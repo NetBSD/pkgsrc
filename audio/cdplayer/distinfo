@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2012/10/22 21:46:26 rh Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 01:12:27 agc Exp $
 
 SHA1 (cdplayer-0.5.1.tar.bz2) = edff8e0dfc0cac8021bee3fe904fb12131f4d715
 RMD160 (cdplayer-0.5.1.tar.bz2) = e605691f06dd192cb15c216f92af7c20869e2101
+SHA512 (cdplayer-0.5.1.tar.bz2) = 637264867a59e41ad6ec2b87cef23ec911f6c7c9ebdd7dbc44a0666e75c0ac938741676191a35a46f8049de3ac244e8d65f1abdc51ee4a2ca7d7a3869b6a0775
 Size (cdplayer-0.5.1.tar.bz2) = 164244 bytes
 SHA1 (patch-aa) = ebd48949eb75b21420e04911dfa964bf6b8e58cf

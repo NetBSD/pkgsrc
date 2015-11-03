@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.15 2013/08/13 00:40:27 khorben Exp $
+$NetBSD: distinfo,v 1.16 2015/11/03 01:12:25 agc Exp $
 
 SHA1 (bmp-0.9.7-ipv6-simple.diff) = d80943d504eeb06d96c2ca73ecc80a89b77e7c77
 RMD160 (bmp-0.9.7-ipv6-simple.diff) = 96072b98f774ed8614818664d0fe173ea5a3e4e5
+SHA512 (bmp-0.9.7-ipv6-simple.diff) = 406015d21d398aa3788981ee750dae432a5c27992fe66e132993ad1ef85443511a46516a0da124bb25071eec86cd55be32478798623d1bf5877ba4fc68bf2c88
 Size (bmp-0.9.7-ipv6-simple.diff) = 8660 bytes
 SHA1 (bmp-0.9.7.1.tar.gz) = ab6444b9a35a8bb8e920a781e72d963a3fb60547
 RMD160 (bmp-0.9.7.1.tar.gz) = 9288083918913ca97ab8883d616159055931ade7
+SHA512 (bmp-0.9.7.1.tar.gz) = a269f9487e67243a8bd24b70b0bafc7130de817ee5d925a1611a455135fe7fff3ed58860c7635a0265cc5b07b9d77483a55d84f40718cc3a3c164569496baecb
 Size (bmp-0.9.7.1.tar.gz) = 2056564 bytes
 SHA1 (patch-aa) = c0dc24215a5bd97fc01159b32e8b812390c3ead5
 SHA1 (patch-an) = a9c00fcbd6a827e466451a5b0e3252c9838b2bf0

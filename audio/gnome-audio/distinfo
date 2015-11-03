@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2008/05/29 17:15:59 drochner Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 01:12:33 agc Exp $
 
 SHA1 (gnome-audio-2.22.2.tar.bz2) = 88bc38387a7b556eb32232f4148fd09abd59ab6d
 RMD160 (gnome-audio-2.22.2.tar.bz2) = 927cf787ff7a6a69ccc7d323f82dddfd1dd5a253
+SHA512 (gnome-audio-2.22.2.tar.bz2) = 99aae5d549068ef699e25b69847b5e1e1c12f69db07e3f8c64c34ab64c7dda08fa0cf2043ba45c0674fb9b121207401d242c25d592eb164307aa6003a2ebbd40
 Size (gnome-audio-2.22.2.tar.bz2) = 1743759 bytes
 SHA1 (patch-aa) = ec089b7e24f5d63928fc47e9be597f871fbdf7f7

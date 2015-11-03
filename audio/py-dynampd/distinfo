@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2012/09/12 17:21:20 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:12:47 agc Exp $
 
 SHA1 (dynampd-1.1.0/dynampd.py) = 33345f88a7a9330c8292cfc8a23131a6599ecde7
 RMD160 (dynampd-1.1.0/dynampd.py) = 8245cf63749a836ba94a1a1407c452ece053690e
+SHA512 (dynampd-1.1.0/dynampd.py) = cd544d947062bcbf4a8996626ba55704d3ec5f8f6e9733469ccf6ebd23c971c4630d2a40ad2bc985f9bc4789595e898a8e7087369a365762417f7da21417a8cc
 Size (dynampd-1.1.0/dynampd.py) = 9134 bytes

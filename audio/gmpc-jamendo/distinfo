@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/10/02 11:28:40 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:12:33 agc Exp $
 
 SHA1 (gmpc-jamendo-11.8.16.tar.gz) = 28c1bb336762740352f84a7710be51d259301324
 RMD160 (gmpc-jamendo-11.8.16.tar.gz) = 4752e709db6ed161d5dd2bfe27e86615e6e9f199
+SHA512 (gmpc-jamendo-11.8.16.tar.gz) = 387b41407db868da69cab4192e353cf5bf3e281103dd0376d852fdeaad8a2e84f4a4858ceda8fe5edb853a205c7abe529b516c82a8e713a9fbd7bfbbd662a56f
 Size (gmpc-jamendo-11.8.16.tar.gz) = 328998 bytes

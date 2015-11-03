@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2008/11/24 12:04:15 obache Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 01:12:35 agc Exp $
 
 SHA1 (id3_0.15.orig.tar.gz) = 5095c2e8963071776adf10df92d94b3fa8934dd8
 RMD160 (id3_0.15.orig.tar.gz) = 85a84f94012971bd79828dee179ffe171fe2eb07
+SHA512 (id3_0.15.orig.tar.gz) = b99f3608fc5494863ddf71b5d15505ea952453777090deb82ea469c1c8ed8cc794907d2fffcd4c5a0aaf6ede260103cd9e720e06244877934b22dfa88e1f2cd0
 Size (id3_0.15.orig.tar.gz) = 12871 bytes
 SHA1 (patch-aa) = 2c3b4f97300489ba7c2ff3d47cbb6654b00abb70
 SHA1 (patch-ab) = e9343a34088e6ca9bbb0315399e9c8e604546c54

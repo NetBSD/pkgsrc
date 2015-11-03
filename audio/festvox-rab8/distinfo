@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 20:39:45 agc Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 01:12:31 agc Exp $
 
 SHA1 (festvox_rablpc8k.tar.gz) = 6a0f27e0a40e70994b5ee308eda336545fffcd1b
 RMD160 (festvox_rablpc8k.tar.gz) = 399d1388de0d2e48ea60618f50792f266fa19d58
+SHA512 (festvox_rablpc8k.tar.gz) = 2ce07c90c142f7c2b9c11c501640ed10552363ad55a70e509514c35d8cd95845ce94832e2b3c95efff1bcc924505c8481f1af424212282794ef83ed78d493018
 Size (festvox_rablpc8k.tar.gz) = 3117763 bytes

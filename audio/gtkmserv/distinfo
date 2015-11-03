@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2009/03/13 14:34:21 martin Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 01:12:34 agc Exp $
 
 SHA1 (gtkmserv-0.5.2.tar.gz) = 59829ef0c2a438b6f35577effbeaff5ed91ccd0d
 RMD160 (gtkmserv-0.5.2.tar.gz) = 073cabc485d4abca55d545c230b9023d021d95cc
+SHA512 (gtkmserv-0.5.2.tar.gz) = 2d3b2ea1d2b36b892bf7e36531ac443eeeefa42ecf5e9a25b7749eab2af9fdbd5c395f6c27ce4011a2d50dccc054013379bbd9aa67bb91dec0ff148e83a7cbe9
 Size (gtkmserv-0.5.2.tar.gz) = 22441 bytes
 SHA1 (patch-aa) = b9b0b62d0444c5e793ea0f331444b25417e1a882
 SHA1 (patch-ab) = 007e57d9053a74a411f1ee8f806259f5ef9310ab

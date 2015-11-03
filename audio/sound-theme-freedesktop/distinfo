@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2009/11/23 11:57:36 drochner Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 01:12:51 agc Exp $
 
 SHA1 (sound-theme-freedesktop-0.7.tar.bz2) = 61b63cbab9eef1f3b00b830f2423c6e5b8aae032
 RMD160 (sound-theme-freedesktop-0.7.tar.bz2) = 4dbbea9e127ab78c6f7747bef37ed6ec1741d70e
+SHA512 (sound-theme-freedesktop-0.7.tar.bz2) = 5c7dec83c686347845f324f55a9634195ff7f892f1dfee64e322d459ed642c7f9982dce7507934a30a4e9354e6f6ac046cc54e19fb2fe0432c48fcb72f368b87
 Size (sound-theme-freedesktop-0.7.tar.bz2) = 413167 bytes

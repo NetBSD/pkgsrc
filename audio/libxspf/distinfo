@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2013/10/03 11:15:39 drochner Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:12:39 agc Exp $
 
 SHA1 (libxspf-1.2.0.tar.bz2) = 23bbc0573636928210f42699029941dd06b20a1d
 RMD160 (libxspf-1.2.0.tar.bz2) = 64f14c6e419c97826ad729ed46651a86061e6964
+SHA512 (libxspf-1.2.0.tar.bz2) = 56667b6df89e30517e2e388e2e3b1c083b19d98d69b4ee328d2784bba57a8d50c6b6ae1876cf17e6f9eb1ff872680c8f33b84b826d1290b890ac173c76bea491
 Size (libxspf-1.2.0.tar.bz2) = 372483 bytes
 SHA1 (patch-aa) = 16f441fd7662395244feae0bebf03497c1bba0ed

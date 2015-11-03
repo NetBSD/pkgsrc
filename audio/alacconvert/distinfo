@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2014/12/09 13:19:44 joerg Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 01:12:24 agc Exp $
 
 SHA1 (libalac-r3.tar.bz2) = d633e538a1d1395614346ef32292f8c16b48b2b2
 RMD160 (libalac-r3.tar.bz2) = b55bd6d8eaf5d1d8ef5bea441cfd206c95ae68ee
+SHA512 (libalac-r3.tar.bz2) = aebd4620863acab4ee02da7df04f6a93666d1ae7174471d048fb0ecca32cae5213012de956cc4bfd5e306412a9dbf68e00792904444f9e533051dae6c035391e
 Size (libalac-r3.tar.bz2) = 65558 bytes
 SHA1 (patch-makefile) = f9cd2ed79e03ddfc34fac86c9f847dfbbb10b8b8

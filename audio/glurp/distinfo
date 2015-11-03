@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2012/03/03 15:57:07 jakllsch Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 01:12:32 agc Exp $
 
 SHA1 (glurp-0.12.3.tar.gz) = a294de6c87034e0222ae8d8a19bc1d5293eb556d
 RMD160 (glurp-0.12.3.tar.gz) = 8ea08a79d1159aae5fc2b6131afd0d32f23e9b1b
+SHA512 (glurp-0.12.3.tar.gz) = cb2592b9667aa45fd7053315c284fde568bdd84953f902e53754b8ba8c1941408b5ab6904d6ca72595f28978f413141d3de988f4d325f899c1d0da93e1b2657b
 Size (glurp-0.12.3.tar.gz) = 166976 bytes

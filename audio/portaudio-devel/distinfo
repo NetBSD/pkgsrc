@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2014/07/21 07:15:07 dbj Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 01:12:46 agc Exp $
 
 SHA1 (pa_stable_v19_20140130.tgz) = 526a7955de59016a06680ac24209ecb6ce05527d
 RMD160 (pa_stable_v19_20140130.tgz) = 0a290cea8a102a45b2df9b72046b3eed0ab35b4f
+SHA512 (pa_stable_v19_20140130.tgz) = 078adfdc2cec7fbd4019837eee65f8411b873b51064dfd7334e1c55118c26ea1fb68cb22e46ee69adb69c78d026b00a7ed973c40632e7d79703e12669a62ee3e
 Size (pa_stable_v19_20140130.tgz) = 1504620 bytes

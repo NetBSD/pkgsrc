@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2011/06/03 19:29:53 shattered Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 01:12:44 agc Exp $
 
 SHA1 (nspmod-0.1.tar.gz) = 3409323d6dbf13e3236a85eb1b8ff9e51ee4de0c
 RMD160 (nspmod-0.1.tar.gz) = c5cd4e77066d1ea23d52e4ed7f10d82f30ed4d36
+SHA512 (nspmod-0.1.tar.gz) = 080837267d4ac71ff2891754545ab8e7c868ab81da2f0b85ab7228b4ea85d4c33650a05f61e2695ae1909f63b04366b288c3786ddde64e240c5e20f96c59041b
 Size (nspmod-0.1.tar.gz) = 32579 bytes
 SHA1 (patch-ac) = e116d9701c1f0fc9e7c4a441d332ad22aee4be24
 SHA1 (patch-ad) = a1a6f68bcaffe0ace1f5e32acb21a1c6bc2a2e47

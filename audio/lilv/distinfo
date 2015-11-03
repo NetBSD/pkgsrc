@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/04/20 03:21:58 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:12:39 agc Exp $
 
 SHA1 (lilv-0.20.0.tar.bz2) = b3a7d0089b16b04114895d47a898b8d494774927
 RMD160 (lilv-0.20.0.tar.bz2) = 7830520d983fa8effa7c3e18fda545bc55253642
+SHA512 (lilv-0.20.0.tar.bz2) = bbc8b9154339cd145a61c5e4613fd31a2e457df8242c55371f3245564d3b23d028a0bc0ffafac393119bb47171b7c735f0c3a55cf5bffc6920ae89aa877240e5
 Size (lilv-0.20.0.tar.bz2) = 207948 bytes

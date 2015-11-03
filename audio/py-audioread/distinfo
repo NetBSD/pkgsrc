@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2014/01/17 14:35:06 wiz Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 01:12:46 agc Exp $
 
 SHA1 (audioread/v1.0.1.tar.gz) = 40a738de9a405439dff1d6b83257fb87e966662f
 RMD160 (audioread/v1.0.1.tar.gz) = a6fd5c4c2e5715183a2ce8a3e7af680fe6491585
+SHA512 (audioread/v1.0.1.tar.gz) = 3e03ddc2ef95c8d4fadde1fd72942bf7be1de5a86e738339bfa070ae10748a59dcc8eb99fd4874ceefa3e5eafa71c85b0e62cb93ddf4b16d11f9fde749a0961b
 Size (audioread/v1.0.1.tar.gz) = 13055 bytes
 SHA1 (patch-audioread_gstdec.py) = ca80c0f0c265d44e038c8321e7824325f4e920f7

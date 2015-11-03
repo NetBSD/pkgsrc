@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2005/12/11 21:13:44 joerg Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 01:12:49 agc Exp $
 
 SHA1 (rio500-0.7.tar.gz) = f22237d3e13222da69d7b7a09f7e27e2aff8e1b8
 RMD160 (rio500-0.7.tar.gz) = 59f56abb5f5ca16d6a8a7792dd227417bcd66709
+SHA512 (rio500-0.7.tar.gz) = dc31533abd56e0012e5803d69fcd846956253a3bf0ab4badc6732351b39ff195bd9e1224477e525d0750ebed600f6152de6deff83160dd038e0b3291a4ff6dac
 Size (rio500-0.7.tar.gz) = 169143 bytes
 SHA1 (patch-aa) = 037b0b5b0aaf5ba107dde56fadc1d613a94966ab
 SHA1 (patch-ab) = 668eca0fcdc2a3c55c12f8fe1a8c59c8e7ee0ba2

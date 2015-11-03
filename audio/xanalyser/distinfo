@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.12 2014/09/14 12:48:35 shattered Exp $
+$NetBSD: distinfo,v 1.13 2015/11/03 01:12:54 agc Exp $
 
 SHA1 (xanalyser-1.32.tar.bz2) = 16304422cc71b7a67f45a0930649ac46cc2fcb20
 RMD160 (xanalyser-1.32.tar.bz2) = 964d02d6a388f3430706fa2ed277478f0c65146b
+SHA512 (xanalyser-1.32.tar.bz2) = ec5d56643a44cadf664fafc7359e76df0877e7d4eea4ebde0c81fe7fca6b1e7b57c0ceb7244b4eed6fb4507b811bbd3b8237d2eeb8ce07a1adb7232350991726
 Size (xanalyser-1.32.tar.bz2) = 86086 bytes
 SHA1 (patch-aa) = e0b0d581ebf9191e284f397898ab88f479bf8ab3
 SHA1 (patch-ac) = ab2438165458ed3d1be2be92d5f27599082e2be4

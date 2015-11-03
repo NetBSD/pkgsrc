@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2007/10/09 20:13:40 hubertf Exp $
+$NetBSD: distinfo,v 1.9 2015/11/03 01:12:40 agc Exp $
 
 SHA1 (madplay-0.15.2b.tar.gz) = 29105eb27c1416aa33c8d1ab3404a8e5f0aecd3f
 RMD160 (madplay-0.15.2b.tar.gz) = 0d3dc164891be5e4f37ce83364f6a40e8049dd3e
+SHA512 (madplay-0.15.2b.tar.gz) = 0e79cdf0c32f48599083ec7a0716d816e3f03254705b7225b1ea9008d53eefd48342dd687b0507f0ff15942218fc07ad1e38c4172508c27755f3e9a0e5412f34
 Size (madplay-0.15.2b.tar.gz) = 590929 bytes
 SHA1 (patch-aa) = 0dd6ee05f9b0d58a88fe9b61f52bf847227c51a6
 SHA1 (patch-ab) = 7af616781aa695e6be2c4a4cae23dafc5d056c4f

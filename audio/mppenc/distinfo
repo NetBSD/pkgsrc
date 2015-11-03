@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2012/01/11 19:51:26 hans Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 01:12:43 agc Exp $
 
 SHA1 (mppenc-1.16.tar.bz2) = f7dc898b14e0bd954941c62435a62c23af89cb8a
 RMD160 (mppenc-1.16.tar.bz2) = 6e97bfc246b9db11532a628afba631883687554d
+SHA512 (mppenc-1.16.tar.bz2) = c11962e8eef7e7a716c6c58f26143e65a226656213a3d3214e6c3be8a4551eec23342b6d1954b37c638163ba2b75fda4fec4d68b040ee07ef0e4e413df0d5443
 Size (mppenc-1.16.tar.bz2) = 105569 bytes
 SHA1 (patch-aa) = 4cc88a533db69fbd8c650358e20f261e162d1049
 SHA1 (patch-ab) = 2b2d5d6cffb0c6c8490b19dc45bab6d74b88530c

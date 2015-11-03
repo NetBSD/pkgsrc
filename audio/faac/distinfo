@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2009/09/09 16:40:39 drochner Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 01:12:29 agc Exp $
 
 SHA1 (faac-1.28.tar.gz) = d00b023a3642f81bb1fb13d962a65079121396ee
 RMD160 (faac-1.28.tar.gz) = 03902393488f04223aabdc804bfe77bb32a61c94
+SHA512 (faac-1.28.tar.gz) = 0ef721ad28835e95cad41afc0cb6130e1ebb634cb6dd4b40f649bc2269b7bb5bf2887f6d8f023c74628d521f8bdf55b4dd070f972ecff162a5fe0384e026235b
 Size (faac-1.28.tar.gz) = 678891 bytes
 SHA1 (patch-aa) = 5d3fa0d38721146aa3131b555ee4f1172ce119c4
 SHA1 (patch-ab) = 9598e987fc3cbde5923236e5264cb176f84c3ba6

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/01/04 11:05:15 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:12:29 agc Exp $
 
 SHA1 (eyeD3-0.7.5.tgz) = bcfd0fe14f5fa40f29ca7e7133138a5112f3c270
 RMD160 (eyeD3-0.7.5.tgz) = 0d2782a6a29aea810d11c877f4ffac6dbf031569
+SHA512 (eyeD3-0.7.5.tgz) = 9f57e05e4db78618e73ec15ca6ac7b983e13c24ae926bfb9194ee4fc1d735f80308dfc5bdac6016f5491bdb06d46b645d7ac54247d581467a8a22129fae85ba5
 Size (eyeD3-0.7.5.tgz) = 221685 bytes

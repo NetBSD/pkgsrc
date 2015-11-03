@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2011/06/08 13:03:34 obache Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 01:12:50 agc Exp $
 
 SHA1 (sonata-1.6.2.1.tar.bz2) = 609452c1672ae01c44988a21f7cc94f0637bad82
 RMD160 (sonata-1.6.2.1.tar.bz2) = 4ca257c0c860804ae3e4cd343d953084b81ea471
+SHA512 (sonata-1.6.2.1.tar.bz2) = 8022b69380714e9c3c685c61d0f1e62be087fc2cbd77a55f32008edea53411f8493d416bd0a446ccb52b4b5603ba9f4a00b655af485d739932dc06af69345c27
 Size (sonata-1.6.2.1.tar.bz2) = 314333 bytes
 SHA1 (patch-aa) = a9920a7c03d63390499415bcc1d1b7bdd55bf399

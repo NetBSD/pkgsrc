@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.9 2013/09/13 09:11:13 jperkin Exp $
+$NetBSD: distinfo,v 1.10 2015/11/03 01:12:35 agc Exp $
 
 SHA1 (ladspa_sdk_1.13.tgz) = 2b69e28afb62c0d97943124f48ed82de796f83ed
 RMD160 (ladspa_sdk_1.13.tgz) = e9eeae8edd24a6890fac3e34c4b55f844f44f8a0
+SHA512 (ladspa_sdk_1.13.tgz) = a1dab807fda58e08869d3f519be5fa91c394690eb13006fbe7f20b332548e4676b32b01273f5695bf36c8da72190c07618662a76d50f991b3f05068ac2b346ef
 Size (ladspa_sdk_1.13.tgz) = 70540 bytes
 SHA1 (patch-aa) = 7d09109572f9da19aac4104437704d731fc3ff99
 SHA1 (patch-ab) = 1ad33baf6dcc4633e1459b6585cc8ccada57831f

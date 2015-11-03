@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/04/18 12:41:09 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:12:38 agc Exp $
 
 SHA1 (libreplaygain_r475.tar.gz) = 7739b4b9cf46e0846663f707a9498a4db0345eaf
 RMD160 (libreplaygain_r475.tar.gz) = b61b087d2b795d8f8dce1bad917dc78fb0170430
+SHA512 (libreplaygain_r475.tar.gz) = b5fce8daf6aa8c8e0adb4c80089b43824b6503cb7d11e0c47c779c57a933b32f0c24722ca3fcf49711199fddcbb92c3fc13876f22418ca1521c7b8e27ba9d409
 Size (libreplaygain_r475.tar.gz) = 8693 bytes

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2008/08/02 18:32:15 dholland Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 01:12:48 agc Exp $
 
 SHA1 (rio007.tgz) = d7abbcd9619ff6528be31c38d55445bebb44e9f0
 RMD160 (rio007.tgz) = 82528f4877e3339c407b6e5dea9393123d44f72d
+SHA512 (rio007.tgz) = 0109778af6da27113149841abd8f27db71edb8a17267d9acccbeed19751b30aa56545ad619c276fb5235b3edf03fd319ac7fd7c90ecd093bd886b968c18e7d18
 Size (rio007.tgz) = 28953 bytes
 SHA1 (patch-aa) = 2aba53b31ff0b75a297fe7696252c02c03850014
 SHA1 (patch-ab) = e7b0e333be109ebe1a5d291724b874418e1dd919

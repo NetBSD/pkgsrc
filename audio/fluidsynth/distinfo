@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.13 2012/08/24 06:35:20 marino Exp $
+$NetBSD: distinfo,v 1.14 2015/11/03 01:12:31 agc Exp $
 
 SHA1 (fluidsynth-1.1.6.tar.bz2) = 1d45fc3263d85f867efd809bdacb5d6116243c35
 RMD160 (fluidsynth-1.1.6.tar.bz2) = 27b17e1e097004dd3cf8fb88d8e4499eeb339ea8
+SHA512 (fluidsynth-1.1.6.tar.bz2) = 0ead8bf86c0edf6d98044eb16b52b85fac8bc3bdeb9c1478d0bceb4f5b38ca28218fcf2cd18cdd5608190dc70b7c39bde681765d01787bc84bc97c6ab3bbf946
 Size (fluidsynth-1.1.6.tar.bz2) = 823783 bytes
 SHA1 (patch-aa) = 16279c3f937b903cdfbc1a26b67606500e33a546
 SHA1 (patch-ac) = 81ca2243404a4fd1a3f93da82116c276db7fb42c

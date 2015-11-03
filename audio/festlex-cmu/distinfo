@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 20:39:44 agc Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 01:12:29 agc Exp $
 
 SHA1 (festlex_CMU.tar.gz) = 968f0007c4cd7d92ce0a786840b6dc64628776b7
 RMD160 (festlex_CMU.tar.gz) = 852a007b5d50ff32d098a4dbd303a4d9c63a1802
+SHA512 (festlex_CMU.tar.gz) = f8fa7eb2dc50df1949f5c941fe9537907fdc19d2ce94824de31f6e75044eadeb91e7511f0d56ba0cd0a32860c33eb27c59f873a6d9e0ce45da2c4d453dd991c0
 Size (festlex_CMU.tar.gz) = 1697709 bytes

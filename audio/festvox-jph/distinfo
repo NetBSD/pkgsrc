@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 20:39:45 agc Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 01:12:30 agc Exp $
 
 SHA1 (voice_jph_di-2.0.tar.gz) = 19f397de2dfe714bd1d1b155e7edce8327c76c3c
 RMD160 (voice_jph_di-2.0.tar.gz) = e11a83c7d6b714dc7169b0ed3d1d6eb701a399b7
+SHA512 (voice_jph_di-2.0.tar.gz) = 9eff22f615e16ff3c3fcd6676f3f9f1816935f89c09c7ebb9c30eaf2ba281baab693fdd0a1a17cb9182bd094891ff6a5923cfec647093c3379025c7552d90328
 Size (voice_jph_di-2.0.tar.gz) = 5694766 bytes

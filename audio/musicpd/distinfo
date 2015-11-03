@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.64 2015/07/01 09:23:30 wiz Exp $
+$NetBSD: distinfo,v 1.65 2015/11/03 01:12:43 agc Exp $
 
 SHA1 (mpd-0.19.10.tar.xz) = 4635b33223d3f1e67eed41f6350ef75515153213
 RMD160 (mpd-0.19.10.tar.xz) = 0cdde355667547b236471d9c75f2c3925f56df81
+SHA512 (mpd-0.19.10.tar.xz) = 037e1ccd69456bd7d388cbcba26de83144816684fb266995b173df960051e84203d3fc7255d7766eee5dbe0629dbb7745b9821664486158d33da4f29189edef8
 Size (mpd-0.19.10.tar.xz) = 701668 bytes
 SHA1 (patch-src_output_plugins_httpd_HttpdOutputPlugin.cxx) = b47d79cc49a27d732a7531e23d666bf9df748bec
 SHA1 (patch-src_system_ByteOrder.hxx) = 955af2aacf1c0a98c4c57728e1283eba81b457e7

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.13 2014/02/22 14:51:03 wiedi Exp $
+$NetBSD: distinfo,v 1.14 2015/11/03 01:12:28 agc Exp $
 
 SHA1 (darkice-1.2.tar.gz) = 508eb0560a7cdf0990a8793f4b8d324ae74bc343
 RMD160 (darkice-1.2.tar.gz) = cc627a716efc49275f3dc3e56011c4d62d0b176d
+SHA512 (darkice-1.2.tar.gz) = d8959819d70eb9b44a34d087fcf3897be5e4cb23681c049f8d88e251d83dfd86b90fdd37744fe27d861dfcbb6bb6e1521b48c5c7b4967bb061ede75596f0a823
 Size (darkice-1.2.tar.gz) = 357026 bytes
 SHA1 (patch-configure) = cf4b34f3a995cec6256385908a9eeb9dfb870875
 SHA1 (patch-rc.darkice) = c8ea98936ad36768014b3fb1410b9c8a902f3a83

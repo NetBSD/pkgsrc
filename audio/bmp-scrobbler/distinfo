@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/08/10 19:00:00 kefren Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:12:26 agc Exp $
 
 SHA1 (xmms-scrobbler-0.4.0.tar.bz2) = 938add7faea22fb89d05e85bbbc3bef1a311a323
 RMD160 (xmms-scrobbler-0.4.0.tar.bz2) = e1a29b1ef491c792f2972fffb96d8e37d1966b79
+SHA512 (xmms-scrobbler-0.4.0.tar.bz2) = 7d9ab56676a822680b25a01c76e8cf49b3828ee8d0a7ce586f1942a32298e9cc0e09325092bddbeca15726803e8788cac190afd867602d892b4f794abe443558
 Size (xmms-scrobbler-0.4.0.tar.bz2) = 270712 bytes

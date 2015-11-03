@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2008/05/21 09:42:13 tron Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 01:12:37 agc Exp $
 
 SHA1 (libid3tag-0.15.1b.tar.gz) = 4d867e8a8436e73cd7762fe0e85958e35f1e4306
 RMD160 (libid3tag-0.15.1b.tar.gz) = 31a69b8ad7684aefdb675acc8ebf89bd6f432095
+SHA512 (libid3tag-0.15.1b.tar.gz) = ade7ce2a43c3646b4c9fdc642095174b9d4938b078b205cd40906d525acd17e87ad76064054a961f391edcba6495441450af2f68be69f116549ca666b069e6d3
 Size (libid3tag-0.15.1b.tar.gz) = 338143 bytes
 SHA1 (patch-aa) = 2103523de3b2703479bba578eb002b33ffff88b0
 SHA1 (patch-ab) = ec5cc92d762d92cebbc180db0300faf0e4c620d2

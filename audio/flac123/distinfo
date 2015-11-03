@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2014/10/10 21:20:28 snj Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 01:12:31 agc Exp $
 
 SHA1 (flac123-0.0.12-release.tar.gz) = 5a1be261a51d790d5e748c0c3e887b6083798adc
 RMD160 (flac123-0.0.12-release.tar.gz) = 9f0c4a5db18af5e85dce2fec2a30588b2bbfa620
+SHA512 (flac123-0.0.12-release.tar.gz) = 4bfabecae86cf11a13bd45025d7fbdee189918e0cd4eee0128856897710b44afd19df5675cae9426d30e9d8cd09b358333438cd05701fa0a7a00a8493a77e1f7
 Size (flac123-0.0.12-release.tar.gz) = 129795 bytes

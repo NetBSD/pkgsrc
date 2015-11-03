@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 20:39:45 agc Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 01:12:30 agc Exp $
 
 SHA1 (festvox_kedlpc16k.tar.gz) = 777e58d25fd499530601c514650328267fb716fb
 RMD160 (festvox_kedlpc16k.tar.gz) = 63480c4ed695c86fc8de0f3a0740196debc710ae
+SHA512 (festvox_kedlpc16k.tar.gz) = 9fc3665bb03484ba20bd1ad80f2acba6c3fa23cef8e23b2d3e3723415aa0ed57c5c184e5393783b3636af735188eff9f106d0993f46c89a2571b9fe8c48c86be
 Size (festvox_kedlpc16k.tar.gz) = 4221528 bytes

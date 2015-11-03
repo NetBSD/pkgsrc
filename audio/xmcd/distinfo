@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.17 2012/08/07 20:18:20 marino Exp $
+$NetBSD: distinfo,v 1.18 2015/11/03 01:12:55 agc Exp $
 
 SHA1 (xmcd-3.0.2-proxyauth-patch) = a6114c73e5470747fe2dcfe16cb11bc7c5e5b4dd
 RMD160 (xmcd-3.0.2-proxyauth-patch) = 405be2eefaaf51fc029828d5850b9f5c78cef5b2
+SHA512 (xmcd-3.0.2-proxyauth-patch) = eb6a80c3cced3f026ca333d8dc47f75eb094712df78434bfd8619a8b785201b52d2308c340d732400e7efbd63198795ce005cd48be854f9280bbbebaeacd2ccc
 Size (xmcd-3.0.2-proxyauth-patch) = 2922 bytes
 SHA1 (xmcd-3.0.2.tar.gz) = 10258f299f917c94780d3e6d9feb57535d4603b5
 RMD160 (xmcd-3.0.2.tar.gz) = 9fbee32681e8df4623a06b49ee64ac328478623b
+SHA512 (xmcd-3.0.2.tar.gz) = d2e08858ed93b3241a4b1d6cddfff5a52ce100f4a4bd09de1232d20f103a2799c512c8827e020c170982e94d4b4cbc46c2505a86af367885f573752f8c26c73a
 Size (xmcd-3.0.2.tar.gz) = 690285 bytes
 SHA1 (patch-aa) = 0a446d2943dd9ac9d66938674daa16d1d629e470
 SHA1 (patch-ab) = 35c9d7cfecbd276a034598375c033c0dd510acdf

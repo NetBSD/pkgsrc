@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2014/08/16 21:30:50 gls Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 01:12:44 agc Exp $
 
 SHA1 (opusfile-0.6.tar.gz) = 2422e3c7bf6105a832226850b19053ec5ac41293
 RMD160 (opusfile-0.6.tar.gz) = a5d036100ecb561ad00b43f276585f3b6440f950
+SHA512 (opusfile-0.6.tar.gz) = 6fee48f3da21eeffed1ee5a3852234032aa559335225b07383c1104f5efba2f88aebe41c453ab2de472a69766e0fa9b48bec2f97d2a096b27afa96901802ba02
 Size (opusfile-0.6.tar.gz) = 437980 bytes
 SHA1 (patch-src_http.c) = 631e7304c825baf5537c871b39e75bfb1f04da8a

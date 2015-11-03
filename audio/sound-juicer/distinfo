@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.13 2015/08/25 07:13:03 richard Exp $
+$NetBSD: distinfo,v 1.14 2015/11/03 01:12:51 agc Exp $
 
 SHA1 (sound-juicer-2.32.0.tar.gz) = db8494570298bd3f8b85902271b6d4caf580316c
 RMD160 (sound-juicer-2.32.0.tar.gz) = d040669ae902390fb1c6ad03212dc414f1710da2
+SHA512 (sound-juicer-2.32.0.tar.gz) = 29637c2c258c799cc6a87a12578de159076e808e395f4485a4f78282649d2f00784a4599dc9ffd56460a14756ec09a7e88140ab968f65d64f1e541a6bf8e9c40
 Size (sound-juicer-2.32.0.tar.gz) = 2628352 bytes
 SHA1 (patch-aa) = 449c22730d83a624247c96406ffb0272d73cf3e9
 SHA1 (patch-ac) = 8e5a52b48d2479f7018922d61094f30bf137da46

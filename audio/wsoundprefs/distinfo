@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.12 2014/08/21 14:48:09 jperkin Exp $
+$NetBSD: distinfo,v 1.13 2015/11/03 01:12:54 agc Exp $
 
 SHA1 (WSoundPrefs-1.1.1.tar.gz) = 444571543e7a076cc49ee484dbcfd0aefc184316
 RMD160 (WSoundPrefs-1.1.1.tar.gz) = c9793dd9c6b100f9de3fa9b2771c684ac890016e
+SHA512 (WSoundPrefs-1.1.1.tar.gz) = f4148c2e66ed64936484129e1b304bb7ade7fb45efa555643203dc2e228e82319802995d4a837b105658ff1d4ca18b721a813f112953407e1459bf02afd513a7
 Size (WSoundPrefs-1.1.1.tar.gz) = 32042 bytes
 SHA1 (patch-aa) = d4aa25406a7fa7f76608f8111308d16bafa5eb9d
 SHA1 (patch-ab) = 3483c3695e206396ee33b87a22f4b5db4c9cf9ef

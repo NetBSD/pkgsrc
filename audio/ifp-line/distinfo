@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.10 2015/07/09 12:00:13 jperkin Exp $
+$NetBSD: distinfo,v 1.11 2015/11/03 01:12:35 agc Exp $
 
 SHA1 (ifp-line-0.3.tar.gz) = e511157878a08fbea6a2c702e726e131dd20cb2f
 RMD160 (ifp-line-0.3.tar.gz) = 71fee7e02daeb9b3dc2e7da53236057b9d5a9f63
+SHA512 (ifp-line-0.3.tar.gz) = 516ad85fdaf69111581b013b2517c7083656436d429a86ec5ca4b7dcaf1c841538f98138cce8839d990a34550f11cc6bc9dedc701b0123b9cb73a91a7d78694d
 Size (ifp-line-0.3.tar.gz) = 138272 bytes
 SHA1 (patch-Makefile_am) = a273f2e813b43b717155a2dcf7bc1372d23b936b
 SHA1 (patch-Makefile_in) = cf64aab56fbf9d7b58535a341c93176a6709b02b

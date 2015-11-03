@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.22 2013/01/21 16:02:34 wiz Exp $
+$NetBSD: distinfo,v 1.23 2015/11/03 01:12:29 agc Exp $
 
 SHA1 (faad2-2.7.tar.gz) = 80eaaa5cc576c35dd28863767b795c50cbcc0511
 RMD160 (faad2-2.7.tar.gz) = 3f0ca461e2953014d5b17edccb3337767d478b8d
+SHA512 (faad2-2.7.tar.gz) = 8135370497dfcfee09094a03a4a9545ebc58b9e532b89c5d6e5037042549e12ddb75f8903aa05866afac9fa28df96320f1ed2eebffc0660578e54392a51c1161
 Size (faad2-2.7.tar.gz) = 1137407 bytes
 SHA1 (patch-aa) = e3bf0fc44569b05295bc6b682bb14a4ca36681dd
 SHA1 (patch-ab) = e443484f19dfcc58d424401842d4747762d631e4
