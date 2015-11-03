@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 14:59:24 agc Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 00:21:17 agc Exp $
 
 SHA1 (gsmc-1.1.tar.gz) = bff9098ecf8e40a720bcc2d60a868f7aaa2d3e59
 RMD160 (gsmc-1.1.tar.gz) = b85385ed04ee2b4d0730cc541f185f38738f6747
+SHA512 (gsmc-1.1.tar.gz) = 9c35bd8971c97c5e6a0c67b045ccfc050d25506e25c84ad1fb130fdc94a2f6604a0f762a2d0037be571ad50672eab588f8cdc4e1367c8d72a55bd3b9b08124fc
 Size (gsmc-1.1.tar.gz) = 122714 bytes

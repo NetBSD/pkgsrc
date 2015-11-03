@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.15 2013/05/22 07:44:03 sbd Exp $
+$NetBSD: distinfo,v 1.16 2015/11/03 00:21:19 agc Exp $
 
 SHA1 (sp3f4.kit.tar.Z) = bded1e078d0acfef090117490a7ac8a57887f39e
 RMD160 (sp3f4.kit.tar.Z) = 0bd293298c41791a9a452648f5c6a936175e220c
+SHA512 (sp3f4.kit.tar.Z) = 81936ebf15f91190e206ffcf721d9ed0df90c343f6b7006c6765f218a2496eda208a169c7b8a76cc4da854c03db2508936ba410bf964ec9756dd8db20332d5e8
 Size (sp3f4.kit.tar.Z) = 2086528 bytes
 SHA1 (patch-aa) = e02c604b9d32b395dd8d7ac22255c96229fff72a
 SHA1 (patch-ab) = aa036badf15b69f199861b1f1d0d10f85471f496

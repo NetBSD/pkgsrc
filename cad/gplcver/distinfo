@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2012/02/16 11:39:39 hans Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 00:21:17 agc Exp $
 
 SHA1 (gplcver-2.12a.src.tar.bz2) = 946bb35b6279646c6e10c309922ed17deb2aca8a
 RMD160 (gplcver-2.12a.src.tar.bz2) = 5af004b345142ac5400c9defc7125bbe127d2c49
+SHA512 (gplcver-2.12a.src.tar.bz2) = 62835fd32c37865590c56e4e04cdd2b1e0918551a927fafe35a2b0838082af2af903e714d2afc0f28d76eb5c077e5b3f56cbf671dee5f38717ddea68a35753e5
 Size (gplcver-2.12a.src.tar.bz2) = 1224470 bytes
 SHA1 (patch-aa) = 82607a701e10ac2cf91860bbe9189b78eb4b0dcc
 SHA1 (patch-ab) = b8d44b8fed5dc8d3379d990160fa453713163e2e

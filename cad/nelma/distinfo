@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2013/05/21 21:33:44 sbd Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 00:21:18 agc Exp $
 
 SHA1 (nelma-3.2.tar.gz) = 2a39a35527db03babcb09e992b29cbc659923c71
 RMD160 (nelma-3.2.tar.gz) = 657decc5243147bdb6d80329a0604d76ddd0a91d
+SHA512 (nelma-3.2.tar.gz) = 12b4481ef8fd5858b5af58903a05191fc9cb1360079afb920ad9b0813ad652e80c57187d087d89a8f7d5347b78713a3f9260d102324261457df9caa97e6ba353
 Size (nelma-3.2.tar.gz) = 64618 bytes
 SHA1 (patch-aa) = 56a3da6d727980298af58bb806aa0c3cf2187a83
 SHA1 (patch-ab) = 48eb0c1b1c8c6f0848d98cf1cdc7ab3126722fe0

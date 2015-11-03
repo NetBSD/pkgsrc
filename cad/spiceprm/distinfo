@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 14:59:25 agc Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 00:21:19 agc Exp $
 
 SHA1 (spiceprm-0.11.tar.gz) = d35521b6f1b26c07331037231f184ce7511c6992
 RMD160 (spiceprm-0.11.tar.gz) = 22ca1030cad4eb5507806f006b6cb83327d49640
+SHA512 (spiceprm-0.11.tar.gz) = 863c6e0c190096f135406c0e14385ac36ba8b5a379c85b63db539ce9c43dbd3cf5aacb313a2df0a2755e9a27e5f095e87470e6c1316da7d0a1f530e98af3c4ea
 Size (spiceprm-0.11.tar.gz) = 15561 bytes
