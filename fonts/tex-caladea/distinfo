@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:58 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:46 agc Exp $
 
 SHA1 (tex-caladea-34991/caladea.tar.xz) = c4def32ecadcd5efddde0c077fb733f81631d423
 RMD160 (tex-caladea-34991/caladea.tar.xz) = bfded7c9db6a9e229814285961b10cb3a3298124
+SHA512 (tex-caladea-34991/caladea.tar.xz) = 0de0865f3f6b463fa6689ac72e515a951287fe9f649736f614f382da3b5fb95531bd1570fc91a917ceec81966c52775343933d5df9dbcd2d99f1edd00b838455
 Size (tex-caladea-34991/caladea.tar.xz) = 343460 bytes

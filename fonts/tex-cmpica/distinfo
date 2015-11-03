@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:36 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:50 agc Exp $
 
 SHA1 (tex-cmpica-15878/cmpica.tar.xz) = 0fc9901c3eb774fe045781bf1c92f83e2e533d2c
 RMD160 (tex-cmpica-15878/cmpica.tar.xz) = 05d77746262081cac14d1210dcca8d05d4c85e64
+SHA512 (tex-cmpica-15878/cmpica.tar.xz) = d83aaa1c2f0fbe61882a4712b77ef7d7cd303785d2c2182d5b75bb2e05a886f1c941293d841724543398f7dea7c857f0dfe574ddad9753171bd455b096773280
 Size (tex-cmpica-15878/cmpica.tar.xz) = 6436 bytes

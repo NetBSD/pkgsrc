@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/03 18:50:33 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:51 agc Exp $
 
 SHA1 (tex-concmath-fonts-17218/concmath-fonts.tar.xz) = 8ced0fdae0b9fe398b62f511d8ebf5ff29ec73aa
 RMD160 (tex-concmath-fonts-17218/concmath-fonts.tar.xz) = e7d4724fd2c4b8fb53248d5439f20c10df025af1
+SHA512 (tex-concmath-fonts-17218/concmath-fonts.tar.xz) = 494e4ae1cac55a6618b811e420520aad4d7e5e3840e8bd092952bb9b750de9ee5d8917c570b992da989b83b8926b15b835c40b6f10b133d1d0ee38281c08790f
 Size (tex-concmath-fonts-17218/concmath-fonts.tar.xz) = 15160 bytes

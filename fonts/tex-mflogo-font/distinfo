@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/06/14 11:19:59 markd Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 20:45:10 agc Exp $
 
 SHA1 (tex-mflogo-font-36898/mflogo-font.tar.xz) = 2242ac0849019ee5008422c58740d5a77f627fb3
 RMD160 (tex-mflogo-font-36898/mflogo-font.tar.xz) = dfdfc6a9af60766d5810d04ddfe3f7446551cecb
+SHA512 (tex-mflogo-font-36898/mflogo-font.tar.xz) = 7a579f5f960df7fad6114d05f3b26b4aca04683a18e1fe9f2672342a3e1d5fc215baf5f82825c8249a515e07ae4fd6feda11a2efec834367996ff10d820da41f
 Size (tex-mflogo-font-36898/mflogo-font.tar.xz) = 18136 bytes

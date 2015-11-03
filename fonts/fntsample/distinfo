@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/09/13 10:29:19 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:31 agc Exp $
 
 SHA1 (Blocks.txt) = e1861d11aca3b2b56552e191ae02d914fd9c123a
 RMD160 (Blocks.txt) = 84ba62e0efa9089cee60a4f84e9946e392288bf3
+SHA512 (Blocks.txt) = a1fe7ef14a29f9891a21b520db69cc4468488d55409a7fbf945c9448a61b40bdc0eeecc6ae98eab3033913a0b9bc6a6588c905fe4386fc7a91c5d9b879ccb02e
 Size (Blocks.txt) = 7119 bytes
 SHA1 (fntsample-3.2.tar.gz) = 46e3e48ab930ad6a1296ceafd759b3175e28e5cf
 RMD160 (fntsample-3.2.tar.gz) = 921668eace359a21881d7df7ec4a1dd8d11a97d9
+SHA512 (fntsample-3.2.tar.gz) = 58e06dfe77911d759ee41b74a215d48446d598076aaf79fe6c53b4708b8c82a90ecf5d0b0cbb65ed645ca2094d895778b15f6742b3530d41dd473cf407e76747
 Size (fntsample-3.2.tar.gz) = 174945 bytes

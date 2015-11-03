@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:35 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:49 agc Exp $
 
 SHA1 (tex-cm-lgc-28250/cm-lgc.doc.tar.xz) = bca5383d2dfd0f00d8d6159801b6b805521dbce6
 RMD160 (tex-cm-lgc-28250/cm-lgc.doc.tar.xz) = 8299ce46766a0d52f1893f170660ab16f41b70da
+SHA512 (tex-cm-lgc-28250/cm-lgc.doc.tar.xz) = b0f620c29159bf3996a5d2d083c87427e2da955ac533747ec57555c79759fffa90d7b3d17cb289b773c1dbb5a785ccad7570cff854f65fa1e99fc1d20457566a
 Size (tex-cm-lgc-28250/cm-lgc.doc.tar.xz) = 89820 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/03/11 18:48:02 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:35 agc Exp $
 
 SHA1 (jsMath-fonts-20090709/TeX-fonts-linux.tgz) = df045a65a72422a2280b33ae83b49f1e30dc7eb2
 RMD160 (jsMath-fonts-20090709/TeX-fonts-linux.tgz) = 61cb278784807a6eef8c0ce8544340cfdd602c76
+SHA512 (jsMath-fonts-20090709/TeX-fonts-linux.tgz) = ccbcd2f8b2a7ddfc7f72c03525741d3cbb7edd98836916126a634376fbaa0454d4f08cee5408f5368e04423719f4408e9f00a656917b58bab0cb5300ea5445da
 Size (jsMath-fonts-20090709/TeX-fonts-linux.tgz) = 127294 bytes

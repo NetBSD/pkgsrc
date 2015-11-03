@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:53 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:15 agc Exp $
 
 SHA1 (tex-prodint-21893/prodint.tar.xz) = a506bd90b8319b826583cadc001820624d7a2d0f
 RMD160 (tex-prodint-21893/prodint.tar.xz) = a6f7af0806047cbcda43c51bf98c94da78ca25d2
+SHA512 (tex-prodint-21893/prodint.tar.xz) = 52e744adcec02bcae3f3c31b052ff0255f25ff52b9cf1abcbd1f0a92a5da424c273c3a547ee6fd5add661cc54028d8249662c0ef3e6cdd1349daae696890e21e
 Size (tex-prodint-21893/prodint.tar.xz) = 3848 bytes

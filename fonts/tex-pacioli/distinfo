@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:52 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:14 agc Exp $
 
 SHA1 (tex-pacioli-24947/pacioli.tar.xz) = 74619127367092d2ed51b479f02d5d899d33340f
 RMD160 (tex-pacioli-24947/pacioli.tar.xz) = e929f80fdada92974fe237b46722da58a4b524c8
+SHA512 (tex-pacioli-24947/pacioli.tar.xz) = cc5232678a9cf216279c6017064ff4b3cb14e64a999ef6835add36f0bfa7742bc3a20125d2324620ec0d95cd92bd2108432b65fb706bb3b4dc83b58bbc2a0910
 Size (tex-pacioli-24947/pacioli.tar.xz) = 14920 bytes

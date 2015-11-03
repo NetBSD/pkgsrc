@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/11/18 19:02:57 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:00 agc Exp $
 
 SHA1 (tex-fontinst-29764/fontinst.tar.xz) = fb6e50d394c25113d7fc3f9e0bb4a9765a9fb1ed
 RMD160 (tex-fontinst-29764/fontinst.tar.xz) = 044534a5ed17240b8fb870e338693136746cd10c
+SHA512 (tex-fontinst-29764/fontinst.tar.xz) = fbda3d16311a15ebb28869700a5d979cdd4d2cfe99fd33191273496dbd56b1ad15f52bdfd082f06d0baa6cc16e736d4f4e5a7b4564f777d11d11e5522c73d30b
 Size (tex-fontinst-29764/fontinst.tar.xz) = 85792 bytes

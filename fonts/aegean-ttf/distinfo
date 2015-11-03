@@ -1,14 +1,18 @@
-$NetBSD: distinfo,v 1.1.1.1 2014/08/09 16:21:27 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:28 agc Exp $
 
 SHA1 (aegean-ttf-7.42/Aegean.zip) = 573d153a3680e4359e4eac579fa01e891061374a
 RMD160 (aegean-ttf-7.42/Aegean.zip) = 47186e594087a45a3133e9aa368de1575d46114d
+SHA512 (aegean-ttf-7.42/Aegean.zip) = baa94ba06607b76526f1c498f7d0506c294e4da5400fa60bcd98e51c4270d81aec538e2b30d0d7ba1f55620376e7eee1ecd48bb02b61e17c946a7b7adcd1dd10
 Size (aegean-ttf-7.42/Aegean.zip) = 1283071 bytes
 SHA1 (aegean-ttf-7.42/Cretan.zip) = 3d8946067d6d52d4884d01a162c9f78a3e7adba7
 RMD160 (aegean-ttf-7.42/Cretan.zip) = e896724768cdb630cec7503d2421667b74f2ea01
+SHA512 (aegean-ttf-7.42/Cretan.zip) = 8fb25b47573e923021cd1a8e6ecd9dd0fe2bb103519fd5ec9d23aadd8c1d187fdba019f0180447993d6b1a22bde2101950cc43ce536a91cff916f6ced8316d7c
 Size (aegean-ttf-7.42/Cretan.zip) = 2198333 bytes
 SHA1 (aegean-ttf-7.42/CyproMinoan.zip) = 34eabe5edc451c799cb6077716323372bedd37aa
 RMD160 (aegean-ttf-7.42/CyproMinoan.zip) = b721fc513c57076c2ca062eafecb3d26511c9da7
+SHA512 (aegean-ttf-7.42/CyproMinoan.zip) = e7fe67c1cff953e4e2db745ce742a6169409d37e4eb1ad31deea94037c22366c7ccb7aa6c06a26f526ef8d3fc22aefe89293461dcab52c8e7b88cbccc4203ddb
 Size (aegean-ttf-7.42/CyproMinoan.zip) = 476844 bytes
 SHA1 (aegean-ttf-7.42/LinearA.zip) = a9d751b7ba7957e8af728fa79f5a75c6a12f3cdd
 RMD160 (aegean-ttf-7.42/LinearA.zip) = 15d51e013e7d8cabf9aa11dcc8f2d6b2e6c7e09e
+SHA512 (aegean-ttf-7.42/LinearA.zip) = af132b2bfec73ec9bffec109cc10eb4a1550ab5735d0090c4a381d3d6519cc62311a5f9895d56bc33cbdc8482b6cc79f9d2efd8adf4368717abeb05d45fd8927
 Size (aegean-ttf-7.42/LinearA.zip) = 316133 bytes
