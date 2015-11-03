@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.4 2011/03/21 08:11:27 obache Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 03:32:17 agc Exp $
 
 SHA1 (emacs-20.7.tar.gz) = ef0168b927fb633bc9b14e2249431f26ff8b8452
 RMD160 (emacs-20.7.tar.gz) = f3b8ea8d6f6ad52ccdd7ca74c84e87a7409fc270
+SHA512 (emacs-20.7.tar.gz) = d782acdaa496ba5f606efa29976a00434a6e571c632f5511bc0b67cb7db7fd77aa5aedb12dac31abdced55f48170f9201cc35d6d533e2bc0a67f78bbdaa7da2a
 Size (emacs-20.7.tar.gz) = 15043428 bytes
 SHA1 (leim-20.7.tar.gz) = 63ca19a8bd27d204134f765b7387bba8466733cd
 RMD160 (leim-20.7.tar.gz) = 175c977973138ec49240d359b6ae0f8293855de1
+SHA512 (leim-20.7.tar.gz) = f8429fbbfedeaf38bf7f5357c848f32e952e30bc7d1903d0e12a4dca85d6f6384423786f8156bcb8facaf1ca3e214e0246cb8d8a388c19592a4d7a6a829b67b6
 Size (leim-20.7.tar.gz) = 3288714 bytes
 SHA1 (patch-aa) = 0fd55a9585b4b44c2aa068971ef3e2481e6b1fcc
 SHA1 (patch-ab) = 48e3e91791e6f86484917acafb136796ab230c41
