@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2009/02/18 20:06:57 ahoka Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 01:34:53 agc Exp $
 
 SHA1 (gnome-pilot-2.0.17.tar.gz) = 7a43b0806ae035934dc15949d24492751e316eeb
 RMD160 (gnome-pilot-2.0.17.tar.gz) = 6af1a1e227cd39018876a5e9ef4c6ec02011a231
+SHA512 (gnome-pilot-2.0.17.tar.gz) = 16ec40ad3cb59f4f5187ae6bf34ec0e0c570068e8f4b5f124ea9423b6da6e1f37d2c09d969a294992bdb2182d84b329ffcee02fb019ff9dd45d8a77aa730ffa6
 Size (gnome-pilot-2.0.17.tar.gz) = 1273410 bytes

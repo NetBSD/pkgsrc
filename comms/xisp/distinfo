@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.12 2015/07/04 16:18:28 joerg Exp $
+$NetBSD: distinfo,v 1.13 2015/11/03 01:34:58 agc Exp $
 
 SHA1 (xisp-2.7p4.tar.gz) = d6b7cba0cbde2d8c42405108d69aa21c96e73659
 RMD160 (xisp-2.7p4.tar.gz) = 617ad86157dc0bef19239359eb20d6f65ee8a00b
+SHA512 (xisp-2.7p4.tar.gz) = 636972d78233ebba988d3440e9bdbe3e249dbe7a4646e206249464150f18616f9cf766aab87d0bcc8d8dea978b11c69b61c28a1b2389237c391e63e80b3b86cc
 Size (xisp-2.7p4.tar.gz) = 300156 bytes
 SHA1 (patch-aa) = 703e2467587b845747666e35006ede0a51b9096d
 SHA1 (patch-ab) = aebdef9938050ad251a4160f1d1d51b83c75c2c0

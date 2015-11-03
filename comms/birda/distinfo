@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.20 2013/10/10 00:02:17 joerg Exp $
+$NetBSD: distinfo,v 1.21 2015/11/03 01:34:53 agc Exp $
 
 SHA1 (birda-1.3.tar.gz) = c72a2e05153f82e9e27e5cf36970a49ae122dbfe
 RMD160 (birda-1.3.tar.gz) = b53823b22db733a65cea515eadca59aa1024c96a
+SHA512 (birda-1.3.tar.gz) = 9598c9b88fa105072f3ee3b5babc5dca32a5407903938415a85727c0100f3d07f9e1c2790af7d6f825d009acf3597cb09bfc382bb168039a0d33698cd3493e41
 Size (birda-1.3.tar.gz) = 57848 bytes
 SHA1 (patch-aa) = 5dc29878d541f354d5ed4b0cc910ca6d57d498fe
 SHA1 (patch-src-iassrv.c) = 538b6af337d278e1d435109b1651a97223979dc6
