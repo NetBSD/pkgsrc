@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2015/02/13 16:58:17 jperkin Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 03:32:21 agc Exp $
 
 SHA1 (scite339.tgz) = 6ac4fc0c56aad1d037dba2e46acb83922a639330
 RMD160 (scite339.tgz) = f7cf3a47280fe34fe1e558945fe86c0f4b4e3bb4
+SHA512 (scite339.tgz) = f64c044c62123c57f18de2e5e27733827118a442818ffc071d44f5a0cf191e7192c73c3cb3d872678b8fb2f1ed03f7f391d02583c2bb79b0cb6ebf0e2efa5824
 Size (scite339.tgz) = 2229269 bytes
 SHA1 (patch-aa) = 3579a07d7a2e9157421602c07b0d6310848882a1

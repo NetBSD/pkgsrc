@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 17:15:13 agc Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 03:32:22 agc Exp $
 
 SHA1 (Ted-2.16/Ted_pl_PL.tar.gz) = bce68a1337a847bef68f9390417dc41312b8779e
 RMD160 (Ted-2.16/Ted_pl_PL.tar.gz) = 40d15e915069166362d52de912f5bd7d6437941d
+SHA512 (Ted-2.16/Ted_pl_PL.tar.gz) = 63b502bf15781b9163b208f3f21a4c6c44f19ba3caf771d598f9477138f26737ab2c91e05b27b1661e5c13a28be6f1f0ff2d19b0e8febfb90832dd3a37b5d410
 Size (Ted-2.16/Ted_pl_PL.tar.gz) = 1181498 bytes
