@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/08/20 16:49:35 fhajny Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 00:12:12 agc Exp $
 
 SHA1 (magento/magento-1.9.2.1.tar.gz) = 41b4b9ae2e02fa9fecf3330e19790120aeeced92
 RMD160 (magento/magento-1.9.2.1.tar.gz) = cd893c2e9a7e5998f9010c4150d0eca02ec800d0
+SHA512 (magento/magento-1.9.2.1.tar.gz) = 9e8ecb51d02403546ef5692511eea2740833481171da65ff47973cebe7d595213f5f1c5856720f6dec2cbade619a2343133327690c446b4ffa0b4406775f1ff4
 Size (magento/magento-1.9.2.1.tar.gz) = 24437578 bytes
