@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/04/28 06:48:12 mef Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:28:25 agc Exp $
 
 SHA1 (Log-Message-Simple-0.10.tar.gz) = ef38fd852fc5cbdd178b0ddcda5cdcc33dd2c4a1
 RMD160 (Log-Message-Simple-0.10.tar.gz) = f1708327cbcfe4eec34298043b8bae04e449f8dd
+SHA512 (Log-Message-Simple-0.10.tar.gz) = 7915f19dabae801da08e230d846faa6da8f82dd8ac90ed9aedbab9022c45ef0464c1fb511d5ac074c7a77d59eab2a8b549da686cc79ed9a8c40a8eb9d12fb418
 Size (Log-Message-Simple-0.10.tar.gz) = 5717 bytes

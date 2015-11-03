@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.20 2012/10/25 08:28:20 asau Exp $
+$NetBSD: distinfo,v 1.21 2015/11/03 03:27:20 agc Exp $
 
 SHA1 (cscope-15.8a.tar.gz) = 00f76825791b895532778f720c509cd13b9d6846
 RMD160 (cscope-15.8a.tar.gz) = 9536de3b7bdf6dd355dd9c28308457692c9a0b9f
+SHA512 (cscope-15.8a.tar.gz) = bedba69820eca86420f6c975d1f267de67a457b182a3fe49720a2ae5ea48759c5b5b8db06ed5ffd85173ddf4a0f12ca722e87200dea4a2da7d43c8c711b00318
 Size (cscope-15.8a.tar.gz) = 601232 bytes
 SHA1 (patch-aa) = b8f3a2b4f30726a51c8cf676c2accd07bfd5ccb1
 SHA1 (patch-ac) = d548d256e9d7dd26195e37512ccbe9844bf7ace1

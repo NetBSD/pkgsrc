@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/02/25 05:15:27 obache Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:28:00 agc Exp $
 
 SHA1 (Check-ISA-0.04.tar.gz) = 0366dd7f74c3c980fc7b33f7027a24d43852194e
 RMD160 (Check-ISA-0.04.tar.gz) = 622c5daf2c3bc3ec78d708e1b91e9ccb91054c30
+SHA512 (Check-ISA-0.04.tar.gz) = 2c9bd53bed54317dc000b6d10b92c71dbbcdd82e4982e849702622540ef7cc8678dcccd793bb5fd17d25abf01c3809620bc4a2d426ec21e516f5dbf240e90fa7
 Size (Check-ISA-0.04.tar.gz) = 5552 bytes

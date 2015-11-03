@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/07/04 17:45:42 cube Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:28:14 agc Exp $
 
 SHA1 (File-BOM-0.14.tar.gz) = c3938acc31b884ee9d4445fcb8231267130afecf
 RMD160 (File-BOM-0.14.tar.gz) = db567ef1c1a42d57b0fefb8f50b1eb8ad1060cb4
+SHA512 (File-BOM-0.14.tar.gz) = 956f86ff28f351976156e847c0b1bc12b6491d842892a9493cc705cbf2598b58ab601690c0fda1cfe813c3562d2f96a28df968bad8b52a92946fe56d2c9932eb
 Size (File-BOM-0.14.tar.gz) = 15273 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 22:24:20 agc Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 03:27:45 agc Exp $
 
 SHA1 (libstroke-0.5.1.tar.gz) = 48bd2b98faa8681ccd97eda7a09442845dbf1b7b
 RMD160 (libstroke-0.5.1.tar.gz) = 699bae20d3be15b73567dab6191903ff4921f3b6
+SHA512 (libstroke-0.5.1.tar.gz) = 03431d4cd39174aadb6cfd00a1c487d34ae9cf4b1db9e9d01d563f2a661f01979f474b87099fd2bfb0e54653416a1b9dea988367674a3cc6134e16b62810a0c7
 Size (libstroke-0.5.1.tar.gz) = 174270 bytes

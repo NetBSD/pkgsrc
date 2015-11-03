@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.12 2014/05/09 18:37:34 marino Exp $
+$NetBSD: distinfo,v 1.13 2015/11/03 03:27:30 agc Exp $
 
 SHA1 (gps-5.2.1-1-src.tgz) = 5e69d59e2e64a3ec5a35c7fb0cb29d0950e156e7
 RMD160 (gps-5.2.1-1-src.tgz) = 2ca95998ecc5eb7930e0b645cc550e99fe144177
+SHA512 (gps-5.2.1-1-src.tgz) = 2784caddbd8708cb44957a577112e58b3bd426580b305ca43cb8ca46b82bec2410b297ba2b80f0bb8cae8f7a421cd16b5039f1d74b33f4289f2b50a8a52c60d6
 Size (gps-5.2.1-1-src.tgz) = 27925475 bytes
 SHA1 (patch-Makefile.in) = 2920de21e7e0f65c76fe406fd7f47abc80dbaf38
 SHA1 (patch-common_tty_terminals.c) = b85725f52f929dae0f3a1b44fe5166e576fed325

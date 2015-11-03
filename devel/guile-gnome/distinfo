@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.8 2015/06/07 12:02:22 gdt Exp $
+$NetBSD: distinfo,v 1.9 2015/11/03 03:27:30 agc Exp $
 
 SHA1 (guile-gnome-platform-2.16.2.tar.gz) = a53d9a2a82ae83b07d6b47bfbfb7f7005cdfc4b3
 RMD160 (guile-gnome-platform-2.16.2.tar.gz) = ef953cd928aa9b4dc410b7fce2dcac1790897c06
+SHA512 (guile-gnome-platform-2.16.2.tar.gz) = 5acaa96d8caf82864ada8bfcbc4954a19cd5d7e210245f2e8b31082c6a9e4ab9ba7af5f8e1f762a891e1aad640913a7a205f56dfaed6915a9f782c53e042d042
 Size (guile-gnome-platform-2.16.2.tar.gz) = 2538191 bytes
 SHA1 (patch-glib_gnome_gobject_guile-support.h) = a2ee021c9d89c2c3d8b2b7e0d5ab363e9d7ee565

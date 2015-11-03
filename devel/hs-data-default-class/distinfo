@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/05/18 21:26:26 szptvlfn Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:27:32 agc Exp $
 
 SHA1 (data-default-class-0.0.1.tar.gz) = 0df4290c315e5509e94362480f62d79439ee746e
 RMD160 (data-default-class-0.0.1.tar.gz) = a5de1204417fde2647ae4652246cb6d18f0a6910
+SHA512 (data-default-class-0.0.1.tar.gz) = f9960deb48938bf0364273762662e56ad0dba3d5db005bf0a00b8eff11cfa2e94c5b5c1d2b2af2622a680dad4495cb31445a17074cfe752cbcf3de7b91e0e313
 Size (data-default-class-0.0.1.tar.gz) = 1461 bytes

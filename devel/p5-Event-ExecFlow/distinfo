@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2010/05/20 18:11:39 drochner Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 03:28:12 agc Exp $
 
 SHA1 (Event-ExecFlow-0.64.tar.gz) = 9394e16f2ed2a769c7c9793a8d187ed6c6ff0892
 RMD160 (Event-ExecFlow-0.64.tar.gz) = 46d293b9e75a59d2ea2b324acfbc4d051457d0ae
+SHA512 (Event-ExecFlow-0.64.tar.gz) = dab795481e3f85ecde70e330eda10c8d09eb310d3325945364eebc1d70521f094b1f6afc311aff4b662cbefd96e0170bfb72f284296654088b747a139bfe7b5d
 Size (Event-ExecFlow-0.64.tar.gz) = 15336 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/03/14 18:52:30 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:29:02 agc Exp $
 
 SHA1 (php-xcache/xcache-3.2.0.tar.bz2) = 711f56b66d8da884214fa311a28e1d299bb73e05
 RMD160 (php-xcache/xcache-3.2.0.tar.bz2) = 1f5edb382b52d9e12bf1c6a9cb34870dcb8cb155
+SHA512 (php-xcache/xcache-3.2.0.tar.bz2) = 9d7bec73ac941c8e38b2cda15af65044291adc0806b39586048943515d67656d64871bea4ea05b3dff76761ebed462db2d6ad0e489079291abc55313b1508946
 Size (php-xcache/xcache-3.2.0.tar.bz2) = 148392 bytes

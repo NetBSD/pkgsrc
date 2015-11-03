@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2011/12/15 02:15:16 hiramatsu Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 03:28:25 agc Exp $
 
 SHA1 (Log-Dispatch-Config-1.04.tar.gz) = 6f49cc49010a2124ae93c1b8370d52ab5958647b
 RMD160 (Log-Dispatch-Config-1.04.tar.gz) = 12202057ebf73d4da94933fc873ea1cfb9e7a262
+SHA512 (Log-Dispatch-Config-1.04.tar.gz) = 827b767806b206f244955f8f57b7206f84aac75012ec6443fb0c427e0fb0e52cad112cc012bd5c43a1e4a82d9fd49adb7bd024130579754dbe0ad4a2218460ef
 Size (Log-Dispatch-Config-1.04.tar.gz) = 14002 bytes

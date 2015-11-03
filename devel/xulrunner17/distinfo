@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.17 2015/09/13 15:09:03 joerg Exp $
+$NetBSD: distinfo,v 1.18 2015/11/03 03:29:39 agc Exp $
 
 SHA1 (firefox-17.0.11esr.source.tar.bz2) = 593153bc2658be0bdf6d1361a079d4ce8fd516bd
 RMD160 (firefox-17.0.11esr.source.tar.bz2) = 9797f1553bf20008e62df2713a22c5844e7e3bdc
+SHA512 (firefox-17.0.11esr.source.tar.bz2) = 4f8440766b0643e3519c312c3897496086714c7ecabf9bdc1627b5fcaef5a2b24b2f2e9a2e1f5b850a10b398316161031ba497d9c22b3d7d5a1548ad15702f3f
 Size (firefox-17.0.11esr.source.tar.bz2) = 90701648 bytes
 SHA1 (patch-aa) = 31801b051004b2bf74ea9cc060d01def3becc1e3
 SHA1 (patch-ab) = b0d7975a291c63e07773e13b023f71e88c883128

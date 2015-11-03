@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/09/06 06:50:41 mef Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 03:28:47 agc Exp $
 
 SHA1 (Term-Cap-1.17.tar.gz) = 6420fdd4d60c46dabf0166f7da74577073523b00
 RMD160 (Term-Cap-1.17.tar.gz) = d33f41bb12b6b384bb56c9fe73fa44e64dd5a6bf
+SHA512 (Term-Cap-1.17.tar.gz) = 79278f0219a201378db801d688f25514fbf47b9fa4a9c631cd51d1ee6d4f49ee10674d37cf514274cdaec2bd13e5fdc7ba2f80c8623200d41590709cdf1b7047
 Size (Term-Cap-1.17.tar.gz) = 12724 bytes

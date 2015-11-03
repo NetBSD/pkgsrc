@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/04/25 01:19:28 mef Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 03:28:31 agc Exp $
 
 SHA1 (MooseX-App-1.33.tar.gz) = e83f871925a7c8237308188aa6020e883539d04f
 RMD160 (MooseX-App-1.33.tar.gz) = 8a425e387095358e2cedef0fa738905efec20b6c
+SHA512 (MooseX-App-1.33.tar.gz) = 48746b1d4ccfdc102e176f8c5327ba23e5d5a6c14eba36fadc6e9708f9b5edc41ba273fbb089c9d1a79f29e7d64d740f0b22d5f4ac5b89c92628a63d28235b23
 Size (MooseX-App-1.33.tar.gz) = 83776 bytes

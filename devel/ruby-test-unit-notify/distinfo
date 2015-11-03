@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2014/11/07 11:08:12 obache Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 03:29:31 agc Exp $
 
 SHA1 (test-unit-notify-1.0.4.gem) = 9fd090710b74b1f9c462c13e81a4ac739c0f152b
 RMD160 (test-unit-notify-1.0.4.gem) = 12174e4e1eab39bea05eb2c6a80fe001204f5e8a
+SHA512 (test-unit-notify-1.0.4.gem) = 8d2d48ad106d722389e55aa44fd5a84c02daefcab1a61c6860532492ee76d0451ce3872d6abc303d793d27269ca95a3a6b00f91eadec04a3e651316c3633fe5a
 Size (test-unit-notify-1.0.4.gem) = 107520 bytes
