@@ -1,4 +1,4 @@
-/* $NetBSD: pbuild.h,v 1.6 2011/11/27 19:53:30 joerg Exp $ */
+/* $NetBSD: pbuild.h,v 1.7 2015/11/03 19:06:47 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -114,6 +114,7 @@ struct build_job {
 extern int		 verbosity;
 
 void			 init_jobs(const char *, const char *, const char *);
+int			 has_job(void);
 struct build_job	*get_job(void);
 void			 process_job(struct build_job *, enum job_state, int);
 int			 build_package(const char *, size_t);
