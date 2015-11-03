@@ -1,7 +1,7 @@
-$NetBSD: patch-gfx_skia_trunk_src_opts_SkBitmapProcState__opts__arm.cpp,v 1.1 2015/10/16 12:59:36 jmcneill Exp $
+$NetBSD: patch-gfx_skia_skia_src_opts_SkBitmapProcState__opts__arm.cpp,v 1.1 2015/11/03 15:52:57 ryoon Exp $
 
---- gfx/skia/trunk/src/opts/SkBitmapProcState_opts_arm.cpp.orig	2015-09-29 21:44:50.000000000 +0000
-+++ gfx/skia/trunk/src/opts/SkBitmapProcState_opts_arm.cpp
+--- gfx/skia/skia/src/opts/SkBitmapProcState_opts_arm.cpp.orig	2015-10-22 22:30:24.000000000 +0000
++++ gfx/skia/skia/src/opts/SkBitmapProcState_opts_arm.cpp
 @@ -97,7 +97,11 @@ void SI8_D16_nofilter_DX_arm(const SkBit
              "2:                                        \n\t"
              : [xx] "+r" (xx), [count8] "+r" (count8), [colors] "+r" (colors)
