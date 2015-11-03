@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.38 2015/05/23 11:52:46 kefren Exp $
+$NetBSD: distinfo,v 1.39 2015/11/03 21:34:07 agc Exp $
 
 SHA1 (libgdiplus-3.12.tar.gz) = 7f7d2b82c0d755bb854fd76d0d62120cdde35d8c
 RMD160 (libgdiplus-3.12.tar.gz) = 23837bce58c2f6082b1455edebad5b7a0c95e842
+SHA512 (libgdiplus-3.12.tar.gz) = 12c58e7ad99e5aa7caf19f64f47bddd399648292f3c2b9ade64e9051b0495bb8772af8ca9cdb6cb664d20c845d7136f028e10e659548bffd35e7604548bb8743
 Size (libgdiplus-3.12.tar.gz) = 688120 bytes
 SHA1 (patch-src_gifcodec.c) = 24e33c94595355fe5762b9488d10187541e97713

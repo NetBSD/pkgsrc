@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/05/01 20:47:53 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:05 agc Exp $
 
 SHA1 (jpegquality-20070802/jpegquality.txt) = 3070097dc5e8518f3409fe70c5ff1e422971db64
 RMD160 (jpegquality-20070802/jpegquality.txt) = 4e55a990e987406cdac0881ff5be94e3235f5318
+SHA512 (jpegquality-20070802/jpegquality.txt) = a4b42f50667543867c4acb5f109e0dd372ddebc1a4c8693a128ebb223e294531bc9c9da6f54c41cbe4db6dd868125b3dc8147fbb819ea73cc28cf7daec67e830
 Size (jpegquality-20070802/jpegquality.txt) = 9661 bytes

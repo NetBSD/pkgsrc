@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 13:47:42 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:32 agc Exp $
 
 SHA1 (tex-textpath-15878/textpath.doc.tar.xz) = 8f5975806a830087b9a48b90841dc6740616e574
 RMD160 (tex-textpath-15878/textpath.doc.tar.xz) = a17e8590cb210654b046422eb3e642caf7d1bff1
+SHA512 (tex-textpath-15878/textpath.doc.tar.xz) = 9ce1ca59782395075dbf2ca9659026a0608b6d52e20a49a04d9fb63ad52a600d689bf6a9a5d3a4a771ca9a1ea2c27cbe3a84a64277864880815926b17501a6e6
 Size (tex-textpath-15878/textpath.doc.tar.xz) = 237644 bytes

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2013/04/30 22:34:30 joerg Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 21:33:59 agc Exp $
 
 SHA1 (gimmage-0.2.3.tar.gz) = 732dee063553b787b65a0a5bd3d207bdb5d01df1
 RMD160 (gimmage-0.2.3.tar.gz) = d3fd105390e21548cf9c83b199681b53616f3640
+SHA512 (gimmage-0.2.3.tar.gz) = ff8fdf860d4712502e6e8656a14e5327a5b89af49f312e54de5f0e80cd6e406214a61228c79ad643c2640268d5eacfd760c83acbebdc7fa9b6e7c094728be167
 Size (gimmage-0.2.3.tar.gz) = 193777 bytes
 SHA1 (patch-aa) = ddb740f723e266d8fc6b37743ef43e6c1095c7ab
