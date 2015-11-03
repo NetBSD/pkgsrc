@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/04/05 18:13:17 drochner Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:20:21 agc Exp $
 
 SHA1 (folks-0.4.2.tar.bz2) = 8c08c13880be3c73ebaebfbd786e6ca28c6d3fe1
 RMD160 (folks-0.4.2.tar.bz2) = 8807ec65c809ca84e0f42902ed65ad8bf84b0772
+SHA512 (folks-0.4.2.tar.bz2) = a8bcee058dc85e845814f4d5a86a2c692fee60a3adcc67d830546f7f065348dfa9217b47098c89721fd77103fe5fdda82421732651653e7c3e3f3566dc09769b
 Size (folks-0.4.2.tar.bz2) = 610469 bytes

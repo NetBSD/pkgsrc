@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 15:59:13 agc Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 01:20:25 agc Exp $
 
 SHA1 (tik-0.90.tar.gz) = b8f8635ede8680c88c250e933a5a29d2b76ea1b6
 RMD160 (tik-0.90.tar.gz) = 235eb57a9d894af18c61144d1ee4a2bd88a170ad
+SHA512 (tik-0.90.tar.gz) = fb6a7282f92932cd8a0ddd83a81f1d50d948a17fdc546723c6f7dab7a5a51b81217fb11752ba390fd54694ac8b9ded98a3d640cdd93579596769827fcd50f384
 Size (tik-0.90.tar.gz) = 265956 bytes
