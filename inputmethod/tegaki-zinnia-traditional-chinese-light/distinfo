@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/08/07 13:02:19 obache Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 22:13:41 agc Exp $
 
 SHA1 (tegaki-zinnia-traditional-chinese-light-0.3.zip) = efc46540e0e7c382bac22c6c65be1962c9bc58b5
 RMD160 (tegaki-zinnia-traditional-chinese-light-0.3.zip) = 5d444a74c5aa54833c115dcd21a00a18926c45af
+SHA512 (tegaki-zinnia-traditional-chinese-light-0.3.zip) = 45a5a1c85e45f8e2ee85e9c39e749370f35f2dcbe5987c9b86239c14932fa4cdff6416579ac5a0f6414c5f5eabfaf2d8bd4426f27c73e2c8a3fc06c12cedf854
 Size (tegaki-zinnia-traditional-chinese-light-0.3.zip) = 12600387 bytes
