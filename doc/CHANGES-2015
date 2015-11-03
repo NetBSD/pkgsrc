@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4455 2015/11/03 15:53:36 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.4456 2015/11/03 16:02:35 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7628,3 +7628,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/sane-backends to 1.0.25nb1 [leot 2015-11-02]
 	Updated lang/openjdk8 to 1.8.66 [ryoon 2015-11-03]
 	Updated www/firefox to 42.0 [ryoon 2015-11-03]
+	Updated www/firefox-l10n to 42.0 [ryoon 2015-11-03]
