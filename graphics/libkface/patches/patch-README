@@ -1,0 +1,18 @@
+$NetBSD: patch-README,v 1.1 2015/11/03 20:28:57 markd Exp $
+
+opencv3 support. https://bugs.kde.org/show_bug.cgi?id=349601
+
+--- README.orig	2015-09-03 21:22:44.000000000 +0000
++++ README
+@@ -21,6 +21,11 @@ libqt      >= 4.6.x                    h
+ libkde     >= 4.4.x                    http://www.kde.org
+ libopencv  >= 2.4.9                    http://opencv.willowgarage.com/wiki    (with opencv 'haarcascades' data files)
+ 
++CMake compilation options to custom libkface:
++
++Use CMake "-DENABLE_OPENCV3=on"        flag to compile libkface source code using OpenCV3 instead OpenCV2 (disabled by default).
++                                       OpenCV3 support needs extra contrib modules package, especially 'face' ands 'legacy' components.
++
+ -- INSTALL ------------------------------------------------------------
+ 
+ In order to compile, especially when QT3/Qt4 are installed at the same time,
