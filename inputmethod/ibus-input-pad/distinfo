@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2013/12/29 06:45:14 obache Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 22:13:35 agc Exp $
 
 SHA1 (ibus-input-pad-1.4.2.tar.gz) = d3ea0327b0e0ba6ecd6ecc8ff11307e79a3e7650
 RMD160 (ibus-input-pad-1.4.2.tar.gz) = 5c098dccf2014c9901b17471932505193d8b1779
+SHA512 (ibus-input-pad-1.4.2.tar.gz) = a486936a6cb6b1c34fe3d81ea45611987769ca804a16274a2abf637be7647a829d91573223d2e22d753c4c1a3f364ce633499ee36ab9de45c43c9ef563f14061
 Size (ibus-input-pad-1.4.2.tar.gz) = 402952 bytes

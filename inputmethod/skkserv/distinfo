@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2013/03/10 18:53:31 hiramatsu Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 22:13:40 agc Exp $
 
 SHA1 (skk/skk9.6.tar.gz) = f462b4586dff6e36bfe331a526e054c3f6c3aad9
 RMD160 (skk/skk9.6.tar.gz) = af182063e92f993cd2d9a69d7f89109ef0631526
+SHA512 (skk/skk9.6.tar.gz) = e3cc03a9b6e0d5be6bcd7dbb2452b0f932850fff7602c865edd4e730b8047aaa10db01571e845bcf567dcfdc6829a7ed2295e1dda40eaaa92fa6b27d9b3abf41
 Size (skk/skk9.6.tar.gz) = 2407653 bytes
 SHA1 (patch-ab) = 5103484679c5d82a8d79460cc24e8857fc89460a
 SHA1 (patch-ac) = 3a1818c3bb453b69eb23154ed0daa6909275774b

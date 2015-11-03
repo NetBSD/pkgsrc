@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.7 2015/10/18 06:44:38 tsutsui Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 22:13:36 agc Exp $
 
 SHA1 (kinput2-v3.1-canna37.diff) = 034a0aa18f364e7736adf6faef604525a27fa9c7
 RMD160 (kinput2-v3.1-canna37.diff) = 83091381f95eff6dd001b4d1f6f962acc7bfa813
+SHA512 (kinput2-v3.1-canna37.diff) = d7047eb1861b68abe9265a6b99b7953ea3405e01c2d24899e7da925b9781b1e318fd9d5262b03e3c54f4b7e85cceb2c295decad8287c337f173e986c1b1e1584
 Size (kinput2-v3.1-canna37.diff) = 993 bytes
 SHA1 (kinput2-v3.1.tar.gz) = 48050f70e7c0cc67193ea260f8d7f6e822a02ca3
 RMD160 (kinput2-v3.1.tar.gz) = c56684769859bbee5f8238cd1af061796ff931e8
+SHA512 (kinput2-v3.1.tar.gz) = 5950f7294fa2bf915e6591290a3deb2c95f27706f3a180a084d14fbc008f3cf363b155b29c8103a8b999e44ae98182ff35bcfda85725b2c565f3e37f54788731
 Size (kinput2-v3.1.tar.gz) = 512177 bytes
 SHA1 (patch-Imakefile) = 2ec731b5ff7ef4cac3497c60b179e0f1ce0a4a05
 SHA1 (patch-aa) = 3eaca25000c756d71fcafbb09a8ad8fd15142437

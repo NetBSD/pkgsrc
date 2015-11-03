@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/08/07 13:01:53 obache Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 22:13:41 agc Exp $
 
 SHA1 (tegaki-zinnia-traditional-chinese-0.3.zip) = a1683a302c607e4e3207c1cc45234f93126f02df
 RMD160 (tegaki-zinnia-traditional-chinese-0.3.zip) = 2c60bd55559090b282f36eb47ec573a888021773
+SHA512 (tegaki-zinnia-traditional-chinese-0.3.zip) = 42dd3486b121e8bd0d6bcf18805343f4fad586d528953b5c9dc28e682593f309dbea3007e359f6fc2130c5a211a7155930076bcc2bf1ea28f177cc336b9672bf
 Size (tegaki-zinnia-traditional-chinese-0.3.zip) = 36773128 bytes

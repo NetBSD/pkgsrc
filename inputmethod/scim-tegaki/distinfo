@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/08/08 01:09:36 obache Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 22:13:39 agc Exp $
 
 SHA1 (scim-tegaki-0.1.tar.gz) = 4529c769ace555927bc17e165dc688aceeef50bc
 RMD160 (scim-tegaki-0.1.tar.gz) = 3816621c00df8a1bfd9287eba13190d0320a08d9
+SHA512 (scim-tegaki-0.1.tar.gz) = a336aca8a01dfb0b8a3d135658bd24055a9c90b26eae8ed3b34adebd160e2766e1f2404679d5611de8814fd26f885b03cdcc6f6d9c0b3d5df78e29804dbadb14
 Size (scim-tegaki-0.1.tar.gz) = 11528 bytes

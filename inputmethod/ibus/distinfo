@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.15 2015/07/31 13:03:45 ryoon Exp $
+$NetBSD: distinfo,v 1.16 2015/11/03 22:13:34 agc Exp $
 
 SHA1 (ibus-1.5.11.tar.gz) = b8dbc12cc90c3e7ec036d7098bc661b26630242a
 RMD160 (ibus-1.5.11.tar.gz) = 5a6bbe9dae98d9114402ca82b207c775dee3f94a
+SHA512 (ibus-1.5.11.tar.gz) = 7745a06a4dc9502a957bdfa7faba3e6ff857ee102f34acfbc5d1c8ca5935eaf5660ebe6d837ee7bae584818c08a1769cf8a9daa012f87d43a1f10917c04615c2
 Size (ibus-1.5.11.tar.gz) = 2177026 bytes
 SHA1 (patch-client_gtk2_ibusimcontext.c) = 31e72d06884858476097f04591004ce46b6074c1
 SHA1 (patch-client_gtk3_ibusimcontext.c) = 543192191d14d61ae3e193de6ffda7b099969a1a

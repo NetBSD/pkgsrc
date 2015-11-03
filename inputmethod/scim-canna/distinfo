@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/11/24 11:50:45 obache Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 22:13:38 agc Exp $
 
 SHA1 (scim-canna-1.0.1.tar.gz) = e8572d829e5f28a5623518475ce07dadd3754793
 RMD160 (scim-canna-1.0.1.tar.gz) = d8858f86e4e955c27473af846ccb55a409f24dc0
+SHA512 (scim-canna-1.0.1.tar.gz) = 711b67211c9d1f4cb8ca09b88d455718607aa2d99e47a753fa8d71d2e1f0df8c649b64d08149785eeaa98d1399b9ca92e3df7e1be8f150ce99f28f82491b8bc1
 Size (scim-canna-1.0.1.tar.gz) = 516186 bytes

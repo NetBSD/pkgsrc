@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/05/20 09:11:07 obache Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 22:13:42 agc Exp $
 
 SHA1 (zinnia-tomoe-0.6.0-20080911.tar.bz2) = 43067ee3c7e6b216ab37652dfb6a3cd6a43ab7ed
 RMD160 (zinnia-tomoe-0.6.0-20080911.tar.bz2) = 5c9e43bb2c5175213d7e5db5ef3322df40f9b461
+SHA512 (zinnia-tomoe-0.6.0-20080911.tar.bz2) = 5c5cf06de46b8feebebca38d8ee4908af1d58f921e30bbbf92b9e5b79acb37e9c78466a1771dc01ddabe4740a0f03f41c50dce55fc38a414b582a1b4708886f5
 Size (zinnia-tomoe-0.6.0-20080911.tar.bz2) = 30666390 bytes

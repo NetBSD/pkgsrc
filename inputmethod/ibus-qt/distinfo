@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2014/04/30 06:53:18 obache Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 22:13:35 agc Exp $
 
 SHA1 (ibus-qt-1.3.3-Source.tar.gz) = 3711d9099ac97d1b3bc7313080a016caa04ae66e
 RMD160 (ibus-qt-1.3.3-Source.tar.gz) = 376b8c4e73306758666e526ac10306b2e1dafb6f
+SHA512 (ibus-qt-1.3.3-Source.tar.gz) = 5d499f217442c34f4a94914d01795f06f1094d1c9e9c5160b25f57f95f31b449e25e00969ef54f90f79e810c6b80ce090123cee9f45732e07ffc9d07b5bc78d4
 Size (ibus-qt-1.3.3-Source.tar.gz) = 144004 bytes
 SHA1 (patch-src_qibusserializable.cpp) = b9227830b1d189bf584dcb1b8cc28551ce76e5c1

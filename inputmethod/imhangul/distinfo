@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.8 2011/11/10 10:51:33 obache Exp $
+$NetBSD: distinfo,v 1.9 2015/11/03 22:13:36 agc Exp $
 
 SHA1 (imhangul-2.0.0.tar.bz2) = 0e12088f6eae4703b22be88251e3dc6546d8fb11
 RMD160 (imhangul-2.0.0.tar.bz2) = 196d05c164d446d65be11ba99263eaf25e2fbafc
+SHA512 (imhangul-2.0.0.tar.bz2) = 203d83ec714ee464d3caa304a462a93129712d2221188a4f5cbb1caac309fb91f3b49749ab81d01d3c8bc2feeaf80398e9b8bc5e09b79c228fbc13ed9fbc28d3
 Size (imhangul-2.0.0.tar.bz2) = 255591 bytes
 SHA1 (patch-aa) = 866f9183fc2e075ab6d00545f577950c6d58cdb2
