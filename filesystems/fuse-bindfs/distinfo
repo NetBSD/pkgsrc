@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/02/01 13:36:43 jmmv Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 00:15:00 agc Exp $
 
 SHA1 (bindfs-1.8.4.tar.gz) = c42606fe69239d372fb8ca274b1dcee21f750b00
 RMD160 (bindfs-1.8.4.tar.gz) = 3a9a4041eb66acda02ff5097dc13d376abbb6c76
+SHA512 (bindfs-1.8.4.tar.gz) = ff65a4cfe5d05ac43ca19e8b54a9d17e0e7202b8c46082251dcf4805dc28a41865014dd9cde1367cd66ca1cc171f81e3f79eb643fb206cbaf0cbb4353985809c
 Size (bindfs-1.8.4.tar.gz) = 305725 bytes
 SHA1 (patch-aa) = 72053cb69ae5002c4b6cae562e3331c566a6b392

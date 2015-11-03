@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2014/11/24 13:19:12 mef Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 00:15:00 agc Exp $
 
 SHA1 (fuse-2.9.3.tar.gz) = 94bd1974a9f2173ac3c2cf122f9fa3c35996b88e
 RMD160 (fuse-2.9.3.tar.gz) = a81f350842a43aa82cff2cb75e0bf9f5b123ad5a
+SHA512 (fuse-2.9.3.tar.gz) = 03f43f88694ec7e039ff3579a8e76349b5a5a05872c55901fc1d9ee53dbb6b1e69f6dd0005b620f3b5ead0b14da8eeb31d46b922d10f88f4e3f830aa47e8162c
 Size (fuse-2.9.3.tar.gz) = 572044 bytes
 SHA1 (patch-aa) = 1179876c7a4f230d8df8a7a6724b90779c9fa0e3
