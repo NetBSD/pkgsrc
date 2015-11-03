@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/10/28 09:14:41 obache Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 22:50:40 agc Exp $
 
 SHA1 (Switch-2.16.tar.gz) = 2737a2b5e64a9d715528fa50a8d967710106220e
 RMD160 (Switch-2.16.tar.gz) = 0b93b8ecea9d2e83d757e95fb4056d6b706b1f60
+SHA512 (Switch-2.16.tar.gz) = 614916c3b813c5cc279e592778d24b4213218acbb94fb842b99969475d356f44f451d0ad7fd18b28899a38bdb070e491d32e22c7ee87bc45668606b9cb413f88
 Size (Switch-2.16.tar.gz) = 13185 bytes
 SHA1 (patch-Switch.pm) = f1bde131fcb5ef85e4f888f7fde7f6b0417318d6

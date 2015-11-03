@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.22 2015/10/07 10:36:54 sevan Exp $
+$NetBSD: distinfo,v 1.23 2015/11/03 22:50:34 agc Exp $
 
 SHA1 (g95_source.tgz) = b5e503fd6459b65cbda73190685f9490230d9cff
 RMD160 (g95_source.tgz) = 98d03e9a1835f4b3553a72a798bdf1d90a757176
+SHA512 (g95_source.tgz) = b464efd6a36bfe3cc63234d82db1f22d3f023bd3e25e6f86569c5bbb9a27fbf142f53c8dd789080a912087230ddabca5ffd324cc4125f8c96acfa367d2f0024f
 Size (g95_source.tgz) = 1355198 bytes
 SHA1 (gcc-core-4.1.2.tar.bz2) = d6875295f6df1bec4a6f4ab8f0da54bfb8d97306
 RMD160 (gcc-core-4.1.2.tar.bz2) = 612cbd5b795f7095fb3f565e6a8eaaee82c472c5
+SHA512 (gcc-core-4.1.2.tar.bz2) = 002a2025f809781e8d427c00dfe884429ae094ad417edc3393f5bae249ae6049ea0c27e43caf51f9f15525bd35e24ad2c993c57f191b9196fdb68fd20e503f6e
 Size (gcc-core-4.1.2.tar.bz2) = 17485561 bytes
 SHA1 (patch-ab) = 7429a4da26aa573dcdd94bf417da1e009f95d273
 SHA1 (patch-ac) = b20a90cc2f9078cf0048980b75fa6836da0f28a8

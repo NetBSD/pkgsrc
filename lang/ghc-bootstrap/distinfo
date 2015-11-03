@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.1 2013/12/15 02:00:07 dholland Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 22:50:36 agc Exp $
 
 SHA1 (ghc-6.8.3-src.tar.bz2) = f908b0e0293014dde587abd8c7912eb490f9b3d2
 RMD160 (ghc-6.8.3-src.tar.bz2) = 415cd144f0641a0c5887ad7325e2e775e93044f0
+SHA512 (ghc-6.8.3-src.tar.bz2) = bd1c24cb4b62dbad6a5b7ff93a77cc5462cd2c633a4ea5bc070a97409762afd9d0a2c65957e37efb4130ded1dc604f409754f0e9eb9a09cf8b3ce5bbd6d19f92
 Size (ghc-6.8.3-src.tar.bz2) = 7092076 bytes
 SHA1 (patch-ac) = 65ba6ec7a78d938af965ebc07aa65fc00fb6b5ce
 SHA1 (patch-ad) = 3d1e88785651dedf582b53e54e4aac6dcf278a2e

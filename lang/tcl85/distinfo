@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.1 2014/03/10 14:20:44 taca Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 22:50:45 agc Exp $
 
 SHA1 (tcl8.5.15-src.tar.gz) = ff20698d7f77617ea179ec225300f4ea4a905299
 RMD160 (tcl8.5.15-src.tar.gz) = 17f570c0f44da5cb49b4b7c56273544bad7b5a76
+SHA512 (tcl8.5.15-src.tar.gz) = 44c8a975ffaeca1f954fbc160fed966064340b5de883e53321691c6c457283716c4ab5c87c7c754ff5c1bd293d46eb14bbf356a0bf6a5ed0078d8789703df3df
 Size (tcl8.5.15-src.tar.gz) = 4536117 bytes
 SHA1 (patch-generic_tclInt.h) = 2e83a0345bc7f87b2a0196d2c2d8d2462b28fbd6
 SHA1 (patch-generic_tclPort.h) = 2b1d78456b23206e5431a696f271d5ecebac7b52

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/09/13 11:16:18 sno Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 22:50:40 agc Exp $
 
 SHA1 (nqp-2013.08.tar.gz) = ae2977b9b6e7c09077f032684cdaeeb1367d9ccc
 RMD160 (nqp-2013.08.tar.gz) = 5f9f803d7c610ec60b383496d334f1e282836024
+SHA512 (nqp-2013.08.tar.gz) = ebcb5865c2110798cbaf34e7e7ba27490f10230779016fe375af6c4c6f60cf6ee3a7ed2a40b6075412854875749e1a513f13b61cceda2915b824533628ce7d4d
 Size (nqp-2013.08.tar.gz) = 2693642 bytes

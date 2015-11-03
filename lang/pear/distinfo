@@ -1,17 +1,22 @@
-$NetBSD: distinfo,v 1.21 2015/08/30 08:37:20 taca Exp $
+$NetBSD: distinfo,v 1.22 2015/11/03 22:50:41 agc Exp $
 
 SHA1 (Archive_Tar-1.4.0.tgz) = c6bc9abdc17e914e95ae306ad14d9a4ca43c8878
 RMD160 (Archive_Tar-1.4.0.tgz) = d267adb476732759d1844b69ee80e20d4c967a64
+SHA512 (Archive_Tar-1.4.0.tgz) = d15825f54fb286473e3d96be82818046cbe0cda40f0968ef9e03c7d620cd3ae5db23c93a764cbcb3fb3ca39f41cc6d4a4f782ee2718ffa47c83e1fd9a5aedba9
 Size (Archive_Tar-1.4.0.tgz) = 20018 bytes
 SHA1 (Console_Getopt-1.4.1.tgz) = a98e088c20b18524c8d254d25a5c9b6dd8e81853
 RMD160 (Console_Getopt-1.4.1.tgz) = 276e91dda93350a97ccddee4d35fd898f6dfd7c6
+SHA512 (Console_Getopt-1.4.1.tgz) = cbf12a72b33424935f019b17ae8fa55289eae77d3845dcfcbbc1c47b71111992d2c0eb837b0f262ce644809c3cc06ad0c2bb04aa1b6ec89a1e3122f327114dbd
 Size (Console_Getopt-1.4.1.tgz) = 5580 bytes
 SHA1 (PEAR-1.9.5.tgz) = 2f21309ac28eb416baab495b96032ca687e2d202
 RMD160 (PEAR-1.9.5.tgz) = acc02ed8bd571dc96182c6a6e57f703f9acc16aa
+SHA512 (PEAR-1.9.5.tgz) = 73c5ef84c4ededa7bca81b1d94944e80ddf9dc40101c0727c5975d4ddb72f66a28aecafcefb7af8d1cc3b6fa7e488e704559a7efbebe860adfb8e9796cdf4933
 Size (PEAR-1.9.5.tgz) = 290006 bytes
 SHA1 (Structures_Graph-1.1.1.tgz) = a27a6b3c9910675cff86be3a0d016f56f2c1750f
 RMD160 (Structures_Graph-1.1.1.tgz) = fb827a55b2bb78f207110a26e0bed032efe26365
+SHA512 (Structures_Graph-1.1.1.tgz) = cd4feb265e1aa05de348645dfc0b8e336486cb02c553dd8fcacb0a1eab452bf54108e07864395d55e0c92f4ffd338a5ae846b2dc28804bb23f03c91864ef0284
 Size (Structures_Graph-1.1.1.tgz) = 12402 bytes
 SHA1 (XML_Util-1.3.0.tgz) = 9dc8c10f93bf4b9fc5f2e63d93e5a14485ec9d95
 RMD160 (XML_Util-1.3.0.tgz) = b32763f33b41dc685eb224837634b540c4d90ab8
+SHA512 (XML_Util-1.3.0.tgz) = 751af0c2329bee53b6b374fc613ed8c388ace6b9d5246f7ecade0e74e5f41101bd14727e1bcd566d850aea5b336981daac92d6adb8d66dbe7425990460ef0633
 Size (XML_Util-1.3.0.tgz) = 17186 bytes

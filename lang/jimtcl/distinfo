@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/04/04 12:54:07 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 22:50:37 agc Exp $
 
 SHA1 (jimtcl/0.76.tar.gz) = b1564098f9e5ed1a5b50afdf4555471662648494
 RMD160 (jimtcl/0.76.tar.gz) = 7f8e6d4229de1444447863d79bd0651615cca59b
+SHA512 (jimtcl/0.76.tar.gz) = d652546a24eaff85511517e0083931cdc68848c2c41b446d8f5b728254f160dbe5ef06ad395c6043ceb4f46b03438b4c51a4ac0bd4fff61d437bec05249cae93
 Size (jimtcl/0.76.tar.gz) = 2234431 bytes
