@@ -1,13 +1,16 @@
-$NetBSD: distinfo,v 1.9 2010/02/01 02:37:56 joerg Exp $
+$NetBSD: distinfo,v 1.10 2015/11/03 21:33:51 agc Exp $
 
 SHA1 (Ngraph-6.3.30-src.tar.gz) = 81574241f35258bb14139c6ae57b28789f0d297c
 RMD160 (Ngraph-6.3.30-src.tar.gz) = 60de19f14d672cddcdb9452d7e40196f9b9b588c
+SHA512 (Ngraph-6.3.30-src.tar.gz) = e93f27a55b71b2cf7e0f7b83f7b9635103ac587edc501bf39163f5d8ec83972ef1a974e5237591742c008fb94c607201b428b5422f574b3088bed05a0bfda257
 Size (Ngraph-6.3.30-src.tar.gz) = 418984 bytes
 SHA1 (Ngraph-6.3.30-doc.tar.gz) = 7f641c7f274e17950e45a4f8a1131b5d05db848e
 RMD160 (Ngraph-6.3.30-doc.tar.gz) = f32a9ac386fefb6688775de110d209d99a39d60d
+SHA512 (Ngraph-6.3.30-doc.tar.gz) = ba5b45c450a2ef9a040e8896b49ee8098dd4bf4b67c011ae3323182a0d8c051a9017ac720d92cc3008f893d113946b88e14246153fb3ef784a9cc57e37db7bd0
 Size (Ngraph-6.3.30-doc.tar.gz) = 557066 bytes
 SHA1 (ileaf-widgets.tar.Z) = db0f6425f77bc3013b7aae163be558683661560e
 RMD160 (ileaf-widgets.tar.Z) = cf3f260ce294ef839da74f19d327257978b12b3f
+SHA512 (ileaf-widgets.tar.Z) = 5895878a3af0b3d67a5a5fb8439f75b8ae9899511e11c7215f71e72e7b6fe60909293e175aff0bcea0c81599be1f0622f2102cf79491a462fda64ff432362ebb
 Size (ileaf-widgets.tar.Z) = 70223 bytes
 SHA1 (patch-aa) = ad4ad58145a1d5523111c7e60a72c6c217f32bdf
 SHA1 (patch-ab) = f2e9df51aeed77ebd6670abf0e34650f006b8c28

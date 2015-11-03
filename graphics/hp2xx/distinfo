@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2006/04/04 14:45:45 jlam Exp $
+$NetBSD: distinfo,v 1.9 2015/11/03 21:34:03 agc Exp $
 
 SHA1 (hp2xx-3.4.4.tar.gz) = a168cbce5e0cea3859b404b9cbad372bd246af91
 RMD160 (hp2xx-3.4.4.tar.gz) = 61befd1a3a3aaa717826fec632dacc01e017edb8
+SHA512 (hp2xx-3.4.4.tar.gz) = ccfe4a23ca482471506e59d6d459ce3ed56d9d775613e3238bd82d11cf4ea0595bf57ff95b3bd22a674865ec7f07dc63c1bcf0deb2a430b7ae241734c7e57ccd
 Size (hp2xx-3.4.4.tar.gz) = 610330 bytes
 SHA1 (patch-ab) = 8c3f510708d4861b1e564eb7c51686cc15003f89
 SHA1 (patch-ad) = 82c123c227c7566e73137cda38f6807830e6cc5c

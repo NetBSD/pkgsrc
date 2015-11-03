@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.31 2015/10/13 14:37:42 joerg Exp $
+$NetBSD: distinfo,v 1.32 2015/11/03 21:34:11 agc Exp $
 
 SHA1 (opencv-3.0.0.zip) = 7b7cd6cb3b7bad537cacad04bb7aa264a897d545
 RMD160 (opencv-3.0.0.zip) = 7b4dff26502e71e6570c2452c35fd03a1982bc7e
+SHA512 (opencv-3.0.0.zip) = 108d0fdcc60b5688ebf61c930fb965ec81f0d3c36bb1797f6cc571fac35331f540773207fd1cb81b12c05c8f4d1af20c4a2452d9f75cd0cae4acd8131be92375
 Size (opencv-3.0.0.zip) = 100980799 bytes
 SHA1 (patch-3rdparty_ippicv_downloader.cmake) = 8d99b26a39aa184a4dfc03e4928ea7b7b62e71d9
 SHA1 (patch-cmake_OpenCVDetectCXXCompiler.cmake) = 221b0551d0f29d7e79afe3da8a33b1b3a4f7bf20

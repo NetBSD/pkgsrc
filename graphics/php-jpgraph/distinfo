@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2005/06/14 11:25:09 adrianp Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 21:34:14 agc Exp $
 
 SHA1 (jpgraph-1.18.tar.gz) = a4f42daf706a3ce6d0fccb1850a956d9fe5a8fbd
 RMD160 (jpgraph-1.18.tar.gz) = 72243e8eb7469537b8e84b2e92f7216753fb9208
+SHA512 (jpgraph-1.18.tar.gz) = 9c652eef61d8fa8894719f4bd69fa1b1b78c3c780926ee3221ff7ea330667523c0e51c2e979f3aa3fa3c5a8e780a568ebd2395542da3c490c7097250d287d8a6
 Size (jpgraph-1.18.tar.gz) = 4065908 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/06/16 23:24:13 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:23 agc Exp $
 
 SHA1 (tex-eepic-15878/eepic.tar.xz) = 76c69962083add335800c5940de8e86e445cdb26
 RMD160 (tex-eepic-15878/eepic.tar.xz) = de4949e0445300763548abbab818e7c16bb16a5c
+SHA512 (tex-eepic-15878/eepic.tar.xz) = 4bad524961023bb7a21092e3510f0614cb5eea4442d8eddb398951ad82293f53916d43a130270a225c60d7c7f192d5448791c3997e43afbaf1f6b6e8cde1d89e
 Size (tex-eepic-15878/eepic.tar.xz) = 11732 bytes
