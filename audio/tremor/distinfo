@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2012/01/11 20:58:09 hans Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 01:12:53 agc Exp $
 
 SHA1 (tremor_snapshot_030406.tgz) = f0df8d70e2aad9a345716b551ead826434134f39
 RMD160 (tremor_snapshot_030406.tgz) = 34eebdf9a74f729ae0319c9e8d8b707642f5d002
+SHA512 (tremor_snapshot_030406.tgz) = 8dbf9abea4dfe09f011b292edd32cee8845c95df3d6571bb67e6f72e77742ec8bdb7c8d49c5a57e0e263c31839a065ddd1910eda3321d73f23fca7f8567700cd
 Size (tremor_snapshot_030406.tgz) = 151981 bytes
 SHA1 (patch-misc.h) = ebe129d13d711d238b7f1e7c52e55804b040fa86

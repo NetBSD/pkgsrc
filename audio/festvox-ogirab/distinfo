@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 20:39:45 agc Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 01:12:30 agc Exp $
 
 SHA1 (voice_ogirab_di-2.0.tar.gz) = 1777a144d3dff405ac4cd1331ac836c6ddbc556c
 RMD160 (voice_ogirab_di-2.0.tar.gz) = 2b94bd98663598230de50fdade85e56a8bb98af3
+SHA512 (voice_ogirab_di-2.0.tar.gz) = f040bc9d578e7413566dd19b49a0fe6661105180fed46e6ee4da3e81e5d995ca51c25c3bdbc8e329abff6948039271fe7df2196b93a4f6ee624d87d011cce23b
 Size (voice_ogirab_di-2.0.tar.gz) = 4496890 bytes

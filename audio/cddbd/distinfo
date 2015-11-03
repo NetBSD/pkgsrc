@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.8 2011/08/28 22:30:17 dholland Exp $
+$NetBSD: distinfo,v 1.9 2015/11/03 01:12:26 agc Exp $
 
 SHA1 (cddbd-1.3.1.tar.gz) = 2e8ab932750e54e6058edbcc6107835c9be7840c
 RMD160 (cddbd-1.3.1.tar.gz) = a2b666407db9d6415f430a9df8ef4a96fa24572c
+SHA512 (cddbd-1.3.1.tar.gz) = 73c649d123cc3616c4df7af3ecd47b7a2d431b25d98bca6afd0a7703fdfbc2e9273bcd9d0eba81f8ab486b9f81241af8688e266456657fb56a453da8af21d051
 Size (cddbd-1.3.1.tar.gz) = 93959 bytes
 SHA1 (cddbd-1.3.1.patch1.gz) = 08a96dac6c95cf6c289922215be6e6c99cd9f49e
 RMD160 (cddbd-1.3.1.patch1.gz) = 6e0343ded77336cec190682581ad8b9ee78f46d8
+SHA512 (cddbd-1.3.1.patch1.gz) = c65c7bc8e803ee6355c2c6c14647f10fd5446beb5b3c6e491a73d1ac1fa6470622a9280fe415a5cdb1b47d6168fbe0037c2f1a41ad8d1eeba5c85717bfa8ef21
 Size (cddbd-1.3.1.patch1.gz) = 416 bytes
 SHA1 (patch-aa) = 2402782d37dbe92c1ff8a1a7106b5ca04146292e
 SHA1 (patch-ab) = defcebf777b5eae603074dc56afe597c456cc211

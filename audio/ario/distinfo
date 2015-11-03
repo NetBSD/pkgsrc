@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2012/05/06 19:06:21 dholland Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 01:12:25 agc Exp $
 
 SHA1 (ario-1.5.1.tar.gz) = 99c1ae6318a596cd27ac3c38ad25bc716527a94d
 RMD160 (ario-1.5.1.tar.gz) = dfc819cf46a80e822aa3b654c334d8cbaddb3b9d
+SHA512 (ario-1.5.1.tar.gz) = 78c3d881d51c3109b73252da0742da2a77bcc24ec21ff2ff02fd3527d62d49a75e412bf092051a9035863d645cba73e6cd2fc674d97629909b931ae9d3ec002b
 Size (ario-1.5.1.tar.gz) = 1135444 bytes
 SHA1 (patch-src_ario-profiles_h) = 5610730865e843beeba09257ce5db1db3160359f
 SHA1 (patch-src_ario-util_h) = d376e424d948c0545e2238466e3fbd229cde3325

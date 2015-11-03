@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2007/05/23 11:13:42 rillig Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 01:12:35 agc Exp $
 
 SHA1 (icecast-1.3.12.tar.gz) = bacb760390453718de536b85979ff3a9a73c7710
 RMD160 (icecast-1.3.12.tar.gz) = 7b576dbc16103c01b5393880ab51c532662334a9
+SHA512 (icecast-1.3.12.tar.gz) = ccc9c4673e842b3215685e1ac6135f891a76a4ea5033def84a3be5b64be8e33d641627cc28f99dedbcd0671d291e7f21ece6654a3e3dd7c1e6c486a289cba339
 Size (icecast-1.3.12.tar.gz) = 269822 bytes
 SHA1 (patch-aa) = 169202f563e4e2812d8d532264dcdb4f9ffc8df2
 SHA1 (patch-ab) = 5d85c8718fba45120bcc3879ca7b2bc718c1c216
