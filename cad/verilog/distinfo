@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.19 2015/02/18 20:12:02 joerg Exp $
+$NetBSD: distinfo,v 1.20 2015/11/03 00:21:19 agc Exp $
 
 SHA1 (verilog-0.9.7.tar.gz) = 714c2a605779957490cca24e3dc01d096dbc1474
 RMD160 (verilog-0.9.7.tar.gz) = 3bac03ca703465a43c5a0a8175a3d27ee00f49a7
+SHA512 (verilog-0.9.7.tar.gz) = 1a81f132c667f5cd33a11156364a366806ef9b6ef59b86f69df852af79cc92db17df8db0bace4e3c14929b0110df0aa7d83f35f664057e715842acf7bd21c1f5
 Size (verilog-0.9.7.tar.gz) = 1238088 bytes
 SHA1 (patch-aa) = cf075110416f6db0892129796cd83b8ae8de55fa
 SHA1 (patch-ad) = bf7d227ed3b321021d8aff54cd008f4b2a1557b9

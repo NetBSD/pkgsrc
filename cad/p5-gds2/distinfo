@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/08/25 01:57:38 mef Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 00:21:18 agc Exp $
 
 SHA1 (GDS2-3.33.tar.gz) = be8c03f5d39be3a6f4c148fccb60503bd468ff71
 RMD160 (GDS2-3.33.tar.gz) = 12476022e6be9b008e7f5b030d765993d501376b
+SHA512 (GDS2-3.33.tar.gz) = 91af89a0b5ffe34a31df166576c2bb6fe1c937d15dfce0ac2d05eb34c6bea4934db222c7eccaa8128893b41301be57c99616e3bfb3c68a34276ebdd8ef9548d5
 Size (GDS2-3.33.tar.gz) = 49063 bytes
