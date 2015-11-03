@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4457 2015/11/03 16:42:08 jperkin Exp $
+$NetBSD: CHANGES-2015,v 1.4458 2015/11/03 16:51:37 agc Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7630,3 +7630,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/firefox to 42.0 [ryoon 2015-11-03]
 	Updated www/firefox-l10n to 42.0 [ryoon 2015-11-03]
 	Updated lang/openjdk7 to 1.7.80nb1 [jperkin 2015-11-03]
+	Updated security/libnetpgpverify to 20151103 [agc 2015-11-03]
