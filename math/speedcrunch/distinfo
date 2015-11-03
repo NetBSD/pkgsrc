@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/02/03 14:09:17 drochner Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 23:33:44 agc Exp $
 
 SHA1 (speedcrunch-0.10.1.tar.gz) = 385828ae8900dd4caee7fa437a2fb35f224d540a
 RMD160 (speedcrunch-0.10.1.tar.gz) = 1a3b81d979b95a0c88e65add28736e5960c19bad
+SHA512 (speedcrunch-0.10.1.tar.gz) = cafd2dc80d4925e0228648883e0117dfe8f7f80b715fc1a97586c19d4f5790833d422aacc117f5beafc18918c116004cb8fce5701b801280f1e9e74a5933d037
 Size (speedcrunch-0.10.1.tar.gz) = 1722124 bytes
 SHA1 (patch-aa) = ca2f19a98b74fa5d8f2250c6914b72c68f2b73aa

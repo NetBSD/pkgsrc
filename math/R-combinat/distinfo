@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2011/11/06 22:24:45 mishka Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 23:33:28 agc Exp $
 
 SHA1 (R/combinat_0.0-8.tar.gz) = e6304b28245ee27747ded378406f64c106e8389b
 RMD160 (R/combinat_0.0-8.tar.gz) = eee75e95af8ada7987aa26336a1faa34aad5a2ca
+SHA512 (R/combinat_0.0-8.tar.gz) = 4fd5d354f7c48b56ad918e666b04d36a7ee56cfd699a5c2b60dae4908de448403b3f71884a4ac7769eb4df4354c749fc15d0fecb648c16e65bf670d2a709e625
 Size (R/combinat_0.0-8.tar.gz) = 7973 bytes
