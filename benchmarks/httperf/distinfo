@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2014/11/26 02:11:16 mef Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 00:25:50 agc Exp $
 
 SHA1 (httperf-0.9.0.tar.gz) = 2aa885c0c143d809c0e50a6eca5063090bddee35
 RMD160 (httperf-0.9.0.tar.gz) = 59580cf5e876b18e69ffb69214c97fbc524be749
+SHA512 (httperf-0.9.0.tar.gz) = 58ea6a3b8a82181a89e5df22fdf18d5be8c7b533c404108702cc03fc727fb1599a43e620d83d41630f8a951d80e48ed99d0c3dd8469ee1fc7626449b777971e1
 Size (httperf-0.9.0.tar.gz) = 425297 bytes
