@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/12/17 17:32:33 taca Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:56:33 agc Exp $
 
 SHA1 (dm-sweatshop-1.2.0.gem) = 3e159e7fae38b2b3ced2526b69ef17c65e7cb68f
 RMD160 (dm-sweatshop-1.2.0.gem) = 8ee7fb6a78d5c5b9ab1a85c8e3660754c87a6bda
+SHA512 (dm-sweatshop-1.2.0.gem) = 6c7a00bf3d0e2f55316ed1c01b467db2d66ba95d86cc29e974e741ff0d72f7a3748fa95b1efbc72dfc5d916246db85242bf5a37f73b7af2143fa072f6372548d
 Size (dm-sweatshop-1.2.0.gem) = 15360 bytes

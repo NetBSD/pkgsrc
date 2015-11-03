@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.10 2015/07/07 11:45:52 joerg Exp $
+$NetBSD: distinfo,v 1.11 2015/11/03 01:56:15 agc Exp $
 
 SHA1 (mysql-workbench-gpl-5.2.33b-src.tar.gz) = 1d47598fb0f956ce1a0c6b1afb462e8d6beeb1ed
 RMD160 (mysql-workbench-gpl-5.2.33b-src.tar.gz) = 60213dd583da6034d5c4f7766b0a7dbafe57100c
+SHA512 (mysql-workbench-gpl-5.2.33b-src.tar.gz) = 55c88322947c010f732d1a316b1c0028e05b95c525ef47417f6d49a3d4b1814bb65515f659c591073472ad31e3d9384fa5845ef38c9bb8d19721003a7ad92e4a
 Size (mysql-workbench-gpl-5.2.33b-src.tar.gz) = 17873523 bytes
 SHA1 (patch-backend_wbprivate_model_wb__component__physical.cpp) = 710cfb3f90f1112536d86461291531cdbe25a61b
 SHA1 (patch-backend_wbprivate_sqlide_wb__sql__editor__form.cpp) = 11d65a32058c646602a6caecbef05883efad85c2

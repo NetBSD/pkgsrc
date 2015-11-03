@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2015/08/30 08:18:14 dholland Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 01:56:09 agc Exp $
 
 SHA1 (cdb-0.75.tar.gz) = 555749be5b2617e29e44b5326a2536813d62c248
 RMD160 (cdb-0.75.tar.gz) = d52288ee6df58fdc5a79efc16693cd5e305f9c65
+SHA512 (cdb-0.75.tar.gz) = 6faeab91a77457348b58f685e81000b83fb609691317198a06284c5c62dee1e4d6138f90be1e727021f279d740169c175a21b23c96adb39a654e3f7fafdf36c0
 Size (cdb-0.75.tar.gz) = 54162 bytes
 SHA1 (patch-aa) = 7e7a4e20ca36c3e773c729c0f0d751ac6340ccda
 SHA1 (patch-cdbmake.c) = 08dfa3ab166bb7467d022a0ea20cac9426f30368

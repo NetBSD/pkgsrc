@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2012/04/26 12:57:51 obache Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 01:56:27 agc Exp $
 
 SHA1 (pymssql-1.0.2.tar.gz) = e35b1a68285728cfe06b193c57c13059e65f5691
 RMD160 (pymssql-1.0.2.tar.gz) = 9130ac3e8a7e489470e8411750c07e91a2a30da7
+SHA512 (pymssql-1.0.2.tar.gz) = 6e9a2d26f2cc33bac093f2a2a41771aa41ba336413076c793137558c05e48cea7409f74f35530939b36a708cc47c66ec0dc765a768bd5f857642553568fe859e
 Size (pymssql-1.0.2.tar.gz) = 175469 bytes
 SHA1 (patch-mssqldbmodule_c) = 32bbb2ded495f517974634b1d90b7ffdef26c781

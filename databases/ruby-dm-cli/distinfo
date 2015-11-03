@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/12/17 17:21:55 taca Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:56:31 agc Exp $
 
 SHA1 (dm-cli-1.2.0.gem) = 7752c87b235cfa1036e683e93b846a82cf1b8533
 RMD160 (dm-cli-1.2.0.gem) = b12aa3121f48f69b50a9a7028f86e19e9fabfe3a
+SHA512 (dm-cli-1.2.0.gem) = 1cafcf16316b7d31714c002a18fa491db729ee3b3224bd5d98a1c9dd38a69b4fe823c8beb543a5161f4fa1e795bbb953ee524a0ea778ab206d7b33d86ee3cc13
 Size (dm-cli-1.2.0.gem) = 9728 bytes

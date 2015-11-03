@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2011/10/18 09:46:01 hiramatsu Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 01:56:19 agc Exp $
 
 SHA1 (DBICx-MapMaker-0.03.tar.gz) = 5a90fd40674ecd29192605fa2c5a6f2002997ca1
 RMD160 (DBICx-MapMaker-0.03.tar.gz) = 11726d6fc385388b33cfaf91d0ff5547a29f833d
+SHA512 (DBICx-MapMaker-0.03.tar.gz) = d741dc3f2b49c907660682ab14158186a1b978d59c22ffe9875340df089f07e704658ab4b2ea242f3367ce4cd3c543d11920c2be631a8486e94c23a3bbfd43e8
 Size (DBICx-MapMaker-0.03.tar.gz) = 11829 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/07/25 14:04:16 bsiegert Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:56:22 agc Exp $
 
 SHA1 (Parse-Dia-SQL-0.27.tar.gz) = 2c55f64cb63a4d2a08786f4acdac4e6bb7d6a0a8
 RMD160 (Parse-Dia-SQL-0.27.tar.gz) = 9661ff02846ced8367eec4720b20e6032de219fb
+SHA512 (Parse-Dia-SQL-0.27.tar.gz) = 6ac2de33deb97296837a4e947d105e4334817e6dd86ce218e0454e022cc88ac978ff139c5a29e259d5083ffea7989e644ef9b6ce4fb432c2b81953faa813f823
 Size (Parse-Dia-SQL-0.27.tar.gz) = 132533 bytes

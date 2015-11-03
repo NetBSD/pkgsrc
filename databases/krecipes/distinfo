@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2012/10/26 20:19:40 joerg Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 01:56:13 agc Exp $
 
 SHA1 (krecipes-1.0-beta1.tar.gz) = c1274f035476778d9b3f85bc007752ba0af841e3
 RMD160 (krecipes-1.0-beta1.tar.gz) = c32732255bbf530932fa3183581be72e12e7a2d2
+SHA512 (krecipes-1.0-beta1.tar.gz) = b094847d6b22105a6a8d9b8fe6f788db7abc4cd44ba70958f2a3aa9e1c1a6a3aa4c827106e65144dc3be28e1317fb825426e57f63c442ff19cc92dd863404e68
 Size (krecipes-1.0-beta1.tar.gz) = 8682447 bytes
 SHA1 (patch-aa) = 073893dcf03798122eaa0161100d7b56e35e4715
 SHA1 (patch-krecipes_src_dialogs_ingredientsdialog.cpp) = 09b8a1276931ce1a6a54ee399c0be128e79abc90

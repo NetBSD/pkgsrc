@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.1 2013/04/13 13:16:02 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:56:36 agc Exp $
 
 SHA1 (virtuoso-opensource-6.1.6.tar.gz) = 03bc14b1627d16d76687f8b8659801966aab3fb4
 RMD160 (virtuoso-opensource-6.1.6.tar.gz) = 0d8b4d0c319cc38b42777a05d19ae0769445716c
+SHA512 (virtuoso-opensource-6.1.6.tar.gz) = d423e872bce8737f60a348c89e24f20de5581e7b943856df534b4c86015e50969cbe46fe0c73eb0f1a29a1a45f2d7cebca98564ab38044f1f731f661635ded55
 Size (virtuoso-opensource-6.1.6.tar.gz) = 113255048 bytes
 SHA1 (patch-binsrc_b3s_make_vad.sh) = bbaeb582329090d79fe1472c024ee950414fae51
 SHA1 (patch-binsrc_samples_demo_make_vad.sh) = 3ccf1c58d7c6d8a9dbcb5ac3172c65ac5813f766

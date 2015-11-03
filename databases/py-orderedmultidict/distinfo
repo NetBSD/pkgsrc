@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/04/08 11:39:21 rodent Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 01:56:27 agc Exp $
 
 SHA1 (orderedmultidict-0.7.5.tar.gz) = 888059de283f96a920633455a38a108da5a6fc67
 RMD160 (orderedmultidict-0.7.5.tar.gz) = 6287c4e73089d7f0ce411d527787b52e04671443
+SHA512 (orderedmultidict-0.7.5.tar.gz) = ec6f738b1199d8f06c7895737335b13e172059c13253703c2ab64dc9dac8f17ad6dc3a81e5768eea1698a88143be1bfc707512db31171a6190d29e67fb934fac
 Size (orderedmultidict-0.7.5.tar.gz) = 14957 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/10/11 11:37:50 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:56:15 agc Exp $
 
 SHA1 (mysqltuner/1.6.0.tar.gz) = 21c2b48020e2c82b9cd440c48e3176b648273eda
 RMD160 (mysqltuner/1.6.0.tar.gz) = 87839415accf41c70c3ddb07fb4ad65d78957254
+SHA512 (mysqltuner/1.6.0.tar.gz) = 904022ef64eaf75f3294a9a5123dc5e00482d95378722df63140bc6859ec245c32d9b06d19955790a5e29b9335e6da3df2cebdeb4659cb9058561866f6ec69c2
 Size (mysqltuner/1.6.0.tar.gz) = 53424 bytes

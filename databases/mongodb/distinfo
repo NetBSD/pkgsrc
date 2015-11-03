@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2015/10/18 05:45:37 ryoon Exp $
+$NetBSD: distinfo,v 1.9 2015/11/03 01:56:15 agc Exp $
 
 SHA1 (mongodb-src-r3.0.7.tar.gz) = 0384231807936cd3b0e016a7fa2778114af62488
 RMD160 (mongodb-src-r3.0.7.tar.gz) = b578718798df8e7eb5a29a392aff33ff7429a373
+SHA512 (mongodb-src-r3.0.7.tar.gz) = 183691c5dc137ea4b86d53d24d2935fd66ed8de60fbf5eca0a0a39c159be1f29043cd655cde1a213a98a76b2b3e6369dbccf790b02a1cc4b622c067ad3c0c91b
 SHA512 (mongodb-src-r3.0.7.tar.gz) = 183691c5dc137ea4b86d53d24d2935fd66ed8de60fbf5eca0a0a39c159be1f29043cd655cde1a213a98a76b2b3e6369dbccf790b02a1cc4b622c067ad3c0c91b
 Size (mongodb-src-r3.0.7.tar.gz) = 26261343 bytes
 SHA1 (patch-SConstruct) = 71f06ac82474f81a6b1b6660cd9e23cd5a63d55f

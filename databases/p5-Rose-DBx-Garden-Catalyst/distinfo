@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2014/12/12 05:10:41 mef Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 01:56:23 agc Exp $
 
 SHA1 (Rose-DBx-Garden-Catalyst-0.180.tar.gz) = cac54ab4ab3006852b569430e1a485320ab8a15a
 RMD160 (Rose-DBx-Garden-Catalyst-0.180.tar.gz) = e9e15bcd6f55f08bfe27236bc37848968757eb3b
+SHA512 (Rose-DBx-Garden-Catalyst-0.180.tar.gz) = f02616167b8f1c7f6ae8c558cf8648d581e736d841045581c517c35620defc0f02e4b28813b62b3bea4a4d3a5d6941c2c3ca2817a52331ee2c0bb80f8745b5fa
 Size (Rose-DBx-Garden-Catalyst-0.180.tar.gz) = 18454 bytes
