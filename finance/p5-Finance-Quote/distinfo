@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.14 2015/08/23 14:08:20 wiz Exp $
+$NetBSD: distinfo,v 1.15 2015/11/03 00:12:13 agc Exp $
 
 SHA1 (Finance-Quote-1.38.tar.gz) = bfa5a9164c1af113b4c865ea15c9c449be3e95ee
 RMD160 (Finance-Quote-1.38.tar.gz) = 7742c4a5e97c55cb3518a70cca21f5e9f78472f5
+SHA512 (Finance-Quote-1.38.tar.gz) = b55382d56ecf89eaf662f49ec6fd803e9e5e0163b63d3020ca3c875d4dff7607f502fa7600997c5db8d62fa671ea82e81597300443fc4b24bb3f94c80bd32439
 Size (Finance-Quote-1.38.tar.gz) = 327822 bytes
