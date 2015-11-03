@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4461 2015/11/03 20:43:00 adam Exp $
+$NetBSD: CHANGES-2015,v 1.4462 2015/11/03 20:53:43 markd Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7635,3 +7635,9 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/bmon to 3.8 [bsiegert 2015-11-03]
 	Updated devel/confuse to 2.8 [bsiegert 2015-11-03]
 	Updated net/youtube-dl to 20151102 [adam 2015-11-03]
+	Added graphics/opencv-contrib-face version 3.0.0 [markd 2015-11-03]
+	Updated www/libmediawiki to 4.13.0 [markd 2015-11-03]
+	Updated misc/libkvkontakte to 4.13.0 [markd 2015-11-03]
+	Updated misc/libkgeomap to 4.13.0 [markd 2015-11-03]
+	Updated graphics/libkface to 4.13.0 [markd 2015-11-03]
+	Updated graphics/digikam to 4.13.0 [markd 2015-11-03]
