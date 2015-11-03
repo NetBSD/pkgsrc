@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/08/21 15:26:56 drochner Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:12:47 agc Exp $
 
 SHA1 (discogs_client/v1.1.1.tar.gz) = 436f7d680d68f9993f8fb781a1432e20a3013c0f
 RMD160 (discogs_client/v1.1.1.tar.gz) = 98d593a0eca1b673a39e84ab6fa14816583ecec8
+SHA512 (discogs_client/v1.1.1.tar.gz) = 1010771829ccebfbee774dda395ba7adc065cffc4b38e3252146989dee1ed81b693d74f9c455a515c5dc532e3840e5be3b9843bed62791f09bca608425b336ac
 Size (discogs_client/v1.1.1.tar.gz) = 4363 bytes

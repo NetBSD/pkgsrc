@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.13 2006/07/03 18:45:24 drochner Exp $
+$NetBSD: distinfo,v 1.14 2015/11/03 01:12:28 agc Exp $
 
 SHA1 (disc-cover-1.5.6.tar.gz) = 83d5ed56e955219ca71f66900b9873f1a8999384
 RMD160 (disc-cover-1.5.6.tar.gz) = 946dc1854425876dffb122b949af277958eda2a4
+SHA512 (disc-cover-1.5.6.tar.gz) = ac00eeda8da63312afa16fdd4d12d160c651dc44aa44e769b92cad1dd9ddb10f123e8fc64e14853302455047ec86582fa9de423ccacd32912a078d2a21cb0d8c
 Size (disc-cover-1.5.6.tar.gz) = 52749 bytes
 SHA1 (patch-aa) = 599f6715726d2d23c99c412e578394efa6174593

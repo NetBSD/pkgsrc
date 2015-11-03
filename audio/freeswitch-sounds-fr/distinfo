@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.1 2012/10/21 18:50:54 darcy Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:12:32 agc Exp $
 
 SHA1 (freeswitch/freeswitch-sounds-fr-ca-june-16000-1.0.18.tar.gz) = 310b91b3d7546afa3c15e6a20254290fb5efb2d7
 RMD160 (freeswitch/freeswitch-sounds-fr-ca-june-16000-1.0.18.tar.gz) = 1c1b78e32f6f304b05a615573c666d7b00813b2a
+SHA512 (freeswitch/freeswitch-sounds-fr-ca-june-16000-1.0.18.tar.gz) = d3306ad81ac9f3da3da6a526abbe1c315a0c50f89750ac3f930086dcd088a0de64a5dd6c06f0d58d28ba12f59abe871701cc2dcf838bb43a1d8d2ed85b5bff0a
 Size (freeswitch/freeswitch-sounds-fr-ca-june-16000-1.0.18.tar.gz) = 26607279 bytes
 SHA1 (freeswitch/freeswitch-sounds-fr-ca-june-32000-1.0.18.tar.gz) = a182a1a9d0fbed7ff8f73308ca74b5a2a17845e5
 RMD160 (freeswitch/freeswitch-sounds-fr-ca-june-32000-1.0.18.tar.gz) = 6eb6ff54eb259ec5e2159fac44ca8504497e998c
@@ -11,4 +12,5 @@ RMD160 (freeswitch/freeswitch-sounds-fr-ca-june-48000-1.0.18.tar.gz) = a6b562070
 Size (freeswitch/freeswitch-sounds-fr-ca-june-48000-1.0.18.tar.gz) = 76712496 bytes
 SHA1 (freeswitch/freeswitch-sounds-fr-ca-june-8000-1.0.18.tar.gz) = 122b79416329e7f3210446416b8693a10d964bc0
 RMD160 (freeswitch/freeswitch-sounds-fr-ca-june-8000-1.0.18.tar.gz) = 96a619213fb306e1fe97c4346099b565e3b6e71a
+SHA512 (freeswitch/freeswitch-sounds-fr-ca-june-8000-1.0.18.tar.gz) = 82640dda13288d911b21fd1beb83f08d5a8497d35e2cdb6438c072bdf81981b1836f91be098cfeb42eb10278170a923cfa120113e8d6329bc94742a1b184396b
 Size (freeswitch/freeswitch-sounds-fr-ca-june-8000-1.0.18.tar.gz) = 13468498 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/10/02 11:43:37 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:12:33 agc Exp $
 
 SHA1 (gmpc-alarm-11.8.16.tar.gz) = 5accff4dc60c30d5b0b29bf9c321c95b5432a17b
 RMD160 (gmpc-alarm-11.8.16.tar.gz) = d6f1f6f6defabe6cbe4058c5eae2dbbf42f80f5e
+SHA512 (gmpc-alarm-11.8.16.tar.gz) = a1fbb66137d9bbbdcf5e4d59fa57628193fde049e9dde08a73ec16dfebdf84a674a643971b6be8d40f2727bf0e591f5aade898080ec5ccb39ec764ff86d041fb
 Size (gmpc-alarm-11.8.16.tar.gz) = 312427 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2005/02/23 20:39:56 agc Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 01:12:56 agc Exp $
 
 SHA1 (xmradio-1.2.tar.gz) = 6f128758307771478eafeef3c5ab96d1b33731f1
 RMD160 (xmradio-1.2.tar.gz) = 6e94f0be8c05319d64156cb301d840dba2bdc82a
+SHA512 (xmradio-1.2.tar.gz) = 13fe6a5912ce8fa1f6ba9ac6e2f0b07ce289079aa16c9948fa6073c5115ad0409a96da8a3f584e2b40157f9dcb83830b5364dfe67712d59110ac711aa4866a10
 Size (xmradio-1.2.tar.gz) = 72373 bytes

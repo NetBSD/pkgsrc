@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2015/10/27 06:48:57 adam Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 01:12:27 agc Exp $
 
 SHA1 (chromaprint-1.2.tar.gz) = 113415ca22298c201721b43e006824c7865afc17
 RMD160 (chromaprint-1.2.tar.gz) = 208ddea00c22451b6838ab8415834403e918b541
+SHA512 (chromaprint-1.2.tar.gz) = dc61db8894a20df3d7e7317cd7cd97148c19be5854dd66409341cb8e47c045e1c632b254e14a869279983a5af2cc6f9effea21b77a63dff729511e6144439cbb
 SHA512 (chromaprint-1.2.tar.gz) = dc61db8894a20df3d7e7317cd7cd97148c19be5854dd66409341cb8e47c045e1c632b254e14a869279983a5af2cc6f9effea21b77a63dff729511e6144439cbb
 Size (chromaprint-1.2.tar.gz) = 529646 bytes
 SHA1 (patch-CMakeLists.txt) = bf0cbe6e1f00ad13eccc5316866a767d1c53f00e

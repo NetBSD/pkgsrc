@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2011/12/17 10:14:44 sbd Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 01:12:40 agc Exp $
 
 SHA1 (liveice-0.20001121/liveice.tar.gz) = 029657129e98d837e3c978885cfb52772d4551c9
 RMD160 (liveice-0.20001121/liveice.tar.gz) = 5739b4e92e17d4d6288573eee257a4fc07a612a8
+SHA512 (liveice-0.20001121/liveice.tar.gz) = 6b6b7ed7f4aa2b27e2b97db407554955e332002c059bbf3fbb5c5fe60c1d6aa5cd594d2698524a9b447fc3a81de96fb46945c2386467f1773ff0ba2b10da78e4
 Size (liveice-0.20001121/liveice.tar.gz) = 85171 bytes
 SHA1 (patch-Makefile.in) = 66422cb7eab60596784d24a25cb9fe9656281a78
 SHA1 (patch-aa) = 367d7fa0b9cc20420814dad2db398a0f84b04982
