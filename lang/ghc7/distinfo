@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2015/10/23 20:46:22 tnn Exp $
+$NetBSD: distinfo,v 1.13 2015/11/03 22:50:36 agc Exp $
 
 SHA1 (ghc-7.6.3-boot-i386-unknown-freebsd.tar.xz) = aea6224f30aa52d9998f2c77f473902179f03b8c
 RMD160 (ghc-7.6.3-boot-i386-unknown-freebsd.tar.xz) = 39a588cac4a0411db45ef269fbe6a63c6cb428ee
@@ -8,9 +8,11 @@ RMD160 (ghc-7.6.3-boot-powerpc-apple-darwin.tar.xz) = 7d4ab57dc6054cbd67b07e64b2
 Size (ghc-7.6.3-boot-powerpc-apple-darwin.tar.xz) = 33660776 bytes
 SHA1 (ghc-7.6.3-boot-x86_64-unknown-netbsd.tar.xz) = 82378c9a172aef10d4cf277967dbf97a0fc2e190
 RMD160 (ghc-7.6.3-boot-x86_64-unknown-netbsd.tar.xz) = c502da9c64f2a58b1af7f98fb90c1110d6a5fff5
+SHA512 (ghc-7.6.3-boot-x86_64-unknown-netbsd.tar.xz) = ce5df38c05df31ef0e2ec7266d6de2a29c6b6dc662f344d07e871916fd6780205482b33e9ebb19408ba54f499e20cc63cd71d022c37ada80d059de56a9f9cc4b
 Size (ghc-7.6.3-boot-x86_64-unknown-netbsd.tar.xz) = 28768864 bytes
 SHA1 (ghc-7.6.3-src.tar.bz2) = 8938e1ef08b37a4caa071fa169e79a3001d065ff
 RMD160 (ghc-7.6.3-src.tar.bz2) = 82a673ed38b7cf9a59afeb01057625fc761a822b
+SHA512 (ghc-7.6.3-src.tar.bz2) = ac86f18b4feeb0bdc9e867261600b210caf62740d73ae657259bbe8149b8c2c4f5a73d09d74d944d4e50f85cc87503485365f0a0ae65befe8d2b6844e5e1253a
 Size (ghc-7.6.3-src.tar.bz2) = 110763823 bytes
 SHA1 (patch-Makefile) = a6692a4a90b8003a8719c51d82d15f5af0ba1907
 SHA1 (patch-ghc.mk) = c4210aaa3e2b4a319b0b70da375ac89fddde5cb7

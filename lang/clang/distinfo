@@ -1,16 +1,20 @@
-$NetBSD: distinfo,v 1.36 2015/09/26 08:42:19 tnn Exp $
+$NetBSD: distinfo,v 1.37 2015/11/03 22:50:33 agc Exp $
 
 SHA1 (cfe-3.7.0.src.tar.xz) = 4ff8100565528b13d99a73f807e9b426c3b3bed9
 RMD160 (cfe-3.7.0.src.tar.xz) = b59a82dcc44d16f1152f5204584bbc47861d223e
+SHA512 (cfe-3.7.0.src.tar.xz) = 099d34cb019ea548c6ee85efd22b150beba0aa92061394fa3e423b1ebfe4a5c98c0586e5d56fc5c39e2b1606d36db59f442c056cc59473e32df76c8790c9d0ae
 Size (cfe-3.7.0.src.tar.xz) = 9147204 bytes
 SHA1 (compiler-rt-3.7.0.src.tar.xz) = b61362b409bb7909a6d11097b5f69fded061073c
 RMD160 (compiler-rt-3.7.0.src.tar.xz) = 94cc920bce769e8b6234376ce8c517cdccd96e0c
+SHA512 (compiler-rt-3.7.0.src.tar.xz) = 2ba6abb3d6ec7f1469cfe1d48fde2069e9a767d19144f80f05516ac63f353ace90a9df3e9d1c1f708f3c397aba0ec61b12e4f105b25a2e1cd26b25b0dd252bc9
 Size (compiler-rt-3.7.0.src.tar.xz) = 1192832 bytes
 SHA1 (libcxx-3.7.0.src.tar.xz) = 73adf9fdca5086dd47a32b34a398d2c1d492d18e
 RMD160 (libcxx-3.7.0.src.tar.xz) = d78a0948483ff593ab2c39dc5ca745b4d08e8620
+SHA512 (libcxx-3.7.0.src.tar.xz) = e71d04efa0fafab129a97ca6f4fd7b5f185258de7455c7a25d0964f459bc6068c69c5d67199f6d7cd3541bdce630106cbaf3b7099e4737dddbdd57c77a3fe054
 Size (libcxx-3.7.0.src.tar.xz) = 994580 bytes
 SHA1 (llvm-3.7.0.src.tar.xz) = 0355c2fe01a8d17c3315069e6f2ef80c281e7dad
 RMD160 (llvm-3.7.0.src.tar.xz) = 1e47ce5e07df267a921c60e526673b2908ffb99b
+SHA512 (llvm-3.7.0.src.tar.xz) = fe3bfefd3d49423831ad12b89f944ac9f469aaaaafdea1dd94fc7fb6d5cc9fbe66b6463796aeaabfc145ae474ec3ad68da41c4a011e8aa4bc650f1835af75388
 Size (llvm-3.7.0.src.tar.xz) = 14636252 bytes
 SHA1 (patch-ab) = 8dd0da6d47a57ac25eea358996cf874dd3289e08
 SHA1 (patch-ac) = 0f0cc98d443ec957fc5374fb491809d27e4f9d4e

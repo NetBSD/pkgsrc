@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.51 2015/05/24 07:44:07 adam Exp $
+$NetBSD: distinfo,v 1.52 2015/11/03 22:50:42 agc Exp $
 
 SHA1 (Python-2.7.10.tar.xz) = ee5a50c5562e7448f037d35fdedc18d95c748b9e
 RMD160 (Python-2.7.10.tar.xz) = eb003de9bb52fc2c6a2d2e3dcb816ba0c56751d0
+SHA512 (Python-2.7.10.tar.xz) = 67615a6defbcda062f15a09f9dd3b9441afd01a8cc3255e5bc45b925378a0ddc38d468b7701176f6cc153ec52a4f21671b433780d9bde343aa9b9c1b2ae29feb
 Size (Python-2.7.10.tar.xz) = 12250696 bytes
 SHA1 (patch-Include_pyerrors.h) = 0d2cd52d18cc719b895fa32ed7e11c6cb15bae54
 SHA1 (patch-Include_pyport.h) = f3e4ddbc954425a65301465410911222ca471320

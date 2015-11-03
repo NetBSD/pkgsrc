@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2008/09/05 05:27:30 dholland Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 22:50:33 agc Exp $
 
 SHA1 (cint-5.15.174/cint5.15.tar.gz) = 7061acb210dafb86413536dc91e0aa24e9ef3ee9
 RMD160 (cint-5.15.174/cint5.15.tar.gz) = 4d403e150fc290feba38785b385f282a28d15dcd
+SHA512 (cint-5.15.174/cint5.15.tar.gz) = a73e7c5ba41573ad9bc04a9c7aa85c234b5f2ab4b255cc52e2ac6792cc8d1c0592748ba963829892676ab8b432c9ca09ebabfa0986e25fddb58fbb57638e67b1
 Size (cint-5.15.174/cint5.15.tar.gz) = 1983029 bytes
 SHA1 (patch-aa) = 7f0c6c93b146507fecca71d6c596d98194cfc7ad
 SHA1 (patch-ab) = ae2689e7b90f6c6acf5914bb4fe19b8d0735896b
