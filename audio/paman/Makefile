@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2015/04/25 14:20:23 tnn Exp $
+# $NetBSD: Makefile,v 1.36 2015/11/03 19:10:07 joerg Exp $
 #
 
 DISTNAME=	paman-0.9.4
@@ -15,6 +15,8 @@ USE_TOOLS+=	pkg-config gmake
 USE_LANGUAGES=	c++
 
 CONFIGURE_ARGS+=	--disable-lynx
+
+CXXFLAGS+=		-std=c++11
 
 .include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../devel/glibmm/buildlink3.mk"

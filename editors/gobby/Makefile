@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2015/08/23 14:30:38 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2015/11/03 19:10:07 joerg Exp $
 
 DISTNAME=	gobby-0.4.12
 PKGREVISION=	23
@@ -14,6 +14,8 @@ USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 GNU_CONFIGURE=		yes
+
+CXXFLAGS+=		-std=c++11
 
 .include "options.mk"
 

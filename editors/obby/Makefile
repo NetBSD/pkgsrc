@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2015/08/23 14:30:35 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2015/11/03 19:10:07 joerg Exp $
 #
 
 DISTNAME=	obby-0.4.7
@@ -15,6 +15,8 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
+
+CXXFLAGS+=		-std=c++11
 
 PKGCONFIG_OVERRIDE+=	obby-0.4.pc.in
 
