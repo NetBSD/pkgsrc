@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.10 2015/09/13 14:37:10 taca Exp $
+$NetBSD: distinfo,v 1.11 2015/11/03 23:33:43 agc Exp $
 
 SHA1 (gsl-1.16.0.6.gem) = d5fb6ac373c11628358f1260344644e74f66dffa
 RMD160 (gsl-1.16.0.6.gem) = c3d6b5e62059c2c7331a3c0e0d9f2f542f9f5b57
+SHA512 (gsl-1.16.0.6.gem) = 99610ef7e9b57c29f1972c4cb2853642157660b885a0a9761876c649badeb02dace7f0191453ce63d1a7f59bc3ee89fb61a73ae71522b5430f7916a60c4d1490
 Size (gsl-1.16.0.6.gem) = 594944 bytes

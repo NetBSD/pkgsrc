@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2009/02/22 13:21:32 he Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 23:33:40 agc Exp $
 
 SHA1 (Roman-1.23.zip) = 49d47d518e92f823f141309a475400ba7e6357ab
 RMD160 (Roman-1.23.zip) = ce377857bf69d0b341935edf59126a49d5a71da9
+SHA512 (Roman-1.23.zip) = 20a2a9f3961317438b9f761bdcf16c582f57e5efe9b6c869b6170f19615f300e467f3ab555861c83e8c7930ae024381a46da64cd80002a26cae1f2d315759f74
 Size (Roman-1.23.zip) = 7346 bytes

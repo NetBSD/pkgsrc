@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2009/09/06 15:24:38 asau Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 23:33:43 agc Exp $
 
 SHA1 (qalculate-bases-0.9.4.tar.gz) = 71f4071bfd6217eb30788c41e95c531cca55b610
 RMD160 (qalculate-bases-0.9.4.tar.gz) = be0c2e11eaca3dfce064b751903249486264f857
+SHA512 (qalculate-bases-0.9.4.tar.gz) = bd5ff424bf49da811637c9c1d7bce020d3d9a33241467fbdb5a0d4918735e0ab1eda2892d1d20b868c95bac88e2c8cddd7f55649e0d8ee679e1043519e8a75b8
 Size (qalculate-bases-0.9.4.tar.gz) = 368685 bytes
 SHA1 (patch-aa) = 8bafc00b8daa26fe72c88f7415f8dceaf748b3e1
 SHA1 (patch-ab) = b72440ffe5fd4b211abef761320666c258a30171

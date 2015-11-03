@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2014/09/14 18:26:13 szptvlfn Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 23:33:35 agc Exp $
 
 SHA1 (semigroups-0.15.3.tar.gz) = cb732ebddec66b4616301136439d00b6c5fe5298
 RMD160 (semigroups-0.15.3.tar.gz) = 099c12ac0ded615e7cbd103fbc680db5011f240c
+SHA512 (semigroups-0.15.3.tar.gz) = 71487c3aec2d7f41a5743b4b3339ebba723b3b230442ac52200b6b23f1f268a2c98eacb96a78d66c196e318922a4b1aea2dec2d48ef49a0efed500273949b46b
 Size (semigroups-0.15.3.tar.gz) = 11886 bytes

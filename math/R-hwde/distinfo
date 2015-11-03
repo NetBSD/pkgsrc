@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2013/08/30 12:58:11 joerg Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 23:33:28 agc Exp $
 
 SHA1 (R/hwde_0.63.tar.gz) = cebe0a934793bdea9d5fb593cccf93a4822c3fba
 RMD160 (R/hwde_0.63.tar.gz) = 221299a07cae8de959a8fa2b78bb5fe3f7dd47a1
+SHA512 (R/hwde_0.63.tar.gz) = d2f0adc103f0d4917e6b69a43f1e6d0f6fc150936ef4c9a203cce5924c1df1b94af5cbc5cd8751201ca25f783649c88620fd89455d99a75dbe1143b8c7c4512b
 Size (R/hwde_0.63.tar.gz) = 129399 bytes
