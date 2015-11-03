@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2014/01/19 17:51:34 wiz Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 03:29:06 agc Exp $
 
 SHA1 (darcsver-1.7.4.tar.gz) = e66783c3943ac6886d9a049b4f78af4819e920a3
 RMD160 (darcsver-1.7.4.tar.gz) = e402685a9ba9f68d53e317ac61cecc4490843902
+SHA512 (darcsver-1.7.4.tar.gz) = 723f8bf4adea38ace4ce72e8c68d571811e3e2c0974aabf614bf2215629eb415873aad6776dd44d3be3b9dadf8016b9de1317f054e850f2f0a43dc5b90c647c1
 Size (darcsver-1.7.4.tar.gz) = 8950 bytes

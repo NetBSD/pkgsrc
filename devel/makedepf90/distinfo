@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2009/11/01 10:49:14 obache Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 03:27:48 agc Exp $
 
 SHA1 (makedepf90-2.8.8.tar.gz) = bf79b561343f7dbcd740cc3d5487fe7a433197a5
 RMD160 (makedepf90-2.8.8.tar.gz) = cedac48e0291c10d6157356e40cffeee50e93d41
+SHA512 (makedepf90-2.8.8.tar.gz) = 799bfd0f3a5d81cdda114724a68fd0fc8c0f6a97f39b1b93ee457f37c947abc189100ceb8e6e936460a2796d1544961779bc7dd55ae02936d44c64468f6ec4fd
 Size (makedepf90-2.8.8.tar.gz) = 91473 bytes
 SHA1 (patch-aa) = 0e803fc3480c9d408d866aedf95f0b2b9989d15b

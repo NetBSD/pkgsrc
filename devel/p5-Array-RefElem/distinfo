@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/05/30 12:03:27 abs Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:27:56 agc Exp $
 
 SHA1 (Array-RefElem-1.00.tar.gz) = ff2966ffb64338176d18c2f3ebb5075954b2949e
 RMD160 (Array-RefElem-1.00.tar.gz) = f9ff68cb95e8c6713c4fba7de697d611ad622cc8
+SHA512 (Array-RefElem-1.00.tar.gz) = dd56af05e74462553d1a76d9b39b451af9376bebf2b2aa8653f16df9b0d1cad320c2a8539c592179a17c981ca4369b06b5343cef2642eeb2928640cb99caf23f
 Size (Array-RefElem-1.00.tar.gz) = 2030 bytes

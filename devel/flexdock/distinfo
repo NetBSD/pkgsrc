@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/03/08 12:38:39 dmcmahill Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:27:26 agc Exp $
 
 SHA1 (flexdock-0.5.1.zip) = 8c8fa3e15e522c5a29f3cc4e17a58aa9edeafe72
 RMD160 (flexdock-0.5.1.zip) = faa90758263bca0d8c5ecbd1af1aeb6809ec6672
+SHA512 (flexdock-0.5.1.zip) = 042b26040ba256e5cafc73c5058934c776699723d7851762aece7127d2c230e65dd41296d4273de67f3f1656e08f6ef8e64ae1ba34b93e6a636f332ee4daad96
 Size (flexdock-0.5.1.zip) = 6666601 bytes

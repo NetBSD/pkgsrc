@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/01/29 01:25:53 mef Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 03:28:08 agc Exp $
 
 SHA1 (Debug-Client-0.29.tar.gz) = 098781073b46442ba6422c0ba651d60296f9d593
 RMD160 (Debug-Client-0.29.tar.gz) = 8177aa68194009d3e80bd0ad0cc24a83ba2a1283
+SHA512 (Debug-Client-0.29.tar.gz) = 32c5adcc11cf32d729fd027e6cc5c2129d2375391cee4321b29a508029da3054fbc84fae4e84674bf0eac2740f431c9d41d3059e48e4e4963be4bdaa29ebd17e
 Size (Debug-Client-0.29.tar.gz) = 41615 bytes

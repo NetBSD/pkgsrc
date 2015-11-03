@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.10 2013/12/31 17:32:51 wiz Exp $
+$NetBSD: distinfo,v 1.11 2015/11/03 03:27:29 agc Exp $
 
 SHA1 (gob2-2.0.20.tar.gz) = 5bdc95b0b7d5f5c7f0d1a4266cfc3997822ac5a6
 RMD160 (gob2-2.0.20.tar.gz) = fdc147b2af85da360f99742428703c27f08418c2
+SHA512 (gob2-2.0.20.tar.gz) = 34c2ebe226eaff6d88f1a04e9dd382a5365e5d6ded218373b77abbf2138b87d3f9dfe5eff94469bba55ea13cfb171ba57164fd6d98455598217f8381f20f7bb8
 Size (gob2-2.0.20.tar.gz) = 284820 bytes
 SHA1 (patch-src_main_c) = 53c7d8e9ec4cf71a5718d0e35cc91539bd482a2a
 SHA1 (patch-src_out_c) = de643aab8b4ee4cb436fa44e62deea96cc0e2b72

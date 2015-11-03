@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/10/13 23:45:15 gdt Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:27:25 agc Exp $
 
 SHA1 (etrace-2.1.tar.gz) = 80798628bb7e1c65c558b05ec451c9447bd8543a
 RMD160 (etrace-2.1.tar.gz) = b15d51acf9cdb4a7d42b31c556d1d86c81f9acf7
+SHA512 (etrace-2.1.tar.gz) = d9ac5add61e67fb235790efadf5ef7626df28260ed0efe073d830d3aa0a5c54c6e9b412c2eb23f236fa476efba932f96bd0592dbf5c472d126474db33b7fbce3
 Size (etrace-2.1.tar.gz) = 8255 bytes

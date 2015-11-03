@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2014/04/26 05:27:20 wen Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 03:28:02 agc Exp $
 
 SHA1 (Class-InsideOut-1.13.tar.gz) = c44d62b6e51dec8a230d28279ea1e1b76d3aff8d
 RMD160 (Class-InsideOut-1.13.tar.gz) = 3b96419889f6ed063416be10a5d89c25535ea567
+SHA512 (Class-InsideOut-1.13.tar.gz) = 38175467338784d796ff90c8a0befefc4a4b7bafc6906a530a707eff8419b09b197bdfa2ea4a7012a5a8daf7992623001ff7f1fd45c6c5d5d5363c3919f53e73
 Size (Class-InsideOut-1.13.tar.gz) = 46507 bytes

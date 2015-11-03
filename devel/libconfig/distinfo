@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/05/28 07:21:01 wiz Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 03:27:39 agc Exp $
 
 SHA1 (libconfig-1.5.tar.gz) = 24306c7efce07669a4053d0977a45e2f3a3add79
 RMD160 (libconfig-1.5.tar.gz) = 32b65e64982d281a21c668a1c20ca57f1f5bc7ef
+SHA512 (libconfig-1.5.tar.gz) = 16bead52ee8c880b25fd1ee6fa83c115dc51830f2f7954389bd8b72cc0e6fc05fc63fe415bd929851894a9f3a1127d51cfc4223149514246e9566305556b7bcd
 Size (libconfig-1.5.tar.gz) = 644432 bytes

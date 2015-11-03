@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2008/07/21 14:40:49 rhaen Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 03:28:11 agc Exp $
 
 SHA1 (Devel-SmallProf-2.02.tar.gz) = fe38f954175e8893743ac16311050180cfdd1d63
 RMD160 (Devel-SmallProf-2.02.tar.gz) = 89b37a3a6d234f1c5c73e21415815b4cb044ee34
+SHA512 (Devel-SmallProf-2.02.tar.gz) = f97ccacf3668feaccb5eda8e451c0c00a434df4051f9f2cb1c2f85cb9285e98c9f1198789467c21cabaddb667ba09b4fb56073075e9307881c7a71a820607743
 Size (Devel-SmallProf-2.02.tar.gz) = 9367 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/02/07 09:11:36 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:28:24 agc Exp $
 
 SHA1 (List-Pairwise-1.03.tar.gz) = 80b1c33535fe0145b128a8f98a63b66a9965f752
 RMD160 (List-Pairwise-1.03.tar.gz) = dfcc2c29163887606841fb51e9f83975dd9e9c57
+SHA512 (List-Pairwise-1.03.tar.gz) = ed90eac006dcedd3c6c21dfed9b8fb43bd353dcfa27f92b7251b4cf4255b65409eb51cd0561c5ada6efffc9f94ba53e382c52463a21aace72b4d237e00363b61
 Size (List-Pairwise-1.03.tar.gz) = 26886 bytes

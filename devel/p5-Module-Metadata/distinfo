@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/04/12 09:20:15 mef Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 03:28:29 agc Exp $
 
 SHA1 (Module-Metadata-1.000027.tar.gz) = ecc9ecb20fb0950139cad433b90cc6032bd36d8e
 RMD160 (Module-Metadata-1.000027.tar.gz) = e0e9f00e52f724414413b689b5bae570bc11aacf
+SHA512 (Module-Metadata-1.000027.tar.gz) = 4b71cf80a722803f664dd069b46b89cbe415bb2fd9ef81750d606ac7463c7d589256d853c4f0005fcd32e554d0cecb3724387e1ebc3b3b49d32ff516fa555c50
 Size (Module-Metadata-1.000027.tar.gz) = 41980 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/01/29 09:19:17 mef Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 03:28:12 agc Exp $
 
 SHA1 (Env-Path-0.19.tar.gz) = 0c4677e6d6e03a0bfaab877ac74bce55a519f49c
 RMD160 (Env-Path-0.19.tar.gz) = 2dd604de0504cbd6704773da97a1aa94bd4dd1e9
+SHA512 (Env-Path-0.19.tar.gz) = ea75dd808bd1d1e00a70179ccf834b4395e810ae46373eb16a9ebd37ada550ce3d9996073dfbe45909c66537fbc7712920d4dbb6dbf905200501884c5acb52fa
 Size (Env-Path-0.19.tar.gz) = 11036 bytes

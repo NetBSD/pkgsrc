@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2012/12/27 17:01:23 bsiegert Exp $
+$NetBSD: distinfo,v 1.9 2015/11/03 03:27:39 agc Exp $
 
 SHA1 (libdaemon-0.14.tar.gz) = 78a4db58cf3a7a8906c35592434e37680ca83b8f
 RMD160 (libdaemon-0.14.tar.gz) = 952ae993fecfe3ec765dfa43b2690a83f1a5c939
+SHA512 (libdaemon-0.14.tar.gz) = a96b25c09bd63cc192c1c5f8b5bf34cc6ad0c32d42ac14b520add611423b6ad3d64091a47e0c7ab9a94476a5e645529abccea3ed6b23596567163fba88131ff2
 Size (libdaemon-0.14.tar.gz) = 340474 bytes
 SHA1 (patch-aa) = f0d309bd98b19a9fcec785edfe686dd33746bf46
 SHA1 (patch-ab) = bb882643ecd8deedfb76f88ee4dea1ce42da2636

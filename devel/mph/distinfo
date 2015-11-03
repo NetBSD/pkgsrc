@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 22:24:21 agc Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 03:27:50 agc Exp $
 
 SHA1 (mph-1.2.tar.gz) = 05da8d39b27d5b1d42c52d825f4d2196711a8df5
 RMD160 (mph-1.2.tar.gz) = 061e85fd36f52774135301abc55c42e75c305b7a
+SHA512 (mph-1.2.tar.gz) = 0694576d807379d900dca85e2ce18b9f99e8bd0bdd6e783b3422c5e6b571e2de79eb45d3739a246a11a0db07654e53023fa311a88b12f2ebce30306feed9dbda
 Size (mph-1.2.tar.gz) = 22762 bytes

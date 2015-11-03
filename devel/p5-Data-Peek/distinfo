@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.11 2015/04/09 01:06:55 mef Exp $
+$NetBSD: distinfo,v 1.12 2015/11/03 03:28:07 agc Exp $
 
 SHA1 (Data-Peek-0.44.tgz) = 0df582c9ce08b140626ffb3063b0a8f46e8f30dc
 RMD160 (Data-Peek-0.44.tgz) = febdfaeae49e6b7b45db5dfd64847271a5b22551
+SHA512 (Data-Peek-0.44.tgz) = cf4acae32b58cfba23588ca273654b1f71ce17e7f25d52fd2458668e886064992c07143e2c505afc6aedd061e8c70f60e17090bb4ccda216570be14447d342f3
 Size (Data-Peek-0.44.tgz) = 60176 bytes

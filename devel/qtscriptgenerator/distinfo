@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2012/11/17 21:51:49 markd Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 03:29:18 agc Exp $
 
 SHA1 (qtscriptgenerator-src-0.2.0.tar.gz) = 4c1078f26b196156e857c17c9d11a66cfea66f00
 RMD160 (qtscriptgenerator-src-0.2.0.tar.gz) = 01c8ce3b4c8e9ebb3bc3c2d7b319846f34baee04
+SHA512 (qtscriptgenerator-src-0.2.0.tar.gz) = 54b91562d275b634b50ae8f6ae024cf738605efadeb3085527087ebdc8b6b86559088972ab5dafb7ff1ede6d18dc135f935ac1fb307a17ea1975b4f7629cc0fa
 Size (qtscriptgenerator-src-0.2.0.tar.gz) = 379776 bytes
 SHA1 (patch-aa) = 4e72fbc5a854851120855557572dbdde43bafd03

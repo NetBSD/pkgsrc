@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/03/08 05:58:07 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:29:37 agc Exp $
 
 SHA1 (topgit_0.7.orig.tar.gz) = 65205aea0dafc7af2ea6557b221a11020f77a27b
 RMD160 (topgit_0.7.orig.tar.gz) = 999adb246d35502510db92d9cc707cadf117ac40
+SHA512 (topgit_0.7.orig.tar.gz) = b3e00eb120bd51b629565a9106c322645dbc5510d3d4257c607bddba1d946c2fb913fdf6851198519d9798ec8cd3dd8e5ba4caa1ff7e629255b7e189d839fc1d
 Size (topgit_0.7.orig.tar.gz) = 23437 bytes

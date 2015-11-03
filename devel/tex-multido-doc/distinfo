@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/03/16 17:49:10 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:29:36 agc Exp $
 
 SHA1 (tex-multido-18302/multido.doc.tar.xz) = a35ede45a349304e5ee649384b766079e3ca3b71
 RMD160 (tex-multido-18302/multido.doc.tar.xz) = 7d78d9da8398b6191a70c80a116950f360c1929b
+SHA512 (tex-multido-18302/multido.doc.tar.xz) = a9fc08f61d061ba3d458d58edd5bc4874fc9795cf1f9b7994c523181bb764fb4e624c6e986696b027601b3af9aca09e18bb77e2f5fd08057445820d66b07e0bf
 Size (tex-multido-18302/multido.doc.tar.xz) = 106736 bytes

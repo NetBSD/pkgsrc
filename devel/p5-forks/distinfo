@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 15:09:25 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:28:59 agc Exp $
 
 SHA1 (forks-0.36.tar.gz) = ef6498f236e70f4a36571f161d6920367d4ceb5e
 RMD160 (forks-0.36.tar.gz) = 2d5d04d2676e286e351c95401d7a13854f68df0f
+SHA512 (forks-0.36.tar.gz) = d361d7fcfec925b03552bb5f8ae4eb2155b7945d0a57ff04c9ed45e7620a55fe6a1907b1aef8af3f80f8eabc158ab5886628ee1a987dc674e4c25e1042425469
 Size (forks-0.36.tar.gz) = 111143 bytes

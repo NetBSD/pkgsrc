@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.1 2014/01/08 14:59:15 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:29:33 agc Exp $
 
 SHA1 (starbug1-1.6.01.tar.gz) = c9ba41a1ff1fe8a83449edc67b20e8568143b587
 RMD160 (starbug1-1.6.01.tar.gz) = 70b91e54b6eacf747ab6c035c12bf713fd9178b5
+SHA512 (starbug1-1.6.01.tar.gz) = 1935e2f0d24d8e33b236513728f6800182aa77f1d137cc3f829bdba429c306ff7e2bf3f16916c712bfcb169c9074616e981ffacf3d991508832139e8cb0ae16a
 Size (starbug1-1.6.01.tar.gz) = 244562 bytes
 SHA1 (patch-Makefile) = 041ba063b20728efece249751dd80e23011ac1f3
 SHA1 (patch-admin.c) = dd1331b88358f2b6bbfcc5a95e3a50040dd64a77

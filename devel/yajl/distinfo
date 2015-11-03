@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2014/04/18 12:16:57 wiz Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 03:29:39 agc Exp $
 
 SHA1 (yajl-2.1.0.tar.gz) = fe6b3c7439b26175aee59cabf8c4923b9eb3650d
 RMD160 (yajl-2.1.0.tar.gz) = df525cb99a1e6f1786c8f8f047127cad1b4eb80a
+SHA512 (yajl-2.1.0.tar.gz) = 671c06081e01584d170b614dc0685f49c6d7448b673d8ed99749ce4e0ca73875af9f62df7787b919ceaecab213668ac1d2a5800b6831731ec146353552f36985
 Size (yajl-2.1.0.tar.gz) = 84039 bytes
 SHA1 (patch-src_CMakeLists.txt) = 6999cdcb8450ec3abd1c81b8a8ab3cab8c9d008e

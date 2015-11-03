@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/08/22 15:25:03 seb Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:28:04 agc Exp $
 
 SHA1 (Compress-PPMd-0.11.tar.gz) = 64fb8d36ae68e8a18d82ee83faf374982386279b
 RMD160 (Compress-PPMd-0.11.tar.gz) = 5f4d8efcb376a5135723fb94d92cee39e3f73df1
+SHA512 (Compress-PPMd-0.11.tar.gz) = 72ca07b746109dc4ad674d8b22508a6af0ce083179b0c90dc11087f997c3e712af726847f5b3b1ceefce94cb33c49dd2c157008c9f3c78698d4b7f55c9ef0aaf
 Size (Compress-PPMd-0.11.tar.gz) = 28738 bytes

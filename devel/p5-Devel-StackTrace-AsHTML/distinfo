@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/01/29 05:29:41 mef Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 03:28:11 agc Exp $
 
 SHA1 (Devel-StackTrace-AsHTML-0.14.tar.gz) = 87b165757d71153aefc70f5f2314d8f6f46a1b28
 RMD160 (Devel-StackTrace-AsHTML-0.14.tar.gz) = 4969deca8e596e3bb58cefb88c1596ca759aa9c0
+SHA512 (Devel-StackTrace-AsHTML-0.14.tar.gz) = 341dc8718434ea714c50b0a76830775341f4ab03746543bf3197f5ea58685deca2325c16fbd8eb78b04dc5125a8b07e3df570da2f755c11c2346534078a48e89
 Size (Devel-StackTrace-AsHTML-0.14.tar.gz) = 53370 bytes

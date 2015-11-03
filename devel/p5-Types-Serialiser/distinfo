@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2014/02/06 12:43:27 abs Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:28:56 agc Exp $
 
 SHA1 (Types-Serialiser-1.0.tar.gz) = 72ba9d1d97bb582360c79bcbdb158e73573adb70
 RMD160 (Types-Serialiser-1.0.tar.gz) = 6166d0657c07880473268b2cfd9b406009759a4c
+SHA512 (Types-Serialiser-1.0.tar.gz) = b786bcd3ee976a6ad948cc98a9c71d2cdcd30f485528eff059091f6d86ae7078c10ba2dc2982326fcf0184dbfbdddea84daff324c6ec6a129fe6aac01253c8fb
 Size (Types-Serialiser-1.0.tar.gz) = 6238 bytes

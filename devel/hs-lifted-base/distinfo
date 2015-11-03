@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/08/01 20:53:58 szptvlfn Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:27:33 agc Exp $
 
 SHA1 (lifted-base-0.2.3.0.tar.gz) = 889b976af03bcbee3c021b08a79d0836341c31e5
 RMD160 (lifted-base-0.2.3.0.tar.gz) = b06b9ad6a6b8fd52e711a57a958ca72d02435dd2
+SHA512 (lifted-base-0.2.3.0.tar.gz) = fbaab9bec5e8f5d29d35f31922d652d270e475453e80b5e5e44424706fdb0897c3c3a4471a8efbd970aa31b8051c0dab81c0d8de74b2f3960856f7193ad0751c
 Size (lifted-base-0.2.3.0.tar.gz) = 11610 bytes

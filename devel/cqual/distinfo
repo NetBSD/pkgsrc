@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.13 2013/03/31 14:13:27 dholland Exp $
+$NetBSD: distinfo,v 1.14 2015/11/03 03:27:20 agc Exp $
 
 SHA1 (cqual-0.991.tar.gz) = f559af6947465ca242f19c1f499c7cb004e713e4
 RMD160 (cqual-0.991.tar.gz) = e3837a11c75f750196ec4be7f991ec519c1260f6
+SHA512 (cqual-0.991.tar.gz) = 3a88dd98bd5792b7bd44fb4071df619e0025ce0efaca1bf2c9c80f7ec7515e524ccfbc68317f0e8f46e69520522f253e6ffde2c0946f5cb5d632471e58b832ac
 Size (cqual-0.991.tar.gz) = 1197696 bytes
 SHA1 (patch-aa) = 5ccdb7354ad0fc5b993133ca748a106d2f3dc30f
 SHA1 (patch-ab) = 8bebf19db4ba5c38ed54122678a03f8c618600a0

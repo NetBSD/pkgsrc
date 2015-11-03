@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2014/09/06 13:32:09 wiz Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 03:28:04 agc Exp $
 
 SHA1 (Clone-PP-1.06.tar.gz) = a84e7f517e2279456f1651bbf84e349494fb58f4
 RMD160 (Clone-PP-1.06.tar.gz) = 4363212f56fd75fa45763837e2e6be36d3cc4ae8
+SHA512 (Clone-PP-1.06.tar.gz) = 5b495f3107be41bf75101a115523d5f0c56db9c4f7cd47828917134bc11fb2c231bb1d8b3f64edb63e85f1e8d99f99150463294a6015c61c5835fe6d5e21e0be
 Size (Clone-PP-1.06.tar.gz) = 9376 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2012/10/30 20:38:09 morr Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 03:27:11 agc Exp $
 
 SHA1 (RTFM-2.4.5.tar.gz) = 96c9800bf1eee94a5dd9978400a7cba8d9594b29
 RMD160 (RTFM-2.4.5.tar.gz) = d1a0dfc6510091584698143a002e695d9edcda1e
+SHA512 (RTFM-2.4.5.tar.gz) = 2c2d477563a488cd74ffcb53ad13ed307e285383d0bc92f1dcb1f94afc7e55ee59ef605660a750c699b80762036a82f34ce1f2111f06013c976eb31e82698cfe
 Size (RTFM-2.4.5.tar.gz) = 145532 bytes

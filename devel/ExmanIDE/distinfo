@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 22:24:08 agc Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 03:27:11 agc Exp $
 
 SHA1 (ExmanIDE-0.9.4.tar.gz) = ded053c45d3681687547dce8c31e0063f302b026
 RMD160 (ExmanIDE-0.9.4.tar.gz) = 8efed21da219f75390ba3d8ac032e12d4b94a7b0
+SHA512 (ExmanIDE-0.9.4.tar.gz) = b66e147b538d49cee9db049e53631f21f0d57a2a212ed2cc5b362b2ecad88c3681a657795666ce34295656d3b02e03452ddaf75b0db64d3c47507de790fead25
 Size (ExmanIDE-0.9.4.tar.gz) = 365495 bytes

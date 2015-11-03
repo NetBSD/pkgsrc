@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.22 2014/04/25 16:13:31 adam Exp $
+$NetBSD: distinfo,v 1.23 2015/11/03 03:27:23 agc Exp $
 
 SHA1 (distcc-3.2rc1.tar.bz2) = 7564e4a4890ad6ff78ec0de620329b71179361e7
 RMD160 (distcc-3.2rc1.tar.bz2) = 505447b910d90ea403a98fe0d0a3a0fa92cd7039
+SHA512 (distcc-3.2rc1.tar.bz2) = 98b2e8423d724bbb6a615d946d170441a8e293310785f867d7a277b318c043a37b0af39ae8ed1f7a0667803de9db1d1925199bad85130cf9bd9cb347635125ee
 Size (distcc-3.2rc1.tar.bz2) = 609904 bytes
 SHA1 (patch-aa) = f459c5e80a60b80f391d9d6c37d8ad2574740372
 SHA1 (patch-ab) = c3a306be0a3576b33f506bd6516d8242ceec07ca

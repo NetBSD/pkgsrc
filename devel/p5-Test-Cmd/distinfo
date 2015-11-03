@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2015/05/09 00:56:40 wen Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 03:28:49 agc Exp $
 
 SHA1 (Test-Cmd-1.08.tar.gz) = f6d2279b05366e6aab925a31e2104387f9ca3b2a
 RMD160 (Test-Cmd-1.08.tar.gz) = c7fc20f09d1c41f27b60904259d3ce051ae09aaa
+SHA512 (Test-Cmd-1.08.tar.gz) = c56d11b90fa1d2d30b2ccc85325cee1388f4ec8acfb31ee9e4c2b68670827761abc04b0054be7ad282f6565b622830dc695063a8045d8096343a078c53f0e2f4
 Size (Test-Cmd-1.08.tar.gz) = 33328 bytes

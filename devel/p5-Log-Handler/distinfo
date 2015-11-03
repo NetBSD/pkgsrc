@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/09/02 12:48:31 mef Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 03:28:25 agc Exp $
 
 SHA1 (Log-Handler-0.87.tar.gz) = 7d2c6b8db57c619e14b40f174d808e35324ebb41
 RMD160 (Log-Handler-0.87.tar.gz) = 216a2f5cc0287cf9025501d4fc207911f8aea850
+SHA512 (Log-Handler-0.87.tar.gz) = 3bbaa74d45048c8555f3d345718bd582903c25e1701c186dd27b8238f984386d4f7dff9035ca7a11683a446cb98da37afeae4eb03fca82271f416c04d2ff5cd0
 Size (Log-Handler-0.87.tar.gz) = 59218 bytes

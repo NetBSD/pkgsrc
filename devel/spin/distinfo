@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/10/24 18:54:12 agc Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:29:33 agc Exp $
 
 SHA1 (spin525.tar.gz) = 274649628c0c8ae3414b863c27a1b8d98a8e9921
 RMD160 (spin525.tar.gz) = 8d01f8dd0da8c8013fbb8c6d6e9a8c40b8c5f33f
+SHA512 (spin525.tar.gz) = 3d2866fe7320bc8c587b0c309c9590c59f4eb787bbc349ba64df7ebc116bfe134c0933ac934b24f8230c04d786a65dcf4d6a0ab19591a679bd65bda0e1eecdc9
 Size (spin525.tar.gz) = 413406 bytes

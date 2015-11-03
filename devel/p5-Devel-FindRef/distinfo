@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/01/29 05:15:19 mef Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 03:28:09 agc Exp $
 
 SHA1 (Devel-FindRef-1.44.tar.gz) = 14941ad09dc69b6fdf5fc82303b9f83141e92d7b
 RMD160 (Devel-FindRef-1.44.tar.gz) = 592e54f7da70459acb11faa4a9381379670a1b60
+SHA512 (Devel-FindRef-1.44.tar.gz) = 96114bea84eb13230bd57b0ea0c8134ab29b07d506bc550baf33b23ecf1579e2d3efc80e43e426053ec1d6b079108ccd35ad87a277cc5eac090282d789c63728
 Size (Devel-FindRef-1.44.tar.gz) = 8758 bytes

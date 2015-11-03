@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/07/03 07:29:07 sno Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:28:58 agc Exp $
 
 SHA1 (bareword-filehandles-0.003.tar.gz) = 1bffc853d8ad66699524607b1da176d99cda425f
 RMD160 (bareword-filehandles-0.003.tar.gz) = 90fd69c5ff114f66dc30d30bb49b515c0e7e5a5a
+SHA512 (bareword-filehandles-0.003.tar.gz) = 184c37f737a638a3cfad7657b39918a2aff862faa7c84ef965cc9f2a7c157b05eac732807a0ebb1de44a0ce76b72a96016a126cbba658cddd8230f3de6ab5d8b
 Size (bareword-filehandles-0.003.tar.gz) = 54286 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/02/13 13:14:26 mef Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 03:28:35 agc Exp $
 
 SHA1 (Net-CIDR-0.18.tar.gz) = d2bed482e19a1031fca57ab82ead4db638edf9bd
 RMD160 (Net-CIDR-0.18.tar.gz) = 9444521c43ba77b46c8e27e1a817032afca081e8
+SHA512 (Net-CIDR-0.18.tar.gz) = 26a8fd1fdb16b03f72c456edbd7dd0f158e6fcd76847be7634c470049eeabd1d41bf328d32e528aa26b7f34179b38904c65ba511ca3347acb0442fe93748bc63
 Size (Net-CIDR-0.18.tar.gz) = 10761 bytes

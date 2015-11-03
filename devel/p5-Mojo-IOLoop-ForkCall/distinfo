@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/06/04 22:26:19 wiedi Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 03:28:30 agc Exp $
 
 SHA1 (0.17.tar.gz) = 8658ef30184f9922f9423d3281675a317b118eef
 RMD160 (0.17.tar.gz) = b249b8e7112b90b752f9b364ea04e1622fc0c9b0
+SHA512 (0.17.tar.gz) = f89b8e9edee2678324f1e47917f2b56d7e804d5356cb0c8ecb73ac3a528ad6c32b2d849335b2cfd6d5e2fbf1f8aea588bd03baa382a7802f171e6c320523c97d
 Size (0.17.tar.gz) = 10122 bytes

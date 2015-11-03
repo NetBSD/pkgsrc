@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/06/19 08:59:07 obache Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:27:54 agc Exp $
 
 SHA1 (Algorithm-HowSimilar-0.01.tar.gz) = a5f05584f90c9fe63f23e1f73f5d78a0ca89dda9
 RMD160 (Algorithm-HowSimilar-0.01.tar.gz) = 10c92f7d67ac1f8936bdc528c6ff8fc0b40b9154
+SHA512 (Algorithm-HowSimilar-0.01.tar.gz) = 709326f7bc4d7db257e4b0787abc1241cd221287a189c03e7c106342b6cc51e2f1585bdd803e606d634d7949fbdd29ae1702f71b84b2dd5656d03deb6593a7d8
 Size (Algorithm-HowSimilar-0.01.tar.gz) = 5714 bytes

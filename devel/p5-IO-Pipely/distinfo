@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/12/15 12:49:32 wen Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:28:21 agc Exp $
 
 SHA1 (IO-Pipely-0.005.tar.gz) = abcfa9df6ab2a000ce85fa0c34835a5252fb4686
 RMD160 (IO-Pipely-0.005.tar.gz) = 493850e1501cd25a6105ea489a37420e7cf66200
+SHA512 (IO-Pipely-0.005.tar.gz) = 0a49ad646978506c6c8ab305cad7e295f68a8c9ddc95b7ee39bc381598cad054ef0ea790904e3bcc96a38fc87c9c91a865209d94f6332106c71c55c5bc98477e
 Size (IO-Pipely-0.005.tar.gz) = 23928 bytes

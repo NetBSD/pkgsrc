@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/08/30 15:59:26 wiz Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 03:28:23 agc Exp $
 
 SHA1 (Import-Into-1.002005.tar.gz) = ae123af669e064168ae0371c020d88335d92c8a3
 RMD160 (Import-Into-1.002005.tar.gz) = 65825c1b0854120faed3415e3d7e28538bac71cf
+SHA512 (Import-Into-1.002005.tar.gz) = d356307072da18bc40b25f11583018ed416cb87178f080982e14e98e53d42bc1e04aebda56d595e707c05065eaa6ad7a6b059920e8b5b8e1589bfd68e26900fb
 Size (Import-Into-1.002005.tar.gz) = 7748 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/04/27 13:54:40 mef Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:28:28 agc Exp $
 
 SHA1 (Module-Install-ManifestSkip-0.24.tar.gz) = bdab1b81fe5042736ffe79338460872f51fe1f48
 RMD160 (Module-Install-ManifestSkip-0.24.tar.gz) = ecbcaa759e4fc904df62324ac24ca3a7d963a3f0
+SHA512 (Module-Install-ManifestSkip-0.24.tar.gz) = 4c0872669559611710b6f421bcee242623f7288118be65e9c1db268827f272090c5612cfbe654f27b344863558408212271888128b171904a80eaa830be363d6
 Size (Module-Install-ManifestSkip-0.24.tar.gz) = 11409 bytes

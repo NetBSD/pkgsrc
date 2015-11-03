@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2014/11/10 18:01:01 joerg Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 03:27:49 agc Exp $
 
 SHA1 (mico-2.3.12.tar.gz) = e1885362d559ea97c62a2437a1d3a94114ef5b05
 RMD160 (mico-2.3.12.tar.gz) = 2f45ace5044233f171ac8e4fd389d523befaca51
+SHA512 (mico-2.3.12.tar.gz) = 0e8b1c5c0c713a78703fb6b34a5997269d30211d0ae807d6c42368abcee8a15143ba9993a1235d3e9aa9528bdae461ecf9a583af515b109e45f12bf6b08ab9bf
 Size (mico-2.3.12.tar.gz) = 2837502 bytes
 SHA1 (patch-aa) = 1a69df4063234d956ab10bf2cbbcaa34508923ad
 SHA1 (patch-ab) = 31c9bf32df643d5071016724799ee4ecf980788e

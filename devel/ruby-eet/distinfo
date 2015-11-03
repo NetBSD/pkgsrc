@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2013/03/07 17:00:44 taca Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 03:29:22 agc Exp $
 
 SHA1 (ruby-eet-0.1.4.tar.gz) = 16e1824179b019f48a554388aadf5168521cad51
 RMD160 (ruby-eet-0.1.4.tar.gz) = 10521754510e8f8bd00372031d663c0ebdae41c2
+SHA512 (ruby-eet-0.1.4.tar.gz) = 0f6cac9e981a8cc0c1614111e4d7aa9f3f80e2080aed3fa0cbc6ac7aa689ba95e854b53859ebb7ff9904f9b9b94916e0e86f1a1c47d15c00e86d0493ede9e2f5
 Size (ruby-eet-0.1.4.tar.gz) = 19972 bytes
 SHA1 (patch-Rakefile) = 5991edede98deb936702f775ec38b9e3a7ca68eb
 SHA1 (patch-rake_extensiontask.rb) = 89ab3da8bcbf2e1ec5a8ca4f9047ec19698f4392

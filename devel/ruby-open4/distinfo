@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/02/01 16:08:38 taca Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 03:29:26 agc Exp $
 
 SHA1 (open4-1.3.4.gem) = 41a7fe9f8e3e02da5ae76c821b89c5b376a97746
 RMD160 (open4-1.3.4.gem) = 32b0626f56be82c66d942409812baee500fb21dc
+SHA512 (open4-1.3.4.gem) = 838a18efcd093d55d9589ff9d5c11054618abef863224c2d9b31445dc735218c2f96d954040e2d3f8d5aab0140e54b627fcc4a1b01c17e59267402a2abdd8efb
 Size (open4-1.3.4.gem) = 18944 bytes

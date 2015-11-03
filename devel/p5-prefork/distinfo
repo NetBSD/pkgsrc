@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2009/08/09 09:53:32 sno Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 03:29:00 agc Exp $
 
 SHA1 (prefork-1.04.tar.gz) = f92d4de1ea268410262a117f992c437ee7e940a4
 RMD160 (prefork-1.04.tar.gz) = d297cff7fdb6bbf51ef91d26a1980c5f7394ca14
+SHA512 (prefork-1.04.tar.gz) = 80fd65f9255116cc54421000557369e4d852444d921a1ef4dadf12a7ad4bd06e641787e57df57fc0180be092d3ca546e42e9ec03cf59d0170db1197140613f54
 Size (prefork-1.04.tar.gz) = 29059 bytes

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.23 2009/04/07 02:59:04 schmonz Exp $
+$NetBSD: distinfo,v 1.24 2015/11/03 03:27:16 agc Exp $
 
 SHA1 (bglibs-1.106.tar.gz) = 5f1914299c0f91a3d5c83bf6c8c1d0b824ffe624
 RMD160 (bglibs-1.106.tar.gz) = d3ac009a0b9196701ff90b6cddbd58596ab480a9
+SHA512 (bglibs-1.106.tar.gz) = c1ae4bb9978b09ffe01231738d1f249c2040a51c2a0bbc4b04389a7085a3885cca6483f1bfe65deca213d991273bb3b7b925ebde8b6e2cd9182d8a57cb9a49d8
 Size (bglibs-1.106.tar.gz) = 481564 bytes
 SHA1 (patch-ab) = c23a0d4b20bd485a599ba445f6957f10190bdfa2
 SHA1 (patch-ac) = 1b75516a494dbc0c7943bc89b2eaf2f9668048fd

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/06/04 14:38:43 taca Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 03:29:26 agc Exp $
 
 SHA1 (posix-spawn-0.3.11.gem) = 4c5527f81f579111fbe355c07a8c10ae94b1712f
 RMD160 (posix-spawn-0.3.11.gem) = 0c820001cb36270e9e6446040f37cef94c368151
+SHA512 (posix-spawn-0.3.11.gem) = a053d80b5f8fca5c70b7aa0799ca07b3fb24b6cbf8b8c04e302f0864e72597e0843a120608838ca71a413a24422e571f4d3422141b726177d360b892e914cbc3
 Size (posix-spawn-0.3.11.gem) = 29696 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2010/01/17 01:00:13 sno Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 03:28:43 agc Exp $
 
 SHA1 (SVN-Simple-0.28.tar.gz) = 3a47dbe7fb95f19eefe24ad29f7d67bc074708fc
 RMD160 (SVN-Simple-0.28.tar.gz) = a8b00c456d1d65754f1ace9e5cdf6c8d94b7aefe
+SHA512 (SVN-Simple-0.28.tar.gz) = ab64a4f005a8047a0c58bf0fcae27559f7400faab8192fecbc62be2348e1d00538281f4174e4085dfbb8395d8d8c050363508322d01438b58802f74830ecc1b9
 Size (SVN-Simple-0.28.tar.gz) = 4952 bytes

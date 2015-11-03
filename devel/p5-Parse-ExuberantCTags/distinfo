@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2010/09/23 06:52:02 sno Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 03:28:39 agc Exp $
 
 SHA1 (Parse-ExuberantCTags-1.02.tar.gz) = c4801765164873c7190129fc22f732b2e3bc43de
 RMD160 (Parse-ExuberantCTags-1.02.tar.gz) = 9d80c914f5ab44bfe503997ff3d9562431573252
+SHA512 (Parse-ExuberantCTags-1.02.tar.gz) = 01cace59056c9924b5344e94bc8a07dec8ef1d43db3bd087f2748f5232ba63061ca0af0ed1a028e3ec86639a339239535e261fc17fd23919d3c7895f1068e7af
 Size (Parse-ExuberantCTags-1.02.tar.gz) = 57545 bytes

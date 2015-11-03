@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/08/26 17:23:30 seb Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:27:56 agc Exp $
 
 SHA1 (AutoXS-Header-1.02.tar.gz) = e1576720a1cc6d77cf77ba1ccfa61d56f7674150
 RMD160 (AutoXS-Header-1.02.tar.gz) = c8a262740ef22b468a0a377fe572b1f6a968259d
+SHA512 (AutoXS-Header-1.02.tar.gz) = 96396cf791c15c0f230eb78d5c9ee41ecf37dc91bb2f61c0a4663df83222ccab9d5bb3cb9219796e7f729e92e065b791403cbaef72c2d7630e74f147a8bb8f27
 Size (AutoXS-Header-1.02.tar.gz) = 3441 bytes

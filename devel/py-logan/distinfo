@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/04/01 02:39:02 rodent Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 03:29:10 agc Exp $
 
 SHA1 (logan-0.6.0.tar.gz) = d33ef7d53affc883a4832bd77132f2c6bf3f3822
 RMD160 (logan-0.6.0.tar.gz) = d09d85746908910f393041452ab62b54beb87358
+SHA512 (logan-0.6.0.tar.gz) = cf2a53fd22bfd65ca908f91c5142596b10da89fb66a2e809a9837965ec9af08039fc7826afd9827674714b58bba19a8008f2c40ee78b7bb6dc9ea21a7e48debf
 Size (logan-0.6.0.tar.gz) = 6742 bytes

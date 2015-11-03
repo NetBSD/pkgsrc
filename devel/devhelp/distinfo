@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.18 2010/11/18 02:05:52 obache Exp $
+$NetBSD: distinfo,v 1.19 2015/11/03 03:27:23 agc Exp $
 
 SHA1 (devhelp-2.32.0.tar.bz2) = 8a7c15a17ccfb0b39b1f1f8b57f77e544fb3b2b8
 RMD160 (devhelp-2.32.0.tar.bz2) = 934697815ec13a5629db775bb3b8585c80c8c6f0
+SHA512 (devhelp-2.32.0.tar.bz2) = 71a497c86a1cb0d89855d27260ffa7ea995cae159501c19b24e9799ad72a1d6a1400ed32dfb468b9be616bbab507e7aa6a53f2f5d236cf53aab0fd34edb2174c
 Size (devhelp-2.32.0.tar.bz2) = 503689 bytes
 SHA1 (patch-ad) = acd18af1eaf048db2bd0e3cbb432dc2674f5522c

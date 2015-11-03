@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2011/08/12 15:56:38 taca Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 03:29:22 agc Exp $
 
 SHA1 (deprecated-2.0.1.gem) = 366fe846dbe85b7abc45e70e3439afdfd2bbe6dd
 RMD160 (deprecated-2.0.1.gem) = a5dcfec594a891368b3db6c2f4c09d0513720298
+SHA512 (deprecated-2.0.1.gem) = b1c48a705808218182f96cfb720ace21da6d2463f2c2e783ee3142e00fe92f9d025b18a03956deca90f422b869e60911459a0d435a4422ccf8fd1fac859f23b7
 Size (deprecated-2.0.1.gem) = 6144 bytes
 SHA1 (patch-lib_deprecated.rb) = 7fe58a99a37b4419d467b26485b3146c22074dfa

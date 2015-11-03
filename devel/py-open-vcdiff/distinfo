@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/08/15 17:14:06 joerg Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:29:11 agc Exp $
 
 SHA1 (06d46e3de6f7.zip) = fb6ea65da02aa769fee94fe67d7525bffb39a6a2
 RMD160 (06d46e3de6f7.zip) = c1083f545fc94fe1708f22232edc5f47c8614493
+SHA512 (06d46e3de6f7.zip) = 20b8be6118f914017fca842bef5611b50772918bcd3b745904db1a25c12fd2625018e1737c0184c1e6dd08bbb828e75ca40dab2b3fbfbd4b8ebeb64d7278122a
 Size (06d46e3de6f7.zip) = 7962 bytes

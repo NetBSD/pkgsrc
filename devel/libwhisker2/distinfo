@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2014/04/06 14:05:14 rodent Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 03:27:46 agc Exp $
 
 SHA1 (libwhisker2-2.5.tar.gz) = e5810210ed6adefadac028700d3e18b451215b3b
 RMD160 (libwhisker2-2.5.tar.gz) = fd8dc1552499119f3e7086860e9cbbfaf3bf6c25
+SHA512 (libwhisker2-2.5.tar.gz) = ea3cfa7658048b23d4fd773db9ee7fde32758096cf7491d309390247648b7635952d734a0918f53109de37cdd87b675843320539db727fd107e81647b13bce10
 Size (libwhisker2-2.5.tar.gz) = 207569 bytes

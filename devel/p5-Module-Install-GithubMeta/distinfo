@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/04/27 13:40:35 mef Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:28:28 agc Exp $
 
 SHA1 (Module-Install-GithubMeta-0.30.tar.gz) = 9bfa5108b97591f8917f5923468da4f5f54276f0
 RMD160 (Module-Install-GithubMeta-0.30.tar.gz) = f6c1842902ab9a192e794275567e73f1fbf41e3f
+SHA512 (Module-Install-GithubMeta-0.30.tar.gz) = 4d72f6b5cab6dd08ba9e5328684196d06b0b0ff58e9f090aaa385ba1d8fbe55293bb5ff094c4d7039a3bf0adbdbf82d44e2a5494bbe90198758ac0fdd1d6c1b4
 Size (Module-Install-GithubMeta-0.30.tar.gz) = 29833 bytes

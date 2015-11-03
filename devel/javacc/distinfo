@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.2 2013/06/30 12:31:42 ryoon Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 03:27:35 agc Exp $
 
 SHA1 (javacc-5.0.tar.gz) = ac9f7833bdd427d05c8364406ff82ee7cab4f86f
 RMD160 (javacc-5.0.tar.gz) = b7d6b5794619fb66a342935ab0644d231c39fb42
+SHA512 (javacc-5.0.tar.gz) = 02fe1f3b714d48b225faf974fc7fd4af617c6e946c8cbf89110c5a117b7f242395cf4af7a2c6d1b3418a2c8ffcc9e72a4bc4a7b842d8703fb49bf298a782ca30
 Size (javacc-5.0.tar.gz) = 472721 bytes
 SHA1 (patch-bin_javacc) = c94965d4725aac84b647ccd20fb0a047d84d3bdc
 SHA1 (patch-bin_jjdoc) = bf27fb8b6b30faf37b03426d13b3547eaa49f70d

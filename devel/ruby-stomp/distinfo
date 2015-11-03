@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2015/02/02 15:09:02 taca Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 03:29:29 agc Exp $
 
 SHA1 (stomp-1.3.4.gem) = 1f15be20f70d3528c00bb65b104a2ffec3a019b5
 RMD160 (stomp-1.3.4.gem) = b67bd8f98192b1895f996afa9bc902c3db236733
+SHA512 (stomp-1.3.4.gem) = f141593a36bf45bcfa7254379fd88b78a62630eeebd638cea9e6e125d6cf5006632c96bcbdd6c0def0cea8f5fe7af11925d372d1e1fb3f1ee802c1a1023e2f15
 Size (stomp-1.3.4.gem) = 77824 bytes

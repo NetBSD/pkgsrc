@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2009/08/09 09:59:28 sno Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 03:27:57 agc Exp $
 
 SHA1 (B-Hooks-OP-PPAddr-0.03.tar.gz) = 34fcff8d10ea81b1020d290777ef4e868cb5f908
 RMD160 (B-Hooks-OP-PPAddr-0.03.tar.gz) = e09969c1cafb539056ea4d032f0b95245a57a59a
+SHA512 (B-Hooks-OP-PPAddr-0.03.tar.gz) = a90e699f8d37b3a0f36dfbfe18416673a5fe7f0cf1a4df4874a27617e59b1fc5228852bffa2496532f56e5fe7a502096bc1c78b9487a2841ac86baae6eddf59c
 Size (B-Hooks-OP-PPAddr-0.03.tar.gz) = 60632 bytes

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2012/11/23 22:55:22 marino Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 03:27:53 agc Exp $
 
 SHA1 (omake-0.9.8.6-0.rc1.tar.gz) = f714fa992bf391b8bac49a488bc654128962d1cc
 RMD160 (omake-0.9.8.6-0.rc1.tar.gz) = b7ceebea6f4c40460625e2e9528257e200676bca
+SHA512 (omake-0.9.8.6-0.rc1.tar.gz) = 10a7ef6746c656d25852d408fafdd67a95acc59b73c892f0dbc316f2a01949b5349d5203c9fe2400cc7c05e14a7b1bc075603bd462ab74b60427d944f8e177d0
 Size (omake-0.9.8.6-0.rc1.tar.gz) = 3254283 bytes
 SHA1 (patch-aa) = 1cc195874da3db9f909993818b347211c9f3ff77
 SHA1 (patch-ab) = 449aae3ff362efbc50f188cba8a76a13334eb964

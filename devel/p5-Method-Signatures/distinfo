@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2014/12/03 07:33:25 wen Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 03:28:26 agc Exp $
 
 SHA1 (Method-Signatures-20141021.tar.gz) = cd27891188e7e292b10609a1b3a5f489463a72d2
 RMD160 (Method-Signatures-20141021.tar.gz) = fb0031ecf344fe6d9894747a28749c5124654882
+SHA512 (Method-Signatures-20141021.tar.gz) = 3eed12838d03dfea4fd2298dc3d511122805cd06c019e4551490f9607e44170925ba2b659fe0250c476d7e60c43ccfe949928b78464453e734d221b2f23bdb8c
 Size (Method-Signatures-20141021.tar.gz) = 70038 bytes

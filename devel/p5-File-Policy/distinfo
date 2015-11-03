@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/08/20 16:47:42 seb Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:28:16 agc Exp $
 
 SHA1 (File-Policy-1.005.tar.gz) = 7323e0c1e3c872837c798281106d61e050cc7e5e
 RMD160 (File-Policy-1.005.tar.gz) = 0aa6bfbe7d6ae91f3a66cbe61c30e21bae1f9da6
+SHA512 (File-Policy-1.005.tar.gz) = acd3702decd0e0da7e473657984f1a7ec02cf95085a7fc6b2ca2223cda3246d9d2471d4e47fac7b996dba5d492b855c602d10de599b155d4c739e16fa8222c24
 Size (File-Policy-1.005.tar.gz) = 14254 bytes

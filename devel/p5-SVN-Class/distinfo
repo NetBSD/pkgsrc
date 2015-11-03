@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/02/15 08:13:38 mef Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 03:28:43 agc Exp $
 
 SHA1 (SVN-Class-0.18.tar.gz) = a9ab6e36437f42ca9e1ba47248275fa1f1eb50f4
 RMD160 (SVN-Class-0.18.tar.gz) = 63fe9eb6973fab5c1f3cac80d6d266838ff6ff20
+SHA512 (SVN-Class-0.18.tar.gz) = 8eb364e169ca1859549f3efe1703eccb3deca2e0f6738edb7ef5dbcfdffa831b73e641caa18761e8c36401137ab40c28079f763c305a5430642577c0dbfb9de8
 Size (SVN-Class-0.18.tar.gz) = 11270 bytes

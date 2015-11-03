@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2015/04/20 07:35:00 wiz Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 03:27:18 agc Exp $
 
 SHA1 (cgdb-0.6.8.tar.gz) = 0892ae59358fa98264269cf6fe57928314ef7942
 RMD160 (cgdb-0.6.8.tar.gz) = 6f72836a168ebe4c530187b02185f9e0aaaa23ea
+SHA512 (cgdb-0.6.8.tar.gz) = 22580f0c2ad9c4f4efc429f94465fe54518c38f5efc95fa544ebbd93188d8e2ec740d7c3f22df1447df9af96eb4a317e4a4fbf5c771173f86ebdccbcbd776ab2
 Size (cgdb-0.6.8.tar.gz) = 716988 bytes
 SHA1 (patch-aa) = f4ff0d3ca52c41fdd42f3899e56950487d4052eb

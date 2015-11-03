@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.12 2015/02/01 16:31:25 taca Exp $
+$NetBSD: distinfo,v 1.13 2015/11/03 03:29:27 agc Exp $
 
 SHA1 (racc-1.4.12.gem) = 70b544dc4fa458ad94dc88d4096e6fdb2c394019
 RMD160 (racc-1.4.12.gem) = bea1c6df3cad968987f7842ed6ab9aee5c323251
+SHA512 (racc-1.4.12.gem) = 7ae244127ba80ef07e1e2cabc1ec4c7c306b93d155d89e95ba425139c3ca24fdbc3c8cef3958b344a0b821fdfc36e25524d8b27de7f8a01ae2f1732edb11987f
 Size (racc-1.4.12.gem) = 115712 bytes
 SHA1 (patch-aa) = 316ae6cc21d9579f56e056f07bb4f8bdc08dac08

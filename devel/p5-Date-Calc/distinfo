@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.14 2015/03/09 06:09:57 wiz Exp $
+$NetBSD: distinfo,v 1.15 2015/11/03 03:28:08 agc Exp $
 
 SHA1 (Date-Calc-6.4.tar.gz) = 0ddc322b9b2b7774f4fefb08e3db95eab34044b7
 RMD160 (Date-Calc-6.4.tar.gz) = 113feb158ccee796c26e45db3392f8e318023a91
+SHA512 (Date-Calc-6.4.tar.gz) = e2d0cb2b041afedb10033700e27075f01987abc763a59034a10a9fc0bb059706cc959f6d76fe1fc21ced4b547475f62a8c37ad38e8e49f7453d78b17082c0671
 Size (Date-Calc-6.4.tar.gz) = 173828 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/07/25 07:13:29 mef Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 03:27:58 agc Exp $
 
 SHA1 (CPAN-FindDependencies-2.44.tar.gz) = 3f2da12792162e39c314aca5510a88a2b6bef530
 RMD160 (CPAN-FindDependencies-2.44.tar.gz) = 38cc1f6c942742a16c6fcccc0a4970e87ca24efb
+SHA512 (CPAN-FindDependencies-2.44.tar.gz) = a3266229395e51ffef203c96fd266c09a2298966c624e1e5dfd9ef620683c0e1538a12f66f6ae426abd0680b27e9e93fa9c8950a6aefd3561e06caa53112c581
 Size (CPAN-FindDependencies-2.44.tar.gz) = 28175 bytes

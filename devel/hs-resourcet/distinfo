@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2014/12/11 12:24:45 szptvlfn Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 03:27:33 agc Exp $
 
 SHA1 (resourcet-1.1.3.1.tar.gz) = b06a6f96e2f05791f1153dea9a9434cf41a8bc91
 RMD160 (resourcet-1.1.3.1.tar.gz) = 590b8fc510586fd32c2145233ceb11b3cf751314
+SHA512 (resourcet-1.1.3.1.tar.gz) = e5c677893affe9b0cde8c25f235f68090db0ff8839d0bcb884540971822eac637da52f766233c96ce00b9c75db49b36975faac753e408ca1a7faea061c17ae9d
 Size (resourcet-1.1.3.1.tar.gz) = 11218 bytes

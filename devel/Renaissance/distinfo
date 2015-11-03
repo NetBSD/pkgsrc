@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2009/04/13 12:33:43 rh Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 03:27:12 agc Exp $
 
 SHA1 (Renaissance-0.9.0.tar.gz) = e40a2b67024d5444ae31ccc1fdb24f2325f2981f
 RMD160 (Renaissance-0.9.0.tar.gz) = 039ca153a1a4de7dbd584cde4528979759dcc427
+SHA512 (Renaissance-0.9.0.tar.gz) = 67ee9612619ef9d6ba3c4fbad7b561206424b235735e847df091e05593fa57001201196cfd0b5c8e6027299cb6d68de75442ef82b44178535c60110df29cdf64
 Size (Renaissance-0.9.0.tar.gz) = 404888 bytes

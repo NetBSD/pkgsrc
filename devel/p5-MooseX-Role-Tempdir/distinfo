@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/02/06 05:11:38 mef Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:28:33 agc Exp $
 
 SHA1 (MooseX-Role-Tempdir-0.03.tar.gz) = 72731046f0979f7741378b5a0f70004a40008b6a
 RMD160 (MooseX-Role-Tempdir-0.03.tar.gz) = 633f0333d6229dab3f23031417dbee3722fed313
+SHA512 (MooseX-Role-Tempdir-0.03.tar.gz) = 38207cb55a5c1537365bd296ec5015c4d23aa94efb064725a16ec6f72c1f559a6a3c3b76aebb17cf642236556a2750befea887488fc37fef51662a4a48a5eb3b
 Size (MooseX-Role-Tempdir-0.03.tar.gz) = 4614 bytes

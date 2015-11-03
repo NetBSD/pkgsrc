@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2014/09/06 13:43:19 wen Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 03:28:18 agc Exp $
 
 SHA1 (Getopt-Mixed-1.12.tar.gz) = 1a1d79cb08d28bca6ea42e95660a70c9b359d287
 RMD160 (Getopt-Mixed-1.12.tar.gz) = f9457865669b66f9f0e9c924d04a9d2a15821d9d
+SHA512 (Getopt-Mixed-1.12.tar.gz) = 74e7d0e7cf854d18b69cf36caf9647f78660db1b21ceb6750aae15aec5e40947902834d7f178adeae442f83958157809a2f95f1873c120dc3093c35d1fdc0ad2
 Size (Getopt-Mixed-1.12.tar.gz) = 21423 bytes

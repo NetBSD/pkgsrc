@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2014/01/01 09:32:11 wen Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 03:28:46 agc Exp $
 
 SHA1 (Sub-Exporter-Progressive-0.001011.tar.gz) = 8a8b9ac0f55c1f8ab99882e00353c1a9d3805fad
 RMD160 (Sub-Exporter-Progressive-0.001011.tar.gz) = d2c809acd3d048db5a17238bdfc08e137430e070
+SHA512 (Sub-Exporter-Progressive-0.001011.tar.gz) = 897c93813aa0e0e5a7337eea861230a3180bdf9c7983f035c9afbee9d56992ab707456ee7ceb392b31d0fa9ef0138bcab36b3a4efcd03f98ccc022e799601daa
 Size (Sub-Exporter-Progressive-0.001011.tar.gz) = 5829 bytes

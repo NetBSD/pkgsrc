@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/12/07 11:23:57 fhajny Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:29:24 agc Exp $
 
 SHA1 (locale_rails-2.0.5.gem) = 4cf517b7a091870727813695d06dc6e9fe839678
 RMD160 (locale_rails-2.0.5.gem) = a0ffe97377b80abd2bfde7dbbaecfed069a69937
+SHA512 (locale_rails-2.0.5.gem) = 7be5cb9540394693336e587b3cb8fb6e53a4ef01797aaeb952c70e8557fcb024214b3f2a054930a5df1eea0be0d46706a5a9eaef900d4d52bfc3a2c0d41cda6b
 Size (locale_rails-2.0.5.gem) = 167424 bytes

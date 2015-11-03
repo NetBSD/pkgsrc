@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/02/09 15:31:25 mef Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 03:28:26 agc Exp $
 
 SHA1 (Mixin-ExtraFields-0.140002.tar.gz) = b20cfa97832d4f1d593bad0addf82752dfa466c4
 RMD160 (Mixin-ExtraFields-0.140002.tar.gz) = e6a1566157b0c5ff6d5051d97bbb66ff7c0a3b71
+SHA512 (Mixin-ExtraFields-0.140002.tar.gz) = 653e0bcbe5af77c11c1e4965759a4e3e8e463a5f27dac591ecda9dee60b3710dabbcc4c38c0d89f34cf31f98463211b62ddd6b31f2ab9c1a30107fee2ba906e8
 Size (Mixin-ExtraFields-0.140002.tar.gz) = 21094 bytes

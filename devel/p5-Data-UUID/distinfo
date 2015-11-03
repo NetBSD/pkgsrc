@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.15 2015/08/15 12:46:07 mef Exp $
+$NetBSD: distinfo,v 1.16 2015/11/03 03:28:08 agc Exp $
 
 SHA1 (Data-UUID-1.221.tar.gz) = 103f783c53a422dc7170ecc3627df96e9017490c
 RMD160 (Data-UUID-1.221.tar.gz) = c6cd97b29de8a67b2854a4a295bf39ae43b2c226
+SHA512 (Data-UUID-1.221.tar.gz) = fa40219890f9adeb486a7ff636603d8695d81765ee858e396130100aaba96b524d80eef76e0c06eac2086fe3bb2d26114d94459466d29ddc82a7a7fcb2f5adac
 Size (Data-UUID-1.221.tar.gz) = 17041 bytes

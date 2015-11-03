@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2012/10/22 22:10:14 rh Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 03:27:11 agc Exp $
 
 SHA1 (objectivelib-1.0.0.tar.gz) = 904046406f63285d2a0e5f6b279f711b34e16ad6
 RMD160 (objectivelib-1.0.0.tar.gz) = 688b8430ea1a16482b52506157b58dedbfd35c0c
+SHA512 (objectivelib-1.0.0.tar.gz) = 1d9c53703600f7ad795bb6cbfee81d3f4e90a01a3b6fe7cbb60b103a9fcb4e912dcf9b97e9e325c27c74c88bcd27c708c36d66c5ea8630c668ddbc62ee3d4834
 Size (objectivelib-1.0.0.tar.gz) = 833390 bytes
 SHA1 (patch-aa) = 3604f398bba598878f731a19aab6ba55006b833d
 SHA1 (patch-ab) = bceb865ac5c72d47dfa219411836c047bfae1510

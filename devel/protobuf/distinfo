@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2015/06/10 01:31:51 wiedi Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 03:29:03 agc Exp $
 
 SHA1 (protobuf-2.6.1.tar.gz) = 375765455ad49e45e4e10364f91aaf2831d3e905
 RMD160 (protobuf-2.6.1.tar.gz) = f6f04600cd5d9a56161b070b26cdec49c680cbb7
+SHA512 (protobuf-2.6.1.tar.gz) = 818ac4ad24aca84d214d14ac860a75c14494528821af144d3cb603f69c94d4500512814be6d62cc82973804ebfa99eb94d9f034b309f53cadb622603a7886a3e
 Size (protobuf-2.6.1.tar.gz) = 2641426 bytes
 SHA1 (patch-gtest_configure) = 57947ae35b3ffdc4906b0fcb99092e7cc5500a11
 SHA1 (patch-src_google_protobuf_stubs_atomicops.h) = 84754ded95b9b78f4211a7aa1de381ce53ed4e40

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/06/14 16:27:50 wiz Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 03:29:06 agc Exp $
 
 SHA1 (pycparser-2.14.tar.gz) = 922162bad4aa8503988035506c1c65bbf8690ba4
 RMD160 (pycparser-2.14.tar.gz) = 48d2731e16e3df6ffeca36d480f487fad6e5b83e
+SHA512 (pycparser-2.14.tar.gz) = d5b9ab434a8944898ac23a4f51189db77b02b993bf3e3ca018852b117fc0eb43e460b156beaa5c1d631ad71c81e1649113e9fff7e33506b1e7d4de24d8b464c6
 Size (pycparser-2.14.tar.gz) = 223295 bytes

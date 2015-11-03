@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/04/12 14:37:02 schmonz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:28:35 agc Exp $
 
 SHA1 (MouseX-NativeTraits-1.09.tar.gz) = 7464358bd249de15583099d0c28193573b1d9fc4
 RMD160 (MouseX-NativeTraits-1.09.tar.gz) = 7ca91f4ef97f0050bc77f57a9d020ce24db77e9f
+SHA512 (MouseX-NativeTraits-1.09.tar.gz) = 2aad717c7c78c1014f705a85b8bb8cab79febb827aa478a0884bcdd4d8d702a366785bc6104ba115513c234b8ca71cafcbbbc070ba37d6328255fe1f972c3619
 Size (MouseX-NativeTraits-1.09.tar.gz) = 50322 bytes

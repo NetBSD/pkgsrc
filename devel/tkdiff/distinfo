@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.10 2013/04/13 06:04:12 shattered Exp $
+$NetBSD: distinfo,v 1.11 2015/11/03 03:29:36 agc Exp $
 
 SHA1 (tkdiff-4.2.tar.gz) = 64b07e3aca75bcfa73f43773716bdac88769f685
 RMD160 (tkdiff-4.2.tar.gz) = 96bb5b6ebc004dc5247c0f7fbce4b20816af8024
+SHA512 (tkdiff-4.2.tar.gz) = 6c16475b808a9ac4d51a3e0b348d12739d821743eb205281473408a722ef7329e7dee61b4e0536741fab0c88eb67b00080d84598fca5e3215d4b183a858f6984
 Size (tkdiff-4.2.tar.gz) = 92063 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/02/14 09:01:33 pho Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:27:13 agc Exp $
 
 SHA1 (alex-3.1.4.tar.gz) = c9ab9bb8bbcc0cfe84086da872bb98b3fe67f946
 RMD160 (alex-3.1.4.tar.gz) = c708edb7f57eeb11b2bdb6b45bf3a1dab6de2ec8
+SHA512 (alex-3.1.4.tar.gz) = 880a6a97b62701712f28c9dc649d90c50bfedecd2c52d7a3781b2f1672826cb2b7a8872528acbae16448494f07743a4c2b4a80e4a9d8de049077fdf4f4bd75d0
 Size (alex-3.1.4.tar.gz) = 101827 bytes

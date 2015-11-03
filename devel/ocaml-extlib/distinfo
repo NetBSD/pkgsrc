@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/10/26 10:54:36 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:27:52 agc Exp $
 
 SHA1 (extlib-1.6.1.tar.gz) = 0022ed273affff85432d5587d46a8721817d315e
 RMD160 (extlib-1.6.1.tar.gz) = 4d92f55e71ee6effe58b07126458caa118472aa3
+SHA512 (extlib-1.6.1.tar.gz) = 9473f474bee99248bdc5e3c56741a191a8f0b89dbf750a4d9e92692b7871c997c584a2dc7e57f55b36b5ddcaf7a11d45b490b117ac15806e35813b82b696f541
 Size (extlib-1.6.1.tar.gz) = 72780 bytes

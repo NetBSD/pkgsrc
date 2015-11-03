@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2015/03/27 03:50:55 rodent Exp $
+$NetBSD: distinfo,v 1.9 2015/11/03 03:29:18 agc Exp $
 
 SHA1 (ragel-6.9.tar.gz) = 70a7fe77aee8423be610fa14c3fa1f96b3119e1d
 RMD160 (ragel-6.9.tar.gz) = 67c7b1f39956f9707742201a1a681c164cff84ab
+SHA512 (ragel-6.9.tar.gz) = 46886a37fa0b785574c03ba6581d99bbeaa11ca65cf4fdc37ceef42f4869bd695694cd69b4b974a25cf539f004cb106e3debda17fc26e1a9a6a4295992733dbd
 Size (ragel-6.9.tar.gz) = 1226871 bytes
 SHA1 (patch-aapl_bstcommon.h) = 540e74d2ff3ace21d3fb0cd817027cf18837bc98
 SHA1 (patch-ragel_javacodegen.cpp) = 3fc6b892b18993a769c7eb80bb89bbef63d71c7d

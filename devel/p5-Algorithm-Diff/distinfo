@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2014/11/26 12:10:35 wiz Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 03:27:54 agc Exp $
 
 SHA1 (Algorithm-Diff-1.1903.tar.gz) = 16b50ac7d83c6cb92d1996785e3496ba0a2cce95
 RMD160 (Algorithm-Diff-1.1903.tar.gz) = 656025111d1d8c6d62abdb5cd953eba23e48f065
+SHA512 (Algorithm-Diff-1.1903.tar.gz) = 61632be4c19a03ccacaa218ab7cb8bdbc53a4a6030b8173a59c7611056375536788392c1da00ab88f3df9884fc8a67825efc83b70e2e564664d5187021d6b106
 Size (Algorithm-Diff-1.1903.tar.gz) = 34174 bytes

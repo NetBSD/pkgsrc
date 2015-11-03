@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.14 2013/11/05 01:49:43 wen Exp $
+$NetBSD: distinfo,v 1.15 2015/11/03 03:28:17 agc Exp $
 
 SHA1 (File-Temp-0.2304.tar.gz) = cafb6a8e2e2cbdc8e08ee00cdeb2f42224de420a
 RMD160 (File-Temp-0.2304.tar.gz) = 689b20459f3d1181077cb6f0fa53948b61ea6878
+SHA512 (File-Temp-0.2304.tar.gz) = 823acf6ca42eb0548617feec4ce32e24da3fbbcb05d78dadea902e318797ed31bb16ef2b7fee50f79d52adb7dd561b8f97c1b9e11c56ba7d50735efbf639f1db
 Size (File-Temp-0.2304.tar.gz) = 59505 bytes

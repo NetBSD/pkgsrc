@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/01/16 15:46:59 sno Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:28:28 agc Exp $
 
 SHA1 (Module-Install-PadrePlugin-0.01.tar.gz) = 1b0688067623daa46d0a763ccaf18ed9474c3180
 RMD160 (Module-Install-PadrePlugin-0.01.tar.gz) = b5e90854603b886200f16fc97c7b2304854df1f3
+SHA512 (Module-Install-PadrePlugin-0.01.tar.gz) = 0f09aa4b947ec3575331eb3f3a263f0fdf45bde2111b76fe570a4ef7d01c6a6686bfa36e65ed516391eb91f6c80b0f3134bfc6445e1396a331366aaa037cd040
 Size (Module-Install-PadrePlugin-0.01.tar.gz) = 2711 bytes

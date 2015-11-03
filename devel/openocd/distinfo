@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2015/10/07 23:14:47 joerg Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 03:27:53 agc Exp $
 
 SHA1 (openocd-0.9.0.tar.bz2) = bcf99bb21f09513065b2c9ece148ace7d16cdd0c
 RMD160 (openocd-0.9.0.tar.bz2) = 21b3c2d80fbf8707644f37e61142d7cccaa8fed0
+SHA512 (openocd-0.9.0.tar.bz2) = 8d46137512829a7e6c5f5936d0e58431fcadb8600b0013663eac26caaddd4bd31e5857767d6b3805a120324301df8592123168241d949a39b82fada4d7eeee70
 Size (openocd-0.9.0.tar.bz2) = 3873090 bytes
 SHA1 (patch-src_flash_nor_sim3x.c) = 9c106fabf794196962a29af2196c2354db83ceb5

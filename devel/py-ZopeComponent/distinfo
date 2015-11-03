@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/01/16 19:32:25 bsiegert Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:29:04 agc Exp $
 
 SHA1 (zope.component-4.2.1.tar.gz) = ea7c81e409796270aaa2882998ac0a63c42c43d9
 RMD160 (zope.component-4.2.1.tar.gz) = a7b12b819865f453363df3e16a17de695ab64546
+SHA512 (zope.component-4.2.1.tar.gz) = 7db20d3bc7a4935f4614a626d736704ddf77e00b50b97b6100d9191d6bd60f238322955c54727e7dedaa96264679bddc4a89bfef28d01e1fd429e8d65df79a36
 Size (zope.component-4.2.1.tar.gz) = 462311 bytes

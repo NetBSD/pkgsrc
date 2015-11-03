@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2012/04/25 15:22:47 drochner Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 03:29:37 agc Exp $
 
 SHA1 (tre-0.8.0.tar.gz) = 8818058785923c32f5e1f48feeb2851507c0e61c
 RMD160 (tre-0.8.0.tar.gz) = 8af2cbecdd51dfed30cbf567652b459712e2542a
+SHA512 (tre-0.8.0.tar.gz) = dda7c9e01ca325f8f58ee2b7a52dcafbdbc5e3cf6e18151412ae5c5a9a49a337eac79d2cacc1b33c5551fe5320ed8c8ecbfc7fb787e057405854ca024d59e401
 Size (tre-0.8.0.tar.gz) = 481286 bytes

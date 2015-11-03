@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.1 2015/09/12 18:51:07 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:27:16 agc Exp $
 
 SHA1 (bam-0.4.0.tar.gz) = c0f32ff9272d5552e02a9d68fbdd72106437ee69
 RMD160 (bam-0.4.0.tar.gz) = cbb8d56c891e650f0a14c9a55efc4e9cc96e0e28
+SHA512 (bam-0.4.0.tar.gz) = c599cdf3618d317a5d304febd2e59d1116fc5819cdaf49969fdc25f88ed8f3e25831861c0c7fea05059d8af7085b654a7732bd89086bc166661b932d168ee2ca
 Size (bam-0.4.0.tar.gz) = 206780 bytes
 SHA1 (patch-make_unix.sh) = 0a0ab4a7bd904ffceb4a06109624071478e19017
 SHA1 (patch-src_platform.h) = 35e306fbd7ed9f20748491d4a0b9c5446a95eb67

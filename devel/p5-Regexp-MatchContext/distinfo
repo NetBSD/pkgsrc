@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/04/19 20:53:31 seb Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:28:42 agc Exp $
 
 SHA1 (Regexp-MatchContext-0.0.2.tar.gz) = 192b702fc10244b1a2289ab2b64a62f8357a3667
 RMD160 (Regexp-MatchContext-0.0.2.tar.gz) = 4feb6db959cf0eab45a0e03a3f87317072847778
+SHA512 (Regexp-MatchContext-0.0.2.tar.gz) = 204437603ad1ad242f8830f4bc7f5863c624bb48fcd4f2d9303f58bcde6dac89204b64263f60d35cfb72935d76d8016905daf209e12f6c60ece87f286bca6bde
 Size (Regexp-MatchContext-0.0.2.tar.gz) = 5493 bytes

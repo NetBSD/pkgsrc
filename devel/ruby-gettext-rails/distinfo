@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/12/07 12:11:05 fhajny Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:29:23 agc Exp $
 
 SHA1 (gettext_rails-2.1.0.gem) = 40bd1b3ae603bc6ad5797f8ebcdfb49bc6d725cb
 RMD160 (gettext_rails-2.1.0.gem) = 6cc5d227ec9748963dff22784c8e1a0c1121ceff
+SHA512 (gettext_rails-2.1.0.gem) = b712dcc5103be4e38e4ff71cb3eddae615dc34ffce51f4827ddb311c858e0e5a5b680d66bb23433fdcb92a23625b1ad6188bcd4f9cba659a33cb2e02e377c2ab
 Size (gettext_rails-2.1.0.gem) = 348672 bytes

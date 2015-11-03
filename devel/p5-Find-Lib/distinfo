@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/04/30 02:44:09 mef Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:28:17 agc Exp $
 
 SHA1 (Find-Lib-1.04.tar.gz) = 1b3ada2c1dc0f3827746308a274c40d7e5530f38
 RMD160 (Find-Lib-1.04.tar.gz) = 7c1c41c549251d59f668a756acadca41568e8359
+SHA512 (Find-Lib-1.04.tar.gz) = b2527acce31a88c5855a83cd3e8e8af9b62b2dc6ff4a29264443dc4e85ab921a644f27d8b5774ddbdc755b51fd5dded5fa6fa7bc98dffcf41c4d2bc53fed1e43
 Size (Find-Lib-1.04.tar.gz) = 8914 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.10 2011/04/06 21:51:14 asau Exp $
+$NetBSD: distinfo,v 1.11 2015/11/03 03:27:44 agc Exp $
 
 SHA1 (libsigsegv-2.10.tar.gz) = b75a647a9ebda70e7a3b33583efdd550e0eac094
 RMD160 (libsigsegv-2.10.tar.gz) = 186b145f0318657544f774868f50d45729f48834
+SHA512 (libsigsegv-2.10.tar.gz) = 9464b3343af5042169f208781ffa9d1f7e5e1ee8654c1e6aca5581157b43eedc5ee504a56eb905c61443273bcfc8da6822ecc6499c5f589570ad0ba02d8d8cc2
 Size (libsigsegv-2.10.tar.gz) = 402279 bytes

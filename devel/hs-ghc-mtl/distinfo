@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/09/10 21:40:07 szptvlfn Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:27:32 agc Exp $
 
 SHA1 (ghc-mtl-1.2.1.0.tar.gz) = ee0f3f28379460b3b4323405683cd71c8bfd6758
 RMD160 (ghc-mtl-1.2.1.0.tar.gz) = cec7f14c6f480ba6d11c2b354a81a9abf4de0708
+SHA512 (ghc-mtl-1.2.1.0.tar.gz) = 3b65c177818cc669bf9b3018afdbd0bf96b049dd140c5343c6608ec46dcf4a91f992986b9494ee25523970f5f02d71e9e3614ecca81b06a7f16c6b871112d6e8
 Size (ghc-mtl-1.2.1.0.tar.gz) = 2963 bytes

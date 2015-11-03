@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/08/16 21:56:30 szptvlfn Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:27:32 agc Exp $
 
 SHA1 (deepseq-generics-0.1.1.1.tar.gz) = e595943cfde3e631f5314b97b401692ed68fcde6
 RMD160 (deepseq-generics-0.1.1.1.tar.gz) = e11838292bf3799d3cfc326c70f01aecb11c6400
+SHA512 (deepseq-generics-0.1.1.1.tar.gz) = eb70ba065d044f061dd137cbbf1dace9931f74d9676d780485796268a7196c566da3b20635f1c64cc9494d09107d9aca42fd524d14a0c775e381e50f7d478d2e
 Size (deepseq-generics-0.1.1.1.tar.gz) = 5061 bytes

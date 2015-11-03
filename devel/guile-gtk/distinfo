@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.9 2008/06/23 15:16:12 gdt Exp $
+$NetBSD: distinfo,v 1.10 2015/11/03 03:27:30 agc Exp $
 
 SHA1 (guile-gtk-0.60.tar.gz) = dd25377098d61fc1030a769caa5e5777a4abd9e8
 RMD160 (guile-gtk-0.60.tar.gz) = 0e620e18745fcd936ee1b8ec61d9881506f7294d
+SHA512 (guile-gtk-0.60.tar.gz) = 62731b8f269c5b23d44bfbd6dc27aff26f414720bbb594aa6c39399e6552c6ba1150c0327db4bd4499e89e4b5fa9e7721a8a2ce72a5514375ecdaef628b952ea
 Size (guile-gtk-0.60.tar.gz) = 752981 bytes
 SHA1 (patch-aa) = f3f6e47727ea7429c671fe02d2a93e8e962e920b

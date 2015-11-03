@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/07/06 00:39:59 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:28:58 agc Exp $
 
 SHA1 (constant-def-0.01.tar.gz) = 0b946930dc6c1c16fe3337f5218b017f9f1a2784
 RMD160 (constant-def-0.01.tar.gz) = 82514af28e8d0b64736a5d0ba5b57901aefd8dbc
+SHA512 (constant-def-0.01.tar.gz) = 0ce2c0ff35633e756a49bb57d0ab6afca0dbfbe7c006fc7d4ed6fc3122e47e890c0ba959631fbdde7cfe54b3feac66826ed28a558ea7f80792fbf33c69ced45a
 Size (constant-def-0.01.tar.gz) = 22335 bytes

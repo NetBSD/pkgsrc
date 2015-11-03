@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/05/16 12:30:39 abs Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:28:22 agc Exp $
 
 SHA1 (IPC-DirQueue-1.0.tar.gz) = d35578914c253da201bc05edc11073a5432c7bad
 RMD160 (IPC-DirQueue-1.0.tar.gz) = 0df73a856db267665ea9cb627092179d82bed3a2
+SHA512 (IPC-DirQueue-1.0.tar.gz) = 688cf54be66045b5260883c75a1808f4bf75d91e852f3588f5e48afb2429428fc5d32c18e2e45e6c5edbc32a2803e0c60d8a7b22eb4c5f747d8a9814d7d2174e
 Size (IPC-DirQueue-1.0.tar.gz) = 29027 bytes

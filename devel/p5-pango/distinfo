@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/02/14 01:17:01 mef Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 03:28:59 agc Exp $
 
 SHA1 (Pango-1.226.tar.gz) = 333dd6e1990ca7557a4b99c5225d2b793afe27cb
 RMD160 (Pango-1.226.tar.gz) = 59a65930f8d299627046455fc5569917b0f6ad98
+SHA512 (Pango-1.226.tar.gz) = 2541dacccc1c6d16b093526899c55e91479f8d5b0340267e5253c4d8a1d6bf99917abd480878376756d25dd5c9db38705e8c205ba5270058c4f27bfa0ca36435
 Size (Pango-1.226.tar.gz) = 46333 bytes

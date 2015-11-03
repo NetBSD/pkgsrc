@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2012/07/20 00:48:24 gdt Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 03:29:16 agc Exp $
 
 SHA1 (setuptools_trial-0.5.12.tar.gz) = 465ccff8f4bd0de54fb68e70c18f8d1a676a443b
 RMD160 (setuptools_trial-0.5.12.tar.gz) = 74165d81a8301de6ed4431551953ba34bae13488
+SHA512 (setuptools_trial-0.5.12.tar.gz) = f1217ad4c1cb80515f118e2879cce110a7bae91a5b4f69c71b5c0093d193fa8567e92b8a7acc3609bd03b7cf255feb3d111f902f5cc19c3d969d9b883f84b829
 Size (setuptools_trial-0.5.12.tar.gz) = 5200 bytes

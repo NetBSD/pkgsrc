@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2011/08/13 07:46:03 adam Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 03:28:15 agc Exp $
 
 SHA1 (File-Find-Rule-PPI-1.06.tar.gz) = 63f1a581fa897170d77b475b775c218f170b811e
 RMD160 (File-Find-Rule-PPI-1.06.tar.gz) = 8b2a3904df3e0487efa348a8c41e712dc45c08a5
+SHA512 (File-Find-Rule-PPI-1.06.tar.gz) = 23fce4b5163b1a78b61e68df64f7367d38d1274237ef5611d7f396f9339621ccf432ddcc5b740850df62583438b8f41eba8f349f7fe151d389f0b9748466a26a
 Size (File-Find-Rule-PPI-1.06.tar.gz) = 28871 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/05/15 23:08:14 dmcmahill Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:27:49 agc Exp $
 
 SHA1 (matio-1.3.3.tar.gz) = 3f8c0dd2eb1abe4ded77ecfca6376f171bcff66c
 RMD160 (matio-1.3.3.tar.gz) = acc835c83fc615978c9ba407f8c17b79afdafb9a
+SHA512 (matio-1.3.3.tar.gz) = 8766f4c77dc276b7f60473f29e7f3ecb63bdbfa96f08647b015819a1e38a4b624d616f95c00f29966dba701a7aa9c479a87af09b9e2b14aa7dabbeeb64cae959
 Size (matio-1.3.3.tar.gz) = 418794 bytes

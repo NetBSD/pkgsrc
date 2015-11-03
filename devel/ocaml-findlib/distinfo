@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.11 2014/11/20 16:07:03 wiz Exp $
+$NetBSD: distinfo,v 1.12 2015/11/03 03:27:52 agc Exp $
 
 SHA1 (findlib-1.5.5.tar.gz) = 3221121c4b5adacc050aa361475eee59b2698afa
 RMD160 (findlib-1.5.5.tar.gz) = 4dd077e963b7a72ce9bd716ee497f8555b182139
+SHA512 (findlib-1.5.5.tar.gz) = 051817ae897a53b705ad641ae7e9010474f2320d3cc7cfd15edc9345f50566932cb44bf6f45772260706b5f9e9e91194802600c770c9c96f772985678db7209d
 Size (findlib-1.5.5.tar.gz) = 240247 bytes
 SHA1 (patch-Makefile) = 3bc4725ce54e7a9a5698fc4930f2fb577c3f5806
 SHA1 (patch-configure) = 023cc1610ab082cf3cdb82efda00df0f4b25d881

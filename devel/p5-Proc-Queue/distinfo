@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/08/21 23:30:55 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:28:41 agc Exp $
 
 SHA1 (Proc-Queue-1.23.tar.gz) = a62e3ea1d24c28bcfd7f42a17b41ff9f659c6fff
 RMD160 (Proc-Queue-1.23.tar.gz) = 14da733a791f98d50ccab3e8a049cbd9c416ac01
+SHA512 (Proc-Queue-1.23.tar.gz) = 2af60358b71f9ae04a73d58a1a0adfe00ecb95c1f77cd7392f8f8365a4810d313a7e052c3417e271b86321584b6a57b79a544056c7f84ae635799af14b54e8ca
 Size (Proc-Queue-1.23.tar.gz) = 8830 bytes

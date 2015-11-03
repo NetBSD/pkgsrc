@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.10 2008/09/15 08:36:24 taca Exp $
+$NetBSD: distinfo,v 1.11 2015/11/03 03:29:27 agc Exp $
 
 SHA1 (rdtool-0.6.22.tar.gz) = 987a75de9a698759d46e3253df42fcee3d50007e
 RMD160 (rdtool-0.6.22.tar.gz) = da52562c0679df8c1d6b22c6831077a969413c89
+SHA512 (rdtool-0.6.22.tar.gz) = 66c1ad9c9bc0447bcd16712c6dbd31ccac1df8fd0b566baeda158f40dadb320a6104c673ea19d25b523a2700b58187fe0a01e577de52f55f7e6841fe61bf5802
 Size (rdtool-0.6.22.tar.gz) = 89524 bytes

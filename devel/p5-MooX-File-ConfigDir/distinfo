@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/03/15 23:43:36 mef Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 03:28:30 agc Exp $
 
 SHA1 (MooX-File-ConfigDir-0.005.tar.gz) = 78e6665d584cdd727a821836f477b28f1035c6ba
 RMD160 (MooX-File-ConfigDir-0.005.tar.gz) = 2fb31b316a29933fdd13f913b54b0325bc434d37
+SHA512 (MooX-File-ConfigDir-0.005.tar.gz) = 02fe7366a968d1c52f8f1779caf2dfdef31f5716dd5dfe28c165d9016ea03a817b4f29d2d8cd41b63bddfc843ffb01f77cd10de706d3aba9594dc2751765a661
 Size (MooX-File-ConfigDir-0.005.tar.gz) = 6998 bytes

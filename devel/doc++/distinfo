@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.9 2013/04/30 22:16:12 joerg Exp $
+$NetBSD: distinfo,v 1.10 2015/11/03 03:27:23 agc Exp $
 
 SHA1 (doc++-3.4.10.tar.gz) = 2102e99152ab91d80d7977fa5e13dd6f6043b2c8
 RMD160 (doc++-3.4.10.tar.gz) = 85b14d32e2932ceb465f1bab16eb8389cd22d72d
+SHA512 (doc++-3.4.10.tar.gz) = be1c826761319230ae8b059b7baf054dfadacfefb08d28c482fec2d5b08aab8cd4a4f227efd8a494b1a22ec67393a68e850125099ab4c76d3fc61e0140999bf8
 Size (doc++-3.4.10.tar.gz) = 408887 bytes
 SHA1 (patch-aa) = d71fd3064b9795ed1c82044c2b42f34f166f0061
 SHA1 (patch-docify) = e38383e7be4c7d2c224c90f97317d0bdbe98685f

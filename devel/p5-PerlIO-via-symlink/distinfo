@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2007/01/10 22:00:52 bad Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 03:28:41 agc Exp $
 
 SHA1 (PerlIO-via-symlink-0.05.tar.gz) = d8b73cd3318752254636cdfd960c5e448907fb18
 RMD160 (PerlIO-via-symlink-0.05.tar.gz) = 2be2272706138ec4a13740c6d95a27eda421968c
+SHA512 (PerlIO-via-symlink-0.05.tar.gz) = 752bdeef202d8dbd89a6db6107213f45dc37ecc50c3e441acd6be5db7be0002d3b403d2cc91b4a0d0154b0551a08dc61738275688393e960dfc03a389a610508
 Size (PerlIO-via-symlink-0.05.tar.gz) = 15656 bytes

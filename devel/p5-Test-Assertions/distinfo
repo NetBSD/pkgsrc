@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/08/20 16:24:42 seb Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:28:49 agc Exp $
 
 SHA1 (Test-Assertions-1.054.tar.gz) = f2312245ee07f2a6e77eb415860350b7a319fc47
 RMD160 (Test-Assertions-1.054.tar.gz) = 3693de3706222bccadc2f2008d32237d7dd9ac6f
+SHA512 (Test-Assertions-1.054.tar.gz) = 79b24ce95e9425240d1d1bb969e93bcce8f6423e87bdf011a2bbd3073daa6762b775dcd8b3b9851d873508868c7cc7cf227036004f71150340e43845456eb398
 Size (Test-Assertions-1.054.tar.gz) = 21511 bytes

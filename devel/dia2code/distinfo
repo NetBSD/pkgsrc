@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2007/04/03 20:23:10 minskim Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 03:27:23 agc Exp $
 
 SHA1 (dia2code-0.8.1.tar.gz) = 5d72a23e82208e789ef1ecceee80edfb8813025b
 RMD160 (dia2code-0.8.1.tar.gz) = 522e48761a4779fd9af9752fd46d8b3ed4717615
+SHA512 (dia2code-0.8.1.tar.gz) = fcc8f821a90c70b74403c08b022693ea2b185db95c4c1e7df7aa32fc1a70a53fb25276f34dee0277bf55f9d5960a31005dc00d15a220d07cc8be8bf5fb75bb37
 Size (dia2code-0.8.1.tar.gz) = 71453 bytes
 SHA1 (patch-aa) = 998b0c25a26209f3e8c06d3e181715b9165b88ef

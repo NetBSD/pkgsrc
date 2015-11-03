@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.9 2008/06/13 05:57:07 bjs Exp $
+$NetBSD: distinfo,v 1.10 2015/11/03 03:27:19 agc Exp $
 
 SHA1 (Codeville-0.8.0.tar.gz) = 5f3bbbf80dd07d34ad0f95c0f7f1aea44d21e257
 RMD160 (Codeville-0.8.0.tar.gz) = 283e822460f802eb22391b3dddda1726c895e77a
+SHA512 (Codeville-0.8.0.tar.gz) = 292f702bfbb12dc11129107950275c01cb1e2803f515b98b718b60d21c9b2167ce47414d1805191fe2007b258fcf04469a5735b03fc6d5e44e3af84503df94fa
 Size (Codeville-0.8.0.tar.gz) = 93779 bytes
 SHA1 (patch-aa) = 48812e477622a984190b3c2b2e79f647b073df24
 SHA1 (patch-ab) = 7c9d5526741589dde60aa39bfbccdd71daa215a8

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2009/02/21 16:53:33 wiz Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 03:27:44 agc Exp $
 
 SHA1 (libowfat-0.28.tar.bz2) = 6bbe997ae1bbe94b784ab50a3d44b63a2e08d857
 RMD160 (libowfat-0.28.tar.bz2) = 3e8826e10a3f46520bdfa9602edb2741728aa370
+SHA512 (libowfat-0.28.tar.bz2) = 789b722cdde18c82132c28e356dfcf825754a74bd15b43c084ff2763160564bee457f18352d0009c108d513f90e50fa155f6ecc3f80d597b2f26b2800c65576d
 Size (libowfat-0.28.tar.bz2) = 129622 bytes
 SHA1 (patch-aa) = 7542a1fd6b2f4f3f1dd430be547075e98488d7d0

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.14 2013/08/21 10:14:54 shattered Exp $
+$NetBSD: distinfo,v 1.15 2015/11/03 03:29:36 agc Exp $
 
 SHA1 (tkcvs-8.2.3.tar.gz) = 16e994c638ad42e0ad89f1fe404835d3804e8d6c
 RMD160 (tkcvs-8.2.3.tar.gz) = 62f80f45341fb4c52212b26845fbb64a8e8c133b
+SHA512 (tkcvs-8.2.3.tar.gz) = 42fb03acf6367e02f6f7b3e1ad66232be4825f152b3e4d123080e0ce7d2f53b5eacb71ac95fbc15224fb4c4c2cae979b612dbb11d0cd0b8fc4a0222a8cd40c8a
 Size (tkcvs-8.2.3.tar.gz) = 570910 bytes
 SHA1 (patch-aa) = 290f23ce63b2f290a4769a25d123de8a128c5527

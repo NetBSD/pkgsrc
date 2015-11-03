@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.10 2015/05/23 06:57:15 kefren Exp $
+$NetBSD: distinfo,v 1.11 2015/11/03 03:27:50 agc Exp $
 
 SHA1 (mono-tools-3.10.tar.gz) = eb042b5c8fcd4a128ed654ad6ed6b917699b99e2
 RMD160 (mono-tools-3.10.tar.gz) = 76137bdc36e770c6073ae23d268c6d8742356b9a
+SHA512 (mono-tools-3.10.tar.gz) = 6ae701122c77e23ea6088e8867d0e5b4468418bd989528318f4a6237d16bd5193f461e08b8b9a3f5e6c2017df5f37a9e60ab817298afaee0b9e7712b4a9a7189
 Size (mono-tools-3.10.tar.gz) = 2511632 bytes
 SHA1 (patch-aa) = c421b09bf0912fbfc2b0a8972aa008ba95dc7133
 SHA1 (patch-docbrowser_Makefile.in) = 27814698f31d49aa2ba1c0543bce743be1052b13

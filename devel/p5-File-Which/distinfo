@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2015/07/23 12:16:48 wiz Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 03:28:17 agc Exp $
 
 SHA1 (File-Which-1.19.tar.gz) = d807d6d7625b9091303900381ca54bbf887b194c
 RMD160 (File-Which-1.19.tar.gz) = f6da68f4684176ca98e4feb7ba1a6d163014a5e6
+SHA512 (File-Which-1.19.tar.gz) = 5cce597185130c63c1cd941516ff51e0fe31ca927e0da67e779a6423afe3569efa5c8eef0e3780dade99e3d23578d0c21780a910690a54120039e43c45333357
 Size (File-Which-1.19.tar.gz) = 21165 bytes

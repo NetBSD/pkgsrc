@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/06/03 22:11:13 pettai Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:29:07 agc Exp $
 
 SHA1 (distorm3-3.3.0.zip) = 1870b61e0dfadad3c121eca00f325a705f7c6683
 RMD160 (distorm3-3.3.0.zip) = a145814ce00a5175a5d889770ab1f11a2e6cd2f5
+SHA512 (distorm3-3.3.0.zip) = a5c17315b293efc04634b0a732405019103d4ffb296c4f0a9146ab2ee132c22045cfc0be1c7305d75ca9d79fc304fc1ad35092c585892a4efc94b5c28853423c
 Size (distorm3-3.3.0.zip) = 145191 bytes

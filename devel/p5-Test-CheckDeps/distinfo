@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/01/28 01:57:41 mef Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 03:28:49 agc Exp $
 
 SHA1 (Test-CheckDeps-0.010.tar.gz) = 6005b5db861133b63aec04dcfc96868fb3677600
 RMD160 (Test-CheckDeps-0.010.tar.gz) = 2da8474ff3d0dcf8e3e320e230727682d7e45a30
+SHA512 (Test-CheckDeps-0.010.tar.gz) = 9683b81aa6bce358fa1abc9b2337b9b15b274742f08a3fd71e80df0bfd20619406cdded191aafdd103db8d514bdc20d36a0b60aefbd72d3de6cb117c17461697
 Size (Test-CheckDeps-0.010.tar.gz) = 11822 bytes

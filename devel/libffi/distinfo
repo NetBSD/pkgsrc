@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.40 2015/03/23 15:34:18 jperkin Exp $
+$NetBSD: distinfo,v 1.41 2015/11/03 03:27:40 agc Exp $
 
 SHA1 (libffi-3.2.1.tar.gz) = 280c265b789e041c02e5c97815793dfc283fb1e6
 RMD160 (libffi-3.2.1.tar.gz) = 9b546a3d002380bec3f00d86fc47d730abf51dfd
+SHA512 (libffi-3.2.1.tar.gz) = 980ca30a8d76f963fca722432b1fe5af77d7a4e4d2eac5144fbc5374d4c596609a293440573f4294207e1bdd9fda80ad1e1cafb2ffb543df5a275bc3bd546483
 Size (libffi-3.2.1.tar.gz) = 940837 bytes
 SHA1 (patch-aa) = 7748465dc903b53568999fc8e0caf4ea3fbc5778
 SHA1 (patch-ac) = f3c6324f4334d23e684b4eca25173a13be5d37eb

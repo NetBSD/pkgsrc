@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2005/05/26 10:22:47 dillo Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 03:29:03 agc Exp $
 
 SHA1 (pilrc-3.2.tar.gz) = a754760f88fb4468a7e640a6e34e8bd90dce2510
 RMD160 (pilrc-3.2.tar.gz) = e9dfb96082c7406e269ea99aec4ce2a6029e8afd
+SHA512 (pilrc-3.2.tar.gz) = 6f86c703ef5c40587f86882d8b60836eb8675ee100197e0ffd16f0493887754db899e80f84dda924b2ec775d77236896d2cf4ce0c0e58d665510fad6552f645b
 Size (pilrc-3.2.tar.gz) = 259898 bytes

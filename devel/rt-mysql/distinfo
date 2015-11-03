@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 22:24:32 agc Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 03:29:20 agc Exp $
 
 SHA1 (rt-2-0-15.tar.gz) = 9469f83b383f4c62e952d43ce3d63413ff5d4656
 RMD160 (rt-2-0-15.tar.gz) = 0042dc37c6c6b4960d519192583dd9f1a0beb819
+SHA512 (rt-2-0-15.tar.gz) = b91ea63d4d1fed161cf66aae403a0cde549c71a762bb3158fa3fb53b8a45ac5195ebb9fec073e9e2aeee5500372a9f5424a786f25c5d74a39fe6b35d275e6fd8
 Size (rt-2-0-15.tar.gz) = 356046 bytes
 SHA1 (patch-aa) = e05e449de52e4500965f9310d16154c956720eb3

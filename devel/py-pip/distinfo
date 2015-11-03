@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.10 2015/10/01 23:11:41 rodent Exp $
+$NetBSD: distinfo,v 1.11 2015/11/03 03:29:11 agc Exp $
 
 SHA1 (pip-7.1.2.tar.gz) = 9eb9ea19b630412bc2b2b587fc6bbbee71950a96
 RMD160 (pip-7.1.2.tar.gz) = 3d748862e9db0b975db9a51105a4ca151c302a4a
+SHA512 (pip-7.1.2.tar.gz) = 78082afe6b559bf87f91ae9b6d304cfbfce00206e09be42fdae9d449a55cd8d968df6873e834191d0b0e6baae29e72eb3eee42386ff7c5dc9c29b6c28b754449
 Size (pip-7.1.2.tar.gz) = 1049170 bytes

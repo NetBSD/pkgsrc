@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.11 2014/06/26 20:31:03 asau Exp $
+$NetBSD: distinfo,v 1.12 2015/11/03 03:27:43 agc Exp $
 
 SHA1 (libmemcached-1.0.18.tar.gz) = 8be06b5b95adbc0a7cb0f232e237b648caf783e1
 RMD160 (libmemcached-1.0.18.tar.gz) = 647ea760191755da4832f1a4c78847a330e5b515
+SHA512 (libmemcached-1.0.18.tar.gz) = 2d95fea63b8b6dc7ded42c3a88a54aad74d5a1d417af1247144dae4a88c3b639a3aabc0c2b66661ff69a7609a314efaaae236e10971af9c428a4bca0a0101585
 Size (libmemcached-1.0.18.tar.gz) = 1039649 bytes
 SHA1 (patch-clients_memflush.cc) = 52423ecc411e9991c2a14d0d54c76a1ce31d4be6
 SHA1 (patch-configure) = 413296ba549ee0e4eb5d5ca910f144916a85b02b
