@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4453 2015/11/02 18:43:02 leot Exp $
+$NetBSD: CHANGES-2015,v 1.4454 2015/11/03 07:27:45 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7626,3 +7626,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/owncloudclient to 2.0.2 [ryoon 2015-11-02]
 	Updated fonts/umefont-ttf to 0.560 [ryoon 2015-11-02]
 	Updated graphics/sane-backends to 1.0.25nb1 [leot 2015-11-02]
+	Updated lang/openjdk8 to 1.8.66 [ryoon 2015-11-03]
