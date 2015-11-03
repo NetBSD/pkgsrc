@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/05/01 02:21:46 wen Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 00:08:44 agc Exp $
 
 SHA1 (Geo-Coordinates-UTM-0.11.tar.gz) = a4933845d097aebb288e239daed593b58f5c1a4d
 RMD160 (Geo-Coordinates-UTM-0.11.tar.gz) = a4f59f82ec56615f81d33ee3e40398454696e60f
+SHA512 (Geo-Coordinates-UTM-0.11.tar.gz) = 6a55ee6444803940c5f9a4510b56d864936de3ccfe09350358d0d359ff8342e7614239ff4429bd8d19e8ad8ff729e2b06b780b75af2f77eedeb547ede1c61b3a
 Size (Geo-Coordinates-UTM-0.11.tar.gz) = 56357 bytes

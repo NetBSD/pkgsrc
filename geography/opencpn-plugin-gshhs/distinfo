@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/01/28 14:14:52 bouyer Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 00:08:43 agc Exp $
 
 SHA1 (opencpn-gshhs_2.2.4.tar.xz) = 63a2e35593fa5948de639617095a6eeb2765f88c
 RMD160 (opencpn-gshhs_2.2.4.tar.xz) = 7a5ecfdce05e29cb72115ea1e049d0507b3b9fc7
+SHA512 (opencpn-gshhs_2.2.4.tar.xz) = a6f94904ed46b7ba789d426a27ba277443e8b286198b48547ad7964cb5702973560d0d0f2a9c0d8fd1fca58e4c78c37476fe36f75c268fe0af47a60b1fb9bff6
 Size (opencpn-gshhs_2.2.4.tar.xz) = 70644960 bytes
