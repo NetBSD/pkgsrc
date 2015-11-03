@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2010/02/25 14:07:52 sno Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 03:32:19 agc Exp $
 
 SHA1 (Padre-Plugin-DataWalker-0.02.tar.gz) = 101a5031a67b2eb481c856b9fb752cfbd7259855
 RMD160 (Padre-Plugin-DataWalker-0.02.tar.gz) = 4b0cc9c530777489061d7a60a2c8b33178efd183
+SHA512 (Padre-Plugin-DataWalker-0.02.tar.gz) = 993eb48a1ae693f8e6d66d4ad16b20bf8c103a5786b4eedfc7beec856b9e04289ee6e10243d2ee7116016f0558ee5adf2df73e42b7fbb903b7d0c6a0617cbc75
 Size (Padre-Plugin-DataWalker-0.02.tar.gz) = 30458 bytes
 SHA1 (patch-aa) = f6671f66ed0d45539941f8adbd848f3fb3fe5d9c

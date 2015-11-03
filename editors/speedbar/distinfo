@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2006/03/20 04:59:08 jlam Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 03:32:21 agc Exp $
 
 SHA1 (speedbar-0.14beta4.tar.gz) = 58b246bab82d475c452ce3dea5a1d404ed1eca1f
 RMD160 (speedbar-0.14beta4.tar.gz) = 0c6845fec1bc3bd8fc4c1076ad5d8bd047a9c7da
+SHA512 (speedbar-0.14beta4.tar.gz) = ea72d82f99186abd3605e5f019bd0cbf4b94b78e53b949763eff3e10983e26b60bf76da2b712d2937a4d3bb8176895ad19f1dd43a2881a2104be7f7502ed50f8
 Size (speedbar-0.14beta4.tar.gz) = 114994 bytes
