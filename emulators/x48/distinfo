@@ -1,13 +1,16 @@
-$NetBSD: distinfo,v 1.10 2013/07/19 12:51:10 joerg Exp $
+$NetBSD: distinfo,v 1.11 2015/11/03 20:31:10 agc Exp $
 
 SHA1 (gxrom-r.bz2) = c60a83cd57681c3cb359f0cd2505ede686fdb4c8
 RMD160 (gxrom-r.bz2) = 1dafce5902310161cb60f3dde401941565fd031c
+SHA512 (gxrom-r.bz2) = 95ea7ea939c5dadac7f1f70343d45bf61fe5e77a39781f5a46264ffe8c8cd431c5d9d625363122df276099fabf5824fceb01a2dfc1c1a149f6763340beb3cfa3
 Size (gxrom-r.bz2) = 332316 bytes
 SHA1 (sxrom-e.bz2) = 62d07d48d2acc4ccb8da9b5ae264a19e2d09b361
 RMD160 (sxrom-e.bz2) = 023f2c2ca0ba12c5b0abb6e3b70e4888257e04a9
+SHA512 (sxrom-e.bz2) = 4019284a13fd4bf5970c4d817f1bcce40565b89236e70d33c42f1588b5910c08e73592112df556c693374e8e07e49d33f585795dfcab98aa7ee5354e592d7098
 Size (sxrom-e.bz2) = 190826 bytes
 SHA1 (x48-0.6.4.tar.bz2) = dfc82fe84f0c793a5f7b8024127e16d341ad2899
 RMD160 (x48-0.6.4.tar.bz2) = a5d7ddb4eb47426c639941d8cf53926bd3451ef5
+SHA512 (x48-0.6.4.tar.bz2) = 60fdba1171a02e4a5f9bcefb29fff9398fdbda50553c3d3b952fab0b4ebf87b219d4615139ca3673b1c61ff6d6559aab3e93218334aa6cdb442d4861347138ce
 Size (x48-0.6.4.tar.bz2) = 227991 bytes
 SHA1 (patch-Makefile.am) = c17957624ea2a65e7bce3e65ced645993b30ee0c
 SHA1 (patch-configure.ac) = 55f1033b0f49e0a296290a1af83f6772e5783f0d

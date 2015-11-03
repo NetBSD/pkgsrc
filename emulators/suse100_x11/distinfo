@@ -1,11 +1,14 @@
-$NetBSD: distinfo,v 1.3 2008/09/03 09:42:45 obache Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 20:31:03 agc Exp $
 
 SHA1 (suse100/i586/xorg-x11-libs-6.8.2-100.13.i586.rpm) = b6cc162c6f6d11a2ee5d24fcd3d9ef7e99c05050
 RMD160 (suse100/i586/xorg-x11-libs-6.8.2-100.13.i586.rpm) = 8aa12a5058cffd664fa68f2efff3a917d0896fc4
+SHA512 (suse100/i586/xorg-x11-libs-6.8.2-100.13.i586.rpm) = d870ed8a8252dde3949cbbdcf55426d62455e650bd5fa5365d5d0c8eff4c34d5c29201eac87a54386e294efb83863aefeaf8310ec6820aaa82d7d528833ad2e7
 Size (suse100/i586/xorg-x11-libs-6.8.2-100.13.i586.rpm) = 2929363 bytes
 SHA1 (suse100/ppc/xorg-x11-libs-6.8.2-100.13.ppc.rpm) = 0478188466aa16f19ffb8738366ad80e58d49f1b
 RMD160 (suse100/ppc/xorg-x11-libs-6.8.2-100.13.ppc.rpm) = d9a5cca3ab605ac80619f9363ba9a902d06a74ed
+SHA512 (suse100/ppc/xorg-x11-libs-6.8.2-100.13.ppc.rpm) = ad4e0b5eb3a717820020e492a0e9b09f190d57912c633a1bea1f355e1de05e9b6f4f250dcff47a50c8a0dede56656b4ec461ac221e6336e9b7fbd891b4d3eede
 Size (suse100/ppc/xorg-x11-libs-6.8.2-100.13.ppc.rpm) = 2838022 bytes
 SHA1 (suse100/x86_64/xorg-x11-libs-6.8.2-100.13.x86_64.rpm) = 01797bb66db7143a18f84d1d0674e4a110143382
 RMD160 (suse100/x86_64/xorg-x11-libs-6.8.2-100.13.x86_64.rpm) = 367b97bebdd247bd616734f93180c0992e1eb862
+SHA512 (suse100/x86_64/xorg-x11-libs-6.8.2-100.13.x86_64.rpm) = e9d9a1daa81a8745f1868b730b1b93725759d21ca6a6ad4274e4bff2e51e06283f10360be5578608a73c9fbcc3d9abafde09867954d15c42c73323a2a2f94a9e
 Size (suse100/x86_64/xorg-x11-libs-6.8.2-100.13.x86_64.rpm) = 3133548 bytes

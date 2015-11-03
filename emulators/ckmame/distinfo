@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2015/05/03 12:13:07 wiz Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 20:30:55 agc Exp $
 
 SHA1 (ckmame-0.12.tar.xz) = 2f7ed3066393a15cdfadeac992a5be5da141be09
 RMD160 (ckmame-0.12.tar.xz) = d80724e5d21df189767edb07b6294a6c2d1a5b82
+SHA512 (ckmame-0.12.tar.xz) = 48a44cca15b245805c26ab996c9eb28491751530244ca6260c1e73f772edaa2b2532f7385be19afe4da8b5e0e1cd8bf33374c20cc9a13c93d818bd9a35e6e9ca
 Size (ckmame-0.12.tar.xz) = 366152 bytes

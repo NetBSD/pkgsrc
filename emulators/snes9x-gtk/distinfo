@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2015/02/18 08:50:44 wiz Exp $
+$NetBSD: distinfo,v 1.9 2015/11/03 20:31:02 agc Exp $
 
 SHA1 (snes9x-1.53-src.tar.bz2) = 57be6480369f66b9aaaeb722789ce114f58ed1e2
 RMD160 (snes9x-1.53-src.tar.bz2) = b3f7ba73caee5373951ec1e1decef1ab6c7207f2
+SHA512 (snes9x-1.53-src.tar.bz2) = 3ded506d1b3b6cff4e8e3de77ad557d97981eb97ea23ffc68ce5abbbd4677aca819776f1d11b9aa47f5b1a785b19455acf6ad4dbc536d3581d62c192ebdfbd8c
 Size (snes9x-1.53-src.tar.bz2) = 1838746 bytes
 SHA1 (patch-aa) = bb32e36bd1d0c82dc4c68c3fb280f7474d1cf493
 SHA1 (patch-configure) = 3c6491a83a124be05bb0ded5af70e4d92053316d

@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/03/21 13:41:02 obache Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:31:05 agc Exp $
 
 SHA1 (suse121/libslang2-2.2.2-6.1.2.i586.rpm) = 89ca3b2a367e519e2e2a64aeec1740e6b04b9573
 RMD160 (suse121/libslang2-2.2.2-6.1.2.i586.rpm) = 53ff7879b70773e777a0ce7bed094140040865c8
+SHA512 (suse121/libslang2-2.2.2-6.1.2.i586.rpm) = bdbc2f23104e4fa25688fb5991321c5e2bf571c5aae6c3ed5335b754848ad9bdd7d7028ee5013105d6e973750e969faeb95a7b9af4229a6eebd7af11893f753b
 Size (suse121/libslang2-2.2.2-6.1.2.i586.rpm) = 276652 bytes
 SHA1 (suse121/libslang2-2.2.2-6.1.2.x86_64.rpm) = 04e28c8ede72d6a62062ca9d1ad93c1ded35a4bd
 RMD160 (suse121/libslang2-2.2.2-6.1.2.x86_64.rpm) = 9241c45064ef217e1036787ddad160e2e70a6ee2
+SHA512 (suse121/libslang2-2.2.2-6.1.2.x86_64.rpm) = 401af6d5e8efaa71295f55bf4687897fcbaad666699099b643728cb3785dcabeacd676aebc66045a216d57a383688daaa9af220a31efd5bb84a1d7bd86a2d1e3
 Size (suse121/libslang2-2.2.2-6.1.2.x86_64.rpm) = 276937 bytes

@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.4 2013/05/23 11:20:09 obache Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 20:31:05 agc Exp $
 
 SHA1 (suse121/libtiff3-3.9.5-8.17.1.i586.rpm) = e702ba9262f962836ccfd226b1b93e68e3dd7201
 RMD160 (suse121/libtiff3-3.9.5-8.17.1.i586.rpm) = f8d049b9a9a7666bfabee812aed37ff4b96906cc
+SHA512 (suse121/libtiff3-3.9.5-8.17.1.i586.rpm) = b0a4140a8817541d053c9aeb177dd7312eedb758082b0df5a4e8ab756f6c9d5c2faa06bdfc57ac09e8a004a5f3cac8b5d41b498f2ba8a3faf486fcf837b1758e
 Size (suse121/libtiff3-3.9.5-8.17.1.i586.rpm) = 126198 bytes
 SHA1 (suse121/libtiff3-3.9.5-8.17.1.x86_64.rpm) = 9c66eaf5288d55985bb50dffa140c1761b42390d
 RMD160 (suse121/libtiff3-3.9.5-8.17.1.x86_64.rpm) = 40dca7f8c80b1cfa8eef6cfeddcec3ca6c9ed66a
+SHA512 (suse121/libtiff3-3.9.5-8.17.1.x86_64.rpm) = 461fd9c5d1e176169fb9a4ccff59f503f989e99dbf7837a265090f680cc9761df2b46fd6d35ee94987bfdf3b3a3bd3377e16db63906cec128d4e421136898c6b
 Size (suse121/libtiff3-3.9.5-8.17.1.x86_64.rpm) = 127628 bytes

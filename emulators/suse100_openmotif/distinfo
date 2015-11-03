@@ -1,17 +1,22 @@
-$NetBSD: distinfo,v 1.2 2006/04/18 09:29:47 salo Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 20:31:03 agc Exp $
 
 SHA1 (suse100/i586/openmotif-libs-2.2.3-13.i586.rpm) = 71ec720ac1de51eb68dae69df3e54bd638400433
 RMD160 (suse100/i586/openmotif-libs-2.2.3-13.i586.rpm) = 4524548dcdeaa5120ae86db29a41ed8b4bd8e807
+SHA512 (suse100/i586/openmotif-libs-2.2.3-13.i586.rpm) = 44b7ae69b2061aeb0306952ebdc0a1cf52cef3c2dcb9f8a73af1d506b65d41e50a78b5af987df5ae140bd6cc4bd166076c3289369efa92508252c39cb88931a6
 Size (suse100/i586/openmotif-libs-2.2.3-13.i586.rpm) = 1205363 bytes
 SHA1 (suse100/i586/openmotif21-libs-2.1.30MLI4-128.i586.rpm) = 255e97dbb6be316031cf2b9a70b1198727e56988
 RMD160 (suse100/i586/openmotif21-libs-2.1.30MLI4-128.i586.rpm) = d83b128a8b94069496c704e36cefcf234ea53520
+SHA512 (suse100/i586/openmotif21-libs-2.1.30MLI4-128.i586.rpm) = ef3f7948f941a8ccfb90ec2ee5f589c9fd761d288456ce67d6e4e89d6c1e1bcae07820f68e9d7a639a8d2ce72d10c127f6b1e8929cf9fe65d5bf5febb30dda7c
 Size (suse100/i586/openmotif21-libs-2.1.30MLI4-128.i586.rpm) = 1010343 bytes
 SHA1 (suse100/ppc/openmotif-libs-2.2.3-13.ppc.rpm) = 0a9a7e67e0806ad37906e6c6e9819a8d1fdfcc6b
 RMD160 (suse100/ppc/openmotif-libs-2.2.3-13.ppc.rpm) = fcd0c7b2045b530ab2a37e9733174adb66cd2be3
+SHA512 (suse100/ppc/openmotif-libs-2.2.3-13.ppc.rpm) = 77b26412538667652b7f2e084432ace1f10a5b24f69e9130d28a57bfcba1f699e1908d3f12c9633fc3d9e76f02352173ee1d0d58a543fa00c2d538d4f8308436
 Size (suse100/ppc/openmotif-libs-2.2.3-13.ppc.rpm) = 1259557 bytes
 SHA1 (suse100/ppc/openmotif21-libs-2.1.30MLI4-128.ppc.rpm) = fd597ea108853930051a2322ce6f38b147ddec2c
 RMD160 (suse100/ppc/openmotif21-libs-2.1.30MLI4-128.ppc.rpm) = 8617ea976fefd2b24a270e5a6ca5d6cc592c79db
+SHA512 (suse100/ppc/openmotif21-libs-2.1.30MLI4-128.ppc.rpm) = 03d8df43be0d6e4c51254b92def47d93150b91b12edf879c698475a846f14b2e93029a2e561203b755b660b047c7a54f967fc4e9c489521132b40443c09ac87e
 Size (suse100/ppc/openmotif21-libs-2.1.30MLI4-128.ppc.rpm) = 1050960 bytes
 SHA1 (suse100/x86_64/openmotif-libs-2.2.3-13.x86_64.rpm) = 9114d68bfaefce72b0fca9e601a8f7af5c553445
 RMD160 (suse100/x86_64/openmotif-libs-2.2.3-13.x86_64.rpm) = f42feff5a55f4760960ca9584e5e344389571f67
+SHA512 (suse100/x86_64/openmotif-libs-2.2.3-13.x86_64.rpm) = ef9ed0ae3bb45d99fa339b89dd547d6a334561b4209f8f6dd1247fca9f16e965f6059ff8ef8c3ac38a14a24806ba79b2405032fc9019f57e4826eec735b8560e
 Size (suse100/x86_64/openmotif-libs-2.2.3-13.x86_64.rpm) = 1285311 bytes

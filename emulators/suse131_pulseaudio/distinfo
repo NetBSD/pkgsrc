@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.4 2014/11/03 08:13:45 obache Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 20:31:09 agc Exp $
 
 SHA1 (suse131/libpulse0-4.0.git.270.g9490a-20.1.i586.rpm) = 05bde0628e9d9e6df311fec60eafb921f2fd41da
 RMD160 (suse131/libpulse0-4.0.git.270.g9490a-20.1.i586.rpm) = ffdf2129e74039925c38cbe0dc8e3f8885b40bea
+SHA512 (suse131/libpulse0-4.0.git.270.g9490a-20.1.i586.rpm) = 7be804fb4cbbe294ab1014c4f875a7f005a504f367a5b6126dc9613e1ad366417da0028c740ce9e15adaf563d7845d84418b756653566652b72a90640e2a28da
 Size (suse131/libpulse0-4.0.git.270.g9490a-20.1.i586.rpm) = 241637 bytes
 SHA1 (suse131/libpulse0-4.0.git.270.g9490a-20.1.x86_64.rpm) = 2eb57068002c9869d6b56ba4b3f9028bfba98016
 RMD160 (suse131/libpulse0-4.0.git.270.g9490a-20.1.x86_64.rpm) = 5c414dc0ddcf1e3310eca40df0032c65405ea9a2
+SHA512 (suse131/libpulse0-4.0.git.270.g9490a-20.1.x86_64.rpm) = d30b3eff82225e45e5945783a9a8e82eb9088ab6ec7a131c7c21e6803169121e98206333ce00143b8cb857378256aae34d357700a6c6e9d6668275681ce2ac78
 Size (suse131/libpulse0-4.0.git.270.g9490a-20.1.x86_64.rpm) = 255037 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/02/11 00:16:25 jmcneill Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:30:59 agc Exp $
 
 SHA1 (mednafen-pce-fast-libretro-20150210.zip) = 4f85536b831f884169a7f3773aafea6722ebb744
 RMD160 (mednafen-pce-fast-libretro-20150210.zip) = c6a55ca95c413637a6ffe2db6f454285bb02ee6f
+SHA512 (mednafen-pce-fast-libretro-20150210.zip) = 876e06320cacb2286942aa11e9ea6b4e5d6140bf863e21a61169cc093d1c0495b929145535234e4ab61c2e7162617be9ffc426e2693cefcb8a1233ad339b67ca
 Size (mednafen-pce-fast-libretro-20150210.zip) = 477795 bytes

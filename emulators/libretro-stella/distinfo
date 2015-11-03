@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/02/05 22:38:59 jmcneill Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:31:00 agc Exp $
 
 SHA1 (stella-libretro-20150205.zip) = f1aff294bcc5777b7f2185e73577c550bc308489
 RMD160 (stella-libretro-20150205.zip) = 0bd254c4fca779397e675bf395cb6f1d93f51659
+SHA512 (stella-libretro-20150205.zip) = 360b0afc6e0eb6306f4b587ae4fb4905158a66c48de67d352e06fb204ce9e84ac71793469497ffc58041ad1c385ffcf2c2c32c5f0f075dd6df8b0cc12f28c290
 Size (stella-libretro-20150205.zip) = 2124856 bytes

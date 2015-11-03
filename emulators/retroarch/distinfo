@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2015/04/21 17:18:01 joerg Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 20:31:01 agc Exp $
 
 SHA1 (retroarch-20150203.zip) = 46f9493f3ab09fd185345e6bab797c4e882c5262
 RMD160 (retroarch-20150203.zip) = 76c4ae4f7edb5c866f606cb23e5550a5b7c285b4
+SHA512 (retroarch-20150203.zip) = 6b7bc44a3956fe706a53ba56d06338823fe9438182b3e16d9a7d3e7f17197cb1d49ca163b947e980849c3d54912a816dd77b17613fffd4dc305486498bca7951
 Size (retroarch-20150203.zip) = 10043939 bytes
 SHA1 (patch-Makefile) = 41a8de7bc2d992cae1799935c5d3a61774c6be88
 SHA1 (patch-Makefile.common) = 3a2157e04dfacadc48f421106760b0194586677e

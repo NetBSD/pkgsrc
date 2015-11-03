@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.30 2015/07/01 13:39:17 ryoon Exp $
+$NetBSD: distinfo,v 1.31 2015/11/03 20:30:55 agc Exp $
 
 SHA1 (bochs-2.6.8.tar.gz) = 561dc622033facb321fd9ac2e56589ae724cfdb2
 RMD160 (bochs-2.6.8.tar.gz) = cf6f9a427559c79e18c208a89e7146b6e9798ea5
+SHA512 (bochs-2.6.8.tar.gz) = 5e7438a6a09417cbc0b311810a485374bb9b10be452edd9daff0afacd487ada66f37b8189d4868d3420dae82ef6c38fe279d541d24f8a41bf1ca59359572e7bd
 Size (bochs-2.6.8.tar.gz) = 5075617 bytes
 SHA1 (patch-.bochsrc) = df5b8879ec005fe44bca8bee42c549095012013d
 SHA1 (patch-Makefile.in) = ca8d485a9f4901df15eb3e521105de2ae833cfcb

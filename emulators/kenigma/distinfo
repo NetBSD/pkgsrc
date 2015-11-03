@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/10/12 12:03:28 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:30:59 agc Exp $
 
 SHA1 (28107-kenigma-1.2.1.tar.gz) = 7b80552ee7169c75bf9397895ccd0a8b196b7598
 RMD160 (28107-kenigma-1.2.1.tar.gz) = c0b57b913e08fa34cea05d97fe63a3cbcde0755d
+SHA512 (28107-kenigma-1.2.1.tar.gz) = 3231ee54238d2ba70bb2a129bcc1b900a9400f2584188b4777c2d05cd04ab152c2f17820b4a964b52ba0c3de38220e3a44fdd7b2aee756ac24f68f37dd2dbad9
 Size (28107-kenigma-1.2.1.tar.gz) = 32907 bytes

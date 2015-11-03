@@ -1,29 +1,38 @@
-$NetBSD: distinfo,v 1.2 2007/03/24 21:52:04 salo Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 20:31:02 agc Exp $
 
 SHA1 (suse100/i586/compat-2004.11.13-4.i586.rpm) = 20a4574823be5b2a8a82a4b0988702baa1b618a5
 RMD160 (suse100/i586/compat-2004.11.13-4.i586.rpm) = 681d3a00970e232f7f37201dd1a8d842c3738043
+SHA512 (suse100/i586/compat-2004.11.13-4.i586.rpm) = 1d687ee58528ae1c64c918013f2014ad088b7a44a776efffb272b8cd05a21e30c2f159b3e51317e83657cd6748383f1aebe3aaf620e06fc70241094c678750fb
 Size (suse100/i586/compat-2004.11.13-4.i586.rpm) = 1363979 bytes
 SHA1 (suse100/i586/compat-g77-3.3.5-2.i586.rpm) = 56ed1c2491fc9907930f8ace990ade4673b422ff
 RMD160 (suse100/i586/compat-g77-3.3.5-2.i586.rpm) = ef8d345f5d152cbb885fb7e0286e9e2908509b41
+SHA512 (suse100/i586/compat-g77-3.3.5-2.i586.rpm) = 9ac04f17b196ffab2210ba0549ce5f586dc2fcde3db1ad1b348dbcd819858b49e6135111a6ed275c0826f85fba9e0efdfbfc481f8a05efd66472d6522c66ce99
 Size (suse100/i586/compat-g77-3.3.5-2.i586.rpm) = 2018811 bytes
 SHA1 (suse100/i586/compat-libstdc++-5.0.7-6.i586.rpm) = 5bf42bac9c07f49d92861034eb06c05d31968116
 RMD160 (suse100/i586/compat-libstdc++-5.0.7-6.i586.rpm) = f4935251c3ef4aa67fd3d656248ab0185bc57636
+SHA512 (suse100/i586/compat-libstdc++-5.0.7-6.i586.rpm) = 09823b240587934733bb32b60dfe05d5cfeaa894250754a75fdfd4ae29c7e95c28620e207513c303ad51b35182b89d2b890cc19127445d2ac43b0aa6439e53a4
 Size (suse100/i586/compat-libstdc++-5.0.7-6.i586.rpm) = 233040 bytes
 SHA1 (suse100/ppc/compat-2004.11.13-4.ppc.rpm) = d56387052cd865d0325e00dbba03f8086500a2cd
 RMD160 (suse100/ppc/compat-2004.11.13-4.ppc.rpm) = 732dde7d78d1fb0a09f437aab47bda6cdeeda702
+SHA512 (suse100/ppc/compat-2004.11.13-4.ppc.rpm) = 05e3ce8f82b5b1bfaea56cad258fcd2d3452b70ed93acea5a933eee282b72d91adffb20ebca783e925f4f7fe8abbbf39021b92b8142e12953948dd0837709535
 Size (suse100/ppc/compat-2004.11.13-4.ppc.rpm) = 853476 bytes
 SHA1 (suse100/ppc/compat-g77-3.3.5-2.ppc.rpm) = 6aa9e0ae12ac151a46913bd6f727309d248d1fb3
 RMD160 (suse100/ppc/compat-g77-3.3.5-2.ppc.rpm) = de0181de957c5993c02674feeecc40ead05a3aa8
+SHA512 (suse100/ppc/compat-g77-3.3.5-2.ppc.rpm) = e4bee1b381dbea19d03ad3173c1e8318d65efb8bd88dde88f6b46ac4a316e81775cf106bb01f01c93f9a9d498f772e7fc7128eb8c5a6818853b09a1d1ee87399
 Size (suse100/ppc/compat-g77-3.3.5-2.ppc.rpm) = 2557135 bytes
 SHA1 (suse100/ppc/compat-libstdc++-5.0.7-6.ppc.rpm) = 32d0566212edb261d12a396992ea82c08614fe11
 RMD160 (suse100/ppc/compat-libstdc++-5.0.7-6.ppc.rpm) = 43d526649a0d14861caf941321abbe1f7c6f39c5
+SHA512 (suse100/ppc/compat-libstdc++-5.0.7-6.ppc.rpm) = a39585d47f71ad684e22f4d09c5d2f14db857017d09ecfd4a4de39eb2956b54b56827db53af4453aea50f92ed5a0dc41aa6d2185d0ca3a5de788808c8f4fb1cd
 Size (suse100/ppc/compat-libstdc++-5.0.7-6.ppc.rpm) = 267312 bytes
 SHA1 (suse100/x86_64/compat-2004.11.13-4.x86_64.rpm) = 5dcbd5f5c18630cce3be6770bf235ca6cd4ec248
 RMD160 (suse100/x86_64/compat-2004.11.13-4.x86_64.rpm) = cd4274f17e45a69909afe4e6315fa2d5a3d95c09
+SHA512 (suse100/x86_64/compat-2004.11.13-4.x86_64.rpm) = 4b8301de4e16ff405e4ad87886bb9586616863f2abcab3cb7511ccaceb724fadcef0c2f69cd633ce245de375bb4a33d636e5b21d6bc256994c22c0c524c05696
 Size (suse100/x86_64/compat-2004.11.13-4.x86_64.rpm) = 120440 bytes
 SHA1 (suse100/x86_64/compat-g77-3.3.5-2.x86_64.rpm) = 7c0b8aa75dc5c7b0ed188d97c8ede438a57d07e8
 RMD160 (suse100/x86_64/compat-g77-3.3.5-2.x86_64.rpm) = 15d004a599fc4ccc83ccd817202fec5e3ebe0c8c
+SHA512 (suse100/x86_64/compat-g77-3.3.5-2.x86_64.rpm) = aca17bafcbaf9e32ae4163c6ece588f932245b573f653ed5bc6316565994fcea032f1b44fb48c7426c6db0ad6203a1929a50a4b224f7eb90fe28c34bd485cecd
 Size (suse100/x86_64/compat-g77-3.3.5-2.x86_64.rpm) = 2423407 bytes
 SHA1 (suse100/x86_64/compat-libstdc++-5.0.7-6.x86_64.rpm) = 95ba61ed1d7c998c4f1177044a6047814a9671d8
 RMD160 (suse100/x86_64/compat-libstdc++-5.0.7-6.x86_64.rpm) = 98c43e40940efd442ff6c8a47cc47f711af69c1b
+SHA512 (suse100/x86_64/compat-libstdc++-5.0.7-6.x86_64.rpm) = 6674c59b0b2b5eaccf02d719135e11c442ac71307ae5a86b6309301c478f4037838fade6c41f9551bbb232e0e824abc422286dc8ec5d1b7c6926c570eeff8939
 Size (suse100/x86_64/compat-libstdc++-5.0.7-6.x86_64.rpm) = 453853 bytes

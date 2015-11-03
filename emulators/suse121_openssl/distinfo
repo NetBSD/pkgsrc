@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.5 2013/02/26 11:51:13 obache Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 20:31:05 agc Exp $
 
 SHA1 (suse121/libopenssl1_0_0-1.0.0k-34.20.1.i586.rpm) = 127cd87b5f66cae09850c290bdbcc84dd9ea055e
 RMD160 (suse121/libopenssl1_0_0-1.0.0k-34.20.1.i586.rpm) = c10dc9a5d02fc0cb8fc5b7bb995fc813593ec7fd
+SHA512 (suse121/libopenssl1_0_0-1.0.0k-34.20.1.i586.rpm) = 3bdaa12605e0675f9ae974fe49964c313190dac89f5916645ab569a99b4d6af45a71acd4893a8bf137c7c64d9ade4585c3648db25c0835e4da24e440b68689f3
 Size (suse121/libopenssl1_0_0-1.0.0k-34.20.1.i586.rpm) = 751117 bytes
 SHA1 (suse121/libopenssl1_0_0-1.0.0k-34.20.1.x86_64.rpm) = 95c9582ba02bdf0e2a559d5adfdc0321b45d6375
 RMD160 (suse121/libopenssl1_0_0-1.0.0k-34.20.1.x86_64.rpm) = 256563fb4876ac9f4a854ca8189309de1786a7e7
+SHA512 (suse121/libopenssl1_0_0-1.0.0k-34.20.1.x86_64.rpm) = f05b7291f3a487efa118fdbeb8c27545c52a45ca176cfdfd05342608c256592c46dafe69118cdb17378ee1afd0e50ad4004cff8a25d8760715e7cab2beaad369
 Size (suse121/libopenssl1_0_0-1.0.0k-34.20.1.x86_64.rpm) = 746305 bytes

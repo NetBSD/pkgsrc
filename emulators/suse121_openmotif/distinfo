@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/03/21 13:40:24 obache Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:31:05 agc Exp $
 
 SHA1 (suse121/openmotif-libs-2.3.2-8.1.3.i586.rpm) = 5917aca03bef72549e7bd665e15eecfa06d2a5f7
 RMD160 (suse121/openmotif-libs-2.3.2-8.1.3.i586.rpm) = ec3ee7048e634c5d6d300e682a5dd4a67092db76
+SHA512 (suse121/openmotif-libs-2.3.2-8.1.3.i586.rpm) = 21a3c600e012c8d772e4877efd07528c56eea847497e4bdfd4cf8ad0b007f905c7942529896a0807e49fbfc392b9a7c6985bcd60a69235b4ef875eb89d49085a
 Size (suse121/openmotif-libs-2.3.2-8.1.3.i586.rpm) = 1122588 bytes
 SHA1 (suse121/openmotif-libs-2.3.2-8.1.3.x86_64.rpm) = d74c68e999aee054a937e7a674b84dd7da449eae
 RMD160 (suse121/openmotif-libs-2.3.2-8.1.3.x86_64.rpm) = 9aa40e548b4e44e4b7235a9025ceda857d0f41eb
+SHA512 (suse121/openmotif-libs-2.3.2-8.1.3.x86_64.rpm) = 26837e424cd392b506607fff0275a7fbcf0fe0564a96e7aa104492654a3dbf02c86405a92c1c4f90950de7724e5375c65db5cc3086c9597eafb77fcda9c6c87c
 Size (suse121/openmotif-libs-2.3.2-8.1.3.x86_64.rpm) = 1119810 bytes

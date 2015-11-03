@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2015/03/07 14:29:35 tnn Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 20:30:59 agc Exp $
 
 SHA1 (libretro-pcsx-rearmed-0.22.tar.gz) = bdd2e38aa53c13e557ddc0ccac2bdcea909f9f9d
 RMD160 (libretro-pcsx-rearmed-0.22.tar.gz) = ea7328498d32d12ee3e4b3504ed1685effecb9a1
+SHA512 (libretro-pcsx-rearmed-0.22.tar.gz) = e193e3a8061595a0ffe13d2755b446560687f776e72ffd51db9ba982267353ecf5a4ce82a060806da2d3389e4c6adaa99cddd3b58d29d30f196d9a828bb72d29
 Size (libretro-pcsx-rearmed-0.22.tar.gz) = 1153355 bytes
 SHA1 (patch-libpcsxcore_new__dynarec_new__dynarec.c) = 82ec36e064ae4f725379ca889eefe1f60038adc0
