@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2013/06/14 11:15:16 obache Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 23:49:34 agc Exp $
 
 SHA1 (dpkg_1.16.10.tar.xz) = bd67ce10236a674a2349d13feaa096b41fea4c9c
 RMD160 (dpkg_1.16.10.tar.xz) = e04b3834056cd97c1cb955007f02e1358a8e8fa0
+SHA512 (dpkg_1.16.10.tar.xz) = cd7b1159c2071f48f2e369e03b8a3d1f00366bcdabab2ef4c33700e8f3230db5c9991e5937331f7f66f616d2bb798efec12e572af5724e1c9809beb9d5ae627e
 Size (dpkg_1.16.10.tar.xz) = 3703340 bytes
 SHA1 (patch-aa) = a7d40af564ae6f95357450026ed75236918cb5ff

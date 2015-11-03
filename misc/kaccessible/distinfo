@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.8 2014/11/13 19:19:06 markd Exp $
+$NetBSD: distinfo,v 1.9 2015/11/03 23:49:38 agc Exp $
 
 SHA1 (kaccessible-4.14.3.tar.xz) = 76a036db685b98c031d6f0e746f44f70c2cacfd5
 RMD160 (kaccessible-4.14.3.tar.xz) = 0e5c60007893a9842b4cebb7efe8e5a1ff23c1b6
+SHA512 (kaccessible-4.14.3.tar.xz) = 605e1633a932bf504532e5bac96ed99920506e0b763a3570c9607176823df1ffa31eb3dac56b3b104ccef9cfb60ba1e31985f7e1721e7182291a488050776504
 Size (kaccessible-4.14.3.tar.xz) = 20544 bytes

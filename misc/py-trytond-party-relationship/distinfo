@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/08/24 14:49:44 richard Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 23:49:47 agc Exp $
 
 SHA1 (tryton-3.6/trytond_party_relationship-3.6.0.tar.gz) = 4b2a6963bb5fad42b7e71d2c489d30a8902b2094
 RMD160 (tryton-3.6/trytond_party_relationship-3.6.0.tar.gz) = 493337f888f466990dfbc1aa2acd3c83a3fa03a2
+SHA512 (tryton-3.6/trytond_party_relationship-3.6.0.tar.gz) = 8810be736e92afe9e63e0192d7b503860c322b0da58257c624693b8aa6a4a21ddfcb3db56017bf50f877654695b233a7c00486bcc18a3a78c59929615f9c5f80
 Size (tryton-3.6/trytond_party_relationship-3.6.0.tar.gz) = 22791 bytes

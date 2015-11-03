@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2012/11/23 12:11:41 joerg Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 23:49:35 agc Exp $
 
 SHA1 (elizatalk-0.4.tar.gz) = 8d5d1931fcd3d014b63d27d1c893661941800f84
 RMD160 (elizatalk-0.4.tar.gz) = b293b8c200946c24d1c3bd68ab5dc5b6fffc8d3b
+SHA512 (elizatalk-0.4.tar.gz) = 037f032cab3ee668527c2f3ff77027d4c2ed881391dbeaff84d4a88266d82d100c783d49ff492044d0008ec4810916afe2e232a9583a92e760174560319ea9ac
 Size (elizatalk-0.4.tar.gz) = 116369 bytes
 SHA1 (patch-aa) = 52423155d4b4fdcc2571c69aafcab80cae3d8ab1
 SHA1 (patch-ab) = f1d0148f3d58bafcb9fe3de255b49afa0e86943e

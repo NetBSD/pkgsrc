@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.17 2011/01/11 19:37:56 drochner Exp $
+$NetBSD: distinfo,v 1.18 2015/11/03 23:49:36 agc Exp $
 
 SHA1 (gnome-user-docs-2.32.0.tar.bz2) = c621e303f63fad663f1a58dddba0f7c8b475427e
 RMD160 (gnome-user-docs-2.32.0.tar.bz2) = d01a316adce5407c14bb9316eb695122e91faf84
+SHA512 (gnome-user-docs-2.32.0.tar.bz2) = d180295b46338f27f827a1dafb2da129cf34c8453e95adc60ee3205c5623038d08ca2aa744d55a67dbe8054b381de0d3c77293663053dc92a556b27cd1cfeb4a
 Size (gnome-user-docs-2.32.0.tar.bz2) = 17858824 bytes
