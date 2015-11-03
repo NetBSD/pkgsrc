@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2014/10/09 19:48:40 jaapb Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 01:56:16 agc Exp $
 
 SHA1 (v2.0.6.tar.gz) = 0835856fe5e255c4c5d90a78c84add065c9b1264
 RMD160 (v2.0.6.tar.gz) = 57ba126bbafb66a86b391ff82a7d92c50c66fc22
+SHA512 (v2.0.6.tar.gz) = 8d8d25c7fdce145a05d444327eceb696c4161c140228dd2be8a2436408e8a4f4a7395690f0ca2ff27269fb7b5890a645c52db9baafe44f01f840a439ff5f7e80
 Size (v2.0.6.tar.gz) = 64424 bytes
 SHA1 (patch-lib_sqlite3_stubs.c) = bd5970939a4ad748067337425992346de2b571a5

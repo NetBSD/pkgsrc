@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/12/17 17:31:17 taca Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:56:32 agc Exp $
 
 SHA1 (dm-rest-adapter-1.2.0.gem) = d5f57d753d9672b20f41ecf3c003bbefc00bd37b
 RMD160 (dm-rest-adapter-1.2.0.gem) = a63891a7cf74cfa60ee470ff735230e768c88aff
+SHA512 (dm-rest-adapter-1.2.0.gem) = 4988b8a92c93c2223316ccc0d12022b594a8be808c72474a94b70598c17408fe627af15d419d7c3ec7dc6134da74696ad6835ce67be266dd0b88fa26ea16b817
 Size (dm-rest-adapter-1.2.0.gem) = 12288 bytes

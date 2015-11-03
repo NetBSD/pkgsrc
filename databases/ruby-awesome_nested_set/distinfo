@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/07/04 00:20:17 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:56:30 agc Exp $
 
 SHA1 (awesome_nested_set-2.1.6.gem) = e3a95e1e5a89a7f8f1ebc18cdc9ee3717bcf9022
 RMD160 (awesome_nested_set-2.1.6.gem) = 5bafa07a121dbb56c01134525ac93a96b8e154cc
+SHA512 (awesome_nested_set-2.1.6.gem) = 68044aebf7b93fc160218379dbac1bce0c30b1fc81eaecc5c1bf35fe71b0ccf090e6c582c9dc61c55ee68d064530ce6543c91d6feb95562a11b817b8df291634
 Size (awesome_nested_set-2.1.6.gem) = 15360 bytes

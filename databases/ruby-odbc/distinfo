@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2013/06/11 15:02:28 taca Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 01:56:34 agc Exp $
 
 SHA1 (ruby-odbc-0.99995.tar.gz) = 8fc7bd34c582953e56478050a7b41b4b3e0efdd3
 RMD160 (ruby-odbc-0.99995.tar.gz) = 8ec9b841e850d497a8af308295cf73fa06d2d427
+SHA512 (ruby-odbc-0.99995.tar.gz) = e62464e1d08a528dd518bcafc55dae1462216f958dba55eb1523667a8daf8ba424e7c9f53c9aecfe9de6cb8127cdd292c3ad61335f09fe4b70bc1df5e3023e60
 Size (ruby-odbc-0.99995.tar.gz) = 73362 bytes

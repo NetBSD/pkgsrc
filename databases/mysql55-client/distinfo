@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.45 2015/10/03 12:13:29 adam Exp $
+$NetBSD: distinfo,v 1.46 2015/11/03 01:56:15 agc Exp $
 
 SHA1 (mysql-5.5.46.tar.gz) = d0ad18d3cd624902c92679f0150c62b06e6a569d
 RMD160 (mysql-5.5.46.tar.gz) = 463e3e6c4af4ab4e48534745c6bffb53ee613fd7
+SHA512 (mysql-5.5.46.tar.gz) = c2db730318d4c16793d62dbd937c1ff739fffabab6d1689b94252f5501ff36917ddf80a8144583492c05220b3ae33f29ecbcec10f6d8ae0a0b10142be719fc27
 Size (mysql-5.5.46.tar.gz) = 21838374 bytes
 SHA1 (sphinx-2.2.10-release.tar.gz) = 0f2372dd41df2848ea06c6076a86af6f0f66a071
 RMD160 (sphinx-2.2.10-release.tar.gz) = 2712e8ce85609e78c53bd2d9fba877f1e630d5f2
+SHA512 (sphinx-2.2.10-release.tar.gz) = 07683f64df730368563e11a7d2939b521837c9a04944ab7d6d09732ab06e451b674169eca4f85db2aae41d883bd16fb4d17b9265912fea9691d07d407d7212d8
 Size (sphinx-2.2.10-release.tar.gz) = 3109250 bytes
 SHA1 (patch-BUILD_compile-pentium-gcov) = a1ac666efa953a98455a726e5db359c903d699b6
 SHA1 (patch-CMakeLists.txt) = 2040dc4904270327c9d64178a3d889ebde2ec5d5

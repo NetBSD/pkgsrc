@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 16:33:09 agc Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 01:56:29 agc Exp $
 
 SHA1 (quicklist-0.8.6.tar.gz) = 3759d4f90fc02f0d04314dec26ed41b09bf97b3c
 RMD160 (quicklist-0.8.6.tar.gz) = 638299105fc42a1c5abef3c415c00dac3646ea1d
+SHA512 (quicklist-0.8.6.tar.gz) = 179639165d2dfb252546f17f37e72b47c610fdd66c354b5bbad052bd17d79f36e6204072c09f86498c940fd4fb74ae9b14bb975365ec75ca406ac5fc8d943102
 Size (quicklist-0.8.6.tar.gz) = 247559 bytes
 SHA1 (patch-aa) = d1058a39ace6c5b3b73d9ce91f21ab6728d41e75
 SHA1 (patch-ab) = 2d6b5e410667b89288d386ee4bbe6baaad4842a8

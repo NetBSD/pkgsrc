@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2010/01/29 17:30:09 joerg Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 01:56:29 agc Exp $
 
 SHA1 (RDB-2.6d.tar.gz) = d7c01391eb8035236630357d77c580fcdd2ed3dd
 RMD160 (RDB-2.6d.tar.gz) = fd28dc86934ff35bb6e18bee196dafdf1248ae15
+SHA512 (RDB-2.6d.tar.gz) = bc41268c0603758e5ba30ed1dfd6756440d029615ea20788c3aa916b316737c9a8f23f3abccb4d5e6ba4068082afa01626e84d5dbfd9cac95efba9c3b5da6f52
 Size (RDB-2.6d.tar.gz) = 214540 bytes
 SHA1 (patch-aa) = bd4eb68ea7a0c0a3b040f25500a09ca159c204ce

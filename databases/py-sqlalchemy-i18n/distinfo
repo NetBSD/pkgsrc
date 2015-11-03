@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/12/06 03:26:17 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:56:28 agc Exp $
 
 SHA1 (SQLAlchemy-i18n-1.0.1.tar.gz) = 013889825f2e2ea4640b50a9a1081171ed1dbd18
 RMD160 (SQLAlchemy-i18n-1.0.1.tar.gz) = 6ba493f2d818639b44f2e1c0ac2b505784778aec
+SHA512 (SQLAlchemy-i18n-1.0.1.tar.gz) = 7c3fb356b5acd19790329f0a8ef46fb373c64e451f389d008bbbe4a7a8226a554f1b08c78916dc67f4c9de40353f62d8c462f8f64ba307460ff6cfe0bb60584a
 Size (SQLAlchemy-i18n-1.0.1.tar.gz) = 25506 bytes

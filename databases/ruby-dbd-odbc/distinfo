@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/10/17 12:33:41 taca Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:56:30 agc Exp $
 
 SHA1 (dbd-odbc-0.2.5.gem) = e44f32355a40a3860f88554204918df5b869322d
 RMD160 (dbd-odbc-0.2.5.gem) = 71357494c323a843f99688ac1b5f1d03390ea079
+SHA512 (dbd-odbc-0.2.5.gem) = db15012e3edc94e21dd06c91f74fe1f09dd812f614289110d28f6e301d724b877928f75ccec1f04cf572951975d2f9a2931c577c781b60e7423937890ec26d5f
 Size (dbd-odbc-0.2.5.gem) = 44032 bytes

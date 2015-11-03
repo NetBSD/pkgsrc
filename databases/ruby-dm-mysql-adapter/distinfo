@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/12/17 17:29:21 taca Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:56:32 agc Exp $
 
 SHA1 (dm-mysql-adapter-1.2.0.gem) = a48e4f4ed97383f00ee80cee992643b26ed5b69a
 RMD160 (dm-mysql-adapter-1.2.0.gem) = 0f2d6b42f3e75f717528922cad943138f5d13e5c
+SHA512 (dm-mysql-adapter-1.2.0.gem) = 0caed030fa7913da98bf14eade8757d168fde850966d30c68b56cee426597d53ffd2b9d8f60b6581c5f4831593d5c6896c635ca633b34fe7b67adbb8cf2493f6
 Size (dm-mysql-adapter-1.2.0.gem) = 7168 bytes

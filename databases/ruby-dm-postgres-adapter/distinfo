@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/12/17 17:30:36 taca Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:56:32 agc Exp $
 
 SHA1 (dm-postgres-adapter-1.2.0.gem) = 924fd356028d4cf30e58e8b91209347b64f28901
 RMD160 (dm-postgres-adapter-1.2.0.gem) = d7fff082cb0d87da1da779003fc31d9a0d02c37f
+SHA512 (dm-postgres-adapter-1.2.0.gem) = d972e0cef48f90705b2085723bed2d6018dd18c44c26f4aa9c0b5a17d0d2aa8ba25222d3ff7adc41e9aa0365756d25084c8bc62d0de0f11602b1e838cc0a0d1b
 Size (dm-postgres-adapter-1.2.0.gem) = 6656 bytes

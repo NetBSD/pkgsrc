@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/04/14 17:32:46 fhajny Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 01:56:24 agc Exp $
 
 SHA1 (percona-toolkit-2.2.14.tar.gz) = bf6e6d4415e843bd5b650dfdf3462d1bcb3a0ffa
 RMD160 (percona-toolkit-2.2.14.tar.gz) = e7d611fd9c2ab7c4333ea14f77d03fbc2c1cf935
+SHA512 (percona-toolkit-2.2.14.tar.gz) = 34c7f9d5984aad85d8ea1bd0a969a6eba371ff5bf94c0e50cc08bb7fd690e967bba76c82f59e9a539040ffef70bd9c47a8db49435044c67dc4ef2a231fe6a07b
 Size (percona-toolkit-2.2.14.tar.gz) = 1399612 bytes

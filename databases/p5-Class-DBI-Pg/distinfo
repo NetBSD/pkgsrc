@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2008/07/17 14:22:44 he Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 01:56:17 agc Exp $
 
 SHA1 (Class-DBI-Pg-0.09.tar.gz) = 93c33daf7487a346c8012bf151da3faa8fefd9b2
 RMD160 (Class-DBI-Pg-0.09.tar.gz) = 3a14066ff4be00259d1716b0df611993d60fdd49
+SHA512 (Class-DBI-Pg-0.09.tar.gz) = d9f9a232211006253727f1a128358b0b39d1c6d8e7da0d5a9543df8ebaa2e85b47a8d0e49797de085df0e456f8c35e91a9c5107460603d9441d0ec6dcac85237
 Size (Class-DBI-Pg-0.09.tar.gz) = 4959 bytes

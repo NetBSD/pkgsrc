@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.1.1.1 2015/07/19 13:14:58 asau Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:56:13 agc Exp $
 
 SHA1 (postgresql-9.4-1201.jdbc4.jar) = b46544ef0eaf0405504089dcc71f36e3f190ef09
 RMD160 (postgresql-9.4-1201.jdbc4.jar) = ef058b1e1f5458f7e97ac089a7582141210682da
+SHA512 (postgresql-9.4-1201.jdbc4.jar) = 635e4e24607e8e9a65f7478dd102c3debfd2c4df2847339338a75486dbf6bbefa87b541d3d9d59486b9daf79282e4e3b7220b30302a1b8b5812fba3e69d2cb9d
 Size (postgresql-9.4-1201.jdbc4.jar) = 642809 bytes
 SHA1 (postgresql-jdbc-9.4-1201.src.tar.gz) = a014b5c32b97cf2087830fcc9e01e521a06a4c0e
 RMD160 (postgresql-jdbc-9.4-1201.src.tar.gz) = 556dadb94f6eb871562a8beeeb0a66c186a30a34
+SHA512 (postgresql-jdbc-9.4-1201.src.tar.gz) = 6fd543e325de931ee6c33fe4b1daf53d7baa91061afc9dc1687c4b202430cbcf2a7e3fb047f9e1d88f4d39b8f4f85a98f2b930205ceba414212dfcbaaf108883
 Size (postgresql-jdbc-9.4-1201.src.tar.gz) = 1909810 bytes

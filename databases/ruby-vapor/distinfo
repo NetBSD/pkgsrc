@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2015/06/03 12:04:16 taca Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 01:56:34 agc Exp $
 
 SHA1 (vapor-0.81.tar.gz) = af5c5f33339c7130296e25671d97dda1f7e81c4f
 RMD160 (vapor-0.81.tar.gz) = 48b39d2bd0000e30161b82e48853125e3a8e460c
+SHA512 (vapor-0.81.tar.gz) = 2fa988d5ca4c4e416f98c80f5682cb30f3a7ec617b2ad0e7a0abee7f3c3d8d4b63fe62eaa4d9ce62d7bd4ffbe484762ea39a354ef3cd226e804e13995cc36d16
 Size (vapor-0.81.tar.gz) = 102993 bytes
 SHA1 (patch-install.rb) = f4d166ec92912014b40175d90158234312a962e0

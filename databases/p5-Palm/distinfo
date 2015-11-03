@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2010/03/17 00:01:19 sno Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 01:56:22 agc Exp $
 
 SHA1 (p5-Palm-1.012.tar.gz) = 06746b28af9ab88c07cdaaf6d7845cb1adea0cf5
 RMD160 (p5-Palm-1.012.tar.gz) = d906e7c875c50bfffd9ba2fd4649ae7094733b23
+SHA512 (p5-Palm-1.012.tar.gz) = 781993b434c1d62bd450c6be7e618f52dfdd331db0b32737de34fb4045cf1f1bbeacc5c03f9fa72192c7acf6a91b8623cae50e5301d120e29acece3fae4987b1
 Size (p5-Palm-1.012.tar.gz) = 55417 bytes

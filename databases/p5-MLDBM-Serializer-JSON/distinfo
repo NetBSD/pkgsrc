@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2014/12/12 04:53:52 mef Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 01:56:22 agc Exp $
 
 SHA1 (MLDBM-Serializer-JSON-0.002.tar.gz) = 1e3155bbd50eef677c9095ca70c4926d6924f620
 RMD160 (MLDBM-Serializer-JSON-0.002.tar.gz) = a8ae38f8d60c2aefb1b1f3e97f91a8828050a91f
+SHA512 (MLDBM-Serializer-JSON-0.002.tar.gz) = e6d2fe0d30b2650f08e6709bc66c6db86565bcfc9e04487d8e1ca02f00b31fa06ea6afab8b88b68f5f9a806374b40a91ce8565efb762a65e51d4bebba94312d9
 Size (MLDBM-Serializer-JSON-0.002.tar.gz) = 4244 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 16:33:06 agc Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 01:56:14 agc Exp $
 
 SHA1 (lsqlite_src.zip) = 4d6159a62f1214bb658a3c4666eb8ca82b1ca1d7
 RMD160 (lsqlite_src.zip) = 717771b68507c54c9b0b540ed2ab70adb53cd420
+SHA512 (lsqlite_src.zip) = 7933a735559815a67d26225a69de72bea55ff529672820abfe10346b0194dff62a1bc4c6625a0a8621417d5b79a4035d21196f31a2beabb7a6f5e1703b6fb012
 Size (lsqlite_src.zip) = 321990 bytes

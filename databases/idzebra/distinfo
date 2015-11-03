@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2014/12/04 07:41:38 mef Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 01:56:12 agc Exp $
 
 SHA1 (idzebra-2.0.59.tar.gz) = 1573927c2bf5aee1b393f3641cf3a79a02c2b2f4
 RMD160 (idzebra-2.0.59.tar.gz) = 94c4ede3261bba13233fc5991f9d811e15827dac
+SHA512 (idzebra-2.0.59.tar.gz) = ed61c411e47b5f8de0e16b343fed3817fdcc0f5ef678e1c990e76b23620abe90fddd5fe395b4b1043e91af0d474cec64bf61cffa520e1be35b95fe58eab3d7ed
 Size (idzebra-2.0.59.tar.gz) = 1933993 bytes

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.20 2013/09/11 16:11:44 jperkin Exp $
+$NetBSD: distinfo,v 1.21 2015/11/03 01:56:11 agc Exp $
 
 SHA1 (freetds-0.91.tar.gz) = 3ab06c8e208e82197dc25d09ae353d9f3be7db52
 RMD160 (freetds-0.91.tar.gz) = 1d33d4c4414d0793d83c87a8224bac181528fdb0
+SHA512 (freetds-0.91.tar.gz) = 4dadafe49848ab5505b0fa5bd650e19e7652c3e1181d3c49f087c50ed055f395eaf5917a99744ed3594e4af9032c4e18f397af58fb1010e695ac2c0bc601b5e3
 Size (freetds-0.91.tar.gz) = 2136329 bytes
 SHA1 (patch-aa) = 3c1df8f94c18b88915795a3a7596d5c282782a4a
 SHA1 (patch-ac) = f5ae8f79adf5e2e227fb7b9e41334659713589ad

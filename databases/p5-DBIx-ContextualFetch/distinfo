@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2007/11/09 02:54:31 hiramatsu Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 01:56:20 agc Exp $
 
 SHA1 (DBIx-ContextualFetch-1.03.tar.gz) = af4627f61980df2c889a8e12f1869ed01894662f
 RMD160 (DBIx-ContextualFetch-1.03.tar.gz) = cd0aa0e634da277aae30b4e295eac2e0680d007e
+SHA512 (DBIx-ContextualFetch-1.03.tar.gz) = e563bb56026bc8f15ced939696caaa1532aa71def6603cf3e941016a1337ca090053e30c582623413af50008ea8f4c62981cb94a4f75d423d53d015300c66885
 Size (DBIx-ContextualFetch-1.03.tar.gz) = 4487 bytes

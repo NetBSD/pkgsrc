@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.16 2013/10/27 12:49:13 obache Exp $
+$NetBSD: distinfo,v 1.17 2015/11/03 01:56:34 agc Exp $
 
 SHA1 (tokyocabinet-ruby-1.31.tar.gz) = 56de5df0b642a219bc4401aa570043538cc52d27
 RMD160 (tokyocabinet-ruby-1.31.tar.gz) = 00e1d258c73f47dc347fc466fea42dbd1d43230a
+SHA512 (tokyocabinet-ruby-1.31.tar.gz) = b1867978bcdc13c87ad641e58848324c388f2c44561ef5c203a07bcccf9468ce9a2ef5412fd03a35a62bfcc0c323b1a8f17a6a0b9bcf1ccf7c09a559f65345b9
 Size (tokyocabinet-ruby-1.31.tar.gz) = 98542 bytes

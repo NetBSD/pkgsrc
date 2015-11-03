@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/09/07 19:11:41 seb Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:56:18 agc Exp $
 
 SHA1 (DBICx-Deploy-0.02.tar.gz) = 794959aac124061a026bc579ec8052637c07d23b
 RMD160 (DBICx-Deploy-0.02.tar.gz) = be90210833dc168fc5ee1c3dd9bcbf2269a3edb3
+SHA512 (DBICx-Deploy-0.02.tar.gz) = c441d8de176d5ec445c06be6d56b52b17297caacb59b5c2156a626fb341786e097c094930259e28e9a4da1c5d9ac23c22ce7b391051f611db6aa6e7c343bc05e
 Size (DBICx-Deploy-0.02.tar.gz) = 14172 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/05/17 10:36:44 dmcmahill Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:56:21 agc Exp $
 
 SHA1 (DublinCore-Record-0.03.tar.gz) = 5fab8fcb9307b787de3831ff9e875c2a5f427bd5
 RMD160 (DublinCore-Record-0.03.tar.gz) = cdb9d36b9be0bd3a0261e5c96c449cad07db20e8
+SHA512 (DublinCore-Record-0.03.tar.gz) = dfeb083ca944fa30897116bf199d5b31b674d36ad8783404975af3f5dca93124d25da921b57b793f2fce27649961b17060aa9d8acbb56cf73ddbc65946c1aa65
 Size (DublinCore-Record-0.03.tar.gz) = 5668 bytes

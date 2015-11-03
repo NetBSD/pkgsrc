@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.15 2010/01/17 02:53:28 obache Exp $
+$NetBSD: distinfo,v 1.16 2015/11/03 01:56:24 agc Exp $
 
 SHA1 (tokyotyrant-perl-1.16.tar.gz) = f6b68e2507a0d3e56a4e1ced38d4bcdab7bd05cd
 RMD160 (tokyotyrant-perl-1.16.tar.gz) = ad0637e5284996deb1c4d12ec4b18b221f22ac79
+SHA512 (tokyotyrant-perl-1.16.tar.gz) = 07c3f5133fb4f1e26fa9e62c85d5aac27947bc97a8322d563ffc03868e5e42b471f6cd19adf4f7dd05d5b9845a872d1635c40573635328a70e8a3540faa53530
 Size (tokyotyrant-perl-1.16.tar.gz) = 33604 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/03/01 21:13:08 gdt Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:56:29 agc Exp $
 
 SHA1 (tokyocabinet-0.5.tar.gz) = 7f4254b9209104026a9537d9ca3edfc2050a1a1a
 RMD160 (tokyocabinet-0.5.tar.gz) = 5826eae28723ea94ba129eb77d5dea3cb8c1c528
+SHA512 (tokyocabinet-0.5.tar.gz) = 12c665be846291f8ec7e37fbb72ca69e18f2278fb02d27138329f440ddaf11ef13812b72192a4792ef8449c253ea17a39837b28adfba680ea6e34de8e091cc2d
 Size (tokyocabinet-0.5.tar.gz) = 12408 bytes
