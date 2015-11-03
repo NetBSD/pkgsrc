@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2015/10/09 11:27:23 jperkin Exp $
+# $NetBSD: Makefile,v 1.22 2015/11/03 13:59:10 jperkin Exp $
 
 GCC_PKGNAME=	gcc48
 .include	"version.mk"
@@ -84,6 +84,11 @@ MAKE_ENV+=		ac_cv_func_clock_gettime=yes
 .endif
 .if ${OPSYS} == "DragonFly"
 CONFIGURE_ARGS+=	--disable-bootstrap
+.endif
+.if ${OPSYS} == "Darwin" && !empty(OSX_SDK_PATH)
+CONFIGURE_ARGS+=	--with-native-system-header-dir=${OSX_SDK_PATH}/usr/include
+# From FreeBSD, avoids compare issues with clang
+CONFIGURE_ARGS+=	--with-build-config=bootstrap-debug
 .endif
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || !empty(MACHINE_PLATFORM:MLinux-*-i386)
