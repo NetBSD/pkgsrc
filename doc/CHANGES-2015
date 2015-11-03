@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4463 2015/11/03 23:40:04 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.4464 2015/11/03 23:46:53 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7642,3 +7642,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/libkface to 4.13.0 [markd 2015-11-03]
 	Updated graphics/digikam to 4.13.0 [markd 2015-11-03]
 	Updated www/firefox38 to 38.4.0 [ryoon 2015-11-03]
+	Updated www/firefox38-l10n to 38.4.0 [ryoon 2015-11-03]
