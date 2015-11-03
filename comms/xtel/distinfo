@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.8 2012/02/16 18:00:20 hans Exp $
+$NetBSD: distinfo,v 1.9 2015/11/03 01:34:58 agc Exp $
 
 SHA1 (xtel-3.3.0.tar.gz) = 7ee5a5afa20bea46e08c346605c53cdd32d69dc9
 RMD160 (xtel-3.3.0.tar.gz) = 0ba51e9129b24db33ac96cff23ffc88d3f13b653
+SHA512 (xtel-3.3.0.tar.gz) = 4a6a691aa8cbe08512c616e1d78065d2578eacf72b54e5f514046892a3eda5a6ffa816a22ab6986345c59494c8dde41c0a78fae5690b0c386cd91e31faa9f72e
 Size (xtel-3.3.0.tar.gz) = 309426 bytes
 SHA1 (xtel-jumbo-patch-20111008.gz) = 868afb6a47402ae4eb819fed5509733b4fafebca
 RMD160 (xtel-jumbo-patch-20111008.gz) = 4f23535a9c93347aa45dce8959e3e6aea6e3957c
+SHA512 (xtel-jumbo-patch-20111008.gz) = d40fa21c61c329f64c1d5e98e58ef7582fa156a3f5c0a7f0495d6d0f25005015f97d97905ce8aa6892c223e1c0d3722075cbf88d769b6e1e3871129785505c75
 Size (xtel-jumbo-patch-20111008.gz) = 43856 bytes
 SHA1 (patch-Xsra_SelFile.c) = f0e9847f2d2793fdc8cbd15ca3c5b1778cde6a40
 SHA1 (patch-ab) = 991cd916bbb4c20c71214d4d74a43736940fd5ce
