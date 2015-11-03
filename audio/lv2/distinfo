@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/04/19 22:52:04 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:12:40 agc Exp $
 
 SHA1 (lv2-1.12.0.tar.bz2) = fc914f00d3230354145748a2a4e55df0a03bcbe2
 RMD160 (lv2-1.12.0.tar.bz2) = 60e8f419e3d9813e76463433355b246a15e96ff6
+SHA512 (lv2-1.12.0.tar.bz2) = acc5e05eeeb5291fe5b64e30b5c00a6ef7136922fab7846efc05ccacdeff4d7714f705e632d5b3f6a5314cb3a7b847528fd717fc9ebb5d6f39653c53ac261f85
 Size (lv2-1.12.0.tar.bz2) = 399666 bytes

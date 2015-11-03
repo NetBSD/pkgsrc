@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2013/10/14 13:33:31 roy Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 01:12:28 agc Exp $
 
 SHA1 (emixer-0.05.5.tar.gz) = acae7acf3cd11633d1f800047287d9f52e8e7d02
 RMD160 (emixer-0.05.5.tar.gz) = f937ae68e32917e58983d9ccfec7039a8e8f1be3
+SHA512 (emixer-0.05.5.tar.gz) = 3fa1720e3baf9854e15674f7796269bb675d3626b0a3013298c27ca6dc84020b87118a4530665a64be17e7e1ea64b724a3f841ecbc93ba6c6c2c308a0fd46082
 Size (emixer-0.05.5.tar.gz) = 19609 bytes
 SHA1 (patch-main.c) = c9afac560ffe1c91d558fcdf4e198dc1d260dc58
 SHA1 (patch-mixer.c) = 188b13e5b7210d875f3faa230ff1e1731146c8d9

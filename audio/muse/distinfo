@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.13 2014/04/23 20:14:03 asau Exp $
+$NetBSD: distinfo,v 1.14 2015/11/03 01:12:43 agc Exp $
 
 SHA1 (MuSE-0.9.tar.gz) = c73dfe6cf5a8da3430864a76d0bc8d9f2cb7d118
 RMD160 (MuSE-0.9.tar.gz) = 53eb653a0488ae3a5ef9486d8b2a9006fdba619d
+SHA512 (MuSE-0.9.tar.gz) = b7f80e6faeaa43a6acc43abf7a161be2a81e6635116feb6ac18821639911810dc59a043c1a15df289213f6df2a7f0b5b76e9459e22ba200f69d48b2b482e45d6
 Size (MuSE-0.9.tar.gz) = 1363091 bytes
 SHA1 (patch-aa) = 5bbea372750e4747cdc6ec40b531937ff0174ccb
 SHA1 (patch-ab) = 56a51f8cdb2c70cea7fad40a73c5720ad9aa8d7c

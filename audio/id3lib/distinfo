@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.20 2013/04/29 21:13:30 joerg Exp $
+$NetBSD: distinfo,v 1.21 2015/11/03 01:12:35 agc Exp $
 
 SHA1 (id3lib-3.8.3.tar.gz) = c92c880da41d1ec0b242745a901702ae87970838
 RMD160 (id3lib-3.8.3.tar.gz) = bfa2499ec649ed40815ad0a370c78eb1517952c4
+SHA512 (id3lib-3.8.3.tar.gz) = 3787e261f86933c1c2f2bff2c4b349b42f5d8636e489e4f39f9d75e6dfbdc79b87009a0f4ce4b786f2fb3dbc01ca9d56c4112095b46244f897e6c9a28573adaf
 Size (id3lib-3.8.3.tar.gz) = 950726 bytes
 SHA1 (patch-aa) = 23ccb36fc35e1f645a72b9292c1cd8eeb0379a38
 SHA1 (patch-af) = 0266e9220791b7b14a35dc9b7564ab75cbc6562b

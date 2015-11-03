@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2010/05/19 21:00:02 drochner Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 01:12:46 agc Exp $
 
 SHA1 (pyao-0.82.tar.gz) = 9b213da96030648a5fa589d5eab7e1791374e269
 RMD160 (pyao-0.82.tar.gz) = 6d602ef060ddc22b4cff841741c90fa88af45fed
+SHA512 (pyao-0.82.tar.gz) = 9c2349a2cfd55f64b8edaa6aaf9cecd4589dab3c6fd8a5cc8ad8c9512bf3595c85e0efaa56d6bb2f89410fbfa82081c8c2ea5ea68071e64afdbd8809f70b36cf
 Size (pyao-0.82.tar.gz) = 15399 bytes
 SHA1 (patch-aa) = 6822564d118285470a5e4fd3dc7dcda250dc869a
 SHA1 (patch-ab) = 40aa185bbf638a09a8e55a9cea6e7a0fdfdfb7a2

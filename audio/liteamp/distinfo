@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2014/09/10 12:09:42 joerg Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 01:12:40 agc Exp $
 
 SHA1 (liteamp-0.2.4.2.tar.gz) = b810ccb6f464d1e4c26223021c7bd571ff62f5cc
 RMD160 (liteamp-0.2.4.2.tar.gz) = 7d8bd665307b65e6596f559378f8f6c636acab9f
+SHA512 (liteamp-0.2.4.2.tar.gz) = cfc62be6835d5cceca6f6ec765b275e2fcb224e3428cf52ccc3108934171bde379fe50b44a2a05f68c461562bec716f34e7d6b4aba3b3b71e0b10c78b2b0afa8
 Size (liteamp-0.2.4.2.tar.gz) = 496190 bytes
 SHA1 (patch-ab) = 4cb36325a550686977b3570d8570f068799ec1ee
 SHA1 (patch-src_mad-decoder.c) = 2f62c4d5f5eac0ccba8174a94609d2616e431181

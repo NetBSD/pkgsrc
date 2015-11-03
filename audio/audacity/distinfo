@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.30 2015/09/29 04:49:55 mrg Exp $
+$NetBSD: distinfo,v 1.31 2015/11/03 01:12:25 agc Exp $
 
 SHA1 (audacity-minsrc-2.1.0.tar.xz) = a53bce0276240bb56f2e3fd1bf235a4ef688caa3
 RMD160 (audacity-minsrc-2.1.0.tar.xz) = 16b0e91222b91b47eeb533d4725b68e5548c057f
+SHA512 (audacity-minsrc-2.1.0.tar.xz) = 5ed441b567bc72a794d9d5a1248db137d1a6d019b5fcdcb8b536a509ecacbf5d85b50c2a0cad484f84053dff4ffa662027cca157fde4b18f9d53b2bd106c34b4
 Size (audacity-minsrc-2.1.0.tar.xz) = 5104924 bytes
 SHA1 (patch-Makefile.in) = 8a770c2ab0494359c22d7f8e1b548fb83c2c00ff
 SHA1 (patch-aa) = 67c0ec5ff99004d9035de13f0263add46ed8c994

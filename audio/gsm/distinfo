@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.9 2009/10/31 01:29:27 wiz Exp $
+$NetBSD: distinfo,v 1.10 2015/11/03 01:12:34 agc Exp $
 
 SHA1 (gsm-1.0.13.tar.gz) = 668b0a180039a50d379b3d5a22e78da4b1d90afc
 RMD160 (gsm-1.0.13.tar.gz) = e44f70d481328038b3b16a25cc99b7855113db61
+SHA512 (gsm-1.0.13.tar.gz) = 0d0cf9e1e81e64cd84f588c1e4f0cb74b849d45e41fdebf860f63588084c73c7c5198bfe73a6c976bda5735ee516661d3db00afbb5cc5886a7ee3a7b31d673aa
 Size (gsm-1.0.13.tar.gz) = 65318 bytes
 SHA1 (patch-aa) = e50ac3bba1c8a6ccd54d6d035232eca739d3f9fa
 SHA1 (patch-ab) = b9af8e40884aeac19e7e5b11df27819408465b65

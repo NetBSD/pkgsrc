@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/08/07 20:53:26 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:12:51 agc Exp $
 
 SHA1 (spectro-edit_0.4.jar) = faf8988a614bbf23985a32a30fe59cff5a3c562e
 RMD160 (spectro-edit_0.4.jar) = 0d1fdc8c0137a39ebf2efdafb89632c4eff348f7
+SHA512 (spectro-edit_0.4.jar) = b98ae98da01f071a467a8ddecf1392ce07ec44264eec19b33941cf7e2bc5d4937b4a82fca55ec736d5cf9480a16c28cc60aa2bc32450c02e4179d10bc9f64a16
 Size (spectro-edit_0.4.jar) = 351068 bytes

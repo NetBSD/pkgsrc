@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/10/02 11:38:14 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:12:33 agc Exp $
 
 SHA1 (gmpc-wikipedia-11.8.16.tar.gz) = c860e7c5614362f8cd8bf3cff820032cb1a41691
 RMD160 (gmpc-wikipedia-11.8.16.tar.gz) = d2966cdc54860845ab5808665bdf5d5b707597ed
+SHA512 (gmpc-wikipedia-11.8.16.tar.gz) = c500fabe714e5aec6506ffeddf0c41d13275179e8839227cd856254c9abd0478b846e459582cd3f10b5a4e374dea872ade83219b7f4d1539f2df3122dee94360
 Size (gmpc-wikipedia-11.8.16.tar.gz) = 310015 bytes

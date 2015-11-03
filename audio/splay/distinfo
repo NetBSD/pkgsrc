@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.10 2012/02/06 02:59:49 sbd Exp $
+$NetBSD: distinfo,v 1.11 2015/11/03 01:12:52 agc Exp $
 
 SHA1 (splay-0.8.2.tar.gz) = 25288afa1b52bf25be8f9c4ceb44325c50fa00c8
 RMD160 (splay-0.8.2.tar.gz) = f1a99ad9e7e70f5e0000aede05966cc5a0b36ad3
+SHA512 (splay-0.8.2.tar.gz) = 349d843c4ddbc553800b82e7c65b6dd01e1f63ebcbcb3d8c51acab6c2967d3092a083ba6f7a0644f45a72eddc04e0a95f17bb193cc6a301b05a0e0fe846221aa
 Size (splay-0.8.2.tar.gz) = 109060 bytes
 SHA1 (patch-aa) = a1c7edc9939454e437a6ad301cd5955f59612ed5
 SHA1 (patch-ab) = 4587aad409b6d2b59a04faedce5a2734cd2a264c

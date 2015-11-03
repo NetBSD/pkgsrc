@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 20:39:44 agc Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 01:12:30 agc Exp $
 
 SHA1 (festvox_ellpc11k.tar.gz) = 73ecc7b3c0a04102b1a591a2061b1b1998edbe4e
 RMD160 (festvox_ellpc11k.tar.gz) = 75c92fe845c7ded2341d8717784bf7bdc93fa966
+SHA512 (festvox_ellpc11k.tar.gz) = 099ec62d7afa2c5645e053f9984414f54a36337674118b6276273b6b9087c16db520a49e6073edcba608d5ca94741d48ecd86d4689b01609dd2f819e169351b7
 Size (festvox_ellpc11k.tar.gz) = 1473907 bytes

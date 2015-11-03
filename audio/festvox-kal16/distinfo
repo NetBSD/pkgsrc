@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 20:39:45 agc Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 01:12:30 agc Exp $
 
 SHA1 (festvox_kallpc16k.tar.gz) = ad18502ae0fd10bdc3db189fa9afa8a167eceebb
 RMD160 (festvox_kallpc16k.tar.gz) = f8be814267359ac9d4fa5d0bcade18e15b64beb2
+SHA512 (festvox_kallpc16k.tar.gz) = ad8d45e04cb704f31a01de8f4d1b3adb4530563728e8b331b0a730c762bd0c0590e5d49f893404a0199f51fb6afce4b786107ae1fdbc4d1b61c3139ce805267c
 Size (festvox_kallpc16k.tar.gz) = 4104056 bytes

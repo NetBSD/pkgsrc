@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/05/09 00:42:45 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:12:36 agc Exp $
 
 SHA1 (libfishsound-1.0.0.tar.gz) = 5263dfaa12dce71e30c5d80f871d92869c6b5ce2
 RMD160 (libfishsound-1.0.0.tar.gz) = 49919da94696932ca88cc81bcc317a434ce67bc9
+SHA512 (libfishsound-1.0.0.tar.gz) = 97d850fb42b394fca098a96b1784da431a0af1d54d57127179b612e4b88a7a2e406eb1411f55536e5a11ec2e8956f2659182c60ac46d49f6d14250e39a740339
 Size (libfishsound-1.0.0.tar.gz) = 444980 bytes

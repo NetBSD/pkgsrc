@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/08/24 17:39:13 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:12:24 agc Exp $
 
 SHA1 (amaroc-0.3.tar.bz2) = 54e9504871cc4db4596a5c867e64e5c41154656a
 RMD160 (amaroc-0.3.tar.bz2) = 6b8b49296d1c20b78c70caf765672fb36ccf6a4c
+SHA512 (amaroc-0.3.tar.bz2) = 71087db3ff960f2b8ff28a3213672812057d52c24aaea967ad8e2ff916f40dbf243af7e4082342077b44cec45c30f3ed99c9170b1d96c3f87ec07c970900657a
 Size (amaroc-0.3.tar.bz2) = 9295 bytes

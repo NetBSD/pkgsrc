@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2007/05/28 07:29:12 gson Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 01:12:52 agc Exp $
 
 SHA1 (snack2.2.10.tar.gz) = 2c333fde061cf1cb7d5932c9cff4eb968c7d095a
 RMD160 (snack2.2.10.tar.gz) = 52616bc4cf06baee0e5d7a91faa5b385ee60c7a7
+SHA512 (snack2.2.10.tar.gz) = c17ad332fa4f3ded006b97ceca85cada079e4c7cd933768b289c13dadca1b8803fccaf709ec2def5af4abe92c307f25597ebfa6f94df2d681e40815cd7eccb9b
 Size (snack2.2.10.tar.gz) = 1798252 bytes
 SHA1 (patch-aa) = 297f046897c9cba1d0919a69874dceeeb2d56808
 SHA1 (patch-ab) = 060757edac59c5c27443466f0c3b0bc55d50364e

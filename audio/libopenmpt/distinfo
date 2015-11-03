@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2015/09/30 20:09:51 wiz Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 01:12:38 agc Exp $
 
 SHA1 (libopenmpt-0.2.5602-beta14-autotools.tar.gz) = d1d8dfcec128ecdb53f7c4c2cd6551078ad49817
 RMD160 (libopenmpt-0.2.5602-beta14-autotools.tar.gz) = d8cce06d8e4dc59215ae1cd5068aeb8584b9c06c
+SHA512 (libopenmpt-0.2.5602-beta14-autotools.tar.gz) = c7359d0dd3c7a087944be4a61284390e9146a074f85ecb179c20fb43a7d290a74a1e5ea03b14c2cd985a2c57d88a8fb318e2d920cb6b84d8328c8fe238667002
 Size (libopenmpt-0.2.5602-beta14-autotools.tar.gz) = 1112195 bytes

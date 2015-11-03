@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2007/03/18 21:24:00 rillig Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 01:12:35 agc Exp $
 
 SHA1 (juke-0.7.tar.gz) = 04f5e2265743e2ea01a43ea71531845f97c095c3
 RMD160 (juke-0.7.tar.gz) = c3a61c32cf1b340723e097620b8f95670a27b65f
+SHA512 (juke-0.7.tar.gz) = 279f4c8f90b97c245de24da5cdb87b4a8b263d07f1da82be4ef9e23b51fbef34f6dead4c0d754136f2bb7534a9023c6c5dc8f24178ec98dfd531913b2b706e95
 Size (juke-0.7.tar.gz) = 64103 bytes
 SHA1 (patch-aa) = e835b1fe8f00d8c5581a87d55407b9979bb73710
 SHA1 (patch-ab) = e4a089f7307e6a029b7e0c6b5b862326e160f6d5

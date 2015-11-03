@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2008/05/30 17:57:26 tnn Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 01:12:38 agc Exp $
 
 SHA1 (libsidplay-1.36.59.tar.bz2) = 8a5c057a44de6f1fd008e8d37a1e5cbe335f72bb
 RMD160 (libsidplay-1.36.59.tar.bz2) = 1a49d6e818bf231d22564884d2f4999885bb3bff
+SHA512 (libsidplay-1.36.59.tar.bz2) = 21aacdd7a44c6bb410dd3383e85a4560fd142504fc37e3f0878aa2b8ba76e8cf310d61ff9741100b166c88dbdb78b574eec0e8b24d7d6b90187633009d5fcec9
 Size (libsidplay-1.36.59.tar.bz2) = 307720 bytes

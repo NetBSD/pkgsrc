@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2006/08/29 05:35:27 ben Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 01:12:55 agc Exp $
 
 SHA1 (xmms-meta-input-0.4.tar.gz) = 46d3644ca51b21b6756b305068aeb54125c44768
 RMD160 (xmms-meta-input-0.4.tar.gz) = bb4623cd28d8f0946a922b4bfa100855a913f8d3
+SHA512 (xmms-meta-input-0.4.tar.gz) = 8b5b829b0a4e31f371676f4b3c7c0352dd5f592b3eb492eb43b27fb35fd48ff46e798a3f6b2c40d057bccb129c57192fcd766c3b1c6304c2f17e2ef0e4dffe9f
 Size (xmms-meta-input-0.4.tar.gz) = 14653 bytes
 SHA1 (patch-aa) = 01cc72cb9f9efff119fddcb2aad0852133a190e1
 SHA1 (patch-ab) = b9b926d7be76a41139281ab7e52dbe8e60cb33ae

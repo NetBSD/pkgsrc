@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/04/13 14:49:09 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:12:53 agc Exp $
 
 SHA1 (vcf-0.0.5.tar.bz2) = 6154ef67ede9fc5b4d8c25e610fe5f0c7a0f76b6
 RMD160 (vcf-0.0.5.tar.bz2) = 81c8b972036e2e0601c5f2d6ae5ea2648ffba375
+SHA512 (vcf-0.0.5.tar.bz2) = 48f794f95c4a786b9a0525cd37bbe8a92fb3ac09176c90eb6296dfa14a38c6722e37fe294473521aadcc7faff25723140b7370f4726efe0a0499575ba12ef45d
 Size (vcf-0.0.5.tar.bz2) = 5390 bytes

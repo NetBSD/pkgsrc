@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2014/08/06 06:17:07 mrg Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 01:12:27 agc Exp $
 
 SHA1 (Csound6.03.2.tar.gz) = 2ff8081c887ef98735197c1ff70bb4955c3eb3ff
 RMD160 (Csound6.03.2.tar.gz) = 00d6407feab8f992b8d309ec6701858087569752
+SHA512 (Csound6.03.2.tar.gz) = 01cea31349632ecf3692a23535793c1cd622669e07a9035e1ee80d6ad117e8d0296d2ece78635fee8a73eb5ba53d2b03a8b895f0b2a9a74ae015288243445c1b
 Size (Csound6.03.2.tar.gz) = 24571513 bytes
 SHA1 (patch-CMakeLists.txt) = 47e77bb65a091a8925893f4cf7bc76efc5080110
 SHA1 (patch-Engine_linevent.c) = da606596a1c8d2545dc0a8e948cd04e9188975ad

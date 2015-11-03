@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.11 2012/02/06 03:10:09 sbd Exp $
+$NetBSD: distinfo,v 1.12 2015/11/03 01:12:53 agc Exp $
 
 SHA1 (tracker-5.3.tgz) = b0973d6a9c363caebd3a71547412f42b0681f323
 RMD160 (tracker-5.3.tgz) = d089f514ace6f64dcb90866542121b51ab5f154c
+SHA512 (tracker-5.3.tgz) = 0cba5f563aea0b733dfc4d3db54fa43e40414e059d5a05cf684a52c455d1123dddffb3817f3cbb3096550a35ef97f7a2c5c01de8552337b84ea66c895ab5e8a6
 Size (tracker-5.3.tgz) = 454803 bytes
 SHA1 (patch-aa) = 511aee63652fc86cd7f116e6b583a4b7f1e6425b
 SHA1 (patch-ab) = 4acd7c74548754b4d640be784aa904e24066568d

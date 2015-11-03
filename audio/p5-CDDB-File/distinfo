@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/08/23 10:38:10 jmmv Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:12:45 agc Exp $
 
 SHA1 (CDDB-File-1.05.tar.gz) = 84617e7a91541fc3f56438bd4d0eaca61fe37acb
 RMD160 (CDDB-File-1.05.tar.gz) = 0c0a060ec2526b01809780b0d7e2f769d001a8f7
+SHA512 (CDDB-File-1.05.tar.gz) = 569294e1b8e26b905915cc4c97dd1fd55d223a662deaba22258a452a5a0fb79e07ec8b0175715a34ad6d6ec3ecce794e04c7e17dd4ee8db22535ef75ef6d09fa
 Size (CDDB-File-1.05.tar.gz) = 6481 bytes

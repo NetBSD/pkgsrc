@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/02/16 08:56:08 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:12:37 agc Exp $
 
 SHA1 (libifp-1.0.0.2.tar.gz) = 3bd2808f8b5fce9234764b84bc6f65d666381086
 RMD160 (libifp-1.0.0.2.tar.gz) = 09c1d09eeaa8c6b092dd7e22e1229f84c7a2790c
+SHA512 (libifp-1.0.0.2.tar.gz) = 538ddcf0be4bf7427a7f8ebb60ec77f22b69aa26055fc279f884bd82bae4e32267c79ac37f4dcf9970806e520549bc93dbf0aa2501c9c4fc699a6855e757a331
 Size (libifp-1.0.0.2.tar.gz) = 358550 bytes

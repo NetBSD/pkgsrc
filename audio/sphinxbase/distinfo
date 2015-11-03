@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/09/05 10:13:21 fhajny Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:12:51 agc Exp $
 
 SHA1 (sphinxbase-0.8.tar.gz) = c0c4d52e143d07cd593bd6bcaeb92b9a8a5a8c8e
 RMD160 (sphinxbase-0.8.tar.gz) = 8ec9d09bdd2b8173fe93cfa4c756c761beb1d7c5
+SHA512 (sphinxbase-0.8.tar.gz) = fdb13c07e591e868c395d5f8209ec389fb9d5a93d99104a00cb82382e84d320091ae7e74d53225706331d4959ab5e248fa622582a148bfdb6ab5c38470d1963c
 Size (sphinxbase-0.8.tar.gz) = 3313197 bytes

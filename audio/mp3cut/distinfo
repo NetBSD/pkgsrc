@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/08/23 10:39:06 jmmv Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:12:42 agc Exp $
 
 SHA1 (mp3cut-1.13.tar.gz) = f0fe98baadb36f837502ac5e4152da7fab5b15b1
 RMD160 (mp3cut-1.13.tar.gz) = 3577aba41b87a5663a8b0747b0adea6a82c461f4
+SHA512 (mp3cut-1.13.tar.gz) = 709f031a37bfd6d5dec75aef8bd8b5c81c21c538a004d31d9d65cadf6bc6d833ef91203126d231d1e47b605670c792bb94723fe663eb9e54230ed1a8a56a2555
 Size (mp3cut-1.13.tar.gz) = 58799 bytes

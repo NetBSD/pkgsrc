@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/09/05 10:13:21 fhajny Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:12:51 agc Exp $
 
 SHA1 (sphinxtrain-1.0.8.tar.gz) = fccbb42203a388b353318d74a89fdf225aa7afe4
 RMD160 (sphinxtrain-1.0.8.tar.gz) = 1238b9dcc296dc0cab3fc4d0d7c55649b6917b74
+SHA512 (sphinxtrain-1.0.8.tar.gz) = 465d2c4ade9acc7b49c1d975449c38ac01d5a3ff332f9841be66cd8ca9d2f0b68fd36cc8a46384c8b510042efa91c3887a080481e84f2d0deb9775a598835f2b
 Size (sphinxtrain-1.0.8.tar.gz) = 8925803 bytes

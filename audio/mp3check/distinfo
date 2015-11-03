@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.11 2013/04/10 16:20:21 drochner Exp $
+$NetBSD: distinfo,v 1.12 2015/11/03 01:12:42 agc Exp $
 
 SHA1 (mp3check-0.8.7.tgz) = 31fe95bb7949343f6ebc04fcaa2faffd2b738264
 RMD160 (mp3check-0.8.7.tgz) = 03ababdfbd3742b4dd55df5d05f980d1c291bd6e
+SHA512 (mp3check-0.8.7.tgz) = 5b5c9bde0cc7fd9dc02de53e4ccc3e403001547c06121be57f8f693b9224302d24f0c84f928b329b0f69c67dd4fb51fa3b60368f57a9446476d8344417bd09fd
 Size (mp3check-0.8.7.tgz) = 71629 bytes
 SHA1 (patch-aa) = b5eccef8ae3ccccbfe7fd54ae3bc3b6a15e7f614
 SHA1 (patch-ae) = 45e1a74fd38fe3413faa85909878a896ddd87620

@@ -1,19 +1,24 @@
-$NetBSD: distinfo,v 1.4 2009/12/17 22:08:09 abs Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 01:12:49 agc Exp $
 
 SHA1 (rsynth/rsynth-2.0.tar.gz) = 50693c68eb74cf82405c7d402d31d3c811ad4515
 RMD160 (rsynth/rsynth-2.0.tar.gz) = 02efbf2e3db504c5c8fb76e8e21253c48900fbfb
+SHA512 (rsynth/rsynth-2.0.tar.gz) = f755549d5c5c305342ebc98cec814ecbe7dc4215fd6ed32aceb10536962a32c8ffa620b10b52b9abdcfff2eefd95a6affdaa1bb579ea9abf3259623b72bf4b88
 Size (rsynth/rsynth-2.0.tar.gz) = 110319 bytes
 SHA1 (rsynth/README) = 80539b75a807d4b042e63def6507fef30ba99af2
 RMD160 (rsynth/README) = b124502f148751869c03718dca74d61d0ec4a9dd
+SHA512 (rsynth/README) = 3cfcb0bdea34b6ba6c132a4aa568bf2f608f8b7a11d87df069ab15a4cc2319eb3f7f9d89ef381378c0ac06cc03573155af42031dd0baab27cfbf72ea9ee8a1cd
 Size (rsynth/README) = 3247 bytes
 SHA1 (rsynth/cmudict.0.4.Z) = af82175ee86ddd6fe160a2cdd60f10b7115259ed
 RMD160 (rsynth/cmudict.0.4.Z) = 9fb75f0625d91ee15d552f886fd9282a51c7474c
+SHA512 (rsynth/cmudict.0.4.Z) = 4e646f559e331003b9601cadf38ab2b45b6eba25a5134dd5e8d7d53dfaf4c889d5e738f30e77b8df0ab908498f2b492cb29cf06f6b391478eea9cc9faeacc6da
 Size (rsynth/cmudict.0.4.Z) = 1069362 bytes
 SHA1 (rsynth/cmulex.0.4.Z) = 33ac72b29cc82e7d896a90bd34fb6db3917f3724
 RMD160 (rsynth/cmulex.0.4.Z) = e43326e44219feb386f54ed4a147d14cb9d31b3d
+SHA512 (rsynth/cmulex.0.4.Z) = 26db540685c5fcc3c29aa588c5f12c4c61db0bee76cdee4646fa719add551b1deddab4b4a45501bc473c88996c00acbd3a80f2be92da6fe5ef2d7cb11f638400
 Size (rsynth/cmulex.0.4.Z) = 430761 bytes
 SHA1 (rsynth/phoneset.0.4) = 8c7e386dbaf33a4e16debd4c538a154a247c1e97
 RMD160 (rsynth/phoneset.0.4) = 9565dcb4db24fc0b0cfd16ea31f45994f24e2753
+SHA512 (rsynth/phoneset.0.4) = 71c722b976046c50ed4b2864259cd5042213fd08b169e4dc0c5ac22bbc7375115877a1d58387a644fef1acf0b753fd776307536d439ee5535dbbf264586e4987
 Size (rsynth/phoneset.0.4) = 629 bytes
 SHA1 (patch-aa) = d2bab8492ba8d280c1de30a4a006a445441ef906
 SHA1 (patch-ab) = b3e9917e3301b600d90c2e245687c8d18b049101
