@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.8 2013/06/16 09:40:58 ryoon Exp $
+$NetBSD: distinfo,v 1.9 2015/11/03 00:47:43 agc Exp $
 
 SHA1 (dasm-2.20.11.tar.gz) = 6c1f0091e88fff8f814a92304286c1875fd64693
 RMD160 (dasm-2.20.11.tar.gz) = 4a22a60d35e9f6ab93f1b135b2fbeca4edcd6b5d
+SHA512 (dasm-2.20.11.tar.gz) = bd90421a68d56a5e6a4e51413559de796b6ec21be949f07a73c18768d24c2a1844b7fdec8b7d7fa09c03d7481e235c58b435a09b3c28a77fbf1cdb7753d72cb9
 Size (dasm-2.20.11.tar.gz) = 112184 bytes
