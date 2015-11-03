@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2011/12/12 16:07:01 dholland Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 20:56:49 agc Exp $
 
 SHA1 (fortunes-calvin-0.2nb1/fortunes-calvin-0.2.gz) = 36365ef30ae2631637b7b734b8fb10d3fe3f36eb
 RMD160 (fortunes-calvin-0.2nb1/fortunes-calvin-0.2.gz) = 8654c320a7c67f94c5c1148f886957be95dccc47
+SHA512 (fortunes-calvin-0.2nb1/fortunes-calvin-0.2.gz) = b330691dc9e35f9665c3b8539fdb2fa27460817c1a9945c4ab55451aecf1aacaf4665f565bdcb0528b2e57bde0e14f696efb2facca8308f2898f1616aa5cfaf1
 Size (fortunes-calvin-0.2nb1/fortunes-calvin-0.2.gz) = 6068 bytes

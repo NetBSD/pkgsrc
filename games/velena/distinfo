@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2011/05/28 22:41:43 dholland Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 20:57:06 agc Exp $
 
 SHA1 (veleng10.zip) = f9af1cc6f809347151bee4763a62073fe56ef9b4
 RMD160 (veleng10.zip) = a8cc6933196140b5ac941f4369e9bb422a885851
+SHA512 (veleng10.zip) = b09b42cc4971ffbeb7143ea8084e6ebf06cde78dc894706a30dd8fb619a9cd2cb44452088d7fe4f8203f110867c54db17b7673cb7ab33bcd3ab992ffd370a71c
 Size (veleng10.zip) = 243352 bytes
 SHA1 (patch-buildob_c) = be8cca61cc4a604f72b150dbd58da3efeccb0b4f
 SHA1 (patch-cmdline_c) = 52a7290d6d6be956d7ee547e99a5df281869991a

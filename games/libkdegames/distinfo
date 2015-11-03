@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2014/11/14 08:49:38 markd Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 20:56:58 agc Exp $
 
 SHA1 (libkdegames-4.14.3.tar.xz) = f5e9b0c3ef265be5b0815e1c739f3b260b5a2ad8
 RMD160 (libkdegames-4.14.3.tar.xz) = ca489492d0c9b3bb263378b8d0f225a5bcc7e20c
+SHA512 (libkdegames-4.14.3.tar.xz) = 43deba5ea5e4f39eae20425f76f9cb02d5215e0a596ffbdd29585c0bb3ff32f2806755ccb22b3c1c5c7fc5c7bcdb2bffd35fc211ae6e2f55aa751965b5c6d9c3
 Size (libkdegames-4.14.3.tar.xz) = 5827668 bytes
 SHA1 (patch-kgdifficulty.cpp) = 172644e63a9ea027bebb1009a9deca47d552781e

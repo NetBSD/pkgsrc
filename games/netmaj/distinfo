@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.10 2013/02/26 10:29:34 joerg Exp $
+$NetBSD: distinfo,v 1.11 2015/11/03 20:56:59 agc Exp $
 
 SHA1 (netmaj-2.0.7.tar.gz) = 1363ea8ca42079fb444b25c605d264b5f083e260
 RMD160 (netmaj-2.0.7.tar.gz) = 9d3fd68b7607b2c3064e9dd8310085818f32f93e
+SHA512 (netmaj-2.0.7.tar.gz) = 3ec29352a2aa0390a54a0dbd56046de7ff5ea87227d013b3068c358572dcdbd3737824c47f5c531136b9354b99e170fa3a53cea45ef6ade7949e5968d587cc62
 Size (netmaj-2.0.7.tar.gz) = 213819 bytes
 SHA1 (patch-aa) = 4be6d0148e4579661162315db968512ae570f122
 SHA1 (patch-af) = 4b0d060fc84deac11e119176233a24f4c8fe1f22

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 23:11:54 agc Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 20:56:42 agc Exp $
 
 SHA1 (adom-111-elf.tar.gz) = 5786195535f629c2a9aec90afcea22e9ea6d20d2
 RMD160 (adom-111-elf.tar.gz) = e70eafb97484f6de4330403142c40fd78c4aecaf
+SHA512 (adom-111-elf.tar.gz) = 7b1d8916f66273b4ab06edd2d77c30e2edce827d346451d83c677af32492c40e5c578a8450ab3cc9be7888a0052a0960306e97db408e8581700c71c1b480b128
 Size (adom-111-elf.tar.gz) = 1001683 bytes

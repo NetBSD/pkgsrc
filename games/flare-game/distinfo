@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/02/02 23:21:37 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:56:49 agc Exp $
 
 SHA1 (flare-game/v0.19.tar.gz) = 7fdd02ff789999f82e70525e4ed0d0fa1f095558
 RMD160 (flare-game/v0.19.tar.gz) = b1dc11faeaa7f3e5bf18da0bc2266ae2fb807ad4
+SHA512 (flare-game/v0.19.tar.gz) = 1f863c1a113a1fc61bc973c2af1f6cbc05b8282e2ca486fba81bcae9c558272d647fb8e97321762b10cc719d48e1d8591a2ee68cd16492819fdd2174080ced52
 Size (flare-game/v0.19.tar.gz) = 177940768 bytes

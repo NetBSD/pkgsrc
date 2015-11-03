@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2015/10/05 05:09:05 richard Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 20:57:01 agc Exp $
 
 SHA1 (palapeli-4.14.3.tar.xz) = 1f1419c96804fc95dcf2518cf7656f63c2b66ca7
 RMD160 (palapeli-4.14.3.tar.xz) = be0b51037a44bee1331b3b45d61487f1d2a93c4f
+SHA512 (palapeli-4.14.3.tar.xz) = 1e7737754441195f43e9a73fa312da43335ea7738384571d5bce18e01777584ebd962aa30c92f0e1809033ff9978e1ab32a37e2f924444a92868ef70440338b0
 Size (palapeli-4.14.3.tar.xz) = 1747840 bytes
 SHA1 (patch-src_engine_puzzlepreview.cpp) = 5a9139be67209840989c26f1faffff08a1c2c9b4

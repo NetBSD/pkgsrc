@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.9 2014/08/19 13:33:30 joerg Exp $
+$NetBSD: distinfo,v 1.10 2015/11/03 20:57:05 agc Exp $
 
 SHA1 (stratagus-2.1-src.tar.gz) = 33181d57e018825a450f1e8c0ec31b0887cbd39c
 RMD160 (stratagus-2.1-src.tar.gz) = f5f97854cad9f17104de34613012fd3aa2efbb9b
+SHA512 (stratagus-2.1-src.tar.gz) = d2a486f9650bdfd997e3815f113483c8409e9320dd642554ac1fee8644f94da3f44da64367a2967d32f78118fbd94cc87b36c351346f182755269bc7156c21fd
 Size (stratagus-2.1-src.tar.gz) = 995686 bytes
 SHA1 (patch-Rules.make.in) = 262ae07f5199f92aee47462033ae1f7d2d4de065
 SHA1 (patch-aa) = 2f1403d58b3a745845c3b3e94abb7cf65b00194d

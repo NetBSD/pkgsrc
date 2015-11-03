@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.12 2014/08/25 18:32:00 wiz Exp $
+$NetBSD: distinfo,v 1.13 2015/11/03 20:57:03 agc Exp $
 
 SHA1 (rftg-0.9.4.tar.bz2) = 43fbad2b1938d933f5506db67d1b140863e1c8c4
 RMD160 (rftg-0.9.4.tar.bz2) = 0a1c34b1239819628f7c5d183e83ef73a11b2274
+SHA512 (rftg-0.9.4.tar.bz2) = 76275851cd4f6200042ee66c323fb8251f37ff7f7804940414d406e26428bc551e93bd0c79760df5b36fc1c95d8d3e7d5cab9f81fcf15f6ec48812ecdea000be
 Size (rftg-0.9.4.tar.bz2) = 35161850 bytes
 SHA1 (patch-osx_bundle_launcher.sh) = 01ef5b0f18e792872253569e974395310c3fbab1

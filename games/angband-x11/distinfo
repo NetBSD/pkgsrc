@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.8 2005/02/23 23:11:54 agc Exp $
+$NetBSD: distinfo,v 1.9 2015/11/03 20:56:43 agc Exp $
 
 SHA1 (angband-3.0.3.tar.gz) = 026b66464732a846fe85499e155fa01974a740eb
 RMD160 (angband-3.0.3.tar.gz) = de8f0d15928ce4c540d6a8e307be5d12c69cdb25
+SHA512 (angband-3.0.3.tar.gz) = 88202d9ea9aa560a288de8ca820100a8be6afd8e4cbb78fa338c5ee30802e8c2eab000a0cf939ae12f1913d8359463afad64c7f1cfdf37e5d6f43dbf838541d3
 Size (angband-3.0.3.tar.gz) = 1374750 bytes
 SHA1 (angband-spoilers.tar.gz) = 6f5db28f686be3f41df6c22990c53f9e46a1c7cd
 RMD160 (angband-spoilers.tar.gz) = 3fc44d0802e73844cc4ed27aff837447cab8a3a2
+SHA512 (angband-spoilers.tar.gz) = 2efa1a199962364d753757f3eafde8795511028630864d7ce52b1f463f5f8e640c3a442b8be38c0f83e9dc9a440129e646bdc3dcdd30bdf2b28ae359a8c3dbe8
 Size (angband-spoilers.tar.gz) = 234909 bytes

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2013/03/25 01:59:03 dholland Exp $
+$NetBSD: distinfo,v 1.9 2015/11/03 20:57:00 agc Exp $
 
 SHA1 (netmaze0.81.tar.gz) = 61c3e1dc00372b18a622cd330c322817e73a6cf4
 RMD160 (netmaze0.81.tar.gz) = fe30487c441d0789a1526e4ec2f4cd2cf57a416a
+SHA512 (netmaze0.81.tar.gz) = 838b765c2e2c9f01bc8101ba503368148224d54c5f6b5c753efe95af8355e0571ca6693c1b5a4a9f26af688e2ce3074ad4dcbcd66dd5c0998cab823de8191ad8
 Size (netmaze0.81.tar.gz) = 281463 bytes
 SHA1 (patch-aa) = 9bf19e360d54fe8130f93252e82f7c22773884a4
 SHA1 (patch-ab) = 1624eade859ee18e2f568fde98187514ae750e95

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2014/09/25 13:47:59 jperkin Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 20:56:45 agc Exp $
 
 SHA1 (ccgo-0.3.6.3.tar.gz) = 3ef5f779aa7560937f9713b7c189f27033bbb5bb
 RMD160 (ccgo-0.3.6.3.tar.gz) = de97f1a726e0d3ca2c20022823499eeacd05923d
+SHA512 (ccgo-0.3.6.3.tar.gz) = 23791ef69cecdb5efa1870d5e6574929d2aa8d37678e905909b86643a71dbb32138bab119219390b68753f7ff338c64fb67121bb8264cd97529ba20d3606ea7d
 Size (ccgo-0.3.6.3.tar.gz) = 565911 bytes
 SHA1 (patch-aa) = dca8fb6d7765c128d289d6c5f082694b1f7df9f2
 SHA1 (patch-ab) = 7bdb6aab0424a3f785e184e8bf0e47b9aa7a017d

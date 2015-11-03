@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.15 2009/08/03 13:18:37 joerg Exp $
+$NetBSD: distinfo,v 1.16 2015/11/03 20:56:46 agc Exp $
 
 SHA1 (crafty-22.1.zip) = 4ed19f5c676035b899d82cd254eee3d391cbabbf
 RMD160 (crafty-22.1.zip) = 963ec8110617b3d1273953d03ddb974019ec26a9
+SHA512 (crafty-22.1.zip) = abeb4b06406a0ba9a5b90db57f2e3570b7755aeec74300f22c1abca8a8bc3ed4310ced95d23629435f7d8949b2b1c7e4ff73e7418c332e317bc1a6aa63dcfe3d
 Size (crafty-22.1.zip) = 405169 bytes
 SHA1 (patch-aa) = 8efbb76aa23b3972c05dd41cde6b2c5ec8dc49b9
 SHA1 (patch-ab) = 2b926a2ebd8f9ecf125d9f62c6d5f751a52d41a7

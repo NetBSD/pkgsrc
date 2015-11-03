@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2014/11/14 08:49:39 markd Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 20:56:55 agc Exp $
 
 SHA1 (klines-4.14.3.tar.xz) = fcdb5274d1027936a28c831103fafa9517ca8384
 RMD160 (klines-4.14.3.tar.xz) = 823a1333c1cc5f4498004961c4376f7de5e63c6f
+SHA512 (klines-4.14.3.tar.xz) = 41db251dc2806261b0c0e5f50ebe43243f6a95255b92d733fea18c208f512511e371146d0a004d38c0b32b281b87878218c3e5156c7789e2aa4c7912b9a4ea16
 Size (klines-4.14.3.tar.xz) = 949860 bytes

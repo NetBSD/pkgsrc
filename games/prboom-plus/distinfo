@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/09/13 12:55:06 shattered Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:57:01 agc Exp $
 
 SHA1 (prboom-plus-2.5.1.3.tar.gz) = f7448128ac725d48325ed6bc4f613708501dc875
 RMD160 (prboom-plus-2.5.1.3.tar.gz) = 345ce730eb045f800d750fb90b2f603e9fe8e7d5
+SHA512 (prboom-plus-2.5.1.3.tar.gz) = 6cad708d334b66e07c9343ebc30451c25f7188c220e9385d61ecf0bf06e0631e69024e1327dac518db9bdc557c0d19571c06bffea1f7e318abd2c770a9ba750d
 Size (prboom-plus-2.5.1.3.tar.gz) = 1465003 bytes

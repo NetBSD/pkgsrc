@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2014/11/14 08:49:38 markd Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 20:56:54 agc Exp $
 
 SHA1 (kblackbox-4.14.3.tar.xz) = 44c9d2701207134c7044721f6bb3eccb9e920750
 RMD160 (kblackbox-4.14.3.tar.xz) = dafd3592732ab060042152828c6a831419cbd145
+SHA512 (kblackbox-4.14.3.tar.xz) = 3b3cd31e04e066e1e4257ada8dd1966bb81b01450b0df100d3b4e456402de00ece24b969fda58b724e13e9c579c97183a4cd207152ebddcd4d55376337cd7540
 Size (kblackbox-4.14.3.tar.xz) = 257112 bytes

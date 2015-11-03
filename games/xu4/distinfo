@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2013/04/29 21:31:11 joerg Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 20:57:10 agc Exp $
 
 SHA1 (xu4-1.0beta3.tar.gz) = baf1bbdc18088096ae11ea31aa497532b7e7124c
 RMD160 (xu4-1.0beta3.tar.gz) = f758fea4bc3034b19122651cfb725a88e0684960
+SHA512 (xu4-1.0beta3.tar.gz) = b62f7d737f31f5cc25dc8c7bb8821f6360dbfec05fe4ba671ae9561cd9bc9fba1f28d35ac3eab9e7c40afbfded25229083a7383c5d6f102f2265b2bca763cd76
 Size (xu4-1.0beta3.tar.gz) = 418477 bytes
 SHA1 (patch-src_Makefile) = ac80c253affd3b150a377cd0072db9557c26407b
 SHA1 (patch-src_armor.cpp) = 1cc4ad07efaa70c5764b910d055939e22b4287d5

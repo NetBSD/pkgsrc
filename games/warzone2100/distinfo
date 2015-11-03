@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2013/04/29 21:31:11 joerg Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 20:57:06 agc Exp $
 
 SHA1 (warzone2100-2.2.2.tar.gz) = d61bd1a87f0a6c1184c640987f759b1ac702b9e1
 RMD160 (warzone2100-2.2.2.tar.gz) = d7af614267acdb548fcbe5f78ed46e8c4d6f33de
+SHA512 (warzone2100-2.2.2.tar.gz) = 763eb464687323aadaab3d679629e36902fbd3e2bdd88b3cf426b0b282eb55c184cf9f56bae24245ae2ee7edaf208352a813cdf1f065cd792fc2c38bf1f47d08
 Size (warzone2100-2.2.2.tar.gz) = 50163580 bytes
 SHA1 (patch-aa) = 95c066ff4340ba6e4c021846541b53eb4cad0704
 SHA1 (patch-ab) = e82a085ddf27a5443e011ada57e78cca1ab66c79

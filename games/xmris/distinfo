@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2011/05/23 12:05:54 obache Exp $
+$NetBSD: distinfo,v 1.9 2015/11/03 20:57:08 agc Exp $
 
 SHA1 (xmris.4.0.5.tgz) = 96443fc266c7388fa67a58ee0e4bada7fe7b6e9e
 RMD160 (xmris.4.0.5.tgz) = beade823d48c229b51fefad4fba804217aff3a11
+SHA512 (xmris.4.0.5.tgz) = df8acf63e8a9709257b1bbe9d266b28e6ce162c4c1d0f4b94e8bc69968871d823edee23159f9da5f2a17a5074cebebb6e5c6c960cf7d202211066b3ea92ab3c3
 Size (xmris.4.0.5.tgz) = 273304 bytes
 SHA1 (patch-aa) = 7b6b00857e143368a286e3e07f2db1a0088e894c
 SHA1 (patch-ab) = 7985aa4060d6e2ff24f5417057ba528561c887d6

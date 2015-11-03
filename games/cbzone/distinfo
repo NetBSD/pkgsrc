@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2011/03/16 08:47:37 obache Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 20:56:45 agc Exp $
 
 SHA1 (cbzone-sound.tar.gz) = 166308d740be0d551197287fab57ef25e25eae8a
 RMD160 (cbzone-sound.tar.gz) = 2770e817b79b305910f0d0cba02c9fc22f5cdff7
+SHA512 (cbzone-sound.tar.gz) = 21f70b0d531c56a4bd97542f0836880ed127940f23829539f5c1bfde88878106c033f5c3d7aa31e14e72591b6d2d08360675cb1759c4e774c31528cdbce200b9
 Size (cbzone-sound.tar.gz) = 85490 bytes
 SHA1 (patch-aa) = 36651f8da4ff7b2f8ad98934c04f350fcd17b70f
 SHA1 (patch-ab) = f97de120c657bf7292e1bf20ccc62e3bc99114b4

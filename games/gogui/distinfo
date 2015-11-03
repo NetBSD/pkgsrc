@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2007/01/06 17:44:52 rillig Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 20:56:52 agc Exp $
 
 SHA1 (gogui-0.9.3.zip) = a94bdb8e70a40ee055b6eda84dd6651bb65b1bd5
 RMD160 (gogui-0.9.3.zip) = 5b09bd84dc4782648804ee24b7e16be0e657cc7c
+SHA512 (gogui-0.9.3.zip) = 9377e470275f8bf6e3b8fc72a83a58c4f641f5e149098dc4e96b7ea769b5199a1de6f5138fbaaf63da7830d1bafbb58a162e2dc2a68f1476936ec50447cd3b77
 Size (gogui-0.9.3.zip) = 7204175 bytes

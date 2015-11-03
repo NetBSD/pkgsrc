@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2012/01/29 21:03:37 marino Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 20:56:52 agc Exp $
 
 SHA1 (gtklevel9-4.0/Level9_4.0_Source.zip) = 6aef7a144093b5d25eef2f7144859bf4c5ebacf5
 RMD160 (gtklevel9-4.0/Level9_4.0_Source.zip) = 8fe6261b064de7419724d2512fc8fcc435fec7c7
+SHA512 (gtklevel9-4.0/Level9_4.0_Source.zip) = 00c11532661d91487897d6db712de96d6e0974e53db9ec5df325f0278705560f31b4cc08602f0e83b52fe74cf46922b2ddc4dd064e73ea1396ced7d84fca520d
 Size (gtklevel9-4.0/Level9_4.0_Source.zip) = 279302 bytes
 SHA1 (patch-aa) = 31a06ffcb85041cf3f1bc0f5ff42c520c25b6d25
 SHA1 (patch-ab) = 1944199a06221641f0aa3bf32fb8d3aee4206837

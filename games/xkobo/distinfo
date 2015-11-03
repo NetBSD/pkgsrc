@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.11 2012/05/27 18:16:31 abs Exp $
+$NetBSD: distinfo,v 1.12 2015/11/03 20:57:08 agc Exp $
 
 SHA1 (xkobo-1.11.tar.gz) = 6ac1c0fe86b7fa524eb86f40b89e86ee6cbe3c5d
 RMD160 (xkobo-1.11.tar.gz) = 874ed89a6ed7da56f41b3867cf2cc45f0bcf9683
+SHA512 (xkobo-1.11.tar.gz) = 6569eea2f124d91301768d186175f46ffc578606dbd0f87ea3478fbe7cd9e95df22b1d9cdeca810fc6ed358c03f0697566bce943eec5d8f9a6249532640b6e22
 Size (xkobo-1.11.tar.gz) = 71804 bytes
 SHA1 (patch-aa) = 33d9c2777613d97246879284c9308aca1fd71423
 SHA1 (patch-ab) = 917df924b7bba819ff90859b3cac302aec055289

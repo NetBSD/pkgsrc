@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2014/11/14 08:49:39 markd Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 20:56:55 agc Exp $
 
 SHA1 (kjumpingcube-4.14.3.tar.xz) = 68b967d15ecf5f51224ed4269b48a28e4d5326ab
 RMD160 (kjumpingcube-4.14.3.tar.xz) = b24206843e6ce1b4b50b0fdd91cd3e95cce2b052
+SHA512 (kjumpingcube-4.14.3.tar.xz) = 1a4a6c2ba9ed4a27c07119b222266cfb215d2f551189769f896512be24760332564e22c6846929a7a136b37eb257a73d57cfdb26aa1e3686918d59afc9fc4b33
 Size (kjumpingcube-4.14.3.tar.xz) = 164376 bytes

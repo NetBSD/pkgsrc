@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2012/12/12 16:26:51 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:56:59 agc Exp $
 
 SHA1 (MarathonEvil.zip) = be8e53895b7f4da53a038078766e4dd2934112d6
 RMD160 (MarathonEvil.zip) = 4905b09be4116cf9912ca6b190d94e371dc139da
+SHA512 (MarathonEvil.zip) = f61e780ebcb41294c19ff80ea3434dbd4cbd83d2e2466d38accd4bfa041e0b133d28b1bce9e2c036d985bf7c977122f6466f0bafe7dc29fed59d036d32a78301
 Size (MarathonEvil.zip) = 32032327 bytes

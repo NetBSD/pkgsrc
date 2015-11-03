@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2010/01/29 23:10:38 joerg Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 20:56:53 agc Exp $
 
 SHA1 (icbm3d.0.4.tar.gz) = 9eee30aa562e15cdc08f1bf354fa6d2e7bf7fd38
 RMD160 (icbm3d.0.4.tar.gz) = 1acdc2e394168eea111dcbc612253b9d4b1a202a
+SHA512 (icbm3d.0.4.tar.gz) = 456c25127f43dcb0bf677e382bdf98fdcb4435a649b21a75472872df1aefc76a568dc90ccc2f2ea7760f55ea5da73bdf72ecb080c0cabe1176266f6f2d200b9c
 Size (icbm3d.0.4.tar.gz) = 31187 bytes
 SHA1 (patch-aa) = 1c466a7fc98586891f0fb8c004866934c1f499d9
