@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2009/04/11 21:17:44 sno Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 01:56:17 agc Exp $
 
 SHA1 (DBD-Google-0.51.tar.gz) = a866842060eee9b3e4d7016904ba1e811865d82f
 RMD160 (DBD-Google-0.51.tar.gz) = 27f10a3d9968c9f736fa824033cd71797629e2e9
+SHA512 (DBD-Google-0.51.tar.gz) = 1bf06579307995fe1411f87bf4e947c86d7ca8990cfc03f937641fd274059a2b6cf31de8e7d74a9554eedc51e73ae0b64a0bd8e8d684549c509e7f56c21cd1a4
 Size (DBD-Google-0.51.tar.gz) = 19032 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.12 2014/04/12 09:30:38 adam Exp $
+$NetBSD: distinfo,v 1.13 2015/11/03 01:56:27 agc Exp $
 
 SHA1 (MySQL-python-1.2.5.zip) = b935a26b3cf80338bcc21b8a991081d83eb9c3ae
 RMD160 (MySQL-python-1.2.5.zip) = f6638f1bda4c6a3f721c05a5f0029951d07430a9
+SHA512 (MySQL-python-1.2.5.zip) = 37521c6fd855c4cde495cc8ec085aca79c2d441a6e3710759385bf2e2c17f43d3311cf1166663892829d2e3999c419443c358c7031cdda225ac44611ced188d0
 Size (MySQL-python-1.2.5.zip) = 108935 bytes

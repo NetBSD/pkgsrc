@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/10/16 21:26:02 kefren Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:56:10 agc Exp $
 
 SHA1 (mysql-connector-net-6.3.5-noinstall.zip) = 1ea85a2664d99e679fe2985705ae07d5ae6a94a1
 RMD160 (mysql-connector-net-6.3.5-noinstall.zip) = 93930e42425dab050c078dc7523d54bfb2bdc4ee
+SHA512 (mysql-connector-net-6.3.5-noinstall.zip) = 4787698c4edece1315dca7314472867e9c74aebb07e099d98e076f3084004b1356e201d78ba68d4400a369b94b989d33b0327be7ca2b25e9be7912d16df3b9cd
 Size (mysql-connector-net-6.3.5-noinstall.zip) = 3348636 bytes

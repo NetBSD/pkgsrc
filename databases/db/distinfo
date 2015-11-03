@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2009/09/09 16:58:52 joerg Exp $
+$NetBSD: distinfo,v 1.9 2015/11/03 01:56:10 agc Exp $
 
 SHA1 (db-2.7.7.tar.gz) = 786e7f1be5f8d2dbdfa205a22ae9a5d1ead85701
 RMD160 (db-2.7.7.tar.gz) = 703dcddb69884c749637e07d592c4d1850981fd1
+SHA512 (db-2.7.7.tar.gz) = aa12d6efcd96efd51ffc8ccc606e0c6afc0b41632f15c41f7b3df8475a38fb2b784987148d93d639ed2155e83b081e77eb9c508d73f8baed9fe84002408b10f9
 Size (db-2.7.7.tar.gz) = 1112976 bytes
 SHA1 (patch-aa) = e0e5208de80ae3c3227934bc59788d9ab4ede9d9
 SHA1 (patch-ab) = f524ff9a01813c4384b830a860e32db24bf502f3
