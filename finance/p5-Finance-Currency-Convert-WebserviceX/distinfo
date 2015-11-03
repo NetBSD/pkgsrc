@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2009/07/07 20:14:07 sno Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 00:12:13 agc Exp $
 
 SHA1 (Finance-Currency-Convert-WebserviceX-0.07001.tar.gz) = 91dfa16b648443b50359e7eaa0df0dfe9e9a5a6e
 RMD160 (Finance-Currency-Convert-WebserviceX-0.07001.tar.gz) = 2a5c5e5367802afd82cf4c0821ca9c5db28e6669
+SHA512 (Finance-Currency-Convert-WebserviceX-0.07001.tar.gz) = 75aec327bda8d52899e6fe92b3158f787ad77ccc6595e971fe47c0ae635a894a6c24a49182369eb75d8ffdfc56845296e702b5fdea1ee480d29bb96c6680278b
 Size (Finance-Currency-Convert-WebserviceX-0.07001.tar.gz) = 32705 bytes

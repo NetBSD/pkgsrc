@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2005/02/22 21:11:48 agc Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 00:12:15 agc Exp $
 
 SHA1 (tclticker-1.1.tar.gz) = 803a40dae1828a6f489336a7386eef6d6dae1dd0
 RMD160 (tclticker-1.1.tar.gz) = ce9e808a1ccc894d83125384ebf9cb3dc35bd22e
+SHA512 (tclticker-1.1.tar.gz) = 609066a7b2522d24930c33eaea56f31484fda7070d21e7465ef9e9f4ba835b93b9a8b69a0abcbb4d46d8c2a8333395c17d8e53c134207a08516ed9a9a64a7feb
 Size (tclticker-1.1.tar.gz) = 11420 bytes
 SHA1 (patch-aa) = 104fc5906b691c6e3fdaba19d520c4ff1810ce9d
 SHA1 (patch-ab) = 4acee8182fa6ace202077f916434312445abe7ae

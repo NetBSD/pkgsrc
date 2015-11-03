@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/08/24 14:49:43 richard Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 00:12:14 agc Exp $
 
 SHA1 (tryton-3.6/trytond_product_cost_fifo-3.6.0.tar.gz) = e297fa71ea39045176eba50c4d4d6ea9e85b7a0f
 RMD160 (tryton-3.6/trytond_product_cost_fifo-3.6.0.tar.gz) = b2e676bf904defdec5989dd1e065813bec6a07f3
+SHA512 (tryton-3.6/trytond_product_cost_fifo-3.6.0.tar.gz) = efe2e7aea548419dd535aadea95cf9ae633cc0dc6c0a079f870936b92ae681019b115615520a74651bd89f982cefbb62681bae47e2aaf938de7c9094bd1bffb5
 Size (tryton-3.6/trytond_product_cost_fifo-3.6.0.tar.gz) = 20098 bytes
