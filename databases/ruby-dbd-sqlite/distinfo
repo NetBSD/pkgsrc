@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/10/17 12:31:18 taca Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:56:31 agc Exp $
 
 SHA1 (dbd-sqlite-0.1.2.gem) = 39a6269c964c2fbd66abf9917f99783b889a0430
 RMD160 (dbd-sqlite-0.1.2.gem) = 07ad5af207b85edc4e039832fd52091355847322
+SHA512 (dbd-sqlite-0.1.2.gem) = b2bdad5a37159094f590ff1a2c2977b25b42488880a09e013a2c77ef705d9c8ff0b576977498d9b3e759851c2258e102475dc842ec6bc6981c188bad874f1be7
 Size (dbd-sqlite-0.1.2.gem) = 45056 bytes

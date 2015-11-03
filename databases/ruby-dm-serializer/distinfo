@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2012/09/16 05:17:52 taca Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 01:56:32 agc Exp $
 
 SHA1 (dm-serializer-1.2.2.gem) = d8f7cd1827bb1dec6f1e2c555d726e5de971dea0
 RMD160 (dm-serializer-1.2.2.gem) = 0b4bbdcf925ca2581e8f42eef0abfba39fdce628
+SHA512 (dm-serializer-1.2.2.gem) = ce0e58089e88bdaea612a64bd112b6f7648f9937a379f79e2126814996e1042121b462e6eba758e9f3901ec9d127b2758706f2aed66a863c03b23b6b94ae5ad7
 Size (dm-serializer-1.2.2.gem) = 17408 bytes

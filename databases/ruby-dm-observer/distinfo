@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/12/17 17:29:57 taca Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:56:32 agc Exp $
 
 SHA1 (dm-observer-1.2.0.gem) = 7bd7579467fdf063afef62b0bd3c2f2db7d03ad1
 RMD160 (dm-observer-1.2.0.gem) = 8a498a896d99cef74a7743b61077d25ee5cafa87
+SHA512 (dm-observer-1.2.0.gem) = 95ab2b6896e814314be9de834921bcad60b68a71e9def455245d35bb31c8256c7c38cb27aa8f0d3f446f877965f5a2d4240cd60de6c4259a476bbc01effbd5fa
 Size (dm-observer-1.2.0.gem) = 7680 bytes

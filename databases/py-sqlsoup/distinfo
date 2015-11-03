@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/02/03 10:21:13 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:56:29 agc Exp $
 
 SHA1 (sqlsoup-0.9.0.tar.gz) = eaf2ff0ac86d0464a055969027c051bef36770dc
 RMD160 (sqlsoup-0.9.0.tar.gz) = db89c8d467a716c82801862e332049d03ddd6a34
+SHA512 (sqlsoup-0.9.0.tar.gz) = 6aacf870e7d469f219e8c13a6c9ed823d418b914cb5d8572e2346704322f8b7ddbbec7f88e80f0f39573a43d9392a7240bfd10e5a0c4c642c3b156b596a7b222
 Size (sqlsoup-0.9.0.tar.gz) = 104496 bytes
