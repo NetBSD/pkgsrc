@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2011/12/15 15:34:16 taca Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 00:12:15 agc Exp $
 
 SHA1 (activemerchant-1.20.0.gem) = f008c4bb9051fb350f6d73f3d45219f64f9093d6
 RMD160 (activemerchant-1.20.0.gem) = ac45d41aec1788930f82e4741cf2b55a0337bde8
+SHA512 (activemerchant-1.20.0.gem) = 27a75cd608f024878e31b8a962e9deb98e5a51f90219b5d6e25e9848b60dcada4350a4d4de2d1fd66878ceb42294d207ce116ffc420c3a87d3abcf3a7987e7a5
 Size (activemerchant-1.20.0.gem) = 231424 bytes
