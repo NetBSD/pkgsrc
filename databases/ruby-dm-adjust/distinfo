@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/12/17 17:18:55 taca Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:56:31 agc Exp $
 
 SHA1 (dm-adjust-1.2.0.gem) = 4dc2df763f1a753cd7df639105a02be1c0745634
 RMD160 (dm-adjust-1.2.0.gem) = 6e3587f0fa38aa6f334d2fdcee64a12dc5a1698b
+SHA512 (dm-adjust-1.2.0.gem) = 8266ae412365868a9e4d0350c7f736ac6116f9f96ad86111419bdd2ae5096cce3df5103f34e8f5ee1ca1143e79c807c07dbf71ea621e1eeb9134bcfb610f6c5c
 Size (dm-adjust-1.2.0.gem) = 9216 bytes

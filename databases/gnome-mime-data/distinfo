@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.10 2007/04/15 10:36:19 wiz Exp $
+$NetBSD: distinfo,v 1.11 2015/11/03 01:56:12 agc Exp $
 
 SHA1 (gnome-mime-data-2.18.0.tar.bz2) = 9ce7b1a24a97f275f60b416fae82d81c1010cb65
 RMD160 (gnome-mime-data-2.18.0.tar.bz2) = 62436da673b9a9e1d27259511401ff69f0397a1a
+SHA512 (gnome-mime-data-2.18.0.tar.bz2) = 132996786254799341eeaa7894749cf4a95e391e31d985b1527b2f3dfeeeb01e7cc000753fc21d559db07fcc92018f4839f170eb149cb457fe06058ad3d986d5
 Size (gnome-mime-data-2.18.0.tar.bz2) = 607012 bytes
 SHA1 (patch-aa) = 34af252c1469ddc35f8f6afeea92d1b332ac679d
