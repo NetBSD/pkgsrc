@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2006/06/15 08:41:13 chap Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 00:21:19 agc Exp $
 
 SHA1 (qcad-manual-en-2.0.4.0-1.html.zip) = 993d3ad64ac226278e51060a43613506aca31656
 RMD160 (qcad-manual-en-2.0.4.0-1.html.zip) = 7e02f5bdee8e0bf1190a4f0522522502c6b40347
+SHA512 (qcad-manual-en-2.0.4.0-1.html.zip) = a130b6d018d9a8083cada7dea285c91708b7616af43ea98c8ca1d4ebe287f69599af59fce34a3185eafc05c21c16afb9139757e4648e7da81165649e42149573
 Size (qcad-manual-en-2.0.4.0-1.html.zip) = 1807333 bytes
