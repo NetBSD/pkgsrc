@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2014/11/14 08:49:38 markd Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 20:56:53 agc Exp $
 
 SHA1 (kajongg-4.14.3.tar.xz) = 74f9beacf13bf42268f15923492b5622ccff7fea
 RMD160 (kajongg-4.14.3.tar.xz) = a1ba67c862399c465498147a50a03c3eadf0718a
+SHA512 (kajongg-4.14.3.tar.xz) = 03b628b898ce29c695a990cf6857e9050af8a8503b4b50ebff14ee697952d47210110a53b5beb6e75791738a12618b58a1f9295285d58c28bfdccd22c1454857
 Size (kajongg-4.14.3.tar.xz) = 2510564 bytes

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2011/08/20 15:31:33 joerg Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 20:56:47 agc Exp $
 
 SHA1 (crossfire-client-1.11.0.tar.gz) = 934618207de854841c3e4673f896e9784ee70073
 RMD160 (crossfire-client-1.11.0.tar.gz) = 9fffcd301c0f32a583b5f6e5a9db77c7900d1cd7
+SHA512 (crossfire-client-1.11.0.tar.gz) = 2a61a057077fea8472a5af7fa60be8832181b7825ba1e9a5b468a25ac76fb21f0fd8d16b3a82583481d810fd95846e1f7122be3b489a16c9e08582a817a1aaba
 Size (crossfire-client-1.11.0.tar.gz) = 759887 bytes
 SHA1 (crossfire-client-images-1.11.0.tar.gz) = 78f25f3dadcdfb85121a9d9fd0dab534980b02a7
 RMD160 (crossfire-client-images-1.11.0.tar.gz) = d7aa59d49c76bc1d16a3a33c36fd0d038cea9824
