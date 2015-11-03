@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.7 2012/02/16 17:54:26 hans Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 01:34:57 agc Exp $
 
 SHA1 (synce-rra-0.9.1.tar.gz) = 9532427890404a5f095df6b95e140c11e20e2e9c
 RMD160 (synce-rra-0.9.1.tar.gz) = af3b87221f28db88a744039b9c709f2a534d4602
+SHA512 (synce-rra-0.9.1.tar.gz) = 7ec46f1a56cfd01d107c0a085f4bd8bc526e13018c60f4ce57219a3a527153d5de8e78efde8f48a8c603220009e962e311a2d6e68400bf059cb4b9840c8edcc8
 Size (synce-rra-0.9.1.tar.gz) = 379075 bytes
 SHA1 (rra-fixes-after-V0_9_1.diff) = 14f25880b79ef27a573c227d151021954247d78c
 RMD160 (rra-fixes-after-V0_9_1.diff) = a030ee14e2b59cfcd9630e2520761099bf150515
+SHA512 (rra-fixes-after-V0_9_1.diff) = 2f859936ba9c54741ecb77731afe088dedd092459f35c2454bf423230ca93ffdba9c728a62f1915ebd042b56b9fd8187e57ac10bd55e678e4e8a3d4c616516a7
 Size (rra-fixes-after-V0_9_1.diff) = 11297 bytes
 SHA1 (patch-ad) = 7a23f0909ef372d0a89e11fd95adf37301d3d883
 SHA1 (patch-af) = 10c72841de2279a5f78713784d692c6c205cdce0

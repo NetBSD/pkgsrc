@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2015/08/24 23:46:03 khorben Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 01:34:53 agc Exp $
 
 SHA1 (Phone-0.4.3.tar.gz) = d5539cb265a13ecbe029ac05bd9c5b099d282de4
 RMD160 (Phone-0.4.3.tar.gz) = fbebb82a515120763928f80b3e529f4d3a366962
+SHA512 (Phone-0.4.3.tar.gz) = 99ab90c3ff8f8a9150ae0ff30915a1b07ee7938587c9634a068c86375c09d3bd1495cfedefbb281242a9c23e43849d32befc7c95950ef9bb567e25c101ef462f
 Size (Phone-0.4.3.tar.gz) = 312446 bytes
 SHA1 (patch-tests_tests.sh) = c05bcc660f119be2b1210671d368b3a3cc6ebbee

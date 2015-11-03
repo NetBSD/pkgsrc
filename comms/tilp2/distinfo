@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/05/26 23:00:21 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:34:58 agc Exp $
 
 SHA1 (tilp2-1.16.tar.bz2) = 61d26fb1ad4f76df1f8d46369692792da7f6e5a3
 RMD160 (tilp2-1.16.tar.bz2) = 9bfd4ec998679e06b56b94901fce1ef765aa749e
+SHA512 (tilp2-1.16.tar.bz2) = eeb48b4b3f7044059bcb172b915f72c8af2e0d1c5eac56eff66d41c44d18e52c4249cc68a06e59ff03636b67ecbeb4ebacc690702cc43f296792ac77f358880f
 Size (tilp2-1.16.tar.bz2) = 2837735 bytes
