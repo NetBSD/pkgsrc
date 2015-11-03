@@ -1,4 +1,4 @@
-/* $NetBSD: jobs.c,v 1.15 2014/01/15 13:52:10 joerg Exp $ */
+/* $NetBSD: jobs.c,v 1.16 2015/11/03 19:06:47 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007, 2009, 2011 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -362,6 +362,12 @@ build_tree(void)
 			depends += strspn(depends, " \t");
 		}
 	}
+}
+
+int
+has_job(void)
+{
+	return !TAILQ_EMPTY(&buildable_jobs);
 }
 
 struct build_job *
