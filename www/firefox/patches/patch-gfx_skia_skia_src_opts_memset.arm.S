@@ -1,7 +1,7 @@
-$NetBSD: patch-gfx_skia_trunk_src_opts_memset.arm.S,v 1.1 2015/10/16 12:59:36 jmcneill Exp $
+$NetBSD: patch-gfx_skia_skia_src_opts_memset.arm.S,v 1.1 2015/11/03 15:52:57 ryoon Exp $
 
---- gfx/skia/trunk/src/opts/memset.arm.S.orig	2015-09-29 21:44:50.000000000 +0000
-+++ gfx/skia/trunk/src/opts/memset.arm.S
+--- gfx/skia/skia/src/opts/memset.arm.S.orig	2015-10-22 22:30:24.000000000 +0000
++++ gfx/skia/skia/src/opts/memset.arm.S
 @@ -13,6 +13,12 @@
   *    to aid future maintenance.
   */
