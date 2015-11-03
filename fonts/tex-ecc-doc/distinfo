@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:39 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:55 agc Exp $
 
 SHA1 (tex-ecc-15878/ecc.doc.tar.xz) = 9656a8fee53bcc23f0c8219b23f044aa00eaa685
 RMD160 (tex-ecc-15878/ecc.doc.tar.xz) = f06aa315ffe07ed7aa9fd744c44238279454d6af
+SHA512 (tex-ecc-15878/ecc.doc.tar.xz) = 03b8e32e4e82885c44b333c722b3a8aa1344149b11b14d4c47a5a152abe1ac60a43e88e76b3bcd797e8e2c1a81a8dcfdbe5367b9d95deda7c25ca3714a0d1ba1
 Size (tex-ecc-15878/ecc.doc.tar.xz) = 2952 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:43 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:02 agc Exp $
 
 SHA1 (tex-gfsartemisia-19469/gfsartemisia.doc.tar.xz) = 2c9eadeb818d41057046cd2334f6a2f9de589e7f
 RMD160 (tex-gfsartemisia-19469/gfsartemisia.doc.tar.xz) = cc8acce8f3bd275772ad77b33d5b248ec8963d90
+SHA512 (tex-gfsartemisia-19469/gfsartemisia.doc.tar.xz) = 64c102a677306c25f3efe70048d45004c72d992d9083824f785e6d939022103da76f21f8588e3c6fd608bc55545e0b3605faebd460b27d701589c700d44ba6d3
 Size (tex-gfsartemisia-19469/gfsartemisia.doc.tar.xz) = 117180 bytes

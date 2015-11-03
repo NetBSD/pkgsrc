@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:47 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:07 agc Exp $
 
 SHA1 (tex-lfb-15878/lfb.tar.xz) = d9d6f97ee013c1849e8687026ea0bff4fde8ae30
 RMD160 (tex-lfb-15878/lfb.tar.xz) = 845fe82066d83c04abc6703cc4b75cac755f5353
+SHA512 (tex-lfb-15878/lfb.tar.xz) = db2dca05a6f23a90a1c8259b8dcecc3cef39cc8cc80af4fb0fd93dd93d6ff1fe7e40ddfc222212b376511e946d5952b6baf9bc4518b45d3b104bb5e4bd9b6039
 Size (tex-lfb-15878/lfb.tar.xz) = 18284 bytes

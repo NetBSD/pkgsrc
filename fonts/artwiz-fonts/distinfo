@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 19:18:26 agc Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 20:44:28 agc Exp $
 
 SHA1 (artwiz-aleczapka-1.3.tar.bz2) = 82ece53669039b12639a077850f9ea1d87f964f4
 RMD160 (artwiz-aleczapka-1.3.tar.bz2) = 6a89224857adf705e4b9dcd465d75c95de736761
+SHA512 (artwiz-aleczapka-1.3.tar.bz2) = 2a3a62ef04c7de068d8a39ead10fa588bb43bbdce1fbf9ff11f37bcdac8761579aa0e67296766c77b06184858cf809b2c48234937915107d19e522ceadb8f172
 Size (artwiz-aleczapka-1.3.tar.bz2) = 30368 bytes

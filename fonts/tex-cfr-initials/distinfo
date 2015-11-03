@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:34 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:48 agc Exp $
 
 SHA1 (tex-cfr-initials-36728/cfr-initials.tar.xz) = bd294607a84c5c8d7d43196d1771ce7443b993c3
 RMD160 (tex-cfr-initials-36728/cfr-initials.tar.xz) = 8616be8a8a845f481a3c63f2e4cc2e57135c7287
+SHA512 (tex-cfr-initials-36728/cfr-initials.tar.xz) = 7b53c14c0d685a22f28c0c01b672da2ef2ae16d07936fa924a2fe152c20b61544543cd6ed67b3fde6f0d2b0d693dadf50937a1ec4798752f90db04a415f564a1
 Size (tex-cfr-initials-36728/cfr-initials.tar.xz) = 2312 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/03/06 23:22:16 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:58 agc Exp $
 
 SHA1 (tex-eurosans-17260/eurosans.doc.tar.xz) = 485e01eb6afa5f1a29b4d90ce0f3cc21d15becaf
 RMD160 (tex-eurosans-17260/eurosans.doc.tar.xz) = 9e515949a12578bf401a019565f4f7e4b7e7f64d
+SHA512 (tex-eurosans-17260/eurosans.doc.tar.xz) = 784058cc5136b1019445bebc2653cb6535d73e54bad8e9a86560633b50ad5e24e39efc45e7aabe2aa0d186d2ea877769b52acff3bd0481610bea1b5fafacd095
 Size (tex-eurosans-17260/eurosans.doc.tar.xz) = 291748 bytes

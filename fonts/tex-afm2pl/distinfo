@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/17 06:16:22 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:41 agc Exp $
 
 SHA1 (tex-afm2pl-33736/afm2pl.tar.xz) = 721abb1b95939f6ac8a6e902d39fdc838997f8eb
 RMD160 (tex-afm2pl-33736/afm2pl.tar.xz) = 8df1fa5f5702f77887c0fbb6f701aa64dc5c6c71
+SHA512 (tex-afm2pl-33736/afm2pl.tar.xz) = f3f0c075e625dc8f70e2c29b7d27950f0abced03591a67a15b389d2c8ea629631ba4700cd701e70e357230a0f23eb444aff5dc6b794500581f8f9ec1e6b8e179
 Size (tex-afm2pl-33736/afm2pl.tar.xz) = 9544 bytes

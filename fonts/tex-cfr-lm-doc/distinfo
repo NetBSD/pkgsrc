@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:34 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:48 agc Exp $
 
 SHA1 (tex-cfr-lm-36195/cfr-lm.doc.tar.xz) = 60e2c330c6fd6ed717b1537c2bf7587f35b9141b
 RMD160 (tex-cfr-lm-36195/cfr-lm.doc.tar.xz) = 651def6578e56884aea398d264371d50b8b1def3
+SHA512 (tex-cfr-lm-36195/cfr-lm.doc.tar.xz) = bae8afa7dee4dc102c0edf858488cc19b5bccb7a84beac5cf3daeddd4e19f171f4298d59db5b14fdfa87384941fd02b37a0b620dee851137788ef566cc88d7f7
 Size (tex-cfr-lm-36195/cfr-lm.doc.tar.xz) = 2524952 bytes

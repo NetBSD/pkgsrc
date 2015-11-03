@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:29 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:41 agc Exp $
 
 SHA1 (tex-almfixed-35065/almfixed.doc.tar.xz) = 56e6f814f4820a4bd76a297b88d84c89b024189d
 RMD160 (tex-almfixed-35065/almfixed.doc.tar.xz) = 15e28a13efc4396ce31316875d0d9f30581a7802
+SHA512 (tex-almfixed-35065/almfixed.doc.tar.xz) = 7d3a116e4328822e39010f6c2839ad7be63b5a3653aee521d8085efedfeee9971d05b6bc03ab19c67d1ce8f87b3cabd4208c3412e983722a8e39b468dfa0c282
 Size (tex-almfixed-35065/almfixed.doc.tar.xz) = 565628 bytes

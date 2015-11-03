@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:51 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:13 agc Exp $
 
 SHA1 (tex-oldstandard-29349/oldstandard.doc.tar.xz) = 00bb921ab5f02f440ccf98d28f5b0ca82ce384ba
 RMD160 (tex-oldstandard-29349/oldstandard.doc.tar.xz) = 2a207a9b0d8c79cb8bde136170dac0075524643f
+SHA512 (tex-oldstandard-29349/oldstandard.doc.tar.xz) = d9b6f866ba3b9da18f6b21cf07f2f514d7a0b458d4654e452018f0fa2f059ca68e32584a6f7193447021bf387664eaa94f0f6759d8dfbbb01082fa699094845b
 Size (tex-oldstandard-29349/oldstandard.doc.tar.xz) = 1191604 bytes
