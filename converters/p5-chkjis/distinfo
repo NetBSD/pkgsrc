@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 16:12:34 agc Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 01:43:53 agc Exp $
 
 SHA1 (chkjis-0.18/chkjis.pl) = 4a6db30275380e66d842c2c0390dd0285007d67d
 RMD160 (chkjis-0.18/chkjis.pl) = fb96c2d17b402c626627219540db9ba9dd5462b8
+SHA512 (chkjis-0.18/chkjis.pl) = a216e4221a19f433e8cdcae3df1cf690bff722e44c51f3ac1035f9114ed96668666531f1c1ade34662243cbd404196279c11b50e59da78a67a2427270d76a586
 Size (chkjis-0.18/chkjis.pl) = 6471 bytes
