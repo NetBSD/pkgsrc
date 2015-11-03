@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 23:11:56 agc Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 20:56:47 agc Exp $
 
 SHA1 (crafty-doc-18.0/crafty.doc.ps) = fac398f8631fb97dce2d51540bba3933c7156d78
 RMD160 (crafty-doc-18.0/crafty.doc.ps) = 10001918bfc54a9c456b4572037b9fa640491d7b
+SHA512 (crafty-doc-18.0/crafty.doc.ps) = 96f74043b73ebbc8ef7e8464933afed6344b0b38630e586813ed1ef8914afc822578c27299973d6b6f2f3a4d6973c051c1e55a0365602e057a6bce54dc8e533a
 Size (crafty-doc-18.0/crafty.doc.ps) = 141725 bytes

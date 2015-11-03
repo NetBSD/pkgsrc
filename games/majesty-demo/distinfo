@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 23:12:00 agc Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 20:56:59 agc Exp $
 
 SHA1 (majesty_demo.run) = b17d7eb5dac703cf8a7c3a6a5cf9c55cfd8d7e1c
 RMD160 (majesty_demo.run) = a792b420c789ae06b7822f935e5c082b1945c38d
+SHA512 (majesty_demo.run) = 67c74e3c11514649fbf1f2aadf529ce4ee62084c5825a2ec213c28ced6ec1d3ff6b6b2858f6f721c032160df794d62e4a73bcf9696ee4ebbb6ed29df1c024e31
 Size (majesty_demo.run) = 43170241 bytes

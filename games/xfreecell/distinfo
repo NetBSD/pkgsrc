@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.9 2011/11/22 18:11:14 joerg Exp $
+$NetBSD: distinfo,v 1.10 2015/11/03 20:57:08 agc Exp $
 
 SHA1 (xfreecell-1.0.5b.tgz) = b0453b09ea2211822a5f03f532097c9eb14db2a6
 RMD160 (xfreecell-1.0.5b.tgz) = 2629217bf29734bb25b30ca8aaec62ae19d0ff6f
+SHA512 (xfreecell-1.0.5b.tgz) = b4437d9c78d5a6cb5fabd0157528aef85aa1d01b87875314e122d1eafbe5808af67b7b4dbf4db8e70d3d5193b10e61cc20210725b75c01ca6ff6db2b5840a64c
 Size (xfreecell-1.0.5b.tgz) = 49367 bytes
 SHA1 (patch-aa) = d5235b5a34df4ea12c249d680cc6e674f1c50626
 SHA1 (patch-ab) = a34285fa7e8564d18d91cdb23affd1afb5cd8938

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.11 2013/08/31 14:49:08 joerg Exp $
+$NetBSD: distinfo,v 1.12 2015/11/03 20:57:03 agc Exp $
 
 SHA1 (quakeforge-0.5.5.tar.gz) = 3ceb229b3d777b6c5e0cb1530b4547b20737f402
 RMD160 (quakeforge-0.5.5.tar.gz) = d22b29498e950bfdf96169bafee6409fca1a8e11
+SHA512 (quakeforge-0.5.5.tar.gz) = 533089502d42d4496267cebee9256c76a85e9b31247ee418df514ce3aa02afca42d41d781deefc538fc06929a70e41e8e763abb7ea58604e560ea912d585a8e7
 Size (quakeforge-0.5.5.tar.gz) = 2659432 bytes
 SHA1 (patch-aa) = d54d4784c5832a00382946d78929cf618696b898
 SHA1 (patch-ab) = f1abe7e12fd956acb18ed4c95db97e5d86eed8b5

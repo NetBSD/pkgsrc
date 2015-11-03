@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2011/11/24 14:08:47 joerg Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 20:56:48 agc Exp $
 
 SHA1 (fillets-ng-0.7.3.tar.gz) = 58937e59c3108e0ed4d2a5e542f3d9b813655287
 RMD160 (fillets-ng-0.7.3.tar.gz) = 6c8f41feab9df2b6dee3942c18848d61ab2f2c7d
+SHA512 (fillets-ng-0.7.3.tar.gz) = a5aad4cdd15ff0a847beb3ff99ee9b14205affc672ff6b6b559716c754939fd8741019eea5d063ce9a4941a50e9ed3373892d118f952bb10708c9b9bc5032cc2
 Size (fillets-ng-0.7.3.tar.gz) = 311799 bytes
 SHA1 (patch-aa) = 355c8fd1a47335f41114786d65256293a9ca4968
 SHA1 (patch-src_gengine_OptionAgent.cpp) = 9e49a989877e5f55f40f2a25d1dd9801ca65fbfe

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2014/11/14 08:49:41 markd Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 20:57:01 agc Exp $
 
 SHA1 (picmi-4.14.3.tar.xz) = 67de1625da3621a3109e3a84d2117b3f5668339d
 RMD160 (picmi-4.14.3.tar.xz) = b8f7ea3835d8b2b6c263df084411cd5b611c1fb8
+SHA512 (picmi-4.14.3.tar.xz) = 123e9df27da424f12a14b75299113d40c35da8e1825e30ea59f2a887a9e5aed3128bbe78fe39dbb82ff767352e3f99217dbe9facf8d3535f09eb19946a192e98
 Size (picmi-4.14.3.tar.xz) = 731476 bytes

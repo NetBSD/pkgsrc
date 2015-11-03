@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/04/04 19:10:18 dsainty Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:56:46 agc Exp $
 
 SHA1 (crack-attack-sounds-1.1.14-58.noarch.rpm) = a9a9146c181613bc08e2cd2454cd00aa7bb7873e
 RMD160 (crack-attack-sounds-1.1.14-58.noarch.rpm) = f6bb553ffc3892c6bb78ed41c62c28163af19bae
+SHA512 (crack-attack-sounds-1.1.14-58.noarch.rpm) = e42119c08c0d6175900e0d0b1602ffee36ff53d247798d6ea967fc30a90d899a69908dd0c931479eb0bd52720e011d10fd252ef13a3e37aff9f6f11718b0533f
 Size (crack-attack-sounds-1.1.14-58.noarch.rpm) = 4259627 bytes

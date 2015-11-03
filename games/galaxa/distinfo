@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2010/01/31 23:45:58 joerg Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 20:56:50 agc Exp $
 
 SHA1 (galaxa.0.1.tar.gz) = 63927c23783aa4b52a2a0ba9f533a73f43cb9e0b
 RMD160 (galaxa.0.1.tar.gz) = fe5e522a2217eeb263ea0e402959da4496d61cd1
+SHA512 (galaxa.0.1.tar.gz) = b72d67b6e8f98a8cf0c57f29bf60eef6400757303f0712729703a8d9e1b3e722eec81d42d226d78102f79208285d32f98b039b5efc208acb91276c8bba1a0332
 Size (galaxa.0.1.tar.gz) = 192068 bytes
 SHA1 (patch-aa) = e610c3708771c21450966c178c2a6142e54ce8b2
 SHA1 (patch-ab) = 1e79b7f423bf8d156c4820b10f05885545c3826a
