@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2014/03/16 07:24:21 taca Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 00:56:25 agc Exp $
 
 SHA1 (bz2-0.2.2.tar.gz) = d7315b5a054ff824c8022cc19b29ccbb1bd10255
 RMD160 (bz2-0.2.2.tar.gz) = af39483be363d72a34bf82eebfcf072618e75145
+SHA512 (bz2-0.2.2.tar.gz) = 9e41ccc867cffea89bd7c9a136f967383e5296fe77c6f3e88e7a43e23f3d4a51e741a3b5059e15fc56c49e42e09d89bd64a0a7dee3195c791da704b2e34d113e
 Size (bz2-0.2.2.tar.gz) = 17129 bytes
 SHA1 (patch-bz2.c) = 5e14083bcbf334a9d17fde6a0debc71c9710290a

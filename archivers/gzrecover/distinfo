@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2014/11/20 07:41:06 mef Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 00:56:21 agc Exp $
 
 SHA1 (gzrt-0.8.tar.gz) = a354901b7aa2192bafdc34f43fbfde3cd7de2822
 RMD160 (gzrt-0.8.tar.gz) = 3d35163f9351f1f496f69a143b0353448de50b22
+SHA512 (gzrt-0.8.tar.gz) = a1ca41320ec39a8d439e5c32fa950fa52c09caf7e9719ca63ff3aec23bbaafa88f78f9b7fc325bb2ba19a1555f12b89fbef91f7708fdbb3ec852d78bf531fc85
 Size (gzrt-0.8.tar.gz) = 7311 bytes
