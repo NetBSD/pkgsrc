@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2013/06/16 12:21:56 ryoon Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 23:54:26 agc Exp $
 
 SHA1 (gst123-0.3.3.tar.bz2) = a5e3804e51a6930bab1e7b5aa85f7340920c7441
 RMD160 (gst123-0.3.3.tar.bz2) = 941bef7f52ca7ef534b9716df258e1005a135f9f
+SHA512 (gst123-0.3.3.tar.bz2) = 8c6b23ee66ef983874268a41c00aa431df5daeb9daf995663c9b9ab72b7df16a0e55c949b5602b50de324b58cd75b7bb734cdbeae0ad56d2059d9d1100630c47
 Size (gst123-0.3.3.tar.bz2) = 113344 bytes

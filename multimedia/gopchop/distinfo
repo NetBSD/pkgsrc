@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2009/03/06 10:35:21 wiz Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 23:54:25 agc Exp $
 
 SHA1 (gopchop-1.1.8.tar.gz) = 6e879c6cbf081df8fa44b535c9fd991ae175d5a2
 RMD160 (gopchop-1.1.8.tar.gz) = 8e5cffca5ef2cc7c1d055ac0a5a20e75d074c2d1
+SHA512 (gopchop-1.1.8.tar.gz) = 5c2af09415c3bc570fe72423912ce8e604031cf58fd1d3f0ef6c29f99994a919fb9f85a2af8635886d8043485cdddfd2652ae598ae218da41edab0c2043641a5
 Size (gopchop-1.1.8.tar.gz) = 574559 bytes
 SHA1 (patch-aa) = 0bb17c6001a06b782cb8aca8a8d82df66cde100d
 SHA1 (patch-ab) = 24496930dbe8d58aeea87abcbfad1a30397f6f87
