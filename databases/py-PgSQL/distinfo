@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 16:33:09 agc Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 01:56:26 agc Exp $
 
 SHA1 (pyPgSQL-2.4.tar.gz) = 478135830e0bf4fc9496452ee3b88de4c218488f
 RMD160 (pyPgSQL-2.4.tar.gz) = 143b10e7e6e69ef27fe29715fdbf2cfabbd0ab66
+SHA512 (pyPgSQL-2.4.tar.gz) = 21b3d1a85a8a03a51abf5af22cc143024a8c0d58f567dae9905bf5a95a894a3434e04bfbfc6eff60dd07a7547eae9ccbe9fd22e5065ab814c6f3451aec764798
 Size (pyPgSQL-2.4.tar.gz) = 152139 bytes
 SHA1 (patch-aa) = 4ac2cbb8378557678a51bb3ece2f280eff0b1187
 SHA1 (patch-ab) = 3d387e7d20db3024a0761570f1bbbeeb3fc8f674

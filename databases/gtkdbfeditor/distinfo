@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/01/08 15:07:54 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:56:12 agc Exp $
 
 SHA1 (gtkdbfeditor-1.0.4.tar.gz) = 59cd948c72f37b834dcf7bd479379d224945be78
 RMD160 (gtkdbfeditor-1.0.4.tar.gz) = dc806f54074fb455f909c6631ec130bc074e3721
+SHA512 (gtkdbfeditor-1.0.4.tar.gz) = 4907c28f694d0dcca8675881ae37e8071141cb309f5c02a58198cb7b0ed064bde601ece5647f6846ece77ece136894b8b59f50ab5f83779e0ed7a018115a9de1
 Size (gtkdbfeditor-1.0.4.tar.gz) = 448537 bytes
 SHA1 (patch-src_main.c) = 311a7fa902f74d800fe7a86fbe06e98628c49456

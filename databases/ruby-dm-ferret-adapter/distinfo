@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/12/17 17:22:52 taca Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:56:31 agc Exp $
 
 SHA1 (dm-ferret-adapter-1.2.0.gem) = 891d663d8bed82e11205b5c194a8816092db5d92
 RMD160 (dm-ferret-adapter-1.2.0.gem) = d4a461eb22fee9b40206e60c7478d20d8b09310f
+SHA512 (dm-ferret-adapter-1.2.0.gem) = c18d9983b182249edf9bf36b6f232592c7385f3326cf3b422566db034e1fada2efd0abaa1ec455a9646dc972b7d6004d862758d5bf0e8567c61b193ed03c79fb
 Size (dm-ferret-adapter-1.2.0.gem) = 11264 bytes
