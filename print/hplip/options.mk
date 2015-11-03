@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2015/04/26 13:29:12 joerg Exp $
+# $NetBSD: options.mk,v 1.7 2015/11/03 15:08:50 schnoebe Exp $
 #
 # HPLIP dependencies are detailed in the following page:
 # http://hplipopensource.com/hplip-web/install/manual/distros/other.html
@@ -33,8 +33,12 @@ MESSAGE_SRC+=		MESSAGE.scan
 MESSAGE_SUBST+=		EGDIR=${EGDIR}
 .include "../../graphics/sane-backends/buildlink3.mk"
 # XXX: a dependency installs py-Pillow, which conflicts
-.include "../../graphics/py-imaging/buildlink3.mk"
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-imaging
+# .include "../../graphics/py-imaging/buildlink3.mk"
+# DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../print/py-Pillow
+# version depends on if py-reportlab was installed before we called
+# out an imaging library.
+DEPENDS+=	{${PYPKGPREFIX}-imaging-[0-9]*,${PYPKGPREFIX}-Pillow-[0-9]*}:../../graphics/py-imaging
+# PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-imaging
 .else
 CONFIGURE_ARGS+=	--disable-scan-build
 .endif
