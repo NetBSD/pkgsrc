@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/10/01 21:44:17 seb Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 23:27:15 agc Exp $
 
 SHA1 (Net-SMTP_auth-0.08.tar.gz) = 8beed886833a17732055df7d14fc579eea19b654
 RMD160 (Net-SMTP_auth-0.08.tar.gz) = 1cc6f43c592db9edb32bf1f32dfba1d0d5a70a15
+SHA512 (Net-SMTP_auth-0.08.tar.gz) = 8aa389061676b0f229a6d1462e0460237b27d60051548e08328249d55f04a3b35108f9841aec2b45309f9545201425a7e1e409bf961393b7faf36798d0256e61
 Size (Net-SMTP_auth-0.08.tar.gz) = 5365 bytes

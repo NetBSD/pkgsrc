@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.12 2010/02/26 19:45:11 is Exp $
+$NetBSD: distinfo,v 1.13 2015/11/03 23:27:10 agc Exp $
 
 SHA1 (mini_sendmail-1.3.6.tar.gz) = e8d18419ffa5075ce0b3f49a52bd5e1a38beeb02
 RMD160 (mini_sendmail-1.3.6.tar.gz) = 87fc1133c5976ae6e85730d3600149f69c7cab55
+SHA512 (mini_sendmail-1.3.6.tar.gz) = ac6c37eec0550044584b44f74c2745e3f79a26dd5cf19852d20ef769aa80100ec7ce38d0724321e2a0055fcf669765a87c30a6f6537d77a145809d4ec36ea94f
 Size (mini_sendmail-1.3.6.tar.gz) = 7579 bytes
 SHA1 (patch-aa) = 54601fa54cedeb9b3bfbafdbd9b2f7e129a53fcd
 SHA1 (patch-ab) = 60715acc1895d01d65c546bfb1a2e4d530f36954

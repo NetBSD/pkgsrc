@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2009/09/13 11:51:57 sno Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 23:27:14 agc Exp $
 
 SHA1 (Mail-Mbox-MessageParser-1.5002.tar.gz) = 9bf7726b52704218558a8bfe6c83892e592def19
 RMD160 (Mail-Mbox-MessageParser-1.5002.tar.gz) = 0500d0290f006a74fc7d2951cd79bf8f9b64317d
+SHA512 (Mail-Mbox-MessageParser-1.5002.tar.gz) = d36fec04875dd9c22db4a58e63f4af73325b98a7ff3fbfa0ba56f4d15fd8fb50f7fb00d93c05c15eb1b9bfd299835af07c7492589fa76290f1a127a455711f08
 Size (Mail-Mbox-MessageParser-1.5002.tar.gz) = 266361 bytes

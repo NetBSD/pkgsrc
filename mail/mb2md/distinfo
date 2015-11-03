@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/04/20 11:00:18 schmonz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 23:27:09 agc Exp $
 
 SHA1 (mb2md-3.20.pl.gz) = 96f69bea2802eaf578c2ce82320ea4b0bb1a08c6
 RMD160 (mb2md-3.20.pl.gz) = 03ee1e543ba070c222aa7e20624aaf5fa390785c
+SHA512 (mb2md-3.20.pl.gz) = 4c795ecd3c5eeab9902e8393622e5d7ab070a844af1b386e975a022f83f37b4abdad1285f7cbc97c489c0931ef2605d85145eb6c1a4b993889f35d50c670503d
 Size (mb2md-3.20.pl.gz) = 14977 bytes

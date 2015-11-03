@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.9 2011/10/14 04:42:10 dholland Exp $
+$NetBSD: distinfo,v 1.10 2015/11/03 23:27:16 agc Exp $
 
 SHA1 (perdition-1.18.tar.gz) = 60d76e2fca810fa1a12bebe369fc3e7d3452ebbb
 RMD160 (perdition-1.18.tar.gz) = 82065dcfb7f05d7bebcf98b72334f676d4fd5dad
+SHA512 (perdition-1.18.tar.gz) = f01ac9eefc69f0018b1d08a9db6a82f8119ec50faae971ca3b64947b9d2b4ca26bf447cab55a7cec6a6c89e8d0695def3649b60b4bceae6e44e480c4f3518a28
 Size (perdition-1.18.tar.gz) = 602933 bytes
 SHA1 (patch-ac) = 01934fb919cc8ac7699e07e407d6e26706e98fbd
 SHA1 (patch-ag) = 3840c9b4ed6e6d286c1cbeebad7184f9ccdaac2a

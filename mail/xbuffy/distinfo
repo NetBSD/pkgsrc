@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 09:59:30 agc Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 23:27:24 agc Exp $
 
 SHA1 (xbuffy-3.4.tar.gz) = 088031eda9ea64a43c86ff51d7d37bedcb213d66
 RMD160 (xbuffy-3.4.tar.gz) = 902b98d60e4ba929e5dd656022cfbdf49c9fcde9
+SHA512 (xbuffy-3.4.tar.gz) = c9e9dbd2ebae94dc78284001dfe0b49abdce47ad9ef9a5bb4a4c85e6344c58c9a7ee1a4166e53f6dadcdff1b0be0b421950726511d2468ed4b9b6dd6083404ca
 Size (xbuffy-3.4.tar.gz) = 77612 bytes
 SHA1 (patch-ab) = 9e3ad3dbdb4ffc0c54514694a05fc815cc8ea20f
 SHA1 (patch-ac) = 458fe29fb60f4bcc37a5e69b465126c9ed94b5da

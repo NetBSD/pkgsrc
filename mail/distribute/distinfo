@@ -1,28 +1,36 @@
-$NetBSD: distinfo,v 1.6 2014/06/29 16:19:38 schmonz Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 23:27:03 agc Exp $
 
 SHA1 (distribute/distribute-2.1-pl19.tar.gz) = f33f63d42d0233eceec759dc0378a914087c0344
 RMD160 (distribute/distribute-2.1-pl19.tar.gz) = 5ffb23682176a86291eb5374ea98c9c5d002947d
+SHA512 (distribute/distribute-2.1-pl19.tar.gz) = 1ece4fd98c86ce6a4087e25b35d46d8cb4d6d9882de13d210c2d4a6885385c38e2fbb31de529886ee3dd24ee3ef2f48858315324fd11e4add8e08b4653b30efa
 Size (distribute/distribute-2.1-pl19.tar.gz) = 45002 bytes
 SHA1 (distribute/patch.20.gz) = 0eb8add5f34f6e7cf88c140bbcfb61a0620d20de
 RMD160 (distribute/patch.20.gz) = c4b488a9070d27ffa83738400e9c48d53eb8a9a3
+SHA512 (distribute/patch.20.gz) = 30e4c7a595a707162ef96e94212a3197bc790fd248bfd1ed5e9fdb24e83dc67868bfae05b30941bafa8dc311363243e46b96d6e218dcb58f2a8c7a52c80e16df
 Size (distribute/patch.20.gz) = 5664 bytes
 SHA1 (distribute/patch.21e.gz) = ac5c073c09ba157a84b23fd729b0e34ec2988f05
 RMD160 (distribute/patch.21e.gz) = bf5637551ce688e6d054e5e13e036b9377165d51
+SHA512 (distribute/patch.21e.gz) = d57c743e6b05c127ef51872dc0f7a03b8839365ac5d470995f9d6490fb76358ce1035a4719bafc339cffc8fff83bf15b80fa8b1245e84770067a2cc53d593b19
 Size (distribute/patch.21e.gz) = 8356 bytes
 SHA1 (distribute/patch.22e.gz) = d6b3f58ec7998374f4c022d2bfe53a655c2853c9
 RMD160 (distribute/patch.22e.gz) = 1e40e3e111671d2d4d74f2a08f972f012a865396
+SHA512 (distribute/patch.22e.gz) = 1086dd0a78627c319512d59907f9db96f21c3e3544c12be614c61ac701ad5bc0e65edb3cf98d391913f64d56b0e2f7ad6105a4f2aae96a17d083c2ae9f485330
 Size (distribute/patch.22e.gz) = 9842 bytes
 SHA1 (distribute/patch.23e.gz) = 323733c0c83c452fcf940ee1b862edbed49887b7
 RMD160 (distribute/patch.23e.gz) = 21de37c8c34d40607cc2e9d9f27cb03985accdff
+SHA512 (distribute/patch.23e.gz) = a0e7b6cfa0c8f623ea456056421f58d98fbc176581a8fb102d219b49d960b80a3e545e26f337017ba1266bd1c54d7419b38d9dab1098abb60691b99b8d21afee
 Size (distribute/patch.23e.gz) = 2570 bytes
 SHA1 (distribute/patch.24e.gz) = 54a098e9806e7bc1351722760d443a6b97877ef5
 RMD160 (distribute/patch.24e.gz) = 378445e45a521cdb3bcc73ced1120714326723c1
+SHA512 (distribute/patch.24e.gz) = 05aac8986975eaf683b5d95bc396f2c27db195ca3534f402e4ffdefec6c14cfb6aa56a0c6a81400e57c12ff6cebe1f7c887984cc48d2f84e3635f69f0c8fd187
 Size (distribute/patch.24e.gz) = 1564 bytes
 SHA1 (distribute/patch.25e.gz) = 942cab4cf4f69de2a84eb7f3f73da758ddb84cc0
 RMD160 (distribute/patch.25e.gz) = cfbfb48d827dec7a8e79ce0eb142e64c4b50fa41
+SHA512 (distribute/patch.25e.gz) = fcaeecdacb9fb6cda26beb5e3f40a35a7155e2d269599bb637f1d031b12172a0557c5ce239d4347d2bb06e9207568079afa974ea0b0b2bb025d8ff16e7225cca
 Size (distribute/patch.25e.gz) = 7374 bytes
 SHA1 (distribute/patch.26e.gz) = e52ac9428e438610b9dd8182212fe78ded909f0a
 RMD160 (distribute/patch.26e.gz) = 2d4c7d0f4bed7c420a32ae7d2ffe999906d3f5cc
+SHA512 (distribute/patch.26e.gz) = c0c1de2467d1b28320585cb4933029182932345e7e8b38fda79eed513ec30e7dea7cef1bd8c7f2ca551aae7c1e5930fc361451f73ce5bd7d1027460df4bef81e
 Size (distribute/patch.26e.gz) = 12560 bytes
 SHA1 (patch-aa) = 6c23421d76b166acffc782271f37e405b45617ed
 SHA1 (patch-ab) = 4c07a6ae9bb1e9dacd33db96624d2c2fefbb9240

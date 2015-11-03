@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2012/06/02 04:28:45 taca Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 23:27:08 agc Exp $
 
 SHA1 (libsylph-1.1.0.tar.bz2) = ab33bdcf3bfdb157802649e49d007fd24d3edadf
 RMD160 (libsylph-1.1.0.tar.bz2) = 622f2b85de2dc1cbbbacbd3be870b09499036bfe
+SHA512 (libsylph-1.1.0.tar.bz2) = 03a8d142a361d3f6b04179d6a6da01f3e24d1d042b01ee6ed20d881553690b9104a5c2dc30aba584a036e5c50e47700af087cf927b56a5be84497cffe0a01f74
 Size (libsylph-1.1.0.tar.bz2) = 570674 bytes
 SHA1 (patch-libsylph_defs_h) = 427f51cb7839ef52f5eaef4b9a044f3646fe7131

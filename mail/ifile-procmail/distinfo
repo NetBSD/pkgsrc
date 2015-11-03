@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 09:59:23 agc Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 23:27:07 agc Exp $
 
 SHA1 (ifile.procmail-0.3.tgz) = 33a00107e046deee14f93dbfe691a9161adbeb0d
 RMD160 (ifile.procmail-0.3.tgz) = 0c5029f1bf415d1112f2e3f75de47afacf9f8202
+SHA512 (ifile.procmail-0.3.tgz) = 78d607fe5ae139bc0efeeb5dde4d4ffa8883b092b8e6310df636f135f1127c9c67fcfa3aca0e8fe0d99428cc45514a5494c0bbacfd94a52c13c6f5e8c7b89d39
 Size (ifile.procmail-0.3.tgz) = 4092 bytes

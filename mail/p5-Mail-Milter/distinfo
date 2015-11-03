@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2006/03/30 04:12:20 tv Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 23:27:14 agc Exp $
 
 SHA1 (Mail-Milter-0.07.tar.gz) = ee1809ec178982bfde9855bf7a0d1b48dbb10415
 RMD160 (Mail-Milter-0.07.tar.gz) = 3b45f92fcadad7b9f1f461b9348d267124f30b27
+SHA512 (Mail-Milter-0.07.tar.gz) = 020b68d5cad8258515efd4ab173c555bebf492408b922693fb28053bdcce49905e3e22510c9fb8cdf0d42ef29b8e3c1cab1f67048fc8cb05635dc64453baaeb2
 Size (Mail-Milter-0.07.tar.gz) = 31445 bytes

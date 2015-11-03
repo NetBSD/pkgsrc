@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/05/11 12:15:08 jmmv Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 23:27:10 agc Exp $
 
 SHA1 (mime-construct-1.10.tar.gz) = 9b0ee8aa0bb273e84fb46aa42f97b27863121ad1
 RMD160 (mime-construct-1.10.tar.gz) = 145ed65a33359c047a6e38fd95ff479bc985c9c3
+SHA512 (mime-construct-1.10.tar.gz) = f1c0294e5c1199d8cba3ea6fc1cd6c242ee43237f9149464fd8299f33d5d3f980ff40e6d90338dc508e288f06f46897ae6b4aaae5859f29eb43ec89a333f8e82
 Size (mime-construct-1.10.tar.gz) = 12452 bytes

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2008/10/12 11:23:13 markd Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 23:27:08 agc Exp $
 
 SHA1 (kbiff-3.9.tar.bz2) = de4533a15c2647e741155c364b862025c522b6ce
 RMD160 (kbiff-3.9.tar.bz2) = bb310d7a56043387759312396e3d8013a25eca71
+SHA512 (kbiff-3.9.tar.bz2) = 5501ff79a89aace0695e76ef3b6c1916cfb27de2107a57d73132c5b858f3f4eabd3311a2214699615a84e6c424c2fb7deb79f5176bcb5601ff6bd1867a3763d8
 Size (kbiff-3.9.tar.bz2) = 571829 bytes
 SHA1 (patch-aa) = f35bfba964150abe75673a47e7fed6a19e52e912
 SHA1 (patch-ab) = 40a223a4ec3f46ed7e44764430f7a7f2014c0f19

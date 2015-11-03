@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/02/10 12:22:57 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 23:27:10 agc Exp $
 
 SHA1 (minimalist-2.5.4-1.tgz) = a29745fbd442e3cedc74d7e81e2383b3fdd0c716
 RMD160 (minimalist-2.5.4-1.tgz) = 77db20bede559a89afe6f35ca32e51fe721ab21e
+SHA512 (minimalist-2.5.4-1.tgz) = 8e2d186c8d82ce8b68f7a7f0ed39c040202f71363cf26da32f2d2b8fb94c557e9ff0453595b81c8fe290d34ffa6b058fdfe8c9f9338798b0cec59e6849c20a4f
 Size (minimalist-2.5.4-1.tgz) = 38935 bytes

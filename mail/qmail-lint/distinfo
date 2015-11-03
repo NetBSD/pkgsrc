@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 09:59:28 agc Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 23:27:18 agc Exp $
 
 SHA1 (qmail-lint-0.55) = bbe23a144a216cc85046e0aa9596806b81613c3e
 RMD160 (qmail-lint-0.55) = f2a412a88ffb696e84afa2d82c095c54c6492024
+SHA512 (qmail-lint-0.55) = d9f81df52f5587c1f4083789ec55795c1b9cfd896583f4bd910ec7fc542daa9da0a6cbe368d261071224981c5e731aa26560ef645a2c9ce64ae8563e9b6b28ec
 Size (qmail-lint-0.55) = 13531 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2010/06/16 15:16:53 pettai Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 23:27:02 agc Exp $
 
 SHA1 (courier-analog-0.16.tar.bz2) = e1a1b32d40a4203430dca7935a20226e222f0077
 RMD160 (courier-analog-0.16.tar.bz2) = 98dcaa2512759e43c558a4a80cd53291439b7a6c
+SHA512 (courier-analog-0.16.tar.bz2) = 3bbf0e45ca0dd42395bd204a137afec2c2d543258855ffea08390f3f25221ae9c4296a92dfb73d18387a38078202ba2c03c337076193348843a63fc23594f022
 Size (courier-analog-0.16.tar.bz2) = 74042 bytes

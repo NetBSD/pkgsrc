@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2009/04/08 01:44:04 schmonz Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 23:27:08 agc Exp $
 
 SHA1 (mailfront-1.12.tar.gz) = 498cfd1af47dfba45671e731c4f0666fc1c930f9
 RMD160 (mailfront-1.12.tar.gz) = 17f06377d6de8f11d12c1585d55c9e7f8aa97bbc
+SHA512 (mailfront-1.12.tar.gz) = 26a5dc791b810ecb9fa262d7263499774201d1a2aeaad997e959daa2cb9ed35b49a12800df29ea17136e32877a4b81bd93998da3748f7e25403f35507a9ca898
 Size (mailfront-1.12.tar.gz) = 104598 bytes
 SHA1 (patch-aa) = 3d24a89e07f1d6eae5d80c922b93a35750b3359a

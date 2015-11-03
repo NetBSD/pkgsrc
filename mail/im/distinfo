@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2011/05/28 07:54:02 obache Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 23:27:07 agc Exp $
 
 SHA1 (im-151.tar.gz) = 6172de08ca4757e97af7b9411fcb3d53f3ad0d4c
 RMD160 (im-151.tar.gz) = d7ad5cd2d0bf2c4df4fbe3be39e50ac567de5422
+SHA512 (im-151.tar.gz) = 5123eaab9faf157a17b0ec34bb78433770f37d9aa538233ae9eebda6b86fbf007e341eb62af5f36f6f6821e304a0ad9206bb6134712b67d753ef32ecdacbabbb
 Size (im-151.tar.gz) = 271073 bytes

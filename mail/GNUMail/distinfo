@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2012/10/22 02:53:12 rh Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 23:27:00 agc Exp $
 
 SHA1 (GNUMail-1.2.0.tar.gz) = cb4a0600c709a2ca53274bc12e355bfbdbde4670
 RMD160 (GNUMail-1.2.0.tar.gz) = 020e9095db9cfdea77747bf2e6e53d0d48f1b1b4
+SHA512 (GNUMail-1.2.0.tar.gz) = ef0c806e5550daa064a789633c3ecb87819c1e94667fc69fc52bc2923a6819ac6e7fc5262a74503c3554e79429c3d2163eeb68fd30adcfe59ba3aede7ee0a7cb
 Size (GNUMail-1.2.0.tar.gz) = 1380032 bytes
