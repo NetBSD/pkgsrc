@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/09/19 16:50:27 brook Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:33:51 agc Exp $
 
 SHA1 (R/latticeExtra_0.6-26.tar.gz) = b3ffbce688ccabca143c9174c647f93edd23d7ab
 RMD160 (R/latticeExtra_0.6-26.tar.gz) = 2f0313fb3356aa12d0af36ba5cf77b18b1e432c4
+SHA512 (R/latticeExtra_0.6-26.tar.gz) = e9623a14650af9418a3df4ebfd73c16f2227c0fb4d5247f135fec85e16b2cc32424c60099101e2ec2b9b17dd5093f12faf1b63a83870958171c815b4f693fa84
 Size (R/latticeExtra_0.6-26.tar.gz) = 1295154 bytes

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.8 2011/02/07 00:37:53 wiz Exp $
+$NetBSD: distinfo,v 1.9 2015/11/03 21:33:52 agc Exp $
 
 SHA1 (autotrace-0.31.1.tar.gz) = 679e4912528030b86f23db5b99e60f8e7df883fd
 RMD160 (autotrace-0.31.1.tar.gz) = 9d008c6c519da7e006cb83ae6012f4d9e4e8b0ba
+SHA512 (autotrace-0.31.1.tar.gz) = 7d0ec86a41617b3d4336eed72f2974c10f569ff53d450a4c91b4611bb6fdb8c4ff81d04d91e9d20f1b4df592f82c8421e7656af7fa2bdc786ffb4618e9eadd24
 Size (autotrace-0.31.1.tar.gz) = 362718 bytes
 SHA1 (patch-input-png.c) = 9c19beb3c8d2f9afa9b51cead8a9fe49e72106f1

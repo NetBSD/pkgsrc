@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 13:47:41 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:27 agc Exp $
 
 SHA1 (tex-piechartmp-19440/piechartmp.tar.xz) = 09813eb870c3bfcb24bffd79e6890a07ebb9a706
 RMD160 (tex-piechartmp-19440/piechartmp.tar.xz) = eba08245b96211ce92da0187d733658cbd0b7f78
+SHA512 (tex-piechartmp-19440/piechartmp.tar.xz) = 88456c9db81a4e8b9f4085b3a2341418a9dc574b076ad4bb6c23585414f43f13b4f2d80ee729039d1acc96fb62d7c8391d2fe2ecf1f730662cbb818ea91c5753
 Size (tex-piechartmp-19440/piechartmp.tar.xz) = 7196 bytes

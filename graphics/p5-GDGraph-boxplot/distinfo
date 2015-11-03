@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/04/06 19:07:13 chuck Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:12 agc Exp $
 
 SHA1 (GDGraph-boxplot-1.00.tar.gz) = 915417b41fa3687e0a21c7dc7f368fd2050a9b0b
 RMD160 (GDGraph-boxplot-1.00.tar.gz) = acb4e7084417a66294e457462e2813b0fc5001bd
+SHA512 (GDGraph-boxplot-1.00.tar.gz) = f374eab8c0d1bbde419624c747962fd08d339dc4fbe21350d279b6196aca443a3a33f5fd03561520ec264dfa2e24fa073547d3a2c6dbf6de9a0727cd1aa20727
 Size (GDGraph-boxplot-1.00.tar.gz) = 10239 bytes

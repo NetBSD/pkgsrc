@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 13:47:42 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:31 agc Exp $
 
 SHA1 (tex-roex-15878/roex.tar.xz) = 2a1a1c1bb54dd49ab7b34b41b176e2b4d06de34a
 RMD160 (tex-roex-15878/roex.tar.xz) = ef16bad5696409f852bacf3f4f9017f283f6f52e
+SHA512 (tex-roex-15878/roex.tar.xz) = 8465ab4c39379822eb09c4d231905caddccb986b9764f67e0aee76276ffb2ece627f5001b6d8eaa7c405106ece166e1512be7e82ca33d5643d395559fc59826b
 Size (tex-roex-15878/roex.tar.xz) = 19684 bytes

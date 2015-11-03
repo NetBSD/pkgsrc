@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/04/17 07:08:17 wiz Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 21:34:35 agc Exp $
 
 SHA1 (xgc-1.0.5.tar.bz2) = 642f9a286bac77ccb20ee42d03920028f6f5894b
 RMD160 (xgc-1.0.5.tar.bz2) = f34421d234b03e7ddf1d95a2aa12de6fa39e2846
+SHA512 (xgc-1.0.5.tar.bz2) = 5943d13b9e0ed5e1b66d26eaa4b39d16d71f0df23e3ea93bfc397b6303516b161c2b60b24679ed75b640bf2493e66682d35efc7cedd41c5b57caa65f309a8314
 Size (xgc-1.0.5.tar.bz2) = 188307 bytes
