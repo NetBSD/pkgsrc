@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/05/26 22:59:06 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:34:55 agc Exp $
 
 SHA1 (libticonv-1.1.3.tar.bz2) = 54ea00bf8123e1d8ea33d2a1adec3ffaf99317a0
 RMD160 (libticonv-1.1.3.tar.bz2) = 5077248d2e878473d19999f0211b04d8f44a4f80
+SHA512 (libticonv-1.1.3.tar.bz2) = 94c44b7f2ff4e0cadcfaa2ae86563b330e3933d7543c9877c7e3a90de699fb38736fe92dceaf009a7a893d2d178eae4c46d81da4d917e86e247c52996616609a
 Size (libticonv-1.1.3.tar.bz2) = 343870 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/12/08 04:53:28 jnemeth Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:34:56 agc Exp $
 
 SHA1 (op_panel-0.29.tar.gz) = 54ceb13340401cbc1fba91cd9a83f71732a59820
 RMD160 (op_panel-0.29.tar.gz) = d863b601dc8785beb9be0e05db0d54e557452ed1
+SHA512 (op_panel-0.29.tar.gz) = 628aa1ac2541afc9220c77219ef8573592dd04ceeaad1777df4164a008342a6b28cdea629b31ed5f6f0fea397e3ae7d452329470adb024d628a1a1e6fdcc31a8
 Size (op_panel-0.29.tar.gz) = 354416 bytes
