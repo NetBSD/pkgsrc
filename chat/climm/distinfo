@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2011/02/15 10:18:06 adam Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 01:20:18 agc Exp $
 
 SHA1 (climm-0.7.1.tgz) = d4220f6d58714ecd312f9dea6015d9ca8e1661d7
 RMD160 (climm-0.7.1.tgz) = c2780ad206a6a3b0a46e0dcd4e3e9e5a0a5815fd
+SHA512 (climm-0.7.1.tgz) = 8ee8b716229b4181a3b2f7ff3323b4587e80200ca753347f670616da9f25e8fd7cae4da597435d6f71b3a104ad89f3cfe4fd3f9524e259feef220255b6f7d138
 Size (climm-0.7.1.tgz) = 1296303 bytes

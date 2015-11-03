@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2015/02/23 18:18:42 joerg Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 01:20:18 agc Exp $
 
 SHA1 (emech-3.0.2.tar.gz) = f74a07136cf6b672b496564c4838e12246f25c0a
 RMD160 (emech-3.0.2.tar.gz) = 2c4bed99dc200afd3636cae948eea193a85e65c2
+SHA512 (emech-3.0.2.tar.gz) = 09655b29abb9f4071a4ef8a4d4a91c5507e3fe35d1d623cf24b3a2cf790919bc23104a77c5fee598b8f53e2f9d0a79513945c1e884cccad05f5772441bc4388b
 Size (emech-3.0.2.tar.gz) = 229907 bytes
 SHA1 (patch-src_channel.c) = 2499c5ef15d2d05349ae87f540b31c9cc66721cf

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 15:59:13 agc Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 01:20:22 agc Exp $
 
 SHA1 (Net-AIM-1.22.tar.gz) = db7aa8eb0613a788e7f8c303e02ac45015b9c9d4
 RMD160 (Net-AIM-1.22.tar.gz) = 1d8dca3a9033e44ae11be83e1e704f393efead59
+SHA512 (Net-AIM-1.22.tar.gz) = c1acfd91e57c695d092f6389f95f1fe6a3bea82f5e4e701ddc2c031942c4cd523cca35897e39cefbfdcc6abead586327e30f78bd429ff050b4eddde3ff04b7a7
 Size (Net-AIM-1.22.tar.gz) = 21261 bytes

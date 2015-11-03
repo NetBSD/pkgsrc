@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.12 2006/04/03 15:45:49 jmmv Exp $
+$NetBSD: distinfo,v 1.13 2015/11/03 01:20:19 agc Exp $
 
 SHA1 (gossip-0.10.2.tar.bz2) = 4bb8413324d852dc4a97b33f7fed06a8dd09ec39
 RMD160 (gossip-0.10.2.tar.bz2) = 348f3d8da348897c40356fbb49b1b6b6dbc08868
+SHA512 (gossip-0.10.2.tar.bz2) = 921038b9622c40aa68c10de35afc15b9cb54e5d665f762403cf43a4ad34e9190b3be1ee9179aac556ed0e61400dcd49d7de6b17b253b7350f8477815499b7bab
 Size (gossip-0.10.2.tar.bz2) = 1072148 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2008/08/07 09:22:54 he Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 01:20:22 agc Exp $
 
 SHA1 (Net-AOLIM-1.61.tar.gz) = 11b78228a25321b2c687f284f83b7c957e357719
 RMD160 (Net-AOLIM-1.61.tar.gz) = 7a0bc04e1b13a34cc26bd7ad8b8cb3f7bde83ba1
+SHA512 (Net-AOLIM-1.61.tar.gz) = e80be9b0517977cd1d53f8788496a8da7e624b4769a3233753a786d58846a478d6ff7211a34c26ea2f243abf6f1a4a4e6f9b55d567e3d9772b61d0266c9a7c54
 Size (Net-AOLIM-1.61.tar.gz) = 37414 bytes

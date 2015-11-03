@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2011/04/05 18:30:22 drochner Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 01:20:24 agc Exp $
 
 SHA1 (telepathy-farsight-0.0.16.tar.gz) = afef272f032ae40f3de75e5ebc7dbef5bfafdd33
 RMD160 (telepathy-farsight-0.0.16.tar.gz) = 6a97fbeda0049ae3ee6d02f08f3e3749bc5ed391
+SHA512 (telepathy-farsight-0.0.16.tar.gz) = 4b17228b4089c110ca3fb975b6c4ab8f7d3dd43728db51a39816072078d7be7f669ad3d9358da65e9f5c0a9432ef4c580e4414cc9b346b2bbc3030f22a03587e
 Size (telepathy-farsight-0.0.16.tar.gz) = 563212 bytes

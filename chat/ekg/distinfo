@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.22 2014/04/16 21:00:35 joerg Exp $
+$NetBSD: distinfo,v 1.23 2015/11/03 01:20:18 agc Exp $
 
 SHA1 (ekg-1.7.tar.gz) = 3b02d2e9fff440783a202f343bda62dc6ad24815
 RMD160 (ekg-1.7.tar.gz) = 1832b34e5d8081fd8b04c85cd87be8cc07908b05
+SHA512 (ekg-1.7.tar.gz) = 5ddfbe422d0e958d739f9847d949ab6509f3d478973af87de3dba8d9a58cda35c09fd4827a470f3c9cc91aad6d0fbd43dd17fc1363279d3641e99df7e3d0a3fe
 Size (ekg-1.7.tar.gz) = 530314 bytes
 SHA1 (patch-aa) = 8da65a969af2eac2dfcfee1d34e4581094c71adc
 SHA1 (patch-ab) = 26323cd967c5358e3e5bbab5ab61b9d8d0ee7f1e

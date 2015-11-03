@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.14 2009/08/09 13:19:35 tonnerre Exp $
+$NetBSD: distinfo,v 1.15 2015/11/03 01:20:24 agc Exp $
 
 SHA1 (irssi-icb-0.14.tar.gz) = 31d7a5d04a896e0e19db44b4d76b7ac85af1a5d4
 RMD160 (irssi-icb-0.14.tar.gz) = dd104925ece6eabd0112b86b9eb6898846ba8f52
+SHA512 (irssi-icb-0.14.tar.gz) = cbc4328be328375aab9f73bd3100f7a56592022f957c166e0e1a1c4e921f1f7b11fa6d6cb2e8d246056cdfe7377eea2eb52818a62b5c54d66606961e0fafcb65
 Size (irssi-icb-0.14.tar.gz) = 172647 bytes
 SHA1 (silc-client-1.1.8.tar.bz2) = 5936ab682e746ae413f938ce9c9b72215d6524c0
 RMD160 (silc-client-1.1.8.tar.bz2) = a010384b5e498a62cc6cd69e97602f3118b64d2f
+SHA512 (silc-client-1.1.8.tar.bz2) = 3b9850557c7f82679a686948f7487ca7bfa53bca320ed798f83f172a1d4eff418c15bcda164bb9ade7051a5e2b19987f0a2145e7e860d0f7f63cd1032206e67d
 Size (silc-client-1.1.8.tar.bz2) = 1532816 bytes
 SHA1 (patch-aa) = 007777f25399402b86a3a54dd5fc8e462c7c7579
 SHA1 (patch-ab) = e76c82af921884467a53a3a106e6e8761b0d5f8b

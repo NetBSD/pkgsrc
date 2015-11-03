@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2010/12/28 08:25:20 obache Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 01:20:25 agc Exp $
 
 SHA1 (tirc-1.2.tar.gz) = eae51ae46282943a3c1a3aa134aaec9455e0f65b
 RMD160 (tirc-1.2.tar.gz) = 31ad3e1796e28a5cbadb1ff30c4753a72775968e
+SHA512 (tirc-1.2.tar.gz) = 2cb4280707c06e16e7f79ca68c39144aa1e72c8076c2299e7658d9e897a9afefc5101961ad7ced240488a3a014ce5886cbcbb7b282b28adef0553585d49c58a2
 Size (tirc-1.2.tar.gz) = 300089 bytes
 SHA1 (patch-aa) = e47e007f827c3453e9a3944ede6b2aba4ae6b9ed
 SHA1 (patch-ab) = 012837ad61d2790fb00f8c621da10e912029bb86

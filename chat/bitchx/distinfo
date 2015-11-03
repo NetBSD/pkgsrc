@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.20 2015/09/27 19:06:23 kamil Exp $
+$NetBSD: distinfo,v 1.21 2015/11/03 01:20:17 agc Exp $
 
 SHA1 (bitchx-1.2.1.tar.gz) = 48ca956d43d6d62e32040bddfae49e88c1188927
 RMD160 (bitchx-1.2.1.tar.gz) = 0bf85169f26297fe517b2886f8b9693c360f32f7
+SHA512 (bitchx-1.2.1.tar.gz) = d5e0a151c69a85cca2544db8478af9fbd8fca17f882993fab7f898a95221087bf6219ad2144caedecb5bc508dfa02fa724737c615fbda47aeb8df8298cdfd645
 Size (bitchx-1.2.1.tar.gz) = 2549182 bytes
 SHA1 (patch-configure) = fa29df53d26437edf98901fd1a192978cda2e685
