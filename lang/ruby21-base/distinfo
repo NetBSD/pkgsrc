@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.20 2015/10/14 18:38:00 sevan Exp $
+$NetBSD: distinfo,v 1.21 2015/11/03 22:50:43 agc Exp $
 
 SHA1 (ruby-2.1.7.tar.bz2) = 9c2d3c73b3d2aed2c8f018d3a27e970846dcf143
 RMD160 (ruby-2.1.7.tar.bz2) = 1fb05a54d255cf3ef3b9933412e935b780ff3258
+SHA512 (ruby-2.1.7.tar.bz2) = f610d2dd6a93f0a5e84e04ddedf847bbcea5dd3289b3164cdf60be64f67a80dfd5f9836ea5d169970cd0ce24a7e05ea6190699706567cb0d5cf450de6a70e445
 Size (ruby-2.1.7.tar.bz2) = 12019706 bytes
 SHA1 (patch-configure) = 7f1f6d2dc7d32c96d6ae65562a9bc6d50d2b79dd
 SHA1 (patch-ext_dbm_extconf.rb) = 08520edd956e17cb6cc80b6ee2c77af77a834bd2

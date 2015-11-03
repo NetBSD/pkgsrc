@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.4 2013/06/30 03:14:43 rodent Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 22:50:31 agc Exp $
 
 SHA1 (Cg-3.1_April2012_x86.tgz) = b0cdbcacd85716a80a90b7c65b817b6931df9d5b
 RMD160 (Cg-3.1_April2012_x86.tgz) = 43c0834948b48a18ca6511b59bc98e82c0e53bc4
+SHA512 (Cg-3.1_April2012_x86.tgz) = 7b2addad157e151eb42b320aea31ccddfd53ec5640cb97bc86a3d461c1b08a2dff280bfc3f7859d124c311e1710e39d40405c387e5724ebc82d95303b250837a
 Size (Cg-3.1_April2012_x86.tgz) = 23332348 bytes
 SHA1 (Cg-3.1_April2012_x86_64.tgz) = 7e3d70fcb2246a577654e6b7fb141db907560c53
 RMD160 (Cg-3.1_April2012_x86_64.tgz) = eb2dbe1883297efa6ab1dc7f091b5a8d5dbbfdba
+SHA512 (Cg-3.1_April2012_x86_64.tgz) = 591b51195193e7e3bbb9f1c2579336d24a179b0a88b955a01f4661bda55543fbccd73cac53033912f2eea8a1068e4c1394c6d286f195963cfb33a0d8b4428e27
 Size (Cg-3.1_April2012_x86_64.tgz) = 24829131 bytes
