@@ -1,12 +1,20 @@
-$NetBSD: patch-Makefile,v 1.4 2014/04/29 07:07:26 wiz Exp $
+$NetBSD: patch-Makefile,v 1.5 2015/11/03 10:48:55 jperkin Exp $
 
 * Fix build on systems lacking strverscmp.
 * Use CFLAGS that were passed in
 * Fix DESTDIR.
+* Fix PKGMANDIR.
 
 --- Makefile.orig	2014-04-18 17:35:39.000000000 +0000
 +++ Makefile
-@@ -30,14 +30,14 @@ OBJS=tree.o unix.o html.o xml.o json.o h
+@@ -24,20 +24,20 @@ VERSION=1.7.0
+ TREE_DEST=tree
+ BINDIR=${prefix}/bin
+ MAN=tree.1
+-MANDIR=${prefix}/man/man1
++MANDIR=${prefix}/${MANSUBDIR}/man1
+ OBJS=tree.o unix.o html.o xml.o json.o hash.o color.o
+ 
  # Uncomment options below for your particular OS:
  
  # Linux defaults:
