@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2006/02/14 20:58:18 adam Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 00:56:26 agc Exp $
 
 SHA1 (rzip-2.1.tar.gz) = efeafc7a5bdd7daa0cea8d797ff21aa28bdfc8d9
 RMD160 (rzip-2.1.tar.gz) = 7ef5299cd526c8c49a779e050ad515a53180c1c5
+SHA512 (rzip-2.1.tar.gz) = 06ed760ba2b7f09781a2e9312b645d41c145f96e3ee55ddf573714493e92466366ec6394267e5e06b0d8c42dcb67e1ae99dafa417a84737ce2b4a650a9059a6f
 Size (rzip-2.1.tar.gz) = 46785 bytes
 SHA1 (patch-aa) = 10c4726d04ef8cea8f1e0e009d19db3178b3caa2
 SHA1 (patch-ab) = 0e68db21e8d605c6ba52cf2e6d8b70805a2635ab

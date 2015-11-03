@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2012/01/29 08:26:32 sbd Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 00:56:22 agc Exp $
 
 SHA1 (lbrate-1.1.tar.gz) = 8731283e79fa6c7a73ebd6c821b42854cb864ea9
 RMD160 (lbrate-1.1.tar.gz) = ccf0d889eb597d3beecceb40349ddbf00f0273c8
+SHA512 (lbrate-1.1.tar.gz) = a14ab609fafa2aa8f751140774ad817edf60c7ccc8d5e55d4446bde8a8cc62a33d6f4b8cd308c22e41642ff3f79550d0087f1294f1016d5ca1bb99757d9a76de
 Size (lbrate-1.1.tar.gz) = 29907 bytes
 SHA1 (patch-aa) = 2a20b1d56a266316ba4968a40f3bc6bed6deaead
 SHA1 (patch-ab) = 94127154f052908a99fb7a6a218984637850b93d

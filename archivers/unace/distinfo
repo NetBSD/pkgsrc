@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2005/03/01 14:53:41 wiz Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 00:56:26 agc Exp $
 
 SHA1 (unace-1.2b.tar.gz) = 7a0cc01105551a84f15897b75749dd9bb2a26184
 RMD160 (unace-1.2b.tar.gz) = 32d8b4fd9a028b333b51436dd378ff26199ee4bf
+SHA512 (unace-1.2b.tar.gz) = 5d0a610260ee6362a88f4b716d0580165fb1fbbbcfcd902a0a7033f6861d076e1d35a49528b3d47cc0dc8b8015ad833266b7f3fa0d1a828ed5633ed20647bdd5
 Size (unace-1.2b.tar.gz) = 43423 bytes
 SHA1 (patch-aa) = bba4226db32be4f0e2217aad6ae38dabf9038ed1
 SHA1 (patch-ab) = f450aa34f650525ae36d90609393990ed650766a

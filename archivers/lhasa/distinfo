@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/08/26 21:25:31 shattered Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 00:56:22 agc Exp $
 
 SHA1 (lhasa-0.3.0.tar.gz) = 044e9bf2bcef5664c1e13ecf440c4a4829059f0d
 RMD160 (lhasa-0.3.0.tar.gz) = 55d3dc69186fdc138279106f94cfb424559fad84
+SHA512 (lhasa-0.3.0.tar.gz) = 1a7d8f69866d8345418d6a75c6ccdf359975094f76516d61c84ec4970645500abe4f186a0511ca31b2621849990b39ba9441c0085b991939139afbf125f9e745
 Size (lhasa-0.3.0.tar.gz) = 2921183 bytes

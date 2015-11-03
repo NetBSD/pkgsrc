@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2008/05/28 05:13:32 dsainty Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 00:56:26 agc Exp $
 
 SHA1 (sarab-0.2.4.tar.gz) = a91d545ec4af9d56c23edf92851eb4f9231f5100
 RMD160 (sarab-0.2.4.tar.gz) = b7c63ba3cac60de2f5ca82dd5e2b35c5b9800939
+SHA512 (sarab-0.2.4.tar.gz) = d02bee1d009d50d1ef627132eef294ab98f8e70cbdc7c8a025ed67c74ec431330c6eeceb5453bc27e2af9e9ccc5c080e5a07e732ea5f3c68a6362e7f29d335a5
 Size (sarab-0.2.4.tar.gz) = 23625 bytes

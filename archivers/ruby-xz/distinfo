@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2015/03/01 12:58:16 taca Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 00:56:25 agc Exp $
 
 SHA1 (ruby-xz-0.2.1.gem) = c9fa108b21a5f5fb23ff5185d827e1ef5bdd6b78
 RMD160 (ruby-xz-0.2.1.gem) = 94b9d4f0636585ec90c7ff4a092ed2306addb651
+SHA512 (ruby-xz-0.2.1.gem) = ac3aff70c0bfd445ce1f41279d2d438eee21b9fbabed0a240bbe5bd80d393d6bebe8bbd0f95d6e68d32bd0d15d6dbe006106f0fecff685945038756b7fb2b298
 Size (ruby-xz-0.2.1.gem) = 16896 bytes
 SHA1 (patch-lib_xz_lib__lzma.rb) = f0ab463ffab401a935551b560af28e26bff8d4eb

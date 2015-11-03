@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.9 2011/07/21 14:31:52 joerg Exp $
+$NetBSD: distinfo,v 1.10 2015/11/03 00:56:22 agc Exp $
 
 SHA1 (libcomprex-0.3.3.tar.gz) = a1ccd214a67aea3863dda866391921b94f162dea
 RMD160 (libcomprex-0.3.3.tar.gz) = 1a4420ce23d88108e6678f6b3bfddad522dd159b
+SHA512 (libcomprex-0.3.3.tar.gz) = aecb7d70899e46e31a9a1f89a380f1a983c9bb1bf747548b7a326fd3dbdb18ce0a2e3ecc47213f6d907cef5d0733ceb8858e157d1fdbfcf5375d0522ebe50bf2
 Size (libcomprex-0.3.3.tar.gz) = 685822 bytes
 SHA1 (patch-aa) = 967fdbf14cf06ff1f483df16bfe45226a8b64e5c
 SHA1 (patch-ab) = f529232ae7bb809fda655735c15803a0913304c8

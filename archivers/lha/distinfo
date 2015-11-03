@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.10 2010/01/09 19:10:46 dholland Exp $
+$NetBSD: distinfo,v 1.11 2015/11/03 00:56:22 agc Exp $
 
 SHA1 (lha-114i.tar.gz) = 79e35271f2cf783f946db3f22e304fef72dbac99
 RMD160 (lha-114i.tar.gz) = c561e0758b467a61f45d287582effc53df29f01d
+SHA512 (lha-114i.tar.gz) = fe91184a32800306277c74ce7bf7d3edacb3a93da319bd59fc25023fb5bab9e3169bca63d8b49a05fac68900cc0eb63d0f1b4f0234522a5ef64f90f407488f07
 Size (lha-114i.tar.gz) = 64608 bytes
 SHA1 (patch-aa) = 945856fde42c3e98bb2b00f8633babc2daf0437c
 SHA1 (patch-ab) = 4b5cce4fd83a5a65cb152183d23f430da1e5aa21

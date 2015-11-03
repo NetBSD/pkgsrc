@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.15 2015/10/01 05:11:36 adam Exp $
+$NetBSD: distinfo,v 1.16 2015/11/03 00:56:27 agc Exp $
 
 SHA1 (xz-5.2.2.tar.bz2) = 3cbd8d42117b6958a1db72acbed677f9b11d69a6
 RMD160 (xz-5.2.2.tar.bz2) = 6c376338dbff31950603738b8ed5ba129b9dcf7c
+SHA512 (xz-5.2.2.tar.bz2) = 83c50b8949b7215ab650fc9bf335e684d4bb2738357e1d002f31cfe4c77f96072e45767a0126016363e0272db880c4a5bd35b280e6f5074a466882137a477c79
 Size (xz-5.2.2.tar.bz2) = 1192692 bytes
 SHA1 (patch-src_xz_Makefile.in) = 3f76a5930228cee24bc0e53425fd8c930c90334d
