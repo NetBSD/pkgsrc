@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/01/31 15:47:58 reed Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:33:56 agc Exp $
 
 SHA1 (ewipe-1.2.0.tar.gz) = 2fb66edc94276731a64946b31855235b697cf6f5
 RMD160 (ewipe-1.2.0.tar.gz) = 497899af4d2d94bfbc7f7f5221a4fb2b163e9529
+SHA512 (ewipe-1.2.0.tar.gz) = 24a033299c4c0e99279d5f61922af52d5572ebccfc42af02b4637a1416d30a4174038fca0768ddea4852ccc35fbef8d698c457cab6ffa63d39d69bbecd2285a6
 Size (ewipe-1.2.0.tar.gz) = 124145 bytes

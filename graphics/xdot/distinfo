@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/01/05 22:12:33 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:35 agc Exp $
 
 SHA1 (xdot-20121124/xdot.py) = c6018a21be91fa59a2673d102f859c0428eb9e7a
 RMD160 (xdot-20121124/xdot.py) = 2e1284be5da72a5eed179d9d4305cb17e826cfa7
+SHA512 (xdot-20121124/xdot.py) = f019d5741d0687a4efcb38fd318b6218b631031b57eff3492c22c56796d3014c05fc3e13df2f422b3cd90c99d7353f32083b6422ff1d32566433cb17937fda43
 Size (xdot-20121124/xdot.py) = 91075 bytes

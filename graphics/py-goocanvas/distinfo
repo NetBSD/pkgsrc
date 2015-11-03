@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2011/04/15 17:14:52 drochner Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 21:34:16 agc Exp $
 
 SHA1 (pygoocanvas-0.14.1.tar.gz) = ea1e10a24ef15a1d3880552fff6352d8b0621ef5
 RMD160 (pygoocanvas-0.14.1.tar.gz) = 162628947fd6a0d630bd20f9dec570c50fab2d23
+SHA512 (pygoocanvas-0.14.1.tar.gz) = 267289dd7e8e6b6ab3871cd7dd680473ca3ad0979bef2d65109d84345fd29236866b197bbf99c3c1f4aff028f4a27bad13b5d407dfda739690011256484718ed
 Size (pygoocanvas-0.14.1.tar.gz) = 421509 bytes
 SHA1 (patch-aa) = 707d6753524c543bd65de0375961b7fd1d842955

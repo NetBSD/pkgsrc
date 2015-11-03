@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 13:47:41 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:26 agc Exp $
 
 SHA1 (tex-mp3d-29349/mp3d.doc.tar.xz) = 1fabb8764b66e55756dd7cb0d4a330dcb48ec94f
 RMD160 (tex-mp3d-29349/mp3d.doc.tar.xz) = 490160b177b527680dde73eb1dc038794d50ea66
+SHA512 (tex-mp3d-29349/mp3d.doc.tar.xz) = d1264e5802ef0bef32dd15b96ca84e13eb0e18ac9f884bac914ff37b2b91e6e55160a64a946600f91db95718212966ffbb3c8666fdc0a5e92d966a89aaebc6a9
 Size (tex-mp3d-29349/mp3d.doc.tar.xz) = 728736 bytes

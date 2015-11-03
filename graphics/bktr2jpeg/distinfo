@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2006/04/21 08:26:18 joerg Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 21:33:53 agc Exp $
 
 SHA1 (bktr2jpeg-1.0.tar.gz) = 77c23db1826936fc1dc920ea7a3c8ae5800655a1
 RMD160 (bktr2jpeg-1.0.tar.gz) = 99593aeaf12c56c07cee74a8f24a0d3f65b9f765
+SHA512 (bktr2jpeg-1.0.tar.gz) = 3e4fafa2db516395727f78b9e18c247f4a15554e1aa55853c1b6b8e8fc2e5b786c1feac07fd93a634e2634a838081b7d9a67bff85bd9181955b655d8d27fd4d0
 Size (bktr2jpeg-1.0.tar.gz) = 4716 bytes
 SHA1 (patch-aa) = 822c9035b160432821e8b2d2b68d9b1c0456eea2
 SHA1 (patch-ab) = 625b8c132f25b27ab7a0824b2ede94c6bca63737

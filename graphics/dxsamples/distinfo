@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2011/03/31 08:07:01 asau Exp $
+$NetBSD: distinfo,v 1.9 2015/11/03 21:33:55 agc Exp $
 
 SHA1 (dxsamples-4.4.0.tar.gz) = 24a8981312c3a2564623acb85538d9935e5c2469
 RMD160 (dxsamples-4.4.0.tar.gz) = 3d5f09c48452374ec25099bd7a894859fe34fba9
+SHA512 (dxsamples-4.4.0.tar.gz) = ae740be888728750de2cf21e94094a4aa01adec8ea0cfe937f03a67803ad7cb0d92968c8d4325e22022c698f871d4af45df02d3b8e8639434a1001dd46e0b311
 Size (dxsamples-4.4.0.tar.gz) = 7791659 bytes
 SHA1 (patch-ab) = 49132e01960ceb7cf2a5f1a74a98e78a2b18b938
 SHA1 (patch-programs_2D__DATA_Makefile.in) = de1cebfdd03c7f39546ef97ff0b7f503c6d7276a

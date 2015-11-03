@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2010/04/13 16:45:37 drochner Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 21:34:07 agc Exp $
 
 SHA1 (libart_lgpl-2.3.21.tar.bz2) = dbac185c65696381ef188de1f98b348b530e22f9
 RMD160 (libart_lgpl-2.3.21.tar.bz2) = ed40181ffc9d6646630c1db64532217acf7dd036
+SHA512 (libart_lgpl-2.3.21.tar.bz2) = 8a632a6a4da59e5e8c02ec2f5a57e36d182b325b46513765425e5f171ff9ae326af1b133725beba28f7e76654309e001aee9bace727b5b4c8589405256a3c020
 Size (libart_lgpl-2.3.21.tar.bz2) = 329102 bytes

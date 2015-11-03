@@ -1,16 +1,20 @@
-$NetBSD: distinfo,v 1.13 2014/09/08 21:24:45 wiz Exp $
+$NetBSD: distinfo,v 1.14 2015/11/03 21:34:34 agc Exp $
 
 SHA1 (urt-3.1b-3.1b1.patch) = 27aefd80b480af298fe4f9542a2efbddba8a174b
 RMD160 (urt-3.1b-3.1b1.patch) = 1eca13b44326f632c98312d364434d785751609a
+SHA512 (urt-3.1b-3.1b1.patch) = a8bfe266b9c346ecacbed94391ec713b2ca754c1c1a24beb5852d11f0a1927b8e68469039ff3ae9ebd3874477d1ade3f6194591c58d3e62d949e6737d17f739d
 Size (urt-3.1b-3.1b1.patch) = 18264 bytes
 SHA1 (urt-3.1b.tar.Z) = 370b19c9e7019a7258754e7494b7ae2d7fe138ac
 RMD160 (urt-3.1b.tar.Z) = fd99f3a4ec7cb6c9195752e227ad95428e331bba
+SHA512 (urt-3.1b.tar.Z) = 6c9070cd106f1d696d22f862cc1c4e10325fafc7bae51e8bb1fb98f6bf8babe21a133e21b3acc0c11cf1b28a23123c8ee7bb064c9d86301b14a1c217fbe1a12d
 Size (urt-3.1b.tar.Z) = 1016405 bytes
 SHA1 (urt-doc.tar.Z) = 1778255cc688693c3dff1f679386692b665733f5
 RMD160 (urt-doc.tar.Z) = b68100c8837e7464bd2db3eecd3039c7515ab371
+SHA512 (urt-doc.tar.Z) = a059428dc091a19f65bacbe06ae499ef3ee75085f250e25919e87480ebfce57b04fe052bdd1d26776cad255ea45e45fc86cde0b5ebcf21acc11ba7f70ebc0a04
 Size (urt-doc.tar.Z) = 491431 bytes
 SHA1 (urt-img.tar.Z) = 3ffa59524037196461c16180c45261e1b4f8ac57
 RMD160 (urt-img.tar.Z) = 22c7bf9ea1cf1d9d2441dc85901b6e90f07cc34d
+SHA512 (urt-img.tar.Z) = da237c98fbeeadea1b0877e284eb66a290bdb5f43c624af07972b00aff68275dff508bd5fed69a5c4e31e4112672da3b7ed30834b84f8dd065e1805f9eb6b8ca
 Size (urt-img.tar.Z) = 1740307 bytes
 SHA1 (patch-aa) = fe589f4005d566b63e3b1d408e03ee3c58a3b6f7
 SHA1 (patch-ab) = 8f8e50f6ccdd80afaa034af998e47284e7788398

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/12/04 18:34:47 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:31 agc Exp $
 
 SHA1 (tex-pstools-29764/pstools.tar.xz) = 238d7a5ea4046af4054cb9c32a500e4eef46b4b7
 RMD160 (tex-pstools-29764/pstools.tar.xz) = 08faaf8c4bf796bfb4ec06c48243cc07c3b68b4f
+SHA512 (tex-pstools-29764/pstools.tar.xz) = 6dea3a38318458e46ec67d3b8ce30fb4bd1368a284df40001fdf4f16076696af0e76c9827b8ac14ed4afba7d7a4e1922963ab0fb5dcf270a087b05ffa6bd044d
 Size (tex-pstools-29764/pstools.tar.xz) = 11524 bytes

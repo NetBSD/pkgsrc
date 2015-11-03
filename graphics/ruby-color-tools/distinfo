@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/09/12 01:41:21 taca Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:19 agc Exp $
 
 SHA1 (color-tools-1.3.0.gem) = 1d775c4b99462e5a147b56acf05eb3670bb773ec
 RMD160 (color-tools-1.3.0.gem) = 6d41b5b0b0e3fb8a199f48ded365f0716edf991b
+SHA512 (color-tools-1.3.0.gem) = 8798527f2592646c80b16798e144deca4b933153b644b1c58b728e095203d72f7343e3b1f7c92565cd147dd68da57d8944527488ea4e72074ea0133ffe3f61c4
 Size (color-tools-1.3.0.gem) = 31232 bytes

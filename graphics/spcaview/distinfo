@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.5 2007/06/02 12:47:51 hamajima Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 21:34:21 agc Exp $
 
 SHA1 (spca5xx-20060402.tar.gz) = 630378040d386aa5d11836d3a89a8b0c8cb78e2a
 RMD160 (spca5xx-20060402.tar.gz) = 8b18c6e6ce4b394ce657f8abc32a202d66736b3e
+SHA512 (spca5xx-20060402.tar.gz) = ec3f41df103d8040467f46877c5c9a243c95673deb4b93303824f1c55482a330271de4ba3a6df37151e2b6273c514c57d821681f4c13fe80a992111c9ff4300d
 Size (spca5xx-20060402.tar.gz) = 195622 bytes
 SHA1 (spca5xx-bsd-0.6b.patch.gz) = 99466be863474d4f410e4b751469327ecf03df6b
 RMD160 (spca5xx-bsd-0.6b.patch.gz) = 9f97dbc5e5141b6c7fd0ee6cf1049fb06bda1cce
+SHA512 (spca5xx-bsd-0.6b.patch.gz) = 9c091455ef1c49a3963955db97be732d01df7f9f0ca749dcfb766f7efe6113d60bec238f1862ded466e228299deb0136d3fd4e679d8c6843eddf3be1591f5dc9
 Size (spca5xx-bsd-0.6b.patch.gz) = 31635 bytes
 SHA1 (patch-aa) = ca5a91f1fe83ca07d6b0a4e3b49e7b73a3c80254
 SHA1 (patch-ab) = db1b0c8c573fec4ca176cddb8497262f53153301

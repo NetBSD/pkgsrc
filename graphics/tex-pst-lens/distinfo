@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/03/18 21:38:53 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:29 agc Exp $
 
 SHA1 (tex-pst-lens-15878/pst-lens.tar.xz) = 951da0df19ecd0a646a6ba348ca14da879260612
 RMD160 (tex-pst-lens-15878/pst-lens.tar.xz) = 6390bdd1dac3d1365ae669ec9dd6edb0dbd7be89
+SHA512 (tex-pst-lens-15878/pst-lens.tar.xz) = 3c23dede50c9262003063de39e7725bc27c36fba3a11f2ba371adfdddde11fe64e4e2fb8843d082949538978f84f8e7382b3cfb30319c1c3fd20597db2d6cf0a
 Size (tex-pst-lens-15878/pst-lens.tar.xz) = 2052 bytes

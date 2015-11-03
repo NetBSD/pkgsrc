@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/06/15 09:57:21 markd Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 21:33:55 agc Exp $
 
 SHA1 (dvipng-1.15.tar.gz) = 05c3152af62dc178267efbbe5a2ebe9aba9b3078
 RMD160 (dvipng-1.15.tar.gz) = 0382c1b2fecd1658b3e8313d10d396362bd73df2
+SHA512 (dvipng-1.15.tar.gz) = 54647526a9d3a26d2ba9c7ef17f285a426d9df06ffb1d5336a1da95cbf24cd17505ba7f6b1ffd14a0beb7f91ab3e519612ce3d3ea3f30c278733127dfbf07c5c
 Size (dvipng-1.15.tar.gz) = 171529 bytes

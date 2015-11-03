@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2012/03/01 19:44:42 hans Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 21:33:53 agc Exp $
 
 SHA1 (camediaplay-20010211.tar.gz) = d6809c9d0e1be692a9a1e468ee759cc9ceb5b276
 RMD160 (camediaplay-20010211.tar.gz) = 17fcd6f1c23b43169ed8de0c726c951cea0fcd80
+SHA512 (camediaplay-20010211.tar.gz) = 4c5c94db20ec295443277bb597ccd782b8f1b10c59a4b40558fe38bd99a7652527984366c6daaf64cbe1d8309fba5f2e272753e82cbc156c11d707d50290e728
 Size (camediaplay-20010211.tar.gz) = 48193 bytes
 SHA1 (patch-aa) = a722870475d6c3fe43e2f8adb529e665e654cad5

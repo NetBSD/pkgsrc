@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/03/18 21:38:45 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:29 agc Exp $
 
 SHA1 (tex-pst-grad-15878/pst-grad.tar.xz) = de04599e3f03617f0e28928702015c201f53ab96
 RMD160 (tex-pst-grad-15878/pst-grad.tar.xz) = 478bdb4db928b8b3ae93bc64f67d783540636874
+SHA512 (tex-pst-grad-15878/pst-grad.tar.xz) = 9058f2aa1daf6ee27fe6d0a624f364a0b3c96c2a88a49bff5e913232d3cf9c4b1a51979bc44913673aea7327552d545fce308d0eec7842b2572b6307baa17e57
 Size (tex-pst-grad-15878/pst-grad.tar.xz) = 3804 bytes

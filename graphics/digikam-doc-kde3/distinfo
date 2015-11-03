@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/02/15 14:18:08 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:33:55 agc Exp $
 
 SHA1 (digikam-doc-0.9.5.tar.bz2) = 42b9a1d6240f87d969fe371f0d66b76cf3259e68
 RMD160 (digikam-doc-0.9.5.tar.bz2) = 791b72883fc7043e8130bb827dae943e208840cb
+SHA512 (digikam-doc-0.9.5.tar.bz2) = 64325bdf99e56021e253d16c11a07b5eccb309242be7057d570f5df5da3cf355918b151db9d539310b2393b2481eb4ec158676bf3a8acdc48f3a7daf6abb9df6
 Size (digikam-doc-0.9.5.tar.bz2) = 55368251 bytes
 SHA1 (patch-aa) = becc41a1f1f8757b8e8afc769d26123e49007020

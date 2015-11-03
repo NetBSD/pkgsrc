@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2012/10/16 22:07:28 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:22 agc Exp $
 
 SHA1 (tex-auto-pst-pdf-23723/auto-pst-pdf.tar.xz) = e7c3b000fe039c6b03de0bbf2f99382c31d0057f
 RMD160 (tex-auto-pst-pdf-23723/auto-pst-pdf.tar.xz) = c459da572fc3b03e7832c74770b3dfb9fd34c1c2
+SHA512 (tex-auto-pst-pdf-23723/auto-pst-pdf.tar.xz) = 804c8d72e4e59511b6ba7b7f39652d90651996157278f0edbbb557a33fc506d3508cde0e7b97d019dd8ce9ba6feb6bf014664e1a4f534881e3ba7709b3733c47
 Size (tex-auto-pst-pdf-23723/auto-pst-pdf.tar.xz) = 2584 bytes

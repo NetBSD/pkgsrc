@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 13:47:39 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:24 agc Exp $
 
 SHA1 (tex-expressg-29349/expressg.doc.tar.xz) = 27ba63ebbb21cf72e2bf9053c45c4e582045cac9
 RMD160 (tex-expressg-29349/expressg.doc.tar.xz) = 18ef560a43de9ec69fced0b7674a431da456fbe0
+SHA512 (tex-expressg-29349/expressg.doc.tar.xz) = d0182bc9c02856e4de5f4fad727a61d6002c2b8bad2825e03745da2dbe03d6b62d453886fc1cb80265d267aabe51804babf4d73fa46dab88c5260fcd0fa40ba8
 Size (tex-expressg-29349/expressg.doc.tar.xz) = 467740 bytes

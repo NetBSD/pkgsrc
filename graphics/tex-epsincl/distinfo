@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 13:47:38 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:23 agc Exp $
 
 SHA1 (tex-epsincl-29349/epsincl.tar.xz) = 0886160c90c7270c9ffa334bc4fc60df7f539552
 RMD160 (tex-epsincl-29349/epsincl.tar.xz) = ad362fcb318cc57bf63765d36716d84ec4539ccf
+SHA512 (tex-epsincl-29349/epsincl.tar.xz) = 8e949193bb623514dfe7fe6f7c19e1536c52e69724fd8af20884d2743009704571c4661472e81051be7cb19882ef31132c9e8638a64e69b9ac32aa73a89a8ecc
 Size (tex-epsincl-29349/epsincl.tar.xz) = 1920 bytes

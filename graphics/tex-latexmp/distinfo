@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 13:47:40 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:25 agc Exp $
 
 SHA1 (tex-latexmp-15878/latexmp.tar.xz) = 59c841584ddbd0416e7950375b2765ed4e213f21
 RMD160 (tex-latexmp-15878/latexmp.tar.xz) = 9f838b4b309bc7cef80426b83a41865f14b6d1a8
+SHA512 (tex-latexmp-15878/latexmp.tar.xz) = 089752c54685b1f08e14272701cc3c337648f92cf16f5233951ee603508ac389577f59d1b8a3b45e1f6978fbd56895aa2bb465d50bfc5af8a1f2b072a69dbe3d
 Size (tex-latexmp-15878/latexmp.tar.xz) = 5276 bytes

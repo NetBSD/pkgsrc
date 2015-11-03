@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/03/18 21:39:44 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:31 agc Exp $
 
 SHA1 (tex-pst-vue3d-15878/pst-vue3d.tar.xz) = e10d839a9129c47830a88a8124b9e8a1e9ae62fc
 RMD160 (tex-pst-vue3d-15878/pst-vue3d.tar.xz) = 52f304ede7ade4d602658d833595da04632295d5
+SHA512 (tex-pst-vue3d-15878/pst-vue3d.tar.xz) = 52fdf3809fceafaeb8261885be03bf18dcb0f1f5002f6d53784855d5be1fdc33b5f7a6edc23bc84f8d8fc0cfa8c8fdf225a03686f493681993c31e89886bff05
 Size (tex-pst-vue3d-15878/pst-vue3d.tar.xz) = 13108 bytes

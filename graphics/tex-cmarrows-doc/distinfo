@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 13:47:38 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:22 agc Exp $
 
 SHA1 (tex-cmarrows-24378/cmarrows.doc.tar.xz) = 88f356b174567ee1096f334dbe128eeadb633a39
 RMD160 (tex-cmarrows-24378/cmarrows.doc.tar.xz) = bf6fd18472bb8a8438434347ded7380d0809f39a
+SHA512 (tex-cmarrows-24378/cmarrows.doc.tar.xz) = 4a8eefcb422203993f1c0ce5129e8401295e7ae51ae5e69dc1372d5679ef364adae7333cff198aa78f2e8bd7accf84903188d99814da3c7742eedb6e9df40a55
 Size (tex-cmarrows-24378/cmarrows.doc.tar.xz) = 47780 bytes

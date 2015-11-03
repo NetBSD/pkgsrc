@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 13:47:42 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:32 agc Exp $
 
 SHA1 (tex-splines-15878/splines.doc.tar.xz) = e7a9ae29c2f2c6facb9bedf15525b5211c7f85a4
 RMD160 (tex-splines-15878/splines.doc.tar.xz) = 81484ee732840acc4aa465cfd7936009fb4fe898
+SHA512 (tex-splines-15878/splines.doc.tar.xz) = b116166491371b969bb24e80043da35ebf0b2fbd3131dfededb1e38fd2650ec2dfde0c03b91c94335dc659f719c2b06dd092a74053cc522e36753b266fdc9f65
 Size (tex-splines-15878/splines.doc.tar.xz) = 87908 bytes

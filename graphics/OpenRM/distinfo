@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.10 2011/08/18 13:00:26 joerg Exp $
+$NetBSD: distinfo,v 1.11 2015/11/03 21:33:51 agc Exp $
 
 SHA1 (openrm-devel-1.5.2.tar.gz) = 8d68099b779ea0e45361f7270ade0646e2d1e635
 RMD160 (openrm-devel-1.5.2.tar.gz) = 3e0d3492b017aea2abdd3cbea0a3edd92d302023
+SHA512 (openrm-devel-1.5.2.tar.gz) = 73f721ba27d9412e37b801bfe7573abfa032dab668a7c641045f707ce05530dbc20d24bbb88d54f233e8043a714612f2fca9529ea8eb887c21b89a75bf1acc64
 Size (openrm-devel-1.5.2.tar.gz) = 633707 bytes
 SHA1 (patch-aa) = 45caa6f9d0117e98f707ba7c7e071e1f9dae4d1f
 SHA1 (patch-ae) = 4ed639a1d2a91c9b2105308af5ac9a811d7e1596

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 13:47:39 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:24 agc Exp $
 
 SHA1 (tex-garrigues-15878/garrigues.doc.tar.xz) = ada423e3f57675820a00b8cdee5a1383c5880f6d
 RMD160 (tex-garrigues-15878/garrigues.doc.tar.xz) = 19e84cdcc9f2101c0098665cceda6e1191e170fa
+SHA512 (tex-garrigues-15878/garrigues.doc.tar.xz) = dbd0c38181443106a94e814d1acc41a1e16911a91602f0ff22b27e111ab98392eb1a1c6c2d5b1f3c1adeff6d19268542ed993541391d9b2cdd55a77bf6cb1975
 Size (tex-garrigues-15878/garrigues.doc.tar.xz) = 536 bytes

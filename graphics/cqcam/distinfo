@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.12 2009/07/20 03:47:20 hasso Exp $
+$NetBSD: distinfo,v 1.13 2015/11/03 21:33:55 agc Exp $
 
 SHA1 (cqcam-0.91.tar.gz) = 28c78c9a24ae01b5a18d81e334f8c0dcab2ebe78
 RMD160 (cqcam-0.91.tar.gz) = 4ef62b01985f834063a0e0941391b8d06428af7e
+SHA512 (cqcam-0.91.tar.gz) = 766f5834f23eb57e9c7160f1290898863a1806e87af23bd77fd8df373c8fb8f658fbea4960d2ef5707cc185db8984b3f405167cf7f4d3e0a0c9e57d25633168f
 Size (cqcam-0.91.tar.gz) = 121252 bytes
 SHA1 (patch-aa) = 9602a446771eb577e82ef151532b6e189b46a907
 SHA1 (patch-ab) = ad64e221ee08994feb430e833c368226d26b9b56

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 13:47:39 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:24 agc Exp $
 
 SHA1 (tex-gmp-21691/gmp.tar.xz) = 1f417d4fffbd030a256c23cc3ba91a5f5a4beaf2
 RMD160 (tex-gmp-21691/gmp.tar.xz) = 77fa192c91ecf37b21b8d9d513dd04335d9a9208
+SHA512 (tex-gmp-21691/gmp.tar.xz) = b358c6a26f485b75ec6428741b67a5270518337b722f6ebf802ad9d384d2c5c82cdb56e4d590a4d372380580fa8438ac8fc00b7a8c7c34cb16bc99883f7b2f31
 Size (tex-gmp-21691/gmp.tar.xz) = 3896 bytes

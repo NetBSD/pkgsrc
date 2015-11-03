@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.2 2013/09/10 14:20:47 joerg Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 21:34:07 agc Exp $
 
 SHA1 (libgiigic-1.0.0.src.tar.bz2) = 1f080b17d5a159da5430349570c280dcde188db7
 RMD160 (libgiigic-1.0.0.src.tar.bz2) = 73b467b1fb65c0175cd6be884e37f12690f11272
+SHA512 (libgiigic-1.0.0.src.tar.bz2) = de32fa4a3e7f9a3b4f64820174725de089021883a92cdfeb85399136abee7fafda9ffe800d946c2ae6103f779c46a50d5bc6c0bcf8baf601d5db58bcb9fbd23d
 Size (libgiigic-1.0.0.src.tar.bz2) = 297025 bytes
 SHA1 (patch-aa) = 4d46329f23b7357486321d436517c3a6d67d080f
 SHA1 (patch-ab) = de0eb9b6cd59e17715fe9f6c01643ac20ec63af1

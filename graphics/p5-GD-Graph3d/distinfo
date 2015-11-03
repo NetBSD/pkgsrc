@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/08/17 17:50:11 sno Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:12 agc Exp $
 
 SHA1 (GD-Graph3d-0.63.tar.gz) = 4f502b6fb0f32f6447970e7fa15cdf156b3d508a
 RMD160 (GD-Graph3d-0.63.tar.gz) = 7e160b9ce63bf598ffdaa6ef7a184124c3edb3f1
+SHA512 (GD-Graph3d-0.63.tar.gz) = 4792461322e7f37a671c1ec87bceb4591f69a90d328d816b19b7fc1013c053c1d66de2f94511c010bed0a8cc6363ee46f928c864614703d399231e149012d559
 Size (GD-Graph3d-0.63.tar.gz) = 97855 bytes

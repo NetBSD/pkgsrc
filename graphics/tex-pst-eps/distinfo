@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/03/18 21:38:12 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:29 agc Exp $
 
 SHA1 (tex-pst-eps-15878/pst-eps.tar.xz) = aa7aa5e9f3fe8545b477d1a210f38104c69ebe49
 RMD160 (tex-pst-eps-15878/pst-eps.tar.xz) = 64f8120124e07bc77786cb6ac71fa84a171b250f
+SHA512 (tex-pst-eps-15878/pst-eps.tar.xz) = 2e6bc21b81af05fd8d5031745ba88c20ef3303bc7bf30d7db73530fa8ffef4064f4ac0e1d246ec76b1db56adcd4d29964d968e8c65bf555ef57c9841a85ddb95
 Size (tex-pst-eps-15878/pst-eps.tar.xz) = 2956 bytes

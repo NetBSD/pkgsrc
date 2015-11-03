@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.21 2015/04/29 15:52:53 gson Exp $
+$NetBSD: distinfo,v 1.22 2015/11/03 21:34:35 agc Exp $
 
 SHA1 (xli-2005-02-27.tar.gz) = 977d8ece0edd41f3ec606310496cf3231f046d88
 RMD160 (xli-2005-02-27.tar.gz) = fc83fa5173befa73a0eeb56ad323dad148ef1426
+SHA512 (xli-2005-02-27.tar.gz) = 132b28396ebf3832dc35ff5fa7c102539ef30a194512fe6577ce1432bb84ecd7b4368e75eaf59f26a806900f63e1bfb9a93487ce1ebe3cfef2199256a783ccf7
 Size (xli-2005-02-27.tar.gz) = 201011 bytes
 SHA1 (patch-aa) = 68e347f4f54884ed3f11260304ef26e6b05e197d
 SHA1 (patch-ab) = 4c9e01d046fb96c056799b078c5d78451270f52e

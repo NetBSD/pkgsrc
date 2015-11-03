@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2014/02/23 00:35:32 schmonz Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 21:34:07 agc Exp $
 
 SHA1 (libcaca-0.99.beta18.tar.gz) = 0cbf8075c01d59b53c3cdfec7df9818696a41128
 RMD160 (libcaca-0.99.beta18.tar.gz) = e7fe45bce798926789e48662038f1eb3ad2bece1
+SHA512 (libcaca-0.99.beta18.tar.gz) = b2a8264ec36b74a01ff415a1fd7cb1806c76e28795b73607d4f8fa5ed5cc776b215f2817f45f06c672688f010622ee5c5e2f9dc4d0c43417dedbff545d575ca5
 Size (libcaca-0.99.beta18.tar.gz) = 1168552 bytes
 SHA1 (patch-caca_caca.h) = 758527c49aa6f27eb82fa645bd80e8a87f4f4b96

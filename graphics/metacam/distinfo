@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2011/11/24 13:59:50 joerg Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 21:34:10 agc Exp $
 
 SHA1 (metacam-1.2.tar.gz) = 41ae144b2b1c849aebc08568261dc49718667dbe
 RMD160 (metacam-1.2.tar.gz) = 1c0a430f73c2c42d4b5be675462c6adf5a5f0391
+SHA512 (metacam-1.2.tar.gz) = 17236b7ebde600ea5e3f464641d11feb43839ee8f69321d5d2074a16f03024a9f0020f2e912a18a048d903e3882204ab4ee26e2c8c5fc8d18efad7bfc1991ae8
 Size (metacam-1.2.tar.gz) = 33657 bytes
 SHA1 (patch-datatiff.h) = a35795fe6ef9c1a954d618e6449320a367d8bb5f
 SHA1 (patch-dpyfuncs.cc) = 6d617594df8a910cdceb4433883bcb2399bfd763

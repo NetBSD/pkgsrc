@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 08:45:14 agc Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 21:34:35 agc Exp $
 
 SHA1 (xdvipresent-0.6p14.tar.gz) = 8c868d629ed01b694d12c0230bcd35339044055f
 RMD160 (xdvipresent-0.6p14.tar.gz) = a8ef03197798f182f98553e964784365cf9676ad
+SHA512 (xdvipresent-0.6p14.tar.gz) = 53f04d1ba26c7c412a6fd299ca0ac342c8eaa626a303891078895dd2779057114f871e1b7e92a8da7c3d351789bb295ca9f30afe59296994cc54dc9747de36a2
 Size (xdvipresent-0.6p14.tar.gz) = 154591 bytes
 SHA1 (patch-aa) = e46578058e4af0de5b5bc10270f6a9269faf5eea

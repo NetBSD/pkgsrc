@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.23 2015/09/11 00:10:43 tnn Exp $
+$NetBSD: distinfo,v 1.24 2015/11/03 21:33:51 agc Exp $
 
 SHA1 (mesa-demos-8.2.0.tar.bz2) = e1a66ac63eebba4f950f95d830f34a6005167116
 RMD160 (mesa-demos-8.2.0.tar.bz2) = e6804e480ed5d227ba689cb9b3ea95cc85353889
+SHA512 (mesa-demos-8.2.0.tar.bz2) = 590e9fb66e23c0ad526754e9084858eb3e1fa906be55ee6121089325254b970e135e04d53c634cabd13d59c572ea39a4a877bce14b120d73850aafd159a5c8de
 Size (mesa-demos-8.2.0.tar.bz2) = 10071635 bytes
 SHA1 (patch-src_Makefile.in) = ab349abae606c4b0f8dae4604e96fc51c02828ac
 SHA1 (patch-src_xdemos_glinfo__common.c) = 1f657daf58f2ae08a161cd7ab73285af441f17b0

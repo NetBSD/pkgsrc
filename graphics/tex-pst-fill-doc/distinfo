@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/03/18 21:38:24 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:29 agc Exp $
 
 SHA1 (tex-pst-fill-15878/pst-fill.doc.tar.xz) = 9b8fe62bd7ac9c42678dde5bf7e43352a663a5f3
 RMD160 (tex-pst-fill-15878/pst-fill.doc.tar.xz) = bf6487c81217eca927de27218c48baebed9acda9
+SHA512 (tex-pst-fill-15878/pst-fill.doc.tar.xz) = dc56e98672d6e7335fe30e841aac8aff84deae01f4caa9b9fb90ccd6769148a93e2bfa3e7d48c72b6c0b77f28d7d51536da1244b64798ce475dc2c92eab8257e
 Size (tex-pst-fill-15878/pst-fill.doc.tar.xz) = 1121256 bytes

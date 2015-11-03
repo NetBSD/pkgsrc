@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/09/01 14:33:39 adam Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:10 agc Exp $
 
 SHA1 (libxmi-1.2.tar.gz) = 62fa13ec4c8b706729c2553122e44f81715f3c0b
 RMD160 (libxmi-1.2.tar.gz) = 6622ed9793605380c8f55f93bf953182fff07dd4
+SHA512 (libxmi-1.2.tar.gz) = 55cf86064496cb1f551fb1a208f9fe1ee8d826e0e1d7ddc2898bef7316c0ac51b34f5f28840626b901b0720264e08fa95f7ab18b57b12c3f64d8a8d48d83e93a
 Size (libxmi-1.2.tar.gz) = 302662 bytes

@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.100 2015/03/12 12:35:42 tnn Exp $
+$NetBSD: distinfo,v 1.101 2015/11/03 21:34:11 agc Exp $
 
 SHA1 (netpbm-10.68.02.tar.gz) = 90fa87549dc7fb33bd7f9f29abad09fe99faf3e1
 RMD160 (netpbm-10.68.02.tar.gz) = 7567eb6c38f06ad89b995b9315deec91db94bfb0
+SHA512 (netpbm-10.68.02.tar.gz) = 7555889392e35f9b24ff70b62a5f9d80aa5157915ef7bf57efa3d5c0f0d0ca198c8baa97ce7985c68b6bea11c3dcfd64ca913b918b0d9d97f93d4927f6efa00b
 Size (netpbm-10.68.02.tar.gz) = 2703809 bytes
 SHA1 (netpbm-docs-r2313.tar.gz) = 8c36b17b1d2dca6ab7bd34666a8929b9ea665743
 RMD160 (netpbm-docs-r2313.tar.gz) = 03854f545c7c0f4c825ee08bc779b62da0ea05c3
+SHA512 (netpbm-docs-r2313.tar.gz) = 978f7e154aadfa2c4332c07f8e822ec1990697c22b4a3b56f5de434a1f249a6b552c6a76763d0ce2684dfbd5d14973bf0b05702dd0ad543c6f440a992bcac0d9
 Size (netpbm-docs-r2313.tar.gz) = 447907 bytes
 SHA1 (patch-common.mk) = f590cc66e0fe6a07e848b9b46662bca350557bea
 SHA1 (patch-converter_other_giftopnm.c) = d64d645307e12b32d3a9ce56885bbfb3a4a80d23

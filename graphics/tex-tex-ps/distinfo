@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/03/16 17:58:42 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:32 agc Exp $
 
 SHA1 (tex-tex-ps-15878/tex-ps.tar.xz) = ea85cd7a1a531804be198eaf0cb630d151649345
 RMD160 (tex-tex-ps-15878/tex-ps.tar.xz) = ad9d30e3a4217023c6a2a2c193040c7cc72bb9dc
+SHA512 (tex-tex-ps-15878/tex-ps.tar.xz) = a24134bbbda2d6805fbb39ef43fc0771f5c2d5374241f8c6890c5b68eb2d3998d893ed7378020b7bc4aebc21aa811d71d82ce3c2a9c45b5d3dadb0e9df5544da
 Size (tex-tex-ps-15878/tex-ps.tar.xz) = 21372 bytes

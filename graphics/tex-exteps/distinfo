@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 13:47:39 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:24 agc Exp $
 
 SHA1 (tex-exteps-19859/exteps.tar.xz) = bd785ba5889daccfcbaf12e6debecd25e5b80949
 RMD160 (tex-exteps-19859/exteps.tar.xz) = ded4087be784e1552fc6ca2898e9ea02a0892c56
+SHA512 (tex-exteps-19859/exteps.tar.xz) = 7e63b4dac4aa07fa8f1799c29a8f832d9f853e21011f85668773c8a08216fdab8e594eb0770de31e85037ba7c8a008175c3d6db09ddb497428355854c071041f
 Size (tex-exteps-19859/exteps.tar.xz) = 2976 bytes

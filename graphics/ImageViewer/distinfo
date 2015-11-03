@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 08:45:02 agc Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 21:33:51 agc Exp $
 
 SHA1 (ImageViewer-0.6.3.tar.gz) = 5ff0376dfdfcbcfe8c7daa23b019ab27a6e0cfe5
 RMD160 (ImageViewer-0.6.3.tar.gz) = 6bc9922c316d1ea507a293d53e9a08d928997b45
+SHA512 (ImageViewer-0.6.3.tar.gz) = c929988755f343b9de6ac58470067bd39453f7f1e78e2e9b36867bf303ba559ee2c03fc891a4c286059248200dc02215ee75189472d04e46423c5ae9132e40c5
 Size (ImageViewer-0.6.3.tar.gz) = 50683 bytes

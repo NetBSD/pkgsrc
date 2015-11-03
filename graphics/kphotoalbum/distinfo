@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2012/12/22 20:01:44 joerg Exp $
+$NetBSD: distinfo,v 1.9 2015/11/03 21:34:06 agc Exp $
 
 SHA1 (kphotoalbum-3.1.1.tar.bz2) = 28957f177adda08caba1935e05b7e3dc20e7649e
 RMD160 (kphotoalbum-3.1.1.tar.bz2) = 8bda36262a160f8f0db994698bf337ee89b95a7b
+SHA512 (kphotoalbum-3.1.1.tar.bz2) = cc76fd420da22a827e73cce8c733b6dfa3a896fc6d378977c1370d83f485e4bf362fcd41ebe1564da747b01bfda396b55656bbd77ed60347ca6425042dbf6f1d
 Size (kphotoalbum-3.1.1.tar.bz2) = 15503061 bytes
 SHA1 (patch-aa) = 8ff3f4b51f45098c907497897f5e63c6d36bf767
 SHA1 (patch-ab) = f80b02e6705b82202827a230c3a568f97eb59056

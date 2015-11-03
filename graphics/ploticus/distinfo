@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.14 2013/06/30 15:13:09 ryoon Exp $
+$NetBSD: distinfo,v 1.15 2015/11/03 21:34:14 agc Exp $
 
 SHA1 (ploticus242_src.tar.gz) = b3d9caa1db12144bdeff2b0b3857762e6aef26a9
 RMD160 (ploticus242_src.tar.gz) = 25535639286ca6caa9cf10971b43181ffa449f7d
+SHA512 (ploticus242_src.tar.gz) = 620232942096f73050633cdc37587833809b82dfb5965e4e9e977565925939c01a5e904c14faed3abe88bff2ae6e063494ed08e650708785c106673091befc6a
 Size (ploticus242_src.tar.gz) = 535755 bytes
 SHA1 (patch-src_Makefile) = 4650de057a7d85da01153be4b3b53493220e372a
 SHA1 (patch-src_gd__png.c) = e52d3bbdbc7dd6d4afa537e5a0dfa0cbfe46c6d9

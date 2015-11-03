@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/12/09 21:53:44 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:02 agc Exp $
 
 SHA1 (graphviz-dot-mode.el) = 5cd9e4ba62623a92e4ed48c03b20e525e1003de5
 RMD160 (graphviz-dot-mode.el) = dcf6bc046f7783bb486be83f543e254d0a036327
+SHA512 (graphviz-dot-mode.el) = 5b768473b39e92e9453ce33d642443dac0c704c56ad5c9c47b862fb9098b7bdd36f5cf4a13006fecadce24cf7fe2fc2802dff208eab2dee357c29444905592bf
 Size (graphviz-dot-mode.el) = 40848 bytes
