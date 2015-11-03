@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.17 2014/09/25 10:58:01 jperkin Exp $
+$NetBSD: distinfo,v 1.18 2015/11/03 21:34:35 agc Exp $
 
 SHA1 (xart19980415.tgz) = d4445392e33a5dcf5ae951babac82394e7cdd65c
 RMD160 (xart19980415.tgz) = 99077c23a798d8c0026bd53450052b1a8cf6ff6f
+SHA512 (xart19980415.tgz) = 576309fc22716fe97b1bebd5e6faa1f85ae1c8d18b1bd6e1b8bac36328d899a88fdf76a961052a319e786f7522f7cbe30f103bd9e1075d4d81d615e2ec1a6ceb
 Size (xart19980415.tgz) = 343909 bytes
 SHA1 (patch-aa) = 7d8ae61d9a624cc537396f406b496f28376cf7b5
 SHA1 (patch-ab) = 326a02c9cb6698a0d4f4cbf372ce71ff2be00958

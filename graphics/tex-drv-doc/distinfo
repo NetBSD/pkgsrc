@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 13:47:38 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:23 agc Exp $
 
 SHA1 (tex-drv-29349/drv.doc.tar.xz) = ac0139b804509ac5161ca8b193d585ce40852769
 RMD160 (tex-drv-29349/drv.doc.tar.xz) = a18552c8fec23e2340a3467328829f8534e234b5
+SHA512 (tex-drv-29349/drv.doc.tar.xz) = f1f8243e640603065d9978c8563d1060a005a44036850d9895242e00a739810260135b4329c499fd091bc0880bbc1b762e3f60f85596dbfaac33c95fe0331796
 Size (tex-drv-29349/drv.doc.tar.xz) = 202676 bytes

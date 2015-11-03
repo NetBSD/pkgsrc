@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 13:47:37 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:22 agc Exp $
 
 SHA1 (tex-automata-19717/automata.doc.tar.xz) = 2b2e19ad3fe763fa80358cdceae08f0225cbe83d
 RMD160 (tex-automata-19717/automata.doc.tar.xz) = 92574779d3df6e75909798899bb52391839ba033
+SHA512 (tex-automata-19717/automata.doc.tar.xz) = 9540ba119d425c3088f564708b5d53ba0c2f413b20b5758b360ab4f5dfa213935d24b395cea59feef6b72aafd40984b2a720145328bd2669bf0b6768a52f8dcf
 Size (tex-automata-19717/automata.doc.tar.xz) = 88216 bytes

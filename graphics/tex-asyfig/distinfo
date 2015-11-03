@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/06/02 20:08:58 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:21 agc Exp $
 
 SHA1 (tex-asyfig-17512/asyfig.tar.xz) = 60ae50e1a4ae5f3383b75dc601ccbc4a913e2c40
 RMD160 (tex-asyfig-17512/asyfig.tar.xz) = f005fc9bdc5e30c5448b623b25860cf3fe32dcb9
+SHA512 (tex-asyfig-17512/asyfig.tar.xz) = 3e49eb8ed2092613725e0440614df590b9e619c71282950a4be97975e4e916783acc704bd414a66b48b8d95487a83170e6a10d3380872cad49db2230772a708a
 Size (tex-asyfig-17512/asyfig.tar.xz) = 3212 bytes

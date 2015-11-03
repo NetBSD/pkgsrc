@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/03 10:01:03 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:25 agc Exp $
 
 SHA1 (tex-graphics-pln-16917/graphics-pln.doc.tar.xz) = 0d69d73facaf7e7b58e28c7d30ac8017792e3c2c
 RMD160 (tex-graphics-pln-16917/graphics-pln.doc.tar.xz) = 1e258f91f6adba51df08165e53872ca2c15961c4
+SHA512 (tex-graphics-pln-16917/graphics-pln.doc.tar.xz) = 7f7777f799dfadb81eeaea88e99355a5b080b2c07af6ccb9fce63062479878b52a71a1f0fa37548afd76caf4a2a31e98116456fe09c34bf68cf86b16d837c9af
 Size (tex-graphics-pln-16917/graphics-pln.doc.tar.xz) = 2140 bytes

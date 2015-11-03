@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 13:47:41 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:27 agc Exp $
 
 SHA1 (tex-mpcolornames-23252/mpcolornames.doc.tar.xz) = 18a7928f9e48374bfe8c71971f661075f8f7c5f5
 RMD160 (tex-mpcolornames-23252/mpcolornames.doc.tar.xz) = 6a5c1df206d29da8a5ff44c5fca12f013738cfd7
+SHA512 (tex-mpcolornames-23252/mpcolornames.doc.tar.xz) = e8ed52fb2f981c2c34e3d251d1ec39d0d3e80069d3ed84fc45d3f46102d8148cbf837703246282353d4fbd330ba1f9a815b4b6b342e3557f841e67f60dd7b5af
 Size (tex-mpcolornames-23252/mpcolornames.doc.tar.xz) = 108768 bytes

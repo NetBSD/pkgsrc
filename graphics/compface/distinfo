@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.9 2009/06/11 10:04:27 tnn Exp $
+$NetBSD: distinfo,v 1.10 2015/11/03 21:33:54 agc Exp $
 
 SHA1 (compface-1.5.2.tar.gz) = 72dad8774b3301a1562bdbd5b3c5536ebf86a03d
 RMD160 (compface-1.5.2.tar.gz) = 17174e8c263ae3984dd74fa7e93f8835773cd742
+SHA512 (compface-1.5.2.tar.gz) = 0da9ee4c5fb2b5c712466d9fa6170e5687b23c038e6304baa42d7ede6d9bd50a1b84da416eb853a420c01a6b9eccd5e7d92a4ebc26295714b85254c05c9e3360
 Size (compface-1.5.2.tar.gz) = 46970 bytes
 SHA1 (patch-aa) = 635def93dbf71e26043c460ab3bf699bc3b35916

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.18 2014/08/21 20:38:47 wiz Exp $
+$NetBSD: distinfo,v 1.19 2015/11/03 21:34:34 agc Exp $
 
 SHA1 (veusz-1.21.tar.gz) = 6c970b4ca1f13d4cd0c5ce80e7249077d7092ec0
 RMD160 (veusz-1.21.tar.gz) = 3143c9dbcdd82b07398b4e4b7697c3d8ee65c034
+SHA512 (veusz-1.21.tar.gz) = 1fb061f31f258b2c17f5200c9d25b6aa94c1cf85b675097ab236e6772c87721b3bbe9d655c0ffe698f087e2e116aa371824a58ce380def9beadde37c8e49bf1c
 Size (veusz-1.21.tar.gz) = 1803048 bytes

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2012/05/07 18:20:33 dholland Exp $
+$NetBSD: distinfo,v 1.9 2015/11/03 21:33:55 agc Exp $
 
 SHA1 (denemo-0.9.2.tar.gz) = 3332f50fc9d4ab550d10662728e294cac8c6bb08
 RMD160 (denemo-0.9.2.tar.gz) = ee1f9fe4a7b3d5e5e316383386e229bb2c431d80
+SHA512 (denemo-0.9.2.tar.gz) = 420a432838cfe92b49e8df7048950357e3a43517deba138cef8dbc7ce624916e4f124ffc670b308b9791ab5f79c17d74c2e697d0f8dabc9706755d7d7064820e
 Size (denemo-0.9.2.tar.gz) = 12305392 bytes
 SHA1 (patch-Makefile.in) = 94274f3105eb2d75536d00653572b166ea23463a
 SHA1 (patch-src_pitchrecog_c) = f743840fa79d8f57ede20c198a6bce3dcbc508d5

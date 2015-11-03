@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 08:45:14 agc Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 21:34:34 agc Exp $
 
 SHA1 (VTKData-4.2.tar.gz) = 059e42b32e1f1f575defd5ee2683c56781a788a4
 RMD160 (VTKData-4.2.tar.gz) = 9ba7b6d90a072ddf228c192d5e13c2fcf749189c
+SHA512 (VTKData-4.2.tar.gz) = f90f7621a6985b0010c98b642fec935bd99651291b304787073419a132daa1d010d95c8b0fdc681168dfbc4cc221a178fea1777f4ab272ef03c46cbf4d0c1e56
 Size (VTKData-4.2.tar.gz) = 19257005 bytes

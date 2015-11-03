@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2013/03/15 23:21:39 wiz Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 21:34:15 agc Exp $
 
 SHA1 (potrace-1.11.tar.gz) = 7296baf27bf35298263cb3ed3df34a38fed0b441
 RMD160 (potrace-1.11.tar.gz) = ea03b188e93d02766ff3b546a199fd76bc72271a
+SHA512 (potrace-1.11.tar.gz) = d0ff037ed989a1742a099bb9d120c5f10cf1eae6ed9adb20d1d37eee713e569925eff6235825dfbdd7b1649dc46ad4507982ae001d6d3d49cc281ed16ddf1843
 Size (potrace-1.11.tar.gz) = 662085 bytes
 SHA1 (patch-src_Makefile.am) = e26b4395a7d1b79fe85346a926c348216c870ef3
 SHA1 (patch-src_Makefile.in) = 2bcf24c3104879c12feba6402b9850e11976166a

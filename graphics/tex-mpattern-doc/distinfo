@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 13:47:41 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:26 agc Exp $
 
 SHA1 (tex-mpattern-15878/mpattern.doc.tar.xz) = 8e8a25ea56da81b3ae6049b9065cafc3ff1bcf04
 RMD160 (tex-mpattern-15878/mpattern.doc.tar.xz) = ec7d6db775e26df52274b41f791ebd55694189e1
+SHA512 (tex-mpattern-15878/mpattern.doc.tar.xz) = 041f76d8aaa3a629875871ddf5ccffcb662882155983504d004a13951f4e5cc94518760c382a1afd9fa7127b248bb04752f4b4a70712bae838e51abbc0ab7e04
 Size (tex-mpattern-15878/mpattern.doc.tar.xz) = 11336 bytes

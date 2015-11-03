@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 13:47:39 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:24 agc Exp $
 
 SHA1 (tex-featpost-35346/featpost.tar.xz) = 68417588ca15df7a0a65d4684cc7e70848a28746
 RMD160 (tex-featpost-35346/featpost.tar.xz) = 356c6fce9f74eda28a973e4133671cced6affe13
+SHA512 (tex-featpost-35346/featpost.tar.xz) = 037f246e598b5b5e92691e8d1fd7a2e329045c03620046082f6f34add5d5d8d969202f7aa3fc81aaf0ba7530e1aaaab8181206a6bc0ad0241499af84f90a14d5
 Size (tex-featpost-35346/featpost.tar.xz) = 31980 bytes

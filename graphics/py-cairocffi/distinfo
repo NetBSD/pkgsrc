@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2014/10/05 20:24:57 rodent Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 21:34:16 agc Exp $
 
 SHA1 (cairocffi-0.6.tar.gz) = 5f712af80ee000ee9a01724a93b97683b33999a4
 RMD160 (cairocffi-0.6.tar.gz) = 45b796aea561edd3c198409d9583e62aa57c5099
+SHA512 (cairocffi-0.6.tar.gz) = c27b443261db4c68e73d3da55a640ac2689dcefda6aa384d7c3e23acdc705f79e07524f8df9ecbe379cfd9f8855d50ad7dfe7392ad7a36d5a63d0124e483e5ec
 Size (cairocffi-0.6.tar.gz) = 75183 bytes

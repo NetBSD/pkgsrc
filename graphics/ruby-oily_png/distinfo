@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/06/07 10:47:57 taca Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 21:34:19 agc Exp $
 
 SHA1 (oily_png-1.2.0.gem) = 7934793be785a9f598ab8dd2b0e119f283c34bb5
 RMD160 (oily_png-1.2.0.gem) = f94a09853d8187b27b0573054a325cdd773d968a
+SHA512 (oily_png-1.2.0.gem) = e216034398b3f915edafd58ee7dff9cb954c0268746f3de0a369499b7f18750b0ef422fdb2410ca167980a6dde7808b3d1ac402d3a061e7287ae4e31c0e9bef3
 Size (oily_png-1.2.0.gem) = 64512 bytes

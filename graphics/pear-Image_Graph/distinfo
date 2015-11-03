@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2010/12/22 15:38:32 taca Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 21:34:14 agc Exp $
 
 SHA1 (pear/Image_Graph-0.8.0.tgz) = 6acca7f1a119c2a2ac522dd1d390007dc1f90ec4
 RMD160 (pear/Image_Graph-0.8.0.tgz) = 211ae1d0f38b60f0b00b3f46814242a7f777d594
+SHA512 (pear/Image_Graph-0.8.0.tgz) = e37e96e33cd416716ae0719c0782b77d67dda0b47175af6aed9971e3dfe315d8967fbc24df9a685311c4f9879b572f375c09761245dacd911d4f0c58066fb3f4
 Size (pear/Image_Graph-0.8.0.tgz) = 367646 bytes

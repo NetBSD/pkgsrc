@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.2 2014/01/09 21:56:53 jperkin Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 21:34:08 agc Exp $
 
 SHA1 (libkdcraw-0.1.9.tar.bz2) = 85a892e1b3368da9329efce1c0588500d3fe45bc
 RMD160 (libkdcraw-0.1.9.tar.bz2) = 489a5a872fcfb24943d0a1cb39cf05ff545f0062
+SHA512 (libkdcraw-0.1.9.tar.bz2) = 2d193096149cbdecee76d6eb4a6346a0b357a0a492657cf84fca65b08c08079d9856e031cc56946336c9ee0146a43dbcb8cfae83c944de1fb242124e141bc95e
 Size (libkdcraw-0.1.9.tar.bz2) = 708121 bytes
 SHA1 (patch-aa) = 5e0d9aa6c58ec9e81f262c7d6c473e6048d601d5
 SHA1 (patch-libkdcraw_libraw_libraw_libraw__alloc.h) = 3853dde9d6361a64a22f1bf49fd6e6a1b3590817

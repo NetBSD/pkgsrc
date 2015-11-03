@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2010/12/12 15:25:59 adam Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 21:34:04 agc Exp $
 
 SHA1 (jpeginfo-1.6.1.tar.gz) = 8fd998c3090908d1b100ed38d5d7fc2600e5742b
 RMD160 (jpeginfo-1.6.1.tar.gz) = d145384f4bfc002eb93da6ab9053965164394492
+SHA512 (jpeginfo-1.6.1.tar.gz) = 9cc9367b8b3e38ba46bff9477b8f61e63b55bd41a67ea2895cca9c097abba2a7a3ae068c235ecfea72c99af52bba91cbb1eb92feb019ba4eb08e826a7083c68b
 Size (jpeginfo-1.6.1.tar.gz) = 64856 bytes
 SHA1 (patch-aa) = 126062e32e56654e2d5e7577f6ea06d164e24529

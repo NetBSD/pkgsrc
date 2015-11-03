@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2013/04/14 00:15:27 dholland Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 21:34:34 agc Exp $
 
 SHA1 (vcg.1.30.r3.17.tgz) = 03a821b4a0bd9c5584d34882b167672868fe723d
 RMD160 (vcg.1.30.r3.17.tgz) = 4df7ce2ff7d5de253f9e851194a703d64ed4cdc3
+SHA512 (vcg.1.30.r3.17.tgz) = 7e075a3cf575adb922d0c6843274c1814d3bdc560a1f254a7071fecf20fff3c98921027fd1bc41b452c91c55ffba101c63179bfd8d1bb78cd44e26a54a9a2fcf
 Size (vcg.1.30.r3.17.tgz) = 1429486 bytes
 SHA1 (patch-aa) = b22f4df0a74ae3f970780a514c43a8c23e04163e
 SHA1 (patch-ab) = 26610ed150bef2ec69e3324fc9a2e44e50543978

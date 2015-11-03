@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.5 2014/02/10 11:43:09 obache Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 21:33:54 agc Exp $
 
 SHA1 (cpia2_driver-1.0.tgz) = 72c70f88fd894118510e761c9c9f5f5a928e7e42
 RMD160 (cpia2_driver-1.0.tgz) = bdec7a2cd68c08d10a734ad66f16433b9622ba84
+SHA512 (cpia2_driver-1.0.tgz) = d95b039f3a3901218517ce14ee250a132f5d45b0cee8217d276d59e33814961d495401c2ddc3ca714e892616998a48bfe911fbe3751014a0aec0c16eaa74f629
 Size (cpia2_driver-1.0.tgz) = 47375 bytes
 SHA1 (cpia2_driver-1.0-bsd-0.03.patch.gz) = 953a7ae4eafd5e3476b0db617703ff291caab3f2
 RMD160 (cpia2_driver-1.0-bsd-0.03.patch.gz) = 6ad079c4032b15eb39e50a73a476c1b44c44202f
+SHA512 (cpia2_driver-1.0-bsd-0.03.patch.gz) = 57e27d08c9ff1a57b809e3a2cde61d8da2f1ff7b53fb4c34c4723b7637ede5b32014299e47da17a8de5bed19bed3e2f735d2946687f2b27d3f018b24f35bc332
 Size (cpia2_driver-1.0-bsd-0.03.patch.gz) = 17497 bytes
 SHA1 (patch-aa) = 553f12df2e7837588d9a6c763b7f645f8c46edff
 SHA1 (patch-ab) = c43e26e86af33abf417496acf4681c104a951da0

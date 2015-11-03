@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.20 2015/10/05 04:37:39 richard Exp $
+$NetBSD: distinfo,v 1.21 2015/11/03 21:34:09 agc Exp $
 
 SHA1 (LibRaw-0.16.2.tar.gz) = fd74432c9167a5621d24cb5ba0d1fc082a8963b4
 RMD160 (LibRaw-0.16.2.tar.gz) = 8857b3531be0c96e4715dd7e3f4ba97e9d0f82ac
+SHA512 (LibRaw-0.16.2.tar.gz) = c8fa974b72c1e2d255254527ca241a059b9a2e0943044c1b3c85257f987d451305fe94b4b901e9efd90ebab71ff602d442686a710c205d51862e88b2dfd13855
 Size (LibRaw-0.16.2.tar.gz) = 1476575 bytes
 SHA1 (patch-configure) = 7626ff87dff75da3c7c136b095ee920a0045c064
 SHA1 (patch-internal_libraw__x3f.cpp) = c141c9a86193717b829afc2795b9c4d3976fa490

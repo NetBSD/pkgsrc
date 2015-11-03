@@ -1,19 +1,24 @@
-$NetBSD: distinfo,v 1.7 2008/11/30 08:43:16 obache Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 21:34:14 agc Exp $
 
 SHA1 (pixmap2.6.tar.gz) = f9b0c610ed73254fbde9a25346ed78d493d97752
 RMD160 (pixmap2.6.tar.gz) = 862bf8a40c95e410035243c5bbd75df8d5c7e617
+SHA512 (pixmap2.6.tar.gz) = 2943c8f9fdab8fcb979711bbace95595fcccd4b498041016ba7b82fa20ad9fbbba68c7359b3bfe4eb05555b4913ff0316752640f40efe0ace31ff4b401bb008f
 Size (pixmap2.6.tar.gz) = 120340 bytes
 SHA1 (pixmap_2.6.patch1.gz) = 3ad6ab9194107055af771fa9b44dad856c0187ba
 RMD160 (pixmap_2.6.patch1.gz) = 5ec0cc5955afdba83e2a31a8b80eb0a3f66b8aaa
+SHA512 (pixmap_2.6.patch1.gz) = d428700e5cfd62855d9120c3b52ebbd8a0e8e0f6916cbdc00121a025df58f3da05cbf95f29f998f2c76fd6acc64111c5d917a40da62c50aed5921e570654086e
 Size (pixmap_2.6.patch1.gz) = 846 bytes
 SHA1 (pixmap_2.6.patch2.gz) = 6393b60bb8237b74f74c49c8667d58d42362e677
 RMD160 (pixmap_2.6.patch2.gz) = 0ba5b815dcec2f076523444b740ecf3277d7a86f
+SHA512 (pixmap_2.6.patch2.gz) = e21286136103d39b3fd850d27afce9f90faf86bb12286f86da0facf0535bc787784b657013a1634c74acf97504504a7e45105f55b98f3a0788a720ca4c9fd760
 Size (pixmap_2.6.patch2.gz) = 931 bytes
 SHA1 (pixmap_2.6.patch3.gz) = 093035c5729eda7c1d7ed3f819f31a2f096ffcaa
 RMD160 (pixmap_2.6.patch3.gz) = e4823accca2deba459d5df48fe55355c71245ea7
+SHA512 (pixmap_2.6.patch3.gz) = 6a937abd41b1383ce663ca8984fed2f8a0caccacd7d4651a3b55995b4b30b0d0118059e39a17e6c126be49d57c6eb1573c452723bb86d382057f946776dde749
 Size (pixmap_2.6.patch3.gz) = 10208 bytes
 SHA1 (pixmap_2.6.patch4.gz) = 1a994cdbe837ac36d0cb4d5c2109f18b5732d7b6
 RMD160 (pixmap_2.6.patch4.gz) = 0f9c67cc6e2db6efe27b88d19640ebccde8e64fc
+SHA512 (pixmap_2.6.patch4.gz) = f30cfe7018a1a16db9f5c2b6c692b082c3ab83a4f79262cfbff2580734a420db4137242e64a83dfabc2dcacfbdea00cd353f3ca4174f23907ff983b3778ff0f5
 Size (pixmap_2.6.patch4.gz) = 1269 bytes
 SHA1 (patch-aa) = b51ced9659d8360f96d9434d670ad66016e81988
 SHA1 (patch-ab) = d7da0a7998bbac1e25763eea5a64afb79d98d1e6

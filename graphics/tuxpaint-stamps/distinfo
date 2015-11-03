@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.11 2014/08/24 07:39:42 wiz Exp $
+$NetBSD: distinfo,v 1.12 2015/11/03 21:34:33 agc Exp $
 
 SHA1 (tuxpaint-stamps-2014.08.23.tar.gz) = 5c907ec66da9ec54e68ec1409991c74cd1d87880
 RMD160 (tuxpaint-stamps-2014.08.23.tar.gz) = c162659364c135bb21aa15a86602da4f707bfe97
+SHA512 (tuxpaint-stamps-2014.08.23.tar.gz) = df51f511ec8dfc548f680b45ed171c61fbce17419f9297c8c8bdaa472c9dbe2492f9b43246ee8dcc3b3808436a8ed545dbc28b575b634af342c989797489bc0a
 Size (tuxpaint-stamps-2014.08.23.tar.gz) = 194053114 bytes

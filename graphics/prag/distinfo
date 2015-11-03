@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 08:45:12 agc Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 21:34:15 agc Exp $
 
 SHA1 (prag-1.0pl2.shar) = f83fea9a332e3539bec980395f195749303aca1f
 RMD160 (prag-1.0pl2.shar) = debca63eb1eac5037d484a11dadc7ceea5da0d9f
+SHA512 (prag-1.0pl2.shar) = 4ecc5814228b9348d1a6fea497847700c4a23dfd34839be79f49b9ded35e38366007d5146590bfaaf39595732fb011cdd61fb72f001b1171f6eb247a41ddb1f1
 Size (prag-1.0pl2.shar) = 161772 bytes
 SHA1 (patch-aa) = 44fc57fff5ab4f29116c57d26cd43d12b7db1ce5

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2014/04/04 21:09:50 ryoon Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 21:34:01 agc Exp $
 
 SHA1 (gource-0.40.tar.gz) = 7af594f84c0ec4c84278a8e9008f83a7a02e97fa
 RMD160 (gource-0.40.tar.gz) = b0f4aa96e838b5db2c6d93a6d10a398b4ff914d6
+SHA512 (gource-0.40.tar.gz) = f027a791674162a366ef30743508d841bc94b7b81c76041a8041d247420b76a9a82581793cb61e571da4805b2989a11e02dfd1246fe656115fef5568f283802a
 Size (gource-0.40.tar.gz) = 861731 bytes
 SHA1 (patch-src_dirnode.cpp) = b692c7c3cf9a9cb8e47d32cf7864cbb0a293802c

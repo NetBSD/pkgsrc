@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/05 14:40:28 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:27 agc Exp $
 
 SHA1 (tex-pictex-21943/pictex.tar.xz) = 9784b68da9a3a70ca82169d367c2f52582b86d58
 RMD160 (tex-pictex-21943/pictex.tar.xz) = bb78838629b19e01d94f7d3272c8dbdb4c353d50
+SHA512 (tex-pictex-21943/pictex.tar.xz) = d5854426024369965592242c523f384890484046696f4721fb3139c9de2fbd86434589e466f2875376bfd7ea90d478b06f076ab40df951bb1dfe40bea9dc2b14
 Size (tex-pictex-21943/pictex.tar.xz) = 41424 bytes

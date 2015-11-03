@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.20 2015/04/06 07:07:43 tnn Exp $
+$NetBSD: distinfo,v 1.21 2015/11/03 21:34:00 agc Exp $
 
 SHA1 (MesaGLUT-7.9.2.tar.bz2) = d0dc573cb7897de514ee29386be944724e17e979
 RMD160 (MesaGLUT-7.9.2.tar.bz2) = ef00dfa09b563a8ffeeb3523b6d06b66d172983f
+SHA512 (MesaGLUT-7.9.2.tar.bz2) = 040bb43c26e1fabf8c005d4cf65d2006fded9902ea20c0eb10bb6e4c8cc43925400ad514066c7948690e9cd67a274e163988d013758de72e4b2174b91042ea44
 Size (MesaGLUT-7.9.2.tar.bz2) = 200406 bytes
 SHA1 (patch-Makefile) = 526f638679c2a78383ae1358f281d4fb370244c4
 SHA1 (patch-acinclude.m4) = f8a00cf60fe3e684fc167e7c4a7449c8ee13f7a5

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2012/10/22 22:59:47 rh Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 21:33:50 agc Exp $
 
 SHA1 (Cenon-3.9.6.tar.bz2) = 083f0f15beea03b534b814edc574e149dec3082f
 RMD160 (Cenon-3.9.6.tar.bz2) = 9a80e3ed91f861715e486199de6523fe6d0c3a29
+SHA512 (Cenon-3.9.6.tar.bz2) = 28becfdefe52ffabf36cedf45c9abd409d1f603bf9bf8e75c1637625b368707812c62408c8369a809359ed8977afa98d7eee1b3348de1e3ab9e485e59f853d45
 Size (Cenon-3.9.6.tar.bz2) = 2005991 bytes
 SHA1 (patch-aa) = 66a7e36332f58404f7acafc8e85bbe500e274148

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2007/12/02 12:38:19 wiz Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 21:34:01 agc Exp $
 
 SHA1 (libmng-1.0.10.tar.gz) = 78ad516a1de79d00de720bf2a7c9afea2c896b09
 RMD160 (libmng-1.0.10.tar.gz) = ed09e537ebb129f5e13cba56d9d2c2a106955393
+SHA512 (libmng-1.0.10.tar.gz) = 302d792af76140d8511ac2f88b5c2a8de01261bbbcd21c83903d94d3f20f1e84a0658827e78ae863499d8f1b466c26641b714dc7e11d06366e64a9966fb18ba1
 Size (libmng-1.0.10.tar.gz) = 1093337 bytes
 SHA1 (patch-aa) = b727f2c2fd68251ecc5b447a17d6a99b6608489f

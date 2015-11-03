@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 13:47:42 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:33 agc Exp $
 
 SHA1 (tex-threeddice-20675/threeddice.tar.xz) = 50165c4c5e47caf15d669529f15504d6060c151f
 RMD160 (tex-threeddice-20675/threeddice.tar.xz) = a41bb8b13fb382af4b70457230faa8e789f8c84f
+SHA512 (tex-threeddice-20675/threeddice.tar.xz) = a51e659e7ea34eaa609528a639f73eb0cdc8bad1a63705e488cc8df7d37f427aa0b4cf80563631cf635464528ebe19b0345aeae771e40bd369312424c5d8e612
 Size (tex-threeddice-20675/threeddice.tar.xz) = 2196 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2011/01/23 08:19:35 obache Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 21:34:01 agc Exp $
 
 SHA1 (goocanvasmm-0.15.4.tar.gz) = 3dc47963f3914e954f12e6682f0a097d50d6e84b
 RMD160 (goocanvasmm-0.15.4.tar.gz) = 92a02b5752e62642ddfa74d9c29abbf5bde58eef
+SHA512 (goocanvasmm-0.15.4.tar.gz) = 88e938acff63bf0cc164cf3aa9e128b9b13d632ae4d137431b50c891752fd68e030e26940d142908009ce855c1132645fa9f81971c7427af6fd53ff5ad03fa41
 Size (goocanvasmm-0.15.4.tar.gz) = 1774316 bytes

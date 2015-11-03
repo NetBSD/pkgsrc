@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 13:47:37 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:22 agc Exp $
 
 SHA1 (tex-blockdraw_mp-15878/blockdraw_mp.doc.tar.xz) = 91463817679524e8377216710377681be8006de3
 RMD160 (tex-blockdraw_mp-15878/blockdraw_mp.doc.tar.xz) = 642f34056e8dfc6e214ca155fe2551076390e184
+SHA512 (tex-blockdraw_mp-15878/blockdraw_mp.doc.tar.xz) = ae333a77e22654c18cfd5b6a8c0f50244c6b547d61560f775450fa4870d226bbdcdaccd509c0b3ee4ff3cf3722bcd11c29dc32470a4055fcfcfcef26dd501ee0
 Size (tex-blockdraw_mp-15878/blockdraw_mp.doc.tar.xz) = 276436 bytes

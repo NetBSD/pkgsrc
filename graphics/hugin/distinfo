@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.13 2015/10/18 15:56:56 adam Exp $
+$NetBSD: distinfo,v 1.14 2015/11/03 21:34:03 agc Exp $
 
 SHA1 (hugin-2015.0.0.tar.bz2) = be7153a0791f2147153e93e8711912ef23b60b61
 RMD160 (hugin-2015.0.0.tar.bz2) = d5780454dc6e2c3c5315d3c5b755d5f6fd17bf1c
+SHA512 (hugin-2015.0.0.tar.bz2) = bb2acf4dea80d43280778f67594dd1ddb0c2e186bcbaafe460fe47e0bd464ae2191b9b25344245e7267316e602ac2179cc838a0dcecb0d408c2206890a5ab6a2
 SHA512 (hugin-2015.0.0.tar.bz2) = bb2acf4dea80d43280778f67594dd1ddb0c2e186bcbaafe460fe47e0bd464ae2191b9b25344245e7267316e602ac2179cc838a0dcecb0d408c2206890a5ab6a2
 Size (hugin-2015.0.0.tar.bz2) = 10611519 bytes
 SHA1 (patch-CMakeLists.txt) = 3edb8ff7c07ca499221fe7c5fd8faf0de120d168

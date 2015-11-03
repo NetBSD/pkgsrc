@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2013/09/02 21:27:23 adam Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 21:34:12 agc Exp $
 
 SHA1 (GDGraph-1.48.tar.gz) = c6223781e3f3b7a1fe5a7d6b29f2c668196fb838
 RMD160 (GDGraph-1.48.tar.gz) = 829f84bab2b50f9e13ee94ca24bca2dbd5d5e4d9
+SHA512 (GDGraph-1.48.tar.gz) = 1b72b0f647dbf79a358fdf49d10f5a016a075bbf257116f120af1874efc5615917d164d95d6125c7534e3fb14050127acbd5c2fb9f5bb745997e9401c7822040
 Size (GDGraph-1.48.tar.gz) = 156383 bytes

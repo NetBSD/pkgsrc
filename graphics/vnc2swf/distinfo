@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/10/29 14:29:13 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:34 agc Exp $
 
 SHA1 (vnc2swf-0.5.0.tar.gz) = 4cd4f03535ca33c2f6bad9761016e6d9f9ee0d15
 RMD160 (vnc2swf-0.5.0.tar.gz) = 37476595432777d8da9e6230f486f6593c29c41f
+SHA512 (vnc2swf-0.5.0.tar.gz) = f1551015eaafb7810b5d6367b73605f97bc5c0d4d3449dfe1a98af90f743133c0534c8988ee72ce2fc8599926a5f3ed5a785bf18788522b4a7c3cb8bc0529913
 Size (vnc2swf-0.5.0.tar.gz) = 438058 bytes

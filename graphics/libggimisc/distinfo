@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2014/06/30 17:45:48 asau Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 21:34:07 agc Exp $
 
 SHA1 (libggimisc-2.2.2.src.tar.bz2) = 2c93b1a219c10ddf318d658ab73ac02de515ee80
 RMD160 (libggimisc-2.2.2.src.tar.bz2) = db433d5dc74cae1674bdb5e88b443523db6bffe2
+SHA512 (libggimisc-2.2.2.src.tar.bz2) = 1b4fcc7260d03a7f5f5b1679adec4904284f370ab428c4f3ce1a6ef9fe73b2c9b86acecbcc90a8375f2c271e82a07622782868a353dea55523b8f6a66ed05ccc
 Size (libggimisc-2.2.2.src.tar.bz2) = 320084 bytes
 SHA1 (patch-aa) = 63c855311941d688a9c3db8d5b219833fcfad7db
 SHA1 (patch-configure) = f2f600e91a35a00a02b3c2ae4c124ad81fbe0519

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/11/03 06:03:13 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:18 agc Exp $
 
 SHA1 (qiviewer-0.5.0.tar.bz2) = a9f0124c572bf56d893f0bb9a5f892eb17ec4ba8
 RMD160 (qiviewer-0.5.0.tar.bz2) = 3b2c4b08721afe66a86f3b875b6ed0733679ced0
+SHA512 (qiviewer-0.5.0.tar.bz2) = f9a75020085576f28b1e38e12a0e69d4b5efbedca5602ad1b47583a220eb50f6967f87764658b1d38ac696ed45134d580d3971c1d791a3156f28c55dceaa7fc7
 Size (qiviewer-0.5.0.tar.bz2) = 177201 bytes

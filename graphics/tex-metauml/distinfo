@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 13:47:40 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:26 agc Exp $
 
 SHA1 (tex-metauml-19692/metauml.tar.xz) = c66fdf18e9177c68af556700fd02b1faf4dd4e65
 RMD160 (tex-metauml-19692/metauml.tar.xz) = f709ef6d9b705d708bc86683110ffa745ca414a6
+SHA512 (tex-metauml-19692/metauml.tar.xz) = dadfb549bb21ad6fd0b5c729acdbc3ca86f2baae5594f7b94ed30dcd388dbbc2e2f2c0ce3c97e7b4b51b51beb7236e236472a4609532a73636120ea9fb5b1063
 Size (tex-metauml-19692/metauml.tar.xz) = 20608 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 13:47:40 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:26 agc Exp $
 
 SHA1 (tex-metaplot-15878/metaplot.doc.tar.xz) = 4e74edbfe4418e5544ac7a1bd5a25d6fd7e150ad
 RMD160 (tex-metaplot-15878/metaplot.doc.tar.xz) = 706c1d421b78b08d751960c897501d363cd80e95
+SHA512 (tex-metaplot-15878/metaplot.doc.tar.xz) = 42f3e7f6a24f6f6e89408a9af4cce110fdb6d97f39ceda655474afb5f154848d877ebd5b214821927d3dfd633a4dbe73fcf78a29fc4c03e3fee62718e9702c91
 Size (tex-metaplot-15878/metaplot.doc.tar.xz) = 289216 bytes

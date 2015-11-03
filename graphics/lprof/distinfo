@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2014/08/21 16:37:51 jperkin Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 21:34:10 agc Exp $
 
 SHA1 (lprof-1.10.1.tar.gz) = ad7cc5fff5d6dfff9d0993d201232d7bb71a46aa
 RMD160 (lprof-1.10.1.tar.gz) = d4a20cffe42a2ca12a1321a2e6013756e447300f
+SHA512 (lprof-1.10.1.tar.gz) = fc1f3d5288d59a3cccf69ee6081ac535ac3f8d05c55578d56afb50b840768071b3ecac253da9622433b38ac42951cd0ccc2fb4209f960f912831b2cdc2898d2c
 Size (lprof-1.10.1.tar.gz) = 1244587 bytes
 SHA1 (patch-aa) = 5ee77dffc9d5f30fe72dca7262903fc88988a8f9
 SHA1 (patch-ab) = 727da3358b8595c49b4e470a60808685a9b84ac9

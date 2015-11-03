@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2014/02/10 11:46:55 obache Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 21:33:54 agc Exp $
 
 SHA1 (cnxtutil-0.00-alpha.tar.gz) = bd151410026a307562ed928d72feb8aa57b2cb51
 RMD160 (cnxtutil-0.00-alpha.tar.gz) = a9ef8504c8254c2f6e99cea2a1345dcdc48a6bda
+SHA512 (cnxtutil-0.00-alpha.tar.gz) = c2a1ce1ae95a76ad2f304a13e07a8400c8e1a0e933fca71ae4c979a94789983fa3b670a8992cd4664e0342a75d1ebb13b0ad2f4c540498b353b48d6ad114a75a
 Size (cnxtutil-0.00-alpha.tar.gz) = 21087 bytes
 SHA1 (patch-aa) = e4b06174c37d573ecdaa67b0ab4fb41bb9a894c1
 SHA1 (patch-ab) = e9277d522b02191e49a9d0b8ef9057b64ae0ae6b

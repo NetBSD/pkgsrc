@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.1 2015/10/17 10:28:43 fhajny Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:11 agc Exp $
 
 SHA1 (opencv-2.4.11.zip) = d6e3048416d42213c204f89b9dfe39742f9a708c
 RMD160 (opencv-2.4.11.zip) = 793391b05b571859005b98612cb176c02352a94f
+SHA512 (opencv-2.4.11.zip) = 748f6b939200a7ad2c2ae2531bf9bf38b82a576530f10691c13a0ad52568a7eb8b9d312e946ba8e78f592ef05ae389ecb982544f0c00cb83a2d87ae4b4da61b0
 Size (opencv-2.4.11.zip) = 91671436 bytes
 SHA1 (patch-modules_contrib_src_inputoutput.cpp) = 57255cda71854e490d83602828299f0ab6420887
 SHA1 (patch-modules_contrib_src_spinimages.cpp) = b3e465700059616be991d597230bc8dc42f15be1

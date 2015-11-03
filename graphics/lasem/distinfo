@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2013/03/14 18:47:29 drochner Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:06 agc Exp $
 
 SHA1 (lasem-0.4.1.tar.xz) = 6731a881e7b78922ad8e56113e019e155defc4a5
 RMD160 (lasem-0.4.1.tar.xz) = 3baa89704242017a796f0b5e291f5f2f0cf1f3dc
+SHA512 (lasem-0.4.1.tar.xz) = fc3e0a6629c2fa329ebc0cec51332ef48313f1d2bbd762e4a31f7f1802cb5cd69f7f4255ac1408a99b5b177979f29436dd95430ffe0dab4eeda4f31c8c2b127a
 Size (lasem-0.4.1.tar.xz) = 454164 bytes
 SHA1 (patch-ab) = a43a8c1792bf0a3b5fe1791fe763f35eca121b22

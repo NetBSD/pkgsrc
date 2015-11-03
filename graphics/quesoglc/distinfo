@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.2 2013/02/26 11:10:28 joerg Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 21:34:18 agc Exp $
 
 SHA1 (quesoglc-0.7.1-free.tar.bz2) = b8a30d69816612d19a968772f528d512ad0947f5
 RMD160 (quesoglc-0.7.1-free.tar.bz2) = d9405e0d57ee5c2bfb7f9b256ea1d47bd2f767c0
+SHA512 (quesoglc-0.7.1-free.tar.bz2) = 7a0c875b4eb24f01490fb9d982f91c8503e0ea0d177dd32eb5921febf1eab4b5abb2f95d4015714f974f6d384539577ec889389c072f1c686e427d3230ddde9e
 Size (quesoglc-0.7.1-free.tar.bz2) = 641475 bytes
 SHA1 (patch-src_ofont.c) = 5e3b4604c327fe186c02144d6c831253beadce7f
 SHA1 (patch-src_ofont.h) = c8ff08d3bc4fb13a44ab7e2534689d05ef668c06
