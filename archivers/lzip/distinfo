@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2015/07/26 12:15:30 mef Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 00:56:23 agc Exp $
 
 SHA1 (lzip-1.17.tar.gz) = d023f1e95202e45b50656833d09eee1a8c7bd9d6
 RMD160 (lzip-1.17.tar.gz) = bf3d2c68939cbf7d489e4635009dfddbc5c2092d
+SHA512 (lzip-1.17.tar.gz) = cd4a1a7d3778f22e3a6f2d2a20491919e662771e79d1738f74c63de857913e28186d53b2af7997e1b164f8ab792561c7dde8781bb025a1859271ddd72f5ed519
 Size (lzip-1.17.tar.gz) = 91299 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/04/21 08:56:37 jperkin Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 00:56:27 agc Exp $
 
 SHA1 (thunar-archive-plugin-0.3.1.tar.bz2) = 56d4c075eb570167caabdb5e4da8119fed4c16cb
 RMD160 (thunar-archive-plugin-0.3.1.tar.bz2) = 42b1e3be7a193aea9221cd3898a5cd88a6999717
+SHA512 (thunar-archive-plugin-0.3.1.tar.bz2) = 51157c2680b3fcc6b541d35fc2943a350a0354d7d5bbb5fbe8a9dcbbeaf4bf4f5fe62521b8e9a73254f70bbefc440357deade8181313da96270c280eb0464e68
 Size (thunar-archive-plugin-0.3.1.tar.bz2) = 329005 bytes

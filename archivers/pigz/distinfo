@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2015/02/08 16:04:28 fhajny Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 00:56:25 agc Exp $
 
 SHA1 (pigz-2.3.3.tar.gz) = 11252d38fe2a7b8d7a712dff22bbb7630287d00b
 RMD160 (pigz-2.3.3.tar.gz) = 053a9f2309982ba21a7041288ace4408ffbcbe5e
+SHA512 (pigz-2.3.3.tar.gz) = 6fa5ee1c03b4a8dc4b191acaa337b6f30132503ff413300214e1e6b27dd70590b53334be3fa880916f6ea4498beb8cf7c411a5954fdf188475882c44618c663c
 Size (pigz-2.3.3.tar.gz) = 92787 bytes
