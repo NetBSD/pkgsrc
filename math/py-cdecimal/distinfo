@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/08/15 14:23:01 richard Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 23:33:42 agc Exp $
 
 SHA1 (cdecimal-2.3.tar.gz) = 9b75cd3ac2e15512ef89f90af13ba5191ac519d2
 RMD160 (cdecimal-2.3.tar.gz) = 29cb215de13da8909b9820103ff09005f723fed4
+SHA512 (cdecimal-2.3.tar.gz) = 06c396e4dde6f6fd7e6de5e448697fe2fbf4df52402f8e31bdbef3bf4b1ec6e5ea5dae3cbffa73e167734ea527f750325c57d4358474e767215ac74a045e74e2
 Size (cdecimal-2.3.tar.gz) = 361809 bytes

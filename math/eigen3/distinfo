@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2013/10/06 16:16:17 wiz Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 23:33:32 agc Exp $
 
 SHA1 (eigen3/3.1.4.tar.bz2) = a5cbe0a5676ea2105c8b0c4569c204bf58fc009a
 RMD160 (eigen3/3.1.4.tar.bz2) = e458d4bc593f76498ef25df4efcc295e8d4d31f9
+SHA512 (eigen3/3.1.4.tar.bz2) = 555aea79b5dcdb8a1c15f223bb64191d69012a9f895e15218a2e0478bc7dc3d8a61d257c072ca29cd9e5788541ac0540af45320cfdb4095360dce841dfaba692
 Size (eigen3/3.1.4.tar.bz2) = 1052745 bytes
 SHA1 (patch-CMakeLists.txt) = aea4fd4e0043eb23e700dd72d0f6d80d125120e4

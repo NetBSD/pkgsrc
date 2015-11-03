@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.9 2008/06/23 17:55:33 drochner Exp $
+$NetBSD: distinfo,v 1.10 2015/11/03 23:33:30 agc Exp $
 
 SHA1 (aribas-1.63.tar.gz) = 280d71a7ecaa8f1ce6c62efa61118e2f48b63353
 RMD160 (aribas-1.63.tar.gz) = f377eac5fa6da2aa2411f7e75eca426e539ad2aa
+SHA512 (aribas-1.63.tar.gz) = 740d03c96c9b12ba4ce62edc63952419bd07fed26f9de6f36fdeda1cac52e01ddd9c8d817b746a2ab3668549f6457ecfced2184fceb8a4307f204a185a765059
 Size (aribas-1.63.tar.gz) = 291939 bytes
 SHA1 (patch-aa) = 34f6ec935bbe6c957ff40f07e2923a58b07e252b

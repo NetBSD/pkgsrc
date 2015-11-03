@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2012/04/15 15:09:26 brook Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 23:33:27 agc Exp $
 
 SHA1 (R/akima_0.5-7.tar.gz) = 7ba0f9510b49f6fcd617e891aa129ee29935a4ab
 RMD160 (R/akima_0.5-7.tar.gz) = e45b7312483873cba622d561460a986b0a60c7eb
+SHA512 (R/akima_0.5-7.tar.gz) = a2faccb5fd1d6c0cff77404e7eac6f22af60b8db19c15f19176343357ff1cc5fb1028f8e447b7058564769c698cc7538ffbcff101d6c1fd2fd57e3517c6dc091
 Size (R/akima_0.5-7.tar.gz) = 185681 bytes

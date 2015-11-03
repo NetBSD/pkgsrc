@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2013/05/06 14:52:54 joerg Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 23:33:37 agc Exp $
 
 SHA1 (openfst-1.1.tar.gz) = b070f84a981dfadc4c049f505bd3406a43dfa55d
 RMD160 (openfst-1.1.tar.gz) = 45657bb11f91ffdce5261ff6f4c103c164cc161b
+SHA512 (openfst-1.1.tar.gz) = dce835b2be5a805ba2927e36536ada1ad2d49c4bea2fed65bd7c09320626a4ba9f159c5b720ddee4f6e67c53f873496c3c7bf80fe826d7eeb31a898d2b2198b8
 Size (openfst-1.1.tar.gz) = 513404 bytes
 SHA1 (patch-src_bin_compile-main.h) = b0f77cf8876acea5597b0ddb622dcddc52103cf0
 SHA1 (patch-src_include_fst_cache.h) = 6a29b49f07b61a0ed9d9e2349805b836c45a25bc

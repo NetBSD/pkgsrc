@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2013/08/30 12:54:06 joerg Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 23:33:27 agc Exp $
 
 SHA1 (R/bitops_1.0-6.tar.gz) = 4e97b33d767e5e5b9deae2f852131a7e78b01c6d
 RMD160 (R/bitops_1.0-6.tar.gz) = fd53672d70c5e0e9aa3837b77bb687a851794880
+SHA512 (R/bitops_1.0-6.tar.gz) = 0761883d2b0ff4cbb7908e4c1999f045a323c3094e0351e26e8bc9481c3922e60099fb7c3f2abf1e4b45b8a120e074d9d59678559fb4ab7d0ead59d07c6f2a2a
 Size (R/bitops_1.0-6.tar.gz) = 8734 bytes
