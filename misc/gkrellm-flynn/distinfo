@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2010/02/25 18:23:45 joerg Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 23:49:36 agc Exp $
 
 SHA1 (gkrellflynn-0.8.tar.gz) = 8fc8ab477572ca8a858d19d5903f9a2b7c3b2d31
 RMD160 (gkrellflynn-0.8.tar.gz) = f35eeacd8121bd52c53a5610199211f7c34c790c
+SHA512 (gkrellflynn-0.8.tar.gz) = 36c643adcfb1ecb994eb6c2bb590225df1f268e885508ede28ea8b9760bdca33bfb48821d356ce0c56e38be5f7b16ad7062bc191e8a77aef1c792bd02da2f366
 Size (gkrellflynn-0.8.tar.gz) = 26722 bytes
 SHA1 (patch-aa) = 9d0a58b73b70df9cb312d4c60f57cff6ce23db05

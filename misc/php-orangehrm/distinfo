@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2012/05/11 10:41:27 ryoon Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 23:49:47 agc Exp $
 
 SHA1 (orangehrm-2.7.tar.gz) = aac7df4a089567deb5236e66f37bb0b58dcad701
 RMD160 (orangehrm-2.7.tar.gz) = 83b9aa7dce284f77833790e64dae183e6db7d1dd
+SHA512 (orangehrm-2.7.tar.gz) = 49bcbb8e458e994fd64287f852f923d0462d9f063792009186c05473f1e5674e01b46ea1bcc56fe902b53b7b1c713826db303fc489e785f746ed276b9cbabef7
 Size (orangehrm-2.7.tar.gz) = 5815395 bytes

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.8 2013/08/30 16:54:07 joerg Exp $
+$NetBSD: distinfo,v 1.9 2015/11/03 23:49:43 agc Exp $
 
 SHA1 (lile-2.0.tar.z) = 8969acd0de5599fee8fb2d1c49c4804f5ae25156
 RMD160 (lile-2.0.tar.z) = 3aac03a4a9fccf3aac9155ab02592c4a5571cb8a
+SHA512 (lile-2.0.tar.z) = 65864484d251b1eb6f04fb6a7a74e2e104a92e1b54ffab06f296f38ca0a5527ab2e21b4f48fd109fdf7c7bed9661b1da6f6f3746ab5813d78fc1d4b9c56bce29
 Size (lile-2.0.tar.z) = 22901 bytes
 SHA1 (patch-aa) = e7a5fbe3c32c403b0837c1e82f4d9ce2d5d9b06c
