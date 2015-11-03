@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2015/04/25 14:24:51 tnn Exp $
+# $NetBSD: Makefile,v 1.78 2015/11/03 19:08:45 joerg Exp $
 
 .include "../../sysutils/cdrdao/Makefile.common"
 
@@ -17,6 +17,8 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/applications share/pixmaps
 USE_TOOLS+=		pkg-config
 INSTALL_DIRS=		xdao
 GCONF_SCHEMAS=		gcdmaster.schemas
+
+CXXFLAGS+=		-std=c++11
 
 .include "../../devel/libsigc++/buildlink3.mk"
 .include "../../x11/gtkmm/buildlink3.mk"
