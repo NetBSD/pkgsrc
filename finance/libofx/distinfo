@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.12 2014/12/30 13:20:29 wiz Exp $
+$NetBSD: distinfo,v 1.13 2015/11/03 00:12:12 agc Exp $
 
 SHA1 (libofx-0.9.10.tar.gz) = 33f394c963c087217cb6c508af842d4844bc0823
 RMD160 (libofx-0.9.10.tar.gz) = 928069129cf945dc85521907325977a36dbeae7f
+SHA512 (libofx-0.9.10.tar.gz) = 061110702034dbbb9be3adaebe6236a4b0842169d8ee7671bad6c93960b380cbb33953bdf080c8b14f45930b0c817fcfe1bf71f15d9872dd2535a1415f5be895
 Size (libofx-0.9.10.tar.gz) = 1433837 bytes
 SHA1 (patch-lib_ofx__preproc.cpp) = 355bc1db8bcdd723ef7534063a673348e3385163
