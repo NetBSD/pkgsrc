@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15047 2015/11/03 17:47:34 bsiegert Exp $
+$NetBSD: TODO,v 1.15048 2015/11/03 19:34:02 bsiegert Exp $
 
 Suggested new packages
 ======================
@@ -551,7 +551,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o compiz-0.8.10
 	o concurrencykit-0.4.5
 	o cone-0.92
-	o confuse-2.8 (github.com/martinh/libconfuse)
 	o conserver8-8.2.1
 	o cook-2.31
 	o coreutils-8.24
