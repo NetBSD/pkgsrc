@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.1 2014/05/19 12:22:06 adam Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 00:15:01 agc Exp $
 
 SHA1 (ntfs-3g_ntfsprogs-2014.2.15.tgz) = c9836f340b508f5d7776156e5afb02434d3f0174
 RMD160 (ntfs-3g_ntfsprogs-2014.2.15.tgz) = 32418b98e60a483173352eb22cc101ed82c92ebf
+SHA512 (ntfs-3g_ntfsprogs-2014.2.15.tgz) = 7e4a5c9ac9d43dcf0d4b4085dea6703126fc4808cb9e1b7038884b20df2a8ab8f54c269d7204a279b62c5ba1127a966fd64226a8ed8f0c11667d9326c2f8fa7c
 Size (ntfs-3g_ntfsprogs-2014.2.15.tgz) = 1143575 bytes
 SHA1 (patch-Makefile.in) = 874ba5084b5eea312a24d7a6b339f83a3f7896d8
 SHA1 (patch-include_ntfs-3g_compat.h) = 78ea127359416c9106eef7025a2ccc84fd0b4447
