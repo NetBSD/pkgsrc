@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2014/11/21 15:45:23 adam Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 01:12:41 agc Exp $
 
 SHA1 (mikmod-3.2.6.tar.gz) = 55677382ab3e6d5ed35c520669e2cedd395a8ebb
 RMD160 (mikmod-3.2.6.tar.gz) = 6adfe5ec76bb57aab8f8a589248fc0d9cd8924b1
+SHA512 (mikmod-3.2.6.tar.gz) = 7a3fbbf7b0ceff92448224a7d9d58660c8f0ecdb26fe08b1b318abf2b07dd18d472467c226c72fcefd73aa9c42da813c65b236c91f5c582e41fad33b6ee96cc5
 Size (mikmod-3.2.6.tar.gz) = 278754 bytes

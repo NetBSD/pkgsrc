@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/04/18 12:38:22 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:12:36 agc Exp $
 
 SHA1 (libcuefile_r475.tar.gz) = d7363882384ff75809dc334d3ced8507b81c6051
 RMD160 (libcuefile_r475.tar.gz) = a0e931b8772371c59c85d4834efb4d9494273d01
+SHA512 (libcuefile_r475.tar.gz) = f33c064fe5455ca8ed78bd83c6e77d6430b61278255293c37b4dba382a3ffc815f714fc13ce16a3a741fae147a97895b640583db4c4176e96be1f8858179a455
 Size (libcuefile_r475.tar.gz) = 68282 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.10 2012/01/26 20:57:56 rhaen Exp $
+$NetBSD: distinfo,v 1.11 2015/11/03 01:12:44 agc Exp $
 
 SHA1 (Audio-Scan-0.93.tar.gz) = 2d6beeb154491dbd45dc13c3ce086c3194eac2fa
 RMD160 (Audio-Scan-0.93.tar.gz) = f7fb97810d84e023c78676480ac06486d1f29db8
+SHA512 (Audio-Scan-0.93.tar.gz) = 1e82f8ff35744a14626777450c87e15d7f0e5ada7f6643c5f9b38a599068cacef50ae83b525292440085de4593ad625abf5ee61282b59f64b1349d5d8f29e99a
 Size (Audio-Scan-0.93.tar.gz) = 3347237 bytes

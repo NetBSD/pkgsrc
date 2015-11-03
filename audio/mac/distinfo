@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2013/01/09 07:24:23 adam Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 01:12:40 agc Exp $
 
 SHA1 (mac-3.99-u4-b5-s7.tar.gz) = f846b50ec47cf31a849ce5a7ac41b799e06999aa
 RMD160 (mac-3.99-u4-b5-s7.tar.gz) = 7d8e97efc827e84f1bf0f59e2faebd6b38567c0c
+SHA512 (mac-3.99-u4-b5-s7.tar.gz) = fa7ca8cec0ba6c0fb78dda6e964b17e9331184fed656a2458d0e3ac12fc375a661adfd36c142ef63111f31c6b63e8c00fe40e7babe84f0cefe5433940be628e0
 Size (mac-3.99-u4-b5-s7.tar.gz) = 450981 bytes
 SHA1 (patch-aa) = 91b18da43302920e922a91cedbb1cbf4705fe87a

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/08/22 13:48:43 rpaulo Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:12:53 agc Exp $
 
 SHA1 (vorbisgain-0.37.tar.gz) = bd79764a83a8ee327df85c538ec798a6d3f240be
 RMD160 (vorbisgain-0.37.tar.gz) = 01de9516a7571c2ecdb3e4645c6c8e7ba8ce80cc
+SHA512 (vorbisgain-0.37.tar.gz) = 67181834e1a0d7c6e1ccd984e2d30ebf1dcdff84caa77f75e5e771de8414904810e966a43852b7184e075d2428fd8b431124835efc370ce6504b8b2756746e04
 Size (vorbisgain-0.37.tar.gz) = 208977 bytes

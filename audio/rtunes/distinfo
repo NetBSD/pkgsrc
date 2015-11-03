@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2015/01/09 14:26:07 joerg Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 01:12:49 agc Exp $
 
 SHA1 (rtunes-snap-20071122.tar.bz2) = 8de9a4e7811785bf2fa05f1da85319942a38c000
 RMD160 (rtunes-snap-20071122.tar.bz2) = 8442a8f90a1a94bdeb61fb8bf1d94bcd861169ab
+SHA512 (rtunes-snap-20071122.tar.bz2) = f7a836571b8e74a2c9551567ac3c315d39dca7a7a56aca275357d48548adb6f6c1ac2e80d5299b649a5fc9b3d07a18bcfe107bb148adb63c692425cbf89770c3
 Size (rtunes-snap-20071122.tar.bz2) = 17785 bytes
 SHA1 (patch-aa) = 6f4daa1a3adbc8f78f19d3224ecdaedebc4dffc5
 SHA1 (patch-ab) = de448ef28337874aef3704f013b0c8e914f6cdb4
