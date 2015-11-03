@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/10/16 21:40:28 kefren Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:27:50 agc Exp $
 
 SHA1 (monodevelop-database-2.4.tar.bz2) = 7b41d6715ac0a1d14b36f1038439f141dab95f85
 RMD160 (monodevelop-database-2.4.tar.bz2) = cebbfb01b4de7cd2824cf1f4f2bca63f0dcfd507
+SHA512 (monodevelop-database-2.4.tar.bz2) = 7d227861a1847b806f32d8fa953fb26431657eb853bacd49821b8ebd406e03eb56dd273da655b09f7073ee034827a02d3ec1e85782024ab3186f942d90efad0b
 Size (monodevelop-database-2.4.tar.bz2) = 416904 bytes

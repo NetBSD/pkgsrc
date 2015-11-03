@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/04/25 10:40:50 adam Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:29:14 agc Exp $
 
 SHA1 (pyobjc-framework-InstantMessage-3.0.4.tar.gz) = 72ee3da1be1e59f84f61e16e15fea047f06da1b7
 RMD160 (pyobjc-framework-InstantMessage-3.0.4.tar.gz) = 795be7c7bcf35b7b8820a268bc8ec0e642a62631
+SHA512 (pyobjc-framework-InstantMessage-3.0.4.tar.gz) = af39e0d7ed5b8c7b2bcd93da347f675b8ccf602d4d2fcf25127e1af2bccdb54d5ae17018fa0b4c9a53315cc855f20970f09a1d4a9537eeace6313e15d1da1f21
 Size (pyobjc-framework-InstantMessage-3.0.4.tar.gz) = 28830 bytes

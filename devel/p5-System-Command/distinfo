@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2015/09/06 06:47:40 mef Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 03:28:46 agc Exp $
 
 SHA1 (System-Command-1.112.tar.gz) = 286ea907383cab75883b37d22c54f9c25f5d3b82
 RMD160 (System-Command-1.112.tar.gz) = fe1176e2a68c905f128011a49d6a5f91513e042b
+SHA512 (System-Command-1.112.tar.gz) = 05f085d83f947fa0b6b950ffc012983ac4a7d0787caf0ce4944d0d8c0c30f598e9067f5e85a85cf4ca158eeddeefa2ffcf46ee0d31cd4a2bb727c2438b8b0c10
 Size (System-Command-1.112.tar.gz) = 27053 bytes

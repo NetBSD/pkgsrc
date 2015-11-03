@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 22:24:28 agc Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 03:28:42 agc Exp $
 
 SHA1 (Regexp-Shellish-0.93.tar.gz) = f89f99055da423a5dfd79717483a9be567ed36f3
 RMD160 (Regexp-Shellish-0.93.tar.gz) = 1d20b7244a429351fed9577aa06f53e0c53a4e63
+SHA512 (Regexp-Shellish-0.93.tar.gz) = c3ca3654241e567c7d7e8285934c95843a1c2c667c6de2f7269c18e95b0bb96351f523aeae481852fcb0a5723f753f26c85f60876a4754e573cf936ccdee4932
 Size (Regexp-Shellish-0.93.tar.gz) = 3343 bytes

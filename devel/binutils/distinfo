@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.26 2015/09/28 16:37:55 ryoon Exp $
+$NetBSD: distinfo,v 1.27 2015/11/03 03:27:16 agc Exp $
 
 SHA1 (binutils-2.25.1.tar.bz2) = 1d597ae063e3947a5f61e23ceda8aebf78405fcd
 RMD160 (binutils-2.25.1.tar.bz2) = 5756c6163a11964347e32d1b2805e97e74ff5e3f
+SHA512 (binutils-2.25.1.tar.bz2) = 0b36dda0e6d32cd25613c0e64b56b28312515c54d6a159efd3db9a86717f114ab0a0a1f69d08975084d55713ebaeab64e4085c9b3d1c3fa86712869f80eb954d
 Size (binutils-2.25.1.tar.bz2) = 24163561 bytes
 SHA1 (patch-aa) = 1a127f82c807cbd1ac6fee073c618f3fb48667f6
 SHA1 (patch-bfd_cache.c) = db48182cee9f0bf16fbefca260b542171f0ef596

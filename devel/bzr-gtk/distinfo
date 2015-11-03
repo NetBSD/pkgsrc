@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2011/11/27 14:20:18 cheusov Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 03:27:17 agc Exp $
 
 SHA1 (bzr-gtk-0.100.0.tar.gz) = 6f1a55a4011b6e8084783fdc3b07233c3f4fb77a
 RMD160 (bzr-gtk-0.100.0.tar.gz) = 783d099d9be700193c1523a8c6d54826ada49187
+SHA512 (bzr-gtk-0.100.0.tar.gz) = 6cc82ac6ba943713822369a86fdf43873f8e9368e51a05fe8b5f40085d95fae9ac244874050604a5e178353f2ef87b2e45388d7b9693530b48ac8278f8097be8
 Size (bzr-gtk-0.100.0.tar.gz) = 220559 bytes

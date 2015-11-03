@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2005/02/23 22:24:11 agc Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 03:27:17 agc Exp $
 
 SHA1 (c_cpp_reference-2.0.2.tar.gz) = 1346c174c1f0f21e0f3f708a4cba53f1fee6dcaf
 RMD160 (c_cpp_reference-2.0.2.tar.gz) = 2ff06d4c3b5a2cbc345262ac59f73d9d78a7f4bb
+SHA512 (c_cpp_reference-2.0.2.tar.gz) = e552fda0b84754600f08945830d40b4fc1673d42bf599089afd74399ac5611a99da0564cc572330384de82e8058fdb079167057c82fbecbb4848f5466a6de160
 Size (c_cpp_reference-2.0.2.tar.gz) = 1391424 bytes
 SHA1 (patch-aa) = 38450c99e0643a7e58dfc10c21d47778400f3b9a

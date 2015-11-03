@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 22:24:23 agc Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 03:28:03 agc Exp $
 
 SHA1 (Class-WhiteHole-0.04.tar.gz) = 59b984271a6a1bc5dda5c1dadd3706a77f5f386e
 RMD160 (Class-WhiteHole-0.04.tar.gz) = ee0eb1a012d513b0d53705310657d470394286a2
+SHA512 (Class-WhiteHole-0.04.tar.gz) = 2b972e4e520123d2b367887cf20e7655b7f513bdc45a3659b73c4f9475e28cd1b824461092616d1fc357f6b811df1eef15de2d8403f42b2e41dfa35f361a9de7
 Size (Class-WhiteHole-0.04.tar.gz) = 3279 bytes

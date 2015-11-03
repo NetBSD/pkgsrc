@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2013/11/08 15:32:10 riz Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 03:29:05 agc Exp $
 
 SHA1 (buildbot-0.8.8.tar.gz) = 4d471ad799baacfe21a33462e91099267e0d447f
 RMD160 (buildbot-0.8.8.tar.gz) = 5658a26075833a1402a2f271d9998549c33ccfe5
+SHA512 (buildbot-0.8.8.tar.gz) = bd6f9a7a8bdf53a3f7012af7ec4aa2f1f40479496ca1e95dc1b9e0524dbf3bfcd0fbe09a94f8e68b0fd8018949c841d8b3f6ecc306b388e4b917ad21597d9168
 Size (buildbot-0.8.8.tar.gz) = 4641582 bytes

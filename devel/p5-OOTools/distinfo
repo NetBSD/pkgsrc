@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2014/07/31 07:45:15 hiramatsu Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 03:28:35 agc Exp $
 
 SHA1 (OOTools-2.3.tar.gz) = a6c8a3a0569659fe64187fe585f796847c409a11
 RMD160 (OOTools-2.3.tar.gz) = d0ec7436f2f0e4eb5bfb0aea4f23098e9358ee08
+SHA512 (OOTools-2.3.tar.gz) = acaafac94d32a1a4e6bad929f94501fb07ff9cbd7ebfd03e4406df7b945cf8d33ab7a0c4a25544442e797838a5a8b7d5a8855e87a7a20631b2a9ca40db82e0a4
 Size (OOTools-2.3.tar.gz) = 34416 bytes

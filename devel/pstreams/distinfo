@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2015/09/24 23:08:42 ryoon Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 03:29:03 agc Exp $
 
 SHA1 (pstreams-0.8.1.tar.gz) = e2dd7987e6498d892bee87fcd95baf38a209a008
 RMD160 (pstreams-0.8.1.tar.gz) = 16f99fe8819b926d7093729adc153eb9244e347f
+SHA512 (pstreams-0.8.1.tar.gz) = edb6fa30e0a77c4a83bbb7a15c427376d39d73db17112cc5888c404fa1e99407c42c09c9ca072027ac52c753071fb7d7333237bd49aa44488512ce64de22d8f3
 Size (pstreams-0.8.1.tar.gz) = 58588 bytes
 SHA1 (patch-Makefile) = 64d1f6d0ff991e5de03e23a038cd3227ae1edbfa

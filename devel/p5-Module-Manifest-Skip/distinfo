@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/04/28 12:07:23 mef Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:28:29 agc Exp $
 
 SHA1 (Module-Manifest-Skip-0.23.tar.gz) = d738d335dfb534a13b3eac62b6044f2edb8752cf
 RMD160 (Module-Manifest-Skip-0.23.tar.gz) = 0362a47178aec5058fa1467394b2ab56e0b3d90c
+SHA512 (Module-Manifest-Skip-0.23.tar.gz) = 96336f5c1b4b294abcd4d38648657604d5e80ee3078531befc630f8cd45dac509de4c0f298889c3376f93f2ac57e060805018bb3d4b21420fb5f76dec2480926
 Size (Module-Manifest-Skip-0.23.tar.gz) = 13569 bytes

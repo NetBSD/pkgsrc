@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.15 2015/03/10 16:24:57 taca Exp $
+$NetBSD: distinfo,v 1.16 2015/11/03 03:29:34 agc Exp $
 
 SHA1 (swig-1.3.38.tar.gz) = fc3759f1671bf55e14ee7ec178e1b08033a3160c
 RMD160 (swig-1.3.38.tar.gz) = 4bca6975c1011a96a3eeff84f3ac539f2a91bedc
+SHA512 (swig-1.3.38.tar.gz) = 835b54e2eab7ae743b72a1509c034c3bc69d4b1a1f4ff8e66b609934447920a19240822e0eb2ff5fa27779aafe3109dcfc2163efd0c7ea1130f5b773d5354b23
 Size (swig-1.3.38.tar.gz) = 4816202 bytes
 SHA1 (patch-Lib_lua_luaruntime.swg) = 0ba6aa9a053522bea896bf27dee7ffb55ed4a2be
 SHA1 (patch-Lib_std_std__container.i) = e4bb2b51b88651adfcec63318d8a228e7f3f8971

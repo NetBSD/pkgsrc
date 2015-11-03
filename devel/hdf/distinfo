@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.11 2013/10/27 20:31:21 joerg Exp $
+$NetBSD: distinfo,v 1.12 2015/11/03 03:27:31 agc Exp $
 
 SHA1 (HDF4.2r4.tar.gz) = 000fa1be9c355c490cceed786feeb269a0d355a7
 RMD160 (HDF4.2r4.tar.gz) = 13274858f1fa0c339fab83b1f9c37314bd10d624
+SHA512 (HDF4.2r4.tar.gz) = 184166a79154bbae4e4efa888042d3b1d398e0b35f6bca680a598bbfc137122b4109da9db6ae45c0caea02a0bd64c2d6a6459ba88f411a3f62edc5de57e83e0a
 Size (HDF4.2r4.tar.gz) = 3914118 bytes
 SHA1 (patch-ai) = 3b85a0d32ca8e7d4065bf09960de2769c12740cd
 SHA1 (patch-aj) = f1f64d19b4346da5b18c2d80c93f929a96b56b70

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2009/12/29 18:12:44 asau Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 03:27:40 agc Exp $
 
 SHA1 (libf2c-20090201.tar.gz) = 85bd1602dce67a4d784fa9815c993202b1da3216
 RMD160 (libf2c-20090201.tar.gz) = 27fe1476eef9431042b67660120285395850d6a7
+SHA512 (libf2c-20090201.tar.gz) = a84cc5e8c7480e5af850a03e4f71bce3ac121afdd0ba5a3ff365401f35fe423fec907c774ad4d30ebdce3ce4f42a780287b45f42b0f58c3f1f71af50f02b48b3
 Size (libf2c-20090201.tar.gz) = 81983 bytes
 SHA1 (patch-ai) = 3213ead493c570eb70bbd43e47f6bbc4bb762796
 SHA1 (patch-aj) = 78ff4ad86970e1a32eb65ca4364dda0004959cf3

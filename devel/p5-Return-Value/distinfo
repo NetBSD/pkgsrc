@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/02/15 01:28:37 mef Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 03:28:42 agc Exp $
 
 SHA1 (Return-Value-1.666004.tar.gz) = d1dbc0daee46294ab121cb7b54198d7f08d07193
 RMD160 (Return-Value-1.666004.tar.gz) = 591d8b8a7ba6adfe93ab91ed0e2ac4d0a0bcca74
+SHA512 (Return-Value-1.666004.tar.gz) = e60bf4545ac28cdee8040a5f6b1d14817fa90a5707f6dd1843b66739f7196c7550f592f6f30dabfbb5e7763e13955781841341b87a0ca49601cf8d0e58f9fac0
 Size (Return-Value-1.666004.tar.gz) = 17113 bytes

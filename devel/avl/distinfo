@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 22:24:10 agc Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 03:27:15 agc Exp $
 
 SHA1 (avl-1.4.0.tar.gz) = 44bf7e95a7fb0d6231dd698b0c32616cf4953011
 RMD160 (avl-1.4.0.tar.gz) = 06f7e085e0e4010b4f026697dae5545070beb2c7
+SHA512 (avl-1.4.0.tar.gz) = 1372d13b4bf093eafbc61428904c5759853d4c22b79aff9ba486badf83126e7597e84f08151831baace2edc33ba58ba45ba934696815ffc34951630654761cdf
 Size (avl-1.4.0.tar.gz) = 128589 bytes
 SHA1 (patch-aa) = 1020d5ef34f3f6090e5800db4266902c99988b42

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2014/11/03 07:26:17 wen Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 03:28:33 agc Exp $
 
 SHA1 (MooseX-SemiAffordanceAccessor-0.10.tar.gz) = efb1498017ded717a94c9c7c4c41a0d3a88150f3
 RMD160 (MooseX-SemiAffordanceAccessor-0.10.tar.gz) = 4a9418677939a8aeeb7a4db797676bc98c325797
+SHA512 (MooseX-SemiAffordanceAccessor-0.10.tar.gz) = 6261248cc3b4a5dca4ae3303160034be89483fd27197978310c0f4b13573914d99837b50886a0f5e423a148f4b876e5c74e54836203eb4837865e4d4a1102f4f
 Size (MooseX-SemiAffordanceAccessor-0.10.tar.gz) = 16697 bytes

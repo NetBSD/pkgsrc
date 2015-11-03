@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/07/11 14:28:46 seb Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:27:55 agc Exp $
 
 SHA1 (App-Cache-0.37.tar.gz) = 82a9abef99e53f1bc6410811303d401cc3f7605b
 RMD160 (App-Cache-0.37.tar.gz) = f7d5039dafe23a702a385a8cf58a25d4b6676fe6
+SHA512 (App-Cache-0.37.tar.gz) = 7412b2fb598aafacecc1aa8c887d0c9d8a40bcd2b66b98786cea32818934784b096d52f4cfefcac3d4713e427f6000bddb7e5db225cdf8b649214aaad34afcff
 Size (App-Cache-0.37.tar.gz) = 5690 bytes

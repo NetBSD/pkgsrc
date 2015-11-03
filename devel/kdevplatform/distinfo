@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.13 2015/08/29 02:29:53 markd Exp $
+$NetBSD: distinfo,v 1.14 2015/11/03 03:27:37 agc Exp $
 
 SHA1 (kdevplatform-1.7.0.tar.xz) = 9fc196e7cb09ab33fd5cfbf5af19aa7c513efdc9
 RMD160 (kdevplatform-1.7.0.tar.xz) = bfa2899a954f3aa1529c3250f56c92a7057d7c42
+SHA512 (kdevplatform-1.7.0.tar.xz) = e553bd5e18c13271f076498ff0a4ff8c838afe357733c274ac869bd209d00b429a9d19912f5f2e771b63d12724129d7e00a45c26237b97ba5a3ef676c89b7720
 Size (kdevplatform-1.7.0.tar.xz) = 1900040 bytes
 SHA1 (patch-plugins_classbrowser_documentclassesfolder.h) = b224d053031f21b09f33d35f2e023232338aca4e
 SHA1 (patch-plugins_standardoutputview_outputwidget.cpp) = 39ec8e88a7b39d2b95af3819add5a1cb379df4ea

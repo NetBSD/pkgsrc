@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/04/18 15:17:42 seb Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:27:55 agc Exp $
 
 SHA1 (AnyEvent-AIO-1.1.tar.gz) = 0a0c8ec4233c4f2c3844b6a343fd4f4483c53419
 RMD160 (AnyEvent-AIO-1.1.tar.gz) = 92e36dc8d974dbd41ac1312c7511c87ad9bc55e1
+SHA512 (AnyEvent-AIO-1.1.tar.gz) = f4fa0ad73d917ef2e9bea254778c7ea117cc417a5eed9d2c5ee3f132ae9f25ad286ec35c97397e843da9f0dd32e3eb7e3921bf54613017e3fc9c63db3bbb9f59
 Size (AnyEvent-AIO-1.1.tar.gz) = 2062 bytes

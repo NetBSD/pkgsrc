@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2015/06/08 13:39:35 joerg Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 03:29:35 agc Exp $
 
 SHA1 (tclreadline-2.1.0.tar.gz) = 3b44f92ce1921ebccebab9b44d7cda6992cf8923
 RMD160 (tclreadline-2.1.0.tar.gz) = 9967f7d7aa18fcd822f5701306f3a75a6001fdc5
+SHA512 (tclreadline-2.1.0.tar.gz) = bd67a65fe2ec708834fb67fabf2e36e778a6aeeb7a7b69cda298f9e18acc9e03f3a379f81ff7d2d289bfbf1093bc86fecbf96fe5d04a2ca954899cc7df6fe4bf
 Size (tclreadline-2.1.0.tar.gz) = 160541 bytes
 SHA1 (patch-tclreadline.c) = d7f6990b99e62a048048afe3fba6e8bb790eff93

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/05/03 07:18:59 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:27:54 agc Exp $
 
 SHA1 (Algorithm-Permute-0.12.tar.gz) = 0e82a8cbca7d90fc09a3c8cd8bfe1213a3e9cf1e
 RMD160 (Algorithm-Permute-0.12.tar.gz) = 06e8949a8689aaccefae92727f954c010146202c
+SHA512 (Algorithm-Permute-0.12.tar.gz) = 95d4ef417bd7f781368e15ce35480c0c626c71e48c77912116f627986328cf5b4d15ebccdaf0e4bca2917c028f758374be35fe32f8c588206144cf134d53fb00
 Size (Algorithm-Permute-0.12.tar.gz) = 13187 bytes

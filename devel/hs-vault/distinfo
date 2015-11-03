@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/07/28 21:01:08 szptvlfn Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:27:34 agc Exp $
 
 SHA1 (vault-0.3.0.3.tar.gz) = b099aef96ef0a920d2f8ee9d824e09cee4dfcd9d
 RMD160 (vault-0.3.0.3.tar.gz) = d0d9af45f39e8a71e66134733b49546eaaa63d2d
+SHA512 (vault-0.3.0.3.tar.gz) = 142bd654c5ea0cdda17429d130bf44901cfb197068db2aa671f564bd2ff1ce61f517d4fa598990bd3c3ce33181f784b5e4524190895d0efe8f4b57d163096fb5
 Size (vault-0.3.0.3.tar.gz) = 4906 bytes

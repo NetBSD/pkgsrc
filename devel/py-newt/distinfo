@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.2 2014/03/27 07:54:49 obache Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 03:29:11 agc Exp $
 
 SHA1 (newt-0.52.16.tar.gz) = 678bf57e0a7e28db4da1a2951dbb65f9ce882f73
 RMD160 (newt-0.52.16.tar.gz) = 0e575dd60b95f2b4fd748f98793be97168793a5f
+SHA512 (newt-0.52.16.tar.gz) = 38cf5aa6660a3ee0409ed0767c02d777a4a2c28a000a359bb735da5abf8ee38f375ef333d10865a1eb3828497b6c58d2f3f6011c7b7e7c2360612b985dcf3d25
 Size (newt-0.52.16.tar.gz) = 183487 bytes
 SHA1 (patch-Makefile.in) = cae82773fcb94dc9b9aa4349b52308e3136843f2
 SHA1 (patch-configure.ac) = 8c685e25e89503cb5e62362c8b8132931d4c6184

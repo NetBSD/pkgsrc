@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 22:24:23 agc Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 03:28:03 agc Exp $
 
 SHA1 (Class-ObjectTemplate-0.7.tar.gz) = 1d02a538df35885ee98590eaa01d653178aac2cc
 RMD160 (Class-ObjectTemplate-0.7.tar.gz) = ee24f6d6f68fef9d65a89eac54dd471b51dbd051
+SHA512 (Class-ObjectTemplate-0.7.tar.gz) = e59b62d2e0ecc403f2ec3c7859eb955d8d7da63881c2ee1ad583f14cceb36eb7b9523668a47d19cb139c5f9d596434e580fd7f29ab2a0a265566ccd3ab128489
 Size (Class-ObjectTemplate-0.7.tar.gz) = 6278 bytes

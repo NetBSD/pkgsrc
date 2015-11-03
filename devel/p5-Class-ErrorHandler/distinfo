@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/05/22 23:47:26 mef Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 03:28:01 agc Exp $
 
 SHA1 (Class-ErrorHandler-0.04.tar.gz) = 04c31f206c2eee369ed54ff61b5a3ba086018714
 RMD160 (Class-ErrorHandler-0.04.tar.gz) = a7da4eba88674a66f1c64bb830cefb1af93ab0cb
+SHA512 (Class-ErrorHandler-0.04.tar.gz) = 9e235da1c2091f9422723af4528305b8ed2b50920a865e6fee76380a8c512fcd837d752f4ea5146df12c506c776e88c1075419ab3809be3296995387df759c83
 Size (Class-ErrorHandler-0.04.tar.gz) = 9821 bytes

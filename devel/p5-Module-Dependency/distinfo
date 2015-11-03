@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2009/05/01 22:22:56 sno Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 03:28:27 agc Exp $
 
 SHA1 (Module-Dependency-1.86.tar.gz) = 61ff55b0c1f76bd94d06e59b8cf7d0ea359f58a6
 RMD160 (Module-Dependency-1.86.tar.gz) = a4de416bae37bfc4a9a341a13d20500f2b5daf0d
+SHA512 (Module-Dependency-1.86.tar.gz) = e3d51cdf71098ab81452bbdb797a91ffd538a65190a8879d8014a7d53b01a4a46b4e707945d6e9c97bf6980483ec2da7430d1c696ea155f541f794b5eb44f2a5
 Size (Module-Dependency-1.86.tar.gz) = 53073 bytes

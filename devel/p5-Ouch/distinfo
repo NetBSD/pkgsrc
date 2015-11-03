@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/01/30 16:06:08 schmonz Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 03:28:36 agc Exp $
 
 SHA1 (Ouch-0.0409.tar.gz) = f6cfc008e79f2fbffc943c34347b265a254fadde
 RMD160 (Ouch-0.0409.tar.gz) = 19e2d74cd5b1688dad955128e21053b811b57534
+SHA512 (Ouch-0.0409.tar.gz) = d0dcb528f72a45582bb072d05ab40bc01e4a6b5748afcac17668f7eca43a87f66f08f235fd9f2dce79db3ef46f0bd7502ab9617e110682eb20022cafadf5e6c0
 Size (Ouch-0.0409.tar.gz) = 13125 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/11/15 16:45:42 sno Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:28:08 agc Exp $
 
 SHA1 (Devel-BeginLift-0.001003.tar.gz) = 5dd4ac815ceb201db9a403cb7053285bd5a874dd
 RMD160 (Devel-BeginLift-0.001003.tar.gz) = 283913b1894429dcc14f8ab11858a7f6d74793cc
+SHA512 (Devel-BeginLift-0.001003.tar.gz) = ffe1e14bd5905ebf4226da118329e2f63d5a237f81b92367a473861ce2bbf3bb418bd0674ef82bbead024d5c42e0ccec705065cdeeaa473b07cf7b7c0de9dafa
 Size (Devel-BeginLift-0.001003.tar.gz) = 18974 bytes

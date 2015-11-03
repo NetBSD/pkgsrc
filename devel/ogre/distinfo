@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2015/04/21 17:04:25 joerg Exp $
+$NetBSD: distinfo,v 1.9 2015/11/03 03:27:53 agc Exp $
 
 SHA1 (ogre-v1-6-3.tar.bz2) = 0bde8f8d982151c561e9e6c9ccb51e0d19b5eab6
 RMD160 (ogre-v1-6-3.tar.bz2) = e1e16c152d5cb3141e306e4886092b5675695e9a
+SHA512 (ogre-v1-6-3.tar.bz2) = 198ac14c730f97a4ee5802a8b3d44dddc836082d05e18e9f5e0b6e79dad18b231b75f6f0f13837736aff27af7548139d3ed343d2c3aaf6bebccf793859b8ede4
 Size (ogre-v1-6-3.tar.bz2) = 41790055 bytes
 SHA1 (patch-OgreMain_include_OgreStringConverter.h) = 8ef476c0056fdf69b4f158e5e8c85bb3b0c0c386
 SHA1 (patch-OgreMain_src_OgreStringConverter.cpp) = 6c1cc7f6f5c23c68ebc0cee33d661ba199d836e9

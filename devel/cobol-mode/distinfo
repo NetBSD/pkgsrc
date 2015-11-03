@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/05 12:38:50 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:27:19 agc Exp $
 
 SHA1 (cobol-mode.el-0.0.20150505/cobol-mode.el) = da740e1492dbf20ffcd9d287d019dfc7af82add9
 RMD160 (cobol-mode.el-0.0.20150505/cobol-mode.el) = 59a73d207b34581e7f7074f1302139db2bda8b0f
+SHA512 (cobol-mode.el-0.0.20150505/cobol-mode.el) = 84a15fad02026672b0ba9b193d433c5f3d8f2c8612de19c2a0bcd8463eebc556da795e77875c6643dbd0d0f7c6d33e4a99a00dcbd74114e3967eea9e2a2173cf
 Size (cobol-mode.el-0.0.20150505/cobol-mode.el) = 48835 bytes

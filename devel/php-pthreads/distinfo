@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/03/07 22:55:54 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:29:02 agc Exp $
 
 SHA1 (php-pthreads/pthreads-2.0.10.tgz) = be2745b65ecf09190fb323ccbf168288c70cfd6c
 RMD160 (php-pthreads/pthreads-2.0.10.tgz) = 9424861725ff90578e325ab2dad5e7f515df3727
+SHA512 (php-pthreads/pthreads-2.0.10.tgz) = 71174a56a52ec0165a73b887f85b6599287c472d64dbb69ba6e33295555dc0d925d14e74bbc3914e35eb0443ad8a17fdb0dcd3ee981e9dd8b08cef7d3ba7b61c
 Size (php-pthreads/pthreads-2.0.10.tgz) = 85247 bytes

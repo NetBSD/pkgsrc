@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2012/11/15 16:44:56 shattered Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 03:29:37 agc Exp $
 
 SHA1 (tpasm1.7.tgz) = 77d06de9d8e29092f2e5cde43930c505c6deb89e
 RMD160 (tpasm1.7.tgz) = 62f0105c5af78083b82d09f90e4ff023d4480286
+SHA512 (tpasm1.7.tgz) = a04202e967d38edffb1f8b9454374de0bda577f9f44ad3d13a3eb2778b2ca719ee9ce140f1f8d34e866803b03b5bd4af67d2882716a400408f72a59736727d2e
 Size (tpasm1.7.tgz) = 190597 bytes
 SHA1 (patch-aa) = 12c5787528df98e7ce5b6ce5d217633057a17f81

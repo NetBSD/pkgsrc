@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2007/07/25 12:16:29 joerg Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 03:27:13 agc Exp $
 
 SHA1 (acunia-jam-1.0.tar.gz) = 784a892a1ba6531b0c19ec3a03f49dd7afbddd47
 RMD160 (acunia-jam-1.0.tar.gz) = a1138e60aea64096a9f008e9e01ed1ae9dbf0bcc
+SHA512 (acunia-jam-1.0.tar.gz) = f4da402bccc6c05a692cf77f6b66a3e18a1ba340f41fb5b23d3f85df7f8d050ae52e08effe8d40c6065803d7f9e82b18a165c00b828d4ec5a0deae83e518d395
 Size (acunia-jam-1.0.tar.gz) = 138340 bytes
 SHA1 (patch-aa) = 45a957df574ffd63f90214500bad33adc0f63826
 SHA1 (patch-ab) = d6e4f102b898a6a144d3686ba664da256e6f9726

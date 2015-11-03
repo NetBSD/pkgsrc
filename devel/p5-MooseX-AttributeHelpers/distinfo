@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.9 2015/09/04 14:39:53 mef Exp $
+$NetBSD: distinfo,v 1.10 2015/11/03 03:28:31 agc Exp $
 
 SHA1 (MooseX-AttributeHelpers-0.24.tar.gz) = dd0e2dadaee82f36c93ca0968d23e26d33aef567
 RMD160 (MooseX-AttributeHelpers-0.24.tar.gz) = 5abd70298f5905f1507d696f0b14814a6ab26d6b
+SHA512 (MooseX-AttributeHelpers-0.24.tar.gz) = ac2b5f1136110e18cfd4d2f6338a7d3699a686c681fcdc038dfb396dc84a4fabb69d371201747afa1e9b07aa293326510a97d43305bad0bb2ceee2d24c925208
 Size (MooseX-AttributeHelpers-0.24.tar.gz) = 51799 bytes

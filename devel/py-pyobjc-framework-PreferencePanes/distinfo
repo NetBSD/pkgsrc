@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/04/25 10:40:50 adam Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:29:14 agc Exp $
 
 SHA1 (pyobjc-framework-PreferencePanes-3.0.4.tar.gz) = fb4b9c1882b7292097c579a48638f498e7acbd44
 RMD160 (pyobjc-framework-PreferencePanes-3.0.4.tar.gz) = e755087a61e480563973a08396f8998d3a9c91d4
+SHA512 (pyobjc-framework-PreferencePanes-3.0.4.tar.gz) = 8d1d7a36312da24411d16e738983eeed2dc91e59acc23338e4dfcf58d75abeda88d54ba56a3a6549a129463d7c8e74a3aa8d158df129b26d1f68bf908d747520
 Size (pyobjc-framework-PreferencePanes-3.0.4.tar.gz) = 21103 bytes

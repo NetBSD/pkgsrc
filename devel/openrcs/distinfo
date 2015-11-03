@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2014/08/13 22:38:33 joerg Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 03:27:53 agc Exp $
 
 SHA1 (openrcs-20110824192219.tar.gz) = 582ca78a9efcc193c18d82fae0617468bdc75b1d
 RMD160 (openrcs-20110824192219.tar.gz) = 266fd50d49da2fbacd2a7c05e2f545a3a19331ad
+SHA512 (openrcs-20110824192219.tar.gz) = 7dcc009f1c8ee0da37bc1d59ecbbf06c1338a136864358164125fa43be69ede73d47501745092266f98346cfcbb4e3d2bce6f27fe1a74b02f765872afbb85e74
 Size (openrcs-20110824192219.tar.gz) = 106878 bytes

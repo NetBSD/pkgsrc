@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/11 14:28:43 bsiegert Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:27:29 agc Exp $
 
 SHA1 (google-api-go-client-0297be7525.tar.gz) = 4123b6d86bbd6ab599846f7b03ed9c6cbb38bdc5
 RMD160 (google-api-go-client-0297be7525.tar.gz) = 0531e15e1c7a5c7c878432289af47ee4c6bc78e8
+SHA512 (google-api-go-client-0297be7525.tar.gz) = 778154d83a9d3a1445cac5c108d9039e0ac3ab3c6951880d29debc718d4005ed7819e23a16e08bcb41cbba8c58c673f676a29631ee4e22b155ee17bf4ce9fc86
 Size (google-api-go-client-0297be7525.tar.gz) = 2148581 bytes

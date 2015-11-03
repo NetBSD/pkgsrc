@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/05/19 21:23:29 szptvlfn Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:27:32 agc Exp $
 
 SHA1 (data-default-instances-dlist-0.0.1.tar.gz) = 19c3f60425ca61216c6177fcbc3a0a9f8a65448d
 RMD160 (data-default-instances-dlist-0.0.1.tar.gz) = dc299aa9da7394adc7c203c81cb824a2d57597d8
+SHA512 (data-default-instances-dlist-0.0.1.tar.gz) = b3794c296d5f1ca54badaab4c267b302967ce73ac649d8df031daafa17f66537bf670ee42fda1b75b92998eb4b8862c1e0a9bdd3716c31dfd0937c3c76b6f03d
 Size (data-default-instances-dlist-0.0.1.tar.gz) = 1503 bytes

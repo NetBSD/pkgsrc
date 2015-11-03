@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/05/28 22:02:11 szptvlfn Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:27:34 agc Exp $
 
 SHA1 (tf-random-0.5.tar.gz) = 27eeae9eeeee8d4162a2646eeee0fd715f76cead
 RMD160 (tf-random-0.5.tar.gz) = bd58a02f7e68c4fd4e51591fa4ddad93d416d717
+SHA512 (tf-random-0.5.tar.gz) = a766909571b4b37daaaaa9fa1aa9739bd2db8c32c0f64452fd7c3717f4578090e5227b763772858c6c311c5f366dd461421ffc3beb295455902fea1fb133deb7
 Size (tf-random-0.5.tar.gz) = 18483 bytes

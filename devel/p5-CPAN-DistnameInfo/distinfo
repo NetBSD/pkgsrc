@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2011/08/10 10:01:37 adam Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 03:27:58 agc Exp $
 
 SHA1 (CPAN-DistnameInfo-0.12.tar.gz) = 8e47e7d4dfca64a07ac2d4f4a662fef3c8801cac
 RMD160 (CPAN-DistnameInfo-0.12.tar.gz) = 10562f85b42e41ff537059ba2becd947c84982d3
+SHA512 (CPAN-DistnameInfo-0.12.tar.gz) = f52eb88b87ab732d13c2ee4e4770cf27c249d2b2446b51e75abe31f2a70b8dc7d8370f4c4426fa68cc8fa7a905668dfdcd1387cd98e239393bde90d1965929f1
 Size (CPAN-DistnameInfo-0.12.tar.gz) = 14523 bytes

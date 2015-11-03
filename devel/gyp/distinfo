@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2015/01/06 10:26:59 ryoon Exp $
+$NetBSD: distinfo,v 1.9 2015/11/03 03:27:31 agc Exp $
 
 SHA1 (gyp-0.1pre2019.tar.gz) = 549e10b125271a5fdd07dc6db0877505f8cbdaa9
 RMD160 (gyp-0.1pre2019.tar.gz) = e2cfa0d8de6742219457afa42daf59f4d6da80a2
+SHA512 (gyp-0.1pre2019.tar.gz) = 2e4cb18690d9b4e58518ac9b1423c15d6526ff9f48882cceba487dd7220ed55bb676fe82afe1d724d5e46eee2a4db5d2e083b7614dedc46d399bbdd7f50cffcd
 Size (gyp-0.1pre2019.tar.gz) = 653486 bytes
 SHA1 (patch-gyptest.py) = e33b65b31390fc5d4989e75f72f35b13055e3b41
 SHA1 (patch-pylib_gyp_common.py) = b074a71ca0f2a131ace33f35e3975239d9aa4b4d

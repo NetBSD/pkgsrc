@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/08/26 21:26:29 shattered Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 03:27:20 agc Exp $
 
 SHA1 (cproto-4.7m.tgz) = 2b896dfe2e18d22d495c619189987b47aa45396a
 RMD160 (cproto-4.7m.tgz) = f0285e389d28bd155f895c6ef8845d58b0e95133
+SHA512 (cproto-4.7m.tgz) = b7810ec88d0395d1e8db73492c65e2d0069417d37e45ad2b5b63236162a4cc6b23ee8d0d6c9d325c081f6f73cbc81a54066358ca120e235cab59996c3782eceb
 Size (cproto-4.7m.tgz) = 167884 bytes

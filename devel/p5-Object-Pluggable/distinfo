@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/10/15 17:31:38 hiramatsu Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:28:36 agc Exp $
 
 SHA1 (Object-Pluggable-1.29.tar.gz) = dc21470f66c4bc86e9b158c9b6cff5a1b6d14bd1
 RMD160 (Object-Pluggable-1.29.tar.gz) = 436a3d12e4bf9fdfa511efe2e744c07d948c482b
+SHA512 (Object-Pluggable-1.29.tar.gz) = 2e9a72c47c761312c82b65c9e52f747889f6847feb133f793bbf745f81a47f6a9a633af7ff853bc0e304bcfee130e8b8228d881e0c4d826d6d42eb07ba96cf94
 Size (Object-Pluggable-1.29.tar.gz) = 23603 bytes

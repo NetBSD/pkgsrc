@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2015/03/15 23:16:06 mef Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 03:28:22 agc Exp $
 
 SHA1 (IPC-Run3-0.048.tar.gz) = b035ea6e0a89f309d88a0472ab0e531f6e8626b1
 RMD160 (IPC-Run3-0.048.tar.gz) = 125ad8b04bb7a072f41825a3dbeb86b23fa0d316
+SHA512 (IPC-Run3-0.048.tar.gz) = 50432850d8dccd2e59aa6684d34f3e3242fd7df3eb4d9a5eb02dae389aa46b5fd68cc54114a157c3fe99956e68e74d575ab3db5009b7bf7d5c325f1f109b1262
 Size (IPC-Run3-0.048.tar.gz) = 20312 bytes

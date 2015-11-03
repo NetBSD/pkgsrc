@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/04/25 10:40:49 adam Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:29:13 agc Exp $
 
 SHA1 (pyobjc-framework-CoreData-3.0.4.tar.gz) = 3d56acb688da562ecb511a8e01cf4c3ddeef777b
 RMD160 (pyobjc-framework-CoreData-3.0.4.tar.gz) = 59384a636935934eb29d3e9be5c2f4284e104b6b
+SHA512 (pyobjc-framework-CoreData-3.0.4.tar.gz) = 2dc47424019a21f3838c72c351f96bef145e9d7530bd3e80c4f8b90153b22da90bd736ddf7de0154c63f4ad3f749080d5ed6e1db1902e99156d70fac37f52cba
 Size (pyobjc-framework-CoreData-3.0.4.tar.gz) = 112001 bytes

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2009/03/03 09:03:59 rillig Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 03:29:38 agc Exp $
 
 SHA1 (uno_v213.tar.gz) = 299b810cb213a23d81c2abb24a6b13e6eec3617d
 RMD160 (uno_v213.tar.gz) = 20c9136a988e65e9345d67672536d86c6aa1d56c
+SHA512 (uno_v213.tar.gz) = 07335bd4110034a2067c1958ce04de31af792ae86d78bae0d615b0ec90e9146340f7953bb5e4d22be10352c669712eac90d4164bbf2bc839b1af7c4e7adbd35a
 Size (uno_v213.tar.gz) = 239127 bytes
 SHA1 (patch-aa) = 1585fa0e6fa1c3229fbb705c046996314391c5a2
 SHA1 (patch-ab) = 01fe0a5fdc85e8d6103d2a9bbd8556661a84a7c8

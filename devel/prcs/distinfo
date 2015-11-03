@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.16 2013/08/31 14:46:20 joerg Exp $
+$NetBSD: distinfo,v 1.17 2015/11/03 03:29:03 agc Exp $
 
 SHA1 (prcs-1.3.3.tar.gz) = 0f1770289ee4e9e8028c1aee9e19fd4fae8d2da6
 RMD160 (prcs-1.3.3.tar.gz) = 85d90b12eb7e00585f1fd880939ee01642293b4e
+SHA512 (prcs-1.3.3.tar.gz) = d32567b62001e11bdadbbf4932d06e83bbad6ea782688d9a1643a7cc297b9202cdcfadeb16284f10218373b98119a904c24a754f7de4550183ed26c434c2a162
 Size (prcs-1.3.3.tar.gz) = 907482 bytes
 SHA1 (patch-aa) = 6890c4de21c7a15d86140d30b92dc84622ca3ce3
 SHA1 (patch-ab) = 695f0389272a88f68e19b8e2e5367b2eafb44683

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.17 2015/03/21 16:18:12 wiz Exp $
+$NetBSD: distinfo,v 1.18 2015/11/03 03:29:04 agc Exp $
 
 SHA1 (pth-2.0.7.tar.gz) = 9a71915c89ff2414de69fe104ae1016d513afeee
 RMD160 (pth-2.0.7.tar.gz) = 80bc66777ba20d9648b7aaf3f58d593be6416910
+SHA512 (pth-2.0.7.tar.gz) = f79d74047c50e06f3198356f88647c5c1c8a04ebdd94641fc31d5ab0fd2750d86615fcb81da2f98d7ea73d012a501195d3fa09060571d18dcfdaec5d7a0ecb12
 Size (pth-2.0.7.tar.gz) = 652640 bytes
 SHA1 (patch-ab) = 8495e25d31dadc9f0b56e48950eecf3e895a9f30
 SHA1 (patch-ac) = d3683f603c3e4f1826b55967639823b3295d1fb7

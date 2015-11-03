@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2009/10/12 12:07:56 rhaen Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 03:28:03 agc Exp $
 
 SHA1 (Class-Trigger-0.14.tar.gz) = fb184c1e58c32bb3add03d45b1b88e23fa3cbfdb
 RMD160 (Class-Trigger-0.14.tar.gz) = fc9c9d0fec5aa40930809fd62cfd75a697976bea
+SHA512 (Class-Trigger-0.14.tar.gz) = f0908469a4853ef386158f2ee66bb52a1bb4cfcdb385ecd9fd3375af87943910ba75f99066a00eab5dd367f68404369c8ad4ae2afbcb76d18e9f1327f95eb2ca
 Size (Class-Trigger-0.14.tar.gz) = 49950 bytes

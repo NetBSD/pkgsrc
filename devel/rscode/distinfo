@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/04/15 21:39:52 agc Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:29:19 agc Exp $
 
 SHA1 (rscode-1.0.tar.gz) = b143b3794de81f73154e6452a213c8c85d501264
 RMD160 (rscode-1.0.tar.gz) = 3659c9bd0e9aa000691e214ca07d8722e83811c4
+SHA512 (rscode-1.0.tar.gz) = a1fbb5540a1d6f157192ebb088b0251976f66cd24b4de09e7e1d0dc31387796e78af5c7d9405027612b319bf82ff4840048d2f409ee8c5425f8abfcdec5787b1
 Size (rscode-1.0.tar.gz) = 9516 bytes
 SHA1 (patch-aa) = a191c8a12329f46d0f5873d882d7927947ab5d03

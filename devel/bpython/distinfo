@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/05/10 12:55:33 imil Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:27:16 agc Exp $
 
 SHA1 (bpython-0.12.tar.gz) = 6ca96f9142fba90a008259275eb0f9b58ab89fc2
 RMD160 (bpython-0.12.tar.gz) = 7e52c0ec1fa56f42b9660496776876eaf09e9cc5
+SHA512 (bpython-0.12.tar.gz) = 001deb068dbc31e592b1c9c524cfbb5061cc9f1abb30d7597472920032285d20632f4ca75a10d4444be947413f9d2d65f476b64a66717956bca7d52b6b7ce948
 Size (bpython-0.12.tar.gz) = 130968 bytes

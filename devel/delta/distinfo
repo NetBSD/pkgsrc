@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2012/09/14 08:11:10 morr Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:27:22 agc Exp $
 
 SHA1 (delta-2006.08.03.tar.gz) = e5ab4933bdbcddac3ba96d6ec497213b42f9f26e
 RMD160 (delta-2006.08.03.tar.gz) = cd8d40af47d642fc94ea0bb0643e86b68d56f876
+SHA512 (delta-2006.08.03.tar.gz) = 3720f164f3721ad06bf5a73e654c70a67d6e7a56d0ce574fb0e8571b33269e56611a909f915bd0ea46434d94206a9548fd99fdef98181efe41e7fb03de75c585
 Size (delta-2006.08.03.tar.gz) = 32804 bytes

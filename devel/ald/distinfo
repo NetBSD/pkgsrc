@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2006/12/12 14:41:18 joerg Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 03:27:13 agc Exp $
 
 SHA1 (ald-0.1.7.tar.gz) = e9734b434047a3e4b0d8aed48f017bdf12f27039
 RMD160 (ald-0.1.7.tar.gz) = 37a2049005fd7101f69e26212e814ebca14dfdbf
+SHA512 (ald-0.1.7.tar.gz) = dbde0929beebe51ef5f77055b5f396630e16fd01ded4210d828f9ce97c676e7863700a98bf02d26e10cc2d8481adf329d8c8cb11c866302361221f072dbf45bf
 Size (ald-0.1.7.tar.gz) = 665998 bytes
 SHA1 (patch-aa) = eaa0c606b9735fbde224f0a95b822c76626bb35e

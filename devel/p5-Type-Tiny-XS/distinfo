@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/11/23 14:15:31 schmonz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:28:56 agc Exp $
 
 SHA1 (Type-Tiny-XS-0.012.tar.gz) = a55e049d57e98a7d7507ff697527c4a6d21065fa
 RMD160 (Type-Tiny-XS-0.012.tar.gz) = 8547a8bc48985db598a48a1297c0247fa26a3dd4
+SHA512 (Type-Tiny-XS-0.012.tar.gz) = 488925d913872f1f5bf73d8b165b1e04bd8f86bda44d594819120760f79c877d4b1be9f2924712ceabaead8822710bd8851f8ff5bb79f91b07fa253ce9ef7a33
 Size (Type-Tiny-XS-0.012.tar.gz) = 77259 bytes

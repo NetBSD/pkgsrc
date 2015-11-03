@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 22:24:34 agc Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 03:29:33 agc Exp $
 
 SHA1 (sml-mode-3.9.5.tar.gz) = 5c4eee321e64ac3fea4f37ec93e51b3251b60c3c
 RMD160 (sml-mode-3.9.5.tar.gz) = 42655c0ce29d42aba1b65305704c051ccf27304d
+SHA512 (sml-mode-3.9.5.tar.gz) = b243cddc20262194a899e0cc2a7191b7b9f8322a96c3085946f0470628583bdc7c682d973646df1ce0a937252ea2f463f9b190f8605f950b8ce81d4cc4c153f1
 Size (sml-mode-3.9.5.tar.gz) = 61639 bytes
 SHA1 (patch-aa) = 233a16a580167aae82c023c48cdb802572afa935

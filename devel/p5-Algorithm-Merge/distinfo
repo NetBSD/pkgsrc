@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2007/12/09 22:07:38 rhaen Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 03:27:54 agc Exp $
 
 SHA1 (Algorithm-Merge-0.08.tar.gz) = 89d2c606c27cbed4a7a1cad0737e437a1d27cf00
 RMD160 (Algorithm-Merge-0.08.tar.gz) = 4a6f1b4b19c47abb9207ac87fcdbc9e66581a8ba
+SHA512 (Algorithm-Merge-0.08.tar.gz) = 5670eaabbf0336de368160de96523af7d7f81fa8f6c826829748742fd075c8f321b3735903148ab53c73cad6a78f173d75c9eb0658a5081535f61465a8c614a1
 Size (Algorithm-Merge-0.08.tar.gz) = 9915 bytes

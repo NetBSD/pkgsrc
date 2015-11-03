@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/08/17 13:34:06 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:27:52 agc Exp $
 
 SHA1 (data-notation-0.0.11.tar.gz) = d0d45b1e8310969e4211fa0bcb534fee236b802e
 RMD160 (data-notation-0.0.11.tar.gz) = a2fa6b3b91d0034350b84e5248c138b4360280be
+SHA512 (data-notation-0.0.11.tar.gz) = 010c6105b0745c4dbf426186915078cd71d02d56e19ca01089a37f803c9d81c02a22e64184b9b4a42d44450834527a050ff20430f8c2d8a972610717f4c653d7
 Size (data-notation-0.0.11.tar.gz) = 63968 bytes

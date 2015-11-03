@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.29 2015/01/28 02:30:48 mef Exp $
+$NetBSD: distinfo,v 1.30 2015/11/03 03:28:51 agc Exp $
 
 SHA1 (Test-Harness-3.35.tar.gz) = 707ddd2dfd873014bca30841c8ceb2b88f8a3b05
 RMD160 (Test-Harness-3.35.tar.gz) = 624c647c38b2063ff8101d733827ab1225a59287
+SHA512 (Test-Harness-3.35.tar.gz) = 0efa56048d4155239eb975f34eff05523a4dff1c5e2b01f914a087573cffa242dc44cf77872b4fea4987161749f87968f0aac9f0c420c9e99cc1e4aa6032d94c
 Size (Test-Harness-3.35.tar.gz) = 242400 bytes

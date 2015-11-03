@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.9 2015/08/06 08:35:54 wiz Exp $
+$NetBSD: distinfo,v 1.10 2015/11/03 03:28:06 agc Exp $
 
 SHA1 (Data-Dump-1.23.tar.gz) = 3f5c0d4a15c8dd6befbcdceb41fe15b9aef1b741
 RMD160 (Data-Dump-1.23.tar.gz) = 8312001d8aa36563a43267650c59fc17af2af76c
+SHA512 (Data-Dump-1.23.tar.gz) = 6fd6c23bb6df7f7396219149dbfd23132fc2ea1dd344c32f62fc27a1afeeb28d7ebf2d429184bb6d1189f412e218f9e62a966b49fdd9ad5564e5152d67a02b96
 Size (Data-Dump-1.23.tar.gz) = 20771 bytes

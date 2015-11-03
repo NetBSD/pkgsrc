@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/08/17 13:51:01 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:27:52 agc Exp $
 
 SHA1 (oasis-0.4.4.tar.gz) = e3b09c0c83a6d989cf6daff11749a839372bf163
 RMD160 (oasis-0.4.4.tar.gz) = 7992772cf1e4e4b8b5d5f7ac463b7507bd19c544
+SHA512 (oasis-0.4.4.tar.gz) = 1abb6e01f93029c5d9af3422a0e93b215182577225ad949442a4b69d0904620c20547941bad96fb27ad0034a0a4b472b586aac2614e89f5faae3084b751ed3c8
 Size (oasis-0.4.4.tar.gz) = 333041 bytes

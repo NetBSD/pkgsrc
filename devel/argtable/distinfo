@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2012/07/03 18:16:35 joerg Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 03:27:14 agc Exp $
 
 SHA1 (argtable-1.2.tar.gz) = 2750b4334471dfecf6f83e9889a6daec0900e516
 RMD160 (argtable-1.2.tar.gz) = 7b6728ab1f85e49797b7a4c8dc58f56c00ed553e
+SHA512 (argtable-1.2.tar.gz) = f2d39c6a6cc105c8913c596591e2ad9ef9eac74590628a4472ab41479468ce8df80dd5113b5d7417e6182c794f13e599d8d3505ab8a55c97147dae20fb68da9d
 Size (argtable-1.2.tar.gz) = 509716 bytes
 SHA1 (patch-aa) = bca5920fbb9b88d5d9bda6d5d393ab7c4cd9d31f
 SHA1 (patch-configure) = d1221b12c061daf88dfba33c34b38811698756eb

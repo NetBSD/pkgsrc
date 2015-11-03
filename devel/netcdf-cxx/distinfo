@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/08/30 10:26:44 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:27:51 agc Exp $
 
 SHA1 (netcdf-cxx-4.2.tar.gz) = bab9b2d873acdddbdbf07ab35481cd0267a3363b
 RMD160 (netcdf-cxx-4.2.tar.gz) = 69e9348ced7da8b6ddf08dad4c3a92c4f18d0648
+SHA512 (netcdf-cxx-4.2.tar.gz) = 347ddbc518ac2186868d69417342e5146e285fc3a88f7c55edc33063f5c9a6647af7e512a03b9b6a8f67a448b85a1edcdde5df707b893f6a1527821cfd78e643
 Size (netcdf-cxx-4.2.tar.gz) = 703482 bytes

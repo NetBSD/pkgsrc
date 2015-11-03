@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.18 2012/05/06 04:14:02 dholland Exp $
+$NetBSD: distinfo,v 1.19 2015/11/03 03:29:32 agc Exp $
 
 SHA1 (sdcc-src-2.8.0.tar.bz2) = 487a9c576130bb1bfb225fe36984f485aac0f513
 RMD160 (sdcc-src-2.8.0.tar.bz2) = b91d6ca5642011f0e735c63e0ed4bc6b33128b9f
+SHA512 (sdcc-src-2.8.0.tar.bz2) = 91f43ea275f4c27e5c475a9dbfe5e9c7d5804a530151420473cbc65a48ca15c65a6e38628e0bf927d89cd8ddb6b6030d5d65aa9cba7963e23ac18bde42951fd5
 Size (sdcc-src-2.8.0.tar.bz2) = 3460693 bytes
 SHA1 (patch-Makefile_in) = 024ed627a88c2d17ac3981c59ec186a8a8ef48d3
 SHA1 (patch-aa) = 7ef1d2d005340b0e18039ff14334b889df5b8b3f

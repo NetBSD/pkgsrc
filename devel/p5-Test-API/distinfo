@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/10/07 14:09:10 wen Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:28:49 agc Exp $
 
 SHA1 (Test-API-0.005.tar.gz) = e7c576e53d9d1b55e57e77376e775d33d41f1c43
 RMD160 (Test-API-0.005.tar.gz) = e5fee40e86af827c2acebceda86f57d8aae3e968
+SHA512 (Test-API-0.005.tar.gz) = f0606da747fad9d68ce22b3a1158fe35f5c343d7162601a8fcf93e20201655c96d929a1160196ce54bd71cb56124fef8a55bb3e6ac0e236e0009e4aa824f11bf
 Size (Test-API-0.005.tar.gz) = 17317 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2013/12/15 14:25:50 wen Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 03:28:44 agc Exp $
 
 SHA1 (Set-Array-0.30.tgz) = 750c3baff450012a5661c88ad042a50ab9355952
 RMD160 (Set-Array-0.30.tgz) = 064c76ffecb03abcb1e35637e1fbecccdf9769a7
+SHA512 (Set-Array-0.30.tgz) = 5370447e65addbb5778b36e89d95cb209b9b3633034910af1f61a3dab6633ff77e3b75278f659750f27658e8e7adbf2a7a730f24662182f9b2810e7cfbaf0a7a
 Size (Set-Array-0.30.tgz) = 32726 bytes

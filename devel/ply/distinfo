@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2013/09/05 20:29:48 wiz Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 03:29:03 agc Exp $
 
 SHA1 (ply-3.4.tar.gz) = 123b9449b838dc387b240ea737a33b6407e5a1ac
 RMD160 (ply-3.4.tar.gz) = c86c2581b4e2766f5045b76632c92a3220b3c48a
+SHA512 (ply-3.4.tar.gz) = 6f6ee528393ff83eff2530ca468caf12e4c89b817a38302738597f1478dd41758036c8f32f88f60d1a26e70d9cfceab5530ddcfd3f058c1ee722be95c27e6bcc
 Size (ply-3.4.tar.gz) = 138342 bytes

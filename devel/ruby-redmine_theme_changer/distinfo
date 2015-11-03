@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/07/06 04:12:49 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:29:28 agc Exp $
 
 SHA1 (redmine_theme_changer-0.2.0.zip) = 0c1ce1ccfd9e33ad3c5ccf224b01a0fe345d8542
 RMD160 (redmine_theme_changer-0.2.0.zip) = 111d32e795d15e0de7287cf66799e4f458c138d3
+SHA512 (redmine_theme_changer-0.2.0.zip) = 964ffebfbf8e909f6834643e3ae330b8e38a6dc9befe044a26d2d7767e1a84f7a7c136917e850db15be758bd004703accd5b92ab0015a75b3df5de2948818e6f
 Size (redmine_theme_changer-0.2.0.zip) = 20105 bytes

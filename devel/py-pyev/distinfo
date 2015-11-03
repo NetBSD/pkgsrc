@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2012/09/01 22:11:38 mspo Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:29:12 agc Exp $
 
 SHA1 (pyev-0.8.1-4.04.tar.gz) = 008099fe6d2a44a851b564ea9d4a6470326be357
 RMD160 (pyev-0.8.1-4.04.tar.gz) = d5dbda1dce3f58c09c3c986b742fae45323b02f2
+SHA512 (pyev-0.8.1-4.04.tar.gz) = 59fd8564445822c12032889c826ad148b15544462aa72d4658cc5887b5af3542e399d2d47767f935f8638836f9ba954e4c8ceef6f5f630e3ee035ba96d339e1d
 Size (pyev-0.8.1-4.04.tar.gz) = 623423 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2013/12/12 06:42:21 wen Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 03:28:05 agc Exp $
 
 SHA1 (Const-Fast-0.014.tar.gz) = f1a62165b91f44fb99efbafe3659bf52d5b81ff3
 RMD160 (Const-Fast-0.014.tar.gz) = 6f25074c8785a17ecdca5989d797d966bdea4b28
+SHA512 (Const-Fast-0.014.tar.gz) = 89258205fe31aa5a60759ed955e6dae305de69f4bc08251242a82eec9e37251b045908585c470106ed9047f604d3292eb3231c80504b29734966b58b8402a929
 Size (Const-Fast-0.014.tar.gz) = 12886 bytes

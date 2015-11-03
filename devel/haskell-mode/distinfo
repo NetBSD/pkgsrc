@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2005/02/23 22:24:16 agc Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 03:27:31 agc Exp $
 
 SHA1 (haskell-mode-1.44.tar.gz) = fa58f3ef2bae6d5223db6f4d7f2793fb1b7dd7e3
 RMD160 (haskell-mode-1.44.tar.gz) = e6ba24edd96bbc219f53bbfaefd17bd342a2ced6
+SHA512 (haskell-mode-1.44.tar.gz) = 22a10b5596678b2e5d52aab8e1841aefc304b095188878d24e2dbd8ea93f74741f433899cea428efd4ee0dafac92d840b59792e95683ce84892c2c4d6224f1de
 Size (haskell-mode-1.44.tar.gz) = 58601 bytes

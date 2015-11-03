@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2013/11/04 21:13:46 tonnerre Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:28:33 agc Exp $
 
 SHA1 (MooseX-POE-0.215.tar.gz) = fa03619bb58cc917c4cc99eaeabd1890e233e724
 RMD160 (MooseX-POE-0.215.tar.gz) = 3a950fc47af3f23de351a1b4428b3c2f52183434
+SHA512 (MooseX-POE-0.215.tar.gz) = 6b423627ab352385d71140aadf14c8f52ecbc4096f2a1ea0cd593c42b5b24fd53386b494c41695538e2fd98730794d9508ec39d84b699216c4bc07e54a7fc1b5
 Size (MooseX-POE-0.215.tar.gz) = 32099 bytes

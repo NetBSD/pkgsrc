@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2013/03/28 21:22:57 joerg Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 03:29:15 agc Exp $
 
 SHA1 (pysvn-1.7.6.tar.gz) = 720399815278a0b29a2ea87a09a0d2807d4614e4
 RMD160 (pysvn-1.7.6.tar.gz) = f6b44e293ec4a94cd610cb8e1f2b711c1aad5aee
+SHA512 (pysvn-1.7.6.tar.gz) = 21c78521d34167ebb751c832ed2cc954f1afa1941caf073f1d3cca2d487dceffbf81feaf0761ed3a9fd94e7289d81228b54f556019b9851386bdbf7577320ed2
 Size (pysvn-1.7.6.tar.gz) = 331549 bytes
 SHA1 (patch-Source_pysvn__client__cmd__checkin.cpp) = d4a6ab9709fea7728519fa3a34044bf93ef24bd2

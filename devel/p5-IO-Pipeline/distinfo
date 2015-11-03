@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/04/11 11:16:33 seb Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:28:21 agc Exp $
 
 SHA1 (IO-Pipeline-0.009002.tar.gz) = 62e9b2d0ed364044afe939930b4e388de5d6ac19
 RMD160 (IO-Pipeline-0.009002.tar.gz) = 8ff57a2289a3e57f1ed6660e0cc99a2d075a8e58
+SHA512 (IO-Pipeline-0.009002.tar.gz) = 5313cb530c89e4bf659cc9e7f91fe24b07a1cc5dcabdeaf37d94a8801fa1ee90890a1f9016cf228e97aeca0c9e515387652f728c5aeef8c867d16436973096bd
 Size (IO-Pipeline-0.009002.tar.gz) = 20717 bytes

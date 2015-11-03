@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/08/21 13:32:06 he Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:28:50 agc Exp $
 
 SHA1 (Test-Distribution-2.00.tar.gz) = 547c00dde9cd68656d4d53ca285bb6a5e69c9ba6
 RMD160 (Test-Distribution-2.00.tar.gz) = 8bed19b2363364230c61f76213223e702d39c23a
+SHA512 (Test-Distribution-2.00.tar.gz) = 74ad4bb228d6727f1c966e2b3311914de15ef6d191717b6c9e7fa7ab9286de737aefc889c1c3f1d587582f234e0da55e980cd7eabb7edce4bd13ff79f4333638
 Size (Test-Distribution-2.00.tar.gz) = 11326 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2011/12/16 11:46:20 taca Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 03:29:24 agc Exp $
 
 SHA1 (loquacious-1.9.1.gem) = ec5b3d44acd7197a879c259f6e274b1309a0c99c
 RMD160 (loquacious-1.9.1.gem) = e42cbf7750c5cc560e988e18d040728708e1ab12
+SHA512 (loquacious-1.9.1.gem) = 49d176d0229e80a5af69a7cdd24fb2947332faeb70846f28c21249e5297d81246f55eb7f033cc444999267ae727b26f7540f1ec4a542a65af11c3d3ddf7bb129
 Size (loquacious-1.9.1.gem) = 22528 bytes

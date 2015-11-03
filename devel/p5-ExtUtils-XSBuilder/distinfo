@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2008/08/07 08:58:34 he Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 03:28:14 agc Exp $
 
 SHA1 (ExtUtils-XSBuilder-0.28.tar.gz) = 2b7239d3437b9111740f6721f5ef129ab77456c1
 RMD160 (ExtUtils-XSBuilder-0.28.tar.gz) = 73378a1ea415db21753e9d55d41b3d1d318586d8
+SHA512 (ExtUtils-XSBuilder-0.28.tar.gz) = 777c6362ce1e780f8226b47b5f1a4ee4bbde3e5eda6637dde9d04d230cfb77025a0c7ec79ef40866242950ca2f052865ab0bbfe09f6315a2fda70111f67a47e3
 Size (ExtUtils-XSBuilder-0.28.tar.gz) = 42758 bytes

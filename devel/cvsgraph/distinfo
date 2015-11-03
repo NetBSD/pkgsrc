@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2007/04/09 09:34:57 adrianp Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 03:27:21 agc Exp $
 
 SHA1 (cvsgraph-1.6.1.tar.gz) = ca5011537e22d6399eeb4d44c9ba0830e0f240a6
 RMD160 (cvsgraph-1.6.1.tar.gz) = b4fa44c6d41a28d8e2e8d1f505dc117d0f59d286
+SHA512 (cvsgraph-1.6.1.tar.gz) = 6548d43784cd6e2e85777e0158371c6332f96f72fc8d1827dcece8aa54d77139021586e468155ec003d371eaa7095cd57a5004a1ed76bc55db325c3899105e6b
 Size (cvsgraph-1.6.1.tar.gz) = 114337 bytes
 SHA1 (patch-aa) = c2020ce2578856f20b47e81e996ce3020f6a4a1a

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/04/14 19:01:05 kleink Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:28:00 agc Exp $
 
 SHA1 (Class-Accessor-Chained-0.01.tar.gz) = dd90a490e68b3f0906fb2a4aeff3213f9e669645
 RMD160 (Class-Accessor-Chained-0.01.tar.gz) = 8b0363acde31f0f4d42f6ecc9bc3cb4e8c516c37
+SHA512 (Class-Accessor-Chained-0.01.tar.gz) = b2728d12dd3bd01169b43ef6cc5d0e8f82660ed80f5473415025ce3d5e93c059cd9ef4fbad2b0481e0efc7478cbdff7bec0042ea3bd6bddac51d78ee5bf25a04
 Size (Class-Accessor-Chained-0.01.tar.gz) = 2322 bytes

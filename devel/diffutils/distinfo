@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.11 2013/08/21 14:08:08 richard Exp $
+$NetBSD: distinfo,v 1.12 2015/11/03 03:27:23 agc Exp $
 
 SHA1 (diffutils-3.3.tar.xz) = 6463cce7d3eb73489996baefd0e4425928ecd61e
 RMD160 (diffutils-3.3.tar.xz) = 5785f14f89923ad115957b88c0bb4766cd4ededc
+SHA512 (diffutils-3.3.tar.xz) = b04b998717e45e8fd1ba675957dad1909beeed68ffc41c0d9bbaddaf78965f9e63af5a8d8811bb94f33a3cddcad2fe1ad794e52e545def9ce96c092999a74a83
 Size (diffutils-3.3.tar.xz) = 1197832 bytes
 SHA1 (patch-aa) = 20e262ca71fe9ca36933e96f790f553130efcd88
 SHA1 (patch-ab) = f875decfb827c10aee02da58012a735a40f3d682

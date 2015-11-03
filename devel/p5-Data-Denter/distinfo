@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/08/20 22:28:18 seb Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:28:06 agc Exp $
 
 SHA1 (Data-Denter-0.15.tar.gz) = 5e7ccbff8bf89fa1bf180863c3838b63ddf7877f
 RMD160 (Data-Denter-0.15.tar.gz) = e2c9e09f07bdd6fca58029e973dacd3f2e3a6db4
+SHA512 (Data-Denter-0.15.tar.gz) = 37512f0a7a9f749ceb0d4db210ad25ec812b0ff4a2d955312200251ac7c74fbf1f50930d8475865bc2215e838a00fde73b281ff45569d63931c10d3dc6df6505
 Size (Data-Denter-0.15.tar.gz) = 9856 bytes

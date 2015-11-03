@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.11 2015/03/19 14:04:45 jperkin Exp $
+$NetBSD: distinfo,v 1.12 2015/11/03 03:27:25 agc Exp $
 
 SHA1 (ffcall-1.10.tar.gz) = 6b4fdc7bd38b434bbf3d65508a3d117fc8b349f3
 RMD160 (ffcall-1.10.tar.gz) = 910af54fae0b992ceb5620f155e301827d2e03c5
+SHA512 (ffcall-1.10.tar.gz) = dceb620907adae5bbbb52cf2d0b0c829242ad22adceb3186b7a887b7ba49e28b607c30179de6b5a0c46a90bd52f9963ce503ca0c69bc3ecf41e3556df094ddca
 Size (ffcall-1.10.tar.gz) = 914870 bytes
 SHA1 (patch-aa) = 13250616ed04a1a2135d7638dd6a83f86e635188
 SHA1 (patch-ab) = 7e4b587a080af5530c7bd883a71b614162522320

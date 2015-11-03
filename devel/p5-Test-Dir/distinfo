@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/04/12 14:33:16 schmonz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:28:50 agc Exp $
 
 SHA1 (Test-Dir-1.014.tar.gz) = 599777a22041288f84c912827f788102c48b5050
 RMD160 (Test-Dir-1.014.tar.gz) = b65ca36f5996436f70430ef6b37163b309a18175
+SHA512 (Test-Dir-1.014.tar.gz) = d314ad2aea917550b47af75845ac74c5dbf838881f98fa7d38c6dabbd4e5bad2c21ae2bca569bd55cf3a9fa180dc37a847693af0fcf43956deb6413beff0066a
 Size (Test-Dir-1.014.tar.gz) = 21360 bytes

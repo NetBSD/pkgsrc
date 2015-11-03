@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2009/07/08 16:09:00 joerg Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 03:27:45 agc Exp $
 
 SHA1 (libstash_s19990912a.tar.gz) = ff9ffb3bd421be2652dced2dabfa503d7e3bbca1
 RMD160 (libstash_s19990912a.tar.gz) = fa7058a9da42b27a1094cd9ae3af204167ad093f
+SHA512 (libstash_s19990912a.tar.gz) = d3acc0ea4348c2e02c686d07e0d2fc3d85357ae3b804b9aa3ac9d065e011527159fb0adf02b0be3a417cb095766fd5e8a361db794f4183dfc7842d0cbcbc4dd3
 Size (libstash_s19990912a.tar.gz) = 159195 bytes
 SHA1 (patch-aa) = f10654a8a95c375bf1b3af13683fe85660c4faae
 SHA1 (patch-ab) = 3c8f3932b176b4ee4730125581569c1bb3aa85f4

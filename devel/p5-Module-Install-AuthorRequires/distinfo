@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/04/28 12:15:56 mef Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:28:28 agc Exp $
 
 SHA1 (Module-Install-AuthorRequires-0.02.tar.gz) = dbd07651f239cb8cc1a7f3284b02ef9a9a32f6ca
 RMD160 (Module-Install-AuthorRequires-0.02.tar.gz) = 13136bb7a3b0112507fe21be1a05024aa7b1ff30
+SHA512 (Module-Install-AuthorRequires-0.02.tar.gz) = 66d2a603e5700eca0a93523b6adcd0330d439b41730b7ccb2606fc4e43e4b6620cf376637fcbbe71d4733ce144c46822fecac39d4bed3d5303b68863425d9819
 Size (Module-Install-AuthorRequires-0.02.tar.gz) = 15596 bytes

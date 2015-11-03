@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2010/06/13 19:07:24 minskim Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 03:29:32 agc Exp $
 
 SHA1 (sgb-2007-03.28.tar.gz) = 651cc1ea52a3ea10d00276e7fb09458bb344072c
 RMD160 (sgb-2007-03.28.tar.gz) = 5da2b7835e051f9e4224a9e56ec17aafba54d864
+SHA512 (sgb-2007-03.28.tar.gz) = 28a62c384d6da482a050703205930f7ae198ae853aabccf2168ad42aacb5201b7aeb3621c484e5cac457e74f5a049d8d618b6a72f17aad6b5dd8112405bd6cad
 Size (sgb-2007-03.28.tar.gz) = 493980 bytes
 SHA1 (patch-aa) = 68cd0aaca599784d42cac101dcf953a726d14040

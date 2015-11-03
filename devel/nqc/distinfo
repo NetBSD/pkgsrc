@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2012/04/22 21:42:42 dholland Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 03:27:51 agc Exp $
 
 SHA1 (nqc-2.3.r1.tar.gz) = 40adcd87c12fc23c600899a6a704620ef2208488
 RMD160 (nqc-2.3.r1.tar.gz) = 2f7a435a99cb207814a8f357b701b1cc1fee2964
+SHA512 (nqc-2.3.r1.tar.gz) = d0c16bf7b6b3fb373631c89ba0f5e5534ac615aba22338e2eca323e0c9bfaa99ea6b15eb0f0fd10c03af306a189775a6ee3abacc21fe94ab12e5d58986c9beba
 Size (nqc-2.3.r1.tar.gz) = 193028 bytes
 SHA1 (patch-aa) = ac916cb16c619b4ccd15fa1a1eba5c93a369abfb
 SHA1 (patch-ab) = 6fbe6b629ac170475cfeffb8848ba8337d4a13cd

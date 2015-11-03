@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2007/12/09 22:14:04 rhaen Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 03:28:10 agc Exp $
 
 SHA1 (Devel-Profile-1.05.tar.gz) = 33c97fd5597d93c18f20966318adefb16aef2dcf
 RMD160 (Devel-Profile-1.05.tar.gz) = d59306b4026a364f654589f83ef5413c2f0a689a
+SHA512 (Devel-Profile-1.05.tar.gz) = 5c4fb3218f23168144bb24bb1a11aed23f65cd510015d31d43d8171d524603d15b1526e6673e3b061c5ef37191070eaef956677683d6cb3f4d47e04938009a2f
 Size (Devel-Profile-1.05.tar.gz) = 7101 bytes

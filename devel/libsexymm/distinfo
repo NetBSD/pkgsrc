@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/07/17 19:10:48 drochner Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:27:44 agc Exp $
 
 SHA1 (libsexymm-0.1.9.tar.gz) = da035fda859e2ed4c553250e203b49fb175127c0
 RMD160 (libsexymm-0.1.9.tar.gz) = 53d423fe964685f31032147441ab56d5f571718b
+SHA512 (libsexymm-0.1.9.tar.gz) = e8b44aa7bf28362649d2db044646d385f143eb713b21dd85aec3ae4ef6720e47d4a1b4e211ff6906de80331ad7ed76b7c346132697f7e55d1bd51ddf40dc164e
 Size (libsexymm-0.1.9.tar.gz) = 348705 bytes

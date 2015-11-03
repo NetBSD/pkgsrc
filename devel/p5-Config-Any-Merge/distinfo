@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/03/06 11:51:09 obache Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:28:04 agc Exp $
 
 SHA1 (Config-Any-Merge-0.08.tar.gz) = 2a49c3cdc0390dfe61162de25b9f2a6336afd1cd
 RMD160 (Config-Any-Merge-0.08.tar.gz) = 9cc19da02224dd3a9f09ec9a262d1283112c4dd9
+SHA512 (Config-Any-Merge-0.08.tar.gz) = 0e7c3bac79b3e1b927d655a0ff34f5b010cfe3464b9788c6311abaacbc73b3a96af108c57660e67ef93847eb5d9d139f0fab917ded57e46c351fddd209c3d1ce
 Size (Config-Any-Merge-0.08.tar.gz) = 4357 bytes

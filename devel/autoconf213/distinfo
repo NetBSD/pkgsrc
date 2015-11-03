@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2006/11/02 18:17:22 joerg Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 03:27:15 agc Exp $
 
 SHA1 (autoconf-2.13.tar.gz) = e4826c8bd85325067818f19b2b2ad2b625da66fc
 RMD160 (autoconf-2.13.tar.gz) = 0d1fa0992280ed71c0d72487a5a4c246d1c1b18a
+SHA512 (autoconf-2.13.tar.gz) = 602584f4c77b7a554aaa068eda5409b68eb0b3229e9c224bffb91c83c4314d25de15bd560a323626ff78f6df339c79e1ef8938c54b78ecadf4dc75c5241290ad
 Size (autoconf-2.13.tar.gz) = 443844 bytes
 SHA1 (patch-aa) = 82b3c0f421f8c5c34b68c625eccff516a4c8cb0c
 SHA1 (patch-ab) = eeb90d28fdd78b39426023110f56df0ab14acd73

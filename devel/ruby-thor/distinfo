@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2014/08/27 00:04:19 schmonz Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 03:29:31 agc Exp $
 
 SHA1 (thor-0.19.1.gem) = 57d118b7ce6d51be06faab84c4ad5709977e098f
 RMD160 (thor-0.19.1.gem) = 639ccda06f7581180a9891ba6fcb3f641ff2ae28
+SHA512 (thor-0.19.1.gem) = e0ca18fd9916a6e14572859607d1d99bc49da662161923192b642a959bb7f679d389af4a5e9f8b9fdf865cb8fc70227eaafe2ca30fd1be70ca076552cd2eb9af
 Size (thor-0.19.1.gem) = 91648 bytes
