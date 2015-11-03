@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/08/07 12:56:29 obache Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 22:13:40 agc Exp $
 
 SHA1 (tegaki-wagomu-japanese-kyoiku-0.3.zip) = 756bec7fd61a528982eda1ec75a47dd162d72f46
 RMD160 (tegaki-wagomu-japanese-kyoiku-0.3.zip) = c99b8540d2da8283442f3618ca5d40155bf3e5dd
+SHA512 (tegaki-wagomu-japanese-kyoiku-0.3.zip) = dbdcee9db993993820155c4b154d8b87e7b087c9f37bbe8aabaf26ae0f92483d59b9025c5043b6d1e99ef9eaae2f83e54e477a9810b30475cf93cdf51df5a200
 Size (tegaki-wagomu-japanese-kyoiku-0.3.zip) = 285141 bytes

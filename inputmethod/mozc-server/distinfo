@@ -1,13 +1,16 @@
-$NetBSD: distinfo,v 1.17 2015/10/19 16:37:37 joerg Exp $
+$NetBSD: distinfo,v 1.18 2015/11/03 22:13:37 agc Exp $
 
 SHA1 (mozc-2.17.2116.102-fd0f5b347d35fe287f4cc9be49f650c87f82ba03.tar.gz) = bb35db84e85bbcf413c36dc2a0d05d8af3f483e2
 RMD160 (mozc-2.17.2116.102-fd0f5b347d35fe287f4cc9be49f650c87f82ba03.tar.gz) = d24b1e1caf00a919620bf6da0855d137a41cb82e
+SHA512 (mozc-2.17.2116.102-fd0f5b347d35fe287f4cc9be49f650c87f82ba03.tar.gz) = 30869120056e470d01af09e99ac095812aaa1a514c1f92208f0fca89af7d69e6778315bf1aa49c7f1912792b9e710f802d6a7fb06bb022f53ad48091951911a2
 Size (mozc-2.17.2116.102-fd0f5b347d35fe287f4cc9be49f650c87f82ba03.tar.gz) = 59322409 bytes
 SHA1 (uim-mozc-318.0562676.tar.xz) = 5cd298aaac5afd7ff8882453e3e8fa698c2c5aa1
 RMD160 (uim-mozc-318.0562676.tar.xz) = 7b93efa2ed2710d5098b1b6b81c0fd195645857b
+SHA512 (uim-mozc-318.0562676.tar.xz) = 85585f9acfb3636bf0a0a903f3da812a3f739a3fe50e7d8a7172fe85218bb5e599d22c08fd31aed2c9279d8cd36a2c177c3543e33272423a2881a403eb1b34b3
 Size (uim-mozc-318.0562676.tar.xz) = 24316 bytes
 SHA1 (usage_dict-rev10.txt) = 174fd3073422deb5f7b3740b1c8ea6d52a077c25
 RMD160 (usage_dict-rev10.txt) = 2c70d0c6c46bff422108e3ce617a6eebc311843d
+SHA512 (usage_dict-rev10.txt) = 2032cfcd8f985c9d2a4fab12bc0e6e505d30bf94eee3df930a57bb35ebc037684d238ab9a0d1dc1625acb950f626cd0201c5f599a852115c23e582b81f171d4a
 Size (usage_dict-rev10.txt) = 219146 bytes
 SHA1 (patch-base_base.gyp) = 437fa7ef6c84448a2a8fb049af773ab9df64dc81
 SHA1 (patch-base_cpu__stats.cc) = cda8bbcbc963d8ed635435375cc80ee5e7ca2191

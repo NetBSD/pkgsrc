@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2013/09/08 12:40:26 obache Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 22:13:39 agc Exp $
 
 SHA1 (scim-thai-0.1.3.tar.gz) = 2d1f87eebb0b4ea2f9b931600bf857cf148f0835
 RMD160 (scim-thai-0.1.3.tar.gz) = b02cf86957a23a89b5faeb9b909bb87292ab6184
+SHA512 (scim-thai-0.1.3.tar.gz) = e8b8f54ad8456e766d83fa6d81a0502f227294f2f77f74a23a14057f0c67cd87d0e7a0ffc2c70e90901407b0256a994d5ddff7acdfee1185258a833fdf642095
 Size (scim-thai-0.1.3.tar.gz) = 420655 bytes
 SHA1 (patch-src_scim__thai__imengine__setup.cpp) = a043ee199f8b91a976e56431c391e2c66c778a5c
