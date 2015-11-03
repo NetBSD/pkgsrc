@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2013/04/01 06:13:12 sbd Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 00:25:51 agc Exp $
 
 SHA1 (phoronix-test-suite-3.4.0.tar.gz) = 10be51fc45c077fd73193a8f4bd6c850a9198f84
 RMD160 (phoronix-test-suite-3.4.0.tar.gz) = 858605ba618cb8c721b68a142db70d9a298ab6d7
+SHA512 (phoronix-test-suite-3.4.0.tar.gz) = f92194e157221e23fca0eb8b25e2f8bf62a46b0a462548e36aa8d2243cf31293445ca3d374d0b659f6d0900445b0cdf37e5f4fb4ac5f8656de758f0e4ee6ac2f
 Size (phoronix-test-suite-3.4.0.tar.gz) = 418224 bytes
 SHA1 (patch-install-sh) = 959bd28c7c9f60f594128be28657ebe1103ceaa6

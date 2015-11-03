@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2011/09/12 07:21:29 dholland Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 00:25:50 agc Exp $
 
 SHA1 (fib.c) = d5eec6bc68c9cbe5e013ab62bcb7b2b5be55eb17
 RMD160 (fib.c) = 915b249676f9a7d5c1ab7bfe16360c23964d25c3
+SHA512 (fib.c) = 154a25c66758381fea24a967b297b4573c714d6638f86b8ac8ffb5a21b2eba834d23a3690feefa0fa88c6ab756d1fdc718532b3307c4c14561b9227d6d942c73
 Size (fib.c) = 11045 bytes
 SHA1 (patch-fib_c) = 256be34048ad4c23494cf56956059508e13c3d7e

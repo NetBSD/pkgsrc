@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.13 2015/07/04 16:11:53 bsiegert Exp $
+$NetBSD: distinfo,v 1.14 2015/11/03 00:25:52 agc Exp $
 
 SHA1 (ttcp.tar.Z) = 33a60af208eff3dc9ae745060f44b24c4e74aa7e
 RMD160 (ttcp.tar.Z) = b5cb1a8efe0f716d25d58a4950f35bac47b17668
+SHA512 (ttcp.tar.Z) = 15b988b3ec701fa1edd5d4020cc2207c180bf0ee3fb221459e8061f3fb704082cb1e6d2b18c9c80b22e1e7c0f44de6ba33f2d1e5b5ad7400a0eb4b2838e14e13
 Size (ttcp.tar.Z) = 18163 bytes
 SHA1 (patch-aa) = 96e3a9136bae4057682d2b3cfea2ec8c8bb21eaa
 SHA1 (patch-ab) = 5d04ee46ae5bb015c8834e18fe2f2e301c5059b4

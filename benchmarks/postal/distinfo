@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2014/07/25 15:52:06 jperkin Exp $
+$NetBSD: distinfo,v 1.9 2015/11/03 00:25:51 agc Exp $
 
 SHA1 (postal-0.70.tgz) = d02dc900eb645aa993c5747fa434a0af4b0fb7e0
 RMD160 (postal-0.70.tgz) = 2b23ab0d60abfeaad32adf7ba65134d0f267294a
+SHA512 (postal-0.70.tgz) = 81356d32e56559a267994c2a18fa7b83c04556423f650404aeb7a8ce3d43d9fbd036b0fa545bccdc8caff8b375f95707031858046f4f99242f4cb23c7809bdb5
 Size (postal-0.70.tgz) = 99965 bytes
 SHA1 (patch-Makefile.in) = 45f7357ff4407033818599a76b9c929b6c09b127
 SHA1 (patch-aa) = 0d85ec46202e0077d7f435547158eff65eab8a69

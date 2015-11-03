@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2012/10/18 16:58:18 asau Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 00:25:52 agc Exp $
 
 SHA1 (skampi-5.0.4.355/skampi.tar.gz) = a1e55043505dc10a576d47e018206ae9c79f145f
 RMD160 (skampi-5.0.4.355/skampi.tar.gz) = bfc545eb065124fabd71e6aec7684887c3fb4974
+SHA512 (skampi-5.0.4.355/skampi.tar.gz) = cecad16ebdd6808b6d127980b149bea4d574e7ebc26adb69530cacd8d3cb5ab2a35d2f408aff8c53b3348c2e5715645d97758e95c33f0d8a65ed975b3ce80998
 Size (skampi-5.0.4.355/skampi.tar.gz) = 386126 bytes
 SHA1 (patch-makedep.sh) = c43f77e46f98215355ca2a2325c14937ce38f589

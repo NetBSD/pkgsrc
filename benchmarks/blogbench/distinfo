@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2015/08/16 06:08:57 mef Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 00:25:49 agc Exp $
 
 SHA1 (blogbench-1.1.tar.gz) = a53747336ec990701e216f3280179f5949b7da44
 RMD160 (blogbench-1.1.tar.gz) = e9e58a61f78a8ebb41797cfe0bc4a7ef6bf61136
+SHA512 (blogbench-1.1.tar.gz) = 2605b486fb32e21f7ab84836e590983f6935e7447a40d0c7e59a2ceefc9d6238c20ae124b7a8c97773a36b2eb6f1863f51d8bf610bfb9749812bb3cbbaefc3c8
 Size (blogbench-1.1.tar.gz) = 137664 bytes
 SHA1 (patch-aa) = 77c48f0e50aeeec341d7d127564839f526a86e1f
 SHA1 (patch-ab) = 9db1070408e2afd12272e01a62d5ea8f2802c1df

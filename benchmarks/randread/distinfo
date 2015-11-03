@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2015/01/01 09:22:23 dholland Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 00:25:52 agc Exp $
 
 SHA1 (randread-0.2.tar.gz) = 5085d07cb6c4395d018addb4ab81f060473ea620
 RMD160 (randread-0.2.tar.gz) = e8806da27cc231748b9416b16949c4921abc1d91
+SHA512 (randread-0.2.tar.gz) = e0d31139c7c6bf116a92eeadbe21f8a06ab4bd47fd4af3aa0bc6a3aa08a1afdac6a33c6f8c82b63b1141553e4585a4f5b2073bbc429fad90c0acb339f440f0c0
 Size (randread-0.2.tar.gz) = 8112 bytes
 SHA1 (patch-Makefile) = 0b709cc55687b274eda350cd263477644964c6e9
 SHA1 (patch-filelist.c) = eee8bb8586cdcc568e8cf44965465d5f1885cd93
