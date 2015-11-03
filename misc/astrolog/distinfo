@@ -1,16 +1,20 @@
-$NetBSD: distinfo,v 1.5 2005/02/24 11:02:50 agc Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 23:49:31 agc Exp $
 
 SHA1 (astrolog/ast54unx.shr) = 8511f7cdee0a559779f30d838e55e44585775840
 RMD160 (astrolog/ast54unx.shr) = 4714490507ab673be707d0e09ff965012cd6c3ca
+SHA512 (astrolog/ast54unx.shr) = 824fcea1891dafc77692e84a36cc97a8afd90ad93d772edab8437e89869cdc912002f628fd86eecc8182ba4f1ad02cb98f42a30fde425bf94cf59f852b4eda1a
 Size (astrolog/ast54unx.shr) = 1465432 bytes
 SHA1 (astrolog/LRZ5_24) = 9c0006c445c2da31d25a202992dff96cfee12ed2
 RMD160 (astrolog/LRZ5_24) = 0f3eab708776dce82abb09b0ca6e319a37c98e46
+SHA512 (astrolog/LRZ5_24) = d40ec9eeabb7dce13cc093ba16e51c3e0919f95db29e314f054d7ae7a252ca1b4f5fcac0d8d633d70a7ce5d540146468db1662699ea70daa85e9f237aa3632e5
 Size (astrolog/LRZ5_24) = 75000 bytes
 SHA1 (astrolog/CHI_24) = 62a65ebdc73aa2f55f2baab2d98cb925712e910a
 RMD160 (astrolog/CHI_24) = 1b0b6a20797dc304e2dd403bb03ca3db523c4c60
+SHA512 (astrolog/CHI_24) = 5e7f960645e535d23c3f658915a0d725ed79579767652a8a4c9ee18fabb1957c825123a4f9f85b256f419edc02d5ab2f146c85a731addd2de775397335ec0789
 Size (astrolog/CHI_24) = 15000 bytes
 SHA1 (astrolog/CPJV_24) = e9ecc057a1aa7a8423fad31b9e6c9cfdf4316b63
 RMD160 (astrolog/CPJV_24) = 9fc848544cbc7c2d99d2d382db33e9aaa3c24594
+SHA512 (astrolog/CPJV_24) = ff52ba68e4bc3cbc3d0ebabaad9f3c2f60e3ac9ea36d9346bd2d487cec2135a1c7ae20072975b79d06e3c59c9ed9adad105eee30147626452022a5ce19cf4995
 Size (astrolog/CPJV_24) = 60000 bytes
 SHA1 (patch-aa) = aa3c6f09b6ba7d1c74465762567cac9c9d7240ce
 SHA1 (patch-ab) = 05cdba66d45c28407e7b2b4a634943218db9ca7c

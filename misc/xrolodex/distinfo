@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2007/07/28 00:47:48 joerg Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 23:49:55 agc Exp $
 
 SHA1 (xrolodex.1.5.motif.tar.Z) = fe263c22afc7d5375de00689c7e7c157f49a628a
 RMD160 (xrolodex.1.5.motif.tar.Z) = 73ac6a1c832cfdea12f5224c858ed758ec3ed97e
+SHA512 (xrolodex.1.5.motif.tar.Z) = e59001b1c7b0440f3476310f443b1fb374dcdf19b10a6ccab6adb98fdafba6833dc2c9c07a9bc0653bd344fa4975f4cb2d5992c42bdcc8d77a19f12725cf19a3
 Size (xrolodex.1.5.motif.tar.Z) = 126075 bytes
 SHA1 (patch-aa) = 5beaf958ad6af7a3c25ee21104e86bbd6079acd5

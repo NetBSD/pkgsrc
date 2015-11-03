@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2013/03/28 21:43:09 joerg Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 23:49:31 agc Exp $
 
 SHA1 (basket-1.0.2.tar.gz) = 8f227c45d84e3739750d39b32700b3329b8c3c84
 RMD160 (basket-1.0.2.tar.gz) = 02e5a9bea054f0dc2aaa5c7f916a106dc970a1fd
+SHA512 (basket-1.0.2.tar.gz) = 48bca754a8fd68157ce45770f4014f63fc36dae2edf934d733d77a76727c6615fc5f981f87a248fb2ee5c15c5299149a33a2e37279d603e32e32a12991388621
 Size (basket-1.0.2.tar.gz) = 6046068 bytes
 SHA1 (patch-aa) = 204154819ad1d53ec8d8c2e7ff25c6f508e9b311
 SHA1 (patch-src_backup.cpp) = 6f788a8ee4890a2c30ebc0ce669653d21938d581

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2007/08/31 21:49:32 agc Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 23:49:53 agc Exp $
 
 SHA1 (utftools-1.6.tar.gz) = 92406e9cc5f47fa0baa2d558b56175bc836431f1
 RMD160 (utftools-1.6.tar.gz) = 7dfeda42ab72257dd92085e911b466175f3d0ff9
+SHA512 (utftools-1.6.tar.gz) = a72a1d4bf768bbcb9b2003872fec902c2b3e7dc7e386573a8aa4acdd48b1900ab0a57811a8241ffa2951e9a1190d8b79878efe08dd9587e6e3dd00d83c60113c
 Size (utftools-1.6.tar.gz) = 26298 bytes
 SHA1 (patch-aa) = c9b89b0b61fd1a51ab301748fc954676cfffc8ef
 SHA1 (patch-ab) = 0010909f1f83b8968275fb26c00e4c9bd4a534c4

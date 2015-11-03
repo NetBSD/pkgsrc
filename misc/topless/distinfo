@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/11/29 07:32:17 obache Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 23:49:53 agc Exp $
 
 SHA1 (topless-1.52.tar.gz) = e0f838cff4b80254eedb5858e57ded599dc224bc
 RMD160 (topless-1.52.tar.gz) = cf4abae31d8d78d51bf307b0974b16b0248dd8da
+SHA512 (topless-1.52.tar.gz) = be3ba19cbbd4de272e519bab663623a95b43bb0fe96f546c3fb59dc09c0ec9ecb7b5618d4a689563d3b90478176478cf1d44d0f63ae2c5ec0e3f5732e76a34ef
 Size (topless-1.52.tar.gz) = 4673 bytes

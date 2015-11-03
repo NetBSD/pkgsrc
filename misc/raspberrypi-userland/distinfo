@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2015/01/24 12:54:15 skrll Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 23:49:48 agc Exp $
 
 SHA1 (raspberrypi-userland-20150118.tar.gz) = 288f9ce03ec8e1ba95ff662d2110c6ef27c65b16
 RMD160 (raspberrypi-userland-20150118.tar.gz) = 2628fa62f7459a34dd16500245d8e167ad2e786f
+SHA512 (raspberrypi-userland-20150118.tar.gz) = 6f19df44721d36635ff0560c0cb6c6f2fb15a45b8a06c5dc3f9c57ce784b2b1d6a8ef234758ecef80b82b6e04f44fc239b90529ff7506e5fbea06469809a1527
 Size (raspberrypi-userland-20150118.tar.gz) = 34246284 bytes
 SHA1 (patch-interface_vchiq__arm_vchiq__test.c) = 78ba7f26aa4db7c84fe53591018489c01191a94a
 SHA1 (patch-interface_vcos_CMakeLists.txt) = f96c052af9c1d10f3f386efc1b5d0006559e4e67

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.15 2015/03/22 17:32:54 sevan Exp $
+$NetBSD: distinfo,v 1.16 2015/11/03 23:49:49 agc Exp $
 
 SHA1 (rpm-4.12.0.1.tar.bz2) = d416bdb249b246b00b2d5d34c66e7f5a68a62524
 RMD160 (rpm-4.12.0.1.tar.bz2) = c57a676d467d0984b13bdca7df803e26609055fd
+SHA512 (rpm-4.12.0.1.tar.bz2) = ae751b04cec2463f1f259aec4b4750fca1e4cef6144b7e612d0c94f7b6a2864ed119547568f6acebb7fefddb7b040b6021c1f32cf465963db0b627f524c5760f
 Size (rpm-4.12.0.1.tar.bz2) = 4129093 bytes
 SHA1 (patch-build_rpmfc.c) = 10e3196d7d2dcc17f7c2be0acbea01f00354eee3
 SHA1 (patch-configure.ac) = c6301dce864ad1ade8bc21c2d00f2c9754594b2d

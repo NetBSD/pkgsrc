@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 11:02:57 agc Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 23:49:46 agc Exp $
 
 SHA1 (Search-0.2.tar.gz) = 3eae95d37dade3ba0425b488992f4d4718306a60
 RMD160 (Search-0.2.tar.gz) = 55dea96a2818b5d96280fb4f6f213a07ab29b627
+SHA512 (Search-0.2.tar.gz) = 1fcefad9e8cb5c3ec99ae6f0f0e5674ff2915a522ea3f4ce8baeb00244c6a404e96f2aa05e91f9a585c0ab67a64dca4657fb22dfc8e7eb2fdbfbf08ef679055b
 Size (Search-0.2.tar.gz) = 14687 bytes

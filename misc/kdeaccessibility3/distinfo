@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.26 2013/06/21 19:23:19 jperkin Exp $
+$NetBSD: distinfo,v 1.27 2015/11/03 23:49:39 agc Exp $
 
 SHA1 (kdeaccessibility-3.5.10.tar.bz2) = 748f155d303b098bc8b6f4731bb860046f5c1846
 RMD160 (kdeaccessibility-3.5.10.tar.bz2) = ffefc1e1a3e66cbd35ead44a84824faa254d228e
+SHA512 (kdeaccessibility-3.5.10.tar.bz2) = a6a4d8ce1e5a36de2979687c54371b79aa8e54595f61a7c7262de580f900e6df774f9cfc27ab9c34d294dd9fff4dd481431580b76204373debc4064abc82f1f2
 Size (kdeaccessibility-3.5.10.tar.bz2) = 8745587 bytes
 SHA1 (patch-kttsd_kcmkttsmgr_kcmkttsmgr.cpp) = 0566f84d0b31f46fbf231103becc718ecbd52383
 SHA1 (patch-kttsd_plugins_epos_eposconf.cpp) = 30faa6d7ddc2a06b1bdd7cdfc58dd2dc536b11ae

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2009/08/29 18:39:37 hasso Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 23:49:52 agc Exp $
 
 SHA1 (taskjuggler-2.4.3.tar.bz2) = 00421ca022319da10f57607f8b62f8430f770767
 RMD160 (taskjuggler-2.4.3.tar.bz2) = 76b403e76dd79b804013e48b8e0eab6fb3b5da9e
+SHA512 (taskjuggler-2.4.3.tar.bz2) = f230e4259f51c522f3563d9af7f773775635a80ae1b04a9994d4ce8ffdbb388cc9c3104d766040211064fc56565dc17c594436789fde6cfb4a2b53941e2b5655
 Size (taskjuggler-2.4.3.tar.bz2) = 1625933 bytes
 SHA1 (patch-aa) = 0fc96885cfc9fe70d271d4b4f1034537dedf2d5d
 SHA1 (patch-ab) = cda635b649e4300666a9df057be1a95d69ae8b66

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 11:02:56 agc Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 23:49:45 agc Exp $
 
 SHA1 (ControlX10-CM11-2.09.tar.gz) = fb01af600f573b94db6ae0b4d8646349691b0217
 RMD160 (ControlX10-CM11-2.09.tar.gz) = 0533e6e309a1b02c2c8292722714d9562eb82fe5
+SHA512 (ControlX10-CM11-2.09.tar.gz) = c13f275c6673a0a6b6b3eafa353e7d9c36a651359247abdf5308870ccbf5528b7d57fed57ce8dea2f9801ce1725835f16f1091705a3c4bd9c571e4690de5e450
 Size (ControlX10-CM11-2.09.tar.gz) = 15182 bytes
 SHA1 (patch-aa) = cbbdedad90548487faae71959b7db94d44974aa1

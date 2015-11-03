@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2012/09/02 15:42:20 shattered Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 23:49:54 agc Exp $
 
 SHA1 (whohas-0.29.tar.gz) = 6c171275db45ab6b7f259613432e93ef879610b8
 RMD160 (whohas-0.29.tar.gz) = b3458435ff472142ee3d9fb254b18deb13e58226
+SHA512 (whohas-0.29.tar.gz) = c078cc252c57e0f7d91769194f1d8e88ffc4481540ab4d573faa64d73ffa86128acba68fd43fcfb45e79b5f57f4232de9799fbf2bad1fbc0f4c85921a34d84b9
 Size (whohas-0.29.tar.gz) = 194111 bytes

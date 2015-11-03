@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.10 2014/12/14 07:51:27 obache Exp $
+$NetBSD: distinfo,v 1.11 2015/11/03 23:49:43 agc Exp $
 
 SHA1 (glibc-2.3.6.tar.gz) = e990cb85e68bf8493f77468a5e21dabc9f8c212a
 RMD160 (glibc-2.3.6.tar.gz) = 447e9afbc096e2c1893bb0d471997295ec22535b
+SHA512 (glibc-2.3.6.tar.gz) = 234c0ad42ab49a6056660c1efc849cc1b8326a764d25cdc84bd53dbf6b5251f9dd0c186e959f65f7d637f56c983f8fcbbfbe5483bcd78cccaf7055ac3a8f9c18
 Size (glibc-2.3.6.tar.gz) = 18814292 bytes
 SHA1 (m17n-db-1.7.0.tar.gz) = 4149c2e59ac8f45ec8cbfb7bc8d4d061f38e58bc
 RMD160 (m17n-db-1.7.0.tar.gz) = d3403b92f007a81223c2c821c1126f62cf2c4482
+SHA512 (m17n-db-1.7.0.tar.gz) = 02c3cb347e9f5c840a723de9ed85be84fc9fb5f86d4963f0d1c6b669045d37d10e5efcf5ac0e0c3cb7249fb391b0dd32bd50fbc3332455aaf0b49d96fc09b2f2
 Size (m17n-db-1.7.0.tar.gz) = 1939608 bytes

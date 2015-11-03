@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 11:02:51 agc Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 23:49:34 agc Exp $
 
 SHA1 (dync-1.1.tar.gz) = 58e3412a2980574d935e64f72eb45f8d017b961c
 RMD160 (dync-1.1.tar.gz) = 7c9326eb5c2381e0eeb8590197c4a76e41cc01e2
+SHA512 (dync-1.1.tar.gz) = 3d217b2aaa2535e44cf4cde03f7059ef18314ac0ee9dcabcf5d10011c5740357572123503ed25343302fa9e20af12d98ec6ec2ac91cac407257df09550c6637e
 Size (dync-1.1.tar.gz) = 24222 bytes
 SHA1 (patch-aa) = 0d83133b2b08ed625cd33af141b3373c6a90c3be
 SHA1 (patch-ab) = 384f40628562c10741988d77043af73a7f5b66d9

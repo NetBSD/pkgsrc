@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2010/02/04 05:08:12 dholland Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 23:49:32 agc Exp $
 
 SHA1 (bottlerocket-0.04c.tar.gz) = 70f4877cea17653ae8e21d93c1a620c7ddeeeb69
 RMD160 (bottlerocket-0.04c.tar.gz) = d1db2caa29faf599132e7c7f6036a7d170778718
+SHA512 (bottlerocket-0.04c.tar.gz) = 37673bd9a519307f0ae3003f3a458dbb99d4fd0c96ebaa664f4967fe45b20c1132828c3c7a31e769157e6034c43c9cdcd1ecac8c6791812d2a04e93d4c0c6888
 Size (bottlerocket-0.04c.tar.gz) = 40533 bytes
 SHA1 (patch-aa) = c4702360736c12e63534554ae191ac19dcedf03f

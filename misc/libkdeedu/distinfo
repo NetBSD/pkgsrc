@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.8 2014/11/13 19:19:06 markd Exp $
+$NetBSD: distinfo,v 1.9 2015/11/03 23:49:42 agc Exp $
 
 SHA1 (libkdeedu-4.14.3.tar.xz) = 02bb448832d518bd920e08e8a87ae9fb2db7f20b
 RMD160 (libkdeedu-4.14.3.tar.xz) = c256555bd7cdb2c38259774e17e3506c8e1df099
+SHA512 (libkdeedu-4.14.3.tar.xz) = 046b51774ca21c9453bb709c0d550c3626ca174a266b8a8a013697707e7f709e521d01c01c262181d6b470a6e16b2e856d31e35bf38b08632e1a73fbd05b0eb4
 Size (libkdeedu-4.14.3.tar.xz) = 218432 bytes

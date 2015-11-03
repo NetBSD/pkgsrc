@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2013/01/11 13:30:32 joerg Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 23:49:37 agc Exp $
 
 SHA1 (ulinuxgnu.zip) = 3c60908177c665fc10f56b6b81c39c6117b7d9d2
 RMD160 (ulinuxgnu.zip) = bc0797ffd2e0042807d6d02ca96e5f1f36233624
+SHA512 (ulinuxgnu.zip) = 44ff8042e737368fa44fc3ae30dd10c0d24aacffca72eaf58bf65ea4bd78cf1f81925fed0cc4164cf7df21a4bbab2d95222d92967035e6176f216a40a1b38cdc
 Size (ulinuxgnu.zip) = 837059 bytes
 SHA1 (patch-1wsensor.c) = a30f9dc80e9b93bf9c21403571afbc1da2200000
 SHA1 (patch-aa) = 59a7106d544315cdebaf236edb81b32fccd83971

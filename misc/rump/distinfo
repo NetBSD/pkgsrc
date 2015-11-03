@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.12 2013/07/05 17:20:59 stacktic Exp $
+$NetBSD: distinfo,v 1.13 2015/11/03 23:49:51 agc Exp $
 
 SHA1 (buildrump-20130705.tar.gz) = a8481e2b5586db82aa2d3ae01c0101dda6c1a9ec
 RMD160 (buildrump-20130705.tar.gz) = e248eb291c58003cda56f64c628876bdbd282a00
+SHA512 (buildrump-20130705.tar.gz) = 789b9b11e94cd0193923d575c99b68bc5405667c87f2c6ac9d82f149302549d911ba71389007c96322a2ccffe5a7c98aac73c961326192430dc1df447d361708
 Size (buildrump-20130705.tar.gz) = 27855958 bytes

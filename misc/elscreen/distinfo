@@ -1,32 +1,42 @@
-$NetBSD: distinfo,v 1.6 2011/09/17 12:02:17 mef Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 23:49:35 agc Exp $
 
 SHA1 (elscreen-1.4.6.tar.gz) = 3a26b92cf5d1ebedd8b17edafad60456bf0e6012
 RMD160 (elscreen-1.4.6.tar.gz) = bc0bfa3479ef8434f5e7950fd55e0207a4db9428
+SHA512 (elscreen-1.4.6.tar.gz) = 2f19941c9c3e74bbe3912e99f53710f42d33a5b063af99c3907c478d2f571a50a75942519bfcad3bf178585f736bb6e2baf2cdffe8ac66b8e4dbd1b0d881fab2
 Size (elscreen-1.4.6.tar.gz) = 21680 bytes
 SHA1 (elscreen-color-theme-0.0.0.tar.gz) = b6534ba6e1486e4a02c13386a9751bac2cd45c8b
 RMD160 (elscreen-color-theme-0.0.0.tar.gz) = 0762c53bb1091ff8fbb62aaa442fcabd9033193b
+SHA512 (elscreen-color-theme-0.0.0.tar.gz) = 8327d1575aa5fc3fe11333aae8df12e3d42820ab1b4b509cffc06a6c6368f2224187f662b3264a5c055febfa3120c68c2be9a1dc11eea0ab41381385d8e49cdc
 Size (elscreen-color-theme-0.0.0.tar.gz) = 1534 bytes
 SHA1 (elscreen-dired-0.1.0.tar.gz) = dd005c344c976dafef5738a062d1e3f8ed3fc536
 RMD160 (elscreen-dired-0.1.0.tar.gz) = 8b05f38f5f5710c07ea055c92b6eacb071ae9d32
+SHA512 (elscreen-dired-0.1.0.tar.gz) = 34667128e1dc87bc4743486f61837d7c6a356c3fb219142cf033bf050a186c43018e69f669951fb4c563dfb50df3575d4b0340155b4e3026f52109bfe272323c
 Size (elscreen-dired-0.1.0.tar.gz) = 889 bytes
 SHA1 (elscreen-dnd-0.0.0.tar.gz) = 1042367694672723d46a8025f03038c4d5db375d
 RMD160 (elscreen-dnd-0.0.0.tar.gz) = aa5c50ffe58b3583eab249a95fd72b9dcd6e2d77
+SHA512 (elscreen-dnd-0.0.0.tar.gz) = 6a4800eb7f8357decdbf9c12687dfd3c2a6539f65791a2ab2fc9418d5dae4ca8631342e9b7db88934d484884e27f6e32b540a5904189d856d1081bae26c9e502
 Size (elscreen-dnd-0.0.0.tar.gz) = 1130 bytes
 SHA1 (elscreen-gf-1.5.3.tar.gz) = 66e71561248f7179e795e250b9386b33137cc2fd
 RMD160 (elscreen-gf-1.5.3.tar.gz) = 77cf6c223460e25577c01739468508144d43c484
+SHA512 (elscreen-gf-1.5.3.tar.gz) = 4dfa6f2dc84ac00143ad2f01a57996b106f4ad356388e4fe04034b61420af2e3777861fba14ce31c36b0b81768c0d5dfe3e59ebedb51458f082b6a1962e8538f
 Size (elscreen-gf-1.5.3.tar.gz) = 11001 bytes
 SHA1 (elscreen-goby-0.0.0.tar.gz) = 15c185ee4a46ec6ae264afc939d1443359551747
 RMD160 (elscreen-goby-0.0.0.tar.gz) = 22cf273bc7cbc6f43b36fb0c33320f39d9587f29
+SHA512 (elscreen-goby-0.0.0.tar.gz) = cb1cf25971771027c09378d39d30c95f91774bbe523462b188df6d70cf2810212b5d6f8efdcac287102161e900fa9418b5a55fe3adf4a004046202fb2465a943
 Size (elscreen-goby-0.0.0.tar.gz) = 829 bytes
 SHA1 (elscreen-howm-0.1.3.tar.gz) = 87962105697f0a181f1f552ac6835eccfa8fa1c7
 RMD160 (elscreen-howm-0.1.3.tar.gz) = a5fa3b91faeedd6a56b909a0ad0299e3b605b818
+SHA512 (elscreen-howm-0.1.3.tar.gz) = 5a3c9a07126d7ee3acce671afb9767f206e5a2a5c9a89e47a54b6ca6f6e6c878a41944d7d8697dee555a5ae72b146177ad0091ffffb031eb48a4f0cea2168b70
 Size (elscreen-howm-0.1.3.tar.gz) = 1855 bytes
 SHA1 (elscreen-server-0.2.0.tar.gz) = a1ea4aefd7432b29bd92d48c8763029a4b0603cf
 RMD160 (elscreen-server-0.2.0.tar.gz) = c0c0209ad77531eed8815932c05ddd44a1803ca5
+SHA512 (elscreen-server-0.2.0.tar.gz) = b5ed2b4d07d61efde3febe360cc584674d5e208fd31213c6f83dc1e95436d1f3cdce848b8c16c83f73c75c81b960f88386e2f2e26049cbbf740c6501247d542b
 Size (elscreen-server-0.2.0.tar.gz) = 1487 bytes
 SHA1 (elscreen-w3m-0.2.2.tar.gz) = cb1278f75a1dd8c376624c8f01d23eef920fc9db
 RMD160 (elscreen-w3m-0.2.2.tar.gz) = 3c1c801cbc994e2d7f8353e5716d194f48ce0579
+SHA512 (elscreen-w3m-0.2.2.tar.gz) = 641647e2b5035da10ee13cf2cb1d7ccc656a9f4f892c5e94140afe0ec88366f7632009a7deddf3d704e016864f73d894ec1cd954cc22fb4e0c625fa8849bf9b2
 Size (elscreen-w3m-0.2.2.tar.gz) = 1362 bytes
 SHA1 (elscreen-wl-0.8.0.tar.gz) = 7735a26755a138354ec169ed85a71d4a5245fa6d
 RMD160 (elscreen-wl-0.8.0.tar.gz) = e7a9dacc9ff3513e721848ceeaf8516f008dc724
+SHA512 (elscreen-wl-0.8.0.tar.gz) = 95170f6a5e6c53d82ef0b38d8366ba2f342ad2482a6adb71dfb80cc14467949675d1145316f9d2f6889268eedd74308d4d79becc142bc50508d8c49b1b44a7fa
 Size (elscreen-wl-0.8.0.tar.gz) = 1921 bytes

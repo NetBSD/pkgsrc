@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.8 2014/11/13 19:19:07 markd Exp $
+$NetBSD: distinfo,v 1.9 2015/11/03 23:49:46 agc Exp $
 
 SHA1 (parley-4.14.3.tar.xz) = 73e22f3a3e08e4298df6e7c3be966c88e2bca797
 RMD160 (parley-4.14.3.tar.xz) = 79b672ca1e6665f2f7d2cb5103f6bfce8342c642
+SHA512 (parley-4.14.3.tar.xz) = e9cbeb7f369ed864f12ab61721682cca475eac10a01fffdb864188387e0349122ba9b02f2ad16e73383f13a411225944938d3b01f2842ca02baf3fd17782dfc3
 Size (parley-4.14.3.tar.xz) = 8203748 bytes
