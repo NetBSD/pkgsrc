@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2008/08/04 08:04:30 obache Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 20:30:59 agc Exp $
 
 SHA1 (ia64sim-0.5/ia64sim.zip) = e19c937082a6231f37b003392386d20675429b76
 RMD160 (ia64sim-0.5/ia64sim.zip) = a2951c2a2ef944b1e5634caea7bc425cd60f0492
+SHA512 (ia64sim-0.5/ia64sim.zip) = 9a9e0c46799b1618d692688972d6d06e3bf77844a4f2339f7197b4c64f52df70bdd808505c4ce3e9abd6d491aba8080d1ddfcfabf7c7875ce695802d2d014dd8
 Size (ia64sim-0.5/ia64sim.zip) = 754344 bytes
 SHA1 (patch-aa) = b4a2beabfaafa5fd64bcd9bb48424679aea924ee
 SHA1 (patch-ab) = bda64a314ce331eb0f604b25513700f8b9f014b6

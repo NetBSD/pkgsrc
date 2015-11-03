@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2012/08/12 02:03:15 marino Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 20:30:55 agc Exp $
 
 SHA1 (B-emv2.2Linux.tar.gz) = 648eb122bba6d7701b341b5af214e4fce1012686
 RMD160 (B-emv2.2Linux.tar.gz) = b6aa6e3e5ba8b24207278211ce17f19b182f93f5
+SHA512 (B-emv2.2Linux.tar.gz) = 44a9e63906e890ff6c3b9356218be42866d18f435a8772213f384b9dc8b8212bb05638ca4bfd64e07c07b126102bc13036749abb64faf136734acb20a15d96e0
 Size (B-emv2.2Linux.tar.gz) = 4855775 bytes
 SHA1 (patch-src-fdi2raw.c) = 98a00eb3059c92b0c2e8009275e5b4a7dfee9b0c
 SHA1 (patch-src-linux.c) = c0188ea8d3bb466dcbaf7a6929577f249e6ef0f1
