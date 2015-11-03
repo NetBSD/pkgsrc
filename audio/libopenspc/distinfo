@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2011/11/21 07:12:24 marino Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 01:12:38 agc Exp $
 
 SHA1 (OpenSPC_snap-20050926.tar.bz2) = 5f12938f07612b0f0138557263338ad74f7a83d5
 RMD160 (OpenSPC_snap-20050926.tar.bz2) = e7d64c9209f0acf376978cadf40724328daa038e
+SHA512 (OpenSPC_snap-20050926.tar.bz2) = a4f4f27e4caf41ad011a5091a850dbd19cd2357b1e03d0cfb0985e88f174bac4d6dc40cb95a5fce8aae0ca753028a0e59f5db3fc857f2752d9faf9ca8e101037
 Size (OpenSPC_snap-20050926.tar.bz2) = 240382 bytes
 SHA1 (patch-aa) = d590025599d640a833fe28aac0d10fb6f33adff2

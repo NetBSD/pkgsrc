@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.9 2015/07/04 16:18:28 joerg Exp $
+$NetBSD: distinfo,v 1.10 2015/11/03 01:12:28 agc Exp $
 
 SHA1 (dap-2.1.5.tgz) = 947b5488bad395d20b88183b024311f7849765b4
 RMD160 (dap-2.1.5.tgz) = 97508843962cc63b670c7248ccc1531e1ee1bb7b
+SHA512 (dap-2.1.5.tgz) = 20efbfbb327a9533375790fc7ff53e43839a9038b2b8c53b740f6edf3967acc4de5353784ec9fdf1114176c62d86dee377a204d46ac403e92a7f39a28dc8e815
 Size (dap-2.1.5.tgz) = 290439 bytes
 SHA1 (patch-aa) = 65a9e699e5db0d94dbe8002fcd5eced5473146c0
 SHA1 (patch-ab) = fb89a62566a0e303012b6f3dbd43468fc9bb6ca5

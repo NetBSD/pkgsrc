@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2014/10/22 20:33:06 gls Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 01:12:42 agc Exp $
 
 SHA1 (mpdas-0.3.2.tar.gz) = 1d9c2a88527140af2a4bdbffc865fedf2d8528ef
 RMD160 (mpdas-0.3.2.tar.gz) = 0ac4c11b208844157bacb73804e0348e485bac74
+SHA512 (mpdas-0.3.2.tar.gz) = b7bc6a78d9a531684a0b59d6e5b6b9701948d10650f567bfebd7eb408d4f22b8c5aed4ddd9b08968aca828ae59b22404bb19c552fc25cf50cdf8adbd7cd77771
 Size (mpdas-0.3.2.tar.gz) = 14143 bytes

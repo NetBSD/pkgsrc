@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2008/07/25 14:20:58 obache Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 01:12:26 agc Exp $
 
 SHA1 (bmp-musepack-1.2.tar.bz2) = e02b455d2289802218b2dee967e7c1c1c7b85c54
 RMD160 (bmp-musepack-1.2.tar.bz2) = d5672544c10b5c2a2f7e8380aaeb6258495f35da
+SHA512 (bmp-musepack-1.2.tar.bz2) = 098d8e7649d6606f5305c9fa0eead625eb8447f3c39e67dfa36d637aeabe9b28a715cc70ce41abe9e8b1c9babea58a7ae4df79a8e6a9ba6b6fc94cc64152e57f
 Size (bmp-musepack-1.2.tar.bz2) = 217862 bytes

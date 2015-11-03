@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2011/09/04 22:25:36 dholland Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 01:12:55 agc Exp $
 
 SHA1 (xmmix-1.2.tar.gz) = 9ec44500dccba63ef7a9d50f66acfb6e45d08714
 RMD160 (xmmix-1.2.tar.gz) = 05f5ca6811848f0b86a9dc94e6d943a07cda0ba8
+SHA512 (xmmix-1.2.tar.gz) = 82704081ff866bb3b73319a7931af6662cc9a1724b8cb9bc44331392c4ccf408314f56d6b6ae72bf4b77475dc084d95f656d4772358b729d11c922c446bf7d3b
 Size (xmmix-1.2.tar.gz) = 33496 bytes
 SHA1 (patch-aa) = 68a33a91de0e373da4818a26e339d3c87e895b33
 SHA1 (patch-ab) = cbdc30e17aa2a857d756b403c0873436e9480129

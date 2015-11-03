@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.9 2012/06/02 20:00:49 dholland Exp $
+$NetBSD: distinfo,v 1.10 2015/11/03 01:12:54 agc Exp $
 
 SHA1 (xcdplayer-2.2.tar.Z) = e518f2df9fcc5e21e1123fe6f5b1193f232b76ef
 RMD160 (xcdplayer-2.2.tar.Z) = ba34fe8092aa96d6370320b20fa46b0b0d043176
+SHA512 (xcdplayer-2.2.tar.Z) = 99cec63801fdf3c407e38dfd314c959980720f3725842dc10dc5bd5e337d038c66a54d6f712aefd9ec7c9152e2080708d0d6763fa7d53035dd3665dd039e2dd0
 Size (xcdplayer-2.2.tar.Z) = 89435 bytes
 SHA1 (patch-aa) = a22f9ef4d86f62c0ca86637938b72a612f42b645
 SHA1 (patch-ab) = 6712998794fdb968e297605c380fa2d94c26a8e6

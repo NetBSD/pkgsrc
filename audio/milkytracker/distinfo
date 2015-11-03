@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2015/06/25 06:01:01 dholland Exp $
+$NetBSD: distinfo,v 1.9 2015/11/03 01:12:41 agc Exp $
 
 SHA1 (milkytracker-0.90.86.tar.bz2) = 620bc1f81894f526d9e806189c5f7f17c3b57b97
 RMD160 (milkytracker-0.90.86.tar.bz2) = 09a4913d737362c42d16a4bcfc1de69e1d1bdbd4
+SHA512 (milkytracker-0.90.86.tar.bz2) = 8142f0b438e478571db25960d1b31f1d8c7e68feea96bdd238d1b1c1744105d929f18c990a301af6bebfc2d517bad687232410477ced6d8c4bfec8053cfcad8e
 Size (milkytracker-0.90.86.tar.bz2) = 2202256 bytes
 SHA1 (patch-src_compression_zziplib_generic_fseeko.cpp) = 002754ec91a5d3b986fabe9266cc8999ac148c82
 SHA1 (patch-src_tracker_TrackerStartup.cpp) = 389ef435b0cd7c67bec81c5e2e450590d7224dca
