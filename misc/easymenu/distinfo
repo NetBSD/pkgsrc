@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 11:02:51 agc Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 23:49:34 agc Exp $
 
 SHA1 (easymenu-0.7.2.tar.gz) = 9aff27807ff66c35c4b63db84aeb9c1a3809d51f
 RMD160 (easymenu-0.7.2.tar.gz) = 953345f4d453c1ef1eb1014569e5084353faf6ca
+SHA512 (easymenu-0.7.2.tar.gz) = 55e3521b665f548e619189626c9e949bb672cb13d45a9b0fb83a865efc1c17fbf1892fdc40a7a30de183464079f7b85048e29f1124be2b332ac1ba5e2f27e211
 Size (easymenu-0.7.2.tar.gz) = 23505 bytes
 SHA1 (patch-aa) = 5cb1b7d264766f6c89451170f357cddb1b8cbcf9
 SHA1 (patch-ab) = 8bac81e6138eefbe093027abb6dfbd2255ff03d9

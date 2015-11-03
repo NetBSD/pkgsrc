@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2010/08/15 07:35:56 obache Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 23:49:42 agc Exp $
 
 SHA1 (libquantum-1.0.0.tar.gz) = 1b3476ac5061ee49b470d4170863d221c0acb903
 RMD160 (libquantum-1.0.0.tar.gz) = ebd88b646cb874f192cc0ce41272fff22820a8df
+SHA512 (libquantum-1.0.0.tar.gz) = c5b0aa8151a7aa156e59ff4653cf757008eac8dbc2e1691fd9640e3e979338298719fdb4a9942d7e08b9f4d9bef7ed2c4972665dd4a3cca35eca0b14082da13f
 Size (libquantum-1.0.0.tar.gz) = 223241 bytes
 SHA1 (patch-aa) = ae9d274d7074e26b78817eb7723413b569154918

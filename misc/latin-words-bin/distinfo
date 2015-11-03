@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 11:02:55 agc Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 23:49:42 agc Exp $
 
 SHA1 (words-1.97-linux.tar.gz) = dda625b5d9cc05a75719045b6795327939197597
 RMD160 (words-1.97-linux.tar.gz) = 1158996d38f93f765e90a2c2c21a8482dfe452f8
+SHA512 (words-1.97-linux.tar.gz) = de8c5ab34d75d0e44490bc40e91c4a5f731d82ca0c2de84ee6db9b09c4dce0c04004da7c603894bdd8c56fbf74c13c0d1b96e81e6726e77a8d09e65056ab36dd
 Size (words-1.97-linux.tar.gz) = 1730135 bytes
