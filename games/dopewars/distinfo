@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.14 2006/02/14 21:40:44 adam Exp $
+$NetBSD: distinfo,v 1.15 2015/11/03 20:56:47 agc Exp $
 
 SHA1 (dopewars-1.5.12.tar.gz) = ad46a38e225680e591b078eeec563d47b96684bc
 RMD160 (dopewars-1.5.12.tar.gz) = 66c86bceb67657a9fb2ef7944b1a069dafab8ae0
+SHA512 (dopewars-1.5.12.tar.gz) = cfabaf9326c847aed6210a852ace64c697df5845a66b3179b8dc8dea7b99a11e1f91358d4ee54929a56c70d5f3a76f9f7bb4079fdef765601f165b4cd06cba5a
 Size (dopewars-1.5.12.tar.gz) = 1419725 bytes
 SHA1 (patch-aa) = df0e51ad4da9ce3963682ba246de9c4f1496a6ec
 SHA1 (patch-ac) = 529cf6e5b9f28a7fa547f81841c5199a1f8f84ae

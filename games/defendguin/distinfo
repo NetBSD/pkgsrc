@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2015/02/09 09:51:26 snj Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 20:56:47 agc Exp $
 
 SHA1 (defendguin-0.0.12.tar.gz) = bdbcd49729f879d34d932bec2e3ee7991697a266
 RMD160 (defendguin-0.0.12.tar.gz) = 468056a93347ec4b476d6b2daff337626a1e3921
+SHA512 (defendguin-0.0.12.tar.gz) = 3a62c7ac62b016eeb6fc63655e8a8c1ac6c5c7cae7eee03c4ab0b9951ba605c7634336d94adb538e94ccbf1d9f927ac530f58da87413a4b1555b2684681e4167
 Size (defendguin-0.0.12.tar.gz) = 2235694 bytes
 SHA1 (patch-aa) = 96ff15abee015bee72bec2745abf3818fe372cc5

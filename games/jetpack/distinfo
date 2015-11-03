@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2013/01/17 15:53:38 joerg Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 20:56:53 agc Exp $
 
 SHA1 (jetpack.tar.Z) = 7898a971eed7a03e9e390c83d0365584f74dabc7
 RMD160 (jetpack.tar.Z) = 2454cef72849f8f644ac6600ad84b3bebd39f8cf
+SHA512 (jetpack.tar.Z) = e99ec5f051e319efe854f3bd10908827e1e83bfa5e06787c4435a355ce8b31136c6a803cc521803c1280b9efb95a774b50005a3c1f72eefa7d1fc4cf0f7bc09a
 Size (jetpack.tar.Z) = 70621 bytes
 SHA1 (patch-ac) = a9a42e0e6f817a5654deec79731786460ed9b944
 SHA1 (patch-ad) = f64494ec70fade9d203ab8dbc2795b94f9ecb7e7

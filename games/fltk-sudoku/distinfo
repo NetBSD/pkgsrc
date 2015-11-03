@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/07/18 17:40:40 reinoud Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:56:49 agc Exp $
 
 SHA1 (fltk-1.1.7-source.tar.bz2) = 16b174522920403af1e4ccddd36daaefda3765c8
 RMD160 (fltk-1.1.7-source.tar.bz2) = a539a1c6bb3363e54bc82c7995037c5d8ede9dd7
+SHA512 (fltk-1.1.7-source.tar.bz2) = 8e4854968bb61a974669766718311c9028bb5abafed58d52f49aabb26249924cf848e554247dcf6e30a916f3fc0bb002f043739b6a006c738a7294bc11bc5aaa
 Size (fltk-1.1.7-source.tar.bz2) = 2060757 bytes

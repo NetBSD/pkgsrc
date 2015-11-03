@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.11 2014/09/11 16:59:16 jperkin Exp $
+$NetBSD: distinfo,v 1.12 2015/11/03 20:56:48 agc Exp $
 
 SHA1 (EXchess_v7.31beta.zip) = 09fa6d133172e34c1908df148f56489c47ee8cc2
 RMD160 (EXchess_v7.31beta.zip) = 38a3a6b3a3a53ff62321642954ff4d29ebfe9705
+SHA512 (EXchess_v7.31beta.zip) = 0bac23f748238fc2f8fceeee29112911a7f3f03ce0ce930bf415ab69632bf673b23d466ca0299069daf5636ef91b9ff0d4633632e6f57a352bebbd9344dd60a6
 Size (EXchess_v7.31beta.zip) = 3421179 bytes
 SHA1 (patch-search.par.in) = 664781d6f9a204f9a071825dc3ebee19da4e3f8b
 SHA1 (patch-src_book.cpp) = ab12445c7ebd769a2a90166fba4ef256f293709d
