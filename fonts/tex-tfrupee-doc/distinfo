@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:56 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:19 agc Exp $
 
 SHA1 (tex-tfrupee-20770/tfrupee.doc.tar.xz) = 9f14bec44dcbeb5049b4d009fdd34b6a39442b7b
 RMD160 (tex-tfrupee-20770/tfrupee.doc.tar.xz) = 9d095938b2919f416387b6183f84d7a678e8b879
+SHA512 (tex-tfrupee-20770/tfrupee.doc.tar.xz) = 960e5df4534c28ad1a6ce8e1f287f2d732d49a0ff273a8351f6830fe7b5926b0ed0141124c9d827655b97b5ec452ef886204344d61463dab2c010cb3b8bd1240
 Size (tex-tfrupee-20770/tfrupee.doc.tar.xz) = 113244 bytes

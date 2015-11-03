@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:49 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:10 agc Exp $
 
 SHA1 (tex-mdsymbol-28399/mdsymbol.tar.xz) = 3e94e9875b34f387fb1a6273129465d70be52b1c
 RMD160 (tex-mdsymbol-28399/mdsymbol.tar.xz) = b1b9b7959361b19e5146dde4f4cbd664f282ab40
+SHA512 (tex-mdsymbol-28399/mdsymbol.tar.xz) = d09b679c12350fd56e05894d6e22d9658440e29c85fb385d1e464751cc1eb944dec1b8bfbf9f1f03e659981920611c8ca704b16b766c2eb514bf50c3947ffc4c
 Size (tex-mdsymbol-28399/mdsymbol.tar.xz) = 905628 bytes

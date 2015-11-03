@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/02/03 13:56:45 taca Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 20:44:39 agc Exp $
 
 SHA1 (ttfunk-1.4.0.gem) = 4494fc3275797d80d0f24251b77cf9884cbe48dc
 RMD160 (ttfunk-1.4.0.gem) = 2fa3411fcaed69691e1bc6419506e9c98e76de16
+SHA512 (ttfunk-1.4.0.gem) = d32ec7ccb963dab1440e91e9d58ecbd6d494da314a943a44e56bc3e33da4a64f5bd4ba42ec5f009ba0000104f1111dc2b65243bdcec2ed2e10704f353956321e
 Size (ttfunk-1.4.0.gem) = 370176 bytes

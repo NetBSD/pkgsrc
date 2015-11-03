@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:37 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:53 agc Exp $
 
 SHA1 (tex-dice-28501/dice.doc.tar.xz) = f61df3b0ad8c491376705fbf68a8d82b4c117493
 RMD160 (tex-dice-28501/dice.doc.tar.xz) = 28884a3d7500235ecea5a9f1d257cd29d93e3e18
+SHA512 (tex-dice-28501/dice.doc.tar.xz) = 11d559f8e0ec8a9ff3eff48bf1e7cf5391bc434a51117e7a51f85f42c8765338efe3a72348563829cf3bd9840daf11fc16d6e29aa9dfe13e0f49a11f1de58f54
 Size (tex-dice-28501/dice.doc.tar.xz) = 1236 bytes

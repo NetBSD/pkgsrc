@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:38 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:54 agc Exp $
 
 SHA1 (tex-droid-23912/droid.doc.tar.xz) = 4071c56a87b3ce9c2c2cd75fde4863cdbcf16e84
 RMD160 (tex-droid-23912/droid.doc.tar.xz) = 22df01e862562a29ed24e4de7dca2f015e5ce55d
+SHA512 (tex-droid-23912/droid.doc.tar.xz) = f67b1a30880d93c54b34afd8cce6ddb905b9bbe1d5a32e6ea864980849bcd6899c3d39cfcf91ba85153b33b716bf6430956242ef1da572bd5cef2a96f365b98d
 Size (tex-droid-23912/droid.doc.tar.xz) = 541012 bytes

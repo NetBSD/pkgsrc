@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:45 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:03 agc Exp $
 
 SHA1 (tex-hacm-27671/hacm.tar.xz) = d246801e1fa5a9605e337cc3f68983fc882fc370
 RMD160 (tex-hacm-27671/hacm.tar.xz) = 7d96d456ea70ec3251f6013f8dd97b3f82f35fe3
+SHA512 (tex-hacm-27671/hacm.tar.xz) = 175842a29114128ed0aacc5e3ccd55d057f26214ff36c6fc7fb4374375faef37497e79d04350ba1f71df6dc032ee53c77c53e1a2d67a8697995dc0dfcbaf0489
 Size (tex-hacm-27671/hacm.tar.xz) = 226268 bytes
