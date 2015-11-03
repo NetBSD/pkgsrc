@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2013/03/01 21:29:14 markd Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 20:30:58 agc Exp $
 
 SHA1 (GNS3-0.8.3.1-src.tar.bz2) = 1918901dd0b06a96a71825cbba66ad067716c1d4
 RMD160 (GNS3-0.8.3.1-src.tar.bz2) = c0d92c44767314c6f8438e3f89e5d606aa867d82
+SHA512 (GNS3-0.8.3.1-src.tar.bz2) = 124a9369c074870016e58b7b8bbbe46a7c399912f85f506344b4d9ef36b5b62e640d2a9b6938945aa3ed214c1598e88cd9c05ea4d4301668f04e4696d9d4fe49
 Size (GNS3-0.8.3.1-src.tar.bz2) = 2611269 bytes

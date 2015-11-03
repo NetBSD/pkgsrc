@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2013/10/28 23:45:28 joerg Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 20:30:58 agc Exp $
 
 SHA1 (gnuboy-1.0.3.tar.gz) = 4c371445b6599c6636d08ba9c5de7bb9fbf78437
 RMD160 (gnuboy-1.0.3.tar.gz) = dfaf927fe2d4e03f39d83079b7dd3aa02c8983b9
+SHA512 (gnuboy-1.0.3.tar.gz) = 89e8075dac5ec17b375a5739367b46c55130211fb487a052be1cca49a5d86cc1a7f1619b2b2473d744fbe3c51fdb1a11110b15836cc9cc9de588932b91d258e6
 Size (gnuboy-1.0.3.tar.gz) = 187627 bytes
 SHA1 (patch-aa) = d99a316e40d1249685204f23e66e3709cefc03e3
 SHA1 (patch-ab) = e3fe25086d105864f4d127c84bfe3f3234820927

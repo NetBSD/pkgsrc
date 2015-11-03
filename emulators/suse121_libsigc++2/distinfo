@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/03/21 13:38:32 obache Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:31:05 agc Exp $
 
 SHA1 (suse121/libsigc-2_0-0-2.2.10-2.1.2.i586.rpm) = f2ff2c99c03b06521e5898ffa893f20828b58d4a
 RMD160 (suse121/libsigc-2_0-0-2.2.10-2.1.2.i586.rpm) = 157607f9cadd1accf25e061e6ebc387117e7ab7f
+SHA512 (suse121/libsigc-2_0-0-2.2.10-2.1.2.i586.rpm) = 1ec7acbbf4cc1b8dda5a35a719577eb49147d5b38399e6c8c334182ecb635319593a55a70c9de68f7bd42b30f2cc25032f709a12d64e6e978d945326edd78a98
 Size (suse121/libsigc-2_0-0-2.2.10-2.1.2.i586.rpm) = 52947 bytes
 SHA1 (suse121/libsigc-2_0-0-2.2.10-2.1.2.x86_64.rpm) = 513442df0223f2afe00474cb79acafad0a94192d
 RMD160 (suse121/libsigc-2_0-0-2.2.10-2.1.2.x86_64.rpm) = b12ad6282850b837a21fd74c639eb053cd6a6221
+SHA512 (suse121/libsigc-2_0-0-2.2.10-2.1.2.x86_64.rpm) = a908f61f62bd2801100b16cbf8ccbea8aafeef6e487bfef9b97a0f11a0462c7ff270bcf4047083a5fd1dc4f3a3aacd8667700b6e4975828e9c5fd4583579716d
 Size (suse121/libsigc-2_0-0-2.2.10-2.1.2.x86_64.rpm) = 52648 bytes

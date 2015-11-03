@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/02/04 22:57:29 jmcneill Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:30:59 agc Exp $
 
 SHA1 (fceumm-libretro-20150204.zip) = a56ceff1b9ae434c9fa83a55aa0e2dfd9baf523b
 RMD160 (fceumm-libretro-20150204.zip) = 707ad067145272a031db529c98a5695837e04882
+SHA512 (fceumm-libretro-20150204.zip) = c5038bae761e6d1dc092903da36bbf95856a99de3ba07eeacb5f66476a557151987e7cedc6682c43cbbd972d3c09428053086f3cbff6822471aebec82245410d
 Size (fceumm-libretro-20150204.zip) = 847075 bytes

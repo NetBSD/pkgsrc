@@ -1,32 +1,42 @@
-$NetBSD: distinfo,v 1.1 2014/12/04 19:51:42 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:31:04 agc Exp $
 
 SHA1 (suse121/libgstapp-0_10-0-0.10.35-6.1.2.i586.rpm) = 783a4ec3b809ebc6b1aa7b8b3ddc4f223640be09
 RMD160 (suse121/libgstapp-0_10-0-0.10.35-6.1.2.i586.rpm) = 63593bee17fedc3254808b8da8b22019d704a8f2
+SHA512 (suse121/libgstapp-0_10-0-0.10.35-6.1.2.i586.rpm) = c4a85c2366077e09808cae945252f5954a786a78d6fd165fdf7cbb18904f03d70c3c89c8a0f8354247c792dba2cfb9435ca20ffa26628acd203a8b04ab58f9f2
 Size (suse121/libgstapp-0_10-0-0.10.35-6.1.2.i586.rpm) = 50904 bytes
 SHA1 (suse121/libgstbasevideo-0_10-0-0.10.22-8.1.2.i586.rpm) = 91e48dea276761530ad43566fc57c708c14e8d1b
 RMD160 (suse121/libgstbasevideo-0_10-0-0.10.22-8.1.2.i586.rpm) = 4255cb78ab7ea41c647b0d0659b5a4092e0c0629
+SHA512 (suse121/libgstbasevideo-0_10-0-0.10.22-8.1.2.i586.rpm) = 8f12d303a6e6b3af9c1240f074d14244ef5fb52429e87fd22e830e8bc28a7c4927117371b19e17fad466208769e1f2a8a4fe09995f764594f361583a740850a3
 Size (suse121/libgstbasevideo-0_10-0-0.10.22-8.1.2.i586.rpm) = 50226 bytes
 SHA1 (suse121/libgstinterfaces-0_10-0-0.10.35-6.1.2.i586.rpm) = c217c2ac06dc97a4f9ee360b49d01de27edf562a
 RMD160 (suse121/libgstinterfaces-0_10-0-0.10.35-6.1.2.i586.rpm) = 8e420791b297f914051fb30dc9f3061e484e11d9
+SHA512 (suse121/libgstinterfaces-0_10-0-0.10.35-6.1.2.i586.rpm) = 6e112551b9b5a70cc33c4717aaea66ee95ae92c4e90f52e1a04a4695e14f1996cfb3b10801dd321915601f7534b54c94eaa3cd28507cc4d9fafb2581ec768de7
 Size (suse121/libgstinterfaces-0_10-0-0.10.35-6.1.2.i586.rpm) = 345897 bytes
 SHA1 (suse121/libgstreamer-0_10-0-0.10.35-4.1.4.i586.rpm) = e304795d2891c28cb1162f8b09f96c173824eed9
 RMD160 (suse121/libgstreamer-0_10-0-0.10.35-4.1.4.i586.rpm) = 4ab43d1e455077fb84ccf9c382e7f55c9605d8b8
+SHA512 (suse121/libgstreamer-0_10-0-0.10.35-4.1.4.i586.rpm) = 103fef950967aaec8e24f0dda8d274797c5c68746795be635d8e7d52ca796a45c8612d5c585e2b877804b54a056a234ac41b71ab34620684548ee09ceb3a8ffe
 Size (suse121/libgstreamer-0_10-0-0.10.35-4.1.4.i586.rpm) = 533035 bytes
 SHA1 (suse121/libgstrtspserver-0_10-0-0.10.8-14.1.2.i586.rpm) = 53ea422e7c853f55557e3696225a8d12141e8a50
 RMD160 (suse121/libgstrtspserver-0_10-0-0.10.8-14.1.2.i586.rpm) = 7a8e6bdda630c9eddb046ac1a9d8d72f4a6fb6a5
+SHA512 (suse121/libgstrtspserver-0_10-0-0.10.8-14.1.2.i586.rpm) = e7c9a8618befcb5ffc790f10318ddc407b83a97fabbee1feda182901abe27e17ef49e1303c4d8dbd280fd91e7b56653965f71af1ed1e76266d762e85559fa427
 Size (suse121/libgstrtspserver-0_10-0-0.10.8-14.1.2.i586.rpm) = 64375 bytes
 SHA1 (suse121/libgstapp-0_10-0-0.10.35-6.1.2.x86_64.rpm) = 3fd6270e08f9f153b3129f8014d43bd782a35b21
 RMD160 (suse121/libgstapp-0_10-0-0.10.35-6.1.2.x86_64.rpm) = f5eb524f957ed868c3c408649a10684e36958a17
+SHA512 (suse121/libgstapp-0_10-0-0.10.35-6.1.2.x86_64.rpm) = 87687325a0bc7791850f4582d58503afa3bae556232c534fc2b942af9ab7d777b74b4d921ef79aeb4d7cf8952b3d883877c976cab9d443b13a31315524ececc7
 Size (suse121/libgstapp-0_10-0-0.10.35-6.1.2.x86_64.rpm) = 50778 bytes
 SHA1 (suse121/libgstbasevideo-0_10-0-0.10.22-8.1.2.x86_64.rpm) = b728f7cdad5c5ed7492de7f456d9273a095d0705
 RMD160 (suse121/libgstbasevideo-0_10-0-0.10.22-8.1.2.x86_64.rpm) = f4dca2d418fe53793a9b428dad3c4754ba66d0e0
+SHA512 (suse121/libgstbasevideo-0_10-0-0.10.22-8.1.2.x86_64.rpm) = 97fdb514fbdf62f7fb81dd9d5c0925b8963b12808da4f64e613829ba0264ce5e32ad51248a6538c614ece1ace864ad3de290d4c2ca8b00dba4f4e65bbd2970db
 Size (suse121/libgstbasevideo-0_10-0-0.10.22-8.1.2.x86_64.rpm) = 47553 bytes
 SHA1 (suse121/libgstinterfaces-0_10-0-0.10.35-6.1.2.x86_64.rpm) = 5d4867f75fae19df3dc99be377025fa9f3957fae
 RMD160 (suse121/libgstinterfaces-0_10-0-0.10.35-6.1.2.x86_64.rpm) = 4ed75a0bb354b3e5c5f8b7dec3be4f99008ca532
+SHA512 (suse121/libgstinterfaces-0_10-0-0.10.35-6.1.2.x86_64.rpm) = 24362d6c89528d6211cc830cfcf945452744ffb03a0d20b298ee18089476cefec462dc65bced0ef192e12b43ffc0764035824943f1fe538217ef9b96a8f3da95
 Size (suse121/libgstinterfaces-0_10-0-0.10.35-6.1.2.x86_64.rpm) = 352404 bytes
 SHA1 (suse121/libgstreamer-0_10-0-0.10.35-4.1.4.x86_64.rpm) = 16206fc7a36f798ad54968f1427fb8da748e83ac
 RMD160 (suse121/libgstreamer-0_10-0-0.10.35-4.1.4.x86_64.rpm) = 97023fc7d4e5a827b6dbaa302f66c29ca0b5fb41
+SHA512 (suse121/libgstreamer-0_10-0-0.10.35-4.1.4.x86_64.rpm) = fe0f91a1405e010268e9180240632ab2785c2cf5a605af4c6c8af19de7c7f0141b5c1ad8c709efef4e1a3fb500334e4320c4e8e28799df12a162b33b73fa548e
 Size (suse121/libgstreamer-0_10-0-0.10.35-4.1.4.x86_64.rpm) = 537739 bytes
 SHA1 (suse121/libgstrtspserver-0_10-0-0.10.8-14.1.2.x86_64.rpm) = d71ce94c5c91b7494ff105b9932da0cd8e92201e
 RMD160 (suse121/libgstrtspserver-0_10-0-0.10.8-14.1.2.x86_64.rpm) = 2c461f409d8a48fef334db3ba63dc45dbac99a04
+SHA512 (suse121/libgstrtspserver-0_10-0-0.10.8-14.1.2.x86_64.rpm) = 8e2a933cdad37f088a22fc964991461534fe55ca4590e99dead5e0dcdeaf9bd7fc73bc5698b1438809bc34b19bbb6f7c13c2817491b8082b22d6164be633030a
 Size (suse121/libgstrtspserver-0_10-0-0.10.8-14.1.2.x86_64.rpm) = 64487 bytes

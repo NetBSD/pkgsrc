@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2012/03/07 15:52:40 hans Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 20:31:09 agc Exp $
 
 SHA1 (tuxnes-0.75.tar.gz) = 1729cb3a33a5a3e0c8fa81a1341f912cd0b8d18b
 RMD160 (tuxnes-0.75.tar.gz) = d4a94e00f7c90cbf6fbf19537ede22aca05eeafd
+SHA512 (tuxnes-0.75.tar.gz) = cb033002d9cacae82476b4686f81a6d984fda303155ade43c8ffc36d9d4a61a90f55ef4d7f8efecb3dde51ffc58bfafeffd0081157318f7bd99250f0ad358174
 Size (tuxnes-0.75.tar.gz) = 198735 bytes
 SHA1 (patch-aa) = d907d8c64ffec0977160f61bf70eb5223a6fc1d2
 SHA1 (patch-ab) = b2acfc6915f30f28aadc5a9ddf780596c8120f72

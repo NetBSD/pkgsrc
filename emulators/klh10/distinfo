@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.2 2013/10/20 18:11:20 joerg Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 20:30:59 agc Exp $
 
 SHA1 (klh10-2.0h/panda-dist.tar.gz) = b32b8d64145a6376326dc6ac1bf68ada4f2d7313
 RMD160 (klh10-2.0h/panda-dist.tar.gz) = ca779c295c5cd3a3be3dd0141aed86f1c2c08aa5
+SHA512 (klh10-2.0h/panda-dist.tar.gz) = bef02ed5c8b7aa78e82222bcd5afd2ef39061f358128d504bc3b5ff37c10afe4f9d60cc890bb4b3c2de1f1b9524c359aae9d47196f2f58d92498af659e2f3dbb
 Size (klh10-2.0h/panda-dist.tar.gz) = 221145391 bytes
 SHA1 (patch-doc_install.txt) = 84f89d148a7c3d4af11ddc708d592899807ee1b6
 SHA1 (patch-run_klt20_klt20.ini) = c48dc5d9360ff0cd1a7afc7ab85ad6de15585c29

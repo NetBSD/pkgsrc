@@ -1,20 +1,26 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/02/22 13:24:13 obache Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:31:03 agc Exp $
 
 SHA1 (suse100/i586/krb5-1.4.1-5.11.i586.rpm) = cb33ae0af2886f1185c86e437adc8eba34c586f1
 RMD160 (suse100/i586/krb5-1.4.1-5.11.i586.rpm) = f2e784ede547a3dadc9a4956b63e7cac1b1491f1
+SHA512 (suse100/i586/krb5-1.4.1-5.11.i586.rpm) = 5a03c6312a730433010c9748f98014524233ca9fac67f3b012e3f171ba0f31cd8318ea4b91c65b17ad28af791e0be6207bff5fae86e6eae9340800cecac58112
 Size (suse100/i586/krb5-1.4.1-5.11.i586.rpm) = 494975 bytes
 SHA1 (suse100/i586/libcom_err-1.38-4.3.i586.rpm) = 4bb9f391a3267943e287ae603f28f14560d7135e
 RMD160 (suse100/i586/libcom_err-1.38-4.3.i586.rpm) = 0eb66e114b4cc6329aae848755979820da17aa3e
+SHA512 (suse100/i586/libcom_err-1.38-4.3.i586.rpm) = ac9073fbf42ea86cb84343aa0190357b5e29aee7b6e050e851d775718aeb3e69a2cb88076dc933f4561e8d05088df9c465e93ea01e75b5a2eff2fd9673df0372
 Size (suse100/i586/libcom_err-1.38-4.3.i586.rpm) = 42487 bytes
 SHA1 (suse100/ppc/krb5-1.4.1-5.11.ppc.rpm) = dbcc115fe5051a6c33faa2c50e6504774a30790c
 RMD160 (suse100/ppc/krb5-1.4.1-5.11.ppc.rpm) = 5ad11c6c158c2fbe2e4df9d393f94589df20805e
+SHA512 (suse100/ppc/krb5-1.4.1-5.11.ppc.rpm) = a20ee49d9cb3394204b072b3754afa6e45b7e837c0dc100ad835eeca10b0090ec01fb3142183002e325a5a75c95e64554fbbce0e732a13bd4d9db82c68c8d075
 Size (suse100/ppc/krb5-1.4.1-5.11.ppc.rpm) = 541646 bytes
 SHA1 (suse100/ppc/libcom_err-1.38-4.3.ppc.rpm) = 53d2fe50f46e34aacd14fbc55ae11bacae4918ae
 RMD160 (suse100/ppc/libcom_err-1.38-4.3.ppc.rpm) = 23c7b7ffd67edd7ff13d72485ff5c955421b8589
+SHA512 (suse100/ppc/libcom_err-1.38-4.3.ppc.rpm) = 88ea8e4ff35880868a2ab4b66b2e6c13cceae94013900cb4b2dc921c121592eb8a55457e0e4e914873068eb3d73aa21e072004316cec1af0227f59ca147fa9e9
 Size (suse100/ppc/libcom_err-1.38-4.3.ppc.rpm) = 49275 bytes
 SHA1 (suse100/x86_64/krb5-1.4.1-5.11.x86_64.rpm) = a3fcb4deca1eac45dd25ec6bda76c542f219e477
 RMD160 (suse100/x86_64/krb5-1.4.1-5.11.x86_64.rpm) = b3f1a721191f243725da937ecd735f602b7f5f97
+SHA512 (suse100/x86_64/krb5-1.4.1-5.11.x86_64.rpm) = 54f35ab9bbb4ce4e8b833c745eb13cdc46a100bf5bd24f848da5058fb86c993b9a7c36839fc041d64d5f318c0f63f3e90f72204849e528444cd84d8e3a7b6e34
 Size (suse100/x86_64/krb5-1.4.1-5.11.x86_64.rpm) = 538713 bytes
 SHA1 (suse100/x86_64/libcom_err-1.38-4.3.x86_64.rpm) = 8c0f121836084fbdb823e557a78074a9e0ef32f3
 RMD160 (suse100/x86_64/libcom_err-1.38-4.3.x86_64.rpm) = 121a4400d26d83350bfc235f5f8ecab77be96a6b
+SHA512 (suse100/x86_64/libcom_err-1.38-4.3.x86_64.rpm) = 61890bd55242348e64cc4fe4f9a1209981173e11554c72ca9c360e7dae6fe4e7a681c864060c2e71a408f37ed068175aa72df4e53b1f6788d8bb2f964e90d925
 Size (suse100/x86_64/libcom_err-1.38-4.3.x86_64.rpm) = 43704 bytes

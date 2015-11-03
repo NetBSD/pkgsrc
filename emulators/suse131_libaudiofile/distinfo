@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.1 2014/04/17 00:08:34 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:31:07 agc Exp $
 
 SHA1 (suse131/libaudiofile1-0.3.6-2.1.2.i586.rpm) = bfd35a6c2588c7896778d6d028c52960b451683c
 RMD160 (suse131/libaudiofile1-0.3.6-2.1.2.i586.rpm) = 0538a50107171e2aa6f6e3bc33f2b40219057d76
+SHA512 (suse131/libaudiofile1-0.3.6-2.1.2.i586.rpm) = 27dd15b5bb90233e5e29e18d924c417b3e829c207fe39559c39a6c469662b84f8bb34d9d4a06ecd6c207d492d7d2c4e20a8800083bbd50ee5d7cbd556bc5447c
 Size (suse131/libaudiofile1-0.3.6-2.1.2.i586.rpm) = 94768 bytes
 SHA1 (suse131/libaudiofile1-0.3.6-2.1.2.x86_64.rpm) = e4e37100602e3b6c74f23f01ca371b53148c6766
 RMD160 (suse131/libaudiofile1-0.3.6-2.1.2.x86_64.rpm) = 289603001c35b8165a8d5a9080d7c8970b4d8e4e
+SHA512 (suse131/libaudiofile1-0.3.6-2.1.2.x86_64.rpm) = 72b8c22e3da693dbec33e5538899b163142642f32050afe94c77502b866f80a2865e8d857b7a6dd9c1080ff05d0ba34928b1d1dde5faf81d99c647fc82ce1a34
 Size (suse131/libaudiofile1-0.3.6-2.1.2.x86_64.rpm) = 92115 bytes

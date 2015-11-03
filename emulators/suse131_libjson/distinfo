@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.2 2014/04/23 12:54:23 obache Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 20:31:07 agc Exp $
 
 SHA1 (suse131/libjson0-0.10-3.4.1.i586.rpm) = 7b677a33ddc6a70953fa4743ceb1fe9d8ce70a96
 RMD160 (suse131/libjson0-0.10-3.4.1.i586.rpm) = f53ea3e1c59ed5c4d539a76f2b701f2597615829
+SHA512 (suse131/libjson0-0.10-3.4.1.i586.rpm) = 4871786cd268941456cef1715eb361076ef4f9b98164ec4f5b5800b54a6cd6d20222452d8ca2cc8610bd8e1c254029ffd6aab60102e3cf682e94a52de7a3817a
 Size (suse131/libjson0-0.10-3.4.1.i586.rpm) = 21544 bytes
 SHA1 (suse131/libjson0-0.10-3.4.1.x86_64.rpm) = 1b810be43b2bd72b14d2d99fc38cc89fe86cca05
 RMD160 (suse131/libjson0-0.10-3.4.1.x86_64.rpm) = 08a4e1ffe410e9029d13e9569cfe04c66f1f6934
+SHA512 (suse131/libjson0-0.10-3.4.1.x86_64.rpm) = d1972a717b1df2f78130c11d202c9552fbd60c55b440553f7f689655a62cd3e82fd8fb315c73bb8ea93222d80d27c4a4def9bea3a1d9d27d265e1336d595ea76
 Size (suse131/libjson0-0.10-3.4.1.x86_64.rpm) = 21536 bytes

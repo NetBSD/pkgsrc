@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.17 2007/04/04 17:36:17 joerg Exp $
+$NetBSD: distinfo,v 1.18 2015/11/03 20:31:09 agc Exp $
 
 SHA1 (uae-0.8.25.tar.gz) = 41b7a70cf672d3cc516bd3856a051459a95a6517
 RMD160 (uae-0.8.25.tar.gz) = 6990dc7aaf43c8bda0d7b86e6d0ae164209d1eb1
+SHA512 (uae-0.8.25.tar.gz) = 987509a18e3ca367d2ad1037afa68dbd9ff36df59713aaede3e40fa381e2157079a5438fbb1ef3f9a7ea5cf681fe87511fdcd4134122a5db5cf2f2f0946df85a
 Size (uae-0.8.25.tar.gz) = 970727 bytes
 SHA1 (patch-aa) = c185427ad9042e0e81ec4990c0ae4b5e6977a74e
 SHA1 (patch-ab) = 4dc5d66008a9c056c7a93f74d25c4778d4f1b6cb

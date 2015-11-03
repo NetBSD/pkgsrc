@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.5 2014/09/27 09:54:06 jperkin Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 20:31:00 agc Exp $
 
 SHA1 (Nestopia140src.zip) = ef85771132cc8652456727278df36f7068d238e0
 RMD160 (Nestopia140src.zip) = caecb991dfd459093b88b2abb84ac9bbd95ced63
+SHA512 (Nestopia140src.zip) = 54a7c569239c15aa9bd7a5bbe13f67b5a62baccf95f81fb55ad9578872edc11a3e456af7ea67107e96c0c88726e976203058cf971fbb527cd30b644d8d51795a
 Size (Nestopia140src.zip) = 2346187 bytes
 SHA1 (nst140_lnx_release_h.zip) = 94a2a911f306514ed725cff68ddbc47bd33b9f99
 RMD160 (nst140_lnx_release_h.zip) = f187b2ff44d8a57432cd7b73679a61142b9ff877
+SHA512 (nst140_lnx_release_h.zip) = eea9b212a26f0d8c294371eeb15a22c1aba595334dd46629767af19671692bd29eda078caa96d4a91f505b4e2764861090578c63dd3715cfa0fce4af7fc39339
 Size (nst140_lnx_release_h.zip) = 250216 bytes
 SHA1 (patch-Makefile) = d3abca01943618fe58d12fac3db2ef2762404aef
 SHA1 (patch-aa) = f598f572056344660c72212900b6b8997d996655

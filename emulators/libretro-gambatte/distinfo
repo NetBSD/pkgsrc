@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/02/05 01:40:45 jmcneill Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:30:59 agc Exp $
 
 SHA1 (gambatte-libretro-20150204.zip) = ca821c70aff0cd62df9e39d906c0d978f65f794c
 RMD160 (gambatte-libretro-20150204.zip) = 00fef2ee8d28ab58ee66cc0a9f781795a13506f0
+SHA512 (gambatte-libretro-20150204.zip) = 9d0be055626e7c37cf767984963c625a1e074ace37d705a8a97bbf9d1e3b293154596897d2cdec5f756fc16d890fa12e2db60a68766eb6b81e396abd7ca9715a
 Size (gambatte-libretro-20150204.zip) = 2293283 bytes

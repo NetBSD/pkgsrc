@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.1 2015/03/02 16:54:55 tnn Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:31:08 agc Exp $
 
 SHA1 (suse131/libxslt1-1.1.28-5.1.2.i586.rpm) = 148173a12dbbda6f431c32a8e96ee752826df20d
 RMD160 (suse131/libxslt1-1.1.28-5.1.2.i586.rpm) = 84dfa12b520376ca2abeb4e8603d648f1020fd2c
+SHA512 (suse131/libxslt1-1.1.28-5.1.2.i586.rpm) = cd0c899a7911d6a9e92b8d85aa6e0a12ddad4315f6ee59d572167ca98ae6903ab2b9f71ab5b313a4c693f57380ff2789a625c2906de103d63f061dca129fdc80
 Size (suse131/libxslt1-1.1.28-5.1.2.i586.rpm) = 126089 bytes
 SHA1 (suse131/libxslt1-1.1.28-5.1.2.x86_64.rpm) = 0eb66cf0e3dd581ae2c1133330e8d62f4a47b995
 RMD160 (suse131/libxslt1-1.1.28-5.1.2.x86_64.rpm) = 76c1e6baa621cdb2fb624919cdcab21c2cf3ca0c
+SHA512 (suse131/libxslt1-1.1.28-5.1.2.x86_64.rpm) = 560e344f9f63a30576b341fa91467e4c02c1853967f9108c99bc81d1ea18288816bc2b6e058fc28cedcd79d8cb212ca26ab67baea57a97d19c458fe4b0294faa
 Size (suse131/libxslt1-1.1.28-5.1.2.x86_64.rpm) = 131567 bytes

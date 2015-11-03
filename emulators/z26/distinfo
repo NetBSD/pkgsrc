@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/10/21 03:49:56 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:31:10 agc Exp $
 
 SHA1 (z26v213.tar.gz) = b9a913ab7965f021be79ee9079fdba79ad26a5da
 RMD160 (z26v213.tar.gz) = 52d0e99839bbc290e184d31a765ce3f3043937c4
+SHA512 (z26v213.tar.gz) = 90ce3f99d04b26f8e50fd96735648a0beec7828453785e07558d5cfe8c6ddd9bfed4c1d4e483fec1f8ec3203738f866363eea5c346df7f8ac376cfbd9e53c4a3
 Size (z26v213.tar.gz) = 216375 bytes

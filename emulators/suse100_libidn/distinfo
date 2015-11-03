@@ -1,11 +1,14 @@
-$NetBSD: distinfo,v 1.2 2014/05/05 01:32:33 obache Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 20:31:03 agc Exp $
 
 SHA1 (suse100/i586/libidn-0.5.9-5.i586.rpm) = fab5ac1bf994293027c475bfa4fc4c9a3521bd9f
 RMD160 (suse100/i586/libidn-0.5.9-5.i586.rpm) = fd30cf2189c8c010112ef2b3495763fa879380f4
+SHA512 (suse100/i586/libidn-0.5.9-5.i586.rpm) = 432b40fb44e696f4b28a962692338479e8beea131ce15ca83a86b039b303490da2c1e508f59d2f9977e7f6542a34cf7b87872929c51ea19d50905bb39e991683
 Size (suse100/i586/libidn-0.5.9-5.i586.rpm) = 181805 bytes
 SHA1 (suse100/ppc/libidn-0.5.9-5.ppc.rpm) = 81271dc2681494cee5d5a481918ef576050ee5a0
 RMD160 (suse100/ppc/libidn-0.5.9-5.ppc.rpm) = b5f36c7ba25ac17351c10bd54177a8b1f67ed431
+SHA512 (suse100/ppc/libidn-0.5.9-5.ppc.rpm) = 1808976b9f76f37eebfd3f488421de359b836e4db96a2e1f770a23025181088ff7d6dd7dd371d40f589be9512794ba1603fa0ef92aa766d2c4a784c65bb2f49a
 Size (suse100/ppc/libidn-0.5.9-5.ppc.rpm) = 191084 bytes
 SHA1 (suse100/x86_64/libidn-0.5.9-5.x86_64.rpm) = d4ee7d928a7ff95fbe081244174b64f2f67afa7a
 RMD160 (suse100/x86_64/libidn-0.5.9-5.x86_64.rpm) = 6cad343734198ee787112db6b6091e50e8c62af0
+SHA512 (suse100/x86_64/libidn-0.5.9-5.x86_64.rpm) = f82551db6df7e22dc97305a6b606c480b49c047590f8aef0862b22933ce21c5b23e737e1cf3f0a179f0cf6d9ceef328a560d5348886a72ecde98ca6b2d316061
 Size (suse100/x86_64/libidn-0.5.9-5.x86_64.rpm) = 183500 bytes

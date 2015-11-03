@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2011/03/15 11:30:05 obache Exp $
+$NetBSD: distinfo,v 1.9 2015/11/03 20:31:09 agc Exp $
 
 SHA1 (twin-src-3.1.14.tar.gz) = b1652f07adcc2c98948a4458480b2d8436cc893f
 RMD160 (twin-src-3.1.14.tar.gz) = e4b54f515505176498335387415dc5797b3e63eb
+SHA512 (twin-src-3.1.14.tar.gz) = b677b94c464b6b4b6cb0126e402cb27f7236f05c9c1e8c9e92cf00cbfc47e3735c0c547649926292d358d9126fdac7d3f3633090a7fe9477baee1a8324083d8e
 Size (twin-src-3.1.14.tar.gz) = 2216218 bytes
 SHA1 (patch-aa) = 82a3a8cd6facd39d8645ca3f243cd25b94d70753
 SHA1 (patch-ab) = 7e7b4d3da2afb119a4222a953ae44251b0c253f2

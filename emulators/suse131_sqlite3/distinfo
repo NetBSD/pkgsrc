@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.1 2014/12/17 01:38:47 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:31:09 agc Exp $
 
 SHA1 (suse131/libsqlite3-0-3.7.17-2.1.2.i586.rpm) = 8060a46f33ba62edeab3f4df770e3330f536ca90
 RMD160 (suse131/libsqlite3-0-3.7.17-2.1.2.i586.rpm) = d3d2d803fada691b8ff32c88e4f4e28f95a07bcd
+SHA512 (suse131/libsqlite3-0-3.7.17-2.1.2.i586.rpm) = 5cc8b9342385be6f154a0fb8adc9889529d8db8cab70a90dc22d34119f501f891d1302c9812b00274923af64aa818faa5ccf518d1ca415f11d627af76138e4d2
 Size (suse131/libsqlite3-0-3.7.17-2.1.2.i586.rpm) = 358153 bytes
 SHA1 (suse131/libsqlite3-0-3.7.17-2.1.2.x86_64.rpm) = fefb5362f4c529a13a63eb90e2559177b4e8c436
 RMD160 (suse131/libsqlite3-0-3.7.17-2.1.2.x86_64.rpm) = 71462c2e39cceaa3d2a254299bd1eba6a207a43c
+SHA512 (suse131/libsqlite3-0-3.7.17-2.1.2.x86_64.rpm) = 1429b1b93743a4b6d8520858512d24c8cfda89de12af70b3e6738a579901013722752b3c4bdb5460d9df85bb860915d97ac84f85b9873c729fe2dacccf8ac4e5
 Size (suse131/libsqlite3-0-3.7.17-2.1.2.x86_64.rpm) = 358393 bytes

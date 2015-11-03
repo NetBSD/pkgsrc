@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/02/05 20:20:41 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:30:57 agc Exp $
 
 SHA1 (dynagen-0.11.0.tar.gz) = 3e3c6e33bc781301c7abe24532a06bca72d328af
 RMD160 (dynagen-0.11.0.tar.gz) = c68861cab9959a28338777dd89ebb9c5064c4459
+SHA512 (dynagen-0.11.0.tar.gz) = 41ad7f31a1c4e30f6859ab706f71c86d15e174af4cc59a1f9604f71b0f12cb28fd3487fd13bc56f98940a323dfdbe85eaabd3831fe778fc9f1a96196257df60d
 Size (dynagen-0.11.0.tar.gz) = 1418846 bytes
 SHA1 (patch-aa) = a3db849a4024188dd22eda174e0e8f1cf2e90802

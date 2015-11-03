@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2013/10/16 23:59:36 roy Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 20:30:55 agc Exp $
 
 SHA1 (aliados-0.2.0.tgz) = 07de1cdf27cff9e15764df7d09d327badf90b92c
 RMD160 (aliados-0.2.0.tgz) = ede3ed71908b166658fc82f651a87243fbf10dff
+SHA512 (aliados-0.2.0.tgz) = e4d7ed462766af181bfb38a91a89dbf8a76c92f1dece5fe2a7d212e396c3d94e210217e7dd0f08d5c052228787e2583a9ae69c2d4430448ec5808b31fc628acb
 Size (aliados-0.2.0.tgz) = 128397 bytes
 SHA1 (patch-configure) = 737e114f2eac860a29e4984c2f973e4233238477
 SHA1 (patch-configure.ac) = c5c5300f48deee8aae633eeb7528b6aec9e6a908
