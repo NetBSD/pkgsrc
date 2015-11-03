@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.13 2013/04/21 15:39:59 joerg Exp $
+$NetBSD: distinfo,v 1.14 2015/11/03 03:32:18 agc Exp $
 
 SHA1 (mule-2.3.tar.gz) = 52737767955caf2fde34b994f367a89c5d8a045f
 RMD160 (mule-2.3.tar.gz) = 52b93e746a7a796549a44104ab1898954df044bf
+SHA512 (mule-2.3.tar.gz) = 5f6a9047e6c9d752787d6cab3573516c6efd65cd901fbab74d314a5967e6c68b2dc7c2aa7454d8588d421553530c87dd3ee9692d523d818e01739580cb1201fd
 Size (mule-2.3.tar.gz) = 10240256 bytes
 SHA1 (patch-aa) = 927ec514204ef97101fb3f4ab77eec1c71af23f1
 SHA1 (patch-ab) = 7c2cf683e87320190af0306cf7d04b3638600944

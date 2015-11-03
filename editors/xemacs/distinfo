@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.19 2015/02/04 09:19:20 hauke Exp $
+$NetBSD: distinfo,v 1.20 2015/11/03 03:32:23 agc Exp $
 
 SHA1 (xemacs/xemacs-21.4.23.tar.gz) = b57bc569cf8d376c1e2443b6ea1f40d30271e9a6
 RMD160 (xemacs/xemacs-21.4.23.tar.gz) = 9df94c576b546a4df30c29ed3b5609ee816ad43c
+SHA512 (xemacs/xemacs-21.4.23.tar.gz) = 5f7b71c937ebcd7c16e42da8e0ac3d9619f8adc9e3b70707942285dd3a0b440d49c6f5ce929ec4a2b6f1093c7940354087221eac193233025b31b8b4b2ff2aee
 Size (xemacs/xemacs-21.4.23.tar.gz) = 8537366 bytes
 SHA1 (patch-Makefile.in.in) = ac8e41c0057a3c3aed0f02dc282423eb48158b7c
 SHA1 (patch-configure) = a48c1a92098c67d6f3e87c0c0e9917bc545d5155
