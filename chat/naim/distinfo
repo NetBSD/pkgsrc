@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.29 2012/06/03 17:24:08 abs Exp $
+$NetBSD: distinfo,v 1.30 2015/11/03 01:20:22 agc Exp $
 
 SHA1 (naim-0.11.8.3.2.tar.bz2) = e2ddfcbf66b6139a68155cae0dddd1ac79d6c713
 RMD160 (naim-0.11.8.3.2.tar.bz2) = 5d9f88c99ad78d30defe09c0f3b62c6217e8ed27
+SHA512 (naim-0.11.8.3.2.tar.bz2) = 96a77d61e73810a80ac832bf340d4595f6c18199d5a0b742f778558a2f5a19a91930426fe4a1d59d63379f2e18a6e76a2847ab9464e1aabab4f9e08cdc94dfc1
 Size (naim-0.11.8.3.2.tar.bz2) = 454699 bytes
 SHA1 (patch-src_hwprintf.c) = 073f816768e5e227c248dcf029b4e56671533d87

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/11/13 07:24:09 hiramatsu Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:20:22 agc Exp $
 
 SHA1 (IRC-Utils-0.12.tar.gz) = 909c8fc2e8edf25d3055bb5aa29b703ffc2a5266
 RMD160 (IRC-Utils-0.12.tar.gz) = 1fcb0ae050863d2cfaf18b2937010b4090212355
+SHA512 (IRC-Utils-0.12.tar.gz) = b1b7bae3d374e0755d46c02adf37ee719a8f40b600b39722b6674bcf61e31ca442373e29974e7d458b82af382dca7a65f8f687bd0857eb8c9f27861c380dae29
 Size (IRC-Utils-0.12.tar.gz) = 23214 bytes

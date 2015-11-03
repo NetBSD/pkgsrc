@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.16 2014/09/07 23:00:55 prlw1 Exp $
+$NetBSD: distinfo,v 1.17 2015/11/03 01:20:24 agc Exp $
 
 SHA1 (telepathy-glib-0.24.1.tar.gz) = 7451f3d3a7b82e2c4aba87fae77fd079577443a2
 RMD160 (telepathy-glib-0.24.1.tar.gz) = a01ea8180f4cc25f40b5aeadb1564230b46a0b57
+SHA512 (telepathy-glib-0.24.1.tar.gz) = 2fed94f76a19d6069f671cdd45d2fd8a4b4ad27c4601aff66041ca205456be397c76a86f92cc9bf20fa4eb6d4c15a67ed8196644c143c37e945f382229a63335
 Size (telepathy-glib-0.24.1.tar.gz) = 3898149 bytes

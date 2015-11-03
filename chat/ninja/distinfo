@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 15:59:13 agc Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 01:20:22 agc Exp $
 
 SHA1 (ninja-1.5.8.1.tar.gz) = f2a9a0173799e1eab2bd6c738e0792342692956d
 RMD160 (ninja-1.5.8.1.tar.gz) = a8189f4d8ab035a528723cf102cd2e719c72a24b
+SHA512 (ninja-1.5.8.1.tar.gz) = 37a43e9769d897b3ac932a43290be3c05de842c6f3c7a5342833068abbbdfc765b66eda8a86ceb5103dabe5f743ddbd5c0f2eddc44852a344cab9e86dd4edd93
 Size (ninja-1.5.8.1.tar.gz) = 651142 bytes

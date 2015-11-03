@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.1 2014/06/15 21:55:17 pettai Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:20:23 agc Exp $
 
 SHA1 (psyBNC-2.4BETA2.tar.gz) = 6af7b3a89857213fdcca05deeeedd0303fb614bf
 RMD160 (psyBNC-2.4BETA2.tar.gz) = 053d09539341ebe9936a50a80b35bd9849f70eb1
+SHA512 (psyBNC-2.4BETA2.tar.gz) = cb92d4273dd8547f22df7bd9fd3a2e50a14a40d18eecea8438e4a27259156de65986a588f0470c022e9ca3b372e1c74f3cf5429c0673254c580b6b30e2c80e53
 Size (psyBNC-2.4BETA2.tar.gz) = 1061094 bytes
 SHA1 (patch-aa) = 61b46a7180926d56fb0b56c9c56320695962176b
 SHA1 (patch-ac) = 44dfcef810bd557a5ffc019d7a6a8303b9b8295c

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2013/07/21 11:34:51 shattered Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 01:20:19 agc Exp $
 
 SHA1 (fisg-0.3.12.tar.gz) = 7d70d4cad3103c8040e6703e452473584b3bb3a5
 RMD160 (fisg-0.3.12.tar.gz) = d79052ecfa184afb23ae26a28fed8cde0434a07d
+SHA512 (fisg-0.3.12.tar.gz) = 576a136881209bf1f4dfcfc7e8c33a248954f4d52d252d3e0a0cac74f6aa25c6f6a96bb7b8ac5102a98edeafe11bc20538fe0660bc5c95a01df5d447288057ed
 Size (fisg-0.3.12.tar.gz) = 157216 bytes
 SHA1 (patch-aa) = d3bd6f902c5d303e2f355e2ff0c8c148b3449e42

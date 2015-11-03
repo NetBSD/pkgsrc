@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2014/05/30 11:32:22 joerg Exp $
+$NetBSD: distinfo,v 1.9 2015/11/03 01:20:26 agc Exp $
 
 SHA1 (zircon-1.18.256.tar.gz) = 6ac2bb2b460c91263b72241c695afb51fc5f3a2d
 RMD160 (zircon-1.18.256.tar.gz) = c3630fc366447e0311905e3febbab0ce1d66ab00
+SHA512 (zircon-1.18.256.tar.gz) = 673f06c5db8459d4b0756dc7bb91245799cc62fc1c40e2d30b4744d17c6fbde53b0ec57d9271ace687cebf1dfe902e17d7baf4049982d08239abe49ba16f6037
 Size (zircon-1.18.256.tar.gz) = 315505 bytes
 SHA1 (patch-aa) = 1f7c108a66906636d76bd200eb39207591bac4dc
 SHA1 (patch-installer_manifest.tcl) = 24594fd7c5b7cc743d0a84c4f31a6bab8efe9169
