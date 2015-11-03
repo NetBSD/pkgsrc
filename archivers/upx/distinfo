@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.10 2014/05/26 01:30:39 rodent Exp $
+$NetBSD: distinfo,v 1.11 2015/11/03 00:56:27 agc Exp $
 
 SHA1 (lzma443.tar.bz2) = 1667abfb40da82d53fa2690f3cd58a0e7e751e55
 RMD160 (lzma443.tar.bz2) = f4f19c9f9bd8ded26318208e75ac14c8869c4ef8
+SHA512 (lzma443.tar.bz2) = f5525d5b2adecc29c22f675cea2328e3009c84ed0b256f265fcb408a3d8603dbfd2481ec4c9150397d728c0492fe5c13fff5b6b980a0a21800acf07c235f9051
 Size (lzma443.tar.bz2) = 178493 bytes
 SHA1 (upx-3.91-src.tar.bz2) = da962c0affb27eae11aa9b6fbd751c3699717b36
 RMD160 (upx-3.91-src.tar.bz2) = 9da4a4136dc0a1f923dbcd68ceefc9c6afcd2345
+SHA512 (upx-3.91-src.tar.bz2) = 7e9a392fe11daf7baf9632f2c448ef9936da7dfab215f86ba417e9f097770949acb653aaabe6cc5ed812efc486cb35e0c1e128c80026b02825713d8b12251cf5
 Size (upx-3.91-src.tar.bz2) = 904747 bytes
 SHA1 (patch-ab) = f7f963e90f0762325685c487dc9b13e5450d33a2
 SHA1 (patch-src_Makefile) = ccb781a80a6c15d46de863d8678cf7317b16c107

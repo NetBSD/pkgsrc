@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 14:45:23 agc Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 00:56:22 agc Exp $
 
 SHA1 (jamjar-0.7.1.tar.gz) = df89da05c59340e347c9308809d2c0fb30389a5b
 RMD160 (jamjar-0.7.1.tar.gz) = 010bdedb903d1eba20c10ad801914bbe1d67adad
+SHA512 (jamjar-0.7.1.tar.gz) = 01aed5a4bdafbeaadb569e2c188911cee3b9f3da76f4ce222189630eab3996d9059999969e2581fb224b0f57579fcca97e87607dc4f699f82e8326cce8f0c730
 Size (jamjar-0.7.1.tar.gz) = 187035 bytes
 SHA1 (patch-aa) = 9db8bef4191f3b1d82862ab7a1ed42977499a28e
