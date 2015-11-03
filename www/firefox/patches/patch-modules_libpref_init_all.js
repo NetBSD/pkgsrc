@@ -1,10 +1,10 @@
-$NetBSD: patch-modules_libpref_init_all.js,v 1.2 2015/09/23 06:44:42 ryoon Exp $
+$NetBSD: patch-modules_libpref_init_all.js,v 1.3 2015/11/03 15:52:57 ryoon Exp $
 
 * Improve stability under NetBSD.
 
---- modules/libpref/init/all.js.orig	2015-08-26 09:39:08.000000000 +0000
+--- modules/libpref/init/all.js.orig	2015-10-29 22:17:56.000000000 +0000
 +++ modules/libpref/init/all.js
-@@ -4048,7 +4048,7 @@ pref("layers.max-active", -1);
+@@ -4283,7 +4283,7 @@ pref("layers.max-active", -1);
  pref("layers.tiles.adjust", true);
  
  // Set the default values, and then override per-platform as needed
