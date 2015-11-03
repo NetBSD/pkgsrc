@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 16:33:09 agc Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 01:56:26 agc Exp $
 
 SHA1 (pxtools-0.0.20.tar.gz) = c0246b549163a5986c5cd70512c1fec0965656e0
 RMD160 (pxtools-0.0.20.tar.gz) = 0a040e2007019f367eacee5e95b3a05179e80b3d
+SHA512 (pxtools-0.0.20.tar.gz) = 24d6cb88decc0fcc2b7a052a38507dc4660ca26cec55144eedea3dc37572783d403c6faa13e7e8d0be6fd82b075291269fd1e21b30356945524b83b99e26b232
 Size (pxtools-0.0.20.tar.gz) = 149990 bytes
