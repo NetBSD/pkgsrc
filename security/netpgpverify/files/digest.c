@@ -297,6 +297,9 @@ digest_get_prefix(unsigned hashalg, uint8_t *prefix, size_t size)
 	case SHA256_HASH_ALG:
 		memcpy(prefix, prefix_sha256, sizeof(prefix_sha256));
 		return sizeof(prefix_sha256);
+	case SHA512_HASH_ALG:
+		memcpy(prefix, prefix_sha512, sizeof(prefix_sha512));
+		return sizeof(prefix_sha512);
 	default:
 		printf("digest_get_prefix: unknown hash algorithm: %d\n", hashalg);
 		return 0;
