@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/03/18 21:38:28 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:29 agc Exp $
 
 SHA1 (tex-pst-ghsb-15878/pst-ghsb.tar.xz) = ca198cd9269f6055c2b3f4ccc3de57b799309473
 RMD160 (tex-pst-ghsb-15878/pst-ghsb.tar.xz) = f3dd06a7702a371deb01d0fd153e554a07573ab5
+SHA512 (tex-pst-ghsb-15878/pst-ghsb.tar.xz) = 5173b6b5ff2202a3cc8d95bc10926508617143e4d47b2f8b8ddc4882a68c5384502e337f354aef694ec4019e91062fc86ec193e11318e780521a16ebcafef99e
 Size (tex-pst-ghsb-15878/pst-ghsb.tar.xz) = 2616 bytes

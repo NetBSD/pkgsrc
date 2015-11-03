@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.19 2014/01/28 21:19:00 wiz Exp $
+$NetBSD: distinfo,v 1.20 2015/11/03 21:34:04 agc Exp $
 
 SHA1 (jpegsrc.v9a.tar.gz) = d65ed6f88d318f7380a3a5f75d578744e732daca
 RMD160 (jpegsrc.v9a.tar.gz) = 885898b3db086ad3b65169d0149bf1f270dff1b5
+SHA512 (jpegsrc.v9a.tar.gz) = 9b21cc115e22c68bea46db462263c5c7a0d10beb192a919ecccbd801a25982b518ce44d8c301dd582ecaba1850e0e0f20e322be82b0e24ae917b9949b4f10d3b
 Size (jpegsrc.v9a.tar.gz) = 1000034 bytes
 SHA1 (patch-af) = aba44e1e3520d2a232f6bd949a82c150e0b3e0f4
 SHA1 (patch-ag) = 4fc698186d149f1152d30bf65a96461bc331c812

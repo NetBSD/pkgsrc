@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2014/01/19 20:15:43 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:16 agc Exp $
 
 SHA1 (pydot-1.0.28.tar.gz) = 3945af1765943807d72e773c7ac853f008ebb0b2
 RMD160 (pydot-1.0.28.tar.gz) = a67336f5edf55a81fe654df3258a12a8ff92d4f6
+SHA512 (pydot-1.0.28.tar.gz) = 54b4d7bfb01bbcae9a4832d1c3321d4f453a93f062ee55b35e3d59bee3f8989f4a544afb56c3d16b22bca8e6ef24b6286ac2688c9045b16906ef625999b35055
 Size (pydot-1.0.28.tar.gz) = 19711 bytes
 SHA1 (patch-dot__parser.py) = 9ce92c76bb5878ac990a3557e550679364a2d7b2

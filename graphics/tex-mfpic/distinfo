@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 13:17:14 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:26 agc Exp $
 
 SHA1 (tex-mfpic-28444/mfpic.tar.xz) = f139b802a2dc3131079db766e4981aaca7b62a91
 RMD160 (tex-mfpic-28444/mfpic.tar.xz) = 4984fe7402c8b1982848031add5c530f7ef62294
+SHA512 (tex-mfpic-28444/mfpic.tar.xz) = 640af99865056a1811130cfa1542fd276c0d16537f93310f50a27d545ba65d8aecb0199c8ad48479a4edba591cf7cb9dabcead2f191279f02278fe4424adce05
 Size (tex-mfpic-28444/mfpic.tar.xz) = 47032 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 13:47:37 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:22 agc Exp $
 
 SHA1 (tex-bbcard-19440/bbcard.doc.tar.xz) = 005392456b882b58a62f45ab69b2c4f0dcf60b5b
 RMD160 (tex-bbcard-19440/bbcard.doc.tar.xz) = 98d94cdd55b045ec4e0e5cb94b4e8c8afd654108
+SHA512 (tex-bbcard-19440/bbcard.doc.tar.xz) = 95019c43857a033816a99ebd151e588ce550d62f7d3182933c2236ca74161fa8fd2684c7ff32193272994012061dd236e42ea9ffd8e7ccc8dc2823308fb9488f
 Size (tex-bbcard-19440/bbcard.doc.tar.xz) = 2200 bytes

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.10 2008/08/10 04:42:52 obache Exp $
+$NetBSD: distinfo,v 1.11 2015/11/03 21:34:00 agc Exp $
 
 SHA1 (giram-0.3.5.tar.gz) = f8ecdd1a954315cb9e1356af3b8a3b20fb9f9b41
 RMD160 (giram-0.3.5.tar.gz) = 4535ff962ceb68f774e2d8b3176dac9dd9eceed1
+SHA512 (giram-0.3.5.tar.gz) = 50ad888328c25fcef3c62bfca2d3163dbc18a4f5d155e794b45222eeac1fb530347096b5d801ed10cebc345963041abfeed3eb6292e02dd09488c302bfa76558
 Size (giram-0.3.5.tar.gz) = 1028404 bytes
 SHA1 (patch-aa) = a575aba5e5bc501f62b7ccd409f3d45306e8b002
 SHA1 (patch-ab) = d26d581019ef91e42c93a4eee01d7b78b69e65f3
