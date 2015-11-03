@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2013/11/23 13:58:13 drochner Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:12:48 agc Exp $
 
 SHA1 (quodlibet-2.6.3.tar.gz) = a196e04d121f7dd85af43efe97e11f49d965b88a
 RMD160 (quodlibet-2.6.3.tar.gz) = 6badb717e00b17b9b90068c967b9da699d3f1c57
+SHA512 (quodlibet-2.6.3.tar.gz) = ffbf03a4e0f1e5740b0c87ce62aa0cda33d017d0ee95dc6ecb3aeb8cadcde0fb525289658ea8edee088a382af4b261e44acb53cd0dc170520ed4070c8bf488e6
 Size (quodlibet-2.6.3.tar.gz) = 2507416 bytes
 SHA1 (patch-aa) = da2b3e11c02444a73667c987453fd75d0058d4f3

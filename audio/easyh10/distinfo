@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2008/09/18 12:17:59 ghen Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 01:12:28 agc Exp $
 
 SHA1 (easyh10-1.5.tar.gz) = 2d6dd78f23829b6e2d21e3362a8eafd651597f19
 RMD160 (easyh10-1.5.tar.gz) = 87893bbcf595f928ba94fcde3b2b2c16b2e09c76
+SHA512 (easyh10-1.5.tar.gz) = 5cc36310ef1ff538754a97b1de5a4ac9e2d5ccccffe2c76a3f792bc78d533ed761b05df2c539b2c99fe1930353473099f8699acde6cc8a2f397218f6efe1f20a
 Size (easyh10-1.5.tar.gz) = 406548 bytes
 SHA1 (patch-aa) = 774606669a087113c6084f964170f2948448fb60

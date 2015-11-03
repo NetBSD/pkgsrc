@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2015/04/21 08:56:37 jperkin Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 01:12:54 agc Exp $
 
 SHA1 (xfce4-xmms-plugin-0.5.3.tar.bz2) = 30bebf95c09aa57d77453209b0bf2d429307d7f2
 RMD160 (xfce4-xmms-plugin-0.5.3.tar.bz2) = a99f95524345cc643f44d64661c9232313836772
+SHA512 (xfce4-xmms-plugin-0.5.3.tar.bz2) = 85beb6e18059ed4cf0bc300346a049ebd7b48cfb20c1d6601b9a550fd4c65df6d76557f9f2c98eeb6ba90df05aeabd3184dcda1a558c3cb8aa187dcde8b3ed2c
 Size (xfce4-xmms-plugin-0.5.3.tar.bz2) = 264326 bytes
 SHA1 (patch-panel-plugin_Makefile.in) = 87e3ac66ddd606bdc416508b298a8bced5e6cb20

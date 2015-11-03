@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2014/04/21 18:17:05 joerg Exp $
+$NetBSD: distinfo,v 1.9 2015/11/03 01:12:35 agc Exp $
 
 SHA1 (id3ed-1.10.4.tar.gz) = b699e645fcea2fa42658886621eb10531d24008a
 RMD160 (id3ed-1.10.4.tar.gz) = c01388bcde85c271ea1a9f1f07a2769913c40e18
+SHA512 (id3ed-1.10.4.tar.gz) = c96716dd24e8fc0aafbb5f0befe1a401ff7ed13821c71470945a5251a553316d17d5eeca3df5d3bd9775d12386078ab2b88d47a7ab9e9f32cd3d209934e31d56
 Size (id3ed-1.10.4.tar.gz) = 31610 bytes
 SHA1 (patch-aa) = b20838a13e1cae3217917d4f5f8023c4329aa979
 SHA1 (patch-ab) = cafd397b8e994eea35e7d87d504c84c79c158fc2
