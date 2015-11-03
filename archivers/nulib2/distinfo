@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.13 2014/09/13 11:10:58 shattered Exp $
+$NetBSD: distinfo,v 1.14 2015/11/03 00:56:23 agc Exp $
 
 SHA1 (nulibdist-220.tar.gz) = 8b8ca835d4e3e3d8a5e1ae9830fdfd0ed0bb07e3
 RMD160 (nulibdist-220.tar.gz) = a6b0d5bd0d0d413741fd1d46da80ef699f084321
+SHA512 (nulibdist-220.tar.gz) = 15fd5dde8e1c5ccfd52298c4379e3953c3574e797540ddb57e3d3c2978613be6c2567854860846a8d431e2c9d31fc7d5bcf624b6a7e8aff66639463f87e22b02
 Size (nulibdist-220.tar.gz) = 390564 bytes
 SHA1 (patch-aa) = b7fe0d23e1c22c67e48e0db5b7fc905756322717
 SHA1 (patch-ab) = 645a9c68d0b712ebc4d64284681a6168d66e4522
