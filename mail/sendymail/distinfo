@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/01/14 14:05:34 obache Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 23:27:20 agc Exp $
 
 SHA1 (sendymail-0.5.8.tar.gz) = 900e7fb7f252c3933e5b58c3659bc58ff565339f
 RMD160 (sendymail-0.5.8.tar.gz) = 2ff4c5c269c4459e0456c01e2703480394ec71c7
+SHA512 (sendymail-0.5.8.tar.gz) = be36dd4fb460df1b3bb8701c99f3a250565c0755358881e752d6f8d33260bc2667cb530a7a0407cadfd24eacc69c7327b1d4dbacd0d27a1971e3a2a7235b3757
 Size (sendymail-0.5.8.tar.gz) = 16327 bytes

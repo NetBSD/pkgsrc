@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2010/03/09 21:12:41 pettai Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 23:27:15 agc Exp $
 
 SHA1 (Net-validMX-2.2.0.tar.gz) = 159b4c3576ea715b8fc0e387d2f35845920f7aa4
 RMD160 (Net-validMX-2.2.0.tar.gz) = 82e4ff36bde639c9944a2a34f1deed54f2ed5ed6
+SHA512 (Net-validMX-2.2.0.tar.gz) = b086a17a37178d3dcfef33d2aa82c6f5263ccc564fb85b7cc9fe0865b5ca0b39d59efe3d118430eb1b7506fa1fc9f815cba8868d871129da98526c23bc16ced7
 Size (Net-validMX-2.2.0.tar.gz) = 10418 bytes

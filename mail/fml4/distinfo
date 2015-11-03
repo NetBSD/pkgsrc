@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2015/07/20 00:06:18 taca Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 23:27:06 agc Exp $
 
 SHA1 (fml-4.0-stable-20040215.tar.gz) = b7f958deacc50a0173928b7c43df52b5869d9491
 RMD160 (fml-4.0-stable-20040215.tar.gz) = 40eb43d2631a5e6d6769b8cfdf35e4a980ff0391
+SHA512 (fml-4.0-stable-20040215.tar.gz) = 4e0d08812a893909873abbf378aaf24e3ddb7ed69405167f1fbbc83c2b3668945bbaaf1679ddcb7fb517a28ac66205f2e3976926a4d583e4f2fc3bae927c2358
 Size (fml-4.0-stable-20040215.tar.gz) = 2906052 bytes
 SHA1 (patch-aa) = 91c0544e2969b3e4537a485d1f7a92ab5bf72bae
 SHA1 (patch-ab) = d8f8ef2085d9ad30331924c89958aaeddb89b457

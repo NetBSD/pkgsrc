@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2007/10/11 15:49:56 tv Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 23:27:16 agc Exp $
 
 SHA1 (URI-imap-1.01.tar.gz) = 25cc41237f92c0e43f5e6d39a03d77bf13ef5bcc
 RMD160 (URI-imap-1.01.tar.gz) = 0f1eb95f11e01f897e85cfad0f2dca8e07976a9e
+SHA512 (URI-imap-1.01.tar.gz) = 1e2f86145471586b81dd06e8b52bc95f9ef406bb5ee3c9e77e74e92b93a42a63d7cf7559e2b416a72f96978a6e9a2f30798732dfd121ad82941ff261f220ea77
 Size (URI-imap-1.01.tar.gz) = 1314 bytes

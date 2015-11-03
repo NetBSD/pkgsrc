@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.16 2013/01/17 15:55:31 joerg Exp $
+$NetBSD: distinfo,v 1.17 2015/11/03 23:27:24 agc Exp $
 
 SHA1 (wmbiff-0.4.26.tar.gz) = cb2fc49bc741209c22d8a50f0f164e34c4a9332d
 RMD160 (wmbiff-0.4.26.tar.gz) = f5ccb17fb6846283cb7cde7996310a65600a8883
+SHA512 (wmbiff-0.4.26.tar.gz) = e9fb1c9b35cd3a7d6854339be46a3ea791f41c3ece565d3ac5a9eeb35f11a6e60050f17575c934f4ccc3b8e78692c8d3789b3ebc7540e54a8f195cc1c0e8406f
 Size (wmbiff-0.4.26.tar.gz) = 200237 bytes
 SHA1 (patch-aa) = 0a4607f2e5d6d3066d9b9994665b659dfbcc003b
 SHA1 (patch-ab) = d84f1c4333d7c192748f5170460563ae7fe0955d
