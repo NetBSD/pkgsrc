@@ -1,5 +1,14 @@
-$NetBSD: distinfo,v 1.5 2014/11/15 20:58:04 markd Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 20:28:57 markd Exp $
 
-SHA1 (digikam-4.4.0.tar.bz2) = 1feb43120addda314e09761440ec2058e430171c
-RMD160 (digikam-4.4.0.tar.bz2) = 540f243361aba3c95b675c05f84d8d60efab1948
-Size (digikam-4.4.0.tar.bz2) = 68871203 bytes
+SHA1 (digikam-4.13.0.tar.bz2) = d696ac88dcb3bcbd3a5da83b0fbe5e7315a43f92
+RMD160 (digikam-4.13.0.tar.bz2) = 11d6aa15a94cd38acca79f2a31f65393a01a2b0b
+SHA512 (digikam-4.13.0.tar.bz2) = 0cadb55f568a34d07f008791ca351428f4cd9e7060ba79aa8acc25e5e38f0bbcd586df764dacbcb9d1dadb56d2fb9160760cc89aeab4d7cef9bdbd26f691752b
+Size (digikam-4.13.0.tar.bz2) = 69554099 bytes
+SHA1 (patch-CMakeLists.txt) = a5c798fc35127996d38ce1103c7b321108f56eaa
+SHA1 (patch-README) = 520dd6ee6562b708fb96adf6bf209056adb5d159
+SHA1 (patch-libkface_CMakeLists.txt) = d183bcfa09244984350fa0ae2957d877618b2d0d
+SHA1 (patch-libkface_detection_opencvfacedetector.cpp) = e8a31a469df3f0bc4d3f3bb2c3864a0913985fab
+SHA1 (patch-libkface_libopencv.h.cmake.in) = 354103b0be8e202630059dc438af9d03837bed72
+SHA1 (patch-libkface_recognition-opencv-lbph_facerec_borrowed.cpp) = d66bbb999105426df7b1281f0e5082f755864c73
+SHA1 (patch-libkface_recognition-opencv-lbph_facerec_borrowed.h) = a69318610fd96dd13e177c7bb93cf22bf9c4768d
+SHA1 (patch-libkface_recognition-opencv-lbph_lbphfacemodel.cpp) = c181d1b94948f7988081b09e3c2bf3190eaf046e
