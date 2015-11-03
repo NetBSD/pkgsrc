@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.2 2012/11/01 19:42:01 joerg Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 23:33:41 agc Exp $
 
 SHA1 (prng-3.0.2.tar.gz) = 02175da3f49a16bcf7eee70b53564f05941232d4
 RMD160 (prng-3.0.2.tar.gz) = e7d885a74751e8d9c906279516a025a152d4c12e
+SHA512 (prng-3.0.2.tar.gz) = 16addfedd16f1caf7489356770c15bde17d8ec5c66dca9fbaa52e50f850f2ab81a1af9d522bb6028ba5e279490beaf6c72060494e8a5367a7453a417a619367f
 Size (prng-3.0.2.tar.gz) = 497047 bytes
 SHA1 (patch-src_anti.c) = 9c59690cb330c618b45a8b661004a28da80f11b1
 SHA1 (patch-src_compound.c) = 4b2bf6f4a7e17edf9af7196904dec25172e68888

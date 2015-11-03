@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2011/12/05 22:51:00 joerg Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 23:33:46 agc Exp $
 
 SHA1 (yorick-1.6.02.tgz) = da66199eb62828ec217f5238e8608ba7aa5bb9e5
 RMD160 (yorick-1.6.02.tgz) = a80fc1e76c8ff553e032e95200510b1171db614b
+SHA512 (yorick-1.6.02.tgz) = 82facfe29acf3b272e2c41a9c91f3d796b471f6a7e7d0a2c75eaca918af503364e7c8d49ea6e2f7d339a4a887669d7184c77395f926aeb4a38183a348c4c45b8
 Size (yorick-1.6.02.tgz) = 2234280 bytes
 SHA1 (patch-aa) = c1fc4e5c8c67216fc3d2e640cd6785b179bfa451
 SHA1 (patch-yorick_yconfig.sh) = 4c2dd3b55e8f17b4b1696961dbfacd4a53f3a494

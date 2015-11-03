@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2012/08/06 14:04:09 wen Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 23:33:39 agc Exp $
 
 SHA1 (Math-Random-MT-1.16.tar.gz) = a85b34804f9340de5e08abcedb40e0ad9d77fdff
 RMD160 (Math-Random-MT-1.16.tar.gz) = 47d3ad390a8c00c48dd1a5b464c63b6b4d6daf41
+SHA512 (Math-Random-MT-1.16.tar.gz) = ad2019c847aade876dce0e0c4f309dad39a6b2be18023bfdb5c481b8042230639877c27c01c4f63226d43125e429e616632f38c4d542868bfc55e741dc7ef6ab
 Size (Math-Random-MT-1.16.tar.gz) = 11138 bytes

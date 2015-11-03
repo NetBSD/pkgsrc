@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.10 2013/01/11 13:29:34 joerg Exp $
+$NetBSD: distinfo,v 1.11 2015/11/03 23:33:45 agc Exp $
 
 SHA1 (xfrac310.zip) = 420de4ca20623b4fe6b6367a269e5525b6bff3af
 RMD160 (xfrac310.zip) = ede481d77f8f5b71a6cef9d7ec4b2e09d9662f5b
+SHA512 (xfrac310.zip) = 8ccc48ba445ed295b18f18234e4d60e78a739cf83f6594659a9ed43a279e5bba46e1de008db3ea33e01b9de430c74c4002f434cf9e7a2a8fbd1c0fdca1633872
 Size (xfrac310.zip) = 1074760 bytes
 SHA1 (patch-aa) = 51d654407fc5621ba69bb5656f7ff7ba65d8ef39
 SHA1 (patch-ab) = d9e793dfe453cb097d671eb764cdf71f95a87eb8
