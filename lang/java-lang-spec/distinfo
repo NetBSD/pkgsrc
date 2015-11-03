@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2012/01/14 14:27:50 ryoon Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 22:50:37 agc Exp $
 
 SHA1 (langspec-3.0.zip) = e62934c4c1b098cf984bae75a15be8a1377c1bc6
 RMD160 (langspec-3.0.zip) = 2c6da062c06c361d8604e5049bb9915b02de307c
+SHA512 (langspec-3.0.zip) = 7fd840fa13f915cac2f9eb0e57014bb9645b55502137ed032f19c08906f6a2b679ae0cce1b89f9fb6c640a92d8f969e7be3d368bb2fb5ea899b24865fbc2e523
 Size (langspec-3.0.zip) = 469388 bytes

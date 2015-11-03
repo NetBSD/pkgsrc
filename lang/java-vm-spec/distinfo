@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 09:03:08 agc Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 22:50:37 agc Exp $
 
 SHA1 (vmspec.2nded.html.tar.gz) = a786d295ab344387bf5045841b34081e2f3ff1d1
 RMD160 (vmspec.2nded.html.tar.gz) = 4342328c5b7e2a85c2dac787cfa5c2bb1b6a94ca
+SHA512 (vmspec.2nded.html.tar.gz) = 9828d484da22a99c6d3c5d9f50fc2a4a181419f18eeee6349c00e69ce372e748c133039a3c33dc6d608dd1940ef5676fdbfd31f3d1de5a3ff1b832d84dabb063
 Size (vmspec.2nded.html.tar.gz) = 332308 bytes

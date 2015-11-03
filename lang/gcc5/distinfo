@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.5 2015/09/28 16:39:13 ryoon Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 22:50:35 agc Exp $
 
 SHA1 (gcc-5.2.0.tar.bz2) = fe3f5390949d47054b613edc36c557eb1d51c18e
 RMD160 (gcc-5.2.0.tar.bz2) = eaedd62e7a738f6bdc0e97a0c40fbbd75d35925b
+SHA512 (gcc-5.2.0.tar.bz2) = 844120349ec04465dcea52d8ec747f1cbbc9d76a39fe3d8ef5e6b93614e63d718862d60d0a1c1cbf59ffc7815562287d0a2e536a6b220cebcd0b8de4ba35e715
 Size (gcc-5.2.0.tar.bz2) = 95221552 bytes
 SHA1 (isl-0.14.tar.bz2) = b09e25df265c97ed54002cd811d227a9a26c5f9c
 RMD160 (isl-0.14.tar.bz2) = 4c69d026b51561bc1948cb7db79331b78a9d2c39
+SHA512 (isl-0.14.tar.bz2) = 117c0c6f31d91a9284a8f54a748df6494ca2ac21507a45611e911403e9610579b9323ce624aea1de0b8089b3194e59d4364f01bdb71ddcf8f6c24c749d11c4b7
 Size (isl-0.14.tar.bz2) = 1399896 bytes
 SHA1 (patch-gcc_Makefile.in) = b2bceb34537de1cf704f18a59aa4e4d4a4551c62
 SHA1 (patch-gcc_config.gcc) = bfa3897de6afa573ee44a60973611c4e9024f497

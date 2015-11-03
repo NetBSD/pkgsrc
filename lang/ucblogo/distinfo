@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.9 2015/10/11 07:02:39 ryoon Exp $
+$NetBSD: distinfo,v 1.10 2015/11/03 22:50:45 agc Exp $
 
 SHA1 (ucblogo-6.0/ucblogo.tar.gz) = ad62c689c264b1aeb7bd58dd9c08ca602bade8f1
 RMD160 (ucblogo-6.0/ucblogo.tar.gz) = 7cd9ec8eeff00fb3440f5036d57a9b29383ab310
+SHA512 (ucblogo-6.0/ucblogo.tar.gz) = 7ca0313d9ea8680a282757df52263b4eb165e46c1368b6693b2d10dbf53cbe4b63849c4233145768553cf999c0b642de95639083d156aede6edecbc93d072c10
 Size (ucblogo-6.0/ucblogo.tar.gz) = 6694879 bytes
 SHA1 (patch-aa) = 54cefcc2821247706675cf2466ef4f1452c9968f
 SHA1 (patch-configure) = 329c31aed56a37b53383a3e7421fd9f429468f6c
