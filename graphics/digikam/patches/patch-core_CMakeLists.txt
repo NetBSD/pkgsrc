@@ -1,0 +1,30 @@
+$NetBSD: patch-core_CMakeLists.txt,v 1.1 2015/11/03 20:47:48 markd Exp $
+
+opencv3 support. https://bugs.kde.org/show_bug.cgi?id=349601
+
+--- core/CMakeLists.txt.orig	2015-09-03 21:22:45.000000000 +0000
++++ core/CMakeLists.txt
+@@ -12,6 +12,7 @@ message(STATUS "Starting CMake configura
+ 
+ option(ENABLE_INTERNALMYSQL     "Build digiKam with internal MySQL server executable (default=OFF)"              OFF)
+ option(ENABLE_LCMS2             "Build digiKam with LCMS2 instead LCMS1 (default=OFF)"                           OFF)
++option(ENABLE_OPENCV3           "Build digiKam with OpenCV3 instead OpenCV2 (default=OFF)"                       OFF)
+ option(ENABLE_BALOOSUPPORT      "Build digiKam with Baloo support (default=ON)"                                  ON)
+ option(ENABLE_KDEPIMLIBSSUPPORT "Build digiKam with Kdepimlibs support (default=OFF)"                            OFF)
+ 
+@@ -122,8 +123,13 @@ find_package(Boost)
+ 
+ # -- check OpenCV --------------------------------------------------------------------------------
+ 
+-set(OPENCV_MIN_VERSION "2.4.9")
+-DETECT_OPENCV(${OPENCV_MIN_VERSION}  core highgui objdetect contrib legacy imgproc)
++if (ENABLE_OPENCV3)
++    set(OPENCV_MIN_VERSION "3.0.0")
++    DETECT_OPENCV(${OPENCV_MIN_VERSION} core face highgui objdetect imgproc)
++else()
++    set(OPENCV_MIN_VERSION "2.4.9")
++    DETECT_OPENCV(${OPENCV_MIN_VERSION} core highgui objdetect contrib legacy imgproc)
++endif()
+ 
+ # -- check the libkdcraw version -----------------------------------------------------------------
+ 
