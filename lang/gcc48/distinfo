@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.26 2015/08/25 19:57:00 wiedi Exp $
+$NetBSD: distinfo,v 1.27 2015/11/03 13:59:10 jperkin Exp $
 
 SHA1 (ecj-4.5.jar) = 58c1d79c64c8cd718550f32a932ccfde8d1e6449
 RMD160 (ecj-4.5.jar) = d3f4da657f086b6423f74e93f001132f4855368a
@@ -17,8 +17,8 @@ SHA1 (patch-boehm-gc_misc.c) = 11bf4eb2e8c54b195904b3f52bd35d5f979058f1
 SHA1 (patch-boehm-gc_os__dep.c) = add0c7e59739cc7c6a248c68d048ebec6700a037
 SHA1 (patch-boehm-gc_pthread__support.c) = b0d66aba1fbf419eb8cf04fd1fd8584e8f92df8d
 SHA1 (patch-boehm-gc_threadlibs.c) = 4cac00c47354d506f69cc784dfcf0b65c5af3237
-SHA1 (patch-fixincludes_fixincl.x) = b53bf6ae3ef1a0cc6d3ce1153f926ed208816c90
-SHA1 (patch-fixincludes_inclhack.def) = 577021b838b64ff987e28b0017afb3b05e28458f
+SHA1 (patch-fixincludes_fixincl.x) = 5fe9210bebf85643932ff681ed4533fcfb71d687
+SHA1 (patch-fixincludes_inclhack.def) = 42ea2818dbc3e59e635bbe55ff9d660744a794f9
 SHA1 (patch-gcc-config-vax-constraints.md) = e6cea7a5334b5b124ca3e8b62eba45423e788e55
 SHA1 (patch-gcc-config-vax-vax.c) = 02e389ec418a0fee1431ecd61d65b7f8d7629785
 SHA1 (patch-gcc-config-vax-vax.md) = e06696be85641cbe9131ecc10bb28c45a465916d
@@ -27,6 +27,7 @@ SHA1 (patch-gcc_builtins.c) = 67c66568237b68b22ba99bc76336e001e1634925
 SHA1 (patch-gcc_c-family_c-format.c) = 485ebb16ff3c0c785678326ff4d622c865849850
 SHA1 (patch-gcc_config.gcc) = 1a697bcc295c40bc1bbed6295f53854d56df9f93
 SHA1 (patch-gcc_config.host) = 1b1e11cd199eb93f49443d51c0063b09b7327858
+SHA1 (patch-gcc_config_darwin.c) = caff312fbc948a1c2730decbab435dbd3caa203f
 SHA1 (patch-gcc_config_dragonfly-stdint.h) = 740dc819b446d5f1476506322c4b280ffdb5a6c0
 SHA1 (patch-gcc_config_dragonfly.h) = 82f549cdc7543b4bf413a44d481ef42b10f59c82
 SHA1 (patch-gcc_config_dragonfly.opt) = 92f615c73c2e94664bae5b5935ab8b09bca15f73
