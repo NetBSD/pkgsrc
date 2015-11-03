@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2010/02/14 12:29:13 taca Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 01:20:24 agc Exp $
 
 SHA1 (net-irc-0.0.9.gem) = 23325bc5b7ec718661d8a6e92c797b3019f48abc
 RMD160 (net-irc-0.0.9.gem) = 44bcf84880f78d0d58b13a381cacb061da332697
+SHA512 (net-irc-0.0.9.gem) = 169e0b4c855516faccbc2cab1f3ae4d955a998a34dc3ad1efbbf890c617188c684e47e39652c9ddf0dbbbb70b2682f71df0487b8a94ace8fe43703c0772b4d7d
 Size (net-irc-0.0.9.gem) = 67072 bytes
