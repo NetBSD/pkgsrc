@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.31 2015/07/01 11:19:01 wiz Exp $
+$NetBSD: distinfo,v 1.32 2015/11/03 03:32:14 agc Exp $
 
 SHA1 (Sigil-0.8.7.tar.gz) = bc0b2f7fc741d2392823120ddf652b820ce682a0
 RMD160 (Sigil-0.8.7.tar.gz) = 48494b5ea61194ddb76a7eae53ea308546d441e7
+SHA512 (Sigil-0.8.7.tar.gz) = 24b74c835ae1f8fb887c9d2c59b3ccc6720ce1fe8d19a6b0056754ab5ea6e63c34c4b229f4e4b3a880e722876d288e58385f5a0ad15b295f147b77b1acf28652
 Size (Sigil-0.8.7.tar.gz) = 19394061 bytes
 SHA1 (patch-src_minizip_ioapi.c) = 0a227daf214ceeb1fe8483aeed700fce05b21ccd

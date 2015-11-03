@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.15 2014/03/25 23:13:21 asau Exp $
+$NetBSD: distinfo,v 1.16 2015/11/03 03:32:21 agc Exp $
 
 SHA1 (ted-2.21.src.tar.gz) = 303b15de1fe97e473c4b89a88b6e127ee81e07e9
 RMD160 (ted-2.21.src.tar.gz) = 68935d62d216708c7053910f1261353176cf5c72
+SHA512 (ted-2.21.src.tar.gz) = f926d49c1c68ae54b7b4871cccc48e1ff1ad217baa915735be6f12944b710050fe358b1e85b75a3d8ffc236563dc81364be1f64079805993978dccfdb819f735
 Size (ted-2.21.src.tar.gz) = 3956815 bytes
 SHA1 (patch-aa) = d8673fb67176c17beb90a87adebb9ab94a1e15ba
 SHA1 (patch-ab) = 16fa3f2a88a6b252148735f02541833b7ac56b8a
