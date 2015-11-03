@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2014/11/07 11:56:04 obache Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 22:13:35 agc Exp $
 
 SHA1 (ibus-hangul-1.5.0.tar.gz) = 3b0ff57be4c0dce2c2b39df0156a00588b0349f1
 RMD160 (ibus-hangul-1.5.0.tar.gz) = 714a03bddb7689dba3e58fc47ebbe290c402f394
+SHA512 (ibus-hangul-1.5.0.tar.gz) = a9bef9ad887d1b41555af12e7589a9c4c69ddf4f61890907d90cbab6b9bf4cb6df4739c54d34ee1b2507486a1cb568f826bb4641e9ccee8ccfa11ff2d7e962bb
 Size (ibus-hangul-1.5.0.tar.gz) = 505707 bytes
