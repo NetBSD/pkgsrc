@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2013/10/20 18:09:05 joerg Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 00:08:43 agc Exp $
 
 SHA1 (libdrg-0.0.81.tar.gz) = 48e45c91710adce23e6cf41a8c5d0368681db1a6
 RMD160 (libdrg-0.0.81.tar.gz) = 2fb8b5fee6464ec47c2ada9f474304003edfee6c
+SHA512 (libdrg-0.0.81.tar.gz) = c7c8e8f8e901bbc64edc06d7547b4f20342d79f217e187751963e210614758ca872f8e50f2d0cb11da6e4635f47154ec81ce211b53b18ce144471445a819b2cf
 Size (libdrg-0.0.81.tar.gz) = 320228 bytes
 SHA1 (patch-configure) = a6a1841826756c6d6fe2964076216f9e265a5ccc
 SHA1 (patch-drg__tiff.c) = a8ea12efaef2b03c5754752f58c785fb049535b1

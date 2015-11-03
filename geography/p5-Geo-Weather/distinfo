@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/03/14 16:26:22 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 00:08:44 agc Exp $
 
 SHA1 (Geo-Weather-1.41.tar.gz) = a3b332e1d284ccf35134daeafd012abf50cff94a
 RMD160 (Geo-Weather-1.41.tar.gz) = d47dcaa123917ca1f75f4d0a8bd3aeba512d6bc8
+SHA512 (Geo-Weather-1.41.tar.gz) = 6fb0d7ffa4785f331e4c61ada0901d5764b8a033f338b094fa5ea9b2030ffc7a214410e313a668d5dd630db406772310cad2b7a7da3681187a242de03e04413a
 Size (Geo-Weather-1.41.tar.gz) = 8744 bytes

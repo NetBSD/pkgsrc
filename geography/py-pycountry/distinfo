@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/12/06 15:18:29 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 00:08:45 agc Exp $
 
 SHA1 (pycountry-1.10.zip) = a7dcea993898d81ae23985d3c0d3a415be59b038
 RMD160 (pycountry-1.10.zip) = 8f8a0f06a03cefa4d40adb42618f008fc4d775df
+SHA512 (pycountry-1.10.zip) = 076de329c5b9d7626fbf0aace654504a2cd2d1d7bdf2ec89ba4763b38b756a6e75c7f3032c4b8785693d291ace7a206673cac1a457c4dd59e8c3ce1cd70d7d60
 Size (pycountry-1.10.zip) = 8140587 bytes

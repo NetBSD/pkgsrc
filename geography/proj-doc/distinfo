@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/03/14 16:26:22 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 00:08:44 agc Exp $
 
 SHA1 (proj-pdf-docs.tar.gz) = c83a154ac00058fba5097eb39cfc8d27706be4d8
 RMD160 (proj-pdf-docs.tar.gz) = 9424d98c27690b089ad083c03f5134c2598cf09a
+SHA512 (proj-pdf-docs.tar.gz) = 51d998163701ad5a23a94f940809c7e4bddad30178be6100c18248b07c492be549b15369e8b82718b9d252d9880eeb3a74be333a3d470773294389dca8b96f05
 Size (proj-pdf-docs.tar.gz) = 6918448 bytes

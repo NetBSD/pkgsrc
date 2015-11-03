@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2013/02/01 05:36:14 wen Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 00:08:44 agc Exp $
 
 SHA1 (Geo-Distance-0.20.tar.gz) = bb451e643a27f515107e11d73a3c0aeea09dbb43
 RMD160 (Geo-Distance-0.20.tar.gz) = 3bee03fde6d19a12ad5d52d7714dda7a23b1a5c4
+SHA512 (Geo-Distance-0.20.tar.gz) = edbe0937aba9b7edee3a7c76c3fcaa1fd0975a45a143aa49fa297c58d6216e1204b98ab1b8d9648239fee70063df2636802d075264779c8443427335721ed6b4
 Size (Geo-Distance-0.20.tar.gz) = 18727 bytes
