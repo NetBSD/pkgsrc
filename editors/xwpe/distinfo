@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2010/02/03 21:35:42 joerg Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 03:32:24 agc Exp $
 
 SHA1 (xwpe-1.5.29a.tar.gz) = 87b5045cff63225a310a0f4148bb04c46660c253
 RMD160 (xwpe-1.5.29a.tar.gz) = da718bb9b14a26ea868f88a02233984c4d2943cd
+SHA512 (xwpe-1.5.29a.tar.gz) = 4f8bdac60733702c3e34689a06f5876340e0b06d576dfaa0e3d1b977d88d85d55ae534757f7c76156148f1774e4b9b7c6caee105dd4c5b3559ed43a3ea60aae4
 Size (xwpe-1.5.29a.tar.gz) = 307545 bytes
 SHA1 (patch-aa) = 1e2f1d13dc1f67f339b7c448b787f24e8d1926d9
 SHA1 (patch-ab) = 23ec6cd425292e2fb58ef2c2dd0d6a62deb8214e

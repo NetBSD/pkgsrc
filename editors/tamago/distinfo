@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.10 2009/08/17 16:05:32 taca Exp $
+$NetBSD: distinfo,v 1.11 2015/11/03 03:32:21 agc Exp $
 
 SHA1 (tamago-4.0.6.tar.gz) = f1ae53cbcdeb5f2aad9d90d75742efe2fcd83d39
 RMD160 (tamago-4.0.6.tar.gz) = 6b744b5e8e512d3dc05f3483ac9b76b0f4eaa968
+SHA512 (tamago-4.0.6.tar.gz) = eadd4164e37499a8b383959325d65e98c33f4306ccda57b6d8eb0b275a144f93a9d4edbfb25a12fbf43b255c9aa1c05147345c61b14b5e000deb034c9d798b21
 Size (tamago-4.0.6.tar.gz) = 260021 bytes
 SHA1 (patch-aa) = 21d8bfed2478c8c49f366f49a7409c704799c5b2

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.12 2014/09/23 22:40:27 jperkin Exp $
+$NetBSD: distinfo,v 1.13 2015/11/03 03:32:23 agc Exp $
 
 SHA1 (ue400dev.zip) = edbb0261cdaa1803d9f7dc7debfd4a9df3a668eb
 RMD160 (ue400dev.zip) = 75bc1b1e11035ed24d33ec4c6afad43880d5985f
+SHA512 (ue400dev.zip) = 8a78d18757db666a5d68a840494bf1d83e23b452d3acd4b3cb81f7b295c5f497c39e5c3364b4160e8448129ef1970f334fd3be41a6899440938a3cb87d314388
 Size (ue400dev.zip) = 1179949 bytes
 SHA1 (patch-aa) = f576f207dc6c55a21664b50c821d8e8280406a70
 SHA1 (patch-ab) = bef63275aa8a88b12ce47fd568059360e1e972c8
