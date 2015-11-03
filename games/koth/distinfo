@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.11 2012/08/16 15:47:29 joerg Exp $
+$NetBSD: distinfo,v 1.12 2015/11/03 20:56:56 agc Exp $
 
 SHA1 (koth-0.8.0.tar.bz2) = 6cb04ae1f09c4fb521fb47465ab91a1d67986c41
 RMD160 (koth-0.8.0.tar.bz2) = 3ea8ef52cab309a764e0379031606d2a949e6553
+SHA512 (koth-0.8.0.tar.bz2) = edda377be9074298c63e85cad5f37f55dc67f0e9a7d075a94207559265ffbf8a5eadbd2dc0e4a06e535e6da9fcfd309d01141ba8be04cf8960b0229e0ce4ab9f
 Size (koth-0.8.0.tar.bz2) = 140569 bytes
 SHA1 (patch-aa) = 74119d2ff66b3187c16e625abab7972cb686d484
 SHA1 (patch-ab) = 69ce8862b3cdba97f3a4040b0004254b89de3606

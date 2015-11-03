@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/10/02 20:06:07 rillig Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:57:01 agc Exp $
 
 SHA1 (polyglot_14.zip) = 47363999135b329302f5565618d1ffa2e8c872d1
 RMD160 (polyglot_14.zip) = 457bbb91c3a40196b496d681e7475379bfa9c7c1
+SHA512 (polyglot_14.zip) = 0f7f010d33dd1daf2fd1280b14e50d3204354aefd68939d2d614e93f1f96ab7347032ba3188057041f1aceaafbf47e999c6dd5fe441ae6a913dacb2614f2b6f0
 Size (polyglot_14.zip) = 229546 bytes

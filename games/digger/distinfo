@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2013/10/10 00:07:23 joerg Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 20:56:47 agc Exp $
 
 SHA1 (digger-20020314.tar.gz) = 4fef6bb91b3c3a4d18a66b94864455299cd19016
 RMD160 (digger-20020314.tar.gz) = 85f0adeb867f1aceef154412e0752c51dd7f6809
+SHA512 (digger-20020314.tar.gz) = 2770a01566d8c55e1226c3099c871aa238cea4dad7da1a012754e9bd86a479ecd678314288459fd9867d928c417739b92bf9623b066109eea27f6790a1e1d8c6
 Size (digger-20020314.tar.gz) = 98435 bytes
 SHA1 (patch-aa) = 07ad1bb5100d389fca04584f511de9feee45edc7
 SHA1 (patch-ab) = 524341c6e188731d22675e75fd3a6cafbaa00537

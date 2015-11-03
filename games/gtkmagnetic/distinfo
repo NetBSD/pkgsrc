@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2012/05/16 22:02:19 marino Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 20:56:52 agc Exp $
 
 SHA1 (gtkmagnetic-2.2.1.6/Magnetic22Src.zip) = 86f58240f6fc34125ddbd4cd6a0b82cdc5e5e643
 RMD160 (gtkmagnetic-2.2.1.6/Magnetic22Src.zip) = 7926ef8ad49e971dbb0bd9c1be093acbf94aabe8
+SHA512 (gtkmagnetic-2.2.1.6/Magnetic22Src.zip) = be5cc69dd5edc7bb27149ff91cd9da23bf23829bf97062a6535ad3288f42f2054f0769ef36d05f0502316cf2e44a2fe12a28c2ae13c18b376fe85e4c2ae386a6
 Size (gtkmagnetic-2.2.1.6/Magnetic22Src.zip) = 395601 bytes
 SHA1 (patch-Makefile) = de04d80daa10d740fb45cc7c1879b94ccfc4618e

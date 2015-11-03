@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2012/07/03 18:44:45 joerg Exp $
+$NetBSD: distinfo,v 1.9 2015/11/03 20:56:44 agc Exp $
 
 SHA1 (battleball.21.src.tar.gz) = 5bc651d513d378d449c117488ef54af5f3381072
 RMD160 (battleball.21.src.tar.gz) = 8bc3ad8767c274135bc3f9d8bf95d8b6518c3542
+SHA512 (battleball.21.src.tar.gz) = 94c94fced7976ac23b0a8943068d89c6c36a83f5a2b493c688f1656bb0c872b606f5d5574b8fd52ae22d31ee8afdbb84033d852608ff6f97d9e4ee96db64dfa7
 Size (battleball.21.src.tar.gz) = 102001 bytes
 SHA1 (patch-aa) = 2edf7330113a768c210b78f88a17a1bc25b9d189
 SHA1 (patch-ab) = 477a8860a8f65a10b163846f184c39e7916712ff

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/08/13 18:57:27 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:56:53 agc Exp $
 
 SHA1 (jin-2.14.1-unix.tar.gz) = 512ef170061d14649af12defbcd5e75976a219c7
 RMD160 (jin-2.14.1-unix.tar.gz) = dfb92f0286b40d9447b586e3d94dd758dae917e7
+SHA512 (jin-2.14.1-unix.tar.gz) = d1a822374b6ec7cd49425d87db06e8f8be5f822dd4f4e7427d9d7e0907cf7115d8e41a841a525f6284410d40841591468a38c22034706d3f07f385c740a32678
 Size (jin-2.14.1-unix.tar.gz) = 17579169 bytes

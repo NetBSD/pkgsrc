@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/07/17 23:39:24 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:56:53 agc Exp $
 
 SHA1 (jools-0.20.tar.gz) = 3832e22cbee8d2cc7f13030ea0b1caf09a185179
 RMD160 (jools-0.20.tar.gz) = c9689549b6f73ca6cc43a7e840d1f7555df24df8
+SHA512 (jools-0.20.tar.gz) = 11eadceb8208a72846a9e16a2dae0a1b1d7f8995d5ff2487ee03dd62811f3a232c0d08dc044c351f44c120e6e75eba11df1a727a9d5c6c57ce5e2ef8ee4d0986
 Size (jools-0.20.tar.gz) = 1710143 bytes
 SHA1 (jools-musicpack-1.0.tar.gz) = 52982a438e7bc6ed4691e63838f92f7aa919bf54
 RMD160 (jools-musicpack-1.0.tar.gz) = e2b084bbea972c42b79fa8e56ee9fcc9b1e34f05
+SHA512 (jools-musicpack-1.0.tar.gz) = 1773beb8cd7df756cb4f7ba55729a6dfa995ca860f3381e2fed3884f42227d19955e13f8be9b2f6f64d4d86e452be9fe876963e24c85cd2c3cc42df62804b9c2
 Size (jools-musicpack-1.0.tar.gz) = 4447501 bytes

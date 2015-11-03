@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.9 2012/05/04 16:12:30 joerg Exp $
+$NetBSD: distinfo,v 1.10 2015/11/03 20:56:42 agc Exp $
 
 SHA1 (abuse_pd.tgz) = 52a703abea31d6f00937d4cc0160af7a454e6630
 RMD160 (abuse_pd.tgz) = 0f69cc38d422fcbf72a36d42433221701a120dfb
+SHA512 (abuse_pd.tgz) = 3d596776b8bc2f481e972f355e8fbfbc51559dbe5f1f0e4ece02833af87f11d2056e459c3faa4fab37b53569b129d454c06237c7a25a906f6a216c5683218a6c
 Size (abuse_pd.tgz) = 2525552 bytes
 SHA1 (abuse_data.tar.gz) = 2e7fad6b866fbbc8f34e3ac68cf2689c91596e48
 RMD160 (abuse_data.tar.gz) = af33d0423b596ae4bb07b5a844fe352aec09b4a0
+SHA512 (abuse_data.tar.gz) = 1f6187fbabc1179f006c99c0bb982a97b0a3694157b54bc2b5d1b695564957fd7b496916c2f2c381b8d3e8eca5569dcacd5a2589c6b749f32108cf10b3444b6f
 Size (abuse_data.tar.gz) = 1593160 bytes
 SHA1 (patch-aa) = d60ffe9f3039c82093e0208a2f592e436a9aee8a
 SHA1 (patch-ab) = 11a75d6265df1ee167ea72e6d3c4202da8615928

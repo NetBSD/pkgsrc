@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2013/10/13 10:19:22 wiz Exp $
+$NetBSD: distinfo,v 1.9 2015/11/03 20:56:57 agc Exp $
 
 SHA1 (Level9_5.1_Source.zip) = 764078fb9f1ed2cc86cecb34fdcc6f053a27672b
 RMD160 (Level9_5.1_Source.zip) = 1d8d9763a2a22dac203c8249efb6d302e1a37cf7
+SHA512 (Level9_5.1_Source.zip) = acc8bef8f229931e12dc552f8b4f6d8483abd95c3f6275966fb6b8423bfab1cf920edb080b11e0bc9aca7efd383c078281f6c5757d1d0327d6d0fd984f436097
 Size (Level9_5.1_Source.zip) = 323660 bytes
 SHA1 (patch-Makefile) = aaf6966e4b62f92003f8ce2e162d9a6a6bbccab0
 SHA1 (patch-aa) = f34eff28db4b1dbb34b8618799dbe17beaf0fc60
