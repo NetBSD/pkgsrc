@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/01/10 22:54:37 dillo Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:34:55 agc Exp $
 
 SHA1 (msynctool-0.22.tar.bz2) = 2eab3c847dba4a457d06061efcf662237da2c8e4
 RMD160 (msynctool-0.22.tar.bz2) = c28c65b0e80505e17915c9d23c5747320f79f8af
+SHA512 (msynctool-0.22.tar.bz2) = 69bc7e38f8d35e3eaebfb307832eab5e6a47a14197433482c8e1c9ccf6fc05070b0931e4063ad0511909b8a310237fc4bdf838acbd93877c55579499f754027f
 Size (msynctool-0.22.tar.bz2) = 219787 bytes

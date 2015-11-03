@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.1 2015/04/03 22:29:12 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:34:54 agc Exp $
 
 SHA1 (hidapi-0.7.0.tar.gz) = caed4fd63098293fec487e8673ea992d35db04ba
 RMD160 (hidapi-0.7.0.tar.gz) = 02ccd173c547cda5e65144eea331d608a5aff414
+SHA512 (hidapi-0.7.0.tar.gz) = eb90f679cf9c996897af16ff773dbb4bb3a6ea3da46f8bac49d8552148a355701f87f2a3d7378de8b62f1b622984914133d562c46a66def3f1ba2e6de7e03bb3
 Size (hidapi-0.7.0.tar.gz) = 1618395 bytes
 SHA1 (patch-Makefile) = 9cc8e81d22a05a1132cf35c3d62656202e0788b9
 SHA1 (patch-linux_hid-libusb.c) = 908032c29cbdb0e4aef0eaa370d840a8a8696eea

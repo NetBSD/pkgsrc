@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/10/13 15:03:42 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:34:57 agc Exp $
 
 SHA1 (synce-librapi2-0.9.1.tar.gz) = 8eb8de894564da9f7f31808a6ff4e88db5ad0fc8
 RMD160 (synce-librapi2-0.9.1.tar.gz) = a3cec3dd032fd5ded241267ed4599407c3b1e2ba
+SHA512 (synce-librapi2-0.9.1.tar.gz) = 8ab4febd93a219f4fcbd75271cf02835702a2104c4cb7c43413d0ecd966a719a1652881f87056ebe3f886ba8386bb7d45fa048234b5210c3d20360224e474047
 Size (synce-librapi2-0.9.1.tar.gz) = 386579 bytes

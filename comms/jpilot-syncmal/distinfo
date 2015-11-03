@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.9 2007/02/02 01:20:14 markd Exp $
+$NetBSD: distinfo,v 1.10 2015/11/03 01:34:54 agc Exp $
 
 SHA1 (jpilot-syncmal-0.80.tar.gz) = 417bca84254f1fc2854d6b17656cfc794352ac2a
 RMD160 (jpilot-syncmal-0.80.tar.gz) = bb2b9ab5c6615e50746ec909c1553a97138b8d6a
+SHA512 (jpilot-syncmal-0.80.tar.gz) = 3a5cbd6eeb30555442523d8eeb3f2e0a919ba963cdd7a0ff2318dfab15ae911c7531a6737549a39122ad4e1c5895ed321c67a650c565701b6d3bfe3e87887ed1
 Size (jpilot-syncmal-0.80.tar.gz) = 332428 bytes
 SHA1 (patch-aa) = 6c05a016a14695bcec7540553bcca8d8f86a2dc7

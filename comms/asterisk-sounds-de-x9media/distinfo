@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2006/12/28 12:01:38 mjl Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 01:34:52 agc Exp $
 
 SHA1 (asterisk-x9rita-soundfiles-ger-v4.zip) = 858cfafae013c5483791d96ddcf83a645123a8d3
 RMD160 (asterisk-x9rita-soundfiles-ger-v4.zip) = 6ca331c7ab434cdbd04d023000d141795d4a8c80
+SHA512 (asterisk-x9rita-soundfiles-ger-v4.zip) = 0266f0b3830bac28d819942e93018b6a17fb7eb8a722aa6b93c51c044247ab0909f4d8dc54992a163a839bc59e7f939480693987d8b3017fba28a28256636b0c
 Size (asterisk-x9rita-soundfiles-ger-v4.zip) = 1661753 bytes
