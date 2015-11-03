@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2015/03/31 15:41:13 joerg Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 00:08:43 agc Exp $
 
 SHA1 (OpenCPN-4.0.0-Source.tar.gz) = a8fe31476a3472cff18e55179094cbc4434699ce
 RMD160 (OpenCPN-4.0.0-Source.tar.gz) = 614889e41c8cd5453f3210781201cb29912d8cc1
+SHA512 (OpenCPN-4.0.0-Source.tar.gz) = d815a0e299debb726c982341e43338ea4ebacc0346ddb31a033e5380f27b56615ecd730f2462696cab4096185207b3c463b8c3a071f81493adc8641e4def6317
 Size (OpenCPN-4.0.0-Source.tar.gz) = 193305992 bytes
 SHA1 (patch-CMakeLists.txt) = 57abad7a02bf5fa64a522aceeddc4c67a3d5a3e2
 SHA1 (patch-FindPortaudio.cmake) = e1bebe2203c6f3dc76f92ee5bdcb01eca66b6b9a

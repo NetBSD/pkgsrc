@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/12/30 08:45:49 plunky Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 00:08:43 agc Exp $
 
 SHA1 (libnova-0.13.0.tar.gz) = 87ecd8e5c8c1510c17928e4681c319d12efec76f
 RMD160 (libnova-0.13.0.tar.gz) = fcaf9cf2553be4853364f84b4b77ebbd01abd99d
+SHA512 (libnova-0.13.0.tar.gz) = 3755408f353536acd24879b3771467a2096cd832f007ef14059ee07d7c854a99ba9a742d979f8070b3da36e60b95b18772179b4a17621f51395ae4528471690d
 Size (libnova-0.13.0.tar.gz) = 1513027 bytes

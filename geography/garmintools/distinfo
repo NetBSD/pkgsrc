@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/03/12 15:55:40 ghen Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 00:08:42 agc Exp $
 
 SHA1 (garmintools-0.10.tar.gz) = f59a761b09575d27abbf5d76811f7ec25a1cbd26
 RMD160 (garmintools-0.10.tar.gz) = 307cd9bc99288c2305324c05792022c457ef5e5d
+SHA512 (garmintools-0.10.tar.gz) = c0a01c0e73983635501b4d63d7f08f9c3e512c4c899beae96d3fbb69c1e1ff0f5a4f5c82b9cbd243d971986489f7b9fcaf5b6c8381d1212e39074c8973f7136b
 Size (garmintools-0.10.tar.gz) = 396659 bytes

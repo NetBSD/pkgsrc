@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2008/01/23 00:52:53 rhaen Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 00:08:41 agc Exp $
 
 SHA1 (cm2gpx-1.0.4.tar.gz) = 66bcd39cd2bf656252c6cc3501e193de96688a76
 RMD160 (cm2gpx-1.0.4.tar.gz) = d1423f55ce345c7b7cdab9f73844b1bd058ce306
+SHA512 (cm2gpx-1.0.4.tar.gz) = c30269e410399c1a7e595518ac387530caca26cf0cac453e39f11c8d58bc0cb1436b38b0589a849601b6324777d0983cfddbda0c3b1655dad7f8c4c119577d97
 Size (cm2gpx-1.0.4.tar.gz) = 120033 bytes

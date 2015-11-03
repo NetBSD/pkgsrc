@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2008/05/07 19:32:55 drochner Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 00:08:46 agc Exp $
 
 SHA1 (factbook_text_2006.tar.bz2) = 34651cb39476ee982b5d9905ede07dfecbfa1da0
 RMD160 (factbook_text_2006.tar.bz2) = 20f361fd1332117e6c351c60390b792e1894e741
+SHA512 (factbook_text_2006.tar.bz2) = 0d8563c89e660c1e5f7e186ee134b3a7ed0053a1250d05188cd9c9bfd2e88e1d26204d8d2320ec65dae4c7829c2862230e31e50c57108fc62bdfb8aaf772adcd
 Size (factbook_text_2006.tar.bz2) = 768743 bytes
