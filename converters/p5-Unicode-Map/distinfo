@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/06/11 14:12:29 taca Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:43:52 agc Exp $
 
 SHA1 (Unicode-Map-0.112.tar.gz) = 896bcbfe370b939b4c5fb5866df9059fbdc5b683
 RMD160 (Unicode-Map-0.112.tar.gz) = 4b05b6ed2e27dbe2c1ee69a668b71b45b0d47530
+SHA512 (Unicode-Map-0.112.tar.gz) = f66961ee84db7316289176cf43ddb8366ecfaf614130f8b1018931a92b96d16a97f231da6fdd1d8c1bd95ddd50f4b93d82ff87affbbd1162c894b1f302f27d4f
 Size (Unicode-Map-0.112.tar.gz) = 476116 bytes

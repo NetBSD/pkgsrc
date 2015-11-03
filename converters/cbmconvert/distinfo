@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2006/02/01 17:38:01 tv Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 01:43:47 agc Exp $
 
 SHA1 (cbmconvert-2.1.2.tar.gz) = 5d49712e0da1b88c9ad26b914c254e25e7973a2f
 RMD160 (cbmconvert-2.1.2.tar.gz) = 22c0b5b4342d7afaaea5bddd81d553b09f122147
+SHA512 (cbmconvert-2.1.2.tar.gz) = 87a30b7c0981c579daf2a8ec72183108c4f81e311e16c5be4f5886cdb3901334f22f088ab9d7b776c2a8aa91e0feb391bad42943c82132b721155a36584a461e
 Size (cbmconvert-2.1.2.tar.gz) = 62666 bytes

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2013/01/05 20:36:58 is Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:43:47 agc Exp $
 
 SHA1 (docx2txt-1.2.tgz) = 3e1ed8a63f0c6ec05009720b7109f23cb7afe55c
 RMD160 (docx2txt-1.2.tgz) = 47f551dc8671582999262b8c858a26a34d82eddf
+SHA512 (docx2txt-1.2.tgz) = ba5884c4d85e23aad26f74727b40e2d9d43cdf2e63f270486cbbfed5ef431f44f8f40a2583d3185fa3c16a97d9cd78e84feaf8f1f7be78ae9e1662e04a2013d6
 Size (docx2txt-1.2.tgz) = 28483 bytes
 SHA1 (patch-docx2txt.pl) = fa216040d67613cceffce40fdaedd36bf114139e

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2012/11/07 15:23:37 joerg Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 01:43:50 agc Exp $
 
 SHA1 (macfork-1.0.tar.gz) = 86cbf8a7a3c65bd168f40ef9ab1e1a73161abdd0
 RMD160 (macfork-1.0.tar.gz) = e37842b9dbec86e235dcd759be002f4810be1421
+SHA512 (macfork-1.0.tar.gz) = 34d290ad0c0fe14fe8fcb3da3fc9a5233e4f7986b0891785ec285883f7ad254d24c5092248e731f7f009e5ce37c7761b0eeda1d61d9135ecda25cb84f157cb99
 Size (macfork-1.0.tar.gz) = 15451 bytes
 SHA1 (patch-Makefile) = 6d6ad60d13b1ff451ab9486a5347b744b39fefe1
 SHA1 (patch-aa) = be6282f1fb0ca57fc3a002e830885ff64eaab233

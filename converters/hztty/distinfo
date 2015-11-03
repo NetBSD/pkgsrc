@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2013/07/18 12:07:24 joerg Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 01:43:48 agc Exp $
 
 SHA1 (hztty-2.0.tar.gz) = db2d13f4f9d3918c1feef3ac8fb4bb24326a28ef
 RMD160 (hztty-2.0.tar.gz) = e9e1250ad55fff042e62b9a99c75315641f9e73b
+SHA512 (hztty-2.0.tar.gz) = 30ec6603b507a8fae64a1bb6d695779e7d991d34bae2adcd068f05232023857e8f2d88f991506d0a7afd7fb31d28df9b48cdfc26690c31e2e38266396a586345
 Size (hztty-2.0.tar.gz) = 229189 bytes
 SHA1 (patch-aa) = 9091f33afb6eb5a8ca98ca937bf7e5488a337111
 SHA1 (patch-ab) = b657386b8a093af50021afe4cf417776afbc4ca1

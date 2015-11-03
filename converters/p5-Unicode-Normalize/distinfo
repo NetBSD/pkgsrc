@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2014/11/20 11:08:45 mef Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 01:43:53 agc Exp $
 
 SHA1 (Unicode-Normalize-1.18.tar.gz) = 808ae5f0abb90fd4a37e58937817ed55e0f38674
 RMD160 (Unicode-Normalize-1.18.tar.gz) = 99154617c2ab531931e2a4974d6fe625cc28d4bd
+SHA512 (Unicode-Normalize-1.18.tar.gz) = e76adbada2ba21306bd34d1296af63f6ad9994c88789338104ff64d1983895a4aeb7b7c66b0f483429450ba2683759d58818380aa8452cde966ee539a7352e75
 Size (Unicode-Normalize-1.18.tar.gz) = 19856 bytes

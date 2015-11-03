@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2010/01/29 16:43:34 joerg Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 01:43:47 agc Exp $
 
 SHA1 (cn2jp1.4b.tar.gz) = 09cee0b189e5925a5378f1f817cc9593be899518
 RMD160 (cn2jp1.4b.tar.gz) = 7697648e23586a0fba0d840ba57cf816c175ac10
+SHA512 (cn2jp1.4b.tar.gz) = f27603eb95a742c490ee3aa8b8358be6c361767fe4593c69515ec5735a99723f2222023db2497075a97df2bcc63363599d68c8d8bbe489fcc4b2dd0e667fa639
 Size (cn2jp1.4b.tar.gz) = 271660 bytes
 SHA1 (patch-aa) = cf112ba4083a1a7e3520c683435da78629340961
 SHA1 (patch-ab) = a5a43c0dd84515a5c8b7d0cacc9a49b9b378a8e1

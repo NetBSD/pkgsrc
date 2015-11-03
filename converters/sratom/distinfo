@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/04/19 23:45:06 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:43:55 agc Exp $
 
 SHA1 (sratom-0.4.6.tar.bz2) = 5f7d18e4917e5a2fee6eedc6ae06aa72d47fa52a
 RMD160 (sratom-0.4.6.tar.bz2) = 4c984f787285cd55ef95320511edc54720bafd11
+SHA512 (sratom-0.4.6.tar.bz2) = 198ab8fd7b027bf62db5d215e1af020695304339df552af6a336be661b30228d9c1ab2befeca959fdde0920dad2c33666fbd6bbf833ba1e24e4fde23d850dc0e
 Size (sratom-0.4.6.tar.bz2) = 138165 bytes
