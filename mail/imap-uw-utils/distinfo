@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2005/03/06 14:37:15 adrianp Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 23:27:07 agc Exp $
 
 SHA1 (imap-uw-utils-20050108/imap-utils.tar.Z) = 0453d669d4208b1c7a8101393654f551aee06b96
 RMD160 (imap-uw-utils-20050108/imap-utils.tar.Z) = eb00b3f90aad728be9df581514e076ed002e4bca
+SHA512 (imap-uw-utils-20050108/imap-utils.tar.Z) = faea17f41ce0c016e5bb3c8b29c8710a53f57db89f9f47ae654ef9205304e5a4462d9570bd7d6a996d2d1d66e9e4a8e96299d8340b4b43fb34e0d95910b302e7
 Size (imap-uw-utils-20050108/imap-utils.tar.Z) = 14720 bytes

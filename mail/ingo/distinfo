@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.10 2012/02/23 11:24:29 obache Exp $
+$NetBSD: distinfo,v 1.11 2015/11/03 23:27:07 agc Exp $
 
 SHA1 (ingo-h3-1.2.6.tar.gz) = 45612000730336076b63d31cd4ecd9b9f3ac18fb
 RMD160 (ingo-h3-1.2.6.tar.gz) = d2864a4cd9d1630296728a682443c8e3e063e6e8
+SHA512 (ingo-h3-1.2.6.tar.gz) = d417a0bb06da6e0ffecfc4c49615d44f155c860caddcb36bec6f6e574f98d35c3b5920ed254864fb91fddd4c21fc650d91906ce7cccb4ab3ae3e0444b204eb5f
 Size (ingo-h3-1.2.6.tar.gz) = 2080408 bytes
