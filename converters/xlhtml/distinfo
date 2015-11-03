@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 16:12:35 agc Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 01:43:55 agc Exp $
 
 SHA1 (xlhtml-0.5.tgz) = b661e061feb72282dbbe80d1dfe09ce08b44ce25
 RMD160 (xlhtml-0.5.tgz) = 1364cf41645e70f39f6f280183a716a3001ad5ee
+SHA512 (xlhtml-0.5.tgz) = 53bb55085dc6671bd7a2a194a8e975988d6644e4a82d902604512f7b85988af683f73fc26d998af00cb53f9bb2d8f85f143468daca5c6367a3130fcd0e1ee84d
 Size (xlhtml-0.5.tgz) = 271045 bytes

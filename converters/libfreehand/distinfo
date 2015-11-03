@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2015/06/27 18:41:39 joerg Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 01:43:49 agc Exp $
 
 SHA1 (libfreehand-0.1.1.tar.bz2) = 713ffc76f065390ce82016ba205415d5bffe724f
 RMD160 (libfreehand-0.1.1.tar.bz2) = 4770e3c4c62909221e4b6f7875b3c88ebf362f86
+SHA512 (libfreehand-0.1.1.tar.bz2) = 2189eb9b4e0959d4a1854f8f73048b00d639c9c155f948f0823c3bf13da28fbeee5ed548ba18c14c1255bc0420df4500382da640488e695ba743a9284655933b
 Size (libfreehand-0.1.1.tar.bz2) = 597212 bytes
 SHA1 (patch-src_lib_FHParser.cpp) = 6b3f5abad40f0220466cfe0620b4e2363b5fa296
 SHA1 (patch-src_lib_FHPath.h) = a883f19924232b178b98aeb480cc0fa1ab37e98f
