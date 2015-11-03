@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.8 2012/12/12 12:25:14 wiz Exp $
+$NetBSD: distinfo,v 1.9 2015/11/03 20:57:07 agc Exp $
 
 SHA1 (xboard-4.6.2.tar.gz) = fdda353252495978be22d3e79f8487142f87ea77
 RMD160 (xboard-4.6.2.tar.gz) = b2c457785538865712df53643fe45a96160b218e
+SHA512 (xboard-4.6.2.tar.gz) = a079e4ca4f825ab3463f2e60d98b977ce0783bc36fa018b79bd3b5c8f16441feef2313f5f586eabe7747ce6fffe0d9a967d19b68502f67f438720db607e3c516
 Size (xboard-4.6.2.tar.gz) = 2956198 bytes
 SHA1 (patch-Makefile.in) = 3e9d7153f1e12e407c425a73abee82ff5f3e3f7a

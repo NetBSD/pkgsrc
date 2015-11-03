@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/06/10 18:49:39 drochner Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:56:48 agc Exp $
 
 SHA1 (duckmaze-pc-0.2.zip) = cd065d97923c5e4a1b421eac08902350160cfa5e
 RMD160 (duckmaze-pc-0.2.zip) = ddb86c0637f4e03e52892e864e16bc8c1e4433fe
+SHA512 (duckmaze-pc-0.2.zip) = 17c46bb831b16565bfcb2e4a1a1788b7111dd204c489c777645f44f0c01be2baa09955cf4d2a0c76aabe1ff5ff44124573b62927534ee540122a1f3f775703fb
 Size (duckmaze-pc-0.2.zip) = 175798 bytes

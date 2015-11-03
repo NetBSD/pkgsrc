@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.9 2005/07/18 01:18:59 kristerw Exp $
+$NetBSD: distinfo,v 1.10 2015/11/03 20:56:53 agc Exp $
 
 SHA1 (hugo-3.1.02.1/hugov31_unix_source.tar.gz) = 7c3785da668e1deb9fe222b6014c402b00fc4256
 RMD160 (hugo-3.1.02.1/hugov31_unix_source.tar.gz) = 205c3a26456eabe6e72116be6a2120a00e118385
+SHA512 (hugo-3.1.02.1/hugov31_unix_source.tar.gz) = c6ca371e537e5a1cf823a8ed185fda4bd631e094dfca5c298779959491480615105ef29f84a0cb47805ef04e6d6f1dc30e36ba944d27dbf541ec4bfe3d738d2f
 Size (hugo-3.1.02.1/hugov31_unix_source.tar.gz) = 214617 bytes
 SHA1 (hugo-3.1.02.1/hugolib.zip) = 5592c8bf87e44dedea44dd6b5880fe511596895a
 RMD160 (hugo-3.1.02.1/hugolib.zip) = 292cf4b3f1042841ba3ae86eabac42c1abae12da
+SHA512 (hugo-3.1.02.1/hugolib.zip) = 5d9c10b573c40778232d2c9ea5165b26ba70ed519f329c8b23a5f9e2790cadb387a19ea3ba93f7d3ce32fe01e0ae80b2185ae5e0e7a8b0eb4f32d633cc7cd397
 Size (hugo-3.1.02.1/hugolib.zip) = 69731 bytes
 SHA1 (patch-aa) = e13b502092b5e762fb853f800ec82ff2a220683b
 SHA1 (patch-ab) = 7b87e47c11bda2b1e57eff97cdae45991150238b

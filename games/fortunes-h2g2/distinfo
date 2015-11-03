@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/10/09 23:15:53 jschauma Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:56:50 agc Exp $
 
 SHA1 (fortunes-h2g2-0.1.gz) = 7d4030c1b154e43daf2db9279002672001153c6e
 RMD160 (fortunes-h2g2-0.1.gz) = 9967b71dd7e24e9d85a18428593080a5fe3285e3
+SHA512 (fortunes-h2g2-0.1.gz) = 5ac94f1d70d3e7c717ef38a83ba3c56c48d996ab564b3cdd35f6662ee5ebd2336d3823f378f885b32895fae16c762680f85c43477bcd0336a0aa2c1f9bd7ef94
 Size (fortunes-h2g2-0.1.gz) = 954 bytes

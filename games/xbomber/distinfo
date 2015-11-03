@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2011/05/24 12:03:37 obache Exp $
+$NetBSD: distinfo,v 1.9 2015/11/03 20:57:07 agc Exp $
 
 SHA1 (xbomber.0.8.tar.gz) = 1146d1cc9d10f1115f650ad20bf4fd9e77cf2b8b
 RMD160 (xbomber.0.8.tar.gz) = 5fd68d1c7376d3c510f2f04680d379b32462746d
+SHA512 (xbomber.0.8.tar.gz) = 0461bdc1a5d833c193d0eb620738e9b4298e99c4ad48b7a48dd5ca16689aa56c5283b64817fedd7d24765550fc15d3eab31c2028fd0d75a35d5e884079366489
 Size (xbomber.0.8.tar.gz) = 241168 bytes
 SHA1 (patch-aa) = b32f9626d172f83b4850b69e06c9f4a3a1ead481
 SHA1 (patch-ab) = d9c32df292be9a37eaa838db55c0c352b1ca916e

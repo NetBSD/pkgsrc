@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.12 2014/01/06 17:08:20 dholland Exp $
+$NetBSD: distinfo,v 1.13 2015/11/03 20:56:47 agc Exp $
 
 SHA1 (CriticalMass-1.0.2.tar.bz2) = d2d1f35183e9fbed76fd8da2a948745a4c89f20b
 RMD160 (CriticalMass-1.0.2.tar.bz2) = 6c0b6988f6a52c4b19fbca2525b1daec0202693d
+SHA512 (CriticalMass-1.0.2.tar.bz2) = af3200adc4b6ed9f24eaa89ef5b2f31e8d09e402d0c2eef8db604afcbb2d36bad48e76c3c11c1b2410d2d4e0ffd8554e2e9749a8c8cc4752b4636b8919a66037
 Size (CriticalMass-1.0.2.tar.bz2) = 5122126 bytes
 SHA1 (patch-aa) = a5caa2facea22cd5e7d208540626ed2163d81f18
 SHA1 (patch-game_BitmapManager.cpp) = 31265aeb2f97b642ca8d7f862de13e6442287a27

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2014/11/14 08:49:39 markd Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 20:56:56 agc Exp $
 
 SHA1 (knetwalk-4.14.3.tar.xz) = e6916eb5a4997da67b6b44442afa353aedd429ff
 RMD160 (knetwalk-4.14.3.tar.xz) = d2d240a210ad43e0df801b874d9ceb542d087c22
+SHA512 (knetwalk-4.14.3.tar.xz) = 91a9bbc898beba7d3dd1bb7955a0948c85e4a9c9878d84d9c944f4160d4671eb852affa6ae185035189231a605077c6842fa4b5d060537ebab1a5d96c2341eb7
 Size (knetwalk-4.14.3.tar.xz) = 781732 bytes

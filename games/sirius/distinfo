@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2005/02/23 23:12:02 agc Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 20:57:04 agc Exp $
 
 SHA1 (sirius-0.8.0.tar.gz) = 4d6854c9a7bcb19069215162040037518cd66cea
 RMD160 (sirius-0.8.0.tar.gz) = 9d264f6072ac64ab236d1b209b35e88d8d6e5a00
+SHA512 (sirius-0.8.0.tar.gz) = ffe5cb3354f30b8cb916b83b8fce1cbf7f7b37fad232ddb77a918eaf149d6b3e47488ff900301970e0d9240edfe483d57c434b1af35b87a9f50bcbd0e3aed3d8
 Size (sirius-0.8.0.tar.gz) = 1623435 bytes

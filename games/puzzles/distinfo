@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.25 2014/10/23 11:42:14 wiz Exp $
+$NetBSD: distinfo,v 1.26 2015/11/03 20:57:02 agc Exp $
 
 SHA1 (puzzles-20141021.r10286.tar.gz) = 972c89134c0901a07022dbc6b67e45f29a688595
 RMD160 (puzzles-20141021.r10286.tar.gz) = af9a4b1e067615d5f5d4eff0e4ef77108187c103
+SHA512 (puzzles-20141021.r10286.tar.gz) = b6c7fb53f2fd0aba73bfc5399542cfe1eb4fecdc6b07770a90bdf0e80ce762fb1d12a21f0436d8ed9404942ff1a70fec08bf3dc58ac16c66ad4809a89d8be343
 Size (puzzles-20141021.r10286.tar.gz) = 2933208 bytes
 SHA1 (patch-aa) = dbea43f7cf4368d18b92a8c7788cf1e5cd058487

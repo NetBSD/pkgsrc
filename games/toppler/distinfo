@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/01/05 22:17:04 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:57:06 agc Exp $
 
 SHA1 (toppler-1.1.6.tar.gz) = 9f3554a77fb3d6c11be3956b9bd84a31cae1956e
 RMD160 (toppler-1.1.6.tar.gz) = 45691ff9057e22e6aeea413fc77e27561bc46b95
+SHA512 (toppler-1.1.6.tar.gz) = e0f6b7b72e38ba3402ba3608116fb51bf36cad129fb5591db62489829f4ed1ec49a4a3b7b1db4aaa34cd1561ee5228d91577f550aad2d55520ccefdff9bda9e9
 Size (toppler-1.1.6.tar.gz) = 2117137 bytes

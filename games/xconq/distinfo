@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.13 2014/01/25 00:01:21 kleink Exp $
+$NetBSD: distinfo,v 1.14 2015/11/03 20:57:07 agc Exp $
 
 SHA1 (xconq-7.4.1.tar.gz) = b7d03d17806500f05c23889a00b7608843a27ce7
 RMD160 (xconq-7.4.1.tar.gz) = e596eaccb6a48709e9ceb58fc59e715e36dbf43a
+SHA512 (xconq-7.4.1.tar.gz) = 5b05b3414afbe00d47e47157e201012d57fc09dec63d19d0d591d9de6bcf471118db9c7bcb16e52ff7fcf4616e711de67ba4bae0506e3f1efc1ecaec7315a37a
 Size (xconq-7.4.1.tar.gz) = 3402832 bytes
 SHA1 (patch-aa) = 8b594e6003e3a5b271900f77edf0c62ea364f5e3
 SHA1 (patch-ab) = 113cae3a645a2e756a6c7f09f2cbb49b53e2a37f

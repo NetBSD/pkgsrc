@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2011/05/24 09:54:05 obache Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 20:57:08 agc Exp $
 
 SHA1 (xjewel-1.6.tar.z) = b202d4fdb70bf3a61707aed7a00607a907c80275
 RMD160 (xjewel-1.6.tar.z) = c34bb8ab01c6a7055b67c600b8511e7e3d62118c
+SHA512 (xjewel-1.6.tar.z) = 566dc108baaeada39a8a7d73aaa7bc958d94dc2469352b8ee4adbf45a96a3353d9272ba08933495f3d0e9b8c17a6c165417e163fa2d43fdab5870d0d7503498c
 Size (xjewel-1.6.tar.z) = 45439 bytes
 SHA1 (patch-aa) = 6c592db6b0eb0ae31b55dc12a78bb3f848263f93

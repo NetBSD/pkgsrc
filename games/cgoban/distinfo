@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2010/01/29 20:22:11 joerg Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 20:56:45 agc Exp $
 
 SHA1 (cgoban-1.9.14.tar.gz) = 90bd53499c9f410caddaae601e7f00350d520a32
 RMD160 (cgoban-1.9.14.tar.gz) = c5c3abd6ea422cc9192db48972d584fbfd2fca06
+SHA512 (cgoban-1.9.14.tar.gz) = 0a471845dbfb3029c2371ba91375aa19ca23591f355452d87eeef2ed56e948a60aedb21923658e74923f16b40ce00f5d74f40f44facf93695d20615b874b354c
 Size (cgoban-1.9.14.tar.gz) = 417691 bytes
 SHA1 (patch-aa) = b71b7be5b325e3806a3f42c2ac69545f81b75cc0

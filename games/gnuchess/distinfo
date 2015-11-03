@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.10 2009/10/31 14:24:14 tnn Exp $
+$NetBSD: distinfo,v 1.11 2015/11/03 20:56:51 agc Exp $
 
 SHA1 (gnuchess-5.07.tar.gz) = 7dbaf957bfea9cf37fe393e1fec7306de0162a16
 RMD160 (gnuchess-5.07.tar.gz) = 043ee9bfd9dacccd6c55905d4a1c390bf56ba603
+SHA512 (gnuchess-5.07.tar.gz) = 4f7cd59572671e98901eb68245f1046b63a72bc0ce8ca7a2458899651d2fce509eba00e35a3d5133412644bd1f7dc888cec4910ea21641feaed27a13bcc3b095
 Size (gnuchess-5.07.tar.gz) = 234542 bytes
 SHA1 (patch-aa) = 417c8ca61142d08c827d2ca760b5ffb0c1988099
 SHA1 (patch-ab) = 05d484b3f3e911a5a90e8b86c0026a7fe70f0ae3

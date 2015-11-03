@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.11 2013/04/30 22:20:22 joerg Exp $
+$NetBSD: distinfo,v 1.12 2015/11/03 20:56:48 agc Exp $
 
 SHA1 (enigma-1.01-r1914.tar.gz) = f0c4b3e8fbbcc246044fbdf0ff474a005e9905a1
 RMD160 (enigma-1.01-r1914.tar.gz) = 205e11ecc87b3a46911782366043ce80079b9918
+SHA512 (enigma-1.01-r1914.tar.gz) = 8111e37134eba90dbf196ee7102c23421adc38bcbfe623fce3949dc3610a6751cbfb80accb81a499c5f7b81a255800e99bbcbfed1b0c9d1394dd3c0903f341ee
 Size (enigma-1.01-r1914.tar.gz) = 10902129 bytes
 SHA1 (patch-aa) = c0a337a1d1098815812e117f5ca49d9ed248a446
 SHA1 (patch-aq) = a58f97c78c4ee2a98c29b53265dbc5d2993cd8df

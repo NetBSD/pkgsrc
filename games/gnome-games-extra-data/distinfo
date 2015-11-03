@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/03/15 19:31:19 jmcneill Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:56:51 agc Exp $
 
 SHA1 (gnome-games-extra-data-2.26.0.tar.bz2) = acdf148b58a60b7708eda3e39d1307c5718543af
 RMD160 (gnome-games-extra-data-2.26.0.tar.bz2) = 7a21be115641f0f0ce8647d2ef95f58bdb13258c
+SHA512 (gnome-games-extra-data-2.26.0.tar.bz2) = 383c019050f7a987a09ae85abc5720fac567759a5abd74d3aeedc674807660a5eb26c56cecf694881e4897c60a6da9409739452fd8b78fbcadb5afc3a6d58956
 Size (gnome-games-extra-data-2.26.0.tar.bz2) = 4089840 bytes

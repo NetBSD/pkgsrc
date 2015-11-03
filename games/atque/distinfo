@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/09/12 23:19:48 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:56:44 agc Exp $
 
 SHA1 (atque-1.1.2.tar.bz2) = 5cdae914d9f137e41e235555f019f760d87d916e
 RMD160 (atque-1.1.2.tar.bz2) = dc7c7e36cedbf786b8b068c04ea1beada97094f3
+SHA512 (atque-1.1.2.tar.bz2) = a6ed2d9137cb7a40ca960a1caff7f576af3470d8a263a9e8e458770aa3c8b3a2b61101f284e2b1786f6cdaa1d80b0d06e7e4902ff480b4b7f1677fd51f001f51
 Size (atque-1.1.2.tar.bz2) = 588348 bytes

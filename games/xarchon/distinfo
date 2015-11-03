@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.12 2011/11/27 19:42:25 joerg Exp $
+$NetBSD: distinfo,v 1.13 2015/11/03 20:57:07 agc Exp $
 
 SHA1 (xarchon-0.60.tar.gz) = e68f79a712a8bff5ca18e5011d1582f7e5196f49
 RMD160 (xarchon-0.60.tar.gz) = fdaa7556ee980b004efe4aaae59618fddba8a10b
+SHA512 (xarchon-0.60.tar.gz) = 195f7e7f1d5431fdb8cfe59849b2a1d36483a7e6cf61d08daa5fdef7ba8a9315a9a1d88ec0b8df12657d272cfed82d4edfca7c755a16cbc44102d36c5e6f501d
 Size (xarchon-0.60.tar.gz) = 435088 bytes
 SHA1 (patch-aa) = f6049d4298cd1363d10bbea35957334fa496e2c0
 SHA1 (patch-ab) = 551ea1b5a9873c14c763b064f270a75d2ce821ce

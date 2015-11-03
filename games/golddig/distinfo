@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2010/02/01 00:01:50 joerg Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 20:56:52 agc Exp $
 
 SHA1 (golddigC3.1.tar.gz) = 07decc85efc680edb7e8dbee12dbb4f85d585bf8
 RMD160 (golddigC3.1.tar.gz) = e4d0122f64f37d95955fa58f212535e0180af148
+SHA512 (golddigC3.1.tar.gz) = 55d50bb2cb9276551e3f6e2154ecbd66ac594697296520b6f2516ddd3678e5319a3801d618fd3403b61030dd807b8091c004927f09632da62aca3f02c777123d
 Size (golddigC3.1.tar.gz) = 62024 bytes
 SHA1 (patch-aa) = 688566f6059ffd44a416dc9c72c8cd7114a0b294

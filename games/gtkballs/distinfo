@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.11 2007/12/09 23:23:03 wiz Exp $
+$NetBSD: distinfo,v 1.12 2015/11/03 20:56:52 agc Exp $
 
 SHA1 (gtkballs-3.1.5.tar.gz) = 778955036dc067d5b997ef351399d6ed050adc15
 RMD160 (gtkballs-3.1.5.tar.gz) = d3e103d9cd21e4b9fb950d95fac45db66cb92a5e
+SHA512 (gtkballs-3.1.5.tar.gz) = a22352a19368c3b957e6fbd21aea0b4636efd3042f4e6b1c44a40f946643eb89873b182fe35a8888111ca42277e69fccfe2e2b683e804358ad36f4feca235e8a
 Size (gtkballs-3.1.5.tar.gz) = 1176977 bytes
 SHA1 (patch-aa) = 559aeb861f4bcc0a5db0fea970e7811d57359b29
 SHA1 (patch-ab) = d993a646e8fb7dc85276a0307777c05bab5dc4ef

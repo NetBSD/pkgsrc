@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 23:11:56 agc Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 20:56:48 agc Exp $
 
 SHA1 (lokigames/eus-demo.tar.gz) = d422ae0aefd41c420383fba364d3a189000d8582
 RMD160 (lokigames/eus-demo.tar.gz) = 860818dfacce6636a807a915e00c535bf5adec80
+SHA512 (lokigames/eus-demo.tar.gz) = e0dcc7e2380c1c7067578e0cf0a94195e4c56f6443d8d6ed226d9b19a9270645be9efc5bbc17a9a3dbecd10ed38e45423d6388166f673ab2e81e3e3fdfdfa6e9
 Size (lokigames/eus-demo.tar.gz) = 7384170 bytes

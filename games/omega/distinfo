@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2013/10/17 16:19:41 roy Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 20:57:00 agc Exp $
 
 SHA1 (omega-0.90.4-src.tar.gz) = fb6e20565057aee1250154afbcdb562cf39586fd
 RMD160 (omega-0.90.4-src.tar.gz) = 04eb5dccb753da896f3cb3cce3a515a6f5699302
+SHA512 (omega-0.90.4-src.tar.gz) = eb60b2fced7d3a4970f4a7554f9e757aeae81360b11179db43bfffe94b7e02259eb57762de2b226b557a12993f123a2ef5dd910cc495b611455355e4f0bbf4b7
 Size (omega-0.90.4-src.tar.gz) = 341346 bytes
 SHA1 (patch-aa) = 270141180de5e8d360b6a22088ab63631e066f71
 SHA1 (patch-ab) = 796f6af88356b09b2e63d05948f7d3098d3a3cc5
