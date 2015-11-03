@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.2 2014/02/21 20:17:03 joerg Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 00:21:18 agc Exp $
 
 SHA1 (kicad-stable-20140214.tar.gz) = d424af27803d26f08657e10cd37d7a5c37d01149
 RMD160 (kicad-stable-20140214.tar.gz) = daf0bc83219c7ba15e18d4211bf77b6a48f47b76
+SHA512 (kicad-stable-20140214.tar.gz) = 3ff31db631d79233c5db1eb095bf9d781b41adb8f0e13ac0f95eea69d28cf80977ef3d54c94ebedd504e5a5f6e1a79d5f409d08ec7d57d3e428f71416bc69b12
 Size (kicad-stable-20140214.tar.gz) = 13856340 bytes
 SHA1 (patch-CMakeLists.txt) = a3a91c4629a64815adf7c10724902163947482bb
 SHA1 (patch-CMakeModules_Functions.cmake) = 40581fd56de4d2cc3d3b6b0384d72373b7175dd3
