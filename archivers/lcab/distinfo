@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2008/07/28 19:42:33 plunky Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 00:56:22 agc Exp $
 
 SHA1 (lcab-1.0b12.tar.gz) = 3e5a1f23f0ea1c991e80322592e3ede9f38ecd94
 RMD160 (lcab-1.0b12.tar.gz) = 2b6978175248ac048613e4414acc121df103de7a
+SHA512 (lcab-1.0b12.tar.gz) = 7aeb1b2aa0b9171963b771cfbec13d1a6d4b2519f0f6f2705b505d0ec7a7425764996de00ed1d2919d08c525617d029035a586e8c7e2fad2f44945fddd2afbcf
 Size (lcab-1.0b12.tar.gz) = 74907 bytes

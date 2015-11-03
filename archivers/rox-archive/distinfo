@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/01/29 17:31:44 rxg Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 00:56:25 agc Exp $
 
 SHA1 (rox/archive-2.0.tgz) = cee34ddd89c808f410ea08632a504d4bf4c25720
 RMD160 (rox/archive-2.0.tgz) = 57cf06d4b40595f91ae7a2374e2adef183d8bd65
+SHA512 (rox/archive-2.0.tgz) = 63c88800cfda4d8044a933c09ce6ebd0d2cb17d49357a4bae81b414acc630bb437ac8809ca3b7f751b33eb32afacd55cfa64a60fb1a1d3864567b54b2899fa06
 Size (rox/archive-2.0.tgz) = 25789 bytes
