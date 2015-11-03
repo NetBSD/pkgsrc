@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 19:18:28 agc Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 20:44:35 agc Exp $
 
 SHA1 (kaname_k12_bdf.tar.gz) = 06b610c7cc417d9fbd2db1e09160bed349b00c47
 RMD160 (kaname_k12_bdf.tar.gz) = a4cdef5f49420befe0e7e6daa39e8a0500c1a529
+SHA512 (kaname_k12_bdf.tar.gz) = d1f977423831f591a34051e4bdf028d309a4a45689fc8b93630e6c24157676c703d56f99058fc8e4273f7f841b9f954e14bfd84c93d32fdd50cb78b0716e68dc
 Size (kaname_k12_bdf.tar.gz) = 196704 bytes
 SHA1 (patch-aa) = 5d13ea57899bfe68bf89c3c0ee7aa8c6ce816d93

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:51 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:13 agc Exp $
 
 SHA1 (tex-ocr-b-outline-20969/ocr-b-outline.doc.tar.xz) = 79b5e7a3c9dea491d1405c5ea73345e0ad781416
 RMD160 (tex-ocr-b-outline-20969/ocr-b-outline.doc.tar.xz) = debdc59db0553816d2f3f72cfa1fa5f12eb4677e
+SHA512 (tex-ocr-b-outline-20969/ocr-b-outline.doc.tar.xz) = ae36c22810928f25560180e52878bb87b009820d6396764417001547ea7fd3aa124f2db127b5a4f003e4c4684a2b46c554196a6365795415934c8869c9054159
 Size (tex-ocr-b-outline-20969/ocr-b-outline.doc.tar.xz) = 1128 bytes

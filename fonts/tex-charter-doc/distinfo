@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/03/03 04:13:26 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:48 agc Exp $
 
 SHA1 (tex-charter-15878/charter.doc.tar.xz) = 7c109e38cbf6df3f155e39e7cd4fd7ca3a6f9cba
 RMD160 (tex-charter-15878/charter.doc.tar.xz) = d71954ef57c15790627a41a9c564f800e9bf9bb2
+SHA512 (tex-charter-15878/charter.doc.tar.xz) = 936408b03bd66cb1d401109138154e8ff510e54d2ea9364c1ab8cb5e0e96cd5381c0a9768e7b9f73ba994383482893207c2396d543cfd8093b7c941f1f06803b
 Size (tex-charter-15878/charter.doc.tar.xz) = 796 bytes

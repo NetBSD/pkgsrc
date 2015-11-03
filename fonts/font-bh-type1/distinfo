@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2012/06/12 02:10:23 mef Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 20:44:32 agc Exp $
 
 SHA1 (font-bh-type1-1.0.3.tar.bz2) = 69ff038d38015cd305a4cd4d1a921fe3bd08bbde
 RMD160 (font-bh-type1-1.0.3.tar.bz2) = b44fd0c3b0be52605fd40f25fdbf7f97a933a098
+SHA512 (font-bh-type1-1.0.3.tar.bz2) = dc6cfe7d78a549ae5368ddd2bb3edc6746648b32e1f22bce87f6adc0845ef4827cd3b2472d0afa17a16a2c384e84f74f1c7d807510798bc69089920fdc5486da
 Size (font-bh-type1-1.0.3.tar.bz2) = 637337 bytes

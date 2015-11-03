@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/02 14:00:44 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:17 agc Exp $
 
 SHA1 (tex-sauter-13293/sauter.tar.xz) = d842d37a4ce9f501be61ceccdf2576c0f2059edb
 RMD160 (tex-sauter-13293/sauter.tar.xz) = 4c7de69d036c3f714eb63e5a17e9b95f46821360
+SHA512 (tex-sauter-13293/sauter.tar.xz) = 49c3654fc6e028563ef96bac80e5b295c7b69ce6e577e422d7946a51cce812a2757ba8d90f5d63c84304dce86672ce3e667c3924a90f598d37ad1bde4093406d
 Size (tex-sauter-13293/sauter.tar.xz) = 12480 bytes

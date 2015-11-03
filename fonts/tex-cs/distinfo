@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/05 14:29:19 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:52 agc Exp $
 
 SHA1 (tex-cs-33941/cs.tar.xz) = be494393eb966effdbdc9be4ea2cd8972130e2bc
 RMD160 (tex-cs-33941/cs.tar.xz) = f146072fd49839aaac11d5ef40e2b643e8605b0b
+SHA512 (tex-cs-33941/cs.tar.xz) = d09ef42b15e5311ea1ac156bb454dea9fbac580e807a60794ea4469ac578a99d3875c12b648cc224f8cf7620ed82f58bd88d9d7ef98a9e4db53046ecbd499eb7
 Size (tex-cs-33941/cs.tar.xz) = 1798400 bytes

@@ -1,14 +1,18 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/05/04 05:41:33 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:35 agc Exp $
 
 SHA1 (kiloji-ttf/kiloji_2.1.0.zip) = b6185ac1263fdc46ecf12778d585350624d0c0bd
 RMD160 (kiloji-ttf/kiloji_2.1.0.zip) = ea31da2f1aa2048ae94badb12e0762dfc3f557c7
+SHA512 (kiloji-ttf/kiloji_2.1.0.zip) = 161cc25d4f097e76b1d955a92fe17022537f699afd2be706441be62c3dcf6eb8c34794f561f5470cf692712eaa1f09882bed1d2faf85a63eb99f59b382bc8805
 Size (kiloji-ttf/kiloji_2.1.0.zip) = 3200242 bytes
 SHA1 (kiloji-ttf/kiloji_b2.1.0.zip) = 89a56d4a3e67fd91be016ea65703e67814fef7b3
 RMD160 (kiloji-ttf/kiloji_b2.1.0.zip) = 35ad313c71577592967c83ba72b8d901b5ff1b48
+SHA512 (kiloji-ttf/kiloji_b2.1.0.zip) = 41b89d9ea20cc002bdd699c9aa28f18ff7c45d76d5da375f4adb1307a51106515bcb646eadaa5dee38b54ccbe8afb83cf119c75554b1a3821e98639c9f51fadf
 Size (kiloji-ttf/kiloji_b2.1.0.zip) = 3435030 bytes
 SHA1 (kiloji-ttf/kiloji_d2.1.0.zip) = 7980b521e9f126eaa4381dbb6e2257d18c10d046
 RMD160 (kiloji-ttf/kiloji_d2.1.0.zip) = 750b6f623c1faf58638c5dd1f6d643c3fb1e59aa
+SHA512 (kiloji-ttf/kiloji_d2.1.0.zip) = 181e34b5014d5f4b2ff35f336d91e791fed5b1f0bc50a68d43a77d7703c00af52a7ed56788944d55decf80b5ea858345ce6be849008ab5b458e30a80672f1907
 Size (kiloji-ttf/kiloji_d2.1.0.zip) = 3405665 bytes
 SHA1 (kiloji-ttf/kiloji_p2.1.0.zip) = de8ea8ea7a86e59c2398b82bc7d665cc8be902d0
 RMD160 (kiloji-ttf/kiloji_p2.1.0.zip) = b0cb76181a8dbe0213614ce23fe300938dfa8540
+SHA512 (kiloji-ttf/kiloji_p2.1.0.zip) = cf7e475c00811bb8870eb63844d94fe0b405ea712d5b3b6dc17b48ed32c385e71b14b79d24a14a3467c31909016de72b230c5ebad9350db3b25e54d1f9bbd85f
 Size (kiloji-ttf/kiloji_p2.1.0.zip) = 3214478 bytes

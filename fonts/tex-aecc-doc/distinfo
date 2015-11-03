@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:29 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:41 agc Exp $
 
 SHA1 (tex-aecc-28574/aecc.doc.tar.xz) = 67b250abadbda3112d07d538692032b4fa07ccce
 RMD160 (tex-aecc-28574/aecc.doc.tar.xz) = de7f59d16e1698995284526d10b5143423c0cc10
+SHA512 (tex-aecc-28574/aecc.doc.tar.xz) = 96ee41deae763522b91f8cd8663482d9fd45cb085da9517d83425752457da7ca39d6e2d47fef65382868f6f7d936a6eb6be83b8061c8f027392f55cda7fb3033
 Size (tex-aecc-28574/aecc.doc.tar.xz) = 26576 bytes

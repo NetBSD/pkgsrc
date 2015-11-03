@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2014/12/31 14:12:49 wiz Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 20:44:29 agc Exp $
 
 SHA1 (bdftopcf-1.0.5.tar.bz2) = 93fca9876367b0950b57680237a7dfc1a520ffac
 RMD160 (bdftopcf-1.0.5.tar.bz2) = 996829d8eb375690a5c0f2525625ccf9e7991d47
+SHA512 (bdftopcf-1.0.5.tar.bz2) = 9c6a156c8932579ee37699efaee3b1421d04d55ca0a62ca850a69cc65c21c7d9366b5a090b6a40e927504df16fecfdb484606052adc1038ca25e797f7e8c86c3
 Size (bdftopcf-1.0.5.tar.bz2) = 123291 bytes

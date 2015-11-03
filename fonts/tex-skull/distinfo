@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:55 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:17 agc Exp $
 
 SHA1 (tex-skull-25608/skull.tar.xz) = 8c06df0e4680343124b896c9da77e4f849e1eaea
 RMD160 (tex-skull-25608/skull.tar.xz) = 2eb78b22ec917fb3f2f8899448f92cdffc7d4477
+SHA512 (tex-skull-25608/skull.tar.xz) = b0ce978d3078391e4e3f8344ed788230a8cb530748beaa4127ef3e69dd5f172d04807d8361fe6cc68899af8e68c4012cd5bdc1e54f2e8d23f30cd0035e7d3496
 Size (tex-skull-25608/skull.tar.xz) = 1668 bytes

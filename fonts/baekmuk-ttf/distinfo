@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 19:18:26 agc Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 20:44:29 agc Exp $
 
 SHA1 (baekmuk-ttf-2.2.tar.gz) = afdee34f700007de6ea87b43c92a88b7385ba65b
 RMD160 (baekmuk-ttf-2.2.tar.gz) = 77c404e0cd2a72a5d86471aa48b9549983ce2b35
+SHA512 (baekmuk-ttf-2.2.tar.gz) = 779e0bef5fe17e08e0e08ccdad9ad0e91123a5d5cbcb3d66256d517a0903c5fd91c4a8c75eb42f82fcb0d82e26455cf13aeec5ba3a04002133dbbaf1357ec14b
 Size (baekmuk-ttf-2.2.tar.gz) = 29241850 bytes

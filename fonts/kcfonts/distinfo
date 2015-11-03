@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2014/06/01 16:35:35 wiz Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 20:44:35 agc Exp $
 
 SHA1 (kcfonts-1.05.tar.gz) = b05d2aae45a7624cc9484e1bac0c0670200a0784
 RMD160 (kcfonts-1.05.tar.gz) = 81beed36904d4a4a012da99d000ec6ddae6e3d37
+SHA512 (kcfonts-1.05.tar.gz) = a8b94e8f8095a8578ff340637bf4a197db56948d0d7ecda0d4f17da51bafc09080761f32894f88a54c88945f72b10a11dcb04e5841c19c4eb6852e263fb64209
 Size (kcfonts-1.05.tar.gz) = 903701 bytes
 SHA1 (patch-aa) = 8f8e2db0123cd61ed395f231856b465dffcdab70
 SHA1 (patch-ab) = 8e395c8f5a6c157db54a9b805fede7136250b11c

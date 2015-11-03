@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:39 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:55 agc Exp $
 
 SHA1 (tex-ebgaramond-maths-35701/ebgaramond-maths.doc.tar.xz) = e5f86d9e290fb1d428793198a4f33fef010488d2
 RMD160 (tex-ebgaramond-maths-35701/ebgaramond-maths.doc.tar.xz) = 5de336b56af504b170dfe359da3fa51f6121de65
+SHA512 (tex-ebgaramond-maths-35701/ebgaramond-maths.doc.tar.xz) = 1760301b23fe3b9dcdb27f7343df029810cf762e4dd2e24758604344efba6cca64bb4aec774b872bbc3faa238d9ab76e68e9a35f5ffd6698227bed0243112eb1
 Size (tex-ebgaramond-maths-35701/ebgaramond-maths.doc.tar.xz) = 196368 bytes

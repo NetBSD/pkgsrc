@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/09 22:21:52 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:11 agc Exp $
 
 SHA1 (tex-mxedruli-30021/mxedruli.tar.xz) = 22081566558d6b6065e162dc0cd6d0dc993d084e
 RMD160 (tex-mxedruli-30021/mxedruli.tar.xz) = 925b4deed1e98fcdd94d11edfb4a65fa11b3e60a
+SHA512 (tex-mxedruli-30021/mxedruli.tar.xz) = 687ba0a6e479d37e8c1cc968ac1a9e1a372f5f36535e85f8b2791f8a227d4ed615e59ec442dc5db0f3a4868954c99d22cc267f54dab491256cc36bf5a3ecf995
 Size (tex-mxedruli-30021/mxedruli.tar.xz) = 138624 bytes

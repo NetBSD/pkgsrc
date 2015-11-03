@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:32 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:45 agc Exp $
 
 SHA1 (tex-berenisadf-32215/berenisadf.tar.xz) = 013d8954a4260a3122d16600d85b71fc6e936928
 RMD160 (tex-berenisadf-32215/berenisadf.tar.xz) = 8034387e13b42e0e429590f6da3b97736420ae64
+SHA512 (tex-berenisadf-32215/berenisadf.tar.xz) = 19957b2a1264ff8ed243d9a786ce211bd171e09d93580c858d83684ed2be81a067eaf9a91d19e56b9db0b1a4aaf5ba757bc7e9998d204901212b33f71817d52f
 Size (tex-berenisadf-32215/berenisadf.tar.xz) = 1389624 bytes

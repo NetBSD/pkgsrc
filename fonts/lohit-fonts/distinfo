@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/04/18 12:43:07 mef Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 20:44:36 agc Exp $
 
 SHA1 (lohit-fonts-2.3.8.tar.gz) = 8add57102df9049f249ba98f73556a23115d62bc
 RMD160 (lohit-fonts-2.3.8.tar.gz) = 8c1c14e71b8191995ee895b490cbc279d968968f
+SHA512 (lohit-fonts-2.3.8.tar.gz) = fc020d61982111ac2bf79358dc7ce35978f0ad020e492cd5f2c407002431c5d39ec49db926d40fd44782610320314a0aa6d8ad04427a380272228d77b33d54b6
 Size (lohit-fonts-2.3.8.tar.gz) = 662298 bytes

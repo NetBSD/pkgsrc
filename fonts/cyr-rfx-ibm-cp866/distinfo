@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 19:18:27 agc Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 20:44:29 agc Exp $
 
 SHA1 (cyr-rfx/cyr-rfx-ibm-cp866-1.1.tgz) = 3ba45c22a29056913aa8b173e0f7c800847e20a3
 RMD160 (cyr-rfx/cyr-rfx-ibm-cp866-1.1.tgz) = fa56627724756bff2414f62967f78906563deec5
+SHA512 (cyr-rfx/cyr-rfx-ibm-cp866-1.1.tgz) = 681de9afa1fea4228f20a7a89fc39b6ec7252b81beea20970e46df8ee3169ddfa3e7e1d1c0946b7583fc97c360a84e6a45139c15b8eabe82949a0fb9ebaa5cc2
 Size (cyr-rfx/cyr-rfx-ibm-cp866-1.1.tgz) = 368450 bytes

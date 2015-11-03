@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:37 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:53 agc Exp $
 
 SHA1 (tex-dancers-13293/dancers.tar.xz) = a743205cd4634e16608942077dba344fe82f7cf7
 RMD160 (tex-dancers-13293/dancers.tar.xz) = a5be13476ae2ac243b3dd4cbd343e10eb7c472f5
+SHA512 (tex-dancers-13293/dancers.tar.xz) = b9da7c4927bd52e7071c97ab5fc7c769658aff0c8c0c382d6d3ba0d5727b4b1601c7294a259726af285a866c95dd46c4ea85d04f74ef8d8cdb2a34feeb6cdd83
 Size (tex-dancers-13293/dancers.tar.xz) = 3836 bytes

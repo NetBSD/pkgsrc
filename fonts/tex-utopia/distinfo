@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/03/08 18:37:26 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:21 agc Exp $
 
 SHA1 (tex-utopia-15878/utopia.tar.xz) = a326f7610ce771febd5f41924aa91018c518db5c
 RMD160 (tex-utopia-15878/utopia.tar.xz) = b573072334277ca4cd545a512791ec66039d11f7
+SHA512 (tex-utopia-15878/utopia.tar.xz) = 806442ec55c287bd0648177ab1c799f73be6f2d2baf9120b9ca32109861df7c097b7eb9f1856d83eb23d602c9f2fea001391b5a66b815ea3b9e16f11fc1371b5
 Size (tex-utopia-15878/utopia.tar.xz) = 205408 bytes

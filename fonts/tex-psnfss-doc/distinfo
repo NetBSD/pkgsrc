@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/04/25 08:24:56 markd Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 20:45:15 agc Exp $
 
 SHA1 (tex-psnfss-33946/psnfss.doc.tar.xz) = 96f9579464e1355503c97b3e94b8fdabe11e7923
 RMD160 (tex-psnfss-33946/psnfss.doc.tar.xz) = 8c9ec89d2e812c73c1885dc5515f5355f76ad67b
+SHA512 (tex-psnfss-33946/psnfss.doc.tar.xz) = 913ae9fb57419ce11f4a755b6b91ef05fca5696a4743277060535896c1f27b3d2d88eb2781ee63165f808283085b93410744000f6da5085666483ac4b84cdee3
 Size (tex-psnfss-33946/psnfss.doc.tar.xz) = 484768 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2013/11/17 18:31:35 minskim Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 20:45:06 agc Exp $
 
 SHA1 (tex-latex-fonts-28888/latex-fonts.tar.xz) = 952311ac3d95eccaeecab5994828e8db5b521e72
 RMD160 (tex-latex-fonts-28888/latex-fonts.tar.xz) = 79625cc0a6608ee878e82c43320ffd84d81e454e
+SHA512 (tex-latex-fonts-28888/latex-fonts.tar.xz) = c6606d8713ec91742c7fb93c4e63dedca8caf5565c65c91e9796d4b8db71ededea75bef5b455141bd7b1e7495eaf5b1aedaeffb415c2318a32650b71ae53332b
 Size (tex-latex-fonts-28888/latex-fonts.tar.xz) = 17960 bytes

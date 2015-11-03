@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/03/06 20:51:17 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:45 agc Exp $
 
 SHA1 (tex-bera-20031/bera.tar.xz) = cff08bd8e062624e575eb779039746fb1d9d1fd5
 RMD160 (tex-bera-20031/bera.tar.xz) = c02e12898bcdecaa773a2fadcb426aee9aedd636
+SHA512 (tex-bera-20031/bera.tar.xz) = aca0d76dbcdbb1546ddc67badbdca09b15107675e4b3ea9b0b5c5be531f92ad0d67668a5998ea1fc3a810d485487bb782cdbd9d967a2a265d0cd211ea7760b32
 Size (tex-bera-20031/bera.tar.xz) = 312416 bytes

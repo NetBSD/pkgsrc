@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:45 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:04 agc Exp $
 
 SHA1 (tex-hands-13293/hands.tar.xz) = a77b04dfdecd163f37663968d5f206db4898570a
 RMD160 (tex-hands-13293/hands.tar.xz) = fa4426f90f0aa7d5e734146e33465c9f60335e0b
+SHA512 (tex-hands-13293/hands.tar.xz) = f4982c9e5de901342e1b9f2af0c6d45c12b5684c0f2a3d5fe10daf86f63082811381be914290033e3e8feeda4a08e050705cb47d0f06247d8be505f0c9879894
 Size (tex-hands-13293/hands.tar.xz) = 2596 bytes

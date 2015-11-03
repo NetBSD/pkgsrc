@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/04/25 05:39:28 markd Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 20:44:45 agc Exp $
 
 SHA1 (tex-bbold-type1-33143/bbold-type1.tar.xz) = ed2487ca03aaf9d7b9da4c0f2802a2a976c1b679
 RMD160 (tex-bbold-type1-33143/bbold-type1.tar.xz) = 0afb0a8bdd214cdbdc7eb935960f9460946e61de
+SHA512 (tex-bbold-type1-33143/bbold-type1.tar.xz) = ca12ff6db81c990d8db78598a8bc06f161ab44e18890945de259cd004f49aeb9a0319b4a01b5ed94b674aceb53c607f554c4f53b2f474bc69799d9ef1aca6ff7
 Size (tex-bbold-type1-33143/bbold-type1.tar.xz) = 69980 bytes

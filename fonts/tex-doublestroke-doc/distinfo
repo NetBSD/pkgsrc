@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:38 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:54 agc Exp $
 
 SHA1 (tex-doublestroke-15878/doublestroke.doc.tar.xz) = 67982eda9f94f63149fb102b0f7fcc6e2ce8722f
 RMD160 (tex-doublestroke-15878/doublestroke.doc.tar.xz) = 714cefefab49ebe4cdd1e9ca38266768e92ceff0
+SHA512 (tex-doublestroke-15878/doublestroke.doc.tar.xz) = 617c483fbe2e4a2dd84fa34395fafe933facfe19d6430aae730a77468133e2d9cd904c8358702919521b82d124c88da9f93bf1a6fd3601701731a1c482c57c8c
 Size (tex-doublestroke-15878/doublestroke.doc.tar.xz) = 94092 bytes

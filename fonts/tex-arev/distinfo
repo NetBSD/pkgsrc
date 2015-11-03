@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:30 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:42 agc Exp $
 
 SHA1 (tex-arev-15878/arev.tar.xz) = c93b9299a82c048b0c7b9fb2f8e492549db7ee52
 RMD160 (tex-arev-15878/arev.tar.xz) = 66860e21f71752d274493f97359d7c3869d928de
+SHA512 (tex-arev-15878/arev.tar.xz) = 8f49b6996643fada21c2174f4ebd8d15f2cf3fa6a7926ff20f232f795e771f793447c651ab3507cd1b65224eb2e21460e083ce46cda90e9e7348035f1f5687c6
 Size (tex-arev-15878/arev.tar.xz) = 964624 bytes

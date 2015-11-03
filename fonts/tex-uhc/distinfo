@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/10/19 21:39:18 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:20 agc Exp $
 
 SHA1 (tex-uhc-16791/uhc.tar.xz) = ab0d5f433732908a7272c0c974ec6f04646ace42
 RMD160 (tex-uhc-16791/uhc.tar.xz) = e3f995fbb639b03a752cb16a27abe7da95c3b640
+SHA512 (tex-uhc-16791/uhc.tar.xz) = 6a807bf80ebe2154a6d43fb415929717883fc9b422f66fe1bce676a642051aba00cd4acb74e20d7746376733c6bd4a1652a5e15036867a9fa3cba8ba78d6b823
 Size (tex-uhc-16791/uhc.tar.xz) = 3599360 bytes

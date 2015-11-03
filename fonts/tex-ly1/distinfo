@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2011/01/21 18:42:04 minskim Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 20:45:08 agc Exp $
 
 SHA1 (tex-ly1-21086/ly1.tar.xz) = 4e296e828dea5f56bcd4a812b5f047d33e0cb28a
 RMD160 (tex-ly1-21086/ly1.tar.xz) = 06fdb97d0aa5401d2593a5a66026e3c2bf254807
+SHA512 (tex-ly1-21086/ly1.tar.xz) = 138de1565fd3767e51bfdcbc326430e16009a814f195179c856e925b3b07e7f32ef5e5ebcf8a4b87172399e8d946805fa5969961103ca28b2b2c119d310cd644
 Size (tex-ly1-21086/ly1.tar.xz) = 55000 bytes

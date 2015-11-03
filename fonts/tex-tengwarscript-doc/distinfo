@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:56 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:19 agc Exp $
 
 SHA1 (tex-tengwarscript-34594/tengwarscript.doc.tar.xz) = 40481fce348923548eb815172aa9d355335e610a
 RMD160 (tex-tengwarscript-34594/tengwarscript.doc.tar.xz) = 8c77b2db75fde3dcee6fe142dcdb72a424353ec3
+SHA512 (tex-tengwarscript-34594/tengwarscript.doc.tar.xz) = 775bb5191b5894191908bf88389cea523e25948f051cad532ca75883ffd4d5d90e55d47a5a4b8f4060c9fec9f7b269fe0bc95f69f73e5c6a7eadcf19339492eb
 Size (tex-tengwarscript-34594/tengwarscript.doc.tar.xz) = 472140 bytes

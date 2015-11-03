@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/02 14:26:41 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:50 agc Exp $
 
 SHA1 (tex-cmbright-21107/cmbright.tar.xz) = 9480bd8c606b94376d9a32436eb0c8aa00541b55
 RMD160 (tex-cmbright-21107/cmbright.tar.xz) = b7771f3e3e4c397180603daef5e694b63ab2630d
+SHA512 (tex-cmbright-21107/cmbright.tar.xz) = 6a072e5f6b1fe84372caef20a14bcb4e008a653b40f408a3a4ae1415358b4e573b589e2d97b92808ac2389ca3d1a4b01bb12b1efe0fe10fd29ef560c187f76db
 Size (tex-cmbright-21107/cmbright.tar.xz) = 111648 bytes

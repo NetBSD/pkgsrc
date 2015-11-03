@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/12/04 17:53:35 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:09 agc Exp $
 
 SHA1 (tex-mathdesign-31639/mathdesign.tar.xz) = c547eb3a895d240ea59f2b00cf23d63ac583381c
 RMD160 (tex-mathdesign-31639/mathdesign.tar.xz) = 252053959e0e6067040eb16f00909c11f4d7acb8
+SHA512 (tex-mathdesign-31639/mathdesign.tar.xz) = f5060034959e93fcb2e9b696c67e9f2a6d7cd2298e5f240efebd91574575b8fa7763ef9e22f46e5646209846fa7828d0c5d3a3dfcc52c57f7468a6808e3e23ec
 Size (tex-mathdesign-31639/mathdesign.tar.xz) = 2168444 bytes

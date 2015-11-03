@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/04/25 08:13:22 markd Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 20:45:10 agc Exp $
 
 SHA1 (tex-mfware-36017/mfware.tar.xz) = 167c2236bc3bbabad7e15abe0850fdc92be3b792
 RMD160 (tex-mfware-36017/mfware.tar.xz) = 2f3145f5152ebc107422c788f32cb97ee70e16b0
+SHA512 (tex-mfware-36017/mfware.tar.xz) = 5898830f12485ad4b8d5c701b6a4717cfe81f326b3820be824ff3df3db286ae692f29105ce92cbe29515a3417bf3c90e7bc99bd1eece8111054261ac30cdaf6c
 Size (tex-mfware-36017/mfware.tar.xz) = 3116 bytes

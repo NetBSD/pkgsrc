@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:43 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:02 agc Exp $
 
 SHA1 (tex-gfscomplutum-19469/gfscomplutum.tar.xz) = 65ca6dc20e32c694cb097594acf6d1d936c75904
 RMD160 (tex-gfscomplutum-19469/gfscomplutum.tar.xz) = 8b978111fe43a70b521eb86c6418798250d73a5b
+SHA512 (tex-gfscomplutum-19469/gfscomplutum.tar.xz) = 2d6a1efd42883fa9bf1f882ea703cc56d2640010bd96ad7eec59e52bb72e06979124204f892ff1f8d52d35142fe3b413782abe82c3a31b6a5aff4eb8d0f74016
 Size (tex-gfscomplutum-19469/gfscomplutum.tar.xz) = 123196 bytes

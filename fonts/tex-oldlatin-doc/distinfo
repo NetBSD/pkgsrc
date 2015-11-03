@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:51 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:13 agc Exp $
 
 SHA1 (tex-oldlatin-17932/oldlatin.doc.tar.xz) = 495165f141b5ae6df534be0bf3035d29adc814da
 RMD160 (tex-oldlatin-17932/oldlatin.doc.tar.xz) = 32d230d8cd378242010f6829ace044a89da2f6e3
+SHA512 (tex-oldlatin-17932/oldlatin.doc.tar.xz) = 48b02513888f6e2bc8845627cea26a5a7379e3bd8349973a527f32296684923b5d6b0ccac49e0856468baf05a0bcd0eb762e0e8e131484ee779d9d2faa996e42
 Size (tex-oldlatin-17932/oldlatin.doc.tar.xz) = 408804 bytes

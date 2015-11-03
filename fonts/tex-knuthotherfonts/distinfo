@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:47 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:06 agc Exp $
 
 SHA1 (tex-knuthotherfonts-13293/knuthotherfonts.tar.xz) = 86370a6a789797849b65311e50f5494a3ab145e1
 RMD160 (tex-knuthotherfonts-13293/knuthotherfonts.tar.xz) = b24efedef47781f146937e66a80adb1cad0939e9
+SHA512 (tex-knuthotherfonts-13293/knuthotherfonts.tar.xz) = 4750012b826f426e9e31cde32c6557c1e7946a992a3797b4b30649f84eaf677bd9a2acb8a144e4325fdb996d68de12d32a5654c8cb963e5177d1368ef0af8725
 Size (tex-knuthotherfonts-13293/knuthotherfonts.tar.xz) = 17372 bytes

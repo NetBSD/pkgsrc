@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:47 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:06 agc Exp $
 
 SHA1 (tex-kpfonts-29803/kpfonts.doc.tar.xz) = fc89ab270c0354237c08a1ac8c5bc1e01a0628af
 RMD160 (tex-kpfonts-29803/kpfonts.doc.tar.xz) = 517415c1414d0c6180d1de83e5db5bb9d5619fe2
+SHA512 (tex-kpfonts-29803/kpfonts.doc.tar.xz) = 5ae6708040ac63bde375de3079acc21a1e2b2721808488172e50b73c0e73b5c85541b090cbf5508eef755ed75ebe8af64fabbe92a92d9390053fb0c70f64a69e
 Size (tex-kpfonts-29803/kpfonts.doc.tar.xz) = 1742044 bytes

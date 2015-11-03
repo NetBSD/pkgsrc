@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:31 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:43 agc Exp $
 
 SHA1 (tex-aurical-15878/aurical.doc.tar.xz) = ba39a1ac01f517bc5ddb0bb9ba0783af7f3eed6b
 RMD160 (tex-aurical-15878/aurical.doc.tar.xz) = 548111ce4e4306f7894b8591ffa99e1f48d7f3a1
+SHA512 (tex-aurical-15878/aurical.doc.tar.xz) = cb1f825c1b5c772bb61c567e574b6980c519e1ee50bb0a5b781179ea8622609d607b02a54714472118af18a6b68358066a85302adb844f9b3c6f881d73460ecb
 Size (tex-aurical-15878/aurical.doc.tar.xz) = 69056 bytes

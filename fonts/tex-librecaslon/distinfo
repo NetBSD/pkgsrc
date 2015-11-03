@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:48 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:07 agc Exp $
 
 SHA1 (tex-librecaslon-31929/librecaslon.tar.xz) = 13cb7da54f6e41dbfc1d3a38a64ad3aa67fe6c2e
 RMD160 (tex-librecaslon-31929/librecaslon.tar.xz) = c90f3cba9850be837ba3db3b51a111c08b53bb0d
+SHA512 (tex-librecaslon-31929/librecaslon.tar.xz) = d8f410aceb8a311b5e721dbe13c4d6d009489a7be50335580a99722c67a459ad31d4fac66e063f6c9a235e03678386b4985c332569153782001b33da6cec5e45
 Size (tex-librecaslon-31929/librecaslon.tar.xz) = 971900 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:36 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:51 agc Exp $
 
 SHA1 (tex-cookingsymbols-35929/cookingsymbols.doc.tar.xz) = d391d9df9fafcd6842e7367547bcf3597dfc8000
 RMD160 (tex-cookingsymbols-35929/cookingsymbols.doc.tar.xz) = 4b52a42eb9c76117e9b0747e98972455509648c3
+SHA512 (tex-cookingsymbols-35929/cookingsymbols.doc.tar.xz) = 1c92f54eca5a14c90e66ef1fe7b438dd5499c69de0c99bf9c8745a6307a98b852d71bcd316360e4623736302d32add48967cb6bff97cd33ccbc3fa155485cf79
 Size (tex-cookingsymbols-35929/cookingsymbols.doc.tar.xz) = 378872 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:30 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:42 agc Exp $
 
 SHA1 (tex-antiqua-24266/antiqua.tar.xz) = c75b76a85769b1f0f1de6b1ef8adce54c26f1a15
 RMD160 (tex-antiqua-24266/antiqua.tar.xz) = d4c1ef2407f8976e4321f549ea2092ac286ba426
+SHA512 (tex-antiqua-24266/antiqua.tar.xz) = 21fee5bc38f5873cb3e7c8f4d9179e86c27046869acbeed0bbbdbb655527d1437faf7ced2aa46805fd4990a7802aad4ba67cce21fe8de9989c70b49dab462cdd
 Size (tex-antiqua-24266/antiqua.tar.xz) = 62620 bytes

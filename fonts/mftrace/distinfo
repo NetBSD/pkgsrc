@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2010/01/07 11:18:33 obache Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 20:44:36 agc Exp $
 
 SHA1 (mftrace-1.2.15.tar.gz) = fd27baaae1e8901f5bffd9fd8b0c87de20a20897
 RMD160 (mftrace-1.2.15.tar.gz) = 1515d53a49f6be59aaeab5dd45cf720fbf97b1bb
+SHA512 (mftrace-1.2.15.tar.gz) = 4c07d8b557b181c07000acfd5fe946440335f12e538d553f44fb4cbab32916733a4552ccb0c4358ce7cb0d1be40c935b3c3ee64808531987e96c6c7d79d80c28
 Size (mftrace-1.2.15.tar.gz) = 74627 bytes

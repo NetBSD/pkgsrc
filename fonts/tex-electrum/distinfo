@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:59 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:56 agc Exp $
 
 SHA1 (tex-electrum-19705/electrum.tar.xz) = 0af701ccdef074e0bb0a594e9d60fd69f37e8f05
 RMD160 (tex-electrum-19705/electrum.tar.xz) = 68496132aa1e78879bf0de6c574e8b292b3a51f4
+SHA512 (tex-electrum-19705/electrum.tar.xz) = 0395a61a226ec6eae2cc8447ed90f7472c34549f848be9b7ce626e444304b7e57eb52f38590a3f7a0edfb2aaca4b58bd308356db6f96497781b585858c30a113
 Size (tex-electrum-19705/electrum.tar.xz) = 724352 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/03/07 01:15:15 ryoon Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 20:44:35 agc Exp $
 
 SHA1 (KanjiStrokeOrders_v3.001.zip) = 8700705bcb9c6b91625e8b8d3ac9e37c43c6010c
 RMD160 (KanjiStrokeOrders_v3.001.zip) = f00b609eb55f647e0e6803ec06af2f0d7bae74ce
+SHA512 (KanjiStrokeOrders_v3.001.zip) = 6f8b52878ea9e5ec0ddd9f0b401266bad60fe053b161f7fdbd5b1d5a00da31066c08473c7a800117a2a910f4b5c1ee8ab6643876f40a0ef95b8cf103fd3b826c
 Size (KanjiStrokeOrders_v3.001.zip) = 9347057 bytes

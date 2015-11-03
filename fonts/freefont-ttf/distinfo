@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2012/10/01 11:12:24 ryoon Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 20:44:33 agc Exp $
 
 SHA1 (freefont-ttf-20120503.zip) = 46179a6f3469b386f6569fc61913314ba79aadac
 RMD160 (freefont-ttf-20120503.zip) = 6d557859062a9aaf2022f4bfd63b9973f31474f0
+SHA512 (freefont-ttf-20120503.zip) = dcd6f525e8f97631c6f84ab4cc2a31af4614dcdb9a4d434bd890baf18e0c2934032f2915384fc27fbecf60d259d792e48f52d357b07e3ed2616d3c8c3544268e
 Size (freefont-ttf-20120503.zip) = 6076197 bytes

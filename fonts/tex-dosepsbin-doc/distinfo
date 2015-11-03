@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/17 06:16:22 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:54 agc Exp $
 
 SHA1 (tex-dosepsbin-29752/dosepsbin.doc.tar.xz) = b2905fc6485e28096ecffe77ad30e0ea8a53c820
 RMD160 (tex-dosepsbin-29752/dosepsbin.doc.tar.xz) = 197a61f481e457bca0a57a7781a6f8dc4b38bf79
+SHA512 (tex-dosepsbin-29752/dosepsbin.doc.tar.xz) = b3bf3e0bccbfa3c7ccf33cf3772b39e8af75b68669fe83fa69981b800e8d4b504388b3e278f2257e9985ce801acb6f632fd7dd6974e0e23bae9e5e468541a2e7
 Size (tex-dosepsbin-29752/dosepsbin.doc.tar.xz) = 57060 bytes

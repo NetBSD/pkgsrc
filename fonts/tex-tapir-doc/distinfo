@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:56 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:19 agc Exp $
 
 SHA1 (tex-tapir-20484/tapir.doc.tar.xz) = 408e1325948a88043251c321c3671313eedb288a
 RMD160 (tex-tapir-20484/tapir.doc.tar.xz) = 43015bb0d1773b0913d9a0d9fa8f2a87298b2649
+SHA512 (tex-tapir-20484/tapir.doc.tar.xz) = d77496a54ba522ce27ba211e0337c4705d51d78d50d36b42cacf325fff0cb2500c0b10c8a3e698d2bbaf04e289d82d222dce4ae65b31257f975e062bee381735
 Size (tex-tapir-20484/tapir.doc.tar.xz) = 53800 bytes

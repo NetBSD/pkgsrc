@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:57 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:21 agc Exp $
 
 SHA1 (tex-universa-15878/universa.doc.tar.xz) = c4fbb227297a509a15a668f232ccda2e565f114c
 RMD160 (tex-universa-15878/universa.doc.tar.xz) = 1c718f66c72b43aece2e2bad369d560bff8aa914
+SHA512 (tex-universa-15878/universa.doc.tar.xz) = 9e67dcc7ea516765e0a9ba8605748085d9b005d157da7ed6a26cd09fc376feb128ff65a5b332f2487ed07d4418e592292af01a2483b3005bc46ffc126959ed8c
 Size (tex-universa-15878/universa.doc.tar.xz) = 10752 bytes

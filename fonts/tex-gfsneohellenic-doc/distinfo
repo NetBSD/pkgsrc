@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:44 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:02 agc Exp $
 
 SHA1 (tex-gfsneohellenic-31979/gfsneohellenic.doc.tar.xz) = 7e61f74a84b5303cc85e1123806d24d40cf56b78
 RMD160 (tex-gfsneohellenic-31979/gfsneohellenic.doc.tar.xz) = 6f322d2d1c91aa8f48401c868d971745b953488f
+SHA512 (tex-gfsneohellenic-31979/gfsneohellenic.doc.tar.xz) = 40bf1ec27589bad709e4be4ebda1b0bc8a2c23a23a4313e289666e2f12388c55050f05f6a87a77dbe187a03f55a269c34b75727158b9ee3f5d3202f67d265027
 Size (tex-gfsneohellenic-31979/gfsneohellenic.doc.tar.xz) = 10280 bytes

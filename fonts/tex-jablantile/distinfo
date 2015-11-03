@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:46 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:05 agc Exp $
 
 SHA1 (tex-jablantile-16364/jablantile.tar.xz) = bf4beb4e9c4555d9230497ac2b941280a353fd8a
 RMD160 (tex-jablantile-16364/jablantile.tar.xz) = 69d10384621a01a55c453a325929dce5ca4bc417
+SHA512 (tex-jablantile-16364/jablantile.tar.xz) = 935c83cdb237a7f41062b418ec478d12686c68c33e0147cf3d67b21d170b666e8f6fcff92ef8028cc432ab716030b0cae2c1214f0aaa31d4f55dd4dfd2b4f1d8
 Size (tex-jablantile-16364/jablantile.tar.xz) = 3660 bytes

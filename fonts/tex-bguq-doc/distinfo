@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:32 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:45 agc Exp $
 
 SHA1 (tex-bguq-27401/bguq.doc.tar.xz) = 24db178932e59215b481d3c37c392cfdd677a84d
 RMD160 (tex-bguq-27401/bguq.doc.tar.xz) = 50e4d4d946cccddcc2856eb043f1b977cda4d0e8
+SHA512 (tex-bguq-27401/bguq.doc.tar.xz) = 55da9dc6f2f34f9dfc9a299b4df9e2e9ecb79c7354c0163ea403cc056dbedaf07b023eaf1b0191a92e377124d974a7020229651cb009af46b62de9fc0cfe7514
 Size (tex-bguq-27401/bguq.doc.tar.xz) = 118616 bytes

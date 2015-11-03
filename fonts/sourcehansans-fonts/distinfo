@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/07/17 14:52:08 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:39 agc Exp $
 
 SHA1 (SourceHanSansOTF-1.000.zip) = 629a03ae7d3d51f30431e0ec2da1096ca0e89da2
 RMD160 (SourceHanSansOTF-1.000.zip) = 85e8e5dcf1e5d2a15915a885248a3d39b975add5
+SHA512 (SourceHanSansOTF-1.000.zip) = 545b94afd6192eaccc6612cb7ad61925160f04c3fe99ae72d0ea8d70fda798b4ca46e5f07ab20e7a9cfa5fa827f7ee1ba7b19757db9ae004522ef317b3b8ae61
 Size (SourceHanSansOTF-1.000.zip) = 95664535 bytes

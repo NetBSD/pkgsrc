@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:34 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:47 agc Exp $
 
 SHA1 (tex-carlito-35002/carlito.doc.tar.xz) = b2f5748b2cc06a156c4b2aba7fddd5631c596380
 RMD160 (tex-carlito-35002/carlito.doc.tar.xz) = 2470347d45424ffc2b0f8b42523b58d0031ce95b
+SHA512 (tex-carlito-35002/carlito.doc.tar.xz) = bae51e2c623c082d4e240b979bc51767da14f8783e4de95d0405a4f33c7caf1e59a04f2fddeb219107b14318b5da94122847b05fb869f77b1f944ae2dcee737c
 Size (tex-carlito-35002/carlito.doc.tar.xz) = 354044 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:56 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:18 agc Exp $
 
 SHA1 (tex-staves-15878/staves.tar.xz) = 09d59e87a9326e9cd830c35d3f970f68597585b7
 RMD160 (tex-staves-15878/staves.tar.xz) = 2d1d05de019a90c4cd49290e22ca41b06d25f094
+SHA512 (tex-staves-15878/staves.tar.xz) = 0b75a1c3be0e08c207166cd723d95cc949ca296d2a67e5ba2d6f69d5615e3e884951062a5062e7e5f2a60e3429040c4591afbb3728c448bf525ff30be9c26dd9
 Size (tex-staves-15878/staves.tar.xz) = 121980 bytes

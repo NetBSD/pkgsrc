@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2012/06/12 02:10:26 mef Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 20:44:33 agc Exp $
 
 SHA1 (font-sony-misc-1.0.3.tar.bz2) = 8d0dd87148283c8ac8c5ac37906b12fab5ddb1d8
 RMD160 (font-sony-misc-1.0.3.tar.bz2) = 1894a03a930b7d23fe4c977fc39433b7753ac2a5
+SHA512 (font-sony-misc-1.0.3.tar.bz2) = c397b4e5081b2946799d701b8c48fca9fd2d55b8fa1dd96d2b29c5cd9996bb7356ae12671bf3bd964e6313bdc154020ed6377534e59ce53067e955e4b37aee1d
 Size (font-sony-misc-1.0.3.tar.bz2) = 108098 bytes

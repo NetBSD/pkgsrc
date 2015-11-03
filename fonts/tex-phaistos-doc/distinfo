@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:52 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:14 agc Exp $
 
 SHA1 (tex-phaistos-18651/phaistos.doc.tar.xz) = ae9f717e7418b168c00bec4707bbc787a6cc64b4
 RMD160 (tex-phaistos-18651/phaistos.doc.tar.xz) = e715a67d16b8c7a496a899ce3b64df1909c27574
+SHA512 (tex-phaistos-18651/phaistos.doc.tar.xz) = 92a1330ea13dea2878801e3ea501df8875ba8577d73260fae29ff52cfff5d18a69a4fddb728822bb3e45bf575969ea3fa732c42697d1c36fb8c4d41aec83d82e
 Size (tex-phaistos-18651/phaistos.doc.tar.xz) = 174584 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:50 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:12 agc Exp $
 
 SHA1 (tex-nkarta-16437/nkarta.doc.tar.xz) = f4041945dc7701781aac1924af9e3b7ab693f409
 RMD160 (tex-nkarta-16437/nkarta.doc.tar.xz) = adc1641054d5a0f9711c1ef84e4fd3e84020465a
+SHA512 (tex-nkarta-16437/nkarta.doc.tar.xz) = 6bfbf1f102f24adf8125d10117d738d75d1e54bb887062064cef0d73b0af8c8b4db6a240dec0c20c8fc8fe03f7418968938ddd83c96ddb258519c1516e77eac1
 Size (tex-nkarta-16437/nkarta.doc.tar.xz) = 93256 bytes

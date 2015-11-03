@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:46 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:05 agc Exp $
 
 SHA1 (tex-jamtimes-20408/jamtimes.doc.tar.xz) = 5744adf5c1415ea4a461b5d3c9e61704828c5086
 RMD160 (tex-jamtimes-20408/jamtimes.doc.tar.xz) = 2e8a572dc5bab49ae6b857616ad7609b188a583f
+SHA512 (tex-jamtimes-20408/jamtimes.doc.tar.xz) = 6b6e945fa7fcd66477f907dea6c8d6f3a4366e7455003b1ff5dadce0d49807854b595685acf425d6e8a20a7c6dbcb92ba77cb02b03396cf04ef4a30fc20be989
 Size (tex-jamtimes-20408/jamtimes.doc.tar.xz) = 851028 bytes

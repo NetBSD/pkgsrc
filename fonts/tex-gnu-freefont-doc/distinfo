@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:44 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:03 agc Exp $
 
 SHA1 (tex-gnu-freefont-29349/gnu-freefont.doc.tar.xz) = 3641f40dd6bc6b872e30cd0d2c8a49baee957f11
 RMD160 (tex-gnu-freefont-29349/gnu-freefont.doc.tar.xz) = f69458dd0bc0d61be0c0223c2f51cac29d7f795d
+SHA512 (tex-gnu-freefont-29349/gnu-freefont.doc.tar.xz) = c2b838e146aadf47fce4375870688cb115d361e352d16f3648d2b0e6c30a46bbd7eab45d714e81a5e764e2fc4bbe15931dcce4c9685fca7a4d23d4f8954d02b1
 Size (tex-gnu-freefont-29349/gnu-freefont.doc.tar.xz) = 161272 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/04/26 02:31:13 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:06 agc Exp $
 
 SHA1 (tex-knuth-local-33147/knuth-local.tar.xz) = 771a48dee06b5fd74b40354597a11e79243c0468
 RMD160 (tex-knuth-local-33147/knuth-local.tar.xz) = 9f6d7ad0603111d65ae14916aa7acdf0be5d1b00
+SHA512 (tex-knuth-local-33147/knuth-local.tar.xz) = 88695557d59258bed966791b88b40eb01d85d6d79731aa8873da4a8cee0b46eefa56ca6ef9ad67a3db2ec610e8f5488fa64c05a1ff17a42d3a793aec0c5b2d1d
 Size (tex-knuth-local-33147/knuth-local.tar.xz) = 22828 bytes

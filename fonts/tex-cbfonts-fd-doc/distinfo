@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/03 19:37:21 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:48 agc Exp $
 
 SHA1 (tex-cbfonts-fd-31624/cbfonts-fd.doc.tar.xz) = c494bf76feea24da12f68f02bf40fdff5f6f58b1
 RMD160 (tex-cbfonts-fd-31624/cbfonts-fd.doc.tar.xz) = 95ee49a55351cc6d4bc7586667fe2551858839cb
+SHA512 (tex-cbfonts-fd-31624/cbfonts-fd.doc.tar.xz) = 92e03ed459a338e66811a581645340532fe3d1b523164d89b3a93fd67f5afb6ef6266d44a76cf0ad3bff00a87393e534975dfaf9f406104a15cb8b3e1da442f8
 Size (tex-cbfonts-fd-31624/cbfonts-fd.doc.tar.xz) = 652912 bytes

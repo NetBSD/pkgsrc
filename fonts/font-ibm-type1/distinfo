@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2012/06/12 02:10:24 mef Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 20:44:32 agc Exp $
 
 SHA1 (font-ibm-type1-1.0.3.tar.bz2) = bfc7d0a3aa0f96bf61ea26d6b3f5afbbdd0f35f6
 RMD160 (font-ibm-type1-1.0.3.tar.bz2) = cfcfb36b95192232efff7f03294422af7b269585
+SHA512 (font-ibm-type1-1.0.3.tar.bz2) = cbd179522c936c4f956ff1fbdc48fc3a55990083b4f858c938c6a54c8526641b4f25eb3a6795d774630b75a0f4fbdf9c16e861e88b2cd95f04c524f95d40f90f
 Size (font-ibm-type1-1.0.3.tar.bz2) = 376985 bytes

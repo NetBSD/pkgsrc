@@ -1,14 +1,18 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 19:18:28 agc Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 20:44:36 agc Exp $
 
 SHA1 (kaist-newmj18.bdf.gz) = c311121c589283104f274b3bda66d7c5158280bd
 RMD160 (kaist-newmj18.bdf.gz) = 9b6e40a5f3f2c4d1b2a7f0f63eddda148db49f46
+SHA512 (kaist-newmj18.bdf.gz) = c2c52ebff7980722b86d29a456382bed884eb5a8b1c868006f18dd3ab3a9f0139a54394d6ce63232f0d0c4532352a0c5f950d2bbdb888f92006338b4fb778f77
 Size (kaist-newmj18.bdf.gz) = 283595 bytes
 SHA1 (ks_philgi16.bdf.gz) = 97840d0f545515ca5dac9b319b50499232969f8f
 RMD160 (ks_philgi16.bdf.gz) = ec0c2f5365469d762e80cea999b6a9d6c37ade74
+SHA512 (ks_philgi16.bdf.gz) = 8b4a990e3f0372500419d7d8d0e3d058f65d24d7f40fd74a44ac714cfae701663f4a4a2d45944981560bbb253e89d46f68ea89014a2f4619d3593fb6558b8661
 Size (ks_philgi16.bdf.gz) = 221687 bytes
 SHA1 (kaist-newmj16.bdf.gz) = 2167aed3dbb16c84c2171e5833efc9a8f9c30cb4
 RMD160 (kaist-newmj16.bdf.gz) = 6a747b530fbf9c11d74dbad1f9d7a9e423320c3f
+SHA512 (kaist-newmj16.bdf.gz) = ddd733c55d0035d8a50b6f02b2ae78896e559414240d8defa2853bed47cf7e14e58fef78d8ee4d673eab54cb8be68a089ae254d2cdca4b4862778fe627a3172c
 Size (kaist-newmj16.bdf.gz) = 221221 bytes
 SHA1 (ks_iyagi16.bdf.gz) = 9a956e334fb10c1062a39a6df1ecca777ccb68b8
 RMD160 (ks_iyagi16.bdf.gz) = 76cd87ac8342e2063d9fc6d2286876a00461ebda
+SHA512 (ks_iyagi16.bdf.gz) = 86e22c03a3ff8c843e08e416b4a63fa2e340ca73414da0588df745a146f31f4e5edb8679fbc643b597c12d48213817e19432e9e8d7aa5ab3c04d6752a53ecbf1
 Size (ks_iyagi16.bdf.gz) = 217151 bytes

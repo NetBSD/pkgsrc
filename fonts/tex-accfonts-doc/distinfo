@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/17 06:16:22 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:40 agc Exp $
 
 SHA1 (tex-accfonts-18835/accfonts.doc.tar.xz) = b9a7b508882c2120a5f09d80333cf34ae3c0d331
 RMD160 (tex-accfonts-18835/accfonts.doc.tar.xz) = d3fd693c5545ebce8245aca6c96fc723167e73b5
+SHA512 (tex-accfonts-18835/accfonts.doc.tar.xz) = 4b54213798da7e6538819f080bc1919a14e1207d6853e035d7f562fac74956505cc3230ef6f2daa5b2bb834452a1a7e31e5a52795418c73c8a12c4f0e4d20658
 Size (tex-accfonts-18835/accfonts.doc.tar.xz) = 15616 bytes

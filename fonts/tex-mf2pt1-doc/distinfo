@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/17 06:16:23 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:10 agc Exp $
 
 SHA1 (tex-mf2pt1-33802/mf2pt1.doc.tar.xz) = 9bac2295790e08195bc4fdf8712c7e77e87282ba
 RMD160 (tex-mf2pt1-33802/mf2pt1.doc.tar.xz) = 7bc8ebb2b0ff67363aee67c128e310807dcb80b1
+SHA512 (tex-mf2pt1-33802/mf2pt1.doc.tar.xz) = 096a41008ce3dbc3000e448e5c22bb9842dcd8bd2edef4fa016ec4da370975a093f99e5b478e87ee9a19769ff628e9247fd9e61ee91317f8665a53fed529bafa
 Size (tex-mf2pt1-33802/mf2pt1.doc.tar.xz) = 213304 bytes

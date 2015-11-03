@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/04 12:51:25 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:14 agc Exp $
 
 SHA1 (tex-pl-36012/pl.tar.xz) = 07ffbc232de335d69a8e241e407877bbefc151e5
 RMD160 (tex-pl-36012/pl.tar.xz) = bb19319811856fbbba3610ce7d329ddfaf242f0d
+SHA512 (tex-pl-36012/pl.tar.xz) = 200c9fd2fc55d8e1837534c8cc9211276d919262d766dbfdf9f9c580f2d538f17007f7203af617f03d2ec77beff5ae3410cebcc2d4ac88ff664b37b4d8814a03
 Size (tex-pl-36012/pl.tar.xz) = 1929896 bytes

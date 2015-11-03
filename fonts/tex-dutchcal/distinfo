@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:39 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:55 agc Exp $
 
 SHA1 (tex-dutchcal-23448/dutchcal.tar.xz) = 09d8ba9edcfd48222ef27bd8ef5eacc01696030c
 RMD160 (tex-dutchcal-23448/dutchcal.tar.xz) = 783032b57d0bba143421789ff21081c7658db26b
+SHA512 (tex-dutchcal-23448/dutchcal.tar.xz) = 836f484d7bb49520019e39e4394027fb19afcfb7229f68ceeb5958e63e6c9576c4f43564a7842d17d9ffafd6de53f9a1ab5be06d70092b4f9c414193e0e7fc9c
 Size (tex-dutchcal-23448/dutchcal.tar.xz) = 36180 bytes

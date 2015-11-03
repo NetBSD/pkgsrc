@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:53 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:15 agc Exp $
 
 SHA1 (tex-punk-27388/punk.tar.xz) = d5fa024cdc4efc61b6019a8eef0249dc08923162
 RMD160 (tex-punk-27388/punk.tar.xz) = 04b4c0bed60698620ac90e2c55c33fb5206f792d
+SHA512 (tex-punk-27388/punk.tar.xz) = ad7b9df732a5d4100729e5c480822b61323d45f5027206680a2a0986e015a0d1f614d24764ff04db470b371c30ccc4622bb755af39544f61028e4c349ea0de10
 Size (tex-punk-27388/punk.tar.xz) = 6044 bytes

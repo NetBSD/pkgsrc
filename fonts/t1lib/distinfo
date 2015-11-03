@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.23 2012/01/16 12:42:56 drochner Exp $
+$NetBSD: distinfo,v 1.24 2015/11/03 20:44:39 agc Exp $
 
 SHA1 (t1lib-5.1.2.tar.gz) = 4b4fc22c8688eefaaa8cfc990f0039f95f4287de
 RMD160 (t1lib-5.1.2.tar.gz) = ab22aea390356750d743c0f4b08762aa76ca2a82
+SHA512 (t1lib-5.1.2.tar.gz) = 9f424b19c6f35cc4f194ff7351a4c2352216462c7d1b1d9650ad3a05cf48c6e90c89ccbcda5ecc47a4169a39a850cf84a1fcbf88b3b15614860c27364b631ae3
 Size (t1lib-5.1.2.tar.gz) = 1872534 bytes
 SHA1 (patch-aa) = 068c25f733c3037faa5051b527b1e1637d706a20
 SHA1 (patch-ac) = 14201794e29a2eeba22a9144726ed3e00322aa1d

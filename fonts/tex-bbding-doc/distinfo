@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:32 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:44 agc Exp $
 
 SHA1 (tex-bbding-17186/bbding.doc.tar.xz) = 5cdf71bcbeee580d54168840e671bbc7f3d80199
 RMD160 (tex-bbding-17186/bbding.doc.tar.xz) = 35f93213acaa73c58fda1a273adcac7c3890843f
+SHA512 (tex-bbding-17186/bbding.doc.tar.xz) = f7a46b1243b53fa00713b792e35c15bed4d265611f8675e890d19e8a39eeb23fdcfb462bcc631a3243d5d2de0b57ad8eb878674109327a30a74a2dc2064c21c5
 Size (tex-bbding-17186/bbding.doc.tar.xz) = 437588 bytes

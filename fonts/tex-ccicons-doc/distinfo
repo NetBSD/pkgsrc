@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:34 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:48 agc Exp $
 
 SHA1 (tex-ccicons-30020/ccicons.doc.tar.xz) = ca0aed1f2a67909d0411bccc0a0ea814965f927e
 RMD160 (tex-ccicons-30020/ccicons.doc.tar.xz) = 7e62665d326df2ea9771ecdd6710511d620e7896
+SHA512 (tex-ccicons-30020/ccicons.doc.tar.xz) = 5fac1e8ad25f85d8d5542d83ed301c25eac4f6ca62a3d5ede1b615e91bfb153860819f93074c9a56e0d521528530ab487c9b0bd9f510678c79a35de1d1a336be
 Size (tex-ccicons-30020/ccicons.doc.tar.xz) = 73820 bytes

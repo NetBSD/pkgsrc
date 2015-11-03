@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:31 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:44 agc Exp $
 
 SHA1 (tex-b1encoding-21271/b1encoding.doc.tar.xz) = 12ea0f51468063b0debe5068571f93eee1d8b659
 RMD160 (tex-b1encoding-21271/b1encoding.doc.tar.xz) = 9e470d6b48d43aafadfa307ee6c00c7a0f126d40
+SHA512 (tex-b1encoding-21271/b1encoding.doc.tar.xz) = b2010d69e166ae6b610713c515b9d241959d30dca2ce6558811b2f4a4c4c04be759ed38d9565f84c881528024e7b6299a9203611e8b8f34f9934fe4b460aace8
 Size (tex-b1encoding-21271/b1encoding.doc.tar.xz) = 142812 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/04/26 00:38:57 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:09 agc Exp $
 
 SHA1 (tex-manfnt-font-35799/manfnt-font.tar.xz) = 251318097628156a34a9e0f5353d476961583d74
 RMD160 (tex-manfnt-font-35799/manfnt-font.tar.xz) = e35cb90210d633efc79bd02cfaf4eaf975db600e
+SHA512 (tex-manfnt-font-35799/manfnt-font.tar.xz) = caf8e882826fdbf244be3e87789522b2d2237e4ac610da42e3da987eba761c879ba855abd428663132f0d840acf8d7ba1dc7c65760be71803841a904c01416cb
 Size (tex-manfnt-font-35799/manfnt-font.tar.xz) = 25704 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/03/14 21:42:00 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:07 agc Exp $
 
 SHA1 (tex-lcyw-15878/lcyw.doc.tar.xz) = e42f0341811831e41a83e4843b5ea426372bebe0
 RMD160 (tex-lcyw-15878/lcyw.doc.tar.xz) = 0804fa3f852f8e438488a99e83ef5d690684000e
+SHA512 (tex-lcyw-15878/lcyw.doc.tar.xz) = 0cedead0baaf9f55553dde0ef2a823e3bcca3c2144b63dc6f6a08dbadd29ca3e71dc084e85916a6bb179a91f6654989eee4b8cd39665492cc9f44f854ecf8c38
 Size (tex-lcyw-15878/lcyw.doc.tar.xz) = 107764 bytes

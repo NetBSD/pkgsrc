@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:40 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:56 agc Exp $
 
 SHA1 (tex-epsdice-15878/epsdice.doc.tar.xz) = 83401188112593325d76900cb732e1a17e25eb8b
 RMD160 (tex-epsdice-15878/epsdice.doc.tar.xz) = 63fbb9be5de1acff50cf5b3ea39c44ee53a82f03
+SHA512 (tex-epsdice-15878/epsdice.doc.tar.xz) = aea42147017dd041a4e0eacebfc456eaf53ecbed8901340e75d79bc5f53c0a2248447e4d07ced2340c5f34bd5b6ad25967d26a9d7daf5472668f929f7f120df3
 Size (tex-epsdice-15878/epsdice.doc.tar.xz) = 66184 bytes

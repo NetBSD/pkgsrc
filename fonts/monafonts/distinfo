@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.8 2010/03/03 15:44:55 taca Exp $
+$NetBSD: distinfo,v 1.9 2015/11/03 20:44:37 agc Exp $
 
 SHA1 (monafont-2.90.tar.bz2) = 6106097a74afed072b3c49555356c5cb88cec172
 RMD160 (monafont-2.90.tar.bz2) = 1b5dbd521581f05bd26e8339b316e0207be3c7a1
+SHA512 (monafont-2.90.tar.bz2) = 187cc4d7245c2a730a02d5a60d6db92f2bab5a3a36ba56a9e7a767391587e5cb136a9e0c0143308936d1d214e6ae2e0ffd2dc9374d931ba52c81aaab7740d6c1
 Size (monafont-2.90.tar.bz2) = 808897 bytes
 SHA1 (patch-aa) = e180f5a4f78a9f999c99f53fb6d20052eb2612c2

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2011/07/20 02:25:56 minskim Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 20:45:18 agc Exp $
 
 SHA1 (tex-stmaryrd-22027/stmaryrd.doc.tar.xz) = bc2cb4f20f180c8cd97026e1fed9216fbf545171
 RMD160 (tex-stmaryrd-22027/stmaryrd.doc.tar.xz) = c5eafc8a7da875b8529c6fe32ee9a1ca0c4075d3
+SHA512 (tex-stmaryrd-22027/stmaryrd.doc.tar.xz) = a8588cec66169cd38f87286279390f0ffeb922bd2331cd8e4a736496c55c8d2fcf37d99167b18275573846ec609510ffd6f33e0b5c8ade69980cc8044a09ee8c
 Size (tex-stmaryrd-22027/stmaryrd.doc.tar.xz) = 78716 bytes

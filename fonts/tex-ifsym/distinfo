@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:45 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:04 agc Exp $
 
 SHA1 (tex-ifsym-24868/ifsym.tar.xz) = 76addc457d2e11b936f62b21a468fcd6770b3d8f
 RMD160 (tex-ifsym-24868/ifsym.tar.xz) = cbdec019925cc281355b5699e53c73f80dc2c2a2
+SHA512 (tex-ifsym-24868/ifsym.tar.xz) = 09f3831bebbe2bfcaba731587e9ba2285bb95cf52a58d997e40c9e8b2f58a3990289b60ebc4d15cb84f02a1a1a798e0cbf6994213ddb87d57d2f0364fca9a570
 Size (tex-ifsym-24868/ifsym.tar.xz) = 9792 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:31 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:44 agc Exp $
 
 SHA1 (tex-baskervald-19490/baskervald.tar.xz) = 303fcfdda61b2681958b9d209aaf583410d36eaa
 RMD160 (tex-baskervald-19490/baskervald.tar.xz) = 0d7a863c2ef55cf4261f44a383fd300e47823895
+SHA512 (tex-baskervald-19490/baskervald.tar.xz) = 08f85dca6ba1c7f3855f34f5561d858496b030ab773ca8520769d1b2552feaa35b884c4661341f1cc44247814a9dda8fa1449560ceda350d36ae18c78aba7fe5
 Size (tex-baskervald-19490/baskervald.tar.xz) = 421028 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:57 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:21 agc Exp $
 
 SHA1 (tex-urwchancal-21701/urwchancal.tar.xz) = 7e16c772d947f96563dd0687898ee112e4f0a142
 RMD160 (tex-urwchancal-21701/urwchancal.tar.xz) = e9ad975385505b98146c8209afaec83cb9d8e7f8
+SHA512 (tex-urwchancal-21701/urwchancal.tar.xz) = 1f00cd96904a950ec6648bdd6b4784cf876684d9772dc9dbf59f6df1d22c50df05ecdf2afab8b702aa235aed667788c8a729564e56143abe61345ed892d532dd
 Size (tex-urwchancal-21701/urwchancal.tar.xz) = 1884 bytes

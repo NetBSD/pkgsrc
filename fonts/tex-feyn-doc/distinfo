@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:41 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:59 agc Exp $
 
 SHA1 (tex-feyn-15878/feyn.doc.tar.xz) = 1272988066f90e5b66e24b05293a048cf42a74c7
 RMD160 (tex-feyn-15878/feyn.doc.tar.xz) = 7ce517ca18f299d03c4d60d23837b8246e9d7d92
+SHA512 (tex-feyn-15878/feyn.doc.tar.xz) = bde8b0b77adfedfd481ac8d410b6167f54ab005609aae87cfad2b591b52e20acd6a7b53d5a984e32d599dc0eef9d6db88d09a02e49374fe6b6eff12e160261f6
 Size (tex-feyn-15878/feyn.doc.tar.xz) = 242544 bytes

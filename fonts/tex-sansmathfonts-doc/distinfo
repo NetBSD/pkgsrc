@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:55 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:17 agc Exp $
 
 SHA1 (tex-sansmathfonts-30173/sansmathfonts.doc.tar.xz) = e1c6135be1efe2a6f4f9aaaefbf3128082a22319
 RMD160 (tex-sansmathfonts-30173/sansmathfonts.doc.tar.xz) = c8c85cdcb9c9217f38aec8d942aae4c70fb0ad74
+SHA512 (tex-sansmathfonts-30173/sansmathfonts.doc.tar.xz) = 4e70ea10c793de361f34cba36b12771bbf9fee69620e72fbd78b45c08ab2f5521a7abc6f8464022aa6e8c35602cbe294689fa50c1154f73981ab938b234da769
 Size (tex-sansmathfonts-30173/sansmathfonts.doc.tar.xz) = 265492 bytes

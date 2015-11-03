@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:42 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:59 agc Exp $
 
 SHA1 (tex-fonetika-21326/fonetika.tar.xz) = 6f346007e02ce08f3856207def6402add5b2b9ac
 RMD160 (tex-fonetika-21326/fonetika.tar.xz) = ebcbcc4fecdddfd021dab63f429cc384ef0c6ae3
+SHA512 (tex-fonetika-21326/fonetika.tar.xz) = 6b6acfcc3d2a5fea9c2a85d752f1b2fe4d3c111c7066ec07d95ef4081655c7aee2000ed4d9b56a21217efc695f70525c5730c94dd42b77c696e5c537d8fecef2
 Size (tex-fonetika-21326/fonetika.tar.xz) = 65312 bytes
