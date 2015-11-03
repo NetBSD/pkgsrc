@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/10/04 12:19:00 taca Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 03:29:24 agc Exp $
 
 SHA1 (locale-2.1.2.gem) = e4e70de4b0cbbc641afa8cf90833fb0057318d27
 RMD160 (locale-2.1.2.gem) = fd15ff1aa215d9786b70a00ea999c523282718ad
+SHA512 (locale-2.1.2.gem) = 3b094d0f42fbbd506d0c524b376a624728fb6882f64de4f3e106b4c21f1ff62ed4789a27be9e6c6d0a2b365bde66e239aaccb08358ad3b8ee953b6149ee3b873
 Size (locale-2.1.2.gem) = 103424 bytes

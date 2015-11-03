@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2015/03/08 16:07:28 taca Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 03:29:31 agc Exp $
 
 SHA1 (thrift-0.7.0.gem) = ab49e578a3fd45f5f7c23a4ea0568a0e6bc31da7
 RMD160 (thrift-0.7.0.gem) = 9ce2d8453b53725602d0447d1a9b7b18086c1750
+SHA512 (thrift-0.7.0.gem) = ede2da14f73872f9d23c838868a38773b7bcf24828840c9a650d786077022f84b785ec5dc796c9610250fe9d79fec08f7068e1988b3f0bce92c0ce4e506f24dd
 Size (thrift-0.7.0.gem) = 173568 bytes
 SHA1 (patch-ext_extconf.rb) = caedbdb98e3f241f2fb0010d560fb112643c74a2

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.18 2015/01/23 14:31:38 hauke Exp $
+$NetBSD: distinfo,v 1.19 2015/11/03 03:29:19 agc Exp $
 
 SHA1 (rpc2-2.10.tar.gz) = cec3c836e29ca1263156c314af662d8e087e0ab5
 RMD160 (rpc2-2.10.tar.gz) = f155cc33c91d6b354376228027a1474e12b0bb28
+SHA512 (rpc2-2.10.tar.gz) = 45d67a1eab7938c120a933aaa1c938d569fabe5d4e90f190c327d48a75de17a324f0717eeed05ae2874db59dd45d4dd604d3df61209807aed6ae357317e4b0bb
 Size (rpc2-2.10.tar.gz) = 595825 bytes
 SHA1 (patch-rpc2-src_host.c) = 8c453258ae82418ef6e4b5464e544b2b9253b93d
 SHA1 (patch-rpc2-src_multi3.c) = eb6a6606e2e6e5be1e3602f87286e384488a188d

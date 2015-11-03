@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/11/24 18:40:02 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:28:58 agc Exp $
 
 SHA1 (capitalization-0.03.tar.gz) = 199dad72e547e1bf61a21c2c9855e255927f4d67
 RMD160 (capitalization-0.03.tar.gz) = 0850936bca250c8f596593671ae757b807fbddc7
+SHA512 (capitalization-0.03.tar.gz) = 33b0f9f56673980dd770e426d30247b5b54e1baedccffff23b312b53069601bbe820589af00da07d1813a4cb05559c9715509ab42879a791684264c87fa0dd5d
 Size (capitalization-0.03.tar.gz) = 2146 bytes

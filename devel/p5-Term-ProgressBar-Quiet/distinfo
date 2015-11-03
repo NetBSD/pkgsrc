@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/01/04 06:15:47 schmonz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:28:47 agc Exp $
 
 SHA1 (Term-ProgressBar-Quiet-0.31.tar.gz) = 7e076ef86f5c5f3facffedde204fc29cf7098066
 RMD160 (Term-ProgressBar-Quiet-0.31.tar.gz) = 03569298d6c53ed34cc3e7177fe90bf76533faf7
+SHA512 (Term-ProgressBar-Quiet-0.31.tar.gz) = f48502ac57d236678159e7b6efd70007bb9ea7b27da7d933c53ccfeab562c6e88c291cd002fc65af8ccc98ff8843a5221048276351491cb324f548bf3cdf3934
 Size (Term-ProgressBar-Quiet-0.31.tar.gz) = 1924 bytes

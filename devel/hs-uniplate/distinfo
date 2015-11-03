@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/07/26 21:50:10 szptvlfn Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:27:34 agc Exp $
 
 SHA1 (uniplate-1.6.12.tar.gz) = a26cd8ff06d8ef2b516ac6a3c1ff39ced278bffa
 RMD160 (uniplate-1.6.12.tar.gz) = 43075b1656cfd53356391a71bc5647030945dfc2
+SHA512 (uniplate-1.6.12.tar.gz) = 049b07e8a57db7e44d91fc9c8dcfb5c49b78a692a730061763cb8bcc4fbc3ed1065bd7a4c337e3d344693df882a0718b6d3bb6a6ea1e7d520a36d252d7038b07
 Size (uniplate-1.6.12.tar.gz) = 30055 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/01/01 03:08:30 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:28:42 agc Exp $
 
 SHA1 (Role-Basic-0.13.tar.gz) = dfda81f81cac84acb03bf1af6fe101bc94ae1e3f
 RMD160 (Role-Basic-0.13.tar.gz) = 2ff6779e1dd932a1e5fc4765a59cd44f902386c3
+SHA512 (Role-Basic-0.13.tar.gz) = 685f758e1afc4441b3ac507d52e0d18b6f64081f74fa0a768c81c7c9fad7b7ec30497002cff22449a65ab78c27671a4fe7a7213c45d28cc4077bb855fcce1438
 Size (Role-Basic-0.13.tar.gz) = 39625 bytes

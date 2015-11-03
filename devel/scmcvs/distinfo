@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.14 2015/04/12 07:43:42 dsainty Exp $
+$NetBSD: distinfo,v 1.15 2015/11/03 03:29:32 agc Exp $
 
 SHA1 (cvs-1.12.13.tar.bz2) = 93a8dacc6ff0e723a130835713235863f1f5ada9
 RMD160 (cvs-1.12.13.tar.bz2) = ba3048e3e2d99ae78f6a759889b615acf65dd487
+SHA512 (cvs-1.12.13.tar.bz2) = 7d10f808de62190b18d4f706d2d03ab218a508bfb52047ff3e830e293ec40c5e8bf6cc743ef72a5c24be5aa867c9e4892d7d475a026a98b296a3764b4bd0f4d8
 Size (cvs-1.12.13.tar.bz2) = 3911104 bytes
 SHA1 (patch-ab) = bc26fcb899d6316298c97779016aab4edb5cd124
 SHA1 (patch-ad) = 12847d39cece34b310e4bc88c47fa8769233dff5

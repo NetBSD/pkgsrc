@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/09/13 14:02:13 taca Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:29:28 agc Exp $
 
 SHA1 (rspec-logsplit-0.1.3.gem) = 2a8acc5ff57f2350185c56b4bef9be6311f7660f
 RMD160 (rspec-logsplit-0.1.3.gem) = a572477676740816c5d8906d0fc1801797754abb
+SHA512 (rspec-logsplit-0.1.3.gem) = 09c4afca946275453a41f6c8ec36ba7a9cff279fb3f8317637db1aadde866eb3bcb8ecde2b39fb30723dc6b87eb30c5d4a6e16d361156232e9d63f3e77e49874
 Size (rspec-logsplit-0.1.3.gem) = 7680 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/10/10 13:15:31 adam Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:29:35 agc Exp $
 
 SHA1 (tclap-1.2.1.tar.gz) = 4f124216dd6e6936f5af6372d921a6c51563f8fd
 RMD160 (tclap-1.2.1.tar.gz) = 96e424af115ffd27cea4ee1eb08f38e2f34d253e
+SHA512 (tclap-1.2.1.tar.gz) = 8bd6ee724600880840048c7b36f02d31b1aa4910b17f80fb04aef89b1f1917856d9979ec488edbd457b66d9d689aea97540abb842a8b902bbd75c66a6e07b9b1
 Size (tclap-1.2.1.tar.gz) = 442387 bytes

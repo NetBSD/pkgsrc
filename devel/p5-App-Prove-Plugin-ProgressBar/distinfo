@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/04/14 05:40:54 schmonz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:27:55 agc Exp $
 
 SHA1 (dd51ac5.tar.gz) = 02c4cb8c9781eaec70ec54a3e63cefc422e6f45a
 RMD160 (dd51ac5.tar.gz) = b0730c68d7fa9b11648e5840611e3ddb1f9b71d2
+SHA512 (dd51ac5.tar.gz) = 8ce1676e89914a6f1b460cc9c0ef9c200e49a1338ae7d604f02388de9dd30dbd38c11263e9fe1c61d020e8ce1df978a089742c896b3b29c49c7527bbf101a5f1
 Size (dd51ac5.tar.gz) = 2335 bytes

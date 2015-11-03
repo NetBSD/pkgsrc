@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/04/25 10:40:50 adam Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:29:14 agc Exp $
 
 SHA1 (pyobjc-framework-InstallerPlugins-3.0.4.tar.gz) = 9c1d6eb942ff7ffcbac2e2acc0afbc351367845b
 RMD160 (pyobjc-framework-InstallerPlugins-3.0.4.tar.gz) = 2d6d5ca26dae5ca1e7a3a2807cb3a4f262270a63
+SHA512 (pyobjc-framework-InstallerPlugins-3.0.4.tar.gz) = 21ccaff597390215d12cd8a4a719904a4e2545950971dd1562403d2162c95c599b06d4cd99953202cccc94f594f4549f2e16f2709f0803296d6ff408586d6415
 Size (pyobjc-framework-InstallerPlugins-3.0.4.tar.gz) = 22095 bytes

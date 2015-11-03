@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2009/01/28 14:32:40 taca Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 03:27:15 agc Exp $
 
 SHA1 (automoc4/automoc4-0.9.88.tar.bz2) = d864c3dda99d8b5f625b9267acfa1d88ff617e3a
 RMD160 (automoc4/automoc4-0.9.88.tar.bz2) = 8545f159092c9237f8c0f0f14b0dca9bfeac5c19
+SHA512 (automoc4/automoc4-0.9.88.tar.bz2) = 96dfa096a3793f93f6a4acf98c051c871c0285124bff09b12914a17e08a1f26cd63f0bb1c22fdf2c5c29550a1727a087b5de86bfa8a555c562e96052b4a2d820
 Size (automoc4/automoc4-0.9.88.tar.bz2) = 9153 bytes

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2013/05/21 16:36:22 joerg Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 03:29:39 agc Exp $
 
 SHA1 (xsd-3.2.0+dep.tar.bz2) = d57fd3b326dcfab3af8fdc40fc3cf27fb9d7c7c5
 RMD160 (xsd-3.2.0+dep.tar.bz2) = da02eb15e607ee9b434f2a729c6f8a3da0981348
+SHA512 (xsd-3.2.0+dep.tar.bz2) = d0f09505535cd14dc3189d7d0e503d8e1794d9f4afef4540aa64335d75b834a5e5d6b74ea132ee18e84f6c4a87f1f9248f2819e4d09b6279b822e6af911aa1aa
 Size (xsd-3.2.0+dep.tar.bz2) = 1054603 bytes
 SHA1 (patch-libbackend-elements-1.6.1_backend-elements_indentation_cxx.hxx) = 8d57a1a35a69eef95d7aa0881721d03efd8b2f93
 SHA1 (patch-libcult-1.4.2_cult_cli_file-arguments.hxx) = e016fb9838c2eeca557c1001172721ad4f647e30

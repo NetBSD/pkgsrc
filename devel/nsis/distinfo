@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.3 2013/10/15 14:41:36 joerg Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 03:27:51 agc Exp $
 
 SHA1 (nsis-2.12.zip) = 88de1b3ea6559209f9bf6f76e0e5708978c0ae0e
 RMD160 (nsis-2.12.zip) = 71bf8ec3654be1cfe38e36dd6795f3608cbcea7c
+SHA512 (nsis-2.12.zip) = 0adf8c9d59605550e3d532689626f2e7e429847d7c998a7cc599f2a615bc371ae6778a74a2cc98c0dd43e8c6bebd0be8ccf7839a80a99d22a85c32b18f2747d5
 Size (nsis-2.12.zip) = 1953720 bytes
 SHA1 (nsis-2.12-src.tar.bz2) = a458bdcbda37ecf29f0ddd8c10d36c1ed4acd763
 RMD160 (nsis-2.12-src.tar.bz2) = bc3edf7d702c9ccef1b225cf30897f1eb031d78c
+SHA512 (nsis-2.12-src.tar.bz2) = 3ec8e61b6d61679c5ee05c0e94f8fba3134f27c56def507ac2ba5d88cb739ad89ce26fe87d29872cbe8d27ecf955211514ce61ecf4e0c0772264375032010698
 Size (nsis-2.12-src.tar.bz2) = 1564803 bytes
 SHA1 (patch-SConstruct) = 9a85461706f286ad6bb23f3e7b8bc45519ce9adc
 SHA1 (patch-Source_util.cpp) = dc112fc88ce54b0bb992ea34f4d9cd57ef6baf1b

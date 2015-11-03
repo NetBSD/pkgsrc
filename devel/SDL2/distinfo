@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.11 2015/05/31 09:20:48 nat Exp $
+$NetBSD: distinfo,v 1.12 2015/11/03 03:27:12 agc Exp $
 
 SHA1 (SDL2-2.0.3.tar.gz) = 21c45586a4e94d7622e371340edec5da40d06ecc
 RMD160 (SDL2-2.0.3.tar.gz) = e6f3718c7366c5da793c1454cf0ec0972e8bd347
+SHA512 (SDL2-2.0.3.tar.gz) = b6d2485154fbc07ab86a4305485e116d35fac25a97033b9e1c65ee0eb8251a18209cb1de3a914d9c0ddc53aa1ffac66c865b111d218e79eb5a10ed00dfec7540
 Size (SDL2-2.0.3.tar.gz) = 3871267 bytes
 SHA1 (patch-configure) = 7f0469ef69c2a7fc6a769435f0d29a01148df122
 SHA1 (patch-src_audio_bsd_SDL__bsdaudio.c) = ad4bfdfc617b05880e3d0165000b7c570abca146

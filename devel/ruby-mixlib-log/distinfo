@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/06/03 13:14:02 jperkin Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:29:25 agc Exp $
 
 SHA1 (mixlib-log-1.6.0.gem) = b9ea96a598f0725c146f41987436056d92023167
 RMD160 (mixlib-log-1.6.0.gem) = 0d3163d26111099a7018d9449b524ac97aec5c78
+SHA512 (mixlib-log-1.6.0.gem) = 59103c7bc5383a30a393b290ae293a210d15c072a85a9085189c4697345469d251a32528cad963378458b16acf9c0cf1bd452afb90b989c13a3e024778141c2a
 Size (mixlib-log-1.6.0.gem) = 12288 bytes

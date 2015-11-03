@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/08/18 22:10:49 seb Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:28:16 agc Exp $
 
 SHA1 (File-Path-Expand-1.02.tar.gz) = ba3e3c9c7324cd9ad52bfc61938ea1b49d199b39
 RMD160 (File-Path-Expand-1.02.tar.gz) = ca130ba5c8d2cd70ab595a3a4f55d24cc9a637b0
+SHA512 (File-Path-Expand-1.02.tar.gz) = ae227cfedfdd2ccd2344ee165341543dc313590936407e26a982a66387041966153cd9d88dcef45392996bf22b1e4c9b28fe3d2396584096aebf6f099643f5aa
 Size (File-Path-Expand-1.02.tar.gz) = 2001 bytes

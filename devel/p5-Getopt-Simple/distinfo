@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2010/09/03 06:10:43 sno Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 03:28:18 agc Exp $
 
 SHA1 (Getopt-Simple-1.52.tgz) = 5257f1c030b87c6a9d3ac3e8dca3aba39199143f
 RMD160 (Getopt-Simple-1.52.tgz) = c52f2e0bcaa8e2420778567c8cf3f5bff6832ea6
+SHA512 (Getopt-Simple-1.52.tgz) = 70e303ecb8a1cdc7a86d57d2618ab3764c45dbeac4c3926ee9dafe4a13e5bfc6e9a3bc0e6c7bff352ea91f209534a2fcc733d32bc1cb65462086d9b61a09443a
 Size (Getopt-Simple-1.52.tgz) = 8701 bytes

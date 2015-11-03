@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/04/25 10:40:51 adam Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:29:15 agc Exp $
 
 SHA1 (pyobjc-framework-WebKit-3.0.4.tar.gz) = 26e210a2a55e643407915857d20dbf8ba40e0abc
 RMD160 (pyobjc-framework-WebKit-3.0.4.tar.gz) = 0dc99762695025cabc9353dc291a866fe11e9b61
+SHA512 (pyobjc-framework-WebKit-3.0.4.tar.gz) = 541aabed07bdbb0a69b299cf14c3eef870c74ea4d5c5391657185b172cd61af38b2b7a1292117df30ce5bb9a6ffced540ca749e3119b1aab1bd26f194d3d9a25
 Size (pyobjc-framework-WebKit-3.0.4.tar.gz) = 266575 bytes
