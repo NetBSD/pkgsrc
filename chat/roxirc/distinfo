@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 15:59:13 agc Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 01:20:24 agc Exp $
 
 SHA1 (roxirc-1.8.tar.gz) = aefbaa583132914ca9a9f18ace197df434c38c69
 RMD160 (roxirc-1.8.tar.gz) = 8f902de1405c166d713481e2a85abc7c9f474b18
+SHA512 (roxirc-1.8.tar.gz) = bd8d5db94117a9e3c0cf494d94c5a23bbdd65f090756acae39ad9bbd8c9ed063c90ad15bfb057c678511e94c2567ef81992d966e491cc215e5a4e3873f1fee09
 Size (roxirc-1.8.tar.gz) = 50738 bytes

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.15 2014/11/14 09:31:14 markd Exp $
+$NetBSD: distinfo,v 1.16 2015/11/03 01:20:21 agc Exp $
 
 SHA1 (konversation-1.5.1.tar.xz) = 1b69db93d2c0a38b631dd92065fa6e7490ffbfbe
 RMD160 (konversation-1.5.1.tar.xz) = 39344ae0934271669092bc4df826f73c69304360
+SHA512 (konversation-1.5.1.tar.xz) = c34def02b776692134e40f6a6fc8a7d362a58d1365a247f21828e08a0df95aface809e23f187f7c445112ce3e8cc41826ef8558de5b224258269c67ea6826615
 Size (konversation-1.5.1.tar.xz) = 3188288 bytes
 SHA1 (patch-src_dcc_dcccommon.cpp) = 59578bd54bd3f45eb03ddb43a8d3d3492d7a0ca6
