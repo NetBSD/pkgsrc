@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2015/03/15 00:41:34 taca Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 22:50:45 agc Exp $
 
 SHA1 (squeak/Squeak-4.10.2.2614-src.tar.gz) = bd807730537122b220840b4a89f04a6689f435c2
 RMD160 (squeak/Squeak-4.10.2.2614-src.tar.gz) = 8e8a94ef036aa9ca51ade7683c3c9c8844a56660
+SHA512 (squeak/Squeak-4.10.2.2614-src.tar.gz) = b823fb97f7826dbbae5feeb15ffc3ab7e11cf27c5a3cc3f2cf2f8c39b56af5f9d0078d020a4b8f72b997198d296be6d85ec10e0bca10d5214bf586e1e0587f07
 Size (squeak/Squeak-4.10.2.2614-src.tar.gz) = 3297314 bytes
 SHA1 (patch-Cross_plugins_Mpeg3Plugin_libmpeg_audio_layer3.c) = 81539b093c78f88747da97f18f56f38223117a39
 SHA1 (patch-Cross_plugins_Mpeg3Plugin_libmpeg_video_getpicture.c) = 19f0eabfcdc983d5e7c09db9081d0a01fe333798

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2014/05/12 22:16:54 asau Exp $
+$NetBSD: distinfo,v 1.9 2015/11/03 22:50:46 agc Exp $
 
 SHA1 (umb-scheme-3.2.tar.Z) = eebce3a837bd57b1509cf91adab144d6ddb48b44
 RMD160 (umb-scheme-3.2.tar.Z) = f56954e66568d04d23ff3d535ca72fb1d2f4b1b3
+SHA512 (umb-scheme-3.2.tar.Z) = 04ad9f856dcb3c8686ebf49077afbc15d1bd85702543c5d8970678e382e63c06f2295ecd0c0d61c26c10065f40e627b40f89549a8946febac3cbb9c2c97ce1ad
 Size (umb-scheme-3.2.tar.Z) = 583249 bytes
 SHA1 (patch-aa) = aae6b46834d5ed4e60ec76badeeb3b7cef169993
 SHA1 (patch-ab) = c2d359e957b4f205bd4728d87c43563bb90b231a

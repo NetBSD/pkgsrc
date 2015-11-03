@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2009/12/05 11:35:49 asau Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 22:50:34 agc Exp $
 
 SHA1 (fort77-1.18.tar.gz) = 0f8ba5a1106182a15e5ab87c615569b8911bc3a7
 RMD160 (fort77-1.18.tar.gz) = 9748f9e068b8071a5b89009bfdb533ee2a9b0c11
+SHA512 (fort77-1.18.tar.gz) = c52d10b25f4a8cd62e4363c65a0a35b2bd3adb066a5e66f6271c0f1eb04e9a57b08d64d2a28388b847ae17f3f216e0563838ab617dfd467d94f2bb58a4f50cca
 Size (fort77-1.18.tar.gz) = 6562 bytes

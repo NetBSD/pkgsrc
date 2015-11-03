@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2012/12/21 04:23:45 dholland Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 22:50:46 agc Exp $
 
 SHA1 (vscmV1R2.tar.gz) = 5c9107d825370e2a3b0d02c008faee2ca9f35eba
 RMD160 (vscmV1R2.tar.gz) = 3c405b384b4fb55594fd9a84c3aec6f10cda6bae
+SHA512 (vscmV1R2.tar.gz) = 5fe528154c32f25b572bcd36d4ecd727c672083d3f38c46926fa8cb2d2ef5baf521775e20d8e5cee5b6e1d9f831c2e3436df79febb99e86701d74692a8a6fca3
 Size (vscmV1R2.tar.gz) = 229752 bytes
 SHA1 (patch-Code.c) = 11f97f7aaeef3878da5ebfaeb6e8e92a93309743
 SHA1 (patch-aa) = 76858679286de5936f985a00772972edf137f188

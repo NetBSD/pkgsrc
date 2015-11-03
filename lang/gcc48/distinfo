@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.27 2015/11/03 13:59:10 jperkin Exp $
+$NetBSD: distinfo,v 1.28 2015/11/03 22:50:35 agc Exp $
 
 SHA1 (ecj-4.5.jar) = 58c1d79c64c8cd718550f32a932ccfde8d1e6449
 RMD160 (ecj-4.5.jar) = d3f4da657f086b6423f74e93f001132f4855368a
+SHA512 (ecj-4.5.jar) = d4e1bf7538ace56e3d69fa91da5bbd16c272923b4de0a9d8dee23ea2b75f9f38c603de72fc4061df49285c450b63f3df211cee5270e9fffc5447445d1a9c9e4e
 Size (ecj-4.5.jar) = 1470676 bytes
 SHA1 (gcc-4.8.4.tar.bz2) = 40867a9ac74a054b1cee855988fd680cabf42006
 RMD160 (gcc-4.8.4.tar.bz2) = c742500ab9d930f2193f8053def21e10cc8b0c4b
+SHA512 (gcc-4.8.4.tar.bz2) = b4c84ebd754c026029d706ef52c4242df4dcadc6a22cc5669b3aa37ac9dc25bc9cd9651fda83fb24dd5d17b1710e6865a35bb6c5cd9b95d0971717453935ae8e
 Size (gcc-4.8.4.tar.bz2) = 86220648 bytes
 SHA1 (patch-boehm-gc_configure) = 4ab0772cede9d4bef0c7eab412359f0700195135
 SHA1 (patch-boehm-gc_dyn__load.c) = 2b0c076d5fe62097af3828886af10fc005e6293b

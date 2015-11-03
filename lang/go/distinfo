@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.27 2015/09/13 19:11:55 fhajny Exp $
+$NetBSD: distinfo,v 1.28 2015/11/03 22:50:36 agc Exp $
 
 SHA1 (go1.5.1.src.tar.gz) = 0df564746d105f4180c2b576a1553ebca9d9a124
 RMD160 (go1.5.1.src.tar.gz) = 751d078789bcd6ec0d85e09f5f40d9959877e202
+SHA512 (go1.5.1.src.tar.gz) = a3e92058c79502cfcb7d67143db67fef97393a416322b6f8b6c52b70879e7ab56e3cec94a9ca8046cc13b134845cc1e4b53c70d7208850092bf4edf04bf439ff
 Size (go1.5.1.src.tar.gz) = 12049701 bytes
 SHA1 (patch-src_cmd_go_pkg.go) = ccc470577951bd00741c39229599c0c06be52d0a
 SHA1 (patch-src_syscall_syscall__solaris.go) = 436371947897dcba574a6dfecc6bbcd04f6e25b2

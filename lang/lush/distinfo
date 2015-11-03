@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2012/07/22 01:08:23 dholland Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 22:50:38 agc Exp $
 
 SHA1 (lush-1.2.1.tar.gz) = c378f339320e98b6c7b9177aec6284567f4aa088
 RMD160 (lush-1.2.1.tar.gz) = 22622b256aab3ad1712b3bbb0c2f892de017002f
+SHA512 (lush-1.2.1.tar.gz) = db052b5d4f215c24a2b8417d0539f0dbb552092d4dd80a32fc3f6837d45b893a5e99d2a2dac0aed1736b38807cec308740332c3ef06c8fbde766485837bc88ce
 Size (lush-1.2.1.tar.gz) = 4431778 bytes
 SHA1 (patch-ac) = 53590b03ff1fa4f182cdc30063d0b854d9681c72

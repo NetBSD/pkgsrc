@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.9 2013/10/28 23:47:56 joerg Exp $
+$NetBSD: distinfo,v 1.10 2015/11/03 22:50:41 agc Exp $
 
 SHA1 (pforth_v27_20101121.zip) = 66b9f3927a877afecca2c303157b7127291802f6
 RMD160 (pforth_v27_20101121.zip) = e39965a79d4845763b6b767f5f7781f0d3758208
+SHA512 (pforth_v27_20101121.zip) = 4f1a4379dc6d39d64e2a9a8ae78d0b17aa66e9829e9ed1fcb69a2a9746d314af9fd9ed3730a47215a3c1a97400feaa6766ef63f4ee604077b9aefbd292f20908
 Size (pforth_v27_20101121.zip) = 209538 bytes
 SHA1 (patch-build_unix_Makefile) = 91f21aa6e7d9943872377568ec7102aa78edbfdd

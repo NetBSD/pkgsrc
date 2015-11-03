@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.16 2014/10/14 14:04:19 joerg Exp $
+$NetBSD: distinfo,v 1.17 2015/11/03 22:50:36 agc Exp $
 
 SHA1 (hugs98-Sep2006.tar.gz) = bf3fec6b28ab812839d20a6c19d0f39e8190b4cc
 RMD160 (hugs98-Sep2006.tar.gz) = 99b6b88bd7256efa16e97684f265932d29133c40
+SHA512 (hugs98-Sep2006.tar.gz) = d09fb0d7da2fc701896cd25dba2823f30891f84190163de8bea916be3942f156b8647361fbbb394d5322e49c65f21ec864ae947287d4d056c9bb5530a1393b22
 Size (hugs98-Sep2006.tar.gz) = 2157369 bytes
 SHA1 (patch-packages_base_cbits_execvpe.c) = 4ed8e023a12f67d8687f1f32d1c20b7045f5bda9
 SHA1 (patch-packages_base_configure) = 60ef62c4d20c6f1552b2564f8b67c4495f514130

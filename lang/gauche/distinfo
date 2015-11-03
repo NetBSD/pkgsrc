@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.34 2015/10/18 00:51:55 dholland Exp $
+$NetBSD: distinfo,v 1.35 2015/11/03 22:50:35 agc Exp $
 
 SHA1 (Gauche-0.9.4.tgz) = 2f0068d19adbc8e7fd3c04ab8e6576d0fac21ad6
 RMD160 (Gauche-0.9.4.tgz) = 88f44c10badc4d4be463ee0c84a0b4065d53dc00
+SHA512 (Gauche-0.9.4.tgz) = 815e719d78950a31c238fd7879e09f40d6b3a83a3ebf9d5f7cd3cc7ada081e5f20fbc6b432900e3455bc59e5e60014bf77605b8c9c5f27def53f89284b9cfca3
 Size (Gauche-0.9.4.tgz) = 5601987 bytes
 SHA1 (patch-aa) = 9363f9f022e44794f3d5377166f41ed060983b50
 SHA1 (patch-af) = 0741e1a047ee7935bffa215a69cc417ba67b81f2

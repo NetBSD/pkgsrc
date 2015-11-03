@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.10 2013/08/06 19:57:42 asau Exp $
+$NetBSD: distinfo,v 1.11 2015/11/03 22:50:44 agc Exp $
 
 SHA1 (scheme48-1.9.tgz) = 8fd78d328a8c39ecd848e849ade094c30c2bb4ba
 RMD160 (scheme48-1.9.tgz) = 273f7de5d3775d80e91e8e8876e0d1328320d9e2
+SHA512 (scheme48-1.9.tgz) = d1fc0ba92df8a621028b6baa05c9193a3bb468d685fb70e717b2199233224da6b2697558857584869afd92a176bcc41a72807256f44fc317038b28eac2758d8a
 Size (scheme48-1.9.tgz) = 3945425 bytes
 SHA1 (patch-Makefile.in) = 0bebb77ceac6785476ec0ad7b3ddd2744e74b11c

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2005/02/24 09:03:06 agc Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 22:50:34 agc Exp $
 
 SHA1 (eieio-0.17.tar.gz) = 4ad41e1c9aab4976808927896b2ec35a6b7dd206
 RMD160 (eieio-0.17.tar.gz) = 5db7ed84a5d16ce073cba36e314bfcbf37612274
+SHA512 (eieio-0.17.tar.gz) = 73fc6e196984487c22eca59942ad5077fcff207a7416c5c137fddd8a4ee23d76c0bede40d6a3d946e5d4d1a7d080e648bd2462aa9d4ebf18b2e1da4fb39bedd9
 Size (eieio-0.17.tar.gz) = 120643 bytes

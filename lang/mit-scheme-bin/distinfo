@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/04/13 21:37:30 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 22:50:38 agc Exp $
 
 SHA1 (mit-scheme-7.7.1-ix86-gnu-linux.tar.gz) = a5312457dad4e6a37a1d705fb917b1b01ca6d976
 RMD160 (mit-scheme-7.7.1-ix86-gnu-linux.tar.gz) = 0c04cecbf95e22147d8597f6912d7527ba2d924f
+SHA512 (mit-scheme-7.7.1-ix86-gnu-linux.tar.gz) = 990db83911b1101ea5123b30bb2dd5d2a3826ab00f13280e41e64f0c60d7995ab570155268ae342f09f96be726d5317a91d948d19634fb49e7a3a20a4c8cad58
 Size (mit-scheme-7.7.1-ix86-gnu-linux.tar.gz) = 16944151 bytes
