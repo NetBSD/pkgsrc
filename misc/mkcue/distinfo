@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.2 2011/01/08 12:43:10 drochner Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 23:49:44 agc Exp $
 
 SHA1 (mkcue_1.orig.tar.gz) = d9a69718ba3d862b589588bdf61796f755200f9d
 RMD160 (mkcue_1.orig.tar.gz) = 8462f803235d90fef3d4dd27a83a47ae895cd4b2
+SHA512 (mkcue_1.orig.tar.gz) = 925d43e1451c064c80058df9e9d35df6b36f8ae551ac0377838e07fdf87babc4706eb287825ee2ef8af2de1a363c54c3fca2e14ec72f6bb86fc7f0bbe8ba9c6e
 Size (mkcue_1.orig.tar.gz) = 80650 bytes
 SHA1 (patch-aa) = 54e894382ab940d522290b6d65503146149fd7e0
 SHA1 (patch-ab) = ac8ba060fff82d1597e189c0dde4db33f0cff871

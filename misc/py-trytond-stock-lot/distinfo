@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/08/24 14:49:44 richard Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 23:49:48 agc Exp $
 
 SHA1 (tryton-3.6/trytond_stock_lot-3.6.0.tar.gz) = 4c6d0402b6f8fb77aab9233f8fb219ec35765ff0
 RMD160 (tryton-3.6/trytond_stock_lot-3.6.0.tar.gz) = 311fcbe64ba65a5a02c02083f1b0c0195eb1a926
+SHA512 (tryton-3.6/trytond_stock_lot-3.6.0.tar.gz) = e178f4c2ad6554bb01d85ba4577a1fbf5a4a4dbd57b79252b7ece59a0455b031356a27a0bede2ae0b2de8d5666e72a93cfa0d839897024ae41291717416fbe59
 Size (tryton-3.6/trytond_stock_lot-3.6.0.tar.gz) = 29527 bytes

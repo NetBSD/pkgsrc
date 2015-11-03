@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2012/10/22 02:48:41 rh Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 23:49:31 agc Exp $
 
 SHA1 (Addresses-0.4.8.tar.gz) = bf15ea13453533d437efbb80eef4b0d728257720
 RMD160 (Addresses-0.4.8.tar.gz) = 6d203466c5bc8f163c2d60f6da29128cb14c248e
+SHA512 (Addresses-0.4.8.tar.gz) = 2cd6bd16620d3fa4136242dd89c3281800bba0caeb99e986d3d6beacf31ae19b3dd7f563da2fe52038781cca639815dfc740c15b0e5273facf8cc2400d90fc0f
 Size (Addresses-0.4.8.tar.gz) = 287207 bytes

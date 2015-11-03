@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.13 2008/01/09 19:16:15 reed Exp $
+$NetBSD: distinfo,v 1.14 2015/11/03 23:49:52 agc Exp $
 
 SHA1 (siag-3.6.1.tar.gz) = 5d47e0ee2562f41492a453eef75c0638369bc14d
 RMD160 (siag-3.6.1.tar.gz) = 1779b1384956ab6c786de03d6babb21e47cd0e9f
+SHA512 (siag-3.6.1.tar.gz) = 8fc7533a2264d2a560189b673893169e2beb75986e8ead751a9143709797fd65a19d4e3bb82ee5b43f3f9020f4bcd90993c8717ce428276e56d3decfc6ff22b4
 Size (siag-3.6.1.tar.gz) = 1526023 bytes
 SHA1 (patch-aa) = d50549158fd83afb0a8cc9cb6ba607161ea45ff9
 SHA1 (patch-ac) = e037d16bada6730dfc02890c317d7365a314eb99

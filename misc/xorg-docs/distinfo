@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2015/05/01 08:51:51 wiz Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 23:49:55 agc Exp $
 
 SHA1 (xorg-docs-1.7.1.tar.bz2) = 19be186705145ca7231ca646b61208c9eba48ca7
 RMD160 (xorg-docs-1.7.1.tar.bz2) = 523cc27c37e8fe02024be81cec5ea2d233716c1e
+SHA512 (xorg-docs-1.7.1.tar.bz2) = 7f33205c5ad4f67c14003525c26481e35bf3fb1ac53012d72a28e6596d058b8028b74c8e8ad39d721f78059c0f571649070e4b1677834583c72fe7ffcedebe70
 Size (xorg-docs-1.7.1.tar.bz2) = 376331 bytes

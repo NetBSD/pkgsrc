@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/01/08 15:18:40 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 23:49:42 agc Exp $
 
 SHA1 (libcarddav_0.6.2-2debian2.tar.gz) = 630c71bc080ce224bed538f213b2ca49d72c8f51
 RMD160 (libcarddav_0.6.2-2debian2.tar.gz) = 6733933170e67478d3c9b86bfd2ac3bd8037bd8e
+SHA512 (libcarddav_0.6.2-2debian2.tar.gz) = 8c7dd812fb00d7d2814488848b08c154405e2b5a9004d0dbe866d21929587dce2fcd47311b73fb99418796d98dfd20d076e878bd604670838097256479a88684
 Size (libcarddav_0.6.2-2debian2.tar.gz) = 503086 bytes

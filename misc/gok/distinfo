@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.26 2013/10/28 14:21:27 richard Exp $
+$NetBSD: distinfo,v 1.27 2015/11/03 23:49:37 agc Exp $
 
 SHA1 (gok-2.28.1.tar.bz2) = 194080d2c4993061af3abd48d3a2a14393cef1c4
 RMD160 (gok-2.28.1.tar.bz2) = d4cf9a2a10e1c0fb87d70f161e1fa3ee39f71c9b
+SHA512 (gok-2.28.1.tar.bz2) = d75445a1fa3859a9cc3e4b1273aaf60e353ad92ec0efa1f2c8d721801f7654fc4ef6207de3795957d1431e63214cde12846cd2e0861455e31477094408ca64d6
 Size (gok-2.28.1.tar.bz2) = 1588038 bytes
 SHA1 (patch-configure) = 5a0e168841eff54791375fe9d8ec6a743244694f

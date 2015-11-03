@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2008/02/16 10:29:26 obache Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 23:49:38 agc Exp $
 
 SHA1 (NetBSD1.3I-jman-19990531.tar.gz) = 354a23fd50c03de1acc42117d0fa1a6091c67cf0
 RMD160 (NetBSD1.3I-jman-19990531.tar.gz) = 03d2781b62bce2f9d9425d9dbc6b5fe0e40479a6
+SHA512 (NetBSD1.3I-jman-19990531.tar.gz) = a9f922207eb8cb429c53b0d22de8a422eb4a833bc85fb2e079dc10412d2f59ef365b3e38888ae38fa88f772eb0003177e904922343b6696db75acb19c49fe481
 Size (NetBSD1.3I-jman-19990531.tar.gz) = 1645123 bytes
 SHA1 (patch-aa) = b98752158f934afa0452871ec10d184fab53cb1c
 SHA1 (patch-ab) = b2431235d2233089418048e0ea1025ec3fa4e60e

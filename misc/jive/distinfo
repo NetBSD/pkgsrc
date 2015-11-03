@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2011/12/22 00:27:12 joerg Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 23:49:38 agc Exp $
 
 SHA1 (jive-1.1.tar.gz) = e9e8f211f5f6d18d58f5451d6048c80b16857a37
 RMD160 (jive-1.1.tar.gz) = 3b1111db2bf5075435140bd645398bde50286634
+SHA512 (jive-1.1.tar.gz) = 0920364d41cdd3a9f4ce673c11507d07ff2d375a008d24354b21c597c4e2bffed25d6c19dff8d3e35492e46c270de7b0a22a64007ff7852f574464271a922df5
 Size (jive-1.1.tar.gz) = 4637 bytes
 SHA1 (patch-jive.l) = c7bb329a6cb4c8ae0ea0edfd0cc763245c89b2ad

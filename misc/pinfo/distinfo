@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2008/06/12 02:14:37 joerg Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 23:49:47 agc Exp $
 
 SHA1 (pinfo-0.6.1.tar.gz) = f0444f4eb3bad4f10ad96c971d7bcd553b567ef4
 RMD160 (pinfo-0.6.1.tar.gz) = 85313caf3323f00720bd319dffd2593025745779
+SHA512 (pinfo-0.6.1.tar.gz) = ee3dc36bbef0903405886787489bcb70d456dfcaea342b15a5a1e4d300456a2e9bf2eece2bdc10f4216cca351c76018cbe4629d911c6eb02fe0ce4634b6654ba
 Size (pinfo-0.6.1.tar.gz) = 271015 bytes
 SHA1 (patch-aa) = e2d7d0e8ccbe5db276fb736d22682bb8f719eb98
 SHA1 (patch-ab) = f089af56a969af630e2cb886aa8fb40be055eca7

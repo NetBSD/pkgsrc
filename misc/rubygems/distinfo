@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.50 2015/06/23 14:07:36 taca Exp $
+$NetBSD: distinfo,v 1.51 2015/11/03 23:49:51 agc Exp $
 
 SHA1 (rubygems-2.4.8.tgz) = 0db6b2f1cdd2267fe19f1f875057c2f2ce9f5696
 RMD160 (rubygems-2.4.8.tgz) = 17c63461f9d7dd74c9dc289fc82769097dc452ca
+SHA512 (rubygems-2.4.8.tgz) = 1cc2e9e19d665268f475ce90547377d41a4ea5ce9a9afab4979de0247a0dd82b04529c087c899d9ced5564fa9051e1d2fe23ddb764ba411915bab2ce344ac419
 Size (rubygems-2.4.8.tgz) = 447712 bytes
 SHA1 (patch-ab) = ac375cf0c8dd688e1b93709ea787def867efaa05
 SHA1 (patch-ac) = a5b0ed3e2cd8ea7385889fc084a5971b5db3c0a5

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/11/22 13:06:40 jmcneill Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 23:49:53 agc Exp $
 
 SHA1 (usbids-20081118.tar.gz) = 41e156cc2e1f1f5b0a221c3203d361531f67c53c
 RMD160 (usbids-20081118.tar.gz) = d6f8a58e7822efdcbee6b17048d1c158d4dc22bd
+SHA512 (usbids-20081118.tar.gz) = 4c3527d5a56935dcdd13c10b2b768a05a01835cb13719b6dc1b01d0d502cb0a7b9ceffe049e17bf5a6684868927e61ac07df1a64c20b4f330ffedc23878830b8
 Size (usbids-20081118.tar.gz) = 122012 bytes

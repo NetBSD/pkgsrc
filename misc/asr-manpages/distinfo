@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2007/03/16 20:07:43 wiz Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 23:49:31 agc Exp $
 
 SHA1 (asr-manpages-20000406/asr.pages.tar) = 1133c059ee39242d2426e04876bad0ba00285b89
 RMD160 (asr-manpages-20000406/asr.pages.tar) = e8c30a719bdc1fdd97f07b1defc0906a9ac614a8
+SHA512 (asr-manpages-20000406/asr.pages.tar) = f877427c3dbdf0da0635aeaf3f3f202d84766c73481eed343a9d6001efa33758695f7ea64dba26c72d47027237afafb892fb0863d9bbf7e8dfc70fa94e9b98c0
 Size (asr-manpages-20000406/asr.pages.tar) = 50176 bytes

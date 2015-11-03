@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.8 2014/11/13 19:19:07 markd Exp $
+$NetBSD: distinfo,v 1.9 2015/11/03 23:49:41 agc Exp $
 
 SHA1 (kturtle-4.14.3.tar.xz) = b022711c94d6a241e1e029f66c35e77ca5af8118
 RMD160 (kturtle-4.14.3.tar.xz) = e30fa38635925c2e2bb8a704f90e24a161639faa
+SHA512 (kturtle-4.14.3.tar.xz) = 397ce8bae115b4945ccb0e0a9574016ccca6e35dd2f5ab7820cc4c902e06f6032ae1b59e9f904157887ca1f29fb0f5b85eca73cde554a6f820cc79b3c477e038
 Size (kturtle-4.14.3.tar.xz) = 192100 bytes

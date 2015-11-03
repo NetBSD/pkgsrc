@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2014/10/26 14:14:09 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 23:49:44 agc Exp $
 
 SHA1 (cudf-0.7.tar.gz) = 33d6942caf5f008d6696c1200a2589e28ff7e7fa
 RMD160 (cudf-0.7.tar.gz) = dd9c5097a627856e0e74fe3052c2f5ee1fd1bec5
+SHA512 (cudf-0.7.tar.gz) = 6adf17c076c0308416f6f8bccb361d03645909f535e6cd0ba34860706e5f26628d33ab4f208fb8def28de1499649279febafd895bdde498f35a77e06128e64fa
 Size (cudf-0.7.tar.gz) = 54821 bytes
 SHA1 (patch-Makefile) = 3680470731d72c9bd0f19ebe3f58522aa743d5fc

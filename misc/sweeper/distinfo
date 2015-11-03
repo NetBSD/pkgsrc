@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.8 2014/11/13 19:19:08 markd Exp $
+$NetBSD: distinfo,v 1.9 2015/11/03 23:49:52 agc Exp $
 
 SHA1 (sweeper-4.14.3.tar.xz) = 62ddc2a7017d0655909a8ee01054873e84c670c9
 RMD160 (sweeper-4.14.3.tar.xz) = 7d8716699bde1cf9458a9767593d887af029d4da
+SHA512 (sweeper-4.14.3.tar.xz) = bd742f2076614a1ded8c411a37bd5a05a012b95e8bb0d720b03856a33ce86dec1416cb763bbad7d029c6e628f6ea1bacf56d072db5d6760e5eadc35505172edb
 Size (sweeper-4.14.3.tar.xz) = 82336 bytes

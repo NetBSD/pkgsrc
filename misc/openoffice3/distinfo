@@ -1,19 +1,24 @@
-$NetBSD: distinfo,v 1.35 2013/04/01 12:19:13 joerg Exp $
+$NetBSD: distinfo,v 1.36 2015/11/03 23:49:44 agc Exp $
 
 SHA1 (openoffice-3.1.1/OOo_3.1.1_src_binfilter.tar.bz2) = 3b4d0d312a1bed9bdb1bbdfb172fa7361533b498
 RMD160 (openoffice-3.1.1/OOo_3.1.1_src_binfilter.tar.bz2) = 8caa064f836e531035fd551cf2d7288ca5188da0
+SHA512 (openoffice-3.1.1/OOo_3.1.1_src_binfilter.tar.bz2) = 887d00ab4e5c413a171321cdf4de25b78d39115868a8ce4fe8ec7fbca1843235778b44365625ec680e5ced8dfdd817d305f67c8ab597ed0eb6ff81fa6d92a8ab
 Size (openoffice-3.1.1/OOo_3.1.1_src_binfilter.tar.bz2) = 6500967 bytes
 SHA1 (openoffice-3.1.1/OOo_3.1.1_src_core.tar.bz2) = e4e68570d488061e7e2e513e33916ce192dd1348
 RMD160 (openoffice-3.1.1/OOo_3.1.1_src_core.tar.bz2) = d1f2eef58fd9c3f436c82bd6347a40ae62e2a812
+SHA512 (openoffice-3.1.1/OOo_3.1.1_src_core.tar.bz2) = 847b7e558c83d02efe35427df407939fe79f0760afbbfde3c52edb6c071dc12fa29e1c56999db5cec192476f4ecc1b5e0299c138de120bcc297e588ef3a68d70
 Size (openoffice-3.1.1/OOo_3.1.1_src_core.tar.bz2) = 185952495 bytes
 SHA1 (openoffice-3.1.1/OOo_3.1.1_src_extensions.tar.bz2) = dba308a76a75320507c0d67a4cf5d2dac3dd01b0
 RMD160 (openoffice-3.1.1/OOo_3.1.1_src_extensions.tar.bz2) = 9dbe9e083f0e32446593a09bb0a64b5e2a396f0a
+SHA512 (openoffice-3.1.1/OOo_3.1.1_src_extensions.tar.bz2) = 677049901967e77791ec02217879098c09779d0b7d70eb4f7eb07d1fd8481cb8674d79c0032c00406b175aef3ab1ad44cc1dae73260ef1eeb73929b3ebed3af7
 Size (openoffice-3.1.1/OOo_3.1.1_src_extensions.tar.bz2) = 14820645 bytes
 SHA1 (openoffice-3.1.1/OOo_3.1.1_src_l10n.tar.bz2) = 24ceb884c9d97722a2359e5ffe6a24e118a3918d
 RMD160 (openoffice-3.1.1/OOo_3.1.1_src_l10n.tar.bz2) = ee2f7cb6d4aaf3a882c7c2ba3ba237158d106eed
+SHA512 (openoffice-3.1.1/OOo_3.1.1_src_l10n.tar.bz2) = 6e3fb329fbd22cd4481f53e3c6f6f8649335b95e552c04969fd07620b9f47e82c10b54f6fe53470631bc1850c9cc01ed20d182a9632add19b83f3aeef4bd73ea
 Size (openoffice-3.1.1/OOo_3.1.1_src_l10n.tar.bz2) = 96600878 bytes
 SHA1 (openoffice-3.1.1/OOo_3.1.1_src_system.tar.bz2) = c8a6348a2259ae8df30a0bc3a72d09280a57988c
 RMD160 (openoffice-3.1.1/OOo_3.1.1_src_system.tar.bz2) = db38175ad14bf5785f3d08631d6d2d66598eb82b
+SHA512 (openoffice-3.1.1/OOo_3.1.1_src_system.tar.bz2) = ac5cb56fe94ddfbf5fc5e23b1743d0d75fe58a5ef0a5855313ec26032b52af0b31f53c1aa595f6563ac5df2eb2701148df559242d99783af44eda59dea0a648d
 Size (openoffice-3.1.1/OOo_3.1.1_src_system.tar.bz2) = 53316228 bytes
 SHA1 (patch-aa) = 8561c34e623a4b97d4e6840d8c2af0483f4e21f3
 SHA1 (patch-ab) = 454f3a357a8c16a027858ed5c789d29baa8eafcb

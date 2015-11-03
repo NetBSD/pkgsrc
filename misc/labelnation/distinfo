@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/01/23 21:40:40 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 23:49:42 agc Exp $
 
 SHA1 (labelnation-1.212.tar.gz) = 65161fbc3e21beaacc3bee9402cbd90714580195
 RMD160 (labelnation-1.212.tar.gz) = bb42b573b2953529246cbff38738a9cc23020f15
+SHA512 (labelnation-1.212.tar.gz) = d1929c24f4e8b78a4be7a866f853e15d1801fce8ca068dc327d7257b8de70d2be266721cc50c7746a53acec76701f6c522f5dd32f2b67d7f7c32cc65696f44d6
 Size (labelnation-1.212.tar.gz) = 24819 bytes

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.2 2011/11/24 13:49:57 joerg Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 23:49:39 agc Exp $
 
 SHA1 (kchm-0.6.5.tar.bz2) = f34f7a96a81a69e1a4d6f80547addda1555dd99e
 RMD160 (kchm-0.6.5.tar.bz2) = 8b59798880a6eae55f70fa63016eda40b01d272e
+SHA512 (kchm-0.6.5.tar.bz2) = ad565e8fb175cfd2b2976b1fa26a083dfa6806d62131ef6614b2f0f88606587e8060542b89338b0a22883f0045be37871caecd51ec4786f9e1048145b5ce6af5
 Size (kchm-0.6.5.tar.bz2) = 458684 bytes
 SHA1 (patch-libchm++_chm.cpp) = 160c9a751d6d2a35c35799016b0a328e2982f295
 SHA1 (patch-src_kpart_TopicTree.cpp) = a4bc507827cfd4e35471a755cf4d2dbab7b9ecb0

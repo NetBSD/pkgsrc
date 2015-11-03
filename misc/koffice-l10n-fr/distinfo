@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2007/06/08 12:57:01 markd Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 23:49:41 agc Exp $
 
 SHA1 (koffice-l10n-fr-1.6.3.tar.bz2) = 991bbd12ed08f377cdaf6bfc6842b92eaeb05de4
 RMD160 (koffice-l10n-fr-1.6.3.tar.bz2) = 0cd24ba8e63163575aad891c0ef6542bef75fcd4
+SHA512 (koffice-l10n-fr-1.6.3.tar.bz2) = 4828975a4c161b275a395a4cb557961b042009bb2751c24551565913d3025f8d5cea81268bff3bf77bc2aad4646f20493d5c829381c0bf60208820d0eac3c05d
 Size (koffice-l10n-fr-1.6.3.tar.bz2) = 5582618 bytes

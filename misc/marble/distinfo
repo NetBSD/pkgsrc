@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.10 2015/01/07 13:14:30 jperkin Exp $
+$NetBSD: distinfo,v 1.11 2015/11/03 23:49:43 agc Exp $
 
 SHA1 (marble-4.14.3.tar.xz) = e2b039e61bdf828e30dd078c5bd5b55df0f5ef2b
 RMD160 (marble-4.14.3.tar.xz) = 13f10ab9fc4d0e963eb258854102172ade68bc91
+SHA512 (marble-4.14.3.tar.xz) = eac20e22d4540e45cd6bb24440166eff88db90d400a7c6cd09f20bc0c49b39814aed0c1ae5f3fa2c591ea9a3a83b9bc16294e9706a38e640db35106dbcbdc1c8
 Size (marble-4.14.3.tar.xz) = 19709200 bytes
 SHA1 (patch-src_lib_astro_astrolib.cpp) = 541b39516af740b0ff8e485e9e4e8a339ca5d7f4
 SHA1 (patch-src_lib_astro_astrolib.h) = 4123af9f32a35400e05943598e7dceff84899928

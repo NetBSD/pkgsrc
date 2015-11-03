@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/06/03 13:02:36 jperkin Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 23:49:50 agc Exp $
 
 SHA1 (method_source-0.8.2.gem) = ea691a5adb25c9485d9916690dbc339e646aa8b1
 RMD160 (method_source-0.8.2.gem) = b4cd24a5876117ff22b568871a5b6fc54c7d9bf0
+SHA512 (method_source-0.8.2.gem) = 44cf12bf0e47101f4e91b91b62c54e5403c827be5999b739a930e74c4449861a254631935f6a60430912316767fcc74e3f947075b0b0d994dc864bfdb935af1e
 Size (method_source-0.8.2.gem) = 13312 bytes

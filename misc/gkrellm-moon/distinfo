@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2008/06/20 01:09:26 joerg Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 23:49:36 agc Exp $
 
 SHA1 (gkrellmoon-0.6.tar.gz) = 17c59576d422e921fc05c9ebfc5ae68b7ec2bac4
 RMD160 (gkrellmoon-0.6.tar.gz) = ee82dd38da6a4a1ab071e1cb89dcd2308b9e7df1
+SHA512 (gkrellmoon-0.6.tar.gz) = d0f1008b4501c412817168f751c1d948dc4fdda97572a85c950c7595dfdb0466be964a04ccd8eb31b1bfd83709607fe6cb422ec15d144ef8615dd9700adf127d
 Size (gkrellmoon-0.6.tar.gz) = 55035 bytes
 SHA1 (patch-aa) = d2d78944247972c2cc3c7eed4310d4ec80287305

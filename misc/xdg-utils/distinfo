@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2015/10/15 10:53:35 wiz Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 23:49:54 agc Exp $
 
 SHA1 (xdg-utils-1.1.1.tar.gz) = 0f046491a4f43475f6371f3fb345cb26cedb5114
 RMD160 (xdg-utils-1.1.1.tar.gz) = f00ee2112a86393420d1c233e0ad98d9bfd994bf
+SHA512 (xdg-utils-1.1.1.tar.gz) = 6641b17daea7eecfee0d395e621dc42481582e505bff90a6df5eb0299ed2dca7a76520f000d9545a8424f06d41590382156a2e50f3d68d5c1ab825c268e90edb
 SHA512 (xdg-utils-1.1.1.tar.gz) = 6641b17daea7eecfee0d395e621dc42481582e505bff90a6df5eb0299ed2dca7a76520f000d9545a8424f06d41590382156a2e50f3d68d5c1ab825c268e90edb
 Size (xdg-utils-1.1.1.tar.gz) = 295213 bytes

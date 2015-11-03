@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/05/29 08:54:02 darcy Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 23:49:32 agc Exp $
 
 SHA1 (chordii-4.5.1.tar.gz) = 3cdeacf53a08cf2193e35651120e129c2bb5a007
 RMD160 (chordii-4.5.1.tar.gz) = 93115773ce7324c044d72bcfa28f95f0fb6f416c
+SHA512 (chordii-4.5.1.tar.gz) = 92996893417cfecb3cc18db283f2f608721172540f1fbb9ea300a0235fa99228a89d2c65417e8ddee91453d4bc12190d1504039e9689ed28ca863546fa938088
 Size (chordii-4.5.1.tar.gz) = 156976 bytes

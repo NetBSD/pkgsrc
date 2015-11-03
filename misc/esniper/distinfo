@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.17 2015/03/26 10:08:15 jperkin Exp $
+$NetBSD: distinfo,v 1.18 2015/11/03 23:49:35 agc Exp $
 
 SHA1 (esniper-2-31-0.tgz) = 0360604d003ace99e8abf7e4d1fb00a8f1129760
 RMD160 (esniper-2-31-0.tgz) = 1297ffa0e5e905016b00a0ca4806ba2b95716fd1
+SHA512 (esniper-2-31-0.tgz) = 7f52f4df0cee80f221a5f0be47c10501496eb717845535c9c92946e70ee8a0b37755e3b7267cf19175bfb272d6f5afd906276e99cfd1301cc78313177c48b983
 Size (esniper-2-31-0.tgz) = 131583 bytes

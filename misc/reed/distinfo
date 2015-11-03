@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2012/05/23 07:05:31 dholland Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 23:49:48 agc Exp $
 
 SHA1 (reed-5.4.tar.gz) = e8c43add662576590597c8989e06011a3e80e93f
 RMD160 (reed-5.4.tar.gz) = d1987fc347dc4dcc537112bec9a774a235ae9ffa
+SHA512 (reed-5.4.tar.gz) = 47216c6444ff2a53a0f6ad0e598761d078fb19099507e5687d15be7f875664d3cb9b74f2a4af8c450d179032e46785d96abc66c2bf9cd264db2f87aa089512f7
 Size (reed-5.4.tar.gz) = 32414 bytes
 SHA1 (patch-Makefile_in) = f53eabb6ea6bbd623dafd833c58765f78b4e96b2
 SHA1 (patch-aa) = b35a3066d11e8926834f492c425652c59fef1335

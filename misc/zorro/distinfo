@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2008/01/04 05:41:52 obache Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 23:49:55 agc Exp $
 
 SHA1 (zorro-1.1p8.tar.gz) = 216c1b1c3c652791f89661c92abb39059d5086ce
 RMD160 (zorro-1.1p8.tar.gz) = 85f126b4906dbd680080ba8b88c810361ed2340f
+SHA512 (zorro-1.1p8.tar.gz) = f440729f1a5f0ca244fe9fe6e7f4d8701b880775ff51774d72f67378ed6eaf14541a8f92aec1a123924743728d6439ece4688063189a1a6a6b66013959a4ac43
 Size (zorro-1.1p8.tar.gz) = 14672 bytes
 SHA1 (patch-ab) = 9c435cdd2192e7ccef543a3f325ec30cf4f9865a
