@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:39 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:54 agc Exp $
 
 SHA1 (tex-duerer-latex-15878/duerer-latex.doc.tar.xz) = bc0b59fef417c84ce60f745b8397e8df14fd3576
 RMD160 (tex-duerer-latex-15878/duerer-latex.doc.tar.xz) = 8e87094aa067915067b3567e41f07b24d0574cb0
+SHA512 (tex-duerer-latex-15878/duerer-latex.doc.tar.xz) = 5316c1671ef4a50fe488adb30a6098f8d481127efed0c6f393db194296df815ac7209b6c0428f106bd057668dda3b24940da1e39336b0cd244457731571951a6
 Size (tex-duerer-latex-15878/duerer-latex.doc.tar.xz) = 150404 bytes

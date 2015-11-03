@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:36 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:52 agc Exp $
 
 SHA1 (tex-countriesofeurope-26042/countriesofeurope.doc.tar.xz) = 83acc96ed4f20c6e96232f78b82cf0486ad382fd
 RMD160 (tex-countriesofeurope-26042/countriesofeurope.doc.tar.xz) = fef80753135e040e9468d6718f4f196ca0269873
+SHA512 (tex-countriesofeurope-26042/countriesofeurope.doc.tar.xz) = 3f519a5cf8c6ab7c735a15a890bb46f039f05a3022f7f82ed91d72a7e6c1db2ea66664448bb8135bf44bc1dfebf6e6e00cad3936d0eb6a44841634cd67e1fd50
 Size (tex-countriesofeurope-26042/countriesofeurope.doc.tar.xz) = 250140 bytes

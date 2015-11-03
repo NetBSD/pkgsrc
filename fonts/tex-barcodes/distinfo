@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:31 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:44 agc Exp $
 
 SHA1 (tex-barcodes-15878/barcodes.tar.xz) = c87519e50815b483e8cb17bd90c8f908fe0dfa47
 RMD160 (tex-barcodes-15878/barcodes.tar.xz) = d5437f0c8c954b73cb2ba77a17fad15cfa1b2243
+SHA512 (tex-barcodes-15878/barcodes.tar.xz) = 3817c577af23ac345db9250f818bdaff6fcb01d946cc0de15e2736dfbd3f1099026f3e2761363948064d1dff869f3693ff48d03c8c130672381dd14ea6dc6718
 Size (tex-barcodes-15878/barcodes.tar.xz) = 6432 bytes

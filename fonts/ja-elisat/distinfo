@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 19:18:28 agc Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 20:44:34 agc Exp $
 
 SHA1 (elisat10.tar.gz) = 7ea5b06d227c1286e82eef528fe476564ada3e30
 RMD160 (elisat10.tar.gz) = b4d97dd7f2e85445eafe7753f034129fa2f9c182
+SHA512 (elisat10.tar.gz) = 243a47f0ab50fcf2348089a80d13c06a9b3e9445f9d86f2c02b6b1080c254db590c0f98812e688e7516b9427ba2bba5a81a58e267caf75cbd3d17aed6c25710b
 Size (elisat10.tar.gz) = 125435 bytes

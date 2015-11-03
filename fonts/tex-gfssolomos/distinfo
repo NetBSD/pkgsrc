@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:44 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:02 agc Exp $
 
 SHA1 (tex-gfssolomos-18651/gfssolomos.tar.xz) = 12a0b371c8ec6097b0f0df8448afa734715b8a01
 RMD160 (tex-gfssolomos-18651/gfssolomos.tar.xz) = 164c1b5c1c15ae0e7619cd73885d05a201ab76ba
+SHA512 (tex-gfssolomos-18651/gfssolomos.tar.xz) = bc35d2821b991bfe2352a13def8f008579d4844ce42646f88879529336725ec545227e9da6d15872a18b7cbb0f3713bd03287e6aa1cf74ba68eec1ef89d520ad
 Size (tex-gfssolomos-18651/gfssolomos.tar.xz) = 102760 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:31 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:43 agc Exp $
 
 SHA1 (tex-auncial-new-15878/auncial-new.tar.xz) = 66094169d280d31bf7627587bb1e9cb81096b95f
 RMD160 (tex-auncial-new-15878/auncial-new.tar.xz) = af4a400b0813631d5227962fa6b46fa1e9609fb9
+SHA512 (tex-auncial-new-15878/auncial-new.tar.xz) = 2bad73ba0785924a0f86462fab37e3ead66cb20fcf7a4abea4dd24385af5fbe4acd6fd0819baa93a18da0142a4a6cf4e1ae9ccc6476e4cf49fb3b296f36160c7
 Size (tex-auncial-new-15878/auncial-new.tar.xz) = 201348 bytes

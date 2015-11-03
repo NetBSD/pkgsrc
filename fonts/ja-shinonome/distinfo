@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2008/04/05 14:56:09 obache Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 20:44:35 agc Exp $
 
 SHA1 (shinonome-0.9.11-src.tar.bz2) = cda2d556d58c9ed223eb80465124af174965e9ab
 RMD160 (shinonome-0.9.11-src.tar.bz2) = 90069a7367cab4e8186b8bf578f41b1b8d17eb72
+SHA512 (shinonome-0.9.11-src.tar.bz2) = 550e37c7744a7c2d74e6339f0ab9a27aaf155f704a7215753055085667ef8e0f468d030cde99abca9053b9f2732ea29ddcb8320e0c9220c525b0081c34efea4b
 Size (shinonome-0.9.11-src.tar.bz2) = 748944 bytes

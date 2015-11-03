@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/06/14 11:19:59 markd Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 20:45:00 agc Exp $
 
 SHA1 (tex-fontools-37381/fontools.doc.tar.xz) = 955493025189a3c88f66240d291fc8b9c57da683
 RMD160 (tex-fontools-37381/fontools.doc.tar.xz) = 75b3e8290b6155cca605a234d5d1d2c29ba50400
+SHA512 (tex-fontools-37381/fontools.doc.tar.xz) = f6ced6aa08f2fe92bc79f8914905ebcdcacbebeff8531f4346e6ed58a66e2273a702154e77f4ea1c9f58209c59ff018d3d6df12724685a6c4e875bfec1f5a5c5
 Size (tex-fontools-37381/fontools.doc.tar.xz) = 51760 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/04/26 00:34:34 markd Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 20:45:09 agc Exp $
 
 SHA1 (tex-manfnt-35799/manfnt.tar.xz) = b680f825167d2be5547a96589523fbd6e5f8e3c3
 RMD160 (tex-manfnt-35799/manfnt.tar.xz) = 15f2973937861e45bb018b68aae372d2a1589531
+SHA512 (tex-manfnt-35799/manfnt.tar.xz) = 3d4ac5ab7d883a823831af38619589dfb74f874a1211277adaf36e6eb75a4a1e97fc8da58c011d7c8ac188a25cb17bac799a9cc37968e2069a7223576f422f31
 Size (tex-manfnt-35799/manfnt.tar.xz) = 1432 bytes

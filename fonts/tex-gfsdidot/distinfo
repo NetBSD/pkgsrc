@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:43 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:02 agc Exp $
 
 SHA1 (tex-gfsdidot-31978/gfsdidot.tar.xz) = 0a6d08d038784804e90aa5c6987ccc7c695a04a6
 RMD160 (tex-gfsdidot-31978/gfsdidot.tar.xz) = 40c895cac41fae1a46d3edfe31c10fec7a73ff78
+SHA512 (tex-gfsdidot-31978/gfsdidot.tar.xz) = dd89d735e7a2ab11ef2f017acd0ccfd4983197d4118419d7e8c9533752b8835df3bc33b4233037d18756dfc9c9b6a0c793110e8760be973b70fee768c3c263b3
 Size (tex-gfsdidot-31978/gfsdidot.tar.xz) = 1217328 bytes

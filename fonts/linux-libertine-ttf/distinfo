@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2011/11/17 18:16:03 ryoon Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 20:44:36 agc Exp $
 
 SHA1 (LinLibertineTTF_5.1.3_2011_06_21.tgz) = c9276e02b31a09999bb782c2a19207e6c86a3062
 RMD160 (LinLibertineTTF_5.1.3_2011_06_21.tgz) = 5ec2af6b8b0e64a43e9283bfbd3ad7dd718770e9
+SHA512 (LinLibertineTTF_5.1.3_2011_06_21.tgz) = 300da877aa7256b66ac83fe90187ad2e176611a5aaedc2978c3fac5b585085b4d9b6350cf3f9333969fcce03ba8830f3b7ceebacb85ac8f32abf2a214bf2fcf7
 Size (LinLibertineTTF_5.1.3_2011_06_21.tgz) = 15350516 bytes

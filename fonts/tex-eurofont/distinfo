@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/03/06 21:13:25 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:58 agc Exp $
 
 SHA1 (tex-eurofont-15878/eurofont.tar.xz) = 3027d2fa3644dc7c1f0cc4cd80a0fc2020c2c115
 RMD160 (tex-eurofont-15878/eurofont.tar.xz) = 3bbdb57e5a366892c369603db0e5f91a4efd7d1a
+SHA512 (tex-eurofont-15878/eurofont.tar.xz) = 047ea31cf2ca3515866948ba6874b2c32ec92707b852c11ebb4ff72cbeb29a8b42f365b0e73f413d1dca8e8a788ac2700f594291dad9fcb278976e69987091c9
 Size (tex-eurofont-15878/eurofont.tar.xz) = 8348 bytes

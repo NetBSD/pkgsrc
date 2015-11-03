@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:48 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:08 agc Exp $
 
 SHA1 (tex-linearA-15878/linearA.doc.tar.xz) = 4d8d57457bca3a0ce1424dc10edd6218a976ba9e
 RMD160 (tex-linearA-15878/linearA.doc.tar.xz) = 6d229a12c3e9852b93380ebfffdbceddbe4d7121
+SHA512 (tex-linearA-15878/linearA.doc.tar.xz) = 8fb5e23db26bc54479a04ea507748e9555d344813d8a4546db98e645274cc4f1a23ef9834fa94535c01abdaf18a41f03614f9b794363c461b6c7969ffd46d327
 Size (tex-linearA-15878/linearA.doc.tar.xz) = 165068 bytes

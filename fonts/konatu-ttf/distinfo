@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/05/08 11:10:14 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:36 agc Exp $
 
 SHA1 (Konatu_ver_26.zip) = e7e3217d12d283f2c11f5bbdfe856605272a8e08
 RMD160 (Konatu_ver_26.zip) = b7e9b8788c819e6d87c6fd714c50bb4d048cfd98
+SHA512 (Konatu_ver_26.zip) = 80babecd96840c5311a527e55bcf683ad3fb5dcf8c478f67a06ee96b85bdb23b4b81c1c51fe17e0d27f8a8e3b1a836b751960213e80a7a36514632c58ab48cc6
 Size (Konatu_ver_26.zip) = 8470986 bytes

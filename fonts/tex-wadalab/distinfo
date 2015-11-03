@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/10/19 22:19:30 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:21 agc Exp $
 
 SHA1 (tex-wadalab-22576/wadalab.tar.xz) = a4569057719c31d692d70d9dad32cd50a48e64ba
 RMD160 (tex-wadalab-22576/wadalab.tar.xz) = 81666ea2df950aea4dd3e2c0d6bab5b0edb24b3c
+SHA512 (tex-wadalab-22576/wadalab.tar.xz) = 56ec38f4aab6ee00f3037d544789cf3543e0e8248ba54b5c439553da2cfd53ad5e0f3ea545048ff5a0f4b3a0fd25eda84ccc1037793e1aea348c948838e5277a
 Size (tex-wadalab-22576/wadalab.tar.xz) = 17774232 bytes

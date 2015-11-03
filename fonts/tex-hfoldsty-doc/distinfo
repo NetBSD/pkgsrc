@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:45 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:04 agc Exp $
 
 SHA1 (tex-hfoldsty-29349/hfoldsty.doc.tar.xz) = c467c592cd37ce39328d40df7772283503456dfb
 RMD160 (tex-hfoldsty-29349/hfoldsty.doc.tar.xz) = d9998aeec4a1ff0b9d19f2f22a1cb48d5badc068
+SHA512 (tex-hfoldsty-29349/hfoldsty.doc.tar.xz) = 3c7bb9a97987b43b94225cb5f0f79d2c0e0a3f04c6b441008d3b370a89f67f919c9ddf7da7e17694ace24bd8d0e09b71371f4e99a520491dc8f0cc59f9b3aa99
 Size (tex-hfoldsty-29349/hfoldsty.doc.tar.xz) = 349128 bytes

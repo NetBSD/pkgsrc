@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/04/25 07:52:01 markd Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 20:44:50 agc Exp $
 
 SHA1 (tex-cmextra-32831/cmextra.tar.xz) = 3a1e58c8be4742c264916b949381edc8503b1b95
 RMD160 (tex-cmextra-32831/cmextra.tar.xz) = edce91d30c1b1103515fafdbd113aa433494a8e1
+SHA512 (tex-cmextra-32831/cmextra.tar.xz) = a2ac6942a8f8096b111bc1f358d5960ba6e33695299ac3a05e03c59ce7ac67b2783c2e52fd6212f12e436cf9dc39e65afbb23f66b1cdc51c135cffcfa0ab87c2
 Size (tex-cmextra-32831/cmextra.tar.xz) = 21744 bytes

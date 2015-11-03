@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/02 13:32:37 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:42 agc Exp $
 
 SHA1 (tex-antt-18651/antt.tar.xz) = f6ccc8c10b790f2b973ad79238c5ec23f7392753
 RMD160 (tex-antt-18651/antt.tar.xz) = adeae75be50e3bf32dd2fc559ba6095733d25f65
+SHA512 (tex-antt-18651/antt.tar.xz) = b04f6593eaf6891934ff7ac26ff8940a129c022a4532080e9a753608792eab942fac672a5615a6b76ef461896979613a9b752cf52000c14d753b171e401ae46c
 Size (tex-antt-18651/antt.tar.xz) = 4706172 bytes

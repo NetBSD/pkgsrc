@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:38 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:53 agc Exp $
 
 SHA1 (tex-dingbat-27918/dingbat.doc.tar.xz) = bdece849dcc06c64c604e310e76f990871b181aa
 RMD160 (tex-dingbat-27918/dingbat.doc.tar.xz) = c784c38fe5ccf9029b75e6f9c26baba60a940d6a
+SHA512 (tex-dingbat-27918/dingbat.doc.tar.xz) = 6b3b86d51ab9d3362da8e9a425de3709360ccba9b33db771b2de1c8c046600026b7af4fac5fb108b015539886bbddb97bf9b466ad5180245d9f80b3c38694c73
 Size (tex-dingbat-27918/dingbat.doc.tar.xz) = 105748 bytes

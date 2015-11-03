@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:57 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:45:21 agc Exp $
 
 SHA1 (tex-universalis-33860/universalis.doc.tar.xz) = 608e87254af087cb89bfa259fe7399aa1c1d64ef
 RMD160 (tex-universalis-33860/universalis.doc.tar.xz) = 5f7cfe382621214082e2d06376b0c07af5317ea4
+SHA512 (tex-universalis-33860/universalis.doc.tar.xz) = cdb1ddfbafa8c9fb6846e1880f2fa4e476fd42be6daa7525025f3e80a7cbd2e36ce09e4a1ff49129b06912bee77bb1856f8af5cc6b244c8fb2e8ac63ae0a22d6
 Size (tex-universalis-33860/universalis.doc.tar.xz) = 35592 bytes

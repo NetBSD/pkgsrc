@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 11:27:37 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:44:53 agc Exp $
 
 SHA1 (tex-dictsym-20031/dictsym.doc.tar.xz) = 4c38eaecde531c3e21406729b7e4fdd1f6c116e1
 RMD160 (tex-dictsym-20031/dictsym.doc.tar.xz) = 667829c1a62dcccc0c456f9deb2f3d58eca127ce
+SHA512 (tex-dictsym-20031/dictsym.doc.tar.xz) = 95ce96aa441cad9e41ae105e95c4a587d0784c540f3535b3b55d64578c46c37fd8988b93782477f931dfa11f6bf5a33867cfa62848c94b29ec7d64b65b571ed6
 Size (tex-dictsym-20031/dictsym.doc.tar.xz) = 19780 bytes
