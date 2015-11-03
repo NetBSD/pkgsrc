@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/03/18 21:38:41 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:29 agc Exp $
 
 SHA1 (tex-pst-gr3d-15878/pst-gr3d.doc.tar.xz) = 54346481d3205f2907c61f89a1294d5ee22d3e29
 RMD160 (tex-pst-gr3d-15878/pst-gr3d.doc.tar.xz) = bb756206ee00e14514865adac3e49f79be48275e
+SHA512 (tex-pst-gr3d-15878/pst-gr3d.doc.tar.xz) = 0d59d4bf51a4637fa6ccf6768bbc29bee7b36b84c89a8e209d95a723d933ed4cb3e1dfa92f3b5e34c6d24d2c44e86ad7abb9f78866ad3bfa0390f08927ffed85
 Size (tex-pst-gr3d-15878/pst-gr3d.doc.tar.xz) = 157408 bytes

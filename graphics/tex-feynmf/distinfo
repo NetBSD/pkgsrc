@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 13:47:39 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:24 agc Exp $
 
 SHA1 (tex-feynmf-17259/feynmf.tar.xz) = b35f0a5aee405ec958f089f1ae83704e25d7b599
 RMD160 (tex-feynmf-17259/feynmf.tar.xz) = 0e9e085dcad680efc0f6009da5702b857f0dd027
+SHA512 (tex-feynmf-17259/feynmf.tar.xz) = 850773269a8bc995d29d93a2d462f298efabff18c20ec7db452ca7a9f44ce876614cc5c72e14d8a6fa28cc9dff30b5062ff232cbae6659cb30fd93ce640392bd
 Size (tex-feynmf-17259/feynmf.tar.xz) = 19472 bytes

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2011/07/28 07:21:07 minskim Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 21:34:15 agc Exp $
 
 SHA1 (ps2eps-1.68.zip) = de04bbda923cf115d544d6288286f437a516b70f
 RMD160 (ps2eps-1.68.zip) = 4063d7b703c208e7d4b37a01cdde42898c802e5b
+SHA512 (ps2eps-1.68.zip) = b849f11efb5d7b1be9944b305a5cf563f67c6a15a838d5e3b802e96977c3d4f0ce112abecc429d96ec4bd45f946620c6926465c4c9ed8038af649d7d7864cbb9
 Size (ps2eps-1.68.zip) = 109264 bytes
 SHA1 (patch-aa) = b411e4aff2d932b85c36ea30ed16eedcc6b8e20d

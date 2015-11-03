@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 13:47:40 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:25 agc Exp $
 
 SHA1 (tex-metaobj-15878/metaobj.tar.xz) = 825dadc921c19182146dbf062abf8d1182dc3a91
 RMD160 (tex-metaobj-15878/metaobj.tar.xz) = 63d7f152654fc3a1ed7f5911b928510a7c63a852
+SHA512 (tex-metaobj-15878/metaobj.tar.xz) = 881e32a9f08ec574273871af548d3502c26833a6b9cdcd546fa6c59da9d5cbc72bad27196d81a013b7c04653c85eaa854298e944008fd5d9afb2e58199468585
 Size (tex-metaobj-15878/metaobj.tar.xz) = 57648 bytes

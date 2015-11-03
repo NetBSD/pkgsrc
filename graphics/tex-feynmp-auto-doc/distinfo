@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 13:47:39 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:24 agc Exp $
 
 SHA1 (tex-feynmp-auto-30223/feynmp-auto.doc.tar.xz) = 85bc9798d90ae958c5fbff140fb6bb6a281112e4
 RMD160 (tex-feynmp-auto-30223/feynmp-auto.doc.tar.xz) = 1c00ab94b33a97c442a47f81da71235099c8e0cb
+SHA512 (tex-feynmp-auto-30223/feynmp-auto.doc.tar.xz) = 1e3eb712fcd290a2fdb3fa4904f7ebad9e6c359aeb6e4914f3dc5785c45bd7523094cc6624a16388cfa6a97901f64b41150f2c424351236de0394dace3c80326
 Size (tex-feynmp-auto-30223/feynmp-auto.doc.tar.xz) = 375268 bytes

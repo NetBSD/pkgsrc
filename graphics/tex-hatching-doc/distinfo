@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 13:47:40 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:25 agc Exp $
 
 SHA1 (tex-hatching-23818/hatching.doc.tar.xz) = 337268219a4584028d3fb2590bc3283c2519192b
 RMD160 (tex-hatching-23818/hatching.doc.tar.xz) = 3df52dafd5260cbeca21a56e5c4144090e725c31
+SHA512 (tex-hatching-23818/hatching.doc.tar.xz) = e083e2decd8933dae2320fef700facad5bc0fb903410e37b1d423ac3e68efcb5de8d744c92754891e205e15b8259ee2aabffa8ed5fdb72d4037ee39f56a173b8
 Size (tex-hatching-23818/hatching.doc.tar.xz) = 2444 bytes

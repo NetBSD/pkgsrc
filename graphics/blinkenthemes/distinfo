@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 08:45:03 agc Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 21:33:53 agc Exp $
 
 SHA1 (blinkenthemes-0.8.tar.gz) = d90050a396ac154f28399740b848f16bb8adf21b
 RMD160 (blinkenthemes-0.8.tar.gz) = 9697e728bee23a9c3c760ccda2510a6bb3817bd9
+SHA512 (blinkenthemes-0.8.tar.gz) = ecbffa1b4042cc33b9c8011c0d6b44f9e731903d908c6a8f033654eadda29e9b691c71670fce0862ec371c6122e339f818b59d711400bf8a2b09d4e8ef2de451
 Size (blinkenthemes-0.8.tar.gz) = 2652787 bytes

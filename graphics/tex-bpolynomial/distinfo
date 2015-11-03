@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 13:47:38 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 21:34:22 agc Exp $
 
 SHA1 (tex-bpolynomial-15878/bpolynomial.tar.xz) = de3997ca4b818a6b1babce706963c234dd2d897f
 RMD160 (tex-bpolynomial-15878/bpolynomial.tar.xz) = b93eb8188f61c0ca868a7aee9e2809ca2922bc16
+SHA512 (tex-bpolynomial-15878/bpolynomial.tar.xz) = b165759b3ce7cba1cb58e3939abc88da9b5b366ae95d220fa06984bd6545075e6785565c834308a5a86ad5b820687c53951fddb99d70d03df486b0a0b4fa3d19
 Size (tex-bpolynomial-15878/bpolynomial.tar.xz) = 2572 bytes
