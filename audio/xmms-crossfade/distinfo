@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2007/05/23 12:00:04 rillig Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 01:12:55 agc Exp $
 
 SHA1 (xmms-crossfade-0.2.9.tar.gz) = afe3ec2a17d9dae54fffe318ef0a14470e045894
 RMD160 (xmms-crossfade-0.2.9.tar.gz) = bc313a0e83cc41c790e12110bb34e84301367762
+SHA512 (xmms-crossfade-0.2.9.tar.gz) = 40044dd3c7823353452bcc7c407139ed7a63c68e69008dc9e09754a43c62f6874dfbc667ef78c8d12c21f05a85bb992ce583253227b7536bf55be206d8f0b166
 Size (xmms-crossfade-0.2.9.tar.gz) = 200553 bytes
 SHA1 (patch-aa) = 1f710760444071888612a76d4ac698930b7ea999
 SHA1 (patch-ab) = ab26ceb14c568eb36728d0aa9498812a56b1e12b

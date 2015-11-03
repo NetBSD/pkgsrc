@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.2 2012/03/21 10:07:36 wiz Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 01:12:35 agc Exp $
 
 SHA1 (jack-rack-1.4.7.tar.bz2) = 42e0e1b9b42db3249d565c5458f585f16b39974f
 RMD160 (jack-rack-1.4.7.tar.bz2) = 62fcef8d550ce77b241ba15dc249045c3fcfd2d9
+SHA512 (jack-rack-1.4.7.tar.bz2) = f037a54ab5cc2670c716384d643310679eccb42ae248f2b9dc75a40cd38bb865e968d3c90a19c9a76c7a4668aa6e3b9657a648a27261c02e6313174e8ce12774
 Size (jack-rack-1.4.7.tar.bz2) = 269478 bytes
 SHA1 (patch-aa) = ea5220ef62604fee53d2089eac519e2486e7e258
 SHA1 (patch-ab) = 271d56b3dd81aa740321f3789297b729a5892342

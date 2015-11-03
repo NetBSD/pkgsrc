@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2011/07/05 04:09:05 schnoebe Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 01:12:52 agc Exp $
 
 SHA1 (taglib-extras-1.0.1.tar.gz) = 58af454ec230d494a75abd0aa78016a969f0c9ce
 RMD160 (taglib-extras-1.0.1.tar.gz) = d687119f4750a2f9eac415667c23552e50e12c72
+SHA512 (taglib-extras-1.0.1.tar.gz) = 282f9c9cde81a250d8d6f4416658167665044d53cd10d8ecfa490df60a1fb95e1309feb17f69963f8dbfccc83ebb76af7275c25339931117435f34a56c4f1a65
 Size (taglib-extras-1.0.1.tar.gz) = 31363 bytes
 SHA1 (patch-aa) = 588fa139d9ab01f332a36c8a7e6e9c03b09f49c7
 SHA1 (patch-cmake_modules_FindTagLib.cmake) = 2b53d7b2527ebb9bbd66d1d94c9f704ec4a2ca1b

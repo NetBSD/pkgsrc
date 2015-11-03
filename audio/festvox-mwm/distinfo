@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 20:39:45 agc Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 01:12:30 agc Exp $
 
 SHA1 (voice_mwm_di-2.0.tar.gz) = abd273149ca8437f80f9eacc7ba48956c197f8ea
 RMD160 (voice_mwm_di-2.0.tar.gz) = bcc453fca534333dcc15ad016848542b48791195
+SHA512 (voice_mwm_di-2.0.tar.gz) = 384694508ac4af5af871895aace7ac781f318362438314c94535cf44e49d18134ae11a250321eb3983a99c9e7cd62251e734b4924d6b4d51f0b307265cf320b2
 Size (voice_mwm_di-2.0.tar.gz) = 5032801 bytes

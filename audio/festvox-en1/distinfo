@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 20:39:45 agc Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 01:12:30 agc Exp $
 
 SHA1 (festvox_en1.tar.gz) = 92d3e06ced67de02b5aa18f111c33b7874376050
 RMD160 (festvox_en1.tar.gz) = 48edf2ad55774712754af341f73ced53aa1d963e
+SHA512 (festvox_en1.tar.gz) = 185a6cfed251fbe3b06932b6e9efaf893c15602eaa0bd150a62e91cf927698798e700337d4e2c116d92534615a2fe154fdcb278d00fd0675c5390e4132295350
 Size (festvox_en1.tar.gz) = 3323 bytes
