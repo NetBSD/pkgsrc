@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 11:24:02 agc Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 23:54:23 agc Exp $
 
 SHA1 (divxplayer-0.2.0/divx-player-installer.tar.gz) = 63e39c6ed7539e3d7e94b16df93745aba9550d42
 RMD160 (divxplayer-0.2.0/divx-player-installer.tar.gz) = a48ba17ebe92f3dd7bd3871ba2c18b9e6b48f609
+SHA512 (divxplayer-0.2.0/divx-player-installer.tar.gz) = cec959b13cdc00d62a7eeef8eaf65d86a677a94a3293c3417838c297017049b6f6e6604c8fb5eb4cdc1a6dcf2f6cd565d4f30fcbf95212c0231c981aca1d09bb
 Size (divxplayer-0.2.0/divx-player-installer.tar.gz) = 3888848 bytes

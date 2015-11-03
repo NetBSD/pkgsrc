@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2012/10/26 20:41:45 joerg Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 23:54:29 agc Exp $
 
 SHA1 (libnms-0.6.0.tar.bz2) = 914676b86c1eb15068a95984b197796693bbfe99
 RMD160 (libnms-0.6.0.tar.bz2) = 4c5b82969d0e60be9c2fb686161c0ef619287bbd
+SHA512 (libnms-0.6.0.tar.bz2) = c2f79266521c68e31e95f75fd9cb5b8b405d9fef312da76b10d3f77662a3ad442befac88792691d02dbef152a5a8f592f737f33f9788c967213f6d44b5cf1275
 Size (libnms-0.6.0.tar.bz2) = 347203 bytes
 SHA1 (patch-aa) = bcb4f65cb547281b475eb21468e93f34ee806260
 SHA1 (patch-ab) = b613b522f1b68d5f34549e337064c69bbd5f10bc

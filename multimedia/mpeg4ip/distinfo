@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.18 2012/12/20 21:44:51 joerg Exp $
+$NetBSD: distinfo,v 1.19 2015/11/03 23:54:30 agc Exp $
 
 SHA1 (mpeg4ip-1.5.0.1.tar.gz) = 1271de695ed65284d9c39aa91bf26c5494603fd3
 RMD160 (mpeg4ip-1.5.0.1.tar.gz) = fee5c21c17a470e6de349e07d233a1eb46b2064a
+SHA512 (mpeg4ip-1.5.0.1.tar.gz) = a76823b80ae420e1903178a1e923783a13935554de83f4a6064897c4903eb8994e5b76862b1001ccfa9ba05e79879aa449d991dd11516e10f2b6c6fb4acb47ac
 Size (mpeg4ip-1.5.0.1.tar.gz) = 4826180 bytes
 SHA1 (patch-aa) = 5f494117fae307f4adc503fd880a762d82d771ff
 SHA1 (patch-ac) = 9e4683fdbbfa3b85941243547773814ea50125a9

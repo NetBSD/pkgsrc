@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2015/03/09 16:14:47 skrll Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 23:54:31 agc Exp $
 
 SHA1 (omxplayer-20150118.zip) = 95522df16247bd1ece40cbccac05f9e73f1c1d2a
 RMD160 (omxplayer-20150118.zip) = 0d3678c8ae71ed3ae507b7f0aaab2a482ee87691
+SHA512 (omxplayer-20150118.zip) = e0d9378077aa78d3d1b3ba3ea87bde9e5f8c488344e1f82c6e5457370c77782a660a8321a4afef6d14f7df14d8a4523a998d4787b2e7716cdddfc8510fc9bb84
 Size (omxplayer-20150118.zip) = 1265704 bytes
 SHA1 (patch-Keyboard.cpp) = 92044ce1077bf043553c7631fad5a779f93ff33c
 SHA1 (patch-Keyboard.h) = 48d4b5da443b6a1e5b736907b9b660c1afb1f119

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2013/01/23 21:51:36 wiz Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 23:54:27 agc Exp $
 
 SHA1 (kaffeine-1.2.2.tar.gz) = 5ba44be69995d24159a185ede3b9a00959ae2ed6
 RMD160 (kaffeine-1.2.2.tar.gz) = a432de95b0808e85f0467d1745d216559f10e9a3
+SHA512 (kaffeine-1.2.2.tar.gz) = 31db518943c223e635822369548949a0c2162cdbbe59edbadb77f4820acf697293d67681553d5552b9435471240fee551786c8c652f1ae5ab9cfe9b8a9cf4459
 Size (kaffeine-1.2.2.tar.gz) = 489727 bytes

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2013/04/17 18:08:42 drochner Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 23:54:32 agc Exp $
 
 SHA1 (pitivi-0.15.2.tar.xz) = f9e16214f95ad65c0e629b26a88140421262543e
 RMD160 (pitivi-0.15.2.tar.xz) = 53864b643b3d81ef312d35b16ac6cb02689e99f7
+SHA512 (pitivi-0.15.2.tar.xz) = dbf02bf8c5c253c3914998a7f03913afe3815480321ffd5b58eaeba5628310a01907e64307f4e2f3a10762dc07c7a8b481ba67e784d0ee5f427a26624aacdc2b
 Size (pitivi-0.15.2.tar.xz) = 2171536 bytes
 SHA1 (patch-help_Makefile.in) = 0784657897b290caafe69cd3a052bdec9ee4034e
