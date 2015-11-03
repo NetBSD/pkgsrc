@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.10 2012/10/20 22:03:46 joerg Exp $
+$NetBSD: distinfo,v 1.11 2015/11/03 00:21:17 agc Exp $
 
 SHA1 (fastcap-2.0-18Sep92.tgz) = 7ad255cfe33c60428e934b87298951829331e4d5
 RMD160 (fastcap-2.0-18Sep92.tgz) = 3073f17442abaf67b9d3a7c8bd05054dbb706a9a
+SHA512 (fastcap-2.0-18Sep92.tgz) = 8603933acf29af1535a1af99d0516de88d27a3b8358e70f6cd9735bb7b1916a6e97890d232e34197a8ca49301fe3bf50e4677a041f1b8672e263eaf119696757
 Size (fastcap-2.0-18Sep92.tgz) = 1392318 bytes
 SHA1 (patch-aa) = 489b5f8716627f9c9297e8d11f1cfb0e1777b3fe
 SHA1 (patch-ab) = c0e078a2d3607f65a797fb6c61dc34ce33a0d4e2

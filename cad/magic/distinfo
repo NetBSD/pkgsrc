@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.18 2013/08/31 14:44:30 joerg Exp $
+$NetBSD: distinfo,v 1.19 2015/11/03 00:21:18 agc Exp $
 
 SHA1 (magic-7.5.188.tgz) = f7a8dfb90f1d1416bdaf4b056972bc6d406c75d4
 RMD160 (magic-7.5.188.tgz) = b677df676ba2aa9f9e9b211445d577a85a309e27
+SHA512 (magic-7.5.188.tgz) = 67e930b63b295f926ed2ae7eaa668f59b338ebb3d43cf48944b0c9dbe3245d2e065fd2f79d67edb6acb37cb1bf5cd087eaaf2930d80691c6f4fa0b8aaf4943e5
 Size (magic-7.5.188.tgz) = 3691582 bytes
 SHA1 (patch-aa) = 8e187ee059636910dd2270db2512ec00bc011c1e
 SHA1 (patch-ab) = a466100783a140105c5e8d7b6061d48c025372a5
