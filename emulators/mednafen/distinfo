@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.13 2012/11/07 11:33:33 wiz Exp $
+$NetBSD: distinfo,v 1.14 2015/11/03 20:31:00 agc Exp $
 
 SHA1 (mednafen-0.8.D.3.tar.bz2) = b19b92101853cb653506456fd8ab1c0bb0b6e636
 RMD160 (mednafen-0.8.D.3.tar.bz2) = 546f49a9541ba4d0367fe682aef23cdadf3d7325
+SHA512 (mednafen-0.8.D.3.tar.bz2) = 40c47554ae42025640c754fe4a578f5b6e1adb623418126adca587b2795ae4e6581d6d96ffa497849706a1ea4d11f9962c44df2040ead788670e6314d8a9b7e7
 Size (mednafen-0.8.D.3.tar.bz2) = 2442705 bytes
 SHA1 (patch-src_wswan_dis_opcodes_inc) = 547ad7a0a7943f1697e64a9607429211fc62fd56

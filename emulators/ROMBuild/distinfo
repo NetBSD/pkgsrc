@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2014/10/07 20:49:47 shattered Exp $
+$NetBSD: distinfo,v 1.9 2015/11/03 20:30:55 agc Exp $
 
 SHA1 (rbuild214.zip) = c9d3a28b1b3994e180ea99cd45369e5429581c4e
 RMD160 (rbuild214.zip) = bcc627c3fd3a402fd6682d2b8354801af6d8c7b4
+SHA512 (rbuild214.zip) = 2c95d0bcf30f2f8eae54813f94eba3609fc8b6e078dc1bfbaa0d52b3acd06b9c919f32cfb2c2624e7c5de3437d7d3018d531f80eee35d7b119a8103aa559e8e3
 Size (rbuild214.zip) = 109798 bytes
 SHA1 (patch-aa) = 9c129cdef08805166cc2bed0d5992d357d2f8523
 SHA1 (patch-ab) = 1fbc4887a532d1f956875589baa8a2e0211070fc

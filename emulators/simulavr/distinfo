@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.10 2014/08/29 04:40:06 mef Exp $
+$NetBSD: distinfo,v 1.11 2015/11/03 20:31:01 agc Exp $
 
 SHA1 (simulavr-1.0.0.tar.gz) = e7cacc74be974793bd9c18330ec8d128fbd17d42
 RMD160 (simulavr-1.0.0.tar.gz) = 0e9eb32f398943449b564e919765348c32f4c600
+SHA512 (simulavr-1.0.0.tar.gz) = d6649c2c61730beacbab01f882517fbbc8d9b8bdd7356e16dcdb02efa09f284fb633fe2d6e2d1bbe868648aa11685eaa6531540e6007eb9aeafd09da0b4af49f
 Size (simulavr-1.0.0.tar.gz) = 1013014 bytes
 SHA1 (patch-configure) = 8fe7c24d17ded8a5b53688f5d35b4aaf55e6c830
 SHA1 (patch-doc_simulavr_texinfo) = ce5615f6e64d4be535b056bd8d3377b1f7a4a5d6
