@@ -1,0 +1,16 @@
+--- multimedia/subtitleeditor/patches/patch-src_utility.h
++++ multimedia/subtitleeditor/patches/patch-src_utility.h
+@@ -0,0 +1,13 @@
++$NetBSD: patch-src_utility.h.diff,v 1.1 2015/11/03 19:04:57 joerg Exp $
++
++--- src/utility.h.orig	2015-11-03 11:44:20.000000000 +0000
+++++ src/utility.h
++@@ -88,7 +88,7 @@ bool from_string(const Glib::ustring &sr
++ 	std::istringstream s(src);
++ 	// return s >> dest != 0;
++ 
++-	bool state = s >> dest != 0;
+++	bool state(s >> dest);
++ 
++ 	if(!state)
++ 		se_debug_message(SE_DEBUG_UTILITY, "string:'%s'failed.", src.c_str());
