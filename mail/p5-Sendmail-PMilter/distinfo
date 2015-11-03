@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2012/10/28 02:06:11 markd Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 23:27:16 agc Exp $
 
 SHA1 (Sendmail-PMilter-1.00.tar.gz) = c17dc57794486d61153854ba90ebb411d3b484e5
 RMD160 (Sendmail-PMilter-1.00.tar.gz) = 4d00ac68475c6ad75ac60fe3b3e81475ec37e056
+SHA512 (Sendmail-PMilter-1.00.tar.gz) = 3e953985315b7a3416182be8feeb64e39d25c0857581614a2b1010f975c3f55031fafcdc3cbff587df2e1d249ee8e15123dc1922c246c697c79cac75da469d51
 Size (Sendmail-PMilter-1.00.tar.gz) = 29170 bytes

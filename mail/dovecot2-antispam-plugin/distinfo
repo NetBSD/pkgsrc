@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.1 2014/11/19 03:37:14 schmonz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 23:27:04 agc Exp $
 
 SHA1 (dovecot-antispam-plugin-20130429.tar.bz2) = 50c7b35467c9e07eb033cd15850ce051d1b8aa6d
 RMD160 (dovecot-antispam-plugin-20130429.tar.bz2) = e63e79e27ae14fd634ecf20b7061f0f4114cb522
+SHA512 (dovecot-antispam-plugin-20130429.tar.bz2) = 82074414065b936ab23f54add06fb0f4098a03e77956bea2d3ffba08f7853a34c61222d412e4241ddf5f2e0b5467c1547fac0087611df6f5e235968cdbe2f6a2
 Size (dovecot-antispam-plugin-20130429.tar.bz2) = 56340 bytes
 SHA1 (patch-buildsys.mk.in) = 85cd1d42e743cd548c078ec2107cda4549fa2a32
 SHA1 (patch-m4_buildsys.m4) = 71a9f28161dfb7b47c6ce6ed862e7326aae7899e

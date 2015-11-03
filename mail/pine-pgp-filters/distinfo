@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2008/06/12 21:46:44 abs Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 23:27:16 agc Exp $
 
 SHA1 (pine-pgp-filters-1.6.tar.gz) = 5d1a4d679a477736ff55fc05802bc2ad752ab4e4
 RMD160 (pine-pgp-filters-1.6.tar.gz) = b1a76358761958e07c184d84e3942fe8071a5135
+SHA512 (pine-pgp-filters-1.6.tar.gz) = fc15f3bb6e719dce6359e0824bb8d67c0a97aec5b03dfbbbf3f80bd9adb1da301fdd53a92ada765f84043f78bceefb2e20209eb1e292c112f682fd9b9bc53641
 Size (pine-pgp-filters-1.6.tar.gz) = 10034 bytes
 SHA1 (patch-ad) = ebb5c15ef4aeceb7c3c6bb01375e7ef0cea8d79b

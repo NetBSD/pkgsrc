@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2010/03/09 21:20:24 pettai Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 23:27:17 agc Exp $
 
 SHA1 (sendmail-admin-1.0.tar.gz) = 4b1ab5077130e509cf682bb939509e015ed74cc5
 RMD160 (sendmail-admin-1.0.tar.gz) = 04507d24df674bd96706b283eadedca96ac2b503
+SHA512 (sendmail-admin-1.0.tar.gz) = 91d6c0733f20a464cce4ec7bdb216a6e5a1e2ffbf1ec66afe508652a800654c7fa605a72af742942bc5992f3963d29d94eac87d4da9017d35cbd42c8cea04812
 Size (sendmail-admin-1.0.tar.gz) = 4698 bytes
