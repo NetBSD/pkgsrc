@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2008/10/19 09:46:46 apb Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:28:23 agc Exp $
 
 SHA1 (Internals-1.1.tar.gz) = b3c0567f00fee3a72ecf52ea11ba3a362b407eb6
 RMD160 (Internals-1.1.tar.gz) = 5d3cdbac2d9d282f7842b93128ca917b15d23942
+SHA512 (Internals-1.1.tar.gz) = 13a79b3034fa10b18b568b379348fbcf413d138642e5875a6d82b8a5c57b69138aee0035de9a3fde5b411b331f3e349af21e4c1d5443634c68532b8b8c4daa1d
 Size (Internals-1.1.tar.gz) = 11167 bytes

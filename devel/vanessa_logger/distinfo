@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2010/06/02 12:42:14 adam Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 03:29:38 agc Exp $
 
 SHA1 (vanessa_logger-0.0.8.tar.bz2) = 5585237357c4a3f7e57c92bd9c57b863c3eb5611
 RMD160 (vanessa_logger-0.0.8.tar.bz2) = 075af000de35094c120a31f7e21b971713aa64fc
+SHA512 (vanessa_logger-0.0.8.tar.bz2) = 4518d1f12fe54554ac1759df30da81e2b25dd51cafe911fe33b119558e8b61cb698a1797bf7064e25d2eff82b456e3ebfe0a565247cbcab76ebe6270a0b7c7da
 Size (vanessa_logger-0.0.8.tar.bz2) = 245056 bytes
 SHA1 (patch-ab) = 08887306fd9803bca7fb8632efafe4422f035e17

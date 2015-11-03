@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/02/25 09:16:06 imil Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:29:15 agc Exp $
 
 SHA1 (pytemplate-1.5.1.tar.gz) = 884a3b27724c20f9fadca38390767176c8854b00
 RMD160 (pytemplate-1.5.1.tar.gz) = be6a2af09255cb459af66787bafd62919c167358
+SHA512 (pytemplate-1.5.1.tar.gz) = aaa89b5c985b789609a6ec879f006593ef76f9920582f6a0f4d11d3c4173026bdeac93b5125bf54cdaf831c09c8a3c7bbdf1c848663178aa3f7c3e746e310dce
 Size (pytemplate-1.5.1.tar.gz) = 17926 bytes

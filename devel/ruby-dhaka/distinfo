@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/04/04 15:16:48 jlam Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:29:22 agc Exp $
 
 SHA1 (dhaka-2.2.1.gem) = 2c8520ab70e32a8c803b1b38ed21291edc1ad9a9
 RMD160 (dhaka-2.2.1.gem) = 61d5525d77b73c8268c3c662f6389cfbd96b33d1
+SHA512 (dhaka-2.2.1.gem) = 929102bb18c232c6172012bb2b05510e0cfd61030016c86318e361294db1b0db7bb862b406c367efe9f16a55027038872176f90901902b7a39cc7e24e91db7b7
 Size (dhaka-2.2.1.gem) = 49152 bytes

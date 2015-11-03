@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/04/25 10:40:49 adam Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:29:13 agc Exp $
 
 SHA1 (pyobjc-framework-DictionaryServices-3.0.4.tar.gz) = 295f0c5ff6f3c5d704b4ec1a416a121d227bca1e
 RMD160 (pyobjc-framework-DictionaryServices-3.0.4.tar.gz) = d55140b5a56392a95342a486e4179e0edef906a2
+SHA512 (pyobjc-framework-DictionaryServices-3.0.4.tar.gz) = dc0d256df7e06191060fdb61f0a1a3f64b0addec955ab4fbcff730cfeae058b0d194741e42860001986a9e39b17a9fbbca4940234197774c0663c567b01d1790
 Size (pyobjc-framework-DictionaryServices-3.0.4.tar.gz) = 9052 bytes

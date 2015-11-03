@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2015/02/23 18:21:09 joerg Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 03:27:27 agc Exp $
 
 SHA1 (gentle-97.tar.gz) = 1cbf70aa6c470346630c407f89878a5f3c0c4406
 RMD160 (gentle-97.tar.gz) = 96cbfca6909f23fa192514eaba0f0fffcfac2d40
+SHA512 (gentle-97.tar.gz) = 41fa95e53261430b456298002000b05a9b26593fa32792e1d382eeac8431babb583dcd9442ed09181ccfcb0ee8c62c9ed3b0e61ca035651c5ba0f34787e65d23
 Size (gentle-97.tar.gz) = 453860 bytes
 SHA1 (patch-aa) = 4b76e24c516ea96214e749758ff4093c0f464ecc
 SHA1 (patch-ab) = a97340016a76e2e5a90aca7f2c1b644125ac9af5

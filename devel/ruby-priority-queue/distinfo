@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2011/11/08 15:45:12 taca Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 03:29:26 agc Exp $
 
 SHA1 (PriorityQueue-0.1.2.gem) = 37b3eb7424b056a9ebb94d882f9ce0059303dc3e
 RMD160 (PriorityQueue-0.1.2.gem) = db7e836b0f22b923c374045417e97ad78ab53888
+SHA512 (PriorityQueue-0.1.2.gem) = 67ae4507882e7635bef387b0df63ac7724b285cda5e23a06572477de71c98fd10b7718d966f2d5dba1f8cad29df112929d6b0ca30c042c843d364e5c8abccf23
 Size (PriorityQueue-0.1.2.gem) = 59392 bytes

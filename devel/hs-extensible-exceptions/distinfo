@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/05/20 21:17:34 szptvlfn Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:27:32 agc Exp $
 
 SHA1 (extensible-exceptions-0.1.1.4.tar.gz) = a0c17865e289067fd36016d9ace47cac1eb68bf8
 RMD160 (extensible-exceptions-0.1.1.4.tar.gz) = 2e1311778e7e87b1e5266bbce2dea81eb4620ae7
+SHA512 (extensible-exceptions-0.1.1.4.tar.gz) = b63bb6b8bc846571db37c23801b711748a10a27a6a6b25035e992013f6705ad9b3ad86e61a7de839c9ac61c26ad3640b9642a8747d6b76a03336834c39e93dca
 Size (extensible-exceptions-0.1.1.4.tar.gz) = 8531 bytes

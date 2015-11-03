@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/07/06 00:30:52 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:28:14 agc Exp $
 
 SHA1 (File-Binary-1.7.tar.gz) = a3189dc711947e360c966c75eb99363e2c25248b
 RMD160 (File-Binary-1.7.tar.gz) = 529247a829b5234fb3e29c8c88287409a4167afd
+SHA512 (File-Binary-1.7.tar.gz) = 6500b3602c519b2d721bb261ceb6500c06f3e2bf3b1ce2f4fbfa1924b95aae54db9ec3302d2f07d1fcb5864e9bbca24e8edb18135a7994e0b2fda535c0d8d5bb
 Size (File-Binary-1.7.tar.gz) = 21502 bytes

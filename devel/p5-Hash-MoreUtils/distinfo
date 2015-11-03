@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/02/05 14:47:09 mef Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 03:28:20 agc Exp $
 
 SHA1 (Hash-MoreUtils-0.05.tar.gz) = b1502ff9d2e88504ed315d2aba5452fb743cebed
 RMD160 (Hash-MoreUtils-0.05.tar.gz) = 8d30e017153bfcfe38405412e756596c02725da7
+SHA512 (Hash-MoreUtils-0.05.tar.gz) = 7e53dfda0336198b5981be772a0aeb3aa1fdbfa5885bf866032bcd168a73ceb03f92db6de92874d5812f062ab9c03e1fed27732f60a7004944da568c3cb04845
 Size (Hash-MoreUtils-0.05.tar.gz) = 5809 bytes

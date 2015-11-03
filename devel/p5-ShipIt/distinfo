@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/04/05 13:12:11 wen Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 03:28:44 agc Exp $
 
 SHA1 (ShipIt-0.60.tar.gz) = 55abc1270017eaa20c877e3da74c1df28bafb407
 RMD160 (ShipIt-0.60.tar.gz) = 20cffd6fe2ea03204e38813f5d77f8dbacce2d5d
+SHA512 (ShipIt-0.60.tar.gz) = 89cc0e03ce0c24cfdce5f09f3dbde32a550692f5734c456d90f51e1266ea2e3bdd74966c2f041054e7a6c62549a62cdeb6cfe1ff24012b2055054fedca22f61f
 Size (ShipIt-0.60.tar.gz) = 20650 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.14 2006/07/23 20:41:24 wiz Exp $
+$NetBSD: distinfo,v 1.15 2015/11/03 03:29:36 agc Exp $
 
 SHA1 (tla-1.3.5.tar.gz) = 0fb3b5bfa6b2fb5eb953fdca9e0f75ac1b35b15e
 RMD160 (tla-1.3.5.tar.gz) = 71b5e411ca48712edafb268c43d1380b2a026804
+SHA512 (tla-1.3.5.tar.gz) = 4e081976467eb709252903bc9b5380cd20ea66977f13dcb1a2d2e057368a7c3fb2788b16e36cf5c022b780735953fff7f50d923fa87b6647e55cfbdb8fef2016
 Size (tla-1.3.5.tar.gz) = 3756860 bytes

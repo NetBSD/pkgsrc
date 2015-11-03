@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2011/10/14 01:01:55 dholland Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 03:27:37 agc Exp $
 
 SHA1 (ldapsdk_12311998.tar.gz) = fc132cf2d7bef6f3b93486fabd73c1f7f202d04e
 RMD160 (ldapsdk_12311998.tar.gz) = d0ede32efd1e33874d5fc74c97d9d4a053709543
+SHA512 (ldapsdk_12311998.tar.gz) = 0e6a1fc33d4d70bba2a376336a0cf93fe7aa1e2147256ba6bc5de323c62139824ac0df66b2ebef6edcda457ba6437ca251112370c9e154bc09960c40429416b4
 Size (ldapsdk_12311998.tar.gz) = 1375703 bytes
 SHA1 (patch-aa) = 19be7abc39dabd593766a0f0f8131f394afd0a67
 SHA1 (patch-ab) = 270317f69022e63a9fca314b39c31297d381e8de

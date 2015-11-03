@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2010/12/06 19:19:16 reed Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 03:27:37 agc Exp $
 
 SHA1 (lcov-1.9.tar.gz) = 5aff4b998b1288896734326a0b74ab536339ec21
 RMD160 (lcov-1.9.tar.gz) = 8065012a49cc7e10c295093c9b0c6dee9efcac22
+SHA512 (lcov-1.9.tar.gz) = 518f068d5eb4a805985863e7b755ae16b1b2ebb9e42cc57c5cda20a60f22e170c1e2957692086e5eeabe12ddbcf39132494aa2ea7ce33411e8abeddc759852ee
 Size (lcov-1.9.tar.gz) = 140035 bytes

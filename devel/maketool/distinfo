@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2010/01/29 19:03:44 joerg Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 03:27:48 agc Exp $
 
 SHA1 (maketool-0.7-src.tar.gz) = e1a8e1e9d52074e232ac43180e376ad50a7db7b5
 RMD160 (maketool-0.7-src.tar.gz) = 74acc5c8d6f4933aef18e0d85c906e515f588035
+SHA512 (maketool-0.7-src.tar.gz) = 0d77046535a32896bffd5484fc05b3cb2cdf02a6a1ea371f3f6a278e4866877157b11ef9d0461f8e91d7434a35d1afc2c3a1c25b7b5b98dd6e156bb048294e34
 Size (maketool-0.7-src.tar.gz) = 218108 bytes
 SHA1 (patch-aa) = 8874b77f39dbe578b40c45b0e6943c32a1977039

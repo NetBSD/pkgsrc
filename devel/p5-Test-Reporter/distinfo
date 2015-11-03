@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2015/04/17 01:09:47 mef Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 03:28:53 agc Exp $
 
 SHA1 (Test-Reporter-1.62.tar.gz) = 7221c90f327bcde80115cbccb7e3d5b8563c4a7b
 RMD160 (Test-Reporter-1.62.tar.gz) = cb6ae64cb9e7b3e4899603e7d07a2fe8976a14d4
+SHA512 (Test-Reporter-1.62.tar.gz) = 761ffd9154035e787e0567d64f93c5bcd41e3e98c1839b8a5e46a63b637b42cf51b586cf5347aaaa427e6d9a183d0332346fba3cac45e6ac58765797f95aebce
 Size (Test-Reporter-1.62.tar.gz) = 36130 bytes

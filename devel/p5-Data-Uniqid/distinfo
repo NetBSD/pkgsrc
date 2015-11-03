@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2013/08/26 09:59:05 abs Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:28:08 agc Exp $
 
 SHA1 (Data-Uniqid-0.12.tar.gz) = d0bce76e8f91f627ef711f5dac4063b11941e3a6
 RMD160 (Data-Uniqid-0.12.tar.gz) = 8174480840118af9cf74f57578b48ae299ede14d
+SHA512 (Data-Uniqid-0.12.tar.gz) = fd12aae4a810fda88dd0f8296e73760d8d62357cb5ebc675a4b2804d9eee93ebfa01942c7057ad9092e80331504f2a38a3c8a576ccb630de10f5e563752ed6e3
 Size (Data-Uniqid-0.12.tar.gz) = 2141 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/02/17 13:12:54 mef Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 03:28:54 agc Exp $
 
 SHA1 (Test-TinyMocker-0.05.tar.gz) = 07628b18a2d59a84108eeccd4ff6a9e595e4ff9f
 RMD160 (Test-TinyMocker-0.05.tar.gz) = 090d5f440ba694e2f652a1afa888e4eeba4d5bab
+SHA512 (Test-TinyMocker-0.05.tar.gz) = 71b36384f40b32e767211c3e34180743701e00642ed01e0fe7326c7dea6ecb0339c9e7fb4bc1a9e894517c22e4a0c6c226419597e269be70529a0165674fb4a5
 Size (Test-TinyMocker-0.05.tar.gz) = 14618 bytes

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2015/03/24 13:35:49 fhajny Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 03:27:47 agc Exp $
 
 SHA1 (luafilesystem-1.6.3.tar.gz) = 72bc1415e7eefb339742538505675c59bd69e6bb
 RMD160 (luafilesystem-1.6.3.tar.gz) = cb949e36d9d09061be5eed9c67332cb3178250b5
+SHA512 (luafilesystem-1.6.3.tar.gz) = abfa1b3ac22ed80189560a1a025a7ea21a954defe14e5b539e08f266d180962a691262efc7eb2ddacc2d4aae14d6e356b1a276165b5bed46a13e4d6c61ab99f1
 Size (luafilesystem-1.6.3.tar.gz) = 30379 bytes
 SHA1 (patch-aa) = c287a1203f4a85e616ef3d31276aabfb0a1ed83d

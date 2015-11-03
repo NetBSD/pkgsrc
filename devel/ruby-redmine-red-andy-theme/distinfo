@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/07/06 04:31:27 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:29:28 agc Exp $
 
 SHA1 (red-andy_1.00.tar.bz2) = 68bd35438091633dcb30af08694b28a3475f940d
 RMD160 (red-andy_1.00.tar.bz2) = 874105ee07c59df25c0d0a30ae6324a5826bb385
+SHA512 (red-andy_1.00.tar.bz2) = 4ac2a6f9ac0d4310ec1d2d0e8a4788935821879ad219d21952d447db82da1f9d4778b616c82407bde9bee9598f589430654d5b3aa88a04fc23d4c3b6973155fc
 Size (red-andy_1.00.tar.bz2) = 13406 bytes

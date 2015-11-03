@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.9 2015/04/18 07:23:18 manu Exp $
+$NetBSD: distinfo,v 1.10 2015/11/03 03:27:29 agc Exp $
 
 SHA1 (libobjc2-1.6.1.tar.bz2) = 02a6cf02f620530ecd64f32dca348def92412b2b
 RMD160 (libobjc2-1.6.1.tar.bz2) = 7babdba063d5377125ffd5b9481e074c32a8cf10
+SHA512 (libobjc2-1.6.1.tar.bz2) = e43bf867ca734e76274826a222a10e9b603e085a9dd245912ee16603bb61e276fcd9388918f61aba7d0bded0c045bc9799f7e24b309d670d144175707662f9c8
 Size (libobjc2-1.6.1.tar.bz2) = 116263 bytes
 SHA1 (patch-objc_msgSend.x86-32.S) = 381fe840c433864ea39858b0cf4af6af46790d06

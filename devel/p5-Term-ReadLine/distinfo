@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.17 2015/09/06 13:12:13 mef Exp $
+$NetBSD: distinfo,v 1.18 2015/11/03 03:28:48 agc Exp $
 
 SHA1 (Term-ReadLine-Gnu-1.27.tar.gz) = b4658f715c1d1df9575432995ec14f1e7bd4f05c
 RMD160 (Term-ReadLine-Gnu-1.27.tar.gz) = 1b59ebdda962602bd655bf9429c90f84d40450a5
+SHA512 (Term-ReadLine-Gnu-1.27.tar.gz) = e3834057a9da6bf4022b2b1614255fbc673877506ab9fd78497b0fbfa2b6df9142b4061a0a58f8281c7bde0caf7d2b700d5f2d4284dbb2af736bfaad0dfd5a22
 Size (Term-ReadLine-Gnu-1.27.tar.gz) = 76921 bytes

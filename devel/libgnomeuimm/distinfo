@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.11 2012/01/20 17:08:40 joerg Exp $
+$NetBSD: distinfo,v 1.12 2015/11/03 03:27:41 agc Exp $
 
 SHA1 (libgnomeuimm-2.28.0.tar.bz2) = 935c206d5d13df371476b3c1075219e0bfdbc91b
 RMD160 (libgnomeuimm-2.28.0.tar.bz2) = 9ad7eb433f4ddd112a16207f2a3183c0ed1a844d
+SHA512 (libgnomeuimm-2.28.0.tar.bz2) = f02ee119bff2d42bd7fc61719988de45e497c7a5cc151a438ad3601c2bf55d6ecfeb001b22032a47f15dc6f7eb4cf4c5412c3246969a24ff0579a9b89d5dab15
 Size (libgnomeuimm-2.28.0.tar.bz2) = 382428 bytes
 SHA1 (patch-examples_iconlist_iconlist.cc) = 0bb90a995091869d984062da019b80b790eb519f
