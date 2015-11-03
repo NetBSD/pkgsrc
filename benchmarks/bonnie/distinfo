@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.11 2013/09/10 14:12:38 joerg Exp $
+$NetBSD: distinfo,v 1.12 2015/11/03 00:25:49 agc Exp $
 
 SHA1 (bonnie.tar.gz) = f435ae56903883c8e3e011eb989783c8410f5ee3
 RMD160 (bonnie.tar.gz) = 677446fde3f53e2afc2b5f1d76af2555a4779d88
+SHA512 (bonnie.tar.gz) = 4cb431986870baf1d9e5f757970a4b489f89d4349f051cc2ae0aea035ce19a7962047920a3af1567e375b2c6f1e826309b044b8a8727400601203042a34ecb5f
 Size (bonnie.tar.gz) = 7140 bytes
 SHA1 (patch-aa) = e81766946655b43fbd6a7c1dc23e32987827d399
 SHA1 (patch-ab) = 927415c66b7c03897aa4cbee07cd54c242272148

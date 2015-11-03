@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.22 2015/07/13 14:05:56 ryoon Exp $
+$NetBSD: distinfo,v 1.23 2015/11/03 00:25:50 agc Exp $
 
 SHA1 (iozone3_430.tar) = de02b10fcde6bd60e0c805e3abfc0aed15e85ac1
 RMD160 (iozone3_430.tar) = 4b43f14268ebe3accf8cdc881c3f82430d649082
+SHA512 (iozone3_430.tar) = f513c1a34bcdfadca0d01a942d55c7494e5646cf17384140df42643259456d41e40a54453ab3b9a1f1ebdeb456a9b4b1f836f979927cac57391b9a20ecdbcb55
 Size (iozone3_430.tar) = 1832960 bytes
 SHA1 (patch-ab) = fdd36fead26811aa830df5fac35b79a9b62ed1f0
 SHA1 (patch-ac) = 6a02e13f3441a76709fbe8ba064555b650f9bd1c

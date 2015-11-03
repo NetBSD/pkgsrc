@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2011/09/14 06:58:35 dholland Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 00:25:50 agc Exp $
 
 SHA1 (heapsort.c) = 78d6ee3715a6250213b948bf7450b53520811e4c
 RMD160 (heapsort.c) = 7ff7fb39b0f774ba2feab1e8e1a9afd6bfaff6c4
+SHA512 (heapsort.c) = 4d14565760a9d7d8554a4782ee00524355da2f08f695b8f1c74d5240a0936f27be11e97774cab90ac2c3ec4787f8a76aa129d624c47ea0df04942425f6073299
 Size (heapsort.c) = 17563 bytes
 SHA1 (patch-heapsort_c) = 5dbe397d31f4714d0baccac2b8557d9dce106bad

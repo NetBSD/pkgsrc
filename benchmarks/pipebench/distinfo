@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2006/03/03 22:09:07 kristerw Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 00:25:51 agc Exp $
 
 SHA1 (pipebench-0.40.tar.gz) = 5ac405b9f1f25b39b3760fd9684533ccb778b26c
 RMD160 (pipebench-0.40.tar.gz) = 9aa9a4a9ef8c641ca25207707cffaefd91f58d85
+SHA512 (pipebench-0.40.tar.gz) = bace18d73425cf56bc3fd95eea4db47b3010cc82c16d9b433390d0ee4593046ab10101ce73df451596b34ace89fa92e93a92bb625286edb9cdfb809e630788cd
 Size (pipebench-0.40.tar.gz) = 11542 bytes
 SHA1 (patch-aa) = f07a93c7c75b8888ac4b8c7e3a6529c23e18ca79

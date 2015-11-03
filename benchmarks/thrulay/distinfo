@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2012/09/30 22:06:24 adam Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 00:25:52 agc Exp $
 
 SHA1 (thrulay-0.9.tar.bz2) = 9221fb49351e767882e50decbe73a27503ce5a3d
 RMD160 (thrulay-0.9.tar.bz2) = 10a2af3c51f9a186fb3421c2a22b027e56dbe7e6
+SHA512 (thrulay-0.9.tar.bz2) = e71b49207ec3bc64b2591f45f92571de8296d370f7494bd52f1d5b5fd59a4557d8ac12a14c969252c06db35ec8d68d4cc49f900c653dc0de6fbe0a412c7a3bac
 Size (thrulay-0.9.tar.bz2) = 256019 bytes

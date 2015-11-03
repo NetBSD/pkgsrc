@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/10/13 08:17:51 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 00:25:50 agc Exp $
 
 SHA1 (forkbomb-1.4.tar.gz) = 25e3d172da96e2c31d90878794ccd48c98dbfaf1
 RMD160 (forkbomb-1.4.tar.gz) = 9f3a8b92c9f12f7181af49271a020cfe107faea8
+SHA512 (forkbomb-1.4.tar.gz) = 3f5404ed6b3fe70b970e79ffc5f75aef2f9b92d0087895e1ae7d3a5409f28475569dbbb00e5bcb66882f56ce34e18ce388babfbe7cfeb7729a688519663d016e
 Size (forkbomb-1.4.tar.gz) = 4718 bytes
