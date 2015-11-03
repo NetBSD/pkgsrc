@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/05/31 12:04:11 wen Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 23:33:29 agc Exp $
 
 SHA1 (R/maps_2.3-9.tar.gz) = f245b16f6ef1dd98bcc483a431276c139f74fbb9
 RMD160 (R/maps_2.3-9.tar.gz) = b923d8928e016b3b4e3aa106b4c9ea8cd3b88fc8
+SHA512 (R/maps_2.3-9.tar.gz) = 9fbbd98bb15af020698ecb2d210c491d95e7b2fb2340a95fc08679a19bc22fcbb5a7fb37dff66368021e3ceaaae5a81e97b42130a2f7fe39ed18d18bdaa884ec
 Size (R/maps_2.3-9.tar.gz) = 1428724 bytes

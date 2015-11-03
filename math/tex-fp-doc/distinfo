@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/03/04 19:05:30 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 23:33:44 agc Exp $
 
 SHA1 (tex-fp-15878/fp.doc.tar.xz) = 45be033f58b6dfdface0e6fd12a04d7b8df479d0
 RMD160 (tex-fp-15878/fp.doc.tar.xz) = 6346090eecd73a2a4683d9af893dace166e7ea27
+SHA512 (tex-fp-15878/fp.doc.tar.xz) = 6003aa4a759b7d0c8a74ad58457aa3d99d8e9dabfc4e3ea81be575ae8d2dd32b6c860c4bd1e4d40d8708df2319de1940e062f0da5a167abf0143accff7baa279
 Size (tex-fp-15878/fp.doc.tar.xz) = 6072 bytes

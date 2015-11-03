@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2012/04/15 15:38:14 brook Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 23:33:29 agc Exp $
 
 SHA1 (R/pixmap_0.4-11.tar.gz) = 5a99bae7891354ac792372fa6a27430e36e5ade2
 RMD160 (R/pixmap_0.4-11.tar.gz) = 2c165a50a62aba32c5d0be74c839e20f1717efa8
+SHA512 (R/pixmap_0.4-11.tar.gz) = 7445c582f9aec9f352717cd21de88c3da7fd768100563f9bbebe043e477676665206426651c704fce370f1b6d12177d12f715fb42f77f123e0ef15ccfe5e53f8
 Size (R/pixmap_0.4-11.tar.gz) = 34461 bytes

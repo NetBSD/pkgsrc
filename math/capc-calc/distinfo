@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.25 2014/01/15 16:23:31 drochner Exp $
+$NetBSD: distinfo,v 1.26 2015/11/03 23:33:31 agc Exp $
 
 SHA1 (calc-2.12.4.13.tar.bz2) = 4d48fb78c903f10e9bcd05c42105498637dea834
 RMD160 (calc-2.12.4.13.tar.bz2) = c04d995a500ad7b0be27afbb6edaa6978c42437e
+SHA512 (calc-2.12.4.13.tar.bz2) = 7b7136c793917652ce2f2b3866b2db16a69dbead729d8a72b8c1359ebb8a4e1d4e7a3a8b214f8e85b9ccf41193ba6ffcb49926cc68f494e2b6cdff58559f2534
 Size (calc-2.12.4.13.tar.bz2) = 970778 bytes
 SHA1 (patch-aa) = 4cc64664e4eb3e5f1aea56f74d9615caa75483b2
 SHA1 (patch-fposval_c) = 8a8d08f8b566e583faa3bd9033c4a9ac90cb343c

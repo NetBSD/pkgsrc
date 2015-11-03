@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2012/09/08 22:35:13 cheusov Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 23:33:44 agc Exp $
 
 SHA1 (statist-1.0.1.tar.gz) = 2900c58e730ecf93dfa3e15a881a1afca0cfdf20
 RMD160 (statist-1.0.1.tar.gz) = 1c6b16fe2dfe74ccb6fe2bd3cd6846a5e17f8025
+SHA512 (statist-1.0.1.tar.gz) = 866cc02227ef9b3552f8e2be9efa471def51c7c66baba96c2dc3425a8f5dc3c99ef6682141e9373057e8dddbdb6ad8100b46731ba691e9bebd64729980cb39bf
 Size (statist-1.0.1.tar.gz) = 214635 bytes
 SHA1 (patch-aa) = 7c12d13664b863a75b32ff1a2baae1fcc89231fc
 SHA1 (patch-ab) = bc36a9055d8a5a3f3d899e897202c1592f79a47e

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/05/30 11:09:12 wen Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 23:33:30 agc Exp $
 
 SHA1 (R/splancs_2.01-37.tar.gz) = 9246939cb58af762c15940f8744d66591ed8adba
 RMD160 (R/splancs_2.01-37.tar.gz) = b54c39aa7603fc0d80c56a4aa93c4f4c3322510f
+SHA512 (R/splancs_2.01-37.tar.gz) = 8d34b0f4b9a4126652ff647b9d5f49ca7be8c581169d828a3de2d87cd1b4e01fa19f3463ecf38439ad75877079d28595a31f3991483a7d32b76755cdf2ff97dd
 Size (R/splancs_2.01-37.tar.gz) = 99050 bytes

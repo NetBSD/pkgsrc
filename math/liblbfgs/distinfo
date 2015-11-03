@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2014/11/02 23:09:31 cheusov Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 23:33:36 agc Exp $
 
 SHA1 (liblbfgs-1.10.tar.gz) = fde08e7b842cd125364cb9db9d66fd61dcf37d21
 RMD160 (liblbfgs-1.10.tar.gz) = bd1bbbd1fb3c708f33e89b600b65bd0ff052a7b0
+SHA512 (liblbfgs-1.10.tar.gz) = 9829f3603bdc870d27af4a87f13779eff823bc480ca018466c49926baf1e763aa075a42ab732f9548bdc8d9eeb3e6185c21d4c7ae692253f933b2f5f557c7750
 Size (liblbfgs-1.10.tar.gz) = 318739 bytes
 SHA1 (patch-configure.in) = 97a3fdb8405343a46a9d6636dc857348f1887253

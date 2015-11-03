@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/02/20 11:27:51 fhajny Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 23:33:39 agc Exp $
 
 SHA1 (Math-Spline-0.02.tar.gz) = d33cf091caa957565c1b7bd9ee551c3314f2c1aa
 RMD160 (Math-Spline-0.02.tar.gz) = 6b3bed34821342af829bc83d5321c0c945823840
+SHA512 (Math-Spline-0.02.tar.gz) = 089c013cedb5e2a87bd144e6f294a7257cb87763221ad7a9069aec7fdb41b6de9714b3a8f66a7e819c4c08739222808420c685ab02e5a1a881e38b086c945bce
 Size (Math-Spline-0.02.tar.gz) = 4077 bytes

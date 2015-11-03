@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2014/04/25 21:01:27 wiz Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 23:33:31 agc Exp $
 
 SHA1 (cloog-0.18.1.tar.gz) = 2dc70313e8e2c6610b856d627bce9c9c3f848077
 RMD160 (cloog-0.18.1.tar.gz) = 5c4a182efc0d42e7d5c30e6fcca5832776a2e69a
+SHA512 (cloog-0.18.1.tar.gz) = 0b12d9f3c39a2425e28e1d7c0a2b3787287fe3e6e3052f094d2ab6cffeb205ce19044100cbfd805659b3e6b3d21ac2f5a3c92848f476de54edfe6b1cbd2172e9
 Size (cloog-0.18.1.tar.gz) = 3857324 bytes
 SHA1 (patch-include_cloog_isl_constraintset.h) = ec640f64d8b40038abeff65122363bcd5aeb2e58
 SHA1 (patch-source_isl_constraints.c) = 377d1662787e389e00816fe42e529a26d28a7928

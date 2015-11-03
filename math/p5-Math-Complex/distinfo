@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/07/06 00:35:15 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 23:33:38 agc Exp $
 
 SHA1 (Math-Complex-1.59.tar.gz) = 2b61547bd6dcc98e86ee439e18d28af023883c76
 RMD160 (Math-Complex-1.59.tar.gz) = 89e2ec0188eaabc9909949bb74f8434e4332c4f1
+SHA512 (Math-Complex-1.59.tar.gz) = eb20b0aa505ba2ed1c177addf1f477a82512644aace8f92111654790292402648d30d2bb6c4a27ba411a7b2d33927dc5ac913c820f7117f00fe66395f6b0f4c5
 Size (Math-Complex-1.59.tar.gz) = 38980 bytes

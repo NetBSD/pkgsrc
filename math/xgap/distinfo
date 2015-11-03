@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2005/12/27 13:53:22 joerg Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 23:33:45 agc Exp $
 
 SHA1 (xgap4r16.zoo) = 4d8b51eaf54ce9eb1d54f75928be1e595b53c1b9
 RMD160 (xgap4r16.zoo) = 89d56f36c09be088cd1911f6ff4271ca0970f829
+SHA512 (xgap4r16.zoo) = 4d089db195c8bf403423197f0d0eba8d1c7738c6d59aa89c25b1e680294ece97760c62db5168990298d5f3e4a1bf657fd2050fbce38bc3753c6fa0e1d9366355
 Size (xgap4r16.zoo) = 731219 bytes
 SHA1 (patch-aa) = 5c2e5d88ab6d3b6fae6a8341ca2eb7cac03cbc30
 SHA1 (patch-ab) = af306491d8c8a8d75384c47cfd4a6081169104de

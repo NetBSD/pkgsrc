@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.10 2011/12/14 02:57:37 sbd Exp $
+$NetBSD: distinfo,v 1.11 2015/11/03 23:33:34 agc Exp $
 
 SHA1 (grpn_1.3.3-1.tar.gz) = 3efee25264aa524a34464a1b2fa0946605de3259
 RMD160 (grpn_1.3.3-1.tar.gz) = 4af8964e9e1d67d89706cc617f72e7e01f0c49d6
+SHA512 (grpn_1.3.3-1.tar.gz) = 1e123b930977254546717968c69a611510f028b5b469c2c1851f7d295f7e4f7e23447431525edaa278c4cd1c2ad2570e63a3b7ed264b9c391219ae54e99532b6
 Size (grpn_1.3.3-1.tar.gz) = 58832 bytes
 SHA1 (patch-aa) = 80465d620e61c43553f6ab79e04a3d736fbfec19
 SHA1 (patch-al) = 2a3b3012644d5b5504c1d8801f00bc3f6dd7ef28

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.8 2012/05/29 14:51:42 wiz Exp $
+$NetBSD: distinfo,v 1.9 2015/11/03 23:33:32 agc Exp $
 
 SHA1 (eigen2/2.0.17.tar.bz2) = 461546be98b964d8d5d2adb0f1c31ba0e42efc38
 RMD160 (eigen2/2.0.17.tar.bz2) = 183c8f7ee3c85ccb447fdcefa3a366f06cca351b
+SHA512 (eigen2/2.0.17.tar.bz2) = 8fa0e4507864f61c30de14e3b29d963eb8b777d1a6bb04192d53e1f4c9db323b9fab2ddcedb63bf2af243fe0e26dcd717e97eb72216b6a1d444e455520192c72
 Size (eigen2/2.0.17.tar.bz2) = 367890 bytes

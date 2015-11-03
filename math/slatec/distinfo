@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2009/12/11 17:32:41 asau Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 23:33:44 agc Exp $
 
 SHA1 (slatec_src.tgz) = 9ff75f3976fa4a5544806a29bf8402aab2132ee0
 RMD160 (slatec_src.tgz) = f4393d91e25ecd2ec0cae6b25d4b2829afcd4291
+SHA512 (slatec_src.tgz) = 15fbd7b11465e2e2fbe690975f0e100373823f0f991bbc49b0d3abdbb79b0400e4c08fe175a3fa6db119e8ced6660a02b5e7953f584f8767f5bccf427fdb2dae
 Size (slatec_src.tgz) = 2373787 bytes
 SHA1 (patch-aa) = bbdcca172b7216ffa8fc8d94c844d3373d9accd2

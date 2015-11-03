@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2010/09/06 11:01:20 wiz Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 23:33:40 agc Exp $
 
 SHA1 (Set-Crontab-1.03.tar.gz) = 9bea347f5ba96257c9e24b66937790f5e40dd673
 RMD160 (Set-Crontab-1.03.tar.gz) = bcfc6de3dc501157d6014c45ac4a5dc4133d9064
+SHA512 (Set-Crontab-1.03.tar.gz) = 9b4929691aac2f740ecf94cfdd166315c355a93be149ef76bbea06a8d820a9da2b7cf26dc6d66baea7f4b359c2012229376f06da55f3fe0653b6d0cc8c77ef91
 Size (Set-Crontab-1.03.tar.gz) = 2887 bytes

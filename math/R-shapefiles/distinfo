@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2013/07/07 12:02:36 wen Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 23:33:29 agc Exp $
 
 SHA1 (R/shapefiles_0.7.tar.gz) = fd71241059eea4bef0a7bf644861df8ab0c7a606
 RMD160 (R/shapefiles_0.7.tar.gz) = 95d784b3c4e864f4db1ac3949a5022608e72127f
+SHA512 (R/shapefiles_0.7.tar.gz) = 864bbb25d096445323f6a69846c2ba9ead9ec440736ded35fda4cf953ba079310125fedd1c72d1daca9f36a58ba0d5ffc26dc79009f55c0a45d2b1cd1092f327
 Size (R/shapefiles_0.7.tar.gz) = 10589 bytes

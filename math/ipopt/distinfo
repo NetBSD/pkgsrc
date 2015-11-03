@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2013/12/06 21:24:59 joerg Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 23:33:35 agc Exp $
 
 SHA1 (Ipopt-3.11.5.tgz) = 66e3ae03179ba7541a478d185b256f336159fc6d
 RMD160 (Ipopt-3.11.5.tgz) = 9fc02e86f9d69a85e77c492ade30df23dba8afc7
+SHA512 (Ipopt-3.11.5.tgz) = c86b73672bc17a6e1d7d126c79e015519364c267a5930d492b7a6b4fcd63d5caed85766f250fd8bc7ebf87fc9da06419b058450750a03e8915e56b9bea07d345
 Size (Ipopt-3.11.5.tgz) = 4743371 bytes
 SHA1 (patch-Ipopt_Makefile.in) = 6582e7425f1d3d8b9b010caa89225fe000e3897a
 SHA1 (patch-Ipopt_configure) = a8737f537b8638a71d65d83658770826bfefc5e6

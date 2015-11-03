@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2011/11/24 13:53:06 joerg Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 23:33:34 agc Exp $
 
 SHA1 (graphopt-0.4.1.tgz) = f9648737604b6d0b403081e59447e39956e6d024
 RMD160 (graphopt-0.4.1.tgz) = 78e10751481ed6ae3cf6dc784c210d1a3b73013b
+SHA512 (graphopt-0.4.1.tgz) = 1ec1645777a4e8e8f4bb7b1f485ea878485c1cc37ba3f935676c3e9b5fff39d4a192912a2af33e3672079a003fec90f16cf13a03c3415891f956b99cf20e412a
 Size (graphopt-0.4.1.tgz) = 77612 bytes
 SHA1 (patch-src_classes_dotImporter.cc) = 5bdc265514d334cdbedeaad1a6d259d19561cb9e
 SHA1 (patch-src_classes_nodes.cc) = 4ad2a227be7bdaa248dad7cab3321100c79cc3d3

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2012/04/15 15:49:00 brook Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 23:33:27 agc Exp $
 
 SHA1 (R/Rcmdr_1.8-4.tar.gz) = 2a05118e3acfe8d9ce33762f630b7a55253409ca
 RMD160 (R/Rcmdr_1.8-4.tar.gz) = 4fed94e6c871e4551ff34ec3782cf5a9148ac493
+SHA512 (R/Rcmdr_1.8-4.tar.gz) = 80c856e9db34c2a8dc13f8f9f026547ce823a42ea34b15d81b24535e80fa3aca21e73cb502f5e2042ef0036bd0c2c1385da11938bc5b4dd3ea4a4a8549ddb47c
 Size (R/Rcmdr_1.8-4.tar.gz) = 2610124 bytes

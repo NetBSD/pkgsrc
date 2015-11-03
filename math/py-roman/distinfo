@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2014/08/08 12:48:44 obache Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 23:33:43 agc Exp $
 
 SHA1 (roman-2.0.0.zip) = 7fd136f80cf780bbf802ffe1c4989a64ff469c75
 RMD160 (roman-2.0.0.zip) = a8ca66d5fafd340986a45332d861d6bae259fe1e
+SHA512 (roman-2.0.0.zip) = d62a95e835232821dbf7a81d0c6b7df63f18c4116cfc7eee0c691a0b31d3d7b69d2dc2e4ea26e0a169a8e24bf080e8bb1e195b853be4adf1491335a5b4d5702c
 Size (roman-2.0.0.zip) = 7590 bytes

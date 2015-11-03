@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/01/20 12:50:31 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 23:33:42 agc Exp $
 
 SHA1 (ephem-3.7.5.1.tar.gz) = 47b53eb85662a2c5e1db791ea0348b109db1dfb6
 RMD160 (ephem-3.7.5.1.tar.gz) = 20532a52ea5610c7b65cf32485d9668af710bcd6
+SHA512 (ephem-3.7.5.1.tar.gz) = 266b06e016b4008c31d99d94ec34416a90ca319f096230916b2617cc8e7b24ec34dd328a59585af546332976d020604ebeeb0d335da742eb9a13f53a045ddfcd
 Size (ephem-3.7.5.1.tar.gz) = 731749 bytes

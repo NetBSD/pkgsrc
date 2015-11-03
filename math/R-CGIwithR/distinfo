@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2011/05/10 18:55:55 alnsn Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 23:33:26 agc Exp $
 
 SHA1 (R/CGIwithR_0.73-0.tar.gz) = 70def800a7894a300b59c96df0169849fdcc07c6
 RMD160 (R/CGIwithR_0.73-0.tar.gz) = dbd075191e2bb31e81e609baccc4f9e557db1a0f
+SHA512 (R/CGIwithR_0.73-0.tar.gz) = 85fcccbcdc34cce2685610677a0b1ab1ffc8ef9a6a5a98d36521c0653130283c78360142943196fcdc815d90d722ac8f05708324f6558a05532a93dd9833626a
 Size (R/CGIwithR_0.73-0.tar.gz) = 191630 bytes
