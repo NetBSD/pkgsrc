@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 11:02:57 agc Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 23:49:49 agc Exp $
 
 SHA1 (routeplanner_0.11.tar.gz) = c8cb905385206b3944963143fc6e00dfb5bd2cfd
 RMD160 (routeplanner_0.11.tar.gz) = e9db0238647b89642970c82916c61e623554a191
+SHA512 (routeplanner_0.11.tar.gz) = 5766da3fda349fa9ac28d50f65e9daf456e9cadb08ca17a416ccd49e20afa7c3644e51abc3ca30e8087b2b00aae8573d68789e3f535ccfc6c12f24a1d9d3b22e
 Size (routeplanner_0.11.tar.gz) = 345249 bytes

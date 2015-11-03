@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 11:02:50 agc Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 23:49:31 agc Exp $
 
 SHA1 (bbappconf-0.0.2.tar.gz) = 13b5746f7977eea1c1175ec39ceec66926151f18
 RMD160 (bbappconf-0.0.2.tar.gz) = 040e735e37394efb8d748fa63c01a4c46a4aa59f
+SHA512 (bbappconf-0.0.2.tar.gz) = 910ebaff204b3bbed88296b077a50fd061e9dee74703991f8f43079aae736a65f98acafe8b437b6d3f7e021173a5f09a8bd98549b8a63d12718d8f2389284117
 Size (bbappconf-0.0.2.tar.gz) = 80107 bytes
 SHA1 (patch-aa) = f730864931ec633ffa54e51a42b2d6dfbb127929
 SHA1 (patch-ab) = a8d8875d2454c54ac42796b326e494edf2ea9162

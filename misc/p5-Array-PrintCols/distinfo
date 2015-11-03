@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2014/05/21 06:28:52 hiramatsu Exp $
+$NetBSD: distinfo,v 1.6 2015/11/03 23:49:45 agc Exp $
 
 SHA1 (Array-PrintCols-2.6.tar.gz) = f19b93c0af48cd125d2ac1c9e952d0bc18938b8b
 RMD160 (Array-PrintCols-2.6.tar.gz) = 15de07351fde50c66438c21fd84f866945d2fc61
+SHA512 (Array-PrintCols-2.6.tar.gz) = c086423443eaef9350ea3f7c80ded17c20e64aef0aadca3d2fe8147d1a8eb57c88b5b409ac0eb5c6f52319ba46349eded5ae7bca902d266e411a82eafabb887e
 Size (Array-PrintCols-2.6.tar.gz) = 54953 bytes

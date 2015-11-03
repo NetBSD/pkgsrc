@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/01/30 13:46:36 mef Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 23:49:45 agc Exp $
 
 SHA1 (Business-ISMN-1.13.tar.gz) = 7bcf7eaeb41bf779b3af4868fbb1003106bec57e
 RMD160 (Business-ISMN-1.13.tar.gz) = a612ee506df9a95d37701da86b98f0b3a1ad9994
+SHA512 (Business-ISMN-1.13.tar.gz) = bad9fdfe16a6b62c823019af4162e0cb2f97dbda8cc5cad01ff3a6e80d22e5fa1d260ef410ad1393d03fc750f7976f06932ac948390cdeb995cc458e1d3cd984
 Size (Business-ISMN-1.13.tar.gz) = 9703 bytes
