@@ -1,0 +1,15 @@
+$NetBSD: patch-examples_Makefile.in,v 1.1 2015/11/03 17:46:57 bsiegert Exp $
+
+Correct installation directory for the example config file.
+
+--- examples/Makefile.in.orig	2015-11-03 17:31:21.000000000 +0000
++++ examples/Makefile.in
+@@ -267,7 +267,7 @@ target_vendor = @target_vendor@
+ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+-exampledir = $(datarootdir)/doc/@PACKAGE@/examples
++exampledir = $(datarootdir)/examples/@PACKAGE@
+ example_DATA = bmon.conf
+ EXTRA_DIST = $(example_DATA)
+ all: all-am
