@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/02/02 15:24:13 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 23:54:32 agc Exp $
 
 SHA1 (smpeg2-2.0.0.tar.gz) = d0455466f61a8e55f83f4d7fd82f1c305bce6832
 RMD160 (smpeg2-2.0.0.tar.gz) = 6c175111e38055d62064c6b6453d8c5e64945c09
+SHA512 (smpeg2-2.0.0.tar.gz) = 80a779d01e7aa76778ef6ceea8041537db9e4b354df413214c4413c875cb98551891cef98fa0f057cc6a3222e4983da9ae65b86bdad2f87f9e2a6751837e2baf
 Size (smpeg2-2.0.0.tar.gz) = 482322 bytes

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/11/27 08:38:49 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 23:54:22 agc Exp $
 
 SHA1 (ccxstream-1.0.15.tar.gz) = d97ac63374bf8ff6dcb77ccb89a6e92ff3e713d6
 RMD160 (ccxstream-1.0.15.tar.gz) = 01676289efe8181cb1c7c9c1340205c7adb97b3c
+SHA512 (ccxstream-1.0.15.tar.gz) = d673dbc60d3bb16a949be8a71cde0b84a3e0f63e110fa182fc0bc43650679303fa3fe80d3c233389a3535dc4f10a8f55f4c22958b8f4213185d5b4f8de7ea7df
 Size (ccxstream-1.0.15.tar.gz) = 40384 bytes
 SHA1 (patch-aa) = 2e5428a1b039bb3be56dc2beec50d7dc8719f2fe

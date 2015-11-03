@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2011/09/19 04:44:19 obache Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 23:54:31 agc Exp $
 
 SHA1 (openquicktime-1.0-src.tgz) = 1304ac28acb953351780dd3626fdb6a73f23c97f
 RMD160 (openquicktime-1.0-src.tgz) = 53c36cf87e48855460106cec8442ad004681be5c
+SHA512 (openquicktime-1.0-src.tgz) = 3be691ca3c0e31d37d532fad571031ae177aa41845792816473a2a4f2f042e4f6d75cc63fad089691415b59fe75a45352b554220b25ee172db11c5fb482ec2e8
 Size (openquicktime-1.0-src.tgz) = 320144 bytes
 SHA1 (patch-aa) = bf5d0211fbec1d067e9d454d6ed08d1a12d5a55b
