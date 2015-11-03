@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2008/06/22 16:14:08 he Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 01:20:22 agc Exp $
 
 SHA1 (Net-Jabber-2.0.tar.gz) = 6e80d2330faab5afba02d0327b1979cc4ded0548
 RMD160 (Net-Jabber-2.0.tar.gz) = 80f1c1dd8c7d1d33f33268b75b76bc25d622fda2
+SHA512 (Net-Jabber-2.0.tar.gz) = 2ad275fdef8a7ed17dc464f692b974e71bc3a5df5239943cceaec9509e6454945023e220ddfb42763e18813124f6b7f2d6d43faf3059e0680b753486961a1b4c
 Size (Net-Jabber-2.0.tar.gz) = 112416 bytes

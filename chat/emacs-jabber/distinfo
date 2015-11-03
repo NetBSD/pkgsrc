@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/04/26 10:48:26 obache Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 01:20:18 agc Exp $
 
 SHA1 (emacs-jabber-0.8.0.tar.bz2) = 702436486b1f0208e0ed1491cdc0daa19e45cadf
 RMD160 (emacs-jabber-0.8.0.tar.bz2) = 79526ffd5136bc59fd399268328d3a6cb4c12acd
+SHA512 (emacs-jabber-0.8.0.tar.bz2) = 67bab5c80df0551663202318b6434f6c1de7d8eab40e5bee247a1d36222a14dbca65034b7d4fb4a5f042365afb1c93f27af4733643fd9bc93dfb73a5950de97b
 Size (emacs-jabber-0.8.0.tar.bz2) = 288449 bytes
