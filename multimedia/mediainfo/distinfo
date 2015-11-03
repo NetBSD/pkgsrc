@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.10 2015/09/07 01:02:00 dsainty Exp $
+$NetBSD: distinfo,v 1.11 2015/11/03 23:54:30 agc Exp $
 
 SHA1 (mediainfo_0.7.77_AllInclusive.7z) = 3cdf292f8aa72c1c590618b44ec9c0700f66b818
 RMD160 (mediainfo_0.7.77_AllInclusive.7z) = bd752aaa933c9fac9bff6ddb5a26ef7e6fa61b04
+SHA512 (mediainfo_0.7.77_AllInclusive.7z) = e4ce93ed35fc087f8c5bec95094f8bfb4e27ee31ef6b3ed16fa147822cf7055be41b39ae8f642193629394c65806aa912ce144bfe82fe4377f675c6f9ca6dcdd
 Size (mediainfo_0.7.77_AllInclusive.7z) = 2645508 bytes
 SHA1 (patch-MediaInfoLib_Source_MediaInfo_MediaInfo__Config.h) = c55f25c0781c1902dd2459d138a88117e3f43de5

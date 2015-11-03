@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.20 2009/05/26 08:49:27 obache Exp $
+$NetBSD: distinfo,v 1.21 2015/11/03 23:54:29 agc Exp $
 
 SHA1 (libmpeg3-1.8-src.tar.bz2) = dae3fc1d68533e71cb9f77adf124bfbfb4e13ae6
 RMD160 (libmpeg3-1.8-src.tar.bz2) = bc01d72b1e1b3e91ff206bae7a314b939c44b192
+SHA512 (libmpeg3-1.8-src.tar.bz2) = e381f07d46d47d391c6db420791a065e3572e17ca63966eb52712560867866683505693f73b25869059319eec66fd1c2f923dbef1fdca5ef9efbe598e217d60e
 Size (libmpeg3-1.8-src.tar.bz2) = 2452350 bytes
 SHA1 (patch-aa) = 6afb72af6ce53e7eb26bfebc056060b99b2612cf
 SHA1 (patch-ab) = 4ca251c445658ad2844b7202ae3a4e1690573f18
