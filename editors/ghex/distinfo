@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/02/26 20:35:07 drochner Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 03:32:16 agc Exp $
 
 SHA1 (ghex-2.24.0.tar.bz2) = 6fd8e0df1cb6fb9fcf60cfa2bc88877713e4366c
 RMD160 (ghex-2.24.0.tar.bz2) = dfdcf1eda509246f805ab593cf4a3e8a06e831d7
+SHA512 (ghex-2.24.0.tar.bz2) = c716dba6b35aa1140d6ba92b3d9b204e46555a22612e3a6f978ac28c08c9ccd86a8d033077389d5534017ebcc689103d718837aa458867413fd8e13a2f5ee7e9
 Size (ghex-2.24.0.tar.bz2) = 1272557 bytes

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2013/08/31 14:47:26 joerg Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 03:32:18 agc Exp $
 
 SHA1 (mlview-0.9.0.tar.bz2) = 1e2d8e03747ffaaacbf9db15e8a7dabf573cee22
 RMD160 (mlview-0.9.0.tar.bz2) = 6b810b478dbdb76dd4bb28fe627e455410f89ea7
+SHA512 (mlview-0.9.0.tar.bz2) = 646f375afa27d1e050f17ded2154af9667e51e345e3a66b4354fa1babe49a45f940114ee6c1106e04cab678ba68618aea0182872dab1c9628e2cabf3561521c7
 Size (mlview-0.9.0.tar.bz2) = 754148 bytes
 SHA1 (patch-aa) = 8aea683a974324d2941a3add0e950fd57b0e83d5
 SHA1 (patch-ab) = 8f86d0e24a6f4cee0eb19e896368358df13d70c5

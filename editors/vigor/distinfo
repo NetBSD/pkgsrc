@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2006/03/21 18:48:45 minskim Exp $
+$NetBSD: distinfo,v 1.9 2015/11/03 03:32:23 agc Exp $
 
 SHA1 (vigor-0.016.tar.gz) = cbbd7db8226421b86c50799178033c4248753706
 RMD160 (vigor-0.016.tar.gz) = 52cf417f85560b46f140d6f1093133eccbd2fc43
+SHA512 (vigor-0.016.tar.gz) = 091f40ff47387122047e384aa01337368806887cc68d9303a036069427e15c25b4c6355f42e4de63f225af157eb62bef3d6a0564762b9acbed79bd5f44a927ae
 Size (vigor-0.016.tar.gz) = 1108486 bytes
 SHA1 (patch-aa) = 2ea52fe10dff6f2445ca0fd870065103b11b59cd
 SHA1 (patch-ab) = 2016eb247f7f747ca80041fac2ad15709f7e7a80

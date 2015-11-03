@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.12 2013/10/16 21:59:30 roy Exp $
+$NetBSD: distinfo,v 1.13 2015/11/03 03:32:17 agc Exp $
 
 SHA1 (hexedit-1.2.13.src.tgz) = 1acb7ca37063d9f4b4d118ef223548fde3b753f1
 RMD160 (hexedit-1.2.13.src.tgz) = cb4fe716cf8f3bfb614ea890aec20d7865e2c271
+SHA512 (hexedit-1.2.13.src.tgz) = df9afb0b9b965e20ea8c427c1986b0200216601b157862199c35bae9e201ccc478ab0bfecd39d0dfaa85bf582f1cf372b0134fadcfeacf4734805a6e6dcaa2bb
 Size (hexedit-1.2.13.src.tgz) = 68778 bytes
 SHA1 (patch-ae) = 49627dd5704fb9cd7b6ac08d01d3324ff2d2babd
 SHA1 (patch-configure) = 847d7fbf644bc3af97c7deebf5b8c24675f4c4bd

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2010/01/29 19:54:17 joerg Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 03:32:17 agc Exp $
 
 SHA1 (lpe-1.2.6.tar.gz) = b69ef7d8ff3cee5bfb0d9709ed91182afccaf587
 RMD160 (lpe-1.2.6.tar.gz) = f177f115db6303ef91778adda9dcdd005c03cf17
+SHA512 (lpe-1.2.6.tar.gz) = f48eb07e338c3ef7bdfabc46b69a3dd96a91fae83681b5b0b77be07958a5e8c38c1afc4f6f00bdf558dd78e8a025d4c499fd9e1b4d8757721da8659151483dad
 Size (lpe-1.2.6.tar.gz) = 285618 bytes
 SHA1 (patch-aa) = da6223e1dc828e3591cc6cd7e0d13d084fedf119
 SHA1 (patch-ab) = 8b258595041ff3b51f7199ec7912729bb5547332

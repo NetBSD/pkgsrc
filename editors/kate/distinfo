@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.9 2014/11/26 12:25:49 joerg Exp $
+$NetBSD: distinfo,v 1.10 2015/11/03 03:32:17 agc Exp $
 
 SHA1 (kate-4.14.3.tar.xz) = da37195e86b5449fcdfe69a3f7df6373a5da900c
 RMD160 (kate-4.14.3.tar.xz) = 195cfac39111a1434b6b5c60543b219a70c0c74e
+SHA512 (kate-4.14.3.tar.xz) = 0d197bb00fb9a56572e140dd3c50338c90a0cb3bb8ebc78cc0e6d6ab04d6c129537a2ab8076ff9b844e159687c0a73cbacbe678e006b2d86b57285068158e38e
 Size (kate-4.14.3.tar.xz) = 2766880 bytes
 SHA1 (patch-addons_kate_pate_src_version_checker.h) = f22a9131bcbcdffc0330d258cf471d8e3dcbf05e
 SHA1 (patch-tests_CMakeLists.txt) = ae9f410649101d6803fc6b14f487f8243fce0991

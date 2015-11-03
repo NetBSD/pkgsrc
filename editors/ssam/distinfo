@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2008/05/09 10:47:29 agc Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 03:32:21 agc Exp $
 
 SHA1 (ssam-1.9.tar.gz) = 6fee1e64d3cbf6bef72fe60798cc8ad7eab9260e
 RMD160 (ssam-1.9.tar.gz) = 378f838fad503693caec5ec3e699d08fc3b7e9eb
+SHA512 (ssam-1.9.tar.gz) = bd30ef0f5aa9117a53b9cb8eb399a596b48a1833554b09a7dc93ff47065947abade1a3c2f08d662f5c9cbb7743e7a8fa9e7792889f4e59137935188747b34ec3
 Size (ssam-1.9.tar.gz) = 41186 bytes
 SHA1 (patch-aa) = 117faef49e067bde9dcae8abb769946c86ff9c4f
 SHA1 (patch-ab) = 7ea16aa146e9a68d1b921a56fb80dc968df140f3

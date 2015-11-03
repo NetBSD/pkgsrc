@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.12 2013/10/20 18:15:02 joerg Exp $
+$NetBSD: distinfo,v 1.13 2015/11/03 03:32:17 agc Exp $
 
 SHA1 (jed-0.99-16.tar.bz2) = 34649571fb5caa61314553c10db2e15ebf248d82
 RMD160 (jed-0.99-16.tar.bz2) = 1c7dc29feb7513a46af13ead11e6abf3f5303ec3
+SHA512 (jed-0.99-16.tar.bz2) = 37431d3bb386867a05d90e4597dc5a07efb2d83387434d4318751ab077ca0e646ec5bb61dca46c323aa9f4668c1b6b2a780fe02a6c4c2eb31e28f12a5f4174fc
 Size (jed-0.99-16.tar.bz2) = 667623 bytes
 SHA1 (patch-aa) = da971ebf501a733fece8f968a0168461cbebb4c3
 SHA1 (patch-ab) = 38c8708fbfff84afa67aeb8691bdbd021156ab82

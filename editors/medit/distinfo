@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2014/12/11 22:07:47 joerg Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 03:32:18 agc Exp $
 
 SHA1 (medit-1.2.0.tar.bz2) = 904ad57f0774ec1ef5ad8905f3dfc700811d5b36
 RMD160 (medit-1.2.0.tar.bz2) = 24c9e9a3df624cbdafaf5251f05690c6a38fe8ad
+SHA512 (medit-1.2.0.tar.bz2) = 936ce5390c7cbc92291946bda08ae271e1d8537686f134d9ac5a9c1067172933c11555a484d7036d7fed8c7fcb57ca145479bcc9009feb44eb3489b6099534f4
 Size (medit-1.2.0.tar.bz2) = 1771094 bytes
 SHA1 (patch-moo_Makefile.in) = 18334afff24bde08a83b670a57745c6317b84e71
