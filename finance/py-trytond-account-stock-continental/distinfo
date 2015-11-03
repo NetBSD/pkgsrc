@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/08/24 14:49:42 richard Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 00:12:14 agc Exp $
 
 SHA1 (tryton-3.6/trytond_account_stock_continental-3.6.0.tar.gz) = 4509c2321d771ef46c5cd67181f24449f9342c33
 RMD160 (tryton-3.6/trytond_account_stock_continental-3.6.0.tar.gz) = 4984d250ce63763aca7c6db71a3f85636361342c
+SHA512 (tryton-3.6/trytond_account_stock_continental-3.6.0.tar.gz) = e7a10634ffa8155293b946d145912325e1e2a3037d17808876be95bf290e2ab8c4384302cfe877c5eb295d799a23a1583d21bd7f299f5ea047ddee6625023963
 Size (tryton-3.6/trytond_account_stock_continental-3.6.0.tar.gz) = 32529 bytes
