@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.11 2015/10/17 09:49:32 wen Exp $
+$NetBSD: distinfo,v 1.12 2015/11/03 23:27:13 agc Exp $
 
 SHA1 (Email-Sender-1.300021.tar.gz) = 8cbb76c01e38feb0532326395c1550442745e907
 RMD160 (Email-Sender-1.300021.tar.gz) = 41ad80817216ef05403e2a6f61b00fc5824aef2f
+SHA512 (Email-Sender-1.300021.tar.gz) = 9b2eed7451fd92ceb9a834e38ab8a992cf9fda66e51576fc98aed8eaecb4f574001315e5afa5f79d8ceb77037821db8aab1f6162b41def26f99b27e6d0a2c20b
 SHA512 (Email-Sender-1.300021.tar.gz) = 9b2eed7451fd92ceb9a834e38ab8a992cf9fda66e51576fc98aed8eaecb4f574001315e5afa5f79d8ceb77037821db8aab1f6162b41def26f99b27e6d0a2c20b
 Size (Email-Sender-1.300021.tar.gz) = 50048 bytes

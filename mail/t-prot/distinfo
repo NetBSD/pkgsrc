@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2010/02/16 14:37:11 wiz Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 23:27:22 agc Exp $
 
 SHA1 (t-prot-2.15.tar.gz) = 46b675b92bbfd75546de93fd5a783625acd3ea85
 RMD160 (t-prot-2.15.tar.gz) = 288a1bf6c6e7b282941da36f6ac7acde9f1ad231
+SHA512 (t-prot-2.15.tar.gz) = 23226305c95822d953c227e6db7327ead6f90f06c3620dead4384a2b05e237d123e112220e34c5741ea618db2420ea9c27535bf4642a29849f5087deb5e9809c
 Size (t-prot-2.15.tar.gz) = 46612 bytes
