@@ -1,4 +1,4 @@
-/* $NetBSD: pscan.c,v 1.8 2012/11/23 12:13:35 joerg Exp $ */
+/* $NetBSD: pscan.c,v 1.9 2015/11/03 19:06:48 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -150,10 +150,12 @@ main(int argc, char **argv)
 	else
 		read_limited_list();
 
-	if (master_port != NULL)
-		master_mode(master_port, start_script);
-	else
-		standalone_mode();
+	if (has_job()) {
+		if (master_port != NULL)
+			master_mode(master_port, start_script);
+		else
+			standalone_mode();
+	}
 
 	write_jobs(output_file);
 

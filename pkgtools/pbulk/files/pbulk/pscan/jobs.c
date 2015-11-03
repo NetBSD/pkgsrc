@@ -1,4 +1,4 @@
-/* $NetBSD: jobs.c,v 1.7 2012/11/30 16:22:49 joerg Exp $ */
+/* $NetBSD: jobs.c,v 1.8 2015/11/03 19:06:48 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -294,6 +294,28 @@ add_job_full(const char *location)
 	jobs[len_jobs].scan_output = NULL;
 	jobs[len_jobs].state = JOB_OPEN;
 	++len_jobs;
+}
+
+int
+has_job(void)
+{
+	size_t i;
+	struct scan_entry *e;
+	struct scan_job * job;
+
+	for (i = first_undone_job; i < len_jobs; ++i) {
+		job = &jobs[i];
+		if (job->state != JOB_OPEN)
+			continue;
+		e = find_old_scan(job->pkg_location);
+		if (e == NULL)
+			return 1;
+		job->scan_output = xstrdup(e->data);
+		process_job(job, JOB_DONE);
+		i = first_undone_job - 1;
+	}
+
+	return 0;
 }
 
 struct scan_job *
