@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2012/07/18 22:10:21 marino Exp $
+$NetBSD: distinfo,v 1.7 2015/11/03 20:31:10 agc Exp $
 
 SHA1 (ucon64-2.0.0-src.tar.gz) = 8782bbc2bf5760fafe3fa4cd02b67991d984a973
 RMD160 (ucon64-2.0.0-src.tar.gz) = c28921cfae1a010db917b96be542c089690b374c
+SHA512 (ucon64-2.0.0-src.tar.gz) = d021fe6db9530405773e1e209bdfafe41a2bd997f275ca7fb387f9b3d8639f4581c2761cbdce859a1831d6eba9dab4d5df1019605698c6cb6a4695ab091b001c
 Size (ucon64-2.0.0-src.tar.gz) = 1188488 bytes
 SHA1 (patch-aa) = fd1543314b6ca6d432c6d88b8b7590085dfc51e9
 SHA1 (patch-ab) = 25f5311844511674d5e64efe7c35cf86dacc34a9

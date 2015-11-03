@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.1 2015/10/11 00:52:23 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:30:54 agc Exp $
 
 SHA1 (8086tiny_125.tar.bz2) = 7380a29cff8beba76dadee47f76445c6e24ee39a
 RMD160 (8086tiny_125.tar.bz2) = d15e2c551aab6f7e12c1dc6ba9cf545539c85ff5
+SHA512 (8086tiny_125.tar.bz2) = e8407467dc68faab5c2178b6e6e1dbd2c9a93ebd5287fe48cd95b7bb3023dec63a3d468fc6ef6015031c7c5e784d8fa2916faee6318f1bfdbaabe546064eba87
 Size (8086tiny_125.tar.bz2) = 1402403 bytes
 SHA1 (patch-8086tiny.c) = 032e20accb7ad02da8080eb65ee6279a2420b961
 SHA1 (patch-Makefile) = fd6b2bf262419642995934eb15e5fd108a0dca3d

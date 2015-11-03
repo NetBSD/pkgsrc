@@ -1,11 +1,14 @@
-$NetBSD: distinfo,v 1.2 2005/05/25 11:59:45 wiz Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 20:30:56 agc Exp $
 
 SHA1 (cygwin/esound-0.2.35-1.tar.bz2) = 40dd08cfbf4aae24b8c2448c6038815e2ea21239
 RMD160 (cygwin/esound-0.2.35-1.tar.bz2) = 271d1bfe3d7fcf2180cc9194ec7e2c66bc1b641d
+SHA512 (cygwin/esound-0.2.35-1.tar.bz2) = 9931402d0c75033cfef7a29efbcf99584de14b9108d2d70e1bf0c0a112d919bab3ee3a954fa00e7cc5000f875fe329eab11e87124f5d35c8449ccb17ad896f4d
 Size (cygwin/esound-0.2.35-1.tar.bz2) = 125137 bytes
 SHA1 (cygwin/libesound0-0.2.35-1.tar.bz2) = 3219452e22a516995aa48713ad0a5999ff8e681a
 RMD160 (cygwin/libesound0-0.2.35-1.tar.bz2) = a31a073a8f0d76cf3ef90759d0be79229842beb8
+SHA512 (cygwin/libesound0-0.2.35-1.tar.bz2) = 547ac5d9345c5cad6f7c54504373a0a34dc2e58d013e7c4ff8782e37556889990b20d63b242ab54ab797f3114f12b4c56dad1cfabd915b021bd1021fc54be950
 Size (cygwin/libesound0-0.2.35-1.tar.bz2) = 11251 bytes
 SHA1 (cygwin/libaudiofile0-0.2.6-2.tar.bz2) = 7c568a4366214e69810fefe62923beafd92ea6c1
 RMD160 (cygwin/libaudiofile0-0.2.6-2.tar.bz2) = 7d808b0cba96b05fedc932b4445a7a5b6be58435
+SHA512 (cygwin/libaudiofile0-0.2.6-2.tar.bz2) = 08c8cbf11d5b1abc0361718d215c274cdfceedfd8d04786ac1f007ae9f765e82b67a4f5cc847d885b5489a373f8069fbc1179553e2e5bb2387baead8cad57c43
 Size (cygwin/libaudiofile0-0.2.6-2.tar.bz2) = 58049 bytes
