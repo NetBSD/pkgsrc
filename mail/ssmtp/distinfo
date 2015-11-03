@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2015/10/20 10:53:24 tnn Exp $
+$NetBSD: distinfo,v 1.8 2015/11/03 23:27:22 agc Exp $
 
 SHA1 (ssmtp_2.64.orig.tar.bz2) = db0cc6b4f82ab8b4c79335933db9c4db706324d1
 RMD160 (ssmtp_2.64.orig.tar.bz2) = ea6472e52a499c39d1d8ce7e13add9d8e9accbfb
+SHA512 (ssmtp_2.64.orig.tar.bz2) = 911752e744420adf58552b9cf3a6e558d8b39103e5ad33a9ed4429b9a3a2091f7674aac11fe9bbd66747a61cdabe6bd638b80efcaadc86b057c12e2e235cca72
 Size (ssmtp_2.64.orig.tar.bz2) = 52501 bytes
 SHA1 (patch-ab) = b9e665c762ecfd4f2b63d90f39a563985e8a3560
 SHA1 (patch-ac) = c348a88e31ab4962e8e325e5a17a4511fcd84bb7

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.9 2014/12/04 13:13:45 mef Exp $
+$NetBSD: distinfo,v 1.10 2015/11/03 23:27:13 agc Exp $
 
 SHA1 (IMAP-Admin-1.6.7.tar.gz) = 06bba1aa700fbea106546e9cbdccfe51f001545c
 RMD160 (IMAP-Admin-1.6.7.tar.gz) = 9fa27378867e8a5f9f95de023eb8eb8bc9f9b03e
+SHA512 (IMAP-Admin-1.6.7.tar.gz) = cd4c735b3152e9f9db5198274b6c1dd39a8cf0f127b55e671880e6a6fb2278673e5443df46e9e01741cca1f1013f885781bee6b9c45214919510762475e72a75
 Size (IMAP-Admin-1.6.7.tar.gz) = 14990 bytes

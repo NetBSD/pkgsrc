@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2013/09/08 10:34:55 wen Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 23:27:12 agc Exp $
 
 SHA1 (Email-LocalDelivery-1.200.tar.gz) = 7771fc00b814bf2e50175ea3c8464a707cf2ead7
 RMD160 (Email-LocalDelivery-1.200.tar.gz) = 846e38e4d2136174e4fa8cd5b8b27ddd8e08f95e
+SHA512 (Email-LocalDelivery-1.200.tar.gz) = a635e18b15fe01ede787b4e4c3c6511a547a5b4a35f80b4c8089bfe75b2cf9e7beec4ff3f7b00380163e671c54df79b0486137663e7bf49a50c1b1c302bc0258
 Size (Email-LocalDelivery-1.200.tar.gz) = 15809 bytes

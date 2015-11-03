@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2012/11/05 15:06:45 reed Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 23:27:09 agc Exp $
 
 SHA1 (mailsort-1.26.tar.gz) = c872b782ae9b0cb1ac35010461cd7434cdfa5ab4
 RMD160 (mailsort-1.26.tar.gz) = 9c32d16de72a3944e629c5a1096560652067aecc
+SHA512 (mailsort-1.26.tar.gz) = 587306c56b7e0c6bda91b528534a72a72dfb225858daaf087b63a5a68415f178659d54d7bb59c3a6ed8300f5dd020eb063091483fc887521cadb94202e356cb5
 Size (mailsort-1.26.tar.gz) = 13422 bytes

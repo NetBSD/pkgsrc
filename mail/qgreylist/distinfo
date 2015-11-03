@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2005/10/13 17:01:46 schmonz Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 23:27:18 agc Exp $
 
 SHA1 (qgreylist-0.3.tar.gz) = 9abaed7fd76f02a1090d1cf2eaad1e43dfa2f6d1
 RMD160 (qgreylist-0.3.tar.gz) = 8f85e1d19d7d9517f21c3b0f6fe0c38332e26fca
+SHA512 (qgreylist-0.3.tar.gz) = 126ba93090ad4889c8e223087f25d752435a9aaa21884540a59f1578595d6a22a97b9b4e77c42fce2b3ccc424df7dfab95d3c99999740da98cc8c25170b22d7c
 Size (qgreylist-0.3.tar.gz) = 5822 bytes
 SHA1 (patch-aa) = afcee4cfd00481b71924ff2e0b96ad64522a8c3e

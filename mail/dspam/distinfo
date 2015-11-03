@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.34 2012/12/06 10:47:35 roy Exp $
+$NetBSD: distinfo,v 1.35 2015/11/03 23:27:04 agc Exp $
 
 SHA1 (dspam-3.10.2.tar.gz) = 21133e0ee1880f3e8c849365b7e27a73f6d0413a
 RMD160 (dspam-3.10.2.tar.gz) = 7e112981e45e483350b9afc056ebfa4c5561036c
+SHA512 (dspam-3.10.2.tar.gz) = 5fe53e1d0d7cabb3983f5c67274b074b7c647c1bae10ebc7ea3805542f99dbfb39abd4697e344e6eb80554522319a1253e1082ed6b389364bbaec1d6ddd43856
 Size (dspam-3.10.2.tar.gz) = 1035054 bytes
 SHA1 (patch-aa) = ff48b3bb84a13f841ee38115377fcb97d03798c0
 SHA1 (patch-ad) = c1fd04d91528be4da368affc4e8b4dc85d93267c

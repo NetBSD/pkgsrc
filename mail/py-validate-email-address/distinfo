@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/12/05 18:35:39 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 23:27:17 agc Exp $
 
 SHA1 (validate-email-address-1.tar.gz) = e41623b7b071f44ab14a8659c62a07a55acaee47
 RMD160 (validate-email-address-1.tar.gz) = bb74bc97bc7c56ebcc26c91472f266e9644d9cd4
+SHA512 (validate-email-address-1.tar.gz) = 76ebc1b746546821068d5a0f9c34330812a082a235951931eea6c92c4006ea654cc740dcebb8b95bc31679db2c334ba45c7257e0564c28dd6a552253bd6fb90e
 Size (validate-email-address-1.tar.gz) = 4906 bytes
