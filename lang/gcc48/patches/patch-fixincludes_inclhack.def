@@ -1,8 +1,90 @@
-$NetBSD: patch-fixincludes_inclhack.def,v 1.1 2014/05/31 13:06:25 ryoon Exp $
+$NetBSD: patch-fixincludes_inclhack.def,v 1.2 2015/11/03 13:59:10 jperkin Exp $
 
---- fixincludes/inclhack.def.orig	2013-05-31 11:43:36.000000000 +0000
+Fix for El Capitan / Xcode 7 from https://trac.macports.org/ticket/48471
+
+--- fixincludes/inclhack.def.orig	2014-12-13 17:47:30.000000000 +0000
 +++ fixincludes/inclhack.def
-@@ -3213,9 +3213,9 @@ fix = {
+@@ -1141,6 +1141,79 @@ fix = {
+     test_text = "#define _Noreturn	[[noreturn]]";
+ };
+ 
++/* 
++ * Add definitions of non-standard (clang) macros.
++ */
++fix = {
++    hackname  = clang_macro___has_builtin;
++    select    = "__has_builtin";
++    bypass    = "#[ \t]*define[ \t]+__has_builtin";
++    c_fix     = wrap;
++    c_fix_arg = "#ifndef __has_builtin\n"
++                "  #define __has_builtin(x) 0\n"
++                "#endif\n";
++    test_text = "#if __has_builtin(__builtin_trap)\n"
++                "  __builtin_trap();\n"
++                "#else\n"
++                "  abort();\n"
++                "#endif\n";
++};
++fix = {
++    hackname  = clang_macro___has_feature;
++    select    = "__has_feature";
++    bypass    = "#[ \t]*define[ \t]+__has_feature";
++    c_fix     = wrap;
++    c_fix_arg = "#ifndef __has_feature\n"
++                "  #define __has_feature(x) 0\n"
++                "#endif\n";
++    test_text = "#if __has_feature(cxx_rvalue_references)\n"
++                "  // This code will only be compiled with the -std=c++11 and -std=gnu++11\n"
++                "  // options, because rvalue references are only standardized in C++11.\n"
++                "#endif\n";
++};
++fix = {
++    hackname  = clang_macro___has_cpp_attribute;
++    select    = "__has_cpp_attribute";
++    bypass    = "#[ \t]*define[ \t]+__has_cpp_attribute";
++    c_fix     = wrap;
++    c_fix_arg = "#ifndef __has_cpp_attribute\n"
++                "  #define __has_cpp_attribute(x) 0\n"
++                "#endif\n";
++    test_text = "#if __has_cpp_attribute(clang::fallthrough)\n"
++                "  #define FALLTHROUGH [[clang::fallthrough]]\n"
++                "#else\n"
++                "  #define FALLTHROUGH\n"
++                "#endif\n";
++};
++fix = {
++    hackname  = clang_macro___has_attribute;
++    select    = "__has_attribute";
++    bypass    = "#[ \t]*define[ \t]+__has_attribute";
++    c_fix     = wrap;
++    c_fix_arg = "#ifndef __has_attribute\n"
++                "  #define __has_attribute(x) 0\n"
++                "#endif\n";
++    test_text = "#if __has_attribute(always_inline)\n"
++                "  #define ALWAYS_INLINE __attribute__((always_inline))\n"
++                "#else\n"
++                "  #define ALWAYS_INLINE\n"
++                "#endif\n";
++};
++fix = {
++    hackname  = clang_macro___has_declspec_attribute;
++    select    = "__has_declspec_attribute";
++    bypass    = "#[ \t]*define[ \t]+__has_declspec_attribute";
++    c_fix     = wrap;
++    c_fix_arg = "#ifndef __has_declspec_attribute\n"
++                "  #define __has_declspec_attribute(x) 0\n"
++                "#endif\n";
++    test_text = "#if __has_declspec_attribute(dllexport)\n"
++                "  #define DLLEXPORT __declspec(dllexport)\n"
++                "#else\n"
++                "  #define DLLEXPORT\n"
++                "#endif\n";
++};
++
+ /*
+  *  Fix various macros used to define ioctl numbers.
+  *  The traditional syntax was:
+@@ -3226,9 +3299,9 @@ fix = {
      mach      = "*-*-solaris2.*";
      files     = complex.h;
      sed	      = "/#if[ \t]*!defined(__cplusplus)/c\\\n"
