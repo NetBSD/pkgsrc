@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2015/11/03 07:27:21 ryoon Exp $
+# $NetBSD: Makefile,v 1.24 2015/11/03 17:57:47 tnn Exp $
 
 DISTNAME=	openjdk-1.8.66-20151103
 PKGNAME=	openjdk8-1.8.66
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_LOCAL:=openjdk7/}
 EXTRACT_SUFX=	.tar.xz
@@ -57,7 +58,7 @@ CONFIGURE_ARGS+=	--with-memory-size=768
 CONFIGURE_ARGS+=	--disable-precompiled-headers
 CONFIGURE_ARGS+=	--disable-ccache
 CONFIGURE_ARGS+=	--with-user-release-suffix=pkgsrc_${PKGVERSION}
-CONFIGURE_ARGS+=	--with-update-version=u${PKGVERSION_NOREV:S/1.8.//}
+CONFIGURE_ARGS+=	--with-update-version=${PKGVERSION_NOREV:S/1.8.//}
 
 CHECK_PORTABILITY_SKIP+=	hotspot/test/runtime/*/*.sh
 
