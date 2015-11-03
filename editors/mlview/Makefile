@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2015/04/25 14:20:42 tnn Exp $
+# $NetBSD: Makefile,v 1.74 2015/11/03 19:10:07 joerg Exp $
 #
 
 DISTNAME=	mlview-0.9.0
@@ -19,6 +19,8 @@ USE_PKGLOCALEDIR=	yes
 MAKE_JOBS_SAFE=		no
 
 GCONF_SCHEMAS=		mlview.schemas
+
+CXXFLAGS+=		-std=c++11
 
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
