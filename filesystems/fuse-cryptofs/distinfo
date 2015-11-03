@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2012/08/17 14:24:21 marino Exp $
+$NetBSD: distinfo,v 1.3 2015/11/03 00:15:00 agc Exp $
 
 SHA1 (cryptofs-0.6.0.tar.bz2) = 967d43f46a26e69704a61f3f68ef83b14c60df41
 RMD160 (cryptofs-0.6.0.tar.bz2) = 6603ba948ba0d421e3ffa0387c718ed42f7f4c51
+SHA512 (cryptofs-0.6.0.tar.bz2) = b4d1fed5ef7715cba61f4574e8e0d35f5995823f5135c09c6735e4b9deb70bede44d34ae4228140660873fc8f6732ee24139d79531bf3de6d6ba41223e332977
 Size (cryptofs-0.6.0.tar.bz2) = 242440 bytes
 SHA1 (patch-configure) = 195b5984b36aafa9d487ab436f57d0626c79e883
