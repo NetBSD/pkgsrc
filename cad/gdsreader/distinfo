@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2014/10/21 22:38:44 mef Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 00:21:17 agc Exp $
 
 SHA1 (GDSreader.0.3.2.tar.gz) = 200fe93b9c44639acb9b5da94c9f0061c49bd3b0
 RMD160 (GDSreader.0.3.2.tar.gz) = da990de44a70c8cc1cc1df6bcfdd6d457a3efa20
+SHA512 (GDSreader.0.3.2.tar.gz) = b3ea898fc53ee3a5dad021eddc0620d859c597f82327080456d0502c6c5563a8f993918cd3a959b0e3aefc066157ef57117a8787f951694ed1d555ddaebebe8c
 Size (GDSreader.0.3.2.tar.gz) = 82649 bytes
