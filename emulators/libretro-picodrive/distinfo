@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/02/04 22:58:13 jmcneill Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 20:30:59 agc Exp $
 
 SHA1 (picodrive-libretro-20150203.zip) = 4be392f3b5a0f3c8b8fbd3fbdb31301bc0c4ee4e
 RMD160 (picodrive-libretro-20150203.zip) = 98401b5992a38dceaa5f6e90f168969bdb0d8baf
+SHA512 (picodrive-libretro-20150203.zip) = 56c1184c30ebad04deaad9a4bc72276adaa50fac7b80e1a63fd91c1a9c06352bfa28db43cba8f92b84feffc487b6f43af7287970c0eaecdab3a1b0fe4cbdc942
 Size (picodrive-libretro-20150203.zip) = 1681676 bytes

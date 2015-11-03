@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2014/05/20 12:26:11 obache Exp $
+$NetBSD: distinfo,v 1.9 2015/11/03 20:31:10 agc Exp $
 
 SHA1 (xtrs-4.9d.tar.gz) = 72b99ede6e8024b8ade4f8aa22eb073078576e74
 RMD160 (xtrs-4.9d.tar.gz) = 009786b70fe1006d552b1d89ac2b74247b17e03f
+SHA512 (xtrs-4.9d.tar.gz) = 5d6a2e1d4c2f2df63eaec8d015ea9e485615d82b7923af5c03c394862a31b1e6be2329aca18c0fa0c7d6b984164bb9b4d18f94a3d8cd140a683c5197ddff2249
 Size (xtrs-4.9d.tar.gz) = 455355 bytes
 SHA1 (patch-Makefile) = 02a4dac76d575329459722fe843ced61c83aa7d7
 SHA1 (patch-Makefile.local) = da854213c3ba3af686ca646d0648cd3f7b873a7f
