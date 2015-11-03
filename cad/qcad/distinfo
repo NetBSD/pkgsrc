@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.19 2011/09/23 03:26:57 ryoon Exp $
+$NetBSD: distinfo,v 1.20 2015/11/03 00:21:19 agc Exp $
 
 SHA1 (qcad-2.0.5.0-1-community.src.tar.gz) = aff563389d1285740f6bf7e28f93b8df0f902e0c
 RMD160 (qcad-2.0.5.0-1-community.src.tar.gz) = 85f0b6d3c1edaa0c19494436413521316e803429
+SHA512 (qcad-2.0.5.0-1-community.src.tar.gz) = a1d9f37005da9a1af57a0398e0421d50bde9c927576a9ddb26e33606aa9c2a3507f886ee0a46fa4b474e14fb2420867999a28e3ae4d287cd317d2005bb8e8b28
 Size (qcad-2.0.5.0-1-community.src.tar.gz) = 4470033 bytes
 SHA1 (patch-aa) = ca5744c2bc24735db1d671c797470d7a324d83ef
 SHA1 (patch-ab) = c72f33035d2d7b0aefd9b193028ef8a6df459d1a

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.24 2012/02/16 11:33:12 hans Exp $
+$NetBSD: distinfo,v 1.25 2015/11/03 00:21:17 agc Exp $
 
 SHA1 (gerbv-2.5.0.tar.gz) = 9a622059a83917834a1ac75551428f400b2cb2ff
 RMD160 (gerbv-2.5.0.tar.gz) = 0c725cd0ee4288014117413c554315fa9b17ae7f
+SHA512 (gerbv-2.5.0.tar.gz) = ffd43e8d6ed1d67ce739a17bb14570a586f05d9aa8ffb7ee57506604fbc480af58232f08eb2f35e27da2d2c8d2e4857a543192192914dae7c7a0da3e59d9deed
 Size (gerbv-2.5.0.tar.gz) = 2295221 bytes
 SHA1 (patch-icon-theme-installer) = b3b183f2ab77c56e52d4cd96058a28bc7e2832bb

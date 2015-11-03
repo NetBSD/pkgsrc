@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.15 2011/08/30 12:01:03 dmcmahill Exp $
+$NetBSD: distinfo,v 1.16 2015/11/03 00:21:18 agc Exp $
 
 SHA1 (ngspice-23.tar.gz) = 65fa23d1168cb3af7651b990344f763c77bf6132
 RMD160 (ngspice-23.tar.gz) = 34a5bb0a06e67a9ebe21f7abe8067cd8e793ea9e
+SHA512 (ngspice-23.tar.gz) = 576edcf4c61db078ab425664468e60c5feab83b350fa55d21bbda6c4f0b5d12513104d54bcf9de2a65254c9de797c9ad136e355b0b9a64e948bfaeca3df119f8
 Size (ngspice-23.tar.gz) = 6485536 bytes

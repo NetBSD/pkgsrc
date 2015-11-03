@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2010/02/16 03:43:12 dmcmahill Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 00:21:18 agc Exp $
 
 SHA1 (mcalc-1.6.tar.gz) = 2b31851de9b5a5c2090e09d3d1f01ff30108dd82
 RMD160 (mcalc-1.6.tar.gz) = 01c17a894f67ab98783b6d8abcfd4199e91a8da4
+SHA512 (mcalc-1.6.tar.gz) = 45f5a5c995b91f811a7fa3306ff8b7030879e83dbe2f4ae2107d561a5ba4081dd8378662ddd71dccf173fa82cc125c996ce54ddce34bfcc00be2be3e459f3668
 Size (mcalc-1.6.tar.gz) = 21789 bytes
