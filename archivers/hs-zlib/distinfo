@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/08/12 21:22:13 szptvlfn Exp $
+$NetBSD: distinfo,v 1.2 2015/11/03 00:56:22 agc Exp $
 
 SHA1 (zlib-0.5.4.1.tar.gz) = ac9b93c09801df507091eece3913d2102dbeabaf
 RMD160 (zlib-0.5.4.1.tar.gz) = 9ed49e79e239604958a9c385cca75747fafc2713
+SHA512 (zlib-0.5.4.1.tar.gz) = aa3522a5704978badcf634e1d99282144f01ddee4600bd146631a3ee8b98080914eb2887869a5fa404dc9d1e438a5df87cf7d44548c2f3e1ec13ba19004ef985
 Size (zlib-0.5.4.1.tar.gz) = 127760 bytes
