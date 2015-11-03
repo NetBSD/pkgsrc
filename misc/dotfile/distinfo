@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2006/11/19 22:48:07 rillig Exp $
+$NetBSD: distinfo,v 1.5 2015/11/03 23:49:34 agc Exp $
 
 SHA1 (dotfile-2.4.1.tar.gz) = dfbd922ec6c0f34b41a0ec78276f222621bf1c05
 RMD160 (dotfile-2.4.1.tar.gz) = 3f09a022e75f3b0b5fa9ef77769e70ef78a75b05
+SHA512 (dotfile-2.4.1.tar.gz) = b892ec376bc1afc83c73592b38ee7d5ca93cb1a7239dfc0a96c9e5a5e795eb2570357710007f8e7b4cd1b43b4a5b4678204bda7c97e010cea70776aed2d3c3e9
 Size (dotfile-2.4.1.tar.gz) = 1015756 bytes
 SHA1 (patch-aa) = 0b17889ba0a5dca52b01614777092096e86e4306
 SHA1 (patch-ab) = 6730793b2b479c2a4df0df1337dccc30780bb140

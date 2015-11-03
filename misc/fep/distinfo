@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.18 2012/03/05 12:15:59 obache Exp $
+$NetBSD: distinfo,v 1.19 2015/11/03 23:49:35 agc Exp $
 
 SHA1 (fep.tar.gz) = 73fa55337b12dba3b91c9895e2c9adbbdfa9d960
 RMD160 (fep.tar.gz) = 2a8b9eeecd5c76bec5cdb524ae6c650f298ccbde
+SHA512 (fep.tar.gz) = a681743a5f4a8f96f8f445e68e7368e1d8b8130ade9021f64f5b8f00f2f25701d94150462072d7f72c51a58bc831423e22e650766b3408f0abdd0ee50f69e0a3
 Size (fep.tar.gz) = 40137 bytes
 SHA1 (patch-aa) = 33cb713a2fc7d084a3769b7b9b61c7810ebacdd0
 SHA1 (patch-ab) = 2b6f6cff25a21b374dce4b0162dc06a6d0b6c24f

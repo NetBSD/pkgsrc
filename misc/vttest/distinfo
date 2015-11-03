@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.8 2014/11/11 21:25:30 shattered Exp $
+$NetBSD: distinfo,v 1.9 2015/11/03 23:49:54 agc Exp $
 
 SHA1 (vttest-20140305.tgz) = 27dee144933a398ff07b7884ce54efe2d3d255cf
 RMD160 (vttest-20140305.tgz) = fdf7cfcbcb56d7880185272a75a6b3084cc80e4d
+SHA512 (vttest-20140305.tgz) = eee1460c3978fd1e9c08d58eddeb8a21cb4cb8cedb5d523e348de85774c1eff1162757fa4d743ca62539f87499557365ac2f4286bc7da6e0203a85bd9ce56e2f
 Size (vttest-20140305.tgz) = 191096 bytes

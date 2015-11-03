@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.21 2014/11/13 19:19:08 markd Exp $
+$NetBSD: distinfo,v 1.22 2015/11/03 23:49:40 agc Exp $
 
 SHA1 (kdeplasma-addons-4.14.3.tar.xz) = f71c6add1d62eaaa57a2f859679f522655ae0f73
 RMD160 (kdeplasma-addons-4.14.3.tar.xz) = 3d1ff5693ee881dd0eac0664bba655d0e95fb530
+SHA512 (kdeplasma-addons-4.14.3.tar.xz) = e4382aa1aab27ddcdecdd53ca0d931b9d53d27dfe4b53736642e1e030ac940ee6909029d7ddb865ee13567facb4e380d3c23601b9ea985151fccba8860077925
 Size (kdeplasma-addons-4.14.3.tar.xz) = 1791328 bytes
 SHA1 (patch-ab) = eb477ddc938d7eb9205df386e6f2f17e88de392e
 SHA1 (patch-libs_lancelot-datamodels_CMakeLists.txt) = 0f8000457dbfc2de02e451a7a76faff089a1635a

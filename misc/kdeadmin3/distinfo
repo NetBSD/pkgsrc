@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.41 2012/06/25 11:30:28 joerg Exp $
+$NetBSD: distinfo,v 1.42 2015/11/03 23:49:39 agc Exp $
 
 SHA1 (kdeadmin-3.5.10.tar.bz2) = 952e9ba9bbd6b92e3a5a4a34fe3a78d7d41bc719
 RMD160 (kdeadmin-3.5.10.tar.bz2) = f271d929752c8927546261184ee905094e8ae3c9
+SHA512 (kdeadmin-3.5.10.tar.bz2) = 1954223a05a642b6a1b42919a0086abe037b85291a0f7fd344528dad3d2874f67d58ef8f54b60b0873a7cc091fe4cf76855958588236e5d3cfda4e4a1316064f
 Size (kdeadmin-3.5.10.tar.bz2) = 2124067 bytes
 SHA1 (patch-aa) = fdb705f78c783b4210804c8214998ea83e09f9ac
 SHA1 (patch-ab) = 9584b66e06f30580091da2d55f2593750663e553

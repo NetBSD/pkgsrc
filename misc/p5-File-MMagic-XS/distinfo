@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2014/12/13 03:49:37 mef Exp $
+$NetBSD: distinfo,v 1.4 2015/11/03 23:49:45 agc Exp $
 
 SHA1 (File-MMagic-XS-0.09008.tar.gz) = 0199caf5c7d9fa5ab1fa4fba56a6b839f7f8bb60
 RMD160 (File-MMagic-XS-0.09008.tar.gz) = 91ec402086aead7a463d31162e2ccbccce8f5f36
+SHA512 (File-MMagic-XS-0.09008.tar.gz) = 82c322f413dabaf916b23d3d829c7ca525d454e00d8f6b7165cef06f70cd1874c45515639e913b06b415864cda3631d34e912b0bd8c85109d2950b7212f8ad05
 Size (File-MMagic-XS-0.09008.tar.gz) = 120918 bytes
