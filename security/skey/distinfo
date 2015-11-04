@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.11 2015/06/12 08:04:23 tron Exp $
+$NetBSD: distinfo,v 1.12 2015/11/04 01:18:09 agc Exp $
 
 SHA1 (skey-1.1.5.tar.bz2) = d55fb286098900cdf3eb6b174a720a06c722312a
 RMD160 (skey-1.1.5.tar.bz2) = 33d97cbcd6dbc91bdca5b27056d51d1f5d06b68d
+SHA512 (skey-1.1.5.tar.bz2) = 4cbddc7e31134d5e23801a9b07de0d05c8357aaa8dddfb8426fceead3f54e539f77204f78a08b2a93890ef2f4f807a2208080f58f80818afa1b8cd4884b1fb37
 Size (skey-1.1.5.tar.bz2) = 61911 bytes
 SHA1 (patch-aa) = 78a4f791c5378d0ce2df8a92203859a34bc92bfe
 SHA1 (patch-ab) = 69d8f92968b3ebffc9b05fe7af1cde7e9d116587

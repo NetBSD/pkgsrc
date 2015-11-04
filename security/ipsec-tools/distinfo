@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.17 2015/05/19 15:45:44 sevan Exp $
+$NetBSD: distinfo,v 1.18 2015/11/04 01:17:46 agc Exp $
 
 SHA1 (ipsec-tools-0.7.3.tar.bz2) = 19dc160643547a0bfabf0fe0ad1a181d3c28f410
 RMD160 (ipsec-tools-0.7.3.tar.bz2) = e0ff32f0daa845934ac868ad5f36d58b25919c30
+SHA512 (ipsec-tools-0.7.3.tar.bz2) = 8612438f95e0ee72b24cca88190027f4dfe611513fd0a5dffe7b0398d2b1dcafee8b30081d0ea2497a173051b8572ed2d62c11a5f6b8c7fcb3e4d45bcfb67a61
 Size (ipsec-tools-0.7.3.tar.bz2) = 776096 bytes
 SHA1 (patch-src_racoon_gssapi.c) = 6294956137e91749feee8de9da696c492fe786b9

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2014/02/04 15:38:16 pettai Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 01:18:03 agc Exp $
 
 SHA1 (DenyHosts-2.6.tar.gz) = 02143843cb7c37c986c222b7acc11f7b75eb7373
 RMD160 (DenyHosts-2.6.tar.gz) = cab4206af992f5405ed1c9b302341c7b5649c71a
+SHA512 (DenyHosts-2.6.tar.gz) = 331144348d4930e2fa7a057a779bb7504dfa8ec348660e1a73fcd6a9195258408abb7c77de2bcc96724dfc42afbee918320eebfbc3b380d6ac4ff2d275e89600
 Size (DenyHosts-2.6.tar.gz) = 42667 bytes
 SHA1 (patch-aa) = 4bbb07f5918330a8dd828e8cfdf5bad3c4f50893
 SHA1 (patch-ab) = 3bb578421dc776cd42e769978d09872bc79098e8

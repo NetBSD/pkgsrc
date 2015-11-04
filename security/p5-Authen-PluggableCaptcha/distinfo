@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/11/17 20:34:47 he Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:17:53 agc Exp $
 
 SHA1 (Authen-PluggableCaptcha-0.05.tar.gz) = 671f7b6f5511804e88310f1c526d94cc76019d1e
 RMD160 (Authen-PluggableCaptcha-0.05.tar.gz) = dfebd2e942d417e2318c3046deb8ef977f0c83d8
+SHA512 (Authen-PluggableCaptcha-0.05.tar.gz) = 60cc674d6b9fc6b4f1f080510973cb0b4d58788bd6027f959121f73a8d6e52ecf10937bacd0001cf4b1593da2f35ec396743cecc0c6cfe604ea13cbb58e588c6
 Size (Authen-PluggableCaptcha-0.05.tar.gz) = 26262 bytes

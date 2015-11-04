@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2011/10/29 08:27:37 obache Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 01:18:06 agc Exp $
 
 SHA1 (pyca-20031118.tar.gz) = 71853be6cea4077c03b25ea2df6f1cdc25b9adeb
 RMD160 (pyca-20031118.tar.gz) = 3cc0d7f50bf146db5a919663a0a34ea13c5e181f
+SHA512 (pyca-20031118.tar.gz) = 41f413f4c2a7811778c470be04f233a82874cf243a0f0c496ea7678af012d36ddfebcc112f443b8467b894b2d24e7a0999bb72e00c9677bdbc7df8de25e21c67
 Size (pyca-20031118.tar.gz) = 83161 bytes

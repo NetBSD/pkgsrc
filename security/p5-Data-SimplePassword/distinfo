@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2011/10/06 15:33:31 hiramatsu Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 01:17:57 agc Exp $
 
 SHA1 (Data-SimplePassword-0.07.tar.gz) = 44557d8ba2663b75b5a0f10ffe0accaef453dbcd
 RMD160 (Data-SimplePassword-0.07.tar.gz) = f729ba47c2d9d3423364ba6d63818cbd2fcc24aa
+SHA512 (Data-SimplePassword-0.07.tar.gz) = 7b227f7444d60779d2de5d28e13652304092bc125fe2866290e6be05f06908ceb98f6d64afba3a33c10af1a9f65d68ceedaf3b95c9821b4c3dc8fb8aa949eeb1
 Size (Data-SimplePassword-0.07.tar.gz) = 8013 bytes

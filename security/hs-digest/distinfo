@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/08/18 21:18:48 szptvlfn Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:17:46 agc Exp $
 
 SHA1 (digest-0.0.1.2.tar.gz) = 6a5d16224abf42a87e60e4ede02c725fe45b5feb
 RMD160 (digest-0.0.1.2.tar.gz) = 0cf778101715c4ccb91afe74982777112d7293e3
+SHA512 (digest-0.0.1.2.tar.gz) = f7961c098677c0e75561e3706446b073f60c6a8646aca6d139d6559952b2cba189221ac8af59f2dc6e4da65ee4a789f703e2ebbcf1e9c3df3f98167409bdf7c9
 Size (digest-0.0.1.2.tar.gz) = 3790 bytes

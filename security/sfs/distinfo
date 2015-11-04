@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2013/10/15 14:48:38 joerg Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 01:18:09 agc Exp $
 
 SHA1 (sfs-0.7.2.tar.gz) = 3619afc9b785e4aa41f7cdf202c5b233a6b5fe08
 RMD160 (sfs-0.7.2.tar.gz) = 30cd5e21c4f63292ef0f5671720f6036d08e5ff1
+SHA512 (sfs-0.7.2.tar.gz) = 5b46d67053bd6a5d7bd4ed00cd61c0f20bdeb0f50050035952c446bd6f7f8a87b56f32aeb886f1b1e3f4fc7047905681199b6f3032b5b6da18bd6c7e2a41c9a5
 Size (sfs-0.7.2.tar.gz) = 1283652 bytes
 SHA1 (patch-aa) = 32bf5ca41bf588bdd4f2471c727822aac2906472
 SHA1 (patch-ab) = 812135658ed2e8e08991eea092a19f843e102f40

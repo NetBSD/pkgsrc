@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2005/02/24 13:10:13 agc Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 01:18:11 agc Exp $
 
 SHA1 (sslwrap206.tar.gz) = fc8a4a4134d2668705f9fc4ac92a45a847c3edf9
 RMD160 (sslwrap206.tar.gz) = 9b212acc6df16cded31ec6e85de8360ed99b9969
+SHA512 (sslwrap206.tar.gz) = 627c25bdf45245f9b3e8d03272fc46a0ef8d1c356e2b7990898b07267c2bbb28efd13d5ca97d330ce7369eedd2d20b5fa781f2e1a00ac732407e06d0b3a8890d
 Size (sslwrap206.tar.gz) = 21170 bytes
 SHA1 (patch-aa) = 1a90645c6a3a43829181d44205fd07e87f4b9f6a
 SHA1 (patch-ab) = 7f28cb5eca2a004408cb20aa365edad0d4f7d45a

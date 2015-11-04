@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.10 2007/04/30 19:26:23 adam Exp $
+$NetBSD: distinfo,v 1.11 2015/11/04 01:17:49 agc Exp $
 
 SHA1 (libmcrypt-2.5.8.tar.bz2) = b4d4d8851db543e6fda80572a54a4901b4e767da
 RMD160 (libmcrypt-2.5.8.tar.bz2) = 4dba23286aa00d88a7f6763629bb3cde7dd2fe6b
+SHA512 (libmcrypt-2.5.8.tar.bz2) = 6c05c42767401d66af67b0922b207d17cdb1c3efdbfdfb5b0c2e651821c48a8a6c6749debfa0206091b8a801f538fabe9f7d95ebc86d82c6b84c8001031d50fe
 Size (libmcrypt-2.5.8.tar.bz2) = 875425 bytes

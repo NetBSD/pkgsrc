@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.24 2015/08/14 20:07:34 wiz Exp $
+$NetBSD: distinfo,v 1.25 2015/11/04 01:17:42 agc Exp $
 
 SHA1 (signing-party_2.1.orig.tar.gz) = 021161fbb3365ded4a9c9bee0eacc870300863bd
 RMD160 (signing-party_2.1.orig.tar.gz) = d50a5f1e9c366d0102341e38fd4606a228d13737
+SHA512 (signing-party_2.1.orig.tar.gz) = 939415b5fd5538a2a8831c7ea37f4395fd56fc216700116ab39a3d3acd6ad7239b730d43f624593c2d89292251d0fc0c443164e26be1f9643b5b410efc75d33b
 Size (signing-party_2.1.orig.tar.gz) = 237478 bytes
 SHA1 (patch-keyanalyze_pgpring_configure.in) = 970a31b75721abb885cd6d7af3bad8efc73c11a2

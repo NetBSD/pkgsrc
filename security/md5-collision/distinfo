@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/11/18 23:42:03 agc Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:17:50 agc Exp $
 
 SHA1 (md5coll.c) = fdef49debfdc07a2c2bccac33d4164ad57d7b341
 RMD160 (md5coll.c) = e6e53dc7b2cdfb2655966573813e8713595932ec
+SHA512 (md5coll.c) = 7329550fadd9e6bf453fbb6cb407c61097b088022a5287ea11868eda182510cd4b704750de559439d8444bdf70b7c12f36d7909f633868ca890aa257dbe25bea
 Size (md5coll.c) = 45352 bytes

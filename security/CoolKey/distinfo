@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2013/04/29 21:31:12 joerg Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 01:17:40 agc Exp $
 
 SHA1 (coolkey-1.1.0.tar.gz) = 54136decf9dfd091c8b231cb77dac97db95e1866
 RMD160 (coolkey-1.1.0.tar.gz) = 1873e85aecb30c5311444c76fd85ba79633dce23
+SHA512 (coolkey-1.1.0.tar.gz) = 4b61de9b40abcf620fbb519d5e3cf1e93ebdd0470854cb63a597fc91e0182998217353014327f7bc4f255d22515d8ea2b08d36b3a831f5f09134fdcd418bc08b
 Size (coolkey-1.1.0.tar.gz) = 432808 bytes
 SHA1 (patch-aa) = f91d804c54540f45e7791b3ca9a1fb987bde0a72
 SHA1 (patch-ab) = 6aed241ec856b7b826e7c9953e286088d8960feb

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/05/16 15:55:23 bouyer Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:17:53 agc Exp $
 
 SHA1 (AuthCAS-1.5.tar.gz) = 576f4400338ba16dc6eb2f5212e8cbb07286b970
 RMD160 (AuthCAS-1.5.tar.gz) = 14d9860c4d9cf932eb997b8e7e70017606ee78eb
+SHA512 (AuthCAS-1.5.tar.gz) = e7142bb1b018f95b6958e53f95188b4920a945f73a1e5b11d20d754896ddd30793344b61f089e52425186f82980b8b0eeca34e431ae353f4e49e3a8455acf5a9
 Size (AuthCAS-1.5.tar.gz) = 7002 bytes

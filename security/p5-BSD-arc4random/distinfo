@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2012/06/02 14:29:42 bsiegert Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:17:54 agc Exp $
 
 SHA1 (BSD-arc4random-1.50.tar.gz) = d7472ce6306572965f041d37437b8be3446294da
 RMD160 (BSD-arc4random-1.50.tar.gz) = 794d4f799e769b7d11ccc79ba733c190868df664
+SHA512 (BSD-arc4random-1.50.tar.gz) = 0d7c50f0cfbd35ff98a0995fc7a7be163210cb14cc4958229dbf1cc0496f6b9ddbbd842aabac74c6b7ed111979221b48f2c90427e14f36aca3a0712852250744
 Size (BSD-arc4random-1.50.tar.gz) = 14432 bytes

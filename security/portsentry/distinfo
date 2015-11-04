@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2008/06/12 02:14:45 joerg Exp $
+$NetBSD: distinfo,v 1.9 2015/11/04 01:18:02 agc Exp $
 
 SHA1 (portsentry-1.2.tar.gz) = 091124db3f9ccc29afae08d6ab1fdd073b789d0a
 RMD160 (portsentry-1.2.tar.gz) = 8bf4bce18229a7ebff47e7fe50493738ae818085
+SHA512 (portsentry-1.2.tar.gz) = bcbea576816c654a9e165897ea51de3a4dde2940b05e26e785315fae5a5c7a0f697abfa2ace14d16e687e4a26f37c75cdaffefa1c5f98681f858dda22bcf3dae
 Size (portsentry-1.2.tar.gz) = 48054 bytes
 SHA1 (patch-aa) = eea7602eaed3d065b4ec6002dff524bdcd846e9f
 SHA1 (patch-ab) = 76d9062ba8fd205b05d64ce8485e1c6c294bed1a

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2010/01/31 23:13:24 joerg Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 01:18:11 agc Exp $
 
 SHA1 (tacshell-0.91.tar.gz) = cddbdfd0bacd197d0783270898d3935026c9e54d
 RMD160 (tacshell-0.91.tar.gz) = ac436ecb10c1a50852ec63b66f786bcbe0b24eb6
+SHA512 (tacshell-0.91.tar.gz) = da7610f67cb2c2be08f7a7a31289547ef7fbd7540eaf1d3d865ca7cd4f448957223eabcd3f9f95f221bd5a5cdf82eb470c7a9cf69e9556af556802cde70d156f
 Size (tacshell-0.91.tar.gz) = 56453 bytes

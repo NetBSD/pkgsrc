@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2010/07/19 16:53:13 ver Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:18:04 agc Exp $
 
 SHA1 (oauth-1.0.1.tar.gz) = b2d7609e4852b33d0d33f0bc6ae5cab8fadca014
 RMD160 (oauth-1.0.1.tar.gz) = 3d1dad6117aeb13392e35870716022e3a71897c3
+SHA512 (oauth-1.0.1.tar.gz) = a503b1bfff18c97a0e666cc376bfcb11e3cc0f3340dd16e0254fcd4340ed28ab0fc52d1de81b573309351a5edaf83d0b437c155580c00e32a81a7c219ee7eca9
 Size (oauth-1.0.1.tar.gz) = 9533 bytes

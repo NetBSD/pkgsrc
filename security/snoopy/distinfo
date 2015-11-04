@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2014/12/05 14:47:02 imil Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:18:09 agc Exp $
 
 SHA1 (snoopy-2.1.0.zip) = f06dc5fe1d74507cd6a3adef1ff8f37850c156fd
 RMD160 (snoopy-2.1.0.zip) = 3011124a6249de9fcf0577944dbd89b2368bd2ad
+SHA512 (snoopy-2.1.0.zip) = 03678c3d04c17ef94da5810b0329b8ea638824e3d961a07d8f0b7f0bafc5f73522a7f5b1db462e709a7391a4baa6b89a16169ae80be9f193cdde5e685dd0f65f
 Size (snoopy-2.1.0.zip) = 318165 bytes
 SHA1 (patch-src_lib_iniparser_src_iniparser.c) = 3f23f0512d51ad20730fe97e2391b744bbe74124

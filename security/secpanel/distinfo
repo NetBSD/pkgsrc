@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/10/14 01:06:20 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:18:09 agc Exp $
 
 SHA1 (secpanel-0.5.1.tar.gz) = 96bb65062e422212ef0e744fd5bfe42631c87924
 RMD160 (secpanel-0.5.1.tar.gz) = f18a4fa42c0f6e9ba27bcc6def6051b28a29762b
+SHA512 (secpanel-0.5.1.tar.gz) = 7a8472e5656aed1d42518c85c17a4774f714db54e32a8786625360321879a4bc060adc7778b0ea64c798c914495d5ad781d74b13681e6ee99808b8296bf0f2c0
 Size (secpanel-0.5.1.tar.gz) = 54382 bytes

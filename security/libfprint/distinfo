@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2013/01/23 17:27:48 wiz Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 01:17:48 agc Exp $
 
 SHA1 (libfprint-0.0.6.tar.bz2) = 430af91efbefeb2b98fe30215fb33051e4f8efc5
 RMD160 (libfprint-0.0.6.tar.bz2) = 3677a0997da641ba3e8586222ca88640e1f6373f
+SHA512 (libfprint-0.0.6.tar.bz2) = f7d5781b2911d45e80631f3d82dd1dd5a3a96ffa257569c01332b821265db59d123471979b79e09318560249e19ff2f2f5d3e3c3161449d7609d39dbdc0693ad
 Size (libfprint-0.0.6.tar.bz2) = 431957 bytes
 SHA1 (patch-aa) = 19797404ed4937941c008fd129e5efb643b9f5e2
 SHA1 (patch-ab) = 0bde246ce6e1d223637ba0decce6fa5db9e88eb1

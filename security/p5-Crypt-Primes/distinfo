@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 13:10:10 agc Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 01:17:55 agc Exp $
 
 SHA1 (Crypt-Primes-0.50.tar.gz) = 1b61c6693b7d703514082ddb5821cdfd45274e81
 RMD160 (Crypt-Primes-0.50.tar.gz) = c8d2aa1ce56c0e6f4f7228bcb0917edd0a964a10
+SHA512 (Crypt-Primes-0.50.tar.gz) = 82e6c3eb5dacf7897c82284b33d18d08c82cd5c3d1f8bc1287ce0f918de655b1bd1f8639863969e5732cb01feb4733da347fa9529986f6fee035d73c0c810739
 Size (Crypt-Primes-0.50.tar.gz) = 136299 bytes

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2010/01/03 14:30:37 schwarz Exp $
+$NetBSD: distinfo,v 1.9 2015/11/04 01:17:42 agc Exp $
 
 SHA1 (crack5.0.tar.gz) = e5e59d1e5e9e42c816a4dbd3f24cc13e16a31365
 RMD160 (crack5.0.tar.gz) = a6785bc5d6f197451f3d404ff7ce91231e474dfb
+SHA512 (crack5.0.tar.gz) = 1ee93f51670ad261907c94c26458c28905e852fdc5ac1198eca80c9b97e9c1964f6b93bcddbaebf578d23a730678a58edb6e531a651141deee9b57d34cfea16a
 Size (crack5.0.tar.gz) = 2964507 bytes
 SHA1 (patch-aa) = 528dfd47336abb5350bfc7c9e2943f998a39ff0f
 SHA1 (patch-ab) = a60df3b47288abf28e44400e4035580da765e279

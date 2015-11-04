@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/06/02 00:00:15 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:18:05 agc Exp $
 
 SHA1 (pydeep-0.2.tar.gz) = 948a0dd5f8e3894ee8c11a6fd7b710a4b7542def
 RMD160 (pydeep-0.2.tar.gz) = 4b232bc55d9da0a0883a50ac9e260b35672baebd
+SHA512 (pydeep-0.2.tar.gz) = 78bcf181d35bb7a1ab3f1eefae9cc03408f96dcbb36aeec78f4437d6b90f3f20d623e427c0f57047dff4b5b087539a3f056167e4c9f9da688ed8a6ca737aff98
 Size (pydeep-0.2.tar.gz) = 1645 bytes

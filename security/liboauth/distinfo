@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2015/09/10 23:05:53 prlw1 Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 01:17:49 agc Exp $
 
 SHA1 (liboauth-1.0.3.tar.gz) = 791dbb4166b5d2c843c8ff48ac17284cc0884af2
 RMD160 (liboauth-1.0.3.tar.gz) = c9f3182e51b48ebae27f577ccb077d8263c52f9a
+SHA512 (liboauth-1.0.3.tar.gz) = 5a13818dbb3e0df76f7a3fde451eff4f90c9bebfe2076a294921af0c07c2b0789f717f0f862ac6961562d4227e016dc198ddd7efb9c7ac599c3bfbcdb2ac33fa
 Size (liboauth-1.0.3.tar.gz) = 504950 bytes
 SHA1 (patch-aa) = 49b16044446c4531dc1a0b78c5f6ac2b6c659423

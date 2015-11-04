@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2013/01/14 14:43:55 bouyer Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:17:54 agc Exp $
 
 SHA1 (Authen-Simple-0.5.tar.gz) = a1f1e48fea54c288dbc6a98d88c3540656f1006f
 RMD160 (Authen-Simple-0.5.tar.gz) = 3d15fa2747699163a5a3cdc610c55d04ceb62f68
+SHA512 (Authen-Simple-0.5.tar.gz) = c8ccd41aee1fd1fba1aa2cb7854918a8ab45e3528f0f2677f8dd7a13bd326c9a13f8c8a2c8f45fc5caecbd328aadbbbda8ca22cef8187e7ce3da4dbca5b718ac
 Size (Authen-Simple-0.5.tar.gz) = 24613 bytes

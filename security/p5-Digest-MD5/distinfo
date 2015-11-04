@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.19 2015/01/14 13:13:05 wiz Exp $
+$NetBSD: distinfo,v 1.20 2015/11/04 01:17:57 agc Exp $
 
 SHA1 (Digest-MD5-2.54.tar.gz) = 18530083941bcb817ec34799a03878ac6dc9dde2
 RMD160 (Digest-MD5-2.54.tar.gz) = 2b777c1744e53ea0b8b537f974b537e81c230a49
+SHA512 (Digest-MD5-2.54.tar.gz) = 59bea96be8ee1c9bbcd1724b1ad51e0ee58c6e351a31597ed4de1230e7de0d0d717a8ca9013c4aefa99167b5fb308fc488bc23e2640aa6be2aa563f878c28cb6
 Size (Digest-MD5-2.54.tar.gz) = 48699 bytes

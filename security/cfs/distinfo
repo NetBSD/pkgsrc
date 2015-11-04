@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.13 2012/10/26 20:24:19 joerg Exp $
+$NetBSD: distinfo,v 1.14 2015/11/04 01:17:42 agc Exp $
 
 SHA1 (cfs-1.4.1.tar.gz) = be3f73b233149477b739456498c71b120d5f2fb5
 RMD160 (cfs-1.4.1.tar.gz) = 0ced92fe9773c6ce6b6706e26de9e17e710e7e46
+SHA512 (cfs-1.4.1.tar.gz) = d2bd3bd7add01eccbdb6e459847185ae9ee067b266ec908dfb5fb6a713875f655e2208ad0790020647c4952044ba252e09f4e503292b0a0f11bc1117a64e02ff
 Size (cfs-1.4.1.tar.gz) = 98943 bytes
 SHA1 (patch-aa) = 7df79a1e84c0866edc11496a4b2cd438ed725936
 SHA1 (patch-ab) = 1ff2d2e32b87332ec66cc8f01299fa4b1ddac81a

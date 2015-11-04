@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2013/04/01 12:23:52 joerg Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 01:18:00 agc Exp $
 
 SHA1 (pam_p11-0.1.5.tar.gz) = 4ff838140e452c84143445dcf6a3f158009b83b0
 RMD160 (pam_p11-0.1.5.tar.gz) = 57930c4b93182dd36cd2a1c81231638f813b47d2
+SHA512 (pam_p11-0.1.5.tar.gz) = 848c4671daa535db67c16b2eedc0495ed68cedeffe5a8c657310ff10fcfd17d2a8b4708f343b4b7b17498953ad47fdc133eb7ea885f94f795b29ff3973ceea12
 Size (pam_p11-0.1.5.tar.gz) = 348181 bytes
 SHA1 (patch-aa) = c82f6de3fdb094601f5250280c7a5727d41d983d
 SHA1 (patch-ab) = 701f8e878f928c98f0037b363099f9c12ece429e

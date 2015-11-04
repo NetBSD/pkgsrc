@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.15 2009/10/02 09:50:38 hasso Exp $
+$NetBSD: distinfo,v 1.16 2015/11/04 01:17:49 agc Exp $
 
 SHA1 (libpreludedb-0.9.15.3.tar.gz) = 617ca366401f461380ceff5de037efa7743ca1ec
 RMD160 (libpreludedb-0.9.15.3.tar.gz) = 70af1692966a6b31d4b18a2342a74991d3e8bfed
+SHA512 (libpreludedb-0.9.15.3.tar.gz) = 7cc0c04585fda115c88417782c6b18a61c93fe5c8d63c9be3f57de98972c031686576ab5a46adedc09b80054a9251979968c7006e59014d46b3265df166dcd12
 Size (libpreludedb-0.9.15.3.tar.gz) = 935457 bytes
 SHA1 (patch-aa) = 11cb4f1353a5dbfc046992d862230849aeb21afa
 SHA1 (patch-ab) = 52fe326b51634cdc123d4ccb48ac054c7cf318c4

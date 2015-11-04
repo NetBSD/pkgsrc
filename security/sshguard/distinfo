@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2014/07/26 19:57:44 tron Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:18:10 agc Exp $
 
 SHA1 (sshguard-1.5.tar.bz2) = f8f713bfb3f5c9877b34f6821426a22a7eec8df3
 RMD160 (sshguard-1.5.tar.bz2) = 7b4625b3b2e0cf974bc935d868b89bd0d8c189e8
+SHA512 (sshguard-1.5.tar.bz2) = 6d17abccd94af9e7fb04a54477ff5686caa64dc36e2f2cbc4a8cd7bc293923daf2fee87fa7f2e247eba1b310abe68549e652ab3224c2d19822d2e8a0306e49e6
 Size (sshguard-1.5.tar.bz2) = 303767 bytes
 SHA1 (patch-man_sshguard.8) = f907d23f5fe3db16dd44128c821f2fe6f94fcb03

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/04/23 11:27:58 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:17:40 agc Exp $
 
 SHA1 (PortableSigner-Generic-2.0.38c0573.zip) = fa98f8d4de485f79fb32ed7998b3b0918181e54e
 RMD160 (PortableSigner-Generic-2.0.38c0573.zip) = 92f6f599178d4274f1781a1b64c13f574ab56e85
+SHA512 (PortableSigner-Generic-2.0.38c0573.zip) = 3b227dacb77f2fc70ebd2f293b84cf4d8d7ea1dcafdc92d5941f4356b97ec406837ded1c27afad2d18612cc00e679d2cbae2a8c8adbe4899a51ab4c23ff9e898
 Size (PortableSigner-Generic-2.0.38c0573.zip) = 5219989 bytes

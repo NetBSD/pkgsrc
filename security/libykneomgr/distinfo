@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/11/14 13:35:09 pettai Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:17:50 agc Exp $
 
 SHA1 (libykneomgr-0.1.6.tar.gz) = 9e0d39544421788223baaea176c3ecafc4290589
 RMD160 (libykneomgr-0.1.6.tar.gz) = 93b55f02766ac36485df6d5d3c28c626a41629f9
+SHA512 (libykneomgr-0.1.6.tar.gz) = deb8deafa3c748bb888309d9d2d62f3657cd6d9d103ceee738abbc47a8e4466535e9641f104f5628657ec8924306b8d9d0a90cd2485dd5ad46dd2d8ee932fab4
 Size (libykneomgr-0.1.6.tar.gz) = 633881 bytes
