@@ -1,9 +1,11 @@
-$NetBSD: distinfo,v 1.8 2014/12/03 10:09:33 wiz Exp $
+$NetBSD: distinfo,v 1.9 2015/11/04 00:35:18 agc Exp $
 
 SHA1 (openvpn-2.3.6.tar.xz) = f360b4b858f70378f18853c334b0cd2f9219adbb
 RMD160 (openvpn-2.3.6.tar.xz) = 8b34467bc4759380e10688c4839a67afa6a58abf
+SHA512 (openvpn-2.3.6.tar.xz) = 2d9d8f818e95d6aa00388074479704cb89a901e03bc3f89ada0188034d65b30ecfafe3e298384997a9972e708537a6a8e7d32c0158099631a3b4b94708652e17
 Size (openvpn-2.3.6.tar.xz) = 809348 bytes
 SHA1 (openvpn-acct-wtmpx-20130210.tgz) = cf7bc26b12a65493cdf5db93b03bbb938a2f0f33
 RMD160 (openvpn-acct-wtmpx-20130210.tgz) = d9000789f04606bfa17db1597a45a4235b1119ea
+SHA512 (openvpn-acct-wtmpx-20130210.tgz) = 7b8fd4929e65d8d84158f62e5a17ff3adb3b4a6cff63b29038acfb368750719f2f593786ed9b02402824c19d872b188d2a46740a5c5f853e8873a71481b13aaf
 Size (openvpn-acct-wtmpx-20130210.tgz) = 2778 bytes
 SHA1 (patch-aa) = 95d9382b74d791306766433506eb0228a806dbdc

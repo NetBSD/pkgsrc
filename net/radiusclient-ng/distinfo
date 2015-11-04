@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/04/13 19:58:56 bouyer Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 00:35:33 agc Exp $
 
 SHA1 (radiusclient-ng-0.5.5.1.tar.gz) = bb8e9619f4c24887e793975e1cd999174cb68de2
 RMD160 (radiusclient-ng-0.5.5.1.tar.gz) = 3476e132fab39aa5cf1e278b9bffd3010abf13e2
+SHA512 (radiusclient-ng-0.5.5.1.tar.gz) = 72f9b0fc3d132163a320e218890fa4539e0ba7f54ebe742c3497604ba6bff571f152989b1ba674b6e2978568c43c3b9d607563b25f3899be2a08d39fb2e869af
 Size (radiusclient-ng-0.5.5.1.tar.gz) = 383855 bytes
 SHA1 (patch-aa) = 197f4f966193c6d4cd249029fd6f6c9be7762b0b

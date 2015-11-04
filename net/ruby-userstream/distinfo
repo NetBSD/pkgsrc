@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2014/12/13 16:38:06 tsutsui Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 00:35:36 agc Exp $
 
 SHA1 (userstream-1.4.0.gem) = 0d82c849760d6829fc0e42079b1ef9266efcb8da
 RMD160 (userstream-1.4.0.gem) = 2c58f7cb1756d9ed7231547b23836e8a2def6fed
+SHA512 (userstream-1.4.0.gem) = 51e6d1d2cc59c29b8f15e0f88c69e62db4ed689680d7713e37e09cb6cc7ad64621857d6faf15332cd429183a31a9f3271ef441f1aa7fde7038e4e4f678f1235e
 Size (userstream-1.4.0.gem) = 8704 bytes

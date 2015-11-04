@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.15 2011/11/25 22:13:29 joerg Exp $
+$NetBSD: distinfo,v 1.16 2015/11/04 00:35:07 agc Exp $
 
 SHA1 (kphone-4.2.tar.gz) = 10c7559b79fb13f42714008cd89a3981f66df2cf
 RMD160 (kphone-4.2.tar.gz) = 6176a97d19fe05741503f5b81dfd21e6130193e1
+SHA512 (kphone-4.2.tar.gz) = ed4b3ba517ad647256be3986d65b4feb044fccfca4bd9ce1aa72c0836d9da54ca82e108cc41dd64f4305be29c2a7710136daa7ffb501ab95720bea0d37777def
 Size (kphone-4.2.tar.gz) = 287320 bytes
 SHA1 (patch-aa) = ecb31fdeeaf4cb2a5aafe50b5fe58b85375cfd65
 SHA1 (patch-ab) = 6edbc28aeb485b8004b6258b04d50c0888c28a31

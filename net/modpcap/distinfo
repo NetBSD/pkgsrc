@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/11/29 07:25:04 agc Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 00:35:12 agc Exp $
 
 SHA1 (modcap.c) = e6f41df0432dc95883606eaf2a66778ec9843552
 RMD160 (modcap.c) = 1cc60d790c446d917a0fefc15c5da06a59825533
+SHA512 (modcap.c) = d59ce0fe47b9628c0805b990f9e82a48cd8ebdbe81aba0a283e09de8c25c51386a747b357d5626783254a8dd35219d857b49b351a27b1226e81f3254e6a7807e
 Size (modcap.c) = 31124 bytes
 SHA1 (patch-aa) = 4c568040d21e766d5506a88abd18291ad0c53a2c

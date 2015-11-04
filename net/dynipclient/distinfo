@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2011/09/25 19:53:55 joerg Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 00:34:59 agc Exp $
 
 SHA1 (dynip_3.00.tar.gz) = d1acee591e3ff51444f7dcbd7250c52a92a2d5f2
 RMD160 (dynip_3.00.tar.gz) = b01af33171c8296bb13f6e31bec25e723d2f7272
+SHA512 (dynip_3.00.tar.gz) = 0d5b3dbe6f5e1625c4cb2bbbda1ea4765129442d33c3979af06f620e074eef09112fcf630bbb44b38f5b6bb812e0b0d9ec19c2aaeb2283642ef82734330c703a
 Size (dynip_3.00.tar.gz) = 22443 bytes
 SHA1 (patch-aa) = ff1a5be64b46675f331b73415acdb04abc62936b
 SHA1 (patch-ab) = d17b71dababab0149322e6954757eb3e46d9383c

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/04/21 21:40:25 reed Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 00:35:44 agc Exp $
 
 SHA1 (walker-3.8.tar.gz) = acb4afd1605cbb308d4ba8780394f97fdb7d3c1d
 RMD160 (walker-3.8.tar.gz) = 0b2e1fb1924f36b3c5224f56a57526cb9d6e5200
+SHA512 (walker-3.8.tar.gz) = ace897f81ba6671fd550ffa69d0609e50dc95a27fb8e9570f80bb7bb8b43070390b5e9bc01816ee784c80d176d9d6356756976c78b9c1bd9445097ee10148334
 Size (walker-3.8.tar.gz) = 18478 bytes

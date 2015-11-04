@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2010/06/02 13:10:05 adam Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 00:35:01 agc Exp $
 
 SHA1 (gift-openft-0.2.1.6.tar.gz) = 7f7c19a3835859c3d76b7b32413161f2c9b007f4
 RMD160 (gift-openft-0.2.1.6.tar.gz) = 492ef2bb691de81a1de099a13c70bce0398adb0b
+SHA512 (gift-openft-0.2.1.6.tar.gz) = b6839e727173bd852f42a31530fc84d6b209c2a0bc086285e414e0d690bfe189983de6ae5ae379978a71801cd9c2ac8c32efadd0f62bc4cd4cdf198710396ade
 Size (gift-openft-0.2.1.6.tar.gz) = 469969 bytes
 SHA1 (patch-aa) = dff35a901a7f25d1855a8cf7e3b0f394589d488c
 SHA1 (patch-ab) = 97e559c94f043b4481ed60cb972060a6acb11654
