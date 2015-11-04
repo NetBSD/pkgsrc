@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2013/08/14 05:31:04 obache Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 00:38:39 agc Exp $
 
 SHA1 (gnome-packagekit-0.4.0.tar.gz) = 8a204535c4a219b8987af756db999ec4f3caa84e
 RMD160 (gnome-packagekit-0.4.0.tar.gz) = 9c1de792b00749ea54fe44d7287cf55228df4bdf
+SHA512 (gnome-packagekit-0.4.0.tar.gz) = 53d892ab873c5e58fdfa3b7a6a468682c5a3ead2ebe8bc830498c21d5c3e70cba2268048bf10aa6902fba5080ead6fc774906b599d0cf009b59619307aab6d8b
 Size (gnome-packagekit-0.4.0.tar.gz) = 2732798 bytes
 SHA1 (patch-aa) = e9b6d7a9d8034aad4e418b7c1e6cfe753e560c0a
 SHA1 (patch-ab) = 88522542563043b06358e98fa323eb94b9e34679
