@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/06/16 13:06:33 sborrill Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 03:28:27 agc Exp $
 
 SHA1 (deskmenu_1.4.2.tar.gz) = cc55f2e60d74acf8d9ccbe77e40232391f5d10f7
 RMD160 (deskmenu_1.4.2.tar.gz) = 8df8a3e687d59facea8ba6fac13d9a535690a357
+SHA512 (deskmenu_1.4.2.tar.gz) = b1a9166ca36f722e497fd6e0b11ba3aafa453126525b7ca60d52c3cee355016d5b856a942c086dcb28d1f4007d22b4802148f9c34710a50b7440239981c1e35b
 Size (deskmenu_1.4.2.tar.gz) = 137477 bytes

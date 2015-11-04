@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/07/02 12:38:32 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 03:28:46 agc Exp $
 
 SHA1 (libXprintAppUtil-1.0.1.tar.bz2) = 6391b4a018189b49e31eda0fe76b3daf92b447ec
 RMD160 (libXprintAppUtil-1.0.1.tar.bz2) = e5e16acd5e6b8b77f5b6821613470950289c4cc4
+SHA512 (libXprintAppUtil-1.0.1.tar.bz2) = a66707fb64c0e04298c31d59baabf149814b40673ee644178126c3d765db8eacffb8916e45515fe805b15c110cd935412008ae301cef9948ab24f81422152a2f
 Size (libXprintAppUtil-1.0.1.tar.bz2) = 208379 bytes

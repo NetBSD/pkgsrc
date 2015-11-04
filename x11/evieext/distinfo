@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2012/08/13 13:10:03 wiz Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 03:28:28 agc Exp $
 
 SHA1 (evieext-1.1.1.tar.bz2) = 86d9545273b07961f0d5ba65c6c408371e10c0d2
 RMD160 (evieext-1.1.1.tar.bz2) = 520fe89b5922418e9c8434eb3a922d01efd4eb23
+SHA512 (evieext-1.1.1.tar.bz2) = 9b7ce0725f1394860d35baeb22feeaa35d21bae0be6d5ebc710dd59b1dce2a8b2e2ad1c153a7f3ecc80278ed903c492caf5396d3599ec9c5f68ebda9d81a6e02
 Size (evieext-1.1.1.tar.bz2) = 95093 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2014/06/07 06:53:34 wiz Exp $
+$NetBSD: distinfo,v 1.8 2015/11/04 03:28:44 agc Exp $
 
 SHA1 (libICE-1.0.9.tar.bz2) = 3c3a857a117ce48a1947a16860056e77cd494fdf
 RMD160 (libICE-1.0.9.tar.bz2) = 933e67f69cef94b03fc96a026222013060323c03
+SHA512 (libICE-1.0.9.tar.bz2) = daa8126ee5279c08f801274a2754132762dea2a40f4733c4b0bf8e8bdad61cba826939a2e067beb3524e256a98a2b83f23c8d4643f3e75a284ab02cc73da41b7
 Size (libICE-1.0.9.tar.bz2) = 384921 bytes

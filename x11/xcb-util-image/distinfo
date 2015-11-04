@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2014/10/24 21:10:21 joerg Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 03:28:58 agc Exp $
 
 SHA1 (xcb-util-image-0.4.0.tar.bz2) = c9c9361781911a47b28f74fc6ebe0abd1273fae4
 RMD160 (xcb-util-image-0.4.0.tar.bz2) = 7f36f7aae35194866d36b064061ed6c8abd8cf50
+SHA512 (xcb-util-image-0.4.0.tar.bz2) = 9b7202c054e1160f9ca97a86be1210d9fb47f2119f89ca85f15f20909cca884bfe0cb88e3e71c75b65e1a0a72b980066ccac810e41a91db895c74dde77440d4f
 Size (xcb-util-image-0.4.0.tar.bz2) = 327891 bytes

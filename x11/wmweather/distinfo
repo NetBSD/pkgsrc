@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.9 2015/08/16 12:03:02 leot Exp $
+$NetBSD: distinfo,v 1.10 2015/11/04 03:28:56 agc Exp $
 
 SHA1 (wmweather-2.4.5.tar.gz) = bb42dabd7e25e8996a50daf6623f9dda555eabdf
 RMD160 (wmweather-2.4.5.tar.gz) = 22418b350d54a68c8625adca127e1ff7a50032b9
+SHA512 (wmweather-2.4.5.tar.gz) = eb62a6d03875c087e306e83ec2010916da702f942b22b130c327d890daf29803bf01f52fe0e03b962656d0dd9a329696e8fc19238eedc32f5ce72d8929eab87b
 Size (wmweather-2.4.5.tar.gz) = 85128 bytes
 SHA1 (patch-aa) = 65f758bb94039e07a228c00d0b8cafdb6fc06db6

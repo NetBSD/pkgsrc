@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2012/11/19 23:12:02 joerg Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 03:29:14 agc Exp $
 
 SHA1 (xwit-3.4.tar.gz) = 916f32c200f8bd5d30738b9added84612c1366ae
 RMD160 (xwit-3.4.tar.gz) = 62a92780352e81130e8d894e377744b61c67bd90
+SHA512 (xwit-3.4.tar.gz) = db0cc8cd7e899790493ca97fa4f12869385d1cfaa807298476d961401004d752531fe75ec72520733e78d81dcd91009c1b4437295056dc1de6219d766235cc5f
 Size (xwit-3.4.tar.gz) = 14536 bytes
 SHA1 (patch-aa) = 4e754921499ad065965077b9c130cf92d107c058
 SHA1 (patch-ab) = c9cd41f627b57075ad08303bb0ff5a6993e2bc10

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2012/06/03 18:39:37 wiz Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 03:29:04 agc Exp $
 
 SHA1 (xf86driproto-2.1.1.tar.bz2) = 23e861f40ba0f0cbbfd7db7ba2ef623762ffca17
 RMD160 (xf86driproto-2.1.1.tar.bz2) = d7da476ce21b8e695d14e796daf1e25315798927
+SHA512 (xf86driproto-2.1.1.tar.bz2) = dce0d4da1dd703a6cdfe7676537034d43c9e84d70f20afdfe59be7929a97fbd077fa7026e41c0fca8aafd5fe666b2ee99265c8e94e69263bdf46e2be9ff34df2
 Size (xf86driproto-2.1.1.tar.bz2) = 96528 bytes

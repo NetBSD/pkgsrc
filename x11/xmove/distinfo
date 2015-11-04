@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2012/12/24 21:16:40 joerg Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 03:29:09 agc Exp $
 
 SHA1 (xmove.2.0beta2.tar.gz) = a34292d88c72db2e1839fe27ddd18456ef069429
 RMD160 (xmove.2.0beta2.tar.gz) = 9ae8a107c50ff971f15aa2027da9e581ba7f06b8
+SHA512 (xmove.2.0beta2.tar.gz) = 0092e6ff2b407d1a7f89a1b7e99897b3fc27aab7d9088869e48800e40f490c2b838beb8fd33c6154a9fae777998a6afb72b98fc209568b35c249cbea173569c4
 Size (xmove.2.0beta2.tar.gz) = 639187 bytes
 SHA1 (patch-Imakefile) = f71d9f465e5613d41a8fbd4d693473c54f4a50ee
 SHA1 (patch-aa) = 19ab7f53c89486a716bfcdffde9f62f86f2fe10e

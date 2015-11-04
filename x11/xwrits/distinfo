@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2006/08/07 23:48:15 wiz Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 03:29:14 agc Exp $
 
 SHA1 (xwrits-2.24.tar.gz) = a53ad9a7dce6360a7e592b4aafecee44493addb4
 RMD160 (xwrits-2.24.tar.gz) = a67833f1b4ce31fc4224e5333017a6bd5fd384e4
+SHA512 (xwrits-2.24.tar.gz) = 3b04181fc4947bc6cbd293fa381d46b6eb1f23cf6e3551d431d780ba925c8e49b4e916a4a4fa280175fe79512daa0dd0af50bcbf098f70e381edb6b912c28a2a
 Size (xwrits-2.24.tar.gz) = 190168 bytes

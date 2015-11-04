@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2013/07/13 19:44:54 joerg Exp $
+$NetBSD: distinfo,v 1.9 2015/11/04 03:28:29 agc Exp $
 
 SHA1 (fltk-2.0.x-r6129.tar.bz2) = fafb9e5309127e5dd3e127ecf83f410312a427b5
 RMD160 (fltk-2.0.x-r6129.tar.bz2) = a43d9603fdbf12fd0deefbad7e5ef5dd8f0a1c6f
+SHA512 (fltk-2.0.x-r6129.tar.bz2) = 840b5bb1db1c035d9bec3b053293a7d03841bd01290a07f21ba79361a6ea1f06e4951682fcc23f6001e427f1bc37eded49c2b42ad9200ac421c3889161e1c2f9
 Size (fltk-2.0.x-r6129.tar.bz2) = 2593617 bytes
 SHA1 (patch-aa) = 344311614b787f1e7b42bde06f2eeee9dc9459e8
 SHA1 (patch-ab) = 80d69520729a397d7b7f03d8ad9cd6a4b7759660

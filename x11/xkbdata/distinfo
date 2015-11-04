@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/11/07 17:27:42 joerg Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 03:29:07 agc Exp $
 
 SHA1 (xkbdata-1.0.1.tar.bz2) = 66ff0387bae7afc26444bdc564001d39c17e806a
 RMD160 (xkbdata-1.0.1.tar.bz2) = 722d9d6c17657992afa6f9fda616c4ce6dba9882
+SHA512 (xkbdata-1.0.1.tar.bz2) = 5cae5dd51dd877d190f410d6cafe5854a8f5101494522c2ed120e0c25851c984d3be69c424ed2f148aea262e87c6d35e694ee5d96ff0ea37934485c10ac31248
 Size (xkbdata-1.0.1.tar.bz2) = 287556 bytes

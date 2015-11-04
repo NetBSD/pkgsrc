@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2005/02/23 17:36:25 wiz Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 03:29:10 agc Exp $
 
 SHA1 (xpenguins-2.2.tar.gz) = 1c9e7a2a868122081581ba9d46a00f0ef2dbebf2
 RMD160 (xpenguins-2.2.tar.gz) = 2a641e7d9142f3514a2c1fe56fd3a257ce6b74d0
+SHA512 (xpenguins-2.2.tar.gz) = cb24e17a5a19df0de162b2214dec2fbfc07396cdea9d138b8426d8fc38e248b1faba65ebfb8ba74a5cf515063ba8f4032c4588586b23b5be6aa0a208cfcfebf1
 Size (xpenguins-2.2.tar.gz) = 275210 bytes

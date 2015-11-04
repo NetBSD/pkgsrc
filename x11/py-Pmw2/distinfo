@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/01/18 19:49:32 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 03:28:51 agc Exp $
 
 SHA1 (Pmw_2_0_0-rc1.tar.gz) = 3e28b9ad661bad20e228543b5820c96791c9ac48
 RMD160 (Pmw_2_0_0-rc1.tar.gz) = 4055ae284cd4b2f919797bbc0b9f88b200e6327d
+SHA512 (Pmw_2_0_0-rc1.tar.gz) = e3eeabf09b6ad07a558261e9f9b719386ddb57886e6d2e440d9660fb7b1ce4f38d25e07f9b39caad4413c47b46b09ebeaf01676b20f149ba9d6e44a452cfdc88
 Size (Pmw_2_0_0-rc1.tar.gz) = 409507 bytes

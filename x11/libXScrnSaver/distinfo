@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2012/06/03 17:31:50 wiz Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 03:28:45 agc Exp $
 
 SHA1 (libXScrnSaver-1.2.2.tar.bz2) = 7b8298eec371c33a71232e3653370a98f03c6c88
 RMD160 (libXScrnSaver-1.2.2.tar.bz2) = b0d007fe39d64eafa4cabb0276d49c0f04e04e89
+SHA512 (libXScrnSaver-1.2.2.tar.bz2) = 973aed3ad296c7160b66fccd4fff7375afc4332239acbe0ae1644fed9c453de69040f8174882ba264c731448edba9b499d398d013d556aea72434339399ed29f
 Size (libXScrnSaver-1.2.2.tar.bz2) = 290437 bytes

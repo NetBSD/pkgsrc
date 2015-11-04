@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/08/09 16:29:52 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 03:29:13 agc Exp $
 
 SHA1 (xtruss-r10030.tar.gz) = 5d7fa08b12dee127ac63004bd8a0eca381de52e5
 RMD160 (xtruss-r10030.tar.gz) = 5e3df288bf95dc6dc3b148cf433e87af98d8cb5c
+SHA512 (xtruss-r10030.tar.gz) = 1e62371d12c692a5ce3c2182328e7d93d1c9a8177616005a739ecafc3e94c33d640d9d8cc807cfd34931412e0344586a42b5a7ad358089206c1b0beb8e550990
 Size (xtruss-r10030.tar.gz) = 218148 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2012/06/03 18:38:41 wiz Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 03:28:58 agc Exp $
 
 SHA1 (xcmiscproto-1.2.2.tar.bz2) = 59ae9ec6414964440bf654b207618e5dd66a32fb
 RMD160 (xcmiscproto-1.2.2.tar.bz2) = 06890647d88499b9533669837c0091e424b06ba2
+SHA512 (xcmiscproto-1.2.2.tar.bz2) = 33060d0f9bba92670fce6e42f5d9094e84b803fd07e61b159aafdbee40a9876b49cf844bc7bae4c628fbb11a6a0883a9ee07041b59290488f1e9dbfe6e5128a8
 Size (xcmiscproto-1.2.2.tar.bz2) = 112486 bytes

@@ -1,19 +1,24 @@
-$NetBSD: distinfo,v 1.26 2015/10/30 15:53:00 tsutsui Exp $
+$NetBSD: distinfo,v 1.27 2015/11/04 03:28:44 agc Exp $
 
 SHA1 (kterm-6.2.0-scroll-wd0.2.patch) = 384d938d3cfea48ae31426c918be6b8df59eb1de
 RMD160 (kterm-6.2.0-scroll-wd0.2.patch) = e2ea4285def5c4ec8b88d36a20a328cc1082a469
+SHA512 (kterm-6.2.0-scroll-wd0.2.patch) = 2cd64419db78500d07fbf749980a58a4d803b52c51223593c21ae33ca0d7d7b53ba86be99e811a45057c5bc197367468e4f70eee6644ba15a3fc4477f27df502
 Size (kterm-6.2.0-scroll-wd0.2.patch) = 2901 bytes
 SHA1 (kterm-6.2.0-termios-wd0.2.patch2) = cc6e57123aa43c5cb849b59a6dce574c10f9ed08
 RMD160 (kterm-6.2.0-termios-wd0.2.patch2) = e9492a0054e6c208743931d1f7c10cd63569fefd
+SHA512 (kterm-6.2.0-termios-wd0.2.patch2) = cbeda79d0bff365acbb6f23a64eace99761784ed4ac5709c917ab3297e2e4cc9054c0b0f7cc0202ba6975a56c707cf0923f1311a9d9e3649f24e544c4bd1020d
 Size (kterm-6.2.0-termios-wd0.2.patch2) = 7785 bytes
 SHA1 (kterm-6.2.0.NFS-xauth.patch) = 940298d2ae3f45d4b2c80f29687c90a09d9a6cb0
 RMD160 (kterm-6.2.0.NFS-xauth.patch) = dd4aa490abeea768e74b97baba6ea29f79299328
+SHA512 (kterm-6.2.0.NFS-xauth.patch) = 4ab3523bcb8b8494c0fbc3adcf676d7ba8e39c940fcc9976f04761128ebde25ad2202b1140471a8109b3d7065be5f65513231401e2a0de017d68cbd6ca42945d
 Size (kterm-6.2.0.NFS-xauth.patch) = 4137 bytes
 SHA1 (kterm-6.2.0.ext06.patch.gz) = aa7e4b7c96fd39f0b7a247734ca3992d3faa0243
 RMD160 (kterm-6.2.0.ext06.patch.gz) = 3486869425a85496714ef98493f32188fffcfe38
+SHA512 (kterm-6.2.0.ext06.patch.gz) = b24c554d86b381192bf1aa74cc15cb32172366e3fe5a62fb3fffb12e23dc63715ce0666122cf8426d6d6b03f9ef0daae54b13b912f4f419a5a5c8114e24d4e08
 Size (kterm-6.2.0.ext06.patch.gz) = 78729 bytes
 SHA1 (kterm-6.2.0.tar.gz) = 23b612254e9f7c9f5e233a4bcacc651887a3f7ee
 RMD160 (kterm-6.2.0.tar.gz) = d23c755f119b5602a3c6f6ac97e27e10c43a8bfe
+SHA512 (kterm-6.2.0.tar.gz) = c84a5b57154dc14ab93e1bc6cd33103495716c203a648d57044672c4218cb7e4e80110f7e6e7c0900c80c2e55843ecb190de4f61d0c72dcf9b1ada306348ce1f
 Size (kterm-6.2.0.tar.gz) = 200448 bytes
 SHA1 (patch-KTerm.ad) = 7fccdb89f586e4db634a2efc9a919a6525982964
 SHA1 (patch-aa) = 6afc18d4c35f86077e00d3444d8ba6953463f073

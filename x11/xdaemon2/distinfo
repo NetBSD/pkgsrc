@@ -1,17 +1,22 @@
-$NetBSD: distinfo,v 1.4 2006/03/02 22:58:56 hubertf Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 03:28:59 agc Exp $
 
 SHA1 (xdaemon/xdaemon.png) = ee7960820646c6e351aee241d34067f17d9a8a10
 RMD160 (xdaemon/xdaemon.png) = 60fbb758ede9c156902bf805bc81d66bc5017876
+SHA512 (xdaemon/xdaemon.png) = 80c5671b953262ede0d9abd3b3a82ae3a2a18c05598e73ea9a6a44003e8abdcf5e509a1aea5a3bff95ed302b9e222e90a25ce6f3c079be47c8a7b704e4e9716a
 Size (xdaemon/xdaemon.png) = 25658 bytes
 SHA1 (xdaemon/xdaemon2.png) = 8bc4dfa53554d7e2f0ffdfcc935766935b94dc67
 RMD160 (xdaemon/xdaemon2.png) = 246de3e73a4278aec03d2268db0ffe1234497d6d
+SHA512 (xdaemon/xdaemon2.png) = 1d0b94c7d1d42c4b1878cd9eb77614ad346b30b191d83a418f97c89dabd470c3650be7231c8cbacaf4769b6e90e67d480397f041df085ac9ddf68342ed49914e
 Size (xdaemon/xdaemon2.png) = 16741 bytes
 SHA1 (xdaemon/xnetbsd-flag.png) = df0200510b4669e8d095bdd4992b3ebb07bc74ed
 RMD160 (xdaemon/xnetbsd-flag.png) = 6ef83b3cc2ffd7eba3e6ee60aa02e0e900791402
+SHA512 (xdaemon/xnetbsd-flag.png) = b4b75f4ba6037e3f7f4dd3a8bb412f35b48c7aa864d810cfa0c7bd24516d3ad40f29a8a4d3f1bc4653a88efd474a14fa086c9cc9872bcc3d87d981dde7f41f90
 Size (xdaemon/xnetbsd-flag.png) = 7844 bytes
 SHA1 (xdaemon/xnetbsd-flag2.png) = fb2080fd70f3ad49d28f66c12964a4498376f363
 RMD160 (xdaemon/xnetbsd-flag2.png) = 35d69c44a0f1cd5fd25b76b2c5fbe52b2d05bcca
+SHA512 (xdaemon/xnetbsd-flag2.png) = f5a72f9c42e3cd1496728171e078c799223281a7c7a06705a7423a50fc7bfa89d42887f306ff8d98d378f5129393d1fc140c876a7915dd0d29612d538f766ce6
 Size (xdaemon/xnetbsd-flag2.png) = 2564 bytes
 SHA1 (xdaemon/Daemon.README) = eb1e6af52adc02ded77af17e8953134b7e60d23b
 RMD160 (xdaemon/Daemon.README) = 39edd92ed4314397080f32a8caff0ac3f716ecf4
+SHA512 (xdaemon/Daemon.README) = 8aaf704a95c7cd25c85c4e0d789ed050b555f3ec0a3c11754b79d8b118b68c32d0eac1fbc3022124b10a7c588e78b592e77ad2f718ab4120a95b8859ca94fa5b
 Size (xdaemon/Daemon.README) = 2191 bytes

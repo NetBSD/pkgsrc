@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2010/01/15 17:59:26 tnn Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 03:29:11 agc Exp $
 
 SHA1 (xproxymanagementprotocol-1.0.3.tar.bz2) = 4abb036371670ecc25d32e48b3277fe203ae5203
 RMD160 (xproxymanagementprotocol-1.0.3.tar.bz2) = b2a7ff26d7452dfa557185c4564958ec84c6191d
+SHA512 (xproxymanagementprotocol-1.0.3.tar.bz2) = 123eca1bdb47db3d2adb2c90a33398de6b3e3cea5cb831348ce0ae9e31358efbb105e12c771994de867e7d2e3f65fe948ea60481250d1491cd8dc1fdddb44a8e
 Size (xproxymanagementprotocol-1.0.3.tar.bz2) = 84154 bytes

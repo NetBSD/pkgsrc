@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2007/10/09 11:09:21 rillig Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 03:28:24 agc Exp $
 
 SHA1 (Xaw-XPM-1.1.tar.gz) = 8d85d0a96c86f46da9dcf21eef8daf3a7dd64c7f
 RMD160 (Xaw-XPM-1.1.tar.gz) = a97a08af7459ada39c7b97a69cf1b05d3e570343
+SHA512 (Xaw-XPM-1.1.tar.gz) = b4ee640d7d5ffac5074058102273e7381be043af88d0db72b6de549083e0f974431aa019b09b6cb7e1a6c7a2886ee01c35055670e3607a913cc3a48fb3b3a6b3
 Size (Xaw-XPM-1.1.tar.gz) = 1188556 bytes
 SHA1 (patch-aa) = 29e549f234464cf8795d422f772bb92d9ace21a2
 SHA1 (patch-ab) = a2e4249ab6d9dce2b98452cf60c0d49e281cde7b

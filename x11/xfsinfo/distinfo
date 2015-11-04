@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/07/02 22:56:38 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 03:29:06 agc Exp $
 
 SHA1 (xfsinfo-1.0.5.tar.bz2) = 7513e16ba5c8fef31aeaff4a42bf131859e75ee0
 RMD160 (xfsinfo-1.0.5.tar.bz2) = 19abd94f21c52aaf3abf99bf5e18223b1684f965
+SHA512 (xfsinfo-1.0.5.tar.bz2) = 49fcbe91ac121022ccecd4a2f0e55a9a5cce7ba12b713be78b3b7f2847e622631bca6f6647256a956910fda591a87b524b966d5c849b8b2526d6f1a1960fe57f
 Size (xfsinfo-1.0.5.tar.bz2) = 122941 bytes

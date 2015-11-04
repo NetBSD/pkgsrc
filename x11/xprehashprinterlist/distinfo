@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/04/12 15:08:22 joerg Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 03:29:11 agc Exp $
 
 SHA1 (xprehashprinterlist-1.0.1.tar.bz2) = c40607bfd0ac86ed4d959af83a1a8583222dddf9
 RMD160 (xprehashprinterlist-1.0.1.tar.bz2) = e5da12f61ef36264644d3f0b50fca304f10c443b
+SHA512 (xprehashprinterlist-1.0.1.tar.bz2) = 91238cda0733f83c77db5b91f2524b4e323f3933e6edbbd96a4b1c38d8eadfc07b8b5a356d56b843d348addce3caef7cb7aa5f75953186e78f47e30d0550d51e
 Size (xprehashprinterlist-1.0.1.tar.bz2) = 75613 bytes

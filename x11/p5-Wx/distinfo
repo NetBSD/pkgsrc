@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.8 2013/01/19 17:14:48 schmonz Exp $
+$NetBSD: distinfo,v 1.9 2015/11/04 03:28:50 agc Exp $
 
 SHA1 (Wx-0.9916.tar.gz) = 951a50076b0d81c4763a33b1cd0cd239168fb30c
 RMD160 (Wx-0.9916.tar.gz) = e406122d93f78a313b460840352a95834064b489
+SHA512 (Wx-0.9916.tar.gz) = 2e569dff9e3dc258e7abff4e2df8f3f70b385fa3a4716e7d9c6314c02f68ff4b0256ad739b86aeea98a2e52dcc3fd6aadfe9873b8235f1fb68217ef32f1316c9
 Size (Wx-0.9916.tar.gz) = 476639 bytes
 SHA1 (patch-build_Wx_build_MakeMaker.pm) = c700f49085a9542ceb4555f351d491a9e6893612

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2014/01/03 05:03:51 ryoon Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 03:28:53 agc Exp $
 
 SHA1 (rep-gtk-0.90.8.1.tar.bz2) = ee4077d8075ee2f7b2759a07e37cdb5294117c36
 RMD160 (rep-gtk-0.90.8.1.tar.bz2) = ea93d7e42a344b6cc94798800c5457318575b790
+SHA512 (rep-gtk-0.90.8.1.tar.bz2) = 9a787f4ba429e67c244444366fcdbb40d1dde66024faa8e1d2edf4562c1099114cc25714d9bd301a3707529298263bdd902ebc9670d4fc5f56f707d346803088
 Size (rep-gtk-0.90.8.1.tar.bz2) = 291355 bytes

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2013/09/19 10:25:44 joerg Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 03:28:52 agc Exp $
 
 SHA1 (qt-creator-2.0.1-src.tgz) = 605bfe7876c4fa322544bc2314b059767eae407f
 RMD160 (qt-creator-2.0.1-src.tgz) = f33a58c926bd710b4688bb5292fa66c417e78070
+SHA512 (qt-creator-2.0.1-src.tgz) = 13af6eab029903b23e23c8196c981823c15ca8b02a6d49a2cc412e9d59d81500cbf4deffb5c5ae2470f04f5e3f261151ae732b21eb126450953d38aa18c24791
 Size (qt-creator-2.0.1-src.tgz) = 18350214 bytes
 SHA1 (patch-aa) = 57b6fe2b9601aee03790c69e05004edcfd2c896f
 SHA1 (patch-ab) = f0acd533050e7f310dba5981eef0f51992d3a41c

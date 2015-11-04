@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2012/06/03 19:56:10 wiz Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 03:29:07 agc Exp $
 
 SHA1 (xineramaproto-1.2.1.tar.bz2) = 818bffc16139d6e3de4344c83f00c495d3536753
 RMD160 (xineramaproto-1.2.1.tar.bz2) = ec5d4878b93766bf9e12bf981f4b419db5fa5853
+SHA512 (xineramaproto-1.2.1.tar.bz2) = ec2194c9bcad3f0f3eb3e9298792272213aa032ae9d6c00dcad567f31d7278a8c676fc67f47aae1a6deef5bade0b204346ed16da4a4c4d5a507c04d109d3dbb3
 Size (xineramaproto-1.2.1.tar.bz2) = 96239 bytes

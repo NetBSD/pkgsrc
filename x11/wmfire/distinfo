@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2005/02/23 17:36:21 wiz Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 03:28:56 agc Exp $
 
 SHA1 (wmfire-0.0.3.9pre4.tar.gz) = 9304816484bb11fa0ab4a2a41b9af6dfea809341
 RMD160 (wmfire-0.0.3.9pre4.tar.gz) = d9f8cfbf96678b13a2ab19802e94f5eca0335063
+SHA512 (wmfire-0.0.3.9pre4.tar.gz) = 338bdff85f55dd5c0ae70c2a7c20c9f6342e1864908c94924a77a22377b3596b8a2f931bab3616b3f86ab228d262c55beada0ec69fb3708027fe2cef63d57d55
 Size (wmfire-0.0.3.9pre4.tar.gz) = 69853 bytes

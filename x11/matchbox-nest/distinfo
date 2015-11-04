@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/12/31 13:30:29 peter Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 03:28:49 agc Exp $
 
 SHA1 (matchbox-nest-0.3.tar.bz2) = 190fdd159d19fe9b2bf08f76241776af0abf2654
 RMD160 (matchbox-nest-0.3.tar.bz2) = e39614e3aa91f25aeb77d121f2243109501a4342
+SHA512 (matchbox-nest-0.3.tar.bz2) = d2d52242cd53edd59881d673a021b6b4a981e1d225373862bb061d65a966295bc4c7b4bb28c109e974e71b57fe98f59946a6928765480f4ea55c2c5ba87cbe0b
 Size (matchbox-nest-0.3.tar.bz2) = 275456 bytes

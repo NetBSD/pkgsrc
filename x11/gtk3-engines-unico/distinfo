@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/04/28 01:59:52 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 03:28:32 agc Exp $
 
 SHA1 (unico-1.0.2.tar.gz) = eef6200029e8787196e6dd45c5daa27e69eab988
 RMD160 (unico-1.0.2.tar.gz) = f8159cbeb907e0d4944de71e306db8f6efb39298
+SHA512 (unico-1.0.2.tar.gz) = a3d5a7efc6244d0d6556319ba25be9df87b330fcac4ac949cadeb940cc39f329785d4a39fd0ab2c9904fa5a2c5bafee8463118888a07036059e726adf76ccccb
 Size (unico-1.0.2.tar.gz) = 362903 bytes

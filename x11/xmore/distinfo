@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2010/09/10 20:00:45 joerg Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 03:29:09 agc Exp $
 
 SHA1 (xmore-1.0.2.tar.bz2) = 7db4e5feb82d5d05038722d3af00d28e103bed18
 RMD160 (xmore-1.0.2.tar.bz2) = d92615867445f60229c991d9dc59b8a99a60815d
+SHA512 (xmore-1.0.2.tar.bz2) = 718ad254beaae57475cead3815fc7625692699c76749c64e3aeb722daf5e1cecbea9d1207e3427d6a5d0aa240a6aaf678ea1656d6731b9f47e1a8045d62c3efb
 Size (xmore-1.0.2.tar.bz2) = 107340 bytes

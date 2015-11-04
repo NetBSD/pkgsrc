@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 17:36:25 wiz Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 03:29:12 agc Exp $
 
 SHA1 (xtermset-0.5.2.tar.gz) = cf6ce5d0c32d4f695330f784e3bda863b1b8aa57
 RMD160 (xtermset-0.5.2.tar.gz) = 3dddde6c6987597010e895aa36215531044d5a21
+SHA512 (xtermset-0.5.2.tar.gz) = 1e8edcf816e9e09a7f754e1fb33f946af4c9504ca28629d40b0deea1a254e2f9bba71e835fe1d51afe31c343cc18dabf1db16a3d28e192a47aa43ae9ba821041
 Size (xtermset-0.5.2.tar.gz) = 46328 bytes
