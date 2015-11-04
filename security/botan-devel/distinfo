@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2015/09/13 02:31:22 joerg Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 01:17:42 agc Exp $
 
 SHA1 (Botan-1.11.16.tgz) = 7214da75a638a7b4a233aca4eccd94d8c688fd52
 RMD160 (Botan-1.11.16.tgz) = 7b82dd41243b7bb53d3d667db58afd7e2f948871
+SHA512 (Botan-1.11.16.tgz) = 3301bba49f121263b407c7225bb622415fb4b7e4940980b0fdcb04c277a52940b9aaf3a3567a2d02c9e94c853c9d8dbc22276f2b7f00c2397cfe0dda2bd80320
 Size (Botan-1.11.16.tgz) = 2843785 bytes
 SHA1 (patch-src_build-data_arch_arm.txt) = 977a5917ee94e1bafb50f467e99d0f6e1e561ec9
 SHA1 (patch-src_build-data_makefile_header.in) = 517fbad5ef23dbda56759b80fb4981f04db20d8a

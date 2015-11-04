@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.4 2013/01/11 00:06:21 joerg Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 01:18:07 agc Exp $
 
 SHA1 (rainbowcrack-1.2-src.zip) = b077a654133cd108a3c619d66482e1796d56b0dc
 RMD160 (rainbowcrack-1.2-src.zip) = 51fdcf84ebfbe8ebb9e5bc6c3d4452f9d158eb79
+SHA512 (rainbowcrack-1.2-src.zip) = a48a4a0921e753a741c78b2984341b63d9272420149f30f0e2ee25519fc25feccdbfc40b05b1af2b0f19f3d097060517649bef30293ae31e8948373bf63759c1
 Size (rainbowcrack-1.2-src.zip) = 44742 bytes
 SHA1 (rainbowcrack-1.2-openbsd-diffs.tar.gz) = 3ab5c1d293e8b86e5e206ecf859525e89f357acc
 RMD160 (rainbowcrack-1.2-openbsd-diffs.tar.gz) = 709556a31e99aa069062762362f48b3ec24beabb
+SHA512 (rainbowcrack-1.2-openbsd-diffs.tar.gz) = e1ac44f7296e380fd887206878f579c3c27468c4f4ff272308f2bcfad3cd29e34c42b4d71f6c67142540333f5e0bd397806a5bba0b36f4e1620a40f63d71e892
 Size (rainbowcrack-1.2-openbsd-diffs.tar.gz) = 846 bytes
 SHA1 (patch-aa) = 01298e694fd944fe2053bb43403f3bed8e996143
 SHA1 (patch-src_ChainWalkContext.cpp) = 126d27626e7f388600e79826c40dacc6e7934fcf

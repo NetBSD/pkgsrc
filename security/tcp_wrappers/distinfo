@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.17 2012/07/20 09:58:36 adam Exp $
+$NetBSD: distinfo,v 1.18 2015/11/04 01:18:11 agc Exp $
 
 SHA1 (tcp_wrappers_7.6-ipv6.4.tar.gz) = e82e269337223a001118e5084b05c6c53fe53dc5
 RMD160 (tcp_wrappers_7.6-ipv6.4.tar.gz) = 7bc5617c0e2833dd60c2fdc681f4890df5a9ac4b
+SHA512 (tcp_wrappers_7.6-ipv6.4.tar.gz) = b753b2e54fe243fbcb403470b19fa1b08a912a6a65981dc1bf20288379b903701d4b5a477350cb3470cb6d908cf51ef653f44dc17daff17f34e59b6aa1b41c95
 Size (tcp_wrappers_7.6-ipv6.4.tar.gz) = 138700 bytes
 SHA1 (patch-aa) = 6bc6f0523b4e8c31a4b02af948f285e800d5c59b
 SHA1 (patch-ab) = b05733e5e615bd3009045ecef4d4e988c8df6236

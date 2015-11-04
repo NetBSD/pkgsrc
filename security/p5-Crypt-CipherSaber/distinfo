@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/05/24 13:49:19 mef Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 01:17:54 agc Exp $
 
 SHA1 (Crypt-CipherSaber-1.01.tar.gz) = d321e5bac469ec0b7ca1486e4228c704d6557c95
 RMD160 (Crypt-CipherSaber-1.01.tar.gz) = 4805de39dc152489495584295cc7693ba48d9109
+SHA512 (Crypt-CipherSaber-1.01.tar.gz) = c523b3db0b011b560a3f1f45793cdcdfb2bda0ed196bed02f058d39a5f9505826113eb6f0f6baedcb3a0bcc5dc1218fb311361c74701b321ecf8df4080722201
 Size (Crypt-CipherSaber-1.01.tar.gz) = 11527 bytes

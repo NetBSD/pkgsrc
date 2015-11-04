@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2015/10/07 23:19:08 joerg Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 01:17:42 agc Exp $
 
 SHA1 (bitstir-0.2.tar.gz) = 867fc2b28805a71ca2f1e3e3337b3c906951e121
 RMD160 (bitstir-0.2.tar.gz) = a34412882c2685acd4b6613fbfe8a6c9fa9ebcf1
+SHA512 (bitstir-0.2.tar.gz) = b64305108e5f4101b812334503e5973e94d7813b7848b2a2bcc2638fb01890f3322a6b332240bb03fbc5be3db5d1b5befd12eadc0c511f1825609cf52130d41b
 Size (bitstir-0.2.tar.gz) = 6423 bytes
 SHA1 (patch-bits-avail.c) = 0a121a5878f38cc9debdd644669a15f31ff5fb1c
 SHA1 (patch-bitstir_c) = 80b743e9fd552f73586bb6e9046fcae58527d27b

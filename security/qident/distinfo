@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2007/12/28 12:27:20 obache Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 01:18:06 agc Exp $
 
 SHA1 (qident-1.2.tar.gz) = 756f618384536090085319aef1b3200f57b47a1e
 RMD160 (qident-1.2.tar.gz) = 805d19e8ec0ebe3d72f749df2c63c05a01e0a607
+SHA512 (qident-1.2.tar.gz) = b84cb9b862675dbde8127b01e32fececf95ae8b0de486c680536f8f430e9358e075c2458ffcace072652025b2dd14bb6956677bda294c9d2afc9e9506b4c013b
 Size (qident-1.2.tar.gz) = 2760 bytes
 SHA1 (patch-aa) = e989fc840fbf82e8efb9bcb008d24ce106062f55

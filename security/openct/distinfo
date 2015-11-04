@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2012/12/03 21:12:48 gdt Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 01:17:52 agc Exp $
 
 SHA1 (openct-0.6.20.tar.gz) = 3ae3f8b32dc12fb2b29493224573b10e4bfa6fb4
 RMD160 (openct-0.6.20.tar.gz) = 06059e052293649fe695c335c1418c024147f538
+SHA512 (openct-0.6.20.tar.gz) = 5175b418847200dbd4af0d8ab09546d94568639c67db67bdea93c68cb042c7ef901bb356784d6b1d9f4de914535eee5a450b39a15d1ab9a676ffce790a408a3e
 Size (openct-0.6.20.tar.gz) = 702818 bytes
 SHA1 (patch-aa) = d44e8daa9cc402c8276bf385a5fbbe5a498b37bb
 SHA1 (patch-ab) = 117d4a1636620f65feb130deb295a31c4cb90d5a

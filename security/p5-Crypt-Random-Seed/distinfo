@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/07/14 04:41:51 wen Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:17:56 agc Exp $
 
 SHA1 (Crypt-Random-Seed-0.03.tar.gz) = 032c7c7c1ddae3c80bb90d0514b412f33dca9cfa
 RMD160 (Crypt-Random-Seed-0.03.tar.gz) = e459454717f7446d04de2292957daba972e7c8a4
+SHA512 (Crypt-Random-Seed-0.03.tar.gz) = 5ee6ea67c325aa9693c96ef650e3888a599d3d7e25316f869808dc6e06b9dd86f1c200c9097939f74511e2ed59e48df1b28cc96e5f7988076d9f7f5d840a894e
 Size (Crypt-Random-Seed-0.03.tar.gz) = 22175 bytes

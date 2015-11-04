@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/07/03 04:59:19 manu Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:17:45 agc Exp $
 
 SHA1 (gnupg-pkcs11-scd-0.7.0.tar.bz2) = 66f83d11c17be43da63d6ccd2478a38251e4cd9c
 RMD160 (gnupg-pkcs11-scd-0.7.0.tar.bz2) = 0b21a8dd907523df795dfbc5e8e84ee78d6618b4
+SHA512 (gnupg-pkcs11-scd-0.7.0.tar.bz2) = 7a72821fed1f20a2796db1b6450bfe1c06073e111ffd326a019a001b1a75862ba2fda6bcd19401a7f40d3268a6242b2432aee3dbe70cc8da2e629cf81ac92fb2
 Size (gnupg-pkcs11-scd-0.7.0.tar.bz2) = 120460 bytes

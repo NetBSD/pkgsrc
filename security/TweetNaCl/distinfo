@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.2 2014/05/18 13:32:32 wiz Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 01:17:40 agc Exp $
 
 SHA1 (TweetNaCl-20140427/tweetnacl.c) = 1d1d2dbd1219f1f360d92d43c501747d244462e5
 RMD160 (TweetNaCl-20140427/tweetnacl.c) = 160cd3bd8a193347b3e216cfb9d491ec77308364
+SHA512 (TweetNaCl-20140427/tweetnacl.c) = 3eeff767e62de5d5dfdd04dd88a5238e08f04eefbdba084658ab081e259ff746c5d24ef85fa409d26c6eac3e29990b1200e834f3d658cb737f3acaadff6860b7
 Size (TweetNaCl-20140427/tweetnacl.c) = 16637 bytes
 SHA1 (TweetNaCl-20140427/tweetnacl.h) = 154477811bcf007801bce52883a778f746334783
 RMD160 (TweetNaCl-20140427/tweetnacl.h) = 57cfcaa08bae73279e9e4574f8da2edb590251f5
+SHA512 (TweetNaCl-20140427/tweetnacl.h) = 3256811a72c2d1a01fded72669413730484ccf398ab7d2150c4e0e0775f5db874ba0d22fb4f3b584dd4cdbf95d119dd11710439045fe07dab2dbba058f7df6de
 Size (TweetNaCl-20140427/tweetnacl.h) = 20014 bytes

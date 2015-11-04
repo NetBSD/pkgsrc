@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/07/03 16:02:33 sno Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:17:56 agc Exp $
 
 SHA1 (Dancer-Plugin-Auth-RBAC-1.110720.tar.gz) = c6a97f2e09148db5d5e12542849846c06d25407c
 RMD160 (Dancer-Plugin-Auth-RBAC-1.110720.tar.gz) = 2fc45bf1bb425f16d62315a1e8375582371a6782
+SHA512 (Dancer-Plugin-Auth-RBAC-1.110720.tar.gz) = 649912590a92a524189883f74c7ba117a03083b55eca1e2fef977964f373ef4ee1bf7d54e7e716176fd0278074bc2b68c693762db3e53788c39924aa14de0eb9
 Size (Dancer-Plugin-Auth-RBAC-1.110720.tar.gz) = 13703 bytes

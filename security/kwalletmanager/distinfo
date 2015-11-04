@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/11/13 11:29:53 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:17:47 agc Exp $
 
 SHA1 (kwalletmanager-4.14.3.tar.xz) = 99981321f1891a77008bb2de4985f09739e75ef3
 RMD160 (kwalletmanager-4.14.3.tar.xz) = 2768aa8d9a3c157da49e72749d076dd3ff2d9218
+SHA512 (kwalletmanager-4.14.3.tar.xz) = 1f77dfaa66e386ed665c46361d5d99748c03f004b8282b62e02eb5fede15773d6a953b88ea94dfd529dc70a415a32384c26670876f6b6fa6e2ece2adb0594ecf
 Size (kwalletmanager-4.14.3.tar.xz) = 456176 bytes

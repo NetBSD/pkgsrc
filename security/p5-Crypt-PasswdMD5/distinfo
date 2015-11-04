@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2014/04/13 09:17:28 wen Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 01:17:55 agc Exp $
 
 SHA1 (Crypt-PasswdMD5-1.40.tgz) = 7bc5aa63adefb575462eaf1430af9812a0541295
 RMD160 (Crypt-PasswdMD5-1.40.tgz) = 404e85c40c4da1f19f17a38b412b84aebb54779b
+SHA512 (Crypt-PasswdMD5-1.40.tgz) = c00f76210a9c07ad610b4698b15d142c3859100a13af620919e32bf046ab2febf8ebedafcffa4dde62f7e9af0e9ff137dae623e0bab60380fca003f7b35bfc77
 Size (Crypt-PasswdMD5-1.40.tgz) = 6683 bytes

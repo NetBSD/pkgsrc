@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2011/09/05 20:24:56 cheusov Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 01:18:07 agc Exp $
 
 SHA1 (rsaref.tar.Z) = 9515c7d58150aa949e1fb01ea939131fca638dc6
 RMD160 (rsaref.tar.Z) = 8901e19d9186a1201c1a4060f9fa01fb9ae0a838
+SHA512 (rsaref.tar.Z) = 70cf6fe7bbf91ab5b5e09af02e8a9b732d94f1126df720fcdf23fb6f5b4d46515573cb18241eb7354c9a40faadfcf30942044cd4a3a8507de6c783fadec03422
 Size (rsaref.tar.Z) = 144092 bytes
 SHA1 (patch-aa) = d1ae15fddfadbe15bfc841ade743a97f2cc92ca9
 SHA1 (patch-ab) = b415044c5d67bef14e231e9c4030af5ca457df50

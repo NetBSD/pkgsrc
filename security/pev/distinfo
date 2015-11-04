@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2014/12/09 14:37:06 khorben Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 01:18:00 agc Exp $
 
 SHA1 (pev-0.70.tar.gz) = b2d1191c3b57049c78ef77b8f54f7f78838af129
 RMD160 (pev-0.70.tar.gz) = 9ffe6dccecdfbeba09e34f9a212c2abcf3861ef0
+SHA512 (pev-0.70.tar.gz) = c98ea778b05b514ef26d87627484b5942247fb4190ad6a166ee2a01fc185dd4663848ca9b5ba3a26be5c8a40eaf42f476bec58ddea0565ac4c6fe0710c9575aa
 Size (pev-0.70.tar.gz) = 254821 bytes
 SHA1 (patch-Makefile) = 39b31541b2f51e82e9807aed36723105959aa26c
 SHA1 (patch-lib_libpe_Makefile) = 11d1beba07b313a4baf2e95b5b56dfd7da4787f9

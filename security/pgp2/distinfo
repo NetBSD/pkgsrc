@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2009/09/29 17:10:38 wiz Exp $
+$NetBSD: distinfo,v 1.8 2015/11/04 01:18:00 agc Exp $
 
 SHA1 (pgp263is.tar.gz) = 031e061ba1d62d7db35f1f854c489867e88f421d
 RMD160 (pgp263is.tar.gz) = b1cba2be918cecc8b9062272d43626c8876fa7f4
+SHA512 (pgp263is.tar.gz) = ced42d884f8dbbc7afc2dfbe485716333df5fa04a5727dc63fa3c7504e53447a7561d7406a057fba18e6239836e40cc13de4b30f2223552c6dc3dae0664a4374
 Size (pgp263is.tar.gz) = 607982 bytes
 SHA1 (patch-aa) = 740486e879c161041969fedebc565dd7683c277c
 SHA1 (patch-ab) = d210fadf6ef45ecce20381174ec1b55615dc3490

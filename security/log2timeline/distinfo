@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2013/09/14 06:35:15 pettai Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 01:17:50 agc Exp $
 
 SHA1 (log2timeline_0.65.tgz) = 99bb6f68a417aaa840a7957be9918586d1918a33
 RMD160 (log2timeline_0.65.tgz) = c9dad4035bad1dbbf87e82f123aa014f03aa647f
+SHA512 (log2timeline_0.65.tgz) = cfc71370c71c30352d55f9647c6f4bd23aee05a5df9fa18f8347a787960df97eccd73eb991e378c3ff6b7c6df7e239d717e6175178d6bdabcf47986438b86a0e
 Size (log2timeline_0.65.tgz) = 579325 bytes

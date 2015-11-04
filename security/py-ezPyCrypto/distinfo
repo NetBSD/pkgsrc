@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2014/04/07 12:36:38 obache Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:18:04 agc Exp $
 
 SHA1 (ezPyCrypto-0.1.1.tar.gz) = 9c488be4b9d0d59234339950a313b8aca2ec1fe3
 RMD160 (ezPyCrypto-0.1.1.tar.gz) = 689458ef5b2c4f2ef79c28c56589deb938b0ec75
+SHA512 (ezPyCrypto-0.1.1.tar.gz) = 185072b5285c9a34c972a1eeefec3fe5d6fbd78825389584b7472f40db429fba0bfd517ad4fde2ee667ebf9f32f0e311fab67e063094d86847cd347c447878d5
 Size (ezPyCrypto-0.1.1.tar.gz) = 1392693 bytes
 SHA1 (patch-ezPyCrypto.py) = 2db4ec17b11ae30f19ce075e086406fcf18b937b

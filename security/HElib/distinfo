@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2014/09/27 10:11:20 jperkin Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 01:17:40 agc Exp $
 
 SHA1 (HElib-20130501.zip) = 4f10c723eda202442550b89d98da8b9f4fdca013
 RMD160 (HElib-20130501.zip) = 729115076c6e90584cf5380694903631764849fb
+SHA512 (HElib-20130501.zip) = 2582e2a6d56dcfa8db268d302579e8ccad85a2658f673bf58d16af13ef040a97efb4ee91a2ca76783ba2d7306ce56e8eea69ebdaa649dc4f64ae282212f2f4e4
 Size (HElib-20130501.zip) = 2287320 bytes
 SHA1 (patch-IndexMap.h) = f03a5c5d64370a233bf73fd3bff369e32f8a220a
 SHA1 (patch-Makefile) = e3a867712039b83f2c49c4dec2e5ff0a6c26f6ac

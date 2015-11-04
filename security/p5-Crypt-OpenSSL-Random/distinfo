@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2008/01/08 14:48:35 heinz Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 01:17:55 agc Exp $
 
 SHA1 (Crypt-OpenSSL-Random-0.04.tar.gz) = 641375f49f715dccb5ea064160ff11978be877ac
 RMD160 (Crypt-OpenSSL-Random-0.04.tar.gz) = 5891f4f00783396e5b88066cb5bf345fe5b15174
+SHA512 (Crypt-OpenSSL-Random-0.04.tar.gz) = 0c5121903dc16bb0ee7f0d6b9528ee43e68a47e1fd301d18fb70c02c9869a1fa7f03f5dd9cdb6ee3c005d8de123f6c1357b459c0dfecd28894874f946f885bea
 Size (Crypt-OpenSSL-Random-0.04.tar.gz) = 10679 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.8 2015/03/11 00:51:06 mef Exp $
+$NetBSD: distinfo,v 1.9 2015/11/04 01:17:44 agc Exp $
 
 SHA1 (flawfinder-1.31.tar.gz) = d20f64bf75877f62f63b5115201f31d85df52373
 RMD160 (flawfinder-1.31.tar.gz) = 8a96954f1f582e2f2b56590cadeac69c29c2dc88
+SHA512 (flawfinder-1.31.tar.gz) = 880919a05dbf0e29055f052b88c8bbfd403105504749bc65fb17675e6ebe0d84f9cd367e7a6efc68dc0d9209e0938185da4718b70f484007c507fe96b83e0355
 Size (flawfinder-1.31.tar.gz) = 174148 bytes

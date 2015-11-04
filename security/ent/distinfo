@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2013/04/25 16:24:54 agc Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:17:44 agc Exp $
 
 SHA1 (ent-19981020/random.zip) = 0f2f12dc67d1f02f77776709cf5fc5eee1d1b2e2
 RMD160 (ent-19981020/random.zip) = b21b8401fdbd2aac189fe4a442a1164b172407f8
+SHA512 (ent-19981020/random.zip) = f74cfae8cd8b9f405b7459a350571d3ef438bdba42508da59ca214f6e7f6372d253a4c1a30685aa7dfc1cf14dde9796ea54bf42aa103a63bae09a5bb3fd3d3d8
 Size (ent-19981020/random.zip) = 76200 bytes

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2013/12/13 11:01:11 jperkin Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 01:17:52 agc Exp $
 
 SHA1 (openvas-libraries-2.0.0.tar.gz) = e3b5614e8fa4721ad93a9eb483f4f0a23242d84b
 RMD160 (openvas-libraries-2.0.0.tar.gz) = c7365d81289bca625ae984fceab901ced0626ce0
+SHA512 (openvas-libraries-2.0.0.tar.gz) = 75596646f254b0641919d7bdc11b287971626527c47a4e10a8f44cdf244e71f73993fa72c5e1e6a8371a5e5f80caf93262934c4341964389cda0d30b87b06d4c
 Size (openvas-libraries-2.0.0.tar.gz) = 425670 bytes
 SHA1 (patch-aa) = a308f1af94cd5524745d2b1c4d311f10ec442de4
 SHA1 (patch-ab) = 35935f39ad9c0a432abc1d6fc1ed93fb52a7218f

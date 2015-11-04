@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2008/07/17 20:50:24 heinz Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 01:17:59 agc Exp $
 
 SHA1 (Tie-EncryptedHash-1.24.tar.gz) = 7c870708594b6ad8e3ff1097fbd580221fb806b7
 RMD160 (Tie-EncryptedHash-1.24.tar.gz) = 0943a34aecfc352faba03f0390daa1419ec0d109
+SHA512 (Tie-EncryptedHash-1.24.tar.gz) = 1b86af7ed2854f8b5a9f03f22484ecb08021efd87993b3f5786a56764478e022d5e2f2cbb87d4a832743a05e1983174481b95d3545175106a44b9911fc8adef7
 Size (Tie-EncryptedHash-1.24.tar.gz) = 10515 bytes

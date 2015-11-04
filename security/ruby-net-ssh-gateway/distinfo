@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2013/02/11 02:08:16 taca Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 01:18:07 agc Exp $
 
 SHA1 (net-ssh-gateway-1.2.0.gem) = bb8eaf03eec228f517c2931c400c7b3ca5509466
 RMD160 (net-ssh-gateway-1.2.0.gem) = ee1676f4db97612513f22c3c41fc49c79539ab83
+SHA512 (net-ssh-gateway-1.2.0.gem) = d387e7ab709628c79cb0c01d0428a8e7e1beddfbdd14c58b7aaff6de11f4a8a8b2cb2026de95977de830855fbed610c276a52f18469da3b4f11b51885e251f60
 Size (net-ssh-gateway-1.2.0.gem) = 23552 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2006/03/04 15:57:32 tonio Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 01:17:47 agc Exp $
 
 SHA1 (jessie-1.0.1.tar.gz) = c7dbd76b51642eb00f6ae46078f36d97f455df2f
 RMD160 (jessie-1.0.1.tar.gz) = cebc62e1d9047774a91b5e0f109796da37bd7733
+SHA512 (jessie-1.0.1.tar.gz) = ade744dc011570edc6c1823c6f691f7879958e42fac03d0524f9b33f04196b5a4babdc1f3144eebb163b4a021e6da808fd19bdf44eb4a70c8c7a75850ae7657c
 Size (jessie-1.0.1.tar.gz) = 838941 bytes

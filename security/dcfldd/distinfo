@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/06/14 07:27:08 pettai Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:17:43 agc Exp $
 
 SHA1 (dcfldd-1.3.4.tar.gz) = 0ff5f510ac88490efb24b5b4929c06a7eac47ed8
 RMD160 (dcfldd-1.3.4.tar.gz) = e0baefedf4c2fb4a114b598e565c3ae98a9b3914
+SHA512 (dcfldd-1.3.4.tar.gz) = 1effc9a8f9b887dd4e35039e11d9812441d83b7fc9deafb9f9642cbed1e076579581cb87013c00bcd71a178947cda6d630662eb1863e693809abcca011ff33d0
 Size (dcfldd-1.3.4.tar.gz) = 166530 bytes

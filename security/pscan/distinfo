@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 13:10:12 agc Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 01:18:02 agc Exp $
 
 SHA1 (pscan.tar.gz) = 7844cabcc1fa014d5d2d192d94565133d60cd51b
 RMD160 (pscan.tar.gz) = 7c92b2b8c8e2f65dc4a37da37de47170ae24809c
+SHA512 (pscan.tar.gz) = 83196cc9c450217fc2287d38fd1a0b9d1d9951b8f6328b6b9f7f50b680f653b099af04d4c448f3cb2b2a96871eec8772557851e887faa2f41dc259f01c031e78
 Size (pscan.tar.gz) = 14555 bytes
 SHA1 (patch-aa) = f9b62f12372392bbe65dd97e441037eceb02c622

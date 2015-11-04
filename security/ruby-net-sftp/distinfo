@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2013/06/16 17:17:04 taca Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 01:18:07 agc Exp $
 
 SHA1 (net-sftp-2.1.2.gem) = af86cfe869b3bca15e9e4eb09b76991e09f48cbe
 RMD160 (net-sftp-2.1.2.gem) = d0317c5370a8c16eedc1e1ee9e4696c44ec15045
+SHA512 (net-sftp-2.1.2.gem) = 126a9537a4ac45150096db4d46ad19e0d8a1833fef3733a1b66ff01463c0d109415f0ef807706ff88be8c5c1395bbd4620e529f06e3c9f746a4ed6ec2cb7d18d
 Size (net-sftp-2.1.2.gem) = 67584 bytes

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2013/05/23 15:46:11 christos Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 01:17:46 agc Exp $
 
 SHA1 (arpd-0.2.tar.gz) = e827ada394aff91f9c539cee35e946e81152426c
 RMD160 (arpd-0.2.tar.gz) = 777ef6789e2882cf0e0958951377f65f6362d816
+SHA512 (arpd-0.2.tar.gz) = 24bd4626188d74e172a46312790f8453619af2ac634c23379d1922c789ed97ef5db8a73ae13fccd98c94457da79682d6a1d7ccc3236c787f9d2eb15f64716ea2
 Size (arpd-0.2.tar.gz) = 49437 bytes
 SHA1 (patch-aa) = 5f89c08d7d93a6f47cde95b6a139695c6ad1e694
 SHA1 (patch-ab) = 7d6f1395a8b2da23f4ba617a9d3421ed5677846a

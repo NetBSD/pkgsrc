@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2013/08/07 04:54:06 agc Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:17:48 agc Exp $
 
 SHA1 (libcurvecpr-20130806/master.zip) = 4083d5edaec792f68bfd91414ce5d4aedab8a688
 RMD160 (libcurvecpr-20130806/master.zip) = ae87ec907de18324c38e147b30c8cc7103380a48
+SHA512 (libcurvecpr-20130806/master.zip) = c26cfd8444eb8124be804e26935ba60b430454dcfe84b3c707f88e1b87c2b0fdb09197c38345d1b7f9efeb86402afe50767144c48cf25d368b16cc7af853c6c3
 Size (libcurvecpr-20130806/master.zip) = 110182 bytes
 SHA1 (patch-configure.ac) = ae60603706decaf38ad0b4b70aa98da6fee2a983

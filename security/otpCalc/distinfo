@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2013/06/09 08:52:27 ryoon Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 01:17:53 agc Exp $
 
 SHA1 (otpCalc-0.97.tar.gz) = 0ca443baf05ed491e49419345ec815256a822b8c
 RMD160 (otpCalc-0.97.tar.gz) = 0b7908f90fede73e23f25cb0ebd0f9e87393a2a2
+SHA512 (otpCalc-0.97.tar.gz) = 5d22bd01fe90b32801d6f1c5ac3105036c14ac8197dda3c8454974ec72830a5f8cd693bd0520a51defdb0a7c7703483770410ba560436168826f8b6133a2524f
 Size (otpCalc-0.97.tar.gz) = 123704 bytes
 SHA1 (patch-Makefile.in) = 03454c602311f679f76769d4c31f54bc737dff76
 SHA1 (patch-aa) = c986eb1d3a458d297522dde93a494d8a2123661e

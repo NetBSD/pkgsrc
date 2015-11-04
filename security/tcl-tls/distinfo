@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2013/10/20 17:56:02 joerg Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 01:18:11 agc Exp $
 
 SHA1 (tls1.5.0-src.tar.gz) = 66611f384f4b1c5e126ac8fc1cd03040bbe8ac16
 RMD160 (tls1.5.0-src.tar.gz) = fa37bc819ffc63f93991c876ffd318405e6bad85
+SHA512 (tls1.5.0-src.tar.gz) = d77d09d3c9113d6888d2a53b04f81b553719d62fc027c241c88250477472101942b31e552d3ab08f2f0dabf5a792c25e0d65f1d643e1c1010057da5ef8bb5584
 Size (tls1.5.0-src.tar.gz) = 113600 bytes
 SHA1 (patch-aa) = 0d2637038ce203dabdc4c4e9ea36d09a99978d15
 SHA1 (patch-ab) = 19b2a615f710f5b9524dc58cb89f96089f6573d8

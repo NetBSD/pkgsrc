@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2013/06/01 12:19:30 shattered Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 01:17:41 agc Exp $
 
 SHA1 (avcheck-0.91.tar.gz) = 68f5c2fd3e1c9c2d82be6323813eccb5e3515937
 RMD160 (avcheck-0.91.tar.gz) = 2859c6dbc9bac4be71a25cbf49d7cce82a41986b
+SHA512 (avcheck-0.91.tar.gz) = 0277aa43910ca99b7db317f70b2d337520c2964d82273338ccf3b0632c933df223c4f62314ad081836c400b256d85fff88ed421de121fcbb2accacb1141aafd6
 Size (avcheck-0.91.tar.gz) = 47799 bytes

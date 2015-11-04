@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2009/09/19 22:28:52 sno Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 01:17:53 agc Exp $
 
 SHA1 (Authen-CAS-Client-0.05.tar.gz) = fb13f4789a49df20769a27474b2e9174237b4d15
 RMD160 (Authen-CAS-Client-0.05.tar.gz) = b98e336290d0da914a1ac902346120d754571cda
+SHA512 (Authen-CAS-Client-0.05.tar.gz) = ab3d1963f22496d2805a1de2ce3052851de12c8d83c0f3c37412b33a9d2e4c26b2f7c2e133b26450b638c7135a3122b42257f68f329c7c541e4bf44d05f11b53
 Size (Authen-CAS-Client-0.05.tar.gz) = 30718 bytes

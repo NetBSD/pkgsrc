@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2012/06/23 23:07:20 dholland Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 01:17:41 agc Exp $
 
 SHA1 (arirang-1.6.tar.gz) = 8f2a658d387830f25106dc21f05a5f54ae4b9964
 RMD160 (arirang-1.6.tar.gz) = 4c3f8262d4592a8bb9b4b9693336c1c078fd3b83
+SHA512 (arirang-1.6.tar.gz) = 0a07a4eee0819f0f6d979aae60557beaab2f6e69360a6ac0af37ff58b78cadfcd339720b2f138d091ffa843490e5b9fbd430cbdc89e9b9e4d5269ec277410c6c
 Size (arirang-1.6.tar.gz) = 54170 bytes
 SHA1 (patch-Makefile) = 28c47ff5a915e2abb1e99d027e0af6938fe0bc75
 SHA1 (patch-aa) = 2205992fdb39583e2dca69aeaa59d149b973cc62

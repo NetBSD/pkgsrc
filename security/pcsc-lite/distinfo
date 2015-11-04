@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.17 2015/09/07 19:34:30 gdt Exp $
+$NetBSD: distinfo,v 1.18 2015/11/04 01:18:00 agc Exp $
 
 SHA1 (pcsc-lite-1.8.14.tar.bz2) = f498dc65f1763818a7e813a46a15be744639dbb3
 RMD160 (pcsc-lite-1.8.14.tar.bz2) = d5bd4109f0c5c659a927fc4e4d677e5bd4ff199c
+SHA512 (pcsc-lite-1.8.14.tar.bz2) = a374ee254403b57a9bb24629e1d2d867b4b2046126f06fcc9df5d2e4b1ab9e8e2daddf371082c829e40d0874d2e84a8d657240857cc928242adfbbb1516c3362
 Size (pcsc-lite-1.8.14.tar.bz2) = 689197 bytes
 SHA1 (patch-configure) = 2b0e0065c14d7625469c85e29ce3a47806a1cf55
 SHA1 (patch-src_Makefile.in) = 5ada9cc404927ac9f44824bce1c4a815832a2ac1

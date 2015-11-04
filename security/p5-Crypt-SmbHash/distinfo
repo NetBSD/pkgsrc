@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/12/06 22:53:24 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:17:56 agc Exp $
 
 SHA1 (Crypt-SmbHash-0.12.tar.gz) = 2fa36d9e6ef661876f5433e56c3803212a13a838
 RMD160 (Crypt-SmbHash-0.12.tar.gz) = ddded936c573062d8e21f4c3cc8278ff08ec7d4b
+SHA512 (Crypt-SmbHash-0.12.tar.gz) = f5635c897874a771fde1db17261dc8a76bbd2053fc2eb6f49b07ad48ad788943f7430f0bfda8341bd69840332c75be013ca31b97b7f20258a21bf29a2298a70d
 Size (Crypt-SmbHash-0.12.tar.gz) = 8840 bytes

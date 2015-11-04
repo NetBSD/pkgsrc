@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.5 2005/02/24 13:10:13 agc Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 01:18:09 agc Exp $
 
 SHA1 (smtpd-2.0.tar.gz) = 7c619e01a1e7b1baa23435159ba67894d5550188
 RMD160 (smtpd-2.0.tar.gz) = 8c8c27612bef6bcd44de6af8ed6a97f47d97fa81
+SHA512 (smtpd-2.0.tar.gz) = 29422ecfea033c601a98ed9c29d9f6ecd310afae5680886b4c438d3cb5cabe46919ac8d4eb292f8ec6c05b4838fef221e242bcb29ffeb8934455be27d7c7b066
 Size (smtpd-2.0.tar.gz) = 62605 bytes
 SHA1 (patch-smtpd-2.0-RBL.gz) = 180bfcca83cb5e0523cf5d983083ed83bacdde7f
 RMD160 (patch-smtpd-2.0-RBL.gz) = 76b55c0f85643f62e9a802fdadd3e29ea0e4f3d7
+SHA512 (patch-smtpd-2.0-RBL.gz) = f97b3f52557a582226db68d18f48b03ae950287e2504bc40678281987619304e9643a3d8d8c3d140d6f480da7e2846d696feafa3080bae4d32419efa0005d5f9
 Size (patch-smtpd-2.0-RBL.gz) = 3829 bytes
 SHA1 (patch-aa) = 937e7d97d9060b848328b6cc084378f9cb334a00
 SHA1 (patch-ab) = 717ffbe58c771967ef2ce6a1ea56003535929ccf

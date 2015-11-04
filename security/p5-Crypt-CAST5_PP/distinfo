@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2007/02/22 11:57:11 wiz Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 01:17:54 agc Exp $
 
 SHA1 (Crypt-CAST5_PP-1.04.tar.gz) = 4637c42aa19b98fe49cf50d66aef7ae6735928e6
 RMD160 (Crypt-CAST5_PP-1.04.tar.gz) = 5b5c18a4b7ce90a6f96f848143c2a72c5f014fef
+SHA512 (Crypt-CAST5_PP-1.04.tar.gz) = a3bf80596dddd061acface0319ec3fe128c6f2e4f611f4c0fc8d0c928f49e087adcdb387910742b42528490be589965f93c15af0c4b111223d211f34afc61bfe
 Size (Crypt-CAST5_PP-1.04.tar.gz) = 20232 bytes

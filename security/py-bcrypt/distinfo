@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2015/04/25 13:49:49 wiz Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 01:18:03 agc Exp $
 
 SHA1 (bcrypt-1.1.1.tar.gz) = 38d9973aeb5f0cea17ce01e457b1b8eafdf85797
 RMD160 (bcrypt-1.1.1.tar.gz) = be0cc2e808392001c183190db5825800da1ea5ee
+SHA512 (bcrypt-1.1.1.tar.gz) = b6388e69dfe4a7a40a304745607fe23fa2cd6c0f874b09c39849958f4d4c77cd5387c2baa79de69e8809c0df8841b085885c83f00bc13ee5a08b3af6c04d721f
 Size (bcrypt-1.1.1.tar.gz) = 39714 bytes
 SHA1 (patch-bcrypt_____init____.py) = cac83e359ca533abc1c60df20101ff71662baa5d
