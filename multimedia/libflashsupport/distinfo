@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 23:54:28 agc Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 17:41:21 agc Exp $
 
 SHA1 (libflashsupport-v4.2-build2011.tar.gz) = c052a9297ec4ff28598d908d9f2ce59596453821
 RMD160 (libflashsupport-v4.2-build2011.tar.gz) = 5a731f85fa258ecc38e3c2d267a0eee04b8fe60d
-SHA512 (libflashsupport-v4.2-build2011.tar.gz) = 12bc98e0c0f0a0978070d1b51148f31119eb2d20efda036ab4bd62a2747c2e2e53d47031d850b7d3b6569de3fa9e67a2fd2b003c159c4e08ea60e3ccc5b6f357
 SHA512 (libflashsupport-v4.2-build2011.tar.gz) = 12bc98e0c0f0a0978070d1b51148f31119eb2d20efda036ab4bd62a2747c2e2e53d47031d850b7d3b6569de3fa9e67a2fd2b003c159c4e08ea60e3ccc5b6f357
 Size (libflashsupport-v4.2-build2011.tar.gz) = 12812 bytes
