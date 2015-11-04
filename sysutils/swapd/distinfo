@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2013/09/13 10:15:40 sno Exp $
+$NetBSD: distinfo,v 1.8 2015/11/04 01:32:32 agc Exp $
 
 SHA1 (swapd-1.0.3.tar.gz) = d2f567767ded2382c24505565e8aea1b8d88a746
 RMD160 (swapd-1.0.3.tar.gz) = a7a30f3c8e8ce5407df04ce5a5a1a3cfaf15a266
+SHA512 (swapd-1.0.3.tar.gz) = 37d679aca157591ce632bf4dc1666be3d739077af7b2e3add3cb0caa283d5885dfaf4d39cc864c0d6c64d525161a3b3c13a18149d03d12a10220a0763bfca1bf
 Size (swapd-1.0.3.tar.gz) = 90981 bytes
 SHA1 (patch-aa) = 7a024306380ce09552996bd27cbb117e6bd1619f
 SHA1 (patch-ab) = 93e9315281390a9029df62df6fd885605c55da43

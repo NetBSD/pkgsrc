@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2012/01/20 17:01:07 joerg Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 01:32:15 agc Exp $
 
 SHA1 (gnome-system-tools-2.22.2.tar.bz2) = 6ff3d2775acf5e36927d523f708aef90190e974b
 RMD160 (gnome-system-tools-2.22.2.tar.bz2) = 6850711c652bd2726fdb5556984fe5bc06c0c576
+SHA512 (gnome-system-tools-2.22.2.tar.bz2) = 0b42f2249be1ce26d76ec52a6183e6cf1383654ebab9378849874bea3dda843c8b7aeb8cf67406f3f03f767275b0836af2fbdc4851462cef4f0f139171c0d538
 Size (gnome-system-tools-2.22.2.tar.bz2) = 4461916 bytes
 SHA1 (patch-aa) = 65812c438b16316caf27cb0793743c744c4e1b6e
 SHA1 (patch-src_common_gst-dialog.c) = c38250b41396b22697e844e509ce632a03b99b82

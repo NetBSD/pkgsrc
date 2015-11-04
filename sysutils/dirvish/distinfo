@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/07/24 18:29:23 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:32:11 agc Exp $
 
 SHA1 (dirvish-1.2.1.tgz) = 0923245c10702ae8015b5b54dcffb051be531d8d
 RMD160 (dirvish-1.2.1.tgz) = 7839fa032bf43a55527c23dd934961d7a11cd5fc
+SHA512 (dirvish-1.2.1.tgz) = 808a15dd2ce6be967e59e4a6e3b1479ebd20508f8c70a62a2677080a7e7cbe3d54b5ba6c3aa01004f49ebf2fbcc8c23795b3444e67a556d8fcda35312666eed6
 Size (dirvish-1.2.1.tgz) = 49156 bytes

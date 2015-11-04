@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2014/02/16 11:57:22 sno Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 01:32:25 agc Exp $
 
 SHA1 (Sys-Filesystem-1.405.tar.gz) = 859b4b234739a9be02ec63eb6a6d557d27ba7619
 RMD160 (Sys-Filesystem-1.405.tar.gz) = 2e2bcf12ae30da2934c687d4cb24e1adb518853e
+SHA512 (Sys-Filesystem-1.405.tar.gz) = 37612c223c4fbab2dcd2b9af79454a762a597bedb82106d779414dbccebc2f7a9c79c5d66f4c887d42ce6a8a748d65ca537bdb9937511f223a2b74ce0591ccba
 Size (Sys-Filesystem-1.405.tar.gz) = 27314 bytes

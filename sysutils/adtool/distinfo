@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2014/12/10 09:43:29 mef Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 01:32:05 agc Exp $
 
 SHA1 (adtool-1.3.3.tar.gz) = ec2186442ebd3cddd4524802b7f0433dc3570035
 RMD160 (adtool-1.3.3.tar.gz) = a0668e42456b73ce6ad099c0b82600fd51548bfa
+SHA512 (adtool-1.3.3.tar.gz) = 800a9fd19481b2c986991c27674e24b40bd6f4d58d7cbcf94532acb88f6c36de1f18d4165d6a2dcffd7d5baeac86aaf6f0ff1ef1b46d93ffc28b826b3d857251
 Size (adtool-1.3.3.tar.gz) = 334767 bytes
 SHA1 (patch-ab) = d229fc43c29c48711aac27b4dfda5b89c5a649ba

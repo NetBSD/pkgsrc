@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2013/01/26 22:02:26 wiz Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 01:32:12 agc Exp $
 
 SHA1 (eggdbus-0.6.tar.bz2) = 9f47d1225aafdcc5c59d177ec4c2b52d6f003ce8
 RMD160 (eggdbus-0.6.tar.bz2) = a1fa28199059e7deb551b755a8a3853aa02ae0b7
+SHA512 (eggdbus-0.6.tar.bz2) = d6948f6c6d96dd5453c0a5262d06bccdb9a4abbd5c0c0d5933796c15ebce51baf4ee148b01240beb7fa279049a72e8315b86d89166124ce3beb81ddef7d29246
 Size (eggdbus-0.6.tar.bz2) = 163804 bytes
 SHA1 (patch-aa) = 4c803b9598f760b88b7a6b9ca53acc64377ed200
 SHA1 (patch-ab) = 24ca885e4397f4942cbe1f8398133aa346687266

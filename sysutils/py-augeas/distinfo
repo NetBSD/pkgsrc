@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/12/30 17:04:15 bsiegert Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:32:27 agc Exp $
 
 SHA1 (python-augeas-0.5.0.tar.gz) = b758e3d1349999b5d9f3397af3b9e186a2fcfd48
 RMD160 (python-augeas-0.5.0.tar.gz) = 909056aeef54735a398581b7a30acb5eff190279
+SHA512 (python-augeas-0.5.0.tar.gz) = d93d9e21c720084ee3c1841a2172dd1a4cfb41e668de0f557bd214efd65e685a1e5fc713a7d34e0fed727fe908bb1e8a09a1c10587bc27f3708cbcdee575cc51
 Size (python-augeas-0.5.0.tar.gz) = 90667 bytes

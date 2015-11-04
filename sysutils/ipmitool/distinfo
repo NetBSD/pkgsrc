@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2013/03/02 17:56:13 joerg Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 01:32:17 agc Exp $
 
 SHA1 (ipmitool-1.8.11.tar.gz) = 4cb6ff3736fd3e166abc5303d6373672327a5db1
 RMD160 (ipmitool-1.8.11.tar.gz) = 189b2232bcd148bc89c610dfae73c6f12f42fb36
+SHA512 (ipmitool-1.8.11.tar.gz) = 48093790baf2532887ac87de9b55fbe38f46f271b84e6152e6b0ba11170b29aad78dfcd42036389750edbedff325476b8366b3ea1401b97148b8bc8c1bd71e4b
 Size (ipmitool-1.8.11.tar.gz) = 769964 bytes
 SHA1 (patch-ad) = 3941c5ea9286137e58ae6fb62aea6daff390ffa1
 SHA1 (patch-ae) = 67828b62b46a30b204dd436681c5ecac39bb29b3

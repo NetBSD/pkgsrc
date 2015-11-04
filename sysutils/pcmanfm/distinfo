@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2013/03/28 21:39:32 joerg Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 01:32:26 agc Exp $
 
 SHA1 (pcmanfm-0.1.8.9.tar.gz) = 12415788dfa93cb767329c45caef32b23e9ab9e6
 RMD160 (pcmanfm-0.1.8.9.tar.gz) = b75784afa73509de6aa0de33ba3e65cc78296773
+SHA512 (pcmanfm-0.1.8.9.tar.gz) = df3be1013d655f9f6e12505617a6b6b0c3682abf42557c891258c56d5584fb382c18ea3a9421e684d235d7b56efaf44da8338db87b11fc0abdee7e8bd95fecbd
 Size (pcmanfm-0.1.8.9.tar.gz) = 261303 bytes
 SHA1 (patch-aa) = d97b81fa583de90973e6339eadf7570931f8d53e
 SHA1 (patch-src_filebrowser.c) = 58ac8013594f610f613833455e15245080cf6eef

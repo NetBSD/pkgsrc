@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.12 2013/05/19 11:07:26 shattered Exp $
+$NetBSD: distinfo,v 1.13 2015/11/04 01:32:12 agc Exp $
 
 SHA1 (dmidecode-2.12.tar.gz) = d190f1333e8a217cf02d2a6c98795dc5ced97ddc
 RMD160 (dmidecode-2.12.tar.gz) = d1c29ae4970623f7e6305aa1cd7b057e054a152c
+SHA512 (dmidecode-2.12.tar.gz) = 8203ca9620f9efca21e7efd9e6c5a6bb83d8b23bdd1b20923a5f83209d94685a1bca3c92474c22d12ac2aaef4bbc074d4dc9236e2fd93a36ebf3cc66c0dfdd73
 Size (dmidecode-2.12.tar.gz) = 68064 bytes
 SHA1 (patch-aa) = 6c861b3742b1627a1b60dbaea9df0843f2ed603d

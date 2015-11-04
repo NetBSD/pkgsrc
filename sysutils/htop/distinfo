@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2015/08/20 13:38:25 jperkin Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 01:32:17 agc Exp $
 
 SHA1 (htop-1.0.1.tar.gz) = bad226ec887a2b7ea5042879ed18e067812d030e
 RMD160 (htop-1.0.1.tar.gz) = c13d438438c5ab8c15c056f7064ae6edb26ec8d9
+SHA512 (htop-1.0.1.tar.gz) = 9cc442fd63fb3270929e489f645d1a63fdcba2bee4ea0e606a86257badb55fa02794b7a97de4070c951f5558b7d40a677e10801a1c42c0832521a453f956997c
 Size (htop-1.0.1.tar.gz) = 384683 bytes
 SHA1 (patch-AvailableColumnsPanel.c) = 0aa40dd4f126a81ff6ad869362486eeb256a2163
 SHA1 (patch-CRT.c) = 6e139b71c64b8ef9b7ef53a08863cd814eb0657e

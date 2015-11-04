@@ -1,9 +1,11 @@
-$NetBSD: distinfo,v 1.7 2011/09/14 17:43:32 hans Exp $
+$NetBSD: distinfo,v 1.8 2015/11/04 01:32:09 agc Exp $
 
 SHA1 (daemontools-0.76.tar.gz) = 70a1be67e7dbe0192a887905846acc99ad5ce5b7
 RMD160 (daemontools-0.76.tar.gz) = 9819dae18b3f15a366e49fea81ecef76d5b4f53f
+SHA512 (daemontools-0.76.tar.gz) = e4a7938352b745a03ccc41acdddba1e6782f0ca245e5cae060de62ab6c5a23c841a994c30140298d274405a7f26d53ba7e84e5810a3d185b2c01e4c0feffe6c7
 Size (daemontools-0.76.tar.gz) = 36975 bytes
 SHA1 (daemontools-0.76-man-20020131.tar.gz) = 28e167def0e457f2be10aa90504c402fa08723ab
 RMD160 (daemontools-0.76-man-20020131.tar.gz) = d82f0bad55f0751fdfadfa0f3bf2883740fa65d9
+SHA512 (daemontools-0.76-man-20020131.tar.gz) = 1767fafb2d92902f903637f08363031971bda007d1b7b53059551c740976d1c643229ccc44171796c1dcb43cbd875a17178edc634e140671817e0ef0ba3ad80b
 Size (daemontools-0.76-man-20020131.tar.gz) = 8005 bytes
 SHA1 (patch-aa) = 52fca4d350ed3f9422c3c8727ed505f31f17ae28

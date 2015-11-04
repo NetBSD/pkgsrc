@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2006/03/09 11:28:00 ghen Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 01:32:06 agc Exp $
 
 SHA1 (atitvout-0.4.tar.gz) = ac0d3f19119fa0c096099f952c9c59ac44ccc840
 RMD160 (atitvout-0.4.tar.gz) = 594fbc3a20362275a2d9b4ca13ae0b7ae761bcf3
+SHA512 (atitvout-0.4.tar.gz) = b2bf906d4348318f38c1ba7a1246dc9047519aa2952d3db49062184e32bd6f03a968ae2bacc6ac579f9369e6686920ce9cfa32f19a3abfa47e4a2a5050f60729
 Size (atitvout-0.4.tar.gz) = 27163 bytes
 SHA1 (patch-aa) = 68e79e289b1aadbba3aa1dbf3137fdf90c486afa
 SHA1 (patch-ab) = e6b0e4fe8ba6427c3c9d2d99d3c0fbb43493f667

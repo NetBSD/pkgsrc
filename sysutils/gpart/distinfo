@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.10 2014/02/16 16:59:37 wiedi Exp $
+$NetBSD: distinfo,v 1.11 2015/11/04 01:32:16 agc Exp $
 
 SHA1 (gpart-0.1h.tar.gz) = 23f66162e1d85977ea43bfe6b5e5bff0ad2d566e
 RMD160 (gpart-0.1h.tar.gz) = 1cdfb1779801ee8755b05975ced24441a3a2b639
+SHA512 (gpart-0.1h.tar.gz) = 673cc99ccc2342c18be3f6395bf7258ab1d8e2ffeac6fd68a4bd75c89825031cb9d7ae628c51bad4da47a8d0625f1608cf4c78345aae5205fd98a9a908a3d45c
 Size (gpart-0.1h.tar.gz) = 52352 bytes
 SHA1 (patch-aa) = f971cc7ae0efbacd64e8f5e6bf9c2496f75320a3
 SHA1 (patch-ab) = 557f146fcd40f2fa501eb2cff006966efa95b087

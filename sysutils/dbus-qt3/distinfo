@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/04/21 14:31:18 drochner Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:32:10 agc Exp $
 
 SHA1 (dbus-qt3-0.70.tar.bz2) = d87cfd7af62d36cc98f0a01f3d7e66eb677b081a
 RMD160 (dbus-qt3-0.70.tar.bz2) = 8e2e3919ea71d50966000239e435b41ead089b1b
+SHA512 (dbus-qt3-0.70.tar.bz2) = 4fff2164228cb8e42406d82107457749a1e51df724c9a42285705695711bf22217e0e0e058c798e7fa925a1075056ada87a416d88243754b9941630fc7c1a859
 Size (dbus-qt3-0.70.tar.bz2) = 220305 bytes

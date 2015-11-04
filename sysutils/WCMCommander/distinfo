@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.2 2015/09/08 13:21:46 wiz Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 01:32:05 agc Exp $
 
 SHA1 (WCMCommander-0.20.0.tar.gz) = 77f034f0da7f13b362b742b965ad9fb444892802
 RMD160 (WCMCommander-0.20.0.tar.gz) = 3f1f93d484846404542f3d4955abdb01f9d5417b
+SHA512 (WCMCommander-0.20.0.tar.gz) = 4c57b741b9336d8c2e4fe69765bdc2a0b17c2785c71877bbd9b928cd26ab36d92dd2e16f53399a77a50762fa6d87bc52dfcd9037c5ba8179f6274b6480b314aa
 Size (WCMCommander-0.20.0.tar.gz) = 5005688 bytes
 SHA1 (patch-src_tcp__sock.cpp) = 5d0758a7f0e53255de1ea9a47ad12b7a7e3b4809
 SHA1 (patch-src_vfs_vfs.cpp) = 47270fe6ee671370635fb880a998630bc2011143

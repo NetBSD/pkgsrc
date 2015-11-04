@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 13:40:58 agc Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 01:32:32 agc Exp $
 
 SHA1 (sysgen.tar.Z) = 1e821ca50073b53231d585b19035a4064337db44
 RMD160 (sysgen.tar.Z) = 88e160da6f190fe9d288edef06466c0c9d62de4b
+SHA512 (sysgen.tar.Z) = c3015b4cd1c6b40e3e34f471e856816455d798d090ab366f489e68d7af42af4588d8ab6d96022b39589301e328674ca4ce80537b602dd4ed13b667f91f09e6ec
 Size (sysgen.tar.Z) = 8228 bytes

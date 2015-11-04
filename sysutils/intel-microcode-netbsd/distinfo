@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2015/03/27 07:14:35 msaitoh Exp $
+$NetBSD: distinfo,v 1.8 2015/11/04 01:32:17 agc Exp $
 
 SHA1 (microcode-20150121.tgz) = b7478c577e9ab6aa3ab3232937cf8508ee4e91ae
 RMD160 (microcode-20150121.tgz) = f76d56ea56c8a50c87683ee3a2272884b455cf06
+SHA512 (microcode-20150121.tgz) = f62edd1b666cf381605613766d7e123f0c6debee4448c0ff0882d33c144ad2174656d2501a449f24eb3e4708259e7ec0ff42810739b7d1f34a6a1d9950d17bc4
 Size (microcode-20150121.tgz) = 850761 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/03/22 21:45:16 sno Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:32:24 agc Exp $
 
 SHA1 (Filesys-Statvfs-0.82.tar.gz) = e90e29426545f389ba18ed99ac082dc98babc406
 RMD160 (Filesys-Statvfs-0.82.tar.gz) = 603549dc1ae2ac99249c09bb51331faaff7f89df
+SHA512 (Filesys-Statvfs-0.82.tar.gz) = 4c62a73b8c4066f7d182e0810b508743a766e708ac5bf52ded8a1f271b95ceab546d10d78d5ca9719c1d50c5b729ceb3e8a1b56950d2abf559080e52a2f9d22e
 Size (Filesys-Statvfs-0.82.tar.gz) = 3964 bytes

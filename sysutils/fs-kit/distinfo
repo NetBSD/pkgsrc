@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2012/04/17 17:48:47 joerg Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 01:32:14 agc Exp $
 
 SHA1 (fs-kit-0.4.tgz) = e2226e62b9ae552ec83fc0afeb30b7716040b88f
 RMD160 (fs-kit-0.4.tgz) = 270e09ff438f3c7924476d7905a5458b3ee43fdd
+SHA512 (fs-kit-0.4.tgz) = a3a5f95810b7d58d3fb240aa00da953815fd4ee3158ca5c4a400a71c74f115ecef7f02bb8bb1cd42e27da37fd549809a3755b191a69394fd32cc6037d644be0d
 Size (fs-kit-0.4.tgz) = 73603 bytes
 SHA1 (patch-aa) = e666b3061ea9ddbfc0cda6d1bcd3512271ddee5a
 SHA1 (patch-fsh_c) = a68e7e212af589d11df07a0659aca03c6b4cc9bc

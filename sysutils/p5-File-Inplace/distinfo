@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/07/06 00:59:04 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:32:23 agc Exp $
 
 SHA1 (File-Inplace-0.20.tar.gz) = 57b03fda3dc87721f46a0b0418844b440abfab7b
 RMD160 (File-Inplace-0.20.tar.gz) = 16300900931de1d51c0fc552753c426b9f422508
+SHA512 (File-Inplace-0.20.tar.gz) = 69d60091029606a962a5a0c13fc12bdc70dd56bae4d627a7460c8fcf8ee7c02d770b1ba3e0d146e0838fef3640fb831237734a7657e1d88dd514ce100548b7f1
 Size (File-Inplace-0.20.tar.gz) = 5139 bytes

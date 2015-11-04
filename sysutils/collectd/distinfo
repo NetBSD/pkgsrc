@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.22 2015/09/17 11:24:11 he Exp $
+$NetBSD: distinfo,v 1.23 2015/11/04 01:32:08 agc Exp $
 
 SHA1 (collectd-5.5.0.tar.gz) = d24e284c1eae20c5e75b846c8b2612ab65bd5565
 RMD160 (collectd-5.5.0.tar.gz) = 2197758942a5fe56e4eabda3786f09d4138e943a
+SHA512 (collectd-5.5.0.tar.gz) = b7ab9db91bf8c0eadbf9893421c019239acf85d2d84a5adb834582ed218a7dd03f750b7279dc4b1bb0030a8b9d3302bea9ae9f201c913128e1896cbd1349b5a9
 Size (collectd-5.5.0.tar.gz) = 2244454 bytes
 SHA1 (patch-Makefile.am) = ed45b75293a4ea2dd577d04eeb3b9017b8f47319
 SHA1 (patch-Makefile.in) = a7cf69ca29c526be643af0ef85544e3a2dc80a77

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/05/26 23:06:05 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:32:15 agc Exp $
 
 SHA1 (gfm-1.06.tar.bz2) = 895ee98bb396cef02d01568d6988097803156899
 RMD160 (gfm-1.06.tar.bz2) = 48495c810ef38f7a56536b0abace9880dac49798
+SHA512 (gfm-1.06.tar.bz2) = be3584e976266af18132ed426eba8ab0fb0425ac40bb5dc10f2ecd490fe4d9ff1e986fc1d178db5dfd415778fb04a53b502ebc90d575ca727f1ee77d2fd76512
 Size (gfm-1.06.tar.bz2) = 481424 bytes

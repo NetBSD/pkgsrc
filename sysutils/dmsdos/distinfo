@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/02/08 21:18:44 drochner Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:32:12 agc Exp $
 
 SHA1 (dmsdos-0.9.2.3-pre2.tgz) = d967cc70aac39d8cff66e78dfcf2632ac36275dc
 RMD160 (dmsdos-0.9.2.3-pre2.tgz) = 19cc815452270460ea1382615a312289820bd39e
+SHA512 (dmsdos-0.9.2.3-pre2.tgz) = 1c77c4b3ee827db1ae0aede008e3180a18051c109dac20360691789b5614fca00fe1d44cd64d63bc7f47b041136d83c9bee414a6fd11cd2ba87007847084e5d6
 Size (dmsdos-0.9.2.3-pre2.tgz) = 280421 bytes
 SHA1 (patch-aa) = 408981c4e21feaee3865f0f8bfa90ca26b795360
 SHA1 (patch-ab) = 5560a52438cedc5c52e77ed4e4b0ccd16f682a9e

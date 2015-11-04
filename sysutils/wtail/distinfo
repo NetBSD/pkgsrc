@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2009/10/29 21:58:38 tnn Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 01:32:38 agc Exp $
 
 SHA1 (wtail-0.2.2.tar.gz) = 609f4ebe064c155829e96f865bee93e727b692e8
 RMD160 (wtail-0.2.2.tar.gz) = cb118254ef80c2a26d0ce2b482ca6b64d0401417
+SHA512 (wtail-0.2.2.tar.gz) = 979f9a94b32c8dbc0fb1653332b208fb0acab5dca94c9e3e01efe312013f47279394f4ccccd3a9efeaa80c63ad9b9b0c0a6639ad1cd16fc4543ec965f2ea1347
 Size (wtail-0.2.2.tar.gz) = 13633 bytes
 SHA1 (patch-aa) = b37d9383f512c3e14fb590d6f07b8e2fbb12ad00

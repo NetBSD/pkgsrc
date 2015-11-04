@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.9 2013/12/07 18:24:59 dholland Exp $
+$NetBSD: distinfo,v 1.10 2015/11/04 01:32:14 agc Exp $
 
 SHA1 (FSViewer.app-0.2.5.tar.gz) = 0df2e5c6317f13b2c867c4d07c9840e455134f7d
 RMD160 (FSViewer.app-0.2.5.tar.gz) = 6e11d8c950c4c4b6020b2af33a32d31f7bca371d
+SHA512 (FSViewer.app-0.2.5.tar.gz) = 758b3e08e9873e76a9b3896ab3aa8dfd00ee5804547bd399e8d7ee94db5f6d291f63b1707fe1214ccaa4b67c0a8b593c4f14310ac556c79973808a9467a0a998
 Size (FSViewer.app-0.2.5.tar.gz) = 858696 bytes
 SHA1 (FSViewer.app-0.2.5-WM-0.81.0.patch.gz) = 7a8c689a30292438c6bd2f282390c7b289efea63
 RMD160 (FSViewer.app-0.2.5-WM-0.81.0.patch.gz) = 86817447aa7183670e4ea131bf67f8a80a48a5aa
+SHA512 (FSViewer.app-0.2.5-WM-0.81.0.patch.gz) = 71916d67f4872bff16212c7d58a6ef1ab366bd889a84b21d7b7ea1503393b9133bb95198641fd2bd2b388fa3867019102d0055f68bfe056ccd6f88fb487a74a8
 Size (FSViewer.app-0.2.5-WM-0.81.0.patch.gz) = 2674 bytes
 SHA1 (patch-Makefile.am) = ac63d77d4fb8533bb7bdaabd2b3da76759186f94
 SHA1 (patch-Makefile.in) = 7b707482d0ec2d29c0cba3dd8a7f964dd9b5eedd

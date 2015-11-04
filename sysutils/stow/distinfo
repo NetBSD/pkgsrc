@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2005/02/24 13:40:58 agc Exp $
+$NetBSD: distinfo,v 1.8 2015/11/04 01:32:32 agc Exp $
 
 SHA1 (stow-1.3.3.tar.gz) = 570c501f8663feb26360db25df0be342278b7b99
 RMD160 (stow-1.3.3.tar.gz) = ab192c3c709c11e0a7d39ec8de268ee6be3265f3
+SHA512 (stow-1.3.3.tar.gz) = 27b5b4b89f22ba644a6dcece2b36b57feab392eb9702dc0e5659cecfd034f8ece21de1628027d3d717e9f663859e3ce0b174b90e6ac0363218918e330dccda6f
 Size (stow-1.3.3.tar.gz) = 139417 bytes

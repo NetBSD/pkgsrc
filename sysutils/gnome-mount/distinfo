@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2013/08/12 14:24:35 obache Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 01:32:15 agc Exp $
 
 SHA1 (gnome-mount-0.8.tar.gz) = 846ba178cf9009f3e32c7f55f912b3ca6b9ecedb
 RMD160 (gnome-mount-0.8.tar.gz) = 003800eda3edb7747714b1002bd1a1b50ea44fe9
+SHA512 (gnome-mount-0.8.tar.gz) = 92a296ef82f8ab7bc531e25e8131003478f63752efcf9aa64e1d40cbb81475f598084bf6d92562fe9a5ce399b002db8b0c99d5642b9150e31d56beffe23ca85c
 Size (gnome-mount-0.8.tar.gz) = 505788 bytes
 SHA1 (patch-aa) = 31479b417cf7c645cef6f3539aa49576d5104795
 SHA1 (patch-ab) = caf82291c778bb5153ca506dc5357998fd4cfd0c
