@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.8 2009/02/11 23:19:01 abs Exp $
+$NetBSD: distinfo,v 1.9 2015/11/04 01:17:51 agc Exp $
 
 SHA1 (msudir-0.15.tbz) = c4a7fb516810cf0a2bdf1250286598b68237ffd0
 RMD160 (msudir-0.15.tbz) = bfba4bd50b59226b348b5e9462b9dfc763dbfe70
+SHA512 (msudir-0.15.tbz) = b78d23b25644da203d4aff2ff73a4bdfa27df8787968ec54a35ceb83f3b6d8b018ab579590924a18eadbe95e59c925265e77e8747776c287f33abe9d2e15fafd
 Size (msudir-0.15.tbz) = 5088 bytes

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.9 2012/11/19 03:03:42 joerg Exp $
+$NetBSD: distinfo,v 1.10 2015/11/04 01:17:51 agc Exp $
 
 SHA1 (NeTraMet44.tar.gz) = 7848d6aa81b29966127fc78afcd9375c60441a91
 RMD160 (NeTraMet44.tar.gz) = f10185263adedf4e8184741998482992a35098e1
+SHA512 (NeTraMet44.tar.gz) = 18089ec4b7517e1c95956ff619f71c6568fbb62a3f2b539e601cb80497f3ba938c640ffdbe5118d494b846d7e177581c932dbb7d47314b941437ff92e0eca96d
 Size (NeTraMet44.tar.gz) = 634714 bytes
 SHA1 (patch-aa) = 5aa23af5263c719a53a453840646ddc3868d7461
 SHA1 (patch-ab) = 10fc930d9673556d7a856c70d3fdcb5be29f23fd

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2012/06/16 22:00:23 dholland Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:17:45 agc Exp $
 
 SHA1 (gnome-keyring-sharp-1.0.0.tar.bz2) = 9900da7b4245710832291bb55139d33a45e15225
 RMD160 (gnome-keyring-sharp-1.0.0.tar.bz2) = 9f9f691228c3493b32736089e2d5cb88dcea027f
+SHA512 (gnome-keyring-sharp-1.0.0.tar.bz2) = adfca131b51699b0e45608ddfa3d2ff2a68912d95390bf4f075b3102232faa63ecf9e30a1cbdfd47c8c6fea0360424a62722b8de3c87203646d7e482d1bb2fe1
 Size (gnome-keyring-sharp-1.0.0.tar.bz2) = 84785 bytes

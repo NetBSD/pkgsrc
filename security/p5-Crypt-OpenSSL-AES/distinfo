@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/08/24 09:09:38 obache Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:17:55 agc Exp $
 
 SHA1 (Crypt-OpenSSL-AES-0.02.tar.gz) = 978a81dcde6c66203da0ac5aeb7d3a22c8114df4
 RMD160 (Crypt-OpenSSL-AES-0.02.tar.gz) = de73f4a6c39f81c60eeee5a1e66426382ad5adac
+SHA512 (Crypt-OpenSSL-AES-0.02.tar.gz) = cac503bfa22d82d8cb1873ce97aeee4f2d698a7c0d27bcc055d2e8984094c098b0244498ee80425e0c699d46d1b204c8894fd0538dd2dc1d3ea0f87c593fc918
 Size (Crypt-OpenSSL-AES-0.02.tar.gz) = 12487 bytes
