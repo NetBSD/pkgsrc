@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/07/15 08:44:04 abs Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:47:17 agc Exp $
 
 SHA1 (Rose-HTMLx-Form-Field-Boolean-0.03.tar.gz) = 2362e59ba45d61e93e7ceee4bf887a4f632c871c
 RMD160 (Rose-HTMLx-Form-Field-Boolean-0.03.tar.gz) = f1eae150f351559f2458c40f5f51315a89eadc7c
+SHA512 (Rose-HTMLx-Form-Field-Boolean-0.03.tar.gz) = 54791820ee5f3f230fd3249fb51b07deb458dd119fab5cda8421df5258101cda2a4cce2e62521405c7b76d8f45b88523a05c887e23cfe65267dcebee452ad127
 Size (Rose-HTMLx-Form-Field-Boolean-0.03.tar.gz) = 2786 bytes

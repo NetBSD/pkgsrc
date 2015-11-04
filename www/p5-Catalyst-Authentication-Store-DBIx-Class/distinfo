@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2015/05/23 12:09:01 mef Exp $
+$NetBSD: distinfo,v 1.8 2015/11/04 02:47:03 agc Exp $
 
 SHA1 (Catalyst-Authentication-Store-DBIx-Class-0.1506.tar.gz) = 23c4008eeb17eb35b7acdc93b0deaa54f36b945a
 RMD160 (Catalyst-Authentication-Store-DBIx-Class-0.1506.tar.gz) = 079ddad5008789b9f3cd2e63caad5ed53d1f2b58
+SHA512 (Catalyst-Authentication-Store-DBIx-Class-0.1506.tar.gz) = 1d73a881934c8cea29bcbb09de1449d74c2b3b8b9cf2204ad82d602e086651b4702f6203248bdcb9f528b9e43aa0514b98e0c0d86f3d5742f818d1ea8682b4f3
 Size (Catalyst-Authentication-Store-DBIx-Class-0.1506.tar.gz) = 46461 bytes

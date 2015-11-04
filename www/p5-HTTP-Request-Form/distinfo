@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2008/08/05 11:32:21 he Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 02:47:11 agc Exp $
 
 SHA1 (HTTP-Request-Form-0.952.tar.gz) = 0c161f9dba58d884b7b7ad4547127fd44a97e402
 RMD160 (HTTP-Request-Form-0.952.tar.gz) = 57d58d67ff22a1db72f639164f74a4e7614d9f02
+SHA512 (HTTP-Request-Form-0.952.tar.gz) = d6d3e4dac632dd1787137afd2f077da1cce433bc28c96ab1987afdea5f08c98c8a5a3a103eaa5fb1da7968b5c26c18770ea1c7c27b1e585b504b1b7e09e2ce91
 Size (HTTP-Request-Form-0.952.tar.gz) = 10575 bytes
 SHA1 (patch-aa) = b82d66b157062ccaf72e4047a632bfa713eca812

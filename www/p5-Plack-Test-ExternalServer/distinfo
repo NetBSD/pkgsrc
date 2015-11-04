@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/08/23 10:01:34 abs Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:47:17 agc Exp $
 
 SHA1 (Plack-Test-ExternalServer-0.01.tar.gz) = c84d0c448487a9d998b921bc8aaf1597b874060a
 RMD160 (Plack-Test-ExternalServer-0.01.tar.gz) = f41273f2cc1f7d8b38d7f45e2294f9ef40bd088c
+SHA512 (Plack-Test-ExternalServer-0.01.tar.gz) = e9339d4255e9463b3d870f048bbd5234d60c08453e71c95a1a8eee8e90ca4a67202287621c75a36a460821ee08a5d280ac8834acdb66d07c5543c29116cafcb5
 Size (Plack-Test-ExternalServer-0.01.tar.gz) = 9198 bytes

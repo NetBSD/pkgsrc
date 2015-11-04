@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2015/06/12 23:39:11 taca Exp $
+$NetBSD: distinfo,v 1.8 2015/11/04 02:46:50 agc Exp $
 
 SHA1 (c_icap-0.3.5.tar.gz) = 189db804146a5654105e8bf6791b5f6eebd5f068
 RMD160 (c_icap-0.3.5.tar.gz) = 32f4d7dbe2a6170b3858c6d05c3f3e388c1037bd
+SHA512 (c_icap-0.3.5.tar.gz) = 4de5608027930551a78d3507ae2263eb2688dc41e257c87578f39c435ed736545b9e77adcca6ac077b173472aea06675950c765ec4a4124eba296f9f9a2c8b35
 Size (c_icap-0.3.5.tar.gz) = 614388 bytes
 SHA1 (patch-Makefile.in) = 251eb502dd1a40ef45ff46f8814f12b098c01528
 SHA1 (patch-aserver.c) = cbcec895c718cb4270b1ac249b5ea0d425ed35ba

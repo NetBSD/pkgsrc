@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2010/09/15 06:02:29 sno Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 02:47:11 agc Exp $
 
 SHA1 (HTTP-Server-Simple-Mason-0.14.tar.gz) = 9a605746312dba6e9b80d8c543039bc568a1b9f9
 RMD160 (HTTP-Server-Simple-Mason-0.14.tar.gz) = 1801a224cbc235de6b18f2312a798e908ab111d6
+SHA512 (HTTP-Server-Simple-Mason-0.14.tar.gz) = 0a1a087affac10568059c7b09d2242a9289b38807deb4a876a2ce2326d42eb44be79b01f001580e4b62bc38bf23c7336a71496a59822cd20a2da250b1c54c930
 Size (HTTP-Server-Simple-Mason-0.14.tar.gz) = 21389 bytes

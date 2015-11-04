@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2008/07/21 11:54:17 rhaen Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 02:47:00 agc Exp $
 
 SHA1 (Apache-Filter-1.024.tar.gz) = 957c411548ddd6a916cf04640ac0056027d42e63
 RMD160 (Apache-Filter-1.024.tar.gz) = 7e8b293f880fe052c00a30623c5db3ef9aee94ef
+SHA512 (Apache-Filter-1.024.tar.gz) = eda6bf04442b721fb68033359bd97604c133091994830a8188dd01e34f8b55030bdf12f56d1f827dafcf7e3aa2686b50f4b7e8f3cabbaf612f417e29b6b741c6
 Size (Apache-Filter-1.024.tar.gz) = 26566 bytes
 SHA1 (patch-aa) = f5fe220731856ca08f945f4d2ff2827fdcf90f75

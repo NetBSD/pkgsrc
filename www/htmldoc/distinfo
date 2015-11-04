@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.11 2011/01/24 16:33:19 wiz Exp $
+$NetBSD: distinfo,v 1.12 2015/11/04 02:46:54 agc Exp $
 
 SHA1 (htmldoc-1.8.27-source.tar.bz2) = 472908e0aafed1cedfbacd8ed3168734aebdec4b
 RMD160 (htmldoc-1.8.27-source.tar.bz2) = 9605a5894675439f5fae405fb060972e19f33c7e
+SHA512 (htmldoc-1.8.27-source.tar.bz2) = f0b2b6fec4925e549e74d6721f15b5de00c8c4889b0c67689945c408ed88074acb1330cae155655a1986adc0ca549cea32e242aa1ecac8e6338a1739f7c85438
 Size (htmldoc-1.8.27-source.tar.bz2) = 3960271 bytes
 SHA1 (patch-aa) = 92de5e1e4761ffe2d117004b2a38ec52edb33d7c
 SHA1 (patch-ab) = 22add1402202fed917a79ce67963cb282ca46f87

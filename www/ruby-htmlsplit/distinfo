@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2006/01/03 14:25:51 taca Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 02:47:34 agc Exp $
 
 SHA1 (htmlsplit102.zip) = e7703e9d4e662cf42b896dace872039f18d498ac
 RMD160 (htmlsplit102.zip) = 349362a6d51388d3f0ae4d500a22f049633cc52a
+SHA512 (htmlsplit102.zip) = 2f76af04490d6a45095a041dfe044f689324573e39f27b8b676fb0f10dcedc265e2d41a06a2308ca0a59494793743582f7c9b439b5e7f2e5d05ba986cdbf519e
 Size (htmlsplit102.zip) = 4063 bytes

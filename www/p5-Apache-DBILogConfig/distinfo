@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 14:08:34 wiz Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 02:47:00 agc Exp $
 
 SHA1 (Apache-DBILogConfig-0.02.tar.gz) = 9de4a233b69980e5e04e3a1160c41697521821ca
 RMD160 (Apache-DBILogConfig-0.02.tar.gz) = 8492eb01a325252af4b4d0e3c9b1587cef69037b
+SHA512 (Apache-DBILogConfig-0.02.tar.gz) = 4519d7edb2420eafe88d4b6aecfe9c283b5aa0888e327025f9e1d684b1f7a070076bf79ba1b8b63fa7442c3edb0216da24b860b95649d2bb75b5cf595ab47150
 Size (Apache-DBILogConfig-0.02.tar.gz) = 5335 bytes

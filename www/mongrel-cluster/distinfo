@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/04/04 15:25:31 jlam Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:46:58 agc Exp $
 
 SHA1 (mongrel_cluster-1.0.5.gem) = e29a902b09c91662cbd7388062980ce2b14f5e4a
 RMD160 (mongrel_cluster-1.0.5.gem) = 095736d09203521bdfa1668cefb8a1b9d64bc3d9
+SHA512 (mongrel_cluster-1.0.5.gem) = 9ef9de8bdb0782b3604e64b72bb286e2938f2dd3c1512f3c26239a79863434169ba4cf65dc7a60c77f09bf9047ee5a29be85ae9115ac55c61afa04864813e1f9
 Size (mongrel_cluster-1.0.5.gem) = 24064 bytes
