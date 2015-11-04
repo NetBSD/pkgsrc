@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.5 2015/10/18 15:25:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/11/04 16:45:52 adam Exp $
 bin/audiotools-config
-bin/cd2track
-bin/cdinfo
-bin/cdplay
+bin/cdda2track
+bin/cddainfo
+bin/cddaplay
 bin/coverdump
 bin/covertag
 bin/coverview
-bin/track2cd
+bin/track2cdda
 bin/track2track
 bin/trackcat
 bin/trackcmp

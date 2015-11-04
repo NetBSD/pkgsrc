@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.7 2015/11/03 01:12:46 agc Exp $
+$NetBSD: distinfo,v 1.8 2015/11/04 16:45:52 adam Exp $
 
-SHA1 (audiotools-3.1.tar.gz) = 1b614d3cb26aaf14bd5f7b0f1e52d70b4da39d59
-RMD160 (audiotools-3.1.tar.gz) = 366b28c499f6a12b9b517186b4e710ebd9c1d57a
-SHA512 (audiotools-3.1.tar.gz) = 793a5109477e57ceb1d7146d48fb3f000abfd5333a7ad82ef5d9ef12667880e319a2aa25d24ca260aed64c3e107e7e35d8d4b6985b9cf232c5855953d123347b
-SHA512 (audiotools-3.1.tar.gz) = 793a5109477e57ceb1d7146d48fb3f000abfd5333a7ad82ef5d9ef12667880e319a2aa25d24ca260aed64c3e107e7e35d8d4b6985b9cf232c5855953d123347b
-Size (audiotools-3.1.tar.gz) = 6318431 bytes
+SHA1 (audiotools-3.1.1.tar.gz) = 61e9107acd0c2d0630de1bf099a170254119c253
+RMD160 (audiotools-3.1.1.tar.gz) = 86436a2e6d80b35153168699a2bd32299ed1a254
+SHA512 (audiotools-3.1.1.tar.gz) = dfba0dab8ef1573a12366bb4d46552eeb6c23c4abde34d9df51238fc97f573135b564cc3e5dbcaf7691c4502d8173dc926d8eb5ecd169fe619278ae89ff24c3a
+Size (audiotools-3.1.1.tar.gz) = 6325408 bytes
 SHA1 (patch-src_cdiomodule.h) = f7624e9c0923dfeceb422039a711e95697548e5a
 SHA1 (patch-src_samplerate_src__sinc.c) = c069c78096f444fc686f5ea6d5319a6e5ed458d1
