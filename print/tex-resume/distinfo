@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/06/03 08:59:02 jmmv Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:41 agc Exp $
 
 SHA1 (resume.zip) = 470f64978bb9d890e3753cde08436eecd7901360
 RMD160 (resume.zip) = 74d9fb560266fdb3d4fbcf5a7c594f6ce3bff1ab
+SHA512 (resume.zip) = d665c6f58b53ba2ae4078db33124243bed6b27252c83f1e65ff7104dc6a9997548282c85e05258b68f04897f9e2624d4d0941df786fc6654113b9c97beedad3f
 Size (resume.zip) = 7958 bytes

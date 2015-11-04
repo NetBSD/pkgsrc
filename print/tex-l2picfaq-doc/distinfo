@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/14 17:07:35 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:23 agc Exp $
 
 SHA1 (tex-l2picfaq-19601/l2picfaq.doc.tar.xz) = bae502ff05b3ce792a64885fb07d285482eb5178
 RMD160 (tex-l2picfaq-19601/l2picfaq.doc.tar.xz) = 2c1edce58668f8ec0782c418b49b9657aa20c2e3
+SHA512 (tex-l2picfaq-19601/l2picfaq.doc.tar.xz) = 1e52314dcc48b09bf50490b4a3c90eea1e6f547ca4a48026f436ea9ba99428576473d2cdaa75f8b54301c4729e3ba825beb17189a5f7c33b030a84f6ec837f1d
 Size (tex-l2picfaq-19601/l2picfaq.doc.tar.xz) = 364380 bytes

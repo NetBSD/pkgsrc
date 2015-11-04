@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/11/13 03:17:17 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:07 agc Exp $
 
 SHA1 (tex-everypage-15878/everypage.doc.tar.xz) = 18755754f66be7e20e7ed551dd650931cfe689ae
 RMD160 (tex-everypage-15878/everypage.doc.tar.xz) = 6d7e3f40b54d4c465df841af969473a58a5cff4d
+SHA512 (tex-everypage-15878/everypage.doc.tar.xz) = 4521eb5f17711549cb7345104bd9a2b1be191c401cc3a49194eae33cc1f1b79c05f01bacd3bd7f8c9527ce722c965eadf9981612825bb195d0bfe9f9e6d6feee
 Size (tex-everypage-15878/everypage.doc.tar.xz) = 14312 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/04 12:26:30 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:47 agc Exp $
 
 SHA1 (tex-babel-czech-30261/babel-czech.tar.xz) = 4270f27ba2ad292dd515683effa23677200a0867
 RMD160 (tex-babel-czech-30261/babel-czech.tar.xz) = 876e5cd1f46bc910c9ab5dd52fa5d6141c6aa4c0
+SHA512 (tex-babel-czech-30261/babel-czech.tar.xz) = 07a0836c608deaa8d3691659d1612e7b89e52e9ff5810bf78b267339e9aacdf748a2b6dda1ad87a9c87233af1e71c1f8ab6070b310a39508a7f33db9ebe6f3a6
 Size (tex-babel-czech-30261/babel-czech.tar.xz) = 4872 bytes

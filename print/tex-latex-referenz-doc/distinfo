@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/14 17:07:35 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:24 agc Exp $
 
 SHA1 (tex-latex-referenz-36671/latex-referenz.doc.tar.xz) = 9cdcac07524623484b7c1b0cab5183c39c1771d2
 RMD160 (tex-latex-referenz-36671/latex-referenz.doc.tar.xz) = 6992494fe1bf841042680b078d4512185d022d5d
+SHA512 (tex-latex-referenz-36671/latex-referenz.doc.tar.xz) = b2ed715d9ee712167a18057e6aba06f802ce4c2908a6ace3096e69c0f00097425161033db57ca3e0036676c4d2c649697ebbb86b7dd25d5b792a8f1478ad28e2
 Size (tex-latex-referenz-36671/latex-referenz.doc.tar.xz) = 98680 bytes

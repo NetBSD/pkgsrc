@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/11/08 01:40:56 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:13 agc Exp $
 
 SHA1 (tex-gustlib-15878/gustlib.tar.xz) = 0246766bafe6873762514f1f37b2d8657b15098e
 RMD160 (tex-gustlib-15878/gustlib.tar.xz) = 06407eadd462fc1ff59660aa4dbb2fc74d06af6d
+SHA512 (tex-gustlib-15878/gustlib.tar.xz) = 062fc7c493f1523ac7bb38edd7a073156eb3a4bcc54c7a7b441407a4522287cd16ec7133efc9f5707a02dba8239d1bff26e77d92a1501134d40330f4af9de6ca
 Size (tex-gustlib-15878/gustlib.tar.xz) = 40512 bytes

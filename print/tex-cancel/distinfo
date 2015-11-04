@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/04/22 10:18:33 markd Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 01:01:54 agc Exp $
 
 SHA1 (tex-cancel-32508/cancel.tar.xz) = c61fcbb45ebac32c53a986f3e6c5bd7ff5d5166e
 RMD160 (tex-cancel-32508/cancel.tar.xz) = 1b9193c39ec3ebcb86ff257ee0d74fb28a02a42f
+SHA512 (tex-cancel-32508/cancel.tar.xz) = 79a3e23a9fa2f3ee6ee11fabf1cbbe6247b98b4d52dd4d8f443386ef7a832e419efceec6f25c6b3f3864fa18eab053e50a5111571a7c58693003453b969f0b9c
 Size (tex-cancel-32508/cancel.tar.xz) = 2892 bytes

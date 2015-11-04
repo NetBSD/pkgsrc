@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/16 10:30:15 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:02 agc Exp $
 
 SHA1 (tex-dinbrief-15878/dinbrief.doc.tar.xz) = 012ba0e6cda8b36dffa8996fa0359f9ff1ee79be
 RMD160 (tex-dinbrief-15878/dinbrief.doc.tar.xz) = 3738b047bc5b74f34460a4ce21ad59579ec0ae61
+SHA512 (tex-dinbrief-15878/dinbrief.doc.tar.xz) = bbab411ba8413ad963f2f438db168a62f3e3e36505eef7b7a7c674e7f8410fbbc5ab291439f598e6d82fce82f9b17f16c0af1fd815854fba2d7c28700aca204c
 Size (tex-dinbrief-15878/dinbrief.doc.tar.xz) = 436604 bytes

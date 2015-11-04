@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2010/11/08 16:45:04 minskim Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 01:02:17 agc Exp $
 
 SHA1 (tex-hyphen-lithuanian-20144/hyphen-lithuanian.tar.xz) = 453d470f3443a456f19b4d0c5eba593230618516
 RMD160 (tex-hyphen-lithuanian-20144/hyphen-lithuanian.tar.xz) = 480ad8378ec928527a1dc789b667c3eb9fbf96e3
+SHA512 (tex-hyphen-lithuanian-20144/hyphen-lithuanian.tar.xz) = 820f3a08b0da2534a65030254af1241e6182da6daedd5944c35b3866f3816b6d8063aa55f082d14e09cb5799f4573b3f461924e08deca0a9c300607c4ee762dc
 Size (tex-hyphen-lithuanian-20144/hyphen-lithuanian.tar.xz) = 348 bytes

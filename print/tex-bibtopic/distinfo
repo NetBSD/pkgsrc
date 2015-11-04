@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/03/06 21:48:54 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:52 agc Exp $
 
 SHA1 (tex-bibtopic-15878/bibtopic.tar.xz) = e99c9da20da7ad3aceba87c0ab6d9c02b35056b7
 RMD160 (tex-bibtopic-15878/bibtopic.tar.xz) = 4e3e8709fa05be918a2d16de3846e5e2366209b5
+SHA512 (tex-bibtopic-15878/bibtopic.tar.xz) = 546a368bea3412aeb4925fc7774d20b625e4434788b568957e846301419612027e216f9479aade79a9d31b182b231fe012f960959b894d2dfb83a54a32c9038f
 Size (tex-bibtopic-15878/bibtopic.tar.xz) = 8584 bytes

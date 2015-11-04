@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/04/11 20:48:10 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:53 agc Exp $
 
 SHA1 (tex-braket-2009/braket.tar.xz) = 89752797cdddb4e5031252783b2c9f81d2b4001e
 RMD160 (tex-braket-2009/braket.tar.xz) = e8e9b5a1b7af08f5a35054ab8e9447bd6f019a8a
+SHA512 (tex-braket-2009/braket.tar.xz) = 212361e4a0c0fa2d5e0c5a7503f91a3b4ff95f3a872006467498f5f0fae82530791ecc425f48d5c6d6d535af635c2046a69d90b1aae7d96c8055aba585bb9153
 Size (tex-braket-2009/braket.tar.xz) = 2012 bytes

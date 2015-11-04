@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/28 11:55:19 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:58 agc Exp $
 
 SHA1 (tex-cnbwp-32550/cnbwp.tar.xz) = e57797b122940a3f8a65a2bd6a1d0ea527b56a42
 RMD160 (tex-cnbwp-32550/cnbwp.tar.xz) = 3b7e3d03e0dc9394bdab2acac8a130e89aa2acef
+SHA512 (tex-cnbwp-32550/cnbwp.tar.xz) = fc9ca8119875ac62373955d6cf264a5551830643b35ac43966108f9eca571c07366b63661fd37cd549e675fc9dfb284f3d3b4aa12c28044e89d7173150f37556
 Size (tex-cnbwp-32550/cnbwp.tar.xz) = 9908 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/10/19 20:43:38 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:43 agc Exp $
 
 SHA1 (tex-adrconv-17683/adrconv.doc.tar.xz) = c2b74c7e6ef1afe277ef081bee082b283c018ad8
 RMD160 (tex-adrconv-17683/adrconv.doc.tar.xz) = 89479e7250b435a2ae4892c13d3dc6013e4b57d4
+SHA512 (tex-adrconv-17683/adrconv.doc.tar.xz) = 58fac98027f81367cdca714c4f4101639c7c208325a8be7eae6838ac17223fa0720460139501f54056a70a2f31b327e15a986548cbcbd32887f7984805c94c4f
 Size (tex-adrconv-17683/adrconv.doc.tar.xz) = 426088 bytes

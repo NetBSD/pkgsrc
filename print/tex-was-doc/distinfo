@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/16 10:30:20 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:58 agc Exp $
 
 SHA1 (tex-was-21439/was.doc.tar.xz) = 042fedb7bd147e91da044a1ea3478931b38658e3
 RMD160 (tex-was-21439/was.doc.tar.xz) = 09671472037990d35c5b5e67a8fe97c37847a04d
+SHA512 (tex-was-21439/was.doc.tar.xz) = c567206cd65d76aea4a505c662ac1087d4b6b0c7346accc84d3b336a8604ee098e503962e2f572869a0b29bfbfbcd2870fc9bfb69ace947380acc1939ec72370
 Size (tex-was-21439/was.doc.tar.xz) = 578872 bytes

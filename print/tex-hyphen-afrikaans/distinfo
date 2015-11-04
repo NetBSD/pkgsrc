@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/16 02:51:23 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:14 agc Exp $
 
 SHA1 (tex-hyphen-afrikaans-25990/hyphen-afrikaans.tar.xz) = e76fe19a45cbbba43b2946561da9f90ecfcf53b4
 RMD160 (tex-hyphen-afrikaans-25990/hyphen-afrikaans.tar.xz) = 3b96fbb2037a54237535a59e3fffb5529afd9975
+SHA512 (tex-hyphen-afrikaans-25990/hyphen-afrikaans.tar.xz) = 14262f708f00d2a333c6e732b7e256f95fd05479d397e3cea87afb2597f83dd2972b681cb6265ff017a14a17a73ab4edaec97f7eb3e5fd1a15969efd2bc8e20a
 Size (tex-hyphen-afrikaans-25990/hyphen-afrikaans.tar.xz) = 504 bytes

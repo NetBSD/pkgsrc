@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/15 17:51:48 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:02 agc Exp $
 
 SHA1 (tex-dickimaw-32925/dickimaw.doc.tar.xz) = 1f5a42243be818bfa075912c82420430ad9ef74b
 RMD160 (tex-dickimaw-32925/dickimaw.doc.tar.xz) = 5f2c554c0773bf8d8cce185838e5bd896fb0efb0
+SHA512 (tex-dickimaw-32925/dickimaw.doc.tar.xz) = 400114d40acfd1377bafa6b6c094a42c00ea6ad014364a20697fd9b115c4f08b784b4faff047fbad39d06084fa064b6e921e9a3adbeb5b2fef31795ddac5ff50
 Size (tex-dickimaw-32925/dickimaw.doc.tar.xz) = 6684416 bytes

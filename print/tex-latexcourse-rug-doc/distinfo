@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/15 17:51:49 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:25 agc Exp $
 
 SHA1 (tex-latexcourse-rug-35544/latexcourse-rug.doc.tar.xz) = 7a048b44748485602f15212d041f8988d8fb015b
 RMD160 (tex-latexcourse-rug-35544/latexcourse-rug.doc.tar.xz) = 4c2fd8d2818e73548af0ea1ec9a114afb82864f4
+SHA512 (tex-latexcourse-rug-35544/latexcourse-rug.doc.tar.xz) = 64802c04451899d11b2b898bff98defb4d7a8928d8a41a5c3ca5fb68ed95872f978404608c1a0c08b999687e8d0304d05db98d7661125910ad35f45d983d0e80
 Size (tex-latexcourse-rug-35544/latexcourse-rug.doc.tar.xz) = 4517736 bytes

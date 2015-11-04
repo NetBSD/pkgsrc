@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/01/26 13:09:09 mef Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 01:01:38 agc Exp $
 
 SHA1 (pslib-0.4.5.tar.gz) = 2ad904b650b7d55b7c12be0c99f77073770ece56
 RMD160 (pslib-0.4.5.tar.gz) = 8400b078bd643325109e988df7971e0eb164f492
+SHA512 (pslib-0.4.5.tar.gz) = 410abfdca6c52f16c07b7d0157930fbb7a996f03bfb84aee2bc951b2d859bc2186d3ba742b724cd957b9b1c48201364fbeb11c15d7f4ead34f78b0d0746abc6f
 Size (pslib-0.4.5.tar.gz) = 493687 bytes
