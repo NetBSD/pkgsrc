@@ -1,4 +1,4 @@
-# $NetBSD: xorg.libxcb,v 1.13 2015/05/05 07:51:43 wiz Exp $
+# $NetBSD: xorg.libxcb,v 1.14 2015/11/04 14:21:02 sevan Exp $
 #
 include/xcb/bigreq.h
 include/xcb/composite.h
@@ -274,6 +274,7 @@ lib/libxcb.so.2.2
 lib/libxcb.so.2.3
 lib/libxcb.so.2.4
 lib/libxcb.so.3.0
+lib/libxcb.so.3.1
 lib/pkgconfig/xcb-composite.pc
 lib/pkgconfig/xcb-damage.pc
 lib/pkgconfig/xcb-dpms.pc
