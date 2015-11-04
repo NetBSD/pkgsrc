@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/11/07 09:04:19 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:59:28 agc Exp $
 
 SHA1 (epubpreflight-0.1.0.zip) = 001f645335bbbf63f41d4e9861de32e2dd6f3d7b
 RMD160 (epubpreflight-0.1.0.zip) = 5a86a51e172609aa5b9f7dacc12e4e0498b2c820
+SHA512 (epubpreflight-0.1.0.zip) = 44015422342b2ba378be4d099351fff12c4f424f8d6a57faa3dec2cdb917247204eed16f58a172f804d3474445ba0582d31a11d37ad1e2797a699e005f78e039
 Size (epubpreflight-0.1.0.zip) = 1299716 bytes

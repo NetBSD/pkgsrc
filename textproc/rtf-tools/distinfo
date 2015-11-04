@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.8 2011/10/06 21:56:15 dholland Exp $
+$NetBSD: distinfo,v 1.9 2015/11/04 02:00:07 agc Exp $
 
 SHA1 (RTF-1.10.tar.Z) = 1fcf63e52bd2d57b2841e32667ab76bb6c2998c6
 RMD160 (RTF-1.10.tar.Z) = 0fdacb6df5779a343d419e1e3bf007f8d8cabbda
+SHA512 (RTF-1.10.tar.Z) = d106bf5c07cd4cca97dbc50281290d6c1fe45645456e8b829a6259d226c1deb632d95109f0bbe2e83e10e647d4c33f0abb683eb3461847be025abc6e3b8231b5
 Size (RTF-1.10.tar.Z) = 312224 bytes
 SHA1 (rtf-tools-jumbo-patch-20111006.gz) = f99a0dc6729733a58561006acdd7ddbf284621bb
 RMD160 (rtf-tools-jumbo-patch-20111006.gz) = d4aef13640f3c0ba39ad2a3811db74e8ed42f66b
+SHA512 (rtf-tools-jumbo-patch-20111006.gz) = 9355c3bbcaafcaea3d42d5d8f1216f14e56fbf1337934e1de61264c8ffd5008ecd7753e9e1360c64c7e6eea5cb4a213d45bd3b214547b7fe29737f35be3af0a3
 Size (rtf-tools-jumbo-patch-20111006.gz) = 31427 bytes

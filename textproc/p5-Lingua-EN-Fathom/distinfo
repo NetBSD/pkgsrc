@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/07/01 02:44:29 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:59:44 agc Exp $
 
 SHA1 (Lingua-EN-Fathom-1.18.tar.gz) = 48a2c8e10054f3fcb6b9f23fe195f9c2fe66fe7d
 RMD160 (Lingua-EN-Fathom-1.18.tar.gz) = ab7949aa13fc9a9cf26265b57b94bbd8597672f6
+SHA512 (Lingua-EN-Fathom-1.18.tar.gz) = c8bed7cb0989b1c86ef0ccbad3fa1d7426232579bde9ab85bc5f2220d649851763fe4ef2b8162e02019ec67ca08b6cadbd5d9890a2e6abb8f54e26f531992139
 Size (Lingua-EN-Fathom-1.18.tar.gz) = 10317 bytes

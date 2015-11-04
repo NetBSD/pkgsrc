@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/08/11 15:55:31 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:59:30 agc Exp $
 
 SHA1 (harmony-stable-20060526.tar.gz) = c6f146af672bc6be6f598fd48321283a6c0aeaf0
 RMD160 (harmony-stable-20060526.tar.gz) = a5014ed431057cc9e8bd36dac62d4031e5b5b4eb
+SHA512 (harmony-stable-20060526.tar.gz) = a4dc20db191ade1c2117005ec3bfb59890bececa7d4871e0d506b806f6cd42bbf3c70b920a8e947019b1d448d7bdb140cb407a852f46c0d460236d479f4a87ee
 Size (harmony-stable-20060526.tar.gz) = 777608 bytes

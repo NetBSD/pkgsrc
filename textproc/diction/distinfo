@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2015/01/16 11:49:07 wiz Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 01:59:27 agc Exp $
 
 SHA1 (diction-1.13.tar.gz) = 339462c27df2ee4138e1db57c221386d74f54932
 RMD160 (diction-1.13.tar.gz) = 749e8879fb0a93eb22c758a5230de2231b07e927
+SHA512 (diction-1.13.tar.gz) = f410f9992adcc362bc60f3e39e85cc07df5763623729c6d599538707aff0831e8cde59d80bcd384975d75229d6ce1cae9bebdf6eb3d4a7203b22d2a1773df039
 Size (diction-1.13.tar.gz) = 145971 bytes
 SHA1 (patch-aa) = 72e0cbc437b031720fe6e26a5a4a4220bbb4a82f
 SHA1 (patch-ab) = efd61a4276f7747d45dab1869566e223e693ca48

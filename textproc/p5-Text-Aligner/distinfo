@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/07/21 20:15:00 bsiegert Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:59:50 agc Exp $
 
 SHA1 (Text-Aligner-0.12.tar.gz) = c2bc19424e9b86c26cc4ccb1ae544f8c0fec227a
 RMD160 (Text-Aligner-0.12.tar.gz) = eaa749b02dcbc423ea2bedb20c29c9ac96f71c1e
+SHA512 (Text-Aligner-0.12.tar.gz) = b3e68aa3a5b26e5de713ec1e9f3775f1b4e6ee51f9e08bf443299e6f27310ceca4135cde95d6d9b279a6ba356af4861a1736527269662e490c0799e5a454093b
 Size (Text-Aligner-0.12.tar.gz) = 12545 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2012/02/28 17:17:58 apb Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:00:06 agc Exp $
 
 SHA1 (regxml-20100901-d9f326.tar.gz) = 7a217fdae8bdce222b3689310706af110d95cf38
 RMD160 (regxml-20100901-d9f326.tar.gz) = 45448c013dc6bdae3a1852e5a99984cb6f2afe71
+SHA512 (regxml-20100901-d9f326.tar.gz) = 40282a6731e597118438fd96c87d70ac2b5cde08deaed87adbbc2217f1d7e93503b9dbb43dc46ca9fd0afa15b36dde848b29b444f09c6a6187f4ab0c11cbd70a
 Size (regxml-20100901-d9f326.tar.gz) = 47261 bytes

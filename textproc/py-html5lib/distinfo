@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2014/01/17 23:32:02 wiz Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 02:00:03 agc Exp $
 
 SHA1 (py-html5lib/0.999.tar.gz) = 2f1c63ab3b032f76cc8bb737eb4be134cc62ea61
 RMD160 (py-html5lib/0.999.tar.gz) = d20fde598f8ab0e09cd71e78abc670e5c16e4f6e
+SHA512 (py-html5lib/0.999.tar.gz) = 1e9b359c70012af80f20bf82ac87966fbc6cb6f4417f5fa217964b67e54ec9877851249acd0551c28dce4198a244cf9a16def3dde2167061ca08f5f4be5f4168
 Size (py-html5lib/0.999.tar.gz) = 122652 bytes
