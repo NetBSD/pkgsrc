@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2005/11/29 10:21:05 rillig Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 00:38:40 agc Exp $
 
 SHA1 (pkgse-0.3.tgz) = 5f7587f19bc768ab8920ad204226313cdd4b6204
 RMD160 (pkgse-0.3.tgz) = 3188c4cf20bca1db60c0006f702fc84758f559a9
+SHA512 (pkgse-0.3.tgz) = 3b8ceef05c023f206ddcb8b645af62e4ed85e2fd89f00e6a0198a256a13568b438b845df98e7a2747345bacfaf925ba08048b15a4d0d8777955b37e1465aa8bf
 Size (pkgse-0.3.tgz) = 874 bytes
