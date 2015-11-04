@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2015/09/23 06:56:57 ryoon Exp $
+# $NetBSD: Makefile,v 1.89 2015/11/04 13:41:22 richard Exp $
 
 DISTNAME=	dbus-1.10.0
 PKGREVISION=	1
@@ -35,11 +35,9 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 
 CONFIGURE_ARGS_GROUPS=	enable disable with without
 
-.if ${OPSYS} == "Darwin"
 # Prevent the configure script from picking up a per-user tmp
 # directory. See the commit message on revision 1.35
 CONFIGURE_ARGS+=	--with-session-socket-dir=/tmp
-.endif
 
 CONFIGURE_ARGS+=	--without-init-scripts
 CONFIGURE_ARGS+=	--disable-ansi
