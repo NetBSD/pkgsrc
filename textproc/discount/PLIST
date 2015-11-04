@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/04/04 09:40:23 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/11/04 01:10:18 leot Exp $
 bin/makepage
 bin/markdown
 bin/mkd2html

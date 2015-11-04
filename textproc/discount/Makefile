@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2013/04/04 09:40:23 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2015/11/04 01:10:18 leot Exp $
 #
 
-DISTNAME=	discount-2.1.6
+DISTNAME=	discount-2.1.8a
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.pell.portland.or.us/~orc/Code/discount/
 EXTRACT_SUFX=	.tar.bz2
