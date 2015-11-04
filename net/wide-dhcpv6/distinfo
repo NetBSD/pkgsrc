@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2009/07/17 01:10:07 jakllsch Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 00:35:44 agc Exp $
 
 SHA1 (wide-dhcpv6-20080615.tar.gz) = 8829c4c871a74dccc0335839ff0a4e763b6b4f24
 RMD160 (wide-dhcpv6-20080615.tar.gz) = 4b7d8115de6c90b8f4878a2bf25a5fd6aceea13a
+SHA512 (wide-dhcpv6-20080615.tar.gz) = 2c6d5ca523dbf07fae0e65af86ed24f6582bf5230df394da385e26ff818594fd15d909851723c582792b4649a89d7f2a99999c5d3aac1ea22229348b8afc2d8b
 Size (wide-dhcpv6-20080615.tar.gz) = 215354 bytes

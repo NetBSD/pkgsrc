@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2006/01/02 19:23:40 adrianp Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 00:35:39 agc Exp $
 
 SHA1 (tcpflow-0.21.tar.gz) = 08eeb8532e1f713db2587580d759ebad813a0b49
 RMD160 (tcpflow-0.21.tar.gz) = 250ed27f1a49f4eda4b274857c11762be8261209
+SHA512 (tcpflow-0.21.tar.gz) = aec7978e88c67671523187eadcf28ba4ef09394a461a7b65a5f5f23af5e87501567f9a3467be824b67ef7b31c554c91d82f25ba0f928308a32e701792095d8d1
 Size (tcpflow-0.21.tar.gz) = 79369 bytes
 SHA1 (patch-aa) = afea3a5b0fb01ac9af87f63881fdf502dc082899
 SHA1 (patch-ab) = f506c51be721f5dcd484028edc3cd0fa56b795fa

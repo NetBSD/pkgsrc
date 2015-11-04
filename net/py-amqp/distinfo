@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.8 2014/11/09 20:18:33 rodent Exp $
+$NetBSD: distinfo,v 1.9 2015/11/04 00:35:29 agc Exp $
 
 SHA1 (amqp-1.4.6.tar.gz) = 662c1e472d3c8df6edf7e7f905ab7079239b51f9
 RMD160 (amqp-1.4.6.tar.gz) = ac1d201e66ce801f37a61b09b8d51e56c70a63b7
+SHA512 (amqp-1.4.6.tar.gz) = fe5cd7cafd9d6a4b8c1ab88a2757db440cd7b415b29c608f51052662d4c7d9e3fae81895ea09ec88f74e83ae9615c5f60b5857417b5d645086f88fc93527758c
 Size (amqp-1.4.6.tar.gz) = 77902 bytes

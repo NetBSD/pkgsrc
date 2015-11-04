@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/01/07 05:02:37 manu Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 00:35:13 agc Exp $
 
 SHA1 (check_dnsrbl-0.2.tgz) = f11df81eb699673cfc9e46313d584d0ef14bab14
 RMD160 (check_dnsrbl-0.2.tgz) = 16c1166831d75bd90797c19a0f08a9ec1a1de7b5
+SHA512 (check_dnsrbl-0.2.tgz) = 23c011a709346dc175baab66d8044b07b9e794ce5df73aa922ca8348f703603fc185e29ce33d0356395d1cf1566b2edade543ff81f00038ddf66496fc887fece
 Size (check_dnsrbl-0.2.tgz) = 4301 bytes

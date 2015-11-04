@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.4 2010/02/11 23:26:12 joerg Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 00:35:46 agc Exp $
 
 SHA1 (xtraceroute-0.8.14.tar.gz) = f7e21072fb653842aaed7ae2be5a0d33573bb654
 RMD160 (xtraceroute-0.8.14.tar.gz) = b468783f00afdc9e346dabcb9ccc4b4ecdba1536
+SHA512 (xtraceroute-0.8.14.tar.gz) = 715ba6869d3900ff9f9b4eb95a909f6217d58a5de5c05dd86cfc047d5c052c6c013f214995aaacea1bb8be372f8d448ffa231612fb8fc59e1e29a67dab56c84f
 Size (xtraceroute-0.8.14.tar.gz) = 981579 bytes
 SHA1 (ndg_files.tar.gz) = 994aeb804dd063f6fd2bf499addd4b5e8aca81cc
 RMD160 (ndg_files.tar.gz) = a86ab4ab5c981f8f53910dd816e4dcac9896628f
+SHA512 (ndg_files.tar.gz) = 6ba8d4bc0157df3a40016be5f15e32f79b16637c769d70191bbcc53d332ec20bca0623a4884ea0a372871c93219822cb99fc5eeee0ff08a33294e5f47dae7bed
 Size (ndg_files.tar.gz) = 90437 bytes
 SHA1 (patch-aa) = f2477f850ffd683fc6c6ef7fd7040ecff20ffa97
 SHA1 (patch-ab) = 752713d3ec6d013987f6b8c48f3a2e59636b421c

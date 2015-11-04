@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/08/13 07:56:41 adrianp Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 00:35:21 agc Exp $
 
 SHA1 (Net-IPv4Addr-0.10.tar.gz) = da26fed2a1ea13c34ebef86606899c5fb294af98
 RMD160 (Net-IPv4Addr-0.10.tar.gz) = fad5493dbb94101b06cdcb1cc5a32da477ce5253
+SHA512 (Net-IPv4Addr-0.10.tar.gz) = 66381f9be27c010721970d1af245885379bcc0b57c4c1179fc00e89a53a2d53e7836789b13d4c5f0079fac63d7987e12ee71f3168517ea5e1064d5fe1f7455af
 Size (Net-IPv4Addr-0.10.tar.gz) = 8429 bytes

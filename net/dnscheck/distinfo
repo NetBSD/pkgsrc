@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/03/19 22:15:52 pettai Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 00:34:58 agc Exp $
 
 SHA1 (dotse-dnscheck-1.5.4-0-g352a15c.tar.gz) = c3a0e38071856ae9b62acf0265fa33fc6581bf96
 RMD160 (dotse-dnscheck-1.5.4-0-g352a15c.tar.gz) = 79f99139446f8d280e51ca60be75faf51f49d6eb
+SHA512 (dotse-dnscheck-1.5.4-0-g352a15c.tar.gz) = 7dd00b191838db45c1c7775b967b9d78c2d31428f6e428524114c5f509a22fb8df2d32e0ceaa075372a9d8cae1dbc1c43fb020f7535cdf2d1c34dad3e723a28a
 Size (dotse-dnscheck-1.5.4-0-g352a15c.tar.gz) = 1341040 bytes
