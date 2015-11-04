@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2007/12/09 22:23:42 rhaen Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 02:47:02 agc Exp $
 
 SHA1 (CGI-Minimal-1.29.tar.gz) = befe818e39f12e4dfd501156e93e4894dc53e947
 RMD160 (CGI-Minimal-1.29.tar.gz) = 6173fc0b09ace22d808e9c54ac577e9800d0ae1f
+SHA512 (CGI-Minimal-1.29.tar.gz) = 8cea94b976a72cdaa7929eff291d796e1effe5d3004391ee945c21b3587fb195305b5cbb9af3c25a4d2ab2494192dff3468bffc5493f98dab35bc2b09cfebf94
 Size (CGI-Minimal-1.29.tar.gz) = 39037 bytes

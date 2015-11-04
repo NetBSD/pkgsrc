@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2009/02/10 12:39:57 abs Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 02:46:59 agc Exp $
 
 SHA1 (ns-remote-1.12.tbz) = d13f1061c8ec024fdf2601a0ad0881075948cede
 RMD160 (ns-remote-1.12.tbz) = 230175625b4364afba34a2681b90b9a8310865f6
+SHA512 (ns-remote-1.12.tbz) = 6868852ec0a8e84767f38446b6017b7c6e47cbc4b3a43d49f8099bfe9bd60f7040f32c73d46f5e2e07162730cef03445f317e2d3c8e1ecffea3f3d099506ef71
 Size (ns-remote-1.12.tbz) = 10424 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2011/11/12 01:23:29 hiramatsu Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 02:47:16 agc Exp $
 
 SHA1 (Plack-Middleware-Header-0.04.tar.gz) = b2bd91b8700748f95824eaff112eb3b0537f2876
 RMD160 (Plack-Middleware-Header-0.04.tar.gz) = e49d514ce75cd2bbe0c8bc6cc9e23679da5db9e0
+SHA512 (Plack-Middleware-Header-0.04.tar.gz) = b9b40bb500b373b3b03699dad9b629c2d34d6bb9e7165a432a834c330fac13a947bdf387556be7b2414e03bb56946260cb5421debeb581b191bb00f046ba6cdf
 Size (Plack-Middleware-Header-0.04.tar.gz) = 45316 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/12/31 16:51:46 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:47:23 agc Exp $
 
 SHA1 (fever-1.2.zip) = 8bcd56f01a6d4e40e9e049cf6a2294dfa347372a
 RMD160 (fever-1.2.zip) = 844caf2b3b85733a2cc78e1bd5049122b4692859
+SHA512 (fever-1.2.zip) = 9a00676c407674bb272bd1a47d447098fe04fa944aa05dfb729eabdf4503b1ce5fcf1d1b212c2bdd48ad29c14b4b1a9781615d09f6a20af6d4341417bc59f05c
 Size (fever-1.2.zip) = 6927 bytes

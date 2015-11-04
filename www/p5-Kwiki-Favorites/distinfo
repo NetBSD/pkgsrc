@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 14:08:36 wiz Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 02:47:13 agc Exp $
 
 SHA1 (Kwiki-Favorites-0.13.tar.gz) = c78c073860061fa9ebf73c45b1cb8526e9c584fe
 RMD160 (Kwiki-Favorites-0.13.tar.gz) = dfa7c9f94ccc42c7afaf9409df733aaa63ded3fd
+SHA512 (Kwiki-Favorites-0.13.tar.gz) = f8c59c51d20156b55af961f03f1603d9ca9fabfe69e3f06bfd90039f3f79999f5e029194d2812df18503e855cf2c1898863aaf60644db27d12a10b0b24c181c3
 Size (Kwiki-Favorites-0.13.tar.gz) = 8447 bytes

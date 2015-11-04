@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2010/09/05 15:05:37 sno Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 02:47:06 agc Exp $
 
 SHA1 (CatalystX-LeakChecker-0.06.tar.gz) = 4d9fd2afecca9f4ad5f85af4f6e0413b158eba8a
 RMD160 (CatalystX-LeakChecker-0.06.tar.gz) = f73672c3b535be0c3f003d463a9d5e43da518925
+SHA512 (CatalystX-LeakChecker-0.06.tar.gz) = 6899db31dc2c071d530d7227fc19921fb9ac004831d081f0e6dd2e2a28f3dbff47bd28aece3aa80ae9459e6bc3a65417e297c50e3ee16cfd1183f81bc9cecc3f
 Size (CatalystX-LeakChecker-0.06.tar.gz) = 10835 bytes

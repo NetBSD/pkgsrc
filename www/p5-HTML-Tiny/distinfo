@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2009/05/21 11:43:44 sno Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 02:47:09 agc Exp $
 
 SHA1 (HTML-Tiny-1.05.tar.gz) = 09d3a97f74d2bc42ac087b79c79064345adb71a8
 RMD160 (HTML-Tiny-1.05.tar.gz) = 9d92654a5295d64fc9bd11709909dc4b2479a8f5
+SHA512 (HTML-Tiny-1.05.tar.gz) = 3b2da589502981fc91afc5e650fc113dfb5abc53bcda24435cd47f313cafc98e64d53fb60f16232ebabb56a34f10752b29640a444df3238888e32a96915f669a
 Size (HTML-Tiny-1.05.tar.gz) = 17258 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/03/13 16:46:12 taca Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:47:34 agc Exp $
 
 SHA1 (jekyll-paginate-1.1.0.gem) = 38920468d904721334ac7b79ef13539ca9a86afd
 RMD160 (jekyll-paginate-1.1.0.gem) = 4e9b622b0f4a7833aa47b486c7bbbb384fe2aa72
+SHA512 (jekyll-paginate-1.1.0.gem) = 91a11257d843306056f27a1717231c21c385317ef71c5a61c259a0406383cb5e5a6ecbb5d43eea2522a2c83dc42dd0c5927dabec3f21725d1cc8b54448d9cf0a
 Size (jekyll-paginate-1.1.0.gem) = 11776 bytes
