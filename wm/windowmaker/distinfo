@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.41 2015/11/02 23:42:55 agc Exp $
+$NetBSD: distinfo,v 1.42 2015/11/04 17:41:21 agc Exp $
 
 SHA1 (WindowMaker-0.95.7.tar.gz) = ceae84f67e056dd291199b76afd0235edda214a0
 RMD160 (WindowMaker-0.95.7.tar.gz) = 2ae5003eb4e59b89c2b81c3b7b751b2f2dc98b14
-SHA512 (WindowMaker-0.95.7.tar.gz) = 9c1190503efdc58c11a90d5ba80796979cdc9f2beb69a6d233ffc8d531a54c877c5270841bf6318738069098cd488e5ab77ac19f661ac888e892bf05ac22d93f
 SHA512 (WindowMaker-0.95.7.tar.gz) = 9c1190503efdc58c11a90d5ba80796979cdc9f2beb69a6d233ffc8d531a54c877c5270841bf6318738069098cd488e5ab77ac19f661ac888e892bf05ac22d93f
 Size (WindowMaker-0.95.7.tar.gz) = 3238325 bytes
 SHA1 (patch-WINGs_dragsource.c) = a9b8dfb0ac453e5835b683a2119428d0b1182ced
