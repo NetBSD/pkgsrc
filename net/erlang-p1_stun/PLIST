@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2015/11/04 13:45:45 fhajny Exp $
+lib/erlang/lib/p1_stun/ebin/p1_stun.app
+lib/erlang/lib/p1_stun/ebin/stun.beam
+lib/erlang/lib/p1_stun/ebin/stun_app.beam
+lib/erlang/lib/p1_stun/ebin/stun_codec.beam
+lib/erlang/lib/p1_stun/ebin/stun_listener.beam
+lib/erlang/lib/p1_stun/ebin/stun_shaper.beam
+lib/erlang/lib/p1_stun/ebin/stun_sup.beam
+lib/erlang/lib/p1_stun/ebin/stun_test.beam
+lib/erlang/lib/p1_stun/ebin/stun_tmp_sup.beam
+lib/erlang/lib/p1_stun/ebin/turn.beam
+lib/erlang/lib/p1_stun/ebin/turn_sm.beam
+lib/erlang/lib/p1_stun/ebin/turn_tmp_sup.beam
+lib/erlang/lib/p1_stun/include/stun.hrl
