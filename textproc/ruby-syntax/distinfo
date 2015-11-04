@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2014/03/14 18:31:53 taca Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 02:00:10 agc Exp $
 
 SHA1 (syntax-1.2.0.gem) = efd7630e92be5ec8d86ff3e3f9dc542da43c2f62
 RMD160 (syntax-1.2.0.gem) = 3d4843a1fe4860da683d334fbefcbb8970b45082
+SHA512 (syntax-1.2.0.gem) = 2ea839917b520acc021a38fe4e8d6a713c02bca56088162c2d17edea8569eca9e825faafb77f1e76bd901ffdc64a80d4acbbd246c32ebf0f70d7f6ac5caff9c7
 Size (syntax-1.2.0.gem) = 19968 bytes

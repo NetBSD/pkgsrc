@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2013/04/09 02:33:45 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:59:23 agc Exp $
 
 SHA1 (aspell-nl-0.50-2.tar.bz2) = 651ac98c63ce342b19dd9c1a74a961500234bc0a
 RMD160 (aspell-nl-0.50-2.tar.bz2) = b01cc46fe6afff822c4b393ac2f0cb9d97d8eab3
+SHA512 (aspell-nl-0.50-2.tar.bz2) = bee6218b476f8655fa325940ba5ea1035ff483b5b47b9b547f60fd63786e8ff08daa03a30dd0ccd988c2f01827bb06075021e1a1fa79c640db82e72a3ccd3152
 Size (aspell-nl-0.50-2.tar.bz2) = 428365 bytes
 SHA1 (patch-aa) = e22211d1b77a79d16e2334630dc171245bb15677

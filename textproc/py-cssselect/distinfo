@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2014/04/11 17:58:35 wiz Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 02:00:02 agc Exp $
 
 SHA1 (cssselect-0.9.1.tar.gz) = 90a0738604ffc7b1e33d4e86347f45206530a4b0
 RMD160 (cssselect-0.9.1.tar.gz) = 5e1c8da5e94411ca3928d3a805b60fe51d7f8484
+SHA512 (cssselect-0.9.1.tar.gz) = c4cd2c8d6fbfa99b836554685dd59e1e794e1fab06fcf4419a226b0608a05d58be5af54e507003f2a233a22f03d59d3d63c0bf19b3314f15c95ab3ce5f4db6cc
 Size (cssselect-0.9.1.tar.gz) = 32952 bytes

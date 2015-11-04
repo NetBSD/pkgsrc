@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2012/12/02 09:50:02 cheusov Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 02:00:17 agc Exp $
 
 SHA1 (zoem-11-166.tar.gz) = cfb2d95b52fa2a74f071e84a9eb34d638a9e3a40
 RMD160 (zoem-11-166.tar.gz) = 651a8013973216f9841bf96ec43e4580ea8640dc
+SHA512 (zoem-11-166.tar.gz) = 61d92f737954ca4b445cdbba593de4c9acfa864f7d2d1fc73beb4b3f6346c5b164b195e8e014292e0d03291500ea3939a05b6f39e67b49410e9a3d5cb5f772e2
 Size (zoem-11-166.tar.gz) = 463646 bytes

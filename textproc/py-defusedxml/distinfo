@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/06/01 23:26:30 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:00:02 agc Exp $
 
 SHA1 (defusedxml-0.4.1.tar.gz) = 762ba44d849c0de9c99980be5137a163291d02b5
 RMD160 (defusedxml-0.4.1.tar.gz) = 9658ee9ca43f27f31a63d35bacdecffd7ef1bbc9
+SHA512 (defusedxml-0.4.1.tar.gz) = 78a7a1f3d1eed9d7cda00afaaccf8153c7f616303c53d3918341d75970d532932b04effcfc8b1b8ed88ba6d730cb56400e9e4ecee8aa7d2181c7577f1d535783
 Size (defusedxml-0.4.1.tar.gz) = 48889 bytes

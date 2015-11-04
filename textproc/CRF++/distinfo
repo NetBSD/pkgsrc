@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2013/05/22 13:07:47 obache Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:59:17 agc Exp $
 
 SHA1 (CRF++-0.58.tar.gz) = 979a686a6d73d14cdd0c96a310888fb6bffd2e91
 RMD160 (CRF++-0.58.tar.gz) = 3c70d129f06d88e13ece94d505dd417668f0a7bc
+SHA512 (CRF++-0.58.tar.gz) = 676b3e9ed89b5fb2f246175b58c384f10cab09fff8329c07311fed3832f55dbad26a25d2946c9efaa75cd8026517cb9e1742bb70ca26187367747852073e4eb9
 Size (CRF++-0.58.tar.gz) = 790570 bytes
 SHA1 (patch-configure) = 5a8a098fff9eaeed841b6de3d2719fc6193764ef
