@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2014/08/09 11:27:31 kim Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 01:32:29 agc Exp $
 
 SHA1 (rtty-3.2.tar.gz) = 62587ee4eec0b551b2b38341f20fddebde1ee8a1
 RMD160 (rtty-3.2.tar.gz) = 03863b5fbaf27a6f254c620e91c3dcd364df926a
+SHA512 (rtty-3.2.tar.gz) = 11d1fa82ddce97320c1aa44f726a2b05e49c7dd67fc9a902a29531e934f7f16b3ad193f9e4f247d8d03fc61bd0337c165faa08e1585374820b8f306b1b5315a4
 Size (rtty-3.2.tar.gz) = 23445 bytes
 SHA1 (patch-aa) = 11cf781b562bfe35c1003db6f3ac94653c1f8e06
 SHA1 (patch-ab) = 32644f9383ef43b45421fc100382509e2e6b2e34

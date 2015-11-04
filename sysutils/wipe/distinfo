@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2013/06/17 06:09:06 dholland Exp $
+$NetBSD: distinfo,v 1.8 2015/11/04 01:32:38 agc Exp $
 
 SHA1 (wipe-2.2.0.tar.bz2) = 4dd18f260ecd91b726336b2788fa33db04d6691a
 RMD160 (wipe-2.2.0.tar.bz2) = 5d1861bd893e01e94205a7ac2efadb1c756da700
+SHA512 (wipe-2.2.0.tar.bz2) = 5d156712b07b579018324b714dad2d3fae3c3cac1a9b1fd76ec44596b9d738bb3e460dedf23898e12ed87ee5dced28d1792c905c9869756914e21ad95efbbbbb
 Size (wipe-2.2.0.tar.bz2) = 70134 bytes
 SHA1 (patch-aa) = 4d84f400528b88f376a374f159b72da4237f3b33
 SHA1 (patch-ab) = 3116ad02dd0a3514afec440e46ab679395e4bbaa

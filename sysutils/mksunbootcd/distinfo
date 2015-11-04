@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2005/03/02 00:41:35 dmcmahill Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 01:32:21 agc Exp $
 
 SHA1 (mksunbootcd-1.0.tar.gz) = ed29f7177b63a375346dd8fde70de253fd4cade3
 RMD160 (mksunbootcd-1.0.tar.gz) = 07639484dc95aba1531b371a3fa015dcbb5a660d
+SHA512 (mksunbootcd-1.0.tar.gz) = 108c93e39065245e22005bafddc392311c0359c4aed759f947b070236eb1fb151785d607e7767308a7db2d2daa19eec535ef82cffa75ffa830e9720f36227342
 Size (mksunbootcd-1.0.tar.gz) = 24812 bytes

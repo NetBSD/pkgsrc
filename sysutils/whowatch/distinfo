@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2012/08/08 18:37:07 marino Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 01:32:38 agc Exp $
 
 SHA1 (whowatch-1.4.tar.gz) = 0d60c8ddb56b9bf9d2f3e1452832ccb2c862ff0c
 RMD160 (whowatch-1.4.tar.gz) = da2ee1d52e2a1d5292713259e66b4e7dd39b8dfd
+SHA512 (whowatch-1.4.tar.gz) = ed4390faabb35bdec1575dad505acbfae741e3618f993386c3c6a9bd67846a4787b82e76d779d1591070d58b616136f2236fcab041655ca282265c54278ff174
 Size (whowatch-1.4.tar.gz) = 43084 bytes
 SHA1 (patch-aa) = a42dbcd3f9a7138a6ec2e52d34e616e7113b87e2
 SHA1 (patch-ab) = f66829eaf7d148df10c2ca064ed81bdedf5c9adc

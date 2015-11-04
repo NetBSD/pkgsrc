@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.23 2015/08/28 07:47:08 wiz Exp $
+$NetBSD: distinfo,v 1.24 2015/11/04 01:32:20 agc Exp $
 
 SHA1 (mc-4.8.14.tar.bz2) = ff83beaca4777fd888b23999664bfa7d0fc584cb
 RMD160 (mc-4.8.14.tar.bz2) = 6d08797e08368cd11dea363d13179d39027c4a72
+SHA512 (mc-4.8.14.tar.bz2) = 69e1e48e7545b75cdfbcf24f5ade72c8ce92ad3d1410a91b847720dae2b7d5405f2f187337279da592482d0cc3dd2e1883ebd37b0b7ce0389a7821171a814b9a
 Size (mc-4.8.14.tar.bz2) = 3213271 bytes
 SHA1 (patch-ac) = d01357b685acd8e863510248ed7519ae2821757f
 SHA1 (patch-ad) = 4484b91511cf5bac73f4ae940988d46239e2cd95
