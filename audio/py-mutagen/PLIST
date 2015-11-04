@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2015/01/06 19:52:40 drochner Exp $
+@comment $NetBSD: PLIST,v 1.11 2015/11/04 09:53:40 wiz Exp $
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/mutagen/__init__.py
 ${PYSITELIB}/mutagen/__init__.pyc
@@ -12,9 +12,15 @@ ${PYSITELIB}/mutagen/_constants.pyo
 ${PYSITELIB}/mutagen/_file.py
 ${PYSITELIB}/mutagen/_file.pyc
 ${PYSITELIB}/mutagen/_file.pyo
+${PYSITELIB}/mutagen/_mp3util.py
+${PYSITELIB}/mutagen/_mp3util.pyc
+${PYSITELIB}/mutagen/_mp3util.pyo
 ${PYSITELIB}/mutagen/_tags.py
 ${PYSITELIB}/mutagen/_tags.pyc
 ${PYSITELIB}/mutagen/_tags.pyo
+${PYSITELIB}/mutagen/_toolsutil.py
+${PYSITELIB}/mutagen/_toolsutil.pyc
+${PYSITELIB}/mutagen/_toolsutil.pyo
 ${PYSITELIB}/mutagen/_util.py
 ${PYSITELIB}/mutagen/_util.pyc
 ${PYSITELIB}/mutagen/_util.pyo
@@ -30,9 +36,18 @@ ${PYSITELIB}/mutagen/aiff.pyo
 ${PYSITELIB}/mutagen/apev2.py
 ${PYSITELIB}/mutagen/apev2.pyc
 ${PYSITELIB}/mutagen/apev2.pyo
-${PYSITELIB}/mutagen/asf.py
-${PYSITELIB}/mutagen/asf.pyc
-${PYSITELIB}/mutagen/asf.pyo
+${PYSITELIB}/mutagen/asf/__init__.py
+${PYSITELIB}/mutagen/asf/__init__.pyc
+${PYSITELIB}/mutagen/asf/__init__.pyo
+${PYSITELIB}/mutagen/asf/_attrs.py
+${PYSITELIB}/mutagen/asf/_attrs.pyc
+${PYSITELIB}/mutagen/asf/_attrs.pyo
+${PYSITELIB}/mutagen/asf/_objects.py
+${PYSITELIB}/mutagen/asf/_objects.pyc
+${PYSITELIB}/mutagen/asf/_objects.pyo
+${PYSITELIB}/mutagen/asf/_util.py
+${PYSITELIB}/mutagen/asf/_util.pyc
+${PYSITELIB}/mutagen/asf/_util.pyo
 ${PYSITELIB}/mutagen/easyid3.py
 ${PYSITELIB}/mutagen/easyid3.pyc
 ${PYSITELIB}/mutagen/easyid3.pyo
