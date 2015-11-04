@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.649 2015/10/29 16:35:47 fhajny Exp $
+# $NetBSD: Makefile,v 1.650 2015/11/04 14:07:27 fhajny Exp $
 #
 
 COMMENT=	System utilities
@@ -127,6 +127,8 @@ SUBDIR+=	edbus
 SUBDIR+=	efreet
 SUBDIR+=	eggdbus
 SUBDIR+=	entr
+SUBDIR+=	erlang-goldrush
+SUBDIR+=	erlang-lager
 SUBDIR+=	estd
 SUBDIR+=	etckeeper
 SUBDIR+=	etcmanage
