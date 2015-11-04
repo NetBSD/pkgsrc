@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.11 2012/10/26 20:13:41 joerg Exp $
+$NetBSD: distinfo,v 1.12 2015/11/04 03:29:13 agc Exp $
 
 SHA1 (xvidcap-1.1.3.tar.gz) = e6d86a4184c8cc3e74738fb6e20d49c0d1640025
 RMD160 (xvidcap-1.1.3.tar.gz) = cc7be360153f192b502ffedc6548cce163a9154c
+SHA512 (xvidcap-1.1.3.tar.gz) = f43bbee7df6a06a61d5b04a32e13f38c1e2cf25a4b3a8572c7918b55a3138b9ad67759025fab9a20b9a5a673213f13b0248dadb7ccc89a280f344b31ede01850
 Size (xvidcap-1.1.3.tar.gz) = 1627036 bytes
 SHA1 (patch-aa) = 9196f59ec849a361821fd5cae800ec6aef2a1dfc
 SHA1 (patch-ab) = a1b379bbca8ca8dcbad4363b8d37897d56cf16d5

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 17:36:26 wiz Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 03:29:14 agc Exp $
 
 SHA1 (xwatchwin.tar.gz) = 36dcc365d38c4798cdea8859576abf3f913de387
 RMD160 (xwatchwin.tar.gz) = 5036c64dbcf759088431cec0f46c629536c2eacd
+SHA512 (xwatchwin.tar.gz) = 06f40dfa8682dc3420ec565bdc929a7309bcef32f4c96717aea370b54f6abd0c2802d2f16a5061800c763434f6e7386403bccb3478b6a6c0d5193e9851b3c4e6
 Size (xwatchwin.tar.gz) = 12313 bytes

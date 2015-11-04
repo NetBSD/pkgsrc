@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.9 2014/08/05 18:37:08 wiz Exp $
+$NetBSD: distinfo,v 1.10 2015/11/04 03:28:57 agc Exp $
 
 SHA1 (xcb-proto-1.11.tar.bz2) = 608bd60663e223464d38acec0183ddb827776401
 RMD160 (xcb-proto-1.11.tar.bz2) = 956fbf550ee9a8b6f5c7db78d1806e44da3c3081
+SHA512 (xcb-proto-1.11.tar.bz2) = 13c228d974f99e2f17a7352629b85c76674e395567474997015941780df123f9c809a76935242aaf31b7836b0478bd557e3cc9161dd4880b4fb8eb576216dbc1
 Size (xcb-proto-1.11.tar.bz2) = 139213 bytes
 SHA1 (patch-ae) = 1cc6863a677460660ddbaa09d279d6ef07368409

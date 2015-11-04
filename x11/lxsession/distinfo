@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/02/01 01:31:37 reed Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 03:28:48 agc Exp $
 
 SHA1 (lxsession-0.4.6.1.tar.gz) = ef7f74617f7555f3e292b670099ef44389a9a849
 RMD160 (lxsession-0.4.6.1.tar.gz) = 97c0c88abdb81c22ec356371c4b7572cd715608f
+SHA512 (lxsession-0.4.6.1.tar.gz) = eea554ba70b3fd278b7ce0bb2d278241dff26eaccf74f2a4a0a9846515688fd5dd846c97f29c71139a0c3b95bc5e906efc4673f0cd79d8db427894dff5524f16
 Size (lxsession-0.4.6.1.tar.gz) = 407100 bytes

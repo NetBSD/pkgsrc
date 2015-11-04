@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2014/06/13 07:41:15 wiz Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 03:28:58 agc Exp $
 
 SHA1 (xcb-util-renderutil-0.3.9.tar.bz2) = cb533b1d039f833f070e7d6398c221a31d30d5e2
 RMD160 (xcb-util-renderutil-0.3.9.tar.bz2) = 72a8521879482de2d9696a3877a56dfe3afdf559
+SHA512 (xcb-util-renderutil-0.3.9.tar.bz2) = 24b567992ecde7e69a406efd0ffb62266610d73b4dc0e5c71093221090fa134c14b850680d1d28dc1f8f4a6f497b4118491e1894ec7c73d2c6ce959d106771cc
 Size (xcb-util-renderutil-0.3.9.tar.bz2) = 292898 bytes

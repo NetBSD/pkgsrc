@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/07/02 03:37:48 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 03:29:00 agc Exp $
 
 SHA1 (xf86-input-elographics-1.4.1.tar.bz2) = 78455583a34ccd209edc1aba5538926df4faf47f
 RMD160 (xf86-input-elographics-1.4.1.tar.bz2) = ba2833a8627b80c538c7b98fba33aeb3f512d136
+SHA512 (xf86-input-elographics-1.4.1.tar.bz2) = 94248fbd256ab32af3d6a72179c261231a710b39731e59626e6aa45ade65abb865fb5e62da0b835d52edfe5d9fcc46c03076e0179a8de9a89341d852103195ad
 Size (xf86-input-elographics-1.4.1.tar.bz2) = 280311 bytes
