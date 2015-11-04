@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4468 2015/11/04 07:04:26 leot Exp $
+$NetBSD: CHANGES-2015,v 1.4469 2015/11/04 09:45:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7649,3 +7649,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/sqlite3-docs to 3.9.2 [adam 2015-11-04]
 	Updated databases/sqlite3-tcl to 3.9.2 [adam 2015-11-04]
 	Updated www/webkit-gtk to 2.10.3 [leot 2015-11-04]
+	Updated textproc/py-markdown to 2.6.3 [wiz 2015-11-04]
