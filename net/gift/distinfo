@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 12:13:46 agc Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 00:35:01 agc Exp $
 
 SHA1 (gift-0.11.8.1.tar.bz2) = eda16a9abead7552859679696605f7e7350b0bb2
 RMD160 (gift-0.11.8.1.tar.bz2) = cef5fe571eff21a61219ce40501652c7b1997a02
+SHA512 (gift-0.11.8.1.tar.bz2) = 5c1e47d3cd77a7331321c7f94486636bb8b6ec69e51e707fbf7706c45f645b8c0831b191ef24da70a850a75a53a4d71d03739dbba7da3e3e34a402cba02aaac8
 Size (gift-0.11.8.1.tar.bz2) = 541446 bytes

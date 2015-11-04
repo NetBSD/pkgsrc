@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.15 2015/07/12 04:59:55 dholland Exp $
+$NetBSD: distinfo,v 1.16 2015/11/04 00:35:39 agc Exp $
 
 SHA1 (scotty-2.1.11.tar.gz) = 819011f908c57e4591d6f50e51677c01eb55dc13
 RMD160 (scotty-2.1.11.tar.gz) = 3b4d45f3db73f05b49a46017bf2ffed6d6464b00
+SHA512 (scotty-2.1.11.tar.gz) = a75eb6bc54e183a8f6b5995122f35133b0f76a7a1061c177d09b4082994d6f05c1b1826bf230945dd699b65d491863c4b74353bc0d4901da5b068217ac376a87
 Size (scotty-2.1.11.tar.gz) = 1381059 bytes
 SHA1 (patch-snmp_tnmMibQuery.c) = 86f2cecac8a0766e7075836569d76671a3d15547
 SHA1 (patch-tkined_apps_ip__discover.tcl) = bf067f64474dc3ed6306caa468f29a040023e165

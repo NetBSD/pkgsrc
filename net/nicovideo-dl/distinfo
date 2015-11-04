@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2012/08/29 14:13:05 ryoon Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 00:35:16 agc Exp $
 
 SHA1 (nicovideo-dl-0.0.20120212.tar.gz) = 19f92570e01bd19a5a980e67985c0821e0af6ad5
 RMD160 (nicovideo-dl-0.0.20120212.tar.gz) = ded4106efd030fcdea63854ff7bf45d57317f8c6
+SHA512 (nicovideo-dl-0.0.20120212.tar.gz) = 388aeceb5d6fddec1f1d995cdb7003cef15dd0e2633fb4417c921bbab96d9f2089294d734655905acd8f18f0a4235b29229ab391cfc6b43d9c8a8cfb91c8f5a0
 Size (nicovideo-dl-0.0.20120212.tar.gz) = 6678 bytes
