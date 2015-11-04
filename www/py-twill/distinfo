@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/05/03 01:56:29 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:47:31 agc Exp $
 
 SHA1 (twill-1.8.0.tar.gz) = 6fa06f4f309c8b7191492a46993addd503fb5511
 RMD160 (twill-1.8.0.tar.gz) = 2583f3108111a7f26868ed6f84e6f3dad1f7d577
+SHA512 (twill-1.8.0.tar.gz) = c0b2a46f827d478939aa964712dcce4ab1a2f41a5ad21ecd6f122d219a2cb91315d04fb1b6e7b033d70f875824698a07e5a896431173057a6cd212b9a8c688cb
 Size (twill-1.8.0.tar.gz) = 176989 bytes

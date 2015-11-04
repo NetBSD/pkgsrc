@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/07/16 11:36:20 wiz Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 02:47:30 agc Exp $
 
 SHA1 (Paste-2.0.2.tar.gz) = 7fe739fbe391bb09afe1bd3327f320e29f27e2cc
 RMD160 (Paste-2.0.2.tar.gz) = 94d13e6db579a24ffde59c667ff0a1bb680316fa
+SHA512 (Paste-2.0.2.tar.gz) = 32eddeab1bab9d0b1a30848d89613b40ed02a77912f7ef5a86880e1c1a860c5637cd45114bd58cc5ac84410a569ede67e6ebd7afd2007c588433d54d6940f529
 Size (Paste-2.0.2.tar.gz) = 627842 bytes

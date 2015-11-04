@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/01/12 07:50:42 mef Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 02:47:11 agc Exp $
 
 SHA1 (HTTP-Server-EV-0.68.tar.gz) = d703dbc0a3db3398503665d71a4147de8099b1d3
 RMD160 (HTTP-Server-EV-0.68.tar.gz) = 10a906cda19e2789ffc5e09073e137849d5f76c3
+SHA512 (HTTP-Server-EV-0.68.tar.gz) = ee0188163667d1552cd4e1a11294f6984ee532b4cfa37f708780bbbdec61e4c95d3a1216c777a9886696913ebd887ade7400cec24fb47cd87636d46ab1e016a0
 Size (HTTP-Server-EV-0.68.tar.gz) = 22695 bytes

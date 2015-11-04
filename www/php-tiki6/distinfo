@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.8 2012/12/24 01:59:45 ryoon Exp $
+$NetBSD: distinfo,v 1.9 2015/11/04 02:47:23 agc Exp $
 
 SHA1 (tiki-6.8.tar.bz2) = 7a4680cabb1bc116a762127e5f6d993e58ffa456
 RMD160 (tiki-6.8.tar.bz2) = fa2955163fcf15c60a37f49f872bf4bb88d2c1b8
+SHA512 (tiki-6.8.tar.bz2) = 0659a23923e97145b105217b069497bf9cfd68415d7a4f27768e6c365db2deff815a528efa267b999fabef0fea242ed25b1b8d436eb7ac160523d9f362e193a6
 Size (tiki-6.8.tar.bz2) = 19042439 bytes
 SHA1 (patch-setup.sh) = b0e7c905700b97bdcb8b040679d477b4865fefc7

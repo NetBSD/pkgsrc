@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2014/10/23 14:31:07 kleink Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 02:47:28 agc Exp $
 
 SHA1 (Flask-Mail-0.9.1.tar.gz) = ff3838a1933597f541dcad83a81c331cb7367fed
 RMD160 (Flask-Mail-0.9.1.tar.gz) = 1408261d04ec35861350fafe53dae4d862ddc10d
+SHA512 (Flask-Mail-0.9.1.tar.gz) = 1d19f0bade77c66e73624d8af0919165f8b6f208a00c1e4025049b50ad56912557b8446cb80f8567adf697e92b126954a5f130bd9fa7a2345d4e98e35b29ac47
 Size (Flask-Mail-0.9.1.tar.gz) = 45654 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/02/17 18:07:29 adam Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:47:24 agc Exp $
 
 SHA1 (django-appmedia-1.0.1.tar.gz) = 1f7d9ca0cbae23872cdfac09e488c89c4c3766d8
 RMD160 (django-appmedia-1.0.1.tar.gz) = 462fec7ecedb7f77b3b7c8cf065cbb08827b8c5e
+SHA512 (django-appmedia-1.0.1.tar.gz) = 0b8e2edc19fc66574bdb34abac591802afde56da3b0fd956fecd2bf5fd5d6cf7183a74f1b2505f3fbd46387f0f40e10cd3cf1594005d731d2e95a9ecf3d0d846
 Size (django-appmedia-1.0.1.tar.gz) = 25263 bytes

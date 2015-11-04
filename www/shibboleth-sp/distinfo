@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2015/10/23 07:35:07 pettai Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 02:47:38 agc Exp $
 
 SHA1 (shibboleth-sp-2.5.5.tar.gz) = e69f4dae585771292e6ad51d5872f14edd683f7a
 RMD160 (shibboleth-sp-2.5.5.tar.gz) = f0176c78e8a85b582266bdc9845f833cf35a83a6
+SHA512 (shibboleth-sp-2.5.5.tar.gz) = 908d0ea664bd3c40fbfa97c7575509cfaf59735f3cf3ffa4bdf13c87b5cc939640030678ab43d4ead3c246dbf6f57927d9eab64db8256504f7c8908b4cebb981
 Size (shibboleth-sp-2.5.5.tar.gz) = 1003433 bytes
 SHA1 (patch-ab) = f667e876e1ebd84e706433156eed2cd60e905372
 SHA1 (patch-configs_Makefile.in) = 00235f36dc529da21cdc55fd833d561ace153d22

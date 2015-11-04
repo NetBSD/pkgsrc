@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/04/04 15:27:05 jlam Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:47:40 agc Exp $
 
 SHA1 (thoth_flickr-0.1.0.gem) = c57f9ae7314534052bf8c85338d98ddce67e3e62
 RMD160 (thoth_flickr-0.1.0.gem) = 49526e3375ef3c0a4ac30c952ad32ce9d7bf665b
+SHA512 (thoth_flickr-0.1.0.gem) = cc55415edf0e863a9d073af34f74520379cc69bbfb285b1ea58d758dc4ba76fd5e0802c61e10c9d1e32c4122072b2dfdb6db1d9848a47322aeccce2bd5932950
 Size (thoth_flickr-0.1.0.gem) = 5120 bytes

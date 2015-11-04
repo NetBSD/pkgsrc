@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2013/11/04 20:52:11 tonnerre Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:47:15 agc Exp $
 
 SHA1 (POE-Component-Server-SOAP-1.14.tar.gz) = fff867bcca970a050ee66b72b8801dfab7c34e5d
 RMD160 (POE-Component-Server-SOAP-1.14.tar.gz) = 382b5a0f3cd9a5cb31d4b631083f0e94febba828
+SHA512 (POE-Component-Server-SOAP-1.14.tar.gz) = aa02a1fb4e54fdd3988eee069a6cd53fec7e63e2470e5d3cd71637a1bf61d26f8d659d347a1db24041f9b5ab097d1be1c4b7989c7a388ba1db605b9c8cde18e4
 Size (POE-Component-Server-SOAP-1.14.tar.gz) = 25142 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.18 2015/06/22 13:59:29 taca Exp $
+$NetBSD: distinfo,v 1.19 2015/11/04 02:47:36 agc Exp $
 
 SHA1 (rack-1.6.4.gem) = 0a1eea6d7bb903d8c075688534480e87d4151470
 RMD160 (rack-1.6.4.gem) = 089a6487cef13719996eda89d6b8f27fa8fff831
+SHA512 (rack-1.6.4.gem) = 304a6ae21bfd38008fd7d147f82c44397f3a1d2e689bd01de689aedc6ea0e8784605207fd314bc796974edc5dfcab81636664ea2becb0489302999f99501d41a
 Size (rack-1.6.4.gem) = 228864 bytes

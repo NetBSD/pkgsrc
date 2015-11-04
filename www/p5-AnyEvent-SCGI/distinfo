@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/07/04 10:48:58 seb Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:47:00 agc Exp $
 
 SHA1 (AnyEvent-SCGI-1.1.tar.gz) = 4547c8aef24cbcdcfb6b005960a6fc7c37c53dad
 RMD160 (AnyEvent-SCGI-1.1.tar.gz) = 225b5a67de13b191fdea95cd96bdfaebac81c4af
+SHA512 (AnyEvent-SCGI-1.1.tar.gz) = 43dc07cba5272381ad67591fb6e06988f85d964aedb2e7a07f945ce69dc3636fb719c55b181b54f747e44619792e0b9f0f0d0fb92c14241aa19bdb131258f640
 Size (AnyEvent-SCGI-1.1.tar.gz) = 23852 bytes

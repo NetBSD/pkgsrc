@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2008/07/18 14:35:29 rhaen Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 02:47:20 agc Exp $
 
 SHA1 (VRML-1.10.tar.gz) = 8426e8cfc9bf7eca0e38435817e9ee0a0a9a7ea3
 RMD160 (VRML-1.10.tar.gz) = 1c62afbbbcfd001b4fd7ba06a5b66312af3c06e6
+SHA512 (VRML-1.10.tar.gz) = f8e5e3bd4c947614c7e25e040811f3986791bb371b8129696ab991d415933613076e0ea353180fa3de1cd84fba0cedc5ee29aa5702c659bd6a1b90bf6fdf71c9
 Size (VRML-1.10.tar.gz) = 72049 bytes

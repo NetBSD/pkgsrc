@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2007/09/29 16:16:47 rillig Exp $
+$NetBSD: distinfo,v 1.8 2015/11/04 02:46:55 agc Exp $
 
 SHA1 (ijb20.tar.Z) = 2233cc5f26208058c5046168ff9ddf70312bfb75
 RMD160 (ijb20.tar.Z) = 9ca21442e53c839102b3abfedd07e290953c28a7
+SHA512 (ijb20.tar.Z) = cb7951767d623e517364bc37c962f6a86002eecacc96c683254a8ab6c5b85518299d18c8eb9773f91368eb6c6231f08f8d177c22c4a58d3d331d2ba1ba3b4a99
 Size (ijb20.tar.Z) = 286005 bytes
 SHA1 (patch-aa) = 4c4f75f5cc3af63afce4aa8beab7f5e2e0b422dd
 SHA1 (patch-ab) = 18da8c5788d8704f3502f70f5aafdbd9ce897fd2

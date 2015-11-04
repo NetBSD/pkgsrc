@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/05/10 17:00:39 tv Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:46:48 agc Exp $
 
 SHA1 (bw_mod-0.6.tgz) = 97827dc13daa2f04d3d28e267463a3f36e1acdbd
 RMD160 (bw_mod-0.6.tgz) = bda6bad38850cf36c942adc041ed209617fe3922
+SHA512 (bw_mod-0.6.tgz) = ad1ee725fc4ce323faf686c715d7b7b8a3298ed535c79d4035f9bd9b119413912aea953df5b6c0030ff34c43f34eeae03a8b796f8ed676477c3e9e77d92cbb83
 Size (bw_mod-0.6.tgz) = 50298 bytes

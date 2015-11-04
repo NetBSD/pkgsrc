@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2009/09/19 22:45:38 sno Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 02:47:10 agc Exp $
 
 SHA1 (HTML-WikiConverter-0.68.tar.gz) = 34cb8ab7f5375aa7836325f9388d6ffe63c475eb
 RMD160 (HTML-WikiConverter-0.68.tar.gz) = 33578c1e99e35919a96d4b9e3e9191bc1d61cc20
+SHA512 (HTML-WikiConverter-0.68.tar.gz) = e80e9053dd01dfbea587ed2816a282abc4083021d3d80b72b1e2ea2d1ce0b45226bcf0c863beddc7a2bc15fece7b8bfa78e33ee409460776a5ef2de57beae7ee
 Size (HTML-WikiConverter-0.68.tar.gz) = 43912 bytes

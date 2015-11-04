@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/02/12 19:57:35 sno Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:47:18 agc Exp $
 
 SHA1 (Task-CatInABox-0.03.tar.gz) = a28970a113161610f9a432dd836b7a7a661f3520
 RMD160 (Task-CatInABox-0.03.tar.gz) = 020b2338c28953a39d0e24515393e1445027d1c0
+SHA512 (Task-CatInABox-0.03.tar.gz) = c430fb2be65af2d6a5a7e99400938f830640b29a74303ac5b9a191d3121a6a74e621361c4c6afe6481cee850f9ecc61563b36136b6a813567d43f44a227a1b01
 Size (Task-CatInABox-0.03.tar.gz) = 23365 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2014/02/05 21:44:27 abs Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:47:02 agc Exp $
 
 SHA1 (CGI-Struct-1.21.tar.gz) = f7b6918017ae2cfb2b14e9feedceb47b2aa42759
 RMD160 (CGI-Struct-1.21.tar.gz) = 31719247981e6dda3f56818b97a613dff9934e1f
+SHA512 (CGI-Struct-1.21.tar.gz) = 3d202c4b7284789c1352a2625c05d8a004ac410e02268bc8125e8ab568ce3d4111249e4799e3536caf35a1b6c85d76669cb714b2e582bae942e2c8b220e42dcd
 Size (CGI-Struct-1.21.tar.gz) = 13445 bytes

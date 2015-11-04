@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2014/12/05 03:01:20 rodent Exp $
+$NetBSD: distinfo,v 1.8 2015/11/04 02:47:28 agc Exp $
 
 SHA1 (py-flask-user/Flask-User-0.6.1.tar.gz) = f013b8994e7ce14d3549c1c4bda7a1d21ebe7ad2
 RMD160 (py-flask-user/Flask-User-0.6.1.tar.gz) = bbe8ba83b6be6261c383a033157712ad5e725e62
+SHA512 (py-flask-user/Flask-User-0.6.1.tar.gz) = eb1807f7e59241517811f6df86dba5fe1941c3653d1bcb38cb96e584a45ca0ca3351447002887a3c0bc28b3e4d3e4afc54bf4f854d6181a5059c7ede3d852449
 Size (py-flask-user/Flask-User-0.6.1.tar.gz) = 42275 bytes

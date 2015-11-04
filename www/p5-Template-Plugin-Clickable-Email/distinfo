@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/08/17 18:55:47 sno Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:47:19 agc Exp $
 
 SHA1 (Template-Plugin-Clickable-Email-0.01.tar.gz) = 0d0aeef1ea163ce35cb7b4917a43475f6e46e33d
 RMD160 (Template-Plugin-Clickable-Email-0.01.tar.gz) = c6218223efb642350b837efa5c43fd22da821675
+SHA512 (Template-Plugin-Clickable-Email-0.01.tar.gz) = dcf535ae2b35422796fe117e38da61cb1b16d82fbd5f762c89415243e8f824b0c7e8b6975b01303a57f37ad0e2c2ed295e66770397581d9c9c2c67d6baa91900
 Size (Template-Plugin-Clickable-Email-0.01.tar.gz) = 3211 bytes

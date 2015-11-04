@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/09/13 11:56:19 fhajny Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:46:49 agc Exp $
 
 SHA1 (mod_authz_ldap-0.30.tar.gz) = c0a02b12de1be1dbf9ff1e78f59e219c3234a088
 RMD160 (mod_authz_ldap-0.30.tar.gz) = 10214013d5885a5685369169923fec6ceef66a18
+SHA512 (mod_authz_ldap-0.30.tar.gz) = c2e988539482f9d4e7ea7c9379890bc8fcc377e2fdeeee0ab76cefcd2c29cd6320fa36f41751789485b65618b3434c047f22215479ae7466c69806c5f6bd2c13
 Size (mod_authz_ldap-0.30.tar.gz) = 386812 bytes

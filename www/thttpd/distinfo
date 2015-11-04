@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.16 2015/03/12 01:00:26 hiramatsu Exp $
+$NetBSD: distinfo,v 1.17 2015/11/04 02:47:40 agc Exp $
 
 SHA1 (thttpd-2.26/sitedrivenby.gif) = 7671e9a8ec2cad3961b268befd33c0920e07c658
 RMD160 (thttpd-2.26/sitedrivenby.gif) = 2e350e6531a800da8796207509c12fb590d0affa
+SHA512 (thttpd-2.26/sitedrivenby.gif) = fc80ec0f63a9a28cd8002ba4c1f922807faf8661c677f7935f8768b2739facf411e6a1e72c65038d72c68c1f7bf64d2bc583c1880dc85f77eca48f7baec38ae2
 Size (thttpd-2.26/sitedrivenby.gif) = 8519 bytes
 SHA1 (thttpd-2.26/thttpd-2.26.tar.gz) = 9b943aeeab9ef92dfd60595649cbe9cf7394968c
 RMD160 (thttpd-2.26/thttpd-2.26.tar.gz) = 4ffb98bc275a3a097e09209a25438008bda04027
+SHA512 (thttpd-2.26/thttpd-2.26.tar.gz) = c42942e010e0f4e3ef362e675073353081b27b04fe9f64a6cef7ff9c51683bca87876916a35e3a75a4eec25ad3d14fcf571be5e2bd70adaeadd6b6950be0090a
 Size (thttpd-2.26/thttpd-2.26.tar.gz) = 133224 bytes
 SHA1 (patch-aa) = 0f739bebf1ade45a9b9819fc92d48eeb1004eb66
 SHA1 (patch-ab) = c6d6a20a00b4ceaf409b849982b8e963debf9530

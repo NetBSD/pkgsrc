@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2013/03/17 15:53:21 taca Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 02:47:33 agc Exp $
 
 SHA1 (cssmin-1.0.3.gem) = f18d0b8da7c83bafcaca8b36dc37557ec3b5ed31
 RMD160 (cssmin-1.0.3.gem) = e47f38df3cfbfdba81a53cd3ea24802edc2475fc
+SHA512 (cssmin-1.0.3.gem) = 4ddecdede432badd8744ee62589b827f344411c51adfde872993dc86cbc3aab771f9e744757230f169842a9e533cce3518b3a8f1c6f1b7b1992e9afdac308b9a
 Size (cssmin-1.0.3.gem) = 5632 bytes

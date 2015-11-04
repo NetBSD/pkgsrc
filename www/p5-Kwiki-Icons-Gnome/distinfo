@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2008/08/07 10:00:48 he Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 02:47:13 agc Exp $
 
 SHA1 (Kwiki-Icons-Gnome-0.15.tar.gz) = 7e0fc6a66b487bd319f90519be61429fe5b51e25
 RMD160 (Kwiki-Icons-Gnome-0.15.tar.gz) = 924c20eb5a42dce95caa67e5b4d6a9d4730c6b51
+SHA512 (Kwiki-Icons-Gnome-0.15.tar.gz) = 012c08fee74dca0275d7dc06ce1a39ec0f7ad908cfabc2de750d17152399caa3afc230ea77c62edab13515a01a5edc2e2a8397395d199e011edbd9c867fc66bb
 Size (Kwiki-Icons-Gnome-0.15.tar.gz) = 16026 bytes

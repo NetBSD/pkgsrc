@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.9 2007/02/18 11:10:45 wiz Exp $
+$NetBSD: distinfo,v 1.10 2015/11/04 02:46:51 agc Exp $
 
 SHA1 (checkbot-1.79.tar.gz) = 0f389bd0f27e7dd9af45e99c43c97f26988e783e
 RMD160 (checkbot-1.79.tar.gz) = b70bfd1d0ee52363856c70048420fa7f9f79ab28
+SHA512 (checkbot-1.79.tar.gz) = c60e93b966587e590379f7bebb90af71395681f8b830910dbc6773e2ea3aeda493cc8a1a8bcfa07693fdb5b422adc1602f355c5333aad25201dd14655a60ff67
 Size (checkbot-1.79.tar.gz) = 36023 bytes

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.15 2015/04/27 11:03:42 jperkin Exp $
+$NetBSD: distinfo,v 1.16 2015/11/04 02:46:56 agc Exp $
 
 SHA1 (libproxy-0.4.11.tar.gz) = c037969434095bc65d29437e11a7c9e0293a5149
 RMD160 (libproxy-0.4.11.tar.gz) = 382110e088faf7a170ac838864d675204d886237
+SHA512 (libproxy-0.4.11.tar.gz) = 563a837946a73c41e0773cec93332c6308245c0b807a40a0fb052c2445deae4a117ba2780a350c799717fd11c4dbe410183a38ea050a4f04db0b1adcb6f9ad98
 Size (libproxy-0.4.11.tar.gz) = 93757 bytes
 SHA1 (patch-libproxy_CMakeLists.txt) = fc283f97eebf0ef0cfbd81341a7db311755ab2ec
 SHA1 (patch-libproxy_modules_config__macosx.cpp) = 75ce7f0f6cc6df17d73ec12051621ec2ebe35ee6

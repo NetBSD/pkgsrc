@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2009/02/09 18:26:46 joerg Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 02:46:48 agc Exp $
 
 SHA1 (ntlm2.tar.gz) = 02deae9b83a73410bab989245335d684f1288f5e
 RMD160 (ntlm2.tar.gz) = 5607b2e2b6420aa7534af0bb38fbf7a877ca616d
+SHA512 (ntlm2.tar.gz) = 39d9b9f00432ec46218e7713bddc81504d0c5694e76ff978c3b0d8a1998c7f88a14ac0ca7a814f0c2750980945d9ca6a0bca502dae2c7a7e325a793ba3efef30
 Size (ntlm2.tar.gz) = 39380 bytes
 SHA1 (patch-mod_ntlm.c) = a5503e6bbcdaf9fe40522f44f78c20fd4160b60c
 SHA1 (patch-ntlmssp.inc.c) = 10dd76d55ebed06c292577b7837ccd719df6652f

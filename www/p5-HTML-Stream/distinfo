@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2008/08/07 08:53:16 he Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 02:47:09 agc Exp $
 
 SHA1 (HTML-Stream-1.60.tar.gz) = d25df835baad0e2fdb36984ec693df33aa64a91a
 RMD160 (HTML-Stream-1.60.tar.gz) = 3e8562ca9b7ea9d21aab937f0f9510d7ea8ee838
+SHA512 (HTML-Stream-1.60.tar.gz) = 5a34f4677d24f8e3b230dfd0a4c96631d6ce1b4e64cc69499ef18e3e5dafe456044cb31ddb042e5bc7547fc56d0b7624aacc0749059928c9b4779e650e771934
 Size (HTML-Stream-1.60.tar.gz) = 63719 bytes

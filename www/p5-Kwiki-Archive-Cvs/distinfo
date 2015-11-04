@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2008/12/15 23:53:07 he Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 02:47:12 agc Exp $
 
 SHA1 (Kwiki-Archive-Cvs-0.104.tar.gz) = e69e066f762071f510d9cd3267916050933b5f79
 RMD160 (Kwiki-Archive-Cvs-0.104.tar.gz) = 40d7bbe81d4fd3d43a24ace9ba3ffc30e4c09d28
+SHA512 (Kwiki-Archive-Cvs-0.104.tar.gz) = 85b431463e72256f77c68e671f92feda806a2d1998019dd32789502ee72991fcc60cd5f79aefc6c0e3437542c068c5d9f762c21fbee306ed72952da1bed58776
 Size (Kwiki-Archive-Cvs-0.104.tar.gz) = 2916 bytes

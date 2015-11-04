@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 14:08:29 wiz Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 02:46:50 agc Exp $
 
 SHA1 (bannerfilter-1.31.tar.gz) = 734277149b5180b3213e558ac02fe5f465103378
 RMD160 (bannerfilter-1.31.tar.gz) = a68c557ecd7e00eac24b85fa502162dcd09de9d0
+SHA512 (bannerfilter-1.31.tar.gz) = 184ec3567feefc08841b22943aad4bb1d02bb855922481f4c437194f6ea4e1d94601641f18b9fd2a91cef1076b9fcae34f275639863ba57821b0deec81ce1dfd
 Size (bannerfilter-1.31.tar.gz) = 36294 bytes
 SHA1 (patch-aa) = 6ebc088bc68f650dbcc7d70a9ee8ab8dbe0e1c14

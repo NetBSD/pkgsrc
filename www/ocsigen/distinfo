@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2015/02/11 13:45:02 jaapb Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 02:46:59 agc Exp $
 
 SHA1 (ocsigenserver/2.5.tar.gz) = bd4d167eab257196aac036a5749bb91b02087c56
 RMD160 (ocsigenserver/2.5.tar.gz) = a0610a3125c1411c73d22dc9cc708f9dba3c1558
+SHA512 (ocsigenserver/2.5.tar.gz) = 8d90ce99bdda2fefdc0d22497badfa885ff310801c6cc205e0360e823964b4b01a1fecef8549121647abfd113bfe45a0b6cb306a326b26657bd95fbafaa59e72
 Size (ocsigenserver/2.5.tar.gz) = 1259472 bytes
 SHA1 (patch-Makefile) = c91c9f739462e3ef79bcd3ee4f05acfcff1e4518
 SHA1 (patch-src_Makefile) = acbd4a0e9b6c4a853f18fdacd1625ee142b5c423

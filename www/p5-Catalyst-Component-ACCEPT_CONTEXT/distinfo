@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2009/06/15 22:44:51 sno Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 02:47:03 agc Exp $
 
 SHA1 (Catalyst-Component-ACCEPT_CONTEXT-0.07.tar.gz) = 09b22bf164c8f1b456d8a2abd750e8ec6b3c6df2
 RMD160 (Catalyst-Component-ACCEPT_CONTEXT-0.07.tar.gz) = 9256e8faf8fc737f6655769b11ae65dd1283384f
+SHA512 (Catalyst-Component-ACCEPT_CONTEXT-0.07.tar.gz) = 06c046844795b26f3d0eae0f5f9621adf010b7015f36af5ac699af3d5f065bf34481a290c1ce2a25c569aed2278128c815861dd3b09793c2b92fc71af605d371
 Size (Catalyst-Component-ACCEPT_CONTEXT-0.07.tar.gz) = 26055 bytes

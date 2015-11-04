@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2015/06/11 17:10:46 taca Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 02:47:38 agc Exp $
 
 SHA1 (webunit-20040429++.tar.gz) = dfc317b7318731e56dadfe4f7d11acc66f54fa29
 RMD160 (webunit-20040429++.tar.gz) = db2416e67ffc178a2d8965cdce312c2407d560ca
+SHA512 (webunit-20040429++.tar.gz) = f3dacf1a8199d26401f31bdad5aee61d27019c31ede4c53a0e6ad530c227581406d32e8bef0ddf1745b0da716f6bcc49d9a7d850ea03611839e2559b0c378c27
 Size (webunit-20040429++.tar.gz) = 59312 bytes
 SHA1 (patch-install.rb) = deed7b29562ddb8a14f3bee1815a99967a403ea1

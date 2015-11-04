@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 14:08:37 wiz Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 02:47:13 agc Exp $
 
 SHA1 (Kwiki-ParagraphBlocks-0.12.tar.gz) = dc1a06b94c56e8768d57beb45ed34e587172d8dc
 RMD160 (Kwiki-ParagraphBlocks-0.12.tar.gz) = e87c9d459e6d8fd4330a7cf1e5a4a64226050143
+SHA512 (Kwiki-ParagraphBlocks-0.12.tar.gz) = ef038d5fa7ad098375bf43e914a11bbb499e79a99cb81c8c86dba19b93e6f1a785a5a3eeb53f8b1cc1637a7471a2a4d7f67692e1bcbde61d30fa445ebbc61f6a
 Size (Kwiki-ParagraphBlocks-0.12.tar.gz) = 7953 bytes

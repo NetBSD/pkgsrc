@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/02/11 14:06:00 taca Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:47:38 agc Exp $
 
 SHA1 (url_mount-0.2.1.gem) = 829d7e478fdc12f2bc0740c2a6e8ce0216a379a6
 RMD160 (url_mount-0.2.1.gem) = b6ad540a2141c5f76628bad208efc79704621a2a
+SHA512 (url_mount-0.2.1.gem) = 7b2cfe7d427aa79781e42a1946b37561aef2e961060ac0a53e3fe2ac967a6851139abeb981f6e700412a6997e785b329d418244fe22625b6215152df5c6f887c
 Size (url_mount-0.2.1.gem) = 16896 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2005/02/24 14:08:32 wiz Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 02:46:55 agc Exp $
 
 SHA1 (htmlfix-1.03.tar.gz) = d40bebc47d547a561f8e2e9849d087c099eb252b
 RMD160 (htmlfix-1.03.tar.gz) = 507ba68dde41e4612c705684b57cf3aed2cb9ad0
+SHA512 (htmlfix-1.03.tar.gz) = c08fb773bed83d9ace97091df445ebc8dd33afc803c12dbd1d2162344b6758bf0c62e599b548eda65b609cde47b71c711ff5c95a495d071607940fc5456b72e1
 Size (htmlfix-1.03.tar.gz) = 2157 bytes

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2011/12/05 10:18:17 wiz Exp $
+$NetBSD: distinfo,v 1.9 2015/11/04 02:46:54 agc Exp $
 
 SHA1 (htdig-3.2.0b6.tar.bz2) = 0b28134386e78fe724c56583fbc61b280551122a
 RMD160 (htdig-3.2.0b6.tar.bz2) = 1e0900e11618ffe3d43a6fc26163e3ed926a1012
+SHA512 (htdig-3.2.0b6.tar.bz2) = 21fd788d30d3d7a0fa3c07a97dcf67a488b9516481257ffefe5ee00810c59ea7bd407523fc970a6e89cdb40ece2875f85c55b59b4b05ad6f54c769538383dc8f
 Size (htdig-3.2.0b6.tar.bz2) = 2498246 bytes
 SHA1 (patch-aa) = 6f4d22f84fe8caa809c1062e210200d9cea1a555
 SHA1 (patch-ab) = 864655d311c2a9fe1f5de8b150587f3625a7c8c7

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.16 2013/10/20 17:48:26 joerg Exp $
+$NetBSD: distinfo,v 1.17 2015/11/04 02:47:38 agc Exp $
 
 SHA1 (screws-0.56.tar.gz) = 3335e7e7116561499ee7164831c31df4ecebe403
 RMD160 (screws-0.56.tar.gz) = 5d7f1af67a42cd5726f0d4708713bb13c4c8fe21
+SHA512 (screws-0.56.tar.gz) = 5f3bf803e2c51ec7c5224c071c5f1d73554b2d21ef2f506bf94c44ea1eab7b0e79b6872eed13996fce1408ccbed1d5987e49313143ab960e4a552d14f4ad8e45
 Size (screws-0.56.tar.gz) = 256862 bytes
 SHA1 (patch-aa) = 0101b7083bb45358371a3853783f9c65cc5b2435
 SHA1 (patch-ab) = 2a4a70f70828d473fdc02b3903bbff8c43833aeb

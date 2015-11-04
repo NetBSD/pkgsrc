@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.23 2013/03/26 23:30:46 joerg Exp $
+$NetBSD: distinfo,v 1.24 2015/11/04 02:46:56 agc Exp $
 
 SHA1 (kdewebdev-3.5.10.tar.bz2) = 71af1a5f3e835b3021b180271f8a4c1879b55b82
 RMD160 (kdewebdev-3.5.10.tar.bz2) = 210665120b13431f18a4070f2b5a9e24cb58920d
+SHA512 (kdewebdev-3.5.10.tar.bz2) = af363f43aba2fa20fbe9fe86e72534adfa73d3f46c61d6a3bb460639d62243c268d0d427e8687299845fae7d52189e388e9f614a230e49c2acc77567ae7c1382
 Size (kdewebdev-3.5.10.tar.bz2) = 6249632 bytes
 SHA1 (patch-aa) = 2ae1f420dfd7cbe841eaae29730bc087ec77f598
 SHA1 (patch-quanta_parsers_tag.h) = 72135e8b222187a2757119b01b407cfd61b861ee

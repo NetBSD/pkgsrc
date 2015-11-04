@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2013/03/14 17:04:27 kim Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 02:47:40 agc Exp $
 
 SHA1 (urlget-1.5.tar.gz) = 0427a3a9c53416225f91225d07aeebc59abc9d60
 RMD160 (urlget-1.5.tar.gz) = 7afea8d415dbc3dfec9fafbc4e4bc15d38d35d52
+SHA512 (urlget-1.5.tar.gz) = 4c35e1bebdd0469db6774a45cb63e18240b20fc36349a11572dd1a771201bdea1d94ab1545d987c27082456143111b3e3fba5a7c94f1e810979833ba4d7fa64c
 Size (urlget-1.5.tar.gz) = 6832 bytes
 SHA1 (patch-aa) = fb5e81415269c2ba54a41d1a3b993a8a5f960585

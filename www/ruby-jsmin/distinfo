@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2010/09/10 13:12:28 taca Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 02:47:35 agc Exp $
 
 SHA1 (jsmin-1.0.1.gem) = 2c6a48920a9902ebb8b46c08550a26df9c682eb5
 RMD160 (jsmin-1.0.1.gem) = 3565c2b6544dd535a22ae09dcfeb9867d4078462
+SHA512 (jsmin-1.0.1.gem) = 4c6ed4ee964f45acc55e9d820a29259b1381d0bae40f7ffa0977f10fd5f4d40606273fde46bfeda5e56cfadefc238edee2e2b11fda5f99415bc2f5a5fb9aa6a7
 Size (jsmin-1.0.1.gem) = 5120 bytes

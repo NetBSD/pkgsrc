@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2011/06/19 08:02:21 taca Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 02:47:33 agc Exp $
 
 SHA1 (compass-susy-plugin-0.9.gem) = 0fa72ad39045e77d1183976b5646df4f229b495d
 RMD160 (compass-susy-plugin-0.9.gem) = 33579b102ae0b291f8f407f60b19c6d4df9ef60f
+SHA512 (compass-susy-plugin-0.9.gem) = db1d64a6d2c0067f07b0b15282b654274a58056490b8d3d4d18a3ed54d052b73b309429da449388eec91f5d968c0c14af78d9a29a4556e6ed0012405a861ca95
 Size (compass-susy-plugin-0.9.gem) = 13312 bytes

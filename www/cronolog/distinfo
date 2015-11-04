@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2005/02/24 14:08:30 wiz Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 02:46:52 agc Exp $
 
 SHA1 (cronolog-1.6.2.tar.gz) = 6422b7c5e87241eb31d76809a2e0eea77ae4c64e
 RMD160 (cronolog-1.6.2.tar.gz) = 6181c14e69a419c633950274c3c112f6bd784f9e
+SHA512 (cronolog-1.6.2.tar.gz) = 786135aaa1359605840effb9a755c500970098ca32c1c4976c62f9d7481d24cecefe223ce8dcc34a139427259a6f3ba1c435c700a72ee07ed68ffc7f2d36e4ea
 Size (cronolog-1.6.2.tar.gz) = 133591 bytes

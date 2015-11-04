@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/04/04 15:26:58 jlam Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:47:40 agc Exp $
 
 SHA1 (thoth_delicious-0.1.0.gem) = 81ca57614633d012db790f884d4de53080af6010
 RMD160 (thoth_delicious-0.1.0.gem) = a4b39cdc701dab03fb0a8ab753dfb580c03fda4f
+SHA512 (thoth_delicious-0.1.0.gem) = 327c3ce65bc3a693f234be04b3790a1cefc797db3bbcf84025653715da44a8c007edd39d665877774c5570db21a75fc77e8c1b0f0f65256f016a85ad0648cb13
 Size (thoth_delicious-0.1.0.gem) = 5120 bytes

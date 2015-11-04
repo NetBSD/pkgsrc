@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/01/19 17:59:05 abs Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:47:03 agc Exp $
 
 SHA1 (Catalyst-Component-InstancePerContext-0.001001.tar.gz) = c9372d7320edac25884736c19439f1a788c2fbb1
 RMD160 (Catalyst-Component-InstancePerContext-0.001001.tar.gz) = 6cc57280eb61f45a73c36c79e36058b76c59f186
+SHA512 (Catalyst-Component-InstancePerContext-0.001001.tar.gz) = 548c1fad4f125263776d773b2c8b337ac619e6f04c7cbe0d4bb62de3f8845c07d0207b289aecd28de564bc9ad759163b7dac8b5254aff0dc5910cd6b4d71bdf7
 Size (Catalyst-Component-InstancePerContext-0.001001.tar.gz) = 18916 bytes

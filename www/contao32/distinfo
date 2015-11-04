@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.22 2015/06/06 03:29:33 taca Exp $
+$NetBSD: distinfo,v 1.23 2015/11/04 02:46:51 agc Exp $
 
 SHA1 (contao/3.2.21.tar.gz) = 557d3323b21835e2ec6d01174fbf2f7513088db2
 RMD160 (contao/3.2.21.tar.gz) = b8b55b66631d07d99606edaefeb05adde7262a46
+SHA512 (contao/3.2.21.tar.gz) = 94f2e5529efc6027818ec416b401da7ad9285776ba205aab4c468f7256970d6e8c9e9fc87ea402c6ff57f368948cff3ce2b25d03b7a981d52c9943b759a572eb
 Size (contao/3.2.21.tar.gz) = 11127054 bytes
 SHA1 (patch-system_bin_sqldump) = 920e6e8e579ae2cbeb84ca6ac74f4b9951a66f5c

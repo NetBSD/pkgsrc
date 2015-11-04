@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/08/20 23:33:21 mef Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 02:47:10 agc Exp $
 
 SHA1 (HTTP-Headers-Fast-0.19.tar.gz) = 445bfd83618896393ffa841492288e4b61b51c13
 RMD160 (HTTP-Headers-Fast-0.19.tar.gz) = 2b6b891daf947dc40d8df07262b5cc360ec61cbb
+SHA512 (HTTP-Headers-Fast-0.19.tar.gz) = 6feeaa9eca47e48310ae77c857615db24b0ad99e6678b959cc9eb439ed4f4fcb82c1d20318105716b4a15705d368f8f4b5f6ebdb5aabea25e6bf46facc99be9c
 Size (HTTP-Headers-Fast-0.19.tar.gz) = 19214 bytes

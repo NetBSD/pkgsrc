@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2015/04/02 23:52:50 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:47:42 agc Exp $
 
 SHA1 (yahttp-0.1.5.tar.gz) = 6cee407d56eaf027cdd0942839d3b172d8d5870e
 RMD160 (yahttp-0.1.5.tar.gz) = 417fb69669f4fb1fe7490d2c57815b2fdc3e8c89
+SHA512 (yahttp-0.1.5.tar.gz) = f7e6b757fd6a4184546ba1de33aeb606e1a6d53cd70cef4b822a163aa9c30022400d973d465d6ce6d7a492e35db9caed5cc05570d9e7d3b104f1876529cf71b9
 Size (yahttp-0.1.5.tar.gz) = 1339625 bytes
 SHA1 (patch-configure.ac) = ad890f7ff9ab32c2a3cce5732be08346fed64118
