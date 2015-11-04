@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2013/05/06 15:04:55 joerg Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 01:32:07 agc Exp $
 
 SHA1 (btpin-qt-1.5.tar.gz) = d8a198caa3e3cb45bbe17deac07f3c96989b42e9
 RMD160 (btpin-qt-1.5.tar.gz) = b1ac5653eb621dc75ca2805b8a55375c8027f0b3
+SHA512 (btpin-qt-1.5.tar.gz) = 16dcdfc401ebf7bb30ec7592f9886163e8febe5e169bf24fe0fcf719a4127d68bb618de079eeba63db82834e3f71fcd0f2adeb19044009215191b098aa3f3336
 Size (btpin-qt-1.5.tar.gz) = 5185 bytes
 SHA1 (patch-btclient.cpp) = 50723353cbc95328afb3c445f47b191815f29cb3

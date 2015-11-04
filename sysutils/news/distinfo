@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2012/03/01 17:24:20 hans Exp $
+$NetBSD: distinfo,v 1.8 2015/11/04 01:32:23 agc Exp $
 
 SHA1 (news-0.2.tar.gz) = 4c6b8cdae58eb3c57d78b14d45104eb96098d052
 RMD160 (news-0.2.tar.gz) = 091c2c7b3502fad33984035a6589986cbc4b018a
+SHA512 (news-0.2.tar.gz) = 8f5078328c5c0d68fc1919bc7fad00a996c711323822dc532c5bf8be6800fb92c24a019212a04745e3cf776984cbe690df69b78f67cb3200e807b17746c264cc
 Size (news-0.2.tar.gz) = 3812 bytes
 SHA1 (patch-Makefile) = 3fedf88945b285b123967fe563cfdf478235f320
 SHA1 (patch-aa) = f6550129bb13741e2eb10dfcdb74067dca020609

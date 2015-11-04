@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.1 2012/12/12 15:24:17 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:32:31 agc Exp $
 
 SHA1 (slocate-3.1.tar.gz) = e427552664385b86931b7626c26bd95ae5f9f085
 RMD160 (slocate-3.1.tar.gz) = d3b1e818cc35ce8e87ec1b0764f6b2145a319e13
+SHA512 (slocate-3.1.tar.gz) = faea4c1ec63d4d318340021e0d946dac6fb6d48273c557dfc6165c9850d9fd5a290b57b8a87a18dd0d521a84fcafbc739f4a86997dd92bff665b183ffa23aa1a
 Size (slocate-3.1.tar.gz) = 37748 bytes
 SHA1 (patch-ae) = a91bcc950628ee8bbe87e17066502a030b8b9c6d
 SHA1 (patch-af) = 9f12826f9263753d423fa01f0d7904dadbbca0d0

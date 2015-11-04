@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.11 2014/02/16 15:37:53 wiedi Exp $
+$NetBSD: distinfo,v 1.12 2015/11/04 01:32:16 agc Exp $
 
 SHA1 (gtoaster1.0Beta5.tgz) = c55bf7e8e532956a8907cd29cbfb98a721c5bb3a
 RMD160 (gtoaster1.0Beta5.tgz) = f8c7386497c56b8e1bf924e099ddf68cbcbd02a0
+SHA512 (gtoaster1.0Beta5.tgz) = 0a2263e09dd98dced6913f384d13073a6fb818f45ae7df9f7572919a3f8eabf3b143b7ed9a9633edadebfcc0c8126b80268b4d34a0b8e1ea01e0551a3d9ac855
 Size (gtoaster1.0Beta5.tgz) = 781796 bytes
 SHA1 (patch-aa) = 6ae7c9aaf606256111c908f429761877238c4a17
 SHA1 (patch-ac) = dbbff55510cead5715eec44c0b19f4d18a4c62cb
