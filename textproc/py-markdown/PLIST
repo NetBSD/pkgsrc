@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2015/07/19 10:20:10 wiz Exp $
-bin/markdown_py
+@comment $NetBSD: PLIST,v 1.6 2015/11/04 09:45:05 wiz Exp $
+bin/markdown_py${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/markdown/__init__.py
 ${PYSITELIB}/markdown/__init__.pyc
