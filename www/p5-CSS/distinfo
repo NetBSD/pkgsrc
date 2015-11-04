@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2011/11/07 15:13:15 hiramatsu Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 02:47:02 agc Exp $
 
 SHA1 (CSS-1.09.tar.gz) = 18158ae24be44e6790b3934c54af4687623fd62a
 RMD160 (CSS-1.09.tar.gz) = 9188e697c214a2d2951dd0808714487a4219eb6b
+SHA512 (CSS-1.09.tar.gz) = 3169d7b56be09c847d36ae1f58bf5b1aefd191535941836e7ece103c1ab229d8847c3ab0a6422f51aeaa9e28c3a1983cc96a3c3bd60dd1f0b33a848bfb2c2df1
 Size (CSS-1.09.tar.gz) = 37808 bytes

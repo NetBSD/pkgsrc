@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 14:08:36 wiz Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 02:47:08 agc Exp $
 
 SHA1 (HTML-PrettyPrinter-0.03.tar.gz) = d02642cc30bd3ef5dd91204e55643406121d673b
 RMD160 (HTML-PrettyPrinter-0.03.tar.gz) = f4387fbf3f876953c85a0d767782de22157cf4ec
+SHA512 (HTML-PrettyPrinter-0.03.tar.gz) = da2ae0efb8072f3a6d6be1c8ecc25955d69b6e818c3b4b824b0208cf8b6b1dabd246d3cebdaa45472f467bf2bd9fc842509d59cffb590f50d18e15753326877a
 Size (HTML-PrettyPrinter-0.03.tar.gz) = 14036 bytes

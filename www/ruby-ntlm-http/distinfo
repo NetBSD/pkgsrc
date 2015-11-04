@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/02/28 21:02:07 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:47:35 agc Exp $
 
 SHA1 (ntlm-http-0.1.1.gem) = ac1ddb3a3a8b3f7075729a2b2d1a31821c7b3d48
 RMD160 (ntlm-http-0.1.1.gem) = 98b4f8ee0882515dd724c29f7c33d526d231bfb6
+SHA512 (ntlm-http-0.1.1.gem) = 1d2868582a194fb3a3dcb48a7dfb031014e51a93d57afb83aaef98be8e57789506b71e6440770ca7bc48979d9dd730f398d01d554d6d0575ff01046a227c7669
 Size (ntlm-http-0.1.1.gem) = 13824 bytes

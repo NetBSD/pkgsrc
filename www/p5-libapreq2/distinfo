@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.10 2015/08/28 11:29:52 wiz Exp $
+$NetBSD: distinfo,v 1.11 2015/11/04 02:47:21 agc Exp $
 
 SHA1 (libapreq2-2.13.tar.gz) = db3761625a62230147896b47e9b047660b20ba28
 RMD160 (libapreq2-2.13.tar.gz) = 8d7d2573624193b6dfbbe354b3771012257c1578
+SHA512 (libapreq2-2.13.tar.gz) = 54553cb90c0d3f6fb34ff19364c5804976c4aff1bae551ae051fdd06f41695770f1e285c40e03dbd93ae738adc332f38f1a1994167598364071feaec833fdf05
 Size (libapreq2-2.13.tar.gz) = 891320 bytes
 SHA1 (patch-aa) = 8fa12ccc0a959c0b2430f4a3165185d3a4f1bf03
 SHA1 (patch-ab) = 46d68205d1759a74ee630a2a33c6fcb29b56bbe9

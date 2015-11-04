@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/01/30 18:51:40 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:47:02 agc Exp $
 
 SHA1 (CGI-Session-Plugin-Redirect-1.01.tar.gz) = 58d11cfd42d1e485f97c3089a6362bad0d4acbee
 RMD160 (CGI-Session-Plugin-Redirect-1.01.tar.gz) = 4e77e9fca0e84f7e4ce821f5df136009c69d42bb
+SHA512 (CGI-Session-Plugin-Redirect-1.01.tar.gz) = aad0321f6aa00f77ff322ed65194b855878708876511148c60b19b273a30c19f4fa60a48a846d120f54ccd00255ebb8e1fb3b28cb580f6cbb45b7ca3b06b9629
 Size (CGI-Session-Plugin-Redirect-1.01.tar.gz) = 1437 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/01/12 13:43:06 mef Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 02:47:21 agc Exp $
 
 SHA1 (WWW-Pastebin-PastebinCom-Create-1.003.tar.gz) = 5e91c747e692e84444a6a95a1427898a5af719ef
 RMD160 (WWW-Pastebin-PastebinCom-Create-1.003.tar.gz) = 2f75ecafe30982afb6f0fac304111ffe2980bfa8
+SHA512 (WWW-Pastebin-PastebinCom-Create-1.003.tar.gz) = 6388477145578fbe0478463884fe5cb3240c153e486dda48e9e54ead47d2ef75b22e65476241a9e834c66609427bed53d0c269b62d8575ac4af3eba6f8b93fe9
 Size (WWW-Pastebin-PastebinCom-Create-1.003.tar.gz) = 15663 bytes

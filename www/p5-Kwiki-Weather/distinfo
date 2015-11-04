@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/01/31 21:39:20 jschauma Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:47:14 agc Exp $
 
 SHA1 (Kwiki-Weather-0.05.tar.gz) = 670c7447307893a78170c8ed31a3c454ef85b0b3
 RMD160 (Kwiki-Weather-0.05.tar.gz) = 634cd8d9609a5152ed4ff0ad08d03499e32d6abf
+SHA512 (Kwiki-Weather-0.05.tar.gz) = 32d5a6b7c91c29fc3c19f7cc80a7adb443ef72136abc9c2d4ee54796fa10f106db39b2d27de3635f314f63158a8c8183f376df04372d78fece882872e27ce739
 Size (Kwiki-Weather-0.05.tar.gz) = 10386 bytes
