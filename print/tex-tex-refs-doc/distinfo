@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/15 17:51:51 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:49 agc Exp $
 
 SHA1 (tex-tex-refs-31946/tex-refs.doc.tar.xz) = 821782cc209c361dadcb8889419923bcf1f2a642
 RMD160 (tex-tex-refs-31946/tex-refs.doc.tar.xz) = 65b48f9bf547292e2fda4d849620929496cd0c9c
+SHA512 (tex-tex-refs-31946/tex-refs.doc.tar.xz) = 164600d7296798fb266bd77d1b170ed7dbd22a3c7cf3c9f19ced5c413ccf38742df3c1ab42ec538613a727ba1f3194875ce255c64d5d31bea1fa64fb9c9b2c30
 Size (tex-tex-refs-31946/tex-refs.doc.tar.xz) = 423932 bytes

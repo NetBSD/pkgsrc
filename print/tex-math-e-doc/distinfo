@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/15 17:51:49 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:27 agc Exp $
 
 SHA1 (tex-math-e-20062/math-e.doc.tar.xz) = 9abaf3edfe79946f3cd33d8e26516137c1a5916e
 RMD160 (tex-math-e-20062/math-e.doc.tar.xz) = 616afd3b6666be7dae91fe331f0a8d06aae37ca0
+SHA512 (tex-math-e-20062/math-e.doc.tar.xz) = 5b6f95ec0af6d879fe442d6cdaecdd7265edf647086a27b6ce9fd7955656ca00b63277891215e58f504da1a9bd7da7f451d3575c45ee0e54130ab840c11ab128
 Size (tex-math-e-20062/math-e.doc.tar.xz) = 52576 bytes

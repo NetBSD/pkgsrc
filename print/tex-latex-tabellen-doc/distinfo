@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/14 17:07:35 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:24 agc Exp $
 
 SHA1 (tex-latex-tabellen-16979/latex-tabellen.doc.tar.xz) = 480bce28ce2b07f54949b3479cfcc44495dab868
 RMD160 (tex-latex-tabellen-16979/latex-tabellen.doc.tar.xz) = 7c6c84b14d15fe9d140401b47820eaf68c5eeb80
+SHA512 (tex-latex-tabellen-16979/latex-tabellen.doc.tar.xz) = 477c07ab0ff697f0e198c7008dd218fb67316c637b3b558481ff204d43fcc3ca817acf2d6d02138292114111896014feed4e3e79b102f74f3dedfbb0d817312d
 Size (tex-latex-tabellen-16979/latex-tabellen.doc.tar.xz) = 45788 bytes

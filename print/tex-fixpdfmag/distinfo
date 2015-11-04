@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 14:09:51 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:09 agc Exp $
 
 SHA1 (tex-fixpdfmag-15878/fixpdfmag.tar.xz) = ff58db8f9d17e5eb61a871798b968e0e8b3e66a6
 RMD160 (tex-fixpdfmag-15878/fixpdfmag.tar.xz) = 907f1bb8c59827330a6fc0d7dafbd7a8bb13094a
+SHA512 (tex-fixpdfmag-15878/fixpdfmag.tar.xz) = 44f1aa99aca1b45c633e57d374ac661b1b60ebd8972070b12618e21143390bb51aa2ad50653b937e1b1daec92dcd8964b82557f0d0e0c6ec9e5b12fc5ebdc4b1
 Size (tex-fixpdfmag-15878/fixpdfmag.tar.xz) = 1148 bytes

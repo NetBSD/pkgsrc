@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2011/11/20 08:29:37 sbd Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 01:01:33 agc Exp $
 
 SHA1 (gtklp-1.2.7.src.tar.gz) = fa7fc0901016bb035d0fdf56e0984bf9728af1d4
 RMD160 (gtklp-1.2.7.src.tar.gz) = 24aae020912b03565a7fccb317b9dab72ade2d51
+SHA512 (gtklp-1.2.7.src.tar.gz) = 8528f119dfba05773f7b9e5854cdf26aa9b6b75ffade9c55119328d783628d32d436afd7b1964a0b468917853f5299f27b2b1634cd0b98a1345adcade4acc648
 Size (gtklp-1.2.7.src.tar.gz) = 739871 bytes
 SHA1 (patch-gtklp_gtklp.h) = cca949838a59c20de2d4060d0b0b4d5525db778e

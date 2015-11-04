@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2010/09/14 00:18:14 minskim Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 01:02:40 agc Exp $
 
 SHA1 (tex-pslatex-16416.2010/pslatex.tar.xz) = c5d6e052225c18c0d4d6cdad7262838698fac2a8
 RMD160 (tex-pslatex-16416.2010/pslatex.tar.xz) = 122afde9ec630257842c1d6d16d34b2d187c8739
+SHA512 (tex-pslatex-16416.2010/pslatex.tar.xz) = 643002c833eb02697ccdc1b2905e086626798d766924e7a9c1d938f4ed072666852541213dc728fce977f874e6cef144a106b3f6f57390d360513e567e84538a
 Size (tex-pslatex-16416.2010/pslatex.tar.xz) = 5732 bytes

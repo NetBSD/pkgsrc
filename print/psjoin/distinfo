@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/08/10 05:19:39 reed Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:38 agc Exp $
 
 SHA1 (psjoin-0.3/psjoin) = 62976fe653f7469953630088de5e728698c6a352
 RMD160 (psjoin-0.3/psjoin) = 93c747b5fc0eaa8e5b46a182005b0ecc69d7c194
+SHA512 (psjoin-0.3/psjoin) = 5dd86a6c863f28bcf4e560ce0a1967a2d316f97ef702ac47dbe0db148c2d4164a973de0a8d0e3aa3ef57a08f92520129cebb99f4bce5a539401f1fc273a8c399
 Size (psjoin-0.3/psjoin) = 5122 bytes

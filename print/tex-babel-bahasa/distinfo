@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/04 12:22:49 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:46 agc Exp $
 
 SHA1 (tex-babel-bahasa-30255/babel-bahasa.tar.xz) = 033a849b3c324011e001f7e3945516af265c31d4
 RMD160 (tex-babel-bahasa-30255/babel-bahasa.tar.xz) = 9343826e85ce64f6dcd17a29ee05f47c245721ff
+SHA512 (tex-babel-bahasa-30255/babel-bahasa.tar.xz) = b8ecd6281b2d9dbd580b008852ff6d66c4fd9278d000cb9494c5b3e4a6d7b5dd23867e89ec4a718c4609f320f0261cf66aeda2e4561c4c6cf856bd4055bf826e
 Size (tex-babel-bahasa-30255/babel-bahasa.tar.xz) = 2720 bytes

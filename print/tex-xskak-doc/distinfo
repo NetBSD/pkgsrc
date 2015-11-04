@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/06 08:52:12 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:03:00 agc Exp $
 
 SHA1 (tex-xskak-35945/xskak.doc.tar.xz) = 108979c9ce45e8e7ea1c827e2bbda2141abd7ad2
 RMD160 (tex-xskak-35945/xskak.doc.tar.xz) = 1f57283c613c0587bf20bf6335835339df73e8a4
+SHA512 (tex-xskak-35945/xskak.doc.tar.xz) = 89de324ad7504d601b7f9ddefa4e001ea770917d46346a67ddc4c9b3b74090049bb805a451adbe614edd2b287993a9f6c300b191506e2319cfa2d730576c8421
 Size (tex-xskak-35945/xskak.doc.tar.xz) = 1168 bytes

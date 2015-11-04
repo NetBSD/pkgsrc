@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/04/30 18:18:29 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:42 agc Exp $
 
 SHA1 (tex-sansmath-doc-1.1/sansmath.doc.tar.xz) = da2041650d0ec1b8744c981f1d71ffb5e188bace
 RMD160 (tex-sansmath-doc-1.1/sansmath.doc.tar.xz) = cc2a0e41e847a7c5667a2965ff0d62b88a5cbf83
+SHA512 (tex-sansmath-doc-1.1/sansmath.doc.tar.xz) = c0f6d2f292a3d51d7228aa580f5c8455cee8ba7038bcabc3f75b6dee6d6096e10f41a7c65c2aa3bb16fd8341ea8f9c63cece365cf656441c007482fce52e85ad
 Size (tex-sansmath-doc-1.1/sansmath.doc.tar.xz) = 182260 bytes

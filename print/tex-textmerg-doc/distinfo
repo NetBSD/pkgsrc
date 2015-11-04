@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/16 10:30:19 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:51 agc Exp $
 
 SHA1 (tex-textmerg-20677/textmerg.doc.tar.xz) = 31c1e288a7ca37cb8fda06a406bc7bcf4f59ea31
 RMD160 (tex-textmerg-20677/textmerg.doc.tar.xz) = 75620faa9e9ed0409906a9cf4dbec558dcfab0a0
+SHA512 (tex-textmerg-20677/textmerg.doc.tar.xz) = 0a5c113986f5bb00be77e833a5cfc7568df6febe4beaab6c5dafd27618ec201048950e233def7cff3a623592ec098048f13f4d5cc2803e0eb89fa9ecf13a0643
 Size (tex-textmerg-20677/textmerg.doc.tar.xz) = 253648 bytes

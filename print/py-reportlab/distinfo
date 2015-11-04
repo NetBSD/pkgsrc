@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.17 2014/01/19 09:59:47 wiz Exp $
+$NetBSD: distinfo,v 1.18 2015/11/04 01:01:39 agc Exp $
 
 SHA1 (pfbfer.zip) = 38753493035ee5b96746051df63ce4884763622d
 RMD160 (pfbfer.zip) = 70097e97f2fccc7f4df6b276b21a0fa765a57f55
+SHA512 (pfbfer.zip) = f07bea3c1f77816a5ce24b6383d7de11a78deeb9e12c5d8d281de640c88e4dd8afc2f6b89a5cfaedd2814bea67ba10d3c1cc8b6c59ce997655162749a59b53ae
 Size (pfbfer.zip) = 676909 bytes
 SHA1 (reportlab-2.7.tar.gz) = be1014c6407c62323ed8d13b00cde0bd20d52099
 RMD160 (reportlab-2.7.tar.gz) = 0ff90be737e925bc156c36dabb25b183834cf537
+SHA512 (reportlab-2.7.tar.gz) = f0c994c91b18ad55f7573af4eb49d173a1b3939d6e7a490e8dc1cce19f8c0dbe31a060df504b908ed6d7642f1d88e5aa4e86b9e459f058da331186f4e0998be4
 Size (reportlab-2.7.tar.gz) = 1951460 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/16 10:30:16 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:25 agc Exp $
 
 SHA1 (tex-layouts-15878/layouts.doc.tar.xz) = e244482561397d4b1333925579fdcfdf7c393d44
 RMD160 (tex-layouts-15878/layouts.doc.tar.xz) = 094725ce2533afefd547545c52e959e011cf6823
+SHA512 (tex-layouts-15878/layouts.doc.tar.xz) = bccd4cf73a5c1aba89ff19298f722e28193fb5e7b0e8782506e0a8684f9e458aab4c567bf6e8e195f18030bc7f4515c2219d1b8b0c069be48b62e217a46a1a72
 Size (tex-layouts-15878/layouts.doc.tar.xz) = 477556 bytes

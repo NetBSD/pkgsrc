@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/04/15 20:53:11 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:54 agc Exp $
 
 SHA1 (tex-captdef-2009/captdef.tar.xz) = 04130f21742989bc74ba149fa1310e737f28330d
 RMD160 (tex-captdef-2009/captdef.tar.xz) = bde72e1273b91d65aab7bb34d28801b67122cbfb
+SHA512 (tex-captdef-2009/captdef.tar.xz) = ee1edf7dd36044e160a3a3a2547c3abf6bf934728eedcfb12b896dc64964672779495ea88361437844b1074f3184bc154d52e678b5f4a06e8f414881e12180f5
 Size (tex-captdef-2009/captdef.tar.xz) = 1072 bytes

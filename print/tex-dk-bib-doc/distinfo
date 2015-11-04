@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/03 10:25:09 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:02 agc Exp $
 
 SHA1 (tex-dk-bib-15878/dk-bib.doc.tar.xz) = aa248dafe2d0e09d2e065939f80518d35c1df96d
 RMD160 (tex-dk-bib-15878/dk-bib.doc.tar.xz) = 051840682dbb185df126ec4a765d6cb29c9601b5
+SHA512 (tex-dk-bib-15878/dk-bib.doc.tar.xz) = 5d1e56be261380107c64b23670a5019d1bc90c3c1dcce68ede9c51be01b9d8beb86d1e88fef42d9ac7bfd5ebf2528d2caa2440bdbbbbb317d9d4bee115fd7b3a
 Size (tex-dk-bib-15878/dk-bib.doc.tar.xz) = 404472 bytes

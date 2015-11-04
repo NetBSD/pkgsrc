@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/09 22:44:22 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:50 agc Exp $
 
 SHA1 (tex-bagpipe-34393/bagpipe.doc.tar.xz) = 7631e51d9ceac49521db4a9bde39b3c46c5f7246
 RMD160 (tex-bagpipe-34393/bagpipe.doc.tar.xz) = e245ce3ab6ed155bce4adceb096b7a88044a76b3
+SHA512 (tex-bagpipe-34393/bagpipe.doc.tar.xz) = dd23f991541e009d39e53507eabb922eb422ffed2dd94f418d2e3b4290d00f49ac935aa781e31760ca548998549d04a37288ecf111759e6d3ba5d8a992ea5783
 Size (tex-bagpipe-34393/bagpipe.doc.tar.xz) = 201336 bytes
