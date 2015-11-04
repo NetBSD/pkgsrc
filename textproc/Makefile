@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.849 2015/10/29 09:00:01 jnemeth Exp $
+# $NetBSD: Makefile,v 1.850 2015/11/04 14:07:27 fhajny Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -165,6 +165,11 @@ SUBDIR+=	enca
 SUBDIR+=	enchant
 SUBDIR+=	epubcheck
 SUBDIR+=	epubpreflight
+SUBDIR+=	erlang-jiffy
+SUBDIR+=	erlang-p1_stringprep
+SUBDIR+=	erlang-p1_xml
+SUBDIR+=	erlang-p1_yaml
+SUBDIR+=	erlang-xmlrpc
 SUBDIR+=	expat
 SUBDIR+=	expatobjc
 SUBDIR+=	ezxml
