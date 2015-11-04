@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2012/08/10 18:00:14 joerg Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 03:28:49 agc Exp $
 
 SHA1 (modeline_vfr.c) = 8db682f68362679938886a27068d3044ae643011
 RMD160 (modeline_vfr.c) = 9c0e9c5b66ec585fa8edeae41784f8bb4516cc01
+SHA512 (modeline_vfr.c) = 467f4a17a6f873e6c9506fd3e5f6b9a38b88a7566f802b3c8694be3826d7ae1f90b8d42476571e10e77aeb0a73c2c176497ac665021bd2f31e172ad869150be9
 Size (modeline_vfr.c) = 2416 bytes
 SHA1 (patch-aa) = d8d425c25814f23e0bec4cc1b3cbff8405e9cdec

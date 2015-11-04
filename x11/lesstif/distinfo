@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.17 2010/01/16 09:15:25 adam Exp $
+$NetBSD: distinfo,v 1.18 2015/11/04 03:28:44 agc Exp $
 
 SHA1 (lesstif-0.95.2.tar.bz2) = b894e544d529a235a6a665d48ca94a465f44a4e5
 RMD160 (lesstif-0.95.2.tar.bz2) = 643fd81b70b6e8617803ddc4350272ca89b4a71f
+SHA512 (lesstif-0.95.2.tar.bz2) = 228c032e00998f774af4677e8af442b6d29eb0781a6cea27ad200fe2d89997dea8326df75000befbd976007c92a886b043a13cefda2b772d4ac7a9958dc58e99
 Size (lesstif-0.95.2.tar.bz2) = 2481073 bytes
 SHA1 (patch-aa) = da781d4ef3c552275848241e538ea452a6c16232
 SHA1 (patch-am) = 52c2a8a84436b0e7c5449b90813deb498a98cc50

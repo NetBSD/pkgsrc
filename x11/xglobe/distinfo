@@ -1,16 +1,20 @@
-$NetBSD: distinfo,v 1.8 2009/07/07 17:47:26 joerg Exp $
+$NetBSD: distinfo,v 1.9 2015/11/04 03:29:07 agc Exp $
 
 SHA1 (xglobe/LE.400.gif) = acfe3f73a9513b312e2c65403b6b4242c53d9c1a
 RMD160 (xglobe/LE.400.gif) = 438e79c256f91f979d5fd08f4eb2812c10c4f28b
+SHA512 (xglobe/LE.400.gif) = d7b836aa7012898b6b7176088ba41cd9f5569c8401080ebc1fa572be056817a201d2fb869e778e9b0ffe5ae2bba4d84264e455ed84dab8c739d6630be5f1c9ee
 Size (xglobe/LE.400.gif) = 50083 bytes
 SHA1 (xglobe/Brill.400.gif) = 6c27bc2c527a2401c4cd8b541035c4276bef7593
 RMD160 (xglobe/Brill.400.gif) = 3be5f2fbfeeb1d51f8fc35d8793df1687a2e95dc
+SHA512 (xglobe/Brill.400.gif) = dcf435258479d92346fd99adebb6595d34e0696d36dbeeb0b4942ea2b456668289ad1941bd61f943f8ff3778305f44580c080372eea242c2d6d9df05c3b1365d
 Size (xglobe/Brill.400.gif) = 35044 bytes
 SHA1 (xglobe/mggd.gif) = d5ae718be9d6a8be98acf92991fc97940c194e85
 RMD160 (xglobe/mggd.gif) = 4e1919322ce8ada4b69df9f1a78ca6e323ad0d88
+SHA512 (xglobe/mggd.gif) = 866120345f343226a6c90743ac47ae4e449e03155e1f4922a8f2f8bc91a55c97c3f3c01d57733c17dbe3e41cc38cbef29ad74865cc00c684995f1a482d615aba
 Size (xglobe/mggd.gif) = 899276 bytes
 SHA1 (xglobe/xglobe-0.5.tar.gz) = ba436e1105462577dd9fb1cbedcec93dd58e4e3a
 RMD160 (xglobe/xglobe-0.5.tar.gz) = 0aa1f0c6fefa2a87d09a0c75fdc897a07889ee5c
+SHA512 (xglobe/xglobe-0.5.tar.gz) = a32436e39da26ff16919c6296d66ff62fcfe44a113bf98323bf17532a048b84306ffee289e6ed90b4c522a3ec9fa9b28be9074ad20075d18db93640514ea1cac
 Size (xglobe/xglobe-0.5.tar.gz) = 982309 bytes
 SHA1 (patch-aa) = 3121c7f7fcb63a67318ae348348874be07c49ecd
 SHA1 (patch-ab) = 4b8297a44eca21a964d873c02cfc9db1e0893b45

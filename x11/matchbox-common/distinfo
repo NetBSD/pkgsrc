@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/12/31 13:26:20 peter Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 03:28:48 agc Exp $
 
 SHA1 (matchbox-common-0.9.1.tar.bz2) = 1d8adb017b600f6c58a8cefdd7c9f4597f21e4b5
 RMD160 (matchbox-common-0.9.1.tar.bz2) = b4c6ed40da45f55129bb31d05e0e43c2787d0104
+SHA512 (matchbox-common-0.9.1.tar.bz2) = 192870faad4f30db79f8c8ca21f0a03f1a790328767a928d911bc7dd51d6f78928953460450e0dfdf55c3985f33626239599895ff11af28617c356b789bb358c
 Size (matchbox-common-0.9.1.tar.bz2) = 86365 bytes

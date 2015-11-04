@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/06/08 21:57:33 sborrill Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 03:28:27 agc Exp $
 
 SHA1 (desklaunch_1.1.5.tar.gz) = 07e7f9b36f9fd71227e9194497912d0fb9f9854b
 RMD160 (desklaunch_1.1.5.tar.gz) = e0e4626ff255ad80a0b7016313a216cc5bd2d31c
+SHA512 (desklaunch_1.1.5.tar.gz) = 9edae9c8a7dc2dd656a499a4cbd628a59601f3b473284e863096036ca74c6aefa100266aec880b655e177bdd76c27829f0ad0085fdc05f645fb1224b03139d92
 Size (desklaunch_1.1.5.tar.gz) = 13214 bytes
 SHA1 (patch-aa) = 4955441de9db409c3603b9e1994a6d4648f17a70

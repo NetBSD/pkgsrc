@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2015/04/02 22:16:49 tnn Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 03:29:04 agc Exp $
 
 SHA1 (xf86-video-wsfb-0.4.0.tar.bz2) = fc04a2127fc5de3f5d13c56c3be781df34c26a90
 RMD160 (xf86-video-wsfb-0.4.0.tar.bz2) = d35555d20ed5ae303846a1e72fa5e55049428edd
+SHA512 (xf86-video-wsfb-0.4.0.tar.bz2) = 7a42ab3c29408ed934b21d3e6620c11d0a2765dc7aed0d7f9eebb6068665b32afcec934a413c30ccb655411ca59871c8f503b21377eb4c18f269493d205c5a8d
 Size (xf86-video-wsfb-0.4.0.tar.bz2) = 264372 bytes
 SHA1 (patch-src_compat-api.h) = 114cfc96361770c145f74c38abd9696943319253
 SHA1 (patch-src_wsfb__driver.c) = 1b846bfd8347c971412e8519afcb9a6a0e00c24d
