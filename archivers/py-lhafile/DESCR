@@ -1,0 +1,2 @@
+Extract LHA(.lzh) archive files.
+The interface is like zipfile extension included in regular python distribution.
