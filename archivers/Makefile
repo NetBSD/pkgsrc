@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.139 2015/05/23 02:13:28 mef Exp $
+# $NetBSD: Makefile,v 1.140 2015/11/04 17:25:55 adam Exp $
 #
 
 COMMENT=	Archivers
@@ -79,6 +79,7 @@ SUBDIR+=	php-zlib
 SUBDIR+=	pigz
 SUBDIR+=	ppmd
 SUBDIR+=	ppunpack
+SUBDIR+=	py-lhafile
 SUBDIR+=	py-yuicompressor
 SUBDIR+=	rar
 SUBDIR+=	rox-archive
