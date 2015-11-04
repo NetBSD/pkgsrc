@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2015/10/18 15:25:04 adam Exp $
+# $NetBSD: Makefile,v 1.18 2015/11/04 16:45:52 adam Exp $
 
-DISTNAME=	audiotools-3.1
+DISTNAME=	audiotools-3.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=audiotools/}
@@ -24,6 +24,7 @@ REPLACE_PYTHON+=	audiotools/py_encoders/*.py
 .include "../../audio/lame/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/mpg123/buildlink3.mk"
+.include "../../audio/opusfile/buildlink3.mk"
 .include "../../audio/wavpack/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
