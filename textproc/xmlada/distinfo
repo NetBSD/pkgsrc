@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2015/03/21 01:06:49 tnn Exp $
+$NetBSD: distinfo,v 1.8 2015/11/04 02:00:15 agc Exp $
 
 SHA1 (xmlada-4.4.0.0.tar.bz2) = 285e98269160428e9387a3b3b3b82c1aef4b9c62
 RMD160 (xmlada-4.4.0.0.tar.bz2) = 389328c6582e96a139694ce854e1fdc8af6d892b
+SHA512 (xmlada-4.4.0.0.tar.bz2) = d275864a38ebeff6c4cea6cf26a122edbbabe5232dc2af57178a104d911983b2ad428d099ce185ce3c81187fdb5396d24e23758cf6c69835d0dea1afe9a7c517
 Size (xmlada-4.4.0.0.tar.bz2) = 632217 bytes
 SHA1 (patch-Makefile.in) = c4358a6395420628e76040523dc780a0130015b0
 SHA1 (patch-dom_dom.gpr) = f5afdec46fac3cd07755d6bb47a83b715e54ba64

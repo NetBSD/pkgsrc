@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.2 2012/08/12 11:52:26 obache Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 01:59:41 agc Exp $
 
 SHA1 (migemo-0.40.tar.gz) = 0c7f066c4c271a8e2556ea9d9cc850c650eaebc8
 RMD160 (migemo-0.40.tar.gz) = 6663ac89abc89e4c568c44a71e8ae1f016920df0
+SHA512 (migemo-0.40.tar.gz) = 8ba4960361035fc570bef533724c82b20fbc2384aa69469bf79791c00732643423aa6725717e4e518e461f9313101f0f2c49ad93dd007984699ad94cb92959ea
 Size (migemo-0.40.tar.gz) = 1674941 bytes
 SHA1 (patch-aa) = a83ce755f3751b9bea6c2e4b4c09d94d2c9a932c
 SHA1 (patch-ab) = 1f0062c64e694e465803e4b4c2bd89855b071ac0

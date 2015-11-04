@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/11/18 14:13:08 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:00:13 agc Exp $
 
 SHA1 (tei-xsl-5.14.zip) = c4496f83b44c8726bc96e9ed1e6606329033ffc5
 RMD160 (tei-xsl-5.14.zip) = 63888efa7a29fb2a3ab671bb8af3fab1875844a8
+SHA512 (tei-xsl-5.14.zip) = d6e3c22f9994ec220f675bd5916c28f65068d057f015602af5c4cadc39c612021a6c70ec0d6fddecfb4f5159a0229bc5df2874c49de6ae14590bdedbdd204792
 Size (tei-xsl-5.14.zip) = 1030184 bytes

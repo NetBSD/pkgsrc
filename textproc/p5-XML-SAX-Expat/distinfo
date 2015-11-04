@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/05/02 14:52:20 mef Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 01:59:58 agc Exp $
 
 SHA1 (XML-SAX-Expat-0.51.tar.gz) = 74609fe5ee5011eac193fbf1ae20e327ce12372c
 RMD160 (XML-SAX-Expat-0.51.tar.gz) = 3c0a5975bcd3eed1a588edb7dce8f724d1e1bc6d
+SHA512 (XML-SAX-Expat-0.51.tar.gz) = 9cd3c7a1cdf0b0a49ea9f871095984fb67ff54c9e5ed49884c591a450c2662acbd6d0f5232a5720663bcab09ff4f41093d414daa0b72457dc98eea5001270478
 Size (XML-SAX-Expat-0.51.tar.gz) = 7134 bytes

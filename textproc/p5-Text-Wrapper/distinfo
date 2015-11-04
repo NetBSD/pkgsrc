@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/05/10 03:04:21 mef Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 01:59:54 agc Exp $
 
 SHA1 (Text-Wrapper-1.05.tar.gz) = 3f760699a4d02c13970d490f89bd9cb3236b7745
 RMD160 (Text-Wrapper-1.05.tar.gz) = f1f47d38c672d7e14ebf3e1ff90866a114d1a661
+SHA512 (Text-Wrapper-1.05.tar.gz) = 8efd94ad7880069a37205a4b6e38d4b03ce8d83869994916abb831498e1e3d1bc23df39e8546b5b0953db7e0c8e7ef29aa237f8cf20452dc9e4263e49e31dad9
 Size (Text-Wrapper-1.05.tar.gz) = 18609 bytes

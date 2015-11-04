@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2007/11/18 16:05:47 seb Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 01:59:56 agc Exp $
 
 SHA1 (XML-LibXML-Iterator-1.04.tar.gz) = 1a688c0e9b867787b391419ce2f22459f14f2ccd
 RMD160 (XML-LibXML-Iterator-1.04.tar.gz) = c39c7eae407f6c8d457aec275454c3756cbc9875
+SHA512 (XML-LibXML-Iterator-1.04.tar.gz) = 34e2c5d57853d34e592126c4d0c281c7975bfced4a81972f0023c3a40a782a9d95483dba78ad77406521850a977ef6a0412a98c1d43a7069b940b333cdf0e935
 Size (XML-LibXML-Iterator-1.04.tar.gz) = 8209 bytes

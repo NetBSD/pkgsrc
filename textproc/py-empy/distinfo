@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2012/07/14 21:59:32 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:00:02 agc Exp $
 
 SHA1 (empy-3.3.tar.gz) = dfc82202231143b9aabc81bd735c6f8a559b5109
 RMD160 (empy-3.3.tar.gz) = 0a9ef8d8c25a4784769a0de283108fe0ddca1289
+SHA512 (empy-3.3.tar.gz) = 36304577839f5e6b2fb9bb2c2d72880e1f16886b2afadbcb38fd31a85620bb0369e837b8a1d74eab09a074bfe1f7be199b38842673106e0d26f1d9abc53987a7
 Size (empy-3.3.tar.gz) = 137144 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/06/10 08:19:34 wiz Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 01:59:43 agc Exp $
 
 SHA1 (Encode-Locale-1.05.tar.gz) = 1e1632e869cb76e3fdbda0a83a192190ed178d60
 RMD160 (Encode-Locale-1.05.tar.gz) = 5c38dd14ba733bc4741658c80b60f6d2d206d569
+SHA512 (Encode-Locale-1.05.tar.gz) = 68ed5732fd3645eca2ea54080067677a48f90fc5a594a1b453a322f3127e67a984d539cb5fd41ac63a03b9dab693c070b65e3c70a2a677dc61b4634f3e212d06
 Size (Encode-Locale-1.05.tar.gz) = 8355 bytes

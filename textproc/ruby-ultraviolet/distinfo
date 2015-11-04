@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2013/09/15 16:37:47 taca Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 02:00:11 agc Exp $
 
 SHA1 (ultraviolet-1.0.1.gem) = 009806b13e9bcb97a3864da030d891df421bb429
 RMD160 (ultraviolet-1.0.1.gem) = b9352162e262935548764fb5d60d1007ba87f943
+SHA512 (ultraviolet-1.0.1.gem) = f974f95743b56d7424c8ac96867c56f4d849247ba552bd09ba8893ca6520758ff2132ac46a42f22b8547732bd148531d177a7d38522fad1dfb86d54ffbb29861
 Size (ultraviolet-1.0.1.gem) = 46592 bytes

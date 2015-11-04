@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/09/16 10:30:25 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:59:28 agc Exp $
 
 SHA1 (muse-3.11.tar.gz) = 82c310474aa630f92c6c7463cb0ca0a197384574
 RMD160 (muse-3.11.tar.gz) = 9cd50c657f9bfd973e63c3cac871b768a24dc5eb
+SHA512 (muse-3.11.tar.gz) = 6ea94f3068d2de2ca844938a6298422f98ba4dc6b833ff09439ffa300c9bb58cd8be5ce06ecb805d83dbeeac45e82faeb0fe43142bfc0c373f1375a431340038
 Size (muse-3.11.tar.gz) = 386622 bytes

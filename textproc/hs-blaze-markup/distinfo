@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2014/09/13 22:04:41 szptvlfn Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 01:59:31 agc Exp $
 
 SHA1 (blaze-markup-0.6.1.1.tar.gz) = f38bdc21474d692f8b105ac444290b34e1a9c869
 RMD160 (blaze-markup-0.6.1.1.tar.gz) = 9f0fb10efcb3947afe0982b87d7c13d3c418442f
+SHA512 (blaze-markup-0.6.1.1.tar.gz) = 0b12e425e2e9d6aca348f5648bb9aa000dfaf29c3af88e5666d4cd966c1e8f2f1dbff0e40cfa78dc2c66cd23abb42eb5e5dc0542a877fa7927b4725a691b17b5
 Size (blaze-markup-0.6.1.1.tar.gz) = 12759 bytes

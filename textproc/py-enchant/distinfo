@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2014/07/22 10:22:39 wiz Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 02:00:02 agc Exp $
 
 SHA1 (pyenchant-1.6.6.tar.gz) = 353b0b06cb29deef46298337afdd96ec71f01625
 RMD160 (pyenchant-1.6.6.tar.gz) = 1032e5f5da257211c69705f1468bb00b864a287b
+SHA512 (pyenchant-1.6.6.tar.gz) = af6aa1ac77b5718ec4b4aad3d0b88d26e697b472ec8261b23b37fdbf6b399a120ccc3e4ee6579b884c44b0eeb3f95bcdbceea189105c05088a48400a0c8cdb90
 Size (pyenchant-1.6.6.tar.gz) = 64010 bytes
 SHA1 (patch-ab) = cc3cc686c76ecc45ae624d319f8207adad5a2207

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2015/08/31 12:16:52 nros Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:59:42 agc Exp $
 
 SHA1 (ots-0.5.0.tar.gz) = 4468bc06470734848c2369a37c84f76ca4ac3f9a
 RMD160 (ots-0.5.0.tar.gz) = e413267fc81ab9bf3da5f3787757ce20c7e0304e
+SHA512 (ots-0.5.0.tar.gz) = 736a672e16b741f2948e6874b88d4ade8e0450941915e65285f2fe661194a6d384a6abb267b15c3254c638750c644b4b2cf4279d7bda163b02336fcd8da9cfbe
 Size (ots-0.5.0.tar.gz) = 371126 bytes
 SHA1 (patch-Makefile.in) = b4c1672fcd34f2b0d32f8b21b662fa3de4dcf9a6

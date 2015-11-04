@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/01/16 16:11:39 sno Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:59:46 agc Exp $
 
 SHA1 (Pod-Abstract-0.20.tar.gz) = 72081b82d4f57983edc037ad5395cbc76c7ab5b8
 RMD160 (Pod-Abstract-0.20.tar.gz) = e29693cb2e326109dfac215d9a63abe7457242bc
+SHA512 (Pod-Abstract-0.20.tar.gz) = 466a55fd3923ae00cef777b69494714e2d4e9ce5ba5c04637bd9f56356c16674d4412ee2705eb230bd2817aad6cd312e87d3394c2d6c45c80b91f57b4e4fc637
 Size (Pod-Abstract-0.20.tar.gz) = 27676 bytes

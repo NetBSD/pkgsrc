@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2014/05/24 10:21:13 obache Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:59:40 agc Exp $
 
 SHA1 (marisa-0.2.4.tar.gz) = fb0ed7d993e84dff32ec456a79bd36a00022629d
 RMD160 (marisa-0.2.4.tar.gz) = 00897f9381b89d08c5190fef8730c9a40aa126a3
+SHA512 (marisa-0.2.4.tar.gz) = 71aee3ae034d1ce725d986bef43472d61bd64f0af3ccda01bb019cce03f0872629b6a1b305e717056bef06e036372323b2a67e5dc69705d6a74e028b5e2553e4
 Size (marisa-0.2.4.tar.gz) = 502552 bytes
 SHA1 (patch-bindings_python_setup.py) = 6c7d1800986077fd5c1e8d4b96b49762a381420a

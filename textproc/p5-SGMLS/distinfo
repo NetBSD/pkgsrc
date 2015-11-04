@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2010/05/06 09:36:28 sbd Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 01:59:47 agc Exp $
 
 SHA1 (SGMLSpm-1.03ii.tar.gz) = 1ff07104fd70a1d1bf05f3523b94413049c1fc95
 RMD160 (SGMLSpm-1.03ii.tar.gz) = 919963150640d4c1a2a52439cd0d985c52c71bb3
+SHA512 (SGMLSpm-1.03ii.tar.gz) = edbac8112561912d5d7a9faee2d920bf763576ace5a9bdef5fc3f235533805643ad8db5f57d96c34ce9ecbf1796399dc531f40ab4b2796a1e130a8f288c901d4
 Size (SGMLSpm-1.03ii.tar.gz) = 93250 bytes
 SHA1 (patch-aa) = 1a7dedb1e66f528cab6f47a9ebfb7a42515091d0

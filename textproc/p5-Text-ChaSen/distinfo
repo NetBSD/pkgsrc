@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2009/05/21 14:54:23 sno Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 01:59:50 agc Exp $
 
 SHA1 (Text-ChaSen-1.04.tar.gz) = bbb993e3a72968a51cca833a4181d5ae301dbb5c
 RMD160 (Text-ChaSen-1.04.tar.gz) = 964b4f3a63554cd04a272c22be0d5a8dc9258484
+SHA512 (Text-ChaSen-1.04.tar.gz) = 7a8f6712c6473556277e67d5979011a0dc4801badb0bc311415036b62e26eb34be6c589803bc37cceac3a4a7e391741a3e5b6ef8ffd2621f5dd58a89a9d6576a
 Size (Text-ChaSen-1.04.tar.gz) = 4850 bytes
 SHA1 (patch-aa) = eda93770c3893cb85b6bf016a78e60adfeceee8c

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2013/07/03 16:48:06 sno Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 01:59:44 agc Exp $
 
 SHA1 (Lingua-EN-Inflect-Phrase-0.18.tar.gz) = 76da8ec3f30c84f56d685c0d88c91c36f61d021d
 RMD160 (Lingua-EN-Inflect-Phrase-0.18.tar.gz) = 6572aeb03ad2e4697c9d4b7b6959301a11d1ef42
+SHA512 (Lingua-EN-Inflect-Phrase-0.18.tar.gz) = e56c19981001ab67e159d08c97f1fb44d65e00a165c8b281a3dbe1e837d54bc7506f3494a53f5499b82db667d5307873e8df10cad069857553151937fce804eb
 Size (Lingua-EN-Inflect-Phrase-0.18.tar.gz) = 15933 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/02/22 12:21:18 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:59:51 agc Exp $
 
 SHA1 (Text-Emoticon-0.04.tar.gz) = c18cb2d67eec4b32752b05b6e30a12ca1fabb503
 RMD160 (Text-Emoticon-0.04.tar.gz) = 6fc0de9a94a423d9f8659cb52607040e3e84ded6
+SHA512 (Text-Emoticon-0.04.tar.gz) = 3803e54b26b8c33beadd99b02ada75e34af8575c6f0d9d8257cd63bce35a59195a2eff23a3ca5e2db570f7afd0c143190bdc5469c00819d89c9935aef9385afb
 Size (Text-Emoticon-0.04.tar.gz) = 2173 bytes

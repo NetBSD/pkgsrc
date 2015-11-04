@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2014/10/05 22:13:52 rodent Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 02:00:04 agc Exp $
 
 SHA1 (pyquery-1.2.9.zip) = 213b9ae9a31b147ca6238b88c59900e8e486d2c8
 RMD160 (pyquery-1.2.9.zip) = 5f9e9d9b61a620c2c294a0876b198f73cdcfa060
+SHA512 (pyquery-1.2.9.zip) = f5152b471c896b39032add6a7f0e6ce63f426b4903bc7cf9eef12723c73453b40c310dd1497a7c4189fc6faaf804690fd91fb6d2f97fb6c4d6314682de4b8d05
 Size (pyquery-1.2.9.zip) = 45289 bytes

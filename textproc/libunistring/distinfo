@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/07/09 14:04:28 wiz Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 01:59:39 agc Exp $
 
 SHA1 (libunistring-0.9.6.tar.gz) = 87cb4c18fbb1e0f1d8eb38311093835a924b4b12
 RMD160 (libunistring-0.9.6.tar.gz) = 07a6287ae9e9406e3ac59ac2d69513e253f5908c
+SHA512 (libunistring-0.9.6.tar.gz) = 244f4ef6343047d2dedfdbe536a7a29584a58f668a41ba3183fc86d2f167186acf120708e024e31551ee2f035b9bee35e9ed24a276a4de9359cf08aec198c20a
 Size (libunistring-0.9.6.tar.gz) = 3565883 bytes

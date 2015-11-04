@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2010/02/22 14:32:08 sno Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 01:59:42 agc Exp $
 
 SHA1 (Convert-BER-1.32.tar.gz) = cb5b031bd3722a84747a21bcbcebe66d34cc0312
 RMD160 (Convert-BER-1.32.tar.gz) = 1976d02bc236e7ed01a75d04957e49f21f9e195d
+SHA512 (Convert-BER-1.32.tar.gz) = c9cf0640db640587d0d69b465d6f42dd2c09c2bc28adb81575508fa3d00c883fded7c66b1eba26aca36ef5b005b8678fcb74fd69f00d265f484b544d0086314c
 Size (Convert-BER-1.32.tar.gz) = 26983 bytes

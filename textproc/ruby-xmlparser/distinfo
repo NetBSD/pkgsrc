@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2010/09/10 08:48:31 taca Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 02:00:11 agc Exp $
 
 SHA1 (xmlparser-0.7.1.tar.gz) = 402e9abc24667c609ce4a8aa6ae4e8c41ef25225
 RMD160 (xmlparser-0.7.1.tar.gz) = 821e52621da1b149e5cf7eaf72a9787529015c78
+SHA512 (xmlparser-0.7.1.tar.gz) = 667a9a387518fd29b7302cf54466531f9f4926e0c5e1cb7d7b8e171c154d191442dd328e0a5d4649ec128629fad896e4e8844f60ddb3849e650907ef6d547584
 Size (xmlparser-0.7.1.tar.gz) = 120244 bytes

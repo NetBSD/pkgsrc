@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2015/03/15 01:20:24 taca Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 01:59:41 agc Exp $
 
 SHA1 (namazu-2.0.21.tar.gz) = 35aaff34d0cdbe96fff24da87671b6f902bb7d43
 RMD160 (namazu-2.0.21.tar.gz) = b5ac1a114dc4730c56a46c24130899f10d37e9bb
+SHA512 (namazu-2.0.21.tar.gz) = c0ce1b8c8b8ce30ee7d28cfed790a9c8585d1b468eefe2ba4ac70976e09329ae04a3a3bbf0b86b9673cfdf206f2b103896daca2f053062f451884fa659b31ea6
 Size (namazu-2.0.21.tar.gz) = 1394048 bytes
 SHA1 (patch-ab) = 15e8b6b67885fe76932e8b749fa8ab64f6faf1d8
 SHA1 (patch-filter_mp3.pl) = 53d150e0384ee8acdd672e9d644ee1a60153c691

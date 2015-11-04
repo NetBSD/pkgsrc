@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/09/07 03:46:53 mef Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 01:59:44 agc Exp $
 
 SHA1 (Lingua-EN-FindNumber-1.31.tar.gz) = d1ec706b9d60132008d8e499ab39efad77627257
 RMD160 (Lingua-EN-FindNumber-1.31.tar.gz) = 4bd1cc9142185188cfcc87bceb0f5f40bba77737
+SHA512 (Lingua-EN-FindNumber-1.31.tar.gz) = 165e3891bbd868ee5a9254b94df51ae8ef6f05921b87f2f6713439a3a3cd12dd0356da7f14884a15cc8532a223dcbc1fc4f6a7a981bbaa5ea6a3a0421b2c57ea
 Size (Lingua-EN-FindNumber-1.31.tar.gz) = 10343 bytes

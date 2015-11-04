@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2013/06/16 09:45:19 jaapb Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 01:59:41 agc Exp $
 
 SHA1 (ocaml-expat-0.9.1.tar.gz) = c0a65558cf996ac727fe5c61224d3e19dfd7d02a
 RMD160 (ocaml-expat-0.9.1.tar.gz) = be731eacff0a114d948cfaedfafe9b9fc6dc54e7
+SHA512 (ocaml-expat-0.9.1.tar.gz) = 0dca5bb3279e248acd76bc1b14511c58f2e60d8c40d806f3d270b6a47ab0e90efb636faed0dd8c34cf00a0b0834aa458421f4f9718d2a8c43dcf77854c11b3f4
 Size (ocaml-expat-0.9.1.tar.gz) = 25223 bytes
 SHA1 (patch-Makefile) = 3058f21e05c664dcb2799bdf987191876056c9cc

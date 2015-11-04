@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/05/03 15:34:22 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:00:01 agc Exp $
 
 SHA1 (python-cjson-1.0.5.tar.gz) = a00519debfdc6dcc33acfe68dc10ee4866fdcd8b
 RMD160 (python-cjson-1.0.5.tar.gz) = c1256cf176af3194233de3704ec07ab4ccfb522c
+SHA512 (python-cjson-1.0.5.tar.gz) = ba47337df70e27a9d44daa96c1d4f8d1a846193486ad78279e29ae7016bb2adb9146c0926fb99c7312c6fe9fea63b6cf947ef2a8faea376e27e004bdd55fb0ed
 Size (python-cjson-1.0.5.tar.gz) = 10978 bytes

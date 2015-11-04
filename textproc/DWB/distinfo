@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.1 2015/08/22 20:51:31 leot Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:59:17 agc Exp $
 
 SHA1 (DWB3.3-20150517.tar.gz) = 31f7655cb6aa688e9fe11e58a5c2f7ae12b28381
 RMD160 (DWB3.3-20150517.tar.gz) = f2e58caea367c4acf74fd5c989444caf8c9bd15b
+SHA512 (DWB3.3-20150517.tar.gz) = 547472d5682de2ea249c657ec9c6a2bb5e053bd3a9afede03041911746f7711f884d703a745315b6a1c1bc0c40fbe21c1adedc64ddcea095dd00e0e1cbea847e
 Size (DWB3.3-20150517.tar.gz) = 2847814 bytes
 SHA1 (patch-doc_doc.mk) = 768fbbf587ce6cfbdd7a5fb820673c70c5bbddda
 SHA1 (patch-index_index.mk) = 428ff5f966378d69257c9e8c3916795c01300723

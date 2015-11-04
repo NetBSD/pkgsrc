@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.12 2011/09/01 14:42:09 obache Exp $
+$NetBSD: distinfo,v 1.13 2015/11/04 01:59:39 agc Exp $
 
 SHA1 (libxml-1.8.17.tar.gz) = ebe7b76bb2b62c882000c1a846a6f8f8346e3bb4
 RMD160 (libxml-1.8.17.tar.gz) = 3d01879e6e5a38f4453d009ea8bd2d2fc9e86bcc
+SHA512 (libxml-1.8.17.tar.gz) = a9e67f8f7d6c5474f933f3509ec09cf26907dcc90c0740c7216748ac52b09e174891b71fcbe8792b1d7a991c4fbad4008a997144249498972562dd2040fb4d34
 Size (libxml-1.8.17.tar.gz) = 996351 bytes
 SHA1 (patch-aa) = 977a9e7f628910c2bc7e7f3c04de9917826bc0b7
 SHA1 (patch-ab) = 6c72ef59fe094ddbb4901b0f35eb681a4d0b4ff2

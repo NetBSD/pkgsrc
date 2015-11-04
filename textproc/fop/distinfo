@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2014/01/22 09:18:40 ryoon Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 01:59:29 agc Exp $
 
 SHA1 (fop-1.1-bin.tar.gz) = 6b96c3f3fd5efe9f2b6b54bfa96161ec3f6a1dbc
 RMD160 (fop-1.1-bin.tar.gz) = fdeee43b73f0b005738661bb9b86d9f9a4434f63
+SHA512 (fop-1.1-bin.tar.gz) = 2f639ed6af993b4367fca35270559e984f82adb08fd999bcf9ace638d0facc40f0ae40c3041784de512aa450b665d44e8c14801093af4ae64378e6e705d4b44e
 Size (fop-1.1-bin.tar.gz) = 22490250 bytes
 SHA1 (patch-aa) = dfbcc411ae6d5f5e092e09643191fb093ecd4357

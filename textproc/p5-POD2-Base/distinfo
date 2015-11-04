@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/08/20 06:45:55 sno Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:59:46 agc Exp $
 
 SHA1 (POD2-Base-0.043.tar.gz) = fe43d8cad982c99e720211513b9cc2fbc538c82a
 RMD160 (POD2-Base-0.043.tar.gz) = 74a2b923ee8c34e97a5bad639140df44a4dd551f
+SHA512 (POD2-Base-0.043.tar.gz) = d535faae9f6722bc8defc016d5b13c8cd251589a28d244feb4394a1ad6235d4e95651e3dc87d13e424e32a54930528c9cf817f65f2eb56ecf53493570450b443
 Size (POD2-Base-0.043.tar.gz) = 9897 bytes

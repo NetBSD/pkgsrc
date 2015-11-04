@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2009/05/21 12:32:05 sno Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 01:59:51 agc Exp $
 
 SHA1 (Text-Kakasi-2.04.tar.gz) = 6a574b6b11eb6ee6b8f52251df355792ffca6add
 RMD160 (Text-Kakasi-2.04.tar.gz) = 26f81dec43a278d5abed501fac860c0884d97726
+SHA512 (Text-Kakasi-2.04.tar.gz) = 6f76e65ed4ba7cbd2c14d53c8eb221a77c1001a36a29e851d570f169c62c124dd493acda0018997cba0fd6009dbe871645de9158b99cec72f5c07819c52ef633
 Size (Text-Kakasi-2.04.tar.gz) = 22990 bytes
 SHA1 (patch-aa) = 0777eedb16a4fae093db7daec833ae9b77cb4c00

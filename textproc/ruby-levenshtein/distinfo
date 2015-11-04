@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/01/26 10:49:03 obache Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:00:09 agc Exp $
 
 SHA1 (levenshtein-0.2.2.gem) = 7408d9adc53cba7ad4b37dd82026a9b8fabb49de
 RMD160 (levenshtein-0.2.2.gem) = e75ce89b5692a0853d93eb94a6dd20242e4dec07
+SHA512 (levenshtein-0.2.2.gem) = a84300b6590ab8c5fe2cc4e6f243ccec397cb97f7a241f635d2344433365b846701f9f4cccd7e574a1e50cf389ed03e3fe9992b6c2f21e12806a0c3ab08f03d0
 Size (levenshtein-0.2.2.gem) = 7680 bytes

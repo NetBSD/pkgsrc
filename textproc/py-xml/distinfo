@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2010/05/08 15:28:02 drochner Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 02:00:05 agc Exp $
 
 SHA1 (PyXML-0.8.4.tar.gz) = 6f30d5907b75ef76809c19e0103d78f4a5fb027c
 RMD160 (PyXML-0.8.4.tar.gz) = 976e618d99fb29840e36eb2c7662c1d0a1f2bca9
+SHA512 (PyXML-0.8.4.tar.gz) = 68d9802a58b8ce90d668d2ba659136dc5377e224fdb837284fdcaf640f28b3bb400bf485d602689905d56121b9ffaa7f7758b4a2f262d1321c8b9890952c8a1e
 Size (PyXML-0.8.4.tar.gz) = 734954 bytes
 SHA1 (patch-aa) = 51af9ee51699a9a17ebaf000aba3aba5cb07fd94
 SHA1 (patch-ab) = 93ab4c0fa3fca80e8683c454c5fa7f589fe14823

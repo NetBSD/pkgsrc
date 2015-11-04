@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/08/21 05:01:27 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:00:07 agc Exp $
 
 SHA1 (albino-1.3.3.gem) = 0a3f534789c1b76dad046563ca6124bd4febe3eb
 RMD160 (albino-1.3.3.gem) = 972213b8bced94f6b9e734b792ca48b565d755db
+SHA512 (albino-1.3.3.gem) = 4c8e7a571e07296c7d12aae1b4163145c3340c6ef15ecf91f37839b5fbd7d7795692062b64dcef1ec618178f5c453e427b153a9c256474c1e9025d2ddeacb3e3
 Size (albino-1.3.3.gem) = 10240 bytes

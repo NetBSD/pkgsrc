@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/04/13 11:54:12 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:59:24 agc Exp $
 
 SHA1 (aspell5-tet-0.1.1.tar.bz2) = 2b170ce5b4b866e61fd63a405ba7139b523a4e18
 RMD160 (aspell5-tet-0.1.1.tar.bz2) = 2369ce97c1fa34b2b62d1481ad9e7634b5ae1946
+SHA512 (aspell5-tet-0.1.1.tar.bz2) = 6dc691b40cedd054a677197219f97ae5afc21bcf4820bf452d23963ae04a716bf7e38d1cff0eb050e13fd24fd2e8f3b0d24f9b19e7de3868faeca8aa16881802
 Size (aspell5-tet-0.1.1.tar.bz2) = 33044 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/07/04 00:23:24 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:00:11 agc Exp $
 
 SHA1 (xpath-2.0.0.gem) = 6cd8a76de83c70b18b00a4f8da3aeb8f15895143
 RMD160 (xpath-2.0.0.gem) = 879063606033137bd52da00618730f0b115055f7
+SHA512 (xpath-2.0.0.gem) = 5d0375d795c755b88d4a16b7da9efe2bf234190066e38654360bbb0d837fdd481c946f055d95975d905330eef7e57d9b1eb4f1c5340d540db0fbd78fb58af690
 Size (xpath-2.0.0.gem) = 18944 bytes

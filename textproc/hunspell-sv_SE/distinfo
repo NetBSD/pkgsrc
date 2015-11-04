@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/07/19 14:46:43 ahoka Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:59:35 agc Exp $
 
 SHA1 (sv-1.27.zip) = a19340d90cdbccced7b7f0f11e6cedb2ffb456e1
 RMD160 (sv-1.27.zip) = 4b469f29470fe69660193f33e99f5ce4db04d56f
+SHA512 (sv-1.27.zip) = c8e7eed73be6e8c0d590e63eb0f0b551a748f7041308f44f832419e6a3e2cdd5e0edc0e90510d1b9975ad55e9f5ca48e91b1716d8ceb7fd4aabca82aafbecfca
 Size (sv-1.27.zip) = 284143 bytes

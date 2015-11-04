@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/02/25 23:46:27 rh Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:00:15 agc Exp $
 
 SHA1 (writer2latex04beta2.zip) = 19c6bca32d793621c0ea3be67ad648b0a14782e4
 RMD160 (writer2latex04beta2.zip) = a90c6e50b569525da1c82c85a9396c18d9a2952d
+SHA512 (writer2latex04beta2.zip) = e8c60059ed8bacb4115a3e7bcb07af333ce330bcdbc961d992fc1bdce05449f6909c0091e4427ff89db5fccf9998ebd2d2d00bd2f22902232e7c421a8b8ffdc1
 Size (writer2latex04beta2.zip) = 1361032 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2013/02/19 19:04:33 kleink Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 01:59:54 agc Exp $
 
 SHA1 (Text-vFile-asData-0.08.tar.gz) = 8c315e790527d6c95ac7c473956e2f0abb21d806
 RMD160 (Text-vFile-asData-0.08.tar.gz) = 54e07aa212a7d59af87c3903d6cdab7a808b799f
+SHA512 (Text-vFile-asData-0.08.tar.gz) = 04ec51061a7dc1c19d00edfcb3740deae7c70372e8d5eba868e2e62326f0084fbb3f8237f7cffaf1a5d2f49a5ceac7dcc7ea391e1effe78923b6b0e523b2728b
 Size (Text-vFile-asData-0.08.tar.gz) = 37806 bytes

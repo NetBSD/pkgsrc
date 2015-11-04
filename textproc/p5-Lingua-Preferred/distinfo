@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/05/19 17:31:02 reed Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:59:44 agc Exp $
 
 SHA1 (Lingua-Preferred-0.2.4.tar.gz) = b8c08b30fd17ebd691f37cc9e142306769990ccb
 RMD160 (Lingua-Preferred-0.2.4.tar.gz) = 7a714b172e3f72b915d04e9e7f268b49686d5c34
+SHA512 (Lingua-Preferred-0.2.4.tar.gz) = 6946b2b8d5978c516688a63bd2126700f8ab0137d51959f0b8c2565c08f25d20dc3fe5f81c6473c3ef5d1faf94a6bd4510959f730cc104b61671bd9436de6353
 Size (Lingua-Preferred-0.2.4.tar.gz) = 6029 bytes

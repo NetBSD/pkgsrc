@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2014/04/11 18:10:11 wiz Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 02:00:02 agc Exp $
 
 SHA1 (cssutils-1.0.zip) = 341e57dbb02b699745b13a9a3296634209d26169
 RMD160 (cssutils-1.0.zip) = 16efd2eca89977a98fb0edb01e17ed5233b43f2e
+SHA512 (cssutils-1.0.zip) = fac2e46edece73fac66a741c7226b7a1ed9ef58d4a621e60a5b7ecd96dc74c5121969f007bd80a6dddea06a811dbc85b3691940cefc7a5b887fc458febb974e8
 Size (cssutils-1.0.zip) = 434178 bytes

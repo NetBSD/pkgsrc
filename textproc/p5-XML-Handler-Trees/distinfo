@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/02/23 20:24:12 kleink Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:59:56 agc Exp $
 
 SHA1 (XML-Handler-Trees-0.02.tar.gz) = 920e5b5bdeb8d1507f4ff0354aa9574a4ca20e01
 RMD160 (XML-Handler-Trees-0.02.tar.gz) = 372b9c53f088744eb0b72a33aaf0217b1c29e076
+SHA512 (XML-Handler-Trees-0.02.tar.gz) = 845349beeb7e1a2425c0cf30b07f045930fd0a90c2bfd74199cc499c070f3654904a5ca634b91087fb5ecdac844758bd6ebaf10f9bee18a78b3f153e15ece149
 Size (XML-Handler-Trees-0.02.tar.gz) = 7684 bytes

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.28 2012/08/29 19:11:12 drochner Exp $
+$NetBSD: distinfo,v 1.29 2015/11/04 01:59:29 agc Exp $
 
 SHA1 (gnome-doc-utils-0.20.10.tar.xz) = 8320a30e1b7239aa33ba276da046090407a93bbf
 RMD160 (gnome-doc-utils-0.20.10.tar.xz) = 64fcdf0166c213b6bf5c872f583546b3a9a17bf4
+SHA512 (gnome-doc-utils-0.20.10.tar.xz) = 1cb5e3b9ca9e45e6c551801e9c9c4aac725c2ce85238c230a4c70b36c90419886b921d8dd464df0643fc3bbb877df075abaa83a36d1609c5664960c31e11d151
 Size (gnome-doc-utils-0.20.10.tar.xz) = 526700 bytes
 SHA1 (patch-aa) = 6940085d1887846869a1b58611b841ced392ab20
