@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2013/03/03 04:52:38 joerg Exp $
+$NetBSD: distinfo,v 1.9 2015/11/04 00:34:59 agc Exp $
 
 SHA1 (ettercap-NG-0.7.3.tar.gz) = 7a2c3f848ca4f39c07fddeb0d6308641265bc4ff
 RMD160 (ettercap-NG-0.7.3.tar.gz) = f4e6c0d87b2064b3775e9af60f34575273742616
+SHA512 (ettercap-NG-0.7.3.tar.gz) = 3681e5c7eacdce5a367111286672c5a8a5f9a74f963285289bf48f67527343a8278723a4c4ca8a000289a6a640bf1a96bbb6899c069cde2fbdf875e8c4ea3f5b
 Size (ettercap-NG-0.7.3.tar.gz) = 1138643 bytes
 SHA1 (patch-aa) = 27c7f53e0d704b7dc2b8c9c76bf1f9aeff1bbece
 SHA1 (patch-ab) = 7cf863797abac4b67dbca55f6f763bf7b9830259

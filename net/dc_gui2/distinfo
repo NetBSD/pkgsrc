@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2010/06/02 13:08:22 adam Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 00:34:56 agc Exp $
 
 SHA1 (dc_gui2-0.80.tar.gz) = 075e512127a0ab6a65295aa989d1f48187575a78
 RMD160 (dc_gui2-0.80.tar.gz) = b3db69c30b7507b183a02f5ce9c847cc7fa0df92
+SHA512 (dc_gui2-0.80.tar.gz) = c85b23b02b95386319ea9a91768ad159555e5a365dad4317f960a8417ba6e29f9425f1e722f7be381a76e9cb642326b08da00a01871a456973d1e5b02c4db71f
 Size (dc_gui2-0.80.tar.gz) = 1340777 bytes
 SHA1 (patch-aa) = 3aafdb3d244ca6234c21c2f4f7ffc9106ce7d45e
 SHA1 (patch-ac) = 535f1853b4371320fd6c1acc6e6b26b9f832c3f4

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2005/12/20 13:29:46 joerg Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 00:35:34 agc Exp $
 
 SHA1 (rootprobe-20030115.tar.gz) = 6e96dd7969672cb7f4477cbb377911d57120edfd
 RMD160 (rootprobe-20030115.tar.gz) = 5e8f25344d016b3f07648ba06a2cc58aa7baca8b
+SHA512 (rootprobe-20030115.tar.gz) = f369f9d3e38ad8542a2629a08082bc596b3984ac835e93883805bd02d5fe8e98956d0f83ba4e85e67998d90921b6d4e36e631a544a37fb9e903d3daa5729a526
 Size (rootprobe-20030115.tar.gz) = 20867 bytes
 SHA1 (patch-aa) = 921d75b27a0f49af8b49f11a2880431186f86622

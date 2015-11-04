@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/09/25 13:18:45 manu Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 00:35:14 agc Exp $
 
 SHA1 (check_mysql_slave-0.1.tgz) = c119faf749949ce2dec3c978944023070f1b4c1c
 RMD160 (check_mysql_slave-0.1.tgz) = 13b287b6074c8fd6d6419051cfd818da00f1911c
+SHA512 (check_mysql_slave-0.1.tgz) = 6669993a4ba8892f7fd874fd2e5105cef1530d2807766a5c1c82cefedf66f5edd7d69012a8c981900dfdb0c4b7fede0aba844e998dbf686bbeec1bf4177ce8ad
 Size (check_mysql_slave-0.1.tgz) = 2532 bytes

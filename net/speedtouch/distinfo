@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.10 2010/03/24 15:36:22 joerg Exp $
+$NetBSD: distinfo,v 1.11 2015/11/04 00:35:38 agc Exp $
 
 SHA1 (speedtouch-1.3.1.tar.bz2) = 9f2bd1d2800686fa96b38bb3de8283fcf5b39a5c
 RMD160 (speedtouch-1.3.1.tar.bz2) = 88e64bb415db535078915d10684262b5e57f55dc
+SHA512 (speedtouch-1.3.1.tar.bz2) = 107f0cddf102da7f2097471d86578196f7141dbce6263d65291ee27734c79ecb8f0a2f28e5fcf2faf7514229e9850302caa89e2945b426d04c2161bef239d726
 Size (speedtouch-1.3.1.tar.bz2) = 197709 bytes
 SHA1 (SpeedTouch330_firmware_3012.zip) = 4fd2eefda958fd34ab4df43cffdda4e7757fbd34
 RMD160 (SpeedTouch330_firmware_3012.zip) = 5d7dea06a6752f44ad2fa030943a3978f5080152
+SHA512 (SpeedTouch330_firmware_3012.zip) = d4ec1b609eb58b15b0c569fc2c96e453517f6a8141c706f342549093c2c7bbdc09bbc3f05ecf75f3018e54f03a974b84e625fb9401f02d4f4143b721eee0b3c3
 Size (SpeedTouch330_firmware_3012.zip) = 769125 bytes
 SHA1 (patch-aa) = e9650d76899382de473f2482b6446373d0a094ce
 SHA1 (patch-ab) = dd6e17f0ad153cbe57055ff843467617dae0c311

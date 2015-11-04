@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.9 2014/02/24 12:49:56 wiedi Exp $
+$NetBSD: distinfo,v 1.10 2015/11/04 00:35:26 agc Exp $
 
 SHA1 (pchar-1.5.tar.gz) = 3e78505b881773d2a726b426c6023ee2519bed75
 RMD160 (pchar-1.5.tar.gz) = b8e600b9c11cf7e584768c87aadeeb9d7b482949
+SHA512 (pchar-1.5.tar.gz) = 56784589a16638a12230a11a177b8dd97a7abac927624beaaea89e0169423f7242c2b434a36aad1a07d977e6b006fd71eb9132aecb1d35e3e3363eb2d1549d84
 Size (pchar-1.5.tar.gz) = 117678
 SHA1 (patch-PctestIpv6Icmp.cc) = 28f4807aa8776fc45377661f4095b9033ad69d36
 SHA1 (patch-PctestIpv6Tcp.cc) = 06113c259529c51d756ae848bcea831c5dac5471

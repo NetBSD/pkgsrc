@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2014/12/13 14:22:05 mef Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 00:35:44 agc Exp $
 
 SHA1 (whoson-2.05.tar.gz) = 8e891eb10f84d885e2ad1de6e621ce9cf08e3434
 RMD160 (whoson-2.05.tar.gz) = d9145cbaafab3c32d76d9efd5c4e50142ca03647
+SHA512 (whoson-2.05.tar.gz) = 22df00d3cd4e5cfed5655cb08880bf1679b2b6bb7e5bf25a8727da132f3a9f2d7e4b8fb5d5e3879556d14283c81fbb107c8ca242f578dbc06145c8ddcb1cfed2
 Size (whoson-2.05.tar.gz) = 337204 bytes
 SHA1 (patch-aa) = 3b80cc062b83de2360b6cb701aae31a0f5948fe2

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2013/06/15 20:24:19 adam Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 00:35:36 agc Exp $
 
 SHA1 (scapy-2.2.0.tar.gz) = ae0a9947a08a01a84abde9db12fed074ac888e47
 RMD160 (scapy-2.2.0.tar.gz) = 0cb0e14e6e84ba6a22b0afd7f2913a98888a418e
+SHA512 (scapy-2.2.0.tar.gz) = da05deb5dd3bfbd0222659a98e5f01c891e948b9104965e14ca975022b180cd7699ec852357baf229c73321dbe73d9a48c2a14008b7d7a3f0e151914536f7d3a
 Size (scapy-2.2.0.tar.gz) = 972996 bytes
 SHA1 (patch-aa) = 37bb1d60a04604c26a518dc0d13d5df601fd295c
 SHA1 (patch-ab) = 12f7c4d0ae505d357692c05de658e393a0526ba1

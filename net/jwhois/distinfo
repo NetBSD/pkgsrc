@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.31 2012/10/23 20:49:38 shattered Exp $
+$NetBSD: distinfo,v 1.32 2015/11/04 00:35:06 agc Exp $
 
 SHA1 (jwhois-4.0.tar.gz) = 4bd4a35cb0c2593284e7ef161f533a8184645174
 RMD160 (jwhois-4.0.tar.gz) = 552a61a17c2c4af8c1a5e7cd12e2e0f40d9f7dc8
+SHA512 (jwhois-4.0.tar.gz) = 5d625c3f1031a8eb8ef766ef5d47a8c1a4396d1ad3344fc9449f80dd71ad84aadf21ba67f5c2f99348f732a4df998eefe699fcec4efcadf87f579b70302a44ae
 Size (jwhois-4.0.tar.gz) = 493007 bytes
 SHA1 (patch-aa) = 65b75e9808a7e7f92fa1f4dece3fd89efb6c5201
 SHA1 (patch-ab) = e2b35b66adae6caba8a778194ff0238a31006b0b

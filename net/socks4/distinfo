@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.9 2013/03/02 18:29:48 joerg Exp $
+$NetBSD: distinfo,v 1.10 2015/11/04 00:35:38 agc Exp $
 
 SHA1 (export.socks.cstc.4.2.2.tar.gz) = 7d8d041c82213f9fd60f64aadf9c1ade418e15db
 RMD160 (export.socks.cstc.4.2.2.tar.gz) = 03dc72b80f2223c7462ecf168a0fbbf3effd5223
+SHA512 (export.socks.cstc.4.2.2.tar.gz) = 849ca98d26db17c34fcdd282aee31276e2dcd4e188e90d3e396edb67c62635e030e999e13ad26624ab53cd71d53f78eb84766350791d2e565d6aaabe23eed56f
 Size (export.socks.cstc.4.2.2.tar.gz) = 278805 bytes
 SHA1 (patch-aa) = 252ef19fa1c255e4aeaad30162869269716c7e98
 SHA1 (patch-ab) = fd3f119add1144b24eb2cec578c011bcb397e875

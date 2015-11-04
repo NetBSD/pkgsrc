@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2008/01/14 02:08:25 rillig Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 00:35:01 agc Exp $
 
 SHA1 (gethost-0.03.tar.gz) = af14f462f3019b5d133d7677e015fa0db2db65b9
 RMD160 (gethost-0.03.tar.gz) = 33d15db6bb2846dbea766c78b628408ebd50db08
+SHA512 (gethost-0.03.tar.gz) = 70bca665fbcdc0c0b590b08f8b4c43b7da0c330273fbc66eff4cd6e40bae9ed6b116299b6f82136bae99b45eb1d4552e98a96e4d1da7e0ba359723b83627296b
 Size (gethost-0.03.tar.gz) = 4226 bytes

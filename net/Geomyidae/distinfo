@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/04/19 19:21:15 wiz Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 00:34:51 agc Exp $
 
 SHA1 (geomyidae-0.26.3.tar.gz) = 7eb018bb7436f9f2ae4e3123bb8d11f69085bb01
 RMD160 (geomyidae-0.26.3.tar.gz) = d5d843ee0f498972eb72f9f663eb550a2b3e7a31
+SHA512 (geomyidae-0.26.3.tar.gz) = fcee0133547881f6df173a24eac0fd3007436365375f11c572c50cf2e77c2033d441209f7f20dab1d291b0e9305de245da409351a02df4ca92d7b158768424b3
 Size (geomyidae-0.26.3.tar.gz) = 15556 bytes
