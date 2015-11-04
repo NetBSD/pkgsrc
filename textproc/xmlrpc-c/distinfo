@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.31 2013/12/01 23:25:31 bsiegert Exp $
+$NetBSD: distinfo,v 1.32 2015/11/04 02:00:16 agc Exp $
 
 SHA1 (xmlrpc-c-1.25.26.tgz) = 62b8b7b76b2937b2f3d51be045cbf17476302d39
 RMD160 (xmlrpc-c-1.25.26.tgz) = 86096117f8e26321c38539eff83cdf0f64055e47
+SHA512 (xmlrpc-c-1.25.26.tgz) = 664ecf5099a109f90130d8794c41d21cc8adfc3e990b63a658b04ccfd73278437c13c54f24336442ea1d8d9f38f248471474912b8647754a15e9eeb3a6ab5e96
 Size (xmlrpc-c-1.25.26.tgz) = 779351 bytes
 SHA1 (patch-GNUmakefile) = e4c6b18adaec74257ae174f64ac680aaf63d31a5
 SHA1 (patch-aa) = 96ca1b0f8550b04e7292d07b4204b5bed841a417

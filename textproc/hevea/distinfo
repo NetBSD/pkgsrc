@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.13 2015/05/06 20:45:43 tonio Exp $
+$NetBSD: distinfo,v 1.14 2015/11/04 01:59:30 agc Exp $
 
 SHA1 (hevea-2.23.tar.gz) = f3b60029849ec7509f68ec0ec7e2bbb166940d7a
 RMD160 (hevea-2.23.tar.gz) = 8b6080f775de7d47a67a117c600e3f9a7bccbd44
+SHA512 (hevea-2.23.tar.gz) = 674a0b3fe14314101cdbb81c572b0df1039c5d4896697405e6cd8b7f3a3a654fb7b681dd8109044ba2fb11c26d591f90d769ce6640b94d75f50b74d2a7b17d10
 Size (hevea-2.23.tar.gz) = 968938 bytes
 SHA1 (patch-Makefile) = 5a3f1a76d055d892a66db9fe73cc7912a2f09b43

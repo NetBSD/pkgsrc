@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2005/05/05 19:20:45 hrs Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 01:59:27 agc Exp $
 
 SHA1 (docbook-simple-1.1.zip) = 8d8556b313969c9f494d2f9641e4d81e79c94f3d
 RMD160 (docbook-simple-1.1.zip) = bcfe3be6e14c05f421c50e88f41a67894f1c0c18
+SHA512 (docbook-simple-1.1.zip) = ddcf35ffda28d7578f5737f909edde928b14d6743cb3b39fd9f5e34973bb6029c343762f6d052a484fc380b12b20c9551b89c6703fdf89588370b02f606760dd
 Size (docbook-simple-1.1.zip) = 34500 bytes

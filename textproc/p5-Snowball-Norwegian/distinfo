@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/08/19 06:46:51 sno Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:59:48 agc Exp $
 
 SHA1 (Snowball-Norwegian-1.2.tar.gz) = 641791649dca1946f0758fdebea8f8c4e9efb453
 RMD160 (Snowball-Norwegian-1.2.tar.gz) = 9b9f3e7cfc59a70d754cc9b2447bfd72eeea98c3
+SHA512 (Snowball-Norwegian-1.2.tar.gz) = a14da012954076c6c3fdaa4ea12dd74d8e07e96e061e368980781c965e72fe9f8ac4b9bc8eb761e232bf8c244edc816f6c991bb2cd02020919fe957cefe034d5
 Size (Snowball-Norwegian-1.2.tar.gz) = 137032 bytes

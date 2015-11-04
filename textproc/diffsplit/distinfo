@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/03/13 16:03:08 ginsbach Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:59:27 agc Exp $
 
 SHA1 (diffsplit) = 209e0b8e0b5f8b6ebf3e9a9d1a51cec16f4d6d15
 RMD160 (diffsplit) = d1d168debe05fbff5b04276fbfef00088d32e53e
+SHA512 (diffsplit) = 6ae1c0a5e410d711355fb6a09f948440e76e15a7e99563e17cfd1bf94ea37f38ad10ab2d37e4a3a2960e39ef090991289562233888ff2780740e7a6be2858b28
 Size (diffsplit) = 3141 bytes

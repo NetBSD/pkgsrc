@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/01/18 15:45:30 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:00:03 agc Exp $
 
 SHA1 (jsonlib-python3-1.6.1.tar.gz) = f4cdf3222d35f495a064b55a895a9c42a4faa8b1
 RMD160 (jsonlib-python3-1.6.1.tar.gz) = 4eaf63352e2242f54204e3ed9a7df8ef7e1c7f37
+SHA512 (jsonlib-python3-1.6.1.tar.gz) = 4b9c2d0e7f07da03975c50bf81fc7bebe3134fefadd8cdc99df340d36c53f2d7dccb4769a2fa3fdd52b7ae03c9b841b0c45fb36387faa52531490224213d75ff
 Size (jsonlib-python3-1.6.1.tar.gz) = 43482 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2008/04/18 17:37:10 bjs Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 02:00:16 agc Exp $
 
 SHA1 (xmltoman_0.4.orig.tar.gz) = 151f75d78d1fa53bca25b94dc00e46a27fabfee8
 RMD160 (xmltoman_0.4.orig.tar.gz) = ce61c5184d5ba0a9db63bff2d4635eb644825383
+SHA512 (xmltoman_0.4.orig.tar.gz) = 347722731e2101ecd0619f88f4efdbca534810c96977a1281af685e8a61f4c1a826a71a9f0e3af43cc899936640787366a78077f36d23a9efcfeb789dbcfae22
 Size (xmltoman_0.4.orig.tar.gz) = 15250 bytes

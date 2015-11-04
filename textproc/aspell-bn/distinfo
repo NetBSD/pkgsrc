@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/04/10 17:50:41 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:59:19 agc Exp $
 
 SHA1 (aspell6-bn-0.01.1-1.tar.bz2) = c3adbfb8b6df04ba5cee2b25671f6119f86d67e5
 RMD160 (aspell6-bn-0.01.1-1.tar.bz2) = 55f0df39cc0a9cb197d3e6215c1f3511efee2570
+SHA512 (aspell6-bn-0.01.1-1.tar.bz2) = d8fe29b100284aa6b2e909811b9eb09bd5decea4c056f2ed6a24de9d5adb48714827a2e892fdf38274d1e1a44b2a93415fccf90b4c4d85512f3052c7f7939d22
 Size (aspell6-bn-0.01.1-1.tar.bz2) = 117436 bytes
