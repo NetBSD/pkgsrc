@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 14:09:52 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:19 agc Exp $
 
 SHA1 (tex-hyplain-15878/hyplain.tar.xz) = debac25fb866f734343d3554adda65004f37c372
 RMD160 (tex-hyplain-15878/hyplain.tar.xz) = b38f52a25751c2cbc2c9af27cd4647514e7552f8
+SHA512 (tex-hyplain-15878/hyplain.tar.xz) = 80eaf264320586c07452f710dc95d2e295124d2f99605cd8f61d2d1c29f12b264041ff8b41e696b54f329d7dc6fde2b892a5419860efd138f2cb00724d582afc
 Size (tex-hyplain-15878/hyplain.tar.xz) = 3108 bytes

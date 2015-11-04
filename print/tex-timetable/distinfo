@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 14:09:53 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:52 agc Exp $
 
 SHA1 (tex-timetable-15878/timetable.tar.xz) = 64dd5cfcaacb9907ef9026aa8f8219efa112ad2b
 RMD160 (tex-timetable-15878/timetable.tar.xz) = 7be83d8eaa418beb3f9079db91705e189c3a3e15
+SHA512 (tex-timetable-15878/timetable.tar.xz) = b7e157a7e42a30079eb79dccc82c56c7ae66cf56a06cecb04a20fe8c83745578521b2c019369dd340781cd1d9e7165e2d426c2cb30d99b6bfe02c62ce1ca34c4
 Size (tex-timetable-15878/timetable.tar.xz) = 7388 bytes

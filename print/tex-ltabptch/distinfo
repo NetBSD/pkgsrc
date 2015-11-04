@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/16 10:30:17 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:27 agc Exp $
 
 SHA1 (tex-ltabptch-17533/ltabptch.tar.xz) = 69969b22f09d7bc2ab23dae860f84b52849329de
 RMD160 (tex-ltabptch-17533/ltabptch.tar.xz) = de48555c13dfc4bad28952ab1fc934aaa8ac395d
+SHA512 (tex-ltabptch-17533/ltabptch.tar.xz) = 9eaea8d9fe7b5aaff5d9503d999a52cc884266bf784914b611ffed222b6d7d56f58107e4ac1a64afa06255e5e1d0db3e441c767e074dab92e51ddca2437f4ae7
 Size (tex-ltabptch-17533/ltabptch.tar.xz) = 4688 bytes

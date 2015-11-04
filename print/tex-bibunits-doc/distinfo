@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/10/19 20:43:39 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:52 agc Exp $
 
 SHA1 (tex-bibunits-15878/bibunits.doc.tar.xz) = 6dfd30a3b7e228be9c5f9553d988b61a01264d26
 RMD160 (tex-bibunits-15878/bibunits.doc.tar.xz) = f652b89253767d8ac192fa707aa8aab70157dc78
+SHA512 (tex-bibunits-15878/bibunits.doc.tar.xz) = 103141525a64a558aefe51cbfa7f11533d89300a4137249273511a57ec837c259ffb12c2598323a670beab89166c1d48a4b613f4daaa659de4cae3a92b7e9b23
 Size (tex-bibunits-15878/bibunits.doc.tar.xz) = 193812 bytes

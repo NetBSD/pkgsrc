@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/14 17:07:36 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:54 agc Exp $
 
 SHA1 (tex-translation-filecontents-de-24010/translation-filecontents-de.doc.tar.xz) = 7ae5fca5e2575557e27146d13f02f3054042fd36
 RMD160 (tex-translation-filecontents-de-24010/translation-filecontents-de.doc.tar.xz) = ea708c9d6d55707f3829be1298b011e8f4ed0937
+SHA512 (tex-translation-filecontents-de-24010/translation-filecontents-de.doc.tar.xz) = 7669e21f586474ca6338d8146408e96dec2fa645f2517f997bf144feaad12fea5c90b0d00763c80f809dc9391e7bc3b7309d9224b495e1497ab918878958b744
 Size (tex-translation-filecontents-de-24010/translation-filecontents-de.doc.tar.xz) = 214456 bytes

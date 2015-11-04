@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/15 17:51:49 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:27 agc Exp $
 
 SHA1 (tex-macros2e-23236/macros2e.doc.tar.xz) = dd030e3bc1fae99702097b9d30cd8adad56fcc82
 RMD160 (tex-macros2e-23236/macros2e.doc.tar.xz) = 3595352b3a9f4a2578d73bf99696dcb184900940
+SHA512 (tex-macros2e-23236/macros2e.doc.tar.xz) = 79bdc0deca5d38ca24f8cc3ab033728651dcce3c624286b1b5b49592fd3676b13b34ff2023e09648a66c3ff2907cb67ecab14b97d316796f7fe6ead2940cf2be
 Size (tex-macros2e-23236/macros2e.doc.tar.xz) = 185468 bytes

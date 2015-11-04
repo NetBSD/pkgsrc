@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/31 06:45:32 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:04 agc Exp $
 
 SHA1 (tex-edmac-15878/edmac.doc.tar.xz) = f6ee932e50d707cb128502d3c404d0e7dcacaa1b
 RMD160 (tex-edmac-15878/edmac.doc.tar.xz) = 5a21f364d19f580b288cb23e5f19f2d713a3e4b5
+SHA512 (tex-edmac-15878/edmac.doc.tar.xz) = 8fb8e5fbc4873d4437b289a15d314f2f3c0b23b34afb89595175cbb4b513a6ff746ff9199a20220766fd1b19cccfa5ea538053c755afd6b533f03b4cd32356ff
 Size (tex-edmac-15878/edmac.doc.tar.xz) = 89932 bytes

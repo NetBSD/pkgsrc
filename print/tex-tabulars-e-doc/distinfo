@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/15 17:51:50 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:49 agc Exp $
 
 SHA1 (tex-tabulars-e-21191/tabulars-e.doc.tar.xz) = 41e8be8e2372309028c96c32362c7c437d803c2f
 RMD160 (tex-tabulars-e-21191/tabulars-e.doc.tar.xz) = b53218f99b57af33b88c542ab210ad07b99955fe
+SHA512 (tex-tabulars-e-21191/tabulars-e.doc.tar.xz) = 9f5581422c5575f1f920522767efb0e879d90ea187e52572a2567c679b90a9434a9204fc24aef3bb02bec0cf260636858cdd90391a5e1167333b5c28e777e5cf
 Size (tex-tabulars-e-21191/tabulars-e.doc.tar.xz) = 48236 bytes

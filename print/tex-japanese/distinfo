@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/04/23 11:40:24 markd Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 01:02:21 agc Exp $
 
 SHA1 (tex-japanese-30855/japanese.tar.xz) = 495c9cea9ad4db0bb69da572b00afa57657d7715
 RMD160 (tex-japanese-30855/japanese.tar.xz) = ed1c0bcc1b00391278d1fa9c037df329c2d7369d
+SHA512 (tex-japanese-30855/japanese.tar.xz) = 6891f8514a9ceae6f308df2c8860e95f2460a4d79253b87e61ae45b468b93246a35fc8f9416d750e889e1cb98b1a77c6c8c7407e06a2d205006efa37ab7609a2
 Size (tex-japanese-30855/japanese.tar.xz) = 1824 bytes

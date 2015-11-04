@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/01/22 22:00:59 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:06 agc Exp $
 
 SHA1 (tex-euler-17261/euler.doc.tar.xz) = 0132fc7238403a64685fa58034d085b4a3e5dece
 RMD160 (tex-euler-17261/euler.doc.tar.xz) = d4d8d1f5215ea55970e209a8d69d859d0437ad99
+SHA512 (tex-euler-17261/euler.doc.tar.xz) = 4721e114543775fb9d2516a172b4c56e0b72b6c5ea074ef715a92703a3942d92ca58a241140af1b76d80194de3838f5bd7d0d193fee59fb53eeefff0a781e147
 Size (tex-euler-17261/euler.doc.tar.xz) = 236752 bytes

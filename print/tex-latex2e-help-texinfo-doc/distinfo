@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/15 17:51:49 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:24 agc Exp $
 
 SHA1 (tex-latex2e-help-texinfo-34128/latex2e-help-texinfo.doc.tar.xz) = 3de507f90d73d5db1cf17c00d20262373bd8b7e1
 RMD160 (tex-latex2e-help-texinfo-34128/latex2e-help-texinfo.doc.tar.xz) = 016f7edf7a2d4edb89b33a5978149750036482c7
+SHA512 (tex-latex2e-help-texinfo-34128/latex2e-help-texinfo.doc.tar.xz) = fd1cf3d480278571cf454e18904d3b4e33a615f128fe86ba55d067b428dec3f39640e14293f5034d393e6b8987ed498ca1bc4b4b9ac91c07168c6ade8f84a2bc
 Size (tex-latex2e-help-texinfo-34128/latex2e-help-texinfo.doc.tar.xz) = 876448 bytes

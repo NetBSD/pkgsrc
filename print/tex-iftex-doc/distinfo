@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/04/26 01:08:22 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:20 agc Exp $
 
 SHA1 (tex-iftex-29654/iftex.doc.tar.xz) = 1e7e24011ecd8f902661ae9c04403f45826cfb83
 RMD160 (tex-iftex-29654/iftex.doc.tar.xz) = 10e9a16c0fb9c2011e3a91909a842060eed601a9
+SHA512 (tex-iftex-29654/iftex.doc.tar.xz) = eb9d69a8f6bc4bb9b0bd5affa78bf0446a84d9416317daf022567b3407de0d2a9266adcd8820ab943542b94af2031c0d3a7965a90d892312b769d1a6c317130a
 Size (tex-iftex-29654/iftex.doc.tar.xz) = 31288 bytes

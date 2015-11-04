@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/04/25 04:34:21 markd Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 01:02:43 agc Exp $
 
 SHA1 (tex-seminar-34011/seminar.tar.xz) = c30c4768fd849a2ce216ecd4afa4aeb4215f8d8b
 RMD160 (tex-seminar-34011/seminar.tar.xz) = a17b4580489c67ac06826ef4ffc0253c1429dfa5
+SHA512 (tex-seminar-34011/seminar.tar.xz) = c60991fd8a38e5aedd82b2119e102e301376c0ab06b1ea4467f2a3e8e56f7129df5a530cf58bc8ba2d1fb7e95139ed710d9b81c25411b50f6f47f9cd7aa42b6f
 Size (tex-seminar-34011/seminar.tar.xz) = 29916 bytes

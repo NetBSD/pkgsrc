@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/14 17:07:35 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:22 agc Exp $
 
 SHA1 (tex-koma-script-examples-34243/koma-script-examples.doc.tar.xz) = 86da0aa930972973664a56c489e91b27f616efa9
 RMD160 (tex-koma-script-examples-34243/koma-script-examples.doc.tar.xz) = 02c7b4bb18e30e75be34c5c3a92a6f679ea716ea
+SHA512 (tex-koma-script-examples-34243/koma-script-examples.doc.tar.xz) = 3115bf49469713c8a274d2e54f607d6cdf5655a5802f2ef6e61807030a6853b4686da6225f79ff62250a00176fb2db03127ef1dec6a076b781f93017cab5b124
 Size (tex-koma-script-examples-34243/koma-script-examples.doc.tar.xz) = 451636 bytes

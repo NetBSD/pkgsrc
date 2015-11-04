@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/04 12:27:32 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:47 agc Exp $
 
 SHA1 (tex-babel-dutch-30263/babel-dutch.tar.xz) = 53a984fac80d3e2e671947f891c38bb7e1cdce61
 RMD160 (tex-babel-dutch-30263/babel-dutch.tar.xz) = a93a2e48e38ec970639c6ae937b9f6d6351211db
+SHA512 (tex-babel-dutch-30263/babel-dutch.tar.xz) = db3fbdebeb83476fb836a092b2836d3c49a31bdfef9b7728eb156acee3b384371cb210225c57b86f90c348528d3e4b26578e8a9ad47d854c74ebb1ce9c50775d
 Size (tex-babel-dutch-30263/babel-dutch.tar.xz) = 2844 bytes

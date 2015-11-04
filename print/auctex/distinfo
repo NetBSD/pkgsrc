@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.15 2014/11/23 06:05:39 mef Exp $
+$NetBSD: distinfo,v 1.16 2015/11/04 01:01:31 agc Exp $
 
 SHA1 (auctex-11.88.tar.gz) = 098a9751c4e00812e61d62a0184a07d9753904df
 RMD160 (auctex-11.88.tar.gz) = 6e4e326b774ae6d7a5b2dc0091100925a8782280
+SHA512 (auctex-11.88.tar.gz) = 30c422b52b3fc698e453ada9643038dd30978f6b1a99f5118a53ae5b939d63246adcb1937f0e5c4cf166477dca78fa17d721402a90c833c9e91d75072ae0f67d
 Size (auctex-11.88.tar.gz) = 1302836 bytes

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2013/05/18 20:50:36 shattered Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 01:01:32 agc Exp $
 
 SHA1 (epstool-3.08.tar.gz) = dc495934f06d3ea8b3209e8b02ea96c66c34f614
 RMD160 (epstool-3.08.tar.gz) = 5594fee09e105745b390de0d2e7144034d83b8e0
+SHA512 (epstool-3.08.tar.gz) = d6d70825c7d08cca318503bd8c12b48408b6d6cd3a64f26df94890373a3e73b68dc09a4eb454b81893c7ee3c11da791cdfed7466eb1410414cd1b97d80e8abf1
 Size (epstool-3.08.tar.gz) = 191567 bytes
 SHA1 (patch-aa) = 27ba994b57144cc075262557d68381429d732858
 SHA1 (patch-ab) = 73e4665fbabb254846c331e4939b7c67ba341bc9

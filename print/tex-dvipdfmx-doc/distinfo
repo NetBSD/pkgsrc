@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2015/06/14 12:50:02 markd Exp $
+$NetBSD: distinfo,v 1.8 2015/11/04 01:02:03 agc Exp $
 
 SHA1 (tex-dvipdfmx-37159/dvipdfmx.doc.tar.xz) = 44385e0dc4d6f247cfb92afe5aa33380956b6d62
 RMD160 (tex-dvipdfmx-37159/dvipdfmx.doc.tar.xz) = dce98b02db18a5dcc18e0efc8e3247489c1b457c
+SHA512 (tex-dvipdfmx-37159/dvipdfmx.doc.tar.xz) = 1200224cc71103d035d0951191783db0437968468c0576dfaa998264c67a5e6b8bf5b5cca449da5a463611bf42c908c5b3b8ce5ed5111b6dcf57b0e4646316c5
 Size (tex-dvipdfmx-37159/dvipdfmx.doc.tar.xz) = 323744 bytes

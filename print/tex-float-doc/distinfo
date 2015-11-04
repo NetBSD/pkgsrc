@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2010/09/14 00:18:12 minskim Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 01:02:09 agc Exp $
 
 SHA1 (tex-float-15878.2010/float.doc.tar.xz) = e936897fe5c6d52dff20186f5b8509554c57fdde
 RMD160 (tex-float-15878.2010/float.doc.tar.xz) = b13d03fb69120fe71fd5a9a6f5ea180118923abc
+SHA512 (tex-float-15878.2010/float.doc.tar.xz) = 4e95eb5b88db1d57344ed8643b945509155a37b168f5379c12862fa1011892b065ce922337d3c26ddfaa7133876256b789c17c49f6821ee3be61b5f07e974101
 Size (tex-float-15878.2010/float.doc.tar.xz) = 112628 bytes

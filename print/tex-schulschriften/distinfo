@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/06 08:58:50 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:42 agc Exp $
 
 SHA1 (tex-schulschriften-35730/schulschriften.tar.xz) = b5600dbb2415f95b07087cb871ff5db84e308bc9
 RMD160 (tex-schulschriften-35730/schulschriften.tar.xz) = fe6f0241ab0365a6f02dc629d8ab08e0a93dfabf
+SHA512 (tex-schulschriften-35730/schulschriften.tar.xz) = e4424368dedde5e96bdafb4098ad0fbd90679fd3a5148d9145203474004be6e40433a07b6609b09b8864e2ea0dfee1e171876873a34f7033b01e8b1c12187734
 Size (tex-schulschriften-35730/schulschriften.tar.xz) = 48964 bytes

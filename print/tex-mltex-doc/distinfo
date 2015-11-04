@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/10/19 20:43:39 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:30 agc Exp $
 
 SHA1 (tex-mltex-30214/mltex.doc.tar.xz) = df6a71ccd6c24dd0ff141a7c7d01deaccd89b733
 RMD160 (tex-mltex-30214/mltex.doc.tar.xz) = 063e498132d1838407db36dec4dcd59f53364b3f
+SHA512 (tex-mltex-30214/mltex.doc.tar.xz) = a86992cf30b8209ce9c276263f2213708bb90690ccdee5d84e72ae5779286111c472c17c35184cb1a3dd9d468b7f21241d15ae5882678dd454a3d9162608a34e
 Size (tex-mltex-30214/mltex.doc.tar.xz) = 8684 bytes

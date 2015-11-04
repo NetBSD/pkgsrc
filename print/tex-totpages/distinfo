@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/16 10:30:19 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:53 agc Exp $
 
 SHA1 (tex-totpages-15878/totpages.tar.xz) = 81d72ca8d946c2b54125e3fa474c492a8a8aace0
 RMD160 (tex-totpages-15878/totpages.tar.xz) = e12fd99461b4d1db3510edb2ffca3536ef9e254d
+SHA512 (tex-totpages-15878/totpages.tar.xz) = a6986a29d45a9669168e05d7b3b478e31baeb01d5368b6e07d4f346e8d2e5a8661410b03cf8c9604605892d8e870a81b94b49e9da3076592899112d12ed2e6fe
 Size (tex-totpages-15878/totpages.tar.xz) = 3004 bytes

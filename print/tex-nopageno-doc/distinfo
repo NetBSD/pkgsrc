@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/05/17 05:11:33 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:32 agc Exp $
 
 SHA1 (tex-nopageno-18128/nopageno.doc.tar.xz) = 25d6be130bcb18477de7ce146f891b52bcd82fc9
 RMD160 (tex-nopageno-18128/nopageno.doc.tar.xz) = b8230f8011a78bd142cca4932d3aef561b5207a5
+SHA512 (tex-nopageno-18128/nopageno.doc.tar.xz) = 6c12bb8df9621d908b02801f20d351291c748ca5c86e6fa13f953d3925cb147a230488da366cf648eb9173bb099428fb27d37793a687806879aa629fdf246b01
 Size (tex-nopageno-18128/nopageno.doc.tar.xz) = 170376 bytes

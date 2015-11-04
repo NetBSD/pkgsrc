@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/04/21 22:13:54 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:01 agc Exp $
 
 SHA1 (tex-dashbox-23425/dashbox.doc.tar.xz) = b180fcfea3e8d8d4d2205f7dfc36bd40873dc6e1
 RMD160 (tex-dashbox-23425/dashbox.doc.tar.xz) = f3fb13826a361706d4fc88ace20a4bd5ef413811
+SHA512 (tex-dashbox-23425/dashbox.doc.tar.xz) = ccac1817aa15cdd756979f265e7c8bfe0fb880628d6aaae47b64c47ad58f57106715d5eee8db1fb628034292072e856e407a28e759dba64f2dc3b80dde2b26ac
 Size (tex-dashbox-23425/dashbox.doc.tar.xz) = 159404 bytes

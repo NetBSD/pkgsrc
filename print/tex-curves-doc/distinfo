@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/16 10:30:15 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:00 agc Exp $
 
 SHA1 (tex-curves-15878/curves.doc.tar.xz) = e30926851d3857e603c8b14235e934dfedfd9ad2
 RMD160 (tex-curves-15878/curves.doc.tar.xz) = 0a33c26ff045e3727b2390c567ee55a622768a9c
+SHA512 (tex-curves-15878/curves.doc.tar.xz) = a6d4eef96d1cd261328e50f1eb4b7f2c7f04884f9802707c61d88cd47e1adc984ead17eb837fadb225a4697824fd6222cb4cb6a9ff6e9a485713864bce0a1c5c
 Size (tex-curves-15878/curves.doc.tar.xz) = 134840 bytes

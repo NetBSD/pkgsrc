@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2009/04/12 02:44:07 minskim Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 01:01:40 agc Exp $
 
 SHA1 (tetex-texmf-3.0.tar.gz) = 1be97f57a26a6e9b72ebfd932e45914a959aff16
 RMD160 (tetex-texmf-3.0.tar.gz) = a1e87733fa3cbef04e39a690ed8549aeaaddb241
+SHA512 (tetex-texmf-3.0.tar.gz) = 5c1881a9ed165e48cc32c2e05b6a11542ee2355a514e2f7b4bbcbd5f79592352af5deb6483a734a51c65704ad1b93ca8365ec1352642c97cc0bebe8ed3e75dd3
 Size (tetex-texmf-3.0.tar.gz) = 91402377 bytes
