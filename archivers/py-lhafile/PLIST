@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2015/11/04 17:25:19 adam Exp $
+${PYSITELIB}/lhafile/__init__.py
+${PYSITELIB}/lhafile/__init__.pyc
+${PYSITELIB}/lhafile/__init__.pyo
+${PYSITELIB}/lhafile/lhafile.py
+${PYSITELIB}/lhafile/lhafile.pyc
+${PYSITELIB}/lhafile/lhafile.pyo
+${PYSITELIB}/lzhlib.so
