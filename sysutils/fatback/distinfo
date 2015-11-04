@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2015/01/18 19:53:27 wiedi Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 01:32:13 agc Exp $
 
 SHA1 (fatback-1.3.tar.gz) = 0c17a76f64b359ee67ea308e58b668c14c77c699
 RMD160 (fatback-1.3.tar.gz) = 4a8b29f00e51ea4856e41e94c30dca3e96712a40
+SHA512 (fatback-1.3.tar.gz) = be76a40eb981e3d33730811e846fc4fce6c6e4a7833ef37076d14da62e0741490b566bc17a4268f0861e004088493eb3e0d36771f4c7aa9bf7e765e5a0a65d82
 Size (fatback-1.3.tar.gz) = 190800 bytes
 SHA1 (patch-aa) = 07279c8918f127047c1c965d2b48b9f69d81ce83
 SHA1 (patch-ab) = 36fb419f55817375437e2548e6c99cb5b70bf0c5

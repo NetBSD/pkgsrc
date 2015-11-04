@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2015/01/15 17:58:16 rumko Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 01:32:18 agc Exp $
 
 SHA1 (kfilemetadata-4.14.3.tar.xz) = 6b106223b3d4ab9ba0516b8301e564af2416eaa9
 RMD160 (kfilemetadata-4.14.3.tar.xz) = 221b22cf55f0119326cc21645fb5e290506381df
+SHA512 (kfilemetadata-4.14.3.tar.xz) = d7321b7e1ad755c0dc267b236a33a011377ba309d94c1497c081edad82171452595ce113428048e455b8b71f3ea480e4e76e797e31a74edd24bcf42617c59acb
 Size (kfilemetadata-4.14.3.tar.xz) = 35908 bytes
 SHA1 (patch-src_extractors_ffmpegextractor.cpp) = 9578c637c2babb1e6c640aea12431b9621b0174c

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2015/03/05 21:29:20 sevan Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 01:32:11 agc Exp $
 
 SHA1 (scrub-2.5.2.tar.bz2) = 863e5894e6acb3f922cb25f58e260f9c59b55c14
 RMD160 (scrub-2.5.2.tar.bz2) = 852698810f401226608f6b1882191dc7bd2b47e4
+SHA512 (scrub-2.5.2.tar.bz2) = 23815831a356b3a7c6a75354134c49912dc97f9e54130acaa9ee8e80cf839e18238bf69cf6d5aaf79dbbc3dc4195ca78cb6f0d5aca11972726956040fcc424e7
 Size (scrub-2.5.2.tar.bz2) = 161468 bytes
 SHA1 (patch-configure.ac) = 9dcbaa212b2778331368b47eb54dd363a843b145
 SHA1 (patch-src_Makefile.am) = 4bdd6a41a6fcdc72120d5a1ebd8a17f9d90881d6

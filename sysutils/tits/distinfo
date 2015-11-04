@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.11 2015/04/26 14:38:10 mef Exp $
+$NetBSD: distinfo,v 1.12 2015/11/04 01:32:33 agc Exp $
 
 SHA1 (tits-1.3.0.tar.gz) = 66719b17ad2dd014f07b205e72a31e4510769cec
 RMD160 (tits-1.3.0.tar.gz) = de693560ed8b6cd37b103cef0b189afdf07e43c9
+SHA512 (tits-1.3.0.tar.gz) = 36c66ae4fcbb88b288b4092dd043ed5dc5ebcc017ed37b720cd859be7263526ea1851185797af07f88ef8315208b064ef8591f5ce1e1cea5225bd979efbbb295
 Size (tits-1.3.0.tar.gz) = 31811 bytes
 SHA1 (patch-aa) = 0538413b25c6f9ca158b5f7d86ff0ec97500b506

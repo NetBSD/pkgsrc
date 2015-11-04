@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2015/04/21 08:56:41 jperkin Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 01:32:41 agc Exp $
 
 SHA1 (xfce4-quicklauncher-plugin-1.9.4.tar.bz2) = ad2b7b344ddb611cee25ee130c1f2d4765072fa1
 RMD160 (xfce4-quicklauncher-plugin-1.9.4.tar.bz2) = c039d2244f08f99d4a764bd8ee38bc017a372923
+SHA512 (xfce4-quicklauncher-plugin-1.9.4.tar.bz2) = 11db64adbef5a04f25891132e798e77a713d5f68fcda9ec5349f975f56c4f352a2da8493d721f307d23e973c02802840c2feef444921da29f2b6e21a5c79a228
 Size (xfce4-quicklauncher-plugin-1.9.4.tar.bz2) = 282545 bytes
 SHA1 (patch-panel-plugin_Makefile.in) = ab3a25da936dc7303afe96730b59bf8d31439a95
