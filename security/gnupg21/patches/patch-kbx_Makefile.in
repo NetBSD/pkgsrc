@@ -1,15 +1,15 @@
-$NetBSD: patch-kbx_Makefile.in,v 1.1 2015/09/30 12:56:47 fhajny Exp $
+$NetBSD: patch-kbx_Makefile.in,v 1.2 2015/11/04 15:05:52 tnn Exp $
 
 Bring in libsocket, needed on SunOS.
 
---- kbx/Makefile.in.orig	2015-09-30 11:23:15.890769261 +0000
+--- kbx/Makefile.in.orig	2015-10-09 15:16:17.000000000 +0000
 +++ kbx/Makefile.in
-@@ -551,7 +551,7 @@ clean-binPROGRAMS:
+@@ -494,7 +494,7 @@ kbxutil_SOURCES = kbxutil.c $(common_sou
+ kbxutil_CFLAGS = $(AM_CFLAGS) -DKEYBOX_WITH_X509=1
+ kbxutil_LDADD = ../common/libcommon.a \
+                   $(KSBA_LIBS) $(LIBGCRYPT_LIBS) $(extra_libs) \
+-                  $(GPG_ERROR_LIBS) $(LIBINTL) $(LIBICONV) $(W32SOCKLIBS)
++                  $(GPG_ERROR_LIBS) $(LIBINTL) $(LIBICONV) $(W32SOCKLIBS) $(NETLIBS)
  
- kbxutil$(EXEEXT): $(kbxutil_OBJECTS) $(kbxutil_DEPENDENCIES) $(EXTRA_kbxutil_DEPENDENCIES) 
- 	@rm -f kbxutil$(EXEEXT)
--	$(AM_V_CCLD)$(LINK) $(kbxutil_OBJECTS) $(kbxutil_LDADD) $(LIBS)
-+	$(AM_V_CCLD)$(LINK) $(kbxutil_OBJECTS) $(kbxutil_LDADD) $(LIBS) $(NETLIBS)
+ all: all-am
  
- mostlyclean-compile:
- 	-rm -f *.$(OBJEXT)
