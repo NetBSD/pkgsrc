@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.504 2015/10/27 20:42:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.505 2015/11/04 14:07:27 fhajny Exp $
 
 COMMENT=	Databases
 
@@ -24,6 +24,10 @@ SUBDIR+=	dbfsak
 SUBDIR+=	deforaos-libdatabase
 SUBDIR+=	edb
 SUBDIR+=	elasticsearch
+SUBDIR+=	erlang-eredis
+SUBDIR+=	erlang-p1_mysql
+SUBDIR+=	erlang-p1_pgsql
+SUBDIR+=	erlang-sqlite3
 SUBDIR+=	freetds
 SUBDIR+=	gdbm
 SUBDIR+=	gdbm_compat
