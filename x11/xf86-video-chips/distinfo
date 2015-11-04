@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.8 2015/09/29 08:21:08 wiz Exp $
+$NetBSD: distinfo,v 1.9 2015/11/04 03:29:01 agc Exp $
 
 SHA1 (xf86-video-chips-1.2.6.tar.bz2) = b8312cd084ba6d5604a59c1f1469cf8fd612018a
 RMD160 (xf86-video-chips-1.2.6.tar.bz2) = b2196bd31d3dde2ee6c546d73faea128533a440a
+SHA512 (xf86-video-chips-1.2.6.tar.bz2) = 7844852fe514281f5613e6bc3254a207d6028663895228976edd77fc3b214e2fb344929eca238b632218f730ef30503ff14500b84289bc7ab3108888078e72f5
 Size (xf86-video-chips-1.2.6.tar.bz2) = 413528 bytes
 SHA1 (patch-configure) = 2a7d72260b5f1650e2aa6dc8c90cfc896f36ddb2

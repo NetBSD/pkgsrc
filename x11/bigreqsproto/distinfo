@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2012/06/03 18:36:16 wiz Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 03:28:26 agc Exp $
 
 SHA1 (bigreqsproto-1.1.2.tar.bz2) = ef1765eeb5e9e38d080225fe6a64ed7cd2984b46
 RMD160 (bigreqsproto-1.1.2.tar.bz2) = 3bff3c4c05a0061e492181d4e687469e590b3900
+SHA512 (bigreqsproto-1.1.2.tar.bz2) = 9c2f98191169f7bca69601fcea5ddcb45d50b3a6bae087a2d6ee2d83f9729155b23268ad4c46a3cc99162cdacf4c8e3d7f061e58d73237da96f23123444f67d8
 Size (bigreqsproto-1.1.2.tar.bz2) = 113218 bytes

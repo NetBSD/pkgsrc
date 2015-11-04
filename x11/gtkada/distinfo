@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.6 2013/07/09 10:14:53 marino Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 03:28:32 agc Exp $
 
 SHA1 (gtkada-2.24.4.0.tar.bz2) = fc67e1fc6ab2153fd78168f04ca4ec0baeef8a76
 RMD160 (gtkada-2.24.4.0.tar.bz2) = 6409d7238de96236ea2f362eb22a5f18ab112ddb
+SHA512 (gtkada-2.24.4.0.tar.bz2) = f6b4712d14b7568d5b533cbdfb3efb9b763779276fc95dd7a7eb3c4a6eb1ff868e69becd1cc312397380c0fea25eb125ba9022538509e0a2355a883b40157e65
 Size (gtkada-2.24.4.0.tar.bz2) = 2758322 bytes
 SHA1 (gtkada-rm-2.24.4.0.tar.bz2) = 5c896e574d8932b152ba242ef48e146a78cae113
 RMD160 (gtkada-rm-2.24.4.0.tar.bz2) = 98ae90a2952f7ca56a604b3fa7e502da24aed53a
+SHA512 (gtkada-rm-2.24.4.0.tar.bz2) = 02f072aa8bee37ec5b0c08905e926016024b6b8fcf5ee31f65e03e2ca5161b162f1c5450cba3bc3d99afe4e6c257651f2051e4a036afd898416beff8edc15bbd
 Size (gtkada-rm-2.24.4.0.tar.bz2) = 3009953 bytes
 SHA1 (patch-docs_Makefile.in) = b096a160fee7b54c31ec08e08e4fe9f024b452db
 SHA1 (patch-src_Makefile.common.in) = 85666832f97560bc1c8b2473e94d623ad0b5ec3f

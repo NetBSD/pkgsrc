@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.4 2015/01/17 11:16:59 wiedi Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 03:28:56 agc Exp $
 
 SHA1 (wxWidgets-3.0.2-libtool.diff.bz2) = d0235d8d9ec9c05deefecf8b15ea3d919e82f1d0
 RMD160 (wxWidgets-3.0.2-libtool.diff.bz2) = c144c8484fabd7dcdc669d0618bcbc4af7f07b4a
+SHA512 (wxWidgets-3.0.2-libtool.diff.bz2) = b664e457e68e9eaf65d2d2c2f2eb3956346a4472e177a82b42d05c64cb008d26bfdf495d5c16a7516ca90d4b4a4fdf71f5a5740eecf469ee2fe1f663fa685abb
 Size (wxWidgets-3.0.2-libtool.diff.bz2) = 202535 bytes
 SHA1 (wxWidgets-3.0.2.tar.bz2) = 6461eab4428c0a8b9e41781b8787510484dea800
 RMD160 (wxWidgets-3.0.2.tar.bz2) = a7f404c8a64ca68fa31e408bded4387c2722196b
+SHA512 (wxWidgets-3.0.2.tar.bz2) = 098f79863103f3be0b7e21e4f0f1b34ab5277ef0033c1ef1387a9c673b0e0b76a2d732b183fa11b22cfcbbfdb7a4884f243d12f65cd49baa1772852307b393c4
 Size (wxWidgets-3.0.2.tar.bz2) = 20172909 bytes
 SHA1 (patch-build_aclocal_bakefile.m4) = 7d3d6fb1e6a72e370dc6147010fa5bf2c46f1206
 SHA1 (patch-configure) = 897f13daa5bc8246902d7d864096d621f2e54928

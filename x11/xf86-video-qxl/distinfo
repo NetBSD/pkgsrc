@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/07/02 03:37:49 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 03:29:03 agc Exp $
 
 SHA1 (xf86-video-qxl-0.1.4.tar.bz2) = 14b8574a0066c15a627064d4986f0d82af8b993b
 RMD160 (xf86-video-qxl-0.1.4.tar.bz2) = cc0b335ae437089c2ca45a1ba0f83050b27ff46f
+SHA512 (xf86-video-qxl-0.1.4.tar.bz2) = 6ce518bb3ee9fce6066b492351c25a4a429edf7eff4ecbe9dc49fe5ee1f1d68586761624d2601f4bb6c4f4ddf7996f2fc8024707501b0de76ab6932bfe82c51d
 Size (xf86-video-qxl-0.1.4.tar.bz2) = 487656 bytes

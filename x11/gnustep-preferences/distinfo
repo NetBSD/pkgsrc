@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2013/03/24 16:42:10 joerg Exp $
+$NetBSD: distinfo,v 1.9 2015/11/04 03:28:31 agc Exp $
 
 SHA1 (Preferences-1.2.0.tar.bz2) = eb6b727c4f9eac2fd55237b3a3dc95e00bf748e9
 RMD160 (Preferences-1.2.0.tar.bz2) = b94629b8a8d44cbbcf7c0a8bff775d89b6865bed
+SHA512 (Preferences-1.2.0.tar.bz2) = 3202dc953128ae73eaf5f9eaac207981d751557d086f026a3a8737c9c70f22742fd05eb2f9e5e4ddafac7827133682eba93363c90dcd6ba2e5f61598ea4e31ca
 Size (Preferences-1.2.0.tar.bz2) = 52293 bytes
 SHA1 (patch-aa) = ebe63b030deac8865addddcee8e577dd05dae515
 SHA1 (patch-ab) = b2e59ffd762d4e519aa1385a391ece62e92c8530

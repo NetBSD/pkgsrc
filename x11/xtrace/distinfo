@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2015/09/27 11:21:41 tnn Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 03:29:13 agc Exp $
 
 SHA1 (xtrace_1.3.1.orig.tar.gz) = a28069a0cc7f364350cee5e972dac26c9be0cf6e
 RMD160 (xtrace_1.3.1.orig.tar.gz) = ee576ce4251ad28c298be19f753db004185af453
+SHA512 (xtrace_1.3.1.orig.tar.gz) = a05c2ba7ee5adf73d1dfb3fc6693456cf24347b136654efc6dd2a6a36fae130ee67f130ee3db693483e50f492b577cedf0dde7d4d64c3aea3d49be8f27d9f4f1
 Size (xtrace_1.3.1.orig.tar.gz) = 185308 bytes
 SHA1 (patch-Makefile.in) = 4a592285a74b19f9e8e747ca2c75d15c79a5e84e

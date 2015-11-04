@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.8 2015/05/08 11:43:12 wiz Exp $
+$NetBSD: distinfo,v 1.9 2015/11/04 03:29:02 agc Exp $
 
 SHA1 (xf86-video-neomagic-1.2.9.tar.bz2) = 63762e9144926c0071f86a5a3c2bc88c02db5a4b
 RMD160 (xf86-video-neomagic-1.2.9.tar.bz2) = 75ef28eb9dd43cb250dc419dbcbcc4c444e42965
+SHA512 (xf86-video-neomagic-1.2.9.tar.bz2) = fc1fbb220110ae5aa8909f586a3a22ed0d4570b1e9f7577da7014c5e129d8cf04a8ea754e0f7fae5fc5d8e5671593f235656ce991f74fa828fd2b8f9c5e171e6
 Size (xf86-video-neomagic-1.2.9.tar.bz2) = 340789 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/07/02 03:37:49 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 03:29:03 agc Exp $
 
 SHA1 (xf86-video-suncg6-1.1.2.tar.bz2) = f23daaa1bffb9ebe168c6c6fc101743becf113ac
 RMD160 (xf86-video-suncg6-1.1.2.tar.bz2) = 73cb3ba36f8106313c9d403f441352ea24ec5594
+SHA512 (xf86-video-suncg6-1.1.2.tar.bz2) = d094d951dfa452b0089210a7a4e30a4e32c7af6198a2c956a4c0820fc8d491d3d556539e060ccba59c91289adc4e57d8f06c193790280e064bef4dd98cd5ce05
 Size (xf86-video-suncg6-1.1.2.tar.bz2) = 286663 bytes

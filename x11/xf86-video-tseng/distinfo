@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2015/04/02 22:16:48 tnn Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 03:29:04 agc Exp $
 
 SHA1 (xf86-video-tseng-1.2.5.tar.bz2) = 95c35b28a19ab486f0bb7482df944d5b0076bdd5
 RMD160 (xf86-video-tseng-1.2.5.tar.bz2) = cefe7f92087debc308ab1a2a9530de036aaae782
+SHA512 (xf86-video-tseng-1.2.5.tar.bz2) = 6e0010b24d5b97ade00ef80fda5ea91bce3a9ce07881551e84ac552ba49336905b62f062c656c72ea3097a0bec1517ec5038aa5766f8424e5f81d67dc777480c
 Size (xf86-video-tseng-1.2.5.tar.bz2) = 330575 bytes
 SHA1 (patch-src_tseng__driver.c) = b4f6eabf1413efc09ac3d48098680aa50e99fb71
