@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2015/11/04 13:45:45 fhajny Exp $
+lib/erlang/lib/p1_cache_tab/ebin/cache_tab.beam
+lib/erlang/lib/p1_cache_tab/ebin/cache_tab_app.beam
+lib/erlang/lib/p1_cache_tab/ebin/cache_tab_sup.beam
+lib/erlang/lib/p1_cache_tab/ebin/p1_cache_tab.app
