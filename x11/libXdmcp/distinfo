@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/04/02 22:35:06 wiz Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 03:28:45 agc Exp $
 
 SHA1 (libXdmcp-1.1.2.tar.bz2) = 3c09eabb0617c275b5ab09fae021d279a4832cac
 RMD160 (libXdmcp-1.1.2.tar.bz2) = 4b3c314683617d46e855e519e846212283c1b574
+SHA512 (libXdmcp-1.1.2.tar.bz2) = f96005934b8bc752059106f8caf7df0574f5ef3c7a83bd797497b56ca556a7ff4dc1d28195e421259e82ea027b5c738094add3ec107a22544c9070725d8d46bb
 Size (libXdmcp-1.1.2.tar.bz2) = 331518 bytes

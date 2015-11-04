@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.23 2015/03/04 08:55:35 wiz Exp $
+$NetBSD: distinfo,v 1.24 2015/11/04 03:28:50 agc Exp $
 
 SHA1 (Tk-804.033.tar.gz) = 3a6c9eaab585218d01c06d12d4ea1b89a2ad1ffe
 RMD160 (Tk-804.033.tar.gz) = 478b4e3aa844e700641d25a10753498b9e1a7557
+SHA512 (Tk-804.033.tar.gz) = ea56be8246123bbc570d86a7d4f1610349cced91ad92ab740baca4c280822aac2e3acab6334bef60b10a70d5840f331fa40b507aba47a7929f44960df95f2aee
 Size (Tk-804.033.tar.gz) = 6924238 bytes
 SHA1 (patch-aa) = 7f4a97b0f97e474ce6f0d0cfeb9d49e8eb703917
 SHA1 (patch-ac) = 8918f9a9dfd884ed8d7b76b0615e266ffa392a44

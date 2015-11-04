@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/01/29 17:54:13 rxg Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 03:28:53 agc Exp $
 
 SHA1 (rox/wallpaper-2.0.tgz) = b03bfad26250c3fad64e2e3a6580a4dd6d08b73e
 RMD160 (rox/wallpaper-2.0.tgz) = b916e0a73d58ee147a02e4b57cfcae958bd099b7
+SHA512 (rox/wallpaper-2.0.tgz) = e7b84a0ceceba0af690e7b94916a04b6cf5ba7460b1d83d99c27542ebcdad4d58e9c818db2b80fb1a0845e48a6a4d60004243e229a414ae159d00684d6b62138
 Size (rox/wallpaper-2.0.tgz) = 21415 bytes

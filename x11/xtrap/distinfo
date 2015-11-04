@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/07/02 12:38:33 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 03:29:13 agc Exp $
 
 SHA1 (xtrap-1.0.2.tar.bz2) = 228735dcf4e059865900cee7f9656fc1a6b0a746
 RMD160 (xtrap-1.0.2.tar.bz2) = 2eee6e6da2d6ce22c1d0148b546eea85b073ec22
+SHA512 (xtrap-1.0.2.tar.bz2) = 5fe6e02dd36d2fb65e5b83cbdae81d89fcbf467c9fc3f943a013299c2fc03c76f125627294302acb808d8b53e3ec51a82ba288d793df6ba3e88e0c980c6b3f77
 Size (xtrap-1.0.2.tar.bz2) = 95471 bytes
