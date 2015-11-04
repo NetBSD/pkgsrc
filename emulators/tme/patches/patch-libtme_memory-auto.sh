@@ -1,12 +1,13 @@
-$NetBSD: patch-libtme_memory-auto.sh,v 1.2 2015/10/07 23:16:58 joerg Exp $
+$NetBSD: patch-libtme_memory-auto.sh,v 1.3 2015/11/04 03:33:39 dholland Exp $
 
 --- libtme/memory-auto.sh.orig	2010-02-15 15:16:28.000000000 +0000
 +++ libtme/memory-auto.sh
-@@ -96,6 +96,7 @@ EOF
+@@ -96,6 +96,8 @@ EOF
  if $header; then
      cat <<EOF
  
 +#include <limits.h>
++#include <stdint.h>
  /* macros: */
  
  /* the plain partial read internal macro: */
