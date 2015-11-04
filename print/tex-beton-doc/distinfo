@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/01/22 21:52:57 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:51 agc Exp $
 
 SHA1 (tex-beton-15878/beton.doc.tar.xz) = 03f354385a6ccc064284140e3be8f7baa041cfe4
 RMD160 (tex-beton-15878/beton.doc.tar.xz) = d88243b4601d058eab381d14c5665f55908577da
+SHA512 (tex-beton-15878/beton.doc.tar.xz) = d69cf8e922d467f2fabd84e0a0ed900929e47ef7ecb1c4b130ba915f68520265af1b82c0d1ad855821861fc17f2116104ecb6dfb6ce61c103fdf92a12b7d30dc
 Size (tex-beton-15878/beton.doc.tar.xz) = 59196 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/04 12:38:33 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:49 agc Exp $
 
 SHA1 (tex-babel-portuges-30284/babel-portuges.tar.xz) = 86a624e212801084ff8b1d304b2a15f7fdf973b3
 RMD160 (tex-babel-portuges-30284/babel-portuges.tar.xz) = 9b2a5072c25874851e84ba51904345c4f8e01135
+SHA512 (tex-babel-portuges-30284/babel-portuges.tar.xz) = 02b2e6fe9ee24e6066b8d60dd073ed6f29826b6363d3762a1a7a617fa9a0d5fda838b7460c088d439e60f72c36552acf20504fbbfaab3f0690b3dd4f19966fad
 Size (tex-babel-portuges-30284/babel-portuges.tar.xz) = 2692 bytes

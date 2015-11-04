@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/14 17:07:35 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:29 agc Exp $
 
 SHA1 (tex-microtype-de-24549/microtype-de.doc.tar.xz) = 140a913cb69ac269a2f00bd007a6660a9de63ea7
 RMD160 (tex-microtype-de-24549/microtype-de.doc.tar.xz) = a70d8125195b7d3f5a684140120242b3d475fc32
+SHA512 (tex-microtype-de-24549/microtype-de.doc.tar.xz) = 6ad48e4272b408e5d9ffbf6cf33885eac34c1a5ee3ed8e61526f7f2f231483f2cfbf002018acde26dae52354fa6e73bbc66b10d90c19ea7dca2b6ed3f791dca6
 Size (tex-microtype-de-24549/microtype-de.doc.tar.xz) = 1378208 bytes

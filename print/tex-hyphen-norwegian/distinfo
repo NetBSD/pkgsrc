@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2010/11/08 16:45:07 minskim Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 01:02:17 agc Exp $
 
 SHA1 (tex-hyphen-norwegian-20144/hyphen-norwegian.tar.xz) = 8f990d334edc5c042c7c4f31df47932e53184459
 RMD160 (tex-hyphen-norwegian-20144/hyphen-norwegian.tar.xz) = a284e0a0749e6c9ba7e8a33a9f20c3f08d68cbd0
+SHA512 (tex-hyphen-norwegian-20144/hyphen-norwegian.tar.xz) = 8b828ee3a16f8562283b714fb46c29303140d18c53ab48fecd2865e2bd513921897505598b48dadb1e9e4dd0b4f25863d8782d06fa0ca6784ef943ce47bf9806
 Size (tex-hyphen-norwegian-20144/hyphen-norwegian.tar.xz) = 380 bytes

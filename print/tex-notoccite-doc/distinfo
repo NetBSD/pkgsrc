@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/05/25 07:53:34 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:32 agc Exp $
 
 SHA1 (tex-notoccite-18129/notoccite.doc.tar.xz) = 4045bfa4ecc165e85d8634bff4f0934df983fc9c
 RMD160 (tex-notoccite-18129/notoccite.doc.tar.xz) = bc44048c7f7638f03a41958b942b05ebeb0c14b4
+SHA512 (tex-notoccite-18129/notoccite.doc.tar.xz) = d0fd58c6a0148ee2600cd0a2be70062a00b78775613ee8172451825e11364a9c5f172a5a12742efb01ee2b35241814c8502f7ece55a34558615f58b18d9acf54
 Size (tex-notoccite-18129/notoccite.doc.tar.xz) = 227148 bytes

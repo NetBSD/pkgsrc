@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/15 17:51:48 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:24 agc Exp $
 
 SHA1 (tex-latex-graphics-companion-29235/latex-graphics-companion.doc.tar.xz) = 2c632d6a99270a1f2dce2f6b3f1e86803eb555a6
 RMD160 (tex-latex-graphics-companion-29235/latex-graphics-companion.doc.tar.xz) = 5af04e7d5841e2c96f3828f56fe110137f2edcee
+SHA512 (tex-latex-graphics-companion-29235/latex-graphics-companion.doc.tar.xz) = 28733a699656e6d85ee5e93f3d6041f856957031c9dbf47802c83c7c3a5ac2675592507d47fcfbdd6b57deb526579b50f746ea8cf53deb09692782c1238f8893
 Size (tex-latex-graphics-companion-29235/latex-graphics-companion.doc.tar.xz) = 61484 bytes

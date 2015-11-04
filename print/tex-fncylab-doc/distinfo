@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/04/26 17:17:40 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:09 agc Exp $
 
 SHA1 (tex-fncylab-doc-1.0/fncylab.doc.tar.xz) = f86e2e008fc5b85c83d0386c329cd425f2e9cdba
 RMD160 (tex-fncylab-doc-1.0/fncylab.doc.tar.xz) = 855cec9c9ae4e55971fb8a9b77728984b366cdf0
+SHA512 (tex-fncylab-doc-1.0/fncylab.doc.tar.xz) = 9decdaf8f6d325cdf5b0e3312b397af052096eb46ce30575e247efa6398c2aa626dea6a7bb28a5508e121e7723bee69f46800d2c77e5e0cf36cc67fa9feb9a0d
 Size (tex-fncylab-doc-1.0/fncylab.doc.tar.xz) = 203096 bytes

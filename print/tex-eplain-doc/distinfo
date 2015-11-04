@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/31 06:45:32 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:05 agc Exp $
 
 SHA1 (tex-eplain-36217/eplain.doc.tar.xz) = e1ffe1a524d5662d6679ca99159c09aaed0b1175
 RMD160 (tex-eplain-36217/eplain.doc.tar.xz) = a7cb4c5c432327c5ef18611f2d9b89fb240b39b2
+SHA512 (tex-eplain-36217/eplain.doc.tar.xz) = 390e9b9646c072b206f0968661eaf838e75cee54d7389aa4011ea1db5484e90867c24e977cae09bb737fdce3343b0a6c499258f1edb5e01f194153db5ca8841e
 Size (tex-eplain-36217/eplain.doc.tar.xz) = 979872 bytes

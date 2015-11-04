@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/16 02:51:23 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:17 agc Exp $
 
 SHA1 (tex-hyphen-indic-25990/hyphen-indic.tar.xz) = 2f0675b545a50eb03394fdbb881713d9f2ff7783
 RMD160 (tex-hyphen-indic-25990/hyphen-indic.tar.xz) = 03cfd4568a9a92fc69be216e4d378db7dc26654e
+SHA512 (tex-hyphen-indic-25990/hyphen-indic.tar.xz) = 697a6bd66979c110386e226bd651e99aaf731099d769c8488afaa0a2520bf7801337b99504b17f6803f53fbef48f0b9307af447a1253f4e345f85fa233f21da6
 Size (tex-hyphen-indic-25990/hyphen-indic.tar.xz) = 572 bytes

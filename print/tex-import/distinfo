@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/16 10:30:16 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:20 agc Exp $
 
 SHA1 (tex-import-17361/import.tar.xz) = 9bfc0425557e7999db3907d2c5e32c397a56bedc
 RMD160 (tex-import-17361/import.tar.xz) = ec5561781542c816809bd4dede7adcf45256843e
+SHA512 (tex-import-17361/import.tar.xz) = 80d0cf0012c2ef4ac77ee0d02fc3e54bf41aa9e70674042ab2cc0a05f5bd59d6bfc4830b51d67dc4a75ad76b8890d38005c8124cee112675f71ca9b4f69bd5dd
 Size (tex-import-17361/import.tar.xz) = 2552 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/04 12:24:21 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:47 agc Exp $
 
 SHA1 (tex-babel-breton-30257/babel-breton.tar.xz) = 39ee3b7784f5dff6b6d34be2474c625373a5b4cc
 RMD160 (tex-babel-breton-30257/babel-breton.tar.xz) = 1974985a0e46b84c602495ba6abe27baf38302dd
+SHA512 (tex-babel-breton-30257/babel-breton.tar.xz) = 2231598d6dad67d7280021e98238f3eafed62739af5d0628ce0a4fe472897330f99701508a5756fc3cfe3a2a69641cd67cf6b1c150be95ec8ab260a1d3a9c8db
 Size (tex-babel-breton-30257/babel-breton.tar.xz) = 2736 bytes

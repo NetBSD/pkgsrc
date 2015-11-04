@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2014/12/14 13:47:49 mef Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 01:03:02 agc Exp $
 
 SHA1 (xpdf-arabic-2011-aug-15.tar.gz) = b3d1f6fa2299de0b6ee25ea73967502ea3a98228
 RMD160 (xpdf-arabic-2011-aug-15.tar.gz) = ac2fd3fa8dcae30029f3d28d037ba8ad58b947ca
+SHA512 (xpdf-arabic-2011-aug-15.tar.gz) = 1ddaee045c0c3576bda0ebf065021e66e1ac6673d6872aff8e8afb3bae33dd927d920d89761553bade040d20e4b60eb286131bdb2f2d75ec1e833b9a9ce58d3e
 Size (xpdf-arabic-2011-aug-15.tar.gz) = 1057 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/09/17 22:31:31 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:41 agc Exp $
 
 SHA1 (tex-romanneg-20087/romanneg.doc.tar.xz) = 8cc0823d5bbd19bd6d7548be5bf87ea81f260554
 RMD160 (tex-romanneg-20087/romanneg.doc.tar.xz) = d815c782b472f4eb0beafbc600d287e8a8635bda
+SHA512 (tex-romanneg-20087/romanneg.doc.tar.xz) = b68907e856103eb99e4ab2ee10035cecca8d5756bd269fb998053d54d2f8f31478045579175dc5d2b8253c4005497cb7498f895cd2f2e379367763fe313674be
 Size (tex-romanneg-20087/romanneg.doc.tar.xz) = 184160 bytes

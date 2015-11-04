@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/04 12:37:25 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:49 agc Exp $
 
 SHA1 (tex-babel-piedmontese-30282/babel-piedmontese.tar.xz) = b3226dc487e5e4d4cc51a247375652e5d09388fa
 RMD160 (tex-babel-piedmontese-30282/babel-piedmontese.tar.xz) = 58beed7c421be550ef8aa0b6d1e1b68699988598
+SHA512 (tex-babel-piedmontese-30282/babel-piedmontese.tar.xz) = 6f0604f094ca7e51d2c870e7e9e037077ec864b6c92c92b805cbf71f953c4cde340bb7b8ec5084be63743d68cda19f841c5e944ff1cd548ef5854695cfd92fe8
 Size (tex-babel-piedmontese-30282/babel-piedmontese.tar.xz) = 1784 bytes

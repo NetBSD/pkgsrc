@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.9 2015/10/11 08:44:01 adam Exp $
+$NetBSD: distinfo,v 1.10 2015/11/04 01:01:33 agc Exp $
 
 SHA1 (ghostscript-9.18.tar.bz2) = 388fea50a38e422a4c6ff27c184491bf5ecb96e1
 RMD160 (ghostscript-9.18.tar.bz2) = 2a05ef570b5ebcf79501fd3ee1fb552be4e9c3fe
+SHA512 (ghostscript-9.18.tar.bz2) = 1ea0911cbdd6861ddadf4d4ff3b0fa043885162a8a3ce730e3cec2402cc591c1c3abc31680c7444b7e5b59e56d0d567649ac7394dda94ab830fb197b4d277e1f
 Size (ghostscript-9.18.tar.bz2) = 29460941 bytes
 SHA1 (patch-af) = 5efab9b732ef24e234bc33e7212222f067a3602c
 SHA1 (patch-ah) = db74a482e22771414f223a97dd71df5215553d85

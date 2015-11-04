@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/15 17:51:50 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:34 agc Exp $
 
 SHA1 (tex-patgen2-tutorial-16490/patgen2-tutorial.doc.tar.xz) = 873e15e7b7d2954395541c1c0e1ac29c8ced8ba6
 RMD160 (tex-patgen2-tutorial-16490/patgen2-tutorial.doc.tar.xz) = 991eff1a66f7e27fc6b1d01a8d798cc557cdbc22
+SHA512 (tex-patgen2-tutorial-16490/patgen2-tutorial.doc.tar.xz) = 2054ef990393f103af6382f2fa3b85eeaf19a9a0d2440995c7a6eb538f0ae0625b685a1cf34345c1f37f293e56f9bb5a68e0f06f58ae7e3b2916f889bdebc3e7
 Size (tex-patgen2-tutorial-16490/patgen2-tutorial.doc.tar.xz) = 61632 bytes

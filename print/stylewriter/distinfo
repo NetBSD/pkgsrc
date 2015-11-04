@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2014/01/09 15:45:18 jperkin Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 01:01:40 agc Exp $
 
 SHA1 (stylewriter.tar.gz) = 8efbbe7510341584ac5170b178f8e6c50c0f6f91
 RMD160 (stylewriter.tar.gz) = 86484c2e8e357d891533c2d52c8e5f5ff64eb544
+SHA512 (stylewriter.tar.gz) = f437311a4af2b2276e17f0c3431f7b8b994175cbb706ef75e80ac83056e6c4bd642bb120d41ec6613ce183f51b838d9bdf9554239bb74ba6cb4926f6f5249460
 Size (stylewriter.tar.gz) = 30136 bytes
 SHA1 (patch-aa) = d8879e10a8f4ca831bbaa6af70c3fe5bf6fd0dba

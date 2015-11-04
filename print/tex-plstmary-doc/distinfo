@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 14:09:53 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:37 agc Exp $
 
 SHA1 (tex-plstmary-31088/plstmary.doc.tar.xz) = 1ea102c0e2b7cb94fbcdebd228fbc016f4619445
 RMD160 (tex-plstmary-31088/plstmary.doc.tar.xz) = 8dfc2b1230d6483f331aafc7cb073eb988b3a7d5
+SHA512 (tex-plstmary-31088/plstmary.doc.tar.xz) = e583b6ab42dea08eb1ce1e5fb7f03f4d57513d8b7e96efdbef639fc05ccce2ff9a35d56d8976984709071a16f63e1764570604e460513ab6c4e9ceeb06d35565
 Size (tex-plstmary-31088/plstmary.doc.tar.xz) = 152416 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/14 17:07:36 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:52 agc Exp $
 
 SHA1 (tex-tipa-de-22005/tipa-de.doc.tar.xz) = 892805d942e4bd48dc44e91bf944993364bc4030
 RMD160 (tex-tipa-de-22005/tipa-de.doc.tar.xz) = 93410c086ef697edf902a33a751ecabc26c834e5
+SHA512 (tex-tipa-de-22005/tipa-de.doc.tar.xz) = 63d1e272b15770227b61b955aa896bdfe4d3ee4d4ca3a5893e767ba2a1be63531c35ad5c3850d46e049ac089900e2ec1fd6326519a70687b9de399171b3028a3
 Size (tex-tipa-de-22005/tipa-de.doc.tar.xz) = 3676380 bytes

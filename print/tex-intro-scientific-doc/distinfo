@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/15 17:51:48 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:20 agc Exp $
 
 SHA1 (tex-intro-scientific-15878/intro-scientific.doc.tar.xz) = 8443bb94de0023969a4a1abaff3c51d6d1843bb9
 RMD160 (tex-intro-scientific-15878/intro-scientific.doc.tar.xz) = 5a1f402bf8ad8fd5e5d6c8ab78f3a13938e97981
+SHA512 (tex-intro-scientific-15878/intro-scientific.doc.tar.xz) = 8c66ec512e26b710c240360a7f79ccd4269ed9688eb06f82d462b8aad2460310edfc5877126cabb4dd1844028c38215323e67f71baa4e4996e1dbc42eb52b7d8
 Size (tex-intro-scientific-15878/intro-scientific.doc.tar.xz) = 274748 bytes

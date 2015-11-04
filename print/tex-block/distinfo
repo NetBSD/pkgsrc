@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/04/11 19:52:11 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:52 agc Exp $
 
 SHA1 (tex-block-2009/block.tar.xz) = 3add1bd30f4d13b60d730ab3cfee3949be083740
 RMD160 (tex-block-2009/block.tar.xz) = c32dbbf71a7bc9d668cb258e2907a61899891dba
+SHA512 (tex-block-2009/block.tar.xz) = 3ca43b95337fd7808a1381063c2c2a42e86f6a7ff76eb6c7bfb693b8986449dce353115fbfe080aeb8285fb41fab94cdc31819132e8acf1a8809e8fe9752c802
 Size (tex-block-2009/block.tar.xz) = 912 bytes

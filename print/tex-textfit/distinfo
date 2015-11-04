@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/16 10:30:19 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:51 agc Exp $
 
 SHA1 (tex-textfit-20591/textfit.tar.xz) = 281b7284adb153f3f754bf56cb80615805ddd0cc
 RMD160 (tex-textfit-20591/textfit.tar.xz) = dcc2c04b3cd617f41bc3e104a0dfeea949a56595
+SHA512 (tex-textfit-20591/textfit.tar.xz) = 434a7b91109b4172b9775c45a13c44d8c53d7591c35cd1ad47e9e5df544ecb2bebbc874ed8ba79e6ff069ba76b04ebef1e54eaefc3626b338cd4e6f0d2d26c78
 Size (tex-textfit-20591/textfit.tar.xz) = 2196 bytes

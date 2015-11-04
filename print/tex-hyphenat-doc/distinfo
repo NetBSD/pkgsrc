@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/02/07 00:42:20 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:19 agc Exp $
 
 SHA1 (tex-hyphenat-15878/hyphenat.doc.tar.xz) = 87124d74ca9c178759e0b047e662a7043e1f01aa
 RMD160 (tex-hyphenat-15878/hyphenat.doc.tar.xz) = 69659cd29154eddc2ac5d37b95ff2f0c4e17a68a
+SHA512 (tex-hyphenat-15878/hyphenat.doc.tar.xz) = 8ca7edf5d2747e84e27022f74e5f8b3b8725c315c5bd1dfc37383c13955fd0dbb0fcda20644319d59a58c6ddd022074fff965631493255c6b9af6b675243d708
 Size (tex-hyphenat-15878/hyphenat.doc.tar.xz) = 151800 bytes

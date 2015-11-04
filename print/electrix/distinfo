@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/01/03 13:34:14 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:32 agc Exp $
 
 SHA1 (electrix-0.2.0.tar.bz2) = d1473b1644c2c64ec67acd7bdaf98d7396bc3d99
 RMD160 (electrix-0.2.0.tar.bz2) = 36fa0377bd9bbd4e514eeaeeb951998849c8583c
+SHA512 (electrix-0.2.0.tar.bz2) = 5092b9126518bed3bc4f7925a273462b8f18e08535af8426a7f8db8b7ad56b3c28139657efa7133235b675e591ee54b140186552e58312885d2e703aaaf82380
 Size (electrix-0.2.0.tar.bz2) = 134220 bytes

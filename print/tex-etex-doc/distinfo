@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2013/11/18 18:21:14 minskim Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 01:02:06 agc Exp $
 
 SHA1 (tex-etex-31600/etex.doc.tar.xz) = bd9e528739ad60d8a9ce2d7bff8c29c18d45982b
 RMD160 (tex-etex-31600/etex.doc.tar.xz) = 62d3019039257b485d75dafd67cbf89bb674a88d
+SHA512 (tex-etex-31600/etex.doc.tar.xz) = 8e7336e891f9d1eb7b9799a6d4e66453095f45c5e390952b0ef50ac09b523c9c6f37fa6063aaee63c15d40f893ac763765492a9c6ed5017ae6acf65be98f7486
 Size (tex-etex-31600/etex.doc.tar.xz) = 189676 bytes

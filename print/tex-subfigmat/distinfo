@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/09/17 22:56:48 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:47 agc Exp $
 
 SHA1 (tex-subfigmat-20308/subfigmat.tar.xz) = f9330b748dfa88925657b51065ea1e2153053871
 RMD160 (tex-subfigmat-20308/subfigmat.tar.xz) = 244fff044942f596f61ba4b5ca64c3b6e4573454
+SHA512 (tex-subfigmat-20308/subfigmat.tar.xz) = 151c20d06fddde046320797396d2319c93deb35fcc311d862ad5abf40080a94cdd68eb9a598b1c3efb654acf096771c2037d937fa4ae89b19e2664e744d079e9
 Size (tex-subfigmat-20308/subfigmat.tar.xz) = 2584 bytes

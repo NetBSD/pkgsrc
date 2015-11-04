@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/04 12:25:29 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:47 agc Exp $
 
 SHA1 (tex-babel-catalan-30259/babel-catalan.tar.xz) = aad8d2752fa78b20421073cc1646e0de26e92e3f
 RMD160 (tex-babel-catalan-30259/babel-catalan.tar.xz) = 11d1b0c73f564e7291d297e6b174182cb238e04c
+SHA512 (tex-babel-catalan-30259/babel-catalan.tar.xz) = c732ae5d9a2a1992bab1e5e87187af01b2eda35415e10edc5ab30f3ac87b416fbc103440d74c258ef35e2d6c1cabca483691f56d3bd0bcaeb9275781dc7f01c4
 Size (tex-babel-catalan-30259/babel-catalan.tar.xz) = 3420 bytes

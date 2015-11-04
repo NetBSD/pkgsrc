@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/03/14 21:54:52 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:36 agc Exp $
 
 SHA1 (tex-picinpar-20374/picinpar.tar.xz) = b9041be73be4c1f17fa50ade32bb0ce7c31eda96
 RMD160 (tex-picinpar-20374/picinpar.tar.xz) = ffe0ea870be87443f35d8cb27863e15225aca778
+SHA512 (tex-picinpar-20374/picinpar.tar.xz) = 0a069afc39f5af0aeb1266f94db43aae4718ce5b26db021c1fe5de27ce54204350fe76dab77be5d393421a6b4d189f3205dd5870903b219b747fe374b90637e4
 Size (tex-picinpar-20374/picinpar.tar.xz) = 5200 bytes

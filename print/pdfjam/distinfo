@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2012/03/15 01:53:45 markd Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 01:01:37 agc Exp $
 
 SHA1 (pdfjam_208.tgz) = 981b504ef96369a203f85fefb42d4ea0d1194493
 RMD160 (pdfjam_208.tgz) = 98452c703d3d799e8562763d2d828aa64e63b893
+SHA512 (pdfjam_208.tgz) = 728c8d304c6d2af773980d20ef4a4be6e0a5dad286ad8cd00be9b1687f5024e00032a750c10c74dcd24431f081368d02b76f03cc5bb1c8725a060cd70be0fd8c
 Size (pdfjam_208.tgz) = 180725 bytes

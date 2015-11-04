@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/28 12:02:49 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:33 agc Exp $
 
 SHA1 (tex-ordinalpt-15878/ordinalpt.tar.xz) = 4168736f295dea28f81b44e3902411952a3f8472
 RMD160 (tex-ordinalpt-15878/ordinalpt.tar.xz) = c9204f54a8d2e2753a66baa38d07e7b27f8deb38
+SHA512 (tex-ordinalpt-15878/ordinalpt.tar.xz) = 98a422ec2ffba0f0fbd2884335ec8635d9c14379f7a4119fe8afa8f99efd5f9e0f6e83adc967c74bb7226b95a66e3f4d5fa68d3324461ae0ec9fa1e6e0398a57
 Size (tex-ordinalpt-15878/ordinalpt.tar.xz) = 1888 bytes

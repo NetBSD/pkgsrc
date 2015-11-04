@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/04 12:25:59 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:47 agc Exp $
 
 SHA1 (tex-babel-croatian-35198/babel-croatian.tar.xz) = ba12ceb85e9024c5a461d6db3fee5600dfa72e63
 RMD160 (tex-babel-croatian-35198/babel-croatian.tar.xz) = 5e5197661ecaccafbbca66412d0d2d681cc29ef8
+SHA512 (tex-babel-croatian-35198/babel-croatian.tar.xz) = 8a81c6b52a3045e258fd3e3600f5f517fd61395d17f90dccd406a246eaeea778493ea1fd70c200335a2d21fecd3633821779ba1cf7b68faba55c5c849dfb2807
 Size (tex-babel-croatian-35198/babel-croatian.tar.xz) = 2152 bytes

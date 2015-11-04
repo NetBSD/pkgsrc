@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/02/15 11:22:05 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:45 agc Exp $
 
 SHA1 (tex-skaknew-20031/skaknew.tar.xz) = 00f966b71808f455545d98cc985848fca53e5a7d
 RMD160 (tex-skaknew-20031/skaknew.tar.xz) = ab377b6f21eab5f534c4b661084f87c2d10e2d2b
+SHA512 (tex-skaknew-20031/skaknew.tar.xz) = 8cfa3e22283aa3a352ba09d82e5cc4902471cbe5340cc380dbc8ebb5dcd73756c6f8697a23eeeec7686b62811efae344252660aaf9f3e34e0679b5bc15d3c7eb
 Size (tex-skaknew-20031/skaknew.tar.xz) = 159996 bytes

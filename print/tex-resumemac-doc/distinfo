@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 14:09:53 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:41 agc Exp $
 
 SHA1 (tex-resumemac-15878/resumemac.doc.tar.xz) = c4c5580a51d392a57aae036b85ae7d50c6aec149
 RMD160 (tex-resumemac-15878/resumemac.doc.tar.xz) = 601cce76738e60d82645a5a29d40e8182a5c152a
+SHA512 (tex-resumemac-15878/resumemac.doc.tar.xz) = c81518e518d1e3500d9caa6c268669f52cb15b69e00beb48332de973e44899f9bd09722cd6520c6d66b76171cbbb5b790929936dc32f86ad046f0f2b39ce1509
 Size (tex-resumemac-15878/resumemac.doc.tar.xz) = 1680 bytes

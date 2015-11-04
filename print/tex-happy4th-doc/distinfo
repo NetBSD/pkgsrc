@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/15 17:51:48 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:13 agc Exp $
 
 SHA1 (tex-happy4th-25020/happy4th.doc.tar.xz) = 883f3b0ea7dbe6cc97ad6db0ff1bc60e70f449fd
 RMD160 (tex-happy4th-25020/happy4th.doc.tar.xz) = 60d9e9bbbc02e73f59b66ac40d433c91d250d4ee
+SHA512 (tex-happy4th-25020/happy4th.doc.tar.xz) = 55e96e803a61913f47e6fabfb278c3cd7d420e32d2d864aa771603c7369fa0866f25f46d31d4f8c4c724c4966e80063f2204f606583a8f7fd1623169194f0db9
 Size (tex-happy4th-25020/happy4th.doc.tar.xz) = 52364 bytes

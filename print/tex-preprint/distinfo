@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/04/25 04:21:21 markd Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 01:02:38 agc Exp $
 
 SHA1 (tex-preprint-30447/preprint.tar.xz) = 8dd0887eced003031fcc5d275a1a82da91812709
 RMD160 (tex-preprint-30447/preprint.tar.xz) = 3f021619430532a2279a52f932ebdf61e63cd844
+SHA512 (tex-preprint-30447/preprint.tar.xz) = c02e79147e0f9b049e2edd41dfe2c0cd71a09ea8ad290caa11ae24b5b3b2d9dc99582dd8b4d4e0397eeee44e738d7e77596911fe61cceb4e534182f80087c82d
 Size (tex-preprint-30447/preprint.tar.xz) = 7052 bytes

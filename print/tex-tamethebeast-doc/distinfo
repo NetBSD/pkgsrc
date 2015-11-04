@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/15 17:51:50 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:49 agc Exp $
 
 SHA1 (tex-tamethebeast-15878/tamethebeast.doc.tar.xz) = dd35bd6e4d084327251fb94509d17d3a7d59b3f2
 RMD160 (tex-tamethebeast-15878/tamethebeast.doc.tar.xz) = 4e5428a43aa006602ad010e21f3ffb9144f0b18a
+SHA512 (tex-tamethebeast-15878/tamethebeast.doc.tar.xz) = b41fa1fd79f308220bd1904a7bfe9dd373d319133b16c8175bb3c757ff087c3a10bc62a80e25bbba1b7ba31e97b0425eea7f8910b94960d5d4883f70430d34de
 Size (tex-tamethebeast-15878/tamethebeast.doc.tar.xz) = 811128 bytes

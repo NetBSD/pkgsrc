@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/15 17:51:51 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:52 agc Exp $
 
 SHA1 (tex-titlepages-19457/titlepages.doc.tar.xz) = 18ee8b24880536f702a890190cec88402775ca0a
 RMD160 (tex-titlepages-19457/titlepages.doc.tar.xz) = c39d0c7c464f01c443a4a57f6c50e9758f3acc39
+SHA512 (tex-titlepages-19457/titlepages.doc.tar.xz) = 92c861c1bd785062a53740a9a97e4d6727e0925d53e073373712e1e0941ae38eb07541f5af8bfc679a94d2a98ba75e1c5961fde3db3cb31759724aee472097aa
 Size (tex-titlepages-19457/titlepages.doc.tar.xz) = 887320 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/16 10:30:15 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:00 agc Exp $
 
 SHA1 (tex-custom-bib-24729/custom-bib.doc.tar.xz) = ba99ead5815fc8e2f1dbc2f28026693288fac49f
 RMD160 (tex-custom-bib-24729/custom-bib.doc.tar.xz) = d84684360415e50f9d42c2eff59616661c9d9ee3
+SHA512 (tex-custom-bib-24729/custom-bib.doc.tar.xz) = 37ba05b4cc925103ba2de7829ef84c97d60ddf51a80d1bfe6f2c8aac8b498997a47e5aad5e0bbf9993913cdd85b7177a9c2909fb4cc82e4655e06946eddd4261
 Size (tex-custom-bib-24729/custom-bib.doc.tar.xz) = 667864 bytes

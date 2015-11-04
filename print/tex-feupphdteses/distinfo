@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/28 12:02:49 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:08 agc Exp $
 
 SHA1 (tex-feupphdteses-30962/feupphdteses.tar.xz) = 134e26e7d0180d7cd4fbb1251cc4975252947846
 RMD160 (tex-feupphdteses-30962/feupphdteses.tar.xz) = cd6029e9999031f32e3af6411243d091584ced29
+SHA512 (tex-feupphdteses-30962/feupphdteses.tar.xz) = 51d525511b0195e18eee082c75036ddbcbabfd8676110bc72dbcb1c7b54db22b761488c40b75e34ddda26e6fc5581bb75349743247b083daa309ff3ae3a4dbf3
 Size (tex-feupphdteses-30962/feupphdteses.tar.xz) = 6300 bytes

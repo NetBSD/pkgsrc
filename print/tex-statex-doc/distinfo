@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/09/17 22:51:16 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:46 agc Exp $
 
 SHA1 (tex-statex-20306/statex.doc.tar.xz) = b4a943470b0ed4adf9edd7d19f65cbece0d60037
 RMD160 (tex-statex-20306/statex.doc.tar.xz) = c086b629b8709cc7b27d69bb9cb71213e4770def
+SHA512 (tex-statex-20306/statex.doc.tar.xz) = ce1f239dbbb2023dd42347ffdbd3467562126df56bc05911fa6ad4fa253c4e8ba7d4cc58953030c3ea0e8edcce92136b103bf0de6087317b186097a2cea7ce9c
 Size (tex-statex-20306/statex.doc.tar.xz) = 177208 bytes

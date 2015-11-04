@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/15 17:51:48 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:24 agc Exp $
 
 SHA1 (tex-latex-brochure-28916/latex-brochure.doc.tar.xz) = 44d536df886abb04f3d20188038f5c529d827e4f
 RMD160 (tex-latex-brochure-28916/latex-brochure.doc.tar.xz) = 63fb353e8c9f44ee2383d6ad46ca5144c8e93211
+SHA512 (tex-latex-brochure-28916/latex-brochure.doc.tar.xz) = 3ce1d6c5c33b28158e61204a094184db90dd170616622239ef36c3c13e9c2a6cea61c1b0dc75ad86c7a12a8f4dea434ddee0733c8be86b9ae8e15c4e9e4315fe
 Size (tex-latex-brochure-28916/latex-brochure.doc.tar.xz) = 6199988 bytes

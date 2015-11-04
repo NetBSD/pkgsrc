@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/04/04 15:20:20 jlam Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:39 agc Exp $
 
 SHA1 (pdf-writer-1.1.8.gem) = 892f108346fcc1de58bc8efc33230452f7199fb7
 RMD160 (pdf-writer-1.1.8.gem) = fac34215baacc7be2c02f48b0fe6f8ebc1b31e5c
+SHA512 (pdf-writer-1.1.8.gem) = 6db4808a270107c3ac65f4ff0e35386ad8a78e0fefa5593ae5dfd7b540b534965b681b259d8ce57e54f3db855327cae495e7cb10cb437b55d0a9a3743271fc92
 Size (pdf-writer-1.1.8.gem) = 358912 bytes

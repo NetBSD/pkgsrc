@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/15 17:51:47 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:45 agc Exp $
 
 SHA1 (tex-around-the-bend-15878/around-the-bend.doc.tar.xz) = 5454fc5d100758239a345ea1114d47042a154998
 RMD160 (tex-around-the-bend-15878/around-the-bend.doc.tar.xz) = fe7c6d563dcc8150ae159abf1aff452af620208e
+SHA512 (tex-around-the-bend-15878/around-the-bend.doc.tar.xz) = 526a66ecf3bf0ff9c38c093006ac28c135c02b2d25d2fa7c593b3810072fb62b282dd91b8a4f775a0a60fe4cce53969d4d09740cf28d809478a9dc51d03d75a6
 Size (tex-around-the-bend-15878/around-the-bend.doc.tar.xz) = 450492 bytes

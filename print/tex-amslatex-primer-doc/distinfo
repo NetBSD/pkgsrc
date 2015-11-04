@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/15 17:51:47 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:44 agc Exp $
 
 SHA1 (tex-amslatex-primer-28980/amslatex-primer.doc.tar.xz) = d3f1c8a03b9f07f93dcb6005f7d3534d97e0886f
 RMD160 (tex-amslatex-primer-28980/amslatex-primer.doc.tar.xz) = 95ad74d35f60a935f70249f5abeca809f63c563d
+SHA512 (tex-amslatex-primer-28980/amslatex-primer.doc.tar.xz) = b835a8a3c5e5c1535803dea9ff5e1f0d2c27537e269770468d70903dfa07e5f523591878bd6098e3632772b1ec298848e35911e47151cd4c73ff3859d883d694
 Size (tex-amslatex-primer-28980/amslatex-primer.doc.tar.xz) = 566748 bytes

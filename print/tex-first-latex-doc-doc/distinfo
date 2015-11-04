@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/15 17:51:48 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:08 agc Exp $
 
 SHA1 (tex-first-latex-doc-15878/first-latex-doc.doc.tar.xz) = 35384c5256f2be734a767b5d379c429621c6f6f9
 RMD160 (tex-first-latex-doc-15878/first-latex-doc.doc.tar.xz) = f113de9e7fc5148aa160aeed7f3046158c6f5931
+SHA512 (tex-first-latex-doc-15878/first-latex-doc.doc.tar.xz) = 64d700efd1a8d34ebe8340757a8a70662ed99adc4482c9f68abee638848cdf909b0dc7a1d21dd916bd544d76f547d9aa712e2b202cbc07eb4f9efde4171c3a09
 Size (tex-first-latex-doc-15878/first-latex-doc.doc.tar.xz) = 503812 bytes

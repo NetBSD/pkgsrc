@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/15 17:51:48 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:23 agc Exp $
 
 SHA1 (tex-l2tabu-english-15878/l2tabu-english.doc.tar.xz) = 6eff21cf6e145736eb2b085ce75834c03559ec13
 RMD160 (tex-l2tabu-english-15878/l2tabu-english.doc.tar.xz) = d60f57fdf5795a613e55cf78818853f5555fde53
+SHA512 (tex-l2tabu-english-15878/l2tabu-english.doc.tar.xz) = a3d438c302675a332e03bb0b063f3ce7cc622e4445db0cc1c22b5216d29c2d8b567f2bfe2b12c3fdcb1a150f9a4f20add1388b8bf60b22854c0c23dbbc22b70f
 Size (tex-l2tabu-english-15878/l2tabu-english.doc.tar.xz) = 266556 bytes

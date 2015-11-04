@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2010/11/08 16:45:24 minskim Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 01:02:18 agc Exp $
 
 SHA1 (tex-hyphen-serbian-20144/hyphen-serbian.tar.xz) = d30d737a665c888756011ba303e1400dbf172866
 RMD160 (tex-hyphen-serbian-20144/hyphen-serbian.tar.xz) = 975588574e4eee1eb35b1ae51099e9707d9cec88
+SHA512 (tex-hyphen-serbian-20144/hyphen-serbian.tar.xz) = eca2111a45e869b2beb47fbdfddcafdfb7b4b00dab0f34270dfecff5f89283f7c68acbca5b9f3980a9321d87fea83d56266d357bff599e01726b95fe8a8a6651
 Size (tex-hyphen-serbian-20144/hyphen-serbian.tar.xz) = 540 bytes

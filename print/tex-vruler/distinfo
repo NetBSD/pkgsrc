@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2011/04/25 22:41:36 minskim Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 01:02:58 agc Exp $
 
 SHA1 (tex-vruler-21598/vruler.tar.xz) = a9b34380d835037eaf0383dd36bbde6e490eeef2
 RMD160 (tex-vruler-21598/vruler.tar.xz) = 170f084a87471f771e2f14cdd581c1ee57828292
+SHA512 (tex-vruler-21598/vruler.tar.xz) = b2f31e15fc16751287df45edc57d48f71e531d80e21d2988aeb6a55da52c1bab96db0f83da2571c0dae184e5bac2d639fbea0f795ec8d55b7357af6b6143480a
 Size (tex-vruler-21598/vruler.tar.xz) = 5980 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/01/22 22:06:36 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:13 agc Exp $
 
 SHA1 (tex-here-16135/here.doc.tar.xz) = 14da02c0b104202d9c3012ec362a3a3cb40b99e2
 RMD160 (tex-here-16135/here.doc.tar.xz) = 41b8e83647fecd9715d20faa3ae48ecad4fdbb53
+SHA512 (tex-here-16135/here.doc.tar.xz) = 68c2aa633b1634dc0f0c938630dc94fd703d31f40b6f196394309642524ac097e36e0af420605b49e437cfcdbceac4ed276e3bdf2c3d8828d79aa5c16625e880
 Size (tex-here-16135/here.doc.tar.xz) = 600 bytes

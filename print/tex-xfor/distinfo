@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/04/09 22:00:21 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:03:00 agc Exp $
 
 SHA1 (tex-xfor-1.05/xfor.tar.xz) = 316ec3e89694c4bd59ba117ab375eaa39f3a5fe2
 RMD160 (tex-xfor-1.05/xfor.tar.xz) = 019acef76948fa685d2f7fccfa1b0fb8420b4dd6
+SHA512 (tex-xfor-1.05/xfor.tar.xz) = f8b2046250abcbaf948ea275496da02d181b2c772a755a2bfdcc3796353b485ac4d1e7b1b49a5bbbc35b622d6c6514d775deeacbdd048ac30985310d78edbc2e
 Size (tex-xfor-1.05/xfor.tar.xz) = 1708 bytes

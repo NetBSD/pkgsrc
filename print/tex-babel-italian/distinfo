@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/04 12:34:22 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:48 agc Exp $
 
 SHA1 (tex-babel-italian-36645/babel-italian.tar.xz) = d399ee7370da9df5679c8b223477ecb20c355e5b
 RMD160 (tex-babel-italian-36645/babel-italian.tar.xz) = 99bb0a149c0cc4033e9eb9dccd7a966726aac551
+SHA512 (tex-babel-italian-36645/babel-italian.tar.xz) = a18ac309cf0cc54051a868d17b38cf8608c675bd9942a3b0d5b0063c07c7915b2a96cf2cc8b408f6c71621ac7d9d578f952261c7b2cc800430c1f62dc4272855
 Size (tex-babel-italian-36645/babel-italian.tar.xz) = 3820 bytes

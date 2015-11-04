@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.11 2015/06/14 12:50:04 markd Exp $
+$NetBSD: distinfo,v 1.12 2015/11/04 01:02:27 agc Exp $
 
 SHA1 (tex-luatex-37242/luatex.doc.tar.xz) = 95f0a19e078c826df47d0ba60f936243260301aa
 RMD160 (tex-luatex-37242/luatex.doc.tar.xz) = 90d153f207420354555b1fd5098036a868f9f8d6
+SHA512 (tex-luatex-37242/luatex.doc.tar.xz) = f808180be34ada302035ee71e355b0e4f46d2719ad3857e0d1847db1c1dc8d830c6a3d165be4f11b69f606f5f80009aaa5fca5e0563900e00d14f94726853672
 Size (tex-luatex-37242/luatex.doc.tar.xz) = 955048 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/16 10:30:18 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:42 agc Exp $
 
 SHA1 (tex-scale-15878/scale.tar.xz) = 34e91e4f20b448bb01e15d9d5cc68989592005dd
 RMD160 (tex-scale-15878/scale.tar.xz) = a1ba0f609d9aa2630091fb489c89551583f6b5ee
+SHA512 (tex-scale-15878/scale.tar.xz) = 64e36d6950995c4b614a1c05eceafc658d2913ab674c83516bd16bb66b65ff4060b02235fcc2818a49df06fa9cab24c1a58f5d1fe4fdf97e1f8046ae5916298a
 Size (tex-scale-15878/scale.tar.xz) = 1824 bytes

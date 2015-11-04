@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 14:09:52 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:10 agc Exp $
 
 SHA1 (tex-font-change-36535/font-change.doc.tar.xz) = 44e7baf19c2c00c8b12c9db2e1c3e5b7ed7b6b87
 RMD160 (tex-font-change-36535/font-change.doc.tar.xz) = c3b125b4193c2f9ea780afe5babb3ae5e5ab3391
+SHA512 (tex-font-change-36535/font-change.doc.tar.xz) = 031e61479b2ff9fb7029dd2075f3ba62742cf40fb53614cd16ce6b8478f19766c7dfcd63622ea30d2795a3006231d34899dbb4ccd1c345913a75663f22bb3dce
 Size (tex-font-change-36535/font-change.doc.tar.xz) = 847976 bytes

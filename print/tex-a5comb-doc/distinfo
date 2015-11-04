@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/04/10 07:35:52 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:41 agc Exp $
 
 SHA1 (tex-a5comb-doc-4/a5comb.doc.tar.xz) = 31891bd9717d01c117990a0c3bba06aa93e22301
 RMD160 (tex-a5comb-doc-4/a5comb.doc.tar.xz) = c1bc43476b4e74cff7552dc10ffade25d8ad06f4
+SHA512 (tex-a5comb-doc-4/a5comb.doc.tar.xz) = 723ddbcd024846678ead29407e84e563605ca4593942c082a846b4644b622a3f965b61277239128665245fe73370335c699e19c614fa51547bbbce2074a2b40a
 Size (tex-a5comb-doc-4/a5comb.doc.tar.xz) = 91652 bytes

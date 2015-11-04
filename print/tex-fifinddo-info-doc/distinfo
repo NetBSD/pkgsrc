@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/14 17:07:34 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:08 agc Exp $
 
 SHA1 (tex-fifinddo-info-29349/fifinddo-info.doc.tar.xz) = 36aeb9e37ef806d3225a9f524d0fc39f9fb10cfc
 RMD160 (tex-fifinddo-info-29349/fifinddo-info.doc.tar.xz) = 1441c1d135744b7a050f1c9489104c7675db0ce6
+SHA512 (tex-fifinddo-info-29349/fifinddo-info.doc.tar.xz) = 4c522d172b3db536128d4b7dfaada390897b9e9c47bb7edb64238ee8acdff4e4c49da7aeadbff95d25812622ddc45010256e1f6fba0536417f6aa1018b036058
 Size (tex-fifinddo-info-29349/fifinddo-info.doc.tar.xz) = 257196 bytes

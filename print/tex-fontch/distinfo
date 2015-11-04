@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/06 09:20:42 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:10 agc Exp $
 
 SHA1 (tex-fontch-17859/fontch.tar.xz) = 012a22b3cda080a80c4565769a87644ec1c7007f
 RMD160 (tex-fontch-17859/fontch.tar.xz) = e615ed0a9f6f04ae7ded4630013fd7c294f60840
+SHA512 (tex-fontch-17859/fontch.tar.xz) = 7743b6aa7df3edbf6375eca5e365f938750d76ad83eb9423af8178edcce0273cfdf87765e1421d9796b5b78a60799a61a10e634cd4a249e8ee792a3ef61af51e
 Size (tex-fontch-17859/fontch.tar.xz) = 15392 bytes

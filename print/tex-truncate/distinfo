@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/09/24 16:23:36 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:54 agc Exp $
 
 SHA1 (tex-truncate-18921/truncate.tar.xz) = 359182246596f97d2dd565a8e829a2bb11695a5f
 RMD160 (tex-truncate-18921/truncate.tar.xz) = ba2a952effd8d4118c40a529411715978f7998a9
+SHA512 (tex-truncate-18921/truncate.tar.xz) = 53e658873ceb60874c58ab4cfa54b2ab944fc393ed7b1fad8df0c8cbd1c87b1a95e9604a990d26ef312851112707667b761f9ae2f65ed76cea7f2b789c48c83c
 Size (tex-truncate-18921/truncate.tar.xz) = 2996 bytes

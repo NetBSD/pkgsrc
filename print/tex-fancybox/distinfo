@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/09/10 20:06:58 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:07 agc Exp $
 
 SHA1 (tex-fancybox-18304/fancybox.tar.xz) = 7484c0cd19760dd4a1ce1ac40af95836e3f4bf80
 RMD160 (tex-fancybox-18304/fancybox.tar.xz) = 5f9cce67abd51f790a74b3948402da7110920b6a
+SHA512 (tex-fancybox-18304/fancybox.tar.xz) = 22d0f830c702e06beb8af0948bd49d30fc32d15aec45d9c4d587fc0592cea728eee05dedd434f8d91926af6dd68e38d0a8b288f3bd9875c1e2733170ffcf65c9
 Size (tex-fancybox-18304/fancybox.tar.xz) = 7692 bytes

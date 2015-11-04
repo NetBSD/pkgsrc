@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/04 12:40:39 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:49 agc Exp $
 
 SHA1 (tex-babel-samin-30288/babel-samin.tar.xz) = 9bd853c3544a363e20d8f31bbf0082feeb480c2f
 RMD160 (tex-babel-samin-30288/babel-samin.tar.xz) = 29d3f5ea955721b6ecbfc59c382cd49237d70046
+SHA512 (tex-babel-samin-30288/babel-samin.tar.xz) = 1fde5eb51d8521ca6f115f973b6fdd23cadcc80b338f08f1d46529465bfe79f57ecc95aa6bba10dac55e8c79fbbbeb65c93a877cdb405615b83307445ac3157c
 Size (tex-babel-samin-30288/babel-samin.tar.xz) = 2320 bytes

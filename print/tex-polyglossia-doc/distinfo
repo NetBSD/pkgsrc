@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/08/02 02:02:15 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:38 agc Exp $
 
 SHA1 (tex-polyglossia-37879/polyglossia.doc.tar.xz) = 1f276394d16e3af5851132a8fed80507318ee23b
 RMD160 (tex-polyglossia-37879/polyglossia.doc.tar.xz) = 25f7c7e963b01fedf132cbc29d1f0c6d2be2d63f
+SHA512 (tex-polyglossia-37879/polyglossia.doc.tar.xz) = e442206d88cb357c5ec29f62ffdee618d45e4e8718f76050d4e8301c7673b4856f5d89119c12527e3c162c11e58eb0bda369202eec562e591b69547f8722249c
 Size (tex-polyglossia-37879/polyglossia.doc.tar.xz) = 468860 bytes

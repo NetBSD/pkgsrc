@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/04/27 07:18:18 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:40 agc Exp $
 
 SHA1 (tex-rcs-15878/rcs.tar.xz) = e8274192b8674c498220c3c07549c67ca70a4c22
 RMD160 (tex-rcs-15878/rcs.tar.xz) = b611dd7c5316365009d2a11dca0816a934a8b7fb
+SHA512 (tex-rcs-15878/rcs.tar.xz) = d46877af81f6cc017c7f3598725917a51643583d5e5f0927b3cd52c3cdceea0ddd85d297eaa2a829f3d1d50a6d23ce58d85f842be4f863ce3c6398b9af096881
 Size (tex-rcs-15878/rcs.tar.xz) = 12488 bytes

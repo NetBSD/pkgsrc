@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2010/11/08 16:44:52 minskim Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 01:02:17 agc Exp $
 
 SHA1 (tex-hyphen-irish-20144/hyphen-irish.tar.xz) = 32d22bba6ed9902722239bcfbc9fad349649b37a
 RMD160 (tex-hyphen-irish-20144/hyphen-irish.tar.xz) = 308adbbd12972d413f975ff1c71dfe698659aece
+SHA512 (tex-hyphen-irish-20144/hyphen-irish.tar.xz) = 21fcf13293224e17e04240e4a67c6578e996c27e3fb7415ef197a59af3654a6f98e02261b4f221866702c03af59611ef7462d16be72306683cd3b61cc30eb4b3
 Size (tex-hyphen-irish-20144/hyphen-irish.tar.xz) = 348 bytes

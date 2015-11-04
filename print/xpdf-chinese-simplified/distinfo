@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2014/12/14 13:47:49 mef Exp $
+$NetBSD: distinfo,v 1.8 2015/11/04 01:03:02 agc Exp $
 
 SHA1 (xpdf-chinese-simplified-2011-sep-02.tar.gz) = d7f0528ab1c21652906c7747e74a27c2f75308dd
 RMD160 (xpdf-chinese-simplified-2011-sep-02.tar.gz) = 69eb53b7ad19d1a7a03bd9d6737c285cb4496f6d
+SHA512 (xpdf-chinese-simplified-2011-sep-02.tar.gz) = ccfe4b5312736a7629d7edabad8608c93c332493c40e8cad4da7009dfa3ab641c098d7faa99f1533bcd11cf8df347ba9b6c66cc908b553722dae2b79395219fa
 Size (xpdf-chinese-simplified-2011-sep-02.tar.gz) = 907207 bytes

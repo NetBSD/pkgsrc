@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/15 17:51:51 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:59 agc Exp $
 
 SHA1 (tex-xetexref-30636/xetexref.doc.tar.xz) = 47b3af06ea61cc42f654ce6d0e1bd590d915edaa
 RMD160 (tex-xetexref-30636/xetexref.doc.tar.xz) = b506a7d6f263d94ad3f5069405e8e38fe1277940
+SHA512 (tex-xetexref-30636/xetexref.doc.tar.xz) = dbbbd27047f8073bca9fdacf0061dd4013dcfee29cb4c8e876e140782c7bd2d43e17f0aa3a7aa71777c1b12895a4297236e5680314a59e79f9f64e995cdbef3c
 Size (tex-xetexref-30636/xetexref.doc.tar.xz) = 174672 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 14:09:54 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:54 agc Exp $
 
 SHA1 (tex-treetex-28176/treetex.doc.tar.xz) = 9ba8096a2007a61d6b1371e3950596b4434392c8
 RMD160 (tex-treetex-28176/treetex.doc.tar.xz) = 3f659d198d968da5aa79b032eff58536b3a6e9cc
+SHA512 (tex-treetex-28176/treetex.doc.tar.xz) = f04bc182a4f42ed9aac5cb6682ebe0190f1bc813f2cfb0b7e9f5e9247a60dbb2f0642e706f1abdc41d34d1180844f96392aca1ec5d106e6d6849fb9cf6f0c3d8
 Size (tex-treetex-28176/treetex.doc.tar.xz) = 23488 bytes

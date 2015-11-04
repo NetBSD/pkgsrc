@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/16 10:30:18 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:44 agc Exp $
 
 SHA1 (tex-showdim-28918/showdim.tar.xz) = 662b9587e32b7a557a2e512d1a6afb604c2fe06a
 RMD160 (tex-showdim-28918/showdim.tar.xz) = 1d367ad068c6cae9120ae09d28788ccd32618dcc
+SHA512 (tex-showdim-28918/showdim.tar.xz) = 1b2027ccbec466d99e1d85f71243031f48e67c8574468a1e7bc93fab6cb3abe67c387b70a834748c0ed4c9a265fba24dff19930678dc71c24aab7cff419c234d
 Size (tex-showdim-28918/showdim.tar.xz) = 1636 bytes

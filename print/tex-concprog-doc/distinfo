@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/05 14:52:37 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:59 agc Exp $
 
 SHA1 (tex-concprog-18791/concprog.doc.tar.xz) = e017cdddb1fd63dbdc382c9629ee7390aa76648e
 RMD160 (tex-concprog-18791/concprog.doc.tar.xz) = 715c39f8d3cb067379dc4d287dfb44664e3e4a19
+SHA512 (tex-concprog-18791/concprog.doc.tar.xz) = d7e177079f8d5a61da5550964c68a0f4117d30d647292aff6833decc80fd2512b88f71a7a84c6e5af26d21fee8016039072231f74fe1179ba42a1e00bcfb1a51
 Size (tex-concprog-18791/concprog.doc.tar.xz) = 1064 bytes

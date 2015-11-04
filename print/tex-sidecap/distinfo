@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/16 10:30:19 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:44 agc Exp $
 
 SHA1 (tex-sidecap-15878/sidecap.tar.xz) = 8f67b6a7e05bfa20c32a9c9fffec803bab6514d9
 RMD160 (tex-sidecap-15878/sidecap.tar.xz) = 65f2e9fccb0569cc72e80c8f0af8879e97009e6e
+SHA512 (tex-sidecap-15878/sidecap.tar.xz) = 271620eca8cc3934a84d3e16331311199a5e14c7384f4228536c462fac9ee55d7d9e341b6ea273ae0b1e195caa9ad282bebea15c76db7a1b68bb72e0aa05d8df
 Size (tex-sidecap-15878/sidecap.tar.xz) = 3432 bytes

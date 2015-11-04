@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/04 12:44:51 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:50 agc Exp $
 
 SHA1 (tex-babel-swedish-30296/babel-swedish.tar.xz) = 4637fc5b34ad913429a7f5ce2b1e71b203091ece
 RMD160 (tex-babel-swedish-30296/babel-swedish.tar.xz) = 579ca7ad0c27fb9c7efa8fdf4d5683f0715ce4c9
+SHA512 (tex-babel-swedish-30296/babel-swedish.tar.xz) = 2747516cbe8c31befc584343a6153d318d811195fe694c6a97f84302790925c8af6c8d93cfc25c9779789f3123a51f3459f87cd865121f3242e72c5163126aa2
 Size (tex-babel-swedish-30296/babel-swedish.tar.xz) = 2664 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/08/02 12:09:44 markd Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 01:02:05 agc Exp $
 
 SHA1 (tex-eso-pic-37925/eso-pic.doc.tar.xz) = 68e3f88f763afa06fbf08b1b10a3acb0e3f5f2a9
 RMD160 (tex-eso-pic-37925/eso-pic.doc.tar.xz) = 90081e077e6a116b45f6c58afb11765320e07692
+SHA512 (tex-eso-pic-37925/eso-pic.doc.tar.xz) = 542bb85d131e1cff6864a1dae19630410399906bebe02af1ce1d5b25dd881038c07bf60f066b5b2ab9dbc20560a41bfaf779f5034144062ce51e992b6a8273d2
 Size (tex-eso-pic-37925/eso-pic.doc.tar.xz) = 252556 bytes

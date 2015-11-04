@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/04 12:30:42 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:48 agc Exp $
 
 SHA1 (tex-babel-georgian-33527/babel-georgian.tar.xz) = d819eacb1510a714c0b41b126b34b607b2491f41
 RMD160 (tex-babel-georgian-33527/babel-georgian.tar.xz) = e22e75ad838e93c3514d70cb97655b2732e6edfd
+SHA512 (tex-babel-georgian-33527/babel-georgian.tar.xz) = fcec967d56731250716e7a4f9d91d9797006856c8f60267ef50671b1473cbc16ba292aa778587c42f4ba6fc7f97a1a332943e33f5bf00698c44559aa507bf7c7
 Size (tex-babel-georgian-33527/babel-georgian.tar.xz) = 5052 bytes

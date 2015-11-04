@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/28 11:59:09 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:45 agc Exp $
 
 SHA1 (tex-spanish-mx-15878/spanish-mx.doc.tar.xz) = 0cd231d19a1e80d210cb97d5fcdad86f998e087e
 RMD160 (tex-spanish-mx-15878/spanish-mx.doc.tar.xz) = 8f5650df1d8e9f25cda76d76269c47caed055e90
+SHA512 (tex-spanish-mx-15878/spanish-mx.doc.tar.xz) = 08779136e4d90e3d28acee4f3e48a73576d90ff2658a2aca585d7e500018a3d44d33ab139f224f56364107bd556b75aa1dd804d7fea5cadf8aaa9328b852f0b9
 Size (tex-spanish-mx-15878/spanish-mx.doc.tar.xz) = 1060 bytes

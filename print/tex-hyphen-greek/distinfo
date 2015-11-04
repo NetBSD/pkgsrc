@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2013/11/17 17:20:53 minskim Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 01:02:16 agc Exp $
 
 SHA1 (tex-hyphen-greek-29725/hyphen-greek.tar.xz) = cc6b1d4454fbe7e83ebb850c6a97829174dcdd39
 RMD160 (tex-hyphen-greek-29725/hyphen-greek.tar.xz) = 904b3f37173ffa37a867960342b1404281249e96
+SHA512 (tex-hyphen-greek-29725/hyphen-greek.tar.xz) = 777dfa3828a0bf43f5bbef6b3acb956faa33ade90636ddd83cd88d4a3c6a49f3aad398c8e2066c2cdd5e58d533c5f3e1317fec511bae6545032bfb460f665ae9
 Size (tex-hyphen-greek-29725/hyphen-greek.tar.xz) = 6364 bytes

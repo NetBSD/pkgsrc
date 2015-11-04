@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/14 17:07:34 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:12 agc Exp $
 
 SHA1 (tex-germkorr-15878/germkorr.tar.xz) = 17825dc0e7d94cda88a5762cab0d9714784fa701
 RMD160 (tex-germkorr-15878/germkorr.tar.xz) = 7d59378dd76e7266f6109ce8a7e3d26b70a85882
+SHA512 (tex-germkorr-15878/germkorr.tar.xz) = 9b75022997cbf404410a5d046d2132728fb29b0227645252d89dd847e57ddfd407f269e1be7f5b69bc4f3e8b02ea9c98784440ae7563c0e81e166c0bd55a65a6
 Size (tex-germkorr-15878/germkorr.tar.xz) = 2328 bytes

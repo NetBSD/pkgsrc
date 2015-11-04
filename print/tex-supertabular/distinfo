@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/11/03 01:33:37 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:48 agc Exp $
 
 SHA1 (tex-supertabular-15878/supertabular.tar.xz) = 75550aabea8e65feabee91eae6933198cfe558cd
 RMD160 (tex-supertabular-15878/supertabular.tar.xz) = 1baee52bc79b8cf8688ec8b8b2d29e747eb9ac2b
+SHA512 (tex-supertabular-15878/supertabular.tar.xz) = 46ecaedacdfefa6c22ac71c154319ab8777f9fa63959307b44bb141d4c0c8aea8e39304cafd2c67c28c4f0966e5117d20babb67cc0eb25c11697950b4b8ed9ec
 Size (tex-supertabular-15878/supertabular.tar.xz) = 3720 bytes

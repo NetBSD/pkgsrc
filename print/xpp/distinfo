@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.10 2011/12/06 19:48:47 joerg Exp $
+$NetBSD: distinfo,v 1.11 2015/11/04 01:03:03 agc Exp $
 
 SHA1 (xpp-1.5.tar.gz) = 7f3c1427979516e47402a0acb708eb83b68daa61
 RMD160 (xpp-1.5.tar.gz) = a64ec4c93013d1db08a6c9b6705b43850c36c337
+SHA512 (xpp-1.5.tar.gz) = 098ce2f78f0f38153680a52e8af1707eadf2f96ed58a2087bdb3e462e44f5e4f5d1a382cd319d8c0d030dea416ce1bf76d0698b3b91ab7019a1c0dab08418d77
 Size (xpp-1.5.tar.gz) = 107755 bytes
 SHA1 (patch-aa) = f8df413715f4f9319f8d52358a99e54d31cd5a6f
 SHA1 (patch-ab) = 76d0ca39bef410e580f805ca10a3d953285c58bb

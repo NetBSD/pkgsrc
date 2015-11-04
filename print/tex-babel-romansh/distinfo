@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/04 12:39:45 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:49 agc Exp $
 
 SHA1 (tex-babel-romansh-30286/babel-romansh.tar.xz) = 75ff198faa13877209afdc105f5e94d874797e93
 RMD160 (tex-babel-romansh-30286/babel-romansh.tar.xz) = dc9cb52097465fe1fb26569fceede72c5df12ae5
+SHA512 (tex-babel-romansh-30286/babel-romansh.tar.xz) = f8e231cff6e5e448c706f90f3a10ce2ae594aae22cf2a65b9cf1c8d6a0e6dc31671952a9dbd3c333b50963296f349b53f9d6a79066289aee41c7f1bf6725db04
 Size (tex-babel-romansh-30286/babel-romansh.tar.xz) = 1112 bytes

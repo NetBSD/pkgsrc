@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/06 17:58:02 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:57 agc Exp $
 
 SHA1 (tex-classpack-33101/classpack.tar.xz) = 3e609d08be9ef9aae5408941e262e4f2be563a3f
 RMD160 (tex-classpack-33101/classpack.tar.xz) = ef460409eda91a445670ba025bc3a23e91facf4e
+SHA512 (tex-classpack-33101/classpack.tar.xz) = cf44e71623740a329bf941bc1be8b3578331dc8e8c7bcdf304dc8803497238cb9b555bf20b108833958b3b6704b3867b1187a86253dfad0780cb317e41e8e2ef
 Size (tex-classpack-33101/classpack.tar.xz) = 1328 bytes

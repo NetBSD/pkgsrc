@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 14:09:54 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:56 agc Exp $
 
 SHA1 (tex-varisize-15878/varisize.doc.tar.xz) = e86e25211c5ff15ea95cef0870b872293c7d187c
 RMD160 (tex-varisize-15878/varisize.doc.tar.xz) = 69ac62b2f9dfe1c7142aca22a362c61eec9ff245
+SHA512 (tex-varisize-15878/varisize.doc.tar.xz) = f24a6a6837da034c259d95723406cfc185e9ee5ac3e6acd624f2ab6ed29032a790905e7c99267c7d75b3e53334fa6eabf649b3b34167e407dd9c3308a6c8b0e3
 Size (tex-varisize-15878/varisize.doc.tar.xz) = 440 bytes

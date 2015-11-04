@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/02/15 11:22:05 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:56 agc Exp $
 
 SHA1 (tex-chessfss-19440/chessfss.tar.xz) = fca8b636b41747c90c5d1b25127c9218150b5016
 RMD160 (tex-chessfss-19440/chessfss.tar.xz) = 0447ec994b25a5de0b1a3da8b0ca3778f92935a4
+SHA512 (tex-chessfss-19440/chessfss.tar.xz) = b2adda5f97158c06b81a39739ccb886169202c493e4559e40fe160d6f2a81bc7e6f5f76bddce446804cdc7dd7f8bc89ce1a517799b3dcc7278fc702e9e0c25fc
 Size (tex-chessfss-19440/chessfss.tar.xz) = 10948 bytes

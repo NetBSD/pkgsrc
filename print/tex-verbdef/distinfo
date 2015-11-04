@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/04/29 22:57:08 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:57 agc Exp $
 
 SHA1 (tex-verbdef-0.2/verbdef.tar.xz) = 61516cbc97f660f59dd46ba5637bc6d281b11b3e
 RMD160 (tex-verbdef-0.2/verbdef.tar.xz) = 4ed6059a77ede3564ea7a45d939ef603c2b0c0b6
+SHA512 (tex-verbdef-0.2/verbdef.tar.xz) = dc2623129464ab5d5754e148341e2d7150ad4dc84530fdd0deb6953d5c2232a566c5af1259ab65d4551e73511f1ce52092b1ac8e58a0d0df4d76c782bb8d6a38
 Size (tex-verbdef-0.2/verbdef.tar.xz) = 1620 bytes

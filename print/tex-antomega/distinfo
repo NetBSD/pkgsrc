@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/09 22:15:46 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:44 agc Exp $
 
 SHA1 (tex-antomega-21933/antomega.tar.xz) = 334196bc1e345f0a7796692cec43788fab91b430
 RMD160 (tex-antomega-21933/antomega.tar.xz) = 9539c999a4d2c78d18ae34c469f2e93877cfaac3
+SHA512 (tex-antomega-21933/antomega.tar.xz) = 5931c3bdbfd799360123a863ce21ca907cf9b69eca3e6c5715092e86aea269288c5dca18d82cdc40bd71decd478bdd8e62ed4c93496b63fc5e5e6b6c9b8f086d
 Size (tex-antomega-21933/antomega.tar.xz) = 65632 bytes

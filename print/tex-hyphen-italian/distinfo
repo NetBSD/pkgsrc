@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2010/11/08 16:44:55 minskim Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 01:02:17 agc Exp $
 
 SHA1 (tex-hyphen-italian-20144/hyphen-italian.tar.xz) = 155e323444a72c0a3c67e348b7a03b0e6a66970d
 RMD160 (tex-hyphen-italian-20144/hyphen-italian.tar.xz) = dd4564f4165a025b37433036c28267e8762e7b61
+SHA512 (tex-hyphen-italian-20144/hyphen-italian.tar.xz) = 222b4fabc12f789622f988df15bd53738dba1a3c0f656b5d66ddbdbd01b3a22a3e35734dd1fcd8001786decd7642122328cfe2127f037e8c0de66a5ae015a3be
 Size (tex-hyphen-italian-20144/hyphen-italian.tar.xz) = 568 bytes

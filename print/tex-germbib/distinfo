@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/03 10:27:20 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:12 agc Exp $
 
 SHA1 (tex-germbib-15878/germbib.tar.xz) = 379aaa6b548719241f6a6b73d5d2333ad397ca23
 RMD160 (tex-germbib-15878/germbib.tar.xz) = 6b77eb12f8ec1efd0a368160984e6600c4839ee5
+SHA512 (tex-germbib-15878/germbib.tar.xz) = 8f72a0272a5eb7a6eb3c546a0d4db5edeabe71ecd2a03bd65be0adfcd64a713f30b1cffaa8c161e9f2b1ff026ee32611c710ecdc97b9a56343196189b046a888
 Size (tex-germbib-15878/germbib.tar.xz) = 12192 bytes

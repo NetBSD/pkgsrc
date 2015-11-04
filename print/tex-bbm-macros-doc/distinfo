@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/05 13:50:03 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:51 agc Exp $
 
 SHA1 (tex-bbm-macros-17224/bbm-macros.doc.tar.xz) = 72ae708e58625437b35335f32100c93f9562aa84
 RMD160 (tex-bbm-macros-17224/bbm-macros.doc.tar.xz) = bd799db7a6e13d852737ebc52da036666d07c1d5
+SHA512 (tex-bbm-macros-17224/bbm-macros.doc.tar.xz) = 3d7336738538d0c8575dc3be1ea797a5d2a5a9968a03a8c227f57afdb46c00d6baf59891bc9854cf1ac2fc481390d6de0256632995c401ac1b309a2517ba01c5
 Size (tex-bbm-macros-17224/bbm-macros.doc.tar.xz) = 301280 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2012/10/21 17:54:51 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:39 agc Exp $
 
 SHA1 (tex-psfrag-15878/psfrag.tar.xz) = 47d53be620a67c2d3933719aa1c3ee3f99f0119c
 RMD160 (tex-psfrag-15878/psfrag.tar.xz) = 36b3547cf959b850beea82e2e4295f3206d8f318
+SHA512 (tex-psfrag-15878/psfrag.tar.xz) = 41ae9e80a816c150c2078f34dc9d43492a3e16442be3700586271ee345a2cd2c7ba61b82c65428f4e882e7c435ec1e191b3517f7532eccf9f049e1f695055904
 Size (tex-psfrag-15878/psfrag.tar.xz) = 4452 bytes

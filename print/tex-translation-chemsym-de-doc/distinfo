@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/14 17:07:36 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:54 agc Exp $
 
 SHA1 (tex-translation-chemsym-de-23804/translation-chemsym-de.doc.tar.xz) = df6cf7e1da9a4e8ff3097f57bd2b928aaf9346a0
 RMD160 (tex-translation-chemsym-de-23804/translation-chemsym-de.doc.tar.xz) = 0525a123eff4e80c9eed40d0a51cfbcf7d2e51a8
+SHA512 (tex-translation-chemsym-de-23804/translation-chemsym-de.doc.tar.xz) = 91e1dc9d0d884b8a4d0ed4e1a8a59abf39d3ab0e148a5073af39a01c2e9d3ceb602c48c6df45df19c22bbd8ae3e16697b2298711902b97e4e7772e1ed795c938
 Size (tex-translation-chemsym-de-23804/translation-chemsym-de.doc.tar.xz) = 141988 bytes

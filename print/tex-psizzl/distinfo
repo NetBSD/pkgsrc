@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/31 06:45:33 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:39 agc Exp $
 
 SHA1 (tex-psizzl-15878/psizzl.tar.xz) = e4f4b847630df8a138dfdedfd7fe0380f60745e2
 RMD160 (tex-psizzl-15878/psizzl.tar.xz) = 77554b5797d3da69830ae69c4539c0dc57cd52a5
+SHA512 (tex-psizzl-15878/psizzl.tar.xz) = 2dc845c8e6a3513fb2ef2509e36471132cd7a729420335bcc2d273385914eaef25a73527744d574743713c7f3b13a3e37e452980c90063f9c5d564274e02ef3a
 Size (tex-psizzl-15878/psizzl.tar.xz) = 23072 bytes

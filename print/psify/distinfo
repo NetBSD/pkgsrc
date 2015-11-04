@@ -1,15 +1,19 @@
-$NetBSD: distinfo,v 1.5 2005/02/24 12:51:44 agc Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 01:01:38 agc Exp $
 
 SHA1 (psify/Makefile) = fbceb5e2add289e07a42fceb0978a95e57b316c3
 RMD160 (psify/Makefile) = 14a95b0e3762e2f893411fe36da0fb9df6e600dd
+SHA512 (psify/Makefile) = 8c351ea94aaa519ab9a83747e4750ef18787a73d204717340f3eb6828b236c15db4ad9962c85b005078528e113e32d6f93724029682347fdaf1e645ff1b7e72f
 Size (psify/Makefile) = 498 bytes
 SHA1 (psify/psify.c) = 60c368b0435a4ccc620640f382948b20c5288d24
 RMD160 (psify/psify.c) = 364d30af13d7ab7dd0c0fab35ac02aa40219d336
+SHA512 (psify/psify.c) = 36794d9bf0107b5a626b9b62b4234c1b03f0d7993a356902ed86a1fa29b9a8c9f17c62e6a53a63d286058bae5428b97ab626dece097b0267cd937094cc06c9ba
 Size (psify/psify.c) = 12855 bytes
 SHA1 (psify/psify.lex) = ed5af37231547e5ac8788d47ca461181f9b7c512
 RMD160 (psify/psify.lex) = 7ede8e7ad15ac39e3fe4c2f7e547f75d8338abde
+SHA512 (psify/psify.lex) = c4fceadd95840ced1d563071ea3e161bf61bab94b3c2540b9ce0c141b764d03ec7603971e12143615a6d5392777f60cb063dbdbe5a6b06cb0356493f8c372230
 Size (psify/psify.lex) = 18541 bytes
 SHA1 (psify/psify.man) = f517bc97ba3d3ff20fa19f86f4a6c26d20e1afbc
 RMD160 (psify/psify.man) = f79e5be3f81ead748e45afd07ae84b0d8ef2b087
+SHA512 (psify/psify.man) = e409f3a9a3ee09854fd377e3dbbac10a468f495b6b1dc1da2ba37bb545911f2f379da12ae19909716dbbe67455d03cbb4b12bee02a0c19afe55aba0b104a4931
 Size (psify/psify.man) = 4023 bytes
 SHA1 (patch-aa) = 9caa22acf3fd00cf355eb44638a93410784961c3

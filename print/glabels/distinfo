@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.11 2010/04/28 18:40:55 drochner Exp $
+$NetBSD: distinfo,v 1.12 2015/11/04 01:01:33 agc Exp $
 
 SHA1 (glabels-2.2.8.tar.gz) = 9b71da53ec3f27e886177a7c9089c8901fbf7fb2
 RMD160 (glabels-2.2.8.tar.gz) = 97506ca496fa35653462850ffd534384ee151733
+SHA512 (glabels-2.2.8.tar.gz) = f73d70dec359c30063fc2f38be337ae8fc0f851d68e90dc8567b9b43187a1a83fb39c7f52f2344b960847f8d44713908a2a485b1970b5277a267e873214c0194
 Size (glabels-2.2.8.tar.gz) = 3842721 bytes

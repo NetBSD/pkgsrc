@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/15 17:51:48 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:24 agc Exp $
 
 SHA1 (tex-latex-course-25505/latex-course.doc.tar.xz) = cf6ac00cad1eb625fcf8d2ec741d228dbd829641
 RMD160 (tex-latex-course-25505/latex-course.doc.tar.xz) = 2f96a009eef58be3dd6d76e740ffe0e72add7978
+SHA512 (tex-latex-course-25505/latex-course.doc.tar.xz) = 4019d7badfd3bc878c7ed77c2b62fdc59eee0c7efcc3ee7e7c0bb9bc82e750f161886bb6260ca838cf0772510b12baf808bee34a292cedf3aa233eb4bf2f8a90
 Size (tex-latex-course-25505/latex-course.doc.tar.xz) = 600116 bytes
