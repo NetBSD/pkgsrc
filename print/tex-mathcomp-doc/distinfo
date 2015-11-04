@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/16 10:30:17 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:28 agc Exp $
 
 SHA1 (tex-mathcomp-15878/mathcomp.doc.tar.xz) = 83a14edcd87ed3a9fa1011277b2eb0ec98cd2238
 RMD160 (tex-mathcomp-15878/mathcomp.doc.tar.xz) = 1b7636d68f0651440f3384bee266862b5ba4547b
+SHA512 (tex-mathcomp-15878/mathcomp.doc.tar.xz) = 102e0a910f3e8ea1de128dd8972e3df87eae05ab315b7219f67b78e1a79a6b5384057a94faf2d6e7fa3b3d3c94827cdad442b92b30661ed511b15f15b1835474
 Size (tex-mathcomp-15878/mathcomp.doc.tar.xz) = 166132 bytes

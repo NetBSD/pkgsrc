@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 14:09:51 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:08 agc Exp $
 
 SHA1 (tex-figflow-21462/figflow.doc.tar.xz) = 274b8567b6698589b259004a60d6916ff1a626e5
 RMD160 (tex-figflow-21462/figflow.doc.tar.xz) = 7f6a4c4603068975a6d00402993a156324640b85
+SHA512 (tex-figflow-21462/figflow.doc.tar.xz) = 9accec747a43ce052ac50afb40396e3e91fe1542f5628a90db7967e19476fec9b85606a27e9b24c406f69a49050b07641522f97b55cf010e114d545ecb3b8e8b
 Size (tex-figflow-21462/figflow.doc.tar.xz) = 688 bytes

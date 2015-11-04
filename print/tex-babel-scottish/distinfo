@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/04 12:41:03 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:49 agc Exp $
 
 SHA1 (tex-babel-scottish-30289/babel-scottish.tar.xz) = 2807754d7e708ffd0ee092f5d4ad29b496660aa3
 RMD160 (tex-babel-scottish-30289/babel-scottish.tar.xz) = 9adb5fdee06c0248923721bba0a2f0777b1f904b
+SHA512 (tex-babel-scottish-30289/babel-scottish.tar.xz) = 9f191717aefbf5ce89c54ad0daa8db668ef35c8204a8ae7206fe8baeb1fbca07cbdb4c91172a6266b33a91b402b34dac9964f63621a8f73c05d59b714a6504fb
 Size (tex-babel-scottish-30289/babel-scottish.tar.xz) = 2240 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/15 17:51:48 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:03 agc Exp $
 
 SHA1 (tex-dtxtut-15878/dtxtut.doc.tar.xz) = 4b5cbf09927ed5cb06f2c6e7bc6bcddede266d10
 RMD160 (tex-dtxtut-15878/dtxtut.doc.tar.xz) = 724c1620fba6a7299ea0340df8bc2e258f1ea359
+SHA512 (tex-dtxtut-15878/dtxtut.doc.tar.xz) = d254cd6e2481a3639b09e3f934d9d91a3207423b8cd7fcf4d407e436b392abeb54fa72e0ee901fcbdb6ca5b1b0bb1d4beecc0af650a48d6ac4effc41e8b71c4f
 Size (tex-dtxtut-15878/dtxtut.doc.tar.xz) = 199744 bytes

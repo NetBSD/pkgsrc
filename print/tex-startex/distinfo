@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/31 06:45:33 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:46 agc Exp $
 
 SHA1 (tex-startex-35718/startex.tar.xz) = 693b68e109464c6d3b643a8b708d7b12f1ac08ec
 RMD160 (tex-startex-35718/startex.tar.xz) = 7bb9dcc54c4e6434377c046d0b210a9e01e2bc4e
+SHA512 (tex-startex-35718/startex.tar.xz) = 73011fc273fc8c4726026917a1a8e14cfa5e1306d49a9e12a59b518bd5d11546b8d2c9a497c1d05b35c36cf5f6f771eaffbf67acee8ec45cc313fd42c984fed1
 Size (tex-startex-35718/startex.tar.xz) = 10172 bytes

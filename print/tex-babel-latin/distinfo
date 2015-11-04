@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/04 12:35:32 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:49 agc Exp $
 
 SHA1 (tex-babel-latin-34389/babel-latin.tar.xz) = b138ffe3ec2c23fdec465a2c1316b98558a42ff3
 RMD160 (tex-babel-latin-34389/babel-latin.tar.xz) = bf56cbd5609dde281a737adfd878ce47edecd8da
+SHA512 (tex-babel-latin-34389/babel-latin.tar.xz) = 9a2c34bd2704f42ecd2b0cd5d9bf4b83f1876055f3db0f057f805aa2d1ad50425b791d0c2bea7d0827bc69f19c50cd6cd89e7e401efa14a7bf5c3ab69cbbc380
 Size (tex-babel-latin-34389/babel-latin.tar.xz) = 3344 bytes

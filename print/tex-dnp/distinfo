@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/10 01:04:04 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:02 agc Exp $
 
 SHA1 (tex-dnp-15878/dnp.tar.xz) = cf9ea1182a884710d1ee5ef327ee49a18bc0814a
 RMD160 (tex-dnp-15878/dnp.tar.xz) = 816d2d6455b0779ca3b7057b2fa440e286530412
+SHA512 (tex-dnp-15878/dnp.tar.xz) = 0a741ca40fa4f61146b5d71c3eabaf4b195b2e50b74e89f5b00efd2fcd4fa7863f5437903706e914f7f3d77fc9a4c1965d8982613d93f7240b893c985a42bc7c
 Size (tex-dnp-15878/dnp.tar.xz) = 816 bytes

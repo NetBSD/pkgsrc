@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/04/26 21:06:21 markd Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 01:02:19 agc Exp $
 
 SHA1 (tex-ifnextok-23379/ifnextok.tar.xz) = 7a3913bcad31823efccff4ef40caa27e16731284
 RMD160 (tex-ifnextok-23379/ifnextok.tar.xz) = 30c40bec89807fb0637b29850826fb23f171df70
+SHA512 (tex-ifnextok-23379/ifnextok.tar.xz) = f924b41e95fdd8782c958542e63083b48cbbcfa2e21237c82ee2efde5ad6aa9dd2ba0be7bd53e5c5a545eb422af1402d63fc9b13d76e8cec2a11230b25e6e34f
 Size (tex-ifnextok-23379/ifnextok.tar.xz) = 10712 bytes

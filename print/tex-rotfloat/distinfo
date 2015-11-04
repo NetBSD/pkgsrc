@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/16 10:30:18 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:42 agc Exp $
 
 SHA1 (tex-rotfloat-18292/rotfloat.tar.xz) = 46149bb06e3cb4afaf1d4f94be7180e4120a2735
 RMD160 (tex-rotfloat-18292/rotfloat.tar.xz) = 1068064da6a9d9dc784935877671a1da95ed9eb4
+SHA512 (tex-rotfloat-18292/rotfloat.tar.xz) = 8aa72b9ba4b754afba8e921e85815d3f62fa06e440140dfaf2e8450dab8186b449dc6c7955fb0bf49d2c8ed95dac3218577ce9ca62f599029e684960dd1ea59c
 Size (tex-rotfloat-18292/rotfloat.tar.xz) = 1524 bytes

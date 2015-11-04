@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/15 17:51:50 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:29 agc Exp $
 
 SHA1 (tex-mil3-21677/mil3.doc.tar.xz) = 96d4a47cff43e6792440ff358b3404c4c44e88fe
 RMD160 (tex-mil3-21677/mil3.doc.tar.xz) = 8a520ee96a9b877000ec497237ab4b042b62f03b
+SHA512 (tex-mil3-21677/mil3.doc.tar.xz) = 64fc54b67a39a1d1cc563eb6f920453f08989f37826436632654d5bcb9d5d98eac6566626e682294d2b9e3df472021fa95e1660b62336f481846b772e4982400
 Size (tex-mil3-21677/mil3.doc.tar.xz) = 35664 bytes

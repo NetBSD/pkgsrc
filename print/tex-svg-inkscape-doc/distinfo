@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/15 17:51:50 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:48 agc Exp $
 
 SHA1 (tex-svg-inkscape-32199/svg-inkscape.doc.tar.xz) = e672702657510dd827069d577507323e6ec713ff
 RMD160 (tex-svg-inkscape-32199/svg-inkscape.doc.tar.xz) = 6d0d9f9efb6a6bfe4f5cd264521c198b828fa89d
+SHA512 (tex-svg-inkscape-32199/svg-inkscape.doc.tar.xz) = a9dcae86b200d31d9357e71661121cdf0af6d00983dbfee156059073bd4c87a06017277773f0f60d95a6b85660baff8703f0fc0e5392531a65664ef44a598597
 Size (tex-svg-inkscape-32199/svg-inkscape.doc.tar.xz) = 197212 bytes

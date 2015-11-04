@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/16 02:51:23 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:19 agc Exp $
 
 SHA1 (tex-hyphen-turkmen-25990/hyphen-turkmen.tar.xz) = 86ec5ceb221de369cefb78789ece5023c0a56999
 RMD160 (tex-hyphen-turkmen-25990/hyphen-turkmen.tar.xz) = d55918567105abe24d75e78b4146c4d8e4b6f004
+SHA512 (tex-hyphen-turkmen-25990/hyphen-turkmen.tar.xz) = 94e54041d2fbf3abfbfa315fcdf2b2e151541c6fd7f97dc3c9e1cd6640e24951c81cc0bf31416ded7d8f5fe49104bde645f6a5e2da426cb7fa5fa8645c50b7a8
 Size (tex-hyphen-turkmen-25990/hyphen-turkmen.tar.xz) = 404 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2014/12/14 13:47:49 mef Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 01:03:02 agc Exp $
 
 SHA1 (xpdf-cyrillic-2011-aug-15.tar.gz) = c5c55919064e452e712a83c69063479a2de08e80
 RMD160 (xpdf-cyrillic-2011-aug-15.tar.gz) = 29da2dcc1feaf852c77c42b7629098ad5a008595
+SHA512 (xpdf-cyrillic-2011-aug-15.tar.gz) = ab1197c90f8cd3d8664ebbdc7ecefdfb8ec12e24da2f7616cad1d5bc9c7fd172c48db6a18d76172de8342377acc8e1dcd78bcf0fb1ef9f05cf94729e90586827
 Size (xpdf-cyrillic-2011-aug-15.tar.gz) = 1656 bytes

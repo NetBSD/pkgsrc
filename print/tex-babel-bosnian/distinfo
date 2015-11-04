@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/04 12:23:46 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:47 agc Exp $
 
 SHA1 (tex-babel-bosnian-36308/babel-bosnian.tar.xz) = b22df9d9a9c662631128c44c91c196d7f372f742
 RMD160 (tex-babel-bosnian-36308/babel-bosnian.tar.xz) = 918c17cda8525ee415f138eb74a97a190861d74a
+SHA512 (tex-babel-bosnian-36308/babel-bosnian.tar.xz) = 7590c564953794276f935ef1f9b70daa61e6ea06f2c648d3abe95d631611a0e31f29846fd36f4e9451b608b253b451a96b2b58ee6d1108771cb42c3f051f0a52
 Size (tex-babel-bosnian-36308/babel-bosnian.tar.xz) = 2112 bytes

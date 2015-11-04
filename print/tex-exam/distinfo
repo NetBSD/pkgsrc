@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/06/14 12:50:02 markd Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 01:02:07 agc Exp $
 
 SHA1 (tex-exam-37279/exam.tar.xz) = 78627ee3e45177a6d2732d6fd3374728d1bd7a93
 RMD160 (tex-exam-37279/exam.tar.xz) = b644a171ddb49dc303552e3a5658d9f6e3add23e
+SHA512 (tex-exam-37279/exam.tar.xz) = 876de59b9b22758f7276d0c5fe7869e657bb4ffc34d586a074ed57ebb6bf77a10deffb3888d0cc93c20abddb8b3994ac7d93ee82e3fc949443dbaff4c66877a7
 Size (tex-exam-37279/exam.tar.xz) = 41748 bytes

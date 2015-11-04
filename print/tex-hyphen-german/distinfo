@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2013/11/17 17:22:05 minskim Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 01:02:16 agc Exp $
 
 SHA1 (tex-hyphen-german-29725/hyphen-german.tar.xz) = f0624f785d04b254a01c16b8fa896003d320691f
 RMD160 (tex-hyphen-german-29725/hyphen-german.tar.xz) = a6f9110a93fac10b97651758b3211c6ab463df75
+SHA512 (tex-hyphen-german-29725/hyphen-german.tar.xz) = 677339694fc1ed0be412801ed8caf0ad39ae6389c163fc090cb48ef87895caa3ce74e3e178c3890755f87937e9c4ef31898a01d0a62345c41c827957d61ef3b9
 Size (tex-hyphen-german-29725/hyphen-german.tar.xz) = 46652 bytes

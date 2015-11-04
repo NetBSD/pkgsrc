@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/03 19:17:39 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:33 agc Exp $
 
 SHA1 (tex-oinuit-28668/oinuit.tar.xz) = a86359c4d5a6882f6153dea6a98160d70e9f1797
 RMD160 (tex-oinuit-28668/oinuit.tar.xz) = 6e0bc72ff93df7e27bb16f10b5f1806a165d2b07
+SHA512 (tex-oinuit-28668/oinuit.tar.xz) = 2c0eecfe7a81ee72030f55f5c6a88768173042ee41b59391b422191e48687ab6b619cd0e311b4cc72a91affd529cb88a1222983f9139400e815644545618b095
 Size (tex-oinuit-28668/oinuit.tar.xz) = 147620 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/15 17:51:47 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:41 agc Exp $
 
 SHA1 (tex-Type1fonts-19603/Type1fonts.doc.tar.xz) = a5093fbafe2ebc388e2678c218a4aa9e3216d8cb
 RMD160 (tex-Type1fonts-19603/Type1fonts.doc.tar.xz) = 5c6c8d3fc8ec21e2e5d58e23512b84eb5e8d0288
+SHA512 (tex-Type1fonts-19603/Type1fonts.doc.tar.xz) = 36bbb3a66ee737b4262211dcc9876d1ac9e6709f05bcb786427676027b15a9c899f62b91b31865b45b1d362032017ce95c939a752737d7af4e543d2f483b11bd
 Size (tex-Type1fonts-19603/Type1fonts.doc.tar.xz) = 527328 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/15 17:51:47 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:59 agc Exp $
 
 SHA1 (tex-comprehensive-25501/comprehensive.doc.tar.xz) = 9ca7ade682837c0e20af9b80df0a09233e5ace03
 RMD160 (tex-comprehensive-25501/comprehensive.doc.tar.xz) = 7bb6655e1175e2507a65d5379caa3249c2f39e97
+SHA512 (tex-comprehensive-25501/comprehensive.doc.tar.xz) = 9ccb0a843d718fb180766c575bb92e7539a3cd195a3150017d7cc833177970a1b691afc99e76757399611daef5e41e5dee384f48235edbc5154f4a16c190f19c
 Size (tex-comprehensive-25501/comprehensive.doc.tar.xz) = 5207128 bytes

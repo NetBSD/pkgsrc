@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/09/18 00:37:21 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:13 agc Exp $
 
 SHA1 (tex-guide-to-latex-15878/guide-to-latex.doc.tar.xz) = e035c6c70f574bdc0d6c055712609ce793795934
 RMD160 (tex-guide-to-latex-15878/guide-to-latex.doc.tar.xz) = d832ae13f50776a378909f5eb82adca752755f51
+SHA512 (tex-guide-to-latex-15878/guide-to-latex.doc.tar.xz) = 0060c5d849a719b1d07dff59c3457aaa471b79e6d0e820583083b14f2ecde5b12da19b47706ee3971a5892c5a56aa3b6af9c4df76869103b6af8c878a83d6ea7
 Size (tex-guide-to-latex-15878/guide-to-latex.doc.tar.xz) = 174488 bytes

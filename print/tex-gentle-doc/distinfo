@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/15 17:51:48 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:11 agc Exp $
 
 SHA1 (tex-gentle-15878/gentle.doc.tar.xz) = bb98adb821b3941d5f14432c0130191f3e285ebf
 RMD160 (tex-gentle-15878/gentle.doc.tar.xz) = 251c59b6c9d50a6bf1c4c2f84bd4a3077f59bbd3
+SHA512 (tex-gentle-15878/gentle.doc.tar.xz) = 3fe5623b21be2a49b946d3f6f48cb0d1770e78a029fe0d039d30614343af18ed53b5faebf66bf3823e573091d9e8250b6f5f32b3e8421638023d8ded1615cab8
 Size (tex-gentle-15878/gentle.doc.tar.xz) = 394792 bytes

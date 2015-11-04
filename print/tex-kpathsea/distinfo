@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.15 2015/06/14 12:50:03 markd Exp $
+$NetBSD: distinfo,v 1.16 2015/11/04 01:02:23 agc Exp $
 
 SHA1 (tex-kpathsea-37193/kpathsea.tar.xz) = b90fc582cd451726f0074ec450b1aa2e7f3430e5
 RMD160 (tex-kpathsea-37193/kpathsea.tar.xz) = 455316cb08c0cfee86e55624c2ef36e1131df78b
+SHA512 (tex-kpathsea-37193/kpathsea.tar.xz) = 7bbb389ce368decdcf8f50a352636e95584e8d6b052cbeb3b0498c88d9147807c37aa0bd81b2860c9cb11d0d0ac4e8a4eef069876fb3ef737c9ac77fac192ab0
 Size (tex-kpathsea-37193/kpathsea.tar.xz) = 30512 bytes
 SHA1 (patch-texmf-dist_web2c_fmtutil.cnf) = afbbc59b9ec6a0d8370cb088b37c04ffcb2ebd6e

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2014/12/14 13:47:49 mef Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 01:03:03 agc Exp $
 
 SHA1 (xpdf-turkish-2011-aug-15.tar.gz) = aabf97033e074593b3efccfdd92068e41e48c356
 RMD160 (xpdf-turkish-2011-aug-15.tar.gz) = 660d307ee0802586c9118c06f672de81b68f6599
+SHA512 (xpdf-turkish-2011-aug-15.tar.gz) = a73e90bce8f2a12154b06ef29333a45d96258c0d653d5cb15afd2e5ad9e79a9b617e5f8ebeb20bde545684d50f3bc1349800c99f70c863bdd502c24c266b4fb1
 Size (xpdf-turkish-2011-aug-15.tar.gz) = 1137 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2010/11/08 16:45:21 minskim Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 01:02:18 agc Exp $
 
 SHA1 (tex-hyphen-sanskrit-20144/hyphen-sanskrit.tar.xz) = 339167e7f34846c450e78c047b95edb5b197ebad
 RMD160 (tex-hyphen-sanskrit-20144/hyphen-sanskrit.tar.xz) = 0e5480f1a29da52ae6272b9856a761c0adeffd0f
+SHA512 (tex-hyphen-sanskrit-20144/hyphen-sanskrit.tar.xz) = f636c61fbc1d86fcaffcb5dd746c482da1d44af09706d3b79d577d317b823e38158921d75689391412082951b55aa1aa2b549e1e6b128f27e184c8e183d03d58
 Size (tex-hyphen-sanskrit-20144/hyphen-sanskrit.tar.xz) = 348 bytes

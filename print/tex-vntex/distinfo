@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/03 17:43:22 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:58 agc Exp $
 
 SHA1 (tex-vntex-30579/vntex.tar.xz) = fa6c8f2a3a3f949c48ddc0735d1c06d459c27cb7
 RMD160 (tex-vntex-30579/vntex.tar.xz) = 1cf5da89ea3c43c8de8c84ad5dc1ebd10225f2e2
+SHA512 (tex-vntex-30579/vntex.tar.xz) = 9a70c0932c6d486a38e9739d2043f720ca89789e495f87f5a2be62374bbcead243cefa818fcd6087c23a9b5e76d5294e8a4f84b1602b69bc574e589f91b1e543
 Size (tex-vntex-30579/vntex.tar.xz) = 5301992 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/15 17:51:49 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:28 agc Exp $
 
 SHA1 (tex-metafont-beginners-29803/metafont-beginners.doc.tar.xz) = cd5b3d86cb95b9eb6e154f3d447544d3aa306e23
 RMD160 (tex-metafont-beginners-29803/metafont-beginners.doc.tar.xz) = 012f6fb2867b401cd0a5d563db6477da8519d0bd
+SHA512 (tex-metafont-beginners-29803/metafont-beginners.doc.tar.xz) = 0b4aa37d72cc589f8486551fa2574f2842b2beb37922b8270c529e72c3d76a0da7e8e640cac5f643b3ced3dc999c4a65d8cee36f0b9599f3f1691a0ccebe36b6
 Size (tex-metafont-beginners-29803/metafont-beginners.doc.tar.xz) = 178912 bytes

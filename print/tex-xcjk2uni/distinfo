@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/10 01:04:04 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:59 agc Exp $
 
 SHA1 (tex-xcjk2uni-34382/xcjk2uni.tar.xz) = 390cf729805861c490ac0cf1201041bca1cc9c6c
 RMD160 (tex-xcjk2uni-34382/xcjk2uni.tar.xz) = 91289c6a7d1f4538f248180918de72623f0ec9fe
+SHA512 (tex-xcjk2uni-34382/xcjk2uni.tar.xz) = 5d99ad5e6878737f2efdbe5c141bdf45aa578de9ffcea9574170ceaaa8228ff0bd3883f55541e92f35a6418703b624b6b457cd18524684f95650eca27e1a2c7d
 Size (tex-xcjk2uni-34382/xcjk2uni.tar.xz) = 214256 bytes

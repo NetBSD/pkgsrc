@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/04/10 21:20:26 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:58 agc Exp $
 
 SHA1 (tex-wallpaper-doc-1.10/wallpaper.doc.tar.xz) = 2dbe1ae45bd287e681c18fd0ef79766857ff0324
 RMD160 (tex-wallpaper-doc-1.10/wallpaper.doc.tar.xz) = d288cd98d45c51eba9fefeacb46dc2396fa04711
+SHA512 (tex-wallpaper-doc-1.10/wallpaper.doc.tar.xz) = 80022b4e16f3f7f7affc956b485904ffa1a9a820fedf1cdeaae17ed3afda1fd279e0948d86ce571cf658dd11cece50162cdcc8747b0d3325e50b8f96f80ad8c6
 Size (tex-wallpaper-doc-1.10/wallpaper.doc.tar.xz) = 1277348 bytes

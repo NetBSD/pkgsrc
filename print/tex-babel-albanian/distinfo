@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/04 12:22:08 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:46 agc Exp $
 
 SHA1 (tex-babel-albanian-30254/babel-albanian.tar.xz) = d5cd3b221af281733a24a0e0002b596b622ea17d
 RMD160 (tex-babel-albanian-30254/babel-albanian.tar.xz) = 22eed59484460a6d9c34004d5d3d727a4179fdbb
+SHA512 (tex-babel-albanian-30254/babel-albanian.tar.xz) = 58f218f8971e77119c48665293f8007338c7e0334afd17063d19222dd73dea9fd497bbb55d595354f20893b955aba519544f29674d218fd081f6ecea5664d73d
 Size (tex-babel-albanian-30254/babel-albanian.tar.xz) = 2464 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2010/11/07 19:52:46 minskim Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 01:01:41 agc Exp $
 
 SHA1 (tex-abc-15878/abc.tar.xz) = f9afecd1c23ad778440e672caa658c42ef54be90
 RMD160 (tex-abc-15878/abc.tar.xz) = 221826124f9084fdffffad119c34202f2e9c4eb3
+SHA512 (tex-abc-15878/abc.tar.xz) = 87cc433068e18dd44ec3f0cc40d04c38a3444951503a49a8a2a4cd23a3f4e20fc2df06f6f96ea2bfeb3b14be56c6b5b5c4a2a6618e0ad24a4d7bbfaf983d0844
 Size (tex-abc-15878/abc.tar.xz) = 2492 bytes

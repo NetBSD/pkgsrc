@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/16 10:30:17 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:35 agc Exp $
 
 SHA1 (tex-pb-diagram-15878/pb-diagram.tar.xz) = 9fc7431016a9c4c0194c69bae91b6211263ec523
 RMD160 (tex-pb-diagram-15878/pb-diagram.tar.xz) = 8f3db950b7ebe3909cdf2cfaedc299d3ddc293df
+SHA512 (tex-pb-diagram-15878/pb-diagram.tar.xz) = 2227577feae9ec3d853ac39a6998835604893d4106880bfdddf3b0d87f8b47cff621502fc37d97ae4d58623e12413a60b4866a445c27bf15dec34992a96c4c62
 Size (tex-pb-diagram-15878/pb-diagram.tar.xz) = 15608 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/06/11 06:13:35 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:20 agc Exp $
 
 SHA1 (igo.zip) = f60a87a80128587037aa9b9ea32def0502bb0581
 RMD160 (igo.zip) = 44d8a9f24a4b00537779939ac7c54ef909f7766b
+SHA512 (igo.zip) = 02335a2b3a9f1ba8a6143ed57c102e70a76e8d8de5b97bbebdbdde377c8f08c3671aa1968cdf58063202d03a4ffdc319d386f0fea598097d9487f44217f6302f
 Size (igo.zip) = 704306 bytes

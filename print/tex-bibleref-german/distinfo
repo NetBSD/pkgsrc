@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/14 17:07:34 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:51 agc Exp $
 
 SHA1 (tex-bibleref-german-21923/bibleref-german.tar.xz) = 3bb8d53f6fbe447f29adb668672c152337af1335
 RMD160 (tex-bibleref-german-21923/bibleref-german.tar.xz) = f8a6b860b82961179964baf4011c0e8f094ea970
+SHA512 (tex-bibleref-german-21923/bibleref-german.tar.xz) = a36d39d431f7a380c2b201213491b028308be6ec99af88efc2d62ea5f11ea8284960ea3fd4e0f9fe69c6b2a3811d37047ba277952d3395d30a73b7cc0fca32a3
 Size (tex-bibleref-german-21923/bibleref-german.tar.xz) = 7476 bytes

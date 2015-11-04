@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/28 11:55:19 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:59 agc Exp $
 
 SHA1 (tex-cslatex-28596/cslatex.tar.xz) = 7e9d1b0a25d2bf3a65dde4d37ecae9fe9d274df9
 RMD160 (tex-cslatex-28596/cslatex.tar.xz) = 0dbce635c1e219ccaa60d9c5760b6629fb9faa51
+SHA512 (tex-cslatex-28596/cslatex.tar.xz) = 21c89bde1e922eb5cb1a8ca83112656d67e53b23b1aa918b2c72d1e9282fc6bc6cdcbec1b910084eac018788009b35bac2e455944722b1d11ab66edab188f52f
 Size (tex-cslatex-28596/cslatex.tar.xz) = 12592 bytes

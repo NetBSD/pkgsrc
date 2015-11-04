@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/01/21 17:25:41 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:28 agc Exp $
 
 SHA1 (tex-metalogo-18611/metalogo.doc.tar.xz) = 3b2695dfc9c969b4f0ec8c892a39e87f7ec6942d
 RMD160 (tex-metalogo-18611/metalogo.doc.tar.xz) = af3914799df878afb5988b407cd6ebe7f164ce43
+SHA512 (tex-metalogo-18611/metalogo.doc.tar.xz) = fc83b929b04dce8f6393ef45d6a510f9a534895c2a37525dbcf4d4fd1f061ec7a9433d7927f5c7607c9b884d2d2feefeb9fefc57ea8e1777671a085a5b98cfc7
 Size (tex-metalogo-18611/metalogo.doc.tar.xz) = 77852 bytes

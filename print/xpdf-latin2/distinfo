@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2014/12/14 13:47:49 mef Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 01:03:02 agc Exp $
 
 SHA1 (xpdf-latin2-2011-aug-15.tar.gz) = 508f237d795bb26abf89fb5999998a87555af159
 RMD160 (xpdf-latin2-2011-aug-15.tar.gz) = 869321e998502892f391060742017b34b0e437d3
+SHA512 (xpdf-latin2-2011-aug-15.tar.gz) = 5fe0b60bfac7f0f4a26e3e7216de5043f6b94446f464c984b7c25431ec01a5912952c0dc66bb2c7159c9f63e4805689c6cfc761086aad9e59f1f21d0cddb5d15
 Size (xpdf-latin2-2011-aug-15.tar.gz) = 1431 bytes

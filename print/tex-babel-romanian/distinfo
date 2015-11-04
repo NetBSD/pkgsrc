@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/04 12:39:08 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:49 agc Exp $
 
 SHA1 (tex-babel-romanian-30285/babel-romanian.tar.xz) = 2f9e6f1564d5ed6a8989f191294e22a3c012d967
 RMD160 (tex-babel-romanian-30285/babel-romanian.tar.xz) = b7ae8f844500e66067283156ccce5b71d5f03591
+SHA512 (tex-babel-romanian-30285/babel-romanian.tar.xz) = 237afd7b784f2ba888b861069b3e7b3da63478a1c4631a72a0851993c5db3386327db53ad171e94138e6cb6a380af3d66669597387aaa45355c7ec808682656e
 Size (tex-babel-romanian-30285/babel-romanian.tar.xz) = 2168 bytes

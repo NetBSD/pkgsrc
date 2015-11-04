@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/15 17:51:47 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:40 agc Exp $
 
 SHA1 (tex-MemoirChapStyles-25918/MemoirChapStyles.doc.tar.xz) = 9c67cec10425b9a327dd8e84c88ac9caa44cfe45
 RMD160 (tex-MemoirChapStyles-25918/MemoirChapStyles.doc.tar.xz) = 3bb4b7ec419e3e7be526772737092971d8e8fde3
+SHA512 (tex-MemoirChapStyles-25918/MemoirChapStyles.doc.tar.xz) = ec1cf86f421ffbb24383795e077ec38d5938433f3702258d300fee918a8d91631c33e72d12e1ccfadff8b0169399cf666d02297fdc9216a1f4f79f52256cde4f
 Size (tex-MemoirChapStyles-25918/MemoirChapStyles.doc.tar.xz) = 755412 bytes

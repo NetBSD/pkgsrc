@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 14:09:52 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:21 agc Exp $
 
 SHA1 (tex-js-misc-16211/js-misc.doc.tar.xz) = ccb5f5751af83466039cf40696a0a5f6f6692ddc
 RMD160 (tex-js-misc-16211/js-misc.doc.tar.xz) = e76b3d1066ae8a05eb782ece6546e6ff4ba56b13
+SHA512 (tex-js-misc-16211/js-misc.doc.tar.xz) = dbf9e7f8c9bc2a670d2be00459cc7d36b67a78fbd086470b623a761c7a9a09892a523cb74bff475c790e582ffddc3630c7d2b76dad5f01fa0ccf946905f3d9dc
 Size (tex-js-misc-16211/js-misc.doc.tar.xz) = 18448 bytes

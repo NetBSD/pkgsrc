@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/07/02 21:02:39 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:12 agc Exp $
 
 SHA1 (tex-gfnotation-37156/gfnotation.doc.tar.xz) = 81aef74d7b1ff327a1d3be7017d42eb94e3ec59c
 RMD160 (tex-gfnotation-37156/gfnotation.doc.tar.xz) = ee78fefddb4a54a54dda7a43fe40b01f5a488d22
+SHA512 (tex-gfnotation-37156/gfnotation.doc.tar.xz) = f6305a4eeca14fb1307e5590580d628213bff85b05ccc3f963db3410087ae70f5baf48a20ed51806e8e83bdc8a6085bcb3104f107071a527e1345bac54c8f29d
 Size (tex-gfnotation-37156/gfnotation.doc.tar.xz) = 167284 bytes

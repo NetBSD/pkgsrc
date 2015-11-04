@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2012/10/21 17:46:40 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:56 agc Exp $
 
 SHA1 (tex-umlaute-15878/umlaute.doc.tar.xz) = 5081836f94edfd5c1b37e0d0483973308ddce20b
 RMD160 (tex-umlaute-15878/umlaute.doc.tar.xz) = f8631e9ca52d3a3fbdcab98b61002564adf1be7e
+SHA512 (tex-umlaute-15878/umlaute.doc.tar.xz) = 6c2987fb65f640962bf4e22efd90bc17d262a1e3b039bc85d39fee6af7acc24a3d67296e8b6a3eef0d06c3c1dd35d82b073d554ba8b4392f31d0169b65f279c2
 Size (tex-umlaute-15878/umlaute.doc.tar.xz) = 106304 bytes

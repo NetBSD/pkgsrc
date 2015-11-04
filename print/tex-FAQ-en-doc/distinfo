@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/15 17:51:47 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:40 agc Exp $
 
 SHA1 (tex-FAQ-en-34303/FAQ-en.doc.tar.xz) = 4860910c6973f689564c437548c7399f2c8e38a1
 RMD160 (tex-FAQ-en-34303/FAQ-en.doc.tar.xz) = 35e9c0700380cb032f301450275f0868b7bc43a0
+SHA512 (tex-FAQ-en-34303/FAQ-en.doc.tar.xz) = a75bf58159e8bff7f14395fae7663050b8681db9c954f2a1c3ff40871e19da314ee47960bec2310b03077ac057ee9c9deb0958d55bb54468d822519f49ce742c
 Size (tex-FAQ-en-34303/FAQ-en.doc.tar.xz) = 5089048 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/04 12:28:01 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:47 agc Exp $
 
 SHA1 (tex-babel-esperanto-30265/babel-esperanto.tar.xz) = 3ee42c8203911596aaeb50bb934f7835ba030682
 RMD160 (tex-babel-esperanto-30265/babel-esperanto.tar.xz) = 53a96778649e8a481364ac42df9f9bd173512220
+SHA512 (tex-babel-esperanto-30265/babel-esperanto.tar.xz) = 22f53a4ae176fa7b928c2207b01159cb4e04237796cebe69b6ef28f96f1886854c89c2ebd8fae81219916a7651cadd5a70c685ca881d4bbab7eafc325ea8a4ab
 Size (tex-babel-esperanto-30265/babel-esperanto.tar.xz) = 2576 bytes

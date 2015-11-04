@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2015/08/15 22:54:50 leot Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 01:01:33 agc Exp $
 
 SHA1 (foomatic-db-engine-4.0.12.tar.gz) = c3b747113b6a64b998000774e7c2d03ce48654c1
 RMD160 (foomatic-db-engine-4.0.12.tar.gz) = 163ad52e616928aa723cb3d263f1686e6a187500
+SHA512 (foomatic-db-engine-4.0.12.tar.gz) = b7e99ace6a632e9b0213183bd2c6c2d11ca072ea0414e8ca569082b7ec183dd81c80594ad63fdee82d761ae36d4fce9d3c881569a95a6085ec326ef7fd21154f
 Size (foomatic-db-engine-4.0.12.tar.gz) = 360499 bytes
 SHA1 (patch-aa) = 3f81a888afc0f0ee6c913f09f2ea896058f015dd
 SHA1 (patch-makeMan.in) = 1beb5dbd5e288660a374e035e52b51fb80b9cc61

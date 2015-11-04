@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/09/17 22:42:48 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:44 agc Exp $
 
 SHA1 (tex-shadow-20312/shadow.tar.xz) = 892e1ae138de604821f8d7bbdcadcd4ca2ae1e19
 RMD160 (tex-shadow-20312/shadow.tar.xz) = 051564c6d9b3ed232784d58017bb9a87069293f9
+SHA512 (tex-shadow-20312/shadow.tar.xz) = 5825611d1e0f9a9752895cc2b81aa02b84f9d3ad6c2c2f177fcd40296e5bf4a9a2341a3d2c85a5a55db12dcec2b4044e88f41364f7ad0816e5e25415cba41f2f
 Size (tex-shadow-20312/shadow.tar.xz) = 1920 bytes

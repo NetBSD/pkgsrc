@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/14 17:07:35 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:40 agc Exp $
 
 SHA1 (tex-r_und_s-15878/r_und_s.doc.tar.xz) = 98c66fe12c496461d556dbe07c1f2edef02c75d4
 RMD160 (tex-r_und_s-15878/r_und_s.doc.tar.xz) = 9bd3ce87f2dd52a9d0e9d46e002d5cf054706370
+SHA512 (tex-r_und_s-15878/r_und_s.doc.tar.xz) = c030c473ceb29babd483b2064fa78acb18bf651ef3dca4d3209c1ba454e5cede2376bc379ff7c39e7f0133a0f5844e210720037c4b7e72f68f185385188c0d62
 Size (tex-r_und_s-15878/r_und_s.doc.tar.xz) = 3584 bytes

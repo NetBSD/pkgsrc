@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/08/02 01:59:51 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:53 agc Exp $
 
 SHA1 (tex-todo-17746/todo.tar.xz) = 19c9c26220f1d899bf6c70495b53bca064510dde
 RMD160 (tex-todo-17746/todo.tar.xz) = 1e6ad54754c136434841274bad49f058b27f6ba6
+SHA512 (tex-todo-17746/todo.tar.xz) = 0bbe1dd2556e133cc97974c25f07bcce96d19fb792dd6bc0050b28981ab8b56bfe329e34d5d8f60aa69499111453e398327b6acbfd7fb422b792435a04aaaade
 Size (tex-todo-17746/todo.tar.xz) = 1888 bytes

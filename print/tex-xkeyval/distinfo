@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/04/25 05:28:37 markd Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 01:03:00 agc Exp $
 
 SHA1 (tex-xkeyval-35741/xkeyval.tar.xz) = 1bfa27f0345c2c6381f56b78000faa8730a05c2d
 RMD160 (tex-xkeyval-35741/xkeyval.tar.xz) = 9f77dc17c7fd65764ba7c3fc611a920b0d176003
+SHA512 (tex-xkeyval-35741/xkeyval.tar.xz) = 59aad7fff7a5808edc60de6d7855d78c635f4196817b250cd2c7ccc44144da6e42c0db1dc9ce35436473120533ee5fc25d512e7fa7edef3a0f098da487dd2020
 Size (tex-xkeyval-35741/xkeyval.tar.xz) = 13104 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/09/01 21:17:54 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:46 agc Exp $
 
 SHA1 (tex-stringstrings-36203/stringstrings.doc.tar.xz) = ddb13ee2133fd136d529d6e01eef1b000988fa39
 RMD160 (tex-stringstrings-36203/stringstrings.doc.tar.xz) = a50b82b0b8a0382b5f50ded33d4124ea467ea4df
+SHA512 (tex-stringstrings-36203/stringstrings.doc.tar.xz) = 532c1407f9e6e4c41f969fb7b83f6b1d8a1a4a4b3fbdf79a6aefd8e7ad1fbe7f524a5dbdb2e408db36dfd2b3475c339d4687b8fc1998015e97cd05e4946574c9
 Size (tex-stringstrings-36203/stringstrings.doc.tar.xz) = 395856 bytes

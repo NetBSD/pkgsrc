@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/04/30 06:56:23 markd Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 01:02:23 agc Exp $
 
 SHA1 (tex-lambda-28669/lambda.tar.xz) = 7b801bc6ca4bc61a702571c8d13c67aeb82551f9
 RMD160 (tex-lambda-28669/lambda.tar.xz) = 07798519b571b99bf2541e41fd27e831365329ad
+SHA512 (tex-lambda-28669/lambda.tar.xz) = 09bd5abcaacfdf63975207c6a0f6bbabc7dd17ee651f69428fa40ce5964465a8d84d1d87a3bf97157059bf10e9663ad956a4dc00737daec743a13b4fdd7611dd
 Size (tex-lambda-28669/lambda.tar.xz) = 47024 bytes

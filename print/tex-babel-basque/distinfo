@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/04 12:23:15 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:47 agc Exp $
 
 SHA1 (tex-babel-basque-30256/babel-basque.tar.xz) = b439d8db876f5872f3d601c26fbc366e4d530a02
 RMD160 (tex-babel-basque-30256/babel-basque.tar.xz) = 1ae82e996c592312ba724838af37705c794b5270
+SHA512 (tex-babel-basque-30256/babel-basque.tar.xz) = 1c24255806a1a253da191609376c749ecf0901e378f574043463c7c348fd1064f86415051a76e8b751613005754a548c0fefe3dd9d95bcbbe2442705445933f2
 Size (tex-babel-basque-30256/babel-basque.tar.xz) = 2640 bytes

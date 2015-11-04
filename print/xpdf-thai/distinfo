@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2014/12/14 13:47:49 mef Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 01:03:02 agc Exp $
 
 SHA1 (xpdf-thai-2011-aug-15.tar.gz) = d8bf58d960121508fb823c7bc7475bc0008b670e
 RMD160 (xpdf-thai-2011-aug-15.tar.gz) = 16eead3ef7fc64d4c37a379e705b9146498a7484
+SHA512 (xpdf-thai-2011-aug-15.tar.gz) = 5584b590e34da29285c379e3b7a7243c28241ec6fddb3e4a8e2e7bf88b8f7aaae3483061d12c332a1ff042ec5e2b31869a67d60512ac48f7903c5e2fc871aa87
 Size (xpdf-thai-2011-aug-15.tar.gz) = 1878 bytes

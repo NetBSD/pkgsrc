@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/09/01 21:17:55 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:31 agc Exp $
 
 SHA1 (tex-newlfm-15878/newlfm.doc.tar.xz) = 1c204686d9f44d55749ce5c3efbb92a14f11d33a
 RMD160 (tex-newlfm-15878/newlfm.doc.tar.xz) = 032fdbe5dfe5233619ff7247b2c2189ae553dd72
+SHA512 (tex-newlfm-15878/newlfm.doc.tar.xz) = 5125abdb6071c6461e9baf2ff0e8a03cce7491292f511d364ccdfe9604c39ce88b0b84f686d4be2dfa19e5d8a7969af52ab0f7f7086e20eb5271bcc9f415e766
 Size (tex-newlfm-15878/newlfm.doc.tar.xz) = 342272 bytes

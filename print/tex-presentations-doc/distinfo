@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/14 17:07:35 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:38 agc Exp $
 
 SHA1 (tex-presentations-17172/presentations.doc.tar.xz) = 16a637137d1a4bf2010db17b9f47d6407cc36651
 RMD160 (tex-presentations-17172/presentations.doc.tar.xz) = b595be002a8e53e70a3b93b067504c3f68fd5573
+SHA512 (tex-presentations-17172/presentations.doc.tar.xz) = cf06471a78ec2e9f9c957a498618588cea9eece087dad9c58e657a80d14772909b1f8169686a603290aa17916942d29e5a30320eebbd0ed789be47a194585d19
 Size (tex-presentations-17172/presentations.doc.tar.xz) = 4076772 bytes

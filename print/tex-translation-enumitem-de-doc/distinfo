@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/14 17:07:36 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:54 agc Exp $
 
 SHA1 (tex-translation-enumitem-de-24196/translation-enumitem-de.doc.tar.xz) = 51aa366a98852237cf5fce83d16996ef1f57dda5
 RMD160 (tex-translation-enumitem-de-24196/translation-enumitem-de.doc.tar.xz) = 8443f68021ce258b1d978671e99bc01e05829657
+SHA512 (tex-translation-enumitem-de-24196/translation-enumitem-de.doc.tar.xz) = e7813ce94a902b4518dc5ee31b4e9ab0d5e3b9cbea15f2fa7a076e2844c1595db327179e42711a4f1c0bdcdb59c5d8154d927d5a6d26e9d2717bca2892284d12
 Size (tex-translation-enumitem-de-24196/translation-enumitem-de.doc.tar.xz) = 607768 bytes

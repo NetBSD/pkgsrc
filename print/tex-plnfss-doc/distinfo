@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 14:09:53 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:37 agc Exp $
 
 SHA1 (tex-plnfss-15878/plnfss.doc.tar.xz) = efd5464328c65ef37fe9ce3265f8e937257e94c6
 RMD160 (tex-plnfss-15878/plnfss.doc.tar.xz) = 37eff9cc763aecd829a8625b15cd14c2ae3c7ef6
+SHA512 (tex-plnfss-15878/plnfss.doc.tar.xz) = d47f1c1edb612353391c9ea2fc5da3a3c6fb53f8906f8fc59c5c177e924e0810b8c1e987b765eacc0f8d4aac0ebc99c01d36af5759bb93a0e2b27b4ed849c1c1
 Size (tex-plnfss-15878/plnfss.doc.tar.xz) = 7696 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/15 17:51:48 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:24 agc Exp $
 
 SHA1 (tex-latex-veryshortguide-29803/latex-veryshortguide.doc.tar.xz) = 48e617054c42833984ccdcf6da7ae2e958f23e89
 RMD160 (tex-latex-veryshortguide-29803/latex-veryshortguide.doc.tar.xz) = 7d17e9b7eeef6fc33a9ef6412d770d73ba4da425
+SHA512 (tex-latex-veryshortguide-29803/latex-veryshortguide.doc.tar.xz) = bae4c8ddfed49ae002d82621d554e1e7b4781516a5d00f4c7f4890b3e90acca68e982840e1a3584eb7e67e37d7eff4129b109dc4ea26d34a02e3ca317b4dc477
 Size (tex-latex-veryshortguide-29803/latex-veryshortguide.doc.tar.xz) = 1597228 bytes

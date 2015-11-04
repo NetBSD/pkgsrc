@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/04 12:37:51 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:49 agc Exp $
 
 SHA1 (tex-babel-polish-30283/babel-polish.tar.xz) = f359ebc5e4bc96810bd69d44b46e6f6ea5e73f60
 RMD160 (tex-babel-polish-30283/babel-polish.tar.xz) = 463e9a10c5dd126aefce40b9cfadad8b3e98489a
+SHA512 (tex-babel-polish-30283/babel-polish.tar.xz) = ac149bde69aa376a827a8075d277b6bdf9e01105699b273864934ebf60ce0a9d57c0ee031d5c6ab2457e43eae2f550a3f8dec0ddc82c8f95696d8f06c2e90ccf
 Size (tex-babel-polish-30283/babel-polish.tar.xz) = 3348 bytes

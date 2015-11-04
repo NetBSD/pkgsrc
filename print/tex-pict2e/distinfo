@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/16 10:30:18 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:36 agc Exp $
 
 SHA1 (tex-pict2e-32658/pict2e.tar.xz) = a29283f437182d664498bf3416328440f1440356
 RMD160 (tex-pict2e-32658/pict2e.tar.xz) = b9bb4049ef983f77ec6922ec9c35a96c9dd88e12
+SHA512 (tex-pict2e-32658/pict2e.tar.xz) = 7873c4059928bb43bdd874171990b7c44f08dae2606a73d8d41e081a6ffa0ec506da984cb8a2ee3ff205c925150605125b5bfb4c567d7553b2dcecf6e2dfa039
 Size (tex-pict2e-32658/pict2e.tar.xz) = 7484 bytes

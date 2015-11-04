@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/04/18 19:31:47 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:28 agc Exp $
 
 SHA1 (tex-mdwtools-15878/mdwtools.tar.xz) = ef7e04b932f5c479e0e3c4f2ea2be7729b2c99b7
 RMD160 (tex-mdwtools-15878/mdwtools.tar.xz) = 18ac9c8ad313b14f12af1e7b76de1d051af59076
+SHA512 (tex-mdwtools-15878/mdwtools.tar.xz) = 6276e848451734503054ceec8bf9d41076d9b3c2bd979a7e8cf21a0954e1c921b18987f2e50deacb66e7f8e30489f18ec396f266c6724f833e7b860f6660f180
 Size (tex-mdwtools-15878/mdwtools.tar.xz) = 19088 bytes

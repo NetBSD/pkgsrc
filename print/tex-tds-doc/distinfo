@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/15 17:51:50 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:49 agc Exp $
 
 SHA1 (tex-tds-15878/tds.doc.tar.xz) = 3f14fadace859e39453824641bd110c7abba58a1
 RMD160 (tex-tds-15878/tds.doc.tar.xz) = 63d2f09d2addfbb0dc5ee0f659505bc546985bfe
+SHA512 (tex-tds-15878/tds.doc.tar.xz) = e1bb30409a6083780c1b5c0fc5eb36922ae215ae97ac4eae218b27d29471a5d1dd16c3c8ec7a36cdd97c5b6f86a915ed5b8409852666afbce1e528b08658cc1b
 Size (tex-tds-15878/tds.doc.tar.xz) = 232652 bytes

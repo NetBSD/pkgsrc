@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/04/09 21:57:11 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:51 agc Exp $
 
 SHA1 (tex-texpower-0.2/texpower.tar.xz) = 3cf87bf551902f7c1c9b9d4346179b28fde232eb
 RMD160 (tex-texpower-0.2/texpower.tar.xz) = 258d14e5de50dd4592de857b40976c58515c1ff1
+SHA512 (tex-texpower-0.2/texpower.tar.xz) = c0ea5ca45b8a397342dafa218980c852d345226adc4c1f241393564df7a8512a707c7493bc7500b090c2696e3617c653502823065e1c6911cf48877f69745a6f
 Size (tex-texpower-0.2/texpower.tar.xz) = 40472 bytes

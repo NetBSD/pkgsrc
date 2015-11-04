@@ -1,9 +1,11 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/02/07 19:43:28 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:37 agc Exp $
 
 SHA1 (dvipsk-ja_5.98+p1.7b.orig-jpatch.tar.gz) = f1e55cd259353a1df6bafba7179876187b5509df
 RMD160 (dvipsk-ja_5.98+p1.7b.orig-jpatch.tar.gz) = 7f847e43b479d3b96414acdd25934db9ecaa8045
+SHA512 (dvipsk-ja_5.98+p1.7b.orig-jpatch.tar.gz) = 73d838c128b50b6ecc93c69b1fd0941f98de52309dd6702f51d26ae0076aa94145bb3809f05378a941b34a9f6f0af28bf642cac98f7ce9bf9793f42a13aed437
 Size (dvipsk-ja_5.98+p1.7b.orig-jpatch.tar.gz) = 175191 bytes
 SHA1 (texlive-20091011-source.tar.xz) = 82fc9fcdb82c63a00f4b08a51733c761cbda897d
 RMD160 (texlive-20091011-source.tar.xz) = 81b86cd93e629d6b1b3d7918848dd76babc0d5a9
+SHA512 (texlive-20091011-source.tar.xz) = 9480764615d4c41a0e423d2e612504ae060d63375561478d21ce7f7a9b944bb452001c50ad57372bcfcbc201ada7e7975386a3f39d70aa588bb91eeefc399afc
 Size (texlive-20091011-source.tar.xz) = 29683728 bytes
 SHA1 (patch-aa) = 825b091fecb17e8cc9135a0341b90e49ffd56baf

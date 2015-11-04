@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/04 12:43:16 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:50 agc Exp $
 
 SHA1 (tex-babel-sorbian-30294/babel-sorbian.tar.xz) = b226a1f51000a5df854f4a4865c2555e9e9a2b91
 RMD160 (tex-babel-sorbian-30294/babel-sorbian.tar.xz) = f6d817a103dbdee22c071a181d3dcbdf53e1e40e
+SHA512 (tex-babel-sorbian-30294/babel-sorbian.tar.xz) = 11f4d1fc6060668cec59cc767dc453093a7640be48633ab5caf59e1d01f188209d1884438e01123252b5d5499061f6e59c0a28a631de13d19548794214f776f6
 Size (tex-babel-sorbian-30294/babel-sorbian.tar.xz) = 3152 bytes

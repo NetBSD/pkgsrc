@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2015/05/03 20:25:50 wiz Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 01:01:36 agc Exp $
 
 SHA1 (LaTeX-Driver-0.200.4.tar.gz) = ca3c70b65eaa36945b425ea2fa11b7a37da92109
 RMD160 (LaTeX-Driver-0.200.4.tar.gz) = f0dfea6bf80054e3f7a7a2a28724ccb17574a5f6
+SHA512 (LaTeX-Driver-0.200.4.tar.gz) = 7ed52118076460d84aa465cbe6c637d7289e2197aff0a40a654d4fdcea9e7a96ab945c7552709ba7cc65f818828e4107477da47b3fe184e474d4baf105048993
 Size (LaTeX-Driver-0.200.4.tar.gz) = 63968 bytes
 SHA1 (patch-Makefile.PL) = 3ecf72c3d42282069cbf599f3d4eddc169ea46f3

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/28 11:55:19 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:59 agc Exp $
 
 SHA1 (tex-csbulletin-15878/csbulletin.doc.tar.xz) = 97d0399bbc9176c0cab3e95b359461005377053d
 RMD160 (tex-csbulletin-15878/csbulletin.doc.tar.xz) = 9640435406fd72b9c2d0d109a5ca5a80a583fa1c
+SHA512 (tex-csbulletin-15878/csbulletin.doc.tar.xz) = c8d042d968514d79a550938071555fa9cc2b319c2dfe377c7fa9eb7c58bee21aa0d84ef87252bb1983f45ce0f32f2bb92be4d080c7540b4342eb5b0dc408ea82
 Size (tex-csbulletin-15878/csbulletin.doc.tar.xz) = 243648 bytes

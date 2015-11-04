@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/28 11:59:09 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:48 agc Exp $
 
 SHA1 (tex-babel-galician-30270/babel-galician.tar.xz) = 9093eef53bf28a80d577cb22f1a0d5d131ccd1f8
 RMD160 (tex-babel-galician-30270/babel-galician.tar.xz) = 0f33dc4711b9b7000ad907cfc139b18349b1fca8
+SHA512 (tex-babel-galician-30270/babel-galician.tar.xz) = 619b0e33e831139b6b8ea633c3b0243b1f12275bd4a6ad0f772fe85b9c22744354fd4a6968e69bd8bb708b7822ca874d5784ac92d988600328fbd1c4e6dc437c
 Size (tex-babel-galician-30270/babel-galician.tar.xz) = 7024 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2011/01/20 16:27:16 minskim Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 01:02:42 agc Exp $
 
 SHA1 (tex-ruhyphen-21081/ruhyphen.tar.xz) = b15702d345a9e476ff17f11fc86cd08611599376
 RMD160 (tex-ruhyphen-21081/ruhyphen.tar.xz) = 12b60501ae2582c908fd6885aa9a46d0a629f49c
+SHA512 (tex-ruhyphen-21081/ruhyphen.tar.xz) = 61434bd3df47d224f4c31213601f976dac8e70e6745e3e4073163195cd00094f6990def3c404eb3e6e6a267f9ecc9ecfa6150afd0951f28275238cba1ddb716b
 Size (tex-ruhyphen-21081/ruhyphen.tar.xz) = 56844 bytes

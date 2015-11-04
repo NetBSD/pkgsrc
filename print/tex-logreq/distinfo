@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/03/22 20:19:53 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:26 agc Exp $
 
 SHA1 (tex-logreq-19640/logreq.tar.xz) = 504e829847a5d310908976fd9aee9920a7f09a60
 RMD160 (tex-logreq-19640/logreq.tar.xz) = e3fe80d00b257fe4254f3ab22d0f4ed02d3cdde9
+SHA512 (tex-logreq-19640/logreq.tar.xz) = a866201bd2d5ac375090404efc0d0c2cf27fe04383e4f574ed5cfa5994c8244d5b850a448aafbe312d668110ff5ea747e8e3e1a1a495350b49c13f0bea08adab
 Size (tex-logreq-19640/logreq.tar.xz) = 3192 bytes

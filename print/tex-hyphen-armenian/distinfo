@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/16 02:51:22 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:14 agc Exp $
 
 SHA1 (tex-hyphen-armenian-23085/hyphen-armenian.tar.xz) = 3fce8b3c0e3b83e4e97ff093b354783a858a2f4a
 RMD160 (tex-hyphen-armenian-23085/hyphen-armenian.tar.xz) = e2a6d7011d6900d0e0f6d84dba0448f371760c21
+SHA512 (tex-hyphen-armenian-23085/hyphen-armenian.tar.xz) = da371568e9e187ee1e9ad63705ac02ed13205cb9aed16042e318a7e533d1a7daf3ba75d8e62afd3005cd87a868c096a791c6f74df01f459bd08f6191b999f551
 Size (tex-hyphen-armenian-23085/hyphen-armenian.tar.xz) = 396 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/04 12:42:45 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:50 agc Exp $
 
 SHA1 (tex-babel-slovenian-30351/babel-slovenian.tar.xz) = 91c7fced0a472cdcdbc00c2b55eaf3c171579f78
 RMD160 (tex-babel-slovenian-30351/babel-slovenian.tar.xz) = 4931b08c987594c45a2ba42cdbf53e2ea48da1ea
+SHA512 (tex-babel-slovenian-30351/babel-slovenian.tar.xz) = 0a4fc638d95d01046f33414e2cadd683b5cfdf7044d761b164ac92711fcfdd946405dc4aaecf22a191792cf579c250b03d8879b7b77144c6141f01b513f9a93a
 Size (tex-babel-slovenian-30351/babel-slovenian.tar.xz) = 2396 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/04 12:25:03 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:47 agc Exp $
 
 SHA1 (tex-babel-bulgarian-31902/babel-bulgarian.tar.xz) = 1820c8220aed0ae89b029e260a14f6ce2a4febc5
 RMD160 (tex-babel-bulgarian-31902/babel-bulgarian.tar.xz) = 1d11085372381e8b0140c4f9069383a8e57265a0
+SHA512 (tex-babel-bulgarian-31902/babel-bulgarian.tar.xz) = d5d16d5575d64f63a31fe54609951de94ccf4cff6135cc60587346e283736c9f35fd6a474711e1873b90a6095c91601e9b5df69182d4124d552641d3424a199f
 Size (tex-babel-bulgarian-31902/babel-bulgarian.tar.xz) = 5788 bytes

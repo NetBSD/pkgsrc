@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/04/27 06:46:59 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:58 agc Exp $
 
 SHA1 (tex-cmap-31477/cmap.tar.xz) = dfc1ba9dc522356e90dd0c482dc3c8ba420ba9e9
 RMD160 (tex-cmap-31477/cmap.tar.xz) = 73fa16b6af0b0dfa3ba3e82b0e37bfbe9ccf2d6c
+SHA512 (tex-cmap-31477/cmap.tar.xz) = 51243bd430e41baf84af21c985a596b05771a104df4c6d5c18290720a5391ff42e8693f301f0b08024d1964835145f9fbfed0ee66555b452b036659050c3ae3c
 Size (tex-cmap-31477/cmap.tar.xz) = 5552 bytes

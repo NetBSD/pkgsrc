@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.10 2013/02/03 20:00:28 jakllsch Exp $
+$NetBSD: distinfo,v 1.11 2015/11/04 01:01:32 agc Exp $
 
 SHA1 (epdfview-0.1.8.tar.bz2) = 72da8958f58cf7ec55b55541f2e67895b402df3f
 RMD160 (epdfview-0.1.8.tar.bz2) = f9444fe278863fdbb545543957a8777e1129ffed
+SHA512 (epdfview-0.1.8.tar.bz2) = e81ca39158ed77040a00b69cdbbea4726a1bbf4885a096aaa3dfc4c64d0cbcadabdc69c559bb14d23c2bf7fc8244799176d2c2d5689ab670c13237edc10e8e40
 Size (epdfview-0.1.8.tar.bz2) = 466270 bytes
 SHA1 (patch-src_PDFDocument.cxx) = e9f126631fc65459fc8e9a97ddaa3d57d08aa755
 SHA1 (patch-src_gtk_StockIcons_h) = be421819baa4c05916d3dc213bd9d9968b9e83ca

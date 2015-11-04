@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2010/09/14 00:36:53 minskim Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 01:02:47 agc Exp $
 
 SHA1 (tex-subfigure-15878/subfigure.doc.tar.xz) = db34b0ffc29012b15fa217152dbd50f06a3ff3f5
 RMD160 (tex-subfigure-15878/subfigure.doc.tar.xz) = 9191b9b854bf325c9ccf17f3a8ee5e0c87d38e11
+SHA512 (tex-subfigure-15878/subfigure.doc.tar.xz) = b3eb910ec996a061b200b38faf4ff6066a9fabf49b09629b5cadaafc56908128cab81b8e53418d44e6d0c91af8b23e9fc6254599ae4d05c90dfd8f6a95049d9f
 Size (tex-subfigure-15878/subfigure.doc.tar.xz) = 344700 bytes

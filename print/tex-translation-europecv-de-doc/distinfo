@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/14 17:07:36 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:54 agc Exp $
 
 SHA1 (tex-translation-europecv-de-23840/translation-europecv-de.doc.tar.xz) = 7d580472007091c3b6626e8ece7c2f301c53a044
 RMD160 (tex-translation-europecv-de-23840/translation-europecv-de.doc.tar.xz) = afced456ad8204f78e44eab3a94be5384be4ce39
+SHA512 (tex-translation-europecv-de-23840/translation-europecv-de.doc.tar.xz) = f9d38f6cf373383193a47988ef4f75586e7e322c496fe32581a989220eb1ad1188e6aedca81677b398c8747b837bcb1cb8df8483784b53eefe394b935947f25a
 Size (tex-translation-europecv-de-23840/translation-europecv-de.doc.tar.xz) = 669668 bytes

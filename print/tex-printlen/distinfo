@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2010/09/24 16:46:56 minskim Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 01:02:39 agc Exp $
 
 SHA1 (tex-printlen-19847/printlen.tar.xz) = 854776ac78fe100cb00e23e8a23a8f9848e09c40
 RMD160 (tex-printlen-19847/printlen.tar.xz) = b1b3b9e3954593bf720bad533710c9a938f82df8
+SHA512 (tex-printlen-19847/printlen.tar.xz) = 625daf12b2af4452cb18281afb97a670d293b1476ce6dd20394f76910960fbc05906db2d0042fbae7e887de8e6db3a019abb5a61eb232f439a1849d7ebd6c223
 Size (tex-printlen-19847/printlen.tar.xz) = 1844 bytes

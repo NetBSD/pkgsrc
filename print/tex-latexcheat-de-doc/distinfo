@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/14 17:07:35 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:24 agc Exp $
 
 SHA1 (tex-latexcheat-de-35702/latexcheat-de.doc.tar.xz) = 265af75df212850679afdaaf41291950b7266c72
 RMD160 (tex-latexcheat-de-35702/latexcheat-de.doc.tar.xz) = 20e699571e1ea606adde9655a90f5b21a67301a2
+SHA512 (tex-latexcheat-de-35702/latexcheat-de.doc.tar.xz) = f9ac8935264a2789ada591e2cdb37d3897fc8655e06761f388d4d425362a9e9289e5673d4f00fff19372ecdf63cfe5a46b7df75c6ba412182a5af3da8ab386ee
 Size (tex-latexcheat-de-35702/latexcheat-de.doc.tar.xz) = 528444 bytes

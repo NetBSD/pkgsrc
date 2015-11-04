@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/03/21 17:38:39 drochner Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:35 agc Exp $
 
 SHA1 (libgxps-0.2.2.tar.xz) = 8d5a2151aeb631119f0c75e1bb10bbc71a0da78d
 RMD160 (libgxps-0.2.2.tar.xz) = 4a4abb182d20342fa4d8856854ab4692dcd5d61f
+SHA512 (libgxps-0.2.2.tar.xz) = 96fa462cb4bba9cdba3d8cfe416199f8d956d17397e3514aa6168c7acc865a30e9347d8f9850f16a8c2a0a83dc83f7d7d2bd1806e27a2af0914ce53fed2b4467
 Size (libgxps-0.2.2.tar.xz) = 302844 bytes
 SHA1 (patch-aa) = 5756ca52be824adc388982353dc9530520cdc927

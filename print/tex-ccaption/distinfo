@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/16 10:30:14 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:54 agc Exp $
 
 SHA1 (tex-ccaption-23443/ccaption.tar.xz) = d15c0dd80b13ffd723f4b9364b4e5d378be1bc87
 RMD160 (tex-ccaption-23443/ccaption.tar.xz) = bc6afd4c28fc57804aa60c86b2e91c4b85958b9b
+SHA512 (tex-ccaption-23443/ccaption.tar.xz) = 88fd04038d59a4da98e1815f24703f7768844fda80a7020633790bf3669a16d7ea5d1d9a998a2c8e96c51c6024c998d9f57b4cd6a283e7eed57a94566780c7a6
 Size (tex-ccaption-23443/ccaption.tar.xz) = 5472 bytes

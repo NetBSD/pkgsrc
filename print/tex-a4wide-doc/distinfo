@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2011/01/19 16:35:07 minskim Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 01:01:41 agc Exp $
 
 SHA1 (tex-a4wide-20943/a4wide.doc.tar.xz) = dfd07b6e92d4995ba0e663768b380b68e5c3b56a
 RMD160 (tex-a4wide-20943/a4wide.doc.tar.xz) = b4ae81fc1d91345037809d69e4d463a88f459ad2
+SHA512 (tex-a4wide-20943/a4wide.doc.tar.xz) = 6fbc191d702d0c988bd5c9fe82c24fdf10ea8121f559fa4b6d79a0955e645cb94c801c43a4dffd205946adfb17790326f1574e3b8212f8aa77c2cd0a5f6d57a0
 Size (tex-a4wide-20943/a4wide.doc.tar.xz) = 134736 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/08/24 17:19:57 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:43 agc Exp $
 
 SHA1 (tex-algorithmicx-15878/algorithmicx.tar.xz) = 128e4de7ecd8d21493a8adebf9123f6b86775f83
 RMD160 (tex-algorithmicx-15878/algorithmicx.tar.xz) = a8927c29a266b8c9f0d940c0b1a9debb70c6ed3a
+SHA512 (tex-algorithmicx-15878/algorithmicx.tar.xz) = 73e1f176b73131395b6a478b5fdd2837e7f3fb5fa4e1dde82d5f3f4ef518e363373157d4911106b95aa36e95aefecf9525893c1246dec78fddcdc3a764df605c
 Size (tex-algorithmicx-15878/algorithmicx.tar.xz) = 7704 bytes

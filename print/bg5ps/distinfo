@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2011/07/03 20:44:45 jym Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 01:01:31 agc Exp $
 
 SHA1 (bg5ps-1.3.0.tar.gz) = b7fc700ff1336b74fe447fd4b13bca7ed3604aa8
 RMD160 (bg5ps-1.3.0.tar.gz) = c35fcd17eedf4fb85db4bb53b6f0ea44a185ba6d
+SHA512 (bg5ps-1.3.0.tar.gz) = 2956a54d725bc2fc8bb0dfeaa29037dac749c79fadeadb3c72cace60fff3f2552ed33ececb098bbe6e071a2d52f20205ea7ac3cf6a5ba29e89de7301cb8146c6
 Size (bg5ps-1.3.0.tar.gz) = 120390 bytes
 SHA1 (patch-aa) = 07b7bcfd6475e57c448d3e9db11ac7837a96269b
 SHA1 (patch-ab) = 1def7918c5809dc08da8cbc2916cfae5e46f5b41

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/04/26 04:02:05 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:47 agc Exp $
 
 SHA1 (tex-babel-english-30264/babel-english.tar.xz) = ecaad43e494e7310481e56ea2c7d0e18339d9ae3
 RMD160 (tex-babel-english-30264/babel-english.tar.xz) = aa1611c9d2bd1b175197e4f2baa2cef3f2451b4c
+SHA512 (tex-babel-english-30264/babel-english.tar.xz) = a98aecbe1e9ff3f0dca073b7b05c2e60471698ecdacfde875cbfa8a58e8c55a5b0ce89c31e6671f7226f55de1ef016d64d19fe161e78e28307b41f4f04a06c0a
 Size (tex-babel-english-30264/babel-english.tar.xz) = 2680 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/01/08 02:01:46 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:42 agc Exp $
 
 SHA1 (tex-sauerj-15878/sauerj.doc.tar.xz) = 7737e8f9c690220c77ad98912f4a3a6504cf68d1
 RMD160 (tex-sauerj-15878/sauerj.doc.tar.xz) = 6c1da2095d9b0181428f952934fba71b3b6f42bc
+SHA512 (tex-sauerj-15878/sauerj.doc.tar.xz) = 4da9df70b2c9b95566d0a2e984200e59796f15f7237cd7a8c56eb1e7406f5bfa0ae945cd7874cb6e9e760157e6ee41c5206404fde34160922500ca8f726d38bc
 Size (tex-sauerj-15878/sauerj.doc.tar.xz) = 543060 bytes

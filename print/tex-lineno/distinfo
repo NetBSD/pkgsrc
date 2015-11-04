@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/04/27 07:09:42 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:26 agc Exp $
 
 SHA1 (tex-lineno-21442/lineno.tar.xz) = 3929b7e6b2de877285ec326362eea25a71dd1999
 RMD160 (tex-lineno-21442/lineno.tar.xz) = bcf70c75b14a8625f94caf6dbc592a84cbd54cf8
+SHA512 (tex-lineno-21442/lineno.tar.xz) = be0a415b1a0eaaa1ba250406d4a2c0d780abb314383d598fb9e2c65f1de8ee23c355cc3ddb9822d55ec8e5795a2f7adf5aafbd83793116457fb63d36f6b59110
 Size (tex-lineno-21442/lineno.tar.xz) = 62240 bytes

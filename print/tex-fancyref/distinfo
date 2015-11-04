@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/04/27 06:56:30 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:07 agc Exp $
 
 SHA1 (tex-fancyref-15878/fancyref.tar.xz) = 8eaca415fe09f6d855cae91e946922263896802f
 RMD160 (tex-fancyref-15878/fancyref.tar.xz) = 6dd5f90021a66ccc86fad31905fff5ab9da236c3
+SHA512 (tex-fancyref-15878/fancyref.tar.xz) = fa311968139da183f486fab0bc33a5f94c4403251ec85cfe8f7ddc00cb64805ca4993c3897d5c671f63b2282417690f07e6895ce7ae4e5d31726e2c2d374a74e
 Size (tex-fancyref-15878/fancyref.tar.xz) = 3372 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/16 10:30:15 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:09 agc Exp $
 
 SHA1 (tex-floatflt-25540/floatflt.tar.xz) = 1c5b8a5c461bac1e73734c1f3b47bc0b319140fe
 RMD160 (tex-floatflt-25540/floatflt.tar.xz) = 8654c70c56198eddfad066f00f50374d2f2c8a21
+SHA512 (tex-floatflt-25540/floatflt.tar.xz) = beb0540e3d8cf3f5d01a1eede3619c48a6d69400a1606545538b981a8dd23f026e3038548cd4013d3848ad0b74b1b8a7ff97bf8d39e50f844e607ceb3120643c
 Size (tex-floatflt-25540/floatflt.tar.xz) = 2808 bytes

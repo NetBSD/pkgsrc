@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2010/11/08 16:44:35 minskim Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 01:02:16 agc Exp $
 
 SHA1 (tex-hyphen-french-20144/hyphen-french.tar.xz) = f66fe28e0eb46e8ed1ea73a229abeb663e1bdf1a
 RMD160 (tex-hyphen-french-20144/hyphen-french.tar.xz) = 8566cdc5d51c1dadbdc288eceb8b7e6e74fd37fa
+SHA512 (tex-hyphen-french-20144/hyphen-french.tar.xz) = c575df88525ab7afb8515819d7ddb1938565630047dd38f5662ecffd88e6290d3a3228fd357bca353bd98788bcf5edc554208063d4b99f81360bb1d30c1522b1
 Size (tex-hyphen-french-20144/hyphen-french.tar.xz) = 368 bytes

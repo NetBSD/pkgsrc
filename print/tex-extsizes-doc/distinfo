@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/05/08 18:41:27 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:07 agc Exp $
 
 SHA1 (tex-extsizes-17263/extsizes.doc.tar.xz) = 772f3980eeac51f24f77318d2df87bb9d6512d05
 RMD160 (tex-extsizes-17263/extsizes.doc.tar.xz) = 6ca343102b4a2b6a54f5089f94e2baf52c27f408
+SHA512 (tex-extsizes-17263/extsizes.doc.tar.xz) = e7179dc366c9acc9d886aa6affde9b09d3d8b31aec4f43e94b843295d96b0c2ef4b9486e8921969cfaeb82299b2327c9bc2dc2b76f49b6111408281f7310b685
 Size (tex-extsizes-17263/extsizes.doc.tar.xz) = 195100 bytes

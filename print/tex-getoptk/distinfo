@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 14:09:52 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:12 agc Exp $
 
 SHA1 (tex-getoptk-23567/getoptk.tar.xz) = 6cbe04103f7717ebfc955f7904f429a8806c6225
 RMD160 (tex-getoptk-23567/getoptk.tar.xz) = 1dfef26f0d5f770e0aaa7ba6820acdcc241e3e7e
+SHA512 (tex-getoptk-23567/getoptk.tar.xz) = 69482638382359d9d2341b3fd06098b3ac5e289246afd76444c599cbd421f96e542eef59abbef4660094a6b55eef697e4f0ecc78405801cbbd2fbd7b0e434421
 Size (tex-getoptk-23567/getoptk.tar.xz) = 4168 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/14 17:07:36 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:49 agc Exp $
 
 SHA1 (tex-templates-sommer-15878/templates-sommer.doc.tar.xz) = 0ed29de3f56f70afb0f0782cb9fb85512d40a61f
 RMD160 (tex-templates-sommer-15878/templates-sommer.doc.tar.xz) = dbbd656559b2f9af78a72e4413959f4dd0ff5571
+SHA512 (tex-templates-sommer-15878/templates-sommer.doc.tar.xz) = 649ca4c82bc6c7126974c476097a502beecf5e5210ff384d32461c3f54379bc57bb15f09a6d8cf0d9f028dcd681cfe883228ab5953d01a076b6be9df1a5d9db3
 Size (tex-templates-sommer-15878/templates-sommer.doc.tar.xz) = 14424 bytes

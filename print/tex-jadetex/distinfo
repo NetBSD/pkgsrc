@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2011/03/18 23:26:58 minskim Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 01:02:21 agc Exp $
 
 SHA1 (tex-jadetex-18835/jadetex.tar.xz) = a72d601846bc2c007c79f78872d3270ff723359a
 RMD160 (tex-jadetex-18835/jadetex.tar.xz) = 6562f1c79668901d348c2f6602432f330f8dd89b
+SHA512 (tex-jadetex-18835/jadetex.tar.xz) = 6da1e98439945f80fd1cd17d96997c7e20f168c66bb88533d8c25e9640c7b8c7a3356d8fc5e314e1e244c59411deac5828649481a1a6fd4b2d9a064ad8d4d043
 Size (tex-jadetex-18835/jadetex.tar.xz) = 29428 bytes

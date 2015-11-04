@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/06 09:11:24 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:12 agc Exp $
 
 SHA1 (tex-go-28628/go.tar.xz) = 70b7198ec0122b3abc886ea8a4da1e66ad03a598
 RMD160 (tex-go-28628/go.tar.xz) = 9fc0478c1f41fa3de67eccd10a80863931fc8c47
+SHA512 (tex-go-28628/go.tar.xz) = 73038c97aa46db6fb6d062bfe58103bf4b316d98cd21c146b4e76f62f249d8ef7f64444b143e960a0329a33bf2d41dc7104979a7d5aa579c6619b8cda8be2201
 Size (tex-go-28628/go.tar.xz) = 8988 bytes

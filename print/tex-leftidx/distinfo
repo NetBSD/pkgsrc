@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/16 10:30:16 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:25 agc Exp $
 
 SHA1 (tex-leftidx-15878/leftidx.tar.xz) = 03d65bd8613e2dd21ada3dd25f6a98bb4607fb4b
 RMD160 (tex-leftidx-15878/leftidx.tar.xz) = 891991ae9b30cba73347a7c22563c2ebe5c3ccdd
+SHA512 (tex-leftidx-15878/leftidx.tar.xz) = 4ce47b2f208deec3e7e28f8d9a200517e0b088d53fea38965fcc314395065a972fb5ccfcaff4b2436764257f3342c92acb2292bcaac88b0ae3380b3c706b6300
 Size (tex-leftidx-15878/leftidx.tar.xz) = 928 bytes

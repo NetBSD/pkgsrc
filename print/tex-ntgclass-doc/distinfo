@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/02/07 00:58:05 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:32 agc Exp $
 
 SHA1 (tex-ntgclass-15878/ntgclass.doc.tar.xz) = 2199e53c54fb45fe0956a5a542f8630aa33308c4
 RMD160 (tex-ntgclass-15878/ntgclass.doc.tar.xz) = 628372479d1b703d97cd943bdec793e614d8c75f
+SHA512 (tex-ntgclass-15878/ntgclass.doc.tar.xz) = bb9e010b6b95a719f1cc38fc4dc86fb75dccce1eeab69fd8784d8071c8d08663916ad979f80ca09c0457ad6123bb6f5181a6251b139bdbaba56c166da772427f
 Size (tex-ntgclass-15878/ntgclass.doc.tar.xz) = 1003744 bytes

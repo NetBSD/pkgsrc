@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2010/11/08 16:44:42 minskim Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 01:02:16 agc Exp $
 
 SHA1 (tex-hyphen-icelandic-20144/hyphen-icelandic.tar.xz) = bd86701c1f5b6256bf976ae164e0941e1c39be4b
 RMD160 (tex-hyphen-icelandic-20144/hyphen-icelandic.tar.xz) = 4cf8421812f286283467c68367f7921357d2515c
+SHA512 (tex-hyphen-icelandic-20144/hyphen-icelandic.tar.xz) = 95054d9b980fe8d20305dafaac7c42f5d6840d4c1c5a315f4494ce7f714db1400d4dde6e6a698dd483c845d0f6b2195fdd81693bd74b17a870f7f34158822473
 Size (tex-hyphen-icelandic-20144/hyphen-icelandic.tar.xz) = 524 bytes

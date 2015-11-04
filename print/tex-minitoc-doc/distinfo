@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/08/02 12:21:43 markd Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 01:02:29 agc Exp $
 
 SHA1 (tex-minitoc-37852/minitoc.doc.tar.xz) = 87c4aeb9ef6ffb88c29914453440449c866a5a91
 RMD160 (tex-minitoc-37852/minitoc.doc.tar.xz) = f790e7ac8d75c326f7e19e7661695496f61d90c0
+SHA512 (tex-minitoc-37852/minitoc.doc.tar.xz) = 779cff7d64829592a3d05670a0f02cb0d5d9185fd65ca0f63fce9a9f5223d61449c9bccfe722c8590fd09e9463ad3efe73a60ce3350d1262f7b796245381d9ec
 Size (tex-minitoc-37852/minitoc.doc.tar.xz) = 6275348 bytes

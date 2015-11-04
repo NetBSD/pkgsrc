@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/16 10:30:16 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:10 agc Exp $
 
 SHA1 (tex-footnpag-15878/footnpag.tar.xz) = 3741c856442f30c0a48f0946210ae8d115de8bd8
 RMD160 (tex-footnpag-15878/footnpag.tar.xz) = 0e40683db20443067777c7e5734760131f78f4f2
+SHA512 (tex-footnpag-15878/footnpag.tar.xz) = 4d0176b9a6f0b948d94eda82b60d5f9f39ef8a91298af003bcb6b9be11e9baf89a4d39b325a1cb488d1831d531bcbcea68a83b128a644a3e2110b9456c16c2ec
 Size (tex-footnpag-15878/footnpag.tar.xz) = 7716 bytes

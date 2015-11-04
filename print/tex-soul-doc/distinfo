@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/03/17 18:08:59 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:45 agc Exp $
 
 SHA1 (tex-soul-15878/soul.doc.tar.xz) = 7e32c3ebc66fef8b7267e5a31118f70b26f4e337
 RMD160 (tex-soul-15878/soul.doc.tar.xz) = 8e3d781e031cdf20d1a5b902bc2400ed32a964b6
+SHA512 (tex-soul-15878/soul.doc.tar.xz) = d542b85912f5eda252028b5f59f951e3b5f6dd6b57dd2fd8a7ec412d7bc15f60fedb8093d0cdab927c130c2571ee1be0a966e09d213b6315215910bbceacd0f9
 Size (tex-soul-15878/soul.doc.tar.xz) = 308320 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/15 17:51:50 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:49 agc Exp $
 
 SHA1 (tex-tex-font-errors-cheatsheet-18314/tex-font-errors-cheatsheet.doc.tar.xz) = aa00afef72ee5566d15155968cabee1670bbb90a
 RMD160 (tex-tex-font-errors-cheatsheet-18314/tex-font-errors-cheatsheet.doc.tar.xz) = be1e5a50910d014a11c6efc683de166934635d1e
+SHA512 (tex-tex-font-errors-cheatsheet-18314/tex-font-errors-cheatsheet.doc.tar.xz) = ca57d52129948a814b46a1b2f37bd99dfcef7b90b81e012e3d8bb30a445cf5a70857f4fc3d58f22ef7b26ca6127efe76d4cddefcf98069606d27312aede2ae7a
 Size (tex-tex-font-errors-cheatsheet-18314/tex-font-errors-cheatsheet.doc.tar.xz) = 219320 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/04 12:45:16 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:50 agc Exp $
 
 SHA1 (tex-babel-thai-30564/babel-thai.tar.xz) = ff48e31aa3177fddd5a0881a994a68d79924c79d
 RMD160 (tex-babel-thai-30564/babel-thai.tar.xz) = 112cbfca1caa58bbbe52eaef08224cecacd20884
+SHA512 (tex-babel-thai-30564/babel-thai.tar.xz) = 11da3424498f73100a5c6a49520c921ba4c6e8d9c8da6b796e37784890a38016acf7fb94235da5117cf895d725df79047ac09719cf31c36208618240b92b941f
 Size (tex-babel-thai-30564/babel-thai.tar.xz) = 6356 bytes

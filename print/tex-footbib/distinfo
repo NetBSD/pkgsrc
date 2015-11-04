@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/16 10:30:15 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:10 agc Exp $
 
 SHA1 (tex-footbib-17115/footbib.tar.xz) = 87887f113a49fe970c7d1853d4604451e1ad8d56
 RMD160 (tex-footbib-17115/footbib.tar.xz) = 94b251af4564e8f4ef2567f48f8e5ab4f4b4ad0a
+SHA512 (tex-footbib-17115/footbib.tar.xz) = e95ea93c55c4312d73ca765f75375a03bc5f2d2fcce9f1916dbcac123dada2a03fe8f765b39d09043873183bbf1c2e457e156b87048111bffa4824fd1b497142
 Size (tex-footbib-17115/footbib.tar.xz) = 6672 bytes

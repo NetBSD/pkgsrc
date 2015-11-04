@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/04/11 05:44:00 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:42 agc Exp $
 
 SHA1 (tex-acromake-doc-2009/acromake.doc.tar.xz) = e767dcdd70981f9d5107501c4418534c139cc826
 RMD160 (tex-acromake-doc-2009/acromake.doc.tar.xz) = 12279a8f0d40f37dc2c52cffa81ab8295f0b76ea
+SHA512 (tex-acromake-doc-2009/acromake.doc.tar.xz) = 7f2a30b7208a07f93c91b20343f4d930add5e9a4bc64a29fbe8a8f0f45346b870e94b7edf801a5c2d51e298bd921197af989bee518a34ab901b09b21860719df
 Size (tex-acromake-doc-2009/acromake.doc.tar.xz) = 161240 bytes

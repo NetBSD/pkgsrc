@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/05 14:36:02 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:33 agc Exp $
 
 SHA1 (tex-omega-33046/omega.doc.tar.xz) = c185954e14995eb1f443e02c27af7e2461b7023f
 RMD160 (tex-omega-33046/omega.doc.tar.xz) = 0596ae9c03b034cf90cd9c57d7fd031093861914
+SHA512 (tex-omega-33046/omega.doc.tar.xz) = ff7d4fe28ede23483a1cfdebdbe578bf282a517a503bb1e103b4b707f596b747bf30507b2c0294492a9bd67fe6def41113a2b5ea8492b6f06acadb8d8f52379f
 Size (tex-omega-33046/omega.doc.tar.xz) = 195984 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2011/01/17 23:42:37 minskim Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 01:02:11 agc Exp $
 
 SHA1 (tex-geometry-19716/geometry.tar.xz) = a8e5a8dd1edf71b44c35c4fe11e2e9d4f15fd5c2
 RMD160 (tex-geometry-19716/geometry.tar.xz) = 1dabc05d051d99695a64e4d2cd639f0633deb4dc
+SHA512 (tex-geometry-19716/geometry.tar.xz) = 6a772fa99d942f165dcbfd4a5967913f3f76bf7ea2ea45b460c184ec0eb4b790490df1c5aebcc5c58785513a234164b12bad3f4857b58e18c8f21aa009fb6e4d
 Size (tex-geometry-19716/geometry.tar.xz) = 8516 bytes

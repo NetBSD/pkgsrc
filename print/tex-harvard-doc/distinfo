@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/04/10 21:55:12 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:13 agc Exp $
 
 SHA1 (tex-harvard-doc-2.0.5/harvard.doc.tar.xz) = e72ef16139d11691432e630099c301b939be8fe2
 RMD160 (tex-harvard-doc-2.0.5/harvard.doc.tar.xz) = 11cd0306ca3f0609e571202338d83169559a0f0a
+SHA512 (tex-harvard-doc-2.0.5/harvard.doc.tar.xz) = 9c20a9476d0605cf947d8d1871b18b29744a7bf94b3ee6e3be9fea5e35dd95f0f3ed2dcae9d3a27115c18db4edf9fde21d5d43fd5ca189b6d97d6ecaafaa599f
 Size (tex-harvard-doc-2.0.5/harvard.doc.tar.xz) = 75192 bytes

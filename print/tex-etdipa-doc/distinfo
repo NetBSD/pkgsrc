@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/14 17:07:34 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:05 agc Exp $
 
 SHA1 (tex-etdipa-36354/etdipa.doc.tar.xz) = 3832191b26e65c23b94f43e103d324e9cf5794f2
 RMD160 (tex-etdipa-36354/etdipa.doc.tar.xz) = f833a95918bed26369614c86d35bf8369e1fbd4d
+SHA512 (tex-etdipa-36354/etdipa.doc.tar.xz) = ebdfbaa14bde89e426b194fc921b01262b672f2c783bd103d76e4cb164116894dd883e7020fe05ae5906565f2735d58e6d7cbdc2a1bdacd04f6d1911ecd5d414
 Size (tex-etdipa-36354/etdipa.doc.tar.xz) = 1019904 bytes

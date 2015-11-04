@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/16 02:51:23 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:17 agc Exp $
 
 SHA1 (tex-hyphen-kurmanji-25990/hyphen-kurmanji.tar.xz) = 5daddb84263049a723e65fc302210b1e11c9d110
 RMD160 (tex-hyphen-kurmanji-25990/hyphen-kurmanji.tar.xz) = e5f8f04ef9bffd1dba665310e656b35410c804ba
+SHA512 (tex-hyphen-kurmanji-25990/hyphen-kurmanji.tar.xz) = ae8a8169f0d284e55c85418e198432b9dc78465692becef3e23ba1cb22d768b1756a87c14d356853b172624e61adec35ba0491eace118d49ce0f63faa51868e4
 Size (tex-hyphen-kurmanji-25990/hyphen-kurmanji.tar.xz) = 456 bytes

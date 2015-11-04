@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2012/07/11 12:58:02 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:03:01 agc Exp $
 
 SHA1 (tex-xtab-23347/xtab.doc.tar.xz) = e7c961f724623865d328321bfab0a9ae02b4eb4d
 RMD160 (tex-xtab-23347/xtab.doc.tar.xz) = 3fceb1faee6918834fd1d045080902d75be765ed
+SHA512 (tex-xtab-23347/xtab.doc.tar.xz) = c5ad58c9c01de805c8918212f9024a2c1ad2496b7b96d733cb02cec99276f8de77d204d0f70059746aa4a3d7ed0e0e9e3f8c2f91faeabc3a279b04c53761666e
 Size (tex-xtab-23347/xtab.doc.tar.xz) = 362720 bytes

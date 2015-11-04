@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/16 10:30:17 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:31 agc Exp $
 
 SHA1 (tex-multibib-15878/multibib.doc.tar.xz) = ed41434c7fc7ef52572db733120f97e64ca9393e
 RMD160 (tex-multibib-15878/multibib.doc.tar.xz) = 96f0fd5a6f3fa98f51fe0e45f2a02cd2c3fd34bf
+SHA512 (tex-multibib-15878/multibib.doc.tar.xz) = 9a0a8336805f123da3c60eb0c7071e5b0a953608d0f4876e2ec1e09a5dcaa78fd33cb6483a361f85839936ed9da5c90f20bf608d7a50223ee11b2b79dd371541
 Size (tex-multibib-15878/multibib.doc.tar.xz) = 188848 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2010/10/28 17:21:56 minskim Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 01:02:43 agc Exp $
 
 SHA1 (tex-selectp-20185/selectp.tar.xz) = e451706e797798928169fd3958c00c5f50b58967
 RMD160 (tex-selectp-20185/selectp.tar.xz) = a2f491f20aa45f4cf07b28bae641a9f09f841b0a
+SHA512 (tex-selectp-20185/selectp.tar.xz) = e75bd45fa66b89671553c07f37c897b4e7ae808bcae43a5d89ebd02dbd2bf01f9d251cc19774197a1e7fb761b5f10b85f45866ec0c5831c18a536de62abdd7dd
 Size (tex-selectp-20185/selectp.tar.xz) = 4168 bytes
