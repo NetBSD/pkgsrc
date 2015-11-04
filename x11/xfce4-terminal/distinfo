@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.8 2015/04/21 08:56:45 jperkin Exp $
+$NetBSD: distinfo,v 1.9 2015/11/04 03:29:06 agc Exp $
 
 SHA1 (xfce4-terminal-0.6.3.tar.bz2) = 4dd4d2bef8101f563487b0230346070930ff689f
 RMD160 (xfce4-terminal-0.6.3.tar.bz2) = 2d369f99c4eb45b19c5348e5520d14c43160a9f6
+SHA512 (xfce4-terminal-0.6.3.tar.bz2) = 805390b75178b3a2fbff4f8dfe972474e5575ad5a80aaf775f7b4086f975cf5b444a335b1ec1a9a39bc89642c71e1d0cb1bbc14d96b913980bd231d32a081c49
 Size (xfce4-terminal-0.6.3.tar.bz2) = 815207 bytes

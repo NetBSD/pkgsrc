@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2015/04/02 22:16:47 tnn Exp $
+$NetBSD: distinfo,v 1.8 2015/11/04 03:29:03 agc Exp $
 
 SHA1 (xf86-video-rendition-4.2.5.tar.bz2) = 930e99e4d44418b1e55f11a2a8525b42b0e2d3b5
 RMD160 (xf86-video-rendition-4.2.5.tar.bz2) = cbd0441ed0aa4bf13765fecfe9ab246fab951ab7
+SHA512 (xf86-video-rendition-4.2.5.tar.bz2) = 203529e2a9c917362ac7c9b4247a9a0a4a7e1911bd022a26b00f467ec4cfd9ce742465aba29618cbfaa5ac5ff0b43e5a54f651e45e81aa950776685e4f74ba72
 Size (xf86-video-rendition-4.2.5.tar.bz2) = 356351 bytes
 SHA1 (patch-src_rendition.c) = 186c838964c83f34e39ff74c7525b19601a2577e
 SHA1 (patch-src_rendition.h) = 1d69e2b9e92de84d25027a67c09077baf712ece3

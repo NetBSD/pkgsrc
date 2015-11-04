@@ -1,16 +1,20 @@
-$NetBSD: distinfo,v 1.118 2014/03/10 18:03:35 jperkin Exp $
+$NetBSD: distinfo,v 1.119 2015/11/04 03:28:43 agc Exp $
 
 SHA1 (Daemon.README) = eb1e6af52adc02ded77af17e8953134b7e60d23b
 RMD160 (Daemon.README) = 39edd92ed4314397080f32a8caff0ac3f716ecf4
+SHA512 (Daemon.README) = 8aaf704a95c7cd25c85c4e0d789ed050b555f3ec0a3c11754b79d8b118b68c32d0eac1fbc3022124b10a7c588e78b592e77ad2f718ab4120a95b8859ca94fa5b
 Size (Daemon.README) = 2191 bytes
 SHA1 (Daemon.png) = e77a42c644beecd66c4b95c0ae68c08c728a4e6d
 RMD160 (Daemon.png) = eb317dc7ac501ee03aac1276856eee14674e3da7
+SHA512 (Daemon.png) = 60a5406526f351644bb2c0bfd3d0b04ffe652bac9adf156e03c4f3c143671527db383e90e376475cfdcae5a94d1d39bd0a18318e46dd27c7ee1f89a08db52284
 Size (Daemon.png) = 15725 bytes
 SHA1 (NetBSD-flag-1.0.png) = a9cf264a52ae0a602eec956d91222e299c7dee5c
 RMD160 (NetBSD-flag-1.0.png) = 2eac20df70396169819059a704e6a85ae10234b0
+SHA512 (NetBSD-flag-1.0.png) = 79921ca035a3aafba9f9c750fd9793d146ffbe64238cd76a11eab72d98f6eb89844efabb17f2b8c49bc5e638c7fbfc61ae29c68b862abc1aecd545ea65e61654
 Size (NetBSD-flag-1.0.png) = 4532 bytes
 SHA1 (kdebase-3.5.10.tar.bz2) = 1a72e4170a0a953ed70c0693a034947d87b6efbd
 RMD160 (kdebase-3.5.10.tar.bz2) = 5845e94fbb8b5b64934d62dc9bd3b580d26d07bc
+SHA512 (kdebase-3.5.10.tar.bz2) = f83ea197cedfce3b2be3038c25a88131f210183a8330d8bfb503e84ea8df2dd019b2f245de1ed75d8102f95f69fbde3d26c29e2ae228cbbd270ad2aadacb8db6
 Size (kdebase-3.5.10.tar.bz2) = 24339704 bytes
 SHA1 (patch-aa) = db07abc7751e0ebe9f96337310fd12976cec88cb
 SHA1 (patch-ab) = 353de4dfb9f465ad5c3349f65854726fdb52dbed

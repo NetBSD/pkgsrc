@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/04/17 19:54:46 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 03:28:46 agc Exp $
 
 SHA1 (libXpresent-1.0.0.tar.bz2) = 8893cca785dc94f4a001b53f4308588ff6c3900a
 RMD160 (libXpresent-1.0.0.tar.bz2) = f942922ec42c641b817a46ac5e67fc350cee9eb4
+SHA512 (libXpresent-1.0.0.tar.bz2) = e88b4ec4fcbc0417a0cbecc0ecd73f8085c496dc6d1a4902b6550750a69a1cb8bb76c436c7941ee3bf3c61ffc85bbd8f8327fca30f14815dbef1cd53bb8db16b
 Size (libXpresent-1.0.0.tar.bz2) = 263461 bytes

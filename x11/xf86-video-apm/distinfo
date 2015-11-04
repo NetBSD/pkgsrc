@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2015/04/02 22:16:45 tnn Exp $
+$NetBSD: distinfo,v 1.8 2015/11/04 03:29:01 agc Exp $
 
 SHA1 (xf86-video-apm-1.2.5.tar.bz2) = a4cdb587f94c0fd28bea92b2469ea1e55d6d6589
 RMD160 (xf86-video-apm-1.2.5.tar.bz2) = 8a8ef0e08eedc12bb3ee901c3222e7a5d14ed7b4
+SHA512 (xf86-video-apm-1.2.5.tar.bz2) = 652307d5e21fcd0df890b941821f409cc0c9846133cf7e522799710d28ebf0d8ff2d8ead3235d8207169f416a6561bc14b4fedb1baaddb1bddf03007372af622
 Size (xf86-video-apm-1.2.5.tar.bz2) = 325277 bytes
 SHA1 (patch-src_apm.h) = d3aa30015f8a3a305cf4076ca356ad2c7a3ae700

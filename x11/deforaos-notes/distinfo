@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2015/09/01 00:28:03 khorben Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 03:28:27 agc Exp $
 
 SHA1 (Notes-0.0.0.tar.gz) = 662f2cfe9cea30f7bf00c421d4dca8c905e8cd74
 RMD160 (Notes-0.0.0.tar.gz) = 72efd9bd7f915a27a9baf168301a60e1a886a717
+SHA512 (Notes-0.0.0.tar.gz) = 49d0fb451defc4269a274ac2f84c085b452a931e3cc03677cff8984aa9842d37693c55e5247b518c93f1ebb83ea43fb085e93809a74d3c9af624c7ccdc77d63e
 Size (Notes-0.0.0.tar.gz) = 16666 bytes
 SHA1 (patch-tools_Makefile) = 1a805aef9fad94a5420edf75001b218393f19e57

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2009/12/23 19:22:28 abs Exp $
+$NetBSD: distinfo,v 1.8 2015/11/04 03:28:56 agc Exp $
 
 SHA1 (wmavgload-0.7.0.tar.gz) = 9225ced4e799a900a18374613396b500740f13a8
 RMD160 (wmavgload-0.7.0.tar.gz) = 1d1430f6a5e20eeed1f4a00e56695f7b17b78384
+SHA512 (wmavgload-0.7.0.tar.gz) = 6d51ecd256c4f37b3d60e86221620cc3fdc4cc6d7698e5ef5cc9ab3c2bf4faaf8945f8540df2d42d564473305443c78fd0261291da3ba7729b5529eb79b1068c
 Size (wmavgload-0.7.0.tar.gz) = 11643 bytes
 SHA1 (patch-aa) = 999801add5bde66b1ac081632295a3186653c761
 SHA1 (patch-ab) = afe7dfe0c89a630fb129c9264e6c6fbad333439a

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.19 2015/04/21 08:56:43 jperkin Exp $
+$NetBSD: distinfo,v 1.20 2015/11/04 03:28:48 agc Exp $
 
 SHA1 (libxfcegui4-4.10.0.tar.bz2) = 6d6f24a7f69dfee359b96bd2867fbe9e3262549f
 RMD160 (libxfcegui4-4.10.0.tar.bz2) = d9385ced0254e37caf3445725663f56bf95a3083
+SHA512 (libxfcegui4-4.10.0.tar.bz2) = 32fe3be287c84d1816154c7632a87025324c2cb9d9524ef3d7813c3b3619ca04e4b70aeb47a3e0fb59090e43e124476988774a0dc5186ebc1a0ccdfe635cbb45
 Size (libxfcegui4-4.10.0.tar.bz2) = 691012 bytes
 SHA1 (patch-libxfcegui4_dialogs.c) = 60632a4ca1119a17f36ff0f2909ea3ab43dceb94
 SHA1 (patch-libxfcegui4_xfce-exec.c) = d38a0fb348560df9c4415c17963d84766d8eabe5

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2012/03/18 21:20:49 jakllsch Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 03:29:07 agc Exp $
 
 SHA1 (xicc-0.1.tar.gz) = 36866f90b6e9be0c283baba91a4bfdda62812321
 RMD160 (xicc-0.1.tar.gz) = 76ae7409455414f5ee9a916ab7b26e50470d54a3
+SHA512 (xicc-0.1.tar.gz) = 6edb7570bfa90c2b490767cbc488a9db9624e82a92b5735b275a0961fa761d5cc3538efc2c10cd55f1128993d50816047a0f6c78de23b29426a969a7d12a5cea
 Size (xicc-0.1.tar.gz) = 661 bytes
 SHA1 (patch-xicc.c) = 41aa2f896a03c45a121635d8f4b88a2e7ab5bfec

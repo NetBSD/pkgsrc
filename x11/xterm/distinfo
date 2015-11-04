@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.72 2015/08/30 14:32:37 wiz Exp $
+$NetBSD: distinfo,v 1.73 2015/11/04 03:29:12 agc Exp $
 
 SHA1 (xterm-320.tgz) = b1d2a1698430eb96530aa7c7bb7a6c562dcecf72
 RMD160 (xterm-320.tgz) = b128e2ff2d170c8f82c56e696cb844455267a4e9
+SHA512 (xterm-320.tgz) = 6c234b5564ce1276136bc3ef8ef5d6703ed9dc3af3b0fd7c8c713c0876276fc4bb55cee7137f9a8c45df66531b6bd8eb778bd7660ea35c4aa8aa80ba17ba1263
 Size (xterm-320.tgz) = 1217356 bytes

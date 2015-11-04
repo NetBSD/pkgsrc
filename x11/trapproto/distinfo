@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/11/03 20:02:34 joerg Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 03:28:55 agc Exp $
 
 SHA1 (trapproto-3.4.3.tar.bz2) = b108aa39a7bfde530d5cd347fda7c58770d5b8da
 RMD160 (trapproto-3.4.3.tar.bz2) = f4adc2687aabd0f6e69fde6949675930ad241869
+SHA512 (trapproto-3.4.3.tar.bz2) = a5bf93bfa2f675e874ece8510a693d3a1ca4ba0b3981740249d4c78273a74724209f5f6d83c6207038bce1c3edca0bdd98ca3e1dd7aba04dcea146c9a1a2e8ef
 Size (trapproto-3.4.3.tar.bz2) = 48785 bytes
