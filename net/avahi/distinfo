@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.14 2015/01/07 13:55:45 wiedi Exp $
+$NetBSD: distinfo,v 1.15 2015/11/04 00:34:53 agc Exp $
 
 SHA1 (avahi-0.6.31.tar.gz) = 7e05bd78572c9088b03b1207a0ad5aba38490684
 RMD160 (avahi-0.6.31.tar.gz) = 122f553ee2d43cdd0185540a63a8e1f587bdb08e
+SHA512 (avahi-0.6.31.tar.gz) = 53eb00d570a274d841e1e6ad07da077950089ae39b4f7aa21fcd21cc5320b30b506b43e7e57e56198e155cc7bd289b779a48b2b2fc002dc6194a946110451858
 Size (avahi-0.6.31.tar.gz) = 1268686 bytes
 SHA1 (patch-aa) = 95b883bf14dd1852cdf0ea8a364c57717eebb03f
 SHA1 (patch-ab) = e230ea9d57f40915469486faf4ffaf90ea3ebac3

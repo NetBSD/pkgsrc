@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 12:13:47 agc Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 00:35:02 agc Exp $
 
 SHA1 (gnapfetch-0.3.tar.gz) = 892a991ea6b9ee7d6a2fe90f1c4bad2614813765
 RMD160 (gnapfetch-0.3.tar.gz) = 4c97cebbf1b695dc7fe8aa60b2f497f40d209f6c
+SHA512 (gnapfetch-0.3.tar.gz) = bca56198e79ab8e2ccdb8e308443d4aaf1eaa70e16add87c494440cd1e331d8fc43283bf4f653e30012d5d8f36ba4d93607996ef2af81bb4940da4a553121a7d
 Size (gnapfetch-0.3.tar.gz) = 2466 bytes

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.12 2009/03/12 15:19:38 wiz Exp $
+$NetBSD: distinfo,v 1.13 2015/11/04 00:35:02 agc Exp $
 
 SHA1 (gnome-netstatus-2.26.0.tar.bz2) = 53ca180d45a42b011ae6765461ae55c6a69d66af
 RMD160 (gnome-netstatus-2.26.0.tar.bz2) = 5cf01deb990c503d9691e514cc7bd3ca5d4b00f9
+SHA512 (gnome-netstatus-2.26.0.tar.bz2) = 359fd6145e12dd3b2689ce127690854b8e41f5ce18f9fd076cf3f49f993b3219a3894bf58d1be89387fbfb452131f8c03929654fb80a5d1d54c875e2d0b48623
 Size (gnome-netstatus-2.26.0.tar.bz2) = 552061 bytes
 SHA1 (patch-aa) = cab8588a081191ee59c9f16f6481aa330331e38d

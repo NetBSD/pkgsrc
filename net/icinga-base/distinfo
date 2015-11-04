@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.2 2013/12/31 03:28:39 ryoon Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 00:35:04 agc Exp $
 
 SHA1 (icinga-1.9.4.tar.gz) = 4bcfb717d4fac94d16205f976ad54b92a1cf0c52
 RMD160 (icinga-1.9.4.tar.gz) = f118ef6e3f56764e47fc24304dff03c1a5d766e4
+SHA512 (icinga-1.9.4.tar.gz) = 973c752ec8547f840445678ef94434209d243d4cef200700d9f774148623531260a90591b27db06d8f46ec50e3f55fc060fbbc90016626298645b6430ba5126f
 Size (icinga-1.9.4.tar.gz) = 17082569 bytes
 SHA1 (patch-Makefile.in) = 0c3ed01f1e8b807710304f6b92011a44d3da0fda
 SHA1 (patch-base_Makefile.in) = 4aa962b3963c084074273255fa6107e2e1a28a7d

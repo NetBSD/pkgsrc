@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2012/11/03 14:29:25 imil Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 00:35:32 agc Exp $
 
 SHA1 (twitter-1.9.0.tar.gz) = e42089c4067498f7aefaf16f32062cefb4141f5a
 RMD160 (twitter-1.9.0.tar.gz) = 703821166ca80e757a2d806b6d4bd23e1cc1e676
+SHA512 (twitter-1.9.0.tar.gz) = 2f4ee43f5204dc0a53dd38a677348e7c55b4ed5e4457213ca510a8605a691225512cb292459f6419aeaedec29a5335accdd9b9867723c959c146253c68f551a5
 Size (twitter-1.9.0.tar.gz) = 31441 bytes
 SHA1 (patch-twitter_ircbot.py) = d477f7c3849f3486345f4be58fd9184b42ace855

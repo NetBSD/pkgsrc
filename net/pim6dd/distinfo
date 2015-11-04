@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.9 2013/09/10 14:36:37 joerg Exp $
+$NetBSD: distinfo,v 1.10 2015/11/04 00:35:28 agc Exp $
 
 SHA1 (pim6dd-20031021a.tar.gz) = 7dac6a611433a4e0b643d3a8b9ff46267abdb6ff
 RMD160 (pim6dd-20031021a.tar.gz) = 27c55cfe054d8942d93e13a1289a6bd29a07a4dd
+SHA512 (pim6dd-20031021a.tar.gz) = ff92131fd0cc804f6a2ef6d48f8b23f6d40e1e76e9e9d3719c283b968f7d2236d27af1facbdc68d48f1b214cc16ef7f9560eaa9e52675c4557a077bb28b59e90
 Size (pim6dd-20031021a.tar.gz) = 84817 bytes
 SHA1 (patch-aa) = 8b11f1530d6e382ff4a4561e32ff27072c11dfe5
 SHA1 (patch-ab) = 631ff729b8aad01d46b8443a4838d35b59725854

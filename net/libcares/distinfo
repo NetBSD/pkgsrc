@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.9 2013/12/13 10:42:57 jperkin Exp $
+$NetBSD: distinfo,v 1.10 2015/11/04 00:35:08 agc Exp $
 
 SHA1 (c-ares-1.10.0.tar.gz) = e44e6575d5af99cb3a38461486e1ee8b49810eb5
 RMD160 (c-ares-1.10.0.tar.gz) = aee918002d3fc1b2112c7d95aacf1c00059f4677
+SHA512 (c-ares-1.10.0.tar.gz) = fef6945549034390ddaa03acf5509d0095e97c151e5f4047ffc32c51945a7261759228b20fdd77b9e4bf4a95f3a61bfb79bee0c66a860219debfd2916b390693
 Size (c-ares-1.10.0.tar.gz) = 809073 bytes
 SHA1 (patch-configure) = 1726722a94960fabc7fd69c8e7f9ca40a1492713

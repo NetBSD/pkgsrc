@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.17 2013/02/14 16:51:32 drochner Exp $
+$NetBSD: distinfo,v 1.18 2015/11/04 00:35:18 agc Exp $
 
 SHA1 (openslp-1.2.1.tar.gz) = 47ab19154084d2b467f09525f5351e9ab7193cf9
 RMD160 (openslp-1.2.1.tar.gz) = a31d516ba784ad893a740946082fe5e0f15a37ea
+SHA512 (openslp-1.2.1.tar.gz) = 34742d88e772d7dba5c6fab1ccb7bf27d6174c5ca429aec406472994bcd806bfaf16dd86fce2ae4c51659587e99cced2436cf36772f6e086f7b87275fb1b19b6
 Size (openslp-1.2.1.tar.gz) = 886195 bytes
 SHA1 (patch-CVE-2012-4428) = 2ada5f48b06b9b5dd37e5e017e50372c3806c021
 SHA1 (patch-aa) = 670b3fa3c95453e5a5efca04bc83a0da06d03d2b
