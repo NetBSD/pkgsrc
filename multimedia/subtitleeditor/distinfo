@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 19:04:57 joerg Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 12:32:26 joerg Exp $
 
 SHA1 (subtitleeditor-0.30.0.tar.gz) = bf1a2064b4c68bf21c05a095ad3f746b53da4ac8
 RMD160 (subtitleeditor-0.30.0.tar.gz) = 77cd4b22740453e986d35cbdd7335fbd5728149c
@@ -10,5 +10,5 @@ SHA1 (patch-plugins_subtitleformats_advancedsubstationalpha_advancedsubstational
 SHA1 (patch-plugins_subtitleformats_mpsub_mpsub.cc) = 49f23c5d1e6b8ad8fab687019280bfb2a932c3d3
 SHA1 (patch-plugins_subtitleformats_substationalpha_substationalpha.cc) = a806c0b86530144dedff2415af1df57a262715d3
 SHA1 (patch-src_subtitleview.cc) = f8f284dd8ba25c02a727f1171ffecc59c4115237
-SHA1 (patch-src_utility.h.diff) = ad9504d664d0dfe3883b578e59fab9f39e7ec0f3
+SHA1 (patch-src_utility.h) = 36e05367154654aaa02716f2c9b30fcbe37fad9b
 SHA1 (patch-src_vp_gstreamerplayer.cc) = 2c9625302adf02565c16a38e4b77a4d38e4db514
