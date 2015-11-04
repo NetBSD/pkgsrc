@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 14:09:52 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:36 agc Exp $
 
 SHA1 (tex-pitex-24731/pitex.doc.tar.xz) = ee6171ecc612152c3ca7b8da8fa2a0292ce7f3f7
 RMD160 (tex-pitex-24731/pitex.doc.tar.xz) = 555ea1cc1ce8c2d2a1907e928d732c169bc7b851
+SHA512 (tex-pitex-24731/pitex.doc.tar.xz) = b66506f900a21fb4f347c2b9b216f6a87a27751ce0707034490adaec7fa9f394245a5342683bd4f6ad47f28bc1e3123c06ec995b2c50b3363bcce47a03f3904e
 Size (tex-pitex-24731/pitex.doc.tar.xz) = 110196 bytes

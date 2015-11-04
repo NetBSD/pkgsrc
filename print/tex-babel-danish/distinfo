@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/04 12:26:57 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:47 agc Exp $
 
 SHA1 (tex-babel-danish-30262/babel-danish.tar.xz) = 11b74184bb6b461b8a657faffb9f22783b3f6a08
 RMD160 (tex-babel-danish-30262/babel-danish.tar.xz) = e23c738e628c3b1732afce5f9ee1b8667d3e43bb
+SHA512 (tex-babel-danish-30262/babel-danish.tar.xz) = bd6c03dce0216a9e687ebdfa28cc675627a8fef41636c5a72e2eb194e2546b7bc13565a1c4e5f29342ed35fa045e00dc70df6848edc075fea2997f1b8bf928bd
 Size (tex-babel-danish-30262/babel-danish.tar.xz) = 2456 bytes

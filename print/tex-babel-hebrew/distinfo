@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/04 12:31:43 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:48 agc Exp $
 
 SHA1 (tex-babel-hebrew-30273/babel-hebrew.tar.xz) = 1fcdccfdde6ccce550ecab4b2978b0a4fdf10ce9
 RMD160 (tex-babel-hebrew-30273/babel-hebrew.tar.xz) = f24ad8641fddd4ac74e35f9b7826d720b8c0a3d5
+SHA512 (tex-babel-hebrew-30273/babel-hebrew.tar.xz) = d67b780f3806f96efc41d1a14d175051bb1405ac91b52a6ecf13e2515a8df5ff17ea6f69eb63f128c854c8a3055fd40aa9c7bbd609e8c0eb4ec08097222dac59
 Size (tex-babel-hebrew-30273/babel-hebrew.tar.xz) = 17508 bytes

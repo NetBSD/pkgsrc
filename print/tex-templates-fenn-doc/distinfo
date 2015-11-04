@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/14 17:07:36 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:49 agc Exp $
 
 SHA1 (tex-templates-fenn-15878/templates-fenn.doc.tar.xz) = 2cc306344bf89c09ae44190f0ce8f850001762aa
 RMD160 (tex-templates-fenn-15878/templates-fenn.doc.tar.xz) = 90f00616cc68807025a78280e874dafb828c3317
+SHA512 (tex-templates-fenn-15878/templates-fenn.doc.tar.xz) = ec489523e57280e257ec811379e46d718c21f5f43287d06473c94e8b2b014b3ecc45af6bfd8c384c4b318f0e8a658596532ce1cf1a86a2802ed12e85358adb0f
 Size (tex-templates-fenn-15878/templates-fenn.doc.tar.xz) = 5996 bytes

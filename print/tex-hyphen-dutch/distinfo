@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2010/11/08 16:24:58 minskim Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 01:02:15 agc Exp $
 
 SHA1 (tex-hyphen-dutch-20144/hyphen-dutch.tar.xz) = ca0525e76407757ce237824382671181b810e35f
 RMD160 (tex-hyphen-dutch-20144/hyphen-dutch.tar.xz) = 90bfd2f69d0a5b813c0fafdaf06437b7a21fffce
+SHA512 (tex-hyphen-dutch-20144/hyphen-dutch.tar.xz) = 2cfe1f738cdc76cdd5b048427787c82d3307dc26dff6d84f2b00c30b3bff102b8caab03641ac991ff8cb67d1cb72f361a3e99101bdb725166ba5c63956554aa0
 Size (tex-hyphen-dutch-20144/hyphen-dutch.tar.xz) = 344 bytes

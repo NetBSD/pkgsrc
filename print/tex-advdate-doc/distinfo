@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2011/01/19 18:27:42 minskim Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 01:01:43 agc Exp $
 
 SHA1 (tex-advdate-20538/advdate.doc.tar.xz) = 17e82f002f9f250fc5fc737b5ac533bd8b58cc1f
 RMD160 (tex-advdate-20538/advdate.doc.tar.xz) = 675d3bbab6b8449db422934b0cc688bef3576d69
+SHA512 (tex-advdate-20538/advdate.doc.tar.xz) = b6ee79d12260e0560540a9eadd421e4c8aa3ee93d1703f59ccbc7bdbcad7cbd80c34140d879d0de9eede110f49f143bed48006d0154ab1793830e31a22461775
 Size (tex-advdate-20538/advdate.doc.tar.xz) = 146668 bytes

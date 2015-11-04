@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2010/11/08 16:16:30 minskim Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 01:02:15 agc Exp $
 
 SHA1 (tex-hyphen-croatian-20144/hyphen-croatian.tar.xz) = c9277438084454349e17d973126231d43498d2ba
 RMD160 (tex-hyphen-croatian-20144/hyphen-croatian.tar.xz) = dcd78343b9c02402dbe5494976813f75ab993779
+SHA512 (tex-hyphen-croatian-20144/hyphen-croatian.tar.xz) = 2f3d96cc5028b143b51a9bf5e6f0973c84e580d5ed4049e3dcbf61b943a77e2bae59c23fdb2877a0a94e2ecd60863c521dd72314109de377e03ea9121d1ba19d
 Size (tex-hyphen-croatian-20144/hyphen-croatian.tar.xz) = 576 bytes

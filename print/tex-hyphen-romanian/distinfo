@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2010/11/08 16:45:14 minskim Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 01:02:18 agc Exp $
 
 SHA1 (tex-hyphen-romanian-20144/hyphen-romanian.tar.xz) = 15162f16586846aefdc5dcfaa07610a9b3b051e6
 RMD160 (tex-hyphen-romanian-20144/hyphen-romanian.tar.xz) = 8a121149667bdc18d07c2a332907772fc07eaa06
+SHA512 (tex-hyphen-romanian-20144/hyphen-romanian.tar.xz) = 56890282ee0dd8f707a873d10909c0be840b701cdbe5cf5ae1aa43d7c34006509656155a2f172f8c2fcd72d9e164294087dae49ecd42acd8b7e7cb5b44ec634e
 Size (tex-hyphen-romanian-20144/hyphen-romanian.tar.xz) = 348 bytes

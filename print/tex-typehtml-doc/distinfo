@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/05/02 17:34:26 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:55 agc Exp $
 
 SHA1 (tex-typehtml-doc-2009/typehtml.doc.tar.xz) = 431d9bc9b81eeb3d5c69fb70d306fbb57863a0bf
 RMD160 (tex-typehtml-doc-2009/typehtml.doc.tar.xz) = d886de374a15b3749c78528b1a449304fe19a4dd
+SHA512 (tex-typehtml-doc-2009/typehtml.doc.tar.xz) = 26db744307f6bf2000f413427197e40b228effa81769f237c1c42b05b5162a3f8c6e1ff571e65ccc80221129f48a925513b1a166bbcd80efb6265323bb503292
 Size (tex-typehtml-doc-2009/typehtml.doc.tar.xz) = 155096 bytes

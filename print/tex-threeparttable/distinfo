@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2010/03/12 21:36:53 minskim Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 01:02:51 agc Exp $
 
 SHA1 (tex-threeparttable-2009/threeparttable.tar.xz) = a3499abd01361ba69ed5d86c6e07c9bf2c3626cd
 RMD160 (tex-threeparttable-2009/threeparttable.tar.xz) = 644ba3b1984a0f7a38e90a23788409847420ccb1
+SHA512 (tex-threeparttable-2009/threeparttable.tar.xz) = 1bc45198971bff25619ff6c2f6ec183788d1374df7ae1a305dfc769f9936301202ef3b0bd07d91c586a2074a25080bb58c79a1e415af89e29eae42d3a6e85093
 Size (tex-threeparttable-2009/threeparttable.tar.xz) = 5436 bytes

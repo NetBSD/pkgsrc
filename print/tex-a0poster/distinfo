@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/04/09 21:34:44 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:41 agc Exp $
 
 SHA1 (tex-a0poster-1.22b/a0poster.tar.xz) = 4fcfef8efbc6ffc6236a33eb9f35b65c0bd509ad
 RMD160 (tex-a0poster-1.22b/a0poster.tar.xz) = ee4aed6865789536325144114c3f5db18e099f2b
+SHA512 (tex-a0poster-1.22b/a0poster.tar.xz) = 36df8ebe4423b9d12b8811a37ed2ce40cfaa2860df604d8fb4e3070cc2e40bfa8c0fcc86b5b9d5cc2db23dd92673988ab28be1a4bb3c70409e5eacfcb6a28d4a
 Size (tex-a0poster-1.22b/a0poster.tar.xz) = 3320 bytes

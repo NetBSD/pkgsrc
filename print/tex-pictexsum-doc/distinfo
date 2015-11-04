@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/15 17:51:50 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:36 agc Exp $
 
 SHA1 (tex-pictexsum-24965/pictexsum.doc.tar.xz) = 895b2f1961c38f5d0b945a5bd69e340ed081d478
 RMD160 (tex-pictexsum-24965/pictexsum.doc.tar.xz) = 565921af8c5d5528b89a0af12f71d3905bd8d04f
+SHA512 (tex-pictexsum-24965/pictexsum.doc.tar.xz) = c5b030259c0b6e55ff11a225af6f80bf5d4868eac5cbc23c981c48e23c2287e91b5d27d23440c09e155333ff47fa2aa013a88398c16984f021e5ea814998824e
 Size (tex-pictexsum-24965/pictexsum.doc.tar.xz) = 192376 bytes

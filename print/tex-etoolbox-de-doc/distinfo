@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/14 17:07:34 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:06 agc Exp $
 
 SHA1 (tex-etoolbox-de-21906/etoolbox-de.doc.tar.xz) = dd3a4f08dffb17120db9923c56f7c2dcdb7abdef
 RMD160 (tex-etoolbox-de-21906/etoolbox-de.doc.tar.xz) = 0b11c73916bfd89ca582aaee1033c966188facb0
+SHA512 (tex-etoolbox-de-21906/etoolbox-de.doc.tar.xz) = 220f50ba421716b6f64f4f691f7434cc70865f52a90b1269d2d0a6bc954360f9cc215cad7166b23a98cd180f1b9188690371e82a3e86dfc66c5bf98ba1f107bf
 Size (tex-etoolbox-de-21906/etoolbox-de.doc.tar.xz) = 234632 bytes

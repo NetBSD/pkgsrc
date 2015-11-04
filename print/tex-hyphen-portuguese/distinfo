@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2010/11/08 16:49:08 minskim Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 01:02:18 agc Exp $
 
 SHA1 (tex-hyphen-portuguese-20144/hyphen-portuguese.tar.xz) = c12e3e242e653b683ede3fe4826b36c525b9d691
 RMD160 (tex-hyphen-portuguese-20144/hyphen-portuguese.tar.xz) = feab98391044216212281b58dce1745d1289c130
+SHA512 (tex-hyphen-portuguese-20144/hyphen-portuguese.tar.xz) = 60287e5c8213782b5dc4743549cce4f172d6577deee26ca52932674a4f2e5622558483825258ac91201d1e39afbe9da21570dd54e2e57af9126edae0182ac903
 Size (tex-hyphen-portuguese-20144/hyphen-portuguese.tar.xz) = 360 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/04/28 16:14:31 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:29 agc Exp $
 
 SHA1 (tex-midpage-doc-1.1a/midpage.doc.tar.xz) = e02a1f5d3f2d6384b93a035610939f600ecdeb7e
 RMD160 (tex-midpage-doc-1.1a/midpage.doc.tar.xz) = dfc7b5e8de5532c2cbfe2fff1e6935aec550fb2b
+SHA512 (tex-midpage-doc-1.1a/midpage.doc.tar.xz) = 662936b0be793ba594bd7492adc795dd25c7e3a5fd85577f9772f60b62c54da24ce1edf94e2965a411673d60b38f8a228e04014d8a28b91057065e59281196c2
 Size (tex-midpage-doc-1.1a/midpage.doc.tar.xz) = 189016 bytes

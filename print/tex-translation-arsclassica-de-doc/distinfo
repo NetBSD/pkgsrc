@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/14 17:07:36 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:53 agc Exp $
 
 SHA1 (tex-translation-arsclassica-de-23803/translation-arsclassica-de.doc.tar.xz) = 0138c9b90b8df37d7501f95a06594168f0a6a974
 RMD160 (tex-translation-arsclassica-de-23803/translation-arsclassica-de.doc.tar.xz) = 4e780f5989a3fd2c5ab17d6d656d47f80f8bd458
+SHA512 (tex-translation-arsclassica-de-23803/translation-arsclassica-de.doc.tar.xz) = 07b92a771a1854f12a6f6efa825971fc84fef1d5c17e86189f716ee3ef89a3881492741488d6f3a5ce1fc54f0f416e828c9b515779c52a229a7f947a7c79840e
 Size (tex-translation-arsclassica-de-23803/translation-arsclassica-de.doc.tar.xz) = 358864 bytes

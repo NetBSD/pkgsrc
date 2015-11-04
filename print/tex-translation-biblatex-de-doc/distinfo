@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/14 17:07:36 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:53 agc Exp $
 
 SHA1 (tex-translation-biblatex-de-24386/translation-biblatex-de.doc.tar.xz) = bac1d36edaa8ee1b62c13b38928e41fc69589ea0
 RMD160 (tex-translation-biblatex-de-24386/translation-biblatex-de.doc.tar.xz) = 3ece53b616a05fc3b61c8e0b688c2a8e4894a9fc
+SHA512 (tex-translation-biblatex-de-24386/translation-biblatex-de.doc.tar.xz) = 94e640d39baf89b2909f0fc748386cce730d6deb79d00ddd1e9988930312e9b1eb3d7213be46dad352221f5833d44f84dc89e63af5c9156ddbb13dc6a834cd51
 Size (tex-translation-biblatex-de-24386/translation-biblatex-de.doc.tar.xz) = 1003204 bytes

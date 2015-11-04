@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/04/21 22:16:33 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:26 agc Exp $
 
 SHA1 (tex-lkproof-20021/lkproof.tar.xz) = 3ef292bdc8f7b71672714f393936ce21cffcc373
 RMD160 (tex-lkproof-20021/lkproof.tar.xz) = ccf38b7fb39d8044faecdc626613d466f53dd8c8
+SHA512 (tex-lkproof-20021/lkproof.tar.xz) = 14c9ad1a55c6dd61968cb59867a42c4f35ad7e318e04f32b9124baa554d311c3355e314aa79f5f0ee31ecd927efb9b6e2fd4a417028967967226ff3c18252dcc
 Size (tex-lkproof-20021/lkproof.tar.xz) = 2640 bytes

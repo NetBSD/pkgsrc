@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/28 12:08:03 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:00 agc Exp $
 
 SHA1 (tex-ctib-15878/ctib.doc.tar.xz) = c194442378febc656f967bc2c0b22729298abfd9
 RMD160 (tex-ctib-15878/ctib.doc.tar.xz) = b292b07a06b440e57ca937ec6ff4c9075f5eabe2
+SHA512 (tex-ctib-15878/ctib.doc.tar.xz) = 172a13dd1bbac425d86e39a8df4c3d67e3bd4265451a0f92a73215efcbaa39231b230c43056e8ef89dcc95c04952f4ccf3e5f0888ac4fee72a18142f45ed1259
 Size (tex-ctib-15878/ctib.doc.tar.xz) = 217768 bytes

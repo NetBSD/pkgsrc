@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/08 14:09:52 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:30 agc Exp $
 
 SHA1 (tex-mkpattern-15878/mkpattern.doc.tar.xz) = fdf0e8c39cddd69d9460426685773827b74a96da
 RMD160 (tex-mkpattern-15878/mkpattern.doc.tar.xz) = 5c99573c91440b6d910107819381526b4529c5f9
+SHA512 (tex-mkpattern-15878/mkpattern.doc.tar.xz) = aa609d54b8ab2a4260ff1eaf40f8a480bc3adbb7269fee16672c934969e3b57364119f7c19afd90d968a8f04522508839c235ef52a20791f23671614fdddbd11
 Size (tex-mkpattern-15878/mkpattern.doc.tar.xz) = 82968 bytes

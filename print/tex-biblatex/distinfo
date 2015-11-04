@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/06/14 12:50:01 markd Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 01:01:51 agc Exp $
 
 SHA1 (tex-biblatex-37083/biblatex.tar.xz) = 2545654c582d23c8b09e35a1a42947fcc765a4f6
 RMD160 (tex-biblatex-37083/biblatex.tar.xz) = 0b36e71b3839261fd76370c8f8843ac6b144ae7f
+SHA512 (tex-biblatex-37083/biblatex.tar.xz) = c941c148de498702bc2245d76812020f39c3431deeda316d944a689a40173f12ec090f7453b2bde68a3b0b1abb66b3474468c9026d710e2398a361a94a1d77e4
 Size (tex-biblatex-37083/biblatex.tar.xz) = 171404 bytes

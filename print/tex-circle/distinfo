@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/04/21 05:37:58 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:56 agc Exp $
 
 SHA1 (tex-circle-2009/circle.tar.xz) = 19ab7b58fc19dfc00bd58caf03cd433bfbe404ba
 RMD160 (tex-circle-2009/circle.tar.xz) = 7933f7067a90cc78a6f67790eb121e9f417390f2
+SHA512 (tex-circle-2009/circle.tar.xz) = 12a3f9e4b7ae64d984b11b87593d14ea89adc56c7b75c81cadfa25fa78f327387ba2d61e9cf8a1fb1592081287b408068eec5a00da51feeb96d7cf3d5edc3245
 Size (tex-circle-2009/circle.tar.xz) = 1384 bytes

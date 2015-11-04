@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/16 02:51:23 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:16 agc Exp $
 
 SHA1 (tex-hyphen-georgian-30326/hyphen-georgian.tar.xz) = 491b65005ad4b6cc5644c49d65be255fb8a42b11
 RMD160 (tex-hyphen-georgian-30326/hyphen-georgian.tar.xz) = 4f473d66471a1047b6183709acb34f76bdeeec8e
+SHA512 (tex-hyphen-georgian-30326/hyphen-georgian.tar.xz) = eae34200302a60de644cb74a3d26790889d648d868944f32ce8372beb51ff849e228ec2777ad0eafeb0ca0960622a9078d9570d27bcffa7bc7a81391ac61186f
 Size (tex-hyphen-georgian-30326/hyphen-georgian.tar.xz) = 412 bytes

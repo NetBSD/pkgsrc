@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/16 10:30:14 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:55 agc Exp $
 
 SHA1 (tex-chappg-15878/chappg.doc.tar.xz) = fa91fbea2844d1f7126dc55596904e1f60ce0a49
 RMD160 (tex-chappg-15878/chappg.doc.tar.xz) = 20295b2ab5296a8d4b4c855b7c50b1c01cda8113
+SHA512 (tex-chappg-15878/chappg.doc.tar.xz) = 724e1cd28e7bced9b68a497a80e63ec709c3c8cdf80faff2e768ed3479f866824c4f8c307cae9cc4bb75a188424ffa21e54b913032e863d50db85e1c6d6f63b7
 Size (tex-chappg-15878/chappg.doc.tar.xz) = 189408 bytes
