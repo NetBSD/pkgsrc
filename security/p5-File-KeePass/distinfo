@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2012/11/07 10:23:32 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:17:58 agc Exp $
 
 SHA1 (File-KeePass-2.03.tar.gz) = 4cfe71d6364d66e50cae45f2f6e717789ee43867
 RMD160 (File-KeePass-2.03.tar.gz) = 8dc0a95fea15dd47421713ead87a8065aacff385
+SHA512 (File-KeePass-2.03.tar.gz) = f50cdcc52e3f4eb9da17e9e823ae268547f9fafaa534bdc52db1da53564fcc28ebf975e71b9968b5cad617f2964ed3c55022063bc52f910d2478d06ce35d4ba1
 Size (File-KeePass-2.03.tar.gz) = 37010 bytes

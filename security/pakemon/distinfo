@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2007/12/28 11:45:42 obache Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 01:17:59 agc Exp $
 
 SHA1 (pakemon-0.3.1.tar.gz) = 27708ac303a58432222b53b71b6ca13e71502f7e
 RMD160 (pakemon-0.3.1.tar.gz) = 156c1829630e2e59a5797882d6309cc423217fee
+SHA512 (pakemon-0.3.1.tar.gz) = 38e16effd70809d65bd9cf9a8a04e21509f42ead8b63bdc4749e2db12c86e7aac54a32c9aa35ee525cd91046ea5e823b6086935dd02fa226c292b8c981c87274
 Size (pakemon-0.3.1.tar.gz) = 110065 bytes
 SHA1 (patch-aa) = 22155e703130a28ba4bf34922b3926411cb917b8
 SHA1 (patch-ab) = d35a76ae3ef96d51526f20d9973d1743c038cf81

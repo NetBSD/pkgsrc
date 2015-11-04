@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.17 2015/04/08 18:45:21 ryoon Exp $
+$NetBSD: distinfo,v 1.18 2015/11/04 01:18:02 agc Exp $
 
 SHA1 (putty-0.64.tar.gz) = 633fe0906a768f9843e328cafa3eed1ad1c02c59
 RMD160 (putty-0.64.tar.gz) = 7036a7b8f0e402524e884b946a007adadb2ba436
+SHA512 (putty-0.64.tar.gz) = ba4d4086b8edcb6388924bf3d9b018841be36a9dbf298271c9d2ed063aae9854093e9ff6808bd1f65669d78369548639eb3c95fdec5e3f0daee4b1c7bb603051
 Size (putty-0.64.tar.gz) = 1977448 bytes
 SHA1 (patch-import.c) = da6a34ec3412985858babb28821296c40e30d96b
 SHA1 (patch-ldisc.c) = e4dd89bfb2ddcb47aad46cc7c311f424aa6ab6be

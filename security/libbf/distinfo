@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 13:10:07 agc Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 01:17:48 agc Exp $
 
 SHA1 (libbf-0.8.2b.tar.gz) = 46b4ae98937ee82dbeaeaf3e446dbabe755934d1
 RMD160 (libbf-0.8.2b.tar.gz) = e4e3717b09d1e8950e8ee6907b2a48680e96cf85
+SHA512 (libbf-0.8.2b.tar.gz) = e7d963334844d10eb4a4f1d7890c95d382a19c6c2e751c1762e91644d0a1d93f92c605974a2d371e113cb2bf0ffa42310c53fe081af4ac0c23df1d676b2d4dcc
 Size (libbf-0.8.2b.tar.gz) = 40210 bytes
 SHA1 (patch-aa) = 406a6ba0d5a21d3c01816ac2b0a396c3c3085cdd

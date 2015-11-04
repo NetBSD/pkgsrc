@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.9 2015/02/04 16:11:32 taca Exp $
+$NetBSD: distinfo,v 1.10 2015/11/04 01:18:07 agc Exp $
 
 SHA1 (net-scp-1.2.1.gem) = bd457bf768107385658c4981a12584c2086d91a6
 RMD160 (net-scp-1.2.1.gem) = cf2b01691081e66617d2837af13d15c3dff24c63
+SHA512 (net-scp-1.2.1.gem) = 64645a4517d6e408e3acfdb24576c8ded3b6ff981035ca10a2e081f9e3ab093f97b4848da4acca03ade364483766677e31296d09a31db4c81eb40123fc966829
 Size (net-scp-1.2.1.gem) = 32768 bytes
