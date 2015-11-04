@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.21 2010/06/02 13:07:12 adam Exp $
+$NetBSD: distinfo,v 1.22 2015/11/04 00:34:56 agc Exp $
 
 SHA1 (dctc-0.85.9.tar.gz) = 4d68d394ea2429f645073f22805eca31e87e345c
 RMD160 (dctc-0.85.9.tar.gz) = dde07b6802e5a421a86fcb83480cdc720b2985b6
+SHA512 (dctc-0.85.9.tar.gz) = 1138acc118728be534c9f73095908eb49accbfd1dba511b00cd7c7fec63342fec5b5781bc339c6c831468fe577257adad13dad729eaef16c2625510855bddde6
 Size (dctc-0.85.9.tar.gz) = 506477 bytes
 SHA1 (patch-aa) = de989aee03c726e78f2fdf10edf3708d6aca75f5
 SHA1 (patch-ab) = 98fd1bfbf5c9abc5fdace74042b69bb76f24749b

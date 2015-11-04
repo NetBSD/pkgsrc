@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/10/14 13:13:44 wiz Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 00:35:17 agc Exp $
 
 SHA1 (openconnect-7.06.tar.gz) = 2351408693aab0c6bc97d37e68b4a869fbb217ed
 RMD160 (openconnect-7.06.tar.gz) = fb9f55e413bd3eb065521332d8632001fb14b12f
+SHA512 (openconnect-7.06.tar.gz) = d1af9efe4ac1f6671dc6b92db0df981e8cae3f2f50b8b4c35a112b42a76517b7c8ea9fd5da93352445dd61da3012bf34fdbcc3add9d8727cbaad7d311e516108
 Size (openconnect-7.06.tar.gz) = 1343870 bytes

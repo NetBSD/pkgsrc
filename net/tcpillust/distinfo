@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2014/02/21 20:31:08 joerg Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 00:35:39 agc Exp $
 
 SHA1 (tcpillust-1.0a.tar.gz) = 326f9d16f7fb59aa68d9ffb21697b85adb3c45ad
 RMD160 (tcpillust-1.0a.tar.gz) = 11d9f5c9a4dc406c9fda82badf86c8de1b1c0e66
+SHA512 (tcpillust-1.0a.tar.gz) = b1f503c084dc1f9e42d2a2ba04490da3a3a7fb0eb13bafa18906c029faa8c84e4b1f586648762ad7d880305904ddb9fb4703e165e1f5501f11bd364d7cbc9297
 Size (tcpillust-1.0a.tar.gz) = 45364 bytes
 SHA1 (patch-aa) = 3202a17e41f2976acc3504db95de4c0caaa9741a
 SHA1 (patch-ab) = b674343b8036c8ffbe0d2cce371f40f3ed8ee0c0

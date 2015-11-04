@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/08/23 14:31:25 leot Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 00:35:31 agc Exp $
 
 SHA1 (netlib-0.13.1.tar.gz) = 750a635a1fbcd24089805bf2cf38c2bc1790a7e5
 RMD160 (netlib-0.13.1.tar.gz) = 6eeece7262d8b57f0d7efca6e0825cfab3d83cfc
+SHA512 (netlib-0.13.1.tar.gz) = 9a8706b917d76ed9750d17b915fd8d140dc68c933f9405dfcc859fdb1974807113168b4b21e1c0f4fff820dc645ea6bbd515490b2855ff9dc3666d5b8202c5fc
 Size (netlib-0.13.1.tar.gz) = 71293 bytes

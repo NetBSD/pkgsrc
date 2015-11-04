@@ -1,13 +1,16 @@
-$NetBSD: distinfo,v 1.20 2012/04/08 05:11:13 dholland Exp $
+$NetBSD: distinfo,v 1.21 2015/11/04 00:35:45 agc Exp $
 
 SHA1 (wu-ftpd/wu-ftpd-2.6.2.tar.gz) = e39112bd8a67f189b6a8da8dd81ceb00a910e271
 RMD160 (wu-ftpd/wu-ftpd-2.6.2.tar.gz) = 0b7451c185f80cf9a345f97b9642853e0323e3bd
+SHA512 (wu-ftpd/wu-ftpd-2.6.2.tar.gz) = d61897489e9829ac3edf7496f721fb28039f648d94f8f87df7112f22d7154dc42230e9febf47c8a82a1c5d68717bfbb7b8cc8835c27a9f9c926644a2e23af093
 Size (wu-ftpd/wu-ftpd-2.6.2.tar.gz) = 354784 bytes
 SHA1 (wu-ftpd/realpath.patch) = a935197d880ab1ed4320e57e4790811df82e825e
 RMD160 (wu-ftpd/realpath.patch) = f96c4c6a8739746ddfe56347dbb10351544a6a2f
+SHA512 (wu-ftpd/realpath.patch) = b03b5cdd70681b00e71c9ac160dd4a5b6207e53e70e6cdd42a2eba03ba0c12e8fd325b2f3a3e1c3f780978ea675dfd4d3f733c00960251b3efb541d40174c1d3
 Size (wu-ftpd/realpath.patch) = 533 bytes
 SHA1 (wu-ftpd/connect-dos.patch) = 8d1131ee3d1bdcb780552ea2d32816989793ae0b
 RMD160 (wu-ftpd/connect-dos.patch) = 197994b4af91fd1a6c951b245313598eaa99e398
+SHA512 (wu-ftpd/connect-dos.patch) = d8d983a9c99f82a2e166f1ac333519da4b6e356a2d7982280744ad1991a507adff56d3de0e9209882fd594d1f86e6342d68ecfa2bf2631f9dea76e9e1e8bab04
 Size (wu-ftpd/connect-dos.patch) = 2307 bytes
 SHA1 (patch-aa) = 0e11b95eb9ce697d48d3665d3bb5dc903b67d89b
 SHA1 (patch-ab) = cd2f3f74508c2bd379a64b7ddebbd73015be7662

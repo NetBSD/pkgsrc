@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2005/02/24 12:13:58 agc Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 00:35:18 agc Exp $
 
 SHA1 (overnetclc-1.0.1-1.i386_compat.rpm) = 6ef4542d428fc8fbd797c02f3644e8c0e5f8d58d
 RMD160 (overnetclc-1.0.1-1.i386_compat.rpm) = ab4d95144f05afdc0c346fabc1d0f22df3528f1f
+SHA512 (overnetclc-1.0.1-1.i386_compat.rpm) = 489fa1e5c32157a9fe0d565ee81a6e2cd449fb4033d19bb34d7229c8219d366b431e187688cd2277f63ccc10a7e33bc81204a6bbe0b0ca3d8acbf2a381748426
 Size (overnetclc-1.0.1-1.i386_compat.rpm) = 375628 bytes

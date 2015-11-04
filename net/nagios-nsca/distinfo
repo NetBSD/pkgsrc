@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2012/09/24 14:21:08 manu Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 00:35:13 agc Exp $
 
 SHA1 (nsca-2.9.1.tar.gz) = 7b3f569fa77a364bd016d87b865c5572d954e41a
 RMD160 (nsca-2.9.1.tar.gz) = 0b22aa3884776278accee77f22a215f7ca1e2c5e
+SHA512 (nsca-2.9.1.tar.gz) = 076831a53710c956c394b26521b221885e2a287c505406dc33920799521afdf3b456383c921d76ba7196fda61c8642cbe897876e2d1b1973d6c7e9fc32ec1dfb
 Size (nsca-2.9.1.tar.gz) = 114107 bytes
 SHA1 (patch-aa) = 3a2b538daeb4a4ec84e4ee947355b59284347ce1

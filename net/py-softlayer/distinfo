@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2014/06/06 12:50:03 joerg Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 00:35:32 agc Exp $
 
 SHA1 (SoftLayer-3.0.2.tar.gz) = 55d4bbcd8618b4e124d84e6d6a7e2f26dfb5d10f
 RMD160 (SoftLayer-3.0.2.tar.gz) = 9593e18c5f306b0b02363efecd323d08da142897
+SHA512 (SoftLayer-3.0.2.tar.gz) = 02497504752df21defa17c00f9d6fa6477644a85b32afa2826fb2c747ea943c1a8693365a717df658033f956298e1bc84991491ef0fa89cb8264f67a6c21b2c6
 Size (SoftLayer-3.0.2.tar.gz) = 99747 bytes
 SHA1 (patch-README.rst) = 24c79958fab4ebad570a97bb37c84bcb82d6f171

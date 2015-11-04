@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2012/11/16 20:10:20 joerg Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 00:34:51 agc Exp $
 
 SHA1 (labrea-2.5-stable-1.tar.gz) = 8f374b05cc50294b2773bda98f8317cf5b102067
 RMD160 (labrea-2.5-stable-1.tar.gz) = 27078ab4b4efdd3f0e8233cac228295bc5a5cf47
+SHA512 (labrea-2.5-stable-1.tar.gz) = 63523f59e9e6ca31d2a5ea781f7b7087e7e41835aec24cd8cbf1cf7b65893fb1cedb2b13aa5fcfab458375ef27f5521a9ab88a71734b7317edf8eda2746c566c
 Size (labrea-2.5-stable-1.tar.gz) = 210494 bytes
 SHA1 (patch-aa) = f3b7b2556513a90b24b5adf73a99da28462d33e4
 SHA1 (patch-ab) = 8a7d091795b0740384651d9e68b95a94af02e1df
