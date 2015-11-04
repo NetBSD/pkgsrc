@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2013/09/22 08:20:09 pettai Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 01:17:54 agc Exp $
 
 SHA1 (Authen-TacacsPlus-0.24.tar.gz) = 42313c23dcde7aaec91e4d863431f9b02c26b2df
 RMD160 (Authen-TacacsPlus-0.24.tar.gz) = b0c61578678f9f205bfdaf3b653260321f7f9c18
+SHA512 (Authen-TacacsPlus-0.24.tar.gz) = f6f625dc8fa0f67045a20d77530d8cb2fd0ce00058da6526553efe3efc5d737c26a654b78699851573542a8b21efcb67a36bb2e9946b4da7cca720f4530c8469
 Size (Authen-TacacsPlus-0.24.tar.gz) = 22755 bytes
 SHA1 (patch-aa) = e94f44e9ce1f7b8e18ac1cfabbe0ff36e9664216

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/10/30 03:32:19 bjs Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:17:59 agc Exp $
 
 SHA1 (pakchois-0.4.tar.gz) = dea8a9a50ec06595b498bdefd1daacdb86e9ceda
 RMD160 (pakchois-0.4.tar.gz) = 354c4bb62645c12349a441153a4979cae04a4403
+SHA512 (pakchois-0.4.tar.gz) = b4322cf58124aa05b6f34155a4eea753c6eae2fbbe57436491caf0549d79598c95f4d4fefa4a823ead341ab66a9e1a3f437d5278e449ca0d088a4a971d244160
 Size (pakchois-0.4.tar.gz) = 371126 bytes

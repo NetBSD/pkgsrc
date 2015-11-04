@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2015/01/25 13:13:51 joerg Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 01:17:50 agc Exp $
 
 SHA1 (crypt-1.17.tar.bz2) = 9c746822c84e4276e432b64964f94d1d5ddd13ad
 RMD160 (crypt-1.17.tar.bz2) = 742d72d82fea2e6a9865d8c682c10cbaba69ea2f
+SHA512 (crypt-1.17.tar.bz2) = 9335df5ae0a2c8e33e8f03ced0cfb0a8d1ac4bccd007b74818228c3b8b232446b4425356f304a08320b75542a537a46b305b92c3011dee76dfd636497bf57af2
 Size (crypt-1.17.tar.bz2) = 1599215 bytes
 SHA1 (patch-aa) = a2385cf0543a19b1555d4370a10c012c5141b48a
 SHA1 (patch-ab) = c0eb1522dd02c2811deebfa353433e81e71a8928
