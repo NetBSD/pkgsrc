@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4471 2015/11/04 10:03:46 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4472 2015/11/04 13:55:50 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7652,3 +7652,23 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/py-markdown to 2.6.3 [wiz 2015-11-04]
 	Updated audio/py-mutagen to 1.31 [wiz 2015-11-04]
 	Updated devel/py-libmc to 1.5.0 [wiz 2015-11-04]
+	Added converters/erlang-p1_iconv version 0.20150624 [fhajny 2015-11-04]
+	Added databases/erlang-eredis version 1.0.8.20150910 [fhajny 2015-11-04]
+	Added databases/erlang-p1_mysql version 0.20150922 [fhajny 2015-11-04]
+	Added databases/erlang-p1_pgsql version 0.20150428 [fhajny 2015-11-04]
+	Added databases/erlang-sqlite3 version 1.1.5.20150809 [fhajny 2015-11-04]
+	Added devel/erlang-p1_cache_tab version 0.20150628 [fhajny 2015-11-04]
+	Added devel/erlang-p1_zlib version 0.20150223 [fhajny 2015-11-04]
+	Added misc/erlang-p1_utils version 0.20151016 [fhajny 2015-11-04]
+	Added net/erlang-p1_sip version 0.20150622 [fhajny 2015-11-04]
+	Added net/erlang-p1_stun version 0.20150916 [fhajny 2015-11-04]
+	Added security/erlang-oauth2 version 0.6.0.20150928 [fhajny 2015-11-04]
+	Added security/erlang-p1_pam version 0.20150223 [fhajny 2015-11-04]
+	Added security/erlang-p1_tls version 0.20150803 [fhajny 2015-11-04]
+	Added sysutils/erlang-goldrush version 0.1.7 [fhajny 2015-11-04]
+	Added sysutils/erlang-lager version 3.0.1 [fhajny 2015-11-04]
+	Added textproc/erlang-jiffy version 0.14.4 [fhajny 2015-11-04]
+	Added textproc/erlang-p1_stringprep version 0.20150204 [fhajny 2015-11-04]
+	Added textproc/erlang-p1_xml version 0.20151023 [fhajny 2015-11-04]
+	Added textproc/erlang-p1_yaml version 0.20151007 [fhajny 2015-11-04]
+	Added textproc/erlang-xmlrpc version 1.15.20150506 [fhajny 2015-11-04]
