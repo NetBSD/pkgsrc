@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2015/07/02 12:38:32 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 03:28:49 agc Exp $
 
 SHA1 (mkcomposecache-1.2.1.tar.bz2) = a0daa928b449998a2374c0472fd715792075f8b3
 RMD160 (mkcomposecache-1.2.1.tar.bz2) = 4f09fbf0c4b72c267ce6242155ff3f177dd403f3
+SHA512 (mkcomposecache-1.2.1.tar.bz2) = 97ce9e5e2f2534291fc0b3a121899e2936de3e71ec6a9929cfc6e1e0f41e6d57cccd08147a2b5d3c7d70d1769f14ed6c4745c398602d5b81a2ddb8c7490fcb5b
 Size (mkcomposecache-1.2.1.tar.bz2) = 97359 bytes
 SHA1 (patch-mkallcomposecaches.sh) = 2382cf4abe912ff80360caa1a9e4d6f3cfe7535e

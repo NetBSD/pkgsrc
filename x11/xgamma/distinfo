@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/04/17 07:07:27 wiz Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 03:29:07 agc Exp $
 
 SHA1 (xgamma-1.0.6.tar.bz2) = af1484d0d70bc71dc9d3b7b95645881b7165c41b
 RMD160 (xgamma-1.0.6.tar.bz2) = 2223d444aff6faa15c94b44d0e5bbadd1f7aed15
+SHA512 (xgamma-1.0.6.tar.bz2) = 2d41798e15ac8c6f6731a2da29589207d936eaee1223ce6f3ca948e67d63c5c8b955d11c7db092dcd8c66a6209bd15c1de3dc1446dad4b4277134f010c6fc47a
 Size (xgamma-1.0.6.tar.bz2) = 123105 bytes

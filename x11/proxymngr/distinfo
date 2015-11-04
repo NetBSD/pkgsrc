@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/08/06 07:21:26 wiz Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 03:28:51 agc Exp $
 
 SHA1 (proxymngr-1.0.4.tar.bz2) = 78984a9e3ccbec423e4103d51dd88df9ef23f63c
 RMD160 (proxymngr-1.0.4.tar.bz2) = c1490e136362b002e213047779f6ce3e49fb051c
+SHA512 (proxymngr-1.0.4.tar.bz2) = dce0d93558e674ce82197476d204488505079c8aa5192387e57c06844c4ea83da1cf45238e0a63e2bbf9867388ca1175125b6d7b4036085be89b3de353887fd2
 Size (proxymngr-1.0.4.tar.bz2) = 131436 bytes

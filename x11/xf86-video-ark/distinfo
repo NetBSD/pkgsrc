@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2015/04/02 22:16:46 tnn Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 03:29:01 agc Exp $
 
 SHA1 (xf86-video-ark-0.7.5.tar.bz2) = 6abadee761f1a49b399361ecbcecef4e4a097c0d
 RMD160 (xf86-video-ark-0.7.5.tar.bz2) = 4559cc0e416a6eabffe78e82d4b034cff716f8eb
+SHA512 (xf86-video-ark-0.7.5.tar.bz2) = 67c2b4e2109bf9d84a007c9679d35e7c0a4e4ddcdb7be9fa5070ce7e2f666e018d8421ddd4890cf3abb4eb37e060a10666c62a9efbb5369eb7cd8647ee18a644
 Size (xf86-video-ark-0.7.5.tar.bz2) = 290423 bytes
 SHA1 (patch-src_ark__driver.c) = 922cbccbd93999e0d0c2ea433e78fb1927595721

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/07/02 12:38:32 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 03:28:45 agc Exp $
 
 SHA1 (libXaw3d-1.6.2.tar.bz2) = 0b1db72e9d5be0edae57cda213860c0289fac12f
 RMD160 (libXaw3d-1.6.2.tar.bz2) = 0837e67bcae5e7191f1fef5522d572cc3b397d1d
+SHA512 (libXaw3d-1.6.2.tar.bz2) = 11b15884e47efc139aa019f0a76086913535767fb2e20fcd837d810d3b6b4a7bda3408be5fa0cbe90ae16eeaebe5db9b0ec77a0e2b5767590662ef3a7c9c96ea
 Size (libXaw3d-1.6.2.tar.bz2) = 551851 bytes

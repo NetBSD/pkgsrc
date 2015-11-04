@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2006/10/18 00:03:44 wiz Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 03:28:50 agc Exp $
 
 SHA1 (paragui-1.0.4.tar.gz) = 3e412618b77499bf08a3eb478fec38f0a35ce86f
 RMD160 (paragui-1.0.4.tar.gz) = c6352dfe99344bf2dc604784ac8ef0a80dbcb5ad
+SHA512 (paragui-1.0.4.tar.gz) = 9427c45508f8ab61a3c43d5c1f97de721ef171c6140841d61ce436f055e03511593e2236b0357b9a0a81914e4ce32a325e0b106165bf8845e30a8e72bb1e1dcc
 Size (paragui-1.0.4.tar.gz) = 1089511 bytes
 SHA1 (patch-aa) = f4c72aed471674e0cbed473ecbcee18895a5aaba
 SHA1 (patch-ab) = af89e83ac8a95dc09a5e2c73df30c3be8d54a82a
