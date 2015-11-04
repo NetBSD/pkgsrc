@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2014/05/18 21:24:04 joerg Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 01:32:14 agc Exp $
 
 SHA1 (fscd-1.1.tar.gz) = 8d17ec035fbe7b90aeefdff23042a07a7d65c2c7
 RMD160 (fscd-1.1.tar.gz) = 0c9aae223825e5fda61d88007b7abb4c30a61c18
+SHA512 (fscd-1.1.tar.gz) = f0a1b29082fbf8f614bc56f7d49e52976a24832f73a4ce734303dfd193bee134a61449062217ba96a19714a52b2862c8014d7876f19212852e28af99d487de93
 Size (fscd-1.1.tar.gz) = 16295 bytes
 SHA1 (patch-fscadm_fscadm.c) = ad163550cfe11603f94e633e7f111b19ed56ba5e
 SHA1 (patch-fscd_fscd.c) = 1091b8ee612d100287fde6c38a0b3d46e98f5eb9

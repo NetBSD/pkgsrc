@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2012/10/26 20:32:56 joerg Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 01:32:41 agc Exp $
 
 SHA1 (xfsprogs-2.7.3.src.tar.gz) = abfe3ea13475810a0ef854f48b9ca9912ee7fbc5
 RMD160 (xfsprogs-2.7.3.src.tar.gz) = 7a4f6b0d5da640041334cef4b4aa2e60ba43af53
+SHA512 (xfsprogs-2.7.3.src.tar.gz) = afbe6e5d68086f0e70c67277ba12b39a3b1358af1f41466fa420637a24d58dfa0ab2be25eabfd1f080b1f66f9f1ce9b84d196f499e9588fd9f6f029ad6ec6462
 Size (xfsprogs-2.7.3.src.tar.gz) = 895400 bytes
 SHA1 (patch-aa) = c2d7667d5f4d7cf027ef0c41b774852cc28638e5
 SHA1 (patch-ab) = d69fdc650846cccad73f1c013d082010e24b98f8

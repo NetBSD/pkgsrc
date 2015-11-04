@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.11 2013/09/10 14:45:05 joerg Exp $
+$NetBSD: distinfo,v 1.12 2015/11/04 01:32:42 agc Exp $
 
 SHA1 (xuvmstat20050909.tar.gz) = b8118b1b11c260683ff14fe2200e9ee584f6b7c5
 RMD160 (xuvmstat20050909.tar.gz) = 6400ee7e396c410bf22ef9673b27b909f2a29a68
+SHA512 (xuvmstat20050909.tar.gz) = 060176052d04731a7e07b190b47ffedace9b07af253bf48c028f0024dc24fef8b8a8750938a98d5024148b27113c9b30df3f7c62b0239580ddfefb0b4ef231f8
 Size (xuvmstat20050909.tar.gz) = 7661 bytes
 SHA1 (patch-aa) = 39881270046f9588c014546c6c8327f123326fb9
 SHA1 (patch-ab) = d68a14dc0a465b1f6e6a3b422f41f677c03b20b6
