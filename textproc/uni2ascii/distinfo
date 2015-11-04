@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2012/02/14 12:04:22 obache Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 02:00:14 agc Exp $
 
 SHA1 (uni2ascii-4.18.tar.bz2) = 9c718b35d1acd30ed4ef6d74318e846d10403b86
 RMD160 (uni2ascii-4.18.tar.bz2) = 4cc1ab903b182bbb7f40c58c8eb5d77cb12b5c33
+SHA512 (uni2ascii-4.18.tar.bz2) = 7ec94576b4ad794e3d4a080551b0cbed8c4e9084eda6505bb5974c06f2e043ba20d293abed5b744fb1abff7897b4719ca2b43e5214dbd897ea44dfae8778eb21
 Size (uni2ascii-4.18.tar.bz2) = 127125 bytes

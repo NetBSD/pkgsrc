@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2010/09/10 08:30:42 taca Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 02:00:09 agc Exp $
 
 SHA1 (nqxml-1.1.3p1.tar.gz) = abac255fdfd09dfc269bf7488029b41081cff44e
 RMD160 (nqxml-1.1.3p1.tar.gz) = 62d48b8f35062de3816dd6177c9739a5d2ebb33a
+SHA512 (nqxml-1.1.3p1.tar.gz) = 5057ab995531ff15e148cb8e306cf32b1dd636f980e6c5ec899830d5440c3b6894cd71a740769c81a3eddb2cc887c648a02e44c6ede19f7273ff60d28ff885b4
 Size (nqxml-1.1.3p1.tar.gz) = 63165 bytes
 SHA1 (patch-aa) = 79440eb396a18f84f81fb80556a81ba35f41de72

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 14:48:41 agc Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 01:59:28 agc Exp $
 
 SHA1 (expatobjc-1.0.tar.gz) = bdda063b5e0703015e73544f0f8d736cdd35efb2
 RMD160 (expatobjc-1.0.tar.gz) = efad20edb1e4ad740ddbd37ab845cad9a406a4f6
+SHA512 (expatobjc-1.0.tar.gz) = f4ebd92088a79f4d65b998f847b5d9117e50509db94b0eebd635a044e2a4d2bf29ba3bbf7496eef291c38b48ca4cbdaad798edd3cce247dc53bceacf9696f00e
 Size (expatobjc-1.0.tar.gz) = 32708 bytes

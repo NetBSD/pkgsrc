@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/04/25 12:36:01 rh Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:00:15 agc Exp $
 
 SHA1 (xml2-0.4.tar.gz) = 735e7f6c336bd88dd1ab12bdea84e7cf1df5a36d
 RMD160 (xml2-0.4.tar.gz) = 06f9c2eed54ad51f0f938ebceee60fa5a3cb878f
+SHA512 (xml2-0.4.tar.gz) = 3bde930aa6be120f4b9cf9b63c865a43d34382151fd3d430249f0ff75e796e1965193c178e9acb271a7de79ce8cf4b1d52cce9b697d5f8a9a8e719c04f3baa4c
 Size (xml2-0.4.tar.gz) = 83449 bytes

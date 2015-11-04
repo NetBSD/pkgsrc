@@ -1,19 +1,24 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 14:48:41 agc Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 01:59:26 agc Exp $
 
 SHA1 (dict-gazetteer-1.3.tar.gz) = d46d3e0aeb956bb2b49e1ec1cda271017eed94c4
 RMD160 (dict-gazetteer-1.3.tar.gz) = 5cf7f603f3430f33015c34d43dc754ef537e82d6
+SHA512 (dict-gazetteer-1.3.tar.gz) = a8849dd0e4383cfee81ea74569c459a1167e8a1f820b657e33ed49653c7ec4f9a5a363bba4c91a7147d94966d7f25c0d8920c9436d0399beca5683f944aa7ee1
 Size (dict-gazetteer-1.3.tar.gz) = 2857457 bytes
 SHA1 (dict-misc-1.5.tar.gz) = faa183a736da3809719bb513c2df4c6b9814e51f
 RMD160 (dict-misc-1.5.tar.gz) = 1fc917721ec2b39cbd621aa7f34f2f0a1d96fa70
+SHA512 (dict-misc-1.5.tar.gz) = 8d71ac9343ca61dec19cf93d37fa1d1df9f63e042a3c34cf4fd83afa1c1298fb5f6e00adca3f0e068b20712f08ab6cdfed2a466096eb9d6cc287264561204a78
 Size (dict-misc-1.5.tar.gz) = 4204499 bytes
 SHA1 (dict-web1913-1.4.tar.gz) = 727751063813fbdc67f8f2a42933d8c9bf35689b
 RMD160 (dict-web1913-1.4.tar.gz) = 926535d040e0b0dbe5fc9e7315101a95922de5e4
+SHA512 (dict-web1913-1.4.tar.gz) = a27340595ff6405e8e245b06e10cb792e700da9d6e43cdc4b554513aad9aaa2179272bd873b163dffd6300051d0adf845026549fb8bc26ab9123fca4c335a720
 Size (dict-web1913-1.4.tar.gz) = 293649 bytes
 SHA1 (web1913-0.46-a.tar.gz) = 56d6b00b79ab31c4104862b44be8c9287babecb1
 RMD160 (web1913-0.46-a.tar.gz) = 0aecf6595aa0bf61cd51edbaa6bce4c3236b2734
+SHA512 (web1913-0.46-a.tar.gz) = 4e2f61a82538567c696cfb18bc39ca8fff79a42fbe89d9d4e77dabfdaf52f1bd0d0027b20777287dbe3b49237a7e0024fe2ee5a8a627ecd047da44c20b521ef8
 Size (web1913-0.46-a.tar.gz) = 13795530 bytes
 SHA1 (dict-wn-1.5.tar.gz) = 56cfd7200e4149504376b280e36aa37abcbe054e
 RMD160 (dict-wn-1.5.tar.gz) = 39cb5dd107a0a084ba1e5d57a540f763d0a978d7
+SHA512 (dict-wn-1.5.tar.gz) = 734ab372c760aebb35fdbe0ef7b1863b499fcff1e99a1bf99ee473f772a2259ff79b89c1c9589a872520ed849ae8ff8f6109ddfa4d7f90a2d45858e311f6e38d
 Size (dict-wn-1.5.tar.gz) = 6363650 bytes
 SHA1 (patch-aa) = fdc8ee511a2e5ebbacccae199e5e37b9c0a40666
 SHA1 (patch-ab) = 232c319e24e874703c441115c13af32c697f81c6

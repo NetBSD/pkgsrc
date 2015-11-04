@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.8 2013/02/28 12:31:37 obache Exp $
+$NetBSD: distinfo,v 1.9 2015/11/04 01:59:37 agc Exp $
 
 SHA1 (mecab-java-0.996.tar.gz) = 3a8d4e998b40e0058dfadb4259c6bec0bff38b06
 RMD160 (mecab-java-0.996.tar.gz) = 8f07939ab2114aa11549a432aa85e8a2c8c27099
+SHA512 (mecab-java-0.996.tar.gz) = 2ca0548d237ddc14cda946eb785e4530ea5fa80ad36e7753dbacb98f2b180739b000112b9abb8ef0c60144809d7e5f15199ca797b34e31d58ee124f131955a5f
 Size (mecab-java-0.996.tar.gz) = 33216 bytes
 SHA1 (patch-aa) = 3d246a6a6f0d27c97fc042bbfa710aaf21ffd19e

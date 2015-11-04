@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2011/02/22 11:46:54 ahoka Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 01:59:34 agc Exp $
 
 SHA1 (hu_HU-1.6.1.tar.gz) = 3ce7e8714c7ffd325b0aabe2641da4ab8c13be72
 RMD160 (hu_HU-1.6.1.tar.gz) = ad37107a62cd657485d74560355fc315fc83ddfa
+SHA512 (hu_HU-1.6.1.tar.gz) = 7ae1f99b16b714158c33b41ee5c7a3aaeb84bf59a1d1c13a02b0ba30972bfd2b3dd0d04a28997f0f5a97943a89d3cf9f0da55fb219ce24917ae1e3aed0a5484f
 Size (hu_HU-1.6.1.tar.gz) = 730641 bytes

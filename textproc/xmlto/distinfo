@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.9 2014/04/11 18:07:26 wiz Exp $
+$NetBSD: distinfo,v 1.10 2015/11/04 02:00:16 agc Exp $
 
 SHA1 (xmlto-0.0.26.tar.bz2) = c5a982239c738c76d0e67bc416d835cf102cd422
 RMD160 (xmlto-0.0.26.tar.bz2) = 3c79400d5a355620d4275f42a1dcf7eb53d230fa
+SHA512 (xmlto-0.0.26.tar.bz2) = 85110f22a7b5a5c8de4115ae5d0391645a223191b17455a4f9539b02f56f7003fd4ba70e48f0e5e46cdb91220a9027802e725f88ca8659e3ce1576f8609ccd18
 Size (xmlto-0.0.26.tar.bz2) = 119819 bytes
