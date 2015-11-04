@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2010/05/05 17:42:59 minskim Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 01:01:42 agc Exp $
 
 SHA1 (tex-acmconf-1.3/acmconf.tar.xz) = 5845fc970d23b33c6c02b9258314cb557dc53cbf
 RMD160 (tex-acmconf-1.3/acmconf.tar.xz) = b1d1be657b4af17490222ebca4277e6a9f587b5a
+SHA512 (tex-acmconf-1.3/acmconf.tar.xz) = bf8c487df3a42a78494c89b8d56e222458d38ee6ab10d79c5ba45eb6d4659048b10274120ccb11a46d2c9f669eac8ae81465364fa659f16c834165a2e5853017
 Size (tex-acmconf-1.3/acmconf.tar.xz) = 4168 bytes

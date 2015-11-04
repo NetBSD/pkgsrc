@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/09/17 22:44:35 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:44 agc Exp $
 
 SHA1 (tex-showtags-20336/showtags.doc.tar.xz) = 6d96a1b41cc9aa5dad63b110e3691f41fdbd86fb
 RMD160 (tex-showtags-20336/showtags.doc.tar.xz) = 20b4ef8e62f542b83c36235d419e61170883cde2
+SHA512 (tex-showtags-20336/showtags.doc.tar.xz) = 5340f1a50953932399be9bc1333707ac7021558eddce048bbda18cceb98fbd1be0d71a6ed63afe96cd716b0030f2f33bc7d6c799a56770309d4d8c3bbb67d860
 Size (tex-showtags-20336/showtags.doc.tar.xz) = 211908 bytes

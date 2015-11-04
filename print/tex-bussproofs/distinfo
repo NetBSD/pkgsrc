@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/29 11:37:24 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:53 agc Exp $
 
 SHA1 (tex-bussproofs-27488/bussproofs.tar.xz) = f7513522c86775eb3664fc80bc06d159f4d630f9
 RMD160 (tex-bussproofs-27488/bussproofs.tar.xz) = c980c62ea909404e27cfb346cf301efbd1cb4ddf
+SHA512 (tex-bussproofs-27488/bussproofs.tar.xz) = 9e7825b04026311a930856cab837d55277b3d2eb351ae70adc7b4592f263fefd04f27b7687a98823e5cca2901c07d722a5ab725605aba6b7f6ffc6f4445a5f1e
 Size (tex-bussproofs-27488/bussproofs.tar.xz) = 8772 bytes

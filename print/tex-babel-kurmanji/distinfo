@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/04 12:34:58 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:48 agc Exp $
 
 SHA1 (tex-babel-kurmanji-30279/babel-kurmanji.tar.xz) = 4a1b26ed6260855c1a4b85e78342b5594d038e10
 RMD160 (tex-babel-kurmanji-30279/babel-kurmanji.tar.xz) = b7c86aadf5685bda5a85931fd9d9c931ee3f56ec
+SHA512 (tex-babel-kurmanji-30279/babel-kurmanji.tar.xz) = 76e38ff22c1a769728b042ec8ba9d09a4ba6172fc4fc91a55e95c29e334221b57aa13afcaacb31d4d81c552a1ffff73e7d034907b856ba112a08b40785223440
 Size (tex-babel-kurmanji-30279/babel-kurmanji.tar.xz) = 2908 bytes

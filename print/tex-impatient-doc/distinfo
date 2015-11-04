@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/15 17:51:48 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:20 agc Exp $
 
 SHA1 (tex-impatient-35573/impatient.doc.tar.xz) = 4ede1bb494a193c86858e71d4781f6248534822f
 RMD160 (tex-impatient-35573/impatient.doc.tar.xz) = 11be866659e160e8b4c7804237a89ff8c56205b4
+SHA512 (tex-impatient-35573/impatient.doc.tar.xz) = 96294377f67b8779baac67b18cff120fa27fd0739bcfd2f75122aafbfc3d3142832428721411cf5bf22ccd0727eee589ecb5068dbd8278d37095a88805b0abb9
 Size (tex-impatient-35573/impatient.doc.tar.xz) = 1562768 bytes

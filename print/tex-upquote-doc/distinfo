@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/10/19 20:43:40 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:56 agc Exp $
 
 SHA1 (tex-upquote-26059/upquote.doc.tar.xz) = 0843b8825c276dff823ca882f63fa44e8b7eb6ec
 RMD160 (tex-upquote-26059/upquote.doc.tar.xz) = 91b1d2163347cd8cc8e25296985935c0fc9b3c4e
+SHA512 (tex-upquote-26059/upquote.doc.tar.xz) = fb32cfd4c9a6cf5c220bc315d41c1f92c0bba8711f8fde405754b97760e104190bdf2f12f6d485e857b6839379eb4c49d5fbb2b5833a80dd71317f47b2aa60c6
 Size (tex-upquote-26059/upquote.doc.tar.xz) = 163312 bytes

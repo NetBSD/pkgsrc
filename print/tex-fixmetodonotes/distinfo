@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/08/02 01:56:40 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:08 agc Exp $
 
 SHA1 (tex-fixmetodonotes-30168/fixmetodonotes.tar.xz) = 7fce64e66e6b04297084b6bc6cda6910f5196db0
 RMD160 (tex-fixmetodonotes-30168/fixmetodonotes.tar.xz) = 4f534ee50aa289f0b9d7adc71203caced1b877bf
+SHA512 (tex-fixmetodonotes-30168/fixmetodonotes.tar.xz) = 1a2283e4588dbc8a0278a33506de2d2722b93115bdd0d50bcaeee730e9fefcbeb1ec9405ae25543be7009016a15ab2d54788c3357e14a96bff21d7cfc399af84
 Size (tex-fixmetodonotes-30168/fixmetodonotes.tar.xz) = 1552 bytes

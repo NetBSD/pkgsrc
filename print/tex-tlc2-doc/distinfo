@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/15 17:51:51 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:52 agc Exp $
 
 SHA1 (tex-tlc2-26096/tlc2.doc.tar.xz) = 8d33d83f686211d667a501d92da532d0987b4823
 RMD160 (tex-tlc2-26096/tlc2.doc.tar.xz) = 35ea21156d6fdf9755609e29261285e129131988
+SHA512 (tex-tlc2-26096/tlc2.doc.tar.xz) = 2aedf9cd805cd9d032e0b2c6e2a2ccd01b2dc8ee0fc44e291d06c2686189779ed9c574cbd8448d069548132bbacbb0d9249a98d92e8a70dfd5a2e876ad8ece5e
 Size (tex-tlc2-26096/tlc2.doc.tar.xz) = 114656 bytes

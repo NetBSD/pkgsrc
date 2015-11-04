@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/15 17:51:51 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:58 agc Exp $
 
 SHA1 (tex-webguide-25813/webguide.doc.tar.xz) = 2823490ab5cabb4cd9da6b9b04956760229a7cb7
 RMD160 (tex-webguide-25813/webguide.doc.tar.xz) = 537a90115a3f6bad2fde224528f1efe29e294e5e
+SHA512 (tex-webguide-25813/webguide.doc.tar.xz) = 5c01cd9d6a48319ad00e586163b754ee6678f0e51c8fa7be455568b0010c82783a3eea9516d8327cfc5c4921d84c308a4ca5585fecf36457664ab0e7202bd4e1
 Size (tex-webguide-25813/webguide.doc.tar.xz) = 145664 bytes

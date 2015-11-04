@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/04/09 21:51:35 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:45 agc Exp $
 
 SHA1 (tex-srcltx-1.6/srcltx.tar.xz) = ff4d99df2d8d131771d36b20a0b2586b8ad05755
 RMD160 (tex-srcltx-1.6/srcltx.tar.xz) = c908b75b1a09c359db7cb53d5b8ad3f3ee3e1bb6
+SHA512 (tex-srcltx-1.6/srcltx.tar.xz) = eb130f8407853313cb73f8d47f3c007f1d5cb31e2cdbac46959673e9133376a9519d100ed999a03787c5f130d3e41f9fde6a81d0b7380d78ff1e86b694f6917d
 Size (tex-srcltx-1.6/srcltx.tar.xz) = 2336 bytes

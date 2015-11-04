@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/04/04 12:34:24 drochner Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:37 agc Exp $
 
 SHA1 (pdfshuffler-0.6.0.tar.gz) = 2c9e570cd0e82a4c01625692a803db342150ea84
 RMD160 (pdfshuffler-0.6.0.tar.gz) = ca2fb6fca4a02eb01782f9dc10892bff5d451bab
+SHA512 (pdfshuffler-0.6.0.tar.gz) = e2563e9b5faf3ebac56f3840017ad9279a5e8e096c9f44ec053c617894910b1d0531457bc37d8fb9bc1db13ae25b94d55ca0b4ec26fbddeb9e51e6b4d75293fe
 Size (pdfshuffler-0.6.0.tar.gz) = 48071 bytes

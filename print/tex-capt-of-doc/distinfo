@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/04/11 20:59:09 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:54 agc Exp $
 
 SHA1 (tex-capt-of-doc-2009/capt-of.doc.tar.xz) = 185cba483f1c9bb4366568201c31d67b2e9b79bd
 RMD160 (tex-capt-of-doc-2009/capt-of.doc.tar.xz) = 81f33314bde4b6652d8632e3fe102fcc48e9a32a
+SHA512 (tex-capt-of-doc-2009/capt-of.doc.tar.xz) = 0debe2aa89b75adae6ea82a43edd451b9203cb474000605f44dd45dbcfdbb61049879c432a5515f37b10fac3aed3780a42f3718027e0bdc9c97defd42975b6cb
 Size (tex-capt-of-doc-2009/capt-of.doc.tar.xz) = 72588 bytes

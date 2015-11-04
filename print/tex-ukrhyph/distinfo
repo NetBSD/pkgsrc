@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2011/01/20 16:31:23 minskim Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 01:02:55 agc Exp $
 
 SHA1 (tex-ukrhyph-21081/ukrhyph.tar.xz) = dca263e127f7ad5d056707d206400c6cdc0e6425
 RMD160 (tex-ukrhyph-21081/ukrhyph.tar.xz) = f47edf000b8b65986d498e81352a9c8c9c0bca0a
+SHA512 (tex-ukrhyph-21081/ukrhyph.tar.xz) = 70b5ae20960ec5e187392f5177aef82e23f712fe1b4d22260309bf4dcdd305d1ea70a61d2c9eeedd9433495af0d38eed49d403a86a33ffaf7b44affbd055fb70
 Size (tex-ukrhyph-21081/ukrhyph.tar.xz) = 39120 bytes

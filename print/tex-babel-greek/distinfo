@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/04 12:31:14 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:48 agc Exp $
 
 SHA1 (tex-babel-greek-35414/babel-greek.tar.xz) = b7f1d8718bf6230cef5a094a6b2a742eec5fab52
 RMD160 (tex-babel-greek-35414/babel-greek.tar.xz) = 45b59a68c5fbf97e93bc2c685726e95b875ac968
+SHA512 (tex-babel-greek-35414/babel-greek.tar.xz) = ee51a38ff5a4b2f4aca9a116344f9464b912dab0072e6e17a2dbf8df902a04b9af2f1422959f79c5ac7b35a4f022f18e7dbd71e941c6a7b6086a50078520616b
 Size (tex-babel-greek-35414/babel-greek.tar.xz) = 5952 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/15 17:51:48 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:24 agc Exp $
 
 SHA1 (tex-latex-doc-ptr-15878/latex-doc-ptr.doc.tar.xz) = a751dcedf4604fc8a7e1188368c161e6779cfca2
 RMD160 (tex-latex-doc-ptr-15878/latex-doc-ptr.doc.tar.xz) = 2b5d826b33f05f26a11eeb82758e9df82bcb69c8
+SHA512 (tex-latex-doc-ptr-15878/latex-doc-ptr.doc.tar.xz) = 1c59b9843f9199f3c99afd3e8718410bb57aa120968e1e9420e27fb6649c6e0f68195fc579eb2b5620817d6aeae020a3502765ae50f869795c5926401240383a
 Size (tex-latex-doc-ptr-15878/latex-doc-ptr.doc.tar.xz) = 130636 bytes

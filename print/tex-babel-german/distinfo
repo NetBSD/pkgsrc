@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/04/26 04:03:22 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:48 agc Exp $
 
 SHA1 (tex-babel-german-35349/babel-german.tar.xz) = 60e65b7e597c5889b3d0d35c5f96541f571a9116
 RMD160 (tex-babel-german-35349/babel-german.tar.xz) = 7500e2d02b666425f8e00cb62984a5c14119a29d
+SHA512 (tex-babel-german-35349/babel-german.tar.xz) = 928ffaf348a4133a0b4ad2ae185ba76acd881c3a4997b86a2ef111a3a045edd2db4c8a8b3acc7e03ca336b730e6eb7057579a5f8b08baca458a86113b0f9cac2
 Size (tex-babel-german-35349/babel-german.tar.xz) = 3448 bytes
