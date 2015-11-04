@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2014/02/16 15:45:52 wiedi Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 01:32:31 agc Exp $
 
 SHA1 (sredird-2.0.0.tar.gz) = 2eae6fb41b46ebf9f704dd997ef0a096e5084721
 RMD160 (sredird-2.0.0.tar.gz) = d4e943b678b294c4e00350be817348d71b289912
+SHA512 (sredird-2.0.0.tar.gz) = 5e13490a4adee81ecfd859b83ed88665a045d29fc0d341abe32d3307cab65e23dbb563055b0e0431da99370d8a4720593ef29e06f741528e004cc3c622797944
 Size (sredird-2.0.0.tar.gz) = 24053 bytes
 SHA1 (patch-Makefile) = 8dff7071ec15fb7d58eef51e57938f5a1d51ec2f
 SHA1 (patch-aa) = fcae87128439b1fc6705703d473380df46dbcd7e

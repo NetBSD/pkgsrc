@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2005/05/25 13:41:47 wiz Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 01:32:34 agc Exp $
 
 SHA1 (misc-src-riscpc.tar.gz) = d41dfe0b59eda0ed2e3c61ae2248ef7420aa4144
 RMD160 (misc-src-riscpc.tar.gz) = ce86de8c586c02cf91177b8a88ef050994370846
+SHA512 (misc-src-riscpc.tar.gz) = 7346209bd6a8d6d20d032eca207be39f38017d6dc3f5004cfb7a634a36f14ed95e2fe69656b5008c9bdb35b576b11b1156be59f67a252bc6f11b12bdce492b7c
 Size (misc-src-riscpc.tar.gz) = 11512 bytes
 SHA1 (patch-aa) = a38934e338f4bb7deea58e040b604150b6a09329
 SHA1 (patch-ab) = 45182e2edef9a132e1ac77e0f26bce7d49dab8cd

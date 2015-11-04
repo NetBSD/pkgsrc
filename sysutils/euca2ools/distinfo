@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/02/26 00:19:06 hubertf Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:32:13 agc Exp $
 
 SHA1 (euca2ools-2.1.2.tar.gz) = 7c050a5c7e397189a8a1482b9106218dbbdc6377
 RMD160 (euca2ools-2.1.2.tar.gz) = eb3dcae2170aae93743b98c084d18d1ffa48860e
+SHA512 (euca2ools-2.1.2.tar.gz) = d3a9a86ebd77f5e534fef4641ae1c835db5144938c8d7d673b0dcb2fdcbbf3c42bf2940dd01812cd1e278cf2c246e94237816b6ab16ad1fc10c8767e4dcd3832
 Size (euca2ools-2.1.2.tar.gz) = 103588 bytes

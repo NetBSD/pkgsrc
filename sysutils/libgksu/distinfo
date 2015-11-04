@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2013/10/16 07:04:37 wiz Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 01:32:19 agc Exp $
 
 SHA1 (libgksu-2.0.12.tar.gz) = 81a541ccfe9ea278dd3e2a80b3287f02f6eb88f8
 RMD160 (libgksu-2.0.12.tar.gz) = c6d4019d9eda3c53743c80300ba8b843c134ca82
+SHA512 (libgksu-2.0.12.tar.gz) = 06935583787c2d63db5ee345efeabd46ce1b2f36ec5c94ba0219d7c27d0935ddbf9987c0368158e57486d541b4a8e75140da53a806061d465985452fd1128573
 Size (libgksu-2.0.12.tar.gz) = 477903 bytes
 SHA1 (patch-aa) = 66226769eaa9461e8637ec0dae83d30d9069d10d

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2013/03/14 13:03:47 kim Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 01:32:23 agc Exp $
 
 SHA1 (osname-2.0.tar.gz) = cb0058cfd388d3fad226ec04a4e1b332b766e417
 RMD160 (osname-2.0.tar.gz) = 0c44a8c0830f297af511287a879d1bbed4587f6e
+SHA512 (osname-2.0.tar.gz) = d448923f11086a30c884b12641820cdee8f3e340746048dd23404b7bf12a5c2288faaf1e8ddeb8e8c6138373a8e45c316b99a0dcd3a789989b5d03008346ebbd
 Size (osname-2.0.tar.gz) = 6174 bytes
 SHA1 (patch-aa) = b7e40efef7a5704c68ef3cd941642711893551dc

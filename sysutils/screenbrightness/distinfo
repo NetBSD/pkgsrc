@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2015/06/05 14:43:48 wiedi Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 01:32:30 agc Exp $
 
 SHA1 (screenbrightness-1.1.tar.gz) = f9750733ac298837f519fcfedcbfec74f781bc68
 RMD160 (screenbrightness-1.1.tar.gz) = e99e365e90e6ade83af2d6b842a71472252b98a6
+SHA512 (screenbrightness-1.1.tar.gz) = da4a949b7a18802bcd00a15d4d88f2d987e55e9b61711dee7674b1023d527d2c889e3632d9b0ca696dabfd9ae1c91dfde75b10dc4e4875fd7e4abf7262a4858f
 Size (screenbrightness-1.1.tar.gz) = 2603 bytes
 SHA1 (patch-Makefile) = 6f56125fe38c5cc06d8b3928c88b2b4a0fd8bd0c

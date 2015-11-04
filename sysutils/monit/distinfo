@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2014/05/12 09:00:54 imil Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 01:32:21 agc Exp $
 
 SHA1 (monit-5.8.tar.gz) = b2eb92d3c76a3161ffdd3b3ec0e5960fd900fac2
 RMD160 (monit-5.8.tar.gz) = b87b68cc46aa868ad300ec05af99c664bd5058de
+SHA512 (monit-5.8.tar.gz) = 61f2cb4a6b2da8617adfd16ace4d9b246957385109fee9a3312272ac271003cd89a12872ac3a07b0148ad7bdbe544e447745033d2a9fab19908ef19b7a106dda
 Size (monit-5.8.tar.gz) = 1237958 bytes
 SHA1 (patch-aa) = bf1ef16d44d082443c34963bab1335767a4a8497

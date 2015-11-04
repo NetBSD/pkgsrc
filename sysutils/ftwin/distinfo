@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2015/01/23 10:11:47 wiz Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 01:32:14 agc Exp $
 
 SHA1 (ftwin-0.8.8.tar.bz2) = 7c262ee1bd4b41ac099532d179f2b917bed12ba3
 RMD160 (ftwin-0.8.8.tar.bz2) = a661d78eb9bf4aa53da25a40a8ad28a0971d70f5
+SHA512 (ftwin-0.8.8.tar.bz2) = 4da042417230cfd4e694f73dcd27dc43d124a24df42b2bcbee2a310cfc5bda050f9d8fa256b5b97a7c2f25a778b73a4c2fdea20a044788c4f22f1341b3907a95
 Size (ftwin-0.8.8.tar.bz2) = 168461 bytes
 SHA1 (patch-aa) = 68fd349331a7e628bd246ad62d682d079dd2f3cf
 SHA1 (patch-configure) = a3f10cd3b6f238dfeabb59ecfc1949bd5b7ff39d

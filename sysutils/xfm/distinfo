@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2015/10/14 20:17:28 wiz Exp $
+$NetBSD: distinfo,v 1.8 2015/11/04 01:32:41 agc Exp $
 
 SHA1 (xfm-1.4.3.tar.gz) = 8d6235bb63e04491cc99603144b52884866b39e2
 RMD160 (xfm-1.4.3.tar.gz) = b06c562b467e5085e5ecdd4273b64d554415ce69
+SHA512 (xfm-1.4.3.tar.gz) = 8d81a50c474712745d1d1fe6e84d772fd2faba6db31bec2bade799923d9455d772cd1b7cc68bd8014e0ab9f2840117ead0eb959945f800e13a62824d82c8955d
 Size (xfm-1.4.3.tar.gz) = 420962 bytes
 SHA1 (patch-aa) = 24ce4e78b18356db98ed2588f8da48380e1efd20
 SHA1 (patch-ab) = b8c1cff37974fee67272e1f7befe345654ceb819

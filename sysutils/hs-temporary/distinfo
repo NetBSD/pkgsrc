@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/09/11 21:59:29 szptvlfn Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:32:17 agc Exp $
 
 SHA1 (temporary-1.2.0.3.tar.gz) = 7f3468c837d1b82b9c684dce68581c5ab4f6b849
 RMD160 (temporary-1.2.0.3.tar.gz) = be576becdb377708ccd69973fcffc7332d755680
+SHA512 (temporary-1.2.0.3.tar.gz) = ceada89c2166c315b2a54cae0a636eb0b38e6e89481ef32d3d1e4305d4e601305b4cb88fba3069493e8fe2014e3d237348a37567aba61e617c69707f0a16dd34
 Size (temporary-1.2.0.3.tar.gz) = 5308 bytes

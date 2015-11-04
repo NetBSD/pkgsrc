@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 13:40:53 agc Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 01:32:15 agc Exp $
 
 SHA1 (gnome-pkgview-1.0.6.tar.gz) = 975e1897441312177015d4ef27c785684a30d26d
 RMD160 (gnome-pkgview-1.0.6.tar.gz) = 62c1927b617eb098e11ec74db1fc5b944b3d485e
+SHA512 (gnome-pkgview-1.0.6.tar.gz) = 5b7cfe87c41ebe685560b1158b92bd29d5f15c637a92090a73b5d5d94f2971399af3cc36b9b916e63da8f24a749bc1fb099790e9be25419b31a20c42d2809b0b
 Size (gnome-pkgview-1.0.6.tar.gz) = 222563 bytes
 SHA1 (patch-aa) = bdcfb7c4e89b80c73b050e8f92681c578292168d

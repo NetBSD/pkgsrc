@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/10/16 08:06:55 heinz Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 01:32:25 agc Exp $
 
 SHA1 (Sys-Hostname-Long-1.4.tar.gz) = 3e2f64ca953ab9123fa9994e6fcfb709b049f6c0
 RMD160 (Sys-Hostname-Long-1.4.tar.gz) = d4ea949ed6d4a4fceaaea2952e46aaf0ecae65c6
+SHA512 (Sys-Hostname-Long-1.4.tar.gz) = a9a4ac20eaa7c959899d4f545a9613fd32ae813cc2bf071c44e94b03d0cbc69e5d962fdd2563aef657ab4250b49a5b44cd07d117a97f6dcda580a66fb4644287
 Size (Sys-Hostname-Long-1.4.tar.gz) = 4991 bytes

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.12 2013/05/09 15:41:23 wen Exp $
+$NetBSD: distinfo,v 1.13 2015/11/04 01:32:27 agc Exp $
 
 SHA1 (pstree-2.36.tar.gz) = 1ca2e08c62d33afd37d78a215095258e77654b3f
 RMD160 (pstree-2.36.tar.gz) = b98c5ce530cd4193a883a0c09e080da595595cd5
+SHA512 (pstree-2.36.tar.gz) = 8a57f29be9891631e7ac0881f43ff52476851871bb12794db825861673619fbf8cc803034829d134a55c78c55e582457e3f5e32a27c98eabdd4fdc2413162bec
 Size (pstree-2.36.tar.gz) = 11179 bytes
 SHA1 (patch-aa) = dc91fb7fe7f8f0f7a4a3f8c4e6491f932925a792

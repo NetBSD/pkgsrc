@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/07/28 23:32:58 jmmv Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:32:32 agc Exp $
 
 SHA1 (sysbuild-2.7.tar.gz) = 3c490167de6f4bd03af874eac24b336f8bbecd82
 RMD160 (sysbuild-2.7.tar.gz) = 6e7218d49672ab326de76226e12d13456b2239b5
+SHA512 (sysbuild-2.7.tar.gz) = af5bef2e6e47bef2a93920dbf995485db534d8e6e0b26b5cd5e918cac24786f49b7f848259e54900c6bdea6697a489dcf8c191b3e94583f26eda308dd1e70130
 Size (sysbuild-2.7.tar.gz) = 76479 bytes

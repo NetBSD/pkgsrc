@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/08/30 11:39:28 obache Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:32:24 agc Exp $
 
 SHA1 (IO-BufferedSelect-1.0.tar.gz) = c15c1247c3829b7bad9852300c23252b6eef563a
 RMD160 (IO-BufferedSelect-1.0.tar.gz) = 011790faf48c8bcc437f3a73b26c272725973829
+SHA512 (IO-BufferedSelect-1.0.tar.gz) = 30bc0ebb5f62c6261938780eaf9eaa9aba2ec9ee3453c35b87614797e74399fbce9cc3aea5742078069e8131ba31ffb5ff5cafed1147b66c8f98b92b40652fc3
 Size (IO-BufferedSelect-1.0.tar.gz) = 3519 bytes

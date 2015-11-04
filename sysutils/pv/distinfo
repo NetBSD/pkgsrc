@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/05/12 15:45:21 bsiegert Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 01:32:27 agc Exp $
 
 SHA1 (pv-1.6.0.tar.gz) = 395ce62f4f3e035b86c77038f04b96c5aa233595
 RMD160 (pv-1.6.0.tar.gz) = fecc8c9bc40311a37af8630376aa426089d23cb2
+SHA512 (pv-1.6.0.tar.gz) = 1cf9d7376fceefcd594d0a8b591afc8e11ce89f7210d10ad74438974ecebe9cc5d9ec4db9cc79e0566bfd2b0278c0cc263c07547803e7536432cd1ffd32d8a45
 Size (pv-1.6.0.tar.gz) = 123072 bytes

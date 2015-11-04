@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.19 2012/05/07 12:55:23 shattered Exp $
+$NetBSD: distinfo,v 1.20 2015/11/04 01:32:06 agc Exp $
 
 SHA1 (apcupsd-3.14.9.tar.gz) = 1e9e8a054f17c554c047ec1d7b363d35553058bc
 RMD160 (apcupsd-3.14.9.tar.gz) = be1a33b85c790fc3bc62bab370a62d014dbf0a57
+SHA512 (apcupsd-3.14.9.tar.gz) = 2fc50a3628eaf0f224b39a575ffa90682ee2e80fae4f6903faed31a6dd40303297d36b55f0f54d617f9e42de274d602c8259ed5755dada870e091309f1447a96
 Size (apcupsd-3.14.9.tar.gz) = 1334762 bytes
 SHA1 (patch-ab) = 3db85accf1b05c8723dd7625278dfac02909dc34
 SHA1 (patch-ac) = 98e8853dd030e09d5a487e57a277ff1269baa517

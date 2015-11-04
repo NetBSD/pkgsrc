@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.18 2015/08/09 22:50:09 dholland Exp $
+$NetBSD: distinfo,v 1.19 2015/11/04 01:32:05 agc Exp $
 
 SHA1 (amanda-3.3.1.tar.gz) = 22273381f61319e46e1da9d7029ca2b3991eee98
 RMD160 (amanda-3.3.1.tar.gz) = 0d66ad25fd905901a1afd3651bd6c1e00db9af8d
+SHA512 (amanda-3.3.1.tar.gz) = 86b7b127c81e75bdc60bebbaf06e474667c364e66b3c12ed6797f1a5ef6971010bc20e4b596488586e0cde6cdbb7e0a96679cabf04d2e427d9eb2922347ebd66
 Size (amanda-3.3.1.tar.gz) = 4328574 bytes
 SHA1 (patch-Makefile.am) = 005201b7a9b4e875c45362456e100c57fcf700f3
 SHA1 (patch-amandad-src_Makefile.am) = bdff2c06da0ee6c88237c56568fe20c5cefedd7a

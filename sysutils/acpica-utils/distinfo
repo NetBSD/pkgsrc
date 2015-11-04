@@ -1,9 +1,11 @@
-$NetBSD: distinfo,v 1.8 2015/04/27 16:08:51 joerg Exp $
+$NetBSD: distinfo,v 1.9 2015/11/04 01:32:05 agc Exp $
 
 SHA1 (acpica-unix2-20150410.tar.gz) = aa1bd36272b9151bb19402dac9db72bcea5a95b0
 RMD160 (acpica-unix2-20150410.tar.gz) = 2b4186e1fd2697eb731f25dac311bc469d78b672
+SHA512 (acpica-unix2-20150410.tar.gz) = 16e6b5e7311966a6ba85058fcd450990b2dcc80b82031e0770d90fb5023a1b68ea2c7976b3744eb63e261c7ac6a6b224a91a148c82936085a207ed2370d18946
 Size (acpica-unix2-20150410.tar.gz) = 1337136 bytes
 SHA1 (acpitests-unix-20150410.tar.gz) = 28bfafa391c3d4daad9ce49e88cda3b16ace5897
 RMD160 (acpitests-unix-20150410.tar.gz) = 8fd7ef601b6abcfa79f5513cd3b8460954f80d31
+SHA512 (acpitests-unix-20150410.tar.gz) = 9df9698fd3f21d1060529033464c1e013c995ec2cc4b95d45fcd4c3508b770e00ed143e47c043338a00c11c14ff4067e70e156550f1d6977e4a83af631b27a14
 Size (acpitests-unix-20150410.tar.gz) = 2052271 bytes
 SHA1 (patch-generate_unix_Makefile.config) = 318859079fcb1c4d6a24a4df1f0cbdcc2581a9eb

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2011/10/26 11:31:12 ryoon Exp $
+$NetBSD: distinfo,v 1.8 2015/11/04 01:32:05 agc Exp $
 
 SHA1 (9base-6.tar.gz) = f349d696859db9a0ff9823cb053f54cf7501ec42
 RMD160 (9base-6.tar.gz) = 7a3686ac1630c52810eebca91b2e49a935dd0812
+SHA512 (9base-6.tar.gz) = 38108a94118b56c6f3982e692beb1068c52f9aecd74447d6b552b77fae5e365eab72b4781bdf07d9696ac89d54371c1cae8cc0363de510b53988302acef50dba
 Size (9base-6.tar.gz) = 1045868 bytes
 SHA1 (patch-bb) = 4e277a72fc2552c177ade11f5ee14570a2b2650f
 SHA1 (patch-bc) = 204d78f2861d0d35b1817d630e58ca5a4b8acf16

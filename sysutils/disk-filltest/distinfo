@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2014/05/31 22:04:35 abs Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:32:11 agc Exp $
 
 SHA1 (disk-filltest-0.7.1.tar.bz2) = be35c8b89410290eecc7cf547bcd59f9da71e05b
 RMD160 (disk-filltest-0.7.1.tar.bz2) = ddcd3478ec752c8328b5e1e510f6f4022e01fa25
+SHA512 (disk-filltest-0.7.1.tar.bz2) = 55becf839a938fa0461fd06d903579a413cb6d17c50e10b3bf55f01c442f660e289402d593c9820b240de1ae9196b120ca9d14bf9d4d6f09010db5e6faa3568d
 Size (disk-filltest-0.7.1.tar.bz2) = 14434 bytes

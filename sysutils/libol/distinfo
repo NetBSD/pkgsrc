@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2008/08/17 10:03:22 adrianp Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 01:32:19 agc Exp $
 
 SHA1 (libol-0.3.18.tar.gz) = 8460daeb01b3439c3adc10a2d8b9acfa1d3ed39a
 RMD160 (libol-0.3.18.tar.gz) = 143040ace3f8653b6be75adac0c3c4767dc5c88c
+SHA512 (libol-0.3.18.tar.gz) = ffddfedee2ace2a5bd6aed171a34da98bd8049551e15f23ca0f3d0815f86c9f2f503dbeda0361aef480b642e593006e0437e7a67a1962002724ecf44c79074c6
 Size (libol-0.3.18.tar.gz) = 345794 bytes
 SHA1 (patch-aa) = f717e5f8444000e3cd92b27f558ea1e6b2915673

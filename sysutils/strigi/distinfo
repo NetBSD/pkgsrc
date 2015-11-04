@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.9 2014/08/13 22:34:37 joerg Exp $
+$NetBSD: distinfo,v 1.10 2015/11/04 01:32:32 agc Exp $
 
 SHA1 (strigi-0.7.8.tar.bz2) = 7250fb15109d33b0c49995a2cc3513ba7d937882
 RMD160 (strigi-0.7.8.tar.bz2) = 34cbbe98e7a371467b115b18586baf299340d1b8
+SHA512 (strigi-0.7.8.tar.bz2) = 536f5bd5ed13d87d30c2fa31b6dcb2a883df173e5d60deefe0fdeb843f40f29f7edd0041029dc013bb31a205572087ed95ca661bcdf6d989d9806931716b1043
 Size (strigi-0.7.8.tar.bz2) = 810574 bytes
 SHA1 (patch-libstreams_CMakeLists.txt) = ce25d12f5c20f7f0be659bdccc24e8b4a898274a
 SHA1 (patch-strigidaemon_bin_daemon_xesam_xesamsearch.h) = 70d251880f08f279f53a3ed31281452c6d25811d

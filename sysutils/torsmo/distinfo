@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2010/10/31 23:38:32 wiz Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 01:32:33 agc Exp $
 
 SHA1 (torsmo-0.18.tar.gz) = 01e6737b3971daa3a7c9cb6dd1961f61bc39bdae
 RMD160 (torsmo-0.18.tar.gz) = f1d8b3c4679155596569f9116970e7ba8a01eb6e
+SHA512 (torsmo-0.18.tar.gz) = 822a7a01bb685c6dbad5520d3c6bab4b2854647054de068952852dbf907f356d27718050ca1b0bc0c83b09112b4ae52c884aa75c6b1753a168f3072d0a91e854
 Size (torsmo-0.18.tar.gz) = 84020 bytes
 SHA1 (patch-aa) = 8c515d3b0925aeaaea928ad8abd89ab5ccbfceab
 SHA1 (patch-ab) = 3bf66bd2b7645c204099a8c7b806098d028cc8bf

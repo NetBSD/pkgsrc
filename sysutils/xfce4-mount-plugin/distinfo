@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2015/04/21 08:56:40 jperkin Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:32:40 agc Exp $
 
 SHA1 (xfce4-mount-plugin-0.6.7.tar.bz2) = aff1b5883cd6b3e80989dcc963579b0078631712
 RMD160 (xfce4-mount-plugin-0.6.7.tar.bz2) = b17828ee08c28bd7ceaf083d1d1d94f7d66c98f3
+SHA512 (xfce4-mount-plugin-0.6.7.tar.bz2) = 18f4f4fc88c521f1fd6dcbcd3146fc8379e3aa0fb00e4787a34b6c52f68f765f18354e6b66e50c8b1a42e4f2366a5779cf057ba8b71fee45d0d3d023afe6fa7b
 Size (xfce4-mount-plugin-0.6.7.tar.bz2) = 390163 bytes
 SHA1 (patch-panel-plugin_devices.c) = 95685dd7eaf73028985ddbe85b8ea1ad9fcb1e3f

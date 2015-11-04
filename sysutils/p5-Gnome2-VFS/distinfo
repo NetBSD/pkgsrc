@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/09/03 22:34:58 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:32:24 agc Exp $
 
 SHA1 (Gnome2-VFS-1.081.tar.gz) = 4495417f5b2b95e14bb199a0fc815145332d5e08
 RMD160 (Gnome2-VFS-1.081.tar.gz) = 31e1d9b7d3baa3c812ea100246c0227f47f6a578
+SHA512 (Gnome2-VFS-1.081.tar.gz) = 4a2e675af01e6d6bfe6ac75d1c2b2e21b28bae284c9fd9ecb60786ed8f9bb9c54113db6edb30039dad4cda522fa15ae22c1364f04421397c2adb1d558d1217f5
 Size (Gnome2-VFS-1.081.tar.gz) = 59061 bytes

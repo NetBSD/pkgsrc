@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2015/01/16 11:41:00 wiz Exp $
+$NetBSD: distinfo,v 1.8 2015/11/04 01:32:27 agc Exp $
 
 SHA1 (pwgen-2.07.tar.gz) = 51180f9cd5530d79eea18b2443780dec4ec5ea43
 RMD160 (pwgen-2.07.tar.gz) = 0195dee7ba4fee1c16b896258de8d2154d82e355
+SHA512 (pwgen-2.07.tar.gz) = 9c56ff04ca2f6f60126608a25f395ddbc4a3ac59585a6f233c87d993b6388e30b1867d43a6bc5b0f9f1f4064b12ea450eac4f7c9ac2844707a99fad1bbd2664d
 Size (pwgen-2.07.tar.gz) = 53513 bytes

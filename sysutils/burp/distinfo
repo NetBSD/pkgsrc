@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.2 2015/09/23 12:03:48 joerg Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 01:32:07 agc Exp $
 
 SHA1 (burp-1.4.40.tar.bz2) = b06dbe9d1440b9e7915d35ad0c23b9d120fec10e
 RMD160 (burp-1.4.40.tar.bz2) = 3ba2a60605562bbff7bacc600ee511c3ce020995
+SHA512 (burp-1.4.40.tar.bz2) = b44ba3a63d3b75f6fee55bbfef70ac07fa87e78ddb22a398e31a86670dfa3f2db1c9dbc58de3d0038cdc409bd5ae52c8e901cb26975fd7dbe0f773c4841af10c
 Size (burp-1.4.40.tar.bz2) = 712937 bytes
 SHA1 (patch-Makefile.in) = 3df0458b1fc50cc03d8f69a864830ab52e9d0f8d
 SHA1 (patch-configs_certs_CA_CA.cnf) = e58da075d16ecd16454b8b08dd6070101fa24475

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2015/06/25 13:21:03 jperkin Exp $
+$NetBSD: distinfo,v 1.9 2015/11/04 01:32:06 agc Exp $
 
 SHA1 (ansible-1.6.10.tar.gz) = 35d4af5beaff73de339442962da286bd3d7bacf4
 RMD160 (ansible-1.6.10.tar.gz) = 2e9160769d06b14fcd4446a8337c5ef3447139bc
+SHA512 (ansible-1.6.10.tar.gz) = 0566a0bbedf00d5e9677f05244fe684d30443fadf8527e72c4f77a3fb618394cd649f925bb5e86ac04a97a8cb5de25c63147dad089ef23deeaad70d3856abe9a
 Size (ansible-1.6.10.tar.gz) = 654605 bytes
 SHA1 (patch-examples_ansible.cfg) = aa743238d77edc4abfeddae69456067a53f6afeb
 SHA1 (patch-lib_ansible_callbacks.py) = 786a30966784b2c0bbf749cb48786f50d42c8894

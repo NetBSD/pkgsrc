@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2010/02/22 16:30:40 sno Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 01:32:24 agc Exp $
 
 SHA1 (Lchown-1.01.tar.gz) = ccdb55c08713582f633f85616e8d8d2c8ccfc841
 RMD160 (Lchown-1.01.tar.gz) = 8f8e4b87be177d190feedc2aede3745c967e9b63
+SHA512 (Lchown-1.01.tar.gz) = f3b7bf7b3b71a7d92449d4ae8249d76b456869e48105db401a49f39f687ee5d97e079485fb2bbaae991a3a27d408959fc132b843c6f69487eeb2958c85f683a8
 Size (Lchown-1.01.tar.gz) = 4018 bytes

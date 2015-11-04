@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.52 2014/08/10 09:19:28 wiz Exp $
+$NetBSD: distinfo,v 1.53 2015/11/04 01:32:22 agc Exp $
 
 SHA1 (nautilus-2.32.2.1.tar.bz2) = 7b0a89cd965f4ca1531115d353b208bb2ba9db33
 RMD160 (nautilus-2.32.2.1.tar.bz2) = 4498fc3c5dd2a4f13935b0366c175ad1b87bac1e
+SHA512 (nautilus-2.32.2.1.tar.bz2) = cb9d65d16c8d771d182bb94d9de59c4054b05603b8ad33beeca26b41c3ca3c84581b596625f6503924c4a26f5ca1218c6d1e81c9d94e6cc637a3e8a941cde9b4
 Size (nautilus-2.32.2.1.tar.bz2) = 6350203 bytes
 SHA1 (patch-aa) = f41d451017a24eacef9b264928d83d446acf6153
 SHA1 (patch-data_nautilus-folder-handler.desktop.in.in) = 7ab32a694fd88996bff8063afae766481db03205

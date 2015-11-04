@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/03/22 21:34:26 sno Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:32:24 agc Exp $
 
 SHA1 (Filesys-DfPortable-0.85.tar.gz) = d3f603c6b3bfaa43aca1197276b12634cd8f4d8f
 RMD160 (Filesys-DfPortable-0.85.tar.gz) = 6d69e68b898b437a8526378c5ede09d107afffad
+SHA512 (Filesys-DfPortable-0.85.tar.gz) = 9298615bbd3238f2730a09b6e0463466f906a52b0a49482b5456818cb88001e2d539d758b753c7b276c7a0491bc19b3f8ce57f10e4107095b3e6b471f331105b
 Size (Filesys-DfPortable-0.85.tar.gz) = 7221 bytes

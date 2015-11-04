@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2013/06/13 13:32:53 obache Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 01:32:30 agc Exp $
 
 SHA1 (notify-0.5.2.gem) = cfaf5988ab5274f6c0fc117881f8bd9a2216a5e3
 RMD160 (notify-0.5.2.gem) = ce950623cbd2a4957dd320b8b0dfc9ac76e121f9
+SHA512 (notify-0.5.2.gem) = f64ea5f265acc970f145e1c43e27d6608b1d90b8da6b7236c001808ab690ca302af501d08bda62e66b69434ef1940b6fa19faae3f9ef37c5cc9cebc4b5310564
 Size (notify-0.5.2.gem) = 7168 bytes

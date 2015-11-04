@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2009/02/19 16:36:25 joerg Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 01:32:12 agc Exp $
 
 SHA1 (dog-1.7.tar.gz) = a1af9c76daa0c9768cdf0c31839b3004e6ccc417
 RMD160 (dog-1.7.tar.gz) = dd8867a5a8ff7208b92df8bc23a9b6b48cc74816
+SHA512 (dog-1.7.tar.gz) = 852373ba988075a47c60c38da0ff3a344f996e6e149d23e1061d6f8fbb0999f32c975c323944375ba758e5663efa57f62c8ff88d46264f72196ea450eacfa4f5
 Size (dog-1.7.tar.gz) = 30433 bytes
 SHA1 (patch-aa) = 84b306fb77688786b075a32635d28fd911e0ebd8

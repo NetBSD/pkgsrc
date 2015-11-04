@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2009/11/29 04:37:58 snj Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 01:32:30 agc Exp $
 
 SHA1 (screentest-2.0.tar.gz) = 14d3af527dbba1637b8021c45598952df6cd1221
 RMD160 (screentest-2.0.tar.gz) = 8dce80aed939d6d7a9d42557c2cd88d496f46f17
+SHA512 (screentest-2.0.tar.gz) = 85b49ed29030ece0739357d7fc51b8030da88ba5239e17d42cc2edabedff76e2d2bcc48918614e0642842b315954db803eef08d87b70e880a7c320126dd323d4
 Size (screentest-2.0.tar.gz) = 341748 bytes
