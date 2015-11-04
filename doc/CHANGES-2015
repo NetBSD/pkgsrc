@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4472 2015/11/04 13:55:50 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.4473 2015/11/04 15:06:51 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7672,3 +7672,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added textproc/erlang-p1_xml version 0.20151023 [fhajny 2015-11-04]
 	Added textproc/erlang-p1_yaml version 0.20151007 [fhajny 2015-11-04]
 	Added textproc/erlang-xmlrpc version 1.15.20150506 [fhajny 2015-11-04]
+	Updated security/gnupg21 to 2.1.9 [tnn 2015-11-04]
