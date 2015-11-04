@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/04/04 09:40:23 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:10:18 leot Exp $
 
-SHA1 (discount-2.1.6.tar.bz2) = a7461731613d0e2f88dd19af9feb860c191e8234
-RMD160 (discount-2.1.6.tar.bz2) = 1cddc71a87e56ba0138e8ca9774c402236a91a7d
-Size (discount-2.1.6.tar.bz2) = 83823 bytes
+SHA1 (discount-2.1.8a.tar.bz2) = 5415057067238f445f767f0c23b33e0b5420f9ff
+RMD160 (discount-2.1.8a.tar.bz2) = 3b5fcfdde3b42056cc87c17cd4dfbe8876aa2dd3
+SHA512 (discount-2.1.8a.tar.bz2) = a1eba7076a27da56136b8057189c5474a36bf11f8233cbae270c8a0cf9b070332b4dcdbbbecfbfbe1d8c19961ccaf87cee27ebe855c6bc6558d8ccc423553c96
+Size (discount-2.1.8a.tar.bz2) = 85161 bytes
