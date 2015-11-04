@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/01/28 19:15:08 gdt Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:00:02 agc Exp $
 
 SHA1 (generateDS-2.14a.tar.gz) = c69ff142bb04fe7895e94545296a1eb04b27983e
 RMD160 (generateDS-2.14a.tar.gz) = 16530faa5c2e7a6883f517a493d2882fd143fd64
+SHA512 (generateDS-2.14a.tar.gz) = 56caf7ac1d95c1d6086f25b34bf594a5f3a66e8c1707c798813eec3576d9c51b65578c79475bf6ee6ed76409730dd019b111a0103b3f098422d84e58fad04460
 Size (generateDS-2.14a.tar.gz) = 640989 bytes

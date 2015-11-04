@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/11/07 08:49:37 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:00:00 agc Exp $
 
 SHA1 (mobiperl-0.0.43.tar) = d2ced934fae28a9272febddc994f60951fc9068c
 RMD160 (mobiperl-0.0.43.tar) = 3946e88a5b89e73c507b26df5636974bccbaa1f6
+SHA512 (mobiperl-0.0.43.tar) = 140257ae37b39f3d51a5d4cea1c6ac36f475441e6336834cdba525fb888c68e05833e7aa54cc673fcacf920d8fc28686788e275d09128f141181ae9b01741024
 Size (mobiperl-0.0.43.tar) = 225280 bytes

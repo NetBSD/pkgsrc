@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.9 2012/07/06 12:49:04 sno Exp $
+$NetBSD: distinfo,v 1.10 2015/11/04 01:59:58 agc Exp $
 
 SHA1 (XML-Simple-2.20.tar.gz) = 2ececb0960deb51296916186000c63d55cc53092
 RMD160 (XML-Simple-2.20.tar.gz) = 0847fae59d34a812b6bb631bfe0123626722a5fb
+SHA512 (XML-Simple-2.20.tar.gz) = f953a0b9082c509c4616b92529da94a289b1e0300b18a5b88c08d0826bb4fd18e51f1e3854e6f870ef3cfb506366c0b47b9dd302433b63270a18b45f068d4658
 Size (XML-Simple-2.20.tar.gz) = 75993 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2006/11/05 14:28:06 seb Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 01:59:59 agc Exp $
 
 SHA1 (XML-XUpdate-LibXML-0.6.0.tar.gz) = 96bd92b71e37bfbd518152c5739f1dcd5229cbdb
 RMD160 (XML-XUpdate-LibXML-0.6.0.tar.gz) = cc130ed0fd3553102c11bc62f307f6f01e00e53d
+SHA512 (XML-XUpdate-LibXML-0.6.0.tar.gz) = 59678c854dc77ff99f65e497db3760cab2e433abbeae07b8b1fddb032d5458ba9b5d1191325a3e43ed92f54551e999b307a6880163bde41bff9592660fa8d40f
 Size (XML-XUpdate-LibXML-0.6.0.tar.gz) = 8378 bytes

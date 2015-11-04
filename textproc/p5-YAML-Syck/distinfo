@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.15 2014/12/30 13:00:03 wiz Exp $
+$NetBSD: distinfo,v 1.16 2015/11/04 01:59:59 agc Exp $
 
 SHA1 (YAML-Syck-1.29.tar.gz) = 493458d414080abb963a6099d687d3d7f67ff005
 RMD160 (YAML-Syck-1.29.tar.gz) = 2637809e5bb8f7af6e4258cdb12b912be4480750
+SHA512 (YAML-Syck-1.29.tar.gz) = 5e6326375ab4498cddee9f54d09a6d62569cb3f68dd2015e5ccda38fedb9b3d22b8f07fc3bd2536feedb61c0cc1d86f91640c5bb03374351e341ec5c1495b991
 Size (YAML-Syck-1.29.tar.gz) = 173181 bytes

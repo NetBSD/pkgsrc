@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/04/24 10:08:29 seb Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:59:52 agc Exp $
 
 SHA1 (Text-Microformat-0.04.tar.gz) = 4d56b299bc89d3cb031e207b8e48172732adf1c9
 RMD160 (Text-Microformat-0.04.tar.gz) = e5508a5df2eefd84390b251519756789fd229ff1
+SHA512 (Text-Microformat-0.04.tar.gz) = 024111390ce785612ce3e33018c5f209eeeb78c162f13860764f69d42b4595dc22f9819d19682839668a3d100e498f927b0e3dd78e6c4b19e073fa2addf71f10
 Size (Text-Microformat-0.04.tar.gz) = 15020 bytes

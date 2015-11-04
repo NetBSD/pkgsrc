@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2015/03/17 22:30:34 ryoon Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 01:59:40 agc Exp $
 
 SHA1 (slnunicode-1.1apl1.tar.gz) = 635cfd874afc88765358206172ecb28308dc9e50
 RMD160 (slnunicode-1.1apl1.tar.gz) = 0802483382f375036fdbbf1b00592dd2c309aa1b
+SHA512 (slnunicode-1.1apl1.tar.gz) = b11bca5cdffba4676f65b4e6d0d12e32427f271e59d734616d3a5d60f74efd6576d3e52bde4591f36569140637f63b21a6f28359e042632006913507da1831d9
 Size (slnunicode-1.1apl1.tar.gz) = 31369 bytes
 SHA1 (patch-Makefile) = 8c7c1653e9fa4102cb50296140336f53ce6bce75

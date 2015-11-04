@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.15 2012/11/23 17:35:00 drochner Exp $
+$NetBSD: distinfo,v 1.16 2015/11/04 01:59:38 agc Exp $
 
 SHA1 (libcroco-0.6.8.tar.xz) = 23a5c33a2a86d5e46173234f5fa88ac1e15de035
 RMD160 (libcroco-0.6.8.tar.xz) = 397a2f9601f068778726423b2534f8c600024bb2
+SHA512 (libcroco-0.6.8.tar.xz) = acfbebb59e5ea1e70da41f35970fb40a58331a1258eee6c981a575fdd23b420b4cc6d8983c90ad1e6afc0a461e675cb24667e03cfc8ec1aa5e9918e606913413
 Size (libcroco-0.6.8.tar.xz) = 464992 bytes
 SHA1 (patch-configure) = 769298417dbabb6c1eaab3d886eb8f1784ed7bb3

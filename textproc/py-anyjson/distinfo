@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/07/02 11:11:29 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:00:01 agc Exp $
 
 SHA1 (anyjson-0.3.3.tar.gz) = 2cd3c6cc61206664268e0e8684dbadf6e2428497
 RMD160 (anyjson-0.3.3.tar.gz) = c85bad7565e983077ea863ec99ca45048faecb18
+SHA512 (anyjson-0.3.3.tar.gz) = 9e70df3cb8bfe2348fdb0eb03cf3c33ca5a1171aca6467787fc28c161354b5ebe89b2f73badfa00708774d6825799860493ddcac7f5da8cc9c251b92b5a343bc
 Size (anyjson-0.3.3.tar.gz) = 8332 bytes

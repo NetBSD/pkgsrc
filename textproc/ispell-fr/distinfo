@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2013/04/24 02:20:39 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:59:36 agc Exp $
 
 SHA1 (francais-IREQ-1.4.tar.gz) = 940712167cd2d40c27e673246b8ce9f99595a309
 RMD160 (francais-IREQ-1.4.tar.gz) = 9f11a627d84488c9cbbd37b75fbeae9060803f3d
+SHA512 (francais-IREQ-1.4.tar.gz) = 6fe5f576fa74af457cfde8b0db932634b5a52a3920390b90d8388a01cc9e9fe6d5523f5ab131a87ef764b934e36950bd4e04cb52b347c959db874d3e5265e30c
 Size (francais-IREQ-1.4.tar.gz) = 326207 bytes
 SHA1 (patch-aa) = 1aafea8a058e1eddb5f64e0f2788ba11e6bf81b9

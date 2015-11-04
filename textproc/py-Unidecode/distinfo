@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/05/30 11:03:50 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:00:01 agc Exp $
 
 SHA1 (Unidecode-0.04.9.tar.gz) = c705b71ea08978012b5800f038b1de1a3ba81426
 RMD160 (Unidecode-0.04.9.tar.gz) = 8ca1c7bb80dcb313b93d3bb6d47576c106e7a14e
+SHA512 (Unidecode-0.04.9.tar.gz) = 37b8a04d88925333a392696c9b23325b2fc7a9df2dd77320ce3bc3ae9d2592cc256e020fce79cc5b142d872140f7f28e73c179ae3d13c79239d085dacc6e7d50
 Size (Unidecode-0.04.9.tar.gz) = 196659 bytes

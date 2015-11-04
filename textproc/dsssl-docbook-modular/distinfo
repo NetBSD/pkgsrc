@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.5 2005/02/24 14:48:41 agc Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 01:59:28 agc Exp $
 
 SHA1 (docbook-dsssl-1.79.tar.bz2) = 0ee935247c9f850e930f3b5c162dbc03915469cd
 RMD160 (docbook-dsssl-1.79.tar.bz2) = 711c688901b33413868c06a10e5700ebdcb8b9fb
+SHA512 (docbook-dsssl-1.79.tar.bz2) = fad71e67227b54b0a7c31a351b4d5c0695517b3687714807d7b144d239dc6f7e0d556520e705eb75581c82e0deea4b32ccfde1eccad2718337b757eddd64843e
 Size (docbook-dsssl-1.79.tar.bz2) = 277650 bytes
 SHA1 (docbook-dsssl-doc-1.79.tar.bz2) = d050b99eb05e920ae8a6431559fefd8e5ee35adc
 RMD160 (docbook-dsssl-doc-1.79.tar.bz2) = e623b00e034e663c50c4947c6af18899fb2f8545
+SHA512 (docbook-dsssl-doc-1.79.tar.bz2) = 703a712af466d4bfe4559578a768730f3e0d8a05df35e90c9185d04c13733e41ac9f19d481fd7183b762d7f9e3ce0840b4f305e8ce98338edd568fc0554e43d2
 Size (docbook-dsssl-doc-1.79.tar.bz2) = 142278 bytes

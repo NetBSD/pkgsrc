@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.2 2013/09/01 05:28:26 obache Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 01:59:26 agc Exp $
 
 SHA1 (SKK-JISYO.L.201102.bz2) = 14a6160269548a6ead1adf627fa0b9c8e27751fe
 RMD160 (SKK-JISYO.L.201102.bz2) = d993fd99ed2156fb2163e021a850094b53590518
+SHA512 (SKK-JISYO.L.201102.bz2) = 4d4d99512aa3e17a43a885237d1436475f578d9bfa3904bb3cefe4c6471b7a01ba7d71afe111453dc4041904ddb118ca6f9cd1448800cc4710f47d50e45dbe8f
 Size (SKK-JISYO.L.201102.bz2) = 1694273 bytes
 SHA1 (cmigemo-default-src-20110227.zip) = 25e279c56d3a8f1e82cbfb3526d1b38742d1d66c
 RMD160 (cmigemo-default-src-20110227.zip) = 38d0670b3ebe36af78650a0b13dbdf14b16ded95
+SHA512 (cmigemo-default-src-20110227.zip) = b69a2be26eeb8612b9b5ced254e116169d5c37fc3e510471a37437c8f445ee9577f1aba527178d187d997dee3b7f2a27a4ab606831c75848e8b7997767df25f7
 Size (cmigemo-default-src-20110227.zip) = 116574 bytes
 SHA1 (patch-compile_Make__gcc.mak) = c99e3e335142ffa3e24655980b6eca6dc5235842
 SHA1 (patch-compile_config.mk.in) = 7480a20f597c49ba18a2ab01098f7ee2a492d026

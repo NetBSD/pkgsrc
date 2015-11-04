@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2012/12/20 21:33:06 joerg Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 01:59:38 agc Exp $
 
 SHA1 (kbanner2.tar.Z) = a557fd49ef76797513894ac8f7e218be52efb219
 RMD160 (kbanner2.tar.Z) = 42cdc13bbc5defd5825303fd17d664b40b7bfcb9
+SHA512 (kbanner2.tar.Z) = e0968687c7a084758964f87ccb17c827fd0a9ac69017bf50a79eaf6b29da99e5645c05ac9689229d76a674583dd94b782b709b9d6c2d3b82de54e25cf71b7c95
 Size (kbanner2.tar.Z) = 240221 bytes
 SHA1 (patch-aa) = 707ed4b3f0b25d1f26db1dcb60d41822b7203a6d
 SHA1 (patch-ab) = 95970635b3fb6f3d6a254f3116c29b9f6d593617

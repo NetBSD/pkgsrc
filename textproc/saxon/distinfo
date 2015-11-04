@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2013/05/18 01:43:42 rodent Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 02:00:11 agc Exp $
 
 SHA1 (SaxonHE9-5-0-1J.zip) = 6fd636137cf879088608fdeb9cf49e165d14f96e
 RMD160 (SaxonHE9-5-0-1J.zip) = e35e9e73090fd68abcfd2454ccf9cb0e08f6b438
+SHA512 (SaxonHE9-5-0-1J.zip) = 89683e56bf0f0bfcff9e59a28ec81e32d1eec1d2e83a3987a327afb9a3babd71f8b1ac085218441717e3c71543fce1fe0f7a1331414c011c1ee34712e7af4b64
 Size (SaxonHE9-5-0-1J.zip) = 2987601 bytes

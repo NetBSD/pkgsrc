@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/05/10 02:51:47 mef Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 01:59:53 agc Exp $
 
 SHA1 (Text-SpellChecker-0.14.tar.gz) = 4945a0e64d9955a8aa44e129bd1a2585e3b70a2a
 RMD160 (Text-SpellChecker-0.14.tar.gz) = 981e358dcdfd2d062eab28353d8eec2d157cda71
+SHA512 (Text-SpellChecker-0.14.tar.gz) = 8198f98591de6476e866d2ad0ce11d7dfabf49a8ade0d3b4e4446972cb8528348c2ac3f400de8362125fe1c599231f0d5bc019b880dbd2a6e9cac7fe3ea25dc7
 Size (Text-SpellChecker-0.14.tar.gz) = 6354 bytes

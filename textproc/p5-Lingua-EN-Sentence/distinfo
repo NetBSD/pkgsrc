@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/09/07 03:45:36 mef Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 01:59:44 agc Exp $
 
 SHA1 (Lingua-EN-Sentence-0.29.tar.gz) = e1898496bc3027e1b63fcdb56b3557b95bcb2d45
 RMD160 (Lingua-EN-Sentence-0.29.tar.gz) = 48757ba7225fdc75f6f3a2098da189f82cdf1df9
+SHA512 (Lingua-EN-Sentence-0.29.tar.gz) = bfe84e3ef4f465b0ca1927e3d59bcfb1876fc395f9426435c9f4a1495a1ea6963e59ee831eb865ba37fa3bec03e138024fc708f553d033fb34da8b64257186ab
 Size (Lingua-EN-Sentence-0.29.tar.gz) = 9417 bytes

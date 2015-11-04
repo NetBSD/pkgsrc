@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/08/01 12:09:42 szptvlfn Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:59:31 agc Exp $
 
 SHA1 (stringsearch-0.3.6.5.tar.gz) = fb6ff8a7ed32fd3a646181ee663b727f7c450047
 RMD160 (stringsearch-0.3.6.5.tar.gz) = 4481559b53afc0ef044b2be4211148bc7e757357
+SHA512 (stringsearch-0.3.6.5.tar.gz) = 73f41f09d589f737e79b22d62c034bb9ebb5145ba0179fd4a9885c345ff8bf296e3d2f624a888aa8cd481d3f3c90c7b8a8380e345b8e710bcc83a2c3f821cd27
 Size (stringsearch-0.3.6.5.tar.gz) = 38994 bytes

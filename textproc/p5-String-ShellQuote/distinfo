@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2010/08/26 06:41:44 sno Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 01:59:48 agc Exp $
 
 SHA1 (String-ShellQuote-1.04.tar.gz) = e60f348200b16d85ccc50780d4d6546485b15bc5
 RMD160 (String-ShellQuote-1.04.tar.gz) = 90d2ad5d4271470fced77567be3b60d0e2e6101f
+SHA512 (String-ShellQuote-1.04.tar.gz) = f5b472985fb9c15d5c82c03b5c6c90a3a545ada854b90a96cfb7b0f57b8a817707ed91ca0f20344a2b8d200fe365ea737a9b39b64d526310d41ac2466552236d
 Size (String-ShellQuote-1.04.tar.gz) = 6867 bytes

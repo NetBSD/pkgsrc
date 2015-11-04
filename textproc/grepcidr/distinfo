@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/10/31 11:23:33 shattered Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 01:59:29 agc Exp $
 
 SHA1 (grepcidr-2.97-20150828/grepcidr-2.97.tgz) = e969ebbb4f45ad1834bd794777d2466485bd5f79
 RMD160 (grepcidr-2.97-20150828/grepcidr-2.97.tgz) = cfa4c6a0eb2df95924a64bc58b3666a572724819
+SHA512 (grepcidr-2.97-20150828/grepcidr-2.97.tgz) = 2c0da939c86e5055491d3f54f59aee6e11072e12bca0020d2914e7489db39df9d28f80e0e796530390f175f1a8cbc50c2a65931d2b602b2da382d8b0d4602237
 Size (grepcidr-2.97-20150828/grepcidr-2.97.tgz) = 17506 bytes

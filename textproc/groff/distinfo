@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.23 2015/10/15 14:11:20 richard Exp $
+$NetBSD: distinfo,v 1.24 2015/11/04 01:59:29 agc Exp $
 
 SHA1 (groff-1.22.3.tar.gz) = 61a6808ea1ef715df9fa8e9b424e1f6b9fa8c091
 RMD160 (groff-1.22.3.tar.gz) = 8f6d364f759e559c12c497091118f6d68f3a3b85
+SHA512 (groff-1.22.3.tar.gz) = c526ab203d13a9c9d110bcd3149fe50d1cd0d309437e9e2731a7ce90d890507ebc0a2331899ecf4dba2938daa756b6094cf76fd347a0ded59797c70ccfd0c95c
 Size (groff-1.22.3.tar.gz) = 4188772 bytes
 SHA1 (patch-aa) = 3f5d2c29397377f673a863e0ea953eaac4088898
 SHA1 (patch-ab) = 64ba9805a0798bfce543a258cd66347caa1bf860

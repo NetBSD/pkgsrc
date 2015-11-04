@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.19 2015/05/26 12:19:37 jaapb Exp $
+$NetBSD: distinfo,v 1.20 2015/11/04 02:00:15 agc Exp $
 
 SHA1 (xapian-core-1.2.21.tar.xz) = 03f67df86f600f0b64ea62fd9b956f72b5dce933
 RMD160 (xapian-core-1.2.21.tar.xz) = 6b2413007f245d2410e2b22d7656abb7f1bae750
+SHA512 (xapian-core-1.2.21.tar.xz) = a821043ea1686a09178bb91b14ed6a8cf00c50dfb0f066e420a40395edd3be085d7f89abb8f6a1151c847272c13601274e645055ede3548b07d5e912f0a70f81
 Size (xapian-core-1.2.21.tar.xz) = 3202560 bytes
 SHA1 (patch-common_socket_utils.cc) = 5e7ec55e2e1a4353a370197b2e953efa7206e59d

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/10/12 21:33:10 ahoka Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:59:34 agc Exp $
 
 SHA1 (hunspell-dictionaries/ga_IE-20071029/ga_IE.zip) = 9a983751599ae57ec0a4d5868fd52d4554a1d3bc
 RMD160 (hunspell-dictionaries/ga_IE-20071029/ga_IE.zip) = 50c5775f3f679083e32247812d4773dc13faf5db
+SHA512 (hunspell-dictionaries/ga_IE-20071029/ga_IE.zip) = b0214bbb08845964e7e33e999264c39785c8254c66519ac865276919811baa284761190191a8408d06913a7574b4122de95f7301cffed3b8018e3c482313dce8
 Size (hunspell-dictionaries/ga_IE-20071029/ga_IE.zip) = 303932 bytes

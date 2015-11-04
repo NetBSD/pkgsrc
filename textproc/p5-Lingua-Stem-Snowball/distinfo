@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2008/11/18 17:14:42 he Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 01:59:45 agc Exp $
 
 SHA1 (Lingua-Stem-Snowball-0.952.tar.gz) = 025a08c4046628b9052ac2c7597b1edef340754b
 RMD160 (Lingua-Stem-Snowball-0.952.tar.gz) = 26319985738499bff2a38d2f2099b7f0c4c40725
+SHA512 (Lingua-Stem-Snowball-0.952.tar.gz) = 53e1f48094d60f2ca2fe4303119bb140ea166a619d5c0141925f62bbfaac0bb1d87053eb49bf5478144efea700ea9ecd7686b11bce94ab6f76fda7550b376c58
 Size (Lingua-Stem-Snowball-0.952.tar.gz) = 206836 bytes

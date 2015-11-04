@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2014/03/31 08:31:44 wiz Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 02:00:14 agc Exp $
 
 SHA1 (uncrustify-0.60.tar.gz) = 769a7649a1cefb80beff9b67b11b4b87a8cc8e0e
 RMD160 (uncrustify-0.60.tar.gz) = 5770265558adaeecf5b66334fe91389e75b19674
+SHA512 (uncrustify-0.60.tar.gz) = 5ff3ac05d607420e6a140369b44407caae4b1dd4601d387375babeb0cfe0fe0501052a80acfc0a28bad53ee55f181f182cb9560f90d7735b2ba879a3a64b35fe
 Size (uncrustify-0.60.tar.gz) = 1037433 bytes

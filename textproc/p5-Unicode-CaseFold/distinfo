@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/10 02:24:03 mef Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:59:54 agc Exp $
 
 SHA1 (Unicode-CaseFold-1.00.tar.gz) = 887dc77575f34ad8a03504dac216f0932d8ad6c9
 RMD160 (Unicode-CaseFold-1.00.tar.gz) = 146647abc6d6de71f001348e43929d15d600092f
+SHA512 (Unicode-CaseFold-1.00.tar.gz) = e947129b05759f1f0d3efa7b8793f47dd0ed4e3c8f105523badecc58d8e9a7c4d79984c172bd4114fe6462adb45500fbebffb1e4ecbf0427a54d535cfb55874d
 Size (Unicode-CaseFold-1.00.tar.gz) = 65145 bytes

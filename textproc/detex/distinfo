@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.9 2012/11/01 19:26:14 joerg Exp $
+$NetBSD: distinfo,v 1.10 2015/11/04 01:59:26 agc Exp $
 
 SHA1 (detex-2.8.tar) = 57691f8e4dd52cbf632f38abebfd8c3725de019b
 RMD160 (detex-2.8.tar) = 983ea90de9e3559317baf4a71de0e8de47863b7d
+SHA512 (detex-2.8.tar) = 5afd54aebc3a018e9b72a5e5f37d05858b0b90c1165ec725b08995f5338479153a04ff938a2f54543108c66ac2f66d2c06159d331c9cde304ebce32b527c737f
 Size (detex-2.8.tar) = 318976 bytes
 SHA1 (patch-aa) = 4ad2937ed0c6fbd00b3767c8bdeb92dd1e7e5652
 SHA1 (patch-ab) = b9fe692f1dbbb96c6d249c702f53f15658d01d0a

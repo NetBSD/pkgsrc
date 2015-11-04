@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/05/08 18:19:54 cheusov Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:59:27 agc Exp $
 
 SHA1 (Mueller7GPL.tgz) = 5d2566e4a312d21c2cf4231771f4e405d54affc1
 RMD160 (Mueller7GPL.tgz) = 1d1a674313d871482f326a898e3d1189e461baf2
+SHA512 (Mueller7GPL.tgz) = e9f64eb81d28f6371df4904a66100bec686f1a6ab102b4d799ad6d5695d96f4e3fd5da4151360b7d9ff43ed8a3db656d0eea228e6011d8d6bb1288eed7ec30c7
 Size (Mueller7GPL.tgz) = 2386052 bytes

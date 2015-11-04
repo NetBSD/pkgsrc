@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/04/30 10:04:56 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:59:26 agc Exp $
 
 SHA1 (dadadodo-1.04.tar.gz) = 20b3c802db70c8c4fddf751e668aa6218c085643
 RMD160 (dadadodo-1.04.tar.gz) = 1d96843b73fc8dc654a5be93d596890f70c01d60
+SHA512 (dadadodo-1.04.tar.gz) = 02670437ffc98e5fb2fe5d617fe2b5f94e261fc8c125c74f08ade8fb50a2b39fda40113d9d6c4d2a78f59d3103b06a5e2e56c95b81fb0704a260e9a0b3ce3634
 Size (dadadodo-1.04.tar.gz) = 22791 bytes

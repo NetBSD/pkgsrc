@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2011/10/12 15:49:17 hiramatsu Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 01:59:51 agc Exp $
 
 SHA1 (Text-Glob-0.09.tar.gz) = 11145c455c6c75f4710c16c604880f9cea40dfd6
 RMD160 (Text-Glob-0.09.tar.gz) = dd891eabaac4eeca4dadb112877a849ad77acea1
+SHA512 (Text-Glob-0.09.tar.gz) = 9b729e4ece88ad79e1b637c7f35e5e1ecae3fd7f62c408ed4f3fcac2e8e8afff32d7d805e1b0269800aada5ae609d03335d42ac54def2797d301e91fa488ae47
 Size (Text-Glob-0.09.tar.gz) = 4171 bytes

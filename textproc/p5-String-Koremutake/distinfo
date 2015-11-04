@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/09/01 22:28:23 seb Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:59:48 agc Exp $
 
 SHA1 (String-Koremutake-0.30.tar.gz) = 0b308b297c911928ae97980e608d4cc42e384844
 RMD160 (String-Koremutake-0.30.tar.gz) = 388792b17ac4a0532936c9e1444a96590d32de0d
+SHA512 (String-Koremutake-0.30.tar.gz) = 27e8c81e10edcbe5dbe232b41f168632c41e40bd5f7418e45e81037b6993de9aef47eb73505d8e1a25820d3e5cbf2a8fa192d7cae3fdb8c3ec8f462276d2d929
 Size (String-Koremutake-0.30.tar.gz) = 3800 bytes

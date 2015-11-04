@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/10/12 21:14:51 ahoka Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:59:35 agc Exp $
 
 SHA1 (hunspell-sk-20090330.zip) = 21bee3b302aa17e27401601aa486f8d058422c50
 RMD160 (hunspell-sk-20090330.zip) = f86f59c3bbc0c3bd15db737754d269b76994f03a
+SHA512 (hunspell-sk-20090330.zip) = a1451a1e9b097f0d0018d22c04a2f502aceade322b39ec9b1b61124c3db15d0db50bd567769f28f9c0766e1681017a48869a3564b7915af60f5e5a54709764e2
 Size (hunspell-sk-20090330.zip) = 665793 bytes

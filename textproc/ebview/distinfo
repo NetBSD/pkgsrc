@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2013/12/15 19:49:36 joerg Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 01:59:28 agc Exp $
 
 SHA1 (ebview-0.3.6.tar.gz) = 47b63fb2f265c83cc5bf7aeb92f96d0e1cc7f9af
 RMD160 (ebview-0.3.6.tar.gz) = c32de00be68c13794f2c1d9c08edc34fc5dcb613
+SHA512 (ebview-0.3.6.tar.gz) = a18c5d04657fabc2146693e53973782672163f491c86b1bf6fe165e1ed903caa0ca0df788133f4a48d0a58903836057af354fee25599acb0713d1d0354b15cf3
 Size (ebview-0.3.6.tar.gz) = 564915 bytes
 SHA1 (patch-aa) = 8ecee1eeb1fddb9f1378a3258c8b8ae9a91c1640
 SHA1 (patch-ab) = ffedc7cc8b931f63f5a661314ef3703f88498434

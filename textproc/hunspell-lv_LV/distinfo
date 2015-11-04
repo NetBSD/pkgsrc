@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/10/27 20:14:12 ahoka Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:59:34 agc Exp $
 
 SHA1 (hunspell-dictionaries/lv_LV-0.8b1/lv_LV.zip) = 35e9faf4d8a6abc003b0ebf8c9b57ad7a2952c0d
 RMD160 (hunspell-dictionaries/lv_LV-0.8b1/lv_LV.zip) = defce0a00e1184a6eabd3114cbcbf9df030fc940
+SHA512 (hunspell-dictionaries/lv_LV-0.8b1/lv_LV.zip) = 6764e851a95f27bd9c77d02ea62b613f27b8c86f4e9a8b419738b7172a3fe56141dbc39b1b809c7e4ca5d5fefdf0d37df295b546f7473a4d6e18879f12e8144d
 Size (hunspell-dictionaries/lv_LV-0.8b1/lv_LV.zip) = 843379 bytes

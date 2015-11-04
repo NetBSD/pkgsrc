@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/01/11 11:47:18 wen Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 01:59:46 agc Exp $
 
 SHA1 (Pod-Escapes-1.07.tar.gz) = a22668af00e024312a0941fac887d9fd50d66a1f
 RMD160 (Pod-Escapes-1.07.tar.gz) = 7dc6be8507d4535521033f8ef9a092d200f0213c
+SHA512 (Pod-Escapes-1.07.tar.gz) = e93fd5440bfdf87833e84bb7e11ad41b316e71fec625775a134e5e0764a6e0b2fc16bff0105eed74fade20def381bdc1b679a6d8eadb94c2b07142280d5b84bc
 Size (Pod-Escapes-1.07.tar.gz) = 11652 bytes

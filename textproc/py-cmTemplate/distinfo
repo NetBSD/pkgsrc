@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/07/27 13:58:53 joerg Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:00:01 agc Exp $
 
 SHA1 (cmTemplate-0.3.2.tar.gz) = 77a768e3cd8eac18468657ffa11c24f3c5581eaf
 RMD160 (cmTemplate-0.3.2.tar.gz) = a55d76571f2e6ca5474affcda34f4e5fb031d9af
+SHA512 (cmTemplate-0.3.2.tar.gz) = bdd7b4d012d824869195f3f457f4535d9fb52ea97aca850784a881e073176aa191bc8d1bfde1d999a9f935e3883ad481698b41ac7861fc59b4868e78e433bc55
 Size (cmTemplate-0.3.2.tar.gz) = 56642 bytes

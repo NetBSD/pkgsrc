@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/10/12 22:03:03 ahoka Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:59:34 agc Exp $
 
 SHA1 (hunspell-dictionaries/nl_NL-20070607/nl_NL.zip) = 34fa7451e8585772ea0101f7b41a1241f334c9f0
 RMD160 (hunspell-dictionaries/nl_NL-20070607/nl_NL.zip) = cba8f4957efa5d8c7de84ae731b7ea0a7d989f13
+SHA512 (hunspell-dictionaries/nl_NL-20070607/nl_NL.zip) = 0e7a35a751dc8a55ae039bc0cb9355fa10089ec1bb7586e747f9777e2eb4e25e3f0621b3e4e85c60653a01eea96d89e114c3fdaef5025968d55e984f699a5f51
 Size (hunspell-dictionaries/nl_NL-20070607/nl_NL.zip) = 973588 bytes

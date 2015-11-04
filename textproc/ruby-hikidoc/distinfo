@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2014/04/05 08:58:57 obache Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 02:00:08 agc Exp $
 
 SHA1 (hikidoc-0.1.0.gem) = 51a1227f98652e1727a08a26f8bb83291a7e8d61
 RMD160 (hikidoc-0.1.0.gem) = b831ae737f707f251549deeab7a6187e6d220ab8
+SHA512 (hikidoc-0.1.0.gem) = b193a4042b58a11da86e63f7cdef62cdbecde93efb2476a1c1d632d5a5ca8b723b931c95b7a9cf806ce70ae6bb4c52c7b22a3e9e9cfc8317d3346a3ee756688b
 Size (hikidoc-0.1.0.gem) = 21504 bytes

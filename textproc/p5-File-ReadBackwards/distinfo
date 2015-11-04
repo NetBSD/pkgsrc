@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2011/06/17 17:00:32 schmonz Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 01:59:43 agc Exp $
 
 SHA1 (File-ReadBackwards-1.05.tar.gz) = 770703360483684e534fd24137e17f9a5a4eeb4d
 RMD160 (File-ReadBackwards-1.05.tar.gz) = 7583d56b7d475585c1bc02ff3be976e5f6ccb4db
+SHA512 (File-ReadBackwards-1.05.tar.gz) = 8e1eeeda0acfdc0b9e1f5234cac37348890fb962e5edd395804d6cf9ab2c221217e2714025303493cafde7ce77721e6c09b2b53825dadb978fafe68f6d7b8c20
 Size (File-ReadBackwards-1.05.tar.gz) = 8943 bytes

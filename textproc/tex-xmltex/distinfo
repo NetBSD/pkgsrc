@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/05/04 09:58:25 markd Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 02:00:13 agc Exp $
 
 SHA1 (tex-xmltex-35755/xmltex.tar.xz) = e74f63fe24f09dea38159076ebb0ca3ce494f280
 RMD160 (tex-xmltex-35755/xmltex.tar.xz) = c6e38f19188be23c689cd36856f5e7be7ae33fae
+SHA512 (tex-xmltex-35755/xmltex.tar.xz) = 813452bd4a9dfe4098b1811938ecc82d2eb41e769cefadbb6b181e64e4023e4cf45bac8d974a0c8ab0a9661337559033b06f9673cf3341a8006b04c3a7d84e29
 Size (tex-xmltex-35755/xmltex.tar.xz) = 18068 bytes

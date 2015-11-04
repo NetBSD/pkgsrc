@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/11/18 14:55:22 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:00:13 agc Exp $
 
 SHA1 (tei-p5-schema-1.2.0.zip) = 0771f93f629b070f1caf3ef0b7dd0d3da6221920
 RMD160 (tei-p5-schema-1.2.0.zip) = 161efb1387fc589d8d7f277d1f373893da5710d3
+SHA512 (tei-p5-schema-1.2.0.zip) = 822f2f7827f481281a463de273d7b6890fc22e3d394d3ae3c39edf61a7a94c41403da25ac1ab770677f1e31e9873006ed5a75d7f95404e3fb1ceaf45f2d2b46f
 Size (tei-p5-schema-1.2.0.zip) = 323252 bytes

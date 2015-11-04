@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2005/03/05 10:39:10 uebayasi Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 01:59:29 agc Exp $
 
 SHA1 (freepwing-1.4.4.tar.gz) = f57bda4fa6212ce718aec07230b74e8e5777b688
 RMD160 (freepwing-1.4.4.tar.gz) = 8f8ff5c78805197dc0f76c6d638cd00af7fbbc62
+SHA512 (freepwing-1.4.4.tar.gz) = b635fea3f04425ed506ea989022e3453c8fb5b39957e9b7380228f3349c7cba07f6cf97b914937ec14cdc3fa94ca90206e11dec81f140e06a93a058c21f9f8e0
 Size (freepwing-1.4.4.tar.gz) = 139167 bytes

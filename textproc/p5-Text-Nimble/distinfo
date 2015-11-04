@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/02/07 03:50:59 schmonz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:59:52 agc Exp $
 
 SHA1 (Text-Nimble-0.002001.tar.gz) = 559e83c907de023f76ac2471b68f45dfaa65ffea
 RMD160 (Text-Nimble-0.002001.tar.gz) = 4a7098f17c65c34f25c13da6d9b0f1c879782d0a
+SHA512 (Text-Nimble-0.002001.tar.gz) = 9a6625f4185c39aaccec335ca31dffd74410983a9c0cf141aeb91cebcbad986200c2eb168a4b7356a4e82f48cdc36ee89d28280f9e39768be9a81587af839370
 Size (Text-Nimble-0.002001.tar.gz) = 20821 bytes

@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.5 2013/09/10 14:45:48 joerg Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 01:59:37 agc Exp $
 
 SHA1 (grep-2.4.2.tar.gz) = 83fbd0fcb6ec4b10edf438a28d12608a4f06d588
 RMD160 (grep-2.4.2.tar.gz) = 768399d130cb517889ccfea952e6bc6798dd27cc
+SHA512 (grep-2.4.2.tar.gz) = e411c4a7f26c01bd67f3a52725915237c0c2e460be327c3cba89039fc911d86e0e2acef2ce5853feb0a6da51825a0e166baa30b91e6bc167acbb0769b7c9a90f
 Size (grep-2.4.2.tar.gz) = 460582 bytes
 SHA1 (grep-2.4.2-mlb2.patch.gz) = d2df678e73efd995db2a41cba110e1d0c1ff5104
 RMD160 (grep-2.4.2-mlb2.patch.gz) = d1d59c8e252d4ef5096843f6ea2fed0277237ecb
+SHA512 (grep-2.4.2-mlb2.patch.gz) = eac0234ac0e36750b913cb944804d211bcc777769a78d49353a96c912e83302359bf396b3c94239ee12a836eb3c8bed44bbdc3b9259cd3741c801c36950ffd54
 Size (grep-2.4.2-mlb2.patch.gz) = 39453 bytes
 SHA1 (patch-configure) = 66e29bba14891b85d23d93ed193fcf6d6d917727
 SHA1 (patch-configure.in) = c680e384c13206173db69465c474caf0772e1132

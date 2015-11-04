@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/04/11 23:42:18 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:59:22 agc Exp $
 
 SHA1 (aspell-mi-0.50-0.tar.bz2) = 837551b776a1e52987c6963e2c6382be9c8faa00
 RMD160 (aspell-mi-0.50-0.tar.bz2) = 65753d719c646b272558b08dd8daeb37a07e63d7
+SHA512 (aspell-mi-0.50-0.tar.bz2) = cba0a646612f6cd24d1e1d91326dcf1c7a6ec01c04ad0661a95fcd745b4d1a3bb50aef84c382d3a6c9108d4e9589ee7661f4988930c7198950396eeb029062a0
 Size (aspell-mi-0.50-0.tar.bz2) = 57818 bytes

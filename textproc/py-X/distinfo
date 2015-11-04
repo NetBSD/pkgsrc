@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2014/01/20 12:37:04 wiz Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 02:00:01 agc Exp $
 
 SHA1 (PyX-0.13.tar.gz) = 1c5d100250358897ca8c6f2237a35f1d69b1ae6d
 RMD160 (PyX-0.13.tar.gz) = 0cbd1da09ae9670bb8b42a59a103d0c8a53175c3
+SHA512 (PyX-0.13.tar.gz) = cab0c22f0862ae20cff92504ededf4fcf5820d5773130fb258de1a95d295ca4fe657b85d5ccd52021a4f84403e6db8eebe9f676fa405781738502456123eb05c
 Size (PyX-0.13.tar.gz) = 1237082 bytes
