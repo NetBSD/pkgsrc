@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2013/01/14 14:47:38 bouyer Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 00:35:19 agc Exp $
 
 SHA1 (FusionInventory-Agent-Task-Network-1.0.2.tar.gz) = 79bb8473932db319fa40265b976756eefcff53d1
 RMD160 (FusionInventory-Agent-Task-Network-1.0.2.tar.gz) = 2ca68144a58f2a7a5e88b95ec2b6815a5ed8fdf7
+SHA512 (FusionInventory-Agent-Task-Network-1.0.2.tar.gz) = 4e2f70ff84589a3fac32382b65518a54899f82447b29eec32b20ac291b5644e3b6f0496d202802d9b14df2e98364d33812132c54d87db9e42ce2dbb550acd174
 Size (FusionInventory-Agent-Task-Network-1.0.2.tar.gz) = 398046 bytes
 SHA1 (patch-Makefile.PL) = 98c92e20eef237567d8e1e458440e6788c25f9f4

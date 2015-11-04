@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2015/03/07 07:42:16 mef Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 00:35:00 agc Exp $
 
 SHA1 (flodo-v5.tar.bz2) = 607d1c605a0c687f48acbc3becb6e8c150cc4bc8
 RMD160 (flodo-v5.tar.bz2) = afea168fb846bfdb6dd485aa88377c9264272441
+SHA512 (flodo-v5.tar.bz2) = 50bb842d7b40b10fc6ae8f6b3281583516693270f7a96e4aef6bcc00ae1d10f6736998cb8e49c3f10bce6eee1c9b3f54b82de0d1b7faf1943a1ebf050a34c448
 Size (flodo-v5.tar.bz2) = 9677 bytes
 SHA1 (patch-aa) = 933b3b58356e073872a99a9198f5b24c0afab831

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2015/03/11 13:56:46 adam Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 00:34:54 agc Exp $
 
 SHA1 (cacti-0.8.8c.tar.gz) = 6fdcaf59a7467ac593d4940e5a65338bdea5475b
 RMD160 (cacti-0.8.8c.tar.gz) = 591d08d27824444b68e4f517eb52be8bd08fc5f4
+SHA512 (cacti-0.8.8c.tar.gz) = dd4533a7fc739b6112ba65084bb711fb28022b097a9a0d49f31c30c3689ae4e18a32a0e161ac1a24f373e63135ef26859c90c0aa4eb4001784cd9c6037aadb76
 Size (cacti-0.8.8c.tar.gz) = 2908451 bytes
 SHA1 (patch-cacti.sql) = 37e18026c4136630d939ab5a7a4d6336bf166282
 SHA1 (patch-include_global.php) = fb0d2f15596b051c60ed6032ecb9038315b7c663

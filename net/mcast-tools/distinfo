@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2011/12/21 11:36:49 wiz Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 00:35:11 agc Exp $
 
 SHA1 (mcast-tools-20061214.tar.gz) = 7a494be18781fae17235942c0222e3db38a4f673
 RMD160 (mcast-tools-20061214.tar.gz) = 2fe4c53a6169cbb4fe84a829b18c907d26ec5f05
+SHA512 (mcast-tools-20061214.tar.gz) = 86adc06dbe5800974731f66efdd1ff4fb428e4d12ccd2121f748bd06294c977b2c6c771426965503df41019ea7c4daead405f911d9ad294e9b91961e564fff26
 Size (mcast-tools-20061214.tar.gz) = 395708 bytes
 SHA1 (patch-aa) = 35d3b217430f53277c0f410861a41fa5e7996dcc
 SHA1 (patch-ab) = 89ee235d97df5d6b0d58d9f3c8c52e3a85554cf8

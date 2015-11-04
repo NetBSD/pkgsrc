@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/12/31 19:56:19 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 00:35:32 agc Exp $
 
 SHA1 (socketpool-0.5.3.tar.gz) = 3c9987e86626aa48ba7e7689b5e738f49d7f2594
 RMD160 (socketpool-0.5.3.tar.gz) = 44cc1323cbbdb8f86419104c87ba38f0093066e8
+SHA512 (socketpool-0.5.3.tar.gz) = 6d16a18927672157703fb5a29f4332241f9ddf743dfee8f2606d600dbb75d547f2e0dcc0398febe55df3319829a80b3f537b5877679e4f674569ef55de78c1b7
 Size (socketpool-0.5.3.tar.gz) = 9793 bytes

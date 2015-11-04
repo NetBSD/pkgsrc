@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2011/11/11 04:32:18 hiramatsu Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 00:35:22 agc Exp $
 
 SHA1 (Net-MAC-2.103622.tar.gz) = cfdf1751d3e68085f55202fdd5915f5be8bc90bd
 RMD160 (Net-MAC-2.103622.tar.gz) = 15aec2b1976e9980e7323dc6a347f517ab315d6e
+SHA512 (Net-MAC-2.103622.tar.gz) = 9ddc271b83976f05730da19f54c2fa8f9046b4727e890251d95f5d71ea257a6eabd1a92718029a85f4b475bbb0c4aa9dc374f9deea45a9de9c2850b8f6776b5a
 Size (Net-MAC-2.103622.tar.gz) = 26123 bytes

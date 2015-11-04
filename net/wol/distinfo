@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2011/05/10 14:07:48 taca Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 00:35:45 agc Exp $
 
 SHA1 (wol-0.7.1.tar.gz) = 7edd1a8c2d4baffc3b6baf8fcd12e786f9fc1fbd
 RMD160 (wol-0.7.1.tar.gz) = 856fefe482db4326df47f10f07ec97396f23870d
+SHA512 (wol-0.7.1.tar.gz) = 233cbd038633c4b04a22710c04a8349d7706c6b4ff0554b6899ee3309349502a318f6fb05a4ad4c80cd373c362b2ad8818cb52a432d768f569e80f05658615a3
 Size (wol-0.7.1.tar.gz) = 445648 bytes
 SHA1 (patch-config.h.in) = 8120dd852646cd1ca34e29ebcd339cc173a52b5b
 SHA1 (patch-configure) = c2a5d44c46c1c4850c6ecc58ba14abd1c047f1f6

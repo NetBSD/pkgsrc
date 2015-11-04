@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.2 2012/04/11 19:32:17 darcy Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 00:35:01 agc Exp $
 
 SHA1 (gitso_0.6_linux_all.tar.gz) = 577edcb257aa2508a6ee9b5ea8a3de135e0abf6c
 RMD160 (gitso_0.6_linux_all.tar.gz) = 4428ecdbe73819a8251c3f9d05c61f62ae2e20df
+SHA512 (gitso_0.6_linux_all.tar.gz) = 6e09b0d1ab1e5a9b87dcbdea689e17e32176d3683c9ca87f55a6fa3cf1e9c2182b56c63dfe8305c98c4e32f2739c233e92723a5c6d2b58c121429b2104ad3ce6
 Size (gitso_0.6_linux_all.tar.gz) = 192753 bytes
 SHA1 (patch-ArgParser.py) = 721c7082c5eef67de9709003d9b51499c948e81c
 SHA1 (patch-GitsoThread.py) = 962343bd4f842df2cbf003f8cdc0707189238463

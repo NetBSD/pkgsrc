@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2014/08/14 19:44:53 shattered Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 00:35:40 agc Exp $
 
 SHA1 (tcpslice-1.2a3.tar.gz) = 98790301cb1bf4399a95153bc62d49b3f5808994
 RMD160 (tcpslice-1.2a3.tar.gz) = 97f8ebcbbb9298c0e2ad4670d442a87c1a2a4738
+SHA512 (tcpslice-1.2a3.tar.gz) = 04e12d592807022c78eb4941580ed103995680c69af885bb8f13828a12ec570f7fe93c34c1b20a01d3d99f445d5da17a1fcfbe25b2e3b41abe28304c034654c5
 Size (tcpslice-1.2a3.tar.gz) = 76879 bytes
 SHA1 (patch-aa) = 82aa2bb3cd7a691ea0559b804ca334588b37822b

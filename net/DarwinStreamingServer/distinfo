@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2013/03/24 16:51:07 joerg Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 00:34:51 agc Exp $
 
 SHA1 (DarwinStreamingSrvr5.5.5-Source.tar.gz) = ba8419be20e1911f7167dbd48722b2ba5e6f1fe1
 RMD160 (DarwinStreamingSrvr5.5.5-Source.tar.gz) = 62996496da51971e384fc26dd336ef2785c2dca7
+SHA512 (DarwinStreamingSrvr5.5.5-Source.tar.gz) = 6ab3c5749dee75bdbd7f178fa656040cbd0d07da41426783dc9d9834ac6064107bf67ee411785ae30c3e63cd171c168dbd439f5902474f78fb94a7fe7781ea9c
 Size (DarwinStreamingSrvr5.5.5-Source.tar.gz) = 21468268 bytes
 SHA1 (patch-APIModules_QTSSAdminModule_AdminElementNode.cpp) = 3138cf323890d3c1789467f29efcc65f6489d5eb
 SHA1 (patch-APIModules_QTSSMP3StreamingModule_QTSSMP3StreamingModule.cpp) = 0461ce97cdf2e7dd062d75b0139ee4c29e347218

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2015/02/19 22:27:59 joerg Exp $
+$NetBSD: distinfo,v 1.8 2015/11/04 00:35:46 agc Exp $
 
 SHA1 (xl2tpd-20140214.zip) = 6d5d38674b6671ef1cd1880a548645ae08725a9e
 RMD160 (xl2tpd-20140214.zip) = 684f3d1d07ce3b0629123f056f8cf3f6d67c41f3
+SHA512 (xl2tpd-20140214.zip) = dc3425caebf5851909912c0e53cc699b725700ff0ec6285ab2b8fc3c72e4ea862810c8c1c9606ff89217c18e7ebf518c52dedb4b6154eb3b6d25eb7fadad0802
 Size (xl2tpd-20140214.zip) = 591764 bytes
 SHA1 (patch-Makefile) = fde2535eb5c2eb498df8e96162d2f24dba27b3dd
 SHA1 (patch-control.c) = 3b1aa772be07bdc1312d94c8e0b1543086b6fb7f

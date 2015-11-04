@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2015/03/07 07:26:02 mef Exp $
+$NetBSD: distinfo,v 1.8 2015/11/04 00:35:00 agc Exp $
 
 SHA1 (flickcurl-1.26.tar.gz) = 547480030ce4f777bb35d98b43fe15ee3eeae0e0
 RMD160 (flickcurl-1.26.tar.gz) = 63aea2ef81b2a846a9ee63db99d08a08b8f2d1dd
+SHA512 (flickcurl-1.26.tar.gz) = 5ffdef58e67cbf99da2e8eefad57e845627703d5b22c85d5635557cd2df53e47e74d8e3387523495708c5cc8952c290da5c4d5f1e86bd482312fc7e46e9af6cd
 Size (flickcurl-1.26.tar.gz) = 1870073 bytes

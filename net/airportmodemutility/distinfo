@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 12:13:42 agc Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 00:34:52 agc Exp $
 
 SHA1 (airportmodemutility_20.zip) = badceefaea37499159c0284a8bb986d111fcbf40
 RMD160 (airportmodemutility_20.zip) = 024b7da7c5fa49909996dc81fe61e42156e2c6d0
+SHA512 (airportmodemutility_20.zip) = cca6280a68430666816b1c4c3534e6198a8fe94e8e64c8f725fe564bc14880cfcdc566b14d56bd1fad5c135222f6c389136e3abfc305654efccc1d644b9ffb66
 Size (airportmodemutility_20.zip) = 16316 bytes

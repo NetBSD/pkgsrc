@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2007/07/24 17:23:34 jschauma Exp $
+$NetBSD: distinfo,v 1.8 2015/11/04 00:35:05 agc Exp $
 
 SHA1 (ipcalc-0.41.tar.gz) = b75b498f2fa5ecfa30707a51da63c6a5775829f3
 RMD160 (ipcalc-0.41.tar.gz) = aaa21c1804d7498e2604c907a336c20dc9b4511d
+SHA512 (ipcalc-0.41.tar.gz) = 089eb2b9a38b07caa182ff11547a93d86aed570311fc8cd9e636c7546ab4d15acc854b9d79bbba9c797dcfbbedd1d6f4d521aec97bf613905fe5198a29c9889d
 Size (ipcalc-0.41.tar.gz) = 21599 bytes

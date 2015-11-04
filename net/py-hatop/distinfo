@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/01/17 03:40:35 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 00:35:30 agc Exp $
 
 SHA1 (hatop-0.7.7.tar.gz) = 1d4f46cc8613746e9310debf0a8632f366619710
 RMD160 (hatop-0.7.7.tar.gz) = 38ea2cca4f82c6481cfe4b3025884e9848b5acad
+SHA512 (hatop-0.7.7.tar.gz) = 879de0e13af1d1c4e86be034066fb4bbc5c1700a30abebbfb1e1d524fb50cec0fa90fe160a7b7d00bf6aedd49ab7bb8fa1447f751fae95200e850ff506feb074
 Size (hatop-0.7.7.tar.gz) = 134143 bytes

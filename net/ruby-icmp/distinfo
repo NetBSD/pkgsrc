@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2006/01/03 14:28:30 taca Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 00:35:35 agc Exp $
 
 SHA1 (icmp-0.2.2.tar.gz) = c0f5edf327780bd0aa094570e262e36549385b49
 RMD160 (icmp-0.2.2.tar.gz) = 3372bf9abd64deecd611170e31690638787cb4f3
+SHA512 (icmp-0.2.2.tar.gz) = e261215bb5ba0e76111036487a18a989ac9b165184136873bca374e95fb997ca4f7ac22fdb9a4f9602f1a2651c72005d5a02cbdc5c491abd14c77eaff3e1719b
 Size (icmp-0.2.2.tar.gz) = 6522 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2011/01/28 20:28:33 is Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 00:34:59 agc Exp $
 
 SHA1 (ether2dns-1.6.shar) = cc0cc945ad528eb7f498485a6b86b0ef4d7d5bab
 RMD160 (ether2dns-1.6.shar) = 6e814b4c99f0bb2585e38d7aed918d33a30185ef
+SHA512 (ether2dns-1.6.shar) = ca83dfb7d6c7720329be3aea638761e09db4f5386356f7af68cdf60f93793ba13fafac056210ba997f54516626bfaa3686f090fe3a4c479b94b8b4cc48e6135e
 Size (ether2dns-1.6.shar) = 9073 bytes

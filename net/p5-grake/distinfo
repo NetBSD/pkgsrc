@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/11/08 23:51:44 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 00:35:26 agc Exp $
 
 SHA1 (grake-0.1.0.tar.gz) = b7b513aba480dca31c1c82bb9abd8e4b8288ac8c
 RMD160 (grake-0.1.0.tar.gz) = 51c7dba4fdd9a5b2d6c2370baec190c4f48c9b55
+SHA512 (grake-0.1.0.tar.gz) = 6b30382fb45f9cba6ced52a416ce373c48dc6fa1c46e929e03fbb057d08c803bc9077a17090aa1adcdcc30f7d89dd448255a3a857992981033100df1779eed81
 Size (grake-0.1.0.tar.gz) = 19336 bytes

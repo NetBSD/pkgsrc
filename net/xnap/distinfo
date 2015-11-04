@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2012/01/01 20:06:34 ryoon Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 00:35:46 agc Exp $
 
 SHA1 (xnap-2.0.tar.gz) = e4b5a8eeb28d0f777029c57de4f9372601d734f6
 RMD160 (xnap-2.0.tar.gz) = b1069cd50ac6d014b63ea5f8e2e523207cf369fb
+SHA512 (xnap-2.0.tar.gz) = 727073efd6487ba63a9f47cafa9c592e017ac05a4ec02c1c9d84bb4a32f837a9fbb3334bdabd2750388c80cd1770f69298ec4744bbc97f4cf17bf15817233b3d
 Size (xnap-2.0.tar.gz) = 773640 bytes
 SHA1 (patch-aa) = c0e25cec360fc75908fb9734c47d2e0c055b8f9d

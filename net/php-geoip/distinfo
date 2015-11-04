@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/02/06 22:44:56 fhajny Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 00:35:28 agc Exp $
 
 SHA1 (php-geoip/geoip-1.0.8.tgz) = f8d17da3e192002332ab54b9b4ab0f5deeaf9f15
 RMD160 (php-geoip/geoip-1.0.8.tgz) = cea5d556b2d502f40cc197cb8acec09d8482aac0
+SHA512 (php-geoip/geoip-1.0.8.tgz) = 3a8a64f1d420472cc5b3a760391be28bd6bd8a34092715b0f75f308502fa76ca71a029cb2f0ba2fb87ba26166781547edbb7f151609c91db48bb025add4d0447
 Size (php-geoip/geoip-1.0.8.tgz) = 10061 bytes

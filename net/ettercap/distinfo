@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.15 2006/02/24 20:39:42 joerg Exp $
+$NetBSD: distinfo,v 1.16 2015/11/04 00:34:59 agc Exp $
 
 SHA1 (ettercap-0.6.b.tar.gz) = 8cc1bbfe61e894620deef74cff0b8ca5a0b9e628
 RMD160 (ettercap-0.6.b.tar.gz) = 05240616b98fdf1c4486837c6b8ff716188ab48b
+SHA512 (ettercap-0.6.b.tar.gz) = 2edb41f3d600665ac6b206cf58bbc7ef2c1534a470c3198c620b0390fa2c42297aaf1939dce1eee6caf321b7fa4d9a5125960ae9493b156916d3ff2d8dfabade
 Size (ettercap-0.6.b.tar.gz) = 689038 bytes
 SHA1 (patch-aa) = 730e78b97746dc9f4fc4efca99bd3eaf124bf614
 SHA1 (patch-ab) = 107ef5dda9457313d7d939745a6a21dbe2b989ce

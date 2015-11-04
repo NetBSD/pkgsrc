@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/12/08 23:23:26 adrianp Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 00:34:53 agc Exp $
 
 SHA1 (barnyard-0.2.0.tar.gz) = 4adfcabb2702def5a9a6c68cbde1b90a70f7e67a
 RMD160 (barnyard-0.2.0.tar.gz) = b5e10dc3cbfe1a73f56e893544722e2771ecf0f3
+SHA512 (barnyard-0.2.0.tar.gz) = 73424acf2e0c620b2f8f2f407d74812f7740234ce523e37557273998108c131311fffb16cfc2cea0f652d6b21072431081bad35b045f5654e2245786d27568e6
 Size (barnyard-0.2.0.tar.gz) = 161543 bytes

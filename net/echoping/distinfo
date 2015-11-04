@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.8 2007/11/18 00:36:37 adrianp Exp $
+$NetBSD: distinfo,v 1.9 2015/11/04 00:34:59 agc Exp $
 
 SHA1 (echoping-6.0.2.tar.gz) = 8b414d1dbc5a0f21a7f2cccb0138aec13117a1a4
 RMD160 (echoping-6.0.2.tar.gz) = 73ee80f4b666fde3a0e02589388e485c487005fc
+SHA512 (echoping-6.0.2.tar.gz) = ca9a38c3be9da283e73a7a1b13ab003dca6a2ee317e2961325f3e6803f132ae2f5e4206d946564915c573f21f9c3e9641d61f6b3ae5806bbaa92c2f30f1e5e22
 Size (echoping-6.0.2.tar.gz) = 1660983 bytes
 SHA1 (patch-ab) = a66af6681503a011cd59a1cb87475f156bde85d4

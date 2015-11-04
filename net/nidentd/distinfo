@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2005/06/17 15:24:55 hira Exp $
+$NetBSD: distinfo,v 1.8 2015/11/04 00:35:16 agc Exp $
 
 SHA1 (nidentd-1.0.tgz) = 5ad5f5f27514a9b647f00bdd8f132203c29987be
 RMD160 (nidentd-1.0.tgz) = 19025d8cfb477dbe739d0d8f20834083f6003a89
+SHA512 (nidentd-1.0.tgz) = e1415c682746f0b887e442a8c68da57574671de3ef9cba213bec12f0011e1e4e071528a5b28cb1ae8e3fbe6a811cc76c9c59baafefe4d6486b5266e98fbf36f1
 Size (nidentd-1.0.tgz) = 1831 bytes
 SHA1 (patch-aa) = bdb6401f59f9664aec65578306efbb273877fb05

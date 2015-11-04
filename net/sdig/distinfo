@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.4 2010/02/11 22:43:35 joerg Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 00:35:36 agc Exp $
 
 SHA1 (sdig-0.30.tar.gz) = 5af0f6adbadee33b91a45cffcfd13587ad5fa3a0
 RMD160 (sdig-0.30.tar.gz) = ec8c433352170aefaf8b74152df7da850349943a
+SHA512 (sdig-0.30.tar.gz) = 953ee1ab325db0808bc800bb3355d04e75b003f3c110e769d5ebf4ec49af726e928065360fff2bf541c70be70200aa767da8cfcd63f8c813b481db68822306cd
 Size (sdig-0.30.tar.gz) = 25301 bytes
 SHA1 (mactable.gz) = afe9c24c45c5472c9e78d2a8d72fcdc18d43563d
 RMD160 (mactable.gz) = 1222c7b06a441c5ab4755c4525a55ca0a84442e3
+SHA512 (mactable.gz) = ac7d4b7ab6cb5a1d8dd9c765913e316c916b576d8602418dfa0b925e972546c1fd099a316721cf2a031044b512fa9acff3413dd511420bc3d52ca02b13217eb1
 Size (mactable.gz) = 36490 bytes
 SHA1 (patch-aa) = f70967610ce3aadc5e67d82cbf8d0d5325cf9c8c
 SHA1 (patch-ab) = 3b2d671d7d0ca66f8afe5c55bf075c6b62a9c95a

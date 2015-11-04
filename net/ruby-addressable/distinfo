@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.14 2015/06/08 15:02:16 taca Exp $
+$NetBSD: distinfo,v 1.15 2015/11/04 00:35:34 agc Exp $
 
 SHA1 (addressable-2.3.8.gem) = 945a36b22ef2f2b3b451f1ddc7fad682bcc22369
 RMD160 (addressable-2.3.8.gem) = a82b6d01d73fd85caed375ffd867132b4ce33f59
+SHA512 (addressable-2.3.8.gem) = 56c3f4b95a78af3b35fa0813cc0b010f89c698fefb0c79865af553ba5c2a162b936921de40b2659498812efc1692ed49e95f9984a044c0ed42f96a26b666b5fc
 Size (addressable-2.3.8.gem) = 99840 bytes

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2014/11/13 11:50:26 markd Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 00:35:07 agc Exp $
 
 SHA1 (kopete-4.14.3.tar.xz) = 298937c6fe06b409881592a4b50dceff9dcf9c87
 RMD160 (kopete-4.14.3.tar.xz) = acbba218e24ba051aedab0296a0b2bad25815f8f
+SHA512 (kopete-4.14.3.tar.xz) = 33a433da426e7a4a519f033bb14635f31c92954f8e6c46b41759f4e1e41197aed9d07894b163a1e484648ac0e9f92914afe20dfbaa8ddff56b8751d426afd9fc
 Size (kopete-4.14.3.tar.xz) = 6317288 bytes
 SHA1 (patch-libkopete_avdevice_videodevice.h) = 9864dd808cf375bcc48ec9ed0c6d939da382ea67
 SHA1 (patch-protocols_jabber_libiris_src_jdns_jdns_sys.c) = 3bb68fd63bbd98ac106402a1c647f23556e6cea8

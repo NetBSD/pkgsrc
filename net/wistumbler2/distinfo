@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.11 2011/01/03 07:38:59 obache Exp $
+$NetBSD: distinfo,v 1.12 2015/11/04 00:35:45 agc Exp $
 
 SHA1 (wistumbler2-2.0pre10.tar.gz) = 1167dfbc53cdf43cca357fefd2153be9f4657669
 RMD160 (wistumbler2-2.0pre10.tar.gz) = 27a1539c93560c753d9951c5c236108bf38d8639
+SHA512 (wistumbler2-2.0pre10.tar.gz) = 7f082817ccfaf85376e8047581669b4cdf32329c50f6368bb33f9e64a0e14ffeb3371545d40a04d7d128e74f98c111b359e8f976332249ddcfa38f0d596c737d
 Size (wistumbler2-2.0pre10.tar.gz) = 45972 bytes
 SHA1 (patch-aa) = 0b5c4409489d334f235373b67dcb3344f7839ea2
 SHA1 (patch-ab) = de998de5ac130b42c068ecefcd179644e3f8c0b9

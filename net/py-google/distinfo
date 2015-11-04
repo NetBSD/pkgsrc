@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2005/02/24 12:14:02 agc Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 00:35:30 agc Exp $
 
 SHA1 (pygoogle-0.6.tar.gz) = d2a2959b53823ef50b70b0b3304656b584964541
 RMD160 (pygoogle-0.6.tar.gz) = 53c3ccea921a6f3845f6299784468f05c39eeb4d
+SHA512 (pygoogle-0.6.tar.gz) = de7674581311ae0e972cc4ca4736748289c2cde6492f16df87b139d555467a64cd97c9d35432673177d61bab4c111b23d644312804bb49d73557a42d00c3b7fb
 Size (pygoogle-0.6.tar.gz) = 61276 bytes

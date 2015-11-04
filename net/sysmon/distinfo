@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/03/10 23:37:48 pettai Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 00:35:39 agc Exp $
 
 SHA1 (sysmon-0.92.2.tar.gz) = 6853adcc359e5132893fc347723e58829ae7132a
 RMD160 (sysmon-0.92.2.tar.gz) = 7408bfa9a20482e2f0e86dee2566b175b8ecad59
+SHA512 (sysmon-0.92.2.tar.gz) = ca8fb5bbc8bf7bf02b7fcfb8b9f775ab6aed32032dba10dc14f89aed3d397d1d560a959a0322f6a6302dc5e9f2ffbfb021019776dae5403794169af578a9cbb1
 Size (sysmon-0.92.2.tar.gz) = 495714 bytes
 SHA1 (patch-aa) = ec5ac4a213cdcd1a79f87c7a89b6c687a3b19b56

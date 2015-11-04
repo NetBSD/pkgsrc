@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2009/05/20 01:23:53 wiz Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 00:35:02 agc Exp $
 
 SHA1 (gnome-nettool-2.26.2.tar.bz2) = dcb026f358a5797793391e5a90ae74c8401a8fec
 RMD160 (gnome-nettool-2.26.2.tar.bz2) = 20b2145d8d616fbbac0c6081a0d508439a9b31f7
+SHA512 (gnome-nettool-2.26.2.tar.bz2) = ec3165a4c4365feaff84d937474528135dc10fce5272214c3aa6508bfc53df04fb79ac30308983ff65533f52057167baaf02042c5595c39245bac5c73f57c9d1
 Size (gnome-nettool-2.26.2.tar.bz2) = 631631 bytes

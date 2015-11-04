@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.22 2014/03/01 22:29:20 richard Exp $
+$NetBSD: distinfo,v 1.23 2015/11/04 00:34:54 agc Exp $
 
 SHA1 (bug-buddy-2.30.0.tar.bz2) = 8e4c3b783ffb51e459598da33007741d6cefaa64
 RMD160 (bug-buddy-2.30.0.tar.bz2) = 4ff2a458167ad0f999a5636281d5df76802e0bd8
+SHA512 (bug-buddy-2.30.0.tar.bz2) = 6c2fc7d4b934b932d8418a6c863f250a89225a4f45919f9d31394f78077908ecd64b37fd57fc92fb3ce15567946a5d7c73cc9073d1db304abe6e87a250eba268
 Size (bug-buddy-2.30.0.tar.bz2) = 1192441 bytes
 SHA1 (patch-aa) = e109a31886c44e05f409dc5a1e9d412940beb48a
 SHA1 (patch-gnome-breakpad_gnome-breakpad.cc) = 733286adba9ce14916015fe41cf077e3483a8f29

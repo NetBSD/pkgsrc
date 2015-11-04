@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2014/09/23 14:50:03 jperkin Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 00:34:54 agc Exp $
 
 SHA1 (bounce-0.0.tar.gz) = 3b0a7306ba80b29f70131e914f344ce67b4691e4
 RMD160 (bounce-0.0.tar.gz) = 6d3151fdafa5751cf7c1be16d149af8fce1d148c
+SHA512 (bounce-0.0.tar.gz) = 9898612f3dc8028d035f58944140ed4a83d04c321562a69859740969bce2d8eb65b28d6ecc7c9e21514742672be86f6cb79dabcae0c2ce5fa1ceed0003281fad
 Size (bounce-0.0.tar.gz) = 3439 bytes
 SHA1 (patch-aa) = 89469c2b8608796006a817dcbb5e5b3bf21007ef
 SHA1 (patch-ab) = 199f3c84c5389a97b4e18f81d1c771717a0ffdd2

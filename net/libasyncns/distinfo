@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/08/25 12:18:09 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 00:35:08 agc Exp $
 
 SHA1 (libasyncns-0.7.tar.gz) = 6b67944c3623e23d08e58a7e6eec8eaf08e5395b
 RMD160 (libasyncns-0.7.tar.gz) = caa0cc61bdd1ba6a9294fe4f1043009a0addacee
+SHA512 (libasyncns-0.7.tar.gz) = d103bcf5294492220470e31ba03c20ad2fa6a701da04039647644965dace434476f6c748bdc0cc8de6efb7c1a987d54c7dbe85a133b8d5979f28a82708d0d586
 Size (libasyncns-0.7.tar.gz) = 374866 bytes

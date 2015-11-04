@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.13 2007/08/08 21:37:20 joerg Exp $
+$NetBSD: distinfo,v 1.14 2015/11/04 00:35:17 agc Exp $
 
 SHA1 (openh323-v1_15_2-src-tar.gz) = e5839bc7b8ad6f26b03794672802530d72c73878
 RMD160 (openh323-v1_15_2-src-tar.gz) = a048af6d27b79384fd6d0f111bc69da3260d1af8
+SHA512 (openh323-v1_15_2-src-tar.gz) = 5920969400a93fbaffd31f8462a533fdd97adc84131a4534abeda8e7622d3e9e32ee6b74041d41637db4869b19b79df1bd1bd0a7dc2301a49f7cf1772ceb07e9
 Size (openh323-v1_15_2-src-tar.gz) = 3735815 bytes
 SHA1 (patch-aa) = 212a661357da355cc6c600b3de9d431bbd90a66e
 SHA1 (patch-ab) = b4599fd637086a8cb3327483ad1b12d97f6bb303

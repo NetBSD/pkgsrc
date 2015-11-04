@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.25 2015/07/08 16:46:43 richard Exp $
+$NetBSD: distinfo,v 1.26 2015/11/04 00:35:00 agc Exp $
 
 SHA1 (FileZilla_3.12.0_src.tar.bz2) = a0d3be9c19e15a14473f3103063dbf7eb1b8ed77
 RMD160 (FileZilla_3.12.0_src.tar.bz2) = dd6f80326b1d2d77d9e25e5bb64647576d3ba9a6
+SHA512 (FileZilla_3.12.0_src.tar.bz2) = 2f137ded716901673249aea8f2603322dd5210289743db20a10d2e6dd3c1dce87357c9589cf2855cb280963f481ca4b1b715e6892abb7da20e9cc70d9a558167
 Size (FileZilla_3.12.0_src.tar.bz2) = 4438133 bytes
 SHA1 (patch-src_engine_ControlSocket.cpp) = efb71dde8ad35c8a7424ac6f0383c79950f6e495
 SHA1 (patch-src_engine_socket.cpp) = 5abbd66d0cb93fc2cf3293bcd91e413934bffe74

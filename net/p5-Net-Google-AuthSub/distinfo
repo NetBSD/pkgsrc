@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/10/19 12:03:46 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 00:35:21 agc Exp $
 
 SHA1 (Net-Google-AuthSub-0.5.tar.gz) = a09dac18f6d62006923e75199a8aa945f080e05a
 RMD160 (Net-Google-AuthSub-0.5.tar.gz) = c3e261b27d83c29664a46b433258b1face491a03
+SHA512 (Net-Google-AuthSub-0.5.tar.gz) = 3a9fcae4dd58574dbe14f14704969fbb366c338eae9b5099c9cac7c67be4c054b482c13310e7a9ef0bed5cd52745b2bb0de1985854f61005adfe5c3e7d9e65cf
 Size (Net-Google-AuthSub-0.5.tar.gz) = 5952 bytes

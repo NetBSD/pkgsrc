@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.13 2013/01/11 00:02:13 joerg Exp $
+$NetBSD: distinfo,v 1.14 2015/11/04 00:35:37 agc Exp $
 
 SHA1 (sniffit.0.3.5.tar.gz) = df9183fca2eec29a56bcfdc68a983c4e7d57bf9d
 RMD160 (sniffit.0.3.5.tar.gz) = 9508f357c6fe74a9147a735fd0eb419b9a1124eb
+SHA512 (sniffit.0.3.5.tar.gz) = e163323a5c2c727258e091f20835a312affcf970cdb31c81500ea98f77de9cb5c639157895e2abf2cd5072e092455bd925a7037be6570a7c1f487d2bd867de2b
 Size (sniffit.0.3.5.tar.gz) = 197255 bytes
 SHA1 (patch-ab) = 146c4d57cb94aa66c9fee9075e141e8b1c4c6b32
 SHA1 (patch-ac) = 05ab42b3499edd550de6f1bb667adce34e26a503

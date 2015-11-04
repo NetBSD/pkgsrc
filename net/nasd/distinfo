@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2013/09/17 21:14:37 joerg Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 00:35:14 agc Exp $
 
 SHA1 (repackaged-nasd-1.3.tar.gz) = 8ea5d523cab58bcc6c90ff2b5c1c04c4ff8f3949
 RMD160 (repackaged-nasd-1.3.tar.gz) = a9aaee4722af1e7f1eefe9402c840308a4f95774
+SHA512 (repackaged-nasd-1.3.tar.gz) = fbb2d603524cb51e67773c64f00625bfde0d3fd6374e3fb1eeecfa82f55435d5a3d460539fb1020f881afe4232dbe31da5db17422cd78380974d8f9cee48d88c
 Size (repackaged-nasd-1.3.tar.gz) = 1441892 bytes
 SHA1 (patch-aa) = 7da68bff24a20dcfbf0c52794705e0195a7ceb15
 SHA1 (patch-ab) = a564bdd20bb2e7d9944287944e2c758645664357

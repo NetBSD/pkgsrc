@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.9 2015/07/09 12:07:38 jperkin Exp $
+$NetBSD: distinfo,v 1.10 2015/11/04 00:35:09 agc Exp $
 
 SHA1 (libradius-linux-20040827.tar.gz) = 27abd1390d16befe290ded70579bfdda8fabe68f
 RMD160 (libradius-linux-20040827.tar.gz) = 040fb6e3919402c21ffc4dcdb6c7ae2137030489
+SHA512 (libradius-linux-20040827.tar.gz) = bd8e239b7ae77fd5c294315e86fe14c80f49507351166c2f73e032793e21f738dd572aa6c7adc94c07f676f8f933635b1d229d60b155617e0169f44364eba983
 Size (libradius-linux-20040827.tar.gz) = 15791 bytes
 SHA1 (patch-aa) = fca7056778bb85b4171eeb817fb835cc0f466994
 SHA1 (patch-md5.h) = b4dfdfba7698343209a5272f824e865bf2b31586

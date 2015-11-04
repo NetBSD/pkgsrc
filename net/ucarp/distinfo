@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2013/12/10 17:56:23 jperkin Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 00:35:42 agc Exp $
 
 SHA1 (ucarp-1.5.2.tar.bz2) = 0326fa7460eacd23b59216878524487265051cba
 RMD160 (ucarp-1.5.2.tar.bz2) = 83f54644abddf4b27f1b829c2a3a0fc98861027b
+SHA512 (ucarp-1.5.2.tar.bz2) = e2e9753225eef28f4c95c6efac9ee384a97576a41ed486b79f16294c6bd828539d264559ee6d92fc1f1431c6a690f31804a1bf3f0fa656f13b096c1e95058984
 Size (ucarp-1.5.2.tar.bz2) = 315414 bytes
 SHA1 (patch-aa) = ef0d7b65f6a964607a695c7a33891d45fd116569
 SHA1 (patch-src_fillmac.c) = c8d862d5e222aae283f1311735dff1f7be32f4af

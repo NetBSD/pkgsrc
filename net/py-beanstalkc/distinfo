@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/06/08 22:55:51 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 00:35:29 agc Exp $
 
 SHA1 (beanstalkc-0.4.0.tar.gz) = d99866e2b2617ad18a27df6417f7717e326738e0
 RMD160 (beanstalkc-0.4.0.tar.gz) = 47ff6bcc3597206547599c95d194143102f089ea
+SHA512 (beanstalkc-0.4.0.tar.gz) = 30485aed4036549c524982bbabe5a27af5fe6f0547175622019b4469fc1fef32d013cbef5e38a1928ab92a3acf6aba9bc7607c3e8e9f2f3c6f65631d39471a7b
 Size (beanstalkc-0.4.0.tar.gz) = 13921 bytes

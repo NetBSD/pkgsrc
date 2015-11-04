@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2010/04/17 12:46:18 obache Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 00:35:29 agc Exp $
 
 SHA1 (adns-python-1.2.1.tar.gz) = 3901d5081744ba528ed5933442fe4cf516e86084
 RMD160 (adns-python-1.2.1.tar.gz) = 772d0b71b81ecc8af204c0c9a7b3af02a228c3a8
+SHA512 (adns-python-1.2.1.tar.gz) = 00770a3eeb27acf7cdeeac9c76acc2cea30cd0f2620b98f3d2976cacbaf3103376cce1ce7a868114caa06caecd8a4fdbf29bdf1ef60f7b43294b41738e02a736
 Size (adns-python-1.2.1.tar.gz) = 18252 bytes

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2012/11/01 19:39:31 joerg Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 00:35:18 agc Exp $
 
 SHA1 (vmpsd-1.3.tar.gz) = 39a8f925191690f209d9f1609321f20360810cf1
 RMD160 (vmpsd-1.3.tar.gz) = 1185fbd654d5d0e939fdfa08149d1ebcb3fc0ef2
+SHA512 (vmpsd-1.3.tar.gz) = e7760f90741acddf6b010918a88c489929a028d9bb0c7bd42fd8b9eac32f3665958617163f2f5ff9d60eee3f36f5326858cd5f009503e4b22c6e50ad4f847651
 Size (vmpsd-1.3.tar.gz) = 95202 bytes
 SHA1 (patch-aa) = 03618ae72addfe881745a0bb94f7943b8c4cb749
 SHA1 (patch-ab) = a30282863432d654669643103de3711da6d53620

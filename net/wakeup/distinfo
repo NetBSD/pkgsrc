@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2005/02/24 12:14:06 agc Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 00:35:44 agc Exp $
 
 SHA1 (hpwake.c.gz) = 9df23297ac93cf48aed2929990b80bff0143675a
 RMD160 (hpwake.c.gz) = 174bfe5290d38c76507338ae0653384badf86dd8
+SHA512 (hpwake.c.gz) = f3e373e7cc395591b24eb428c9fb037112ce653dee18212f23fe85e10c474f9f8dbbb59dcd0edfaa9bbec1328b54ad56e28ff15035645e34939de1ebfc6834f7
 Size (hpwake.c.gz) = 1193 bytes
 SHA1 (patch-aa) = 74a88fa25b4deee4449e61ab11a06e5db0e3a8f0

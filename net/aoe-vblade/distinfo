@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2011/01/01 12:42:28 obache Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 00:34:52 agc Exp $
 
 SHA1 (vblade-14.tgz) = 57bea505f3acb88f03f761954eea0759a0241e3f
 RMD160 (vblade-14.tgz) = ad0fe6f0c4ab40fa31daa68c7b14143ad87f443c
+SHA512 (vblade-14.tgz) = 17eeff15c8ffb6fbf47298a26e5a33e518b92eb05867a610e9361631d12e487a9f98c5c539c2c893fc3a1744698236d7d361c6f72eeffe3ba3525c30f74fb633
 Size (vblade-14.tgz) = 20317 bytes
 SHA1 (patch-aa) = fe40105ed835cb54a23edb4861024f1d16ef1116
 SHA1 (patch-ab) = b7ab4ac144f885d9198d1efacd2089c7f4dcfb33

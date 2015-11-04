@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.9 2013/01/17 16:00:56 joerg Exp $
+$NetBSD: distinfo,v 1.10 2015/11/04 00:35:07 agc Exp $
 
 SHA1 (kiax-0.8.51-src.tar.gz) = 5a67df17d478f4f1f5d802e126e6c38fb0834a6b
 RMD160 (kiax-0.8.51-src.tar.gz) = 8019d742867d0af339210363c42f1c46df422dd2
+SHA512 (kiax-0.8.51-src.tar.gz) = 21541fadb9e5b307a8cefdc42b7ce191f422adecc3b5ab8bce6141e4ec79a766d6b937de4069054ee4cbda15b9b7b2d7f63c19704ba1338b1d1064103af997ce
 Size (kiax-0.8.51-src.tar.gz) = 1493268 bytes
 SHA1 (patch-aa) = c310aa4a3edb242fa84f7e4c65ef5bd83885974d
 SHA1 (patch-ab) = 0c0ef51b9f4b0e26e354b15568359022a5cf7db0

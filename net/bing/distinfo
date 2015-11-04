@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2008/06/20 01:09:29 joerg Exp $
+$NetBSD: distinfo,v 1.9 2015/11/04 00:34:54 agc Exp $
 
 SHA1 (bing-1.0.4.tar.gz) = 21954516f4b72895ad7be96d320581510a186b33
 RMD160 (bing-1.0.4.tar.gz) = e434ea8705677234ac289ff9f2a72cdffbb89aa6
+SHA512 (bing-1.0.4.tar.gz) = 48c7650aa56e065426bdbc28a4eca18466bdc5a409ba98d57ec1070a4e05dd1f01f3a3db9a09a5921f8130b4513be81251bc5c5d9c2c15448718aae8d51630e8
 Size (bing-1.0.4.tar.gz) = 27069 bytes
 SHA1 (patch-aa) = 08b3da9d7b753eec7b5c33c1ed474a0d06684da8
 SHA1 (patch-ab) = e6b5b12e03e2c7d99330a3b86e5a8626707e31af

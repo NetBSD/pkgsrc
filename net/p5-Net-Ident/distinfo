@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/02/26 14:32:27 mef Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 00:35:22 agc Exp $
 
 SHA1 (Net-Ident-1.24.tar.gz) = ed9235ef35530f1768eee81875e12ee8a637f68e
 RMD160 (Net-Ident-1.24.tar.gz) = e62465be148b9fd288bf92259471a88da49c9c43
+SHA512 (Net-Ident-1.24.tar.gz) = 877a2699964323b009dbdbab134bb329acf71758e48165f4d19bb8e49d0c02786f58ab32bb1bc2ff6c4d375d4b64128207cbbf3c858a6db2e30bd2733474d740
 Size (Net-Ident-1.24.tar.gz) = 26691 bytes

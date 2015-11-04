@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.2 2015/09/14 13:33:21 joerg Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 00:35:09 agc Exp $
 
 SHA1 (librsync-1.0.1-f32ed26d02b4d59aa0db215fb58c7a2536d19cb9.tar.gz) = 72ba18f73df99ca77335d0952bad3e0ca8f53e34
 RMD160 (librsync-1.0.1-f32ed26d02b4d59aa0db215fb58c7a2536d19cb9.tar.gz) = d027e202518252fd64ec11a0a21122ded262718a
+SHA512 (librsync-1.0.1-f32ed26d02b4d59aa0db215fb58c7a2536d19cb9.tar.gz) = ff07d4472f7aadbfa59161c946c36bffc51a2fd605c4b1e06ccc895e35d3ecd283bdd1044eb9340e3a0d3035fae3bdada1ba0c6c56b56c983ee55a950dc5de79
 Size (librsync-1.0.1-f32ed26d02b4d59aa0db215fb58c7a2536d19cb9.tar.gz) = 140956 bytes
 SHA1 (patch-Makefile.am) = 196443871ed3795e62267e0a5399010d1031a584
 SHA1 (patch-delta.c) = e0025f414fe4b5b32dea17be033f7e2c1978f3f1
