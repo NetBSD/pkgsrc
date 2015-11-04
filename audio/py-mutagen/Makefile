@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2015/01/06 19:52:40 drochner Exp $
+# $NetBSD: Makefile,v 1.17 2015/11/04 09:53:40 wiz Exp $
 
-DISTNAME=	mutagen-1.27
+DISTNAME=	mutagen-1.31
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	audio
 MASTER_SITES=	https://bitbucket.org/lazka/mutagen/downloads/
