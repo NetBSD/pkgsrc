@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/11/04 17:25:19 adam Exp $
+
+SHA1 (python-lhafile-a7341c16a2028bce547b6c06df8d455af29fcab6.zip) = 0ce3e8bbc3d993ebde273872138f6f447a78b5ee
+RMD160 (python-lhafile-a7341c16a2028bce547b6c06df8d455af29fcab6.zip) = 39ccb9cb5c11b50825f864962ac91633261fac42
+SHA512 (python-lhafile-a7341c16a2028bce547b6c06df8d455af29fcab6.zip) = 434826981e08bc4d9939e5f2ee1fa3b65adef1932a05024d8d8d2dbf281a0ca31466e057a04dcb0f89f8151d6ae49f69fb03953cd7a3ccc8ce765094c23d162a
+Size (python-lhafile-a7341c16a2028bce547b6c06df8d455af29fcab6.zip) = 274104 bytes
