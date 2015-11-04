@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.8 2014/05/09 15:28:53 sborrill Exp $
+$NetBSD: distinfo,v 1.9 2015/11/04 00:35:00 agc Exp $
 
 SHA1 (fping-3.10.tar.gz) = d8a1fa3ec13289d67d70102c1ef16c461a7eb505
 RMD160 (fping-3.10.tar.gz) = ca957b5f629b6e32ab5592644a4fa75d7f737e07
+SHA512 (fping-3.10.tar.gz) = 64bf93c7dbfa2b8adc3344514b2e6e182f1e5950da08b042b8d4d5e4c94b2b8bdc3aaba804339d0461dd88e0efbdfc0bd914a10d22810da8138c9c45335f7047
 Size (fping-3.10.tar.gz) = 157010 bytes
 SHA1 (patch-aa) = 7a5c2a99abd08797b8567ff23bfe6764ba585cbf

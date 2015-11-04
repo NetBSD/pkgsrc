@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.1 2013/11/22 12:01:13 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 00:35:17 agc Exp $
 
 SHA1 (ocsync-0.90.4.tar.bz2) = d53a64177addc9fcdd831a0a78786eca25b2588a
 RMD160 (ocsync-0.90.4.tar.bz2) = b6208a9c0ae452f16f0ced32c1b5635df06d3b99
+SHA512 (ocsync-0.90.4.tar.bz2) = 74bf6b083ae4d4c09e3915d777d916a04ebb19aefb21a5a14a49e2079e02c5c60f1f274aa0cab5c227147883eaf1a5f91b6c0546b818c960cc3575cdcdd93d57
 Size (ocsync-0.90.4.tar.bz2) = 4630698 bytes
 SHA1 (patch-cmake_Modules_DefineInstallationPaths.cmake) = 785dbb9f7c7f7fb6218470985818145f87f0688c
 SHA1 (patch-config_CMakeLists.txt) = b387f38a79d9f85e3f67060a2cb689bb13dd1c28

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2006/06/01 22:20:16 joerg Exp $
+$NetBSD: distinfo,v 1.9 2015/11/04 00:35:17 agc Exp $
 
 SHA1 (oidentd-2.0.7.tar.gz) = c973b436e6f8cab87b5e2f557e901722e27f1e79
 RMD160 (oidentd-2.0.7.tar.gz) = 91c2d24f8a1b37bd6feffd4243b0311f76e7aff3
+SHA512 (oidentd-2.0.7.tar.gz) = 67b7a1cf53059f9d3bc4151c227b9c6a7f06a227dcf4cb54d2aaa86419734a9e3c56146deb6ae345ee3af152bfb80c193a7ee09bee347a71bc48c842797a565f
 Size (oidentd-2.0.7.tar.gz) = 196027 bytes
 SHA1 (patch-aa) = b5c82f425fc9f5174dd4efb4c4d13bdf78486beb
 SHA1 (patch-ab) = 264178c5cc79c744354ab228678cb41bdc27b198

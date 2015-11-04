@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2013/05/23 14:58:09 joerg Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 00:35:18 agc Exp $
 
 SHA1 (openwbem-3.2.2.tar.gz) = 3272e5cbcfb2a864cccf71e15e0da0f6623420bb
 RMD160 (openwbem-3.2.2.tar.gz) = 31ce8c80d47ff7539315e3978b8c1c493bd17f35
+SHA512 (openwbem-3.2.2.tar.gz) = 277d6929b96115171b671be31039fc52997b5eb68ddf0e5dd57cf8e41f42a1292a455e0e5c2ef46d39736caa9b5e0e3bddc9239f21c8d44b3fad77e8447e300e
 Size (openwbem-3.2.2.tar.gz) = 2919455 bytes
 SHA1 (patch-aa) = 33cd8d21ed698b511fc662686a7bf7abbf85c232
 SHA1 (patch-ab) = c83f632376f12d7378b1f013a0db5d4ae63f15bf

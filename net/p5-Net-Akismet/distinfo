@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/11/24 06:00:32 seb Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 00:35:19 agc Exp $
 
 SHA1 (Net-Akismet-0.05.tar.gz) = cae75cb182b611e044bfb101087bddd2ef130b87
 RMD160 (Net-Akismet-0.05.tar.gz) = 01d10bf85560b1332d01d00309e4e88ce82b4e27
+SHA512 (Net-Akismet-0.05.tar.gz) = 8ee24a299f6fbe555002e247de0f8a5bb94020c4344ffdc7ca7affdbc1f16ceece74dddbb258708a9081affbd5e494048c8ac9c0ab6e33079a4676a69a259119
 Size (Net-Akismet-0.05.tar.gz) = 4543 bytes

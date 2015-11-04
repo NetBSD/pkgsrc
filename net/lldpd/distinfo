@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.11 2015/05/23 08:24:07 mef Exp $
+$NetBSD: distinfo,v 1.12 2015/11/04 00:35:10 agc Exp $
 
 SHA1 (lldpd-0.7.15.tar.gz) = 59044b44e449610b150fe5f82688e3685fe06b58
 RMD160 (lldpd-0.7.15.tar.gz) = 8a099b3da799e3b4d06c2bea032dc974bf417400
+SHA512 (lldpd-0.7.15.tar.gz) = cd1a897c364aed953ed737827018accfb7d6cfba32606e3843d52a81a85694fa947cbe5385b5c703ba6a80edc620a402d419ecba196bbae24beef28b2c943016
 Size (lldpd-0.7.15.tar.gz) = 1529127 bytes

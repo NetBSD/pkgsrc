@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 12:14:04 agc Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 00:35:37 agc Exp $
 
 SHA1 (sitescooper-2.2.8.tar.gz) = fe2c915a22a2398f0d2e98089b68e8cc67ef77fa
 RMD160 (sitescooper-2.2.8.tar.gz) = b394a171d1e33f99cc18175f6c38eaf4a9b6d5a2
+SHA512 (sitescooper-2.2.8.tar.gz) = 8d4699fd8ed491f8676de68123248082df27f059606c86c81de55f7f71f2d940ee9a4c2d6883e6347b287ce995c07d7c8e743fe0031fb1b395e5999a4f669b20
 Size (sitescooper-2.2.8.tar.gz) = 174821 bytes

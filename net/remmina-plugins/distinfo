@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/03/15 17:27:13 asau Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 00:35:34 agc Exp $
 
 SHA1 (remmina-plugins-0.9.2.tar.gz) = be51a08b127496f6c81a319ee6ae4fa64d81b2e0
 RMD160 (remmina-plugins-0.9.2.tar.gz) = 70cb47ed8ef59ea5835973f9b7920bd579973420
+SHA512 (remmina-plugins-0.9.2.tar.gz) = f635145339f8afa16a17043b0320da30036c6a1bcff5aa5a8a30c2c74eb8bd42f9375754d754f16e6543f5f4e577e0a3753d0d7f9e3c83c0e31f4d835d872c23
 Size (remmina-plugins-0.9.2.tar.gz) = 542221 bytes

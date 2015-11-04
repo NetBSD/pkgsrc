@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2008/06/22 16:24:29 he Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 00:35:21 agc Exp $
 
 SHA1 (Net-Google-1.0.tar.gz) = 8091e327432f3f0b4d8c761623512ac71e2cf43d
 RMD160 (Net-Google-1.0.tar.gz) = 9db76f715c9763dc487c120b2abae1460bcb502d
+SHA512 (Net-Google-1.0.tar.gz) = 2530c0bb34d4429cef9671dd45cd9573a18cd8e5145202785a8466af2f90bf7fdef413234829e4225fe29c2ef577cd2333cc0c6dd3df00069db365c4d3918f05
 Size (Net-Google-1.0.tar.gz) = 16390 bytes

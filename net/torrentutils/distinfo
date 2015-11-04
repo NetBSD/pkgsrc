@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2011/03/27 23:05:22 wiz Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 00:35:41 agc Exp $
 
 SHA1 (torrentutils-0.3.0.tar.gz) = d9487551e5de128c31abe7fc404ec3a51d6a83a0
 RMD160 (torrentutils-0.3.0.tar.gz) = bc6dde481113a0a37a1a60fd520c6c28debea34e
+SHA512 (torrentutils-0.3.0.tar.gz) = 479b1e2e865d65067c500760bdbd8bcf91234e418170a17c953480108c09eb79ce1f2e97468f73d8a5b6bc4aeffa1326d843c8c6067bf934d7f30721b1b078ed
 Size (torrentutils-0.3.0.tar.gz) = 21697 bytes
 SHA1 (patch-aa) = 23cbe86a3cb3fa7da1a97055ae05f3d2ab556fea
 SHA1 (patch-ab) = 90510de9ea0e19b99e12fec1c17e811fd2bcd3b0

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.8 2014/05/06 14:54:51 jperkin Exp $
+$NetBSD: distinfo,v 1.9 2015/11/04 00:34:53 agc Exp $
 
 SHA1 (autonet-0.22.tbz) = 5ec1271d43d3f276c6dabcaaad088e388de11ea2
 RMD160 (autonet-0.22.tbz) = 461522c3f44b2944186708417720ee3e180be7c1
+SHA512 (autonet-0.22.tbz) = 34508c65a6d32a51cb47c358e86647f0295cf085220b31da8ce49f6280c3b6aee695cadd582af76c0d584d93f36d2dbabc180bf555704287abd841c3f0068557
 Size (autonet-0.22.tbz) = 5821 bytes
 SHA1 (patch-aa) = 2e704ea83939e70434540bc041a80fdb9731bde7

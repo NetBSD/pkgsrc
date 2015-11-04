@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2010/05/28 10:07:42 martti Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 00:35:24 agc Exp $
 
 SHA1 (POE-Component-SNMP-1.1006.tar.gz) = e55a37fcb34637a64e65bec08ccef5ba61fb2ed3
 RMD160 (POE-Component-SNMP-1.1006.tar.gz) = 6d4f9babb42f62f0b60c1bee8d9aa8a116817e60
+SHA512 (POE-Component-SNMP-1.1006.tar.gz) = d66f516421bb9d6fa34c85c393878fb43816229a738a82f316ed57952ebf9c678b0ef96abfc236b6dc6eec29fc83b9fbbfaddb5659e4b039fa6be02b7d6aee36
 Size (POE-Component-SNMP-1.1006.tar.gz) = 37375 bytes
 SHA1 (patch-aa) = 34f76011fc5c5bc89afcef4ac5a82568301f85f2

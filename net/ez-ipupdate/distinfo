@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.2 2008/09/07 12:01:16 ghen Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 00:34:59 agc Exp $
 
 SHA1 (ez-ipupdate-3.0.11b7.tar.gz) = a2754a5e1ff4b252ee7e3878f5c89d4a9bf7a084
 RMD160 (ez-ipupdate-3.0.11b7.tar.gz) = fdb0c0cec776690cd57b12d18d3733a1b61ad72a
+SHA512 (ez-ipupdate-3.0.11b7.tar.gz) = 1dc56508b8df2c1087121a8852c8f6458cf911433609f8aa55f59ed9749b172d32f19490bba6df5f239075543c213c065eb9d18b673694310a1da15c0b5c5e82
 Size (ez-ipupdate-3.0.11b7.tar.gz) = 82481 bytes
 SHA1 (patch-aa) = 4eba2e43f9dcd2da1f927a5cc09048d7025ad8a4
 SHA1 (patch-ab) = e98e7d4af30866f86382da03fd5e70e5f0f16362

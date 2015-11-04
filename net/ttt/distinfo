@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.11 2013/10/20 18:00:57 joerg Exp $
+$NetBSD: distinfo,v 1.12 2015/11/04 00:35:41 agc Exp $
 
 SHA1 (ttt-1.8.2.tar.gz) = 8b52a1e90de17202c22f062f44025b7ae0e21454
 RMD160 (ttt-1.8.2.tar.gz) = 8f1877904087d9260e61e76f869196111de585c0
+SHA512 (ttt-1.8.2.tar.gz) = 11e20d60a954a11b2763fc5fc1a960f9398df3577e8223f531046b89790f94487c4a6bdd81eb4bd4db74fc9b51be6ebdb06cd77d842822f6a1a481f00cc6a90d
 Size (ttt-1.8.2.tar.gz) = 138877 bytes
 SHA1 (patch-aa) = 730f0b67cd4407b7996e515b82caf1eb8033eb14
 SHA1 (patch-ab) = 4ced63fabf7c4d7360fc3f1a249fb08256b1a745

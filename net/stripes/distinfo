@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 12:14:04 agc Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 00:35:38 agc Exp $
 
 SHA1 (stripes-2.1.tar.gz) = 1910d40e975b98b2e815cf7a1c228777c5a0b816
 RMD160 (stripes-2.1.tar.gz) = a5221cbf8eb0e5d231662a8d0f475d9fe0773b5c
+SHA512 (stripes-2.1.tar.gz) = 15be2238b01c3aa87cb99142c4a7a6837d61ca58193c27905386ec7d7203a10366f69244ebf1c4be41456999bb3d4ef8a37836f73f138a607e63a5220e98ea75
 Size (stripes-2.1.tar.gz) = 6227 bytes

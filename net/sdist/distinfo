@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2013/03/14 15:49:10 kim Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 00:35:36 agc Exp $
 
 SHA1 (sdist-1.9.tar.gz) = ccbbffc7debac08be5164603df5645ad01859156
 RMD160 (sdist-1.9.tar.gz) = 8491ed4f23a750a80372779f5903ac038e50659c
+SHA512 (sdist-1.9.tar.gz) = d1812d887f00958e588017b3f4041a353002f875d83f1283f4aae1979975f687b71d86ab2a47ea85167648f94db7b7c2461669373baf8abb67922bc2f8b52716
 Size (sdist-1.9.tar.gz) = 5947 bytes
 SHA1 (patch-aa) = 03b8ce66b8930ee04487754bdb822790896b9998

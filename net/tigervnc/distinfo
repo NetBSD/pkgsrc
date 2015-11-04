@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.3 2015/07/21 21:51:39 markd Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 00:35:40 agc Exp $
 
 SHA1 (tigervnc-1.5.0.tar.gz) = e03e618c06153b83d1fec756cd817885c371cd0b
 RMD160 (tigervnc-1.5.0.tar.gz) = 57240c4a5db8c0d013dbc12322e48901f5750d90
+SHA512 (tigervnc-1.5.0.tar.gz) = 6db7268552d9b7784acb14a2e37b9a1f1a710cc3e55fb4c385dd47ef8767adce6ce032c42c56cbc6180fe444d272e851763db0eb1b0ebd6732132208ef6274f2
 Size (tigervnc-1.5.0.tar.gz) = 1268682 bytes
 SHA1 (xorg-server-1.17.2.tar.bz2) = 56ac29a82b99bcf4c7ba2fca41a44cfa18748262
 RMD160 (xorg-server-1.17.2.tar.bz2) = bf575a269f1e7b729992a20989be84e09fcc88a2
+SHA512 (xorg-server-1.17.2.tar.bz2) = 7e7b7620890cc8db696695758fa22fa879f9d3c33946663611ec0b37f02116e9c6f08779f9eece59907b430d3df93f0c0548939683ea156b3c4cbe02571b7551
 Size (xorg-server-1.17.2.tar.bz2) = 5767983 bytes
 SHA1 (patch-CMakeLists.txt) = 8528782142ef7bc95151f8a130bc8626ad9ee93c
 SHA1 (patch-common_CMakeLists.txt) = d879e36df9db9978adaa5545758f43097d40f10a

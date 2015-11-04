@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2015/06/03 22:52:24 prlw1 Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 00:35:01 agc Exp $
 
 SHA1 (get_iplayer-2.94.tar.gz) = 1082ffb213bf16bfdaa95731f48272b2a7adc4fd
 RMD160 (get_iplayer-2.94.tar.gz) = 70b67bdc2850e914c0606030b6cb2f09a41b0332
+SHA512 (get_iplayer-2.94.tar.gz) = 2e91631fa8d8ef384f454a4812f35a4f8af749feba5373d6203d769d85212f09a8c69b076d245dad00739739b8cf7bdf9a3b401a42295365f9fc7494458be906
 Size (get_iplayer-2.94.tar.gz) = 276644 bytes
 SHA1 (patch-aa) = e15a98daae71135936329d29766a3b70dc845326
 SHA1 (patch-windows_get_iplayer_setup.cgi) = 1f87f0bb74c5883e875cb7676dfd61461dc2cbd0

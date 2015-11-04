@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2013/10/19 13:56:50 wen Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 00:35:18 agc Exp $
 
 SHA1 (Data-Stream-Bulk-0.11.tar.gz) = 11f234a2d385360b6da4f3b4669f790a003962f8
 RMD160 (Data-Stream-Bulk-0.11.tar.gz) = 637ea2671bebc1c29e5ac84165be4deb5db98117
+SHA512 (Data-Stream-Bulk-0.11.tar.gz) = 7c14e3e1e8d6d805aa6cedd6caec3f8e09cf30c196abd3661b3f6f12871212a808ad938ae24d13e4c1d7114ead912debf0f859d34cc42e70ef5e748dcc9242d2
 Size (Data-Stream-Bulk-0.11.tar.gz) = 21692 bytes

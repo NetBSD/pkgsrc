@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2009/02/13 21:47:02 abs Exp $
+$NetBSD: distinfo,v 1.8 2015/11/04 00:35:12 agc Exp $
 
 SHA1 (mrstat-1.20.tbz) = c7fe20e97b1390cb6ca3f90dd4f2f2adde763541
 RMD160 (mrstat-1.20.tbz) = d22843811dda7d83864b0a5fb990ffa309772015
+SHA512 (mrstat-1.20.tbz) = b9afd6fc0ca57d437ef062a45b6c48dbb8fed7fc4be1c5b75e734cf5a301ea7aa3d4b5c02c5b34216cbfb316e4df6fb879e0f75c488fdc1dc9e69c53210bc93f
 Size (mrstat-1.20.tbz) = 5673 bytes

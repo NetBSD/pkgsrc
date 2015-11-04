@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2010/09/06 12:06:13 wiz Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 00:35:24 agc Exp $
 
 SHA1 (POE-Component-Client-Ident-1.16.tar.gz) = 10fdf2bc22ae8cdd8ec34c1fdeaddd1e3bccbc18
 RMD160 (POE-Component-Client-Ident-1.16.tar.gz) = 91ffb3def6a127754f1a0cb522982a6f4a372972
+SHA512 (POE-Component-Client-Ident-1.16.tar.gz) = b1c084f38b8352020b8c6e2a848f8297f6acff8f40e4c4950d76ec149c3ce95aab8fe29502a964601f4aecfa3dbbf8724a3ca8bf2dc90f62948b088ef9cb8e91
 Size (POE-Component-Client-Ident-1.16.tar.gz) = 30205 bytes

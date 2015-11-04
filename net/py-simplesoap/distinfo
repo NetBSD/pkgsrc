@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/04/22 00:07:52 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 00:35:32 agc Exp $
 
 SHA1 (PySimpleSOAP-1.10.zip) = f4225d4447090be09462056bf1ae2bffaf3e8f4b
 RMD160 (PySimpleSOAP-1.10.zip) = 33ebf1c0fb2500a9b8b4396bb4fd37efe3e3fe1e
+SHA512 (PySimpleSOAP-1.10.zip) = e048ee82509aee21c47c085d6ce6c79cebb9c75e99be1042007579393caa0986382a9eaef503ebfb751439a17ad86a722e13a9fd518c1ba9b7b587f276eef8c5
 Size (PySimpleSOAP-1.10.zip) = 29106 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/01/13 04:29:50 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 00:34:54 agc Exp $
 
 SHA1 (bwping-1.7.tar.gz) = c6feff02b5ccda3c5c22e9724b17f3acba7503cd
 RMD160 (bwping-1.7.tar.gz) = bab69a69a14f54f53c09e48634cb08497f7154b9
+SHA512 (bwping-1.7.tar.gz) = 74b695a80c2fa54693af1afab78417dc6ca35130bbd9367950681ddbbebe36b38166068532e8296f336c5cad8230339b4fb4fb975f4b066cdacba8a99179cac7
 Size (bwping-1.7.tar.gz) = 90441 bytes

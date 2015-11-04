@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/04/19 17:34:01 jakllsch Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 00:35:42 agc Exp $
 
 SHA1 (u6rd-1.7.1.tar.gz) = e48e195ce503d1b5bca4bb3c6e62731be7fd538b
 RMD160 (u6rd-1.7.1.tar.gz) = eee1295776e662d8b3aeabc4c6afd7cf55b74ab0
+SHA512 (u6rd-1.7.1.tar.gz) = cdee6369af13724c8ee9a22184b34601832b574ae99c4e564ec3ed6d049614864680b13e12013f46eacb57ede77aff4a920ebaa04415756f19a29319f4a75f70
 Size (u6rd-1.7.1.tar.gz) = 32833 bytes

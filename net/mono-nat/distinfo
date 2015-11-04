@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/07/16 07:52:40 kefren Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 00:35:12 agc Exp $
 
 SHA1 (mono-nat-1.0.2.tar.gz) = 8efa18c1948500f85e9ab6647caf7124435f737c
 RMD160 (mono-nat-1.0.2.tar.gz) = af2812d7946cb5daaef6a1dce39cca8f11a2cf28
+SHA512 (mono-nat-1.0.2.tar.gz) = bc85edc5efff648ffe8937a84b4888afaf834cd11ea4df82dae6f9a027f26bffdb35b9069d5dca9b53d2a94ccff7479496cf0ffddf54416fb0d2ce7aacb82a5f
 Size (mono-nat-1.0.2.tar.gz) = 75072 bytes

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.14 2015/09/13 21:55:15 leot Exp $
+$NetBSD: distinfo,v 1.15 2015/11/04 00:34:56 agc Exp $
 
 SHA1 (dante-1.4.1.tar.gz) = 17ded4322d78b7b031da23cd4e03dbb14f397d71
 RMD160 (dante-1.4.1.tar.gz) = b01a09375f45d226ffc564ca0d26e0285721fda3
+SHA512 (dante-1.4.1.tar.gz) = 1c8e2966ba68c8584fb99ff76ae1d9c8dfe669c7e5e61c7e6e7f87295d1280c3e7849491a6369ce27795040f951dcc11f4f2b3d7e46c54219594c89315d0487e
 Size (dante-1.4.1.tar.gz) = 1284288 bytes
 SHA1 (patch-aa) = a201b0ec844a2dd610cd4bfb5ffce2f37132fc77
 SHA1 (patch-ab) = baedbd12c4b77031e58167a0ecba2f286a504822

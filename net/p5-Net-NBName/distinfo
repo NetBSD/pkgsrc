@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/12/06 23:12:03 bouyer Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 00:35:22 agc Exp $
 
 SHA1 (Net-NBName-0.26.tar.gz) = 3e9fbbb816a87d478cf270c145c68c82d235f18c
 RMD160 (Net-NBName-0.26.tar.gz) = 6440567ac79c3a5c7dd8d44baf7a0feedc6797bc
+SHA512 (Net-NBName-0.26.tar.gz) = ff12f9265ff1dbdca5c592b6854dbad7eabf4ce9d68d054534924cc62759aff301e41b4892677b822c30735858542f76804b18ca1be62f8f8c7aaa1fc530a035
 Size (Net-NBName-0.26.tar.gz) = 9195 bytes

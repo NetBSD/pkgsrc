@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2015/09/28 17:37:04 ryoon Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 00:35:36 agc Exp $
 
 SHA1 (samba-4.3.0.tar.gz) = 0ad147d8570bf11715156c654942216b7ac77869
 RMD160 (samba-4.3.0.tar.gz) = ac416fa1bc45b8bc12ba9e567412aa7e0f003d6f
+SHA512 (samba-4.3.0.tar.gz) = 7edad171dd98a332ebfd51c7c380b1def3d1508399755fc2d333671ce4a7d5e73782871c5760341cb71460d3f7fc4b666d906d61b9e2b28f977301d08bc9a872
 Size (samba-4.3.0.tar.gz) = 20417699 bytes
 SHA1 (patch-buildtools_wafsamba_wscript) = 5604936a825675647157331df2333f4237c611f5
 SHA1 (patch-lib_nss__wrapper_nss__wrapper.c) = c692fa33ec17ed4f1dc1e40c1fadf7846d976824

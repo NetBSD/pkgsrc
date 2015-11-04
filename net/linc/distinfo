@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.14 2013/05/25 23:45:34 joerg Exp $
+$NetBSD: distinfo,v 1.15 2015/11/04 00:35:10 agc Exp $
 
 SHA1 (linc-1.1.1.tar.bz2) = efebe15c4e29f9c03dfda04191161e557b1e1982
 RMD160 (linc-1.1.1.tar.bz2) = 0b8607abf3a9fa877c83f43586e5227a3fb85d66
+SHA512 (linc-1.1.1.tar.bz2) = 3311b632f22a56ece018beffc06d92a0fc1bd1934530de578b84d93a27375be6d0c4d47747e4f350659ae5b19ceed89ece9b9aba03bc8c09e328e3b1950022f1
 Size (linc-1.1.1.tar.bz2) = 204064 bytes
 SHA1 (patch-aa) = 965071a6cdfb7dca2bd976ac96e566f671df6ede
 SHA1 (patch-include_linc_linc-connection_h) = a6bbddfc11f7bb40e129ea33c4d4589f6c6a26c4

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 12:13:42 agc Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 00:34:52 agc Exp $
 
 SHA1 (configurator_201.zip) = e918c26cb75ae8bb4d848279c048de4987074fa5
 RMD160 (configurator_201.zip) = de160f33fb26133ad606894bea246583a8e2ecfc
+SHA512 (configurator_201.zip) = 1cbe7ae2253a6eb04f7c43690bfd72aa30889719075266d39c8504fe2599bca0be46290fb3f6dd03b3e5b315e64d33fd1cc1ebd7f4ac6edb8d097b5bd549e6e5
 Size (configurator_201.zip) = 155307 bytes

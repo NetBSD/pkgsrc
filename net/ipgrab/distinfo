@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2012/11/19 03:06:04 joerg Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 00:35:05 agc Exp $
 
 SHA1 (ipgrab-0.9.9.tar.gz) = 2fe9816ee2661c1efe87ce63b845a32732bf3b78
 RMD160 (ipgrab-0.9.9.tar.gz) = cef17116e4f2c86edc7d20c95fb5a6c8b900a130
+SHA512 (ipgrab-0.9.9.tar.gz) = d46794471ce489924d0194db7a255c89b8091caf9930199be74d5f5abbde8abf8eb44b685bc330a8eee360795e162ee317d0ed5bac88611b3efb1299bafe27d5
 Size (ipgrab-0.9.9.tar.gz) = 289561 bytes
 SHA1 (patch-src_display.h) = 16763fdef9ea3caaaf05d51c9f0301e908546057
 SHA1 (patch-src_hexbuffer.h) = 2ac77e4ba8db664d9cb25aef2dbe5b160effd61a

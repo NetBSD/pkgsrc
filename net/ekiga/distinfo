@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.13 2013/10/15 14:46:07 joerg Exp $
+$NetBSD: distinfo,v 1.14 2015/11/04 00:34:59 agc Exp $
 
 SHA1 (ekiga-3.2.6.tar.bz2) = 1c9d2004aa57643a951c1d454e9cfb207143c021
 RMD160 (ekiga-3.2.6.tar.bz2) = f53fe740856e4a4c5b6141086ba25288aabe51ac
+SHA512 (ekiga-3.2.6.tar.bz2) = 4ba2cc1f243970e2272e9224c79dcdd4442aee43ba92b2fd4f45de94a1ed606941d2e1cc6ea0b3e8136e0d3e8d896dac74386688d633827ad67084ac070f910c
 Size (ekiga-3.2.6.tar.bz2) = 8257285 bytes
 SHA1 (patch-configure) = 2aa9145b6b790dcc4dbb63de47ebf663d059c26e
 SHA1 (patch-configure.ac) = a27f2712f9b3f2fa9020d85de87cae78d30ad9bb

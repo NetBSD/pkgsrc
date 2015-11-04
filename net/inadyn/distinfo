@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2015/08/14 20:24:27 abs Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 00:35:05 agc Exp $
 
 SHA1 (inadyn-1.99.13.zip) = 1294b252979dccb6ecb926d9460d36fa54c97bfe
 RMD160 (inadyn-1.99.13.zip) = 09c4795277621128810f5342efd81a46fe555b8c
+SHA512 (inadyn-1.99.13.zip) = 10aec0a2f843996008a4265e3f24e77e6a2c6fb88a96207f4bcceab9a62a5ffad1fe6f4c825cddffa3db71bb646aebb2d079c89b07101a8324608836480a2b1f
 Size (inadyn-1.99.13.zip) = 233771 bytes
 SHA1 (patch-include_ddns.h) = 3d5ae83a33eb848d755364c0d67d9e996bd0aa76
 SHA1 (patch-man_inadyn.8) = 66d66eeea6d59bd2c747083003215a124ed0b4d2

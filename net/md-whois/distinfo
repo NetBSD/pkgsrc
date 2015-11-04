@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.11 2011/05/10 14:01:10 taca Exp $
+$NetBSD: distinfo,v 1.12 2015/11/04 00:35:11 agc Exp $
 
 SHA1 (whois_5.0.11.tar.gz) = 435770400fbccd0066af62a85e2028420e43ca4b
 RMD160 (whois_5.0.11.tar.gz) = c1b4fecf6759aafe54b0b05ff32a0fc9503ea0de
+SHA512 (whois_5.0.11.tar.gz) = 7ea67bbe7633c28db2691bb29ecb8dd8c6f371e8aee70e699bee8cc1541655f28d9700c8096382e8eb6254f710c1ab4698a00b9a03fcd359136e3d1b24bbc242
 Size (whois_5.0.11.tar.gz) = 81195 bytes

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2015/03/18 10:28:42 joerg Exp $
+$NetBSD: distinfo,v 1.8 2015/11/04 00:35:31 agc Exp $
 
 SHA1 (irc-11.1.1.zip) = 7ffe8481133679e5d475ac4c6eb149cac34e349d
 RMD160 (irc-11.1.1.zip) = 33609549dbfc0550b2580a6b19c461e533b49add
+SHA512 (irc-11.1.1.zip) = 30804737d9f7d760361c7cb739fb4ff87ceb6404be41d09fff4d9286bad6124f3fbd1568653282f3ee181b62e1083ba6dd68f9a72656307e1cd4f4146fa5878a
 Size (irc-11.1.1.zip) = 121371 bytes
 SHA1 (patch-setup.py) = beba108237c5fdc0cf72a64cee741d8924a7ee47

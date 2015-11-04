@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.2 2009/01/06 18:54:51 kefren Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 00:34:56 agc Exp $
 
 SHA1 (dcsharp-0.11.1.tar.bz2) = 7589a5620619a85ebb9c5f531a558e72c81e2c79
 RMD160 (dcsharp-0.11.1.tar.bz2) = 524630248f0c353abf81f2854d6e0a67b764f318
+SHA512 (dcsharp-0.11.1.tar.bz2) = f76f82ada6b3da435fa60ba9fb2f716dd9314628ed663c725ced855c5cce725fea08cfb729a335861972696bc62bd407af337b0148a27fefbaac5d02855de658
 Size (dcsharp-0.11.1.tar.bz2) = 207178 bytes
 SHA1 (patch-aa) = 81c4152a1dc33bdc373fa85626407383987b2ae3
 SHA1 (patch-ab) = a410159c9c4d6c379024560b6f34229a38d4995e

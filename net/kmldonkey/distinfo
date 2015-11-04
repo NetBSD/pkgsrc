@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2010/04/10 03:04:47 markd Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 00:35:07 agc Exp $
 
 SHA1 (kmldonkey-2.0.2-kde4.4.0.tar.bz2) = c5a6a47456c2aebe518b081bc94d40fbfbf6489d
 RMD160 (kmldonkey-2.0.2-kde4.4.0.tar.bz2) = 1cecbb3c0fc78ca4e345da8af9cb4bf430be5e54
+SHA512 (kmldonkey-2.0.2-kde4.4.0.tar.bz2) = 1eb3e89c6cebae54e05bbb3f3cb431e8ba168629f861a797d8231219f7f967a6315f67d09d48eb458d48e56fb07afa38c682ab4cd52edad0dd4204c02934d97d
 Size (kmldonkey-2.0.2-kde4.4.0.tar.bz2) = 420422 bytes

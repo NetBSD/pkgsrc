@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.12 2015/07/20 17:44:41 adam Exp $
+$NetBSD: distinfo,v 1.13 2015/11/04 00:35:40 agc Exp $
 
 SHA1 (tinc-1.0.26.tar.gz) = 4c6c650618b2015f9b8ec5bd04c0fa38e8f215c5
 RMD160 (tinc-1.0.26.tar.gz) = 0864250102300fd592076749510097a80e667dd1
+SHA512 (tinc-1.0.26.tar.gz) = 33f0a21a6a7f5b4e3bad5e30437efe88738bab243d9ea303842c454be53de0296878da90502b577996767a07d597453054fd4cdefbd05d22b49a6fb78b2aa64c
 Size (tinc-1.0.26.tar.gz) = 473681 bytes
 SHA1 (patch-aa) = 15b56f157cc1d23865c1ef5bc9f6adc499027ca5
 SHA1 (patch-ac) = 7e2aedcbc88ca71cb46d5a0a81e654671a7219b6

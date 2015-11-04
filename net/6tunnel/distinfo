@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2011/10/13 11:40:05 ghen Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 00:34:51 agc Exp $
 
 SHA1 (6tunnel-0.11rc2.tar.gz) = be5af4c64070255f7e6c7119c0cdcaadf192ef32
 RMD160 (6tunnel-0.11rc2.tar.gz) = e42d9f672ca0e3ce217a320101191a30f7125f43
+SHA512 (6tunnel-0.11rc2.tar.gz) = c18f253a31ae896c0f4a6dced17869b3a239199b1c0bedcbc0d77da508a9fff51efbf178df5d9e66ab50730f8f81da58cfa6ff3513eefa7fcedf838db1e1e16e
 Size (6tunnel-0.11rc2.tar.gz) = 17522 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/03/08 12:37:43 mef Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 00:35:04 agc Exp $
 
 SHA1 (httptunnel-3.3.tar.gz) = e3fa5c6499cbad9202bb7a3ba8a5b6478a60a3f3
 RMD160 (httptunnel-3.3.tar.gz) = 0e0a34dbe122510b19a2e37f3dcaeab8ff7cae5d
+SHA512 (httptunnel-3.3.tar.gz) = 84503e27e84cd39441a7592d6446e30fce07a54b940e4398407dc105fabc6c8f96d3b5d05137d6dab22b2088c5b114728551337429748c900bd6fe7d6b6109e5
 Size (httptunnel-3.3.tar.gz) = 262749 bytes

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2010/01/09 16:55:09 joerg Exp $
+$NetBSD: distinfo,v 1.8 2015/11/04 00:35:41 agc Exp $
 
 SHA1 (tsclient-0.132.tar.gz) = 9299d7bb3834a59f77760c85a841586121eab233
 RMD160 (tsclient-0.132.tar.gz) = b7ae5fea95cc044be27ae150c7b618ca5cad64e7
+SHA512 (tsclient-0.132.tar.gz) = 9cac1ae7ad4c57b10b4a78948ff2d5e90a9bec57ef802d6c58f269f886625897516604f00402ee0c252de5783c54b66c6a3cde596634122fb055556bb881dc65
 Size (tsclient-0.132.tar.gz) = 357984 bytes
 SHA1 (patch-aa) = f4a331e7efe42a89dde9869db1a967b1b0745aca

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2014/05/30 21:06:39 pettai Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 00:35:33 agc Exp $
 
 SHA1 (rbldnsd-0.997a.tar.gz) = 2a487e915994ac45b8de7f3998aae4a95af7654d
 RMD160 (rbldnsd-0.997a.tar.gz) = 25682485cfd8d30e048a91be23a27b5647406709
+SHA512 (rbldnsd-0.997a.tar.gz) = 9a3e1a0ad2cd9dd08bcc114c70213a875e984f3761fa32c44fe544d8173f54330fe355ad229a120e64b8f4c8286187d0baa055526d3a85bc846df070bb213529
 Size (rbldnsd-0.997a.tar.gz) = 144771 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/11/08 23:50:38 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 00:35:26 agc Exp $
 
 SHA1 (gcap-0.1.1.tar.gz) = 18144b33291d523e6be54a7c31b018264956a57d
 RMD160 (gcap-0.1.1.tar.gz) = fbbd9992e0997d17c895863fd69fe6165d9373ae
+SHA512 (gcap-0.1.1.tar.gz) = 5206bdbc7cd5265456dd0b1a2c028c9ffb5e1324a0527c16ae2d74ff93e82e56bfc9e498f94d9895108265ce5e87c5510aece5ef61011f3128bf260eeaaee52d
 Size (gcap-0.1.1.tar.gz) = 20612 bytes

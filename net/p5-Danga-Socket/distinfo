@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/01/31 02:42:47 mspo Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 00:35:18 agc Exp $
 
 SHA1 (Danga-Socket-1.61.tar.gz) = dc767b69d1a2448b679771a740fb2964f944b6aa
 RMD160 (Danga-Socket-1.61.tar.gz) = 09c76bdf4b9e8f2d182086d2cf0cb61602f866e6
+SHA512 (Danga-Socket-1.61.tar.gz) = f3799b56f6b70a2bbf141c2f0d8c1f6f6a1568ba6cf886a685919aa3600767a440f2d56f81c0c498c5234d807e848f31df851fd03e1e8c07145247c1c54e11b3
 Size (Danga-Socket-1.61.tar.gz) = 20361 bytes

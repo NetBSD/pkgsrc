@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.10 2009/02/11 21:20:43 joerg Exp $
+$NetBSD: distinfo,v 1.11 2015/11/04 00:35:32 agc Exp $
 
 SHA1 (SOAPpy-0.11.6.tar.gz) = 59c91688f23de3b738bf504351bca89aab5cc203
 RMD160 (SOAPpy-0.11.6.tar.gz) = ba0c90f0229aa077976face8d5e50147b034f30c
+SHA512 (SOAPpy-0.11.6.tar.gz) = 42dfd10d2810731942cd5b7b461c1fee92a5fd57fc3fc7f9350124225fe8addd04b4bf69a1e125ca44a1566c9f97df73a57f2219aa9946d6b0d7ef17e5371972
 Size (SOAPpy-0.11.6.tar.gz) = 159078 bytes
 SHA1 (patch-aa) = 3a788d6ad83948132dbc71ea3b2588d17ae89595
 SHA1 (patch-ab) = 55846e093dcd73f8f46aa0d76eb3f5d5309c94d7

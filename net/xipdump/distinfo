@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.9 2013/01/17 16:01:38 joerg Exp $
+$NetBSD: distinfo,v 1.10 2015/11/04 00:35:46 agc Exp $
 
 SHA1 (xipdump-1.5.4.tgz) = 8fa152cc9114fb3862a223be47e104394f00b250
 RMD160 (xipdump-1.5.4.tgz) = 4202c4c3ac7a749d1b7a25caa9577a6529ee87df
+SHA512 (xipdump-1.5.4.tgz) = 92d3a507c6a3c0892f9d839021ecf322e65ca84880b6568c45002aaadd64d17f88863407884e3a4da549d4ab3ec4efad658f13c59761bd4f03957ea2fd1b7077
 Size (xipdump-1.5.4.tgz) = 311526 bytes
 SHA1 (patch-XmgDict.c) = 03834a2ebf1844851c0fdee28ebe988977ceaa0d
 SHA1 (patch-aa) = 4dc89157456a3d223456babcbdca4ac501b6a664

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.14 2015/08/14 21:21:24 leot Exp $
+$NetBSD: distinfo,v 1.15 2015/11/04 00:34:58 agc Exp $
 
 SHA1 (dnstop-20140915.tar.gz) = af1567d6b53e8be697b884508a2a3a0edbea5e01
 RMD160 (dnstop-20140915.tar.gz) = cf21ac48c0d16c4656f0ffc4f28ff9187cf200bc
+SHA512 (dnstop-20140915.tar.gz) = 902cf96f7366983cae4bf684e44fbe12f6e982cee8ff489329e25e1a13de60870d356906a99fee56c6da2258c4a39074a504389549c6c2e239a4ea94d8b9a65d
 Size (dnstop-20140915.tar.gz) = 77917 bytes
 SHA1 (patch-dnstop.c) = 25fd8afa7e9d7ea8d4ee07b8515cbad8efc5283b

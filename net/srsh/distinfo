@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2013/03/14 16:02:39 kim Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 00:35:38 agc Exp $
 
 SHA1 (srsh-1.3.tar.gz) = db01cab9e559157016a6455197f7ac484266b685
 RMD160 (srsh-1.3.tar.gz) = b8dd3a3df49c47d1ec4ab5e33a7e6111f52cdb81
+SHA512 (srsh-1.3.tar.gz) = 8b9ce7e028429a488cb82af7fc10be3ba8f7fa72343d2ab65c3745ce547574a7f9e5ce56555668ed454b4142a3de6adf20635f7fe1032c0be44ba2be977fa85d
 Size (srsh-1.3.tar.gz) = 686 bytes
 SHA1 (patch-aa) = dfe99342bb038989a147918441f996cb234a021b

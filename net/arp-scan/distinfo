@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2015/01/03 14:44:36 schwarz Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 00:34:53 agc Exp $
 
 SHA1 (arp-scan-1.9.tar.gz) = 6bf698572b21242778df9d2019fd386b2a21a135
 RMD160 (arp-scan-1.9.tar.gz) = 1c6dabae9ff665ec540b144e8c6613debedfc822
+SHA512 (arp-scan-1.9.tar.gz) = 5061ac82d1acad3dd5dab998e4e2d2d9d2dbf436a2839ee1f68dd2997278df7e77f5dda7e54bdb13c9200d7a714b8d82737c041cec8438571d1d14c9d7f936ac
 Size (arp-scan-1.9.tar.gz) = 488442 bytes
 SHA1 (patch-link-bpf.c) = 4dd7d4bddb96d58be645d9538892082023956e22

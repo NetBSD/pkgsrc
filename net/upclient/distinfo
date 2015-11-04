@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.14 2012/03/07 17:19:56 hans Exp $
+$NetBSD: distinfo,v 1.15 2015/11/04 00:35:43 agc Exp $
 
 SHA1 (upclient-4.2.1.23.tar.gz) = c6595959c6a5058b03ab7096a6bf9c0dbfa4285a
 RMD160 (upclient-4.2.1.23.tar.gz) = bc5df520a6ab73049ab45bf2d3ed230a80bf561e
+SHA512 (upclient-4.2.1.23.tar.gz) = 822e1b269861b306e468a196756bba79babf06c89d3a441293f1d418458f2f563c3b18c9bdab587aba81a8bba1dd1db088d01c03a91d3900be485146535fc4fc
 Size (upclient-4.2.1.23.tar.gz) = 29386 bytes
 SHA1 (patch-aa) = 2e1dacd293b69e0d2338e1a316d7d1d7015447c2
 SHA1 (patch-ab) = dd1e318cee6e27fcf433b2123cf8f3f6ed8eb548

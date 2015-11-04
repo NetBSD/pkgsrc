@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2006/03/22 17:43:32 joerg Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 00:35:00 agc Exp $
 
 SHA1 (firewalk-5.0.tgz) = d6603ab0ccb84facf65220331fe94d6ec742932c
 RMD160 (firewalk-5.0.tgz) = 798a5a961eb45c669a9bce4ce3a04aa024b90bd5
+SHA512 (firewalk-5.0.tgz) = 919aa6e464dac72a02f8967ccf7109de7d0b3a574f0a396bcf69bacc988ab8e13e8e25932d749eadc898cae2546f8f81014d53ef51429e6c784a16d40da90ff2
 Size (firewalk-5.0.tgz) = 80446 bytes
 SHA1 (patch-aa) = 043b62e9e4369320fbcf3454dc8c817f60ed3839
 SHA1 (patch-ab) = ae6a82b355648e664df14c9549d5a1fafe4d8204

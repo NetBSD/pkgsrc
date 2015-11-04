@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.10 2015/04/13 10:03:21 hannken Exp $
+$NetBSD: distinfo,v 1.11 2015/11/04 00:34:55 agc Exp $
 
 SHA1 (chrony-1.31.1.tar.gz) = 8e92871e164dad89b315a5dda99d94ff7b31770a
 RMD160 (chrony-1.31.1.tar.gz) = 7dd53fb95c1ecf30099bb580adeccd1a808c4dff
+SHA512 (chrony-1.31.1.tar.gz) = c64b0bfc52f091994774927900a12075afce876a1df66c0fc4ea8ad2b72cee189e044f886594e61b8aafb7d3ecf161a290aeff37bfd7da9d416f21b3213de2a4
 Size (chrony-1.31.1.tar.gz) = 395797 bytes
 SHA1 (patch-Makefile.in) = 28abbbf1cfd037f018a92c3827642e749fd8768a
 SHA1 (patch-conf.c) = df47df974995f9f947b731a4812fb7633fd874a4
