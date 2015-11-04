@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2012/06/03 17:41:04 wiz Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 03:28:45 agc Exp $
 
 SHA1 (libXevie-1.0.3.tar.bz2) = 84e2dc6e35c4a82f1a4d1fe4723fba58364c3bec
 RMD160 (libXevie-1.0.3.tar.bz2) = 31d896cce4123d2c188c805f89fa33f6e0d2c2f9
+SHA512 (libXevie-1.0.3.tar.bz2) = fe26a446842559bc077e3ca257a57bb26730eec72c55fbe98de2a6b9ea83a47a2a8411ba16976bf834bb83b50398dde73d93112153b79b7b8ef88604f9b16dd6
 Size (libXevie-1.0.3.tar.bz2) = 253286 bytes
 SHA1 (patch-aa) = 0316502d7e0850c807b6ed9c20f7d9dba0683965

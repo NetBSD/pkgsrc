@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2010/10/16 16:13:55 wiz Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 03:28:30 agc Exp $
 
 SHA1 (gnome-sharp-2.24.2.tar.gz) = c20f373001873f310327aa35b30f2cbcb286e591
 RMD160 (gnome-sharp-2.24.2.tar.gz) = 1202395b29e45d33253c229b6a21c9902aeb5850
+SHA512 (gnome-sharp-2.24.2.tar.gz) = e05810725c71dbeeaff0960e11094cf6d7f72e8c5030bed8e3d776f765c76ceec50dc373677ecaee484a733c261ca2062e05b4cef31771e3604f60a7f4c913c9
 Size (gnome-sharp-2.24.2.tar.gz) = 552419 bytes
 SHA1 (patch-aa) = 73127f8b0e90ab53f03fbec6242d5ccc1ccdfd1f
 SHA1 (patch-ab) = a8bb071d965cc7265bae16fa78f7bc286fd8f7b2

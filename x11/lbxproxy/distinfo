@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/07/02 22:46:45 rodent Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 03:28:44 agc Exp $
 
 SHA1 (lbxproxy-1.0.3.tar.bz2) = 2c6db0a501d7ee88ccfe60436f894d5749ade5e4
 RMD160 (lbxproxy-1.0.3.tar.bz2) = 94442ec67f1950588a1b45769add67e7876a3b0a
+SHA512 (lbxproxy-1.0.3.tar.bz2) = e025101ba6743f98717958c3ff561df3f0fea7b491b2a41639cb8a84ffe9d82d980dcaaa8f50408e3a1a8ecfbd29fbe599a16a0f5de454b05ff82bc2629f68f2
 Size (lbxproxy-1.0.3.tar.bz2) = 229963 bytes

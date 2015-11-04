@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2005/02/23 17:36:22 wiz Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 03:29:00 agc Exp $
 
 SHA1 (xearth-1.1.tar.gz) = 5b664648ff592d6f29a96a17823ec59db4958b1d
 RMD160 (xearth-1.1.tar.gz) = 71c700ed2c6042c87dc171be9ee6dd7759bebed7
+SHA512 (xearth-1.1.tar.gz) = ab1c146385a0e61f6208a0218cabc8a10902f52feb50f328a330cdbddc5d2eff2c3efdf6719b625bcc07171ed2fd6201230ad8a71cd77a451ad9c81383bfd46e
 Size (xearth-1.1.tar.gz) = 157887 bytes
 SHA1 (patch-aa) = dd176226e315426a382a7170a4b2c08901a9beaa

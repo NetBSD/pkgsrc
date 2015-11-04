@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2008/07/28 02:45:56 dholland Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 03:29:10 agc Exp $
 
 SHA1 (xphoon.tar.Z) = 1f267a69be8b00c07d2bce97623b8eba100eac42
 RMD160 (xphoon.tar.Z) = 920b2fe6eaa47a98d6e6e3f8eff8034c0c7764ed
+SHA512 (xphoon.tar.Z) = 6801bc3bec5337664be6eb90254abbf4e084a42d417470810018ab6099e44b79f367ee90c3a9312e3552c7abc747e9c27103d43112b9284b6bbb0aa9cae546c9
 Size (xphoon.tar.Z) = 95407 bytes
 SHA1 (patch-ab) = 94647ef046da68e750a2cbe387d1e775483b208c
 SHA1 (patch-ac) = fbed89ba75f4dea2e9ecb3f865b6e1499e0e4245

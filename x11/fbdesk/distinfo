@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.9 2013/02/26 10:19:28 joerg Exp $
+$NetBSD: distinfo,v 1.10 2015/11/04 03:28:28 agc Exp $
 
 SHA1 (fbdesk-1.4.1.tar.gz) = b5a2f446fa27406d9adb9a9608f1dc3c638d37ff
 RMD160 (fbdesk-1.4.1.tar.gz) = ce22936b73acd8273e9816f4c2a5458cc98cf45a
+SHA512 (fbdesk-1.4.1.tar.gz) = 0a99ae062442f85a9d4018db0f2815c0e537488999e71aef18eb3df09526e2b9c931e5caf30bb0cf484ddce28c3fc3672773fbf576e3f932f30ee48c89b346a0
 Size (fbdesk-1.4.1.tar.gz) = 426550 bytes
 SHA1 (patch-aa) = 4412dfd20e31814ee674213ca798864dab25399f
 SHA1 (patch-ab) = 9e2c2600561ba4228959a79cb2da603aab7e8ba3

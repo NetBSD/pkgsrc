@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/04/12 15:05:24 joerg Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 03:28:46 agc Exp $
 
 SHA1 (libXprintUtil-1.0.1.tar.bz2) = 2e93e8c3d105c7f08b8dfb79ecdc641178e07b82
 RMD160 (libXprintUtil-1.0.1.tar.bz2) = 1c6a4465fd284750c01a59aad94d4456be53a239
+SHA512 (libXprintUtil-1.0.1.tar.bz2) = 58ede35ee2ce63cf85f26b1d3d37f27571d935f4c1f0b774e41bd00f43853c737b153dcf473ba437ceb041c64d4701b41c8ab81d6ddcf90655582d70fbf493cb
 Size (libXprintUtil-1.0.1.tar.bz2) = 223325 bytes

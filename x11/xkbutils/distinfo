@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2013/02/11 08:59:58 wiz Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 03:29:08 agc Exp $
 
 SHA1 (xkbutils-1.0.4.tar.bz2) = b09aef7cc3853eb12dbda332f55adec3add4447b
 RMD160 (xkbutils-1.0.4.tar.bz2) = 84ebc85a7289a501bf0c779e4d8f57a43fa55eb7
+SHA512 (xkbutils-1.0.4.tar.bz2) = 5bb6cb52ac02a4ec18332559853815585ca86e00e8c6452483af10c4db75811fe00952575dbbad5b7d03b9d6498830fb45d617b1b3c5c1cea8445f1131856a4d
 Size (xkbutils-1.0.4.tar.bz2) = 131269 bytes

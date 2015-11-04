@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.9 2013/12/31 17:31:44 wiz Exp $
+$NetBSD: distinfo,v 1.10 2015/11/04 03:28:29 agc Exp $
 
 SHA1 (glproto-1.4.17.tar.bz2) = 20e061c463bed415051f0f89e968e331a2078551
 RMD160 (glproto-1.4.17.tar.bz2) = 85ca52a3752d8618ed0e16dfb2b1020a464a83a8
+SHA512 (glproto-1.4.17.tar.bz2) = 3e5bb1949ab9993e07d2ed7e829b9e0a8803eab476e9f4082fc01087c3dce01f3bcb9d55261eaf60e55977a689b326ed1dcf40f74d5e1fc660c83bea094b6754
 Size (glproto-1.4.17.tar.bz2) = 126969 bytes

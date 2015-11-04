@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2014/06/07 06:54:41 wiz Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 03:29:11 agc Exp $
 
 SHA1 (xscope-1.4.1.tar.bz2) = d1da41796e72ec41b7763ce0370182e7a33cdbfd
 RMD160 (xscope-1.4.1.tar.bz2) = fd00da57aa626974eb6ecbe882c079b7cf76f17e
+SHA512 (xscope-1.4.1.tar.bz2) = 0b35bd51ed3118bde72359280a610f6f3f7d5e62f1673e493f13d2118ce07bfe4ae7ccc4231556d1c24f4bd7add88c46a4ea478d825fc9cf3fd723dc662d2874
 Size (xscope-1.4.1.tar.bz2) = 216128 bytes

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2012/02/03 03:47:47 sbd Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 03:28:47 agc Exp $
 
 SHA1 (libunique-3.0.2.tar.bz2) = 3ca7c702741e6fa39ceab364d69056633a326846
 RMD160 (libunique-3.0.2.tar.bz2) = d69b34ae74ddf2f88a1a91b05f8c62f9f1466502
+SHA512 (libunique-3.0.2.tar.bz2) = 08373391c06872794a1be7a7ecf25e4b6d6a80b65246db941badfc8d61d5d1770bdf77887a3474c12a35c135da834fd581d9713e6984def3d02b8409f0773a8d
 Size (libunique-3.0.2.tar.bz2) = 342778 bytes
 SHA1 (patch-unique_Makefile.am) = c69e6de16feeaa06aae597d92a43307f5488fa2d
 SHA1 (patch-unique_Makefile.in) = 6d079ad07957d5fba475fb47239d9c750b786dc5

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/10/22 22:30:40 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 03:28:31 agc Exp $
 
 SHA1 (gselt-1.2.tar.gz) = cb646d042ed78b4937daa5a36889cc553b1a1478
 RMD160 (gselt-1.2.tar.gz) = 11445a51fbb01a3e2c2b9f419e2261c4f669e6cc
+SHA512 (gselt-1.2.tar.gz) = 0e0eb1ae11eb321b9e0d2646c9446c84759db9eff62fdab6b2a7d5ac25d3e0667327adfc549074013388bf5e167e41f35c729f82c326fa66c868adb0e699e186
 Size (gselt-1.2.tar.gz) = 79375 bytes

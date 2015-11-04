@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.38 2012/11/05 16:27:37 jperkin Exp $
+$NetBSD: distinfo,v 1.39 2015/11/04 03:28:30 agc Exp $
 
 SHA1 (gnome-themes-2.32.1.tar.bz2) = 0af9ac28c7b1f7fdd543b3629d9b4711c7412195
 RMD160 (gnome-themes-2.32.1.tar.bz2) = f6fc96686e6076995f0c2a5b25c655e513435941
+SHA512 (gnome-themes-2.32.1.tar.bz2) = 126331b89a102d20ee2467b8400beec5dbb3540b77f61dea1ac0d0442112385efc5a5dbe67c260c2410c4223d4e036034b04de53298322ac24e6968757372721
 Size (gnome-themes-2.32.1.tar.bz2) = 2683723 bytes
 SHA1 (patch-aa) = 2e801aacdcaac5b86bdf89c8486e534ad1f06119

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/07/02 03:37:49 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 03:29:03 agc Exp $
 
 SHA1 (xf86-video-suntcx-1.1.2.tar.bz2) = 6c86212b104647e239e24b33078406fa15fdbdba
 RMD160 (xf86-video-suntcx-1.1.2.tar.bz2) = af64e3a204a58a5b71960a5f765fc6f266349a20
+SHA512 (xf86-video-suntcx-1.1.2.tar.bz2) = c7fa5959694e21fe4613d09eff3666eaca3f25a507b9e6c3efc537bd02aa35fb8633a381d01e5ea243dc38782e616558502c181e9116a0240cf6f196e26a20bd
 Size (xf86-video-suntcx-1.1.2.tar.bz2) = 285544 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/01/08 04:19:13 obache Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 03:28:32 agc Exp $
 
 SHA1 (murrine-0.98.2.tar.xz) = ddaca56b6e10736838572014ae9d20b814242615
 RMD160 (murrine-0.98.2.tar.xz) = d408ce9ca25be3e3b7afe9ce1e6127ffa0d9cff3
+SHA512 (murrine-0.98.2.tar.xz) = 5ed6b499b957c33d301c7ac508937517e8f9753fabb84e0cf977f67b10b09968cee5a10bdeae64a05f64606b5769e7313ededbb3b0c3ae9f78e34f893aa96667
 Size (murrine-0.98.2.tar.xz) = 296944 bytes

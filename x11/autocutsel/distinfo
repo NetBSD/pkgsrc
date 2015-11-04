@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/06/09 13:10:00 ryoon Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 03:28:25 agc Exp $
 
 SHA1 (autocutsel-0.10.0.tar.gz) = a2314565fe932ab67f6ec4cbf1b2ea0bb339240c
 RMD160 (autocutsel-0.10.0.tar.gz) = 70e62bc65eb74d33f17a0ee2141d211ba2a260ee
+SHA512 (autocutsel-0.10.0.tar.gz) = 89a51a541960133a1a4212de531c1de5512484e98713f680749b404a3cf0c712e9d0e664b10a5ad3ed634997d6432b6d7c26fcaeed39892078f0c42ec4b0551f
 Size (autocutsel-0.10.0.tar.gz) = 19114 bytes

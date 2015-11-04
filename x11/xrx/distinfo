@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/07/02 12:38:33 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 03:29:11 agc Exp $
 
 SHA1 (xrx-1.0.4.tar.bz2) = ff5b8c329ed255138eb78e6b9c034add2b02de94
 RMD160 (xrx-1.0.4.tar.bz2) = 10d4ae4e953e926dc28960b49533e27a2df3420a
+SHA512 (xrx-1.0.4.tar.bz2) = beb505555604a18651f77dee7579d928fa0f529c45ccf77e870fc066f5d0a181e265b96b6a4a4423bd3f76b46c9eed70d513919fe1c936e0671e89ffbfa2a81e
 Size (xrx-1.0.4.tar.bz2) = 338140 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2011/03/18 10:50:46 adam Exp $
+$NetBSD: distinfo,v 1.8 2015/11/04 03:28:27 agc Exp $
 
 SHA1 (dxpc-3.9.2.tgz) = 08f3c3cc04f8048ec181563b373f309e5e270bfa
 RMD160 (dxpc-3.9.2.tgz) = 5494459e7c460138e72e900877c61c30265bbb89
+SHA512 (dxpc-3.9.2.tgz) = 7dd31f024ca9eae763ec82c424483b4dd4ff667ae70666f3de298e5acb75a5028134914f9c58ab07c16a68de53e170ace455653d83ffe6db290b952ca82fad38
 Size (dxpc-3.9.2.tgz) = 199267 bytes

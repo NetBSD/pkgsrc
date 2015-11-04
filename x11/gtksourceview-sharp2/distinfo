@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2008/10/30 07:06:02 kefren Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 03:28:33 agc Exp $
 
 SHA1 (gtksourceview-sharp-2.0-0.12.tar.bz2) = 36e673a67922b35b9b28b91e20464aa2fd9b457d
 RMD160 (gtksourceview-sharp-2.0-0.12.tar.bz2) = b9f54d87a4f61e81040f05ff9fddc389b3470510
+SHA512 (gtksourceview-sharp-2.0-0.12.tar.bz2) = c4cf2f08f942013ccc02a27c4a1bd49b98526b49af6af811c09860f1ef44da514028e2d64d1c3d125e804439fb3f30cdba5c42b65b36b4e029ba1685ba6b80b6
 Size (gtksourceview-sharp-2.0-0.12.tar.bz2) = 137252 bytes
 SHA1 (patch-aa) = 5e1d4b026b59bc6416ec254775e3e8c2cb97e1c1
 SHA1 (patch-ab) = 68efc2a43394e469799b82ab674b668f3954ffb9

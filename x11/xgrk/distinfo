@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2006/05/13 13:28:27 joerg Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 03:29:07 agc Exp $
 
 SHA1 (xgrk-1.6.3.tar.gz) = 0cfe79190225d1cf3e5489c7674b4294d793d14b
 RMD160 (xgrk-1.6.3.tar.gz) = 70c6f41f29f04ccac5662544cfb45e10dbc5eb7c
+SHA512 (xgrk-1.6.3.tar.gz) = 929be2fcc2a08d537a0b0c4991849a9d5c377e89a7e8a305b7247c0efc0cd821a93745ff0f27b6210fd4085c06cbe47cd42f3e3548bd9f1114f75c4a58aa22f2
 Size (xgrk-1.6.3.tar.gz) = 25039 bytes
 SHA1 (patch-aa) = a0031b6ddda14c9b9803c2e2b18df7a5fdf17f3b
 SHA1 (patch-ab) = 493d021068e09cdce68d9bfa99f2738950663650

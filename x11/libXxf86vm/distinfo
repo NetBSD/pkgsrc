@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2015/02/24 08:46:04 wiz Exp $
+$NetBSD: distinfo,v 1.8 2015/11/04 03:28:47 agc Exp $
 
 SHA1 (libXxf86vm-1.1.4.tar.bz2) = 78ef18ca2be157131899e01c62679e247409a13f
 RMD160 (libXxf86vm-1.1.4.tar.bz2) = d16754b856d26ded7ccfa12af1e88c489834ad9f
+SHA512 (libXxf86vm-1.1.4.tar.bz2) = c5f92d86e143db02ebb36bcd25618acaa2cb2831f5a23800a06dd431cd73b6702d95de8fe7407ce626336bf614c288d5256f4d87ea7781fad2ab6c517cbf09e0
 Size (libXxf86vm-1.1.4.tar.bz2) = 295346 bytes

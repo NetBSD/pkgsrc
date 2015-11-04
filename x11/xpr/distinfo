@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/07/02 12:38:33 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 03:29:11 agc Exp $
 
 SHA1 (xpr-1.0.4.tar.bz2) = 0645404e9aa2c9f979e4d006c483633bf6cfc2d9
 RMD160 (xpr-1.0.4.tar.bz2) = 1b022d6a733aece430c27a23c1a0c480dfc408d4
+SHA512 (xpr-1.0.4.tar.bz2) = 4b88b71a6da835b8f27b185510cff6bc6b260e009b31b9118f12d77d37e660606654ff7ebd50014ff13f15ca74011cd3ffc12a417cea5e38d6d29ccc820a2957
 Size (xpr-1.0.4.tar.bz2) = 143144 bytes

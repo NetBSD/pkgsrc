@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/06/02 21:56:42 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 03:29:00 agc Exp $
 
 SHA1 (xf86-input-acecad-1.5.0.tar.bz2) = 410cee68e4435dc95774fb389fcefae1b2ffe3d1
 RMD160 (xf86-input-acecad-1.5.0.tar.bz2) = ee4cf72d21026465cbe0611ee63aa3d070719bea
+SHA512 (xf86-input-acecad-1.5.0.tar.bz2) = 123ad012df1bf6d973aded65f67c1599827cee8ac8c18b873f34949e98139ff23b575589408ad9d38859c2f7baef5d017e79c8645f07ce62d7a84dd06c0ee17f
 Size (xf86-input-acecad-1.5.0.tar.bz2) = 262818 bytes

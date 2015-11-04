@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2015/07/04 16:18:43 joerg Exp $
+$NetBSD: distinfo,v 1.8 2015/11/04 03:29:08 agc Exp $
 
 SHA1 (xkbset-0.5.tar.gz) = aa2f067e0963f351323b947bfbdfdb0be9e7d52d
 RMD160 (xkbset-0.5.tar.gz) = be1b29d9dc695b5c4848c0ac78c170b6c2ce5d67
+SHA512 (xkbset-0.5.tar.gz) = 64de1a18076c0e0fd3e3189444b6033880028f53777566286caf935bfafcf062ccbd408d20926e2a4febb77d15b026349e0288f2aa93c815ddd9437b96589d8c
 Size (xkbset-0.5.tar.gz) = 13933 bytes
 SHA1 (patch-aa) = a5214bc6d84b2c96ed52d07fbcb73dc16ea42a13

@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.1 2015/07/25 02:06:04 kamil Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 03:28:29 agc Exp $
 
 SHA1 (gcolor2-0.4.tar.gz) = 7cfa173825d486c54a5358b6f41e679d8a2cd5b6
 RMD160 (gcolor2-0.4.tar.gz) = d31dd5d19720a8888be269778d2be6715849c506
+SHA512 (gcolor2-0.4.tar.gz) = 9b9677b4be8797c9b03deef9bf1b96e6497d2adf85f74d01f1b478f04d92cb912790c4d5fb74f403295219cac6c0d3fcabaa7de340975bbcdb68b0347f6042a3
 Size (gcolor2-0.4.tar.gz) = 375217 bytes
 SHA1 (patch-src_callbacks.c) = e8eaeed80aba3a10bf86d29f4e7afd4c0a812586
 SHA1 (patch-src_interface.c) = a979f4d926fa1ec95238108dc291340a8722221c

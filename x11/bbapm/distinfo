@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2007/11/30 19:59:04 rillig Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 03:28:26 agc Exp $
 
 SHA1 (bbapm-0.0.1.tar.gz) = 9ab102dd4289962ae2b5bd10a73a394e349da4cf
 RMD160 (bbapm-0.0.1.tar.gz) = dfcec30fe55b6b5443cfb188527f16c1b2a50fd7
+SHA512 (bbapm-0.0.1.tar.gz) = 5f0d1031febcb61ad2c45245fda07916a29352b1912db0283b9b8dfff3ee10332a716e3c02c77c6a5550cd5a90c3589d11ca69ff7106e0b6f5c8c8b4543980a4
 Size (bbapm-0.0.1.tar.gz) = 61376 bytes
 SHA1 (patch-aa) = 82be3cca979f6a8ecef1c15f85af44865c998587
 SHA1 (patch-ab) = 147dd5cfebdbbd62440d0303959fbc2e369bb203

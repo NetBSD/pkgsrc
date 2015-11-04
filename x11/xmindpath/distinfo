@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2012/05/23 07:19:23 dholland Exp $
+$NetBSD: distinfo,v 1.9 2015/11/04 03:29:09 agc Exp $
 
 SHA1 (magicpoint-1.09a.tar.gz) = 2903f7c42a30d558677fc1a93607fe7fc8c1fc0f
 RMD160 (magicpoint-1.09a.tar.gz) = 2ee96eed9c9e31d6c599447d421ae319483c3617
+SHA512 (magicpoint-1.09a.tar.gz) = 1c4f692ead9068f6594466495c95b26a7cb30dad075c39eb54835658a0afafc8e87762f84045e4fd085303f3b346d38da4eb2faa4d1e63d4a4c1b8f7e8b5b64b
 Size (magicpoint-1.09a.tar.gz) = 816234 bytes
 SHA1 (patch-aa) = 8566a9bbab0538509ea5a1b383d357b403f0860c
 SHA1 (patch-ab) = 974f82cab1dcc87094768e77c626f3da49b7f1d1

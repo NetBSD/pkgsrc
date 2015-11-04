@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/04/12 15:06:23 joerg Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 03:29:10 agc Exp $
 
 SHA1 (xplsprinters-1.0.1.tar.bz2) = 6e8bca655944d3c75e2ead37a5972f24ba0b56e0
 RMD160 (xplsprinters-1.0.1.tar.bz2) = b1b6060c77b0db5646fe7f95232bdef84ce3b96f
+SHA512 (xplsprinters-1.0.1.tar.bz2) = 2794647ff480a08f1e555d89a0f1223eff24614196b451f73e72fe2e558121494a5312b6bb7ee6f6b68ded3b991abee3f1b114acb7e5ce32782e5f4838956276
 Size (xplsprinters-1.0.1.tar.bz2) = 77212 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/05/22 21:36:32 szptvlfn Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 03:28:33 agc Exp $
 
 SHA1 (X11-xft-0.3.1.tar.gz) = 03bca9046ec6c9ef1cbf53e9b52e8d7f46b50726
 RMD160 (X11-xft-0.3.1.tar.gz) = 488bac2742d1f3bfa486ffeb5876163aa15a8ba6
+SHA512 (X11-xft-0.3.1.tar.gz) = 8f40db25453227ef9ce53b05a0c6af869e3a2efdb1d9b9ad683baf52601f320c85b09f0e514bb6ffeb17516d9b75c6772aa49613bb96272d56f06788118b7cfe
 Size (X11-xft-0.3.1.tar.gz) = 13621 bytes

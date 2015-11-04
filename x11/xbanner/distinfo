@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2005/07/20 17:38:05 kristerw Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 03:28:57 agc Exp $
 
 SHA1 (XBanner1.31.tar.gz) = 90bd958c81f30d8a92db7b89b340fd1803ca8e58
 RMD160 (XBanner1.31.tar.gz) = cf69323daed6eb0e86f5fc38721b50ab6528c3c7
+SHA512 (XBanner1.31.tar.gz) = 86adc2985c86943262b326618bcc0ae4f9234a1a78ef525e2936ec2909f7076795e0aacd6c03a94401a6db55efefde35b43118c26329345488be57f5ad08cb11
 Size (XBanner1.31.tar.gz) = 289732 bytes
 SHA1 (patch-aa) = c1598a751c6897f94ecb181e292dfd06b5ac059a
 SHA1 (patch-ab) = ccd98d3fefd4e3359cc618d6f4d614d01c4ff2c3

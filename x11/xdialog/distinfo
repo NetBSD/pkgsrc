@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2012/07/30 02:21:31 dholland Exp $
+$NetBSD: distinfo,v 1.8 2015/11/04 03:28:59 agc Exp $
 
 SHA1 (Xdialog-2.3.1.tar.bz2) = 292c552506633c54a28d51aa290277b7b5c0c708
 RMD160 (Xdialog-2.3.1.tar.bz2) = 12085dfddc9217fe5f07510c76755eb75446e658
+SHA512 (Xdialog-2.3.1.tar.bz2) = 2a0f6e15297ae3ef54a41da1b1fe2ef376d28757d47433df2b8e9918cd4f95871a630b94ec544bd848e518df7f86934030a71bf0371a1466286bf7d912335525
 Size (Xdialog-2.3.1.tar.bz2) = 457938 bytes
 SHA1 (patch-ac) = 785a6e5833617e0602699f8c7810a2db5c3354cf
 SHA1 (patch-ad) = f5d067838ce6418723fd0e7f658cea4442c88ce5

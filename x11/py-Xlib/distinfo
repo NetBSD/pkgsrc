@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2011/09/06 20:45:05 wiz Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 03:28:51 agc Exp $
 
 SHA1 (python-xlib-0.14.tar.gz) = e25e3c1284e768d3f84eaebbea4ed3e647c2a05b
 RMD160 (python-xlib-0.14.tar.gz) = be5610035fb1aee36a55e3e276582e3e31ba1cfc
+SHA512 (python-xlib-0.14.tar.gz) = 37d237a9924284c9917a4a7ede2f6cc3f57baec73db229f45b296e923bc69493322cf288b8638a8594afa68e7359994b12a1bfad2fb9421e2a42084622e064ae
 Size (python-xlib-0.14.tar.gz) = 200223 bytes
 SHA1 (patch-Xlib_____init____.py) = 201d4855b03534204723d88522d6af3529e5bd6c
 SHA1 (patch-Xlib_protocol_display.py) = e6943531a5e2ae1164e5faab2824f8e90b3d2493

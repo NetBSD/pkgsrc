@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2013/09/30 20:07:56 wiz Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 03:29:02 agc Exp $
 
 SHA1 (xf86-video-fbdev-0.4.4.tar.bz2) = 237ea14a55ca4012d6ce18fbfdc697d48d5838a2
 RMD160 (xf86-video-fbdev-0.4.4.tar.bz2) = 3f9b47251791683803e9b9ba12aa4d1c8839525b
+SHA512 (xf86-video-fbdev-0.4.4.tar.bz2) = 942ccf7e528b7cf0af19ef0efc9f5c60ab558bd865aad330f1c58a9ef063f9b38b4e62e5622270c0bfc237cb3cbc579d43b854aaa64fa2a9130eede73b1e55e9
 Size (xf86-video-fbdev-0.4.4.tar.bz2) = 293545 bytes
 SHA1 (patch-src_fbdev.c) = 18b19dc7b034692e05cf0e1201a0e82337c5fbcc

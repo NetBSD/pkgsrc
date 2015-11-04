@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2009/02/16 18:21:24 joerg Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 03:28:34 agc Exp $
 
 SHA1 (imwheel-0.9.9.tar.gz) = cbf5d40f764d4b7382538954b68bb9a6c4faa336
 RMD160 (imwheel-0.9.9.tar.gz) = 960aae8a7eabc113e3c4b875f58c4c50e5d87934
+SHA512 (imwheel-0.9.9.tar.gz) = 8c4eede0e9714a2e70e7ca828ee7c29af12cbaa49cd86212335aac4d572d284997b705ffa75784f9e731be40eec3dd087b6616e438c34556feff76c6c71ecdac
 Size (imwheel-0.9.9.tar.gz) = 411882 bytes
 SHA1 (patch-aa) = f869d434415e526b24451205383009be76829f28
 SHA1 (patch-ab) = 0fc4fb90dd32223b5dff124fb58760a48f0beebd

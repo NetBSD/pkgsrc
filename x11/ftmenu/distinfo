@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/05/13 21:36:14 sborrill Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 03:28:29 agc Exp $
 
 SHA1 (ftmenu-0.3.tar.gz) = fa115f85996fbd3b22e7f2d5ba259dab9f1d7877
 RMD160 (ftmenu-0.3.tar.gz) = 4f2cba2ba572c064f2735d0b6f9c9c773caedcef
+SHA512 (ftmenu-0.3.tar.gz) = 01e19b720fe060f70dbbbe33756346844f1f9775acd717898b97542923feb2213d5d47ee5c1c4de56b7d1a5d9664bd92ff10a5a0c6fbcd986101806bac0195af
 Size (ftmenu-0.3.tar.gz) = 83706 bytes
 SHA1 (patch-aa) = 7edc7e5972b4b093871e61541cca1404de072f8c

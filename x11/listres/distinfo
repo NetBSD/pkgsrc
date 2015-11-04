@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2012/06/03 17:58:04 wiz Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 03:28:48 agc Exp $
 
 SHA1 (listres-1.0.3.tar.bz2) = ff226b0e565c337ac1ae60027487131920b8d86b
 RMD160 (listres-1.0.3.tar.bz2) = ad3f68fe4dc7291e3d293770c8ffa87f535a9718
+SHA512 (listres-1.0.3.tar.bz2) = 999156e9fcf1636fd4a398dc3940749eeab3b514141b9dc5125bbbb4c611c0fca9d4afa7e3b127bd9e7d3e3f94b942ef3be6aa79636eaf89bef75353c8203c22
 Size (listres-1.0.3.tar.bz2) = 115429 bytes

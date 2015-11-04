@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2012/07/30 03:04:32 dholland Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 03:29:07 agc Exp $
 
 SHA1 (xhangglider-0.94.0.tar.gz) = db4808c1953aff5496d4f97d2f413fac76705b12
 RMD160 (xhangglider-0.94.0.tar.gz) = 168c2dfb22d7146411bba9b0cfc2ee4a0001c769
+SHA512 (xhangglider-0.94.0.tar.gz) = f73c07cff928c268a4cd64f8969771b838c2f11805136fe19f70529e0434f0301c771a9ad675fa3202e7cf7fafb1768e071bdd38dba0e1cb855c8652707e30b4
 Size (xhangglider-0.94.0.tar.gz) = 35189 bytes
 SHA1 (patch-aa) = 8a63b1bc53aa4431e6c354f5030cf1b1e9c13499
 SHA1 (patch-ab) = e0704527e645b5e84e59ad47b1955180c5a45658

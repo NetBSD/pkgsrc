@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2014/04/30 06:25:54 wiz Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 03:28:58 agc Exp $
 
 SHA1 (xclip-0.12.tar.gz) = aed2cff18b9aecfe3377ad064c6a67518bbec211
 RMD160 (xclip-0.12.tar.gz) = 8c19557031295e041d2f952d6706717a3d125cd8
+SHA512 (xclip-0.12.tar.gz) = 6c769878004c02d87b9eca2b33dc34edb40acc59be767a6481f207a74d52fca3725a040b0c8deffa1419b687bd73cf3124a090413c06787c0dd137b0ede795e0
 Size (xclip-0.12.tar.gz) = 63420 bytes

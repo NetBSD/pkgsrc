@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2015/05/09 01:37:12 mef Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 03:29:09 agc Exp $
 
 SHA1 (xmon.1.5.6.tar.gz) = bf354628f92a4cc92db1af7c1adb96335d2bacfa
 RMD160 (xmon.1.5.6.tar.gz) = 15be4e458e57a88c1d73e9339bf9577d47169811
+SHA512 (xmon.1.5.6.tar.gz) = e9ef12f0a91236d0b2934961b4184a615ec9e56a74d8ad8c71ea4f259977cc7237492c509ef4e0a61c637c06b66620c6fdff932245cb29358b91d12a57bf6ed5
 Size (xmon.1.5.6.tar.gz) = 70564 bytes
 SHA1 (patch-ab) = 2b23ab7d8f9fcc2d627320a2aa23e425365a59ec

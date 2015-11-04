@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.21 2012/12/19 14:25:56 jperkin Exp $
+$NetBSD: distinfo,v 1.22 2015/11/04 03:29:06 agc Exp $
 
 SHA1 (xforms-1.0.tar.gz) = 865086d2885331ce30b05c7aa07cd8c3d02ce87b
 RMD160 (xforms-1.0.tar.gz) = 2972fb4534d3794b2027e81f4222f20a04cc81f8
+SHA512 (xforms-1.0.tar.gz) = 5ac45dc8dd906269e593adead5c04084ffbeacb9a3c49228203bffe6c4c541e4a5cffa0d4ec61a80d45843a0dbae14492947ad481c8449759699ce9bd8577223
 Size (xforms-1.0.tar.gz) = 1012878 bytes
 SHA1 (patch-aa) = d33ccbf03d2896c0a0495b0a806a7e258ab010a3
 SHA1 (patch-ab) = fec198a109b9c7af16e3297a7f6048a501495723

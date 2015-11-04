@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2012/06/03 18:13:21 wiz Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 03:29:00 agc Exp $
 
 SHA1 (xeyes-1.1.1.tar.bz2) = efe6116d31a7f69e4fb6038613e52b0960b9b61c
 RMD160 (xeyes-1.1.1.tar.bz2) = cc232409952e59e6d8e634c2728edde88bc4ed62
+SHA512 (xeyes-1.1.1.tar.bz2) = 3cb734239fa3180a9cc0eb2564c5a04f5e5c64ea314079c0604cebdbb821132f95a2c113dab476af8820308f0e6dbd4eac02b5da45dc2ed78a5d3ca010453618
 Size (xeyes-1.1.1.tar.bz2) = 113757 bytes

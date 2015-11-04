@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.10 2013/06/16 17:32:06 dholland Exp $
+$NetBSD: distinfo,v 1.11 2015/11/04 03:29:00 agc Exp $
 
 SHA1 (xdm3d-1.0.tar.gz) = 494a33aefee0c1545331b657bf47b90634b69648
 RMD160 (xdm3d-1.0.tar.gz) = 6a60c3afaf0756fc2c04256a79c61d413ee1a473
+SHA512 (xdm3d-1.0.tar.gz) = 6875d0d8a814d57e19c70c03a5094f7c8a446a678caa53503206f00fe75be34d7438b7fc33a471feb658d87ac1f0c8b761ee2c29f852777ec958f553cd162788
 Size (xdm3d-1.0.tar.gz) = 157858 bytes
 SHA1 (xdm3d-jumbo-patch-20130616.gz) = 5a41cc4b03a47d49d4a864cd2395da077cb8582c
 RMD160 (xdm3d-jumbo-patch-20130616.gz) = a7d5f8ecc57b46aaa525c481d8b66f0af95b969a
+SHA512 (xdm3d-jumbo-patch-20130616.gz) = 690593a43900ae917a7b76c1a73d43f8db6cf3d8768c187ab978616f64dd43a7fe2938195087cfe9a00df72310bc156b026a13af2ee3cb4cd3e09169c17b17b1
 Size (xdm3d-jumbo-patch-20130616.gz) = 38677 bytes
 SHA1 (patch-Xresources_3D) = db96d677d89ee86bad76785ac2bd254d902a0876
 SHA1 (patch-ab) = 512f3df37f5480203c99198760fe98e2e127ae15

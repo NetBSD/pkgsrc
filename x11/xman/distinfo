@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.8 2015/03/07 18:32:44 wiz Exp $
+$NetBSD: distinfo,v 1.9 2015/11/04 03:29:09 agc Exp $
 
 SHA1 (xman-1.1.4.tar.bz2) = b64516dab2b1c407b28ce3822a98b93178e29f02
 RMD160 (xman-1.1.4.tar.bz2) = cb4e3a9444c27c9bd0a7388802db491e32cc96db
+SHA512 (xman-1.1.4.tar.bz2) = 785e973eb15b0300de08aace24f3604dfee61421c7f64ea4cde2e280480bf5d3ad797ab8208668dc023a375494f8db7534fbcaa1c1ef16e79464fdd017b5da68
 Size (xman-1.1.4.tar.bz2) = 188259 bytes

@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.7 2009/12/01 13:58:33 itohy Exp $
+$NetBSD: distinfo,v 1.8 2015/11/04 03:28:50 agc Exp $
 
 SHA1 (oneko-1.1b.tar.Z) = 47819395dc1c13c7d08579fd712714b66e5fb18d
 RMD160 (oneko-1.1b.tar.Z) = 4e83faa1c4ac134bee436b291a50586146b30741
+SHA512 (oneko-1.1b.tar.Z) = d99a20dfe28be3ad3377623e19f890af5bd9e338f90b079de92c2d03c0f10d5ef0a397346b6045e68eb2ca5ab37b839448dc72b79d6cb8de1a176701b006d3c6
 Size (oneko-1.1b.tar.Z) = 76477 bytes
 SHA1 (oneko-1.2.diff.gz) = 0594737a32d0a0d32c9261ed7f38165818ad593b
 RMD160 (oneko-1.2.diff.gz) = d173dcbdee66ad09dd2345ecc6c266d08d6b0c19
+SHA512 (oneko-1.2.diff.gz) = eca934d174dd924ad279a103ca81cf3eea97e24f0bf59df4dd7411485b67f898f76929fec735b46f6b145ec3120707e09c21b3d6b468db276ca0076a45ec552f
 Size (oneko-1.2.diff.gz) = 12637 bytes
 SHA1 (patch-aa) = d4818a97e0f8c0c3ef41b31019d8e0ac18190a5f
 SHA1 (patch-ab) = 8f2e9bbb490e47094bd934f8b4badea94daed795

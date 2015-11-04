@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/04/17 07:08:59 wiz Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 03:29:07 agc Exp $
 
 SHA1 (xhost-1.0.7.tar.bz2) = 8abfb0554e14a074f0dbfdda4919880e088545cb
 RMD160 (xhost-1.0.7.tar.bz2) = 6f95db06a976b1e8059fd6752e92309011afac09
+SHA512 (xhost-1.0.7.tar.bz2) = 670a8c97291565f6c36c94e135f7bd60a572bb42b4fca9d2460823db0d0576187c64f9b876ed60d348029d3f74a732862eea4ce889a6b6b9c97665746a38b1d7
 Size (xhost-1.0.7.tar.bz2) = 135767 bytes

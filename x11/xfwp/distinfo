@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/08/03 07:29:42 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 03:29:07 agc Exp $
 
 SHA1 (xfwp-1.0.3.tar.bz2) = ee1b47d2525e2132be628304577e43727077fa3b
 RMD160 (xfwp-1.0.3.tar.bz2) = 640b450c63ea9d3d35fb7647d3bb1577d34bd17c
+SHA512 (xfwp-1.0.3.tar.bz2) = 493cfff0c90ada372c76f3fc49278bc4b1bf30c013f325d0358d0bd7004144bd540e86dee0fadd0bfbe1c47b91437a61dd7e9ff21d747d75ce9f42750fb17609
 Size (xfwp-1.0.3.tar.bz2) = 144719 bytes

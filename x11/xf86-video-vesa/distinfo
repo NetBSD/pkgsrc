@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.9 2015/06/29 11:12:05 wiz Exp $
+$NetBSD: distinfo,v 1.10 2015/11/04 03:29:04 agc Exp $
 
 SHA1 (xf86-video-vesa-2.3.4.tar.bz2) = 88e74ccc5c11fdb60539bd474ba978eeb4f28a23
 RMD160 (xf86-video-vesa-2.3.4.tar.bz2) = b5818c0d6b8ee6acfcadc576a0d52fc18a216457
+SHA512 (xf86-video-vesa-2.3.4.tar.bz2) = 5a01c295a03f367281f49bb186a003a91da3aa4cff7c37ef3fb83889b595f641745899c62e4c0954a1daf4b18bd0e1bcbbe1b87d2863d1ce71feffa1744e892d
 Size (xf86-video-vesa-2.3.4.tar.bz2) = 285675 bytes
