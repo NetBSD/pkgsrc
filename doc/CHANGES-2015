@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4474 2015/11/04 21:26:45 adam Exp $
+$NetBSD: CHANGES-2015,v 1.4475 2015/11/04 21:45:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7673,7 +7673,8 @@ Changes to the packages collection and infrastructure in 2015:
 	Added textproc/erlang-p1_yaml version 0.20151007 [fhajny 2015-11-04]
 	Added textproc/erlang-xmlrpc version 1.15.20150506 [fhajny 2015-11-04]
 	Updated security/gnupg21 to 2.1.9 [tnn 2015-11-04]
-	Updated audio/py-audiotools to 3.1 [adam 2015-11-04]
+	Updated audio/py-audiotools to 3.1.1 [adam 2015-11-04]
 	Added archivers/py-lhafile version 0.2.1 [adam 2015-11-04]
 	Added emulators/fs-uae version 2.6.2 [adam 2015-11-04]
 	Added emulators/fs-uae-launcher version 2.6.2 [adam 2015-11-04]
+	Updated www/squid3 to 3.5.11 [adam 2015-11-04]
