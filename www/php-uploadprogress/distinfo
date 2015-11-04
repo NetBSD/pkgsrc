@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/08/30 15:04:45 taca Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 02:47:23 agc Exp $
 
 SHA1 (php-uploadprogress/uploadprogress-1.0.3.1.tgz) = 5fd50a1d5d3ee485e31e16d76b686873125e8dec
 RMD160 (php-uploadprogress/uploadprogress-1.0.3.1.tgz) = 41eca2504c467a3bacc716db06ff8e42501586a8
+SHA512 (php-uploadprogress/uploadprogress-1.0.3.1.tgz) = c317a30ed81430184b643e2755867cdccf9848312aa31a5527e4fe229ac19ee3099121de8e253207b55dd7e788c28720bd3c477663c4ca15100478647a6dc1bb
 Size (php-uploadprogress/uploadprogress-1.0.3.1.tgz) = 9040 bytes

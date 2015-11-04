@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2014/12/03 06:46:20 wen Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 02:47:17 agc Exp $
 
 SHA1 (Plack-Middleware-Test-StashWarnings-0.08.tar.gz) = 11c62305b2268861f827ac5b983e25ead6d9db6b
 RMD160 (Plack-Middleware-Test-StashWarnings-0.08.tar.gz) = c2017c9ac98b9c4494d871f589d3e1e1a7761d19
+SHA512 (Plack-Middleware-Test-StashWarnings-0.08.tar.gz) = 6dc272355c545eb406ad5fce9cc1f40dea9beabe3d8a9d73a2055904098dae7833046d64a69e508f57e3b6edd0814cb004a635c39f49dfc39848f5b6c2e7934b
 Size (Plack-Middleware-Test-StashWarnings-0.08.tar.gz) = 23970 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/07/15 18:37:02 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:47:24 agc Exp $
 
 SHA1 (URLObject-2.4.0.tar.gz) = ff3eafe9810dc117e172f24f366743b060831876
 RMD160 (URLObject-2.4.0.tar.gz) = 9479430cfb9fb1dee2580513253ca735debe6eed
+SHA512 (URLObject-2.4.0.tar.gz) = 1334c8d8dbb93f50fb6672ae5c2e1dbb8c880af65c18c96c7bc65bb46ae894ab0696d36236036c1e4434a6e75b692ecd0b37055ef9b55fb50ffbaf13197b1701
 Size (URLObject-2.4.0.tar.gz) = 12533 bytes

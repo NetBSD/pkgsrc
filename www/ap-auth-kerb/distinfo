@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2014/08/05 18:47:31 spz Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 02:46:47 agc Exp $
 
 SHA1 (mod_auth_kerb-5.4.tar.gz) = 22673081419bc2e98789fe2f998968c0cf10c2d4
 RMD160 (mod_auth_kerb-5.4.tar.gz) = 13bebc9f5b77b11b1a3cd3a1197a7535e541037c
+SHA512 (mod_auth_kerb-5.4.tar.gz) = 93fdf0e43af1c24e8c8204d09240b708747068ef99dd8d21b45cb4d132d31e6d582d49ea5e23b905f55cb0d4a20b1ecb58de1bcbfdad1d016e536fc622b63214
 Size (mod_auth_kerb-5.4.tar.gz) = 93033 bytes
 SHA1 (patch-aa) = 64c80c3fe355d114bdd590f7564725354c39567a

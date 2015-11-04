@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 14:08:37 wiz Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 02:47:14 agc Exp $
 
 SHA1 (Kwiki-Search-0.12.tar.gz) = 024d53034a2f207751855e3f4db3f04a949358cb
 RMD160 (Kwiki-Search-0.12.tar.gz) = 3e25d2210c03b386c25aa45683832289d53c057b
+SHA512 (Kwiki-Search-0.12.tar.gz) = 96e711091c5443c4c00326843b7130c9f6054fdd1288796779983621f1cd205e9f3c9b6ca49e863eb5911e956e26206ce8ffcd847c94a27f328fd49d87e02167
 Size (Kwiki-Search-0.12.tar.gz) = 8180 bytes

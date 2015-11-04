@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/04/02 23:08:03 rodent Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 02:47:29 agc Exp $
 
 SHA1 (furl-0.4.5.tar.gz) = b0abfc3381d7c21f457fea32eebf4e519dfffc33
 RMD160 (furl-0.4.5.tar.gz) = efc8bad8790fde324e455a12fe247e5bce479d03
+SHA512 (furl-0.4.5.tar.gz) = b9774ea09e2018f518b6cee7704a2bb4c30eb971c9a9ae8581c9cc062e723b51b7ad98dcb6ea11e71b87b42832f0bf73da952e4749781e78b81ad0d77fc33cf5
 Size (furl-0.4.5.tar.gz) = 29653 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2014/06/09 20:04:42 schmonz Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 02:47:13 agc Exp $
 
 SHA1 (Kwiki-Archive-Rcs-0.16.tar.gz) = 2351644849c5fb39bc39cecfcf6e288077db7975
 RMD160 (Kwiki-Archive-Rcs-0.16.tar.gz) = fb57171eacdadbfd2e85bda68284cee936602ce8
+SHA512 (Kwiki-Archive-Rcs-0.16.tar.gz) = c40bb032c7272ec0a679367f99f90ef08218fcaa0f1ce5000e897b2c7d0ce0cdd6335d90962fd419e59e23e63b7224a3df5d9b2ce0de36364dae214953c1c182
 Size (Kwiki-Archive-Rcs-0.16.tar.gz) = 16080 bytes

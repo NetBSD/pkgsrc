@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2013/08/22 14:21:23 wen Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 02:47:03 agc Exp $
 
 SHA1 (Catalyst-Authentication-Credential-HTTP-1.016.tar.gz) = ec9231bc7eeabbb6e23b783ad38210fe8c2d1a4f
 RMD160 (Catalyst-Authentication-Credential-HTTP-1.016.tar.gz) = 1704958835c8657277e7127aa792a648f38586ce
+SHA512 (Catalyst-Authentication-Credential-HTTP-1.016.tar.gz) = 76285e217ecc9ec05f09451209a04843851d7c125e784408e55a0a671886f2bdec9ab36c528ded07d26c28ea389a58b6d24915530f08dd40687c83fd2a4c4509
 Size (Catalyst-Authentication-Credential-HTTP-1.016.tar.gz) = 42770 bytes
