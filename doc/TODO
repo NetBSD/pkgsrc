@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15050 2015/11/04 09:45:15 wiz Exp $
+$NetBSD: TODO,v 1.15051 2015/11/04 09:53:51 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1521,7 +1521,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-mezzanine-4.0.1
 	o py-munkres-1.0.7
 	o py-musicbrainz-0.7.4
-	o py-mutagen-1.29
 	o py-ncclient-0.4.3
 	o py-netaddr-0.7.15
 	o py-newt-0.52.18
