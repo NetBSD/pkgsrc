@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2005/12/05 20:50:54 rillig Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 01:17:41 agc Exp $
 
 SHA1 (antonym-1.9.tar.gz) = 0c1fd06f175a3c13900479460824c07a4bbeb480
 RMD160 (antonym-1.9.tar.gz) = b49db8adcd87e57f22fe1095c8307fecd1e08f6a
+SHA512 (antonym-1.9.tar.gz) = 2a4d2dcacb950af336b3d97b69f4f76924a1004bf32789189f86bea6eb5ccec303728f59985d7343706b35c3a1ea1d533bddd566a88731c2483e0e04fa0ea12a
 Size (antonym-1.9.tar.gz) = 14902 bytes
 SHA1 (patch-aa) = 36c055595784ff8cd6fc600e3ac3ed5ce4f03275
 SHA1 (patch-ab) = ccb7b3bca2faf22aa8948aea5d8df2fada83388f

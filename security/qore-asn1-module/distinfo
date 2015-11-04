@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2014/12/30 16:01:22 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:18:06 agc Exp $
 
 SHA1 (qore-asn1-module-0.0.3.tar.gz) = c754b6344f7989265f594f6640caa4bcad2477ac
 RMD160 (qore-asn1-module-0.0.3.tar.gz) = 6d96555be5029a91378a4a34f999570cf02b62ac
+SHA512 (qore-asn1-module-0.0.3.tar.gz) = b468a7386188219061a4ba1ecc43dfc4fffa1d1ba50fcce98fc18849add400e50203eb824ae7fd93297f4c2debae847c6b72e0d4792f1d4e04a7c0adef7fd355
 Size (qore-asn1-module-0.0.3.tar.gz) = 442116 bytes
 SHA1 (patch-configure) = dbe35003e691a61db7adf9bacec949cf125bff4e

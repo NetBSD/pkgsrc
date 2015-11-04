@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2014/11/02 20:38:16 agc Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:17:48 agc Exp $
 
 SHA1 (libgfshare-1.0.5.tar.bz2) = 379dd54d198df300ecbd3d848d7e3f092fd60b9f
 RMD160 (libgfshare-1.0.5.tar.bz2) = b95284bd5c531de89f7fa07bf5faaa22afc38c52
+SHA512 (libgfshare-1.0.5.tar.bz2) = 7799ad35e0bb3046e946a0a14bcd98641a9ea11e8651729bdeb7ef2a37ea0bfffafa65bdc8564596750176109da8b71326d52a88d292a297d2c13dcc29f1f499
 Size (libgfshare-1.0.5.tar.bz2) = 238018 bytes
