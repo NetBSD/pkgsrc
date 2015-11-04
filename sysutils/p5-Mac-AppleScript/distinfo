@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/02/18 02:56:04 seb Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:32:24 agc Exp $
 
 SHA1 (Mac-AppleScript-0.04.tar.gz) = 5f1d93e323b624ab38b2688b1c7baebc990976b4
 RMD160 (Mac-AppleScript-0.04.tar.gz) = 6be9c674149e5647299f0523839d6db6f8b2b323
+SHA512 (Mac-AppleScript-0.04.tar.gz) = cedba2ce7b900065a8a7b5b80cf00644c73b2f3dfa5125d4082b95bc5efd357bd235584f8c9ddcafe73eba32c95ffe55596a465161418cea49578f8c61ed8470
 Size (Mac-AppleScript-0.04.tar.gz) = 3420 bytes

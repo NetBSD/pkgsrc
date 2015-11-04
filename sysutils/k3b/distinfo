@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.22 2014/11/15 03:35:26 markd Exp $
+$NetBSD: distinfo,v 1.23 2015/11/04 01:32:18 agc Exp $
 
 SHA1 (k3b-2.0.3a.tar.xz) = f1001db3b5b32ef6bdb827742f1ca357c82b216f
 RMD160 (k3b-2.0.3a.tar.xz) = 5f5cd852c2d8368b1899bf80e27f36a3afdc670c
+SHA512 (k3b-2.0.3a.tar.xz) = 008d69f3d60dfcd39c787c8fb0b50cdf7b29f1cf551c2c0aa0b6e995ec9d67b26edcb0670d5cd428afcc4e2a60c9e6170a9316b90978dfcc3693d27db98e7472
 Size (k3b-2.0.3a.tar.xz) = 9864468 bytes
 SHA1 (patch-libk3b_jobs_k3bdatatrackreader.cpp) = 63e9f83183a7407e775813960fddea410f2a4d2c
 SHA1 (patch-libk3b_tools_k3bcdparanoialib.cpp) = 15ec2a4191770991137a29ef6ca8605c3626374a

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/06/02 15:10:52 martin Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:32:05 agc Exp $
 
 SHA1 (afbinit_1.0.orig.tar.gz) = bb02434819301bb55e1d7f984540868353bd6153
 RMD160 (afbinit_1.0.orig.tar.gz) = a56f33696865fbc77b4b27f10b680b3d9a359635
+SHA512 (afbinit_1.0.orig.tar.gz) = 2b1f93439f500796fbf8cb964fd4b8a7a5f0a391545104a7775d2c4e5fe2ee0b3ed78b3e80fa39c03a028bf25ee89d3b25c9f77f2b4190d3a587bf3d77ae1995
 Size (afbinit_1.0.orig.tar.gz) = 2979 bytes
 SHA1 (patch-aa) = ea57e2ca73123f3e71bb733d84fe5dc6d7db501e

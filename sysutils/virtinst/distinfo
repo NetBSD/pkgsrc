@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2012/09/05 21:09:10 gls Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:32:34 agc Exp $
 
 SHA1 (virtinst-0.600.3.tar.gz) = 906bf5be3cca23cda77486ea06655de23e4bcac4
 RMD160 (virtinst-0.600.3.tar.gz) = e6fedfaaf40bdbf29b18df5381efe875908d4149
+SHA512 (virtinst-0.600.3.tar.gz) = fdb51919cd24bd83857c6a078bbc2469a184b98966da4afc1e2b4f39d570b570bd2d408c233e7049e8f7d57f137426d361496d349afff9c7dde6833fb5790332
 Size (virtinst-0.600.3.tar.gz) = 8174690 bytes
 SHA1 (patch-setup.py) = dee3d46c73968d2df057808a20f589c236943628

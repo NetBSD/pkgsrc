@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2008/07/18 14:26:24 rhaen Exp $
+$NetBSD: distinfo,v 1.8 2015/11/04 01:32:25 agc Exp $
 
 SHA1 (Unix-Syslog-1.1.tar.gz) = 42728e41b4d85e2e2e5f711939e329a0500f56c4
 RMD160 (Unix-Syslog-1.1.tar.gz) = d5b54dcf7e283a86095b2d65c15495a1f6f5eb35
+SHA512 (Unix-Syslog-1.1.tar.gz) = cb1ea3846844b7c82e081f3bb778c698b681d1875b83201b1beef2267a288890c6fc62af8edbfbc04553a9caa1ebafa429130e784f31c9531719b11a4c47c3ba
 Size (Unix-Syslog-1.1.tar.gz) = 13738 bytes

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/04/28 00:29:21 tonnerre Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:32:07 agc Exp $
 
 SHA1 (bcollect-0.6.0.tar.gz) = d8df7f0220c82e268e48fea18e5daf018c806830
 RMD160 (bcollect-0.6.0.tar.gz) = 0baa1d33cac38cafc331401bf8e974d11fe2687f
+SHA512 (bcollect-0.6.0.tar.gz) = 5e5a0cb213dcf08a2f1d71d42053f7611c8959517438fcc96a880386bb4d5346d69781d0d487c2602359221d15ec38bac9a62a446a27b75b101882a1f3c6d16a
 Size (bcollect-0.6.0.tar.gz) = 204248 bytes
 SHA1 (patch-aa) = 94d56d05594b529c56833e7879ef2dc4a5bfb945
