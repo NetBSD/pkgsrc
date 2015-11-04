@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2014/02/06 10:40:10 abs Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 02:47:05 agc Exp $
 
 SHA1 (Catalyst-Plugin-StackTrace-0.12.tar.gz) = 0058e3b92be401bcb0cc4029236f85fd43fabd47
 RMD160 (Catalyst-Plugin-StackTrace-0.12.tar.gz) = 7f5a8ae12f594e9d07303906d846ca05bf3c0a53
+SHA512 (Catalyst-Plugin-StackTrace-0.12.tar.gz) = 881dbb2670c39bf98f3a771074be9581cc2bd792a60da82529e165172a958d6a4e1158773c53e54b59ed57499ff8b26a141961e27825a21593ca3b455849817a
 Size (Catalyst-Plugin-StackTrace-0.12.tar.gz) = 23238 bytes

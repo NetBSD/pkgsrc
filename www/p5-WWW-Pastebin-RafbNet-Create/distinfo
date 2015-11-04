@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/01/17 15:42:56 seb Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:47:21 agc Exp $
 
 SHA1 (WWW-Pastebin-RafbNet-Create-0.001.tar.gz) = af8ee45f6bbf1efede1c725ae6556a529199f29d
 RMD160 (WWW-Pastebin-RafbNet-Create-0.001.tar.gz) = 66471e4b987380abfa99eacde645bd4e0aacbf54
+SHA512 (WWW-Pastebin-RafbNet-Create-0.001.tar.gz) = 4ab552c91e995c53c9784fb6ab91945afd1c254e9410c3352ce9e3b0bb18f77ec6569afb38d4a18c4155afc239ca2659028bc12e10bc3a9caf90b16965f232f5
 Size (WWW-Pastebin-RafbNet-Create-0.001.tar.gz) = 6114 bytes

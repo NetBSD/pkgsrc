@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/09/13 15:32:01 taca Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 02:47:34 agc Exp $
 
 SHA1 (http_router-0.11.2.gem) = 149ee0854244c8ec403b36b4f52b07066447e26b
 RMD160 (http_router-0.11.2.gem) = 0e7b9c3457b861488ec7b356873e9ab78f2fdd79
+SHA512 (http_router-0.11.2.gem) = 6059e9cdcca4fa1d94d5126d6b51d6a2dede0d33a57b18490d63dfb727166b669e2534f6f00bf3405f62f48745f61983b3d23a4715a2b1557cc7fd1152fa1f3d
 Size (http_router-0.11.2.gem) = 156672 bytes

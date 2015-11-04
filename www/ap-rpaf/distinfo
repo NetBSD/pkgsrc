@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2006/03/06 19:31:03 tv Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:46:47 agc Exp $
 
 SHA1 (mod_rpaf-0.5.tar.gz) = 0a0763c7c146e83288d2a621056da20d7b85b6cc
 RMD160 (mod_rpaf-0.5.tar.gz) = 237cf8a772b772fc186f5162de35d4a975abec88
+SHA512 (mod_rpaf-0.5.tar.gz) = 1962b31e5d7272612febe3148f3ed094c4f95b8beb1faea93822216bc0453128451c523d5cf58a8fc1eccb7548ce4da58a18376eb4c547fdf1c7af6c1f9acd2d
 Size (mod_rpaf-0.5.tar.gz) = 4482 bytes

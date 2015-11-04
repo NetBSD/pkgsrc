@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/07/07 08:56:50 sborrill Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:47:10 agc Exp $
 
 SHA1 (HTML-WikiConverter-DokuWiki-0.53.tar.gz) = dc30252e400a997d57e6253fed7f26c5c6231a43
 RMD160 (HTML-WikiConverter-DokuWiki-0.53.tar.gz) = 9a2b2a6aad79fde2f6e9c47de4a894117d257164
+SHA512 (HTML-WikiConverter-DokuWiki-0.53.tar.gz) = 958ee11c36cdb8a232fa06245b6d311eaa45c895cf3e9e9b9352cf1ba8264a719b67b204d636eea9211d87eb412d70fe7a367fe412add85b614ca594c7db21b4
 Size (HTML-WikiConverter-DokuWiki-0.53.tar.gz) = 7300 bytes
