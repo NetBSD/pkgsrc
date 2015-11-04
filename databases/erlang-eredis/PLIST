@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2015/11/04 13:45:44 fhajny Exp $
+lib/erlang/lib/eredis/ebin/eredis.app
+lib/erlang/lib/eredis/ebin/eredis.beam
+lib/erlang/lib/eredis/ebin/eredis_client.beam
+lib/erlang/lib/eredis/ebin/eredis_parser.beam
+lib/erlang/lib/eredis/ebin/eredis_sub.beam
+lib/erlang/lib/eredis/ebin/eredis_sub_client.beam
+lib/erlang/lib/eredis/include/eredis.hrl
+lib/erlang/lib/eredis/include/eredis_sub.hrl
