@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/01/03 14:08:18 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:47:25 agc Exp $
 
 SHA1 (grappelli-safe-0.2.11.tar.bz2) = 8a850e959e84eb60403b724b545b3a615c83a845
 RMD160 (grappelli-safe-0.2.11.tar.bz2) = 2910fe6d7c77c8ff347cee9b4b54497f5ae7b13d
+SHA512 (grappelli-safe-0.2.11.tar.bz2) = 95adac3531246cfd98ecea17245c144b26d8732ef7053c4fe94dc6974e1e0268a726ceedb194dc44dcabf5d95f28a7a7e073470b6ea6dc78c198355ed2e9b849
 Size (grappelli-safe-0.2.11.tar.bz2) = 614529 bytes

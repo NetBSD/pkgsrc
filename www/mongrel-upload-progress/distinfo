@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/04/04 15:25:54 jlam Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:46:58 agc Exp $
 
 SHA1 (mongrel_upload_progress-0.2.2.gem) = 7a40e6d0bfcfaa055681a3575f152df63261f676
 RMD160 (mongrel_upload_progress-0.2.2.gem) = a257f8b7ddae0719e045e64c64230e26324f3302
+SHA512 (mongrel_upload_progress-0.2.2.gem) = 067b5b784765417c1516f6921cdfff533923777a520a635935f2876ba6447e62c38244d096fd6297ea6502a4f4470425f6eaa282745b94ef4282590ea993b6fd
 Size (mongrel_upload_progress-0.2.2.gem) = 8704 bytes

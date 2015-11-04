@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/11/10 10:44:57 sborrill Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:46:48 agc Exp $
 
 SHA1 (mod-cband-0.9.7.5.tgz) = 316ba3068fea6b58c0cbd173b1f58df882643728
 RMD160 (mod-cband-0.9.7.5.tgz) = 19ea621a1f46878dd9178dd2186479ce2fb9a922
+SHA512 (mod-cband-0.9.7.5.tgz) = 71b6b9946c24a7f424746c8f9add721ed1a14681b97a3d41115fbc228b83dba7068089f48d8acc41b108117f4abe3f0b55a77af0faefd0c84975e7003607714a
 Size (mod-cband-0.9.7.5.tgz) = 70713 bytes

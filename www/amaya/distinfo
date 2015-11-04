@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.24 2012/01/08 22:15:21 dholland Exp $
+$NetBSD: distinfo,v 1.25 2015/11/04 02:46:47 agc Exp $
 
 SHA1 (amaya-fullsrc-11.3.1.tgz) = 7b180434a8271ecdeb3ae821997619bc3dcd2da4
 RMD160 (amaya-fullsrc-11.3.1.tgz) = 12206de82551ed2eb548e3c778909bf0d9cafe43
+SHA512 (amaya-fullsrc-11.3.1.tgz) = 9af00a665ef6d36638c8a998c36b689bc05cb67050143c37e62ffefcff26805da36f4ab28003255599bef63cc9bd4615023231a024a7e11b14917c3cdc1a2286
 Size (amaya-fullsrc-11.3.1.tgz) = 37240030 bytes
 SHA1 (patch-Amaya_amaya_HTMLedit_c) = bda20efa29e6ace95222d42574e7acd3afb55834
 SHA1 (patch-Amaya_thotlib_base_platform_c) = 034512f7886fb15089a1134538891f9c62c0c90b

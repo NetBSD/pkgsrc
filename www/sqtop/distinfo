@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/04/12 12:47:39 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:47:39 agc Exp $
 
 SHA1 (sqtop-2013-12-17.tar.bz2) = 930608bff0c4821f78976d50aec8bb27c9218adf
 RMD160 (sqtop-2013-12-17.tar.bz2) = bc3e0cb9398a7b9bdc7c9ea158a0ee605697b0fc
+SHA512 (sqtop-2013-12-17.tar.bz2) = 9730f9c7a7ef77a02fbfc3c4cc6670573a6b8e1cf7bce79df9b882404365d63ad6a7171c9503b590dd007025eae718a89638dd2bac55cfd5fa6968698581909b
 Size (sqtop-2013-12-17.tar.bz2) = 117247 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 14:08:37 wiz Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 02:47:13 agc Exp $
 
 SHA1 (Kwiki-PreformattedBlocks-0.11.tar.gz) = 0e16ade43bea8d792d9ec8443be276038aac1489
 RMD160 (Kwiki-PreformattedBlocks-0.11.tar.gz) = 346926ed7fd848659f4ef3d00c6d200c9f2ae389
+SHA512 (Kwiki-PreformattedBlocks-0.11.tar.gz) = 6a7d39453522b100fe5bc2589ec5226f05626885fbad54a4d69f9bc8aa9628e8d7df53d7e2e1af5ef76df86ec9d9b739f6d14975105a7d9681b703a77fc5b17d
 Size (Kwiki-PreformattedBlocks-0.11.tar.gz) = 7708 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/11/16 05:22:16 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:47:32 agc Exp $
 
 SHA1 (rekonq-2.4.2.tar.xz) = 4317cd5f7d9eeea7b6c6a900e803694f3a32c59a
 RMD160 (rekonq-2.4.2.tar.xz) = 8b9777d00684075b02dd75de12b03367e172e1d1
+SHA512 (rekonq-2.4.2.tar.xz) = 55594dac99b06db7986198f1b6e8efdb0770e2219a33d34db7919d4d0d741ef026b0e12d284ae9b2e1a9b6e40efcdf4f0870e9b0819bff14f45162c5b464ba78
 Size (rekonq-2.4.2.tar.xz) = 5161348 bytes

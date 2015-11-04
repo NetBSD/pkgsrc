@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.17 2013/07/30 13:01:11 tez Exp $
+$NetBSD: distinfo,v 1.18 2015/11/04 02:46:52 agc Exp $
 
 SHA1 (cvsweb-3.0.6.tar.gz) = 6a9c9d2cc120bc0f0b3c2652a06f587bce8845a8
 RMD160 (cvsweb-3.0.6.tar.gz) = e933c3814ea52c7fb9cec65e088c9ab778da2fee
+SHA512 (cvsweb-3.0.6.tar.gz) = 32ac58bcb025746e4cc20bdc12d1bd915e2286a4093afebf8d60cb94a70ac614301f9b7f0a175458b14262a03d3d2eb8c29eabaf9127bef1aa6847905f331cc6
 Size (cvsweb-3.0.6.tar.gz) = 72484 bytes
 SHA1 (patch-cvsweb.cgi) = 8808dbc9d42539b22225b6fcc3502c2eebab5140

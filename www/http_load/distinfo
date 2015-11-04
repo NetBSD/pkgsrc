@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.10 2011/02/10 12:36:31 obache Exp $
+$NetBSD: distinfo,v 1.11 2015/11/04 02:46:55 agc Exp $
 
 SHA1 (http_load-12mar2006.tar.gz) = a989253cf32f9ef038dfaa2c254773ea9912137f
 RMD160 (http_load-12mar2006.tar.gz) = 6202297454b24694315880258049da8dafc900b7
+SHA512 (http_load-12mar2006.tar.gz) = 3966ae3f16190de816f499eece7158de8d518178967b4a5b0e5ca5efd191eccdba1bcd7260a517487d0c0a7f240fa3bf0df30004e3c1321b0c127f3bbaa0efc1
 Size (http_load-12mar2006.tar.gz) = 17033 bytes
 SHA1 (patch-aa) = ca3967a62bd9cc0d2dceefe60a29e43bf3a888a1
 SHA1 (patch-http__load.c) = c34a8df609492ea18325d9df9e02644b93f06699

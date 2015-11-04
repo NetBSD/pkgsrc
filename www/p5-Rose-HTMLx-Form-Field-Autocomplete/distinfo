@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/07/15 08:43:49 abs Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:47:17 agc Exp $
 
 SHA1 (Rose-HTMLx-Form-Field-Autocomplete-0.02.tar.gz) = 2ba391cf3172a868014832682416bb4a8cd70596
 RMD160 (Rose-HTMLx-Form-Field-Autocomplete-0.02.tar.gz) = 2ded29f84df1624477844ab8a8d27f7eb4ef89fb
+SHA512 (Rose-HTMLx-Form-Field-Autocomplete-0.02.tar.gz) = 7afe2a5e9a6157ef475bbfe5dae42d1ed954d6ed3c6d2cc539e11fa7f57967bfcf84b0ce1f39258886783083e5d877d765a268e30d62250e018af993e6cc90d8
 Size (Rose-HTMLx-Form-Field-Autocomplete-0.02.tar.gz) = 2928 bytes
