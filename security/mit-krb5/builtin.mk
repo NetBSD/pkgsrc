@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.12 2014/02/28 12:17:20 obache Exp $
+# $NetBSD: builtin.mk,v 1.13 2015/11/04 15:32:34 jperkin Exp $
 
 BUILTIN_PKG:=	mit-krb5
 
@@ -16,6 +16,7 @@ BUILTIN_FIND_HEADERS.H_MIT_KRB5=	krb5.h
 BUILTIN_FIND_GREP.H_MIT_KRB5=		Massachusetts Institute of Technology
 BUILTIN_FIND_FILES_VAR:=		SH_KRB5_CONFIG
 BUILTIN_FIND_FILES.SH_KRB5_CONFIG=	/usr/bin/krb5-config
+BUILTIN_FIND_FILES.SH_KRB5_CONFIG+=	/usr/lib/mit/bin/krb5-config
 BUILTIN_FIND_GREP.SH_KRB5_CONFIG=	^[ 	]*--version)
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
