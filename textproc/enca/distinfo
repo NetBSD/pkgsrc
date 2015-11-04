@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2013/11/13 19:44:03 wiz Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 01:59:28 agc Exp $
 
 SHA1 (enca-1.15.tar.bz2) = cec4509b662ded6651c3c5e10d1c6f0067909b24
 RMD160 (enca-1.15.tar.bz2) = 6f25cb333e35eb339403a983f05c4fc90e82874d
+SHA512 (enca-1.15.tar.bz2) = f0b843b0b38fcb250991ad072fe2f1bcaa6aaad8348983446046f40b44a2523a7c3b46569f9693e5b2848356288f718595ea4cc9bc0b4685aac02291fe7393ba
 Size (enca-1.15.tar.bz2) = 536627 bytes

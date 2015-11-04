@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/03/01 08:29:07 obache Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:00:11 agc Exp $
 
 SHA1 (sary-1.2.0.tar.gz) = cfc671ca99d58df4ed8985408499f96579af18f3
 RMD160 (sary-1.2.0.tar.gz) = 0c38bf02edb08dabc3577bfde1357ec8821a27f7
+SHA512 (sary-1.2.0.tar.gz) = 0eeae82a384970b4d96f7a0ca3929e74d17b8b3ebc61459ec9fc7172e61c3835ffe2de8aaab7ebd64f54be24d39f6734949ebc98758c28cec299b3bd25020632
 Size (sary-1.2.0.tar.gz) = 393787 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2006/01/03 14:25:50 taca Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 02:00:07 agc Exp $
 
 SHA1 (amrita-1.0.2.tar.gz) = b9d74d73b7668bcbfa60abf8c076bc12f71c6898
 RMD160 (amrita-1.0.2.tar.gz) = 348a6a52de58fe5a6ae0dc5a082018a6ba5702f6
+SHA512 (amrita-1.0.2.tar.gz) = 543d8c981a26b1d9a9e0fafe5a8e7538f948cb2d162da45b101495f98cb174dbf9a5b205f8acd9386dc0e0d0c75e32c7dd63ff56fef8c4d76b2518c7ae31b7ef
 Size (amrita-1.0.2.tar.gz) = 221789 bytes

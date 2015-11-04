@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/05/10 02:55:56 mef Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 01:59:53 agc Exp $
 
 SHA1 (Text-TabularDisplay-1.38.tar.gz) = df951cdf36b8800a50dce1a6188739e872ae2caa
 RMD160 (Text-TabularDisplay-1.38.tar.gz) = e27a2381585fd5328f75124df588a10ee709d180
+SHA512 (Text-TabularDisplay-1.38.tar.gz) = 08186e4898498fd84dc5a0eeb88ce40059be98bf6549fc04b7b997ac006e946523f5d4a27118930d23849697d38df66b39ca7429528a3d0b3bd0bb283dd6cb1f
 Size (Text-TabularDisplay-1.38.tar.gz) = 17014 bytes

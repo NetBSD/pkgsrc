@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2012/11/16 20:08:25 joerg Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 01:59:17 agc Exp $
 
 SHA1 (FlightCrew-0.7.2-Code.zip) = 16afdb4fcb30275070907c27857f89930bd8a322
 RMD160 (FlightCrew-0.7.2-Code.zip) = d6c71d8d1d9c79a0eaa211fea91cda5c1af84c7a
+SHA512 (FlightCrew-0.7.2-Code.zip) = 6933cd85bab0300ee2258106225cbf23474516c4993bc1bcad6736676169eabcaf4a5b31a6cdfc2bf4ff3be8fee9432a8048615112f330d1ac55a04874d094aa
 Size (FlightCrew-0.7.2-Code.zip) = 7794710 bytes
 SHA1 (patch-CMakeLists.txt) = 8423ab7b53fad354e04fdfd159b070a8f8bf61f9
 SHA1 (patch-src_FlightCrew_Validators_Opf_ReachabilityAnalysis.cpp) = 53fbd6e1b1b9a11739f16383406f10ddaa253293

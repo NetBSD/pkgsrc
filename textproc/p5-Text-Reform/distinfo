@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2009/09/13 19:31:22 sno Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 01:59:52 agc Exp $
 
 SHA1 (Text-Reform-1.20.tar.gz) = af969c7dedb098adaf80efbe86f37de4d344c5b8
 RMD160 (Text-Reform-1.20.tar.gz) = c4bfd45cda322e69702834e19fb70819a0ea1b39
+SHA512 (Text-Reform-1.20.tar.gz) = 2a8901c59dcee91d479735c243ee563da69dbbc340ba5573dc0d6be62cf7b485cea2e90301eb8b529bd8b39a1fc09597381680c4882c17462613321a80f2a110
 Size (Text-Reform-1.20.tar.gz) = 29521 bytes

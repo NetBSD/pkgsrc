@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/04/02 22:36:59 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:00:02 agc Exp $
 
 SHA1 (ftfy-3.4.0.tar.gz) = 143f8eb98ae9e2f8e2c861cf654acdda023de18d
 RMD160 (ftfy-3.4.0.tar.gz) = de9d0f9cc874b6c1c18fb0a5800d3c3979b120f4
+SHA512 (ftfy-3.4.0.tar.gz) = a2f4161ac236035fc5127858a830dd00c8cdf229acdbe62a4304c2f4f6eec5813a4908ee3f55ae5ef754b1e202c9a3d0be2f9bb6bda5b39f62067c6fbc1c4b10
 Size (ftfy-3.4.0.tar.gz) = 26845 bytes

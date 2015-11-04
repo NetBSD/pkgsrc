@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/04/24 03:05:33 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:59:36 agc Exp $
 
 SHA1 (ispell-lt-1.3.tar.gz) = 931def263afb54a8d41499a2af5da7beb80a7978
 RMD160 (ispell-lt-1.3.tar.gz) = 49aa4ded4951ee07a1fe3d0df15df00972dbb087
+SHA512 (ispell-lt-1.3.tar.gz) = fb5cc118be3bbef38b4e6a88ea7048db93ab54fa740ebfb8410dab055901c784bc541302baf0ffee566ec628e7e017b2307142b09a7956828fc1ba4186b259f9
 Size (ispell-lt-1.3.tar.gz) = 648599 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2014/06/15 06:37:54 obache Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 02:00:15 agc Exp $
 
 SHA1 (Xerces-J-bin.1.4.4.tar.gz) = 2d35816d79a0ed1acf79a3659bc772a52d463bc5
 RMD160 (Xerces-J-bin.1.4.4.tar.gz) = d8515856bf4fde152442fc0029f265a7d7a275ca
+SHA512 (Xerces-J-bin.1.4.4.tar.gz) = 7baae0d46831d22e92fc87d04ca6976496cb69018d6a0920291befda2cba93d8eca093ead3aa09ae24f6aafeae6a980491c4e86ecf84b41e4c1df078ea3a9e0e
 Size (Xerces-J-bin.1.4.4.tar.gz) = 2567397 bytes
