@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2005/12/08 17:46:16 joerg Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 01:18:02 agc Exp $
 
 SHA1 (prngd-0.9.29.tar.gz) = 72e82928b99a94e11fe379159d5fe3a5ddab4112
 RMD160 (prngd-0.9.29.tar.gz) = 08a61c80ce18782e5accd5e7e7b7fd6482120eab
+SHA512 (prngd-0.9.29.tar.gz) = 773be1be402cc701a80de7a5c5a7603f1e68ad1bbfa9957c7e37afd9d3c667f6e043c154a8f87e2fd63d2235b2e950782f3853a9a33854708f969495ccd5dc68
 Size (prngd-0.9.29.tar.gz) = 76392 bytes
 SHA1 (patch-aa) = af3891375f135a69d3da14e6095d68d6554e83d8

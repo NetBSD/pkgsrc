@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.20 2013/09/20 23:07:44 joerg Exp $
+$NetBSD: distinfo,v 1.21 2015/11/04 01:17:47 agc Exp $
 
 SHA1 (isakmpd-20030903.tar.gz) = 3400947199759a69b878ea396a598d9df174c6e8
 RMD160 (isakmpd-20030903.tar.gz) = 988afc6f8c84122e7a0a70ef4afe6815aceeb95d
+SHA512 (isakmpd-20030903.tar.gz) = 34cc4c09a097a47aeaf63008f5908099ade5a77a3eb0a93d85edf69b8dce1d5e193eca110f1223ac8ece6105893399f2f9a6b1f536171f50d9aa1e673e445d22
 Size (isakmpd-20030903.tar.gz) = 358314 bytes
 SHA1 (patch-aa) = da61cae20e99276720183264896ada554cc2f38e
 SHA1 (patch-ab) = f30c790f42d72866e95092848e102e4c3728365c

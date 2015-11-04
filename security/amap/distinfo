@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.3 2006/10/27 10:35:47 adrianp Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 01:17:41 agc Exp $
 
 SHA1 (amap-5.2.tar.gz) = 0474391a4c78040a7504bcce3b45bd926a682c41
 RMD160 (amap-5.2.tar.gz) = 4ea604ecb086f8e3cac84b45caac93b4a04eba26
+SHA512 (amap-5.2.tar.gz) = 46d4f500751e709de03f3b03a717538657390780cc753498ba75dc09a6824f7765c66e72dab7362cc1696f9af7aab9a18f71ed736bf1ff54d7e1a21e2c251600
 Size (amap-5.2.tar.gz) = 262875 bytes
 SHA1 (patch-aa) = de977332fa86c19def26e684f8c5e2c5ff032da7
 SHA1 (patch-ab) = 6ad1627821f42d80557b0b2ed600a192ccbffc28

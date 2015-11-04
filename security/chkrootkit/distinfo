@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.12 2015/04/29 15:55:47 christos Exp $
+$NetBSD: distinfo,v 1.13 2015/11/04 01:17:42 agc Exp $
 
 SHA1 (chkrootkit-0.50.tar.gz) = 0c3f40b2919d25421a90533c2fe6cca81321232c
 RMD160 (chkrootkit-0.50.tar.gz) = c038cc6ddbc0cf30d3492545bc02b1c95df973f1
+SHA512 (chkrootkit-0.50.tar.gz) = 9f26fd34e85b58b13dedc5f38a889ae258bb2c0f1ff40e99c149e23f93890e956f94204b1bb2241584454e99168c53b583f52777083454237f3ba343424dba1c
 Size (chkrootkit-0.50.tar.gz) = 38616 bytes
 SHA1 (patch-aa) = e047b8f102125c8bf3452943b90a72164ce6b1e1
 SHA1 (patch-ab) = 248f8bdd9dae2a8f81574346da32971600d8f4e4

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2005/03/20 12:51:54 fredb Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 01:17:44 agc Exp $
 
 SHA1 (fsh-1.2.tar.gz) = c2f1e923076d368fbb5504dcd1d33c74024b0d1b
 RMD160 (fsh-1.2.tar.gz) = 41f20e5a4001851d2cadc6909b72a17a270acfd2
+SHA512 (fsh-1.2.tar.gz) = 572cee06a964b22b164fd0ab3f85a22a87b1c5a48535f2dc1c6f334c776a377a539be58db082c517d341c4b2ad4369c5ffebd46ed89903da6a98c604f1c68192
 Size (fsh-1.2.tar.gz) = 152374 bytes
 SHA1 (patch-aa) = 369d409cf63c77780f15234e22103762a036cc0f
