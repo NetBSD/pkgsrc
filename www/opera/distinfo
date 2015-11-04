@@ -1,14 +1,18 @@
-$NetBSD: distinfo,v 1.47 2013/08/04 13:02:07 obache Exp $
+$NetBSD: distinfo,v 1.48 2015/11/04 02:46:59 agc Exp $
 
 SHA1 (opera-12.16-1860.amd64.freebsd.tar.xz) = 250ac09676e961a0d5175a044939d3b9a4b25320
 RMD160 (opera-12.16-1860.amd64.freebsd.tar.xz) = 83c473318ef7091550f47390221e6fd588782cb5
+SHA512 (opera-12.16-1860.amd64.freebsd.tar.xz) = e08547a8c966ec64c00e7058cb17856c9e2174b8b6e327d3e8b4c69226c9d1a1ff98f07557b607d8db68811b8a4f94a349ec9c882b480a706d3f28f7430e5ff8
 Size (opera-12.16-1860.amd64.freebsd.tar.xz) = 13312684 bytes
 SHA1 (opera-12.16-1860.i386.freebsd.tar.xz) = 0a3716603827abb63dde55eb1a8e7538cd80ae04
 RMD160 (opera-12.16-1860.i386.freebsd.tar.xz) = 5fa54f53ee9974167888d64eccf39eba2b4ea5b6
+SHA512 (opera-12.16-1860.i386.freebsd.tar.xz) = 0bb2c0548765ea476cdb8be6c84faf1d60dddb5a2c08b7312027f4cd17fa8ebd4fbc1a97657bbcb0ac07733e5f3b340b181a307a778c38543140adbfe7f8b844
 Size (opera-12.16-1860.i386.freebsd.tar.xz) = 13385696 bytes
 SHA1 (opera-12.16-1860.i386.linux.tar.xz) = fdd1ff1f49fac48cb8cd2eaa23e985a02866fb41
 RMD160 (opera-12.16-1860.i386.linux.tar.xz) = 461796a9721ccc95456768a9881950c1416cfcec
+SHA512 (opera-12.16-1860.i386.linux.tar.xz) = a13ec53311e3e78f35103a9dd5337c0e9a555362860213080211ee9d21de88fbd6aae03bed20b7515874d5a09dfbab108954213745fb82175f5e48e555152613
 Size (opera-12.16-1860.i386.linux.tar.xz) = 13154668 bytes
 SHA1 (opera-12.16-1860.x86_64.linux.tar.xz) = 65a531e8d1179797be8db6bfa0f9856c0c356d0c
 RMD160 (opera-12.16-1860.x86_64.linux.tar.xz) = 3ca6fa0211c42ef7225493d61c2e70839f7f988e
+SHA512 (opera-12.16-1860.x86_64.linux.tar.xz) = c1289f352ea5fc8133b105771f48fdc56ccd770920330b1a0ed939ff909abc68081447673572eabeb1aae6db5194b6ab35c93afad78a91d8f7a9a0f91e81ef8b
 Size (opera-12.16-1860.x86_64.linux.tar.xz) = 14018800 bytes

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2015/01/04 05:58:35 obache Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 02:46:49 agc Exp $
 
 SHA1 (mod_dnssd-0.6.tar.gz) = 22a90b4e3a5c042b47926888bbc41d79d9745b10
 RMD160 (mod_dnssd-0.6.tar.gz) = 75e3d85960761221be6ff1736d6dbe73da01d24f
+SHA512 (mod_dnssd-0.6.tar.gz) = c3eacd2065f996ace76496b828a5be4b735225782c88ed0fba00c37ffed91af7c81cef755556968880e11e05fbaf65a4326728cb82abcad03ccaf925be1f29d3
 Size (mod_dnssd-0.6.tar.gz) = 86417 bytes
 SHA1 (patch-src_mod__dnssd.c) = 7910370e48330b67411e49671a7fd3df8222ef18

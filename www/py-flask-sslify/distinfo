@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/05/03 01:38:37 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:47:28 agc Exp $
 
 SHA1 (Flask-SSLify-0.1.4.tar.gz) = 144558f870762e53f7566180d6cec9d42e1c190d
 RMD160 (Flask-SSLify-0.1.4.tar.gz) = 47ac15d2bcf910248f5bfe181a3a62cccc404db4
+SHA512 (Flask-SSLify-0.1.4.tar.gz) = 8db84cca400f595dafe5cb26e42f94614dc294f0c1a3d04803a1c4dbd667a0afda7c926b10f5d595df991abca3d9f9d38ccb32feb2731daa47b7728c5cde3560
 Size (Flask-SSLify-0.1.4.tar.gz) = 2417 bytes

@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/11/08 14:45:14 is Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:46:49 agc Exp $
 
 SHA1 (mod_limitipconn-0.23.tar.bz2) = 8a7d2d991328fa67fffa617942436049799bfa02
 RMD160 (mod_limitipconn-0.23.tar.bz2) = 13b4d8ce48965e337fabaed224c00db41fbecdaf
+SHA512 (mod_limitipconn-0.23.tar.bz2) = 090f70a3bc4f63a99337630cead07f713c4657302f5e3aca9b30927efe06e7e3ae21a28e5a3fbcd2a7ef596bc9b5a2c918b26155a71615593420fc007d95f348
 Size (mod_limitipconn-0.23.tar.bz2) = 9851 bytes
 SHA1 (mod_limitipconn_local_IP_patch_2.diff) = 925b15a3bdc33653deda286d504664bdfaff7c2a
 RMD160 (mod_limitipconn_local_IP_patch_2.diff) = f8b5e18697139343a5801f8fd94edad890797481
+SHA512 (mod_limitipconn_local_IP_patch_2.diff) = e5119f663830e3332a01f970df05ac6ad5d67973d4223b963b1b7c5528acce42369060cebc1da678c2d01778865bb787abee7005a220f571d3bd18a631214ec5
 Size (mod_limitipconn_local_IP_patch_2.diff) = 4080 bytes

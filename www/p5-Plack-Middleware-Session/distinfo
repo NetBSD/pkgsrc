@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.5 2014/11/03 03:17:51 wen Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 02:47:17 agc Exp $
 
 SHA1 (Plack-Middleware-Session-0.25.tar.gz) = a161b2cdb7bd25e7c3bbfdaa7bb49530a8dffd30
 RMD160 (Plack-Middleware-Session-0.25.tar.gz) = f41c71de15cfaaa79cca5cd8b2d54ec9b20adb54
+SHA512 (Plack-Middleware-Session-0.25.tar.gz) = 1cbba277857127a0f2b2ae079a2c96768b6e997dff97430bbaf403ed85ab008276763a2c14851c14985741ef1b9bcfe28c6079e34d3b5c69824d55886fa4d8e0
 Size (Plack-Middleware-Session-0.25.tar.gz) = 24555 bytes

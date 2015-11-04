@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/05/02 14:18:43 jlam Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:47:14 agc Exp $
 
 SHA1 (Kwiki-Wikiwyg-0.13.tar.gz) = 2b0c0852af2ce19330adf772484e91868211b609
 RMD160 (Kwiki-Wikiwyg-0.13.tar.gz) = 1301a5f206a5d4d3fe03293e9ccf4d229b0d29b4
+SHA512 (Kwiki-Wikiwyg-0.13.tar.gz) = df4d6fabc0213f39b2ecd8e734ea9c952bab9b7b7b9af3aaa192e2e474de9e7a9f03a5744e58103c2538dd3934aafc0c0bbfcfd653d3b0f55dfa2573e561481f
 Size (Kwiki-Wikiwyg-0.13.tar.gz) = 33602 bytes

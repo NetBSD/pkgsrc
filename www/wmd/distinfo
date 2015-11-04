@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/05/04 22:48:26 schmonz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:47:42 agc Exp $
 
 SHA1 (wmd-1.0.1.zip) = 0448cf143d926ea840e013517ae97b3eb82d322e
 RMD160 (wmd-1.0.1.zip) = b929fa11379db53fcaf5dee9b3d8518aa9f09744
+SHA512 (wmd-1.0.1.zip) = ab84bcacfffd9ccb7513d63bc8e42791fd5d21b513e30bbdacd08c5c1d56d3f1f4d3b5e884f70888f33470e54619e73399172064a0fafe8f973f8913831ac6d4
 Size (wmd-1.0.1.zip) = 30863 bytes

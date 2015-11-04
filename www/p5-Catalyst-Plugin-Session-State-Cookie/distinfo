@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.8 2009/10/24 14:50:28 sno Exp $
+$NetBSD: distinfo,v 1.9 2015/11/04 02:47:05 agc Exp $
 
 SHA1 (Catalyst-Plugin-Session-State-Cookie-0.17.tar.gz) = d533939951fcbdd59bb2005340d321d702b838e8
 RMD160 (Catalyst-Plugin-Session-State-Cookie-0.17.tar.gz) = be13439d71318779d4539708d5005b5662df8d9d
+SHA512 (Catalyst-Plugin-Session-State-Cookie-0.17.tar.gz) = 29040a1b6be47152b1604d20d5adcfc38e7b23ec4ab2fa8b8897e64ae294d4a220b0ab53bad69ecc5c0b7ac2982001a032f4fd93ca3f55e1588d4e5ab3721ddc
 Size (Catalyst-Plugin-Session-State-Cookie-0.17.tar.gz) = 28177 bytes

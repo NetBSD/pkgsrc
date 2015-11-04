@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/01/28 21:07:16 adam Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:47:25 agc Exp $
 
 SHA1 (django-inline-ordering-1.0.2.tar.gz) = 50da0c16a14f5df7e243310833f8396f0293dfb9
 RMD160 (django-inline-ordering-1.0.2.tar.gz) = 841e9def9616625958e9dcd2cbcb3b63de4c1d19
+SHA512 (django-inline-ordering-1.0.2.tar.gz) = 96e5cb1382aac4ceb4a01f32026bad250ae2d993d57da8f21f5fe90ce4261183f23c8fb1cf8117f99436586b30022f6307abac0bea7954d2a35d1d5c829a0a7f
 Size (django-inline-ordering-1.0.2.tar.gz) = 7391 bytes

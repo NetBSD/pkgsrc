@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.10 2011/04/08 12:23:04 obache Exp $
+$NetBSD: distinfo,v 1.11 2015/11/04 02:46:50 agc Exp $
 
 SHA1 (asp2php-0.77.3.tar.gz) = d415bcfe53eb297c4d9297a485a145b49f0b6c3f
 RMD160 (asp2php-0.77.3.tar.gz) = 92ac13aac01b638d70413255101e06742dbc9fee
+SHA512 (asp2php-0.77.3.tar.gz) = 5c0a128c24a2318ca11d7a9aacdd4344a21b38696a685c56d744e497e60f49891ccd123408c05b19e34d7984b3b1945fdc2e56f778c9942d0fb212c3cdf432d0
 Size (asp2php-0.77.3.tar.gz) = 68369 bytes
 SHA1 (patch-aa) = 9788bb50a07a32a8895c82580b21418114cae57f
 SHA1 (patch-ab) = 35208f8676c92658284738c70125e15b801a92f4

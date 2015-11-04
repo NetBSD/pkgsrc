@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 14:08:37 wiz Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 02:47:18 agc Exp $
 
 SHA1 (Template-Generate-0.04.tar.gz) = d1f3d070498ebb09d7c2c6c520f8990027f94c15
 RMD160 (Template-Generate-0.04.tar.gz) = 4d471e12f15cb3c7ccdf2cb733480f4c446845ab
+SHA512 (Template-Generate-0.04.tar.gz) = c163f51abf153ec2416aa59bbf80b314b03af3e4601dcd5498cc5eef006099566f27d45553d1272fe7b8dc4be048672cd49cfaca375b00c17461dacbd5ffecc7
 Size (Template-Generate-0.04.tar.gz) = 9145 bytes

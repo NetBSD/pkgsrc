@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.9 2015/06/25 07:39:26 joerg Exp $
+$NetBSD: distinfo,v 1.10 2015/11/04 02:46:59 agc Exp $
 
 SHA1 (nvu-1.0-sources.tar.bz2) = 438b1633cb820bbede503ef2da90f46d4e96bee8
 RMD160 (nvu-1.0-sources.tar.bz2) = 6d6fdb747d79e8602a4757e8eff8bbb21db6df8c
+SHA512 (nvu-1.0-sources.tar.bz2) = 2e0076d73b029142a550b5d7be91524517d1141d84e6339c95f7772fc6c8e9d3a1399aa62c94b1dc5e2a218e89a2dbd16a973d99aca50e547f533a26a8915473
 Size (nvu-1.0-sources.tar.bz2) = 29687976 bytes
 SHA1 (patch-ah) = 6d4805a719d2ba5347d283b85ddf0b65e8c536af
 SHA1 (patch-ai) = 74e87e7bfb098cd598ec30d21e9dc28fb4b99b7e

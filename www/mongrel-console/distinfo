@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/04/04 15:25:46 jlam Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:46:58 agc Exp $
 
 SHA1 (mongrel_console-0.2.1.gem) = f2f4bc621f98e897f9b7a7e1af3ab681f45275d8
 RMD160 (mongrel_console-0.2.1.gem) = bb88a321da3eb517a17e6cbbcf85dbdc3fca216d
+SHA512 (mongrel_console-0.2.1.gem) = 13d5fc543d5b962c31f7be028bec54ceab22a564f10ffe7194b76773011d14598d4939e6a1e73ff36d74627e383817be2af23280b6d62bff0805faaedc7b13cb
 Size (mongrel_console-0.2.1.gem) = 8704 bytes

@@ -1,9 +1,11 @@
-$NetBSD: distinfo,v 1.4 2007/02/25 15:51:50 sborrill Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 02:46:48 agc Exp $
 
 SHA1 (ap2-auth-mysql/mod_auth_mysql.c.gz) = 0e53b22ccd2ebd36a213d5e418b02e6167a1300b
 RMD160 (ap2-auth-mysql/mod_auth_mysql.c.gz) = 1c5578132b79063ac6da87d827e9fdb55f7be412
+SHA512 (ap2-auth-mysql/mod_auth_mysql.c.gz) = 46167eeb0264fde9b937d01af6d4210c3aa7d37743375be777a5cc8b8ac476bed510e4483f8fa5c6e2287bb3eca5f3fbff86292830ab6eb4b40e383cd9b6d1eb
 Size (ap2-auth-mysql/mod_auth_mysql.c.gz) = 6900 bytes
 SHA1 (ap2-auth-mysql/mysql-group-auth.txt) = 6c0d39ed3ac6a3955d8d8c7c4892e07ba3d3ae77
 RMD160 (ap2-auth-mysql/mysql-group-auth.txt) = aff76b74993e8501e2efa0cc366ef91a4b29821a
+SHA512 (ap2-auth-mysql/mysql-group-auth.txt) = 80a1a2e55e3b9866b5e52326fd738be6993c3f99117bb4c53898c6da63a2da153ebb33e31e0707e102758f8a0cb71d80c1254c89eead3c2cc6ecbd05da5c32d3
 Size (ap2-auth-mysql/mysql-group-auth.txt) = 1564 bytes
 SHA1 (patch-aa) = 36364c3af7dd99ba9ce3f79fb4625e40e07d3911

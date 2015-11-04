@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/06/11 16:47:00 taca Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 02:47:33 agc Exp $
 
 SHA1 (csspool-4.0.5.gem) = af39b91fd3452b7295ac77cdb433ea78e04b4785
 RMD160 (csspool-4.0.5.gem) = 3de48299518c516302cc920f5bc5c332e94f4653
+SHA512 (csspool-4.0.5.gem) = d4a6426511c5de958832cd66b29ec3590c982b4300112fe0828bf2068d3374c2da04f0062aa2d5f9ae6b4d3e12b773abc137e301d39120af100986271a0c52d9
 Size (csspool-4.0.5.gem) = 47616 bytes

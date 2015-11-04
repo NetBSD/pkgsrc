@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.14 2014/11/23 06:50:06 mef Exp $
+$NetBSD: distinfo,v 1.15 2015/11/04 02:47:00 agc Exp $
 
 SHA1 (Apache-Session-1.93.tar.gz) = 764405935853333c2f470569185b5f3336bb1b23
 RMD160 (Apache-Session-1.93.tar.gz) = 470461e490b481c66fc523c4543413ed7a081f65
+SHA512 (Apache-Session-1.93.tar.gz) = 568653b5151df61dbbc4b034043e1d4be75642122ab920a13155c4abbe052e4d96915b1453eb9f2f06bd1159d95efef7ed5905b4d2f2b8c6fdd3711d0cf5dbe4
 Size (Apache-Session-1.93.tar.gz) = 49995 bytes

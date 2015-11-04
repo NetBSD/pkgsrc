@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2013/09/15 16:42:23 taca Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 02:46:51 agc Exp $
 
 SHA1 (camping-2.1.532.gem) = 3d34a10169a822e3946da6da885dd949a4ed3c7d
 RMD160 (camping-2.1.532.gem) = 40258c02af7ba95fb31d76a7243aacddacb529d0
+SHA512 (camping-2.1.532.gem) = 0a061ed886b7bb86bfe0906e8a7950b96d2c8360bde3c0545b52d41b3012b1c3975a056449f1919c8ba454ee6457738bfc9f815da8ce764e79ef3cf9981e9408
 Size (camping-2.1.532.gem) = 375808 bytes

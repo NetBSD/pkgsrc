@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/05/19 21:28:27 spz Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 02:46:49 agc Exp $
 
 SHA1 (roller-release-5.1.2-standard.tar.gz) = b1b49d52728222d088e37579e8f53651efce5f4d
 RMD160 (roller-release-5.1.2-standard.tar.gz) = 7c754799e0ec348359d0d7a07826e653eb181284
+SHA512 (roller-release-5.1.2-standard.tar.gz) = 13ecf3e9b2710452f6479903c2951ce518bd46c825a480402ff015f07f55f8c0f5ee6f79cb7ee21ad5871720555ada11b8389a531b9ad7d84ad7b631a6ac3fd7
 Size (roller-release-5.1.2-standard.tar.gz) = 35919465 bytes

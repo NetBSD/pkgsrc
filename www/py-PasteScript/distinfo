@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/07/16 11:39:56 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:47:24 agc Exp $
 
 SHA1 (PasteScript-2.0.2.tar.gz) = 884c1e94390479ed3ffed494044fdb5bbeb09938
 RMD160 (PasteScript-2.0.2.tar.gz) = 7c3a84ede5dfe782fefe01b9f30e0bdbd8420852
+SHA512 (PasteScript-2.0.2.tar.gz) = 2f093eb982972fed354219c75c2e008931cea553960cea8aaafbe57cde8556de5626e7eb9bb3b9b7328bad3b7d9899f11fc9773a65380396dae506e7531516de
 Size (PasteScript-2.0.2.tar.gz) = 117521 bytes

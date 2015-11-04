@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/01/12 10:34:23 mef Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 02:47:16 agc Exp $
 
 SHA1 (Plack-Handler-AnyEvent-SCGI-0.03.tar.gz) = 895b0a2cc97f7745bdfb534d10d211d50257f936
 RMD160 (Plack-Handler-AnyEvent-SCGI-0.03.tar.gz) = 4ef163da1fc137f99af9ec72a22e4b1c429a60d3
+SHA512 (Plack-Handler-AnyEvent-SCGI-0.03.tar.gz) = f08b4706991af0c9adae6ca4e209588aa3a9cb4ed6ff604d7cf800b5ddbeb4116526fdc9b75d2221881b5bb2a64767007ff3b9fd507b9ca7b823b7b6aa8c97da
 Size (Plack-Handler-AnyEvent-SCGI-0.03.tar.gz) = 11105 bytes

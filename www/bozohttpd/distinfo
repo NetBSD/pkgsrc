@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.63 2015/10/17 06:06:49 richard Exp $
+$NetBSD: distinfo,v 1.64 2015/11/04 02:46:50 agc Exp $
 
 SHA1 (bozohttpd-20150320.tar.bz2) = 1126d17a79c87bde1df77f6f71e6e040726579a0
 RMD160 (bozohttpd-20150320.tar.bz2) = 7e8db6b6cc3f6df5638eeabed5ec4ee1efa859c2
+SHA512 (bozohttpd-20150320.tar.bz2) = f1fc5f6c55bd18bef478402dc7d250cd785007233b0d8c6afbf319525fdefb13352954fd8e1285806fd2704235ce1faf97881f29bf162a5473e2f64d288426ed
 Size (bozohttpd-20150320.tar.bz2) = 52482 bytes
 SHA1 (patch-aa) = 2e70d3d10aa8bc228331cc1a229ef04106aca210
 SHA1 (patch-ab) = a1a56a188084440ab907995c7728e435961c5fbd

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2009/03/04 13:19:36 kleink Exp $
+$NetBSD: distinfo,v 1.8 2015/11/04 02:46:52 agc Exp $
 
 SHA1 (drraw-2.2b2.tar.gz) = 823f0a31242d1a7c25306edc589842151b1bdb3e
 RMD160 (drraw-2.2b2.tar.gz) = f22d873d79bb08128a57c7bf4539f9c9083317ef
+SHA512 (drraw-2.2b2.tar.gz) = 4ca94c3726e4cc9d661e7a007d0099e0555ae22c4ad493c3d45f6facf85b9afdd4d682bc58d35e7ad545380c1239d55861bd538a15d481baeafe75771124d2f5
 Size (drraw-2.2b2.tar.gz) = 53447 bytes
 SHA1 (patch-aa) = d6d9ac805ff302ea2f3570014e1d2146ec3040d6

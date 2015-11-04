@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2010/08/16 09:43:58 wiz Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 02:47:07 agc Exp $
 
 SHA1 (HTML-Element-Extended-1.18.tar.gz) = d5a49a13d4e8ff4683ad5f7b6da57a163f73e298
 RMD160 (HTML-Element-Extended-1.18.tar.gz) = ca0a93de287769750b53ce2f6f54e38b41574ef0
+SHA512 (HTML-Element-Extended-1.18.tar.gz) = b11e75660c393c89974825ed46cfe9145ed8562da45ae14547352fea481d8fa64d61500e3d1601ba5f0f14aba67b554ff5257de8de9280a74f76cebc70abb26e
 Size (HTML-Element-Extended-1.18.tar.gz) = 19823 bytes

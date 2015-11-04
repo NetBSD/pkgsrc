@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2008/07/20 19:25:32 he Exp $
+$NetBSD: distinfo,v 1.8 2015/11/04 02:47:09 agc Exp $
 
 SHA1 (HTML-Table-2.08a.tar.gz) = b3c899772eb520b248955edf188e692bd8416729
 RMD160 (HTML-Table-2.08a.tar.gz) = 7c2adfe11db8714c9c5b6eba56a4e1a4344f1133
+SHA512 (HTML-Table-2.08a.tar.gz) = fe2e0a9777a45cc7b720b33694fd9aec6626a27720dedf57238c4166163ae6d35fd8f61a4321e6951c589269c28a3ba2677bdd1f849446bfadb2c90e6d052a36
 Size (HTML-Table-2.08a.tar.gz) = 23934 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2013/07/05 23:35:35 rodent Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 02:47:32 agc Exp $
 
 SHA1 (web.py-0.37.tar.gz) = 8744f710ddfb89ca2b66a509042b860d7216ff37
 RMD160 (web.py-0.37.tar.gz) = 8297ec3d2b87e209286562f523027cc94adf0f64
+SHA512 (web.py-0.37.tar.gz) = 766e24d9df6ab1c3a214156794a19c23fcb16ca7a4ee7586a7723f802eab2ba0b8cda4653c2504ef63f773609436ac12dfd40bbe6cf20e2f93bf95493f041628
 Size (web.py-0.37.tar.gz) = 90232 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2013/10/11 14:33:37 obache Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 02:47:29 agc Exp $
 
 SHA1 (Genshi-0.7.tar.gz) = f34b762736d2814bcdea075f6b01b9de6c61aa61
 RMD160 (Genshi-0.7.tar.gz) = 3c8d8dfd8cb55b30e38af0039e2c42d56669c913
+SHA512 (Genshi-0.7.tar.gz) = 2d0042d4da4566725ddd80b73c5b7be09f479f5529e4aa69903edc2a98905ff6de42a0d5a6f02986d7962deb7740c4a3acf6955a8b77fdb42d3cf4ca037de6bf
 Size (Genshi-0.7.tar.gz) = 491579 bytes

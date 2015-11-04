@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/07/24 21:18:24 szptvlfn Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:46:54 agc Exp $
 
 SHA1 (HTTP-4000.2.17.tar.gz) = e4dd82f84fab6bd90a025a087573e7a46c72ed4a
 RMD160 (HTTP-4000.2.17.tar.gz) = ff48cd11b46da823e5bb93d88c41fdc30104b8b7
+SHA512 (HTTP-4000.2.17.tar.gz) = 0c72f2f78aaa6da64c734f70e1c7e5454d0041eb0354a63b25a534614671df21433c30451ef8a54ed3e303fa105b7d0d998a4a55658933749fc77ec08d6ff8c2
 Size (HTTP-4000.2.17.tar.gz) = 69706 bytes

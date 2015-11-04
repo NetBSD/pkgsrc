@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.38 2015/07/24 10:23:12 adam Exp $
+$NetBSD: distinfo,v 1.39 2015/11/04 02:46:52 agc Exp $
 
 SHA1 (dillo-3.0.5.tar.bz2) = 1f6646f03e3c99f03a4e4abeeb5110bf7f7b3e6a
 RMD160 (dillo-3.0.5.tar.bz2) = 404d7b1a0e60526a53a02d4d49ed5b747f4e43fb
+SHA512 (dillo-3.0.5.tar.bz2) = d0e86f57e50da762debf592b6deb94de5ee58f84e0cae1159890262540a463aea8143d2b99c634021c1f273f91c2fe0918f30d72c3eaf91fdb541e741469b155
 Size (dillo-3.0.5.tar.bz2) = 734472 bytes

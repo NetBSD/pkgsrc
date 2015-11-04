@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2012/12/08 16:53:41 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:46:56 agc Exp $
 
 SHA1 (libmrss-0.19.2.tar.gz) = 3723b0f41151873de11eb56bb3743a4f72d446ce
 RMD160 (libmrss-0.19.2.tar.gz) = 4ac352f158925463ea38af7c122b01222d4b4864
+SHA512 (libmrss-0.19.2.tar.gz) = 0997ced472b767174977b7623484c57bfd0b901a9650cb7f7738ad7393153752ebfc1f717e2eacfb5f7eb319140599128d73de7e095327ee089cd1f85ab42b24
 Size (libmrss-0.19.2.tar.gz) = 375238 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/03/13 16:34:26 taca Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:47:33 agc Exp $
 
 SHA1 (compass-import-once-1.0.5.gem) = bc3dae9736cfaff57d93608532aef002b87098b9
 RMD160 (compass-import-once-1.0.5.gem) = 976aeaf9e5bba4ff06d5150543431976ad0f3a5c
+SHA512 (compass-import-once-1.0.5.gem) = 2ef723803341892b34a4bbe691b32ddd266a125c5e3faf8034c473566d70c7a8c0931f1a02abe64c243fe62f2a204cc8e53b951dd88c440eada4ec2dfc19856b
 Size (compass-import-once-1.0.5.gem) = 9728 bytes

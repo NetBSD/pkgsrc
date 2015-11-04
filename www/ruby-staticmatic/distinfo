@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2011/06/19 08:06:33 taca Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 02:47:38 agc Exp $
 
 SHA1 (staticmatic-0.11.1.gem) = d034e4ffdd0be6acb134d5b9804df991368c7a7b
 RMD160 (staticmatic-0.11.1.gem) = ea8c7b6886a0a719e45a253b5c3dd299fdb02058
+SHA512 (staticmatic-0.11.1.gem) = 5465fd3ca116a71393f2ee2bf5e61950dedbfdccf989a7a16962677d5be9a5d6f28f0cfb558b972317843709a43ce9629518858080d242ac038e751dded09556
 Size (staticmatic-0.11.1.gem) = 212480 bytes

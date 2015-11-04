@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2015/05/20 04:10:38 kim Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 02:46:53 agc Exp $
 
 SHA1 (fcgi-2.4.0.tar.gz) = 2329404159e8b8315e524b9eaf1de763202c6e6a
 RMD160 (fcgi-2.4.0.tar.gz) = df5c01b197bc72fca7abee184a34ec14253dd0f0
+SHA512 (fcgi-2.4.0.tar.gz) = 38164d11112e834b30c6f809da4e184021e8d22ec8db2c49ad827895a75b99dc1824b94831304aa0ae1174176fe64d02a12882b1a00b780119600bdc39a90927
 Size (fcgi-2.4.0.tar.gz) = 468682 bytes
 SHA1 (patch-aa) = 13577b77ae3d124a5f27be0e456b470180c99550
 SHA1 (patch-libfcgi_fcgio.cpp) = 542e620fd252d80696d6b53e34a65998c6545ad5

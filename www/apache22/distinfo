@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.62 2015/07/20 18:28:59 adam Exp $
+$NetBSD: distinfo,v 1.63 2015/11/04 02:46:49 agc Exp $
 
 SHA1 (httpd-2.2.31.tar.bz2) = e3b55387112206307ba76526820a2627472f3787
 RMD160 (httpd-2.2.31.tar.bz2) = 5b073f5f556c74e19eba8e40faa5c5fa308e018a
+SHA512 (httpd-2.2.31.tar.bz2) = 5aa47d4b76f692bbd8b309135ff99152df98cf69b505b9daf3f13f7f2a31443eaf4995161adfbc47a133b4d0e091fda2d95fc6b87a956f0ada18d7466ee28e74
 Size (httpd-2.2.31.tar.bz2) = 5610489 bytes
 SHA1 (patch-aa) = e0bfdf6bc9cb034bea46a390a12a5508e363c9a7
 SHA1 (patch-ab) = 365cc3b0ac2d9d68ccb94f5699fe168a1c9b0150

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2013/01/27 17:41:40 adam Exp $
+$NetBSD: distinfo,v 1.3 2015/11/04 02:47:25 agc Exp $
 
 SHA1 (django-photologue-2.5.zip) = 24b138173aa0568440ffdce52bedfb031aaa9b48
 RMD160 (django-photologue-2.5.zip) = 313e49f89e2e870c570d0d8ad6a344fbd7153e84
+SHA512 (django-photologue-2.5.zip) = f9af1a91b4450b1d4e573b7d1f2b628a7b3796b0912532dce8d121992a93ec4406912288a2474ce80eea972bb2935be898b7b689e959107cb086b223e7430337
 Size (django-photologue-2.5.zip) = 179013 bytes

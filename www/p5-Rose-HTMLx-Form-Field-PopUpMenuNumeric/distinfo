@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/05/01 19:28:51 sno Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:47:17 agc Exp $
 
 SHA1 (Rose-HTMLx-Form-Field-PopUpMenuNumeric-0.001.tar.gz) = 44b640c83f7b41c1b11ba07bd813f5acd388ae6c
 RMD160 (Rose-HTMLx-Form-Field-PopUpMenuNumeric-0.001.tar.gz) = 988913410165943a232178bfb3cbc397956455ec
+SHA512 (Rose-HTMLx-Form-Field-PopUpMenuNumeric-0.001.tar.gz) = 18bb37f8558bf10a2292d5516d83655ac89f2277f74812f50e245248b50b60696b1e07907ae1a8f3c6bc603818a566cc58d78cf23905dea781e01ff80f847245
 Size (Rose-HTMLx-Form-Field-PopUpMenuNumeric-0.001.tar.gz) = 2619 bytes

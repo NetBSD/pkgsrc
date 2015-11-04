@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2007/07/19 23:00:47 xtraeme Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 02:47:39 agc Exp $
 
 SHA1 (swiggle-0.4.tar.gz) = e949b37a700da1e7154217a23f2e49ca6c08154d
 RMD160 (swiggle-0.4.tar.gz) = 23c34a96805cbd821c2a51dac8a18db02c2f2401
+SHA512 (swiggle-0.4.tar.gz) = c22fa855d1b2581dea756a5667539866d09077a2bb4fc9a4dde14e9353ea11fc435a7f3f46d9a558633d0547b5025bbfa88597f976f07606eba2e296632af9e4
 Size (swiggle-0.4.tar.gz) = 13012 bytes

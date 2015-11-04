@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/05/20 00:07:25 mspo Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:46:47 agc Exp $
 
 SHA1 (mod_geoip2_1.2.5.tar.gz) = aee05907479bbb6c7923287d6ddb6e8a0e169b46
 RMD160 (mod_geoip2_1.2.5.tar.gz) = e81511ed3a2aa20897a4071d508a01194f97c4aa
+SHA512 (mod_geoip2_1.2.5.tar.gz) = bc3674fa374d613ce9512706c87cee68ecf20dfdfaeec81de8ce71345a4101ae4c6f8ac177fd9308c4ead933c757fd4e13f1888f4644650be96b36bf6d1049f5
 Size (mod_geoip2_1.2.5.tar.gz) = 11602 bytes

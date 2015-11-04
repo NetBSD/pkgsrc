@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 14:08:40 wiz Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 02:47:41 agc Exp $
 
 SHA1 (waplet.tgz) = d022fbb18b47044c30f0c244a61203d403a0fb15
 RMD160 (waplet.tgz) = 359c0ecaac9bb598c9ff02d97788afb1e95ee9b1
+SHA512 (waplet.tgz) = b099014d59a487033265763770a2a7ade6091ab8b47a5029b117aba61bb75fdd630d83e091da16534830c2e1385ccf79d7c00c6e3774ba909155faea8ba5ad02
 Size (waplet.tgz) = 30905 bytes

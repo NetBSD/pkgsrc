@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/02/20 18:39:52 schmonz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:47:20 agc Exp $
 
 SHA1 (URI-Nested-0.10.tar.gz) = 8621b40c4dff82c990df95e0920e728a4a03d775
 RMD160 (URI-Nested-0.10.tar.gz) = 68e04d009c21e3eb070d020aab9148be204f2604
+SHA512 (URI-Nested-0.10.tar.gz) = 00f6bc5ac77e629b7bd82ba593f839dc2da394c5e8fafc03db2d816fffc149557ece6a50e0b82867c4e458d1dff108535bb3ec4768401a30450f51e5a827b9e4
 Size (URI-Nested-0.10.tar.gz) = 6170 bytes

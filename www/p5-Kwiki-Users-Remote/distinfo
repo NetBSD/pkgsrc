@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/01/31 20:12:41 jschauma Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:47:14 agc Exp $
 
 SHA1 (Kwiki-Users-Remote-0.04.tar.gz) = 811a62698baf9234c5b739333ad1dbefb1a74e9f
 RMD160 (Kwiki-Users-Remote-0.04.tar.gz) = 0fce1ed4e9f2dd6a4c86be5fc792fdfb272446ec
+SHA512 (Kwiki-Users-Remote-0.04.tar.gz) = c9d0757fe668596f28f13e4e5dc8631caaa034697512065433325e77d45e8a658a7edeed986e7973c4e2dfe36db43b3f5fa560946df900b936a315fe20efaedf
 Size (Kwiki-Users-Remote-0.04.tar.gz) = 10116 bytes

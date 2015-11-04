@@ -1,14 +1,18 @@
-$NetBSD: distinfo,v 1.9 2014/03/10 12:49:39 obache Exp $
+$NetBSD: distinfo,v 1.10 2015/11/04 02:47:39 agc Exp $
 
 SHA1 (squidGuard-1.4-patch-20091015.tar.gz) = b6ad4c67222463e6bafa002593e947d73929db18
 RMD160 (squidGuard-1.4-patch-20091015.tar.gz) = 08991337d2966d44dbe2a9a131b26fa881e1e807
+SHA512 (squidGuard-1.4-patch-20091015.tar.gz) = 7214cb61fc6418b8b78a8bd91525e2848280307200251241c23a25f3a1aa5437b401473b6ad5181fd6981fcb626d3a61a9e88a7d9c9ba847e2571648f8d34f37
 Size (squidGuard-1.4-patch-20091015.tar.gz) = 2577 bytes
 SHA1 (squidGuard-1.4-patch-20091019.tar.gz) = 0da4230be909020e5fb560183ca43b4f5594c980
 RMD160 (squidGuard-1.4-patch-20091019.tar.gz) = 62c8e79da9a5ffca4b222b7b498549696b7c9f40
+SHA512 (squidGuard-1.4-patch-20091019.tar.gz) = 8f2419d04cb175ceddd5a0fc8da25b3e968337bc7974b41697476add37f7effe8e8ea01dc6ed3821709f4e538c0abb98cfb8035e60d3f8d38e99e545ab6de413
 Size (squidGuard-1.4-patch-20091019.tar.gz) = 9597 bytes
 SHA1 (squidGuard-1.4.tar.gz) = 0508ccb7db5c656b9952eacbcff2c956c01677d3
 RMD160 (squidGuard-1.4.tar.gz) = c44880ddbfd7d1ad63fcda1c6ed777f24feedbba
+SHA512 (squidGuard-1.4.tar.gz) = 6d55bda4c6b597ff52fed95ec336ca2d0b028359332217a552e645a3ac76d6d812926cd837e77cb5e046109c3c6291d52b92f3f7ac987dbf1b6fd17d68f1413d
 Size (squidGuard-1.4.tar.gz) = 1968492 bytes
 SHA1 (squidGuard-1.4_upgrade.patch) = 4ad24b5fe6891450bf4da1a0469f8350715e8cf4
 RMD160 (squidGuard-1.4_upgrade.patch) = 9a4bf9c52cec21ddb12a310c2436974faedb5b70
+SHA512 (squidGuard-1.4_upgrade.patch) = 9f7dc291d1a91b027856b4b9c5a16a46cca4558018e63c4afffef1ab39bd5ed9eefe72871b5a14328681e2aa9053789c8ac01a7b657f9de387581af29cdf93cf
 Size (squidGuard-1.4_upgrade.patch) = 2619 bytes

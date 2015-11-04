@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.12 2015/09/25 06:03:12 taca Exp $
+$NetBSD: distinfo,v 1.13 2015/11/04 02:46:46 agc Exp $
 
 SHA1 (SOGo-2.3.2.tar.gz) = f3cdfcb1865835772aa6732b8bc006a6bcd3985d
 RMD160 (SOGo-2.3.2.tar.gz) = bb5493d68387d3f50a764b08401bf98dcc072a6c
+SHA512 (SOGo-2.3.2.tar.gz) = e90fa9433413586b944f508a87a2959ba3b93ebd6513adf04ee4af24821b48b5cd5a807afaf1982d7e3e9829765dd3c44ce7a0a769fa373cc0034ae93ab481d4
 Size (SOGo-2.3.2.tar.gz) = 11781695 bytes
 SHA1 (patch-SoObjects_SOGo_NSData+Crypto.m) = 1ea9270c9f17af383d1306d726c0e6c6733ad45a

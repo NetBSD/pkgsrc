@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/05/02 04:11:58 jlam Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:47:11 agc Exp $
 
 SHA1 (HTTP-Server-Simple-Kwiki-0.29.tar.gz) = 484c934a784ba5ca922e024e19952637e0cdc06c
 RMD160 (HTTP-Server-Simple-Kwiki-0.29.tar.gz) = 006bf427dce7f1d4ddc78de809136be5f31b498c
+SHA512 (HTTP-Server-Simple-Kwiki-0.29.tar.gz) = 1564384fcec209b1cb79ef70c14bf4e8d612b5b5002ba4d4a48b9e9adb70732cf1233b9aa3e6ba1d47c0f222389901082c99f011db144d56727a9f8509433188
 Size (HTTP-Server-Simple-Kwiki-0.29.tar.gz) = 2030 bytes
