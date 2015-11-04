@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.30 2015/08/28 07:09:57 richard Exp $
+# $NetBSD: Makefile.common,v 1.31 2015/11/04 13:30:06 richard Exp $
 #
 # used by devel/ncurses/Makefile
 # used by devel/ncursesw/Makefile
@@ -81,3 +81,5 @@ CPPFLAGS+=	-P
 INSTALLATION_DIRS+=	${TERMINFODIR}
 
 PLIST_SUBST+=	TERMINFODIR=${TERMINFODIR}
+
+CHECK_WRKREF_SKIP+=	man/man?/*
