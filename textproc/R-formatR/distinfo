@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/09/19 20:31:50 brook Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:59:18 agc Exp $
 
 SHA1 (R/formatR_1.0.tar.gz) = 9fc399675e8dcc8979ebc99c94816d08830cc9ba
 RMD160 (R/formatR_1.0.tar.gz) = e8eb942cce07c3dd26ef1e8ceab961c6b8144e80
+SHA512 (R/formatR_1.0.tar.gz) = 6a7db5f8065310842fdd38a0789f7dc72830394ff5660d24f851bea08818a83c2497e067550ef382ad31b7cd2d3d06b366a16108fc0fa6bbc80df0f8bbfe8f2a
 Size (R/formatR_1.0.tar.gz) = 28265 bytes

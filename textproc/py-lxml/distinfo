@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.23 2015/04/26 08:01:31 wiz Exp $
+$NetBSD: distinfo,v 1.24 2015/11/04 02:00:03 agc Exp $
 
 SHA1 (lxml-3.4.4.tgz) = b210b84551d3ac1cadbcfae2fe553040fc7a61dd
 RMD160 (lxml-3.4.4.tgz) = d1e5a848b5b335bc7581183e483c8b7e1cdeb124
+SHA512 (lxml-3.4.4.tgz) = 94453ff0562fc18a4b43555271e2469556255b69daf5f801d1a0f1ff29fd73f4b46d4faba9bfe86b42cfdac31005a0d3cfcbf230e0c7593dd5fc6461afcad906
 Size (lxml-3.4.4.tgz) = 3537508 bytes

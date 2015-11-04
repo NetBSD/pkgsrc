@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/01/03 03:49:00 rodent Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:00:03 agc Exp $
 
 SHA1 (iniparse-0.4.tar.gz) = 2b2af8a19f3e5c212c27d7c524cd748fa0b38650
 RMD160 (iniparse-0.4.tar.gz) = f4cb5edc035e787acea428a7d21343d986f85f5c
+SHA512 (iniparse-0.4.tar.gz) = d59eae7c1ce474c89eddb0b0cbff5973444571728aa0c6ce5b3632984353415f7eec4de63cf007c276df0d1bb914b2ea5dd0acc00f3a261285c8e2e9883fbe9a
 Size (iniparse-0.4.tar.gz) = 31278 bytes

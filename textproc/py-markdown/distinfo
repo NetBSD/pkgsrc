@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/07/19 10:20:10 wiz Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 02:00:03 agc Exp $
 
 SHA1 (Markdown-2.6.2.tar.gz) = a988f811f1c73de4b49f610dee58a6b8132f5afe
 RMD160 (Markdown-2.6.2.tar.gz) = 5466f322ac0694d942d49588d12cc980f83e5dcf
+SHA512 (Markdown-2.6.2.tar.gz) = a69dabf65187f54d200f59191a149bfe2109f94ffc5d003e15c2e6333c0b5fdeebfc4136842d7be5a15bc903b7a22120a4ccba2722858194c43fd09cd8fbea16
 Size (Markdown-2.6.2.tar.gz) = 298231 bytes

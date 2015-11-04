@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/01/17 12:49:50 obache Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:00:07 agc Exp $
 
 SHA1 (buftok-0.2.0.gem) = 79416fb8e3c8b2f4f5a01159fc40af0cf9e470d6
 RMD160 (buftok-0.2.0.gem) = f0ee7c1d7fc42809aab341ee91443ef643a7f13b
+SHA512 (buftok-0.2.0.gem) = 2be11c56b49254f16cadfd8abc7c414a16a54b32ec416402a4c87be72c2ce9c524aaa17ede9bb3535555191f2a7b1d7d863199db5b4af8874880bcd16d3c3b45
 Size (buftok-0.2.0.gem) = 8192 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2012/08/25 20:52:24 cheusov Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 01:59:27 agc Exp $
 
 SHA1 (dictem-1.0.4.tar.gz) = 4ccba9d22969397e2902b5fe9e01fae6cfc03145
 RMD160 (dictem-1.0.4.tar.gz) = 7d16c8697a2d614649e24c9aa5867040f07df81c
+SHA512 (dictem-1.0.4.tar.gz) = d7c30a882e6e9cbae397241468c0bdeae82724626354576a5866b0d3ca9d904277eeb7ce0039895b1d06832eb7b837e3b19774790d1e3ac903eaff988f9a0aa5
 Size (dictem-1.0.4.tar.gz) = 22376 bytes

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2013/02/28 12:31:38 obache Exp $
+$NetBSD: distinfo,v 1.8 2015/11/04 02:00:09 agc Exp $
 
 SHA1 (mecab-ruby-0.996.tar.gz) = 5730d9667118d79ad6f2c49f45476d0874718d10
 RMD160 (mecab-ruby-0.996.tar.gz) = 916fbe29716988936abf19be1728b184b0afc0a6
+SHA512 (mecab-ruby-0.996.tar.gz) = a6beb9992d441118e4d824a7c8378bc1bd86d232a843e2327ab43cac0e0b1bf65c17f27ca8787f336c21796c77f4e8c350813e1ee84f7938654d1dcba876b4db
 Size (mecab-ruby-0.996.tar.gz) = 48723 bytes
 SHA1 (patch-MeCab__wrap.cpp) = bfefcacd978c3ec1c6284c6204f111be34342af3

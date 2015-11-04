@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/11/24 14:06:12 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 02:00:05 agc Exp $
 
 SHA1 (uri-template-py-0.6.tar.gz) = d39efd8e43173def6f3a2d0ca914549ba044f920
 RMD160 (uri-template-py-0.6.tar.gz) = 5786b11507b6ef992c08a23e4a4661d73f48b339
+SHA512 (uri-template-py-0.6.tar.gz) = 3d3b0d845d5b5603d3e8e07ac211c316a2752ee27e23b508c9d16817e9c3051592ff26971d86682276e76cb21788be5dfc7941f497ee3a2cfb36332e76de3d46
 Size (uri-template-py-0.6.tar.gz) = 4797 bytes
