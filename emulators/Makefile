@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.238 2015/10/11 00:54:08 ryoon Exp $
+# $NetBSD: Makefile,v 1.239 2015/11/04 21:25:07 adam Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -59,6 +59,8 @@ SUBDIR+=	fceu
 SUBDIR+=	fmsx
 SUBDIR+=	free42
 SUBDIR+=	freebsd_lib
+SUBDIR+=	fs-uae
+SUBDIR+=	fs-uae-launcher
 SUBDIR+=	fuse
 SUBDIR+=	fuse-utils
 SUBDIR+=	gambatte
