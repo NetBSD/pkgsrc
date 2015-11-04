@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.8 2011/10/01 21:42:16 dholland Exp $
+$NetBSD: distinfo,v 1.9 2015/11/04 01:32:26 agc Exp $
 
 SHA1 (netbsd-pcvt-20000611.tar.gz) = ea51ded62dc82635f1eda3cd198b29cf6f4941ea
 RMD160 (netbsd-pcvt-20000611.tar.gz) = 33364b8503d286047163e9f4256374faa3c6b455
+SHA512 (netbsd-pcvt-20000611.tar.gz) = a7f845556ab87d3133a15026a1ae62efa15a866d4cbee913cb14670e995487fd5645249bd15263776f5e815dc8fff96a04af0408b5e7612cde2d24f7fa934cca
 Size (netbsd-pcvt-20000611.tar.gz) = 315263 bytes
 SHA1 (patch-aa) = 47dec68f79792803f9b4480c8fde812c97b49c46
 SHA1 (patch-ab) = f553c956aea18464bced85743a32f3a489870f67

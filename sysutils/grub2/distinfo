@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.4 2014/09/05 12:14:24 gsutre Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 01:32:16 agc Exp $
 
 SHA1 (grub-2.00.tar.gz) = fcb39b621680caf34071abcb9ec913d5da458554
 RMD160 (grub-2.00.tar.gz) = 7a4d4fc2a22dfe169c03ec54b9c9a078679aa506
+SHA512 (grub-2.00.tar.gz) = 5c819e1dcc3d39c3c3c97357da0e17c89635f252927fdb027ca6a489ace0d2e2f7a9ae2221bebb33575e3889b91382cdf84b0c70a0a698f51e721800545a2fd4
 Size (grub-2.00.tar.gz) = 8270319 bytes
 SHA1 (unifont-5.1.20080820.pcf.gz) = 87f8600ba24e521b5d20bdf6c4b71af8ae861e3a
 RMD160 (unifont-5.1.20080820.pcf.gz) = ddc87231a7c1e18e81a6f4578a4f0279bcd0c292
+SHA512 (unifont-5.1.20080820.pcf.gz) = 8939e2bc82ca97b60e6678f3ff079a2be7ba9b702f2e8ee289e853af5823695f7baafbf14b674fc5e41071f2a6de4f2dadd56bf8b4653849dd756d59622f1649
 Size (unifont-5.1.20080820.pcf.gz) = 1379965 bytes
 SHA1 (patch-configure) = 5bc08d640943e59c795113a4375a712c1932ccff
 SHA1 (patch-grub-core_lib_posix__wrap_sys_types.h) = 7510953e7bbed347f5d53e4535c309c365ba2bcd

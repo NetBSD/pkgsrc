@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2015/07/31 09:02:53 youri Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:32:40 agc Exp $
 
 SHA1 (xfce4-gvfs-mount-0.0.4-6d2684b.tar.bz2) = a782b1204049839eb01d792ce67dd32e320adff1
 RMD160 (xfce4-gvfs-mount-0.0.4-6d2684b.tar.bz2) = 20da93179d239c59075caa911f37142574337ccc
+SHA512 (xfce4-gvfs-mount-0.0.4-6d2684b.tar.bz2) = 0bab5e20620594e1633c12c4c20724a43317004eda6f353579f890cc1d9b3288b7a3bdc411e9f34efb00ed31876d1e29d70e8bfacc9f18ed6806b36f5e112527
 Size (xfce4-gvfs-mount-0.0.4-6d2684b.tar.bz2) = 280614 bytes
 SHA1 (patch-panel-plugin_Makefile.in) = a451b8002936a00c1d68223872dc3c1b059fb0b5

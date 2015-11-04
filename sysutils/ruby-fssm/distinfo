@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2013/02/11 04:14:58 taca Exp $
+$NetBSD: distinfo,v 1.5 2015/11/04 01:32:29 agc Exp $
 
 SHA1 (fssm-0.2.10.gem) = a3bd79e2cc190656a975590e91f7ed9719ca7661
 RMD160 (fssm-0.2.10.gem) = a390318a923f2196c01e0ccbfd98bd24f59d17ac
+SHA512 (fssm-0.2.10.gem) = 3de2cf03b3f2b0a73ea120d72ed66436ac2b5124f5af8173a46294bbc869f778db6b445ff1e853af24623ba0b8cb88c4c0931abf1504976e21b0585a1908bf15
 Size (fssm-0.2.10.gem) = 22528 bytes

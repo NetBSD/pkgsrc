@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2005/02/24 13:40:51 agc Exp $
+$NetBSD: distinfo,v 1.6 2015/11/04 01:32:09 agc Exp $
 
 SHA1 (cpuburn_1_4_tar.gz) = 291e163d17ce528fd8301f821babed74d9caffaf
 RMD160 (cpuburn_1_4_tar.gz) = d9a25567002e3c8801991be5e980156ba068e680
+SHA512 (cpuburn_1_4_tar.gz) = 28211de05869785d515e9b5994f5d95d41c0f4b429a1469b20b59a0cd804d5b291c5c8fc74d5c403444c98c8a6ebd156f37713c4461e343793305cc416385daa
 Size (cpuburn_1_4_tar.gz) = 7373 bytes
 SHA1 (patch-aa) = 6427616decd8c19a5e79e6eedf1ff59e60323b45
