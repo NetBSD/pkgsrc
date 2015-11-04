@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/11/14 21:56:27 pettai Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:18:05 agc Exp $
 
 SHA1 (yubiauth-0.3.9.tar.gz) = 982b6b3b1bba987da8f6a56f3e618a788f4f7eaa
 RMD160 (yubiauth-0.3.9.tar.gz) = 55f4db67a16b55e23b3b460f529e8ec31136d605
+SHA512 (yubiauth-0.3.9.tar.gz) = 76ce3816021c012d48b29e28bc6cb109d48328cabceac96e01d9001d0d3ffd958914cb4f6f7e7520f80742a21b19b8e3ff249dfe04ab62915e80639cc52e33cc
 Size (yubiauth-0.3.9.tar.gz) = 177754 bytes

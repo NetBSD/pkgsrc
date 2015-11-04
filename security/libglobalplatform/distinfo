@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2014/03/12 21:23:11 gdt Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:17:48 agc Exp $
 
 SHA1 (globalplatform-6.0.0.tar.gz) = 5a08bec4cbcc8caffa7c646a35600712f468553c
 RMD160 (globalplatform-6.0.0.tar.gz) = ac147749605733a47fe6678f88ec07a3d8f61984
+SHA512 (globalplatform-6.0.0.tar.gz) = cb2fc79052a073b5099da6c02ff9ca87bb966d42c1d8cf4f9ef2a39eb9772e1c5f656bc03f5e305885a9995856c0fbd3648a2c7ceb38ed194d007f3fc1219be4
 Size (globalplatform-6.0.0.tar.gz) = 421171 bytes

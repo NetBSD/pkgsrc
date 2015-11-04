@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.8 2013/07/25 13:57:39 wen Exp $
+$NetBSD: distinfo,v 1.9 2015/11/04 01:17:55 agc Exp $
 
 SHA1 (Crypt-IDEA-1.10.tar.gz) = a43a12e1c515c41155036d730aad2ba79e0bb646
 RMD160 (Crypt-IDEA-1.10.tar.gz) = e1866fcc3c4f3e33f7a18063cc0ad96ecfdd641a
+SHA512 (Crypt-IDEA-1.10.tar.gz) = 2459f8f8ca088564b037101129796d6d3652062e80f9342173508df95b60ceb9ccb836b946d50127f86b38b239e25c58e1f4efde4eb73a5b24fc823a100fd018
 Size (Crypt-IDEA-1.10.tar.gz) = 7225 bytes
