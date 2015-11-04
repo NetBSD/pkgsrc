@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/16 10:30:14 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:53 agc Exp $
 
 SHA1 (tex-calrsfs-17125/calrsfs.doc.tar.xz) = 95e845c917a1ecfce173d0abd569729e46524ebc
 RMD160 (tex-calrsfs-17125/calrsfs.doc.tar.xz) = 121a4533c1e7045a6d4b4bd847b32d16b44b9c1d
+SHA512 (tex-calrsfs-17125/calrsfs.doc.tar.xz) = 67b1ad0fc900dbad0d386b0624f366e2efffe941356d0877240249d43ab309df254d2c72e217ee779245d135883b24f8709ea8d63bfd79d51197c2225218ae5c
 Size (tex-calrsfs-17125/calrsfs.doc.tar.xz) = 153676 bytes

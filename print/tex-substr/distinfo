@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/04/09 21:53:53 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:48 agc Exp $
 
 SHA1 (tex-substr-1.2/substr.tar.xz) = f8a62dfc42d99adfe641da9226651fb0698c92b1
 RMD160 (tex-substr-1.2/substr.tar.xz) = e69cad43de449ced4bdfc877766f6af138e0431d
+SHA512 (tex-substr-1.2/substr.tar.xz) = 61fb1e573d6ab298506c59ff99d96454fa56b9efef72af441da7d370f2738f3e1570933e090ebd58d3703ab97795bd9d3880b4073fb9861a3afaf1e3a6d94a0e
 Size (tex-substr-1.2/substr.tar.xz) = 2024 bytes

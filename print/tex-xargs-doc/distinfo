@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/11/29 19:34:49 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:59 agc Exp $
 
 SHA1 (tex-xargs-15878/xargs.doc.tar.xz) = 51c58648be4cd5c299f768dbdfaec8949433edf7
 RMD160 (tex-xargs-15878/xargs.doc.tar.xz) = f725312550004f641b8bbeebf253508a0b3d28dd
+SHA512 (tex-xargs-15878/xargs.doc.tar.xz) = 8c6a0e812c9a68082babc19aad3caa82c5bc4afff4325f510f1713e94c144b9d6f0b03bc2f188f58a9e3c0ffb8a30cdd1988ae3a49ed48ef817b9a5545303b4d
 Size (tex-xargs-15878/xargs.doc.tar.xz) = 181864 bytes

@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2008/06/21 18:55:13 joerg Exp $
+$NetBSD: distinfo,v 1.4 2015/11/04 01:01:31 agc Exp $
 
 SHA1 (bg5pdf-1.0.0.tar.gz) = f050a1995c0a40f0578dffb04055bab6195b032e
 RMD160 (bg5pdf-1.0.0.tar.gz) = 8757c6afe000dd30fa83d42c5f219930fb092427
+SHA512 (bg5pdf-1.0.0.tar.gz) = 51bd320ed29215d2be9cae89f74c2bca2ee1af1cfb3fadd6e744db542bd96245f951a908d001b42f56a9ba0e923ae125f266772924e87371b3d7566d8bb8918d
 Size (bg5pdf-1.0.0.tar.gz) = 55208 bytes
 SHA1 (patch-aa) = 75d0a19afb5d947a3cee607503cfbf78b1417a73

@@ -1,9 +1,11 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/11/15 03:00:11 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:10 agc Exp $
 
 SHA1 (foiltex.dtx) = 92527013d1c5ab837a4b6d8f8dfd9573ff20bed4
 RMD160 (foiltex.dtx) = 6a143debfbd0ec10776575fead59ec5cc66e9446
+SHA512 (foiltex.dtx) = 182655acf789a3360bd53e89c66ca684f2313f028d69410571db2565c8d93668356df092153f16d9531ecf57aa8698a76cbb640d477b2d7061b2a400daf02a69
 Size (foiltex.dtx) = 173634 bytes
 SHA1 (foiltex.ins) = 297ba9c5d1674957d4c283514fdca064c5dea064
 RMD160 (foiltex.ins) = 324393458cce6a78fc5793fad32a54491dd21d7a
+SHA512 (foiltex.ins) = 1fc9d458b2ba4720de506be11a8802e0d8c3ea27a20b3d91e61d2b74d39cdf90dbea41d6aad925bec1c9be0092cdfde91e8b05b015c379395f72977748c24f81
 Size (foiltex.ins) = 6319 bytes
 SHA1 (patch-aa) = 563dc859b90730daa0796470c3abf6884a4588e7

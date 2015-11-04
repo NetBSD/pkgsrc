@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/04 12:41:29 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:49 agc Exp $
 
 SHA1 (tex-babel-serbianc-30348/babel-serbianc.tar.xz) = 26a7325979c1c23d3c63754f2ba4fd7c2b31a825
 RMD160 (tex-babel-serbianc-30348/babel-serbianc.tar.xz) = 37f441b2889c6914f3d08a22dcc204f82da55289
+SHA512 (tex-babel-serbianc-30348/babel-serbianc.tar.xz) = 97203713618872aaa09b993d7e9a9634c9cf33975a32b19826a6c4757137a831ae90815a587fa8010f54b331c85aa9273dbb1af5772d9c574f55767c8e4a2ed9
 Size (tex-babel-serbianc-30348/babel-serbianc.tar.xz) = 3216 bytes

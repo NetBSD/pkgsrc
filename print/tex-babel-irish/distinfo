@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/04 12:33:54 markd Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:48 agc Exp $
 
 SHA1 (tex-babel-irish-30277/babel-irish.tar.xz) = fd1eec707caeb8a6915a0092d6a09f090e1ee80d
 RMD160 (tex-babel-irish-30277/babel-irish.tar.xz) = df2a16f1733ec371111fcc7481412947f3da9da4
+SHA512 (tex-babel-irish-30277/babel-irish.tar.xz) = 4e52c93156499893e81b521a7c47b555db8ff3202d227543b672779aba3b875987b8ab00cefc6bf280d343581337f9d3c9bb21de278f1acc86ec8a417b82ac37
 Size (tex-babel-irish-30277/babel-irish.tar.xz) = 2260 bytes

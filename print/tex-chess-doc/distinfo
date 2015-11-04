@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/05/06 08:41:03 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:01:56 agc Exp $
 
 SHA1 (tex-chess-20582/chess.doc.tar.xz) = abe82acc2f2233ffa341b9cc3635f005860c4995
 RMD160 (tex-chess-20582/chess.doc.tar.xz) = 74d0e446dc2bbdfee515d2c57a261ea183f533e8
+SHA512 (tex-chess-20582/chess.doc.tar.xz) = 881ea58c554a187c2f99f0343efb5269117518d7211a38f7e97cd0c5b4b87e8b003b24e4298950b1c92efafd11a9c03f28468a9e73558326b6ab966b18c906f5
 Size (tex-chess-20582/chess.doc.tar.xz) = 44696 bytes

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/09/24 16:19:54 minskim Exp $
+$NetBSD: distinfo,v 1.2 2015/11/04 01:02:52 agc Exp $
 
 SHA1 (tex-titleref-18729/titleref.doc.tar.xz) = 012ccb609b8edd5222094ce1d73960c66dc2eae7
 RMD160 (tex-titleref-18729/titleref.doc.tar.xz) = 34927fbf89f2e69c93e7faec72f902909b9c3a6e
+SHA512 (tex-titleref-18729/titleref.doc.tar.xz) = b3259b4291fea2f41445d34ca360dc4ce1428eeefc435e39d3cd16eb56ae8b99daf66d0c154735efb9c1d89c039e4c74d9a52b791df79ef10e7d939aa54f3083
 Size (tex-titleref-18729/titleref.doc.tar.xz) = 200724 bytes

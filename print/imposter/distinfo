@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2014/04/17 21:41:38 asau Exp $
+$NetBSD: distinfo,v 1.7 2015/11/04 01:01:34 agc Exp $
 
 SHA1 (imposter-0.3.tar.gz) = 70ebda94cd62dcc65c9c53a4c7cb420f4b8b694b
 RMD160 (imposter-0.3.tar.gz) = 7e01b354fe28db286e3bfdc1499f077e1c8afac6
+SHA512 (imposter-0.3.tar.gz) = 00a407990247f15c08b39a14b52844cb87a1e8515d54523f16198381df48a04c9e56053590e44b3d9f9b3155aa4c38a7e260f20ecddfc0f586372d0762483dad
 Size (imposter-0.3.tar.gz) = 169592 bytes
 SHA1 (patch-aa) = 380b3c29c0c00008e530dadece6be9934a4f984b
