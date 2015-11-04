@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/11/04 13:45:45 fhajny Exp $
+lib/erlang/lib/p1_utils/ebin/p1_fsm.beam
+lib/erlang/lib/p1_utils/ebin/p1_nif_utils.beam
+lib/erlang/lib/p1_utils/ebin/p1_server.beam
+lib/erlang/lib/p1_utils/ebin/p1_utils.app
+lib/erlang/lib/p1_utils/ebin/treap.beam
