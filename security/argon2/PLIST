@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/11/05 08:50:33 wiz Exp $
+bin/argon2
+lib/libargon2.a
+lib/libargon2.so
+share/doc/argon2/README.md
+share/doc/argon2/argon2-specs.pdf
