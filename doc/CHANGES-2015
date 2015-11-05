@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4476 2015/11/05 08:50:55 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4477 2015/11/05 12:24:05 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7679,3 +7679,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added emulators/fs-uae-launcher version 2.6.2 [adam 2015-11-04]
 	Updated www/squid3 to 3.5.11 [adam 2015-11-04]
 	Added security/argon2 version 20151102 [wiz 2015-11-05]
+	Updated chat/ejabberd to 15.10 [fhajny 2015-11-05]
