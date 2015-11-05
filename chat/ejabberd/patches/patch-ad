@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.7 2013/10/11 13:32:25 fhajny Exp $
+$NetBSD: patch-ad,v 1.8 2015/11/05 12:23:50 fhajny Exp $
 
 Proper path to captcha script.
 --- ejabberd.yml.example.orig	2013-09-27 09:19:22.000000000 +0000
@@ -8,7 +8,7 @@ Proper path to captcha script.
  ## Full path to a script that generates the image.
  ##
 -## captcha_cmd: "/lib/ejabberd/priv/bin/captcha.sh"
-+## captcha_cmd: "@PREFIX@/lib/erlang/lib/@DISTNAME@/priv/bin/captcha.sh"
++## captcha_cmd: "@PREFIX@/lib/erlang/lib/ejabberd/priv/bin/captcha.sh"
  
  ##
  ## Host for the URL and port where ejabberd listens for CAPTCHA requests.
