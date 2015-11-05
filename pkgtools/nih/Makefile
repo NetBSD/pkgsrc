@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2014/11/30 01:10:12 cheusov Exp $
+# $NetBSD: Makefile,v 1.22 2015/11/05 21:26:58 cheusov Exp $
 
-DISTNAME=	pkgnih-0.13.0
+DISTNAME=	pkgnih-0.14.0
 PKGNAME=	${DISTNAME:S/pkgnih/nih/}
 CATEGORIES=	pkgtools
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/cheusov/nih/ \
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/cheusov/pkgnih
 COMMENT=	Package manager for pkgsrc
 LICENSE=	2-clause-bsd
 
-DEPENDS+=	pkg_summary-utils>=0.63.0:../../pkgtools/pkg_summary-utils
+DEPENDS+=	pkg_summary-utils>=0.66.0:../../pkgtools/pkg_summary-utils
 DEPENDS+=	digest-[0-9]*:../../pkgtools/digest
 DEPENDS+=	pkg_install>=20100915:../../pkgtools/pkg_install
 
