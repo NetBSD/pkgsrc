@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2015/06/12 10:51:03 wiz Exp $
+# $NetBSD: Makefile,v 1.85 2015/11/05 19:10:29 tez Exp $
 
 DISTNAME=	krb5-1.10.7
 PKGNAME=	mit-${DISTNAME}
@@ -45,6 +45,7 @@ CONFIGURE_ARGS+=	--enable-kdc-replay-cache
 CONFIGURE_ARGS+=	--disable-thread-support
 CONFIGURE_ARGS+=	--without-tcl
 CONFIGURE_ARGS+=	--enable-pkgsrc-libtool
+CONFIGURE_ARGS+=	--without-system-verto
 CONFIGURE_ENV+=		BUILDLINK_PREFIX_OPENSSL=${BUILDLINK_PREFIX.openssl:Q}
 MAKE_ENV+=		ROOT_USER=${ROOT_USER}
 LIBS.SunOS=		-lrt
