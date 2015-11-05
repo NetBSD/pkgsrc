@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4479 2015/11/05 13:41:29 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.4480 2015/11/05 13:43:10 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7682,3 +7682,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated chat/ejabberd to 15.10 [fhajny 2015-11-05]
 	Updated lang/nodejs to 4.2.2 [fhajny 2015-11-05]
 	Updated devel/libbson to 1.2.1 [fhajny 2015-11-05]
+	Updated databases/mongo-c-driver to 1.2.1 [fhajny 2015-11-05]
