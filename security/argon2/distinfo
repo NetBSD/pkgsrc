@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2015/11/05 08:50:33 wiz Exp $
+
+SHA1 (phc-winner-argon2-20151102.tgz) = 424d779af4bfe666a2de0b4c71d3a53f9b44c96b
+RMD160 (phc-winner-argon2-20151102.tgz) = 76c37fc4d4903793b885a50556153a197431ff67
+SHA512 (phc-winner-argon2-20151102.tgz) = ff99736fbe9c7c7606eed5213191327a8d5855c781c4b2fd55483beb28baa8fb07c53baf258e2636ed62304e54220b49906d3723c7c42bc862ab840b84b74060
+Size (phc-winner-argon2-20151102.tgz) = 768167 bytes
+SHA1 (patch-Makefile) = 6eafa96f951f8e8120a3b26652ed4c42b53a8783
+SHA1 (patch-kats_check-sums.sh) = d91c232633e6fc8d3ab6d8cc8701997aee9c66bc
