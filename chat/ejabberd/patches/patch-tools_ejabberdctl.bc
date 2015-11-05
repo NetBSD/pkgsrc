@@ -1,8 +1,8 @@
-$NetBSD: patch-tools_ejabberdctl.bc,v 1.1 2015/10/01 14:48:14 fhajny Exp $
+$NetBSD: patch-tools_ejabberdctl.bc,v 1.2 2015/11/05 12:23:50 fhajny Exp $
 
-Subst real log dir.
+Proper log file location.
 
---- tools/ejabberdctl.bc.orig	2015-09-29 20:37:15.000000000 +0000
+--- tools/ejabberdctl.bc.orig	2015-10-28 14:53:12.000000000 +0000
 +++ tools/ejabberdctl.bc
 @@ -3,7 +3,7 @@
  #
