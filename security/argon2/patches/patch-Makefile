@@ -1,0 +1,27 @@
+$NetBSD: patch-Makefile,v 1.1 2015/11/05 08:50:33 wiz Exp $
+
+Disable -march=native since it causes problems on NetBSD.
+Add NetBSD support.
+
+--- Makefile.orig	2015-11-02 15:20:31.000000000 +0000
++++ Makefile
+@@ -24,7 +24,6 @@ CFLAGS = -std=c89 -pthread -O3 -Wall -g
+ 
+ #OPT=TRUE
+ ifeq ($(OPT), TRUE)
+-	CFLAGS += -march=native
+ 	SRC += src/opt.c
+ else
+ 	SRC += src/ref.c
+@@ -39,6 +38,11 @@ ifeq ($(KERNEL_NAME), Linux)
+ 	LIB_CFLAGS := -shared -fPIC
+ 	LIB_PATH := -Wl,-rpath=$(BUILD_PATH)
+ endif
++ifeq ($(KERNEL_NAME), NetBSD)
++	LIB_EXT := so
++	LIB_CFLAGS := -shared -fPIC
++	LIB_PATH := -Wl,-rpath=$(BUILD_PATH)
++endif
+ ifeq ($(KERNEL_NAME), Darwin)
+ 	LIB_EXT := dylib
+ 	LIB_CFLAGS := -dynamiclib -install_name @rpath/lib$(LIB_NAME).$(LIB_EXT)
