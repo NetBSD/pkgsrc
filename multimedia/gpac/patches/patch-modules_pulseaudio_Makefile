@@ -1,8 +1,8 @@
-$NetBSD: patch-modules_pulseaudio_Makefile,v 1.1 2014/07/25 18:13:54 jperkin Exp $
+$NetBSD: patch-modules_pulseaudio_Makefile,v 1.2 2015/11/05 22:02:08 tnn Exp $
 
 Pass through LDFLAGS for rpaths.
 
---- modules/pulseaudio/Makefile.orig	2011-04-21 15:06:51.000000000 +0000
+--- modules/pulseaudio/Makefile.orig	2015-01-20 11:56:44.000000000 +0000
 +++ modules/pulseaudio/Makefile
 @@ -25,7 +25,7 @@ LIB=gm_pulseaudio.$(DYN_LIB_SUFFIX)
  all: $(LIB)
@@ -11,5 +11,5 @@ Pass through LDFLAGS for rpaths.
 -	$(CC) $(SHFLAGS) -o ../../bin/gcc/$@ $(OBJS) $(EXTRALIBS) -L../../bin/gcc -lgpac -L/usr/lib -lpulse-simple
 +	$(CC) $(SHFLAGS) -o ../../bin/gcc/$@ $(OBJS) $(EXTRALIBS) $(LDFLAGS) -L../../bin/gcc -lgpac -L/usr/lib -lpulse-simple
  
- 
- %.o: %.c
+ clean: 
+ 	rm -f $(OBJS) ../../bin/gcc/$(LIB)
