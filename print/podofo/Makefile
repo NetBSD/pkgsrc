@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2014/10/19 22:27:47 alnsn Exp $
+# $NetBSD: Makefile,v 1.24 2015/11/05 19:46:53 adam Exp $
 
-DISTNAME=	podofo-0.9.2
-PKGREVISION=	5
+DISTNAME=	podofo-0.9.3
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=podofo/}
 
@@ -13,7 +12,8 @@ LICENSE=	gnu-lgpl-v2 AND gnu-gpl-v2
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
-CMAKE_ARGS+=	-DPODOFO_BUILD_SHARED:BOOL=TRUE -DPODOFO_BUILD_STATIC:BOOL=TRUE
+CMAKE_ARGS+=	-DPODOFO_BUILD_SHARED:BOOL=TRUE
+CMAKE_ARGS+=	-DPODOFO_BUILD_STATIC:BOOL=TRUE
 CMAKE_ARGS+=	-DFREETYPE_INCLUDE_DIR_FT2BUILD:PATH=${BUILDLINK_PREFIX.freetype2}/include/freetype2
 CMAKE_ARGS+=	-DFREETYPE_INCLUDE_DIR_FTHEADER:PATH=${BUILDLINK_PREFIX.freetype2}/include/freetype2/config
 CMAKE_ARGS+=	-DFREETYPE_LIB_PATHS:PATH=${BUILDLINK_PREFIX.freetype2}/lib
@@ -25,8 +25,8 @@ CMAKE_ARGS+=	-DFREETYPE_LIB_PATHS:PATH=${BUILDLINK_PREFIX.freetype2}/lib
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
