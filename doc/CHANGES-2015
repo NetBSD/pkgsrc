@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4477 2015/11/05 12:24:05 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.4478 2015/11/05 13:08:47 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7680,3 +7680,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/squid3 to 3.5.11 [adam 2015-11-04]
 	Added security/argon2 version 20151102 [wiz 2015-11-05]
 	Updated chat/ejabberd to 15.10 [fhajny 2015-11-05]
+	Updated lang/nodejs to 4.2.2 [fhajny 2015-11-05]
