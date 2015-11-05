@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q3,v 1.1.2.18 2015/10/27 19:09:16 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q3,v 1.1.2.19 2015/11/05 07:44:16 bsiegert Exp $
 
 Changes to the packages collection and infrastructure on the 2015Q3 branch:
 
@@ -85,4 +85,13 @@ www/drupal7: security fix
 
 Pullup ticket #4846 - requested by taca
 net/ntp4: security fix
+
+Pullup ticket #4848 - requested by bouyer
+sysutils/xenkernel41: security fix
+
+Pullup ticket #4849 - requested by bouyer
+sysutils/xenkernel42: security fix
+
+Pullup ticket #4850 - requested by bouyer
+sysutils/xenkernel45: security fix
 
