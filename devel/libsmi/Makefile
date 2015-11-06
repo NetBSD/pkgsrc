@@ -1,25 +1,25 @@
-# $NetBSD: Makefile,v 1.18 2012/10/31 11:17:21 asau Exp $
+# $NetBSD: Makefile,v 1.19 2015/11/06 17:07:23 adam Exp $
 
-DISTNAME=	libsmi-0.4.8
-PKGREVISION=	1
+DISTNAME=	libsmi-0.5.0
 CATEGORIES=	devel net
-MASTER_SITES=	ftp://ftp.ibr.cs.tu-bs.de/pub/local/libsmi/
+MASTER_SITES=	http://www.ibr.cs.tu-bs.de/projects/libsmi/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ibr.cs.tu-bs.de/projects/libsmi/
 COMMENT=	Library to access SMI MIB information
+LICENSE=	esdl-license
 
 MIBDIR=		${PREFIX}/share/libsmi/mibs
 PIBDIR=		${PREFIX}/share/libsmi/pibs
 
 DEPENDS+=	wget-[0-9]*:../../net/wget
 
-USE_LIBTOOL=	YES
-USE_TOOLS+=	gmake
-GNU_CONFIGURE=	YES
-CONFIGURE_ARGS+=--with-mibdir=${MIBDIR:Q}
-CONFIGURE_ARGS+=--with-pibdir=${PIBDIR:Q}
-CONFIGURE_ARGS+=--sysconfdir=${PKG_SYSCONFDIR:Q}
+USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-mibdir=${MIBDIR:Q}
+CONFIGURE_ARGS+=	--with-pibdir=${PIBDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 REPLACE_SH+=	tools/smicache.in
 REPLACE_SH+=	tools/smistrip.in
