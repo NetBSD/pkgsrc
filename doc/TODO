@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15053 2015/11/04 15:06:51 tnn Exp $
+$NetBSD: TODO,v 1.15054 2015/11/06 07:12:51 wen Exp $
 
 Suggested new packages
 ======================
@@ -1259,7 +1259,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Crypt-GeneratePassword-0.04
 	o p5-Crypt-OpenPGP-1.11
 	o p5-Crypt-RIPEMD160-0.06
-	o p5-Crypt-RandPasswd-0.06
 	o p5-DBD-DB2-1.85
 	o p5-DBD-ODBC-1.52
 	o p5-DBD-Oracle-1.74

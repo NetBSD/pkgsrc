@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4483 2015/11/06 07:06:47 wen Exp $
+$NetBSD: CHANGES-2015,v 1.4484 2015/11/06 07:12:51 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7686,3 +7686,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated print/podofo to 0.9.3 [adam 2015-11-05]
 	Updated multimedia/gpac to 0.5.2 [tnn 2015-11-05]
 	Updated www/p5-Mojolicious to 6.29 [wen 2015-11-06]
+	Updated security/p5-Crypt-RandPasswd to 0.06 [wen 2015-11-06]
