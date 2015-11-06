@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST.Linux,v 1.1 2015/11/06 15:37:49 fhajny Exp $
+include/iv_inotify.h
+man/man3/IV_INOTIFY_INIT.3
+man/man3/IV_INOTIFY_WATCH_INIT.3
+man/man3/iv_inotify.3
+man/man3/iv_inotify_register.3
+man/man3/iv_inotify_unregister.3
+man/man3/iv_inotify_watch_register.3
+man/man3/iv_inotify_watch_unregister.3

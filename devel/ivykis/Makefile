@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/11/01 13:38:52 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2015/11/06 15:37:49 fhajny Exp $
 
 DISTNAME=	ivykis-0.39
 CATEGORIES=	devel
@@ -17,7 +17,8 @@ USE_TOOLS+=	pkg-config
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "SunOS"
+# Disable inotify checks on non-Linux platforms
+.if ${OPSYS} != "Linux"
 CONFIGURE_ARGS+=	ac_cv_func_inotify_init=no
 .endif
 
