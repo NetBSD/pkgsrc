@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.139 2015/10/21 09:12:10 wiz Exp $
+# $NetBSD: Makefile,v 1.140 2015/11/06 17:35:26 adam Exp $
 
 DISTNAME=	wireshark-1.12.8
 CATEGORIES=	net
@@ -54,6 +54,10 @@ REPLACE_PYTHON+=	tools/rdps.py
 
 .if !empty(MACHINE_PLATFORM:MDarwin-[567].*-*)
 USE_BUILTIN.libpcap=	no
+.endif
+
+.if ${OPSYS} == "Darwin"
+CONFIGURE_ARGS+=	--disable-osx-deploy-target
 .endif
 
 # Extra post install targets are in options.mk
