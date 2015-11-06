@@ -1,4 +1,4 @@
-$NetBSD: patch-graphics.c,v 1.2 2015/10/11 07:02:39 ryoon Exp $
+$NetBSD: patch-graphics.c,v 1.3 2015/11/06 20:33:21 joerg Exp $
 
 --- graphics.c.orig	2008-09-03 17:58:13.000000000 +0000
 +++ graphics.c
@@ -7,7 +7,7 @@ $NetBSD: patch-graphics.c,v 1.2 2015/10/11 07:02:39 ryoon Exp $
  #endif
     
 -    prepare_to_draw;
-+    prepare_to_draw2(UNBOUND);
++    prepare_to_draw(UNBOUND);
      prepare_to_draw_turtle;
      save_pen(&saved_pen);
      plain_xor_pen();
@@ -16,7 +16,7 @@ $NetBSD: patch-graphics.c,v 1.2 2015/10/11 07:02:39 ryoon Exp $
  
  void right(FLONUM a) {
 -    prepare_to_draw;
-+    prepare_to_draw2(UNBOUND);
++    prepare_to_draw(UNBOUND);
      draw_turtle();
      turtle_heading += a;
      turtle_heading = pfmod(turtle_heading,360.0);
@@ -25,7 +25,7 @@ $NetBSD: patch-graphics.c,v 1.2 2015/10/11 07:02:39 ryoon Exp $
      internal_hideturtle();
     // #endif
 -    prepare_to_draw;
-+    prepare_to_draw2(UNBOUND);
++    prepare_to_draw(UNBOUND);
      draw_turtle();
      forward_helper(d);
      draw_turtle();
@@ -43,7 +43,7 @@ $NetBSD: patch-graphics.c,v 1.2 2015/10/11 07:02:39 ryoon Exp $
  void internal_hideturtle() {
      if(!graphics_setup) graphics_setup++;
 -    prepare_to_draw;
-+    prepare_to_draw2(UNBOUND);
++    prepare_to_draw(UNBOUND);
      if (turtle_shown) {
  	draw_turtle();
  	turtle_shown = FALSE;
@@ -70,7 +70,7 @@ $NetBSD: patch-graphics.c,v 1.2 2015/10/11 07:02:39 ryoon Exp $
      clearing_screen++;
  #endif
 -    prepare_to_draw;
-+    prepare_to_draw2(UNBOUND);
++    prepare_to_draw(UNBOUND);
      clear_screen;
  #if defined(x_window) && !HAVE_WX
      clearing_screen==0;
@@ -79,7 +79,7 @@ $NetBSD: patch-graphics.c,v 1.2 2015/10/11 07:02:39 ryoon Exp $
  void setpos_bynumber(FLONUM target_x, FLONUM target_y) {
      if (NOT_THROWING) {
 -	prepare_to_draw;
-+	prepare_to_draw2(UNBOUND);
++	prepare_to_draw(UNBOUND);
  	draw_turtle();
  	move_to(g_round(screen_x_coord), g_round(screen_y_coord));
  	setpos_commonpart(target_x, target_y);
@@ -88,7 +88,7 @@ $NetBSD: patch-graphics.c,v 1.2 2015/10/11 07:02:39 ryoon Exp $
      if (NOT_THROWING) {
  	internal_hideturtle();
 -	prepare_to_draw;
-+	prepare_to_draw2(UNBOUND);
++	prepare_to_draw(UNBOUND);
  	draw_turtle();
  	move_to(g_round(screen_x_coord), g_round(screen_y_coord));
  	target_x = ((xnode == NIL) ?
@@ -205,7 +205,7 @@ $NetBSD: patch-graphics.c,v 1.2 2015/10/11 07:02:39 ryoon Exp $
      }
  
 -    prepare_to_draw;
-+    prepare_to_draw2(UNBOUND);
++    prepare_to_draw(UNBOUND);
      if(!graphics_setup){
          done_drawing;
          return;
