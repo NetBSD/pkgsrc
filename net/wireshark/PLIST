@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2015/09/12 19:03:59 tnn Exp $
+@comment $NetBSD: PLIST,v 1.28 2015/11/06 17:35:26 adam Exp $
 bin/capinfos
 bin/captype
 bin/dftest
@@ -11,6 +11,7 @@ bin/reordercap
 bin/text2pcap
 bin/tshark
 ${PLIST.gtk3}bin/wireshark
+${PLIST.qt5}bin/wireshark-qt
 lib/libfiletap.la
 lib/libwireshark.la
 lib/libwiretap.la
@@ -38,7 +39,7 @@ man/man1/rawshark.1
 man/man1/reordercap.1
 man/man1/text2pcap.1
 man/man1/tshark.1
-${PLIST.gtk3}man/man1/wireshark.1
+${PLIST.icons}man/man1/wireshark.1
 man/man4/wireshark-filter.4
 ${PLIST.gtk3}share/applications/wireshark.desktop
 ${PLIST.icons}share/icons/hicolor/128x128/mimetypes/application-vnd.tcpdump.pcap.png
