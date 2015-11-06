@@ -1,14 +1,15 @@
-$NetBSD: README.MacOSX,v 1.21 2015/11/06 15:48:52 gdt Exp $
+$NetBSD: README.MacOSX,v 1.22 2015/11/06 16:38:27 gdt Exp $
 
 This file describes the use of current versions of pkgsrc with
-multiple versions of Mac OS X, omitting information about previous
-pkgsrc versions.
+multiple versions of OS X, omitting information about previous pkgsrc
+versions.  (Apple has renamed Mac OS X to OS X, but the filename
+remains.)
 
 * system tools issues
 
 ** native headers vs SDK
 
-Mac OS X used to include system headers in /usr/include, so that one
+OS X used to include system headers in /usr/include, so that one
 could treat it like a relatively normal POSIX system.  Starting at
 approximately 10.9, headers were no longer available at the standard
 location, and one has to use an SDK that puts headers someplace else.
@@ -18,12 +19,12 @@ confusion is believed to be resolved.
 
 ** gcc vs clang
 
-Older versions of Mac OS X (when XCode is installed) provided gcc, and
+Older versions of OS X (when XCode is installed) provided gcc, and
 pkgsrc defaulted to using gcc.  With 10.9, gcc is no longer present.
 
 ** i386 vs x86_64 ABI issue
 
-Mac OS X 10.6 and higher supports x86-64 binaries on most Intel Macs.
+OS X 10.6 and higher supports x86-64 binaries on most Intel Macs.
 This has caused problems with packages which get confused because
 "MACHINE_ARCH" is in some OS versions set to "i386" (on a 64-bit
 system!).
@@ -32,7 +33,7 @@ system!).
   10.9: x86_64 : i386
 
 On Intel machines, pkgsrc currently defaults to i386 mode (--abi=32)
-on Mac OS X, and can be set to x86_64 mode (--abi=64).
+on OS X, and can be set to x86_64 mode (--abi=64).
 Note that a pkgsrc build in x86_64 mode will not run on an Intel Mac
 that is i386 only (some older Mac Minis and Macbooks).  For a longer
 discussion, see:
@@ -53,9 +54,9 @@ Therefore, pkgsrc uses nbsed on 10.9.
 
 This section applies to 10.6 through 10.10.
 
-If you haven't already, you will need to install the Mac OS X
+If you haven't already, you will need to install the OS X
 Developer Tools package (XCode) to obtain a compiler, etc.  The
-procedure depends on the version of Mac OS X; recent versions use the
+procedure depends on the version of OS X; recent versions use the
 App Store.
 
 ** Command-line Tools
@@ -72,10 +73,10 @@ it may be useful to `git clone https://github.com/jsonn/pkgsrc.git`.
 
 ** X11
 
-X11 used to be built into Mac OS X, but as of 10.8 it is no longer
+X11 used to be built into OS X, but as of 10.8 it is no longer
 included.  Install XQuartz from http://xquartz.macosforge.org/landing/
 
-* Mac OS X Versions
+* OS X Versions
 
 pkgsrc is a volunteer project, and individuals support/fix packages
 and platforms as they choose.  However, pkgsrc contributors as a group
@@ -101,7 +102,7 @@ in mind that there are no guarantees:
   system at all.
 
 Given the above definitions, the pkgsrc developers label versions of
-Mac OS X as follows:
+OS X as follows:
 
   10.11: current. [SUPPORTED]
 
@@ -148,5 +149,5 @@ binary packages, building packages will not in general work.
 
 ** 10.9, --abi=64 (x86-64), clang
 
-Joyent provide a build build for 10.9/x86_64, and therefore clang, at
+Joyent provide a bulk build for 10.9/x86_64, and therefore clang, at
 the same URL as above.
