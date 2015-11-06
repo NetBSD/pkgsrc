@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4497 2015/11/06 11:07:08 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4498 2015/11/06 11:16:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7700,3 +7700,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/py-oauthlib to 1.0.3 [wiz 2015-11-06]
 	Updated security/py-requests-oauthlib to 0.5.0 [wiz 2015-11-06]
 	Updated time/py-vdirsyncer to 0.7.3 [wiz 2015-11-06]
+	Updated graphics/cairo to 1.14.4 [wiz 2015-11-06]
