@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4482 2015/11/05 22:03:15 tnn Exp $
+$NetBSD: CHANGES-2015,v 1.4483 2015/11/06 07:06:47 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7685,3 +7685,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/mongo-c-driver to 1.2.1 [fhajny 2015-11-05]
 	Updated print/podofo to 0.9.3 [adam 2015-11-05]
 	Updated multimedia/gpac to 0.5.2 [tnn 2015-11-05]
+	Updated www/p5-Mojolicious to 6.29 [wen 2015-11-06]
