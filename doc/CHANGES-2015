@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4503 2015/11/06 11:42:21 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4504 2015/11/06 12:46:29 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7706,3 +7706,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated math/gsl to 2.0 [wiz 2015-11-06]
 	Updated audio/libopenmpt to 0.2.5705 [wiz 2015-11-06]
 	Added devel/py-requests-oauthlib version 0.5.0 [wiz 2015-11-06]
+	Updated finance/magento to 1.9.2.2 [fhajny 2015-11-06]
