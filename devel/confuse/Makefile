@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2015/11/03 19:32:50 bsiegert Exp $
+# $NetBSD: Makefile,v 1.14 2015/11/06 20:12:01 bsiegert Exp $
 #
 
 DISTNAME=	confuse-2.8
@@ -17,6 +17,7 @@ CONFIGURE_ARGS+=	--enable-shared
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		pkg-config msgfmt autoconf automake
+BUILD_DEPENDS+=		gettext-m4-[0-9]*:../../devel/gettext-m4
 
 PKGCONFIG_OVERRIDE+=	libconfuse.pc.in
 INSTALLATION_DIRS=	lib include
@@ -29,5 +30,6 @@ pre-configure:
 	cd ${WRKSRC} && ./autogen.sh
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/gettext-tools/buildlink3.mk"
 .include "../../mk/fetch/github.mk"
 .include "../../mk/bsd.pkg.mk"
