@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4505 2015/11/06 13:50:25 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4506 2015/11/06 17:32:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7708,3 +7708,11 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/py-requests-oauthlib version 0.5.0 [wiz 2015-11-06]
 	Updated finance/magento to 1.9.2.2 [fhajny 2015-11-06]
 	Added lang/clang-static-analyzer version 3.7.0 [wiz 2015-11-06]
+	Updated devel/git to 2.6.3 [adam 2015-11-06]
+	Updated devel/git-base to 2.6.3 [adam 2015-11-06]
+	Updated devel/git-docs to 2.6.3 [adam 2015-11-06]
+	Updated devel/git-svn to 2.6.3 [adam 2015-11-06]
+	Updated devel/git-gitk to 2.6.3 [adam 2015-11-06]
+	Updated devel/git-contrib to 2.6.3 [adam 2015-11-06]
+	Updated www/gitweb to 2.6.3 [adam 2015-11-06]
+	Updated devel/libsmi to 0.5.0 [adam 2015-11-06]
