@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4490 2015/11/06 09:25:32 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4491 2015/11/06 09:39:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7693,3 +7693,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/geany to 1.25 [wiz 2015-11-06]
 	Updated devel/libuv to 1.7.5 [wiz 2015-11-06]
 	Updated sysutils/dbus to 1.10.2 [wiz 2015-11-06]
+	Updated audio/musicpd to 0.19.11 [wiz 2015-11-06]
