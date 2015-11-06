@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2015/08/20 16:49:35 fhajny Exp $
+# $NetBSD: Makefile,v 1.6 2015/11/06 12:46:14 fhajny Exp $
 
-DISTNAME=	magento-1.9.2.1
+DISTNAME=	magento-1.9.2.2
 CATEGORIES=	www finance
 # Upstream temporarily removed the option to download directly
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/fhajny/magento/
@@ -14,6 +14,7 @@ LICENSE=	osl
 DIST_SUBDIR=	magento
 PATCH_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/fhajny/magento/
 PATCHFILES=	# none sofar
+EXTRACT_DIR=	${WRKDIR}/magento
 
 DEPENDS+=	${PHP_PKG_PREFIX}-curl-[0-9]*:../../www/php-curl
 DEPENDS+=	${PHP_PKG_PREFIX}-dom-[0-9]*:../../textproc/php-dom
@@ -37,6 +38,7 @@ NO_BUILD=	yes
 .include "../../mk/bsd.prefs.mk"
 
 BUILD_DEFS+=		VARBASE MAGENTO_DIR MAGENTO_OWN MAGENTO_GRP
+BUILD_DEFS+=		APACHE_USER APACHE_GROUP
 
 MAGENTO_DIR?=		${VARBASE}/magento
 MAGENTO_OWN?=		${APACHE_USER}
@@ -76,6 +78,9 @@ PKG_SYSCONFSUBDIR=	magento
 PKG_SYSCONFDIR_PERMS=	${MAGENTO_OWN} ${MAGENTO_GRP} 0750
 MAKE_DIRS_PERMS+=	${PKG_SYSCONFDIR}/modules ${MAGENTO_OWN} ${MAGENTO_GRP} 0750
 OWN_DIRS_PERMS+=	${MAGENTO_DIR} ${MAGENTO_OWN} ${MAGENTO_GRP} 0750
+
+post-extract:
+	${CHMOD} -R g-w,o-w ${WRKSRC}
 
 # Make note of the patches applied, same way the upstream patch scripts do
 post-patch:
