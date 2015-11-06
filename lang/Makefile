@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.417 2015/08/06 10:14:42 jnemeth Exp $
+# $NetBSD: Makefile,v 1.418 2015/11/06 13:50:16 wiz Exp $
 #
 
 COMMENT=	Programming languages
@@ -26,6 +26,7 @@ SUBDIR+=	chicken
 SUBDIR+=	cim
 SUBDIR+=	cint
 SUBDIR+=	clang
+SUBDIR+=	clang-static-analyzer
 SUBDIR+=	classpath
 SUBDIR+=	classpath-gui
 SUBDIR+=	clisp
