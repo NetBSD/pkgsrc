@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2015/08/14 17:53:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2015/11/06 11:06:56 wiz Exp $
 bin/vdirsyncer
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -12,15 +12,18 @@ ${PYSITELIB}/vdirsyncer/__init__.pyo
 ${PYSITELIB}/vdirsyncer/cli/__init__.py
 ${PYSITELIB}/vdirsyncer/cli/__init__.pyc
 ${PYSITELIB}/vdirsyncer/cli/__init__.pyo
+${PYSITELIB}/vdirsyncer/cli/config.py
+${PYSITELIB}/vdirsyncer/cli/config.pyc
+${PYSITELIB}/vdirsyncer/cli/config.pyo
+${PYSITELIB}/vdirsyncer/cli/fetchparams.py
+${PYSITELIB}/vdirsyncer/cli/fetchparams.pyc
+${PYSITELIB}/vdirsyncer/cli/fetchparams.pyo
 ${PYSITELIB}/vdirsyncer/cli/tasks.py
 ${PYSITELIB}/vdirsyncer/cli/tasks.pyc
 ${PYSITELIB}/vdirsyncer/cli/tasks.pyo
 ${PYSITELIB}/vdirsyncer/cli/utils.py
 ${PYSITELIB}/vdirsyncer/cli/utils.pyc
 ${PYSITELIB}/vdirsyncer/cli/utils.pyo
-${PYSITELIB}/vdirsyncer/doubleclick.py
-${PYSITELIB}/vdirsyncer/doubleclick.pyc
-${PYSITELIB}/vdirsyncer/doubleclick.pyo
 ${PYSITELIB}/vdirsyncer/exceptions.py
 ${PYSITELIB}/vdirsyncer/exceptions.pyc
 ${PYSITELIB}/vdirsyncer/exceptions.pyo
@@ -51,6 +54,9 @@ ${PYSITELIB}/vdirsyncer/storage/http.pyo
 ${PYSITELIB}/vdirsyncer/storage/memory.py
 ${PYSITELIB}/vdirsyncer/storage/memory.pyc
 ${PYSITELIB}/vdirsyncer/storage/memory.pyo
+${PYSITELIB}/vdirsyncer/storage/remotestorage.py
+${PYSITELIB}/vdirsyncer/storage/remotestorage.pyc
+${PYSITELIB}/vdirsyncer/storage/remotestorage.pyo
 ${PYSITELIB}/vdirsyncer/storage/singlefile.py
 ${PYSITELIB}/vdirsyncer/storage/singlefile.pyc
 ${PYSITELIB}/vdirsyncer/storage/singlefile.pyo
@@ -66,9 +72,6 @@ ${PYSITELIB}/vdirsyncer/utils/compat.pyo
 ${PYSITELIB}/vdirsyncer/utils/http.py
 ${PYSITELIB}/vdirsyncer/utils/http.pyc
 ${PYSITELIB}/vdirsyncer/utils/http.pyo
-${PYSITELIB}/vdirsyncer/utils/password.py
-${PYSITELIB}/vdirsyncer/utils/password.pyc
-${PYSITELIB}/vdirsyncer/utils/password.pyo
 ${PYSITELIB}/vdirsyncer/utils/vobject.py
 ${PYSITELIB}/vdirsyncer/utils/vobject.pyc
 ${PYSITELIB}/vdirsyncer/utils/vobject.pyo
