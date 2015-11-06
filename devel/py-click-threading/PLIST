@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2015/11/06 09:44:07 wiz Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/click_threading/__init__.py
+${PYSITELIB}/click_threading/__init__.pyc
+${PYSITELIB}/click_threading/__init__.pyo
+${PYSITELIB}/click_threading/_compat.py
+${PYSITELIB}/click_threading/_compat.pyc
+${PYSITELIB}/click_threading/_compat.pyo
+${PYSITELIB}/click_threading/monkey.py
+${PYSITELIB}/click_threading/monkey.pyc
+${PYSITELIB}/click_threading/monkey.pyo
