@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2015/08/24 10:45:22 adam Exp $
+@comment $NetBSD: PLIST,v 1.36 2015/11/06 08:38:29 adam Exp $
 bin/django-admin${PYVERSSUFFIX}
 bin/django-admin${PYVERSSUFFIX}.py
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -4612,6 +4612,9 @@ ${PYSITELIB}/django/utils/http.pyo
 ${PYSITELIB}/django/utils/importlib.py
 ${PYSITELIB}/django/utils/importlib.pyc
 ${PYSITELIB}/django/utils/importlib.pyo
+${PYSITELIB}/django/utils/inspect.pyc
+${PYSITELIB}/django/utils/inspect.pyo
+${PYSITELIB}/django/utils/inspect.py
 ${PYSITELIB}/django/utils/ipv6.py
 ${PYSITELIB}/django/utils/ipv6.pyc
 ${PYSITELIB}/django/utils/ipv6.pyo
