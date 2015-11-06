@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2015/03/15 21:05:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.39 2015/11/06 11:15:51 wiz Exp $
 bin/cairo-trace
 include/cairo/cairo-deprecated.h
 include/cairo/cairo-features.h
@@ -85,6 +85,7 @@ share/gtk-doc/html/cairo/cairo.devhelp2
 share/gtk-doc/html/cairo/home.png
 share/gtk-doc/html/cairo/index-1.10.html
 share/gtk-doc/html/cairo/index-1.12.html
+share/gtk-doc/html/cairo/index-1.14.html
 share/gtk-doc/html/cairo/index-1.2.html
 share/gtk-doc/html/cairo/index-1.4.html
 share/gtk-doc/html/cairo/index-1.6.html
