@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2015/11/01 13:38:52 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/11/06 15:37:49 fhajny Exp $
 include/iv.h
 include/iv_avl.h
 include/iv_event.h
 include/iv_event_raw.h
 include/iv_fd_pump.h
-include/iv_inotify.h
 include/iv_list.h
 include/iv_popen.h
 include/iv_signal.h
@@ -17,8 +16,6 @@ lib/pkgconfig/ivykis.pc
 man/man3/IV_EVENT_INIT.3
 man/man3/IV_EVENT_RAW_INIT.3
 man/man3/IV_FD_PUMP_INIT.3
-man/man3/IV_INOTIFY_INIT.3
-man/man3/IV_INOTIFY_WATCH_INIT.3
 man/man3/IV_POPEN_REQUEST_INIT.3
 man/man3/IV_SIGNAL_INIT.3
 man/man3/IV_WAIT_INTEREST_INIT.3
@@ -50,11 +47,6 @@ man/man3/iv_fd_set_handler_out.3
 man/man3/iv_fd_unregister.3
 man/man3/iv_init.3
 man/man3/iv_inited.3
-man/man3/iv_inotify.3
-man/man3/iv_inotify_register.3
-man/man3/iv_inotify_unregister.3
-man/man3/iv_inotify_watch_register.3
-man/man3/iv_inotify_watch_unregister.3
 man/man3/iv_invalidate_now.3
 man/man3/iv_main.3
 man/man3/iv_popen.3
