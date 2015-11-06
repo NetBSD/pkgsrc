@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2015/10/29 16:34:13 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/11/06 16:05:00 fhajny Exp $
 bin/loggen
 bin/pdbtool
 bin/syslog2ng
@@ -166,7 +166,6 @@ lib/syslog-ng/libaffile.la
 lib/syslog-ng/libafprog.la
 lib/syslog-ng/libafsocket.la
 lib/syslog-ng/libafstomp.la
-lib/syslog-ng/libafstreams.la
 lib/syslog-ng/libafuser.la
 lib/syslog-ng/libbasicfuncs.la
 lib/syslog-ng/libconfgen.la
