@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.4 2013/07/21 20:11:11 wiz Exp $
+$NetBSD: patch-af,v 1.5 2015/11/06 11:19:48 wiz Exp $
 
 Tags: not-for-upstream
 
---- siman/Makefile.in.orig	2013-07-19 15:14:55.000000000 +0000
+--- siman/Makefile.in.orig	2015-10-31 18:42:35.000000000 +0000
 +++ siman/Makefile.in
 @@ -95,7 +95,7 @@ CONFIG_HEADER = $(top_builddir)/config.h
  CONFIG_CLEAN_FILES =
