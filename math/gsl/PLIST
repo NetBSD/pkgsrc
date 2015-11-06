@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2011/05/08 20:35:25 asau Exp $
+@comment $NetBSD: PLIST,v 1.19 2015/11/06 11:19:48 wiz Exp $
 bin/gsl-config
 bin/gsl-histogram
 bin/gsl-randist
@@ -55,6 +55,7 @@ include/gsl/gsl_ieee_utils.h
 include/gsl/gsl_inline.h
 include/gsl/gsl_integration.h
 include/gsl/gsl_interp.h
+include/gsl/gsl_interp2d.h
 include/gsl/gsl_linalg.h
 include/gsl/gsl_machine.h
 include/gsl/gsl_math.h
@@ -128,6 +129,7 @@ include/gsl/gsl_qrng.h
 include/gsl/gsl_randist.h
 include/gsl/gsl_rng.h
 include/gsl/gsl_roots.h
+include/gsl/gsl_rstat.h
 include/gsl/gsl_sf.h
 include/gsl/gsl_sf_airy.h
 include/gsl/gsl_sf_bessel.h
@@ -184,8 +186,12 @@ include/gsl/gsl_sort_vector_uchar.h
 include/gsl/gsl_sort_vector_uint.h
 include/gsl/gsl_sort_vector_ulong.h
 include/gsl/gsl_sort_vector_ushort.h
+include/gsl/gsl_spblas.h
 include/gsl/gsl_specfunc.h
+include/gsl/gsl_splinalg.h
 include/gsl/gsl_spline.h
+include/gsl/gsl_spline2d.h
+include/gsl/gsl_spmatrix.h
 include/gsl/gsl_statistics.h
 include/gsl/gsl_statistics_char.h
 include/gsl/gsl_statistics_double.h
