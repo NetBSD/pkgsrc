@@ -1,0 +1,9 @@
+The Clang Static Analyzer is a source code analysis tool that finds
+bugs in C, C++, and Objective-C programs.
+
+The standalone tool is invoked from the command line, and is intended
+to be run in tandem with a build of a codebase.
+
+The analyzer is 100% open source and is part of the Clang project.
+Like the rest of Clang, the analyzer is implemented as a C++ library
+that can be used by other tools and applications
