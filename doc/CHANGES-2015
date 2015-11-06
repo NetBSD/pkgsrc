@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4507 2015/11/06 21:42:32 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4508 2015/11/06 21:45:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7705,7 +7705,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/colordiff to 1.0.16 [wiz 2015-11-06]
 	Updated math/gsl to 2.0 [wiz 2015-11-06]
 	Updated audio/libopenmpt to 0.2.5705 [wiz 2015-11-06]
-	Added devel/py-requests-oauthlib version 0.5.0 [wiz 2015-11-06]
 	Updated finance/magento to 1.9.2.2 [fhajny 2015-11-06]
 	Added lang/clang-static-analyzer version 3.7.0 [wiz 2015-11-06]
 	Updated devel/git to 2.6.3 [adam 2015-11-06]
