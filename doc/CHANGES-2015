@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4496 2015/11/06 11:01:51 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4497 2015/11/06 11:07:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7699,3 +7699,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added textproc/py-JWT version 1.4.0 [wiz 2015-11-06]
 	Updated security/py-oauthlib to 1.0.3 [wiz 2015-11-06]
 	Updated security/py-requests-oauthlib to 0.5.0 [wiz 2015-11-06]
+	Updated time/py-vdirsyncer to 0.7.3 [wiz 2015-11-06]
