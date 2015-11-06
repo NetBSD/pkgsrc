@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4491 2015/11/06 09:39:30 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4492 2015/11/06 09:44:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7694,3 +7694,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/libuv to 1.7.5 [wiz 2015-11-06]
 	Updated sysutils/dbus to 1.10.2 [wiz 2015-11-06]
 	Updated audio/musicpd to 0.19.11 [wiz 2015-11-06]
+	Added devel/py-click-threading version 0.1.2 [wiz 2015-11-06]
