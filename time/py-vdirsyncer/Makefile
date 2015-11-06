@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2015/11/06 11:06:56 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2015/11/06 21:32:45 wiz Exp $
 
 DISTNAME=	vdirsyncer-0.7.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -19,7 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-click-log-[0-9]*:../../devel/py-click-log
 DEPENDS+=	${PYPKGPREFIX}-click-threading-[0-9]*:../../devel/py-click-threading
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-requests-[0-9]*:../../devel/py-requests
-DEPENDS+=	${PYPKGPREFIX}-requests-oauthlib-[0-9]*:../../devel/py-requests-oauthlib
+DEPENDS+=	${PYPKGPREFIX}-requests-oauthlib-[0-9]*:../../security/py-requests-oauthlib
 DEPENDS+=	${PYPKGPREFIX}-requests-toolbelt>=0.4.0:../../devel/py-requests-toolbelt
 # optional, but recommended
 DEPENDS+=	${PYPKGPREFIX}-keyring-[0-9]*:../../security/py-keyring
