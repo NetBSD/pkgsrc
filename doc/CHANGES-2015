@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4513 2015/11/07 18:42:24 dholland Exp $
+$NetBSD: CHANGES-2015,v 1.4514 2015/11/07 19:03:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7722,3 +7722,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated archivers/unrar to 5.3.7 [adam 2015-11-07]
 	Updated x11/gtk3 to 3.16.6nb1 [he 2015-11-07]
 	Updated devel/quilt to 0.64nb2 [dholland 2015-11-07]
+	Added devel/py-test-cov version 2.2.0 [wiz 2015-11-07]
