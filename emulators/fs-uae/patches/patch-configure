@@ -1,0 +1,24 @@
+$NetBSD: patch-configure,v 1.1 2015/11/07 13:30:21 adam Exp $
+
+Fix OpenAL support on Darwin.
+
+--- configure.orig	2015-11-07 13:22:13.000000000 +0000
++++ configure
+@@ -7122,7 +7122,7 @@ fi
+ $as_echo "$as_me: Using OpenAL.framework" >&6;}
+ 		# OPENAL_CFLAGS="-I/System/Library/Frameworks/OpenAL.framework/Headers"
+ 		# OPENAL_CFLAGS="-I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/OpenAL.framework/Headers"
+-		OPENAL_CFLAGS="-I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Headers"
++		OPENAL_CFLAGS="-framework OpenAL"
+ 		OPENAL_LIBS="-framework OpenAL"
+ 
+ 	 ;; #(
+@@ -7148,7 +7148,7 @@ $as_echo "no" >&6; }
+ $as_echo "$as_me: Using OpenAL.framework" >&6;}
+ 		# OPENAL_CFLAGS="-I/System/Library/Frameworks/OpenAL.framework/Headers"
+ 		# OPENAL_CFLAGS="-I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk/System/Library/Frameworks/OpenAL.framework/Headers"
+-		OPENAL_CFLAGS="-I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/OpenAL.framework/Headers"
++		OPENAL_CFLAGS="-framework OpenAL"
+ 		OPENAL_LIBS="-framework OpenAL"
+ 
+ 	 ;; #(
