@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2014/02/12 23:17:35 tron Exp $
+# $NetBSD: Makefile,v 1.39 2015/11/07 21:18:23 dholland Exp $
 #
 
 DISTNAME=	epic4-2.10.2
@@ -17,6 +17,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.epicsol.org/
 COMMENT=	The (E)nhanced (P)rogrammable (I)RC-II (C)lient
+USE_TOOLS+=	perl
 
 GNU_CONFIGURE=	YES
 
