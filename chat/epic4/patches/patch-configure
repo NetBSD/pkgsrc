@@ -1,0 +1,23 @@
+$NetBSD: patch-configure,v 1.1 2015/11/07 21:36:57 dholland Exp $
+
+- Disable part of the perl probe so pkgsrc perl works.
+
+--- configure~	2008-03-20 04:20:49.000000000 +0000
++++ configure
+@@ -5051,11 +5051,11 @@ fi
+ 
+ test "xno" != "x$withval" && for base in $withval /usr/local /usr /
+ do
+-	FOUND=
+-	for ext in so a dll ; do
+-		test -r $base/lib/libperl.$ext && FOUND=1
+-		test -r $base/libperl.$ext && FOUND=1
+-	done
++	FOUND=1
++	#for ext in so a dll ; do
++	#	test -r $base/lib/libperl.$ext && FOUND=1
++	#	test -r $base/libperl.$ext && FOUND=1
++	#done
+ 	test -n "$FOUND" || continue
+ 	echo "$ac_t""yes" 1>&6
+ 	LIBS="$LIBS `perl -MExtUtils::Embed -e ldopts`"

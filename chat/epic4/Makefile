@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2015/11/07 21:18:23 dholland Exp $
+# $NetBSD: Makefile,v 1.40 2015/11/07 21:36:57 dholland Exp $
 #
 
 DISTNAME=	epic4-2.10.2
@@ -17,13 +17,14 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.epicsol.org/
 COMMENT=	The (E)nhanced (P)rogrammable (I)RC-II (C)lient
-USE_TOOLS+=	perl
 
 GNU_CONFIGURE=	YES
 
 INSTALL_MAKE_FLAGS+=	IP=${DESTDIR}
 
 CFLAGS.OSF1+=	-D_SOCKADDR_LEN
+
+.include "options.mk"
 
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
