@@ -1,7 +1,8 @@
-$NetBSD: patch-gtk_fallback-c89.c,v 1.1 2015/11/07 15:51:40 he Exp $
+$NetBSD: patch-gtk_fallback-c89.c,v 1.2 2015/11/07 20:20:01 wiz Exp $
 
 Work around the fact that math.h may declare these functions
 non-static.
+https://bugzilla.gnome.org/show_bug.cgi?id=757748                                                                                                         
 
 --- gtk/fallback-c89.c.orig	2014-03-06 04:42:58.000000000 +0000
 +++ gtk/fallback-c89.c
