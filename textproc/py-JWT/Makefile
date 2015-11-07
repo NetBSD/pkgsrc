@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/11/06 10:46:25 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2015/11/07 19:04:09 wiz Exp $
 
 DISTNAME=	PyJWT-1.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Py//}
@@ -11,6 +11,8 @@ COMMENT=	JSON Web Token implementation in Python
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test-cov-[0-9]*:../../devel/py-test-cov
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
