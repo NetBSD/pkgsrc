@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/01/27 20:46:22 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/11/07 19:12:09 wiz Exp $
 bin/coverage-${PYVERSSUFFIX}
 ${PLIST.py2x}bin/coverage2
 ${PLIST.py3x}bin/coverage3
@@ -17,6 +17,9 @@ ${PYSITELIB}/coverage/__main__.pyo
 ${PYSITELIB}/coverage/annotate.py
 ${PYSITELIB}/coverage/annotate.pyc
 ${PYSITELIB}/coverage/annotate.pyo
+${PYSITELIB}/coverage/backunittest.py
+${PYSITELIB}/coverage/backunittest.pyc
+${PYSITELIB}/coverage/backunittest.pyo
 ${PYSITELIB}/coverage/backward.py
 ${PYSITELIB}/coverage/backward.pyc
 ${PYSITELIB}/coverage/backward.pyo
@@ -26,9 +29,6 @@ ${PYSITELIB}/coverage/bytecode.pyo
 ${PYSITELIB}/coverage/cmdline.py
 ${PYSITELIB}/coverage/cmdline.pyc
 ${PYSITELIB}/coverage/cmdline.pyo
-${PYSITELIB}/coverage/codeunit.py
-${PYSITELIB}/coverage/codeunit.pyc
-${PYSITELIB}/coverage/codeunit.pyo
 ${PYSITELIB}/coverage/collector.py
 ${PYSITELIB}/coverage/collector.pyc
 ${PYSITELIB}/coverage/collector.pyo
@@ -44,6 +44,9 @@ ${PYSITELIB}/coverage/data.pyo
 ${PYSITELIB}/coverage/debug.py
 ${PYSITELIB}/coverage/debug.pyc
 ${PYSITELIB}/coverage/debug.pyo
+${PYSITELIB}/coverage/env.py
+${PYSITELIB}/coverage/env.pyc
+${PYSITELIB}/coverage/env.pyo
 ${PYSITELIB}/coverage/execfile.py
 ${PYSITELIB}/coverage/execfile.pyc
 ${PYSITELIB}/coverage/execfile.pyo
@@ -55,6 +58,7 @@ ${PYSITELIB}/coverage/html.pyc
 ${PYSITELIB}/coverage/html.pyo
 ${PYSITELIB}/coverage/htmlfiles/coverage_html.js
 ${PYSITELIB}/coverage/htmlfiles/index.html
+${PYSITELIB}/coverage/htmlfiles/jquery.debounce.min.js
 ${PYSITELIB}/coverage/htmlfiles/jquery.hotkeys.js
 ${PYSITELIB}/coverage/htmlfiles/jquery.isonscreen.js
 ${PYSITELIB}/coverage/htmlfiles/jquery.min.js
@@ -66,12 +70,30 @@ ${PYSITELIB}/coverage/htmlfiles/style.css
 ${PYSITELIB}/coverage/misc.py
 ${PYSITELIB}/coverage/misc.pyc
 ${PYSITELIB}/coverage/misc.pyo
+${PYSITELIB}/coverage/monkey.py
+${PYSITELIB}/coverage/monkey.pyc
+${PYSITELIB}/coverage/monkey.pyo
 ${PYSITELIB}/coverage/parser.py
 ${PYSITELIB}/coverage/parser.pyc
 ${PYSITELIB}/coverage/parser.pyo
 ${PYSITELIB}/coverage/phystokens.py
 ${PYSITELIB}/coverage/phystokens.pyc
 ${PYSITELIB}/coverage/phystokens.pyo
+${PYSITELIB}/coverage/pickle2json.py
+${PYSITELIB}/coverage/pickle2json.pyc
+${PYSITELIB}/coverage/pickle2json.pyo
+${PYSITELIB}/coverage/plugin.py
+${PYSITELIB}/coverage/plugin.pyc
+${PYSITELIB}/coverage/plugin.pyo
+${PYSITELIB}/coverage/plugin_support.py
+${PYSITELIB}/coverage/plugin_support.pyc
+${PYSITELIB}/coverage/plugin_support.pyo
+${PYSITELIB}/coverage/python.py
+${PYSITELIB}/coverage/python.pyc
+${PYSITELIB}/coverage/python.pyo
+${PYSITELIB}/coverage/pytracer.py
+${PYSITELIB}/coverage/pytracer.pyc
+${PYSITELIB}/coverage/pytracer.pyo
 ${PYSITELIB}/coverage/report.py
 ${PYSITELIB}/coverage/report.pyc
 ${PYSITELIB}/coverage/report.pyo
@@ -84,6 +106,9 @@ ${PYSITELIB}/coverage/summary.pyo
 ${PYSITELIB}/coverage/templite.py
 ${PYSITELIB}/coverage/templite.pyc
 ${PYSITELIB}/coverage/templite.pyo
+${PYSITELIB}/coverage/test_helpers.py
+${PYSITELIB}/coverage/test_helpers.pyc
+${PYSITELIB}/coverage/test_helpers.pyo
 ${PYSITELIB}/coverage/tracer.so
 ${PYSITELIB}/coverage/version.py
 ${PYSITELIB}/coverage/version.pyc
