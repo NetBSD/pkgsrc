@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.11 2015/11/03 00:25:51 agc Exp $
+$NetBSD: distinfo,v 1.12 2015/11/07 20:07:07 dholland Exp $
 
 SHA1 (nettest.92.11.09.tar.Z) = 745408751115784f8f5dc63b16428eb1404d6c5e
 RMD160 (nettest.92.11.09.tar.Z) = dadf2688c5d57dc019df7267f35089e70a92bd79
 SHA512 (nettest.92.11.09.tar.Z) = f2ff63a84f3001673988a2608bdeb2e6b9725ad522c1db02c9dedc649beca2c0610991faa655370e043be3f4ba3a6a28a66cf1f7be1fcfaeef59fc354019f249
 Size (nettest.92.11.09.tar.Z) = 35068 bytes
-SHA1 (patch-aa) = 969de4bb4d98cf31ef7dc516bdc74fc8640e5b5a
+SHA1 (patch-aa) = dbe24bfdc96933b9711bd0f9fbec2788117f33f7
 SHA1 (patch-ab) = e96227451fce253cd77491cfa2214fa49651af15
 SHA1 (patch-ac) = 7c6f6abf3012c81d8898c4ef21936e0e89d108dd
 SHA1 (patch-ad) = bbae628cc8cb7a38f89f912d8682dc100fceeabc
