@@ -1,7 +1,7 @@
 /*
  * $OpenBSD: common.h,v 1.26 2006/03/11 19:41:30 otto Exp $
  * $DragonFly: src/usr.bin/patch/common.h,v 1.5 2008/08/10 23:50:12 joerg Exp $
- * $NetBSD: common.h,v 1.4 2014/03/14 22:13:09 ryoon Exp $
+ * $NetBSD: common.h,v 1.5 2015/11/07 18:29:50 joerg Exp $
  */
 
 /*
@@ -49,14 +49,15 @@
 #define INITHUNKMAX 125		/* initial dynamic allocation size */
 #define MAXLINELEN 8192
 #define BUFFERSIZE 1024
+#define LINENUM_MAX LONG_MAX
 
 #define SCCSPREFIX "s."
 #define GET "get -e %s"
 #define SCCSDIFF "get -p %s | diff - %s >/dev/null"
 
 #define RCSSUFFIX ",v"
-#define CHECKOUT "co -l %s"
-#define RCSDIFF "rcsdiff %s > /dev/null"
+#define CHECKOUT "/usr/bin/co"
+#define RCSDIFF "/usr/bin/rcsdiff"
 
 #define ORIGEXT ".orig"
 #define REJEXT ".rej"
