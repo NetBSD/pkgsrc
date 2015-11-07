@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4508 2015/11/06 21:45:32 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4509 2015/11/07 09:16:28 tron Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7716,3 +7716,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/gitweb to 2.6.3 [adam 2015-11-06]
 	Updated devel/libsmi to 0.5.0 [adam 2015-11-06]
 	Updated devel/py-requests to 2.8.1 [wiz 2015-11-06]
+	Updated pkgtools/x11-links to 0.99 [tron 2015-11-07]
