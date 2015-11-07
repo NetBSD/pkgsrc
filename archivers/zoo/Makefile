@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2014/10/09 14:05:55 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2015/11/07 19:20:16 dholland Exp $
 
 DISTNAME=	zoo-2.10pl1
 PKGNAME=	zoo-2.10.1
@@ -17,5 +17,9 @@ BUILD_TARGET=	bsdansi
 MAKE_FILE=	makefile
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
+# without this installing ploughs on case-insensitive fses
+post-extract:
+	cd ${WRKSRC} && mv Install Install.txt
 
 .include "../../mk/bsd.pkg.mk"
