@@ -1,4 +1,4 @@
-# $NetBSD: xorg.freetype2,v 1.21 2015/10/12 18:47:21 sevan Exp $
+# $NetBSD: xorg.freetype2,v 1.22 2015/11/07 09:16:08 tron Exp $
 #
 bin/freetype-config
 include/freetype2/config/ftconfig.h
@@ -26,6 +26,7 @@ include/freetype2/freetype/ftchapters.h
 include/freetype2/freetype/ftcid.h
 include/freetype2/freetype/fterrdef.h
 include/freetype2/freetype/fterrors.h
+include/freetype2/freetype/ftfntfmt.h
 include/freetype2/freetype/ftgasp.h
 include/freetype2/freetype/ftglyph.h
 include/freetype2/freetype/ftgxval.h
