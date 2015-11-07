@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2015/11/03 01:20:19 agc Exp $
+$NetBSD: distinfo,v 1.17 2015/11/07 21:47:07 dholland Exp $
 
 SHA1 (i2cb-6.0_ALPHA.tar.gz) = 6d2ddd234403fe33426ece3fd4de4104cf1a6257
 RMD160 (i2cb-6.0_ALPHA.tar.gz) = 2c0683c20939fe5709fa08b6e335cbee2574ecd8
@@ -26,7 +26,7 @@ SHA1 (patch-as) = 04caba156b07ef94552227b434ed51b83123b078
 SHA1 (patch-at) = 3f296af5201612777491b3c95d44a1840bc5c8e0
 SHA1 (patch-au) = 591bae1fcfe43ba86ec29c5ca53322bad5b572e7
 SHA1 (patch-av) = 3ebe9872953147e9694f36e76584482167d2f34a
-SHA1 (patch-aw) = 27e6c09d15f7f0ece6337c6c14d66de2424a4068
+SHA1 (patch-aw) = 4027f62aed11ef66d7bbe226ccd1bf7806ecaf57
 SHA1 (patch-ax) = 610a34662113e800fa7455422b170312ef92fe4d
 SHA1 (patch-ay) = 442fdc77dfe58676c17212d4343ffba42ce44b8b
 SHA1 (patch-az) = 7e0cd06b7085bbbf451bedf406564f30c82a5aaf
