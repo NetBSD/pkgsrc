@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/02/12 23:17:35 tron Exp $
+# $NetBSD: Makefile,v 1.11 2015/11/07 20:38:08 dholland Exp $
 #
 
 DISTNAME=	atheme-services-3.0.4
@@ -37,6 +37,15 @@ FILES_SUBST+=		ATHEME_USER=${ATHEME_USER}
 FILES_SUBST+=		ATHEME_GROUP=${ATHEME_GROUP}
 
 .include "options.mk"
+
+.include "../../mk/bsd.prefs.mk"
+
+PLIST_VARS+=		posixcrypt
+.if ${OPSYS} == "Darwin"
+PLIST.posixcrypt=	no
+.else
+PLIST.posixcrypt=	yes
+.endif
 
 CFLAGS.SunOS+=		-Dfaultcode_t=foo_faultcode_t -Dboolean_t=foo_boolean_t
 
