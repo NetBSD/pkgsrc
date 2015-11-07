@@ -1,9 +1,24 @@
-$NetBSD: README.MacOSX,v 1.22 2015/11/06 16:38:27 gdt Exp $
+$NetBSD: README.MacOSX,v 1.23 2015/11/07 12:55:03 gdt Exp $
 
 This file describes the use of current versions of pkgsrc with
-multiple versions of OS X, omitting information about previous pkgsrc
-versions.  (Apple has renamed Mac OS X to OS X, but the filename
+multiple versions of Darwin and OS X, omitting information about previous pkgsrc
+versions.
+
+* Darwin vs OS X
+
+(Apple has renamed Mac OS X to OS X, but the filename
 remains.)
+
+OS X consists of Darwin (kernel/userland) plus Mac stuff on top.
+pkgsrc used to target Darwin, but given the tools issued discussed
+below it is not clear that it works on Darwin without OS X.  Darwin
+from Apple is no longer open source.
+
+Users of non-OSX Darwin are invited to submit patches to this file.
+The only known project is:
+  http://www.puredarwin.org/
+
+Until then, this file remains OSX-centric.
 
 * system tools issues
 
@@ -24,7 +39,9 @@ pkgsrc defaulted to using gcc.  With 10.9, gcc is no longer present.
 
 ** i386 vs x86_64 ABI issue
 
-OS X 10.6 and higher supports x86-64 binaries on most Intel Macs.
+OS X 10.6 and higher supports x86-64 binaries on Intel Macs with
+x86-64 processors, which is now most of them.
+
 This has caused problems with packages which get confused because
 "MACHINE_ARCH" is in some OS versions set to "i386" (on a 64-bit
 system!).
@@ -35,9 +52,7 @@ system!).
 On Intel machines, pkgsrc currently defaults to i386 mode (--abi=32)
 on OS X, and can be set to x86_64 mode (--abi=64).
 Note that a pkgsrc build in x86_64 mode will not run on an Intel Mac
-that is i386 only (some older Mac Minis and Macbooks).  For a longer
-discussion, see:
-
+that is i386 only.  For a longer discussion, see:
   http://mail-index.NetBSD.org/pkgsrc-users/2009/09/24/msg010817.html
 
 As of 2015-11, changing the default to x86_64 is imminent.
@@ -74,58 +89,46 @@ it may be useful to `git clone https://github.com/jsonn/pkgsrc.git`.
 ** X11
 
 X11 used to be built into OS X, but as of 10.8 it is no longer
-included.  Install XQuartz from http://xquartz.macosforge.org/landing/
+included.  You can install XQuartz from
+http://xquartz.macosforge.org/landing/, or try the newly-added pkgsrc
+version.
 
 * OS X Versions
 
-pkgsrc is a volunteer project, and individuals support/fix packages
-and platforms as they choose.  However, pkgsrc contributors as a group
-share both a bugtracker and norms about what is ok to break and what
-is not.  To describe these norms, we define levels of concern, keeping
-in mind that there are no guarantees:
+Because Apple drops support for previous hardware faster than the
+hardware fails, many machines cannot be upgraded to recent versions of
+OS X, creating a greater than usual desire to support old systems.
+Because of the particular history of deprecation, most systems tend to
+run relatively recent versions or specific older versions (10.6 and
+10.5).
 
-  SUPPORTED doesn't mean that anyone is required to fix your problem; it
-  means that we agree that it is broadly desireable that such problems
-  be fixed and that we therefore allow them to be listed in our issue
-  tracker.  Structural breakage is unacceptable.
+The stance of pkgsrc is generally to avoid breaking older systems
+unless keeping support would cause difficulty, and to accept clean
+patches when there is no harm to non-deprecated versions.  This
+section is partly to document what versions tend to be used and why,
+and partly to enable cleaning up bug reports without fixes for very
+old systems.
 
-  DEPRECATED means that individual problems are not of interest, but
-  pkgsrc overall working is of enough interest to be allowed to be
-  listed in the issue tracker.  Structural breakage is undesirable,
-  but a fair topic of discussion if keeping support is painful.
-  Individual pkg PRs may be bounced to authors to retest with newer
-  versions, and closed if that doesn't happen in 14 days.
+pkgsrc PRs about 10.5 or older that do not contain fixes may be closed
+without fixing.
 
-  IGNORED means we are not willing to expend issue tracker resources
-  (clutter for those reviewing the db) at all.  PRs may be summarily
-  closed.  We are also unconcerned with whether pkgsrc works on the
-  system at all.
+OS X 10.9 through 10.11 are considered current.
 
-Given the above definitions, the pkgsrc developers label versions of
-OS X as follows:
+There are not any known reasons to run OS X 10.8 instead of upgrading
+to a newer version.
 
-  10.11: current. [SUPPORTED]
+OS X 10.7 is the last version that works on a few Intel Macs, e.g. the
+Mac Pro 1.1 and 2.1 and some Mac Minis.
 
-  10.10: recent. [SUPPORTED]
+OS X 10.6 is the last version that works on Intel Macs lacking amd64
+support, e.g. Mac Minis and Macbooks with Core Duo.  (There is an
+active bulk build for 10.6.)
 
-  10.9 (13.4.0): somewhat old but not that crufty.  [SUPPORTED]
+OS X 10.5 is the last version that works on PowerPC Macs.  As of 2015
+reports of using 10.5 are very rare.
 
-  10.8: old.  [SUPPORTED]
-
-  10.7: old.  [SUPPORTED]
-
-  10.6 (10.8.0): very old [DEPRECATED] (But note that this is the
-  Joyent i386-mode build target.)
-
-  10.5 and below: ancient, and PRs will be summarily closed.  It is
-	acceptable to give zero consideration to causing structural
-	problems on 10.5 and below. [IGNORED]
-
-Because Apple provides 10.9 as a no-cost upgrade (from 10.6 or higher,
-it is fairly likely that 10.6-10.8 will become DEPRECATED faster than
-they might have otherwise.  (The rationale for supporting versions
-beyond the current and previous ones has been the difficulty for users
-to upgrade.)
+OS X 10.4 is the last version that works on PowerPC G3 and slower G4
+Macs.  There have been no recent reports of anyone using pkgsrc on it.
 
 * Bulk builds
 
@@ -134,7 +137,7 @@ computers as possible.  The main issues are which ABI and which OS X
 version.  Targetting older versions makes a build run on more systems,
 and targetting newer versions makes the build closer to what would be
 obtained from bootstrappping on a newer version and thus avoids some
-issues.
+issues.   This section has pointers to active bulk builds.
 
 ** 10.6, --abi=32 (i386), gcc
 
