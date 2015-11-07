@@ -1,4 +1,6 @@
-$NetBSD: patch-ae,v 1.1 2005/12/16 15:52:03 joerg Exp $
+$NetBSD: patch-ae,v 1.2 2015/11/07 22:52:54 dholland Exp $
+
+Don't declare own errno.
 
 --- src/socket.c.orig	2005-12-16 15:23:27.000000000 +0000
 +++ src/socket.c
