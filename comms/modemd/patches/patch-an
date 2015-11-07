@@ -1,8 +1,15 @@
-$NetBSD: patch-an,v 1.1 2006/01/12 17:13:58 joerg Exp $
+$NetBSD: patch-an,v 1.2 2015/11/07 23:26:34 dholland Exp $
 
---- include/osdep.h.orig	2006-01-12 16:54:08.000000000 +0000
+- add configuration for various OSes
+
+--- include/osdep.h.orig	1996-04-30 07:02:41.000000000 +0000
 +++ include/osdep.h
-@@ -48,6 +48,6 @@
+@@ -44,10 +44,15 @@
+ #include "cf/bsdos.h"
+ #endif
+ 
+-#ifdef __NetBSD__
++#if defined(__NetBSD__) || defined(__OpenBSD__) || defined(__Bitrig__)
  #include "cf/netbsd.h"
  #endif
  
@@ -10,3 +17,8 @@ $NetBSD: patch-an,v 1.1 2006/01/12 17:13:58 joerg Exp $
 +#if defined(__FreeBSD__) || defined(__DragonFly__)
  #include "cf/freebsd.h"
  #endif
++
++#if defined(__APPLE__)
++/* with luck this will just work */
++#include "cf/netbsd.h"
++#endif
