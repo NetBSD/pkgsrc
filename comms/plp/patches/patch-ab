@@ -1,8 +1,20 @@
-$NetBSD: patch-ab,v 1.5 2005/12/23 16:10:05 joerg Exp $
+$NetBSD: patch-ab,v 1.6 2015/11/07 23:43:56 dholland Exp $
+
+- Use standard headers.
+- Use termios, not termio.
 
 --- ncp/mp_serial.c.orig	1999-11-02 20:47:06.000000000 +0000
 +++ ncp/mp_serial.c
-@@ -37,9 +37,7 @@
+@@ -30,16 +30,14 @@
+ #include <unistd.h>	/* for usleep() */
+ #include <string.h>	/* for bzero() */
+ #include <termios.h>
+-#if defined(linux) || defined(_IBMR2) || defined(__NetBSD__)
++#if defined(linux) || defined(_IBMR2) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__Bitrig__)
+ # include <sys/ioctl.h>	/* for ioctl() */
+ #endif
+-#include <sys/errno.h>
++#include <errno.h>
  #ifdef sun
  # include <sys/ttold.h>	/* sun has TIOCEXCL there */
  #endif
