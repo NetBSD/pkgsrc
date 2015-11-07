@@ -1,6 +1,12 @@
-$NetBSD: patch-aa,v 1.5 2012/02/16 17:25:16 hans Exp $
+$NetBSD: patch-aa,v 1.6 2015/11/07 23:39:15 dholland Exp $
 
---- Makefile.orig	2003-05-31 11:42:14.000000000 +1200
+- configure for pkgsrc
+- provide a correct all: target
+- remove --traditional-cpp on MacOS as it breaks the build
+- remove custom snprintf on Solaris as it hasn't been needed in ages
+- honor pkgsrc LDFLAGS
+
+--- Makefile.orig	2003-05-30 23:42:14.000000000 +0000
 +++ Makefile
 @@ -1,5 +1,7 @@
  TARGET = malsync
@@ -10,7 +16,7 @@ $NetBSD: patch-aa,v 1.5 2012/02/16 17:25:16 hans Exp $
  PLAT := $(shell uname)
  	
  ifeq ($(PLAT),SunOS)
-@@ -15,7 +17,6 @@ LINKLIBS = -lm
+@@ -15,14 +17,13 @@ LINKLIBS = -lm
  endif
  
  TREETOP = .
@@ -18,6 +24,14 @@ $NetBSD: patch-aa,v 1.5 2012/02/16 17:25:16 hans Exp $
  
  CFLAGS = -Wall -g -DMALSYNC -I$(TREETOP)/mal/common \
    -I$(TREETOP)/mal/client/common -I$(PILOT_LINK_DIR)/include \
+   -I$(TREETOP)/mal/client/unix
+ 
+ ifeq ($(PLAT),Darwin)
+-CFLAGS += --traditional-cpp -DDARWIN -D__unix__ -D__FreeBSD__ -D_HPUX_SOURCE
++CFLAGS += -DDARWIN -D__unix__ -D__FreeBSD__ -D_HPUX_SOURCE
+ endif
+ 
+ SRC = malsync.c  \
 @@ -59,10 +60,6 @@ SRC = malsync.c  \
    $(TREETOP)/mal/client/common/AGSyncProcessor.c \
    $(TREETOP)/mal/common/AGServerConfig.c
