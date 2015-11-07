@@ -1,4 +1,9 @@
-$NetBSD: patch-au,v 1.6 2013/01/11 13:24:32 joerg Exp $
+$NetBSD: patch-au,v 1.7 2015/11/07 22:07:15 dholland Exp $
+
+- use standard headers
+- avoid implicit int
+- build if NAME_MAX is missing (old Solaris?)
+- build if access() and F_OK/R_OK/etc. are missing (OpenBSD)
 
 --- icb/tcl.c.orig	1995-02-24 21:20:30.000000000 +0000
 +++ icb/tcl.c
@@ -47,3 +52,16 @@ $NetBSD: patch-au,v 1.6 2013/01/11 13:24:32 joerg Exp $
  
  	/* get name of file to use */
  	if (((rcfile = getenv("ICBRC")) != NULL)
+@@ -135,10 +144,12 @@ getrcname()
+ 		}
+ 
+ 		/* make sure the file is there */
++#if defined(F_OK) && defined(R_OK)
+ 		if (access(rcfile, (F_OK | R_OK)) < 0) {
+ 			printf("icb: can't read rc file \"%s\".\r\n", rcfile);
+ 			return(NULL);
+ 		}
++#endif
+ 
+ 		return rcfile;
+ 	} 
