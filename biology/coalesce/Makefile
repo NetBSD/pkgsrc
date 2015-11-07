@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2012/09/11 20:32:11 asau Exp $
+# $NetBSD: Makefile,v 1.10 2015/11/07 21:06:37 dholland Exp $
 #
 
 DISTNAME=	coalesce1.5b
 PKGNAME=	coalesce-1.5.0.2
+PKGREVISION=	1
 CATEGORIES=	biology
 MASTER_SITES=	http://evolution.genetics.washington.edu/lamarc/coalesce/
 
