@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/11/04 21:24:14 adam Exp $
+# $NetBSD: Makefile,v 1.2 2015/11/07 13:30:21 adam Exp $
 
 DISTNAME=	fs-uae-2.6.2
 CATEGORIES=	emulators
@@ -15,12 +15,12 @@ GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} != "Darwin"
+.include "../../audio/openal/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXi/buildlink3.mk"
 .endif
-.include "../../audio/openal/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
