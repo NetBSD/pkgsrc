@@ -1,0 +1,13 @@
+$NetBSD: patch-install,v 1.1 2015/11/07 22:38:08 dholland Exp $
+
+Avoid failing in sed if $HOME isn't set.
+
+--- install~	1997-07-30 22:32:32.000000000 +0000
++++ install
+@@ -625,5 +625,5 @@ fi
+ 
+ echo
+ echo "Happy IRCing..."
+-echo "... and don't forget to read $libdir/README sometime :)" | sed "s|$HOME|~|"
++echo "... and don't forget to read $libdir/README sometime :)" | sed "s|${HOME:-aaaaaaaaaaa}|~|"
+ 
