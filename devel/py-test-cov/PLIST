@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2015/11/07 19:03:04 wiz Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/pytest-cov.pth
+${PYSITELIB}/pytest_cov/__init__.py
+${PYSITELIB}/pytest_cov/__init__.pyc
+${PYSITELIB}/pytest_cov/__init__.pyo
+${PYSITELIB}/pytest_cov/embed.py
+${PYSITELIB}/pytest_cov/embed.pyc
+${PYSITELIB}/pytest_cov/embed.pyo
+${PYSITELIB}/pytest_cov/engine.py
+${PYSITELIB}/pytest_cov/engine.pyc
+${PYSITELIB}/pytest_cov/engine.pyo
+${PYSITELIB}/pytest_cov/plugin.py
+${PYSITELIB}/pytest_cov/plugin.pyc
+${PYSITELIB}/pytest_cov/plugin.pyo
