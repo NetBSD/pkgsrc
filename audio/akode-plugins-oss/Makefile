@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/09/11 23:59:22 asau Exp $
+# $NetBSD: Makefile,v 1.7 2015/11/07 20:46:20 dholland Exp $
 #
 
 PKGNAME=		akode-plugins-oss-${AKODE_VERSION}
@@ -14,6 +14,9 @@ DISTINFO_FILE=		${.CURDIR}/../../audio/akode/distinfo
 PATCHDIR=		${.CURDIR}/../../audio/akode/patches
 
 CONFIGURE_ARGS+=	--with-oss
+
+# MacOS doesn't have OSS
+NOT_FOR_PLATFORM=	Darwin-*-*
 
 do-install:
 	cd ${WRKSRC}/akode/plugins/oss_sink && ${SETENV} ${MAKE_ENV} ${MAKE} \
