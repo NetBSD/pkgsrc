@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2014/12/22 01:16:34 mef Exp $
+# $NetBSD: Makefile,v 1.34 2015/11/07 19:11:19 dholland Exp $
 #
 
 DISTNAME=	star-1.4.3
@@ -21,6 +21,10 @@ MAKE_FLAGS+=	MANDIR=${PKGMANDIR}
 .if !empty(CC:M*gcc*)
 MAKE_ENV+=	CCOM=gcc
 .endif
+
+# without this installing ploughs on case-insensitive fses
+post-extract:
+	cd ${WRKSRC} && mv INSTALL INSTALL.txt
 
 pre-build:
 	set -e; \
