@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2015/11/06 09:25:17 wiz Exp $
+# $NetBSD: Makefile,v 1.91 2015/11/07 21:33:32 asau Exp $
 
 DISTNAME=	dbus-1.10.2
 CATEGORIES=	sysutils
@@ -11,6 +11,8 @@ LICENSE=	gnu-gpl-v2
 
 CONFLICTS+=	dbus-glib<0.71
 CONFLICTS+=	py27-dbus<0.71
+
+BUILD_DEPENDS+=	docbook-xsl>=0:../../textproc/docbook-xsl
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake msgfmt pkg-config
