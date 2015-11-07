@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.371 2015/11/07 13:35:44 sevan Exp $
+# $NetBSD: bsd.prefs.mk,v 1.372 2015/11/07 19:53:49 sevan Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -150,9 +150,14 @@ LOWER_OPSYS?=		bsdi
 
 .elif ${OPSYS} == "Bitrig"
 LOWER_OPSYS?= 		bitrig
-LOWER_ARCH!= 		${UNAME} -p
+LOWER_ARCH!= 		arch -s
+.  if ${LOWER_ARCH} == "amd64"
+MACHINE_ARCH= 		x86_64
+.  else
 MACHINE_ARCH= 		${LOWER_ARCH}
+.  endif
 MAKEFLAGS+= 		LOWER_ARCH=${LOWER_ARCH:Q}
+MAKEFLAGS+= 		MACHINE_ARCH=${MACHINE_ARCH:Q}
 LOWER_VENDOR?= 		unknown
 
 .elif ${OPSYS} == "Cygwin"
