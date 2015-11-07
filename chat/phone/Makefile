@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/06/08 13:38:12 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2015/11/07 22:19:32 dholland Exp $
 
 DISTNAME=	phone-2.0
 PKGREVISION=	3
@@ -13,6 +13,8 @@ LICENSE=	generic-nonlicense
 
 INSTALLATION_DIRS=	bin libexec ${PKGMANDIR}/man1 sbin
 
+# needs utmpx unless someone wants to patch legacy utmp support in
+BROKEN_ON_PLATFORM=	OpenBSD-*-*
 
 .include "../../mk/bsd.prefs.mk"
 
