@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4511 2015/11/07 15:50:22 he Exp $
+$NetBSD: CHANGES-2015,v 1.4512 2015/11/07 18:35:37 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7644,6 +7644,7 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/firefox38 to 38.4.0 [ryoon 2015-11-03]
 	Updated www/firefox38-l10n to 38.4.0 [ryoon 2015-11-03]
 	Updated textproc/discount to 2.1.8a [leot 2015-11-04]
+	Updated emulators/tme to 0.8nb28 [dholland 2015-11-04]
 	mk/bsd.pkg.mk: Add SHA512 digests for most package distfiles [agc 2015-11-03]
 	Updated databases/sqlite3 to 3.9.2 [adam 2015-11-04]
 	Updated databases/sqlite3-docs to 3.9.2 [adam 2015-11-04]
