@@ -1,10 +1,11 @@
-# $NetBSD: options.mk,v 1.8 2015/10/08 01:02:42 leot Exp $
+# $NetBSD: options.mk,v 1.9 2015/11/07 16:58:13 tnn Exp $
 
 # Global and legacy options
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ffmpeg2
 PKG_SUPPORTED_OPTIONS=	ass faac fdk-aac fontconfig freetype gnutls lame \
-			libvpx opencore-amr openssl theora vorbis x264 x265 xvid
+			libvpx opencore-amr openssl theora vorbis x264 x265 \
+			xcb xvid
 PKG_SUGGESTED_OPTIONS=	lame ass freetype fontconfig libvpx theora vorbis x264 \
 			xvid
 
@@ -171,4 +172,15 @@ CONFIGURE_ARGS+=	--enable-libvpx
 .include "../../multimedia/libvpx/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-libvpx
+.endif
+
+# X11 screen capture support using libxcb
+.if !empty(PKG_OPTIONS:Mxcb)
+CONFIGURE_ARGS+=	--enable-libxcb
+CONFIGURE_ARGS+=	--enable-libxcb-shape
+CONFIGURE_ARGS+=	--enable-libxcb-shm
+CONFIGURE_ARGS+=	--enable-libxcb-xfixes
+.include "../../x11/libxcb/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-libxcb
 .endif
