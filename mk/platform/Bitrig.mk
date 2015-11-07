@@ -1,4 +1,4 @@
-# $NetBSD: Bitrig.mk,v 1.1 2015/06/04 15:48:45 sevan Exp $
+# $NetBSD: Bitrig.mk,v 1.2 2015/11/07 23:46:28 sevan Exp $
 #
 # Variable definitions for the Bitrig operating system.
 
@@ -57,7 +57,7 @@ _OPSYS_NO_WHOLE_ARCHIVE_FLAG=	-Wl,--no-whole-archive
 _STRIPFLAG_CC?=		${_INSTALL_UNSTRIPPED:D:U-s}	# cc(1) option to strip
 _STRIPFLAG_INSTALL?=	${_INSTALL_UNSTRIPPED:D:U-s}	# install(1) option to strip
 
-.if (${MACHINE_ARCH} == "amd64") || (${MACHINE_ARCH} == "arm")
+.if (${MACHINE_ARCH} == "x86_64") || (${MACHINE_ARCH} == "arm")
 DEFAULT_SERIAL_DEVICE?=	/dev/tty00
 SERIAL_DEVICES?=	/dev/tty00 \
 			/dev/tty01
