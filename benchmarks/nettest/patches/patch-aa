@@ -1,4 +1,7 @@
-$NetBSD: patch-aa,v 1.6 2014/04/23 20:22:56 asau Exp $
+$NetBSD: patch-aa,v 1.7 2015/11/07 20:07:07 dholland Exp $
+
+ - uname might be in /usr/bin
+ - add configury for modern OSes
 
 --- Makefile.orig	1992-11-05 22:03:14.000000000 +0000
 +++ Makefile
@@ -37,7 +40,7 @@ $NetBSD: patch-aa,v 1.6 2014/04/23 20:22:56 asau Exp $
 +		DEFINES="-DSYSV -DWAIT3CODE -DNAMEDPIPES -DNO_ISO" \
 +		LIBS="-lsocket -lnsl" OPT="-O"
 +
-+NetBSD FreeBSD DragonFly:
++NetBSD FreeBSD DragonFly OpenBSD Bitrig Darwin:
 +	$(MAKE) objs \
 +		INCLUDE="" \
 +		DEFINES="-DWAIT3CODE -DBSD44 -DNAMEDPIPES -DNO_ISO -DNONVOID_SETPGRP" \
