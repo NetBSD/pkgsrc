@@ -1,4 +1,4 @@
-$NetBSD: README.MacOSX,v 1.23 2015/11/07 12:55:03 gdt Exp $
+$NetBSD: README.MacOSX,v 1.24 2015/11/07 20:17:08 gdt Exp $
 
 This file describes the use of current versions of pkgsrc with
 multiple versions of Darwin and OS X, omitting information about previous pkgsrc
@@ -112,10 +112,14 @@ old systems.
 pkgsrc PRs about 10.5 or older that do not contain fixes may be closed
 without fixing.
 
-OS X 10.9 through 10.11 are considered current.
+OS X 10.11 is considered new and there may be issues.
 
-There are not any known reasons to run OS X 10.8 instead of upgrading
-to a newer version.
+OS X 10.10 is considered current.
+
+OS X 10.9 (Darwin 13.4.0) is considered current.
+
+OS X 10.8 is old, and there are no no known reasons to it instead of a
+newer version.
 
 OS X 10.7 is the last version that works on a few Intel Macs, e.g. the
 Mac Pro 1.1 and 2.1 and some Mac Minis.
@@ -127,8 +131,8 @@ active bulk build for 10.6.)
 OS X 10.5 is the last version that works on PowerPC Macs.  As of 2015
 reports of using 10.5 are very rare.
 
-OS X 10.4 is the last version that works on PowerPC G3 and slower G4
-Macs.  There have been no recent reports of anyone using pkgsrc on it.
+OS X 10.4 (Darwin 8.11.0) is the last version that works on PowerPC G3
+and slower G4 Macs.
 
 * Bulk builds
 
@@ -139,7 +143,12 @@ and targetting newer versions makes the build closer to what would be
 obtained from bootstrappping on a newer version and thus avoids some
 issues.   This section has pointers to active bulk builds.
 
-** 10.6, --abi=32 (i386), gcc
+** 10.4, --abi=32 powerpc, gcc
+
+See
+https://mail-index.netbsd.org/pkgsrc-bulk/2015/11/07/msg012171.html
+
+** 10.6, --abi=32 i386, gcc
 
 Joyent provide a bulk build for quarterly branches (--abi=32, OSX
 10.6, and therefore gcc 4.2.1, XQuartz, X11_TYPE=native):
@@ -150,7 +159,7 @@ Note that sed on 10.9 is broken, but a bootstrap on 10.6 will not
 avoid it, so while one can install this bootstrap on 10.9 and run
 binary packages, building packages will not in general work.
 
-** 10.9, --abi=64 (x86-64), clang
+** 10.9, --abi=64 x86-64, clang
 
 Joyent provide a bulk build for 10.9/x86_64, and therefore clang, at
 the same URL as above.
