@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2015/09/07 12:02:06 jperkin Exp $
+# $NetBSD: Makefile,v 1.43 2015/11/07 22:52:04 dholland Exp $
 
 DISTNAME=	Unreal3.2.10.4
 PKGNAME=	${DISTNAME:tl:S/l/lircd-/1}
@@ -23,8 +23,8 @@ CHECK_PORTABILITY_SKIP=	update
 CONFIGURE_ARGS+=	--with-system-cares
 CONFIGURE_ARGS+=	--with-system-tre
 
-CONFIGURE_ARGS+=	--with-dpath=${UIRCD_HOME:Q}
-CONFIGURE_ARGS+=	--with-spath=${PREFIX:Q}/sbin/ircd
+CONFIGURE_ARGS+=	--with-dpath=${UIRCD_HOME}
+CONFIGURE_ARGS+=	--with-spath=${PREFIX}/sbin/ircd
 CONFIGURE_ARGS+=	--with-permissions=0660
 
 CONFIGURE_ARGS+=	--with-listen=${UIRCD_LISTEN:Q}
@@ -33,14 +33,16 @@ CONFIGURE_ARGS+=	--with-bufferpool=${UIRCD_BUFFER:Q}
 CONFIGURE_ARGS+=	--with-fd-setsize=${UIRCD_FDSIZE:Q}
 CONFIGURE_ARGS+=	--with-nick-history=${UIRCD_NICKHIST:Q}
 
-IRCD_DOCS=	${PREFIX:Q}/share/doc/unrealircd
-IRCD_SHARE=	${PREFIX:Q}/share/unrealircd
-IRCD_EG=	${PREFIX:Q}/share/examples/unrealircd
+IRCD_DOCS=	${PREFIX}/share/doc/unrealircd
+IRCD_SHARE=	${PREFIX}/share/unrealircd
+IRCD_EG=	${PREFIX}/share/examples/unrealircd
 
 BUILD_DEFS+=	UIRCD_SENDQ UIRCD_LISTEN UIRCD_BUFFER UIRCD_HOST
 BUILD_DEFS+=	UIRCD_HOME UIRCD_NICKHIST UIRCD_FDSIZE VARBASE
 
 PTHREAD_OPTS+=	require
+
+.include "../../mk/bsd.prefs.mk"
 
 # The defaults for most of these here are from the standard Conf
 # script supplied with the UnrealIRCd package.
@@ -57,15 +59,15 @@ UIRCD_HOME?=		${VARBASE}/unrealircd
 
 DOC_FILES=		doc/Authors doc/coding-guidelines doc/tao.of.irc LICENSE
 
-CONF_FILES_PERMS=	${IRCD_EG:Q}/example.conf \
-			${UIRCD_HOME:Q}/unrealircd.conf \
+CONF_FILES_PERMS=	${IRCD_EG}/example.conf \
+			${UIRCD_HOME}/unrealircd.conf \
 			${UIRCD_USER} ${UIRCD_GROUP} 0660
 
 PKG_USERS_VARS+=	UIRCD_USER
 PKG_GROUPS_VARS+=	UIRCD_GROUP
 
-PKG_GROUPS=		${UIRCD_GROUP:Q}
-PKG_USERS=		${UIRCD_USER:Q}:${UIRCD_GROUP:Q}
+PKG_GROUPS=		${UIRCD_GROUP}
+PKG_USERS=		${UIRCD_USER}:${UIRCD_GROUP}
 
 PKG_GECOS.${UIRCD_USER}=	UnrealIRCD user
 PKG_HOME.${UIRCD_USER}=		${UIRCD_HOME}
@@ -73,10 +75,10 @@ PKG_HOME.${UIRCD_USER}=		${UIRCD_HOME}
 RCD_SCRIPTS=	unrealircd
 
 MESSAGE_SRC+=	MESSAGE
-MESSAGE_SUBST+=	UIRCD_HOME=${UIRCD_HOME:Q}
-FILES_SUBST+=	UIRCD_HOME=${UIRCD_HOME:Q}
-FILES_SUBST+=	UIRCD_USER=${UIRCD_USER:Q}
-FILES_SUBST+=	UIRCD_GROUP=${UIRCD_GROUP:Q}
+MESSAGE_SUBST+=	UIRCD_HOME=${UIRCD_HOME}
+FILES_SUBST+=	UIRCD_HOME=${UIRCD_HOME}
+FILES_SUBST+=	UIRCD_USER=${UIRCD_USER}
+FILES_SUBST+=	UIRCD_GROUP=${UIRCD_GROUP}
 
 SUBST_CLASSES+=		homedir
 SUBST_STAGE.homedir=	post-patch
@@ -94,9 +96,8 @@ SUBST_SED.chroot+=	-e "s|unrealircd_group=|\#unrealircd_group=|g"
 SUBST_MESSAGE.chroot=	Fixing chroot installation.
 .endif
 
-OWN_DIRS_PERMS+=	${UIRCD_HOME:Q} ${UIRCD_USER:Q} ${UIRCD_GROUP:Q} 0770
-OWN_DIRS_PERMS+=	${UIRCD_HOME:Q}/tmp ${UIRCD_USER:Q} \
-			${UIRCD_GROUP:Q} 0770
+OWN_DIRS_PERMS+=	${UIRCD_HOME}     ${UIRCD_USER} ${UIRCD_GROUP} 0770
+OWN_DIRS_PERMS+=	${UIRCD_HOME}/tmp ${UIRCD_USER} ${UIRCD_GROUP} 0770
 INSTALLATION_DIRS=	sbin ${IRCD_DOCS} ${IRCD_EG} ${IRCD_SHARE}/aliases \
 			${IRCD_SHARE}/modules
 
@@ -108,20 +109,19 @@ CFLAGS.SunOS+=	-DUSE_LOCALE
 .include "../../devel/tre/buildlink3.mk"
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC:Q}/src/ircd ${DESTDIR}${PREFIX}/sbin
-	${INSTALL_DATA} ${WRKSRC:Q}/aliases/*.conf \
-		${DESTDIR}${IRCD_SHARE:Q}/aliases
-	${INSTALL_DATA} ${WRKSRC:Q}/badwords*.conf ${DESTDIR}${IRCD_SHARE:Q}
-	${INSTALL_DATA} ${WRKSRC:Q}/help.* ${DESTDIR}${IRCD_SHARE:Q}
-	${INSTALL_DATA} ${WRKSRC:Q}/doc/help.* ${DESTDIR}${IRCD_SHARE:Q}
-	${INSTALL_DATA} ${WRKSRC:Q}/spamfilter.conf ${DESTDIR}${IRCD_SHARE:Q}
-	${INSTALL_LIB} ${WRKSRC:Q}/src/modules/*.so \
-		${DESTDIR}${IRCD_SHARE:Q}/modules
-	${INSTALL_DATA} ${WRKSRC:Q}/doc/unreal32docs.* ${DESTDIR}${IRCD_DOCS:Q}
-	${INSTALL_DATA} ${WRKSRC:Q}/doc/example.* ${DESTDIR}${IRCD_EG:Q}
-
-.	for f in ${DOC_FILES}
-		${INSTALL_DATA} ${WRKSRC:Q}/${f:Q} ${DESTDIR}${IRCD_DOCS:Q}
-.	endfor
+	${INSTALL_PROGRAM} ${WRKSRC}/src/ircd ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_DATA} ${WRKSRC}/aliases/*.conf \
+		${DESTDIR}${IRCD_SHARE}/aliases
+	${INSTALL_DATA} ${WRKSRC}/badwords*.conf ${DESTDIR}${IRCD_SHARE}
+	${INSTALL_DATA} ${WRKSRC}/help.* ${DESTDIR}${IRCD_SHARE}
+	${INSTALL_DATA} ${WRKSRC}/doc/help.* ${DESTDIR}${IRCD_SHARE}
+	${INSTALL_DATA} ${WRKSRC}/spamfilter.conf ${DESTDIR}${IRCD_SHARE}
+	${INSTALL_LIB} ${WRKSRC}/src/modules/*.so \
+		${DESTDIR}${IRCD_SHARE}/modules
+	${INSTALL_DATA} ${WRKSRC}/doc/unreal32docs.* ${DESTDIR}${IRCD_DOCS}
+	${INSTALL_DATA} ${WRKSRC}/doc/example.* ${DESTDIR}${IRCD_EG}
+.for f in ${DOC_FILES}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${IRCD_DOCS}
+.endfor
 
 .include "../../mk/bsd.pkg.mk"
