@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2015/08/18 07:31:18 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2015/11/07 22:42:20 jnemeth Exp $
 #
 # VERSION is set in version.mk as it is shared with other packages
 .include		"version.mk"
@@ -13,7 +13,7 @@ DISTFILES=		${DISTNAME}.tar.gz
 DISTFILES+=		ipxe-git-v${VERSION_IPXE}.tar.gz
 SITES.ipxe-git-v${VERSION_IPXE}.tar.gz +=	http://xenbits.xensource.com/xen-extfiles/
 
-MAINTAINER=		cegger@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://xen.org/
 COMMENT=		Userland Tools for Xen 4.1.x
 
@@ -175,7 +175,8 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/xmdomain.cfg.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
 	${INSTALL_DATA} ${WRKDIR}/xm.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
-.if ${OPSYS} == "NetBSD" && !exists(/var/shm)
+.if (${OPSYS} == "NetBSD" && \
+    (empty(OS_VERSION:M6.99.[3-9]?) && empty(OS_VERSION:M[7-9].*)))
 CPPFLAGS+=	-Dshm_open=open -Dshm_unlink=unlink
 .endif
 
