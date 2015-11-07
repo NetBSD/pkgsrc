@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/11/07 20:12:37 dholland Exp $
+# $NetBSD: Makefile,v 1.5 2015/11/07 20:54:17 dholland Exp $
 #
 
 DISTNAME=	libmicro-${LIBMICRO_VERSION}
@@ -30,6 +30,11 @@ SUBST_MESSAGE.fix-arch=	Fix machine architecture path
 SUBST_STAGE.fix-arch=	pre-configure
 SUBST_FILES.fix-arch=	Makefile bench.sh wrapper.sh
 SUBST_SED.fix-arch=	-e 's|@@MACHINE_ARCH@@|${MACHINE_ARCH}|'
+
+post-patch:
+	cd ${WRKSRC} && ${LN} -s Makefile.NetBSD Makefile.OpenBSD
+	cd ${WRKSRC} && ${LN} -s Makefile.NetBSD Makefile.Bitrig
+	cd ${WRKSRC} && ${LN} -s Makefile.DragonFly Makefile.FreeBSD
 
 post-build:
 	${SED}  -e 's|@@DESTDIR@@|${DESTDIR}|'		\
