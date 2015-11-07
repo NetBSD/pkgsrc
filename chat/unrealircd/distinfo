@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2015/11/03 01:20:25 agc Exp $
+$NetBSD: distinfo,v 1.17 2015/11/07 22:46:25 dholland Exp $
 
 SHA1 (Unreal3.2.10.4.tar.gz) = fa2b828b98afeab8677cb04aed9a634f7e43c386
 RMD160 (Unreal3.2.10.4.tar.gz) = 07c4854a59432dfa8a2ef16c5c9517e08b20cb6b
@@ -8,3 +8,10 @@ SHA1 (patch-ab) = b66ae1990e25479abe9087a9308a2185692fcba2
 SHA1 (patch-ac) = 4c3e7219d03e93c2a3e8f735c350d919efdf8fbb
 SHA1 (patch-ae) = dc5f4d080d1027e229f9817d1d4f1e501124f7ba
 SHA1 (patch-af) = 28d622375362bc77ec44ea6a3b1f3a0d05c60ce5
+SHA1 (patch-src_modules_m__cycle.c) = 9841937064cf0573dd3bb9d0cc8bc77c4e850bcc
+SHA1 (patch-src_modules_m__rping.c) = 505f36bb4dcb4d0c7f0b25d7ec357c85e791c012
+SHA1 (patch-src_modules_m__svsjoin.c) = 9ca6d9c32637ce8b68633bdd539e612af26b2672
+SHA1 (patch-src_modules_m__svspart.c) = 62ba995e3808c1558595ec8e36daa6a60697eab9
+SHA1 (patch-src_modules_m__svssilence.c) = 2eb10a6343ea3417073266df5c70fbb872bdfc9f
+SHA1 (patch-src_modules_m__svswatch.c) = efc0bdee6a8e0039db5604d50babe7e5c92dbbad
+SHA1 (patch-src_modules_m__vhost.c) = 80c528b455f0821d75622afde90b06c3c256cf6f
