@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.23 2015/11/03 01:34:54 agc Exp $
+$NetBSD: distinfo,v 1.24 2015/11/07 23:20:59 dholland Exp $
 
 SHA1 (kermit-9.0.302/cku302.tar.gz) = d04c8b5600bc0bb0f163d294881f7a5a0d4395b5
 RMD160 (kermit-9.0.302/cku302.tar.gz) = ef3a71b5a42868c80408ac09662d00b71da0b0c8
@@ -17,3 +17,4 @@ SHA1 (patch-aj) = 6468e2139639f601de4609db8dff07b8b3a82d82
 SHA1 (patch-ak) = 9ded2d7cc3a83158edfbbe87851f892ccb09df0b
 SHA1 (patch-al) = 616ad10e65b24a04d24ff2556d6362ef3cc64b78
 SHA1 (patch-am) = 8c5acbfefe7b7d11825cc32c4449582b51f6cad9
+SHA1 (patch-ckupty.c) = fd8966627f3642550750ccd42e3add64a36dae09
