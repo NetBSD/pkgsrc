@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.219 2015/11/07 14:05:20 sevan Exp $
+# $NetBSD: bootstrap,v 1.220 2015/11/07 19:55:46 sevan Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -509,7 +509,11 @@ Bitrig)
 	need_awk=no
 	need_sed=no
 	set_opsys=no
-	machine_arch=`uname -m`
+	machine_arch=`arch -s`
+	if [ "$machine_arch" = "amd64" ]; then
+		machine_arch=x86_64
+		bmakexargs="MACHINE_ARCH=$machine_arch"
+	fi
 	check_compiler=yes
 	;;
 CYGWIN_*)
