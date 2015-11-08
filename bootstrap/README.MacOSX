@@ -1,4 +1,4 @@
-$NetBSD: README.MacOSX,v 1.24 2015/11/07 20:17:08 gdt Exp $
+$NetBSD: README.MacOSX,v 1.25 2015/11/08 14:24:31 sevan Exp $
 
 This file describes the use of current versions of pkgsrc with
 multiple versions of Darwin and OS X, omitting information about previous pkgsrc
@@ -14,11 +14,11 @@ pkgsrc used to target Darwin, but given the tools issued discussed
 below it is not clear that it works on Darwin without OS X.  Darwin
 from Apple is no longer open source.
 
-Users of non-OSX Darwin are invited to submit patches to this file.
+Users of non-OS X Darwin are invited to submit patches to this file.
 The only known project is:
   http://www.puredarwin.org/
 
-Until then, this file remains OSX-centric.
+Until then, this file remains OS X-centric.
 
 * system tools issues
 
@@ -150,7 +150,7 @@ https://mail-index.netbsd.org/pkgsrc-bulk/2015/11/07/msg012171.html
 
 ** 10.6, --abi=32 i386, gcc
 
-Joyent provide a bulk build for quarterly branches (--abi=32, OSX
+Joyent provide a bulk build for quarterly branches (--abi=32, OS X
 10.6, and therefore gcc 4.2.1, XQuartz, X11_TYPE=native):
   http://pkgsrc.joyent.com/install-on-osx/
 which should run on any version from 10.6 and up.
