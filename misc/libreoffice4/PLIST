@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2015/07/05 08:27:41 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.15 2015/11/08 00:55:04 ryoon Exp $
 bin/libreoffice
 bin/lobase
 bin/localc
@@ -11292,8 +11292,6 @@ ${PKGNAME}/share/extensions/dict-cs/cs_CZ.dic
 ${PKGNAME}/share/extensions/dict-cs/description.xml
 ${PKGNAME}/share/extensions/dict-cs/dictionaries.xcu
 ${PKGNAME}/share/extensions/dict-cs/hyph_cs_CZ.dic
-${PKGNAME}/share/extensions/dict-cs/th_cs_CZ_v3.dat
-${PKGNAME}/share/extensions/dict-cs/th_cs_CZ_v3.idx
 ${PKGNAME}/share/extensions/dict-da/HYPH_da_DK_README.txt
 ${PKGNAME}/share/extensions/dict-da/META-INF/manifest.xml
 ${PKGNAME}/share/extensions/dict-da/README_da_DK.txt
