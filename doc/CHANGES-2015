@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4531 2015/11/08 09:22:46 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4532 2015/11/08 09:30:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7740,3 +7740,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/py-gevent to 1.0.2 [wiz 2015-11-08]
 	Added devel/py-pluggy version 0.3.1 [wiz 2015-11-08]
 	Added devel/py-tox version 2.1.1 [wiz 2015-11-08]
+	Updated emulators/qemu to 2.4.1 [adam 2015-11-08]
