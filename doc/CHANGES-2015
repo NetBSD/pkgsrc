@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4535 2015/11/08 11:29:41 wen Exp $
+$NetBSD: CHANGES-2015,v 1.4536 2015/11/08 13:06:43 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7744,3 +7744,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/p5-PDF-Create to 1.19 [wen 2015-11-08]
 	Updated devel/p5-local-lib to 2.000018 [wen 2015-11-08]
 	Updated databases/p5-Rose-DB to 0.777 [wen 2015-11-08]
+	Updated databases/p5-Rose-DB-Object to 0.815 [wen 2015-11-08]
