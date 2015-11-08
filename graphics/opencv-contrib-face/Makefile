@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2015/11/03 20:08:06 markd Exp $
+# $NetBSD: Makefile,v 1.2 2015/11/08 20:05:35 markd Exp $
 
 PKGNAME=	opencv-contrib-face-3.0.0
 DISTNAME=	opencv_contrib-3.0.0
 CATEGORIES=	graphics devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Itseez/}
 EXTRACT_SUFX=	.zip
+GITHUB_PROJECT=	opencv_contrib
 
 MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://code.opencv.org/projects/OpenCV/wiki/WikiStart
