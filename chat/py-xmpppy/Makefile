@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2015/01/12 08:53:37 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2015/11/08 22:02:57 schnoebe Exp $
 
 DISTNAME=	xmpppy-0.5.0rc1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	chat python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xmpppy/}
 
