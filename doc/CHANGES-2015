@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4523 2015/11/08 05:04:27 wen Exp $
+$NetBSD: CHANGES-2015,v 1.4524 2015/11/08 05:11:21 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7732,3 +7732,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/p5-Dancer to 1.3202 [wen 2015-11-08]
 	Updated devel/p5-Moose to 2.1604 [wen 2015-11-08]
 	Added devel/py-backports_abc version 0.4 [wen 2015-11-08]
+	Updated www/py-tornado to 4.3 [wen 2015-11-08]
