@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2015/10/11 17:51:47 tnn Exp $
+# $NetBSD: Makefile,v 1.8 2015/11/08 15:08:00 sevan Exp $
 
 DISTNAME=	xorg-server-1.12.4
 PKGNAME=	modular-${DISTNAME}
@@ -92,7 +92,7 @@ PLIST_SUBST+=		SUNOS_ARCH=${SUNOS_ARCH}
 PLIST.sunos=		yes
 .  if ${MACHINE_ARCH} == "i386"
 SUNOS_ARCH=		ia32
-.  elif ${MACHINE_ARCH} == "amd64" || ${MACHINE_ARCH} == "x86_64"
+.  elif ${MACHINE_ARCH} == "x86_64"
 SUNOS_ARCH=		amd64
 .  elif ${MACHINE_ARCH} == "sparc" || ${MACHINE_ARCH} == "sparc64"
 SUNOS_ARCH=		sparcv8plus

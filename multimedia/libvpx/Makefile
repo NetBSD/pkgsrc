@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2015/07/11 23:40:49 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2015/11/08 15:08:00 sevan Exp $
 
 DISTNAME=	libvpx-1.4.0
 CATEGORIES=	multimedia
@@ -25,8 +25,7 @@ CONFIGURE_ARGS+=	--disable-unit-tests
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64" || \
-	${MACHINE_ARCH} == "amd64"
+.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 .  if ${PKGSRC_COMPILER} == "gcc" && (${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS")
 # PR pkg/48508: GCC 4.4 or later is required to compile ssse3 code on NetBSD & Solaris.
 GCC_REQD+=	4.4
