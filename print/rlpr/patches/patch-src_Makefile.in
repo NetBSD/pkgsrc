@@ -1,0 +1,15 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2015/11/08 23:24:58 dholland Exp $
+
+Honor pkgsrc LDFLAGS.
+
+--- src/Makefile.in~	2004-09-07 06:19:05.000000000 +0000
++++ src/Makefile.in
+@@ -119,7 +119,7 @@ am__quote = @am__quote@
+ install_sh = @install_sh@
+ 
+ localedir = $(datadir)/locale
+-LDFLAGS = -L../lib
++LDFLAGS += -L../lib
+ LDADD = @INTLLIBS@ ../lib/librlpr.a
+ INCLUDES = -I$(top_srcdir)/intl -I$(top_srcdir)/lib \
+ 		  -DLOCALEDIR=\"$(localedir)\"
