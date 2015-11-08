@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4518 2015/11/08 00:53:24 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.4519 2015/11/08 00:55:31 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7727,3 +7727,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-coverage to 4.0.2 [wiz 2015-11-07]
 	Updated misc/less to 481 [wiz 2015-11-07]
 	Updated misc/libreoffice to 5.0.3.2 [ryoon 2015-11-08]
+	Updated misc/libreoffice4 to 4.4.6.3 [ryoon 2015-11-08]
