@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:09:47 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/11/08 22:06:29 dholland Exp $
 bin/cu
+bin/rmail
 bin/uucp
 bin/uulog
 bin/uuname
@@ -7,17 +8,16 @@ bin/uupick
 bin/uustat
 bin/uuto
 bin/uux
-bin/rmail
 info/uucp.info
 libexec/uucpd
 man/man1/cu.1
 man/man1/uucp.1
 man/man1/uustat.1
 man/man1/uux.1
-man/man8/uucico.8
-man/man8/uuxqt.8
 man/man8/rmail.8
+man/man8/uucico.8
 man/man8/uucpd.8
+man/man8/uuxqt.8
 sbin/uuchk
 sbin/uucico
 sbin/uuconv
