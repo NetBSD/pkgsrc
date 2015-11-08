@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2015/10/14 20:17:27 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2015/11/08 21:31:00 dholland Exp $
 
 DISTNAME=	xawtv-3.95
 PKGREVISION=	18
@@ -51,6 +51,16 @@ CONFIGURE_ARGS+=	--enable-mmx
 CFLAGS+=		-I${X11BASE}/include/X11/fonts
 
 MAKE_FLAGS+=		SUID_ROOT= FS_LIBS=-lFS
+
+PLIST_VARS+=		bsd v4l linux
+.if ${OPSYS} == "Linux"
+PLIST.v4l=		yes
+PLIST.linux=		yes
+.elif ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD" || ${OPSYS} == "Bitrig" ||\
+      ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
+PLIST.bsd=		yes
+#PLIST.v4l=		yes	# XXX: should teach it to probe this
+.endif
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
