@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/08/13 19:16:41 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2015/11/08 00:10:34 dholland Exp $
 
 DISTNAME=	jin-2.14.1-unix
 PKGNAME=	${DISTNAME:S/-unix//}
@@ -15,7 +15,7 @@ USE_LANGUAGES=		# none
 USE_TOOLS+=		pax
 USE_JAVA=		run
 USE_JAVA2=		yes
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin share/${PKGBASE}
 
 do-build:
 	${ECHO} '#!/bin/sh' > ${WRKDIR}/jin.sh
