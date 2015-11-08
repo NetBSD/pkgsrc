@@ -1,4 +1,4 @@
-$NetBSD: README.MacOSX,v 1.25 2015/11/08 14:24:31 sevan Exp $
+$NetBSD: README.MacOSX,v 1.26 2015/11/08 14:41:17 sevan Exp $
 
 This file describes the use of current versions of pkgsrc with
 multiple versions of Darwin and OS X, omitting information about previous pkgsrc
@@ -145,8 +145,13 @@ issues.   This section has pointers to active bulk builds.
 
 ** 10.4, --abi=32 powerpc, gcc
 
-See
-https://mail-index.netbsd.org/pkgsrc-bulk/2015/11/07/msg012171.html
+Sevan Janiyan <Sevan@NetBSD.org> provides a bulk build for the -current branch
+(--abi=32, OS X 10.4/PowerPC, gcc 4.0.1 from Xcode 2.5, X11_TYPE=modular):
+  https://www.geeklan.co.uk/?p=1579
+  US repo: http://sevan.mit.edu/packages
+  Euro mirror: http://pkgsrc.geeklan.co.uk/packages/current/Darwin-8
+  See
+  https://mail-index.netbsd.org/pkgsrc-bulk/2015/11/07/msg012171.html
 
 ** 10.6, --abi=32 i386, gcc
 
