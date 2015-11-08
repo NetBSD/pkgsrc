@@ -1,5 +1,5 @@
---- ext/ldap/ldap.c.orig	2015-03-18 06:33:59.000000000 +0100
-+++ ext/ldap/ldap.c	2015-04-13 05:57:02.000000000 +0200
+--- ext/ldap/ldap.c.orig	2015-09-01 22:09:37.000000000 +0200
++++ ext/ldap/ldap.c	2015-11-08 05:12:41.000000000 +0100
 @@ -66,8 +66,13 @@
  #elif defined(HAVE_LDAP_SASL_SASL_H)
  #include <sasl/sasl.h>
@@ -347,7 +347,18 @@
  typedef struct {
  	char *mech;
  	char *realm;
-@@ -562,8 +790,9 @@
+@@ -510,8 +738,10 @@
+ 				break;
+ 			case SASL_CB_USER:
+ 				p = ctx->authzid;
+ 				break;
++			case SASL_CB_ECHOPROMPT:
++			case SASL_CB_NOECHOPROMPT:
+ 			case SASL_CB_PASS:
+ 				p = ctx->passwd;
+ 				break;
+ 		}
+@@ -562,8 +792,9 @@
  	_php_sasl_freedefs(ctx);
  }
  /* }}} */
@@ -357,7 +368,7 @@
  /* {{{ proto bool ldap_unbind(resource link)
     Unbind from LDAP directory */
  PHP_FUNCTION(ldap_unbind)
-@@ -1259,9 +1488,14 @@
+@@ -1259,9 +1490,14 @@
  	for (i = 0; i<count; i++) {
  		add_index_string(return_value, i, ldap_value[i], 1);
  	}
@@ -372,7 +383,7 @@
  /* }}} */
  
  /* {{{ proto string ldap_dn2ufn(string dn)
-@@ -1292,38 +1526,67 @@
+@@ -1292,38 +1528,67 @@
  /* added to fix use of ldap_modify_add for doing an ldap_add, gerrit thomson. */
  #define PHP_LD_FULL_ADD 0xff
  /* {{{ php_ldap_do_modify
@@ -450,7 +461,7 @@
  		ldap_mods[i] = emalloc(sizeof(LDAPMod));
  		ldap_mods[i]->mod_op = oper | LDAP_MOD_BVALUES;
  		ldap_mods[i]->mod_type = NULL;
-@@ -1381,19 +1644,78 @@
+@@ -1381,19 +1646,78 @@
  		zend_hash_move_forward(Z_ARRVAL_P(entry));
  	}
  	ldap_mods[num_attribs] = NULL;
@@ -537,7 +548,7 @@
  
  errexit:
  	for (i = 0; i < num_attribs; i++) {
-@@ -1406,46 +1728,57 @@
+@@ -1406,46 +1730,57 @@
  	}
  	efree(num_berval);
  	efree(ldap_mods);	
@@ -601,7 +612,7 @@
  /* {{{ proto bool ldap_delete(resource link, string dn)
     Delete an entry from a directory */
  PHP_FUNCTION(ldap_delete)
-@@ -1869,38 +2202,109 @@
+@@ -1869,38 +2204,109 @@
  	RETURN_STRING(ldap_err2string(ld_errno), 1);
  }
  /* }}} */
@@ -730,7 +741,7 @@
  /* }}} */
  
  /* {{{ proto bool ldap_sort(resource link, resource result, string sortfilter)
-@@ -1932,59 +2336,233 @@
+@@ -1932,59 +2338,233 @@
  	RETURN_TRUE;
  }
  /* }}} */
@@ -1006,7 +1017,7 @@
  		} break;
  #elif defined(LDAP_X_OPT_CONNECT_TIMEOUT)
  	case LDAP_X_OPT_CONNECT_TIMEOUT:
-@@ -2207,21 +2785,23 @@
+@@ -2207,21 +2787,23 @@
  }
  /* }}} */
  
@@ -1035,7 +1046,7 @@
  
  	ZEND_FETCH_RESOURCE(ld, ldap_linkdata *, &link, -1, "ldap link", le_link);
  	ZEND_FETCH_RESOURCE(ldap_result, LDAPMessage *, &result, -1, "ldap result", le_result);
-@@ -2229,9 +2809,9 @@
+@@ -2229,9 +2811,9 @@
  	rc = ldap_parse_result(ld->link, ldap_result, &lerrcode,
  				myargcount > 3 ? &lmatcheddn : NULL,
  				myargcount > 4 ? &lerrmsg : NULL,
@@ -1046,7 +1057,7 @@
  	if (rc != LDAP_SUCCESS) {
  		php_error_docref(NULL TSRMLS_CC, E_WARNING, "Unable to parse result: %s", ldap_err2string(rc));
  		RETURN_FALSE;
-@@ -2241,19 +2821,15 @@
+@@ -2241,19 +2823,15 @@
  	ZVAL_LONG(errcode, lerrcode);
  
  	/* Reverse -> fall through */
@@ -1072,7 +1083,7 @@
  			zval_dtor(errmsg);
  			if (lerrmsg == NULL) {
  				ZVAL_EMPTY_STRING(errmsg);
-@@ -2274,8 +2850,142 @@
+@@ -2274,8 +2852,142 @@
  }
  /* }}} */
  #endif
@@ -1215,7 +1226,7 @@
     Return first reference */
  PHP_FUNCTION(ldap_first_reference)
  {
-@@ -2758,51 +3468,733 @@
+@@ -2758,51 +3470,733 @@
  }
  /* }}} */
  #endif
@@ -1988,7 +1999,7 @@
  ZEND_BEGIN_ARG_INFO_EX(arginfo_ldap_list, 0, 0, 3)
  	ZEND_ARG_INFO(0, link_identifier)
  	ZEND_ARG_INFO(0, base_dn)
-@@ -3007,8 +4399,9 @@
+@@ -3007,8 +4401,9 @@
  	ZEND_ARG_INFO(1, errcode)
  	ZEND_ARG_INFO(1, matcheddn)
  	ZEND_ARG_INFO(1, errmsg)
@@ -1998,7 +2009,7 @@
  #endif
  #endif
  
-@@ -3027,8 +4420,40 @@
+@@ -3027,8 +4422,40 @@
  ZEND_BEGIN_ARG_INFO_EX(arginfo_ldap_8859_to_t61, 0, 0, 1)
  	ZEND_ARG_INFO(0, value)
  ZEND_END_ARG_INFO()
@@ -2039,7 +2050,7 @@
  	
  /*
  	This is just a small subset of the functionality provided by the LDAP library. All the 
-@@ -3091,9 +4516,22 @@
+@@ -3091,9 +4518,22 @@
  #endif
  #ifdef HAVE_LDAP_START_TLS_S
  	PHP_FE(ldap_start_tls,								arginfo_ldap_resource)
@@ -2062,7 +2073,7 @@
  #if defined(LDAP_API_FEATURE_X_OPENLDAP) && defined(HAVE_3ARG_SETREBINDPROC)
  	PHP_FE(ldap_set_rebind_proc,						arginfo_ldap_set_rebind_proc)
  #endif
-@@ -3102,8 +4540,33 @@
+@@ -3102,8 +4542,33 @@
  	PHP_FE(ldap_t61_to_8859,							arginfo_ldap_t61_to_8859)
  	PHP_FE(ldap_8859_to_t61,							arginfo_ldap_8859_to_t61)
  #endif
@@ -2096,7 +2107,7 @@
  	PHP_FE(ldap_control_paged_result,							arginfo_ldap_control_paged_result)
  	PHP_FE(ldap_control_paged_result_response,		arginfo_ldap_control_paged_result_response)
  #endif
-@@ -3128,8 +4591,10 @@
+@@ -3128,8 +4593,10 @@
  	STANDARD_MODULE_PROPERTIES_EX
  };
  /* }}} */
