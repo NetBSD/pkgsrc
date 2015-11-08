@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/11/07 20:38:08 dholland Exp $
+# $NetBSD: Makefile,v 1.12 2015/11/08 21:31:59 dholland Exp $
 #
 
 DISTNAME=	atheme-services-3.0.4
@@ -41,9 +41,7 @@ FILES_SUBST+=		ATHEME_GROUP=${ATHEME_GROUP}
 .include "../../mk/bsd.prefs.mk"
 
 PLIST_VARS+=		posixcrypt
-.if ${OPSYS} == "Darwin"
-PLIST.posixcrypt=	no
-.else
+.if ${OPSYS} != "Darwin"
 PLIST.posixcrypt=	yes
 .endif
 
