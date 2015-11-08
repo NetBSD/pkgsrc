@@ -1,9 +1,13 @@
-# $NetBSD: mozilla-common.mk,v 1.66 2015/11/03 17:21:04 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.67 2015/11/08 00:46:22 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
 # used by www/firefox/Makefile
 # used by www/seamonkey/Makefile
+
+.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
+BUILD_DEPENDS+=		yasm>=1.1:../../devel/yasm
+.endif
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config perl gmake autoconf213 unzip zip
