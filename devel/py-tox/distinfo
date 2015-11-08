@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/11/08 09:21:52 wiz Exp $
+
+SHA1 (tox-2.1.1.tar.gz) = 32be3ba78431f83e3542e0a4dfbea6ad349af2db
+RMD160 (tox-2.1.1.tar.gz) = 9d526e02d4c5cfb7891112db7bb21ac06f195ed9
+SHA512 (tox-2.1.1.tar.gz) = 74c0875bbbd8e28806e71a4562fe8bccd1e501b58e870de074825dfab4d3e3026a3e0421443a35be07cd349451c476dff0e590934e2bb1a74287a25f026934cd
+Size (tox-2.1.1.tar.gz) = 102170 bytes
