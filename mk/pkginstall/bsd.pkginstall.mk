@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.63 2015/08/10 05:41:10 dholland Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.64 2015/11/08 03:21:46 leot Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -387,7 +387,7 @@ su-create-usergroup: ${_INSTALL_USERGROUP_UNPACKER}
 #
 #	SPECIAL_PERMS+=	/path/to/sgidgame ${SETGID_GAMES_PERMS}
 #
-# GAMEDATA_PERMS and GAMEDIR_PERMS are convenience defintiions for files
+# GAMEDATA_PERMS and GAMEDIR_PERMS are convenience definitions for files
 # that are meant to be accessed by things that are setgid games. Because
 # such files should normally be under ${VARBASE}, generally these 
 # definitions should be used roughly as follows:
