@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2014/06/29 05:08:36 dholland Exp $
+# $NetBSD: Makefile,v 1.37 2015/11/08 07:05:45 dholland Exp $
 
 DISTNAME=		gpc-2.1
 PKGREVISION=		5
@@ -57,9 +57,9 @@ INFO_FILES=	yes
 
 post-extract:
 	${MKDIR} ${WRKSRC}
-	${CP} ${.CURDIR}/../gcc/files/xm-netbsd.h ${WRKSRC}/gcc/config
-	${CP} ${.CURDIR}/../gcc/files/xm-target64.h ${WRKSRC}/gcc/config
-	for file in ${.CURDIR}/../gcc/files/*_* ; do			 \
+	${CP} ../../lang/gcc2/files/xm-netbsd.h ${WRKSRC}/gcc/config
+	${CP} ../../lang/gcc2/files/xm-target64.h ${WRKSRC}/gcc/config
+	for file in ../../lang/gcc2/files/*_* ; do			 \
 		arch=`${BASENAME} $${file} | ${SED} -e "s/_.*//"`;	 \
 		dest=`${BASENAME} $${file} | ${SED} -e "s/$${arch}_//"`; \
 		${MKDIR} ${WRKSRC}/gcc/config/$${arch};			 \
