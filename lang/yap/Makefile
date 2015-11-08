@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2015/08/18 07:31:11 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2015/11/08 19:27:40 dholland Exp $
 
 DISTNAME=		yap-6.3.3
 PKGREVISION=		3
@@ -20,6 +20,21 @@ CONFIGURE_ENV+=		INDENT=${TRUE:Q}
 
 # debug option:
 #CONFIGURE_ARGS+=	--enable-debug-yap
+
+.include "../../mk/bsd.prefs.mk"
+
+# If it doesn't probe a c++0x compiler, it doesn't build "horus",
+# which is apparently a belief propagation engine. There isn't any
+# good way to detect in pkgsrc if the current compiler supports any
+# particular dialect (at least as of this writing) and forcing a
+# non-default compiler seems like overkill, so for now at least we'll
+# approximate by OS.
+PLIST_VARS+=		horus
+.if ${OPSYS} == "OpenBSD"
+PLIST.horus=		no
+.else
+PLIST.horus=		yes
+.endif
 
 .include "../../archivers/libarchive/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
