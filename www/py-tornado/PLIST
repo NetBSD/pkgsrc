@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2015/08/28 10:42:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2015/11/08 05:10:28 wen Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -7,6 +7,9 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/tornado/__init__.py
 ${PYSITELIB}/tornado/__init__.pyc
 ${PYSITELIB}/tornado/__init__.pyo
+${PYSITELIB}/tornado/_locale_data.py
+${PYSITELIB}/tornado/_locale_data.pyc
+${PYSITELIB}/tornado/_locale_data.pyo
 ${PYSITELIB}/tornado/auth.py
 ${PYSITELIB}/tornado/auth.pyc
 ${PYSITELIB}/tornado/auth.pyo
@@ -197,6 +200,9 @@ ${PYSITELIB}/tornado/test/stack_context_test.pyc
 ${PYSITELIB}/tornado/test/stack_context_test.pyo
 ${PYSITELIB}/tornado/test/static/dir/index.html
 ${PYSITELIB}/tornado/test/static/robots.txt
+${PYSITELIB}/tornado/test/static/sample.xml
+${PYSITELIB}/tornado/test/static/sample.xml.bz2
+${PYSITELIB}/tornado/test/static/sample.xml.gz
 ${PYSITELIB}/tornado/test/static_foo.txt
 ${PYSITELIB}/tornado/test/tcpclient_test.py
 ${PYSITELIB}/tornado/test/tcpclient_test.pyc
