@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2013/07/12 10:45:01 jperkin Exp $
+# $NetBSD: Makefile,v 1.18 2015/11/08 22:06:38 dholland Exp $
 
 DISTNAME=	uucp-1.07
 PKGREVISION=	7
@@ -6,8 +6,8 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GNU:=uucp/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-COMMENT=	Taylor UUCP
 HOMEPAGE=	http://www.airs.com/ian/uucp.html
+COMMENT=	Taylor UUCP
 
 USE_TOOLS+=	mkdir:run pwd:run rmdir:run
 USE_FEATURES+=	cdefs
@@ -17,11 +17,11 @@ USE_FEATURES+=	cdefs
 PKG_SYSCONFSUBDIR=	uucp
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-user=${UUCP_USER}
-CONFIGURE_ARGS+=	--with-newconfigdir=${PKG_SYSCONFDIR:Q}
-CONFIGURE_ARGS+=	--with-oldconfigdir=${PKG_SYSCONFDIR:Q}
-CONFIGURE_ENV+=		MKDIR_PROGRAM=${TOOLS_MKDIR:Q}
-CONFIGURE_ENV+=		PWD_PROGRAM=${TOOLS_PWD_CMD:Q}
-CONFIGURE_ENV+=		RMDIR_PROGRAM=${TOOLS_RMDIR:Q}
+CONFIGURE_ARGS+=	--with-newconfigdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-oldconfigdir=${PKG_SYSCONFDIR}
+CONFIGURE_ENV+=		MKDIR_PROGRAM=${TOOLS_MKDIR}
+CONFIGURE_ENV+=		PWD_PROGRAM=${TOOLS_PWD_CMD}
+CONFIGURE_ENV+=		RMDIR_PROGRAM=${TOOLS_RMDIR}
 
 PKG_GROUPS=	${UUCP_GROUP}
 PKG_USERS=	${UUCP_USER}:${UUCP_GROUP}
@@ -91,18 +91,18 @@ post-extract:
 
 # Generate a policy_local.h header file that holds the paths used by UUCP.
 post-configure:
-	@${RM} -f ${WRKSRC}/policy_local.h
-.for _var_ in	MAIL_PROGRAM	CMDPATH		LOCKDIR			\
+	${RM} -f ${WRKSRC}/policy_local.h
+.for var in	MAIL_PROGRAM	CMDPATH		LOCKDIR			\
 		SPOOLDIR	PUBDIR		LOGFILE			\
 		STATFILE	DEBUGFILE
-	@${ECHO} "#define ${_var_}	\""${UUCP_${_var_}:Q}"\""	\
+	${ECHO} "#define ${var}	\""${UUCP_${var}:Q}"\""			\
 		>> ${WRKSRC}/policy_local.h
 .endfor
 
 post-install:
-	cd ${FILESDIR}/etc; for f in [a-z]*; do				\
-		${TEST} -f $$f || continue;				\
-		${INSTALL_DATA} $$f ${DESTDIR}${PREFIX}/share/examples/uucp;	\
+	set -e; cd ${FILESDIR}/etc; for f in [a-z]*; do			\
+		${TEST} -f "$$f" || continue;				\
+		${INSTALL_DATA} "$$f" ${DESTDIR}${PREFIX}/share/examples/uucp;	\
 	done
 
 .include "../../mk/bsd.pkg.mk"
