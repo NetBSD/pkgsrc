@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.35 2015/10/01 02:16:00 wen Exp $
+# $NetBSD: Makefile,v 1.36 2015/11/08 01:28:56 wen Exp $
 
-DISTNAME=	Dancer-1.3142
+DISTNAME=	Dancer-1.3202
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/Y/YA/YANICK/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/B/BI/BIGPRESH/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://perldancer.org/
