@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2015/07/12 06:20:01 dholland Exp $
+# $NetBSD: Makefile,v 1.17 2015/11/08 21:55:11 dholland Exp $
 
 DISTNAME=		repackaged-${PKGNAME_NOREV}
 PKGNAME=		nasd-1.3
@@ -10,7 +10,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.pdl.cmu.edu/NASD/Downloads/NASDcode.html
 COMMENT=		Prototype storage implementation
 
-BROKEN_EXCEPT_FOR_PLATFORM=	OSF1-*-* Linux-*-* FreeBSD-*-* NetBSD-*-* \
+BROKEN_EXCEPT_ON_PLATFORM=	OSF1-*-* Linux-*-* FreeBSD-*-* NetBSD-*-* \
 				SunOS-*-* IRIX-*-*
 
 USE_IMAKE=		yes
