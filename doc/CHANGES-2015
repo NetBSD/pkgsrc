@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4517 2015/11/07 20:19:00 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4518 2015/11/08 00:53:24 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7726,3 +7726,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/py-test-runner version 2.6.2 [wiz 2015-11-07]
 	Updated devel/py-coverage to 4.0.2 [wiz 2015-11-07]
 	Updated misc/less to 481 [wiz 2015-11-07]
+	Updated misc/libreoffice to 5.0.3.2 [ryoon 2015-11-08]
