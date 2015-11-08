@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2015/11/03 23:49:42 agc Exp $
+$NetBSD: distinfo,v 1.12 2015/11/08 00:52:59 ryoon Exp $
 
 SHA1 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = 452eba922e4f41603539c9dc39947d2271e47093
 RMD160 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = dbeb7a7f8c89961ca2e544b810345d025561866b
@@ -152,22 +152,22 @@ SHA1 (libreoffice/f94d9870737518e3b597f9265f4e9803-libserializer-1.1.6.zip) = 5e
 RMD160 (libreoffice/f94d9870737518e3b597f9265f4e9803-libserializer-1.1.6.zip) = 575a7daf02efbab9ea972e03a6870f7f13112806
 SHA512 (libreoffice/f94d9870737518e3b597f9265f4e9803-libserializer-1.1.6.zip) = c1a15ebbfe817ec79d4b3f1c97d096bf8511737d7d35d97302856ccfb3de14a1cd16bd31000415d9ab24bbd9ef770d37855cee4b819ff0e8fca2f2766920a114
 Size (libreoffice/f94d9870737518e3b597f9265f4e9803-libserializer-1.1.6.zip) = 211919 bytes
-SHA1 (libreoffice/libreoffice-5.0.2.2.tar.xz) = fe9f80a2bf2a8e1e32fbe91b6e6832dab3a55f4b
-RMD160 (libreoffice/libreoffice-5.0.2.2.tar.xz) = ce7b99681d79b25ee74c29d559632750af186289
-SHA512 (libreoffice/libreoffice-5.0.2.2.tar.xz) = 7a72ed01b0f9fc131b7241ea4d1bb70bc813752e33d8e823e91a769d77308d2eec2d32a0fac61bdb41fd605a6f91dbaa3d5478a0b150e64fa9f7e47724f46cce
-Size (libreoffice/libreoffice-5.0.2.2.tar.xz) = 166869100 bytes
-SHA1 (libreoffice/libreoffice-dictionaries-5.0.2.2.tar.xz) = 0d44bf666c98e0a20250cf5541aa37ebb2ae7350
-RMD160 (libreoffice/libreoffice-dictionaries-5.0.2.2.tar.xz) = c5dc79bedbd9dd145021e0ac76e1d95b18c4defe
-SHA512 (libreoffice/libreoffice-dictionaries-5.0.2.2.tar.xz) = 32c466e018b1bf5154aaf21ebe2eae68a9b83a80dddaab8b1f0f55f5b2f95600d1adea0865ad171ae973453971343b267e5256f4095ddef8b97deff3b9b0c010
-Size (libreoffice/libreoffice-dictionaries-5.0.2.2.tar.xz) = 36704156 bytes
-SHA1 (libreoffice/libreoffice-help-5.0.2.2.tar.xz) = 3831b4966d2b63a3a6260f1f07b92c45ca40d80a
-RMD160 (libreoffice/libreoffice-help-5.0.2.2.tar.xz) = f2fad56f216cd2243550b1a6b15e931cc7cbcd1e
-SHA512 (libreoffice/libreoffice-help-5.0.2.2.tar.xz) = 1000423578211dc843dcedb9f864634235ab09d5234f8d8fe2897065207bdf6cd3bca7cdc1b3c012de0c78b585978a25c0df5048779bd0b9a734c9160064e313
-Size (libreoffice/libreoffice-help-5.0.2.2.tar.xz) = 1882964 bytes
-SHA1 (libreoffice/libreoffice-translations-5.0.2.2.tar.xz) = 448cc28158ac6d0f1c0d5ca464ce5e3b79c5c2fd
-RMD160 (libreoffice/libreoffice-translations-5.0.2.2.tar.xz) = 87c6bf7a99f0467e2d6deb5154d1ab1f40612eec
-SHA512 (libreoffice/libreoffice-translations-5.0.2.2.tar.xz) = e5a9474b78446c75a952e91905ac66b8d023694573f4a049d7121a63452f699b52ba2bc3fbf35df135b4031b45302cd48eae42872f52fc83863f6df6534e7ad4
-Size (libreoffice/libreoffice-translations-5.0.2.2.tar.xz) = 130062656 bytes
+SHA1 (libreoffice/libreoffice-5.0.3.2.tar.xz) = 8981b8b975679038b72717f0b9921791cc7886ab
+RMD160 (libreoffice/libreoffice-5.0.3.2.tar.xz) = cf3a303ee46ce6ca6337f949c57daae0e51682c1
+SHA512 (libreoffice/libreoffice-5.0.3.2.tar.xz) = fe49577d26c2241a2e7d6f2e8faa25cacf77dc94dbe76f7dbbf1b208295695298d24842c73444b284e9af2a323b7536cce6727ffab0431ac22d80691a9902e62
+Size (libreoffice/libreoffice-5.0.3.2.tar.xz) = 167009360 bytes
+SHA1 (libreoffice/libreoffice-dictionaries-5.0.3.2.tar.xz) = e906f96a5fd95691b0bcf0e733c00f594b9563e5
+RMD160 (libreoffice/libreoffice-dictionaries-5.0.3.2.tar.xz) = 7ee0b897d40aeb5fb63cfbc549a1fdf512064353
+SHA512 (libreoffice/libreoffice-dictionaries-5.0.3.2.tar.xz) = 605a7e1bebcd2c8ac153f2d5b9200c8ef702f38c1c2242a545c9d1d5a541cd2545f051e7545ab7322421976605683ae7128b87f8b317a87a9a990228096d9646
+Size (libreoffice/libreoffice-dictionaries-5.0.3.2.tar.xz) = 37066744 bytes
+SHA1 (libreoffice/libreoffice-help-5.0.3.2.tar.xz) = bd311a0d2792eeecbf0699d650abf59711c1b8c1
+RMD160 (libreoffice/libreoffice-help-5.0.3.2.tar.xz) = 82f06eec23530db2cbf7a3db71c131ab17344e72
+SHA512 (libreoffice/libreoffice-help-5.0.3.2.tar.xz) = 73de5507b0e7994a189d5580ad7bfdf842e9a3a10cc0a9bbe39eb11f20e47fa7016f6cf6748ad7c35260587cfc7078eaac6055b439292068a9d9783509bd715d
+Size (libreoffice/libreoffice-help-5.0.3.2.tar.xz) = 1882292 bytes
+SHA1 (libreoffice/libreoffice-translations-5.0.3.2.tar.xz) = 259d57db2e26d5c00ea35d8a8d2dba420d70449e
+RMD160 (libreoffice/libreoffice-translations-5.0.3.2.tar.xz) = d26e1aa176a94889919a1d9a6653df6d539e3d85
+SHA512 (libreoffice/libreoffice-translations-5.0.3.2.tar.xz) = 54abcf71377778e5901fe94a3cb718ee296ba7e13cea094f6191bab17b1636534400c435823b784cb54dae05786b3ce861b5e3f6920fb4639625a683ed7937e1
+Size (libreoffice/libreoffice-translations-5.0.3.2.tar.xz) = 130083964 bytes
 SHA1 (patch-Repository.mk) = 01a1fe049fc192a2b8b171b7162e3d34da1480c0
 SHA1 (patch-bin_distro-install-desktop-integration) = 292abb5c40018547bc58efa092eb7014dc28dced
 SHA1 (patch-bin_distro-install-file-lists) = 782e2943a8438fb0ff033b97eda8ad4923453774
