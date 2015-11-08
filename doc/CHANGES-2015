@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4526 2015/11/08 08:29:49 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4527 2015/11/08 08:33:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7735,3 +7735,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/py-tornado to 4.3 [wen 2015-11-08]
 	Updated textproc/p5-Pod-POM to 2.01 [wiz 2015-11-08]
 	Updated devel/p5-strictures to 2.000002 [wiz 2015-11-08]
+	Updated time/p5-DateTime-Locale to 1.01 [wiz 2015-11-08]
