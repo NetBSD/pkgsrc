@@ -1,6 +1,10 @@
-$NetBSD: patch-ca,v 1.1 2006/01/24 19:01:45 joerg Exp $
+$NetBSD: patch-ca,v 1.2 2015/11/08 20:42:38 dholland Exp $
 
---- utils/newmail.c.orig	2006-01-24 17:45:56.000000000 +0000
+- use standard headers
+- avoid obsolete sys/timeb.h
+- don't declare own errno
+
+--- utils/newmail.c.orig	2001-06-19 17:03:48.000000000 +0000
 +++ utils/newmail.c
 @@ -61,6 +61,7 @@ static char rcsid[] = "@(#)$Id: newmail.
  
@@ -10,7 +14,18 @@ $NetBSD: patch-ca,v 1.1 2006/01/24 19:01:45 joerg Exp $
  #ifdef PWDINSYS
  #  include <sys/pwd.h>
  #else
-@@ -141,8 +142,6 @@ int  interval_time,		/* how long to slee
+@@ -68,10 +69,6 @@ DEBUG_VAR(Debug,__FILE__,"util");
+ #endif
+ #include <sys/stat.h>
+ 
+-#ifdef BSD_TYPE
+-#  include <sys/timeb.h>
+-#endif
+-
+ #ifdef I_UTIME
+ #  include <utime.h>
+ #endif
+@@ -141,8 +138,6 @@ int  interval_time,		/* how long to slee
  int  parent_pid;		/* See if sucide should be attempt  */
  #endif /* PIDCHECK */
  
@@ -19,7 +34,7 @@ $NetBSD: patch-ca,v 1.1 2006/01/24 19:01:45 joerg Exp $
  #if defined(BSD_TYPE) && !defined(UTIMBUF)
          time_t utime_buffer[2];         /* utime command */
  
-@@ -780,7 +779,6 @@ static void save_acc(name)
+@@ -780,7 +775,6 @@ static void save_acc(name)
      /** return the number of bytes in the specified file.  This
  	is to check to see if new mail has arrived....  **/
  
