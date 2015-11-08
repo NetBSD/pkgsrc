@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.7 2015/01/04 06:58:44 dholland Exp $
+$NetBSD: patch-aa,v 1.8 2015/11/08 00:16:29 dholland Exp $
 
  - configure for pkgsrc
  - add destdir support
@@ -23,7 +23,7 @@ $NetBSD: patch-aa,v 1.7 2015/01/04 06:58:44 dholland Exp $
 +CC=cc
 +OPTIMIZE=
 +UNIXFLAGS=-DOSANSI -DUNIX -DHAVE_STRCASECMP
-+SYSFLAGS=-DOS_SYSTEM_NAME=\""${OPSYS}"\" -DSYSNAME=\""${OPSYS}"\" -DSYSPL=\"${PKGREVISION}\" -DPORTER=\""pkgsrc-users"\" -DSYSMAINTAINER=\""pkgsrc port maintained by ${MAINTAINER}\n"\"
++SYSFLAGS=-DOS_SYSTEM_NAME=\""${OPSYS}"\" -DSYSNAME=\""${OPSYS}"\" -DSYSPL=\"${PKGREVISION}\" -DPORTER=\""pkgsrc-users"\" -DSYSMAINTAINER=\""pkgsrc port maintained by ${MAINTAINER}\\n"\"
 +CFLAGS+=$(UNIXFLAGS) $(SYSFLAGS) -DNETBSD
 +AFLAGS=
 +OVLFLG=
