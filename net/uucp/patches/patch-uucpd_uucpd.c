@@ -1,4 +1,4 @@
-$NetBSD: patch-uucpd_uucpd.c,v 1.1 2015/11/08 22:06:52 dholland Exp $
+$NetBSD: patch-uucpd_uucpd.c,v 1.2 2015/11/08 23:19:22 dholland Exp $
 
 Fix build on platforms that don't have a NetBSD cdefs.h.
 
@@ -9,10 +9,10 @@ Fix build on platforms that don't have a NetBSD cdefs.h.
  #include <sys/cdefs.h>
  #ifndef lint
 +#ifndef __COPYRIGHT
-+#define __COPYRIGHT(x) char rmail_copyright[] = x
++#define __COPYRIGHT(x) char uucpd_copyright[] = x
 +#endif
 +#ifndef __RCSID
-+#define __RCSID(x) char rmail_rcsid[] = x
++#define __RCSID(x) char uucpd_rcsid[] = x
 +#endif
  __COPYRIGHT("@(#) Copyright (c) 1985 The Regents of the University of California.\n\
   All rights reserved.\n");

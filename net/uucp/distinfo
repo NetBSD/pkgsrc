@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2015/11/08 22:06:52 dholland Exp $
+$NetBSD: distinfo,v 1.7 2015/11/08 23:19:22 dholland Exp $
 
 SHA1 (uucp-1.07.tar.gz) = e7c93c3aa6468f1b26dd4d9104dbbe8c2949e9ee
 RMD160 (uucp-1.07.tar.gz) = e265ecd08245dd2510db20430a7a0e387ef4df51
@@ -24,4 +24,4 @@ SHA1 (patch-aq) = bb6bcaa133ddda48ad24a94ed690afb5934b96d0
 SHA1 (patch-ar) = d71d7e016d840d06c52bd88c507450111cf02e2c
 SHA1 (patch-as) = 76773cbfccec131b3eb0adfad43c6d4e9d54a99b
 SHA1 (patch-rmail_rmail.c) = 3010f4dcc2ef05b1563658b3c2ec769229a253bb
-SHA1 (patch-uucpd_uucpd.c) = 98bba1b26c0fd22c2f09d90838c4ba5ffc2f6ee3
+SHA1 (patch-uucpd_uucpd.c) = 42278c73d5f3f6c95a64896168dcdb2ead425f26
