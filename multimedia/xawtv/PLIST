@@ -1,14 +1,18 @@
-@comment $NetBSD: PLIST,v 1.4 2011/08/13 04:43:51 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/11/08 21:31:00 dholland Exp $
 bin/dump-mixers
+${PLIST.linux}bin/fbtv
 bin/ntsc-cc
 bin/pia
 bin/propwatch
+${PLIST.linux}bin/radio
 bin/record
 bin/rootv
 bin/showqt
 bin/showriff
 bin/streamer
 bin/subtitles
+${PLIST.v4l}bin/v4l-conf
+${PLIST.v4l}bin/v4l-info
 bin/v4lctl
 bin/webcam
 bin/xawtv
@@ -17,6 +21,10 @@ lib/X11/app-defaults/Xawtv
 lib/xawtv/bilinear.so
 lib/xawtv/conv-mjpeg.so
 lib/xawtv/cubic.so
+${PLIST.bsd}lib/xawtv/drv0-bsd.so
+${PLIST.v4l}lib/xawtv/drv0-v4l2-old.so
+${PLIST.v4l}lib/xawtv/drv0-v4l2.so
+${PLIST.v4l}lib/xawtv/drv1-v4l.so
 lib/xawtv/flt-disor.so
 lib/xawtv/flt-gamma.so
 lib/xawtv/flt-invert.so
