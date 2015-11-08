@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2015/06/12 10:50:40 wiz Exp $
+# $NetBSD: Makefile,v 1.87 2015/11/08 01:04:11 sevan Exp $
 
 DISTNAME=	freeradius-${RADVER}
 PKGREVISION=	11
@@ -125,10 +125,6 @@ SUBST_SED.make+=	-e 's|@ldap_ldflags@|@ldap_ldflags@ \
 .if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "native"
 SUBST_SED.make+=	-e 's|@ldap_ldflags@|@ldap_ldflags@ \
 			${PTHREAD_LDFLAGS:M*:Q} ${PTHREAD_LIBS:M*:Q}|g'
-.endif
-
-.if ${MACHINE_ARCH} == "amd64"
-CFLAGS+= -fPIC
 .endif
 
 INSTALLATION_DIRS+=	${EGDIR}/certs/demoCA
