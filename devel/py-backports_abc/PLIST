@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2015/11/08 05:01:48 wen Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/backports_abc.py
+${PYSITELIB}/backports_abc.pyc
+${PYSITELIB}/backports_abc.pyo
