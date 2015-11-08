@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4532 2015/11/08 09:30:13 adam Exp $
+$NetBSD: CHANGES-2015,v 1.4533 2015/11/08 10:40:52 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7741,3 +7741,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/py-pluggy version 0.3.1 [wiz 2015-11-08]
 	Added devel/py-tox version 2.1.1 [wiz 2015-11-08]
 	Updated emulators/qemu to 2.4.1 [adam 2015-11-08]
+	Updated textproc/p5-PDF-Create to 1.19 [wen 2015-11-08]
