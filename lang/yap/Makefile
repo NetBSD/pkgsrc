@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2015/11/08 19:27:40 dholland Exp $
+# $NetBSD: Makefile,v 1.22 2015/11/08 21:31:59 dholland Exp $
 
 DISTNAME=		yap-6.3.3
 PKGREVISION=		3
@@ -30,9 +30,7 @@ CONFIGURE_ENV+=		INDENT=${TRUE:Q}
 # non-default compiler seems like overkill, so for now at least we'll
 # approximate by OS.
 PLIST_VARS+=		horus
-.if ${OPSYS} == "OpenBSD"
-PLIST.horus=		no
-.else
+.if ${OPSYS} != "OpenBSD"
 PLIST.horus=		yes
 .endif
 
