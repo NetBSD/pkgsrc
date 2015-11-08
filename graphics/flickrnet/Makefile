@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/10/10 01:58:09 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2015/11/08 06:56:54 dholland Exp $
 
 DISTNAME=	3.16
 PKGREVISION=	2
@@ -23,7 +23,7 @@ do-build:
 	xbuild FlickrNet/FlickrNet.csproj
 
 do-install:
-	mkdir ${DESTDIR}/${PREFIX}/lib/flickrnet &&
+	mkdir ${DESTDIR}/${PREFIX}/lib/flickrnet
 	install ${WRKSRC}/FlickrNet/bin/Debug/FlickrNet.* \
 		${DESTDIR}/${PREFIX}/lib/flickrnet
 	mkdir ${DESTDIR}/${PREFIX}/lib/pkgconfig
