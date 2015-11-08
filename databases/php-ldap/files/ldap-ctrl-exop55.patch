@@ -24,8 +24,8 @@ $NetBSD$
  * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
---- ext/ldap/ldap.c.orig	2015-03-18 10:45:50.000000000 +0100
-+++ ext/ldap/ldap.c	2015-04-10 14:54:51.000000000 +0200
+--- ext/ldap/ldap.c.orig	2015-09-02 18:00:35.000000000 +0200
++++ ext/ldap/ldap.c	2015-11-08 05:14:15.000000000 +0100
 @@ -66,8 +66,13 @@
  #elif defined(HAVE_LDAP_SASL_SASL_H)
  #include <sasl/sasl.h>
@@ -373,7 +373,18 @@ $NetBSD$
  typedef struct {
  	char *mech;
  	char *realm;
-@@ -562,8 +790,9 @@
+@@ -510,8 +738,10 @@
+ 				break;
+ 			case SASL_CB_USER:
+ 				p = ctx->authzid;
+ 				break;
++			case SASL_CB_ECHOPROMPT:
++			case SASL_CB_NOECHOPROMPT:
+ 			case SASL_CB_PASS:
+ 				p = ctx->passwd;
+ 				break;
+ 		}
+@@ -562,8 +792,9 @@
  	_php_sasl_freedefs(ctx);
  }
  /* }}} */
@@ -383,7 +394,7 @@ $NetBSD$
  /* {{{ proto bool ldap_unbind(resource link)
     Unbind from LDAP directory */
  PHP_FUNCTION(ldap_unbind)
-@@ -1259,9 +1488,14 @@
+@@ -1259,9 +1490,14 @@
  	for (i = 0; i<count; i++) {
  		add_index_string(return_value, i, ldap_value[i], 1);
  	}
@@ -398,7 +409,7 @@ $NetBSD$
  /* }}} */
  
  /* {{{ proto string ldap_dn2ufn(string dn)
-@@ -1292,38 +1526,67 @@
+@@ -1292,38 +1528,67 @@
  /* added to fix use of ldap_modify_add for doing an ldap_add, gerrit thomson. */
  #define PHP_LD_FULL_ADD 0xff
  /* {{{ php_ldap_do_modify
@@ -476,7 +487,7 @@ $NetBSD$
  		ldap_mods[i] = emalloc(sizeof(LDAPMod));
  		ldap_mods[i]->mod_op = oper | LDAP_MOD_BVALUES;
  		ldap_mods[i]->mod_type = NULL;
-@@ -1381,19 +1644,78 @@
+@@ -1381,19 +1646,78 @@
  		zend_hash_move_forward(Z_ARRVAL_P(entry));
  	}
  	ldap_mods[num_attribs] = NULL;
@@ -563,7 +574,7 @@ $NetBSD$
  
  errexit:
  	for (i = 0; i < num_attribs; i++) {
-@@ -1406,46 +1728,57 @@
+@@ -1406,46 +1730,57 @@
  	}
  	efree(num_berval);
  	efree(ldap_mods);	
@@ -627,7 +638,7 @@ $NetBSD$
  /* {{{ proto bool ldap_delete(resource link, string dn)
     Delete an entry from a directory */
  PHP_FUNCTION(ldap_delete)
-@@ -1869,38 +2202,109 @@
+@@ -1869,38 +2204,109 @@
  	RETURN_STRING(ldap_err2string(ld_errno), 1);
  }
  /* }}} */
@@ -756,7 +767,7 @@ $NetBSD$
  /* }}} */
  
  /* {{{ proto bool ldap_sort(resource link, resource result, string sortfilter)
-@@ -1932,58 +2336,232 @@
+@@ -1932,59 +2338,233 @@
  	RETURN_TRUE;
  }
  /* }}} */
@@ -854,6 +865,7 @@ $NetBSD$
 -				RETURN_FALSE;
 -			}
 -			zval_dtor(retval);
+-			ZVAL_LONG(retval, timeout->tv_sec);
 +	ZEND_REGISTER_RESOURCE(return_value, ldap_res, le_result);
 +	rc = ldap_parse_result(ld->link, ldap_res, &lerr, NULL, NULL, NULL, NULL, 0);
 +	if (rc == LDAP_SUCCESS) {
@@ -1026,11 +1038,12 @@ $NetBSD$
 +				RETURN_FALSE;
 +			}
 +			zval_dtor(retval);
- 			ZVAL_LONG(retval, timeout->tv_sec);
++			ZVAL_LONG(retval, timeout->tv_sec);
  			ldap_memfree(timeout);
  		} break;
  #elif defined(LDAP_X_OPT_CONNECT_TIMEOUT)
-@@ -2207,21 +2785,23 @@
+ 	case LDAP_X_OPT_CONNECT_TIMEOUT:
+@@ -2207,21 +2787,23 @@
  }
  /* }}} */
  
@@ -1059,7 +1072,7 @@ $NetBSD$
  
  	ZEND_FETCH_RESOURCE(ld, ldap_linkdata *, &link, -1, "ldap link", le_link);
  	ZEND_FETCH_RESOURCE(ldap_result, LDAPMessage *, &result, -1, "ldap result", le_result);
-@@ -2229,9 +2809,9 @@
+@@ -2229,9 +2811,9 @@
  	rc = ldap_parse_result(ld->link, ldap_result, &lerrcode,
  				myargcount > 3 ? &lmatcheddn : NULL,
  				myargcount > 4 ? &lerrmsg : NULL,
@@ -1070,7 +1083,7 @@ $NetBSD$
  	if (rc != LDAP_SUCCESS) {
  		php_error_docref(NULL TSRMLS_CC, E_WARNING, "Unable to parse result: %s", ldap_err2string(rc));
  		RETURN_FALSE;
-@@ -2241,19 +2821,15 @@
+@@ -2241,19 +2823,15 @@
  	ZVAL_LONG(errcode, lerrcode);
  
  	/* Reverse -> fall through */
@@ -1096,7 +1109,7 @@ $NetBSD$
  			zval_dtor(errmsg);
  			if (lerrmsg == NULL) {
  				ZVAL_EMPTY_STRING(errmsg);
-@@ -2274,8 +2850,142 @@
+@@ -2274,8 +2852,142 @@
  }
  /* }}} */
  #endif
@@ -1239,7 +1252,7 @@ $NetBSD$
     Return first reference */
  PHP_FUNCTION(ldap_first_reference)
  {
-@@ -2758,54 +3468,736 @@
+@@ -2758,53 +3470,735 @@
  }
  /* }}} */
  #endif
@@ -1358,7 +1371,6 @@ $NetBSD$
 +		}
  
 -ZEND_BEGIN_ARG_INFO_EX(arginfo_ldap_list, 0, 0, 3)
--	ZEND_ARG_INFO(0, link_identifier)
 +		RETURN_TRUE;
 +	}
 +
@@ -2012,12 +2024,11 @@ $NetBSD$
 +ZEND_END_ARG_INFO()
 +
 +ZEND_BEGIN_ARG_INFO_EX(arginfo_ldap_list, 0, 0, 3)
-+	ZEND_ARG_INFO(0, link_identifier)
+ 	ZEND_ARG_INFO(0, link_identifier)
  	ZEND_ARG_INFO(0, base_dn)
  	ZEND_ARG_INFO(0, filter)
  	ZEND_ARG_INFO(0, attributes)
- 	ZEND_ARG_INFO(0, attrsonly)
-@@ -3007,8 +4399,9 @@
+@@ -3007,8 +4401,9 @@
  	ZEND_ARG_INFO(1, errcode)
  	ZEND_ARG_INFO(1, matcheddn)
  	ZEND_ARG_INFO(1, errmsg)
@@ -2027,7 +2038,7 @@ $NetBSD$
  #endif
  #endif
  
-@@ -3027,8 +4420,40 @@
+@@ -3027,8 +4422,40 @@
  ZEND_BEGIN_ARG_INFO_EX(arginfo_ldap_8859_to_t61, 0, 0, 1)
  	ZEND_ARG_INFO(0, value)
  ZEND_END_ARG_INFO()
@@ -2068,7 +2079,7 @@ $NetBSD$
  	
  /*
  	This is just a small subset of the functionality provided by the LDAP library. All the 
-@@ -3091,9 +4516,22 @@
+@@ -3091,9 +4518,22 @@
  #endif
  #ifdef HAVE_LDAP_START_TLS_S
  	PHP_FE(ldap_start_tls,								arginfo_ldap_resource)
@@ -2091,7 +2102,7 @@ $NetBSD$
  #if defined(LDAP_API_FEATURE_X_OPENLDAP) && defined(HAVE_3ARG_SETREBINDPROC)
  	PHP_FE(ldap_set_rebind_proc,						arginfo_ldap_set_rebind_proc)
  #endif
-@@ -3102,8 +4540,33 @@
+@@ -3102,8 +4542,33 @@
  	PHP_FE(ldap_t61_to_8859,							arginfo_ldap_t61_to_8859)
  	PHP_FE(ldap_8859_to_t61,							arginfo_ldap_8859_to_t61)
  #endif
@@ -2125,7 +2136,7 @@ $NetBSD$
  	PHP_FE(ldap_control_paged_result,							arginfo_ldap_control_paged_result)
  	PHP_FE(ldap_control_paged_result_response,		arginfo_ldap_control_paged_result_response)
  #endif
-@@ -3128,8 +4591,10 @@
+@@ -3128,8 +4593,10 @@
  	STANDARD_MODULE_PROPERTIES_EX
  };
  /* }}} */
