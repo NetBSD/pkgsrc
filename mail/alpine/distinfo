@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.20 2015/11/03 23:27:01 agc Exp $
+$NetBSD: distinfo,v 1.21 2015/11/08 20:13:24 dholland Exp $
 
 SHA1 (alpine-2.11.tar.xz) = 656556f5d2e5ec7e3680d1760cd02aa3a0072c46
 RMD160 (alpine-2.11.tar.xz) = ea4b2d87500d1aa1b424033ec3263e3cf3c53814
@@ -7,5 +7,6 @@ Size (alpine-2.11.tar.xz) = 4403188 bytes
 SHA1 (patch-aa) = c306613a297d61591d577b6968a31fc85b03f852
 SHA1 (patch-ab) = f0983d8c0123b06a2970eb2736b04afad1502450
 SHA1 (patch-imap_src_c-client_auth_gss.c) = 622b18f03074f87036f5469323125b4c855d9ce5
+SHA1 (patch-imap_src_mtest_mtest.c) = a08084e1ea656385b267049bb2465b1af6c2949b
 SHA1 (patch-imap_src_osdep_unix_Makefile.gss) = ca09bc26a139c68afe8ac1f99be54bd1fc0e77f0
 SHA1 (patch-imap_src_osdep_unix_kerb_mit.c) = c77d5ee1e8aee30811c2df0562caa375ed270c0e
