@@ -1,8 +1,12 @@
-$NetBSD: patch-bb,v 1.1 2006/01/24 19:01:45 joerg Exp $
+$NetBSD: patch-bb,v 1.2 2015/11/08 20:42:38 dholland Exp $
 
---- src/elm.c.orig	2006-01-24 17:18:55.000000000 +0000
+- use standard headers
+- avoid obsolete sys/timeb.h
+- don't declare own errno
+
+--- src/elm.c.orig	2001-06-19 17:03:46.000000000 +0000
 +++ src/elm.c
-@@ -15,6 +15,7 @@ static char rcsid[] = "@(#)$Id: elm.c,v 
+@@ -15,14 +15,11 @@ static char rcsid[] = "@(#)$Id: elm.c,v 
  /* Main program of the ELM mail system! 
  */
  
@@ -10,7 +14,15 @@ $NetBSD: patch-bb,v 1.1 2006/01/24 19:01:45 joerg Exp $
  #include "patchlevel.h"
  #include "elm.h"
  #include "s_elm.h"
-@@ -90,7 +91,6 @@ int main(argc, argv)
+ 
+-#ifdef BSD_TYPE
+-#  include <sys/timeb.h>
+-#endif
+-
+ #include "mime.h"
+ #include "me.h"
+ 
+@@ -90,7 +87,6 @@ int main(argc, argv)
  	char **to_whom = NULL;
  	int bytes;
  	int  i,j;      		/** Random counting variables (etc)          **/
