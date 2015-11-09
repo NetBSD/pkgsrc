@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/02/18 03:00:52 gdt Exp $
+# $NetBSD: Makefile,v 1.3 2015/11/09 05:05:27 dholland Exp $
 
 DISTNAME=	ori-0.8.1
 PKGREVISION=	1
@@ -27,6 +27,9 @@ do-build:
 
 do-install:
 	cd ${WRKSRC} && ${SETENV} ${INSTALL_ENV} ${PREFIX}/bin/scons install PREFIX=${DESTDIR}${PREFIX}
+
+# configure script demands libevent 2.0 or greater
+BUILDLINK_API_DEPENDS.libevent+=	libevent>=2.0
 
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
