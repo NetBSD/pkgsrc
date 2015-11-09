@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.220 2015/11/07 19:55:46 sevan Exp $
+# $NetBSD: bootstrap,v 1.221 2015/11/09 10:54:44 jperkin Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -175,10 +175,23 @@ get_abi()
 	abi_opsys=$@
 
 	if [ -n "$abi" ]; then
-		die "ERROR: $abi_opsys has special ABI handling, --abi not supported (yet)."
+		case "$abi_opsys" in
+		IRIX)
+			die "ERROR: $abi_opsys has special ABI handling, --abi not supported (yet)."
+			;;
+		esac
 	fi
 
 	case "$abi_opsys" in
+	Darwin)
+		if [ -z "$abi" ]; then
+			case `uname -m` in
+			x86_64)
+				abi="64"
+				;;
+			esac
+		fi
+		;;
 	IRIX)
 		if [ `uname -r` -ge 6 ]; then
 		abi=`sed -e 's/.*\(abi=\)\([on]*[36][24]\).*/\2/' /etc/compiler.defaults`
@@ -541,6 +554,7 @@ Darwin)
 	need_awk=no
 	need_sed=no
 	set_opsys=no
+	get_abi "Darwin"
 	machine_arch=`uname -p`
 	CC=${CC:-"cc -isystem /usr/include"}; export CC
 	check_compiler=yes
