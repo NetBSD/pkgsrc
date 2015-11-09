@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2015/11/06 20:33:21 joerg Exp $
+$NetBSD: distinfo,v 1.12 2015/11/09 07:18:34 dholland Exp $
 
 SHA1 (ucblogo-6.0/ucblogo.tar.gz) = ad62c689c264b1aeb7bd58dd9c08ca602bade8f1
 RMD160 (ucblogo-6.0/ucblogo.tar.gz) = 7cd9ec8eeff00fb3440f5036d57a9b29383ab310
@@ -11,7 +11,7 @@ SHA1 (patch-graphics.c) = 232ed36d7e1dd058ada493040acd467c96257dd3
 SHA1 (patch-intern.c) = 2ed10c027fbea3410585838629477a0e085c1e83
 SHA1 (patch-makehelp.c) = e236bbf271337d6f45474c071f2ea26f14b09744
 SHA1 (patch-print.c) = d988911dddb5a27228366b607a4acd442facef42
-SHA1 (patch-term.c) = 621b4a5a02e0e6c150d8655957f945a81177cb08
+SHA1 (patch-term.c) = 5b0c41497e2c6e282385bd395101f638a247b83a
 SHA1 (patch-wrksp.c) = cca5b7192d359355cbf14d0f44047ff5bc77cba4
 SHA1 (patch-xgraphics.c) = e12f2ff10f990b4d9d00041db970de87ec41684d
 SHA1 (patch-xgraphics.h) = 3b4c6a74cd328241dd2ea8c601879bd24911570d
