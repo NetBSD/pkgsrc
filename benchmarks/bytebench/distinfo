@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2015/11/03 00:25:49 agc Exp $
+$NetBSD: distinfo,v 1.14 2015/11/09 07:30:59 dholland Exp $
 
 SHA1 (unixbench-4.1.0.tgz) = 0a43d9cf08869c0f81bde4647be6bcf76c064248
 RMD160 (unixbench-4.1.0.tgz) = 182e8a35574df0cd7984662bf99d47a7e24e7e03
@@ -11,3 +11,4 @@ SHA1 (patch-ad) = 3a1b788d9fa51fc168d59d8c87b1f476df2d5f41
 SHA1 (patch-ae) = fbbce3deed7f0421034c1d57b66b1967ad8bddf1
 SHA1 (patch-af) = 725a82ecb5f15ec47dda39d53a16027a0e4a7efd
 SHA1 (patch-ag) = 27014f92b6e15756a0b6b5ae9fdeca9dd7d261cc
+SHA1 (patch-dhry__1.c) = d83787bcb0af2c568efe1287ae73ff9d082d83b3
