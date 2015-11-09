@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2015/11/09 07:17:37 dholland Exp $
+# $NetBSD: Makefile,v 1.28 2015/11/09 07:18:34 dholland Exp $
 
 DISTNAME=	ucblogo
 PKGNAME=	${DISTNAME}-6.0
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://www.cs.berkeley.edu/~bh/downloads/
 # Not at GNU mirrors yet
