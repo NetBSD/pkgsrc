@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2008/09/07 07:31:35 dholland Exp $
+$NetBSD: patch-aa,v 1.5 2015/11/09 05:50:05 dholland Exp $
 
 --- configure.orig	1999-03-15 21:03:46.000000000 -0500
 +++ configure	2008-09-07 02:58:26.000000000 -0400
@@ -7,15 +7,16 @@ $NetBSD: patch-aa,v 1.4 2008/09/07 07:31:35 dholland Exp $
  if test x"${JNITYPES_HOST+set}"x != x"set"x; then
      case "${host}" in
 -    i?86-* | alpha-* | sparc-* | mips-* | hppa1*)
-+    i?86-* | x86_64-* | alpha-* | sparc-* | mips-* | hppa1*)
++    i?86-* | x86_64-* | alpha-* | sparc-* | mips-* | hppa1* | powerpc-*)
  	JNITYPES_HOST="${srcdir}/lib/libjni/include/jnitypes.frag";;
      *)
        { echo "configure: error: Unsupported platform.\n  Check ${srcdir}/lib/libjni/include/jnitypes.frag to see if types are correct, and\n  update configure.in." 1>&2; exit 1; }
-@@ -3498,6 +3498,7 @@ case "$host" in
+@@ -3498,6 +3498,8 @@ case "$host" in
    mips-sgi-irix5.* | mips-sgi-irix6.*) can_use_libffi=true;;
    i*86-pc-linux*) can_use_libffi=true;;
    i*86-*-freebsd*) can_use_libffi=true;;
 +  *-*-dragonfly*) can_use_libffi=true;;
++  *-*-netbsd*) can_use_libffi=true;;
    i*86-pc-solaris2*) can_use_libffi=true;;
    sparc-sun-4*) can_use_libffi=true;;
    sparc-sun-*) can_use_libffi=true;;
