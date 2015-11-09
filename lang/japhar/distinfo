@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.10 2015/11/03 22:50:37 agc Exp $
+$NetBSD: distinfo,v 1.11 2015/11/09 05:50:05 dholland Exp $
 
 SHA1 (japhar-0.08.tar.gz) = 3f450610ca31061c1c183c8e86d1fcd47660f86d
 RMD160 (japhar-0.08.tar.gz) = 283f47db3a54f8f51d755a61fab94c611de13988
 SHA512 (japhar-0.08.tar.gz) = d8efe9dcc37a0d61b7de13a20285f02a20d704cca8e486325b7a635389e72afdebd46387c971aa022c252e206a0b5c706fea4303e781c587dd0aa39093beb9ec
 Size (japhar-0.08.tar.gz) = 903160 bytes
-SHA1 (patch-aa) = fe445f7ce812a6a52de9a26f21eb8fd778d34e6b
+SHA1 (patch-aa) = dadaf2075c9be6fcf6cdfda161e4c0c4e0d03869
 SHA1 (patch-ab) = a6c80ee5d1814002e7dd7b2a68964170af81ddc2
 SHA1 (patch-ac) = 26b8f7321fad1944d5df4eba757c35f9e32fa015
 SHA1 (patch-ad) = 640ebdda8fe1a6d51de69dde2626c62f6b2cf1e0
