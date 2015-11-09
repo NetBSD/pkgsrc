@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2015/08/15 11:55:26 nros Exp $
+# $NetBSD: Makefile,v 1.13 2015/11/09 11:05:44 nros Exp $
 #
 
-DISTNAME=	i3-4.10.3
+DISTNAME=	i3-4.11
 CATEGORIES=	wm
 MASTER_SITES=	http://i3wm.org/downloads/
 EXTRACT_SUFX=	.tar.bz2
