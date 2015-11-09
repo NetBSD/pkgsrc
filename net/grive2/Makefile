@@ -1,21 +1,16 @@
-# $NetBSD: Makefile,v 1.2 2015/06/25 07:37:58 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2015/11/09 14:52:34 abs Exp $
 
-DISTNAME=	${GHNAME}-${GHDATE}-${GHCOMMIT}
-PKGNAME=	${GHNAME}-0.4.0.${GHDATE}
+DISTNAME=	grive2-0.4.1
 CATEGORIES=	net
-MASTER_SITES=	${MASTER_SITE_GITHUB:=${GHACCOUNT}/${GHNAME}/archive/${GHCOMMIT}/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=vitalif/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/vitalif/Grive2
 COMMENT=	Independent open source implementation of Google Drive client
 LICENSE=	gnu-gpl-v2
 
-GHACCOUNT=	vitalif
-GHNAME=		grive2
-GHDATE=		20150531
-GHCOMMIT=	06eb1a7df2032144f99473fd812412514834a1ee
+GITHUB_TAG=v${PKGVERSION_NOREV}
 
-WRKSRC=		${WRKDIR}/grive2-${GHCOMMIT}
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
