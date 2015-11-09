@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15070 2015/11/08 13:06:43 wen Exp $
+$NetBSD: TODO,v 1.15071 2015/11/09 01:55:59 leot Exp $
 
 Suggested new packages
 ======================
@@ -599,6 +599,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o di-4.36
 	o digikam-4.12.0
 	o dinotrace-9.4d
+	o dmenu-4.6 [leot]
 	o dmg2img-1.6.5
 	o doclifter-2.15
 	o dojo-1.9.7
@@ -607,6 +608,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o drivel-3.0.5
 	o dropbear-2015.67
 	o dvdstyler-2.9.3
+	o dwm-6.1 [leot]
 	o e2fsprogs-1.42.12 [wip]
 	o easymenu-0.7.2p1
 	o easytag-2.2.6
