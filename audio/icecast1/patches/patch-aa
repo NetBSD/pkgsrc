@@ -1,16 +1,21 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/01/08 20:48:46 xtraeme Exp $
+$NetBSD: patch-aa,v 1.2 2015/11/09 07:50:28 dholland Exp $
 
---- src/definitions.h.orig	Tue Nov 21 02:26:07 2000
+Don't screw with libc feature hiding macros in ways that break the
+build.
+
+--- src/definitions.h.orig	2000-05-25 16:00:15.000000000 +0000
 +++ src/definitions.h
-@@ -31,6 +31,7 @@
+@@ -31,6 +31,9 @@
  # define __USE_BSD
  #endif
  
-+#ifndef __NetBSD__
++#if !defined(__NetBSD__) && !defined(__FreeBSD__) && !defined(__DragonFly__) \
++ && !defined(__OpenBSD__) && !defined(__Bitrig__)
++
  #ifndef __EXTENSIONS__
  # define __EXTENSIONS__
  #endif
-@@ -62,6 +63,7 @@
+@@ -62,6 +65,7 @@
  # endif
  #endif
  
