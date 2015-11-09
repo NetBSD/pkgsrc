@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15071 2015/11/09 01:55:59 leot Exp $
+$NetBSD: TODO,v 1.15072 2015/11/09 14:45:35 wen Exp $
 
 Suggested new packages
 ======================
@@ -1380,7 +1380,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Tree-DAG_Node-1.27
 	o p5-URI-Escape-XS-0.13
 	o p5-URI-Fetch-0.11
-	o p5-Unicode-Collate-1.14
 	o p5-Unicode-LineBreak-2015.07.16
 	o p5-Unicode-Normalize-1.19
 	o p5-User-Identity-0.94
