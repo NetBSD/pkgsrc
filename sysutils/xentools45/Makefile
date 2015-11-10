@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.19 2015/10/28 01:26:42 jnemeth Exp $
+# $NetBSD: Makefile,v 1.20 2015/11/10 05:18:14 jnemeth Exp $
 
 VERSION=	4.5.1
 VERSION_IPXE=	9a93db3f0947484e30e753bbd61a10b17336e20e
 
 DISTNAME=		xen-${VERSION}
 PKGNAME=		xentools45-${VERSION}
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		sysutils
 MASTER_SITES=		http://bits.xensource.com/oss-xen/release/${VERSION}/
 
@@ -159,14 +159,23 @@ pre-build:
 	${CP} -f ${FILESDIR}/${s} ${WRKSRC}/blktap/drivers/
 .endfor
 	${SED} -e "s,@XENDCONFDIR@,${PKG_SYSCONFDIR},g" \
-		${XENTOP}/docs/man/xl.pod.1 |\
-	    pod2man >${WRKDIR}/xl.1
+		${XENTOP}/docs/man/xenstore-chmod.pod.1 |\
+	    pod2man >${WRKDIR}/xenstore-chmod.1
+	${SED} -e "s,@XENDCONFDIR@,${PKG_SYSCONFDIR},g" \
+		${XENTOP}/docs/man/xenstore-ls.pod.1 |\
+	    pod2man >${WRKDIR}/xenstore-ls.1
+	${SED} -e "s,@XENDCONFDIR@,${PKG_SYSCONFDIR},g" \
+		${XENTOP}/docs/man/xenstore.pod.1 |\
+	    pod2man >${WRKDIR}/xenstore.1
 	${SED} -e "s,@XENDCONFDIR@,${PKG_SYSCONFDIR},g" \
 		${XENTOP}/docs/man/xl.cfg.pod.5 |\
 	    pod2man >${WRKDIR}/xl.cfg.5
 	${SED} -e "s,@XENDCONFDIR@,${PKG_SYSCONFDIR},g" \
 		${XENTOP}/docs/man/xl.conf.pod.5 |\
 	    pod2man >${WRKDIR}/xl.conf.5
+	${SED} -e "s,@XENDCONFDIR@,${PKG_SYSCONFDIR},g" \
+		${XENTOP}/docs/man/xl.pod.1 |\
+	    pod2man >${WRKDIR}/xl.1
 	${SED} -e "s,@XENDCONFDIR@,${PKG_SYSCONFDIR},g" \
 		${XENTOP}/docs/man/xlcpupool.cfg.pod.5 |\
 	    pod2man >${WRKDIR}/xlcpupool.cfg.5
@@ -176,10 +185,16 @@ INSTALLATION_DIRS=	${EGDIR} ${PKGMANDIR}/man5
 BUILD_DEFS+=		VARBASE
 
 post-install:
-	${INSTALL_DATA} ${WRKDIR}/xl.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA} ${WRKDIR}/xenstore-chmod.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA} ${WRKDIR}/xenstore-ls.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA} ${WRKDIR}/xenstore.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA} ${WRKDIR}/xl.cfg.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
 	${INSTALL_DATA} ${WRKDIR}/xl.conf.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
+	${INSTALL_DATA} ${WRKDIR}/xl.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA} ${WRKDIR}/xlcpupool.cfg.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
+	${INSTALL_DATA} ${XENTOP}/docs/misc/xen-command-line.markdown ${DESTDIR}${PREFIX}/share/doc/xen
+	${INSTALL_DATA} ${XENTOP}/docs/misc/xl-disk-configuration.txt ${DESTDIR}${PREFIX}/share/doc/xen
+	${INSTALL_DATA} ${XENTOP}/docs/misc/xl-network-configuration.markdown ${DESTDIR}${PREFIX}/share/doc/xen
 
 .if (${OPSYS} == "NetBSD" && \
     (empty(OS_VERSION:M6.99.[3-9]?) && empty(OS_VERSION:M[7-9].*)))
