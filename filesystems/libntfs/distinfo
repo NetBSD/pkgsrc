@@ -1,14 +1,16 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 00:15:01 agc Exp $
+$NetBSD: distinfo,v 1.3 2015/11/10 17:45:22 adam Exp $
 
-SHA1 (ntfs-3g_ntfsprogs-2014.2.15.tgz) = c9836f340b508f5d7776156e5afb02434d3f0174
-RMD160 (ntfs-3g_ntfsprogs-2014.2.15.tgz) = 32418b98e60a483173352eb22cc101ed82c92ebf
-SHA512 (ntfs-3g_ntfsprogs-2014.2.15.tgz) = 7e4a5c9ac9d43dcf0d4b4085dea6703126fc4808cb9e1b7038884b20df2a8ab8f54c269d7204a279b62c5ba1127a966fd64226a8ed8f0c11667d9326c2f8fa7c
-Size (ntfs-3g_ntfsprogs-2014.2.15.tgz) = 1143575 bytes
+SHA1 (ntfs-3g_ntfsprogs-2015.3.14.tgz) = 0ebd9adffd5a6ddcfbacade6be8efe1eba4b1a08
+RMD160 (ntfs-3g_ntfsprogs-2015.3.14.tgz) = 67cbb81ab619c0941fe23a73e9a187a73008d51e
+SHA512 (ntfs-3g_ntfsprogs-2015.3.14.tgz) = 9744dee814e89a97050bc8beb76f1a7d8a585e7d7740e8041e393c6912c93e49803f9b41af84e8315b3162e58b19ca8d155d435395cb07ecaa7de9caaf2af441
+Size (ntfs-3g_ntfsprogs-2015.3.14.tgz) = 1210069 bytes
 SHA1 (patch-Makefile.in) = 874ba5084b5eea312a24d7a6b339f83a3f7896d8
 SHA1 (patch-include_ntfs-3g_compat.h) = 78ea127359416c9106eef7025a2ccc84fd0b4447
-SHA1 (patch-include_ntfs-3g_types.h) = b6731cee8e1cd72dfe1ef485f4f997e8dfa6e928
+SHA1 (patch-include_ntfs-3g_types.h) = bb6414b8991e8a05f32fce88d4915448bc498d58
 SHA1 (patch-libntfs-3g_Makefile.in) = 50a318a1c9a0a68d42e5cac2557e781f8c728094
+SHA1 (patch-libntfs-3g_compat.c) = 5cecaa8f8d4fe463094592f11f4757a434e903dd
 SHA1 (patch-libntfs-3g_device.c) = 3ad49d69b03cdd500246f77d9f6e30ca3d2e2ec6
 SHA1 (patch-ntfsprogs_Makefile.in) = 9acd073006c54009cedeafc766c964e9b5f11468
 SHA1 (patch-ntfsprogs_ntfsclone.c) = 3306b501e94ce71a709f394516829a727aa743ad
-SHA1 (patch-src_Makefile.in) = 78d107a3ba0e9e0b39a4c5e4eaad2fd58bb9ade2
+SHA1 (patch-src_Makefile.in) = eaa83166f98d2a2c9b2116abab6fe315faf545ac
+SHA1 (patch-src_ntfs-3g.c) = 9ae108fec22dc2a4219cd4ae5077d9eea17ab700
