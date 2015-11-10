@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4542 2015/11/09 20:22:15 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.4543 2015/11/10 05:18:30 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7751,3 +7751,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/grive2 to 0.4.1 [abs 2015-11-09]
 	Updated lang/nodejs to 5.0.0 [fhajny 2015-11-09]
 	Added lang/nodejs4 version 4.2.2 [fhajny 2015-11-09]
+	Updated sysutils/xentools45 to 4.5.1nb7 [jnemeth 2015-11-10]
