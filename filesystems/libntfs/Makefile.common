@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.1 2014/05/19 12:22:06 adam Exp $
+# $NetBSD: Makefile.common,v 1.2 2015/11/10 17:45:22 adam Exp $
 # used by filesystems/fuse-ntfs-3g/Makefile
 # used by sysutils/ntfsprogs/Makefile
 
-DISTNAME=	ntfs-3g_ntfsprogs-2014.2.15
+DISTNAME=	ntfs-3g_ntfsprogs-2015.3.14
 CATEGORIES=	sysutils
 MASTER_SITES=	http://tuxera.com/opensource/
 EXTRACT_SUFX=	.tgz

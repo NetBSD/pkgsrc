@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2014/05/19 12:22:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2015/11/10 17:45:22 adam Exp $
 bin/ntfscat
 bin/ntfscluster
 bin/ntfscmp
@@ -12,13 +12,17 @@ man/man8/ntfsclone.8
 man/man8/ntfscluster.8
 man/man8/ntfscmp.8
 man/man8/ntfscp.8
+man/man8/ntfsdecrypt.8
+man/man8/ntfsfallocate.8
 man/man8/ntfsfix.8
 man/man8/ntfsinfo.8
 man/man8/ntfslabel.8
 man/man8/ntfsls.8
 man/man8/ntfsprogs.8
 man/man8/ntfsresize.8
+man/man8/ntfstruncate.8
 man/man8/ntfsundelete.8
+man/man8/ntfswipe.8
 sbin/mkntfs
 sbin/ntfsclone
 sbin/ntfscp
