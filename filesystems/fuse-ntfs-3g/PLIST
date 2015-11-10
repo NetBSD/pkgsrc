@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2014/05/19 12:22:06 adam Exp $
-bin/lowntfs-3g
+@comment $NetBSD: PLIST,v 1.5 2015/11/10 17:45:22 adam Exp $
+${PLIST.lowntfs}bin/lowntfs-3g
 bin/ntfs-3g
 bin/ntfs-3g.probe
 bin/ntfs-3g.secaudit
