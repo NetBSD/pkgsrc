@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2015/09/02 12:39:33 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.15 2015/11/10 10:10:39 fhajny Exp $
 bin/sqlr-cachemanager
 bin/sqlr-connection
 bin/sqlr-export
@@ -65,6 +65,7 @@ lib/pkgconfig/sqlrelay-c.pc
 libexec/sqlrelay/sqlrauth_database.so
 libexec/sqlrelay/sqlrauth_sqlrelay.so
 libexec/sqlrelay/sqlrauth_userlist.so
+libexec/sqlrelay/sqlrconfig_xml.so
 libexec/sqlrelay/sqlrconnection_router.so
 libexec/sqlrelay/sqlrfilter_patterns.so
 libexec/sqlrelay/sqlrfilter_regex.so
