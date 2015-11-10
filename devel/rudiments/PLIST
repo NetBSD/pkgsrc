@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2015/09/02 12:37:09 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.17 2015/11/10 10:04:40 fhajny Exp $
 bin/rudiments-config
 include/rudiments/bytebuffer.h
 include/rudiments/bytestring.h
@@ -157,6 +157,8 @@ include/rudiments/private/unixsocketserver.h
 include/rudiments/private/unixsocketserverincludes.h
 include/rudiments/private/unixsocketutil.h
 include/rudiments/private/unixsocketutilincludes.h
+include/rudiments/private/url.h
+include/rudiments/private/urlincludes.h
 include/rudiments/private/userentry.h
 include/rudiments/private/userentryincludes.h
 include/rudiments/private/winsock.h
@@ -189,6 +191,7 @@ include/rudiments/threadmutex.h
 include/rudiments/unixsocketclient.h
 include/rudiments/unixsocketserver.h
 include/rudiments/unixsocketutil.h
+include/rudiments/url.h
 include/rudiments/userentry.h
 include/rudiments/xmldom.h
 include/rudiments/xmldomnode.h
@@ -363,6 +366,8 @@ share/doc/rudiments/classes/html/classunixsocketserver-members.html
 share/doc/rudiments/classes/html/classunixsocketserver.html
 share/doc/rudiments/classes/html/classunixsocketutil-members.html
 share/doc/rudiments/classes/html/classunixsocketutil.html
+share/doc/rudiments/classes/html/classurl-members.html
+share/doc/rudiments/classes/html/classurl.html
 share/doc/rudiments/classes/html/classuserentry-members.html
 share/doc/rudiments/classes/html/classuserentry.html
 share/doc/rudiments/classes/html/classwinsock-members.html
@@ -383,6 +388,7 @@ share/doc/rudiments/classes/html/commandline_8h_source.html
 share/doc/rudiments/classes/html/commandlineincludes_8h_source.html
 share/doc/rudiments/classes/html/compiler_8h_source.html
 share/doc/rudiments/classes/html/compilerincludes_8h_source.html
+share/doc/rudiments/classes/html/config_8h_source.html
 share/doc/rudiments/classes/html/config__openvms721_8h_source.html
 share/doc/rudiments/classes/html/config__vs2005_8h_source.html
 share/doc/rudiments/classes/html/config__vs2010_8h_source.html
@@ -579,6 +585,7 @@ share/doc/rudiments/classes/html/private_2threadmutex_8h_source.html
 share/doc/rudiments/classes/html/private_2unixsocketclient_8h_source.html
 share/doc/rudiments/classes/html/private_2unixsocketserver_8h_source.html
 share/doc/rudiments/classes/html/private_2unixsocketutil_8h_source.html
+share/doc/rudiments/classes/html/private_2url_8h_source.html
 share/doc/rudiments/classes/html/private_2userentry_8h_source.html
 share/doc/rudiments/classes/html/private_2xmldom_8h_source.html
 share/doc/rudiments/classes/html/private_2xmldomnode_8h_source.html
@@ -651,6 +658,8 @@ share/doc/rudiments/classes/html/unixsocketserver_8h_source.html
 share/doc/rudiments/classes/html/unixsocketserverincludes_8h_source.html
 share/doc/rudiments/classes/html/unixsocketutil_8h_source.html
 share/doc/rudiments/classes/html/unixsocketutilincludes_8h_source.html
+share/doc/rudiments/classes/html/url_8h_source.html
+share/doc/rudiments/classes/html/urlincludes_8h_source.html
 share/doc/rudiments/classes/html/userentry_8h_source.html
 share/doc/rudiments/classes/html/userentryincludes_8h_source.html
 share/doc/rudiments/classes/html/winsock_8h_source.html
@@ -722,6 +731,7 @@ share/doc/rudiments/programming/thread.html
 share/doc/rudiments/programming/threadmutex.html
 share/doc/rudiments/programming/unixsocketclient.html
 share/doc/rudiments/programming/unixsocketserver.html
+share/doc/rudiments/programming/url.html
 share/doc/rudiments/programming/userentry.html
 share/doc/rudiments/programming/xmldom.html
 share/doc/rudiments/programming/xmlsax.html
