@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4547 2015/11/10 11:38:47 jperkin Exp $
+$NetBSD: CHANGES-2015,v 1.4548 2015/11/10 14:49:45 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7757,3 +7757,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated sysutils/puppet to 3.8.4 [fhajny 2015-11-10]
 	Updated lang/oracle-jre8 to 8.0.66 [jperkin 2015-11-10]
 	Updated lang/oracle-jdk8 to 8.0.66 [jperkin 2015-11-10]
+	Updated sysutils/salt to 2015.8.1 [sborrill 2015-11-10]
