@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4548 2015/11/10 14:49:45 sborrill Exp $
+$NetBSD: CHANGES-2015,v 1.4549 2015/11/10 17:47:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7758,3 +7758,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/oracle-jre8 to 8.0.66 [jperkin 2015-11-10]
 	Updated lang/oracle-jdk8 to 8.0.66 [jperkin 2015-11-10]
 	Updated sysutils/salt to 2015.8.1 [sborrill 2015-11-10]
+	Updated filesystems/libntfs to 2015.3.14 [adam 2015-11-10]
+	Updated filesystems/fuse-ntfs-3g to 2015.3.14 [adam 2015-11-10]
+	Updated sysutils/ntfsprogs to 2015.3.14 [adam 2015-11-10]

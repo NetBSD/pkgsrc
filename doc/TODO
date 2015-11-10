@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15073 2015/11/09 20:19:50 fhajny Exp $
+$NetBSD: TODO,v 1.15074 2015/11/10 17:47:37 adam Exp $
 
 Suggested new packages
 ======================
@@ -724,7 +724,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o fuse-archivemount-0.8.5
 	o fuse-encfs-1.5.2
 	o fuse-mp3fs-0.91 [needs fixes to work on NetBSD; started in wip]
-	o fuse-ntfs-3g-2015.3.14
 	o fuse-unionfs-0.25
 	o fvwm-devel-2.7.0
 	o fvwm2-themes-0.7.0
@@ -1050,7 +1049,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libmicrohttpd-0.9.42
 	o libmtag-0.3.6
 	o libmusicbrainz5-5.1.0
-	o libntfs-2015.3.14
 	o liboobs-2.32.0 [GNOME 2.32]
 	o libowfat-0.29
 	o libpgm-5.2.122
@@ -1184,7 +1182,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ns-3.14.1
 	o ns-plugger-common-5.1.3
 	o nslint-3.1
-	o ntfsprogs-2015.3.14
 	o ntop-5.0
 	o nts-82
 	o nuitka-0.5.13.4
