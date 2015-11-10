@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2015/10/28 15:52:11 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2015/11/10 12:18:44 abs Exp $
 lib/pkgconfig/Qt5Bootstrap.pc
 lib/pkgconfig/Qt5Concurrent.pc
 lib/pkgconfig/Qt5Core.pc
@@ -2353,7 +2353,7 @@ qt5/lib/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake
 ${PLIST.mac}qt5/lib/cmake/Qt5Gui/Qt5Gui_QCocoaIntegrationPlugin.cmake
 ${PLIST.unix}qt5/lib/cmake/Qt5Gui/Qt5Gui_QComposePlatformInputContextPlugin.cmake
 ${PLIST.egl}qt5/lib/cmake/Qt5Gui/Qt5Gui_QEglFSIntegrationPlugin.cmake
-${PLIST.unix}qt5/lib/cmake/Qt5Gui/Qt5Gui_QEglFSX11IntegrationPlugin.cmake
+${PLIST.egl}qt5/lib/cmake/Qt5Gui/Qt5Gui_QEglFSX11IntegrationPlugin.cmake
 qt5/lib/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake
 qt5/lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake
 ${PLIST.unix}qt5/lib/cmake/Qt5Gui/Qt5Gui_QIbusPlatformInputContextPlugin.cmake
@@ -2364,7 +2364,7 @@ ${PLIST.unix}qt5/lib/cmake/Qt5Gui/Qt5Gui_QXcbIntegrationPlugin.cmake
 qt5/lib/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake
 qt5/lib/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake
 ${PLIST.unix}qt5/lib/cmake/Qt5Gui/Qt5Gui_QXcbGlxIntegrationPlugin.cmake
-${PLIST.unix}qt5/lib/cmake/Qt5Gui/Qt5Gui_QXcbEglIntegrationPlugin.cmake
+${PLIST.egl}qt5/lib/cmake/Qt5Gui/Qt5Gui_QXcbEglIntegrationPlugin.cmake
 qt5/lib/cmake/Qt5Network/Qt5NetworkConfig.cmake
 qt5/lib/cmake/Qt5Network/Qt5NetworkConfigVersion.cmake
 ${PLIST.mac}qt5/lib/cmake/Qt5Network/Qt5Network_QCoreWlanEnginePlugin.cmake
@@ -2395,8 +2395,8 @@ qt5/lib/libQt5Core.la
 qt5/lib/libQt5Core.prl
 qt5/lib/libQt5DBus.la
 qt5/lib/libQt5DBus.prl
-${PLIST.unix}qt5/lib/libQt5EglDeviceIntegration.la
-${PLIST.unix}qt5/lib/libQt5EglDeviceIntegration.prl
+${PLIST.egl}qt5/lib/libQt5EglDeviceIntegration.la
+${PLIST.egl}qt5/lib/libQt5EglDeviceIntegration.prl
 qt5/lib/libQt5Gui.la
 qt5/lib/libQt5Gui.prl
 qt5/lib/libQt5Network.la
@@ -2423,7 +2423,7 @@ qt5/lib/pkgconfig/Qt5Bootstrap.pc
 qt5/lib/pkgconfig/Qt5Concurrent.pc
 qt5/lib/pkgconfig/Qt5Core.pc
 qt5/lib/pkgconfig/Qt5DBus.pc
-${PLIST.unix}qt5/lib/pkgconfig/Qt5EglDeviceIntegration.pc
+${PLIST.egl}qt5/lib/pkgconfig/Qt5EglDeviceIntegration.pc
 qt5/lib/pkgconfig/Qt5Gui.pc
 qt5/lib/pkgconfig/Qt5Network.pc
 qt5/lib/pkgconfig/Qt5OpenGL.pc
@@ -2794,7 +2794,7 @@ qt5/mkspecs/modules/qt_lib_core.pri
 qt5/mkspecs/modules/qt_lib_core_private.pri
 qt5/mkspecs/modules/qt_lib_dbus.pri
 qt5/mkspecs/modules/qt_lib_dbus_private.pri
-${PLIST.unix}qt5/mkspecs/modules/qt_lib_eglfs_device_lib_private.pri
+${PLIST.egl}qt5/mkspecs/modules/qt_lib_eglfs_device_lib_private.pri
 qt5/mkspecs/modules/qt_lib_gui.pri
 qt5/mkspecs/modules/qt_lib_gui_private.pri
 qt5/mkspecs/modules/qt_lib_network.pri
@@ -2921,7 +2921,7 @@ ${PLIST.mac}qt5/plugins/bearer/libqcorewlanbearer.la
 qt5/mkspecs/winrt-x86-msvc2015/qmake.conf
 qt5/mkspecs/winrt-x86-msvc2015/qplatformdefs.h
 qt5/plugins/bearer/libqgenericbearer.la
-${PLIST.unix}qt5/plugins/egldeviceintegrations/libqeglfs-x11-integration.la
+${PLIST.egl}qt5/plugins/egldeviceintegrations/libqeglfs-x11-integration.la
 qt5/plugins/generic/libqtuiotouchplugin.la
 qt5/plugins/imageformats/libqgif.la
 qt5/plugins/imageformats/libqico.la
@@ -2937,4 +2937,4 @@ ${PLIST.unix}qt5/plugins/platforms/libqxcb.la
 ${PLIST.mac}qt5/plugins/printsupport/libcocoaprintersupport.la
 ${PLIST.cups}qt5/plugins/printsupport/libcupsprintersupport.la
 ${PLIST.unix}qt5/plugins/xcbglintegrations/libqxcb-glx-integration.la
-${PLIST.unix}qt5/plugins/xcbglintegrations/libqxcb-egl-integration.la
+${PLIST.egl}qt5/plugins/xcbglintegrations/libqxcb-egl-integration.la
