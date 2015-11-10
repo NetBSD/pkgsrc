@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/30 09:49:43 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2015/11/10 11:35:30 jperkin Exp $
 
 # Note: Regen distinfo with PKG_OPTIONS.oracle-jre8+=oracle-jre-jce
 # Note: Update DOWNLOAD_NAME when you update the JRE version
@@ -15,7 +15,6 @@ DOWNLOAD_NAME=	Java Runtime Environment (JRE) 8u${UPDATE_NUMBER}
 
 USE_TOOLS+=	pax
 
-WRKSRC=		${WRKDIR}/jre1.8.0_${UPDATE_NUMBER}
 JAVA_WRAPPERS=	java javaws keytool orbd policytool rmid rmiregistry \
 		servertool tnameserv
 REQD_DIRS=	${JAVA_HOME}
@@ -27,6 +26,12 @@ REQD_DIRS+=	${JAVA_HOME}/lib/security
 CONF_FILES=	# empty
 
 .include "../../lang/oracle-jre8/Makefile.common"
+
+.if ${OPSYS} == "Darwin"
+WRKSRC=		${WRKDIR}/jre1.8.0_${UPDATE_NUMBER}.jre/Contents/Home
+.else
+WRKSRC=		${WRKDIR}/jre1.8.0_${UPDATE_NUMBER}
+.endif
 
 SFILES_MK=sfiles-${DIST_OS}-${EMUL_ARCH}.mk
 
@@ -47,7 +52,7 @@ PKG_SUPPORTED_OPTIONS=	oracle-jre-jce
 PLIST_SRC=	PLIST.${DIST_OS}-${EMUL_ARCH}
 
 PLIST_VARS+=	jce native
-.if !empty(PKG_OPTIONS:Moracle-jre-jce) || make(distinfo)
+.if !empty(PKG_OPTIONS:Moracle-jre-jce)
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} jce_policy-8.zip
 .endif
 .if !empty(PKG_OPTIONS:Moracle-jre-jce)
@@ -56,10 +61,28 @@ FETCH_MESSAGE+=	""
 FETCH_MESSAGE+=	"As oracle-jre-jce is enabled jce_policy-8.zip is also needed"
 .endif
 
+# Simplify distinfo generation
+.if make(distinfo)
+DISTFILES=	jce_policy-8.zip
+DISTFILES+=	jre-8u${UPDATE_NUMBER}-linux-i586.tar.gz
+DISTFILES+=	jre-8u${UPDATE_NUMBER}-linux-x64.tar.gz
+DISTFILES+=	jre-8u${UPDATE_NUMBER}-macosx-x64.tar.gz
+DISTFILES+=	jre-8u${UPDATE_NUMBER}-solaris-x64.tar.gz
+FETCH_MESSAGE=	"You must fetch the following files to generate distinfo:"
+FETCH_MESSAGE+=	""
+.for file in ${DISTFILES}
+FETCH_MESSAGE+=	"	${file}"
+.endfor
+FETCH_MESSAGE+=	""
+FETCH_MESSAGE+=	"from:"
+FETCH_MESSAGE+=	"	${DOWNLOAD}"
+FETCH_MESSAGE+=	"	or ${ARCHIVE}"
+.endif
+
 # Some of the binaries require libX11, so ensure that requirement is
 # satisfied when the package is installed on the native OS.
 #
-.if defined(EMUL_IS_NATIVE) && ${OPSYS} != "SunOS"
+.if defined(EMUL_IS_NATIVE) && ${OPSYS} != "SunOS" && ${OPSYS} != "Darwin"
 .  if ${X11_TYPE} == "native"
 X11_LIBDIR=	${X11BASE}/lib${LIBABISUFFIX}
 .    if ${_OPSYS_SHLIB_TYPE} == "dylib"

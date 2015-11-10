@@ -1,14 +1,22 @@
-$NetBSD: distinfo,v 1.2 2015/08/30 10:52:16 ryoon Exp $
+$NetBSD: distinfo,v 1.3 2015/11/10 11:35:30 jperkin Exp $
 
 SHA1 (jce_policy-8.zip) = 7d25dcee3e6ef2c984d748a14614b37c18ce3507
 RMD160 (jce_policy-8.zip) = bdcb54a9900c00b52c24d024282b6e40c148d49c
+SHA512 (jce_policy-8.zip) = abbaa81a35f904ec61b4cf3c2d1ca8c8d49e53bb248e698185eea906939d68f5063412800585ec74027aab1012ef189aebe1dc99fe8ef4230a0ecb0b527f88e5
 Size (jce_policy-8.zip) = 8409 bytes
-SHA1 (jre-8u60-linux-i586.tar.gz) = 27c66201df30500cd87c557b48e05f265f110d96
-RMD160 (jre-8u60-linux-i586.tar.gz) = 4652b51a5371e7e606bf7ca7c535bfd9d01b6917
-Size (jre-8u60-linux-i586.tar.gz) = 73863653 bytes
-SHA1 (jre-8u60-linux-x64.tar.gz) = 1dcfa4ea4cd82be67f598564424f67a46e6a5f58
-RMD160 (jre-8u60-linux-x64.tar.gz) = 6fd20f85f941a1c4da313d5f48c2781696f4d05c
-Size (jre-8u60-linux-x64.tar.gz) = 71680110 bytes
-SHA1 (jre-8u60-solaris-x64.tar.gz) = f46caf3d2a6ff79c6b3c8fd0f45a924bca21c969
-RMD160 (jre-8u60-solaris-x64.tar.gz) = b0626d42839e11bdd7408dcd26619bc8ed32a172
-Size (jre-8u60-solaris-x64.tar.gz) = 52202549 bytes
+SHA1 (jre-8u66-linux-i586.tar.gz) = 05bfa6eae0e0102496ab9faa01ea95807b7f815b
+RMD160 (jre-8u66-linux-i586.tar.gz) = 5e41338b83e431434150a9e5feb3db4367d9f900
+SHA512 (jre-8u66-linux-i586.tar.gz) = c605027974e5d6ad55cefee9c75239cd15fcf726abe49617d1008cec44f8a927f6794fcf2819e1f1e35b9535d40f6bef1fd4b023271f80e3e392824fa8bb2111
+Size (jre-8u66-linux-i586.tar.gz) = 73883805 bytes
+SHA1 (jre-8u66-linux-x64.tar.gz) = 5537d78b13676564f17c6c8388daa0250838d39b
+RMD160 (jre-8u66-linux-x64.tar.gz) = 27b0d970d43f4b09b0c8a61a540155d1e6fe0aca
+SHA512 (jre-8u66-linux-x64.tar.gz) = ba0de83d6a485cab305c352091cfca74b6a64132fbda38b5bda53b9dd2569adafc64c93f92397dc3a40167b04690f4d8de9f1209485a8e51a236db312efe4b8c
+Size (jre-8u66-linux-x64.tar.gz) = 71719193 bytes
+SHA1 (jre-8u66-macosx-x64.tar.gz) = adcef9537e242a646a0b300629e6980d67d46741
+RMD160 (jre-8u66-macosx-x64.tar.gz) = e004d6887b15cded7a3e00ff241d53d2cd83ffa1
+SHA512 (jre-8u66-macosx-x64.tar.gz) = 082a92d71bf6a7800d25eaec738b5cae5fa13a389544df4eb24b5ff4f7282edb909a841b162bf369b675df4344d3ab1fdd7935cd1155bedfc9f35337978799f9
+Size (jre-8u66-macosx-x64.tar.gz) = 58650871 bytes
+SHA1 (jre-8u66-solaris-x64.tar.gz) = 8e73346a90e2bade4cc452c6f371dd8b928a734a
+RMD160 (jre-8u66-solaris-x64.tar.gz) = 0ddad7615c82ea954c067b3fc63e20e8f50b9f05
+SHA512 (jre-8u66-solaris-x64.tar.gz) = 1a4bf16d26d7c74e6e6a990d2d4fbdb7f2a08e55f91829222972acfaeb559fd103d171ac36851e436ccfab3f834f3c94d42a67420a816a477b712e8f35072482
+Size (jre-8u66-solaris-x64.tar.gz) = 52098285 bytes
