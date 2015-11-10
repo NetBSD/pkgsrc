@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/30 09:51:11 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2015/11/10 11:35:30 jperkin Exp $
 
 # Note: This must be kept in sync with the oracle-jre8 package
 # Note: make sure you include sums for both the x86_64 and the x86_32
@@ -28,6 +28,22 @@ CHECK_SHLIBS_SUPPORTED=	no
 
 PLIST_SRC=	PLIST.${DIST_OS}-${EMUL_ARCH}
 PLIST_SUBST+=	JAVA_ARCH="${JAVA_ARCH}"
+
+# Simplify distinfo generation
+.if make(distinfo)
+DISTFILES=	jdk-8u${UPDATE_NUMBER}-linux-i586.tar.gz
+DISTFILES+=	jdk-8u${UPDATE_NUMBER}-linux-x64.tar.gz
+DISTFILES+=	jdk-8u${UPDATE_NUMBER}-solaris-x64.tar.gz
+FETCH_MESSAGE=	"You must fetch the following files to generate distinfo:"
+FETCH_MESSAGE+=	""
+.for file in ${DISTFILES}
+FETCH_MESSAGE+=	"	${file}"
+.endfor
+FETCH_MESSAGE+=	""
+FETCH_MESSAGE+=	"from:"
+FETCH_MESSAGE+=	"	${DOWNLOAD}"
+FETCH_MESSAGE+=	"	or ${ARCHIVE}"
+.endif
 
 # Remove parts that are in common with the JRE
 #
