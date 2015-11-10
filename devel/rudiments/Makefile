@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2015/09/02 12:37:09 fhajny Exp $
+# $NetBSD: Makefile,v 1.33 2015/11/10 10:04:40 fhajny Exp $
 #
 
-DISTNAME=		rudiments-0.53
+DISTNAME=		rudiments-0.54
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=rudiments/}
 
@@ -25,5 +25,6 @@ CWRAPPERS_APPEND.cxx+=	-Wno-error=unused-private-field
 
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
