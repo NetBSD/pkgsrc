@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4544 2015/11/10 10:04:54 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.4545 2015/11/10 10:10:56 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7753,3 +7753,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added lang/nodejs4 version 4.2.2 [fhajny 2015-11-09]
 	Updated sysutils/xentools45 to 4.5.1nb7 [jnemeth 2015-11-10]
 	Updated devel/rudiments to 0.54 [fhajny 2015-11-10]
+	Updated databases/sqlrelay to 0.64 [fhajny 2015-11-10]
