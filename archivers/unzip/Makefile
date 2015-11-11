@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.90 2015/06/05 12:22:28 sevan Exp $
+# $NetBSD: Makefile,v 1.91 2015/11/11 12:47:26 wiz Exp $
 
 DISTNAME=	unzip60
 PKGNAME=	unzip-6.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	archivers
 MASTER_SITES=	ftp://ftp.info-zip.org/pub/infozip/src/
 EXTRACT_SUFX=	.tgz

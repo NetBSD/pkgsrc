@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.28 2015/11/03 00:56:26 agc Exp $
+$NetBSD: distinfo,v 1.29 2015/11/11 12:47:26 wiz Exp $
 
 SHA1 (unzip60.tgz) = abf7de8a4018a983590ed6f5cbd990d4740f8a22
 RMD160 (unzip60.tgz) = 48af66606e9472e45fbb94bc4e285da23d1b89ba
@@ -6,7 +6,8 @@ SHA512 (unzip60.tgz) = 0694e403ebc57b37218e00ec1a406cae5cc9c5b52b6798e0d4590840b
 Size (unzip60.tgz) = 1376845 bytes
 SHA1 (patch-ab) = 672635c469e0a53ac9808f8155ee38643a8acf69
 SHA1 (patch-ac) = 27b91401d4d5ecc3842c91dc49c08f42c8646154
-SHA1 (patch-extract.c) = bba436910084ec43ef8f8e76a1cd0392c566e4ac
+SHA1 (patch-crypt.c) = e44e14ba2c8e5651659c6756a5adbe88b4385ca4
+SHA1 (patch-extract.c) = 042fe7d233d0b3cb1e978902c901e8239f7a3732
 SHA1 (patch-fileio.c) = 910ddb3b847cae92326697a399234b2948555534
 SHA1 (patch-list.c) = 7aa261ecef5e5cc14ad387070560730ff419d635
 SHA1 (patch-process.c) = d6e6ed05ef7c2977353e848d9e9cba2877577812
