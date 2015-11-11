@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2015/10/24 06:52:43 tsutsui Exp $
+# $NetBSD: Makefile,v 1.54 2015/11/11 14:06:05 tsutsui Exp $
 
 DISTNAME=		flash-plugin-${FLASH_VERSION}-release.${FLASH_ARCH}
 PKGNAME=		adobe-${DISTNAME:C/-release.*//}
-PKGREVISION=		1
 CATEGORIES=		multimedia www
 MASTER_SITES=		http://fpdownload.macromedia.com/get/flashplayer/pdc/${FLASH_VERSION}/
 
@@ -30,7 +29,7 @@ EMUL_PLATFORMS=		linux-i386 linux-x86_64
 EMUL_MODULES.linux=	gtk2 x11 krb5 alsa curl nss nspr
 EMUL_REQD=		suse>=11.3
 
-FLASH_VERSION=		11.2.202.540
+FLASH_VERSION=		11.2.202.548
 
 .include "../../mk/bsd.prefs.mk"
 
