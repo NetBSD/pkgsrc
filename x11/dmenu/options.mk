@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2012/01/22 12:59:01 obache Exp $
+# $NetBSD: options.mk,v 1.3 2015/11/11 16:13:12 leot Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dmenu
 PKG_SUPPORTED_OPTIONS=	xinerama
@@ -16,9 +16,8 @@ PKG_SUGGESTED_OPTIONS=	xinerama
 .  include "../../x11/libXinerama/buildlink3.mk"
 .else
 SUBST_CLASSES+=		options
-SUBST_STAGE.options=	pre-build
+SUBST_STAGE.options=	pre-patch
 SUBST_MESSAGE.options=	Toggle the Xinerama support
 SUBST_FILES.options=	config.mk
 SUBST_SED.options+=	-e '/^XINERAMA/d'
-.  include "../../x11/libX11/buildlink3.mk"
 .endif
