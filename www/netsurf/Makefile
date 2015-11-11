@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2015/09/22 19:03:35 leot Exp $
+# $NetBSD: Makefile,v 1.45 2015/11/11 16:20:42 leot Exp $
 #
 
 DISTNAME=	netsurf-all-3.3
@@ -16,6 +16,10 @@ BUILD_DEPENDS+=	re2c>=0.12:../../devel/re2c
 
 BUILD_TARGET=	build
 USE_TOOLS+=	bison flex gmake perl:build pax pkg-config
+
+# Avoid possible problems with shells that defines HOST
+MAKE_ENV+=	BUILD="${MACHINE_GNU_ARCH}--${LOWER_OPSYS}"
+MAKE_ENV+=	HOST="${MACHINE_GNU_ARCH}--${LOWER_OPSYS}"
 
 INSTALLATION_DIRS+=	share/netsurf bin
 
