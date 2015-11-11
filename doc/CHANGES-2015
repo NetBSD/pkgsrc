@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4557 2015/11/11 16:47:38 leot Exp $
+$NetBSD: CHANGES-2015,v 1.4558 2015/11/11 17:09:06 leot Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7769,3 +7769,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated wm/dwm to 6.1 [leot 2015-11-11]
 	Updated x11/dmenu to 4.6 [leot 2015-11-11]
 	Updated net/youtube-dl to 20151110 [leot 2015-11-11]
+	Updated print/mupdf to 1.8 [leot 2015-11-11]
