@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.10 2015/04/17 07:18:21 wiz Exp $
+$NetBSD: patch-ac,v 1.11 2015/11/11 17:08:25 leot Exp $
 
 o libtool support 
 o Install target cleanup
@@ -6,7 +6,7 @@ o Install only one "mupdf" binary, prefer the featureful one and always
  install it as "mupdf"
 o libmujs support: install like a non-thirdparty mupdf's library
 
---- Makefile.orig	2015-04-08 15:04:10.000000000 +0000
+--- Makefile.orig	2015-10-21 14:45:11.000000000 +0000
 +++ Makefile
 @@ -41,22 +41,12 @@ CFLAGS += $(ZLIB_CFLAGS)
  
@@ -37,20 +37,22 @@ o libmujs support: install like a non-thirdparty mupdf's library
  
  # --- File lists ---
  
-@@ -87,32 +77,32 @@ PDF_SRC_HDR := $(wildcard source/pdf/*.h
- XPS_SRC_HDR := $(wildcard source/xps/*.h)
+@@ -91,33 +81,33 @@ XPS_SRC_HDR := $(wildcard source/xps/*.h
  HTML_SRC_HDR := $(wildcard source/html/*.h)
+ GPRF_SRC_HDR := $(wildcard source/gprf/*.h)
  
 -FITZ_OBJ := $(subst source/, $(OUT)/, $(addsuffix .o, $(basename $(FITZ_SRC))))
 -PDF_OBJ := $(subst source/, $(OUT)/, $(addsuffix .o, $(basename $(PDF_SRC))))
 -XPS_OBJ := $(subst source/, $(OUT)/, $(addsuffix .o, $(basename $(XPS_SRC))))
 -CBZ_OBJ := $(subst source/, $(OUT)/, $(addsuffix .o, $(basename $(CBZ_SRC))))
 -HTML_OBJ := $(subst source/, $(OUT)/, $(addsuffix .o, $(basename $(HTML_SRC))))
+-GPRF_OBJ := $(subst source/, $(OUT)/, $(addsuffix .o, $(basename $(GPRF_SRC))))
 +FITZ_OBJ := $(subst source/, $(OUT)/, $(addsuffix .lo, $(basename $(FITZ_SRC))))
 +PDF_OBJ := $(subst source/, $(OUT)/, $(addsuffix .lo, $(basename $(PDF_SRC))))
 +XPS_OBJ := $(subst source/, $(OUT)/, $(addsuffix .lo, $(basename $(XPS_SRC))))
 +CBZ_OBJ := $(subst source/, $(OUT)/, $(addsuffix .lo, $(basename $(CBZ_SRC))))
 +HTML_OBJ := $(subst source/, $(OUT)/, $(addsuffix .lo, $(basename $(HTML_SRC))))
++GPRF_OBJ := $(subst source/, $(OUT)/, $(addsuffix .lo, $(basename $(GPRF_SRC))))
  
  # --- Choice of Javascript library ---
  
@@ -82,14 +84,14 @@ o libmujs support: install like a non-thirdparty mupdf's library
  endif
  
  $(FITZ_OBJ) : $(FITZ_HDR) $(FITZ_SRC_HDR)
-@@ -123,44 +113,47 @@ $(HTML_OBJ) : $(FITZ_HDR) $(HTML_HDR) $(
+@@ -129,47 +119,50 @@ $(GPRF_OBJ) : $(FITZ_HDR) $(GPRF_HDR) $(
  
  # --- Library ---
  
 -MUPDF_LIB := $(OUT)/libmupdf.a
 +MUPDF_LIB := $(OUT)/libmupdf.la
  
- $(MUPDF_LIB) : $(FITZ_OBJ) $(PDF_OBJ) $(XPS_OBJ) $(CBZ_OBJ) $(HTML_OBJ)
+ $(MUPDF_LIB) : $(FITZ_OBJ) $(PDF_OBJ) $(XPS_OBJ) $(CBZ_OBJ) $(HTML_OBJ) $(GPRF_OBJ)
  
  INSTALL_LIBS := $(MUPDF_LIB)
 +ifeq "$(HAVE_MUJS)" "yes"
@@ -135,12 +137,16 @@ o libmujs support: install like a non-thirdparty mupdf's library
 +$(OUT)/platform/x11/curl/%.lo : platform/x11/%.c | $(ALL_DIR)
  	$(CC_CMD) $(X11_CFLAGS) $(CURL_CFLAGS) -DHAVE_CURL
  
+-$(OUT)/platform/gl/%.o : platform/gl/%.c | $(ALL_DIR)
++$(OUT)/platform/gl/%.lo : platform/gl/%.c | $(ALL_DIR)
+ 	$(CC_CMD) $(GLFW_CFLAGS)
+ 
 -.PRECIOUS : $(OUT)/%.o # Keep intermediates from chained rules
 +.PRECIOUS : $(OUT)/%.lo # Keep intermediates from chained rules
  
  # --- Generated CMAP, FONT and JAVASCRIPT files ---
  
-@@ -224,24 +217,24 @@ endif
+@@ -233,17 +226,17 @@ endif
  
  generate: $(CMAP_GEN) $(FONT_GEN) $(JAVASCRIPT_GEN) $(ADOBECA_GEN) $(NAME_GEN)
  
@@ -159,21 +165,13 @@ o libmujs support: install like a non-thirdparty mupdf's library
  
  # --- Tools and Apps ---
  
- MUDRAW := $(addprefix $(OUT)/, mudraw)
--MUDRAW_OBJ := $(addprefix $(OUT)/tools/, mudraw.o)
-+MUDRAW_OBJ := $(addprefix $(OUT)/tools/, mudraw.lo)
- $(MUDRAW_OBJ) : $(FITZ_HDR) $(PDF_HDR)
- $(MUDRAW) : $(MUPDF_LIB) $(THIRD_LIBS)
- $(MUDRAW) : $(MUDRAW_OBJ)
- 	$(LINK_CMD)
- 
  MUTOOL := $(addprefix $(OUT)/, mutool)
--MUTOOL_OBJ := $(addprefix $(OUT)/tools/, mutool.o pdfclean.o pdfextract.o pdfinfo.o pdfposter.o pdfshow.o pdfpages.o)
-+MUTOOL_OBJ := $(addprefix $(OUT)/tools/, mutool.lo pdfclean.lo pdfextract.lo pdfinfo.lo pdfposter.lo pdfshow.lo pdfpages.lo)
+-MUTOOL_OBJ := $(addprefix $(OUT)/tools/, mutool.o mudraw.o pdfclean.o pdfextract.o pdfinfo.o pdfposter.o pdfshow.o pdfpages.o)
++MUTOOL_OBJ := $(addprefix $(OUT)/tools/, mutool.lo mudraw.lo pdfclean.lo pdfextract.lo pdfinfo.lo pdfposter.lo pdfshow.lo pdfpages.lo)
  $(MUTOOL_OBJ): $(FITZ_HDR) $(PDF_HDR)
  $(MUTOOL) : $(MUPDF_LIB) $(THIRD_LIBS)
  $(MUTOOL) : $(MUTOOL_OBJ)
-@@ -249,27 +242,27 @@ $(MUTOOL) : $(MUTOOL_OBJ)
+@@ -251,11 +244,11 @@ $(MUTOOL) : $(MUTOOL_OBJ)
  
  MJSGEN := $(OUT)/mjsgen
  $(MJSGEN) : $(MUPDF_LIB) $(THIRD_LIBS)
@@ -187,17 +185,26 @@ o libmujs support: install like a non-thirdparty mupdf's library
  $(MUJSTEST_OBJ) : $(FITZ_HDR) $(PDF_HDR)
  $(MUJSTEST) : $(MUPDF_LIB) $(THIRD_LIBS)
  $(MUJSTEST) : $(MUJSTEST_OBJ)
- 	$(LINK_CMD)
+@@ -263,7 +256,7 @@ $(MUJSTEST) : $(MUJSTEST_OBJ)
  
  ifeq "$(HAVE_X11)" "yes"
--MUVIEW_X11 := $(OUT)/mupdf-x11
+ MUVIEW_X11 := $(OUT)/mupdf-x11
 -MUVIEW_X11_OBJ := $(addprefix $(OUT)/platform/x11/, x11_main.o x11_image.o pdfapp.o)
-+MUVIEW_X11 := $(OUT)/platform/x11/mupdf
 +MUVIEW_X11_OBJ := $(addprefix $(OUT)/platform/x11/, x11_main.lo x11_image.lo pdfapp.lo)
  $(MUVIEW_X11_OBJ) : $(FITZ_HDR) $(PDF_HDR)
  $(MUVIEW_X11) : $(MUPDF_LIB) $(THIRD_LIBS)
  $(MUVIEW_X11) : $(MUVIEW_X11_OBJ)
- 	$(LINK_CMD) $(X11_LIBS)
+@@ -271,7 +264,7 @@ $(MUVIEW_X11) : $(MUVIEW_X11_OBJ)
+ 
+ ifeq "$(HAVE_GLFW)" "yes"
+ MUVIEW_GLFW := $(OUT)/mupdf-gl
+-MUVIEW_GLFW_OBJ := $(addprefix $(OUT)/platform/gl/, gl-font.o gl-input.o gl-main.o)
++MUVIEW_GLFW_OBJ := $(addprefix $(OUT)/platform/gl/, gl-font.lo gl-input.lo gl-main.lo)
+ $(MUVIEW_GLFW_OBJ) : $(FITZ_HDR) $(PDF_HDR) platform/gl/gl-app.h
+ $(MUVIEW_GLFW) : $(MUPDF_LIB) $(THIRD_LIBS) $(GLFW_LIB)
+ $(MUVIEW_GLFW) : $(MUVIEW_GLFW_OBJ)
+@@ -279,8 +272,8 @@ $(MUVIEW_GLFW) : $(MUVIEW_GLFW_OBJ)
+ endif
  
  ifeq "$(HAVE_CURL)" "yes"
 -MUVIEW_X11_CURL := $(OUT)/mupdf-x11-curl
@@ -207,7 +214,7 @@ o libmujs support: install like a non-thirdparty mupdf's library
  $(MUVIEW_X11_CURL_OBJ) : $(FITZ_HDR) $(PDF_HDR)
  $(MUVIEW_X11_CURL) : $(MUPDF_LIB) $(THIRD_LIBS) $(CURL_LIB)
  $(MUVIEW_X11_CURL) : $(MUVIEW_X11_CURL_OBJ)
-@@ -279,7 +272,7 @@ endif
+@@ -290,7 +283,7 @@ endif
  
  ifeq "$(HAVE_WIN32)" "yes"
  MUVIEW_WIN32 := $(OUT)/mupdf
@@ -216,12 +223,12 @@ o libmujs support: install like a non-thirdparty mupdf's library
  $(MUVIEW_WIN32_OBJ) : $(FITZ_HDR) $(PDF_HDR)
  $(MUVIEW_WIN32) : $(MUPDF_LIB) $(THIRD_LIBS)
  $(MUVIEW_WIN32) : $(MUVIEW_WIN32_OBJ)
-@@ -289,7 +282,12 @@ endif
- MUVIEW := $(MUVIEW_X11) $(MUVIEW_WIN32)
+@@ -300,7 +293,12 @@ endif
+ MUVIEW := $(MUVIEW_X11) $(MUVIEW_WIN32) $(MUVIEW_GLFW)
  MUVIEW_CURL := $(MUVIEW_X11_CURL) $(MUVIEW_WIN32_CURL)
  
--INSTALL_APPS := $(MUDRAW) $(MUTOOL) $(MUVIEW) $(MUJSTEST) $(MUVIEW_CURL)
-+INSTALL_APPS := $(MUDRAW) $(MUTOOL) $(MUJSTEST)
+-INSTALL_APPS := $(MUTOOL) $(MUVIEW) $(MUJSTEST) $(MUVIEW_CURL)
++INSTALL_APPS := $(MUTOOL) $(MUJSTEST)
 +ifeq "$(HAVE_CURL)" "yes"
 +INSTALL_APPS += $(MUVIEW_CURL)
 +else ifeq "$(HAVE_X11)" "yes"
@@ -230,7 +237,7 @@ o libmujs support: install like a non-thirdparty mupdf's library
  
  # --- Examples ---
  
-@@ -331,24 +329,26 @@ libs: $(INSTALL_LIBS)
+@@ -343,24 +341,26 @@ libs: $(INSTALL_LIBS)
  apps: $(INSTALL_APPS)
  
  install: libs apps

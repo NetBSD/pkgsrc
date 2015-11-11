@@ -1,21 +1,28 @@
-$NetBSD: patch-ab,v 1.9 2014/06/15 19:15:51 wiz Exp $
+$NetBSD: patch-ab,v 1.10 2015/11/11 17:08:25 leot Exp $
 
 o Handle the various operating systems in the same way avoiding hardcoding
 o Build and link with openjpeg-2.1
 
---- Makerules.orig	2014-06-10 15:09:28.000000000 +0000
+--- Makerules.orig	2015-10-21 14:45:11.000000000 +0000
 +++ Makerules
-@@ -25,37 +25,6 @@ else
- $(error unknown build setting: '$(build)')
+@@ -29,46 +29,6 @@ ifeq "$(largefile)" "yes"
+ CFLAGS += -DFZ_LARGEFILE
  endif
  
 -# Windows (MINGW) build doesn't use system libraries.
 -ifeq "$(OS)" "MINGW"
 -
+-HAVE_X11 ?= no
+-HAVE_GLUT ?= yes
+-
+-SYS_GLUT_CFLAGS = -DFREEGLUT_STATIC -Ithirdparty/freeglut/include
+-SYS_GLUT_LIBS = -Lthirdparty/freeglut/lib -lfreeglut_static -lopengl32 -lgdi32 -lwinmm
+-
 -# Mac OS X doesn't have pkg-config so we hard code paths.
 -else ifeq "$(OS)" "MACOS"
 -
 -HAVE_X11 ?= yes
+-HAVE_GLUT ?= yes
 -
 -SYS_OPENSSL_CFLAGS = -DHAVE_OPENSSL
 -SYS_OPENSSL_LIBS = -lcrypto
@@ -24,6 +31,8 @@ o Build and link with openjpeg-2.1
 -
 -SYS_X11_CFLAGS = -I/usr/X11R6/include
 -SYS_X11_LIBS = -L/usr/X11R6/lib -lX11 -lXext
+-SYS_GLUT_CFLAGS = -Wno-deprecated-declarations
+-SYS_GLUT_LIBS = -framework GLUT -framework OpenGL
 -
 -SYS_FREETYPE_CFLAGS = -I/usr/X11R6/include/freetype2
 -SYS_FREETYPE_LIBS = -lfreetype
@@ -41,9 +50,9 @@ o Build and link with openjpeg-2.1
 -else ifeq "$(OS)" "Linux"
 -
  HAVE_X11 ?= yes
+ HAVE_GLUT ?= yes
  
- ifeq "$(shell pkg-config --exists libcrypto && echo yes)" "yes"
-@@ -81,8 +50,6 @@ SYS_JBIG2DEC_LIBS = -ljbig2dec
+@@ -98,8 +58,6 @@ SYS_JBIG2DEC_LIBS = -ljbig2dec
  SYS_JPEG_LIBS = -ljpeg
  SYS_ZLIB_LIBS = -lz
  

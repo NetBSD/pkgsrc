@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.7 2015/04/17 07:18:21 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2015/11/11 17:08:25 leot Exp $
 
 BUILDLINK_TREE+=	mupdf
 
 .if !defined(MUPDF_BUILDLINK3_MK)
 MUPDF_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.mupdf+=	mupdf>=1.7
+BUILDLINK_API_DEPENDS.mupdf+=	mupdf>=1.8
 BUILDLINK_PKGSRCDIR.mupdf?=	../../print/mupdf
 
 pkgbase := mupdf
