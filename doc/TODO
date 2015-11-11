@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15075 2015/11/11 11:59:40 wiz Exp $
+$NetBSD: TODO,v 1.15076 2015/11/11 12:02:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -777,7 +777,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gle-4.2.4
 	o gliv-1.9.7
 	o glom-1.14.2 [GNOME 2.26]
-	o glpk-4.56
+	o glpk-4.57
 	o gmock-1.7.0
 	o gnet1-1.1.9
 	o gnetman-20050429
@@ -1127,6 +1127,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mknmz-wwwoffle-0.7.2
 	o mkvtoolnix-8.4.0
 	o moc-2.5.0
+	o modular-xorg-server-1.18.0
 	o modular-xorg-xquartz-1.17.4
 	o molden-4.8 [after which PR 40252 can be closed]
 	o molden-5.4
@@ -1304,6 +1305,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Net-Amazon-S3-0.80
 	o p5-Net-DBus-1.1.0
 	o p5-Net-DHCP-0.696
+	o p5-Net-DNS-1.03
 	o p5-Net-GitHub-0.77
 	o p5-Net-ManageSieve-0.12
 	o p5-Net-OpenSSH-0.64
@@ -1588,6 +1590,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ruby-builder-3.2.2
 	o ruby-chef-12.3.0
 	o ruby-chef-zero-4.2.2
+	o ruby-jekyll-3.0.0
 	o ruby-jquery-rails-4.0.4
 	o ruby-ncurses-1.3.1
 	o ruby-odbc-0.99997
@@ -1679,7 +1682,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o stellarium-0.13.3
 	o stgit-0.16
 	o stlport-4.6.2
-	o stow-2.2.0
+	o stow-2.2.2
 	o strace-4.10
 	o stratagus-2.2.5.5
 	o streamtuner-2.1.4
