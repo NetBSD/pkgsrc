@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2012/05/25 21:00:26 reed Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/11/11 16:13:12 leot Exp $
 bin/dmenu
+bin/dmenu_path
 bin/dmenu_run
 bin/stest
 man/man1/dmenu.1
