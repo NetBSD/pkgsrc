@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2015/07/30 14:36:34 adam Exp $
+# $NetBSD: Makefile,v 1.23 2015/11/11 10:59:48 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/-/-client-/}
 COMMENT=	MySQL 5, a free SQL database (client)
@@ -16,7 +16,6 @@ INSTALL_DIRS+=		client include libmysql man scripts tests
 REPLACE_PERL=	scripts/mysql_convert_table_format.sh
 REPLACE_PERL+=	scripts/mysql_find_rows.sh
 REPLACE_PERL+=	scripts/mysql_fix_extensions.sh
-REPLACE_PERL+=	scripts/mysql_fix_privilege_tables.sh
 REPLACE_PERL+=	scripts/mysql_setpermission.sh
 REPLACE_PERL+=	scripts/mysql_zap.sh
 REPLACE_PERL+=	scripts/mysqlaccess.sh
