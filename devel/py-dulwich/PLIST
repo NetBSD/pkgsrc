@@ -1,7 +1,12 @@
-@comment $NetBSD: PLIST,v 1.6 2015/04/02 15:28:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/11/11 11:53:11 wiz Exp $
 bin/dul-receive-pack
 bin/dul-upload-pack
 bin/dulwich
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/pbr.json
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/docs/tutorial/conclusion.txt
 ${PYSITELIB}/docs/tutorial/file-format.txt
 ${PYSITELIB}/docs/tutorial/index.txt
@@ -10,10 +15,6 @@ ${PYSITELIB}/docs/tutorial/object-store.txt
 ${PYSITELIB}/docs/tutorial/remote.txt
 ${PYSITELIB}/docs/tutorial/repo.txt
 ${PYSITELIB}/docs/tutorial/tag.txt
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/dulwich/__init__.py
 ${PYSITELIB}/dulwich/__init__.pyc
 ${PYSITELIB}/dulwich/__init__.pyo
@@ -35,6 +36,9 @@ ${PYSITELIB}/dulwich/config.pyo
 ${PYSITELIB}/dulwich/contrib/__init__.py
 ${PYSITELIB}/dulwich/contrib/__init__.pyc
 ${PYSITELIB}/dulwich/contrib/__init__.pyo
+${PYSITELIB}/dulwich/contrib/paramiko_vendor.py
+${PYSITELIB}/dulwich/contrib/paramiko_vendor.pyc
+${PYSITELIB}/dulwich/contrib/paramiko_vendor.pyo
 ${PYSITELIB}/dulwich/contrib/swift.py
 ${PYSITELIB}/dulwich/contrib/swift.pyc
 ${PYSITELIB}/dulwich/contrib/swift.pyo
@@ -162,6 +166,9 @@ ${PYSITELIB}/dulwich/tests/data/repos/empty.git/objects/info/.gitignore
 ${PYSITELIB}/dulwich/tests/data/repos/empty.git/objects/pack/.gitignore
 ${PYSITELIB}/dulwich/tests/data/repos/empty.git/refs/heads/.gitignore
 ${PYSITELIB}/dulwich/tests/data/repos/empty.git/refs/tags/.gitignore
+${PYSITELIB}/dulwich/tests/data/repos/issue88_expect_ack_nak_client.export
+${PYSITELIB}/dulwich/tests/data/repos/issue88_expect_ack_nak_other.export
+${PYSITELIB}/dulwich/tests/data/repos/issue88_expect_ack_nak_server.export
 ${PYSITELIB}/dulwich/tests/data/repos/ooo_merge.git/HEAD
 ${PYSITELIB}/dulwich/tests/data/repos/ooo_merge.git/objects/29/69be3e8ee1c0222396a5611407e4769f14e54b
 ${PYSITELIB}/dulwich/tests/data/repos/ooo_merge.git/objects/38/74e9c60a6d149c44c928140f250d81e6381520
