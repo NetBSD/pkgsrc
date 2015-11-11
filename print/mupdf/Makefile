@@ -1,26 +1,26 @@
-# $NetBSD: Makefile,v 1.31 2015/09/06 20:53:24 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2015/11/11 17:08:25 leot Exp $
 
-DISTNAME=	mupdf-1.7a-source
+DISTNAME=	mupdf-1.8-source
 PKGNAME=	${DISTNAME:S/-source//}
 CATEGORIES=	print
 MASTER_SITES=	http://mupdf.com/downloads/
 
-MAINTAINER=	leot1990@users.sourceforge.net
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	http://mupdf.com/
 COMMENT=	Lightweight PDF viewer and toolkit
 LICENSE=	gnu-agpl-v3
 
-USE_LANGUAGES+=	c99
+USE_LANGUAGES=	c99
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake
 
 INSTALLATION_DIRS+=	bin include lib/pkgconfig
 INSTALL_MAKE_FLAGS+=	prefix=${PREFIX}
 INSTALL_MAKE_FLAGS+=	mandir=${PREFIX}/${PKGMANDIR}
-LDFLAGS=	${COMPILER_RPATH_FLAG}${X11BASE}/lib
-MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
-MAKE_FLAGS+=	XCFLAGS=${CFLAGS:Q}
-MAKE_FLAGS+=	build=release
+LDFLAGS=		${COMPILER_RPATH_FLAG}${X11BASE}/lib
+MAKE_FLAGS+=		LDFLAGS=${LDFLAGS:Q}
+MAKE_FLAGS+=		XCFLAGS=${CFLAGS:Q}
+MAKE_FLAGS+=		build=release
 
 CFLAGS+=	-DJBIG_NO_MEMENTO
 CFLAGS.SunOS+=	-D_XOPEN_SOURCE=600
