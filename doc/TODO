@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15074 2015/11/10 17:47:37 adam Exp $
+$NetBSD: TODO,v 1.15075 2015/11/11 11:59:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -315,10 +315,6 @@ Suggested new packages
 	Geogebra
 	http://www.geogebra.org/
 	Simple and powerful geometry application
-
-	Baikal
-	http://baikal-server.com/
-	Lightweight CalDAV and CardDAV server
 
 	Gitlab
 	https://gitlab.com/gitlab-org/gitlab-ce
