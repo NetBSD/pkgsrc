@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2015/05/07 12:45:28 fhajny Exp $
+# $NetBSD: options.mk,v 1.3 2015/11/11 11:00:06 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mariadb55
 
@@ -21,6 +21,8 @@ PLIST_VARS+=		dtrace
 .if !empty(PKG_OPTIONS:Mdtrace)
 CMAKE_ARGS+=		-DENABLE_DTRACE=ON
 PLIST.dtrace=		yes
+.else
+CMAKE_ARGS+=		-DENABLE_DTRACE=OFF
 .endif
 
 # Enable Sphinx SE support
