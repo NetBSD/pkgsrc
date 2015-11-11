@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4553 2015/11/11 13:55:25 tnn Exp $
+$NetBSD: CHANGES-2015,v 1.4554 2015/11/11 14:07:45 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7765,3 +7765,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-hg-git to 0.8.3 [wiz 2015-11-11]
 	Updated archivers/unzip to 6.0nb5 [wiz 2015-11-11]
 	Updated graphics/MesaLib to 11.0.5 [tnn 2015-11-11]
+	Updated multimedia/adobe-flash-plugin11 to 11.2.202.548 [tsutsui 2015-11-11]
