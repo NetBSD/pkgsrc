@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.20 2015/11/04 03:29:01 agc Exp $
+$NetBSD: distinfo,v 1.21 2015/11/12 16:23:09 wiz Exp $
 
-SHA1 (xf86-video-ati-7.5.0.tar.bz2) = 9cfdaf0bd4a46781b5082c75ca546fc832598124
-RMD160 (xf86-video-ati-7.5.0.tar.bz2) = fc82a385ca60b4942a6b022178bd7af6eb3f3537
-SHA512 (xf86-video-ati-7.5.0.tar.bz2) = 51ea3934285c579314614e336cee0d5c079a466cdc94f2c8649d9499515af3dfb37a7ac87ed69c6dbf6befa5bfca27f8305bbc028ff722e2f87143da5f101f7c
-Size (xf86-video-ati-7.5.0.tar.bz2) = 809756 bytes
+SHA1 (xf86-video-ati-7.6.1.tar.bz2) = b517c7fc8e7df0fb0ece0c9a5446b092ec944479
+RMD160 (xf86-video-ati-7.6.1.tar.bz2) = beb0dcf6b17d0a89602add06036e9230d81b8b43
+SHA512 (xf86-video-ati-7.6.1.tar.bz2) = b829b1db2088161a2486f396a9b36afd6fbbc765fb495450fb1c2de33951e6270c7ef6665c8275c66dfc6509af71b9882c342d236fc0537ff0dde117683c4891
+Size (xf86-video-ati-7.6.1.tar.bz2) = 823043 bytes
 SHA1 (patch-src_radeon__dri2.c) = 907f29999a8889dcf764c78d2786989e5ed914a4
 SHA1 (patch-src_radeon__kms.c) = 0f0cbf99644711983e31242b6d756a668d18fee5
