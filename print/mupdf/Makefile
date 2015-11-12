@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2015/11/11 17:08:25 leot Exp $
+# $NetBSD: Makefile,v 1.33 2015/11/12 21:11:31 leot Exp $
 
 DISTNAME=	mupdf-1.8-source
 PKGNAME=	${DISTNAME:S/-source//}
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	http://mupdf.com/downloads/
 
@@ -34,6 +35,7 @@ post-extract:
 	${RM} -fr \
 	    ${WRKSRC}/thirdparty/curl \
 	    ${WRKSRC}/thirdparty/freetype \
+	    ${WRKSRC}/thirdparty/glfw \
 	    ${WRKSRC}/thirdparty/jbig2dec \
 	    ${WRKSRC}/thirdparty/jpeg \
 	    ${WRKSRC}/thirdparty/openjpeg \
