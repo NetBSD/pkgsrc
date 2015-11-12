@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4559 2015/11/11 17:37:44 leot Exp $
+$NetBSD: CHANGES-2015,v 1.4560 2015/11/12 15:23:38 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7771,3 +7771,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/youtube-dl to 20151110 [leot 2015-11-11]
 	Updated print/mupdf to 1.8 [leot 2015-11-11]
 	Updated multimedia/mpv to 0.13.0 [leot 2015-11-11]
+	Updated www/apache22 to 2.2.31nb1 [prlw1 2015-11-12]
