@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2015/03/14 20:36:23 rodent Exp $
+# $NetBSD: options.mk,v 1.3 2015/11/12 16:32:29 morr Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.haproxy
 PKG_SUPPORTED_OPTIONS=	pcre ssl
@@ -12,6 +12,25 @@ PKG_SUGGESTED_OPTIONS=	pcre ssl
 .if !empty(PKG_OPTIONS:Mpcre)
 .  include "../../devel/pcre/buildlink3.mk"
 BUILD_MAKE_FLAGS+=	USE_PCRE=1
+.endif
+
+###
+### Support DeviceAtlas detection.
+###
+.if !empty(PKG_OPTIONS:Mpcre) && !empty(PKG_OPTIONS:Mdeviceatlas)
+DEVICEATLAS_VERSION=	2.1
+DEVICEATLAS_DISTFILE=	deviceatlas-enterprise-c-${DEVICEATLAS_VERSION}
+DISTFILES+=		${DEVICEATLAS_DISTFILE}.zip
+DEVICEATLAS_HOMEPAGE=	https://www.deviceatlas.com/deviceatlas-haproxy-module
+
+BUILD_MAKE_FLAGS+=	USE_DEVICEATLAS=1 DEVICEATLAS_SRC=../${DEVICEATLAS_DISTFILE}
+
+.if !exists(${DISTDIR}/${DEVICEATLAS_DISTFILE}.zip)
+FETCH_MESSAGE= 		"Please fetch ${DEVICEATLAS_DISTFILE}.zip manually from"
+FETCH_MESSAGE+=		"${DEVICEATLAS_HOMEPAGE}"
+FETCH_MESSAGE+= 	"and put into"
+FETCH_MESSAGE+= 	"${DISTDIR}"
+.endif
 .endif
 
 ###
