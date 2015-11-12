@@ -20,16 +20,27 @@
         <envvar name='JAVA_HOME' value='@PKG_JAVA_HOME@' />
       </method_environment>
     </method_context>
-    <exec_method name="start" type="method" exec="@PKG_JAVA_HOME@/bin/java -Delasticsearch -Des.index.store.type=%{store_type} -Des.pidfile=@ES_PIDDIR@/elasticsearch.pid -Des.config=%{config_file} %{java_opts} -Xms%{min_heap} -Xmx%{max_heap} -cp %{class_path} org.elasticsearch.bootstrap.Elasticsearch" timeout_seconds="3600" />
-    <exec_method type="method" name="stop" exec=":kill" timeout_seconds="60" />
-    <exec_method type="method" name="refresh" exec=":kill -HUP" timeout_seconds="60" />
-    <property_group name="application" type="application">
-      <propval name="min_heap" type="astring" value="256m" />
-      <propval name="max_heap" type="astring" value="1g" />
-      <propval name="store_type" type="astring" value="niofs" />
-      <propval name="class_path" type="astring" value="@ES_LIBDIR@/@DISTNAME@.jar:@ES_LIBDIR@/*:@ES_LIBDIR@/sigar/*.jar" />
-      <propval name="config_file" type="astring" value="@PKG_SYSCONFDIR@/elasticsearch.yml" />
-      <propval name="java_opts" type="astring" value="-Djava.awt.headless=true -Xss256k -XX:+DisableExplicitGC -XX:+HeapDumpOnOutOfMemoryError -XX:+UseCMSInitiatingOccupancyOnly -XX:+UseConcMarkSweepGC -XX:+UseParNewGC -XX:CMSInitiatingOccupancyFraction=75" />
+    <exec_method name='start' type='method' exec='@PKG_JAVA_HOME@/bin/java -Delasticsearch -Des.path.home=@PREFIX@ -Des.path.conf=@PKG_SYSCONFDIR@ -Des.pidfile=@ES_PIDDIR@/elasticsearch.pid -Des.index.store.type=%{store_type} %{java_opts} -Xms%{min_heap} -Xmx%{max_heap} -cp %{class_path} org.elasticsearch.bootstrap.Elasticsearch start' timeout_seconds='3600' />
+    <exec_method type='method' name='stop' exec=':kill' timeout_seconds='60' />
+    <exec_method type='method' name='refresh' exec=':kill -HUP' timeout_seconds='60' />
+    <property_group name='application' type='application'>
+      <propval name='min_heap' type='astring' value='256m' />
+      <propval name='max_heap' type='astring' value='1g' />
+      <propval name='store_type' type='astring' value='niofs' />
+      <propval name='class_path' type='astring' value='@ES_LIBDIR@/@DISTNAME@.jar:@ES_LIBDIR@/*' />
+      <property name='java_opts' type='astring'>
+        <astring_list>
+          <value_node value='-Dfile.encoding=UTF-8'/>
+          <value_node value='-Djava.awt.headless=true'/>
+          <value_node value='-XX:+DisableExplicitGC'/>
+          <value_node value='-XX:+HeapDumpOnOutOfMemoryError'/>
+          <value_node value='-XX:+UseCMSInitiatingOccupancyOnly'/>
+          <value_node value='-XX:+UseConcMarkSweepGC'/>
+          <value_node value='-XX:+UseParNewGC'/>
+          <value_node value='-XX:CMSInitiatingOccupancyFraction=75'/>
+          <value_node value='-Xss256k'/>
+        </astring_list>
+      </property>
     </property_group>
     <property_group name='startd' type='framework'>
       <propval name='duration' type='astring' value='child' />
