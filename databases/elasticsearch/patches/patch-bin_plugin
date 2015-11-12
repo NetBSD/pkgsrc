@@ -1,14 +1,14 @@
-$NetBSD: patch-bin_plugin,v 1.1 2015/10/18 16:02:05 fhajny Exp $
+$NetBSD: patch-bin_plugin,v 1.2 2015/11/12 15:37:08 fhajny Exp $
 
 Fix paths and improve portability.
 
---- bin/plugin.orig	2015-10-15 09:16:10.000000000 +0000
+--- bin/plugin.orig	2015-10-21 13:32:03.000000000 +0000
 +++ bin/plugin
-@@ -15,15 +15,20 @@ while [ -h "$SCRIPT" ] ; do
+@@ -16,8 +16,13 @@ while [ -h "$SCRIPT" ] ; do
    fi
  done
  
-+#set defualt JAVA_HOME
++#set default JAVA_HOME
 +if [ -z "$JAVA_HOME" ]; then
 +  JAVA_HOME="@PKG_JAVA_HOME@"
 +fi
@@ -19,21 +19,18 @@ Fix paths and improve portability.
  
  # make ELASTICSEARCH_HOME absolute
  ES_HOME=`cd "$ES_HOME"; pwd`
+@@ -25,7 +30,7 @@ ES_HOME=`cd "$ES_HOME"; pwd`
  
  # Sets the default values for elasticsearch variables used in this script
  if [ -z "$CONF_DIR" ]; then
 -  CONF_DIR="$ES_HOME/config"
 +  CONF_DIR="@PKG_SYSCONFDIR@"
- 
-   if [ -z "$CONF_FILE" ]; then
-     CONF_FILE="$CONF_DIR/elasticsearch.yml"
-@@ -103,6 +108,6 @@ if [ -e "$CONF_FILE" ]; then
-   esac
  fi
  
--export HOSTNAME=`hostname -s`
-+export HOSTNAME=`hostname`
+ # The default env file is defined at building/packaging time.
+@@ -105,4 +110,4 @@ fi
+ HOSTNAME=`hostname | cut -d. -f1`
+ export HOSTNAME
  
--eval "$JAVA" $JAVA_OPTS $ES_JAVA_OPTS -Xmx64m -Xms16m -Delasticsearch -Des.path.home=\""$ES_HOME"\" $properties -cp \""$ES_HOME/lib/*"\" org.elasticsearch.plugins.PluginManager $args
-\ No newline at end of file
-+eval "$JAVA" $JAVA_OPTS $ES_JAVA_OPTS -Xmx64m -Xms16m -Delasticsearch -Des.path.home=\""$ES_HOME"\" $properties -cp \""$ES_HOME/lib/elasticsearch/*"\" org.elasticsearch.plugins.PluginManager $args
+-eval "$JAVA" -client -Delasticsearch -Des.path.home="\"$ES_HOME\"" $properties -cp "\"$ES_HOME/lib/*\"" org.elasticsearch.plugins.PluginManagerCliParser $args
++eval "$JAVA" -client -Delasticsearch -Des.path.home="\"$ES_HOME\"" $properties -cp "\"@ES_LIBDIR@/*\"" org.elasticsearch.plugins.PluginManagerCliParser $args

@@ -1,6 +1,6 @@
 #! @RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: elasticsearch.sh,v 1.2 2014/04/25 08:47:52 imil Exp $
+# $NetBSD: elasticsearch.sh,v 1.3 2015/11/12 15:37:07 fhajny Exp $
 #
 # PROVIDE: elasticsearch
 # REQUIRE: DAEMON
@@ -27,22 +27,25 @@ ES_CLASSPATH="@ES_LIBDIR@/@DISTNAME@.jar:@ES_LIBDIR@/*"
 command="@PKG_JAVA_HOME@/bin/java"
 # flags taken from bin/elasticsearch and bin/elasticsearch.in.sh
 command_args="	-Delasticsearch					\
+		-Des.path.home=@PREFIX@				\
+		-Des.path.conf=@PKG_SYSCONFDIR@			\
 		-Des.pidfile=${pidfile}				\
-		-Des.config=${elasticsearch_config}		\
+		-Dfile.encoding=UTF-8				\
+		-Djava.awt.headless=true			\
 		-Xms${elasticsearch_min_mem}			\
 		-Xmx${elasticsearch_max_mem}			\
 		-Xss256k					\
-		-Djava.awt.headless=true			\
-		-XX:+UseParNewGC				\
-		-XX:+UseConcMarkSweepGC				\
-		-XX:CMSInitiatingOccupancyFraction=75		\
-		-XX:+UseCMSInitiatingOccupancyOnly		\
+		-XX:+DisableExplicitGC				\
 		-XX:+HeapDumpOnOutOfMemoryError			\
 		-XX:+UseCMSInitiatingOccupancyOnly		\
+		-XX:+UseCMSInitiatingOccupancyOnly		\
+		-XX:+UseConcMarkSweepGC				\
+		-XX:+UseParNewGC				\
+		-XX:CMSInitiatingOccupancyFraction=75		\
 		-cp ${ES_CLASSPATH}				\
 		${elasticsearch_props}				\
 		org.elasticsearch.bootstrap.Elasticsearch	\
-		>/dev/null &"
+		start >/dev/null &"
 
 # ElasticSearch is fd hungry, default limit leads to write locks
 SOFT_FDLIMIT=`ulimit -S -n`
