@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4563 2015/11/12 16:14:21 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4564 2015/11/12 16:23:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7775,3 +7775,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/elasticsearch to 2.0.0 [fhajny 2015-11-12]
 	Updated graphics/png to 1.6.19 [wiz 2015-11-12]
 	Updated x11/xf86-video-rendition to 4.2.6 [wiz 2015-11-12]
+	Updated x11/xf86-video-ati to 7.6.1 [wiz 2015-11-12]
