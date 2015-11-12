@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4567 2015/11/12 16:34:57 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4568 2015/11/12 16:37:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7779,3 +7779,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/iso-codes to 3.63 [wiz 2015-11-12]
 	Updated net/p5-Net-DNS to 1.03 [wiz 2015-11-12]
 	Updated devel/py-setuptools to 18.5 [wiz 2015-11-12]
+	Updated security/py-cryptography to 1.1 [wiz 2015-11-12]
