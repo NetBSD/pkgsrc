@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4562 2015/11/12 16:12:33 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4563 2015/11/12 16:14:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7774,3 +7774,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/apache22 to 2.2.31nb1 [prlw1 2015-11-12]
 	Updated databases/elasticsearch to 2.0.0 [fhajny 2015-11-12]
 	Updated graphics/png to 1.6.19 [wiz 2015-11-12]
+	Updated x11/xf86-video-rendition to 4.2.6 [wiz 2015-11-12]
