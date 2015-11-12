@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4560 2015/11/12 15:23:38 prlw1 Exp $
+$NetBSD: CHANGES-2015,v 1.4561 2015/11/12 15:37:20 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7772,3 +7772,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated print/mupdf to 1.8 [leot 2015-11-11]
 	Updated multimedia/mpv to 0.13.0 [leot 2015-11-11]
 	Updated www/apache22 to 2.2.31nb1 [prlw1 2015-11-12]
+	Updated databases/elasticsearch to 2.0.0 [fhajny 2015-11-12]
