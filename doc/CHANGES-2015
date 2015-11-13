@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4573 2015/11/13 11:36:59 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4574 2015/11/13 11:53:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7785,3 +7785,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated sysutils/rsyslog to 8.14.0 [fhajny 2015-11-12]
 	Updated print/mupdf to 1.8nb1 [leot 2015-11-12]
 	Updated devel/gmp to 6.1.0 [wiz 2015-11-13]
+	Updated devel/libuuid to 2.27.1 [wiz 2015-11-13]
