@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4582 2015/11/13 20:04:31 adam Exp $
+$NetBSD: CHANGES-2015,v 1.4583 2015/11/13 22:13:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7794,3 +7794,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/py-html2text to 2015.11.4 [wiz 2015-11-13]
 	Added archivers/zopfli version 1.0.1 [wiz 2015-11-13]
 	Updated www/py-django-reversion to 1.9.3 [adam 2015-11-13]
+	Updated archivers/unzip to 6.0nb6 [wiz 2015-11-13]
