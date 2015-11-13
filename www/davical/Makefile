@@ -1,11 +1,14 @@
-# $NetBSD: Makefile,v 1.22 2015/06/12 10:51:49 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2015/11/13 12:13:13 hauke Exp $
 #
 
 DISTNAME=	davical-${DAVICAL_VERSION}
-DAVICAL_VERSION=1.1.1
-PKGREVISION=	7
+DAVICAL_VERSION=1.1.3.1
+#PKGREVISION=	1
 CATEGORIES=	www
-MASTER_SITES=	http://debian.mcmillan.net.nz/packages/davical/
+MASTER_SITES=	-https://gitlab.com/davical-project/davical/repository/archive.tar.gz?ref=r${DAVICAL_VERSION}
+
+FETCH_USING=		wget
+FETCH_BEFORE_ARGS+=	--no-check-certificate
 
 MAINTAINER=	jym@NetBSD.org
 HOMEPAGE=	http://www.davical.org/
@@ -63,7 +66,8 @@ REPLACE_PERL=		dba/update-davical-database
 REPLACE_INTERPRETER+=	php
 REPLACE.php.old=	.*php
 REPLACE.php.new=	${PREFIX}/bin/php
-REPLACE_FILES.php=	scripts/cron-sync-ldap.php
+REPLACE_FILES.php=	scripts/archive-old-events.php
+REPLACE_FILES.php+=	scripts/cron-sync-ldap.php
 REPLACE_FILES.php+=	scripts/export_calendar.php
 REPLACE_FILES.php+=	scripts/load_calendar.php
 REPLACE_FILES.php+=	scripts/refresh-alarms.php
@@ -99,10 +103,13 @@ SUBST_SED.files+=	-e "s|@DAVICALDIR@|${DAVICALDIR}|g"
 SUBST_MESSAGE.files=	Fixing DAViCal configuration file for Apache.
 
 post-extract:
+	${MV} ${WRKDIR}/davical-r${DAVICAL_VERSION}-* \
+		${WRKDIR}/davical-${DAVICAL_VERSION}
 	${CP} ${FILESDIR}/davical.conf ${WRKSRC}/davical.conf
 
 pre-install:
 	${FIND} ${WRKSRC} -name "*.orig" -print | ${XARGS} ${RM} -f
+	${FIND} ${WRKSRC} -name ".gitignore" -print | ${XARGS} ${RM} -f
 	${FIND} ${WRKSRC}/po -name "*~" -print | ${XARGS} ${RM} -f
 
 do-install:
