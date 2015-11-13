@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.11 2015/11/03 03:27:46 agc Exp $
+$NetBSD: distinfo,v 1.12 2015/11/13 11:52:50 wiz Exp $
 
-SHA1 (util-linux-2.27.tar.xz) = 0549760ba1d2eb0e48b41b926d54ac55533369af
-RMD160 (util-linux-2.27.tar.xz) = fa0ff85e9701461e8f259bd72d3715c2d14c4ff1
-SHA512 (util-linux-2.27.tar.xz) = 06ee17f4801fd3e35fb4cf3717722ea3f709e3dd9f9153510c399742a5cfca341e3a3a400d35a091b74f0de3636e62c7a14b7dd91d63482b7b98b1991aa6fa3c
-Size (util-linux-2.27.tar.xz) = 3968872 bytes
+SHA1 (util-linux-2.27.1.tar.xz) = 462bca6320535d39b62216d8609da5531bfef0bb
+RMD160 (util-linux-2.27.1.tar.xz) = 1bb866553fdab0d7ff9315f6cdf901812ccdd029
+SHA512 (util-linux-2.27.1.tar.xz) = a450a0c2d26a6deaf5e53b8f6bddf59409aefb1f0aaf07393f68a418408fbc62c5da353c8ba53c7cac8ea6e3dddfad59161753d888c31f5ccea445e81accbad8
+Size (util-linux-2.27.1.tar.xz) = 3964512 bytes
 SHA1 (patch-ab) = 14203e9a470f620c442ddacf14dba219027aef84
 SHA1 (patch-configure) = 9d13a7e8cd029be574900e080f521303f90b35e7
-SHA1 (patch-lib_randutils.c) = d1f57352c5c19bfe20ee79ebc93fb2949db2ea47
+SHA1 (patch-lib_randutils.c) = 5cab5d27a4936478c55c8d11dc002df9a0a41962
