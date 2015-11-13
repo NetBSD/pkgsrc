@@ -1,7 +1,8 @@
-$NetBSD: patch-src_joystick_bsd_SDL__sysjoystick.c,v 1.2 2015/02/25 12:45:59 jmcneill Exp $
+$NetBSD: patch-src_joystick_bsd_SDL__sysjoystick.c,v 1.3 2015/11/13 14:23:42 wiz Exp $
 
 Skip non-joystick HID devices, and give joysticks on NetBSD a human readable
 name.
+https://bugzilla.libsdl.org/show_bug.cgi?id=3178
 
 --- src/joystick/bsd/SDL_sysjoystick.c.orig	2014-03-16 02:31:41.000000000 +0000
 +++ src/joystick/bsd/SDL_sysjoystick.c
