@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/11/13 16:20:32 wiz Exp $
+
+SHA1 (zopfli-1.0.1.tar.gz) = 5185792cda1590588fcfcfb5e31fbcbfda2495ae
+RMD160 (zopfli-1.0.1.tar.gz) = edbbb113251ceff6ff5cacb76d21afbe1d187fe5
+SHA512 (zopfli-1.0.1.tar.gz) = 51d4b2d990e6785e86f0e0104325723c9a7c3b8bf6925ef694b6696f2238eaafff2ca625495a676874ecc1704df7d685e5234b0c601e5804c1c293242e113430
+Size (zopfli-1.0.1.tar.gz) = 128178 bytes
