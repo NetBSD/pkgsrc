@@ -1,4 +1,10 @@
-@comment $NetBSD: PLIST,v 1.7 2015/04/17 15:14:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2015/11/13 19:56:16 adam Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/reversion/__init__.py
 ${PYSITELIB}/reversion/__init__.pyc
 ${PYSITELIB}/reversion/__init__.pyo
@@ -8,6 +14,8 @@ ${PYSITELIB}/reversion/admin.pyo
 ${PYSITELIB}/reversion/helpers.py
 ${PYSITELIB}/reversion/helpers.pyc
 ${PYSITELIB}/reversion/helpers.pyo
+${PYSITELIB}/reversion/locale/ar/LC_MESSAGES/django.mo
+${PYSITELIB}/reversion/locale/ar/LC_MESSAGES/django.po
 ${PYSITELIB}/reversion/locale/cs/LC_MESSAGES/django.mo
 ${PYSITELIB}/reversion/locale/cs/LC_MESSAGES/django.po
 ${PYSITELIB}/reversion/locale/da/LC_MESSAGES/django.mo
