@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2015/10/11 10:56:44 tron Exp $
+# $NetBSD: Makefile,v 1.102 2015/11/13 13:41:39 wiz Exp $
 
 DISTNAME=	rsync-3.1.1
 PKGREVISION=	2
@@ -14,7 +14,6 @@ LICENSE=	gnu-gpl-v3
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 share/doc/rsync
 
-USE_TOOLS+=		perl
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-included-popt
 CONFIGURE_ARGS+=	--with-rsyncd-conf=${PKG_SYSCONFDIR}/rsyncd.conf
