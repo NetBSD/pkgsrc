@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2015/10/02 07:55:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/11/13 14:11:49 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -95,13 +95,20 @@ share/mame/hash/astrocde.xml
 share/mame/hash/atom.xml
 share/mame/hash/attache.xml
 share/mame/hash/b2m.xml
+share/mame/hash/bbc_32016_flop.xml
+share/mame/hash/bbc_65c102_flop.xml
+share/mame/hash/bbc_80186_flop.xml
+share/mame/hash/bbc_arm_flop.xml
+share/mame/hash/bbc_z80_flop.xml
 share/mame/hash/bbca_cass.xml
 share/mame/hash/bbcb_cass.xml
 share/mame/hash/bbcb_de_cass.xml
+share/mame/hash/bbcb_flop.xml
 share/mame/hash/bbcb_us_flop.xml
 share/mame/hash/bbcbc.xml
 share/mame/hash/bbcm_cart.xml
 share/mame/hash/bbcm_cass.xml
+share/mame/hash/bbcm_flop.xml
 share/mame/hash/bbcmc_flop.xml
 share/mame/hash/bk0010.xml
 share/mame/hash/bml3_flop.xml
@@ -313,6 +320,7 @@ share/mame/hash/plus4_flop.xml
 share/mame/hash/pmd85_cass.xml
 share/mame/hash/pokemini.xml
 share/mame/hash/pro128_cart.xml
+share/mame/hash/pro128s_flop.xml
 share/mame/hash/prof180.xml
 share/mame/hash/prof80.xml
 share/mame/hash/psion1.xml
@@ -398,6 +406,7 @@ share/mame/hash/tutor.xml
 share/mame/hash/tvc_cart.xml
 share/mame/hash/tvc_cass.xml
 share/mame/hash/tvc_flop.xml
+share/mame/hash/unichamp.xml
 share/mame/hash/ut88.xml
 share/mame/hash/uzebox.xml
 share/mame/hash/v1050_flop.xml

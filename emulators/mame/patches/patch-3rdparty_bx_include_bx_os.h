@@ -1,6 +1,7 @@
-$NetBSD: patch-3rdparty_bx_include_bx_os.h,v 1.3 2015/10/02 07:55:53 wiz Exp $
+$NetBSD: patch-3rdparty_bx_include_bx_os.h,v 1.4 2015/11/13 14:11:49 wiz Exp $
 
 Add NetBSD support.
+https://github.com/mamedev/mame/pull/464
 
 --- 3rdparty/bx/include/bx/os.h.orig	2015-09-30 06:29:01.000000000 +0000
 +++ 3rdparty/bx/include/bx/os.h
