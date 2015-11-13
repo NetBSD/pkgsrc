@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4579 2015/11/13 14:50:13 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4580 2015/11/13 15:48:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7791,3 +7791,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated time/py-iso8601 to 0.1.11 [wiz 2015-11-13]
 	Updated textproc/py-markdown to 2.6.4 [wiz 2015-11-13]
 	Updated devel/talloc to 2.1.5 [wiz 2015-11-13]
+	Updated textproc/py-html2text to 2015.11.4 [wiz 2015-11-13]
