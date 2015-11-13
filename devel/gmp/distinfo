@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.48 2015/11/03 03:27:29 agc Exp $
+$NetBSD: distinfo,v 1.49 2015/11/13 10:42:23 wiz Exp $
 
 SHA1 (gmp-6.0.0a.tar.bz2) = 360802e3541a3da08ab4b55268c80f799939fddc
 RMD160 (gmp-6.0.0a.tar.bz2) = 2322e21e2042c974dcfaca2da18ae22d43a23ec4
@@ -7,5 +7,21 @@ Size (gmp-6.0.0a.tar.bz2) = 2319400 bytes
 SHA1 (patch-aa) = dec275cbd5886a70f7cf0def1dedf01e7e4a49e9
 SHA1 (patch-ab) = 829812822a72a4926ea4cf6e8ffafdcd13a0f76c
 SHA1 (patch-ac) = 6f7de0a285bec2c2645479d3090dc0276580f3d8
-SHA1 (patch-mpn-arm-netbsd.diff) = 00ead78b6966e9863b4acacbaeced9a67815f90b
+SHA1 (patch-mpn_arm_aorslsh1__n.asm) = 2c12b798eba26a3c4429792e1a88f91638261255
+SHA1 (patch-mpn_arm_bdiv__dbm1c.asm) = 8fcc50684c6baae02abeadb56feeb2340fc39731
+SHA1 (patch-mpn_arm_cnd__aors__n.asm) = 3d15898f923524122c09f63773bd9a35820a6016
+SHA1 (patch-mpn_arm_com.asm) = fb6dde3cecb4d082a63b8f7cc5e2c2aa877da27c
+SHA1 (patch-mpn_arm_copyd.asm) = 93f4e677b8cf4b85ff2dd21db7fca475930d623f
+SHA1 (patch-mpn_arm_copyi.asm) = 6d385726860fcb88d516dca3faa95edeb82fb79d
+SHA1 (patch-mpn_arm_dive__1.asm) = cb3425948ba7e69eb4bdb9b150a83881a6011aa3
+SHA1 (patch-mpn_arm_invert__limb.asm) = f8eb28f094864b02ebd709745a19b496b63ca437
+SHA1 (patch-mpn_arm_logops__n.asm) = fbd73182a6f53b452cf385494080579e3ab17d81
+SHA1 (patch-mpn_arm_lshift.asm) = d076210156c4dbcbe3b46803c0aaf966954a3058
+SHA1 (patch-mpn_arm_lshiftc.asm) = 95692c226ff057294d2aa9cf409559b605f444e4
+SHA1 (patch-mpn_arm_mod__34lsub1.asm) = 30a31a9d999097568cc8bc83a9565ee2f30657e0
+SHA1 (patch-mpn_arm_mode1o.asm) = 9fb7a224489ea56b433ab5e869c9402138210a30
+SHA1 (patch-mpn_arm_rsh1aors__n.asm) = 2c20729fdccd16f8418e0cf4e9b583848dd00b18
+SHA1 (patch-mpn_arm_rshift.asm) = fdc9b43d50a7c621b201098a01c440277c1ae43a
+SHA1 (patch-mpn_arm_sec__tabselect.asm) = 9f317285b87262d98e557bb7c4c9df21d51fa655
+SHA1 (patch-mpn_arm_udiv.asm) = 4f0cc8d7f578c41c11a73c7abb91ab955ec30019
 SHA1 (patch-mpn_x86__64_k8_redc_1.asm) = 896a8fcfe9f7370f5628403b93e10a5f52e38944
