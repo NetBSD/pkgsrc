@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/02 23:31:44 agc Exp $
+$NetBSD: distinfo,v 1.3 2015/11/13 14:43:53 wiz Exp $
 
-SHA1 (iso8601-0.1.10.tar.gz) = 523f48ec579c49c0c1496c094282b684e07d4b36
-RMD160 (iso8601-0.1.10.tar.gz) = dab2bd109891c7c76340dc6a5a18a86c5c95eee4
-SHA512 (iso8601-0.1.10.tar.gz) = 5a3635b3daf6c5ccfd0dfdf47bcd60a0841c06137b3ee334ec024909fa24c8fe4a1da1fa253e0a5dfaca173d4b10dfd994b83a031b2a0385406ca92987098168
-Size (iso8601-0.1.10.tar.gz) = 8405 bytes
+SHA1 (iso8601-0.1.11.tar.gz) = d7af90c7f01c8b62a9d8c0bf26badf2a903ccf70
+RMD160 (iso8601-0.1.11.tar.gz) = ee76d7208baaadd4b2a0b859b5ff0e8735afbc8d
+SHA512 (iso8601-0.1.11.tar.gz) = 19f5443aae4e3f93b0521a7215318c2833bcca5740ea05f9a6d5771bff2aaeb5626ba26e5ba64efae135bf9420a1810854969dad845aaf67089d5e6898a254a0
+Size (iso8601-0.1.11.tar.gz) = 8725 bytes
