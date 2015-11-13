@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4576 2015/11/13 14:12:03 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4577 2015/11/13 14:44:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7788,3 +7788,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/libuuid to 2.27.1 [wiz 2015-11-13]
 	Updated www/davical to 1.1.3.1 [hauke 2015-11-13]
 	Updated emulators/mame to 0.167 [wiz 2015-11-13]
+	Updated time/py-iso8601 to 0.1.11 [wiz 2015-11-13]

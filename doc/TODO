@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15089 2015/11/13 14:12:03 wiz Exp $
+$NetBSD: TODO,v 1.15090 2015/11/13 14:44:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1491,7 +1491,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-html2text-2015.11.4
 	o py-input-pad-1.4.2
 	o py-ipython-4.0
-	o py-iso8601-0.1.11
 	o py-jaraco_util-11.0
 	o py-junos-eznc-1.2.2
 	o py-markdown-2.6.4
