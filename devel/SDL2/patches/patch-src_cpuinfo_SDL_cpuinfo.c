@@ -1,6 +1,8 @@
-$NetBSD: patch-src_cpuinfo_SDL_cpuinfo.c,v 1.2 2014/03/13 13:25:49 adam Exp $
+$NetBSD: patch-src_cpuinfo_SDL_cpuinfo.c,v 1.3 2015/11/13 14:13:26 wiz Exp $
 
 Fix building on NetBSD and OpenBSD.
+NetBSD part submitted as
+https://bugzilla.libsdl.org/show_bug.cgi?id=3176
 
 --- src/cpuinfo/SDL_cpuinfo.c.orig	2014-03-08 04:36:51.000000000 +0000
 +++ src/cpuinfo/SDL_cpuinfo.c

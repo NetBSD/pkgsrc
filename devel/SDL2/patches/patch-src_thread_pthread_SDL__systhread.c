@@ -1,6 +1,7 @@
-$NetBSD: patch-src_thread_pthread_SDL__systhread.c,v 1.1 2015/02/09 08:27:07 snj Exp $
+$NetBSD: patch-src_thread_pthread_SDL__systhread.c,v 1.2 2015/11/13 14:13:26 wiz Exp $
 
 Handle NetBSD's pthread_setname_np.
+https://bugzilla.libsdl.org/show_bug.cgi?id=3176
 
 --- src/thread/pthread/SDL_systhread.c.orig	2014-03-15 19:31:44.000000000 -0700
 +++ src/thread/pthread/SDL_systhread.c	2015-02-09 00:17:52.000000000 -0800
