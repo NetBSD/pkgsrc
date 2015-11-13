@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2012/08/15 20:23:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2015/11/13 12:13:13 hauke Exp $
 share/davical/dba/appuser_permissions.txt
 share/davical/dba/base-data.sql
 share/davical/dba/better_perms.sql
@@ -136,6 +136,9 @@ share/davical/inc/ui/principal-edit.php
 share/davical/inc/vcard.php
 share/davical/inc/vtimezone.php
 share/davical/inc/well-known.php
+share/davical/po/ar.po
+share/davical/po/ca.po
+share/davical/po/cs_CZ.po
 share/davical/po/de.po
 share/davical/po/de.values
 share/davical/po/es_AR.po
@@ -148,14 +151,17 @@ share/davical/po/es_VE.po
 share/davical/po/es_VE.values
 share/davical/po/et.po
 share/davical/po/et.values
+share/davical/po/fi.po
 share/davical/po/fr.po
 share/davical/po/fr.values
 share/davical/po/hu.po
 share/davical/po/hu.values
+share/davical/po/id_ID.po
 share/davical/po/it.po
 share/davical/po/it.values
 share/davical/po/ja.po
 share/davical/po/ja.values
+share/davical/po/ko_KR.po
 share/davical/po/messages.pot
 share/davical/po/nb_NO.po
 share/davical/po/nb_NO.values
@@ -170,8 +176,10 @@ share/davical/po/pt_PT.po
 share/davical/po/pt_PT.values
 share/davical/po/ru.po
 share/davical/po/ru.values
+share/davical/po/sk_SK.po
 share/davical/po/sv.po
 share/davical/po/sv.values
+share/davical/scripts/archive-old-events.php
 share/davical/scripts/build-always.sh
 share/davical/scripts/cron-sync-ldap.php
 share/davical/scripts/export_calendar.php
@@ -187,7 +195,10 @@ share/doc/davical/INSTALL
 share/doc/davical/README
 share/doc/davical/TODO
 share/doc/davical/VERSION
+share/doc/davical/api/awl/CalDAVSyncCalendar.html
+share/doc/davical/api/awl/_inc---CalDAVSyncCalendar.php.html
 share/doc/davical/api/awl/caldav/CalDAVClient.html
+share/doc/davical/api/awl/caldav/CalDAVSyncClient.html
 share/doc/davical/api/awl/caldav/CalendarInfo.html
 share/doc/davical/api/awl/caldav/RRule.html
 share/doc/davical/api/awl/caldav/RepeatRule.html
@@ -195,6 +206,7 @@ share/doc/davical/api/awl/caldav/RepeatRuleDateRange.html
 share/doc/davical/api/awl/caldav/RepeatRuleDateTime.html
 share/doc/davical/api/awl/caldav/RepeatRuleTimeZone.html
 share/doc/davical/api/awl/caldav/Rfc5545Duration.html
+share/doc/davical/api/awl/caldav/_inc---CalDAVSyncClient.php.html
 share/doc/davical/api/awl/caldav/_inc---RRule-v2.php.html
 share/doc/davical/api/awl/caldav/_inc---RRule.php.html
 share/doc/davical/api/awl/caldav/_inc---caldav-client-v2.php.html
@@ -206,6 +218,8 @@ share/doc/davical/api/classtrees_davical.html
 share/doc/davical/api/davical/AtomEntry.html
 share/doc/davical/api/davical/AtomFeed.html
 share/doc/davical/api/davical/AtomXHTMLContent.html
+share/doc/davical/api/davical/CalDAVSyncCache.html
+share/doc/davical/api/davical/CalDAVSyncState.html
 share/doc/davical/api/davical/CheckResult.html
 share/doc/davical/api/davical/DAVTicket/DAVTicket.html
 share/doc/davical/api/davical/DAVTicket/_inc---DAVTicket.php.html
@@ -213,6 +227,7 @@ share/doc/davical/api/davical/DAViCalSession/DAViCalSession.html
 share/doc/davical/api/davical/DAViCalSession/Tools.html
 share/doc/davical/api/davical/DAViCalSession/_htdocs---tools.php.html
 share/doc/davical/api/davical/DAViCalSession/_inc---DAViCalSession.php.html
+share/doc/davical/api/davical/FakeSession.html
 share/doc/davical/api/davical/HTTPAuthSession/HTTPAuthSession.html
 share/doc/davical/api/davical/HTTPAuthSession/_inc---HTTPAuthSession.php.html
 share/doc/davical/api/davical/Principal/DAVPrincipal.html
@@ -246,6 +261,9 @@ share/doc/davical/api/davical/_htdocs---test.php.html
 share/doc/davical/api/davical/_htdocs---upgrade.php.html
 share/doc/davical/api/davical/_htdocs---well-known.php.html
 share/doc/davical/api/davical/_inc---AtomFeed.php.html
+share/doc/davical/api/davical/_inc---CalDAVSyncCache.php.html
+share/doc/davical/api/davical/_inc---CalDAVSyncState.php.html
+share/doc/davical/api/davical/_inc---FakeSession.php.html
 share/doc/davical/api/davical/_inc---WritableCollection.php.html
 share/doc/davical/api/davical/_inc---autodiscover-handler.php.html
 share/doc/davical/api/davical/_inc---caldav-LOCK.php.html
@@ -420,11 +438,9 @@ share/doc/davical/website/clients/ical4/002.png
 share/doc/davical/website/clients/ical4/003.png
 share/doc/davical/website/images/davical_logo.ico
 share/doc/davical/website/images/davical_logo.svg
-share/doc/davical/website/images/flattr-badge-large.png
 share/doc/davical/website/images/icon.png
 share/doc/davical/website/images/larger.png
 share/doc/davical/website/images/logo.gif
-share/doc/davical/website/images/paypal_donate_button.png
 share/doc/davical/website/inc/page-footer.php
 share/doc/davical/website/inc/page-header.php
 share/doc/davical/website/inc/page-middle.php
