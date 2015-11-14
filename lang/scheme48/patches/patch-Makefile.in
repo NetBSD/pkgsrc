@@ -1,8 +1,10 @@
-$NetBSD: patch-Makefile.in,v 1.1 2013/08/06 19:57:42 asau Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2015/11/14 14:14:46 leot Exp $
 
---- Makefile.in.orig	2012-12-27 16:46:24.000000000 +0000
+Html documentation should be installed to a separate dir
+
+--- Makefile.in.orig	2014-02-22 13:09:49.000000000 +0000
 +++ Makefile.in
-@@ -47,6 +47,7 @@ mandir = @mandir@/man$(manext)
+@@ -48,6 +48,7 @@ mandir = @mandir@/man$(manext)
  docdir = @docdir@
  datarootdir = @datarootdir@
  datadir = @datadir@
@@ -10,22 +12,18 @@ $NetBSD: patch-Makefile.in,v 1.1 2013/08/06 19:57:42 asau Exp $
  
  DYNAMIC_EXTERNALS_CFLAGS=@DYNAMIC_EXTERNALS_CFLAGS@
  DYNAMIC_EXTERNALS_LDFLAGS=@DYNAMIC_EXTERNALS_LDFLAGS@
-@@ -533,15 +534,15 @@ install-no-doc: enough dirs
+@@ -533,7 +534,7 @@ install-no-doc: enough dirs
+ # install the external modules
  	$(INSTALL_PROGRAM) $(EXTERNALS) $(DESTDIR)$(LIB)/
  # install the documentation
- 	$(srcdir)/mkinstalldirs $(DESTDIR)$(docdir)
--	$(INSTALL_DATA) $(srcdir)/COPYING $(docdir)
-+	$(INSTALL_DATA) $(srcdir)/COPYING $(DESTDIR)$(docdir)
+-	$(srcdir)/mkinstalldirs $(DESTDIR)$(docdir)
++	$(srcdir)/mkinstalldirs $(DESTDIR)$(docdir) $(DESTDIR)$(htmldir)
+ 	$(INSTALL_DATA) $(srcdir)/COPYING $(DESTDIR)$(docdir)
  
  install-doc: dirs doc
--	$(srcdir)/mkinstalldirs $(DESTDIR)$(docdir)
--	$(INSTALL_DATA) $(srcdir)/COPYING $(docdir)
--	$(INSTALL_DATA) $(srcdir)/doc/manual.pdf $(docdir)
--	$(INSTALL_DATA) $(srcdir)/doc/manual.ps $(docdir)
-+	$(srcdir)/mkinstalldirs $(DESTDIR)$(docdir) $(DESTDIR)$(htmldir)
-+	$(INSTALL_DATA) $(srcdir)/COPYING $(DESTDIR)$(docdir)
-+	$(INSTALL_DATA) $(srcdir)/doc/manual.pdf $(DESTDIR)$(docdir)
-+	$(INSTALL_DATA) $(srcdir)/doc/manual.ps $(DESTDIR)$(docdir)
+@@ -542,7 +543,7 @@ install-doc: dirs doc
+ 	$(INSTALL_DATA) $(srcdir)/doc/manual.pdf $(DESTDIR)$(docdir)
+ 	$(INSTALL_DATA) $(srcdir)/doc/manual.ps $(DESTDIR)$(docdir)
  	for f in $(srcdir)/doc/html/*; do \
 -		$(INSTALL_DATA) $$f $(DESTDIR)$(docdir) || exit 1; \
 +		$(INSTALL_DATA) $$f $(DESTDIR)$(htmldir) || exit 1; \
