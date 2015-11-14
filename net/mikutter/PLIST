@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2014/12/30 08:05:17 obache Exp $
+@comment $NetBSD: PLIST,v 1.31 2015/11/14 16:38:03 tsutsui Exp $
 bin/mikutter
 share/applications/mikutter.desktop
 share/doc/mikutter/README
@@ -638,6 +638,7 @@ share/mikutter/core/skin/data/console.png
 share/mikutter/core/skin/data/copy.png
 share/mikutter/core/skin/data/copy_all.png
 share/mikutter/core/skin/data/directmessage.png
+share/mikutter/core/skin/data/dont_like.png
 share/mikutter/core/skin/data/etc.png
 share/mikutter/core/skin/data/fav.png
 share/mikutter/core/skin/data/followers.png
@@ -645,6 +646,7 @@ share/mikutter/core/skin/data/followings.png
 share/mikutter/core/skin/data/forward.png
 share/mikutter/core/skin/data/icon.png
 share/mikutter/core/skin/data/icon_alternative.png
+share/mikutter/core/skin/data/like.png
 share/mikutter/core/skin/data/list.png
 share/mikutter/core/skin/data/loading.png
 share/mikutter/core/skin/data/notfound.png
