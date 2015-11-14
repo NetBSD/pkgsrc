@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2015/08/18 07:31:16 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2015/11/14 17:12:35 asau Exp $
 
-DISTNAME=	hwloc-1.11.0
-PKGREVISION=	1
+DISTNAME=	hwloc-1.11.1
 CATEGORIES=	parallel
 MASTER_SITES=	http://www.open-mpi.org/software/hwloc/v1.11/downloads/
 
@@ -11,14 +10,11 @@ COMMENT=	Portable Hardware Locality
 LICENSE=	modified-bsd
 
 USE_LIBTOOL=		yes
-USE_TOOLS+=		aclocal automake autoconf autoreconf pkg-config
+USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-picky
 
 TEST_TARGET=	check
-
-pre-configure:
-	cd ${WRKSRC} && autoreconf -ivf
 
 # libpci??
 #.include "../../graphics/cairo/buildlink3.mk" # optional
