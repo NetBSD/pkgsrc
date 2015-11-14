@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4586 2015/11/14 03:59:20 wen Exp $
+$NetBSD: CHANGES-2015,v 1.4587 2015/11/14 04:09:27 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7798,3 +7798,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-PathTools to 3.59 [wen 2015-11-14]
 	Updated devel/p5-System-Command to 1.115 [wen 2015-11-14]
 	Updated graphics/p5-SVG to 2.64 [wen 2015-11-14]
+	Updated mail/p5-Email-MIME to 1.936 [wen 2015-11-14]
