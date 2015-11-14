@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4592 2015/11/14 16:38:47 tsutsui Exp $
+$NetBSD: CHANGES-2015,v 1.4593 2015/11/14 17:14:22 asau Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7804,3 +7804,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated math/p5-Math-GMP to 2.11 [wen 2015-11-14]
 	Updated lang/scheme48 to 1.9.2 [leot 2015-11-14]
 	Updated net/mikutter to 3.2.10 [tsutsui 2015-11-14]
+	Updated parallel/hwloc to 1.11.1 [asau 2015-11-14]
