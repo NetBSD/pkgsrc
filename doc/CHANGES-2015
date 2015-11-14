@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4584 2015/11/14 03:45:03 wen Exp $
+$NetBSD: CHANGES-2015,v 1.4585 2015/11/14 03:53:54 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7796,3 +7796,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/py-django-reversion to 1.9.3 [adam 2015-11-13]
 	Updated archivers/unzip to 6.0nb6 [wiz 2015-11-13]
 	Updated devel/p5-PathTools to 3.59 [wen 2015-11-14]
+	Updated devel/p5-System-Command to 1.115 [wen 2015-11-14]
