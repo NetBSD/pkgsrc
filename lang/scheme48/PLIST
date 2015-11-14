@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2013/08/06 19:57:42 asau Exp $
+@comment $NetBSD: PLIST,v 1.9 2015/11/14 14:14:46 leot Exp $
 bin/scheme-r5rs
 bin/scheme-srfi-7
 bin/scheme48

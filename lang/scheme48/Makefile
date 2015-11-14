@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2015/01/04 03:31:07 dholland Exp $
+# $NetBSD: Makefile,v 1.42 2015/11/14 14:14:46 leot Exp $
 
-DISTNAME=		scheme48-1.9
-PKGREVISION=		1
+DISTNAME=		scheme48-1.9.2
 CATEGORIES=		lang
-MASTER_SITES=		http://s48.org/1.9/
+MASTER_SITES=		http://s48.org/1.9.2/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -20,7 +19,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS=		--docdir=${PREFIX}/share/doc/${PKGNAME_NOREV} \
 			--htmldir=${PREFIX}/share/doc/${PKGNAME_NOREV}/html \
 			--mandir=${PREFIX}/${PKGMANDIR}
-USE_TOOLS=		gmake
+USE_TOOLS+=		gmake
 BUILD_TARGET=		enough
 TEST_TARGET=		check		# fail if USER == root directory owner
 
@@ -31,11 +30,11 @@ REPLACE_FILES.scheme=	build/scheme48-config.in
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
-SUBST_CLASSES+= 	pthr
+SUBST_CLASSES+=		pthr
 SUBST_STAGE.pthr=	post-patch
 SUBST_FILES.pthr=	configure
 SUBST_MESSAGE.pthr=	Hardcoding -pthread in CFLAGS and LDFLAGS
-SUBST_SED.pthr= 	-e 's,pthreads_done=\"no\",pthreads_done=\"yes\"; CFLAGS=\"$$CFLAGS -pthread\"; LDFLAGS=\"$$LDFLAGS -pthread\",'
+SUBST_SED.pthr=		-e 's,pthreads_done=\"no\",pthreads_done=\"yes\"; CFLAGS=\"$$CFLAGS -pthread\"; LDFLAGS=\"$$LDFLAGS -pthread\",'
 .endif
 
 .include "../../mk/compiler.mk"
