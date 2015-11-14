@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4590 2015/11/14 10:12:40 skrll Exp $
+$NetBSD: CHANGES-2015,v 1.4591 2015/11/14 14:15:20 leot Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7802,3 +7802,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/p5-SVG to 2.64 [wen 2015-11-14]
 	Updated mail/p5-Email-MIME to 1.936 [wen 2015-11-14]
 	Updated math/p5-Math-GMP to 2.11 [wen 2015-11-14]
+	Updated lang/scheme48 to 1.9.2 [leot 2015-11-14]
