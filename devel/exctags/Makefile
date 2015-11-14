@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.27 2015/03/29 09:19:06 bsiegert Exp $
+# $NetBSD: Makefile,v 1.28 2015/11/14 06:01:02 richard Exp $
 #
 
 DISTNAME=	ctags-5.8
 PKGNAME=	ex${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ctags/}
 
@@ -16,6 +16,8 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-macro-patterns
 CONFIGURE_ARGS+=	--with-readlib
 CONFIGURE_ARGS+=	--enable-custom-config=${PKG_SYSCONFDIR}/ctags.conf
+#avoid configure picking up TMPDIR and changing the default
+CONFIGURE_ARGS+=	--enable-tmpdir=/tmp
 
 CPPFLAGS+=		-DETAGS="\"exetags\""
 # Makefile ignores CPPFLAGS
