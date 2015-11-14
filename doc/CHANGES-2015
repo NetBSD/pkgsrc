@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4591 2015/11/14 14:15:20 leot Exp $
+$NetBSD: CHANGES-2015,v 1.4592 2015/11/14 16:38:47 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7803,3 +7803,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mail/p5-Email-MIME to 1.936 [wen 2015-11-14]
 	Updated math/p5-Math-GMP to 2.11 [wen 2015-11-14]
 	Updated lang/scheme48 to 1.9.2 [leot 2015-11-14]
+	Updated net/mikutter to 3.2.10 [tsutsui 2015-11-14]
