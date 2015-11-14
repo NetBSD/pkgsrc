@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4588 2015/11/14 05:08:18 wen Exp $
+$NetBSD: CHANGES-2015,v 1.4589 2015/11/14 07:49:11 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7795,6 +7795,7 @@ Changes to the packages collection and infrastructure in 2015:
 	Added archivers/zopfli version 1.0.1 [wiz 2015-11-13]
 	Updated www/py-django-reversion to 1.9.3 [adam 2015-11-13]
 	Updated archivers/unzip to 6.0nb6 [wiz 2015-11-13]
+	Updated multimedia/ffmpeg2 to 2.8.2 [adam 2015-11-13]
 	Updated devel/p5-PathTools to 3.59 [wen 2015-11-14]
 	Updated devel/p5-System-Command to 1.115 [wen 2015-11-14]
 	Updated graphics/p5-SVG to 2.64 [wen 2015-11-14]
