@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4594 2015/11/14 18:15:53 asau Exp $
+$NetBSD: CHANGES-2015,v 1.4595 2015/11/15 03:43:55 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7806,3 +7806,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/mikutter to 3.2.10 [tsutsui 2015-11-14]
 	Updated parallel/hwloc to 1.11.1 [asau 2015-11-14]
 	Updated lang/sbcl to 1.3.0 [asau 2015-11-14]
+	Updated www/py-werkzeug to 0.11.2 [wen 2015-11-15]
