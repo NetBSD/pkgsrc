@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/02 23:31:37 agc Exp $
+$NetBSD: distinfo,v 1.3 2015/11/15 08:22:15 szptvlfn Exp $
 
-SHA1 (timezone-olson-0.1.4.tar.gz) = 3bff6c5669f54ed998099eb8b94bb69e4333d8eb
-RMD160 (timezone-olson-0.1.4.tar.gz) = d7b9b2e87b7a2de38b95004858aca57a4b21212e
-SHA512 (timezone-olson-0.1.4.tar.gz) = 40b902acbf33cd839a8217b66946a6fe2b0923e8ed7b42c05c2507a1b0c3c232e2fa93eccc1961efdc845fb7a90d0338460e8316121ad098ed449b424fda05af
-Size (timezone-olson-0.1.4.tar.gz) = 11639 bytes
+SHA1 (timezone-olson-0.1.7.tar.gz) = 1b0bc3e29cfac1d2c68109f217a5de5cabbfcf75
+RMD160 (timezone-olson-0.1.7.tar.gz) = 449ee503558edd64a575e47525c9407f42e6a5ee
+SHA512 (timezone-olson-0.1.7.tar.gz) = 136bca829b40edd3c46f83e2d19b496da7b6e7268825ff017fa598f9dc8a9de5fd65101f417e9c22ae8b845c61c98347944971f8f41072be60d894ea148a4e0a
+Size (timezone-olson-0.1.7.tar.gz) = 11313 bytes
