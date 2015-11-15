@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/08/16 16:18:24 kleink Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/11/15 03:42:42 wen Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -82,6 +82,9 @@ ${PYSITELIB}/werkzeug/debug/tbtools.pyo
 ${PYSITELIB}/werkzeug/exceptions.py
 ${PYSITELIB}/werkzeug/exceptions.pyc
 ${PYSITELIB}/werkzeug/exceptions.pyo
+${PYSITELIB}/werkzeug/filesystem.py
+${PYSITELIB}/werkzeug/filesystem.pyc
+${PYSITELIB}/werkzeug/filesystem.pyo
 ${PYSITELIB}/werkzeug/formparser.py
 ${PYSITELIB}/werkzeug/formparser.pyc
 ${PYSITELIB}/werkzeug/formparser.pyo
