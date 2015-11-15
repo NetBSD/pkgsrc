@@ -1,6 +1,7 @@
 A parser and renderer for binary Olson timezone files whose format is
 specified by the tzfile(5) man page on Unix-like systems. For more
-information about this format, see http://www.twinsun.com/tz/tz-link.htm.
+information about this format, see
+http://www.iana.org/time-zones/repository/tz-link.html
 Functions are provided for converting the parsed data into TimeZoneSeries
 objects from the timezone-series package. On many platforms, binary Olson
 timezone files suitable for use with this package are available in the
