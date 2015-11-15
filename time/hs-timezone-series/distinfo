@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/02 23:31:37 agc Exp $
+$NetBSD: distinfo,v 1.3 2015/11/15 08:22:00 szptvlfn Exp $
 
-SHA1 (timezone-series-0.1.3.tar.gz) = c36b52a224769ae89736935b86707608e6bff49c
-RMD160 (timezone-series-0.1.3.tar.gz) = d8ae9510a991fe5ce18c4d8b11743e067c03b13c
-SHA512 (timezone-series-0.1.3.tar.gz) = 37b6d803c2f41309230656a180cb78814e8bcd1f2a9e7af64f11cded0425570dbb65a567efceef3761632cec67bdc3fe97f486368c0febb198a20c10827431ed
-Size (timezone-series-0.1.3.tar.gz) = 5416 bytes
+SHA1 (timezone-series-0.1.5.1.tar.gz) = d43d093cb72d2ab62b94d9e220c3741a6124879e
+RMD160 (timezone-series-0.1.5.1.tar.gz) = 8b6450c35060e34687c4bd96f98315c02f8cc77c
+SHA512 (timezone-series-0.1.5.1.tar.gz) = 7f080455f58c8aefb8ac7e34e9b91724a294537069d8acf65865cc481fd3053816dd3e5ce3ef7a41c85f7d983764b7c472c13e47cc20d458c74a256c394f2d03
+Size (timezone-series-0.1.5.1.tar.gz) = 5330 bytes
