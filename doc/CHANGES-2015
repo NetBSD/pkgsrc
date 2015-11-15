@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4597 2015/11/15 04:55:44 wen Exp $
+$NetBSD: CHANGES-2015,v 1.4598 2015/11/15 05:09:01 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7809,3 +7809,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/py-werkzeug to 0.11.2 [wen 2015-11-15]
 	Updated devel/p5-File-Path to 2.12 [wen 2015-11-15]
 	Updated devel/p5-Getopt-Long to 2.48 [wen 2015-11-15]
+	Updated devel/p5-Package-DeprecationManager to 0.15 [wen 2015-11-15]
