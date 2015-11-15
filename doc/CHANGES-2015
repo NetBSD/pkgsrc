@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4602 2015/11/15 08:22:20 szptvlfn Exp $
+$NetBSD: CHANGES-2015,v 1.4603 2015/11/15 08:22:59 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7814,3 +7814,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mail/p5-MIME-Types to 2.12 [wiz 2015-11-15]
 	Updated www/p5-Starlet to 0.28 [wen 2015-11-15]
 	Updated time/hs-timezone-series to 0.1.5.1 [szptvlfn 2015-11-15]
+	Updated time/hs-timezone-olson to 0.1.7 [szptvlfn 2015-11-15]
