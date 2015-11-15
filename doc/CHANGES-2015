@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4600 2015/11/15 06:53:46 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4601 2015/11/15 08:12:20 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7812,3 +7812,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Package-DeprecationManager to 0.15 [wen 2015-11-15]
 	Updated time/p5-DateTime-Format-Strptime to 1.61 [wen 2015-11-15]
 	Updated mail/p5-MIME-Types to 2.12 [wiz 2015-11-15]
+	Updated www/p5-Starlet to 0.28 [wen 2015-11-15]

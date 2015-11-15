@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15099 2015/11/15 03:17:15 wen Exp $
+$NetBSD: TODO,v 1.15100 2015/11/15 08:12:20 wen Exp $
 
 Suggested new packages
 ======================
@@ -1348,7 +1348,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Spreadsheet-ParseExcel-0.6500
 	o p5-Spreadsheet-Read-0.61
 	o p5-Spreadsheet-WriteExcel-2.40
-	o p5-Starlet-0.25
 	o p5-Starman-0.4014
 	o p5-Statistics-Descriptive-3.0609
 	o p5-Switch-2.17
