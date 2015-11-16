@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.128 2015/02/28 00:13:25 wiz Exp $
+# $NetBSD: Makefile,v 1.129 2015/11/16 10:33:35 wiz Exp $
 
 DISTNAME=	gnupg-1.4.19
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/gnupg/ \
 		http://gd.tuwien.ac.at/privacy/gnupg/gnupg/ \
