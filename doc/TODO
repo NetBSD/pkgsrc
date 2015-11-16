@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15103 2015/11/15 12:06:56 prlw1 Exp $
+$NetBSD: TODO,v 1.15104 2015/11/16 11:27:58 wiz Exp $
 
 Suggested new packages
 ======================
@@ -409,6 +409,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o adocman-0.13
 	o adodb-5.19
 	o aewm++-1.0.27
+	o afl-1.95b
 	o afterstep-2.2.12
 	o aget-0.4.1
 	o alacarte-0.13.2
@@ -537,6 +538,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cloog-0.18.3
 	o clutter-1.24
 	o clutter-gst-3.0.2
+	o cmake-3.4.0
 	o cmake-fedora-2.3.4
 	o cmocka-1.0.1
 	o cmus-2.7.1
@@ -846,6 +848,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gromacs-5.0.6
 	o groonga-5.0.6
 	o gsharutils-4.15.2
+	o gsl-2.1
 	o gss-1.0.3
 	o gst-plugins0.10-fluendo-mp3-0.10.32
 	o gst-plugins1-base-1.6.1
@@ -1032,6 +1035,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libkface-4.12.0
 	o libkgeomap-4.12.0
 	o libkvkontakte-4.12.0
+	o liblangtag-0.5.8
 	o libmatheval-1.1.11
 	o libmcs-0.7.2
 	o libmediawiki-4.12.0
@@ -1094,6 +1098,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o matchbox-panel-0.9.3
 	o mbedtls-2.0.0
 	o mbuf-20141227
+	o mc-4.8.15
 	o mcollective-2.3.2
 	o mcsim-5.5.0
 	o mednafen-0.9.38.2
@@ -1484,10 +1489,13 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-gmpy-1.17
 	o py-gnome-menus-3.8.0
 	o py-input-pad-1.4.2
+	o py-ipaddress-1.0.15
 	o py-ipython-4.0
 	o py-jaraco_util-11.0
 	o py-junos-eznc-1.2.2
+	o py-lxml-3.5.0
 	o py-matplotlib-1.4.3
+	o py-mercurial-3.6.1
 	o py-metar-0.20
 	o py-mezzanine-4.0.1
 	o py-munkres-1.0.7
@@ -1517,6 +1525,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-suds-0.4.1
 	o py-sybase-0.37
 	o py-tlslite-0.4.6
+	o py-tortoisehg-3.6
 	o py-uliweb-0.4.1
 	o py-unittest2-1.1.0
 	o py-uwsgi-2.0.11.1
@@ -1695,6 +1704,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tacacs-4.0.4.29a
 	o tacacs-shrubbery-5.0.0a1
 	o tads-3.0.16
+	o taglib-1.10
 	o taskjuggler-3.3.0
 	o tc-hasida-table-0.8 [wip]
 	o tcl85-8.5.18
@@ -1798,7 +1808,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wpa_supplicant-2.4
 	o wwwoffle-2.9i
 	o wxRemind-101
-	o x264-devel-20151031
+	o x264-devel-20151114
 	o x2vnc-1.31
 	o xa65-2.3.7
 	o xenkernel46-4.6.0
@@ -1829,6 +1839,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xml2-0.5
 	o xmlsec1-1.2.20
 	o xmlstarlet-1.5.0
+	o xmlto-0.0.27
 	o xmms-crossfade-0.3.14
 	o xmms-musepack-1.8.0 [http://dl.slik.org/musepack/xmms-musepack-1.8.0.tar.gz]
 	o xmonad-0.11.1
