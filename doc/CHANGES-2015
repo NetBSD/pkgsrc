@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4609 2015/11/16 10:09:58 he Exp $
+$NetBSD: CHANGES-2015,v 1.4610 2015/11/16 10:33:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7821,3 +7821,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/bokken version 1.8 [khorben 2015-11-16]
 	Updated security/py-certifi to 2015.9.6.2 [leot 2015-11-16]
 	Updated security/opendnssec to 1.4.8.2 [he 2015-11-16]
+	Updated security/gnupg to 1.4.19nb1 [wiz 2015-11-16]
