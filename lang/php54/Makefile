@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2015/10/27 09:08:20 jperkin Exp $
+# $NetBSD: Makefile,v 1.33 2015/11/16 13:12:27 sevan Exp $
 
 #
 # We can't omit PKGNAME here to handle PKG_OPTIONS.
@@ -45,6 +45,12 @@ INSTALLATION_DIRS+=	${CGIDIR} ${PHP_EXTENSION_DIR} ${EGDIR} share/php
 
 .if ${OPSYS} == "SunOS" && ${PKGSRC_COMPILER} == "clang"
 CONFIGURE_ARGS+=	--disable-libgcc
+.endif
+
+.if ${OPSYS} == "OpenBSD"
+# From PHP bug #68114
+# Workaround issue with decimal floating point support in older versions of GCC
+CONFIGURE_ENV+= 	ac_cv_decimal_fp_supported=no
 .endif
 
 post-extract:
