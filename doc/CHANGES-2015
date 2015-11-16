@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4605 2015/11/16 01:34:48 khorben Exp $
+$NetBSD: CHANGES-2015,v 1.4606 2015/11/16 01:48:01 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7817,3 +7817,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated time/hs-timezone-olson to 0.1.7 [szptvlfn 2015-11-15]
 	Updated math/eigen3 to 3.2.7 [prlw1 2015-11-15]
 	Added devel/py-radare2 version 0.9.9 [khorben 2015-11-16]
+	Added graphics/py-pygraphviz version 1.3.1 [khorben 2015-11-16]
