@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2015/08/18 07:31:14 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2015/11/16 03:16:50 ryoon Exp $
 
 DISTNAME=	tmux-2.0
 PKGREVISION=	2
@@ -6,7 +6,7 @@ CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tmux/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://tmux.sourceforge.net/
+HOMEPAGE=	http://tmux.github.io/
 COMMENT=	BSD-licensed terminal multiplexer (GNU Screen alternative)
 LICENSE=	modified-bsd
 
