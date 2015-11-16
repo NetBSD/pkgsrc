@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4612 2015/11/16 13:34:38 nros Exp $
+$NetBSD: CHANGES-2015,v 1.4613 2015/11/16 16:34:08 msaitoh Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7824,3 +7824,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/gnupg to 1.4.19nb1 [wiz 2015-11-16]
 	Updated graphics/libwebp to 0.4.4 [nros 2015-11-16]
 	Added graphics/gimp-webp version 0.2 [nros 2015-11-16]
+	Updated sysutils/intel-microcode-netbsd to 20151106 [msaitoh 2015-11-17]
