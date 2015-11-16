@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.51 2015/11/16 15:02:53 hauke Exp $
+@comment $NetBSD: PLIST,v 1.52 2015/11/16 20:34:28 hauke Exp $
 bin/cancel
 bin/cups-config
 bin/cupstestdsc
@@ -39,7 +39,7 @@ lib/libcupscgi.la
 lib/libcupsimage.la
 lib/libcupsmime.la
 lib/libcupsppdc.la
-${PLIST.dnssd}libexec/cups/backend/dnssd
+${PLIST.mdns}libexec/cups/backend/dnssd
 libexec/cups/backend/http
 libexec/cups/backend/ipp
 libexec/cups/backend/lpd
