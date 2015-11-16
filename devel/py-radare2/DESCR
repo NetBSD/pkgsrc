@@ -1,0 +1,4 @@
+radare2 is an advanced commandline hexadecimal editor
+with a set of tools for working with binary files.
+
+This package provides Python bindings for radare2.
