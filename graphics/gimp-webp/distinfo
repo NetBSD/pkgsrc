@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2015/11/16 13:33:13 nros Exp $
+
+SHA1 (gimp-webp-0.2.tar.gz) = d0b0d6bbf9004a043ea10ac1fd84bd2783d190b6
+RMD160 (gimp-webp-0.2.tar.gz) = 38bc31d44e39e29124ffa6f14ecd312b8e077e88
+SHA512 (gimp-webp-0.2.tar.gz) = 8d8d80d651a2d86b1126f331c57b63d1ccfe32bd786b1777a406864bb6f0cd47e61a4e54fa474eb37da7bb3a65c5b5594fb51fe8180dbaa90837f85e41607aed
+Size (gimp-webp-0.2.tar.gz) = 21823 bytes
+SHA1 (patch-CMakeLists.txt) = dbd9803f398a5c4c4f18d39b0ca8bf5d395f9222
