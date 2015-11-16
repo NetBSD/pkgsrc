@@ -1,10 +1,18 @@
-$NetBSD: patch-enforcer_utils_Makefile.in,v 1.2 2014/12/04 15:58:21 he Exp $
+$NetBSD: patch-enforcer_utils_Makefile.in,v 1.3 2015/11/16 10:09:08 he Exp $
 
 Regenerate after adding installation of migration scripts to Makefile.am.
 
---- enforcer/utils/Makefile.in.orig	2014-12-04 15:18:00.000000000 +0000
+--- enforcer/utils/Makefile.in.orig	2015-10-05 14:20:51.000000000 +0000
 +++ enforcer/utils/Makefile.in
-@@ -788,7 +788,8 @@ info: info-am
+@@ -423,7 +423,6 @@ pkcs11_softhsm_module = @pkcs11_softhsm_
+ prefix = @prefix@
+ program_transform_name = @program_transform_name@
+ psdir = @psdir@
+-runstatedir = @runstatedir@
+ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+ srcdir = @srcdir@
+@@ -798,7 +797,8 @@ info: info-am
  
  info-am:
  
@@ -14,7 +22,7 @@ Regenerate after adding installation of migration scripts to Makefile.am.
  
  install-dvi: install-dvi-am
  
-@@ -846,17 +847,24 @@ uninstall-man: uninstall-man1
+@@ -856,20 +856,27 @@ uninstall-man: uninstall-man1
  	ctags ctags-am distclean distclean-compile distclean-generic \
  	distclean-libtool distclean-tags distdir dvi dvi-am html \
  	html-am info info-am install install-am install-binPROGRAMS \
@@ -28,7 +36,6 @@ Regenerate after adding installation of migration scripts to Makefile.am.
 -	mostlyclean-libtool pdf pdf-am ps ps-am tags tags-am uninstall \
 -	uninstall-am uninstall-binPROGRAMS \
 -	uninstall-dist_opendnssecdataDATA uninstall-man uninstall-man1
--
 +	install-data install-data-am install-data-local \
 +	install-dist_opendnssecdataDATA install-dvi install-dvi-am \
 +	install-exec install-exec-am install-html install-html-am \
@@ -40,13 +47,16 @@ Regenerate after adding installation of migration scripts to Makefile.am.
 +	pdf pdf-am ps ps-am tags tags-am uninstall uninstall-am \
 +	uninstall-binPROGRAMS uninstall-dist_opendnssecdataDATA \
 +	uninstall-man uninstall-man1
-+
-+
+ 
+ .PRECIOUS: Makefile
+ 
+ 
 +install-data-local: $(EXTRA_DIST)
 +	for f in $(EXTRA_DIST); do \
 +		$(INSTALL_DATA) "$$f" $(DESTDIR)$(opendnssecdatadir) \
 +			|| exit $$?; \
 +	done
- 
++
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
