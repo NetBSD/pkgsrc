@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2015/11/16 01:31:10 khorben Exp $
+
+SHA1 (radare2-bindings-0.9.9.tar.xz) = e7f536e490da7a4e98c94ae3fb7e6529abae1dff
+RMD160 (radare2-bindings-0.9.9.tar.xz) = 438902d9e20d89cc76e7ccfecbd192c64da6d6ed
+Size (radare2-bindings-0.9.9.tar.xz) = 539100 bytes
+SHA1 (patch-do-swig.sh) = 0ece481530346ece7516a5415256310a12b9a0da
+SHA1 (patch-python_Makefile) = 91c46c5c3805d347a07bda7a3acda5f7550be545
