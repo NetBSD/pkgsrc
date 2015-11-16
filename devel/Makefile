@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2165 2015/11/16 01:31:47 khorben Exp $
+# $NetBSD: Makefile,v 1.2166 2015/11/16 02:05:53 khorben Exp $
 #
 
 COMMENT=	Development utilities
@@ -81,6 +81,7 @@ SUBDIR+=	bmake
 SUBDIR+=	bmkdep
 SUBDIR+=	boa-constructor
 SUBDIR+=	boehm-gc
+SUBDIR+=	bokken
 SUBDIR+=	boost-build
 SUBDIR+=	boost-docs
 SUBDIR+=	boost-headers
