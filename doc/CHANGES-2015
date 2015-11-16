@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4611 2015/11/16 13:24:06 nros Exp $
+$NetBSD: CHANGES-2015,v 1.4612 2015/11/16 13:34:38 nros Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7823,3 +7823,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/opendnssec to 1.4.8.2 [he 2015-11-16]
 	Updated security/gnupg to 1.4.19nb1 [wiz 2015-11-16]
 	Updated graphics/libwebp to 0.4.4 [nros 2015-11-16]
+	Added graphics/gimp-webp version 0.2 [nros 2015-11-16]
