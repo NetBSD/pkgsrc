@@ -1,0 +1,13 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2015/11/16 13:33:14 nros Exp $
+This project only uses C.
+--- CMakeLists.txt.orig	2015-11-16 11:22:30.000000000 +0000
++++ CMakeLists.txt
+@@ -15,7 +15,7 @@
+ # along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ 
+ cmake_minimum_required(VERSION 2.8.12)
+-project(gimp-webp)
++project(gimp-webp C)
+ 
+ # Find the packages that contain the Gimp/WebP headers and libraries
+ find_package(PkgConfig REQUIRED)
