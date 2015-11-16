@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.66 2015/10/26 09:33:16 jperkin Exp $
+# $NetBSD: SunOS.mk,v 1.67 2015/11/16 15:59:59 jperkin Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -115,11 +115,7 @@ _OPSYS_SYSTEM_RPATH?=	/lib${LIBABISUFFIX}:/usr/lib${LIBABISUFFIX}
 _OPSYS_LIB_DIRS?=	/lib${LIBABISUFFIX} /usr/lib${LIBABISUFFIX}
 _OPSYS_INCLUDE_DIRS?=	/usr/include
 
-# Enable shlibs checks if readelf is set, not available by default.
-_OPSYS_CAN_CHECK_SHLIBS=	no
-.if !empty(TOOLS_PATH.readelf)
-_OPSYS_CAN_CHECK_SHLIBS=	yes
-.endif
+_OPSYS_CAN_CHECK_SHLIBS=	yes # requires readelf
 
 # check for maximum command line length and set it in configure's environment,
 # to avoid a test required by the libtool script that takes forever.
