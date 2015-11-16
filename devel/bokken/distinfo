@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/11/16 02:05:09 khorben Exp $
+
+SHA1 (bokken-1.8.tar.gz) = 46f033a854dd02e26af09e878dff3e1b6c128309
+RMD160 (bokken-1.8.tar.gz) = 6fa15604986f3dfb830cc2d08aa03ba6235bba3e
+Size (bokken-1.8.tar.gz) = 1138240 bytes
