@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/11/16 17:35:59 leot Exp $
+
+SHA1 (construct-2.5.2.tar.gz) = d23f17d3c6afe2e91aa3b54f1a28b4057b9a2094
+RMD160 (construct-2.5.2.tar.gz) = 0c75f72cb06a4abd039499cf216a2e66fd921192
+SHA512 (construct-2.5.2.tar.gz) = dbfa28f58821811fa28ef170818d74212e76389a017c4073acd24025ace292285828506cb44387ff07c1c05ae70766a3a0679baea25deb3b0dcc31c85b24340b
+Size (construct-2.5.2.tar.gz) = 58373 bytes
