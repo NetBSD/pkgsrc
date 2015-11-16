@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2014/09/27 19:41:06 pettai Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/11/16 10:09:08 he Exp $
 bin/ods-getconf
 bin/ods-hsmspeed
 bin/ods-hsmutil
@@ -41,6 +41,8 @@ share/opendnssec/enforcerstate.rng
 share/opendnssec/kasp.rnc
 share/opendnssec/kasp.rng
 share/opendnssec/kasp2html.xsl
+share/opendnssec/migrate_1_4_8.mysql
+share/opendnssec/migrate_1_4_8.sqlite3
 share/opendnssec/migrate_adapters_1.mysql
 share/opendnssec/migrate_adapters_1.sqlite3
 share/opendnssec/migrate_id_mysql.pl
