@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/10/14 20:17:39 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2015/11/17 10:19:40 wiz Exp $
 
 GCC_PKGNAME=		gcc5
 .include		"version.mk"
@@ -82,7 +82,12 @@ CONFIGURE_ARGS+=	--enable-languages=${LANGS:Q}
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--enable-long-long
 CONFIGURE_ARGS+=	--with-local-prefix=${GCC_PREFIX:Q}
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-*) && ${PKGSRC_USE_SSP:Uno} != "no"
+# on NetBSD with stack protector, use the native SSP code in libc
+CONFIGURE_ARGS+=	--disable-libssp
+.else
 CONFIGURE_ARGS+=	--enable-libssp
+.endif
 CONFIGURE_ARGS+=	--enable-threads=posix
 CONFIGURE_ARGS+=	--with-boot-ldflags=${BOOT_LDFLAGS:Q}
 .if ${OPSYS} == "NetBSD"
@@ -154,7 +159,7 @@ pre-test:
 post-test:
 	${RUN} cd ${WRKSRC} && cd ${OBJDIR} &&		\
 	${SHELL} ${WRKSRC}/contrib/test_summary >${WRKDIR}/test_summary.log
-	@${INFO_MSG} "Test summary are available in ${WRKDIR}/test_summary.log"
+	${INFO_MSG} "Test summary are available in ${WRKDIR}/test_summary.log"
 
 post-install:
 	${TEST} -f ${DESTDIR}${GCC_PREFIX}/bin/cc || \
