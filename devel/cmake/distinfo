@@ -1,22 +1,16 @@
-$NetBSD: distinfo,v 1.80 2015/11/03 03:27:19 agc Exp $
+$NetBSD: distinfo,v 1.81 2015/11/17 12:12:11 wiz Exp $
 
-SHA1 (cmake-3.3.2.tar.gz) = 85f4debf7406bb2a436a302bfd51ada2b4e43719
-RMD160 (cmake-3.3.2.tar.gz) = c7d3b8895e2e143b7e1019477764370535917dca
-SHA512 (cmake-3.3.2.tar.gz) = 01bc0e6ca52a6836ef57360fb38dd92a4575bfa37bfe9625645db77fefd0c170383cfb07b61c6283bde96738ce1a5e18cb7569e7e0b7c98d4b99e86305c50180
-Size (cmake-3.3.2.tar.gz) = 6578184 bytes
+SHA1 (cmake-3.4.0.tar.gz) = 986ac16b09dfa8a667c3b5da58f1ab5fe03206e8
+RMD160 (cmake-3.4.0.tar.gz) = 95d3d0cd86e17c249459975eb9b293a5075ae87a
+SHA512 (cmake-3.4.0.tar.gz) = 3600faa8475840e350954c8273829c1fb6dc63984860455b792b520e20a8fd9864c96d7afd6b42a6937624edf49b73c8807aa230a3ee9c24aa7aec136022bc90
+Size (cmake-3.4.0.tar.gz) = 6719859 bytes
 SHA1 (patch-CMakeLists.txt) = ae722c41e0d9a1396fe80f1000266a33e406e2f6
 SHA1 (patch-Modules_FindX11.cmake) = 124a2d51155cb4455e8b829dc74598cbd50a4e1c
 SHA1 (patch-Modules_Platform_SCO__SV.cmake) = 3ed230b3a06ea693812db8f57bc73aebec12b99f
-SHA1 (patch-Modules_Platform_SunOS.cmake) = 7a53ae3c902dd69ee22ef9fe0ae2a022d5284f16
-SHA1 (patch-Source_CursesDialog_cmCursesLongMessageForm.cxx) = 9b31c475571bb9a32cae8e165fa50ee6b7efd00b
-SHA1 (patch-Source_CursesDialog_cmCursesMainForm.cxx) = 2dff7b23d95cf54fb47dc8e8c61382ad7f9b2864
-SHA1 (patch-Source_CursesDialog_cmCursesStringWidget.cxx) = 04f7dedd281300bda9eb18a24f356c842f21b0ef
-SHA1 (patch-Source_CursesDialog_cmCursesWidget.cxx) = ffc07666acd449f2e822672f7540ce4bfa85ed5f
 SHA1 (patch-Source_cmELF.cxx) = 5eb9dc0b3567b5685596ddf0a03ca8e5c76e6f92
-SHA1 (patch-Source_kwsys_SystemInformation.cxx) = e259da70601cf1b4641f253de3d4f3aaec5e68f6
+SHA1 (patch-Source_kwsys_SystemInformation.cxx) = 5e8c8ff7875c329e48c54ee03570ea4a6d52953a
 SHA1 (patch-Source_kwsys_SystemTools.cxx) = 634348b9bc8ccf8c72f23837baa6ba0bcacf5961
 SHA1 (patch-Utilities_KWIML_CMakeLists.txt) = 4e8cef0eab2ad8cb27cd7076e077bb5e7425a95c
-SHA1 (patch-Utilities_cmjsoncpp_src_lib__json_json__writer.cpp) = 52c4cb0e8f097ada5185d1172bced3fbfc159104
 SHA1 (patch-aa) = bab24334e025b7c1bf7caa2e69d6a439cc421ea9
 SHA1 (patch-ab) = d1b39bdcd654f2a4fc63463cd20de656cce3cf8f
 SHA1 (patch-ac) = b5cedc6a2354beaf08e06d416c150154a7dc1f05
