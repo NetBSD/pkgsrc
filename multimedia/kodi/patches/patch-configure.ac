@@ -1,0 +1,38 @@
+$NetBSD: patch-configure.ac,v 1.1 2015/11/17 14:56:07 jmcneill Exp $
+
+--- configure.ac.orig	2015-10-19 06:31:15.000000000 +0000
++++ configure.ac
+@@ -641,6 +641,23 @@ case $host in
+      ARCH="x86_64-freebsd"
+      MAKE="gmake"
+      ;;
++  i386-*-netbsd*)
++     ARCH="x86-netbsd"
++     MAKE="gmake"
++     ;;
++  amd64-*-netbsd*)
++     ARCH="x86_64-netbsd"
++     MAKE="gmake"
++     ;;
++  armv6-*-netbsd*)
++     ARCH="arm-netbsd"
++     MAKE="gmake"
++     ;;
++  armv7-*-netbsd*)
++     ARCH="arm-netbsd"
++     MAKE="gmake"
++     use_neon=yes
++     ;;
+   arm-apple-darwin*)
+      use_joystick=no
+      use_neon=yes
+@@ -1540,6 +1557,9 @@ if test "x$use_samba" != "xno"; then
+   USE_LIBSMBCLIENT=1
+ fi
+ 
++# libossaudio
++AC_CHECK_LIB([ossaudio], [main], [LIBS="$LIBS -lossaudio"])
++
+ # libnfs
+ if test "$use_libnfs" != "no"; then
+   AC_CHECK_HEADERS([nfsc/libnfs.h],,
