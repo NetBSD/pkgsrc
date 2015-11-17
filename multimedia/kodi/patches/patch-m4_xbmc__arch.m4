@@ -1,4 +1,4 @@
-$NetBSD: patch-m4_xbmc__arch.m4,v 1.1 2015/11/17 14:56:07 jmcneill Exp $
+$NetBSD: patch-m4_xbmc__arch.m4,v 1.2 2015/11/17 16:43:10 christos Exp $
 
 --- m4/xbmc_arch.m4.orig	2015-10-19 06:31:15.000000000 +0000
 +++ m4/xbmc_arch.m4
@@ -9,7 +9,7 @@ $NetBSD: patch-m4_xbmc__arch.m4,v 1.1 2015/11/17 14:56:07 jmcneill Exp $
 +  i386-*-netbsd*)
 +     AC_SUBST(NATIVE_ARCH_DEFINES, "-DTARGET_POSIX -DTARGET_NETBSD -D_LINUX")
 +     ;;
-+  amd64-*-netbsd*)
++  x86_64-*-netbsd*)
 +     AC_SUBST(NATIVE_ARCH_DEFINES, "-DTARGET_POSIX -DTARGET_NETBSD -D_LINUX")
 +     ;;
 +  armv6-*-netbsd*|armv7-*-netbsd*)
@@ -25,7 +25,7 @@ $NetBSD: patch-m4_xbmc__arch.m4,v 1.1 2015/11/17 14:56:07 jmcneill Exp $
 +  i386-*-netbsd*)
 +     AC_SUBST(ARCH_DEFINES, "-DTARGET_POSIX -DTARGET_NETBSD -D_LINUX")
 +     ;;
-+  amd64-*-netbsd*)
++  x86_64-*-netbsd*)
 +     AC_SUBST(ARCH_DEFINES, "-DTARGET_POSIX -DTARGET_NETBSD -D_LINUX")
 +     ;;
 +  armv6-*-netbsd*|armv7-*-netbsd*)
