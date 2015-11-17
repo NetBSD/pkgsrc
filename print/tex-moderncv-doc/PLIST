@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2015/11/17 20:25:31 nros Exp $
+share/texmf-dist/doc/latex/moderncv/CHANGELOG
+share/texmf-dist/doc/latex/moderncv/KNOWN_BUGS
+share/texmf-dist/doc/latex/moderncv/README
+share/texmf-dist/doc/latex/moderncv/examples/Makefile
+share/texmf-dist/doc/latex/moderncv/examples/picture.eps
+share/texmf-dist/doc/latex/moderncv/examples/picture.jpg
+share/texmf-dist/doc/latex/moderncv/examples/publications.bib
+share/texmf-dist/doc/latex/moderncv/examples/template-es.pdf
+share/texmf-dist/doc/latex/moderncv/examples/template-es.tex
+share/texmf-dist/doc/latex/moderncv/examples/template-multibib.pdf
+share/texmf-dist/doc/latex/moderncv/examples/template-multibib.tex
+share/texmf-dist/doc/latex/moderncv/examples/template-zh.pdf
+share/texmf-dist/doc/latex/moderncv/examples/template-zh.tex
+share/texmf-dist/doc/latex/moderncv/examples/template.tex
+share/texmf-dist/doc/latex/moderncv/examples/template_banking_red-fullrules-center.pdf
+share/texmf-dist/doc/latex/moderncv/examples/template_banking_red-norules.pdf
+share/texmf-dist/doc/latex/moderncv/examples/template_banking_red-shortrules-right.pdf
+share/texmf-dist/doc/latex/moderncv/examples/template_banking_red.pdf
+share/texmf-dist/doc/latex/moderncv/examples/template_casual_orange-left.pdf
+share/texmf-dist/doc/latex/moderncv/examples/template_casual_orange.pdf
+share/texmf-dist/doc/latex/moderncv/examples/template_classic_green-right.pdf
+share/texmf-dist/doc/latex/moderncv/examples/template_classic_green.pdf
+share/texmf-dist/doc/latex/moderncv/examples/template_fancy_purple.pdf
+share/texmf-dist/doc/latex/moderncv/examples/template_oldstyle_grey.pdf
