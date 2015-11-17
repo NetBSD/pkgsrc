@@ -1,4 +1,4 @@
-$NetBSD: patch-xbmc_utils_CPUInfo.cpp,v 1.2 2015/11/17 18:14:07 jmcneill Exp $
+$NetBSD: patch-xbmc_utils_CPUInfo.cpp,v 1.3 2015/11/17 18:15:33 jmcneill Exp $
 
 --- xbmc/utils/CPUInfo.cpp.orig	2015-10-19 06:31:15.000000000 +0000
 +++ xbmc/utils/CPUInfo.cpp
@@ -50,7 +50,7 @@ $NetBSD: patch-xbmc_utils_CPUInfo.cpp,v 1.2 2015/11/17 18:14:07 jmcneill Exp $
 +    size_t len = sizeof(flag);
 +    if (sysctlbyname("machdep.neon_present", &flag, &len, NULL, 0) == 0)
 +    {
-+      has_neon = 1;
++      has_neon = flag;
 +    }
 +  }
 +
