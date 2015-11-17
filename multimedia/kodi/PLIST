@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/11/17 14:56:07 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/11/17 15:44:50 jmcneill Exp $
 bin/kodi
 bin/kodi-standalone
 bin/xbmc
@@ -31,9 +31,6 @@ lib/kodi/addons/library.kodi.guilib/libKODI_guilib-arm-netbsd.so
 lib/kodi/addons/library.xbmc.addon/libXBMC_addon-arm-netbsd.so
 lib/kodi/addons/library.xbmc.codec/libXBMC_codec-arm-netbsd.so
 lib/kodi/addons/library.xbmc.pvr/libXBMC_pvr-arm-netbsd.so
-lib/kodi/addons/screensaver.rsxs.euphoria/Euphoria.xbs
-lib/kodi/addons/screensaver.rsxs.plasma/Plasma.xbs
-lib/kodi/addons/screensaver.rsxs.solarwinds/Solarwinds.xbs
 lib/kodi/addons/visualization.fishbmc/fishbmc.vis
 lib/kodi/addons/visualization.glspectrum/opengl_spectrum.vis
 lib/kodi/addons/visualization.waveform/Waveform.vis
