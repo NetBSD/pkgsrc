@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4625 2015/11/17 11:58:44 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4626 2015/11/17 11:59:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7837,3 +7837,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/py-ipaddress to 1.0.15 [wiz 2015-11-17]
 	Updated devel/liblangtag to 0.5.8 [wiz 2015-11-17]
 	Updated sysutils/mc to 4.8.15 [wiz 2015-11-17]
+	Updated textproc/xmlto to 0.0.27 [wiz 2015-11-17]
