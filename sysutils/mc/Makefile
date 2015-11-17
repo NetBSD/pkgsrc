@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.100 2015/09/20 21:54:39 tnn Exp $
+# $NetBSD: Makefile,v 1.101 2015/11/17 11:58:32 wiz Exp $
 
-DISTNAME=	mc-4.8.14
+DISTNAME=	mc-4.8.15
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.midnight-commander.org/downloads/
 EXTRACT_SUFX=	.tar.bz2
@@ -59,6 +59,6 @@ CONF_FILES+=	${EGDIR}/${i} ${PKG_SYSCONFDIR}/mc/${i}
 .endfor
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.14.0
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.26.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

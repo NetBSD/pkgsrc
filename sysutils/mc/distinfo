@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.24 2015/11/04 01:32:20 agc Exp $
+$NetBSD: distinfo,v 1.25 2015/11/17 11:58:32 wiz Exp $
 
-SHA1 (mc-4.8.14.tar.bz2) = ff83beaca4777fd888b23999664bfa7d0fc584cb
-RMD160 (mc-4.8.14.tar.bz2) = 6d08797e08368cd11dea363d13179d39027c4a72
-SHA512 (mc-4.8.14.tar.bz2) = 69e1e48e7545b75cdfbcf24f5ade72c8ce92ad3d1410a91b847720dae2b7d5405f2f187337279da592482d0cc3dd2e1883ebd37b0b7ce0389a7821171a814b9a
-Size (mc-4.8.14.tar.bz2) = 3213271 bytes
+SHA1 (mc-4.8.15.tar.bz2) = 896e703c394702c6cbadbd343c27174b7c55fefd
+RMD160 (mc-4.8.15.tar.bz2) = d89d15ae1a87053eed9718a3f2b829509589ae9c
+SHA512 (mc-4.8.15.tar.bz2) = d5eb35d5ca25cb5b19d512adc15f11d23035b59c68977a08bdacadc39a3d49cc9c9fe659fd4ca0bb17f8ab7e0b71574cbaac9dbc1935f64f0534a28d60eaffe1
+Size (mc-4.8.15.tar.bz2) = 3223744 bytes
 SHA1 (patch-ac) = d01357b685acd8e863510248ed7519ae2821757f
 SHA1 (patch-ad) = 4484b91511cf5bac73f4ae940988d46239e2cd95
 SHA1 (patch-src_vfs_extfs_helpers_Makefile.in) = c5d4735ce9548714731fdb1227e1acac78f11332
