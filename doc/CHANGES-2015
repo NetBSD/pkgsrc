@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4629 2015/11/17 15:49:23 christos Exp $
+$NetBSD: CHANGES-2015,v 1.4630 2015/11/17 15:59:53 he Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7841,3 +7841,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/cmake to 3.4.0 [wiz 2015-11-17]
 	Added multimedia/kodi version 15.2 [jmcneill 2015-11-17]
 	Updated security/libssh to 0.7.2 [christos 2015-11-17]
+	Updated wm/bbkeys09 to 0.9.1 [he 2015-11-17]
