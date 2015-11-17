@@ -1,4 +1,6 @@
-$NetBSD: patch-src_Config.cpp,v 1.1 2011/11/25 22:21:28 joerg Exp $
+$NetBSD: patch-src_Config.cpp,v 1.2 2015/11/17 15:59:13 he Exp $
+
+Include strings.h too.
 
 --- src/Config.cpp.orig	2011-11-25 16:58:41.000000000 +0000
 +++ src/Config.cpp
