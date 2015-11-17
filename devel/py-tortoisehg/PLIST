@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2015/08/14 18:00:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/11/17 11:42:39 wiz Exp $
 bin/thg
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/tortoisehg/__init__.py
@@ -511,6 +511,7 @@ share/locale/pt_BR/LC_MESSAGES/tortoisehg.mo
 share/locale/ru/LC_MESSAGES/tortoisehg.mo
 share/locale/sr/LC_MESSAGES/tortoisehg.mo
 share/locale/sv/LC_MESSAGES/tortoisehg.mo
+share/locale/th/LC_MESSAGES/tortoisehg.mo
 share/locale/tr/LC_MESSAGES/tortoisehg.mo
 share/locale/uk/LC_MESSAGES/tortoisehg.mo
 share/locale/zh_CN/LC_MESSAGES/tortoisehg.mo
