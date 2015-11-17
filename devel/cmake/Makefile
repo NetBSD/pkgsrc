@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.107 2015/10/27 09:04:38 jperkin Exp $
+# $NetBSD: Makefile,v 1.108 2015/11/17 12:12:11 wiz Exp $
 
-DISTNAME=	cmake-${CMAKE_API}.2
-PKGREVISION=	1
+DISTNAME=	cmake-${CMAKE_API}.0
 CATEGORIES=	devel
 MASTER_SITES=	http://www.cmake.org/files/v${CMAKE_API}/
 
-CMAKE_API=	3.3
+CMAKE_API=	3.4
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cmake.org/
@@ -64,7 +63,7 @@ pre-configure:
 	    ${WRKSRC}/Modules/Platform/SunOS-Clang-${lang}.cmake
 .endfor
 
-INCOMPAT_CURSES=	NetBSD-[0-5].*
+INCOMPAT_CURSES=	NetBSD-[0-5].*-*
 
 BUILDLINK_API_DEPENDS.libarchive+=	libarchive>=3.0.0
 .include "../../archivers/libarchive/buildlink3.mk"
