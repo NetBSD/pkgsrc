@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4622 2015/11/17 11:52:22 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4623 2015/11/17 11:53:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7834,3 +7834,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-mercurial to 3.6.1 [wiz 2015-11-17]
 	Updated devel/py-tortoisehg to 3.6 [wiz 2015-11-17]
 	Updated textproc/py-lxml to 3.5.0 [wiz 2015-11-17]
+	Updated net/py-ipaddress to 1.0.15 [wiz 2015-11-17]
