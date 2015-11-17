@@ -1,5 +1,5 @@
---- CMakeLists.txt.orig	2013-01-30 11:46:25.000000000 +0000
-+++ CMakeLists.txt	2013-01-30 11:45:52.000000000 +0000
+--- CMakeLists.txt.orig	2015-09-16 02:44:35.000000000 -0400
++++ CMakeLists.txt	2015-11-17 10:44:55.000000000 -0500
 @@ -36,8 +36,8 @@
  include(CPackConfig.cmake)
  
@@ -9,5 +9,5 @@
 +#include(MacroEnsureOutOfSourceBuild)
 +#macro_ensure_out_of_source_build("${PROJECT_NAME} requires an out of source build. Please create a separate build directory and run 'cmake /path/to/${PROJECT_NAME} [options]' there.")
  
- # add macros
- include(MacroAddPlugin)
+ # search for libraries
+ if (WITH_ZLIB)
