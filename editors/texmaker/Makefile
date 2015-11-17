@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.56 2015/10/10 01:58:07 ryoon Exp $
+# $NetBSD: Makefile,v 1.57 2015/11/17 20:07:39 nros Exp $
 
-DISTNAME=	texmaker-4.4.1
-PKGREVISION=	9
+DISTNAME=	texmaker-4.5
 CATEGORIES=	editors
 MASTER_SITES=	http://www.xm1math.net/texmaker/
 EXTRACT_SUFX=	.tar.bz2
+EXTRACT_USING=	bsdtar
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.xm1math.net/texmaker/
