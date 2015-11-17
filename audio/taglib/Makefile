@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2013/10/24 06:08:44 obache Exp $
+# $NetBSD: Makefile,v 1.34 2015/11/17 10:43:42 wiz Exp $
 
-DISTNAME=	taglib-1.9.1
+DISTNAME=	taglib-1.10
 CATEGORIES=	audio
 MASTER_SITES=	http://taglib.github.io/releases/
 
