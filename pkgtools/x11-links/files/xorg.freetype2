@@ -1,4 +1,4 @@
-# $NetBSD: xorg.freetype2,v 1.22 2015/11/07 09:16:08 tron Exp $
+# $NetBSD: xorg.freetype2,v 1.23 2015/11/17 11:18:38 sevan Exp $
 #
 bin/freetype-config
 include/freetype2/config/ftconfig.h
@@ -22,6 +22,7 @@ include/freetype2/freetype/ftbdf.h
 include/freetype2/freetype/ftbitmap.h
 include/freetype2/freetype/ftbzip2.h
 include/freetype2/freetype/ftcache.h
+include/freetype2/freetype/ftcffdrv.h
 include/freetype2/freetype/ftchapters.h
 include/freetype2/freetype/ftcid.h
 include/freetype2/freetype/fterrdef.h
@@ -50,6 +51,7 @@ include/freetype2/freetype/ftstroke.h
 include/freetype2/freetype/ftsynth.h
 include/freetype2/freetype/ftsystem.h
 include/freetype2/freetype/fttrigon.h
+include/freetype2/freetype/ftttdrv.h
 include/freetype2/freetype/fttypes.h
 include/freetype2/freetype/ftwinfnt.h
 include/freetype2/freetype/ftxf86.h
@@ -123,6 +125,7 @@ lib/libfreetype.so.20.0
 lib/libfreetype.so.22.0
 lib/libfreetype.so.23.0
 lib/libfreetype.so.24.0
+lib/libfreetype.so.24.1
 lib/libfreetype.so.6
 lib/libfreetype.so.6.3.17
 lib/libfreetype.so.7
