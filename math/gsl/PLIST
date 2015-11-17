@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2015/11/06 11:19:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.20 2015/11/17 10:42:12 wiz Exp $
 bin/gsl-config
 bin/gsl-histogram
 bin/gsl-randist
@@ -84,6 +84,7 @@ include/gsl/gsl_monte_plain.h
 include/gsl/gsl_monte_vegas.h
 include/gsl/gsl_multifit.h
 include/gsl/gsl_multifit_nlin.h
+include/gsl/gsl_multilarge.h
 include/gsl/gsl_multimin.h
 include/gsl/gsl_multiroots.h
 include/gsl/gsl_multiset.h
