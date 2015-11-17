@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/02/01 13:33:49 is Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/11/17 15:48:23 christos Exp $
 lib/pkgconfig/libssh.pc
 lib/pkgconfig/libssh_threads.pc
 include/libssh/callbacks.h
@@ -8,9 +8,9 @@ include/libssh/legacy.h
 include/libssh/sftp.h
 include/libssh/server.h
 @comment, XXX PLIST lib handling seems to be broke
-lib/libssh.so.4.2.4
+lib/libssh.so.4.4.0
 lib/libssh.so.4
 lib/libssh.so
-lib/libssh_threads.so.4.2.4
+lib/libssh_threads.so.4.4.0
 lib/libssh_threads.so.4
 lib/libssh_threads.so
