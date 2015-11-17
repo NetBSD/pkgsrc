@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4632 2015/11/17 20:08:19 nros Exp $
+$NetBSD: CHANGES-2015,v 1.4633 2015/11/17 20:27:02 nros Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7845,3 +7845,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/GraphicsMagick to 1.3.23 [adam 2015-11-17]
 	Updated graphics/p5-GraphicsMagick to 1.3.23 [adam 2015-11-17]
 	Updated editors/texmaker to 4.5 [nros 2015-11-17]
+	Updated print/tex-moderncv to 2.0.0 [nros 2015-11-17]
