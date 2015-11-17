@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4635 2015/11/17 20:35:28 nros Exp $
+$NetBSD: CHANGES-2015,v 1.4636 2015/11/17 22:58:29 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7847,3 +7847,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated editors/texmaker to 4.5 [nros 2015-11-17]
 	Added print/tex-moderncv to 2.0.0 [nros 2015-11-17]
 	Added print/tex-moderncv-doc to 2.0.0 [nros 2015-11-17]
+	Updated x11/gtk3 to 3.16.7 [prlw1 2015-11-17]
