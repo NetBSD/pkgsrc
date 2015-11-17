@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.650 2015/09/12 16:50:00 joerg Exp $
+# $NetBSD: Makefile,v 1.651 2015/11/17 20:25:31 nros Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -797,6 +797,8 @@ SUBDIR+=	tex-mkpattern
 SUBDIR+=	tex-mkpattern-doc
 SUBDIR+=	tex-mltex
 SUBDIR+=	tex-mltex-doc
+SUBDIR+=	tex-moderncv
+SUBDIR+=	tex-moderncv-doc
 SUBDIR+=	tex-moreverb
 SUBDIR+=	tex-moreverb-doc
 SUBDIR+=	tex-mparhack
