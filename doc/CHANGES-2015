@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4627 2015/11/17 12:12:23 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4628 2015/11/17 14:58:23 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7839,3 +7839,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated sysutils/mc to 4.8.15 [wiz 2015-11-17]
 	Updated textproc/xmlto to 0.0.27 [wiz 2015-11-17]
 	Updated devel/cmake to 3.4.0 [wiz 2015-11-17]
+	Added multimedia/kodi version 15.2 [jmcneill 2015-11-17]
