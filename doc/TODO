@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15111 2015/11/17 11:53:55 wiz Exp $
+$NetBSD: TODO,v 1.15112 2015/11/17 11:55:49 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1033,7 +1033,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libkface-4.12.0
 	o libkgeomap-4.12.0
 	o libkvkontakte-4.12.0
-	o liblangtag-0.5.8
 	o libmatheval-1.1.11
 	o libmcs-0.7.2
 	o libmediawiki-4.12.0
