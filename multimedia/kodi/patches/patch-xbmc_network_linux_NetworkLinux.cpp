@@ -1,4 +1,4 @@
-$NetBSD: patch-xbmc_network_linux_NetworkLinux.cpp,v 1.1 2015/11/17 14:56:07 jmcneill Exp $
+$NetBSD: patch-xbmc_network_linux_NetworkLinux.cpp,v 1.2 2015/11/17 16:41:26 jmcneill Exp $
 
 --- xbmc/network/linux/NetworkLinux.cpp.orig	2015-10-19 06:31:15.000000000 +0000
 +++ xbmc/network/linux/NetworkLinux.cpp
@@ -57,7 +57,24 @@ $NetBSD: patch-xbmc_network_linux_NetworkLinux.cpp,v 1.1 2015/11/17 14:56:07 jmc
  
     // Query the list of interfaces.
     struct ifaddrs *list;
-@@ -547,7 +549,7 @@ bool CNetworkLinux::PingHost(unsigned lo
+@@ -507,6 +509,16 @@ std::vector<std::string> CNetworkLinux::
+ 
+   if (!result.size())
+        CLog::Log(LOGWARNING, "Unable to determine nameserver");
++#elif defined(TARGET_NETBSD)
++   struct __res_state state;
++   memset(&state, 0, sizeof(state));
++   res_ninit(&state);
++   
++   for (int i = 0; i < state.nscount; i ++)
++   {
++      std::string ns = inet_ntoa(((struct sockaddr_in *)&state.nsaddr_list[i])->sin_addr);
++      result.push_back(ns);
++   }
+ #else
+    res_init();
+ 
+@@ -547,7 +559,7 @@ bool CNetworkLinux::PingHost(unsigned lo
  
  #if defined (TARGET_DARWIN_IOS) // no timeout option available
    sprintf(cmd_line, "ping -c 1 %s", inet_ntoa(host_ip));
@@ -66,7 +83,7 @@ $NetBSD: patch-xbmc_network_linux_NetworkLinux.cpp,v 1.1 2015/11/17 14:56:07 jmc
    sprintf(cmd_line, "ping -c 1 -t %d %s", timeout_ms / 1000 + (timeout_ms % 1000) != 0, inet_ntoa(host_ip));
  #else
    sprintf(cmd_line, "ping -c 1 -w %d %s", timeout_ms / 1000 + (timeout_ms % 1000) != 0, inet_ntoa(host_ip));
-@@ -568,7 +570,7 @@ bool CNetworkLinux::PingHost(unsigned lo
+@@ -568,7 +580,7 @@ bool CNetworkLinux::PingHost(unsigned lo
    return result == 0;
  }
  
