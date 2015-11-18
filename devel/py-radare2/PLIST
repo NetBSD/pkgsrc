@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2015/11/16 01:31:10 khorben Exp $
-lib/python2.7/site-packages/r2/__init__.py
-lib/python2.7/site-packages/r2/_r_asm.so
-lib/python2.7/site-packages/r2/_r_bin.so
-lib/python2.7/site-packages/r2/_r_core.so
-lib/python2.7/site-packages/r2/r_asm.py
-lib/python2.7/site-packages/r2/r_bin.py
-lib/python2.7/site-packages/r2/r_core.py
+@comment $NetBSD: PLIST,v 1.2 2015/11/18 20:19:15 khorben Exp $
+${PYSITELIB}/r2/__init__.py
+${PYSITELIB}/r2/_r_asm.so
+${PYSITELIB}/r2/_r_bin.so
+${PYSITELIB}/r2/_r_core.so
+${PYSITELIB}/r2/r_asm.py
+${PYSITELIB}/r2/r_bin.py
+${PYSITELIB}/r2/r_core.py
