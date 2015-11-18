@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1 2015/01/28 18:46:53 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/11/18 21:31:14 szptvlfn Exp $
 lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/HShaskell-src-exts-${PKGVERSION}.o
 lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts.hi
 lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/Annotated.hi
 lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/Annotated/Build.hi
+lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/Annotated/Comments.hi
 lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/Annotated/ExactPrint.hi
 lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/Annotated/Fixity.hi
+lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/Annotated/Parser.hi
 lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/Annotated/Simplify.hi
 lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/Annotated/Syntax.hi
 lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/Build.hi
@@ -26,8 +28,10 @@ lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/libHShaskell-src-exts-${PK
 lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/haskell-src-exts-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/haskell-src-exts-${PKGVERSION}/html/Language-Haskell-Exts-Annotated-Build.html
+${PLIST.doc}share/doc/haskell-src-exts-${PKGVERSION}/html/Language-Haskell-Exts-Annotated-Comments.html
 ${PLIST.doc}share/doc/haskell-src-exts-${PKGVERSION}/html/Language-Haskell-Exts-Annotated-ExactPrint.html
 ${PLIST.doc}share/doc/haskell-src-exts-${PKGVERSION}/html/Language-Haskell-Exts-Annotated-Fixity.html
+${PLIST.doc}share/doc/haskell-src-exts-${PKGVERSION}/html/Language-Haskell-Exts-Annotated-Parser.html
 ${PLIST.doc}share/doc/haskell-src-exts-${PKGVERSION}/html/Language-Haskell-Exts-Annotated-Simplify.html
 ${PLIST.doc}share/doc/haskell-src-exts-${PKGVERSION}/html/Language-Haskell-Exts-Annotated-Syntax.html
 ${PLIST.doc}share/doc/haskell-src-exts-${PKGVERSION}/html/Language-Haskell-Exts-Annotated.html
@@ -78,8 +82,10 @@ ${PLIST.doc}share/doc/haskell-src-exts-${PKGVERSION}/html/hslogo-16.png
 ${PLIST.doc}share/doc/haskell-src-exts-${PKGVERSION}/html/index-frames.html
 ${PLIST.doc}share/doc/haskell-src-exts-${PKGVERSION}/html/index.html
 ${PLIST.doc}share/doc/haskell-src-exts-${PKGVERSION}/html/mini_Language-Haskell-Exts-Annotated-Build.html
+${PLIST.doc}share/doc/haskell-src-exts-${PKGVERSION}/html/mini_Language-Haskell-Exts-Annotated-Comments.html
 ${PLIST.doc}share/doc/haskell-src-exts-${PKGVERSION}/html/mini_Language-Haskell-Exts-Annotated-ExactPrint.html
 ${PLIST.doc}share/doc/haskell-src-exts-${PKGVERSION}/html/mini_Language-Haskell-Exts-Annotated-Fixity.html
+${PLIST.doc}share/doc/haskell-src-exts-${PKGVERSION}/html/mini_Language-Haskell-Exts-Annotated-Parser.html
 ${PLIST.doc}share/doc/haskell-src-exts-${PKGVERSION}/html/mini_Language-Haskell-Exts-Annotated-Simplify.html
 ${PLIST.doc}share/doc/haskell-src-exts-${PKGVERSION}/html/mini_Language-Haskell-Exts-Annotated-Syntax.html
 ${PLIST.doc}share/doc/haskell-src-exts-${PKGVERSION}/html/mini_Language-Haskell-Exts-Annotated.html
