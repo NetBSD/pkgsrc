@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2015/11/17 18:15:33 jmcneill Exp $
+$NetBSD: distinfo,v 1.7 2015/11/18 23:27:23 jmcneill Exp $
 
 SHA1 (15.2-Isengard.tar.gz) = 4acb4a60eadc7289f873cff5add31693b9520cba
 RMD160 (15.2-Isengard.tar.gz) = d81d3f15783b2b69920ea85d7e04f01872f2d85f
@@ -31,7 +31,7 @@ SHA1 (patch-xbmc_interfaces_python_XBPython.cpp) = 0ad33ef736f12b6aca8667da5d509
 SHA1 (patch-xbmc_linux_LinuxTimezone.cpp) = 18974ed63d1ac35a4060ea3d01826120b016c06e
 SHA1 (patch-xbmc_linux_PlatformDefs.h) = 56d70fce18807b10cb8d42ac0feca94d0c113c57
 SHA1 (patch-xbmc_linux_XFileUtils.cpp) = 4c03a869957ca501adaa5dc0d966cfd043e0d5c9
-SHA1 (patch-xbmc_linux_XMemUtils.cpp) = a225fd8d90e58c12295c47126c76ded36a5bcec5
+SHA1 (patch-xbmc_linux_XMemUtils.cpp) = 2c8fb8f80feb4d5f50518d9bd6fcc69519674658
 SHA1 (patch-xbmc_network_linux_NetworkLinux.cpp) = febc3a9791d0c087261ccbbecdcffcaa4793e333
 SHA1 (patch-xbmc_peripherals_bus_PeripheralBusUSB.h) = e3682d8fbfad9bca11a706c2ca3a77f0a7751e3a
 SHA1 (patch-xbmc_peripherals_bus_linux_PeripheralBusUSBLibUSB.cpp) = 040678e8379f6797e8276d9787d60fcdb24e17c9
@@ -42,11 +42,12 @@ SHA1 (patch-xbmc_storage_MediaManager.cpp) = 5a816d5c6b060a99aa498f6f9b62571873d
 SHA1 (patch-xbmc_system.h) = 10738c487ed6c2de066483cc077ad05037132da8
 SHA1 (patch-xbmc_system__gl.h) = e2b8e3d57c6d838020163cf56e8f868c959af937
 SHA1 (patch-xbmc_threads_platform_pthreads_ThreadImpl.cpp) = f8853a8ace422d9ab088be89b5562da552edcc7a
-SHA1 (patch-xbmc_utils_CPUInfo.cpp) = 79f044c36291886b1d32e80700ba3191aa93faf8
+SHA1 (patch-xbmc_utils_CPUInfo.cpp) = 292699f70c30c9462faea7c8bb2d2edb8836d226
 SHA1 (patch-xbmc_utils_CharsetConverter.cpp) = 420a1e39d24c38dca2a8702a22b8cf67ef04dd3f
 SHA1 (patch-xbmc_utils_Stopwatch.cpp) = fd2b8f7112e89ce164a0329ea3ee389f85705d1f
-SHA1 (patch-xbmc_utils_SystemInfo.cpp) = 751ca3390422387cea4dc0f240bb55eeb9e077a5
+SHA1 (patch-xbmc_utils_SystemInfo.cpp) = 444e0e34842f97660d521b9715c01fa4fe99a9f0
 SHA1 (patch-xbmc_utils_test_TestSystemInfo.cpp) = eeca9e097346f9f2c7f047f5906d6ffb75fd393b
 SHA1 (patch-xbmc_windowing_WinEvents.cpp) = 5e1c202214cd95671cc8bb503dd49080efd828f2
 SHA1 (patch-xbmc_windowing_WindowingFactory.h) = 736df0f1a0f3c7e9048481a58c15951bdea017f1
 SHA1 (patch-xbmc_windowing_X11_XRandR.cpp) = e0d03f225704019fb162022020d1d9ed72ed480a
+SHA1 (patch-xbmc_windows_GUIWindowSystemInfo.cpp) = 761af54a7728059356e14b15b55383d5a53c92a1
