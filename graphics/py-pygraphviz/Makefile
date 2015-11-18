@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/11/18 20:52:10 khorben Exp $
+# $NetBSD: Makefile,v 1.3 2015/11/18 21:48:19 khorben Exp $
 #
 
 VERS=		1.3.1
@@ -12,11 +12,8 @@ HOMEPAGE=	http://networkx.lanl.gov/pygraphviz/index.html
 COMMENT=	Python interface to the Graphviz package
 LICENSE=	original-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-
 PYDISTUTILSPKG=	yes
 
 .include "../../graphics/graphviz/buildlink3.mk"
-.include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
