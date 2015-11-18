@@ -1,4 +1,4 @@
-$NetBSD: patch-xbmc_utils_SystemInfo.cpp,v 1.1 2015/11/17 14:56:07 jmcneill Exp $
+$NetBSD: patch-xbmc_utils_SystemInfo.cpp,v 1.2 2015/11/18 23:27:23 jmcneill Exp $
 
 --- xbmc/utils/SystemInfo.cpp.orig	2015-10-19 06:31:15.000000000 +0000
 +++ xbmc/utils/SystemInfo.cpp
@@ -42,7 +42,18 @@ $NetBSD: patch-xbmc_utils_SystemInfo.cpp,v 1.1 2015/11/17 14:56:07 jmcneill Exp 
    osNameVer = GetOsName() + " " + GetOsVersion();
  #elif defined(TARGET_ANDROID)
    osNameVer = GetOsName() + " " + GetOsVersion() + " API level " +   StringUtils::Format("%d", CJNIBuild::SDK_INT);
-@@ -1251,6 +1251,8 @@ std::string CSysInfo::GetBuildTargetPlat
+@@ -992,6 +992,10 @@ const std::string& CSysInfo::GetKernelCp
+       std::string machine(un.machine);
+       if (machine.compare(0, 3, "arm", 3) == 0)
+         kernelCpuFamily = "ARM";
++#if defined(TARGET_NETBSD)
++      else if (machine.compare(0, 6, "evbarm", 6) == 0)
++        kernelCpuFamily = "ARM";
++#endif
+       else if (machine.compare(0, 4, "mips", 4) == 0)
+         kernelCpuFamily = "MIPS";
+       else if (machine.compare(0, 4, "i686", 4) == 0 || machine == "i386" || machine == "amd64" ||  machine.compare(0, 3, "x86", 3) == 0)
+@@ -1251,6 +1255,8 @@ std::string CSysInfo::GetBuildTargetPlat
    return "iOS";
  #elif defined(TARGET_FREEBSD)
    return "FreeBSD";
@@ -51,7 +62,7 @@ $NetBSD: patch-xbmc_utils_SystemInfo.cpp,v 1.1 2015/11/17 14:56:07 jmcneill Exp 
  #elif defined(TARGET_ANDROID)
    return "Android";
  #elif defined(TARGET_LINUX)
-@@ -1274,6 +1276,8 @@ std::string CSysInfo::GetBuildTargetPlat
+@@ -1274,6 +1280,8 @@ std::string CSysInfo::GetBuildTargetPlat
    return XSTR_MACRO(__IPHONE_OS_VERSION_MIN_REQUIRED);
  #elif defined(TARGET_FREEBSD)
    return XSTR_MACRO(__FreeBSD_version);
@@ -60,7 +71,7 @@ $NetBSD: patch-xbmc_utils_SystemInfo.cpp,v 1.1 2015/11/17 14:56:07 jmcneill Exp 
  #elif defined(TARGET_ANDROID)
    return "API level " XSTR_MACRO(__ANDROID_API__);
  #elif defined(TARGET_LINUX)
-@@ -1320,6 +1324,14 @@ std::string CSysInfo::GetBuildTargetPlat
+@@ -1320,6 +1328,14 @@ std::string CSysInfo::GetBuildTargetPlat
      return StringUtils::Format("version %d.%d-STABLE", major, minor);
  
    return StringUtils::Format("version %d.%d-CURRENT", major, minor);
