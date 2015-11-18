@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2015/09/01 21:33:27 markd Exp $
+# $NetBSD: Makefile,v 1.12 2015/11/18 09:53:05 markd Exp $
 
 DISTNAME=	collection-latexextra
-PKGNAME=	texlive-${DISTNAME}-2015pre5
+PKGNAME=	texlive-${DISTNAME}-2015pre6
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	37946
@@ -81,7 +81,7 @@ DEPENDS+=	tex-bezos-[0-9]*:../../print/tex-bezos
 # depend bigints
 # depend bizcard
 # depend blindtext
-# depend blkarray
+DEPENDS+=	tex-blkarray-[0-9]*:../../print/tex-blkarray
 DEPENDS+=	tex-block-[0-9]*:../../print/tex-block
 # depend blowup
 # depend bnumexpr
@@ -625,7 +625,7 @@ DEPENDS+=	tex-minted-[0-9]*:../../print/tex-minted
 # depend mlist
 # depend mmap
 # depend mnotes
-# depend moderncv
+DEPENDS+=	tex-moderncv-[0-9]*:../../print/tex-moderncv
 # depend moderntimeline
 # depend modref
 # depend modroman
