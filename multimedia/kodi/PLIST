@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2015/11/17 15:44:50 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.3 2015/11/18 01:14:18 christos Exp $
 bin/kodi
 bin/kodi-standalone
 bin/xbmc
@@ -27,10 +27,10 @@ include/kodi/xbmc_vis_dll.h
 include/kodi/xbmc_vis_types.h
 include/xbmc
 lib/kodi/addon-helpers.cmake
-lib/kodi/addons/library.kodi.guilib/libKODI_guilib-arm-netbsd.so
-lib/kodi/addons/library.xbmc.addon/libXBMC_addon-arm-netbsd.so
-lib/kodi/addons/library.xbmc.codec/libXBMC_codec-arm-netbsd.so
-lib/kodi/addons/library.xbmc.pvr/libXBMC_pvr-arm-netbsd.so
+lib/kodi/addons/library.kodi.guilib/libKODI_guilib-${MACHINE_CPU}-netbsd.so
+lib/kodi/addons/library.xbmc.addon/libXBMC_addon-${MACHINE_CPU}-netbsd.so
+lib/kodi/addons/library.xbmc.codec/libXBMC_codec-${MACHINE_CPU}-netbsd.so
+lib/kodi/addons/library.xbmc.pvr/libXBMC_pvr-${MACHINE_CPU}-netbsd.so
 lib/kodi/addons/visualization.fishbmc/fishbmc.vis
 lib/kodi/addons/visualization.glspectrum/opengl_spectrum.vis
 lib/kodi/addons/visualization.waveform/Waveform.vis
@@ -41,12 +41,12 @@ lib/kodi/kodi-config.cmake
 lib/kodi/kodi-xrandr
 lib/kodi/kodi.bin
 lib/kodi/prepare-env.cmake
-lib/kodi/system/ImageLib-arm-netbsd.so
-lib/kodi/system/hdhomerun-arm-netbsd.so
-lib/kodi/system/libcpluff-arm-netbsd.so
-lib/kodi/system/libexif-arm-netbsd.so
-lib/kodi/system/players/dvdplayer/libdvdcss-arm-netbsd.so
-lib/kodi/system/players/dvdplayer/libdvdnav-arm-netbsd.so
+lib/kodi/system/ImageLib-${MACHINE_CPU}-netbsd.so
+lib/kodi/system/hdhomerun-${MACHINE_CPU}-netbsd.so
+lib/kodi/system/libcpluff-${MACHINE_CPU}-netbsd.so
+lib/kodi/system/libexif-${MACHINE_CPU}-netbsd.so
+lib/kodi/system/players/dvdplayer/libdvdcss-${MACHINE_CPU}-netbsd.so
+lib/kodi/system/players/dvdplayer/libdvdnav-${MACHINE_CPU}-netbsd.so
 lib/kodi/xbmc-config.cmake
 lib/xbmc
 share/applications/kodi.desktop
