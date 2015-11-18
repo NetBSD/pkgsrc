@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2015/11/16 01:46:20 khorben Exp $
-${PYSITELIB}/pygraphviz-${PKGVERSION}-py2.7.egg-info/PKG-INFO
-${PYSITELIB}/pygraphviz-${PKGVERSION}-py2.7.egg-info/SOURCES.txt
-${PYSITELIB}/pygraphviz-${PKGVERSION}-py2.7.egg-info/dependency_links.txt
-${PYSITELIB}/pygraphviz-${PKGVERSION}-py2.7.egg-info/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2015/11/18 21:48:19 khorben Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/pygraphviz/__init__.py
 ${PYSITELIB}/pygraphviz/__init__.pyc
 ${PYSITELIB}/pygraphviz/__init__.pyo
