@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2013/02/01 16:47:51 is Exp $
+# $NetBSD: options.mk,v 1.2 2015/11/18 21:00:51 christos Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.${PKGNAME}
 PKG_OPTIONS_REQUIRED_GROUPS=	crypto
-PKG_OPTIONS_GROUP.crypto=	openssl gcrypt
+PKG_OPTIONS_GROUP.crypto=	openssl libgcrypt
 #PKG_SUPPORTED_OPTIONS=		compression
 PKG_SUGGESTED_OPTIONS=		openssl # XXX zlib
 
@@ -21,8 +21,8 @@ CONFIGURE_ARGS+=		--with-openssl=${SSLBASE:Q}
 .include "../../security/openssl/buildlink3.mk"
 .endif
 
-.if !empty(PKG_OPTIONS:Mgcrypt)
-BUILDLINK_API_DEPENDS.gcrypt+=	gcrypt>=1.4
+.if !empty(PKG_OPTIONS:Mlibgcrypt)
+BUILDLINK_API_DEPENDS.libgcrypt+=	libgcrypt>=1.4
 CONFIGURE_ARGS+=		--with-libgcrypt=${BUILDLINK_PREFIX.libgcrypt:Q}
 CONFIGURE_ARGS+=		--with-openssl=no
 .include "../../security/libgcrypt/buildlink3.mk"
