@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4648 2015/11/18 20:29:18 markd Exp $
+$NetBSD: CHANGES-2015,v 1.4649 2015/11/18 21:31:30 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7864,3 +7864,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/ruby-toml to 0.1.2nb1 [taca 2015-11-18]
 	Updated lang/ruby-execjs to 2.6.0nb1 [taca 2015-11-18]
 	Updated devel/py-tortoisehg to 3.6nb1 [nros 2015-11-18]
+	Updated devel/hs-haskell-src-exts to 1.17.0 [szptvlfn 2015-11-18]
