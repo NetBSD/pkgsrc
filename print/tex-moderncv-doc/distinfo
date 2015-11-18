@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/11/17 20:25:31 nros Exp $
+$NetBSD: distinfo,v 1.2 2015/11/18 09:40:45 markd Exp $
 
-SHA1 (tex-moderncv-doc-2.0.0/moderncv.doc.tar.xz) = 5870526c78e57c4d091d55ea2a6fafa5d9c11547
-RMD160 (tex-moderncv-doc-2.0.0/moderncv.doc.tar.xz) = c2c92019201d83d0075113b58e327b00f06df878
-SHA512 (tex-moderncv-doc-2.0.0/moderncv.doc.tar.xz) = 0c2c1614d7e41e63e77e6f19bb03b9bb857ad718fa83b7b5f188db25998c0651f87d404614663d267f39ea590e7b16e7ec181aa20ae8873e183bb74aa755d55c
-Size (tex-moderncv-doc-2.0.0/moderncv.doc.tar.xz) = 839412 bytes
+SHA1 (tex-moderncv-doc-37992/moderncv.doc.tar.xz) = 5870526c78e57c4d091d55ea2a6fafa5d9c11547
+RMD160 (tex-moderncv-doc-37992/moderncv.doc.tar.xz) = c2c92019201d83d0075113b58e327b00f06df878
+SHA512 (tex-moderncv-doc-37992/moderncv.doc.tar.xz) = 0c2c1614d7e41e63e77e6f19bb03b9bb857ad718fa83b7b5f188db25998c0651f87d404614663d267f39ea590e7b16e7ec181aa20ae8873e183bb74aa755d55c
+Size (tex-moderncv-doc-37992/moderncv.doc.tar.xz) = 839412 bytes
