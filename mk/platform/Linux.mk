@@ -1,4 +1,4 @@
-# $NetBSD: Linux.mk,v 1.63 2015/07/18 15:08:43 wiedi Exp $
+# $NetBSD: Linux.mk,v 1.64 2015/11/18 22:30:12 jperkin Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -127,6 +127,7 @@ LIBABISUFFIX?=	64
 # explicitly set it.
 .if ${NATIVE_MACHINE_ARCH} == "x86_64" && ${MACHINE_ARCH} == "i386"
 _WRAP_EXTRA_ARGS.LD+=	-m elf_i386
+CWRAPPERS_APPEND.ld+=	-m elf_i386
 .endif
 
 ## Use _CMD so the command only gets run when needed!
