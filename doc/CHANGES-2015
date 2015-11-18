@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4637 2015/11/18 08:51:38 adam Exp $
+$NetBSD: CHANGES-2015,v 1.4638 2015/11/18 09:53:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7849,3 +7849,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added print/tex-moderncv-doc version 2.0.0 [nros 2015-11-17]
 	Updated x11/gtk3 to 3.16.7 [prlw1 2015-11-17]
 	Updated www/nghttp2 to 1.4.0 [adam 2015-11-18]
+	Updated converters/p5-Convert-BinHex to 1.125 [wiz 2015-11-18]
