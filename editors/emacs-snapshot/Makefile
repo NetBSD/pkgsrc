@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.64 2015/10/14 20:17:24 wiz Exp $
+# $NetBSD: Makefile,v 1.65 2015/11/18 14:19:49 ryoon Exp $
 
 #PKGREVISION= 1
-PKGREVISION= 4
+PKGREVISION= 5
 .include "../../editors/emacs-snapshot/Makefile.common"
 
 .include "options.mk"
