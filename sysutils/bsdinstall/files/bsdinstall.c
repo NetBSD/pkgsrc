@@ -1,4 +1,4 @@
-/*	$NetBSD: bsdinstall.c,v 1.2 2013/09/03 15:27:38 jperkin Exp $	*/
+/*	$NetBSD: bsdinstall.c,v 1.3 2015/11/18 12:12:49 jperkin Exp $	*/
 /*	NetBSD: xinstall.c,v 1.114 2009/11/12 10:10:49 tron Exp	*/
 
 /*
@@ -71,26 +71,22 @@ __RCSID("NetBSD: xinstall.c,v 1.114 2009/11/12 10:10:49 tron Exp");
 #endif
 #include <errno.h>
 #include <fcntl.h>
-#include <grp.h>
 #include <libgen.h>
-#if defined(HAVE_NBCOMPAT_H)
-#include <nbcompat/paths.h>
-#else
-#include <paths.h>
-#endif
-#include <pwd.h>
 #include <stdio.h>
-#if defined(HAVE_NBCOMPAT_H)
-#include <nbcompat/stdlib.h>
-#else
-#include <stdlib.h>
-#endif
 #include <string.h>
 #include <unistd.h>
 #if defined(HAVE_NBCOMPAT_H)
+#include <nbcompat/grp.h>
+#include <nbcompat/paths.h>
+#include <nbcompat/pwd.h>
+#include <nbcompat/stdlib.h>
 #include <nbcompat/util.h>
 #include <nbcompat/vis.h>
 #else
+#include <grp.h>
+#include <paths.h>
+#include <pwd.h>
+#include <stdlib.h>
 #include <util.h>
 #include <vis.h>
 #endif
