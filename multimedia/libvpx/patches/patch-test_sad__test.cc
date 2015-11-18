@@ -1,37 +1,26 @@
-$NetBSD: patch-test_sad__test.cc,v 1.3 2015/06/30 09:53:17 ryoon Exp $
+$NetBSD: patch-test_sad__test.cc,v 1.4 2015/11/18 14:09:25 ryoon Exp $
 
---- test/sad_test.cc.orig	2015-04-03 18:49:19.000000000 +0000
+--- test/sad_test.cc.orig	2015-11-09 22:12:38.000000000 +0000
 +++ test/sad_test.cc
-@@ -36,28 +36,44 @@ typedef unsigned int (*SadMxNFunc)(const
-                                    const unsigned char *reference_ptr,
-                                    int reference_stride,
-                                    unsigned int max_sad);
+@@ -29,21 +29,33 @@ typedef unsigned int (*SadMxNFunc)(const
+                                    int src_stride,
+                                    const uint8_t *ref_ptr,
+                                    int ref_stride);
 +#if __cplusplus >= 201103L
 +typedef std::tuple<int, int, SadMxNFunc, int> SadMxNParam;
 +#else
  typedef std::tr1::tuple<int, int, SadMxNFunc, int> SadMxNParam;
- #endif
 +#endif
- #if CONFIG_VP9_ENCODER
- typedef unsigned int (*SadMxNVp9Func)(const unsigned char *source_ptr,
-                                       int source_stride,
-                                       const unsigned char *reference_ptr,
-                                       int reference_stride);
+ 
+ typedef uint32_t (*SadMxNAvgFunc)(const uint8_t *src_ptr,
+                                   int src_stride,
+                                   const uint8_t *ref_ptr,
+                                   int ref_stride,
+                                   const uint8_t *second_pred);
 +#if __cplusplus >= 201103L
-+typedef std::tuple<int, int, SadMxNVp9Func, int> SadMxNVp9Param;
++typedef std::tuple<int, int, SadMxNAvgFunc, int> SadMxNAvgParam;
 +#else
- typedef std::tr1::tuple<int, int, SadMxNVp9Func, int> SadMxNVp9Param;
-+#endif
- typedef uint32_t (*SadMxNAvgVp9Func)(const uint8_t *source_ptr,
-                                      int source_stride,
-                                      const uint8_t *reference_ptr,
-                                      int reference_stride,
-                                      const uint8_t *second_pred);
-+#if __cplusplus >= 201103L
-+typedef std::tuple<int, int, SadMxNAvgVp9Func, int> SadMxNAvgVp9Param;
-+#else
- typedef std::tr1::tuple<int, int, SadMxNAvgVp9Func, int> SadMxNAvgVp9Param;
- #endif
+ typedef std::tr1::tuple<int, int, SadMxNAvgFunc, int> SadMxNAvgParam;
 +#endif
  
  typedef void (*SadMxNx4Func)(const uint8_t *src_ptr,
@@ -47,7 +36,7 @@ $NetBSD: patch-test_sad__test.cc,v 1.3 2015/06/30 09:53:17 ryoon Exp $
  
  using libvpx_test::ACMRandom;
  
-@@ -637,7 +653,11 @@ TEST_P(SADx4Test, SrcAlignedByWidth) {
+@@ -480,7 +492,11 @@ TEST_P(SADx4Test, SrcAlignedByWidth) {
    source_data_ = tmp_source_data;
  }
  
