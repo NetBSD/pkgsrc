@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.122 2015/10/30 15:29:20 tsutsui Exp $
+# $NetBSD: Makefile,v 1.123 2015/11/18 14:19:55 ryoon Exp $
 
 DISTNAME=	mlterm-3.6.0
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mlterm/}
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.61 2015/06/30 09:57:42 ryoon Exp $
+# $NetBSD: Makefile,v 1.62 2015/11/18 14:19:54 ryoon Exp $
 
 .include "../../sysutils/ups-nut/Makefile.common"
 
 PKGNAME=		${DISTNAME:S/nut/ups-nut-cgi/}
-PKGREVISION=		7
+PKGREVISION=		8
 COMMENT=		Network UPS Tools CGI scripts
 
 DEPENDS+=		ups-nut-2.*:../../sysutils/ups-nut
