@@ -1,0 +1,9 @@
+An experimental package which implements an environment,
+blockarray, that may be used in the same way as the array or
+tabular environments of standard LaTeX, or their extended
+versions defined in array. If used in math-mode, blockarray
+acts like array, otherwise it acts like tabular. The package
+implements a new method of defining column types, and also
+block and block* environments, for specifying sub-arrays of the
+main array. What's more, the \footnote command works inside a
+blockarray.
