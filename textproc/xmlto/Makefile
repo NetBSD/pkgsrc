@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2015/11/17 11:59:25 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2015/11/18 09:16:19 richard Exp $
 
 DISTNAME=	xmlto-0.0.27
 CATEGORIES=	textproc
@@ -21,6 +21,8 @@ CONFIGURE_ENV+=		GETOPT=${PREFIX}/bin/getopt
 CONFIGURE_ENV+=		BASH=${TOOLS_PATH.bash}
 CONFIGURE_ENV+=		GCP=${TOOLS_PATH.cp}
 CONFIGURE_ENV+=		TAIL=${TOOLS_PATH.tail}
+
+CPPFLAGS.SunOS+=	-D__EXTENSIONS__
 
 MAKE_ENV+=		SGML_CATALOG_FILES=${PREFIX}/share/xml/catalog
 REPLACE_BASH+=		xmlif/test/run-test
