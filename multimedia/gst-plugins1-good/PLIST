@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2014/08/08 21:28:06 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/11/18 12:04:16 wiz Exp $
 lib/gstreamer-1.0/libgstalaw.la
 lib/gstreamer-1.0/libgstalpha.la
 lib/gstreamer-1.0/libgstalphacolor.la
@@ -151,6 +151,7 @@ share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins
 share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins-plugin-alphacolor.html
 share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins-plugin-apetag.html
 share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins-plugin-audiofx.html
+share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins-plugin-audioparsers.html
 share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins-plugin-auparse.html
 share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins-plugin-autodetect.html
 share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins-plugin-avi.html
@@ -239,11 +240,16 @@ share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins
 share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins-rtpbvdepay.html
 share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins-rtpbvpay.html
 share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins-rtpdec.html
+share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins-rtpdtmfdepay.html
 share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins-rtpdtmfmux.html
 share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins-rtpdtmfsrc.html
+share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins-rtph261depay.html
+share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins-rtph261pay.html
 share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins-rtpj2kpay.html
 share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins-rtpjitterbuffer.html
 share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins-rtpjpegpay.html
+share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins-rtpklvdepay.html
+share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins-rtpklvpay.html
 share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins-rtpmux.html
 share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins-rtpptdemux.html
 share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins-rtprtxreceive.html
@@ -257,6 +263,8 @@ share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins
 share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins-shagadelictv.html
 share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins-shapewipe.html
 share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins-shout2send.html
+share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins-smokedec.html
+share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins-smokeenc.html
 share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins-smpte.html
 share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins-smptealpha.html
 share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins-souphttpsrc.html
@@ -264,6 +272,8 @@ share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins
 share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins-speexdec.html
 share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins-speexenc.html
 share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins-splitfilesrc.html
+share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins-splitmuxsink.html
+share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins-splitmuxsrc.html
 share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins-streaktv.html
 share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins-taginject.html
 share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins-udpsink.html
