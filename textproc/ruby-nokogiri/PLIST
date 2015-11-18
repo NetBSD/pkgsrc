@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.14 2015/03/08 15:17:21 taca Exp $
-bin/nokogiri
+@comment $NetBSD: PLIST,v 1.15 2015/11/18 16:04:50 taca Exp $
+bin/nokogiri${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/nokogiri/nokogiri.${RUBY_DLEXT}
@@ -157,6 +157,12 @@ ${GEM_LIBDIR}/lib/nokogiri/xslt/stylesheet.rb
 ${GEM_LIBDIR}/lib/xsd/xmlparser/nokogiri.rb
 ${GEM_LIBDIR}/ports/patches/libxml2/0001-Revert-Missing-initialization-for-the-catalog-module.patch
 ${GEM_LIBDIR}/ports/patches/libxml2/0002-Fix-missing-entities-after-CVE-2014-3660-fix.patch
+${GEM_LIBDIR}/ports/patches/libxml2/0003-Stop-parsing-on-entities-boundaries-errors.patch
+${GEM_LIBDIR}/ports/patches/libxml2/0004-Cleanup-conditional-section-error-handling.patch
+${GEM_LIBDIR}/ports/patches/libxml2/0005-CVE-2015-1819-Enforce-the-reader-to-run-in-constant-.patch
+${GEM_LIBDIR}/ports/patches/libxml2/0006-Another-variation-of-overflow-in-Conditional-section.patch
+${GEM_LIBDIR}/ports/patches/libxml2/0007-Fix-an-error-in-previous-Conditional-section-patch.patch
+${GEM_LIBDIR}/ports/patches/libxml2/0008-CVE-2015-8035-Fix-XZ-compression-support-loop.patch
 ${GEM_LIBDIR}/ports/patches/libxslt/0001-Adding-doc-update-related-to-1.1.28.patch
 ${GEM_LIBDIR}/ports/patches/libxslt/0002-Fix-a-couple-of-places-where-f-printf-parameters-wer.patch
 ${GEM_LIBDIR}/ports/patches/libxslt/0003-Initialize-pseudo-random-number-generator-with-curre.patch
@@ -169,6 +175,7 @@ ${GEM_LIBDIR}/ports/patches/libxslt/0010-Fix-handling-of-UTF-8-strings-in-EXSLT-
 ${GEM_LIBDIR}/ports/patches/libxslt/0013-Memory-leak-in-xsltCompileIdKeyPattern-error-path.patch
 ${GEM_LIBDIR}/ports/patches/libxslt/0014-Fix-for-bug-436589.patch
 ${GEM_LIBDIR}/ports/patches/libxslt/0015-Fix-mkdir-for-mingw.patch
+${GEM_LIBDIR}/ports/patches/libxslt/0016-Fix-for-type-confusion-in-preprocessing-attributes.patch
 ${GEM_LIBDIR}/ports/patches/sort-patches-by-date
 ${GEM_LIBDIR}/suppressions/README.txt
 ${GEM_LIBDIR}/suppressions/nokogiri_ree-1.8.7.358.supp
