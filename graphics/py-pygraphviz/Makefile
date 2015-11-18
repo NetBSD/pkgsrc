@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/11/16 01:46:20 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2015/11/18 20:52:10 khorben Exp $
 #
 
 VERS=		1.3.1
@@ -11,6 +11,8 @@ MAINTAINER=	helgoman@users.sourceforge.net
 HOMEPAGE=	http://networkx.lanl.gov/pygraphviz/index.html
 COMMENT=	Python interface to the Graphviz package
 LICENSE=	original-bsd
+
+DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
 PYDISTUTILSPKG=	yes
 
