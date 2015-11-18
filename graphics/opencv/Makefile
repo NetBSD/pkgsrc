@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2015/10/08 17:45:59 fhajny Exp $
+# $NetBSD: Makefile,v 1.57 2015/11/18 14:19:50 ryoon Exp $
 
 DISTNAME=	opencv-3.0.0
+PKGREVISION=	1
 CATEGORIES=	graphics devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Itseez/}
 EXTRACT_SUFX=	.zip
