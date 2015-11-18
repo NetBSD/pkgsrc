@@ -1,9 +1,7 @@
-# $NetBSD: options.mk,v 1.3 2014/08/08 21:24:51 wiz Exp $
+# $NetBSD: options.mk,v 1.4 2015/11/18 12:04:16 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gstreamer
 PKG_SUPPORTED_OPTIONS=	gstreamer-gstcheck
-
-PKG_OPTIONS_LEGACY_OPTS+=	gstcheck:gstreamer-gstcheck
 
 .include "../../mk/bsd.options.mk"
 
