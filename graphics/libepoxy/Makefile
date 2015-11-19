@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2015/10/01 13:50:05 tnn Exp $
+# $NetBSD: Makefile,v 1.13 2015/11/19 11:46:33 adam Exp $
 
 DISTNAME=	libepoxy-1.3.1
 PKGREVISION=	2
@@ -13,40 +13,40 @@ LICENSE=	mit
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-expat>=0:../../textproc/py-expat
 
-USE_TOOLS+=	pkg-config autoconf autoreconf automake
-USE_LIBTOOL=	yes
-GNU_CONFIGURE=	yes
+USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config autoconf autoreconf automake
+GNU_CONFIGURE=		yes
+PKGCONFIG_OVERRIDE+=	epoxy.pc.in
 PYTHON_FOR_BUILD_ONLY=	yes
 
-PKGCONFIG_OVERRIDE+=	epoxy.pc.in
+.include "../../mk/bsd.prefs.mk"
+
+PLIST_VARS+=		egl glx
+
+.if ${OPSYS} == "Darwin" && ${X11_TYPE} != "modular"
+BUILD_EGL=	no
+BUILD_GLX=	no
+.else
+BUILD_EGL=	${MESALIB_SUPPORTS_EGL}
+BUILD_GLX=	yes
+CPPFLAGS+=	-DGLX_LIB=\"${PREFIX}/lib/libGL.dylib\"
+PLIST.glx=	yes
+.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.  if !empty(MESALIB_SUPPORTS_EGL:Myes)
+PLIST.egl=	yes
+.  endif
+.endif
+
+SUBST_CLASSES+=		gl
+SUBST_STAGE.gl=		pre-configure
+SUBST_MESSAGE.gl=	Configuring optional EGL and GLX build.
+SUBST_FILES.gl=		configure.ac
+SUBST_VARS.gl=		BUILD_EGL BUILD_GLX
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -vif
 
-.include "../../mk/bsd.prefs.mk"
-
-PLIST_VARS+=		egl
-CONFIGURE_ENV+=		PKGSRC_BUILD_EGL=${MESALIB_SUPPORTS_EGL}
-
-# This could be garbage collected, but it seems likely that there will
-# be more glx issues, so it seems easier to leave it.
-PLIST_VARS+=		glx
-.if ${OPSYS} != "Darwin"
-PLIST.glx=		yes
-.else
-# On Darwin, we patch upstream to enable this.
-PLIST.glx=		yes
-.endif
-
-.if ${OPSYS} == "Darwin" && ${X11_TYPE} == "modular"
-CPPFLAGS+=	-DGLX_LIB=\"${PREFIX}/lib/libGL.1.dylib\"
-.endif
-
 .include "../../lang/python/tool.mk"
 .include "../../devel/xorg-util-macros/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
-.if !empty(MESALIB_SUPPORTS_EGL:Myes) && ${OPSYS} != "Darwin"
-PLIST.egl=		yes
-.endif
-.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
