@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.722 2015/11/16 13:33:13 nros Exp $
+# $NetBSD: Makefile,v 1.723 2015/11/19 07:39:08 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -411,6 +411,7 @@ SUBDIR+=	py-gdchart
 SUBDIR+=	py-gdmodule
 SUBDIR+=	py-gnuplot
 SUBDIR+=	py-goocanvas
+SUBDIR+=	py-graphviz
 SUBDIR+=	py-gtkglext
 SUBDIR+=	py-imaging
 SUBDIR+=	py-imagingtk
@@ -422,7 +423,6 @@ SUBDIR+=	py-nwdiag
 SUBDIR+=	py-piddle
 SUBDIR+=	py-pycha
 SUBDIR+=	py-pygal
-SUBDIR+=	py-pygraphviz
 SUBDIR+=	py-qrcode
 SUBDIR+=	py-seqdiag
 SUBDIR+=	py-sk1libs
