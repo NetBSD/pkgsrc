@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/11/19 02:31:47 jmcneill Exp $
+# $NetBSD: Makefile,v 1.5 2015/11/19 02:34:49 jmcneill Exp $
 
 PKGNAME=	kodi-15.2
 PKGREVISION=	2
@@ -7,7 +7,7 @@ CATEGORIES=	multimedia
 MASTER_SITES=	http://mirrors.kodi.tv/releases/source/
 
 MAINTAINER=	jmcneill@invisible.ca
-HOMEPAGE=	http://mirrors.kodi.tv/releases/source/
+HOMEPAGE=	http://kodi.tv/
 COMMENT=	Open source software media center
 LICENSE=	gnu-gpl-v2
 PLIST_SUBST+=	MACHINE_CPU=${MACHINE_CPU}
