@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4650 2015/11/19 01:39:36 wen Exp $
+$NetBSD: CHANGES-2015,v 1.4651 2015/11/19 02:06:24 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7866,3 +7866,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-tortoisehg to 3.6nb1 [nros 2015-11-18]
 	Updated devel/hs-haskell-src-exts to 1.17.0 [szptvlfn 2015-11-18]
 	Updated www/p5-Mojolicious to 6.32 [wen 2015-11-19]
+	Updated www/moodle to 3.0 [wen 2015-11-19]
