@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/11/16 01:31:10 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2015/11/19 14:37:21 wiz Exp $
 
 .include "../../devel/radare2/Makefile.common"
 
@@ -23,6 +23,7 @@ CONFIGURE_ARGS+=--enable=python
 
 MAKE_ENV+=	PYTHON_CONFIG=${PYTHONCONFIG}
 MAKE_ENV+=	SWIG=swig2.0
+PY_PATCHPLIST=	yes
 
 BUILD_DIRS=	python
 
