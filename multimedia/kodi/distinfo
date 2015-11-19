@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2015/11/18 23:27:23 jmcneill Exp $
+$NetBSD: distinfo,v 1.8 2015/11/19 02:31:47 jmcneill Exp $
 
 SHA1 (15.2-Isengard.tar.gz) = 4acb4a60eadc7289f873cff5add31693b9520cba
 RMD160 (15.2-Isengard.tar.gz) = d81d3f15783b2b69920ea85d7e04f01872f2d85f
@@ -19,7 +19,7 @@ SHA1 (patch-xbmc_addons_Addon.cpp) = 9060723ebba93311eb6f4657bae73d9589b96a77
 SHA1 (patch-xbmc_addons_AddonDll.h) = 77905da081d2436c383328421e1ab9316fb5939d
 SHA1 (patch-xbmc_addons_AddonManager.cpp) = 10c583ed0c2c8eabef34ea4497a845765ce53c79
 SHA1 (patch-xbmc_cores_AudioEngine_AESinkFactory.cpp) = 5437865b90130d7a0dc780fc1d542e6cfc8cc309
-SHA1 (patch-xbmc_cores_AudioEngine_Sinks_AESinkOSS.cpp) = 729a9fa7ebc317e0e14aa5685baf33eaebb4444d
+SHA1 (patch-xbmc_cores_AudioEngine_Sinks_AESinkOSS.cpp) = eb359844589ca8575fe0c1841506d715513ea092
 SHA1 (patch-xbmc_cores_DllLoader_exports_emu__msvcrt.cpp) = 650a107afbf5bb78eb971592e66bea7fc7c115b9
 SHA1 (patch-xbmc_cores_DllLoader_exports_emu__msvcrt.h) = 6047438509663af2826bd5e6c181d9018f86b27c
 SHA1 (patch-xbmc_cores_DllLoader_exports_util_EmuFileWrapper.h) = a4d62050c1efb96a0b1e6ccb2d9529f6ae3a1135
