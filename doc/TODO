@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15116 2015/11/18 12:06:01 wiz Exp $
+$NetBSD: TODO,v 1.15117 2015/11/19 16:09:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -454,6 +454,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o asymptote-2.35
 	o aterm-1.0.1
 	o aubio-0.4.0
+	o auctex-11.89
 	o audacious-3.6.2
 	o audacious-plugins-3.6.2
 	o audacity-2.1.1
@@ -1781,6 +1782,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o webalizer-2.23.05
 	o webmin-1.690
 	o websvn-2.3.3
+	o wget-1.17
 	o whohas-0.29.1
 	o whowatch-1.8.5
 	o windowlab-1.40
