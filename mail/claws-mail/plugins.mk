@@ -1,4 +1,4 @@
-# $NetBSD: plugins.mk,v 1.6 2014/04/09 06:35:53 obache Exp $
+# $NetBSD: plugins.mk,v 1.7 2015/11/20 14:32:55 joerg Exp $
 #
 # used by mail/claws-mail-archive/Makefile
 # used by mail/claws-mail-attachwarner/Makefile
@@ -23,6 +23,7 @@
 
 PKGNAME=	claws-mail-${PLUGIN_NAME:S/_/-/}-${CLAWS_VERSION}
 
+PLUGIN_FILE?=	${PLUGIN_NAME}
 CONFIGURE_DIRS=	.
 BUILD_DIRS=	src/plugins/${PLUGIN_NAME}
 INSTALL_DIRS=	src/plugins/${PLUGIN_NAME}
@@ -32,6 +33,6 @@ LIBTOOL_OVERRIDE=	../../../libtool
 #.include "../../mail/claws-mail/options.mk"
 
 PLIST_SRC=	${.CURDIR}/../../mail/claws-mail/PLIST.plugins
-PLIST_SUBST+=	PLUGIN_NAME=${PLUGIN_NAME:Q}
+PLIST_SUBST+=	PLUGIN_FILE=${PLUGIN_FILE:Q}
 
 MESSAGE_SRC+=	${.CURDIR}/../../mail/claws-mail/MESSAGE.plugins
