@@ -1,11 +1,11 @@
-$NetBSD: patch-src_fsq_fsq.cxx,v 1.3 2015/11/03 19:03:27 joerg Exp $
+$NetBSD: patch-src_fsq_fsq.cxx,v 1.4 2015/11/20 14:29:17 joerg Exp $
 
 Resolve conflict between std::next and the local variable of the same name.
 std::complex::imag() and std::complex::real() are not lvalues.
 
 --- src/fsq/fsq.cxx.orig	2015-09-28 18:24:41.000000000 +0000
 +++ src/fsq/fsq.cxx
-@@ -1193,9 +1193,12 @@ int fsq::rx_process(const double *buf, i
+@@ -1195,9 +1195,12 @@ int fsq::rx_process(const double *buf, i
  						&rx_stream[SHIFT_SIZE],				// from
  						BLOCK_SIZE*sizeof(*rx_stream));	// # bytes
  				memset(fft_data, 0, sizeof(fft_data));
@@ -21,16 +21,16 @@ std::complex::imag() and std::complex::real() are not lvalues.
  				fft->ComplexFFT(fft_data);
  				process_tones();
  			}
-@@ -1423,7 +1426,7 @@ static string tx_text_queue = "";
+@@ -1426,7 +1429,7 @@ static string tx_text_queue = "";
  
  static vector<string> commands;
  #define NUMCOMMANDS 10
 -static size_t next = 0;
 +static size_t nextidx = 0;
  
- double fsq_xmtdelay() // in seconds
+ void  clear_xmt_arrays()
  {
-@@ -1440,9 +1443,9 @@ double fsq_xmtdelay() // in seconds
+@@ -1450,9 +1453,9 @@ double fsq_xmtdelay() // in seconds
  void fsq_repeat_last_command()
  {
  	fsq_tx_text->clear();
@@ -43,7 +43,7 @@ std::complex::imag() and std::complex::real() are not lvalues.
  }
  
  int get_fsq_tx_char(void)
-@@ -1484,7 +1487,7 @@ void try_transmit(void *)
+@@ -1494,7 +1497,7 @@ void try_transmit(void *)
  	if (active_modem != fsq_modem) return;
  
  	if (!active_modem->fsq_squelch_open() && trx_state == STATE_RX) {
