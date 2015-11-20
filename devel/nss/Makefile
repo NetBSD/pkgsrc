@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.103 2015/11/03 16:55:07 ryoon Exp $
+# $NetBSD: Makefile,v 1.104 2015/11/20 18:54:50 ryoon Exp $
 
 DISTNAME=		nss-${NSS_RELEASE:S/.0$//}
-NSS_RELEASE=		3.20.1
+NSS_RELEASE=		3.21.0
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_MOZILLA_ALL:=security/nss/releases/NSS_${NSS_RELEASE:S/.0$//:S/./_/g}_RTM/src/}
 
@@ -56,6 +56,7 @@ MAKE_ENV+=	BUILD_OPT=1
 MAKE_ENV+=	INCLUDES=-I${BUILDLINK_PREFIX.nspr}/include/nspr
 MAKE_ENV+=	NSS_USE_SYSTEM_SQLITE=1
 MAKE_ENV+=	EXTRA_SHARED_LIBS="-Wl,-R${BUILDLINK_PREFIX.nspr}/lib/nspr -Wl,-R,${PREFIX}/lib/nss -L${BUILDLINK_PREFIX.nspr}/lib/nspr -lplc4 -lplds4 -lnspr4"
+MAKE_ENV+=	NSS_DISABLE_GTESTS=yes
 
 post-extract:
 	find ${WRKSRC} -type f | xargs ${CHMOD} 644
