@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.222 2015/11/03 15:52:57 ryoon Exp $
+$NetBSD: distinfo,v 1.223 2015/11/20 14:48:20 joerg Exp $
 
 SHA1 (firefox-42.0.source.tar.xz) = c207a73fbfde2683aca36417331441d007ceb765
 RMD160 (firefox-42.0.source.tar.xz) = d1bbfd59ceaeed46a00cdb076396267a94efd29c
@@ -23,6 +23,7 @@ SHA1 (patch-config_system-headers) = 364bf8907325a3dbf61298c5aa2aae407acaa56b
 SHA1 (patch-config_system__wrappers_unwind.h) = b3bdac0710179b9c8f8eabd824216d0114504491
 SHA1 (patch-dom_base_DOMRequest.cpp) = b934991e8ad03c3785e4c7d197b42f697571ec09
 SHA1 (patch-dom_base_moz.build) = 8b59c33958b7037c4c051742c64f1455096ced46
+SHA1 (patch-dom_events_MessageEvent.h) = 66d8d66807087823648062cb7588d7a98c20ca31
 SHA1 (patch-dom_media_gstreamer_GStreamerAllocator.cpp) = 4685a646a76282619d7c42fac43500e0065f067d
 SHA1 (patch-dom_media_moz.build) = a89695c9557f59e00b42c60742f27a82de0f77fb
 SHA1 (patch-dom_plugins_ipc_PluginModuleChild.cpp) = 6219ce1b3f2893c1d53453fcb5568d081b72e106
