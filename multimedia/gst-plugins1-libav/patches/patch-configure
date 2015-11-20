@@ -1,0 +1,13 @@
+$NetBSD: patch-configure,v 1.1 2015/11/20 18:38:36 ryoon Exp $
+
+--- configure.orig	2015-10-30 12:12:55.000000000 +0000
++++ configure
+@@ -16737,7 +16737,7 @@ fi
+         --disable-filters --disable-doc --disable-vda --disable-d3d11va --disable-dxva2 \
+         --disable-iconv --enable-optimizations"
+ 
+-  if test "x$enable_gpl" == "xyes"; then
++  if test "x$enable_gpl" = "xyes"; then
+     emblibav_configure_args="$emblibav_configure_args --enable-gpl"
+   fi
+ 
