@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2015/06/09 12:41:08 fhajny Exp $
+# $NetBSD: Makefile,v 1.21 2015/11/20 12:26:21 fhajny Exp $
 
 PKGNAME=		rabbitmq-${RMQ_VERSION}
 DISTNAME=		rabbitmq-server-${RMQ_VERSION}
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		http://www.rabbitmq.com/releases/rabbitmq-server/v${RMQ_VERSION}/
 
@@ -17,7 +18,6 @@ MAKE_JOBS_SAFE=		no
 BUILD_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
 BUILD_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 BUILD_DEPENDS+=		xmlto-[0-9]*:../../textproc/xmlto
-DEPENDS+=		coreutils-[0-9]*:../../sysutils/coreutils
 DEPENDS+=		${PYPKGPREFIX}-simplejson>=2:../../converters/py-simplejson
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 3.2.2
@@ -55,6 +55,8 @@ FILES_SUBST+=		RMQ_USER=${RMQ_USER}
 FILES_SUBST+=		RMQ_GROUP=${RMQ_GROUP}
 FILES_SUBST+=		RMQ_DIR=${RMQ_DIR}
 
+RABBITMQ_HOME=		${PREFIX}/lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}
+
 INSTALLATION_DIRS+=	share/examples/rabbitmq
 
 SCRIPTS_DIR=		${WRKSRC}/scripts
@@ -70,15 +72,16 @@ SUBST_FILES.paths+=	${SCRIPTS_DIR}/rabbitmq-defaults
 SUBST_SED.paths=	-e 's|/etc/rabbitmq|${PKG_SYSCONFDIR}|g'
 SUBST_SED.paths+=	-e 's|/var/lib|${VARBASE}/db|g'
 SUBST_SED.paths+=	-e 's|/var/log|${VARBASE}/log|g'
-SUBST_SED.paths+=	-e 's|@PREFIX@|${PREFIX}|g'
 SUBST_SED.paths+=	-e 's|erl|${PREFIX}/bin/erl|g'
-SUBST_SED.paths+=	-e 's|readlink|${PREFIX}/bin/greadlink|g'
+SUBST_VARS.paths=	RABBITMQ_HOME
 
 REPLACE_BASH+=		${SCRIPTS_DIR}/rabbitmqctl
+REPLACE_BASH+=		${SCRIPTS_DIR}/rabbitmq-defaults
 REPLACE_BASH+=		${SCRIPTS_DIR}/rabbitmq-env
+REPLACE_BASH+=		${SCRIPTS_DIR}/rabbitmq-plugins
 REPLACE_BASH+=		${SCRIPTS_DIR}/rabbitmq-server
 
-MAKE_ENV+=		TARGET_DIR="${DESTDIR}${PREFIX}/lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}"
+MAKE_ENV+=		TARGET_DIR="${DESTDIR}${RABBITMQ_HOME}"
 MAKE_ENV+=		SBIN_DIR="${DESTDIR}${PREFIX}/sbin/"
 MAKE_ENV+=		MAN_DIR="${DESTDIR}${PREFIX}/man"
 MAKE_ENV+=		DOC_INSTALL_DIR="${DESTDIR}${PREFIX}/share/examples/rabbitmq"
@@ -86,18 +89,12 @@ MAKE_ENV+=		RMQ_VERSION=${RMQ_VERSION}
 MAKE_ENV+=		MAKE_SHELL="${RMQ_SHELL}"
 MAKE_ENV+=		GIT_SSL_NO_VERIFY=true
 
-INSTALL_ENV+=		TARGET_DIR="${DESTDIR}${PREFIX}/lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}"
-INSTALL_ENV+=		SBIN_DIR="${DESTDIR}${PREFIX}/sbin/"
-INSTALL_ENV+=		MAN_DIR="${DESTDIR}${PREFIX}/man"
-INSTALL_ENV+=		DOC_INSTALL_DIR="${DESTDIR}${PREFIX}/share/examples/rabbitmq"
-INSTALL_ENV+=		RMQ_VERSION=${RMQ_VERSION}
-INSTALL_ENV+=		MAKE_SHELL="${RMQ_SHELL}"
-
 REPLACE_PYTHON+=	calculate-relative
 REPLACE_PYTHON+=	plugins-src/rabbitmq-amqp1.0/codegen.py
 
 post-install:
-	${INSTALL_DATA} ${FILESDIR}/rabbitmq-env.conf ${DESTDIR}${PREFIX}/share/examples/rabbitmq/rabbitmq-env.conf
+	${INSTALL_DATA} ${FILESDIR}/rabbitmq-env.conf 				\
+		${DESTDIR}${PREFIX}/share/examples/rabbitmq/rabbitmq-env.conf
 
 .include "../../lang/erlang/buildlink3.mk"
 .include "../../lang/python/application.mk"
