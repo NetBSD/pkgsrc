@@ -1,0 +1,50 @@
+$NetBSD: patch-Makefile,v 1.1 2015/11/20 14:47:20 adam Exp $
+
+Use LIBTOOL.
+
+--- Makefile.orig	2015-11-20 13:39:37.000000000 +0000
++++ Makefile
+@@ -1,32 +1,25 @@
+ CXX ?= g++
+ CC ?= gcc
+-CFLAGS = -Wall -Wconversion -O3 -fPIC
+ LIBS = blas/blas.a
+ SHVER = 3
+-OS = $(shell uname)
+ #LIBS = -lblas
+ 
+ all: train predict
+ 
+-lib: linear.o tron.o blas/blas.a
+-	if [ "$(OS)" = "Darwin" ]; then \
+-		SHARED_LIB_FLAG="-dynamiclib -Wl,-install_name,liblinear.so.$(SHVER)"; \
+-	else \
+-		SHARED_LIB_FLAG="-shared -Wl,-soname,liblinear.so.$(SHVER)"; \
+-	fi; \
+-	$(CXX) $${SHARED_LIB_FLAG} linear.o tron.o blas/blas.a -o liblinear.so.$(SHVER)
+-
+-train: tron.o linear.o train.c blas/blas.a
+-	$(CXX) $(CFLAGS) -o train train.c tron.o linear.o $(LIBS)
++lib: linear.lo tron.lo blas/blas.a
++	${LIBTOOL} --mode=link $(CXX) -o liblinear.la $> -rpath ${PREFIX}/lib -version-info ${SHVER}:0
+ 
+-predict: tron.o linear.o predict.c blas/blas.a
+-	$(CXX) $(CFLAGS) -o predict predict.c tron.o linear.o $(LIBS)
++train: tron.lo linear.lo train.c blas/blas.a
++	${LIBTOOL} --mode=link $(CXX) $(CFLAGS) -o train $>
+ 
+-tron.o: tron.cpp tron.h
+-	$(CXX) $(CFLAGS) -c -o tron.o tron.cpp
++predict: tron.lo linear.lo predict.c blas/blas.a
++	${LIBTOOL} --mode=link $(CXX) $(CFLAGS) -o predict $>
+ 
+-linear.o: linear.cpp linear.h
+-	$(CXX) $(CFLAGS) -c -o linear.o linear.cpp
++tron.lo: tron.cpp tron.h
++	${LIBTOOL} --mode=compile $(CXX) $(CFLAGS) -c -o tron.o tron.cpp
++
++linear.lo: linear.cpp linear.h
++	${LIBTOOL} --mode=compile $(CXX) $(CFLAGS) -c -o linear.o linear.cpp
+ 
+ blas/blas.a: blas/*.c blas/*.h
+ 	make -C blas OPTFLAGS='$(CFLAGS)' CC='$(CC)';
