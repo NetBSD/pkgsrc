@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.124 2015/04/25 14:23:47 tnn Exp $
+# $NetBSD: Makefile,v 1.125 2015/11/20 15:37:40 adam Exp $
 
-DISTNAME=	nmap-6.47
-PKGREVISION=	2
+DISTNAME=	nmap-7.00
 CATEGORIES=	net security
 MASTER_SITES=	http://nmap.org/dist/
 EXTRACT_SUFX=	.tar.bz2
@@ -19,6 +18,7 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-liblinear=${BUILDLINK_PREFIX.liblinear}
 CONFIGURE_ARGS+=	--with-libpcap=${BUILDLINK_PREFIX.libpcap}
 CONFIGURE_ARGS+=	--with-libpcre=${BUILDLINK_PREFIX.pcre}
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
@@ -35,6 +35,7 @@ CHECK_INTERPRETER_SKIP+=	share/nmap/nselib/data/oracle-sids
 CHECK_INTERPRETER_SKIP+=	share/nmap/nselib/data/passwords.lst
 CHECK_INTERPRETER_SKIP+=	share/nmap/nselib/data/rtsp-urls.txt
 CHECK_INTERPRETER_SKIP+=	share/nmap/nselib/data/snmpcommunities.lst
+CHECK_PORTABILITY_SKIP+=	libpcap/configure
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -58,6 +59,7 @@ pre-build:
 .endif
 
 .include "../../devel/pcre/buildlink3.mk"
+.include "../../math/liblinear/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 #.include "../../devel/subversion-base/buildlink3.mk"
