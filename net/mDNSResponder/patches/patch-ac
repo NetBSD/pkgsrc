@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.10 2014/05/12 15:06:56 ryoon Exp $
+$NetBSD: patch-ac,v 1.11 2015/11/20 09:32:53 jperkin Exp $
 
 * Fix build on FreeBSD and DragonFly, as shown in recent bulk builds and
   PR 34022.
@@ -38,7 +38,7 @@ $NetBSD: patch-ac,v 1.10 2014/05/12 15:06:56 ryoon Exp $
  			plen_to_mask(plen, ipv6addr);
  			ifi->ifi_netmask = calloc(1, sizeof(struct sockaddr_in6));
  			if (ifi->ifi_addr == NULL) {
-@@ -488,7 +491,15 @@ recvfrom_flags(int fd, void *ptr, size_t
+@@ -488,6 +491,14 @@ recvfrom_flags(int fd, void *ptr, size_t
             set the value to 0, but I'm concerned that 0 
             might be a valid interface value.
          */
@@ -48,9 +48,8 @@ $NetBSD: patch-ac,v 1.10 2014/05/12 15:06:56 ryoon Exp $
 +        */
 +        struct in_pktinfo *tmp;
 +        struct sockaddr_in *sin = (struct sockaddr_in*)&pktp->ipi_addr;
-         memset(pktp, 0, sizeof(struct my_in_pktinfo));
 +        sin->sin_family = AF_INET;
 +#endif
+         memset(pktp, 0, sizeof(struct my_in_pktinfo));
          pktp->ipi_ifindex = -1;
      }
- /* end recvfrom_flags1 */

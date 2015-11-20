@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2015/08/29 17:41:07 jperkin Exp $
+# $NetBSD: Makefile,v 1.40 2015/11/20 09:32:53 jperkin Exp $
 
 DISTNAME=	mDNSResponder-258.14
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://www.opensource.apple.com/tarballs/mDNSResponder/
 
