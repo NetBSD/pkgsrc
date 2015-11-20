@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.127 2015/11/04 02:47:38 agc Exp $
+$NetBSD: distinfo,v 1.128 2015/11/20 14:48:21 joerg Exp $
 
 SHA1 (seamonkey-2.38.source.tar.xz) = fc9c22f7411372876d4f151ff6aca39cde31f711
 RMD160 (seamonkey-2.38.source.tar.xz) = 8c1358fe5fe9f6a6b7f5d122d2e50472d89221e4
@@ -28,6 +28,7 @@ SHA1 (patch-mozilla_config_stl__wrappers_ostream) = 232e253bca5d8f7f0de1b880dc34
 SHA1 (patch-mozilla_config_system-headers) = 142b95a375fab09097a3bbd5f4673be5bfe88741
 SHA1 (patch-mozilla_dom_base_DOMRequest.cpp) = 3c01dd16ea83b2d972e437e92b2126aeec68a7a1
 SHA1 (patch-mozilla_dom_base_moz.build) = de05328ca4339e0e3a92da3e4517697df9d3b53a
+SHA1 (patch-mozilla_dom_events_MessageEvent.h) = 6be0cb8c8c6b60cf9e2604e2deb018bc69b6e2d5
 SHA1 (patch-mozilla_dom_media_AudioStream.h) = 92029dfdf3cfd168b88e313806340db9d13d408f
 SHA1 (patch-mozilla_dom_media_gstreamer_GStreamerAllocator.cpp) = c160b78d4ea5058df602c74be43be9476cb78d1f
 SHA1 (patch-mozilla_dom_media_moz.build) = e21f162f6fb2f053e3e04a8273033b92bd6a75dd
