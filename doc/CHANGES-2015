@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4655 2015/11/20 15:40:02 adam Exp $
+$NetBSD: CHANGES-2015,v 1.4656 2015/11/20 17:54:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7872,3 +7872,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ruby-parslet to 1.6.0 [jperkin 2015-11-20]
 	Updated math/liblinear to 2.1 [adam 2015-11-20]
 	Updated net/nmap to 7.00 [adam 2015-11-20]
+	Updated devel/scons to 2.4.1 [adam 2015-11-20]
