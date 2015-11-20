@@ -1,0 +1,12 @@
+$NetBSD: patch-configure.ac,v 1.1 2015/11/20 14:28:02 joerg Exp $
+
+--- configure.ac.orig	2015-11-18 13:16:13.000000000 +0000
++++ configure.ac
+@@ -86,7 +86,6 @@ AM_COND_IF(OP_WIN32,
+     )
+   )
+ )
+-AC_SEARCH_LIBS(ftime, [compat], , [enable_http=no])
+ 
+ AS_IF([test "$enable_http" != "no"], [
+    openssl="openssl"
