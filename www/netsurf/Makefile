@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2015/11/20 13:43:06 hauke Exp $
-#
+# $NetBSD: Makefile,v 1.47 2015/11/20 21:07:25 wiz Exp $
 
 DISTNAME=	netsurf-all-3.3
 PKGNAME=	${DISTNAME:S/-all//}
@@ -15,7 +14,7 @@ LICENSE=	gnu-gpl-v2 AND mit
 BUILD_DEPENDS+=	lemon>=1.0:../../devel/lemon
 BUILD_DEPENDS+=	re2c>=0.12:../../devel/re2c
 
-DEPENDS+=	p5-HTML-Parser:../../www/p5-HTML-Parser
+DEPENDS+=	p5-HTML-Parser-[0-9]*:../../www/p5-HTML-Parser
 
 BUILD_TARGET=	build
 USE_TOOLS+=	bison flex gmake perl:build pax pkg-config
