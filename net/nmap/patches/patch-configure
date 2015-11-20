@@ -1,0 +1,22 @@
+$NetBSD: patch-configure,v 1.1 2015/11/20 15:37:40 adam Exp $
+
+External liblinear must be configured later.
+
+--- configure.orig	2015-11-10 04:26:26.000000000 +0000
++++ configure
+@@ -6192,6 +6192,7 @@ else
+ extern char pcap_version[];
+ int main() {
+   int major, minor1, minor2;
++  exit(0);	/* fool it */
+   sscanf(pcap_version,"%d.%d.%d", &major, &minor1, &minor2);
+   if (major > 0)
+     return 0;
+@@ -6894,7 +6895,6 @@ if test "${with_liblinear+set}" = set; t
+   *)
+     CPPFLAGS="-I$with_liblinear/include $CPPFLAGS"
+     LDFLAGS="-L$with_liblinear/lib $LDFLAGS"
+-    have_liblinear=yes
+   ;;
+   esac
+ 
