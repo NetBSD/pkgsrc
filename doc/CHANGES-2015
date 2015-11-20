@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4653 2015/11/20 09:33:03 jperkin Exp $
+$NetBSD: CHANGES-2015,v 1.4654 2015/11/20 11:54:34 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7869,3 +7869,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/moodle to 3.0 [wen 2015-11-19]
 	Renamed graphics/py-pygraphviz to graphics/py-graphviz [wiz 2015-11-19]
 	Updated net/mDNSResponder to 258.14nb2 [jperkin 2015-11-20]
+	Updated devel/ruby-parslet to 1.6.0 [jperkin 2015-11-20]
