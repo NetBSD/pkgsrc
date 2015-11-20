@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.167 2015/11/03 23:27:22 agc Exp $
+$NetBSD: distinfo,v 1.168 2015/11/20 14:48:20 joerg Exp $
 
 SHA1 (thunderbird-38.3.0.source.tar.bz2) = 7c8ef066d6b6516fddbb654b38353f894f85d469
 RMD160 (thunderbird-38.3.0.source.tar.bz2) = 0b30a430d9006d737a7116b63c66b8a1843c0381
@@ -43,6 +43,7 @@ SHA1 (patch-mozilla_config_stl__wrappers_ostream) = 67559c5ab17088680b86dea6b081
 SHA1 (patch-mozilla_config_system-headers) = 2b66e88ad46cf4e7c0b8a663c615b272a475dc59
 SHA1 (patch-mozilla_config_system__wrappers_unwind.h) = 32d4ab3fbf80bf19783dab7c4a875a7262f419cf
 SHA1 (patch-mozilla_dom_base_moz.build) = dce93f4c00bb662d5c702b442ee169bb8888237d
+SHA1 (patch-mozilla_dom_events_MessageEvent.h) = 677c3531230147baf260aca9e39d7a04b2a7c673
 SHA1 (patch-mozilla_dom_media_AudioStream.h) = b5092adaf26c8c1809b4ad62eb92be101c07ac88
 SHA1 (patch-mozilla_dom_media_gstreamer_GStreamerAllocator.cpp) = cadb3396a56ed3147c4ec2b4b8494205672883fb
 SHA1 (patch-mozilla_dom_media_moz.build) = 12ab0e2441422bbb683a5da163644db9bfd11aec
