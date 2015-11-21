@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4679 2015/11/21 15:17:48 wen Exp $
+$NetBSD: CHANGES-2015,v 1.4680 2015/11/21 16:14:28 leot Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7896,3 +7896,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Class-C3 to 0.30 [wen 2015-11-21]
 	Updated devel/p5-Class-Tiny to 1.004 [wen 2015-11-21]
 	Updated devel/p5-MooX-Options to 4.021 [wen 2015-11-21]
+	Updated games/wesnoth to 1.12.5 [leot 2015-11-21]
