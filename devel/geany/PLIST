@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2015/11/06 09:16:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2015/11/21 09:25:28 wiz Exp $
 bin/geany
 include/geany/app.h
 include/geany/build.h
@@ -21,6 +21,7 @@ include/geany/pluginutils.h
 include/geany/prefs.h
 include/geany/project.h
 include/geany/scintilla/SciLexer.h
+include/geany/scintilla/Sci_Position.h
 include/geany/scintilla/Scintilla.h
 include/geany/scintilla/Scintilla.iface
 include/geany/scintilla/ScintillaWidget.h
