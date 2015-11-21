@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.43 2015/07/23 14:56:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.44 2015/11/21 16:13:39 leot Exp $
 bin/wesnoth
 bin/wesnothd
 man/cs/man6/wesnoth.6
@@ -56,18 +56,6 @@ man/zh_TW/man6/wesnothd.6
 ${PLIST.icons}share/applications/wesnoth.desktop
 ${PLIST.icons}share/applications/wesnoth_editor.desktop
 share/doc/wesnoth/images/README.txt
-share/doc/wesnoth/images/de/game-screen-1.9.14.jpg
-share/doc/wesnoth/images/de/main-menu-1.9.14.jpg
-share/doc/wesnoth/images/de/multiplayer-1.9.14.jpg
-share/doc/wesnoth/images/de/recruit-1.9.14.jpg
-share/doc/wesnoth/images/de/right_pane-1.9.14.jpg
-share/doc/wesnoth/images/de/top_pane-1.9.14.jpg
-share/doc/wesnoth/images/es/game-screen-1.9.14.jpg
-share/doc/wesnoth/images/es/main-menu-1.9.14.jpg
-share/doc/wesnoth/images/es/multiplayer-1.9.14.jpg
-share/doc/wesnoth/images/es/recruit-1.9.14.jpg
-share/doc/wesnoth/images/es/right_pane-1.9.14.jpg
-share/doc/wesnoth/images/es/top_pane-1.9.14.jpg
 share/doc/wesnoth/images/fr/game-screen-1.11.11.jpg
 share/doc/wesnoth/images/fr/main-menu-1.11.11.jpg
 share/doc/wesnoth/images/fr/multiplayer-1.11.11.jpg
@@ -81,18 +69,12 @@ share/doc/wesnoth/images/gl/multiplayer-1.11.9.jpg
 share/doc/wesnoth/images/gl/recruit-1.11.9.jpg
 share/doc/wesnoth/images/gl/right_pane-1.11.9.jpg
 share/doc/wesnoth/images/gl/top_pane-1.11.9.jpg
-share/doc/wesnoth/images/hu/game-screen-1.9.4.jpg
-share/doc/wesnoth/images/hu/main-menu-1.9.4.jpg
-share/doc/wesnoth/images/hu/multiplayer-1.9.4.jpg
-share/doc/wesnoth/images/hu/recruit-1.9.4.jpg
-share/doc/wesnoth/images/hu/right_pane-1.9.4.jpg
-share/doc/wesnoth/images/hu/top_pane-1.9.4.jpg
-share/doc/wesnoth/images/it/game-screen-1.9.4.jpg
-share/doc/wesnoth/images/it/main-menu-1.9.4.jpg
-share/doc/wesnoth/images/it/multiplayer-1.9.4.jpg
-share/doc/wesnoth/images/it/recruit-1.9.4.jpg
-share/doc/wesnoth/images/it/right_pane-1.9.4.jpg
-share/doc/wesnoth/images/it/top_pane-1.9.4.jpg
+share/doc/wesnoth/images/it/game-screen-1.12.4.jpg
+share/doc/wesnoth/images/it/main-menu-1.12.4.jpg
+share/doc/wesnoth/images/it/multiplayer-1.12.4.jpg
+share/doc/wesnoth/images/it/recruit-1.12.4.jpg
+share/doc/wesnoth/images/it/right_pane-1.12.4.jpg
+share/doc/wesnoth/images/it/top_pane-1.12.4.jpg
 share/doc/wesnoth/images/main-menu-1.11.9.jpg
 share/doc/wesnoth/images/multiplayer-1.11.9.jpg
 share/doc/wesnoth/images/orb-black.jpg
@@ -108,12 +90,6 @@ share/doc/wesnoth/images/pt/right_pane-1.11.19.jpg
 share/doc/wesnoth/images/pt/top_pane-1.11.19.jpg
 share/doc/wesnoth/images/recruit-1.11.9.jpg
 share/doc/wesnoth/images/right_pane-1.11.9.jpg
-share/doc/wesnoth/images/ru/game-screen-1.9.7.jpg
-share/doc/wesnoth/images/ru/main-menu-1.9.7.jpg
-share/doc/wesnoth/images/ru/multiplayer-1.9.7.jpg
-share/doc/wesnoth/images/ru/recruit-1.9.7.jpg
-share/doc/wesnoth/images/ru/right_pane-1.9.7.jpg
-share/doc/wesnoth/images/ru/top_pane-1.9.7.jpg
 share/doc/wesnoth/images/schedule-afternoon.png
 share/doc/wesnoth/images/schedule-dawn.png
 share/doc/wesnoth/images/schedule-dusk.png
@@ -121,43 +97,7 @@ share/doc/wesnoth/images/schedule-firstwatch.png
 share/doc/wesnoth/images/schedule-morning.png
 share/doc/wesnoth/images/schedule-secondwatch.png
 share/doc/wesnoth/images/schedule-underground.png
-share/doc/wesnoth/images/sr/game-screen-1.9.11.jpg
-share/doc/wesnoth/images/sr/main-menu-1.9.11.jpg
-share/doc/wesnoth/images/sr/multiplayer-1.7.10.jpg
-share/doc/wesnoth/images/sr/recruit-1.7.10.jpg
-share/doc/wesnoth/images/sr/right_pane-1.9.11.jpg
-share/doc/wesnoth/images/sr/top_pane-1.9.11.jpg
-share/doc/wesnoth/images/sr@ijekavian/game-screen-1.9.11.jpg
-share/doc/wesnoth/images/sr@ijekavian/main-menu-1.9.11.jpg
-share/doc/wesnoth/images/sr@ijekavian/multiplayer-1.7.10.jpg
-share/doc/wesnoth/images/sr@ijekavian/recruit-1.7.10.jpg
-share/doc/wesnoth/images/sr@ijekavian/right_pane-1.9.11.jpg
-share/doc/wesnoth/images/sr@ijekavian/top_pane-1.9.11.jpg
-share/doc/wesnoth/images/sr@ijekavianlatin/game-screen-1.9.11.jpg
-share/doc/wesnoth/images/sr@ijekavianlatin/main-menu-1.9.11.jpg
-share/doc/wesnoth/images/sr@ijekavianlatin/multiplayer-1.7.10.jpg
-share/doc/wesnoth/images/sr@ijekavianlatin/recruit-1.7.10.jpg
-share/doc/wesnoth/images/sr@ijekavianlatin/right_pane-1.9.11.jpg
-share/doc/wesnoth/images/sr@ijekavianlatin/top_pane-1.9.11.jpg
-share/doc/wesnoth/images/sr@latin/game-screen-1.9.11.jpg
-share/doc/wesnoth/images/sr@latin/main-menu-1.9.11.jpg
-share/doc/wesnoth/images/sr@latin/multiplayer-1.7.10.jpg
-share/doc/wesnoth/images/sr@latin/recruit-1.7.10.jpg
-share/doc/wesnoth/images/sr@latin/right_pane-1.9.11.jpg
-share/doc/wesnoth/images/sr@latin/top_pane-1.9.11.jpg
 share/doc/wesnoth/images/top_pane-1.11.9.jpg
-share/doc/wesnoth/images/tr/game-screen-1.5.7.jpg
-share/doc/wesnoth/images/tr/main-menu-1.5.11.jpg
-share/doc/wesnoth/images/tr/multiplayer-1.5.11.jpg
-share/doc/wesnoth/images/tr/recruit-1.5.7.jpg
-share/doc/wesnoth/images/tr/right_pane-1.5.7.jpg
-share/doc/wesnoth/images/tr/top_pane-1.5.7.jpg
-share/doc/wesnoth/images/zh_CN/game-screen-1.8.0.jpg
-share/doc/wesnoth/images/zh_CN/main-menu-1.8.0.jpg
-share/doc/wesnoth/images/zh_CN/multiplayer-1.8.0.jpg
-share/doc/wesnoth/images/zh_CN/recruit-1.8.0.jpg
-share/doc/wesnoth/images/zh_CN/right_pane-1.8.0.jpg
-share/doc/wesnoth/images/zh_CN/top_pane-1.8.0.jpg
 share/doc/wesnoth/manual.cs.html
 share/doc/wesnoth/manual.de.html
 share/doc/wesnoth/manual.en.html
@@ -13015,6 +12955,7 @@ share/wesnoth/fonts/COPYING
 share/wesnoth/fonts/DejaVuSans.ttf
 share/wesnoth/fonts/DroidSansFallbackFull.ttf
 share/wesnoth/fonts/DroidSansJapanese.ttf
+share/wesnoth/fonts/fonts.conf
 share/wesnoth/images/README
 share/wesnoth/images/arrows/focus/end-n.png
 share/wesnoth/images/arrows/focus/end-ne.png
@@ -16141,32 +16082,3 @@ share/wesnoth/translations/zh_TW/LC_MESSAGES/wesnoth-tutorial.mo
 share/wesnoth/translations/zh_TW/LC_MESSAGES/wesnoth-units.mo
 share/wesnoth/translations/zh_TW/LC_MESSAGES/wesnoth-utbs.mo
 share/wesnoth/translations/zh_TW/LC_MESSAGES/wesnoth.mo
-@pkgdir man/tl/man6
-@pkgdir man/sv/man6
-@pkgdir man/sl/man6
-@pkgdir man/ro/man6
-@pkgdir man/racv/man6
-@pkgdir man/nl/man6
-@pkgdir man/nb_NO/man6
-@pkgdir man/mr/man6
-@pkgdir man/mk/man6
-@pkgdir man/lv/man6
-@pkgdir man/la/man6
-@pkgdir man/ko/man6
-@pkgdir man/is/man6
-@pkgdir man/hr/man6
-@pkgdir man/he/man6
-@pkgdir man/gd/man6
-@pkgdir man/ga/man6
-@pkgdir man/fur_IT/man6
-@pkgdir man/eu/man6
-@pkgdir man/eo/man6
-@pkgdir man/en@shaw/man6
-@pkgdir man/el/man6
-@pkgdir man/da/man6
-@pkgdir man/ca_ES@valencia/man6
-@pkgdir man/ca/man6
-@pkgdir man/ar/man6
-@pkgdir man/ang@latin/man6
-@pkgdir man/ang/man6
-@pkgdir man/af/man6
