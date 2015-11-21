@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2015/11/19 02:05:34 wen Exp $
+# $NetBSD: Makefile,v 1.44 2015/11/21 11:17:13 wen Exp $
 
 DISTNAME=	moodle-3.0
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=moodle/}
 EXTRACT_SUFX=	.tgz
@@ -21,6 +22,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.4.4:../../textproc/php-json
 DEPENDS+=	${PHP_PKG_PREFIX}-intl>=5.4.4:../../textproc/php-intl
 DEPENDS+=	${PHP_PKG_PREFIX}-zip>=5.4.4:../../archivers/php-zip
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.4.4:../../archivers/php-zlib
+DEPENDS+=	${PHP_PKG_PREFIX}-opcache>=5.4.4:../../devel/php-opcache
 
 EGDIR=			share/examples/moodle
 MOODLEDIR=		${PREFIX}/share/moodle
@@ -69,7 +71,7 @@ SUBST_FILES.php=	admin/cli/mysql_engine.php admin/cli/maintenance.php admin/cli/
 SUBST_FILES.php+=	admin/cli/reset_password.php admin/cli/automated_backups.php
 SUBST_FILES.php+=	admin/cli/install.php admin/cli/install_database.php admin/cli/upgrade.php
 SUBST_FILES.php+=	admin/mailout-debugger.php admin/process_email.php
-SUBST_FILES.php+=	auth/ldap/cli/sync_users.php auth/cas/cli/sync_users.php auth/db/cli/sync_users.php
+SUBST_FILES.php+=	auth/db/cli/sync_users.php
 SUBST_FILES.php+=	enrol/ldap/cli/sync.php enrol/database/cli/sync.php enrol/category/cli/sync.php
 SUBST_SED.php=		-e "s,/usr/bin/php,${PREFIX}/bin/php,g"
 
