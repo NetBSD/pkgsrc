@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2014/10/04 12:59:02 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/11/21 09:21:40 wiz Exp $
 include/sodium.h
 include/sodium/core.h
+include/sodium/crypto_aead_aes256gcm.h
 include/sodium/crypto_aead_chacha20poly1305.h
 include/sodium/crypto_auth.h
 include/sodium/crypto_auth_hmacsha256.h
