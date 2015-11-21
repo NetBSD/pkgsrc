@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4662 2015/11/21 09:25:54 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4663 2015/11/21 09:33:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7879,3 +7879,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/grep to 2.22 [ryoon 2015-11-20]
 	Updated security/libsodium to 1.0.6 [wiz 2015-11-21]
 	Updated devel/geany to 1.26 [wiz 2015-11-21]
+	Updated www/libmicrohttpd to 0.9.46 [wiz 2015-11-21]
