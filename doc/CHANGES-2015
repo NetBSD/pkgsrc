@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4676 2015/11/21 14:02:23 mef Exp $
+$NetBSD: CHANGES-2015,v 1.4677 2015/11/21 14:28:58 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7893,3 +7893,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/p5-DBIx-Class-Candy to 0.005001 [wen 2015-11-21]
 	Updated cad/eagle to 7.5.0 [mef 2015-11-21]
 	Updated ham/fldigi to 3.23.05 [mef 2015-11-21]
+	Updated devel/p5-Class-C3 to 0.30 [wen 2015-11-21]
