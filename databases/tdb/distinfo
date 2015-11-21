@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.11 2015/11/03 01:56:36 agc Exp $
+$NetBSD: distinfo,v 1.12 2015/11/21 09:42:18 wiz Exp $
 
-SHA1 (tdb-1.3.4.tar.gz) = 585d188267e4ba698c86b86703cc8cd97f1a71ac
-RMD160 (tdb-1.3.4.tar.gz) = 47aabcdef10f9a22adb3a38d197548a6326cf6cc
-SHA512 (tdb-1.3.4.tar.gz) = add1f58a0686cfd6910667b494de9a40737edfb799896f4f042b641309699a7fdb23b5c4d21555c02021eafc80def0d8fc1b6d4faf25ceb0b32b761e1610764c
-Size (tdb-1.3.4.tar.gz) = 483140 bytes
-SHA1 (patch-buildtools_wafadmin_Tools_ccroot.py) = ff22497c99c782c82f468efb4a388ca18fa21c2e
+SHA1 (tdb-1.3.8.tar.gz) = 3ac6779e14ed37caa27d5243777a2c7c485ef087
+RMD160 (tdb-1.3.8.tar.gz) = 8f1d7b43b40abf9bcf18331c314fec334eb98996
+SHA512 (tdb-1.3.8.tar.gz) = 9a7040206bbaae419a296714fe14fcbd3b67c0cef2b0f33563d52336aac2fe814049f5136a148fb049a273bb36fe81e3d777df58869c93f45d6e42b4adf9970b
+Size (tdb-1.3.8.tar.gz) = 494106 bytes
