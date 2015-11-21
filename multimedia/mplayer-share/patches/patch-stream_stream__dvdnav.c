@@ -1,10 +1,10 @@
-$NetBSD: patch-stream_stream__dvdnav.c,v 1.1 2015/04/05 08:27:08 dsainty Exp $
+$NetBSD: patch-stream_stream__dvdnav.c,v 1.2 2015/11/21 09:47:23 leot Exp $
 
 Build against libdvdnav 5.0 API.
 
---- stream/stream_dvdnav.c.orig	2015-04-02 19:11:45.639187166 +1300
-+++ stream/stream_dvdnav.c	2015-04-02 19:15:31.431196527 +1300
-@@ -737,13 +737,13 @@
+--- stream/stream_dvdnav.c.orig	2014-10-24 23:01:02.000000000 +0000
++++ stream/stream_dvdnav.c
+@@ -721,13 +721,13 @@ static int mp_dvdnav_get_aid_from_format
  
    format = dvdnav_audio_stream_format(priv->dvdnav, lg);
    switch(format) {
