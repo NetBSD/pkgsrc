@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.52 2015/04/05 08:27:08 dsainty Exp $
+# $NetBSD: options.mk,v 1.53 2015/11/21 09:47:23 leot Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
@@ -167,10 +167,8 @@ CONFIGURE_ARGS+=	--enable-libdv
 CONFIGURE_ARGS+=	--disable-libdv
 .endif
 
-CONFIGURE_ARGS+=	--disable-dvdread-internal
 .if !empty(PKG_OPTIONS:Mdvdread)
 CONFIGURE_ARGS+=	--enable-dvdread
-CONFIGURE_ARGS+=	--with-dvdread-config=${BUILDLINK_PREFIX.libdvdread}/bin/dvdread-config
 .  include "../../multimedia/libdvdread/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-dvdread
@@ -178,7 +176,6 @@ CONFIGURE_ARGS+=	--disable-dvdread
 
 .if !empty(PKG_OPTIONS:Mdvdnav)
 CONFIGURE_ARGS+=	--enable-dvdnav
-CONFIGURE_ARGS+=	--with-dvdnav-config=${BUILDLINK_PREFIX.libdvdnav}/bin/dvdnav-config
 .  include "../../multimedia/libdvdnav/buildlink3.mk"
 #CFLAGS+=		-I${BUILDLINK_PREFIX.libdvdnav}/include/dvdnav
 .else
@@ -326,7 +323,7 @@ CONFIGURE_ARGS+=	--disable-vidix
 .endif
 
 .if !empty(PKG_OPTIONS:Mvorbis)
-CONFIGURE_ARGS+=	--enable-libvorbis
+.  include "../../audio/libvorbis/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-libvorbis
 .endif
