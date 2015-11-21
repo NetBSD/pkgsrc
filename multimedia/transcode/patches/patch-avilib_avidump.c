@@ -1,4 +1,6 @@
-$NetBSD: patch-ax,v 1.4 2012/10/10 13:37:25 drochner Exp $
+$NetBSD: patch-avilib_avidump.c,v 1.1 2015/11/21 17:14:26 adam Exp $
+
+Compatibility fix.
 
 --- avilib/avidump.c.orig	2012-02-01 17:07:24.000000000 +0000
 +++ avilib/avidump.c

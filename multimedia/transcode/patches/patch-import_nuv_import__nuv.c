@@ -1,7 +1,9 @@
-$NetBSD: patch-aw,v 1.5 2009/07/07 16:38:29 drochner Exp $
+$NetBSD: patch-import_nuv_import__nuv.c,v 1.1 2015/11/21 17:14:26 adam Exp $
 
---- ./import/nuv/import_nuv.c.orig	2009-02-21 22:01:57.000000000 +0100
-+++ ./import/nuv/import_nuv.c
+Optionally build LZO support.
+
+--- import/nuv/import_nuv.c.orig	2009-02-21 22:01:57.000000000 +0100
++++ import/nuv/import_nuv.c
 @@ -15,7 +15,9 @@
  #include "aclib/ac.h"
  #include "nuppelvideo.h"
