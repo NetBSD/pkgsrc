@@ -1,21 +1,22 @@
-# $NetBSD: Makefile,v 1.97 2015/11/18 14:19:53 ryoon Exp $
+# $NetBSD: Makefile,v 1.98 2015/11/21 17:14:26 adam Exp $
 
 DISTNAME=	transcode-1.1.7
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	multimedia
-#MASTER_SITES=	http://download.berlios.de/tcforge/
 MASTER_SITES=	http://bitbucket.org/france/transcode-tcforge/downloads/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tcforge.berlios.de/
 COMMENT=	Command line video-stream processing tool
+LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		awk:run gmake pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-xio
+CONFIGURE_ARGS+=	--enable-freetype2
 CONFIGURE_ARGS+=	--enable-libmpeg2
 CONFIGURE_ARGS+=	--enable-libmpeg2convert
 CONFIGURE_ARGS+=	--enable-libpostproc
@@ -31,11 +32,11 @@ PTHREAD_OPTS=		require
 
 .include "../../mk/bsd.prefs.mk"
 
+PLIST_VARS+=		i386 oss x11
+
 .if ${MACHINE_ARCH} == "i386"
 PLIST.i386=		yes
 .endif
-
-PLIST_VARS+=		i386 oss x11
 
 .if ${OPSYS} != "Darwin"
 CONFIGURE_ARGS+=	--enable-oss
@@ -52,7 +53,7 @@ LIBS+=			${LIBOSSAUDIO}
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../multimedia/ffmpeg1/buildlink3.mk"
+.include "../../multimedia/ffmpeg2/buildlink3.mk"
 .include "../../multimedia/libdvdread/buildlink3.mk"
 .include "../../multimedia/libmpeg2/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"

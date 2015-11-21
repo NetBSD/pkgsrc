@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2012/07/07 15:50:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.18 2015/11/21 17:14:26 adam Exp $
 bin/avifix
 bin/aviindex
 bin/avimerge
@@ -89,7 +89,7 @@ lib/transcode/filter_smooth.la
 lib/transcode/filter_stabilize.la
 ${PLIST.x11}lib/transcode/filter_subtitler.la
 lib/transcode/filter_testframe.la
-${PLIST.freetype2}lib/transcode/filter_text.la
+lib/transcode/filter_text.la
 ${PLIST.i386}lib/transcode/filter_tomsmocomp.la
 lib/transcode/filter_transform.la
 lib/transcode/filter_unsharp.la

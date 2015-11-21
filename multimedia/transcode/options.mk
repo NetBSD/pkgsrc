@@ -1,12 +1,8 @@
-# $NetBSD: options.mk,v 1.8 2010/05/08 16:04:05 drochner Exp $
-#
+# $NetBSD: options.mk,v 1.9 2015/11/21 17:14:26 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.transcode
-PKG_SUPPORTED_OPTIONS=	a52 freetype2 mjpegtools lzo libxml2
-PKG_SUPPORTED_OPTIONS+=	dv imagemagick x264 faac
-
-PKG_SUGGESTED_OPTIONS=	a52 freetype2 mjpegtools libxml2
-PKG_SUGGESTED_OPTIONS+=	imagemagick x264
+PKG_SUPPORTED_OPTIONS=	a52 dv faac imagemagick mjpegtools lzo libxml2 x264
+PKG_SUGGESTED_OPTIONS=	a52 imagemagick mjpegtools libxml2 x264
 
 .include "../../mk/bsd.options.mk"
 
@@ -19,14 +15,6 @@ CONFIGURE_ARGS+=	--enable-a52-default-decoder
 PLIST.a52=		yes
 .else
 CONFIGURE_ARGS+=	--disable-a52
-.endif
-
-.if !empty(PKG_OPTIONS:Mfreetype2)
-.  include "../../graphics/freetype2/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-freetype2
-PLIST.freetype2=	yes
-.else
-CONFIGURE_ARGS+=	--disable-freetype2
 .endif
 
 .if !empty(PKG_OPTIONS:Mmjpegtools)
