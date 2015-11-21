@@ -1,4 +1,6 @@
-$NetBSD: patch-ba,v 1.4 2012/10/10 13:37:25 drochner Exp $
+$NetBSD: patch-filter_filter__pp.c,v 1.1 2015/11/21 17:14:26 adam Exp $
+
+Fixes building against FFmpeg version >= 2.0.0 (gentoo patch).
 
 --- filter/filter_pp.c.orig	2011-11-19 16:50:27.000000000 +0000
 +++ filter/filter_pp.c

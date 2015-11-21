@@ -1,6 +1,6 @@
-$NetBSD: patch-import_probe_ffmpeg.c,v 1.1 2012/11/17 21:46:44 markd Exp $
+$NetBSD: patch-import_probe_ffmpeg.c,v 1.2 2015/11/21 17:14:26 adam Exp $
 
-Fix build with ffmpeg 0.11. gentoo patch from Brennan Shacklett
+Fixes building against FFmpeg version >= 2.0.0 (gentoo patch).
 
 --- import/probe_ffmpeg.c.orig	2011-11-19 16:50:27.000000000 +0000
 +++ import/probe_ffmpeg.c
@@ -15,3 +15,21 @@ Fix build with ffmpeg 0.11. gentoo patch from Brennan Shacklett
      if (ret != 0) {
          tc_log_error(__FILE__, "unable to open '%s'"
                                 " (libavformat failure)",
+@@ -109,7 +109,7 @@ void probe_ffmpeg(info_t *ipipe)
+         return;
+     }
+ 
+-    ret = av_find_stream_info(lavf_dmx_context);
++    ret = avformat_find_stream_info(lavf_dmx_context, NULL);
+     if (ret < 0) {
+         tc_log_error(__FILE__, "unable to fetch informations from '%s'"
+                                " (libavformat failure)",
+@@ -120,7 +120,7 @@ void probe_ffmpeg(info_t *ipipe)
+ 
+     translate_info(lavf_dmx_context, ipipe->probe_info);
+ 
+-    av_close_input_file(lavf_dmx_context);
++    avformat_close_input(&lavf_dmx_context);
+     return;
+ }
+ 
