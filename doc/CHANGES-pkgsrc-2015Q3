@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q3,v 1.1.2.22 2015/11/20 21:07:28 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q3,v 1.1.2.23 2015/11/21 16:14:35 bsiegert Exp $
 
 Changes to the packages collection and infrastructure on the 2015Q3 branch:
 
@@ -107,4 +107,7 @@ graphics/png: security fix
 
 Pullup ticket #4855 - requested by he
 archivers/unzip: security fix
+
+Pullup ticket #4852 - requested by he
+lang/g95: build fix
 
