@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: pkg_comp.sh,v 1.42 2015/08/17 08:18:31 wiz Exp $
+# $NetBSD: pkg_comp.sh,v 1.43 2015/11/21 23:10:27 agc Exp $
 #
 # pkg_comp - Build packages inside a clean chroot environment
 # Copyright (c) 2002, 2003, 2004, 2005 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -45,8 +45,8 @@ _MKCONF_VARS="WRKDIR_BASENAME MKOBJDIRS BSDSRCDIR WRKOBJDIR DISTDIR PACKAGES \
               PKGSRC_COMPILER \
               LIBKVER_STANDALONE_PREFIX PKG_DBDIR"
 
-_TEMPLATE_VARS="DESTDIR ROOTSHELL COPYROOTCFG BUILD_TARGET DISTRIBDIR SETS \
-                SETS_X11 REAL_SRC REAL_SRC_OPTS REAL_PKGSRC \
+_TEMPLATE_VARS="DESTDIR ROOTSHELL BUILD_PKG_COMP_TARGET COPYROOTCFG DISTRIBDIR \
+		SETS SETS_X11 REAL_SRC REAL_SRC_OPTS REAL_PKGSRC \
                 REAL_PKGSRC_OPTS REAL_DISTFILES REAL_DISTFILES_OPTS \
                 REAL_PACKAGES REAL_PACKAGES_OPTS REAL_PKGVULNDIR \
                 NETBSD_RELEASE MAKEROOT_HOOKS MOUNT_HOOKS UMOUNT_HOOKS \
@@ -105,7 +105,7 @@ env_setdefaults()
     : ${ROOTSHELL:=/bin/ksh}
     : ${COPYROOTCFG:=no}
     : ${AUTO_TARGET:=package}
-    : ${BUILD_TARGET:=package}
+    : ${BUILD_PKG_COMP_TARGET:=package}
     : ${DISTRIBDIR:=/var/pub/NetBSD}
     : ${SETS:=base.tgz comp.tgz etc.tgz kern-GENERIC.tgz text.tgz}
     : ${SETS_X11:=xbase.tgz xcomp.tgz xetc.tgz xfont.tgz xserver.tgz}
@@ -621,10 +621,10 @@ makeroot_libkver()
     local prefix script statfile
 
     if [ "$NETBSD_RELEASE" != "no" ]; then
-        _BUILD_TARGET="$BUILD_TARGET"
-        BUILD_TARGET="standalone-install"
+        _BUILD_PKG_COMP_TARGET="$BUILD_PKG_COMP_TARGET"
+        BUILD_PKG_COMP_TARGET="standalone-install"
         build_and_install pkgtools/libkver
-        BUILD_TARGET="$_BUILD_TARGET"
+        BUILD_PKG_COMP_TARGET="$_BUILD_PKG_COMP_TARGET"
         echo "LD_PRELOAD=${LIBKVER_STANDALONE_PREFIX}/lib/libkver.so; export LD_PRELOAD" >> $DESTDIR/etc/shrc
         echo "setenv LD_PRELOAD ${LIBKVER_STANDALONE_PREFIX}/lib/libkver.so" >> $DESTDIR/etc/csh.login
         echo "setenv LD_PRELOAD ${LIBKVER_STANDALONE_PREFIX}/lib/libkver.so" >> $DESTDIR/etc/csh.cshrc
@@ -678,7 +678,7 @@ pkg_auto()
     fi
 
     checkroot
-    _BUILD_RESUME=${rfile} BUILD_TARGET=${target} pkg_build ${pkgs}
+    _BUILD_RESUME=${rfile} BUILD_PKG_COMP_TARGET=${target} pkg_build ${pkgs}
     pkg_removeroot
 }
 
@@ -734,7 +734,7 @@ pkg_build()
         init_script $script
         cat >> $script <<EOF
 cd /usr/pkgsrc/$p
-make $BUILD_TARGET
+make $BUILD_PKG_COMP_TARGET
 if [ \$? != 0 ]; then
     touch /pkg_comp/tmp/`basename $statfile`
 fi

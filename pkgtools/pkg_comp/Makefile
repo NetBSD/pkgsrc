@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2015/08/17 08:18:31 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2015/11/21 23:10:27 agc Exp $
 
 PKGNAME=	pkg_comp-1.38
+PKGREVISION=	1
 CATEGORIES=	pkgtools
 
 MAINTAINER=	jmmv@NetBSD.org

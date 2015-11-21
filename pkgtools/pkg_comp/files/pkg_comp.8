@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_comp.8,v 1.40 2015/08/17 08:18:31 wiz Exp $
+.\" $NetBSD: pkg_comp.8,v 1.41 2015/11/21 23:10:27 agc Exp $
 .\"
 .\" pkg_comp - Build packages inside a clean chroot environment
 .\" Copyright (c) 2002, 2003, 2004, 2005 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -185,7 +185,7 @@ like
 or a plain name like
 .Sq colorls .
 Defaults to nothing.
-.It BUILD_TARGET
+.It BUILD_PKG_COMP_TARGET
 The pkgsrc target to use when building packages.
 It can contain any target supported by the pkgsrc system, but
 reasonable values are:
@@ -507,7 +507,7 @@ will take care to umount needed mount points.
 This executes several targets automatically, using
 .Sy AUTO_TARGET
 as
-.Sy BUILD_TARGET
+.Sy BUILD_PKG_COMP_TARGET
 during the build.
 The order is: makeroot, build and removeroot.
 This is useful to create binary packages of several pkgsrc and their
