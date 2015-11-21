@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4669 2015/11/21 09:48:54 leot Exp $
+$NetBSD: CHANGES-2015,v 1.4670 2015/11/21 09:49:16 leot Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7886,3 +7886,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated multimedia/libbluray to 0.9.0 [wiz 2015-11-21]
 	Updated multimedia/mplayer-share to 1.2 [leot 2015-11-21]
 	Updated multimedia/mplayer to 1.2 [leot 2015-11-21]
+	Updated multimedia/gmplayer to 1.2 [leot 2015-11-21]
