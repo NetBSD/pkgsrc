@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.11 2015/09/02 01:55:13 mef Exp $
+$NetBSD: distinfo,v 1.12 2015/11/21 13:49:16 mef Exp $
 
-SHA1 (eagle-lin32-7.4.0.run) = 6724a53a90423e1fcd3ddfab2557c20739623cd3
-RMD160 (eagle-lin32-7.4.0.run) = ad76164db7693b0bddfb0cc1d205b514d9692fad
-Size (eagle-lin32-7.4.0.run) = 49535353 bytes
+SHA1 (eagle-lin32-7.5.0.run) = 4d6b4eef6b8488303b76913e7332100082c5e350
+RMD160 (eagle-lin32-7.5.0.run) = 2f505856289e9c35068914ec190b283571eb6800
+SHA512 (eagle-lin32-7.5.0.run) = 9dd6d49549473d1e65563d46cd671cc6d748b6196c6524720031ce5494e4dd704d7326986e80e1eaf4f52133a1929a801167883477ce9b1be8ba47dcf9f29b96
+Size (eagle-lin32-7.5.0.run) = 51067764 bytes
