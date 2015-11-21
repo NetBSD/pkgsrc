@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.54 2014/11/20 01:41:22 jmcneill Exp $
+# $NetBSD: Makefile.common,v 1.55 2015/11/21 09:47:23 leot Exp $
 # used by multimedia/gmplayer/Makefile
 # used by multimedia/mencoder/Makefile
 # used by multimedia/mplayer/Makefile
 
-MPLAYER_VERSION=	1.1.1
+MPLAYER_VERSION=	1.2
 
 DISTNAME=		MPlayer-${MPLAYER_VERSION}
 
