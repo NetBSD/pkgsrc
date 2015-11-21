@@ -1,4 +1,8 @@
-$NetBSD: patch-ac,v 1.6 2012/10/10 13:37:25 drochner Exp $
+$NetBSD: patch-configure,v 1.1 2015/11/21 17:14:26 adam Exp $
+
+Add DragonFly support.
+Make use of PTHREAD_LDFLAGS.
+Portability fix.
 
 --- configure.orig	2011-11-19 16:50:37.000000000 +0000
 +++ configure
