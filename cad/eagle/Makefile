@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.27 2015/09/02 01:55:13 mef Exp $
+# $NetBSD: Makefile,v 1.28 2015/11/21 13:49:16 mef Exp $
 
-DISTNAME=		eagle-lin32-7.4.0
+DISTNAME=		eagle-lin32-7.5.0
 PKGNAME=		${DISTNAME:S/-lin32//}
 CATEGORIES=		cad
-MASTER_SITES=		http://web.cadsoft.de/ftp/eagle/program/7.4/
+# Strip microversion from directory name
+MASTER_SITES=		http://web.cadsoft.de/ftp/eagle/program/${PKGVERSION_NOREV:C/([0-9]+\.[0-9]+)\.[0-9]/\1/}/
 EXTRACT_SUFX=		.run
 EXTRACT_CMD=		tail +126 $$extract_file | ${TOOLS_PATH.bsdtar} -C ${WRKDIR} -xjf -
 
@@ -34,5 +35,9 @@ do-build:
 do-install:
 	cd ${WRKSRC} && ${PAX} -rw . ${DESTDIR}${PREFIX}/eagle/.
 	${INSTALL_SCRIPT} ${WRKDIR}/eagle ${DESTDIR}${PREFIX}/bin
+	# Drop executable bit for regular files
+	${CHMOD} -x ${DESTDIR}${PREFIX}/eagle/projects/examples/seeed/DESCRIPTION
+	${CHMOD} -x ${DESTDIR}${PREFIX}/eagle/projects/examples/seeed/*/*
+	${CHMOD} -x ${DESTDIR}${PREFIX}/eagle/lbr/seeed/*
 
 .include "../../mk/bsd.pkg.mk"
