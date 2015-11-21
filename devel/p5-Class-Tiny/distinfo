@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 03:28:03 agc Exp $
+$NetBSD: distinfo,v 1.5 2015/11/21 14:54:10 wen Exp $
 
-SHA1 (Class-Tiny-1.001.tar.gz) = f95392e59aa081b9174cb6b6744be984273a9e80
-RMD160 (Class-Tiny-1.001.tar.gz) = 34262aac2452da50d995b8e39727e1b8ae222bfb
-SHA512 (Class-Tiny-1.001.tar.gz) = 7d64a78f72edb249b988da9ab7e4769f2721030eeb1dd3e111f1d0ae2bed76ea6ee0d5feb30867eaf78f0d436ff2e72f701cb2c51d53ce40bb0840f9b3c33dc7
-Size (Class-Tiny-1.001.tar.gz) = 27064 bytes
+SHA1 (Class-Tiny-1.004.tar.gz) = 936398abd0cc28ae32cbdc9c80db02e59742a852
+RMD160 (Class-Tiny-1.004.tar.gz) = 0b2586cfb2cb053f130b0d6b7dabe0c09e33f81a
+SHA512 (Class-Tiny-1.004.tar.gz) = e5a30cea0c4518e257c2298a421128941d8e6969daeeae2edca2e99566b12ace9880249accad8434d72cc6073dbad754782502d220a21213a7b3f2dbbf53e97b
+Size (Class-Tiny-1.004.tar.gz) = 27506 bytes
