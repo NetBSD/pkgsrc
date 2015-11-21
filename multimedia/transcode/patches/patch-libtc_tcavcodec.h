@@ -1,6 +1,6 @@
-$NetBSD: patch-libtc_tcavcodec.h,v 1.1 2012/11/17 21:46:44 markd Exp $
+$NetBSD: patch-libtc_tcavcodec.h,v 1.2 2015/11/21 17:14:26 adam Exp $
 
-Fix build with ffmpeg 0.11. gentoo patch from Brennan Shacklett
+Fixes building against FFmpeg version >= 2.0.0 (gentoo patch).
 
 --- libtc/tcavcodec.h.orig	2011-11-19 16:50:27.000000000 +0000
 +++ libtc/tcavcodec.h
