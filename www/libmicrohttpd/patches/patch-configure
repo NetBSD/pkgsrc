@@ -1,6 +1,7 @@
-$NetBSD: patch-configure,v 1.1 2015/11/21 09:33:45 wiz Exp $
+$NetBSD: patch-configure,v 1.2 2015/11/21 09:44:21 wiz Exp $
 
 Fix bashism.
+https://gnunet.org/bugs/view.php?id=4062
 
 --- configure.orig	2015-11-09 07:50:11.000000000 +0000
 +++ configure
