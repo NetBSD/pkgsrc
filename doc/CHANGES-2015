@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4660 2015/11/20 19:05:20 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.4661 2015/11/21 09:21:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7877,3 +7877,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/nss to 3.21 [ryoon 2015-11-20]
 	Updated security/putty to 0.66 [ryoon 2015-11-20]
 	Updated textproc/grep to 2.22 [ryoon 2015-11-20]
+	Updated security/libsodium to 1.0.6 [wiz 2015-11-21]
