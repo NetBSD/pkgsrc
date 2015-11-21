@@ -1,0 +1,10 @@
+$NetBSD: patch-kscreensaver_xsavers_CMakeLists.txt,v 1.1 2015/11/21 20:18:14 abs Exp $
+
+--- kscreensaver/xsavers/CMakeLists.txt.orig	2010-03-05 18:35:01.000000000 +0000
++++ kscreensaver/xsavers/CMakeLists.txt
+@@ -1,3 +1,5 @@
++include(CheckIncludeFiles)
++
+ check_include_files(memory.h HAVE_MEMORY_H)
+ configure_file (config-xsavers.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-xsavers.h )
+ 
