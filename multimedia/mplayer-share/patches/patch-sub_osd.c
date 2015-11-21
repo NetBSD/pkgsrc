@@ -1,11 +1,11 @@
-$NetBSD: patch-sub_osd.c,v 1.2 2012/06/11 21:55:34 wiz Exp $
+$NetBSD: patch-sub_osd.c,v 1.3 2015/11/21 09:47:23 leot Exp $
 
 XXX: OS X support
 
---- sub/osd.c.orig	2010-10-27 17:53:24.000000000 +0000
+--- sub/osd.c.orig	2012-09-02 21:17:03.000000000 +0000
 +++ sub/osd.c
-@@ -29,6 +29,11 @@
- #include <inttypes.h>
+@@ -31,6 +31,11 @@
+ #include "libmpcodecs/img_format.h"
  #include "cpudetect.h"
  
 +#if ARCH_X86 && defined(__APPLE__)

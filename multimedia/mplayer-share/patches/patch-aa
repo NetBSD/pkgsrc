@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.32 2015/04/05 08:27:08 dsainty Exp $
+$NetBSD: patch-aa,v 1.33 2015/11/21 09:47:23 leot Exp $
 
 o Handle properly sh3 and evbarm ports on NetBSD.
 o Fix CPU family detection on NetBSD with /proc mounted with "-o linux"
@@ -8,21 +8,9 @@ o Add necessary libs for aalib support even if the aa option is turned on with
   --enable-aa.
 o Add support for dvb capture on NetBSD.
 
---- configure.orig	2012-05-22 14:01:51.000000000 -0400
-+++ configure	2013-01-11 22:15:07.000000000 -0500
-@@ -1519,8 +1519,9 @@
-       alpha) host_arch=alpha ;;
-       sun4*|sparc*) host_arch=sparc ;;
-       parisc*|hppa*|9000*) host_arch=hppa ;;
--      arm*|zaurus|cats) host_arch=arm ;;
--      sh3|sh4|sh4a) host_arch=sh ;;
-+      arm*|zaurus|cats|evbarm) host_arch=arm ;;
-+      sh3*) host_arch=sh ;;
-+	  sh4|sh4a) host_arch=sh4 ;;
-       s390) host_arch=s390 ;;
-       s390x) host_arch=s390x ;;
-       *mips*) host_arch=mips ;;
-@@ -1674,7 +1675,7 @@
+--- configure.orig	2015-10-02 20:29:04.000000000 +0000
++++ configure
+@@ -1640,7 +1640,7 @@ else
        cc_name=$cc_name_tmp
        echocheck "$_cc version"
        cc_vendor=gnu
@@ -31,7 +19,19 @@ o Add support for dvb capture on NetBSD.
        case $cc_version in
          2.96*)
            cc_fail=yes
-@@ -1798,7 +1799,7 @@
+@@ -1717,8 +1717,9 @@ if test -z "$_target" ; then
+       sun4*|sparc*) host_arch=sparc ;;
+       parisc*|hppa*|9000*) host_arch=hppa ;;
+       aarch64*) host_arch=aarch64 ;;
+-      arm*|zaurus|cats) host_arch=arm ;;
+-      sh3|sh4|sh4a) host_arch=sh ;;
++      arm*|zaurus|cats|evbarm) host_arch=arm ;;
++      sh3*) host_arch=sh ;;
++	  sh4|sh4a) host_arch=sh4 ;;
+       s390) host_arch=s390 ;;
+       s390x) host_arch=s390x ;;
+       *mips*) host_arch=mips ;;
+@@ -1930,7 +1931,7 @@ if x86 ; then
    # gather more CPU information
    pname=$($_cpuinfo | grep 'model name' | cut -d ':' -f 2 | head -n 1)
    pvendor=$($_cpuinfo | grep 'vendor_id' | cut -d ':' -f 2  | cut -d ' ' -f 2 | head -n 1)
@@ -40,7 +40,7 @@ o Add support for dvb capture on NetBSD.
    pmodel=$($_cpuinfo | grep -v 'model name' | grep 'model' | cut -d ':' -f 2 | cut -d ' ' -f 2 | head -n 1)
    pstepping=$($_cpuinfo | grep 'stepping' | cut -d ':' -f 2 | cut -d ' ' -f 2 | head -n 1)
  
-@@ -2274,7 +2275,12 @@
+@@ -2446,7 +2447,12 @@ case "$host_arch" in
      test $_fast_clz = "auto" && _fast_clz=yes
      ;;
  
@@ -54,16 +54,37 @@ o Add support for dvb capture on NetBSD.
      arch='sh4'
      iproc='sh4'
      ;;
-@@ -2591,7 +2597,7 @@
- # Checking for CFLAGS
+@@ -2783,23 +2789,23 @@ fi # if darwin && test "$cc_vendor" = "g
  _install_strip="-s"
- if test "$_profile" != "" || test "$_debug" != "" ; then
--  CFLAGS="-O2 $_march $_mcpu $_pipe $_debug $_profile"
-+  CFLAGS="$CFLAGS $_debug $_profile"
-   WARNFLAGS="-W -Wall"
-   _install_strip=
- elif test -z "$CFLAGS" ; then
-@@ -4288,7 +4294,11 @@
+ if test -z "$CFLAGS" || test "$_profile" != "" || test "$_debug" != ""; then
+   if test "$cc_vendor" = "intel" ; then
+-    CFLAGS="-O2 $_march $_mcpu $_pipe -fomit-frame-pointer"
++    CFLAGS="$CFLAGS -fomit-frame-pointer"
+     WARNFLAGS="-wd167 -wd556 -wd144"
+   elif test "$cc_vendor" = "sun" ; then
+-    CFLAGS="-O2 $_march $_mcpu $_pipe -xc99 -xregs=frameptr"
++    CFLAGS="$CFLAGS -xc99 -xregs=frameptr"
+   elif test "$cc_vendor" = "clang"; then
+-    CFLAGS="-O2 $_march $_pipe"
++    CFLAGS="$CFLAGS"
+   elif test "$cc_vendor" != "gnu" ; then
+-    CFLAGS="-O2 $_march $_mcpu $_pipe"
++    CFLAGS="$CFLAGS"
+   else
+-    CFLAGS="-O4 $_march $_mcpu $_pipe -ffast-math -fomit-frame-pointer"
++    CFLAGS="$CFLAGS -ffast-math -fomit-frame-pointer"
+     WARNFLAGS="-Wall -Wno-switch -Wno-parentheses -Wpointer-arith -Wredundant-decls -Werror=format-security"
+     WARN_CFLAGS="-Werror-implicit-function-declaration"
+     extra_ldflags="$extra_ldflags -ffast-math"
+   fi
+ 
+   if test "$_profile" != "" || test "$_debug" != ""; then
+-    CFLAGS="-O2 $_march $_mcpu $_pipe $_debug $_profile"
++    CFLAGS="$CFLAGS $_debug $_profile"
+     WARNFLAGS="-W -Wall $WARNFLAGS"
+     _install_strip=
+   fi
+@@ -4591,7 +4597,11 @@ if test "$_x11" = auto && test "$_x11_he
             -L/usr/X11/lib -L/usr/lib32 -L/usr/openwin/lib -L/usr/local/lib64 -L/usr/X11R6/lib64 \
             -L/usr/lib ; do
      if netbsd; then
@@ -76,7 +97,7 @@ o Add support for dvb capture on NetBSD.
      else
        ld_tmp="$I -lXext -lX11 $ld_pthread"
      fi
-@@ -4669,6 +4679,8 @@
+@@ -4994,6 +5004,8 @@ if test "$_aa" = yes ; then
    def_aa='#define CONFIG_AA 1'
    if cygwin ; then
      libs_mplayer="$libs_mplayer $(aalib-config --libs | cut -d " " -f 2,5,6)"
@@ -85,7 +106,7 @@ o Add support for dvb capture on NetBSD.
    fi
    vomodules="aa $vomodules"
  else
-@@ -4756,7 +4768,6 @@
+@@ -5081,7 +5093,6 @@ EOF
        extra_cflags="$extra_cflags $inc_tmp" && break
    done
  fi
@@ -93,7 +114,7 @@ o Add support for dvb capture on NetBSD.
  if test "$_dvb" = yes ; then
    _dvbin=yes
    inputmodules="dvb $inputmodules"
-@@ -4765,14 +4776,29 @@
+@@ -5090,14 +5101,29 @@ if test "$_dvb" = yes ; then
    aomodules="mpegpes(dvb) $aomodules"
    vomodules="mpegpes(dvb) $vomodules"
  else
@@ -129,14 +150,3 @@ o Add support for dvb capture on NetBSD.
  
  if darwin; then
  
-@@ -7764,8 +7790,8 @@
-     cflags_libdvdnav="-Ilibdvdnav"
-     inputmodules="dvdnav(internal) $inputmodules"
-   else
--    extra_cflags="$extra_cflags $($_dvdnavconfig --cflags)"
--    extra_ldflags="$extra_ldflags $($_dvdnavconfig --minilibs)"
-+    extra_cflags="$extra_cflags $($_pkg_config --cflags dvdnav)"
-+    extra_ldflags="$extra_ldflags $($_pkg_config --libs dvdnav)"
-     inputmodules="dvdnav $inputmodules"
-   fi
- else

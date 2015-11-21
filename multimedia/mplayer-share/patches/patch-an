@@ -1,10 +1,10 @@
-$NetBSD: patch-an,v 1.4 2012/06/11 21:55:34 wiz Exp $
+$NetBSD: patch-an,v 1.5 2015/11/21 09:47:23 leot Exp $
 
 http://bugzilla.mplayerhq.hu/show_bug.cgi?id=751
 
 Please also see: pkg/20549.
 
---- stream/vcd_read_fbsd.h.orig	2011-05-07 21:32:50.000000000 +0000
+--- stream/vcd_read_fbsd.h.orig	2013-12-02 13:53:03.000000000 +0000
 +++ stream/vcd_read_fbsd.h
 @@ -63,9 +63,8 @@ typedef struct mp_vcd_priv_st {
    vcd_tocentry entry;
@@ -15,9 +15,9 @@ Please also see: pkg/20549.
  #endif
 +  cdsector_t buf;
    struct ioc_toc_header tochdr;
+   unsigned int track;
  } mp_vcd_priv_t;
- 
-@@ -236,8 +235,8 @@ vcd_read(mp_vcd_priv_t* vcd, char *mem)
+@@ -237,8 +236,8 @@ vcd_read(mp_vcd_priv_t* vcd, char *mem)
    sc.cmd[9] = 1 << 4; // user data only
    sc.cmd[10] = 0;     // no subchannel
    sc.cmdlen = 12;
@@ -28,7 +28,7 @@ Please also see: pkg/20549.
    sc.senselen = sizeof(sc.sense);
    sc.flags = SCCMD_READ;
    sc.timeout = 10000;
-@@ -254,9 +253,9 @@ vcd_read(mp_vcd_priv_t* vcd, char *mem)
+@@ -255,9 +254,9 @@ vcd_read(mp_vcd_priv_t* vcd, char *mem)
  #else
    if (pread(vcd->fd,&vcd->buf,VCD_SECTOR_SIZE,vcd_get_msf(vcd)*VCD_SECTOR_SIZE)
       != VCD_SECTOR_SIZE) return 0;  // EOF?
