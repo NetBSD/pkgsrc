@@ -1,22 +1,28 @@
-$NetBSD: distinfo,v 1.88 2015/04/05 08:27:08 dsainty Exp $
+$NetBSD: distinfo,v 1.89 2015/11/21 09:47:23 leot Exp $
 
-SHA1 (mplayer/MPlayer-1.1.1.tar.xz) = ba2f3bd1442d04b17b0143680850273d928689c1
-RMD160 (mplayer/MPlayer-1.1.1.tar.xz) = 745b3fdf684ba7614dbec2a7143188b7c9cca3a1
-Size (mplayer/MPlayer-1.1.1.tar.xz) = 11202492 bytes
-SHA1 (patch-CVE-2014-4610) = 855276c8e301494942a03e13712cc53615d8f4d5
-SHA1 (patch-aa) = abe6709d87c0a1b4f4da15e93a5bc4d923ed0793
+SHA1 (mplayer/MPlayer-1.2.tar.xz) = 64fad840dfae466ab5ef3be2b6c74058892cd981
+RMD160 (mplayer/MPlayer-1.2.tar.xz) = 6d4c83370affbc7a1f79e59af8d78a2346a2b846
+SHA512 (mplayer/MPlayer-1.2.tar.xz) = ac10dd4facd0d8fbc3454a3a2eae0e0d2ed76fa60f30ebd6f8495632e4541af712ab2d005e88bc2baa8302ccb98d63ba80a051db80d2b76ac928a2bd779b47aa
+Size (mplayer/MPlayer-1.2.tar.xz) = 13019196 bytes
+SHA1 (patch-aa) = 81383178c34b89c2e2eb6132e379294ca1f824f3
 SHA1 (patch-ae) = 286f5ac075ea4123a1a6276f97e02a4dda9b3e67
-SHA1 (patch-an) = a1d16ce7a4ff5a2071a7bac1b6836dc197b849e4
-SHA1 (patch-ffmpeg_libavcodec_arm_asm.S) = dfe8670bcbb6e6dc17b65bf6459b9550da06f73f
-SHA1 (patch-ffmpeg_libavcodec_arm_simple__idct__arm.S) = 7ffa3a0dc52afe28a6c184a72586a1392719d885
-SHA1 (patch-ffmpeg_libavutil_x86__cpu.h) = ea2c6e179840c7746930848b751b6fd1dcd67e90
-SHA1 (patch-gui_interface.c) = b5b1b2da84aaa7555e9ff8b75186684e2439717d
+SHA1 (patch-an) = 330c427e30b686165fda15a85b730a3f53e0d217
+SHA1 (patch-ffmpeg_Makefile) = c42d63935e824bd4006b40575b3e56e1645a32d2
+SHA1 (patch-ffmpeg_configure) = 43adffa6ff6a781875950a20adeb837b4eafd9b7
+SHA1 (patch-ffmpeg_libavcodec_libvpxenc.c) = 85fb37d2cf8361faa649b41fc6c36ac261314d39
+SHA1 (patch-ffmpeg_libavcodec_x86_ac3dsp_init.c) = bbf84edc6b74721e31c0952b461131eac4499026
+SHA1 (patch-ffmpeg_libavutil_common.h) = 20fe12a85d253caeeca90e09fcecdc929d2d9e34
+SHA1 (patch-ffmpeg_libavutil_opencl.c) = 5146acb650e699f1e1d05efa4575cec825b7c2eb
+SHA1 (patch-ffmpeg_libavutil_x86_asm.h) = 4010a5f5a7fd6e22c81f7e56fde5f0a474ad89e2
+SHA1 (patch-ffmpeg_libavutil_x86_cpu.c) = a298feb778bc1d50e1abf4c0b56b9db97ab13c42
+SHA1 (patch-gui_interface.c) = 04c347b6cb0a54132e6b089142c8ed282f583a1c
+SHA1 (patch-gui_wm_ws.c) = cdffd469d7b1fcc63016fa506d53304b24624235
 SHA1 (patch-libao2_ao_sun.c) = ce7042b394b9b8c051597c734b70290c8bf0a8d5
-SHA1 (patch-libmpdemux_demux__gif.c) = 4efec4ea1fe395e24760530e532d3251c64a8fb8
-SHA1 (patch-libvo_vo__corevideo.h) = 2d0b1702363227363343a29060a7b027ce96b5bb
-SHA1 (patch-libvo_vo__gif89a.c) = 88e20df5ea5d5f294d312dddab08cb0e40fb8483
+SHA1 (patch-libmpdemux_demux__gif.c) = 6c7f6d0a89835b64eecead148597bb277be38fd9
+SHA1 (patch-libvo_vo__corevideo.h) = c29a24266edb6727dda68a378fac413b5b0ab7ec
+SHA1 (patch-libvo_vo__gif89a.c) = f7ee649bebef4b7f3fd4659613f61667109ee825
 SHA1 (patch-stream_dvb_tune.c) = 46cb5fb4700d7da5ed997dd468033c1edbe9be03
 SHA1 (patch-stream_dvbin.h) = ee4f74eb786100e7cc62be228d73ce29d88638d1
-SHA1 (patch-stream_stream__dvdnav.c) = 25215d7764fe481f7cec85b30dc554aeda448fd0
-SHA1 (patch-sub_osd.c) = 00dceec6ddd10d5ccb6561a18663fe1ca0635be5
-SHA1 (patch-sub_subreader.c) = dc653c1e1cc9583a7e0998b4000e87859a4753a0
+SHA1 (patch-stream_stream__dvdnav.c) = 6f7e54629b32c83de8e4b31fe414b78f6043e0e8
+SHA1 (patch-sub_osd.c) = 95f1bc1c20f181720a2a073acbb3abdde3921608
+SHA1 (patch-sub_subreader.c) = 3ec0d3824b6e9fe34cb33e9463d833868f0b03c1
