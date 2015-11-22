@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4686 2015/11/22 19:18:25 tsutsui Exp $
+$NetBSD: CHANGES-2015,v 1.4687 2015/11/22 19:31:38 leot Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7903,3 +7903,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/drupal7 to 7.41nb1 [wen 2015-11-22]
 	Updated multimedia/gmplayer to 1.2nb1 [martin 2015-11-22]
 	Updated graphics/xv to 3.10anb22 [tsutsui 2015-11-22]
+	Updated multimedia/gmplayer to 1.2nb2 [leot 2015-11-22]
