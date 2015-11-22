@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4689 2015/11/22 22:00:15 agc Exp $
+$NetBSD: CHANGES-2015,v 1.4690 2015/11/22 23:05:01 wiedi Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7906,3 +7906,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated multimedia/gmplayer to 1.2nb2 [leot 2015-11-22]
 	Updated www/netsurf to 3.3nb2 [leot 2015-11-22]
 	Added pkgtools/gimme version 20151122 [agc 2015-11-22]
+	Updated editors/nano to 2.4.3 [wiedi 2015-11-22]
