@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.127 2015/11/21 09:47:23 leot Exp $
+# $NetBSD: Makefile,v 1.128 2015/11/22 15:38:56 martin Exp $
 #
 # NOTE: if you are updating both mplayer and gmplayer, you must ensure
 # that *both* distinfo files contain the correct, up-to-date files and
@@ -8,6 +8,7 @@
 #
 
 PKGNAME=	gmplayer-${MPLAYER_VERSION}
+PKGREVISION=	1
 
 SKIN_SITES=	http://www1.mplayerhq.hu/MPlayer/skins/		\
 		http://www2.mplayerhq.hu/MPlayer/skins/		\
@@ -24,6 +25,10 @@ BUILD_DEPENDS+=		yasm-[0-9]*:../../devel/yasm
 .endif
 
 COMMENT=	Fast, cross-platform movie player with GTK2+ interface
+
+# This one does not work with the current version, re-add once it
+# gets fixed...
+# brushedGnome-1.0${SKIN_EXTRACT_SUFX}
 
 SKINS+=		Abyss-1.7${SKIN_EXTRACT_SUFX}			\
 		AlienMind-1.2${SKIN_EXTRACT_SUFX}		\
@@ -57,7 +62,6 @@ SKINS+=		Abyss-1.7${SKIN_EXTRACT_SUFX}			\
 		XFce4-1.0${SKIN_EXTRACT_SUFX}			\
 		avifile-1.7${SKIN_EXTRACT_SUFX}			\
 		bluecurve-1.3${SKIN_EXTRACT_SUFX}		\
-		brushedGnome-1.0${SKIN_EXTRACT_SUFX}		\
 		changuito-0.2${SKIN_EXTRACT_SUFX}		\
 		clearplayer-0.9${SKIN_EXTRACT_SUFX}		\
 		disappearer-1.2${SKIN_EXTRACT_SUFX}		\
@@ -118,14 +122,6 @@ do-install:
 	@${ECHO_MSG} "Installing skin ${skin}..."
 	${BZCAT} ${DISTDIR}/${DIST_SUBDIR}/${skin} |	\
 	  ${GTAR} xCmf ${DESTDIR}${PREFIX}/share/mplayer/skins -
-.endfor
-.for skin in ${SKINS:C,-[0-9]+\.[0-9]+${SKIN_EXTRACT_SUFX},,}
-	${MV} ${DESTDIR}${PREFIX}/share/mplayer/skins/${skin}/skin \
-	  ${DESTDIR}${PREFIX}/share/mplayer/skins/${skin}/skin.orig
-	${SED} -e 's/pimage/potmeter/' -e 's/rpotmeter/;rpotmeter/' \
-	  < ${DESTDIR}${PREFIX}/share/mplayer/skins/${skin}/skin.orig \
-	  > ${DESTDIR}${PREFIX}/share/mplayer/skins/${skin}/skin
-	${RM} ${DESTDIR}${PREFIX}/share/mplayer/skins/${skin}/skin.orig
 .endfor
 	${CHMOD} -R a+rX ${DESTDIR}${PREFIX}/share/mplayer/skins
 	${RM} -f ${DESTDIR}${PREFIX}/share/mplayer/skins/default
