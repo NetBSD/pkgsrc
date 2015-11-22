@@ -1,4 +1,4 @@
-$NetBSD: patch-src_access.c,v 1.1 2015/11/07 22:00:16 dholland Exp $
+$NetBSD: patch-src_access.c,v 1.2 2015/11/22 17:17:33 dholland Exp $
 
 Fix bounding errors detected by OpenBSD's compiler.
 
@@ -18,7 +18,7 @@ Fix bounding errors detected by OpenBSD's compiler.
  		sends_cmdout(forWhom, line);
  
 -		strlcpy(u_tab[forWhom].realname, "registered", LINE_SIZE);
-+		strlcpy(u_tab[forWhom].realname, "registered", sizeof(u_tab[forWhom].realname);
++		strlcpy(u_tab[forWhom].realname, "registered", sizeof(u_tab[forWhom].realname));
  		strlcpy(u_tab[forWhom].password, password, MAX_PASSWDLEN+1);
  		nickwritetime(forWhom, 0);
  	}
