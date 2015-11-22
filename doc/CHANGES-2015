@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4688 2015/11/22 20:21:28 leot Exp $
+$NetBSD: CHANGES-2015,v 1.4689 2015/11/22 22:00:15 agc Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7905,3 +7905,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/xv to 3.10anb22 [tsutsui 2015-11-22]
 	Updated multimedia/gmplayer to 1.2nb2 [leot 2015-11-22]
 	Updated www/netsurf to 3.3nb2 [leot 2015-11-22]
+	Added pkgtools/gimme version 20151122 [agc 2015-11-22]
