@@ -1,0 +1,20 @@
+Sometimes, there's a need to just build a package without any of the
+installed pre-requisites being used. Or building a one-off package
+which can then be used elsewhere.
+
+This package helps to produce other binary packages, using pkg_comp to
+build them in a chroot.  The chroot is populated either by cloning the
+current operating system, or by using pre-existing binary sets.  As an
+example:
+
+	# gimme -c vip
+
+will clone the current operating system on this host, and use it to
+make a chroot in which the sysutils/vip package will be built.
+
+Similarly, to build packages and all their pre-requisites afresh,
+something like
+
+	# gimme -c mercurial git-base
+
+would be used.
