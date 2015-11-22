@@ -1,7 +1,18 @@
-@comment $NetBSD: PLIST,v 1.2 2015/03/15 00:17:35 rodent Exp $
+@comment $NetBSD: PLIST,v 1.3 2015/11/22 08:05:08 richard Exp $
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/trytond/modules/account_product/__init__.py
 ${PYSITELIB}/trytond/modules/account_product/__init__.pyc
 ${PYSITELIB}/trytond/modules/account_product/__init__.pyo
+${PYSITELIB}/trytond/modules/account_product/configuration.py
+${PYSITELIB}/trytond/modules/account_product/configuration.pyc
+${PYSITELIB}/trytond/modules/account_product/configuration.pyo
+${PYSITELIB}/trytond/modules/account_product/configuration.xml
 ${PYSITELIB}/trytond/modules/account_product/locale/bg_BG.po
 ${PYSITELIB}/trytond/modules/account_product/locale/ca_ES.po
 ${PYSITELIB}/trytond/modules/account_product/locale/cs_CZ.po
@@ -10,8 +21,14 @@ ${PYSITELIB}/trytond/modules/account_product/locale/es_AR.po
 ${PYSITELIB}/trytond/modules/account_product/locale/es_CO.po
 ${PYSITELIB}/trytond/modules/account_product/locale/es_EC.po
 ${PYSITELIB}/trytond/modules/account_product/locale/es_ES.po
+${PYSITELIB}/trytond/modules/account_product/locale/es_MX.po
 ${PYSITELIB}/trytond/modules/account_product/locale/fr_FR.po
+${PYSITELIB}/trytond/modules/account_product/locale/hu_HU.po
+${PYSITELIB}/trytond/modules/account_product/locale/it_IT.po
+${PYSITELIB}/trytond/modules/account_product/locale/ja_JP.po
+${PYSITELIB}/trytond/modules/account_product/locale/lt_LT.po
 ${PYSITELIB}/trytond/modules/account_product/locale/nl_NL.po
+${PYSITELIB}/trytond/modules/account_product/locale/pt_BR.po
 ${PYSITELIB}/trytond/modules/account_product/locale/ru_RU.po
 ${PYSITELIB}/trytond/modules/account_product/locale/sl_SI.po
 ${PYSITELIB}/trytond/modules/account_product/product.py
@@ -26,11 +43,5 @@ ${PYSITELIB}/trytond/modules/account_product/tests/test_account_product.pyc
 ${PYSITELIB}/trytond/modules/account_product/tests/test_account_product.pyo
 ${PYSITELIB}/trytond/modules/account_product/tryton.cfg
 ${PYSITELIB}/trytond/modules/account_product/view/category_form.xml
+${PYSITELIB}/trytond/modules/account_product/view/configuration_form.xml
 ${PYSITELIB}/trytond/modules/account_product/view/template_form.xml
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
-${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
