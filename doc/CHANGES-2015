@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4684 2015/11/22 12:50:02 wen Exp $
+$NetBSD: CHANGES-2015,v 1.4685 2015/11/22 15:39:22 martin Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7901,3 +7901,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-trytond to 3.8.0 [richard 2015-11-22]
 	Updated www/webkit-gtk to 2.10.4 [leot 2015-11-22]
 	Updated www/drupal7 to 7.41nb1 [wen 2015-11-22]
+	Updated multimedia/gmplayer to 1.2nb1 [martin 2015-11-22]
