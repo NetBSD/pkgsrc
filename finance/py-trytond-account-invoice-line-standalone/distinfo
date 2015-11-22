@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 00:12:13 agc Exp $
+$NetBSD: distinfo,v 1.3 2015/11/22 08:05:08 richard Exp $
 
-SHA1 (tryton-3.6/trytond_account_invoice_line_standalone-3.6.0.tar.gz) = 54f08fc2988b58846772fe4a8681d5d384a16ac3
-RMD160 (tryton-3.6/trytond_account_invoice_line_standalone-3.6.0.tar.gz) = d1ce2af14dbebe4b0216c46ec6a7fff023c8fc7d
-SHA512 (tryton-3.6/trytond_account_invoice_line_standalone-3.6.0.tar.gz) = f7381c54294cc673f73c5037505d9191823c4e2cd6d654ed0564e30832719d8d0a4acb086bf60c32e2e885d74bf77b8df102f1fb1a6a7613ef0be918bc6aa83c
-Size (tryton-3.6/trytond_account_invoice_line_standalone-3.6.0.tar.gz) = 19871 bytes
+SHA1 (tryton-3.8/trytond_account_invoice_line_standalone-3.8.0.tar.gz) = fe830339b4cb6879c7a2eba34b6b6a4ce97ad8b1
+RMD160 (tryton-3.8/trytond_account_invoice_line_standalone-3.8.0.tar.gz) = 119ec1330c4246cd4a788d310673718d6b04a37d
+SHA512 (tryton-3.8/trytond_account_invoice_line_standalone-3.8.0.tar.gz) = 756b652cdace82c44e88efe6d7723893295271e22a54df433bc3aed51878c8b4b5acf12353e3c8d0513da8c9963e36377724ee0b65e4a4c1043ca7982d471aa4
+Size (tryton-3.8/trytond_account_invoice_line_standalone-3.8.0.tar.gz) = 20264 bytes

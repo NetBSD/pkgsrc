@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 00:12:14 agc Exp $
+$NetBSD: distinfo,v 1.3 2015/11/22 08:05:08 richard Exp $
 
-SHA1 (tryton-3.6/trytond_account_payment_clearing-3.6.0.tar.gz) = 235c88cf4e39c672aeb3823c12a646935a39e76a
-RMD160 (tryton-3.6/trytond_account_payment_clearing-3.6.0.tar.gz) = f1e94e2c065ccf81a93913721975dc20e411e6b5
-SHA512 (tryton-3.6/trytond_account_payment_clearing-3.6.0.tar.gz) = 53e6efcbb9ec212eba81ca5de9e9a968cc42f9cb264e336bf9123f5dee056b3c272fb9bba98d65e3f6e9218f62241a38bdf55504a8e8f60d4daa6fe6e31a65ab
-Size (tryton-3.6/trytond_account_payment_clearing-3.6.0.tar.gz) = 22318 bytes
+SHA1 (tryton-3.8/trytond_account_payment_clearing-3.8.0.tar.gz) = 1fd14e980944ea3f1b1b13c09fe9568a1906d1d7
+RMD160 (tryton-3.8/trytond_account_payment_clearing-3.8.0.tar.gz) = 6defb1dd8a79d4e46f7bca67e1488a14fd92c3bf
+SHA512 (tryton-3.8/trytond_account_payment_clearing-3.8.0.tar.gz) = 96aa3af2c11638a848887c71bb1ca24083ac9ce541f8a5d690a4b5cbeabe4d864aa1e63072079659f475de3b17e1ea69a2578d2355e2a053d6cccce6d2b52db1
+Size (tryton-3.8/trytond_account_payment_clearing-3.8.0.tar.gz) = 22868 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 00:12:14 agc Exp $
+$NetBSD: distinfo,v 1.6 2015/11/22 08:05:08 richard Exp $
 
-SHA1 (tryton-3.6/trytond_account_product-3.6.0.tar.gz) = 822980ccab1b0acc241f531e65fabac4f323e9b6
-RMD160 (tryton-3.6/trytond_account_product-3.6.0.tar.gz) = ece2bcd4bdca492cfd8a57570bb3d9fcf768a11f
-SHA512 (tryton-3.6/trytond_account_product-3.6.0.tar.gz) = dcd362c0221123da931d629612648827598c7affcb4147033a25b2d4f23fae97dc48d1bb79eb735b8ec1ae098c9008ead81cc8cf41d29c226d68b5de2d53ecfc
-Size (tryton-3.6/trytond_account_product-3.6.0.tar.gz) = 27324 bytes
+SHA1 (tryton-3.8/trytond_account_product-3.8.0.tar.gz) = c488376589e71117c3b0fc6eba0a0397585a1026
+RMD160 (tryton-3.8/trytond_account_product-3.8.0.tar.gz) = fa97ec83da3e3bd1d2088cf7813e8776a22cc3a9
+SHA512 (tryton-3.8/trytond_account_product-3.8.0.tar.gz) = 717cb7b4b081c31a3ecaa07289c7b522f834bf330a6b1ff4089b05fd8ac4f2ed04a5ec6e48ed380d1a27f349001da7794a0d95b639dcd55a445ab7586f9ccd06
+Size (tryton-3.8/trytond_account_product-3.8.0.tar.gz) = 29571 bytes
