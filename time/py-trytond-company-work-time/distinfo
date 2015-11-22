@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/08/24 14:49:45 richard Exp $
+$NetBSD: distinfo,v 1.2 2015/11/22 08:05:10 richard Exp $
 
-SHA1 (tryton-3.6/trytond_company_work_time-3.6.0.tar.gz) = 3c0a853bcf4428dd455fc7e651a26f5a45a95a4e
-RMD160 (tryton-3.6/trytond_company_work_time-3.6.0.tar.gz) = 347982f4d63095c6174ed70da9a9f22958a27ce7
-Size (tryton-3.6/trytond_company_work_time-3.6.0.tar.gz) = 19231 bytes
+SHA1 (tryton-3.8/trytond_company_work_time-3.8.0.tar.gz) = 7355916fdd0d0baab86ba834bd5667691ae02585
+RMD160 (tryton-3.8/trytond_company_work_time-3.8.0.tar.gz) = 2241e74dda69444b5e695babc03822ae5e02e7b8
+SHA512 (tryton-3.8/trytond_company_work_time-3.8.0.tar.gz) = 10160f993b12d17f2ef4b9387dc8d4228bd1646f5c632bac9df7ea7de943f394accf9601f9f92793c656d2197e75d079167786d16c0c7daccf1d4378433bda1d
+Size (tryton-3.8/trytond_company_work_time-3.8.0.tar.gz) = 19528 bytes
