@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.47 2015/11/20 21:07:25 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2015/11/22 20:21:11 leot Exp $
 
 DISTNAME=	netsurf-all-3.3
 PKGNAME=	${DISTNAME:S/-all//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://download.netsurf-browser.org/netsurf/releases/source-full/
 
@@ -13,8 +13,7 @@ LICENSE=	gnu-gpl-v2 AND mit
 
 BUILD_DEPENDS+=	lemon>=1.0:../../devel/lemon
 BUILD_DEPENDS+=	re2c>=0.12:../../devel/re2c
-
-DEPENDS+=	p5-HTML-Parser-[0-9]*:../../www/p5-HTML-Parser
+BUILD_DEPENDS+=	p5-HTML-Parser-[0-9]*:../../www/p5-HTML-Parser
 
 BUILD_TARGET=	build
 USE_TOOLS+=	bison flex gmake perl:build pax pkg-config
