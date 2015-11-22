@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/08/24 14:49:42 richard Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/11/22 08:05:08 richard Exp $
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
@@ -13,13 +13,23 @@ ${PYSITELIB}/trytond/modules/account_invoice_stock/account.py
 ${PYSITELIB}/trytond/modules/account_invoice_stock/account.pyc
 ${PYSITELIB}/trytond/modules/account_invoice_stock/account.pyo
 ${PYSITELIB}/trytond/modules/account_invoice_stock/account.xml
+${PYSITELIB}/trytond/modules/account_invoice_stock/locale/bg_BG.po
 ${PYSITELIB}/trytond/modules/account_invoice_stock/locale/ca_ES.po
+${PYSITELIB}/trytond/modules/account_invoice_stock/locale/cs_CZ.po
 ${PYSITELIB}/trytond/modules/account_invoice_stock/locale/de_DE.po
 ${PYSITELIB}/trytond/modules/account_invoice_stock/locale/es_AR.po
 ${PYSITELIB}/trytond/modules/account_invoice_stock/locale/es_CO.po
 ${PYSITELIB}/trytond/modules/account_invoice_stock/locale/es_EC.po
 ${PYSITELIB}/trytond/modules/account_invoice_stock/locale/es_ES.po
+${PYSITELIB}/trytond/modules/account_invoice_stock/locale/es_MX.po
 ${PYSITELIB}/trytond/modules/account_invoice_stock/locale/fr_FR.po
+${PYSITELIB}/trytond/modules/account_invoice_stock/locale/hu_HU.po
+${PYSITELIB}/trytond/modules/account_invoice_stock/locale/it_IT.po
+${PYSITELIB}/trytond/modules/account_invoice_stock/locale/ja_JP.po
+${PYSITELIB}/trytond/modules/account_invoice_stock/locale/lt_LT.po
+${PYSITELIB}/trytond/modules/account_invoice_stock/locale/nl_NL.po
+${PYSITELIB}/trytond/modules/account_invoice_stock/locale/pt_BR.po
+${PYSITELIB}/trytond/modules/account_invoice_stock/locale/ru_RU.po
 ${PYSITELIB}/trytond/modules/account_invoice_stock/locale/sl_SI.po
 ${PYSITELIB}/trytond/modules/account_invoice_stock/stock.py
 ${PYSITELIB}/trytond/modules/account_invoice_stock/stock.pyc

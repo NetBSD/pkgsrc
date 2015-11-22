@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/08/24 14:49:44 richard Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/11/22 08:05:10 richard Exp $
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
@@ -25,8 +25,14 @@ ${PYSITELIB}/trytond/modules/production/locale/es_AR.po
 ${PYSITELIB}/trytond/modules/production/locale/es_CO.po
 ${PYSITELIB}/trytond/modules/production/locale/es_EC.po
 ${PYSITELIB}/trytond/modules/production/locale/es_ES.po
+${PYSITELIB}/trytond/modules/production/locale/es_MX.po
 ${PYSITELIB}/trytond/modules/production/locale/fr_FR.po
+${PYSITELIB}/trytond/modules/production/locale/hu_HU.po
+${PYSITELIB}/trytond/modules/production/locale/it_IT.po
+${PYSITELIB}/trytond/modules/production/locale/ja_JP.po
+${PYSITELIB}/trytond/modules/production/locale/lt_LT.po
 ${PYSITELIB}/trytond/modules/production/locale/nl_NL.po
+${PYSITELIB}/trytond/modules/production/locale/pt_BR.po
 ${PYSITELIB}/trytond/modules/production/locale/ru_RU.po
 ${PYSITELIB}/trytond/modules/production/locale/sl_SI.po
 ${PYSITELIB}/trytond/modules/production/product.py
