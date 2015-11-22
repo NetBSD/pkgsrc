@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2015/11/22 16:00:26 martin Exp $
+@comment $NetBSD: PLIST,v 1.12 2015/11/22 19:30:33 leot Exp $
 bin/gmplayer
 share/mplayer/skins/Abyss/README
 share/mplayer/skins/Abyss/VERSION
@@ -979,6 +979,32 @@ share/mplayer/skins/bluecurve/stop.png
 share/mplayer/skins/bluecurve/sub.png
 share/mplayer/skins/bluecurve/symbols.fnt
 share/mplayer/skins/bluecurve/symbols.png
+share/mplayer/skins/brushedGnome/README
+share/mplayer/skins/brushedGnome/VERSION
+share/mplayer/skins/brushedGnome/about.png
+share/mplayer/skins/brushedGnome/double.png
+share/mplayer/skins/brushedGnome/dvd.png
+share/mplayer/skins/brushedGnome/exit.png
+share/mplayer/skins/brushedGnome/font.fnt
+share/mplayer/skins/brushedGnome/font.png
+share/mplayer/skins/brushedGnome/fullscr.png
+share/mplayer/skins/brushedGnome/icon.png
+share/mplayer/skins/brushedGnome/knob.png
+share/mplayer/skins/brushedGnome/main.png
+share/mplayer/skins/brushedGnome/menu.png
+share/mplayer/skins/brushedGnome/menus.png
+share/mplayer/skins/brushedGnome/mute.png
+share/mplayer/skins/brushedGnome/next.png
+share/mplayer/skins/brushedGnome/open.png
+share/mplayer/skins/brushedGnome/pause.png
+share/mplayer/skins/brushedGnome/play.png
+share/mplayer/skins/brushedGnome/playbar3.png
+share/mplayer/skins/brushedGnome/prev.png
+share/mplayer/skins/brushedGnome/skin
+share/mplayer/skins/brushedGnome/stop.png
+share/mplayer/skins/brushedGnome/sub.png
+share/mplayer/skins/brushedGnome/symbols.fnt
+share/mplayer/skins/brushedGnome/symbols.png
 share/mplayer/skins/changuito/README
 share/mplayer/skins/changuito/VERSION
 share/mplayer/skins/changuito/button_forward.png
