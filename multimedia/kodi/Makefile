@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/11/19 02:34:49 jmcneill Exp $
+# $NetBSD: Makefile,v 1.6 2015/11/22 11:35:02 wiz Exp $
 
 PKGNAME=	kodi-15.2
 PKGREVISION=	2
@@ -10,12 +10,18 @@ MAINTAINER=	jmcneill@invisible.ca
 HOMEPAGE=	http://kodi.tv/
 COMMENT=	Open source software media center
 LICENSE=	gnu-gpl-v2
-PLIST_SUBST+=	MACHINE_CPU=${MACHINE_CPU}
+
+DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
+DEPENDS+=	zip-[0-9]*:../../archivers/zip
+BUILD_DEPENDS+=	gettext-tools-[0-9]*:../../devel/gettext-tools
+BUILD_DEPENDS+=	cmake-[0-9]*:../../devel/cmake
+BUILD_DEPENDS+=	gperf-[0-9]*:../../devel/gperf
 
 EXTRACT_USING=	gtar
 
 WRKSRC=			${WRKDIR}/xbmc-15.2-Isengard
-USE_TOOLS+=		pkg-config automake autoconf autoreconf gmake bash
+USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config automake autoconf autoreconf gawk gmake bash
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 USE_JAVA2=		yes
@@ -28,6 +34,8 @@ CONFIG_SUB_OVERRIDE=    lib/libmpeg2/.auto/config.sub \
 			tools/depends/build-aux/config.sub
 
 CONFIGURE_ENV+=		ac_cv_path_SWIG_EXE=${PREFIX}/bin/swig2.0
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # insists on < 3.0 as of 15.2
 
 # These need to be ported
 CONFIGURE_ARGS+=	--disable-projectm
@@ -43,11 +51,10 @@ PKGCONFIG_OVERRIDE+=	tools/depends/native/libsquish-native/src/squish.pc.in
 PKGCONFIG_OVERRIDE+=	xbmc/visualizations/Goom/goom2k4-0/libgoom2.pc.in
 PKGCONFIG_OVERRIDE+=	xbmc/visualizations/XBMCProjectM/libprojectM/libprojectM.pc.in
 
+PLIST_SUBST+=	MACHINE_CPU=${MACHINE_CPU}
+
 pre-configure:
 	cd ${WRKSRC} && ${SH} ./bootstrap
-
-DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
-DEPENDS+=	zip-[0-9]*:../../archivers/zip
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/lzo/buildlink3.mk"
@@ -73,6 +80,7 @@ DEPENDS+=	zip-[0-9]*:../../archivers/zip
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/giflib/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/jasper/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
