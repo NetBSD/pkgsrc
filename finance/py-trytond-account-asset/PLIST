@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2015/08/24 14:49:41 richard Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/11/22 08:05:08 richard Exp $
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
@@ -9,11 +9,11 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/trytond/modules/account_asset/__init__.py
 ${PYSITELIB}/trytond/modules/account_asset/__init__.pyc
 ${PYSITELIB}/trytond/modules/account_asset/__init__.pyo
-${PYSITELIB}/trytond/modules/account_asset/asset_table.odt
 ${PYSITELIB}/trytond/modules/account_asset/account.py
 ${PYSITELIB}/trytond/modules/account_asset/account.pyc
 ${PYSITELIB}/trytond/modules/account_asset/account.pyo
 ${PYSITELIB}/trytond/modules/account_asset/account.xml
+${PYSITELIB}/trytond/modules/account_asset/asset_table.odt
 ${PYSITELIB}/trytond/modules/account_asset/asset.py
 ${PYSITELIB}/trytond/modules/account_asset/asset.pyc
 ${PYSITELIB}/trytond/modules/account_asset/asset.pyo
@@ -22,14 +22,33 @@ ${PYSITELIB}/trytond/modules/account_asset/invoice.py
 ${PYSITELIB}/trytond/modules/account_asset/invoice.pyc
 ${PYSITELIB}/trytond/modules/account_asset/invoice.pyo
 ${PYSITELIB}/trytond/modules/account_asset/invoice.xml
+${PYSITELIB}/trytond/modules/account_asset/locale/bg_BG.po
 ${PYSITELIB}/trytond/modules/account_asset/locale/ca_ES.po
+${PYSITELIB}/trytond/modules/account_asset/locale/cs_CZ.po
 ${PYSITELIB}/trytond/modules/account_asset/locale/de_DE.po
 ${PYSITELIB}/trytond/modules/account_asset/locale/es_AR.po
 ${PYSITELIB}/trytond/modules/account_asset/locale/es_CO.po
 ${PYSITELIB}/trytond/modules/account_asset/locale/es_EC.po
 ${PYSITELIB}/trytond/modules/account_asset/locale/es_ES.po
+${PYSITELIB}/trytond/modules/account_asset/locale/es_MX.po
 ${PYSITELIB}/trytond/modules/account_asset/locale/fr_FR.po
+${PYSITELIB}/trytond/modules/account_asset/locale/hu_HU.po
+${PYSITELIB}/trytond/modules/account_asset/locale/it_IT.po
+${PYSITELIB}/trytond/modules/account_asset/locale/ja_JP.po
+${PYSITELIB}/trytond/modules/account_asset/locale/lt_LT.po
+${PYSITELIB}/trytond/modules/account_asset/locale/nl_NL.po
+${PYSITELIB}/trytond/modules/account_asset/locale/pt_BR.po
+${PYSITELIB}/trytond/modules/account_asset/locale/ru_RU.po
 ${PYSITELIB}/trytond/modules/account_asset/locale/sl_SI.po
+${PYSITELIB}/trytond/modules/account_asset/minimal_chart_bg.xml
+${PYSITELIB}/trytond/modules/account_asset/minimal_chart_ca.xml
+${PYSITELIB}/trytond/modules/account_asset/minimal_chart_de.xml
+${PYSITELIB}/trytond/modules/account_asset/minimal_chart_en.xml
+${PYSITELIB}/trytond/modules/account_asset/minimal_chart_es.xml
+${PYSITELIB}/trytond/modules/account_asset/minimal_chart_fr.xml
+${PYSITELIB}/trytond/modules/account_asset/minimal_chart_nl.xml
+${PYSITELIB}/trytond/modules/account_asset/minimal_chart_ru.xml
+${PYSITELIB}/trytond/modules/account_asset/minimal_chart_sl.xml
 ${PYSITELIB}/trytond/modules/account_asset/product.py
 ${PYSITELIB}/trytond/modules/account_asset/product.pyc
 ${PYSITELIB}/trytond/modules/account_asset/product.pyo

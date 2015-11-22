@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2015/09/17 14:28:01 richard Exp $
+# $NetBSD: Makefile.common,v 1.8 2015/11/22 08:05:07 richard Exp $
 
 # used by meta-pkgs/py-tryton-platform/Makefile
 # used by devel/py-proteus/Makefile
@@ -45,16 +45,16 @@
 # used by time/py-trytond-calendar/Makefile
 # used by time/py-trytond-company-work-time/Makefile
 
-TRYTON_BASEVER=		3.6
+TRYTON_BASEVER=		3.8
 
 #specific module revisions:
-MODULE_REVISION.proteus=					1
-MODULE_REVISION.tryton=						3
-MODULE_REVISION.trytond=					3
-MODULE_REVISION.trytond_account=				1
-MODULE_REVISION.trytond_account_asset=				1
+#MODULE_REVISION.proteus=					1
+MODULE_REVISION.tryton=						2
+#MODULE_REVISION.trytond=					3
+#MODULE_REVISION.trytond_account=				1
+#MODULE_REVISION.trytond_account_asset=				1
 #MODULE_REVISION.trytond_account_fr=				0
-MODULE_REVISION.trytond_account_invoice=			1
+#MODULE_REVISION.trytond_account_invoice=			1
 #MODULE_REVISION.trytond_account_invoice_history=		1
 #MODULE_REVISION.trytond_account_invoice_line_standalone=	1
 #MODULE_REVISION.trytond_account_invoice_stock=			1
@@ -69,7 +69,7 @@ MODULE_REVISION.trytond_account_invoice=			1
 #MODULE_REVISION.trytond_analytic_purchase=			1
 #MODULE_REVISION.trytond_analytic_sale=				1
 #MODULE_REVISION.trytond_bank=					1
-MODULE_REVISION.trytond_calendar=				1
+#MODULE_REVISION.trytond_calendar=				1
 #MODULE_REVISION.trytond_carrier=				1
 #MODULE_REVISION.trytond_carrier_percentage=			1
 #MODULE_REVISION.trytond_carrier_weight=				1
@@ -80,11 +80,11 @@ MODULE_REVISION.trytond_calendar=				1
 #MODULE_REVISION.trytond_dashboard=				1
 #MODULE_REVISION.trytond_google_maps=				1
 #MODULE_REVISION.trytond_ldap_authentication=			1
-MODULE_REVISION.trytond_party=					1
+#MODULE_REVISION.trytond_party=					1
 #MODULE_REVISION.trytond_party_relationship=			1
 #MODULE_REVISION.trytond_party_siret=				1
 #MODULE_REVISION.trytond_party_vcarddav=				1
-MODULE_REVISION.trytond_product=				1
+#MODULE_REVISION.trytond_product=				1
 #MODULE_REVISION.trytond_product_attribute=			1
 #MODULE_REVISION.trytond_product_cost_fifo=			1
 #MODULE_REVISION.trytond_product_cost_history=			1
@@ -92,8 +92,8 @@ MODULE_REVISION.trytond_product=				1
 #MODULE_REVISION.trytond_product_price_list=			1
 #MODULE_REVISION.trytond_production=				1
 #MODULE_REVISION.trytond_project=				1
-MODULE_REVISION.trytond_project_invoice=			1
-MODULE_REVISION.trytond_project_plan=				1
+#MODULE_REVISION.trytond_project_invoice=			1
+#MODULE_REVISION.trytond_project_plan=				1
 #MODULE_REVISION.trytond_project_revenue=			1
 #MODULE_REVISION.trytond_purchase=				1
 #MODULE_REVISION.trytond_purchase_invoice_line_standalone=	1
