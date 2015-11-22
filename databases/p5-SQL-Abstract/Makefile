@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2015/07/12 18:56:09 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2015/11/22 23:55:51 mef Exp $
 
 DISTNAME=	SQL-Abstract-1.81
 PKGNAME=	p5-${DISTNAME}
@@ -16,6 +16,7 @@ DEPENDS+=	p5-Getopt-Long-Descriptive>=0.091:../../devel/p5-Getopt-Long-Descripti
 DEPENDS+=	p5-Hash-Merge>=0.12:../../devel/p5-Hash-Merge
 #DEPENDS+=	{perl>=5.7.3,p5-Scalar-List-Utils-[0-9]*}:../../devel/p5-Scalar-List-Utils
 
+BUILD_DEPENDS+=	p5-Moo-[0-9]*:../../devel/p5-Moo
 BUILD_DEPENDS+=	p5-Test-Deep>=0.101:../../devel/p5-Test-Deep
 BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 #BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.92}:../../devel/p5-Test-Simple
