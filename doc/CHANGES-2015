@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4682 2015/11/22 08:06:04 richard Exp $
+$NetBSD: CHANGES-2015,v 1.4683 2015/11/22 08:47:09 leot Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7899,3 +7899,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated games/wesnoth to 1.12.5 [leot 2015-11-21]
 	Updated pkgtools/pkg_comp to 1.38nb1 [agc 2015-11-21]
 	Updated devel/py-trytond to 3.8.0 [richard 2015-11-22]
+	Updated www/webkit-gtk to 2.10.4 [leot 2015-11-22]
