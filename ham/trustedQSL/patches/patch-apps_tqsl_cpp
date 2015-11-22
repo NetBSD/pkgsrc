@@ -1,4 +1,4 @@
-$NetBSD: patch-apps_tqsl_cpp,v 1.3 2015/10/11 02:59:07 mef Exp $
+$NetBSD: patch-apps_tqsl_cpp,v 1.4 2015/11/22 09:52:55 mef Exp $
 
 (1)
 Avoid following error (interim, only valid with db5)
@@ -10,9 +10,11 @@ gmake[1]: *** [apps/CMakeFiles/tqsl.dir/all] Error 2
 tqsl-2.0.1/apps/tqsl.cpp:2963:10: error: #pragma GCC diagnostic not allowed inside functions
 tqsl-2.0.1/apps/tqsl.cpp:2967:10: error: #pragma GCC diagnostic not allowed inside functions
 
+(3) Trial code for wxGTK30
+
 --- apps/tqsl.cpp.orig	2015-09-20 09:15:24.000000000 +0900
-+++ apps/tqsl.cpp	2015-10-11 01:19:49.000000000 +0900
-@@ -55,7 +55,7 @@
++++ apps/tqsl.cpp	2015-11-17 23:08:20.000000000 +0900
+@@ -64,7 +64,7 @@
  #endif
  #include <zlib.h>
  #include <openssl/opensslv.h> // only for version info!
@@ -21,7 +23,7 @@ tqsl-2.0.1/apps/tqsl.cpp:2967:10: error: #pragma GCC diagnostic not allowed insi
  
  #include <iostream>
  #include <fstream>
-@@ -3022,7 +3022,7 @@ MyFrame::OnUpdateCheckDone(wxCommandEven
+@@ -3428,7 +3428,7 @@ MyFrame::OnUpdateCheckDone(wxCommandEven
  // The macro for declaring a hash map defines a couple of typedefs
  // that it never uses. Current GCC warns about those. The pragma
  // below suppresses those warnings for those.
@@ -39,3 +41,15 @@ tqsl-2.0.1/apps/tqsl.cpp:2967:10: error: #pragma GCC diagnostic not allowed insi
  	#pragma GCC diagnostic warning "-Wunused-local-typedefs"
  #endif
  
+@@ -4676,7 +4676,11 @@ QSLApp::OnInit() {
+ 	for (int i = 1; i < argc; i++) {
+ 		origCommandLine += wxT(" ");
+ 		origCommandLine += argv[i];
++#if defined (wxABI_VERSION) && (wxABI_VERSION < 30000 )
+ 		if (argv[i] && (argv[i][0] == wxT('-') || argv[i][0] == wxT('/')))
++#else
++		if (!argv[i].empty() && (argv[i][0] == wxT('-') || argv[i][0] == wxT('/')))
++#endif
+ 			if (wxIsalpha(argv[i][1]) && wxIsupper(argv[i][1]))
+ 				argv[i][1] = wxTolower(argv[i][1]);
+ 	}
