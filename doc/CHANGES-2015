@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4681 2015/11/21 23:22:46 agc Exp $
+$NetBSD: CHANGES-2015,v 1.4682 2015/11/22 08:06:04 richard Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7898,3 +7898,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-MooX-Options to 4.021 [wen 2015-11-21]
 	Updated games/wesnoth to 1.12.5 [leot 2015-11-21]
 	Updated pkgtools/pkg_comp to 1.38nb1 [agc 2015-11-21]
+	Updated devel/py-trytond to 3.8.0 [richard 2015-11-22]
