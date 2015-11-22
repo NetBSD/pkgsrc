@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2015/11/19 02:31:47 jmcneill Exp $
+$NetBSD: distinfo,v 1.9 2015/11/22 11:35:02 wiz Exp $
 
 SHA1 (15.2-Isengard.tar.gz) = 4acb4a60eadc7289f873cff5add31693b9520cba
 RMD160 (15.2-Isengard.tar.gz) = d81d3f15783b2b69920ea85d7e04f01872f2d85f
@@ -7,10 +7,11 @@ Size (15.2-Isengard.tar.gz) = 61484128 bytes
 SHA1 (patch-Makefile.in) = 10fa432a7b2dc53bdfa3f679890a343db3cca304
 SHA1 (patch-bootstrap) = 179a827d07d8a5ca6566ac247a167197652384f6
 SHA1 (patch-codegenerator.mk) = faf908bf1614f68f3a67faa9ac3139d5851daf95
-SHA1 (patch-configure.ac) = 5b19831d7a120261f7c5a42b86c55f14428afa46
+SHA1 (patch-configure.ac) = 0ea925fbc880851a413ec03b236ee99712a6c6d0
 SHA1 (patch-lib_cximage-6.0_CxImage_DllInterface.cpp) = 7f0d2d6fb46aa99d1889609e257b0978e72e1c6c
 SHA1 (patch-lib_cximage-6.0_CxImage_ximage.h) = da60aeaaa22daefaf6b91bff602ce15618e4c5a0
 SHA1 (patch-lib_cximage-6.0_CxImage_ximainfo.cpp) = 2457e20bfec3d0dc12edee3679167f092555b153
+SHA1 (patch-lib_gtest_configure.ac) = 5c45c0ee6c997157c4e2bfe9d99c2e1e5b63ad1d
 SHA1 (patch-m4_xbmc__arch.m4) = ec0018a5a07cd8ab0e6718585fe8dcc9dd561c02
 SHA1 (patch-xbmc_GUIInfoManager.cpp) = 8ffd619dfc7f611da927422e9be295d8fa5fb71c
 SHA1 (patch-xbmc_Makefile.in) = 8a55856686715244d9999f846a2cc8bac6f08a21
