@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.87 2013/02/16 11:22:35 wiz Exp $
+# $NetBSD: Makefile,v 1.88 2015/11/22 19:17:01 tsutsui Exp $
 
 DISTNAME=	xv-3.10a
-PKGREVISION=	21
+PKGREVISION=	22
 CATEGORIES=	graphics x11
 MASTER_SITES=	ftp://ftp.cis.upenn.edu/pub/xv/
 DISTFILES=	${DEFAULT_DISTFILES} ${JUMBO_PATCHES}
@@ -11,6 +11,8 @@ JUMBO_PATCHES=	xv-3.10a-jumbo-patches-20070520.tar.gz
 PATCH_DIST_CAT.${JUMBO_PATCHES}=	${CAT} ${WRKDIR}/*-patch-*
 PATCH_DIST_STRIP.${JUMBO_PATCHES}=	-p1
 SITES.${JUMBO_PATCHES}=	${MASTER_SITE_SOURCEFORGE:=png-mng/}
+PATCHFILES+=	xv-3.10a-enhancements.20070520-20081216.diff
+PATCH_SITES=	http://www.gregroelofs.com/code/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.trilon.com/xv/
