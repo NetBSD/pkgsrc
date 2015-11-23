@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4719 2015/11/23 20:00:17 adam Exp $
+$NetBSD: CHANGES-2015,v 1.4720 2015/11/23 21:15:44 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7938,3 +7938,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated chat/ejabberd to 15.11 [fhajny 2015-11-23]
 	Updated x11/py-qt4 to 4.11.4 [adam 2015-11-23]
 	Updated emulators/hatari to 1.9.0 [adam 2015-11-23]
+	Updated databases/py-peewee to 2.7.3 [fhajny 2015-11-23]
