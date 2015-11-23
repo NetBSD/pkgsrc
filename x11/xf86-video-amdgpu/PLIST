@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/11/23 12:46:49 wiz Exp $
+lib/xorg/modules/drivers/amdgpu_drv.la
+man/man4/amdgpu.4
+share/X11/xorg.conf.d/10-amdgpu.conf
