@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q3,v 1.1.2.24 2015/11/22 09:43:53 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q3,v 1.1.2.25 2015/11/23 18:47:46 bsiegert Exp $
 
 Changes to the packages collection and infrastructure on the 2015Q3 branch:
 
@@ -113,4 +113,7 @@ lang/g95: build fix
 
 Pullup ticket #4858 - requested by tez
 security/mit-krb5: build fix
+
+Pullup ticket #4859 - requested by agc
+pkgtools/pkg_comp: bugfix
 
