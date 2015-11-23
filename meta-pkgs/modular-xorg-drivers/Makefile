@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2015/10/10 20:08:08 tnn Exp $
+# $NetBSD: Makefile,v 1.34 2015/11/23 12:48:15 wiz Exp $
 
 DISTNAME=	# empty
 PKGNAME=	modular-xorg-drivers-1.14.2
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	meta-pkgs x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 DISTFILES=	# empty
@@ -27,6 +27,7 @@ DEPENDS+=	xf86-input-vmmouse-[0-9]*:../../x11/xf86-input-vmmouse
 DEPENDS+=	xf86-input-ws-[0-9]*:../../x11/xf86-input-ws
 .endif
 DEPENDS+=	xf86-input-void-[0-9]*:../../x11/xf86-input-void
+DEPENDS+=	xf86-video-amdgpu-[0-9]*:../../x11/xf86-video-amdgpu
 DEPENDS+=	xf86-video-apm-[0-9]*:../../x11/xf86-video-apm
 DEPENDS+=	xf86-video-ark-[0-9]*:../../x11/xf86-video-ark
 DEPENDS+=	xf86-video-ast-[0-9]*:../../x11/xf86-video-ast
