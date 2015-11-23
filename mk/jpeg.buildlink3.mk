@@ -1,4 +1,4 @@
-# $NetBSD: jpeg.buildlink3.mk,v 1.1 2010/12/19 11:22:59 dsainty Exp $
+# $NetBSD: jpeg.buildlink3.mk,v 1.2 2015/11/23 00:49:26 mef Exp $
 #
 # This Makefile fragment is meant to be included by packages that
 # require a libjpeg implementation.  jpeg.buildlink3.mk will:
@@ -6,7 +6,7 @@
 #	* set JPEGBASE to the base directory of the libjpeg files;
 #	* set JPEG_TYPE to the libjpeg implementation used.
 #
-# There are three variables that can be used to tweak the selection of
+# There are two variables that can be used to tweak the selection of
 # the libjpeg implementation:
 #
 # JPEG_DEFAULT is a user-settable variable whose value is the default
