@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4716 2015/11/23 13:33:17 mef Exp $
+$NetBSD: CHANGES-2015,v 1.4717 2015/11/23 15:24:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7933,3 +7933,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Added x11/xf86-video-amdgpu version 1.0.0 [wiz 2015-11-23]
 	Updated meta-pkgs/modular-xorg-drivers to 1.14.2nb7 [wiz 2015-11-23]
 	Updated devel/p5-gettext to 1.07 [mef 2015-11-23]
+	Removed lang/ruby193 [taca 2015-11-23]
+	Removed lang/ruby193-base [taca 2015-11-23]
