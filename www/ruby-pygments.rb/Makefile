@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2015/11/23 07:23:49 taca Exp $
+# $NetBSD: Makefile,v 1.7 2015/11/23 12:16:32 wiz Exp $
 
 DISTNAME=	pygments.rb-0.6.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -19,6 +19,8 @@ SUBST_STAGE.path=	pre-configure
 SUBST_FILES.path=	lib/pygments/popen.rb
 SUBST_SED.path+=	-e 's|@PYTHON@|python${PYVERSSUFFIX}|'
 SUBST_MESSAGE.path=	Fixing Python's path.
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # as of 0.6.3
 
 .include "../../lang/ruby/gem.mk"
 .include "../../lang/python/application.mk"
