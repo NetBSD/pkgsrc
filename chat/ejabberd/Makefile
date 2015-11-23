@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.60 2015/11/05 12:23:50 fhajny Exp $
+# $NetBSD: Makefile,v 1.61 2015/11/23 15:30:26 fhajny Exp $
 
-DISTNAME=	ejabberd-15.10
+DISTNAME=	ejabberd-15.11
 CATEGORIES=	chat
 MASTER_SITES=	http://www.process-one.net/downloads/ejabberd/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tgz
@@ -10,7 +10,6 @@ HOMEPAGE=	http://www.ejabberd.im/
 COMMENT=	Free and Open Source distributed fault-tolerant Jabber server
 LICENSE=	gnu-gpl-v2
 
-#BUILD_DEPENDS+=		git-base>=1.5:../../devel/git-base
 DEPENDS+=	erlang-goldrush-[0-9]*:../../sysutils/erlang-goldrush
 DEPENDS+=	erlang-jiffy-[0-9]*:../../textproc/erlang-jiffy
 DEPENDS+=	erlang-lager-[0-9]*:../../sysutils/erlang-lager
