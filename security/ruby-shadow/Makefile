@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2015/02/04 16:14:57 taca Exp $
+# $NetBSD: Makefile,v 1.7 2015/11/23 07:26:14 taca Exp $
 
-SHADOW_VER=	2.4.1
+SHADOW_VER=	2.5.0
 DISTNAME=	ruby-shadow-${SHADOW_VER}
 PKGNAME=	${RUBY_PKGPREFIX}-shadow-${SHADOW_VER}
 CATEGORIES=	databases security
