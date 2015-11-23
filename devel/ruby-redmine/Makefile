@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/11/21 09:32:07 ryoon Exp $
+# $NetBSD: Makefile,v 1.9 2015/11/23 15:46:59 taca Exp $
 
 DISTNAME=	redmine-3.1.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2 # and so on.
 
 .include "../../lang/ruby/rubyversion.mk"
 
-RUBY_VERSION_SUPPORTED= 200 193 21 22
+RUBY_VERSION_SUPPORTED= 200 21 22
 
 GEMS_DISTFILES+=	actionmailer-4.2.4.gem actionpack-4.2.4.gem
 GEMS_DISTFILES+=	actionpack-action_caching-1.1.1.gem
