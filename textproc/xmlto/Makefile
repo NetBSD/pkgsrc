@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2015/11/19 23:40:59 asau Exp $
+# $NetBSD: Makefile,v 1.29 2015/11/23 00:04:38 wiz Exp $
 
-DISTNAME=	xmlto-0.0.27
-PKGREVISION=	1
+DISTNAME=	xmlto-0.0.28
 CATEGORIES=	textproc
 MASTER_SITES=	https://fedorahosted.org/releases/x/m/xmlto/
 EXTRACT_SUFX=	.tar.bz2
