@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2015/11/05 12:23:50 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.37 2015/11/23 15:30:26 fhajny Exp $
 lib/erlang/lib/ejabberd/ebin/ELDAPv3.beam
 lib/erlang/lib/ejabberd/ebin/XmppAddr.beam
 lib/erlang/lib/ejabberd/ebin/acl.beam
@@ -187,8 +187,6 @@ lib/erlang/lib/ejabberd/include/mod_roster.hrl
 lib/erlang/lib/ejabberd/include/ns.hrl
 lib/erlang/lib/ejabberd/include/pubsub.hrl
 lib/erlang/lib/ejabberd/priv/bin/captcha.sh
-lib/erlang/lib/ejabberd/priv/bin/joincluster
-lib/erlang/lib/ejabberd/priv/bin/leavecluster
 lib/erlang/lib/ejabberd/priv/msgs/ca.msg
 lib/erlang/lib/ejabberd/priv/msgs/cs.msg
 lib/erlang/lib/ejabberd/priv/msgs/de.msg
