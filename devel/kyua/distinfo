@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/03 03:27:37 agc Exp $
+$NetBSD: distinfo,v 1.4 2015/11/23 03:39:14 jmmv Exp $
 
-SHA1 (kyua-0.11.tar.gz) = ba4b822c7157bf9b3478717fc3ff9bb9883d7a8f
-RMD160 (kyua-0.11.tar.gz) = 4b7b7b21eafc53f54bfefaae57dbfa0dceb27586
-SHA512 (kyua-0.11.tar.gz) = aee8f7f91d3a84e6e27a83c306f69627499d8127030eca521414b6c9a5834f920b6b750f6ae378216065ad745d05fa809436d0dcc08f209dd6874b29785cdcbb
-Size (kyua-0.11.tar.gz) = 611865 bytes
+SHA1 (kyua-0.12.tar.gz) = 72225fb836d23060f3a77fc9d8753bd70e3796a8
+RMD160 (kyua-0.12.tar.gz) = a05c5a35e8a6b7f7e4b629faeb9578205389247d
+SHA512 (kyua-0.12.tar.gz) = ab4b2905629ef733a51f090c7197297636a972b4a0668891e2b23f8601fd5818f1962103d6d957f8e9c2bf07ed6eea652c168c79bc1bd5fde0abb65f4f46deb2
+Size (kyua-0.12.tar.gz) = 663129 bytes
