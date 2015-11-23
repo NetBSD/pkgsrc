@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2015/08/18 07:31:05 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2015/11/23 15:46:58 taca Exp $
 #
 
 DISTNAME=		${RUBY_DISTNAME}
@@ -20,7 +20,7 @@ CURSES_EXAMPLES=	hello.rb rain.rb view.rb view2.rb
 REPLACE_RUBY=		${CURSES_EXAMPLES}
 INSTALLATION_DIRS=	${RUBY_EG}/curses
 
-RUBY_VERSION_SUPPORTED= 200 193 18
+RUBY_VERSION_SUPPORTED= 200 18
 
 post-install:
 .for f in ${CURSES_EXAMPLES}
