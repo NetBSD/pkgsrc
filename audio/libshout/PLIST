@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2009/07/30 16:41:18 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/11/23 09:51:48 wiz Exp $
 include/shout/shout.h
+lib/ckport/db/libshout.ckport
 lib/libshout.la
 lib/pkgconfig/shout.pc
 share/aclocal/shout.m4
