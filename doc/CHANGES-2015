@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4710 2015/11/23 10:36:24 mef Exp $
+$NetBSD: CHANGES-2015,v 1.4711 2015/11/23 11:03:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7927,3 +7927,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated print/poppler to 0.38.0 [wiz 2015-11-23]
 	Updated www/p5-Apache2-AuthCookie to 3.23 [mef 2015-11-23]
 	Updated www/p5-CGI-Compile to 0.20 [mef 2015-11-23]
+	Updated misc/calibre to 2.44.1 [wiz 2015-11-23]
