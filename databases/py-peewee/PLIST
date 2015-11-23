@@ -1,15 +1,12 @@
-@comment $NetBSD: PLIST,v 1.7 2015/10/08 12:59:13 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.8 2015/11/23 21:15:32 fhajny Exp $
 bin/pwiz.py
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/peewee.py
 ${PYSITELIB}/peewee.pyc
 ${PYSITELIB}/peewee.pyo
 ${PYSITELIB}/playhouse/__init__.py
 ${PYSITELIB}/playhouse/__init__.pyc
 ${PYSITELIB}/playhouse/__init__.pyo
+${PYSITELIB}/playhouse/_speedups.so
 ${PYSITELIB}/playhouse/apsw_ext.py
 ${PYSITELIB}/playhouse/apsw_ext.pyc
 ${PYSITELIB}/playhouse/apsw_ext.pyo
@@ -70,7 +67,6 @@ ${PYSITELIB}/playhouse/shortcuts.pyo
 ${PYSITELIB}/playhouse/signals.py
 ${PYSITELIB}/playhouse/signals.pyc
 ${PYSITELIB}/playhouse/signals.pyo
-${PYSITELIB}/playhouse/speedups.so
 ${PYSITELIB}/playhouse/sqlcipher_ext.py
 ${PYSITELIB}/playhouse/sqlcipher_ext.pyc
 ${PYSITELIB}/playhouse/sqlcipher_ext.pyo
