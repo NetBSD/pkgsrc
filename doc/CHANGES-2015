@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4697 2015/11/23 00:03:50 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4698 2015/11/23 00:04:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7914,3 +7914,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mail/notmuch to 0.21 [wiz 2015-11-22]
 	Updated textproc/py-libxml2 to 2.9.3 [wiz 2015-11-23]
 	Updated devel/py-test to 2.8.3 [wiz 2015-11-23]
+	Updated textproc/xmlto to 0.0.28 [wiz 2015-11-23]
