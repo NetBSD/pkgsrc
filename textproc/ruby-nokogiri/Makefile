@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2015/11/18 16:04:50 taca Exp $
+# $NetBSD: Makefile,v 1.28 2015/11/23 07:28:01 taca Exp $
 
-DISTNAME=	nokogiri-1.6.6.3
+DISTNAME=	nokogiri-1.6.6.4
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

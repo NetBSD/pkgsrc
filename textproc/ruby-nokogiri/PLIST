@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2015/11/18 16:04:50 taca Exp $
+@comment $NetBSD: PLIST,v 1.16 2015/11/23 07:28:01 taca Exp $
 bin/nokogiri${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
@@ -163,6 +163,7 @@ ${GEM_LIBDIR}/ports/patches/libxml2/0005-CVE-2015-1819-Enforce-the-reader-to-run
 ${GEM_LIBDIR}/ports/patches/libxml2/0006-Another-variation-of-overflow-in-Conditional-section.patch
 ${GEM_LIBDIR}/ports/patches/libxml2/0007-Fix-an-error-in-previous-Conditional-section-patch.patch
 ${GEM_LIBDIR}/ports/patches/libxml2/0008-CVE-2015-8035-Fix-XZ-compression-support-loop.patch
+${GEM_LIBDIR}/ports/patches/libxml2/0010-Fix-parsering-short-unclosed-comment-uninitialized-access.patch
 ${GEM_LIBDIR}/ports/patches/libxslt/0001-Adding-doc-update-related-to-1.1.28.patch
 ${GEM_LIBDIR}/ports/patches/libxslt/0002-Fix-a-couple-of-places-where-f-printf-parameters-wer.patch
 ${GEM_LIBDIR}/ports/patches/libxslt/0003-Initialize-pseudo-random-number-generator-with-curre.patch
