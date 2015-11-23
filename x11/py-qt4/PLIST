@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.25 2015/11/23 15:18:19 adam Exp $
+@comment $NetBSD: PLIST,v 1.1 2015/11/23 21:34:42 adam Exp $
 bin/pylupdate4
 bin/pyrcc4
 bin/pyuic4
