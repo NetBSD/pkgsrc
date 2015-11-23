@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/11/23 13:21:16 taca Exp $
+# $NetBSD: Makefile,v 1.5 2015/11/23 15:46:58 taca Exp $
 
 DISTNAME=	debugger-1.6.8
 PKGREVISION=	1
@@ -15,7 +15,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-debugger-linecache>=1.2.0<1.3:../../devel/ruby-debug
 
 BUILDLINK_PASSTHRU_DIRS+= ${PREFIX}/${GEM_HOME}/gems
 
-RUBY_VERSION_SUPPORTED=	193 200 210
+RUBY_VERSION_SUPPORTED=	200 210
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"

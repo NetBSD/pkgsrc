@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2015/11/10 10:24:14 fhajny Exp $
+# $NetBSD: Makefile,v 1.21 2015/11/23 15:46:59 taca Exp $
 
 DISTNAME=		puppet-3.8.4
 CATEGORIES=		sysutils
@@ -16,7 +16,7 @@ DEPENDS+=		${RUBY_PKGPREFIX}-json-pure>=0:../../textproc/ruby-json-pure
 DEPENDS+=		${RUBY_PKGPREFIX}-minitest>=2.5.1:../../devel/ruby-minitest
 DEPENDS+=		${RUBY_PKGPREFIX}-shadow>=2.0.0:../../security/ruby-shadow
 
-RUBY_VERSION_SUPPORTED=	200 193 21
+RUBY_VERSION_SUPPORTED=	200 21
 
 CONFLICTS+=		ruby[1-9][0-9]-puppet-[0-9]* puppet-[0-9]*
 
