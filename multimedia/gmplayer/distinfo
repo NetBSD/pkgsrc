@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.93 2015/11/21 09:47:23 leot Exp $
+$NetBSD: distinfo,v 1.94 2015/11/23 22:47:59 leot Exp $
 
 SHA1 (mplayer/Abyss-1.7.tar.bz2) = 46d122cb60496eecbc96f26a0cfe0bda883fd725
 RMD160 (mplayer/Abyss-1.7.tar.bz2) = ca1e1c77177dc23300d011c1e00711c6bb81756a
@@ -132,10 +132,10 @@ SHA1 (mplayer/bluecurve-1.3.tar.bz2) = 65dce3134ab3bbad54e8de7c9b62da74be90a09d
 RMD160 (mplayer/bluecurve-1.3.tar.bz2) = 2827037f0d298a6668e406a89e0af5a05a167134
 SHA512 (mplayer/bluecurve-1.3.tar.bz2) = f15b19a17c6f532152f9df883f6729f34eff6727c15822d300090a08e61633e5d5c0c25aca86d29b2429068f47c4e7c42a72f44129bcf611aed1fdb266daaebd
 Size (mplayer/bluecurve-1.3.tar.bz2) = 38231 bytes
-SHA1 (mplayer/brushedGnome-1.0.tar.bz2) = 15efa883aac3d79edcb5ae3354b44cee0b91dc68
-RMD160 (mplayer/brushedGnome-1.0.tar.bz2) = 4afce6c7cbc897eddbbb5d554ae074dfef78fcdb
-SHA512 (mplayer/brushedGnome-1.0.tar.bz2) = 6a1908a58fb6fd1c96bc128539ac1d92f56ab9fcfd790d9e7541cd2804d52baa13f6b271d731fd5b8ee8d3e69c1dae499bde84a945d1ea07918e2ea99a953be0
-Size (mplayer/brushedGnome-1.0.tar.bz2) = 199367 bytes
+SHA1 (mplayer/brushedGnome-1.1.tar.bz2) = 05fb9423046121b90a0bd4c29e9e8db573b42c46
+RMD160 (mplayer/brushedGnome-1.1.tar.bz2) = 3e2836912babb783e5c7254efd55851801b0371f
+SHA512 (mplayer/brushedGnome-1.1.tar.bz2) = 0dac9760772d6feba53bba8c74097af228a728864d41c551d71a105821c71fa7b96f6b11ad83adc9506f5f8e13002f477f1e20d8cb1367b5ad906ba5977416b7
+Size (mplayer/brushedGnome-1.1.tar.bz2) = 199315 bytes
 SHA1 (mplayer/changuito-0.2.tar.bz2) = 931956c5fe3210ce4f708f491bde9eaac458bb29
 RMD160 (mplayer/changuito-0.2.tar.bz2) = 9889807642302d3e27b77e40c009b22978d56469
 SHA512 (mplayer/changuito-0.2.tar.bz2) = 76979a1c9480029d3c248da8f199a7aa128e8ee833850c18ca6c6969308bc8e221079dc8f9f72a71307f5caece85149a6bceba9313fa38bcd949a4b60c164bb3

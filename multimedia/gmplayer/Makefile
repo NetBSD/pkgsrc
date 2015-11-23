@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.129 2015/11/22 19:30:33 leot Exp $
+# $NetBSD: Makefile,v 1.130 2015/11/23 22:47:59 leot Exp $
 #
 # NOTE: if you are updating both mplayer and gmplayer, you must ensure
 # that *both* distinfo files contain the correct, up-to-date files and
@@ -8,7 +8,7 @@
 #
 
 PKGNAME=	gmplayer-${MPLAYER_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 
 SKIN_SITES=	http://www1.mplayerhq.hu/MPlayer/skins/		\
 		http://www2.mplayerhq.hu/MPlayer/skins/		\
@@ -58,7 +58,7 @@ SKINS+=		Abyss-1.7${SKIN_EXTRACT_SUFX}			\
 		XFce4-1.0${SKIN_EXTRACT_SUFX}			\
 		avifile-1.7${SKIN_EXTRACT_SUFX}			\
 		bluecurve-1.3${SKIN_EXTRACT_SUFX}		\
-		brushedGnome-1.0${SKIN_EXTRACT_SUFX}		\
+		brushedGnome-1.1${SKIN_EXTRACT_SUFX}		\
 		changuito-0.2${SKIN_EXTRACT_SUFX}		\
 		clearplayer-0.9${SKIN_EXTRACT_SUFX}		\
 		disappearer-1.2${SKIN_EXTRACT_SUFX}		\
@@ -110,14 +110,6 @@ USE_TOOLS+=		pax pkg-config
 CONFIGURE_ARGS+=	--enable-gui --disable-mencoder \
 			--confdir=${PREFIX}/share/mplayer
 CONFIGURE_ARGS+=	--enable-xvmc
-
-# XXX: fix a typo in brushedGnome-1.0 skin otherwise it fails to load with:
-# XXX:  Error in skin config file at line 61: Unknown message 'evEqualeaser'
-SUBST_CLASSES+=		skins
-SUBST_STAGE.skins=	pre-patch
-SUBST_MESSAGE.skins=	Fixing typo in brushedGnome-1.0 skin
-SUBST_FILES.skins=	${WRKDIR}/brushedGnome/skin
-SUBST_SED.skins=	-e 's/evEqualeaser/evEqualizer/'
 
 INSTALLATION_DIRS=	bin share/mplayer/skins
 
