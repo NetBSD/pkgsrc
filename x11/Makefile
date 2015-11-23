@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.777 2015/10/26 19:05:19 adam Exp $
+# $NetBSD: Makefile,v 1.778 2015/11/23 12:47:01 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -563,6 +563,7 @@ SUBDIR+=	xf86-input-penmount
 SUBDIR+=	xf86-input-vmmouse
 SUBDIR+=	xf86-input-void
 SUBDIR+=	xf86-input-ws
+SUBDIR+=	xf86-video-amdgpu
 SUBDIR+=	xf86-video-apm
 SUBDIR+=	xf86-video-ark
 SUBDIR+=	xf86-video-ast
