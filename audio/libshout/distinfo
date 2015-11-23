@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2015/11/03 01:12:38 agc Exp $
+$NetBSD: distinfo,v 1.8 2015/11/23 09:51:48 wiz Exp $
 
-SHA1 (libshout-2.3.1.tar.gz) = 147c5670939727420d0e2ad6a20468e2c2db1e20
-RMD160 (libshout-2.3.1.tar.gz) = 674d6a726de93313d5c3b7432aa683ee428ce435
-SHA512 (libshout-2.3.1.tar.gz) = 19c1421e654310ddbc25f343d205d921b7c3f1c9c97f028207deaf1a46150b7f6c8069d52b7a3c9ed72dda276b52237cf1208292fbfa09aa7d09f85072c46a7b
-Size (libshout-2.3.1.tar.gz) = 464229 bytes
+SHA1 (libshout-2.4.1.tar.gz) = cca5606f38e84a4c46223796b06cf7483abaa32f
+RMD160 (libshout-2.4.1.tar.gz) = 4dc076d0d12161202110b4fd53954314db5e6ebf
+SHA512 (libshout-2.4.1.tar.gz) = 4d4b958947e020de3330d49d39d59220fc89315f25f653a7456b9aa24ca9566fca30bb3d65e6348e79958656096b6b864ea8885157d24e55c8d84d6604670219
+Size (libshout-2.4.1.tar.gz) = 516161 bytes
