@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.24 2014/08/21 21:33:07 wiz Exp $
+@comment $NetBSD: PLIST.common,v 1.25 2015/11/23 15:18:19 adam Exp $
 bin/pylupdate4
 bin/pyrcc4
 bin/pyuic4
@@ -407,6 +407,8 @@ share/sip${PYVERSSUFFIX}/QtGui/qwidgetaction.sip
 share/sip${PYVERSSUFFIX}/QtGui/qwindowdefs.sip
 share/sip${PYVERSSUFFIX}/QtGui/qwizard.sip
 share/sip${PYVERSSUFFIX}/QtGui/qworkspace.sip
+share/sip${PYVERSSUFFIX}/QtGui/qx11embed_x11.sip
+share/sip${PYVERSSUFFIX}/QtGui/qx11info_x11.sip
 share/sip${PYVERSSUFFIX}/QtHelp/QtHelpmod.sip
 share/sip${PYVERSSUFFIX}/QtHelp/qhelpcontentwidget.sip
 share/sip${PYVERSSUFFIX}/QtHelp/qhelpengine.sip
