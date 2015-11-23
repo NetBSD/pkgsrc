@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2015/04/25 14:20:46 tnn Exp $
+# $NetBSD: Makefile,v 1.42 2015/11/23 19:40:39 adam Exp $
 
-DISTNAME=	hatari-1.8.0
-PKGREVISION=	1
+DISTNAME=	hatari-1.9.0
 CATEGORIES=	emulators
 MASTER_SITES=	http://download.tuxfamily.org/hatari/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
@@ -19,18 +18,18 @@ PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 1.7.0
 REPLACE_PYTHON+=	python-ui/config.py
 REPLACE_PYTHON+=	python-ui/debugui.py
 REPLACE_PYTHON+=	python-ui/dialogs.py
+REPLACE_PYTHON+=	python-ui/gentypes.py
 REPLACE_PYTHON+=	python-ui/hatari.py
 REPLACE_PYTHON+=	python-ui/hatariui.py
+REPLACE_PYTHON+=	python-ui/tests/pygtk-hello-world.py
 REPLACE_PYTHON+=	python-ui/uihelpers.py
-
-SUBST_CLASSES+=			fix-python
-SUBST_STAGE.fix-python=		pre-configure
-SUBST_MESSAGE.fix-python=	Fixing python
-SUBST_FILES.fix-python+=	tools/hconsole/example.py
-SUBST_FILES.fix-python+=	tools/debugger/hatari_profile.py
-SUBST_FILES.fix-python+=	tools/hconsole/hconsole.py
-SUBST_FILES.fix-python+=	python-ui/gentypes.py
-SUBST_SED.fix-python+=		-e 's,/usr/bin/env python,${PYTHONBIN},'
+REPLACE_PYTHON+=	tests/tosboot/tos_tester.py
+REPLACE_PYTHON+=	tools/atari-convert-dir.py
+REPLACE_PYTHON+=	tools/atari-hd-image.sh
+REPLACE_PYTHON+=	tools/debugger/hatari_profile.py
+REPLACE_PYTHON+=	tools/debugger/hatari_spinloop.py
+REPLACE_PYTHON+=	tools/hconsole/example.py
+REPLACE_PYTHON+=	tools/hconsole/hconsole.py
 
 INSTALLATION_DIRS+=	share/doc/hatari
 
