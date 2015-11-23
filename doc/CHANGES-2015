@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4717 2015/11/23 15:24:28 taca Exp $
+$NetBSD: CHANGES-2015,v 1.4718 2015/11/23 15:30:39 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7935,3 +7935,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-gettext to 1.07 [mef 2015-11-23]
 	Removed lang/ruby193 [taca 2015-11-23]
 	Removed lang/ruby193-base [taca 2015-11-23]
+	Updated chat/ejabberd to 15.11 [fhajny 2015-11-23]
