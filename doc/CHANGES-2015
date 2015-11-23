@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4695 2015/11/22 23:55:48 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4696 2015/11/23 00:01:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7912,3 +7912,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated fonts/harfbuzz to 1.1.0 [wiz 2015-11-22]
 	Updated textproc/libxml2 to 2.9.3 [wiz 2015-11-22]
 	Updated mail/notmuch to 0.21 [wiz 2015-11-22]
+	Updated textproc/py-libxml2 to 2.9.3 [wiz 2015-11-23]
