@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4718 2015/11/23 15:30:39 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.4719 2015/11/23 20:00:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7936,3 +7936,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Removed lang/ruby193 [taca 2015-11-23]
 	Removed lang/ruby193-base [taca 2015-11-23]
 	Updated chat/ejabberd to 15.11 [fhajny 2015-11-23]
+	Updated x11/py-qt4 to 4.11.4 [adam 2015-11-23]
+	Updated emulators/hatari to 1.9.0 [adam 2015-11-23]
