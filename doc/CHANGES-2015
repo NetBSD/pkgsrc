@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4703 2015/11/23 07:19:51 taca Exp $
+$NetBSD: CHANGES-2015,v 1.4704 2015/11/23 07:24:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7920,3 +7920,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-tortoisehg to 3.6.1 [wiz 2015-11-23]
 	Updated devel/kyua to 0.12 [jmmv 2015-11-23]
 	Updated devel/ruby-parslet to 1.7.1 [taca 2015-11-23]
+	Updated www/ruby-pygments.rb to 0.6.3nb1 [taca 2015-11-23]
