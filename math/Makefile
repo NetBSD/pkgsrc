@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.307 2015/10/05 01:14:06 wen Exp $
+# $NetBSD: Makefile,v 1.308 2015/11/24 05:46:22 dholland Exp $
 
 COMMENT=	Mathematics
 
@@ -286,5 +286,6 @@ SUBDIR+=	xmgr
 SUBDIR+=	xylib
 SUBDIR+=	yacas
 SUBDIR+=	yorick
+SUBDIR+=	z3
 
 .include "../mk/misc/category.mk"
