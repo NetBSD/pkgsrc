@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4727 2015/11/24 12:04:34 mef Exp $
+$NetBSD: CHANGES-2015,v 1.4728 2015/11/24 14:17:35 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7951,3 +7951,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/pcre to 8.38 [wiz 2015-11-24]
 	Added net/php-baikal version 0.2.7 [wiz 2015-11-24]
 	Updated misc/chordii to 4.5.3 [mef 2015-11-24]
+	Updated pkgtools/pkglint to 4.158 [rillig 2015-11-24]
