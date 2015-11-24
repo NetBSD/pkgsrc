@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: squid.sh,v 1.3 2015/10/08 10:07:10 sborrill Exp $
+# $NetBSD: squid.sh,v 1.2.10.1 2015/11/24 18:19:32 bsiegert Exp $
 #
 # PROVIDE: squid
 # REQUIRE: DAEMON
