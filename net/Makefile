@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1089 2015/11/04 14:07:27 fhajny Exp $
+# $NetBSD: Makefile,v 1.1090 2015/11/24 11:38:45 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -534,6 +534,7 @@ SUBDIR+=	pear-SOAP
 SUBDIR+=	pen
 SUBDIR+=	perlbal
 SUBDIR+=	pfnet
+SUBDIR+=	php-baikal
 SUBDIR+=	php-ftp
 SUBDIR+=	php-geoip
 SUBDIR+=	php-snmp
