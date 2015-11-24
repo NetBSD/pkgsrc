@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4725 2015/11/24 11:04:12 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4726 2015/11/24 11:38:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7949,3 +7949,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added math/z3 version 4.4.1 [dholland 2015-11-24]
 	Updated devel/py-requests-toolbelt to 0.4.0nb1 [wiz 2015-11-24]
 	Updated devel/pcre to 8.38 [wiz 2015-11-24]
+	Added net/php-baikal version 0.2.7 [wiz 2015-11-24]
