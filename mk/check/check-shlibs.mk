@@ -1,4 +1,4 @@
-# $NetBSD: check-shlibs.mk,v 1.27 2015/11/16 17:53:29 jperkin Exp $
+# $NetBSD: check-shlibs.mk,v 1.28 2015/11/24 09:41:20 jperkin Exp $
 #
 # This file verifies that all libraries used by the package can be found
 # at run-time.
@@ -67,7 +67,7 @@ CHECK_SHLIBS_NATIVE_ENV+=	DEPENDS_FILE=${_RRDEPENDS_FILE:Q}
 CHECK_SHLIBS_NATIVE_ENV+=	DESTDIR=${DESTDIR:Q}
 .  endif
 CHECK_SHLIBS_NATIVE_ENV+=	WRKDIR=${WRKDIR:Q}
-.  if !empty(CHECK_WRKREF:Mextra)
+.  if defined(CHECK_WRKREF) && !empty(CHECK_WRKREF:Mextra)
 CHECK_SHLIBS_NATIVE_ENV+=	CHECK_WRKREF_EXTRA_DIRS=${CHECK_WRKREF_EXTRA_DIRS:Q}
 .  endif
 
