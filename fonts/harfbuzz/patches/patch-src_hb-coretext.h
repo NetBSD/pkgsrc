@@ -1,6 +1,7 @@
-$NetBSD: patch-src_hb-coretext.h,v 1.3 2015/11/23 20:02:15 adam Exp $
+$NetBSD: patch-src_hb-coretext.h,v 1.4 2015/11/24 08:20:51 wiz Exp $
 
 Fix building on OS X.
+https://github.com/behdad/harfbuzz/issues/183
 
 --- src/hb-coretext.h.orig	2015-11-23 19:57:54.000000000 +0000
 +++ src/hb-coretext.h
