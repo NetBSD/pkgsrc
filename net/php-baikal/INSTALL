@@ -1,0 +1,15 @@
+#!@SH@
+#
+# $NetBSD: INSTALL,v 1.1 2015/11/24 11:38:28 wiz Exp $
+
+WWWGRP="@WWWGRP@"
+WWWOWN="@WWWOWN@"
+BAIKALDIR="@PREFIX@/@BAIKALDIR@"
+
+case "${STAGE}" in
+POST-INSTALL)
+	cd ${BAIKALDIR} &&
+		${CHOWN} -R ${WWWOWN} ${BAIKALDIR} &&
+		${CHGRP} -R ${WWWGRP} ${BAIKALDIR}
+	;;
+esac
