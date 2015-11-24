@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2014/05/29 08:54:02 darcy Exp $
+# $NetBSD: Makefile,v 1.2 2015/11/24 12:04:23 mef Exp $
 
-DISTNAME=	chordii-4.5.1
+DISTNAME=	chordii-4.5.3
 CATEGORIES=	misc
 MASTER_SITES=	 ${MASTER_SITE_SOURCEFORGE:=chordii/}
 
