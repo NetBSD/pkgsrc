@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q3,v 1.1.2.25 2015/11/23 18:47:46 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q3,v 1.1.2.26 2015/11/24 20:13:08 bsiegert Exp $
 
 Changes to the packages collection and infrastructure on the 2015Q3 branch:
 
@@ -116,4 +116,19 @@ security/mit-krb5: build fix
 
 Pullup ticket #4859 - requested by agc
 pkgtools/pkg_comp: bugfix
+
+Pullup ticket #4860 - requested by taca
+www/squid3: security fix
+
+Pullup ticket #4861 - requested by taca
+net/ntp4: build fix
+
+Pullup ticket #4862 - requested by taca
+mail/roundcube: security fix
+
+Pullup ticket #4863 - requested by taca
+textproc/ruby-nokogiri: security fix
+
+Pullup ticket #4864 - requested by wiz
+devel/pcre: srcurity fix
 
