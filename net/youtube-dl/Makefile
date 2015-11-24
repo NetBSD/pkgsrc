@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.70 2015/11/11 16:47:14 leot Exp $
+# $NetBSD: Makefile,v 1.71 2015/11/24 15:56:22 asau Exp $
 
 VERSION_DATE=	2015.11.10
 DISTNAME=	youtube-dl-${VERSION_DATE}
 PKGNAME=	youtube-dl-${VERSION_DATE:S/.//S/.//}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://youtube-dl.org/downloads/${VERSION_DATE}/
 
@@ -10,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://rg3.github.io/youtube-dl/
 COMMENT=	Download videos from youtube.com
 LICENSE=	public-domain
-
-DEPENDS+=	mozilla-rootcerts-openssl-[0-9]*:../../security/mozilla-rootcerts-openssl
 
 # Unfortunately at the moment upstream youtube-dl does not provide a changelog.
 # When updating net/youtube-dl you can find a complete list of changes here:
