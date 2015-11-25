@@ -1,4 +1,4 @@
-$NetBSD: patch-SConstruct,v 1.5 2014/02/12 14:35:11 jperkin Exp $
+$NetBSD: patch-SConstruct,v 1.6 2015/11/25 10:46:24 adam Exp $
 
 Hack: Use OPENSSL variable as final shared library path; fixes lib id on Darwin.
 Don't append -O2 compiler flag.
@@ -36,8 +36,8 @@ Don't append -O2 compiler flag.
  
 +for l in env['LDFLAGS']:
 +  if l.startswith('-l'):
-+    env.Append(LINKFLAGS=" " + l)
-+    env.Append(GSSAPI_LIBS=" " + l)
++    env.Append(LINKFLAGS=l)
++    env.Append(GSSAPI_LIBS=l)
 +
  # Set up the construction of serf-*.pc
  pkgconfig = env.Textfile('serf-%d.pc' % (MAJOR,),
