@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2013/09/19 08:49:20 obache Exp $
+# $NetBSD: Makefile,v 1.17 2015/11/25 12:49:46 jperkin Exp $
 #
 
 DISTNAME=	nsis-${NSIS_VER}
@@ -24,8 +24,7 @@ WRKSRC=		${WRKDIR}/${NSIS_SRC}
 NO_CONFIGURE=	yes
 EXTRACT_OPTS_ZIP=	-qo
 
-EVAL_PREFIX+=	SCONS_PREFIX=scons
-SCONS_BIN=	${SCONS_PREFIX}/bin/scons
+SCONS_BIN=	${LOCALBASE}/bin/scons
 MAKENSIS_BIN=	${PREFIX}/share/nsis/makensis
 
 INSTALLATION_DIRS=	bin share/nsis
