@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4729 2015/11/24 17:34:31 adam Exp $
+$NetBSD: CHANGES-2015,v 1.4730 2015/11/25 03:39:59 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7954,3 +7954,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated pkgtools/pkglint to 4.158 [rillig 2015-11-24]
 	Updated www/py-djangocms-admin-style to 1.0.6 [adam 2015-11-24]
 	Updated www/py-django-cms to 3.2.0 [adam 2015-11-24]
+	Updated devel/php-mode to 1.13.1 [mef 2015-11-25]
