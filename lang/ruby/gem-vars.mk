@@ -1,4 +1,4 @@
-# $NetBSD: gem-vars.mk,v 1.2 2015/04/26 16:51:26 rodent Exp $
+# $NetBSD: gem-vars.mk,v 1.3 2015/11/25 12:51:17 jperkin Exp $
 #
 # This Makefile fragment defines various make(1) variables for Ruby gems
 # support.
@@ -15,9 +15,7 @@ MAKE_ENV+=	GEM_PATH=${GEM_PATH}
 RUBYGEM_LANG?=	en_US.UTF-8
 RUBYGEM_ENV?=	LANG=${RUBYGEM_LANG} LC_CTYPE=${RUBYGEM_LANG}
 
-FIND_PREFIX+=	RUBY_PREFIX=${RUBY_BASE}
-.include "../../mk/find-prefix.mk"
-RUBYGEM=	${RUBY_PREFIX}/bin/${RUBYGEM_NAME}
+RUBYGEM=	${LOCALBASE}/bin/${RUBYGEM_NAME}
 
 RUBY_GEMS_VERSION?=	${RUBY_GEMS_PKGSRC_VERS}
 
