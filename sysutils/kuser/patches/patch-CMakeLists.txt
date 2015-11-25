@@ -1,0 +1,12 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2015/11/25 07:22:58 mrg Exp $
+
+--- CMakeLists.txt.orig	2013-08-03 21:22:20.000000000 -0700
++++ CMakeLists.txt	2015-11-24 21:47:35.000000000 -0800
+@@ -1,5 +1,7 @@
+ project(kuser)
+ 
++include(CheckIncludeFiles)
++
+ # search packages used by KDE
+ find_package(KDE4 REQUIRED)
+ include (KDE4Defaults)
