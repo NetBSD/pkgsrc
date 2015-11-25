@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/28 06:30:16 asau Exp $
+# $NetBSD: Makefile,v 1.13 2015/11/25 12:54:07 jperkin Exp $
 
 DISTNAME=	haskell-cgi-20001206
 CATEGORIES=	www
@@ -14,14 +14,11 @@ NO_SRC_ON_FTP=	Already in MASTER_SITE_LOCAL
 
 NO_BUILD=	yes
 
-HUGS_PREFIX_DEFAULT=	${LOCALBASE}
-EVAL_PREFIX+=	HUGS_PREFIX=hugs
-
 INSTALLATION_DIRS=	share/hugs/lib
 
 do-configure:
 	@for i in ${WRKSRC}/*; do					  \
-	${SED} -e 's:\/soft\/bin\/runhugs:'${HUGS_PREFIX}'/bin/runhugs:g' \
+	${SED} -e 's:\/soft\/bin\/runhugs:'${LOCALBASE}'/bin/runhugs:g' \
 	$$i > $$i.tmp && ${MV} $$i.tmp $$i;				  \
 	done
 

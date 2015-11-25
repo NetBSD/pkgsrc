@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/10/12 10:29:48 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2015/11/25 12:54:07 jperkin Exp $
 #
 
 DISTNAME=	matcha-sns-1.3.7
@@ -42,12 +42,9 @@ FILES_SUBST+=		WWWGRP=${APACHE_GROUP} WWWOWN=${APACHE_USER} \
 
 REPLACE_SH=		cake/console/cake
 
-FIND_PREFIX:=		PHPDIR=php
-.include "../../mk/find-prefix.mk"
-
 REPLACE_INTERPRETER+=	php
 REPLACE.php.old=	/usr/bin/php
-REPLACE.php.new=	${PHPDIR}/bin/php
+REPLACE.php.new=	${LOCALBASE}/bin/php
 REPLACE_FILES.php=	cake/console/cake.php
 
 CONF_FILES_PERMS=	${PREFIX}/share/matcha-sns/app/config/core.php-dist \
