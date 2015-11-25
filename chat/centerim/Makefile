@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2015/09/08 11:57:49 jperkin Exp $
+# $NetBSD: Makefile,v 1.31 2015/11/25 12:48:35 jperkin Exp $
 #
 
 DISTNAME=	centerim-4.22.10
@@ -34,8 +34,7 @@ INCOMPAT_CURSES+=	NetBSD-[0-5].*-* # see PR 29060
 CPPFLAGS+=		-DAUDIO_PLAYER="\"/usr/bin/audioplay\""
 .else
 DEPENDS+=		sox>=12.17.4:../../audio/sox
-EVAL_PREFIX+=		SOX_PREFIX=sox
-CPPFLAGS+=		-DAUDIO_PLAYER="\"${SOX_PREFIX}/bin/play\""
+CPPFLAGS+=		-DAUDIO_PLAYER="\"${LOCALBASE}/bin/play\""
 .endif
 
 .if !empty(MACHINE_ARCH:Msparc64)
