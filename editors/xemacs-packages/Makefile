@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2015/11/11 15:02:33 hauke Exp $
+# $NetBSD: Makefile,v 1.66 2015/11/25 12:50:00 jperkin Exp $
 
 DISTNAME=	xemacs-packages
 PKGNAME=	xemacs-packages-1.17
@@ -169,8 +169,6 @@ REPLACE_PERL+=		lisp/hyperbole/file-newer
 
 # Do not depend on Python just for one file
 CHECK_INTERPRETER_SKIP=	${XEPKGDIR}/etc/python-modes/pydoc_lisp.py
-
-.include "../../editors/xemacs/Makefile.pkg"
 
 PRINT_PLIST_AWK+=	{ sub("\\.el$$", ".el$${ELSUFX}") }
 
