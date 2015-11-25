@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailqread.sh,v 1.7 2014/12/06 22:14:27 schmonz Exp $
+# $NetBSD: qmailqread.sh,v 1.8 2015/11/25 12:51:30 jperkin Exp $
 #
 # @PKGNAME@ script to control a service providing local non-root
 # users access to see the queue. Adapted from a script by Steinar Haug.
@@ -14,14 +14,14 @@ name="qmailqread"
 # User-settable rc.conf variables and their default values:
 : ${qmailqread_log:="YES"}
 : ${qmailqread_logcmd:="logger -t nb${name} -p mail.info"}
-: ${qmailqread_nologcmd:="@DAEMONTOOLS_PREFIX@/bin/multilog -*"}
+: ${qmailqread_nologcmd:="@PREFIX@/bin/multilog -*"}
 
 if [ -f /etc/rc.subr ]; then
 	. /etc/rc.subr
 fi
 
 rcvar=${name}
-command="@UCSPI_TCP_PREFIX@/bin/tcpserver"
+command="@PREFIX@/bin/tcpserver"
 procname=${name}
 start_precmd="qmailqread_precmd"
 
@@ -30,7 +30,7 @@ qmailqread_precmd()
 	if [ -f /etc/rc.subr ]; then
 		checkyesno qmailqread_log || qmailqread_logcmd=${qmailqread_nologcmd}
 	fi
-	command="@SETENV@ - @UCSPI_TCP_PREFIX@/bin/argv0 @UCSPI_TCP_PREFIX@/bin/tcpserver ${name} -R -1 -u `@ID@ -u qmails` -g `@ID@ -g qmails` 127.0.0.1 20025 @QMAIL_PREFIX@/bin/qmail-qread 2>&1 | @DAEMONTOOLS_PREFIX@/bin/setuidgid qmaill ${qmailqread_logcmd}"
+	command="@SETENV@ - @PREFIX@/bin/argv0 @PREFIX@/bin/tcpserver ${name} -R -1 -u `@ID@ -u qmails` -g `@ID@ -g qmails` 127.0.0.1 20025 @PREFIX@/bin/qmail-qread 2>&1 | @PREFIX@/bin/setuidgid qmaill ${qmailqread_logcmd}"
 	command_args="&"
 	rc_flags=""
 }
