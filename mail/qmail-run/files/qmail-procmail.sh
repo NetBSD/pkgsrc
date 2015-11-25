@@ -4,7 +4,7 @@
 # Written by Philip Hands. Distributed under the GNU GPL.
 # Modified slightly by Dave Sill.
 
-@QMAIL_PREFIX@/bin/preline @PROCMAIL_PREFIX@/bin/procmail && exit 0
+@PREFIX@/bin/preline @PREFIX@/bin/procmail && exit 0
 
 # check if procmail returned EX_TEMPFAIL (75)
 [ $? = 75 ] && exit 111
