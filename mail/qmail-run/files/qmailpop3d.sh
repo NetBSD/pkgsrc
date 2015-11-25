@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailpop3d.sh,v 1.9 2014/12/06 22:14:27 schmonz Exp $
+# $NetBSD: qmailpop3d.sh,v 1.10 2015/11/25 12:51:30 jperkin Exp $
 #
 # @PKGNAME@ script to control qmail-pop3d (POP3 server for Maildirs).
 #
@@ -17,11 +17,11 @@ name="qmailpop3d"
 : ${qmailpop3d_datalimit:="146800640"}
 : ${qmailpop3d_pretcpserver:=""}
 : ${qmailpop3d_prepop3d:=""}
-: ${qmailpop3d_checkpassword:="@CHECKPASSWORD_PREFIX@/bin/checkpassword"}
+: ${qmailpop3d_checkpassword:="@PREFIX@/bin/checkpassword"}
 : ${qmailpop3d_maildirname:="Maildir"}
 : ${qmailpop3d_log:="YES"}
 : ${qmailpop3d_logcmd:="logger -t nb${name} -p mail.info"}
-: ${qmailpop3d_nologcmd:="@DAEMONTOOLS_PREFIX@/bin/multilog -*"}
+: ${qmailpop3d_nologcmd:="@PREFIX@/bin/multilog -*"}
 
 if [ -f /etc/rc.subr ]; then
 	. /etc/rc.subr
@@ -31,7 +31,7 @@ rcvar=${name}
 required_files="@PKG_SYSCONFDIR@/control/me"
 required_files="${required_files} @PKG_SYSCONFDIR@/control/concurrencypop3"
 required_files="${required_files} @PKG_SYSCONFDIR@/tcp.pop3.cdb"
-command="@UCSPI_TCP_PREFIX@/bin/tcpserver"
+command="@PREFIX@/bin/tcpserver"
 procname=${name}
 start_precmd="qmailpop3d_precmd"
 extra_commands="stat pause cont cdb"
@@ -48,7 +48,7 @@ qmailpop3d_precmd()
 	if [ -f /etc/rc.subr ]; then
 		checkyesno qmailpop3d_log || qmailpop3d_logcmd=${qmailpop3d_nologcmd}
 	fi
-	command="@SETENV@ - ${qmailpop3d_postenv} @DAEMONTOOLS_PREFIX@/bin/softlimit -m ${qmailpop3d_datalimit} ${qmailpop3d_pretcpserver} @UCSPI_TCP_PREFIX@/bin/argv0 @UCSPI_TCP_PREFIX@/bin/tcpserver ${name} ${qmailpop3d_tcpflags} -x @PKG_SYSCONFDIR@/tcp.pop3.cdb -c `@HEAD@ -1 @PKG_SYSCONFDIR@/control/concurrencypop3` ${qmailpop3d_tcphost} ${qmailpop3d_tcpport} @QMAIL_PREFIX@/bin/qmail-popup `@HEAD@ -1 @PKG_SYSCONFDIR@/control/me` ${qmailpop3d_checkpassword} ${qmailpop3d_prepop3d} @QMAIL_PREFIX@/bin/qmail-pop3d ${qmailpop3d_maildirname} 2>&1 | @DAEMONTOOLS_PREFIX@/bin/setuidgid qmaill ${qmailpop3d_logcmd}"
+	command="@SETENV@ - ${qmailpop3d_postenv} @PREFIX@/bin/softlimit -m ${qmailpop3d_datalimit} ${qmailpop3d_pretcpserver} @PREFIX@/bin/argv0 @PREFIX@/bin/tcpserver ${name} ${qmailpop3d_tcpflags} -x @PKG_SYSCONFDIR@/tcp.pop3.cdb -c `@HEAD@ -1 @PKG_SYSCONFDIR@/control/concurrencypop3` ${qmailpop3d_tcphost} ${qmailpop3d_tcpport} @PREFIX@/bin/qmail-popup `@HEAD@ -1 @PKG_SYSCONFDIR@/control/me` ${qmailpop3d_checkpassword} ${qmailpop3d_prepop3d} @PREFIX@/bin/qmail-pop3d ${qmailpop3d_maildirname} 2>&1 | @PREFIX@/bin/setuidgid qmaill ${qmailpop3d_logcmd}"
 	command_args="&"
 	rc_flags=""
 }
@@ -81,7 +81,7 @@ qmailpop3d_cont()
 qmailpop3d_cdb()
 {
 	@ECHO@ "Reloading @PKG_SYSCONFDIR@/tcp.pop3."
-	@UCSPI_TCP_PREFIX@/bin/tcprules @PKG_SYSCONFDIR@/tcp.pop3.cdb @PKG_SYSCONFDIR@/tcp.pop3.tmp < @PKG_SYSCONFDIR@/tcp.pop3
+	@PREFIX@/bin/tcprules @PKG_SYSCONFDIR@/tcp.pop3.cdb @PKG_SYSCONFDIR@/tcp.pop3.tmp < @PKG_SYSCONFDIR@/tcp.pop3
 	@CHMOD@ 644 @PKG_SYSCONFDIR@/tcp.pop3.cdb
 }
 
