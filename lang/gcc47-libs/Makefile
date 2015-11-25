@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2015/06/22 15:38:08 jperkin Exp $
+# $NetBSD: Makefile,v 1.22 2015/11/25 12:51:16 jperkin Exp $
 
 GCC_PKGNAME=	gcc47
 .include	"../../lang/${GCC_PKGNAME}/version.mk"
@@ -28,11 +28,8 @@ BUILD_DEPENDS+=		${GCC_PKGNAME}-${GCC47_DIST_VERSION}{,nb[0-9]*}:../../lang/gcc4
 
 .include "../../mk/bsd.prefs.mk"
 
-FIND_PREFIX:=		GCC_PKG_PREFIX=${GCC_PKGNAME}-${GCC47_DIST_VERSION}*
-.include "../../mk/find-prefix.mk"
-
 LIBGCC_SUBPREFIX=	${GCC_PKGNAME}
-LIBGCC_PREFIX=		${GCC_PKG_PREFIX}/${LIBGCC_SUBPREFIX}
+LIBGCC_PREFIX=		${LOCALBASE}/${LIBGCC_SUBPREFIX}
 GCC_TARGET_MACHINE?=	${MACHINE_GNU_PLATFORM}
 BUILD_DEFS+=		GCC_TARGET_MACHINE
 
