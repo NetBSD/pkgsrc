@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.103 2015/08/12 01:06:45 ryoon Exp $
+# $NetBSD: java-vm.mk,v 1.104 2015/11/25 13:05:47 jperkin Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -268,36 +268,30 @@ _JAVA_BASE_CLASSES=	classes.zip
 .if ${_PKG_JVM} == "kaffe"
 _JDK_PKGSRCDIR=		../../lang/kaffe
 _JRE_PKGSRCDIR=		${_JDK_PKGSRCDIR}
-_JAVA_HOME_DEFAULT=	${LOCALBASE}/java/kaffe
+_JAVA_HOME=		${LOCALBASE}/java/kaffe
 .elif ${_PKG_JVM} == "openjdk7"
 _JDK_PKGSRCDIR=		../../lang/openjdk7
 _JRE_PKGSRCDIR=		${_JDK_PKGSRCDIR}
-_JAVA_HOME_DEFAULT=	${LOCALBASE}/java/openjdk7
+_JAVA_HOME=		${LOCALBASE}/java/openjdk7
 .elif ${_PKG_JVM} == "openjdk8"
 _JDK_PKGSRCDIR=		../../lang/openjdk8
 _JRE_PKGSRCDIR=		${_JDK_PKGSRCDIR}
-_JAVA_HOME_DEFAULT=	${LOCALBASE}/java/openjdk8
+_JAVA_HOME=		${LOCALBASE}/java/openjdk8
 .elif ${_PKG_JVM} == "sun-jdk6"
 _JDK_PKGSRCDIR=		../../lang/sun-jdk6
 _JRE_PKGSRCDIR=		../../lang/sun-jre6
-_JAVA_HOME_DEFAULT=	${LOCALBASE}/java/sun-6
+_JAVA_HOME=		${LOCALBASE}/java/sun-6
 UNLIMIT_RESOURCES+=	datasize
 .elif ${_PKG_JVM} == "sun-jdk7"
 _JDK_PKGSRCDIR=		../../lang/sun-jdk7
 _JRE_PKGSRCDIR=		../../lang/sun-jre7
-_JAVA_HOME_DEFAULT=	${LOCALBASE}/java/sun-7
+_JAVA_HOME=		${LOCALBASE}/java/sun-7
 UNLIMIT_RESOURCES+=	datasize
 .elif ${_PKG_JVM} == "oracle-jdk8"
 _JDK_PKGSRCDIR=		../../lang/oracle-jdk8
 _JRE_PKGSRCDIR=		../../lang/oracle-jre8
-_JAVA_HOME_DEFAULT=	${LOCALBASE}/java/oracle-8
+_JAVA_HOME=		${LOCALBASE}/java/oracle-8
 UNLIMIT_RESOURCES+=	datasize
-.endif
-
-.if defined(_JAVA_HOME_DEFAULT)
-_JAVA_HOME=		${_JAVA_HOME_DEFAULT}
-.else
-EVAL_PREFIX+=		_JAVA_HOME=${_JAVA_PKGBASE.${_PKG_JVM}}
 .endif
 
 # If we are not using Java for building, then we need a run-time dependency on
