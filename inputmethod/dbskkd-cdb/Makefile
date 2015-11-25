@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/06 14:25:10 asau Exp $
+# $NetBSD: Makefile,v 1.5 2015/11/25 12:50:57 jperkin Exp $
 #
 
 DISTNAME=	dbskkd-cdb-2.00
@@ -18,13 +18,11 @@ INSTALLATION_DIRS=	libexec \
 
 DEPENDS=	skk-jisyo-cdb-[0-9]*:../../inputmethod/skk-jisyo-cdb
 
-FIND_PREFIX:=	SKKJISYOCDBDIR=skk-jisyo-cdb
-
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure
 SUBST_MESSAGE.fix-paths=	fixing pathes
 SUBST_FILES.fix-paths=		dbskkd-cdb.c
-SUBST_SED.fix-paths=		-e 's,/usr/local/share/skk/SKK-JISYO.L.cdb,${SKKJISYOCDBDIR}/share/skk/SKK-JISYO.L.cdb,g'
+SUBST_SED.fix-paths=		-e 's,/usr/local/share/skk/SKK-JISYO.L.cdb,${LOCALBASE}/share/skk/SKK-JISYO.L.cdb,g'
 
 CDBLIB=		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.tinycdb}/lib \
 		-L${BUILDLINK_PREFIX.tinycdb}/lib -lcdb
@@ -51,6 +49,5 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/${filename} ${DESTDIR}${DOCSDIR}
 .endfor
 
-.include "../../mk/find-prefix.mk"
 .include "../../databases/tinycdb/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
