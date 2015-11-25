@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/06/14 22:19:00 prlw1 Exp $
+# $NetBSD: Makefile,v 1.5 2015/11/25 12:50:43 jperkin Exp $
 
 DISTNAME=		adwaita-icon-theme-3.16.2.1
 CATEGORIES=		graphics gnome
@@ -26,17 +26,15 @@ PKGCONFIG_OVERRIDE+=	adwaita-icon-theme.pc.in
 # but isn't
 INSTALLATION_DIRS+=	share/icons/Adwaita/96x96/places
 
-EVAL_PREFIX+=		PREFIX.svg=librsvg
-EVAL_PREFIX+=		PREFIX.gtk3=gtk3+
-FILES_SUBST+=		GTK_UPDATE_ICON_CACHE="${PREFIX.gtk3}/bin/gtk-update-icon-cache"
-FILES_SUBST+=		ICON_THEME_DIR="${PREFIX}/share/icons/Adwaita"
+FILES_SUBST+=		GTK_UPDATE_ICON_CACHE="${LOCALBASE}/bin/gtk-update-icon-cache"
+FILES_SUBST+=		ICON_THEME_DIR="${LOCALBASE}/share/icons/Adwaita"
 INSTALL_TEMPLATES+=	../../graphics/adwaita-icon-theme/files/icon-cache.tmpl
 DEINSTALL_TEMPLATES+=	../../graphics/adwaita-icon-theme/files/icon-cache.tmpl
 PRINT_PLIST_AWK+=	/^share\/icons\/gnome\/icon-theme.cache$$/ { next; }
 
 post-install:
 .for s in 16 22 24 32 48 96 256
-	 ${PREFIX.svg}/bin/rsvg-convert ${FILESDIR}/distributor-logo.svg \
+	 ${LOCALBASE}/bin/rsvg-convert ${FILESDIR}/distributor-logo.svg \
 	 -w ${s} -h ${s} -o \
 	 ${DESTDIR}${PREFIX}/share/icons/Adwaita/${s}x${s}/places/start-here.png
 .endfor
