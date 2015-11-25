@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.467 2015/11/25 13:29:07 rillig Exp $
+# $NetBSD: Makefile,v 1.468 2015/11/25 16:53:18 rillig Exp $
 
 PKGNAME=	pkglint-5.0
 DISTFILES=	# none
@@ -8,6 +8,7 @@ OWNER=		wiz@NetBSD.org
 HOMEPAGE=	http://www.NetBSD.org/docs/pkgsrc/
 COMMENT=	Verifier for NetBSD packages
 LICENSE=	2-clause-bsd
+CONFLICTS+=	pkglint4-[0-9]*
 
 WRKSRC=		${WRKDIR}/netbsd.org/pkglint
 NO_CHECKSUM=	yes
