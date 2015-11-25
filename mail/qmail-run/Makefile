@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2014/12/06 22:14:27 schmonz Exp $
+# $NetBSD: Makefile,v 1.28 2015/11/25 12:51:30 jperkin Exp $
 #
 
 DISTNAME=		qmail-run-20141206
@@ -41,18 +41,9 @@ MAKEVARS+=	PKG_SYSCONFDIR.qmail-run
 .  endif
 .endif
 
-QMAIL_TOOLS=		checkpassword daemontools fastforward procmail
-QMAIL_TOOLS+=		qmail qmail-qfilter ucspi-tcp
-
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	mailer.conf qmail-procmail qmail-qfilter-queue
 SUBST_FILES.paths+=	qmail-qread-client
-.for i in ${QMAIL_TOOLS}
-QMAIL_TOOL_VAR.${i}=	${i:S/-/_/g:tu}_PREFIX
-EVAL_PREFIX+=		${QMAIL_TOOL_VAR.${i}}=${i}
-FILES_SUBST+=		${QMAIL_TOOL_VAR.${i}}=${${QMAIL_TOOL_VAR.${i}}:Q}
-SUBST_SED.paths+=	-e 's,@${QMAIL_TOOL_VAR.${i}}@,${${QMAIL_TOOL_VAR.${i}}},g'
-.endfor
 SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
 SUBST_SED.paths+=	-e 's,@ECHO@,${ECHO},g'
