@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2015/10/18 03:58:31 tsutsui Exp $
+# $NetBSD: Makefile,v 1.16 2015/11/25 12:50:57 jperkin Exp $
 
 CANNA_MODULE=	dict
 
@@ -8,10 +8,9 @@ MAKE_JOBS_SAFE=	no
 
 BUILD_DEPENDS+=	Canna-server>=${CANNA_VERSION}:../../inputmethod/canna-server
 
-EVAL_PREFIX+=	CANNASERVERBINDIR=Canna-server
 .for cmd in MERGE FORCPP FORSORT SPLITWORD MERGEWORD CRXGRAM CRXDIC CRFREQ KPDIC
 CANNA_CMD_SED_SCRIPT+=	\
-	-e 's|\(${cmd} = \).*/\(.*\)|\1${CANNASERVERBINDIR}/bin/\2|'
+	-e 's|\(${cmd} = \).*/\(.*\)|\1${LOCALBASE}/bin/\2|'
 .endfor
 
 DICT_WRKSRC=		${WRKSRC}/dic/ideo
