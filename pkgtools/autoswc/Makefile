@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2014/03/03 03:33:18 obache Exp $
+# $NetBSD: Makefile,v 1.22 2015/11/25 12:52:47 jperkin Exp $
 
 PKGNAME=		autoswc-1.6
 CATEGORIES=		pkgtools sysutils
@@ -19,13 +19,6 @@ CACHEDIR=		/var/db/autoswc
 MKCONF=			/etc/mk.conf
 OWN_DIRS=		${CACHEDIR}
 
-EVAL_PREFIX+=			PREFIX.autoconf=autoconf
-PREFIX.autoconf_DEFAULT=	${LOCALBASE}
-EVAL_PREFIX+=			PREFIX.automake=automake
-PREFIX.automake_DEFAULT=	${LOCALBASE}
-EVAL_PREFIX+=			PREFIX.libtool=libtool
-PREFIX.libtool_DEFAULT=		${LOCALBASE}
-
 SUBST_CLASSES+=		build
 SUBST_MESSAGE.build=	Building autoswc.
 SUBST_STAGE.build=	do-build
@@ -33,11 +26,11 @@ SUBST_FILES.build=	autoswc
 SUBST_FILES.build+=	autoswc.8
 SUBST_FILES.build+=	autoswc.mk
 SUBST_FILES.build+=	config.site
-SUBST_SED.build=	-e 's|@ACLOCAL@|${PREFIX.automake}/bin/aclocal|g'
-SUBST_SED.build+=	-e 's|@AUTOCONF@|${PREFIX.autoconf}/bin/autoconf|g'
-SUBST_SED.build+=	-e 's|@AUTOMAKE@|${PREFIX.automake}/bin/automake|g'
+SUBST_SED.build=	-e 's|@ACLOCAL@|${LOCALBASE}/bin/aclocal|g'
+SUBST_SED.build+=	-e 's|@AUTOCONF@|${LOCALBASE}/bin/autoconf|g'
+SUBST_SED.build+=	-e 's|@AUTOMAKE@|${LOCALBASE}/bin/automake|g'
 SUBST_SED.build+=	-e 's|@CACHEDIR@|${CACHEDIR}|g'
-SUBST_SED.build+=	-e 's|@LIBTOOLIZE@|${PREFIX.libtool}/bin/libtoolize|g'
+SUBST_SED.build+=	-e 's|@LIBTOOLIZE@|${LOCALBASE}/bin/libtoolize|g'
 SUBST_SED.build+=	-e 's|@MACHINE_GNU_PLATFORM@|${MACHINE_GNU_PLATFORM}|g'
 SUBST_SED.build+=	-e 's|@MAKE@|${MAKE}|g'
 SUBST_SED.build+=	-e 's|@MKCONF@|${MKCONF}|g'
