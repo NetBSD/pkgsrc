@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.276 2015/10/08 18:16:31 richard Exp $
+# $NetBSD: replace.mk,v 1.277 2015/11/25 13:05:47 jperkin Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -211,8 +211,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.7za=
 .  elif !empty(_TOOLS_USE_PKGSRC.7za:M[yY][eE][sS])
 TOOLS_DEPENDS.7za?=		p7zip>=9.04:../../archivers/p7zip
 TOOLS_CREATE+=			7za
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.7za=7za
-TOOLS_PATH.7za=			${TOOLS_PREFIX.7za}/bin/7za
+TOOLS_PATH.7za=			${LOCALBASE}/bin/7za
 .  endif
 .endif
 
@@ -222,8 +221,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.awk=
 .  elif !empty(_TOOLS_USE_PKGSRC.awk:M[yY][eE][sS])
 TOOLS_DEPENDS.awk?=		nawk>=20040207:../../lang/nawk
 TOOLS_CREATE+=			awk
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.awk=nawk
-TOOLS_PATH.awk=			${TOOLS_PREFIX.awk}/bin/nawk
+TOOLS_PATH.awk=			${LOCALBASE}/bin/nawk
 .  endif
 .endif
 
@@ -233,8 +231,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.bash=
 .  elif !empty(_TOOLS_USE_PKGSRC.bash:M[yY][eE][sS])
 TOOLS_DEPENDS.bash?=		bash-[0-9]*:../../shells/bash
 TOOLS_CREATE+=			bash
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.bash=bash
-TOOLS_PATH.bash=		${TOOLS_PREFIX.bash}/bin/bash
+TOOLS_PATH.bash=		${LOCALBASE}/bin/bash
 .  endif
 .endif
 
@@ -244,8 +241,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.bison=
 .  elif !empty(_TOOLS_USE_PKGSRC.bison:M[yY][eE][sS])
 TOOLS_DEPENDS.bison?=		bison>=1.0:../../devel/bison
 TOOLS_CREATE+=			bison
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.bison=bison
-TOOLS_PATH.bison=		${TOOLS_PREFIX.bison}/bin/bison
+TOOLS_PATH.bison=		${LOCALBASE}/bin/bison
 .  endif
 .endif
 
@@ -255,8 +251,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.bison-yacc=
 .  elif !empty(_TOOLS_USE_PKGSRC.bison-yacc:M[yY][eE][sS])
 TOOLS_DEPENDS.bison-yacc?=	bison>=1.0:../../devel/bison
 TOOLS_CREATE+=			bison-yacc
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.bison-yacc=bison
-TOOLS_PATH.bison-yacc=		${TOOLS_PREFIX.bison-yacc}/bin/bison
+TOOLS_PATH.bison-yacc=		${LOCALBASE}/bin/bison
 TOOLS_ARGS.bison-yacc=		-y
 .  endif
 TOOLS_CMD.bison-yacc=		${TOOLS_DIR}/bin/yacc
@@ -275,8 +270,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.bsdtar=
 .  elif !empty(_TOOLS_USE_PKGSRC.bsdtar:M[yY][eE][sS])
 TOOLS_DEPENDS.bsdtar?=		bsdtar-[0-9]*:../../archivers/bsdtar
 TOOLS_CREATE+=			bsdtar
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.bsdtar=bsdtar
-TOOLS_PATH.bsdtar=		${TOOLS_PREFIX.bsdtar}/bin/bsdtar
+TOOLS_PATH.bsdtar=		${LOCALBASE}/bin/bsdtar
 .  endif
 .endif
 
@@ -286,8 +280,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.byacc=
 .  elif !empty(_TOOLS_USE_PKGSRC.byacc:M[yY][eE][sS])
 TOOLS_DEPENDS.byacc?=		byacc>=20040328:../../devel/byacc
 TOOLS_CREATE+=			byacc
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.byacc=byacc
-TOOLS_PATH.byacc=		${TOOLS_PREFIX.byacc}/bin/yacc
+TOOLS_PATH.byacc=		${LOCALBASE}/bin/yacc
 TOOLS_CMD.byacc=		${TOOLS_DIR}/bin/yacc
 .  endif
 .endif
@@ -300,8 +293,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.${_t_}=
 .    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
 TOOLS_DEPENDS.${_t_}?=		bzip2>=0.9.0b:../../archivers/bzip2
 TOOLS_CREATE+=			${_t_}
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.${_t_}=bzip2
-TOOLS_PATH.${_t_}=		${TOOLS_PREFIX.${_t_}}/bin/${_t_}
+TOOLS_PATH.${_t_}=		${LOCALBASE}/bin/${_t_}
 .    endif
 .  endif
 .endfor
@@ -312,8 +304,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.chrpath=
 .  elif !empty(_TOOLS_USE_PKGSRC.chrpath:M[yY][eE][sS])
 TOOLS_DEPENDS.chrpath?=		chrpath>=0.13:../../devel/chrpath
 TOOLS_CREATE+=			chrpath
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.chrpath=chrpath
-TOOLS_PATH.chrpath=		${TOOLS_PREFIX.chrpath}/bin/chrpath
+TOOLS_PATH.chrpath=		${LOCALBASE}/bin/chrpath
 .  endif
 .endif
 
@@ -325,8 +316,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.${_t_}=
 .    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
 TOOLS_DEPENDS.${_t_}?=		cmake>=2.8.1nb1:../../devel/cmake
 TOOLS_CREATE+=			${_t_}
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.${_t_}=cmake
-TOOLS_PATH.${_t_}=		${TOOLS_PREFIX.${_t_}}/bin/${_t_}
+TOOLS_PATH.${_t_}=		${LOCALBASE}/bin/${_t_}
 .    endif
 .  endif
 .endfor
@@ -337,8 +327,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.csh=
 .  elif !empty(_TOOLS_USE_PKGSRC.csh:M[yY][eE][sS])
 TOOLS_DEPENDS.csh?=		tcsh-[0-9]*:../../shells/tcsh
 TOOLS_CREATE+=			csh
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.csh=tcsh
-TOOLS_PATH.csh=			${TOOLS_PREFIX.csh}/bin/tcsh
+TOOLS_PATH.csh=			${LOCALBASE}/bin/tcsh
 .  endif
 .endif
 
@@ -347,8 +336,7 @@ TOOLS_PATH.csh=			${TOOLS_PREFIX.csh}/bin/tcsh
 MAKEFLAGS+=			TOOLS_IGNORE.curl=
 .  elif !empty(_TOOLS_USE_PKGSRC.curl:M[yY][eE][sS])
 TOOLS_DEPENDS.curl?=		curl-[0-9]*:../../www/curl
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.curl=curl
-TOOLS_PATH.curl=		${TOOLS_PREFIX.curl}/bin/curl
+TOOLS_PATH.curl=		${LOCALBASE}/bin/curl
 .  endif
 .endif
 
@@ -357,8 +345,7 @@ TOOLS_PATH.curl=		${TOOLS_PREFIX.curl}/bin/curl
 MAKEFLAGS+=			TOOLS_IGNORE.fetch=
 .  elif !empty(_TOOLS_USE_PKGSRC.fetch:M[yY][eE][sS])
 TOOLS_DEPENDS.fetch?=		fetch-[0-9]*:../../net/fetch
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.fetch=fetch
-TOOLS_PATH.fetch=		${TOOLS_PREFIX.fetch}/bin/fetch
+TOOLS_PATH.fetch=		${LOCALBASE}/bin/fetch
 .  endif
 .endif
 
@@ -368,8 +355,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.file=
 .  elif !empty(_TOOLS_USE_PKGSRC.file:M[yY][eE][sS])
 TOOLS_DEPENDS.file?=		file>=4.13:../../sysutils/file
 TOOLS_CREATE+=			file
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.file=file
-TOOLS_PATH.file=		${TOOLS_PREFIX.file}/bin/file
+TOOLS_PATH.file=		${LOCALBASE}/bin/file
 .  endif
 .endif
 
@@ -379,8 +365,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.find=
 .  elif !empty(_TOOLS_USE_PKGSRC.find:M[yY][eE][sS])
 TOOLS_DEPENDS.find?=		findutils>=4.1:../../sysutils/findutils
 TOOLS_CREATE+=			find
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.find=findutils
-TOOLS_PATH.find=		${TOOLS_PREFIX.find}/bin/gfind
+TOOLS_PATH.find=		${LOCALBASE}/bin/gfind
 .  endif
 .endif
 
@@ -395,8 +380,7 @@ _TOOLS_DEPENDS.flex+=		${_dep_}:${BUILDLINK_PKGSRCDIR.flex}
 .    endfor
 TOOLS_DEPENDS.flex?=		${_TOOLS_DEPENDS.flex}
 TOOLS_CREATE+=			flex
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.flex=flex
-TOOLS_PATH.flex=		${TOOLS_PREFIX.flex}/bin/flex
+TOOLS_PATH.flex=		${LOCALBASE}/bin/flex
 .  endif
 TOOLS_ALIASES.flex=		lex
 .endif
@@ -406,8 +390,7 @@ TOOLS_ALIASES.flex=		lex
 MAKEFLAGS+=			TOOLS_IGNORE.ftp=
 .  elif !empty(_TOOLS_USE_PKGSRC.ftp:M[yY][eE][sS])
 TOOLS_DEPENDS.ftp?=		tnftp-[0-9]*:../../net/tnftp
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.ftp=ftp
-TOOLS_PATH.ftp=			${TOOLS_PREFIX.ftp}/bin/ftp
+TOOLS_PATH.ftp=			${LOCALBASE}/bin/ftp
 .  endif
 .endif
 
@@ -417,8 +400,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.gawk=
 .  elif !empty(_TOOLS_USE_PKGSRC.gawk:M[yY][eE][sS])
 TOOLS_DEPENDS.gawk?=		gawk>=3.1.1:../../lang/gawk
 TOOLS_CREATE+=			gawk
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.gawk=gawk
-TOOLS_PATH.gawk=		${TOOLS_PREFIX.gawk}/bin/gawk
+TOOLS_PATH.gawk=		${LOCALBASE}/bin/gawk
 .  endif
 TOOLS_ALIASES.gawk=		awk
 .endif
@@ -433,8 +415,7 @@ TOOLS_DEPENDS.gem?=		${RUBY_PKGPREFIX}-rubygems-[0-9]*:../../misc/rubygems
 TOOLS_DEPENDS.gem?=		${RUBY_BASE}>=${RUBY_VERSION}:${RUBY_SRCDIR}
 .    endif
 TOOLS_CREATE+=			gem
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.gem=gem
-TOOLS_PATH.gem=			${TOOLS_PREFIX.gem}/bin/gem${RUBY_SUFFIX}
+TOOLS_PATH.gem=			${LOCALBASE}/bin/gem${RUBY_SUFFIX}
 .  endif
 .endif
 
@@ -444,8 +425,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.gm4=
 .  elif !empty(_TOOLS_USE_PKGSRC.gm4:M[yY][eE][sS])
 TOOLS_DEPENDS.gm4?=		m4>=1.4:../../devel/m4
 TOOLS_CREATE+=			gm4
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.gm4=m4
-TOOLS_PATH.gm4=			${TOOLS_PREFIX.gm4}/bin/gm4
+TOOLS_PATH.gm4=			${LOCALBASE}/bin/gm4
 .  endif
 TOOLS_ALIASES.gm4=		m4
 .endif
@@ -456,8 +436,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.gmake=
 .  elif !empty(_TOOLS_USE_PKGSRC.gmake:M[yY][eE][sS])
 TOOLS_DEPENDS.gmake?=		gmake>=${GMAKE_REQD}:../../devel/gmake
 TOOLS_CREATE+=			gmake
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.gmake=gmake
-TOOLS_PATH.gmake=		${TOOLS_PREFIX.gmake}/bin/gmake
+TOOLS_PATH.gmake=		${LOCALBASE}/bin/gmake
 .  endif
 .endif
 
@@ -467,8 +446,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.gsed=
 .  elif !empty(_TOOLS_USE_PKGSRC.gsed:M[yY][eE][sS])
 TOOLS_DEPENDS.gsed?=		gsed>=3.0.2:../../textproc/gsed
 TOOLS_CREATE+=			gsed
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.gsed=gsed
-TOOLS_PATH.gsed=		${TOOLS_PREFIX.gsed}/bin/gsed
+TOOLS_PATH.gsed=		${LOCALBASE}/bin/gsed
 .  endif
 TOOLS_ALIASES.gsed=		sed
 .endif
@@ -479,8 +457,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.gtar=
 .  elif !empty(_TOOLS_USE_PKGSRC.gtar:M[yY][eE][sS])
 TOOLS_DEPENDS.gtar?=		gtar-base>=1.13.25:../../archivers/gtar-base
 TOOLS_CREATE+=			gtar
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.gtar=gtar-base
-TOOLS_PATH.gtar=		${TOOLS_PREFIX.gtar}/bin/gtar
+TOOLS_PATH.gtar=		${LOCALBASE}/bin/gtar
 .  endif
 .endif
 
@@ -490,8 +467,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.gunzip=
 .  elif !empty(_TOOLS_USE_PKGSRC.gunzip:M[yY][eE][sS])
 TOOLS_DEPENDS.gunzip?=		{gzip>=1.2.4b,gzip-base>=1.2.4b}:../../archivers/gzip
 TOOLS_CREATE+=			gunzip
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.gunzip=gzip
-TOOLS_PATH.gunzip=		${TOOLS_PREFIX.gunzip}/bin/gunzip
+TOOLS_PATH.gunzip=		${LOCALBASE}/bin/gunzip
 TOOLS_ARGS.gunzip=		-f
 .  endif
 .endif
@@ -502,8 +478,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.gzcat=
 .  elif !empty(_TOOLS_USE_PKGSRC.gzcat:M[yY][eE][sS])
 TOOLS_DEPENDS.gzcat?=		{gzip>=1.2.4b,gzip-base>=1.2.4b}:../../archivers/gzip
 TOOLS_CREATE+=			gzcat
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.gzcat=gzip
-TOOLS_PATH.gzcat=		${TOOLS_PREFIX.gzcat}/bin/zcat
+TOOLS_PATH.gzcat=		${LOCALBASE}/bin/zcat
 .  endif
 .endif
 
@@ -513,8 +488,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.gzip=
 .  elif !empty(_TOOLS_USE_PKGSRC.gzip:M[yY][eE][sS])
 TOOLS_DEPENDS.gzip?=		{gzip>=1.2.4b,gzip-base>=1.2.4b}:../../archivers/gzip
 TOOLS_CREATE+=			gzip
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.gzip=gzip
-TOOLS_PATH.gzip=		${TOOLS_PREFIX.gzip}/bin/gzip
+TOOLS_PATH.gzip=		${LOCALBASE}/bin/gzip
 TOOLS_ARGS.gzip=		-nf ${GZIP}
 .  endif
 .endif
@@ -525,8 +499,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.ident=
 .  elif !empty(_TOOLS_USE_PKGSRC.ident:M[yY][eE][sS])
 TOOLS_DEPENDS.ident?=		rcs-[0-9]*:../../devel/rcs
 TOOLS_CREATE+=			ident
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.ident=rcs
-TOOLS_PATH.ident=		${TOOLS_PREFIX.ident}/bin/ident
+TOOLS_PATH.ident=		${LOCALBASE}/bin/ident
 .  endif
 .endif
 
@@ -536,8 +509,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.install-info=
 .  elif !empty(_TOOLS_USE_PKGSRC.install-info:M[yY][eE][sS])
 TOOLS_DEPENDS.install-info?=	pkg_install-info-[0-9]*:../../pkgtools/pkg_install-info
 TOOLS_CREATE+=			install-info
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.install-info=pkg_install-info
-TOOLS_PATH.install-info=	${TOOLS_PREFIX.install-info}/bin/pkg_install-info
+TOOLS_PATH.install-info=	${LOCALBASE}/bin/pkg_install-info
 .  endif
 .endif
 #
@@ -552,8 +524,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.ksh=
 .  elif !empty(_TOOLS_USE_PKGSRC.ksh:M[yY][eE][sS])
 TOOLS_DEPENDS.ksh?=		pdksh>=5.2.14:../../shells/pdksh
 TOOLS_CREATE+=			ksh
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.ksh=pdksh
-TOOLS_PATH.ksh=			${TOOLS_PREFIX.ksh}/bin/pdksh
+TOOLS_PATH.ksh=			${LOCALBASE}/bin/pdksh
 .  endif
 .endif
 
@@ -568,8 +539,7 @@ _TOOLS_DEPENDS.lex+=		${_dep_}:${BUILDLINK_PKGSRCDIR.flex}
 .    endfor
 TOOLS_DEPENDS.lex?=		${_TOOLS_DEPENDS.lex}
 TOOLS_CREATE+=			lex
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.lex=flex
-TOOLS_PATH.lex=			${TOOLS_PREFIX.lex}/bin/flex
+TOOLS_PATH.lex=			${LOCALBASE}/bin/flex
 .  endif
 .endif
 
@@ -579,8 +549,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.lha=
 .  elif !empty(_TOOLS_USE_PKGSRC.lha:M[yY][eE][sS])
 TOOLS_DEPENDS.lha?=		lha>=114.9:../../archivers/lha
 TOOLS_CREATE+=			lha
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.lha=lha
-TOOLS_PATH.lha=			${TOOLS_PREFIX.lha}/bin/lha
+TOOLS_PATH.lha=			${LOCALBASE}/bin/lha
 .  endif
 .endif
 
@@ -590,8 +559,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.lzip=
 .  elif !empty(_TOOLS_USE_PKGSRC.lzip:M[yY][eE][sS])
 TOOLS_DEPENDS.lzip?=		lzip>=1.14:../../archivers/lzip
 TOOLS_CREATE+=			lzip
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.lzip=lzip
-TOOLS_PATH.lzip=		${TOOLS_PREFIX.lzip}/bin/lzip
+TOOLS_PATH.lzip=		${LOCALBASE}/bin/lzip
 .  endif
 .endif
 
@@ -601,8 +569,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.lzcat=
 .  elif !empty(_TOOLS_USE_PKGSRC.lzcat:M[yY][eE][sS])
 TOOLS_DEPENDS.lzcat?=		xz>=4.999.9betanb1:../../archivers/xz
 TOOLS_CREATE+=			lzcat
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.lzcat=lzcat
-TOOLS_PATH.lzcat=		${TOOLS_PREFIX.lzcat}/bin/lzcat
+TOOLS_PATH.lzcat=		${LOCALBASE}/bin/lzcat
 .  endif
 .endif
 
@@ -612,8 +579,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.m4=
 .  elif !empty(_TOOLS_USE_PKGSRC.m4:M[yY][eE][sS])
 TOOLS_DEPENDS.m4?=		m4>=1.4:../../devel/m4
 TOOLS_CREATE+=			m4
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.m4=m4
-TOOLS_PATH.m4=			${TOOLS_PREFIX.m4}/bin/gm4
+TOOLS_PATH.m4=			${LOCALBASE}/bin/gm4
 .  endif
 .endif
 
@@ -623,8 +589,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.mail=
 .  elif !empty(_TOOLS_USE_PKGSRC.mail:M[yY][eE][sS])
 TOOLS_DEPENDS.mail?=		heirloom-mailx-[0-9]*:../../mail/heirloom-mailx
 TOOLS_CREATE+=			mail
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.mail=heirloom-mailx
-TOOLS_PATH.mail=		${TOOLS_PREFIX.mail}/bin/mailx
+TOOLS_PATH.mail=		${LOCALBASE}/bin/mailx
 .  endif
 .endif
 
@@ -634,8 +599,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.makeinfo=
 .  elif !empty(_TOOLS_USE_PKGSRC.makeinfo:M[yY][eE][sS])
 TOOLS_DEPENDS.makeinfo?=	gtexinfo>=${TEXINFO_REQD}:../../devel/gtexinfo
 TOOLS_CREATE+=			makeinfo
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.makeinfo=gtexinfo
-TOOLS_PATH.makeinfo=		${TOOLS_PREFIX.makeinfo}/bin/makeinfo
+TOOLS_PATH.makeinfo=		${LOCALBASE}/bin/makeinfo
 .  endif
 .endif
 
@@ -645,8 +609,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.mktemp=
 .  elif !empty(_TOOLS_USE_PKGSRC.mktemp:M[yY][eE][sS])
 TOOLS_DEPENDS.mktemp?=		mktemp>=1.5:../../sysutils/mktemp
 TOOLS_CREATE+=			mktemp
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.mktemp=mktemp
-TOOLS_PATH.mktemp=		${TOOLS_PREFIX.mktemp}/bin/mktemp
+TOOLS_PATH.mktemp=		${LOCALBASE}/bin/mktemp
 .  endif
 .endif
 
@@ -660,8 +623,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.mtree=
 #
 TOOLS_DEPENDS.mtree?=		mtree>=20040722:../../pkgtools/mtree
 TOOLS_CREATE+=			mtree
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.mtree=mtree
-TOOLS_PATH.mtree=		${TOOLS_PREFIX.mtree}/bin/mtree
+TOOLS_PATH.mtree=		${LOCALBASE}/bin/mtree
 .  endif
 .endif
 
@@ -680,8 +642,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.openssl=
 .  elif !empty(_TOOLS_USE_PKGSRC.openssl:M[yY][eE][sS])
 TOOLS_DEPENDS.openssl?=		openssl>=0.9.6:../../security/openssl
 TOOLS_CREATE+=			openssl
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.openssl=openssl
-TOOLS_PATH.openssl=		${TOOLS_PREFIX.openssl}/bin/openssl
+TOOLS_PATH.openssl=		${LOCALBASE}/bin/openssl
 .  endif
 .endif
 
@@ -691,8 +652,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.patch=
 .  elif !empty(_TOOLS_USE_PKGSRC.patch:M[yY][eE][sS])
 TOOLS_DEPENDS.patch?=		nbpatch-[0-9]*:../../devel/nbpatch
 TOOLS_CREATE+=			patch
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.patch=nbpatch
-TOOLS_PATH.patch=		${TOOLS_PREFIX.patch}/bin/nbpatch
+TOOLS_PATH.patch=		${LOCALBASE}/bin/nbpatch
 _PATCH_CAN_BACKUP=		yes
 _PATCH_BACKUP_ARG=		-V simple -z
 .  endif
@@ -704,8 +664,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.pax=
 .  elif !empty(_TOOLS_USE_PKGSRC.pax:M[yY][eE][sS])
 TOOLS_DEPENDS.pax?=		pax>=20040802:../../archivers/pax
 TOOLS_CREATE+=			pax
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.pax=pax
-TOOLS_PATH.pax=			${TOOLS_PREFIX.pax}/bin/${NBPAX_PROGRAM_PREFIX}pax
+TOOLS_PATH.pax=			${LOCALBASE}/bin/${NBPAX_PROGRAM_PREFIX}pax
 .  endif
 .endif
 
@@ -715,8 +674,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.pkg-config=
 .  elif !empty(_TOOLS_USE_PKGSRC.pkg-config:M[yY][eE][sS])
 TOOLS_DEPENDS.pkg-config?=	pkg-config>=0.25:../../devel/pkg-config
 TOOLS_CREATE+=			pkg-config
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.pkg-config=pkg-config
-TOOLS_PATH.pkg-config=		${TOOLS_PREFIX.pkg-config}/bin/pkg-config
+TOOLS_PATH.pkg-config=		${LOCALBASE}/bin/pkg-config
 .  else
 AUTORECONF_ARGS+=		-I ${TOOLS_PLATFORM.pkg-config:S/\/bin\/pkg-config//}/share/aclocal
 .  endif
@@ -728,8 +686,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.rpm2pkg=
 .  elif !empty(_TOOLS_USE_PKGSRC.rpm2pkg:M[yY][eE][sS])
 TOOLS_DEPENDS.rpm2pkg?=		rpm2pkg>=3.1.4:../../pkgtools/rpm2pkg
 TOOLS_CREATE+=			rpm2pkg
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.rpm2pkg=rpm2pkg
-TOOLS_PATH.rpm2pkg=		${TOOLS_PREFIX.rpm2pkg}/sbin/rpm2pkg
+TOOLS_PATH.rpm2pkg=		${LOCALBASE}/sbin/rpm2pkg
 .  endif
 .endif
 
@@ -739,8 +696,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.sed=
 .  elif !empty(_TOOLS_USE_PKGSRC.sed:M[yY][eE][sS])
 TOOLS_DEPENDS.sed?=		nbsed>=20040821:../../textproc/nbsed
 TOOLS_CREATE+=			sed
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.sed=nbsed
-TOOLS_PATH.sed=			${TOOLS_PREFIX.nbsed}/bin/nbsed
+TOOLS_PATH.sed=			${LOCALBASE}/bin/nbsed
 .  endif
 .endif
 
@@ -750,8 +706,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.sh=
 .  elif !empty(_TOOLS_USE_PKGSRC.sh:M[yY][eE][sS])
 TOOLS_DEPENDS.sh?=		pdksh>=5.2.14:../../shells/pdksh
 TOOLS_CREATE+=			sh
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.sh=pdksh
-TOOLS_PATH.sh=			${TOOLS_PREFIX.sh}/bin/pdksh
+TOOLS_PATH.sh=			${LOCALBASE}/bin/pdksh
 .  endif
 TOOLS_CMD.sh=			${TOOLS_DIR}/bin/sh
 .endif
@@ -762,8 +717,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.shlock=
 .  elif !empty(_TOOLS_USE_PKGSRC.shlock:M[yY][eE][sS])
 TOOLS_DEPENDS.shlock?=		shlock>=20020114:../../pkgtools/shlock
 TOOLS_CREATE+=			shlock
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.shlock=shlock
-TOOLS_PATH.shlock=		${TOOLS_PREFIX.shlock}/bin/shlock
+TOOLS_PATH.shlock=		${LOCALBASE}/bin/shlock
 .  endif
 .endif
 
@@ -773,8 +727,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.tar=
 .  elif !empty(_TOOLS_USE_PKGSRC.tar:M[yY][eE][sS])
 TOOLS_DEPENDS.tar?=		pax>=20040802:../../archivers/pax
 TOOLS_CREATE+=			tar
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.tar=pax
-TOOLS_PATH.tar=			${TOOLS_PREFIX.tar}/bin/${NBPAX_PROGRAM_PREFIX}tar
+TOOLS_PATH.tar=			${LOCALBASE}/bin/${NBPAX_PROGRAM_PREFIX}tar
 .  endif
 .endif
 
@@ -784,8 +737,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.tclsh=
 .  elif !empty(_TOOLS_USE_PKGSRC.tclsh:M[yY][eE][sS])
 TOOLS_DEPENDS.tclsh?=		tcl>=8.4:../../lang/tcl
 TOOLS_CREATE+=			tclsh
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.tclsh=tcl
-TOOLS_PATH.tclsh=		${TOOLS_PREFIX.tclsh}/bin/tclsh
+TOOLS_PATH.tclsh=		${LOCALBASE}/bin/tclsh
 .  endif
 .endif
 
@@ -795,8 +747,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.texi2html=
 .  elif !empty(_TOOLS_USE_PKGSRC.texi2html:M[yY][eE][sS])
 TOOLS_DEPENDS.texi2html?=	texi2html>=1.76:../../textproc/texi2html
 TOOLS_CREATE+=			texi2html
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.texi2html=texi2html
-TOOLS_PATH.texi2html=		${TOOLS_PREFIX.texi2html}/bin/texi2html
+TOOLS_PATH.texi2html=		${LOCALBASE}/bin/texi2html
 .  endif
 .endif
 
@@ -806,8 +757,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.ttmkfdir=
 .  elif !empty(_TOOLS_USE_PKGSRC.ttmkfdir:M[yY][eE][sS])
 TOOLS_DEPENDS.ttmkfdir?=	ttmkfdir2>=20021109:../../fonts/ttmkfdir2
 TOOLS_CREATE+=			ttmkfdir
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.ttmkfdir=ttmkfdir2
-TOOLS_PATH.ttmkfdir=		${TOOLS_PREFIX.ttmkfdir}/bin/ttmkfdir
+TOOLS_PATH.ttmkfdir=		${LOCALBASE}/bin/ttmkfdir
 .  endif
 .endif
 
@@ -817,8 +767,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.type1inst=
 .  elif !empty(_TOOLS_USE_PKGSRC.type1inst:M[yY][eE][sS])
 TOOLS_DEPENDS.type1inst?=	type1inst>=0.6.1:../../fonts/type1inst
 TOOLS_CREATE+=			type1inst
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.type1inst=type1inst
-TOOLS_PATH.type1inst=		${TOOLS_PREFIX.type1inst}/bin/type1inst
+TOOLS_PATH.type1inst=		${LOCALBASE}/bin/type1inst
 .  endif
 .endif
 
@@ -828,8 +777,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.unrar=
 .  elif !empty(_TOOLS_USE_PKGSRC.unrar:M[yY][eE][sS])
 TOOLS_DEPENDS.unrar?=		unrar>=3.3.4:../../archivers/unrar
 TOOLS_CREATE+=			unrar
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.unrar=unrar
-TOOLS_PATH.unrar=		${TOOLS_PREFIX.unrar}/bin/unrar
+TOOLS_PATH.unrar=		${LOCALBASE}/bin/unrar
 .  endif
 .endif
 
@@ -839,8 +787,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.unzip=
 .  elif !empty(_TOOLS_USE_PKGSRC.unzip:M[yY][eE][sS])
 TOOLS_DEPENDS.unzip?=		unzip-[0-9]*:../../archivers/unzip
 TOOLS_CREATE+=			unzip
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.unzip=unzip
-TOOLS_PATH.unzip=		${TOOLS_PREFIX.unzip}/bin/unzip
+TOOLS_PATH.unzip=		${LOCALBASE}/bin/unzip
 .  endif
 .endif
 
@@ -850,8 +797,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.unzoo=
 .  elif !empty(_TOOLS_USE_PKGSRC.unzoo:M[yY][eE][sS])
 TOOLS_DEPENDS.unzoo?=		unzoo-[0-9]*:../../archivers/unzoo
 TOOLS_CREATE+=			unzoo
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.unzoo=unzoo
-TOOLS_PATH.unzoo=		${TOOLS_PREFIX.unzoo}/bin/unzoo
+TOOLS_PATH.unzoo=		${LOCALBASE}/bin/unzoo
 .  endif
 .endif
 
@@ -860,8 +806,7 @@ TOOLS_PATH.unzoo=		${TOOLS_PREFIX.unzoo}/bin/unzoo
 MAKEFLAGS+=			TOOLS_IGNORE.wget=
 .  elif !empty(_TOOLS_USE_PKGSRC.wget:M[yY][eE][sS])
 TOOLS_DEPENDS.wget?=		wget-[0-9]*:../../net/wget
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.wget=wget
-TOOLS_PATH.wget=		${TOOLS_PREFIX.wget}/bin/wget
+TOOLS_PATH.wget=		${LOCALBASE}/bin/wget
 .  endif
 .endif
 
@@ -871,8 +816,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.wish=
 .  elif !empty(_TOOLS_USE_PKGSRC.wish:M[yY][eE][sS])
 TOOLS_DEPENDS.wish?=		tk>=8.4:../../x11/tk
 TOOLS_CREATE+=			wish
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.wish=tk
-TOOLS_PATH.wish=		${TOOLS_PREFIX.wish}/bin/wish
+TOOLS_PATH.wish=		${LOCALBASE}/bin/wish
 .  endif
 .endif
 
@@ -882,8 +826,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.xargs=
 .  elif !empty(_TOOLS_USE_PKGSRC.xargs:M[yY][eE][sS])
 TOOLS_DEPENDS.xargs?=		findutils>=4.1:../../sysutils/findutils
 TOOLS_CREATE+=			xargs
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.xargs=findutils
-TOOLS_PATH.xargs=		${TOOLS_PREFIX.xargs}/bin/gxargs
+TOOLS_PATH.xargs=		${LOCALBASE}/bin/gxargs
 TOOLS_ARGS.xargs=		-r	# don't run command if stdin is empty
 .  endif
 .endif
@@ -896,8 +839,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.${_t_}=
 .    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
 TOOLS_DEPENDS.${_t_}?=		xz>=4.999.9betanb1:../../archivers/xz
 TOOLS_CREATE+=			${_t_}
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.${_t_}=xz
-TOOLS_PATH.${_t_}=		${TOOLS_PREFIX.${_t_}}/bin/${_t_}
+TOOLS_PATH.${_t_}=		${LOCALBASE}/bin/${_t_}
 .    endif
 .  endif
 .endfor
@@ -908,8 +850,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.yacc=
 .  elif !empty(_TOOLS_USE_PKGSRC.yacc:M[yY][eE][sS])
 TOOLS_DEPENDS.yacc?=		bison>=1.0:../../devel/bison
 TOOLS_CREATE+=			yacc
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.yacc=bison
-TOOLS_PATH.yacc=		${TOOLS_PREFIX.yacc}/bin/bison
+TOOLS_PATH.yacc=		${LOCALBASE}/bin/bison
 TOOLS_ARGS.yacc=		-y
 #
 # bison/yacc is typically a build tool whose path is not embedded in
@@ -929,8 +870,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.${_t_}=
 .    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
 TOOLS_DEPENDS.${_t_}?=		zip-[0-9]*:../../archivers/zip
 TOOLS_CREATE+=			${_t_}
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.${_t_}=zip
-TOOLS_PATH.${_t_}=		${TOOLS_PREFIX.${_t_}}/bin/${_t_}
+TOOLS_PATH.${_t_}=		${LOCALBASE}/bin/${_t_}
 .    endif
 .  endif
 .endfor
@@ -997,8 +937,7 @@ MAKEFLAGS+=			TOOLS_IGNORE.${_t_}=
 _TOOLS_USE_PKGSRC.perl=		yes
 TOOLS_DEPENDS.${_t_}?=		perl>=${PERL5_REQD}:../../lang/perl5
 TOOLS_CREATE+=			${_t_}
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.${_t_}=perl
-TOOLS_PATH.${_t_}=		${TOOLS_PREFIX.${_t_}}/bin/${_t_}
+TOOLS_PATH.${_t_}=		${LOCALBASE}/bin/${_t_}
 .    endif
 .  endif
 .endfor
@@ -1018,8 +957,7 @@ MAKEFLAGS+=		TOOLS_IGNORE.${_t_}=
 .    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
 TOOLS_DEPENDS.${_t_}?=	coreutils>=5.2.1:../../sysutils/coreutils
 TOOLS_CREATE+=		${_t_}
-TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=coreutils
-TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/g${_t_}
+TOOLS_PATH.${_t_}=	${LOCALBASE}/bin/g${_t_}
 .    endif
 .  endif
 .endfor
@@ -1033,8 +971,7 @@ MAKEFLAGS+=		TOOLS_IGNORE.[=
 .  elif !empty(_TOOLS_USE_PKGSRC.[:M[yY][eE][sS])
 TOOLS_DEPENDS.[?=	coreutils>=5.2.1:../../sysutils/coreutils
 TOOLS_CREATE+=		[
-TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.[=coreutils
-TOOLS_PATH.[=		${TOOLS_PREFIX.[}/bin/g[
+TOOLS_PATH.[=		${LOCALBASE}/bin/g[
 .  endif
 .endif
 
@@ -1052,8 +989,7 @@ MAKEFLAGS+=		TOOLS_IGNORE.${_t_}=
 .    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
 TOOLS_DEPENDS.${_t_}?=	grep>=2.5.1:../../textproc/grep
 TOOLS_CREATE+=		${_t_}
-TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=grep
-TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/g${_t_}
+TOOLS_PATH.${_t_}=	${LOCALBASE}/bin/g${_t_}
 .    endif
 .  endif
 .endfor
@@ -1073,8 +1009,7 @@ MAKEFLAGS+=		TOOLS_IGNORE.${_t_}=
 .    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
 TOOLS_DEPENDS.${_t_}?=	mdocml>=1.12.0nb3:../../textproc/mdocml
 TOOLS_CREATE+=		${_t_}
-TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=mdocml
-TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/mandoc
+TOOLS_PATH.${_t_}=	${LOCALBASE}/bin/mandoc
 .    endif
 .  endif
 .endfor
@@ -1098,12 +1033,11 @@ _TOOLS_USE_PKGSRC.${_t_}= yes
 .      if !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
 TOOLS_DEPENDS.${_t_}?=	groff>=1.19.2nb3:../../textproc/groff
 TOOLS_CREATE+=		${_t_}
-TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=groff
 .        if "${_t_}" != "groff"
-TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/g${_t_}
+TOOLS_PATH.${_t_}=	${LOCALBASE}/bin/g${_t_}
 TOOLS_ALIASES.${_t_}=	g${_t_}
 .        else
-TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/${_t_}
+TOOLS_PATH.${_t_}=	${LOCALBASE}/bin/${_t_}
 .        endif
 .      endif
 .    endif
@@ -1118,8 +1052,7 @@ MAKEFLAGS+=		TOOLS_IGNORE.gsoelim=
 .  elif !empty(_TOOLS_USE_PKGSRC.gsoelim:M[yY][eE][sS])
 TOOLS_DEPENDS.gsoelim?=	groff>=1.19nb4:../../textproc/groff
 TOOLS_CREATE+=		gsoelim
-TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.gsoelim=groff
-TOOLS_PATH.gsoelim=	${TOOLS_PREFIX.gsoelim}/bin/gsoelim
+TOOLS_PATH.gsoelim=	${LOCALBASE}/bin/gsoelim
 .  endif
 TOOLS_ALIASES.gsoelim=	soelim
 .endif
@@ -1138,8 +1071,7 @@ MAKEFLAGS+=		TOOLS_IGNORE.${_t_}=
 .    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
 TOOLS_DEPENDS.${_t_}?=	diffutils>=2.8.1:../../devel/diffutils
 TOOLS_CREATE+=		${_t_}
-TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=diffutils
-TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/g${_t_}
+TOOLS_PATH.${_t_}=	${LOCALBASE}/bin/g${_t_}
 .    endif
 .  endif
 .endfor
@@ -1173,8 +1105,7 @@ MAKEFLAGS+=		TOOLS_IGNORE.${_t_}=
 .    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
 TOOLS_DEPENDS.${_t_}?=	${TOOLS_DEPENDS.ghostscript}
 TOOLS_CREATE+=		${_t_}
-TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=${TOOLS_DEPENDS.ghostscript:C/:.*//}
-TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/${_t_}
+TOOLS_PATH.${_t_}=	${LOCALBASE}/bin/${_t_}
 .    endif
 .  endif
 .endfor
@@ -1192,8 +1123,7 @@ TOOLS_CREATE+=			iceauth
 TOOLS_PATH.iceauth=	${X11BASE}/bin/iceauth
 .    else
 TOOLS_DEPENDS.iceauth?=		iceauth-[0-9]*:../../x11/iceauth
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.iceauth=iceauth
-TOOLS_PATH.iceauth=		${TOOLS_PREFIX.iceauth}/bin/iceauth
+TOOLS_PATH.iceauth=		${LOCALBASE}/bin/iceauth
 .    endif
 .  endif
 .endif
@@ -1207,8 +1137,7 @@ TOOLS_CREATE+=			mkfontdir
 TOOLS_PATH.mkfontdir=	${X11BASE}/bin/mkfontdir
 .    else
 TOOLS_DEPENDS.mkfontdir?=	mkfontdir-[0-9]*:../../fonts/mkfontdir
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.mkfontdir=mkfontdir
-TOOLS_PATH.mkfontdir=		${TOOLS_PREFIX.mkfontdir}/bin/mkfontdir
+TOOLS_PATH.mkfontdir=		${LOCALBASE}/bin/mkfontdir
 .    endif
 .  endif
 .endif
@@ -1222,8 +1151,7 @@ TOOLS_CREATE+=			mkfontscale
 TOOLS_PATH.mkfontscale=	${X11BASE}/bin/mkfontscale
 .    else
 TOOLS_DEPENDS.mkfontscale?=	mkfontscale-[0-9]*:../../fonts/mkfontscale
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.mkfontscale=mkfontscale
-TOOLS_PATH.mkfontscale=		${TOOLS_PREFIX.mkfontscale}/bin/mkfontscale
+TOOLS_PATH.mkfontscale=		${LOCALBASE}/bin/mkfontscale
 .    endif
 .  endif
 .endif
@@ -1237,8 +1165,7 @@ TOOLS_CREATE+=			bdftopcf
 TOOLS_PATH.bdftopcf=	${X11BASE}/bin/bdftopcf
 .    else
 TOOLS_DEPENDS.bdftopcf?=	bdftopcf-[0-9]*:../../fonts/bdftopcf
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.bdftopcf=bdftopcf
-TOOLS_PATH.bdftopcf=		${TOOLS_PREFIX.bdftopcf}/bin/bdftopcf
+TOOLS_PATH.bdftopcf=		${LOCALBASE}/bin/bdftopcf
 .    endif
 .  endif
 .endif
@@ -1252,8 +1179,7 @@ TOOLS_CREATE+=			ucs2any
 TOOLS_PATH.ucs2any=	${X11BASE}/bin/ucs2any
 .    else
 TOOLS_DEPENDS.ucs2any?=		font-util-[0-9]*:../../fonts/font-util
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.ucs2any=ucs2any
-TOOLS_PATH.ucs2any=		${TOOLS_PREFIX.ucs2any}/bin/ucs2any
+TOOLS_PATH.ucs2any=		${LOCALBASE}/bin/ucs2any
 .    endif
 .  endif
 .endif
@@ -1267,8 +1193,7 @@ TOOLS_CREATE+=			bdftruncate
 TOOLS_PATH.bdftruncate=	${X11BASE}/bin/bdftruncate
 .    else
 TOOLS_DEPENDS.bdftruncate?=	font-util-[0-9]*:../../fonts/font-util
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.bdftruncate=bdftruncate
-TOOLS_PATH.bdftruncate=		${TOOLS_PREFIX.bdftruncate}/bin/bdftruncate
+TOOLS_PATH.bdftruncate=		${LOCALBASE}/bin/bdftruncate
 .    endif
 .  endif
 .endif
@@ -1282,8 +1207,7 @@ TOOLS_CREATE+=			xauth
 TOOLS_PATH.xauth=	${X11BASE}/bin/xauth
 .    else
 TOOLS_DEPENDS.xauth?=		xauth-[0-9]*:../../x11/xauth
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.xauth=xauth
-TOOLS_PATH.xauth=		${TOOLS_PREFIX.xauth}/bin/xauth
+TOOLS_PATH.xauth=		${LOCALBASE}/bin/xauth
 .    endif
 .  endif
 .endif
@@ -1297,8 +1221,7 @@ TOOLS_CREATE+=			xinit
 TOOLS_PATH.xinit=	${X11BASE}/bin/xinit
 .    else
 TOOLS_DEPENDS.xinit?=		xinit-[0-9]*:../../x11/xinit
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.xinit=xinit
-TOOLS_PATH.xinit=		${TOOLS_PREFIX.xinit}/bin/xinit
+TOOLS_PATH.xinit=		${LOCALBASE}/bin/xinit
 .    endif
 .  endif
 .endif
@@ -1312,8 +1235,7 @@ TOOLS_CREATE+=			xmessage
 TOOLS_PATH.xmessage=	${X11BASE}/bin/xmessage
 .    else
 TOOLS_DEPENDS.xmessage?=		xmessage-[0-9]*:../../x11/xmessage
-TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.xmessage=xmessage
-TOOLS_PATH.xmessage=		${TOOLS_PREFIX.xmessage}/bin/xmessage
+TOOLS_PATH.xmessage=		${LOCALBASE}/bin/xmessage
 .    endif
 .  endif
 .endif
@@ -1330,8 +1252,7 @@ _TOOLS.x11-imake=	imake mkdirhier xmkmf
       !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
 TOOLS_CREATE+=		${_t_}
 TOOLS_DEPENDS.${_t_}?=	imake-[0-9]*:../../devel/imake
-TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=imake
-TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/${_t_}
+TOOLS_PATH.${_t_}=	${LOCALBASE}/bin/${_t_}
 .  endif
 .endfor
 
@@ -1340,18 +1261,11 @@ TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/${_t_}
 TOOLS_CREATE+=		makedepend
 .  if defined(X11_TYPE) && !empty(X11_TYPE:Mmodular)
 TOOLS_DEPENDS.makedepend?=	makedepend-[0-9]*:../../devel/makedepend
-TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.makedepend=makedepend
-TOOLS_PATH.makedepend=	${TOOLS_PREFIX.makedepend}/bin/makedepend
+TOOLS_PATH.makedepend=	${LOCALBASE}/bin/makedepend
 .  else # !empty(X11_TYPE:Mnative)
 TOOLS_PATH.makedepend=	${X11BASE}/bin/makedepend
 .  endif
 .endif
-
-######################################################################
-
-# Compute the locations of the pkgsrc-supplied tools.
-FIND_PREFIX:=	${TOOLS_FIND_PREFIX}
-.include "../find-prefix.mk"
 
 ######################################################################
 

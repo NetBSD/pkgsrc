@@ -1,4 +1,4 @@
-# $NetBSD: autoconf.mk,v 1.17 2015/02/11 23:39:35 rillig Exp $
+# $NetBSD: autoconf.mk,v 1.18 2015/11/25 13:05:47 jperkin Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -103,28 +103,27 @@ TOOLS_DEPENDS.autoconf?=	autoconf>=${AUTOCONF_REQD}:../../devel/autoconf
 .    if empty(${_TOOLS_DEPMETHOD.autoconf}:M${TOOLS_DEPENDS.autoconf})
 ${_TOOLS_DEPMETHOD.autoconf}+=	${TOOLS_DEPENDS.autoconf}
 .    endif
-EVAL_PREFIX+=			_TOOLS_AC_PREFIX=autoconf
 
 _TOOLS_AC_TYPE.autoconf=	TOOLS_CREATE
-TOOLS_PATH.autoconf=		${_TOOLS_AC_PREFIX}/bin/autoconf
+TOOLS_PATH.autoconf=		${LOCALBASE}/bin/autoconf
 
 _TOOLS_AC_TYPE.autoheader=	TOOLS_CREATE
-TOOLS_PATH.autoheader=		${_TOOLS_AC_PREFIX}/bin/autoheader
+TOOLS_PATH.autoheader=		${LOCALBASE}/bin/autoheader
 
 _TOOLS_AC_TYPE.autom4te=	TOOLS_CREATE
-TOOLS_PATH.autom4te=		${_TOOLS_AC_PREFIX}/bin/autom4te
+TOOLS_PATH.autom4te=		${LOCALBASE}/bin/autom4te
 
 _TOOLS_AC_TYPE.autoreconf=	TOOLS_CREATE
-TOOLS_PATH.autoreconf=		${_TOOLS_AC_PREFIX}/bin/autoreconf
+TOOLS_PATH.autoreconf=		${LOCALBASE}/bin/autoreconf
 
 _TOOLS_AC_TYPE.autoscan=	TOOLS_CREATE
-TOOLS_PATH.autoscan=		${_TOOLS_AC_PREFIX}/bin/autoscan
+TOOLS_PATH.autoscan=		${LOCALBASE}/bin/autoscan
 
 _TOOLS_AC_TYPE.autoupdate=	TOOLS_CREATE
-TOOLS_PATH.autoupdate=		${_TOOLS_AC_PREFIX}/bin/autoupdate
+TOOLS_PATH.autoupdate=		${LOCALBASE}/bin/autoupdate
 
 _TOOLS_AC_TYPE.ifnames=		TOOLS_CREATE
-TOOLS_PATH.ifnames=		${_TOOLS_AC_PREFIX}/bin/ifnames
+TOOLS_PATH.ifnames=		${LOCALBASE}/bin/ifnames
 .  endif
 .endif
 
@@ -143,36 +142,35 @@ TOOLS_DEPENDS.autoconf213?=	autoconf213>=${AUTOCONF_REQD}:../../devel/autoconf21
 .    if empty(${_TOOLS_DEPMETHOD.autoconf213}:M${TOOLS_DEPENDS.autoconf213})
 ${_TOOLS_DEPMETHOD.autoconf213}+=	${TOOLS_DEPENDS.autoconf213}
 .    endif
-EVAL_PREFIX+=			_TOOLS_AC_PREFIX=autoconf213
 
 _TOOLS_AC_TYPE.autoconf-2.13=	TOOLS_CREATE
 _TOOLS_AC_TYPE.autoconf=	# empty
-TOOLS_PATH.autoconf-2.13=	${_TOOLS_AC_PREFIX}/bin/autoconf-2.13
+TOOLS_PATH.autoconf-2.13=	${LOCALBASE}/bin/autoconf-2.13
 TOOLS_ALIASES.autoconf-2.13=	autoconf
 
 _TOOLS_AC_TYPE.autoheader-2.13=	TOOLS_CREATE
 _TOOLS_AC_TYPE.autoheader=	# empty
-TOOLS_PATH.autoheader-2.13=	${_TOOLS_AC_PREFIX}/bin/autoheader-2.13
+TOOLS_PATH.autoheader-2.13=	${LOCALBASE}/bin/autoheader-2.13
 TOOLS_ALIASES.autoheader-2.13=	autoheader
 
 _TOOLS_AC_TYPE.autoreconf-2.13=	TOOLS_CREATE
 _TOOLS_AC_TYPE.autoreconf=	# empty
-TOOLS_PATH.autoreconf-2.13=	${_TOOLS_AC_PREFIX}/bin/autoreconf-2.13
+TOOLS_PATH.autoreconf-2.13=	${LOCALBASE}/bin/autoreconf-2.13
 TOOLS_ALIASES.autoreconf-2.13=	autoreconf
 
 _TOOLS_AC_TYPE.autoscan-2.13=	TOOLS_CREATE
 _TOOLS_AC_TYPE.autoscan=	# empty
-TOOLS_PATH.autoscan-2.13=	${_TOOLS_AC_PREFIX}/bin/autoscan-2.13
+TOOLS_PATH.autoscan-2.13=	${LOCALBASE}/bin/autoscan-2.13
 TOOLS_ALIASES.autoscan-2.13=	autoscan
 
 _TOOLS_AC_TYPE.autoupdate-2.13=	TOOLS_CREATE
 _TOOLS_AC_TYPE.autoupdate=	# empty
-TOOLS_PATH.autoupdate-2.13=	${_TOOLS_AC_PREFIX}/bin/autoupdate-2.13
+TOOLS_PATH.autoupdate-2.13=	${LOCALBASE}/bin/autoupdate-2.13
 TOOLS_ALIASES.autoupdate-2.13=	autoupdate
 
 _TOOLS_AC_TYPE.ifnames-2.13=	TOOLS_CREATE
 _TOOLS_AC_TYPE.ifnames=		# empty
-TOOLS_PATH.ifnames-2.13=	${_TOOLS_AC_PREFIX}/bin/ifnames-2.13
+TOOLS_PATH.ifnames-2.13=	${LOCALBASE}/bin/ifnames-2.13
 TOOLS_ALIASES.ifnames-2.13=	ifnames
 
 .    if defined(USE_LIBTOOL)

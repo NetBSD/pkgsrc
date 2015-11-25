@@ -1,4 +1,4 @@
-# $NetBSD: f2c.mk,v 1.16 2013/05/09 23:37:26 riastradh Exp $
+# $NetBSD: f2c.mk,v 1.17 2015/11/25 13:05:47 jperkin Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -60,9 +60,6 @@ _USE_F2C=	YES
 .if !empty(_USE_F2C:M[yY][eE][sS])
 USE_LANGUAGES+=		c
 
-EVAL_PREFIX+=		_F2CBASE=f2c
-_F2CBASE_DEFAULT=	${LOCALBASE}
-
 _F2C_DIR=	${WRKDIR}/.f2c
 _F2C_VARS=	# empty
 .  if !empty(_LANGUAGES.f2c:Mfortran) || !empty(_LANGUAGES.f2c:Mfortran77)
@@ -70,7 +67,7 @@ PKG_FC?=	${FC}
 _F2C_VARS+=	FC
 _F2C_FC:=	${_F2C_DIR}/bin/${PKG_FC:T}
 _ALIASES.FC+=	f77 g77 f2c-f77
-FCPATH=		${_F2CBASE}/bin/f2c-f77
+FCPATH=		${LOCALBASE}/bin/f2c-f77
 PKG_FC:=	${_F2C_FC}
 #
 # The f2c-f77 shell script invokes the C compiler, so ensure that it finds
@@ -121,11 +118,11 @@ override-tools: ${_F2C_${_var_}}
 ${_F2C_${_var_}}:
 	${RUN}${MKDIR} ${.TARGET:H}
 	${RUN}					\
-	${LN} -fs ${_F2CBASE}/bin/f2c-f77 ${.TARGET}
+	${LN} -fs ${LOCALBASE}/bin/f2c-f77 ${.TARGET}
 .      for _alias_ in ${_ALIASES.${_var_}:S/^/${.TARGET:H}\//}
 	${RUN}					\
 	if [ ! -x "${_alias_}" ]; then					\
-		${LN} -fs ${_F2CBASE}/bin/f2c-f77 ${_alias_};		\
+		${LN} -fs ${LOCALBASE}/bin/f2c-f77 ${_alias_};		\
 	fi
 .      endfor
 .    endif

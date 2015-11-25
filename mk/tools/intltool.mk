@@ -1,4 +1,4 @@
-# $NetBSD: intltool.mk,v 1.7 2014/04/05 03:02:00 obache Exp $
+# $NetBSD: intltool.mk,v 1.8 2015/11/25 13:05:47 jperkin Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -53,12 +53,10 @@ DEPENDS+=		${TOOLS_DEPENDS.intltool}
 .    else
 TOOL_DEPENDS+=		${TOOLS_DEPENDS.intltool}
 .    endif
-EVAL_PREFIX+=		TOOLS_PREFIX.intltool=intltool
 .    for _t_ in ${_TOOLS.intltool}
 TOOLS_DEPENDS.${_t_}=	${TOOLS_DEPENDS.intltool}
 TOOLS_CREATE+=		${_t_}
-TOOLS_PREFIX.${_t_}=	${TOOLS_PREFIX.intltool}
-TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/${_t_}
+TOOLS_PATH.${_t_}=	${LOCALBASE}/bin/${_t_}
 .    endfor
 .  endif
 .else
