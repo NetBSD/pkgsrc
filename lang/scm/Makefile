@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2014/02/08 23:39:55 wiedi Exp $
+# $NetBSD: Makefile,v 1.26 2015/11/25 12:51:17 jperkin Exp $
 #
 # Convert the version number as follows 2d2 -> 2.4.2, where the d is
 # changed to a 4, representing the 4th letter.
@@ -20,7 +20,6 @@ COMMENT=	Portable scheme interpreter
 DEPENDS+=	slib>=3.1.1:../../devel/slib
 
 WRKSRC=		${WRKDIR}/scm
-EVAL_PREFIX+=	SLIB_PREFIX=slib
 INFO_FILES=	yes
 
 LDFLAGS.SunOS+=	-lsocket -lnsl
@@ -46,7 +45,7 @@ INSTALLATION_DIRS=	${PKGINFODIR} share/scm
 .include "../../mk/readline.buildlink3.mk"
 
 post-extract:
-	${SED} -e "s|@SLIB_PREFIX@|"${SLIB_PREFIX:Q}"|g"		\
+	${SED} -e "s|@SLIB_PREFIX@|"${LOCALBASE}"|g"		\
 		${FILESDIR}/require.scm > ${WRKSRC}/require.scm
 	${SED} -e "s|@PREFIX@|"${PREFIX:Q}"|g"				\
 		-e "s|@COMPILED_INITS@|${COMPILED_INITS:=();}|g"	\
