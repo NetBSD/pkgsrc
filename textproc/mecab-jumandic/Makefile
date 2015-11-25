@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/25 06:56:07 asau Exp $
+# $NetBSD: Makefile,v 1.7 2015/11/25 12:53:42 jperkin Exp $
 #
 
 .include "../../textproc/mecab/Makefile.common"
@@ -20,8 +20,6 @@ BUILD_DEFS+=		MECAB_CHARSET
 
 UNLIMIT_RESOURCES=	datasize
 
-FIND_PREFIX:=	MECABDIR=mecab-base
-.include "../../mk/find-prefix.mk"
-CONFIGURE_ARGS+=	--with-mecab-config=${MECABDIR}/bin/mecab-config
+CONFIGURE_ARGS+=	--with-mecab-config=${LOCALBASE}/bin/mecab-config
 
 .include "../../mk/bsd.pkg.mk"

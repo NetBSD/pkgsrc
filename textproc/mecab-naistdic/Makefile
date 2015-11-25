@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/06/29 11:06:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2015/11/25 12:53:42 jperkin Exp $
 #
 
 DISTNAME=	mecab-naist-jdic-0.6.3-20100801
@@ -22,8 +22,6 @@ BUILD_DEFS+=		MECAB_CHARSET
 
 UNLIMIT_RESOURCES=	datasize
 
-FIND_PREFIX:=	MECABDIR=mecab-base
-.include "../../mk/find-prefix.mk"
-CONFIGURE_ARGS+=	--with-mecab-config=${MECABDIR}/bin/mecab-config
+CONFIGURE_ARGS+=	--with-mecab-config=${LOCALBASE}/bin/mecab-config
 
 .include "../../mk/bsd.pkg.mk"

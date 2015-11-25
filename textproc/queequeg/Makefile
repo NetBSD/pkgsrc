@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/05/09 07:37:22 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2015/11/25 12:53:42 jperkin Exp $
 
 DISTNAME=	queequeg-0.91
 PKGREVISION=	1
@@ -26,11 +26,8 @@ SUBST_FILES.fix-python+=	Makefile
 SUBST_SED.fix-python+=		-e 's,/usr/bin/env python,${PYTHONBIN},'
 SUBST_SED.fix-python+=		-e 's,python ,${PYTHONBIN} ,'
 
-FIND_PREFIX:=		WORDNETDIR=WordNet
-.include "../../mk/find-prefix.mk"
-
 BUILD_TARGET=		dict
-BUILD_MAKE_FLAGS=	WORDNETDICT=${WORDNETDIR}/dict
+BUILD_MAKE_FLAGS=	WORDNETDICT=${LOCALBASE}/dict
 
 INSTALLATION_DIRS=	bin ${PYSITELIB} dict
 
