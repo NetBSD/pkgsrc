@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/09/12 14:03:58 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2015/11/25 12:49:12 jperkin Exp $
 
 DISTNAME=		pml-2.03
 PKGNAME=		cross-freemint-${DISTNAME}
@@ -38,9 +38,6 @@ GNU_CONFIGURE=		yes
 
 GNU_CONFIGURE_PREFIX=	${FREEMINT_PREFIX}
 
-FIND_PREFIX:=		AR_DIR=cross-freemint-binutils
-.include "../../mk/find-prefix.mk"
-
 CFLAGS+=		-fomit-frame-pointer
 
 CROSSDIR=		${DESTDIR}${FREEMINT_PREFIX}/m68k-atari-mint
@@ -54,7 +51,7 @@ CONFIGURE_ARGS+=	--disable-multilib
 MAKE_ENV+=		SHELL=${TOOLS_PATH.bash}
 MAKE_ENV+=		FREEMINT_PREFIX=${FREEMINT_PREFIX}
 MAKE_ENV+=		WRKSRC=${WRKSRC}
-MAKE_ENV+=		ARDIR=${AR_DIR}/cross-freemint/bin
+MAKE_ENV+=		ARDIR=${FREEMINT_PREFIX}/bin
 MAKE_ENV+=		DESTDIR=${DESTDIR}
 MAKE_ENV+=		CONFIGURE_DIRS=${CONFIGURE_DIRS}
 INFO_FILES=		yes
