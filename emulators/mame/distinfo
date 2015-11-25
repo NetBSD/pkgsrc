@@ -1,11 +1,6 @@
-$NetBSD: distinfo,v 1.43 2015/11/13 14:11:49 wiz Exp $
+$NetBSD: distinfo,v 1.44 2015/11/25 12:34:36 wiz Exp $
 
-SHA1 (mame-0.167.tar.gz) = b8f6671d9220c8a4187e48dd1d9598f179f5b302
-RMD160 (mame-0.167.tar.gz) = 6ea27945a6070e29856f55d2402b9b782ad82ddb
-SHA512 (mame-0.167.tar.gz) = dcfc328477203ebc766661da35b9ee830a202fa5a74800d95dd6c69b1e17a740aae70d791fbadfd6749d726534c77e8e3a85feec54aad5e0107832c754a23af9
-Size (mame-0.167.tar.gz) = 88620865 bytes
-SHA1 (patch-3rdparty_bx_include_bx_os.h) = a67e187ae42e1b8c7c753b16e8f6d90439953eeb
-SHA1 (patch-3rdparty_bx_include_bx_platform.h) = cfe106f747caa0309098afef06b553a16147c48e
-SHA1 (patch-3rdparty_genie_build_gmake.bsd_genie.make) = c8ed2193baf5df90b387c463bdd5e9a3b3e44ab8
-SHA1 (patch-3rdparty_genie_build_gmake.solaris_genie.make) = 8ba3c9dc2ab2bc5f4775f91afce8d7fb15f30d9d
-SHA1 (patch-src_osd_sdl_sdlptty__unix.c) = 4edffc93e6ba9d4b97adc0be848f5aadf84d3272
+SHA1 (mame-0.168.tar.gz) = aa71ca6911749cb5d6bf5d8148866ccff0e649af
+RMD160 (mame-0.168.tar.gz) = 677a398c2854c7bd7e3f007a6846cfd7ff9007cc
+SHA512 (mame-0.168.tar.gz) = e0895bbf8152c00c4ef3da8a3beddb191203c4be3d7b30da7a35ffe2931def9bcaef08ec7cf28651a2ae9adad6d3731f5444691ed07a4516c2e84c3092f312c2
+Size (mame-0.168.tar.gz) = 88471983 bytes
