@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2012/05/07 01:53:34 dholland Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2015/11/25 12:50:43 jperkin Exp $
 
 BUILDLINK_TREE+=	gnome-icon-theme
 
@@ -17,8 +17,7 @@ USE_TOOLS+=	perl
 .include "../../mk/bsd.fast.prefs.mk"
 
 .if !defined(GNOME_ICON_THEME_DEPEND_ONLY)
-EVAL_PREFIX+=		PREFIX.gtk2=gtk2+
-FILES_SUBST+=		GTK_UPDATE_ICON_CACHE="${PREFIX.gtk2}/bin/gtk-update-icon-cache"
+FILES_SUBST+=		GTK_UPDATE_ICON_CACHE="${LOCALBASE}/bin/gtk-update-icon-cache"
 FILES_SUBST+=		ICON_THEME_DIR="${BUILDLINK_PREFIX.gnome-icon-theme}/share/icons/gnome"
 INSTALL_TEMPLATES+=	../../graphics/gnome-icon-theme/files/icon-cache.tmpl
 DEINSTALL_TEMPLATES+=	../../graphics/gnome-icon-theme/files/icon-cache.tmpl

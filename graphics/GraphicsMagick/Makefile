@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2015/10/06 16:50:31 adam Exp $
+# $NetBSD: Makefile,v 1.72 2015/11/25 12:50:43 jperkin Exp $
 
 .include "Makefile.common"
 
@@ -16,7 +16,7 @@ USE_FEATURES=		vsnprintf	# optional but recommended for security
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--with-modules=yes
-CONFIGURE_ARGS+=	--with-gs-font-dir=${URW_FONTS_DIR}/share/fonts/urw
+CONFIGURE_ARGS+=	--with-gs-font-dir=${LOCALBASE}/share/fonts/urw
 CONFIGURE_ARGS+=	--with-ltdl-include=${BUILDLINK_PREFIX.libltdl}/include
 CONFIGURE_ARGS+=	--with-ltdl-lib=${BUILDLINK_PREFIX.libltdl}/lib
 CONFIGURE_ARGS+=	--without-perl
@@ -26,9 +26,6 @@ PKGCONFIG_OVERRIDE+=	wand/GraphicsMagickWand.pc.in
 PKGCONFIG_OVERRIDE+=	Magick++/lib/GraphicsMagick++.pc.in
 
 TEST_TARGET=	check
-
-FIND_PREFIX:=	URW_FONTS_DIR=urw-fonts
-.include "../../mk/find-prefix.mk"
 
 .include "options.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2010/10/21 12:37:59 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2015/11/25 12:50:43 jperkin Exp $
 
 BUILDLINK_TREE+=	hicolor-icon-theme
 
@@ -12,8 +12,7 @@ BUILDLINK_PKGSRCDIR.hicolor-icon-theme?=../../graphics/hicolor-icon-theme
 .include "../../mk/bsd.fast.prefs.mk"
 
 .if !defined(HICOLOR_ICON_THEME_DEPEND_ONLY)
-EVAL_PREFIX+=		PREFIX.gtk2=gtk2+
-FILES_SUBST+=		GTK_UPDATE_ICON_CACHE="${PREFIX.gtk2}/bin/gtk-update-icon-cache"
+FILES_SUBST+=		GTK_UPDATE_ICON_CACHE="${LOCALBASE}/bin/gtk-update-icon-cache"
 FILES_SUBST+=		ICON_THEME_DIR="${BUILDLINK_PREFIX.hicolor-icon-theme}/share/icons/hicolor"
 INSTALL_TEMPLATES+=	../../graphics/hicolor-icon-theme/files/icon-cache.tmpl
 DEINSTALL_TEMPLATES+=	../../graphics/hicolor-icon-theme/files/icon-cache.tmpl
