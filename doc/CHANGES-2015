@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4733 2015/11/25 13:30:12 rillig Exp $
+$NetBSD: CHANGES-2015,v 1.4734 2015/11/25 15:58:21 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7958,3 +7958,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated fonts/harfbuzz to 1.1.1 [wiz 2015-11-25]
 	Updated emulators/mame to 0.168 [wiz 2015-11-25]
 	Updated pkgtools/pkglint to 5.0 [rillig 2015-11-25]
+	Updated databases/py-cassandra-driver to 3.0.0 [fhajny 2015-11-25]
