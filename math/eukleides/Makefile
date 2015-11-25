@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2015/08/18 07:31:12 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2015/11/25 12:51:41 jperkin Exp $
 
 DISTNAME=	eukleides-1.5.4
 PKGREVISION=	3
@@ -20,14 +20,11 @@ REPLACE_BASH=	bash/*
 
 BUILDLINK_TRANSFORM+=	l:ncurses:curses
 
-FIND_PREFIX:=		GETOPTDIR=getopt
-.include "../../mk/find-prefix.mk"
-
 SUBST_CLASSES+=		getopt
 SUBST_STAGE.getopt=	pre-configure
 SUBST_MESSAGE.getopt=	Replacing getopt.
 SUBST_FILES.getopt=	bash/euktoeps
-SUBST_SED.getopt+=	-e 's,@GETOPT@,${GETOPTDIR}/bin/getopt,'
+SUBST_SED.getopt+=	-e 's,@GETOPT@,${LOCALBASE}/bin/getopt,'
 
 INSTALL_MAKE_FLAGS=	${MAKE_FLAGS}					\
 			PREFIX=${DESTDIR}${PREFIX}			\
