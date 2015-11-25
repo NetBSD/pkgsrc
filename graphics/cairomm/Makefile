@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2015/10/22 11:54:38 tnn Exp $
+# $NetBSD: Makefile,v 1.37 2015/11/25 18:05:52 adam Exp $
 
 DISTNAME=	cairomm-1.12.0
 PKGREVISION=	1
@@ -17,7 +17,7 @@ USE_TOOLS+=		gmake perl pkg-config
 GNU_CONFIGURE=		yes
 # long file name, does not extract correctly with NetBSD tar(1):
 # classhash__load__check__resize__trigger__size__base__inherit__graph.png
-EXTRACT_USING=		bsdtar 
+EXTRACT_USING=		bsdtar
 
 PKGCONFIG_OVERRIDE+=	data/cairomm-1.0.pc.in
 PKGCONFIG_OVERRIDE+=	data/cairomm-ft-1.0.pc.in
