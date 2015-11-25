@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2015/04/25 14:20:20 tnn Exp $
+# $NetBSD: Makefile,v 1.38 2015/11/25 12:47:55 jperkin Exp $
 #
 
 DISTNAME=	gimmix-0.5.7.1
@@ -20,7 +20,7 @@ USE_TOOLS+=	intltool gmake msgfmt pkg-config
 # fixes broken symbolic link to /usr/share/intltool/Makefile.in.in
 post-extract:
 	rm -f ${WRKSRC}/po/Makefile.in.in
-	ln -s ${TOOLS_PREFIX.intltool:Q}/share/intltool/Makefile.in.in \
+	ln -s ${LOCALBASE}/share/intltool/Makefile.in.in \
 		${WRKSRC}/po/Makefile.in.in
 
 .include "../../x11/gtk2/buildlink3.mk"
