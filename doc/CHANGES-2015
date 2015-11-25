@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4736 2015/11/25 20:46:42 leot Exp $
+$NetBSD: CHANGES-2015,v 1.4737 2015/11/25 23:45:48 wiedi Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7961,3 +7961,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/py-cassandra-driver to 3.0.0 [fhajny 2015-11-25]
 	Added pkgtools/pkglint4 version 4.158 [rillig 2015-11-25]
 	Updated pkgtools/lintpkgsrc to 4.91 [leot 2015-11-25]
+	Updated sysutils/znapzend to 0.14.1 [wiedi 2015-11-25]
