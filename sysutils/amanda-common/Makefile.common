@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.40 2014/09/25 21:47:06 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.41 2015/11/25 12:53:29 jperkin Exp $
 
 # used by sysutils/amanda-common/Makefile
 # used by sysutils/amanda-client/Makefile
@@ -84,7 +84,7 @@ LDFLAGS.SunOS+=		-lsocket
 
 INSTALL_MAKE_FLAGS+=	SETUID_GROUP=${ROOT_GROUP}
 
-AMPERLDIR=		${PERLDIR:Q}/${PERL5_SUB_INSTALLVENDORLIB}
+AMPERLDIR=		${PREFIX:Q}/${PERL5_SUB_INSTALLVENDORLIB}
 
 .include "../../sysutils/amanda-common/options.mk"
 
@@ -116,7 +116,7 @@ post-install-extra:
 .if defined(PERL5_MODS) && !empty(PERL5_MODS)
 .  for mod in ${PERL5_MODS}
 	${INSTALL_DATA} ${WRKSRC}/perl/${mod}				\
-		${DESTDIR}${PERLDIR}/${PERL5_SUB_INSTALLVENDORLIB}/${mod}
+		${DESTDIR}${PREFIX}/${PERL5_SUB_INSTALLVENDORLIB}/${mod}
 .  endfor
 .endif
 .if defined(PERL5_LIBS)  && !empty(PERL5_LIBS)
@@ -124,7 +124,7 @@ post-install-extra:
 	${RUN}${_ULIMIT_CMD} ${PKGSRC_SETENV} ${MAKE_ENV} \
 	  ${WRAPPER_BINDIR}/libtool --mode=install ${INSTALL_LIB}	\
 	    ${WRKSRC}/perl/lib${lib}.la					\
-	    ${DESTDIR}${PERLDIR}/${PERL5_SUB_INSTALLVENDORLIB}/auto/Amanda/${lib}
+	    ${DESTDIR}${PREFIX}/${PERL5_SUB_INSTALLVENDORLIB}/auto/Amanda/${lib}
 .  endfor
 .endif
 .if defined(MANPAGES) && !empty(MANPAGES)
