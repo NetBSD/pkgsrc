@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2014/09/06 08:20:29 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2015/11/25 12:51:16 jperkin Exp $
 
 BUILDLINK_TREE+=	gcc47
 
@@ -10,8 +10,6 @@ BUILDLINK_ABI_DEPENDS.gcc47+=	gcc47>=4.7.0
 BUILDLINK_PKGSRCDIR.gcc47=	../../lang/gcc47
 BUILDLINK_DEPMETHOD.gcc47?=	build
 
-FIND_PREFIX:=	BUILDLINK_PREFIX.gcc47=gcc47
-.include "../../mk/find-prefix.mk"
 BUILDLINK_PASSTHRU_DIRS+=	${BUILDLINK_PREFIX.gcc47}/gcc47
 
 BUILDLINK_FILES.gcc47=		#empty
