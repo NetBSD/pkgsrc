@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/07/19 11:13:55 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2015/11/25 12:53:29 jperkin Exp $
 
 DISTNAME=	libisoburn-1.3.8
 #PKGNAME=	${DISTNAME:S/.pl/pl/}
@@ -22,14 +22,11 @@ INFO_FILES=	yes
 
 PKGCONFIG_OVERRIDE+=	libisoburn-1.pc.in
 
-FIND_PREFIX:=	TCLDIR=tcl
-.include "../../mk/find-prefix.mk"
-
 SUBST_CLASSES+=		fix-wish
 SUBST_STAGE.fix-wish=	pre-configure
 SUBST_MESSAGE.fix-wish=	Fixing tcl wish
 SUBST_FILES.fix-wish+=	frontend/xorriso-tcltk
-SUBST_SED.fix-wish+=	-e 's,/usr/bin/wish,${TCLDIR}/bin/wish,'
+SUBST_SED.fix-wish+=	-e 's,/usr/bin/wish,${LOCALBASE}/bin/wish,'
 
 .include "../../sysutils/libisofs/buildlink3.mk"
 .include "../../sysutils/libburn/buildlink3.mk"
