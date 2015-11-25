@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2014/04/17 20:26:51 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2015/11/25 12:54:23 jperkin Exp $
 
 BUILDLINK_TREE+=	tk
 
@@ -21,9 +21,7 @@ TKCONFIG_SH?=	${BUILDLINK_PREFIX.tk}/lib/tkConfig.sh
 
 _TOOLS_USE_PKGSRC.wish=	yes
 
-FIND_PREFIX:=		TOOLS_PREFIX.wish=tk
-.include "../../mk/find-prefix.mk"
-WISH=			${TOOLS_PREFIX.wish}/bin/wish
+WISH=			${LOCALBASE}/bin/wish
 
 pkgbase := tk
 .include "../../mk/pkg-build-options.mk"

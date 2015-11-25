@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2015/10/10 01:58:22 ryoon Exp $
+# $NetBSD: Makefile,v 1.70 2015/11/25 12:54:23 jperkin Exp $
 #
 
 DISTNAME=	fast-user-switch-applet-2.24.0
@@ -21,9 +21,7 @@ USE_X11=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
-EVAL_PREFIX=		PREFIX.gdm
-PREFIX.gdm_DEFAULT=	${PREFIX}
-CONFIGURE_ARGS+=	--with-gdm-setup=${PREFIX.gdm}/sbin/gdmsetup
+CONFIGURE_ARGS+=	--with-gdm-setup=${LOCALBASE}/sbin/gdmsetup
 
 .if defined(PKG_SYSCONFDIR.gdm)
 CONFIGURE_ARGS+=	--with-gdm-config=${PKG_SYSCONFDIR.gdm}/custom.conf
