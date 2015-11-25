@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/06 14:25:14 asau Exp $
+# $NetBSD: Makefile,v 1.5 2015/11/25 12:50:58 jperkin Exp $
 #
 
 DISTNAME=	multiskkserv-20100128-ac
@@ -14,8 +14,6 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS=	skk-jisyo-cdb-[0-9]*:../../inputmethod/skk-jisyo-cdb
 
-FIND_PREFIX:=		SKKJISYOCDBDIR=skk-jisyo-cdb
-
 DOCSDIR=		${PREFIX}/share/doc/${PKGBASE}
 INSTALLATION_DIRS=	${DOCSDIR}
 
@@ -26,8 +24,6 @@ USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 
 RCD_SCRIPTS=	multiskkserv
-
-FILES_SUBST=	SKKJISYOCDBDIR=${SKKJISYOCDBDIR}
 
 post-install:
 .for filename in ${INSTALL_DOCS}
@@ -40,6 +36,5 @@ SUBST_FILES.pthread=	configure
 SUBST_SED.pthread=	-e 's/-D_REENTRANT/${PTHREAD_CFLAGS}/g'
 SUBST_SED.pthread+=	-e 's/-lpthread/${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}/g'
 
-.include "../../mk/find-prefix.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
