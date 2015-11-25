@@ -1,6 +1,6 @@
 #! @PERL@
 
-# $NetBSD: lintpkgsrc.pl,v 1.8 2015/10/05 13:16:44 tnn Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.9 2015/11/25 20:46:28 leot Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -627,7 +627,7 @@ sub get_default_makefile_vars() {
     $default_vars->{LOWER_OPSYS} = lc( $default_vars->{OPSYS} );
 
     if ( $opt{P} ) {
-        $default_vars->{PKGSRCDIR} = $opt{P};
+        $default_vars->{PKGSRCDIR} = realpath($opt{P});
     }
     else {
         $default_vars->{PKGSRCDIR} = $conf_pkgsrcdir;
@@ -646,18 +646,18 @@ sub get_default_makefile_vars() {
     }
 
     if ( $opt{P} ) {
-        $default_vars->{PKGSRCDIR} = $opt{P};
+        $default_vars->{PKGSRCDIR} = realpath($opt{P});
     }
 
     if ( $opt{M} ) {
-        $default_vars->{DISTDIR} = $opt{M};
+        $default_vars->{DISTDIR} = realpath($opt{M});
     }
     else {
         $default_vars->{DISTDIR} ||= $default_vars->{PKGSRCDIR} . '/distfiles';
     }
 
     if ( $opt{K} ) {
-        $default_vars->{PACKAGES} = $opt{K};
+        $default_vars->{PACKAGES} = realpath($opt{K});
     }
 
     # Extract some variables from bsd.pkg.mk
