@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2014/06/17 13:17:12 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2015/11/25 12:53:09 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cups
 PKG_OPTIONS_REQUIRED_GROUPS=	pdftops
@@ -76,11 +76,9 @@ MESSAGE_SRC=		${.CURDIR}/MESSAGE
 .endif
 
 .if !empty(PKG_OPTIONS:Mpoppler)
-FIND_PREFIX:=	POPPLERDIR=poppler-utils
-.include "../../mk/find-prefix.mk"
 DEPENDS+=	poppler-utils-[0-9]*:../../print/poppler-utils
 CONFIGURE_ARGS+=	--with-pdftops=pdftops
-CONFIGURE_ENV+=		ac_cv_path_CUPS_PDFTOPS=${POPPLERDIR}/bin/pdftops
+CONFIGURE_ENV+=		ac_cv_path_CUPS_PDFTOPS=${LOCALBASE}/bin/pdftops
 .endif
 
 .if !empty(PKG_OPTIONS:Mslp)
