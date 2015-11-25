@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/09/17 17:13:33 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2015/11/25 12:49:46 jperkin Exp $
 
 VERSION=	13.1.2
 DISTNAME=	ideaIC-${VERSION:S/.0.0//}-src
@@ -22,9 +22,6 @@ USE_TOOLS+=	pax tar
 DEPENDS+=	snappy-java10-[0-9]*:../../devel/snappy-java10
 BUILD_DEPENDS+=	apache-ant-[0-9]*:../../devel/apache-ant
 
-FIND_PREFIX:=	ANTDIR=apache-ant
-.include "../../mk/find-prefix.mk"
-
 SUBST_CLASSES+=		dos_eol
 SUBST_MESSAGE.dos_eol=	Removing DOS line-ends
 SUBST_STAGE.dos_eol=	post-extract
@@ -47,7 +44,7 @@ do-build:
 # Build Java part
 	cd ${WRKSRC} \
 		&& env ${MAKE_ENV} \
-		${ANTDIR}/bin/ant
+		${LOCALBASE}/bin/ant
 # Build fsnotifier native binary
 	cd ${WRKSRC}/native/fsNotifier/linux && \
 		${CC} -Wall -std=c99 -D_BSD_SOURCE -D_XOPEN_SOURCE=500 \
