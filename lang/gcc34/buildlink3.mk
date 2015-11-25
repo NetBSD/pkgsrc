@@ -1,12 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.22 2014/09/06 08:20:29 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.23 2015/11/25 12:51:16 jperkin Exp $
 
 BUILDLINK_TREE+=	gcc34
 
 .if !defined(GCC34_BUILDLINK3_MK)
 GCC34_BUILDLINK3_MK:=
-
-FIND_PREFIX:=	BUILDLINK_PREFIX.gcc34=gcc34
-.include "../../mk/find-prefix.mk"
 
 _GCC34_SUBDIR=	gcc34
 _GCC34_PREFIX=	${BUILDLINK_PREFIX.gcc34}/${_GCC34_SUBDIR}

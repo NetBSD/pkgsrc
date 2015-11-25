@@ -1,4 +1,4 @@
-# $NetBSD: modules.mk,v 1.35 2014/03/13 17:06:42 taca Exp $
+# $NetBSD: modules.mk,v 1.36 2015/11/25 12:51:17 jperkin Exp $
 
 .if !defined(_RUBY_MODULE_MK)
 _RUBY_MODULE_MK=	# defined
@@ -205,8 +205,7 @@ BUILD_DEPENDS+=	${RUBY_PKGPREFIX}-rake>=0.8.7:../../devel/ruby-rake
 # RAKE
 #	The path to the ``rake'' binary.
 #
-EVAL_PREFIX+=	RAKE_PREFIX=${RAKE_NAME}
-RAKE=		${RAKE_PREFIX}/bin/${RAKE_NAME}
+RAKE=		${LOCALBASE}/bin/${RAKE_NAME}
 MAKE_ENV+=	RAKE=${RAKE:Q}
 .endif
 

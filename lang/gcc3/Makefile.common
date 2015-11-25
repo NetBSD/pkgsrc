@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.26 2014/10/05 16:41:07 wiz Exp $
+# $NetBSD: Makefile.common,v 1.27 2015/11/25 12:51:16 jperkin Exp $
 #
 # used by lang/gcc3/language.mk
 # used by lang/gcc3-c/Makefile
@@ -89,9 +89,7 @@ MAKEFLAGS+=	USE_BINUTILS=${USE_BINUTILS:Q}
 
 .if defined(USE_BINUTILS) && !empty(USE_BINUTILS:M[yY][eE][sS])
 DEPENDS+=		binutils>=2.13.2.1:../../devel/binutils
-EVAL_PREFIX+=		BINUTILS_PREFIX=binutils
-BINUTILS_PREFIX_DEFAULT= ${LOCALBASE}
-CONFIGURE_ARGS+=	--with-as=${BINUTILS_PREFIX}/${MACHINE_GNU_PLATFORM}/bin/as
+CONFIGURE_ARGS+=	--with-as=${LOCALBASE}/${MACHINE_GNU_PLATFORM}/bin/as
 .endif
 
 OPSYSVARS+=			GCC_SHARED_ARG
