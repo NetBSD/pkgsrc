@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2015/06/12 10:50:55 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2015/11/25 12:52:26 jperkin Exp $
 
 PKGNAME=	gridscheduler-2011.11
 DISTNAME=	GE2011.11
@@ -35,8 +35,6 @@ PKG_USERS=		${SGE_USER}:${SGE_GROUP}
 PKG_GECOS.${SGE_USER}=	Sun Grid Engine Administrator
 PKG_GROUPS_VARS+=	SGE_GROUP
 PKG_USERS_VARS+=	SGE_USER
-
-EVAL_PREFIX+=	PKGSRC_SSL_PREFIX=openssl
 
 AIMK=	${SETENV} ${MAKE_ENV} tcsh -fb ${WRKSRC}/source/aimk
 
@@ -109,12 +107,12 @@ post-patch:
 		${ECHO} "        `${WRKSRC}/source/dist/util/arch`" ; \
 		${FALSE} ; \
 	fi
-	( ${ECHO} "set OPENSSL_HOME = ${SSL_PREFIX}" ; \
+	( ${ECHO} "set OPENSSL_HOME = ${BUILDLINK_PREFIX.openssl}" ; \
 	${ECHO} "set BERKELEYDB_HOME = ${BUILDLINK_PREFIX.db4}" ; \
 	${ECHO} "set BDB_INCLUDE_SUBDIR = db4" ; \
 	${ECHO} "set BDB_LIB_SUFFIX = 4" ; \
 	${ECHO} "set PERL = ${PERL5}" ) > ${WRKSRC}/source/aimk.private
-	( ${ECHO} "OPENSSLBASE=${SSL_PREFIX}" ; \
+	( ${ECHO} "OPENSSLBASE=${BUILDLINK_PREFIX.openssl}" ; \
 	${ECHO} "BERKELEYDBBASE=${BUILDLINK_PREFIX.db4}" ) > ${WRKSRC}/source/distinst.private
 
 SUBST_CLASSES+=		paths
@@ -147,7 +145,7 @@ do-install:
 	for f in archive checkpoint deadlock dump load printlog recover stat upgrade verify ; do \
 		ln -s ${DESTDIR}${LOCALBASE}/bin/db4_$${f} ${DESTDIR}${SGE_ROOT}/utilbin/${SGE_ARCH}/db_$${f} ; done
 	ln -s ${DESTDIR}${LOCALBASE}/bin/berkeley_db4_svc ${DESTDIR}${SGE_ROOT}/utilbin/${SGE_ARCH}/berkeley_db_svc
-	ln -s ${DESTDIR}${SSL_PREFIX}/bin/openssl ${DESTDIR}${SGE_ROOT}/utilbin/${SGE_ARCH}/openssl
+	ln -s ${DESTDIR}${BUILDLINK_PREFIX.openssl}/bin/openssl ${DESTDIR}${SGE_ROOT}/utilbin/${SGE_ARCH}/openssl
 	cd ${DESTDIR}${SGE_ROOT} && ${SETENV} SGE_ROOT=${SGE_ROOT} DESTDIR=${DESTDIR} ./util/setfileperm.sh -auto \
 		${SGE_ROOT}
 	for f in ${DESTDIR}${SGE_ROOT}/bin/${SGE_ARCH}/q* ; do \
@@ -169,8 +167,3 @@ CHECK_INTERPRETER_SKIP=	sge/hadoop/pestart.sh \
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../mk/motif.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
-.if ${USE_BUILTIN.openssl} == "yes"
-SSL_PREFIX=	/usr
-.else
-SSL_PREFIX=	${PKGSRC_SSL_PREFIX}
-.endif
