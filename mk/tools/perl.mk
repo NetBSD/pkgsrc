@@ -1,4 +1,4 @@
-# $NetBSD: perl.mk,v 1.23 2007/11/19 04:08:58 minskim Exp $
+# $NetBSD: perl.mk,v 1.24 2015/11/25 13:05:47 jperkin Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -44,9 +44,7 @@
 #
 # Define PERL5_* variables that locate the site directories for
 # ${PERL5}.  These variables depend on PERL5 being properly defined
-# and existing on the filesystem.  This needs to be done _after_
-# ${PERL5} is fully resolved, which happens after mk/tools/replace.mk
-# includes find-prefix.mk.
+# and existing on the filesystem.
 #
 .  include "../../lang/perl5/vars.mk"
 .else

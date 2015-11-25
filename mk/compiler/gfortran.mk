@@ -1,4 +1,4 @@
-# $NetBSD: gfortran.mk,v 1.7 2015/09/11 15:23:21 jperkin Exp $
+# $NetBSD: gfortran.mk,v 1.8 2015/11/25 13:05:47 jperkin Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -68,8 +68,7 @@ _USE_GFORTRAN=	YES
 .endif
 
 .if !empty(_USE_GFORTRAN:M[yY][eE][sS])
-EVAL_PREFIX+=		_GFORTRANBASE=gfortran
-_GFORTRANBASE_DEFAULT=	${LOCALBASE}/gcc48
+_GFORTRANBASE=	${LOCALBASE}/gcc48
 FC=		gfortran
 
 _GFORTRAN_DIR=	${WRKDIR}/.gfortran

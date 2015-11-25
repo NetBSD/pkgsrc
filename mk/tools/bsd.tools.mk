@@ -1,4 +1,4 @@
-# $NetBSD: bsd.tools.mk,v 1.54 2012/01/14 01:52:14 hans Exp $
+# $NetBSD: bsd.tools.mk,v 1.55 2015/11/25 13:05:47 jperkin Exp $
 #
 # Copyright (c) 2005, 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -181,7 +181,6 @@ _PKG_VARS.tools=	USE_TOOLS TOOLS_BROKEN TOOLS_CREATE \
 	TOOLS_IGNORE \
 	TOOLS_PATH \
 	TOOLS_PLATFORM \
-	TOOLS_PREFIX \
 	TOOLS_SCRIPT \
 	TOOLS_SCRIPT_DFLT \
 	TOOLS_VALUE_GNU \

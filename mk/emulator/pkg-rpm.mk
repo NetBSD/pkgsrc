@@ -1,4 +1,4 @@
-# $NetBSD: pkg-rpm.mk,v 1.5 2013/05/09 23:37:26 riastradh Exp $
+# $NetBSD: pkg-rpm.mk,v 1.6 2015/11/25 13:05:47 jperkin Exp $
 #
 # RPM package format
 #
@@ -57,8 +57,7 @@
 #
 
 TOOL_DEPENDS+=		rpm2pkg>=3.1.4:../../pkgtools/rpm2pkg
-EVAL_PREFIX+=		_RPM2PKG_PREFIX=rpm2pkg
-RPM2PKG=		${_RPM2PKG_PREFIX}/sbin/rpm2pkg
+RPM2PKG=		${LOCALBASE}/sbin/rpm2pkg
 
 RPMFILES?=		${DISTFILES:M*.rpm:S/^/${_DISTDIR}\//}
 BUILD_DEFS+=		RPMFILES

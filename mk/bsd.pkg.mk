@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.2013 2015/04/29 14:23:23 jperkin Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.2014 2015/11/25 13:05:47 jperkin Exp $
 #
 # This file is in the public domain.
 #
@@ -420,12 +420,6 @@ BUILD_DEPENDS+=		${BUILD_ABI_DEPENDS}
 .  else
 _BUILD_DEFS+=		USE_ABI_DEPENDS
 .  endif
-.endif
-
-# Find out the PREFIX of dependencies where the PREFIX is needed at build time.
-.if defined(EVAL_PREFIX)
-FIND_PREFIX:=	${EVAL_PREFIX}
-.  include "find-prefix.mk"
 .endif
 
 .if !defined(_PATH_ORIG)

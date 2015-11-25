@@ -1,4 +1,4 @@
-# $NetBSD: g95.mk,v 1.4 2012/12/15 21:23:31 markd Exp $
+# $NetBSD: g95.mk,v 1.5 2015/11/25 13:05:47 jperkin Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -68,9 +68,8 @@ _USE_G95=	YES
 .endif
 
 .if !empty(_USE_G95:M[yY][eE][sS])
-EVAL_PREFIX+=		_G95BASE=g95
-_G95BASE_DEFAULT=	${LOCALBASE}
 FC=		g95
+G95BASE?=	${PREFIX}
 
 _G95_DIR=	${WRKDIR}/.g95
 _G95_VARS=	# empty
@@ -80,7 +79,7 @@ PKG_FC?=	${FC}
 _G95_VARS+=	FC
 _G95_FC:=	${_G95_DIR}/bin/${PKG_FC:T}
 _ALIASES.FC+=	f77 g77 g95
-FCPATH=		${_G95BASE}/bin/g95
+FCPATH=		${G95BASE}/bin/g95
 PKG_FC:=	${_G95_FC}
 .  endif
 
@@ -103,11 +102,11 @@ override-tools: ${_G95_${_var_}}
 ${_G95_${_var_}}:
 	${RUN}${MKDIR} ${.TARGET:H}
 	${RUN}					\
-	${LN} -fs ${_G95BASE}/bin/g95 ${.TARGET}
+	${LN} -fs ${G95BASE}/bin/g95 ${.TARGET}
 .      for _alias_ in ${_ALIASES.${_var_}:S/^/${.TARGET:H}\//}
 	${RUN}					\
 	if [ ! -x "${_alias_}" ]; then					\
-		${LN} -fs ${_G95BASE}/bin/g95 ${_alias_};		\
+		${LN} -fs ${G95BASE}/bin/g95 ${_alias_};		\
 	fi
 .      endfor
 .    endif
