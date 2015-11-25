@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2013/02/17 19:17:58 dholland Exp $
+# $NetBSD: Makefile,v 1.37 2015/11/25 12:49:46 jperkin Exp $
 
 DISTNAME=	flim-1.14.9
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -20,7 +20,6 @@ BUILD_TARGET=	${BUILD_TARGET.${EMACS_FLAVOR}}
 INSTALL_TARGET=	${INSTALL_TARGET.${EMACS_FLAVOR}}
 MAKEFLAGS=	${MAKEFLAGS.${EMACS_FLAVOR}}
 
-EVAL_PREFIX+=	QKC_PREFIX=qkc
 USE_TOOLS+=	makeinfo
 INFO_FILES=	yes
 TEXINFO_REQD=	4.5
@@ -40,7 +39,7 @@ post-build:
 	@cd ${WRKSRC}; for i in mime-en mime-ja; do			\
 		${RM} -f $${i}.info*;					\
 		${CP} $${i}.texi $${i}.texi.orig;			\
-		${QKC_PREFIX}/bin/qkc -Oeu $${i}.texi.orig >$${i}.texi;	\
+		${LOCALBASE}/bin/qkc -Oeu $${i}.texi.orig >$${i}.texi;	\
 		makeinfo --force --no-validate $${i}.texi;		\
 	done
 
