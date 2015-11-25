@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2015/10/14 20:17:27 wiz Exp $
+# $NetBSD: Makefile,v 1.100 2015/11/25 12:51:42 jperkin Exp $
 #
 
 DISTNAME=	${SCIBASE}-src
@@ -28,12 +28,10 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-local-xaw
 CONFIGURE_ARGS+=	--without-java
 
-EVAL_PREFIX+=		TCL_PREFIX=tcl
-EVAL_PREFIX+=		TK_PREFIX=tk
-CONFIGURE_ARGS+=	--with-tcl-library=${TCL_PREFIX}/lib
-CONFIGURE_ARGS+=	--with-tcl-include=${TCL_PREFIX}/include
-CONFIGURE_ARGS+=	--with-tk-library=${TK_PREFIX}/lib
-CONFIGURE_ARGS+=	--with-tk-include=${TK_PREFIX}/include
+CONFIGURE_ARGS+=	--with-tcl-library=${BUILDLINK_PREFIX.tcl}/lib
+CONFIGURE_ARGS+=	--with-tcl-include=${BUILDLINK_PREFIX.tcl}/include
+CONFIGURE_ARGS+=	--with-tk-library=${BUILDLINK_PREFIX.tk}/lib
+CONFIGURE_ARGS+=	--with-tk-include=${BUILDLINK_PREFIX.tk}/include
 CONFIGURE_ENV+=		TCL_CONFIG_SH=${BUILDLINK_PREFIX.tcl}/lib/tclConfig.sh
 CONFIGURE_ENV+=		TK_CONFIG_SH=${BUILDLINK_PREFIX.tk}/lib/tkConfig.sh
 CONFIGURE_ENV+=		CC_LDFLAGS=${X11_LDFLAGS:Q}\ ${COMPILER_RPATH_FLAG:Q}${BUILDLINK_PREFIX.tk:Q}/lib
