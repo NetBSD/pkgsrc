@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qmailsmtpd.sh,v 1.9 2014/12/06 22:14:27 schmonz Exp $
+# $NetBSD: qmailsmtpd.sh,v 1.10 2015/11/25 12:51:30 jperkin Exp $
 #
 # @PKGNAME@ script to control qmail-smtpd (SMTP service).
 #
@@ -11,7 +11,7 @@
 name="qmailsmtpd"
 
 # User-settable rc.conf variables and their default values:
-: ${qmailsmtpd_postenv:="QMAILQUEUE=@QMAIL_PREFIX@/bin/qmail-queue"}
+: ${qmailsmtpd_postenv:="QMAILQUEUE=@PREFIX@/bin/qmail-queue"}
 : ${qmailsmtpd_tcpflags:="-vRl0"}
 : ${qmailsmtpd_tcphost:="0"}
 : ${qmailsmtpd_tcpport:="25"}
@@ -21,7 +21,7 @@ name="qmailsmtpd"
 : ${qmailsmtpd_postsmtpd:=""}
 : ${qmailsmtpd_log:="YES"}
 : ${qmailsmtpd_logcmd:="logger -t nb${name} -p mail.info"}
-: ${qmailsmtpd_nologcmd:="@DAEMONTOOLS_PREFIX@/bin/multilog -*"}
+: ${qmailsmtpd_nologcmd:="@PREFIX@/bin/multilog -*"}
 
 if [ -f /etc/rc.subr ]; then
 	. /etc/rc.subr
@@ -31,7 +31,7 @@ rcvar=${name}
 required_files="@PKG_SYSCONFDIR@/control/concurrencyincoming"
 required_files="${required_files} @PKG_SYSCONFDIR@/tcp.smtp.cdb"
 required_files="${required_files} @PKG_SYSCONFDIR@/control/rcpthosts"
-command="@UCSPI_TCP_PREFIX@/bin/tcpserver"
+command="@PREFIX@/bin/tcpserver"
 procname=${name}
 start_precmd="qmailsmtpd_precmd"
 extra_commands="stat pause cont cdb"
@@ -48,7 +48,7 @@ qmailsmtpd_precmd()
 	if [ -f /etc/rc.subr ]; then
 		checkyesno qmailsmtpd_log || qmailsmtpd_logcmd=${qmailsmtpd_nologcmd}
 	fi
-	command="@SETENV@ - ${qmailsmtpd_postenv} @DAEMONTOOLS_PREFIX@/bin/softlimit -m ${qmailsmtpd_datalimit} ${qmailsmtpd_pretcpserver} @UCSPI_TCP_PREFIX@/bin/argv0 @UCSPI_TCP_PREFIX@/bin/tcpserver ${name} ${qmailsmtpd_tcpflags} -x @PKG_SYSCONFDIR@/tcp.smtp.cdb -c `@HEAD@ -1 @PKG_SYSCONFDIR@/control/concurrencyincoming` -u `@ID@ -u qmaild` -g `@ID@ -g qmaild` ${qmailsmtpd_tcphost} ${qmailsmtpd_tcpport} ${qmailsmtpd_presmtpd} @QMAIL_PREFIX@/bin/qmail-smtpd ${qmailsmtpd_postsmtpd} 2>&1 | @DAEMONTOOLS_PREFIX@/bin/setuidgid qmaill ${qmailsmtpd_logcmd}"
+	command="@SETENV@ - ${qmailsmtpd_postenv} @PREFIX@/bin/softlimit -m ${qmailsmtpd_datalimit} ${qmailsmtpd_pretcpserver} @PREFIX@/bin/argv0 @PREFIX@/bin/tcpserver ${name} ${qmailsmtpd_tcpflags} -x @PKG_SYSCONFDIR@/tcp.smtp.cdb -c `@HEAD@ -1 @PKG_SYSCONFDIR@/control/concurrencyincoming` -u `@ID@ -u qmaild` -g `@ID@ -g qmaild` ${qmailsmtpd_tcphost} ${qmailsmtpd_tcpport} ${qmailsmtpd_presmtpd} @PREFIX@/bin/qmail-smtpd ${qmailsmtpd_postsmtpd} 2>&1 | @PREFIX@/bin/setuidgid qmaill ${qmailsmtpd_logcmd}"
 	command_args="&"
 	rc_flags=""
 }
@@ -81,7 +81,7 @@ qmailsmtpd_cont()
 qmailsmtpd_cdb()
 {
 	@ECHO@ "Reloading @PKG_SYSCONFDIR@/tcp.smtp."
-	@UCSPI_TCP_PREFIX@/bin/tcprules @PKG_SYSCONFDIR@/tcp.smtp.cdb @PKG_SYSCONFDIR@/tcp.smtp.tmp < @PKG_SYSCONFDIR@/tcp.smtp
+	@PREFIX@/bin/tcprules @PKG_SYSCONFDIR@/tcp.smtp.cdb @PKG_SYSCONFDIR@/tcp.smtp.tmp < @PKG_SYSCONFDIR@/tcp.smtp
 	@CHMOD@ 644 @PKG_SYSCONFDIR@/tcp.smtp.cdb
 }
 
