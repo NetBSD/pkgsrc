@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2015/11/18 14:09:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.62 2015/11/25 13:00:43 jperkin Exp $
 
 DISTNAME=	libvpx-1.5.0
 CATEGORIES=	multimedia
@@ -121,9 +121,7 @@ CONFIGURE_ARGS+=	--disable-runtime-cpu-detect
 # Under Solaris 10 its /usr/xpg4/bin/tr is not sufficient. PR pkg/48508
 .if !empty(MACHINE_PLATFORM:MSunOS-5.10*)
 BUILD_DEPENDS=		coreutils-[0-9]*:../../sysutils/coreutils
-FIND_PREFIX:=		GTRDIR=coreutils
-.include "../../mk/find-prefix.mk"
-TOOLS_PLATFORM.tr=	${GTRDIR}/bin/gtr
+TOOLS_PLATFORM.tr=	${LOCALBASE}/bin/gtr
 .endif
 
 BUILD_TARGET=	# none
