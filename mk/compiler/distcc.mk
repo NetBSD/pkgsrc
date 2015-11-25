@@ -1,4 +1,4 @@
-# $NetBSD: distcc.mk,v 1.31 2013/05/09 23:37:26 riastradh Exp $
+# $NetBSD: distcc.mk,v 1.32 2015/11/25 13:05:47 jperkin Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -67,9 +67,6 @@ _USE_DISTCC=	YES
 .endif
 
 .if !empty(_USE_DISTCC:M[yY][eE][sS])
-EVAL_PREFIX+=		_DISTCCBASE=distcc
-_DISTCCBASE_DEFAULT=	${LOCALBASE}
-
 _DISTCC_DIR=	${WRKDIR}/.distcc
 _DISTCC_VARS=	# empty
 .  if !empty(_LANGUAGES.distcc:Mc)
@@ -94,6 +91,7 @@ PREPEND_PATH+=	${_DISTCC_DIR}/bin
 
 # Add the dependency on distcc.
 TOOL_DEPENDS+=	distcc-[0-9]*:../../devel/distcc
+DISTCCBASE?=	${PREFIX}
 
 .  if defined(DISTCC_HOSTS) && !empty(DISTCC_HOSTS)
 PKGSRC_MAKE_ENV+=	DISTCC_HOSTS=${DISTCC_HOSTS:Q}
@@ -112,11 +110,11 @@ override-tools: ${_DISTCC_${_var_}}
 ${_DISTCC_${_var_}}:
 	${RUN}${MKDIR} ${.TARGET:H}
 	${RUN}					\
-	${LN} -fs ${_DISTCCBASE}/bin/distcc ${.TARGET}
+	${LN} -fs ${DISTCCBASE}/bin/distcc ${.TARGET}
 .      for _alias_ in ${_ALIASES.${_var_}:S/^/${.TARGET:H}\//}
 	${RUN}					\
 	if [ ! -x "${_alias_}" ]; then					\
-		${LN} -fs ${_DISTCCBASE}/bin/distcc ${_alias_};		\
+		${LN} -fs ${DISTCCBASE}/bin/distcc ${_alias_};		\
 	fi
 .      endfor
 .    endif
