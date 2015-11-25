@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2015/03/15 19:51:08 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.22 2015/11/25 12:50:44 jperkin Exp $
 #
 
 DISTNAME=	x11rec-0.3
@@ -13,7 +13,6 @@ COMMENT=	Very ad hoc X11 recorder which create a movie
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	gifsicle-[0-9]*:../../graphics/gifsicle
-DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
 
 .include "../../mk/bsd.prefs.mk"
 .if ${X11_TYPE} == "modular"
@@ -38,10 +37,6 @@ do-install:
 .include "../../lang/ruby/replace.mk"
 DEPENDS+=	${RUBY_BASE}-[0-9]*:${RUBY_SRCDIR}
 
-FIND_PREFIX:=	BUILDLINK_PREFIX.ImageMagick=ImageMagick	\
-		BUILDLINK_PREFIX.gifsicle=gifsicle
-.include "../../mk/find-prefix.mk"
-
 SUBST_CLASSES+=		toolpath
 SUBST_STAGE.toolpath=	pre-configure
 SUBST_MESSAGE.toolpath=	Fixing paths.
@@ -49,6 +44,7 @@ SUBST_FILES.toolpath=	x11rec
 SUBST_SED.toolpath=	-e "s|@xwininfo@|${X11BASE}/bin/xwininfo|"
 SUBST_SED.toolpath+=	-e "s|@xwd@|${X11BASE}/bin/xwd|"
 SUBST_SED.toolpath+=	-e "s|@convert@|${BUILDLINK_PREFIX.ImageMagick}/bin/convert|"
-SUBST_SED.toolpath+=	-e "s|@gifsicle@|${BUILDLINK_PREFIX.gifsicle}/bin/gifsicle|"
+SUBST_SED.toolpath+=	-e "s|@gifsicle@|${LOCALBASE}/bin/gifsicle|"
 
+.include "../../graphics/ImageMagick/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
