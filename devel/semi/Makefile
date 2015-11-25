@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2013/04/06 20:27:19 rodent Exp $
+# $NetBSD: Makefile,v 1.36 2015/11/25 12:49:46 jperkin Exp $
 #
 
 DISTNAME=	semi-1.14.6
@@ -26,7 +26,6 @@ BUILD_TARGET=	${BUILD_TARGET.${EMACS_FLAVOR}}
 INSTALL_TARGET=	${INSTALL_TARGET.${EMACS_FLAVOR}}
 MAKEFLAGS=	${MAKEFLAGS.${EMACS_FLAVOR}}
 
-EVAL_PREFIX+=	QKC_PREFIX=qkc
 USE_TOOLS+=	makeinfo
 INFO_FILES=	yes
 
@@ -44,7 +43,7 @@ post-build:
 	@cd ${WRKSRC}; for i in mime-ui-en mime-ui-ja; do		\
 		${RM} -f $${i}.info*;					\
 		${CP} $${i}.texi $${i}.texi.orig;			\
-		${QKC_PREFIX}/bin/qkc -Oeu $${i}.texi.orig >$${i}.texi;	\
+		${LOCALBASE}/bin/qkc -Oeu $${i}.texi.orig >$${i}.texi;	\
 		makeinfo --force --no-validate $${i}.texi;		\
 	done
 

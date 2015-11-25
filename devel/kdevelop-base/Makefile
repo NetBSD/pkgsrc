@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.135 2015/10/10 01:58:04 ryoon Exp $
+# $NetBSD: Makefile,v 1.136 2015/11/25 12:49:46 jperkin Exp $
 
 DISTNAME=	kdevelop_3.5.5.orig
 PKGNAME=	kdevelop-base-3.5.5
@@ -48,14 +48,11 @@ SUBST_MESSAGE.perlpath=	Fix perl path.
 SUBST_FILES.perlpath=	languages/perl/perlparser.cpp parts/doxygen/config.cpp
 SUBST_SED.perlpath=	-e s:/usr/bin/perl:${PERL5:Q}:
 
-EVAL_PREFIX+=		QT3DIR=qt3
-EVAL_PREFIX+=		KDELIBDIR=kdelibs
-
 CONFIGURE_ARGS+=	--with-db-includedir=${BDBBASE}/include/${BDB_TYPE}
 CONFIGURE_ARGS+=	--with-db-libdir=${BDBBASE}/lib
 CONFIGURE_ARGS+=	--with-db-lib=${BDB_TYPE}
-CONFIGURE_ARGS+=	--with-qtdoc-dir=${QT3DIR}/qt3/doc/html
-CONFIGURE_ARGS+=	--with-kdelibsdoxy-dir=${KDELIBDIR}/share/doc/kde/HTML/en/kdelibs-apidocs
+CONFIGURE_ARGS+=	--with-qtdoc-dir=${LOCALBASE}/qt3/doc/html
+CONFIGURE_ARGS+=	--with-kdelibsdoxy-dir=${LOCALBASE}/share/doc/kde/HTML/en/kdelibs-apidocs
 
 .include "options.mk"
 
