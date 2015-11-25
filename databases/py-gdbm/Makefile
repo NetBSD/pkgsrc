@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2014/12/21 01:22:33 obache Exp $
+# $NetBSD: Makefile,v 1.35 2015/11/25 12:49:27 jperkin Exp $
 
 PKGNAME=	${PYPKGPREFIX}-gdbm-${PY_DISTVERSION}
 CATEGORIES=	databases python
@@ -6,8 +6,6 @@ CATEGORIES=	databases python
 MAINTAINER=	dolecek@ics.muni.cz
 HOMEPAGE=	http://www.python.org/doc/lib/module-gdbm.html
 COMMENT=	Python interface to gdbm - GNU database manager
-
-EVAL_PREFIX+=	GDBMDIR=gdbm
 
 USE_TOOLS+=	patch
 
@@ -22,7 +20,7 @@ EXTRACT_ELEMENTS=	${PYSUBDIR}/Modules/${GDBM_MODNAME}module.c
 PYDISTUTILSPKG=	yes
 PY_PATCHPLIST=	yes
 
-PY_SETUP_SUBST+= GDBMPREFIX=${GDBMDIR}
+PY_SETUP_SUBST+= GDBMPREFIX=${BUILDLINK_PREFIX.gdbm}
 PY_SETUP_SUBST+= GDBM_MODNAME=${GDBM_MODNAME}
 PLIST_SUBST+=	GDBM_MODNAME=${GDBM_MODNAME}
 PYSETUPINSTALLARGS+=	--install-lib ${PREFIX}/${PYLIB}/lib-dynload
