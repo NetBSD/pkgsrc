@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2015/03/15 17:56:15 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.20 2015/11/25 12:50:57 jperkin Exp $
 
 DISTNAME=	ibus-anthy-1.5.6
 CATEGORIES=	inputmethod japanese
@@ -19,12 +19,9 @@ USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c
 USE_TOOLS+=		pkg-config msgfmt gmake intltool
 
-FIND_PREFIX:=	KASUMI_DIR=kasumi
-.include "../../mk/find-prefix.mk"
-
 CONFIGURE_ARGS+=	--localedir=${PREFIX}/${PKGLOCALEDIR}/locale
-CONFIGURE_ARGS+=	--with-kasumi-exec=${KASUMI_DIR}/bin/kasumi
-CONFIGURE_ARGS+=	--with-kasumi-icon=${KASUMI_DIR}/share/pixmaps/kasumi.png
+CONFIGURE_ARGS+=	--with-kasumi-exec=${LOCALBASE}/bin/kasumi
+CONFIGURE_ARGS+=	--with-kasumi-icon=${LOCALBASE}/share/pixmaps/kasumi.png
 CONFIGURE_ARGS+=	--with-layout=default
 #CONFIGURE_ARGS+=	--enable-pygtk2-anthy
 

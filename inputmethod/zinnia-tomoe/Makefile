@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/03/15 19:31:44 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.4 2015/11/25 12:50:58 jperkin Exp $
 #
 
 DISTNAME=	zinnia-tomoe-0.6.0-20080911
@@ -17,9 +17,6 @@ BUILD_DEPENDS+=	zinnia-[0-9]*:../../inputmethod/zinnia
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	# none
 
-FIND_PREFIX:=	ZINNIA_DIR=zinnia
-.include "../../mk/find-prefix.mk"
-
-CONFIGURE_ARGS+=	--with-zinnia-convert=${ZINNIA_DIR}/bin/zinnia_convert
+CONFIGURE_ARGS+=	--with-zinnia-convert=${LOCALBASE}/bin/zinnia_convert
 
 .include "../../mk/bsd.pkg.mk"
