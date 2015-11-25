@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.6 2013/02/17 19:18:00 dholland Exp $
+# $NetBSD: Makefile,v 1.7 2015/11/25 03:39:49 mef Exp $
 #
 
-DISTNAME=	php-mode-1.5.0
+DISTNAME=	php-mode-1.13.1
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=php-mode/}
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/php-mode/
 COMMENT=	PHP editing mode for Emacs
+LICENSE=	gnu-gpl-v3
 
 NO_CONFIGURE=		yes
 
