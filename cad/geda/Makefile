@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2015/11/18 14:19:48 ryoon Exp $
+# $NetBSD: Makefile,v 1.104 2015/11/25 12:48:18 jperkin Exp $
 
 DISTNAME=	geda-gaf-1.8.2
 PKGNAME=	${DISTNAME:S/-gaf-/-/}
@@ -50,8 +50,7 @@ REPLACE_PERL+=		utils/scripts/pads_backannotate \
 # needs GNU m4 for the PCBboard and gsch2pcb netlisters
 USE_TOOLS+=		gmake m4:run pkg-config
 
-EVAL_PREFIX+=	PCBDIR=pcb
-CONFIGURE_ARGS+=	--with-pcbm4dir=${PCBDIR}/share/pcb/m4
+CONFIGURE_ARGS+=	--with-pcbm4dir=${LOCALBASE}/share/pcb/m4
 CONFIGURE_ARGS+=	--with-pcbconfdir=${PKG_SYSCONFDIR}/pcb
 
 SUBST_CLASSES+=			python
@@ -64,8 +63,7 @@ REPLACE_SH+=		gnetlist/scripts/sch2eaglepos.sh
 USE_TOOLS+=		sh:run
 
 # for gsch2pcb
-EVAL_PREFIX+=		PCBDIR=pcb
-CONFIGURE_ARGS+=	--with-pcb-datadir=${PCBDIR}/share
+CONFIGURE_ARGS+=	--with-pcb-datadir=${LOCALBASE}/share
 USE_TOOLS+=		gawk:run lex perl:run pkg-config
 
 # disable groff for a consistent build
