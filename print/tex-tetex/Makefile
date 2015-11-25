@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2015/08/09 11:04:54 markd Exp $
+# $NetBSD: Makefile,v 1.25 2015/11/25 12:53:09 jperkin Exp $
 
 DISTNAME=	tetex
 PKGNAME=	tex-${DISTNAME}-3.0.38001
@@ -18,20 +18,16 @@ USE_TOOLS+=	perl:run sh:run
 
 FILES_SUBST+=	UPDMAP_SYS=${PREFIX}/bin/updmap-sys
 
-EVAL_PREFIX+=	DIALOG_PREFIX=dialog
-EVAL_PREFIX+=	KPATHSEA_PREFIX=kpathsea
-EVAL_PREFIX+=	TEXCONFIG_PREFIX=tex-texconfig
-
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Setting paths to commands.
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	bin/fmtutil bin/fmtutil-sys bin/kpsetool bin/kpsewhere \
 			bin/texconfig-dialog bin/texconfig-sys bin/texlinks \
 			bin/updmap bin/updmap-sys
-SUBST_SED.paths+=	-e 's,@DIALOG@,${DIALOG_PREFIX}/bin/dialog,g'
+SUBST_SED.paths+=	-e 's,@DIALOG@,${LOCALBASE}/bin/dialog,g'
 SUBST_SED.paths+=	-e 's,@FMTUTIL@,${PREFIX}/bin/fmtutil,g'
-SUBST_SED.paths+=	-e 's,@KPSEWHICH@,${KPATHSEA_PREFIX}/bin/kpsewhich,g'
-SUBST_SED.paths+=	-e 's,@TEXCONFIG@,${TEXCONFIG_PREFIX}/bin/texconfig,g'
+SUBST_SED.paths+=	-e 's,@KPSEWHICH@,${LOCALBASE}/bin/kpsewhich,g'
+SUBST_SED.paths+=	-e 's,@TEXCONFIG@,${LOCALBASE}/bin/texconfig,g'
 SUBST_SED.paths+=	-e 's,@UPDMAP@,${PREFIX}/bin/updmap,g'
 
 REPLACE_PERL=	bin/updmap bin/fmtutil texmf-dist/scripts/texlive/mktexlsr.pl

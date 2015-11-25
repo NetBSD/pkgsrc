@@ -1,4 +1,4 @@
-# $NetBSD: map.mk,v 1.2 2012/03/04 01:01:43 minskim Exp $
+# $NetBSD: map.mk,v 1.3 2015/11/25 12:53:09 jperkin Exp $
 #
 # This Makefile fragment is intended to be included by packages that
 # install font maps for TeX.  It updates font map entries in updmap.cfg
@@ -18,8 +18,7 @@ TEX_MAP_MK=		# defined
 
 DEPENDS+=		tex-tetex>=3.0.25424:../../print/tex-tetex
 
-EVAL_PREFIX+=		TETEX_PREFIX=tex-tetex
-FILES_SUBST+=		UPDMAP_SYS=${TETEX_PREFIX:Q}/bin/updmap-sys
+FILES_SUBST+=		UPDMAP_SYS=${LOCALBASE}/bin/updmap-sys
 FILES_SUBST+=		MAP_FILES=${TEX_MAP_FILES:Q}
 FILES_SUBST+=		MIXEDMAP_FILES=${TEX_MIXEDMAP_FILES:Q}
 FILES_SUBST+=		KANJIMAP_FILES=${TEX_KANJIMAP_FILES:Q}

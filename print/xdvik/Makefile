@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2015/10/14 20:17:27 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2015/11/25 12:53:09 jperkin Exp $
 
 DISTNAME=	texlive-20150521-source
 PKGNAME=	xdvik-22.87
@@ -31,9 +31,6 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/texk/xdvik
 
 CONFIG_GUESS_OVERRIDE+=	${WRKDIR}/${DISTNAME}/build-aux/config.guess
 CONFIG_SUB_OVERRIDE+=	${WRKDIR}/${DISTNAME}/build-aux/config.sub
-
-FIND_PREFIX:=	TEX_XDVI_PREFIX=tex-xdvi
-.include "../../mk/find-prefix.mk"
 
 CONFIGURE_ARGS+=	--with-system-freetype2
 CONFIGURE_ARGS+=	--with-system-kpathsea
