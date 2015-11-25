@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2015/04/25 14:23:22 tnn Exp $
+# $NetBSD: Makefile,v 1.34 2015/11/25 12:50:57 jperkin Exp $
 #
 
 DISTNAME=	ibus-handwrite-3.0.0
@@ -14,15 +14,12 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	zinnia-tomoe-[0-9]*:../../inputmethod/zinnia-tomoe
 
-FIND_PREFIX:=	ZINNIA_TOMOE_DIR=zinnia-tomoe
-.include "../../mk/find-prefix.mk"
-
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config
 
 CONFIGURE_ARGS+=	--enable-zinnia
-CONFIGURE_ARGS+=	--with-zinnia-tomoe=${ZINNIA_TOMOE_DIR}/lib/zinnia/model/tomoe
+CONFIGURE_ARGS+=	--with-zinnia-tomoe=${LOCALBASE}/lib/zinnia/model/tomoe
 
 SUBST_CLASSES+=		locale_dir
 SUBST_STAGE.locale_dir=	pre-configure
