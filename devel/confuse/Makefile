@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2015/11/07 19:31:17 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2015/11/25 22:10:16 wiedi Exp $
 
 DISTNAME=	confuse-2.8
 CATEGORIES=	devel
@@ -18,7 +18,7 @@ GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-shared
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=		pkg-config msgfmt autoconf automake
+USE_TOOLS+=		pkg-config msgfmt autoconf automake flex
 
 PKGCONFIG_OVERRIDE+=	libconfuse.pc.in
 INSTALLATION_DIRS=	lib include
