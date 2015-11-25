@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2015/08/10 14:19:11 manu Exp $
+# $NetBSD: Makefile,v 1.22 2015/11/25 12:49:27 jperkin Exp $
 
 MODNAME=		mysql
 CATEGORIES+=		databases
@@ -19,7 +19,6 @@ PKG_SUGGESTED_OPTIONS=	# empty
 .if !empty(PKG_OPTIONS:Mmysqlnd)
 CONFIGURE_ARGS+=	--with-${MODNAME}=shared,mysqlnd
 .else
-EVAL_PREFIX+=		MYSQLDIR=mysql-client
 CONFIGURE_ARGS+=	--with-${MODNAME}=shared,${BUILDLINK_PREFIX.mysql-client}
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${LOCALBASE}/lib/mysql
 .  include "../../mk/mysql.buildlink3.mk"
