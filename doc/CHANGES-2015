@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4731 2015/11/25 10:39:58 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4732 2015/11/25 12:34:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7956,3 +7956,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/py-django-cms to 3.2.0 [adam 2015-11-24]
 	Updated devel/php-mode to 1.13.1 [mef 2015-11-25]
 	Updated fonts/harfbuzz to 1.1.1 [wiz 2015-11-25]
+	Updated emulators/mame to 0.168 [wiz 2015-11-25]
