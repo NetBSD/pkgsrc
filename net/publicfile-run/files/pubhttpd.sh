@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: pubhttpd.sh,v 1.1 2015/01/27 23:01:31 schmonz Exp $
+# $NetBSD: pubhttpd.sh,v 1.2 2015/11/25 12:52:12 jperkin Exp $
 #
 # @PKGNAME@ script to control publicfile httpd (HTTP server)
 #
@@ -22,7 +22,7 @@ name="pubhttpd"
 : ${pubhttpd_port:="80"}
 : ${pubhttpd_log:="YES"}
 : ${pubhttpd_logcmd:="logger -t nb${name} -p ftp.info"}
-: ${pubhttpd_nologcmd:="@DAEMONTOOLS_PREFIX@/bin/multilog -*"}
+: ${pubhttpd_nologcmd:="@PREFIX@/bin/multilog -*"}
 
 if [ -f /etc/rc.subr ]; then
 	. /etc/rc.subr
@@ -30,7 +30,7 @@ fi
 
 rcvar=${name}
 required_dirs="${pubhttpd_root}"
-command="@UCSPI_TCP_PREFIX@/bin/tcpserver"
+command="@PREFIX@/bin/tcpserver"
 procname=${name}
 start_precmd="pubhttpd_precmd"
 
@@ -42,7 +42,7 @@ pubhttpd_precmd()
 	if [ -f /etc/rc.subr ]; then
 		checkyesno pubhttpd_log || pubhttpd_logcmd=${pubhttpd_nologcmd}
 	fi
- 	command="@SETENV@ - ${pubhttpd_postenv} @DAEMONTOOLS_PREFIX@/bin/envuidgid pubhttp @DAEMONTOOLS_PREFIX@/bin/softlimit -o20 -d${pubhttpd_datalimit} @UCSPI_TCP_PREFIX@/bin/argv0 @UCSPI_TCP_PREFIX@/bin/tcpserver ${name} -vDRH -l${pubhttpd_localname} -b${pubhttpd_backlog} -c${pubhttpd_conlimit} ${pubhttpd_host} ${pubhttpd_port} @PUBLICFILE_PREFIX@/publicfile/bin/httpd ${pubhttpd_root} 2>&1 | @DAEMONTOOLS_PREFIX@/bin/setuidgid publog ${pubhttpd_logcmd}"
+ 	command="@SETENV@ - ${pubhttpd_postenv} @PREFIX@/bin/envuidgid pubhttp @PREFIX@/bin/softlimit -o20 -d${pubhttpd_datalimit} @PREFIX@/bin/argv0 @PREFIX@/bin/tcpserver ${name} -vDRH -l${pubhttpd_localname} -b${pubhttpd_backlog} -c${pubhttpd_conlimit} ${pubhttpd_host} ${pubhttpd_port} @PREFIX@/publicfile/bin/httpd ${pubhttpd_root} 2>&1 | @PREFIX@/bin/setuidgid publog ${pubhttpd_logcmd}"
 	command_args="&"
 	rc_flags=""
 }

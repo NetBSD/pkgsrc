@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: axfrdns.sh,v 1.6 2014/12/07 04:33:31 schmonz Exp $
+# $NetBSD: axfrdns.sh,v 1.7 2015/11/25 12:52:12 jperkin Exp $
 #
 # @PKGNAME@ script to control axfrdns (DNS zone-transfer and TCP service)
 #
@@ -19,7 +19,7 @@ name="axfrdns"
 : ${axfrdns_pretcpserver:=""}
 : ${axfrdns_log:="YES"}
 : ${axfrdns_logcmd:="logger -t nb${name} -p daemon.info"}
-: ${axfrdns_nologcmd:="@DAEMONTOOLS_PREFIX@/bin/multilog -*"}
+: ${axfrdns_nologcmd:="@PREFIX@/bin/multilog -*"}
 
 if [ -f /etc/rc.subr ]; then
 	. /etc/rc.subr
@@ -27,7 +27,7 @@ fi
 
 rcvar=${name}
 required_files="@PKG_SYSCONFDIR@/axfrdns/tcp.cdb"
-command="@UCSPI_TCP_PREFIX@/bin/tcpserver"
+command="@PREFIX@/bin/tcpserver"
 procname=${name}
 start_precmd="axfrdns_precmd"
 extra_commands="reload cdb"
@@ -38,7 +38,7 @@ axfrdns_precmd()
 	if [ -f /etc/rc.subr ]; then
 		checkyesno axfrdns_log || axfrdns_logcmd=${axfrdns_nologcmd}
 	fi
-	command="@SETENV@ - ${axfrdns_postenv} ROOT=@PKG_SYSCONFDIR@/tinydns IP=${tinydns_ip} @DAEMONTOOLS_PREFIX@/bin/envuidgid axfrdns @DAEMONTOOLS_PREFIX@/bin/softlimit -d ${axfrdns_datalimit} ${axfrdns_pretcpserver} @UCSPI_TCP_PREFIX@/bin/argv0 @UCSPI_TCP_PREFIX@/bin/tcpserver ${name} ${axfrdns_tcpflags} -x @PKG_SYSCONFDIR@/axfrdns/tcp.cdb -- ${tinydns_ip} ${axfrdns_tcpport} @DJBDNS_PREFIX@/bin/axfrdns </dev/null 2>&1 | @DAEMONTOOLS_PREFIX@/bin/setuidgid dnslog ${axfrdns_logcmd}"
+	command="@SETENV@ - ${axfrdns_postenv} ROOT=@PKG_SYSCONFDIR@/tinydns IP=${tinydns_ip} @PREFIX@/bin/envuidgid axfrdns @PREFIX@/bin/softlimit -d ${axfrdns_datalimit} ${axfrdns_pretcpserver} @PREFIX@/bin/argv0 @PREFIX@/bin/tcpserver ${name} ${axfrdns_tcpflags} -x @PKG_SYSCONFDIR@/axfrdns/tcp.cdb -- ${tinydns_ip} ${axfrdns_tcpport} @PREFIX@/bin/axfrdns </dev/null 2>&1 | @PREFIX@/bin/setuidgid dnslog ${axfrdns_logcmd}"
 	command_args="&"
 	rc_flags=""
 }
@@ -47,7 +47,7 @@ axfrdns_cdb()
 {
 	@ECHO@ "Reloading @PKG_SYSCONFDIR@/axfrdns/tcp."
 	cd @PKG_SYSCONFDIR@/axfrdns
-	@UCSPI_TCP_PREFIX@/bin/tcprules tcp.cdb tcp.tmp < tcp
+	@PREFIX@/bin/tcprules tcp.cdb tcp.tmp < tcp
 }
 
 if [ -f /etc/rc.subr ]; then
