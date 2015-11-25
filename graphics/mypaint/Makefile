@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2015/04/25 14:23:17 tnn Exp $
+# $NetBSD: Makefile,v 1.21 2015/11/25 12:50:44 jperkin Exp $
 
 DISTNAME=	mypaint-1.1.0
 PKGREVISION=	1
@@ -21,9 +21,6 @@ USE_TOOLS+=	bash:run msgfmt pkg-config
 PYTHON_VERSIONED_DEPENDENCIES=	cairo
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-gtk2
 
-FIND_PREFIX:=	SCONSDIR=scons
-.include "../../mk/find-prefix.mk"
-
 USE_PKGLOCALEDIR=	yes
 
 SUBST_CLASSES+=			python
@@ -38,12 +35,12 @@ REPLACE_BASH=			brushes/label-brush-mypaint.sh
 do-build:
 	cd ${WRKSRC} && cd ${BUILD_DIRS} && \
 		${SETENV} ${MAKE_ENV} \
-		${SCONSDIR}/bin/scons prefix=${DESTDIR}${PREFIX}
+		${LOCALBASE}/bin/scons prefix=${DESTDIR}${PREFIX}
 
 do-install:
 	cd ${WRKSRC} && cd ${INSTALL_DIRS} && \
 		${SETENV} ${MAKE_ENV} \
-		${SCONSDIR}/bin/scons prefix=${DESTDIR}${PREFIX} install
+		${LOCALBASE}/bin/scons prefix=${DESTDIR}${PREFIX} install
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2015/04/25 14:23:07 tnn Exp $
+# $NetBSD: Makefile,v 1.114 2015/11/25 12:50:43 jperkin Exp $
 
 DISTNAME=	blender-2.71
 PKGREVISION=	6
@@ -18,9 +18,6 @@ USE_LANGUAGES=		c c++
 PYTHON_VERSIONS_ACCEPTED=	34 33
 
 BUILD_DEPENDS+=		scons-[0-9]*:../../devel/scons
-
-FIND_PREFIX:=		SCONSDIR=scons
-.include "../../mk/find-prefix.mk"
 
 .include "options.mk"
 
@@ -74,7 +71,7 @@ do-build:
 # build is done in install phase.
 do-install:
 	cd ${WRKSRC:Q} && ${PKGSRC_SETENV} ${MAKE_ENV}			\
-		${SCONSDIR}/bin/scons ${SCONS_ARGS} ${_MAKE_JOBS}
+		${LOCALBASE}/bin/scons ${SCONS_ARGS} ${_MAKE_JOBS}
 
 CHECK_INTERPRETER_SKIP=	share/blender/${DISTNAME:S/blender-//:C/[a-z]//}/scripts/*.py share/blender/${DISTNAME:S/blender-//:C/[a-z]//}datafiles/*.py \
 			share/blender/${DISTNAME:S/blender-//:C/[a-z]//}/python/lib/python3.3/venv/scripts/posix/pydoc
