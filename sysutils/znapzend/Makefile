@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2015/06/12 10:51:19 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2015/11/25 23:45:10 wiedi Exp $
 
-DISTNAME=	znapzend-0.14.0
-PKGREVISION=	1
+DISTNAME=	znapzend-0.14.1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=oetiker/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.in,v 1.1 2015/11/25 23:45:10 wiedi Exp $
+
+There is no thirdparty stuff to install
+
+--- Makefile.in.orig	2015-10-12 06:53:47.000000000 +0000
++++ Makefile.in
+@@ -906,7 +906,7 @@ install-exec-hook:        
+ 	$(AM_V_GEN)[ "$(PERL5LIB)" == "" ] || cd "$(DESTDIR)$(exec_prefix)" && $(PERL) -i -p -e 's{.*# PERL5LIB}{use lib qw($(PERL5LIB)); # PERL5LIB}' $(BIN)
+ 	$(AM_V_GEN)cd "$(DESTDIR)$(exec_prefix)" && $(PERL) -i -p -e 's{.*# LIBDIR}{use lib qw($(libdir)); # LIBDIR}' $(BIN)
+ 	$(AM_V_GEN)cd "$(DESTDIR)$(exec_prefix)" && $(PERL) -i -p -e 's{^#!.*perl.*}{#!$(PERL)};' $(BIN) 
+-	$(AM_V_GEN)cp -fr $(THIRDPARTY_DIR)/lib/perl5/* $(DESTDIR)$(libdir)
++	#$(AM_V_GEN)cp -fr $(THIRDPARTY_DIR)/lib/perl5/* $(DESTDIR)$(libdir)
+ 
+ dist-hook: $(POD) $(MAN) CHANGES
+ 	$(AM_V_GEN)cd $(distdir) && $(PERL) -i -p -e '"$(PACKAGE_VERSION)" =~ /(\d+)\.(\d+)\.(\d+)/ and $$v = sprintf("%d.%03d%03d",$$1,$$2,$$3) and s/^\$$VERSION\s+=\s+".+?"/\$$VERSION = "$$d"/;'  $(BIN)	
