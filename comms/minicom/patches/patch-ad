@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.9 2012/12/12 12:35:21 wiz Exp $
+$NetBSD: patch-ad,v 1.10 2015/11/25 12:48:55 jperkin Exp $
 
-Removed hardcoded LRZSZ_PREFIX and PREFIX.
+Removed hardcoded paths.
 
 --- src/rwconf.c.orig	2011-12-27 22:21:05.000000000 +0000
 +++ src/rwconf.c
@@ -29,14 +29,14 @@ Removed hardcoded LRZSZ_PREFIX and PREFIX.
 -  { "/usr/local/bin/kermit -i -l %l -r", 0, "pprog8" },
 -#endif
 -  { "/usr/bin/ascii-xfr -dsv", 0,   "pprog9" },
-+  { "@LRZSZ_PREFIX@/bin/lsz -vv",	0,   "pprog1" },
-+  { "@LRZSZ_PREFIX@/bin/lsb -vv",	0,   "pprog2" },
-+  { "@LRZSZ_PREFIX@/bin/lsx -vv",	0,   "pprog3" },
-+  { "@LRZSZ_PREFIX@/bin/lrz -vv",	0,   "pprog4" },
-+  { "@LRZSZ_PREFIX@/bin/lrb -vv",	0,   "pprog5" },
-+  { "@LRZSZ_PREFIX@/bin/lrx -vv",	0,   "pprog6" },
-+  { "@LRZSZ_PREFIX@/bin/gkermit -i -l %l -s", 0, "pprog7" },
-+  { "@LRZSZ_PREFIX@/bin/gkermit -i -l %l -r", 0, "pprog8" },
++  { "@PREFIX@/bin/lsz -vv",	0,   "pprog1" },
++  { "@PREFIX@/bin/lsb -vv",	0,   "pprog2" },
++  { "@PREFIX@/bin/lsx -vv",	0,   "pprog3" },
++  { "@PREFIX@/bin/lrz -vv",	0,   "pprog4" },
++  { "@PREFIX@/bin/lrb -vv",	0,   "pprog5" },
++  { "@PREFIX@/bin/lrx -vv",	0,   "pprog6" },
++  { "@PREFIX@/bin/gkermit -i -l %l -s", 0, "pprog7" },
++  { "@PREFIX@/bin/gkermit -i -l %l -r", 0, "pprog8" },
 +  { "@PREFIX@/bin/ascii-xfr -dsv", 0,   "pprog9" },
    { "",			0,   "pprog10" },
    { "",			0,   "pprog11" },
