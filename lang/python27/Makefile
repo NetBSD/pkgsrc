@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2015/11/16 13:47:25 fhajny Exp $
+# $NetBSD: Makefile,v 1.53 2015/11/25 14:01:34 adam Exp $
 
 .include "dist.mk"
 
@@ -153,6 +153,12 @@ REPLACE.py27.old=	.*python[^ ]*
 REPLACE.py27.new=	${PREFIX}/bin/python${PY_VER_SUFFIX}
 REPLACE_FILES.py27=	Lib/*.py Lib/*/*.py Lib/*/*/*.py
 REPLACE_FILES.py27+=	Lib/*/*/*/*.py
+
+SUBST_CLASSES+=		libffi
+SUBST_MESSAGE.libffi=	Fixing libffi include path on Darwin.
+SUBST_STAGE.libffi=	pre-configure
+SUBST_FILES.libffi=	setup.py
+SUBST_SED.libffi=	-e 's,/usr/include/ffi,${BUILDLINK_PREFIX.libffi}/include,'
 
 SUBST_CLASSES+=		findlib
 SUBST_MESSAGE.findlib=	Fixing find_library_file on Darwin.
