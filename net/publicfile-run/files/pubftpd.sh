@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: pubftpd.sh,v 1.1 2015/01/27 23:01:31 schmonz Exp $
+# $NetBSD: pubftpd.sh,v 1.2 2015/11/25 12:52:12 jperkin Exp $
 #
 # @PKGNAME@ script to control publicfile ftpd (FTP server)
 #
@@ -22,7 +22,7 @@ name="pubftpd"
 : ${pubftpd_port:="21"}
 : ${pubftpd_log:="YES"}
 : ${pubftpd_logcmd:="logger -t nb${name} -p ftp.info"}
-: ${pubftpd_nologcmd:="@DAEMONTOOLS_PREFIX@/bin/multilog -*"}
+: ${pubftpd_nologcmd:="@PREFIX@/bin/multilog -*"}
 
 if [ -f /etc/rc.subr ]; then
 	. /etc/rc.subr
@@ -39,7 +39,7 @@ pubftpd_precmd()
 	if [ -f /etc/rc.subr ]; then
 		checkyesno pubftpd_log || pubftpd_logcmd=${pubftpd_nologcmd}
 	fi
- 	command="@SETENV@ - ${pubftpd_postenv} @DAEMONTOOLS_PREFIX@/bin/envuidgid pubftp @DAEMONTOOLS_PREFIX@/bin/softlimit -o20 -d${pubftpd_datalimit} @PREFIX@/libexec/pubftpd -vDRH -l${pubftpd_localname} -b${pubftpd_backlog} -c${pubftpd_conlimit} ${pubftpd_host} ${pubftpd_port} @PUBLICFILE_PREFIX@/publicfile/bin/ftpd ${pubftpd_root} 2>&1 | @DAEMONTOOLS_PREFIX@/bin/setuidgid publog ${pubftpd_logcmd}"
+ 	command="@SETENV@ - ${pubftpd_postenv} @PREFIX@/bin/envuidgid pubftp @PREFIX@/bin/softlimit -o20 -d${pubftpd_datalimit} @PREFIX@/libexec/pubftpd -vDRH -l${pubftpd_localname} -b${pubftpd_backlog} -c${pubftpd_conlimit} ${pubftpd_host} ${pubftpd_port} @PREFIX@/publicfile/bin/ftpd ${pubftpd_root} 2>&1 | @PREFIX@/bin/setuidgid publog ${pubftpd_logcmd}"
 	command_args="&"
 	rc_flags=""
 }
