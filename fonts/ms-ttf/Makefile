@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2015/07/04 16:18:33 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2015/11/25 12:50:14 jperkin Exp $
 
 DISTNAME=	# empty
 PKGNAME=	ms-ttf-20020306
@@ -26,9 +26,7 @@ NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
 DIST_SUBDIR=	ms-ttf
-EVAL_PREFIX+=	CABEXTRACT_PREFIX=cabextract
-CABEXTRACT_PREFIX_DEFAULT=${LOCALBASE}
-EXTRACT_CMD=	${CABEXTRACT_PREFIX}/bin/cabextract -q $${extract_file}
+EXTRACT_CMD=	${LOCALBASE}/bin/cabextract -q $${extract_file}
 FONTDIR=	${PREFIX}/share/fonts/X11/TTF
 DOCDIR=		${PREFIX}/share/doc/ms-ttf
 FONTS_DIRS.ttf=	${FONTDIR}
