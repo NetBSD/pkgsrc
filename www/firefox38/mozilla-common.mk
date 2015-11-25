@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.2 2015/10/17 00:31:41 szptvlfn Exp $
+# $NetBSD: mozilla-common.mk,v 1.3 2015/11/25 12:54:07 jperkin Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -17,7 +17,7 @@ test:
 .include "../../mk/bsd.prefs.mk"
 # tar(1) of OpenBSD 5.5 has no --exclude command line option.
 .if ${OPSYS} == "OpenBSD"
-TOOLS_PLATFORM.tar=	${TOOLS_PREFIX.bsdtar}/bin/bsdtar
+TOOLS_PLATFORM.tar=	${TOOLS_PATH.bsdtar}
 USE_TOOLS+=		bsdtar
 .endif
 # GCC 4.6 is required to support nullptr.

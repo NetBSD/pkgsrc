@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2015/07/23 12:19:10 mef Exp $
+# $NetBSD: Makefile,v 1.13 2015/11/25 12:54:07 jperkin Exp $
 
 DISTNAME=	w3m-el-snapshot_1.4.554+0.20150609.orig
 PKGNAME=	${EMACS_PKGNAME_PREFIX}emacs-${DISTNAME:S/-el-snapshot_/-/:S/+0//:S/.orig//}
@@ -22,13 +22,11 @@ CONFIGURE_ENV+=		GAMEOWN=${GAMES_USER}
 BUILD_TARGET=
 WRKSRC=			${WRKDIR}/${DISTNAME:S/_/-/}
 
-EVAL_PREFIX+=	W3M_PREFIX=w3m
-
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing paths.
 SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	w3m.el
-SUBST_SED.paths=	-e 's|@W3M@|${W3M_PREFIX}/bin/w3m|g'
+SUBST_SED.paths=	-e 's|@W3M@|${LOCALBASE}/bin/w3m|g'
 
 BUILD_DEFS+=		VARBASE
 BUILD_DEFS+=		GAMEDATAMODE

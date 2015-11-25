@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.1 2014/11/03 12:18:31 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.2 2015/11/25 12:54:07 jperkin Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -13,7 +13,7 @@ UNLIMIT_RESOURCES+=	datasize
 .include "../../mk/bsd.prefs.mk"
 # tar(1) of OpenBSD 5.5 has no --exclude command line option.
 .if ${OPSYS} == "OpenBSD"
-TOOLS_PLATFORM.tar=	${TOOLS_PREFIX.bsdtar}/bin/bsdtar
+TOOLS_PLATFORM.tar=	${TOOLS_PATH.bsdtar}
 USE_TOOLS+=		bsdtar
 .endif
 # gcc45-4.5.3 of lang/gcc45 does not generate proper binary,

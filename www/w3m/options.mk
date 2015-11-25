@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.13 2012/06/12 15:46:04 wiz Exp $
+# $NetBSD: options.mk,v 1.14 2015/11/25 12:54:07 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.w3m
 PKG_SUPPORTED_OPTIONS=	inet6 migemo w3m-lynx-key
@@ -24,9 +24,7 @@ CONFIGURE_ARGS+=	--disable-ipv6
 .if !empty(PKG_OPTIONS:Mmigemo)
 .include "../../lang/ruby/rubyversion.mk"
 DEPENDS+=	${RUBY_PKGPREFIX}-migemo-[0-9]*:../../textproc/migemo
-FIND_PREFIX:=	MIGEMODIR=${RUBY_PKGPREFIX}-migemo
-.include "../../mk/find-prefix.mk"
-CONFIGURE_ARGS+=	--with-migemo="${MIGEMODIR}/bin/migemo -t egrep ${MIGEMODIR}/share/migemo/migemo-dict"
+CONFIGURE_ARGS+=	--with-migemo="${LOCALBASE}/bin/migemo -t egrep ${LOCALBASE}/share/migemo/migemo-dict"
 .else
 CONFIGURE_ARGS+=	--without-migemo
 .endif
