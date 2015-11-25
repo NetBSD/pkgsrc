@@ -1,4 +1,4 @@
-PKGLINT(1)                  General Commands Manual                 PKGLINT(1)
+PKGLINT(1)              NetBSD General Commands Manual              PKGLINT(1)
 
 NNAAMMEE
      ppkkgglliinntt -- static analyzer for pkgsrc packages
@@ -9,7 +9,6 @@ SSYYNNOOPPSSIISS
 DDEESSCCRRIIPPTTIIOONN
      ppkkgglliinntt attempts to detect features of the named pkgsrc packages that are
      likely to be bugs, or that are simply deprecated.
-
 
    OOppttiioonnss
      --CC{{[[nnoo--]]cchheecckk,,......}}  Enable or disable specific checks.  For a list of
@@ -24,17 +23,14 @@ DDEESSCCRRIIPPTTIIOONN
                          all the files that are slurped in via `.include'
                          directives.  This flag is mainly for debugging.
 
-     --RR|----rrccssiiddssttrriinngg    Allow other RCS Id strings than NetBSD.  Multiple
-                         strings may be concatenated with `|'.
-
      --VV|----vveerrssiioonn        Print the current ppkkgglliinntt version number and exit.
 
      --WW{{[[nnoo--]]wwaarrnn,,......}}   Enable or disable specific warnings.  For a list of
                          warnings, see below.
 
-     --ee|----eexxppllaaiinn        Print further explanations for diagnostics.
-                         Sometimes the reasons for diagnostics are not obvious
-                         and need further explanation.
+     --ee|----eexxppllaaiinn        Print further explanations for diagnostics.  Some-
+                         times the reasons for diagnostics are not obvious and
+                         need further explanation.
 
      --gg|----ggcccc--oouuttppuutt--ffoorrmmaatt
                          Use a format for the diagnostics that is understood
@@ -150,14 +146,14 @@ DDEESSCCRRIIPPTTIIOONN
                          unknown
                               permissions for this variable currently not
                               known
-                         A `?' means that it is not yet clear which
-                         permissions are allowed and which aren't.
+                         A `?' means that it is not yet clear which permis-
+                         sions are allowed and which aren't.
 
      [[nnoo--]]pplliisstt--ddeepprr     Warn if deprecated pathnames are used in _P_L_I_S_T files.
                          This warning is disabled by default.
 
-     [[nnoo--]]pplliisstt--ssoorrtt     Warn if items of a PLIST file are not sorted
-                         alphabetically.  This warning is disabled by default.
+     [[nnoo--]]pplliisstt--ssoorrtt     Warn if items of a PLIST file are not sorted alpha-
+                         betically.  This warning is disabled by default.
 
      [[nnoo--]]qquuoottiinngg        Warn for possibly invalid quoting of make variables
                          in shell programs and shell variables themselves.
@@ -174,11 +170,11 @@ DDEESSCCRRIIPPTTIIOONN
                          ordered in the way it is described the pkgsrc guide.
 
    OOtthheerr aarrgguummeennttss
-           _d_i_r _._._.             The pkgsrc directories to be checked.  If
-                               omitted, the current directory is checked.
+           _d_i_r _._._.             The pkgsrc directories to be checked.  If omit-
+                               ted, the current directory is checked.
 
 FFIILLEESS
-     _p_k_g_s_r_c_/_m_k_/_*  Files from the pkgsrc infrastructure.
+     pkgsrc/mk/*  Files from the pkgsrc infrastructure.
 
 EEXXAAMMPPLLEESS
      ppkkgglliinntt --CCnnoonnee,,ppaattcchheess ..
@@ -202,12 +198,10 @@ DDIIAAGGNNOOSSTTIICCSS
                    critical as errors.
 
 AAUUTTHHOORRSS
-     Roland Illig <rillig@NetBSD.org>
+     Roland Illig <_r_i_l_l_i_g_@_N_e_t_B_S_D_._o_r_g>
 
 BBUUGGSS
-     Many more checks could be added.
-
      If you don't understand the messages, feel free to ask on the
      <tech-pkg@NetBSD.org> mailing list.
 
-NetBSD 6.99.8                    July 14, 2012                   NetBSD 6.99.8
+NetBSD 6.1                     November 25, 2015                    NetBSD 6.1

@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkglint.1,v 1.48 2013/07/20 21:50:54 wiz Exp $
+.\"	$NetBSD: pkglint.1,v 1.49 2015/11/25 13:29:07 rillig Exp $
 .\"	From FreeBSD: portlint.1,v 1.8 1997/11/25 14:53:14 itojun Exp
 .\"
 .\" Copyright (c) 1997 by Jun-ichiro Itoh <itojun@itojun.org>.
@@ -6,8 +6,9 @@
 .\"
 .\" Roland Illig <roland.illig@gmx.de>, 2004, 2005.
 .\" Thomas Klausner <wiz@NetBSD.org>, 2012.
+.\" Roland Illig <rillig@NetBSD.org>, 2015.
 .\"
-.Dd July 14, 2012
+.Dd November 25, 2015
 .Dt PKGLINT 1
 .Os
 .Sh NAME
@@ -41,10 +42,6 @@ are slurped in via
 .Ql .include
 directives.
 This flag is mainly for debugging.
-.It Fl R Ns | Ns Fl -rcsidstring
-Allow other RCS Id strings than NetBSD.
-Multiple strings may be concatenated with
-.Ql | .
 .It Fl V Ns | Ns Fl -version
 Print the current
 .Nm
@@ -237,8 +234,6 @@ errors.
 .Sh AUTHORS
 .An Roland Illig Aq Mt rillig@NetBSD.org
 .Sh BUGS
-Many more checks could be added.
-.Pp
 If you don't understand the messages, feel free to ask on the
 .Aq tech-pkg@NetBSD.org
 mailing list.
