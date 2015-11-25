@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2004/07/19 13:47:51 wiz Exp $
+$NetBSD: patch-aa,v 1.4 2015/11/25 12:51:42 jperkin Exp $
 
 --- make.inc.orig	2004-02-05 20:01:19.000000000 +0100
 +++ make.inc
@@ -18,7 +18,7 @@ $NetBSD: patch-aa,v 1.3 2004/07/19 13:47:51 wiz Exp $
 +TMGLIB       = tmglib.a
 +SUPERLULIB   = libsuperlu.a
 +BLASDEF	     = -DUSE_VENDOR_BLAS
-+BLASLIB      = -L${BLAS_PREFIX}/lib -lblas
++BLASLIB      = -L${LOCALBASE}/lib -lblas
  
  #
  #  The archiver and the flag(s) to use when building archive (library)

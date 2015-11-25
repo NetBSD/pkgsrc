@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2015/11/03 23:33:44 agc Exp $
+$NetBSD: distinfo,v 1.8 2015/11/25 12:51:42 jperkin Exp $
 
 SHA1 (superlu-3.0.1/superlu_3.0.tar.gz) = 662803e2c2ec6c604884ba356219dec98eae0976
 RMD160 (superlu-3.0.1/superlu_3.0.tar.gz) = eb570724216ae09fd53931caffce62ce5160e347
 SHA512 (superlu-3.0.1/superlu_3.0.tar.gz) = 40bba86999105172656c6825789e9f4808007687e4fc4316873add68ad2113d54a2e0cb1ac8ef2596d3894bb9f128518c75ae892ac2f5c12410c071fc8191f09
 Size (superlu-3.0.1/superlu_3.0.tar.gz) = 1116795 bytes
-SHA1 (patch-aa) = e35d3e257b091a9241f41c81b211de10af65f321
+SHA1 (patch-aa) = fd3c02f94989c8eb4a83193faaec3f67607f0634
