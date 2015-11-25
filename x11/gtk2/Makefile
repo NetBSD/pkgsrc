@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.270 2015/06/14 21:46:34 prlw1 Exp $
+# $NetBSD: Makefile,v 1.271 2015/11/25 12:54:23 jperkin Exp $
 
 DISTNAME=	gtk+-2.24.28
 PKGNAME=	${DISTNAME:S/gtk/gtk2/}
@@ -90,9 +90,8 @@ REPLACE_PYTHON=	gtk/gtk-builder-convert
 post-install:
 	${RM} -f ${DESTDIR}${GTK_IMMODULES_DB}
 
-EVAL_PREFIX+=		PREFIX.hicolor=hicolor-icon-theme
 FILES_SUBST+=		GTK_UPDATE_ICON_CACHE="${PREFIX}/bin/gtk2-update-icon-cache"
-FILES_SUBST+=		ICON_THEME_DIR="${PREFIX.hicolor}/share/icons/hicolor"
+FILES_SUBST+=		ICON_THEME_DIR="${LOCALBASE}/share/icons/hicolor"
 INSTALL_TEMPLATES+=	../../x11/gtk2/files/icon-cache.tmpl
 PRINT_PLIST_AWK+=	/^share\/icons\/hicolor\/icon-theme.cache$$/ { next; }
 
