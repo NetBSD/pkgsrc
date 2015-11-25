@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2014/06/18 09:28:51 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2015/11/25 12:53:09 jperkin Exp $
 
 META_PACKAGE=	yes
 
@@ -15,8 +15,7 @@ DEPENDS+=	foomatic-ppds-${FOOMATIC_PPDS_VERSION}{,nb[0-9]*}:../../print/foomatic
 
 WRKSRC=		${WRKDIR}
 
-EVAL_PREFIX+=		CUPS_PREFIX=cups
-CUPS_DATADIR=		${CUPS_PREFIX:Q}/share/cups/model
+CUPS_DATADIR=		${LOCALBASE}/share/cups/model
 FILES_SUBST+=		CUPS_DATADIR=${CUPS_DATADIR}
 
 .include "../../mk/bsd.pkg.mk"
