@@ -1,4 +1,4 @@
-# $NetBSD: gettext.mk,v 1.20 2015/02/16 10:40:40 jperkin Exp $
+# $NetBSD: gettext.mk,v 1.21 2015/11/25 13:05:47 jperkin Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -116,8 +116,7 @@ MAKEVARS+=	_TOOLS_USE_MSGFMT_SH
 .    if !empty(_TOOLS_USE_PKGSRC.msgfmt:M[yY][eE][sS])
 TOOLS_CREATE+=		msgfmt
 TOOLS_DEPENDS.msgfmt?=	${_TOOLS_DEP.gettext-tools}:../../devel/gettext-tools
-TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.msgfmt=${TOOLS_DEPENDS.msgfmt:C/:.*//}
-TOOLS_PATH.msgfmt=	${TOOLS_PREFIX.msgfmt}/bin/msgfmt
+TOOLS_PATH.msgfmt=	${LOCALBASE}/bin/msgfmt
 .    endif
 
 .    if !empty(_TOOLS_USE_MSGFMT_SH:M[yY][eE][sS])
@@ -146,8 +145,7 @@ MAKEFLAGS+=		TOOLS_IGNORE.${_t_}=
 .    elif !empty(_TOOLS_USE_PKGSRC.${_t_}:M[yY][eE][sS])
 TOOLS_DEPENDS.${_t_}?=	${_TOOLS_DEP.gettext-tools}:../../devel/gettext-tools
 TOOLS_CREATE+=		${_t_}
-TOOLS_FIND_PREFIX+=	TOOLS_PREFIX.${_t_}=${TOOLS_DEPENDS.${_t_}:C/:.*//}
-TOOLS_PATH.${_t_}=	${TOOLS_PREFIX.${_t_}}/bin/${_t_}
+TOOLS_PATH.${_t_}=	${LOCALBASE}/bin/${_t_}
 .    endif
 .  endif
 .endfor
