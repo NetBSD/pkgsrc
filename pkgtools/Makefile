@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2015/11/22 21:58:36 agc Exp $
+# $NetBSD: Makefile,v 1.112 2015/11/25 16:42:21 rillig Exp $
 #
 
 COMMENT=	Tools for use in the packages collection
@@ -56,6 +56,7 @@ SUBDIR+=	pkgdiff
 SUBDIR+=	pkgfind
 SUBDIR+=	pkgin
 SUBDIR+=	pkglint
+SUBDIR+=	pkglint4
 SUBDIR+=	pkgse
 SUBDIR+=	pkgsrc-todo
 SUBDIR+=	pkgsurvey
