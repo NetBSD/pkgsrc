@@ -11,6 +11,6 @@
 # constructed command.
 #
 
-exec @UCSPI_TCP_PREFIX@/bin/argv0 @UCSPI_TCP_PREFIX@/bin/tcpserver pubftpd \
+exec @PREFIX@/bin/argv0 @PREFIX@/bin/tcpserver pubftpd \
 -B'220 Features: a p .
 ' "$@"

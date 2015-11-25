@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2015/04/25 14:23:48 tnn Exp $
+# $NetBSD: Makefile,v 1.43 2015/11/25 12:52:12 jperkin Exp $
 #
 
 DISTNAME=		xymon-4.3.17
@@ -90,15 +90,13 @@ MESSAGE_SUBST+=		DESTDIR=${DESTDIR}
 MESSAGE_SUBST+=		EXAMPLEDIR=${EXAMPLEDIR}
 MESSAGE_SUBST+=		SECCGIDIR=${SECCGIDIR}
 
-EVAL_PREFIX+=		PREFIX.fping=fping
-
 CONFIGURE_ARGS+=	"--server"
 CONFIGURE_ARGS+=	"--rrdinclude" "${BUILDLINK_PREFIX.rrdtool}/include"
 CONFIGURE_ARGS+=	"--rrdlib" "${BUILDLINK_PREFIX.rrdtool}/lib"
 CONFIGURE_ARGS+=	"--pngconfig" "${BUILDLINK_PREFIX.png}/bin/libpng-config"
 CONFIGURE_ARGS+=	"--pcreinclude" "${BUILDLINK_PREFIX.pcre}/include"
 CONFIGURE_ARGS+=	"--pcrelib" "${BUILDLINK_PREFIX.pcre}/lib"
-CONFIGURE_ARGS+=	"--fping" "${PREFIX.fping}/sbin/fping"
+CONFIGURE_ARGS+=	"--fping" "${LOCALBASE}/sbin/fping"
 
 CONFIGURE_ENV+=		USEXYMONPING=n
 CONFIGURE_ENV+=		XYMONHOSTNAME=${XYMONSERVERNAME:Q}
