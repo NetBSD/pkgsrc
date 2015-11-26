@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/11/22 11:35:02 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2015/11/26 11:51:41 jmcneill Exp $
 
 PKGNAME=	kodi-15.2
 PKGREVISION=	2
@@ -24,6 +24,7 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config automake autoconf autoreconf gawk gmake bash
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
+USE_JAVA=		build
 USE_JAVA2=		yes
 GNU_CONFIGURE=		yes
 
@@ -88,6 +89,7 @@ pre-configure:
 .include "../../lang/python/application.mk"
 .include "../../misc/libcdio/buildlink3.mk"
 .include "../../misc/libcec/buildlink3.mk"
+.include "../../mk/java-vm.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../multimedia/ffmpeg2/buildlink3.mk"
@@ -113,8 +115,5 @@ pre-configure:
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
-
-# XXX java is a build dependency
-.include "../../mk/java-vm.mk"
 
 .include "../../mk/bsd.pkg.mk"
