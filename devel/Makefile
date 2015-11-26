@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2169 2015/11/26 14:17:43 mef Exp $
+# $NetBSD: Makefile,v 1.2170 2015/11/26 14:51:31 mef Exp $
 #
 
 COMMENT=	Development utilities
@@ -833,6 +833,7 @@ SUBDIR+=	p5-Date-Calc-XS
 SUBDIR+=	p5-Date-Manip
 SUBDIR+=	p5-Date-Simple
 SUBDIR+=	p5-Debug-Client
+SUBDIR+=	p5-Debug-ShowStuff
 SUBDIR+=	p5-Declare-Constraints-Simple
 SUBDIR+=	p5-Devel-Autoflush
 SUBDIR+=	p5-Devel-BeginLift
