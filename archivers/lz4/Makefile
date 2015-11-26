@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2015/08/24 16:28:32 fhajny Exp $
+# $NetBSD: Makefile,v 1.7 2015/11/26 10:40:48 wiz Exp $
 
 DISTNAME=	lz4-r131
 PKGNAME=	${DISTNAME:S/-r/-/}
+PKGREVISION=	1
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Cyan4973/}
 
@@ -17,6 +18,6 @@ USE_TOOLS+=	gmake pkg-config
 
 CPPFLAGS.SunOS+=	-D_XOPEN_SOURCE=600
 
-PKGCONFIG_OVERRIDE+=	liblz4.pc.in
+PKGCONFIG_OVERRIDE+=	lib/liblz4.pc.in
 
 .include "../../mk/bsd.pkg.mk"
