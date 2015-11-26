@@ -1,0 +1,51 @@
+$NetBSD: patch-git-remote-hg,v 1.1 2015/11/26 08:30:57 agc Exp $
+
+Patch to fix a crash caused by incompatible changes in mercurial API,
+see:
+
+	https://github.com/felipec/git-remote-hg/issues/33
+
+and
+
+	https://github.com/felipec/git-remote-hg/pull/28/files
+
+--- git-remote-hg	2015/11/25 21:51:36	1.1
++++ git-remote-hg	2015/11/25 21:56:29
+@@ -430,7 +430,12 @@
+             peer = hg.peer(repo.ui, {}, url)
+         except:
+             die('Repository error')
+-        repo.pull(peer, heads=None, force=True)
++        
++        if check_version(3, 2):
++            from mercurial import exchange
++            exchange.pull(repo, peer, heads=None, force=True)
++        else:
++            repo.pull(peer, heads=None, force=True)
+ 
+         updatebookmarks(repo, peer)
+ 
+@@ -803,7 +808,11 @@
+     def getfilectx(repo, memctx, f):
+         of = files[f]
+         if 'deleted' in of:
+-            raise IOError
++            # the file is not available anymore - was deleted
++            if check_version(3, 2):
++                return None
++            else:
++                raise IOError
+         if 'ctx' in of:
+             return of['ctx']
+         is_exec = of['mode'] == 'x'
+@@ -1036,7 +1045,9 @@
+     if not checkheads(repo, remote, p_revs):
+         return None
+ 
+-    if check_version(3, 0):
++    if check_version(3, 2):
++        cg = changegroup.getchangegroup(repo, 'push', heads=list(p_revs), common=common)
++    elif check_version(3, 0):
+         cg = changegroup.getbundle(repo, 'push', heads=list(p_revs), common=common)
+     else:
+         cg = repo.getbundle('push', heads=list(p_revs), common=common)
