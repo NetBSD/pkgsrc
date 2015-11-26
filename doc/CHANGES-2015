@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4747 2015/11/26 13:20:33 mef Exp $
+$NetBSD: CHANGES-2015,v 1.4748 2015/11/26 13:22:21 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7974,3 +7974,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-namespace-autoclean to 0.28 [mef 2015-11-26]
 	Updated devel/p5-namespace-clean to 0.26 [mef 2015-11-26]
 	Updated www/p5-CGI-Emulate-PSGI to 0.21 [mef 2015-11-26]
+	Updated www/p5-CGI-Cookie-Splitter to 0.05 [mef 2015-11-26]
