@@ -1,8 +1,10 @@
-$NetBSD: patch-ab,v 1.1.1.1 2005/11/29 19:17:03 adrianp Exp $
+$NetBSD: patch-ab,v 1.2 2015/11/26 16:36:00 jperkin Exp $
 
---- Makefile.in.orig	2005-11-29 18:38:58.000000000 +0000
+Remove LDFLAGS from CFLAGS.
+
+--- Makefile.in.orig	2015-11-09 16:16:59.000000000 +0000
 +++ Makefile.in
-@@ -112,7 +112,7 @@ FD_SETSIZE=@FD_SETSIZE@
+@@ -114,7 +114,7 @@ FD_SETSIZE=@FD_SETSIZE@
  # Where is your openssl binary
  OPENSSLPATH=@OPENSSLPATH@
  

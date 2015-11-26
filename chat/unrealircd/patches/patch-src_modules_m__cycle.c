@@ -1,8 +1,8 @@
-$NetBSD: patch-src_modules_m__cycle.c,v 1.1 2015/11/07 22:46:25 dholland Exp $
+$NetBSD: patch-src_modules_m__cycle.c,v 1.2 2015/11/26 16:36:00 jperkin Exp $
 
 Avoid unnecessary use of legacy sys/timeb.h, which doesn't exist on OpenBSD.
 
---- src/modules/m_cycle.c~	2014-07-26 15:42:10.000000000 +0000
+--- src/modules/m_cycle.c.orig	2015-11-09 16:16:59.000000000 +0000
 +++ src/modules/m_cycle.c
 @@ -31,8 +31,8 @@
  #include <string.h>
