@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4741 2015/11/26 08:32:34 agc Exp $
+$NetBSD: CHANGES-2015,v 1.4742 2015/11/26 10:40:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7966,3 +7966,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated misc/mbuffer to 20151002 [wiedi 2015-11-26]
 	Updated www/py-django to 1.8.7 [adam 2015-11-26]
 	Added devel/git-remote-hg version 20140603 [agc 2015-11-26]
+	Updated archivers/lz4 to 131nb1 [wiz 2015-11-26]
