@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4753 2015/11/26 15:10:31 mef Exp $
+$NetBSD: CHANGES-2015,v 1.4754 2015/11/26 16:36:10 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7979,3 +7979,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/p5-Catalyst-Manual to 5.9009 [mef 2015-11-26]
 	Added devel/p5-String-Util version 1.24 [mef 2015-11-26]
 	Added devel/p5-Debug-ShowStuff version 1.16 [mef 2015-11-26]
+	Updated chat/unrealircd to 3.2.10.5nb1 [jperkin 2015-11-26]
