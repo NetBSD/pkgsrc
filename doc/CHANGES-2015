@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4743 2015/11/26 11:27:48 adam Exp $
+$NetBSD: CHANGES-2015,v 1.4744 2015/11/26 13:02:25 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7970,3 +7970,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/qwt-qt4 to 5.2.3 [adam 2015-11-26]
 	Updated devel/hdf5 to 1.8.16 [adam 2015-11-26]
 	Updated devel/hdf5-c++ to 1.8.16 [adam 2015-11-26]
+	Updated devel/p5-Test-DependentModules to 0.26 [mef 2015-11-26]
