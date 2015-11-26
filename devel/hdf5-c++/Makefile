@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2015/08/24 17:58:34 gdt Exp $
+# $NetBSD: Makefile,v 1.5 2015/11/26 11:25:11 adam Exp $
 
 PKGNAME=	${DISTNAME:S/-/-c++-/}
-PKGREVISION=	1
 COMMENT=	Hierarchical Data Format (new generation) - C++ wrappers
 
 USE_LANGUAGES=		c c++
@@ -39,17 +38,17 @@ do-install:
 .endfor
 
 .include "../../devel/hdf5/Makefile.common"
-
 .include "../../devel/hdf5/buildlink3.mk"
-
 # Since the package is build from source code shared with hdf5,
 # same options should be passed:
-.if !empty(PKG_BUILD_OPTIONS.hdf5:Mszip)
-CONFIGURE_ARGS+=	--with-szlib
-.endif
+.include "../../devel/hdf5/options.mk"
 
-.if !empty(PKG_BUILD_OPTIONS.hdf5:Mthreads)
-CONFIGURE_ARGS+=	--enable-threadsafe
-.endif
+#.if !empty(PKG_BUILD_OPTIONS.hdf5:Mszip)
+#CONFIGURE_ARGS+=	--with-szlib
+#.endif
+
+#.if !empty(PKG_BUILD_OPTIONS.hdf5:Mthreads)
+#CONFIGURE_ARGS+=	--enable-threadsafe
+#.endif
 
 .include "../../mk/bsd.pkg.mk"
