@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4737 2015/11/25 23:45:48 wiedi Exp $
+$NetBSD: CHANGES-2015,v 1.4738 2015/11/26 00:14:10 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7962,3 +7962,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added pkgtools/pkglint4 version 4.158 [rillig 2015-11-25]
 	Updated pkgtools/lintpkgsrc to 4.91 [leot 2015-11-25]
 	Updated sysutils/znapzend to 0.14.1 [wiedi 2015-11-25]
+	Updated net/syncthing to 0.12.4 [gdt 2015-11-26]
