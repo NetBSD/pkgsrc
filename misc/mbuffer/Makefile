@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2015/06/05 11:36:40 wiedi Exp $
+# $NetBSD: Makefile,v 1.4 2015/11/26 00:27:23 wiedi Exp $
 
-DISTNAME=	mbuffer-20150412
+DISTNAME=	mbuffer-20151002
 CATEGORIES=	misc
 MASTER_SITES=	http://www.maier-komor.de/software/mbuffer/
 EXTRACT_SUFX=	.tgz
