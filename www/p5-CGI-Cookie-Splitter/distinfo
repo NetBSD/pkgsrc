@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/04 02:47:01 agc Exp $
+$NetBSD: distinfo,v 1.4 2015/11/26 13:22:13 mef Exp $
 
-SHA1 (CGI-Cookie-Splitter-0.04.tar.gz) = d40d9a1a919101d939b17a75f0a7ef38a6c80e25
-RMD160 (CGI-Cookie-Splitter-0.04.tar.gz) = d8de4cc42b275fcee563c5b90b20910c308ac121
-SHA512 (CGI-Cookie-Splitter-0.04.tar.gz) = 7d5838f61e0a6d8ee63f8a54ad0d1bc260731c7bbb773a2897bccd6056c99b266e0cee4e2390faa2158c5ffff361fc2351810b18fd2b6dabb6c9ebce14864c81
-Size (CGI-Cookie-Splitter-0.04.tar.gz) = 23318 bytes
+SHA1 (CGI-Cookie-Splitter-0.05.tar.gz) = 68d31ae59d214472d1834703ccfba16d6fd7b89e
+RMD160 (CGI-Cookie-Splitter-0.05.tar.gz) = 5ca92ab3a2b7584d137b70a758abb6a35a4386d9
+SHA512 (CGI-Cookie-Splitter-0.05.tar.gz) = 4034026b4e0fa3730fac33f46301c73b501c999f94c8a681b74fce7fa22545da16bd98ba6424d2ee1ba78edd1734d1bfc635c1fd0410b1c3c20efa8b42e823a9
+Size (CGI-Cookie-Splitter-0.05.tar.gz) = 26596 bytes
