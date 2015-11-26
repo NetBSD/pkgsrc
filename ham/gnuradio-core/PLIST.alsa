@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST.alsa,v 1.1 2014/10/17 09:51:56 mef Exp $
-share/examples/gnuradio/conf.d/gr-audio-alsa.conf
+@comment $NetBSD: PLIST.alsa,v 1.2 2015/11/26 20:57:48 wiedi Exp $
+share/gnuradio/examples/gr-audio-alsa.conf
