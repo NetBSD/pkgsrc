@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/06/12 10:51:45 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2015/11/26 13:54:47 mef Exp $
 
 DISTNAME=	Test-Time-0.04
 PKGNAME=	p5-${DISTNAME}
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/~satoh/Test-Time/
 COMMENT=	Override time()/sleep() core functions for testing
 LICENSE=	${PERL5_LICENSE}
+
+BUILD_DEPENDS+=	p5-File-Slurp-[0-9]*:../../devel/p5-File-Slurp
 
 PERL5_PACKLIST=	auto/Test/Time/.packlist
 
