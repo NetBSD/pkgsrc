@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4749 2015/11/26 13:39:24 adam Exp $
+$NetBSD: CHANGES-2015,v 1.4750 2015/11/26 13:40:22 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7976,3 +7976,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/p5-CGI-Emulate-PSGI to 0.21 [mef 2015-11-26]
 	Updated www/p5-CGI-Cookie-Splitter to 0.05 [mef 2015-11-26]
 	Updated geography/gdal-lib to 1.11.3 [adam 2015-11-26]
+	Updated www/p5-Catalyst-Manual to 5.9009 [mef 2015-11-26]
