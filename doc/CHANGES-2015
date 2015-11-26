@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4751 2015/11/26 14:17:43 mef Exp $
+$NetBSD: CHANGES-2015,v 1.4752 2015/11/26 14:51:31 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7978,3 +7978,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated geography/gdal-lib to 1.11.3 [adam 2015-11-26]
 	Updated www/p5-Catalyst-Manual to 5.9009 [mef 2015-11-26]
 	Added devel/p5-String-Util version 1.24 [mef 2015-11-26]
+	Added devel/p5-Debug-ShowStuf version 1.16 [mef 2015-11-26]
