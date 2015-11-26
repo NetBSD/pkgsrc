@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2015/04/25 14:25:19 tnn Exp $
+# $NetBSD: Makefile,v 1.31 2015/11/26 10:14:57 adam Exp $
 
-DISTNAME=	qwt-5.2.2
-PKGREVISION=	16
+DISTNAME=	qwt-5.2.3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qwt/}
 EXTRACT_SUFX=	.tar.bz2
@@ -10,11 +9,10 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/qwt/
 COMMENT=	Qt widget library for technical purposes
 LICENSE=	gnu-lgpl-v2
-MAKE_JOBS_SAFE=		no
 
-USE_LANGUAGES=	c++
-USE_TOOLS+=	gmake
-USE_LIBTOOL=	yes
+USE_LANGUAGES=		c++
+USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake
 
 CONFLICTS=	qwtlib-[0-9]*
 
