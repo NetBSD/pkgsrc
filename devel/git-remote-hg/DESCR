@@ -1,0 +1,2 @@
+git-remote-hg allows you to transparently clone, fetch and push to and
+from Mercurial repositories as if they were Git ones.
