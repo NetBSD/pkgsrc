@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/11/26 15:09:05 mef Exp $
+
+SHA1 (Debug-ShowStuff-1.16.tar.gz) = 898adf26ca5c38aebd22e379e9eabbddc132b480
+RMD160 (Debug-ShowStuff-1.16.tar.gz) = 33c1957f53719bdd39b4b7ebc5062f6e317641ef
+SHA512 (Debug-ShowStuff-1.16.tar.gz) = 7d42e664812d03b4bbbebb307ae4a8f1ab6ff1dfcd1e1f6a9d9b80fdbd227e37732a2309a14174307690f4fca3db62376cf116585cfad10814f0143111af5de9
+Size (Debug-ShowStuff-1.16.tar.gz) = 40315 bytes
