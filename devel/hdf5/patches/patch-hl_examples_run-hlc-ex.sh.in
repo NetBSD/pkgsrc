@@ -1,8 +1,8 @@
-$NetBSD: patch-hl_examples_run-hlc-ex.sh.in,v 1.1 2011/10/07 10:38:52 alnsn Exp $
+$NetBSD: patch-hl_examples_run-hlc-ex.sh.in,v 1.2 2015/11/26 11:25:10 adam Exp $
 
 Fix paths to examples.
 
---- hl/examples/run-hlc-ex.sh.in.orig	2011-05-09 16:47:58.000000000 +0000
+--- hl/examples/run-hlc-ex.sh.in.orig	2015-10-24 05:14:03.000000000 +0000
 +++ hl/examples/run-hlc-ex.sh.in
 @@ -20,7 +20,7 @@
  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
@@ -17,8 +17,8 @@ Fix paths to examples.
  
  # Where the tool is installed.
  # default is relative path to installed location of the tools
--prefix="${prefix:-../../../../}"
-+prefix="${prefix:-../../../../../}"
+-prefix="${prefix:-../../../..}"
++prefix="${prefix:-../../../../..}"
  PARALLEL=@PARALLEL@             # Am I in parallel mode?
  AR="@AR@"
  RANLIB="@RANLIB@"

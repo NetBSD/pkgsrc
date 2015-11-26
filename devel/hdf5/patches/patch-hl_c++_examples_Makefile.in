@@ -1,15 +1,17 @@
-$NetBSD: patch-hl_c++_examples_Makefile.in,v 1.2 2012/12/09 00:07:38 adam Exp $
+$NetBSD: patch-hl_c++_examples_Makefile.in,v 1.3 2015/11/26 11:25:10 adam Exp $
 
 Fix paths to examples.
 
---- hl/c++/examples/Makefile.in.orig	2011-05-10 14:20:48.000000000 +0000
+--- hl/c++/examples/Makefile.in.orig	2015-11-10 14:01:04.000000000 +0000
 +++ hl/c++/examples/Makefile.in
-@@ -401,7 +401,7 @@ CXX_API = yes
+@@ -615,8 +615,8 @@ CXX_API = yes
  
  # Where to install examples
  # Note: no '/' after DESTDIR.  Explanation in commence.am
--EXAMPLEDIR = ${DESTDIR}$(exec_prefix)/share/hdf5_examples/hl/c++
-+EXAMPLEDIR = ${DESTDIR}$(prefix)/share/examples/hdf5/hl/c++
+-EXAMPLEDIR = ${DESTDIR}$(datarootdir)/hdf5_examples/hl/c++
+-EXAMPLETOPDIR = ${DESTDIR}$(datarootdir)/hdf5_examples/hl
++EXAMPLEDIR = ${DESTDIR}$(datarootdir)/examples/hdf5/hl/c++
++EXAMPLETOPDIR = ${DESTDIR}$(datarootdir)/examples/hdf5/hl
  
  # Assume that all tests in this directory are examples, and tell
  # conclude.am when to build them.
