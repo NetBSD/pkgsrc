@@ -1,4 +1,6 @@
-$NetBSD: patch-pri,v 1.6 2011/12/07 16:05:09 drochner Exp $
+$NetBSD: patch-pri,v 1.7 2015/11/26 10:14:57 adam Exp $
+
+Use PREFIX and PKGMANDIR.
 
 --- qwtconfig.pri.orig	2011-08-01 09:28:22.000000000 +0000
 +++ qwtconfig.pri
