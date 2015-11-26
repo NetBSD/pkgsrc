@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2015/09/06 10:07:46 mef Exp $
+# $NetBSD: Makefile,v 1.6 2015/11/26 13:02:14 mef Exp $
 
-DISTNAME=	Test-DependentModules-0.22
+DISTNAME=	Test-DependentModules-0.26
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/D/DR/DROLSKY/
@@ -20,6 +20,7 @@ BUILD_DEPENDS+=	p5-Log-Dispatch-[0-9]*:../../devel/p5-Log-Dispatch
 BUILD_DEPENDS+=	p5-Module-Build-Tiny-[0-9]*:../../devel/p5-Module-Build-Tiny
 BUILD_DEPENDS+=	p5-Moo-[0-9]*:../../devel/p5-Moo
 BUILD_DEPENDS+=	p5-MetaCPAN-Client-[0-9]*:../../devel/p5-MetaCPAN-Client
+BUILD_DEPENDS+=	p5-Module-Build-[0-9]*:../../devel/p5-Module-Build
 BUILD_DEPENDS+=	p5-Search-Elasticsearch-[0-9]*:../../devel/p5-Search-Elasticsearch
 BUILD_DEPENDS+=	p5-Try-Tiny-[0-9]*:../../devel/p5-Try-Tiny
 BUILD_DEPENDS+=	p5-namespace-clean-[0-9]*:../../devel/p5-namespace-clean
