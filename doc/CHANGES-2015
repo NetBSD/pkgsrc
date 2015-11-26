@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4739 2015/11/26 00:28:03 wiedi Exp $
+$NetBSD: CHANGES-2015,v 1.4740 2015/11/26 06:39:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7964,3 +7964,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated sysutils/znapzend to 0.14.1 [wiedi 2015-11-25]
 	Updated net/syncthing to 0.12.4 [gdt 2015-11-26]
 	Updated misc/mbuffer to 20151002 [wiedi 2015-11-26]
+	Updated www/py-django to 1.8.7 [adam 2015-11-26]
