@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2015/11/06 08:38:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.37 2015/11/26 06:38:59 adam Exp $
 bin/django-admin${PYVERSSUFFIX}
 bin/django-admin${PYVERSSUFFIX}.py
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -2929,6 +2929,9 @@ ${PYSITELIB}/django/contrib/postgres/fields/hstore.pyo
 ${PYSITELIB}/django/contrib/postgres/fields/ranges.py
 ${PYSITELIB}/django/contrib/postgres/fields/ranges.pyc
 ${PYSITELIB}/django/contrib/postgres/fields/ranges.pyo
+${PYSITELIB}/django/contrib/postgres/fields/utils.pyc
+${PYSITELIB}/django/contrib/postgres/fields/utils.pyo
+${PYSITELIB}/django/contrib/postgres/fields/utils.py
 ${PYSITELIB}/django/contrib/postgres/forms/__init__.py
 ${PYSITELIB}/django/contrib/postgres/forms/__init__.pyc
 ${PYSITELIB}/django/contrib/postgres/forms/__init__.pyo
