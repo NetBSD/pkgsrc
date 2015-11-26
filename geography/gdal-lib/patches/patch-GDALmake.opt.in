@@ -1,9 +1,7 @@
-$NetBSD: patch-GDALmake.opt.in,v 1.1 2014/09/15 16:48:21 jperkin Exp $
+$NetBSD: patch-GDALmake.opt.in,v 1.2 2015/11/26 13:37:30 adam Exp $
 
-Fix occasional paralle build failure:
-
+Fix occasional paralell build failure:
   ogr/ogr_core.h:34:26: fatal error: gdal_version.h: No such file or directory
-
 by ensuring we have the correct includes.
 
 --- GDALmake.opt.in.orig	2012-10-09 00:58:28.000000000 +0000
