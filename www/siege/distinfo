@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/11/27 16:20:31 nils Exp $
+
+SHA1 (siege-3.1.2.tar.gz) = 29562e621536a54ea3a710847b7299039fd43e42
+RMD160 (siege-3.1.2.tar.gz) = 5c7d5771a76c38ba0c67961cd13ef4422dc01ae0
+SHA512 (siege-3.1.2.tar.gz) = 3ec3e861d56b8a75c83ddf2c971fda01b0981568d30deeeeaf22f34324308bf67244f3045366d63d20aacb946f968244a295b048f40250429b509f7f466fdf6f
+Size (siege-3.1.2.tar.gz) = 527365 bytes
