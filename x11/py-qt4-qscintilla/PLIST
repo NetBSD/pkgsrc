@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2014/12/30 14:40:30 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/11/27 17:04:18 adam Exp $
 ${PYSITELIB}/PyQt4/Qsci.la
 qt4/qsci/api/python/QScintilla2.api
 share/sip${PYVERSSUFFIX}/Qsci/qsciabstractapis.sip
@@ -45,13 +45,11 @@ share/sip${PYVERSSUFFIX}/Qsci/qscilexervhdl.sip
 share/sip${PYVERSSUFFIX}/Qsci/qscilexerxml.sip
 share/sip${PYVERSSUFFIX}/Qsci/qscilexeryaml.sip
 share/sip${PYVERSSUFFIX}/Qsci/qscimacro.sip
-share/sip${PYVERSSUFFIX}/Qsci/qscimod3.sip
 share/sip${PYVERSSUFFIX}/Qsci/qscimod4.sip
 share/sip${PYVERSSUFFIX}/Qsci/qscimod5.sip
 share/sip${PYVERSSUFFIX}/Qsci/qscimodcommon.sip
 share/sip${PYVERSSUFFIX}/Qsci/qsciprinter.sip
 share/sip${PYVERSSUFFIX}/Qsci/qsciscintilla.sip
-share/sip${PYVERSSUFFIX}/Qsci/qsciscintillabase3.sip
-share/sip${PYVERSSUFFIX}/Qsci/qsciscintillabase4.sip
+share/sip${PYVERSSUFFIX}/Qsci/qsciscintillabase.sip
 share/sip${PYVERSSUFFIX}/Qsci/qscistyle.sip
 share/sip${PYVERSSUFFIX}/Qsci/qscistyledtext.sip
