@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/02/09 10:05:25 nils Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/11/27 15:41:47 nils Exp $
 bin/fail2ban-client
 bin/fail2ban-regex
 bin/fail2ban-server
@@ -151,6 +151,8 @@ ${PYSITELIB}/fail2ban/tests/clientreadertestcase.pyo
 ${PYSITELIB}/fail2ban/tests/config/action.d/brokenaction.conf
 ${PYSITELIB}/fail2ban/tests/config/fail2ban.conf
 ${PYSITELIB}/fail2ban/tests/config/filter.d/simple.conf
+${PYSITELIB}/fail2ban/tests/config/filter.d/test.conf
+${PYSITELIB}/fail2ban/tests/config/filter.d/test.local
 ${PYSITELIB}/fail2ban/tests/config/jail.conf
 ${PYSITELIB}/fail2ban/tests/databasetestcase.py
 ${PYSITELIB}/fail2ban/tests/databasetestcase.pyc
@@ -167,6 +169,9 @@ ${PYSITELIB}/fail2ban/tests/failmanagertestcase.pyo
 ${PYSITELIB}/fail2ban/tests/files/action.d/action.py
 ${PYSITELIB}/fail2ban/tests/files/action.d/action.pyc
 ${PYSITELIB}/fail2ban/tests/files/action.d/action.pyo
+${PYSITELIB}/fail2ban/tests/files/action.d/action_checkainfo.py
+${PYSITELIB}/fail2ban/tests/files/action.d/action_checkainfo.pyc
+${PYSITELIB}/fail2ban/tests/files/action.d/action_checkainfo.pyo
 ${PYSITELIB}/fail2ban/tests/files/action.d/action_errors.py
 ${PYSITELIB}/fail2ban/tests/files/action.d/action_errors.pyc
 ${PYSITELIB}/fail2ban/tests/files/action.d/action_errors.pyo
@@ -208,10 +213,12 @@ ${PYSITELIB}/fail2ban/tests/files/logs/3proxy
 ${PYSITELIB}/fail2ban/tests/files/logs/apache-auth
 ${PYSITELIB}/fail2ban/tests/files/logs/apache-badbots
 ${PYSITELIB}/fail2ban/tests/files/logs/apache-botsearch
+${PYSITELIB}/fail2ban/tests/files/logs/apache-fakegooglebot
 ${PYSITELIB}/fail2ban/tests/files/logs/apache-modsecurity
 ${PYSITELIB}/fail2ban/tests/files/logs/apache-nohome
 ${PYSITELIB}/fail2ban/tests/files/logs/apache-noscript
 ${PYSITELIB}/fail2ban/tests/files/logs/apache-overflows
+${PYSITELIB}/fail2ban/tests/files/logs/apache-pass
 ${PYSITELIB}/fail2ban/tests/files/logs/apache-shellshock
 ${PYSITELIB}/fail2ban/tests/files/logs/assp
 ${PYSITELIB}/fail2ban/tests/files/logs/asterisk
@@ -225,10 +232,12 @@ ${PYSITELIB}/fail2ban/tests/files/logs/cyrus-imap
 ${PYSITELIB}/fail2ban/tests/files/logs/directadmin
 ${PYSITELIB}/fail2ban/tests/files/logs/dovecot
 ${PYSITELIB}/fail2ban/tests/files/logs/dropbear
+${PYSITELIB}/fail2ban/tests/files/logs/drupal-auth
 ${PYSITELIB}/fail2ban/tests/files/logs/ejabberd-auth
 ${PYSITELIB}/fail2ban/tests/files/logs/exim
 ${PYSITELIB}/fail2ban/tests/files/logs/exim-spam
 ${PYSITELIB}/fail2ban/tests/files/logs/freeswitch
+${PYSITELIB}/fail2ban/tests/files/logs/froxlor-auth
 ${PYSITELIB}/fail2ban/tests/files/logs/groupoffice
 ${PYSITELIB}/fail2ban/tests/files/logs/gssftpd
 ${PYSITELIB}/fail2ban/tests/files/logs/guacamole
@@ -239,6 +248,7 @@ ${PYSITELIB}/fail2ban/tests/files/logs/monit
 ${PYSITELIB}/fail2ban/tests/files/logs/mysqld-auth
 ${PYSITELIB}/fail2ban/tests/files/logs/nagios
 ${PYSITELIB}/fail2ban/tests/files/logs/named-refused
+${PYSITELIB}/fail2ban/tests/files/logs/nginx-botsearch
 ${PYSITELIB}/fail2ban/tests/files/logs/nginx-http-auth
 ${PYSITELIB}/fail2ban/tests/files/logs/nsd
 ${PYSITELIB}/fail2ban/tests/files/logs/openwebmail
@@ -248,6 +258,7 @@ ${PYSITELIB}/fail2ban/tests/files/logs/perdition
 ${PYSITELIB}/fail2ban/tests/files/logs/php-url-fopen
 ${PYSITELIB}/fail2ban/tests/files/logs/portsentry
 ${PYSITELIB}/fail2ban/tests/files/logs/postfix
+${PYSITELIB}/fail2ban/tests/files/logs/postfix-rbl
 ${PYSITELIB}/fail2ban/tests/files/logs/postfix-sasl
 ${PYSITELIB}/fail2ban/tests/files/logs/proftpd
 ${PYSITELIB}/fail2ban/tests/files/logs/pure-ftpd
@@ -362,7 +373,9 @@ share/examples/fail2ban/action.d/cloudflare.conf
 share/examples/fail2ban/action.d/complain.conf
 share/examples/fail2ban/action.d/dshield.conf
 share/examples/fail2ban/action.d/dummy.conf
+share/examples/fail2ban/action.d/firewallcmd-allports.conf
 share/examples/fail2ban/action.d/firewallcmd-ipset.conf
+share/examples/fail2ban/action.d/firewallcmd-multiport.conf
 share/examples/fail2ban/action.d/firewallcmd-new.conf
 share/examples/fail2ban/action.d/hostsdeny.conf
 share/examples/fail2ban/action.d/ipfilter.conf
@@ -378,22 +391,26 @@ share/examples/fail2ban/action.d/iptables-new.conf
 share/examples/fail2ban/action.d/iptables-xt_recent-echo.conf
 share/examples/fail2ban/action.d/iptables.conf
 share/examples/fail2ban/action.d/mail-buffered.conf
+share/examples/fail2ban/action.d/mail-whois-common.conf
 share/examples/fail2ban/action.d/mail-whois-lines.conf
 share/examples/fail2ban/action.d/mail-whois.conf
 share/examples/fail2ban/action.d/mail.conf
 share/examples/fail2ban/action.d/mynetwatchman.conf
+share/examples/fail2ban/action.d/nsupdate.conf
 share/examples/fail2ban/action.d/osx-afctl.conf
 share/examples/fail2ban/action.d/osx-ipfw.conf
 share/examples/fail2ban/action.d/pf.conf
 share/examples/fail2ban/action.d/route.conf
 share/examples/fail2ban/action.d/sendmail-buffered.conf
 share/examples/fail2ban/action.d/sendmail-common.conf
+share/examples/fail2ban/action.d/sendmail-geoip-lines.conf
 share/examples/fail2ban/action.d/sendmail-whois-ipjailmatches.conf
 share/examples/fail2ban/action.d/sendmail-whois-ipmatches.conf
 share/examples/fail2ban/action.d/sendmail-whois-lines.conf
 share/examples/fail2ban/action.d/sendmail-whois-matches.conf
 share/examples/fail2ban/action.d/sendmail-whois.conf
 share/examples/fail2ban/action.d/sendmail.conf
+share/examples/fail2ban/action.d/shorewall-ipset-proto6.conf
 share/examples/fail2ban/action.d/shorewall.conf
 share/examples/fail2ban/action.d/smtp.py
 share/examples/fail2ban/action.d/symbiosis-blacklist-allports.conf
@@ -405,13 +422,16 @@ share/examples/fail2ban/filter.d/apache-auth.conf
 share/examples/fail2ban/filter.d/apache-badbots.conf
 share/examples/fail2ban/filter.d/apache-botsearch.conf
 share/examples/fail2ban/filter.d/apache-common.conf
+share/examples/fail2ban/filter.d/apache-fakegooglebot.conf
 share/examples/fail2ban/filter.d/apache-modsecurity.conf
 share/examples/fail2ban/filter.d/apache-nohome.conf
 share/examples/fail2ban/filter.d/apache-noscript.conf
 share/examples/fail2ban/filter.d/apache-overflows.conf
+share/examples/fail2ban/filter.d/apache-pass.conf
 share/examples/fail2ban/filter.d/apache-shellshock.conf
 share/examples/fail2ban/filter.d/assp.conf
 share/examples/fail2ban/filter.d/asterisk.conf
+share/examples/fail2ban/filter.d/botsearch-common.conf
 share/examples/fail2ban/filter.d/common.conf
 share/examples/fail2ban/filter.d/counter-strike.conf
 share/examples/fail2ban/filter.d/courier-auth.conf
@@ -420,21 +440,25 @@ share/examples/fail2ban/filter.d/cyrus-imap.conf
 share/examples/fail2ban/filter.d/directadmin.conf
 share/examples/fail2ban/filter.d/dovecot.conf
 share/examples/fail2ban/filter.d/dropbear.conf
+share/examples/fail2ban/filter.d/drupal-auth.conf
 share/examples/fail2ban/filter.d/ejabberd-auth.conf
 share/examples/fail2ban/filter.d/exim-common.conf
 share/examples/fail2ban/filter.d/exim-spam.conf
 share/examples/fail2ban/filter.d/exim.conf
 share/examples/fail2ban/filter.d/freeswitch.conf
+share/examples/fail2ban/filter.d/froxlor-auth.conf
 share/examples/fail2ban/filter.d/groupoffice.conf
 share/examples/fail2ban/filter.d/gssftpd.conf
 share/examples/fail2ban/filter.d/guacamole.conf
 share/examples/fail2ban/filter.d/horde.conf
+share/examples/fail2ban/filter.d/ignorecommands/apache-fakegooglebot
 share/examples/fail2ban/filter.d/kerio.conf
 share/examples/fail2ban/filter.d/lighttpd-auth.conf
 share/examples/fail2ban/filter.d/monit.conf
 share/examples/fail2ban/filter.d/mysqld-auth.conf
 share/examples/fail2ban/filter.d/nagios.conf
 share/examples/fail2ban/filter.d/named-refused.conf
+share/examples/fail2ban/filter.d/nginx-botsearch.conf
 share/examples/fail2ban/filter.d/nginx-http-auth.conf
 share/examples/fail2ban/filter.d/nsd.conf
 share/examples/fail2ban/filter.d/openwebmail.conf
@@ -443,6 +467,7 @@ share/examples/fail2ban/filter.d/pam-generic.conf
 share/examples/fail2ban/filter.d/perdition.conf
 share/examples/fail2ban/filter.d/php-url-fopen.conf
 share/examples/fail2ban/filter.d/portsentry.conf
+share/examples/fail2ban/filter.d/postfix-rbl.conf
 share/examples/fail2ban/filter.d/postfix-sasl.conf
 share/examples/fail2ban/filter.d/postfix.conf
 share/examples/fail2ban/filter.d/proftpd.conf
@@ -477,7 +502,3 @@ share/examples/fail2ban/paths-freebsd.conf
 share/examples/fail2ban/paths-netbsd.conf
 share/examples/fail2ban/paths-osx.conf
 share/examples/fail2ban/paths-pkgsrc.conf
-@pkgdir share/examples/fail2ban/jail.d
-@pkgdir share/examples/fail2ban/fail2ban.d
-@pkgdir etc/fail2ban/filter.d
-@pkgdir etc/fail2ban/action.d

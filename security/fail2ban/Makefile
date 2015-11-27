@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2015/04/14 21:09:48 gdt Exp $
+# $NetBSD: Makefile,v 1.4 2015/11/27 15:41:47 nils Exp $
 #
 
-DISTNAME=	fail2ban-0.9.1
-PKGREVISION=	2
+DISTNAME=	fail2ban-0.9.3
+#PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	-https://github.com/fail2ban/fail2ban/archive/${PKGVERSION_NOREV}${EXTRACT_SUFX}
 EXTRACT_SUFX=	.zip
@@ -25,21 +25,24 @@ PKG_SYSCONFSUBDIR=	fail2ban
 DOCDIR=			${PREFIX}/share/doc/fail2ban
 OWN_DIRS=		${PKG_SYSCONFDIR} ${PKG_SYSCONFDIR}/action.d/ ${PKG_SYSCONFDIR}/filter.d/ \
 			${VARBASE}/run/fail2ban ${VARBASE}/db/fail2ban
-INSTALLATION_DIRS+=	${PKGMANDIR}/man1/ ${PKGMANDIR}/man5/ ${EGDIR} ${EGDIR}/action.d/ ${EGDIR}/filter.d/ \
-			${PKG_SYSCONFDIR} ${PKG_SYSCONFDIR}/action.d/ ${PKG_SYSCONFDIR}/filter.d/
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1/ ${PKGMANDIR}/man5/ ${EGDIR} ${EGDIR}/action.d/ ${EGDIR}/filter.d/ ${EGDIR}/filter.d/ignorecommands/ \
+			${PKG_SYSCONFDIR} ${PKG_SYSCONFDIR}/action.d/ ${PKG_SYSCONFDIR}/filter.d/ ${PKG_SYSCONFDIR}/filter.d/ignorecommands/
+			
 
 .for config in fail2ban.conf jail.conf paths-common.conf paths-debian.conf paths-fedora.conf paths-freebsd.conf paths-osx.conf paths-netbsd.conf paths-pkgsrc.conf
 CONF_FILES+=		${EGDIR}/${config} ${PKG_SYSCONFDIR}/${config}
 .endfor
 
 
-.for action in apf.conf badips.conf badips.py blocklist_de.conf bsd-ipfw.conf cloudflare.conf complain.conf dshield.conf dummy.conf firewallcmd-ipset.conf firewallcmd-new.conf hostsdeny.conf ipfilter.conf ipfw.conf iptables-allports.conf iptables-common.conf iptables-ipset-proto4.conf iptables-ipset-proto6-allports.conf iptables-ipset-proto6.conf iptables-multiport-log.conf iptables-multiport.conf iptables-new.conf iptables-xt_recent-echo.conf iptables.conf mail-buffered.conf mail-whois-lines.conf mail-whois.conf mail.conf mynetwatchman.conf osx-afctl.conf osx-ipfw.conf pf.conf route.conf sendmail-buffered.conf sendmail-common.conf sendmail-whois-lines.conf sendmail-whois-ipjailmatches.conf sendmail-whois-ipmatches.conf sendmail-whois-matches.conf sendmail-whois.conf sendmail.conf shorewall.conf smtp.py symbiosis-blacklist-allports.conf ufw.conf xarf-login-attack.conf
+.for action in pf.conf badips.conf badips.py blocklist_de.conf bsd-ipfw.conf cloudflare.conf complain.conf dshield.conf dummy.conf firewallcmd-allports.conf firewallcmd-ipset.conf firewallcmd-multiport.conf firewallcmd-new.conf hostsdeny.conf ipfilter.conf ipfw.conf iptables-allports.conf iptables-common.conf iptables-ipset-proto4.conf iptables-ipset-proto6-allports.conf iptables-ipset-proto6.conf iptables-multiport-log.conf iptables-multiport.conf iptables-new.conf iptables-xt_recent-echo.conf iptables.conf mail-buffered.conf mail-whois-common.conf mail-whois-lines.conf mail-whois.conf mail.conf mynetwatchman.conf nsupdate.conf osx-afctl.conf osx-ipfw.conf pf.conf route.conf sendmail-buffered.conf sendmail-common.conf sendmail-geoip-lines.conf sendmail-whois-ipjailmatches.conf sendmail-whois-ipmatches.conf sendmail-whois-lines.conf sendmail-whois-matches.conf sendmail-whois.conf sendmail.conf shorewall-ipset-proto6.conf shorewall.conf smtp.py symbiosis-blacklist-allports.conf ufw.conf xarf-login-attack.conf
 CONF_FILES+=		${EGDIR}/action.d/${action} ${PKG_SYSCONFDIR}/action.d/${action}
 .endfor
 
-.for filter in 3proxy.conf apache-auth.conf apache-badbots.conf apache-botsearch.conf apache-common.conf apache-modsecurity.conf apache-nohome.conf apache-noscript.conf apache-overflows.conf apache-shellshock.conf assp.conf asterisk.conf common.conf counter-strike.conf courier-auth.conf courier-smtp.conf cyrus-imap.conf dovecot.conf directadmin.conf dropbear.conf ejabberd-auth.conf exim-common.conf exim-spam.conf exim.conf freeswitch.conf groupoffice.conf gssftpd.conf guacamole.conf horde.conf kerio.conf lighttpd-auth.conf monit.conf mysqld-auth.conf nagios.conf named-refused.conf nginx-http-auth.conf nsd.conf openwebmail.conf oracleims.conf pam-generic.conf perdition.conf php-url-fopen.conf portsentry.conf postfix-sasl.conf postfix.conf proftpd.conf pure-ftpd.conf qmail.conf recidive.conf roundcube-auth.conf selinux-common.conf selinux-ssh.conf sendmail-auth.conf sendmail-reject.conf sieve.conf sogo-auth.conf solid-pop3d.conf squid.conf squirrelmail.conf sshd-ddos.conf sshd.conf stunnel.conf suhosin.conf tine20.conf uwimap-auth.conf vsftpd.conf webmin-auth.conf wuftpd.conf xinetd-fail.conf
+.for filter in 3proxy.conf apache-auth.conf apache-badbots.conf apache-botsearch.conf apache-common.conf apache-fakegooglebot.conf apache-modsecurity.conf apache-nohome.conf apache-noscript.conf apache-overflows.conf apache-pass.conf apache-shellshock.conf assp.conf asterisk.conf botsearch-common.conf common.conf counter-strike.conf courier-auth.conf courier-smtp.conf cyrus-imap.conf directadmin.conf dovecot.conf dropbear.conf drupal-auth.conf ejabberd-auth.conf exim-common.conf exim-spam.conf exim.conf freeswitch.conf froxlor-auth.conf groupoffice.conf gssftpd.conf guacamole.conf horde.conf kerio.conf lighttpd-auth.conf monit.conf mysqld-auth.conf nagios.conf named-refused.conf nginx-botsearch.conf nginx-http-auth.conf nsd.conf openwebmail.conf oracleims.conf pam-generic.conf perdition.conf php-url-fopen.conf portsentry.conf postfix-rbl.conf postfix-sasl.conf postfix.conf proftpd.conf pure-ftpd.conf qmail.conf recidive.conf roundcube-auth.conf selinux-common.conf selinux-ssh.conf sendmail-auth.conf sendmail-reject.conf sieve.conf sogo-auth.conf solid-pop3d.conf squid.conf squirrelmail.conf sshd-ddos.conf sshd.conf stunnel.conf suhosin.conf tine20.conf uwimap-auth.conf vsftpd.conf webmin-auth.conf wuftpd.conf xinetd-fail.conf
 CONF_FILES+=		${EGDIR}/filter.d/${filter} ${PKG_SYSCONFDIR}/filter.d/${filter}
 .endfor
+
+CONF_FILES+=		${EGDIR}/filter.d/ignorecommands/apache-fakegooglebot ${PKG_SYSCONFDIR}/filter.d/ignorecommands/apache-fakegooglebot
 
 TXTDOCFILES+=		develop.txt fail2ban.txt fail2ban.client.txt fail2ban.client.actionreader.txt fail2ban.client.beautifier.txt fail2ban.client.configparserinc.txt fail2ban.client.configreader.txt fail2ban.client.configurator.txt fail2ban.client.csocket.txt fail2ban.client.fail2banreader.txt fail2ban.client.filterreader.txt fail2ban.client.jailreader.txt fail2ban.exceptions.txt fail2ban.client.jailsreader.txt fail2ban.helpers.txt fail2ban.protocol.txt fail2ban.server.txt fail2ban.server.action.txt fail2ban.server.actions.txt fail2ban.server.asyncserver.txt fail2ban.server.banmanager.txt fail2ban.server.database.txt fail2ban.server.datedetector.txt fail2ban.server.datetemplate.txt fail2ban.server.faildata.txt fail2ban.server.failmanager.txt filters.txt fail2ban.server.failregex.txt fail2ban.server.filter.txt fail2ban.server.filtergamin.txt fail2ban.server.filterpoll.txt fail2ban.server.filterpyinotify.txt fail2ban.server.filtersystemd.txt fail2ban.server.jail.txt fail2ban.server.jails.txt fail2ban.server.jailthread.txt fail2ban.server.mytime.txt fail2ban.server.server.txt fail2ban.server.strptime.txt fail2ban.server.ticket.txt fail2ban.server.transmitter.txt fail2ban.version.txt index.txt release.txt
 
