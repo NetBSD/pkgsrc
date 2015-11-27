@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4756 2015/11/27 10:13:22 gson Exp $
+$NetBSD: CHANGES-2015,v 1.4757 2015/11/27 10:29:07 leot Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7982,3 +7982,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated chat/unrealircd to 3.2.10.5nb1 [jperkin 2015-11-26]
 	Updated net/youtube-dl to 20151124 [leot 2015-11-27]
 	Added math/py-fftw version 0.2.1nb2 [gson 2015-11-27]
+	Added net/megatools version 1.9.95 [leot 2015-11-27]
