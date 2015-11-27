@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.49 2015/11/23 11:03:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.50 2015/11/27 13:52:50 wiz Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -1245,6 +1245,7 @@ lib/calibre/calibre/utils/config_base.py
 lib/calibre/calibre/utils/date.py
 lib/calibre/calibre/utils/dbus_service.py
 lib/calibre/calibre/utils/file_associations.py
+lib/calibre/calibre/utils/file_type_icons.py
 lib/calibre/calibre/utils/filenames.py
 lib/calibre/calibre/utils/fonts/__init__.py
 lib/calibre/calibre/utils/fonts/free_type.py
@@ -2083,7 +2084,6 @@ share/calibre/recipes/deadspin.recipe
 share/calibre/recipes/deccan_herald.recipe
 share/calibre/recipes/defensenews.recipe
 share/calibre/recipes/degentenaar.recipe
-share/calibre/recipes/deia.recipe
 share/calibre/recipes/delco_times.recipe
 share/calibre/recipes/demagog.cz.recipe
 share/calibre/recipes/democracy_journal.recipe
@@ -3000,8 +3000,6 @@ share/calibre/recipes/reptantes.recipe
 share/calibre/recipes/republica.recipe
 share/calibre/recipes/republika.recipe
 share/calibre/recipes/res_publica.recipe
-share/calibre/recipes/respekt_magazine.recipe
-share/calibre/recipes/respekt_web.recipe
 share/calibre/recipes/resurgence.recipe
 share/calibre/recipes/reuters.recipe
 share/calibre/recipes/reuters_ja.recipe
