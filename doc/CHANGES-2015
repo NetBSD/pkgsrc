@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4769 2015/11/27 22:22:53 mef Exp $
+$NetBSD: CHANGES-2015,v 1.4770 2015/11/27 23:20:06 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7995,3 +7995,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added geography/spatialindex version 1.8.5 [adam 2015-11-27]
 	Updated math/glpk to 4.57 [adam 2015-11-27]
 	Added www/p5-Plack-Middleware-MethodOverride version 0.15 [mef 2015-11-27]
+	Updated www/p5-Catalyst-Runtime to 5.90103 [mef 2015-11-27]
