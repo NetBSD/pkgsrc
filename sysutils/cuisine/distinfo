@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 01:32:09 agc Exp $
+$NetBSD: distinfo,v 1.5 2015/11/27 14:21:26 nils Exp $
 
-SHA1 (cuisine-0.7.1.tar.gz) = e4969aaee9997bfaba79c63f2ab54ee699290d3d
-RMD160 (cuisine-0.7.1.tar.gz) = 7ffae94e7df0d9c4fd6c629fb2aedaa9488dad26
-SHA512 (cuisine-0.7.1.tar.gz) = 8b0308b2fb597ceb941aa861996ccc01562cf1d3eb40cf80a91acee668479ba56a2d34517240767a4d62e19507161c9ceea1ba615933ce71e9b9d79e644f9040
-Size (cuisine-0.7.1.tar.gz) = 17984 bytes
+SHA1 (cuisine-0.7.11.tar.gz) = ac76e0029880c3119a50c17014001ec281906235
+RMD160 (cuisine-0.7.11.tar.gz) = 19ab2a4f2c6f50773c8a2c857262fd0e4d93142d
+SHA512 (cuisine-0.7.11.tar.gz) = b1ba60cdadd48874c7d2d7b5b763122c4640f16d79514d244b90a78f841e07dbe3ad71f9f46f36c76e983530f8ef9b10423f3b6c7bbf34478568baf54aa4a46c
+Size (cuisine-0.7.11.tar.gz) = 21283 bytes
