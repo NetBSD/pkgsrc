@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4759 2015/11/27 13:53:05 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4760 2015/11/27 14:04:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7985,3 +7985,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Added net/megatools version 1.9.95 [leot 2015-11-27]
 	Updated www/p5-Catalyst-Action-REST to 1.20 [mef 2015-11-27]
 	Updated misc/calibre to 2.45.0 [wiz 2015-11-27]
+	Added textproc/freexl version 1.0.2 [adam 2015-11-27]
+	Added geography/libspatialite version 4.3.0a [adam 2015-11-27]
