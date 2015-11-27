@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4758 2015/11/27 13:24:48 mef Exp $
+$NetBSD: CHANGES-2015,v 1.4759 2015/11/27 13:53:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7984,3 +7984,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added math/py-fftw version 0.2.1nb2 [gson 2015-11-27]
 	Added net/megatools version 1.9.95 [leot 2015-11-27]
 	Updated www/p5-Catalyst-Action-REST to 1.20 [mef 2015-11-27]
+	Updated misc/calibre to 2.45.0 [wiz 2015-11-27]
