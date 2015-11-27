@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1128 2015/10/11 18:38:57 joerg Exp $
+# $NetBSD: Makefile,v 1.1129 2015/11/27 16:21:32 nils Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -755,6 +755,7 @@ SUBDIR+=	seamonkey
 SUBDIR+=	seamonkey-l10n
 SUBDIR+=	serf
 SUBDIR+=	shibboleth-sp
+SUBDIR+=	siege
 SUBDIR+=	sitecopy
 SUBDIR+=	snarf
 SUBDIR+=	snownews
