@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2014/06/12 00:58:38 gls Exp $
+# $NetBSD: Makefile,v 1.6 2015/11/27 14:21:26 nils Exp $
 
-VERSION=		0.7.1
+VERSION=		0.7.11
 DISTNAME=		cuisine-${VERSION}
-#PKGNAME=		cuisine-0.7.1
+#PKGNAME=		cuisine-0.7.11
 CATEGORIES=		sysutils
 MASTER_SITES=		https://pypi.python.org/packages/source/c/cuisine/
 
@@ -11,7 +11,7 @@ HOMEPAGE=		https://github.com/sebastien/cuisine
 COMMENT=		Small set of functions that sit on top of Fabric
 LICENSE=		modified-bsd
 
-DEPENDS+=		fabric>=1.6.0:../../sysutils/fabric
+DEPENDS+=		fabric>=1.7.0:../../sysutils/fabric
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.6.4
 
