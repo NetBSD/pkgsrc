@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/11/27 10:10:36 gson Exp $
+
+SHA1 (PyFFTW3-0.2.1.tar.gz) = f01a7591a51316d6a55dfd7300097edefdaed450
+RMD160 (PyFFTW3-0.2.1.tar.gz) = 2f83fd22a239edc3cb4fe854255f7445ae19f2b1
+Size (PyFFTW3-0.2.1.tar.gz) = 25317 bytes
