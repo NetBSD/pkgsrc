@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4762 2015/11/27 15:42:52 nils Exp $
+$NetBSD: CHANGES-2015,v 1.4763 2015/11/27 16:22:36 nils Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7987,3 +7987,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated misc/calibre to 2.45.0 [wiz 2015-11-27]
 	Updated sysutils/cuisine to 0.7.11 [nils 2015-11-27]
 	Updated security/fail2ban to 0.9.3 [nils 2015-11-27]
+	Added www/siege version 3.1.2 [nils 2015-11-27]
