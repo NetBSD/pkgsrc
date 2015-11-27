@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/11/27 17:51:58 adam Exp $
+
+SHA1 (spatialindex-src-1.8.5.tar.bz2) = 733c859b9d16dfa7466f1d8a33770f47eb68add1
+RMD160 (spatialindex-src-1.8.5.tar.bz2) = 63df2e6c579e91d90de406357cedb89b420e3ca7
+SHA512 (spatialindex-src-1.8.5.tar.bz2) = d3e47982cc2809d04490fae27796b31cdb59675790010d8b45e1a98b5a23048a4a44e321a2470dd36c01aba6f6e7620cafc4988a02b55e4f59d1b7fa9b588b06
+Size (spatialindex-src-1.8.5.tar.bz2) = 407871 bytes
