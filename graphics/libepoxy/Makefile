@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2015/11/19 11:46:33 adam Exp $
+# $NetBSD: Makefile,v 1.14 2015/11/27 10:33:21 jperkin Exp $
 
 DISTNAME=	libepoxy-1.3.1
 PKGREVISION=	2
@@ -23,7 +23,7 @@ PYTHON_FOR_BUILD_ONLY=	yes
 
 PLIST_VARS+=		egl glx
 
-.if ${OPSYS} == "Darwin" && ${X11_TYPE} != "modular"
+.if ${OPSYS} == "Darwin"
 BUILD_EGL=	no
 BUILD_GLX=	no
 .else
