@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4767 2015/11/27 17:53:31 adam Exp $
+$NetBSD: CHANGES-2015,v 1.4768 2015/11/27 21:01:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7993,3 +7993,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/qt4-qscintilla to 2.9.1 [adam 2015-11-27]
 	Updated x11/py-qt4-qscintilla to 2.9.1 [adam 2015-11-27]
 	Added geography/spatialindex version 1.8.5 [adam 2015-11-27]
+	Updated math/glpk to 4.57 [adam 2015-11-27]
