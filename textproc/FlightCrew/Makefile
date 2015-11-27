@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2015/04/25 14:24:56 tnn Exp $
+# $NetBSD: Makefile,v 1.35 2015/11/27 21:45:19 joerg Exp $
 #
 
 DISTNAME=	FlightCrew-0.7.2-Code
@@ -46,6 +46,9 @@ CWRAPPERS_APPEND.cxx+=	-std=c++0x
 _WRAP_EXTRA_ARGS.CXX+=	-std=c++11
 CWRAPPERS_APPEND.cxx+=	-std=c++11
 .endif
+
+post-extract:
+	${RM} -rf ${WRKDIR}/src/BoostParts ${WRKDIR}/src/Xerces ${WRKDIR}/src/zlib ${WRKDIR}/src/googlemock
 
 .include "../../devel/googletest/buildlink3.mk"
 .include "../../devel/gmock/buildlink3.mk"
