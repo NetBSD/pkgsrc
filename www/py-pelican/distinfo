@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/11/27 16:56:25 nils Exp $
+
+SHA1 (pelican-3.6.3.tar.gz) = b0e7892a3a5e168317391320abaf392bd50cbd65
+RMD160 (pelican-3.6.3.tar.gz) = 462f92e59d8e3ecb9168a0b23f628478ca89226f
+SHA512 (pelican-3.6.3.tar.gz) = 2494c263ba8dcbe790dda7c0e67e473d7d00326c2f35319b45b424f7fbea21139c70d1174b8363535bf37a1670f0f08c43abca0b5029efc42a57ed2d7de6e6b2
+Size (pelican-3.6.3.tar.gz) = 264389 bytes
