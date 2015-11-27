@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2015/09/11 18:45:01 bouyer Exp $
+# $NetBSD: Makefile,v 1.58 2015/11/27 14:04:22 adam Exp $
 #
 
 COMMENT=	Software for geographical-related uses
@@ -30,6 +30,7 @@ SUBDIR+=	libdrg
 SUBDIR+=	libgeotiff
 SUBDIR+=	libmemphis02
 SUBDIR+=	libnova
+SUBDIR+=	libspatialite
 SUBDIR+=	mapserver
 SUBDIR+=	merkaartor
 SUBDIR+=	opencpn
