@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2015/11/27 14:04:22 adam Exp $
+# $NetBSD: Makefile,v 1.59 2015/11/27 17:52:35 adam Exp $
 #
 
 COMMENT=	Software for geographical-related uses
@@ -60,6 +60,7 @@ SUBDIR+=	qlandkartegt
 SUBDIR+=	qlandkartegt-garmindev
 SUBDIR+=	qlandkartem
 SUBDIR+=	shapelib
+SUBDIR+=	spatialindex
 SUBDIR+=	tex-pst-geo
 SUBDIR+=	tex-pst-geo-doc
 SUBDIR+=	viking
