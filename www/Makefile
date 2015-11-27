@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1130 2015/11/27 16:50:18 nils Exp $
+# $NetBSD: Makefile,v 1.1131 2015/11/27 16:57:04 nils Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -636,6 +636,7 @@ SUBDIR+=	py-mod_wsgi-metrics
 SUBDIR+=	py-moin
 SUBDIR+=	py-nevow
 SUBDIR+=	py-paste
+SUBDIR+=	py-pelican
 SUBDIR+=	py-pendrell
 SUBDIR+=	py-python-digest
 SUBDIR+=	py-python-mimeparse
