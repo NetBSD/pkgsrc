@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2015/02/09 10:05:25 nils Exp $
+$NetBSD: distinfo,v 1.2 2015/11/27 15:41:47 nils Exp $
 
-SHA1 (fail2ban-0.9.1.zip) = 1b402896454b46ee92fab09f2126a93c02b16ceb
-RMD160 (fail2ban-0.9.1.zip) = aad8d5d49bfd5547e528b283ccc764d4916fa1fb
-Size (fail2ban-0.9.1.zip) = 469965 bytes
+SHA1 (fail2ban-0.9.3.zip) = ddcffd34fd968f512c22a9e85b5608c09ff8ef1e
+RMD160 (fail2ban-0.9.3.zip) = 22d77678515fc40e1b92ee4e1bced086b6cb60f2
+SHA512 (fail2ban-0.9.3.zip) = 5948b59fad867516e5eb047f4a0ed665996da8070d5382a63d8339a9ec04629f052120533b021902f3bc84d0cecaaf5e75efeeb6c4664bbbf26dd33e2d32e772
+Size (fail2ban-0.9.3.zip) = 503756 bytes
 SHA1 (patch-doc_Makefile) = b17d28b1ef79b0cf86e4cd5d6eaa3e3d1bc2da39
