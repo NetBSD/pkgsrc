@@ -1,8 +1,8 @@
-$NetBSD: patch-src_Makefile.in,v 1.2 2014/08/30 11:19:52 adam Exp $
+$NetBSD: patch-src_Makefile.in,v 1.3 2015/11/27 21:00:28 adam Exp $
 
 Use external zlib.
 
---- src/Makefile.in.orig	2014-04-01 08:25:18.000000000 +0000
+--- src/Makefile.in.orig	2015-11-08 07:00:00.000000000 +0000
 +++ src/Makefile.in
 @@ -94,7 +94,7 @@ am__uninstall_files_from_dir = { \
    }
@@ -13,36 +13,37 @@ Use external zlib.
  am_libglpk_la_OBJECTS = libglpk_la-avl.lo libglpk_la-bfd.lo \
  	libglpk_la-bfx.lo libglpk_la-glpapi01.lo \
  	libglpk_la-glpapi02.lo libglpk_la-glpapi03.lo \
-@@ -151,13 +151,7 @@ am_libglpk_la_OBJECTS = libglpk_la-avl.l
- 	libglpk_la-strspx.lo libglpk_la-strtrim.lo \
- 	libglpk_la-triang.lo libglpk_la-wclique.lo \
- 	libglpk_la-wclique1.lo libglpk_la-proxy.lo \
--	libglpk_la-proxy1.lo libglpk_la-adler32.lo \
--	libglpk_la-compress.lo libglpk_la-crc32.lo \
--	libglpk_la-deflate.lo libglpk_la-gzclose.lo \
--	libglpk_la-gzlib.lo libglpk_la-gzread.lo libglpk_la-gzwrite.lo \
--	libglpk_la-inffast.lo libglpk_la-inflate.lo \
--	libglpk_la-inftrees.lo libglpk_la-trees.lo \
--	libglpk_la-uncompr.lo libglpk_la-zio.lo libglpk_la-zutil.lo
-+	libglpk_la-proxy1.lo
+@@ -154,14 +154,7 @@ am_libglpk_la_OBJECTS = libglpk_la-avl.l
+ 	libglpk_la-spxchuzc.lo libglpk_la-spxchuzr.lo \
+ 	libglpk_la-spxlp.lo libglpk_la-spxnt.lo libglpk_la-spxprim.lo \
+ 	libglpk_la-spxprob.lo libglpk_la-spychuzc.lo \
+-	libglpk_la-spychuzr.lo libglpk_la-spydual.lo \
+-	libglpk_la-adler32.lo libglpk_la-compress.lo \
+-	libglpk_la-crc32.lo libglpk_la-deflate.lo \
+-	libglpk_la-gzclose.lo libglpk_la-gzlib.lo libglpk_la-gzread.lo \
+-	libglpk_la-gzwrite.lo libglpk_la-inffast.lo \
+-	libglpk_la-inflate.lo libglpk_la-inftrees.lo \
+-	libglpk_la-trees.lo libglpk_la-uncompr.lo libglpk_la-zio.lo \
+-	libglpk_la-zutil.lo
++	libglpk_la-spychuzr.lo libglpk_la-spydual.lo
  libglpk_la_OBJECTS = $(am_libglpk_la_OBJECTS)
  libglpk_la_LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) \
  	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
-@@ -310,8 +304,7 @@ libglpk_la_CPPFLAGS = \
- -I$(srcdir)/env \
+@@ -315,8 +308,7 @@ libglpk_la_CPPFLAGS = \
  -I$(srcdir)/minisat \
  -I$(srcdir)/misc \
---I$(srcdir)/proxy \
+ -I$(srcdir)/proxy \
+--I$(srcdir)/simplex \
 --I$(srcdir)/zlib
-+-I$(srcdir)/proxy
++-I$(srcdir)/simplex
  
  libglpk_la_LDFLAGS = \
- -version-info 37:2:1 \
-@@ -447,22 +440,7 @@ misc/triang.c \
- misc/wclique.c \
- misc/wclique1.c \
- proxy/proxy.c \
--proxy/proxy1.c \
+ -version-info 38:0:2 \
+@@ -459,22 +451,7 @@ simplex/spxprim.c \
+ simplex/spxprob.c \
+ simplex/spychuzc.c \
+ simplex/spychuzr.c \
+-simplex/spydual.c \
 -zlib/adler32.c \
 -zlib/compress.c \
 -zlib/crc32.c \
@@ -58,7 +59,7 @@ Use external zlib.
 -zlib/uncompr.c \
 -zlib/zio.c \
 -zlib/zutil.c
-+proxy/proxy1.c
++simplex/spydual.c
  
  all: all-am
  
