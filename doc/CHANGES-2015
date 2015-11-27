@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4761 2015/11/27 14:23:33 nils Exp $
+$NetBSD: CHANGES-2015,v 1.4762 2015/11/27 15:42:52 nils Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7986,3 +7986,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/p5-Catalyst-Action-REST to 1.20 [mef 2015-11-27]
 	Updated misc/calibre to 2.45.0 [wiz 2015-11-27]
 	Updated sysutils/cuisine to 0.7.11 [nils 2015-11-27]
+	Updated security/fail2ban to 0.9.3 [nils 2015-11-27]
