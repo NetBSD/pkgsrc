@@ -1,8 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:24:09 joerg Exp $
-# Packages that only install static libraries or headers should
-# include the following line:
-#
-# BUILDLINK_DEPMETHOD.argp?=	build
+# $NetBSD: buildlink3.mk,v 1.3 2015/11/27 17:43:38 joerg Exp $
 
 BUILDLINK_TREE+=	argp
 
