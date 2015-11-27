@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1129 2015/11/27 16:21:32 nils Exp $
+# $NetBSD: Makefile,v 1.1130 2015/11/27 16:50:18 nils Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -592,6 +592,7 @@ SUBDIR+=	py-djangocms-teaser
 SUBDIR+=	py-djangocms-text-ckeditor
 SUBDIR+=	py-djangocms-video
 SUBDIR+=	py-djangorestframework
+SUBDIR+=	py-feedgenerator
 SUBDIR+=	py-flask
 SUBDIR+=	py-flask-admin
 SUBDIR+=	py-flask-assets
