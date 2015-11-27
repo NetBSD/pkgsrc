@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2015/11/27 14:03:33 adam Exp $
+include/spatialite.h
+include/spatialite/control_points.h
+include/spatialite/debug.h
+include/spatialite/gaiaaux.h
+include/spatialite/gaiaexif.h
+include/spatialite/gaiageo.h
+include/spatialite/gaiamatrix.h
+include/spatialite/geopackage.h
+include/spatialite/gg_advanced.h
+include/spatialite/gg_const.h
+include/spatialite/gg_core.h
+include/spatialite/gg_dxf.h
+include/spatialite/gg_dynamic.h
+include/spatialite/gg_formats.h
+include/spatialite/gg_mbr.h
+include/spatialite/gg_structs.h
+include/spatialite/gg_wfs.h
+include/spatialite/gg_xml.h
+include/spatialite/spatialite.h
+include/spatialite/sqlite.h
+lib/libspatialite.la
+lib/mod_spatialite.la
+lib/pkgconfig/spatialite.pc
