@@ -1,0 +1,20 @@
+Writing RESTful apps is a good thing, but if you're also trying to support
+web browsers, it would be nice not to be reduced to GET and POST for
+everything.
+
+This middleware allows for POST requests that pretend to be something else:
+by adding either a header named X-HTTP-Method-Override to the request, or a
+query parameter named x-tunneled-method to the URI, the client can say what
+method it actually meant. That is, as long as it meant one of these:
+    GET
+    POST
+    HEAD
+    PUT
+    DELETE
+    OPTIONS
+    TRACE
+    CONNECT
+    PATCH
+If so, then the REQUEST_METHOD in the PSGI environment will be replaced
+with the client's desired value. The original request method is always
+stored under the plack.original_request_method key.
