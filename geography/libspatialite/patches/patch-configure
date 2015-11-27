@@ -1,0 +1,24 @@
+$NetBSD: patch-configure,v 1.1 2015/11/27 14:03:33 adam Exp $
+
+Portability fix.
+
+--- configure.orig	2015-11-26 15:50:52.000000000 +0000
++++ configure
+@@ -17390,7 +17390,7 @@ else
+   enable_geocallbacks=no
+ fi
+ 
+-if test x"$enable_geocallbacks" == "xyes"; then
++if test x"$enable_geocallbacks" = "xyes"; then
+   { $as_echo "$as_me:${as_lineno-$LINENO}: checking for sqlite3_rtree_geometry_callback in -lsqlite3" >&5
+ $as_echo_n "checking for sqlite3_rtree_geometry_callback in -lsqlite3... " >&6; }
+ if ${ac_cv_lib_sqlite3_sqlite3_rtree_geometry_callback+:} false; then :
+@@ -18544,7 +18544,7 @@ if test x"$enable_geopackage" != "xno"; 
+   $as_echo "#define ENABLE_GEOPACKAGE 1" >>confdefs.h
+ 
+ fi
+- if test x"$enable_geopackage" == "xyes"; then
++ if test x"$enable_geopackage" = "xyes"; then
+   ENABLE_GEOPACKAGE_TRUE=
+   ENABLE_GEOPACKAGE_FALSE='#'
+ else

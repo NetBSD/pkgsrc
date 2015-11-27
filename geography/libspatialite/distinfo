@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2015/11/27 14:03:33 adam Exp $
+
+SHA1 (libspatialite-4.3.0a.tar.gz) = 56176d6722e469d6863d27a2b17b0b181c2f1f87
+RMD160 (libspatialite-4.3.0a.tar.gz) = ee8d9f3f69f1c70f041b418e0e51a05ec40a5be7
+SHA512 (libspatialite-4.3.0a.tar.gz) = adfd63e8dde0f370b07e4e7bb557647d2bfb5549205b60bdcaaca69ff81298a3d885e7c1ca515ef56dd0aca152ae940df8b5dbcb65bb61ae0a9337499895c3c0
+Size (libspatialite-4.3.0a.tar.gz) = 4440660 bytes
+SHA1 (patch-configure) = 1ee6a1551f9f059bd34bee47993acd4a019d4a82
