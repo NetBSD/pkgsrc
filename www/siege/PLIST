@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2015/11/27 16:20:31 nils Exp $
+bin/bombardment
+bin/siege
+bin/siege.config
+bin/siege2csv.pl
+man/man1/bombardment.1
+man/man1/siege.1
+man/man1/siege.config.1
+man/man1/siege2csv.1
+man/man5/urls_txt.5
+man/man7/layingsiege.7
+share/doc/siege/AUTHORS
+share/doc/siege/COPYING
+share/doc/siege/ChangeLog
+share/doc/siege/INSTALL
+share/doc/siege/KNOWNBUGS
+share/doc/siege/NEWS
+share/doc/siege/PLATFORM
+share/doc/siege/README.https
+share/doc/siege/README.md
+share/examples/siege/siege/siegerc
+share/examples/siege/siege/urls.txt
+share/examples/siege/siegerc
+share/examples/siege/urls.txt
