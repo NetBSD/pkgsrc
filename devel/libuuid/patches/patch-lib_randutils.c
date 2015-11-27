@@ -1,11 +1,11 @@
-$NetBSD: patch-lib_randutils.c,v 1.3 2015/11/13 11:52:50 wiz Exp $
+$NetBSD: patch-lib_randutils.c,v 1.4 2015/11/27 14:57:36 jperkin Exp $
 
 O_CLOEXEC is not available on every platform (e.g. MacOS X < 10.7). It
 was introduced in POSIX 2008.
 
---- lib/randutils.c.orig	2014-04-23 13:28:29.000000000 +0000
+--- lib/randutils.c.orig	2015-10-05 14:18:43.000000000 +0000
 +++ lib/randutils.c
-@@ -28,6 +28,10 @@
+@@ -30,6 +30,10 @@
  THREAD_LOCAL unsigned short ul_jrand_seed[3];
  #endif
  
