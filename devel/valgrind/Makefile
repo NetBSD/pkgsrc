@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2015/11/28 10:12:57 alnsn Exp $
+# $NetBSD: Makefile,v 1.21 2015/11/28 20:50:07 wiedi Exp $
 #
 
 DISTNAME=		valgrind-3.11.0
@@ -18,7 +18,8 @@ GNU_CONFIGURE=		yes
 ONLY_FOR_PLATFORM=	Darwin-*-i386 Darwin-*-x86_64 \
 			Linux-*-x86_64 \
 			Linux-*-i386   \
-			Linux-*-arm*
+			Linux-*-arm*   \
+			SunOS-*-i386 SunOS-*-x86_64
 
 USE_TOOLS+=		gmake perl
 USE_LANGUAGES=		c c++
