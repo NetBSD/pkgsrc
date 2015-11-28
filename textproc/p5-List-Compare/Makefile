@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2015/06/12 10:51:25 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2015/11/28 14:43:03 wen Exp $
 #
 
-DISTNAME=		List-Compare-0.49
+DISTNAME=		List-Compare-0.53
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		1
 CATEGORIES=		perl5 textproc
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=List/}
 
