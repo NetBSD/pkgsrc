@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4774 2015/11/28 10:14:56 alnsn Exp $
+$NetBSD: CHANGES-2015,v 1.4775 2015/11/28 14:36:56 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8000,3 +8000,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/php56 to 5.6.16 [taca 2015-11-28]
 	Added math/nlopt version 2.4.2 [wen 2015-11-28]
 	Updated devel/valgrind to 3.11.0 [alnsn 2015-11-28]
+	Updated devel/p5-Log-Report to 1.09 [wen 2015-11-28]
