@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.309 2015/11/27 10:11:45 gson Exp $
+# $NetBSD: Makefile,v 1.310 2015/11/28 07:35:01 wen Exp $
 
 COMMENT=	Mathematics
 
@@ -157,6 +157,7 @@ SUBDIR+=	mtl
 SUBDIR+=	muparser
 SUBDIR+=	newmat
 SUBDIR+=	nickle
+SUBDIR+=	nlopt
 SUBDIR+=	ntl
 SUBDIR+=	octave
 SUBDIR+=	odepack
