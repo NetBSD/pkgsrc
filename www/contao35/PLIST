@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/10/12 05:47:19 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/11/28 05:45:42 taca Exp $
 ${CT_WEBDIR}/.htaccess.default
 ${CT_WEBDIR}/README.md
 ${CT_WEBDIR}/assets/ace/1.1.8/ace.js
@@ -3501,12 +3501,13 @@ ${CT_WEBDIR}/vendor/contao-components/compass/css/compass/utilities/text/_replac
 ${CT_WEBDIR}/vendor/leafo/scssphp/LICENSE.md
 ${CT_WEBDIR}/vendor/leafo/scssphp/README.md
 ${CT_WEBDIR}/vendor/leafo/scssphp/bin/pscss
-${CT_WEBDIR}/vendor/leafo/scssphp/classmap.php
 ${CT_WEBDIR}/vendor/leafo/scssphp/composer.json
 ${CT_WEBDIR}/vendor/leafo/scssphp/scss.inc.php
 ${CT_WEBDIR}/vendor/leafo/scssphp/src/Base/Range.php
+${CT_WEBDIR}/vendor/leafo/scssphp/src/Block.php
 ${CT_WEBDIR}/vendor/leafo/scssphp/src/Colors.php
 ${CT_WEBDIR}/vendor/leafo/scssphp/src/Compiler.php
+${CT_WEBDIR}/vendor/leafo/scssphp/src/Compiler/Environment.php
 ${CT_WEBDIR}/vendor/leafo/scssphp/src/Formatter.php
 ${CT_WEBDIR}/vendor/leafo/scssphp/src/Formatter/Compact.php
 ${CT_WEBDIR}/vendor/leafo/scssphp/src/Formatter/Compressed.php
@@ -3514,8 +3515,12 @@ ${CT_WEBDIR}/vendor/leafo/scssphp/src/Formatter/Crunched.php
 ${CT_WEBDIR}/vendor/leafo/scssphp/src/Formatter/Debug.php
 ${CT_WEBDIR}/vendor/leafo/scssphp/src/Formatter/Expanded.php
 ${CT_WEBDIR}/vendor/leafo/scssphp/src/Formatter/Nested.php
+${CT_WEBDIR}/vendor/leafo/scssphp/src/Formatter/OutputBlock.php
+${CT_WEBDIR}/vendor/leafo/scssphp/src/Node.php
+${CT_WEBDIR}/vendor/leafo/scssphp/src/Node/Number.php
 ${CT_WEBDIR}/vendor/leafo/scssphp/src/Parser.php
 ${CT_WEBDIR}/vendor/leafo/scssphp/src/Server.php
+${CT_WEBDIR}/vendor/leafo/scssphp/src/Type.php
 ${CT_WEBDIR}/vendor/leafo/scssphp/src/Util.php
 ${CT_WEBDIR}/vendor/leafo/scssphp/src/Version.php
 ${CT_WEBDIR}/vendor/matthiasmullie/minify/.coveralls.yml
@@ -3652,7 +3657,6 @@ ${CT_WEBDIR}/vendor/simplepie/simplepie/build/compile.php
 ${CT_WEBDIR}/vendor/simplepie/simplepie/build/header.txt
 ${CT_WEBDIR}/vendor/simplepie/simplepie/composer.json
 ${CT_WEBDIR}/vendor/simplepie/simplepie/db.sql
-${CT_WEBDIR}/vendor/simplepie/simplepie/demo/cache/.gitignore
 ${CT_WEBDIR}/vendor/simplepie/simplepie/idn/LICENCE
 ${CT_WEBDIR}/vendor/simplepie/simplepie/idn/ReadMe.txt
 ${CT_WEBDIR}/vendor/simplepie/simplepie/idn/idna_convert.class.php
