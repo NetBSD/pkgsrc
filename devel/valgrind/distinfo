@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2015/11/03 03:29:38 agc Exp $
+$NetBSD: distinfo,v 1.8 2015/11/28 10:12:57 alnsn Exp $
 
-SHA1 (valgrind-3.10.1.tar.bz2) = 15518427de842547ffa84eff8b2b67f3b16581a8
-RMD160 (valgrind-3.10.1.tar.bz2) = d645cf1fad68471de129b5338ff41a3533f1fb8a
-SHA512 (valgrind-3.10.1.tar.bz2) = 8f3d27637c13b06381b3dd44088244e0cf2f7008f40e46f34322f2a5bfa6373d29ce68ff49f19c48f1a5f139d8be5838b9606206e0ce2599c5f74c0db8ce2642
-Size (valgrind-3.10.1.tar.bz2) = 10967905 bytes
+SHA1 (valgrind-3.11.0.tar.bz2) = 340757e91d9e83591158fe8bb985c6b11bc53de5
+RMD160 (valgrind-3.11.0.tar.bz2) = 2fe13f93a85d8008f99b955dbb98351549073bd1
+SHA512 (valgrind-3.11.0.tar.bz2) = a25f97fa80aef4ad1e86b303886cd7a97aac248820a4c24e3d3dc26567dd7d2d86db237866468fd43885a9fb8534cb0a8e301a3c752fffbc231a2842272999da
+Size (valgrind-3.11.0.tar.bz2) = 11910809 bytes
