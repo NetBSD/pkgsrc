@@ -1,10 +1,13 @@
-# $NetBSD: Makefile,v 1.9 2015/02/01 04:49:39 taca Exp $
+# $NetBSD: Makefile,v 1.10 2015/11/28 06:02:08 taca Exp $
 #
 
 DISTNAME=	${CT_VERSION}
 PKGNAME=	contao${CT_VER}-${CT_PKGVER}
 CATEGORIES=	www
-MASTER_SITES=	${CT_MASTER_SITE}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=contao/}
+GITHUB_PROJECT=	core
+GITHUB_TAG=	${CT_VERSION}
+DIST_SUBDIR=	contao
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.contao.org/
@@ -20,7 +23,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-soap>=5.3.2:../../net/php-soap
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.2.7:../../archivers/php-zlib
 DEPENDS+=	bash>=4.0:../../shells/bash
 
-CT_VERS=	32
+CT_VERSION=	3.2.21
 USE_TOOLS=	bash pax
 NO_BUILD=	yes
 
