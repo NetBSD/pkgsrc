@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2014/11/07 08:16:45 alnsn Exp $
+@comment $NetBSD: PLIST,v 1.8 2015/11/28 20:50:07 wiedi Exp $
 bin/callgrind_annotate
 bin/callgrind_control
 bin/cg_annotate
@@ -25,6 +25,7 @@ include/valgrind/libvex_guest_ppc32.h
 include/valgrind/libvex_guest_ppc64.h
 include/valgrind/libvex_guest_s390x.h
 include/valgrind/libvex_guest_x86.h
+include/valgrind/libvex_guest_tilegx.h
 include/valgrind/libvex.h
 include/valgrind/libvex_ir.h
 include/valgrind/libvex_s390x_common.h
@@ -42,6 +43,7 @@ include/valgrind/pub_tool_deduppoolalloc.h
 include/valgrind/pub_tool_errormgr.h
 include/valgrind/pub_tool_execontext.h
 include/valgrind/pub_tool_gdbserver.h
+include/valgrind/pub_tool_guest.h
 include/valgrind/pub_tool_hashtable.h
 include/valgrind/pub_tool_libcassert.h
 include/valgrind/pub_tool_libcbase.h
@@ -64,6 +66,7 @@ include/valgrind/pub_tool_sparsewa.h
 include/valgrind/pub_tool_stacktrace.h
 include/valgrind/pub_tool_threadstate.h
 include/valgrind/pub_tool_tooliface.h
+include/valgrind/pub_tool_transtab.h
 include/valgrind/pub_tool_vki.h
 include/valgrind/pub_tool_vkiscnums_asm.h
 include/valgrind/pub_tool_vkiscnums.h
@@ -99,7 +102,10 @@ include/valgrind/vki/vki-scnums-mips64-linux.h
 include/valgrind/vki/vki-scnums-ppc32-linux.h
 include/valgrind/vki/vki-scnums-ppc64-linux.h
 include/valgrind/vki/vki-scnums-s390x-linux.h
+include/valgrind/vki/vki-scnums-solaris.h
 include/valgrind/vki/vki-scnums-x86-linux.h
+include/valgrind/vki/vki-solaris-repcache.h
+include/valgrind/vki/vki-solaris.h
 include/valgrind/vki/vki-x86-linux.h
 include/valgrind/vki/vki-xen-domctl.h
 include/valgrind/vki/vki-xen-evtchn.h
@@ -108,10 +114,13 @@ include/valgrind/vki/vki-xen.h
 include/valgrind/vki/vki-xen-hvm.h
 include/valgrind/vki/vki-xen-memory.h
 include/valgrind/vki/vki-xen-mmuext.h
+include/valgrind/vki/vki-xen-physdev.h
+include/valgrind/vki/vki-xen-schedop.h
 include/valgrind/vki/vki-xen-sysctl.h
 include/valgrind/vki/vki-xen-tmem.h
 include/valgrind/vki/vki-xen-version.h
 include/valgrind/vki/vki-xen-x86.h
+include/valgrind/vki/vki-xen-xsm.h
 lib/pkgconfig/valgrind.pc
 lib/valgrind/32bit-core-valgrind-s1.xml
 lib/valgrind/32bit-core-valgrind-s2.xml
@@ -163,6 +172,7 @@ lib/valgrind/lackey-${VGCONF_ARCH_PRI}-${LOWER_OPSYS}
 lib/valgrind/libcoregrind-${VGCONF_ARCH_PRI}-${LOWER_OPSYS}.a
 lib/valgrind/libreplacemalloc_toolpreload-${VGCONF_ARCH_PRI}-${LOWER_OPSYS}.a
 lib/valgrind/libvex-${VGCONF_ARCH_PRI}-${LOWER_OPSYS}.a
+lib/valgrind/libvexmultiarch-${VGCONF_ARCH_PRI}-${LOWER_OPSYS}.a
 lib/valgrind/massif-${VGCONF_ARCH_PRI}-${LOWER_OPSYS}
 lib/valgrind/memcheck-${VGCONF_ARCH_PRI}-${LOWER_OPSYS}
 lib/valgrind/mips64-cp0-valgrind-s1.xml
@@ -258,6 +268,7 @@ share/doc/valgrind/html/dist.readme-mips.html
 share/doc/valgrind/html/dist.readme-missing.html
 share/doc/valgrind/html/dist.readme-packagers.html
 share/doc/valgrind/html/dist.readme-s390.html
+share/doc/valgrind/html/dist.readme-solaris.html
 share/doc/valgrind/html/drd-manual.html
 share/doc/valgrind/html/faq.html
 share/doc/valgrind/html/FAQ.html
