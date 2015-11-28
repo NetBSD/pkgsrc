@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2015/11/28 07:33:38 wen Exp $
+include/nlopt.f
+include/nlopt.h
+include/nlopt.hpp
+lib/libnlopt.la
+lib/pkgconfig/nlopt.pc
+man/man3/nlopt.3
