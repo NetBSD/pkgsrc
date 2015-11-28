@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2015/11/28 06:02:08 taca Exp $
+# $NetBSD: Makefile,v 1.11 2015/11/28 06:04:17 taca Exp $
 #
 
 DISTNAME=	${CT_VERSION}
@@ -10,7 +10,7 @@ GITHUB_TAG=	${CT_VERSION}
 DIST_SUBDIR=	contao
 
 MAINTAINER=	taca@NetBSD.org
-HOMEPAGE=	http://www.contao.org/
+HOMEPAGE=	https://contao.org/
 COMMENT=	Contao Open Source CMS ${CT_VERSION}
 LICENSE=	gnu-lgpl-v3
 
