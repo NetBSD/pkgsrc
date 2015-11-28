@@ -1,4 +1,4 @@
-$NetBSD: README.MacOSX,v 1.26 2015/11/08 14:41:17 sevan Exp $
+$NetBSD: README.MacOSX,v 1.27 2015/11/28 23:24:54 sevan Exp $
 
 This file describes the use of current versions of pkgsrc with
 multiple versions of Darwin and OS X, omitting information about previous pkgsrc
@@ -79,6 +79,9 @@ App Store.
 In 10.11, XCode has been reported as unsuitable [TODO: add details,
 but it seems it doesn't include an SDK for itself].  Instead, it is
 recommend to install command-line tools.
+
+Command Line Tools for Xcode can be obtained from
+https://developer.apple.com/downloads/
 
 ** cvs
 
