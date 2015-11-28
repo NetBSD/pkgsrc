@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4772 2015/11/28 07:10:29 taca Exp $
+$NetBSD: CHANGES-2015,v 1.4773 2015/11/28 07:37:12 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -7998,3 +7998,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/p5-Catalyst-Runtime to 5.90103 [mef 2015-11-27]
 	Updated www/contao35 to 3.5.6 [taca 2015-11-28]
 	Updated lang/php56 to 5.6.16 [taca 2015-11-28]
+	Added math/nlopt version 2.4.2 [wen 2015-11-28]
