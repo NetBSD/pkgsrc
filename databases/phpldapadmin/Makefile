@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2015/03/24 16:34:12 fhajny Exp $
+# $NetBSD: Makefile,v 1.39 2015/11/29 11:25:53 taca Exp $
 
 DISTNAME=	phpldapadmin-${VERSION}
 PKGREVISION=	1
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://phpldapadmin.sourceforge.net/
 COMMENT=	Set of PHP-scripts to administer an LDAP directory over the WWW
 LICENSE=	gnu-gpl-v2
-
-PHP_VERSIONS_ACCEPTED=	54
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../lang/php/phpversion.mk"
