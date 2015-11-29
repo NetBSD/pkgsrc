@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.15 2015/06/13 00:01:37 taca Exp $
+@comment $NetBSD: PLIST,v 1.16 2015/11/29 14:59:13 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/Capybara.md
 ${GEM_LIBDIR}/Changelog.md
-${GEM_LIBDIR}/License.txt
+${GEM_LIBDIR}/License.md
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/lib/generators/rspec.rb
 ${GEM_LIBDIR}/lib/generators/rspec/controller/controller_generator.rb
@@ -60,6 +60,7 @@ ${GEM_LIBDIR}/lib/rspec/rails/extensions/active_record/proxy.rb
 ${GEM_LIBDIR}/lib/rspec/rails/feature_check.rb
 ${GEM_LIBDIR}/lib/rspec/rails/fixture_support.rb
 ${GEM_LIBDIR}/lib/rspec/rails/matchers.rb
+${GEM_LIBDIR}/lib/rspec/rails/matchers/active_job.rb
 ${GEM_LIBDIR}/lib/rspec/rails/matchers/be_a_new.rb
 ${GEM_LIBDIR}/lib/rspec/rails/matchers/be_new_record.rb
 ${GEM_LIBDIR}/lib/rspec/rails/matchers/be_valid.rb
