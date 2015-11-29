@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4781 2015/11/29 12:13:31 taca Exp $
+$NetBSD: CHANGES-2015,v 1.4782 2015/11/29 12:37:38 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8007,3 +8007,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/ruby-mysql2 to 0.4.2 [taca 2015-11-29]
 	Updated databases/ruby-pg to 0.18.4 [taca 2015-11-29]
 	Updated databases/ruby-sequel to 4.28.0 [taca 2015-11-29]
+	Updated devel/ruby-backports to 3.6.7 [taca 2015-11-29]
