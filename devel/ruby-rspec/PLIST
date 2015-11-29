@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.8 2012/06/02 00:47:46 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2015/11/29 14:53:59 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/License.txt
+${GEM_LIBDIR}/LICENSE.md
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/lib/rspec.rb
 ${GEM_LIBDIR}/lib/rspec/version.rb
