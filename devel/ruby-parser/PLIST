@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.9 2015/06/04 14:35:13 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2015/11/29 14:24:22 taca Exp $
 bin/ruby_parse${RUBY_SUFFIX}
 bin/ruby_parse_extract_error${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.autotest
-${GEM_LIBDIR}/.gemtest
 ${GEM_LIBDIR}/History.txt
 ${GEM_LIBDIR}/Manifest.txt
 ${GEM_LIBDIR}/README.txt
