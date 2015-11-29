@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4784 2015/11/29 13:17:48 leot Exp $
+$NetBSD: CHANGES-2015,v 1.4785 2015/11/29 13:55:24 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8010,3 +8010,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ruby-backports to 3.6.7 [taca 2015-11-29]
 	Updated print/cups-filters to 1.2.0 [leot 2015-11-29]
 	Updated mail/msmtp to 1.6.3 [leot 2015-11-29]
+	Updated devel/ruby-fast_gettext to 1.0.0 [taca 2015-11-29]
