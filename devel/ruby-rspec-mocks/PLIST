@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.13 2015/09/13 11:54:16 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2015/11/29 14:51:46 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/Changelog.md
-${GEM_LIBDIR}/License.txt
+${GEM_LIBDIR}/LICENSE.md
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/lib/rspec/mocks.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/any_instance.rb
@@ -33,18 +33,16 @@ ${GEM_LIBDIR}/lib/rspec/mocks/message_expectation.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/method_double.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/method_reference.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/mutate_const.rb
-${GEM_LIBDIR}/lib/rspec/mocks/mutex.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/object_reference.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/order_group.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/proxy.rb
-${GEM_LIBDIR}/lib/rspec/mocks/reentrant_mutex.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/space.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/standalone.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/syntax.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/targets.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/test_double.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/verifying_double.rb
-${GEM_LIBDIR}/lib/rspec/mocks/verifying_message_expecation.rb
+${GEM_LIBDIR}/lib/rspec/mocks/verifying_message_expectation.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/verifying_proxy.rb
 ${GEM_LIBDIR}/lib/rspec/mocks/version.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
