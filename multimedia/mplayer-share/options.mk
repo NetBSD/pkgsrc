@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.53 2015/11/21 09:47:23 leot Exp $
+# $NetBSD: options.mk,v 1.54 2015/11/29 11:48:29 leot Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
@@ -168,7 +168,6 @@ CONFIGURE_ARGS+=	--disable-libdv
 .endif
 
 .if !empty(PKG_OPTIONS:Mdvdread)
-CONFIGURE_ARGS+=	--enable-dvdread
 .  include "../../multimedia/libdvdread/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-dvdread
