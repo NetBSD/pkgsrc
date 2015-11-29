@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4795 2015/11/29 15:00:27 taca Exp $
+$NetBSD: CHANGES-2015,v 1.4796 2015/11/29 15:21:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8024,3 +8024,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ruby-rspec-mocks to 3.4.0 [taca 2015-11-29]
 	Updated devel/ruby-rspec to 3.4.0 [taca 2015-11-29]
 	Updated devel/ruby-rspec-rails to 3.4.0 [taca 2015-11-29]
+	Updated devel/ruby-tins to 1.7.0 [taca 2015-11-29]
