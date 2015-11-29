@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2015/10/04 12:29:46 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/11/29 15:20:41 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.travis.yml
@@ -77,10 +77,8 @@ ${GEM_LIBDIR}/lib/tins/proc_prelude.rb
 ${GEM_LIBDIR}/lib/tins/range_plus.rb
 ${GEM_LIBDIR}/lib/tins/require_maybe.rb
 ${GEM_LIBDIR}/lib/tins/responding.rb
-${GEM_LIBDIR}/lib/tins/rotate.rb
 ${GEM_LIBDIR}/lib/tins/secure_write.rb
 ${GEM_LIBDIR}/lib/tins/sexy_singleton.rb
-${GEM_LIBDIR}/lib/tins/shuffle.rb
 ${GEM_LIBDIR}/lib/tins/string_byte_order_mark.rb
 ${GEM_LIBDIR}/lib/tins/string_camelize.rb
 ${GEM_LIBDIR}/lib/tins/string_underscore.rb
@@ -130,7 +128,6 @@ ${GEM_LIBDIR}/lib/tins/xt/responding.rb
 ${GEM_LIBDIR}/lib/tins/xt/rotate.rb
 ${GEM_LIBDIR}/lib/tins/xt/secure_write.rb
 ${GEM_LIBDIR}/lib/tins/xt/sexy_singleton.rb
-${GEM_LIBDIR}/lib/tins/xt/shuffle.rb
 ${GEM_LIBDIR}/lib/tins/xt/string.rb
 ${GEM_LIBDIR}/lib/tins/xt/string_byte_order_mark.rb
 ${GEM_LIBDIR}/lib/tins/xt/string_camelize.rb
@@ -188,7 +185,6 @@ ${GEM_LIBDIR}/tests/rotate_test.rb
 ${GEM_LIBDIR}/tests/scope_test.rb
 ${GEM_LIBDIR}/tests/secure_write_test.rb
 ${GEM_LIBDIR}/tests/sexy_singleton_test.rb
-${GEM_LIBDIR}/tests/shuffle_test.rb
 ${GEM_LIBDIR}/tests/string_byte_order_mark_test.rb
 ${GEM_LIBDIR}/tests/string_camelize_test.rb
 ${GEM_LIBDIR}/tests/string_underscore_test.rb
