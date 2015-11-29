@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4782 2015/11/29 12:37:38 taca Exp $
+$NetBSD: CHANGES-2015,v 1.4783 2015/11/29 12:42:39 leot Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8008,3 +8008,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/ruby-pg to 0.18.4 [taca 2015-11-29]
 	Updated databases/ruby-sequel to 4.28.0 [taca 2015-11-29]
 	Updated devel/ruby-backports to 3.6.7 [taca 2015-11-29]
+	Updated print/cups-filters to 1.2.0 [leot 2015-11-29]
