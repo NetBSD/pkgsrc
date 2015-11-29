@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.13 2015/06/12 23:58:07 taca Exp $
+@comment $NetBSD: PLIST,v 1.14 2015/11/29 14:49:49 taca Exp $
 bin/rspec${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/Changelog.md
-${GEM_LIBDIR}/License.txt
+${GEM_LIBDIR}/LICENSE.md
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/exe/rspec
 ${GEM_LIBDIR}/lib/rspec/autorun.rb
@@ -14,7 +14,6 @@ ${GEM_LIBDIR}/lib/rspec/core/bisect/coordinator.rb
 ${GEM_LIBDIR}/lib/rspec/core/bisect/example_minimizer.rb
 ${GEM_LIBDIR}/lib/rspec/core/bisect/runner.rb
 ${GEM_LIBDIR}/lib/rspec/core/bisect/server.rb
-${GEM_LIBDIR}/lib/rspec/core/bisect/subset_enumerator.rb
 ${GEM_LIBDIR}/lib/rspec/core/configuration.rb
 ${GEM_LIBDIR}/lib/rspec/core/configuration_options.rb
 ${GEM_LIBDIR}/lib/rspec/core/drb.rb
@@ -37,6 +36,7 @@ ${GEM_LIBDIR}/lib/rspec/core/formatters/fallback_message_formatter.rb
 ${GEM_LIBDIR}/lib/rspec/core/formatters/helpers.rb
 ${GEM_LIBDIR}/lib/rspec/core/formatters/html_formatter.rb
 ${GEM_LIBDIR}/lib/rspec/core/formatters/html_printer.rb
+${GEM_LIBDIR}/lib/rspec/core/formatters/html_snippet_extractor.rb
 ${GEM_LIBDIR}/lib/rspec/core/formatters/json_formatter.rb
 ${GEM_LIBDIR}/lib/rspec/core/formatters/profile_formatter.rb
 ${GEM_LIBDIR}/lib/rspec/core/formatters/progress_formatter.rb
@@ -52,7 +52,6 @@ ${GEM_LIBDIR}/lib/rspec/core/mocking_adapters/mocha.rb
 ${GEM_LIBDIR}/lib/rspec/core/mocking_adapters/null.rb
 ${GEM_LIBDIR}/lib/rspec/core/mocking_adapters/rr.rb
 ${GEM_LIBDIR}/lib/rspec/core/mocking_adapters/rspec.rb
-${GEM_LIBDIR}/lib/rspec/core/mutex.rb
 ${GEM_LIBDIR}/lib/rspec/core/notifications.rb
 ${GEM_LIBDIR}/lib/rspec/core/option_parser.rb
 ${GEM_LIBDIR}/lib/rspec/core/ordering.rb
@@ -62,7 +61,6 @@ ${GEM_LIBDIR}/lib/rspec/core/project_initializer.rb
 ${GEM_LIBDIR}/lib/rspec/core/project_initializer/.rspec
 ${GEM_LIBDIR}/lib/rspec/core/project_initializer/spec/spec_helper.rb
 ${GEM_LIBDIR}/lib/rspec/core/rake_task.rb
-${GEM_LIBDIR}/lib/rspec/core/reentrant_mutex.rb
 ${GEM_LIBDIR}/lib/rspec/core/reporter.rb
 ${GEM_LIBDIR}/lib/rspec/core/ruby_project.rb
 ${GEM_LIBDIR}/lib/rspec/core/runner.rb
@@ -71,6 +69,11 @@ ${GEM_LIBDIR}/lib/rspec/core/set.rb
 ${GEM_LIBDIR}/lib/rspec/core/shared_context.rb
 ${GEM_LIBDIR}/lib/rspec/core/shared_example_group.rb
 ${GEM_LIBDIR}/lib/rspec/core/shell_escape.rb
+${GEM_LIBDIR}/lib/rspec/core/source.rb
+${GEM_LIBDIR}/lib/rspec/core/source/location.rb
+${GEM_LIBDIR}/lib/rspec/core/source/node.rb
+${GEM_LIBDIR}/lib/rspec/core/source/syntax_highlighter.rb
+${GEM_LIBDIR}/lib/rspec/core/source/token.rb
 ${GEM_LIBDIR}/lib/rspec/core/test_unit_assertions_adapter.rb
 ${GEM_LIBDIR}/lib/rspec/core/version.rb
 ${GEM_LIBDIR}/lib/rspec/core/warnings.rb
