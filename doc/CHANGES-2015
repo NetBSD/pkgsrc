@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4793 2015/11/29 14:45:16 taca Exp $
+$NetBSD: CHANGES-2015,v 1.4794 2015/11/29 14:56:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8019,3 +8019,7 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ruby-parser to 3.7.2 [taca 2015-11-29]
 	Updated devel/ruby-power_assert to 0.2.6 [taca 2015-11-29]
 	Updated devel/ruby-racc to 1.4.14 [taca 2015-11-29]
+	Updated devel/ruby-rspec-support to 3.4.1 [taca 2015-11-29]
+	Updated devel/ruby-rspec-core to 3.4.1 [taca 2015-11-29]
+	Updated devel/ruby-rspec-mocks to 3.4.0 [taca 2015-11-29]
+	Updated devel/ruby-rspec to 3.4.0 [taca 2015-11-29]
