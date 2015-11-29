@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2015/10/04 12:20:21 taca Exp $
+# $NetBSD: Makefile,v 1.9 2015/11/29 14:15:17 taca Exp $
 
-DISTNAME=	minitest-5.8.1
+DISTNAME=	minitest-5.8.3
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
