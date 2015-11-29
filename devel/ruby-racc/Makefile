@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2015/02/01 16:31:25 taca Exp $
+# $NetBSD: Makefile,v 1.21 2015/11/29 14:44:19 taca Exp $
 
-DISTNAME=	racc-1.4.12
+DISTNAME=	racc-1.4.14
 CATEGORIES=	devel ruby
 
 MAINTAINER=	taca@NetBSD.org
@@ -8,7 +8,7 @@ HOMEPAGE=	https://github.com/tenderlove/racc
 COMMENT=	LALR(1) parser generator for Ruby
 LICENSE=	gnu-lgpl-v2
 
-CONFLICTS+=	ruby[1-9][0-9]-racc-* ruby[1-9][0-9][0-9]-racc-*
+RUBYGEM_OPTIONS+=	--format-executable
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
