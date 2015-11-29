@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 01:56:12 agc Exp $
+$NetBSD: distinfo,v 1.5 2015/11/29 18:35:37 wiedi Exp $
 
-SHA1 (hiredis-0.13.2.tar.gz) = 49481f5807e46713dcec6bde8a9b2a40f4ba7b59
-RMD160 (hiredis-0.13.2.tar.gz) = bb5e389aefdcba2e64cca285b24e824645437a23
-SHA512 (hiredis-0.13.2.tar.gz) = e100dcf009d60fa78a02944f857e9576cf082365af0c8b6d87edaf1ec8e492bb4eb6c88ea90185fc3a5298ed9fb142b2e0955a090b6ee1e71405c2016d993d0d
-Size (hiredis-0.13.2.tar.gz) = 58206 bytes
+SHA1 (hiredis-0.13.3.tar.gz) = be6f1c50fc4d649dd2924f0afecc0a1705dbe0d3
+RMD160 (hiredis-0.13.3.tar.gz) = 0183a5bfffa09fa51bc89667081d89c619b85037
+SHA512 (hiredis-0.13.3.tar.gz) = 0d8b71d5ee4105e8aaeeee308795afc2c1f60a04b0bfe8ae873d800a0c157882ec307efa04a8d0e63b538fd3fc3f88eedf4d46cb87c8937e2403927aeb7e434c
+Size (hiredis-0.13.3.tar.gz) = 58291 bytes
 SHA1 (patch-Makefile) = f0c189ce10ed32d9a31a30b2067a03460e852fd1
