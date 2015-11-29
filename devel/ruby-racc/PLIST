@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.14 2015/03/08 15:17:19 taca Exp $
-bin/racc
-bin/racc2y
-bin/y2racc
+@comment $NetBSD: PLIST,v 1.15 2015/11/29 14:44:19 taca Exp $
+bin/racc${RUBY_SUFFIX}
+bin/racc2y${RUBY_SUFFIX}
+bin/y2racc${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_EXTSDIR}/racc/cparse.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/gem.build_complete
-${GEM_LIBDIR}/.gemtest
+${GEM_EXTSDIR}/racc/cparse.${RUBY_DLEXT}
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/ChangeLog
 ${GEM_LIBDIR}/DEPENDS
@@ -70,6 +69,7 @@ ${GEM_LIBDIR}/test/assets/conf.y
 ${GEM_LIBDIR}/test/assets/digraph.y
 ${GEM_LIBDIR}/test/assets/echk.y
 ${GEM_LIBDIR}/test/assets/err.y
+${GEM_LIBDIR}/test/assets/error_recovery.y
 ${GEM_LIBDIR}/test/assets/expect.y
 ${GEM_LIBDIR}/test/assets/firstline.y
 ${GEM_LIBDIR}/test/assets/ichk.y
