@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4789 2015/11/29 14:21:55 taca Exp $
+$NetBSD: CHANGES-2015,v 1.4790 2015/11/29 14:23:37 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8015,3 +8015,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ruby-gettext_i18n_rails to 1.3.1 [taca 2015-11-29]
 	Updated devel/ruby-minitest to 5.8.3 [taca 2015-11-29]
 	Updated devel/ruby-mixlib-shellout to 2.2.3 [taca 2015-11-29]
+	Updated devel/ruby-msgpack to 0.7.1 [taca 2015-11-29]
