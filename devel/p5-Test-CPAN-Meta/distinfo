@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/11/30 13:33:25 mef Exp $
+
+SHA1 (Test-CPAN-Meta-0.25.tar.gz) = 54faf28859ccd3b0bad6f65e3c1aecd464e22a33
+RMD160 (Test-CPAN-Meta-0.25.tar.gz) = 8db2f2f5456c52e5ce048d89bf695daecc0d46f1
+SHA512 (Test-CPAN-Meta-0.25.tar.gz) = 60a3414e1e0f9aaa1a9459aedd76a6d937742a4197d0d5ce9330348138997d372ca3f454c262fb6dd757699168aa7d1c2653c4066060c9c5685a6fe407260580
+Size (Test-CPAN-Meta-0.25.tar.gz) = 17671 bytes
