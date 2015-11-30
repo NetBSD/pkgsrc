@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4799 2015/11/30 13:35:44 mef Exp $
+$NetBSD: CHANGES-2015,v 1.4800 2015/11/30 14:10:15 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8028,3 +8028,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/hiredis to 0.13.3 [wiedi 2015-11-29]
 	Updated converters/help2man to 1.47.3 [adam 2015-11-30]
 	Added devel/p5-CPAN-Meta version 2.150005 [mef 2015-11-30]
+	Added devel/p5-Test-EOL version 1.6 [mef 2015-11-30]
