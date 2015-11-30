@@ -1,4 +1,4 @@
-/* $NetBSD: netaddr.c,v 1.8 2014/03/14 09:45:31 jperkin Exp $ */
+/* $NetBSD: netaddr.c,v 1.9 2015/11/30 20:46:57 asau Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -37,6 +37,7 @@
 #include <arpa/inet.h>
 #include <errno.h>
 #include <netinet/in.h>
+#include <netdb.h>
 #include <nbcompat/stdlib.h>
 #include <nbcompat/string.h>
 
@@ -52,9 +53,12 @@ parse_sockaddr_in(const char *str, struct sockaddr_in *addr)
 
 	if ((port_sep = strrchr(str, ':')) != NULL) {
 		char *addr_part = strdup(str);
+		struct hostent *he;
 
 		addr_part[port_sep - str] = '\0';
-		if (inet_aton(addr_part, &in) == 0) {
+		if ((he = gethostbyname(addr_part)) != NULL) {
+			memmove(&in, he->h_addr, sizeof(in));
+		} else if (inet_aton(addr_part, &in) == 0) {
 			free(addr_part);
 			return -1;
 		}
