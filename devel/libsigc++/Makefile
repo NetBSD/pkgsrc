@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.47 2015/10/15 12:05:06 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2015/11/30 14:27:44 adam Exp $
 
-DISTNAME=	libsigc++-2.6.1
+DISTNAME=	libsigc++-2.6.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libsigc++/2.6/}
 EXTRACT_SUFX=	.tar.xz
@@ -14,14 +14,13 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gm4 gmake perl:build
 GNU_CONFIGURE=		yes
+PKGCONFIG_OVERRIDE=	sigc++.pc.in
 
 CONFLICTS+=		libsigc++2-[0-9]*
 GCC_REQD+=		4.7
 
 # use something that can extract long filenames in GNU format on NetBSD 1.6.x
 EXTRACT_USING=		bsdtar
-
-PKGCONFIG_OVERRIDE=	sigc++.pc.in
 
 TEST_TARGET=		check
 
