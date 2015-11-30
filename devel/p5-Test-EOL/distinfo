@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/11/30 14:08:51 mef Exp $
+
+SHA1 (Test-EOL-1.6.tar.gz) = d58cc2cd2698339dc5b088ef2624d9be8b378ce6
+RMD160 (Test-EOL-1.6.tar.gz) = 59f75f0abd092d3aca8292a3a32e52794ae44c72
+SHA512 (Test-EOL-1.6.tar.gz) = 7bc11f6fc2e361f9d2cd97626ba0d8f13ad3118c451d1d6b445f39608aba594e374cc51dec9d872aa831ad69d8b49852044e6edfc64bb8a7804969d8cfaed4cd
+Size (Test-EOL-1.6.tar.gz) = 18617 bytes
