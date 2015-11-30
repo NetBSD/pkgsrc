@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2015/11/27 10:33:21 jperkin Exp $
+# $NetBSD: Makefile,v 1.15 2015/11/30 14:36:35 tnn Exp $
 
 DISTNAME=	libepoxy-1.3.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_GITHUB:=anholt/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -23,18 +23,33 @@ PYTHON_FOR_BUILD_ONLY=	yes
 
 PLIST_VARS+=		egl glx
 
-.if ${OPSYS} == "Darwin"
-BUILD_EGL=	no
-BUILD_GLX=	no
-.else
-BUILD_EGL=	${MESALIB_SUPPORTS_EGL}
+PKG_OPTIONS_VAR=	PKG_OPTIONS.libepoxy
+PKG_SUPPORTED_OPTIONS=	x11
+PKG_SUGGESTED_OPTIONS=	x11
+
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mx11)
 BUILD_GLX=	yes
-CPPFLAGS+=	-DGLX_LIB=\"${PREFIX}/lib/libGL.dylib\"
 PLIST.glx=	yes
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
-.  if !empty(MESALIB_SUPPORTS_EGL:Myes)
+.  if ${OPSYS} == "Darwin"
+BUILD_EGL=	no
+.    if ${X11_TYPE} == "modular"
+CPPFLAGS+=	-DGLX_LIB=\"${PREFIX}/lib/libGL.dylib\"
+.    endif
+.  else # ! Darwin
+BUILD_EGL=	${MESALIB_SUPPORTS_EGL}
+.    if !empty(MESALIB_SUPPORTS_EGL:Myes)
 PLIST.egl=	yes
+.    endif
+.  endif
+.else # ! x11
+BUILD_GLX=	no
+BUILD_EGL=	no
+.  if !(${OPSYS} == "Darwin" && ${X11_TYPE} == "native")
+PKG_FAIL_REASON=	"The x11 option must be enabled on this platform/configuration."
 .  endif
 .endif
 
