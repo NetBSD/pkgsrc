@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2015/06/12 10:52:00 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2015/11/30 15:14:53 mef Exp $
 #
 
 DISTNAME=	HTML-Scrubber-0.11
@@ -11,7 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Extension for scrubbing/sanitizing html
 LICENSE=	${PERL5_LICENSE}
 
-DEPENDS+=		p5-HTML-Parser>=3.47:../../www/p5-HTML-Parser
+DEPENDS+=	p5-HTML-Parser>=3.47:../../www/p5-HTML-Parser
+BUILD_DEPENDS+=	p5-Test-NoTabs-[0-9]*:../../devel/p5-Test-NoTabs
 
 PERL5_MODULE_TYPE=	Module::Build
 
