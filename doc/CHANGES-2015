@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4801 2015/11/30 14:35:56 adam Exp $
+$NetBSD: CHANGES-2015,v 1.4802 2015/11/30 16:22:56 roy Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8030,3 +8030,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/p5-CPAN-Meta version 2.150005 [mef 2015-11-30]
 	Added devel/p5-Test-EOL version 1.6 [mef 2015-11-30]
 	Updated devel/libsigc++ to 2.6.2 [adam 2015-11-30]
+	Updated net/dhcpcd to 6.9.4 [roy 2015-11-30]
