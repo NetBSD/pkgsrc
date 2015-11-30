@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4797 2015/11/29 18:36:12 wiedi Exp $
+$NetBSD: CHANGES-2015,v 1.4798 2015/11/30 11:59:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8026,3 +8026,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ruby-rspec-rails to 3.4.0 [taca 2015-11-29]
 	Updated devel/ruby-tins to 1.7.0 [taca 2015-11-29]
 	Updated databases/hiredis to 0.13.3 [wiedi 2015-11-29]
+	Updated converters/help2man to 1.47.3 [adam 2015-11-30]
