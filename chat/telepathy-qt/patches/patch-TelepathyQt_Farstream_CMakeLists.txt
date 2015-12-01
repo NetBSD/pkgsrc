@@ -1,0 +1,14 @@
+$NetBSD: patch-TelepathyQt_Farstream_CMakeLists.txt,v 1.1 2015/12/01 13:11:49 jaapb Exp $
+
+Search for gst/gstconfig.h explicitly. Patch is in upstream repository:
+http://cgit.freedesktop.org/telepathy/telepathy-qt/commit/?id=ec4a3d62b68a57254515f01fc5ea3325ffb1dbfb
+--- TelepathyQt/Farstream/CMakeLists.txt.orig	2015-05-24 19:33:18.000000000 +0000
++++ TelepathyQt/Farstream/CMakeLists.txt
+@@ -3,6 +3,7 @@ if(FARSTREAM_COMPONENTS_FOUND)
+                         ${TELEPATHY_GLIB_INCLUDE_DIR}
+                         ${FARSTREAM_INCLUDE_DIR}
+                         ${GSTREAMER_INCLUDE_DIR}
++                        ${GSTREAMER_INCLUDE_DIRS}
+                         ${GLIB2_INCLUDE_DIR}
+                         ${LIBXML2_INCLUDE_DIR}
+                         ${DBUS_INCLUDE_DIR})
