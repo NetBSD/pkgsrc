@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4805 2015/12/01 08:33:50 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.4806 2015/12/01 08:37:45 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8038,3 +8038,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-mock to 1.3.0nb1 [fhajny 2015-12-01]
 	Updated devel/py-dialog to 3.3.0 [fhajny 2015-12-01]
 	Updated devel/py-dialog2 to 3.3.0 [fhajny 2015-12-01]
+	Added time/py-rfc3339 version 1.0 [fhajny 2015-12-01]
