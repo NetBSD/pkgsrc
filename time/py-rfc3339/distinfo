@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/12/01 08:37:29 fhajny Exp $
+
+SHA1 (pyRFC3339-1.0.tar.gz) = a27e8ae4e36d1eb3a89e3905136ed05d10a1f1b7
+RMD160 (pyRFC3339-1.0.tar.gz) = cb2c3fbe046b22209c101b99455199459aae3ad5
+SHA512 (pyRFC3339-1.0.tar.gz) = abcfcfcf516ab60214dc11de618d37415da2177387f51f85da99ef18b8cc0d37ed55f0ea6ba3e61292ce5a319838f322e01c1c9f3c0c4edb8341b4b135e575e3
+Size (pyRFC3339-1.0.tar.gz) = 9325 bytes
