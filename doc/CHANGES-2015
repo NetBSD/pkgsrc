@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4802 2015/11/30 16:22:56 roy Exp $
+$NetBSD: CHANGES-2015,v 1.4803 2015/12/01 07:55:08 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8031,3 +8031,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/p5-Test-EOL version 1.6 [mef 2015-11-30]
 	Updated devel/libsigc++ to 2.6.2 [adam 2015-11-30]
 	Updated net/dhcpcd to 6.9.4 [roy 2015-11-30]
+	Added devel/py-ZopeEvent version 4.1.0 [fhajny 2015-12-01]
+	Updated devel/py-ZopeInterface to 4.1.3 [fhajny 2015-12-01]
+	Updated devel/py-ZopeComponent to 4.2.2 [fhajny 2015-12-01]
