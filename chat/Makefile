@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.181 2015/12/01 13:01:03 jaapb Exp $
+# $NetBSD: Makefile,v 1.182 2015/12/01 13:04:52 jaapb Exp $
 #
 
 COMMENT=	Communication programs
@@ -113,6 +113,7 @@ SUBDIR+=	smirk
 SUBDIR+=	spectrum
 SUBDIR+=	swift
 SUBDIR+=	telepathy-farsight
+SUBDIR+=	telepathy-farstream
 SUBDIR+=	telepathy-gabble
 SUBDIR+=	telepathy-glib
 SUBDIR+=	telepathy-idle
