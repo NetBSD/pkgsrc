@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2015/12/01 12:25:38 mef Exp $
+# $NetBSD: Makefile,v 1.2 2015/12/01 12:30:27 mef Exp $
 
 DISTNAME=	Test-Stream-1.302026
+PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/E/EX/EXODIST/
 
