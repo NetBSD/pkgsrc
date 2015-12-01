@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/12/01 07:58:50 fhajny Exp $
+
+SHA1 (funcsigs-0.4.tar.gz) = 928ad451d02d4556af829aede70527b02ff5e2a3
+RMD160 (funcsigs-0.4.tar.gz) = 1bfa9cbac20d2993543d892c8f7a8835a540f744
+SHA512 (funcsigs-0.4.tar.gz) = 0a5d2a2eca954344b0fc5d4de6457bd191097faf8fe6c38097953fb576de8a59d9573426b7da6fe40bba5205f73e909294bc4659971b615b84701a7ad4ba0d25
+Size (funcsigs-0.4.tar.gz) = 24832 bytes
