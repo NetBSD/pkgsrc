@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2015/04/13 23:12:41 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2015/12/01 08:32:51 fhajny Exp $
 
-VERSION=	3.2.1
+VERSION=	3.3.0
 DISTNAME=	pythondialog-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-dialog-${VERSION}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pythondialog/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pythondialog/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pythondialog.sourceforge.net/
