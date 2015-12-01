@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4814 2015/12/01 14:08:01 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.4815 2015/12/01 16:04:16 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8048,3 +8048,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added chat/telepathy-qt version 0.9.6.1 [jaapb 2015-12-01]
 	Added chat/telepathy-haze version 0.8.0 [jaapb 2015-12-01]
 	Updated sysutils/py-psutil to 3.3.0 [ryoon 2015-12-01]
+	Updated www/mediawiki to 1.26.0 [wen 2015-12-01]
