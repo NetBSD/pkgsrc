@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2014/12/30 17:04:15 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2 2015/12/01 13:04:53 fhajny Exp $
 
 DISTNAME=	python-augeas-0.5.0
+PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}/}
 CATEGORIES=	sysutils
 MASTER_SITES=	https://fedorahosted.org/released/python-augeas/
 
