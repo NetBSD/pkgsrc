@@ -1,0 +1,5 @@
+This is the primary interface for loading Test::Stream based tools. This
+module is responsible for loading bundles and plugins for the tools you
+want. By default you are required to specify at least 1 plugin or bundle to
+load. You can subclass Test::Stream to have your own default plugins or
+bundles.
