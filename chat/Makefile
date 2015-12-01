@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.180 2015/06/04 20:20:50 youri Exp $
+# $NetBSD: Makefile,v 1.181 2015/12/01 13:01:03 jaapb Exp $
 #
 
 COMMENT=	Communication programs
@@ -25,6 +25,7 @@ SUBDIR+=	emech
 SUBDIR+=	empathy
 SUBDIR+=	epic4
 SUBDIR+=	epic4-doc
+SUBDIR+=  farstream
 SUBDIR+=	finch
 SUBDIR+=	fisg
 SUBDIR+=	gajim
