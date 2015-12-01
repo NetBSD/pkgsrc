@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/12/01 08:43:05 fhajny Exp $
+
+SHA1 (ndg_httpsclient-0.4.0.tar.gz) = 82f6a1797b80a544cbfbc7f9f1df41da8463248d
+RMD160 (ndg_httpsclient-0.4.0.tar.gz) = e5f71f2d369ebc02f3628f88ab1bdabcac444faa
+SHA512 (ndg_httpsclient-0.4.0.tar.gz) = 3c0225a20c25cf0f12f03005bb79e738527c0488bb660c1eb3b55c505a0ef503002d37fcffb3d013e5f91101bdd03080a68d5805d6d29b682cc01bdc9f0e4a19
+Size (ndg_httpsclient-0.4.0.tar.gz) = 24038 bytes
