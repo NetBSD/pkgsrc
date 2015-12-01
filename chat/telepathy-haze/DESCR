@@ -1,0 +1,3 @@
+Haze is a telepathy connection manager based on libpurple. This allows
+telepathy-based applications to connect to all protocols supported by
+libpurple (pidgin).
