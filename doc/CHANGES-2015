@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4808 2015/12/01 12:27:34 mef Exp $
+$NetBSD: CHANGES-2015,v 1.4809 2015/12/01 12:50:47 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8041,3 +8041,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Added time/py-rfc3339 version 1.0 [fhajny 2015-12-01]
 	Added security/py-ndg_httpsclient version 0.4.0 [fhajny 2015-12-01]
 	Added devel/p5-Test-Stream version 1.302026 [mef 2015-12-01]
+	Updated chat/telepathy-gabble to 0.18.3 [jaapb 2015-12-01]
+	Updated chat/telepathy-farsight to 0.0.19 [jaapb 2015-12-01]
