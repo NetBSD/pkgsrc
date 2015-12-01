@@ -1,5 +1,6 @@
-$NetBSD: patch-lib_ext_wocky_wocky_wocky-muc.c,v 1.1 2013/03/02 18:19:10 joerg Exp $
+$NetBSD: patch-lib_ext_wocky_wocky_wocky-muc.c,v 1.2 2015/12/01 12:45:43 jaapb Exp $
 
+Use correct enum.
 --- lib/ext/wocky/wocky/wocky-muc.c.orig	2013-03-01 14:32:26.000000000 +0000
 +++ lib/ext/wocky/wocky/wocky-muc.c
 @@ -1480,7 +1480,7 @@ extract_chat_state (WockyNode *msg)
