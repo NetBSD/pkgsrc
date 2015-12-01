@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2015/12/01 08:37:29 fhajny Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/pyrfc3339/__init__.py
+${PYSITELIB}/pyrfc3339/__init__.pyc
+${PYSITELIB}/pyrfc3339/__init__.pyo
+${PYSITELIB}/pyrfc3339/generator.py
+${PYSITELIB}/pyrfc3339/generator.pyc
+${PYSITELIB}/pyrfc3339/generator.pyo
+${PYSITELIB}/pyrfc3339/parser.py
+${PYSITELIB}/pyrfc3339/parser.pyc
+${PYSITELIB}/pyrfc3339/parser.pyo
+${PYSITELIB}/pyrfc3339/utils.py
+${PYSITELIB}/pyrfc3339/utils.pyc
+${PYSITELIB}/pyrfc3339/utils.pyo
