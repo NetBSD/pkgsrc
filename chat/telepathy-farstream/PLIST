@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2015/12/01 13:03:05 jaapb Exp $
+include/telepathy-1.0/telepathy-farstream/channel.h
+include/telepathy-1.0/telepathy-farstream/content.h
+include/telepathy-1.0/telepathy-farstream/telepathy-farstream.h
+lib/libtelepathy-farstream.la
+lib/pkgconfig/telepathy-farstream.pc
+share/gtk-doc/html/telepathy-farstream/TfChannel.html
+share/gtk-doc/html/telepathy-farstream/TfContent.html
+share/gtk-doc/html/telepathy-farstream/ch01.html
+share/gtk-doc/html/telepathy-farstream/home.png
+share/gtk-doc/html/telepathy-farstream/index.html
+share/gtk-doc/html/telepathy-farstream/index.sgml
+share/gtk-doc/html/telepathy-farstream/left.png
+share/gtk-doc/html/telepathy-farstream/right.png
+share/gtk-doc/html/telepathy-farstream/style.css
+share/gtk-doc/html/telepathy-farstream/telepathy-farstream.devhelp2
+share/gtk-doc/html/telepathy-farstream/up.png
