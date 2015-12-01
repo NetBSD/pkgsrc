@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2015/12/01 07:49:03 fhajny Exp $
+${PYSITELIB}/${EGG_NAME}-nspkg.pth
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/zope/event/__init__.py
+${PYSITELIB}/zope/event/__init__.pyc
+${PYSITELIB}/zope/event/__init__.pyo
+${PYSITELIB}/zope/event/classhandler.py
+${PYSITELIB}/zope/event/classhandler.pyc
+${PYSITELIB}/zope/event/classhandler.pyo
+${PYSITELIB}/zope/event/classhandler.py~
+${PYSITELIB}/zope/event/classhandler.rst~
+${PYSITELIB}/zope/event/classhandlers.py~
+${PYSITELIB}/zope/event/tests.py
+${PYSITELIB}/zope/event/tests.pyc
+${PYSITELIB}/zope/event/tests.pyo
+${PYSITELIB}/zope/event/tests.py~
