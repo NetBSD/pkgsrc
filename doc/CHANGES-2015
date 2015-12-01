@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4807 2015/12/01 08:43:25 fhajny Exp $
+$NetBSD: CHANGES-2015,v 1.4808 2015/12/01 12:27:34 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8040,3 +8040,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-dialog2 to 3.3.0 [fhajny 2015-12-01]
 	Added time/py-rfc3339 version 1.0 [fhajny 2015-12-01]
 	Added security/py-ndg_httpsclient version 0.4.0 [fhajny 2015-12-01]
+	Added devel/p5-Test-Stream version 1.302026 [mef 2015-12-01]
