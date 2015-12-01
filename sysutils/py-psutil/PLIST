@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2015/01/24 23:23:48 adam Exp $
-${PYSITELIB}/_psutil_${SYSTEM}.so
-${PYSITELIB}/_psutil_posix.so
+@comment $NetBSD: PLIST,v 1.6 2015/12/01 14:07:36 ryoon Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -20,9 +18,6 @@ ${PYSITELIB}/psutil/_psbsd.pyo
 ${PYSITELIB}/psutil/_pslinux.py
 ${PYSITELIB}/psutil/_pslinux.pyc
 ${PYSITELIB}/psutil/_pslinux.pyo
-${PYSITELIB}/psutil/_psnetbsd.py
-${PYSITELIB}/psutil/_psnetbsd.pyc
-${PYSITELIB}/psutil/_psnetbsd.pyo
 ${PYSITELIB}/psutil/_psosx.py
 ${PYSITELIB}/psutil/_psosx.pyc
 ${PYSITELIB}/psutil/_psosx.pyo
@@ -32,6 +27,8 @@ ${PYSITELIB}/psutil/_psposix.pyo
 ${PYSITELIB}/psutil/_pssunos.py
 ${PYSITELIB}/psutil/_pssunos.pyc
 ${PYSITELIB}/psutil/_pssunos.pyo
+${PYSITELIB}/psutil/_psutil_bsd.so
+${PYSITELIB}/psutil/_psutil_posix.so
 ${PYSITELIB}/psutil/_pswindows.py
 ${PYSITELIB}/psutil/_pswindows.pyc
 ${PYSITELIB}/psutil/_pswindows.pyo

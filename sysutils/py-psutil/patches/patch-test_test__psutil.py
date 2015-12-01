@@ -1,15 +1,16 @@
-$NetBSD: patch-test_test__psutil.py,v 1.3 2014/04/18 19:58:46 wiz Exp $
+$NetBSD: patch-test_test__psutil.py,v 1.4 2015/12/01 14:07:37 ryoon Exp $
 
 Port to NetBSD.
 
---- test/test_psutil.py.orig	2014-04-08 00:03:00.000000000 +0000
+--- test/test_psutil.py.orig	2015-11-25 01:20:34.000000000 +0000
 +++ test/test_psutil.py
-@@ -87,7 +87,7 @@ if WINDOWS:
-     WIN_VISTA = (6, 0, 0)
- LINUX = sys.platform.startswith("linux")
+@@ -107,7 +107,8 @@ LINUX = sys.platform.startswith("linux")
  OSX = sys.platform.startswith("darwin")
--BSD = sys.platform.startswith("freebsd")
-+BSD = sys.platform.startswith("freebsd") or sys.platform.startswith("netbsd")
+ FREEBSD = sys.platform.startswith("freebsd")
+ OPENBSD = sys.platform.startswith("openbsd")
+-BSD = FREEBSD or OPENBSD
++NETBSD = sys.platform.startswith("netbsd")
++BSD = FREEBSD or OPENBSD or NETBSD
  SUNOS = sys.platform.startswith("sunos")
  VALID_PROC_STATUSES = [getattr(psutil, x) for x in dir(psutil)
                         if x.startswith('STATUS_')]

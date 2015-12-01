@@ -1,14 +1,16 @@
-$NetBSD: distinfo,v 1.9 2015/11/04 01:32:27 agc Exp $
+$NetBSD: distinfo,v 1.10 2015/12/01 14:07:36 ryoon Exp $
 
-SHA1 (psutil-2.1.3.tar.gz) = aae4725eb33cf56d4480bc60f50c147870d607ba
-RMD160 (psutil-2.1.3.tar.gz) = 4d5d0971c7acbd81cd883eceb237b688a60d3b80
-SHA512 (psutil-2.1.3.tar.gz) = 12a566c2c53897d858bd75455da8f52d9d9279e28dc0df40594275626f75da716d82c8f67d1fc37df4bd3bc05fef401391cb6c52380c819d1e82fb4edd11f843
-Size (psutil-2.1.3.tar.gz) = 224008 bytes
-SHA1 (patch-psutil_____init____.py) = 4036989d048542eb2b5649c6398146369d2793a5
-SHA1 (patch-psutil___psnetbsd.py) = 1a017104b6ac800de1a47ccb810d5a56b2bde66a
-SHA1 (patch-psutil___psutil__netbsd.c) = 00480e009800bb1970592c8bcfbef17d7ac79240
-SHA1 (patch-psutil___psutil__netbsd.h) = 33e3c857f764d8391db747068ade7ea333698ec0
-SHA1 (patch-psutil_arch_netbsd_process__info.c) = c384d12cc47514d6396d779d59c586ef2b42a89a
-SHA1 (patch-psutil_arch_netbsd_process__info.h) = b23075df15749e4e5274ccb9e21d67ac55fdd199
-SHA1 (patch-setup.py) = 3e87561b6dfd7e851e232342dab3b2e8ade28cfd
-SHA1 (patch-test_test__psutil.py) = c521f4fa30b24cb86115370e52979c2c7f7af4a3
+SHA1 (psutil-release-3.3.0.tar.gz) = e1a1ff558a90ad48302ad4aaf485a1841d67ee89
+RMD160 (psutil-release-3.3.0.tar.gz) = 59ddfcdd2bdaa4274ff22e40da021c0ff69191a1
+SHA512 (psutil-release-3.3.0.tar.gz) = c0865631a3cb3a347c5e24328108f05a84f9468f661ca864764df3e5a723a52e38b338a3126b870c7f3a54fbbae60e6e4d80dba54f9b5459edb08fd24d078da3
+Size (psutil-release-3.3.0.tar.gz) = 256632 bytes
+SHA1 (patch-psutil_____init____.py) = 40b3108ab934ed8529a3989eda331d9d2cf2b7af
+SHA1 (patch-psutil___psbsd.py) = e80fd4dcfad88468963d67c90b79c09625c43d1c
+SHA1 (patch-psutil___psutil__bsd.c) = 4efa4ae9fcd16961e3bca987726732260214b635
+SHA1 (patch-psutil___psutil__posix.c) = 6a01a7d45481ab1f512ef90164548a8a8b5cb831
+SHA1 (patch-psutil_arch_bsd_netbsd.c) = 2613cc24b9c25469d67bac3bc30b09d3e391919f
+SHA1 (patch-psutil_arch_bsd_netbsd.h) = 4d58a458b10e34e4fac862cc70e53b9faf65dcb0
+SHA1 (patch-psutil_arch_bsd_netbsd__socks.c) = f02ef45768ba34ede2ace38901ee59a15b817537
+SHA1 (patch-psutil_arch_bsd_netbsd__socks.h) = a0af0fe10b7d5243cfc89cb23a863fd819b6cfcc
+SHA1 (patch-setup.py) = daf3e4ebed119a234387d5b37cf693bbf8156a5d
+SHA1 (patch-test_test__psutil.py) = fee930410be0e083b5f616f41f30f6687ab224d9
