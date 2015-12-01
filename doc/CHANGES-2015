@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4812 2015/12/01 13:12:20 jaapb Exp $
+$NetBSD: CHANGES-2015,v 1.4813 2015/12/01 13:20:26 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8046,3 +8046,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added chat/farstream version 0.2.7 [jaapb 2015-12-01]
 	Added chat/telepathy-farstream version 0.6.2 [jaapb 2015-12-01]
 	Added chat/telepathy-qt version 0.9.6.1 [jaapb 2015-12-01]
+	Added chat/telepathy-haze version 0.8.0 [jaapb 2015-12-01]
