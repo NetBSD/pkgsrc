@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2174 2015/12/01 08:22:45 fhajny Exp $
+# $NetBSD: Makefile,v 1.2175 2015/12/01 12:27:34 mef Exp $
 #
 
 COMMENT=	Development utilities
@@ -1446,6 +1446,7 @@ SUBDIR+=	p5-Test-SharedFork
 SUBDIR+=	p5-Test-Simple
 SUBDIR+=	p5-Test-Spec
 SUBDIR+=	p5-Test-Spelling
+SUBDIR+=	p5-Test-Stream
 SUBDIR+=	p5-Test-SubCalls
 SUBDIR+=	p5-Test-Taint
 SUBDIR+=	p5-Test-TempDir
