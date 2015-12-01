@@ -1,5 +1,15 @@
-@comment $NetBSD: PLIST,v 1.5 2011/04/05 18:47:20 drochner Exp $
-lib/telepathy/gabble-0/gateways.la
+@comment $NetBSD: PLIST,v 1.6 2015/12/01 12:45:43 jaapb Exp $
+bin/telepathy-gabble-xmpp-console
+lib/telepathy/gabble-0/lib/libgabble-plugins-0.18.3.so
+lib/telepathy/gabble-0/lib/libgabble-plugins.a
+lib/telepathy/gabble-0/lib/libgabble-plugins.la
+lib/telepathy/gabble-0/lib/libgabble-plugins.so
+lib/telepathy/gabble-0/lib/libwocky-telepathy-gabble-0.18.3.so
+lib/telepathy/gabble-0/lib/libwocky.a
+lib/telepathy/gabble-0/lib/libwocky.la
+lib/telepathy/gabble-0/lib/libwocky.so
+lib/telepathy/gabble-0/plugins/libconsole.la
+lib/telepathy/gabble-0/plugins/libgateways.la
 libexec/telepathy-gabble
 man/man8/telepathy-gabble.8
 share/dbus-1/services/org.freedesktop.Telepathy.ConnectionManager.gabble.service
