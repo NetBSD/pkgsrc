@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4821 2015/12/02 14:14:58 taca Exp $
+$NetBSD: CHANGES-2015,v 1.4822 2015/12/02 14:20:41 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8055,3 +8055,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/squid3 to 3.5.12 [adam 2015-12-02]
 	Updated databases/ruby-sequel to 4.29.0 [taca 2015-12-02]
 	Updated devel/ruby-simplecov to 0.11.0 [taca 2015-12-02]
+	Updated devel/ruby-tins to 1.8.0 [taca 2015-12-02]
