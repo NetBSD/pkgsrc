@@ -17,7 +17,7 @@ func (s *Suite) TestPkgnameFromDistname(c *check.C) {
 }
 
 func (s *Suite) TestChecklinesPackageMakefileVarorder(c *check.C) {
-	s.UseCommandLine("-Worder")
+	s.UseCommandLine(c, "-Worder")
 	G.pkgContext = newPkgContext("x11/9term")
 	lines := s.NewLines("Makefile",
 		"# $"+"NetBSD$",

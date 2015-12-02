@@ -106,7 +106,7 @@ func convertToLogicalLines(fname string, rawText string, joinContinuationLines b
 }
 
 func saveAutofixChanges(lines []*Line) {
-	if !G.opts.Autofix || !G.autofixAvailable {
+	if !G.opts.Autofix {
 		return
 	}
 
