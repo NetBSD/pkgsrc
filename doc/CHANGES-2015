@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4827 2015/12/02 17:06:03 adam Exp $
+$NetBSD: CHANGES-2015,v 1.4828 2015/12/02 17:23:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8067,3 +8067,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/openldap-cloak to 2.4.43 [adam 2015-12-02]
 	Updated databases/openldap-nops to 2.4.43 [adam 2015-12-02]
 	Updated databases/openldap-smbk5pwd to 2.4.43 [adam 2015-12-02]
+	Added devel/tlsh version 3.4.3 [wiz 2015-12-02]
