@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2175 2015/12/01 12:27:34 mef Exp $
+# $NetBSD: Makefile,v 1.2176 2015/12/02 17:23:30 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -702,7 +702,6 @@ SUBDIR+=	p5-CPAN-Inject
 SUBDIR+=	p5-CPAN-Meta
 SUBDIR+=	p5-CPAN-Meta-Check
 SUBDIR+=	p5-CPAN-Meta-Requirements
-SUBDIR+=	p5-CPAN-Meta
 SUBDIR+=	p5-CPAN-Meta-YAML
 SUBDIR+=	p5-CPAN-Mini
 SUBDIR+=	p5-CPAN-ParseDistribution
@@ -1383,6 +1382,7 @@ SUBDIR+=	p5-Test-Approx
 SUBDIR+=	p5-Test-Assertions
 SUBDIR+=	p5-Test-BDD-Cucumber
 SUBDIR+=	p5-Test-Base
+SUBDIR+=	p5-Test-CPAN-Meta
 SUBDIR+=	p5-Test-CPAN-Meta-YAML
 SUBDIR+=	p5-Test-CheckDeps
 SUBDIR+=	p5-Test-CheckManifest
@@ -1790,6 +1790,7 @@ SUBDIR+=	py-test
 SUBDIR+=	py-test-cov
 SUBDIR+=	py-test-runner
 SUBDIR+=	py-testtools
+SUBDIR+=	py-tlsh
 SUBDIR+=	py-tortoisehg
 SUBDIR+=	py-tox
 SUBDIR+=	py-tryton
@@ -2067,6 +2068,7 @@ SUBDIR+=	tig
 SUBDIR+=	tkcvs
 SUBDIR+=	tkdiff
 SUBDIR+=	tla
+SUBDIR+=	tlsh
 SUBDIR+=	tmake
 SUBDIR+=	tmin
 SUBDIR+=	topgit
