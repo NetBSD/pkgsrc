@@ -5,7 +5,7 @@ import (
 )
 
 func (s *Suite) TestChecklineMkVartype_SimpleType(c *check.C) {
-	s.UseCommandLine("-Wtypes", "-Dunchecked")
+	s.UseCommandLine(c, "-Wtypes", "-Dunchecked")
 	G.globalData.InitVartypes()
 	line := NewLine("fname", "1", "dummy", nil)
 
@@ -33,7 +33,7 @@ func (s *Suite) TestChecklineMkVartype(c *check.C) {
 }
 
 func (s *Suite) TestChecklineMkVaralign(c *check.C) {
-	s.UseCommandLine("-Wspace", "-f")
+	s.UseCommandLine(c, "-Wspace", "-f")
 	lines := s.NewLines("file.mk",
 		"VAR=   value",    // Indentation 7, fixed to 8.
 		"VAR=    value",   // Indentation 8, fixed to 8.
