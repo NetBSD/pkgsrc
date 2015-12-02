@@ -2,13 +2,66 @@ package main
 
 import (
 	check "gopkg.in/check.v1"
+	"io/ioutil"
+	"os"
 )
 
+func (s *Suite) TestVartypeCheck_AwkCommand(c *check.C) {
+	newVartypeCheck("PLIST_AWK", "+=", "{print $0}").AwkCommand()
+}
+
+func (s *Suite) TestVartypeCheck_BasicRegularExpression(c *check.C) {
+	newVartypeCheck("REPLACE_FILES.pl", "=", ".*\\.pl$").BasicRegularExpression()
+}
+
+func (s *Suite) TestVartypeCheck_BuildlinkDepmethod(c *check.C) {
+	newVartypeCheck("BUILDLINK_DEPMETHOD.libc", "?=", "full").BuildlinkDepmethod()
+	newVartypeCheck("BUILDLINK_DEPMETHOD.libc", "?=", "unknown").BuildlinkDepmethod()
+
+	c.Check(s.Output(), equals, "WARN: fname:1: Invalid dependency method \"unknown\". Valid methods are \"build\" or \"full\".\n")
+}
+
 func (s *Suite) TestVartypeCheck_Category(c *check.C) {
+	tmpdir := c.MkDir()
+	categorydir := tmpdir + "/filesyscategory"
+	categoryMakefile := categorydir + "/Makefile"
+	os.Mkdir(categorydir, 0777)
+	ioutil.WriteFile(categoryMakefile, []byte("# Nothing\n"), 0777)
+	G.currentDir = tmpdir
+	G.curPkgsrcdir = "."
+
 	newVartypeCheck("CATEGORIES", "=", "chinese").Category()
 	newVartypeCheck("CATEGORIES", "=", "arabic").Category()
+	newVartypeCheck("CATEGORIES", "=", "filesyscategory").Category()
 
 	c.Check(s.Output(), equals, "ERROR: fname:1: Invalid category \"arabic\".\n")
+}
+
+func (s *Suite) TestVartypeCheck_CFlag(c *check.C) {
+	newVartypeCheck("CFLAGS", "+=", "-Wall").CFlag()
+	newVartypeCheck("CFLAGS", "+=", "/W3").CFlag()
+	newVartypeCheck("CFLAGS", "+=", "target:sparc64").CFlag()
+	newVartypeCheck("CFLAGS", "+=", "-std=c99").CFlag()
+	newVartypeCheck("CFLAGS", "+=", "-XX:+PrintClassHistogramAfterFullGC").CFlag()
+
+	c.Check(s.Output(), equals, ""+
+		"WARN: fname:1: Compiler flag \"/W3\" should start with a hyphen.\n"+
+		"WARN: fname:1: Compiler flag \"target:sparc64\" should start with a hyphen.\n"+
+		"WARN: fname:1: Unknown compiler flag \"-XX:+PrintClassHistogramAfterFullGC\".\n")
+}
+
+func (s *Suite) TestVartypeCheck_Comment(c *check.C) {
+	newVartypeCheck("COMMENT", "=", "Versatile Programming Language").Comment()
+	newVartypeCheck("COMMENT", "=", "SHORT_DESCRIPTION_OF_THE_PACKAGE").Comment()
+	newVartypeCheck("COMMENT", "=", "A great package.").Comment()
+	newVartypeCheck("COMMENT", "=", "some packages need a very very long comment to explain their basic usefulness").Comment()
+
+	c.Check(s.Output(), equals, ""+
+		"ERROR: fname:1: COMMENT must be set.\n"+
+		"WARN: fname:1: COMMENT should not begin with \"A\".\n"+
+		"WARN: fname:1: COMMENT should not end with a period.\n"+
+		"WARN: fname:1: COMMENT should start with a capital letter.\n"+
+		"WARN: fname:1: COMMENT should not be longer than 70 characters.\n")
 }
 
 func (s *Suite) TestVartypeCheck_Dependency(c *check.C) {
@@ -27,6 +80,14 @@ func (s *Suite) TestVartypeCheck_Dependency(c *check.C) {
 	newVartypeCheck("CONFLICTS", "+=", "perl5-5.22.*").Dependency()
 
 	c.Check(s.Output(), equals, "WARN: fname:1: Please append \"{,nb*}\" to the version number of this dependency.\n")
+
+	newVartypeCheck("CONFLICTS", "+=", "perl5-[5.10-5.22]*").Dependency()
+
+	c.Check(s.Output(), equals, "WARN: fname:1: Only [0-9]* is allowed in the numeric part of a dependency.\n")
+
+	newVartypeCheck("CONFLICTS", "+=", "py-docs").Dependency()
+
+	c.Check(s.Output(), equals, "ERROR: fname:1: Unknown dependency pattern \"py-docs\".\n")
 
 	newVartypeCheck("CONFLICTS", "+=", "perl5-5.22.*{,nb*}").Dependency()
 
@@ -50,6 +111,24 @@ func (s *Suite) TestVartypeCheck_DependencyWithPatch(c *check.C) {
 		"ERROR: fname:1: \"../../lang/perl5\" does not exist.\n"+
 		"ERROR: fname:1: There is no package in \"lang/perl5\".\n"+
 		"WARN: fname:1: Please use USE_TOOLS+=perl:run instead of this dependency.\n")
+}
+
+func (s *Suite) TestVartypeCheck_DistSuffix(c *check.C) {
+	newVartypeCheck("EXTRACT_SUFX", "=", ".tar.gz").DistSuffix()
+	newVartypeCheck("EXTRACT_SUFX", "=", ".tar.bz2").DistSuffix()
+
+	c.Check(s.Output(), equals, "NOTE: fname:1: EXTRACT_SUFX is \".tar.gz\" by default, so this definition may be redundant.\n")
+}
+
+func (s *Suite) TestVartypeCheck_EmulPlatform(c *check.C) {
+	newVartypeCheck("EMUL_PLATFORM", "=", "linux-i386").EmulPlatform()
+	newVartypeCheck("EMUL_PLATFORM", "=", "nextbsd-8087").EmulPlatform()
+	newVartypeCheck("EMUL_PLATFORM", "=", "${LINUX}").EmulPlatform()
+
+	c.Check(s.Output(), equals, ""+
+		"WARN: fname:1: Unknown operating system: nextbsd\n"+
+		"WARN: fname:1: Unknown hardware architecture: 8087\n"+
+		"WARN: fname:1: \"${LINUX}\" is not a valid emulation platform.\n")
 }
 
 func (s *Suite) TestVartypeCheck_FetchURL(c *check.C) {
@@ -79,6 +158,22 @@ func (s *Suite) TestVartypeCheck_FetchURL(c *check.C) {
 	newVartypeCheck("MASTER_SITES", "=", "${MASTER_SITE_INVALID:=subdir/}").FetchURL()
 
 	c.Check(s.Output(), equals, "ERROR: fname:1: MASTER_SITE_INVALID does not exist.\n")
+}
+
+func (s *Suite) TestVartypeCheck_Filename(c *check.C) {
+	newVartypeCheck("FNAME", "=", "Filename with spaces.docx").Filename()
+
+	c.Check(s.Output(), equals, "WARN: fname:1: \"Filename with spaces.docx\" is not a valid filename.\n")
+
+	newVartypeCheck("FNAME", "=", "OS/2-manual.txt").Filename()
+
+	c.Check(s.Output(), equals, "WARN: fname:1: A filename should not contain a slash.\n")
+}
+
+func (s *Suite) TestVartypeCheck_MailAddress(c *check.C) {
+	newVartypeCheck("MAINTAINER", "=", "pkgsrc-users@netbsd.org").MailAddress()
+
+	c.Check(s.Output(), equals, "WARN: fname:1: Please write \"NetBSD.org\" instead of \"netbsd.org\".\n")
 }
 
 func (s *Suite) TestVartypeCheck_Message(c *check.C) {
@@ -112,6 +207,17 @@ func (s *Suite) TestVartypeCheck_PkgRevision(c *check.C) {
 	vc.PkgRevision()
 
 	c.Check(s.Output(), equals, "")
+}
+
+func (s *Suite) TestVartypeCheck_PlatformTriple(c *check.C) {
+	newVartypeCheck("ONLY_FOR_PLATFORM", "=", "linux-i386").PlatformTriple()
+	newVartypeCheck("ONLY_FOR_PLATFORM", "=", "nextbsd-5.0-8087").PlatformTriple()
+	newVartypeCheck("ONLY_FOR_PLATFORM", "=", "${LINUX}").PlatformTriple()
+
+	c.Check(s.Output(), equals, ""+
+		"WARN: fname:1: \"linux-i386\" is not a valid platform triple.\n"+
+		"WARN: fname:1: Unknown operating system: nextbsd\n"+
+		"WARN: fname:1: Unknown hardware architecture: 8087\n")
 }
 
 func (s *Suite) TestVartypeCheck_SedCommands(c *check.C) {
