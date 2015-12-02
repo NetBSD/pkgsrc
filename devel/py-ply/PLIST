@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2015/12/02 18:22:10 drochner Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/ply/__init__.py
+${PYSITELIB}/ply/__init__.pyc
+${PYSITELIB}/ply/__init__.pyo
+${PYSITELIB}/ply/cpp.py
+${PYSITELIB}/ply/cpp.pyc
+${PYSITELIB}/ply/cpp.pyo
+${PYSITELIB}/ply/ctokens.py
+${PYSITELIB}/ply/ctokens.pyc
+${PYSITELIB}/ply/ctokens.pyo
+${PYSITELIB}/ply/lex.py
+${PYSITELIB}/ply/lex.pyc
+${PYSITELIB}/ply/lex.pyo
+${PYSITELIB}/ply/yacc.py
+${PYSITELIB}/ply/yacc.pyc
+${PYSITELIB}/ply/yacc.pyo
+${PYSITELIB}/ply/ygen.py
+${PYSITELIB}/ply/ygen.pyc
+${PYSITELIB}/ply/ygen.pyo
