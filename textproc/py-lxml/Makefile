@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2015/11/17 11:52:10 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2015/12/02 14:46:40 wiz Exp $
 
 DISTNAME=	lxml-3.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,6 +11,8 @@ HOMEPAGE=	http://lxml.de/
 COMMENT=	Python binding for libxml2 and libxslt
 LICENSE=	modified-bsd
 
+# as of 3.5.0, two test failures on NetBSD, see
+# https://bugs.launchpad.net/lxml/+bug/1522052
 TEST_TARGET=	test_inplace
 
 .include "../../lang/python/egg.mk"
