@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.54 2015/09/02 07:41:08 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2015/12/02 06:53:40 wiz Exp $
 
-DISTNAME=	Date-Manip-6.51
+DISTNAME=	Date-Manip-6.52
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Date/}
@@ -18,7 +18,6 @@ BUILD_DEPENDS+=	p5-Test-Inter-[0-9]*:../../devel/p5-Test-Inter
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Date/Manip/.packlist
-PERL5_MODULE_TYPE=	Module::Build
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
