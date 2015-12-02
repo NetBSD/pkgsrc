@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4819 2015/12/02 10:45:38 adam Exp $
+$NetBSD: CHANGES-2015,v 1.4820 2015/12/02 14:12:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8053,3 +8053,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated audio/libopus to 1.1.1 [wiz 2015-12-02]
 	Updated fonts/harfbuzz to 1.1.2 [wiz 2015-12-02]
 	Updated www/squid3 to 3.5.12 [adam 2015-12-02]
+	Updated databases/ruby-sequel to 4.29.0 [taca 2015-12-02]
