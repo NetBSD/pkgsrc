@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4829 2015/12/02 17:24:12 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4830 2015/12/02 17:31:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8069,3 +8069,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/openldap-smbk5pwd to 2.4.43 [adam 2015-12-02]
 	Added devel/tlsh version 3.4.3 [wiz 2015-12-02]
 	Added devel/py-tlsh version 3.4.3 [wiz 2015-12-02]
+	Updated textproc/mdoclint to 1.34 [wiz 2015-12-02]
