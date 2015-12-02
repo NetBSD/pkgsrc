@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4826 2015/12/02 15:15:21 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4827 2015/12/02 17:06:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8060,3 +8060,10 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/ruby-color to 1.8 [taca 2015-12-02]
 	Updated graphics/ruby-mini-magick to 4.3.6 [taca 2015-12-02]
 	Added archivers/py-libarchive-c version 2.2 [wiz 2015-12-02]
+	Updated databases/openldap to 2.4.43 [adam 2015-12-02]
+	Updated databases/openldap-client to 2.4.43 [adam 2015-12-02]
+	Updated databases/openldap-server to 2.4.43 [adam 2015-12-02]
+	Updated databases/openldap-doc to 2.4.43 [adam 2015-12-02]
+	Updated databases/openldap-cloak to 2.4.43 [adam 2015-12-02]
+	Updated databases/openldap-nops to 2.4.43 [adam 2015-12-02]
+	Updated databases/openldap-smbk5pwd to 2.4.43 [adam 2015-12-02]
