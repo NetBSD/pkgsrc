@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2015/03/13 14:12:24 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2015/12/02 14:23:57 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.travis.yml
@@ -297,6 +297,7 @@ ${GEM_LIBDIR}/spec/resources/clock_nn_xup_yup.png
 ${GEM_LIBDIR}/spec/resources/clock_updated.png
 ${GEM_LIBDIR}/spec/resources/composited.png
 ${GEM_LIBDIR}/spec/resources/cropped.png
+${GEM_LIBDIR}/spec/resources/cropped_height.png
 ${GEM_LIBDIR}/spec/resources/damaged_chunk.png
 ${GEM_LIBDIR}/spec/resources/damaged_signature.png
 ${GEM_LIBDIR}/spec/resources/empty.png
