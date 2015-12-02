@@ -2,10 +2,11 @@ package main
 
 import (
 	check "gopkg.in/check.v1"
+	"path/filepath"
 )
 
 func (s *Suite) TestChecklinesPatch_WithComment(c *check.C) {
-	s.UseCommandLine("-Wall")
+	s.UseCommandLine(c, "-Wall")
 	lines := s.NewLines("patch-WithComment",
 		"$"+"NetBSD$",
 		"",
@@ -26,8 +27,10 @@ func (s *Suite) TestChecklinesPatch_WithComment(c *check.C) {
 }
 
 func (s *Suite) TestChecklinesPatch_WithoutEmptyLine(c *check.C) {
-	s.UseCommandLine("-Wall")
-	lines := s.NewLines("patch-WithoutEmptyLines",
+	tmpdir := c.MkDir()
+	fname := filepath.ToSlash(tmpdir + "/patch-WithoutEmptyLines")
+	s.UseCommandLine(c, "-Wall", "--autofix")
+	lines := s.NewLines(fname,
 		"$"+"NetBSD$",
 		"Text",
 		"--- file.orig",
@@ -41,12 +44,15 @@ func (s *Suite) TestChecklinesPatch_WithoutEmptyLine(c *check.C) {
 	checklinesPatch(lines)
 
 	c.Check(s.Output(), equals, ""+
-		"NOTE: patch-WithoutEmptyLines:2: Empty line expected.\n"+
-		"NOTE: patch-WithoutEmptyLines:3: Empty line expected.\n")
+		"NOTE: "+fname+":2: Empty line expected.\n"+
+		"NOTE: "+fname+":2: Autofix: inserting a line \"\\n\" before this line.\n"+
+		"NOTE: "+fname+":3: Empty line expected.\n"+
+		"NOTE: "+fname+":3: Autofix: inserting a line \"\\n\" before this line.\n"+
+		"NOTE: "+fname+": Has been auto-fixed. Please re-run pkglint.\n")
 }
 
 func (s *Suite) TestChecklinesPatch_WithoutComment(c *check.C) {
-	s.UseCommandLine("-Wall")
+	s.UseCommandLine(c, "-Wall")
 	lines := s.NewLines("patch-WithoutComment",
 		"$"+"NetBSD$",
 		"",
@@ -72,7 +78,7 @@ func (s *Suite) TestChecklineOtherAbsolutePathname(c *check.C) {
 }
 
 func (s *Suite) TestChecklinesPatch_ErrorCode(c *check.C) {
-	s.UseCommandLine("-Wall")
+	s.UseCommandLine(c, "-Wall")
 	lines := s.NewLines("patch-ErrorCode",
 		"$"+"NetBSD$",
 		"",
@@ -92,7 +98,7 @@ func (s *Suite) TestChecklinesPatch_ErrorCode(c *check.C) {
 }
 
 func (s *Suite) TestChecklinesPatch_WrongOrder(c *check.C) {
-	s.UseCommandLine("-Wall")
+	s.UseCommandLine(c, "-Wall")
 	lines := s.NewLines("patch-WrongOrder",
 		"$"+"NetBSD$",
 		"",

@@ -302,7 +302,7 @@ func (cv *VartypeCheck) MailAddress() {
 
 	if m, _, domain := match2(value, `^([+\-.0-9A-Z_a-z]+)@([-\w\d.]+)$`); m {
 		if strings.EqualFold(domain, "NetBSD.org") && domain != "NetBSD.org" {
-			line.warnf("Please write NetBSD.org instead of %q.", domain)
+			line.warnf("Please write \"NetBSD.org\" instead of %q.", domain)
 		}
 		if matches(value, `(?i)^(tech-pkg|packages)@NetBSD\.org$`) {
 			line.errorf("This mailing list address is obsolete. Use pkgsrc-users@NetBSD.org instead.")

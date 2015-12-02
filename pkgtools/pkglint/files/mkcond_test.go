@@ -21,7 +21,7 @@ func (s *Suite) TestParseMkCond_Compare(c *check.C) {
 }
 
 func (s *Suite) TestChecklineMkCondition(c *check.C) {
-	s.UseCommandLine("-Wtypes")
+	s.UseCommandLine(c, "-Wtypes")
 	G.globalData.InitVartypes()
 	line := NewLine("fname", "1", "", nil)
 

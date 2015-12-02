@@ -26,7 +26,7 @@ func (s *Suite) TestChecklineMkShelltext(c *check.C) {
 }
 
 func (s *Suite) TestChecklineMkShellword(c *check.C) {
-	s.UseCommandLine("-Wall")
+	s.UseCommandLine(c, "-Wall")
 	G.globalData.InitVartypes()
 	line := NewLine("fname", "1", "dummy", nil)
 
@@ -43,7 +43,7 @@ func (s *Suite) TestChecklineMkShellword(c *check.C) {
 }
 
 func (s *Suite) TestShelltextContext_CheckCommandStart(c *check.C) {
-	s.UseCommandLine("-Wall")
+	s.UseCommandLine(c, "-Wall")
 	G.globalData.tools = map[string]bool{"echo": true}
 	G.globalData.vartools = map[string]string{"echo": "ECHO"}
 	G.globalData.toolsVarRequired = map[string]bool{"echo": true}

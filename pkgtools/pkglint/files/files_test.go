@@ -3,6 +3,7 @@ package main
 import (
 	check "gopkg.in/check.v1"
 	"io/ioutil"
+	"path/filepath"
 )
 
 func (s *Suite) TestConvertToLogicalLines_nocont(c *check.C) {
@@ -49,18 +50,19 @@ func (s *Suite) TestSplitRawLine(c *check.C) {
 	c.Check(trailingWhitespace, equals, "")
 	c.Check(continuation, equals, "")
 
-	leadingWhitespace, text, trailingWhitespace, continuation = splitRawLine("\tasdf   \\\n")
+	leadingWhitespace, text, trailingWhitespace, continuation = splitRawLine("\tword   \\\n")
 
 	c.Check(leadingWhitespace, equals, "\t")
-	c.Check(text, equals, "asdf")
+	c.Check(text, equals, "word")
 	c.Check(trailingWhitespace, equals, "   ")
 	c.Check(continuation, equals, "\\")
 }
 
 func (s *Suite) TestAutofix(c *check.C) {
+	s.UseCommandLine(c, "--show-autofix")
 	tmpdir := c.MkDir()
-	tmpname := tmpdir + "/Makefile"
-	lines := s.NewLines(tmpname,
+	fname := filepath.ToSlash(tmpdir + "/Makefile")
+	lines := s.NewLines(fname,
 		"line1",
 		"line2",
 		"line3")
@@ -68,12 +70,15 @@ func (s *Suite) TestAutofix(c *check.C) {
 
 	saveAutofixChanges(lines)
 
-	c.Assert(fileExists(tmpname), equals, false)
+	c.Assert(fileExists(fname), equals, false)
+	c.Check(s.Output(), equals, "NOTE: "+fname+":2: Autofix: replacing regular expression \".\" with \"X\".\n")
 
-	G.opts.Autofix = true
+	s.UseCommandLine(c, "--autofix")
+
 	saveAutofixChanges(lines)
 
-	content, err := ioutil.ReadFile(tmpdir + "/Makefile")
+	content, err := ioutil.ReadFile(fname)
 	c.Assert(err, check.IsNil)
 	c.Check(string(content), equals, "line1\nXXXXX\nline3\n")
+	c.Check(s.Output(), equals, "NOTE: "+fname+": Has been auto-fixed. Please re-run pkglint.\n")
 }

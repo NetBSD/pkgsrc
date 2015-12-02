@@ -52,7 +52,7 @@ func (s *Suite) TestSubstContext_Complete(c *check.C) {
 }
 
 func (s *Suite) TestSubstContext_NoClass(c *check.C) {
-	s.UseCommandLine("-Wextra")
+	s.UseCommandLine(c, "-Wextra")
 	line := NewLine("Makefile", "1", "dummy", nil)
 	ctx := new(SubstContext)
 

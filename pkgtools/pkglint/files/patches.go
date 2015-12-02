@@ -173,6 +173,7 @@ func (ctx *CheckPatchContext) checkOutside() {
 	text := ctx.line.text
 	if G.opts.WarnSpace && text != "" && ctx.needEmptyLineNow {
 		ctx.line.notef("Empty line expected.")
+		ctx.line.insertBefore("\n")
 	}
 	ctx.needEmptyLineNow = false
 	if text != "" {
@@ -184,6 +185,7 @@ func (ctx *CheckPatchContext) checkOutside() {
 func (ctx *CheckPatchContext) checkBeginDiff() {
 	if G.opts.WarnSpace && !ctx.prevLineWasEmpty {
 		ctx.line.notef("Empty line expected.")
+		ctx.line.insertBefore("\n")
 	}
 	if !ctx.seenComment {
 		ctx.line.errorf("Each patch must be documented.")
@@ -369,7 +371,10 @@ var patchTransitions = map[PatchState][]transition{
 		{rePatchUniLineNoNewline, PST_UNI_LINE, func(ctx *CheckPatchContext) {
 		}},
 		{rePatchEmpty, PST_UNI_LINE, func(ctx *CheckPatchContext) {
-			_ = G.opts.WarnSpace && ctx.line.notef("Leading white-space missing in hunk.")
+			if G.opts.WarnSpace {
+				ctx.line.notef("Leading white-space missing in hunk.")
+				ctx.line.replaceRegex(`^`, " ")
+			}
 			ctx.checkHunkLine(1, 1, PST_UNI_HUNK)
 		}},
 		{"", PST_UNI_HUNK, func(ctx *CheckPatchContext) {
@@ -484,7 +489,10 @@ type CheckPatchContext struct {
 }
 
 func (ctx *CheckPatchContext) expectEmptyLine() {
-	_ = G.opts.WarnSpace && ctx.line.notef("Empty line expected.")
+	if G.opts.WarnSpace {
+		ctx.line.notef("Empty line expected.")
+		ctx.line.insertBefore("\n")
+	}
 }
 
 func (ctx *CheckPatchContext) useUnifiedDiffs() {
