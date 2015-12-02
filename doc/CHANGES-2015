@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4831 2015/12/02 18:27:50 drochner Exp $
+$NetBSD: CHANGES-2015,v 1.4832 2015/12/02 21:14:31 leot Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8071,3 +8071,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/py-tlsh version 3.4.3 [wiz 2015-12-02]
 	Updated textproc/mdoclint to 1.34 [wiz 2015-12-02]
 	Updated devel/py-ply to 3.8 [drochner 2015-12-02]
+	Updated print/cups to 2.1.2 [leot 2015-12-02]
