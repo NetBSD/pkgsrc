@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2015/11/29 12:12:41 taca Exp $
+@comment $NetBSD: PLIST,v 1.37 2015/12/02 14:11:58 taca Exp $
 bin/sequel${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -116,6 +116,7 @@ ${GEM_LIBDIR}/doc/release_notes/4.25.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.26.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.27.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.28.0.txt
+${GEM_LIBDIR}/doc/release_notes/4.29.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.3.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.4.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.5.0.txt
@@ -369,6 +370,7 @@ ${GEM_LIBDIR}/lib/sequel/plugins/unlimited_update.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/update_or_create.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/update_primary_key.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/update_refresh.rb
+${GEM_LIBDIR}/lib/sequel/plugins/uuid.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/validate_associated.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/validation_class_methods.rb
 ${GEM_LIBDIR}/lib/sequel/plugins/validation_helpers.rb
@@ -526,6 +528,7 @@ ${GEM_LIBDIR}/spec/extensions/unlimited_update_spec.rb
 ${GEM_LIBDIR}/spec/extensions/update_or_create_spec.rb
 ${GEM_LIBDIR}/spec/extensions/update_primary_key_spec.rb
 ${GEM_LIBDIR}/spec/extensions/update_refresh_spec.rb
+${GEM_LIBDIR}/spec/extensions/uuid_spec.rb
 ${GEM_LIBDIR}/spec/extensions/validate_associated_spec.rb
 ${GEM_LIBDIR}/spec/extensions/validation_class_methods_spec.rb
 ${GEM_LIBDIR}/spec/extensions/validation_helpers_spec.rb
