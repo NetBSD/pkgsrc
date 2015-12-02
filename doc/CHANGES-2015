@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4815 2015/12/01 16:04:16 wen Exp $
+$NetBSD: CHANGES-2015,v 1.4816 2015/12/02 06:53:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8049,3 +8049,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added chat/telepathy-haze version 0.8.0 [jaapb 2015-12-01]
 	Updated sysutils/py-psutil to 3.3.0 [ryoon 2015-12-01]
 	Updated www/mediawiki to 1.26.0 [wen 2015-12-01]
+	Updated devel/p5-Date-Manip to 6.52 [wiz 2015-12-02]
