@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/12/02 17:22:18 wiz Exp $
+
+SHA1 (tlsh-3.4.3.tar.gz) = 0364110b437cec2d90f3df2396b84715f5178d7e
+RMD160 (tlsh-3.4.3.tar.gz) = 9921d6d693a5dcccd5db44eb84669790e38215e8
+SHA512 (tlsh-3.4.3.tar.gz) = 7e95c2933f25dc4a2700ad2245313d798ee0048e977b0cc3c8f5def258cf0f2372518a916cd9ffb098072aa79ca8f8339532541ca3115ef95520d0ebbb6a7b73
+Size (tlsh-3.4.3.tar.gz) = 1411903 bytes
