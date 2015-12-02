@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2015/12/02 17:22:18 wiz Exp $
+bin/tlsh_unittest
+include/tlsh.h
+include/tlsh_impl.h
+include/tlsh_util.h
+include/version.h
+lib/libtlsh.a
