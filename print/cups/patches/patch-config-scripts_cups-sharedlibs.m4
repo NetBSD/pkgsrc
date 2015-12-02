@@ -1,10 +1,10 @@
-$NetBSD: patch-config-scripts_cups-sharedlibs.m4,v 1.1 2015/01/02 02:03:42 christos Exp $
+$NetBSD: patch-config-scripts_cups-sharedlibs.m4,v 1.2 2015/12/02 21:14:16 leot Exp $
 
 libtoolize.
 
---- config-scripts/cups-sharedlibs.m4.orig	2013-10-18 16:36:01.000000000 -0400
-+++ config-scripts/cups-sharedlibs.m4	2014-12-24 14:33:48.000000000 -0500
-@@ -22,6 +22,24 @@
+--- config-scripts/cups-sharedlibs.m4.orig	2013-10-18 20:36:01.000000000 +0000
++++ config-scripts/cups-sharedlibs.m4
+@@ -22,6 +22,24 @@ cupsbase="cups"
  LIBCUPSBASE="lib$cupsbase"
  LIBCUPSSTATIC="lib$cupsbase.a"
  
@@ -29,7 +29,7 @@ libtoolize.
  if test x$enable_shared != xno; then
  	case "$uname" in
  		SunOS*)
-@@ -67,6 +85,15 @@
+@@ -67,6 +85,15 @@ if test x$enable_shared != xno; then
  			DSOFLAGS="$DSOFLAGS -Wl,-soname,\`basename \$@\` -shared \$(OPTIM)"
  			;;
  	esac
@@ -45,7 +45,7 @@ libtoolize.
  else
  	PICFLAG=0
  	LIBCUPS="lib$cupsbase.a"
-@@ -90,8 +117,13 @@
+@@ -90,8 +117,13 @@ AC_SUBST(LIBCUPSPPDC)
  AC_SUBST(LIBCUPSSTATIC)
  
  if test x$enable_shared = xno; then
@@ -61,7 +61,7 @@ libtoolize.
  
  	EXTLINKCUPS="-lcups"
  	EXTLINKCUPSIMAGE="-lcupsimage"
-@@ -119,10 +151,11 @@
+@@ -119,10 +151,11 @@ if test "$DSO" != ":"; then
  	DSOLIBS="\$(LIBZ)"
  	IMGLIBS=""
  
@@ -77,7 +77,7 @@ libtoolize.
                  SunOS*)
                  	# Solaris...
  			if test $exec_prefix != /usr; then
-@@ -147,7 +180,8 @@
+@@ -147,7 +180,8 @@ if test "$DSO" != ":"; then
  				EXPORT_LDFLAGS="-Wl,-rpath,$libdir"
  			fi
  			;;
