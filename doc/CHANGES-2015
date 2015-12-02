@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4818 2015/12/02 06:59:06 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4819 2015/12/02 10:45:38 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8052,3 +8052,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-Date-Manip to 6.52 [wiz 2015-12-02]
 	Updated audio/libopus to 1.1.1 [wiz 2015-12-02]
 	Updated fonts/harfbuzz to 1.1.2 [wiz 2015-12-02]
+	Updated www/squid3 to 3.5.12 [adam 2015-12-02]
