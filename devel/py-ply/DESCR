@@ -1,0 +1,30 @@
+PLY is a 100% Python implementation of the common parsing tools lex and yacc.
+Here are a few highlights:
+
+ -  PLY is very closely modeled after traditional lex/yacc. If you know how to
+    use these tools in C, you will find PLY to be similar.
+
+ -  PLY provides *very* extensive error reporting and diagnostic information to
+    assist in parser construction.  The original implementation was developed
+    for instructional purposes.  As a result, the system tries to identify the
+    most common types of errors made by novice users.
+
+ -  PLY provides full support for empty productions, error recovery, precedence
+    specifiers, and moderately ambiguous grammars.
+
+ -  Parsing is based on LR-parsing which is fast, memory efficient, better
+    suited to large grammars, and which has a number of nice properties when
+    dealing with syntax errors and other parsing problems. Currently, PLY builds
+    its parsing tables using the LALR(1) algorithm used in yacc.
+
+ -  PLY uses Python introspection features to build lexers and parsers. This
+    greatly simplifies the task of parser construction since it reduces the
+    number of files and eliminates the need to run a separate lex/yacc tool
+    before running your program.
+
+ -  PLY can be used to build parsers for "real" programming languages. Although
+    it is not ultra-fast due to its Python implementation, PLY can be used to
+    parse grammars consisting of several hundred rules (as might be found for a
+    language like C).  The lexer and LR parser are also reasonably efficient
+    when parsing typically sized programs.  People have used PLY to build
+    parsers for C, C++, ADA, and other real programming languages.
