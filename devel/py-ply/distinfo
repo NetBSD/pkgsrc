@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/12/02 18:22:10 drochner Exp $
+
+SHA1 (ply-3.8.tar.gz) = 7f3f8504fd394e4f210857a59644d21b3b90f830
+RMD160 (ply-3.8.tar.gz) = 028af8e860568c10f55321c830cbe8343aaa7012
+SHA512 (ply-3.8.tar.gz) = 2c8cf0ee49ca6dec9ec8d5146e98885e871c26125fb5764988fbefae984ee94b4240f265762aaab26d6ec24989b35a4fd6905c3c0d14aac8a085e89b7d6159ef
+Size (ply-3.8.tar.gz) = 157286 bytes
