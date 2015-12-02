@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15152 2015/12/01 14:08:01 ryoon Exp $
+$NetBSD: TODO,v 1.15153 2015/12/02 06:48:16 wiz Exp $
 
 Suggested new packages
 ======================
@@ -862,6 +862,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hamster-applet-2.32.1 [GNOME 2.32]
 	o handbrake-0.10.2
 	o hanzim-3.5
+	o harfbuzz-1.1.2
 	o harminv-1.4
 	o haskell-mode-1.45
 	o hdevtools-0.1.1.9
@@ -1027,11 +1028,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libmtag-0.3.6
 	o libmusicbrainz5-5.1.0
 	o liboobs-2.32.0 [GNOME 2.32]
+	o libopenmpt-0.2.5787
+	o libopus-1.1.1
 	o libowfat-0.29
 	o libpgm-5.2.122
 	o libplist-1.12
 	o libprelude-1.2.5
 	o libquantum-1.1.0 [pkg/43728, development release]
+	o libsndfile-1.0.26
 	o libstree-0.4.3pre2 [pkg/43748]
 	o libtar-1.2.20
 	o libtcl-nothread-8.5.1
@@ -1051,6 +1055,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libyubikey-1.13
 	o licq-1.3.8
 	o lincvs-2.1.4 [now called CrossVC]
+	o link-grammar-5.3.1
 	o linpsk-1.2 [ld: cannot find -lqt-mt with qt4]
 	o liquidwar-6.0.0.11
 	o lit2epub-0.2.2
@@ -1451,6 +1456,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-bleach-1.4.1
 	o py-bsddb3-6.1.0
 	o py-cassa-1.11.0
+	o py-click-6.2
 	o py-colorama-0.3.3
 	o py-creole-1.1.1
 	o py-cups-1.9.73
@@ -1469,6 +1475,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-ipython-4.0
 	o py-jaraco_util-11.0
 	o py-junos-eznc-1.2.2
+	o py-markdown-2.6.5
 	o py-matplotlib-1.4.3
 	o py-metar-0.20
 	o py-mezzanine-4.0.1
@@ -1485,8 +1492,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-ptt-1.10.2
 	o py-quixote-2.8
 	o py-reportlab-3.0
+	o py-requests-toolbelt-0.5.0
 	o py-rope-0.9.4
 	o py-serpent-1.11
+	o py-setuptools-18.7
 	o py-simpletal-5.1
 	o py-smb-1.1.16
 	o py-spf-2.0.11
@@ -1498,6 +1507,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-suds-0.4.1
 	o py-sybase-0.37
 	o py-tlslite-0.4.6
+	o py-twisted-15.5.0
 	o py-uliweb-0.4.1
 	o py-unittest2-1.1.0
 	o py-uwsgi-2.0.11.1
@@ -1777,7 +1787,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wpa_supplicant-2.4
 	o wwwoffle-2.9i
 	o wxRemind-101
-	o x264-devel-20151121
+	o x264-devel-20151128
 	o x2vnc-1.31
 	o xa65-2.3.7
 	o xenkernel46-4.6.0
