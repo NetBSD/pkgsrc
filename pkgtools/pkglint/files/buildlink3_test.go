@@ -36,7 +36,7 @@ func (s *Suite) TestChecklinesBuildlink3(c *check.C) {
 // takes care of constructing the correct PKGNAME, but pkglint doesn’t
 // look at that file.
 func (s *Suite) TestChecklinesBuildlink3_NameMismatch(c *check.C) {
-	s.UseCommandLine("-Wall", "-Call")
+	s.UseCommandLine(c, "-Wall", "-Call")
 	G.globalData.InitVartypes()
 	G.pkgContext = newPkgContext("x11/hs-X11")
 	G.pkgContext.effectivePkgbase = "X11"
@@ -64,7 +64,7 @@ func (s *Suite) TestChecklinesBuildlink3_NameMismatch(c *check.C) {
 }
 
 func (s *Suite) TestChecklinesBuildlink3_NoBuildlinkTree(c *check.C) {
-	s.UseCommandLine("-Wall", "-Call")
+	s.UseCommandLine(c, "-Wall", "-Call")
 	G.globalData.InitVartypes()
 	lines := s.NewLines("buildlink3.mk",
 		"# $"+"NetBSD$",

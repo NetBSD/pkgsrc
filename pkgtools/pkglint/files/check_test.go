@@ -11,7 +11,6 @@ var equals = check.Equals
 var deepEquals = check.DeepEquals
 
 type Suite struct {
-	c      *check.C
 	stdout bytes.Buffer
 	stderr bytes.Buffer
 }
@@ -39,9 +38,10 @@ func (s *Suite) NewLines(fname string, lines ...string) []*Line {
 	return result
 }
 
-func (s *Suite) UseCommandLine(args ...string) {
-	if exitcode := new(Pkglint).ParseCommandLine(append([]string{"pkglint"}, args...)); exitcode != nil {
-		s.c.FailNow()
+func (s *Suite) UseCommandLine(c *check.C, args ...string) {
+	exitcode := new(Pkglint).ParseCommandLine(append([]string{"pkglint"}, args...))
+	if exitcode != nil && *exitcode != 0 {
+		c.Fatalf("Cannot parse command line: %#v", args)
 	}
 }
 
@@ -62,7 +62,6 @@ func (s *Suite) ExpectFatalError(action func()) {
 func (s *Suite) SetUpTest(c *check.C) {
 	G = new(GlobalVars)
 	G.logOut, G.logErr, G.traceOut = &s.stdout, &s.stderr, &s.stdout
-	s.c = c
 }
 
 func (s *Suite) TearDownTest(c *check.C) {

@@ -31,7 +31,7 @@ func (s *Suite) TestChecklinesDistinfo(c *check.C) {
 	checklinesDistinfo(lines)
 
 	c.Check(s.Output(), equals, ""+
-		"ERROR: distinfo:1: Expected \"$NetBSD: distinfo_test.go,v 1.1 2015/11/25 13:29:07 rillig Exp $\".\n"+
+		"ERROR: distinfo:1: Expected \"$"+"NetBSD$\".\n"+
 		"NOTE: distinfo:2: Empty line expected.\n"+
 		"ERROR: distinfo:5: Expected SHA1, RMD160, SHA512, Size checksums for \"distfile.tar.gz\", got MD5, SHA1.\n")
 }
