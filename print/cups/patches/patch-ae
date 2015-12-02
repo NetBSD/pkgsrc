@@ -1,11 +1,11 @@
-$NetBSD: patch-ae,v 1.32 2014/06/07 07:34:05 wiz Exp $
+$NetBSD: patch-ae,v 1.33 2015/12/02 21:14:16 leot Exp $
 
 For proper libtool usage split CC into CC_COMPILE and CC with libtool
 mode options compile/link respectively.
 
 Same for CXX.
 
---- Makedefs.in.orig	2013-07-17 15:21:18.000000000 +0000
+--- Makedefs.in.orig	2015-02-17 13:10:19.000000000 +0000
 +++ Makedefs.in
 @@ -19,9 +19,11 @@
  
@@ -46,7 +46,7 @@ Same for CXX.
  DSOLIBS		=	@DSOLIBS@ $(COMMONLIBS)
  DNSSDLIBS	=	@DNSSDLIBS@
  IPPFIND_BIN	=	@IPPFIND_BIN@
-@@ -243,11 +245,11 @@ DBUSDIR		=	@DBUSDIR@
+@@ -246,11 +248,11 @@ USBQUIRKS	=	@USBQUIRKS@
  
  .c.o:
  	echo Compiling $<...
