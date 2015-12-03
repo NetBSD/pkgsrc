@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4833 2015/12/02 21:47:14 rillig Exp $
+$NetBSD: CHANGES-2015,v 1.4834 2015/12/03 11:13:49 he Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8073,3 +8073,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-ply to 3.8 [drochner 2015-12-02]
 	Updated print/cups to 2.1.2 [leot 2015-12-02]
 	Updated pkgtools/pkglint to 5.1 [rillig 2015-12-02]
+	Updated cad/geda to 1.8.2nb9 [he 2015-12-03]
