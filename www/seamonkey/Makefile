@@ -1,18 +1,17 @@
-# $NetBSD: Makefile,v 1.138 2015/11/18 14:19:55 ryoon Exp $
+# $NetBSD: Makefile,v 1.139 2015/12/03 12:22:27 ryoon Exp $
 
 DISTNAME=	seamonkey-${SM_VER}.source
 PKGNAME=	seamonkey-${SM_VER:S/b/beta/}
-PKGREVISION=	2
-SM_VER=		2.38
+SM_VER=		2.39
 CATEGORIES=	www
-MASTER_SITES=	https://archive.mozilla.org/pub/mozilla.org/seamonkey/releases/${SM_VER}/source/
+MASTER_SITES=	${MASTER_SITE_MOZILLA:=seamonkey/releases/${SM_VER}/source/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.seamonkey-project.org/
 COMMENT=	Full-featured gecko-based browser
 
-WRKSRC=		${WRKDIR}/comm-release
+WRKSRC=		${WRKDIR}/${DISTNAME:S/.source//}
 MOZILLA_DIR=	mozilla/
 PLIST_SRC+=	${PLIST_SRC_DFLT}
 USE_LANGUAGES+=	c c++

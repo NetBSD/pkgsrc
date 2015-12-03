@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_mfbt_Attributes.h,v 1.3 2015/10/02 22:49:36 ryoon Exp $
+$NetBSD: patch-mozilla_mfbt_Attributes.h,v 1.4 2015/12/03 12:22:27 ryoon Exp $
 
---- mozilla/mfbt/Attributes.h.orig	2015-09-25 07:35:44.000000000 +0000
+--- mozilla/mfbt/Attributes.h.orig	2015-11-04 01:56:08.000000000 +0000
 +++ mozilla/mfbt/Attributes.h
 @@ -50,6 +50,7 @@
   * don't indicate support for them here, due to
@@ -9,8 +9,8 @@ $NetBSD: patch-mozilla_mfbt_Attributes.h,v 1.3 2015/10/02 22:49:36 ryoon Exp $
 +#  define MOZ_HAVE_CXX11_ALIGNAS
  #  define MOZ_HAVE_NEVER_INLINE          __declspec(noinline)
  #  define MOZ_HAVE_NORETURN              __declspec(noreturn)
- #  ifdef __clang__
-@@ -70,6 +71,9 @@
+ #  if _MSC_VER >= 1900
+@@ -73,6 +74,9 @@
  #  ifndef __has_extension
  #    define __has_extension __has_feature /* compatibility, for older versions of clang */
  #  endif
@@ -20,7 +20,7 @@ $NetBSD: patch-mozilla_mfbt_Attributes.h,v 1.3 2015/10/02 22:49:36 ryoon Exp $
  #  if __has_extension(cxx_constexpr)
  #    define MOZ_HAVE_CXX11_CONSTEXPR
  #  endif
-@@ -86,6 +90,7 @@
+@@ -89,6 +93,7 @@
  #  if defined(__GXX_EXPERIMENTAL_CXX0X__) || __cplusplus >= 201103L
  #    define MOZ_HAVE_CXX11_CONSTEXPR
  #    if MOZ_GCC_VERSION_AT_LEAST(4, 8, 0)
