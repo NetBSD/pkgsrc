@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4835 2015/12/03 12:25:36 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.4836 2015/12/03 13:13:06 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8075,3 +8075,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated pkgtools/pkglint to 5.1 [rillig 2015-12-02]
 	Updated cad/geda to 1.8.2nb9 [he 2015-12-03]
 	Updated www/seamonkey to 2.39 [ryoon 2015-12-03]
+	Updated www/seamonkey-l10n to 2.39 [ryoon 2015-12-03]
