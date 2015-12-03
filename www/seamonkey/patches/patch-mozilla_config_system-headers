@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_config_system-headers,v 1.16 2015/10/02 22:49:36 ryoon Exp $
+$NetBSD: patch-mozilla_config_system-headers,v 1.17 2015/12/03 12:22:27 ryoon Exp $
 
---- mozilla/config/system-headers.orig	2015-09-25 07:36:05.000000000 +0000
+--- mozilla/config/system-headers.orig	2015-11-04 01:56:15.000000000 +0000
 +++ mozilla/config/system-headers
 @@ -626,6 +626,7 @@ libgnome/libgnome.h
  libgnomeui/gnome-icon-lookup.h
@@ -10,15 +10,7 @@ $NetBSD: patch-mozilla_config_system-headers,v 1.16 2015/10/02 22:49:36 ryoon Ex
  lib$routines.h
  limits
  limits.h
-@@ -1256,7 +1257,6 @@ X11/Xlocale.h
- X11/Xos.h
- X11/Xutil.h
- zmouse.h
--soundtouch/SoundTouch.h
- #if MOZ_NATIVE_PNG==1
- png.h
- #endif
-@@ -1318,10 +1318,13 @@ vorbis/codec.h
+@@ -1322,10 +1323,13 @@ vorbis/codec.h
  theora/theoradec.h
  tremor/ivorbiscodec.h
  speex/speex_resampler.h
@@ -32,7 +24,7 @@ $NetBSD: patch-mozilla_config_system-headers,v 1.16 2015/10/02 22:49:36 ryoon Ex
  #endif
  gst/gst.h
  gst/app/gstappsink.h
-@@ -1351,3 +1354,43 @@ unicode/utypes.h
+@@ -1355,3 +1359,43 @@ unicode/utypes.h
  #endif
  libutil.h
  unwind.h
