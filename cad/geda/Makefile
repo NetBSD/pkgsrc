@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.104 2015/11/25 12:48:18 jperkin Exp $
+# $NetBSD: Makefile,v 1.105 2015/12/03 11:13:17 he Exp $
 
 DISTNAME=	geda-gaf-1.8.2
 PKGNAME=	${DISTNAME:S/-gaf-/-/}
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	cad
 MASTER_SITES=	http://ftp.geda-project.org/geda-gaf/stable/v1.8/1.8.2/
 
@@ -48,7 +48,7 @@ REPLACE_PERL+=		utils/scripts/pads_backannotate \
 			utils/gxyrs/gxyrs.pl
 
 # needs GNU m4 for the PCBboard and gsch2pcb netlisters
-USE_TOOLS+=		gmake m4:run pkg-config
+USE_TOOLS+=		gmake gm4:run pkg-config
 
 CONFIGURE_ARGS+=	--with-pcbm4dir=${LOCALBASE}/share/pcb/m4
 CONFIGURE_ARGS+=	--with-pcbconfdir=${PKG_SYSCONFDIR}/pcb
