@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2015/12/01 14:07:36 ryoon Exp $
+$NetBSD: distinfo,v 1.11 2015/12/04 09:42:18 ryoon Exp $
 
 SHA1 (psutil-release-3.3.0.tar.gz) = e1a1ff558a90ad48302ad4aaf485a1841d67ee89
 RMD160 (psutil-release-3.3.0.tar.gz) = 59ddfcdd2bdaa4274ff22e40da021c0ff69191a1
@@ -8,7 +8,7 @@ SHA1 (patch-psutil_____init____.py) = 40b3108ab934ed8529a3989eda331d9d2cf2b7af
 SHA1 (patch-psutil___psbsd.py) = e80fd4dcfad88468963d67c90b79c09625c43d1c
 SHA1 (patch-psutil___psutil__bsd.c) = 4efa4ae9fcd16961e3bca987726732260214b635
 SHA1 (patch-psutil___psutil__posix.c) = 6a01a7d45481ab1f512ef90164548a8a8b5cb831
-SHA1 (patch-psutil_arch_bsd_netbsd.c) = 2613cc24b9c25469d67bac3bc30b09d3e391919f
+SHA1 (patch-psutil_arch_bsd_netbsd.c) = a1183af4f7745c9774e01e3b3addf5f817a084ef
 SHA1 (patch-psutil_arch_bsd_netbsd.h) = 4d58a458b10e34e4fac862cc70e53b9faf65dcb0
 SHA1 (patch-psutil_arch_bsd_netbsd__socks.c) = f02ef45768ba34ede2ace38901ee59a15b817537
 SHA1 (patch-psutil_arch_bsd_netbsd__socks.h) = a0af0fe10b7d5243cfc89cb23a863fd819b6cfcc
