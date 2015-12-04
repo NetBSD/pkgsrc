@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4839 2015/12/04 09:43:24 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.4840 2015/12/04 09:43:59 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8079,3 +8079,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/png to 1.6.20 [wiz 2015-12-03]
 	Updated print/gv to 3.7.4nb5 [leot 2015-12-03]
 	Updated sysutils/py-psutil to 3.3.0nb1 [ryoon 2015-12-04]
+	Updated emulators/suse131_gstreamer to 13.1nb3 [ryoon 2015-12-04]
