@@ -1,16 +1,21 @@
-# $NetBSD: Makefile,v 1.6 2015/08/30 14:43:25 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2015/12/04 20:43:14 wiz Exp $
 
-DISTNAME=	click-5.1
+DISTNAME=	click-6.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	https://pypi.python.org/packages/source/c/click/
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/click/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pypi.python.org/pypi/click
 COMMENT=	Simple wrapper around optparse for powerful command line utilities
 LICENSE=	modified-bsd
 
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+
 USE_LANGUAGES=	# none
+
+do-test:
+	cd ${WRKSRC}/tests && PYTHONPATH=.. py.test-${PYVERSSUFFIX} --tb=short
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
