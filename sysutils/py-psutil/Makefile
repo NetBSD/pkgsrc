@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2015/12/01 14:07:36 ryoon Exp $
+# $NetBSD: Makefile,v 1.13 2015/12/04 09:42:18 ryoon Exp $
 
 DISTNAME=	psutil-release-3.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-release//}
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=giampaolo/}
 GITHUB_PROJECT=	psutil
