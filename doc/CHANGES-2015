@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4844 2015/12/04 20:06:00 gdt Exp $
+$NetBSD: CHANGES-2015,v 1.4845 2015/12/04 20:34:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8085,3 +8085,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/pkgconf version 0.9.12 [wiz 2015-12-04]
 	Updated www/py-djangocms-text-ckeditor to 2.8.0 [adam 2015-12-04]
 	Updated net/syncthing to 0.12.6 [gdt 2015-12-04]
+	Updated www/libmicrohttpd to 0.9.47 [wiz 2015-12-04]
