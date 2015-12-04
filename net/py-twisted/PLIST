@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2015/09/06 20:35:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.20 2015/12/04 21:58:53 wiz Exp $
 bin/cftp
 bin/ckeygen
 bin/conch
@@ -193,6 +193,9 @@ ${PYSITELIB}/twisted/conch/scripts/tkconch.pyo
 ${PYSITELIB}/twisted/conch/ssh/__init__.py
 ${PYSITELIB}/twisted/conch/ssh/__init__.pyc
 ${PYSITELIB}/twisted/conch/ssh/__init__.pyo
+${PYSITELIB}/twisted/conch/ssh/_kex.py
+${PYSITELIB}/twisted/conch/ssh/_kex.pyc
+${PYSITELIB}/twisted/conch/ssh/_kex.pyo
 ${PYSITELIB}/twisted/conch/ssh/address.py
 ${PYSITELIB}/twisted/conch/ssh/address.pyc
 ${PYSITELIB}/twisted/conch/ssh/address.pyo
@@ -1352,7 +1355,6 @@ ${PYSITELIB}/twisted/protocols/wire.pyo
 ${PYSITELIB}/twisted/python/__init__.py
 ${PYSITELIB}/twisted/python/__init__.pyc
 ${PYSITELIB}/twisted/python/__init__.pyo
-${PYSITELIB}/twisted/python/_initgroups.c
 ${PYSITELIB}/twisted/python/_inotify.py
 ${PYSITELIB}/twisted/python/_inotify.pyc
 ${PYSITELIB}/twisted/python/_inotify.pyo
@@ -1370,6 +1372,9 @@ ${PYSITELIB}/twisted/python/_textattributes.pyo
 ${PYSITELIB}/twisted/python/_tzhelper.py
 ${PYSITELIB}/twisted/python/_tzhelper.pyc
 ${PYSITELIB}/twisted/python/_tzhelper.pyo
+${PYSITELIB}/twisted/python/_url.py
+${PYSITELIB}/twisted/python/_url.pyc
+${PYSITELIB}/twisted/python/_url.pyo
 ${PYSITELIB}/twisted/python/compat.py
 ${PYSITELIB}/twisted/python/compat.pyc
 ${PYSITELIB}/twisted/python/compat.pyo
@@ -1523,6 +1528,9 @@ ${PYSITELIB}/twisted/python/test/test_textattributes.pyo
 ${PYSITELIB}/twisted/python/test/test_tzhelper.py
 ${PYSITELIB}/twisted/python/test/test_tzhelper.pyc
 ${PYSITELIB}/twisted/python/test/test_tzhelper.pyo
+${PYSITELIB}/twisted/python/test/test_url.py
+${PYSITELIB}/twisted/python/test/test_url.pyc
+${PYSITELIB}/twisted/python/test/test_url.pyo
 ${PYSITELIB}/twisted/python/test/test_urlpath.py
 ${PYSITELIB}/twisted/python/test/test_urlpath.pyc
 ${PYSITELIB}/twisted/python/test/test_urlpath.pyo
@@ -1551,6 +1559,9 @@ ${PYSITELIB}/twisted/python/threadpool.py
 ${PYSITELIB}/twisted/python/threadpool.pyc
 ${PYSITELIB}/twisted/python/threadpool.pyo
 ${PYSITELIB}/twisted/python/twisted-completion.zsh
+${PYSITELIB}/twisted/python/url.py
+${PYSITELIB}/twisted/python/url.pyc
+${PYSITELIB}/twisted/python/url.pyo
 ${PYSITELIB}/twisted/python/urlpath.py
 ${PYSITELIB}/twisted/python/urlpath.pyc
 ${PYSITELIB}/twisted/python/urlpath.pyo
@@ -1959,9 +1970,6 @@ ${PYSITELIB}/twisted/test/test_reflect.pyo
 ${PYSITELIB}/twisted/test/test_roots.py
 ${PYSITELIB}/twisted/test/test_roots.pyc
 ${PYSITELIB}/twisted/test/test_roots.pyo
-${PYSITELIB}/twisted/test/test_setup.py
-${PYSITELIB}/twisted/test/test_setup.pyc
-${PYSITELIB}/twisted/test/test_setup.pyo
 ${PYSITELIB}/twisted/test/test_shortcut.py
 ${PYSITELIB}/twisted/test/test_shortcut.pyc
 ${PYSITELIB}/twisted/test/test_shortcut.pyo
@@ -2269,7 +2277,6 @@ ${PYSITELIB}/twisted/web/domhelpers.pyo
 ${PYSITELIB}/twisted/web/error.py
 ${PYSITELIB}/twisted/web/error.pyc
 ${PYSITELIB}/twisted/web/error.pyo
-${PYSITELIB}/twisted/web/failure.xhtml
 ${PYSITELIB}/twisted/web/guard.py
 ${PYSITELIB}/twisted/web/guard.pyc
 ${PYSITELIB}/twisted/web/guard.pyo
