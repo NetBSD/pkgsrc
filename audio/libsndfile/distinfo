@@ -1,9 +1,6 @@
-$NetBSD: distinfo,v 1.37 2015/11/03 01:12:38 agc Exp $
+$NetBSD: distinfo,v 1.38 2015/12/04 20:39:05 wiz Exp $
 
-SHA1 (libsndfile-1.0.25.tar.gz) = e95d9fca57f7ddace9f197071cbcfb92fa16748e
-RMD160 (libsndfile-1.0.25.tar.gz) = 7330ea9fc1cfa3809fa7d2a6e2a0593b6e0233c7
-SHA512 (libsndfile-1.0.25.tar.gz) = 4ca9780ed0a915aca8a10ef91bf4bf48b05ecb85285c2c3fe7eef1d46d3e0747e61416b6bddbef369bd69adf4b796ff5f61380e0bc998906b170a93341ba6f78
-Size (libsndfile-1.0.25.tar.gz) = 1060692 bytes
-SHA1 (patch-programs_sndfile-play.c) = c72eb9f7b4dbcc87051a841acb8bcdb7cadd5585
-SHA1 (patch-src_file__io.c) = 6f1f5c4dd5f60281e7850f264dd6546c08c28af8
-SHA1 (patch-src_sd2.c) = 34b5317b07bf12f9cf944e8c6154de1444ac7565
+SHA1 (libsndfile-1.0.26.tar.gz) = c9092c06f6ed51034c9e809e150083ff1f55e79e
+RMD160 (libsndfile-1.0.26.tar.gz) = e521b70af27b0a1bd6aebee3b46806d66aac230a
+SHA512 (libsndfile-1.0.26.tar.gz) = 49a131482f9735e2f171ab7b59770cafc6b92e177f88bed9d2e6189390abc5aa473081dce3e4ec3c0e32b6f3d8c19901136b3df15b9222c11b578f522e88257e
+Size (libsndfile-1.0.26.tar.gz) = 1080727 bytes
