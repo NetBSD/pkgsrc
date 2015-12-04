@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2015/10/19 17:26:44 jperkin Exp $
+# $NetBSD: Makefile,v 1.34 2015/12/04 11:32:40 hauke Exp $
 
 DISTNAME=	pkg-config-0.29
 CATEGORIES=	devel
@@ -26,6 +26,10 @@ CONFIGURE_ARGS+=	--cache-file=/dev/null
 .endif
 
 .if ${OPSYS} == "NetBSD"
+.if ${MACHINE_ARCH} == "i386" && !empty(OS_VERSION:M[12345].*)
+# Built-in GLib wants __sync_bool_compare_and_swap_4
+CFLAGS+=		-march=i486
+.endif
 post-configure:
 	cd ${WRKSRC}/glib; \
 	${GREP} -v HAVE_DTRACE config.h >config.h.new; \
