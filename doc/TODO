@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15155 2015/12/02 06:59:06 wiz Exp $
+$NetBSD: TODO,v 1.15156 2015/12/04 20:36:17 wiz Exp $
 
 Suggested new packages
 ======================
@@ -810,6 +810,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnu-pw-mgr-1.6
 	o gnuchess-6.2.2
 	o gnuchess-book-1.02
+	o gnupg21-2.1.10
 	o gnuradio-3.7.7.1
 	o gnustep-back-0.24.1
 	o gnustep-base-1.24.8
@@ -1453,6 +1454,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-Unidecode-0.04.18
 	o py-bleach-1.4.1
 	o py-bsddb3-6.1.0
+	o py-buildbot-0.9.0b5
+	o py-buildbot-slave-0.9.0b5
 	o py-cassa-1.11.0
 	o py-click-6.2
 	o py-colorama-0.3.3
