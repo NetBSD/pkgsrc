@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4838 2015/12/03 17:35:09 leot Exp $
+$NetBSD: CHANGES-2015,v 1.4839 2015/12/04 09:43:24 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8078,3 +8078,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/seamonkey-l10n to 2.39 [ryoon 2015-12-03]
 	Updated graphics/png to 1.6.20 [wiz 2015-12-03]
 	Updated print/gv to 3.7.4nb5 [leot 2015-12-03]
+	Updated sysutils/py-psutil to 3.3.0nb1 [ryoon 2015-12-04]
