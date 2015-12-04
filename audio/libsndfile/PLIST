@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2010/10/16 08:23:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2015/12/04 20:39:05 wiz Exp $
 bin/sndfile-cmp
 bin/sndfile-concat
 bin/sndfile-convert
@@ -23,19 +23,19 @@ man/man1/sndfile-interleave.1
 man/man1/sndfile-metadata-get.1
 man/man1/sndfile-metadata-set.1
 man/man1/sndfile-play.1
-share/doc/libsndfile1-dev/html/FAQ.html
-share/doc/libsndfile1-dev/html/api.html
-share/doc/libsndfile1-dev/html/bugs.html
-share/doc/libsndfile1-dev/html/command.html
-share/doc/libsndfile1-dev/html/dither.html
-share/doc/libsndfile1-dev/html/embedded_files.html
-share/doc/libsndfile1-dev/html/index.html
-share/doc/libsndfile1-dev/html/libsndfile.css
-share/doc/libsndfile1-dev/html/libsndfile.jpg
-share/doc/libsndfile1-dev/html/lists.html
-share/doc/libsndfile1-dev/html/new_file_type.HOWTO
-share/doc/libsndfile1-dev/html/octave.html
-share/doc/libsndfile1-dev/html/pkgconfig.html
-share/doc/libsndfile1-dev/html/sndfile_info.html
-share/doc/libsndfile1-dev/html/tutorial.html
-share/doc/libsndfile1-dev/html/win32.html
+man/man1/sndfile-salvage.1
+share/doc/libsndfile/FAQ.html
+share/doc/libsndfile/api.html
+share/doc/libsndfile/bugs.html
+share/doc/libsndfile/command.html
+share/doc/libsndfile/dither.html
+share/doc/libsndfile/embedded_files.html
+share/doc/libsndfile/index.html
+share/doc/libsndfile/libsndfile.css
+share/doc/libsndfile/libsndfile.jpg
+share/doc/libsndfile/lists.html
+share/doc/libsndfile/new_file_type.HOWTO
+share/doc/libsndfile/octave.html
+share/doc/libsndfile/sndfile_info.html
+share/doc/libsndfile/tutorial.html
+share/doc/libsndfile/win32.html
