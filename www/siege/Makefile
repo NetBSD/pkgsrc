@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2015/11/27 16:20:31 nils Exp $
+# $NetBSD: Makefile,v 1.2 2015/12/04 22:11:32 nils Exp $
 #
 
-DISTNAME=		siege-3.1.2
+DISTNAME=		siege-3.1.3
 CATEGORIES=		www
 MASTER_SITES=		http://download.joedog.org/siege/
 
