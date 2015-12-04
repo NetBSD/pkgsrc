@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2015/11/21 09:33:45 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2015/12/04 20:33:53 wiz Exp $
 
-DISTNAME=	libmicrohttpd-0.9.46
+DISTNAME=	libmicrohttpd-0.9.47
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GNU:=libmicrohttpd/}
 
@@ -12,14 +12,11 @@ LICENSE=	gnu-lgpl-v2.1
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
-# Too many problems with libmicrospdy at the moment (0.9.31)
-CONFIGURE_ARGS+=	--disable-spdy
 # Avoid building and installing 'demo' program
 CONFIGURE_ENV+=		ac_cv_header_magic_h=no
 INFO_FILES=		yes
 
 PKGCONFIG_OVERRIDE+=	libmicrohttpd.pc.in
-PKGCONFIG_OVERRIDE+=	libmicrospdy.pc.in
 
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
