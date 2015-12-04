@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/12/04 21:46:47 wiz Exp $
+
+SHA1 (betamax-0.5.1.tar.gz) = f1fab32412e5cc5b7c1a01bdeefe221a0788bd6e
+RMD160 (betamax-0.5.1.tar.gz) = db4839ac9fb76cdb71cc631f2c6ed7ae496624e9
+SHA512 (betamax-0.5.1.tar.gz) = 1737c42594dcb00b58d42ea0b8258b582f30ce6673bc34761e2592148e3ec9aada3fa0a9392dea623d818423829908240c6b25b215666bffd6c9418fb9e3835a
+Size (betamax-0.5.1.tar.gz) = 25586 bytes
