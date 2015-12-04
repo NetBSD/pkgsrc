@@ -1,8 +1,8 @@
-$NetBSD: patch-psutil_arch_bsd_netbsd.c,v 1.1 2015/12/01 14:07:36 ryoon Exp $
+$NetBSD: patch-psutil_arch_bsd_netbsd.c,v 1.2 2015/12/04 09:42:18 ryoon Exp $
 
---- psutil/arch/bsd/netbsd.c.orig	2015-11-30 22:46:00.000000000 +0000
+--- psutil/arch/bsd/netbsd.c.orig	2015-12-04 06:20:21.000000000 +0000
 +++ psutil/arch/bsd/netbsd.c
-@@ -0,0 +1,665 @@
+@@ -0,0 +1,662 @@
 +/*
 + * Copyright (c) 2009, Giampaolo Rodola', Landry Breuil.
 + * All rights reserved.
@@ -485,11 +485,8 @@ $NetBSD: patch-psutil_arch_bsd_netbsd.c,v 1.1 2015/12/01 14:07:36 ryoon Exp $
 +    int cnt;
 +
 +    struct kinfo_file *freep;
-+    kinfo_proc kipp;
 +
 +    if (! PyArg_ParseTuple(args, "l", &pid))
-+        return NULL;
-+    if (psutil_kinfo_proc(pid, &kipp) == -1)
 +        return NULL;
 +
 +    freep = kinfo_getfile(pid, &cnt);
