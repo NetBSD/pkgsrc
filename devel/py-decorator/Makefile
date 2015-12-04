@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2014/12/31 13:57:26 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2015/12/04 20:44:48 wiz Exp $
 
-DISTNAME=		decorator-3.4.0
+DISTNAME=		decorator-4.0.2
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		devel python
 MASTER_SITES=		http://pypi.python.org/packages/source/d/decorator/
