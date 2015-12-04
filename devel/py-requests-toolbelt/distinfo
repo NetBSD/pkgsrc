@@ -1,9 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/24 10:27:26 wiz Exp $
+$NetBSD: distinfo,v 1.5 2015/12/04 21:48:21 wiz Exp $
 
-SHA1 (requests-toolbelt-0.4.0.tar.gz) = 89034149cb90c4ba825bbc8c68a590c3ad41f067
-RMD160 (requests-toolbelt-0.4.0.tar.gz) = 06759883eac9d07a4a5a037746c9d36140f8396d
-SHA512 (requests-toolbelt-0.4.0.tar.gz) = f3fce2f93c1152a7f42bed57bcff5910f2cb5cae27d3beea58ddfac556752c65c30e3dfd0409bcc110073d1e42edba873886c99129811115b297eb26f071577d
-Size (requests-toolbelt-0.4.0.tar.gz) = 25451 bytes
-SHA1 (patch-requests__toolbelt_auth___digest__auth__compat.py) = 662f4681dff1f1795597770b50fc2c1fb6955fa0
-SHA1 (patch-requests__toolbelt_auth_guess.py) = 352acc6d4b9a98d17133257edb497743c8d09191
-SHA1 (patch-requests__toolbelt_auth_http__proxy__digest.py) = 65fe748ff7de4ebcfdc7799c4134372007d124ff
+SHA1 (requests-toolbelt-0.5.0.tar.gz) = 5d7af9b9b3a80f627170461132dcf5c15d9b1f45
+RMD160 (requests-toolbelt-0.5.0.tar.gz) = 0f9cf8ecb6cccf24ba2540cb21996684d4130d2a
+SHA512 (requests-toolbelt-0.5.0.tar.gz) = 9f01f5783f5ab852fc6bc536a8ede23ad102d7ae0a476e3c749e1d63bc3466da3212259fd2276c35e95d987e64d72036c6d7f10727cc242b5b3026e884d0c014
+Size (requests-toolbelt-0.5.0.tar.gz) = 182971 bytes

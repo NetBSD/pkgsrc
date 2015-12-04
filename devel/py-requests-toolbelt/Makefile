@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2015/11/24 10:27:26 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2015/12/04 21:48:21 wiz Exp $
 
-DISTNAME=	requests-toolbelt-0.4.0
+DISTNAME=	requests-toolbelt-0.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/requests-toolbelt/}
 
@@ -12,6 +11,9 @@ COMMENT=	Utility belt for advanced users of python-requests
 LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-requests>=2.1.0:../../devel/py-requests
+BUILD_DEPENDS+=	${PYPKGPREFIX}-betamax-[0-9]*:../../www/py-betamax
+BUILD_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
 
