@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q3,v 1.1.2.26 2015/11/24 20:13:08 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q3,v 1.1.2.27 2015/12/04 19:05:34 bsiegert Exp $
 
 Changes to the packages collection and infrastructure on the 2015Q3 branch:
 
@@ -130,5 +130,8 @@ Pullup ticket #4863 - requested by taca
 textproc/ruby-nokogiri: security fix
 
 Pullup ticket #4864 - requested by wiz
-devel/pcre: srcurity fix
+devel/pcre: security fix
+
+Pullup ticket #4866 - requested by wiz
+graphics/png: security fix
 
