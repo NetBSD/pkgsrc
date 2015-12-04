@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4848 2015/12/04 20:45:02 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4849 2015/12/04 21:47:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8089,3 +8089,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated audio/libsndfile to 1.0.26 [wiz 2015-12-04]
 	Updated devel/py-click to 6.2 [wiz 2015-12-04]
 	Updated devel/py-decorator to 4.0.2 [wiz 2015-12-04]
+	Added www/py-betamax version 0.5.1 [wiz 2015-12-04]
