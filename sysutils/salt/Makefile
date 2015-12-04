@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2015/11/10 14:48:39 sborrill Exp $
+# $NetBSD: Makefile,v 1.30 2015/12/04 09:13:33 sborrill Exp $
 
 DISTNAME=	salt-2015.8.1
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	https://pypi.python.org/packages/source/s/salt/
 
@@ -18,6 +19,7 @@ DEPENDS+= ${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 DEPENDS+= ${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
 DEPENDS+= ${PYPKGPREFIX}-apache-libcloud>=0.14.1:../../net/py-apache-libcloud
 DEPENDS+= ${PYPKGPREFIX}-requests>=2.5.0:../../devel/py-requests
+DEPENDS+= ${PYPKGPREFIX}-tornado>=4.3:../../www/py-tornado
 
 BUILD_DEFS+=	VARBASE
 
