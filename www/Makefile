@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1132 2015/11/27 22:22:53 mef Exp $
+# $NetBSD: Makefile,v 1.1133 2015/12/04 21:47:03 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -557,6 +557,7 @@ SUBDIR+=	py-URLObject
 SUBDIR+=	py-WebOb
 SUBDIR+=	py-beautifulsoup
 SUBDIR+=	py-beautifulsoup4
+SUBDIR+=	py-betamax
 SUBDIR+=	py-bleach
 SUBDIR+=	py-blosxom
 SUBDIR+=	py-bottle
