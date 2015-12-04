@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4846 2015/12/04 20:39:23 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4847 2015/12/04 20:43:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8087,3 +8087,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/syncthing to 0.12.6 [gdt 2015-12-04]
 	Updated www/libmicrohttpd to 0.9.47 [wiz 2015-12-04]
 	Updated audio/libsndfile to 1.0.26 [wiz 2015-12-04]
+	Updated devel/py-click to 6.2 [wiz 2015-12-04]
