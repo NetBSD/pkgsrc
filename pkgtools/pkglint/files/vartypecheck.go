@@ -361,7 +361,7 @@ func (cv *VartypeCheck) Option() {
 
 // The PATH environment variable
 func (cv *VartypeCheck) Pathlist() {
-	if !contains(cv.value, ":") && cv.guessed == GUESSED {
+	if !contains(cv.value, ":") && cv.guessed == guGuessed {
 		checklineMkVartypePrimitive(cv.line, cv.varname, CheckvarPathname, cv.op, cv.value, cv.comment, cv.listContext, cv.guessed)
 		return
 	}

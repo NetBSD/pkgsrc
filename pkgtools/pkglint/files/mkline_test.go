@@ -11,14 +11,14 @@ func (s *Suite) TestChecklineMkVartype_SimpleType(c *check.C) {
 
 	vartype1 := G.globalData.vartypes["COMMENT"]
 	c.Assert(vartype1, check.NotNil)
-	c.Check(vartype1.guessed, equals, NOT_GUESSED)
+	c.Check(vartype1.guessed, equals, guNotGuessed)
 
 	vartype := getVariableType(line, "COMMENT")
 
 	c.Assert(vartype, check.NotNil)
 	c.Check(vartype.checker.name, equals, "Comment")
-	c.Check(vartype.guessed, equals, NOT_GUESSED)
-	c.Check(vartype.kindOfList, equals, LK_NONE)
+	c.Check(vartype.guessed, equals, guNotGuessed)
+	c.Check(vartype.kindOfList, equals, lkNone)
 
 	checklineMkVartype(line, "COMMENT", "=", "A nice package", "")
 

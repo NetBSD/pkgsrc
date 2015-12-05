@@ -4,8 +4,8 @@ import (
 	"io"
 )
 
-const NO_FILE = ""
-const NO_LINES = ""
+const noFile = ""
+const noLines = ""
 
 type LogLevel struct {
 	traditionalName string
@@ -13,17 +13,17 @@ type LogLevel struct {
 }
 
 var (
-	LL_FATAL = LogLevel{"FATAL", "fatal"}
-	LL_ERROR = LogLevel{"ERROR", "error"}
-	LL_WARN  = LogLevel{"WARN", "warning"}
-	LL_NOTE  = LogLevel{"NOTE", "note"}
-	LL_DEBUG = LogLevel{"DEBUG", "debug"}
+	llFatal = LogLevel{"FATAL", "fatal"}
+	llError = LogLevel{"ERROR", "error"}
+	llWarn  = LogLevel{"WARN", "warning"}
+	llNote  = LogLevel{"NOTE", "note"}
+	llDebug = LogLevel{"DEBUG", "debug"}
 )
 
-var dummyLine = NewLine(NO_FILE, NO_LINES, "", nil)
+var dummyLine = NewLine(noFile, noLines, "", nil)
 
 func logMessage(level LogLevel, fname, lineno, message string) {
-	if fname != NO_FILE {
+	if fname != noFile {
 		fname = cleanpath(fname)
 	}
 
@@ -32,10 +32,10 @@ func logMessage(level LogLevel, fname, lineno, message string) {
 		text += sep + level.traditionalName + ":"
 		sep = " "
 	}
-	if fname != NO_FILE {
+	if fname != noFile {
 		text += sep + fname
 		sep = ": "
-		if lineno != NO_LINES {
+		if lineno != noLines {
 			text += ":" + lineno
 		}
 	}
@@ -44,7 +44,7 @@ func logMessage(level LogLevel, fname, lineno, message string) {
 		sep = " "
 	}
 	text += sep + message + "\n"
-	if level != LL_FATAL {
+	if level != llFatal {
 		io.WriteString(G.logOut, text)
 	} else {
 		io.WriteString(G.logErr, text)
@@ -53,29 +53,29 @@ func logMessage(level LogLevel, fname, lineno, message string) {
 
 func fatalf(fname, lineno, format string, args ...interface{}) bool {
 	message := sprintf(format, args...)
-	logMessage(LL_FATAL, fname, lineno, message)
+	logMessage(llFatal, fname, lineno, message)
 	panic(pkglintFatal{})
 }
 func errorf(fname, lineno, format string, args ...interface{}) bool {
 	message := sprintf(format, args...)
-	logMessage(LL_ERROR, fname, lineno, message)
+	logMessage(llError, fname, lineno, message)
 	G.errors++
 	return true
 }
 func warnf(fname, lineno, format string, args ...interface{}) bool {
 	message := sprintf(format, args...)
-	logMessage(LL_WARN, fname, lineno, message)
+	logMessage(llWarn, fname, lineno, message)
 	G.warnings++
 	return true
 }
 func notef(fname, lineno, format string, args ...interface{}) bool {
 	message := sprintf(format, args...)
-	logMessage(LL_NOTE, fname, lineno, message)
+	logMessage(llNote, fname, lineno, message)
 	return true
 }
 func debugf(fname, lineno, format string, args ...interface{}) bool {
 	message := sprintf(format, args...)
-	logMessage(LL_DEBUG, fname, lineno, message)
+	logMessage(llDebug, fname, lineno, message)
 	return true
 }
 

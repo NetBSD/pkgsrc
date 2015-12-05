@@ -42,12 +42,12 @@ func loadPackageMakefile(fname string) []*Line {
 
 	var mainLines, allLines []*Line
 	if !readMakefile(fname, &mainLines, &allLines) {
-		errorf(fname, NO_LINES, "Cannot be read.")
+		errorf(fname, noLines, "Cannot be read.")
 		return nil
 	}
 
 	if G.opts.DumpMakefile {
-		debugf(G.currentDir, NO_LINES, "Whole Makefile (with all included files) follows:")
+		debugf(G.currentDir, noLines, "Whole Makefile (with all included files) follows:")
 		for _, line := range allLines {
 			fmt.Printf("%s\n", line.String())
 		}
@@ -128,11 +128,11 @@ func getVariableType(line *Line, varname string) *Vartype {
 	}
 
 	if G.globalData.varnameToToolname[varname] != "" {
-		return &Vartype{LK_NONE, CheckvarShellCommand, []AclEntry{{"*", "u"}}, NOT_GUESSED}
+		return &Vartype{lkNone, CheckvarShellCommand, []AclEntry{{"*", "u"}}, guNotGuessed}
 	}
 
 	if m, toolvarname := match1(varname, `^TOOLS_(.*)`); m && G.globalData.varnameToToolname[toolvarname] != "" {
-		return &Vartype{LK_NONE, CheckvarPathname, []AclEntry{{"*", "u"}}, NOT_GUESSED}
+		return &Vartype{lkNone, CheckvarPathname, []AclEntry{{"*", "u"}}, guNotGuessed}
 	}
 
 	allowAll := []AclEntry{{"*", "adpsu"}}
@@ -142,33 +142,33 @@ func getVariableType(line *Line, varname string) *Vartype {
 	var gtype *Vartype
 	switch {
 	case hasSuffix(varname, "DIRS"):
-		gtype = &Vartype{LK_SHELL, CheckvarPathmask, allowRuntime, GUESSED}
+		gtype = &Vartype{lkShell, CheckvarPathmask, allowRuntime, guGuessed}
 	case hasSuffix(varname, "DIR"), hasSuffix(varname, "_HOME"):
-		gtype = &Vartype{LK_NONE, CheckvarPathname, allowRuntime, GUESSED}
+		gtype = &Vartype{lkNone, CheckvarPathname, allowRuntime, guGuessed}
 	case hasSuffix(varname, "FILES"):
-		gtype = &Vartype{LK_SHELL, CheckvarPathmask, allowRuntime, GUESSED}
+		gtype = &Vartype{lkShell, CheckvarPathmask, allowRuntime, guGuessed}
 	case hasSuffix(varname, "FILE"):
-		gtype = &Vartype{LK_NONE, CheckvarPathname, allowRuntime, GUESSED}
+		gtype = &Vartype{lkNone, CheckvarPathname, allowRuntime, guGuessed}
 	case hasSuffix(varname, "PATH"):
-		gtype = &Vartype{LK_NONE, CheckvarPathlist, allowRuntime, GUESSED}
+		gtype = &Vartype{lkNone, CheckvarPathlist, allowRuntime, guGuessed}
 	case hasSuffix(varname, "PATHS"):
-		gtype = &Vartype{LK_SHELL, CheckvarPathname, allowRuntime, GUESSED}
+		gtype = &Vartype{lkShell, CheckvarPathname, allowRuntime, guGuessed}
 	case hasSuffix(varname, "_USER"):
-		gtype = &Vartype{LK_NONE, CheckvarUserGroupName, allowAll, GUESSED}
+		gtype = &Vartype{lkNone, CheckvarUserGroupName, allowAll, guGuessed}
 	case hasSuffix(varname, "_GROUP"):
-		gtype = &Vartype{LK_NONE, CheckvarUserGroupName, allowAll, GUESSED}
+		gtype = &Vartype{lkNone, CheckvarUserGroupName, allowAll, guGuessed}
 	case hasSuffix(varname, "_ENV"):
-		gtype = &Vartype{LK_SHELL, CheckvarShellWord, allowRuntime, GUESSED}
+		gtype = &Vartype{lkShell, CheckvarShellWord, allowRuntime, guGuessed}
 	case hasSuffix(varname, "_CMD"):
-		gtype = &Vartype{LK_NONE, CheckvarShellCommand, allowRuntime, GUESSED}
+		gtype = &Vartype{lkNone, CheckvarShellCommand, allowRuntime, guGuessed}
 	case hasSuffix(varname, "_ARGS"):
-		gtype = &Vartype{LK_SHELL, CheckvarShellWord, allowRuntime, GUESSED}
+		gtype = &Vartype{lkShell, CheckvarShellWord, allowRuntime, guGuessed}
 	case hasSuffix(varname, "_CFLAGS"), hasSuffix(varname, "_CPPFLAGS"), hasSuffix(varname, "_CXXFLAGS"), hasSuffix(varname, "_LDFLAGS"):
-		gtype = &Vartype{LK_SHELL, CheckvarShellWord, allowRuntime, GUESSED}
+		gtype = &Vartype{lkShell, CheckvarShellWord, allowRuntime, guGuessed}
 	case hasSuffix(varname, "_MK"):
-		gtype = &Vartype{LK_NONE, CheckvarUnchecked, allowAll, GUESSED}
+		gtype = &Vartype{lkNone, CheckvarUnchecked, allowAll, guGuessed}
 	case hasPrefix(varname, "PLIST."):
-		gtype = &Vartype{LK_NONE, CheckvarYes, allowAll, GUESSED}
+		gtype = &Vartype{lkNone, CheckvarYes, allowAll, guGuessed}
 	}
 
 	if gtype != nil {
@@ -425,19 +425,19 @@ func checkfile(fname string) {
 	basename := path.Base(fname)
 	if matches(basename, `^(?:work.*|.*~|.*\.orig|.*\.rej)$`) {
 		if G.opts.Import {
-			errorf(fname, NO_LINES, "Must be cleaned up before committing the package.")
+			errorf(fname, noLines, "Must be cleaned up before committing the package.")
 		}
 		return
 	}
 
 	st, err := os.Lstat(fname)
 	if err != nil {
-		errorf(fname, NO_LINES, "%s", err)
+		errorf(fname, noLines, "%s", err)
 		return
 	}
 
 	if st.Mode().IsRegular() && st.Mode().Perm()&0111 != 0 && !isCommitted(fname) {
-		line := NewLine(fname, NO_LINES, "", nil)
+		line := NewLine(fname, noLines, "", nil)
 		line.warnf("Should not be executable.")
 		line.explain(
 			"No package file should ever be executable. Even the INSTALL and",
@@ -454,16 +454,16 @@ func checkfile(fname string) {
 		case matches(fname, `(?:^|/)files/[^/]*$`):
 			// Ok
 		case !isEmptyDir(fname):
-			warnf(fname, NO_LINES, "Unknown directory name.")
+			warnf(fname, noLines, "Unknown directory name.")
 		}
 
 	case st.Mode()&os.ModeSymlink != 0:
 		if !matches(basename, `^work`) {
-			warnf(fname, NO_LINES, "Unknown symlink name.")
+			warnf(fname, noLines, "Unknown symlink name.")
 		}
 
 	case !st.Mode().IsRegular():
-		errorf(fname, NO_LINES, "Only files and directories are allowed in pkgsrc.")
+		errorf(fname, noLines, "Only files and directories are allowed in pkgsrc.")
 
 	case basename == "ALTERNATIVES":
 		if G.opts.CheckAlternatives {
@@ -512,11 +512,11 @@ func checkfile(fname string) {
 
 	case matches(fname, `(?:^|/)patches/manual[^/]*$`):
 		if G.opts.DebugUnchecked {
-			debugf(fname, NO_LINES, "Unchecked file %q.", fname)
+			debugf(fname, noLines, "Unchecked file %q.", fname)
 		}
 
 	case matches(fname, `(?:^|/)patches/[^/]*$`):
-		warnf(fname, NO_LINES, "Patch files should be named \"patch-\", followed by letters, '-', '_', '.', and digits only.")
+		warnf(fname, noLines, "Patch files should be named \"patch-\", followed by letters, '-', '_', '.', and digits only.")
 
 	case matches(basename, `^(?:.*\.mk|Makefile.*)$`) && !matches(fname, `files/`) && !matches(fname, `patches/`):
 		if G.opts.CheckMk {
@@ -541,7 +541,7 @@ func checkfile(fname string) {
 		// Skip
 
 	default:
-		warnf(fname, NO_LINES, "Unexpected file found.")
+		warnf(fname, noLines, "Unexpected file found.")
 		if G.opts.CheckExtra {
 			checkfileExtra(fname)
 		}

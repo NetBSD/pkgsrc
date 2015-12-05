@@ -18,7 +18,7 @@ func checklinesDistinfo(lines []*Line) {
 	if G.pkgContext != nil && hasSuffix(fname, "/lang/php54/distinfo") {
 		patchesDir = G.curPkgsrcdir + "/lang/php54/patches"
 	}
-	_ = G.opts.DebugMisc && debugf(fname, NO_LINES, "patchesDir=%q", patchesDir)
+	_ = G.opts.DebugMisc && debugf(fname, noLines, "patchesDir=%q", patchesDir)
 
 	ck := &distinfoLinesChecker{
 		fname, patchesDir, isCommitted(fname),
@@ -109,14 +109,14 @@ func (ck *distinfoLinesChecker) checkPatchSha1(line *Line, patchFname, distinfoS
 func (ck *distinfoLinesChecker) checkUnrecordedPatches() {
 	files, err := ioutil.ReadDir(G.currentDir + "/" + ck.patchdir)
 	if err != nil {
-		_ = G.opts.DebugUnchecked && debugf(ck.distinfoFilename, NO_LINES, "Cannot read patchesDir %q: %s", ck.patchdir, err)
+		_ = G.opts.DebugUnchecked && debugf(ck.distinfoFilename, noLines, "Cannot read patchesDir %q: %s", ck.patchdir, err)
 		return
 	}
 
 	for _, file := range files {
 		patch := file.Name()
 		if !ck.patches[patch] {
-			errorf(ck.distinfoFilename, NO_LINES, "patch %q is not recorded. Run \"%s makepatchsum\".", ck.patchdir+"/"+patch, confMake)
+			errorf(ck.distinfoFilename, noLines, "patch %q is not recorded. Run \"%s makepatchsum\".", ck.patchdir+"/"+patch, confMake)
 		}
 	}
 }
