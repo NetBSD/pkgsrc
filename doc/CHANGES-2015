@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4855 2015/12/05 05:43:09 taca Exp $
+$NetBSD: CHANGES-2015,v 1.4856 2015/12/05 05:47:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8096,3 +8096,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/siege to 3.1.3 [nils 2015-12-04]
 	Removed meta-pkgs/php54-extensions [taca 2015-12-05]
 	Removed www/php-apc [taca 2015-12-05]
+	Removed lang/php54 [taca 2015-12-05]
