@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4856 2015/12/05 05:47:00 taca Exp $
+$NetBSD: CHANGES-2015,v 1.4857 2015/12/05 08:54:24 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8097,3 +8097,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Removed meta-pkgs/php54-extensions [taca 2015-12-05]
 	Removed www/php-apc [taca 2015-12-05]
 	Removed lang/php54 [taca 2015-12-05]
+	Updated pkgtools/pkglint to 5.2 [rillig 2015-12-05]
