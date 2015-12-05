@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4860 2015/12/05 14:17:37 leot Exp $
+$NetBSD: CHANGES-2015,v 1.4861 2015/12/05 15:16:43 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8101,3 +8101,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-mercurial to 3.6.2 [wiz 2015-12-05]
 	Updated devel/hs-haskell-src-exts to 1.17.1 [szptvlfn 2015-12-05]
 	Updated textproc/the_silver_searcher to 0.31.0 [leot 2015-12-05]
+	Updated pkgtools/pkglint to 5.2.1 [rillig 2015-12-05]
