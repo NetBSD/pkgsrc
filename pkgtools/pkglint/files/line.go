@@ -56,9 +56,9 @@ func (ln *Line) printSource(out io.Writer) {
 	}
 }
 
-func (ln *Line) fatalf(format string, args ...interface{}) bool {
+func (ln *Line) fatalf(format string, args ...interface{}) {
 	ln.printSource(G.logErr)
-	return fatalf(ln.fname, ln.lines, format, args...)
+	fatalf(ln.fname, ln.lines, format, args...)
 }
 func (ln *Line) errorf(format string, args ...interface{}) bool {
 	ln.printSource(G.logOut)
