@@ -323,16 +323,16 @@ func ChecklinesMk(lines []*Line) {
 		checklineTrailingWhitespace(line)
 
 		if line.extra["is_empty"] != nil {
-			substcontext.Finish(line)
+			substcontext.Finish(NewMkLine(line))
 
 		} else if line.extra["is_comment"] != nil {
 			// No further checks.
 
-		} else if m, varname, op, value, _ := matchVarassign(text); m {
+		} else if line.extra["is_varassign"] != nil {
 			ml := NewMkLine(line)
 			ml.checkVaralign()
 			ml.checkVarassign()
-			substcontext.Varassign(line, varname, op, value)
+			substcontext.Varassign(NewMkLine(line))
 
 		} else if hasPrefix(text, "\t") {
 			shellcmd := text[1:]
@@ -516,7 +516,7 @@ func ChecklinesMk(lines []*Line) {
 			_ = G.opts.DebugMisc && line.debugf("Unknown line format")
 		}
 	}
-	substcontext.Finish(lines[len(lines)-1])
+	substcontext.Finish(NewMkLine(lines[len(lines)-1]))
 
 	checklinesTrailingEmptyLines(lines)
 
