@@ -27,8 +27,8 @@ type AclEntry struct {
 	permissions string // Some of: "a"ppend, "d"efault, "s"et; "p"reprocessing, "u"se
 }
 
-// Whether the type definition is guessed (based on the variable name)
-// or explicitly defined (see vardefs.go).
+// Guessed says whether the type definition is guessed (based on the
+// variable name) or explicitly defined (see vardefs.go).
 type Guessed bool
 
 const (

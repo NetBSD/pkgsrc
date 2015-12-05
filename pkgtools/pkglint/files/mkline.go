@@ -282,7 +282,7 @@ func checklineMkVarassign(line *Line, varname, op, value, comment string) {
 
 	checklineMkVardef(line, varname, op)
 
-	if G.opts.WarnExtra && op == "?=" && G.pkgContext != nil && !G.pkgContext.seen_bsd_prefs_mk {
+	if G.opts.WarnExtra && op == "?=" && G.pkgContext != nil && !G.pkgContext.seenBsdPrefsMk {
 		switch varbase {
 		case "BUILDLINK_PKGSRCDIR", "BUILDLINK_DEPMETHOD", "BUILDLINK_ABI_DEPENDS":
 			// FIXME: What about these ones? They occur quite often.

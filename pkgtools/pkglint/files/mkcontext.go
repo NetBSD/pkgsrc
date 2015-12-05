@@ -1,6 +1,6 @@
 package main
 
-// Context of the Makefile that is currently checked.
+// MkContext contains data for the Makefile (or *.mk) that is currently checked.
 type MkContext struct {
 	forVars     map[string]bool  // The variables currently used in .for loops
 	indentation []int            // Indentation depth of preprocessing directives

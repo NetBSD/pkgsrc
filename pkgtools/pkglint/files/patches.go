@@ -132,7 +132,6 @@ const (
 	rePatchUniLineNoNewline = `^\\ No newline at end of file$`
 )
 
-// See doc/statemachine.patch.dia
 type PatchState string
 
 const (
