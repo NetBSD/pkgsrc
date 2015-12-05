@@ -15,7 +15,6 @@ const (
 	reMkCond             = `^\.(\s*)(if|ifdef|ifndef|else|elif|endif|for|endfor|undef)(?:\s+([^\s#][^#]*?))?\s*(?:#.*)?$`
 	reMkInclude          = `^\.\s*(s?include)\s+\"([^\"]+)\"\s*(?:#.*)?$`
 	reVarassign          = `^ *([-*+A-Z_a-z0-9.${}\[]+?)\s*([!+:?]?=)\s*((?:\\#|[^#])*?)(?:\s*(#.*))?$`
-	reVarname            = `(?:[-*+.0-9A-Z_a-z{}\[]+|\$\{[\w_]+\})+`
 	rePkgname            = `^([\w\-.+]+)-(\d(?:\w|\.\d)*)$`
 	rePkgbase            = `(?:[+.\w]|-[A-Z_a-z])+`
 	rePkgversion         = `\d(?:\w|\.\d)*`

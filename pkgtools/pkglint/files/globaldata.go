@@ -67,8 +67,8 @@ func (gd *GlobalData) Initialize() {
 	gd.deprecated = getDeprecatedVars()
 }
 
-func (self *GlobalData) loadDistSites() {
-	fname := self.pkgsrcdir + "/mk/fetch/sites.mk"
+func (gd *GlobalData) loadDistSites() {
+	fname := gd.pkgsrcdir + "/mk/fetch/sites.mk"
 	lines := LoadExistingLines(fname, true)
 
 	names := make(map[string]bool)
@@ -91,25 +91,25 @@ func (self *GlobalData) loadDistSites() {
 	names["MASTER_SITE_LOCAL"] = true
 
 	_ = G.opts.DebugMisc && debugf(fname, NO_LINES, "Loaded %d MASTER_SITE_* URLs.", len(url2name))
-	self.masterSiteUrls = url2name
-	self.masterSiteVars = names
+	gd.masterSiteUrls = url2name
+	gd.masterSiteVars = names
 }
 
-func (self *GlobalData) loadPkgOptions() {
-	fname := self.pkgsrcdir + "/mk/defaults/options.description"
+func (gd *GlobalData) loadPkgOptions() {
+	fname := gd.pkgsrcdir + "/mk/defaults/options.description"
 	lines := LoadExistingLines(fname, false)
 
-	self.pkgOptions = make(map[string]string)
+	gd.pkgOptions = make(map[string]string)
 	for _, line := range lines {
 		if m, optname, optdescr := match2(line.text, `^([-0-9a-z_+]+)(?:\s+(.*))?$`); m {
-			self.pkgOptions[optname] = optdescr
+			gd.pkgOptions[optname] = optdescr
 		} else {
 			line.fatalf("Unknown line format.")
 		}
 	}
 }
 
-func (self *GlobalData) loadTools() {
+func (gd *GlobalData) loadTools() {
 	toolFiles := []string{"defaults.mk"}
 	{
 		fname := G.globalData.pkgsrcdir + "/mk/tools/bsd.tools.mk"
@@ -221,19 +221,19 @@ func (self *GlobalData) loadTools() {
 	systemBuildDefs["GAMEOWN"] = true
 	systemBuildDefs["GAMEGRP"] = true
 
-	self.tools = tools
-	self.vartools = vartools
-	self.predefinedTools = predefinedTools
-	self.varnameToToolname = varnameToToolname
-	self.systemBuildDefs = systemBuildDefs
-	self.toolvarsVarRequired = map[string]bool{
+	gd.tools = tools
+	gd.vartools = vartools
+	gd.predefinedTools = predefinedTools
+	gd.varnameToToolname = varnameToToolname
+	gd.systemBuildDefs = systemBuildDefs
+	gd.toolvarsVarRequired = map[string]bool{
 		"ECHO":   true,
 		"ECHO_N": true,
 		"FALSE":  true,
 		"TEST":   true,
 		"TRUE":   true,
 	}
-	self.toolsVarRequired = map[string]bool{
+	gd.toolsVarRequired = map[string]bool{
 		"echo":  true,
 		"false": true,
 		"test":  true,
@@ -277,14 +277,14 @@ func parselinesSuggestedUpdates(lines []*Line) []SuggestedUpdate {
 	return updates
 }
 
-func (self *GlobalData) loadSuggestedUpdates() {
-	self.suggestedUpdates = loadSuggestedUpdates(G.globalData.pkgsrcdir + "/doc/TODO")
+func (gd *GlobalData) loadSuggestedUpdates() {
+	gd.suggestedUpdates = loadSuggestedUpdates(G.globalData.pkgsrcdir + "/doc/TODO")
 	if wipFilename := G.globalData.pkgsrcdir + "/wip/TODO"; fileExists(wipFilename) {
-		self.suggestedWipUpdates = loadSuggestedUpdates(wipFilename)
+		gd.suggestedWipUpdates = loadSuggestedUpdates(wipFilename)
 	}
 }
 
-func (self *GlobalData) loadDocChangesFromFile(fname string) []Change {
+func (gd *GlobalData) loadDocChangesFromFile(fname string) []Change {
 	lines := LoadExistingLines(fname, false)
 
 	var changes []Change
@@ -317,15 +317,15 @@ func (self *GlobalData) loadDocChangesFromFile(fname string) []Change {
 	return changes
 }
 
-func (self *GlobalData) getSuggestedPackageUpdates() []SuggestedUpdate {
+func (gd *GlobalData) getSuggestedPackageUpdates() []SuggestedUpdate {
 	if G.isWip {
-		return self.suggestedWipUpdates
+		return gd.suggestedWipUpdates
 	} else {
-		return self.suggestedUpdates
+		return gd.suggestedUpdates
 	}
 }
 
-func (self *GlobalData) loadDocChanges() {
+func (gd *GlobalData) loadDocChanges() {
 	docdir := G.globalData.pkgsrcdir + "/doc"
 	files, err := ioutil.ReadDir(docdir)
 	if err != nil {
@@ -341,24 +341,24 @@ func (self *GlobalData) loadDocChanges() {
 	}
 
 	sort.Strings(fnames)
-	self.lastChange = make(map[string]*Change)
+	gd.lastChange = make(map[string]*Change)
 	for _, fname := range fnames {
-		changes := self.loadDocChangesFromFile(docdir + "/" + fname)
+		changes := gd.loadDocChangesFromFile(docdir + "/" + fname)
 		for _, change := range changes {
 			c := change
-			self.lastChange[change.pkgpath] = &c
+			gd.lastChange[change.pkgpath] = &c
 		}
 	}
 }
 
-func (self *GlobalData) loadUserDefinedVars() {
+func (gd *GlobalData) loadUserDefinedVars() {
 	lines := LoadExistingLines(G.globalData.pkgsrcdir+"/mk/defaults/mk.conf", true)
 
-	self.userDefinedVars = make(map[string]*Line)
+	gd.userDefinedVars = make(map[string]*Line)
 	for _, line := range lines {
 		parselineMk(line)
 		if m, varname, _, _, _ := matchVarassign(line.text); m {
-			self.userDefinedVars[varname] = line
+			gd.userDefinedVars[varname] = line
 		}
 	}
 }

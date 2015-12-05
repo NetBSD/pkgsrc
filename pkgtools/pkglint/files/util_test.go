@@ -58,3 +58,23 @@ func (s *Suite) TestCleanpath(c *check.C) {
 	c.Check(cleanpath("cat/pkg.v1/../../cat/pkg.v2/Makefile"), equals, "cat/pkg.v1/../../cat/pkg.v2/Makefile")
 	c.Check(cleanpath("dir/"), equals, "dir")
 }
+
+func (s *Suite) TestIsEmptyDirAndGetSubdirs(c *check.C) {
+	s.CreateTmpFile(c, "CVS/Entries", "dummy\n")
+
+	c.Check(isEmptyDir(s.tmpdir), equals, true)
+	c.Check(getSubdirs(s.tmpdir), check.DeepEquals, []string(nil))
+
+	s.CreateTmpFile(c, "somedir/file", "")
+
+	c.Check(isEmptyDir(s.tmpdir), equals, false)
+	c.Check(getSubdirs(s.tmpdir), check.DeepEquals, []string{"somedir"})
+
+	if nodir := s.tmpdir + "/nonexistent"; true {
+		c.Check(isEmptyDir(nodir), equals, true) // Counts as empty.
+		defer s.ExpectFatalError(func() {
+			c.Check(s.Output(), equals, "FATAL: "+nodir+": Cannot be read: open "+nodir+": The system cannot find the file specified.\n")
+		})
+		c.Check(getSubdirs(nodir), check.DeepEquals, []string(nil))
+	}
+}

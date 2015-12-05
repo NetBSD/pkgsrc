@@ -17,7 +17,7 @@ func variableNeedsQuoting(line *Line, varname string, vuc *VarUseContext) NeedsQ
 		return NQ_DONT_KNOW
 	}
 
-	cond := vartype.checker.IsEnum()
+	isPlainWord := vartype.checker.IsEnum()
 	switch vartype.checker.name {
 	case "DistSuffix",
 		"FileMode", "Filename",
@@ -28,9 +28,9 @@ func variableNeedsQuoting(line *Line, varname string, vuc *VarUseContext) NeedsQ
 		"UserGroupName",
 		"Varname", "Version",
 		"WrkdirSubdirectory":
-		cond = true
+		isPlainWord = true
 	}
-	if cond {
+	if isPlainWord {
 		if vartype.kindOfList == LK_NONE {
 			return NQ_DOESNT_MATTER
 		}

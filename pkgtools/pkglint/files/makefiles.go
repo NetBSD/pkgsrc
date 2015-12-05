@@ -450,7 +450,7 @@ func ChecklinesMk(lines []*Line) {
 				}
 
 			} else if directive == "if" || directive == "elif" {
-				checklineMkCondition(line, args)
+				checklineMkIf(line, args)
 
 			} else if directive == "ifdef" || directive == "ifndef" {
 				if matches(args, `\s`) {

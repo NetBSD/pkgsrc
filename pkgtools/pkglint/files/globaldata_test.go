@@ -8,7 +8,7 @@ func (s *Suite) TestGlobalDataVartypes(c *check.C) {
 	G.globalData.InitVartypes()
 
 	c.Check(G.globalData.vartypes["BSD_MAKE_ENV"].checker.name, equals, "ShellWord")
-	c.Check(G.globalData.vartypes["USE_BUILTIN.*"].checker.name, equals, "YesNo_Indirectly")
+	c.Check(G.globalData.vartypes["USE_BUILTIN.*"].checker.name, equals, "YesNoIndirectly")
 }
 
 func (s *Suite) TestParselinesSuggestedUpdates(c *check.C) {

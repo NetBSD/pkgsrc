@@ -4,8 +4,8 @@ import (
 	"sort"
 )
 
-type Subdir struct {
-	subdir string
+type subdir struct {
+	name   string
 	line   *Line
 	active bool
 }
@@ -42,33 +42,33 @@ func checkdirCategory() {
 
 	fSubdirs := getSubdirs(G.currentDir)
 	sort.Sort(sort.StringSlice(fSubdirs))
-	var mSubdirs []Subdir
+	var mSubdirs []subdir
 
 	prevSubdir := ""
 	for !exp.eof() {
 		line := exp.currentLine()
 		text := line.text
 
-		if m, commentFlag, indentation, subdir, comment := match4(text, `^(#?)SUBDIR\+=(\s*)(\S+)\s*(?:#\s*(.*?)\s*|)$`); m {
+		if m, commentFlag, indentation, name, comment := match4(text, `^(#?)SUBDIR\+=(\s*)(\S+)\s*(?:#\s*(.*?)\s*|)$`); m {
 			commentedOut := commentFlag == "#"
 			if commentedOut && comment == "" {
-				line.warnf("%q commented out without giving a reason.", subdir)
+				line.warnf("%q commented out without giving a reason.", name)
 			}
 
 			if indentation != "\t" {
 				line.warnf("Indentation should be a single tab character.")
 			}
 
-			if subdir == prevSubdir {
-				line.errorf("%q must only appear once.", subdir)
-			} else if subdir < prevSubdir {
-				line.warnf("%q should come before %q.", subdir, prevSubdir)
+			if name == prevSubdir {
+				line.errorf("%q must only appear once.", name)
+			} else if name < prevSubdir {
+				line.warnf("%q should come before %q.", name, prevSubdir)
 			} else {
 				// correctly ordered
 			}
 
-			mSubdirs = append(mSubdirs, Subdir{subdir, line, !commentedOut})
-			prevSubdir = subdir
+			mSubdirs = append(mSubdirs, subdir{name, line, !commentedOut})
+			prevSubdir = name
 			exp.advance()
 
 		} else {
@@ -88,62 +88,62 @@ func checkdirCategory() {
 		fCheck[fsub] = true
 	}
 	for _, msub := range mSubdirs {
-		mCheck[msub.subdir] = true
+		mCheck[msub.name] = true
 	}
 
-	f_index, f_atend, f_neednext, f_current := 0, false, true, ""
-	m_index, m_atend, m_neednext, m_current := 0, false, true, ""
+	fIndex, fAtend, fNeednext, fCurrent := 0, false, true, ""
+	mIndex, mAtend, mNeednext, mCurrent := 0, false, true, ""
 
 	var subdirs []string
 
 	var line *Line
-	m_active := false
+	mActive := false
 
-	for !(m_atend && f_atend) {
-		if !m_atend && m_neednext {
-			m_neednext = false
-			if m_index >= len(mSubdirs) {
-				m_atend = true
+	for !(mAtend && fAtend) {
+		if !mAtend && mNeednext {
+			mNeednext = false
+			if mIndex >= len(mSubdirs) {
+				mAtend = true
 				line = exp.currentLine()
 				continue
 			} else {
-				m_current = mSubdirs[m_index].subdir
-				line = mSubdirs[m_index].line
-				m_active = mSubdirs[m_index].active
-				m_index++
+				mCurrent = mSubdirs[mIndex].name
+				line = mSubdirs[mIndex].line
+				mActive = mSubdirs[mIndex].active
+				mIndex++
 			}
 		}
 
-		if !f_atend && f_neednext {
-			f_neednext = false
-			if f_index >= len(fSubdirs) {
-				f_atend = true
+		if !fAtend && fNeednext {
+			fNeednext = false
+			if fIndex >= len(fSubdirs) {
+				fAtend = true
 				continue
 			} else {
-				f_current = fSubdirs[f_index]
-				f_index++
+				fCurrent = fSubdirs[fIndex]
+				fIndex++
 			}
 		}
 
-		if !f_atend && (m_atend || f_current < m_current) {
-			if !mCheck[f_current] {
-				line.errorf("%q exists in the file system, but not in the Makefile.", f_current)
-				line.insertBefore("SUBDIR+=\t" + f_current)
+		if !fAtend && (mAtend || fCurrent < mCurrent) {
+			if !mCheck[fCurrent] {
+				line.errorf("%q exists in the file system, but not in the Makefile.", fCurrent)
+				line.insertBefore("SUBDIR+=\t" + fCurrent)
 			}
-			f_neednext = true
+			fNeednext = true
 
-		} else if !m_atend && (f_atend || m_current < f_current) {
-			if !fCheck[m_current] {
-				line.errorf("%q exists in the Makefile, but not in the file system.", m_current)
+		} else if !mAtend && (fAtend || mCurrent < fCurrent) {
+			if !fCheck[mCurrent] {
+				line.errorf("%q exists in the Makefile, but not in the file system.", mCurrent)
 				line.delete()
 			}
-			m_neednext = true
+			mNeednext = true
 
 		} else { // f_current == m_current
-			f_neednext = true
-			m_neednext = true
-			if m_active {
-				subdirs = append(subdirs, G.currentDir+"/"+m_current)
+			fNeednext = true
+			mNeednext = true
+			if mActive {
+				subdirs = append(subdirs, G.currentDir+"/"+mCurrent)
 			}
 		}
 	}
