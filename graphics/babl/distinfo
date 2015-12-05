@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.13 2015/11/03 21:33:52 agc Exp $
+$NetBSD: distinfo,v 1.14 2015/12/05 21:27:38 adam Exp $
 
-SHA1 (babl_0.1.12.orig.tar.bz2) = b9a811d9d05717d66bc107a18447fbd74cff7eea
-RMD160 (babl_0.1.12.orig.tar.bz2) = 4429fc997a34c1e3f171c3097486a90437380ab5
-SHA512 (babl_0.1.12.orig.tar.bz2) = b69c8e3870f25372b2223aa4a716383af30342822461fc847039af964cdd194603dbc327a5c3547369d64b206b54280a5a9a227197ca6b7bcfbfa8e2e560df6a
-Size (babl_0.1.12.orig.tar.bz2) = 642234 bytes
+SHA1 (babl-0.1.14.tar.bz2) = 1e1e27a9a07da95e905d07816701b2efaf5611af
+RMD160 (babl-0.1.14.tar.bz2) = df886c51b01b7b8ee52bbdd9b0cdf0a20e65f728
+SHA512 (babl-0.1.14.tar.bz2) = fb7c48738b968c2cf01aab20b50c7768501b73c8c34957ef500cf7a77bb2dce519ede34463a8a100037533d5f3566e1cd23d898c41eb29fc01620a0dde131398
+Size (babl-0.1.14.tar.bz2) = 718238 bytes
