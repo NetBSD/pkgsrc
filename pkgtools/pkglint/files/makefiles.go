@@ -394,11 +394,11 @@ func ChecklinesMk(lines []*Line) {
 					line.notef("For efficiency reasons, please include bsd.fast.prefs.mk instead of bsd.prefs.mk.")
 				}
 				if G.pkgContext != nil {
-					G.pkgContext.seen_bsd_prefs_mk = true
+					G.pkgContext.seenBsdPrefsMk = true
 				}
 			} else if includefile == "../../mk/bsd.fast.prefs.mk" {
 				if G.pkgContext != nil {
-					G.pkgContext.seen_bsd_prefs_mk = true
+					G.pkgContext.seenBsdPrefsMk = true
 				}
 			}
 

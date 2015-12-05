@@ -6,7 +6,7 @@ import (
 	"sort"
 )
 
-// Constant data that is loaded once.
+// GlobalData contains data describing pkgsrc as a whole.
 type GlobalData struct {
 	pkgsrcdir           string              // Relative to the current working directory.
 	masterSiteUrls      map[string]string   // "https://github.com/" => "MASTER_SITE_GITHUB"
@@ -22,12 +22,12 @@ type GlobalData struct {
 	suggestedUpdates    []SuggestedUpdate   //
 	suggestedWipUpdates []SuggestedUpdate   //
 	lastChange          map[string]*Change  //
-	userDefinedVars     map[string]*Line    //
+	userDefinedVars     map[string]*Line    // varname => line (after calling parselineMk on it)
 	deprecated          map[string]string   //
 	vartypes            map[string]*Vartype // varcanon => type
 }
 
-// A change entry from doc/CHANGES-*
+// Change is a change entry from the `doc/CHANGES-*` files.
 type Change struct {
 	line    *Line
 	action  string
@@ -37,7 +37,7 @@ type Change struct {
 	date    string
 }
 
-// From the doc/TODO file.
+// SuggestedUpdate is from the `doc/TODO` file.
 type SuggestedUpdate struct {
 	line    *Line
 	pkgname string
@@ -357,7 +357,7 @@ func (gd *GlobalData) loadUserDefinedVars() {
 	gd.userDefinedVars = make(map[string]*Line)
 	for _, line := range lines {
 		parselineMk(line)
-		if m, varname, _, _, _ := matchVarassign(line.text); m {
+		if varname, ok := line.extra["varname"].(string); ok {
 			gd.userDefinedVars[varname] = line
 		}
 	}
