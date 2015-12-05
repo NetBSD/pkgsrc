@@ -1,14 +1,9 @@
-@comment $NetBSD: PLIST,v 1.16 2015/08/25 13:25:54 wiz Exp $
-bin/2geglbuffer
+@comment $NetBSD: PLIST,v 1.17 2015/12/05 21:28:32 adam Exp $
 bin/gegl
-bin/gegl-convert
 bin/gegl-imgcmp
-bin/gegl-slicer
 bin/gegl-tester
-bin/geglbuffer-add-image
-bin/geglbuffer-clock
-bin/hello-world
 include/gegl-0.3/gegl-apply.h
+include/gegl-0.3/gegl-audio-fragment.h
 include/gegl-0.3/gegl-buffer-backend.h
 include/gegl-0.3/gegl-buffer-cl-iterator.h
 include/gegl-0.3/gegl-buffer-iterator.h
@@ -115,6 +110,7 @@ lib/gegl-0.3/copy-buffer.la
 lib/gegl-0.3/crop.la
 lib/gegl-0.3/cubism.la
 lib/gegl-0.3/darken.la
+lib/gegl-0.3/dcraw-load.la
 lib/gegl-0.3/deinterlace.la
 lib/gegl-0.3/difference-of-gaussians.la
 lib/gegl-0.3/difference.la
@@ -174,6 +170,7 @@ lib/gegl-0.3/mantiuk06.la
 lib/gegl-0.3/map-absolute.la
 lib/gegl-0.3/map-relative.la
 lib/gegl-0.3/matting-global.la
+lib/gegl-0.3/maze.la
 lib/gegl-0.3/mblur.la
 lib/gegl-0.3/mirrors.la
 lib/gegl-0.3/mono-mixer.la
@@ -216,7 +213,6 @@ lib/gegl-0.3/posterize.la
 lib/gegl-0.3/ppm-load.la
 lib/gegl-0.3/ppm-save.la
 lib/gegl-0.3/radial-gradient.la
-lib/gegl-0.3/raw-load.la
 lib/gegl-0.3/rectangle.la
 lib/gegl-0.3/red-eye-removal.la
 lib/gegl-0.3/reinhard05.la
@@ -229,6 +225,7 @@ lib/gegl-0.3/save.la
 lib/gegl-0.3/screen.la
 lib/gegl-0.3/seamless-clone-compose.la
 lib/gegl-0.3/seamless-clone.la
+lib/gegl-0.3/sepia.la
 lib/gegl-0.3/shift.la
 lib/gegl-0.3/sinus.la
 lib/gegl-0.3/snn-mean.la
@@ -293,6 +290,7 @@ share/locale/ko/LC_MESSAGES/gegl-0.3.mo
 share/locale/lv/LC_MESSAGES/gegl-0.3.mo
 share/locale/oc/LC_MESSAGES/gegl-0.3.mo
 share/locale/pl/LC_MESSAGES/gegl-0.3.mo
+share/locale/pt/LC_MESSAGES/gegl-0.3.mo
 share/locale/pt_BR/LC_MESSAGES/gegl-0.3.mo
 share/locale/ru/LC_MESSAGES/gegl-0.3.mo
 share/locale/sl/LC_MESSAGES/gegl-0.3.mo
