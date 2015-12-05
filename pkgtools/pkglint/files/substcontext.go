@@ -1,7 +1,7 @@
 package main
 
-// Records the state of a block of variable assignments that make up a SUBST
-// class (see mk/subst.mk).
+// SubstContext records the state of a block of variable assignments
+// that make up a SUBST class (see `mk/subst.mk`).
 type SubstContext struct {
 	id        string
 	stage     string
