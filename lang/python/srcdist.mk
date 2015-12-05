@@ -1,4 +1,4 @@
-# $NetBSD: srcdist.mk,v 1.34 2010/09/17 07:11:41 obache Exp $
+# $NetBSD: srcdist.mk,v 1.35 2015/12/05 20:44:22 adam Exp $
 
 .include "../../lang/python/pyversion.mk"
 
@@ -10,6 +10,10 @@ WRKSRC=		${WRKDIR}/${PYSUBDIR}
 .if defined(PYDISTUTILSPKG)
 # This is used for standard modules shipped with Python but build as
 # separate packages.
+
+.  if ${PYVERSSUFFIX} == "3.5"
+EXTRACT_ELEMENTS+=	${PYSUBDIR}/Modules/clinic
+.  endif
 
 python-std-patchsetup:
 	${SED} ${PY_SETUP_SUBST:S/=/@!/:S/$/!g/:S/^/ -e s!@/} \
