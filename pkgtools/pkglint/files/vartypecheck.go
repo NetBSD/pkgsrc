@@ -387,7 +387,7 @@ func (cv *VartypeCheck) Pathmask() {
 	if !matches(cv.valueNovar, `^[#\-0-9A-Za-z._~+%*?/\[\]]*`) {
 		cv.line.warnf("%q is not a valid pathname mask.", cv.value)
 	}
-	NewMkLine(cv.line).checkAbsolutePathname(cv.value)
+	cv.line.checkAbsolutePathname(cv.value)
 }
 
 // Like Filename, but including slashes
@@ -396,7 +396,7 @@ func (cv *VartypeCheck) Pathname() {
 	if !matches(cv.valueNovar, `^[#\-0-9A-Za-z._~+%/]*$`) {
 		cv.line.warnf("%q is not a valid pathname.", cv.value)
 	}
-	NewMkLine(cv.line).checkAbsolutePathname(cv.value)
+	cv.line.checkAbsolutePathname(cv.value)
 }
 
 func (cv *VartypeCheck) Perl5Packlist() {
