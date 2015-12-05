@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/10/18 05:45:37 ryoon Exp $
+# $NetBSD: Makefile,v 1.9 2015/12/05 21:25:31 adam Exp $
 
 DISTNAME=	mongodb-src-r3.0.7
 PKGNAME=	${DISTNAME:S/src-r//:S/-rc/rc/}
@@ -28,7 +28,7 @@ SCONS_ARGS+=	--js-engine=v8-3.25
 # Avoid Argument list too long from mongod linking
 SCONS_ARGS+=	--variant-dir=pkgsrc
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet supported as of 3.0.4
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet supported as of 3.0.4
 
 .include "../../mk/bsd.prefs.mk"
 

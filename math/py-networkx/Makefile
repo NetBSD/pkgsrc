@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2015/11/01 09:58:28 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2015/12/05 21:25:49 adam Exp $
 
 DISTNAME=	networkx-1.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,7 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-nose>=1.3.7:../../devel/py-nose
 USE_LANGUAGES=	# none
 
 PYTHON_SELF_CONFLICT=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35
 
 SUBST_CLASSES+=		python
 SUBST_STAGE.python=	post-patch

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2015/04/25 14:20:42 tnn Exp $
+# $NetBSD: Makefile,v 1.56 2015/12/05 21:25:41 adam Exp $
 
 DISTNAME=	kdissert-1.0.7
 PKGREVISION=	30
@@ -16,7 +16,7 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		msgfmt
 PYTHON_FOR_BUILD_ONLY=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 1.0.7
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 1.0.7
 
 do-configure:
 	${RUN} ${_ULIMIT_CMD} \

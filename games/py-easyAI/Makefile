@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/08/09 22:26:50 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2015/12/05 21:25:43 adam Exp $
 
 DISTNAME=	easyAI-0.0.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,7 @@ COMMENT=	Easy-to-use game AI algorithms
 LICENSE=	mit
 
 USE_LANGUAGES=	# none
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.0.0.4
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 0.0.0.4
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

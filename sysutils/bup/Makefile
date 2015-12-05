@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2015/06/12 10:51:11 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2015/12/05 21:25:58 adam Exp $
 
 DISTNAME=	bup-0.27
 PKGREVISION=	1
@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-readline-[0-9]*:../../devel/py-readline
 DEPENDS+=	${PYPKGPREFIX}-tornado-[0-9]*:../../www/py-tornado
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-fuse-bindings
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-fuse-bindings
 
 DOCDIR=		${WRKDIR}/bup-man
 
