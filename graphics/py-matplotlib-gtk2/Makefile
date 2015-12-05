@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2015/04/25 14:23:18 tnn Exp $
+# $NetBSD: Makefile,v 1.52 2015/12/05 21:25:46 adam Exp $
 
 DISTNAME=		matplotlib-1.3.1
 PKGNAME=		${PYPKGPREFIX}-matplotlib-gtk-1.3.1
@@ -13,7 +13,7 @@ COMMENT=		GTK frontend for matplotlib
 USE_TOOLS+=		pkg-config
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-gtk2
 USE_LANGUAGES=		c c++
 
 post-patch:

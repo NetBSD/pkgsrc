@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2015/06/12 10:52:16 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2015/12/05 21:26:07 adam Exp $
 
 DISTNAME=	alacarte-0.13.1
 PKGREVISION=	30
@@ -15,7 +15,7 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	intltool perl pkg-config gmake msgfmt
 
 PY_PATCHPLIST=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-ORBit via py-gnome2, py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-ORBit via py-gnome2, py-gtk2
 
 SUBST_CLASSES+=	paths
 SUBST_STAGE.paths=	pre-configure
