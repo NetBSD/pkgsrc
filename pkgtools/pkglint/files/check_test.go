@@ -50,6 +50,19 @@ func (s *Suite) UseCommandLine(c *check.C, args ...string) {
 	}
 }
 
+func (s *Suite) RegisterTool(toolname, varname string, varRequired bool) {
+	if G.globalData.tools == nil {
+		G.globalData.tools = make(map[string]bool)
+		G.globalData.vartools = make(map[string]string)
+		G.globalData.toolsVarRequired = make(map[string]bool)
+	}
+	G.globalData.tools[toolname] = true
+	G.globalData.vartools[toolname] = varname
+	if varRequired {
+		G.globalData.toolsVarRequired[toolname] = true
+	}
+}
+
 func (s *Suite) CreateTmpFile(c *check.C, fname, content string) {
 	if s.tmpdir == "" {
 		s.tmpdir = filepath.ToSlash(c.MkDir())
