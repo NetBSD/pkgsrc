@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4864 2015/12/05 21:31:44 adam Exp $
+$NetBSD: CHANGES-2015,v 1.4865 2015/12/05 22:52:28 alnsn Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8107,3 +8107,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/babl to 0.1.14 [adam 2015-12-05]
 	Updated graphics/gegl to 0.3.4 [adam 2015-12-05]
 	Updated graphics/gimp to 2.8.16 [adam 2015-12-05]
+	Updated lang/lua53 to 5.3.2 [alnsn 2015-12-05]
