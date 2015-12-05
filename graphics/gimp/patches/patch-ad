@@ -1,19 +1,19 @@
-$NetBSD: patch-ad,v 1.12 2012/05/07 08:40:08 adam Exp $
+$NetBSD: patch-ad,v 1.13 2015/12/05 21:31:13 adam Exp $
 
 Disable API deprecated in Mac OS X v10.5 or not available for 64-bit.
 
---- plug-ins/twain/tw_mac.c.orig	2010-10-25 18:48:00.000000000 +0000
+--- plug-ins/twain/tw_mac.c.orig	2015-11-20 20:32:13.000000000 +0000
 +++ plug-ins/twain/tw_mac.c
-@@ -192,10 +192,12 @@ static void twainSetupMacUI()
- 
+@@ -193,10 +193,12 @@ static void twainSetupMacUI()
    /* Voodoo magic fix inspired by java_swt launcher */
    /* Without this the icon setting doesn't work about half the time. */
-+  /*
+ 
++/*
    CGrafPtr p = BeginQDContextForApplicationDockTile();
    EndQDContextForApplicationDockTile(p);
  
    SetApplicationDockTileImage (icon);
-+  */
++*/
  }
  
  int
