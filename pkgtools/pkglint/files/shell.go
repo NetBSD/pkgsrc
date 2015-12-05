@@ -59,29 +59,29 @@ const (
 type scState string
 
 const (
-	SCST_START           scState = "start"
-	SCST_CONT            scState = "continuation"
-	SCST_INSTALL         scState = "install"
-	SCST_INSTALL_D       scState = "install -d"
-	SCST_MKDIR           scState = "mkdir"
-	SCST_PAX             scState = "pax"
-	SCST_PAX_S           scState = "pax -s"
-	SCST_SED             scState = "sed"
-	SCST_SED_E           scState = "sed -e"
-	SCST_SET             scState = "set"
-	SCST_SET_CONT        scState = "set-continuation"
-	SCST_COND            scState = "cond"
-	SCST_COND_CONT       scState = "cond-continuation"
-	SCST_CASE            scState = "case"
-	SCST_CASE_IN         scState = "case in"
-	SCST_CASE_LABEL      scState = "case label"
-	SCST_CASE_LABEL_CONT scState = "case-label-continuation"
-	SCST_FOR             scState = "for"
-	SCST_FOR_IN          scState = "for-in"
-	SCST_FOR_CONT        scState = "for-continuation"
-	SCST_ECHO            scState = "echo"
-	SCST_INSTALL_DIR     scState = "install-dir"
-	SCST_INSTALL_DIR2    scState = "install-dir2"
+	scstStart         scState = "start"
+	scstCont          scState = "continuation"
+	scstInstall       scState = "install"
+	scstInstallD      scState = "install -d"
+	scstMkdir         scState = "mkdir"
+	scstPax           scState = "pax"
+	scstPaxS          scState = "pax -s"
+	scstSed           scState = "sed"
+	scstSedE          scState = "sed -e"
+	scstSet           scState = "set"
+	scstSetCont       scState = "set-continuation"
+	scstCond          scState = "cond"
+	scstCondCont      scState = "cond-continuation"
+	scstCase          scState = "case"
+	scstCaseIn        scState = "case in"
+	scstCaseLabel     scState = "case label"
+	scstCaseLabelCont scState = "case-label-continuation"
+	scstFor           scState = "for"
+	scstForIn         scState = "for-in"
+	scstForCont       scState = "for-continuation"
+	scstEcho          scState = "echo"
+	scstInstallDir    scState = "install-dir"
+	scstInstallDir2   scState = "install-dir2"
 )
 
 type MkShellLine struct {
@@ -99,8 +99,8 @@ func (msline *MkShellLine) checklineMkShellword(shellword string, checkQuoting b
 		return
 	}
 
-	shellcommandContextType := &Vartype{LK_NONE, CheckvarShellCommand, []AclEntry{{"*", "adsu"}}, NOT_GUESSED}
-	shellwordVuc := &VarUseContext{VUC_TIME_UNKNOWN, shellcommandContextType, VUC_SHW_PLAIN, VUC_EXT_WORD}
+	shellcommandContextType := &Vartype{lkNone, CheckvarShellCommand, []AclEntry{{"*", "adsu"}}, guNotGuessed}
+	shellwordVuc := &VarUseContext{vucTimeUnknown, shellcommandContextType, vucQuotPlain, vucExtentWord}
 
 	line := msline.line
 	if m, varname, mod := match2(shellword, `^\$\{(`+reVarnameDirect+`)(:[^{}]+)?\}$`); m {
@@ -117,15 +117,15 @@ func (msline *MkShellLine) checklineMkShellword(shellword string, checkQuoting b
 
 	type ShellwordState string
 	const (
-		SWST_PLAIN       ShellwordState = "plain"
-		SWST_SQUOT       ShellwordState = "squot"
-		SWST_DQUOT       ShellwordState = "dquot"
-		SWST_DQUOT_BACKT ShellwordState = "dquot+backt"
-		SWST_BACKT       ShellwordState = "backt"
+		swstPlain      ShellwordState = "plain"
+		swstSquot      ShellwordState = "squot"
+		swstDquot      ShellwordState = "dquot"
+		swstDquotBackt ShellwordState = "dquot+backt"
+		swstBackt      ShellwordState = "backt"
 	)
 
 	rest := shellword
-	state := SWST_PLAIN
+	state := swstPlain
 outer:
 	for rest != "" {
 		_ = G.opts.DebugShell && line.debugf("shell state %s: %q", state, rest)
@@ -136,7 +136,7 @@ outer:
 		// reasonable to check the whole shell command
 		// recursively, instead of splitting off the first
 		// make(1) variable.
-		case state == SWST_BACKT || state == SWST_DQUOT_BACKT:
+		case state == swstBackt || state == swstDquotBackt:
 			// Scan for the end of the backticks, checking
 			// for single backslashes and removing one level
 			// of backslashes. Backslashes are only removed
@@ -148,10 +148,10 @@ outer:
 			for rest != "" {
 				switch {
 				case replacePrefix(&rest, &m, "^`"):
-					if state == SWST_BACKT {
-						state = SWST_PLAIN
+					if state == swstBackt {
+						state = swstPlain
 					} else {
-						state = SWST_DQUOT
+						state = swstDquot
 					}
 					goto endOfBackticks
 
@@ -162,7 +162,7 @@ outer:
 					line.warnf("Backslashes should be doubled inside backticks.")
 					stripped += m[1]
 
-				case state == SWST_DQUOT_BACKT && replacePrefix(&rest, &m, `^"`):
+				case state == swstDquotBackt && replacePrefix(&rest, &m, `^"`):
 					line.warnf("Double quotes inside backticks inside double quotes are error prone.")
 					line.explain(
 						"According to the SUSv3, they produce undefined results.",
@@ -197,13 +197,13 @@ outer:
 			}
 
 			switch {
-			case state == SWST_PLAIN && hasSuffix(mod, ":Q"):
+			case state == swstPlain && hasSuffix(mod, ":Q"):
 				// Fine.
-			case state == SWST_BACKT:
+			case state == swstBackt:
 				// Don't check anything here, to avoid false positives for tool names.
-			case (state == SWST_SQUOT || state == SWST_DQUOT) && matches(varname, `^(?:.*DIR|.*FILE|.*PATH|.*_VAR|PREFIX|.*BASE|PKGNAME)$`):
+			case (state == swstSquot || state == swstDquot) && matches(varname, `^(?:.*DIR|.*FILE|.*PATH|.*_VAR|PREFIX|.*BASE|PKGNAME)$`):
 				// This is ok if we don't allow these variables to have embedded [\$\\\"\'\`].
-			case state == SWST_DQUOT && hasSuffix(mod, ":Q"):
+			case state == swstDquot && hasSuffix(mod, ":Q"):
 				line.warnf("Please don't use the :Q operator in double quotes.")
 				line.explain(
 					"Either remove the :Q or the double quotes. In most cases, it is more",
@@ -211,18 +211,18 @@ outer:
 			}
 
 			if varname != "@" {
-				vucstate := VUC_SHW_UNKNOWN
+				vucstate := vucQuotUnknown
 				switch state {
-				case SWST_PLAIN:
-					vucstate = VUC_SHW_PLAIN
-				case SWST_DQUOT:
-					vucstate = VUC_SHW_DQUOT
-				case SWST_SQUOT:
-					vucstate = VUC_SHW_SQUOT
-				case SWST_BACKT:
-					vucstate = VUC_SHW_BACKT
+				case swstPlain:
+					vucstate = vucQuotPlain
+				case swstDquot:
+					vucstate = vucQuotDquot
+				case swstSquot:
+					vucstate = vucQuotSquot
+				case swstBackt:
+					vucstate = vucQuotBackt
 				}
-				vuc := &VarUseContext{VUC_TIME_UNKNOWN, shellcommandContextType, vucstate, VUC_EXT_WORDPART}
+				vuc := &VarUseContext{vucTimeUnknown, shellcommandContextType, vucstate, vucExtentWordpart}
 				checklineMkVaruse(line, varname, mod, vuc)
 			}
 
@@ -245,16 +245,16 @@ outer:
 				}
 			}
 
-		case state == SWST_PLAIN:
+		case state == swstPlain:
 			switch {
 			case replacePrefix(&rest, &m, `^[!#\%&\(\)*+,\-.\/0-9:;<=>?@A-Z\[\]^_a-z{|}~]+`),
 				replacePrefix(&rest, &m, `^\\(?:[ !"#'\(\)*;?\\^{|}]|\$\$)`):
 			case replacePrefix(&rest, &m, `^'`):
-				state = SWST_SQUOT
+				state = swstSquot
 			case replacePrefix(&rest, &m, `^"`):
-				state = SWST_DQUOT
+				state = swstDquot
 			case replacePrefix(&rest, &m, "^`"):
-				state = SWST_BACKT
+				state = swstBackt
 			case replacePrefix(&rest, &m, `^\$\$([0-9A-Z_a-z]+|\#)`),
 				replacePrefix(&rest, &m, `^\$\$\{([0-9A-Z_a-z]+|\#)\}`),
 				replacePrefix(&rest, &m, `^\$\$(\$)\$`):
@@ -297,10 +297,10 @@ outer:
 				break outer
 			}
 
-		case state == SWST_SQUOT:
+		case state == swstSquot:
 			switch {
 			case replacePrefix(&rest, &m, `^'`):
-				state = SWST_PLAIN
+				state = swstPlain
 			case replacePrefix(&rest, &m, `^[^\$\']+`):
 				// just skip
 			case replacePrefix(&rest, &m, `^\$\$`):
@@ -309,12 +309,12 @@ outer:
 				break outer
 			}
 
-		case state == SWST_DQUOT:
+		case state == swstDquot:
 			switch {
 			case replacePrefix(&rest, &m, `^"`):
-				state = SWST_PLAIN
+				state = swstPlain
 			case replacePrefix(&rest, &m, "^`"):
-				state = SWST_DQUOT_BACKT
+				state = swstDquotBackt
 			case replacePrefix(&rest, &m, "^[^$\"\\\\`]+"):
 				// just skip
 			case replacePrefix(&rest, &m, "^\\\\(?:[\\\\\"`]|\\$\\$)"):
@@ -392,24 +392,24 @@ func (msline *MkShellLine) checklineMkShelltext(shelltext string) {
 		msline.checkLineStart(hidden, macro, rest, &setE)
 	}
 
-	state := SCST_START
+	state := scstStart
 	for replacePrefix(&rest, &m, reShellword) {
 		shellword := m[1]
 
 		_ = G.opts.DebugShell && line.debugf("checklineMkShelltext state=%v shellword=%q", state, shellword)
 
 		{
-			quotingNecessary := state != SCST_CASE &&
-				state != SCST_FOR_CONT &&
-				state != SCST_SET_CONT &&
-				!(state == SCST_START && matches(shellword, reShVarassign))
+			quotingNecessary := state != scstCase &&
+				state != scstForCont &&
+				state != scstSetCont &&
+				!(state == scstStart && matches(shellword, reShVarassign))
 			msline.checklineMkShellword(shellword, quotingNecessary)
 		}
 
 		st := &ShelltextContext{line, state, shellword}
 		st.checkCommandStart()
 		st.checkConditionalCd()
-		if state != SCST_PAX_S && state != SCST_SED_E && state != SCST_CASE_LABEL {
+		if state != scstPaxS && state != scstSedE && state != scstCaseLabel {
 			checklineMkAbsolutePathname(line, shellword)
 		}
 		st.checkAutoMkdirs()
@@ -420,7 +420,7 @@ func (msline *MkShellLine) checklineMkShelltext(shelltext string) {
 		st.checkPipeExitcode()
 		st.checkSetE(setE)
 
-		if state == SCST_SET && matches(shellword, `^-.*e`) || state == SCST_START && shellword == "${RUN}" {
+		if state == scstSet && matches(shellword, `^-.*e`) || state == scstStart && shellword == "${RUN}" {
 			setE = true
 		}
 
@@ -485,7 +485,7 @@ func (ctx *ShelltextContext) checkCommandStart() {
 	defer tracecall("ShelltextContext.checkCommandStart", ctx.state, ctx.shellword)()
 
 	line, state, shellword := ctx.line, ctx.state, ctx.shellword
-	if state != SCST_START && state != SCST_COND {
+	if state != scstStart && state != scstCond {
 		return
 	}
 
@@ -608,7 +608,7 @@ func (ctx *ShelltextContext) handleComment() bool {
 func (ctx *ShelltextContext) checkConditionalCd() {
 	line, state, shellword := ctx.line, ctx.state, ctx.shellword
 
-	if state == SCST_COND && shellword == "cd" {
+	if state == scstCond && shellword == "cd" {
 		line.errorf("The Solaris /bin/sh cannot handle \"cd\" inside conditionals.")
 		line.explain(
 			"When the Solaris shell is in \"set -e\" mode and \"cd\" fails, the",
@@ -620,9 +620,9 @@ func (ctx *ShelltextContext) checkConditionalCd() {
 func (ctx *ShelltextContext) checkAutoMkdirs() {
 	line, state, shellword := ctx.line, ctx.state, ctx.shellword
 
-	if (state == SCST_INSTALL_D || state == SCST_MKDIR) && matches(shellword, `^(?:\$\{DESTDIR\})?\$\{PREFIX(?:|:Q)\}/`) {
+	if (state == scstInstallD || state == scstMkdir) && matches(shellword, `^(?:\$\{DESTDIR\})?\$\{PREFIX(?:|:Q)\}/`) {
 		line.warnf("Please use AUTO_MKDIRS instead of %q.",
-			ifelseStr(state == SCST_MKDIR, "${MKDIR}", "${INSTALL} -d"))
+			ifelseStr(state == scstMkdir, "${MKDIR}", "${INSTALL} -d"))
 		line.explain(
 			"Setting AUTO_MKDIRS=yes automatically creates all directories that are",
 			"mentioned in the PLIST. If you need additional directories, specify",
@@ -630,7 +630,7 @@ func (ctx *ShelltextContext) checkAutoMkdirs() {
 			"${PREFIX}.")
 	}
 
-	if (state == SCST_INSTALL_DIR || state == SCST_INSTALL_DIR2) && !matches(shellword, reMkShellvaruse) {
+	if (state == scstInstallDir || state == scstInstallDir2) && !matches(shellword, reMkShellvaruse) {
 		if m, dirname := match1(shellword, `^(?:\$\{DESTDIR\})?\$\{PREFIX(?:|:Q)\}/(.*)`); m {
 			line.notef("You can use AUTO_MKDIRS=yes or \"INSTALLATION_DIRS+= %s\" instead of this command.", dirname)
 			line.explain(
@@ -650,7 +650,7 @@ func (ctx *ShelltextContext) checkAutoMkdirs() {
 func (ctx *ShelltextContext) checkInstallMulti() {
 	line, state, shellword := ctx.line, ctx.state, ctx.shellword
 
-	if state == SCST_INSTALL_DIR2 && hasPrefix(shellword, "$") {
+	if state == scstInstallDir2 && hasPrefix(shellword, "$") {
 		line.warnf("The INSTALL_*_DIR commands can only handle one directory at a time.")
 		line.explain(
 			"Many implementations of install(1) can handle more, but pkgsrc aims at",
@@ -661,7 +661,7 @@ func (ctx *ShelltextContext) checkInstallMulti() {
 func (ctx *ShelltextContext) checkPaxPe() {
 	line, state, shellword := ctx.line, ctx.state, ctx.shellword
 
-	if state == SCST_PAX && shellword == "-pe" {
+	if state == scstPax && shellword == "-pe" {
 		line.warnf("Please use the -pp option to pax(1) instead of -pe.")
 		line.explain(
 			"The -pe option tells pax to preserve the ownership of the files, which",
@@ -673,7 +673,7 @@ func (ctx *ShelltextContext) checkPaxPe() {
 func (ctx *ShelltextContext) checkQuoteSubstitution() {
 	line, state, shellword := ctx.line, ctx.state, ctx.shellword
 
-	if state == SCST_PAX_S || state == SCST_SED_E {
+	if state == scstPaxS || state == scstSedE {
 		if false && !matches(shellword, `"^[\"\'].*[\"\']$`) {
 			line.warnf("Substitution commands like %q should always be quoted.", shellword)
 			line.explain(
@@ -687,7 +687,7 @@ func (ctx *ShelltextContext) checkQuoteSubstitution() {
 func (ctx *ShelltextContext) checkEchoN() {
 	line, state, shellword := ctx.line, ctx.state, ctx.shellword
 
-	if state == SCST_ECHO && shellword == "-n" {
+	if state == scstEcho && shellword == "-n" {
 		line.warnf("Please use ${ECHO_N} instead of \"echo -n\".")
 	}
 }
@@ -695,7 +695,7 @@ func (ctx *ShelltextContext) checkEchoN() {
 func (ctx *ShelltextContext) checkPipeExitcode() {
 	line, state, shellword := ctx.line, ctx.state, ctx.shellword
 
-	if G.opts.WarnExtra && state != SCST_CASE_LABEL_CONT && shellword == "|" {
+	if G.opts.WarnExtra && state != scstCaseLabelCont && shellword == "|" {
 		line.warnf("The exitcode of the left-hand-side command of the pipe operator is ignored.")
 		line.explain(
 			"In a shell command like \"cat *.txt | grep keyword\", if the command",
@@ -709,7 +709,7 @@ func (ctx *ShelltextContext) checkPipeExitcode() {
 func (ctx *ShelltextContext) checkSetE(eflag bool) {
 	line, state, shellword := ctx.line, ctx.state, ctx.shellword
 
-	if G.opts.WarnExtra && shellword == ";" && state != SCST_COND_CONT && state != SCST_FOR_CONT && !eflag {
+	if G.opts.WarnExtra && shellword == ";" && state != scstCondCont && state != scstForCont && !eflag {
 		line.warnf("Please switch to \"set -e\" mode before using a semicolon to separate commands.")
 		line.explain(
 			"Older versions of the NetBSD make(1) had run the shell commands using",
@@ -768,105 +768,105 @@ func (msline *MkShellLine) checkCommandUse(shellcmd string) {
 func nextState(line *Line, state scState, shellword string) scState {
 	switch {
 	case shellword == ";;":
-		return SCST_CASE_LABEL
-	case state == SCST_CASE_LABEL_CONT && shellword == "|":
-		return SCST_CASE_LABEL
+		return scstCaseLabel
+	case state == scstCaseLabelCont && shellword == "|":
+		return scstCaseLabel
 	case matches(shellword, `^[;&\|]+$`):
-		return SCST_START
-	case state == SCST_START:
+		return scstStart
+	case state == scstStart:
 		switch shellword {
 		case "${INSTALL}":
-			return SCST_INSTALL
+			return scstInstall
 		case "${MKDIR}":
-			return SCST_MKDIR
+			return scstMkdir
 		case "${PAX}":
-			return SCST_PAX
+			return scstPax
 		case "${SED}":
-			return SCST_SED
+			return scstSed
 		case "${ECHO}", "echo":
-			return SCST_ECHO
+			return scstEcho
 		case "${RUN}", "then", "else", "do", "(":
-			return SCST_START
+			return scstStart
 		case "set":
-			return SCST_SET
+			return scstSet
 		case "if", "elif", "while":
-			return SCST_COND
+			return scstCond
 		case "case":
-			return SCST_CASE
+			return scstCase
 		case "for":
-			return SCST_FOR
+			return scstFor
 		default:
 			switch {
 			case matches(shellword, `^\$\{INSTALL_[A-Z]+_DIR\}$`):
-				return SCST_INSTALL_DIR
+				return scstInstallDir
 			case matches(shellword, reShVarassign):
-				return SCST_START
+				return scstStart
 			default:
-				return SCST_CONT
+				return scstCont
 			}
 		}
-	case state == SCST_MKDIR:
-		return SCST_MKDIR
-	case state == SCST_INSTALL && shellword == "-d":
-		return SCST_INSTALL_D
-	case state == SCST_INSTALL, state == SCST_INSTALL_D:
+	case state == scstMkdir:
+		return scstMkdir
+	case state == scstInstall && shellword == "-d":
+		return scstInstallD
+	case state == scstInstall, state == scstInstallD:
 		if matches(shellword, `^-[ogm]$`) {
-			return SCST_CONT // XXX: why not keep the state?
+			return scstCont // XXX: why not keep the state?
 		}
 		return state
-	case state == SCST_INSTALL_DIR && hasPrefix(shellword, "-"):
-		return SCST_CONT
-	case state == SCST_INSTALL_DIR && hasPrefix(shellword, "$"):
-		return SCST_INSTALL_DIR2
-	case state == SCST_INSTALL_DIR || state == SCST_INSTALL_DIR2:
+	case state == scstInstallDir && hasPrefix(shellword, "-"):
+		return scstCont
+	case state == scstInstallDir && hasPrefix(shellword, "$"):
+		return scstInstallDir2
+	case state == scstInstallDir || state == scstInstallDir2:
 		return state
-	case state == SCST_PAX && shellword == "-s":
-		return SCST_PAX_S
-	case state == SCST_PAX && hasPrefix(shellword, "-"):
-		return SCST_PAX
-	case state == SCST_PAX:
-		return SCST_CONT
-	case state == SCST_PAX_S:
-		return SCST_PAX
-	case state == SCST_SED && shellword == "-e":
-		return SCST_SED_E
-	case state == SCST_SED && hasPrefix(shellword, "-"):
-		return SCST_SED
-	case state == SCST_SED:
-		return SCST_CONT
-	case state == SCST_SED_E:
-		return SCST_SED
-	case state == SCST_SET:
-		return SCST_SET_CONT
-	case state == SCST_SET_CONT:
-		return SCST_SET_CONT
-	case state == SCST_CASE:
-		return SCST_CASE_IN
-	case state == SCST_CASE_IN && shellword == "in":
-		return SCST_CASE_LABEL
-	case state == SCST_CASE_LABEL && shellword == "esac":
-		return SCST_CONT
-	case state == SCST_CASE_LABEL:
-		return SCST_CASE_LABEL_CONT
-	case state == SCST_CASE_LABEL_CONT && shellword == ")":
-		return SCST_START
-	case state == SCST_CONT:
-		return SCST_CONT
-	case state == SCST_COND:
-		return SCST_COND_CONT
-	case state == SCST_COND_CONT:
-		return SCST_COND_CONT
-	case state == SCST_FOR:
-		return SCST_FOR_IN
-	case state == SCST_FOR_IN && shellword == "in":
-		return SCST_FOR_CONT
-	case state == SCST_FOR_CONT:
-		return SCST_FOR_CONT
-	case state == SCST_ECHO:
-		return SCST_CONT
+	case state == scstPax && shellword == "-s":
+		return scstPaxS
+	case state == scstPax && hasPrefix(shellword, "-"):
+		return scstPax
+	case state == scstPax:
+		return scstCont
+	case state == scstPaxS:
+		return scstPax
+	case state == scstSed && shellword == "-e":
+		return scstSedE
+	case state == scstSed && hasPrefix(shellword, "-"):
+		return scstSed
+	case state == scstSed:
+		return scstCont
+	case state == scstSedE:
+		return scstSed
+	case state == scstSet:
+		return scstSetCont
+	case state == scstSetCont:
+		return scstSetCont
+	case state == scstCase:
+		return scstCaseIn
+	case state == scstCaseIn && shellword == "in":
+		return scstCaseLabel
+	case state == scstCaseLabel && shellword == "esac":
+		return scstCont
+	case state == scstCaseLabel:
+		return scstCaseLabelCont
+	case state == scstCaseLabelCont && shellword == ")":
+		return scstStart
+	case state == scstCont:
+		return scstCont
+	case state == scstCond:
+		return scstCondCont
+	case state == scstCondCont:
+		return scstCondCont
+	case state == scstFor:
+		return scstForIn
+	case state == scstForIn && shellword == "in":
+		return scstForCont
+	case state == scstForCont:
+		return scstForCont
+	case state == scstEcho:
+		return scstCont
 	default:
 		_ = G.opts.DebugShell && line.errorf("Internal pkglint error: shellword.nextState state=%s shellword=%q", state, shellword)
-		return SCST_START
+		return scstStart
 	}
 }
 
