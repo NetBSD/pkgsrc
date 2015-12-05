@@ -83,15 +83,6 @@ func (s *Suite) TestResolveVariableRefs_SpecialChars(c *check.C) {
 	c.Check(resolved, equals, "gst-plugins0.10-x11/distinfo")
 }
 
-func (s *Suite) TestReVarname(c *check.C) {
-	re := `^(?:` + reVarname + `)$`
-
-	c.Check(matches("", re), equals, false)
-	c.Check(matches("VARNAME", re), equals, true)
-	c.Check(matches("0FLAGS", re), equals, true)
-	c.Check(matches("CFLAGS.${prog}.DEBUG", re), equals, true)
-}
-
 func (s *Suite) TestChecklineRcsid(c *check.C) {
 	lines := s.NewLines("fname",
 		"$"+"NetBSD: dummy $",

@@ -111,7 +111,6 @@ func checklineOtherAbsolutePathname(line *Line, text string) {
 }
 
 const (
-	rePatchRcsid            = `^\$.*\$$`
 	rePatchNonempty         = `^(.+)$`
 	rePatchEmpty            = `^$`
 	rePatchTextError        = `\*\*\* Error code`
