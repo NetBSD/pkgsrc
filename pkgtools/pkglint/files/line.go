@@ -44,7 +44,7 @@ func NewLine(fname, linenos, text string, rawLines []*RawLine) *Line {
 }
 
 func (ln *Line) rawLines() []*RawLine {
-	return append(ln.before, append(ln.raw, ln.after...)...)
+	return append(append(append([]*RawLine(nil), ln.before...), ln.raw...), ln.after...)
 }
 
 func (ln *Line) printSource(out io.Writer) {

@@ -23,7 +23,7 @@ func checktoplevelUnusedLicenses() {
 		licensepath := licensedir + "/" + licensename
 		if fileExists(licensepath) {
 			if !G.ipcUsedLicenses[licensename] {
-				warnf(licensepath, NO_LINES, "This license seems to be unused.")
+				warnf(licensepath, noLines, "This license seems to be unused.")
 			}
 		}
 	}

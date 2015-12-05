@@ -171,6 +171,6 @@ func checkdirCategory() {
 	saveAutofixChanges(lines)
 
 	if G.opts.Recursive {
-		G.todo = append(subdirs, G.todo...)
+		G.todo = append(append([]string(nil), subdirs...), G.todo...)
 	}
 }
