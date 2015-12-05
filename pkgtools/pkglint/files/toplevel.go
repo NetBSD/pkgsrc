@@ -18,9 +18,6 @@ func checkdirToplevel() {
 	}
 
 	ParselinesMk(lines)
-	if 0 < len(lines) {
-		checklineRcsid(lines[0], `#\s+`, "# ")
-	}
 
 	for _, line := range lines {
 		if m, commentedOut, indentation, subdir, comment := match4(line.text, `^(#?)SUBDIR\s*\+=(\s*)(\S+)\s*(?:#\s*(.*?)\s*|)$`); m {
@@ -40,7 +37,7 @@ func checkdirToplevel() {
 
 func (ctx *Toplevel) checkSubdir(line *Line, commentedOut bool, indentation, subdir, comment string) {
 	if commentedOut && comment == "" {
-		line.warnf("%s commented out without giving a reason.", subdir)
+		line.warnf("%q commented out without giving a reason.", subdir)
 	}
 
 	if indentation != "\t" {

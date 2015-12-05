@@ -35,8 +35,8 @@ const (
 )
 
 // The allowed actions in this file, or "?" if unknown.
-func (self *Vartype) effectivePermissions(fname string) string {
-	for _, aclEntry := range self.aclEntries {
+func (vt *Vartype) effectivePermissions(fname string) string {
+	for _, aclEntry := range vt.aclEntries {
 		if m, _ := path.Match(aclEntry.glob, path.Base(fname)); m {
 			return aclEntry.permissions
 		}
@@ -68,9 +68,9 @@ func ReadableVartypePermissions(perms string) string {
 // Returns the union of all possible permissions. This can be used to
 // check whether a variable may be defined or used at all, or if it is
 // read-only.
-func (self *Vartype) union() string {
+func (vt *Vartype) union() string {
 	var permissions string
-	for _, aclEntry := range self.aclEntries {
+	for _, aclEntry := range vt.aclEntries {
 		permissions += aclEntry.permissions
 	}
 	return permissions
@@ -79,34 +79,34 @@ func (self *Vartype) union() string {
 // Returns whether the type is considered a shell list.
 // This distinction between “real lists” and “considered a list” makes
 // the implementation of checklineMkVartype easier.
-func (self *Vartype) isConsideredList() bool {
-	switch self.kindOfList {
+func (vt *Vartype) isConsideredList() bool {
+	switch vt.kindOfList {
 	case LK_SHELL:
 		return true
 	case LK_SPACE:
 		return false
 	}
-	switch self.checker {
+	switch vt.checker {
 	case CheckvarSedCommands, CheckvarShellCommand:
 		return true
 	}
 	return false
 }
 
-func (self *Vartype) mayBeAppendedTo() bool {
-	return self.kindOfList != LK_NONE ||
-		self.checker == CheckvarAwkCommand ||
-		self.checker == CheckvarSedCommands
+func (vt *Vartype) mayBeAppendedTo() bool {
+	return vt.kindOfList != LK_NONE ||
+		vt.checker == CheckvarAwkCommand ||
+		vt.checker == CheckvarSedCommands
 }
 
-func (self *Vartype) String() string {
-	switch self.kindOfList {
+func (vt *Vartype) String() string {
+	switch vt.kindOfList {
 	case LK_NONE:
-		return self.checker.name
+		return vt.checker.name
 	case LK_SPACE:
-		return "SpaceList of " + self.checker.name
+		return "SpaceList of " + vt.checker.name
 	case LK_SHELL:
-		return "ShellList of " + self.checker.name
+		return "ShellList of " + vt.checker.name
 	default:
 		panic("Unknown list type")
 	}
@@ -181,7 +181,7 @@ var (
 	CheckvarWrksrcSubdirectory     = &VarChecker{"WrksrcSubdirectory", (*VartypeCheck).WrksrcSubdirectory}
 	CheckvarYes                    = &VarChecker{"Yes", (*VartypeCheck).Yes}
 	CheckvarYesNo                  = &VarChecker{"YesNo", (*VartypeCheck).YesNo}
-	CheckvarYesNo_Indirectly       = &VarChecker{"YesNo_Indirectly", (*VartypeCheck).YesNo_Indirectly}
+	CheckvarYesNoIndirectly        = &VarChecker{"YesNoIndirectly", (*VartypeCheck).YesNoIndirectly}
 )
 
 func init() { // Necessary due to circular dependency

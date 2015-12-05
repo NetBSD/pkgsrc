@@ -32,7 +32,7 @@ func (s *Suite) TestGetopt_UnknownLong(c *check.C) {
 	c.Check(err.Error(), equals, "progname: unknown option: --unknown-long")
 }
 
-func (s *Suite) TestGetopt_UnknownFlag(c *check.C) {
+func (s *Suite) TestGetopt_UnknownFlagInGroup(c *check.C) {
 	opts := NewOptions()
 	opts.AddFlagGroup('W', "warnings", "", "")
 
@@ -43,6 +43,32 @@ func (s *Suite) TestGetopt_UnknownFlag(c *check.C) {
 	_, err = opts.Parse([]string{"progname", "--warnings=all", "--warnings=no-error"})
 
 	c.Check(err.Error(), equals, "progname: unknown option: --warnings=no-error")
+}
+
+func (s *Suite) TestGetopt_AbbreviatedLong(c *check.C) {
+	opts := NewOptions()
+	var longFlag, longerFlag bool
+	opts.AddFlagVar('?', "long", &longFlag, false, "")
+	opts.AddFlagVar('?', "longer", &longerFlag, false, "")
+
+	_, err := opts.Parse([]string{"progname", "--lo"})
+
+	c.Check(err.Error(), equals, "progname: ambiguous option: --lo could mean --long or --longer")
+
+	args, err := opts.Parse([]string{"progname", "--long"})
+
+	c.Assert(err, check.IsNil)
+	c.Check(args, check.IsNil)
+	c.Check(longFlag, equals, true)
+	c.Check(longerFlag, equals, false)
+
+	longFlag = false
+	args, err = opts.Parse([]string{"progname", "--longe"})
+
+	c.Assert(err, check.IsNil)
+	c.Check(args, check.IsNil)
+	c.Check(longFlag, equals, false)
+	c.Check(longerFlag, equals, true)
 }
 
 func (s *Suite) TestGetopt_MixedArgsAndOptions(c *check.C) {

@@ -43,41 +43,41 @@ func NewLine(fname, linenos, text string, rawLines []*RawLine) *Line {
 	return &Line{fname, linenos, text, rawLines, false, nil, nil, make(map[string]interface{})}
 }
 
-func (self *Line) rawLines() []*RawLine {
-	return append(self.before, append(self.raw, self.after...)...)
+func (ln *Line) rawLines() []*RawLine {
+	return append(ln.before, append(ln.raw, ln.after...)...)
 }
 
-func (self *Line) printSource(out io.Writer) {
+func (ln *Line) printSource(out io.Writer) {
 	if G.opts.PrintSource {
 		io.WriteString(out, "\n")
-		for _, rawLine := range self.rawLines() {
+		for _, rawLine := range ln.rawLines() {
 			fmt.Fprintf(out, "> %s", rawLine.textnl)
 		}
 	}
 }
 
-func (self *Line) fatalf(format string, args ...interface{}) bool {
-	self.printSource(G.logErr)
-	return fatalf(self.fname, self.lines, format, args...)
+func (ln *Line) fatalf(format string, args ...interface{}) bool {
+	ln.printSource(G.logErr)
+	return fatalf(ln.fname, ln.lines, format, args...)
 }
-func (self *Line) errorf(format string, args ...interface{}) bool {
-	self.printSource(G.logOut)
-	return errorf(self.fname, self.lines, format, args...)
+func (ln *Line) errorf(format string, args ...interface{}) bool {
+	ln.printSource(G.logOut)
+	return errorf(ln.fname, ln.lines, format, args...)
 }
-func (self *Line) warnf(format string, args ...interface{}) bool {
-	self.printSource(G.logOut)
-	return warnf(self.fname, self.lines, format, args...)
+func (ln *Line) warnf(format string, args ...interface{}) bool {
+	ln.printSource(G.logOut)
+	return warnf(ln.fname, ln.lines, format, args...)
 }
-func (self *Line) notef(format string, args ...interface{}) bool {
-	self.printSource(G.logOut)
-	return notef(self.fname, self.lines, format, args...)
+func (ln *Line) notef(format string, args ...interface{}) bool {
+	ln.printSource(G.logOut)
+	return notef(ln.fname, ln.lines, format, args...)
 }
-func (self *Line) debugf(format string, args ...interface{}) bool {
-	self.printSource(G.logOut)
-	return debugf(self.fname, self.lines, format, args...)
+func (ln *Line) debugf(format string, args ...interface{}) bool {
+	ln.printSource(G.logOut)
+	return debugf(ln.fname, ln.lines, format, args...)
 }
 
-func (self *Line) explain(explanation ...string) {
+func (ln *Line) explain(explanation ...string) {
 	if G.opts.Explain {
 		complete := strings.Join(explanation, "\n")
 		if G.explanationsGiven[complete] {
@@ -97,41 +97,41 @@ func (self *Line) explain(explanation ...string) {
 	G.explanationsAvailable = true
 }
 
-func (self *Line) String() string {
-	return self.fname + ":" + self.lines + ": " + self.text
+func (ln *Line) String() string {
+	return ln.fname + ":" + ln.lines + ": " + ln.text
 }
 
-func (self *Line) insertBefore(line string) {
-	self.before = append(self.before, &RawLine{0, line + "\n"})
-	self.noteAutofix("Autofix: inserting a line %q before this line.", line)
+func (ln *Line) insertBefore(line string) {
+	ln.before = append(ln.before, &RawLine{0, line + "\n"})
+	ln.noteAutofix("Autofix: inserting a line %q before this line.", line)
 }
 
-func (self *Line) insertAfter(line string) {
-	self.after = append(self.after, &RawLine{0, line + "\n"})
-	self.noteAutofix("Autofix: inserting a line %q after this line.", line)
+func (ln *Line) insertAfter(line string) {
+	ln.after = append(ln.after, &RawLine{0, line + "\n"})
+	ln.noteAutofix("Autofix: inserting a line %q after this line.", line)
 }
 
-func (self *Line) delete() {
-	self.raw = nil
-	self.changed = true
+func (ln *Line) delete() {
+	ln.raw = nil
+	ln.changed = true
 }
 
-func (self *Line) replace(from, to string) {
-	for _, rawLine := range self.raw {
+func (ln *Line) replace(from, to string) {
+	for _, rawLine := range ln.raw {
 		if rawLine.lineno != 0 {
 			if replaced := strings.Replace(rawLine.textnl, from, to, 1); replaced != rawLine.textnl {
 				rawLine.textnl = replaced
-				self.noteAutofix("Autofix: replacing %q with %q.", from, to)
+				ln.noteAutofix("Autofix: replacing %q with %q.", from, to)
 			}
 		}
 	}
 }
-func (self *Line) replaceRegex(from, to string) {
-	for _, rawLine := range self.raw {
+func (ln *Line) replaceRegex(from, to string) {
+	for _, rawLine := range ln.raw {
 		if rawLine.lineno != 0 {
 			if replaced := regcomp(from).ReplaceAllString(rawLine.textnl, to); replaced != rawLine.textnl {
 				rawLine.textnl = replaced
-				self.noteAutofix("Autofix: replacing regular expression %q with %q.", from, to)
+				ln.noteAutofix("Autofix: replacing regular expression %q with %q.", from, to)
 			}
 		}
 	}

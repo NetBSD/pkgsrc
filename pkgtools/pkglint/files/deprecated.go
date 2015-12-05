@@ -137,9 +137,6 @@ func getDeprecatedVars() map[string]string {
 		"_PKG_SILENT": "Use RUN (with more error checking) instead.",
 		"_PKG_DEBUG":  "Use RUN (with more error checking) instead.",
 		"LICENCE":     "Use LICENSE instead.",
-		// The following variable is not yet deprecated, as there has been
-		// a large disagreement on the proper spelling.
-		//ACCEPTABLE_LICENCES	Use ACCEPTABLE_LICENSES instead.
 
 		// November 2007
 		//USE_NCURSES		Include "../../devel/ncurses/buildlink3.mk" instead.

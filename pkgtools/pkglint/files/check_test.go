@@ -2,6 +2,10 @@ package main
 
 import (
 	"bytes"
+	"io/ioutil"
+	"os"
+	"path"
+	"path/filepath"
 	"testing"
 
 	check "gopkg.in/check.v1"
@@ -13,6 +17,7 @@ var deepEquals = check.DeepEquals
 type Suite struct {
 	stdout bytes.Buffer
 	stderr bytes.Buffer
+	tmpdir string
 }
 
 func (s *Suite) Stdout() string {
@@ -49,6 +54,17 @@ func (s *Suite) DummyLine() *Line {
 	return NewLine("fname", "1", "dummy", nil)
 }
 
+func (s *Suite) CreateTmpFile(c *check.C, fname, content string) {
+	if s.tmpdir == "" {
+		s.tmpdir = filepath.ToSlash(c.MkDir())
+	}
+	err := os.MkdirAll(s.tmpdir+"/"+path.Dir(fname), 0777)
+	c.Check(err, check.IsNil)
+
+	err = ioutil.WriteFile(s.tmpdir+"/"+fname, []byte(content), 0666)
+	c.Check(err, check.IsNil)
+}
+
 func (s *Suite) ExpectFatalError(action func()) {
 	if r := recover(); r != nil {
 		if _, ok := r.(pkglintFatal); ok {
@@ -69,6 +85,7 @@ func (s *Suite) TearDownTest(c *check.C) {
 	if out := s.Output(); out != "" {
 		c.Logf("Unchecked output; check with: c.Check(s.Output(), equals, %q)", out)
 	}
+	s.tmpdir = ""
 }
 
 var _ = check.Suite(new(Suite))
