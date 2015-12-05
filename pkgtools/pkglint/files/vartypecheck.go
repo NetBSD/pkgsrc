@@ -740,7 +740,7 @@ func (cv *VartypeCheck) YesNo() {
 
 // Like YesNo, but the value may be produced by a shell command using the
 // != operator.
-func (cv *VartypeCheck) YesNo_Indirectly() {
+func (cv *VartypeCheck) YesNoIndirectly() {
 	if cv.valueNovar != "" && !matches(cv.value, `^(?:YES|yes|NO|no)(?:\s+#.*)?$`) {
 		cv.line.warnf("%s should be set to YES, yes, NO, or no.", cv.varname)
 	}
