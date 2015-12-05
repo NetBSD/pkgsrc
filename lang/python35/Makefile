@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2015/12/05 17:12:13 adam Exp $
+# $NetBSD: Makefile,v 1.1 2015/12/05 17:12:13 adam Exp $
 
 .include "dist.mk"
 
-PKGNAME=	python33-${PY_DISTVERSION}
-PKGREVISION=	1
+PKGNAME=	python35-${PY_DISTVERSION}
 CATEGORIES=	lang python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -14,22 +13,23 @@ LICENSE=	python-software-foundation
 CONFLICTS+=	python-[0-9]*
 
 PLIST_AWK+=		-f ${PKGSRCDIR}/lang/python/plist-python.awk
-PLIST_AWK_ENV+=		PYVERS=33
-PRINT_PLIST_AWK+=	/^[^@]/ && /[^\/]+\.py[co]$$/ {
-PRINT_PLIST_AWK+=	gsub(/__pycache__\//, "")
-PRINT_PLIST_AWK+=	gsub(/\.cpython-33/, "")}
+PLIST_AWK_ENV+=		PYVERS=35
+PRINT_PLIST_AWK+=	/^[^@]/ && /[^\/]+\.pyc$$/ {
+PRINT_PLIST_AWK+=	sub(/__pycache__\//, "")
+PRINT_PLIST_AWK+=	sub(/\.cpython-35/, "")}
+PRINT_PLIST_AWK+=	/^[^@]/ && /[^\/]+\.opt-1.pyc$$/ {
+PRINT_PLIST_AWK+=	sub(/.opt-[12].pyc$$/, ".pyo")}
 
+USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-threads
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	OPT=${CFLAGS:M*:Q}
 CONFIGURE_ARGS+=	--with-system-ffi
 CONFIGURE_ARGS+=	--without-pymalloc
+CONFIGURE_ARGS+=	--without-ensurepip
 CONFIGURE_ENV+=		ac_cv_path_mkdir=${TOOLS_PATH.mkdir}
-
 PKGCONFIG_OVERRIDE+=	Misc/python.pc.in
-
-USE_LANGUAGES=		c c++
 
 PTHREAD_OPTS+=	require
 .include "../../mk/pthread.buildlink3.mk"
@@ -46,9 +46,9 @@ CXX=			clang++
 # fdatasync()
 LIBS.SunOS+=		-lrt
 
-PY_VER_SUFFIX=		3.3
+PY_VER_SUFFIX=		3.5
 
-.if ${OPSYS} == "Darwin" || ${OPSYS} == "Interix"
+.if ${OPSYS} == "Darwin"
 PY_PLATNAME=	${LOWER_OPSYS}
 USE_TOOLS+=	gmake
 .elif ${OPSYS} == "IRIX"
@@ -73,8 +73,8 @@ PLIST.oss=	yes
 
 # For Xcode 5 and up, we need to search the SDK path for headers, otherwise
 # certain modules will not be built.
-.if ${OPSYS} == "Darwin" && exists(${OSX_SDK_PATH}/usr/include)
-CFLAGS+=		-I${OSX_SDK_PATH}/usr/include
+.if ${OPSYS} == "Darwin" && exists(${OSX_SDK_PATH:Q}/usr/include)
+CFLAGS+=		-I${OSX_SDK_PATH:Q}/usr/include
 .endif
 
 PLIST_VARS+=	bsddb dll nis no-nis
@@ -111,10 +111,10 @@ PRINT_PLIST_AWK+=	{ gsub(/python${PY_VER_SUFFIX}/, \
 TEST_TARGET=	test
 INSTALL_TARGET=	altinstall
 
-REPLACE_INTERPRETER+=	py33
-REPLACE.py33.old=	.*python[^ ]*
-REPLACE.py33.new=	${PREFIX}/bin/python${PY_VER_SUFFIX}
-REPLACE_FILES.py33=	Lib/*.py Lib/*/*.py Lib/*/*/*.py Lib/*/*/*/*.py
+REPLACE_INTERPRETER+=	py35
+REPLACE.py35.old=	.*python[^ ]*
+REPLACE.py35.new=	${PREFIX}/bin/python${PY_VER_SUFFIX}
+REPLACE_FILES.py35=	Lib/*.py Lib/*/*.py Lib/*/*/*.py Lib/*/*/*/*.py
 
 SUBST_CLASSES+=		findlib
 SUBST_MESSAGE.findlib=	Fixing find_library_file on Darwin.
@@ -132,8 +132,8 @@ CHECK_INTERPRETER_SKIP=	lib/python${PY_VER_SUFFIX}/venv/scripts/posix/pydoc
 
 .if ${OPSYS} == "HPUX"
 post-install:
-	${LN} -fs ${DESTDIR}${PREFIX}/lib/libpython3.3.sl \
-		${DESTDIR}${PREFIX}/lib/libpython3.3.sl.1.0
+	${LN} -fs ${DESTDIR}${PREFIX}/lib/libpython3.5.sl \
+		${DESTDIR}${PREFIX}/lib/libpython3.5.sl.1.0
 .endif
 
 BUILDLINK_DEPMETHOD.readline=		build
