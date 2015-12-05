@@ -4,55 +4,62 @@ package main
 // or used. Whether that is allowed depends on:
 //
 // * The variable’s data type, as defined in vardefs.go.
-// * Whether the variable is accessed at loading time (when the
-//   Makefiles are parsed) or at run time (when the shell commands are
-//   run). Especially at load time, there are several points of time
-//   (e.g. the bsd.pkg.mk file is loaded at the very end, therefore
-//   the variables that are defined there cannot be used at load time.)
 // * When used on the right-hand side of an assigment, the variable can
 //   represent a list of words, a single word or even only part of a
 //   word. This distinction decides upon the correct use of the :Q
 //   operator.
-// * When used in shell commands, the variable can appear inside single
-//   quotes, double quotes, backticks or some combination thereof. This
-//   also influences whether the variable is correctly used.
 // * When used in preprocessing statements like .if or .for, the other
 //   operands of that statement should fit to the variable and are
 //   checked against the variable type. For example, comparing OPSYS to
 //   x86_64 doesn’t make sense.
-
 type VarUseContext struct {
 	time      vucTime
 	vartype   *Vartype
-	shellword vucShellword
+	shellword vucQuoting
 	extent    vucExtent
 }
 
 type vucTime int
 
 const (
-	VUC_TIME_UNKNOWN vucTime = iota
-	VUC_TIME_LOAD            // During loading, not all variables are available yet.
-	VUC_TIME_RUN             // All files have been read, especially bsd.pkg.mk.
+	vucTimeUnknown vucTime = iota
+
+	// When Makefiles are loaded, the operators := and != are evaluated,
+	// as well as the conditionals .if, .elif and .for.
+	// During loading, not all variables are available yet.
+	// Variable values are still subject to change, especially lists.
+	vucTimeParse
+
+	// All files have been read, all variables can be referenced.
+	// Variable values don’t change anymore.
+	vucTimeRun
 )
 
-type vucShellword int
+// The quoting context in which the variable is used.
+// Depending on this context, the modifiers :Q or :M can be allowed or not.
+type vucQuoting int
 
 const (
-	VUC_SHW_UNKNOWN vucShellword = iota
-	VUC_SHW_PLAIN                // Example: echo LOCALBASE=${LOCALBASE}
-	VUC_SHW_DQUOT                // Example: echo "The version is ${PKGVERSION}."
-	VUC_SHW_SQUOT                // Example: echo 'The version is ${PKGVERSION}.'
-	VUC_SHW_BACKT                // Example: echo \`sed 1q ${WRKSRC}/README\`
-	VUC_SHW_FOR                  // Example: for f in ${EXAMPLE_FILES}
+	vucQuotUnknown vucQuoting = iota
+	vucQuotPlain              // Example: echo LOCALBASE=${LOCALBASE}
+	vucQuotDquot              // Example: echo "The version is ${PKGVERSION}."
+	vucQuotSquot              // Example: echo 'The version is ${PKGVERSION}.'
+	vucQuotBackt              // Example: echo \`sed 1q ${WRKSRC}/README\`
+
+	// The .for loop in Makefiles. This is the only place where
+	// variables are split on whitespace. Everywhere else (:Q, :M)
+	// they are split like in the shell.
+	//
+	// Example: .for f in ${EXAMPLE_FILES}
+	vucQuotFor
 )
 
 type vucExtent int
 
 const (
-	VUC_EXTENT_UNKNOWN vucExtent = iota
-	VUC_EXT_WORD                 // Example: echo ${LOCALBASE}
-	VUC_EXT_WORDPART             // Example: echo LOCALBASE=${LOCALBASE}
+	vucExtentUnknown  vucExtent = iota
+	vucExtentWord               // Example: echo ${LOCALBASE}
+	vucExtentWordpart           // Example: echo LOCALBASE=${LOCALBASE}
 )
 
 func (vuc *VarUseContext) String() string {

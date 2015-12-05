@@ -54,33 +54,33 @@ func (s *Suite) TestChecklineMkShelltext(c *check.C) {
 	G.mkContext = newMkContext()
 	G.globalData.InitVartypes()
 
-	msline.checklineMkShelltext("echo ${PKGNAME:Q}") // VUC_SHW_PLAIN
+	msline.checklineMkShelltext("echo ${PKGNAME:Q}") // vucQuotPlain
 
 	c.Check(s.Output(), equals, ""+
 		"WARN: fname:1: PKGNAME may not be used in this file.\n"+
 		"NOTE: fname:1: The :Q operator isn't necessary for ${PKGNAME} here.\n")
 
-	msline.checklineMkShelltext("echo \"${CFLAGS:Q}\"") // VUC_SHW_DQUOT
+	msline.checklineMkShelltext("echo \"${CFLAGS:Q}\"") // vucQuotDquot
 
 	c.Check(s.Output(), equals, ""+
 		"WARN: fname:1: Please don't use the :Q operator in double quotes.\n"+
 		"WARN: fname:1: CFLAGS may not be used in this file.\n"+
 		"WARN: fname:1: Please use ${CFLAGS:M*:Q} instead of ${CFLAGS:Q} and make sure the variable appears outside of any quoting characters.\n")
 
-	msline.checklineMkShelltext("echo '${COMMENT:Q}'") // VUC_SHW_SQUOT
+	msline.checklineMkShelltext("echo '${COMMENT:Q}'") // vucQuotSquot
 
 	c.Check(s.Output(), equals, "WARN: fname:1: COMMENT may not be used in this file.\n")
-	
-	msline.checklineMkShelltext("echo $$@") 
+
+	msline.checklineMkShelltext("echo $$@")
 
 	c.Check(s.Output(), equals, "WARN: fname:1: The $@ shell variable should only be used in double quotes.\n")
-	
+
 	msline.checklineMkShelltext("echo \"$$\"") // As seen by make(1); the shell sees: echo $
-	
+
 	c.Check(s.Output(), equals, "WARN: fname:1: Unquoted $ or strange shell variable found.\n")
-	
+
 	msline.checklineMkShelltext("echo \"\\n\"") // As seen by make(1); the shell sees: echo "\n"
-	
+
 	c.Check(s.Output(), equals, "WARN: fname:1: Please use \"\\\\n\" instead of \"\\n\".\n")
 }
 

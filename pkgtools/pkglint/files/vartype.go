@@ -17,9 +17,9 @@ type Vartype struct {
 type KindOfList int
 
 const (
-	LK_NONE  KindOfList = iota // Plain data type
-	LK_SPACE                   // List entries are separated by whitespace; used in .for loops.
-	LK_SHELL                   // List entries are shell words; used in the :M, :S modifiers.
+	lkNone  KindOfList = iota // Plain data type
+	lkSpace                   // List entries are separated by whitespace; used in .for loops.
+	lkShell                   // List entries are shell words; used in the :M, :S modifiers.
 )
 
 type AclEntry struct {
@@ -27,11 +27,13 @@ type AclEntry struct {
 	permissions string // Some of: "a"ppend, "d"efault, "s"et; "p"reprocessing, "u"se
 }
 
+// Whether the type definition is guessed (based on the variable name)
+// or explicitly defined (see vardefs.go).
 type Guessed bool
 
 const (
-	NOT_GUESSED Guessed = false
-	GUESSED     Guessed = true
+	guNotGuessed Guessed = false
+	guGuessed    Guessed = true
 )
 
 // The allowed actions in this file, or "?" if unknown.
@@ -81,9 +83,9 @@ func (vt *Vartype) union() string {
 // the implementation of checklineMkVartype easier.
 func (vt *Vartype) isConsideredList() bool {
 	switch vt.kindOfList {
-	case LK_SHELL:
+	case lkShell:
 		return true
-	case LK_SPACE:
+	case lkSpace:
 		return false
 	}
 	switch vt.checker {
@@ -94,18 +96,18 @@ func (vt *Vartype) isConsideredList() bool {
 }
 
 func (vt *Vartype) mayBeAppendedTo() bool {
-	return vt.kindOfList != LK_NONE ||
+	return vt.kindOfList != lkNone ||
 		vt.checker == CheckvarAwkCommand ||
 		vt.checker == CheckvarSedCommands
 }
 
 func (vt *Vartype) String() string {
 	switch vt.kindOfList {
-	case LK_NONE:
+	case lkNone:
 		return vt.checker.name
-	case LK_SPACE:
+	case lkSpace:
 		return "SpaceList of " + vt.checker.name
-	case LK_SHELL:
+	case lkShell:
 		return "ShellList of " + vt.checker.name
 	default:
 		panic("Unknown list type")

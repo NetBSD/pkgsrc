@@ -10,7 +10,7 @@ func CheckDirent(fname string) {
 
 	st, err := os.Lstat(fname)
 	if err != nil || !st.Mode().IsDir() && !st.Mode().IsRegular() {
-		errorf(fname, NO_LINES, "No such file or directory.")
+		errorf(fname, noLines, "No such file or directory.")
 		return
 	}
 	isDir := st.Mode().IsDir()
@@ -22,7 +22,7 @@ func CheckDirent(fname string) {
 	G.isInfrastructure = matches(absCurrentDir, `/mk/|/mk$`)
 	G.curPkgsrcdir = findPkgsrcTopdir(G.currentDir)
 	if G.curPkgsrcdir == "" {
-		errorf(fname, NO_LINES, "Cannot determine the pkgsrc root directory for %q.", G.currentDir)
+		errorf(fname, noLines, "Cannot determine the pkgsrc root directory for %q.", G.currentDir)
 		return
 	}
 
@@ -42,6 +42,6 @@ func CheckDirent(fname string) {
 	case ".":
 		checkdirToplevel()
 	default:
-		errorf(fname, NO_LINES, "Cannot check directories outside a pkgsrc tree.")
+		errorf(fname, noLines, "Cannot check directories outside a pkgsrc tree.")
 	}
 }

@@ -9,11 +9,11 @@ import (
 func LoadNonemptyLines(fname string, joinContinuationLines bool) []*Line {
 	lines, err := readLines(fname, joinContinuationLines)
 	if err != nil {
-		errorf(fname, NO_LINES, "Cannot be read.")
+		errorf(fname, noLines, "Cannot be read.")
 		return nil
 	}
 	if len(lines) == 0 {
-		errorf(fname, NO_LINES, "Must not be empty.")
+		errorf(fname, noLines, "Must not be empty.")
 		return nil
 	}
 	return lines
@@ -22,7 +22,7 @@ func LoadNonemptyLines(fname string, joinContinuationLines bool) []*Line {
 func LoadExistingLines(fname string, foldBackslashLines bool) []*Line {
 	lines, err := readLines(fname, foldBackslashLines)
 	if lines == nil || err != nil {
-		fatalf(fname, NO_LINES, "Cannot be read.")
+		fatalf(fname, noLines, "Cannot be read.")
 	}
 	return lines
 }
@@ -128,14 +128,14 @@ func saveAutofixChanges(lines []*Line) {
 		}
 		err := ioutil.WriteFile(tmpname, []byte(text), 0777)
 		if err != nil {
-			errorf(tmpname, NO_LINES, "Cannot write.")
+			errorf(tmpname, noLines, "Cannot write.")
 			continue
 		}
 		err = os.Rename(tmpname, fname)
 		if err != nil {
-			errorf(fname, NO_LINES, "Cannot overwrite with auto-fixed content.")
+			errorf(fname, noLines, "Cannot overwrite with auto-fixed content.")
 			continue
 		}
-		notef(fname, NO_LINES, "Has been auto-fixed. Please re-run pkglint.")
+		notef(fname, noLines, "Has been auto-fixed. Please re-run pkglint.")
 	}
 }

@@ -57,7 +57,7 @@ func checklineMkVaruse(line *Line, varname string, mod string, vuc *VarUseContex
 
 	vartype := getVariableType(line, varname)
 	if G.opts.WarnExtra &&
-		(vartype == nil || vartype.guessed == GUESSED) &&
+		(vartype == nil || vartype.guessed == guGuessed) &&
 		!varIsUsed(varname) &&
 		(G.mkContext == nil || !G.mkContext.forVars[varname]) {
 		line.warnf("%s is used but not defined. Spelling mistake?", varname)
@@ -73,11 +73,11 @@ func checklineMkVaruse(line *Line, varname string, mod string, vuc *VarUseContex
 
 	needsQuoting := variableNeedsQuoting(line, varname, vuc)
 
-	if vuc.shellword == VUC_SHW_FOR {
+	if vuc.shellword == vucQuotFor {
 		checklineMkVaruseFor(line, varname, vartype, needsQuoting)
 	}
 
-	if G.opts.WarnQuoting && vuc.shellword != VUC_SHW_UNKNOWN && needsQuoting != NQ_DONT_KNOW {
+	if G.opts.WarnQuoting && vuc.shellword != vucQuotUnknown && needsQuoting != nqDontKnow {
 		checklineMkVaruseShellword(line, varname, vartype, vuc, mod, needsQuoting)
 	}
 
@@ -102,10 +102,10 @@ func checklineMkVarusePerm(line *Line, varname string, vuc *VarUseContext) {
 	isIndirect := false
 
 	switch {
-	case vuc.vartype != nil && vuc.vartype.guessed == GUESSED:
+	case vuc.vartype != nil && vuc.vartype.guessed == guGuessed:
 		// Don't warn about unknown variables.
 
-	case vuc.time == VUC_TIME_LOAD && !contains(perms, "p"):
+	case vuc.time == vucTimeParse && !contains(perms, "p"):
 		isLoadTime = true
 
 	case vuc.vartype != nil && contains(vuc.vartype.union(), "p") && !contains(perms, "p"):
@@ -177,10 +177,10 @@ func checklineMkVaruseFor(line *Line, varname string, vartype *Vartype, needsQuo
 	case vartype == nil:
 		// Cannot check anything here.
 
-	case vartype.kindOfList == LK_SPACE:
+	case vartype.kindOfList == lkSpace:
 		// Fine
 
-	case needsQuoting == NQ_DOESNT_MATTER || needsQuoting == NQ_NO:
+	case needsQuoting == nqDoesntMatter || needsQuoting == nqNo:
 		// Fine, this variable is not supposed to contain special characters.
 
 	default:
@@ -212,8 +212,8 @@ func checklineMkVaruseShellword(line *Line, varname string, vartype *Vartype, vu
 	if mod == ":M*:Q" && !needMstar {
 		line.notef("The :M* modifier is not needed here.")
 
-	} else if mod != correctMod && needsQuoting == NQ_YES {
-		if vuc.shellword == VUC_SHW_PLAIN {
+	} else if mod != correctMod && needsQuoting == nqYes {
+		if vuc.shellword == vucQuotPlain {
 			line.warnf("Please use ${%s%s} instead of ${%s%s}.", varname, correctMod, varname, mod)
 		} else {
 			line.warnf("Please use ${%s%s} instead of ${%s%s} and make sure the variable appears outside of any quoting characters.", varname, correctMod, varname, mod)
@@ -240,10 +240,10 @@ func checklineMkVaruseShellword(line *Line, varname string, vartype *Vartype, vu
 		}
 
 		switch needsQuoting {
-		case NQ_NO:
+		case nqNo:
 			line.warnf("The :Q operator should not be used for ${%s} here.", varname)
 			line.explain(expl...)
-		case NQ_DOESNT_MATTER:
+		case nqDoesntMatter:
 			line.notef("The :Q operator isn't necessary for ${%s} here.", varname)
 			line.explain(expl...)
 		}
@@ -407,18 +407,18 @@ func checklineMkVarassign(line *Line, varname, op, value, comment string) {
 		}
 	}
 
-	time := VUC_TIME_RUN
+	time := vucTimeRun
 	switch op {
 	case ":=", "!=":
-		time = VUC_TIME_LOAD
+		time = vucTimeParse
 	}
 
 	usedVars := extractUsedVariables(line, value)
 	vuc := &VarUseContext{
 		time,
 		getVariableType(line, varname),
-		VUC_SHW_UNKNOWN,
-		VUC_EXTENT_UNKNOWN}
+		vucQuotUnknown,
+		vucExtentUnknown}
 	for _, usedVar := range usedVars {
 		checklineMkVaruse(line, usedVar, "", vuc)
 	}
@@ -507,12 +507,12 @@ func checklineMkVartype(line *Line, varname, op, value, comment string) {
 	case op == "!=":
 		_ = G.opts.DebugMisc && line.debugf("Use of !=: %q", value)
 
-	case vartype.kindOfList == LK_NONE:
+	case vartype.kindOfList == lkNone:
 		checklineMkVartypePrimitive(line, varname, vartype.checker, op, value, comment, vartype.isConsideredList(), vartype.guessed)
 
 	default:
 		var words []string
-		if vartype.kindOfList == LK_SPACE {
+		if vartype.kindOfList == lkSpace {
 			words = splitOnSpace(value)
 		} else {
 			words, _ = splitIntoShellwords(line, value)
@@ -520,7 +520,7 @@ func checklineMkVartype(line *Line, varname, op, value, comment string) {
 
 		for _, word := range words {
 			checklineMkVartypePrimitive(line, varname, vartype.checker, op, word, comment, true, vartype.guessed)
-			if vartype.kindOfList != LK_SPACE {
+			if vartype.kindOfList != lkSpace {
 				checklineMkShellword(line, word, true)
 			}
 		}
@@ -533,7 +533,7 @@ func checklineMkVartype(line *Line, varname, op, value, comment string) {
 func checklineMkVartypePrimitive(line *Line, varname string, checker *VarChecker, op, value, comment string, isList bool, guessed Guessed) {
 	defer tracecall("checklineMkVartypePrimitive", varname, op, value, comment, isList, guessed)()
 
-	ctx := &VartypeCheck{line, varname, op, value, "", comment, isList, guessed == GUESSED}
+	ctx := &VartypeCheck{line, varname, op, value, "", comment, isList, guessed == guGuessed}
 	ctx.valueNovar = withoutMakeVariables(line, value, isList)
 
 	checker.checker(ctx)
