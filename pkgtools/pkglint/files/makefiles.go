@@ -335,7 +335,9 @@ func ChecklinesMk(lines []*Line) {
 			substcontext.Varassign(line, varname, op, value)
 
 		} else if hasPrefix(text, "\t") {
-			checklineMkShellcmd(line, text[1:])
+			shellcmd := text[1:]
+			NewMkLine(line).checkText(shellcmd)
+			NewMkShellLine(line).checkShelltext(shellcmd)
 
 		} else if m, include, includefile := match2(text, reMkInclude); m {
 			_ = G.opts.DebugInclude && line.debugf("includefile=%s", includefile)
