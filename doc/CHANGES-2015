@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4862 2015/12/05 15:51:29 rillig Exp $
+$NetBSD: CHANGES-2015,v 1.4863 2015/12/05 17:14:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8103,3 +8103,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/the_silver_searcher to 0.31.0 [leot 2015-12-05]
 	Updated pkgtools/pkglint to 5.2.1 [rillig 2015-12-05]
 	Updated pkgtools/pkglint to 5.2.2 [rillig 2015-12-05]
+	Added lang/python35 version 3.5.0 [adam 2015-12-05]
