@@ -116,8 +116,8 @@ func (gd *GlobalData) loadTools() {
 		lines := LoadExistingLines(fname, true)
 		for _, line := range lines {
 			if m, _, includefile := match2(line.text, reMkInclude); m {
-				if m, toolfile := match1(includefile, `^(?:\$\{PKGSRCDIR\}/mk/tools/)?([^/]+)$`); m {
-					toolFiles = append(toolFiles, toolfile)
+				if !contains(includefile, "/") {
+					toolFiles = append(toolFiles, includefile)
 				}
 			}
 		}

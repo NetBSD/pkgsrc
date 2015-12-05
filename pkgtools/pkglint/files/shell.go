@@ -8,17 +8,6 @@ import (
 	"unicode"
 )
 
-func checklineMkShellword(line *Line, word string, checkQuoting bool) {
-	NewMkShellLine(line).checklineMkShellword(word, checkQuoting)
-}
-func checklineMkShellcmdUse(line *Line, shellcmd string) {
-	NewMkShellLine(line).checkCommandUse(shellcmd)
-}
-func checklineMkShellcmd(line *Line, shellcmd string) {
-	NewMkLine(line).checkText(shellcmd)
-	NewMkShellLine(line).checklineMkShelltext(shellcmd)
-}
-
 const (
 	reMkShellvaruse = `(?:^|[^\$])\$\$\{?(\w+)\}?`
 	reVarnameDirect = `(?:[-*+.0-9A-Z_a-z{}\[]+)`
@@ -92,7 +81,7 @@ func NewMkShellLine(line *Line) *MkShellLine {
 	return &MkShellLine{line}
 }
 
-func (msline *MkShellLine) checklineMkShellword(shellword string, checkQuoting bool) {
+func (msline *MkShellLine) checkShellword(shellword string, checkQuoting bool) {
 	defer tracecall("MkShellLine.checklineMkShellword", shellword, checkQuoting)()
 
 	if shellword == "" || hasPrefix(shellword, "#") {
@@ -180,7 +169,7 @@ outer:
 			line.errorf("Unfinished backquotes: rest=%q", rest)
 
 		endOfBackticks:
-			msline.checklineMkShelltext(stripped)
+			msline.checkShelltext(stripped)
 
 		// Make(1) variables have the same syntax, no matter in which state we are currently.
 		case replacePrefix(&rest, &m, `^\$\{(`+reVarnameDirect+`|@)(:[^\{]+)?\}`),
@@ -360,7 +349,7 @@ type ShelltextContext struct {
 	shellword string
 }
 
-func (msline *MkShellLine) checklineMkShelltext(shelltext string) {
+func (msline *MkShellLine) checkShelltext(shelltext string) {
 	defer tracecall("MkShellLine.checklineMkShelltext", shelltext)()
 
 	line := msline.line
@@ -403,7 +392,7 @@ func (msline *MkShellLine) checklineMkShelltext(shelltext string) {
 				state != scstForCont &&
 				state != scstSetCont &&
 				!(state == scstStart && matches(shellword, reShVarassign))
-			msline.checklineMkShellword(shellword, quotingNecessary)
+			msline.checkShellword(shellword, quotingNecessary)
 		}
 
 		st := &ShelltextContext{line, state, shellword}
@@ -525,7 +514,7 @@ func (ctx *ShelltextContext) handleTool() bool {
 		ctx.line.warnf("Please use \"${%s}\" instead of %q.", G.globalData.vartools[shellword], shellword)
 	}
 
-	checklineMkShellcmdUse(ctx.line, shellword)
+	NewMkShellLine(ctx.line).checkCommandUse(shellword)
 	return true
 }
 
@@ -554,12 +543,12 @@ func (ctx *ShelltextContext) handleCommandVariable() bool {
 			if !G.mkContext.tools[toolname] {
 				ctx.line.warnf("The %q tool is used but not added to USE_TOOLS.", toolname)
 			}
-			checklineMkShellcmdUse(ctx.line, shellword)
+			NewMkShellLine(ctx.line).checkCommandUse(shellword)
 			return true
 		}
 
 		if vartype := getVariableType(ctx.line, varname); vartype != nil && vartype.checker.name == "ShellCommand" {
-			checklineMkShellcmdUse(ctx.line, shellword)
+			NewMkShellLine(ctx.line).checkCommandUse(shellword)
 			return true
 		}
 
