@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4863 2015/12/05 17:14:13 adam Exp $
+$NetBSD: CHANGES-2015,v 1.4864 2015/12/05 21:31:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8104,3 +8104,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated pkgtools/pkglint to 5.2.1 [rillig 2015-12-05]
 	Updated pkgtools/pkglint to 5.2.2 [rillig 2015-12-05]
 	Added lang/python35 version 3.5.0 [adam 2015-12-05]
+	Updated graphics/babl to 0.1.14 [adam 2015-12-05]
+	Updated graphics/gegl to 0.3.4 [adam 2015-12-05]
+	Updated graphics/gimp to 2.8.16 [adam 2015-12-05]
