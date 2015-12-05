@@ -90,7 +90,7 @@ func (gd *GlobalData) loadDistSites() {
 	names["MASTER_SITE_SUSE_UPD"] = true
 	names["MASTER_SITE_LOCAL"] = true
 
-	_ = G.opts.DebugMisc && debugf(fname, NO_LINES, "Loaded %d MASTER_SITE_* URLs.", len(url2name))
+	_ = G.opts.DebugMisc && debugf(fname, noLines, "Loaded %d MASTER_SITE_* URLs.", len(url2name))
 	gd.masterSiteUrls = url2name
 	gd.masterSiteVars = names
 }
@@ -123,7 +123,7 @@ func (gd *GlobalData) loadTools() {
 		}
 	}
 	if len(toolFiles) <= 1 {
-		fatalf(toolFiles[0], NO_LINES, "Too few tool files.")
+		fatalf(toolFiles[0], noLines, "Too few tool files.")
 	}
 
 	tools := make(map[string]bool)
@@ -329,7 +329,7 @@ func (gd *GlobalData) loadDocChanges() {
 	docdir := G.globalData.pkgsrcdir + "/doc"
 	files, err := ioutil.ReadDir(docdir)
 	if err != nil {
-		fatalf(docdir, NO_LINES, "Cannot be read.")
+		fatalf(docdir, noLines, "Cannot be read.")
 	}
 
 	var fnames []string

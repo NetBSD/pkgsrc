@@ -43,7 +43,7 @@ func checklinesPlist(lines []*Line) {
 	}
 
 	// Collect all files and directories that appear in the PLIST file.
-	for _, line := range append(extraLines, lines...) {
+	for _, line := range append(append([]*Line(nil), extraLines...), lines...) {
 		text := line.text
 
 		if hasPrefix(text, "${") {
