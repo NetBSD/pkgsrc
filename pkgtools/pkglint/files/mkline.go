@@ -68,7 +68,7 @@ func (ml *MkLine) checkVaruse(varname string, mod string, vuc *VarUseContext) {
 	if G.opts.WarnExtra &&
 		(vartype == nil || vartype.guessed == guGuessed) &&
 		!varIsUsed(varname) &&
-		(G.mkContext == nil || !G.mkContext.forVars[varname]) {
+		!(G.mkContext != nil && G.mkContext.forVars[varname]) {
 		line.warnf("%s is used but not defined. Spelling mistake?", varname)
 	}
 
@@ -541,7 +541,7 @@ func (ml *MkLine) checkVartype(varname, op, value, comment string) {
 		for _, word := range words {
 			ml.checkVartypePrimitive(varname, vartype.checker, op, word, comment, true, vartype.guessed)
 			if vartype.kindOfList != lkSpace {
-				checklineMkShellword(line, word, true)
+				NewMkShellLine(ml.line).checkShellword(word, true)
 			}
 		}
 	}

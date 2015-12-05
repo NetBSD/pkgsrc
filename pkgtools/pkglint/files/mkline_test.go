@@ -76,12 +76,3 @@ func (s *Suite) TestChecklineMkVaralign(c *check.C) {
 		"NOTE: file.mk:6: Autofix: replacing \"VAR=    \\t\" with \"VAR=\\t\\t\".\n")
 	c.Check(tabLength("VAR=    \t"), equals, 16)
 }
-
-func (s *Suite) TestMkLine_CheckAbsolutePathname(c *check.C) {
-	ml := NewMkLine(NewLine("Makefile", "1", "# dummy", nil))
-
-	ml.checkAbsolutePathname("bindir=/bin")
-	ml.checkAbsolutePathname("bindir=/../lib")
-
-	c.Check(s.Output(), equals, "WARN: Makefile:1: Found absolute pathname: /bin\n")
-}
