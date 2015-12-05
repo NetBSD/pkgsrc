@@ -532,7 +532,7 @@ func (cv *VartypeCheck) SedCommands() {
 
 	for i := 0; i < nwords; i++ {
 		word := words[i]
-		checklineMkShellword(cv.line, word, true)
+		NewMkShellLine(cv.line).checkShellword(word, true)
 
 		switch {
 		case word == "-e":
@@ -551,8 +551,8 @@ func (cv *VartypeCheck) SedCommands() {
 						"",
 						"This way, short sed commands cannot be hidden at the end of a line.")
 				}
-				checklineMkShellword(line, words[i-1], true)
-				checklineMkShellword(line, words[i], true)
+				NewMkShellLine(line).checkShellword(words[i-1], true)
+				NewMkShellLine(line).checkShellword(words[i], true)
 				NewMkLine(line).checkVartypePrimitive(cv.varname, CheckvarSedCommand, cv.op, words[i], cv.comment, cv.listContext, cv.guessed)
 			} else {
 				line.errorf("The -e option to sed requires an argument.")
@@ -573,12 +573,12 @@ func (cv *VartypeCheck) SedCommands() {
 }
 
 func (cv *VartypeCheck) ShellCommand() {
-	NewMkShellLine(cv.line).checklineMkShelltext(cv.value)
+	NewMkShellLine(cv.line).checkShelltext(cv.value)
 }
 
 func (cv *VartypeCheck) ShellWord() {
 	if !cv.listContext {
-		checklineMkShellword(cv.line, cv.value, true)
+		NewMkShellLine(cv.line).checkShellword(cv.value, true)
 	}
 }
 
