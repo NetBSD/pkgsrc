@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.117 2015/04/13 23:12:44 rodent Exp $
+# $NetBSD: pyversion.mk,v 1.118 2015/12/05 17:12:13 adam Exp $
 
 # This file determines which Python version is used as a dependency for
 # a package.
@@ -8,7 +8,7 @@
 # PYTHON_VERSION_DEFAULT
 #	The preferred Python version to use.
 #
-#	Possible values: 27 33 34
+#	Possible values: 27 33 34 35
 #	Default: 27
 #
 # === Infrastructure variables ===
@@ -27,13 +27,13 @@
 #	order of the entries matters, since earlier entries are
 #	preferred over later ones.
 #
-#	Possible values: 34 33 27
-#	Default: 34 33 27
+#	Possible values: 35 34 33 27
+#	Default: 35 34 33 27
 #
 # PYTHON_VERSIONS_INCOMPATIBLE
 #	The Python versions that are NOT acceptable for the package.
 #
-#	Possible values: 27 33 34
+#	Possible values: 27 33 34 35
 #	Default: (empty)
 #
 # PYTHON_FOR_BUILD_ONLY
@@ -85,7 +85,7 @@ BUILD_DEFS+=		PYTHON_VERSION_DEFAULT
 BUILD_DEFS_EFFECTS+=	PYPACKAGE
 
 PYTHON_VERSION_DEFAULT?=		27
-PYTHON_VERSIONS_ACCEPTED?=		34 33 27
+PYTHON_VERSIONS_ACCEPTED?=		35 34 33 27
 PYTHON_VERSIONS_INCOMPATIBLE?=		# empty by default
 
 # transform the list into individual variables
