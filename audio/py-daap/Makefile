@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/05/09 07:36:54 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2015/12/05 21:25:28 adam Exp $
 
 DISTNAME=	PythonDaap-0.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/PythonD/d/}
@@ -10,7 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://movieos.org/code/pythondaap/
 COMMENT=	Python binding for DAAP
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.7
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 0.7
 CONFLICTS=	${PYPKGPREFIX}-PythonDaap-[0-9]*
 
 .include "../../lang/python/distutils.mk"

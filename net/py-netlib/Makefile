@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/11/16 18:32:32 leot Exp $
+# $NetBSD: Makefile,v 1.7 2015/12/05 21:25:54 adam Exp $
 
 DISTNAME=	netlib-0.14.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -22,7 +22,7 @@ DEPENDS+=	${PYPKGPREFIX}-ipaddress>=1.0.14:../../net/py-ipaddress
 DEPENDS+=	${PYPKGPREFIX}-passlib>=1.6.2:../../security/py-passlib
 DEPENDS+=	${PYPKGPREFIX}-six>=1.9.0:../../lang/py-six
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.14.0
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 0.14.0
 
 # XXX: Get rid of garbage files (probably will not needed for future versions)
 pre-configure:

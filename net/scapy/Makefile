@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2014/05/09 07:37:16 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2015/12/05 21:25:55 adam Exp $
 
 DISTNAME=	scapy-2.2.0
 CATEGORIES=	net
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-readline-[0-9]*:../../devel/py-readline
 
 NO_BUILD=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-libpcap, py-libdnet
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-libpcap, py-libdnet
 
 INSTALLATION_DIRS+=	share/examples/scapy
 

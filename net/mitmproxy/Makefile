@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/11/16 18:33:51 leot Exp $
+# $NetBSD: Makefile,v 1.7 2015/12/05 21:25:52 adam Exp $
 
 DISTNAME=	mitmproxy-0.14.0
 CATEGORIES=	net
@@ -27,7 +27,7 @@ DEPENDS+=	${PYPKGPREFIX}-tornado>=4.0.2:../../www/py-tornado
 DEPENDS+=	${PYPKGPREFIX}-urwid>=1.3:../../devel/py-urwid
 
 USE_LANGUAGES=	# none
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-netlib
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-netlib
 
 REPLACE_PYTHON=	libmproxy/contrib/*.py libmproxy/contrib/wbxml/*.py
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2015/04/25 14:24:57 tnn Exp $
+# $NetBSD: Makefile,v 1.58 2015/12/05 21:26:03 adam Exp $
 
 DISTNAME=	gDeskCal-0_57_1
 PKGNAME=	gdeskcal-0.57.1
@@ -15,7 +15,7 @@ NO_BUILD=	yes
 
 REPLACE_PYTHON=	gdeskcal
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-xml, py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-xml, py-gtk2
 
 INSTALLATION_DIRS=	bin lib/gdeskcal
 

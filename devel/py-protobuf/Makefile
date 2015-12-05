@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/06/24 18:09:59 khorben Exp $
+# $NetBSD: Makefile,v 1.6 2015/12/05 21:25:39 adam Exp $
 
 .include "../../devel/protobuf/Makefile.common"
 
@@ -12,7 +12,7 @@ LICENSE=	modified-bsd
 
 PYSETUPSUBDIR=	python
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-gflags-[0-9]*:../../devel/py-gflags
 BUILD_DEPENDS+=	${PYPKGPREFIX}-google-apputils-[0-9]*:../../devel/py-google-apputils

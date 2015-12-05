@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2015/11/09 04:13:56 manu Exp $
+# $NetBSD: Makefile,v 1.58 2015/12/05 21:25:42 adam Exp $
 
 DISTNAME=	glusterfs-3.7.6
 #PKGREVISION=	1
@@ -21,7 +21,7 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 # Only libfl.a is available, and libtool wants libfl.so
 MAKE_FLAGS+=		LEXLIB=""
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # only 2.x supported as of 3.6.0
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # only 2.x supported as of 3.6.0
 
 REPLACE_PYTHON+=	contrib/ipaddr-py/ipaddr.py
 REPLACE_PYTHON+=	extras/snap_scheduler/gcron.py

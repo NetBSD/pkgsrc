@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2015/06/12 10:50:28 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2015/12/05 21:25:48 adam Exp $
 
 DISTNAME=	gnumeric-1.10.17
 PKGREVISION=	23
@@ -29,7 +29,7 @@ PLIST_SUBST+=		GOFFICE_VERSION=${GOFFICE_VERSION}
 
 CONFIGURE_ARGS+=	--with-python
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 1.10.17
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 1.10.17
 .include "../../lang/python/application.mk"
 .include "../../devel/py-gobject/buildlink3.mk"
 

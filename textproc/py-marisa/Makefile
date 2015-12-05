@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/06/02 13:08:20 obache Exp $
+# $NetBSD: Makefile,v 1.3 2015/12/05 21:26:02 adam Exp $
 #
 
 .include "../../textproc/marisa/Makefile.common"
@@ -11,7 +11,7 @@ COMMENT=	MARISA python module
 USE_LANGUAGES=	c c++
 
 PYSETUPSUBDIR=	bindings/python
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.2.4
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 0.2.4
 
 SUBST_CLASSES+=		version
 SUBST_STAGE.version=	pre-configure

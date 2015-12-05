@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.179 2015/06/12 10:50:27 wiz Exp $
+# $NetBSD: Makefile,v 1.180 2015/12/05 21:25:48 adam Exp $
 
 DISTNAME=		gnumeric-1.8.4
 PKGREVISION=		40
@@ -25,7 +25,7 @@ REPLACE_PERL+=		plugins/perl-func/perl_func.pl
 
 CONFIGURE_ARGS+=	--with-python
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 1.8.4
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 1.8.4
 .include "../../lang/python/application.mk"
 .include "../../devel/py-gobject/buildlink3.mk"
 

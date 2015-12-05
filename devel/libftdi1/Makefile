@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/04/17 15:53:01 adam Exp $
+# $NetBSD: Makefile,v 1.12 2015/12/05 21:25:35 adam Exp $
 
 DISTNAME=	libftdi1-1.1
 PKGREVISION=	3
@@ -17,7 +17,7 @@ USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config cmake
 USE_LANGUAGES=	c c++
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 1.0
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 1.0
 
 BUILD_DEPENDS+=libusb1-[0-9]*:../../devel/libusb1
 # It is better off to have doxygen, but

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2014/05/09 07:37:03 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2015/12/05 21:25:40 adam Exp $
 
 DISTNAME=	pyunit-1.4.1
 PKGNAME=	${PYPKGPREFIX}-unitgui-1.4.1
@@ -14,7 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
 
 EGG_NAME=	PyUnit-${PKGVERSION_NOREV}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

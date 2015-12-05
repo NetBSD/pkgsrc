@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/12/31 13:57:27 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2015/12/05 21:25:38 adam Exp $
 
 DISTNAME=	logilab-astng-0.24.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-logilab-common>=0.53.0:../../devel/py-logilab-common
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-mxDateTime via py-logilab-common
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-mxDateTime via py-logilab-common
 
 do-test:
 	cd ${WRKSRC} && ${SH} test/fulltest.sh ${PYVERSSUFFIX}

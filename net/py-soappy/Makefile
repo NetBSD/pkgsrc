@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2014/05/09 07:37:16 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2015/12/05 21:25:54 adam Exp $
 
 DISTNAME=	SOAPpy-0.11.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-xml>=0.8.3:../../textproc/py-xml
 
 USE_LANGUAGES=	# empty
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-xml
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-xml
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/09/12 20:03:01 tnn Exp $
+# $NetBSD: Makefile,v 1.7 2015/12/05 21:25:59 adam Exp $
 
 DISTNAME=	salt-0.10.5
 PKGNAME=	${DISTNAME:S/-/-docs-/}
@@ -28,7 +28,7 @@ do-install:
 	  && ${FIND} ${HTMLDIR} -type f -print ) >>${PLIST_SRC}
 
 # problem in sphinx config file?
-PYTHON_VERSIONS_INCOMPATIBLE=  33 34 # not yet ported as of 0.10.5
+PYTHON_VERSIONS_INCOMPATIBLE=  33 34 35 # not yet ported as of 0.10.5
 
 # The upstream salt project does not say what version of sphinx is required.
 .include "../../lang/python/pyversion.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/06/07 08:19:04 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2015/12/05 21:25:37 adam Exp $
 
 DISTNAME=	fastimport-0.9.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ HOMEPAGE=	https://github.com/jelmer/python-fastimport
 COMMENT=	Fastimport parser and generator in Python
 LICENSE=	gnu-gpl-v2
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.9.4
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 0.9.4
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

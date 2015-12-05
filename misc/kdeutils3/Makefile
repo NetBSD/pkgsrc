@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2015/11/25 12:51:54 jperkin Exp $
+# $NetBSD: Makefile,v 1.109 2015/12/05 21:25:50 adam Exp $
 
 DISTNAME=	kdeutils-${_KDE_VERSION}
 PKGREVISION=	36
@@ -34,7 +34,7 @@ CONFIGURE_ARGS+=	--with-snmp=no
 CONFIGURE_ARGS+=	--with-pythondir=${LOCALBASE}
 CONFIGURE_ENV+=		PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 3.5.10
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 3.5.10
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../devel/gmp/buildlink3.mk"

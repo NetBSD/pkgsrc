@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/05/09 07:37:21 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2015/12/05 21:26:01 adam Exp $
 
 DISTNAME=	ispell-lt-1.3
 CATEGORIES=	textproc
@@ -13,7 +13,7 @@ DEPENDS+=	ispell-[0-9]*:../../textproc/ispell
 
 USE_TOOLS+=		gmake
 REPLACE_PYTHON+=	tools/*.py
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 1.3
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 1.3
 
 SUBST_CLASSES+=		install
 SUBST_FILES.install=	Makefile

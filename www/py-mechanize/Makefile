@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/05/09 07:37:25 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2015/12/05 21:26:06 adam Exp $
 
 DISTNAME=	mechanize-0.2.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Stateful programmatic web browsing in Python
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.2.5
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 0.2.5
 
 do-test:
 	${RUN}cd ${WRKSRC}; ${PYTHONBIN} test.py

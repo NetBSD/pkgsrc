@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/12/31 14:07:40 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2015/12/05 21:25:33 adam Exp $
 
 DISTNAME=	skytools-3.2
 PKGREVISION=	1
@@ -20,7 +20,7 @@ USE_TOOLS+=	awk gmake grep sed
 
 PY_PATCHPLIST=	yes
 PY_NO_EGG=	no
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 3.2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 3.2
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 REPLACE_PYTHON+=	scripts/*.py

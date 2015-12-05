@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2015/06/12 10:52:15 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2015/12/05 21:26:06 adam Exp $
 
 VER=		1.9.7
 DISTNAME=	moin-${VER}
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 1.9.7
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 1.9.7
 
 REPLACE_PYTHON=	jabberbot/bot.py \
 		MoinMoin/version.py \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/08/09 21:57:14 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2015/12/05 21:25:34 adam Exp $
 
 DISTNAME=	be-1.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/be/bugs-everywhere/}
@@ -22,7 +22,7 @@ USE_LANGUAGES=	# none
 
 EGG_NAME=			bugs_everywhere-${PKGVERSION}
 PLIST_SUBST+=			PYVERSSUFFIX=${PYVERSSUFFIX}
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not ported yet as of 1.1.1
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not ported yet as of 1.1.1
 REPLACE_PYTHON+=		libbe/version.py
 
 post-install:

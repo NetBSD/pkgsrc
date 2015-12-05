@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2015/08/18 07:31:18 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2015/12/05 21:26:00 adam Exp $
 
 VERSION=		3.1.4
 DISTNAME=		xen-${VERSION}
@@ -21,7 +21,7 @@ ONLY_FOR_PLATFORM+=	NetBSD-*-i386 NetBSD-*-x86_64
 CONFLICTS=		xentools30-* xentools33-*
 CONFLICTS+=		xenstoretools-*
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 3.1.4
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 3.1.4
 
 WRKSRC=			${WRKDIR}/xen-${VERSION}/tools
 CHECK_PORTABILITY_SKIP+=	examples/* xm-test/ramdisk/make-release.sh

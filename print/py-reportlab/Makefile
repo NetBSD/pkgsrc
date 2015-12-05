@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2015/03/15 23:05:25 joerg Exp $
+# $NetBSD: Makefile,v 1.53 2015/12/05 21:25:56 adam Exp $
 
 DISTNAME=	reportlab-2.7
 DISTFILES=	${DEFAULT_DISTFILES} pfbfer.zip
@@ -18,7 +18,7 @@ DEPENDS+=	{${PYPKGPREFIX}-imaging-[0-9]*,${PYPKGPREFIX}-Pillow-[0-9]*}:../../gra
 EXTRACT_DIR.pfbfer.zip=	${WRKSRC}/src/reportlab/fonts
 EXTRACT_OPTS_ZIP+=	-L
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 2.7; py-imaging
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 2.7; py-imaging
 
 REPLACE_PYTHON+=	demos/tests/testdemos.py
 REPLACE_PYTHON+=	docs/genAll.py

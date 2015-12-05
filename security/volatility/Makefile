@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/06/22 10:38:17 pettai Exp $
+# $NetBSD: Makefile,v 1.5 2015/12/05 21:25:58 adam Exp $
 
 DISTNAME=	volatility-2.4
 CATEGORIES=	security
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-distorm3-[0-9]*:../../devel/py-distorm3
 PYDISTUTILSPKG= yes
 REPLACE_PYTHON= tools/vtype_diff.py
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35
 
 .include "../../lang/python/egg.mk"
 .include "../../lang/python/application.mk"

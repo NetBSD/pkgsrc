@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/05/09 07:37:09 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2015/12/05 21:25:47 adam Exp $
 
 .include "../../inputmethod/zinnia/Makefile.common"
 
@@ -11,7 +11,7 @@ USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
 PYSETUPSUBDIR=	python
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.06
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 0.06
 
 EGG_NAME=	zinnia_python-0.0.0
 

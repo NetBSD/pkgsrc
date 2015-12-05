@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2015/04/25 14:24:59 tnn Exp $
+# $NetBSD: Makefile,v 1.23 2015/12/05 21:26:03 adam Exp $
 
 DISTNAME=	bmpanel2-2.1pre1
 PKGREVISION=	17
@@ -18,7 +18,7 @@ USE_TOOLS+=	pkg-config gzip
 
 PY_PATCHPLIST=	yes
 REPLACE_PYTHON=	extra/py/bmpanel2.py
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 2.1pre1
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 2.1pre1
 
 SUBST_CLASSES+=		prefix
 SUBST_SED.prefix=	-e "s,/usr/local,${PREFIX},g"

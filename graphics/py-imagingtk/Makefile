@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2014/05/09 07:37:08 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2015/12/05 21:25:46 adam Exp $
 
 DISTNAME=	Imaging-1.1.7
 PKGNAME=	${PYPKGPREFIX}-imagingtk-1.1.7
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
 DIST_SUBDIR=	python
 EGG_NAME=	${DISTNAME:S/Imaging/PIL/}
 PY_NO_EGG=	yes # same egg installed by py-imaging
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-imaging
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-imaging
 
 PLIST_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX:Q}
 

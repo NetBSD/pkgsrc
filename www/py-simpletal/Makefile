@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/05/09 07:37:26 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2015/12/05 21:26:06 adam Exp $
 
 DISTNAME=	SimpleTAL-4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES=	#none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35
 
 do-test:
 	${PYTHONBIN} ${WRKSRC}/runtests.py

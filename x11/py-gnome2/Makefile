@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2015/04/25 14:25:14 tnn Exp $
+# $NetBSD: Makefile,v 1.104 2015/12/05 21:26:08 adam Exp $
 
 DISTNAME=	gnome-python-2.28.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/gnome-python/gnome2/}
@@ -18,7 +18,7 @@ GNU_CONFIGURE=	YES
 CONFIGURE_ENV+=	PYTHON=${PYTHONBIN:Q}
 USE_TOOLS+=		pkg-config gmake
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-ORBit, py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-ORBit, py-gtk2
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "SunOS"

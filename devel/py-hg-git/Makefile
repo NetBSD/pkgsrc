@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/11/11 11:59:28 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2015/12/05 21:25:37 adam Exp $
 
 DISTNAME=	0.8.3
 PKGNAME=	${PYPKGPREFIX}-hg-git-${DISTNAME}
@@ -18,7 +18,7 @@ WRKSRC=		${WRKDIR}/durin42-hg-git-d7ad67f850b2
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # as of 0.8.3
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # as of 0.8.3
 EGG_NAME=	hg_git-${DISTNAME}
 
 .include "../../lang/python/egg.mk"

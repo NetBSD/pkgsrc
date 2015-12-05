@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2015/10/06 14:56:12 fhajny Exp $
+# $NetBSD: Makefile,v 1.8 2015/12/05 21:25:35 adam Exp $
 
 DISTNAME=	libgit2-0.23.3
 CATEGORIES=	devel
@@ -17,7 +17,7 @@ USE_CMAKE=	yes
 CMAKE_ARGS+=	-DUSE_SSH=OFF
 
 PKGCONFIG_OVERRIDE+=	libgit2.pc.in
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.21.1
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 0.21.1
 
 .include "../../security/libssh2/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
