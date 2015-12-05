@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2015/09/14 09:06:39 jnemeth Exp $
+# $NetBSD: Makefile,v 1.102 2015/12/05 23:43:54 jnemeth Exp $
 #
 
 COMMENT=	Communication utilities
@@ -6,6 +6,7 @@ COMMENT=	Communication utilities
 SUBDIR+=	asterisk
 SUBDIR+=	asterisk-sounds-de-x9media
 SUBDIR+=	asterisk-sounds-native
+SUBDIR+=	asterisk13
 SUBDIR+=	asterisk18
 SUBDIR+=	binkd
 SUBDIR+=	birda
