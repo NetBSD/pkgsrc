@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2015/11/04 02:00:13 agc Exp $
+$NetBSD: distinfo,v 1.9 2015/12/05 14:17:08 leot Exp $
 
-SHA1 (the_silver_searcher-0.30.0.tar.gz) = 7f5496cf450c225dcdb3eac264ffc6d2c57b487e
-RMD160 (the_silver_searcher-0.30.0.tar.gz) = d5474901f67c2f506e5c3083299375283d0136bc
-SHA512 (the_silver_searcher-0.30.0.tar.gz) = edbcb01e954f9efdab729db0e544571e9f955756c00835c52bd21b6387a6d5d14197d8f215b60a3c9152ff9e368fba7c050ec4c1ee0a8ade43302cd16434159b
-Size (the_silver_searcher-0.30.0.tar.gz) = 148786 bytes
+SHA1 (the_silver_searcher-0.31.0.tar.gz) = 9b7f5201ac22b7e9fb3e3b2a7c3d4e26f2a75795
+RMD160 (the_silver_searcher-0.31.0.tar.gz) = 418158de9691425cd619d83eb3123e139e1d7465
+SHA512 (the_silver_searcher-0.31.0.tar.gz) = a090ade80ace03a6dd02b98bde16b1ef36a30204da59aff1714217e8367c75470f2e56c6486e487e170ad7b207c868d4f596947e6a85c1af48c537fade575435
+Size (the_silver_searcher-0.31.0.tar.gz) = 177903 bytes
