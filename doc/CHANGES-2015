@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4858 2015/12/05 11:22:45 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4859 2015/12/05 14:08:55 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8099,3 +8099,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Removed lang/php54 [taca 2015-12-05]
 	Updated pkgtools/pkglint to 5.2 [rillig 2015-12-05]
 	Updated devel/py-mercurial to 3.6.2 [wiz 2015-12-05]
+	Updated devel/hs-haskell-src-exts to 1.17.1 [szptvlfn 2015-12-05]
