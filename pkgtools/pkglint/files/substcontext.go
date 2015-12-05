@@ -12,11 +12,15 @@ type SubstContext struct {
 	filterCmd string
 }
 
-func (ctx *SubstContext) Varassign(line *Line, varname, op, value string) {
+func (ctx *SubstContext) Varassign(mkline *MkLine) {
 	if !G.opts.WarnExtra {
 		return
 	}
 
+	line:=mkline.line
+	varname := line.extra["varname"].(string)
+	op := line.extra["op"].(string)
+	value := line.extra["value"].(string)
 	if varname == "SUBST_CLASSES" {
 		classes := splitOnSpace(value)
 		if len(classes) > 1 {
@@ -46,7 +50,7 @@ func (ctx *SubstContext) Varassign(line *Line, varname, op, value string) {
 		if ctx.IsComplete() {
 			// XXX: This code sometimes produces weird warnings. See
 			// meta-pkgs/xorg/Makefile.common 1.41 for an example.
-			ctx.Finish(line)
+			ctx.Finish(mkline)
 
 			// The following assignment prevents an additional warning,
 			// but from a technically viewpoint, it is incorrect.
@@ -82,7 +86,8 @@ func (ctx *SubstContext) IsComplete() bool {
 		(len(ctx.sed) != 0 || len(ctx.vars) != 0 || ctx.filterCmd != "")
 }
 
-func (ctx *SubstContext) Finish(line *Line) {
+func (ctx *SubstContext) Finish(mkline *MkLine) {
+	line:=mkline.line
 	if ctx.id == "" || !G.opts.WarnExtra {
 		return
 	}
