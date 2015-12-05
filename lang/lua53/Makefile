@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2015/01/17 17:50:23 alnsn Exp $
+# $NetBSD: Makefile,v 1.2 2015/12/05 22:50:26 alnsn Exp $
 
 DISTNAME=	lua-${LUA_VERSION}
 PKGNAME=	lua53-${LUA_VERSION}
@@ -23,6 +23,16 @@ USE_TOOLS+=	gmake
 MAKE_ENV+=	DLLIB=${BUILDLINK_LDADD.dl:Q}
 MAKE_ENV+=	INSTALL_DATA=${INSTALL_DATA:Q}
 CFLAGS+=	-DLUA_ROOT=\"${PREFIX}/\"
+
+# Address pkg/47587 lua not linked to pthread causes issues with modules
+PTHREAD_OPTS+=		native
+
+.include "../../mk/pthread.buildlink3.mk"
+
+.if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} == "native"
+CFLAGS+=	-pthread
+LDFLAGS+=	-pthread
+.endif
 
 PKGCONFIG_OVERRIDE=	${WRKSRC}/lua.pc
 INSTALLATION_DIRS+=	lib/pkgconfig share/doc/lua-5.3
