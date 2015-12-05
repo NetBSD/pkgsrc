@@ -42,7 +42,7 @@ func (p *Pkglint) Main(args ...string) (exitcode int) {
 	if G.opts.Profiling {
 		f, err := os.Create("pkglint.pprof")
 		if err != nil {
-			fatalf(NO_FILE, NO_LINES, "Cannot create profiling file: %s", err)
+			dummyLine.fatalf("Cannot create profiling file: %s", err)
 		}
 		pprof.StartCPUProfile(f)
 		defer pprof.StopCPUProfile()
