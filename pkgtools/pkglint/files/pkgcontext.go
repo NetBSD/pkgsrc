@@ -1,6 +1,6 @@
 package main
 
-// Context of the package that is currently checked.
+// PkgContext contains data for the package that is currently checked.
 type PkgContext struct {
 	pkgpath              string // e.g. "category/pkgdir"
 	pkgdir               string // PKGDIR from the package Makefile
@@ -11,7 +11,7 @@ type PkgContext struct {
 	effectivePkgbase     string // The effective PKGNAME without the version
 	effectivePkgversion  string // The version part of the effective PKGNAME
 	effectivePkgnameLine *Line  // The origin of the three effective_* values
-	seen_bsd_prefs_mk    bool   // Has bsd.prefs.mk already been included?
+	seenBsdPrefsMk       bool   // Has bsd.prefs.mk already been included?
 
 	vardef             map[string]*Line // varname => line
 	varuse             map[string]*Line // varname => line

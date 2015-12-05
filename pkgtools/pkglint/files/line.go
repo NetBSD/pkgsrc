@@ -137,10 +137,10 @@ func (ln *Line) replaceRegex(from, to string) {
 	}
 }
 
-func (line *Line) noteAutofix(format string, args ...interface{}) {
-	line.changed = true
+func (ln *Line) noteAutofix(format string, args ...interface{}) {
+	ln.changed = true
 	if G.opts.Autofix || G.opts.PrintAutofix {
-		line.notef(format, args...)
+		ln.notef(format, args...)
 	}
 	G.autofixAvailable = true
 }

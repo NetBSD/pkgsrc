@@ -165,19 +165,7 @@ func (pline *PlistLine) checkPathname(pctx *PlistContext, fullname string) {
 	sdirname, basename := path.Split(fullname)
 	dirname := strings.TrimSuffix(sdirname, "/")
 
-	if G.opts.WarnPlistSort && hasAlnumPrefix(text) && !containsVarRef(text) {
-		if pctx.lastFname != "" {
-			if pctx.lastFname > text {
-				line.warnf("%q should be sorted before %q.", text, pctx.lastFname)
-				line.explain(
-					"For aesthetic reasons, the files in the PLIST should be sorted",
-					"alphabetically.")
-			} else if pctx.lastFname == text {
-				line.errorf("Duplicate filename.")
-			}
-		}
-		pctx.lastFname = text
-	}
+	pline.checkSorted(pctx)
 
 	if contains(basename, "${IMAKE_MANNEWSUFFIX}") {
 		pline.warnAboutPlistImakeMannewsuffix()
@@ -188,20 +176,7 @@ func (pline *PlistLine) checkPathname(pctx *PlistContext, fullname string) {
 		line.warnf("The bin/ directory should not have subdirectories.")
 
 	case dirname == "bin":
-		switch {
-		case pctx.allFiles["man/man1/"+basename+".1"] != nil:
-		case pctx.allFiles["man/man6/"+basename+".6"] != nil:
-		case pctx.allFiles["${IMAKE_MAN_DIR}/"+basename+".${IMAKE_MANNEWSUFFIX}"] != nil:
-		default:
-			if G.opts.WarnExtra {
-				line.warnf("Manual page missing for bin/%s.", basename)
-				line.explain(
-					"All programs that can be run directly by the user should have a manual",
-					"page for quick reference. The programs in the bin/ directory should have",
-					"corresponding manual pages in section 1 (filename program.1), not in",
-					"section 8.")
-			}
-		}
+		pline.checkpathBin(pctx, basename)
 
 	case hasPrefix(text, "doc/"):
 		line.errorf("Documentation must be installed under share/doc, not doc.")
@@ -232,61 +207,13 @@ func (pline *PlistLine) checkPathname(pctx *PlistContext, fullname string) {
 		line.errorf("\"lib/locale\" must not be listed. Use ${PKGLOCALEDIR}/locale and set USE_PKGLOCALEDIR instead.")
 
 	case hasPrefix(text, "lib/"):
-		if m, dir, lib, ext := match3(text, `^(lib/(?:.*/)*)([^/]+)\.(so|a|la)$`); m {
-			if dir == "lib/" && !hasPrefix(lib, "lib") {
-				_ = G.opts.WarnExtra && line.warnf("Library filename does not start with \"lib\".")
-			}
-			if ext == "la" {
-				if G.pkgContext != nil && G.pkgContext.vardef["USE_LIBTOOL"] == nil {
-					line.warnf("Packages that install libtool libraries should define USE_LIBTOOL.")
-				}
-			}
-		}
+		pline.checkpathLib(pctx, basename)
 
 	case hasPrefix(text, "man/"):
-		if m, catOrMan, section, manpage, ext, gz := match5(text, `^man/(cat|man)(\w+)/(.*?)\.(\w+)(\.gz)?$`); m {
-
-			if !matches(section, `^[\dln]$`) {
-				line.warnf("Unknown section %q for manual page.", section)
-			}
-
-			if catOrMan == "cat" && pctx.allFiles["man/man"+section+"/"+manpage+"."+section] == nil {
-				line.warnf("Preformatted manual page without unformatted one.")
-			}
-
-			if catOrMan == "cat" {
-				if ext != "0" {
-					line.warnf("Preformatted manual pages should end in \".0\".")
-				}
-			} else {
-				if section != ext {
-					line.warnf("Mismatch between the section (%s) and extension (%s) of the manual page.", section, ext)
-				}
-			}
-
-			if gz != "" {
-				line.notef("The .gz extension is unnecessary for manual pages.")
-				line.explain(
-					"Whether the manual pages are installed in compressed form or not is",
-					"configured by the pkgsrc user. Compression and decompression takes place",
-					"automatically, no matter if the .gz extension is mentioned in the PLIST",
-					"or not.")
-			}
-		} else {
-			// maybe: line.warnf("Invalid filename %q for manual page.", text)
-		}
+		pline.checkpathMan(pctx)
 
 	case hasPrefix(text, "sbin/"):
-		binname := text[5:]
-
-		if pctx.allFiles["man/man8/"+binname+".8"] == nil && G.opts.WarnExtra {
-			line.warnf("Manual page missing for sbin/%s.", binname)
-			line.explain(
-				"All programs that can be run directly by the user should have a manual",
-				"page for quick reference. The programs in the sbin/ directory should have",
-				"corresponding manual pages in section 8 (filename program.8), not in",
-				"section 1.")
-		}
+		pline.checkpathSbin(pctx)
 
 	case hasPrefix(text, "share/applications/") && hasSuffix(text, ".desktop"):
 		f := "../../sysutils/desktop-file-utils/desktopdb.mk"
@@ -359,13 +286,108 @@ func (pline *PlistLine) checkPathname(pctx *PlistContext, fullname string) {
 			"This file is handled automatically by the INSTALL/DEINSTALL scripts,",
 			"since its contents changes frequently.")
 	}
+}
 
-	if contains(basename, ".a") || contains(basename, ".so") {
-		if m, basename := match1(text, `^(.*)(?:\.a|\.so[0-9.]*)$`); m {
-			if laLine := pctx.allFiles[basename+".la"]; laLine != nil {
-				line.warnf("Redundant library found. The libtool library is in line %s.", laLine)
+func (pline *PlistLine) checkSorted(pctx *PlistContext) {
+	if text := pline.line.text; G.opts.WarnPlistSort && hasAlnumPrefix(text) && !containsVarRef(text) {
+		if pctx.lastFname != "" {
+			if pctx.lastFname > text {
+				pline.line.warnf("%q should be sorted before %q.", text, pctx.lastFname)
+				pline.line.explain(
+					"The files in the PLIST should be sorted alphabetically.")
+			} else if pctx.lastFname == text {
+				pline.line.errorf("Duplicate filename.")
 			}
 		}
+		pctx.lastFname = text
+	}
+}
+
+func (pline *PlistLine) checkpathBin(pctx *PlistContext, basename string) {
+	switch {
+	case pctx.allFiles["man/man1/"+basename+".1"] != nil:
+	case pctx.allFiles["man/man6/"+basename+".6"] != nil:
+	case pctx.allFiles["${IMAKE_MAN_DIR}/"+basename+".${IMAKE_MANNEWSUFFIX}"] != nil:
+	default:
+		if G.opts.WarnExtra {
+			pline.line.warnf("Manual page missing for bin/%s.", basename)
+			pline.line.explain(
+				"All programs that can be run directly by the user should have a manual",
+				"page for quick reference. The programs in the bin/ directory should have",
+				"corresponding manual pages in section 1 (filename program.1), not in",
+				"section 8.")
+		}
+	}
+}
+
+func (pline *PlistLine) checkpathLib(pctx *PlistContext, basename string) {
+	if m, dir, lib, ext := match3(pline.line.text, `^(lib/(?:.*/)*)([^/]+)\.(so|a|la)$`); m {
+		if dir == "lib/" && !hasPrefix(lib, "lib") {
+			_ = G.opts.WarnExtra && pline.line.warnf("Library filename does not start with \"lib\".")
+		}
+		if ext == "la" {
+			if G.pkgContext != nil && G.pkgContext.vardef["USE_LIBTOOL"] == nil {
+				pline.line.warnf("Packages that install libtool libraries should define USE_LIBTOOL.")
+			}
+		}
+	}
+
+	if contains(basename, ".a") || contains(basename, ".so") {
+		if m, noext := match1(pline.line.text, `^(.*)(?:\.a|\.so[0-9.]*)$`); m {
+			if laLine := pctx.allFiles[noext+".la"]; laLine != nil {
+				pline.line.warnf("Redundant library found. The libtool library is in line %s.", laLine)
+			}
+		}
+	}
+}
+
+func (pline *PlistLine) checkpathMan(pctx *PlistContext) {
+	line := pline.line
+
+	m, catOrMan, section, manpage, ext, gz := match5(pline.line.text, `^man/(cat|man)(\w+)/(.*?)\.(\w+)(\.gz)?$`)
+	if !m {
+		// maybe: line.warnf("Invalid filename %q for manual page.", text)
+		return
+	}
+
+	if !matches(section, `^[\dln]$`) {
+		line.warnf("Unknown section %q for manual page.", section)
+	}
+
+	if catOrMan == "cat" && pctx.allFiles["man/man"+section+"/"+manpage+"."+section] == nil {
+		line.warnf("Preformatted manual page without unformatted one.")
+	}
+
+	if catOrMan == "cat" {
+		if ext != "0" {
+			line.warnf("Preformatted manual pages should end in \".0\".")
+		}
+	} else {
+		if section != ext {
+			line.warnf("Mismatch between the section (%s) and extension (%s) of the manual page.", section, ext)
+		}
+	}
+
+	if gz != "" {
+		line.notef("The .gz extension is unnecessary for manual pages.")
+		line.explain(
+			"Whether the manual pages are installed in compressed form or not is",
+			"configured by the pkgsrc user. Compression and decompression takes place",
+			"automatically, no matter if the .gz extension is mentioned in the PLIST",
+			"or not.")
+	}
+}
+
+func (pline *PlistLine) checkpathSbin(pctx *PlistContext) {
+	binname := pline.line.text[5:]
+
+	if pctx.allFiles["man/man8/"+binname+".8"] == nil && G.opts.WarnExtra {
+		pline.line.warnf("Manual page missing for sbin/%s.", binname)
+		pline.line.explain(
+			"All programs that can be run directly by the user should have a manual",
+			"page for quick reference. The programs in the sbin/ directory should have",
+			"corresponding manual pages in section 8 (filename program.8), not in",
+			"section 1.")
 	}
 }
 

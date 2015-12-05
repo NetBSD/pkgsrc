@@ -1,6 +1,6 @@
 package main
 
-// High-level iterating through lines and checking them.
+// Expecter records the state when checking a list of lines from top to bottom.
 type Expecter struct {
 	lines []*Line
 	index int

@@ -55,7 +55,7 @@ const (
 	reShVarassign = `^([A-Z_a-z]\w*)=`
 )
 
-// Shell command state; see doc/statemachine.shellcmd.dia.
+// ShellCommandState
 type scState string
 
 const (
