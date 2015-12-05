@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2015/08/14 18:27:06 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2015/12/05 21:27:38 adam Exp $
 
-DISTNAME=	babl_0.1.12.orig
-PKGNAME=	babl-0.1.12
+DISTNAME=	babl-0.1.14
 CATEGORIES=	graphics
-MASTER_SITES=	https://launchpad.net/ubuntu/+archive/primary/+files/
-# https://git.gnome.org/browse/babl/
+MASTER_SITES=	http://download.gimp.org/pub/babl/0.1/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -20,14 +18,13 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config gmake
 GNU_CONFIGURE=		yes
-
 PKGCONFIG_OVERRIDE+=	babl.pc.in
 
 # XXX Clang does not handle assembler, yet
-.include "../../mk/compiler.mk"
-.if !empty(PKGSRC_COMPILER:Mclang)
-CONFIGURE_ARGS+=	--disable-sse
-.endif
+#.include "../../mk/compiler.mk"
+#.if !empty(PKGSRC_COMPILER:Mclang)
+#CONFIGURE_ARGS+=	--disable-sse
+#.endif
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
