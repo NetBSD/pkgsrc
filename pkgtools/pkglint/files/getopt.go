@@ -37,7 +37,8 @@ func (o *Options) Parse(args []string) (remainingArgs []string, err error) {
 		arg := args[i]
 		switch {
 		case arg == "--":
-			return append(remainingArgs, args[i+1:]...), err
+			remainingArgs = append(remainingArgs, args[i+1:]...)
+			return
 		case hasPrefix(arg, "--"):
 			skip, err = o.parseLongOption(args, i, arg[2:])
 			i += skip
