@@ -258,10 +258,19 @@ func replaceFirst(s, re, replacement string) ([]string, string) {
 	return nil, s
 }
 
-func replacePrefix(ps *string, pm *[]string, re string) bool {
-	if m := regcomp(re).FindStringSubmatch(*ps); m != nil {
-		*ps = (*ps)[len(m[0]):]
-		*pm = m
+type PrefixReplacer struct {
+	rest string
+	m    []string
+}
+
+func NewPrefixReplacer(s string) *PrefixReplacer {
+	return &PrefixReplacer{s, nil}
+}
+
+func (pr *PrefixReplacer) startsWith(re string) bool {
+	if m := regcomp(re).FindStringSubmatch(pr.rest); m != nil {
+		pr.rest = pr.rest[len(m[0]):]
+		pr.m = m
 		return true
 	}
 	return false
