@@ -4,7 +4,7 @@ import (
 	check "gopkg.in/check.v1"
 )
 
-func (s *Suite) TestLineAppendPrepend(c *check.C) {
+func (s *Suite) TestLineModify(c *check.C) {
 	line := NewLine("fname", "1", "dummy", []*RawLine{{1, "original\n"}})
 
 	c.Check(line.changed, equals, false)

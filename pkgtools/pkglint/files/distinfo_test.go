@@ -61,6 +61,7 @@ func (s *Suite) TestChecklinesDistinfo_UncommittedPatch(c *check.C) {
 }
 
 func (s *Suite) TestChecklinesDistinfo_UnrecordedPatches(c *check.C) {
+	s.CreateTmpFile(c, "patches/CVS/Entries", "")
 	s.CreateTmpFile(c, "patches/patch-aa", "")
 	s.CreateTmpFile(c, "patches/patch-src-Makefile", "")
 	G.currentDir = s.tmpdir

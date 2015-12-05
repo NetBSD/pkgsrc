@@ -99,24 +99,6 @@ func (s *Suite) TestChecklineRcsid(c *check.C) {
 		"ERROR: fname:3: Expected \"$"+"NetBSD$\".\n"+
 		"ERROR: fname:4: Expected \"$"+"NetBSD$\".\n"+
 		"ERROR: fname:5: Expected \"$"+"NetBSD$\".\n")
-
-	G.isWip = true
-
-	for _, line := range lines {
-		checklineRcsid(line, ``, "")
-	}
-
-	c.Check(s.Output(), equals, ""+
-		"ERROR: fname:5: Expected \"$"+"NetBSD$\".\n")
-}
-
-func (s *Suite) TestChecklineMkAbsolutePathname(c *check.C) {
-	line := NewLine("Makefile", "1", "dummy", nil)
-
-	checklineMkAbsolutePathname(line, "bindir=/bin")
-	checklineMkAbsolutePathname(line, "bindir=/../lib")
-
-	c.Check(s.Output(), equals, "WARN: Makefile:1: Found absolute pathname: /bin\n")
 }
 
 func (s *Suite) TestMatchVarassign(c *check.C) {

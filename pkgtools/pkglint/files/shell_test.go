@@ -21,7 +21,7 @@ func (s *Suite) TestSplitIntoShellwords_LineContinuation(c *check.C) {
 func (s *Suite) TestChecklineMkShelltext(c *check.C) {
 	s.UseCommandLine(c, "-Wall")
 	G.mkContext = newMkContext()
-	msline := NewMkShellLine(NewLine("fname", "1", "dummy", nil))
+	msline := NewMkShellLine(NewLine("fname", "1", "# dummy", nil))
 
 	msline.checklineMkShelltext("@# Comment")
 
@@ -87,7 +87,7 @@ func (s *Suite) TestChecklineMkShelltext(c *check.C) {
 func (s *Suite) TestChecklineMkShellword(c *check.C) {
 	s.UseCommandLine(c, "-Wall")
 	G.globalData.InitVartypes()
-	line := NewLine("fname", "1", "dummy", nil)
+	line := NewLine("fname", "1", "# dummy", nil)
 
 	c.Check(matches("${list}", `^`+reVarnameDirect+`$`), equals, false)
 
@@ -106,7 +106,7 @@ func (s *Suite) TestShelltextContext_CheckCommandStart(c *check.C) {
 	G.globalData.vartools = map[string]string{"echo": "ECHO"}
 	G.globalData.toolsVarRequired = map[string]bool{"echo": true}
 	G.mkContext = newMkContext()
-	line := NewLine("fname", "3", "dummy", nil)
+	line := NewLine("fname", "3", "# dummy", nil)
 
 	checklineMkShellcmd(line, "echo \"hello, world\"")
 
@@ -117,26 +117,26 @@ func (s *Suite) TestShelltextContext_CheckCommandStart(c *check.C) {
 
 func (s *Suite) TestMkShellLine_checklineMkShelltext(c *check.C) {
 
-	shline := NewMkShellLine(s.DummyLine())
+	shline := NewMkShellLine(NewLine("Makefile", "3", "# dummy", nil))
 
 	shline.checklineMkShelltext("for f in *.pl; do ${SED} s,@PREFIX@,${PREFIX}, < $f > $f.tmp && ${MV} $f.tmp $f; done")
 
-	c.Check(s.Output(), equals, "NOTE: fname:1: Please use the SUBST framework instead of ${SED} and ${MV}.\n")
+	c.Check(s.Output(), equals, "NOTE: Makefile:3: Please use the SUBST framework instead of ${SED} and ${MV}.\n")
 
 	shline.checklineMkShelltext("install -c manpage.1 ${PREFIX}/man/man1/manpage.1")
 
-	c.Check(s.Output(), equals, "WARN: fname:1: Please use ${PKGMANDIR} instead of \"man\".\n")
+	c.Check(s.Output(), equals, "WARN: Makefile:3: Please use ${PKGMANDIR} instead of \"man\".\n")
 
 	shline.checklineMkShelltext("cp init-script ${PREFIX}/etc/rc.d/service")
 
-	c.Check(s.Output(), equals, "WARN: fname:1: Please use the RCD_SCRIPTS mechanism to install rc.d scripts automatically to ${RCD_SCRIPTS_EXAMPLEDIR}.\n")
+	c.Check(s.Output(), equals, "WARN: Makefile:3: Please use the RCD_SCRIPTS mechanism to install rc.d scripts automatically to ${RCD_SCRIPTS_EXAMPLEDIR}.\n")
 }
 
 func (s *Suite) TestMkShellLine_checkCommandUse(c *check.C) {
 	G.mkContext = newMkContext()
 	G.mkContext.target = "do-install"
 
-	shline := NewMkShellLine(s.DummyLine())
+	shline := NewMkShellLine(NewLine("fname", "1", "dummy", nil))
 
 	shline.checkCommandUse("sed")
 

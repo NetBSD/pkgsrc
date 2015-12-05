@@ -168,6 +168,10 @@ func resolveVarsInRelativePath(relpath string, adjustDepth bool) string {
 func parselineMk(line *Line) {
 	defer tracecall("parselineMk", line.text)()
 
+	if len(line.extra) != 0 {
+		return
+	}
+
 	text := line.text
 
 	if m, varname, op, value, comment := matchVarassign(text); m {
@@ -242,50 +246,6 @@ func parselineMk(line *Line) {
 func ParselinesMk(lines []*Line) {
 	for _, line := range lines {
 		parselineMk(line)
-	}
-}
-
-func checklineMkText(line *Line, text string) {
-	defer tracecall("checklineMkText", text)()
-
-	if m, varname := match1(text, `^(?:[^#]*[^\$])?\$(\w+)`); m {
-		line.warnf("$%s is ambiguous. Use ${%s} if you mean a Makefile variable or $$%s if you mean a shell variable.", varname, varname, varname)
-	}
-
-	if line.lines == "1" {
-		checklineRcsid(line, `# `, "# ")
-	}
-
-	if contains(text, "${WRKSRC}/../") {
-		line.warnf("Using \"${WRKSRC}/..\" is conceptually wrong. Please use a combination of WRKSRC, CONFIGURE_DIRS and BUILD_DIRS instead.")
-		line.explain(
-			"You should define WRKSRC such that all of CONFIGURE_DIRS, BUILD_DIRS",
-			"and INSTALL_DIRS are subdirectories of it.")
-	}
-
-	// Note: A simple -R is not detected, as the rate of false positives is too high.
-	if m, flag := match1(text, `\b(-Wl,--rpath,|-Wl,-rpath-link,|-Wl,-rpath,|-Wl,-R)\b`); m {
-		line.warnf("Please use ${COMPILER_RPATH_FLAG} instead of %q.", flag)
-	}
-
-	rest := text
-	for {
-		m, r := replaceFirst(rest, `(?:^|[^$])\$\{([-A-Z0-9a-z_]+)(\.[\-0-9A-Z_a-z]+)?(?::[^\}]+)?\}`, "")
-		if m == nil {
-			break
-		}
-		rest = r
-
-		varbase, varext := m[1], m[2]
-		varname := varbase + varext
-		varcanon := varnameCanon(varname)
-		instead := G.globalData.deprecated[varname]
-		if instead == "" {
-			instead = G.globalData.deprecated[varcanon]
-		}
-		if instead != "" {
-			line.warnf("Use of %q is deprecated. %s", varname, instead)
-		}
 	}
 }
 
@@ -368,9 +328,10 @@ func ChecklinesMk(lines []*Line) {
 		} else if line.extra["is_comment"] != nil {
 			// No further checks.
 
-		} else if m, varname, op, value, comment := matchVarassign(text); m {
-			ChecklineMkVaralign(line)
-			checklineMkVarassign(line, varname, op, value, comment)
+		} else if m, varname, op, value, _ := matchVarassign(text); m {
+			ml := NewMkLine(line)
+			ml.checkVaralign()
+			ml.checkVarassign()
 			substcontext.Varassign(line, varname, op, value)
 
 		} else if hasPrefix(text, "\t") {
@@ -450,7 +411,7 @@ func ChecklinesMk(lines []*Line) {
 				}
 
 			} else if directive == "if" || directive == "elif" {
-				checklineMkIf(line, args)
+				NewMkLine(line).checkIf()
 
 			} else if directive == "ifdef" || directive == "ifndef" {
 				if matches(args, `\s`) {
@@ -497,7 +458,7 @@ func ChecklinesMk(lines []*Line) {
 						vucExtentWord,
 					}
 					for _, fvar := range extractUsedVariables(line, values) {
-						checklineMkVaruse(line, fvar, "", forLoopContext)
+						NewMkLine(line).checkVaruse(fvar, "", forLoopContext)
 					}
 				}
 

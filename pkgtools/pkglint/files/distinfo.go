@@ -115,7 +115,7 @@ func (ck *distinfoLinesChecker) checkUnrecordedPatches() {
 
 	for _, file := range files {
 		patch := file.Name()
-		if !ck.patches[patch] {
+		if file.Mode().IsRegular() && !ck.patches[patch] {
 			errorf(ck.distinfoFilename, noLines, "patch %q is not recorded. Run \"%s makepatchsum\".", ck.patchdir+"/"+patch, confMake)
 		}
 	}

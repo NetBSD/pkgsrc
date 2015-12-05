@@ -281,40 +281,16 @@ func checklineTrailingWhitespace(line *Line) {
 func checklineRcsid(line *Line, prefixRe, suggestedPrefix string) bool {
 	defer tracecall("checklineRcsid", prefixRe, suggestedPrefix)()
 
-	repartRcsid := "NetBSD"
-	if G.isWip {
-		repartRcsid = "(?:NetBSD|Id)"
-	}
-
-	if !matches(line.text, `^`+prefixRe+`\$`+repartRcsid+`(?::[^\$]+)?\$$`) {
+	if !matches(line.text, `^`+prefixRe+`\$NetBSD(?::[^\$]+)?\$$`) {
 		line.errorf("Expected %q.", suggestedPrefix+"$"+"NetBSD$")
 		line.explain(
 			"Several files in pkgsrc must contain the CVS Id, so that their current",
 			"version can be traced back later from a binary package. This is to",
-			"ensure reproducible builds, for example for finding bugs.",
-			"",
-			"Please insert the text from the above error message (without the quotes)",
-			"at this position in the file.")
+			"ensure reproducible builds, for example for finding bugs.")
+		line.insertBefore(suggestedPrefix + "$" + "NetBSD$")
 		return false
 	}
 	return true
-}
-
-func checklineMkAbsolutePathname(line *Line, text string) {
-	defer tracecall("checklineMkAbsolutePathname", text)()
-
-	// In the GNU coding standards, DESTDIR is defined as a (usually
-	// empty) prefix that can be used to install files to a different
-	// location from what they have been built for. Therefore
-	// everything following it is considered an absolute pathname.
-	//
-	// Another context where absolute pathnames usually appear is in
-	// assignments like "bindir=/bin".
-	if m, path := match1(text, `(?:^|\$[{(]DESTDIR[)}]|[\w_]+\s*=\s*)(/(?:[^"'\s]|"[^"*]"|'[^']*')*)`); m {
-		if matches(path, `^/\w`) {
-			checkwordAbsolutePathname(line, path)
-		}
-	}
 }
 
 func checklineRelativePath(line *Line, path string, mustExist bool) {

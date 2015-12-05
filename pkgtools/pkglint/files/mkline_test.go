@@ -7,29 +7,29 @@ import (
 func (s *Suite) TestChecklineMkVartype_SimpleType(c *check.C) {
 	s.UseCommandLine(c, "-Wtypes", "-Dunchecked")
 	G.globalData.InitVartypes()
-	line := NewLine("fname", "1", "dummy", nil)
+	ml := NewMkLine(NewLine("fname", "1", "COMMENT=\tA nice package", nil))
 
 	vartype1 := G.globalData.vartypes["COMMENT"]
 	c.Assert(vartype1, check.NotNil)
 	c.Check(vartype1.guessed, equals, guNotGuessed)
 
-	vartype := getVariableType(line, "COMMENT")
+	vartype := getVariableType(ml.line, "COMMENT")
 
 	c.Assert(vartype, check.NotNil)
 	c.Check(vartype.checker.name, equals, "Comment")
 	c.Check(vartype.guessed, equals, guNotGuessed)
 	c.Check(vartype.kindOfList, equals, lkNone)
 
-	checklineMkVartype(line, "COMMENT", "=", "A nice package", "")
+	ml.checkVartype("COMMENT", "=", "A nice package", "")
 
 	c.Check(s.Stdout(), equals, "WARN: fname:1: COMMENT should not begin with \"A\".\n")
 }
 
 func (s *Suite) TestChecklineMkVartype(c *check.C) {
-	line := NewLine("fname", "1", "dummy", nil)
 	G.globalData.InitVartypes()
+	ml := NewMkLine(NewLine("fname", "1", "DISTNAME=gcc-${GCC_VERSION}", nil))
 
-	checklineMkVartype(line, "DISTNAME", "=", "gcc-${GCC_VERSION}", "")
+	ml.checkVartype("DISTNAME", "=", "gcc-${GCC_VERSION}", "")
 }
 
 func (s *Suite) TestChecklineMkVaralign(c *check.C) {
@@ -44,7 +44,7 @@ func (s *Suite) TestChecklineMkVaralign(c *check.C) {
 		"VAR=\tvalue")     // Already aligned with tabs only, left unchanged.
 
 	for _, line := range lines {
-		ChecklineMkVaralign(line)
+		NewMkLine(line).checkVaralign()
 	}
 
 	c.Check(lines[0].changed, equals, true)
@@ -75,4 +75,13 @@ func (s *Suite) TestChecklineMkVaralign(c *check.C) {
 		"NOTE: file.mk:6: Alignment of variable values should be done with tabs, not spaces.\n"+
 		"NOTE: file.mk:6: Autofix: replacing \"VAR=    \\t\" with \"VAR=\\t\\t\".\n")
 	c.Check(tabLength("VAR=    \t"), equals, 16)
+}
+
+func (s *Suite) TestMkLine_CheckAbsolutePathname(c *check.C) {
+	ml := NewMkLine(NewLine("Makefile", "1", "# dummy", nil))
+
+	ml.checkAbsolutePathname("bindir=/bin")
+	ml.checkAbsolutePathname("bindir=/../lib")
+
+	c.Check(s.Output(), equals, "WARN: Makefile:1: Found absolute pathname: /bin\n")
 }
