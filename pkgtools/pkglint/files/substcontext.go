@@ -12,7 +12,7 @@ type SubstContext struct {
 	filterCmd string
 }
 
-func (self *SubstContext) Varassign(line *Line, varname, op, value string) {
+func (ctx *SubstContext) Varassign(line *Line, varname, op, value string) {
 	if !G.opts.WarnExtra {
 		return
 	}
@@ -22,54 +22,54 @@ func (self *SubstContext) Varassign(line *Line, varname, op, value string) {
 		if len(classes) > 1 {
 			line.warnf("Please add only one class at a time to SUBST_CLASSES.")
 		}
-		if self.id != "" {
+		if ctx.id != "" {
 			line.warnf("SUBST_CLASSES should only appear once in a SUBST block.")
 		}
-		self.id = classes[0]
+		ctx.id = classes[0]
 		return
 	}
 
 	m, varbase, varparam := match2(varname, `^(SUBST_(?:STAGE|MESSAGE|FILES|SED|VARS|FILTER_CMD))\.([\-\w_]+)$`)
 	if !m {
-		if self.id != "" {
+		if ctx.id != "" {
 			line.warnf("Foreign variable %q in SUBST block.", varname)
 		}
 		return
 	}
 
-	if self.id == "" {
+	if ctx.id == "" {
 		line.warnf("SUBST_CLASSES should come before the definition of %q.", varname)
-		self.id = varparam
+		ctx.id = varparam
 	}
 
-	if varparam != self.id {
-		if self.IsComplete() {
+	if varparam != ctx.id {
+		if ctx.IsComplete() {
 			// XXX: This code sometimes produces weird warnings. See
 			// meta-pkgs/xorg/Makefile.common 1.41 for an example.
-			self.Finish(line)
+			ctx.Finish(line)
 
 			// The following assignment prevents an additional warning,
 			// but from a technically viewpoint, it is incorrect.
-			self.id = varparam
+			ctx.id = varparam
 		} else {
-			line.warnf("Variable %q does not match SUBST class %q.", varname, self.id)
+			line.warnf("Variable %q does not match SUBST class %q.", varname, ctx.id)
 		}
 		return
 	}
 
 	switch varbase {
 	case "SUBST_STAGE":
-		self.dup(line, &self.stage, varname, value)
+		ctx.dup(line, &ctx.stage, varname, value)
 	case "SUBST_MESSAGE":
-		self.dup(line, &self.message, varname, value)
+		ctx.dup(line, &ctx.message, varname, value)
 	case "SUBST_FILES":
-		self.duplist(line, &self.files, varname, op, value)
+		ctx.duplist(line, &ctx.files, varname, op, value)
 	case "SUBST_SED":
-		self.duplist(line, &self.sed, varname, op, value)
+		ctx.duplist(line, &ctx.sed, varname, op, value)
 	case "SUBST_FILTER_CMD":
-		self.dup(line, &self.filterCmd, varname, value)
+		ctx.dup(line, &ctx.filterCmd, varname, value)
 	case "SUBST_VARS":
-		self.duplist(line, &self.vars, varname, op, value)
+		ctx.duplist(line, &ctx.vars, varname, op, value)
 	default:
 		line.warnf("Foreign variable %q in SUBST block.", varname)
 	}
@@ -82,27 +82,27 @@ func (ctx *SubstContext) IsComplete() bool {
 		(len(ctx.sed) != 0 || len(ctx.vars) != 0 || ctx.filterCmd != "")
 }
 
-func (self *SubstContext) Finish(line *Line) {
-	if self.id == "" || !G.opts.WarnExtra {
+func (ctx *SubstContext) Finish(line *Line) {
+	if ctx.id == "" || !G.opts.WarnExtra {
 		return
 	}
-	if self.stage == "" {
-		line.warnf("Incomplete SUBST block: %s missing.", self.varname("SUBST_STAGE"))
+	if ctx.stage == "" {
+		line.warnf("Incomplete SUBST block: %s missing.", ctx.varname("SUBST_STAGE"))
 	}
-	if len(self.files) == 0 {
-		line.warnf("Incomplete SUBST block: %s missing.", self.varname("SUBST_FILES"))
+	if len(ctx.files) == 0 {
+		line.warnf("Incomplete SUBST block: %s missing.", ctx.varname("SUBST_FILES"))
 	}
-	if len(self.sed) == 0 && len(self.vars) == 0 && self.filterCmd == "" {
+	if len(ctx.sed) == 0 && len(ctx.vars) == 0 && ctx.filterCmd == "" {
 		line.warnf("Incomplete SUBST block: %s, %s or %s missing.",
-			self.varname("SUBST_SED"), self.varname("SUBST_VARS"), self.varname("SUBST_FILTER_CMD"))
+			ctx.varname("SUBST_SED"), ctx.varname("SUBST_VARS"), ctx.varname("SUBST_FILTER_CMD"))
 	}
-	self.id = ""
-	self.stage = ""
-	self.message = ""
-	self.files = nil
-	self.sed = nil
-	self.vars = nil
-	self.filterCmd = ""
+	ctx.id = ""
+	ctx.stage = ""
+	ctx.message = ""
+	ctx.files = nil
+	ctx.sed = nil
+	ctx.vars = nil
+	ctx.filterCmd = ""
 }
 
 func (ctx *SubstContext) varname(varbase string) string {
