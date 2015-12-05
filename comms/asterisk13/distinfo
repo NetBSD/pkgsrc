@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2015/12/05 23:29:08 jnemeth Exp $
+$NetBSD: distinfo,v 1.2 2015/12/05 23:42:44 jnemeth Exp $
 
 SHA1 (asterisk-13.6.0/asterisk-13.6.0.tar.gz) = 320d3b83f6d4641db76c957738b21a7b8eec938b
 RMD160 (asterisk-13.6.0/asterisk-13.6.0.tar.gz) = c6cdb801c65f3539d16c6db1e10bd75e6807684e
