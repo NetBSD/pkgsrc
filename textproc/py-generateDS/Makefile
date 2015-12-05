@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/03/22 20:09:28 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2015/12/05 21:26:02 adam Exp $
 #
 
 DISTNAME=	generateDS-2.14a
@@ -17,7 +17,7 @@ LICENSE=	mit
 PY_PATCHPLIST=	yes
 PYDISTUTILSPKG=	yes
 # TODO: explain
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-xml
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-xml
 
 REPLACE_PYTHON=	generateDS.py libgenerateDS/gui/*.py libgenerateDS/*.py
 

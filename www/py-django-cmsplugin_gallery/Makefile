@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/05/09 07:37:24 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2015/12/05 21:26:05 adam Exp $
 
 DISTNAME=	cmsplugin_gallery-0.5.5
 PKGNAME=	${PYPKGPREFIX}-django-${DISTNAME}
@@ -15,8 +15,6 @@ DEPENDS+=	${PYPKGPREFIX}-django-easy-thumbnails-[0-9]*:../../www/py-django-easy-
 DEPENDS+=	${PYPKGPREFIX}-django-inline-ordering-[0-9]*:../../www/py-django-inline-ordering
 
 USE_LANGUAGES=		# none
-
-#PYTHON_VERSIONS_INCOMPATIBLE=   33 34 # py-django-appmedia via py-django-cms, py-django-easy-thumbnails
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

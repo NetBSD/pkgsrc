@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/05/09 07:37:15 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2015/12/05 21:25:53 adam Exp $
 
 DISTNAME=	dpkt-1.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 1.8
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 1.8
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

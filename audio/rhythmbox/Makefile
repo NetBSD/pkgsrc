@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.127 2015/10/10 01:58:00 ryoon Exp $
+# $NetBSD: Makefile,v 1.128 2015/12/05 21:25:29 adam Exp $
 
 DISTNAME=	rhythmbox-0.12.8
 PKGREVISION=	43
@@ -23,7 +23,7 @@ CONFIGURE_ARGS+=	--disable-fm-radio
 
 GCONF_SCHEMAS=		rhythmbox.schemas
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-gtk2, py-gstreamer0.10
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-gtk2, py-gstreamer0.10
 
 .include "../../lang/python/application.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/11/06 13:50:05 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2015/12/05 21:25:47 adam Exp $
 
 PKGNAME=		${DISTNAME:S/clang/clang-static-analyzer/}
 
@@ -16,7 +16,7 @@ REPLACE_PERL+=	tools/clang/tools/scan-build/ccc-analyzer
 REPLACE_PERL+=	tools/clang/tools/scan-build/scan-build
 
 REPLACE_PYTHON+=		tools/clang/tools/scan-view/scan-view
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 3.5
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 3.5
 .include "../../lang/python/application.mk"
 
 do-build:

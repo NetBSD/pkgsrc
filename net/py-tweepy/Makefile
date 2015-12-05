@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/06/13 20:11:17 riz Exp $
+# $NetBSD: Makefile,v 1.2 2015/12/05 21:25:54 adam Exp $
 
 DISTNAME=	tweepy-2.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.tweepy.org/
 COMMENT=	A basic Python API for Twitter
 LICENSE=	mit
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2014/05/09 07:37:17 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2015/12/05 21:25:57 adam Exp $
 
 DISTNAME=	SSLCrypto-0.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Python bindings for openssl
 
 DEPENDS+=	${PYPKGPREFIX}-pyrex>=0.9.4.1:../../lang/py-pyrex
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-pyrex
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-pyrex
 
 .include "../../lang/python/distutils.mk"
 .include "../../security/openssl/buildlink3.mk"

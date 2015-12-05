@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/05/09 07:37:03 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2015/12/05 21:25:41 adam Exp $
 
 DISTNAME=	${VERS}
 PKGNAME=	transifex-client-${VERS}
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 VERS=		0.10
 WRKSRC=		${WRKDIR}/transifex-client-${VERS}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.10
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 0.10
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

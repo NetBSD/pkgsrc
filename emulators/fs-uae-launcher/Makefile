@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/11/07 20:15:21 adam Exp $
+# $NetBSD: Makefile,v 1.4 2015/12/05 21:26:09 adam Exp $
 
 DISTNAME=	fs-uae-launcher-2.6.2
 CATEGORIES=	emulators
@@ -23,7 +23,7 @@ INSTALL_TARGET=		install-data
 USE_TOOLS+=		gmake msgfmt
 
 # Imports urllib.parse which is 3+.
-PYTHON_VERSIONS_ACCEPTED=	34 33
+PYTHON_VERSIONS_ACCEPTED=	33 34 35
 PYTHON_VERSIONS_INCOMPATIBLE=	26 27
 PYDISTUTILSPKG=		yes
 PYSETUPINSTALLARGS=	--install-lib=${PREFIX:Q}/share/fs-uae-launcher

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/05/09 07:37:25 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2015/12/05 21:26:06 adam Exp $
 
 DISTNAME=	jonpy-0.06
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	http://jonpy.sourceforge.net/
 COMMENT=	Tools for FastCGI/CGI Python programs
 LICENSE=	mit
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.06
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 0.06
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
