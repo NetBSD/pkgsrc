@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2015/04/25 14:23:17 tnn Exp $
+# $NetBSD: Makefile,v 1.48 2015/12/05 21:25:45 adam Exp $
 
 DISTNAME=		py2cairo-1.10.0
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/py2//}
@@ -20,7 +20,7 @@ CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 
 PKGCONFIG_OVERRIDE+=	pycairo.pc.in
 PY_PATCHPLIST=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35
 
 post-extract:
 	cd ${WRKSRC} && touch ChangeLog && aclocal && automake -a

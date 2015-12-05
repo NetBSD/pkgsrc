@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/06/06 08:13:50 pettai Exp $
+# $NetBSD: Makefile,v 1.3 2015/12/05 21:25:36 adam Exp $
 
 DISTNAME=	distorm3-3.3.0
 PKGNAME=	${PYPKGPREFIX}-distorm3-3.3.0
@@ -12,7 +12,7 @@ COMMENT=	Powerful Disassembler Library For x86/AMD64
 LICENSE=	gnu-gpl-v3
 
 PYDISTUTILSPKG= yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35
 
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"

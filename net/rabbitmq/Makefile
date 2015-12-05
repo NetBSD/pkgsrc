@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2015/11/20 12:26:21 fhajny Exp $
+# $NetBSD: Makefile,v 1.22 2015/12/05 21:25:55 adam Exp $
 
 PKGNAME=		rabbitmq-${RMQ_VERSION}
 DISTNAME=		rabbitmq-server-${RMQ_VERSION}
@@ -20,7 +20,7 @@ BUILD_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 BUILD_DEPENDS+=		xmlto-[0-9]*:../../textproc/xmlto
 DEPENDS+=		${PYPKGPREFIX}-simplejson>=2:../../converters/py-simplejson
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 3.2.2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 3.2.2
 
 .include "version.mk"
 .include "../../lang/python/pyversion.mk"

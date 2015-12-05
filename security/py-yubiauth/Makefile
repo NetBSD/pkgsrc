@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/11/17 19:05:39 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2015/12/05 21:25:58 adam Exp $
 
 DISTNAME=	yubiauth-0.3.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -16,7 +16,7 @@ PYSETUP=	setup.py
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.3.9
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 0.3.9
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
