@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.140 2015/11/06 17:35:26 adam Exp $
+# $NetBSD: Makefile,v 1.141 2015/12/05 21:25:55 adam Exp $
 
 DISTNAME=	wireshark-1.12.8
 CATEGORIES=	net
@@ -32,7 +32,7 @@ CONFIGURE_ENV+=		ac_cv_path_LEXDUMMY=${TOOLS_PATH.lex}
 PTHREAD_OPTS+=		require
 
 PYTHON_FOR_BUILD_ONLY=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 1.10.5
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 1.10.5
 REPLACE_PYTHON+=	help/faq.py
 REPLACE_PYTHON+=	tools/asn2deb
 REPLACE_PYTHON+=	tools/asn2wrs.py

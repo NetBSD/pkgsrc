@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/04/08 18:48:54 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2015/12/05 21:26:09 adam Exp $
 
 DISTNAME=	zanata-python-client-1.3.21
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-httplib2-[0-9]*:../../www/py-httplib2
 DEPENDS+=	${PYPKGPREFIX}-polib-[0-9]*:../../devel/py-polib
 
 # TypeError: can't concat bytes to str
-PYTHON_VERSIONS_INCOMPATIBLE=	34 33
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35
 USE_LANGUAGES=	# none
 
 SUBST_CLASSES+=			version

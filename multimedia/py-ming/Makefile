@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2014/09/28 03:00:45 obache Exp $
+# $NetBSD: Makefile,v 1.26 2015/12/05 21:25:51 adam Exp $
 
 .include "../../multimedia/ming/Makefile.common"
 
@@ -15,7 +15,7 @@ PY_PATCHPLIST=		yes
 PYSETUPSUBDIR=		py_ext
 EGG_NAME=		${DISTNAME:S/ming/mingc/}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35
 
 SUBST_CLASSES+=		giflib
 SUBST_STAGE.giflib=	pre-configure

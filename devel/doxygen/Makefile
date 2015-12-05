@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.121 2015/06/12 10:48:48 wiz Exp $
+# $NetBSD: Makefile,v 1.122 2015/12/05 21:25:34 adam Exp $
 
 DISTNAME=	doxygen-1.8.9.1.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -31,7 +31,7 @@ MAKE_FLAGS+=		MAN1DIR=${PKGMANDIR}/man1
 
 REPLACE_PERL=		tmake/bin/tmake
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 1.8.6
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 1.8.6
 
 # Case Insensitive or Case Sensitive File System
 PLIST_VARS+=		ci cs

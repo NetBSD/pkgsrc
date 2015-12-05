@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/05/09 07:37:21 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2015/12/05 21:26:02 adam Exp $
 
 DISTNAME=	PyX-0.12.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Py//}
@@ -21,7 +21,7 @@ CONF_FILES=	${PYSITELIB}/pyx/data/pyxrc \
 		${PKG_SYSCONFDIR}/pyxrc
 
 PYTHON_SELF_CONFLICT=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=33 34
+PYTHON_VERSIONS_INCOMPATIBLE=33 34 35
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

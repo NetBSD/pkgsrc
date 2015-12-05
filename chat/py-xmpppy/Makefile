@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2015/11/08 22:02:57 schnoebe Exp $
+# $NetBSD: Makefile,v 1.10 2015/12/05 21:25:30 adam Exp $
 
 DISTNAME=	xmpppy-0.5.0rc1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,7 +17,7 @@ USE_LANGUAGES=	# none
 
 PYDISTUTILSPKG=		yes
 PYTHON_VERSIONED_DEPENDENCIES=	dns
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.5.0rc1
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 0.5.0rc1
 
 DOCDIR=		${PREFIX}/share/doc/py-xmpppy
 EXDIR=		${PREFIX}/share/examples/py-xmpppy

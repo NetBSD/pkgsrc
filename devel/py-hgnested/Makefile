@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/09/11 13:49:06 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2015/12/05 21:25:37 adam Exp $
 
 DISTNAME=	hgnested-0.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,7 @@ USE_LANGUAGES=	# none
 
 DEPENDS+=	${PYPKGPREFIX}-mercurial>=1.6:../../devel/py-mercurial
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34	# XXX: devel/py-mercurial
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35	# XXX: devel/py-mercurial
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

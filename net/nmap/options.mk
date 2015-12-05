@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.13 2015/11/20 15:37:40 adam Exp $
+# $NetBSD: options.mk,v 1.14 2015/12/05 21:25:52 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nmap
 
@@ -37,7 +37,7 @@ PY_PATCHPLIST=		yes
 REPLACE_PYTHON+=	zenmap/zenmapCore/*.py
 REPLACE_PYTHON+=	zenmap/zenmapGUI/*.py
 REPLACE_PYTHON+=	zenmap/zenmapGUI/higwidgets/*.py
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-xml, py-sqlite2, py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-xml, py-sqlite2, py-gtk2
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"

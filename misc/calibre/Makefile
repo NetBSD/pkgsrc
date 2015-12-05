@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.123 2015/11/27 13:52:50 wiz Exp $
+# $NetBSD: Makefile,v 1.124 2015/12/05 21:25:50 adam Exp $
 
 DISTNAME=	calibre-2.45.0
 CATEGORIES=	misc
@@ -40,7 +40,7 @@ USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config pax
 PYTHON_VERSIONS_ACCEPTED=	27
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not ported as of 2.1.0; also: py-mechanize, py-beautifulsoup, py-imaging, py-netifaces
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not ported as of 2.1.0; also: py-mechanize, py-beautifulsoup, py-imaging, py-netifaces
 PYDISTUTILSPKG=	yes
 PYSETUPOPTARGS=	# empty
 PYSETUPINSTALLARGS=	--prefix=${PREFIX} --root=${DESTDIR:Q}${PREFIX}

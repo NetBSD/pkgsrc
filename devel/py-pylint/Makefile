@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/04/05 15:59:54 wen Exp $
+# $NetBSD: Makefile,v 1.6 2015/12/05 21:25:39 adam Exp $
 
 DISTNAME=	pylint-1.4.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
 DEPENDS+=	${PYPKGPREFIX}-astroid>=1.3.6:../../devel/py-astroid
 DEPENDS+=	${PYPKGPREFIX}-logilab-common>=0.53.0:../../devel/py-logilab-common
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-mxDateTime via py-logilab-common
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-mxDateTime via py-logilab-common
 
 USE_LANGUAGES=	# none
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2014/09/07 09:37:46 spz Exp $
+# $NetBSD: Makefile,v 1.51 2015/12/05 21:25:46 adam Exp $
 
 DISTNAME=	Imaging-1.1.7
 PKGNAME=	${PYPKGPREFIX}-imaging-1.1.7
@@ -22,7 +22,7 @@ SUBST_SED.fix-path+=	-e 's,FREETYPE_ROOT = None,FREETYPE_ROOT = libinclude("${BU
 
 INSTALLATION_DIRS=	${PYINC}/PIL
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 1.1.7, use Pillow instead
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 1.1.7, use Pillow instead
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/libImaging/ImPlatform.h ${DESTDIR}${PREFIX}/${PYINC}/PIL

@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.5 2014/11/11 03:36:00 mef Exp $
+# $NetBSD: mozilla-common.mk,v 1.6 2015/12/05 21:25:41 adam Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -53,7 +53,7 @@ CONFIG_SUB_OVERRIDE+=		${MOZILLA_DIR}nsprpub/build/autoconf/config.sub
 CONFIG_SUB_OVERRIDE+=		${MOZILLA_DIR}/js/ctypes/libffi/config.sub
 
 PYTHON_FOR_BUILD_ONLY=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-sqlite2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-sqlite2
 .include "../../lang/python/application.mk"
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
 

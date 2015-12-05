@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2015/01/27 05:05:30 dbj Exp $
+# $NetBSD: Makefile,v 1.21 2015/12/05 21:25:49 adam Exp $
 
 DISTNAME=	numarray-1.5.2
 PKGNAME=	${PYPKGPREFIX}-numarray-1.5.2
@@ -15,7 +15,7 @@ PLIST_VARS+=	blas
 PLIST.blas=	yes
 .endif
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 1.5.2; use py-numpy
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 1.5.2; use py-numpy
 
 do-test:
 	(cd ${WRKSRC}/Lib && ${PYTHONBIN} testall.py)

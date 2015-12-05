@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/11/19 07:46:57 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2015/12/05 21:25:33 adam Exp $
 
 DISTNAME=	bokken-1.8
 CATEGORIES=	devel
@@ -21,7 +21,7 @@ NO_BUILD=	yes
 REPLACE_PYTHON=	bokken.py lib/web/utils.py ui/xdot.py
 REPLACE_SH=	bokken
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-gtk2
 
 SUBST_CLASSES+=			bin-bokken
 SUBST_STAGE.bin-bokken=		post-patch

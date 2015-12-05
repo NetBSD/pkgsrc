@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/05/30 03:27:52 wen Exp $
+# $NetBSD: Makefile,v 1.2 2015/12/05 21:25:44 adam Exp $
 
 DISTNAME=	obspy-0.10.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -20,7 +20,7 @@ USE_TOOLS+=	bash:run
 
 REPLACE_BASH=	obspy/taup/tests/data/TauP_test_data/gendata.sh
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-suds
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-suds
 
 pre-configure:
 	${FIND} ${WRKSRC} -type f -exec ${CHMOD} -x {} \;

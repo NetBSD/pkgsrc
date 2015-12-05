@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2014/05/09 07:37:24 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2015/12/05 21:26:04 adam Exp $
 
 PKGNAME=			${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=			1
@@ -14,7 +14,7 @@ CFLAGS+=			-fPIC
 INSTALL_DIRS=			python
 
 PY_PATCHPLIST=			YES
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 0.10.5
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 0.10.5
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

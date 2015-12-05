@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2015/06/12 10:50:01 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2015/12/05 21:25:41 adam Exp $
 
 DISTNAME=		lyx-2.1.2.2
 PKGREVISION=		3
@@ -65,7 +65,7 @@ GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake perl:run pkg-config
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 1.6.10
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 1.6.10
 
 CXXFLAGS.Linux+=	-fpermissive
 

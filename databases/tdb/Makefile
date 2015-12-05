@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2015/11/21 09:42:18 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2015/12/05 21:25:33 adam Exp $
 
 DISTNAME=	tdb-1.3.8
 CATEGORIES=	databases
@@ -24,7 +24,7 @@ PKGCONFIG_OVERRIDE=	tdb.pc.in
 
 PYTHON_FOR_BUILD_ONLY=	yes
 REPLACE_PYTHON+= buildtools/bin/waf
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 1.2.12
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 1.2.12
 
 USE_GCC_RUNTIME=	yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2014/12/21 08:15:03 obache Exp $
+# $NetBSD: Makefile,v 1.16 2015/12/05 21:25:34 adam Exp $
 
 DISTNAME=	bzr-explorer-${VER}
 PKGREVISION=	2
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-qt4>=4.4:../../x11/py-qt4
 
 USE_TOOLS+=	msgfmt
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # qbzr
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # qbzr
 
 EGG_NAME=	${DISTNAME:S/bzr-//}
 

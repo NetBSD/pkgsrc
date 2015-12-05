@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2015/08/18 07:31:18 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2015/12/05 21:26:00 adam Exp $
 
 VERSION=	3.1.4
 DISTNAME=	xen-${VERSION}
@@ -15,7 +15,7 @@ COMMENT=	Userland Tools for Xen
 DEPENDS+=	${PYPKGPREFIX}-readline-[0-9]*:../../devel/py-readline
 DEPENDS+=	${PYPKGPREFIX}-curses>=0nb4:../../devel/py-curses
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-xml
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-xml
 
 MAKE_JOBS_SAFE=	no
 

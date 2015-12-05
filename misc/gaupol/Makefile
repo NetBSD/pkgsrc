@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2014/05/09 07:37:11 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2015/12/05 21:25:50 adam Exp $
 
 DISTNAME=	gaupol-0.19.2
 PKGREVISION=	2
@@ -19,7 +19,7 @@ USE_LANGUAGES=			# none
 USE_TOOLS+=			intltool msgfmt
 
 PYSETUPARGS=			--mandir=${PREFIX}/${PKGMANDIR}
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-gtk2
 
 .include "../../lang/python/distutils.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

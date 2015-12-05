@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2015/11/23 19:40:39 adam Exp $
+# $NetBSD: Makefile,v 1.43 2015/12/05 21:25:41 adam Exp $
 
 DISTNAME=	hatari-1.9.0
 CATEGORIES=	emulators
@@ -14,7 +14,7 @@ USE_CMAKE=		yes
 USE_LANGUAGES=		c
 CMAKE_ARGS+=		-DENABLE_OSX_BUNDLE:BOOL=0
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 1.7.0
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 1.7.0
 REPLACE_PYTHON+=	python-ui/config.py
 REPLACE_PYTHON+=	python-ui/debugui.py
 REPLACE_PYTHON+=	python-ui/dialogs.py

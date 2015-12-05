@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2014/05/09 07:36:54 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2015/12/05 21:25:29 adam Exp $
 
 DISTNAME=		pyvorbis-1.3
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -12,7 +12,7 @@ COMMENT=		Python bindings for Vorbis library
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-ogg, and itself not ported as of 1.3
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-ogg, and itself not ported as of 1.3
 
 HAS_CONFIGURE=		yes
 CONFIG_SHELL=		${PYTHONBIN}

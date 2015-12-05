@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2015/05/02 07:54:11 gson Exp $
+# $NetBSD: Makefile,v 1.38 2015/12/05 21:25:50 adam Exp $
 
 DISTNAME=	anita-1.38
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-pexpect>=2.1:../../devel/py-pexpect
 
 USE_LANGUAGES=	#none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 1.34
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 1.34
 
 .include "options.mk"
 .include "../../lang/python/distutils.mk"

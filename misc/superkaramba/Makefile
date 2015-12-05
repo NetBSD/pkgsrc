@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.31 2015/04/25 14:23:36 tnn Exp $
+# $NetBSD: Makefile,v 1.32 2015/12/05 21:25:51 adam Exp $
 
 DISTNAME=	superkaramba-${_KDE_VERSION}
 PKGREVISION=	2
 CATEGORIES=	misc
 COMMENT=	KDE desktop widgets
 
-PYTHON_VERSIONS_INCOMPATIBLE=  33 34 # not yet ported as of 4.11.3
+PYTHON_VERSIONS_INCOMPATIBLE=  33 34 35 # not yet ported as of 4.11.3
 
 .include "../../meta-pkgs/kde4/Makefile.kde4"
 

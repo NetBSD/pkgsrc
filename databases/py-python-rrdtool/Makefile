@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/04/25 14:20:31 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2015/12/05 21:25:33 adam Exp $
 
 DISTNAME=	python-rrdtool-1.4.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://github.com/pbanaszkiewicz/python-rrdtool
 COMMENT=	Python bindings for RRDTool, the graphing and logging utility
 LICENSE=	gnu-gpl-v2
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 1.4.7
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 1.4.7
 
 USE_TOOLS+=	pkg-config
 

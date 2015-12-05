@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2015/11/23 12:16:32 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2015/12/05 21:26:07 adam Exp $
 
 DISTNAME=	pygments.rb-0.6.3
 PKGREVISION=	2
@@ -20,7 +20,7 @@ SUBST_FILES.path=	lib/pygments/popen.rb
 SUBST_SED.path+=	-e 's|@PYTHON@|python${PYVERSSUFFIX}|'
 SUBST_MESSAGE.path=	Fixing Python's path.
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # as of 0.6.3
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # as of 0.6.3
 
 .include "../../lang/ruby/gem.mk"
 .include "../../lang/python/application.mk"
