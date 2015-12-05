@@ -21,8 +21,11 @@ func LoadNonemptyLines(fname string, joinContinuationLines bool) []*Line {
 
 func LoadExistingLines(fname string, foldBackslashLines bool) []*Line {
 	lines, err := readLines(fname, foldBackslashLines)
-	if lines == nil || err != nil {
+	if err != nil {
 		fatalf(fname, noLines, "Cannot be read.")
+	}
+	if lines == nil {
+		fatalf(fname, noLines, "Must not be empty.")
 	}
 	return lines
 }
