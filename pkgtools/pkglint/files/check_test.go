@@ -50,10 +50,6 @@ func (s *Suite) UseCommandLine(c *check.C, args ...string) {
 	}
 }
 
-func (s *Suite) DummyLine() *Line {
-	return NewLine("fname", "1", "dummy", nil)
-}
-
 func (s *Suite) CreateTmpFile(c *check.C, fname, content string) {
 	if s.tmpdir == "" {
 		s.tmpdir = filepath.ToSlash(c.MkDir())

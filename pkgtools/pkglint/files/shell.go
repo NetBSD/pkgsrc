@@ -15,7 +15,7 @@ func checklineMkShellcmdUse(line *Line, shellcmd string) {
 	NewMkShellLine(line).checkCommandUse(shellcmd)
 }
 func checklineMkShellcmd(line *Line, shellcmd string) {
-	checklineMkText(line, shellcmd)
+	NewMkLine(line).checkText(shellcmd)
 	NewMkShellLine(line).checklineMkShelltext(shellcmd)
 }
 
@@ -104,7 +104,7 @@ func (msline *MkShellLine) checklineMkShellword(shellword string, checkQuoting b
 
 	line := msline.line
 	if m, varname, mod := match2(shellword, `^\$\{(`+reVarnameDirect+`)(:[^{}]+)?\}$`); m {
-		checklineMkVaruse(line, varname, mod, shellwordVuc)
+		NewMkLine(line).checkVaruse(varname, mod, shellwordVuc)
 		return
 	}
 
@@ -223,7 +223,7 @@ outer:
 					vucstate = vucQuotBackt
 				}
 				vuc := &VarUseContext{vucTimeUnknown, shellcommandContextType, vucstate, vucExtentWordpart}
-				checklineMkVaruse(line, varname, mod, vuc)
+				NewMkLine(line).checkVaruse(varname, mod, vuc)
 			}
 
 		// The syntax of the variable modifiers can get quite
@@ -410,7 +410,7 @@ func (msline *MkShellLine) checklineMkShelltext(shelltext string) {
 		st.checkCommandStart()
 		st.checkConditionalCd()
 		if state != scstPaxS && state != scstSedE && state != scstCaseLabel {
-			checklineMkAbsolutePathname(line, shellword)
+			NewMkLine(line).checkAbsolutePathname(shellword)
 		}
 		st.checkAutoMkdirs()
 		st.checkInstallMulti()
