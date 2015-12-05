@@ -55,14 +55,14 @@ const (
 	VUC_EXT_WORDPART             // Example: echo LOCALBASE=${LOCALBASE}
 )
 
-func (self *VarUseContext) String() string {
+func (vuc *VarUseContext) String() string {
 	typename := "no-type"
-	if self.vartype != nil {
-		typename = self.vartype.String()
+	if vuc.vartype != nil {
+		typename = vuc.vartype.String()
 	}
 	return sprintf("(%s %s %s %s)",
-		[]string{"unknown", "load-time", "run-time"}[self.time],
+		[]string{"unknown", "load-time", "run-time"}[vuc.time],
 		typename,
-		[]string{"unknown", "plain", "dquot", "squot", "backt", "for"}[self.shellword],
-		[]string{"unknown", "word", "word-part"}[self.extent])
+		[]string{"unknown", "plain", "dquot", "squot", "backt", "for"}[vuc.shellword],
+		[]string{"unknown", "word", "word-part"}[vuc.extent])
 }
