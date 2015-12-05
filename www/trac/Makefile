@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2015/09/13 23:37:39 gdt Exp $
+# $NetBSD: Makefile,v 1.73 2015/12/05 21:26:07 adam Exp $
 
 DISTNAME=	Trac-1.0.9
 PKGNAME=	${DISTNAME:tl}
@@ -46,7 +46,7 @@ PYDISTUTILSPKG=	YES
 PY_PATCHPLIST=	YES
 REPLACE_PYTHON=	contrib/cgi-bin/trac.* contrib/*.py contrib/*-hook
 REPLACE_PYTHON+=	trac/tests/functional/*.py
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # not yet ported as of 1.0
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 1.0
 
 .include "../../lang/python/application.mk"
 
