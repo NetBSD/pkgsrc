@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2015/10/10 01:58:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.96 2015/12/05 21:26:08 adam Exp $
 
 DISTNAME=	gnome-python-desktop-2.32.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-python/2/}
@@ -20,7 +20,7 @@ USE_TOOLS+=	pkg-config gmake
 
 PKGCONFIG_OVERRIDE+=	gnome-python-desktop-2.0.pc.in
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-ORBit via py-gnome2, py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-ORBit via py-gnome2, py-gtk2
 PYTHON_VERSIONED_DEPENDENCIES=	cairo:link
 
 .include "../../lang/python/pyversion.mk"

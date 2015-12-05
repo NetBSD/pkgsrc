@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2015/12/04 09:13:33 sborrill Exp $
+# $NetBSD: Makefile,v 1.31 2015/12/05 21:25:59 adam Exp $
 
 DISTNAME=	salt-2015.8.1
 PKGREVISION=	1
@@ -23,7 +23,7 @@ DEPENDS+= ${PYPKGPREFIX}-tornado>=4.3:../../www/py-tornado
 
 BUILD_DEFS+=	VARBASE
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # py-m2crypto
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-m2crypto
 
 PYSETUPINSTALLARGS+=	--salt-root-dir=${PREFIX}
 PYSETUPINSTALLARGS+=	--salt-config-dir=${PKG_SYSCONFDIR}
