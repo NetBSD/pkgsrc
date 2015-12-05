@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2015/11/16 13:47:26 fhajny Exp $
+# $NetBSD: Makefile,v 1.33 2015/12/05 17:12:13 adam Exp $
 
 .include "dist.mk"
 
@@ -13,8 +13,8 @@ LICENSE=	python-software-foundation
 
 CONFLICTS+=	python-[0-9]*
 
-PLIST_AWK+=	-f ${PKGSRCDIR}/lang/python/plist-python.awk
-PLIST_AWK_ENV+=	PYTHON_SOABI="cpython-33"
+PLIST_AWK+=		-f ${PKGSRCDIR}/lang/python/plist-python.awk
+PLIST_AWK_ENV+=		PYVERS=33
 PRINT_PLIST_AWK+=	/^[^@]/ && /[^\/]+\.py[co]$$/ {
 PRINT_PLIST_AWK+=	gsub(/__pycache__\//, "")
 PRINT_PLIST_AWK+=	gsub(/\.cpython-33/, "")}

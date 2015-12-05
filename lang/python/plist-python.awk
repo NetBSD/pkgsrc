@@ -1,4 +1,4 @@
-# $NetBSD: plist-python.awk,v 1.1 2012/05/13 12:54:54 obache Exp $
+# $NetBSD: plist-python.awk,v 1.2 2015/12/05 17:12:13 adam Exp $
 #
 # Copyright (c) 2012 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -34,17 +34,18 @@
 ###
 ### Certain environment variables must be set prior to running this script:
 ###
-### PY_SOABI is the python SO ABI.
+###	PYVERS
 ###
 BEGIN {
-	PYTHON_SOABI = getenv_or_die("PYTHON_SOABI")
+	PYVERS = getenv_or_die("PYVERS")
 }
 
-###
-### For each python bytecode file entry, convert directory and file name
-### using cache sub directory and SOABI.
+### For each python bytecode file entry, convert directory and file name.
 ###
 /^[^@]/ && /[^\/]+\.py[co]$/ {
 	sub(/[^\/]+\.py[co]$/, "__pycache__/&")
-	sub(/\.py[co]$/, "." PYTHON_SOABI "&")
+	sub(/\.py[co]$/, ".cpython-" PYVERS "&")
+	if (PYVERS ~ /^3[5-9]$/ && $0 ~ /\.pyo$/) {
+		sub(/\.pyo$/, ".opt-1.pyc")
+	}
 }
