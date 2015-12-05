@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2015/12/05 23:29:05 jnemeth Exp $
+# $NetBSD: Makefile,v 1.2 2015/12/05 23:42:44 jnemeth Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked
