@@ -1,10 +1,10 @@
-$NetBSD: patch-devel-docs_app_Makefile.in,v 1.3 2013/11/06 20:32:45 adam Exp $
+$NetBSD: patch-devel-docs_app_Makefile.in,v 1.4 2015/12/05 21:31:13 adam Exp $
 
---- devel-docs/app/Makefile.in.orig	2012-04-27 17:59:56.000000000 +0000
+--- devel-docs/app/Makefile.in.orig	2015-11-20 20:42:15.000000000 +0000
 +++ devel-docs/app/Makefile.in
-@@ -511,10 +511,10 @@ GTKDOC_CFLAGS = \
- 	-UGTK_DISABLE_SINGLE_INCLUDES
+@@ -537,10 +537,10 @@ GTKDOC_CFLAGS = \
  
+ @OS_WIN32_FALSE@libm = -lm
  GTKDOC_LIBS = \
 -	-u $(SYMPREFIX)xcf_init		   				     \
 -	-u $(SYMPREFIX)internal_procs_init 				     \
