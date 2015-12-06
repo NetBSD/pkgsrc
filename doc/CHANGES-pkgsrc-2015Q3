@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q3,v 1.1.2.27 2015/12/04 19:05:34 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q3,v 1.1.2.28 2015/12/06 20:11:57 bsiegert Exp $
 
 Changes to the packages collection and infrastructure on the 2015Q3 branch:
 
@@ -134,4 +134,7 @@ devel/pcre: security fix
 
 Pullup ticket #4866 - requested by wiz
 graphics/png: security fix
+
+Pullup ticket #4868 - requested by wiz
+security/keepassx: security fix
 
