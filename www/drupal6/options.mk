@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2012/04/14 16:25:11 adam Exp $
+# $NetBSD: options.mk,v 1.8 2015/12/06 12:13:13 taca Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.drupal
 
@@ -20,6 +20,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-pgsql-[0-9]*:../../databases/php-pgsql
 ### Use MySQL for storing Drupal data
 ###
 DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=4.3.3:../../databases/php-mysql
+PHP_VERSIONS_ACCEPTED=	55 56
 .endif
 
 ###

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2015/04/25 14:23:43 tnn Exp $
+# $NetBSD: Makefile,v 1.28 2015/12/06 12:13:12 taca Exp $
 
 DISTNAME=	cacti-0.8.8c
 PKGREVISION=	1
@@ -18,6 +18,8 @@ DEPENDS+=		${PHP_PKG_PREFIX}-mysql-[0-9]*:../../databases/php-mysql
 DEPENDS+=		${PHP_PKG_PREFIX}-snmp-[0-9]*:../../net/php-snmp
 DEPENDS+=		${PHP_PKG_PREFIX}-sockets-[0-9]*:../../net/php-sockets
 DEPENDS+=		${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}-[0-9]*:../../www/ap-php
+
+PHP_VERSIONS_ACCEPTED=	55 56
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../lang/php/phpversion.mk"
