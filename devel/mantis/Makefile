@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2014/09/24 01:06:26 rodent Exp $
+# $NetBSD: Makefile,v 1.44 2015/12/06 12:13:12 taca Exp $
 
 DISTNAME=	mantisbt-1.2.17
 PKGNAME=	${DISTNAME:S/mantisbt/mantis/}
@@ -12,6 +12,8 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=4.0.6:../../www/ap-php
 DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=4.0.6:../../databases/php-mysql
+
+PHP_VERSIONS_ACCEPTED=	55 56
 
 NO_BUILD=	YES
 

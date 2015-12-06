@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2015/11/25 12:49:27 jperkin Exp $
+# $NetBSD: Makefile,v 1.23 2015/12/06 12:13:12 taca Exp $
 
 MODNAME=		mysql
 CATEGORIES+=		databases
@@ -8,6 +8,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 
 CONFLICTS=	php-mysql-[0-9]*
 
+PHP_VERSIONS_ACCEPTED=	55 56
 USE_PHP_EXT_PATCHES=	yes
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.php-mysql
