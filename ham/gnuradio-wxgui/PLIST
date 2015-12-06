@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2015/09/01 04:14:55 mef Exp $
+@comment $NetBSD: PLIST,v 1.12 2015/12/06 15:34:15 mef Exp $
 include/gnuradio/swig/wxgui_swig.i
 include/gnuradio/swig/wxgui_swig_doc.i
 include/gnuradio/wxgui/api.h
@@ -143,6 +143,7 @@ ${PYSITELIB}/grc_gnuradio/wxgui/panel.pyo
 ${PYSITELIB}/grc_gnuradio/wxgui/top_block_gui.py
 ${PYSITELIB}/grc_gnuradio/wxgui/top_block_gui.pyc
 ${PYSITELIB}/grc_gnuradio/wxgui/top_block_gui.pyo
+share/gnuradio/examples/gr-wxgui.conf
 share/gnuradio/grc/blocks/notebook.xml
 share/gnuradio/grc/blocks/variable_check_box.xml
 share/gnuradio/grc/blocks/variable_chooser.xml
