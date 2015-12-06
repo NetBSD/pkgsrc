@@ -1,16 +1,15 @@
-$NetBSD: distinfo,v 1.52 2015/11/03 22:50:42 agc Exp $
+$NetBSD: distinfo,v 1.53 2015/12/06 18:22:35 adam Exp $
 
-SHA1 (Python-2.7.10.tar.xz) = ee5a50c5562e7448f037d35fdedc18d95c748b9e
-RMD160 (Python-2.7.10.tar.xz) = eb003de9bb52fc2c6a2d2e3dcb816ba0c56751d0
-SHA512 (Python-2.7.10.tar.xz) = 67615a6defbcda062f15a09f9dd3b9441afd01a8cc3255e5bc45b925378a0ddc38d468b7701176f6cc153ec52a4f21671b433780d9bde343aa9b9c1b2ae29feb
-Size (Python-2.7.10.tar.xz) = 12250696 bytes
+SHA1 (Python-2.7.11.tar.xz) = c3b8bbe3f084c4d4ea13ffb03d75a5e22f9756ff
+RMD160 (Python-2.7.11.tar.xz) = 215c72b1d81e878a675984783ed8df041ee7539c
+SHA512 (Python-2.7.11.tar.xz) = 72166763a2fe6aab45ecf378f55a1efc7322d1742c4638bae84f4ed4b9fb4c01f2a0293733c64426ae2c70df24d95ff2b1e2a4f3c2715de00d8f320d4d939ea0
+Size (Python-2.7.11.tar.xz) = 12277476 bytes
 SHA1 (patch-Include_pyerrors.h) = 0d2cd52d18cc719b895fa32ed7e11c6cb15bae54
 SHA1 (patch-Include_pyport.h) = f3e4ddbc954425a65301465410911222ca471320
 SHA1 (patch-Lib_distutils_unixccompiler.py) = def4142633b8f6b75e905b5c57be1d5c19b42d33
 SHA1 (patch-Lib_multiprocessing_process.py) = 15699bd8ec822bf54a0631102e00e0a34f882803
 SHA1 (patch-Modules_getaddrinfo.c) = aa699d257f1bc98b9a3183a21324053e134409d1
 SHA1 (patch-Modules_getpath.c) = 9bb2c040895ad6bbe4d0b5807803723b5437d47b
-SHA1 (patch-Modules_mmapmodule.c) = 3f401b59883af3232b6c77a76a08e5feffa77044
 SHA1 (patch-Modules_posixmodule.c) = 5105d380cd49bf49b8adbd9aa5ffb245195728ed
 SHA1 (patch-Modules_socketmodule.c) = 16848d90947b3de1f921a0813fa5c317f76961d4
 SHA1 (patch-aa) = d9626c1648d7ff2a7da7352665bcb05f4ab0412a
@@ -22,7 +21,7 @@ SHA1 (patch-al) = 541936b79f281db06761f4fa6a65a04e852b02b4
 SHA1 (patch-am) = a7697dda83b151fdd30d460bdcf5ab3cc057c92b
 SHA1 (patch-an) = 9aad78714c4fe1a21cf66a6627d97d164ecea196
 SHA1 (patch-ao) = 5bcfad96f8e490351160f1a7c1f4ece7706a33fa
-SHA1 (patch-au) = dcfac01d19dd3fc1eaa3b59a440f5c393c373f9e
+SHA1 (patch-au) = 0ecdb937cbd58e3dbfa6fb94d1af5838619c77fd
 SHA1 (patch-av) = e6aef090b444b455fe351308d251e670329b7dc3
 SHA1 (patch-aw) = d07129531ec1427669092c504c12247206408c2d
 SHA1 (patch-ax) = 8a7a0e5cbfec279a05945dffafea1b1131a76f0e
