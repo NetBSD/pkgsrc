@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4871 2015/12/06 10:54:40 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4872 2015/12/06 11:11:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8114,3 +8114,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/p5-File-Find-Rule to 0.34 [wiz 2015-12-06]
 	Updated security/p5-IO-Socket-SSL to 2.021 [wiz 2015-12-06]
 	Updated archivers/p5-Archive-Zip to 1.55 [wiz 2015-12-06]
+	Updated audio/libopenmpt to 0.2.5787 [wiz 2015-12-06]
