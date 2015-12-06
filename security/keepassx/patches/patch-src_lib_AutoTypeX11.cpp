@@ -1,4 +1,6 @@
-$NetBSD: patch-src_lib_AutoTypeX11.cpp,v 1.1 2013/05/04 12:59:48 joerg Exp $
+$NetBSD: patch-src_lib_AutoTypeX11.cpp,v 1.2 2015/12/06 14:20:34 wiz Exp $
+
+Add a bunch of missing includes hidden by libstdc++ namespace pollution.
 
 --- src/lib/AutoTypeX11.cpp.orig	2013-05-04 00:34:27.000000000 +0000
 +++ src/lib/AutoTypeX11.cpp
