@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.54 2015/10/15 10:59:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.55 2015/12/06 11:31:13 wiz Exp $
 bin/curl
 bin/curl-config
 include/curl/curl.h
@@ -262,6 +262,9 @@ man/man3/CURLOPT_SSL_VERIFYHOST.3
 man/man3/CURLOPT_SSL_VERIFYPEER.3
 man/man3/CURLOPT_SSL_VERIFYSTATUS.3
 man/man3/CURLOPT_STDERR.3
+man/man3/CURLOPT_STREAM_DEPENDS.3
+man/man3/CURLOPT_STREAM_DEPENDS_E.3
+man/man3/CURLOPT_STREAM_WEIGHT.3
 man/man3/CURLOPT_TCP_KEEPALIVE.3
 man/man3/CURLOPT_TCP_KEEPIDLE.3
 man/man3/CURLOPT_TCP_KEEPINTVL.3
@@ -352,3 +355,4 @@ share/aclocal/libcurl.m4
 share/doc/curl/FAQ
 share/doc/curl/MANUAL
 share/doc/curl/TheArtOfHttpScripting
+share/zsh/site-functions/_curl
