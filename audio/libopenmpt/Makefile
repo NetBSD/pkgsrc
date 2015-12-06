@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2015/11/06 11:33:39 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2015/12/06 11:11:28 wiz Exp $
 
-DISTNAME=	libopenmpt-0.2.5705-beta15-autotools
+DISTNAME=	libopenmpt-0.2.5787-beta16-autotools
 PKGNAME=	${DISTNAME:C/-beta.*//}
 CATEGORIES=	audio
 MASTER_SITES=	http://lib.openmpt.org/files/libopenmpt/src/
@@ -18,7 +18,9 @@ USE_TOOLS=	gmake pkg-config
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-PKGCONFIG_OVERRIDE=		libmodplug/libmodplug.pc.in libopenmpt/libopenmpt.pc.in
+PKGCONFIG_OVERRIDE=	libmodplug/libmodplug.pc.in libopenmpt/libopenmpt.pc.in
+CONFIGURE_ARGS+=	--without-portaudio
+CONFIGURE_ARGS+=	--without-portaudiocpp
 
 .include "options.mk"
 
