@@ -1,4 +1,4 @@
-# $NetBSD: phpversion.mk,v 1.117 2015/12/05 05:50:33 taca Exp $
+# $NetBSD: phpversion.mk,v 1.118 2015/12/06 15:13:02 taca Exp $
 #
 # This file selects a PHP version, based on the user's preferences and
 # the installed packages. It does not add a dependency on the PHP
@@ -10,7 +10,7 @@
 #	The PHP version to choose when more than one is acceptable to
 #	the package.
 #
-#	Possible: 55 56
+#	Possible: 55 56 70
 #	Default: 55
 #
 # === Infrastructure variables ===
@@ -27,12 +27,12 @@
 # PHP_VERSIONS_ACCEPTED
 #	The PHP versions that are accepted by the package.
 #
-#	Possible: 55 56
+#	Possible: 55 56 70
 #	Default: 55 56
 #
 # PHP_CHECK_INSTALLED
 #	Check installed version of PHP.  Should be used by lang/php55,
-#	and lang/php56 only.
+#	lang/php56 and lang/php70 only.
 #
 #	Possible: Yes No
 #	Default: Yes
@@ -42,7 +42,7 @@
 # PKG_PHP_VERSION
 #	The selected PHP version.
 #
-#	Possible: 55 56
+#	Possible: 55 56 70
 #	Default: ${PHP_VERSION_DEFAULT}
 #
 # PHP_BASE_VERS
@@ -51,7 +51,7 @@
 # PKG_PHP_MAJOR_VERS
 #	The selected PHP's major version.
 #
-#	Possible: 5
+#	Possible: 5 7
 #	Default: 5
 #
 # PKG_PHP
@@ -66,7 +66,7 @@
 # PHP_PKG_PREFIX
 #	The prefix that is prepended to the package name.
 #
-#	Example: php55 php56
+#	Example: php55 php56 php70
 #
 # PHP_EXTENSION_DIR
 #	Relative path to ${PREFIX} for PHP's extensions.  It is derived from
@@ -83,10 +83,12 @@ PHPVERSION_MK=	defined
 # Define each PHP's version.
 PHP55_VERSION=	5.5.30
 PHP56_VERSION=	5.6.16
+PHP70_VERSION=	7.0.0
 
 # Define initial release of major version.
 PHP55_RELDATE=	20130620
 PHP56_RELDATE=	20140828
+PHP70_RELDATE=	20151203
 
 _VARGROUPS+=	php
 _USER_VARS.php=	PHP_VERSION_DEFAULT
@@ -97,7 +99,7 @@ _SYS_VARS.php=	PKG_PHP_VERSION PKG_PHP PHPPKGSRCDIR PHP_PKG_PREFIX \
 .include "../../mk/bsd.prefs.mk"
 
 PHP_VERSION_DEFAULT?=		55
-PHP_VERSIONS_ACCEPTED?=		55 56
+PHP_VERSIONS_ACCEPTED?=		55 56 70
 
 # transform the list into individual variables
 .for pv in ${PHP_VERSIONS_ACCEPTED}
@@ -155,8 +157,8 @@ MULTI+=	PHP_VERSION_REQD=${_PHP_VERSION}
 PKG_PHP_VERSION:=	${_PHP_VERSION:C/\.[0-9]//}
 PKG_PHP:=		PHP${_PHP_VERSION:C/([0-9])([0-9])/\1.\2/}
 
-# currently we have only PHP 5.x packages.
-PKG_PHP_MAJOR_VERS:=	5
+# Major version
+PKG_PHP_MAJOR_VERS:=	${_PHP_VERSION:C/^([0-9]).*/\1/}
 
 PHP_CHECK_INSTALLED?=	Yes
 
@@ -191,6 +193,12 @@ PHP_VERSION=		${PHP56_VERSION}
 PHP_INITIAL_TEENY=	3
 PHP_PKG_PREFIX=		php56
 PHP_EXTENSION_DIR=	lib/php/${PHP56_RELDATE}
+.elif ${_PHP_VERSION} == "70"
+PHPPKGSRCDIR=		../../lang/php70
+PHP_VERSION=		${PHP70_VERSION}
+PHP_INITIAL_TEENY=	0
+PHP_PKG_PREFIX=		php70
+PHP_EXTENSION_DIR=	lib/php/${PHP70_RELDATE}
 .else
 # force an error
 PKG_FAIL_REASON+=	"${PKG_PHP} is not a valid package"
