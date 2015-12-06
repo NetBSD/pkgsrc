@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2015/08/01 19:10:15 tonio Exp $
+# $NetBSD: options.mk,v 1.13 2015/12/06 22:36:46 tonio Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.weechat
 PKG_SUPPORTED_OPTIONS=	gnutls python lua wide-curses perl ruby
@@ -48,8 +48,8 @@ CMAKE_ARGS+=		-DENABLE_PERL:BOOL=OFF
 .include "../../lang/ruby/buildlink3.mk"
 CMAKE_ARGS+=		-DENABLE_RUBY:BOOL=ON
 PLIST.ruby=		yes
-BUILDLINK_INCDIRS.${RUBY_BASE}+=	${RUBY_INC}
-BUILDLINK_INCDIRS.${RUBY_BASE}+=	${RUBY_ARCHINC}
+#BUILDLINK_INCDIRS.${RUBY_BASE}+=	${RUBY_INC}
+#BUILDLINK_INCDIRS.${RUBY_BASE}+=	${RUBY_ARCHINC}
 .else
 CMAKE_ARGS+=		-DENABLE_RUBY:BOOL=OFF
 .endif
