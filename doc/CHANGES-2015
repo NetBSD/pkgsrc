@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4869 2015/12/06 10:49:48 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4870 2015/12/06 10:51:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8112,3 +8112,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/py-django-tagging to 0.4 [riz 2015-12-05]
 	Updated www/p5-libwww to 6.15 [wiz 2015-12-06]
 	Updated devel/p5-File-Find-Rule to 0.34 [wiz 2015-12-06]
+	Updated security/p5-IO-Socket-SSL to 2.021 [wiz 2015-12-06]
