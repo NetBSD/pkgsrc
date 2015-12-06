@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15163 2015/12/05 17:14:14 adam Exp $
+$NetBSD: TODO,v 1.15164 2015/12/06 11:03:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -561,6 +561,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o crossfire-client-gtk2-1.60.0
 	o csharp-mysql-6.9.6
 	o cue-20150720
+	o curl-7.46.0
 	o cvm-0.97
 	o cvs2p4-2.5.5 [schmonz]
 	o cvsgraph-1.7.0
@@ -578,6 +579,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o darktable-1.6.8
 	o dasher-4.11
 	o dateutils-0.3.3
+	o dbus-1.10.6
 	o dd_rescue-1.46
 	o dd_rhelp-0.3.0
 	o ddrescue-1.20
@@ -728,12 +730,13 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gcal-4
 	o gcc-5.1
 	o gcc48-4.8.5
+	o gcc5-5.3
 	o gcin-1.5.5
 	o gcombust-0.1.55
 	o gcompris-15.02
 	o gcpio-2.12
 	o gdal-lib-2.0.1
-	o gdb-7.10
+	o gdb-7.10.1
 	o gdeskcal-1.01
 	o gdl-3.16.0
 	o gdm-2.32.2 [GNOME 2.32]
@@ -767,7 +770,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gkrellm-snmp-1.0
 	o glade3-3.18.3
 	o glade3-3.8.5 [GNOME 2.34]
-	o gle-4.2.4
+	o gle-4.2.5 [wip]
 	o gliv-1.9.7
 	o glom-1.14.2 [GNOME 2.26]
 	o gmock-1.7.0
@@ -1004,7 +1007,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libcanberra-0.28 [drops support for GNOME2; don't update for now -- wiz]
 	o libchamplain08-0.12.10
 	o libdatrie-0.2.9
-	o libetonyek-0.1.4
+	o libetonyek-0.1.5
 	o libextractor-1.2 [requires shm_open()]
 	o libflash-0.4.13
 	o libfolks-0.10.1
@@ -1052,7 +1055,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libyubikey-1.13
 	o licq-1.3.8
 	o lincvs-2.1.4 [now called CrossVC]
-	o link-grammar-5.3.1
+	o link-grammar-5.3.2
 	o linpsk-1.2 [ld: cannot find -lqt-mt with qt4]
 	o liquidwar-6.0.0.11
 	o lit2epub-0.2.2
@@ -1465,6 +1468,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-django-registration-1.0
 	o py-djangorestframework-2.3.12
 	o py-doctor-15.0.0
+	o py-enum34-1.1.1
 	o py-flake8-2.4.1
 	o py-gmpy-1.17
 	o py-gnome-menus-3.8.0
@@ -1491,6 +1495,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-reportlab-3.0
 	o py-rope-0.9.4
 	o py-serpent-1.11
+	o py-setuptools-18.7.1
 	o py-simpletal-5.1
 	o py-smb-1.1.16
 	o py-spf-2.0.11
@@ -1780,7 +1785,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wpa_supplicant-2.4
 	o wwwoffle-2.9i
 	o wxRemind-101
-	o x264-devel-20151128
+	o x264-devel-20151205
 	o x2vnc-1.31
 	o xa65-2.3.7
 	o xenkernel46-4.6.0
