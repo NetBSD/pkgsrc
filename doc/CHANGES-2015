@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4880 2015/12/06 15:19:27 taca Exp $
+$NetBSD: CHANGES-2015,v 1.4881 2015/12/06 15:20:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8124,3 +8124,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/contao35 to 3.5.6nb1 [taca 2015-12-06]
 	Updated security/keepassx to 0.4.3nb9 [wiz 2015-12-06]
 	Added lang/php70 version 7.0.0 [taca 2015-12-06]
+	Added sysutils/findnewest version 0.3 [wiz 2015-12-06]
