@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/11/06 12:46:14 fhajny Exp $
+# $NetBSD: Makefile,v 1.7 2015/12/06 12:16:54 taca Exp $
 
 DISTNAME=	magento-1.9.2.2
 CATEGORIES=	www finance
@@ -27,6 +27,8 @@ DEPENDS+=	${PHP_PKG_PREFIX}-pdo_mysql-[0-9]*:../../databases/php-pdo_mysql
 DEPENDS+=	${PHP_PKG_PREFIX}-soap-[0-9]*:../../net/php-soap
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib-[0-9]*:../../archivers/php-zlib
 
+PHP_VERSIONS_ACCEPTED=	55 56
+
 WRKSRC=		${WRKDIR}/magento
 
 USE_LANGUAGES=	# none
@@ -49,26 +51,26 @@ PKG_GROUPS_VARS+=	MAGENTO_GRP
 PKG_GROUPS=		${MAGENTO_GRP}
 PKG_USERS=		${MAGENTO_OWN}:${MAGENTO_GRP}
 
-MODULEFILES=	Cm_RedisSession.xml Mage_All.xml Mage_Api.xml Mage_Api2.xml	\
-		Mage_Authorizenet.xml Mage_Bundle.xml Mage_Captcha.xml		\
-		Mage_Centinel.xml Mage_Compiler.xml Mage_Connect.xml		\
-		Mage_CurrencySymbol.xml Mage_Downloadable.xml			\
-		Mage_ImportExport.xml Mage_Oauth.xml Mage_PageCache.xml		\
-		Mage_Persistent.xml Mage_Weee.xml Mage_Widget.xml		\
+MODULEFILES=	Cm_RedisSession.xml Mage_All.xml Mage_Api.xml Mage_Api2.xml \
+		Mage_Authorizenet.xml Mage_Bundle.xml Mage_Captcha.xml \
+		Mage_Centinel.xml Mage_Compiler.xml Mage_Connect.xml \
+		Mage_CurrencySymbol.xml Mage_Downloadable.xml \
+		Mage_ImportExport.xml Mage_Oauth.xml Mage_PageCache.xml \
+		Mage_Persistent.xml Mage_Weee.xml Mage_Widget.xml \
 		Mage_XmlConnect.xml Phoenix_Moneybookers.xml
 
-CONF_FILES_PERMS+=	share/examples/magento/applied.patches.list		\
-			${PKG_SYSCONFDIR}/applied.patches.list			\
+CONF_FILES_PERMS+=	share/examples/magento/applied.patches.list \
+			${PKG_SYSCONFDIR}/applied.patches.list \
 			${MAGENTO_OWN} ${MAGENTO_GRP} 0640
-CONF_FILES_PERMS+=	share/examples/magento/local.xml.template		\
-			${PKG_SYSCONFDIR}/local.xml.template			\
+CONF_FILES_PERMS+=	share/examples/magento/local.xml.template \
+			${PKG_SYSCONFDIR}/local.xml.template \
 			${MAGENTO_OWN} ${MAGENTO_GRP} 0640
-CONF_FILES_PERMS+=	share/examples/magento/config.xml 			\
-			${PKG_SYSCONFDIR}/config.xml				\
+CONF_FILES_PERMS+=	share/examples/magento/config.xml \
+			${PKG_SYSCONFDIR}/config.xml \
 			${MAGENTO_OWN} ${MAGENTO_GRP} 0640
 .for file in ${MODULEFILES}
-CONF_FILES_PERMS+=	share/examples/magento/modules/${file}			\
-			${PKG_SYSCONFDIR}/modules/${file}			\
+CONF_FILES_PERMS+=	share/examples/magento/modules/${file} \
+			${PKG_SYSCONFDIR}/modules/${file} \
 			${MAGENTO_OWN} ${MAGENTO_GRP} 0640
 .endfor
 
