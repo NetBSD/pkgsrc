@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2015/11/18 14:19:54 ryoon Exp $
+# $NetBSD: Makefile,v 1.24 2015/12/06 12:13:12 taca Exp $
 
 PKGNAME=	${DISTNAME:S/ZoneMinder-/zoneminder-/}
 DISTNAME=	ZoneMinder-1.28.1
@@ -18,6 +18,8 @@ LICENSE=	gnu-gpl-v2
 EXTRACT_USING=  gtar
 
 DEPENDS+=	netpbm-[0-9]*:../../graphics/netpbm
+
+PHP_VERSIONS_ACCEPTED=	55 56
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.zoneminder
 PKG_SUPPORTED_OPTIONS=	apache

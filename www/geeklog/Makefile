@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2015/11/29 03:05:15 taca Exp $
+# $NetBSD: Makefile,v 1.44 2015/12/06 12:13:13 taca Exp $
 #
 
 DISTNAME=	geeklog-${VER}
@@ -14,6 +14,8 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=4.3.3:../../www/ap-php
 DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=4.3.0:../../databases/php-mysql
+
+PHP_VERSIONS_ACCEPTED=	55 56
 
 USE_TOOLS+=	pax
 
