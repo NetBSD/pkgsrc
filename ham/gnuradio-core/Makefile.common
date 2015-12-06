@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2015/12/05 21:25:46 adam Exp $
+# $NetBSD: Makefile.common,v 1.11 2015/12/06 15:34:15 mef Exp $
 # This Makefile fragment is included in the package Makefiles for
 # GNU Radio distributed packages (they all share common configure and build
 # settings).
@@ -58,7 +58,7 @@ PY_PATCHPLIST=	yes
 
 CONFIGURE_DIRS=	build
 
-EGDIR=			share/examples/gnuradio/conf.d
+EGDIR=			share/gnuradio/examples
 PKG_SYSCONFSUBDIR=	gnuradio/conf.d
 
 LDFLAGS.DragonFly+=	-lboost_system
