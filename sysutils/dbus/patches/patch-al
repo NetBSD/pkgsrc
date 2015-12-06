@@ -1,4 +1,6 @@
-$NetBSD: patch-al,v 1.4 2015/07/26 22:51:23 wiz Exp $
+$NetBSD: patch-al,v 1.5 2015/12/06 11:35:55 wiz Exp $
+
+Adapt path for pkgsrc.
 
 --- tools/Makefile.in.orig	2015-07-21 16:32:32.000000000 +0000
 +++ tools/Makefile.in
