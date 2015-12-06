@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2015/04/25 14:24:48 tnn Exp $
-#
+# $NetBSD: Makefile,v 1.30.4.1 2015/12/06 20:10:39 bsiegert Exp $
 
 DISTNAME=	keepassx-0.4.3
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=keepassx/}
 
@@ -24,7 +23,7 @@ do-configure:
 		${QMAKE} -unix -o Makefile ${CONFIGURE_ARGS} keepassx.pro
 
 pre-install:
-	${CP} ${WRKSRC}/bin/keepassx ${WRKSRC}/src
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/keepassx ${WRKSRC}/src
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"

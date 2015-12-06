@@ -1,4 +1,6 @@
-$NetBSD: patch-src_lib_random.cpp,v 1.3 2013/05/04 12:59:48 joerg Exp $
+$NetBSD: patch-src_lib_random.cpp,v 1.3.20.1 2015/12/06 20:10:39 bsiegert Exp $
+
+Add a bunch of missing includes hidden by libstdc++ namespace pollution.
 
 --- src/lib/random.cpp.orig	2013-05-04 00:33:31.000000000 +0000
 +++ src/lib/random.cpp
