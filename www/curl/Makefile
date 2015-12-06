@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.155 2015/10/15 10:59:52 wiz Exp $
+# $NetBSD: Makefile,v 1.156 2015/12/06 11:31:13 wiz Exp $
 
-DISTNAME=	curl-7.45.0
+DISTNAME=	curl-7.46.0
 CATEGORIES=	www
 MASTER_SITES=	http://curl.haxx.se/download/ \
 		ftp://ftp.sunet.se/pub/www/utilities/curl/
@@ -16,6 +16,8 @@ LICENSE=	mit
 BUILD_DEFS+=	IPV6_READY
 
 USE_TOOLS+=		nroff
+# https://github.com/bagder/curl/issues/555
+USE_TOOLS+=		gmake perl
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
