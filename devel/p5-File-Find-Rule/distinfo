@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 03:28:15 agc Exp $
+$NetBSD: distinfo,v 1.6 2015/12/06 10:49:36 wiz Exp $
 
-SHA1 (File-Find-Rule-0.33.tar.gz) = d9f846664f5bc092051645dbf9b77d0bbb9d3299
-RMD160 (File-Find-Rule-0.33.tar.gz) = b108cd2777874d65790a63dfd3eec4b213b25002
-SHA512 (File-Find-Rule-0.33.tar.gz) = 287537a39e4ceeef6388dcf27c6b10fd7aceae7ab55b27f6acd608687ae695f964703e5b2ea2efbb57f7e5a6b658d7637fef5e87695fe39ae3222f8c7808ff31
-Size (File-Find-Rule-0.33.tar.gz) = 15207 bytes
+SHA1 (File-Find-Rule-0.34.tar.gz) = 05fe46cc142279b0716d058a51f7214bd80d34ff
+RMD160 (File-Find-Rule-0.34.tar.gz) = 8ed78da83d4302146f81ba1bdbe326aa82463dce
+SHA512 (File-Find-Rule-0.34.tar.gz) = 97328a86578942d214f7ac530cc88fc84dc7ef2018db06b8c0c58907a4045e90c9c97d1848ed4f16838bd8ca591aca4fa9f24649c81fd8dfe9efe7a2f9f2722c
+Size (File-Find-Rule-0.34.tar.gz) = 16165 bytes
