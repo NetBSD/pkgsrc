@@ -1,0 +1,23 @@
+PHP is an HTML-embedded scripting language. It is modular, with
+some object-oriented features. Much of its syntax is borrowed from
+C, Java and Perl with a couple of unique PHP-specific features
+thrown in.  The language is designed to allow web developers to
+write dynamically generated pages quickly.
+
+This package provides PHP version 7.0.x.
+
+PHP 7.0.0 comes with a new version of the Zend Engine, numerous improvements
+and new features such as
+
+* Improved performance: PHP 7 is up to twice as fast as PHP 5.6
+* Significantly reduced memory usage
+* Abstract Syntax Tree
+* Consistent 64-bit support
+* Improved Exception hierarchy
+* Many fatal errors converted to Exceptions
+* Secure random number generator
+* Removed old and unsupported SAPIs and extensions
+* The null coalescing operator (??)
+* Return and Scalar Type Declarations
+* Anonymous Classes
+* Zero cost asserts

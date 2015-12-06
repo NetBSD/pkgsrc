@@ -1,0 +1,125 @@
+$NetBSD: patch-configure,v 1.1 2015/12/06 15:17:31 taca Exp $
+
+--- configure.orig	2015-12-01 13:36:27.000000000 +0000
++++ configure
+@@ -6862,27 +6862,6 @@ EOF
+     ;;
+   esac
+ 
+-  if test "$APACHE_VERSION" -lt 2004001; then
+-    APXS_MPM=`$APXS -q MPM_NAME`
+-    if test "$APXS_MPM" != "prefork" && test "$APXS_MPM" != "peruser" && test "$APXS_MPM" != "itk"; then
+-
+-  enable_maintainer_zts=yes
+-  if test "$pthreads_working" != "yes"; then
+-    as_fn_error $? "ZTS currently requires working POSIX threads. We were unable to verify that your system supports Pthreads." "$LINENO" 5
+-  fi
+-
+-    fi
+-  else
+-    APACHE_THREADED_MPM=`$APXS_HTTPD -V | grep 'threaded:.*yes'`
+-    if test -n "$APACHE_THREADED_MPM"; then
+-
+-  enable_maintainer_zts=yes
+-  if test "$pthreads_working" != "yes"; then
+-    as_fn_error $? "ZTS currently requires working POSIX threads. We were unable to verify that your system supports Pthreads." "$LINENO" 5
+-  fi
+-
+-    fi
+-  fi
+   { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+ $as_echo "yes" >&6; }
+ 
+@@ -9468,7 +9447,7 @@ $as_echo "$ext_output" >&6; }
+ 
+ 
+ 
+-if test "$BUILD_PHPDBG" == "" && test "$PHP_PHPDBG" != "no"; then
++if test "$BUILD_PHPDBG" = "" && test "$PHP_PHPDBG" != "no"; then
+   { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether termios.h defines TIOCGWINSZ" >&5
+ $as_echo_n "checking whether termios.h defines TIOCGWINSZ... " >&6; }
+ if ${ac_cv_sys_tiocgwinsz_in_termios_h+:} false; then :
+@@ -18211,7 +18190,7 @@ fi
+     if test "$found_openssl" = "no"; then
+ 
+     if test "$PHP_OPENSSL_DIR" = "yes"; then
+-      PHP_OPENSSL_DIR="/usr/local/ssl /usr/local /usr /usr/local/openssl"
++      PHP_OPENSSL_DIR="/usr/local/ssl /usr/local /usr /usr/local/openssl /"
+     fi
+ 
+     for i in $PHP_OPENSSL_DIR; do
+@@ -20373,7 +20352,7 @@ $as_echo "yes" >&6; }
+     PHP_SQLITE3_CFLAGS="-I@ext_srcdir@/libsqlite $other_flags $threadsafe_flags $debug_flags"
+ 
+ 
+-    for header_file in ext/sqlite3/libsqlite/sqlite3.h; do
++    for header_file; do
+ 
+ 
+   unique=`echo $header_file|$SED 's/[^a-zA-Z0-9]/_/g'`
+@@ -31526,7 +31505,7 @@ fi
+     if test "$found_openssl" = "no"; then
+ 
+     if test "$PHP_OPENSSL_DIR" = "yes"; then
+-      PHP_OPENSSL_DIR="/usr/local/ssl /usr/local /usr /usr/local/openssl"
++      PHP_OPENSSL_DIR="/usr/local/ssl /usr/local /usr /usr/local/openssl /"
+     fi
+ 
+     for i in $PHP_OPENSSL_DIR; do
+@@ -42409,7 +42388,7 @@ fi
+     if test "$found_openssl" = "no"; then
+ 
+     if test "$PHP_OPENSSL_DIR" = "yes"; then
+-      PHP_OPENSSL_DIR="/usr/local/ssl /usr/local /usr /usr/local/openssl"
++      PHP_OPENSSL_DIR="/usr/local/ssl /usr/local /usr /usr/local/openssl /"
+     fi
+ 
+     for i in $PHP_OPENSSL_DIR; do
+@@ -57215,13 +57194,13 @@ $as_echo "$ext_output" >&6; }
+ 
+ if test "$PHP_OPCACHE" != "no"; then
+ 
+-  if test "$PHP_OPCACHE_FILE" == "yes"; then
++  if test "$PHP_OPCACHE_FILE" = "yes"; then
+ 
+ $as_echo "#define HAVE_OPCACHE_FILE_CACHE 1" >>confdefs.h
+ 
+   fi
+ 
+-  if test "$PHP_HUGE_CODE_PAGES" == "yes"; then
++  if test "$PHP_HUGE_CODE_PAGES" = "yes"; then
+ 
+ $as_echo "#define HAVE_HUGE_CODE_PAGES 1" >>confdefs.h
+ 
+@@ -57721,7 +57700,7 @@ rm -f core *.core core.conftest.* gmon.o
+ fi
+ 
+ 
+-if test "$flock_type" == "unknown"; then
++if test "$flock_type" = "unknown"; then
+ 	as_fn_error $? "Don't know how to define struct flock on this system, set --enable-opcache=no" "$LINENO" 5
+ fi
+ 
+@@ -92550,7 +92529,7 @@ fi
+     if test "$found_openssl" = "no"; then
+ 
+     if test "$PHP_OPENSSL_DIR" = "yes"; then
+-      PHP_OPENSSL_DIR="/usr/local/ssl /usr/local /usr /usr/local/openssl"
++      PHP_OPENSSL_DIR="/usr/local/ssl /usr/local /usr /usr/local/openssl /"
+     fi
+ 
+     for i in $PHP_OPENSSL_DIR; do
+@@ -95978,12 +95957,7 @@ old_CC=$CC
+ if test "$PHP_THREAD_SAFETY" = "yes" && test -n "$ac_cv_pthreads_cflags"; then
+   CXXFLAGS="$CXXFLAGS $ac_cv_pthreads_cflags"
+   INLINE_CFLAGS="$INLINE_CFLAGS $ac_cv_pthreads_cflags"
+-  cat >meta_ccld<<EOF
+-#! /bin/sh
+-exec $CC $ac_cv_pthreads_cflags \$@
+-EOF
+-  CC="$abs_builddir/meta_ccld"
+-  chmod +x meta_ccld
++  CPPFLAGS="$CPPFLAGS $ac_cv_pthreads_cflags"
+ fi
+ 
+ if test "$PHP_THREAD_SAFETY" = "yes" && test "$PHP_MYSQL" = "yes"; then
