@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.650 2015/11/04 14:07:27 fhajny Exp $
+# $NetBSD: Makefile,v 1.651 2015/12/06 15:20:31 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -145,6 +145,7 @@ SUBDIR+=	fdupes
 SUBDIR+=	file
 SUBDIR+=	filelight
 SUBDIR+=	filelight-kde3
+SUBDIR+=	findnewest
 SUBDIR+=	findutils
 SUBDIR+=	fix4SA110rev2
 SUBDIR+=	fixelfprot
