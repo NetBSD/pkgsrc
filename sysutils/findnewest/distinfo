@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/12/06 15:20:12 wiz Exp $
+
+SHA1 (findnewest-0.3.tar.gz) = 8cb075cb21c0b4c4d5b95968ead759bdaf611dc1
+RMD160 (findnewest-0.3.tar.gz) = 0ccbf757f41d43ec9b36609be1da6ad2ef258385
+SHA512 (findnewest-0.3.tar.gz) = e8cb2afcd8ba549f35d9e9b490f8fb4cc6b851c0376547ebcb8fd8b246fd7bc88b0fc1febde430a6f6a6091badfb91165c32fc390e9fc1571f0ec578f6d84c50
+Size (findnewest-0.3.tar.gz) = 73777 bytes

@@ -1,0 +1,3 @@
+findnewest recursively scans the directories given on the command
+line and prints the UNIX timestamp (seconds since UNIX epoch) of
+the newest file found.
