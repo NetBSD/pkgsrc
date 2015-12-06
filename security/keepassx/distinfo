@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.7 2015/11/04 01:17:47 agc Exp $
+$NetBSD: distinfo,v 1.8 2015/12/06 14:20:34 wiz Exp $
 
 SHA1 (keepassx-0.4.3.tar.gz) = d25ecc9d3caaa5a6d0f39a42c730a95997f37e2e
 RMD160 (keepassx-0.4.3.tar.gz) = 3e963d82dd6b8bc32e32dbb46efa9168bac1088b
 SHA512 (keepassx-0.4.3.tar.gz) = 8ce1bc252694e11a8b0da94bb00a4e5ca2837fe099f2f992aa9a93bacc4d94f33970cec687bd73a7a7762e86220a0541fe85a6708a2d4ad1bb3aef5f19935ccc
 Size (keepassx-0.4.3.tar.gz) = 1368766 bytes
 SHA1 (patch-src_crypto_aes__endian.h) = 3a88c3ebf2ccaa2229aa7e0600b4f0e976b21772
-SHA1 (patch-src_lib_AutoTypeX11.cpp) = 00c112837d50cf01fc4fc7f76865e5407c90e901
-SHA1 (patch-src_lib_random.cpp) = 01cc7569a75bc3af8326f0903881c16d96d51551
+SHA1 (patch-src_lib_AutoTypeX11.cpp) = 3bd8421804ec549ba4a7a42907516534d7bbf6f3
+SHA1 (patch-src_lib_FileDialogs.cpp) = ab5d6caf0eea7d66b3b614fba3e92e6c48227cc3
+SHA1 (patch-src_lib_random.cpp) = dd50e9cb5a95f5db780aab727dfd4b0dcceac9ef
