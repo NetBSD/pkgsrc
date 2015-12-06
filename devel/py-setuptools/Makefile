@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.83 2015/12/04 21:52:58 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2015/12/06 11:47:23 wiz Exp $
 
-EGG_VERSION=		18.7
-DISTNAME=		setuptools-${EGG_VERSION}
-PKGNAME=		${PYPKGPREFIX}-setuptools-${EGG_VERSION}
+DISTNAME=		setuptools-18.7.1
+PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		devel python
 MASTER_SITES=		${MASTER_SITE_PYPI:=s/setuptools/}
 
@@ -12,6 +11,7 @@ COMMENT=		New Python packaging system
 LICENSE=		python-software-foundation OR zpl-2.0
 
 DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+# not sure if this would introduce a dependency cycle
 #BUILD_DEPENDS+=		${PYPKGPREFIX}-test-runner-[0-9]*:../../devel/py-test-runner
 
 PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
