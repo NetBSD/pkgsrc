@@ -1,0 +1,15 @@
+$NetBSD: patch-cmake_FindRuby_cmake.patch,v 1.1 2015/12/06 22:36:46 tonio Exp $
+
+Support ruby 200 from pkgsrc
+
+--- cmake/FindRuby.cmake.orig	2015-08-16 06:27:07.000000000 +0000
++++ cmake/FindRuby.cmake
+@@ -33,7 +33,7 @@ endif()
+ 
+ find_package(PkgConfig)
+ if(PKG_CONFIG_FOUND)
+-  pkg_search_module(RUBY ruby-2.2 ruby-2.1 ruby-2.0 ruby-1.9 ruby-1.8)
++  pkg_search_module(RUBY ruby-2.2 ruby-2.1 ruby-2.0.0 ruby-2.0 ruby-1.9 ruby-1.8)
+ endif()
+ 
+ if(RUBY_FOUND)
