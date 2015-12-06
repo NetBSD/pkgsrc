@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2013/01/03 13:59:44 ryoon Exp $
+# $NetBSD: options.mk,v 1.2 2015/12/06 12:13:13 taca Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.php-tt-rss
 
@@ -14,6 +14,7 @@ PKG_SUGGESTED_OPTIONS=	pgsql
 ###
 .if !empty(PKG_OPTIONS:Mmysql)
 DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=5.2.0:../../databases/php-mysql
+PHP_VERSIONS_ACCEPTED=	55 56
 .elif !empty(PKG_OPTIONS:Mpgsql)
 DEPENDS+=	${PHP_PKG_PREFIX}-pgsql>=5.2.0:../../databases/php-pgsql
 .endif
