@@ -1,4 +1,6 @@
-$NetBSD: patch-ak,v 1.4 2015/08/30 15:08:00 wiz Exp $
+$NetBSD: patch-ak,v 1.5 2015/12/06 11:35:55 wiz Exp $
+
+Adapt path for pkgsrc.
 
 --- dbus/Makefile.in.orig	2015-08-25 15:52:09.000000000 +0000
 +++ dbus/Makefile.in

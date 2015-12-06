@@ -1,4 +1,6 @@
-$NetBSD: patch-tools_dbus-print-message.c,v 1.1 2015/10/08 14:32:08 joerg Exp $
+$NetBSD: patch-tools_dbus-print-message.c,v 1.2 2015/12/06 11:35:55 wiz Exp $
+
+Fix build on NetBSD 5.x and 6.x.
 
 --- tools/dbus-print-message.c.orig	2015-10-07 20:10:37.000000000 +0000
 +++ tools/dbus-print-message.c
