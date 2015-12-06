@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4866 2015/12/05 23:44:50 jnemeth Exp $
+$NetBSD: CHANGES-2015,v 1.4867 2015/12/06 01:57:26 riz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8109,3 +8109,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/gimp to 2.8.16 [adam 2015-12-05]
 	Updated lang/lua53 to 5.3.2 [alnsn 2015-12-05]
 	Added comms/asterisk13 version 13.6.0 [jnemeth 2015-12-05]
+	Updated www/py-django-tagging to 0.4 [riz 2015-12-05]
