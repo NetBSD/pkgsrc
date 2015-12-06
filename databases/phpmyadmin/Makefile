@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.146 2015/05/15 17:36:06 tron Exp $
+# $NetBSD: Makefile,v 1.147 2015/12/06 12:13:12 taca Exp $
 
 DISTNAME=	phpMyAdmin-${DIST_VERSION}-all-languages
 PKGNAME=	phpmyadmin-${DIST_VERSION:S/-//}
@@ -20,6 +20,8 @@ DEPENDS+=	${PHP_PKG_PREFIX}-mysqli>=5.3.0:../../databases/php-mysqli
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.3.0:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-mcrypt>=5.3.0:../../security/php-mcrypt
 DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.3.0:../../textproc/php-json
+
+PHP_VERSIONS_ACCEPTED=	55 56
 
 FILES_SUBST+=	APACHE_GROUP=${APACHE_GROUP} APACHE_USER=${APACHE_USER}
 FILES_SUBST+=	PMSETUPDIR=${PMSETUPDIR} PMSETUPFILE=${PMSETUPFILE}

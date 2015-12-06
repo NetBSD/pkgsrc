@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/04/19 01:14:41 asau Exp $
+# $NetBSD: Makefile,v 1.12 2015/12/06 12:13:12 taca Exp $
 #
 
 DISTNAME=	ampache-3.5.3
@@ -16,6 +16,7 @@ DEPENDS+=       ${PHP_PKG_PREFIX}-iconv>=0:../../converters/php-iconv
 DEPENDS+=       ${PHP_PKG_PREFIX}-mbstring>=0:../../converters/php-mbstring
 DEPENDS+=       ${PHP_PKG_PREFIX}-mysql>=0:../../databases/php-mysql
 
+PHP_VERSIONS_ACCEPTED=	55 56
 NO_BUILD=		yes
 USE_LANGUAGES=		# none
 USE_PKGLOCALEDIR=	yes

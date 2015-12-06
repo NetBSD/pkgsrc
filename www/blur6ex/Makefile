@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2013/03/16 07:21:23 obache Exp $
+# $NetBSD: Makefile,v 1.18 2015/12/06 12:13:12 taca Exp $
 #
 
 DISTNAME=	blur6ex-0.1.198
@@ -12,6 +12,8 @@ COMMENT=	Weblog and content framework
 
 DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=4.0.0:../../www/ap-php
 DEPENDS+=	${PHP_PKG_PREFIX}-mysql-[0-9]*:../../databases/php-mysql
+
+PHP_VERSIONS_ACCEPTED=	55 56
 
 USE_TOOLS+=	pax
 
