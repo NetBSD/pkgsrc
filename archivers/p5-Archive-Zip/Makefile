@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2015/09/30 19:14:19 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2015/12/06 10:54:27 wiz Exp $
 
-DISTNAME=	Archive-Zip-1.53
+DISTNAME=	Archive-Zip-1.55
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	archivers perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Archive/}
@@ -11,6 +11,7 @@ COMMENT=	Perl5 module interface to manipulate zip files
 LICENSE=	${PERL5_LICENSE}
 
 #DEPENDS+=	{perl>=5.10.1,p5-IO-Compress>=2.017}:../../devel/p5-IO-Compress	# Compress::Raw::Zlib>=2.017
+BUILD_DEPENDS+=	p5-Test-MockModule-[0-9]*:../../devel/p5-Test-MockModule
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Archive/Zip/.packlist
