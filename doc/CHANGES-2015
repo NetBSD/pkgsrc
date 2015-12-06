@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4875 2015/12/06 11:44:21 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4876 2015/12/06 11:47:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8118,3 +8118,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/curl to 7.46.0 [wiz 2015-12-06]
 	Updated sysutils/dbus to 1.10.6 [wiz 2015-12-06]
 	Updated devel/py-enum34 to 1.1.1 [wiz 2015-12-06]
+	Updated devel/py-setuptools to 18.7.1 [wiz 2015-12-06]
