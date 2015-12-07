@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4889 2015/12/07 11:06:12 adam Exp $
+$NetBSD: CHANGES-2015,v 1.4890 2015/12/07 14:43:03 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8133,3 +8133,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated archivers/py-libarchive-c to 2.2nb1 [wiz 2015-12-07]
 	Updated devel/cmake to 3.4.1 [adam 2015-12-07]
 	Updated print/hplip to 3.15.11 [adam 2015-12-07]
+	Updated lang/python35 to 3.5.1 [adam 2015-12-07]
