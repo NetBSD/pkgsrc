@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2015/12/05 21:25:59 adam Exp $
+# $NetBSD: Makefile,v 1.32 2015/12/07 21:51:53 wiz Exp $
 
 DISTNAME=	salt-2015.8.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	https://pypi.python.org/packages/source/s/salt/
 
@@ -28,7 +28,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-m2crypto
 PYSETUPINSTALLARGS+=	--salt-root-dir=${PREFIX}
 PYSETUPINSTALLARGS+=	--salt-config-dir=${PKG_SYSCONFDIR}
 PYSETUPINSTALLARGS+=	--salt-cache-dir=${VARBASE}/cache/salt
-PYSETUPINSTALLARGS+=	--salt-sock-dir==${VARBASE}/run/salt
+PYSETUPINSTALLARGS+=	--salt-sock-dir=${VARBASE}/run/salt
 PYSETUPINSTALLARGS+=	--salt-base-file-roots-dir=${PKG_SYSCONFDIR}/states
 PYSETUPINSTALLARGS+=	--salt-base-pillar-roots-dir=${PKG_SYSCONFDIR}/pillar
 PYSETUPINSTALLARGS+=	--salt-base-master-roots-dir=${PKG_SYSCONFDIR}/salt-master
