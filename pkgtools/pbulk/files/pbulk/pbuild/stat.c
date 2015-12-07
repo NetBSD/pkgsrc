@@ -1,4 +1,4 @@
-/* $NetBSD: stat.c,v 1.3 2008/01/15 22:14:30 joerg Exp $ */
+/* $NetBSD: stat.c,v 1.4 2015/12/07 16:52:39 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -52,21 +52,14 @@
 void
 stat_mode(const char *client_port)
 {
-	struct sockaddr_in dst;
 	ssize_t recv_bytes, sent_bytes;
 	char buf[7 * 4];
 	struct build_stat st;
 	uint32_t tmp;
 	int fd;
 
-	if (parse_sockaddr_in(client_port, &dst))
-		errx(1, "Could not parse addr/port");
-
-	fd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
-	if (fd == -1)
-		err(1, "Could not create socket");	
-	if (connect(fd, (struct sockaddr *)&dst, sizeof(dst)) == -1)
-		err(1, "Could not connect socket");
+	if ((fd = connect_sockaddr(client_port)) == -1)
+		err(1, "Could not creation connection to %s", client_port);
 
 	sent_bytes = write(fd, "S", 1);
 	if (sent_bytes == -1)
