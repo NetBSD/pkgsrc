@@ -1,4 +1,4 @@
-$NetBSD: patch-Modules___cursesmodule.c,v 1.1 2015/12/05 17:12:13 adam Exp $
+$NetBSD: patch-Modules___cursesmodule.c,v 1.2 2015/12/07 09:07:43 wiz Exp $
 
 Ncurses will be used by devel/py-curses and devel/py-cursespanel.
 http://bugs.python.org/issue21457
@@ -43,14 +43,14 @@ http://bugs.python.org/issue21457
  static PyObject *
  PyCurses_KeyName(PyObject *self, PyObject *args)
  {
-@@ -2669,7 +2656,6 @@ PyCurses_MouseMask(PyObject *self, PyObj
-     availmask = mousemask(newmask, &oldmask);
-     return Py_BuildValue("(ll)", (long)availmask, (long)oldmask);
+@@ -2614,7 +2601,6 @@ PyCurses_KeyName(PyObject *self, PyObjec
+ 
+     return PyBytes_FromString((knp == NULL) ? "" : knp);
  }
 -#endif
  
  static PyObject *
- PyCurses_Napms(PyObject *self, PyObject *args)
+ PyCurses_KillChar(PyObject *self)
 @@ -3228,9 +3214,7 @@ static PyMethodDef PyCurses_methods[] = 
  #ifdef HAVE_CURSES_IS_TERM_RESIZED
      {"is_term_resized",     (PyCFunction)PyCurses_Is_Term_Resized, METH_VARARGS},
