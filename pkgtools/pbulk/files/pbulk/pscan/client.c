@@ -1,4 +1,4 @@
-/* $NetBSD: client.c,v 1.4 2015/10/21 23:03:17 joerg Exp $ */
+/* $NetBSD: client.c,v 1.5 2015/12/07 16:52:40 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -51,7 +51,6 @@
 void
 client_mode(const char *client_port)
 {
-	struct sockaddr_in dst;
 	uint16_t path_len;
 	uint32_t net_output_len;
 	ssize_t recv_bytes, sent_bytes;
@@ -59,14 +58,8 @@ client_mode(const char *client_port)
 	char *path, *output;
 	int fd;
 
-	if (parse_sockaddr_in(client_port, &dst))
-		errx(1, "Could not parse addr/port");
-
-	fd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
-	if (fd == -1)
-		err(1, "Could not create socket");	
-	if (connect(fd, (struct sockaddr *)&dst, sizeof(dst)) == -1)
-		err(1, "Could not connect socket");
+	if ((fd = connect_sockaddr(client_port)) == -1)
+		err(1, "Could not creation connection to %s", client_port);
 
 loop:
 	recv_bytes = atomic_read(fd, &path_len, 2);

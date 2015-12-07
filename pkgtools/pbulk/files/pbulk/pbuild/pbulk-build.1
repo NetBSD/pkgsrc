@@ -1,4 +1,4 @@
-.\" $NetBSD: pbulk-build.1,v 1.1.1.1 2007/06/19 19:49:55 joerg Exp $
+.\" $NetBSD: pbulk-build.1,v 1.2 2015/12/07 16:52:39 joerg Exp $
 .\"
 .\" Copyright (c) 2007 Thomas Klausner and Joerg Sonnenberger.
 .\" All rights reserved.
@@ -32,16 +32,16 @@
 .Nd build all packages specified in input file
 .Sh SYNOPSIS
 .Nm
-.Fl s Oo Ar ip: Oc Ns Ar port
+.Fl s Oo Ar host: Oc Ns Ar port
 .Nm
 .Op Fl v
-.Fl c Oo Ar ip: Oc Ns Ar port
+.Fl c Oo Ar host: Oc Ns Ar port
 .Fl b Ar build_script
 .Nm
 .Op Fl I Ar start_script
 .Op Fl r Ar report_file
 .Op Fl v
-.Fl m Oo Ar ip: Oc Ns Ar port
+.Fl m Oo Ar host: Oc Ns Ar port
 .Ar input success error
 .Nm
 .Op Fl r Ar report_file
@@ -61,11 +61,11 @@ for building the packages.
 See
 .Sx BUILD SCRIPT FORMAT
 for details.
-.It Fl c Oo Ar ip: Oc Ns Ar port
+.It Fl c Oo Ar host: Oc Ns Ar port
 Obtain jobs from master running on the given
 .Ar port
 (or
-.Ar ip:port ) .
+.Ar host:port ) .
 If used with
 .Fl v ,
 print the name of the package to build to stdout.
@@ -73,18 +73,18 @@ print the name of the package to build to stdout.
 Run
 .Ar start_script
 after opening the socket and wait for completion before entering build loop.
-.It Fl m Oo Ar ip: Oc Ns Ar port
+.It Fl m Oo Ar host : Oc Ns Ar port
 Enter master mode.
 The master binds to
 .Ar port
 (or
-.Ar ip:port )
+.Ar host:port )
 and waits for clients to connect and build individual packages.
-.It Fl s Oo Ar ip: Oc Ns Ar port
+.It Fl s Oo Ar host: Oc Ns Ar port
 Query the master running on the given
 .Ar port
 (or
-.Ar ip:port )
+.Ar host:port )
 for the current number of successful, open, and failed builds.
 .It Fl r Ar report_file
 Write name of each package,

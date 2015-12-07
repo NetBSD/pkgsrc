@@ -1,4 +1,4 @@
-/* $NetBSD: pbulk.h,v 1.5 2014/01/15 13:52:10 joerg Exp $ */
+/* $NetBSD: pbulk.h,v 1.6 2015/12/07 16:52:39 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007, 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -75,8 +75,9 @@ void		 deferred_write(int fd, const void *, size_t,
 ssize_t		 atomic_read(int, void *, size_t);
 ssize_t		 atomic_write(int, const void *, size_t);
 
-
-int		 parse_sockaddr_in(const char *, struct sockaddr_in *);
+int		 connect_sockaddr(const char *);
+int		 listen_sockaddr(const char *, void (*)(int, void *));
+void		 shutdown_listeners(void);
 pid_t		 fork_chdir_exec(const char *, const char *,
 				 const char * const *, int *);
 char		*read_from_child(const char *, const char *,
