@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2015/10/03 12:13:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.39 2015/12/07 15:54:31 adam Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -789,6 +789,7 @@ share/mysql/test/r/drop-no_root.result
 share/mysql/test/r/drop.result
 share/mysql/test/r/drop_debug.result
 share/mysql/test/r/empty_table.result
+share/mysql/test/r/enable_cleartext_plugin.result
 share/mysql/test/r/endspace.result
 share/mysql/test/r/error_simulation.result
 share/mysql/test/r/errors.result
@@ -2909,6 +2910,7 @@ share/mysql/test/suite/funcs_2/t/suite.opt
 share/mysql/test/suite/innodb/r/add_constraint.result
 share/mysql/test/suite/innodb/r/blob-update-debug.result
 share/mysql/test/suite/innodb/r/create-index.result
+share/mysql/test/suite/innodb/r/dropdb.result
 share/mysql/test/suite/innodb/r/foreign-keys.result
 share/mysql/test/suite/innodb/r/foreign-keys.result.moved
 share/mysql/test/suite/innodb/r/innodb-analyze.result
@@ -3016,6 +3018,7 @@ share/mysql/test/suite/innodb/t/add_constraint.test
 share/mysql/test/suite/innodb/t/blob-update-debug.test
 share/mysql/test/suite/innodb/t/create-index.test
 share/mysql/test/suite/innodb/t/disabled.def
+share/mysql/test/suite/innodb/t/dropdb.test
 share/mysql/test/suite/innodb/t/foreign-keys.test
 share/mysql/test/suite/innodb/t/foreign-keys.test.moved
 share/mysql/test/suite/innodb/t/innodb-analyze.test
@@ -5769,6 +5772,8 @@ share/mysql/test/t/drop-no_root.test
 share/mysql/test/t/drop.test
 share/mysql/test/t/drop_debug.test
 share/mysql/test/t/empty_table.test
+share/mysql/test/t/enable_cleartext_plugin-master.opt
+share/mysql/test/t/enable_cleartext_plugin.test
 share/mysql/test/t/endspace.test
 share/mysql/test/t/error_simulation-master.opt
 share/mysql/test/t/error_simulation.test
