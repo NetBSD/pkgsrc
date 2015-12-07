@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/12/05 17:12:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/12/07 14:36:26 adam Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -1599,6 +1599,10 @@ lib/python${PY_VER_SUFFIX}/idlelib/dynOptionMenuWidget.py
 lib/python${PY_VER_SUFFIX}/idlelib/dynOptionMenuWidget.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/dynOptionMenuWidget.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/extend.txt
+lib/python${PY_VER_SUFFIX}/idlelib/help.html
+lib/python${PY_VER_SUFFIX}/idlelib/help.py
+lib/python${PY_VER_SUFFIX}/idlelib/help.pyc
+lib/python${PY_VER_SUFFIX}/idlelib/help.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/help.txt
 lib/python${PY_VER_SUFFIX}/idlelib/idle.bat
 lib/python${PY_VER_SUFFIX}/idlelib/idle.py
