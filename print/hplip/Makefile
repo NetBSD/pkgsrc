@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.46 2015/08/27 23:53:24 khorben Exp $
+# $NetBSD: Makefile,v 1.47 2015/12/07 11:02:26 adam Exp $
 
-DISTNAME=		hplip-3.15.7
-PKGREVISION=		2
-CATEGORIES=		print
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=hplip/}
+DISTNAME=	hplip-3.15.11
+CATEGORIES=	print
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hplip/}
 
-MAINTAINER=		schnoebe@NetBSD.org
-HOMEPAGE=		http://hplipopensource.com/
-COMMENT=		HP Linux Imaging and Printing
-LICENSE=		gnu-gpl-v2 AND mit AND modified-bsd
+MAINTAINER=	schnoebe@NetBSD.org
+HOMEPAGE=	http://hplipopensource.com/
+COMMENT=	HP Linux Imaging and Printing
+LICENSE=	gnu-gpl-v2 AND mit AND modified-bsd
 
 CONFLICTS+=		hpijs-[0-9]*
 
@@ -20,17 +19,16 @@ PKG_USERS_VARS+=        CUPS_USER
 
 BUILD_DEFS+=            CUPS_USER CUPS_GROUP VARBASE
 
-GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		aclocal autoconf automake gmake pkg-config
 USE_TOOLS+=		perl:run
-
-CONFIGURE_ARGS=		--sysconfdir=${PKG_SYSCONFDIR} \
-			--localstatedir=${VARBASE} \
-			--with-cupsbackenddir=${PREFIX}/libexec/cups/backend \
-			--with-cupsfilterdir=${PREFIX}/libexec/cups/filter \
-			--with-hpppddir=${PREFIX}/share/hplip/ppd/HP
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+CONFIGURE_ARGS+=	--with-cupsbackenddir=${PREFIX}/libexec/cups/backend
+CONFIGURE_ARGS+=	--with-cupsfilterdir=${PREFIX}/libexec/cups/filter
+CONFIGURE_ARGS+=	--with-hpppddir=${PREFIX}/share/hplip/ppd/HP
 CONFIGURE_ARGS+=	--enable-network-build
 CONFIGURE_ARGS+=	--disable-pp-build
 CONFIGURE_ARGS+=	--enable-hpcups-install
@@ -53,7 +51,6 @@ INSTALL_MAKE_FLAGS+=	mimedir=${EGDIR}/cups
 OWN_DIRS+=		${PKG_SYSCONFDIR}/hp
 OWN_DIRS+=		${VARBASE}/lib/hp
 OWN_DIRS+=		${PREFIX}/share/examples/hplip/log/hp
-
 OWN_DIRS_PERMS+=	${PREFIX}/share/examples/hplip/log/hp ${CUPS_USER} ${CUPS_GROUP} 0774
 
 PLIST_SRC=		PLIST.base
