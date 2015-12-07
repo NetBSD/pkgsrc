@@ -1,11 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2015/08/27 23:53:24 khorben Exp $
+$NetBSD: patch-configure.in,v 1.1 2015/12/07 11:02:26 adam Exp $
 
-# lots of portability changes to configure.in, removing hard-coded paths
-# and pulling in the dynamic library loading modules..
-
-# pushed upstream as https://bugs.launchpad.net/hplip/+bug/726207
-
---- configure.in.orig	2015-06-07 19:25:40.000000000 +0000
+--- configure.in.orig	2015-11-12 10:29:29.000000000 +0000
 +++ configure.in
 @@ -34,14 +34,15 @@ AC_DISABLE_STATIC
  # Checks for programs.
@@ -24,7 +19,7 @@ $NetBSD: patch-aa,v 1.4 2015/08/27 23:53:24 khorben Exp $
  
  # Checks for required header files.
  AC_CHECK_HEADERS(pthread.h,, [AC_MSG_ERROR([cannot find pthread-devel support], 7)])
-@@ -316,25 +317,25 @@ else
+@@ -333,29 +334,29 @@ else
  fi
  AM_CONDITIONAL(LIBUSB01_BUILD, test x$libusb01_build = xyes)
  
@@ -50,6 +45,12 @@ $NetBSD: patch-aa,v 1.4 2015/08/27 23:53:24 khorben Exp $
  
  AC_ARG_WITH(hpppddir, AC_HELP_STRING([--with-hpppddir=DIR], [set hp ppd install directory [default=datadir/ppd/HP]]),
     hpppddir=$withval, hpppddir="$datadir/ppd/HP")
+    
+ # AppArmor Changes
+-AC_ARG_WITH(apparmordir, AC_HELP_STRING([--with-apparmordir=DIR], [set apparmor profile install directory [default=/etc/apparmor.d]]),
+-   apparmordir=$withval, apparmordir="/etc/apparmor.d")
++AC_ARG_WITH(apparmordir, AC_HELP_STRING([--with-apparmordir=DIR], [set apparmor profile install directory [default=sysconfdir/apparmor.d]]),
++   apparmordir=$withval, apparmordir="$sysconfdir/apparmor.d")
  
 -if test -f "/usr/share/cups/mime/mime.types"; then 
 -   abs_mimedir="/usr/share/cups/mime/"
@@ -57,11 +58,11 @@ $NetBSD: patch-aa,v 1.4 2015/08/27 23:53:24 khorben Exp $
 +   abs_mimedir="$datadir/cups/mime/"
  else
 -   abs_mimedir="/etc/cups/"
-+   abs_mimedir="$sysconfdir/etc/cups/"
++   abs_mimedir="$sysconfdir/cups/"
  fi
  AC_ARG_WITH(mimedir, AC_HELP_STRING([--with-mimedir=DIR], [set cups mime.types location [default=abs_mimedir]]),
     mimedir=$withval, mimedir="$abs_mimedir")
-@@ -467,12 +468,12 @@ AM_CONDITIONAL(POLICYKIT_INSTALL, test x
+@@ -488,12 +489,12 @@ AM_CONDITIONAL(POLICYKIT_INSTALL, test x
  
  # Determine where the PolicyKit policy file goes
  if test "$policykit" = "yes"; then
@@ -79,7 +80,7 @@ $NetBSD: patch-aa,v 1.4 2015/08/27 23:53:24 khorben Exp $
     fi
  else
     policykit_dir=
-@@ -581,6 +582,7 @@ AC_DEFINE_DIR([abs_sbindir], [sbindir])
+@@ -602,6 +603,7 @@ AC_DEFINE_DIR([abs_sbindir], [sbindir])
  AC_DEFINE_DIR([abs_hpppddir], [hpppddir])
  AC_DEFINE_DIR([abs_docdir], [hpdocdir])
  AC_DEFINE_DIR([abs_htmldir], [hphtmldir])
