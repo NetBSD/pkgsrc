@@ -1,0 +1,10 @@
+$NetBSD: patch-lp__solve_ccc,v 1.1 2015/12/07 17:40:27 joerg Exp $
+
+--- lp_solve/ccc.orig	2015-12-07 17:17:20.529655116 +0000
++++ lp_solve/ccc
+@@ -38,4 +38,4 @@ then opts='-O0'
+ else dl=-ldl
+ fi
+ 
+-$c -I.. -I../bfp -I../bfp/bfp_LUSOL -I../bfp/bfp_LUSOL/LUSOL -I../colamd -I../shared $opts $def $NOISNAN -DYY_NEVER_INTERACTIVE -DPARSER_LP -DINVERSE_ACTIVE=INVERSE_LUSOL -DRoleIsExternalInvEngine $src -o bin/$PLATFORM/lp_solve $math $dl
++$c -I.. -I../bfp -I../bfp/bfp_LUSOL -I../bfp/bfp_LUSOL/LUSOL -I../colamd -I../shared $opts $def $NOISNAN -DYY_NEVER_INTERACTIVE -DPARSER_LP -DINVERSE_ACTIVE=INVERSE_LUSOL -DRoleIsExternalInvEngine $src -o bin/$PLATFORM/lp_solve $math $DL_LDADD
