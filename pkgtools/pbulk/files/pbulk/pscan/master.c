@@ -1,4 +1,4 @@
-/* $NetBSD: master.c,v 1.10 2015/10/22 19:57:47 joerg Exp $ */
+/* $NetBSD: master.c,v 1.11 2015/12/07 16:52:40 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007, 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -53,8 +53,6 @@
 
 static int clients_started;
 static LIST_HEAD(, scan_peer) active_peers, inactive_peers;
-static struct event listen_event;
-static int listen_event_socket;
 static struct signal_event child_event;
 static pid_t child_pid;
 
@@ -159,8 +157,8 @@ shutdown_master(void)
 	struct timeval tv;
 	struct scan_peer *peer;
 
-	event_del(&listen_event);
-	(void)close(listen_event_socket);
+	shutdown_listeners();
+
 	LIST_FOREACH(peer, &inactive_peers, peer_link) {
 		uint16_t net_job_len = htons(0);
 		(void)memcpy(peer->tmp_buf, &net_job_len, 2);
@@ -168,6 +166,8 @@ shutdown_master(void)
 		deferred_write(peer->fd, peer->tmp_buf, 2, peer, do_nothing,
 		    kill_peer);
 	}
+
+	/* Give clients a second to close connections to prevent TIME_WAIT. */
 	tv.tv_sec = 1;
 	tv.tv_usec = 0;
 	event_loopexit(&tv);
@@ -205,12 +205,9 @@ static void
 listen_handler(int sock, void *arg)
 {
 	struct scan_peer *peer;
-	struct sockaddr_in src;
-	socklen_t src_len;
 	int fd;
 
-	src_len = sizeof(src);
-	if ((fd = accept(sock, (struct sockaddr *)&src, &src_len)) == -1) {
+	if ((fd = accept(sock, NULL, 0)) == -1) {
 		warn("Could not accept connection");
 		return;
 	}
@@ -253,29 +250,13 @@ child_handler(struct signal_event *ev)
 void
 master_mode(const char *master_port, const char *start_script)
 {
-	struct sockaddr_in dst;
-	int fd;
-
 	LIST_INIT(&active_peers);
 	LIST_INIT(&inactive_peers);
 
 	event_init();
 
-	if (parse_sockaddr_in(master_port, &dst))
-		errx(1, "Could not parse addr/port");
-
-	fd = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
-	if (fd == -1)
-		err(1, "Could not create socket");	
-	if (fcntl(fd, F_SETFD, FD_CLOEXEC) == -1)
-		err(1, "Could not set close-on-exec flag");
-	if (bind(fd, (struct sockaddr *)&dst, sizeof(dst)) == -1)
-		err(1, "Could not bind socket");
-	if (listen(fd, 5) == -1)
-		err(1, "Could not listen on socket");
-
-	event_add(&listen_event, fd, 0, 1, listen_handler, NULL);
-	listen_event_socket = fd;
+	if (listen_sockaddr(master_port, listen_handler))
+		errx(1, "Could not create listen socket for %s", master_port);
 
 	if (start_script) {
 		signal_add(&child_event, SIGCHLD, child_handler);
@@ -291,6 +272,4 @@ master_mode(const char *master_port, const char *start_script)
 	}
 
 	event_dispatch();
-
-	(void)close(fd);
 }
