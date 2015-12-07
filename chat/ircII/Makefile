@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2015/09/16 20:21:07 mrg Exp $
+# $NetBSD: Makefile,v 1.74 2015/12/07 06:44:23 mrg Exp $
 
 DISTNAME=		ircii-${VERS}
 PKGNAME=		ircII-${VERS}
@@ -13,7 +13,7 @@ LICENSE=		modified-bsd
 
 CONFLICTS=		blackened-[0-9]*
 
-VERS=			20150903
+VERS=			20151120
 PLIST_SUBST+=	VERS=${VERS:Q}
 
 .include "../../mk/bsd.prefs.mk"
