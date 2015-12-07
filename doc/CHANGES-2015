@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4892 2015/12/07 15:58:00 jperkin Exp $
+$NetBSD: CHANGES-2015,v 1.4893 2015/12/07 16:52:59 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8137,3 +8137,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/mysql55-client to 5.5.47 [adam 2015-12-07]
 	Updated databases/mysql55-server to 5.5.47 [adam 2015-12-07]
 	Updated security/openssl to 1.0.2e [jperkin 2015-12-07]
+	Updated pkgtools/pbulk-base to 0.51 [joerg 2015-12-07]
