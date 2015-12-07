@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2015/11/08 15:08:00 sevan Exp $
+# $NetBSD: Makefile,v 1.8 2015/12/07 17:40:27 joerg Exp $
 #
 
 DISTNAME=	lp_solve_5.5.2.0_source
@@ -34,6 +34,8 @@ LPSOLVE_ARCH=	ux32
 .endif
 
 INSTALLATION_DIRS=	bin include/lpsolve lib
+
+MAKE_ENV+=	DL_LDADD=${BUILDLINK_LDADD.dl:Q}
 
 do-build:
 .for dir in lp_solve lpsolve55 demo
