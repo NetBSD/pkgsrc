@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4884 2015/12/06 22:39:23 tonio Exp $
+$NetBSD: CHANGES-2015,v 1.4885 2015/12/07 06:44:23 mrg Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8128,3 +8128,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added meta-pkgs/php70-extensions version 7.0.0 [taca 2015-12-06]
 	Updated lang/python27 to 2.7.11 [adam 2015-12-06]
 	Updated chat/weechat to 1.3 [tonio 2015-12-06]
+	Updated chat/ircII to 20151120 [mrg 2015-12-07]
