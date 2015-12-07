@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.215 2015/10/26 09:42:47 jperkin Exp $
+# $NetBSD: Makefile,v 1.216 2015/12/07 15:57:42 jperkin Exp $
 
-DISTNAME=	openssl-1.0.2d
+DISTNAME=	openssl-1.0.2e
 CATEGORIES=	security
 MASTER_SITES=	https://www.openssl.org/source/
 
@@ -21,6 +21,7 @@ USE_GCC_RUNTIME=	yes
 .include "../../mk/compiler.mk"
 
 USE_TOOLS+=		fgrep gmake perl
+BUILD_TARGET=		depend all
 TEST_TARGET=		tests
 MAKE_JOBS_SAFE=		no
 
