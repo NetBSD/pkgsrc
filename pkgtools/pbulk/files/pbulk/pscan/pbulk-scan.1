@@ -1,4 +1,4 @@
-.\" $NetBSD: pbulk-scan.1,v 1.1.1.1 2007/06/19 19:49:57 joerg Exp $
+.\" $NetBSD: pbulk-scan.1,v 1.2 2015/12/07 16:52:40 joerg Exp $
 .\"
 .\" Copyright (c) 2007 Thomas Klausner and Joerg Sonnenberger.
 .\" All rights reserved.
@@ -33,13 +33,13 @@
 .Sh SYNOPSIS
 .Nm
 .Op Fl v
-.Fl c Oo Ar ip: Oc Ns Ar port
+.Fl c Oo Ar host: Oc Ns Ar port
 .Fl M Ar make
 .Ar pkgsrc
 .Nm
 .Op Fl lv
 .Op Fl I Ar start_script
-.Op Fl m Oo Ar ip: Oc Ns Ar port
+.Op Fl m Oo Ar host: Oc Ns Ar port
 .Fl M Ar make
 .Ar pkgsrc output
 .Sh DESCRIPTION
@@ -48,11 +48,11 @@ extracts information for a pbulk bulk build from a pkgsrc tree.
 .Pp
 Supported options are:
 .Bl -tag -width 15n -offset indent
-.It Fl c Oo Ar ip: Oc Ns Ar port
+.It Fl c Oo Ar host: Oc Ns Ar port
 Connect to pbulk bulk build master process on
 .Ar port
 (or
-.Ar ip:port ) .
+.Ar host:port ) .
 .It Fl I Ar start_script
 Run
 .Ar start_script
@@ -72,14 +72,14 @@ Usually
 .Dq make
 or
 .Dq bmake .
-.It Fl m Oo Ar ip: Oc Ns Ar port
+.It Fl m Oo Ar host: Oc Ns Ar port
 Enter master mode.
 In this mode,
 .Nm
 waits for connections on
 .Ar port
 (or
-.Ar ip:port ) .
+.Ar host:port ) .
 .It Fl v
 Log each location to be scanned or other progress to stdout.
 .El
