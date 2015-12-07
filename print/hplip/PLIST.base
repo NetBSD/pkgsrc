@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.base,v 1.17 2015/08/14 19:45:29 schnoebe Exp $
+@comment $NetBSD: PLIST.base,v 1.18 2015/12/07 11:02:26 adam Exp $
 bin/hp-align
 bin/hp-check
 bin/hp-clean
@@ -35,6 +35,7 @@ bin/hp-unload
 bin/hp-upgrade
 bin/hp-wificonfig
 bin/hpijs
+lib/libhpdiscovery.la
 lib/libhpip.la
 lib/libhpipp.la
 lib/libhpmud.la
@@ -493,11 +494,15 @@ share/hplip/ppd/HP/hp-color_laserjet_cp6015-pcl3.ppd.gz
 share/hplip/ppd/HP/hp-color_laserjet_cp6015-ps.ppd.gz
 share/hplip/ppd/HP/hp-color_laserjet_flow_mfp_m680-ps.ppd.gz
 share/hplip/ppd/HP/hp-color_laserjet_flow_mfp_m880-ps.ppd.gz
+share/hplip/ppd/HP/hp-color_laserjet_m452-ps.ppd.gz
+share/hplip/ppd/HP/hp-color_laserjet_m452d-ps.ppd.gz
 share/hplip/ppd/HP/hp-color_laserjet_m552-ps.ppd.gz
 share/hplip/ppd/HP/hp-color_laserjet_m553-ps.ppd.gz
 share/hplip/ppd/HP/hp-color_laserjet_m651-ps.ppd.gz
 share/hplip/ppd/HP/hp-color_laserjet_m750-ps.ppd.gz
 share/hplip/ppd/HP/hp-color_laserjet_m855-ps.ppd.gz
+share/hplip/ppd/HP/hp-color_laserjet_mfp_m274-ps.ppd.gz
+share/hplip/ppd/HP/hp-color_laserjet_mfp_m577-ps.ppd.gz
 share/hplip/ppd/HP/hp-color_laserjet_mfp_m680-ps.ppd.gz
 share/hplip/ppd/HP/hp-color_laserjet_pro_m252-ps.ppd.gz
 share/hplip/ppd/HP/hp-color_laserjet_pro_mfp_m176n-hpijs.ppd.gz
@@ -506,6 +511,8 @@ share/hplip/ppd/HP/hp-color_laserjet_pro_mfp_m177fw-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-color_laserjet_pro_mfp_m177fw.ppd.gz
 share/hplip/ppd/HP/hp-color_laserjet_pro_mfp_m277-ps.ppd.gz
 share/hplip/ppd/HP/hp-color_laserjet_pro_mfp_m476-ps.ppd.gz
+share/hplip/ppd/HP/hp-color_laserjet_pro_mfp_m477-ps.ppd.gz
+share/hplip/ppd/HP/hp-color_laserjet_pro_mfp_m477d-ps.ppd.gz
 share/hplip/ppd/HP/hp-cp1160-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-cp1160.ppd.gz
 share/hplip/ppd/HP/hp-designjet_4000ps.ppd.gz
@@ -652,6 +659,8 @@ share/hplip/ppd/HP/hp-deskjet_400l-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_400l.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_4510_series-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_4510_series.ppd.gz
+share/hplip/ppd/HP/hp-deskjet_4530_series-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-deskjet_4530_series.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_460-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_460.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_4610_series-hpijs.ppd.gz
@@ -660,6 +669,10 @@ share/hplip/ppd/HP/hp-deskjet_4620_series-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_4620_series.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_4640_series-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_4640_series.ppd.gz
+share/hplip/ppd/HP/hp-deskjet_4670_series-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-deskjet_4670_series.ppd.gz
+share/hplip/ppd/HP/hp-deskjet_4720_series-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-deskjet_4720_series.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_500-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_500.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_500c-hpijs.ppd.gz
@@ -686,8 +699,12 @@ share/hplip/ppd/HP/hp-deskjet_5551-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_5551.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_5552-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_5552.ppd.gz
+share/hplip/ppd/HP/hp-deskjet_5570_series-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-deskjet_5570_series.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_5600-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_5600.ppd.gz
+share/hplip/ppd/HP/hp-deskjet_5640_series-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-deskjet_5640_series.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_5650-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_5650.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_5652-hpijs.ppd.gz
@@ -916,8 +933,14 @@ share/hplip/ppd/HP/hp-envy_120_series-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-envy_120_series.ppd.gz
 share/hplip/ppd/HP/hp-envy_4500_series-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-envy_4500_series.ppd.gz
+share/hplip/ppd/HP/hp-envy_4510_series-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-envy_4510_series.ppd.gz
+share/hplip/ppd/HP/hp-envy_4520_series-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-envy_4520_series.ppd.gz
 share/hplip/ppd/HP/hp-envy_5530_series-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-envy_5530_series.ppd.gz
+share/hplip/ppd/HP/hp-envy_5540_series-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-envy_5540_series.ppd.gz
 share/hplip/ppd/HP/hp-envy_5640_series-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-envy_5640_series.ppd.gz
 share/hplip/ppd/HP/hp-envy_5660_series-hpijs.ppd.gz
@@ -1285,6 +1308,7 @@ share/hplip/ppd/HP/hp-laserjet_m5035_mfp-pcl3.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_m5035_mfp-ps.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_m5039_mfp-hpijs-pcl3.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_m5039_mfp-pcl3.ppd.gz
+share/hplip/ppd/HP/hp-laserjet_m506-ps.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_m604_m605_m606-ps.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_m806-ps.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_m9040_mfp-hpijs-pcl3.ppd.gz
@@ -1296,7 +1320,9 @@ share/hplip/ppd/HP/hp-laserjet_m9050_mfp-ps.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_m9059_mfp-hpijs-pcl3.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_m9059_mfp-pcl3.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_m9059_mfp-ps.ppd.gz
+share/hplip/ppd/HP/hp-laserjet_mfp_m426_m427-ps.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_mfp_m521-ps.ppd.gz
+share/hplip/ppd/HP/hp-laserjet_mfp_m527-ps.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_mfp_m630-ps.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_mfp_m725-ps.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_p1005-hpijs.ppd.gz
@@ -1388,6 +1414,8 @@ share/hplip/ppd/HP/hp-laserjet_p4515x.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_p4515xm-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_p4515xm.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_pro_m201_m202-ps.ppd.gz
+share/hplip/ppd/HP/hp-laserjet_pro_m402_m403-ps.ppd.gz
+share/hplip/ppd/HP/hp-laserjet_pro_m402_m403d-ps.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_pro_m701-ps.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_pro_m706-ps.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_pro_mfp_m125a-hpijs.ppd.gz
@@ -1534,6 +1562,8 @@ share/hplip/ppd/HP/hp-officejet_4620_series-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_4620_series.ppd.gz
 share/hplip/ppd/HP/hp-officejet_4630_series-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_4630_series.ppd.gz
+share/hplip/ppd/HP/hp-officejet_4650_series-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-officejet_4650_series.ppd.gz
 share/hplip/ppd/HP/hp-officejet_5100_series-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_5100_series.ppd.gz
 share/hplip/ppd/HP/hp-officejet_5105-hpijs.ppd.gz
@@ -2036,6 +2066,8 @@ share/hplip/ppd/HP/hp-psc_950vr-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-psc_950vr.ppd.gz
 share/hplip/ppd/HP/hp-psc_950xi-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-psc_950xi.ppd.gz
+share/hplip/ppd/HP/hp-scanjet_pro_3500_f1-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-scanjet_pro_3500_f1.ppd.gz
 share/hplip/pqdiag.py
 share/hplip/pqdiag.pyc
 share/hplip/print.py
