@@ -1,6 +1,6 @@
-$NetBSD: patch-crypto_bn_bn__prime.pl,v 1.2 2014/05/13 02:23:11 rodent Exp $
+$NetBSD: patch-crypto_bn_bn__prime.pl,v 1.3 2015/12/08 16:53:32 jperkin Exp $
 
---- crypto/bn/bn_prime.pl.orig	Mon Mar 17 16:14:20 2014
+--- crypto/bn/bn_prime.pl.orig	2015-12-03 14:04:23.000000000 +0000
 +++ crypto/bn/bn_prime.pl
 @@ -1,6 +1,8 @@
  #!/usr/local/bin/perl
