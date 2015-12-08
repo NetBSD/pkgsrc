@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2010/05/15 06:37:03 adam Exp $
+$NetBSD: patch-aa,v 1.5 2015/12/08 11:13:04 jperkin Exp $
 
---- zzip/Makefile.in.orig	2010-05-15 06:16:27.000000000 +0000
+--- zzip/Makefile.in.orig	2010-03-29 19:40:50.000000000 +0000
 +++ zzip/Makefile.in
 @@ -775,6 +775,7 @@ install-data-hook : install-zzipHEADERS
  	$(DESTDIR)$(includedir)/zzip.h >$(DESTDIR)$(includedir)/zzip-io.h
