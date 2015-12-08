@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2015/10/03 12:46:13 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2015/12/08 08:49:50 adam Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -984,6 +984,7 @@ share/mysql/test/r/drop_debug.result
 share/mysql/test/r/ds_mrr-big.result
 share/mysql/test/r/dynamic_tracing.result
 share/mysql/test/r/empty_table.result
+share/mysql/test/r/enable_cleartext_plugin.result
 share/mysql/test/r/endspace.result
 share/mysql/test/r/eq_range_idx_stat.result
 share/mysql/test/r/error_simulation.result
@@ -2028,6 +2029,7 @@ share/mysql/test/suite/binlog/t/binlog_database.test
 share/mysql/test/suite/binlog/t/binlog_delete_and_flush_index.test
 share/mysql/test/suite/binlog/t/binlog_drop_if_exists.test
 share/mysql/test/suite/binlog/t/binlog_enforce_gtid_consistency.test
+share/mysql/test/suite/binlog/t/binlog_error_action-master.opt
 share/mysql/test/suite/binlog/t/binlog_error_action.test
 share/mysql/test/suite/binlog/t/binlog_format_switch_in_tmp_table.test
 share/mysql/test/suite/binlog/t/binlog_grant.test
@@ -3436,6 +3438,7 @@ share/mysql/test/suite/innodb/include/innodb_stats.inc
 share/mysql/test/suite/innodb/include/innodb_stats_table_flag.inc
 share/mysql/test/suite/innodb/include/innodb_stats_table_flag_analyze.inc
 share/mysql/test/suite/innodb/r/add_foreign_key.result
+share/mysql/test/suite/innodb/r/alter_rename_existing.result
 share/mysql/test/suite/innodb/r/blob-update-debug.result
 share/mysql/test/suite/innodb/r/blob_redo.result
 share/mysql/test/suite/innodb/r/checksum.result
@@ -3621,6 +3624,7 @@ share/mysql/test/suite/innodb/r/strict_checksum.result
 share/mysql/test/suite/innodb/r/strict_mode.result
 share/mysql/test/suite/innodb/r/xa_recovery.result
 share/mysql/test/suite/innodb/t/add_foreign_key.test
+share/mysql/test/suite/innodb/t/alter_rename_existing.test
 share/mysql/test/suite/innodb/t/blob-update-debug.test
 share/mysql/test/suite/innodb/t/blob_redo-master.opt
 share/mysql/test/suite/innodb/t/blob_redo.test
@@ -8921,6 +8925,8 @@ share/mysql/test/t/drop_debug.test
 share/mysql/test/t/ds_mrr-big.test
 share/mysql/test/t/dynamic_tracing.test
 share/mysql/test/t/empty_table.test
+share/mysql/test/t/enable_cleartext_plugin-master.opt
+share/mysql/test/t/enable_cleartext_plugin.test
 share/mysql/test/t/endspace.test
 share/mysql/test/t/eq_range_idx_stat.test
 share/mysql/test/t/error_simulation.test
