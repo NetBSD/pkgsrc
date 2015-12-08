@@ -1,9 +1,9 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: tor.in,v 1.3 2008/12/21 11:10:27 obache Exp $
+# $NetBSD: tor.in,v 1.4 2015/12/08 13:19:38 wiz Exp $
 #
 # PROVIDE: tor
-# REQUIRE: DAEMON
+# REQUIRE: DAEMON NETWORKING
 # KEYWORD: shutdown
 #
 # You will need to set some variables in /etc/rc.conf to start tor:
