@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2015/09/01 04:14:55 mef Exp $
+@comment $NetBSD: PLIST,v 1.3 2015/12/08 21:28:57 wiedi Exp $
 bin/gr_modtool
 bin/gr_plot_char
 bin/gr_plot_const
@@ -81,6 +81,7 @@ ${PYSITELIB}/gnuradio/pyqt_filter.pyo
 ${PYSITELIB}/gnuradio/pyqt_plot.py
 ${PYSITELIB}/gnuradio/pyqt_plot.pyc
 ${PYSITELIB}/gnuradio/pyqt_plot.pyo
+share/gnuradio/examples/modtool.conf
 share/gnuradio/modtool/gr-newmod/CMakeLists.txt
 share/gnuradio/modtool/gr-newmod/MANIFEST.md
 share/gnuradio/modtool/gr-newmod/apps/CMakeLists.txt
