@@ -1,0 +1,45 @@
+$NetBSD: patch-configure,v 1.1 2015/12/08 11:02:25 jperkin Exp $
+
+Use $as_echo to ensure \1 etc are supported.
+
+--- configure.orig	2013-11-11 04:41:53.000000000 +0000
++++ configure
+@@ -19087,23 +19087,23 @@ $as_echo X/* automatically generated */
+ 	    q
+ 	  }
+ 	  s/.*/./; q'
+-    echo '#ifndef '$ac_prefix_conf_DEF >$ac_prefix_conf_OUT
+-    echo '#define '$ac_prefix_conf_DEF' 1' >>$ac_prefix_conf_OUT
+-    echo ' ' >>$ac_prefix_conf_OUT
+-    echo /'*' $ac_prefix_conf_OUT. Generated automatically at end of configure. '*'/ >>$ac_prefix_conf_OUT
++    $as_echo '#ifndef '$ac_prefix_conf_DEF >$ac_prefix_conf_OUT
++    $as_echo '#define '$ac_prefix_conf_DEF' 1' >>$ac_prefix_conf_OUT
++    $as_echo ' ' >>$ac_prefix_conf_OUT
++    $as_echo /'*' $ac_prefix_conf_OUT. Generated automatically at end of configure. '*'/ >>$ac_prefix_conf_OUT
+ 
+-    echo 's/#undef  *\([A-Z_]\)/#undef '$ac_prefix_conf_UPP'_\1/' >conftest.sed
+-    echo 's/#undef  *\([a-z]\)/#undef '$ac_prefix_conf_LOW'_\1/' >>conftest.sed
+-    echo 's/#define  *\([A-Z_][A-Za-z0-9_]*\)\(.*\)/#ifndef '$ac_prefix_conf_UPP"_\\1 \\" >>conftest.sed
+-    echo '#define '$ac_prefix_conf_UPP"_\\1 \\2 \\" >>conftest.sed
+-    echo '#endif/' >>conftest.sed
+-    echo 's/#define  *\([a-z][A-Za-z0-9_]*\)\(.*\)/#ifndef '$ac_prefix_conf_LOW"_\\1 \\" >>conftest.sed
+-    echo '#define '$ac_prefix_conf_LOW"_\\1 \\2 \\" >>conftest.sed
+-    echo '#endif/' >>conftest.sed
++    $as_echo 's/#undef  *\([A-Z_]\)/#undef '$ac_prefix_conf_UPP'_\1/' >conftest.sed
++    $as_echo 's/#undef  *\([a-z]\)/#undef '$ac_prefix_conf_LOW'_\1/' >>conftest.sed
++    $as_echo 's/#define  *\([A-Z_][A-Za-z0-9_]*\)\(.*\)/#ifndef '$ac_prefix_conf_UPP"_\\1 \\" >>conftest.sed
++    $as_echo '#define '$ac_prefix_conf_UPP"_\\1 \\2 \\" >>conftest.sed
++    $as_echo '#endif/' >>conftest.sed
++    $as_echo 's/#define  *\([a-z][A-Za-z0-9_]*\)\(.*\)/#ifndef '$ac_prefix_conf_LOW"_\\1 \\" >>conftest.sed
++    $as_echo '#define '$ac_prefix_conf_LOW"_\\1 \\2 \\" >>conftest.sed
++    $as_echo '#endif/' >>conftest.sed
+     sed -f conftest.sed $ac_prefix_conf_INP >>$ac_prefix_conf_OUT
+-    echo ' ' >>$ac_prefix_conf_OUT
+-    echo '/*' $ac_prefix_conf_DEF '*/' >>$ac_prefix_conf_OUT
+-    echo '#endif' >>$ac_prefix_conf_OUT
++    $as_echo ' ' >>$ac_prefix_conf_OUT
++    $as_echo '/*' $ac_prefix_conf_DEF '*/' >>$ac_prefix_conf_OUT
++    $as_echo '#endif' >>$ac_prefix_conf_OUT
+   else
+     as_fn_error $? "input file $ac_prefix_conf_IN does not exist,     skip generating $ac_prefix_conf_OUT" "$LINENO" 5
+   fi

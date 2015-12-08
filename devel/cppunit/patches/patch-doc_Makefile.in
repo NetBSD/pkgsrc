@@ -1,8 +1,8 @@
-$NetBSD: patch-doc_Makefile.in,v 1.1 2013/08/15 10:26:32 gsutre Exp $
+$NetBSD: patch-doc_Makefile.in,v 1.2 2015/12/08 11:02:25 jperkin Exp $
 
 Install docs in $docdir.
 
---- doc/Makefile.in.orig	2012-09-24 17:52:23.000000000 +0000
+--- doc/Makefile.in.orig	2013-11-11 04:41:52.000000000 +0000
 +++ doc/Makefile.in
 @@ -50,7 +50,7 @@ PRE_UNINSTALL = :
  POST_UNINSTALL = :
