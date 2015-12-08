@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/09/01 04:14:54 mef Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/12/08 01:45:05 wiedi Exp $
 bin/gnuradio-companion
 ${PYSITELIB}/gnuradio/grc/__init__.py
 ${PYSITELIB}/gnuradio/grc/__init__.pyc
@@ -169,6 +169,7 @@ ${PYSITELIB}/grc_gnuradio/blks2/tcp.py
 ${PYSITELIB}/grc_gnuradio/blks2/tcp.pyc
 ${PYSITELIB}/grc_gnuradio/blks2/tcp.pyo
 libexec/gnuradio/grc_setup_freedesktop
+share/gnuradio/examples/grc.conf
 share/gnuradio/examples/grc/simple/variable_config.grc
 share/gnuradio/examples/grc/xmlrpc/readme.txt
 share/gnuradio/examples/grc/xmlrpc/xmlrpc_client.grc
