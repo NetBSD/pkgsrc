@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2015/10/15 04:59:30 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2015/12/08 21:02:11 rillig Exp $
 
 DISTNAME=	xalarm-3.06
 PKGREVISION=	4
@@ -10,10 +10,7 @@ COMMENT=	X11 interactive alarm clock
 
 DEPENDS+=	skill>=4.0:../../sysutils/skill
 
-.include "../../mk/bsd.prefs.mk"
-
 USE_IMAKE=	yes
-XAW_TYPE?=	3d
 
 FORTUNE=	"Sorry, xfortune is unavailable - no fortune!"
 YOW=		"Sorry, xyow is unavailable - no yow!"
@@ -64,5 +61,5 @@ pre-configure:
 	${RUN}${CP} ${FILESDIR}/XAlarm-color.ad ${WRKSRC}/
 
 .include "../../x11/libXpm/buildlink3.mk"
-.include "../../mk/xaw.buildlink3.mk"
+.include "../../x11/libXaw3d/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
