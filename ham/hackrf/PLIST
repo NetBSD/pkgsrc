@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/10/13 13:46:23 mef Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/12/08 21:40:44 wiedi Exp $
 bin/hackrf_cpldjtag
 bin/hackrf_info
 bin/hackrf_max2837
@@ -10,7 +10,7 @@ include/libhackrf/hackrf.h
 lib/libhackrf.a
 lib/libhackrf.so
 lib/libhackrf.so.0
-lib/libhackrf.so.0.3.0
+lib/libhackrf.so.0.4.0
 lib/pkgconfig/libhackrf.pc
 share/hackerRF/COPYING
 share/hackerRF/RELEASENOTES
@@ -58,6 +58,8 @@ share/hackerRF/doc/jawbreaker.jpeg
 share/hackerRF/doc/lemonAndjelly.jpeg
 share/hackerRF/doc/wiki/hardware/modifications/sgpio-gclk2-reroute.jpg
 share/hackerRF/doc/wiki/hardware/modifications/sgpio-p1_12-cut-trace.jpg
+share/hackerRF/doc/wiki/images/baseband-filter/max2837-1m75bw-at-2m.png
+share/hackerRF/doc/wiki/images/baseband-filter/max2837-1m75bw-at-8m.png
 share/hackerRF/doc/wiki/images/hackrf_blockdiagram-digital.png
 share/hackerRF/doc/wiki/images/hackrf_blockdiagram-digital.svg
 share/hackerRF/doc/wiki/images/hackrf_blockdiagram-frontend_baseband.png
@@ -68,16 +70,9 @@ share/hackerRF/firmware-bin/hackrf_jawbreaker_usb_rom_to_ram.bin
 share/hackerRF/firmware-bin/hackrf_one_usb_ram.dfu
 share/hackerRF/firmware-bin/hackrf_one_usb_rom_to_ram.bin
 share/hackerRF/firmware/.gitignore
-share/hackerRF/firmware/Makefile
+share/hackerRF/firmware/CMakeLists.txt
 share/hackerRF/firmware/README
-share/hackerRF/firmware/blinky/.svn/all-wcprops
-share/hackerRF/firmware/blinky/.svn/entries
-share/hackerRF/firmware/blinky/.svn/text-base/Makefile.svn-base
-share/hackerRF/firmware/blinky/.svn/text-base/README.svn-base
-share/hackerRF/firmware/blinky/.svn/text-base/blinky.c.svn-base
-share/hackerRF/firmware/blinky/.svn/tmp/Makefile.2.tmp
-share/hackerRF/firmware/blinky/.svn/tmp/Makefile.tmp
-share/hackerRF/firmware/blinky/Makefile
+share/hackerRF/firmware/blinky/CMakeLists.txt
 share/hackerRF/firmware/blinky/README
 share/hackerRF/firmware/blinky/blinky.c
 share/hackerRF/firmware/common/LPC4320_M4_memory.ld
@@ -85,7 +80,6 @@ share/hackerRF/firmware/common/LPC4330_M4_memory.ld
 share/hackerRF/firmware/common/LPC43xx_M0_memory.ld
 share/hackerRF/firmware/common/LPC43xx_M4_M0_image_from_text.ld
 share/hackerRF/firmware/common/LPC43xx_M4_memory.ld
-share/hackerRF/firmware/common/Makefile_inc.mk
 share/hackerRF/firmware/common/README
 share/hackerRF/firmware/common/bitband.c
 share/hackerRF/firmware/common/bitband.h
@@ -97,7 +91,7 @@ share/hackerRF/firmware/common/gpdma.c
 share/hackerRF/firmware/common/gpdma.h
 share/hackerRF/firmware/common/hackrf_core.c
 share/hackerRF/firmware/common/hackrf_core.h
-share/hackerRF/firmware/common/m0_bin.s
+share/hackerRF/firmware/common/m0_bin.s.cmake
 share/hackerRF/firmware/common/m0_sleep.c
 share/hackerRF/firmware/common/max2837.c
 share/hackerRF/firmware/common/max2837.h
@@ -154,7 +148,8 @@ share/hackerRF/firmware/cpld/sgpio_if_passthrough/sgpio_if_passthrough.svf
 share/hackerRF/firmware/cpld/sgpio_if_passthrough/sgpio_if_passthrough.xise
 share/hackerRF/firmware/cpld/sgpio_if_passthrough/top.ucf
 share/hackerRF/firmware/cpld/sgpio_if_passthrough/top.vhd
-share/hackerRF/firmware/hackrf_usb/Makefile
+share/hackerRF/firmware/hackrf-common.cmake
+share/hackerRF/firmware/hackrf_usb/CMakeLists.txt
 share/hackerRF/firmware/hackrf_usb/hackrf_usb.c
 share/hackerRF/firmware/hackrf_usb/sgpio_isr.c
 share/hackerRF/firmware/hackrf_usb/sgpio_isr.h
@@ -176,40 +171,41 @@ share/hackerRF/firmware/hackrf_usb/usb_device.c
 share/hackerRF/firmware/hackrf_usb/usb_device.h
 share/hackerRF/firmware/hackrf_usb/usb_endpoint.c
 share/hackerRF/firmware/hackrf_usb/usb_endpoint.h
-share/hackerRF/firmware/mixertx/Makefile
+share/hackerRF/firmware/mixertx/CMakeLists.txt
 share/hackerRF/firmware/mixertx/README
 share/hackerRF/firmware/mixertx/mixertx.c
-share/hackerRF/firmware/sgpio-rx/Makefile
+share/hackerRF/firmware/sgpio-rx/CMakeLists.txt
 share/hackerRF/firmware/sgpio-rx/README
 share/hackerRF/firmware/sgpio-rx/sgpio-rx.c
 share/hackerRF/firmware/sgpio-rx/table.py
-share/hackerRF/firmware/sgpio/Makefile
+share/hackerRF/firmware/sgpio/CMakeLists.txt
 share/hackerRF/firmware/sgpio/README
 share/hackerRF/firmware/sgpio/sgpio_test.c
-share/hackerRF/firmware/sgpio_passthrough/Makefile
+share/hackerRF/firmware/sgpio_passthrough/CMakeLists.txt
 share/hackerRF/firmware/sgpio_passthrough/README
 share/hackerRF/firmware/sgpio_passthrough/Test_SGPIO0_to15.ods
 share/hackerRF/firmware/sgpio_passthrough/Test_SGPIO0_to15.pdf
 share/hackerRF/firmware/sgpio_passthrough/Test_SGPIO_GPIO_mode_test_sgpio_interface.txt
 share/hackerRF/firmware/sgpio_passthrough/sgpio_passthrough.c
-share/hackerRF/firmware/simpletx/Makefile
+share/hackerRF/firmware/simpletx/CMakeLists.txt
 share/hackerRF/firmware/simpletx/README
 share/hackerRF/firmware/simpletx/simpletx.c
-share/hackerRF/firmware/spiflash/Makefile
+share/hackerRF/firmware/spiflash/CMakeLists.txt
 share/hackerRF/firmware/spiflash/README
 share/hackerRF/firmware/spiflash/spiflash.c
-share/hackerRF/firmware/startup/Makefile
+share/hackerRF/firmware/startup/CMakeLists.txt
 share/hackerRF/firmware/startup/README
 share/hackerRF/firmware/startup/startup.c
-share/hackerRF/firmware/startup_systick/Makefile
+share/hackerRF/firmware/startup_systick/CMakeLists.txt
 share/hackerRF/firmware/startup_systick/README
 share/hackerRF/firmware/startup_systick/startup_systick.c
-share/hackerRF/firmware/startup_systick_perfo/Makefile
+share/hackerRF/firmware/startup_systick_perfo/CMakeLists.txt
 share/hackerRF/firmware/startup_systick_perfo/README
 share/hackerRF/firmware/startup_systick_perfo/perf_mips.c
 share/hackerRF/firmware/startup_systick_perfo/result_exec_from_SPIFI.txt
 share/hackerRF/firmware/startup_systick_perfo/result_exec_from_SRAM.txt
 share/hackerRF/firmware/startup_systick_perfo/startup_systick.c
+share/hackerRF/firmware/toolchain-arm-cortex-m.cmake
 share/hackerRF/firmware/tools/check_clock.py
 share/hackerRF/firmware/tools/dump_cgu.py
 share/hackerRF/hardware/.gitignore
@@ -306,4 +302,3 @@ share/hackerRF/hardware/lollipop/lollipop.pro
 share/hackerRF/hardware/lollipop/lollipop.sch
 share/hackerRF/hardware/lollipop/lollipop_logic.py
 share/hackerRF/hardware/test/si5351-configure.py
-@pkgdir share/hackerRF/firmware/libopencm3
