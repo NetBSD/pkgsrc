@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4903 2015/12/08 16:53:18 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4904 2015/12/08 17:15:57 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8150,3 +8150,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-subprocess32 to 3.2.7 [nonaka 2015-12-08]
 	Updated multimedia/libbluray to 0.9.2 [adam 2015-12-08]
 	Updated devel/pkgconf to 0.9.12.20151209 [wiz 2015-12-08]
+	Updated sysutils/cfengine3 to 3.7.2 [fhajny 2015-12-08]
