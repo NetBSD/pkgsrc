@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2015/09/02 10:54:29 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.33 2015/12/08 11:24:59 szptvlfn Exp $
 bin/zsh
 bin/${PKGNAME}
 info/zsh.info
@@ -19,6 +19,7 @@ ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/mathfunc.so
 ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/net/socket.so
 ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/net/tcp.so
 ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/newuser.so
+${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/param/private.so
 ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/parameter.so
 ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/regex.so
 ${PLIST.dynamic}lib/zsh/${PKGVERSION}/zsh/rlimits.so
@@ -205,6 +206,7 @@ share/zsh/${PKGVERSION}/functions/_cryptsetup
 share/zsh/${PKGVERSION}/functions/_cssh
 share/zsh/${PKGVERSION}/functions/_csup
 share/zsh/${PKGVERSION}/functions/_ctags_tags
+share/zsh/${PKGVERSION}/functions/_curl
 share/zsh/${PKGVERSION}/functions/_cut
 share/zsh/${PKGVERSION}/functions/_cvs
 share/zsh/${PKGVERSION}/functions/_cvsup
@@ -362,6 +364,7 @@ share/zsh/${PKGVERSION}/functions/_gzip
 share/zsh/${PKGVERSION}/functions/_hash
 share/zsh/${PKGVERSION}/functions/_have_glob_qual
 share/zsh/${PKGVERSION}/functions/_hdiutil
+share/zsh/${PKGVERSION}/functions/_head
 share/zsh/${PKGVERSION}/functions/_hg
 share/zsh/${PKGVERSION}/functions/_history
 share/zsh/${PKGVERSION}/functions/_history_complete_word
@@ -416,6 +419,7 @@ share/zsh/${PKGVERSION}/functions/_links
 share/zsh/${PKGVERSION}/functions/_lintian
 share/zsh/${PKGVERSION}/functions/_list
 share/zsh/${PKGVERSION}/functions/_list_files
+share/zsh/${PKGVERSION}/functions/_lldb
 share/zsh/${PKGVERSION}/functions/_ln
 share/zsh/${PKGVERSION}/functions/_loadkeys
 share/zsh/${PKGVERSION}/functions/_locales
@@ -505,6 +509,7 @@ share/zsh/${PKGVERSION}/functions/_nothing
 share/zsh/${PKGVERSION}/functions/_notmuch
 share/zsh/${PKGVERSION}/functions/_npm
 share/zsh/${PKGVERSION}/functions/_nslookup
+share/zsh/${PKGVERSION}/functions/_objdump
 share/zsh/${PKGVERSION}/functions/_object_classes
 share/zsh/${PKGVERSION}/functions/_od
 share/zsh/${PKGVERSION}/functions/_okular
@@ -622,6 +627,7 @@ share/zsh/${PKGVERSION}/functions/_sccs
 share/zsh/${PKGVERSION}/functions/_sched
 share/zsh/${PKGVERSION}/functions/_schedtool
 share/zsh/${PKGVERSION}/functions/_schroot
+share/zsh/${PKGVERSION}/functions/_scl
 share/zsh/${PKGVERSION}/functions/_screen
 share/zsh/${PKGVERSION}/functions/_sed
 share/zsh/${PKGVERSION}/functions/_sep_parts
@@ -676,8 +682,8 @@ share/zsh/${PKGVERSION}/functions/_sysctl
 share/zsh/${PKGVERSION}/functions/_sysstat
 share/zsh/${PKGVERSION}/functions/_systat
 share/zsh/${PKGVERSION}/functions/_system_profiler
-share/zsh/${PKGVERSION}/functions/_systemd
 share/zsh/${PKGVERSION}/functions/_tags
+share/zsh/${PKGVERSION}/functions/_tail
 share/zsh/${PKGVERSION}/functions/_tar
 share/zsh/${PKGVERSION}/functions/_tar_archive
 share/zsh/${PKGVERSION}/functions/_tardy
@@ -704,6 +710,7 @@ share/zsh/${PKGVERSION}/functions/_topgit
 share/zsh/${PKGVERSION}/functions/_totd
 share/zsh/${PKGVERSION}/functions/_tpb
 share/zsh/${PKGVERSION}/functions/_tpconfig
+share/zsh/${PKGVERSION}/functions/_tr
 share/zsh/${PKGVERSION}/functions/_tracepath
 share/zsh/${PKGVERSION}/functions/_trap
 share/zsh/${PKGVERSION}/functions/_tree
@@ -835,7 +842,9 @@ share/zsh/${PKGVERSION}/functions/_zoneadm
 share/zsh/${PKGVERSION}/functions/_zones
 share/zsh/${PKGVERSION}/functions/_zpool
 share/zsh/${PKGVERSION}/functions/_zpty
+share/zsh/${PKGVERSION}/functions/_zsh
 share/zsh/${PKGVERSION}/functions/_zsh-mime-handler
+share/zsh/${PKGVERSION}/functions/_zsocket
 share/zsh/${PKGVERSION}/functions/_zstyle
 share/zsh/${PKGVERSION}/functions/_ztodo
 share/zsh/${PKGVERSION}/functions/_zypper
@@ -848,6 +857,7 @@ share/zsh/${PKGVERSION}/functions/backward-word-match
 share/zsh/${PKGVERSION}/functions/bashcompinit
 share/zsh/${PKGVERSION}/functions/before
 share/zsh/${PKGVERSION}/functions/bracketed-paste-magic
+share/zsh/${PKGVERSION}/functions/bracketed-paste-url-magic
 share/zsh/${PKGVERSION}/functions/calendar
 share/zsh/${PKGVERSION}/functions/calendar_add
 share/zsh/${PKGVERSION}/functions/calendar_edit
@@ -1024,6 +1034,7 @@ share/zsh/${PKGVERSION}/functions/zsh-mime-handler
 share/zsh/${PKGVERSION}/functions/zsh-mime-setup
 ${PLIST.dynamic}share/zsh/${PKGVERSION}/functions/zsh-newuser-install
 share/zsh/${PKGVERSION}/functions/zsh_directory_name_cdr
+share/zsh/${PKGVERSION}/functions/zsh_directory_name_generic
 share/zsh/${PKGVERSION}/functions/zstyle+
 share/zsh/${PKGVERSION}/functions/ztodo
 share/zsh/${PKGVERSION}/help/alias
