@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2015/10/19 11:42:46 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.8 2015/12/08 09:35:24 fhajny Exp $
 bin/mongoc-stat
 include/libmongoc-1.0/mongoc-array-private.h
 include/libmongoc-1.0/mongoc-async-cmd-private.h
@@ -26,6 +26,8 @@ include/libmongoc-1.0/mongoc-database-private.h
 include/libmongoc-1.0/mongoc-database.h
 include/libmongoc-1.0/mongoc-errno-private.h
 include/libmongoc-1.0/mongoc-error.h
+include/libmongoc-1.0/mongoc-find-and-modify-private.h
+include/libmongoc-1.0/mongoc-find-and-modify.h
 include/libmongoc-1.0/mongoc-flags.h
 include/libmongoc-1.0/mongoc-gridfs-file-list-private.h
 include/libmongoc-1.0/mongoc-gridfs-file-list.h
@@ -46,11 +48,14 @@ include/libmongoc-1.0/mongoc-log.h
 include/libmongoc-1.0/mongoc-matcher-op-private.h
 include/libmongoc-1.0/mongoc-matcher-private.h
 include/libmongoc-1.0/mongoc-matcher.h
+include/libmongoc-1.0/mongoc-memcmp-private.h
 include/libmongoc-1.0/mongoc-opcode-private.h
 include/libmongoc-1.0/mongoc-opcode.h
 include/libmongoc-1.0/mongoc-queue-private.h
 ${PLIST.ssl}include/libmongoc-1.0/mongoc-rand-private.h
 ${PLIST.ssl}include/libmongoc-1.0/mongoc-rand.h
+include/libmongoc-1.0/mongoc-read-concern-private.h
+include/libmongoc-1.0/mongoc-read-concern.h
 include/libmongoc-1.0/mongoc-read-prefs-private.h
 include/libmongoc-1.0/mongoc-read-prefs.h
 include/libmongoc-1.0/mongoc-rpc-private.h
@@ -58,6 +63,7 @@ include/libmongoc-1.0/mongoc-sasl-private.h
 include/libmongoc-1.0/mongoc-scram-private.h
 include/libmongoc-1.0/mongoc-server-description-private.h
 include/libmongoc-1.0/mongoc-server-description.h
+include/libmongoc-1.0/mongoc-server-stream-private.h
 include/libmongoc-1.0/mongoc-set-private.h
 include/libmongoc-1.0/mongoc-socket-private.h
 include/libmongoc-1.0/mongoc-socket.h
@@ -108,6 +114,7 @@ man/man3/mongoc_bulk_operation_insert.3
 man/man3/mongoc_bulk_operation_remove.3
 man/man3/mongoc_bulk_operation_remove_one.3
 man/man3/mongoc_bulk_operation_replace_one.3
+man/man3/mongoc_bulk_operation_set_bypass_document_validation.3
 man/man3/mongoc_bulk_operation_t.3
 man/man3/mongoc_bulk_operation_update.3
 man/man3/mongoc_bulk_operation_update_one.3
@@ -123,6 +130,7 @@ man/man3/mongoc_client_get_default_database.3
 man/man3/mongoc_client_get_gridfs.3
 man/man3/mongoc_client_get_max_bson_size.3
 man/man3/mongoc_client_get_max_message_size.3
+man/man3/mongoc_client_get_read_concern.3
 man/man3/mongoc_client_get_read_prefs.3
 man/man3/mongoc_client_get_server_status.3
 man/man3/mongoc_client_get_uri.3
@@ -138,6 +146,7 @@ man/man3/mongoc_client_pool_push.3
 man/man3/mongoc_client_pool_set_ssl_opts.3
 man/man3/mongoc_client_pool_t.3
 man/man3/mongoc_client_pool_try_pop.3
+man/man3/mongoc_client_set_read_concern.3
 man/man3/mongoc_client_set_read_prefs.3
 man/man3/mongoc_client_set_ssl_opts.3
 man/man3/mongoc_client_set_stream_initiator.3
@@ -146,6 +155,7 @@ man/man3/mongoc_client_t.3
 man/man3/mongoc_collection_aggregate.3
 man/man3/mongoc_collection_command.3
 man/man3/mongoc_collection_command_simple.3
+man/man3/mongoc_collection_copy.3
 man/man3/mongoc_collection_count.3
 man/man3/mongoc_collection_count_with_opts.3
 man/man3/mongoc_collection_create_bulk_operation.3
@@ -157,9 +167,11 @@ man/man3/mongoc_collection_drop_index.3
 man/man3/mongoc_collection_ensure_index.3
 man/man3/mongoc_collection_find.3
 man/man3/mongoc_collection_find_and_modify.3
+man/man3/mongoc_collection_find_and_modify_with_opts.3
 man/man3/mongoc_collection_find_indexes.3
 man/man3/mongoc_collection_get_last_error.3
 man/man3/mongoc_collection_get_name.3
+man/man3/mongoc_collection_get_read_concern.3
 man/man3/mongoc_collection_get_read_prefs.3
 man/man3/mongoc_collection_get_write_concern.3
 man/man3/mongoc_collection_insert.3
@@ -168,6 +180,7 @@ man/man3/mongoc_collection_keys_to_index_string.3
 man/man3/mongoc_collection_remove.3
 man/man3/mongoc_collection_rename.3
 man/man3/mongoc_collection_save.3
+man/man3/mongoc_collection_set_read_concern.3
 man/man3/mongoc_collection_set_read_prefs.3
 man/man3/mongoc_collection_set_write_concern.3
 man/man3/mongoc_collection_stats.3
@@ -179,13 +192,16 @@ man/man3/mongoc_cursor_current.3
 man/man3/mongoc_cursor_destroy.3
 man/man3/mongoc_cursor_error.3
 man/man3/mongoc_cursor_get_host.3
+man/man3/mongoc_cursor_get_max_await_time_ms.3
 man/man3/mongoc_cursor_is_alive.3
 man/man3/mongoc_cursor_more.3
 man/man3/mongoc_cursor_next.3
+man/man3/mongoc_cursor_set_max_await_time_ms.3
 man/man3/mongoc_cursor_t.3
 man/man3/mongoc_database_add_user.3
 man/man3/mongoc_database_command.3
 man/man3/mongoc_database_command_simple.3
+man/man3/mongoc_database_copy.3
 man/man3/mongoc_database_create_collection.3
 man/man3/mongoc_database_destroy.3
 man/man3/mongoc_database_drop.3
@@ -193,15 +209,25 @@ man/man3/mongoc_database_find_collections.3
 man/man3/mongoc_database_get_collection.3
 man/man3/mongoc_database_get_collection_names.3
 man/man3/mongoc_database_get_name.3
+man/man3/mongoc_database_get_read_concern.3
 man/man3/mongoc_database_get_read_prefs.3
 man/man3/mongoc_database_get_write_concern.3
 man/man3/mongoc_database_has_collection.3
 man/man3/mongoc_database_remove_all_users.3
 man/man3/mongoc_database_remove_user.3
+man/man3/mongoc_database_set_read_concern.3
 man/man3/mongoc_database_set_read_prefs.3
 man/man3/mongoc_database_set_write_concern.3
 man/man3/mongoc_database_t.3
 man/man3/mongoc_delete_flags_t.3
+man/man3/mongoc_find_and_modify_opts_destroy.3
+man/man3/mongoc_find_and_modify_opts_new.3
+man/man3/mongoc_find_and_modify_opts_set_bypass_document_validation.3
+man/man3/mongoc_find_and_modify_opts_set_fields.3
+man/man3/mongoc_find_and_modify_opts_set_flags.3
+man/man3/mongoc_find_and_modify_opts_set_sort.3
+man/man3/mongoc_find_and_modify_opts_set_update.3
+man/man3/mongoc_find_and_modify_opts_t.3
 man/man3/mongoc_get_major_version.3
 man/man3/mongoc_get_micro_version.3
 man/man3/mongoc_get_minor_version.3
@@ -245,6 +271,7 @@ man/man3/mongoc_gridfs_get_chunks.3
 man/man3/mongoc_gridfs_get_files.3
 man/man3/mongoc_gridfs_remove_by_filename.3
 man/man3/mongoc_gridfs_t.3
+man/man3/mongoc_host_list_t.3
 man/man3/mongoc_index_opt_geo_get_default.3
 man/man3/mongoc_index_opt_geo_init.3
 man/man3/mongoc_index_opt_geo_t.3
@@ -266,6 +293,12 @@ man/man3/mongoc_rand.3
 man/man3/mongoc_rand_add.3
 man/man3/mongoc_rand_seed.3
 man/man3/mongoc_rand_status.3
+man/man3/mongoc_read_concern_copy.3
+man/man3/mongoc_read_concern_destroy.3
+man/man3/mongoc_read_concern_get_level.3
+man/man3/mongoc_read_concern_new.3
+man/man3/mongoc_read_concern_set_level.3
+man/man3/mongoc_read_concern_t.3
 man/man3/mongoc_read_mode_t.3
 man/man3/mongoc_read_prefs_add_tag.3
 man/man3/mongoc_read_prefs_copy.3
@@ -337,6 +370,7 @@ man/man3/mongoc_uri_get_database.3
 man/man3/mongoc_uri_get_hosts.3
 man/man3/mongoc_uri_get_options.3
 man/man3/mongoc_uri_get_password.3
+man/man3/mongoc_uri_get_read_concern.3
 man/man3/mongoc_uri_get_read_prefs.3
 man/man3/mongoc_uri_get_read_prefs_t.3
 man/man3/mongoc_uri_get_replica_set.3
