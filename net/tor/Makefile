@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.105 2015/07/19 12:04:47 wiz Exp $
+# $NetBSD: Makefile,v 1.106 2015/12/08 13:19:38 wiz Exp $
 
-DISTNAME=		tor-0.2.6.10
+DISTNAME=		tor-0.2.7.5
 CATEGORIES=		net security
 MASTER_SITES=		http://www.torproject.org/dist/
 
@@ -54,9 +54,10 @@ CHECK_PORTABILITY_SKIP+=contrib/*
 CFLAGS+=		-c99
 .endif
 
-BUILDLINK_API_DEPENDS.libevent+= libevent>=1.2
+BUILDLINK_API_DEPENDS.libevent+= libevent>=2.0
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+BUILDLINK_API_DEPENDS.openssl+=	openssl>=1.0
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 
