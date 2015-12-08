@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.8 2015/05/21 14:07:10 rodent Exp $
+$NetBSD: patch-aa,v 1.9 2015/12/08 17:41:56 adam Exp $
 
 time_t changes
 
---- items.c.orig	2015-01-01 07:50:52.000000000 +0000
+--- items.c.orig	2015-11-20 01:18:56.000000000 +0000
 +++ items.c
-@@ -440,9 +440,9 @@ char *do_item_cachedump(const unsigned i
+@@ -460,9 +460,9 @@ char *item_cachedump(const unsigned int 
          /* Copy the key since it may not be null-terminated in the struct */
          strncpy(key_temp, ITEM_key(it), it->nkey);
          key_temp[it->nkey] = 0x00; /* terminate */
@@ -16,19 +16,19 @@ time_t changes
          if (bufcurr + len + 6 > memlimit)  /* 6 is END\r\n\0 */
              break;
          memcpy(buffer + bufcurr, temp, len);
-@@ -506,13 +506,13 @@ void do_item_stats(ADD_STAT add_stats, v
-                 continue;
-             }
-             APPEND_NUM_FMT_STAT(fmt, i, "number", "%u", sizes[i]);
--            APPEND_NUM_FMT_STAT(fmt, i, "age", "%u", current_time - tails[i]->time);
-+            APPEND_NUM_FMT_STAT(fmt, i, "age", "%jd", current_time - tails[i]->time);
-             APPEND_NUM_FMT_STAT(fmt, i, "evicted",
-                                 "%llu", (unsigned long long)itemstats[i].evicted);
-             APPEND_NUM_FMT_STAT(fmt, i, "evicted_nonzero",
-                                 "%llu", (unsigned long long)itemstats[i].evicted_nonzero);
-             APPEND_NUM_FMT_STAT(fmt, i, "evicted_time",
--                                "%u", itemstats[i].evicted_time);
-+                                "%jd", itemstats[i].evicted_time);
-             APPEND_NUM_FMT_STAT(fmt, i, "outofmemory",
-                                 "%llu", (unsigned long long)itemstats[i].outofmemory);
-             APPEND_NUM_FMT_STAT(fmt, i, "tailrepairs",
+@@ -576,13 +576,13 @@ void item_stats(ADD_STAT add_stats, void
+             if (settings.expirezero_does_not_evict)
+                 APPEND_NUM_FMT_STAT(fmt, n, "number_noexp", "%u", lru_size_map[3]);
+         }
+-        APPEND_NUM_FMT_STAT(fmt, n, "age", "%u", age);
++        APPEND_NUM_FMT_STAT(fmt, n, "age", "%jd", age);
+         APPEND_NUM_FMT_STAT(fmt, n, "evicted",
+                             "%llu", (unsigned long long)totals.evicted);
+         APPEND_NUM_FMT_STAT(fmt, n, "evicted_nonzero",
+                             "%llu", (unsigned long long)totals.evicted_nonzero);
+         APPEND_NUM_FMT_STAT(fmt, n, "evicted_time",
+-                            "%u", totals.evicted_time);
++                            "%jd", totals.evicted_time);
+         APPEND_NUM_FMT_STAT(fmt, n, "outofmemory",
+                             "%llu", (unsigned long long)totals.outofmemory);
+         APPEND_NUM_FMT_STAT(fmt, n, "tailrepairs",
