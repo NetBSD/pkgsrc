@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4900 2015/12/08 13:19:53 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4901 2015/12/08 14:13:10 nonaka Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8147,3 +8147,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/mysql56-server to 5.6.28 [adam 2015-12-08]
 	Updated devel/pkgconf to 0.9.12.20151208 [wiz 2015-12-08]
 	Updated net/tor to 0.2.7.5 [wiz 2015-12-08]
+	Updated devel/py-subprocess32 to 3.2.7 [nonaka 2015-12-08]
