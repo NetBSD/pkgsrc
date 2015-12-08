@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2015/12/07 17:40:27 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2015/12/08 17:15:01 joerg Exp $
 #
 
 DISTNAME=	lp_solve_5.5.2.0_source
 PKGNAME=	${DISTNAME:S/_source//:S/_5/-5/}
+PKGREVISION=	1
 CATEGORIES=	math devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lpsolve/}
 
