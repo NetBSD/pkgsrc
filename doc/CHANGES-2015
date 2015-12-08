@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4898 2015/12/08 12:31:22 adam Exp $
+$NetBSD: CHANGES-2015,v 1.4899 2015/12/08 13:15:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8145,3 +8145,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated shells/zsh to 5.2 [szptvlfn 2015-12-08]
 	Updated databases/mysql56-client to 5.6.28 [adam 2015-12-08]
 	Updated databases/mysql56-server to 5.6.28 [adam 2015-12-08]
+	Updated devel/pkgconf to 0.9.12.20151208 [wiz 2015-12-08]
