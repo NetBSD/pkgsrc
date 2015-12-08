@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4902 2015/12/08 14:40:10 adam Exp $
+$NetBSD: CHANGES-2015,v 1.4903 2015/12/08 16:53:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8149,3 +8149,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/tor to 0.2.7.5 [wiz 2015-12-08]
 	Updated devel/py-subprocess32 to 3.2.7 [nonaka 2015-12-08]
 	Updated multimedia/libbluray to 0.9.2 [adam 2015-12-08]
+	Updated devel/pkgconf to 0.9.12.20151209 [wiz 2015-12-08]
