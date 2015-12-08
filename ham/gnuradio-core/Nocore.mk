@@ -1,4 +1,4 @@
-# $NetBSD: Nocore.mk,v 1.7 2015/09/01 04:13:43 mef Exp $
+# $NetBSD: Nocore.mk,v 1.8 2015/12/08 01:21:01 wiedi Exp $
 
 DEPENDS+=	gnuradio-core-[0-9]*:../../ham/gnuradio-core
 
@@ -25,7 +25,7 @@ post-install:
 	    fi							\
 	  done							\
 	done							\
-	| ${AWK} ${_PLIST_SHLIB_AWK}				\
+	| ${PKGSRC_SETENV} ${_PLIST_AWK_ENV} ${AWK} ${_PLIST_SHLIB_AWK}				\
 	> ${WRKDIR}/.PLIST.minus;
 	(cd ${WRKDIR}/.destdir/${PREFIX};			\
 	${RM} -f $$(cat ${WRKDIR}/.PLIST.minus)	);
