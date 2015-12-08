@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2015/11/05 13:41:18 fhajny Exp $
+# $NetBSD: Makefile,v 1.16 2015/12/08 09:34:38 fhajny Exp $
 
-DISTNAME=	libbson-1.2.1
+DISTNAME=	libbson-1.3.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mongodb/}
 
@@ -11,17 +11,18 @@ LICENSE=	apache-2.0
 
 GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
-BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
-BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
-
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
 
-CONFIGURE_ARGS+=	--enable-man-pages=yes
-
 PKGCONFIG_OVERRIDE+=	src/libbson-1.0.pc.in
+
+INSTALLATION_DIRS+=	${PKGMANDIR}/man3
+
+post-install:
+	${INSTALL_MAN} ${WRKSRC}/doc/man/bson_*.3 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man3
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
