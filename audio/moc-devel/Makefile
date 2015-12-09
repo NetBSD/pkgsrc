@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2015/08/18 07:31:02 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2015/12/09 01:39:10 wiedi Exp $
 
 DISTNAME=		moc-2.5.0-beta1
 PKGREVISION=		3
@@ -36,7 +36,7 @@ SUBST_MESSAGE.oss=	Fixing hardcoded audio device.
 post-extract:
 	${CP} ${FILESDIR}/getline.c ${WRKSRC}
 
-LIBS.SunOS+=    -lsocket
+LDFLAGS.SunOS+=    -lsocket
 
 BUILDLINK_TRANSFORM+=	l:db:db4
 
