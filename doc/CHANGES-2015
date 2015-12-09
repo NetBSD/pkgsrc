@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4907 2015/12/09 00:35:19 wiedi Exp $
+$NetBSD: CHANGES-2015,v 1.4908 2015/12/09 11:27:15 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8154,3 +8154,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/memcached to 1.4.25 [adam 2015-12-08]
 	Updated ham/hackrf to 2015.07.2 [wiedi 2015-12-08]
 	Updated editors/nano to 2.5.0 [wiedi 2015-12-09]
+	Updated lang/nodejs to 5.2.0 [fhajny 2015-12-09]
