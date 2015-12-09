@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4909 2015/12/09 13:41:46 wen Exp $
+$NetBSD: CHANGES-2015,v 1.4910 2015/12/09 13:46:59 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8156,3 +8156,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated editors/nano to 2.5.0 [wiedi 2015-12-09]
 	Updated lang/nodejs to 5.2.0 [fhajny 2015-12-09]
 	Updated www/p5-Mojolicious to 6.36 [wen 2015-12-09]
+	Updated www/p5-URI-Fetch to 0.11 [wen 2015-12-09]
