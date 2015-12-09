@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/12/05 21:25:33 adam Exp $
+# $NetBSD: Makefile,v 1.5 2015/12/09 03:03:46 kamil Exp $
 
 DISTNAME=	bokken-1.8
 CATEGORIES=	devel
@@ -13,6 +13,7 @@ DEPENDS+=	${PYPKGPREFIX}-graphviz-[0-9]*:../../graphics/py-graphviz
 DEPENDS+=	${PYPKGPREFIX}-gtk2-[0-9]*:../../x11/py-gtk2
 DEPENDS+=	${PYPKGPREFIX}-gtksourceview-[0-9]*:../../x11/py-gtksourceview
 DEPENDS+=	${PYPKGPREFIX}-radare2-[0-9]*:../../devel/py-radare2
+DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
 
 USE_TOOLS+=	pax
 
@@ -34,6 +35,14 @@ SUBST_STAGE.bin-dot=		post-patch
 SUBST_MESSAGE.bin-dot=		Fixing path to dot(1)
 SUBST_FILES.bin-dot=		ui/graph.py
 SUBST_SED.bin-dot=	-e 's,/usr/bin/dot,${PREFIX}/bin/dot,'
+
+SUBST_CLASSES+=			bin-python
+SUBST_STAGE.bin-python=		post-patch
+SUBST_MESSAGE.bin-python=	Fixing path to python${PYVERSSUFFIX}(1)
+SUBST_FILES.bin-python=		bokken
+SUBST_SED.bin-python=		-e 's,"python","python${PYVERSSUFFIX}",'
+SUBST_SED.bin-python+=		-e 's,\(PYTHON_VER=\).*,\1${PYVERSSUFFIX},'
+SUBST_SED.bin-python+=		-e 's,-eq,=,'
 
 INSTALLATION_DIRS=	bin share/bokken
 
