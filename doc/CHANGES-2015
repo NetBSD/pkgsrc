@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4913 2015/12/09 15:33:26 tsutsui Exp $
+$NetBSD: CHANGES-2015,v 1.4914 2015/12/09 19:55:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8160,3 +8160,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/p5-Plack to 1.0039 [wen 2015-12-09]
 	Updated security/keepassx to 0.4.4 [wiz 2015-12-09]
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.554 [tsutsui 2015-12-09]
+	Updated net/p5-Net-DNS to 1.04 [wiz 2015-12-09]
