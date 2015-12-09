@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4911 2015/12/09 13:53:34 wen Exp $
+$NetBSD: CHANGES-2015,v 1.4912 2015/12/09 13:54:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8158,3 +8158,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/p5-Mojolicious to 6.36 [wen 2015-12-09]
 	Updated www/p5-URI-Fetch to 0.11 [wen 2015-12-09]
 	Updated www/p5-Plack to 1.0039 [wen 2015-12-09]
+	Updated security/keepassx to 0.4.4 [wiz 2015-12-09]

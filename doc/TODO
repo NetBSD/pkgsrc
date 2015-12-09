@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15172 2015/12/09 13:46:59 wen Exp $
+$NetBSD: TODO,v 1.15173 2015/12/09 13:54:43 wiz Exp $
 
 Suggested new packages
 ======================
@@ -973,7 +973,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o kdenlive-0.9.10
 	o kdevelop4-4.7.1
 	o kdevplatform-1.7.1
-	o keepassx-0.4.4
 	o keychain-2.8.1
 	o kipi-plugins-4.12.0
 	o kismet-2011.03r2 [pkg/45692]
