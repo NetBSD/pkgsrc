@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.16 2015/11/03 22:50:34 agc Exp $
+$NetBSD: distinfo,v 1.17 2015/12/09 21:00:47 asau Exp $
 
-SHA1 (ecl-13.5.1.tgz) = db7f732e5e12182118f00c02d8d2531f6d6aefb2
-RMD160 (ecl-13.5.1.tgz) = e704fbe2d598376d9818bd5512a9457ca3661feb
-SHA512 (ecl-13.5.1.tgz) = a09f8b824aa78e461d700eefb1a8b68b876e15d49124a397e0b5b58ad73b80f818133a7b8e48ddb83505eea2f9c5fb024de8701b527524004e336e456eb07c84
-Size (ecl-13.5.1.tgz) = 9401163 bytes
-SHA1 (patch-aa) = 84c5a7617843594d83229bb8621d897a183dc8f9
+SHA1 (ecl-16.0.0.tgz) = 3309b5f4126d1a024f7eacaec6aca0e391dd3c75
+RMD160 (ecl-16.0.0.tgz) = adf1e77f0bf602534566fd986d27a7c84deac045
+Size (ecl-16.0.0.tgz) = 8009304 bytes
+SHA1 (patch-aa) = 2f4ce3ab55b4d8a03480191bf2820b9655d4fc3c
 SHA1 (patch-ab) = f0229ede69a04648eadf03e0d4bcbed2c200c340
+SHA1 (patch-ac) = d4266cdf41f1df3fe3014dcd28c03113d798efd5
