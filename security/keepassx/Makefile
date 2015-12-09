@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2015/12/06 14:20:34 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2015/12/09 13:54:32 wiz Exp $
 
-DISTNAME=	keepassx-0.4.3
-PKGREVISION=	9
+DISTNAME=	keepassx-0.4.4
 CATEGORIES=	security
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=keepassx/}
+MASTER_SITES=	https://www.keepassx.org/releases/${PKGVERSION_NOREV}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.keepassx.org/
