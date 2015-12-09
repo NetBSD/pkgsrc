@@ -1,28 +1,28 @@
-$NetBSD: patch-aa,v 1.4 2012/07/26 21:09:29 asau Exp $
+$NetBSD: patch-aa,v 1.5 2015/12/09 21:00:47 asau Exp $
 
---- src/c/file.d.orig	2012-07-24 16:51:53.000000000 +0000
-+++ src/c/file.d
-@@ -5358,7 +5358,7 @@ ecl_integer_to_off_t(cl_object offset)
- 	} else if (ECL_BIGNUMP(offset)) {
- 		if (sizeof(ECL_BIGNUM_LIMBS(offset)[0]) == sizeof(cl_index)) {
- 			if (ECL_BIGNUM_SIZE(offset) > 2) {
--				goto ERR;
-+				goto ERROR;
- 			}
- 			if (ECL_BIGNUM_SIZE(offset) == 2) {
- 			    output = ECL_BIGNUM_LIMBS(offset)[1];
-@@ -5367,12 +5367,12 @@ ecl_integer_to_off_t(cl_object offset)
- 			output += ECL_BIGNUM_LIMBS(offset)[0];
- 		} else if (sizeof(ECL_BIGNUM_LIMBS(offset)[0]) >= sizeof(ecl_off_t)) {
- 			if (ECL_BIGNUM_SIZE(offset) > 1) {
--				goto ERR;
-+				goto ERROR;
- 			}
- 			output = ECL_BIGNUM_LIMBS(offset)[0];
- 		}
- 	} else {
--	ERR:	FEerror("Not a valid file offset: ~S", 1, offset);
-+	ERROR:	FEerror("Not a valid file offset: ~S", 1, offset);
- 	}
- 	return output;
+--- src/c/file.d.orig	2015-08-24 02:41:27.000000000 -0400
++++ src/c/file.d	2015-10-25 15:28:33.000000000 -0400
+@@ -5367,7 +5367,7 @@ ecl_integer_to_off_t(cl_object offset)
+         } else if (ECL_BIGNUMP(offset)) {
+                 if (sizeof(ECL_BIGNUM_LIMBS(offset)[0]) == sizeof(cl_index)) {
+                         if (ECL_BIGNUM_SIZE(offset) > 2) {
+-                                goto ERR;
++                                goto ERROR;
+                         }
+                         if (ECL_BIGNUM_SIZE(offset) == 2) {
+                             output = ECL_BIGNUM_LIMBS(offset)[1];
+@@ -5376,12 +5376,12 @@ ecl_integer_to_off_t(cl_object offset)
+                         output += ECL_BIGNUM_LIMBS(offset)[0];
+                 } else if (sizeof(ECL_BIGNUM_LIMBS(offset)[0]) >= sizeof(ecl_off_t)) {
+                         if (ECL_BIGNUM_SIZE(offset) > 1) {
+-                                goto ERR;
++                                goto ERROR;
+                         }
+                         output = ECL_BIGNUM_LIMBS(offset)[0];
+                 }
+         } else {
+-        ERR:    FEerror("Not a valid file offset: ~S", 1, offset);
++        ERROR:    FEerror("Not a valid file offset: ~S", 1, offset);
+         }
+         return output;
  }
