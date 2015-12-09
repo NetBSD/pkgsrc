@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/10/27 20:41:42 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2015/12/09 13:20:59 ryoon Exp $
 
 DISTNAME=	sqliteman-1.2.2
 CATEGORIES=	databases
@@ -17,6 +17,7 @@ USE_LANGUAGES=	c c++
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
+.include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../x11/qt4-qscintilla/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
