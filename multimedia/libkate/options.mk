@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2015/12/05 21:25:51 adam Exp $
+# $NetBSD: options.mk,v 1.5 2015/12/10 11:46:48 markd Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libkate
 PKG_SUPPORTED_OPTIONS=	debug doc oggz python valgrind vorbis
@@ -30,7 +30,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-wxWidgets
 .include "../../lang/python/extension.mk"
 PLIST.python=		yes
 .else
-CONFIGURE_ARGS+=	HAVE_PYTHON=no
+CONFIGURE_ENV+=		PYTHON=":"
 .endif
 
 .if !empty(PKG_OPTIONS:Mvalgrind)
