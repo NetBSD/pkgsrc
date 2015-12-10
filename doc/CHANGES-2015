@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4919 2015/12/10 11:13:49 adam Exp $
+$NetBSD: CHANGES-2015,v 1.4920 2015/12/10 13:36:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8166,3 +8166,10 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated pkgtools/pkglint4 to 4.159 [wiz 2015-12-10]
 	Updated audio/pulseaudio to 7.1nb1 [ryoon 2015-12-10]
 	Updated net/youtube-dl to 20151209 [adam 2015-12-10]
+	Updated devel/git to 2.6.4 [adam 2015-12-10]
+	Updated devel/git-base to 2.6.4 [adam 2015-12-10]
+	Updated devel/git-docs to 2.6.4 [adam 2015-12-10]
+	Updated devel/git-svn to 2.6.4 [adam 2015-12-10]
+	Updated devel/git-gitk to 2.6.4 [adam 2015-12-10]
+	Updated devel/git-contrib to 2.6.4 [adam 2015-12-10]
+	Updated www/gitweb to 2.6.4 [adam 2015-12-10]
