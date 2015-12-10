@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.34 2015/09/30 13:36:00 imil Exp $
+# $NetBSD: options.mk,v 1.35 2015/12/10 19:33:41 shattered Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nginx
 PKG_SUPPORTED_OPTIONS=	dav flv gtools inet6 luajit mail-proxy memcache naxsi \
@@ -65,6 +65,7 @@ CONFIGURE_ARGS+=	--with-http_sub_module
 
 .if !empty(PKG_OPTIONS:Mgtools)
 CONFIGURE_ARGS+=	--with-google_perftools_module
+.include "../../devel/gperftools/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mmail-proxy)
