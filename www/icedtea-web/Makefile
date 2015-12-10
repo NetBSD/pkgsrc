@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2015/06/12 10:51:50 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2015/12/10 23:01:37 ryoon Exp $
 
 # Keep icedtea-web distfile in sync with lang/openjdk7/icedtea-extras.mk
 DISTNAME=	icedtea-web-1.5.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://icedtea.wildebeest.org/download/source/
 
@@ -51,6 +51,6 @@ post-install:
 	cd ${DESTDIR}/${PREFIX}/lib/netscape/plugins && \
 		${LN} -s ../../IcedTeaPlugin.so IcedTeaPlugin.so
 
-.include "../../devel/xulrunner31/buildlink3.mk"
+.include "../../devel/xulrunner38/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
