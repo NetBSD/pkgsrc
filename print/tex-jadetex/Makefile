@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2011/03/18 23:26:58 minskim Exp $
+# $NetBSD: Makefile,v 1.30 2015/12/10 10:07:45 markd Exp $
 
 DISTNAME=	jadetex
 PKGNAME=	tex-${DISTNAME}-3.13
-PKGREVISION=	8
+PKGREVISION=	9
 TEXLIVE_REV=	18835
 
 MAINTAINER=	minskim@NetBSD.org
@@ -10,6 +10,7 @@ COMMENT=	Macros supporting Jade DSSSL output
 
 DEPENDS+=	tex-colortbl-[0-9]*:../../print/tex-colortbl
 DEPENDS+=	tex-ec-[0-9]*:../../fonts/tex-ec
+DEPENDS+=	tex-babel-[0-9]*:../../print/tex-babel
 DEPENDS+=	tex-fancyhdr-[0-9]*:../../print/tex-fancyhdr
 DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
 DEPENDS+=	tex-hyperref-[0-9]*:../../print/tex-hyperref
