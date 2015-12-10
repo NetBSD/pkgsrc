@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.72 2015/11/27 09:52:42 leot Exp $
+# $NetBSD: Makefile,v 1.73 2015/12/10 11:11:16 adam Exp $
 
-VERSION_DATE=	2015.11.24
+VERSION_DATE=	2015.12.09
 DISTNAME=	youtube-dl-${VERSION_DATE}
 PKGNAME=	youtube-dl-${VERSION_DATE:S/.//S/.//}
 CATEGORIES=	net
@@ -18,23 +18,8 @@ LICENSE=	public-domain
 # the version you are going to commit.
 
 USE_LANGUAGES=	# none
-USE_TOOLS+=	gmake
-NO_BUILD=	yes
+EGG_NAME=	youtube_dl-2015.12.9
 WRKSRC=		${WRKDIR}/youtube-dl
 
-MAKE_FLAGS+=	PREFIX=${PREFIX} MANDIR=${PREFIX}/${PKGMANDIR} \
-		BASHCOMPDIR=${PREFIX}/share/bash-completion/completions \
-		FISHCOMPDIR=${PREFIX}/share/fish/completions
-INSTALLATION_DIRS=	share/youtube-dl
-CHECK_INTERPRETER_SKIP=	share/youtube-dl/youtube-dl
-
-post-patch:
-	${ECHO} '#!/bin/sh' > ${WRKSRC}/youtube-dl.sh
-	${ECHO} 'exec ${PYTHONBIN} ${PREFIX}/share/youtube-dl/youtube-dl "$$@"' >> ${WRKSRC}/youtube-dl.sh
-
-post-install:
-	mv ${DESTDIR}${PREFIX}/bin/youtube-dl ${DESTDIR}${PREFIX}/share/youtube-dl
-	${INSTALL_SCRIPT} ${WRKSRC}/youtube-dl.sh ${DESTDIR}${PREFIX}/bin/youtube-dl
-
-.include "../../lang/python/application.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
