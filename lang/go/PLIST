@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2015/09/13 14:24:58 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.21 2015/12/10 20:04:54 bsiegert Exp $
 bin/go
 bin/gofmt
 go/AUTHORS
@@ -57,6 +57,7 @@ go/doc/codewalk/popout.png
 go/doc/codewalk/run
 go/doc/codewalk/sharemem.xml
 go/doc/codewalk/urlpoll.go
+go/doc/conduct.html
 go/doc/contrib.html
 go/doc/contribute.html
 go/doc/debugging_with_gdb.html
@@ -216,6 +217,7 @@ go/misc/cgo/test/fpvar.go
 go/misc/cgo/test/helpers.go
 go/misc/cgo/test/issue10303.go
 go/misc/cgo/test/issue11925.go
+go/misc/cgo/test/issue12030.go
 go/misc/cgo/test/issue1222.go
 go/misc/cgo/test/issue1328.go
 go/misc/cgo/test/issue1560.go
@@ -3362,6 +3364,7 @@ go/src/runtime/race/testdata/chan_test.go
 go/src/runtime/race/testdata/comp_test.go
 go/src/runtime/race/testdata/finalizer_test.go
 go/src/runtime/race/testdata/io_test.go
+go/src/runtime/race/testdata/issue12225_test.go
 go/src/runtime/race/testdata/map_test.go
 go/src/runtime/race/testdata/mop_test.go
 go/src/runtime/race/testdata/mutex_test.go
@@ -4773,9 +4776,12 @@ go/test/fixedbugs/issue11656.go
 go/test/fixedbugs/issue11750.go
 go/test/fixedbugs/issue11771.go
 go/test/fixedbugs/issue11790.go
+go/test/fixedbugs/issue11987.go
 go/test/fixedbugs/issue12133.go
 go/test/fixedbugs/issue12226.go
+go/test/fixedbugs/issue12686.go
 go/test/fixedbugs/issue1304.go
+go/test/fixedbugs/issue13160.go
 go/test/fixedbugs/issue2615.go
 go/test/fixedbugs/issue3552.dir/one.go
 go/test/fixedbugs/issue3552.dir/two.go
