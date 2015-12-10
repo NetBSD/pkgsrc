@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4921 2015/12/10 20:06:47 bsiegert Exp $
+$NetBSD: CHANGES-2015,v 1.4922 2015/12/10 22:59:35 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8174,3 +8174,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/git-contrib to 2.6.4 [adam 2015-12-10]
 	Updated www/gitweb to 2.6.4 [adam 2015-12-10]
 	Updated lang/go to 1.5.2 [bsiegert 2015-12-10]
+	Added devel/xulrunner38 version 38.4.0 [ryoon 2015-12-10]
