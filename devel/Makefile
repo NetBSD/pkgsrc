@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2178 2015/12/04 19:27:30 wiz Exp $
+# $NetBSD: Makefile,v 1.2179 2015/12/10 23:06:33 ryoon Exp $
 #
 
 COMMENT=	Development utilities
@@ -2110,6 +2110,7 @@ SUBDIR+=	xulrunner17
 SUBDIR+=	xulrunner192
 SUBDIR+=	xulrunner24
 SUBDIR+=	xulrunner31
+SUBDIR+=	xulrunner38
 SUBDIR+=	xxgdb
 SUBDIR+=	yajl
 SUBDIR+=	yasm
