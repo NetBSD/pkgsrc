@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4915 2015/12/09 19:56:29 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4916 2015/12/10 08:23:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8162,3 +8162,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.554 [tsutsui 2015-12-09]
 	Updated net/p5-Net-DNS to 1.04 [wiz 2015-12-09]
 	Updated textproc/p5-XML-LibXML to 2.0123 [wiz 2015-12-09]
+	Updated pkgtools/pkglint to 5.2.2.1 [wiz 2015-12-10]
