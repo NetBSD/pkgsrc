@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/10/11 01:14:56 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2015/12/10 03:02:16 joerg Exp $
 
 DISTNAME=		gcc-5.2.0
 PKGNAME=		cross-arm-none-eabi-${DISTNAME}
@@ -44,6 +44,16 @@ CONFIGURE_ARGS+=	--disable-libstdcxx-pch
 INFO_FILES=		yes
 
 INSTALLATION_DIRS+=	bin
+
+CONFIGURE_ARGS+=	--enable-${PLUGIN_NAME}-plugin
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+# geattrtab on neon.md results in a very deeply nested expression
+# with > 255 brackets. This was reported against GCC 4.9.1 at least
+# already, but it seems noone cares enough in GCC to fix the generator.
+CFLAGS+=	-fbracket-depth=1024
+.endif
 
 post-extract:
 	${LN} -s ${WRKDIR}/newlib-${NEWLIBVER}/newlib ${WRKSRC}/newlib
