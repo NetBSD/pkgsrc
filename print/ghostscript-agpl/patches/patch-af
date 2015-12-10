@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.4 2015/10/10 11:55:19 adam Exp $
+$NetBSD: patch-af,v 1.5 2015/12/10 11:58:58 markd Exp $
 
 ghostscript has hand-rolled shared lib handling in src/unix-dll.mak
 that does not do the right thing on Darwin (where shared libs are
@@ -7,6 +7,8 @@ as an extension).
 
 You need to manually reconfigure unix-dll.mak to make it work, so
 do it in hacks.mk.
+
+Add gserrors.h to the installed files (Bug 696301)
 
 --- base/unix-dll.mak.orig	2015-10-05 08:21:11.000000000 +0000
 +++ base/unix-dll.mak
@@ -41,3 +43,11 @@ do it in hacks.mk.
  
  # ------------------------- Recursive make targets ------------------------- #
  
+@@ -184,6 +184,7 @@ install-so-subtarget: so-subtarget
+ 	ln -s $(GS_SONAME_MAJOR_MINOR) $(DESTDIR)$(libdir)/$(GS_SONAME_MAJOR)
+ 	$(INSTALL_DATA) $(PSSRC)iapi.h $(DESTDIR)$(gsincludedir)iapi.h
+ 	$(INSTALL_DATA) $(PSSRC)ierrors.h $(DESTDIR)$(gsincludedir)ierrors.h
++	$(INSTALL_DATA) $(GLSRC)gserrors.h $(DESTDIR)$(gsincludedir)gserrors.h
+ 	$(INSTALL_DATA) $(DEVSRC)gdevdsp.h $(DESTDIR)$(gsincludedir)gdevdsp.h
+ 
+ soinstall:
