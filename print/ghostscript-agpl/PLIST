@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2014/04/04 08:48:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/12/10 11:58:58 markd Exp $
 bin/dvipdf
 bin/eps2eps
 bin/font2c
@@ -30,6 +30,7 @@ bin/ps2ps2
 bin/unix-lpr.sh
 bin/wftopfa
 include/ghostscript/gdevdsp.h
+include/ghostscript/gserrors.h
 include/ghostscript/iapi.h
 include/ghostscript/ierrors.h
 lib/libgs.so
