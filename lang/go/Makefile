@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2015/09/13 19:11:55 fhajny Exp $
+# $NetBSD: Makefile,v 1.35 2015/12/10 20:04:54 bsiegert Exp $
 
 .include "version.mk"
 
@@ -21,10 +21,6 @@ BUILD_DEPENDS+=	bash>=4.2nb3:../../shells/bash
 # cgo compiles under TMPDIR
 TMPDIR?=	/tmp
 BUILDLINK_PASSTHRU_DIRS+= ${TMPDIR}
-
-# bash script may use unportable bash constructs
-CHECK_PORTABILITY_SKIP=	lib/time/update.bash
-CHECK_PORTABILITY_SKIP=	misc/ios/clangwrap.sh
 
 GOROOT_FINAL=	${PREFIX}/go
 INSTALLATION_DIRS= bin
