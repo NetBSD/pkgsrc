@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/12/10 23:04:25 ryoon Exp $
+
+SHA1 (stlink-1.1.0.tar.gz) = 60ab8c52b6d55909d7ac831ecfd1a7faaba4ea86
+RMD160 (stlink-1.1.0.tar.gz) = 9400ed5d50c04344493045e9a117ace614d5121f
+SHA512 (stlink-1.1.0.tar.gz) = 5a9fcb97de84b55c57751e251743ad7641a26e9a2da7e9292beb013a828bffc9e41eb3e052d62c5fddca3fd55b03fcb8faf3158eea2cd944d84fb978acf82a92
+Size (stlink-1.1.0.tar.gz) = 201430 bytes
