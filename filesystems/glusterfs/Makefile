@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2015/12/05 21:25:42 adam Exp $
+# $NetBSD: Makefile,v 1.59 2015/12/10 02:55:58 joerg Exp $
 
 DISTNAME=	glusterfs-3.7.6
-#PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	filesystems
 MASTER_SITES=	http://bits.gluster.org/pub/gluster/glusterfs/src/
 
@@ -116,6 +116,7 @@ CONFIGURE_ARGS+=	--enable-debug
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/userspace-rcu/buildlink3.mk"
+.include "../../devel/argp/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 
