@@ -1,0 +1,13 @@
+$NetBSD: patch-format_fo_pdf,v 1.1 2015/12/11 23:31:09 joerg Exp $
+
+--- format/fo/pdf.orig	2015-12-11 20:30:43.000000000 +0000
++++ format/fo/pdf
+@@ -8,7 +8,7 @@ DEFAULT|DBLATEX)
+ 	  then
+ 	    echo >&2 "Post-process XSL-FO to PDF"
+ 	  fi
+-	  if [ -z "`type -t $PDFXMLTEX_PATH`" ]
++	  if ! type "$PDFXMLTEX_PATH" > /dev/null 2>&1
+ 	  then
+ 	    echo >&2 "Can't process, pdfxmltex tool not found at $PDFXMLTEX_PATH."
+ 	    exit 3
