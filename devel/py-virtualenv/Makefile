@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2015/09/28 23:16:12 rodent Exp $
+# $NetBSD: Makefile,v 1.23 2015/12/11 11:41:37 wiz Exp $
 
 DISTNAME=	virtualenv-13.1.2
-PKGREVISION=	1
+PKGREVISION=	2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	http://pypi.python.org/packages/source/v/virtualenv/
@@ -12,6 +12,7 @@ COMMENT=	Virtual Python Environment builder
 LICENSE=	mit
 
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
+FILES_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 REPLACE_PYTHON=	virtualenv.py
 
 post-install:
