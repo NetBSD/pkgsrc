@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.221 2015/11/09 10:54:44 jperkin Exp $
+# $NetBSD: bootstrap,v 1.222 2015/12/11 23:55:44 joerg Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -587,6 +587,10 @@ DragonFly)
 	set_opsys=no
 	check_prog tarprog tar
 	machine_arch=`uname -p`
+	if [ "$machine_arch" = "amd64" ]; then
+		machine_arch=x86_64
+		bmakexargs="MACHINE_ARCH=$machine_arch"
+	fi
 	;;
 FreeBSD)
 	root_group=wheel
@@ -595,6 +599,10 @@ FreeBSD)
 	need_sed=no
 	set_opsys=no
 	machine_arch=`uname -p`
+	if [ "$machine_arch" = "amd64" ]; then
+		machine_arch=x86_64
+		bmakexargs="MACHINE_ARCH=$machine_arch"
+	fi
 	check_compiler=yes
 	;;
 FreeMiNT)
