@@ -1,1 +1,1 @@
-bin/kramdown @PREFIX@/bin/kramdown${RUBY_SUFFIX}
+bin/kramdown @PREFIX@/bin/kramdown@RUBY_SUFFIX@
