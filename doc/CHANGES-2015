@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4932 2015/12/11 12:13:13 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4933 2015/12/11 12:33:51 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8185,3 +8185,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/ruby-jekyll to 2.5.3nb1 [wiz 2015-12-11]
 	Updated textproc/ruby-kramdown to 1.9.0nb1 [wiz 2015-12-11]
 	Updated net/tor to 0.2.7.5nb1 [wiz 2015-12-11]
+	Updated lang/gcc5 to 5.3.0 [ryoon 2015-12-11]
+	Updated lang/gcc5-libs to 5.3.0nb1 [ryoon 2015-12-11]
