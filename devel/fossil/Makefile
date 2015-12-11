@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2015/05/29 14:15:34 ryoon Exp $
+# $NetBSD: Makefile,v 1.34 2015/12/11 23:22:49 wiedi Exp $
 
 DISTNAME=	fossil-src-1.33
 PKGNAME=	${DISTNAME:S/-src//}
@@ -11,6 +11,7 @@ COMMENT=	High-reliability, distributed software configuration management
 LICENSE=	2-clause-bsd
 
 HAS_CONFIGURE=	yes
+CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl:Q}
 
 INSTALLATION_DIRS+=	bin
 
