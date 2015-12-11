@@ -1,14 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2015/03/15 00:55:06 taca Exp $
+# $NetBSD: Makefile,v 1.2 2015/12/11 16:31:06 adam Exp $
 
-DISTNAME=	clamav-${CLAMAV_VERSION}
-PKGNAME=	clamav-doc-${CLAMAV_VERSION}
-CATEGORIES=	security
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=clamav/}
+.include "../../security/clamav/Makefile.common"
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.clamav.net/
+PKGNAME=	${DISTNAME:S/clamav/clamav-doc/}
 COMMENT=	Anti-virus toolkit documents
-LICENSE=	gnu-gpl-v2
 
 NO_BUILD=	yes
 NO_CONFIGURE=	yes
@@ -27,5 +22,4 @@ do-install:
 	cd ${WRKSRC}/docs && ${FIND} html -type f -print | \
 		pax -rw ${DESTDIR}${DOCDIR}
 
-.include "../../security/clamav/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
