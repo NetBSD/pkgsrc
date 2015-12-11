@@ -1,0 +1,13 @@
+$NetBSD: patch-format_fo_dvi,v 1.1 2015/12/11 23:31:09 joerg Exp $
+
+--- format/fo/dvi.orig	2015-12-11 20:30:43.000000000 +0000
++++ format/fo/dvi
+@@ -6,7 +6,7 @@ post-process)
+   then
+     echo >&2 "Post-process XSL-FO to DVI"
+   fi
+-  if [ -z "`type -t $XMLTEX_PATH`" ]
++  if ! type "$XMLTEX_PATH" > /dev/null 2>&1
+   then
+     echo >&2 "Can't process, xmltex tool not found at $XMLTEX_PATH."
+     exit 3

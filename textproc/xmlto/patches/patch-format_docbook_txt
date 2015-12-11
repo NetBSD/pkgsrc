@@ -1,0 +1,22 @@
+$NetBSD: patch-format_docbook_txt,v 1.1 2015/12/11 23:31:09 joerg Exp $
+
+--- format/docbook/txt.orig	2015-12-11 20:30:43.000000000 +0000
++++ format/docbook/txt
+@@ -1,14 +1,14 @@
+ case "$USE_BACKEND" in
+ DEFAULT|DBLATEX)
+-	if [ -n "`type -t $W3M_PATH`" ]
++	if type "$W3M_PATH" > /dev/null 2>&1
+ 	then
+ 	  CONVERT="$W3M_PATH"
+ 	  ARGS="-T text/html -dump"
+-	elif [ -n "`type -t $LYNX_PATH`" ]
++	elif type "$LYNX_PATH" > /dev/null 2>&1
+ 	then
+ 	  CONVERT="$LYNX_PATH"
+ 	  ARGS="-force_html -dump -nolist -width=72"
+-	elif [ -n "`type -t $LINKS_PATH`" ]
++	elif type "$LINKS_PATH" > /dev/null 2>&1
+ 	then
+ 	  CONVERT="$LINKS_PATH"
+ 	  ARGS="-dump"
