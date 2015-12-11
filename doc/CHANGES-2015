@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4951 2015/12/11 21:36:30 riz Exp $
+$NetBSD: CHANGES-2015,v 1.4952 2015/12/11 21:41:53 riz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8206,3 +8206,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added textproc/markdown2social version 0.2 [jmmv 2015-12-11]
 	Added net/py-txamqp version 0.3 [riz 2015-12-11]
 	Added databases/py-whisper version 0.9.15 [riz 2015-12-11]
+	Added databases/py-carbon version 0.9.15 [riz 2015-12-11]
