@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15176 2015/12/11 13:17:19 wiz Exp $
+$NetBSD: TODO,v 1.15177 2015/12/11 13:46:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1709,7 +1709,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tk85-8.5.18
 	o tkhylafax-3.2
 	o tkpasman-2.2b
-	o tlsh-3.4.4
 	o tn5250-0.17.3 [at http://tn5250.sourceforge.net/]
 	o tob-0.26
 	o tomboy-1.10.2
