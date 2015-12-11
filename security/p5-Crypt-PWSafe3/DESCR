@@ -1,0 +1,2 @@
+Crypt::PWSafe3 provides read and write access to password database
+files created by Password Safe V3 (and up).
