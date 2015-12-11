@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2015/12/11 13:35:04 wiz Exp $
+
+SHA1 (keepassx-0.4.4.tar.gz) = a6e7f779df0156d4419dae50bfa12df7a04f6aeb
+RMD160 (keepassx-0.4.4.tar.gz) = c7ce5954707760aafab6291d160dc3e538201bc2
+SHA512 (keepassx-0.4.4.tar.gz) = 2fc93d77f5576a0cce6514b39ee9b319efaa72b475762438eed5601c5e3edb7693a5fbb9c1e741be1e5d3a08849bc54b0cff90fe3a86cf240129febc0cc703d8
+Size (keepassx-0.4.4.tar.gz) = 1371560 bytes
+SHA1 (patch-src_crypto_aes__endian.h) = 3a88c3ebf2ccaa2229aa7e0600b4f0e976b21772
+SHA1 (patch-src_lib_AutoTypeX11.cpp) = 3bd8421804ec549ba4a7a42907516534d7bbf6f3
+SHA1 (patch-src_lib_random.cpp) = dd50e9cb5a95f5db780aab727dfd4b0dcceac9ef
