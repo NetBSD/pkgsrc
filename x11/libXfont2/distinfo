@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/12/11 14:04:23 wiz Exp $
+$NetBSD: distinfo,v 1.2 2015/12/11 15:59:00 wiz Exp $
 
-SHA1 (libXfont2-2.0.0.tar.bz2) = b989b36d2e33dc6f9d3b197acaaf8b018203ba24
-RMD160 (libXfont2-2.0.0.tar.bz2) = 8e6d1f422e016d3d82060b95369f92498ca387c3
-SHA512 (libXfont2-2.0.0.tar.bz2) = dd26d9016107280ed2b7c29b7b3633056f91a44897602b3138be6855fc4d89f7d53d3c4ff9a430164ec5553ee031db2e471182ce1554e3f62ae2141aafa7533c
-Size (libXfont2-2.0.0.tar.bz2) = 487706 bytes
+SHA1 (libXfont2-2.0.1.tar.bz2) = 4cf056ab00bf631649e040051cf8e2b096cc245b
+RMD160 (libXfont2-2.0.1.tar.bz2) = 3522b8ec43b6d45f096c815365895fc977046bbc
+SHA512 (libXfont2-2.0.1.tar.bz2) = 5e4dcb587b4d25dd41124bb50d71c30b5e29663ce675b0830def82fb6e00b64ba34e1b1ed7fad947fd0da95007aa55d14f587383e4cff08c3e0a0241c8879d16
+Size (libXfont2-2.0.1.tar.bz2) = 472822 bytes
