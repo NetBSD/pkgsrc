@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4924 2015/12/10 23:05:09 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.4925 2015/12/11 00:27:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8177,3 +8177,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/xulrunner38 version 38.4.0 [ryoon 2015-12-10]
 	Updated www/icedtea-web to 1.5.2nb3 [ryoon 2015-12-10]
 	Added cross/stlink version 1.1.0 [ryoon 2015-12-10]
+	Updated sysutils/salt to 2015.8.3 [wiz 2015-12-11]
