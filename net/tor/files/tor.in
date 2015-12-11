@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: tor.in,v 1.4 2015/12/08 13:19:38 wiz Exp $
+# $NetBSD: tor.in,v 1.5 2015/12/11 12:13:00 wiz Exp $
 #
 # PROVIDE: tor
 # REQUIRE: DAEMON NETWORKING
@@ -23,6 +23,7 @@ start_cmd="tor_start"
 stop_cmd="tor_stop"
 pidfile="@PKG_HOME@/${name}.pid"
 restart_cmd="tor_stop ; tor_start"
+extra_commands="reload"
 
 tor_start ()
 {
@@ -42,3 +43,4 @@ then
 else
 	eval ${start_cmd}
 fi
+
