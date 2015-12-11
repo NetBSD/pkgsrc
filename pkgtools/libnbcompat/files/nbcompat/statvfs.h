@@ -1,4 +1,4 @@
-/*	$NetBSD: statvfs.h,v 1.5 2013/09/08 16:24:43 ryoon Exp $	*/
+/*	$NetBSD: statvfs.h,v 1.6 2015/12/11 23:28:10 ryoon Exp $	*/
 
 /*-
  * Copyright (c) 2004 The NetBSD Foundation, Inc.
@@ -60,10 +60,10 @@
 #define VFS_NAMELEN	32
 #define VFS_MNAMELEN	1024
 
-#if defined(fsblkcnt_t)
+#if !defined(fsblkcnt_t)
 typedef uint64_t	fsblkcnt_t;	/* fs block count (statvfs) */
 #endif
-#if defined(fsfilcnt_t)
+#if !defined(fsfilcnt_t)
 typedef uint64_t	fsfilcnt_t;	/* fs file count */
 #endif
 
