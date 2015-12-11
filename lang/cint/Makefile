@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2015/08/30 08:41:44 dholland Exp $
+# $NetBSD: Makefile,v 1.31 2015/12/11 23:32:53 joerg Exp $
 
 DISTNAME=		cint5.15
 PKGNAME=		cint-5.15.174
@@ -12,6 +12,8 @@ HOMEPAGE=		http://root.cern.ch/root/Cint.html
 COMMENT=		C/C++ interpreter
 
 CONFLICTS=		man-pages-[0-9]*
+
+USE_LANGUAGES=		c c++
 
 #same distribution file name for minor versions
 DIST_SUBDIR=		${PKGNAME_NOREV}
@@ -37,11 +39,14 @@ do-build:
 	cd ${WRKDIR};						\
 	case ${OPSYS} in					\
 	FreeBSD|DragonFly)					\
-		${SH} ./setup platform/freebsd_C ;;		\
+		${PKGSRC_SETENV} ${MAKE_ENV} ${SH} ./setup platform/freebsd_C \
+		;;						\
 	NetBSD|OpenBSD|Bitrig)					\
-		${SH} ./setup platform/netbsd ;;		\
+		${PKGSRC_SETENV} ${MAKE_ENV} ${SH} ./setup platform/netbsd \
+		;;						\
 	SunOS)							\
-		${SH} ./setup platform/solaris_gcc ;;		\
+		${PKGSRC_SETENV} ${MAKE_ENV} ${SH} ./setup platform/solaris_gcc \
+		;;						\
 	*)							\
 		${ECHO} 'not yet ported to ${OPSYS}'; exit 1 ;;	\
 	esac
