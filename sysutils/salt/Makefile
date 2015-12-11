@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2015/12/07 21:51:53 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2015/12/11 00:27:06 wiz Exp $
 
-DISTNAME=	salt-2015.8.1
-PKGREVISION=	2
+DISTNAME=	salt-2015.8.3
 CATEGORIES=	sysutils
-MASTER_SITES=	https://pypi.python.org/packages/source/s/salt/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/salt/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://saltstack.org/
@@ -58,11 +57,14 @@ SUBST_STAGE.fix-paths=	pre-configure
 SUBST_MESSAGE.fix-paths=Fixing hardcoded paths
 SUBST_FILES.fix-paths=	conf/*
 SUBST_FILES.fix-paths+=	doc/man/* salt/modules/munin.py setup.py
+SUBST_FILES.fix-paths+=	salt/utils/rsax931.py salt/grains/core.py
 SUBST_SED.fix-paths=	-e 's,/etc/salt,${PKG_SYSCONFDIR},g'
 SUBST_SED.fix-paths+=	-e 's,/srv/salt,${PKG_SYSCONFDIR}/states,g'
 SUBST_SED.fix-paths+=	-e 's,/srv/pillar,${PKG_SYSCONFDIR}/pillar,g'
 SUBST_SED.fix-paths+=	-e 's,/etc/munin,${PKG_SYSCONFBASEDIR}/munin,g'
 SUBST_SED.fix-paths+=	-e 's,share/man,man,g'
+SUBST_SED.fix-paths+=	-e 's,/opt/local/lib,${PREFIX}/lib,g'
+SUBST_SED.fix-paths+=	-e 's,/opt/local/etc,${PKG_SYSCONFBASEDIR},g'
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/conf/master ${DESTDIR}${EGDIR}/

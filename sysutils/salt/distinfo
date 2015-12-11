@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2015/11/10 14:48:39 sborrill Exp $
+$NetBSD: distinfo,v 1.16 2015/12/11 00:27:06 wiz Exp $
 
-SHA1 (salt-2015.8.1.tar.gz) = ddf97614ad1f281d2bea0703bb959625fa64c222
-RMD160 (salt-2015.8.1.tar.gz) = aec7aa4830aec4649e788322870c8c03a62ca628
-SHA512 (salt-2015.8.1.tar.gz) = d882e3a8e70cf19c64e14c35d4c69fa308b8502d01095ce3f8c383a0ee0b70dbefd4b8eda95205f2cba2fe237279e2a3425daf0d5bf66144fb97ca3be0ec162a
-Size (salt-2015.8.1.tar.gz) = 6527650 bytes
+SHA1 (salt-2015.8.3.tar.gz) = 0457866d5619febc3cdf3b27b2e736b0c4ae3623
+RMD160 (salt-2015.8.3.tar.gz) = 607db5d35545cfb6c4e8676482133a1560f3e896
+SHA512 (salt-2015.8.3.tar.gz) = 18a2c63d5e54d09468189450557974e47f87d8b7dde52beaae678120da1da1e7aecfff18cf0fdfb63a11cd5f6bab102c229462f0afe5e3e858c0c467761c7121
+Size (salt-2015.8.3.tar.gz) = 6757678 bytes
