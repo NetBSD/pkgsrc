@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/12/11 14:10:42 wiz Exp $
+
+SHA1 (highway-1.1.0.tar.gz) = 6914177b9c7e518ed7ba4384618da265a28d52f1
+RMD160 (highway-1.1.0.tar.gz) = 6e7e513e5ef326282ce96e601b3cebc7269badf4
+SHA512 (highway-1.1.0.tar.gz) = c30c90f5b601a775e64a684037d668acc6c1a8b6e64f7aa1204c184978c49079a3cd07683ebeeab674a9b64932223da0c067fdb184b5918bf88eca7e113c05fd
+Size (highway-1.1.0.tar.gz) = 319516 bytes
