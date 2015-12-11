@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4950 2015/12/11 21:31:06 riz Exp $
+$NetBSD: CHANGES-2015,v 1.4951 2015/12/11 21:36:30 riz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8205,3 +8205,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/clamav-doc to 0.99 [adam 2015-12-11]
 	Added textproc/markdown2social version 0.2 [jmmv 2015-12-11]
 	Added net/py-txamqp version 0.3 [riz 2015-12-11]
+	Added databases/py-whisper version 0.9.15 [riz 2015-12-11]
