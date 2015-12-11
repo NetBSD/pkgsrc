@@ -1,1 +1,1 @@
-bin/jekyll @PREFIX@/bin/jekyll${RUBY_SUFFIX}
+bin/jekyll @PREFIX@/bin/jekyll@RUBY_SUFFIX@
