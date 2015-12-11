@@ -1,0 +1,16 @@
+# $NetBSD: Makefile.common,v 1.1 2015/12/11 21:40:50 riz Exp $
+
+# used by databases/py-carbon/Makefile
+# used by www/py-graphite-web/Makefile
+
+GRAPHITE_USER?=		graphite
+GRAPHITE_GROUP?=	graphite
+WWW_USER?=		www
+WWW_GROUP?=		www
+GRAPHITE_DIR?=		${VARBASE}/graphite
+GRAPHITE_EGDIR?=	share/examples/graphite
+GRAPHITE_LOG_DIR?=	${VARBASE}/log/graphite
+
+PKG_GROUPS+=			${GRAPHITE_GROUP} ${WWW_GROUP}
+PKG_USERS+=			${GRAPHITE_USER}:${GRAPHITE_GROUP} ${WWW_USER}:${WWW_GROUP}
+PKG_GECOS.${GRAPHITE_USER}=	Graphite Carbon user

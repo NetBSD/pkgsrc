@@ -1,0 +1,57 @@
+$NetBSD: patch-carbon_conf_example,v 1.1 2015/12/11 21:40:50 riz Exp $
+
+Set package-appropriate defaults
+
+--- conf/carbon.conf.example.orig	2015-11-27 10:37:07.000000000 -0800
++++ conf/carbon.conf.example	2015-12-06 11:41:02.000000000 -0800
+@@ -30,6 +30,13 @@
+ #
+ #LOCAL_DATA_DIR = /opt/graphite/storage/whisper/
+ 
++STORAGE_DIR	= @GRAPHITE_DIR@
++LOCAL_DATA_DIR	= @GRAPHITE_DIR@/whisper
++WHITELISTS_DIR	= @GRAPHITE_DIR@/lists
++CONF_DIR	= @PKG_SYSCONFDIR@
++LOG_DIR		= @VARBASE@/log/graphite/
++PID_DIR		= @VARBASE@/run/graphite/
++
+ # Enable daily log rotation. If disabled, carbon will automatically re-open
+ # the file if it's rotated out of place (e.g. by logrotate daemon)
+ ENABLE_LOGROTATION = True
+@@ -37,7 +44,7 @@
+ # Specify the user to drop privileges to
+ # If this is blank carbon runs as the user that invokes it
+ # This user must have write access to the local data directory
+-USER =
++USER = @GRAPHITE_USER@
+ #
+ # NOTE: The above settings must be set under [relay] and [aggregator]
+ #       to take effect for those daemons as well
+@@ -235,6 +242,13 @@
+ 
+ 
+ [relay]
++STORAGE_DIR	= @GRAPHITE_DIR@
++LOCAL_DATA_DIR	= @GRAPHITE_DIR@/whisper
++WHITELISTS_DIR	= @GRAPHITE_DIR@/lists
++CONF_DIR	= @PKG_SYSCONFDIR@
++LOG_DIR		= @VARBASE@/log/graphite/
++PID_DIR		= @VARBASE@/run/graphite/
++USER = @GRAPHITE_USER@
+ LINE_RECEIVER_INTERFACE = 0.0.0.0
+ LINE_RECEIVER_PORT = 2013
+ PICKLE_RECEIVER_INTERFACE = 0.0.0.0
+@@ -322,6 +336,13 @@
+ 
+ 
+ [aggregator]
++STORAGE_DIR	= @GRAPHITE_DIR@
++LOCAL_DATA_DIR	= @GRAPHITE_DIR@/whisper
++WHITELISTS_DIR	= @GRAPHITE_DIR@/lists
++CONF_DIR	= @PKG_SYSCONFDIR@
++LOG_DIR		= @VARBASE@/log/graphite/
++PID_DIR		= @VARBASE@/run/graphite/
++USER = @GRAPHITE_USER@
+ LINE_RECEIVER_INTERFACE = 0.0.0.0
+ LINE_RECEIVER_PORT = 2023
+ 
