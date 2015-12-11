@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2015/12/11 11:44:39 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2015/12/11 21:29:49 wiz Exp $
 
 DISTNAME=	jekyll-2.5.3
 PKGREVISION=	1
@@ -25,7 +25,6 @@ DEPENDS+=	${RUBY_PKGPREFIX}-jekyll-watch>=1.1<2:../../www/ruby-jekyll-watch
 DEPENDS+=	${RUBY_PKGPREFIX}-classifier-reborn>=2.0<3:../../textproc/ruby-classifier-reborn
 
 RUBYGEM_OPTIONS+=	--format-executable
-FILES_SUBST+=		RUBY_SUFFIX=${RUBY_SUFFIX}
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
