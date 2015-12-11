@@ -1,2 +1,2 @@
-# $NetBSD: version.mk,v 1.2 2015/07/25 03:46:02 ryoon Exp $
-GCC5_DIST_VERSION:=5.2.0
+# $NetBSD: version.mk,v 1.3 2015/12/11 12:31:03 ryoon Exp $
+GCC5_DIST_VERSION:=5.3.0
