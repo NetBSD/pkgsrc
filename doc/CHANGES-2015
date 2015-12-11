@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4941 2015/12/11 14:07:38 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4942 2015/12/11 14:11:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8195,3 +8195,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated math/fftwf to 3.3.4 [wiz 2015-12-11]
 	Updated x11/xf86-video-nouveau to 1.0.12 [wiz 2015-12-11]
 	Added x11/libXfont2 version 2.0.0 [wiz 2015-12-11]
+	Added textproc/highway version 1.1.0 [wiz 2015-12-11]
