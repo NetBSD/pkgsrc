@@ -1,0 +1,4 @@
+The markdown2social utility converts simple Markdown documents to Google+
+posts ready to be shared on the social network.  There is room for writing
+output plugins for other target sites, but at the moment only Google+ is
+supported.
