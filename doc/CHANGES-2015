@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4937 2015/12/11 13:46:36 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4938 2015/12/11 13:46:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8191,3 +8191,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/kpcli to 3.0 [wiz 2015-12-11]
 	Updated security/keepassx to 2.0 [wiz 2015-12-11]
 	Updated devel/tlsh to 3.4.4 [wiz 2015-12-11]
+	Updated devel/py-tlsh to 3.4.4 [wiz 2015-12-11]
