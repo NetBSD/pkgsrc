@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.565 2015/12/11 13:15:31 wiz Exp $
+# $NetBSD: Makefile,v 1.566 2015/12/11 13:43:36 wiz Exp $
 #
 
 COMMENT=	Security tools
@@ -120,6 +120,7 @@ SUBDIR+=	isakmpd
 SUBDIR+=	jessie
 SUBDIR+=	john
 SUBDIR+=	keepassx
+SUBDIR+=	keepassx0
 SUBDIR+=	keychain
 SUBDIR+=	kgpg
 SUBDIR+=	knc
