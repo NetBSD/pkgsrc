@@ -1,0 +1,12 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2015/12/11 21:45:07 riz Exp $
+
+If your webserver does not run as "${WWW_USER}", you should
+chown ${GRAPHITE_LOG_DIR}/webapp and ${GRAPHITE_DIR} (but
+not the subdirectories) to be owned by the user your webserver
+runs as.
+
+If you will be using a different database (besides sqlite3),
+you will need to install the appropriate python package
+to support it.
+===========================================================================
