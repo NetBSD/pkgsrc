@@ -1,31 +1,34 @@
-# $NetBSD: Makefile,v 1.32 2015/12/09 13:54:32 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2015/12/11 13:37:32 wiz Exp $
 
-DISTNAME=	keepassx-0.4.4
-CATEGORIES=	security
+DISTNAME=	keepassx-2.0
+CATEGORIES=	security x11
 MASTER_SITES=	https://www.keepassx.org/releases/${PKGVERSION_NOREV}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.keepassx.org/
-COMMENT=	Password manager or safe
+HOMEPAGE=	https://www.keepassx.org/
+COMMENT=	Password generator and manager v2 (kdbx support)
 LICENSE=	gnu-gpl-v2
 
+USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
-USE_LIBTOOL=	YES
+USE_LIBTOOL=	yes
+CMAKE_ARG_PATH=	..
+CONFIGURE_DIRS=	build
 
-QMAKE=			${QTDIR}/bin/qmake
-CONFIGURE_ARGS+=	QMAKE=${QMAKE:Q} PREFIX=${PREFIX:Q} PRECOMPILED=0
-MAKE_ENV+=		QTDIR=${QTDIR} PREFIX=${PREFIX}
-INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR}
+.PHONY: qmake-bin-add
+pre-configure: qmake-bin-add
 
-do-configure:
-	cd ${WRKSRC} && \
-		${QMAKE} -unix -o Makefile ${CONFIGURE_ARGS} keepassx.pro
+qmake-bin-add:
+	${LN} -sf ${QTDIR}/bin/qmake ${BUILDLINK_DIR}/bin/
 
-pre-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/keepassx ${WRKSRC}/src
+pre-configure:
+	${MKDIR} ${WRKSRC}/build
 
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../security/libgcrypt/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../x11/libXtst/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
-.include "../../x11/libXtst/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
