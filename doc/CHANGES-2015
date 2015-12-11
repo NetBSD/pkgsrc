@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4948 2015/12/11 16:32:08 adam Exp $
+$NetBSD: CHANGES-2015,v 1.4949 2015/12/11 19:34:33 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8203,3 +8203,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated meta-pkgs/modular-xorg-libs to 1.4 [wiz 2015-12-11]
 	Updated security/clamav to 0.99 [adam 2015-12-11]
 	Updated security/clamav-doc to 0.99 [adam 2015-12-11]
+	Added textproc/markdown2social version 0.2 [jmmv 2015-12-11]
