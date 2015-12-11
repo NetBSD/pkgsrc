@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.217 2015/12/08 16:51:33 jperkin Exp $
+# $NetBSD: Makefile,v 1.218 2015/12/11 10:20:13 jperkin Exp $
 
 DISTNAME=	openssl-1.0.2e
 CATEGORIES=	security
@@ -34,8 +34,8 @@ CONFIGURE_ARGS+=	shared no-fips
 
 # Avoid dependency on 'makedepend' on platforms where the default CC is set
 # to 'cc' not 'gcc' in boostrap-mk-files.  OpenSSL only supports the latter.
-.if ${PKGSRC_COMPILER} == "gcc"
-CONFIGURE_ENV+=		CC=gcc
+.if ${PKGSRC_COMPILER} == "gcc" && ${CC} == "cc"
+CC=			gcc
 .endif
 
 .if ${OPSYS} == "SunOS"
