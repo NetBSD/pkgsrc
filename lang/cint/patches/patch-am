@@ -1,8 +1,16 @@
-$NetBSD: patch-am,v 1.1 2008/09/05 05:27:31 dholland Exp $
+$NetBSD: patch-am,v 1.2 2015/12/11 23:32:22 joerg Exp $
 
---- tool/ifdef/ifdef.cxx~	2005-05-06 04:49:09.000000000 -0400
-+++ tool/ifdef/ifdef.cxx	2008-09-05 00:32:03.000000000 -0400
-@@ -62,7 +62,7 @@ extern "C" {
+--- tool/ifdef/ifdef.cxx.orig	2005-05-06 08:49:09.000000000 +0000
++++ tool/ifdef/ifdef.cxx
+@@ -13,6 +13,7 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <ctype.h>
++#include <unistd.h>
+ #include <string>
+ #include <map>
+ #ifndef __hpux
+@@ -62,7 +63,7 @@ extern "C" {
  char *G__calc(char*);
  char *G__getexpr(char*);
  char *G__getandor(char*);
