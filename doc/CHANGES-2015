@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4944 2015/12/11 14:47:03 is Exp $
+$NetBSD: CHANGES-2015,v 1.4945 2015/12/11 14:47:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8198,3 +8198,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added x11/libXfont2 version 2.0.0 [wiz 2015-12-11]
 	Added textproc/highway version 1.1.0 [wiz 2015-12-11]
 	Updated textproc/mdoclint to 1.35 [wiz 2015-12-11]
+	Updated devel/cmake to 3.4.1nb1 [wiz 2015-12-11]
