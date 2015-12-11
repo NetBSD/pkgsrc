@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.1 2015/12/02 17:22:18 wiz Exp $
+# $NetBSD: Makefile.common,v 1.2 2015/12/11 13:46:26 wiz Exp $
 # used by devel/tlsh/Makefile
 # used by devel/py-tlsh/Makefile
 
-DISTNAME=	tlsh-3.4.3
+DISTNAME=	tlsh-3.4.4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=trendmicro/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -11,3 +11,5 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/trendmicro/tlsh/
 COMMENT=	Fuzzy matching library
 LICENSE=	apache-2.0
+
+DISTINFO_FILE=	${.CURDIR}/../../devel/tlsh/distinfo
