@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2015/12/11 14:04:23 wiz Exp $
+include/X11/fonts/fontconf.h
+include/X11/fonts/libxfont2.h
+lib/libXfont2.la
+lib/pkgconfig/xfont2.pc
