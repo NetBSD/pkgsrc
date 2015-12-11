@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4934 2015/12/11 13:15:40 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4935 2015/12/11 13:17:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8188,3 +8188,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/gcc5 to 5.3.0 [ryoon 2015-12-11]
 	Updated lang/gcc5-libs to 5.3.0nb1 [ryoon 2015-12-11]
 	Added security/p5-Crypt-PWSafe3 version 1.21 [wiz 2015-12-11]
+	Updated security/kpcli to 3.0 [wiz 2015-12-11]
