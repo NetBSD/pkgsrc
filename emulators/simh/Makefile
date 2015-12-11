@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2013/03/26 13:53:42 martin Exp $
+# $NetBSD: Makefile,v 1.43 2015/12/11 23:33:33 joerg Exp $
 
 DISTNAME=	simhv39-0
 PKGNAME=	simh-3.9.0
@@ -18,6 +18,8 @@ BUILDLINK_API_DEPENDS.libpcap+=	libpcap>=0.9
 WRKSRC=			${WRKDIR}
 
 .include "../../mk/bsd.prefs.mk"
+
+BUILDLINK_TRANSFORM+=	rm:-flto
 
 .if (${MACHINE_ARCH} == "arm")
 BUILDLINK_TRANSFORM+=	rm:-O2
