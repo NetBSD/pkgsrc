@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4947 2015/12/11 16:00:07 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4948 2015/12/11 16:32:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8201,3 +8201,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/cmake to 3.4.1nb1 [wiz 2015-12-11]
 	Updated x11/libXfont2 to 2.0.1 [wiz 2015-12-11]
 	Updated meta-pkgs/modular-xorg-libs to 1.4 [wiz 2015-12-11]
+	Updated security/clamav to 0.99 [adam 2015-12-11]
+	Updated security/clamav-doc to 0.99 [adam 2015-12-11]
