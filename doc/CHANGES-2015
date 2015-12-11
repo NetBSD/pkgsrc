@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4928 2015/12/11 11:44:08 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4929 2015/12/11 11:44:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8181,3 +8181,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/pkgconf to 0.9.12.20151211 [wiz 2015-12-11]
 	Updated devel/bugs-everywhere to 1.1.1nb1 [wiz 2015-12-11]
 	Updated security/py-keyring to 5.3nb1 [wiz 2015-12-11]
+	Updated devel/py-virtualenv to 13.1.2nb2 [wiz 2015-12-11]
