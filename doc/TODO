@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15175 2015/12/11 12:33:51 ryoon Exp $
+$NetBSD: TODO,v 1.15176 2015/12/11 13:17:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -984,7 +984,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o knock-0.7
 	o koffice-l10n-de-2.0.2
 	o konversation-1.6
-	o kpcli-3.0
 	o kphotobook-0.0.7
 	o kronolith-4.2.9
 	o krusader-2.0
