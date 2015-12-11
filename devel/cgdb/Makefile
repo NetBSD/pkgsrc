@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2015/08/18 07:31:04 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2015/12/11 23:51:08 wiedi Exp $
 
 DISTNAME=	cgdb-0.6.8
 PKGREVISION=	1
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 BUILD_DEPENDS+=	help2man-[0-9]*:../../converters/help2man
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake flex
 INFO_FILES=	yes
 
 # As -L/usr/lib tends to be found in LDFLAGS, make sure that the library
