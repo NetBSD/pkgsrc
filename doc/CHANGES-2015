@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4939 2015/12/11 13:53:36 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4940 2015/12/11 13:56:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8193,3 +8193,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/tlsh to 3.4.4 [wiz 2015-12-11]
 	Updated devel/py-tlsh to 3.4.4 [wiz 2015-12-11]
 	Updated math/fftwf to 3.3.4 [wiz 2015-12-11]
+	Updated x11/xf86-video-nouveau to 1.0.12 [wiz 2015-12-11]
