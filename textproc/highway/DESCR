@@ -1,0 +1,10 @@
+Highway
+-------
+A fast pattern matching tool like pt and ag.
+
+Feature:
+- It can search the PATTERN from your source code very fast.
+- It can search also the PATTERN as a regular expression.
+- It supports UTF-8 and some Japanese encodings (Because I'm
+  Japanese. EUC-JP and Shift_JIS is supported).
+- It ignores file patterns form your .gitignore by default.
