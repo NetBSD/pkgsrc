@@ -1,0 +1,10 @@
+$NetBSD: patch-format_docbook_epub,v 1.1 2015/12/11 23:31:09 joerg Exp $
+
+--- format/docbook/epub.orig	2015-12-11 20:30:43.000000000 +0000
++++ format/docbook/epub
+@@ -1,4 +1,4 @@
+-if [ -z "`type -t $ZIP_PATH`" ]
++if ! type "$ZIP_PATH" > /dev/null 2>&1
+ then
+   echo >&2 "Missing zip utility at $ZIP_PATH, conversion to epub not possible."
+   echo >&2 "Exiting !"
