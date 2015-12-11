@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2015/08/27 21:58:42 wiz Exp $
+# $NetBSD: Makefile,v 1.69 2015/12/11 23:34:04 joerg Exp $
 
 DISTNAME=		bitlbee-3.4.1
 CATEGORIES=		chat
@@ -46,6 +46,8 @@ PKG_USERS=		bitlbee:nobody
 PKG_HOME.bitlbee=	${VARBASE}/db/bitlbee
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man5 ${PKGMANDIR}/man8 sbin
+
+MAKE_ENV+=		LINKS_PATH=${PREFIX}/bin/links
 
 post-build:
 	cd ${WRKSRC}/doc/user-guide && \
