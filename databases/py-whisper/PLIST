@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2015/12/11 21:34:15 riz Exp $
+bin/rrd2whisper.py
+bin/whisper-create.py
+bin/whisper-diff.py
+bin/whisper-dump.py
+bin/whisper-fetch.py
+bin/whisper-fill.py
+bin/whisper-info.py
+bin/whisper-merge.py
+bin/whisper-resize.py
+bin/whisper-set-aggregation-method.py
+bin/whisper-update.py
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/whisper.py
+${PYSITELIB}/whisper.pyc
+${PYSITELIB}/whisper.pyo
