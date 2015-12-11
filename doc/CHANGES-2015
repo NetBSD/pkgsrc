@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4927 2015/12/11 11:35:33 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4928 2015/12/11 11:44:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8180,3 +8180,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated sysutils/salt to 2015.8.3 [wiz 2015-12-11]
 	Updated devel/pkgconf to 0.9.12.20151211 [wiz 2015-12-11]
 	Updated devel/bugs-everywhere to 1.1.1nb1 [wiz 2015-12-11]
+	Updated security/py-keyring to 5.3nb1 [wiz 2015-12-11]
