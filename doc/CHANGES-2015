@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4930 2015/12/11 11:44:48 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4931 2015/12/11 11:46:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8183,3 +8183,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/py-keyring to 5.3nb1 [wiz 2015-12-11]
 	Updated devel/py-virtualenv to 13.1.2nb2 [wiz 2015-12-11]
 	Updated www/ruby-jekyll to 2.5.3nb1 [wiz 2015-12-11]
+	Updated textproc/ruby-kramdown to 1.9.0nb1 [wiz 2015-12-11]
