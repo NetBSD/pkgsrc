@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2015/12/11 21:45:07 riz Exp $
+
+SHA1 (graphite-web-0.9.15.tar.gz) = 680eb942c5c57fa763e949e81cb13e054eed6ca8
+RMD160 (graphite-web-0.9.15.tar.gz) = aa24a757a6046b89e42169cf49f3dd921c5b796a
+SHA512 (graphite-web-0.9.15.tar.gz) = 055c0cf3e98db56ecd37c8926f83f82b38f88edbe795d183967dfe5e09391a8a838265afef6e426686a8dfbddd8e2164e445ca007b3454ec674142bbf8f693e2
+Size (graphite-web-0.9.15.tar.gz) = 2434438 bytes
+SHA1 (patch-bin_build-index.sh) = 13ad11086c620bd65a7cf084a88ae0187fdae2d7
+SHA1 (patch-setup.py) = 1f215025652d5d45302af8d13ee7ff7a91003cfc
