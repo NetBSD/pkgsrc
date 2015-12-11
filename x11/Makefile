@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.778 2015/11/23 12:47:01 wiz Exp $
+# $NetBSD: Makefile,v 1.779 2015/12/11 14:04:47 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -289,6 +289,7 @@ SUBDIR+=	libXevie
 SUBDIR+=	libXext
 SUBDIR+=	libXfixes
 SUBDIR+=	libXfont
+SUBDIR+=	libXfont2
 SUBDIR+=	libXft
 SUBDIR+=	libXi
 SUBDIR+=	libXinerama
