@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4955 2015/12/12 01:32:35 kamil Exp $
+$NetBSD: CHANGES-2015,v 1.4956 2015/12/12 04:04:03 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8211,3 +8211,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mail/thunderbird-enigmail to 1.8.2nb1 [ryoon 2015-12-12]
 	Updated mail/seamonkey-enigmail to 1.8.2nb1 [ryoon 2015-12-12]
 	Added emulators/unicorn version 0.9 [kamil 2015-12-12]
+	Updated sysutils/fdupes to 1.51 [kamil 2015-12-12]
