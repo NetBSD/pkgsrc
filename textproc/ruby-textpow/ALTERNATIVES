@@ -1,2 +1,2 @@
-bin/plist2syntax @PREFIX@/bin/plist2syntax${RUBY_SUFFIX}
-bin/plist2yaml @PREFIX@/bin/plist2yaml${RUBY_SUFFIX}
+bin/plist2syntax @PREFIX@/bin/plist2syntax@RUBY_SUFFIX@
+bin/plist2yaml @PREFIX@/bin/plist2yaml@RUBY_SUFFIX@
