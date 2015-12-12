@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4980 2015/12/12 17:57:43 taca Exp $
+$NetBSD: CHANGES-2015,v 1.4981 2015/12/12 21:40:01 he Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8236,3 +8236,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/ruby-odbc to 0.99997 [taca 2015-12-12]
 	Updated time/ruby-tzinfo to 0.3.46 [taca 2015-12-12]
 	Updated converters/ruby-uconv to 0.6.1 [taca 2015-12-12]
+	Updated sysutils/collectd to 5.5.0nb9 [he 2015-12-12]
