@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4983 2015/12/12 23:50:30 pettai Exp $
+$NetBSD: CHANGES-2015,v 1.4984 2015/12/12 23:57:31 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8245,3 +8245,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added print/tex-mathdots version 0.9 [markd 2015-12-12]
 	Added print/tex-mathdots-doc version 0.9 [markd 2015-12-12]
 	Updated net/unbound to 1.5.7 [pettai 2015-12-12]
+	Updated net/nsd to 4.1.7 [pettai 2015-12-12]
