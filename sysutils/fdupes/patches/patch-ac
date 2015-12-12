@@ -1,15 +1,43 @@
-$NetBSD: patch-ac,v 1.1.1.1 2008/12/17 11:56:26 obache Exp $
+$NetBSD: patch-ac,v 1.2 2015/12/12 04:00:30 kamil Exp $
 
---- Makefile.orig	2001-03-15 02:49:11.000000000 +0000
+Fix various target paths.
+Add a rule in order not to depend on gmake.
+
+--- Makefile.orig	2013-04-20 17:51:58.000000000 +0000
 +++ Makefile
-@@ -38,8 +38,8 @@ fdupes: fdupes.c md5/md5.c	
- 	gcc fdupes.c md5/md5.c -Wall -o fdupes -DVERSION=\"$(VERSION)\" $(EXTERNAL_MD5) $(EXPERIMENTAL_RBTREE)
+@@ -11,7 +11,7 @@
+ # determination of the actual installation directories.
+ # Suggested values are "/usr/local", "/usr", "/pkgs/fdupes-$(VERSION)"
+ #
+-PREFIX = /usr/local
++PREFIX ?= /usr/local
  
- install: fdupes
--	cp fdupes $(INSTALLDIR)
--	cp fdupes.1 $(MANPAGEDIR)/man1
-+	${BSD_INSTALL_PROGRAM} fdupes ${DESTDIR}$(INSTALLDIR)
-+	${BSD_INSTALL_MAN} fdupes.1 ${DESTDIR}$(MANPAGEDIR)/man1
+ #
+ # When compiling for 32-bit systems, FILEOFFSET_64BIT must be enabled
+@@ -50,13 +50,13 @@ PROGRAM_NAME=fdupes
+ # BIN_DIR indicates directory where program is to be installed. 
+ # Suggested value is "$(PREFIX)/bin"
+ #
+-BIN_DIR = $(PREFIX)/bin
++BIN_DIR = $(DESTDIR)$(PREFIX)/bin
  
- tarball: clean
- 	tar --directory=.. -c -z -v -f ../fdupes-$(VERSION).tar.gz fdupes-$(VERSION)
+ #
+ # MAN_DIR indicates directory where the fdupes man page is to be 
+ # installed. Suggested value is "$(PREFIX)/man/man1"
+ #
+-MAN_BASE_DIR = $(PREFIX)/man
++MAN_BASE_DIR = $(DESTDIR)$(PREFIX)/man
+ MAN_DIR = $(MAN_BASE_DIR)/man1
+ MAN_EXT = 1
+ 
+@@ -91,7 +91,9 @@ INSTALL_DATA    = $(INSTALL) -c -m 0644
+ #
+ #ADDITIONAL_OBJECTS = getopt.o
+ 
+-OBJECT_FILES = fdupes.o md5/md5.o $(ADDITIONAL_OBJECTS)
++OBJECT_FILES = fdupes.o md5.o $(ADDITIONAL_OBJECTS)
++
++md5.o: md5/md5.c
+ 
+ #####################################################################
+ # no need to modify anything beyond this point                      #
