@@ -1,4 +1,4 @@
-$NetBSD: patch-src_entropy.c,v 1.5 2015/12/12 21:39:25 he Exp $
+$NetBSD: patch-src_entropy.c,v 1.6 2015/12/12 22:23:32 he Exp $
 
 Provide a NetBSD implementation for graphing available entropy.
 This version tries to keep /dev/urandom open (for repeated use),
@@ -42,7 +42,7 @@ needlessly reduce the kernel's entropy estimate.
  
  static int entropy_read (void)
  {
-@@ -74,6 +63,67 @@ static int entropy_read (void)
+@@ -74,6 +63,68 @@ static int entropy_read (void)
  
  	return (0);
  }
@@ -74,8 +74,10 @@ needlessly reduce the kernel's entropy estimate.
 +
 +	if (fd == 0) {
 +		fd = open(_PATH_URANDOM, O_RDONLY, 0644);
-+		if (fd < 0)
++		if (fd < 0) {
++			fd = 0;
 +			return -1;
++		}
 +	}
 +
 +	if (ioctl(fd, RNDGETPOOLSTAT, &rs) < 0) {
@@ -86,7 +88,6 @@ needlessly reduce the kernel's entropy estimate.
 +
 +	entropy_submit (rs.curentropy);
 +
-+	close(fd);
 +	return 0;
 +}
 +
