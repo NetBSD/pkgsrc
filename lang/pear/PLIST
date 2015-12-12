@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2015/08/30 08:37:20 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2015/12/12 14:21:36 taca Exp $
 bin/pear
 bin/peardev
 bin/pecl
@@ -58,7 +58,6 @@ lib/php/PEAR/Downloader.php
 lib/php/PEAR/Downloader/Package.php
 lib/php/PEAR/ErrorStack.php
 lib/php/PEAR/Exception.php
-lib/php/PEAR/FixPHP5PEARWarnings.php
 lib/php/PEAR/Frontend.php
 lib/php/PEAR/Frontend/CLI.php
 lib/php/PEAR/Installer.php
@@ -72,6 +71,8 @@ lib/php/PEAR/Installer/Role/Doc.php
 lib/php/PEAR/Installer/Role/Doc.xml
 lib/php/PEAR/Installer/Role/Ext.php
 lib/php/PEAR/Installer/Role/Ext.xml
+lib/php/PEAR/Installer/Role/Man.php
+lib/php/PEAR/Installer/Role/Man.xml
 lib/php/PEAR/Installer/Role/Php.php
 lib/php/PEAR/Installer/Role/Php.xml
 lib/php/PEAR/Installer/Role/Script.php
@@ -110,7 +111,6 @@ lib/php/PEAR/Task/Windowseol/rw.php
 lib/php/PEAR/Validate.php
 lib/php/PEAR/Validator/PECL.php
 lib/php/PEAR/XMLParser.php
-lib/php/PEAR5.php
 lib/php/Structures/Graph.php
 lib/php/Structures/Graph/Manipulator/AcyclicTest.php
 lib/php/Structures/Graph/Manipulator/TopologicalSorter.php
@@ -122,7 +122,7 @@ lib/php/data/PEAR/template.spec
 lib/php/doc/Archive_Tar/docs/Archive_Tar.txt
 lib/php/doc/PEAR/INSTALL
 lib/php/doc/PEAR/LICENSE
-lib/php/doc/PEAR/README
+lib/php/doc/PEAR/README.rst
 lib/php/doc/Structures_Graph/LICENSE
 lib/php/doc/Structures_Graph/docs/tutorials/Structures_Graph/Structures_Graph.pkg
 lib/php/doc/XML_Util/examples/example.php
