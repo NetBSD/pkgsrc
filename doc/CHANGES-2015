@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4953 2015/12/11 21:46:20 riz Exp $
+$NetBSD: CHANGES-2015,v 1.4954 2015/12/12 01:29:08 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8208,3 +8208,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Added databases/py-whisper version 0.9.15 [riz 2015-12-11]
 	Added databases/py-carbon version 0.9.15 [riz 2015-12-11]
 	Added www/py-graphite-web version 0.9.15 [riz 2015-12-11]
+	Updated mail/thunderbird-enigmail to 1.8.2nb1 [ryoon 2015-12-12]
+	Updated mail/seamonkey-enigmail to 1.8.2nb1 [ryoon 2015-12-12]
