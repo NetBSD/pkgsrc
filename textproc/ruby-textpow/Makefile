@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2015/03/13 16:24:59 taca Exp $
+# $NetBSD: Makefile,v 1.7 2015/12/12 04:14:03 taca Exp $
 
 DISTNAME=	textpow-1.4.0
+PKGREVISION=	1
 CATEGORIES=	textproc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
