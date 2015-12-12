@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/12/12 01:26:39 kamil Exp $
+# $NetBSD: Makefile,v 1.2 2015/12/12 23:23:46 wiz Exp $
 
 DISTNAME=	unicorn-0.9
 CATEGORIES=	emulators
@@ -10,6 +10,8 @@ COMMENT=	CPU emulator engine framework based on QEMU
 LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	gmake pkg-config
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # as of 0.9
 
 .include "../../lang/python/application.mk"
 
