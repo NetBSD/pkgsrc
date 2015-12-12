@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4966 2015/12/12 14:30:29 taca Exp $
+$NetBSD: CHANGES-2015,v 1.4967 2015/12/12 14:37:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8222,3 +8222,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/pear to 1.10.1 [taca 2015-12-12]
 	Updated devel/ruby-flexmock to 2.0.3 [taca 2015-12-12]
 	Updated devel/ruby-mixlib-shellout to 2.2.5 [taca 2015-12-12]
+	Updated devel/ruby-simplecov to 0.11.1 [taca 2015-12-12]
