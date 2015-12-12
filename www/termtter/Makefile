@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2015/03/13 17:43:43 taca Exp $
+# $NetBSD: Makefile,v 1.14 2015/12/12 04:17:38 taca Exp $
 
 DISTNAME=	termtter-2.2.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
