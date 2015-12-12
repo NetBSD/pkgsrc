@@ -1,4 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 17:39:11 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/12/12 17:56:55 taca Exp $
+${RUBY_VENDORLIB}/uconv/cp51932.rb
+${RUBY_VENDORLIB}/uconv/euc-jis-2004.rb
+${RUBY_VENDORLIB}/uconv/eucjp-open.rb
+${RUBY_VENDORLIB}/uconv/eucjp-unicode.rb
+${RUBY_VENDORLIB}/uconv/shift_jis-2004.rb
 ${RUBY_VENDORARCHLIB}/uconv.${RUBY_DLEXT}
 ${RUBY_DOC}/uconv/README
 ${RUBY_DOC}/uconv/README.ja
