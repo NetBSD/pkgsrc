@@ -1,13 +1,13 @@
-$NetBSD: patch-Makefile.in,v 1.3 2015/04/25 10:21:27 markd Exp $
+$NetBSD: patch-Makefile.in,v 1.4 2015/12/12 19:24:00 markd Exp $
 
---- Makefile.in.orig	2014-05-17 10:46:00.000000000 +0000
+--- Makefile.in.orig	2015-02-16 14:32:53.000000000 +0000
 +++ Makefile.in
-@@ -311,7 +311,7 @@ top_srcdir = @top_srcdir@
- ACLOCAL_AMFLAGS = -I ../../m4
+@@ -333,7 +333,7 @@ NEVER_NAMES_SUB = -o -name .deps -o -nam
+ NEVER_NAMES_LT = -o -name .libs -o -name '*.lo'
  AM_CPPFLAGS = $(X_CFLAGS)
  AM_CFLAGS = $(WARNING_CFLAGS)
 -LDADD = $(X_LIBS) -lX11 -lXmu $(X_EXTRA_LIBS)
 +LDADD = $(X_LIBS) -lX11 $(X_EXTRA_LIBS)
- common_sources = externs.h sendx.c sendx.h utils.c utils.h xpdfopen.h
- pdfopen_SOURCES = pdfopen.c $(common_sources)
- pdfclose_SOURCES = pdfclose.c $(common_sources)
+ common_sources = \
+ 	@XPDFOPEN_TREE@/sendx.c \
+ 	@XPDFOPEN_TREE@/utils.c
