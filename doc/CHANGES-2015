@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4958 2015/12/12 04:13:20 taca Exp $
+$NetBSD: CHANGES-2015,v 1.4959 2015/12/12 04:15:22 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8214,3 +8214,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated sysutils/fdupes to 1.51 [kamil 2015-12-12]
 	Updated devel/ruby-parser to 3.7.2nb1 [taca 2015-12-12]
 	Updated textproc/ruby-diff-lcs to 1.2.5nb2 [taca 2015-12-12]
+	Updated textproc/ruby-textpow to 1.4.0nb1 [taca 2015-12-12]
