@@ -1,0 +1,19 @@
+$NetBSD: patch-removeredeyes_test_CMakeLists.txt,v 1.1 2015/12/12 19:32:45 markd Exp $
+
+opencv3 support. https://bugs.kde.org/show_bug.cgi?id=349601
+
+--- removeredeyes/test/CMakeLists.txt.orig	2015-09-03 21:22:45.000000000 +0000
++++ removeredeyes/test/CMakeLists.txt
+@@ -1,10 +1,10 @@
+ #
+-# Copyright (c) 2010-2014, Gilles Caulier, <caulier dot gilles at gmail dot com>
++# Copyright (c) 2010-2015, Gilles Caulier, <caulier dot gilles at gmail dot com>
+ #
+ # Redistribution and use is allowed according to the terms of the BSD license.
+ # For details see the accompanying COPYING-CMAKE-SCRIPTS file.
+ 
+-if(NOT WIN32)
++if(NOT WIN32 AND (${OpenCV_VERSION} VERSION_LESS 3.0.0))
+ 
+     include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../plugin
+                         ${CMAKE_CURRENT_SOURCE_DIR}/../libcvblobs
