@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2015/06/08 15:03:52 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/12/12 15:00:03 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.coveralls.yml
 ${GEM_LIBDIR}/.gitignore
@@ -7,6 +7,7 @@ ${GEM_LIBDIR}/DNSSEC
 ${GEM_LIBDIR}/EVENTMACHINE
 ${GEM_LIBDIR}/EXAMPLES
 ${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/RELEASE_NOTES.md
 ${GEM_LIBDIR}/Rakefile
