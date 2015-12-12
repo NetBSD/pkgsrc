@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2015/11/26 13:37:30 adam Exp $
+# $NetBSD: Makefile,v 1.77 2015/12/12 15:27:50 wiedi Exp $
 
 DISTNAME=	gdal-1.11.3
 PKGNAME=	${DISTNAME:S/gdal/gdal-lib/}
@@ -14,7 +14,7 @@ LICENSE=	mit
 # as a bug and changes the C++ shlib version every release.  Therefore
 # this package needs revbumping on every geos update.
 
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c99 c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake
