@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.239 2015/11/04 21:25:07 adam Exp $
+# $NetBSD: Makefile,v 1.240 2015/12/12 01:28:37 kamil Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -340,6 +340,7 @@ SUBDIR+=	tuxnes
 SUBDIR+=	twin
 SUBDIR+=	uae
 SUBDIR+=	ucon64
+SUBDIR+=	unicorn
 SUBDIR+=	vba
 SUBDIR+=	vice
 SUBDIR+=	vmips
