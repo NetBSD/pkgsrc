@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2015/08/02 02:59:03 markd Exp $
+# $NetBSD: Makefile,v 1.4 2015/12/12 22:50:22 markd Exp $
 
 DISTNAME=	collection-genericextra
-PKGNAME=	texlive-${DISTNAME}-2015pre1
+PKGNAME=	texlive-${DISTNAME}-2015pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	37591
@@ -39,7 +39,7 @@ DEPENDS+=	tex-iftex-[0-9]*:../../print/tex-iftex
 # depend langcode
 # depend lecturer
 # depend librarian
-# depend mathdots
+DEPENDS+=	tex-mathdots-[0-9]*:../../print/tex-mathdots
 # depend metatex
 # depend midnight
 # depend navigator
