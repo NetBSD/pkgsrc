@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.1 2015/12/12 15:31:26 kamil Exp $
+
+Include sys/statvfs.h instead of sys/vfs.h on NetBSD.
+
+--- src/gui_main.c.orig	2005-12-27 09:29:51.000000000 -0500
++++ src/gui_main.c
+@@ -11,7 +11,11 @@
+ #  include <config.h>
+ #endif
+ 
++#if defined(__NetBSD__)
++#include <sys/statvfs.h>
++#else
+ #include <sys/vfs.h>
++#endif
+ #include <stdlib.h>
+ #include <math.h>
+ #include <string.h>
