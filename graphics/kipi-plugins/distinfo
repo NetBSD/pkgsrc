@@ -1,6 +1,12 @@
-$NetBSD: distinfo,v 1.34 2015/11/03 21:34:05 agc Exp $
+$NetBSD: distinfo,v 1.35 2015/12/12 19:32:45 markd Exp $
 
-SHA1 (digikam-4.4.0.tar.bz2) = 1feb43120addda314e09761440ec2058e430171c
-RMD160 (digikam-4.4.0.tar.bz2) = 540f243361aba3c95b675c05f84d8d60efab1948
-SHA512 (digikam-4.4.0.tar.bz2) = 4992fad1e574fc44eac53f3ac8d4ab78ccbf8e04beb54a211a9afc20af1efb6f8bacedea07e403f490e7f70a74ed5ac02d4f9b939dfaf25f64a4a9bda0a7d94a
-Size (digikam-4.4.0.tar.bz2) = 68871203 bytes
+SHA1 (digikam-4.13.0.tar.bz2) = d696ac88dcb3bcbd3a5da83b0fbe5e7315a43f92
+RMD160 (digikam-4.13.0.tar.bz2) = 11d6aa15a94cd38acca79f2a31f65393a01a2b0b
+SHA512 (digikam-4.13.0.tar.bz2) = 0cadb55f568a34d07f008791ca351428f4cd9e7060ba79aa8acc25e5e38f0bbcd586df764dacbcb9d1dadb56d2fb9160760cc89aeab4d7cef9bdbd26f691752b
+Size (digikam-4.13.0.tar.bz2) = 69554099 bytes
+SHA1 (patch-CMakeLists.txt) = 84a60e41594a93a619994157529da2656e17e38a
+SHA1 (patch-README) = 2b01709a03ffa0d74fb20a5b9d6aced552df2c9b
+SHA1 (patch-removeredeyes_CMakeLists.txt) = b2224f70410e6c767258b751e05bedab4515cbfa
+SHA1 (patch-removeredeyes_detection_locators_haarclassifier_haarclassifierlocator.cpp) = 7084638db7858c144710e3c18eadef0fcf022d77
+SHA1 (patch-removeredeyes_plugin_libopencv.h) = 6460c0f62d095372588b1397b337157defb82fe7
+SHA1 (patch-removeredeyes_test_CMakeLists.txt) = b5ff51e037754a133450f599603811cdd10660a4
