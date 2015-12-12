@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2015/10/04 13:02:20 taca Exp $
+# $NetBSD: Makefile,v 1.5 2015/12/12 14:50:16 taca Exp $
 
-DISTNAME=	pry-0.10.2
+DISTNAME=	pry-0.10.3
 CATEGORIES=	misc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
