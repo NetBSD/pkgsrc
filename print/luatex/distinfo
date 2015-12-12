@@ -1,10 +1,6 @@
-$NetBSD: distinfo,v 1.16 2015/11/04 01:01:35 agc Exp $
+$NetBSD: distinfo,v 1.17 2015/12/12 19:11:47 markd Exp $
 
-SHA1 (luatex-0.76.0/luatex-beta-0.76.0-source.tar.bz2) = f139e728a16ae332ce323e28e19940169540e549
-RMD160 (luatex-0.76.0/luatex-beta-0.76.0-source.tar.bz2) = 7eec8c90ea21b4db70a0b6b6e874e96732822fd1
-SHA512 (luatex-0.76.0/luatex-beta-0.76.0-source.tar.bz2) = 71ea789a95d419bf177f7f9f8d24d00a9d5639665feadac93cc30c86531e4942d29d848ef39ca3698de3efb1b8da9eb19890b1a06b45664641c7e47a79dd80b0
-Size (luatex-0.76.0/luatex-beta-0.76.0-source.tar.bz2) = 11748576 bytes
-SHA1 (patch-ab) = a3c2d7aecb3117c5d2394af9a6919d25833410be
-SHA1 (patch-ac) = c8f633462cff3ed73a198d980f85f54c3fad953e
-SHA1 (patch-texk_web2c_luatexdir_image_epdf.h) = 8d890f5a83491b08c32cddd97401a1a9de94ccf4
-SHA1 (patch-texk_web2c_luatexdir_lua_lepdflib.cc) = de9574587b6837afbb0e211042d2c5fe7ccce3d2
+SHA1 (texlive-20150521-source.tar.xz) = a32df8d5d6b61f87f7dab907e864fb51b14f4143
+RMD160 (texlive-20150521-source.tar.xz) = fced0e58a7bd15d19e11d72baed23ac14fd2be13
+Size (texlive-20150521-source.tar.xz) = 45459552 bytes
+SHA1 (patch-ac) = 554c3236775f1ce6eac39434efd72f2ed3b14287
