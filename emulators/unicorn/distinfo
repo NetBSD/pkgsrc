@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/12/12 01:26:39 kamil Exp $
+
+SHA1 (unicorn-0.9.tar.gz) = 1504c21f28f19ff1f71bcd74043c2284decb1d9f
+RMD160 (unicorn-0.9.tar.gz) = f95fe16ba7900dde5eae502ad8eb55c227436d0f
+Size (unicorn-0.9.tar.gz) = 2576109 bytes
