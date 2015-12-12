@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4962 2015/12/12 05:43:34 kamil Exp $
+$NetBSD: CHANGES-2015,v 1.4963 2015/12/12 09:21:58 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8218,3 +8218,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/termtter to 2.2.1nb2 [taca 2015-12-12]
 	Added www/otter-browser version 0.9.08 [kamil 2015-12-12]
 	Added sysutils/py-setconf version 0.6.7 [kamil 2015-12-12]
+	Updated editors/gedit3 to 3.16.4 [prlw1 2015-12-12]
