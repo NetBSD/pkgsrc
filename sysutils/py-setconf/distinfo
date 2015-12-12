@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/12/12 05:38:45 kamil Exp $
+
+SHA1 (setconf-0.6.7.tar.gz) = 0f15291341019ff74459f4067f832ceb42d0b06a
+RMD160 (setconf-0.6.7.tar.gz) = 0366b9d761b76083bf21f6512a69d8893e675394
+Size (setconf-0.6.7.tar.gz) = 53756 bytes
