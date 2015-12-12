@@ -1,0 +1,3 @@
+GdMap is a tool which allows you to visualize disk space in a novel way.  Files
+and directories are displayed in rectangular areas.  The larger the file, the
+larger the rectangle that represents it.
