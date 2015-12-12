@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4961 2015/12/12 05:07:09 kamil Exp $
+$NetBSD: CHANGES-2015,v 1.4962 2015/12/12 05:43:34 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8216,4 +8216,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/ruby-diff-lcs to 1.2.5nb2 [taca 2015-12-12]
 	Updated textproc/ruby-textpow to 1.4.0nb1 [taca 2015-12-12]
 	Updated www/termtter to 2.2.1nb2 [taca 2015-12-12]
-	Added otter-browser version 0.9.08 [kamil 2015-12-12]
+	Added www/otter-browser version 0.9.08 [kamil 2015-12-12]
+	Added sysutils/py-setconf version 0.6.7 [kamil 2015-12-12]
