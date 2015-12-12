@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.652 2015/12/12 05:39:46 kamil Exp $
+# $NetBSD: Makefile,v 1.653 2015/12/12 15:46:21 kamil Exp $
 #
 
 COMMENT=	System utilities
@@ -159,6 +159,7 @@ SUBDIR+=	ftwin
 SUBDIR+=	gamin
 SUBDIR+=	gcdmaster
 SUBDIR+=	gcombust
+SUBDIR+=	gdmap
 SUBDIR+=	genpasswd
 SUBDIR+=	gentoo
 SUBDIR+=	gfm
