@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.14 2015/11/02 23:46:13 agc Exp $
+$NetBSD: distinfo,v 1.15 2015/12/12 22:41:19 asau Exp $
 
-SHA1 (openmpi-1.6.4.tar.bz2) = 38095d3453519177272f488d5058a98f7ebdbf10
-RMD160 (openmpi-1.6.4.tar.bz2) = 6abcb4ef5de3da00c23bcad521b66e1774675890
-SHA512 (openmpi-1.6.4.tar.bz2) = 714e8faff6efeb3ef7cd43073e3bc235e38dae0414f7803c7430d82c31c5b66ffb61f5cced888436b7e5924ac7c99fbd5c58463fc1a2080ccc132f08d7b3dd01
-Size (openmpi-1.6.4.tar.bz2) = 10869229 bytes
+SHA1 (openmpi-1.10.1.tar.bz2) = caf6885f323a38b9c106a7815711313843409478
+RMD160 (openmpi-1.10.1.tar.bz2) = 70de0da1f31793333b51eda328a18c01c4ffa3c0
+SHA512 (openmpi-1.10.1.tar.bz2) = 2ebdb6ca29d937bdada25d56b162cddceeed5256a4971b990ac8093e31de931473eb3aff3d18168d2c407b38ec0250b508d0b393ec677288adedb9b5156eaf15
+Size (openmpi-1.10.1.tar.bz2) = 13210778 bytes
 SHA1 (patch-aa) = 6fa20775c6e2abae7c9a2ae858dbb941652beab8
-SHA1 (patch-ai) = 95d699d343a7df8d768e78a235036c842c24e2d2
-SHA1 (patch-aj) = 1408114e5fc07d5b0df3e9368b6d2c5b85f85991
-SHA1 (patch-ak) = d42271d1c6adeb5e9425cc6a183f5308c74dea59
+SHA1 (patch-ai) = 5ddce5ee190ac7bf6964176e23c0a6e624c8c1dd
+SHA1 (patch-aj) = 547fa12b56bd5fe4c4b58d3558d78773bd9dc5c2
+SHA1 (patch-ak) = f79e69fc02510de8da3834729f471799e175bb9c
