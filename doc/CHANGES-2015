@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4981 2015/12/12 21:40:01 he Exp $
+$NetBSD: CHANGES-2015,v 1.4982 2015/12/12 22:53:28 markd Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8237,3 +8237,10 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated time/ruby-tzinfo to 0.3.46 [taca 2015-12-12]
 	Updated converters/ruby-uconv to 0.6.1 [taca 2015-12-12]
 	Updated sysutils/collectd to 5.5.0nb9 [he 2015-12-12]
+	Updated print/luatex to 0.80.0 [markd 2015-12-12]
+	Updated print/xpdfopen to 0.86 [markd 2015-12-12]
+	Updated graphics/kipi-plugins to 4.13.0 [markd 2015-12-12]
+	Updated math/bc to 1.06.95 [markd 2015-12-12]
+	Updated emulators/dynamips to 0.2.15 [markd 2015-12-12]
+	Added print/tex-mathdots version 0.9 [markd 2015-12-12]
+	Added print/tex-mathdots-doc version 0.9 [markd 2015-12-12]
