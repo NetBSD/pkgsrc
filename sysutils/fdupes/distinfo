@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:32:13 agc Exp $
+$NetBSD: distinfo,v 1.3 2015/12/12 04:00:30 kamil Exp $
 
-SHA1 (fdupes-1.40.tar.gz) = e1bce9bdf50d7bf700dda3eb8a3d218b181b3931
-RMD160 (fdupes-1.40.tar.gz) = 0abd2f0dfee38cb333c1069363a65f8ab37e18dd
-SHA512 (fdupes-1.40.tar.gz) = 800f281bd17cfbf3e007959e99ce2c74e8d7e23cbb272aab8373e7e6cb462275a5c52cf7455ed461b8cc442d73ba456b83c017df9d01d3d8fba60b8344f0ef99
-Size (fdupes-1.40.tar.gz) = 16026 bytes
-SHA1 (patch-aa) = c84138d46bef74db226e3ea1226de874e5a7e01a
-SHA1 (patch-ab) = 8e988a6f42682b0393454b8564b6068e1fc70df9
-SHA1 (patch-ac) = 833aaa5903efb59acaa1f3f505090f7b018903f8
+SHA1 (fdupes-1.51.tar.gz) = 8276b39026f57a2f9503d7af18efca0a7d42b8ec
+RMD160 (fdupes-1.51.tar.gz) = cf2c3524a2f827c50ce2ef257d3d7f9b75951c48
+SHA512 (fdupes-1.51.tar.gz) = 7cbc414f25427793317667b8d5494f7247a08ba402855929de77d1db01eb3dce41ea608f8dcca047c4a7856e02b10261982cf2acd7f6a79ab726b3009c710a8d
+Size (fdupes-1.51.tar.gz) = 48942 bytes
+SHA1 (patch-aa) = 925d3c4923fe1d784273b292ef3be0a36371a9f2
+SHA1 (patch-ac) = be0d27bfbf58fae478f54133d16e01012a24c5cf
