@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2010/02/05 15:26:15 martin Exp $
+# $NetBSD: Makefile.common,v 1.8 2015/12/12 22:57:22 wiedi Exp $
 #
 # used by misc/open2300-mysql/Makefile
 
@@ -11,5 +11,7 @@ HOMEPAGE=		http://www.lavrsen.dk/twiki/bin/view/Open2300/WebHome
 
 PATCHDIR=		${.CURDIR}/../open2300/patches
 DISTINFO_FILE=		${.CURDIR}/../open2300/distinfo
+
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 .include "../../mk/bsd.pkg.mk"
