@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4982 2015/12/12 22:53:28 markd Exp $
+$NetBSD: CHANGES-2015,v 1.4983 2015/12/12 23:50:30 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8244,3 +8244,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated emulators/dynamips to 0.2.15 [markd 2015-12-12]
 	Added print/tex-mathdots version 0.9 [markd 2015-12-12]
 	Added print/tex-mathdots-doc version 0.9 [markd 2015-12-12]
+	Updated net/unbound to 1.5.7 [pettai 2015-12-12]
