@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.652 2015/11/18 09:48:08 markd Exp $
+# $NetBSD: Makefile,v 1.653 2015/12/12 22:46:30 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -767,6 +767,8 @@ SUBDIR+=	tex-marginnote-doc
 SUBDIR+=	tex-math-e-doc
 SUBDIR+=	tex-mathcomp
 SUBDIR+=	tex-mathcomp-doc
+SUBDIR+=	tex-mathdots
+SUBDIR+=	tex-mathdots-doc
 SUBDIR+=	tex-mathtools
 SUBDIR+=	tex-mdframed
 SUBDIR+=	tex-mdframed-doc
