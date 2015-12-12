@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/09/27 10:07:53 tnn Exp $
+# $NetBSD: Makefile,v 1.2 2015/12/12 21:13:32 wiedi Exp $
 
 DISTNAME=	foobillardplus-3.42beta
 PKGNAME=	${DISTNAME:S/beta/b/}
@@ -15,6 +15,8 @@ USE_TOOLS+=	automake autoconf autoreconf
 
 CONFIGURE_ARGS+=	--enable-standard
 CONFIGURE_ARGS+=	--disable-fastmath
+
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 SUBST_CLASSES+=			fix-datadir
 SUBST_STAGE.fix-datadir=	pre-configure
