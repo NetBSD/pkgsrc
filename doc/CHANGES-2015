@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4970 2015/12/12 14:45:19 taca Exp $
+$NetBSD: CHANGES-2015,v 1.4971 2015/12/12 14:47:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8226,3 +8226,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ruby-tins to 1.8.1 [taca 2015-12-12]
 	Updated lang/ruby-coffee-script-source to 1.10.0 [taca 2015-12-12]
 	Updated math/ruby-spreadsheet to 1.1.0 [taca 2015-12-12]
+	Updated misc/ruby-hashie to 3.4.3 [taca 2015-12-12]
