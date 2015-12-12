@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.15 2015/09/26 15:11:01 taca Exp $
+# $NetBSD: Makefile,v 1.16 2015/12/12 15:00:03 taca Exp $
 
-DISTNAME=	dnsruby-1.58.0
+DISTNAME=	dnsruby-1.59.0
 CATEGORIES=	net
 
 MAINTAINER=	pettai@NetBSD.org
 HOMEPAGE=	https://github.com/alexdalitz/dnsruby
 COMMENT=	Ruby DNS client library
-LICENSE=	apache-1.1
+LICENSE=	apache-2.0
 
 post-extract:
 	${MKDIR} ${WRKSRC}/html/classes
