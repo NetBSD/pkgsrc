@@ -1,0 +1,24 @@
+$NetBSD: patch-Makefile,v 1.1 2015/12/12 16:56:04 wiedi Exp $
+
+Don't overwrite pkgsrc CC and CFLAGS
+
+--- Makefile.orig	2014-05-19 13:11:41.000000000 +0000
++++ Makefile
+@@ -1,6 +1,6 @@
+-CC=			gcc
++#CC=			gcc
+ #CC=			clang --analyze
+-CFLAGS=		-g -Wall -Wno-unused-function -O2
++#CFLAGS=		-g -Wall -Wno-unused-function -O2
+ WRAP_MALLOC=-DUSE_MALLOC_WRAPPERS
+ AR=			ar
+ DFLAGS=		-DHAVE_PTHREAD $(WRAP_MALLOC)
+@@ -11,7 +11,7 @@ AOBJS=		QSufSort.o bwt_gen.o bwase.o bwa
+ 			bwtsw2_chain.o fastmap.o bwtsw2_pair.o
+ PROG=		bwa
+ INCLUDES=	
+-LIBS=		-lm -lz -lpthread
++LIBS=		-lm -lz -lpthread $(LDFLAGS)
+ SUBDIRS=	.
+ 
+ .SUFFIXES:.c .o .cc

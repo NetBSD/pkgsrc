@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2015/11/07 20:20:54 dholland Exp $
+# $NetBSD: Makefile,v 1.3 2015/12/12 16:56:04 wiedi Exp $
 #
 
 DISTNAME=	bwa-0.7.9a
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bio-bwa/}
 EXTRACT_SUFX=	.tar.bz2
+PKGREVISION=	1
 
 MAINTAINER=	jwbacon@tds.net
 HOMEPAGE=	http://bio-bwa.sourceforge.net/
@@ -18,6 +19,9 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 # unconditionally uses <emmintrin.h>
 ONLY_FOR_PLATFORM=	*-*-x86_64 *-*-i386 *-*-ia64
+
+CFLAGS.SunOS+=	-Du_int32_t=uint32_t
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bwa ${DESTDIR}${PREFIX}/bin
