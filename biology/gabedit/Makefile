@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/07/27 19:47:55 asau Exp $
+# $NetBSD: Makefile,v 1.3 2015/12/12 17:26:05 wiedi Exp $
 
 PKGNAME=	gabedit-2.4.8
 DISTNAME=	GabeditSrc248
@@ -16,6 +16,8 @@ INSTALLATION_DIRS=	bin
 # Skip check for example scripts:
 CHECK_PORTABILITY_SKIP=	utils/Dalton/SGE/submitDalton \
 			utils/Gamess/SGE/submitGamess
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 do-configure:
 	cd $(WRKSRC) && cp platforms/CONFIG.unix CONFIG
