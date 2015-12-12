@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2015/12/12 01:26:39 kamil Exp $
+include/unicorn/arm.h
+include/unicorn/arm64.h
+include/unicorn/m68k.h
+include/unicorn/mips.h
+include/unicorn/platform.h
+include/unicorn/sparc.h
+include/unicorn/unicorn.h
+include/unicorn/x86.h
+lib/libunicorn.a
+lib/libunicorn.so
+lib/libunicorn.so.0
+lib/pkgconfig/unicorn.pc
