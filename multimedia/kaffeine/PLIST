@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2013/01/23 21:51:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/12/12 20:27:13 markd Exp $
+bin/dtvdaemon
 bin/kaffeine
-bin/kaffeine-xbu
+share/appdata/kaffeine.appdata.xml
 share/applications/kde4/kaffeine.desktop
 share/icons/hicolor/128x128/apps/kaffeine.png
 share/icons/hicolor/16x16/apps/kaffeine.png
