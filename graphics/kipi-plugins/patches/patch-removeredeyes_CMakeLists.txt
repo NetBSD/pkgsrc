@@ -1,0 +1,13 @@
+$NetBSD: patch-removeredeyes_CMakeLists.txt,v 1.1 2015/12/12 19:32:45 markd Exp $
+
+opencv3 support. https://bugs.kde.org/show_bug.cgi?id=349601
+
+--- removeredeyes/CMakeLists.txt.orig	2015-09-03 21:22:45.000000000 +0000
++++ removeredeyes/CMakeLists.txt
+@@ -1,5 +1,5 @@
+ #
+-# Copyright (c) 2010-2014, Gilles Caulier, <caulier dot gilles at gmail dot com>
++# Copyright (c) 2010-2015, Gilles Caulier, <caulier dot gilles at gmail dot com>
+ #
+ # Redistribution and use is allowed according to the terms of the BSD license.
+ # For details see the accompanying COPYING-CMAKE-SCRIPTS file.

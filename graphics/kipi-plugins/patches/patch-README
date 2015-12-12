@@ -1,0 +1,19 @@
+$NetBSD: patch-README,v 1.1 2015/12/12 19:32:45 markd Exp $
+
+opencv3 support. https://bugs.kde.org/show_bug.cgi?id=349601
+
+--- README.orig	2015-09-03 21:22:45.000000000 +0000
++++ README
+@@ -140,6 +140,12 @@ http://bugs.kde.org/buglist.cgi?product=
+ 
+ -- INSTALL ------------------------------------------------------------
+ 
++CMake compilation options to custom digiKam:
++
++Use CMake "-DENABLE_OPENCV3=on"           flag to compile kipi-plugins source code using OpenCV3 instead OpenCV2                     (disabled by default).
++                                          OpenCV3 support needs extra contrib modules package, especially 'face'
++                                          and 'legacy' components.
++
+ In order to compile, especially when QT3/Qt4 are installed at the same time, 
+ just use something like that:
+ 
