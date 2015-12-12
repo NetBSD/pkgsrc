@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2015/06/07 13:53:49 taca Exp $
+# $NetBSD: Makefile,v 1.12 2015/12/12 14:41:21 taca Exp $
 
-DISTNAME=	coffee-script-source-1.9.1.1
+DISTNAME=	coffee-script-source-1.10.0
 CATEGORIES=	lang
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	# 404 http://jashkenas.github.com/coffee-script/
+HOMEPAGE=	http://coffeescript.org/
 COMMENT=	Little language that compiles into JavaScript
 LICENSE=	mit
 
