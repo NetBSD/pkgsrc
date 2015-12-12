@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4956 2015/12/12 04:04:03 kamil Exp $
+$NetBSD: CHANGES-2015,v 1.4957 2015/12/12 04:11:18 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8212,3 +8212,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mail/seamonkey-enigmail to 1.8.2nb1 [ryoon 2015-12-12]
 	Added emulators/unicorn version 0.9 [kamil 2015-12-12]
 	Updated sysutils/fdupes to 1.51 [kamil 2015-12-12]
+	Updated devel/ruby-parser to 3.7.2nb1 [taca 2015-12-12]
