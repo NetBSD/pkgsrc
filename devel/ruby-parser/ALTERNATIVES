@@ -1,2 +1,2 @@
-bin/ruby_parse @PREFIX@/bin/ruby_parse${RUBY_SUFFIX}
-bin/ruby_parse_extract_error @PREFIX@/bin/ruby_parse_extract_error${RUBY_SUFFIX}
+bin/ruby_parse @PREFIX@/bin/ruby_parse@RUBY_SUFFIX@
+bin/ruby_parse_extract_error @PREFIX@/bin/ruby_parse_extract_error@RUBY_SUFFIX@
