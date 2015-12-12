@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2015/06/14 12:50:01 markd Exp $
+# $NetBSD: Makefile,v 1.11 2015/12/12 23:15:03 markd Exp $
 
 DISTNAME=	context
 PKGNAME=	tex-${DISTNAME}-2015
+PKGREVISION=	1
 TEXLIVE_REV=	37464
 
 MAINTAINER=	minskim@NetBSD.org
@@ -29,7 +30,7 @@ REPLACE_TEXLUA=	bin/mtxrun \
 		texmf-dist/scripts/context/stubs/unix/mtxrun \
 		texmf-dist/scripts/context/stubs/unix/luatools
 
-TEX_FORMATS+=		"cont-en pdftex cont-usr.tex -8bit *cont-en.ini\\ncont-en xetex cont-usr.tex -8bit *cont-en.ini\\n"
+TEX_FORMATS+=		"cont-en pdftex cont-usr.tex -8bit *cont-en.mkii\\ncont-en xetex cont-usr.tex -8bit *cont-en.mkii\\n"
 TEX_MAP_FILES+=		original-context-symbol.map
 
 INSTALLATION_DIRS+=	bin
