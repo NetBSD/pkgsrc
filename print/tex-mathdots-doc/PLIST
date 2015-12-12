@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2015/12/12 22:44:30 markd Exp $
+share/texmf-dist/doc/generic/mathdots/README
+share/texmf-dist/doc/generic/mathdots/mathdots.pdf
+share/texmf-dist/doc/generic/mathdots/mdotest.pdf
+share/texmf-dist/doc/generic/mathdots/mdotest.tex
+share/texmf-dist/doc/generic/mathdots/plmdotest.tex
