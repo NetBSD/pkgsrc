@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2015/06/08 15:02:16 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2015/12/12 14:52:36 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/Gemfile
@@ -7,6 +7,7 @@ ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/addressable.gemspec
 ${GEM_LIBDIR}/data/unicode.data
+${GEM_LIBDIR}/lib/addressable.rb
 ${GEM_LIBDIR}/lib/addressable/idna.rb
 ${GEM_LIBDIR}/lib/addressable/idna/native.rb
 ${GEM_LIBDIR}/lib/addressable/idna/pure.rb
@@ -15,6 +16,8 @@ ${GEM_LIBDIR}/lib/addressable/uri.rb
 ${GEM_LIBDIR}/lib/addressable/version.rb
 ${GEM_LIBDIR}/spec/addressable/idna_spec.rb
 ${GEM_LIBDIR}/spec/addressable/net_http_compat_spec.rb
+${GEM_LIBDIR}/spec/addressable/rack_mount_compat_spec.rb
+${GEM_LIBDIR}/spec/addressable/security_spec.rb
 ${GEM_LIBDIR}/spec/addressable/template_spec.rb
 ${GEM_LIBDIR}/spec/addressable/uri_spec.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
@@ -24,5 +27,4 @@ ${GEM_LIBDIR}/tasks/git.rake
 ${GEM_LIBDIR}/tasks/metrics.rake
 ${GEM_LIBDIR}/tasks/rspec.rake
 ${GEM_LIBDIR}/tasks/yard.rake
-${GEM_LIBDIR}/website/index.html
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
