@@ -1,0 +1,5 @@
+Redefines \ddots and \vdots, and defines \iddots. The dots
+produced by \iddots slant in the opposite direction to \ddots.
+All the commands are designed to change size appropriately in
+scripts, as well as in response to LaTeX size changing
+commands. The commands may also be used in plain TeX.
