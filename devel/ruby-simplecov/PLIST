@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2015/12/02 14:14:13 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2015/12/12 14:36:38 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.rspec
@@ -110,6 +110,7 @@ ${GEM_LIBDIR}/spec/fixtures/sample.rb
 ${GEM_LIBDIR}/spec/fixtures/utf-8.rb
 ${GEM_LIBDIR}/spec/helper.rb
 ${GEM_LIBDIR}/spec/merge_helpers_spec.rb
+${GEM_LIBDIR}/spec/multi_formatter_spec.rb
 ${GEM_LIBDIR}/spec/result_spec.rb
 ${GEM_LIBDIR}/spec/return_codes_spec.rb
 ${GEM_LIBDIR}/spec/source_file_line_spec.rb
