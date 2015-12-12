@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/09/03 21:07:10 sevan Exp $
+# $NetBSD: Makefile,v 1.6 2015/12/12 01:24:13 wiedi Exp $
 
 VERSION=	5.3.3p1
 DISTNAME=	opensmtpd-${VERSION}
@@ -62,6 +62,7 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf \
 		${DESTDIR}${EXAMPLEDIR}/mailer.conf
 
+.include "../../databases/db/buildlink3.mk"
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
