@@ -1,2 +1,2 @@
-bin/htmldiff @PREFIX@/bin/htmldiff${RUBY_SUFFIX}
-bin/ldiff @PREFIX@/bin/ldiff${RUBY_SUFFIX}
+bin/htmldiff @PREFIX@/bin/htmldiff@RUBY_SUFFIX@
+bin/ldiff @PREFIX@/bin/ldiff@RUBY_SUFFIX@
