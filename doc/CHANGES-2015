@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4968 2015/12/12 14:39:16 taca Exp $
+$NetBSD: CHANGES-2015,v 1.4969 2015/12/12 14:42:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8224,3 +8224,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ruby-mixlib-shellout to 2.2.5 [taca 2015-12-12]
 	Updated devel/ruby-simplecov to 0.11.1 [taca 2015-12-12]
 	Updated devel/ruby-tins to 1.8.1 [taca 2015-12-12]
+	Updated lang/ruby-coffee-script-source to 1.10.0 [taca 2015-12-12]
