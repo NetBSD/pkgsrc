@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4979 2015/12/12 17:28:37 taca Exp $
+$NetBSD: CHANGES-2015,v 1.4980 2015/12/12 17:57:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8235,3 +8235,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added sysutils/gdmap version 0.8.1 [kamil 2015-12-12]
 	Updated databases/ruby-odbc to 0.99997 [taca 2015-12-12]
 	Updated time/ruby-tzinfo to 0.3.46 [taca 2015-12-12]
+	Updated converters/ruby-uconv to 0.6.1 [taca 2015-12-12]
