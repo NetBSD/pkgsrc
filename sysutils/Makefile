@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.651 2015/12/06 15:20:31 wiz Exp $
+# $NetBSD: Makefile,v 1.652 2015/12/12 05:39:46 kamil Exp $
 #
 
 COMMENT=	System utilities
@@ -421,6 +421,7 @@ SUBDIR+=	py-notify
 SUBDIR+=	py-notify-python
 SUBDIR+=	py-pefile
 SUBDIR+=	py-psutil
+SUBDIR+=	py-setconf
 SUBDIR+=	py-setproctitle
 SUBDIR+=	py-structlog
 SUBDIR+=	py-syslog-ng
