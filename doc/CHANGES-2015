@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4973 2015/12/12 14:53:31 taca Exp $
+$NetBSD: CHANGES-2015,v 1.4974 2015/12/12 15:01:15 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8229,3 +8229,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated misc/ruby-hashie to 3.4.3 [taca 2015-12-12]
 	Updated misc/ruby-pry to 0.10.3 [taca 2015-12-12]
 	Updated net/ruby-addressable to 2.4.0 [taca 2015-12-12]
+	Updated net/ruby-dnsruby to 1.59.0 [taca 2015-12-12]
