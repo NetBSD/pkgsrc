@@ -1,143 +1,78 @@
-# $NetBSD: Makefile,v 1.40 2015/11/23 10:30:17 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2015/12/12 19:11:47 markd Exp $
 
-DISTNAME=	luatex-beta-0.76.0-source
-PKGNAME=	${DISTNAME:S/-beta//:S/-source//}
-PKGREVISION=	11
+DISTNAME=	texlive-20150521-source
+PKGNAME=	luatex-0.80.0
 CATEGORIES=	print
-MASTER_SITES=	https://foundry.supelec.fr/frs/download.php/file/15745/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2015/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.luatex.org/
 COMMENT=	Extended version of pdfTeX using Lua
 LICENSE=	gnu-gpl-v2
 
-DIST_SUBDIR=	${PKGNAME_NOREV}
-
-MAKE_JOBS_SAFE=no
-
-CONFLICTS+=	web2c<=7.5.7nb3
-DEPENDS+=	kpathsea>=6.0.1:../../print/kpathsea
+EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
+			${DISTNAME}/libs/lua52 \
+			${DISTNAME}/texk/web2c
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake pkg-config
-WRKSRC=		${WRKDIR}/${DISTNAME:S/-source//}/source
+USE_TOOLS+=	gmake lex perl pkg-config yacc
+CONFIGURE_ARGS+=	--disable-aleph --disable-etex --disable-pdftex \
+			--enable-luatex --disable-mf --disable-mf-nowin \
+			--disable-luajittex \
+			--disable-mp --disable-pmp --disable-upmp \
+			--disable-ptex --disable-eptex --disable-uptex --disable-euptex \
+			--disable-web-progs \
+			--enable-web2c --disable-xetex
+CONFIGURE_ARGS+=	--with-system-poppler
+CONFIGURE_ARGS+=	--with-system-xpdf
+CONFIGURE_ARGS+= \
+	--with-fontconfig-includes=${BUILDLINK_PREFIX.fontconfig}/include \
+	--with-fontconfig-libdir=${BUILDLINK_PREFIX.fontconfig}/lib
+CONFIGURE_ARGS+=	--with-system-kpathsea
+CONFIGURE_ARGS+=	--with-system-zlib \
+	--with-zlib-includes=${BUILDLINK_PREFIX.zlib}/include \
+	--with-zlib-libdir=${BUILDLINK_PREFIX.zlib}/lib
+CONFIGURE_ARGS+=	--with-system-cairo
+CONFIGURE_ARGS+=	--with-system-pixman
+CONFIGURE_ARGS+=	--with-system-libpng
+CONFIGURE_ARGS+=	--with-system-freetype2
+CONFIGURE_ARGS+=	--with-system-zziplib
+CONFIGURE_ARGS+=	--with-system-mpfr \
+			--with-mpfr-includes=${BUILDLINK_PREFIX.mpfr}/include \
+			--with-mpfr-libdir=${BUILDLINK_PREFIX.mpfr}/lib
+CONFIGURE_ARGS+=	--with-system-gmp \
+			--with-gmp-includes=${BUILDLINK_PREFIX.gmp}/include \
+			--with-gmp-libdir=${BUILDLINK_PREFIX.gmp}/lib
 
-CONFIGURE_ARGS+=--enable-build-in-source-tree \
-		--enable-cxx-runtime-hack \
-		--disable-afm2pl    \
-		--disable-aleph  \
-		--disable-bibtex   \
-		--disable-bibtex8   \
-		--disable-cfftot1 \
-		--disable-cjkutils  \
-		--disable-detex    \
-		--disable-devnag   \
-		--disable-dialog   \
-		--disable-dtl      \
-		--enable-dump-share  \
-		--disable-dvi2tty  \
-		--disable-dvidvi   \
-		--disable-dviljk   \
-		--disable-dvipdfm  \
-		--disable-dvipdfmx \
-		--disable-dvipos  \
-		--disable-dvipsk  \
-		--disable-gsftopk \
-		--disable-lacheck \
-		--disable-lcdf-typetools \
-		--enable-luatex \
-		--disable-makeindexk \
-		--disable-mf  \
-		--disable-mmafm \
-		--disable-mmpfb \
-		--enable-mp \
-		--disable-musixflx \
-		--disable-otfinfo \
-		--disable-otftotfm  \
-		--disable-pdfopen  \
-		--disable-pdftex  \
-		--disable-ptex \
-		--disable-ps2eps   \
-		--disable-ps2pkm \
-		--disable-psutils  \
-		--disable-seetexk \
-		--disable-t1dotlessj  \
-		--disable-t1lint \
-		--disable-t1rawafm \
-		--disable-t1reencode \
-		--disable-t1testpage \
-		--disable-t1utils  \
-		--disable-tex    \
-		--disable-tex4htk \
-		--disable-tpic2pdftex  \
-		--disable-ttf2pk \
-		--disable-ttfdump \
-		--disable-ttftotype42 \
-		--disable-vlna  \
-		--disable-web-progs \
-		--disable-xdv2pdf \
-		--disable-xdvipdfmx \
-		--disable-xetex \
-		--with-system-freetype2 \
-		--without-system-gd \
-		--without-system-teckit \
-		--without-system-t1lib \
-		--without-x \
-		--disable-native-texlive-build \
-		--disable-shared    \
-		--disable-largefile
-CONFIGURE_ARGS+=--with-system-cairo
-CONFIGURE_ARGS+=--with-system-kpathsea \
-		--with-kpathsea-includes=${BUILDLINK_PREFIX.kpathsea}/include \
-		--with-kpathsea-libdir=${BUILDLINK_PREFIX.kpathsea}/lib
-CONFIGURE_ARGS+=--with-system-libpng
-CONFIGURE_ARGS+=--with-system-pixman
-CONFIGURE_ARGS+=--with-system-poppler
-CONFIGURE_ARGS+=--with-system-zlib \
-		--with-zlib-include=${BUILDLINK_PREFIX.zlib}/include \
-		--with-zlib-libdir=${BUILDLINK_PREFIX.zlib}/lib
-CONFIGURE_ARGS+=--with-system-zziplib
-CONFIGURE_DIRS+=. texk/web2c
-MAKE_FLAGS+=	LIBTOOL=${LIBTOOL:Q}
+CONFIGURE_DIRS=		libs/lua52
+CONFIGURE_DIRS+=	texk/web2c
 
-CFLAGS+=	-I${BUILDLINK_PREFIX.kpathsea}/lib
+INSTALLATION_DIRS+=	bin lib
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	post-configure
-SUBST_FILES.prefix=	texk/web2c/luatexdir/lua51/luaconf.h
+SUBST_FILES.prefix=	libs/lua52/lua-5.2.4/src/luaconf.h
 SUBST_VARS.prefix=	PREFIX
 
-INSTALLATION_DIRS+=	bin
-
-.include "../../mk/bsd.prefs.mk"
-
-# Native clang crashes on FreeBSD 10:
-.if $(OPSYS) == "FreeBSD"
-BUILDLINK_TRANSFORM+=	opt:-O*:-O0
-.endif
+CFLAGS.SunOS+= -std=gnu99 -D_XOPEN_SOURCE_EXTENDED=0
 
 .include "../../archivers/zziplib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../math/mpfr/buildlink3.mk"
+BUILDLINK_API_DEPENDS.kpathsea+= kpathsea>=6.2.1
 .include "../../print/kpathsea/buildlink3.mk"
-.include "../../print/poppler-includes/buildlink3.mk"
 .include "../../print/poppler/buildlink3.mk"
+.include "../../print/poppler-includes/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
 
-post-extract:
-	${RM} -rf ${WRKSRC}/libs/zziplib
-	${RM} -rf ${WRKSRC}/texk/kpathsea
-	${ECHO} '#define luatex_svn_revision 4630' \
-		> ${WRKSRC}/texk/web2c/luatexdir/luatex_svnversion.h
-
 do-install:
-.for f in luatex
-	${INSTALL_PROGRAM} ${WRKSRC}/texk/web2c/${f} ${DESTDIR}${PREFIX}/bin
-.endfor
+	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/libs/lua52/libtexlua52.la ${DESTDIR}${PREFIX}/lib
+	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/texk/web2c/luatex ${DESTDIR}${PREFIX}/bin
 .for f in texlua texluac
 	${LN} -s luatex ${DESTDIR}${PREFIX}/bin/${f}
 .endfor
