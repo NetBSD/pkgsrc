@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4964 2015/12/12 14:22:38 taca Exp $
+$NetBSD: CHANGES-2015,v 1.4965 2015/12/12 14:27:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8220,3 +8220,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added sysutils/py-setconf version 0.6.7 [kamil 2015-12-12]
 	Updated editors/gedit3 to 3.16.4 [prlw1 2015-12-12]
 	Updated lang/pear to 1.10.1 [taca 2015-12-12]
+	Updated devel/ruby-flexmock to 2.0.3 [taca 2015-12-12]
