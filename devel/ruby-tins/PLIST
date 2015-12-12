@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2015/11/29 15:20:41 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/12/12 14:38:26 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.travis.yml
@@ -125,7 +125,6 @@ ${GEM_LIBDIR}/lib/tins/xt/proc_prelude.rb
 ${GEM_LIBDIR}/lib/tins/xt/range_plus.rb
 ${GEM_LIBDIR}/lib/tins/xt/require_maybe.rb
 ${GEM_LIBDIR}/lib/tins/xt/responding.rb
-${GEM_LIBDIR}/lib/tins/xt/rotate.rb
 ${GEM_LIBDIR}/lib/tins/xt/secure_write.rb
 ${GEM_LIBDIR}/lib/tins/xt/sexy_singleton.rb
 ${GEM_LIBDIR}/lib/tins/xt/string.rb
@@ -134,7 +133,6 @@ ${GEM_LIBDIR}/lib/tins/xt/string_camelize.rb
 ${GEM_LIBDIR}/lib/tins/xt/string_underscore.rb
 ${GEM_LIBDIR}/lib/tins/xt/string_version.rb
 ${GEM_LIBDIR}/lib/tins/xt/subhash.rb
-${GEM_LIBDIR}/lib/tins/xt/symbol_to_proc.rb
 ${GEM_LIBDIR}/lib/tins/xt/time_dummy.rb
 ${GEM_LIBDIR}/lib/tins/xt/time_freezer.rb
 ${GEM_LIBDIR}/lib/tins/xt/to.rb
