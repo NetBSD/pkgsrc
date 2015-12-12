@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.29 2015/10/22 18:14:40 pettai Exp $
+$NetBSD: distinfo,v 1.30 2015/12/12 23:50:06 pettai Exp $
 
-SHA1 (unbound-1.5.6.tar.gz) = b1e521669d6e5a3c1baf8b71dad070e38887162b
-RMD160 (unbound-1.5.6.tar.gz) = bb333953b2aafd65525712cc4fa64f502af48817
-SHA512 (unbound-1.5.6.tar.gz) = 2477e3f00b8f5a3a4661ff20b0bc0d1d56c8a65cc6ab9f1308ae86f41c67a998af68d3ac5ba6c9c22a25a251f0410eaf9fee82911bcb3a3e82ffb6383e28dcf7
-Size (unbound-1.5.6.tar.gz) = 4849569 bytes
+SHA1 (unbound-1.5.7.tar.gz) = 6306fec537f507a41b9c3a7e16e4aa1c10532510
+RMD160 (unbound-1.5.7.tar.gz) = f5cdda4b439f9b16cf1da62ca796c664cd53998b
+SHA512 (unbound-1.5.7.tar.gz) = 7fc000364139519ed837ef9883f2e8a684b5ac19f2d3343626ab0a4c3459a7c3ccf2c79e9d992d82b123c6a38245fc286994365b427145d218e0b3c645c4dc4f
+Size (unbound-1.5.7.tar.gz) = 4859573 bytes
