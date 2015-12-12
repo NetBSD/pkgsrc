@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2015/12/05 21:25:48 adam Exp $
+# $NetBSD: Makefile.common,v 1.4 2015/12/12 01:28:15 ryoon Exp $
 # used by mail/thunderbird-enigmail/Makefile
 # used by mail/seamonkey-enigmail/Makefile
 
@@ -16,7 +16,8 @@ USE_TOOLS+=	gmake perl sed unzip zip
 MAKE_JOBS_SAFE=	no
 
 # Minimal requirements are here: https://www.enigmail.net/download/source.php
-DEPENDS+=		gnupg-[0-9]*:../../security/gnupg
+DEPENDS+=		gnupg2-[0-9]*:../../security/gnupg2
+DEPENDS+=		pinentry-gtk2-[0-9]*:../../security/pinentry-gtk2
 
 DISTINFO_FILE=	${.CURDIR}/../../mail/thunderbird-enigmail/distinfo
 PATCHDIR=	${.CURDIR}/../../mail/thunderbird-enigmail/patches
