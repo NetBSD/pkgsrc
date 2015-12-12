@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2012/10/03 00:20:17 asau Exp $
+# $NetBSD: Makefile,v 1.21 2015/12/12 17:56:55 taca Exp $
 
-DISTNAME=	uconv-0.4.12
-PKGREVISION=	6
+DISTNAME=	uconv-0.6.1
 CATEGORIES=	converters japanese ruby
 MASTER_SITES=	http://www.yoshidam.net/
 
@@ -10,8 +9,6 @@ HOMEPAGE=	http://www.yoshidam.net/Ruby.html#uconv
 COMMENT=	Unicode conversion library with Japanese codesets support
 LICENSE=	gnu-gpl-v2 OR ruby-license
 
-# Depends on Ruby's internal and use 1.9's encoding support.
-RUBY_VERSION_SUPPORTED= 18
 USE_RUBY_EXTCONF=	yes
 WRKSRC=			${WRKDIR}/uconv
 
