@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2015/11/08 01:03:30 ryoon Exp $
+# $NetBSD: Makefile,v 1.14 2015/12/13 14:27:05 ryoon Exp $
 
 DISTNAME=		libreoffice4-bin	# overridden below
 PKGNAME=		libreoffice4-bin-${OO_RELEASE}
@@ -21,8 +21,8 @@ CONFLICTS+=		libreoffice3-bin-[0-9]*
 
 OO_VER=			4
 OO_BASEVER=		${OO_VER}.4
-OO_RELEASE=		${OO_BASEVER}.6
-OO_RELEASEV=		${OO_RELEASE}.3
+OO_RELEASE=		${OO_BASEVER}.7
+OO_RELEASEV=		${OO_RELEASE}.2
 PLIST_SUBST+=		VER=${OO_VER:Q} BASEVER=${OO_BASEVER:Q}
 MESSAGE_SUBST+=		VER=${OO_VER:Q}
 FILES_SUBST+=		VER=${OO_VER:Q}
@@ -75,7 +75,7 @@ do-install:
 		-e "s|@@OO_BASEVER@@|${OO_BASEVER}|g" \
 		< ${FILESDIR}/soffice > ${DESTDIR}${PREFIX}/bin/soffice
 	${CHMOD} +x ${DESTDIR}${PREFIX}/bin/soffice
-.for i in scalc sdraw simpress smath swriter
+.for i in sbase scalc sdraw simpress smath swriter
 	${LN} -sf ../opt/libreoffice${OO_BASEVER}/program/${i} ${DESTDIR}${PREFIX}/bin/${i}
 .endfor
 
