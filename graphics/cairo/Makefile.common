@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.8 2015/11/06 11:15:51 wiz Exp $
+# $NetBSD: Makefile.common,v 1.9 2015/12/13 21:20:15 wiz Exp $
 #
 # used by graphics/cairo/Makefile
 # used by graphics/cairo-gobject/Makefile
 
-DISTNAME=	cairo-1.14.4
+DISTNAME=	cairo-1.14.6
 CATEGORIES=	graphics
 MASTER_SITES=	http://cairographics.org/releases/
 EXTRACT_SUFX=	.tar.xz
