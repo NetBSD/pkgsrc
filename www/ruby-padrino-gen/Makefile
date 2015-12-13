@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/02/11 14:31:55 taca Exp $
+# $NetBSD: Makefile,v 1.2 2015/12/13 15:52:14 taca Exp $
 
 DISTNAME=	padrino-gen-${RUBY_PADRINO_VERS}
 CATEGORIES=	www
@@ -11,7 +11,7 @@ LICENSE=	mit
 DEPENDS+=	${RUBY_PKGPREFIX}-padrino-core>=${RUBY_PADRINO_VERS}:../../www/ruby-padrino-core
 DEPENDS+=	${RUBY_PKGPREFIX}-bundler>=1.0<2:../../misc/ruby-bundler
 
-CONFLICTS+=	ruby[1-9][0-9][0-9]-padrino-gen-[0-9]*
+RUBYGEM_OPTIONS+=	--format-executable
 
 .include "../../www/ruby-padrino/Makefile.common"
 .include "../../lang/ruby/gem.mk"

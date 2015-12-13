@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/02/11 14:33:57 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/12/13 15:52:14 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.gitignore
@@ -32,6 +32,7 @@ ${GEM_LIBDIR}/test/fixtures/views/mailers/i18n/hello.it.erb
 ${GEM_LIBDIR}/test/fixtures/views/mailers/layouts/sample.erb
 ${GEM_LIBDIR}/test/fixtures/views/mailers/multipart/basic.html.erb
 ${GEM_LIBDIR}/test/fixtures/views/mailers/multipart/basic.plain.erb
+${GEM_LIBDIR}/test/fixtures/views/mailers/partial/_object.erb
 ${GEM_LIBDIR}/test/fixtures/views/mailers/sample/foo.erb
 ${GEM_LIBDIR}/test/helper.rb
 ${GEM_LIBDIR}/test/test_email.rb
