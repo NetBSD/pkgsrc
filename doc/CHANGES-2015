@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5016 2015/12/13 15:27:26 taca Exp $
+$NetBSD: CHANGES-2015,v 1.5017 2015/12/13 15:29:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8300,3 +8300,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added sysutils/ruby-chef-config version 12.5.1 [taca 2015-12-13]
 	Updated sysutils/ruby-childprocess to 0.5.8 [taca 2015-12-13]
 	Updated textproc/ruby-nokogiri to 1.6.7 [taca 2015-12-13]
+	Updated net/ruby-tw to 1.0.11 [taca 2015-12-13]
