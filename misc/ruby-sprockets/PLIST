@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2015/09/13 14:51:58 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2015/12/13 17:23:25 taca Exp $
 bin/sprockets${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
@@ -73,6 +73,7 @@ ${GEM_LIBDIR}/lib/sprockets/unloaded_asset.rb
 ${GEM_LIBDIR}/lib/sprockets/uri_tar.rb
 ${GEM_LIBDIR}/lib/sprockets/uri_utils.rb
 ${GEM_LIBDIR}/lib/sprockets/utils.rb
+${GEM_LIBDIR}/lib/sprockets/utils/gzip.rb
 ${GEM_LIBDIR}/lib/sprockets/version.rb
 ${GEM_LIBDIR}/lib/sprockets/yui_compressor.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
