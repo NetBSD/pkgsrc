@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4995 2015/12/13 10:54:00 tsutsui Exp $
+$NetBSD: CHANGES-2015,v 1.4996 2015/12/13 11:22:21 markd Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8278,3 +8278,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/ruby-gnome2-gtksourceview2 to 3.0.7 [tsutsui 2015-12-13]
 	Updated x11/ruby-gnome2-gtksourceview3 to 3.0.7 [tsutsui 2015-12-13]
 	Updated x11/ruby-gnome2-vte to 3.0.7 [tsutsui 2015-12-13]
+	Added mail/claws-mail-managesieve version 3.13.0 [markd 2015-12-13]
