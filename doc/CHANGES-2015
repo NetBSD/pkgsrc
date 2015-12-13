@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5000 2015/12/13 14:09:21 szptvlfn Exp $
+$NetBSD: CHANGES-2015,v 1.5001 2015/12/13 14:10:50 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8283,3 +8283,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated ham/uhd to 3.9.1 [mef 2015-12-13]
 	Updated devel/hs-primitive to 0.6.1.0 [szptvlfn 2015-12-13]
 	Updated devel/hs-vector to 0.11.0.0 [szptvlfn 2015-12-13]
+	Updated math/hs-mwc-random to 0.13.3.2 [szptvlfn 2015-12-13]
