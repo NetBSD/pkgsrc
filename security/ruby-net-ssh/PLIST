@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2015/02/04 16:09:07 taca Exp $
+@comment $NetBSD: PLIST,v 1.12 2015/12/13 15:03:15 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/CHANGES.txt
@@ -6,7 +6,6 @@ ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/Manifest
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/Rudyfile
 ${GEM_LIBDIR}/THANKS.txt
 ${GEM_LIBDIR}/lib/net/ssh.rb
 ${GEM_LIBDIR}/lib/net/ssh/authentication/agent.rb
@@ -120,7 +119,13 @@ ${GEM_LIBDIR}/test/configs/substitutes
 ${GEM_LIBDIR}/test/configs/wild_cards
 ${GEM_LIBDIR}/test/connection/test_channel.rb
 ${GEM_LIBDIR}/test/connection/test_session.rb
+${GEM_LIBDIR}/test/integration/README.txt
+${GEM_LIBDIR}/test/integration/Vagrantfile
+${GEM_LIBDIR}/test/integration/common.rb
+${GEM_LIBDIR}/test/integration/playbook.yml
+${GEM_LIBDIR}/test/integration/test_id_rsa_keys.rb
 ${GEM_LIBDIR}/test/known_hosts/github
+${GEM_LIBDIR}/test/known_hosts/github_hash
 ${GEM_LIBDIR}/test/manual/test_forward.rb
 ${GEM_LIBDIR}/test/manual/test_pageant.rb
 ${GEM_LIBDIR}/test/start/test_connection.rb
