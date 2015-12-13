@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2015/01/20 11:47:17 obache Exp $
+@comment $NetBSD: PLIST,v 1.12 2015/12/13 15:37:44 taca Exp $
 bin/httpclient${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/README.md
@@ -10,13 +10,16 @@ ${GEM_LIBDIR}/lib/http-access2/cookie.rb
 ${GEM_LIBDIR}/lib/http-access2/http.rb
 ${GEM_LIBDIR}/lib/httpclient.rb
 ${GEM_LIBDIR}/lib/httpclient/auth.rb
-${GEM_LIBDIR}/lib/httpclient/cacert.p7s
+${GEM_LIBDIR}/lib/httpclient/cacert.pem
+${GEM_LIBDIR}/lib/httpclient/cacert1024.pem
 ${GEM_LIBDIR}/lib/httpclient/connection.rb
 ${GEM_LIBDIR}/lib/httpclient/cookie.rb
 ${GEM_LIBDIR}/lib/httpclient/http.rb
 ${GEM_LIBDIR}/lib/httpclient/include_client.rb
+${GEM_LIBDIR}/lib/httpclient/jruby_ssl_socket.rb
 ${GEM_LIBDIR}/lib/httpclient/session.rb
 ${GEM_LIBDIR}/lib/httpclient/ssl_config.rb
+${GEM_LIBDIR}/lib/httpclient/ssl_socket.rb
 ${GEM_LIBDIR}/lib/httpclient/timeout.rb
 ${GEM_LIBDIR}/lib/httpclient/util.rb
 ${GEM_LIBDIR}/lib/httpclient/version.rb
@@ -42,7 +45,7 @@ ${GEM_LIBDIR}/sample/ssl/webrick_httpsd.rb
 ${GEM_LIBDIR}/sample/stream.rb
 ${GEM_LIBDIR}/sample/thread.rb
 ${GEM_LIBDIR}/sample/wcat.rb
-${GEM_LIBDIR}/test/ca-chain.cert
+${GEM_LIBDIR}/test/ca-chain.pem
 ${GEM_LIBDIR}/test/ca.cert
 ${GEM_LIBDIR}/test/client-pass.key
 ${GEM_LIBDIR}/test/client.cert
