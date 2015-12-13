@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15181 2015/12/13 08:48:46 wiz Exp $
+$NetBSD: TODO,v 1.15182 2015/12/13 09:15:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -503,6 +503,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o c4-1.10 [schmonz]
 	o cacti-0.8.8f
 	o cacti-spine-0.8.8f
+	o cairo-1.14.6
 	o cal3d-0.11.0
 	o calcoo-2.1.0
 	o calligra-2.9.9 [in wip; koffice successor]
@@ -561,6 +562,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o crossfire-client-gtk2-1.60.0
 	o csharp-mysql-6.9.6
 	o cue-20150720
+	o cups-filters-1.3.0
 	o cvm-0.97
 	o cvs2p4-2.5.5 [schmonz]
 	o cvsgraph-1.7.0
@@ -1012,6 +1014,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libgiigic-1.1.2
 	o libgnomedb-3.1.2
 	o libgnomekbd-3.4.0.2
+	o libgpg-error-1.21
 	o libgroove-4.2.1
 	o libisoburn-1.4.0
 	o libisofs-1.4.0
@@ -1167,7 +1170,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o obby-0.4.8
 	o objc-3.2.13
 	o ocaml-cmdliner-0.9.7
-	o ocaml-findlib-1.5.6
+	o ocaml-findlib-1.6.1
 	o ocaml-graphics-4.02.3
 	o ocaml-mysql-1.2.0
 	o ocaml-oasis-0.4.5
@@ -1272,6 +1275,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Math-BigInt-Pari-1.18
 	o p5-Math-Derivative-0.04
 	o p5-Math-MatrixReal-2.12
+	o p5-Math-Pari-2.01080800
 	o p5-Math-Permute-List-1.007
 	o p5-Math-Prime-Util-0.51
 	o p5-Math-Random-MT-Perl-1.13
@@ -1409,6 +1413,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pidgin-icb-20100207
 	o pim6dd-20040819a
 	o pim6sd-20040824a
+	o pinentry-0.9.7
 	o pinfo-0.6.10
 	o pingus-0.7.4
 	o pioneers-15.3
@@ -1454,6 +1459,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-cassa-1.11.0
 	o py-colorama-0.3.3
 	o py-creole-1.1.1
+	o py-cryptography-1.1.2
 	o py-cups-1.9.73
 	o py-d2to1-0.2.12
 	o py-daemon-2.0.5
@@ -1488,6 +1494,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-reportlab-3.0
 	o py-rope-0.9.4
 	o py-serpent-1.11
+	o py-setuptools-18.8
 	o py-simpletal-5.1
 	o py-smb-1.1.16
 	o py-spf-2.0.11
@@ -1713,6 +1720,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tomboy-1.10.2
 	o top-3.8beta1
 	o topgit-0.8
+	o tor-0.2.7.6
 	o totem-3.14.1
 	o totem-pl-parser-3.10.3
 	o tripwire-2.3.1 [see also pkg/22362]
@@ -1754,6 +1762,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vte-0.36.0
 	o vtk-5.10.1
 	o wMosaic-3.8.22
+	o waf-1.8.17
 	o wap-utils-1.4.1
 	o warmux-11.04.1
 	o warzone2100-2.3.8
@@ -1777,7 +1786,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wpa_supplicant-2.4
 	o wwwoffle-2.9i
 	o wxRemind-101
-	o x264-devel-20151205
+	o x264-devel-20151212
 	o x2vnc-1.31
 	o xa65-2.3.7
 	o xenkernel46-4.6.0
