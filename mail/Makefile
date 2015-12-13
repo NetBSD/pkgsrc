@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.470 2015/09/07 09:47:01 fhajny Exp $
+# $NetBSD: Makefile,v 1.471 2015/12/13 11:17:53 markd Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -30,6 +30,7 @@ SUBDIR+=	claws-mail-bogofilter
 SUBDIR+=	claws-mail-cachesaver
 SUBDIR+=	claws-mail-fetchinfo
 SUBDIR+=	claws-mail-mailmbox
+SUBDIR+=	claws-mail-managesieve
 SUBDIR+=	claws-mail-newmail
 SUBDIR+=	claws-mail-notification
 SUBDIR+=	claws-mail-pgp
