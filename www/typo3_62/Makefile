@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2015/09/13 21:14:36 taca Exp $
+# $NetBSD: Makefile,v 1.10 2015/12/13 14:41:32 taca Exp $
 #
 
 DISTNAME=	${TYPO3NAME}
-PKGNAME=	typo3-${VER}
+PKGNAME=	${PHP_PKG_PREFIX}-typo3-${VER}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=typo3/}
 
