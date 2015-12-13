@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2015/05/09 11:22:26 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.4 2015/12/13 14:14:35 szptvlfn Exp $
 
 DISTNAME=	QuickCheck-2.7.6
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
