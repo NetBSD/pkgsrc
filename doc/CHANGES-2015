@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5047 2015/12/13 21:20:28 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.5048 2015/12/13 21:24:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8342,3 +8342,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-setuptools to 18.8 [wiz 2015-12-13]
 	Updated security/py-cryptography to 1.1.2 [wiz 2015-12-13]
 	Updated graphics/cairo to 1.14.6 [wiz 2015-12-13]
+	Updated net/tor to 0.2.7.6 [wiz 2015-12-13]
