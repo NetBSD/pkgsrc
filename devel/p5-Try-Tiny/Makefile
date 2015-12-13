@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2015/06/12 10:49:55 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.19 2015/12/13 08:14:30 wiz Exp $
 
-DISTNAME=	Try-Tiny-0.22
+DISTNAME=	Try-Tiny-0.24
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/D/DO/DOY/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/E/ET/ETHER/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://metacpan.org/release/Try-Tiny
