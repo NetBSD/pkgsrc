@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4992 2015/12/13 08:48:46 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.4993 2015/12/13 10:00:56 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8254,3 +8254,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/wget to 1.17.1 [wiz 2015-12-13]
 	Updated time/p5-DateTime-Locale to 1.02 [wiz 2015-12-13]
 	Updated net/samba4 to 4.3.2 [wiz 2015-12-13]
+	Updated ham/fldigi to 3.23.07.03 [mef 2015-12-13]
