@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.47 2015/06/29 11:06:48 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.48 2015/12/13 10:52:15 tsutsui Exp $
 #
 # used by devel/ruby-gnome2-atk/Makefile
 # used by devel/ruby-gnome2-gio/Makefile
@@ -10,7 +10,6 @@
 # used by graphics/ruby-gnome2-clutter-gtk/Makefile
 # used by graphics/ruby-gnome2-gdk3/Makefile
 # used by graphics/ruby-gnome2-gdkpixbuf/Makefile
-# used by graphics/ruby-gnome2-goocanvas/Makefile
 # used by graphics/ruby-gnome2-rsvg/Makefile
 # used by multimedia/ruby-gnome2-clutter-gstreamer/Makefile
 # used by multimedia/ruby-gnome2-gstreamer/Makefile
@@ -34,7 +33,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://ruby-gnome2.osdn.jp/
 LICENSE=		gnu-lgpl-v2.1
 
-VERSION=		2.2.5
+VERSION=		3.0.7
 USE_RUBY_EXTCONF?=	yes
 CONFIGURE_ENV+=		RUBYOPT="-Ku"
 

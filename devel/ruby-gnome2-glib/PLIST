@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.15 2014/12/30 08:53:44 obache Exp $
+@comment $NetBSD: PLIST,v 1.16 2015/12/13 10:52:15 tsutsui Exp $
 lib/pkgconfig/ruby-glib2.pc
 ${RUBY_VENDORLIB}/glib-mkenums.rb
 ${RUBY_VENDORLIB}/glib2.rb
 ${RUBY_VENDORLIB}/glib2/deprecatable.rb
+${RUBY_VENDORLIB}/glib2/version.rb
 ${RUBY_VENDORLIB}/gnome2-raketask.rb
 ${RUBY_VENDORLIB}/gnome2/rake/external-package.rb
 ${RUBY_VENDORLIB}/gnome2/rake/native-binary-build-task.rb

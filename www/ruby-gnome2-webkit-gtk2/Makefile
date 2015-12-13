@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2015/08/23 13:19:41 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2015/12/13 10:52:16 tsutsui Exp $
 
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-webkit-gtk2-${VERSION}
-PKGREVISION=		1
 COMMENT=		Ruby binding of WebKitGTK+ for GTK2+
 CATEGORIES=		www
 
