@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2015/09/26 23:45:00 taca Exp $
+# $NetBSD: Makefile,v 1.16 2015/12/13 16:42:30 taca Exp $
 
 DISTNAME=	mechanize-2.7.3
+PKGREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	minskim@NetBSD.org
@@ -10,7 +11,7 @@ LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-net-http-digest_auth>=1.1.1:../../www/ruby-net-http-digest_auth
 DEPENDS+=	${RUBY_PKGPREFIX}-net-http-persistent>=2.5.2:../../www/ruby-net-http-persistent
-DEPENDS+=	${RUBY_PKGPREFIX}-mime-types>=2.0<3:../../mail/ruby-mime-types
+DEPENDS+=	${RUBY_PKGPREFIX}-mime-types2>=2.0<3:../../mail/ruby-mime-types2
 DEPENDS+=	${RUBY_PKGPREFIX}-domain_name>=0.5<1:../../net/ruby-domain_name
 DEPENDS+=	${RUBY_PKGPREFIX}-http-cookie>=1.0.0<1.1:../../www/ruby-http-cookie
 DEPENDS+=	${RUBY_PKGPREFIX}-nokogiri>=1.4<2:../../textproc/ruby-nokogiri
