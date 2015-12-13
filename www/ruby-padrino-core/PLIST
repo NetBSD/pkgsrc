@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2015/02/04 14:54:53 taca Exp $
-bin/padrino
+@comment $NetBSD: PLIST,v 1.6 2015/12/13 15:52:14 taca Exp $
+bin/padrino${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.gitignore
@@ -24,7 +24,7 @@ ${GEM_LIBDIR}/lib/padrino-core/cli/launcher.rb
 ${GEM_LIBDIR}/lib/padrino-core/cli/rake.rb
 ${GEM_LIBDIR}/lib/padrino-core/cli/rake_tasks.rb
 ${GEM_LIBDIR}/lib/padrino-core/command.rb
-${GEM_LIBDIR}/lib/padrino-core/ext/http_router.rb
+${GEM_LIBDIR}/lib/padrino-core/configuration.rb
 ${GEM_LIBDIR}/lib/padrino-core/ext/sinatra.rb
 ${GEM_LIBDIR}/lib/padrino-core/filter.rb
 ${GEM_LIBDIR}/lib/padrino-core/images/404.png
@@ -33,6 +33,12 @@ ${GEM_LIBDIR}/lib/padrino-core/loader.rb
 ${GEM_LIBDIR}/lib/padrino-core/logger.rb
 ${GEM_LIBDIR}/lib/padrino-core/module.rb
 ${GEM_LIBDIR}/lib/padrino-core/mounter.rb
+${GEM_LIBDIR}/lib/padrino-core/mounter/application_extension.rb
+${GEM_LIBDIR}/lib/padrino-core/path_router.rb
+${GEM_LIBDIR}/lib/padrino-core/path_router/compiler.rb
+${GEM_LIBDIR}/lib/padrino-core/path_router/error_handler.rb
+${GEM_LIBDIR}/lib/padrino-core/path_router/matcher.rb
+${GEM_LIBDIR}/lib/padrino-core/path_router/route.rb
 ${GEM_LIBDIR}/lib/padrino-core/reloader.rb
 ${GEM_LIBDIR}/lib/padrino-core/reloader/rack.rb
 ${GEM_LIBDIR}/lib/padrino-core/reloader/storage.rb
@@ -52,6 +58,8 @@ ${GEM_LIBDIR}/test/fixtures/apps/demo_demo.rb
 ${GEM_LIBDIR}/test/fixtures/apps/demo_project/api/app.rb
 ${GEM_LIBDIR}/test/fixtures/apps/demo_project/api/lib/api_lib.rb
 ${GEM_LIBDIR}/test/fixtures/apps/demo_project/app.rb
+${GEM_LIBDIR}/test/fixtures/apps/external_apps/fake_lib.rb
+${GEM_LIBDIR}/test/fixtures/apps/external_apps/fake_root.rb
 ${GEM_LIBDIR}/test/fixtures/apps/helpers/class_methods_helpers.rb
 ${GEM_LIBDIR}/test/fixtures/apps/helpers/instance_methods_helpers.rb
 ${GEM_LIBDIR}/test/fixtures/apps/helpers/support.rb
@@ -61,10 +69,13 @@ ${GEM_LIBDIR}/test/fixtures/apps/lib/myklass.rb
 ${GEM_LIBDIR}/test/fixtures/apps/lib/myklass/mysubklass.rb
 ${GEM_LIBDIR}/test/fixtures/apps/models/child.rb
 ${GEM_LIBDIR}/test/fixtures/apps/models/parent.rb
-${GEM_LIBDIR}/test/fixtures/apps/rack_apps.rb
+${GEM_LIBDIR}/test/fixtures/apps/mountable_apps/rack_apps.rb
+${GEM_LIBDIR}/test/fixtures/apps/mountable_apps/static.html
+${GEM_LIBDIR}/test/fixtures/apps/precompiled_app.rb
 ${GEM_LIBDIR}/test/fixtures/apps/simple.rb
-${GEM_LIBDIR}/test/fixtures/apps/static.html
 ${GEM_LIBDIR}/test/fixtures/apps/static.rb
+${GEM_LIBDIR}/test/fixtures/apps/stealthy/app.rb
+${GEM_LIBDIR}/test/fixtures/apps/stealthy/helpers/stealthy_class_helpers.rb
 ${GEM_LIBDIR}/test/fixtures/apps/system.rb
 ${GEM_LIBDIR}/test/fixtures/apps/system_class_methods_demo.rb
 ${GEM_LIBDIR}/test/fixtures/apps/system_instance_methods_demo.rb
@@ -80,6 +91,7 @@ ${GEM_LIBDIR}/test/fixtures/reloadable_apps/external/app/controllers/base.rb
 ${GEM_LIBDIR}/test/fixtures/reloadable_apps/main/app.rb
 ${GEM_LIBDIR}/test/helper.rb
 ${GEM_LIBDIR}/test/test_application.rb
+${GEM_LIBDIR}/test/test_configuration.rb
 ${GEM_LIBDIR}/test/test_core.rb
 ${GEM_LIBDIR}/test/test_csrf_protection.rb
 ${GEM_LIBDIR}/test/test_dependencies.rb
