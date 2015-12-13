@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.26 2014/02/24 19:30:53 schnoebe Exp $
+# $NetBSD: options.mk,v 1.27 2015/12/13 23:46:11 schnoebe Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.jabberd2
 PKG_OPTIONS_REQUIRED_GROUPS=	auth storage mio
@@ -12,6 +12,7 @@ PKG_OPTIONS_GROUP.storage+=	storage-sqlite storage-db
 PKG_OPTIONS_GROUP.mio=		mio-kqueue mio-select mio-poll mio-epoll
 # debugging
 PKG_SUPPORTED_OPTIONS+=		debug
+# PKG_SUPPORTED_OPTIONS+=		websocket
 
 PKG_SUGGESTED_OPTIONS=		auth-sqlite storage-sqlite
 PKG_SUGGESTED_OPTIONS+=		mio-select mio-poll
@@ -19,6 +20,7 @@ PKG_SUGGESTED_OPTIONS+=		mio-select mio-poll
 .include "../../mk/bsd.options.mk"
 
 PLIST_VARS+=	db ldap mysql pam pgsql sqlite
+# PLIST_VARS+=	ws
 
 .if !empty(PKG_OPTIONS:Mauth-db) || !empty(PKG_OPTIONS:Mstorage-db)
 BDB_ACCEPTED=		db4 db5
@@ -94,3 +96,10 @@ CONFIGURE_ARGS+=	--enable-mio=poll
 .if !empty(PKG_OPTIONS:Mmio-select)
 CONFIGURE_ARGS+=	--enable-mio=select
 .endif
+
+# .if !empty(PKG_OPTIONS:Mwebsocket)
+# PLIST.ws=		yes
+# CONFIGURE_ARGS+=	--enable-websocket
+# .else
+# CONFIGURE_ARGS+=	--disable-websocket
+# .endif
