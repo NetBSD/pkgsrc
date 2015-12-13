@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5002 2015/12/13 14:12:05 szptvlfn Exp $
+$NetBSD: CHANGES-2015,v 1.5003 2015/12/13 14:23:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8285,3 +8285,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/hs-vector to 0.11.0.0 [szptvlfn 2015-12-13]
 	Updated math/hs-mwc-random to 0.13.3.2 [szptvlfn 2015-12-13]
 	Updated devel/hs-vector-algorithms to 0.7.0.1 [szptvlfn 2015-12-13]
+	Added www/contao41 version 4.1.0 [taca 2015-12-13]
