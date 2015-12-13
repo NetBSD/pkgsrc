@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2015/10/31 18:54:46 nros Exp $
+# $NetBSD: Makefile.common,v 1.16 2015/12/13 11:12:56 markd Exp $
 
 # used by mail/claws-mail/plugins.mk
 
@@ -45,6 +45,7 @@ CONFIGURE_ARGS+=	--disable-clamd-plugin
 CONFIGURE_ARGS+=	--disable-fancy-plugin
 CONFIGURE_ARGS+=	--disable-fetchinfo-plugin
 CONFIGURE_ARGS+=	--disable-mailmbox-plugin
+CONFIGURE_ARGS+=	--disable-managesieve-plugin
 CONFIGURE_ARGS+=	--disable-newmail-plugin
 CONFIGURE_ARGS+=	--disable-notification-plugin
 CONFIGURE_ARGS+=	--disable-rssyl-plugin
