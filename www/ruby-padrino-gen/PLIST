@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2015/02/04 14:56:57 taca Exp $
-bin/padrino-gen
+@comment $NetBSD: PLIST,v 1.6 2015/12/13 15:52:14 taca Exp $
+bin/padrino-gen${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.gitignore
@@ -52,6 +52,7 @@ ${GEM_LIBDIR}/lib/padrino-gen/generators/components/tests/riot.rb
 ${GEM_LIBDIR}/lib/padrino-gen/generators/components/tests/rspec.rb
 ${GEM_LIBDIR}/lib/padrino-gen/generators/components/tests/shoulda.rb
 ${GEM_LIBDIR}/lib/padrino-gen/generators/components/tests/steak.rb
+${GEM_LIBDIR}/lib/padrino-gen/generators/components/tests/testunit.rb
 ${GEM_LIBDIR}/lib/padrino-gen/generators/controller.rb
 ${GEM_LIBDIR}/lib/padrino-gen/generators/helper.rb
 ${GEM_LIBDIR}/lib/padrino-gen/generators/mailer.rb
