@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/03/22 14:21:27 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/12/13 18:23:52 bsiegert Exp $
 share/basercms/.htaccess
 share/basercms/.travis.yml
 share/basercms/CONTRIBUTING.md
@@ -419,6 +419,7 @@ share/basercms/lib/Baser/Config/update/3.0.2/alter_plugins.php
 share/basercms/lib/Baser/Config/update/3.0.2/updater.php
 share/basercms/lib/Baser/Config/update/3.0.6/config.php
 share/basercms/lib/Baser/Config/update/3.0.6/updater.php
+share/basercms/lib/Baser/Config/update/3.0.8/updater.php
 share/basercms/lib/Baser/Configure/BcThemeConfigReader.php
 share/basercms/lib/Baser/Console/Command/BaserTestShell.php
 share/basercms/lib/Baser/Console/Command/BcAppShell.php
@@ -476,6 +477,7 @@ share/basercms/lib/Baser/Lib/TestSuite/BaserTestCase.php
 share/basercms/lib/Baser/Lib/TestSuite/BaserTestLoader.php
 share/basercms/lib/Baser/Lib/TestSuite/BaserTestSuiteCommand.php
 share/basercms/lib/Baser/Lib/TestSuite/BaserTestSuiteDispatcher.php
+share/basercms/lib/Baser/Lib/TestSuite/Fixture/BaserTestFixture.php
 share/basercms/lib/Baser/Lib/TestSuite/Fixture/CakeFixtureManager.php
 share/basercms/lib/Baser/Lib/TestSuite/Reporter/BaserHtmlReporter.php
 share/basercms/lib/Baser/Lib/TestSuite/Reporter/BaserTextReporter.php
@@ -497,7 +499,6 @@ share/basercms/lib/Baser/Model/Behavior/BcPluginContentBehavior.php
 share/basercms/lib/Baser/Model/Behavior/BcUploadBehavior.php
 share/basercms/lib/Baser/Model/CakeSchema.php
 share/basercms/lib/Baser/Model/Content.php
-share/basercms/lib/Baser/Model/Datasource/Database/BcCsv.php
 share/basercms/lib/Baser/Model/Datasource/Database/BcMysql.php
 share/basercms/lib/Baser/Model/Datasource/Database/BcPostgres.php
 share/basercms/lib/Baser/Model/Datasource/Database/BcSqlite.php
@@ -789,6 +790,7 @@ share/basercms/lib/Baser/Plugin/Mail/View/Elements/admin/submenus/mail_common.ph
 share/basercms/lib/Baser/Plugin/Mail/View/Elements/admin/submenus/mail_fields.php
 share/basercms/lib/Baser/Plugin/Mail/View/Elements/mail_form.php
 share/basercms/lib/Baser/Plugin/Mail/View/Elements/mail_input.php
+share/basercms/lib/Baser/Plugin/Mail/View/Elements/mail_token.php
 share/basercms/lib/Baser/Plugin/Mail/View/Elements/mobile/mail_form.php
 share/basercms/lib/Baser/Plugin/Mail/View/Elements/mobile/mail_input.php
 share/basercms/lib/Baser/Plugin/Mail/View/Elements/smartphone/mail_form.php
@@ -967,6 +969,7 @@ share/basercms/lib/Baser/View/Elements/crumbs.php
 share/basercms/lib/Baser/View/Elements/footer.php
 share/basercms/lib/Baser/View/Elements/global_menu.php
 share/basercms/lib/Baser/View/Elements/google_analytics.php
+share/basercms/lib/Baser/View/Elements/google_analytics_old.php
 share/basercms/lib/Baser/View/Elements/google_maps.php
 share/basercms/lib/Baser/View/Elements/googlemaps.php
 share/basercms/lib/Baser/View/Elements/header.php
@@ -1026,6 +1029,7 @@ share/basercms/lib/Baser/View/Helper/BcSmartphoneHelper.php
 share/basercms/lib/Baser/View/Helper/BcTextHelper.php
 share/basercms/lib/Baser/View/Helper/BcTimeHelper.php
 share/basercms/lib/Baser/View/Helper/BcUploadHelper.php
+share/basercms/lib/Baser/View/Helper/BcWidgetAreaHelper.php
 share/basercms/lib/Baser/View/Helper/BcXmlHelper.php
 share/basercms/lib/Baser/View/Installations/admin/alert.php
 share/basercms/lib/Baser/View/Installations/admin/index.php
@@ -1053,7 +1057,7 @@ share/basercms/lib/Baser/View/Layouts/smartphone/email/text/default.php
 share/basercms/lib/Baser/View/Maintenance/index.php
 share/basercms/lib/Baser/View/Maintenance/mobile/index.php
 share/basercms/lib/Baser/View/Maintenance/smartphone/index.php
-share/basercms/lib/Baser/View/Members/mypage/edit.php
+share/basercms/lib/Baser/View/Members/mypage/index.php
 share/basercms/lib/Baser/View/Members/mypage/login.php
 share/basercms/lib/Baser/View/Members/mypage/reset_password.php
 share/basercms/lib/Baser/View/Menus/admin/ajax_index.php
@@ -1144,6 +1148,7 @@ share/basercms/lib/Baser/webroot/css/admin/jquery-ui/images/ui-icons_cd0a0a_256x
 share/basercms/lib/Baser/webroot/css/admin/jquery-ui/ui.all.css
 share/basercms/lib/Baser/webroot/css/admin/jquery.timepicker.css
 share/basercms/lib/Baser/webroot/css/admin/layout.css
+share/basercms/lib/Baser/webroot/css/admin/sidebar_opened.css
 share/basercms/lib/Baser/webroot/css/admin/toolbar.css
 share/basercms/lib/Baser/webroot/css/cake.generic.css
 share/basercms/lib/Baser/webroot/css/import.css
@@ -1321,7 +1326,9 @@ share/basercms/lib/Baser/webroot/js/admin/ckeditor/plugins/link/dialogs/link.js
 share/basercms/lib/Baser/webroot/js/admin/ckeditor/plugins/link/images/anchor.png
 share/basercms/lib/Baser/webroot/js/admin/ckeditor/plugins/link/images/hidpi/anchor.png
 share/basercms/lib/Baser/webroot/js/admin/ckeditor/plugins/liststyle/dialogs/liststyle.js
+share/basercms/lib/Baser/webroot/js/admin/ckeditor/plugins/magicline/images/hidpi/icon-rtl.png
 share/basercms/lib/Baser/webroot/js/admin/ckeditor/plugins/magicline/images/hidpi/icon.png
+share/basercms/lib/Baser/webroot/js/admin/ckeditor/plugins/magicline/images/icon-rtl.png
 share/basercms/lib/Baser/webroot/js/admin/ckeditor/plugins/magicline/images/icon.png
 share/basercms/lib/Baser/webroot/js/admin/ckeditor/plugins/pagebreak/images/pagebreak.gif
 share/basercms/lib/Baser/webroot/js/admin/ckeditor/plugins/pastefromword/filter/default.js
@@ -1388,7 +1395,7 @@ share/basercms/lib/Baser/webroot/js/admin/ckeditor/plugins/smiley/images/wink_sm
 share/basercms/lib/Baser/webroot/js/admin/ckeditor/plugins/smiley/images/wink_smile.png
 share/basercms/lib/Baser/webroot/js/admin/ckeditor/plugins/specialchar/dialogs/lang/_translationstatus.txt
 share/basercms/lib/Baser/webroot/js/admin/ckeditor/plugins/specialchar/dialogs/lang/ja.js
-share/basercms/lib/Baser/webroot/js/admin/ckeditor/plugins/specialchar/specialchar.js
+share/basercms/lib/Baser/webroot/js/admin/ckeditor/plugins/specialchar/dialogs/specialchar.js
 share/basercms/lib/Baser/webroot/js/admin/ckeditor/plugins/table/dialogs/table.js
 share/basercms/lib/Baser/webroot/js/admin/ckeditor/plugins/tabletools/dialogs/tableCell.js
 share/basercms/lib/Baser/webroot/js/admin/ckeditor/plugins/templates/dialogs/templates.css
@@ -1400,7 +1407,6 @@ share/basercms/lib/Baser/webroot/js/admin/ckeditor/plugins/templates/templates/i
 share/basercms/lib/Baser/webroot/js/admin/ckeditor/plugins/wsc/LICENSE.md
 share/basercms/lib/Baser/webroot/js/admin/ckeditor/plugins/wsc/README.md
 share/basercms/lib/Baser/webroot/js/admin/ckeditor/plugins/wsc/dialogs/ciframe.html
-share/basercms/lib/Baser/webroot/js/admin/ckeditor/plugins/wsc/dialogs/tmp.html
 share/basercms/lib/Baser/webroot/js/admin/ckeditor/plugins/wsc/dialogs/tmpFrameset.html
 share/basercms/lib/Baser/webroot/js/admin/ckeditor/plugins/wsc/dialogs/wsc.css
 share/basercms/lib/Baser/webroot/js/admin/ckeditor/plugins/wsc/dialogs/wsc.js
@@ -1410,7 +1416,6 @@ share/basercms/lib/Baser/webroot/js/admin/ckeditor/skins/moono/dialog_ie.css
 share/basercms/lib/Baser/webroot/js/admin/ckeditor/skins/moono/dialog_ie7.css
 share/basercms/lib/Baser/webroot/js/admin/ckeditor/skins/moono/dialog_ie8.css
 share/basercms/lib/Baser/webroot/js/admin/ckeditor/skins/moono/dialog_iequirks.css
-share/basercms/lib/Baser/webroot/js/admin/ckeditor/skins/moono/dialog_opera.css
 share/basercms/lib/Baser/webroot/js/admin/ckeditor/skins/moono/editor.css
 share/basercms/lib/Baser/webroot/js/admin/ckeditor/skins/moono/editor_gecko.css
 share/basercms/lib/Baser/webroot/js/admin/ckeditor/skins/moono/editor_ie.css
@@ -1428,6 +1433,7 @@ share/basercms/lib/Baser/webroot/js/admin/ckeditor/skins/moono/images/hidpi/refr
 share/basercms/lib/Baser/webroot/js/admin/ckeditor/skins/moono/images/lock-open.png
 share/basercms/lib/Baser/webroot/js/admin/ckeditor/skins/moono/images/lock.png
 share/basercms/lib/Baser/webroot/js/admin/ckeditor/skins/moono/images/refresh.png
+share/basercms/lib/Baser/webroot/js/admin/ckeditor/skins/moono/images/spinner.gif
 share/basercms/lib/Baser/webroot/js/admin/ckeditor/skins/moono/readme.md
 share/basercms/lib/Baser/webroot/js/admin/ckeditor/styles.js
 share/basercms/lib/Baser/webroot/js/admin/colpick.js
@@ -1441,6 +1447,7 @@ share/basercms/lib/Baser/webroot/js/admin/jquery.baseUrl.js
 share/basercms/lib/Baser/webroot/js/admin/jquery.baser_ajax_batch.js
 share/basercms/lib/Baser/webroot/js/admin/jquery.baser_ajax_data_list.js
 share/basercms/lib/Baser/webroot/js/admin/jquery.baser_ajax_sort_table.js
+share/basercms/lib/Baser/webroot/js/admin/jquery.bcConfirm.js
 share/basercms/lib/Baser/webroot/js/admin/jquery.bt.min.js
 share/basercms/lib/Baser/webroot/js/admin/jquery.colorbox-min-1.4.5.js
 share/basercms/lib/Baser/webroot/js/admin/jquery.contextMenu-1.0/images/cut.png
