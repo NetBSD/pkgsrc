@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.653 2015/12/12 15:46:21 kamil Exp $
+# $NetBSD: Makefile,v 1.654 2015/12/13 15:19:03 taca Exp $
 #
 
 COMMENT=	System utilities
@@ -454,6 +454,7 @@ SUBDIR+=	rtty
 SUBDIR+=	ruby-activesambaldap
 SUBDIR+=	ruby-capistrano-stats
 SUBDIR+=	ruby-chef
+SUBDIR+=	ruby-chef-config
 SUBDIR+=	ruby-chef-zero
 SUBDIR+=	ruby-childprocess
 SUBDIR+=	ruby-directory-watcher
