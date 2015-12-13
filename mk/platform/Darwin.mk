@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.74 2015/10/10 13:12:50 jperkin Exp $
+# $NetBSD: Darwin.mk,v 1.75 2015/12/13 22:38:00 sevan Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -168,6 +168,13 @@ _OPSYS_MAX_CMDLEN_CMD=	/usr/sbin/sysctl -n kern.argmax
 .  if !exists(/usr/include/poll.h) && !exists(/usr/include/sys/poll.h)
 CONFIGURE_ENV+=		ac_cv_func_poll=no
 .  endif
+.endif
+
+# If the deployment target is not set explicitly, the linker in Tiger and prior
+# versions running on PowerPC hosts defaults to a target of 10.1.
+# Set the target for Tiger systems to be 10.4.
+.if !empty(MACHINE_PLATFORM:MDarwin-8.*-powerpc)
+MAKE_ENV+=	MACOSX_DEPLOYMENT_TARGET="10.4"
 .endif
 
 # El Capitan GM has a file system bug where a deep directory hierarchy can be
