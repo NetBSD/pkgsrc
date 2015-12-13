@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4985 2015/12/13 00:01:53 pettai Exp $
+$NetBSD: CHANGES-2015,v 1.4986 2015/12/13 00:39:28 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8247,3 +8247,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/unbound to 1.5.7 [pettai 2015-12-12]
 	Updated net/nsd to 4.1.7 [pettai 2015-12-12]
 	Updated net/knot to 2.0.2 [pettai 2015-12-13]
+	Added net/py-bitmessage version 0.4.4 [kamil 2015-12-12]
