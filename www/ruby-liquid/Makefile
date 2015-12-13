@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2015/03/14 07:58:37 taca Exp $
+# $NetBSD: Makefile,v 1.8 2015/12/13 17:12:25 taca Exp $
 
-DISTNAME=	liquid-2.6.2
+DISTNAME=	liquid-3.0.6
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	www
 
