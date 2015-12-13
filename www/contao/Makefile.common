@@ -1,13 +1,14 @@
-# $NetBSD: Makefile.common,v 1.103 2015/11/28 06:02:08 taca Exp $
+# $NetBSD: Makefile.common,v 1.104 2015/12/13 14:24:42 taca Exp $
 #
 # used by www/contao32/Makefile
 # used by www/contao35/Makefile
+# used by www/contao41/Makefile
 
 CT_VER=		${CT_VERSION:C/([0-9]+)\.([0-9]+)\..*/\1\2/}
 CT_VERBASE=	${CT_VERSION:C/([0-9]+)\.([0-9]+)\..*/\1.\2/}
 CT_PKGVER=	${CT_VERSION:S/.RC/rc/}
 
-FILESDIR=	${.CURDIR}/../../www/contao/files
+FILESDIR?=	${.CURDIR}/../../www/contao/files
 
 FILES_SUBST+=	PAX=${PAX} CT_EGDIR=${CT_EGDIR:Q} CT_WEBDIR=${CT_WEBDIR:Q} \
 		WWWGRP=${APACHE_GROUP:Q} WWWOWN=${APACHE_USER:Q}
