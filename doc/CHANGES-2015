@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5007 2015/12/13 14:56:28 taca Exp $
+$NetBSD: CHANGES-2015,v 1.5008 2015/12/13 14:59:01 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8290,3 +8290,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated misc/libreoffice4-bin to 4.4.7 [ryoon 2015-12-13]
 	Updated misc/libreoffice4 to 4.4.7.2 [ryoon 2015-12-13]
 	Updated www/geeklog to 2.1.1 [taca 2015-12-13]
+	Updated devel/SOPE to 2.3.3 [taca 2015-12-13]
