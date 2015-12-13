@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/12/13 14:20:57 taca Exp $
+# $NetBSD: Makefile,v 1.2 2015/12/13 14:37:08 taca Exp $
 #
 
 DISTNAME=	contao-${CT_PKGVER}
@@ -27,7 +27,6 @@ DEPENDS+=	bash>=4.0:../../shells/bash
 CT_VERSION=	4.1.0
 USE_TOOLS=	bash pax
 NO_BUILD=	yes
-FILESDIR?=	${.CURDIR}/files
 
 EG_CONFIG=	app/config/config.yml app/config/config_dev.yml \
 		app/config/config_prod.yml app/config/config_test.yml \
