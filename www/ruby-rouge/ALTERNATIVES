@@ -1,0 +1,1 @@
+bin/rougify @PREFIX@/bin/rougify@RUBY_SUFFIX@
