@@ -1,6 +1,9 @@
-$NetBSD: patch-aa,v 1.4 2014/01/19 15:27:16 tsutsui Exp $
+$NetBSD: patch-Makefile.in,v 1.1 2015/12/13 15:02:36 tsutsui Exp $
 
---- Makefile.in.orig	2014-01-05 15:06:33.000000000 +0000
+- put config files into the example dir
+- use pkgsrc INSTALL_MACROS
+
+--- Makefile.in.orig	2015-11-22 20:29:54.000000000 +0000
 +++ Makefile.in
 @@ -1,5 +1,5 @@
  PACKAGE = jwm
@@ -11,8 +14,8 @@ $NetBSD: patch-aa,v 1.4 2014/01/19 15:27:16 tsutsui Exp $
  USE_NLS = @USE_NLS@
 @@ -11,10 +11,10 @@ all:
  install: all
- 	cd src ; $(MAKE) install ; cd ..
- 	cd po ; $(MAKE) install ; cd ..
+ 	$(MAKE) -C src install
+ 	$(MAKE) -C po install
 -	install -d -m 0755 $(SYSCONF)
 -	install -m 644 example.jwmrc $(SYSCONF)/system.jwmrc
 -	install -d -m 0755 $(MANDIR)/man1
@@ -22,5 +25,5 @@ $NetBSD: patch-aa,v 1.4 2014/01/19 15:27:16 tsutsui Exp $
 +	${BSD_INSTALL_MAN_DIR} $(MANDIR)/man1
 +	${BSD_INSTALL_MAN} jwm.1 $(MANDIR)/man1/jwm.1
  
- depend:
- 	cd src ; $(MAKE) depend
+ install-strip: all install-conf
+ 	$(MAKE) -C src install-strip
