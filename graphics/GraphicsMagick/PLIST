@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2015/03/02 09:57:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.22 2015/12/13 07:13:36 richard Exp $
 bin/GraphicsMagick++-config
 bin/GraphicsMagick-config
 bin/GraphicsMagickWand-config
@@ -176,6 +176,7 @@ lib/${PKGNAME}/modules-Q8/coders/vicar.la
 lib/${PKGNAME}/modules-Q8/coders/vid.la
 lib/${PKGNAME}/modules-Q8/coders/viff.la
 lib/${PKGNAME}/modules-Q8/coders/wbmp.la
+lib/${PKGNAME}/modules-Q8/coders/webp.la
 lib/${PKGNAME}/modules-Q8/coders/wmf.la
 lib/${PKGNAME}/modules-Q8/coders/wpg.la
 ${PLIST.x11}lib/${PKGNAME}/modules-Q8/coders/x.la
