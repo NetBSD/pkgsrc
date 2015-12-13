@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2015/12/05 21:25:56 adam Exp $
+# $NetBSD: Makefile,v 1.24 2015/12/13 19:48:03 wiedi Exp $
 
 DISTNAME=		Mixminion-0.0.8alpha3
 PKGNAME=		${DISTNAME:S/M/m/}
@@ -15,6 +15,8 @@ REPLACE_PYTHON=	lib/mixminion/Main.py
 PYTHON_VERSIONS_INCOMPATIBLE=  33 34 35 # not yet ported as of 0.0.8alpha3
 
 TEST_TARGET=		test
+
+MAKE_ENV+=		OPENSSL_PREFIX=${BUILDLINK_PREFIX.openssl:Q}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
