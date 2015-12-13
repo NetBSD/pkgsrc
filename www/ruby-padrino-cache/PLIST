@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2015/02/04 14:56:24 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/12/13 15:52:14 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.gitignore
@@ -11,10 +11,8 @@ ${GEM_LIBDIR}/lib/padrino-cache/helpers/cache_object.rb
 ${GEM_LIBDIR}/lib/padrino-cache/helpers/cache_store.rb
 ${GEM_LIBDIR}/lib/padrino-cache/helpers/fragment.rb
 ${GEM_LIBDIR}/lib/padrino-cache/helpers/page.rb
-${GEM_LIBDIR}/lib/padrino-cache/legacy_store.rb
 ${GEM_LIBDIR}/padrino-cache.gemspec
 ${GEM_LIBDIR}/test/helper.rb
-${GEM_LIBDIR}/test/test_legacy_store.rb
 ${GEM_LIBDIR}/test/test_moneta_store.rb
 ${GEM_LIBDIR}/test/test_padrino_cache.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
