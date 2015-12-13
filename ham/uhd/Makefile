@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2015/12/13 11:54:06 mef Exp $
+# $NetBSD: Makefile,v 1.15 2015/12/13 12:12:41 mef Exp $
 
-DISTNAME=		uhd-3.9.0
+DISTNAME=		uhd-3.9.1
 CATEGORIES=		ham
 MASTER_SITES=           ${MASTER_SITE_GITHUB:=EttusResearch/}
 #                                                                     3.9.1 -> 003_009_001
 GITHUB_TAG=		release_${PKGVERSION_NOREV:C/([0-9])\.([0-9])\.([0-9])/00\1_00\2_00\3/}
-# 3.9.0 of previous commit was really 3.8.5, sorry, mef
-PKGREVISION=		1
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://code.ettus.com/redmine/ettus/projects/uhd/wiki
