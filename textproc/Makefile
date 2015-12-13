@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.854 2015/12/11 19:33:38 jmmv Exp $
+# $NetBSD: Makefile,v 1.855 2015/12/13 17:25:03 taca Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -750,7 +750,6 @@ SUBDIR+=	ruby-bluecloth
 SUBDIR+=	ruby-buftok
 SUBDIR+=	ruby-builder
 SUBDIR+=	ruby-cabocha
-SUBDIR+=	ruby-classifier
 SUBDIR+=	ruby-classifier-reborn
 SUBDIR+=	ruby-coderay
 SUBDIR+=	ruby-diff-lcs
