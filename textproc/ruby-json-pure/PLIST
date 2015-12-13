@@ -1,11 +1,8 @@
-@comment $NetBSD: PLIST,v 1.15 2015/02/05 15:06:12 taca Exp $
+@comment $NetBSD: PLIST,v 1.16 2015/12/13 15:04:46 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/CHANGES
-${GEM_LIBDIR}/COPYING
-${GEM_LIBDIR}/COPYING-json-jruby
-${GEM_LIBDIR}/GPL
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/README-json-jruby.markdown
 ${GEM_LIBDIR}/README.rdoc
