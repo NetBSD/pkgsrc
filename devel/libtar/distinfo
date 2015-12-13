@@ -1,9 +1,7 @@
-$NetBSD: distinfo,v 1.8 2015/11/03 03:27:45 agc Exp $
+$NetBSD: distinfo,v 1.9 2015/12/13 18:26:07 bsiegert Exp $
 
-SHA1 (libtar-1.2.11.tar.gz) = 9611f23024b0e89aad1cfea301122186b3c160f8
-RMD160 (libtar-1.2.11.tar.gz) = 205d1213ed32f9708fb2135010afdd9e184c430e
-SHA512 (libtar-1.2.11.tar.gz) = f50edfa5ee164200f0c2636bab5b80628c1007cdf125c06925c173cf98046a24240fab3650566beecfb9252009f54390a6dc3e4a3b1d86e85fa6f3e44f33d8d3
-Size (libtar-1.2.11.tar.gz) = 145354 bytes
+SHA1 (libtar-1.2.20.tar.gz) = 89901d5dbf720b59df7a5f0b34ff90bff9bbb806
+RMD160 (libtar-1.2.20.tar.gz) = 2a27adb42ecf77289bfdc14ca931a6d482f7e975
+SHA512 (libtar-1.2.20.tar.gz) = aa2ba3a1fc90029bb4ba79b1127aaa91f3653ba1f672c52be04556586a5dcd07c52dcaad6939cabf95480966ad7db9a767881db28cc4567da634072ae766ad77
+Size (libtar-1.2.20.tar.gz) = 64640 bytes
 SHA1 (patch-aa) = c07f32034bb5e84b0b90ac5ab322e800036d5fde
-SHA1 (patch-ab) = 881344e3ddcd4a85eadc86e833bcc02c78c89b84
-SHA1 (patch-ac) = 936a26e718d3b16369a00a5997a97c355524c7e4
