@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1092 2015/12/11 21:30:10 riz Exp $
+# $NetBSD: Makefile,v 1.1093 2015/12/13 00:33:07 kamil Exp $
 #
 
 COMMENT=	Networking tools
@@ -580,6 +580,7 @@ SUBDIR+=	py-adns
 SUBDIR+=	py-amqp
 SUBDIR+=	py-apache-libcloud
 SUBDIR+=	py-beanstalkc
+SUBDIR+=	py-bitmessage
 SUBDIR+=	py-boto
 SUBDIR+=	py-caldav
 SUBDIR+=	py-celery
