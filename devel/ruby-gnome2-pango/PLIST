@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.6 2012/01/15 12:34:44 obache Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/12/13 10:52:15 tsutsui Exp $
 lib/pkgconfig/ruby-pango.pc
 ${RUBY_VENDORARCHLIB}/pango.${RUBY_DLEXT}
 ${RUBY_VENDORARCHLIB}/rbpango.h
 ${RUBY_VENDORARCHLIB}/rbpangoconversions.h
-${RUBY_VENDORARCHLIB}/rbpangoversion.h
 ${RUBY_VENDORLIB}/pango.rb
