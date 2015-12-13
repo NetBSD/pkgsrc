@@ -1,11 +1,8 @@
-$NetBSD: patch-bd,v 1.1.1.1 2012/03/21 20:48:53 asau Exp $
+$NetBSD: patch-bd,v 1.2 2015/12/13 00:50:39 asau Exp $
 
-Exclude Java files.
-DESTDIR support.
-
---- source/scripts/distinst.orig	2011-11-14 23:00:44.000000000 +0400
-+++ source/scripts/distinst	2012-02-22 01:09:06.000000000 +0400
-@@ -75,13 +75,13 @@
+--- source/scripts/distinst.orig	2012-05-23 19:04:39.000000000 +0000
++++ source/scripts/distinst
+@@ -75,13 +75,13 @@ DRMAA_SHARED_LIBRARIES="libdrmaa"
  # The last number listed here will be the verson linked from libdrmaa.so
  DRMAA_SHARED_LIB_VERSIONS="1.0"
  DRMAA_HEADER_FILES="libs/japi/drmaa.h"
@@ -23,16 +20,16 @@ DESTDIR support.
  JAVA_LIBRARIES="${DRMAAJ_FILES} ${JUTIJ_FILES} ${JGDIJ_FILES} ${JJSV_FILES}"
  
  PVMSOURCES="start_pvm.c stop_pvm.c slave.c master.c spmd.c Makefile"
-@@ -428,7 +428,7 @@
+@@ -430,7 +430,7 @@ instclassictargets=false
  instopenssl=true
  instbdb=true
  instarco=false
 -instguiinst=true
 +instguiinst=false
  instsgeinspect=false
+ accept_prompts=false
  enforce_shlibpath=false
- 
-@@ -527,11 +527,11 @@
+@@ -530,11 +530,11 @@ while [ $# -ge 1 ]; do
           echo Please set variable SGE_ROOT. Installation failed.
           exit 1
        fi
@@ -47,7 +44,7 @@ DESTDIR support.
        localinst=true
        ;;
     -mansrc)
-@@ -897,13 +897,16 @@
+@@ -901,13 +901,16 @@ if [ $instcommon = true ]; then
                          $DEST_SGE_ROOT/util/sgeCA/*.cnf \
                          $DEST_SGE_ROOT/util/sgeSMF/*.xml \
                          $DEST_SGE_ROOT/util/sgeSMF/sge_smf_support.sh \
@@ -65,7 +62,7 @@ DESTDIR support.
        Execute chmod 755 $DEST_SGE_ROOT/util/resources/jsv/jsv.sh \
                          $DEST_SGE_ROOT/util/resources/jsv/jjsv.sh \
                          $DEST_SGE_ROOT/util/resources/jsv/jsv.pl \
-@@ -1085,9 +1088,6 @@
+@@ -1089,9 +1092,6 @@ if [ $instcommon = true ]; then
  
        if [ -f CLASSES/herd/herd.jar ]; then
           Execute cp CLASSES/herd/herd.jar $DEST_SGE_ROOT/lib/herd.jar
