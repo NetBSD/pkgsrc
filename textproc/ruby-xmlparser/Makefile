@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2012/10/25 06:56:59 asau Exp $
+# $NetBSD: Makefile,v 1.17 2015/12/13 16:57:32 taca Exp $
 
-DISTNAME=	xmlparser-0.7.1
-PKGREVISION=	1
+DISTNAME=	xmlparser-0.7.3
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.yoshidam.net/
 
