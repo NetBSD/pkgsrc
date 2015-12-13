@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2015/05/17 06:45:24 tsutsui Exp $
+# $NetBSD: Makefile,v 1.19 2015/12/13 10:52:16 tsutsui Exp $
 #
 
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-gtksourceview3-${VERSION}
@@ -7,7 +7,10 @@ CATEGORIES=		x11
 
 CONFLICTS+=		ruby[0-9][0-9]-gnome2-gtksourceview3-[0-9]*
 
-RUBY_EXTCONF_SUBDIRS=	gtksourceview3
+RUBY_SETUP_SUBDIRS=	gtksourceview3
+USE_RUBY_EXTCONF=	no
+USE_RUBY_SETUP=		yes
+USE_RUBY_SETUP_PKG=	yes
 
 DEPENDS+=		${RUBY_PKGPREFIX}-gnome2-gtk3>=${VERSION}:../../x11/ruby-gnome2-gtk3
 

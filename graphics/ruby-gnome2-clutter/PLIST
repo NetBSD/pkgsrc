@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2014/12/30 08:53:44 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/12/13 10:52:15 tsutsui Exp $
 ${RUBY_VENDORLIB}/clutter.rb
 ${RUBY_VENDORLIB}/clutter/actor-iter.rb
 ${RUBY_VENDORLIB}/clutter/actor.rb
@@ -12,3 +12,4 @@ ${RUBY_VENDORLIB}/clutter/point.rb
 ${RUBY_VENDORLIB}/clutter/text-buffer.rb
 ${RUBY_VENDORLIB}/clutter/text.rb
 ${RUBY_VENDORLIB}/clutter/threads.rb
+${RUBY_VENDORLIB}/clutter/version.rb
