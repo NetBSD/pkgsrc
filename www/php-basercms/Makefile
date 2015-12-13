@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2015/09/26 23:43:12 taca Exp $
+# $NetBSD: Makefile,v 1.6 2015/12/13 18:23:52 bsiegert Exp $
 
-BASERVER=	3.0.7
+BASERVER=	3.0.8
 DISTNAME=	basercms-${BASERVER}
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=	www
