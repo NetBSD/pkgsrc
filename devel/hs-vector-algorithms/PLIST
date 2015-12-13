@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/08/16 22:23:42 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/12/13 14:11:25 szptvlfn Exp $
 lib/vector-algorithms-${PKGVERSION}/${HASKELL_VERSION}/Data/Vector/Algorithms/AmericanFlag.hi
 lib/vector-algorithms-${PKGVERSION}/${HASKELL_VERSION}/Data/Vector/Algorithms/Common.hi
 lib/vector-algorithms-${PKGVERSION}/${HASKELL_VERSION}/Data/Vector/Algorithms/Heap.hi
@@ -8,6 +8,7 @@ lib/vector-algorithms-${PKGVERSION}/${HASKELL_VERSION}/Data/Vector/Algorithms/Me
 lib/vector-algorithms-${PKGVERSION}/${HASKELL_VERSION}/Data/Vector/Algorithms/Optimal.hi
 lib/vector-algorithms-${PKGVERSION}/${HASKELL_VERSION}/Data/Vector/Algorithms/Radix.hi
 lib/vector-algorithms-${PKGVERSION}/${HASKELL_VERSION}/Data/Vector/Algorithms/Search.hi
+lib/vector-algorithms-${PKGVERSION}/${HASKELL_VERSION}/Data/Vector/Algorithms/Tim.hi
 lib/vector-algorithms-${PKGVERSION}/${HASKELL_VERSION}/HSvector-algorithms-${PKGVERSION}.o
 lib/vector-algorithms-${PKGVERSION}/${HASKELL_VERSION}/include/vector.h
 lib/vector-algorithms-${PKGVERSION}/${HASKELL_VERSION}/libHSvector-algorithms-${PKGVERSION}.a
@@ -21,6 +22,7 @@ ${PLIST.doc}share/doc/vector-algorithms-${PKGVERSION}/html/Data-Vector-Algorithm
 ${PLIST.doc}share/doc/vector-algorithms-${PKGVERSION}/html/Data-Vector-Algorithms-Optimal.html
 ${PLIST.doc}share/doc/vector-algorithms-${PKGVERSION}/html/Data-Vector-Algorithms-Radix.html
 ${PLIST.doc}share/doc/vector-algorithms-${PKGVERSION}/html/Data-Vector-Algorithms-Search.html
+${PLIST.doc}share/doc/vector-algorithms-${PKGVERSION}/html/Data-Vector-Algorithms-Tim.html
 ${PLIST.doc}share/doc/vector-algorithms-${PKGVERSION}/html/doc-index.html
 ${PLIST.doc}share/doc/vector-algorithms-${PKGVERSION}/html/frames.html
 ${PLIST.doc}share/doc/vector-algorithms-${PKGVERSION}/html/haddock-util.js
@@ -35,6 +37,7 @@ ${PLIST.doc}share/doc/vector-algorithms-${PKGVERSION}/html/mini_Data-Vector-Algo
 ${PLIST.doc}share/doc/vector-algorithms-${PKGVERSION}/html/mini_Data-Vector-Algorithms-Optimal.html
 ${PLIST.doc}share/doc/vector-algorithms-${PKGVERSION}/html/mini_Data-Vector-Algorithms-Radix.html
 ${PLIST.doc}share/doc/vector-algorithms-${PKGVERSION}/html/mini_Data-Vector-Algorithms-Search.html
+${PLIST.doc}share/doc/vector-algorithms-${PKGVERSION}/html/mini_Data-Vector-Algorithms-Tim.html
 ${PLIST.doc}share/doc/vector-algorithms-${PKGVERSION}/html/minus.gif
 ${PLIST.doc}share/doc/vector-algorithms-${PKGVERSION}/html/ocean.css
 ${PLIST.doc}share/doc/vector-algorithms-${PKGVERSION}/html/plus.gif
