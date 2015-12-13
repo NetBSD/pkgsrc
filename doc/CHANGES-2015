@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5034 2015/12/13 16:52:18 taca Exp $
+$NetBSD: CHANGES-2015,v 1.5035 2015/12/13 16:56:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8327,3 +8327,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mail/ruby-mime-types to 3.0 [taca 2015-12-13]
 	Updated www/ruby-jekyll to 3.0.1 [taca 2015-12-13]
 	Updated www/ruby-jekyll-gist to 1.4.0 [taca 2015-12-13]
+	Updated textproc/ruby-classifier-reborn to 2.0.4 [taca 2015-12-13]
