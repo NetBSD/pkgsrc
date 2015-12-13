@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5032 2015/12/13 16:46:00 taca Exp $
+$NetBSD: CHANGES-2015,v 1.5033 2015/12/13 16:50:18 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8325,3 +8325,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/ruby-mechanize to 2.7.3nb1 [taca 2015-12-13]
 	Updated www/ruby-rest-client to 1.8.0nb1 [taca 2015-12-13]
 	Updated mail/ruby-mime-types to 3.0 [taca 2015-12-13]
+	Updated www/ruby-jekyll to 3.0.1 [taca 2015-12-13]
