@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2015/07/21 21:36:41 markd Exp $
+# $NetBSD: Makefile,v 1.21 2015/12/13 17:48:04 richard Exp $
 
 DISTNAME=	fltk-1.3.3-source
 PKGNAME=	${DISTNAME:S/-source//}
@@ -14,7 +14,7 @@ LICENSE=	gnu-lgpl-v2
 WRKSRC=			${WRKDIR}/${DISTNAME:S/-source//}
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake nroff
 TEST_TARGET=		test
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.fltk13
