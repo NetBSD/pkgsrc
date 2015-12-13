@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2015/02/04 14:55:44 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/12/13 15:52:14 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.gitignore
@@ -187,7 +187,7 @@ ${GEM_LIBDIR}/lib/padrino-admin/locale/orm/uk.yml
 ${GEM_LIBDIR}/lib/padrino-admin/locale/orm/zh_cn.yml
 ${GEM_LIBDIR}/lib/padrino-admin/locale/orm/zh_tw.yml
 ${GEM_LIBDIR}/padrino-admin.gemspec
-${GEM_LIBDIR}/test/fixtures/data_mapper.rb
+${GEM_LIBDIR}/test/fixtures/sequel.rb
 ${GEM_LIBDIR}/test/generators/test_account_model_generator.rb
 ${GEM_LIBDIR}/test/generators/test_admin_app_generator.rb
 ${GEM_LIBDIR}/test/generators/test_admin_page_generator.rb
