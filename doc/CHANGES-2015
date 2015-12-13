@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.4987 2015/12/13 02:56:41 mef Exp $
+$NetBSD: CHANGES-2015,v 1.4988 2015/12/13 08:14:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8249,3 +8249,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/knot to 2.0.2 [pettai 2015-12-13]
 	Added net/py-bitmessage version 0.4.4 [kamil 2015-12-12]
 	Updated ham/trustedQSL to 2.1.3 [mef 2015-12-13]
+	Updated devel/p5-Try-Tiny to 0.24 [wiz 2015-12-13]
