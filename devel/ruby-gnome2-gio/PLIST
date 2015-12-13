@@ -1,6 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2014/11/09 06:27:02 obache Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/12/13 10:52:14 tsutsui Exp $
 lib/pkgconfig/ruby-gio2.pc
 ${RUBY_VENDORLIB}/gio2.rb
+${RUBY_VENDORLIB}/gio2/action-map.rb
+${RUBY_VENDORLIB}/gio2/action.rb
+${RUBY_VENDORLIB}/gio2/application-command-line.rb
 ${RUBY_VENDORLIB}/gio2/deprecated.rb
 ${RUBY_VENDORLIB}/gio2/inet-address.rb
 ${RUBY_VENDORLIB}/gio2/input-stream.rb
@@ -8,4 +11,5 @@ ${RUBY_VENDORLIB}/gio2/loader.rb
 ${RUBY_VENDORLIB}/gio2/pollable-input-stream.rb
 ${RUBY_VENDORLIB}/gio2/pollable-output-stream.rb
 ${RUBY_VENDORLIB}/gio2/resources.rb
+${RUBY_VENDORLIB}/gio2/simple-action.rb
 ${RUBY_VENDORARCHLIB}/gio2.${RUBY_DLEXT}
