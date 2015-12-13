@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5041 2015/12/13 17:36:11 taca Exp $
+$NetBSD: CHANGES-2015,v 1.5042 2015/12/13 17:37:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8335,3 +8335,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/php-mecab to 0.6.0 [taca 2015-12-13]
 	Removed textproc/ruby-classifier [taca 2015-12-13]
 	Updated net/bind910 to 9.10.3 [taca 2015-12-13]
+	Updated net/bind99 to 9.9.8 [taca 2015-12-13]
