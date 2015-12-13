@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/09/28 17:37:04 ryoon Exp $
+# $NetBSD: Makefile,v 1.12 2015/12/13 08:48:36 wiz Exp $
 
 DISTNAME=	samba-${VERSION}
 CATEGORIES=	net
@@ -11,7 +11,7 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
-VERSION=	4.3.0
+VERSION=	4.3.2
 CONFLICTS+=	ja-samba-[0-9]* pam-smbpass-[0-9]* tdb-[0-9]* winbind-[0-9]*
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
@@ -181,10 +181,9 @@ REPLACE_PERL=	pidl/pidl
 REPLACE_PYTHON=	buildtools/bin/waf \
 		source4/setup/* \
 		source4/scripting/bin/* \
-		lib/subunit/python/subunit/run.py \
-		lib/subunit/python/subunit/tests/sample-script.py \
-		lib/subunit/python/subunit/tests/sample-two-script.py \
 		lib/tevent/tevent.py
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # as of 4.3.2
 
 .include "../../lang/python/application.mk"
 
