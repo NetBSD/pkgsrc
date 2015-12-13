@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.49 2015/11/23 21:49:04 schmonz Exp $
+$NetBSD: distinfo,v 1.50 2015/12/13 08:30:24 wiz Exp $
 
-SHA1 (wget-1.17.tar.xz) = 442330c7381593bdde568d15b758b76bdb9b98a2
-RMD160 (wget-1.17.tar.xz) = ea35738ca2e5b60a191b45a698b0a98766fc57d6
-SHA512 (wget-1.17.tar.xz) = 4936dad41580f6ba33df73de041e407cd6dd5266af4af947ebf4c54457f0f296e3462cfff1fb203b27ff5760ec4f6f4d24ea4faceeea461f98c22b031225947f
-Size (wget-1.17.tar.xz) = 1884628 bytes
+SHA1 (wget-1.17.1.tar.xz) = 8ae737ab2252607ce708f98d1dd7559ebf047f48
+RMD160 (wget-1.17.1.tar.xz) = 8ad5e9936c66ced9ad4ffc5012484a38f4a15cee
+SHA512 (wget-1.17.1.tar.xz) = aa13584c94d0911268aeee9d6c7b1a7de259e0ec0f9daebe767e1f45afba097a6e9de09f370e55ead7acc9faa68f189063ac9e3d2d4a8d490f0b4edb6adc19ba
+Size (wget-1.17.1.tar.xz) = 1894140 bytes
 SHA1 (patch-doc_wget.texi) = 6db25b3500ff4617b5ade34d9013b1f9876104f8
-SHA1 (patch-src_ftp-basic.c) = 9e8a9457c5e947d234dc639818e49589d5c72e9e
