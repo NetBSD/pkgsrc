@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.2014 2015/11/25 13:05:47 jperkin Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.2015 2015/12/13 06:05:25 richard Exp $
 #
 # This file is in the public domain.
 #
@@ -360,7 +360,7 @@ _BUILD_DEFS+=		PKG_SYSCONFBASEDIR PKG_SYSCONFDIR
 #
 USE_TOOLS+=								\
 	[ awk basename cat chgrp chmod chown cmp cp cut dirname echo	\
-	egrep env false find grep head hostname id install ln ls	\
+	egrep env false fgrep find grep head hostname id install ln ls	\
 	mkdir mv printf pwd rm rmdir sed sh sort			\
 	tail test touch tr true wc xargs
 
@@ -574,7 +574,7 @@ all: ${_PKGSRC_BUILD_TARGETS}
 .endif
 
 .PHONY: makedirs
-makedirs: ${WRKDIR}
+makedirs: ${WRKDIR} ${FAKEHOMEDIR}
 
 ${WRKDIR}:
 .if !defined(KEEP_WRKDIR)
