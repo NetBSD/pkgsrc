@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2015/02/04 14:53:55 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/12/13 15:52:14 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.gitignore
@@ -9,7 +9,6 @@ ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/lib/padrino-helpers.rb
 ${GEM_LIBDIR}/lib/padrino-helpers/asset_tag_helpers.rb
 ${GEM_LIBDIR}/lib/padrino-helpers/form_builder/abstract_form_builder.rb
-${GEM_LIBDIR}/lib/padrino-helpers/form_builder/deprecated_builder_methods.rb
 ${GEM_LIBDIR}/lib/padrino-helpers/form_builder/standard_form_builder.rb
 ${GEM_LIBDIR}/lib/padrino-helpers/form_helpers.rb
 ${GEM_LIBDIR}/lib/padrino-helpers/form_helpers/errors.rb
@@ -47,6 +46,7 @@ ${GEM_LIBDIR}/lib/padrino-helpers/render_helpers.rb
 ${GEM_LIBDIR}/lib/padrino-helpers/tag_helpers.rb
 ${GEM_LIBDIR}/lib/padrino-helpers/translation_helpers.rb
 ${GEM_LIBDIR}/lib/padrino/rendering.rb
+${GEM_LIBDIR}/lib/padrino/rendering/erb_template.rb
 ${GEM_LIBDIR}/lib/padrino/rendering/erubis_template.rb
 ${GEM_LIBDIR}/lib/padrino/rendering/haml_template.rb
 ${GEM_LIBDIR}/lib/padrino/rendering/slim_template.rb
