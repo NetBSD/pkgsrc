@@ -1,0 +1,42 @@
+$NetBSD: patch-Makefile,v 1.1 2015/12/13 00:31:54 kamil Exp $
+
+Adjust paths for pkgsrc.
+
+--- Makefile.orig	2014-10-15 21:16:27.000000000 +0000
++++ Makefile
+@@ -13,13 +13,12 @@ source:
+ 	tar -cvf ../${APP}_${VERSION}.orig.tar ../${APP}-${VERSION} --exclude-vcs
+ 	gzip -f9n ../${APP}_${VERSION}.orig.tar
+ install:
+-	mkdir -p ${DESTDIR}/usr
+ 	mkdir -p ${DESTDIR}${PREFIX}
+ 	mkdir -p ${DESTDIR}${PREFIX}/bin
+-	mkdir -m 755 -p ${DESTDIR}${PREFIX}/share
+-	mkdir -m 755 -p ${DESTDIR}${PREFIX}/share/man
+-	mkdir -m 755 -p ${DESTDIR}${PREFIX}/share/man/man1
+-	install -m 644 man/${APP}.1.gz ${DESTDIR}${PREFIX}/share/man/man1
++	mkdir -m 755 -p ${DESTDIR}${PREFIX}/man
++	mkdir -m 755 -p ${DESTDIR}${PREFIX}/man/man1
++	gunzip man/${APP}.1.gz
++	install -m 644 man/${APP}.1 ${DESTDIR}${PREFIX}/man/man1
+ 	mkdir -m 755 -p ${DESTDIR}${PREFIX}/share/${APP}
+ 	mkdir -m 755 -p ${DESTDIR}${PREFIX}/share/applications
+ 	mkdir -m 755 -p ${DESTDIR}${PREFIX}/share/pixmaps
+@@ -34,15 +33,10 @@ install:
+ 	install -m 644 desktop/can-icon.svg ${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps/${APP}.svg
+ 	cp -rf src/* ${DESTDIR}${PREFIX}/share/${APP}
+ 	echo '#!/bin/sh' > ${DESTDIR}${PREFIX}/bin/${APP}
+-	echo 'if [ -d ${DESTDIR}/usr/local/share/${APP} ]; then' >> ${DESTDIR}${PREFIX}/bin/${APP}
+-	echo '  cd ${DESTDIR}/usr/local/share/${APP}' >> ${DESTDIR}${PREFIX}/bin/${APP}
+-	echo 'else' >> ${DESTDIR}${PREFIX}/bin/${APP}
+-	echo '  cd ${DESTDIR}/usr/share/pybitmessage' >> ${DESTDIR}${PREFIX}/bin/${APP}
+-	echo 'fi' >> ${DESTDIR}${PREFIX}/bin/${APP}
+-	echo 'LD_LIBRARY_PATH="/opt/openssl-compat-bitcoin/lib/" exec python2 bitmessagemain.py' >> ${DESTDIR}${PREFIX}/bin/${APP}
++	echo 'exec ${PREFIX}/share/${APP}/bitmessagemain.py' >> ${DESTDIR}${PREFIX}/bin/${APP}
+ 	chmod +x ${DESTDIR}${PREFIX}/bin/${APP}
+ uninstall:
+-	rm -f ${PREFIX}/share/man/man1/${APP}.1.gz
++	rm -f ${PREFIX}/man/man1/${APP}.1.gz
+ 	rm -rf ${PREFIX}/share/${APP}
+ 	rm -f ${PREFIX}/bin/${APP}
+ 	rm -f ${PREFIX}/share/applications/${APP}.desktop
