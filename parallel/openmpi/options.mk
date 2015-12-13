@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.8 2015/01/15 20:26:47 dholland Exp $
+# $NetBSD: options.mk,v 1.9 2015/12/13 06:49:01 markd Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openmpi
-PKG_SUPPORTED_OPTIONS=	debug f90 sge
+PKG_SUPPORTED_OPTIONS=	debug f90 java sge
 
 .include "../../mk/bsd.options.mk"
 
@@ -9,7 +9,7 @@ PKG_SUPPORTED_OPTIONS=	debug f90 sge
 CONFIGURE_ARGS+=	--enable-debug
 .endif
 
-PLIST_VARS+=		f90 sge
+PLIST_VARS+=		f90 java sge
 
 .if !empty(PKG_OPTIONS:Mf90)
 GCC_REQD+=		4.7
@@ -28,6 +28,13 @@ SUBST_SED.f90+=		-e 's,^linker_flags=,linker_flags= -L${GCCDIR}/lib ,'
 CONFIGURE_ARGS+=	--disable-mpi-f90
 .endif
 
+.if !empty(PKG_OPTIONS:Mjava)
+CONFIGURE_ARGS+=	--enable-mpi-java
+PLIST.java=		yes
+.include "../../mk/java-vm.mk"
+.else
+CONFIGURE_ARGS+=	--disable-mpi-java
+.endif
 
 .if !empty(PKG_OPTIONS:Msge)
 CONFIGURE_ARGS+=        --with-sge
