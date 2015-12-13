@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2015/06/11 17:07:56 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2015/12/13 16:16:59 taca Exp $
 bin/unicorn${RUBY_SUFFIX}
 bin/unicorn_rails${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -6,6 +6,7 @@ ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/unicorn_http.${RUBY_DLEXT}
 ${GEM_LIBDIR}/.CHANGELOG.old
 ${GEM_LIBDIR}/.document
+${GEM_LIBDIR}/.gitattributes
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.mailmap
 ${GEM_LIBDIR}/.manifest
@@ -42,13 +43,14 @@ ${GEM_LIBDIR}/bin/unicorn
 ${GEM_LIBDIR}/bin/unicorn_rails
 ${GEM_LIBDIR}/examples/big_app_gc.rb
 ${GEM_LIBDIR}/examples/echo.ru
-${GEM_LIBDIR}/examples/git.ru
 ${GEM_LIBDIR}/examples/init.sh
 ${GEM_LIBDIR}/examples/logger_mp_safe.rb
 ${GEM_LIBDIR}/examples/logrotate.conf
 ${GEM_LIBDIR}/examples/nginx.conf
 ${GEM_LIBDIR}/examples/unicorn.conf.minimal.rb
 ${GEM_LIBDIR}/examples/unicorn.conf.rb
+${GEM_LIBDIR}/examples/unicorn.socket
+${GEM_LIBDIR}/examples/unicorn@.service
 ${GEM_LIBDIR}/ext/unicorn_http/CFLAGS
 ${GEM_LIBDIR}/ext/unicorn_http/c_util.h
 ${GEM_LIBDIR}/ext/unicorn_http/common_field_optimization.h
@@ -60,8 +62,6 @@ ${GEM_LIBDIR}/ext/unicorn_http/unicorn_http.c
 ${GEM_LIBDIR}/ext/unicorn_http/unicorn_http.rl
 ${GEM_LIBDIR}/ext/unicorn_http/unicorn_http_common.rl
 ${GEM_LIBDIR}/lib/unicorn.rb
-${GEM_LIBDIR}/lib/unicorn/app/exec_cgi.rb
-${GEM_LIBDIR}/lib/unicorn/app/inetd.rb
 ${GEM_LIBDIR}/lib/unicorn/app/old_rails.rb
 ${GEM_LIBDIR}/lib/unicorn/app/old_rails/static.rb
 ${GEM_LIBDIR}/lib/unicorn/cgi_wrapper.rb
@@ -74,9 +74,6 @@ ${GEM_LIBDIR}/lib/unicorn/launcher.rb
 ${GEM_LIBDIR}/lib/unicorn/oob_gc.rb
 ${GEM_LIBDIR}/lib/unicorn/preread_input.rb
 ${GEM_LIBDIR}/lib/unicorn/socket_helper.rb
-${GEM_LIBDIR}/lib/unicorn/ssl_client.rb
-${GEM_LIBDIR}/lib/unicorn/ssl_configurator.rb
-${GEM_LIBDIR}/lib/unicorn/ssl_server.rb
 ${GEM_LIBDIR}/lib/unicorn/stream_input.rb
 ${GEM_LIBDIR}/lib/unicorn/tee_input.rb
 ${GEM_LIBDIR}/lib/unicorn/tmpio.rb
@@ -128,8 +125,6 @@ ${GEM_LIBDIR}/t/t0013.ru
 ${GEM_LIBDIR}/t/t0014-rewindable-input-true.sh
 ${GEM_LIBDIR}/t/t0014.ru
 ${GEM_LIBDIR}/t/t0015-configurator-internals.sh
-${GEM_LIBDIR}/t/t0016-trust-x-forwarded-false.sh
-${GEM_LIBDIR}/t/t0017-trust-x-forwarded-true.sh
 ${GEM_LIBDIR}/t/t0018-write-on-close.sh
 ${GEM_LIBDIR}/t/t0019-max_header_len.sh
 ${GEM_LIBDIR}/t/t0020-at_exit-handler.sh
@@ -156,12 +151,10 @@ ${GEM_LIBDIR}/test/unit/test_configurator.rb
 ${GEM_LIBDIR}/test/unit/test_droplet.rb
 ${GEM_LIBDIR}/test/unit/test_http_parser.rb
 ${GEM_LIBDIR}/test/unit/test_http_parser_ng.rb
-${GEM_LIBDIR}/test/unit/test_http_parser_xftrust.rb
 ${GEM_LIBDIR}/test/unit/test_request.rb
 ${GEM_LIBDIR}/test/unit/test_response.rb
 ${GEM_LIBDIR}/test/unit/test_server.rb
 ${GEM_LIBDIR}/test/unit/test_signals.rb
-${GEM_LIBDIR}/test/unit/test_sni_hostnames.rb
 ${GEM_LIBDIR}/test/unit/test_socket_helper.rb
 ${GEM_LIBDIR}/test/unit/test_stream_input.rb
 ${GEM_LIBDIR}/test/unit/test_tee_input.rb
