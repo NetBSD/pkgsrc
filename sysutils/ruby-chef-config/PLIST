@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2015/12/13 15:16:35 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/lib/chef-config.rb
+${GEM_LIBDIR}/lib/chef-config/config.rb
+${GEM_LIBDIR}/lib/chef-config/exceptions.rb
+${GEM_LIBDIR}/lib/chef-config/logger.rb
+${GEM_LIBDIR}/lib/chef-config/package_task.rb
+${GEM_LIBDIR}/lib/chef-config/path_helper.rb
+${GEM_LIBDIR}/lib/chef-config/version.rb
+${GEM_LIBDIR}/lib/chef-config/windows.rb
+${GEM_LIBDIR}/lib/chef-config/workstation_config_loader.rb
+${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_LIBDIR}/spec/unit/config_spec.rb
+${GEM_LIBDIR}/spec/unit/path_helper_spec.rb
+${GEM_LIBDIR}/spec/unit/workstation_config_loader_spec.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
