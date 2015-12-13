@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15184 2015/12/13 14:09:21 szptvlfn Exp $
+$NetBSD: TODO,v 1.15185 2015/12/13 14:10:50 szptvlfn Exp $
 
 Suggested new packages
 ======================
@@ -892,7 +892,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hs-hscolour-1.23
 	o hs-lifted-base-0.2.3.6
 	o hs-monad-control-1.0.0.4
-	o hs-mwc-random-0.13.3.2
 	o hs-network-2.6.2.1
 	o hs-pandoc-types-1.12.4.5
 	o hs-reflection-2
