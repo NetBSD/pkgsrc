@@ -1,0 +1,15 @@
+$NetBSD: patch-ompi_mpi_java_java_Makefile.in,v 1.1 2015/12/13 06:49:01 markd Exp $
+
+Don't install jdocs - its dependent on particular javadoc version
+
+--- ompi/mpi/java/java/Makefile.in.orig	2015-09-16 10:13:10.000000000 +0000
++++ ompi/mpi/java/java/Makefile.in
+@@ -2017,7 +2017,7 @@ uninstall-am: uninstall-javaDATA uninsta
+ @OMPI_WANT_JAVA_BINDINGS_TRUE@jdoc-uninstall:
+ @OMPI_WANT_JAVA_BINDINGS_TRUE@	-rm -rf $(DESTDIR)$(docdir)/javadoc
+ 
+-@OMPI_WANT_JAVA_BINDINGS_TRUE@install-data-hook: jdoc-install
++@OMPI_WANT_JAVA_BINDINGS_TRUE@install-data-hook: 
+ @OMPI_WANT_JAVA_BINDINGS_TRUE@uninstall-local: jdoc-uninstall
+ 
+ # Can only put *files* in CLEANFILES; need to remove the generated doc
