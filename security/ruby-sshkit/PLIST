@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2015/03/13 15:49:17 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/12/13 17:18:07 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.travis.yml
 ${GEM_LIBDIR}/.yardopts
+${GEM_LIBDIR}/BREAKING_API_WISHLIST.md
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/CONTRIBUTING.md
 ${GEM_LIBDIR}/EXAMPLES.md
@@ -30,6 +31,7 @@ ${GEM_LIBDIR}/lib/sshkit/command.rb
 ${GEM_LIBDIR}/lib/sshkit/command_map.rb
 ${GEM_LIBDIR}/lib/sshkit/configuration.rb
 ${GEM_LIBDIR}/lib/sshkit/coordinator.rb
+${GEM_LIBDIR}/lib/sshkit/deprecation_logger.rb
 ${GEM_LIBDIR}/lib/sshkit/dsl.rb
 ${GEM_LIBDIR}/lib/sshkit/exception.rb
 ${GEM_LIBDIR}/lib/sshkit/formatters/abstract.rb
@@ -40,34 +42,37 @@ ${GEM_LIBDIR}/lib/sshkit/formatters/simple_text.rb
 ${GEM_LIBDIR}/lib/sshkit/host.rb
 ${GEM_LIBDIR}/lib/sshkit/log_message.rb
 ${GEM_LIBDIR}/lib/sshkit/logger.rb
+${GEM_LIBDIR}/lib/sshkit/mapping_interaction_handler.rb
 ${GEM_LIBDIR}/lib/sshkit/runners/abstract.rb
 ${GEM_LIBDIR}/lib/sshkit/runners/group.rb
 ${GEM_LIBDIR}/lib/sshkit/runners/null.rb
 ${GEM_LIBDIR}/lib/sshkit/runners/parallel.rb
 ${GEM_LIBDIR}/lib/sshkit/runners/sequential.rb
-${GEM_LIBDIR}/lib/sshkit/utils/capture_output_methods.rb
 ${GEM_LIBDIR}/lib/sshkit/version.rb
 ${GEM_LIBDIR}/sshkit.gemspec
 ${GEM_LIBDIR}/test/boxes.json
 ${GEM_LIBDIR}/test/functional/backends/test_local.rb
 ${GEM_LIBDIR}/test/functional/backends/test_netssh.rb
-${GEM_LIBDIR}/test/functional/test_coordinator.rb
 ${GEM_LIBDIR}/test/functional/test_ssh_server_comes_up_for_functional_tests.rb
 ${GEM_LIBDIR}/test/helper.rb
 ${GEM_LIBDIR}/test/support/vagrant_wrapper.rb
+${GEM_LIBDIR}/test/unit/backends/test_abstract.rb
 ${GEM_LIBDIR}/test/unit/backends/test_connection_pool.rb
 ${GEM_LIBDIR}/test/unit/backends/test_local.rb
 ${GEM_LIBDIR}/test/unit/backends/test_netssh.rb
 ${GEM_LIBDIR}/test/unit/backends/test_printer.rb
 ${GEM_LIBDIR}/test/unit/core_ext/test_string.rb
+${GEM_LIBDIR}/test/unit/formatters/test_custom.rb
 ${GEM_LIBDIR}/test/unit/formatters/test_dot.rb
 ${GEM_LIBDIR}/test/unit/formatters/test_pretty.rb
+${GEM_LIBDIR}/test/unit/formatters/test_simple_text.rb
 ${GEM_LIBDIR}/test/unit/test_color.rb
 ${GEM_LIBDIR}/test/unit/test_command.rb
 ${GEM_LIBDIR}/test/unit/test_command_map.rb
 ${GEM_LIBDIR}/test/unit/test_configuration.rb
 ${GEM_LIBDIR}/test/unit/test_coordinator.rb
+${GEM_LIBDIR}/test/unit/test_deprecation_logger.rb
 ${GEM_LIBDIR}/test/unit/test_host.rb
 ${GEM_LIBDIR}/test/unit/test_logger.rb
+${GEM_LIBDIR}/test/unit/test_mapping_interaction_handler.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
-@pkgdir lib/ruby/gems/2.0.0/build_info
