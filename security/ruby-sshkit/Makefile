@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2015/03/13 15:49:17 taca Exp $
+# $NetBSD: Makefile,v 1.4 2015/12/13 17:18:07 taca Exp $
 
-DISTNAME=	sshkit-1.7.1
+DISTNAME=	sshkit-1.8.1
 CATEGORIES=	security
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -10,7 +10,6 @@ LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-net-ssh>=2.8.0:../../security/ruby-net-ssh
 DEPENDS+=	${RUBY_PKGPREFIX}-net-scp>=1.1.2:../../security/ruby-net-scp
-DEPENDS+=	${RUBY_PKGPREFIX}-colorize>=0.7.0:../../misc/ruby-colorize
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
