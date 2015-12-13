@@ -1,17 +1,21 @@
-# $NetBSD: Makefile,v 1.15 2012/10/31 11:17:22 asau Exp $
+# $NetBSD: Makefile,v 1.16 2015/12/13 18:26:07 bsiegert Exp $
 #
 
-DISTNAME=	libtar-1.2.11
-PKGREVISION=	2
+DISTNAME=	libtar-1.2.20
 CATEGORIES=	devel archivers
-MASTER_SITES=	ftp://ftp.feep.net/pub/software/libtar/
+MASTER_SITES=	http://pkgbuild.com/~giovanni/libtar/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.feep.net/libtar/
+HOMEPAGE=	http://repo.or.cz/w/libtar.git/
 COMMENT=	Library for manipulating POSIX tar files
 
-GNU_CONFIGURE=		YES
+WRKSRC=			${WRKDIR}/libtar
+GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
+USE_TOOLS+=		autoconf automake autoreconf gmake
+
+pre-configure:
+	cd ${WRKSRC} && autoreconf -fvi
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
