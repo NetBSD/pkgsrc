@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5021 2015/12/13 15:46:50 taca Exp $
+$NetBSD: CHANGES-2015,v 1.5022 2015/12/13 16:06:34 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8305,3 +8305,11 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/ruby-httpclient to 2.7.0.1 [taca 2015-12-13]
 	Updated www/ruby-innate to 2015.10.28 [taca 2015-12-13]
 	Added www/ruby-mustermann19 version 0.4.0 [taca 2015-12-13]
+	Updated www/ruby-padrino-support to 0.13.0 [taca 2015-12-13]
+	Updated www/ruby-padrino-core to 0.13.0 [taca 2015-12-13]
+	Updated www/ruby-padrino-helpers to 0.13.0 [taca 2015-12-13]
+	Updated www/ruby-padrino-admin to 0.13.0 [taca 2015-12-13]
+	Updated www/ruby-padrino-cache to 0.13.0 [taca 2015-12-13]
+	Updated www/ruby-padrino-gen to 0.13.0 [taca 2015-12-13]
+	Updated www/ruby-padrino-mailer to 0.13.0 [taca 2015-12-13]
+	Updated www/ruby-padrino to 0.13.0 [taca 2015-12-13]
