@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5036 2015/12/13 17:11:01 taca Exp $
+$NetBSD: CHANGES-2015,v 1.5037 2015/12/13 17:14:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8330,4 +8330,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/ruby-classifier-reborn to 2.0.4 [taca 2015-12-13]
 	Updated textproc/ruby-xmlparser to 0.7.3 [taca 2015-12-13]
 	Updated devel/ruby-racc to 1.4.14nb1 [taca 2015-12-13]
-	Updated devel/ruby-racc to 1.4.14nb1 [taca 2015-12-13]
+	Updated www/ruby-liquid to 3.0.6 [taca 2015-12-13]
