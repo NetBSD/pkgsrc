@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2015/11/03 16:41:55 jperkin Exp $
+# $NetBSD: Makefile,v 1.104 2015/12/13 16:08:26 asau Exp $
 
 JDK_MICRO=	80
 DISTNAME=	openjdk-1.7.${JDK_MICRO}-20150609
@@ -26,8 +26,6 @@ JAVA_WRAPPERS=	jar java javac javadoc javah javap jps keytool orbd \
 MAKE_ENV+=		PKGSRC_ZIPEXE=${TOOLS_PATH.zip}
 MAKE_ENV+=		PKGSRC_UNZIP=${TOOLS_PATH.unzip}
 MAKE_ENV+=		PKGSRC_UNZIPSFX=${TOOLS_PATH.unzip}sfx
-
-BUILD_DEPENDS+=		mozilla-rootcerts>=1.0.20140820nb2:../../security/mozilla-rootcerts
 
 NO_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
