@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2015/11/03 17:57:47 tnn Exp $
+# $NetBSD: Makefile,v 1.25 2015/12/13 16:09:10 asau Exp $
 
 DISTNAME=	openjdk-1.8.66-20151103
 PKGNAME=	openjdk8-1.8.66
@@ -22,8 +22,6 @@ JAVA_NAME=	openjdk8
 JAVA_HOME=	${PREFIX}/java/${JAVA_NAME}
 JAVA_WRAPPERS=	jar java javac javadoc javah javap jps keytool orbd \
 		policytool rmid rmiregistry servertool tnameserv
-
-BUILD_DEPENDS+=		mozilla-rootcerts>=1.0.20140820nb2:../../security/mozilla-rootcerts
 
 GNU_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	common/autoconf/configure
