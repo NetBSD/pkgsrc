@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5027 2015/12/13 16:28:08 taca Exp $
+$NetBSD: CHANGES-2015,v 1.5028 2015/12/13 16:34:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8318,3 +8318,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/ruby-sass to 3.4.20 [taca 2015-12-13]
 	Updated www/ruby-unicorn to 5.0.1 [taca 2015-12-13]
 	Added www/ruby-rouge version 1.10.1 [taca 2015-12-13]
+	Added devel/ruby-octokit version 4.2.0 [taca 2015-12-13]
