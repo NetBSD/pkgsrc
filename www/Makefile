@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1139 2015/12/13 15:46:17 taca Exp $
+# $NetBSD: Makefile,v 1.1140 2015/12/13 16:27:22 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -744,6 +744,7 @@ SUBDIR+=	ruby-rack15
 SUBDIR+=	ruby-rails32
 SUBDIR+=	ruby-raindrops
 SUBDIR+=	ruby-rest-client
+SUBDIR+=	ruby-rouge
 SUBDIR+=	ruby-sass
 SUBDIR+=	ruby-sass-rails32
 SUBDIR+=	ruby-selenium-webdriver
