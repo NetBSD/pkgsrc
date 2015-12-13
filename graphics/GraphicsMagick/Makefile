@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.72 2015/11/25 12:50:43 jperkin Exp $
+# $NetBSD: Makefile,v 1.73 2015/12/13 07:13:36 richard Exp $
 
+PKGREVISION= 1
 .include "Makefile.common"
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -35,6 +36,7 @@ TEST_TARGET=	check
 .include "../../graphics/jbigkit/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/lcms2/buildlink3.mk"
+.include "../../graphics/libwebp/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
