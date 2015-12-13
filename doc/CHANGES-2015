@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5038 2015/12/13 17:18:53 taca Exp $
+$NetBSD: CHANGES-2015,v 1.5039 2015/12/13 17:21:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8332,3 +8332,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/ruby-racc to 1.4.14nb1 [taca 2015-12-13]
 	Updated www/ruby-liquid to 3.0.6 [taca 2015-12-13]
 	Updated security/ruby-sshkit to 1.8.1 [taca 2015-12-13]
+	Updated textproc/php-mecab to 0.6.0 [taca 2015-12-13]
