@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1138 2015/12/13 14:27:39 taca Exp $
+# $NetBSD: Makefile,v 1.1139 2015/12/13 15:46:17 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -714,6 +714,7 @@ SUBDIR+=	ruby-jsmin
 SUBDIR+=	ruby-liquid
 SUBDIR+=	ruby-mechanize
 SUBDIR+=	ruby-multipart-post
+SUBDIR+=	ruby-mustermann19
 SUBDIR+=	ruby-net-flickr
 SUBDIR+=	ruby-net-http-digest_auth
 SUBDIR+=	ruby-net-http-persistent
