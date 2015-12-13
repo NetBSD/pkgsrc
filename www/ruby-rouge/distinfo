@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/12/13 16:25:23 taca Exp $
+
+SHA1 (rouge-1.10.1.gem) = 72808161d60b97842d22345e2f83a85cad9abcc1
+RMD160 (rouge-1.10.1.gem) = b0628e9fdc27973b2d84acb74a58686f848edc21
+SHA512 (rouge-1.10.1.gem) = eb5215c5e1f45feb6f76f24f0a19be2c75f1ec861164ac051f3ea77dd5eda6b9b064806c14d0bfe291bff6a9ed724977ea40933ee1409928195ac96370d7c964
+Size (rouge-1.10.1.gem) = 177664 bytes
