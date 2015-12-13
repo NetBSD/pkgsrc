@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.7 2010/09/10 08:48:31 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2015/12/13 16:57:32 taca Exp $
 ${RUBY_VENDORLIB}/sax.rb
 ${RUBY_VENDORLIB}/saxdriver.rb
 ${RUBY_VENDORLIB}/wget.rb
 ${RUBY_VENDORARCHLIB}/xmlparser.${RUBY_DLEXT}
 ${RUBY_VENDORLIB}/xml/dom/builder.rb
 ${RUBY_VENDORLIB}/xml/dom/core.rb
+${RUBY_VENDORLIB}/xml/dom/digest.rb
 ${RUBY_VENDORLIB}/xml/dom/visitor.rb
 ${RUBY_VENDORLIB}/xml/dom2/attr.rb
 ${RUBY_VENDORLIB}/xml/dom2/cdatasection.rb
