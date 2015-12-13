@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/21 20:48:53 asau Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/12/13 00:50:39 asau Exp $
 bin/qacct
 bin/qalter
 bin/qconf
@@ -393,7 +393,6 @@ sge/qmon/PIXMAPS/xterm.xpm
 sge/qmon/Qmon
 sge/qmon/qmon_help.ad
 sge/util/arch
-sge/util/arch.dist
 sge/util/arch_variables
 sge/util/arch_variables.orig
 sge/util/bdb_checkpoint.sh
