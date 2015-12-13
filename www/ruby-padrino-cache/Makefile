@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2015/06/04 00:10:12 taca Exp $
+# $NetBSD: Makefile,v 1.5 2015/12/13 15:52:14 taca Exp $
 
 DISTNAME=	padrino-cache-${RUBY_PADRINO_VERS}
-PKGREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
