@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2015/10/04 13:26:10 taca Exp $
+# $NetBSD: Makefile,v 1.8 2015/12/13 15:12:04 taca Exp $
 
-DISTNAME=	listen-3.0.3
+DISTNAME=	listen-3.0.5
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils
 
@@ -9,7 +9,6 @@ HOMEPAGE=	https://github.com/guard/listen
 COMMENT=	Listen to file modifications
 LICENSE=	mit
 
-DEPENDS+=	${RUBY_PKGPREFIX}-celluloid>=0.15.2:../../devel/ruby-celluloid
 #DEPENDS+=	${RUBY_PKGPREFIX}-rb-fsevent>=0.9.3:../../sysutils/ruby-rb-fsevent
 DEPENDS+=	${RUBY_PKGPREFIX}-rb-inotify>=0.9:../../sysutils/ruby-rb-inotify
 
