@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15195 2015/12/13 21:29:52 wiz Exp $
+$NetBSD: TODO,v 1.15196 2015/12/14 14:08:14 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -992,7 +992,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o leafpad-0.8.18.1
 	o lft-3.73
 	o lgeneral-1.2.3
-	o libassuan-2.2.1
 	o libasyncns-0.8
 	o libbpg-0.9.5
 	o libburn-1.4.0
