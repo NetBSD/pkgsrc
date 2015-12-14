@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5054 2015/12/14 13:55:04 taca Exp $
+$NetBSD: CHANGES-2015,v 1.5055 2015/12/14 14:08:14 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8349,3 +8349,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated chat/jabberd2 to 2.3.4 [schnoebe 2015-12-13]
 	Added www/jetty9 version 9.2.14.20151106 [jperkin 2015-12-14]
 	Added www/ruby-sawyer version 0.6.0 [taca 2015-12-14]
+	Updated security/libassuan2 to 2.4.2 [ryoon 2015-12-14]
