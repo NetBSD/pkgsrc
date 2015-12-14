@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/12/14 13:53:27 taca Exp $
+
+SHA1 (sawyer-0.6.0.gem) = f1fc364c9a74aa0bc206a2a972534f77ced860b7
+RMD160 (sawyer-0.6.0.gem) = 8fda1f0204139a4dbf66e567ee4eb7f7a3792990
+SHA512 (sawyer-0.6.0.gem) = 079a5b4b350cbd52a22ae2dbe291f21823f3bbf70d39866f60c8d7470b0d09a7faa60c289dd67c4e178e360a73fb8de46a5567ff54eeb4423eea34edb603a5c8
+Size (sawyer-0.6.0.gem) = 15872 bytes
