@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2015/12/05 21:25:30 adam Exp $
+# $NetBSD: Makefile,v 1.43 2015/12/14 14:00:28 jaapb Exp $
 
 DISTNAME=	telepathy-farsight-0.0.19
 CATEGORIES=	chat multimedia
@@ -27,8 +27,8 @@ PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-gtk2, py-gstreamer0.10
 BUILDLINK_API_DEPENDS.pygobject+=	${PYPKGPREFIX}-gobject>=2.12
 .include "../../devel/py-gobject/buildlink3.mk"
 .include "../../multimedia/farsight2/buildlink3.mk"
-#BUILDLINK_API_DEPENDS.gst-python+=	${PYPKGPREFIX}-gstreamer0.10>=0.10.10
-#.include "../../multimedia/py-gstreamer0.10/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gst-python+=	${PYPKGPREFIX}-gstreamer0.10>=0.10.10
+.include "../../multimedia/py-gstreamer0.10/buildlink3.mk"
 BUILDLINK_API_DEPENDS.telepathy-glib+=	telepathy-glib>=0.13.4
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
