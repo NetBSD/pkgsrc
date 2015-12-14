@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/12/14 15:32:13 wiz Exp $
+
+SHA1 (freecol-0.11.6.zip) = 084acb6c3c86ce7b1935dfc9a60596ab9547c8fe
+RMD160 (freecol-0.11.6.zip) = 80f45b78f1afd03ae76beb52bba274fc3f51bccc
+SHA512 (freecol-0.11.6.zip) = 956ef37f80fcb911c2b6770d12c143599cfe516d6c7583912a834120fe41dbc2e7f0ca75213b4807c78ce8b8591d46edd07a9356682d47545f1fac65b40e41b6
+Size (freecol-0.11.6.zip) = 38642198 bytes
