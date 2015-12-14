@@ -1,5 +1,5 @@
 #!/bin/sh
-# $Id: pbulk.sh,v 1.2 2015/10/29 22:12:04 he Exp $
+# $Id: pbulk.sh,v 1.3 2015/12/14 21:12:01 asau Exp $
 set -e
 
 usage="usage: ${0##*/} [-lun] [-c mk.conf.fragment] [-d nodes]"
@@ -25,7 +25,6 @@ if [ -n "$unprivileged" ]; then
 : ${PKGSRCDIR:=${HOME}/pkgsrc}
 : ${PREFIX:=${HOME}/pkg}
 : ${PACKAGES:=${HOME}/packages}
-: ${DISTDIR:=${HOME}/distfiles}
 : ${BULKLOG:=${HOME}/bulklog}
 fi
 
@@ -34,7 +33,6 @@ fi
 : ${PBULKWORK:=${TMPDIR}/work-pbulk}
 
 : ${PACKAGES:=/mnt/packages}
-: ${DISTDIR:=/mnt/distfiles}
 : ${BULKLOG:=/mnt/bulklog}
 
 # almost constant:
@@ -44,7 +42,7 @@ fi
 if [ ! -n "$unprivileged" ]; then
 case "$(uname)" in
 NetBSD)
-if ! id pbulk; then user add -m -g users pbulk -s /bin/sh; fi
+if ! id pbulk; then user add -m -g users pbulk; fi
 ;;
 FreeBSD)
 if ! id pbulk; then
@@ -61,10 +59,7 @@ fi
 # Deploying pbulk packages:
 # - bootstrapping
 cat >${TMPDIR}/pbulk.mk <<EOF
-WRKOBJDIR=	${TMPDIR}/obj-pbulk
-PACKAGES=	${TMPDIR}/packages-pbulk
 PKG_DEVELOPER=	yes
-DISTDIR=	${DISTDIR}
 EOF
 
 ${PKGSRCDIR}/bootstrap/bootstrap \
@@ -76,7 +71,7 @@ rm -rf ${PBULKWORK}
 rm -f ${TMPDIR}/pbulk.mk
 
 # - installing pbulk
-(cd ${PKGSRCDIR}/pkgtools/pbulk && ${PBULKPREFIX}/bin/bmake install)
+(cd ${PKGSRCDIR}/pkgtools/pbulk && PACKAGES=${TMPDIR}/packages-pbulk WRKOBJDIR=${TMPDIR}/obj-pbulk ${PBULKPREFIX}/bin/bmake install)
 rm -rf ${TMPDIR}/obj-pbulk
 rm -rf ${TMPDIR}/packages-pbulk
 
@@ -131,6 +126,14 @@ prefix=${PREFIX}
 varbase=${PREFIX}/var
 pkgdb=${PREFIX}/var/db/pkg
 EOF
+elif [ -n "${PREFIX}" ]; then
+# Non-default prefix:
+cat >> ${PBULKPREFIX}/etc/pbulk.conf.over <<EOF
+# Non-default prefix overrides:
+prefix=${PREFIX}
+varbase=${PREFIX}/var
+pkgdb=${PREFIX}/var/db/pkg
+EOF
 fi
 
 # Quotes around "EOF" are important below
@@ -172,28 +175,23 @@ cp ${PBULKPREFIX}/etc/pbulk.conf ${PBULKPREFIX}/etc/pbulk.conf.bak
 mv ${PBULKPREFIX}/etc/pbulk.conf.new ${PBULKPREFIX}/etc/pbulk.conf
 
 # Bootstrapping
-cat ${mk_fragment:+"$mk_fragment"} - >${TMPDIR}/mk.conf.inc <<EOF
-WRKOBJDIR=		${TMPDIR}
-PACKAGES=		${PACKAGES}
-DISTDIR=		${DISTDIR}
-EOF
-# Keep "packages" in pbulk.conf and "PACKAGES" in mk.conf in sync.
-
 if [ -n "$native" ]; then
-cat ${TMPDIR}/mk.conf.inc > /etc/mk.conf
+if [ -n "$mk_fragment" ]; then cat "$mk_fragment" > /etc/mk.conf; fi
 else
 # Ensure that the directory for bootstrap kit exists:
 mkdir -p ${PACKAGES}
 
 # Creating the bootstrap kit
 ${PKGSRCDIR}/bootstrap/bootstrap \
-  ${unprivileged:+--unprivileged --prefix=${PREFIX}} \
-  --mk-fragment=${TMPDIR}/mk.conf.inc \
+  ${unprivileged:+--unprivileged} \
+  ${PREFIX:+--prefix=${PREFIX}} \
+  ${mk_fragment:+--mk-fragment="$mk_fragment"} \
   --workdir=${TMPDIR}/work \
   --gzip-binary-kit=${PACKAGES}/bootstrap.tar.gz
 rm -rf ${TMPDIR}/work
 rm -f ${TMPDIR}/mk.conf.inc
 fi
+# Keep "packages" in pbulk.conf and "PACKAGES" in mk.conf fragment in sync.
 
 # Final preparations:
 mkdir -p ${PACKAGES}
@@ -202,4 +200,4 @@ chown pbulk:"$(id -gn pbulk)" ${PACKAGES}
 fi
 
 # Let's start:
-#${PBULKPREFIX}/bin/bulkbuild
+#PACKAGES=${PACKAGES} WRKOBJDIR=${TMPDIR} ${PBULKPREFIX}/bin/bulkbuild
