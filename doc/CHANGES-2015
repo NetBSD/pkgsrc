@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5056 2015/12/14 14:09:28 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.5057 2015/12/14 15:32:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8351,3 +8351,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added www/ruby-sawyer version 0.6.0 [taca 2015-12-14]
 	Updated security/libassuan2 to 2.4.2 [ryoon 2015-12-14]
 	Updated security/gnupg21 to 2.1.10 [ryoon 2015-12-14]
+	Added games/freecol version 0.11.6 [wiz 2015-12-14]
