@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/12/14 13:05:30 jperkin Exp $
+
+SHA1 (jetty-distribution-9.2.14.v20151106.tar.gz) = f732d079892de536f38af72180e7486f40b4f47f
+RMD160 (jetty-distribution-9.2.14.v20151106.tar.gz) = 41be01c5f6d9e021b6cd9edb6875d25ade1088f5
+SHA512 (jetty-distribution-9.2.14.v20151106.tar.gz) = e91f648a3ccd39d474d3c7070b75671a7575d79e77da614f4fac6fc7ac3c899b43fec2a1b02627b26f30739453c97e81c332f0a18733df5182cb3ca78d51084e
+Size (jetty-distribution-9.2.14.v20151106.tar.gz) = 13547862 bytes
