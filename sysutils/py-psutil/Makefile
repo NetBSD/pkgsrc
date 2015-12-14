@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2015/12/06 09:21:06 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2015/12/14 22:58:20 ryoon Exp $
 
 DISTNAME=	psutil-release-3.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-release//}
@@ -21,8 +21,10 @@ EGG_NAME=	psutil-${PKGVERSION_NOREV}
 # facilitate PLIST processing
 .if ${OPSYS} == "Darwin"
 PLIST_SUBST+=	SYSTEM=osx
+.elif !empty(OPSYS:M*BSD)
+PLIST_SUBST+=	SYSTEM=bsd
 .else
-PLIST_SUBST+=	SYSTEM=${OPSYS:tl}
+PLIST_SUBST+=	SYSTEM=${LOWER_OPSYS}
 .endif
 
 .include "../../lang/python/application.mk"
