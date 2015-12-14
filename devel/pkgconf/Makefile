@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2015/12/11 10:25:07 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2015/12/14 16:45:25 wiz Exp $
 
 DISTNAME=	pkgconf-0.9.12.20151211
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://rabbit.dereferenced.org/~nenolod/distfiles/
 #EXTRACT_SUFX=	.tar.bz2
@@ -15,7 +16,7 @@ CONFLICTS+=	pkg-config-[0-9]*
 WRKSRC=		${WRKDIR}/pkgconf-1.0
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS=	--with-pkg-config-dir=${PREFIX}/share/pkgconfig \
+CONFIGURE_ARGS=	--with-pkg-config-dir=${PREFIX}/lib/pkgconfig:/usr/lib/pkgconfig \
 		--with-system-libdir=/usr/lib \
 		--with-system-includedir=/usr/include
 MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}/man1
