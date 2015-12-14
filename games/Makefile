@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.386 2015/10/24 21:39:33 joerg Exp $
+# $NetBSD: Makefile,v 1.387 2015/12/14 15:32:25 wiz Exp $
 #
 
 COMMENT=	Games
@@ -104,6 +104,7 @@ SUBDIR+=	freeciv-client
 SUBDIR+=	freeciv-manual
 SUBDIR+=	freeciv-server
 SUBDIR+=	freeciv-share
+SUBDIR+=	freecol
 SUBDIR+=	freedroid
 SUBDIR+=	freesci
 SUBDIR+=	frotz
