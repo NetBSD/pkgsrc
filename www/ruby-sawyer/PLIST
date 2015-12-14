@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2015/12/14 13:53:27 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LICENSE.md
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/lib/sawyer.rb
+${GEM_LIBDIR}/lib/sawyer/agent.rb
+${GEM_LIBDIR}/lib/sawyer/link_parsers/hal.rb
+${GEM_LIBDIR}/lib/sawyer/link_parsers/simple.rb
+${GEM_LIBDIR}/lib/sawyer/relation.rb
+${GEM_LIBDIR}/lib/sawyer/resource.rb
+${GEM_LIBDIR}/lib/sawyer/response.rb
+${GEM_LIBDIR}/lib/sawyer/serializer.rb
+${GEM_LIBDIR}/sawyer.gemspec
+${GEM_LIBDIR}/script/bootstrap
+${GEM_LIBDIR}/script/console
+${GEM_LIBDIR}/script/package
+${GEM_LIBDIR}/script/release
+${GEM_LIBDIR}/script/test
+${GEM_LIBDIR}/test/agent_test.rb
+${GEM_LIBDIR}/test/helper.rb
+${GEM_LIBDIR}/test/relation_test.rb
+${GEM_LIBDIR}/test/resource_test.rb
+${GEM_LIBDIR}/test/response_test.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
