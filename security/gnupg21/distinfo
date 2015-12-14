@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 15:05:52 tnn Exp $
+$NetBSD: distinfo,v 1.5 2015/12/14 14:09:05 ryoon Exp $
 
-SHA1 (gnupg-2.1.9.tar.bz2) = 119bab38d2ff3a849be62914be9bf7333da68883
-RMD160 (gnupg-2.1.9.tar.bz2) = 4fcc251aa7da95e647984469277a49153533d1e8
-SHA512 (gnupg-2.1.9.tar.bz2) = c19b8cac42b7060caada230b77f36a0b0ed0a05efd519818c5b4057ef0fcb16602f2f3ade2409de2ef353a9e2acc3e5fa106a4449c6929a36a599a82194c0ee0
-Size (gnupg-2.1.9.tar.bz2) = 4925167 bytes
-SHA1 (patch-dirmngr_Makefile.in) = 4287bfd66eab7918e98cf9b4e50a2f7f9e18ab09
+SHA1 (gnupg-2.1.10.tar.bz2) = 4aa2594d2d364fe7708a9739ae7cebd251e536c4
+RMD160 (gnupg-2.1.10.tar.bz2) = b29e086cb65bbe40b3a6021b3c4eb0083cd0a344
+SHA512 (gnupg-2.1.10.tar.bz2) = ceea93a7e7d30e07839bcc52d4246fd5be1ec81a8c4d4d62059e2b0c0e58fab07a1531016f82bcc506340653d66c73541dd3f5897df7691abeb4068d94957003
+Size (gnupg-2.1.10.tar.bz2) = 5173253 bytes
+SHA1 (patch-dirmngr_Makefile.in) = fa74bcf4ea214945c64d383dff039ab938ae1446
 SHA1 (patch-dirmngr_ks-engine-ldap.c) = 3a7d96d877cd52bed66c481af83da99c517d3380
-SHA1 (patch-doc_Makefile.in) = bcd467d0fad08198b74892b240d3adeb72b5c52f
 SHA1 (patch-kbx_Makefile.in) = 58f7c3711744a42d40f580944fb768f7aaaf1b68
