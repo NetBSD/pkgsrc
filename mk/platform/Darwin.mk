@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.75 2015/12/13 22:38:00 sevan Exp $
+# $NetBSD: Darwin.mk,v 1.76 2015/12/14 14:14:33 jperkin Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -180,7 +180,7 @@ MAKE_ENV+=	MACOSX_DEPLOYMENT_TARGET="10.4"
 # El Capitan GM has a file system bug where a deep directory hierarchy can be
 # created but not removed.  Avoid running a test which does exactly this.
 # See https://openradar.appspot.com/radar?id=6160634819379200
-.if defined(GNU_CONFIGURE) && !empty(OS_VERSION:M15.0.0)
+.if defined(GNU_CONFIGURE) && !empty(OS_VERSION:M15.[01].0)
 CONFIGURE_ENV+=		gl_cv_func_getcwd_abort_bug=no
 .endif
 
