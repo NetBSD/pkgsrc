@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2015/03/04 16:39:41 wiedi Exp $
+# $NetBSD: Makefile,v 1.14 2015/12/14 09:32:37 jperkin Exp $
 
 DISTNAME=	spiped-1.5.0
 CATEGORIES=	net security
@@ -15,6 +15,7 @@ MAKE_FLAGS+=	BINDIR=${DESTDIR}${PREFIX}/bin
 MAKE_FLAGS+=	MAN1DIR=${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 LDADD_EXTRA=	${COMPILER_RPATH_FLAG:Q}${BUILDLINK_PREFIX.openssl}/lib
+LDADD_EXTRA+=	-L${BUILDLINK_PREFIX.openssl}/lib
 
 CFLAGS.SunOS+=	-D__EXTENSIONS__
 
