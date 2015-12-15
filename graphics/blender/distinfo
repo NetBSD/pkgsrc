@@ -1,16 +1,17 @@
-$NetBSD: distinfo,v 1.44 2015/11/03 21:33:53 agc Exp $
+$NetBSD: distinfo,v 1.45 2015/12/15 09:46:27 markd Exp $
 
-SHA1 (blender-2.71.tar.gz) = 3fb2faa7faecdcef552e2c7a66fd91347173f1cb
-RMD160 (blender-2.71.tar.gz) = 25a4c7bb4972a633af80a198f54d86f4c29a9331
-SHA512 (blender-2.71.tar.gz) = 59092cc0e49030ffc0094fac96272d618428d8964337002a331bf52438c7dd7d24d7bc7930a5b6b5073389144e789a971402bae2eda827ec79ee193b03bd5697
-Size (blender-2.71.tar.gz) = 57120144 bytes
-SHA1 (patch-build__files_scons_config_linux-config.py) = 863ff0b2839fa96a4b579cb52d7c4475aa4c571c
+SHA1 (blender-2.74.tar.gz) = 303a84ec01c358be77498983ba7be212212aa70b
+RMD160 (blender-2.74.tar.gz) = 6fb8544e6ac084b0289efe32461e4f045a940878
+SHA512 (blender-2.74.tar.gz) = 080ca06cf3532ba62746a404d994f2887472155d916415ab8467fb70bd3e0fc678dc617f9d0290e261768990387dd2d22998ba190dafe2782eaa11392d6ceb8c
+Size (blender-2.74.tar.gz) = 54011017 bytes
+SHA1 (patch-build__files_scons_config_linux-config.py) = 595dbb0c8d8ceaa06e5b862ceb318b5aa4011d16
 SHA1 (patch-build__files_scons_config_netbsd6-config.py) = 105360e9959ac98620e178cf4139d68a277bead2
-SHA1 (patch-build__files_scons_tools_btools.py) = cd5cf628cd3f5c1e13c9a14e5fb66759f98d0816
+SHA1 (patch-build__files_scons_tools_btools.py) = 53e9b0766e040f24cfe4a3e8a8ced8d799e2dbe4
+SHA1 (patch-doc_python_api_sphinx_doc_gen.sh) = 734a372369ca7bb89ef62f0e0aae22d7046f49f8
 SHA1 (patch-extern_libmv_third__party_glog_src_config.h) = d889d56d47167222ab54fad1c8f87c7ddb02852a
 SHA1 (patch-extern_libmv_third__party_glog_src_config__netbsd.h) = 72dad7d3ec74560d46217b7e943eeeef097c23fe
 SHA1 (patch-extern_libmv_third__party_glog_src_utilities.h) = 32fea10d935621ef0529fe56b3e857685fbc5d1f
 SHA1 (patch-extern_rangetree_range__tree.hh) = 976881b9caad67a2cfb24039652e887867fa6cc0
 SHA1 (patch-intern_cycles_util_util__types.h) = 37944c6b0a970468e6791ec4a5beef1ec0ddf190
-SHA1 (patch-intern_ghost_SConscript) = 84dad76663e6dfc3bd6636fe8924921fe04caa2f
+SHA1 (patch-intern_ghost_SConscript) = d576ea87b5b0f386e2c78efa78351927a105f243
 SHA1 (patch-intern_guardedalloc_intern_mallocn__intern.h) = 6d92a0c0a19c04cbb5e34de360c9e3303e2d8ceb
