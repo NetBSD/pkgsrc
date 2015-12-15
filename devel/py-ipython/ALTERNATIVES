@@ -1,0 +1,5 @@
+bin/ipcluster @PREFIX@/bin/ipcluster@PYVERSSUFFIX@
+bin/ipcontroller @PREFIX@/bin/ipcontroller@PYVERSSUFFIX@
+bin/ipengine @PREFIX@/bin/ipengine@PYVERSSUFFIX@
+bin/iptest @PREFIX@/bin/iptest@PYVERSSUFFIX@
+bin/ipython @PREFIX@/bin/ipython@PYVERSSUFFIX@
