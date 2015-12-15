@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5060 2015/12/15 09:41:59 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.5061 2015/12/15 09:49:01 markd Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8355,3 +8355,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/pkgconf to 0.9.12.20151211nb1 [wiz 2015-12-14]
 	Updated databases/postgresql-postgis2 to 2.2.0 [gdt 2015-12-15]
 	Updated print/cups-filters to 1.4.0 [wiz 2015-12-15]
+	Updated graphics/openimagio to 1.5.16 [markd 2015-12-15]
+	Updated graphics/blender to 2.74 [markd 2015-12-15]
