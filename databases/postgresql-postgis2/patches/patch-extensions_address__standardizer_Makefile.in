@@ -1,0 +1,36 @@
+$NetBSD: patch-extensions_address__standardizer_Makefile.in,v 1.1 2015/12/15 00:44:40 gdt Exp $
+
+Use perl from autoconf rather than pgxs.  Reported upstream.
+
+--- extensions/address_standardizer/Makefile.in.orig	2015-08-25 09:44:58.000000000 +0000
++++ extensions/address_standardizer/Makefile.in
+@@ -66,7 +66,7 @@ PERL=@PERL@
+ sql/%.sql: %.sql.in
+ 	mkdir -p sql
+ 	$(SQLPP) -I../libpgcommon $< | grep -v '^#' | \
+-	$(PERL) -lpe "s'MODULE_PATHNAME'\$$libdir/${EXTENSION}-${MINORVERSION}'g" > $@
++	@PERL@ -lpe "s'MODULE_PATHNAME'\$$libdir/${EXTENSION}-${MINORVERSION}'g" > $@
+ 	
+ sql/address_standardizer--@POSTGIS_LIB_VERSION@.sql: sql/address_standardizer_types.sql \
+     sql/address_standardizer_functions.sql
+@@ -105,16 +105,16 @@ sql/$(EXTENSION)_data_us--$(EXTVERSION)n
+ 	cat $^ > $@	
+ 	
+ mk-st-regexp: mk-st-regexp.pl
+-	$(PERL) -c mk-st-regexp.pl
++	@PERL@ -c mk-st-regexp.pl
+ 	rm -f mk-st-regexp
+-	echo "#! " $(PERL) > mk-st-regexp
++	echo "#! " @PERL@ > mk-st-regexp
+ 	cat mk-st-regexp.pl >> mk-st-regexp
+ 	chmod ugo+x mk-st-regexp
+ 
+ mk-city-regex: mk-city-regex.pl usps-st-city-name.txt
+-	$(PERL) -c mk-city-regex.pl
++	@PERL@ -c mk-city-regex.pl
+ 	rm -f mk-city-regex
+-	echo "#! " $(PERL) > mk-city-regex
++	echo "#! " @PERL@ > mk-city-regex
+ 	cat mk-city-regex.pl >> mk-city-regex
+ 	chmod ugo+x mk-city-regex
+ 
