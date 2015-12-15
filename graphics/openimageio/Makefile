@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2015/04/25 14:23:17 tnn Exp $
+# $NetBSD: Makefile,v 1.36 2015/12/15 09:29:04 markd Exp $
 
-OIIOVER=	1.4.10
+OIIOVER=	1.5.16
 DISTNAME=	oiio-Release-${OIIOVER}
 PKGNAME=	${DISTNAME:S/oiio-Release/openimageio/}
-PKGREVISION=	6
 CATEGORIES=	graphics
 MASTER_SITES=	-https://github.com/OpenImageIO/oiio/archive/Release-${OIIOVER}.tar.gz
 
@@ -16,7 +15,6 @@ USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
 
-CXXFLAGS+=		-std=c++0x
 CXXFLAGS.Linux+=	-pthread
 
 CMAKE_ARGS+=		-DILMBASE_HOME:STRING=${BUILDLINK_PREFIX.ilmbase}
