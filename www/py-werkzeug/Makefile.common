@@ -1,11 +1,13 @@
-# $NetBSD: Makefile.common,v 1.9 2015/11/15 03:42:42 wen Exp $
+# $NetBSD: Makefile.common,v 1.10 2015/12/15 17:40:36 kleink Exp $
 
 # used by www/py-werkzeug/Makefile
 # used by www/py-werkzeug-docs/Makefile
 
 DISTNAME=	Werkzeug-0.11.2
+DIST_SUBDIR=	py-werkzeug
 CATEGORIES=	www python
-MASTER_SITES=	${MASTER_SITE_PYPI:=W/Werkzeug/}
+MASTER_SITES=  ${MASTER_SITE_GITHUB:=mitsuhiko/}
+GITHUB_PROJECT=${DISTNAME:tl:C/-[^-]*$//}
 
 DISTINFO_FILE=	${.CURDIR}/../../www/py-werkzeug/distinfo
 PATCHDIR=	${.CURDIR}/../../www/py-werkzeug/patches
