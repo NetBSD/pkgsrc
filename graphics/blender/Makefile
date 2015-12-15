@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.115 2015/12/05 21:26:09 adam Exp $
+# $NetBSD: Makefile,v 1.116 2015/12/15 09:46:27 markd Exp $
 
-DISTNAME=	blender-2.71
-PKGREVISION=	6
+DISTNAME=	blender-2.74
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.blender.org/source/
 
@@ -16,6 +15,7 @@ USE_TOOLS+=		gmake sed
 USE_LANGUAGES=		c c++
 
 PYTHON_VERSIONS_ACCEPTED=	35 34 33
+GCC_REQD+=	4.7
 
 BUILD_DEPENDS+=		scons-[0-9]*:../../devel/scons
 
@@ -64,6 +64,15 @@ SCONS_ARGS+=	BF_FFTW3=${BUILDLINK_PREFIX.fftw}
 SCONS_ARGS+=	BF_INSTALLDIR=${DESTDIR}${PREFIX}/share/blender
 
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
+
+.if !empty(MACHINE_PLATFORM:MNetBSD-7.*)
+PLIST_SUBST+=	NETBSDVER=netbsd7
+.else
+PLIST_SUBST+=	NETBSDVER=netbsd6
+.endif
+
+post-patch:
+	cd ${WRKSRC}/build_files/scons/config/; ln netbsd6-config.py netbsd7-config.py
 
 # I cannot separate build and install...
 do-build:
