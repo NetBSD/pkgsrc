@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5063 2015/12/15 12:04:57 jperkin Exp $
+$NetBSD: CHANGES-2015,v 1.5064 2015/12/15 15:45:57 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8359,3 +8359,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated graphics/blender to 2.74 [markd 2015-12-15]
 	Updated devel/py-ipython to 3.2.1 [markd 2015-12-15]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2015Q4 branch [jperkin 2015-12-15]
+	Updated wm/jwm to 2.3.4nb1 [tsutsui 2015-12-15]
