@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2015/12/13 15:02:36 tsutsui Exp $
+# $NetBSD: Makefile,v 1.28 2015/12/15 15:44:44 tsutsui Exp $
 #
 
 DISTNAME=		jwm-2.3.4
+PKGREVISION=		1
 CATEGORIES=		wm x11
 MASTER_SITES=		http://www.joewing.net/programs/jwm/releases/
 EXTRACT_SUFX=		.tar.xz
@@ -44,6 +45,7 @@ INSTALLATION_DIRS=	bin
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
