@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2015/11/15 03:42:42 wen Exp $
+# $NetBSD: Makefile,v 1.10 2015/12/15 17:40:36 kleink Exp $
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 
 COMMENT=	Python WSGI Utility Library
 
-USE_LANGUAGES=	c # empty
+USE_LANGUAGES=	# empty
 USE_TOOLS+=	pax
 
 REPLACE_PYTHON=		examples/cookieauth.py
