@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2015/12/13 14:41:32 taca Exp $
+# $NetBSD: Makefile,v 1.11 2015/12/15 15:53:29 taca Exp $
 #
 
 DISTNAME=	${TYPO3NAME}
@@ -18,7 +18,7 @@ DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.3.7:../../textproc/php-json
 DEPENDS+=	${PHP_PKG_PREFIX}-zip>=5.3.7:../../archivers/php-zip
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.3.7:../../archivers/php-zlib
 
-VER=		6.2.15
+VER=		6.2.16
 NO_BUILD=	yes
 USE_TOOLS+=	bash:run pax
 
@@ -31,7 +31,8 @@ REPLACE.php.old=	.*php[^ ]*
 REPLACE.php.new=	${PREFIX}/bin/php
 REPLACE_FILES.php=	typo3/cli_dispatch.phpsh
 
-REPLACE_BASH=	typo3/sysext/core/Build/Scripts/xlfcheck.sh \
+REPLACE_BASH= typo3/sysext/core/Build/Scripts/xlfcheck.sh \
+	typo3/sysext/core/Build/Scripts/update-static-composer.sh \
 	typo3/contrib/flowplayer/plugins/flowplayer.captions/example/flvtool2-cuepoints.sh
 
 OWN_DIRS_PERMS+= ${TYPO3DIR}/${SITEDIR} ${REAL_ROOT_USER} ${APACHE_GROUP} 0770
