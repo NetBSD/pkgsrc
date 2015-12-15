@@ -1,0 +1,15 @@
+$NetBSD: patch-extensions_postgis__topology_Makefile.in,v 1.1 2015/12/15 00:44:40 gdt Exp $
+
+Use perl from autoconf rather than pgxs.  Reported upstream.
+
+--- extensions/postgis_topology/Makefile.in.orig	2014-06-27 07:35:32.000000000 +0000
++++ extensions/postgis_topology/Makefile.in
+@@ -60,7 +60,7 @@ sql_bits/topology_comments.sql: ../../do
+ 	
+ sql/$(EXTENSION)--unpackaged--$(EXTVERSION).sql: ../../topology/topology.sql ../../utils/create_unpackaged.pl
+ 	mkdir -p sql
+-	cat $< | $(PERL) ../../utils/create_unpackaged.pl postgis_topology > $@
++	cat $< | @PERL@ ../../utils/create_unpackaged.pl postgis_topology > $@
+ 
+ #upgrade script should have everything but table, schema, type creation/alter
+ #NOTE: we assume all object definitions end in ;
