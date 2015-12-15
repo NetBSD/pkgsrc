@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15197 2015/12/14 14:09:28 ryoon Exp $
+$NetBSD: TODO,v 1.15198 2015/12/15 14:47:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -363,7 +363,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o Gorm-1.2.22
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
-	o MesaLib-11.0.6
+	o MesaLib-11.0.7
 	o OdfConverter-4.0
 	o PACK-0.0.4
 	o PAM-0.99.7.1
@@ -396,7 +396,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o R-plyr-1.8.3
 	o R-stringr-1.0.0
 	o ROMInfo-28
-	o Sigil-0.9.0
+	o Sigil-0.9.1
 	o TeXmacs-devel-1.0.7.21
 	o TiffIO-140a
 	o YoSucker-81
@@ -411,9 +411,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o alacarte-0.13.2
 	o allegro-5.10
 	o alpine-2.20
-	o alsa-lib-1.0.29
-	o alsa-plugins-1.0.29
-	o alsa-utils-1.0.29
+	o alsa-lib-1.1.0
+	o alsa-plugins-1.1.0
+	o alsa-utils-1.1.0
 	o amavis-perl-0.3.12 [called just amavis]
 	o amaya-11.4.4 [wip]
 	o amtterm-1.4
@@ -505,6 +505,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cacti-spine-0.8.8f
 	o cal3d-0.11.0
 	o calcoo-2.1.0
+	o calibre-2.46.0
 	o calligra-2.9.9 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o catdoc-1.1
@@ -629,7 +630,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o emacs-muse-3.20
 	o embryo-1.7.10
 	o emerillon-0.1.90
-	o enlightenment-0.19.7
+	o enlightenment-0.20.1
 	o entr-3.2
 	o eog-plugins-3.6.1
 	o epiphany-3.16.0
@@ -703,6 +704,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o freeradius2-2.2.8
 	o freesci-0.6.4
 	o freeswitch-1.2.3
+	o freetype-2.6.2
 	o freetype-lib-1.5.20050518
 	o freetype-utils-1.5.20050518
 	o freewais-sf-2.2.14
@@ -772,7 +774,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gmock-1.7.0
 	o gnet1-1.1.9
 	o gnetman-20050429
-	o gnome-3.18.1
+	o gnome-3.18.2
 	o gnome-applets-3.14.0
 	o gnome-bluetooth-2.30.0 [GNOME 2.30]
 	o gnome-chess-3.12.3
@@ -963,7 +965,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o kbiff-4.0
 	o kbool-2.1 [kbool_2_1, next to boolean-7.1]
 	o kdbg-2.5.4
-	o kdenlive-0.9.10
+	o kdenlive-15.12
 	o kdevelop4-4.7.1
 	o kdevplatform-1.7.1
 	o keychain-2.8.1
@@ -1048,6 +1050,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o link-grammar-5.3.2
 	o linpsk-1.2 [ld: cannot find -lqt-mt with qt4]
 	o liquidwar-6.0.0.11
+	o lirc-0.9.3
 	o lit2epub-0.2.2
 	o llgal-0.13.17
 	o lmbench-3
@@ -1144,6 +1147,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o nestopia-1.46.2 [http://0ldsk00l.ca/nestopia/]
 	o netatalk-3.1.0 [wip]
 	o netbt-hcidump-5.33
+	o nethack-3.6
 	o netio-132
 	o netramet-50
 	o newmail-1.0.2
@@ -1186,7 +1190,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o openscad-2013.06
 	o openslp-2.0.0
 	o opera-26
-	o opus-1.1
+	o opus-1.1.1
 	o oroborus-2.0.18
 	o ortp-0.24.2
 	o osh-20150115
@@ -1443,6 +1447,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-Scientific-doc-2.5.5
 	o py-Unidecode-0.04.18
 	o py-bleach-1.4.1
+	o py-borg-0.29.0
 	o py-bsddb3-6.1.0
 	o py-buildbot-0.9.0b5
 	o py-buildbot-slave-0.9.0b5
@@ -1757,7 +1762,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o whohas-0.29.1
 	o whowatch-1.8.5
 	o windowlab-1.40
-	o wine-devel-1.7.54
+	o wine-devel-1.7.55
 	o wireshark-2.0.0
 	o wmi-11
 	o wmii+ixp-3.9.2 [pkg/43459; wip (wmii-devel); see also libixp entry]
