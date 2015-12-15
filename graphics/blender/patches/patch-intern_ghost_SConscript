@@ -1,4 +1,4 @@
-$NetBSD: patch-intern_ghost_SConscript,v 1.1 2012/12/03 13:15:51 ryoon Exp $
+$NetBSD: patch-intern_ghost_SConscript,v 1.2 2015/12/15 09:46:27 markd Exp $
 
 * Add window system support on NetBSD
 
@@ -9,7 +9,7 @@ $NetBSD: patch-intern_ghost_SConscript,v 1.1 2012/12/03 13:15:51 ryoon Exp $
      incs += ' ' + env['BF_SDL_INC']
      defs += ['WITH_GHOST_SDL']
 -elif window_system in ('linux', 'openbsd3', 'sunos5', 'freebsd7', 'freebsd8', 'freebsd9', 'aix4', 'aix5'):
-+elif window_system in ('linux', 'openbsd3', 'sunos5', 'freebsd7', 'freebsd8', 'freebsd9', 'aix4', 'aix5', 'netbsd6'):
++elif window_system in ('linux', 'openbsd3', 'sunos5', 'freebsd7', 'freebsd8', 'freebsd9', 'aix4', 'aix5', 'netbsd6', 'netbsd7'):
      for f in pf:
          try:
              sources.remove('intern' + os.sep + f + 'Win32.cpp')
