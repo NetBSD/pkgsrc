@@ -1,16 +1,13 @@
-$NetBSD: distinfo,v 1.12 2015/11/03 21:34:11 agc Exp $
+$NetBSD: distinfo,v 1.13 2015/12/15 09:29:04 markd Exp $
 
-SHA1 (oiio-Release-1.4.10.tar.gz) = b02b238c4b41e33fb070300d1017fd533c703bf7
-RMD160 (oiio-Release-1.4.10.tar.gz) = e86ba7f7aba8e8ed67a85b3d0ecb84c8107854e8
-SHA512 (oiio-Release-1.4.10.tar.gz) = 9565544f20aac2dd0dd9940f9a615899255cf0a6a242a7ece6eeb4f509f60b0f48d3a837da5b758ab31fcec525c59a1950d2c9b7b50d05ba84cda4214c24765e
-Size (oiio-Release-1.4.10.tar.gz) = 17535558 bytes
+SHA1 (oiio-Release-1.5.16.tar.gz) = 9e067be3bd191841faaa39352fee66a22352db19
+RMD160 (oiio-Release-1.5.16.tar.gz) = b4d17be7e2d074b2e5a936834c5540242f7603e7
+SHA512 (oiio-Release-1.5.16.tar.gz) = 8ecf2b42875b05aa72a227e56f8c247560d8e53505d51812449afa57db39e7c8425c1fdfa87a08b22c0592a24e457fba4b98ad91642168e45d99753ca4cf7b8e
+Size (oiio-Release-1.5.16.tar.gz) = 23136543 bytes
 SHA1 (patch-CMakeLists.txt) = cce7fabfd51526847ea964fa7fd5ca3e8a6b08e7
 SHA1 (patch-src_cmake_modules_FindOpenJpeg.cmake) = 5c68708dc0c987c27719e63ab634bcdcde4d7bee
 SHA1 (patch-src_cmake_oiio__macros.cmake) = 37962a7256e1e82b6ffa1b16bfc771ea3812fae3
 SHA1 (patch-src_cmake_platform.cmake) = b7c8f459499563f6aeb0de270087d1993db67af3
-SHA1 (patch-src_dpx.imageio_libdpx_DPXColorConverter.cpp) = e758c6fc1960575f6471c28f03180031875cdf5d
-SHA1 (patch-src_gif.imageio_gifinput.cpp) = 5a4d0879c202e861c252a3c46bfcafdf41f48a68
 SHA1 (patch-src_libutil_sysutil.cpp) = 6a4418cd4557d036fd94b747a7630bdce0abd4be
 SHA1 (patch-src_make_detectplatform.mk) = d62c332ad559cca3a5f135bc8cdd69cc89a6c196
-SHA1 (patch-src_psd.imageio_psdinput.cpp) = 9a0678f39762883f04a28ec143e3c026b73955d9
 SHA1 (patch-src_ptex.imageio_ptex_PtexPlatform.h) = 9fad164cda52e35d42128a55d63057dae8ddac35
