@@ -1,9 +1,9 @@
-$NetBSD: patch-memory_build_mozjemalloc__compat.c,v 1.3 2015/04/05 12:54:12 ryoon Exp $
+$NetBSD: patch-memory_build_mozjemalloc__compat.c,v 1.4 2015/12/16 09:34:56 ryoon Exp $
 
---- memory/build/mozjemalloc_compat.c.orig	2015-03-27 02:20:26.000000000 +0000
+--- memory/build/mozjemalloc_compat.c.orig	2015-12-04 00:37:04.000000000 +0000
 +++ memory/build/mozjemalloc_compat.c
-@@ -131,6 +131,48 @@ compute_bin_unused(unsigned int narenas)
-     return bin_unused;
+@@ -140,6 +140,48 @@ compute_bin_unused_and_bookkeeping(jemal
+     stats->bin_unused = bin_unused;
  }
  
 +static size_t
