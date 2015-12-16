@@ -1,8 +1,13 @@
-$NetBSD: patch-aa,v 1.4 2004/02/22 19:30:52 jlam Exp $
+$NetBSD: patch-aa,v 1.5 2015/12/16 10:44:44 dholland Exp $
 
---- Makefile.orig	Fri Feb 17 00:57:26 1995
-+++ Makefile	Thu May 10 17:41:10 2001
-@@ -1,14 +1,25 @@
+- configure for pkgsrc
+- honor pkgsrc CFLAGS
+- build nfsshell as well as nfsbug
+- run rpcgen before compiling; otherwise not MAKE_JOBS_SAFE
+
+--- Makefile.orig	1995-02-17 05:57:26.000000000 +0000
++++ Makefile
+@@ -1,21 +1,35 @@
 -CC=cc
 -#CFLAGS=-g -I. -DSVR4
 +CC=gcc
@@ -20,7 +25,7 @@ $NetBSD: patch-aa,v 1.4 2004/02/22 19:30:52 jlam Exp $
  RPCGEN_MOUNT= mount.h mount_clnt.c mount_svc.c mount_xdr.c
  RPCGEN_NFS_PROT= nfs_prot.h nfs_prot_clnt.c nfs_prot_svc.c nfs_prot_xdr.c
  
-+all: nfsbug nfsshell
++all: rpcgen .WAIT nfsbug nfsshell
 +
 +nfsshell: ${NFSSHELL_OBJECTS}
 +	$(CC) ${CFLAGS} -o nfsshell $(NFSSHELL_OBJECTS) $(LIBS)
@@ -32,12 +37,15 @@ $NetBSD: patch-aa,v 1.4 2004/02/22 19:30:52 jlam Exp $
 +	$(CC) ${CFLAGS} -o nfsbug $(NFSBUG_OBJECTS) $(LIBS)
  
  lint:	$(NFSBUG_SOURCES)
-@@ -17,5 +28,6 @@
+ 	lint $(NFSBUG_SOURCES)
+ 
  clean:
  	rm -f nfsbug $(NFSBUG_OBJECTS) $(RPCGEN_MOUNT) $(RPCGEN_NFS_PROT) core
 +	rm -f ${NFSSHELL_OBJECTS}
++
++$(RPCGEN_MOUNT):; rpcgen -C mount.x
++$(RPCGEN_NFS_PROT):; rpcgen -C nfs_prot.x
  
 -$(RPCGEN_MOUNT):; rpcgen mount.x
 -$(RPCGEN_NFS_PROT):; rpcgen nfs_prot.x
-+$(RPCGEN_MOUNT):; rpcgen -C mount.x
-+$(RPCGEN_NFS_PROT):; rpcgen -C nfs_prot.x
++rpcgen: $(RPCGEN_MOUNT) $(RPCGEN_NFS_PROT)
