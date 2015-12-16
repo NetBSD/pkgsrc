@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.234 2015/11/18 14:19:55 ryoon Exp $
+# $NetBSD: Makefile,v 1.235 2015/12/16 09:34:55 ryoon Exp $
 
 FIREFOX_VER=	${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
-MOZ_BRANCH=	42.0
+MOZ_BRANCH=	43.0
 MOZ_BRANCH_MINOR=	
 
 DISTNAME=	firefox-${FIREFOX_VER}.source
 PKGNAME=	firefox-${MOZ_BRANCH}${MOZ_BRANCH_MINOR:S/b/beta/:S/esr//}
-PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES+=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/source/}
 MASTER_SITES+=	${MASTER_SITE_MOZILLA_ALL:=firefox/releases/${FIREFOX_VER}/source/}
@@ -61,7 +60,7 @@ MOZILLA_NAME=	Browser
 SUBST_CLASSES+=		sys-dic
 SUBST_STAGE.sys-dic=	pre-configure
 SUBST_MESSAGE.sys-dic=	Reference to system hunspell dictionaries.
-SUBST_FILES.sys-dic=	extensions/spellcheck/hunspell/src/mozHunspell.cpp
+SUBST_FILES.sys-dic=	extensions/spellcheck/hunspell/glue/mozHunspell.cpp
 SUBST_VARS.sys-dic=	PREFIX
 
 pre-configure:
