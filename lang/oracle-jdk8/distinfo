@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.3 2015/11/10 11:35:30 jperkin Exp $
+$NetBSD: distinfo,v 1.4 2015/12/16 03:47:13 dsainty Exp $
 
-SHA1 (jdk-8u66-linux-i586.tar.gz) = 4d651c600e59d8ecea66b93346fe1188034522e9
-RMD160 (jdk-8u66-linux-i586.tar.gz) = 1028859ad8aa1e6f3ff3a69f48ec83934d46e058
-SHA512 (jdk-8u66-linux-i586.tar.gz) = 84b538bbfc372c88d5e4af6327d3ac7cef2bc5780edcee81ae192092a3239d9700fe8840b104d4e44f5baa24b40229ae821303d67e90d0cd9d3d722abf4019fb
-Size (jdk-8u66-linux-i586.tar.gz) = 12582912 bytes
+SHA1 (jdk-8u66-linux-i586.tar.gz) = 9b491537e856d0f95986e7ef1ee2552408571bcc
+RMD160 (jdk-8u66-linux-i586.tar.gz) = add7319200ed78425903e13f94b9af25f93c0d83
+SHA512 (jdk-8u66-linux-i586.tar.gz) = e764d5ec297b02a96a0df4d5fd5e737b0b36cad72bb471b08ee254f762cb2648a4564fdd2b6ddf9048fa22a1ef830d11d0796bc447c4b19bf14324ad4607ce9a
+Size (jdk-8u66-linux-i586.tar.gz) = 183327641 bytes
 SHA1 (jdk-8u66-linux-x64.tar.gz) = 9503183dbd069166f5d5c344ef90f5f3462720c1
 RMD160 (jdk-8u66-linux-x64.tar.gz) = 4f7debd1ae9fb067784b8807d72314cc2c91b5d0
 SHA512 (jdk-8u66-linux-x64.tar.gz) = 5fa9022aefc63d8b516996137ebbfa7094af8c5cce14f48bcaee7a5a0cdbf619772215a77a3e5d7193349b50aa6cfa4d2d657372da8b010088afce30eb56206c
