@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5066 2015/12/15 17:42:09 kleink Exp $
+$NetBSD: CHANGES-2015,v 1.5067 2015/12/16 00:32:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8362,3 +8362,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated wm/jwm to 2.3.4nb1 [tsutsui 2015-12-15]
 	Updated www/typo3_62 to 6.2.16 [taca 2015-12-15]
 	Updated www/py-werkzeug to 0.11.2nb1 [kleink 2015-12-15]
+	Updated net/bind910 to 9.10.3pl2 [taca 2015-12-16]
+	Updated net/bind99 to 9.9.8pl2 [taca 2015-12-16]
