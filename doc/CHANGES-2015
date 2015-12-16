@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5069 2015/12/16 09:37:51 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.5070 2015/12/16 09:43:59 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8366,3 +8366,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/bind99 to 9.9.8pl2 [taca 2015-12-16]
 	Updated www/contao41 to 4.1.0nb1 [taca 2015-12-16]
 	Updated www/firefox to 43.0 [ryoon 2015-12-16]
+	Updated www/firefox-l10n to 43.0 [ryoon 2015-12-16]
