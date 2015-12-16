@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2015/12/13 14:37:08 taca Exp $
+# $NetBSD: Makefile,v 1.3 2015/12/16 09:23:54 taca Exp $
 #
 
 DISTNAME=	contao-${CT_PKGVER}
 PKGNAME=	${PHP_PKG_PREFIX}-contao${CT_VER}-${CT_VERSION}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=contao/}
 GITHUB_PROJECT=	standard-edition
