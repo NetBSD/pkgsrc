@@ -1,4 +1,4 @@
-/* $NetBSD: proto.h,v 1.3 2014/03/12 14:20:43 ryoon Exp $ */
+/* $NetBSD: proto.h,v 1.4 2015/12/17 21:27:53 dholland Exp $ */
 
 /****************************************************************
 Copyright (C) Lucent Technologies 1997
@@ -24,6 +24,12 @@ ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF
 THIS SOFTWARE.
 ****************************************************************/
 
+#if defined(__CLANG__) || defined(__GNUC__)
+#define DEAD __attribute__((__noreturn__))
+#else
+#define DEAD
+#endif
+
 extern	int	yywrap(void);
 extern	void	setfname(Cell *);
 extern	int	constnode(Node *);
@@ -48,7 +54,7 @@ extern	void	freetr(Node *);
 extern	int	hexstr(uschar **);
 extern	int	quoted(uschar **);
 extern	char	*cclenter(const char *);
-extern	void	overflo(const char *) __attribute__((__noreturn__));
+extern	DEAD void overflo(const char *);
 extern	void	cfoll(fa *, Node *);
 extern	int	first(Node *);
 extern	void	follow(Node *);
@@ -134,7 +140,7 @@ extern	void	fpecatch(int);
 extern	void	bracecheck(void);
 extern	void	bcheck2(int, int, int);
 extern	void	SYNTAX(const char *, ...);
-extern	void	FATAL(const char *, ...) __attribute__((__noreturn__));
+extern	DEAD void FATAL(const char *, ...);
 extern	void	WARNING(const char *, ...);
 extern	void	error(void);
 extern	void	eprint(void);
