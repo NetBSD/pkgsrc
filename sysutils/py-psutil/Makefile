@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2015/12/14 22:58:20 ryoon Exp $
+# $NetBSD: Makefile,v 1.16 2015/12/17 04:22:37 ryoon Exp $
 
 DISTNAME=	psutil-release-3.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-release//}
@@ -24,7 +24,7 @@ PLIST_SUBST+=	SYSTEM=osx
 .elif !empty(OPSYS:M*BSD)
 PLIST_SUBST+=	SYSTEM=bsd
 .else
-PLIST_SUBST+=	SYSTEM=${LOWER_OPSYS}
+PLIST_SUBST+=	SYSTEM=${OPSYS:tl}
 .endif
 
 .include "../../lang/python/application.mk"
