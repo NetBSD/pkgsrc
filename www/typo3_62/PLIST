@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2015/09/13 21:14:36 taca Exp $
+@comment $NetBSD: PLIST,v 1.7.2.1 2015/12/17 19:43:31 bsiegert Exp $
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/INSTALL.md
 ${TYPO3DIR}/${TYPO3NAME}/LICENSE.txt
@@ -439,6 +439,9 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/flashmedia/player.license.txt
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/flashmedia/player.readme.txt
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/flashmedia/player.swf
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/flashmedia/qtobject/qtobject.js
+${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/flashmedia/src/doc_core_mediace.sxw
+${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/flashmedia/src/flvplayer.as
+${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/flashmedia/src/flvplayer.fla
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/flashmedia/swfobject/expressInstall.swf
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/flashmedia/swfobject/swfobject.js
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/flowplayer/LICENSE-exception.txt
@@ -680,7 +683,23 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/vendor/composer/autoload_classmap.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/vendor/composer/autoload_namespaces.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/vendor/composer/autoload_psr4.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/vendor/composer/autoload_real.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/vendor/doctrine/instantiator/.scrutinizer.yml
+${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/vendor/doctrine/instantiator/.travis.install.sh
+${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/vendor/doctrine/instantiator/.travis.yml
+${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/vendor/doctrine/instantiator/CONTRIBUTING.md
+${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/vendor/doctrine/instantiator/LICENSE
+${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/vendor/doctrine/instantiator/README.md
+${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/vendor/doctrine/instantiator/composer.json
+${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/vendor/doctrine/instantiator/phpmd.xml.dist
+${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/vendor/doctrine/instantiator/phpunit.xml.dist
+${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/vendor/doctrine/instantiator/src/Doctrine/Instantiator/Exception/ExceptionInterface.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/vendor/doctrine/instantiator/src/Doctrine/Instantiator/Exception/InvalidArgumentException.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/vendor/doctrine/instantiator/src/Doctrine/Instantiator/Exception/UnexpectedValueException.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/vendor/doctrine/instantiator/src/Doctrine/Instantiator/Instantiator.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/vendor/doctrine/instantiator/src/Doctrine/Instantiator/InstantiatorInterface.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/vendor/helhum/class-alias-loader/Classes/Composer/ClassAliasGenerator.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/vendor/helhum/class-alias-loader/Classes/Composer/ClassAliasLoader.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/vendor/helhum/class-alias-loader/Classes/Composer/Plugin.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/vendor/helhum/class-alias-loader/LICENSE
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/vendor/helhum/class-alias-loader/composer.json
 ${TYPO3DIR}/${TYPO3NAME}/typo3/contrib/videojs/video-js/LICENSE.txt
@@ -2100,6 +2119,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/cms/locallang_csh_webinfo.xlf
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/cms/locallang_csh_weblayout.xlf
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/cms/locallang_tca.xlf
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/cms/locallang_ttc.xlf
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/cms/tslib/PHP/ValidateHashEID.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/cms/tslib/class.tslib_pagegen.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/cms/tslib/extdirecteid.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/cms/tslib/index_ts.php
@@ -2148,6 +2168,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/context_help/locallang_csh_ttcontent.xlf
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Build/Configuration/FunctionalTestsConfiguration.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Build/FunctionalTests.xml
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Build/FunctionalTestsBootstrap.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Build/Scripts/update-static-composer.sh
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Build/Scripts/xlfcheck.sh
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Build/UnitTests.xml
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Build/UnitTestsBootstrap.php
@@ -2217,6 +2238,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Core/SystemEnvironmentBuilder
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/DataHandling/DataHandler.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/DataHandling/DataHandlerCheckModifyAccessListHookInterface.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/DataHandling/DataHandlerProcessUploadHookInterface.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/DataHandling/PlainDataResolver.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/DataHandling/TableColumnSubType.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/DataHandling/TableColumnType.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Classes/Database/DatabaseConnection.php
@@ -2476,7 +2498,6 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Configuration/TCA/sys_news.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Migrations/Code/ClassAliasMap.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Migrations/Code/LegacyClassesForIde.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Resources/PHP/FileDumpEID.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Resources/PHP/TYPO3.Flow/Classes/TYPO3/Flow/Core/ClassLoader.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Resources/PHP/TYPO3.Flow/Classes/TYPO3/Flow/Exception.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Resources/PHP/TYPO3.Flow/Classes/TYPO3/Flow/Log/LoggerInterface.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Resources/PHP/TYPO3.Flow/Classes/TYPO3/Flow/Log/SystemLoggerInterface.php
@@ -2638,6 +2659,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/Fo
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/copyParentContentToDifferentPage.csv
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/createNCopyParentContentNHotelNOfferChildren.csv
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/createNLocalizeParentContentNHotelNOfferChildren.csv
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/createNLocalizeParentContentNHotelNOfferChildrenWOSortBy.csv
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/createParentContent.csv
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/createParentContentNHotelNOfferChildren.csv
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/core/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/deletePage.csv
@@ -2964,7 +2986,6 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/cshmanual/mod/conf.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/cshmanual/mod/index.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/css_styled_content/Classes/Controller/CssStyledContentController.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/css_styled_content/Configuration/TCA/Overrides/tt_content.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/css_styled_content/Documentation/.gitignore
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/css_styled_content/Documentation/AboutThisDocument/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/css_styled_content/Documentation/Configuration/Constants/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/css_styled_content/Documentation/Configuration/Index.rst
@@ -3041,7 +3062,6 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/dbal/Classes/Database/SqlParser.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/dbal/Classes/ExtensionManager/MessageDisplay.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/dbal/Classes/QueryCache.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/dbal/Classes/RecordList/DatabaseRecordList.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/dbal/Documentation/.gitignore
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/dbal/Documentation/Appendices/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/dbal/Documentation/Appendices/UsingOracleWithTypo3/ConfiguringDatabaseAccess/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/dbal/Documentation/Appendices/UsingOracleWithTypo3/Index.rst
@@ -3138,7 +3158,6 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/documentation/Resources/Private/.htaccess
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/documentation/Resources/Private/Language/locallang.xlf
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/documentation/Resources/Private/Language/locallang_mod.xlf
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/documentation/Resources/Private/Layouts/Default.html
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/documentation/Resources/Private/Scss/.gitignore
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/documentation/Resources/Private/Scss/helpers/_mixins.scss
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/documentation/Resources/Private/Scss/main.scss
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/documentation/Resources/Private/Scss/page/_base.scss
@@ -3799,7 +3818,6 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extensionmanager/Resources/Private/Templat
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extensionmanager/Resources/Private/Templates/List/Index.html
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extensionmanager/Resources/Private/Templates/List/ShowAllVersions.html
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extensionmanager/Resources/Private/Templates/List/Ter.html
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extensionmanager/Resources/Private/Templates/List/Ter.json
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extensionmanager/Resources/Private/Templates/List/UnresolvedDependencies.html
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extensionmanager/Resources/Private/Templates/UpdateFromTer/UpdateExtensionListFromTer.json
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extensionmanager/Resources/Private/Templates/UpdateScript/Show.html
@@ -3887,7 +3905,6 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/felogin/Classes/Hooks/CmsLayout.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/felogin/Configuration/TCA/Overrides/fe_groups.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/felogin/Configuration/TCA/Overrides/fe_users.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/felogin/Configuration/TCA/Overrides/tt_content.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/felogin/Documentation/.gitignore
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/felogin/Documentation/Configuration/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/felogin/Documentation/Examples/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/felogin/Documentation/Hooks/Index.rst
@@ -4428,7 +4445,6 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/form/Classes/View/Wizard/WizardView.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/form/Configuration/PageTS/modWizards.ts
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/form/Configuration/TCA/Overrides/tt_content.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/form/Configuration/TypoScript/setup.txt
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/form/Documentation/.gitignore
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/form/Documentation/Administration/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/form/Documentation/Configuration/CheatSheet/Images.txt
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/form/Documentation/Configuration/CheatSheet/Index.rst
@@ -4973,7 +4989,6 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/indexed_search/Configuration/TCA/Overrides
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/indexed_search/Configuration/TCA/index_config.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/indexed_search/Configuration/TypoScript/constants.txt
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/indexed_search/Configuration/TypoScript/setup.txt
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/indexed_search/Documentation/.gitignore
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/indexed_search/Documentation/Administration/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/indexed_search/Documentation/AnalysingIndexedData/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/indexed_search/Documentation/Configuration/General/Index.rst
@@ -5690,7 +5705,6 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/linkvalidator/Classes/Report/LinkValidator
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/linkvalidator/Classes/Task/ValidatorTask.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/linkvalidator/Classes/Task/ValidatorTaskAdditionalFieldProvider.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/linkvalidator/Configuration/TsConfig/Page/pagetsconfig.txt
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/linkvalidator/Documentation/.gitignore
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/linkvalidator/Documentation/Administration/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/linkvalidator/Documentation/Configuration/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/linkvalidator/Documentation/Images/CheckLinksTab.png
@@ -5779,7 +5793,6 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/openid/Classes/OpenidStore.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/openid/Classes/Wizard.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/openid/Configuration/TCA/Overrides/be_users.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/openid/Configuration/TCA/Overrides/fe_users.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/openid/Documentation/.gitignore
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/openid/Documentation/Administration/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/openid/Documentation/Configuration/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/openid/Documentation/Images/BackendUserConfiguration.png
@@ -5892,7 +5905,6 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/recycler/Classes/Controller/RecyclerModule
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/recycler/Classes/Domain/Model/DeletedRecords.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/recycler/Classes/Domain/Model/Tables.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/recycler/Classes/Utility/RecyclerUtility.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/recycler/Documentation/.gitignore
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/recycler/Documentation/Configuration/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/recycler/Documentation/Images/RecyclerMainScreen.jpg
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/recycler/Documentation/Includes.txt
@@ -5976,7 +5988,6 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rsaauth/Classes/Storage/SessionStorage.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rsaauth/Classes/Storage/SplitStorage.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rsaauth/Classes/Storage/StorageFactory.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rsaauth/Configuration/TCA/tx_rsaauth_keys.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rsaauth/Documentation/.gitignore
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rsaauth/Documentation/Administration/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rsaauth/Documentation/Includes.txt
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rsaauth/Documentation/Index.rst
@@ -6065,7 +6076,6 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/Classes/User.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/Configuration/Hook/Frontend/Controller/ext_localconf.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/Configuration/TCA/tx_rtehtmlarea_acronym.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/Configuration/TypoScript/ImageRendering/setup.txt
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/Documentation/.gitignore
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/Documentation/Configuration/AnchorAccessibility/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/Documentation/Configuration/Clickenlarge/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/rtehtmlarea/Documentation/Configuration/CustomTags/Index.rst
@@ -6566,7 +6576,6 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/saltedpasswords/Classes/Utility/ExtensionM
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/saltedpasswords/Classes/Utility/SaltedPasswordsUtility.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/saltedpasswords/Configuration/TCA/Overrides/be_users.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/saltedpasswords/Configuration/TCA/Overrides/fe_users.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/saltedpasswords/Documentation/.gitignore
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/saltedpasswords/Documentation/Configuration/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/saltedpasswords/Documentation/Credits/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/saltedpasswords/Documentation/DevelopersGuide/Index.rst
@@ -6621,7 +6630,6 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/scheduler/Classes/Task/RecyclerGarbageColl
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/scheduler/Classes/Task/TableGarbageCollectionAdditionalFieldProvider.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/scheduler/Classes/Task/TableGarbageCollectionTask.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/scheduler/Configuration/TCA/tx_scheduler_task_group.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/scheduler/Documentation/.gitignore
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/scheduler/Documentation/Administration/BackendModule/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/scheduler/Documentation/Administration/DeleteTask/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/scheduler/Documentation/Administration/EditTask/Index.rst
@@ -6736,7 +6744,6 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/sys_action/Classes/ActionList.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/sys_action/Classes/ActionTask.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/sys_action/Classes/ActionToolbarMenu.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/sys_action/Configuration/TCA/sys_action.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/sys_action/Documentation/.gitignore
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/sys_action/Documentation/Images/CreateBackendUserAction.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/sys_action/Documentation/Images/CreateSqlQuery.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/sys_action/Documentation/Images/RecordListAction.gif
@@ -8918,7 +8925,6 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/t3skin/templates/errorpage-message.html
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/taskcenter/Classes/Controller/TaskModuleController.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/taskcenter/Classes/TaskInterface.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/taskcenter/Classes/TaskStatus.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/taskcenter/Documentation/.gitignore
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/taskcenter/Documentation/Administration/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/taskcenter/Documentation/DevelopersGuide/CreatingANewTask/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/taskcenter/Documentation/DevelopersGuide/Index.rst
@@ -9130,7 +9136,6 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Classes/Task/AutoPublishTask.ph
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Classes/Task/CleanupPreviewLinkTask.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Configuration/TCA/sys_workspace.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Configuration/TCA/sys_workspace_stage.php
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Documentation/.gitignore
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Documentation/Administration/Configuration/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Documentation/Administration/Index.rst
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Documentation/Administration/Versioning/Index.rst
@@ -9448,6 +9453,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/I
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/createNLocalizeParentContentNHotelNOfferChildren.csv
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/createNLocalizeParentContentNHotelNOfferChildrenNDiscardCreatedParent.csv
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/createNLocalizeParentContentNHotelNOfferChildrenNDiscardLocalizedParent.csv
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/createNLocalizeParentContentNHotelNOfferChildrenWOSortBy.csv
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/createParentContent.csv
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/createParentContentNHotelNOfferChildren.csv
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/IRRE/ForeignField/Modify/DataSet/deletePage.csv
@@ -9600,20 +9606,34 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/R
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/DataSet/ReferenceIndex.csv
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/Modify/ActionTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/Modify/DataSet/changeContentSorting.csv
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/Modify/DataSet/changeContentSortingAndCopyDraftPage.csv
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/Modify/DataSet/changeContentSortingAndCopyLivePage.csv
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/Modify/DataSet/changeContentSortingNDeleteLiveRecord.csv
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/Modify/DataSet/changeContentSortingNDeleteMovedRecord.csv
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/Modify/DataSet/changePageSorting.csv
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/Modify/DataSet/copyContent.csv
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/Modify/DataSet/copyPage.csv
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/Modify/DataSet/createContentAndCopyDraftPage.csv
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/Modify/DataSet/createContentAndCopyLivePage.csv
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/Modify/DataSet/createContentNDiscardCreatedContent.csv
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/Modify/DataSet/createContents.csv
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/Modify/DataSet/createNCopyContentNDiscardCopiedContent.csv
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/Modify/DataSet/createNestedPagesAndCopyDraftParentPage.csv
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/Modify/DataSet/createNestedPagesAndCopyLiveParentPage.csv
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/Modify/DataSet/createPage.csv
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/Modify/DataSet/createPageAndCopyDraftParentPage.csv
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/Modify/DataSet/createPageAndCopyLiveParentPage.csv
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/Modify/DataSet/deleteContent.csv
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/Modify/DataSet/deleteContentAndCopyDraftPage.csv
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/Modify/DataSet/deleteContentAndCopyLivePage.csv
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/Modify/DataSet/deleteLocalizedContentNDeleteContent.csv
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/Modify/DataSet/deletePage.csv
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/Modify/DataSet/localizeContent.csv
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/Modify/DataSet/localizePage.csv
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/Modify/DataSet/modifyContent.csv
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/Modify/DataSet/modifyPage.csv
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/Modify/DataSet/moveContentAndCopyDraftPage.csv
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/Modify/DataSet/moveContentAndCopyLivePage.csv
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/Modify/DataSet/moveContentToDifferentPage.csv
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/Modify/DataSet/moveContentToDifferentPageNChangeSorting.csv
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/Modify/DataSet/movePageToDifferentPage.csv
