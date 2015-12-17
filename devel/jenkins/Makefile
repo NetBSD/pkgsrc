@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2014/10/25 15:04:06 ryoon Exp $
+# $NetBSD: Makefile,v 1.18 2015/12/17 20:20:30 asau Exp $
 #
 
 DISTNAME=	jenkins
 PKGNAME=	jenkins-${J_VERSION}
 CATEGORIES=	devel
-MASTER_SITES=	http://mirrors.jenkins-ci.org/war-stable/${J_VERSION}/
+MASTER_SITES=	http://mirrors.jenkins-ci.org/war/${J_VERSION}/
 EXTRACT_SUFX=	.war
 
 MAINTAINER=	ryoon@NetBSD.org
@@ -12,7 +12,7 @@ HOMEPAGE=	http://jenkins-ci.org/
 COMMENT=	Open source continuous integration server (LTS release)
 LICENSE=	mit
 
-J_VERSION=	1.565.3
+J_VERSION=	1.642
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
@@ -20,7 +20,7 @@ WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none
 
 USE_JAVA=	run
-USE_JAVA2=	6
+USE_JAVA2=	7
 
 USE_TOOLS+=	unzip
 
