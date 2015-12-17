@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2015/12/15 15:09:01 taca Exp $
+# $NetBSD: Makefile,v 1.36 2015/12/17 01:40:54 taca Exp $
 #
 
 DISTNAME=	PEAR-1.10.1
@@ -71,17 +71,10 @@ post-extract:
 	${CP} ${FILESDIR}/PEAR.php ${BUNDLE}
 
 do-build:
-	${GZCAT} ${DISTDIR}/${ARCHIVE_SRCS} > \
-		${BUNDLE}/${ARCHIVE_SRCS:S/${EXTRACT_SUFX}/.tar/}
-	${GZCAT} ${DISTDIR}/${CONSOLE_SRCS} > \
-		${BUNDLE}/${CONSOLE_SRCS:S/${EXTRACT_SUFX}/.tar/}
-	${GZCAT} ${DISTDIR}/${PEAR_SRCS} > \
-		${BUNDLE}/${PEAR_SRCS:S/${EXTRACT_SUFX}/.tar/}
-	${GZCAT} ${DISTDIR}/${STRUCTURES_SRCS} > \
-		${BUNDLE}/${STRUCTURES_SRCS:S/${EXTRACT_SUFX}/.tar/}
-	${GZCAT} ${DISTDIR}/${XMLUTIL_SRCS} > \
-		${BUNDLE}/${XMLUTIL_SRCS:S/${EXTRACT_SUFX}/.tar/}
-
+.for f in ${DISTFILES}
+	${GZCAT} ${DISTDIR}/${DIST_SUBDIR}/${f} > \
+		${BUNDLE}/${f:S/${EXTRACT_SUFX}/.tar/}
+.endfor
 	${CP} ${ARCHIVE_WRKSRC}/Archive/Tar.php ${BUNDLE}
 	${CP} ${CONSOLE_WRKSRC}/Console/Getopt.php ${BUNDLE}
 
