@@ -1,9 +1,9 @@
-$NetBSD: patch-configure,v 1.6 2015/01/07 21:39:24 wiedi Exp $
+$NetBSD: patch-configure,v 1.7 2015/12/18 22:39:33 ryoon Exp $
 Don't use gld on SunOS
 
---- configure.orig	2014-12-09 14:45:40.000000000 +0000
+--- configure.orig	2015-12-16 22:04:48.000000000 +0000
 +++ configure
-@@ -622,7 +622,6 @@ SunOS)
+@@ -650,7 +650,6 @@ SunOS)
    solaris="yes"
    make="${MAKE-gmake}"
    install="${INSTALL-ginstall}"
@@ -11,3 +11,16 @@ Don't use gld on SunOS
    smbd="${SMBD-/usr/sfw/sbin/smbd}"
    needs_libsunmath="no"
    solarisrev=`uname -r | cut -f2 -d.`
+@@ -3935,8 +3934,12 @@ fi
+ cat > $TMPC <<EOF
+ #include <signal.h>
+ #include <time.h>
++#include <sys/types.h>
++#include <sys/mman.h>
++#include <fcntl.h>
+ int main(void) {
+   timer_create(CLOCK_REALTIME, NULL, NULL);
++  shm_open(NULL, O_RDWR, 0644);
+   return clock_gettime(CLOCK_REALTIME, NULL);
+ }
+ EOF
