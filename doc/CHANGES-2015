@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5075 2015/12/18 14:59:17 taca Exp $
+$NetBSD: CHANGES-2015,v 1.5076 2015/12/18 17:50:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8376,3 +8376,10 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/firefox38 to 38.5.0 [ryoon 2015-12-16]
 	Updated www/firefox38-l10n to 38.5.0 [ryoon 2015-12-16]
 	Updated lang/php70 to 7.0.1 [taca 2015-12-18]
+	Updated devel/subversion to 1.9.3 [adam 2015-12-18]
+	Updated devel/subversion-base to 1.9.3 [adam 2015-12-18]
+	Updated devel/java-subversion to 1.9.3 [adam 2015-12-18]
+	Updated devel/p5-subversion to 1.9.3 [adam 2015-12-18]
+	Updated devel/py-subversion to 1.9.3 [adam 2015-12-18]
+	Updated devel/ruby-subversion to 1.9.3 [adam 2015-12-18]
+	Updated www/ap2-subversion to 1.9.3 [adam 2015-12-18]
