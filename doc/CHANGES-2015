@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5078 2015/12/18 22:40:08 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.5079 2015/12/18 22:51:17 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8385,3 +8385,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/ap2-subversion to 1.9.3 [adam 2015-12-18]
 	Updated devel/xulrunner38 to 38.5.0 [ryoon 2015-12-18]
 	Updated emulators/qemu to 2.5.0 [ryoon 2015-12-18]
+	Updated misc/libreoffice to 5.0.4.2 [ryoon 2015-12-18]
