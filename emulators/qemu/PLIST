@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.43 2015/08/12 06:55:59 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.44 2015/12/18 22:39:33 ryoon Exp $
+bin/ivshmem-client
+bin/ivshmem-server
 ${PLIST.alpha}bin/qemu-alpha
 ${PLIST.arm}bin/qemu-arm
 ${PLIST.armeb}bin/qemu-armeb
@@ -55,6 +57,7 @@ bin/qemu-system-xtensaeb
 ${PLIST.x86_64}bin/qemu-x86_64
 man/man1/qemu-img.1
 man/man1/qemu.1
+man/man8/qemu-ga.8
 man/man8/qemu-nbd.8
 share/doc/qemu/Makefile.multinode-NetBSD
 share/doc/qemu/qemu-doc.html
