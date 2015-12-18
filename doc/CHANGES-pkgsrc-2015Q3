@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q3,v 1.1.2.30 2015/12/17 20:31:58 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q3,v 1.1.2.31 2015/12/18 19:51:08 bsiegert Exp $
 
 Changes to the packages collection and infrastructure on the 2015Q3 branch:
 
@@ -143,4 +143,10 @@ www/typo3_62: security fix
 
 Pullup ticket #4871 - requested by taca
 net/bind99: security fix
+
+Pullup ticket #4872 - requested by taca
+net/bind910: security fix
+
+Pullup ticket #4873 - requested by cyber
+devel/nbpatch: security fix
 
