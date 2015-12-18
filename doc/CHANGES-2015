@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5076 2015/12/18 17:50:15 adam Exp $
+$NetBSD: CHANGES-2015,v 1.5077 2015/12/18 22:23:25 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8383,3 +8383,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-subversion to 1.9.3 [adam 2015-12-18]
 	Updated devel/ruby-subversion to 1.9.3 [adam 2015-12-18]
 	Updated www/ap2-subversion to 1.9.3 [adam 2015-12-18]
+	Updated devel/xulrunner38 to 38.5.0 [ryoon 2015-12-18]
