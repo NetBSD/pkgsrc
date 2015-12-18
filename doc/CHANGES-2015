@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5074 2015/12/16 23:54:28 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.5075 2015/12/18 14:59:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8375,3 +8375,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/ruby22 to 2.2.4 [taca 2015-12-16]
 	Updated www/firefox38 to 38.5.0 [ryoon 2015-12-16]
 	Updated www/firefox38-l10n to 38.5.0 [ryoon 2015-12-16]
+	Updated lang/php70 to 7.0.1 [taca 2015-12-18]
