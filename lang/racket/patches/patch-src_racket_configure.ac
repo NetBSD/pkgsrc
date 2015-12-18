@@ -1,0 +1,40 @@
+$NetBSD: patch-src_racket_configure.ac,v 1.1 2015/12/18 01:10:14 asau Exp $
+
+--- src/racket/configure.ac.orig	2015-10-20 15:10:35.000000000 +0000
++++ src/racket/configure.ac
+@@ -369,7 +369,7 @@ if test "${enable_sysroot}" != "" ; then
+ fi
+ 
+ if test "${enable_racket}" != "" ; then
+-  if test "${enable_racket}" == "auto" ; then
++  if test "${enable_racket}" = "auto" ; then
+      echo "=== Creating and using local Racket executable"
+   else
+      echo "=== Using Racket executable ${enable_racket}"
+@@ -786,7 +786,7 @@ case "$host_os" in
+     skip_iconv_check=yes
+     check_for_mprotect=no
+     # ".a" is typically not useful, since we always build a DLL:
+-    if test "${enable_libs}" == "" ; then
++    if test "${enable_libs}" = "" ; then
+       INSTALL_LIBS_ENABLE=no-install
+     fi
+     AC_DEFINE(HAVE_STDINT_H,1,[Have stdint.h])
+@@ -798,7 +798,7 @@ case "$host_os" in
+     fi
+ 
+     AC_CHECK_LIB(winpthread, pthread_create, has_winpthread=yes, has_winpthread=no)
+-    if test "${has_winpthread}" == "yes" ; then
++    if test "${has_winpthread}" = "yes" ; then
+       LIBS="${LIBS} -Wl,-Bstatic -lwinpthread"
+     fi
+     case "$build_os" in
+@@ -874,7 +874,7 @@ case "$host_os" in
+     try_kqueue_syscall=yes
+ 
+     # ".a" is typically not useful, since we always build a ".dylib":
+-    if test "${enable_libs}" == "" ; then
++    if test "${enable_libs}" = "" ; then
+       INSTALL_LIBS_ENABLE=no-install
+     fi
+ 
