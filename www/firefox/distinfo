@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.224 2015/12/16 09:34:55 ryoon Exp $
+$NetBSD: distinfo,v 1.225 2015/12/18 23:51:16 ryoon Exp $
 
 SHA1 (firefox-43.0.source.tar.xz) = 65913f9dd61b49b341a66a514c9cac23b602c7c8
 RMD160 (firefox-43.0.source.tar.xz) = 9694b5389feaf88c8a11d6b9fb87cec18e6a27af
@@ -85,6 +85,7 @@ SHA1 (patch-media_libcubeb_src_cubeb__oss.c) = 54e2a210411c7083bc395033fbf519d58
 SHA1 (patch-media_libcubeb_src_moz.build) = 23a194c97402590b05af6a6423882528c7cf02ef
 SHA1 (patch-media_libpng_pngpriv.h) = c9cefd1b5dd85fbd0c875c3f9bc108975398fe3a
 SHA1 (patch-media_libsoundtouch_src_cpu__detect__x86.cpp) = db61737afa7773e8cbd82976de3a02c917174696
+SHA1 (patch-media_libstagefright_frameworks_av_include_media_stagefright_foundation_AString.h) = b280f691dbe67b6de592dcd04baf33c6cf480cc8
 SHA1 (patch-media_libstagefright_frameworks_av_media_libstagefright_foundation_AString.cpp) = b7c21a68f09176100794148aa75eb19829417fed
 SHA1 (patch-media_libstagefright_system_core_liblog_fake__log__device.c) = b59809a7292d41bdb352bc425dc46273f1c0c270
 SHA1 (patch-media_libstagefright_system_core_liblog_logprint.c) = 56c5590b57caf568e12f8ff7df07daec281855de
