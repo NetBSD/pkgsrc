@@ -1,0 +1,27 @@
+$NetBSD: patch-Makefile,v 1.1 2015/12/18 19:54:14 wiedi Exp $
+Make sure files are installed into PREFIX and pass our LDFLAGS.
+
+--- Makefile.orig	2008-05-22 14:14:08.000000000 +0000
++++ Makefile
+@@ -39,16 +39,16 @@ WFLAGS=-Wall -Wstrict-prototypes -Wpoint
+ # Possible CFLAGS: -g -O3 -DDONT_FORK
+ #
+ 
+-CFLAGS= -O3 $(WFLAGS) -I. -I/usr/local/include # $(MYSQL_INCLUDE) -DWITH_MYSQL=1
+-LFLAGS= -L/usr/local/lib # $(MYSQL_LIBDIR)
++CFLAGS= -O3 $(WFLAGS) -I. -I$(PREFIX)/include # $(MYSQL_INCLUDE) -DWITH_MYSQL=1
++LFLAGS= $(LDFLAGS) # $(MYSQL_LIBDIR)
+ 
+ # For System V (Solaris) add -lnsl and -lsocket
+ # For MySQL support add -lmysqlclient
+ LIBS=-lgmp # -lmysqlclient #-lnsl -lsocket 
+ 
+-INSTALLBIN=/usr/local/sbin
+-INSTALLCONF=/usr/local/etc
+-INSTALLRC=/usr/local/etc/rc.d
++INSTALLBIN=$(PREFIX)/sbin
++INSTALLCONF=$(PREFIX)/etc
++INSTALLRC=$(PREFIX)/etc/rc.d
+ LOGDIR=/var/log/dhis
+ PIDDIR=/var/run/dhis
+ CP=cp
