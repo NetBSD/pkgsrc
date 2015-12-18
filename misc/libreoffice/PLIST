@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2015/09/24 03:18:34 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/12/18 22:50:38 ryoon Exp $
 ${PKGNAME}/CREDITS.fodt
 ${PKGNAME}/LICENSE
 ${PKGNAME}/LICENSE.fodt
@@ -261,6 +261,7 @@ ${PKGNAME}/program/libucpextlo.so
 ${PKGNAME}/program/libucpfile1.so
 ${PKGNAME}/program/libucpftp1.so
 ${PKGNAME}/program/libucphier1.so
+${PKGNAME}/program/libucpimagelo.so
 ${PKGNAME}/program/libucppkg1.so
 ${PKGNAME}/program/libucptdoc1lo.so
 ${PKGNAME}/program/libuno_cppu.so.3
@@ -13749,7 +13750,7 @@ ${PKGNAME}/share/xslt/import/wordml/wordml2ooo_props.xsl
 ${PKGNAME}/share/xslt/import/wordml/wordml2ooo_settings.xsl
 ${PKGNAME}/share/xslt/import/wordml/wordml2ooo_table.xsl
 ${PKGNAME}/share/xslt/import/wordml/wordml2ooo_text.xsl
-@comment $NetBSD: PLIST,v 1.5 2015/09/24 03:18:34 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/12/18 22:50:38 ryoon Exp $
 bin/libreoffice
 bin/lobase
 bin/localc
