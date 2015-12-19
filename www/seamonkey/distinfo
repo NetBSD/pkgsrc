@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.129 2015/12/03 12:22:27 ryoon Exp $
+$NetBSD: distinfo,v 1.130 2015/12/19 10:26:44 ryoon Exp $
 
 SHA1 (seamonkey-2.39.source.tar.xz) = cae3d2cf38f85190d0639a391f04953d9313d48b
 RMD160 (seamonkey-2.39.source.tar.xz) = 35d442092e359145ff4799d82576e1e8c0ee5a06
@@ -47,7 +47,6 @@ SHA1 (patch-mozilla_gfx_skia_skia_src_opts_memset.arm.S) = 7e7e9ba1638935b81128b
 SHA1 (patch-mozilla_gfx_thebes_moz.build) = c9fc7811cf24c735f1f829f206af5d8bba27d505
 SHA1 (patch-mozilla_gfx_ycbcr_moz.build) = 263c37980558d485e868a7097689cdf35c5f678d
 SHA1 (patch-mozilla_gfx_ycbcr_yuv__row__arm.S) = 74c70bad49b9781dae6be4fd46c33da886bcfd34
-SHA1 (patch-mozilla_gfx_ycbcr_yuv__row__arm.s) = 555a4e929666563e84bda4345e8ac02d89ab9d85
 SHA1 (patch-mozilla_image_decoders_nsJPEGDecoder.cpp) = ff09ce62a57b0024cf664e807afc813fc25eefdf
 SHA1 (patch-mozilla_intl_hyphenation_hnjalloc.h) = ec6eeebc8d7edb2f6d021d22d9621b057141c736
 SHA1 (patch-mozilla_intl_unicharutil_util_moz.build) = dc07e0b3afba4633fc68af028835e34e6ced4242
