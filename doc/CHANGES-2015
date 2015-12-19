@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5081 2015/12/19 11:44:09 tsutsui Exp $
+$NetBSD: CHANGES-2015,v 1.5082 2015/12/19 12:52:19 martin Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8388,3 +8388,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated misc/libreoffice to 5.0.4.2 [ryoon 2015-12-18]
 	Updated net/mikutter to 3.2.11 [tsutsui 2015-12-19]
 	Updated x11/mlterm to 3.6.1 [tsutsui 2015-12-19]
+	Updated www/firefox to 43.0nb1 [martin 2015-12-19]
