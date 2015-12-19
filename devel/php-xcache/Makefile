@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/03/21 21:35:07 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2015/12/19 14:27:13 taca Exp $
 
 MODNAME=	xcache
 PECL_VERSION=	3.2.0
@@ -13,6 +13,8 @@ COMMENT=	Fast and stable PHP opcode cacher
 LICENSE=	modified-bsd
 
 BUILD_DEPENDS+=	re2c>=0.13.0.4:../../devel/re2c
+
+PHP_VERSIONS_ACCEPTED=	55 56
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gawk gm4 gsed pax

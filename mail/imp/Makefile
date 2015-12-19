@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2013/03/16 07:21:20 obache Exp $
+# $NetBSD: Makefile,v 1.60 2015/12/19 14:27:14 taca Exp $
 
 DISTNAME=	imp-h3-${IMPVER}
 PKGNAME=	imp-${IMPVER}
@@ -18,6 +18,8 @@ DEPENDS+=	horde>=3.2:../../www/horde
 DEPENDS+=	${PHP_PKG_PREFIX}-imap>4.3.3:../../mail/php-imap
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Mail-[0-9]*:../../mail/pear-Mail
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Mail_mimeDecode-[0-9]*:../../mail/pear-Mail_mimeDecode
+
+PHP_VERSIONS_ACCEPTED=	55 56
 
 USE_TOOLS+=	pax
 

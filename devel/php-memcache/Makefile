@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/09/24 21:32:32 jperkin Exp $
+# $NetBSD: Makefile,v 1.13 2015/12/19 14:27:13 taca Exp $
 #
 
 MODNAME=		memcache
@@ -8,6 +8,8 @@ CATEGORIES+=		devel
 COMMENT=		PHP extension for memcached
 
 CONFLICTS=		php-memcache-[0-9]*
+
+PHP_VERSIONS_ACCEPTED=	55 56
 
 CONFIGURE_ARGS+=	--enable-${MODNAME}
 CONFIGURE_ARGS+=	--with-zlib-dir=${BUILDLINK_PREFIX.zlib}
