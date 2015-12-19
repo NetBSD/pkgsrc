@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5082 2015/12/19 12:52:19 martin Exp $
+$NetBSD: CHANGES-2015,v 1.5083 2015/12/19 19:39:54 leot Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8389,3 +8389,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/mikutter to 3.2.11 [tsutsui 2015-12-19]
 	Updated x11/mlterm to 3.6.1 [tsutsui 2015-12-19]
 	Updated www/firefox to 43.0nb1 [martin 2015-12-19]
+	Updated net/youtube-dl to 20151218 [leot 2015-12-19]
