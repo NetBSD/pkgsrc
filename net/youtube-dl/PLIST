@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.6 2015/12/10 11:11:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/12/19 19:39:28 leot Exp $
 bin/youtube-dl
-man/man1/youtube-dl.1
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -507,6 +506,9 @@ ${PYSITELIB}/youtube_dl/extractor/freespeech.pyo
 ${PYSITELIB}/youtube_dl/extractor/freevideo.py
 ${PYSITELIB}/youtube_dl/extractor/freevideo.pyc
 ${PYSITELIB}/youtube_dl/extractor/freevideo.pyo
+${PYSITELIB}/youtube_dl/extractor/funimation.py
+${PYSITELIB}/youtube_dl/extractor/funimation.pyc
+${PYSITELIB}/youtube_dl/extractor/funimation.pyo
 ${PYSITELIB}/youtube_dl/extractor/funnyordie.py
 ${PYSITELIB}/youtube_dl/extractor/funnyordie.pyc
 ${PYSITELIB}/youtube_dl/extractor/funnyordie.pyo
@@ -1716,6 +1718,7 @@ ${PYSITELIB}/youtube_dl/utils.pyo
 ${PYSITELIB}/youtube_dl/version.py
 ${PYSITELIB}/youtube_dl/version.pyc
 ${PYSITELIB}/youtube_dl/version.pyo
+man/man1/youtube-dl.1
 share/bash_completion.d/youtube-dl.bash-completion
 share/doc/youtube_dl/README.txt
 share/fish/completions/youtube-dl.fish
