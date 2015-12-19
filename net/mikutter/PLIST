@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2015/11/14 16:38:03 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.32 2015/12/19 11:32:45 tsutsui Exp $
 bin/mikutter
 share/applications/mikutter.desktop
 share/doc/mikutter/README
@@ -597,7 +597,7 @@ share/mikutter/core/plugin/sound/po/zh_TW/sound.po
 share/mikutter/core/plugin/sound/sound.rb
 share/mikutter/core/plugin/streaming/.mikutter.yml
 share/mikutter/core/plugin/streaming/filter.rb
-share/mikutter/core/plugin/streaming/parma_streamer.rb
+share/mikutter/core/plugin/streaming/perma_streamer.rb
 share/mikutter/core/plugin/streaming/po/ar/streaming.po
 share/mikutter/core/plugin/streaming/po/de/streaming.po
 share/mikutter/core/plugin/streaming/po/el/streaming.po
