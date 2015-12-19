@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.45 2015/12/15 09:46:27 markd Exp $
+$NetBSD: distinfo,v 1.46 2015/12/19 20:52:12 markd Exp $
 
-SHA1 (blender-2.74.tar.gz) = 303a84ec01c358be77498983ba7be212212aa70b
-RMD160 (blender-2.74.tar.gz) = 6fb8544e6ac084b0289efe32461e4f045a940878
-SHA512 (blender-2.74.tar.gz) = 080ca06cf3532ba62746a404d994f2887472155d916415ab8467fb70bd3e0fc678dc617f9d0290e261768990387dd2d22998ba190dafe2782eaa11392d6ceb8c
-Size (blender-2.74.tar.gz) = 54011017 bytes
+SHA1 (blender-2.76b.tar.gz) = 7be96d90296cc95e15380ad0ae56cb86f1374a65
+RMD160 (blender-2.76b.tar.gz) = 393c03e9ff15631f89ddd0cdfc8548bb87a0bde5
+SHA512 (blender-2.76b.tar.gz) = 6226f9709d680344fe5cd8106fafc94c33c131658971681d56df6865ae86c834fc248830c9d2c2ac0c5342bf903ada4d5b61afcdfb1ab79a06976287eeed28b9
+Size (blender-2.76b.tar.gz) = 41728871 bytes
 SHA1 (patch-build__files_scons_config_linux-config.py) = 595dbb0c8d8ceaa06e5b862ceb318b5aa4011d16
 SHA1 (patch-build__files_scons_config_netbsd6-config.py) = 105360e9959ac98620e178cf4139d68a277bead2
 SHA1 (patch-build__files_scons_tools_btools.py) = 53e9b0766e040f24cfe4a3e8a8ced8d799e2dbe4
@@ -14,4 +14,4 @@ SHA1 (patch-extern_libmv_third__party_glog_src_utilities.h) = 32fea10d935621ef05
 SHA1 (patch-extern_rangetree_range__tree.hh) = 976881b9caad67a2cfb24039652e887867fa6cc0
 SHA1 (patch-intern_cycles_util_util__types.h) = 37944c6b0a970468e6791ec4a5beef1ec0ddf190
 SHA1 (patch-intern_ghost_SConscript) = d576ea87b5b0f386e2c78efa78351927a105f243
-SHA1 (patch-intern_guardedalloc_intern_mallocn__intern.h) = 6d92a0c0a19c04cbb5e34de360c9e3303e2d8ceb
+SHA1 (patch-intern_guardedalloc_intern_mallocn__intern.h) = c7bc89af1c03b50ae0bd8af5aacc25cd82dfcbfc

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.116 2015/12/15 09:46:27 markd Exp $
+# $NetBSD: Makefile,v 1.117 2015/12/19 20:52:12 markd Exp $
 
-DISTNAME=	blender-2.74
+DISTNAME=	blender-2.76b
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.blender.org/source/
 
@@ -8,8 +8,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.blender.org/
 COMMENT=	Fully integrated 3D graphics creation suite
 LICENSE=	gnu-gpl-v2
-
-#WRKSRC=		${WRKDIR}/blender-2.71
 
 USE_TOOLS+=		gmake sed
 USE_LANGUAGES=		c c++
@@ -64,12 +62,15 @@ SCONS_ARGS+=	BF_FFTW3=${BUILDLINK_PREFIX.fftw}
 SCONS_ARGS+=	BF_INSTALLDIR=${DESTDIR}${PREFIX}/share/blender
 
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
+PLIST_SUBST+=	BLENDERVER=${PKGVERSION:C/[a-z]//}
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-7.*)
 PLIST_SUBST+=	NETBSDVER=netbsd7
 .else
 PLIST_SUBST+=	NETBSDVER=netbsd6
 .endif
+
+PLIST_VARS+=	py34 py35
 
 post-patch:
 	cd ${WRKSRC}/build_files/scons/config/; ln netbsd6-config.py netbsd7-config.py
@@ -110,5 +111,11 @@ post-install:
 .include "../../security/openssl/buildlink3.mk"
 
 .include "../../lang/python/application.mk"
+
+.if ${PYVERSSUFFIX} == "3.4"
+PLIST.py34=	yes
+.elif ${PYVERSSUFFIX} == "3.5"
+PLIST.py35=	yes
+.endif
 
 .include "../../mk/bsd.pkg.mk"
