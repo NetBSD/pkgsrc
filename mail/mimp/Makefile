@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/03/16 07:21:21 obache Exp $
+# $NetBSD: Makefile,v 1.3 2015/12/19 14:27:14 taca Exp $
 
 DISTNAME=	mimp-h3-${MIMPVER}
 PKGNAME=	mimp-${MIMPVER}
@@ -13,6 +13,8 @@ COMMENT=	Internet Messaging Program for mobile devices
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	imp>=4.2:../../mail/imp
+
+PHP_VERSIONS_ACCEPTED=	55 56
 
 USE_TOOLS+=	pax
 
