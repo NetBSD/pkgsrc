@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5083 2015/12/19 19:39:54 leot Exp $
+$NetBSD: CHANGES-2015,v 1.5084 2015/12/19 20:54:31 markd Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8390,3 +8390,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/mlterm to 3.6.1 [tsutsui 2015-12-19]
 	Updated www/firefox to 43.0nb1 [martin 2015-12-19]
 	Updated net/youtube-dl to 20151218 [leot 2015-12-19]
+	Updated graphics/blender to 2.76b [markd 2015-12-19]
