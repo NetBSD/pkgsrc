@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.73 2015/12/10 11:11:16 adam Exp $
+# $NetBSD: Makefile,v 1.74 2015/12/19 19:39:28 leot Exp $
 
-VERSION_DATE=	2015.12.09
+VERSION_DATE=	2015.12.18
 DISTNAME=	youtube-dl-${VERSION_DATE}
 PKGNAME=	youtube-dl-${VERSION_DATE:S/.//S/.//}
 CATEGORIES=	net
@@ -18,7 +18,7 @@ LICENSE=	public-domain
 # the version you are going to commit.
 
 USE_LANGUAGES=	# none
-EGG_NAME=	youtube_dl-2015.12.9
+EGG_NAME=	youtube_dl-2015.12.18
 WRKSRC=		${WRKDIR}/youtube-dl
 
 .include "../../lang/python/egg.mk"
