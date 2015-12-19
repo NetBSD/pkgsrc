@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.225 2015/12/18 23:51:16 ryoon Exp $
+$NetBSD: distinfo,v 1.226 2015/12/19 12:50:55 martin Exp $
 
 SHA1 (firefox-43.0.source.tar.xz) = 65913f9dd61b49b341a66a514c9cac23b602c7c8
 RMD160 (firefox-43.0.source.tar.xz) = 9694b5389feaf88c8a11d6b9fb87cec18e6a27af
@@ -63,8 +63,6 @@ SHA1 (patch-ipc_chromium_src_chrome_common_transport__dib.h) = 7af18973c005d7b14
 SHA1 (patch-ipc_glue_GeckoChildProcessHost.cpp) = 45f2f22b4f567ffddd4458f635179b5201e87e64
 SHA1 (patch-ipc_glue_StringUtil.cpp) = f238adebb5bdf57f7109a781c6f3fb195763f3c0
 SHA1 (patch-ipc_glue_moz.build) = 5c3f99ede7ab2d8ad58e92b31576971de87cb528
-SHA1 (patch-ipc_ipdl_ipdl_cxx_ast.py) = 047b7012dffdcfc2b07d2d249fb3523e7d4643f8
-SHA1 (patch-ipc_ipdl_ipdl_cxx_cgen.py) = d7f7dc85b1ff26c6d7e902f94c0ac09f04497105
 SHA1 (patch-js__src__vm__SPSProfiler.cpp) = 989ba25e4c5308d21d07baa802decce13609a475
 SHA1 (patch-js_src_ctypes_CTypes.h) = 768a084239f92a424c1c7dc9eaaf9be9456ca9f0
 SHA1 (patch-js_src_frontend_ParseMaps.cpp) = c00117d79b78904bc50a1d664a8fc0e4e339bfbc
@@ -114,7 +112,6 @@ SHA1 (patch-media_webrtc_trunk_webrtc_system__wrappers_source_spreadsortlib_spre
 SHA1 (patch-memory_build_mozjemalloc__compat.c) = c27c745fd6e0bbb120ef34d8a984937d5f2e1319
 SHA1 (patch-memory_mozalloc_mozalloc__abort.cpp) = f61a8ef233963d5d9639a4ce68e8584bc7d7c1b2
 SHA1 (patch-memory_volatile_VolatileBufferOSX.cpp) = ebea8a615443206376cb4264ed43b5c74e029b7d
-SHA1 (patch-mfbt_Alignment.h) = 5c3d4f92a39874f2fdbc11321f63205c03b35ce0
 SHA1 (patch-mfbt_Attributes.h) = bf3378667704d7c9194b00024bb51ed23fd92286
 SHA1 (patch-mfbt_Poison.cpp) = f502581db96b3e5eca25a9aa9035f436e9167503
 SHA1 (patch-modules_libjar_nsZipArchive.cpp) = 6aff0f8ed42575d8ca36a524e12e9a1f7351004a
