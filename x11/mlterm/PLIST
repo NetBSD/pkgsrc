@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2015/10/30 15:29:20 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.34 2015/12/19 11:43:24 tsutsui Exp $
 bin/mlcc
 bin/mlclient
 bin/mlclientx
@@ -11,6 +11,7 @@ lib/mkf/libmkf_8bits.la
 lib/mkf/libmkf_jajp.la
 lib/mkf/libmkf_kokr.la
 lib/mkf/libmkf_zh.la
+lib/mlterm/libathena.la
 ${PLIST.bidi}lib/mlterm/libctl_bidi.la
 ${PLIST.ind}lib/mlterm/libctl_iscii.la
 ${PLIST.canna}lib/mlterm/libim-canna.la
@@ -21,6 +22,7 @@ lib/mlterm/libim-kbd.la
 ${PLIST.fb}lib/mlterm/libim-kbd-fb.la
 ${PLIST.m17nlib}lib/mlterm/libim-m17nlib.la
 ${PLIST.fb}${PLIST.m17nlib}lib/mlterm/libim-m17nlib-fb.la
+${PLIST.scim}lib/mlterm/libim-scim.la
 ${PLIST.uim}lib/mlterm/libim-uim.la
 ${PLIST.fb}${PLIST.uim}lib/mlterm/libim-uim-fb.la
 ${PLIST.wnn}lib/mlterm/libim-wnn.la
@@ -40,6 +42,11 @@ ${PLIST.ind}lib/mlterm/libind_tamil.la
 ${PLIST.ind}lib/mlterm/libind_telugu.la
 ${PLIST.cairo}lib/mlterm/libtype_cairo.la
 ${PLIST.xft2}lib/mlterm/libtype_xft.la
+lib/mlterm/libmotif.la
+lib/mlterm/libmozmodern.la
+lib/mlterm/libnext.la
+lib/mlterm/libpixmap_engine.la
+lib/mlterm/libsample.la
 libexec/mlterm/mlconfig
 libexec/mlterm/mlimgloader
 libexec/mlterm/mlterm-menu
@@ -84,3 +91,15 @@ share/locale/vi/LC_MESSAGES/mlconfig.mo
 share/locale/zh_TW/LC_MESSAGES/mlconfig.mo
 ${PLIST.fb}share/mlterm/kbd/kbd.six
 ${PLIST.fb}share/mlterm/kbd/pressed_kbd.six
+share/mlterm/scrollbars/sample3/bg_body.png
+share/mlterm/scrollbars/sample3/bg_bottom.png
+share/mlterm/scrollbars/sample3/bg_top.png
+share/mlterm/scrollbars/sample3/button_down.png
+share/mlterm/scrollbars/sample3/button_down_pressed.png
+share/mlterm/scrollbars/sample3/button_up.png
+share/mlterm/scrollbars/sample3/button_up_pressed.png
+share/mlterm/scrollbars/sample3/rc
+share/mlterm/scrollbars/sample3/slider_body.png
+share/mlterm/scrollbars/sample3/slider_bottom.png
+share/mlterm/scrollbars/sample3/slider_knob.png
+share/mlterm/scrollbars/sample3/slider_top.png
