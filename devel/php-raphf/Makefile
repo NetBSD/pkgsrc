@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/08/30 08:22:53 taca Exp $
+# $NetBSD: Makefile,v 1.4 2015/12/19 14:27:13 taca Exp $
 
 MODNAME=	raphf
 PECL_VERSION=	1.1.0
@@ -10,6 +10,8 @@ COMMENT=	Resource and persistent handles factory
 LICENSE=	2-clause-bsd
 
 BUILD_DEPENDS+=	re2c>=0.13.0.4:../../devel/re2c
+
+PHP_VERSIONS_ACCEPTED=	55 56
 
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
