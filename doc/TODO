@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15202 2015/12/21 06:46:04 dbj Exp $
+$NetBSD: TODO,v 1.15203 2015/12/21 12:34:58 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -1437,6 +1437,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o plasma-5.4.1
 	o ploticus-examples-230
 	o ply-3.6
+	o poco-1.6.1
 	o podcastdl-0.3.2
 	o pokerth-1.0.1
 	o policyd-weight-0.1.15.2
