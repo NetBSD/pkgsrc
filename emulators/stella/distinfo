@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.17 2015/11/03 20:31:02 agc Exp $
+$NetBSD: distinfo,v 1.18 2015/12/21 06:46:04 dbj Exp $
 
-SHA1 (stella-3.9.2-src.tar.gz) = 96b83dd2c41dddfe77f7bb1ecf74ab4c47e06e9b
-RMD160 (stella-3.9.2-src.tar.gz) = 6d9127db8ee9f67f9af173aa140c0da826a0cb84
-SHA512 (stella-3.9.2-src.tar.gz) = 4b1a612c584762580e192e4f2b73fd1f564311203ce36015f915be18e590ae905fc63a94ce03f8102c39fb9822fe3cb28d59fffd79da1094e6d9c5ebd9a61a22
-Size (stella-3.9.2-src.tar.gz) = 2282963 bytes
-SHA1 (patch-ab) = 80504428805995d6a7c651254aded4f4d3fa3962
-SHA1 (patch-src_unix_FSNodePOSIX.cxx) = 1ca0a4f34794843a5f7df0bcc0d5f589cd11a3bd
+SHA1 (stella-4.6.7-src.tar.gz) = abcd26fe1ebc8caadf4180e74d6453ff6fe688a5
+RMD160 (stella-4.6.7-src.tar.gz) = da2f24a3f594fcbea45ed9cdf57ba9ba76ff73d9
+SHA512 (stella-4.6.7-src.tar.gz) = 3c0a1f149c46073c72053fd071d449f8d4cc156edc9fb064afd99ba0b061089b5479c39f53636a0c39a83e32b25979a5abb00979a0fc6ffb6a5446cb8a03c759
+Size (stella-4.6.7-src.tar.gz) = 2293052 bytes
+SHA1 (patch-configure) = 141f240a686a85ffe7eda4a145fa681c4733dbe9
+SHA1 (patch-src_unix_FSNodePOSIX.cxx) = 8679698480dd443bbcf9d92411ad307bfbe700b3

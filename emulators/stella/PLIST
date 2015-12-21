@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2014/01/06 23:42:38 dholland Exp $
+@comment $NetBSD: PLIST,v 1.10 2015/12/21 06:46:04 dbj Exp $
 bin/stella
 share/applications/stella.desktop
 share/doc/stella/Announce.txt
@@ -22,6 +22,8 @@ share/doc/stella/graphics/debugger_dataops.png
 share/doc/stella/graphics/debugger_globalbuttons.png
 share/doc/stella/graphics/debugger_iotab.png
 share/doc/stella/graphics/debugger_main.png
+share/doc/stella/graphics/debugger_ram-dpc.png
+share/doc/stella/graphics/debugger_ram-f8sc.png
 share/doc/stella/graphics/debugger_ram.png
 share/doc/stella/graphics/debugger_ramsearch.png
 share/doc/stella/graphics/debugger_rom.png
