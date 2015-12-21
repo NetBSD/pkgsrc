@@ -1,12 +1,12 @@
-$NetBSD: patch-src_unix_FSNodePOSIX.cxx,v 1.1 2014/02/17 18:36:07 dholland Exp $
+$NetBSD: patch-src_unix_FSNodePOSIX.cxx,v 1.2 2015/12/21 06:46:04 dbj Exp $
 
 Try to make the dirent->d_type handling code autodetect. (As best as I
 can tell it is not, in the current version 3.9.2 at least, handled
 from configure.)
 
---- src/unix/FSNodePOSIX.cxx~	2013-06-29 00:02:49.000000000 +0000
+--- src/unix/FSNodePOSIX.cxx.orig	2015-01-01 03:49:32.000000000 +0000
 +++ src/unix/FSNodePOSIX.cxx
-@@ -145,6 +145,12 @@ bool FilesystemNodePOSIX::getChildren(Ab
+@@ -120,6 +120,12 @@ bool FilesystemNodePOSIX::getChildren(Ab
  
      FilesystemNodePOSIX entry(newPath, false);
  
