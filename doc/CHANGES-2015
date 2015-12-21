@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5090 2015/12/21 17:03:55 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.5091 2015/12/21 17:04:42 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8396,3 +8396,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated emulators/stella to 4.6.7 [dbj 2015-12-20]
 	Updated ham/fldigi to 3.23.07.04 [mef 2015-12-21]
 	Updated www/apache-tomcat7 to 7.0.67 [ryoon 2015-12-21]
+	Updated www/apache-tomcat8 to 8.0.30 [ryoon 2015-12-21]
