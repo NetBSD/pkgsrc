@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.FreeBSD,v 1.1 2015/12/21 00:33:47 sevan Exp $
+${PYSITELIB}/borg/platform_freebsd.so
