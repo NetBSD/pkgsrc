@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.147 2015/12/18 22:39:33 ryoon Exp $
+# $NetBSD: Makefile,v 1.148 2015/12/21 12:10:22 ryoon Exp $
 
 DISTNAME=	qemu-2.5.0
 CATEGORIES=	emulators
@@ -80,7 +80,7 @@ PLIST.nbd=		YES
 CONFIGURE_ARGS+=	--disable-coroutine-pool
 .endif
 
-PLIST_VARS+=		${UE_ARCHS} nbd
+PLIST_VARS+=		${UE_ARCHS} nbd ivshmem
 .for _var_ in ${USER_EMUL}
 PLIST.${_var_}=		YES
 .endfor

@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.44 2015/12/18 22:39:33 ryoon Exp $
-bin/ivshmem-client
-bin/ivshmem-server
+@comment $NetBSD: PLIST,v 1.45 2015/12/21 12:10:22 ryoon Exp $
+${PLIST.ivshmem}bin/ivshmem-client
+${PLIST.ivshmem}bin/ivshmem-server
 ${PLIST.alpha}bin/qemu-alpha
 ${PLIST.arm}bin/qemu-arm
 ${PLIST.armeb}bin/qemu-armeb
