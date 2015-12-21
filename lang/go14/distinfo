@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 22:50:36 agc Exp $
+$NetBSD: distinfo,v 1.5 2015/12/21 20:20:02 bsiegert Exp $
 
 SHA1 (go1.4.3.src.tar.gz) = 486db10dc571a55c8d795365070f66d343458c48
 RMD160 (go1.4.3.src.tar.gz) = b1fbb2805a777c8107e7c946f36a881303ac5e35
@@ -23,7 +23,7 @@ SHA1 (patch-src_go_build_build.go) = b68bc557e7b48877889c63070e9cb9d8360f40f5
 SHA1 (patch-src_net_cgo__bsd.go) = 4678fccd6956300ce55343965334fc3881383bbc
 SHA1 (patch-src_net_cgo__stub.go) = cf373587745d68e556dadf3a61956b489b4f420a
 SHA1 (patch-src_net_cgo__unix.go) = cebe897ab624aaf52bebc50d12a045d6b4ea2bc6
-SHA1 (patch-src_os_user_lookup__unix.go) = 861cf9b2b64bc314b6ee8e11411245e214717515
+SHA1 (patch-src_os_user_lookup__unix.go) = 2cb66fb1af534f45c14bded4994a00584a7cc19d
 SHA1 (patch-src_runtime_cgo_cgo.go) = 9cc88b35d12e0d52e76495e04f7fce2b78af08d5
 SHA1 (patch-src_runtime_cgo_gcc__setenv.c) = c9614b76d71e84ad46b2ce785580fdc54b261455
 SHA1 (patch-src_runtime_cgo_gcc__solaris__amd64.c) = 633d8dcc8a843e343ee2ab9edb7cfaf6f6c3865b
