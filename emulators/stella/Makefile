@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2015/04/25 14:20:47 tnn Exp $
+# $NetBSD: Makefile,v 1.46 2015/12/21 06:46:04 dbj Exp $
 
-STELLA_VERSION=	3.9.2
+STELLA_VERSION=	4.6.7
 DISTNAME=	stella-${STELLA_VERSION}-src
 PKGNAME=	stella-${STELLA_VERSION}
-PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=stella/}
 
@@ -25,7 +24,7 @@ GCC_REQD+=	3.0
 .endif
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../devel/SDL/buildlink3.mk"
+.include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"

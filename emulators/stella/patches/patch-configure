@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2015/12/21 06:46:04 dbj Exp $
+
+Recognize solaris, dragonfly, and darwin.
+
+--- configure.orig	2015-04-22 14:11:11.000000000 +0000
++++ configure
+@@ -497,7 +497,7 @@ else
+ 	echo_n "Checking hosttype... "
+ 	echo $_host_os
+ 	case $_host_os in
+-		linux* | openbsd* | freebsd* | kfreebsd* | netbsd* | bsd* | gnu0.* | sunos* | hpux* | beos*)
++		linux* | openbsd* | freebsd* | kfreebsd* | netbsd* | bsd* | gnu0.* | sunos* | hpux* | beos* | solaris* | dragonfly* | darwin*)
+ 			DEFINES="$DEFINES -DUNIX"
+ 			_host_os=unix
+ 			;;
