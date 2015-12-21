@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5088 2015/12/21 06:46:04 dbj Exp $
+$NetBSD: CHANGES-2015,v 1.5089 2015/12/21 13:25:47 mef Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8394,3 +8394,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/mediawiki to 1.26.1 [wen 2015-12-20]
 	Updated lang/ruby22-base to 2.2.4nb1 [taca 2015-12-20]
 	Updated emulators/stella to 4.6.7 [dbj 2015-12-20]
+	Updated ham/fldigi to 3.23.07.04 [mef 2015-12-21]
