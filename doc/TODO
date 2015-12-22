@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15204 2015/12/21 17:20:35 wiz Exp $
+$NetBSD: TODO,v 1.15205 2015/12/22 20:56:18 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -820,7 +820,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnucash-2.6.10
 	o gnuchess-6.2.2
 	o gnuchess-book-1.02
-	o gnupg-1.4.20
 	o gnuradio-3.7.7.1
 	o gnustep-back-0.24.1
 	o gnustep-base-1.24.8
