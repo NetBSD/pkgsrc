@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST.OpenBSD,v 1.1 2015/12/22 13:19:55 sevan Exp $
+include/ansidecl.h
+include/bfd.h
+include/bfdlink.h
+include/dis-asm.h
+include/symcat.h
+lib/libbfd.a
+lib/libbfd.la
+lib/libopcodes.a
+lib/libopcodes.la
