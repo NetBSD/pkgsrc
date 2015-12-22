@@ -1,4 +1,4 @@
-$NetBSD: patch-lib_time_update.bash,v 1.1 2015/12/10 20:04:54 bsiegert Exp $
+$NetBSD: patch-lib_time_update.bash,v 1.2 2015/12/22 20:44:40 bsiegert Exp $
 
 --- lib/time/update.bash.orig	2015-12-03 00:52:58.000000000 +0000
 +++ lib/time/update.bash
@@ -11,5 +11,3 @@ $NetBSD: patch-lib_time_update.bash,v 1.1 2015/12/10 20:04:54 bsiegert Exp $
  	echo Left workspace behind in work/.
  else
  	rm -rf work
-
-
