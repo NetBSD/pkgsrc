@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.144 2015/09/25 14:57:59 ryoon Exp $
+# $NetBSD: Makefile,v 1.143.2.2 2015/12/22 20:21:43 bsiegert Exp $
 
-DISTNAME=	qemu-2.4.0.1
+DISTNAME=	qemu-2.5.0
 CATEGORIES=	emulators
 MASTER_SITES=	http://wiki.qemu.org/download/
 EXTRACT_SUFX=	.tar.bz2
@@ -80,7 +80,7 @@ PLIST.nbd=		YES
 CONFIGURE_ARGS+=	--disable-coroutine-pool
 .endif
 
-PLIST_VARS+=		${UE_ARCHS} nbd
+PLIST_VARS+=		${UE_ARCHS} nbd ivshmem
 .for _var_ in ${USER_EMUL}
 PLIST.${_var_}=		YES
 .endfor
@@ -97,6 +97,7 @@ post-install:
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/extension.mk"
+.include "../../security/libgcrypt/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
