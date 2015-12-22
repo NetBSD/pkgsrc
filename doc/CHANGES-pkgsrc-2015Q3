@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q3,v 1.1.2.31 2015/12/18 19:51:08 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q3,v 1.1.2.32 2015/12/22 20:30:32 bsiegert Exp $
 
 Changes to the packages collection and infrastructure on the 2015Q3 branch:
 
@@ -149,4 +149,7 @@ net/bind910: security fix
 
 Pullup ticket #4873 - requested by cyber
 devel/nbpatch: security fix
+
+Pullup ticket #4876 - requested by ryoon
+emulators/qemu: security fix
 
