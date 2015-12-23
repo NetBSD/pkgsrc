@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 17:59:32 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/12/23 12:39:41 joerg Exp $
 bin/zphoto
-${PLIST.wx}bin/wxzphoto
 share/locale/ja/LC_MESSAGES/zphoto.mo
 share/locale/ja_JP.SJIS/LC_MESSAGES/zphoto.mo
 share/zphoto/doc/images/wxzphoto-linux-mini.png
