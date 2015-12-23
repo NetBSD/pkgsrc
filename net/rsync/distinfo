@@ -1,11 +1,8 @@
-$NetBSD: distinfo,v 1.43 2015/11/13 13:41:39 wiz Exp $
+$NetBSD: distinfo,v 1.44 2015/12/23 19:53:24 ryoon Exp $
 
-SHA1 (rsync-3.1.1.tar.gz) = c84faba04f721d393feccfa0476bfeed9b5b5250
-RMD160 (rsync-3.1.1.tar.gz) = de7ad955cb05d481a963aa30423790f3d82efe7b
-SHA512 (rsync-3.1.1.tar.gz) = ec0e46ff532a09a711282aaa822f5f1c133593ee6c1c474acd67284619236e6a202f0f369d3e67a95ceb3a3b1c39ea7fb609d6d6fb950f3be6e0f6372e903e21
-Size (rsync-3.1.1.tar.gz) = 890124 bytes
+SHA1 (rsync-3.1.2.tar.gz) = 0d4c7fb7fe3fc80eeff922a7c1d81df11dbb8a1a
+RMD160 (rsync-3.1.2.tar.gz) = f7d6c0c9752af8d9eb933cffc6032c1763490a04
+SHA512 (rsync-3.1.2.tar.gz) = 4c55fd69f436ead0cb5a0b7c6fdfef9bb28ddb9c63534eb619e756b118d5b08cfc5e696498650932c86e865b37e06633da947e6720ca0c27ed5c034313ae208b
+Size (rsync-3.1.2.tar.gz) = 892724 bytes
 SHA1 (patch-Makefile.in) = df3479e93de86524a391433a3d6e6108a797835a
 SHA1 (patch-ab) = 98aa07a50314e3309b48f803d6febb1138eae1f2
-SHA1 (patch-config.h.in) = 81c927bc687a0194e1a227e6ff02181d638498bd
-SHA1 (patch-configure.ac) = 1df4fd9a67d08790eb7d433eadbc9b5590ba1257
-SHA1 (patch-configure.sh) = 49d8ddea4669d14ba77625d33255df0072f5c3e4
