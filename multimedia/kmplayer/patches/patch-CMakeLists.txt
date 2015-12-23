@@ -1,0 +1,12 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2015/12/23 12:41:47 joerg Exp $
+
+--- CMakeLists.txt.orig	2015-12-22 17:31:21.000000000 +0000
++++ CMakeLists.txt
+@@ -57,6 +57,7 @@ if(NOT WIN32)
+ 
+ endif(NOT WIN32)
+ 
++include(CheckIncludeFiles)
+ 
+ check_include_files(stdint.h HAVE_STDINT_H)
+ 
