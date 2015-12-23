@@ -1,4 +1,4 @@
-$NetBSD: patch-mozilla_config_system-headers,v 1.6 2015/09/07 15:19:10 ryoon Exp $
+$NetBSD: patch-mozilla_config_system-headers,v 1.7 2015/12/23 12:55:02 ryoon Exp $
 
 --- mozilla/config/system-headers.orig	2015-08-13 14:57:14.000000000 +0000
 +++ mozilla/config/system-headers
@@ -10,14 +10,6 @@ $NetBSD: patch-mozilla_config_system-headers,v 1.6 2015/09/07 15:19:10 ryoon Exp
  atlcom.h
  atlconv.h
  atlctl.cpp
-@@ -471,6 +470,7 @@ freetype/ftbitmap.h
- freetype/ftxf86.h
- freetype.h
- ftcache.h
-+ftfntfmt.h
- ftglyph.h
- ftsynth.h
- ftoutln.h
 @@ -636,6 +636,7 @@ libgnomevfs/gnome-vfs-mime-handlers.h
  libgnomevfs/gnome-vfs-mime-utils.h
  libgnomevfs/gnome-vfs-ops.h
