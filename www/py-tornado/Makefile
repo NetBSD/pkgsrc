@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2015/11/19 01:32:30 wen Exp $
+# $NetBSD: Makefile,v 1.17 2015/12/23 12:43:50 joerg Exp $
 
 DISTNAME=	tornado-4.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -32,6 +32,9 @@ DEPENDS+=	${PYPKGPREFIX}-singledispatch>0:../../devel/py-singledispatch
 .if "${PYPKGPREFIX}" == "py33"
 DEPENDS+=	${PYPKGPREFIX}-certifi-[0-9]*:../../security/py-certifi
 DEPENDS+=	${PYPKGPREFIX}-singledispatch>0:../../devel/py-singledispatch
+.endif
+.if "${PYPKGPREFIX}" != "py35"
+PLIST.requires=	yes
 .endif
 
 .include "../../lang/python/egg.mk"
