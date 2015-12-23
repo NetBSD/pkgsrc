@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/12/01 13:11:49 jaapb Exp $
+# $NetBSD: Makefile,v 1.2 2015/12/23 12:38:56 joerg Exp $
 
 DISTNAME=	telepathy-qt-0.9.6.1
 CATEGORIES=	chat
@@ -17,10 +17,16 @@ PKGCONFIG_OVERRIDE+=	TelepathyQt/TelepathyQt.pc.in
 PKGCONFIG_OVERRIDE+=	TelepathyQt/TelepathyQtService.pc.in
 PKGCONFIG_OVERRIDE+=	TelepathyQt/Farstream/TelepathyQtFarstream.pc.in
 
+
+PYTHON_FOR_BUILD_ONLY=	yes
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 0.24.1
+BUILD_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+
 .include "../../chat/telepathy-farstream/buildlink3.mk"
 BUILDLINK_API_DEPENDS.telepathy-glib+=	telepathy-glib>=0.18.0
 .include "../../chat/telepathy-glib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../multimedia/gstreamer1/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
