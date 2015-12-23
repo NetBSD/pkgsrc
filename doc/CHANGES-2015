@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5094 2015/12/23 12:57:46 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.5095 2015/12/23 12:58:49 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8400,3 +8400,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/mikutter to 3.2.12 [tsutsui 2015-12-22]
 	Updated security/gnupg to 1.4.20 [ryoon 2015-12-22]
 	Updated mail/thunderbird to 38.5.0 [ryoon 2015-12-23]
+	Updated mail/thunderbird-l10n to 38.5.0 [ryoon 2015-12-23]
