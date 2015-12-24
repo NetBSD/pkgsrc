@@ -1,9 +1,21 @@
-$NetBSD: patch-Makefile.in,v 1.2 2014/04/30 16:27:04 marino Exp $
+$NetBSD: patch-Makefile.in,v 1.3 2015/12/24 23:54:07 dholland Exp $
 
-  Support DESTDIR and install files in standard locations
+
+ - Don't hide the c-posix-signals output in a log file where one needs
+access to the build machine to inspect it. Use tee instead.
+ - Support DESTDIR and install files in standard locations
 
 --- Makefile.in.orig	2012-05-10 13:32:06.000000000 +0000
 +++ Makefile.in
+@@ -107,7 +107,7 @@ $(C-POSIX_GENERATED): c-posix
+ posix-implementation-ok_signals.ads: c-posix-signals
+ 	rm -f posix-implementations-ok_signals.ads
+ 	# See file "c-posix-signals.log" for results of this step.
+-	./c-posix-signals -nodefaults > c-posix-signals.log 2>&1
++	./c-posix-signals -nodefaults 2>&1 | tee c-posix-signals.log 
+ 
+ #
+ # Some other Ada source files are tailored to the
 @@ -187,8 +187,12 @@ distclean:
  
  # install floristlib
