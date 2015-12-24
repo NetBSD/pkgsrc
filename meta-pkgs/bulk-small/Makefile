@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2015/09/12 16:50:43 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2015/12/24 05:54:10 richard Exp $
 
-DISTNAME=	bulk-small-20140101
-PKGREVISION=	2
+DISTNAME=	bulk-small-20151224
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -133,7 +132,8 @@ BUILD_DEPENDS+=	readline-[0-9]*:../../devel/readline
 BUILD_DEPENDS+=	zlib-[0-9]*:../../devel/zlib
 BUILD_DEPENDS+=	gd-[0-9]*:../../graphics/gd
 BUILD_DEPENDS+=	giflib-[0-9]*:../../graphics/giflib
-BUILD_DEPENDS+=	jpeg-[0-9]*:../../graphics/jpeg
+.include "../../mk/jpeg.buildlink3.mk"
+BUILDLINK_DEPMETHOD.${JPEG_DEFAULT}=	build
 BUILD_DEPENDS+=	png-[0-9]*:../../graphics/png
 BUILD_DEPENDS+=	tiff-[0-9]*:../../graphics/tiff
 BUILD_DEPENDS+=	gnutls-[0-9]*:../../security/gnutls
