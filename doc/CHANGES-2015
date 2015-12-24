@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5096 2015/12/23 19:54:06 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.5097 2015/12/24 00:54:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8402,3 +8402,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mail/thunderbird to 38.5.0 [ryoon 2015-12-23]
 	Updated mail/thunderbird-l10n to 38.5.0 [ryoon 2015-12-23]
 	Updated net/rsync to 3.1.2 [ryoon 2015-12-23]
+	Updated net/youtube-dl to 20151223 [wiz 2015-12-24]
