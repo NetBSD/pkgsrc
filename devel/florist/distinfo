@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.8 2015/11/03 03:27:26 agc Exp $
+$NetBSD: distinfo,v 1.9 2015/12/24 23:54:07 dholland Exp $
 
 SHA1 (florist-gpl-2012-src.tgz) = 9d0c2dfbb565a92830cb5ea5894bd64d67993061
 RMD160 (florist-gpl-2012-src.tgz) = 53e759e65647c87f0d1b691dd0830e56d77c1fab
 SHA512 (florist-gpl-2012-src.tgz) = 1742756736460f3ca2829c7465a568c177c74ea9417a7bb3e609903672f2fb7b0cbf3f0598bd381c1fd49755b83837583df753e53a03da86ae797028b72c97c5
 Size (florist-gpl-2012-src.tgz) = 224141 bytes
-SHA1 (patch-Makefile.in) = 3052fdef8854155dbc5235490ebb594101da4c9f
+SHA1 (patch-Makefile.in) = f34fad0bb90d39f35aca8af6a44cf472addea4ee
 SHA1 (patch-c-posix-signals.c) = 151ccbad3f18e6a1333291db3d32499075dc141a
 SHA1 (patch-c-posix.c) = c6da2f4614af5ae0b96a70a93b5d308a3238c9c2
 SHA1 (patch-configure) = 72e1add2e6c2af1ff8b2686e5e5f92511e4dcbfa
