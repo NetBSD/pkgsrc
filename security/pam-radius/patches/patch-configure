@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2015/12/24 23:40:27 dholland Exp $
+
+Fix shell conditional.
+
+--- configure~	2014-12-17 22:00:59.000000000 +0000
++++ configure
+@@ -5261,7 +5261,7 @@ fi
+ HOSTINFO=$host
+ 
+ 
+-if test "x$werror" == "xyes"; then
++if test "x$werror" = "xyes"; then
+   CFLAGS="-Werror $CFLAGS"
+ fi
+ 
