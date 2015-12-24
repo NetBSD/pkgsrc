@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15206 2015/12/23 09:50:16 wiz Exp $
+$NetBSD: TODO,v 1.15207 2015/12/24 00:49:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -488,6 +488,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o blur6ex-0.3.462
 	o bmkdep-20140112
 	o boolean-7.1
+	o boost-1.60.0
 	o bos-2.5
 	o boson-0.13
 	o botan-1.10.9
@@ -518,6 +519,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cddbd-1.5.2
 	o cdk-5.0.20120323
 	o cdrkit-1.1.10
+	o cdrtools-3.02a04
 	o cfengine3-3.7.0
 	o cflow-mode-1.4
 	o cgal-4.6.1
@@ -605,6 +607,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o drivel-3.0.5
 	o dropbear-2015.67
 	o drupal-8.0
+	o duplicity-0.7.06
 	o dvdstyler-2.9.3
 	o e2fsprogs-1.42.12 [wip]
 	o easymenu-0.7.2p1
@@ -672,6 +675,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o evolution-mapi-0.32.2 [GNOME 2.32]
 	o ex-20050325
 	o exaile-3.4.4
+	o exiftool-10.08
 	o exim-4.86
 	o exmh-2.8.0
 	o ezmlm-idx-7.2.0 [schmonz]
@@ -884,6 +888,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hevea-2.24
 	o heyu-2.9.0
 	o hiawatha-9.5
+	o highlight-3.25
 	o honeyd-1.5c
 	o horde-5.2.7
 	o howm-1.4.2
@@ -1006,6 +1011,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o leafpad-0.8.18.1
 	o lft-3.73
 	o lgeneral-1.2.3
+	o libXi-1.7.6 [wiz]
 	o libasyncns-0.8
 	o libbpg-0.9.5
 	o libburn-1.4.0
@@ -1108,6 +1114,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mg-20150323
 	o mgetty+sendfax-1.1.35
 	o micro_httpd-20140814
+	o miller-3.1.2
 	o milter-greylist-4.5.14
 	o milter-regex-2.0
 	o mime-construct-1.11
@@ -1119,6 +1126,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mit-scheme-bin-9.2
 	o mknmz-wwwoffle-0.7.2
 	o mkvtoolnix-8.4.0
+	o mlterm-3.6.2
 	o moc-2.5.0
 	o modular-xorg-server-1.18.0
 	o modular-xorg-xquartz-1.17.4
@@ -1230,7 +1238,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Bytes-Random-Secure-0.29
 	o p5-CDB_File-0.98
 	o p5-CDDB-2.00
-	o p5-CGI-4.23
+	o p5-CGI-4.25
 	o p5-CPANPLUS-2.101
 	o p5-Captcha-reCAPTCHA-0.97
 	o p5-Catalyst-DispatchType-Regex-5.90035
@@ -1511,6 +1519,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-ptt-1.10.2
 	o py-quixote-2.8
 	o py-reportlab-3.0
+	o py-requests-2.9.0
 	o py-requests-toolbelt-0.5.1
 	o py-rope-0.9.4
 	o py-serpent-1.11
@@ -1559,6 +1568,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o rc-1.7.4
 	o rdp-1.6
 	o re-alpine-2.03 [pkg/47802]
+	o redis-3.0.6
 	o regionset-0.2
 	o relay-ctrl-3.2
 	o remind-03.01.15
@@ -1580,6 +1590,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o rp-pppoe-3.11
 	o rrdtool-1.5.5
 	o rsnapshot-1.4.0
+	o rspamd-1.0.11
 	o rtcw-1.41.3
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o rubber-1.2
@@ -1679,9 +1690,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o stgit-0.16
 	o stlport-4.6.2
 	o stow-2.2.2
-	o strace-4.10
+	o strace-4.11
 	o stratagus-2.2.5.5
 	o streamtuner-2.1.4
+	o stunnel-5.28
 	o subtitleeditor-0.52.1
 	o sudo-1.8.15
 	o superlu-5.0
@@ -1689,7 +1701,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o swapd-1.0.5
 	o swath-0.5.2
 	o swfdec-gnome-2.30.1
-	o swi-prolog-7.1.37
+	o swi-prolog-7.3.14
 	o swi-prolog-jpl-7.1.37
 	o swi-prolog-lite-7.1.37
 	o swi-prolog-packages-7.1.37
@@ -1841,6 +1853,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xmonad-0.11.1
 	o xmonad-contrib-0.11.4
 	o xnap-2.5r3
+	o xorg-cf-files-1.0.6 [wiz]
 	o xorp-1.8.5
 	o xosview-1.16
 	o xpad-4.5.0
