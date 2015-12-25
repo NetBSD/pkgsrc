@@ -94,7 +94,7 @@ func (ck *distinfoLinesChecker) checkPatchSha1(line *Line, patchFname, distinfoS
 	}
 
 	h := sha1.New()
-	netbsd := []byte("$NetBSD")
+	netbsd := []byte("$" + "NetBSD")
 	for _, patchLine := range bytes.SplitAfter(patchBytes, []byte("\n")) {
 		if !bytes.Contains(patchLine, netbsd) {
 			h.Write(patchLine)
