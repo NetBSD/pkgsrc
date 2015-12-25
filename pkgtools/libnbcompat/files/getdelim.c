@@ -1,5 +1,5 @@
-/*	$NetBSD: getdelim.c,v 1.1 2015/04/19 12:22:14 tnn Exp $	*/
-/*	$NetBSD-src: getline.c,v 1.2 2014/09/16 17:23:50 christos Exp $	*/
+/*	$NetBSD: getdelim.c,v 1.2 2015/12/25 20:12:46 joerg Exp $	*/
+/*	NetBSD-src: getline.c,v 1.2 2014/09/16 17:23:50 christos Exp 	*/
 
 /*-
  * Copyright (c) 2011 The NetBSD Foundation, Inc.
