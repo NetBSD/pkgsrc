@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.5 2015/12/13 00:50:39 asau Exp $
+$NetBSD: distinfo,v 1.6 2015/12/25 20:12:16 joerg Exp $
 
 SHA1 (GE2011.11p1.tar.gz) = 8935cc015e9de87d000b7e1814a1359b3cd6f3ca
 RMD160 (GE2011.11p1.tar.gz) = 535f453ace86bfa067cebad2b2b37d7e730aa779
 Size (GE2011.11p1.tar.gz) = 14305562 bytes
 SHA1 (patch-ad) = 0da714b6f9f2dfb0d952f84863a76fdac23aed8e
 SHA1 (patch-ag) = f33c490bbb93c6d37ef1937210bff7b92cf19207
-SHA1 (patch-ak) = e73a58e547b8401eff27a4635629577767234f0f
-SHA1 (patch-am) = d9425eda7027a43921aa43c7a2428bc1236b4bd8
+SHA1 (patch-ak) = d96eb75285ca793d96ae33a86c25b6f0e8f2d1b7
+SHA1 (patch-am) = 954f3bc8093c52910c0cae66423d4d4042d04043
 SHA1 (patch-at) = d29e29e4915f8015618a4ebc5b17231c2bcc4bf5
-SHA1 (patch-bd) = eaa18b6234b8fe3f0046766df56afab938d0f7ee
+SHA1 (patch-bd) = 47e1a4f61916ec7038ed5ce9b8beedb0527c04e9
 SHA1 (patch-bl) = d13fd8f276093304fcd34769714cbcce95012809
 SHA1 (patch-bm) = a760a1f06ab301acb1f0dcb88151c308f381ab60
 SHA1 (patch-daemons_common_procfs.c) = cdcbf58cb3278d5bc718fd235aaa76a10e938002

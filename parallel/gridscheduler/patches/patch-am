@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.2 2015/12/13 00:50:39 asau Exp $
+$NetBSD: patch-am,v 1.3 2015/12/25 20:12:16 joerg Exp $
 
 --- source/aimk.orig	2012-05-23 19:05:00.000000000 +0000
 +++ source/aimk
@@ -11,7 +11,21 @@ $NetBSD: patch-am,v 1.2 2015/12/13 00:50:39 asau Exp $
  
  # JUTI Targets
  set JUTI_ALL  = juti_all
-@@ -1334,10 +1334,10 @@ case NETBSD_*:
+@@ -1301,11 +1301,11 @@ case FREEBSD_*:
+    set CFLAGS   = "$OFLAG -Wall -DFREEBSD -D$BUILDARCH -DGETHOSTBYNAME_M -DGETHOSTBYADDR_M $DEBUG_FLAG $CFLAGS -I/usr/X11R6/include"
+    set DEPEND_FLAGS = "$CFLAGS $XMTINCD"
+    set NOERR_CFLAG = "-Wno-error"
+-   set LFLAGS   = "$DEBUG_FLAG $LFLAGS -export-dynamic"
++   set LFLAGS   = "$DEBUG_FLAG $LFLAGS -Wl,-export-dynamic"
+    set LIBS     = "$LIBS -lkvm"
+    set SHAREDLD = $CC
+    set SHARED_CFLAGS = "-fPIC"
+-   set SHARED_LFLAGS = "$SHARED_LFLAGS -L. -shared -export-dynamic"
++   set SHARED_LFLAGS = "$SHARED_LFLAGS -L. -shared"
+    set AUTHLIBS = "-lcrypt -lpam"
+  
+    set XMTDEF   = ""
+@@ -1334,20 +1334,20 @@ case NETBSD_*:
     set CXX      = g++
     set DLLIB    = ""
     set PTHRDSFLAGS = "-D_REENTRANT -D__USE_REENTRANT"
@@ -20,11 +34,12 @@ $NetBSD: patch-am,v 1.2 2015/12/13 00:50:39 asau Exp $
     set DEPEND_FLAGS = "$CFLAGS $XMTINCD"
     set NOERR_CFLAG = "-Wno-error"
 -   set LFLAGS   = "$DEBUG_FLAG $LFLAGS -export-dynamic"
-+   set LFLAGS   = "$DEBUG_FLAG $LFLAGS -export-dynamic -L${LOCALBASE}/lib -R${LOCALBASE}/lib"
++   set LFLAGS   = "$DEBUG_FLAG $LFLAGS -Wl,-export-dynamic -L${LOCALBASE}/lib -R${LOCALBASE}/lib"
     set LIBS     = "$LIBS -lkvm"
     set SHAREDLD = $CC
     set SHARED_CFLAGS = "-fPIC"
-@@ -1345,9 +1345,9 @@ case NETBSD_*:
+-   set SHARED_LFLAGS = "$SHARED_LFLAGS -L. -shared -export-dynamic"
++   set SHARED_LFLAGS = "$SHARED_LFLAGS -L. -shared"
     set AUTHLIBS = "-lcrypt -lpam"
  
     set XMTDEF   = ""
