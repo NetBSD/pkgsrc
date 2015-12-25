@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2015/11/04 00:35:17 agc Exp $
+$NetBSD: distinfo,v 1.8 2015/12/25 02:55:16 dholland Exp $
 
 SHA1 (omniORB-4.1.7.tar.bz2) = e039eba5f63458651cfdc8a67c664c1ce4134540
 RMD160 (omniORB-4.1.7.tar.bz2) = fddd28888a8f735be0d47a487f4891325f8c3c6c
@@ -9,3 +9,4 @@ SHA1 (patch-ab) = 4b20f8c5a4d34259d9a5810c7642a71822626c2c
 SHA1 (patch-ac) = 797e6fb2dba6b96a2f55008196f84c95101367ed
 SHA1 (patch-ad) = 8678d9e3aebafdd41cba62bb980e89c020feab80
 SHA1 (patch-ae) = cdf99c4aa901c69fc4f22321d6616a7694264be8
+SHA1 (patch-include_omniORB4_CORBA__sysdep__auto.h) = 009aac236a345f21120b991d685e22e0022c6d58
