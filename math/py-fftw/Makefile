@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/12/05 21:25:49 adam Exp $
+# $NetBSD: Makefile,v 1.3 2015/12/25 20:06:47 joerg Exp $
 
 DISTNAME=	PyFFTW3-0.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Py//S/FFTW/fftw/S/3//}
@@ -14,6 +14,8 @@ LICENSE=	gnu-gpl-v3
 USE_LANGUAGES=	c
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # as of 0.2.1
+
+MAKE_ENV+=	FFTW_PATH=${PREFIX}/lib
 
 .include "../../lang/python/distutils.mk"
 .include "../../math/fftw/buildlink3.mk"
