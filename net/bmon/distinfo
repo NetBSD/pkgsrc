@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 17:46:57 bsiegert Exp $
+$NetBSD: distinfo,v 1.6 2015/12/25 20:08:38 joerg Exp $
 
 SHA1 (bmon-3.8.tar.gz) = f10ddfebf4b6c2fcdeea9ccd3027dd5291cd6838
 RMD160 (bmon-3.8.tar.gz) = eba503ff9d5bedc3901ab546193effcef8fbb298
 SHA512 (bmon-3.8.tar.gz) = 629a8678bf76e2dab125a08b334925f953e3ddd5ee0b2b865f157013a5462a5fa8e1bc76920487a03f5afdf12143c4a2cc1c6ab51d514119ca9754cc67117d84
 Size (bmon-3.8.tar.gz) = 195437 bytes
 SHA1 (patch-examples_Makefile.in) = f7dab570d8b141226f70774aed3a5f119793229f
+SHA1 (patch-src_in__sysctl.c) = 71c0a11b7e19e0de0eaac281f94e18835aeb532e
