@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2013/04/06 13:02:33 rodent Exp $
+# $NetBSD: Makefile,v 1.11 2015/12/25 01:18:10 taca Exp $
 #
 
 .include "../../www/phraseanet/Makefile.common"
@@ -10,6 +10,8 @@ PECL_LEGACY_VERSION_SCHEME=	yes
 EXTRACT_ELEMENTS=	${DISTNAME}/bin/src/php_phrasea2
 EXTRACT_SUFX=		.tar.gz
 USE_LANGUAGES=		c c++
+
+PHP_VERSIONS_ACCEPTED=	55 56
 
 .include "../../lang/php/ext.mk"
 
