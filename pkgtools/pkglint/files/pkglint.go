@@ -281,7 +281,7 @@ func checklineTrailingWhitespace(line *Line) {
 func checklineRcsid(line *Line, prefixRe, suggestedPrefix string) bool {
 	defer tracecall("checklineRcsid", prefixRe, suggestedPrefix)()
 
-	if !matches(line.text, `^`+prefixRe+`\$NetBSD(?::[^\$]+)?\$$`) {
+	if !matches(line.text, `^`+prefixRe+`[$]NetBSD(?::[^\$]+)?\$$`) {
 		line.errorf("Expected %q.", suggestedPrefix+"$"+"NetBSD$")
 		line.explain(
 			"Several files in pkgsrc must contain the CVS Id, so that their current",
