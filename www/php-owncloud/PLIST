@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.34 2015/11/20 14:34:24 joerg Exp $
+@comment $NetBSD: PLIST,v 1.35 2015/12/25 23:06:41 ryoon Exp $
 share/owncloud/.htaccess
-share/owncloud/.mailmap
 share/owncloud/.tag
 share/owncloud/.user.ini
 share/owncloud/3rdparty/LICENSE INFO
@@ -1664,9 +1663,9 @@ share/owncloud/3rdparty/rackspace/php-opencloud/.coveralls.yml
 share/owncloud/3rdparty/rackspace/php-opencloud/CONTRIBUTING.md
 share/owncloud/3rdparty/rackspace/php-opencloud/LICENSE
 share/owncloud/3rdparty/rackspace/php-opencloud/composer.json
-share/owncloud/3rdparty/rackspace/php-opencloud/docs/changelog/1.7.0.md
+share/owncloud/3rdparty/rackspace/php-opencloud/docs/changelog/1.${OS_VERSION}.md
 share/owncloud/3rdparty/rackspace/php-opencloud/docs/changelog/1.9.0.md
-share/owncloud/3rdparty/rackspace/php-opencloud/docs/changelog/Upgrading to 1.7.0.md
+share/owncloud/3rdparty/rackspace/php-opencloud/docs/changelog/Upgrading to 1.${OS_VERSION}.md
 share/owncloud/3rdparty/rackspace/php-opencloud/docs/generate.sh
 share/owncloud/3rdparty/rackspace/php-opencloud/docs/getting-started-openstack.md
 share/owncloud/3rdparty/rackspace/php-opencloud/docs/getting-started.md
@@ -2365,7 +2364,7 @@ share/owncloud/3rdparty/sabre/dav/lib/DAVACL/Property/AclRestrictions.php
 share/owncloud/3rdparty/sabre/dav/lib/DAVACL/Property/CurrentUserPrivilegeSet.php
 share/owncloud/3rdparty/sabre/dav/lib/DAVACL/Property/Principal.php
 share/owncloud/3rdparty/sabre/dav/lib/DAVACL/Property/SupportedPrivilegeSet.php
-share/owncloud/3rdparty/sabre/event/ChangeLog.md
+share/owncloud/3rdparty/sabre/event/CHANGELOG.md
 share/owncloud/3rdparty/sabre/event/LICENSE
 share/owncloud/3rdparty/sabre/event/composer.json
 share/owncloud/3rdparty/sabre/event/lib/EventEmitter.php
@@ -5446,23 +5445,13 @@ share/owncloud/apps/files_external/tests/js/mountsfilelistSpec.js
 share/owncloud/apps/files_external/tests/js/settingsSpec.js
 share/owncloud/apps/files_external/tests/legacydependencycheckpolyfilltest.php
 share/owncloud/apps/files_external/tests/owncloudfunctions.php
+share/owncloud/apps/files_external/tests/personalmounttest.php
 share/owncloud/apps/files_external/tests/service/backendservicetest.php
 share/owncloud/apps/files_external/tests/service/globalstoragesservicetest.php
 share/owncloud/apps/files_external/tests/service/storagesservicetest.php
 share/owncloud/apps/files_external/tests/service/userglobalstoragesservicetest.php
 share/owncloud/apps/files_external/tests/service/userstoragesservicetest.php
 share/owncloud/apps/files_external/tests/storageconfigtest.php
-share/owncloud/apps/files_locking/CONTRIBUTING.md
-share/owncloud/apps/files_locking/appinfo/app.php
-share/owncloud/apps/files_locking/appinfo/info.xml
-share/owncloud/apps/files_locking/img/app.svg
-share/owncloud/apps/files_locking/lib/lock.php
-share/owncloud/apps/files_locking/lib/lockingwrapper.php
-share/owncloud/apps/files_locking/tests/LockTest.php
-share/owncloud/apps/files_locking/tests/LockingWrapperTest.php
-share/owncloud/apps/files_locking/tests/bootstrap.php
-share/owncloud/apps/files_locking/tests/data/test.txt
-share/owncloud/apps/files_locking/tests/phpunit.xml
 share/owncloud/apps/files_pdfviewer/CONTRIBUTING.md
 share/owncloud/apps/files_pdfviewer/appinfo/app.php
 share/owncloud/apps/files_pdfviewer/appinfo/info.xml
@@ -5470,6 +5459,7 @@ share/owncloud/apps/files_pdfviewer/appinfo/routes.php
 share/owncloud/apps/files_pdfviewer/appinfo/version
 share/owncloud/apps/files_pdfviewer/controller/displaycontroller.php
 share/owncloud/apps/files_pdfviewer/css/style.css
+share/owncloud/apps/files_pdfviewer/css/viewer.css
 share/owncloud/apps/files_pdfviewer/img/app.png
 share/owncloud/apps/files_pdfviewer/img/app.svg
 share/owncloud/apps/files_pdfviewer/img/toolbarButton-secondaryToolbarClose.svg
@@ -6104,6 +6094,7 @@ share/owncloud/apps/files_sharing/tests/external/cache.php
 share/owncloud/apps/files_sharing/tests/external/managertest.php
 share/owncloud/apps/files_sharing/tests/external/scannertest.php
 share/owncloud/apps/files_sharing/tests/externalstorage.php
+share/owncloud/apps/files_sharing/tests/groupetagpropagation.php
 share/owncloud/apps/files_sharing/tests/grouppropagationmanager.php
 share/owncloud/apps/files_sharing/tests/helper.php
 share/owncloud/apps/files_sharing/tests/js/appSpec.js
@@ -6115,6 +6106,7 @@ share/owncloud/apps/files_sharing/tests/locking.php
 share/owncloud/apps/files_sharing/tests/middleware/sharingcheckmiddleware.php
 share/owncloud/apps/files_sharing/tests/migrationtest.php
 share/owncloud/apps/files_sharing/tests/permissions.php
+share/owncloud/apps/files_sharing/tests/propagationtestcase.php
 share/owncloud/apps/files_sharing/tests/server2server.php
 share/owncloud/apps/files_sharing/tests/share.php
 share/owncloud/apps/files_sharing/tests/sharedmount.php
@@ -7777,8 +7769,7 @@ share/owncloud/apps/updater/controller/updatecontroller.php
 share/owncloud/apps/updater/css/updater.css
 share/owncloud/apps/updater/img/app.svg
 share/owncloud/apps/updater/js/3rdparty/angular.js
-share/owncloud/apps/updater/js/app.js
-share/owncloud/apps/updater/js/controllers.js
+share/owncloud/apps/updater/js/updater.js
 share/owncloud/apps/updater/l10n/ar.php
 share/owncloud/apps/updater/l10n/ast.php
 share/owncloud/apps/updater/l10n/az.js
@@ -8288,6 +8279,9 @@ share/owncloud/apps/user_ldap/tests/integration/data/avatar-valid.jpg
 share/owncloud/apps/user_ldap/tests/integration/exceptionOnLostConnection.php
 share/owncloud/apps/user_ldap/tests/integration/fakemanager.php
 share/owncloud/apps/user_ldap/tests/integration/lib/IntegrationTestAccessGroupsMatchFilter.php
+share/owncloud/apps/user_ldap/tests/integration/lib/integrationtestbackupserver.php
+share/owncloud/apps/user_ldap/tests/integration/lib/integrationtestcountusersbyloginname.php
+share/owncloud/apps/user_ldap/tests/integration/lib/integrationtestfetchusersbyloginname.php
 share/owncloud/apps/user_ldap/tests/integration/lib/integrationtestpaging.php
 share/owncloud/apps/user_ldap/tests/integration/lib/integrationtestuserhome.php
 share/owncloud/apps/user_ldap/tests/integration/lib/user/IntegrationTestUserAvatar.php
@@ -8386,6 +8380,7 @@ share/owncloud/core/css/multiselect.css
 share/owncloud/core/css/share.css
 share/owncloud/core/css/styles.css
 share/owncloud/core/css/tooltip.css
+share/owncloud/core/doc/admin/_images/2-updates.png
 share/owncloud/core/doc/admin/_images/add_storage.png
 share/owncloud/core/doc/admin/_images/amazons3.png
 share/owncloud/core/doc/admin/_images/android_custom_1.png
@@ -8413,6 +8408,7 @@ share/owncloud/core/doc/admin/_images/android_custom_9.png
 share/owncloud/core/doc/admin/_images/antivirus-app.png
 share/owncloud/core/doc/admin/_images/antivirus-config.png
 share/owncloud/core/doc/admin/_images/antivirus-daemon-socket.png
+share/owncloud/core/doc/admin/_images/antivirus-daemon.png
 share/owncloud/core/doc/admin/_images/antivirus-executable.png
 share/owncloud/core/doc/admin/_images/antivirus-logging.png
 share/owncloud/core/doc/admin/_images/app-sharepoint-enable.png
@@ -8512,21 +8508,24 @@ share/owncloud/core/doc/admin/_images/files-drop-4.png
 share/owncloud/core/doc/admin/_images/files-drop-5.png
 share/owncloud/core/doc/admin/_images/files-drop-6.png
 share/owncloud/core/doc/admin/_images/files-drop-7.png
-share/owncloud/core/doc/admin/_images/files_locking_app.png
 share/owncloud/core/doc/admin/_images/ftp.png
 share/owncloud/core/doc/admin/_images/google-drive.png
 share/owncloud/core/doc/admin/_images/google-drive1.png
 share/owncloud/core/doc/admin/_images/google-drive10.png
 share/owncloud/core/doc/admin/_images/google-drive11.png
+share/owncloud/core/doc/admin/_images/google-drive12.png
+share/owncloud/core/doc/admin/_images/google-drive13.png
 share/owncloud/core/doc/admin/_images/google-drive2.png
 share/owncloud/core/doc/admin/_images/google-drive3.png
 share/owncloud/core/doc/admin/_images/google-drive4.png
 share/owncloud/core/doc/admin/_images/google-drive5.png
 share/owncloud/core/doc/admin/_images/google-drive6.png
 share/owncloud/core/doc/admin/_images/google-drive8.png
-share/owncloud/core/doc/admin/_images/install-wizard-2.png
-share/owncloud/core/doc/admin/_images/install-wizard-3.png
-share/owncloud/core/doc/admin/_images/install-wizard.png
+share/owncloud/core/doc/admin/_images/google-drive9.png
+share/owncloud/core/doc/admin/_images/install-wizard-a.png
+share/owncloud/core/doc/admin/_images/install-wizard-a1.png
+share/owncloud/core/doc/admin/_images/install-wizard-a2.png
+share/owncloud/core/doc/admin/_images/install-wizard-a4.png
 share/owncloud/core/doc/admin/_images/ios-p12-2.png
 share/owncloud/core/doc/admin/_images/ios-p12-3.png
 share/owncloud/core/doc/admin/_images/ios-p12-4.png
@@ -8626,6 +8625,7 @@ share/owncloud/core/doc/admin/_images/sharing-files-1.png
 share/owncloud/core/doc/admin/_images/shib-gui1.png
 share/owncloud/core/doc/admin/_images/shib-gui4.png
 share/owncloud/core/doc/admin/_images/shib-gui5.png
+share/owncloud/core/doc/admin/_images/shib-gui6.png
 share/owncloud/core/doc/admin/_images/shibboleth-personal.png
 share/owncloud/core/doc/admin/_images/skeleton-files.png
 share/owncloud/core/doc/admin/_images/skeleton-files1.png
@@ -8633,14 +8633,9 @@ share/owncloud/core/doc/admin/_images/smb.png
 share/owncloud/core/doc/admin/_images/smtp-config-php-sendmail.png
 share/owncloud/core/doc/admin/_images/smtp-config-smtp.png
 share/owncloud/core/doc/admin/_images/smtp-config-wizard.png
-share/owncloud/core/doc/admin/_images/transactional-locking-1.png
-share/owncloud/core/doc/admin/_images/transactional-locking-2.png
-share/owncloud/core/doc/admin/_images/ucs-app-center-install.png
-share/owncloud/core/doc/admin/_images/ucs-app-center-module.png
 share/owncloud/core/doc/admin/_images/ucsint.png
 share/owncloud/core/doc/admin/_images/ucsint1.png
 share/owncloud/core/doc/admin/_images/ucsint2.png
-share/owncloud/core/doc/admin/_images/untrusted-domain.png
 share/owncloud/core/doc/admin/_images/updater-1.png
 share/owncloud/core/doc/admin/_images/updater-10.png
 share/owncloud/core/doc/admin/_images/updater-11.png
@@ -8649,6 +8644,10 @@ share/owncloud/core/doc/admin/_images/updater-3.png
 share/owncloud/core/doc/admin/_images/updater-7.png
 share/owncloud/core/doc/admin/_images/updater-8.png
 share/owncloud/core/doc/admin/_images/updater-9.png
+share/owncloud/core/doc/admin/_images/upgrade-1.png
+share/owncloud/core/doc/admin/_images/upgrade-2.png
+share/owncloud/core/doc/admin/_images/upgrade-3.png
+share/owncloud/core/doc/admin/_images/upgrade-notifier.png
 share/owncloud/core/doc/admin/_images/user_mounts.png
 share/owncloud/core/doc/admin/_images/users-config-1.png
 share/owncloud/core/doc/admin/_images/users-config-2.png
@@ -8659,6 +8658,7 @@ share/owncloud/core/doc/admin/_images/webbrander-1.png
 share/owncloud/core/doc/admin/_images/webdav.png
 share/owncloud/core/doc/admin/_images/wnd-1.png
 share/owncloud/core/doc/admin/_images/wnd-2.png
+share/owncloud/core/doc/admin/_images/wnd-3.jpg
 share/owncloud/core/doc/admin/_sources/configuration_database/db_conversion.txt
 share/owncloud/core/doc/admin/_sources/configuration_database/index.txt
 share/owncloud/core/doc/admin/_sources/configuration_database/linux_database_configuration.txt
@@ -8682,7 +8682,6 @@ share/owncloud/core/doc/admin/_sources/configuration_files/external_storage_conf
 share/owncloud/core/doc/admin/_sources/configuration_files/external_storage_configuration_gui.txt
 share/owncloud/core/doc/admin/_sources/configuration_files/federated_cloud_sharing_configuration.txt
 share/owncloud/core/doc/admin/_sources/configuration_files/file_sharing_configuration.txt
-share/owncloud/core/doc/admin/_sources/configuration_files/files_locking_enabling.txt
 share/owncloud/core/doc/admin/_sources/configuration_files/files_locking_transactional.txt
 share/owncloud/core/doc/admin/_sources/configuration_files/index.txt
 share/owncloud/core/doc/admin/_sources/configuration_files/previews_configuration.txt
@@ -8695,6 +8694,7 @@ share/owncloud/core/doc/admin/_sources/configuration_server/automatic_configurat
 share/owncloud/core/doc/admin/_sources/configuration_server/background_jobs_configuration.txt
 share/owncloud/core/doc/admin/_sources/configuration_server/caching_configuration.txt
 share/owncloud/core/doc/admin/_sources/configuration_server/config_sample_php_parameters.txt
+share/owncloud/core/doc/admin/_sources/configuration_server/custom_client_repos.txt
 share/owncloud/core/doc/admin/_sources/configuration_server/email_configuration.txt
 share/owncloud/core/doc/admin/_sources/configuration_server/external_sites.txt
 share/owncloud/core/doc/admin/_sources/configuration_server/harden_server.txt
@@ -8762,6 +8762,7 @@ share/owncloud/core/doc/admin/_sources/installation/linux_installation.txt
 share/owncloud/core/doc/admin/_sources/installation/macos_installation.txt
 share/owncloud/core/doc/admin/_sources/installation/nginx_configuration.txt
 share/owncloud/core/doc/admin/_sources/installation/php_54_installation.txt
+share/owncloud/core/doc/admin/_sources/installation/php_55_installation.txt
 share/owncloud/core/doc/admin/_sources/installation/selinux_configuration.txt
 share/owncloud/core/doc/admin/_sources/installation/source_installation.txt
 share/owncloud/core/doc/admin/_sources/installation/system_requirements.txt
@@ -8771,7 +8772,9 @@ share/owncloud/core/doc/admin/_sources/issues/index.txt
 share/owncloud/core/doc/admin/_sources/maintenance/backup.txt
 share/owncloud/core/doc/admin/_sources/maintenance/enable_maintenance.txt
 share/owncloud/core/doc/admin/_sources/maintenance/index.txt
+share/owncloud/core/doc/admin/_sources/maintenance/manual_upgrade.txt
 share/owncloud/core/doc/admin/_sources/maintenance/migrating.txt
+share/owncloud/core/doc/admin/_sources/maintenance/package_upgrade.txt
 share/owncloud/core/doc/admin/_sources/maintenance/restore.txt
 share/owncloud/core/doc/admin/_sources/maintenance/update.txt
 share/owncloud/core/doc/admin/_sources/maintenance/upgrade.txt
@@ -8838,7 +8841,6 @@ share/owncloud/core/doc/admin/configuration_files/external_storage_configuration
 share/owncloud/core/doc/admin/configuration_files/external_storage_configuration_gui.html
 share/owncloud/core/doc/admin/configuration_files/federated_cloud_sharing_configuration.html
 share/owncloud/core/doc/admin/configuration_files/file_sharing_configuration.html
-share/owncloud/core/doc/admin/configuration_files/files_locking_enabling.html
 share/owncloud/core/doc/admin/configuration_files/files_locking_transactional.html
 share/owncloud/core/doc/admin/configuration_files/index.html
 share/owncloud/core/doc/admin/configuration_files/previews_configuration.html
@@ -8851,6 +8853,7 @@ share/owncloud/core/doc/admin/configuration_server/automatic_configuration.html
 share/owncloud/core/doc/admin/configuration_server/background_jobs_configuration.html
 share/owncloud/core/doc/admin/configuration_server/caching_configuration.html
 share/owncloud/core/doc/admin/configuration_server/config_sample_php_parameters.html
+share/owncloud/core/doc/admin/configuration_server/custom_client_repos.html
 share/owncloud/core/doc/admin/configuration_server/email_configuration.html
 share/owncloud/core/doc/admin/configuration_server/external_sites.html
 share/owncloud/core/doc/admin/configuration_server/harden_server.html
@@ -8919,6 +8922,7 @@ share/owncloud/core/doc/admin/installation/linux_installation.html
 share/owncloud/core/doc/admin/installation/macos_installation.html
 share/owncloud/core/doc/admin/installation/nginx_configuration.html
 share/owncloud/core/doc/admin/installation/php_54_installation.html
+share/owncloud/core/doc/admin/installation/php_55_installation.html
 share/owncloud/core/doc/admin/installation/selinux_configuration.html
 share/owncloud/core/doc/admin/installation/source_installation.html
 share/owncloud/core/doc/admin/installation/system_requirements.html
@@ -8928,7 +8932,9 @@ share/owncloud/core/doc/admin/issues/index.html
 share/owncloud/core/doc/admin/maintenance/backup.html
 share/owncloud/core/doc/admin/maintenance/enable_maintenance.html
 share/owncloud/core/doc/admin/maintenance/index.html
+share/owncloud/core/doc/admin/maintenance/manual_upgrade.html
 share/owncloud/core/doc/admin/maintenance/migrating.html
+share/owncloud/core/doc/admin/maintenance/package_upgrade.html
 share/owncloud/core/doc/admin/maintenance/restore.html
 share/owncloud/core/doc/admin/maintenance/update.html
 share/owncloud/core/doc/admin/maintenance/upgrade.html
@@ -8991,6 +8997,14 @@ share/owncloud/core/doc/user/_images/files-drop-4.png
 share/owncloud/core/doc/user/_images/files-drop-5.png
 share/owncloud/core/doc/user/_images/files-drop-6.png
 share/owncloud/core/doc/user/_images/files-drop-7.png
+share/owncloud/core/doc/user/_images/files_page-1.png
+share/owncloud/core/doc/user/_images/files_page-2.png
+share/owncloud/core/doc/user/_images/files_page-3.png
+share/owncloud/core/doc/user/_images/files_page-4.png
+share/owncloud/core/doc/user/_images/files_page-5.png
+share/owncloud/core/doc/user/_images/files_page-6.png
+share/owncloud/core/doc/user/_images/files_page.png
+share/owncloud/core/doc/user/_images/files_page1.png
 share/owncloud/core/doc/user/_images/files_versioning.png
 share/owncloud/core/doc/user/_images/full_name.png
 share/owncloud/core/doc/user/_images/gear.png
@@ -9010,9 +9024,6 @@ share/owncloud/core/doc/user/_images/oc_documents.png
 share/owncloud/core/doc/user/_images/oc_documents_col_edit.png
 share/owncloud/core/doc/user/_images/oc_documents_edit.png
 share/owncloud/core/doc/user/_images/oc_documents_share.png
-share/owncloud/core/doc/user/_images/oc_filesweb_navigate.png
-share/owncloud/core/doc/user/_images/oc_filesweb_new.png
-share/owncloud/core/doc/user/_images/oc_main_web_labelled.png
 share/owncloud/core/doc/user/_images/oc_personal_settings_dropdown.png
 share/owncloud/core/doc/user/_images/osx_webdav1.png
 share/owncloud/core/doc/user/_images/osx_webdav2.png
@@ -9022,13 +9033,8 @@ share/owncloud/core/doc/user/_images/profile_picture_personal_settings.png
 share/owncloud/core/doc/user/_images/quota1.png
 share/owncloud/core/doc/user/_images/sharepoint-drive-config-user.png
 share/owncloud/core/doc/user/_images/usage_indicator.png
-share/owncloud/core/doc/user/_images/users-files.png
 share/owncloud/core/doc/user/_images/users-overlays-sharepoint.png
 share/owncloud/core/doc/user/_images/users-overlays-win-net-drive.png
-share/owncloud/core/doc/user/_images/users-overlays.png
-share/owncloud/core/doc/user/_images/users-share-local.png
-share/owncloud/core/doc/user/_images/users-share-local2.png
-share/owncloud/core/doc/user/_images/users-share-public.png
 share/owncloud/core/doc/user/_images/webdav_dolphin.png
 share/owncloud/core/doc/user/_images/webdav_gnome3_nautilus.png
 share/owncloud/core/doc/user/_sources/bookmarks.txt
@@ -9130,6 +9136,7 @@ share/owncloud/core/doc/user/whats_new.html
 share/owncloud/core/fonts/LICENSE.txt
 share/owncloud/core/fonts/OpenSans-Light.woff
 share/owncloud/core/fonts/OpenSans-Regular.ttf
+share/owncloud/core/fonts/OpenSans-Regular.woff
 share/owncloud/core/fonts/OpenSans-Semibold.woff
 share/owncloud/core/img/actions/add.png
 share/owncloud/core/img/actions/add.svg
@@ -9618,6 +9625,7 @@ share/owncloud/core/skeleton/Documents/Example.odt
 share/owncloud/core/skeleton/Photos/Paris.jpg
 share/owncloud/core/skeleton/Photos/San Francisco.jpg
 share/owncloud/core/skeleton/Photos/Squirrel.jpg
+share/owncloud/core/skeleton/ownCloud_User_Manual.pdf
 share/owncloud/core/strings.php
 share/owncloud/core/tags/controller.php
 share/owncloud/core/templates/403.php
@@ -9991,6 +9999,7 @@ share/owncloud/lib/private/connector/sabre/exception/filelocked.php
 share/owncloud/lib/private/connector/sabre/exception/invalidpath.php
 share/owncloud/lib/private/connector/sabre/exception/unsupportedmediatype.php
 share/owncloud/lib/private/connector/sabre/exceptionloggerplugin.php
+share/owncloud/lib/private/connector/sabre/fakelockerplugin.php
 share/owncloud/lib/private/connector/sabre/file.php
 share/owncloud/lib/private/connector/sabre/filesplugin.php
 share/owncloud/lib/private/connector/sabre/listenerplugin.php
@@ -10415,6 +10424,7 @@ share/owncloud/lib/public/il10n.php
 share/owncloud/lib/public/ilogger.php
 share/owncloud/lib/public/image.php
 share/owncloud/lib/public/imemcache.php
+share/owncloud/lib/public/imemcachettl.php
 share/owncloud/lib/public/inavigationmanager.php
 share/owncloud/lib/public/ipreview.php
 share/owncloud/lib/public/irequest.php
@@ -10463,6 +10473,7 @@ share/owncloud/lib/repair/dropoldjobs.php
 share/owncloud/lib/repair/dropoldtables.php
 share/owncloud/lib/repair/filletags.php
 share/owncloud/lib/repair/innodb.php
+share/owncloud/lib/repair/oldgroupmembershipshares.php
 share/owncloud/lib/repair/preview.php
 share/owncloud/lib/repair/removegetetagentries.php
 share/owncloud/lib/repair/repairconfig.php
@@ -10490,7 +10501,6 @@ share/owncloud/settings/admin.php
 share/owncloud/settings/ajax/changedisplayname.php
 share/owncloud/settings/ajax/disableapp.php
 share/owncloud/settings/ajax/enableapp.php
-share/owncloud/settings/ajax/geteveryonecount.php
 share/owncloud/settings/ajax/installapp.php
 share/owncloud/settings/ajax/navigationdetect.php
 share/owncloud/settings/ajax/setlanguage.php
