@@ -1,10 +1,10 @@
-$NetBSD: patch-ak,v 1.1.1.1 2012/03/21 20:48:53 asau Exp $
+$NetBSD: patch-ak,v 1.2 2015/12/25 20:12:16 joerg Exp $
 
 Add LDFLAGS
 replace $(COMMLISTSLIB) with -lcommlists so that pkgsrc wrapper
 doesnt reorder.
 
---- source/utilbin/Makefile.orig	2011-11-14 19:00:55.000000000 +0000
+--- source/utilbin/Makefile.orig	2012-05-23 19:04:49.000000000 +0000
 +++ source/utilbin/Makefile
 @@ -146,7 +146,7 @@ read_raw.o:		$(UTILBIN_DIR)/read_raw.c
  
@@ -33,6 +33,15 @@ doesnt reorder.
  
  spooldefaults.o: $(UTILBIN_DIR)/spooldefaults.c
  		$(CC) $(CFLAGS) -c $(UTILBIN_DIR)/spooldefaults.c
+@@ -257,7 +257,7 @@ tst_pthread_signals.o: $(UTILBIN_DIR)/ts
+ 
+ #---------------------------------------------------------------------
+ spooledit: spooledit.o sge_mt_init.o $(SPOOLING_DEPS) $(SPOOLLIB) $(SCHEDLIB) $(EVCLIB) $(GDILIB) $(SGEOBJLIB) $(SGEOBJDLIB) $(COMMLIB) $(COMMLISTSLIB) $(CULLLIB) $(WINGRIDLIB_DEP) $(UTILIB) $(LCKLIB) $(RMONLIB)
+-		$(CC) -o $@ $(LFLAGS) spooledit.o version.o sge_mt_init.o -lspoolb $(SPOOLING_LIBS) -lsched -levc -lgdi -lsgeobj -lsgeobjd $(SECLIB) $(KRBLIB) -lcull -lcomm -lcommlists -luti $(WINGRIDLIB) -llck -lrmon -ldb$(BDB_LIB_SUFFIX) $(DLLIB) $(SLIBS) $(LIBS)
++		$(CC) -o $@ $(LFLAGS) ${COMPILER_RPATH_FLAG}${SGE_ROOT}/lib/${SGE_ARCH} spooledit.o version.o sge_mt_init.o -lspoolb $(SPOOLING_LIBS) -lsched -levc -lgdi -lsgeobj -lsgeobjd $(SECLIB) $(KRBLIB) -lcull -lcomm -lcommlists -luti $(WINGRIDLIB) -llck -lrmon -ldb$(BDB_LIB_SUFFIX) $(DLLIB) $(SLIBS) $(LIBS)
+ 
+ spooledit.o: $(UTILBIN_DIR)/spooledit.c
+ 		$(CC) $(CFLAGS) -c $(UTILBIN_DIR)/spooledit.c
 @@ -290,7 +290,7 @@ valid_jvmlib.o:		$(UTILBIN_DIR)/valid_jv
  		$(CC) $(CFLAGS) -c $(UTILBIN_DIR)/valid_jvmlib.c
  
