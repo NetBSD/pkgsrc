@@ -1,4 +1,8 @@
-$NetBSD: patch-bc,v 1.1.1.1 2005/01/02 02:51:44 cube Exp $
+$NetBSD: patch-bc,v 1.2 2015/12/25 00:44:37 dholland Exp $
+
+- remove unnecessary use of <utmp.h>
+- don't provide own strlcpy/strlcat unless needed
+- use ctype.h correctly
 
 --- pppd/utils.c.orig	2004-11-04 11:02:26.000000000 +0100
 +++ pppd/utils.c
@@ -44,28 +48,3 @@ $NetBSD: patch-bc,v 1.1.1.1 2005/01/02 02:51:44 cube Exp $
  		    prec = prec * 10 + c - '0';
  		    c = *++fmt;
  		}
-@@ -287,19 +288,15 @@ vslprintf(buf, buflen, fmt, args)
- 		     (ip >> 16) & 0xff, (ip >> 8) & 0xff, ip & 0xff);
- 	    str = num;
- 	    break;
--#if 0	/* not used, and breaks on S/390, apparently */
--	case 'r':
-+	case 'r': {
-+	    va_list vlist;
- 	    f = va_arg(args, char *);
--#ifndef __powerpc__
--	    n = vslprintf(buf, buflen + 1, f, va_arg(args, va_list));
--#else
--	    /* On the powerpc, a va_list is an array of 1 structure */
--	    n = vslprintf(buf, buflen + 1, f, va_arg(args, void *));
--#endif
-+	    vlist = va_arg(args, va_list);
-+	    n = vslprintf(buf, buflen + 1, f, vlist);
- 	    buf += n;
- 	    buflen -= n;
- 	    continue;
--#endif
-+	}
- 	case 't':
- 	    time(&t);
- 	    str = ctime(&t);
