@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5099 2015/12/25 04:42:08 dholland Exp $
+$NetBSD: CHANGES-2015,v 1.5100 2015/12/25 13:29:39 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8405,3 +8405,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/youtube-dl to 20151223 [wiz 2015-12-24]
 	Updated net/omniORB to 4.1.7nb1 [dholland 2015-12-25]
 	Updated net/omniNotify to 2.1nb1 [dholland 2015-12-25]
+	Updated misc/py-anita to 1.39 [ryoon 2015-12-25]
