@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2015/12/15 15:53:29 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2015/12/26 14:26:37 taca Exp $
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/INSTALL.md
 ${TYPO3DIR}/${TYPO3NAME}/LICENSE.txt
@@ -4785,6 +4785,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/frontend/Tests/Unit/Configuration/TypoScri
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/frontend/Tests/Unit/ContentObject/CaseContentObjectTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/frontend/Tests/Unit/ContentObject/ContentObjectRendererTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/frontend/Tests/Unit/ContentObject/FilesContentObjectTest.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/frontend/Tests/Unit/ContentObject/Fixtures/PageRepositoryFixture.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/frontend/Tests/Unit/ContentObject/FluidTemplateContentObjectTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/frontend/Tests/Unit/ContentObject/Menu/AbstractMenuContentObjectTest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/frontend/Tests/Unit/ContentObject/Menu/MenuContentObjectFactoryTest.php
@@ -9623,6 +9624,8 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/R
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/Modify/DataSet/createPage.csv
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/Modify/DataSet/createPageAndCopyDraftParentPage.csv
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/Modify/DataSet/createPageAndCopyLiveParentPage.csv
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/Modify/DataSet/createPlaceholdersAndDeleteDraftParentPage.csv
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/Modify/DataSet/createPlaceholdersAndDeleteLiveParentPage.csv
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/Modify/DataSet/deleteContent.csv
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/Modify/DataSet/deleteContentAndCopyDraftPage.csv
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/Modify/DataSet/deleteContentAndCopyLivePage.csv
@@ -9648,6 +9651,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/R
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/Publish/DataSet/createContents.csv
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/Publish/DataSet/createNCopyContentNDiscardCopiedContent.csv
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/Publish/DataSet/createPage.csv
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/Publish/DataSet/createPlaceholdersAndDeleteDraftParentPage.csv
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/Publish/DataSet/deleteContent.csv
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/Publish/DataSet/deleteLocalizedContentNDeleteContent.csv
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/Publish/DataSet/deletePage.csv
@@ -9669,6 +9673,8 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/R
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/PublishAll/DataSet/createContents.csv
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/PublishAll/DataSet/createNCopyContentNDiscardCopiedContent.csv
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/PublishAll/DataSet/createPage.csv
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/PublishAll/DataSet/createPlaceholdersAndDeleteDraftParentPage.csv
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/PublishAll/DataSet/createPlaceholdersAndDeleteLiveParentPage.csv
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/PublishAll/DataSet/deleteContent.csv
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/PublishAll/DataSet/deleteLocalizedContentNDeleteContent.csv
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/workspaces/Tests/Functional/DataHandling/Regular/PublishAll/DataSet/deletePage.csv
