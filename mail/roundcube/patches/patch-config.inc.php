@@ -1,5 +1,7 @@
-$NetBSD: patch-config.inc.php,v 1.1 2015/05/24 14:48:54 jym Exp $
+$NetBSD: patch-config.inc.php,v 1.2 2015/12/26 14:24:48 taca Exp $
+
 Add default paths for log, tmp and MIME types.
+
 --- config/config.inc.php.sample	2015-03-16 20:54:49.000000000 +0000
 +++ config/config.inc.php.sample.18555.sample
 @@ -83,3 +83,10 @@ $config['plugins'] = array(
