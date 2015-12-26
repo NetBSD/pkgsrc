@@ -1,7 +1,7 @@
-# $NetBSD: INSTALL,v 1.1 2015/05/30 09:49:43 ryoon Exp $
+# $NetBSD: INSTALL,v 1.2 2015/12/26 12:04:01 joerg Exp $
 
 case ${STAGE} in
 POST-INSTALL)
-	${PREFIX}/bin/oracle8-java -Xshare:dump -mx128m
+	${PREFIX}/bin/oracle8-java -Xshare:dump -mx128m -XX:ReservedCodeCacheSize=128M -XX:MaxMetaspaceSize=128M -XX:CompressedClassSpaceSize=128M
 	;;
 esac
