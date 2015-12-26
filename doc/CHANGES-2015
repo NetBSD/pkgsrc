@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5104 2015/12/26 10:48:12 wen Exp $
+$NetBSD: CHANGES-2015,v 1.5105 2015/12/26 14:25:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8410,3 +8410,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated audio/pulseaudio to 7.1nb2 [ryoon 2015-12-25]
 	Updated net/owncloudclient to 2.1.0 [ryoon 2015-12-26]
 	Updated www/mediawiki to 1.26.2 [wen 2015-12-26]
+	Updated mail/roundcube to 1.1.4 [taca 2015-12-26]
