@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.6.6.1 2015/12/22 20:21:43 bsiegert Exp $
+$NetBSD: patch-configure,v 1.6.6.2 2015/12/26 22:51:12 bsiegert Exp $
 Don't use gld on SunOS
 
 --- configure.orig	2015-12-16 22:04:48.000000000 +0000
@@ -54,7 +54,7 @@ Don't use gld on SunOS
    if [ "$linux" = "yes" -o "$bsd" = "yes" -o "$solaris" = "yes" ] ; then
      tools="qemu-nbd\$(EXESUF) $tools"
 -    tools="ivshmem-client\$(EXESUF) ivshmem-server\$(EXESUF) $tools"
-+    if ["$shm_open" = "yes" ] ; then
++    if test "$shm_open" = "yes" ; then
 +      tools="ivshmem-client\$(EXESUF) ivshmem-server\$(EXESUF) $tools"
 +    fi
    fi
@@ -64,7 +64,7 @@ Don't use gld on SunOS
  if test "$fallocate_zero_range" = "yes" ; then
    echo "CONFIG_FALLOCATE_ZERO_RANGE=y" >> $config_host_mak
  fi
-+if test "$shm_open" = "yes" ; then
++if [ "$shm_open" = "yes" ] ; then
 +  echo "CONFIG_SHM_OPEN=y" >> $config_host_mak
 +fi
  if test "$posix_fallocate" = "yes" ; then
