@@ -1,8 +1,10 @@
-$NetBSD: patch-rcube_mime_default,v 1.1 2015/05/24 14:48:54 jym Exp $
+$NetBSD: patch-rcube_mime_default,v 1.2 2015/12/26 14:24:48 taca Exp $
+
 Fix path to /etc/.
---- program/lib/Roundcube/rcube_mime.php.orig	2015-03-16 20:54:50.000000000 +0000
+
+--- program/lib/Roundcube/rcube_mime.php.orig	2015-12-23 09:18:12.000000000 +0000
 +++ program/lib/Roundcube/rcube_mime.php
-@@ -807,12 +807,12 @@ class rcube_mime
+@@ -770,12 +770,12 @@ class rcube_mime
              $file_paths[] = 'C:/xampp/apache/conf/mime.types.';
          }
          else {
