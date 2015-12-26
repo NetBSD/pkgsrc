@@ -28,7 +28,7 @@ OWNER		= root.bin
 .SUFFIXES:	.o .c
 
 .c.o:
-		$(F77) $(FFLAGS) -c $<
+		$(CC) $(CFLAGS) -c $<
 
 $(MOPAC):     	SIZES $(OBJS) 
 		@echo -n "Loading $@ ... "
