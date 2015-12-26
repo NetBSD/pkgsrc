@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2014/04/20 06:40:00 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.13 2015/12/26 02:13:46 mef Exp $
 #
 # used by inputmethod/uim/Makefile
 # used by inputmethod/uim-elisp/Makefile
@@ -6,11 +6,12 @@
 UIM_VERSION=		1.8.6
 DISTNAME=		uim-${UIM_VERSION}
 CATEGORIES=		inputmethod
-MASTER_SITES=		http://uim.googlecode.com/files/
+MASTER_SITES=		${MASTER_SITE_GITHUB:=uim/}
+GITHUB_RELEASE=		${DISTNAME}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		VEG03617@nifty.com
-HOMEPAGE=		http://code.google.com/p/uim/
+HOMEPAGE=		https://github.com/uim/uim/wiki
 
 DISTINFO_FILE=		${.CURDIR}/../../inputmethod/uim/distinfo
 PATCHDIR=		${.CURDIR}/../../inputmethod/uim/patches
