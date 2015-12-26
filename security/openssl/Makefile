@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.214 2015/10/09 11:44:47 jperkin Exp $
+# $NetBSD: Makefile,v 1.213.2.1 2015/12/26 23:07:24 bsiegert Exp $
 
-DISTNAME=	openssl-1.0.2d
+DISTNAME=	openssl-1.0.2e
 CATEGORIES=	security
 MASTER_SITES=	https://www.openssl.org/source/
 
@@ -21,6 +21,7 @@ USE_GCC_RUNTIME=	yes
 .include "../../mk/compiler.mk"
 
 USE_TOOLS+=		fgrep gmake perl
+BUILD_TARGET=		depend all
 TEST_TARGET=		tests
 MAKE_JOBS_SAFE=		no
 
@@ -43,7 +44,7 @@ OPENSSL_MACHINE_ARCH=	${MACHINE_ARCH}
 # back to ./config's autodetection if not.
 .  if defined(OPENSSL_MACHINE_ARCH) && !empty(OPENSSL_MACHINE_ARCH)
 CONFIGURE_SCRIPT=	./Configure
-.    if !empty(CC_VERSION:Mgcc*)
+.    if ${PKGSRC_COMPILER} == "clang" || ${PKGSRC_COMPILER} == "gcc"
 CONFIGURE_ARGS+=	solaris${${ABI}==64:?64:}-${OPENSSL_MACHINE_ARCH}-gcc
 .    else
 CONFIGURE_ARGS+=	solaris${${ABI}==64:?64:}-${OPENSSL_MACHINE_ARCH}-cc
