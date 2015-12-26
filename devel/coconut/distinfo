@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 03:27:19 agc Exp $
+$NetBSD: distinfo,v 1.7 2015/12/26 23:35:46 dholland Exp $
 
 SHA1 (coconut-0.3.0.tar.gz) = 69c1c4cbf061def240f7c8c1636bdddb2c00da5b
 RMD160 (coconut-0.3.0.tar.gz) = 71098f8eb9a731f990534c98d532707ce93329dc
@@ -11,3 +11,11 @@ SHA1 (patch-ad) = 0dc62013310a4e3ec0b1137a082eb94d9174fbda
 SHA1 (patch-ae) = a60890cee110b68e01211e5a8e97af70110e3410
 SHA1 (patch-af) = 4f84102e6e16601d5ade202054f851cf0cf831f5
 SHA1 (patch-ag) = b69ac4769cd675602e9c2f2cdc90ce9698cbf9a2
+SHA1 (patch-test_ccmdexit-test.m) = dab490aab32133a15490a575b0ddb60d2a6261ba
+SHA1 (patch-test_ccmdprint-test.m) = 419eba5460f4a5b3a4f825cccf61eaec48bb1183
+SHA1 (patch-test_ccmdtext-test.m) = edc807adefab38f580e8c93d2464661a05b9b827
+SHA1 (patch-test_cdir-test.m) = 39779a02bfaf531dc19c1ba934591c7c9c9efd01
+SHA1 (patch-test_cidset-test.m) = b1d8d80ef0447096433674385201edd765f9a4e8
+SHA1 (patch-test_cnode-test.m) = 70c58fbc49f4dffafbf45a5a2dc990ecc121325a
+SHA1 (patch-test_cset-test.m) = c13c7d9255e4f48aec2a27b29d8f91184f09cc71
+SHA1 (patch-test_ctree-test.m) = 7415ded225c7185834314a69bf6f96d13c01a535
