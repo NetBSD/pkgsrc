@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2015/12/25 23:06:41 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.36 2015/12/26 19:56:03 joerg Exp $
 share/owncloud/.htaccess
 share/owncloud/.tag
 share/owncloud/.user.ini
@@ -1663,9 +1663,9 @@ share/owncloud/3rdparty/rackspace/php-opencloud/.coveralls.yml
 share/owncloud/3rdparty/rackspace/php-opencloud/CONTRIBUTING.md
 share/owncloud/3rdparty/rackspace/php-opencloud/LICENSE
 share/owncloud/3rdparty/rackspace/php-opencloud/composer.json
-share/owncloud/3rdparty/rackspace/php-opencloud/docs/changelog/1.${OS_VERSION}.md
+share/owncloud/3rdparty/rackspace/php-opencloud/docs/changelog/1.7.0.md
 share/owncloud/3rdparty/rackspace/php-opencloud/docs/changelog/1.9.0.md
-share/owncloud/3rdparty/rackspace/php-opencloud/docs/changelog/Upgrading to 1.${OS_VERSION}.md
+share/owncloud/3rdparty/rackspace/php-opencloud/docs/changelog/Upgrading to 1.7.0.md
 share/owncloud/3rdparty/rackspace/php-opencloud/docs/generate.sh
 share/owncloud/3rdparty/rackspace/php-opencloud/docs/getting-started-openstack.md
 share/owncloud/3rdparty/rackspace/php-opencloud/docs/getting-started.md
