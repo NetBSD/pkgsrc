@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5107 2015/12/26 14:28:59 taca Exp $
+$NetBSD: CHANGES-2015,v 1.5108 2015/12/26 23:50:07 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8413,3 +8413,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mail/roundcube to 1.1.4 [taca 2015-12-26]
 	Updated www/typo3_62 to 6.2.17 [taca 2015-12-26]
 	Updated mail/im to 152 [taca 2015-12-26]
+	Updated devel/libjit to 0.1.2nb1 [dholland 2015-12-26]
