@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15207 2015/12/24 00:49:55 wiz Exp $
+$NetBSD: TODO,v 1.15208 2015/12/26 09:26:32 wiz Exp $
 
 Suggested new packages
 ======================
@@ -583,7 +583,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dar-2.4.14
 	o darcs-2.10.1
 	o darkstat-3.0.719 [pkg/50113]
-	o darktable-1.6.8
+	o darktable-2.0
 	o dasher-4.11
 	o dateutils-0.3.3
 	o dd_rescue-1.46
@@ -1594,6 +1594,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o rtcw-1.41.3
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o rubber-1.2
+	o ruby-2.3.0
 	o ruby-actionmailer-4.2.5
 	o ruby-actionpack-4.2.5
 	o ruby-activemodel-4.2.5
@@ -1741,6 +1742,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o thaixfonts-1.2.7
 	o tidy-5.0.0 [wip]
 	o tig-2.1.1
+	o tigervnc-1.6.0
 	o tightvnc-2.7.10
 	o tile-0.7.4
 	o tileworld-1.3.1
