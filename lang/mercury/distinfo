@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2015/11/03 22:50:38 agc Exp $
+$NetBSD: distinfo,v 1.16 2015/12/26 11:58:19 joerg Exp $
 
 SHA1 (mercury-srcdist-14.01.1.tar.gz) = 8d8295aed6cadb6cd2e932490042de6075d18acf
 RMD160 (mercury-srcdist-14.01.1.tar.gz) = 8ee4a5ee694985b6d6453bee86a3a7e12cc9d0ac
@@ -11,4 +11,4 @@ SHA1 (patch-an) = 65bfb05147fe2f3663b35e494b8e8bf7fc6906e2
 SHA1 (patch-ao) = c994597a95edc8376c4916333e7ad371752bbd2e
 SHA1 (patch-ap) = 1779d182c543322c0083a6cca354a73fda4f7cb5
 SHA1 (patch-aq) = fcf7b99650d9f288cbc4200c2bc48934f7198845
-SHA1 (patch-at) = 41173e0ea5bffe06f8bcffb85cd8447831c3c044
+SHA1 (patch-at) = fc77b1e0059a7eb98e5d9c9fb30b69434fcf475c
