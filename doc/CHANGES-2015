@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5103 2015/12/26 00:39:06 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.5104 2015/12/26 10:48:12 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8409,3 +8409,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/php-owncloud to 8.2.2 [ryoon 2015-12-25]
 	Updated audio/pulseaudio to 7.1nb2 [ryoon 2015-12-25]
 	Updated net/owncloudclient to 2.1.0 [ryoon 2015-12-26]
+	Updated www/mediawiki to 1.26.2 [wen 2015-12-26]
