@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5106 2015/12/26 14:27:25 taca Exp $
+$NetBSD: CHANGES-2015,v 1.5107 2015/12/26 14:28:59 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8412,3 +8412,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/mediawiki to 1.26.2 [wen 2015-12-26]
 	Updated mail/roundcube to 1.1.4 [taca 2015-12-26]
 	Updated www/typo3_62 to 6.2.17 [taca 2015-12-26]
+	Updated mail/im to 152 [taca 2015-12-26]
