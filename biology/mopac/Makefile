@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/06/27 07:08:13 dholland Exp $
+# $NetBSD: Makefile,v 1.9 2015/12/26 22:36:07 dholland Exp $
 #
 
 DISTNAME=		mopac7
@@ -20,15 +20,14 @@ COMMENT=		Molecular energy calculation program
 WRKSRC=			${WRKDIR}/mopac7
 BUILD_TARGET=		MOPAC7
 USE_TOOLS+=		gmake pax
-USE_LANGUAGES=		fortran77
-PKG_FC=			f2c-f77
+USE_LANGUAGES=		c fortran77
 
 INSTALLATION_DIRS=	bin share/mopac7/sample
 
-.include "../../mk/compiler.mk"
-.if !empty(PKGSRC_COMPILER:Mclang) || !empty(PKGSRC_COMPILER:Mgcc)
-ALL_ENV+=	PKGSRC_FFLAGS=-freal-loops
-.endif
+# XXX  This package builds only with f2c, not g95.
+# XXX  There does not appear to be any way to specify this other
+# XXX  than by abusively setting PKGSRC_FORTRAN.
+PKGSRC_FORTRAN=		f2c
 
 pre-build:
 	cp ${WRKSRC}/esp.rof ${WRKSRC}/esp.f
@@ -41,8 +40,6 @@ do-install:
 	cd ${WRKSRC} && pax -wr test_* \
 	  ${DESTDIR}${PREFIX}/share/mopac7/sample
 	cd ${WRKDIR} && pax -wr mopac7-man ${DESTDIR}${PREFIX}/share/mopac7
-
-# "g77" can not be used for external function
 
 .include "../../devel/libf2c/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
