@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2015/07/04 16:18:29 joerg Exp $
+# $NetBSD: Makefile,v 1.64 2015/12/26 23:35:46 dholland Exp $
 #
 
 DISTNAME=	coconut-0.3.0
@@ -17,6 +17,13 @@ USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 CPPFLAGS+=	-I${PREFIX}/include/libxml2/libxml -DGL_GLEXT_LEGACY
 MAKE_ENV+=	AM_MAKEFLAGS="am__depfiles_maybe="
+
+SUBST_CLASSES+=	g_memmove
+SUBST_MESSAGE.g_memmove=	Eliminating g_memmove.
+SUBST_STAGE.g_memmove=		pre-configure
+SUBST_FILES.g_memmove=		coconut/cmemalloc.m coconut/cstack.m \
+				coconut/cset.m
+SUBST_SED.g_memmove=		-e s,g_memmove,memmove,g
 
 .include "../../graphics/gtkglext/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
