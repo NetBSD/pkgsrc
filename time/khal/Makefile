@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2015/09/17 17:11:25 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2015/12/27 14:52:53 wiz Exp $
 
-DISTNAME=		khal-0.6.0
+DISTNAME=		khal-0.7.0
 CATEGORIES=		time net
-MASTER_SITES=		https://pypi.python.org/packages/source/k/khal/
+MASTER_SITES=		${MASTER_SITE_PYPI:=k/khal/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://github.com/geier/khal
