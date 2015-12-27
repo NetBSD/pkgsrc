@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2015/10/10 01:58:12 ryoon Exp $
+# $NetBSD: Makefile,v 1.19 2015/12/27 12:41:42 adam Exp $
 
 BOOST_PACKAGE=	meta-pkg
 BOOST_COMMENT=	(meta package)
 
 META_PACKAGE=	yes
 
-PKGREVISION= 1
 .include "Makefile.common"
 
 BOOST_DEPENDS_VERSION=	${BOOST_SHORT_VERSION:S/_/./}{,nb*,.*}
