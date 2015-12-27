@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5144 2015/12/27 23:36:52 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.5145 2015/12/27 23:38:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8462,3 +8462,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated archivers/p5-Archive-Zip to 1.56 [wiz 2015-12-27]
 	Updated devel/py-setuptools to 19.2 [wiz 2015-12-27]
 	Updated devel/py-requests-toolbelt to 0.5.1 [wiz 2015-12-27]
+	Updated devel/py-requests to 2.9.0 [wiz 2015-12-27]
