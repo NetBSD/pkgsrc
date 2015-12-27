@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/02/04 13:37:18 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/12/27 12:07:40 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/README.md
@@ -1013,6 +1013,7 @@ ${GEM_LIBDIR}/lib/debugger/ruby_core_source/ruby-2.0.0-p481/vm_exec.h
 ${GEM_LIBDIR}/lib/debugger/ruby_core_source/ruby-2.0.0-p481/vm_insnhelper.h
 ${GEM_LIBDIR}/lib/debugger/ruby_core_source/ruby-2.0.0-p481/vm_opts.h
 ${GEM_LIBDIR}/lib/debugger/ruby_core_source/ruby-2.0.0-p481/vmtc.inc
+${GEM_LIBDIR}/lib/debugger/ruby_core_source/ruby-2.0.0-p648
 ${GEM_LIBDIR}/lib/debugger/ruby_core_source/ruby-2.1.0-p0/addr2line.h
 ${GEM_LIBDIR}/lib/debugger/ruby_core_source/ruby-2.1.0-p0/constant.h
 ${GEM_LIBDIR}/lib/debugger/ruby_core_source/ruby-2.1.0-p0/dln.h
