@@ -1,4 +1,4 @@
-# $NetBSD: extension.mk,v 1.40 2015/12/05 17:12:13 adam Exp $
+# $NetBSD: extension.mk,v 1.41 2015/12/27 21:08:45 wiz Exp $
 
 .include "../../lang/python/pyversion.mk"
 
@@ -71,5 +71,6 @@ PLIST_AWK+=	-f ${PKGSRCDIR}/lang/python/plist-python.awk
 PLIST_AWK_ENV+=	PYVERS="${PYVERSSUFFIX:S/.//}"
 PRINT_PLIST_AWK+=	/^[^@]/ && /[^\/]+\.py[co]$$/ {
 PRINT_PLIST_AWK+=	gsub(/__pycache__\//, "")
+PRINT_PLIST_AWK+=	gsub(/opt-1\.pyc$$/, "pyo")
 PRINT_PLIST_AWK+=	gsub(/\.cpython-${_PYTHON_VERSION}/, "")}
 .endif
