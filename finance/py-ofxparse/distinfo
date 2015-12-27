@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/12/27 16:27:40 richard Exp $
+
+SHA1 (ofxparse-0.14.tar.gz) = 7e23940f61f949373041595d3f7011b6e437f3e8
+RMD160 (ofxparse-0.14.tar.gz) = 01ae1cae0724505d6c88399783f4fe880811ef2a
+SHA512 (ofxparse-0.14.tar.gz) = d685341f8787000281d480cdf5aa221331fea25fca5e6bcc6a72e1f106993313a20822ce8bcd8f59c795a26b71a7078b16e0644b92d08a7bcbe24e2e4f24deb3
+Size (ofxparse-0.14.tar.gz) = 42638 bytes

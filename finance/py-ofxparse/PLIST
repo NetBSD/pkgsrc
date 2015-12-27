@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2015/12/27 16:27:40 richard Exp $
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/zip-safe
+${PYSITELIB}/ofxparse/__init__.py
+${PYSITELIB}/ofxparse/__init__.pyc
+${PYSITELIB}/ofxparse/__init__.pyo
+${PYSITELIB}/ofxparse/mcc.py
+${PYSITELIB}/ofxparse/mcc.pyc
+${PYSITELIB}/ofxparse/mcc.pyo
+${PYSITELIB}/ofxparse/ofxparse.py
+${PYSITELIB}/ofxparse/ofxparse.pyc
+${PYSITELIB}/ofxparse/ofxparse.pyo
+${PYSITELIB}/ofxparse/ofxutil.py
+${PYSITELIB}/ofxparse/ofxutil.pyc
+${PYSITELIB}/ofxparse/ofxutil.pyo
