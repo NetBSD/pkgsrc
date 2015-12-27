@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2015/09/05 14:41:06 adam Exp $
+# $NetBSD: Makefile,v 1.37 2015/12/27 12:41:42 adam Exp $
 
 BOOST_PACKAGE=		libs
 BOOST_COMMENT=		(binary libraries)
@@ -39,6 +39,9 @@ UNLIMIT_RESOURCES+=	stacksize
 
 MAKE_ENV+=	BZIP2_INCLUDE=${BUILDLINK_PREFIX.bzip2}/include
 MAKE_ENV+=	BZIP2_LIBPATH=${BUILDLINK_PREFIX.bzip2}/lib
+MAKE_ENV+=	EXPAT_INCLUDE=${BUILDLINK_PREFIX.expat}/include
+MAKE_ENV+=	EXPAT_LIBPATH=${BUILDLINK_PREFIX.expat}/lib
+MAKE_ENV+=	ICU_PATH=${BUILDLINK_PREFIX.icu}
 MAKE_ENV+=	ZLIB_INCLUDE=${BUILDLINK_PREFIX.zlib}/include
 MAKE_ENV+=	ZLIB_LIBPATH=${BUILDLINK_PREFIX.zlib}/lib
 
@@ -51,5 +54,7 @@ do-install: boost-install-libs
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
+.include "../../textproc/icu/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

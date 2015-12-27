@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2015/08/14 07:54:04 adam Exp $
+# $NetBSD: Makefile,v 1.15 2015/12/27 12:41:42 adam Exp $
 
 BOOST_PACKAGE=		docs
 BOOST_COMMENT=		(documentation)
@@ -14,16 +14,16 @@ NO_BUILD=		yes
 
 PLIST_SRC=	PLIST ${WRKDIR}/PLIST.auto
 
-SUBST_CLASSES+=		appendix
-SUBST_STAGE.appendix=	post-extract
-SUBST_MESSAGE.appendix=	Fixing links to file with a long name with spaces.
-SUBST_FILES.appendix=	libs/preprocessor/doc/contents.html
-SUBST_FILES.appendix+=	libs/preprocessor/doc/title.html
-SUBST_SED.appendix=	-e 's,Appendix%20A%20%C2%A0%20An%20Introduction%20to%20Preprocessor%20Metaprogramming.html,appendix.html,g'
+#SUBST_CLASSES+=		appendix
+#SUBST_STAGE.appendix=	post-extract
+#SUBST_MESSAGE.appendix=	Fixing links to file with a long name with spaces.
+#SUBST_FILES.appendix=	libs/preprocessor/doc/contents.html
+#SUBST_FILES.appendix+=	libs/preprocessor/doc/title.html
+#SUBST_SED.appendix=	-e 's,Appendix%20A%20%C2%A0%20An%20Introduction%20to%20Preprocessor%20Metaprogramming.html,appendix.html,g'
 
-post-extract:
-	cd ${WRKSRC}/libs/preprocessor/doc && \
-	mv 'Appendix A   An Introduction to Preprocessor Metaprogramming.html' appendix.html
+#post-extract:
+#	cd ${WRKSRC}/libs/preprocessor/doc && \
+#	mv 'Appendix A   An Introduction to Preprocessor Metaprogramming.html' appendix.html
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
