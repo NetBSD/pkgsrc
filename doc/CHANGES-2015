@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5142 2015/12/27 22:56:59 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.5143 2015/12/27 22:58:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8460,3 +8460,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated audio/musicpd to 0.19.12 [wiz 2015-12-27]
 	Updated audio/playitslowly to 1.5.0 [wiz 2015-12-27]
 	Updated archivers/p5-Archive-Zip to 1.56 [wiz 2015-12-27]
+	Updated devel/py-setuptools to 19.2 [wiz 2015-12-27]
