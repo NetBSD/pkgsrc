@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2015/01/12 11:46:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2015/12/27 12:11:36 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -21,6 +21,9 @@ ${PYSITELIB}/ldap/cidict.pyo
 ${PYSITELIB}/ldap/controls/__init__.py
 ${PYSITELIB}/ldap/controls/__init__.pyc
 ${PYSITELIB}/ldap/controls/__init__.pyo
+${PYSITELIB}/ldap/controls/deref.py
+${PYSITELIB}/ldap/controls/deref.pyc
+${PYSITELIB}/ldap/controls/deref.pyo
 ${PYSITELIB}/ldap/controls/libldap.py
 ${PYSITELIB}/ldap/controls/libldap.pyc
 ${PYSITELIB}/ldap/controls/libldap.pyo
