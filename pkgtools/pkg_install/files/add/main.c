@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.31 2015/10/15 13:31:27 sevan Exp $	*/
+/*	$NetBSD: main.c,v 1.32 2015/12/27 12:36:42 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,7 +7,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: main.c,v 1.31 2015/10/15 13:31:27 sevan Exp $");
+__RCSID("$NetBSD: main.c,v 1.32 2015/12/27 12:36:42 joerg Exp $");
 
 /*
  *
@@ -159,7 +159,10 @@ main(int argc, char **argv)
 		free(pkgdbdir);
 	}
 
+#ifndef BOOTSTRAP
 	process_pkg_path();
+#endif
+
 	TAILQ_INIT(&pkgs);
 
 	if (argc == 0) {
@@ -168,6 +171,7 @@ main(int argc, char **argv)
 		usage();
 	}
 
+#ifndef BOOTSTRAP
 	if (strcasecmp(do_license_check, "no") == 0)
 		LicenseCheck = 0;
 	else if (strcasecmp(do_license_check, "yes") == 0)
@@ -180,6 +184,7 @@ main(int argc, char **argv)
 
 	if (LicenseCheck)
 		load_license_lists();
+#endif
 
 	/* Get all the remaining package names, if any */
 	for (; argc > 0; --argc, ++argv) {
