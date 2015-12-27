@@ -1,0 +1,1 @@
+go-nbreader provides a non-blocking io.Reader for go (golang).
