@@ -1,0 +1,3 @@
+This is a modified version of Daniel J. Bernstein's simplesha3
+Python library that works in Python 3 in addition to the Python 2
+of the original. This modified version is also available on pypi.

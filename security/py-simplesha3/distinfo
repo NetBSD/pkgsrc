@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/12/27 22:26:23 wiz Exp $
+
+SHA1 (simplesha3-2015.09.22.post1.tar.bz2) = 95b90ef943f863a8df4fa5941eaf4adc3311b271
+RMD160 (simplesha3-2015.09.22.post1.tar.bz2) = d83a3bd3b53d1b6e1338d826c716e8a02f9db20d
+SHA512 (simplesha3-2015.09.22.post1.tar.bz2) = b2fe408a6c0ffce495b85d02080a7a030c317d0957e8333de6bc5582f195849666ab214264432785c20b0a0c60abca92d87b5da7e4cc3c5aa3a947cb53f29ce0
+Size (simplesha3-2015.09.22.post1.tar.bz2) = 1908 bytes
