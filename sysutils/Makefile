@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.654 2015/12/13 15:19:03 taca Exp $
+# $NetBSD: Makefile,v 1.655 2015/12/27 15:44:14 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -415,6 +415,7 @@ SUBDIR+=	py-augeas
 SUBDIR+=	py-borg
 SUBDIR+=	py-collectd
 SUBDIR+=	py-dbus
+SUBDIR+=	py-diffoscope
 SUBDIR+=	py-gnome-menus
 SUBDIR+=	py-kazoo
 SUBDIR+=	py-magic
