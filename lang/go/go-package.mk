@@ -1,4 +1,4 @@
-# $NetBSD: go-package.mk,v 1.5 2015/05/11 13:25:35 bsiegert Exp $
+# $NetBSD: go-package.mk,v 1.6 2015/12/27 19:41:10 wiz Exp $
 #
 # This file implements common logic for compiling Go programs in pkgsrc.
 # The compiled Go code is tied to a specific compiler version, and the
@@ -17,6 +17,23 @@
 #
 # Packages using this should set GO_SRCPATH to the path that could
 # be used with "go get" (usually the URL without the leading protocol).
+#
+# === Package-settable variables ===
+#
+# GO_SRCPATH
+#	Path used for go 'import' lines in source code.
+#
+# GO_DIST_BASE
+#	Path this package extracts to; only set it if it's not the same
+#	as GO_SRCPATH.
+#
+# GO_BUILD_PATTERN
+#	Argument used for 'go install'
+#	Defaults to "${GO_SRCPATH}/..." which means all files
+#	below GO_SRCPATH.
+#
+# Keywords: go
+#
 
 .include "../../lang/go/version.mk"
 
