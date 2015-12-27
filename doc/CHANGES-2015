@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5136 2015/12/27 22:26:52 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.5137 2015/12/27 22:37:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8454,3 +8454,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/hunspell-de to 20151222 [wiz 2015-12-27]
 	Updated finance/gnucash to 2.6.10 [wiz 2015-12-27]
 	Added security/py-simplesha3 version 2015.09.22.post1 [wiz 2015-12-27]
+	Updated devel/py-cffi to 1.4.2 [wiz 2015-12-27]
