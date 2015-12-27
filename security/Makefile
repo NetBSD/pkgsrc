@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.566 2015/12/11 13:43:36 wiz Exp $
+# $NetBSD: Makefile,v 1.567 2015/12/27 20:13:06 wiz Exp $
 #
 
 COMMENT=	Security tools
@@ -94,6 +94,7 @@ SUBDIR+=	gnupg-pkcs11-scd
 SUBDIR+=	gnupg2
 SUBDIR+=	gnupg21
 SUBDIR+=	gnutls
+SUBDIR+=	go-crypto
 SUBDIR+=	go-oauth2
 SUBDIR+=	google-authenticator
 SUBDIR+=	gpa
