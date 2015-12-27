@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5138 2015/12/27 22:39:28 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.5139 2015/12/27 22:48:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8456,3 +8456,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added security/py-simplesha3 version 2015.09.22.post1 [wiz 2015-12-27]
 	Updated devel/py-cffi to 1.4.2 [wiz 2015-12-27]
 	Updated www/p5-CGI to 4.25 [wiz 2015-12-27]
+	Added audio/gst-plugins1-soundtouch version 1.6.1 [wiz 2015-12-27]
