@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 03:29:33 agc Exp $
+$NetBSD: distinfo,v 1.6 2015/12/27 07:36:49 joerg Exp $
 
-SHA1 (sparsehash-2.0.2.tar.gz) = 12c7552400b3e20464b3362286653fc17366643e
-RMD160 (sparsehash-2.0.2.tar.gz) = 4da86c970e66c4fd3abb82d9b800267175a18bea
-SHA512 (sparsehash-2.0.2.tar.gz) = 27d823551bc8364dd3c10f071e51bab55d2bbe9cf74ddb8337d118475aa7fdd38ae07dbb7dbd721c1350830325cadccdadf127f9996f26387e412e108edba3a1
-Size (sparsehash-2.0.2.tar.gz) = 340514 bytes
+SHA1 (sparsehash-2.0.3.tar.gz) = 94a9aad9167275af41b13122c60754ad1a5adb34
+RMD160 (sparsehash-2.0.3.tar.gz) = 6131707767bbe23cfb118a41c625b53126eeaf53
+SHA512 (sparsehash-2.0.3.tar.gz) = bb00d0acb8eba65f7da8015ea4f6bebf8bba36ed6777881960ee215f22b7be17b069c59838d210551ce67a34baccfc7b2fed603677ec53c0c32714d8e76f5d6c
+Size (sparsehash-2.0.3.tar.gz) = 322046 bytes

@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2012/10/31 11:19:46 asau Exp $
+# $NetBSD: Makefile,v 1.13 2015/12/27 07:36:49 joerg Exp $
 #
 
-DISTNAME=		sparsehash-2.0.2
+
+DISTNAME=		sparsehash-2.0.3
+GITHUB_TAG=		${DISTNAME}
+MASTER_SITES=		${MASTER_SITE_GITHUB:=sparsehash/}
 CATEGORIES=		devel
-MASTER_SITES=		http://sparsehash.googlecode.com/files/
 
 MAINTAINER=		cheusov@NetBSD.org
 HOMEPAGE=		http://goog-sparsehash.sourceforge.net/
