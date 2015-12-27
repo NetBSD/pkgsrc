@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5148 2015/12/27 23:44:39 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.5149 2015/12/27 23:46:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8466,3 +8466,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-requests to 2.9.0 [wiz 2015-12-27]
 	Updated time/py-vdirsyncer to 0.7.4 [wiz 2015-12-27]
 	Updated devel/py-tortoisehg to 3.6.2 [wiz 2015-12-27]
+	Updated misc/p5-Business-ISBN-Data to 20140910.003 [wiz 2015-12-27]
