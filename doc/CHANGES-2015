@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5125 2015/12/27 20:13:18 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.5126 2015/12/27 20:38:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8442,3 +8442,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/stunnel to 5.28 [ryoon 2015-12-27]
 	Updated www/php-ja-wordpress to 4.4 [ryoon 2015-12-27]
 	Added security/go-crypto version 0.0.20151215 [wiz 2015-12-27]
+	Added devel/go-flags-svent version 0.0.20141123 [wiz 2015-12-27]
