@@ -1,0 +1,9 @@
+This library provides similar functionality to the builtin flag
+library of go, but provides much more functionality and nicer
+formatting. From the documentation:
+
+Package flags provides an extensive command line option parser.
+The flags package is similar in functionality to the go builtin
+flag package but provides more options and uses reflection to
+provide a convenient and succinct way of specifying command line
+options.
