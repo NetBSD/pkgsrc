@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2015/11/03 23:49:45 agc Exp $
+$NetBSD: distinfo,v 1.11 2015/12/27 23:46:26 wiz Exp $
 
-SHA1 (Business-ISBN-Data-20140910.002.tar.gz) = 4c0f2ef263a69e35150e2eb162067ddb922acb69
-RMD160 (Business-ISBN-Data-20140910.002.tar.gz) = 0fd24b0962363ffe3daa0797d8175bfb27ce9e22
-SHA512 (Business-ISBN-Data-20140910.002.tar.gz) = bbfa483490ac3037fba33ae6d038ce2fb9b537d67cd3d2cd1b91edd06306cee38badb6ca6da38983c9b16d98e57b855fef19a5addd21f31ea58eb0d24181c9b1
-Size (Business-ISBN-Data-20140910.002.tar.gz) = 16522 bytes
+SHA1 (Business-ISBN-Data-20140910.003.tar.gz) = fe28a3bd5da9825f053c8db7897b0689be57b803
+RMD160 (Business-ISBN-Data-20140910.003.tar.gz) = 8c4923b439f68bc81160b9a99b3167b50c8fba6b
+SHA512 (Business-ISBN-Data-20140910.003.tar.gz) = 90e866e58d242e0de3b097a2df04d26d36eef92366a5fa0b21413065b09ec0e45d5a0cd7c657505975ff58a0b5270cfcec712d3fa5ef60e91c4dec7fe50708ed
+Size (Business-ISBN-Data-20140910.003.tar.gz) = 21156 bytes
