@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.56 2015/09/30 19:48:23 wiz Exp $
+@comment $NetBSD: PLIST,v 1.57 2015/12/27 22:16:52 wiz Exp $
 bin/gnc-fq-check
 bin/gnc-fq-dump
 bin/gnc-fq-helper
@@ -732,6 +732,7 @@ share/gnucash/accounts/nb/acctchrt_spouseinc.gnucash-xea
 share/gnucash/accounts/nb/acctchrt_spouseretire.gnucash-xea
 share/gnucash/accounts/nl/acctchrt_checkbook.gnucash-xea
 share/gnucash/accounts/nl/acctchrt_full.gnucash-xea
+share/gnucash/accounts/nl/acctchrt_rgs_1.1.gnucash-xea
 share/gnucash/accounts/pl/acctchrt_brokerage.gnucash-xea
 share/gnucash/accounts/pl/acctchrt_business.gnucash-xea
 share/gnucash/accounts/pl/acctchrt_carloan.gnucash-xea
@@ -1196,6 +1197,7 @@ share/locale/nl/LC_MESSAGES/gnucash.mo
 share/locale/pl/LC_MESSAGES/gnucash.mo
 share/locale/pt/LC_MESSAGES/gnucash.mo
 share/locale/pt_BR/LC_MESSAGES/gnucash.mo
+share/locale/pt_PT/LC_MESSAGES/gnucash.mo
 share/locale/ro/LC_MESSAGES/gnucash.mo
 share/locale/ru/LC_MESSAGES/gnucash.mo
 share/locale/rw/LC_MESSAGES/gnucash.mo
