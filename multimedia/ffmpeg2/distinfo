@@ -1,12 +1,11 @@
-$NetBSD: distinfo,v 1.42 2015/11/28 14:36:49 adam Exp $
+$NetBSD: distinfo,v 1.43 2015/12/27 21:45:56 wiz Exp $
 
-SHA1 (ffmpeg-2.8.3.tar.bz2) = e6fcaa2ad16d68068a04ffe0596eeb2b689294b5
-RMD160 (ffmpeg-2.8.3.tar.bz2) = 48055359bbf8db923c0c62afb56ca309c749dbbd
-SHA512 (ffmpeg-2.8.3.tar.bz2) = aadfab7db84b85cbfe44a5c7b47e447a1711c3d78fa195f30d3f6644e95842c8d484172e4c98f75cbae5d3783f4dd2972a892123d9a9ff90be32db20b0dc8aa6
-Size (ffmpeg-2.8.3.tar.bz2) = 8576798 bytes
+SHA1 (ffmpeg-2.8.4.tar.bz2) = b249bdbe14d17edb9a2091f361bfe9c77578cba5
+RMD160 (ffmpeg-2.8.4.tar.bz2) = 8f01909af99d0601f27b890edcb4720c9c7d9b59
+SHA512 (ffmpeg-2.8.4.tar.bz2) = 37f88c05fd0b8d1c4de83f5330f756cddd157ba78487d78436899d46a49a4e420eb086d263dd77c6c31a61c91f7839f40b07ed87817d686498b90caf9d870aa5
+Size (ffmpeg-2.8.4.tar.bz2) = 8579383 bytes
 SHA1 (patch-Makefile) = ff8a7a5fdfd4987ef2835bd7360a78efd4310253
 SHA1 (patch-configure) = bc0dcdb5605b5a112de556ecb466265ef8ff5ca9
-SHA1 (patch-libavcodec_libvpxenc.c) = ca50671633f1d1cb321ea0692d70351b452be624
 SHA1 (patch-libavcodec_x86_ac3dsp_init.c) = f997271f4f4604987591d7f17c571aaaa8a6188a
 SHA1 (patch-libavutil_common.h) = ebbd0c169f228af37ae2dd54b27d5dba11a34c5e
 SHA1 (patch-libavutil_opencl.c) = 2404f98c677c9fe92bcc49be01ebf76bebba0eea
