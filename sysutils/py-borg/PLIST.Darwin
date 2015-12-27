@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.Darwin,v 1.1 2015/08/28 11:25:51 wiz Exp $
-${PYSITELIB}/borg/platform_darwin.so
