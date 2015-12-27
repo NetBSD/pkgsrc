@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5122 2015/12/27 18:27:19 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.5123 2015/12/27 18:36:40 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8439,3 +8439,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated finance/py-ofxparse to 0.14 [richard 2015-12-27]
 	Updated www/firefox to 43.0.2 [ryoon 2015-12-27]
 	Updated www/firefox-l10n to 43.0.2 [ryoon 2015-12-27]
+	Updated security/stunnel to 5.28 [ryoon 2015-12-27]
