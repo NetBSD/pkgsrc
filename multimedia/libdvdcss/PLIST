@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2013/04/01 20:34:33 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/12/27 12:16:33 adam Exp $
 include/dvdcss/dvdcss.h
+include/dvdcss/version.h
 lib/libdvdcss.la
 lib/pkgconfig/libdvdcss.pc
 share/doc/libdvdcss/AUTHORS
