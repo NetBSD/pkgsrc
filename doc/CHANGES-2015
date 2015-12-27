@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5132 2015/12/27 21:46:18 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.5133 2015/12/27 21:48:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8450,3 +8450,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/caff to 2.2 [wiz 2015-12-27]
 	Updated devel/afl to 1.96b [wiz 2015-12-27]
 	Updated multimedia/ffmpeg2 to 2.8.4 [wiz 2015-12-27]
+	Updated devel/meld to 3.15.1 [wiz 2015-12-27]
