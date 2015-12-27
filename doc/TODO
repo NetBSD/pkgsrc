@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15231 2015/12/27 23:46:35 wiz Exp $
+$NetBSD: TODO,v 1.15232 2015/12/27 23:49:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -777,7 +777,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o glade3-3.8.5 [GNOME 2.34]
 	o gle-4.2.5 [wip]
 	o gliv-1.9.7
-	o global-6.5.2
 	o glom-1.14.2 [GNOME 2.26]
 	o gmock-1.7.0
 	o gnet1-1.1.9
