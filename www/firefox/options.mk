@@ -1,8 +1,9 @@
-# $NetBSD: options.mk,v 1.27 2015/10/16 12:58:16 jmcneill Exp $
+# $NetBSD: options.mk,v 1.28 2015/12/27 18:25:33 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
 PKG_SUPPORTED_OPTIONS=	official-mozilla-branding
-PKG_SUPPORTED_OPTIONS+=	alsa debug debug-info mozilla-jemalloc gnome pulseaudio webrtc
+PKG_SUPPORTED_OPTIONS+=	debug debug-info mozilla-jemalloc gnome webrtc
+PKG_SUPPORTED_OPTIONS+=	alsa oss pulseaudio
 PLIST_VARS+=		gnome jemalloc debug
 
 .if ${OPSYS} == "Linux"
@@ -23,6 +24,13 @@ CONFIGURE_ARGS+=	--enable-alsa
 .include "../../audio/alsa-lib/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-alsa
+.endif
+
+.if !empty(PKG_OPTIONS:Moss)
+CONFIGURE_ARGS+=	--with-oss
+.include "../../mk/oss.buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--without-oss
 .endif
 
 .if !empty(PKG_OPTIONS:Mgnome)
