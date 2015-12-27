@@ -1,4 +1,4 @@
-# $NetBSD: xorg,v 1.24 2015/03/12 14:46:09 ryoon Exp $
+# $NetBSD: xorg,v 1.25 2015/12/27 18:56:33 sevan Exp $
 #
 # The files listed below are the union of the sets of files installed by
 # the supported Xorg (and some XFree) distributions, minus the set of files
@@ -290,6 +290,7 @@ lib/libFS.so.7.0
 lib/libFS.so.8.0
 lib/libFS.so.9.0
 lib/libFS.so.10.0
+lib/libFS.so.15.0
 lib/libPEX5.6.0.dylib
 lib/libPEX5.6.dylib
 lib/libPEX5.a
@@ -392,6 +393,7 @@ lib/libXi.so.10.1
 lib/libXi.so.11.0
 lib/libXi.so.11.1
 lib/libXi.so.12.0
+lib/lbiXi.so.12.1
 lib/libXp.6.2.0.dylib
 lib/libXp.6.2.dylib
 lib/libXp.6.dylib
@@ -449,6 +451,7 @@ lib/libXvMCW.la
 lib/libXvMCW.so
 lib/libXvMCW.so.1
 lib/libXvMCW.so.1.0
+lib/libXvMCW.so.2.0
 lib/libXxf86misc.1.1.0.dylib
 lib/libXxf86misc.1.dylib
 lib/libXxf86misc.dylib
@@ -542,6 +545,7 @@ lib/libxkbfile.so.2
 lib/libxkbfile.so.2.0
 lib/libxkbfile.so.4.0
 lib/libxkbfile.so.5.0
+lib/libxkbfile.so.6.0
 lib/libxkbui.1.0.0.dylib
 lib/libxkbui.1.dylib
 lib/libxkbui.dylib
