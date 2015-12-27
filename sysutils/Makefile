@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.655 2015/12/27 15:44:14 wiz Exp $
+# $NetBSD: Makefile,v 1.656 2015/12/27 21:06:49 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -412,7 +412,7 @@ SUBDIR+=	pv
 SUBDIR+=	pwgen
 SUBDIR+=	py-attic
 SUBDIR+=	py-augeas
-SUBDIR+=	py-borg
+SUBDIR+=	py-borgbackup
 SUBDIR+=	py-collectd
 SUBDIR+=	py-dbus
 SUBDIR+=	py-diffoscope
