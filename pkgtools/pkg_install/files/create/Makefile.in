@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.27 2015/09/07 09:06:05 jperkin Exp $
+# $NetBSD: Makefile.in,v 1.28 2015/12/27 12:18:20 joerg Exp $
 
 srcdir=		@srcdir@
 
@@ -24,17 +24,17 @@ INSTALL=	@INSTALL@
 PROG=		pkg_create
 
 SSL_SUPPORT=	@ssl_support@
+CPPFLAGS=	@CPPFLAGS@ -I. -I$(srcdir) -I../lib
 
 .if empty(BOOTSTRAP)
 LIBS=		-linstall -lnetpgpverify -larchive -lbz2 -lz -lfetch @LIBS@
 .if !empty(SSL_SUPPORT)
 LIBS+=		-lssl -lcrypto
 .endif
-CPPFLAGS=	@CPPFLAGS@ -I. -I$(srcdir) -I../lib
 OBJS=	main.o perform.o pl.o util.o build.o
 .else
 LIBS=		-linstall @LIBS@
-CPPFLAGS=	@CPPFLAGS@ -I. -I$(srcdir) -I../lib -DBOOTSTRAP
+CPPFLAGS+=	-DBOOTSTRAP
 OBJS=	main.o perform.o pl.o util.o
 .endif
 
