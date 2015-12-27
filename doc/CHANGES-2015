@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5128 2015/12/27 20:51:05 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.5129 2015/12/27 21:07:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8445,3 +8445,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/go-flags-svent version 0.0.20141123 [wiz 2015-12-27]
 	Added devel/go-nbreader version 0.0.20150201 [wiz 2015-12-27]
 	Added textproc/sift version 0.6.0 [wiz 2015-12-27]
+	Moved sysutils/py-borg to sysutils/py-borgbackup [wiz 2015-12-27]
+	Updated sysutils/py-borgbackup to 0.29.0 [wiz 2015-12-27]
