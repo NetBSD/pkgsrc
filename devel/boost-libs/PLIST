@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2015/01/25 12:21:33 pho Exp $
+@comment $NetBSD: PLIST,v 1.28 2015/12/27 12:41:42 adam Exp $
 lib/libboost_atomic.a
 lib/libboost_atomic.so
 lib/libboost_atomic.so.${BOOST_VERSION}
@@ -82,6 +82,9 @@ lib/libboost_thread.so.${BOOST_VERSION}
 lib/libboost_timer.a
 lib/libboost_timer.so
 lib/libboost_timer.so.${BOOST_VERSION}
+lib/libboost_type_erasure.a
+lib/libboost_type_erasure.so
+lib/libboost_type_erasure.so.${BOOST_VERSION}
 lib/libboost_unit_test_framework.a
 lib/libboost_unit_test_framework.so
 lib/libboost_unit_test_framework.so.${BOOST_VERSION}
