@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2015/12/04 21:48:21 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2015/12/27 23:36:43 wiz Exp $
 
-DISTNAME=	requests-toolbelt-0.5.0
+DISTNAME=	requests-toolbelt-0.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/requests-toolbelt/}
@@ -16,6 +16,9 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 USE_LANGUAGES=	# none
+
+post-extract:
+	${RM} ${WRKSRC}/requests_toolbelt/multipart/.encoder.py.swp
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
