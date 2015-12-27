@@ -1,0 +1,134 @@
+#!/usr/bin/env python
+# Ardour developers (c) 2015
+# This file is redistributed with the same license as vamp-plugin-sdk (x11)
+
+from waflib import TaskGen
+import re
+
+# Get waf to do %FOO% substitution rather than @FOO@
+TaskGen.re_m4 = re.compile('%%(\w+)%%', re.M)
+
+def options(opt):
+    opt.load('compiler_cxx')
+    pass
+
+def configure(conf):
+    conf.load('compiler_cxx')
+    conf.check_cfg (package='fftw3', uselib_store='FFTW3', args=['--cflags', '--libs'], mandatory=True)
+    conf.check_cfg (package='fftw3f', uselib_store='FFTW3F',  args=['--cflags', '--libs'], mandatory=True)
+    conf.check_cfg (package='sndfile', uselib_store='SNDFILE', args=['--cflags', '--libs'], mandatory=True)
+    conf.env.append_value('CXXFLAGS', '-DHAVE_FFTW3')
+
+def build(bld):
+    # Host Library
+    host_sources = '''
+            src/vamp-hostsdk/Files.cpp
+            src/vamp-hostsdk/PluginBufferingAdapter.cpp
+            src/vamp-hostsdk/PluginChannelAdapter.cpp
+            src/vamp-hostsdk/PluginHostAdapter.cpp
+            src/vamp-hostsdk/PluginInputDomainAdapter.cpp
+            src/vamp-hostsdk/PluginLoader.cpp
+            src/vamp-hostsdk/PluginSummarisingAdapter.cpp
+            src/vamp-hostsdk/PluginWrapper.cpp
+            src/vamp-hostsdk/RealTime.cpp
+            src/vamp-hostsdk/host-c.cpp
+    '''
+    sdk_sources = '''
+            src/vamp-sdk/PluginAdapter.cpp
+            src/vamp-sdk/RealTime.cpp
+    '''
+
+    bld.shlib (source = host_sources,
+               includes = '.',
+               target = 'vamp-hostsdk',
+               name = 'vamp-hostsdk',
+               uselib = 'FFTW3 FFTW3F',
+               features = 'cxx cxxshlib',
+               vnum = '3.6.0',
+               )
+    
+    bld.shlib (source = sdk_sources,
+               includes = '.',
+               target = 'vamp-sdk',
+               name = 'vamp-sdk',
+               uselib = 'FFTW3 FFTW3F',
+               features = 'cxx cxxshlib',
+               vnum = '2.6.0',
+               )
+
+    rdf_sources = '''
+        rdf/generator/vamp-rdf-template-generator.cpp
+    '''
+
+    simple_host_sources = '''
+        host/vamp-simple-host.cpp
+    '''
+
+    bld.program (source = rdf_sources,
+               includes = '.',
+               target = 'vamp-rdf-template-generator',
+               name = 'rdf-generator',
+               use = 'vamp-hostsdk vamp-sdk',
+               features = 'cxx'
+               )
+
+    bld.program (source = simple_host_sources,
+               includes = '.',
+               target = 'vamp-simple-host',
+               name = 'simple-host-generator',
+               use = 'vamp-hostsdk vamp-sdk SNDFILE',
+               features = 'cxx'
+               )
+
+    sdk_headers = '''
+         vamp-sdk/Plugin.h
+         vamp-sdk/PluginAdapter.h
+         vamp-sdk/PluginBase.h
+         vamp-sdk/RealTime.h
+         vamp-sdk/FFT.h
+         vamp-sdk/plugguard.h
+         vamp-sdk/vamp-sdk.h
+    '''
+    hostsdk_headers = '''
+         vamp-hostsdk/Plugin.h
+         vamp-hostsdk/PluginBase.h
+         vamp-hostsdk/PluginHostAdapter.h
+         vamp-hostsdk/RealTime.h
+         vamp-hostsdk/PluginBufferingAdapter.h
+         vamp-hostsdk/PluginChannelAdapter.h
+         vamp-hostsdk/PluginInputDomainAdapter.h
+         vamp-hostsdk/PluginLoader.h
+         vamp-hostsdk/PluginSummarisingAdapter.h
+         vamp-hostsdk/PluginWrapper.h
+         vamp-hostsdk/host-c.h
+         vamp-hostsdk/hostguard.h
+         vamp-hostsdk/vamp-hostsdk.h
+    '''
+    api_headers = '''
+       vamp/vamp.h
+    '''
+    bld.install_files ('${PREFIX}/include/vamp', api_headers)
+    bld.install_files ('${PREFIX}/include/vamp-sdk', sdk_headers)
+    bld.install_files ('${PREFIX}/include/vamp-hostsdk', hostsdk_headers)
+
+    pc = bld (features = 'subst',
+              source = 'pkgconfig/vamp.pc.in',
+              target = 'vamp.pc',
+              install_path = '${PREFIX}/lib/pkgconfig',
+              dict = {'PREFIX' : bld.env.PREFIX },
+              )
+
+    pc = bld (features = 'subst',
+              source = 'pkgconfig/vamp-sdk.pc.in',
+              target = 'vamp-sdk.pc',
+              install_path = '${PREFIX}/lib/pkgconfig',
+              dict = {'PREFIX' : bld.env.PREFIX },
+              )
+
+    pc = bld (features = 'subst',
+              source = 'pkgconfig/vamp-hostsdk.pc.in',
+              target = 'vamp-hostsdk.pc',
+              install_path = '${PREFIX}/lib/pkgconfig',
+              dict = {'PREFIX' : bld.env.PREFIX },
+              )
+    
