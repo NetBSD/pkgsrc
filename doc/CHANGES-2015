@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5116 2015/12/27 12:46:53 adam Exp $
+$NetBSD: CHANGES-2015,v 1.5117 2015/12/27 14:53:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8433,3 +8433,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/boost-build to 1.60.0 [adam 2015-12-27]
 	Updated devel/py-boost to 1.60.0 [adam 2015-12-27]
 	Updated meta-pkgs/boost to 1.60.0 [adam 2015-12-27]
+	Updated time/khal to 0.7.0 [wiz 2015-12-27]
