@@ -1,4 +1,4 @@
-# $NetBSD: xorg.xcb-util,v 1.6 2014/05/03 21:31:10 ryoon Exp $
+# $NetBSD: xorg.xcb-util,v 1.7 2015/12/27 18:56:33 sevan Exp $
 include/xcb/xcb_atom.h
 include/xcb/xcb_aux.h
 include/xcb/xcb_bitops.h
@@ -48,6 +48,7 @@ lib/libxcb-icccm.so.1
 lib/libxcb-icccm.so.1.0
 lib/libxcb-icccm.so.1.1
 lib/libxcb-icccm.so.2.0
+lib/libxcb-icccm.so.4.0
 lib/libxcb-image.0.0.0.dylib
 lib/libxcb-image.0.dylib
 lib/libxcb-image.a
@@ -57,6 +58,7 @@ lib/libxcb-image.so
 lib/libxcb-image.so.0
 lib/libxcb-image.so.0.0
 lib/libxcb-image.so.1.0
+lib/libxcb-image.so.2.0
 lib/libxcb-keysyms.0.0.0.dylib
 lib/libxcb-keysyms.0.dylib
 lib/libxcb-keysyms.a
@@ -66,9 +68,11 @@ lib/libxcb-keysyms.so
 lib/libxcb-keysyms.so.1
 lib/libxcb-keysyms.so.1.0
 lib/libxcb-keysyms.so.2.0
+lib/libxcb-keysyms.so.3.0
 lib/libxcb-present.a
 lib/libxcb-present.so
 lib/libxcb-present.so.0
+lib/libxcb-present.so.0.0
 lib/libxcb-present.so.0.1
 lib/libxcb-property.1.0.0.dylib
 lib/libxcb-property.1.dylib
@@ -87,6 +91,7 @@ lib/libxcb-render-util.la
 lib/libxcb-render-util.so
 lib/libxcb-render-util.so.0
 lib/libxcb-render-util.so.0.0
+lib/libxcb-render-util.so.1.0
 lib/libxcb-reply.1.0.0.dylib
 lib/libxcb-reply.1.dylib
 lib/libxcb-reply.a
@@ -99,6 +104,7 @@ lib/libxcb-reply.so.2.0
 lib/libxcb-util.0.dylib
 lib/libxcb-util.1.dylib
 lib/libxcb-util.dylib
+lib/libxcb-util.so.0.0
 lib/pkgconfig/xcb-atom.pc
 lib/pkgconfig/xcb-aux.pc
 lib/pkgconfig/xcb-event.pc
