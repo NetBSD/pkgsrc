@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2015/11/03 21:34:06 agc Exp $
+$NetBSD: distinfo,v 1.16 2015/12/27 12:31:53 adam Exp $
 
-SHA1 (lensfun-0.3.1.tar.gz) = 905168c39c7ccb980ee3d985778723a8c65cddb8
-RMD160 (lensfun-0.3.1.tar.gz) = b98aeed79c4514ed73ecd48e46d78c673b7d7e96
-SHA512 (lensfun-0.3.1.tar.gz) = cd0f142bb7d6aa154f587d89502da35473a7a02660246bd025ccd5d1982f55425359405898e11ce9094351ad44a2d6786b9ff07d227f75699e99e4de8f40938c
-Size (lensfun-0.3.1.tar.gz) = 761892 bytes
+SHA1 (lensfun-0.3.2.tar.gz) = 1d978b15aa7304d66a4931fa37ca9f8f89396c16
+RMD160 (lensfun-0.3.2.tar.gz) = 57322f5b6969c90f5549e20229a01e70606cc742
+SHA512 (lensfun-0.3.2.tar.gz) = 9c6f546fa70e6dc692e66ef378447345be6d3383812934780d326d772d775c1918cbf3447cd91c067655044cf659025763bf47ba2d938a82a3c2de4d60127446
+Size (lensfun-0.3.2.tar.gz) = 784825 bytes
