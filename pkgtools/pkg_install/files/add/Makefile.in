@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.32 2015/10/20 08:18:12 jperkin Exp $
+# $NetBSD: Makefile.in,v 1.33 2015/12/27 12:36:42 joerg Exp $
 
 srcdir=		@srcdir@
 
@@ -18,13 +18,20 @@ DEFS=		@DEFS@ -DOPSYS_NAME=\"$(OPSYS)\" -DPKGSRC_MACHINE_ARCH=\"$(PKGSRC_MACHINE
 CFLAGS=		@CFLAGS@
 LDFLAGS=	@LDFLAGS@ -L../lib
 
+BOOTSTRAP=	@bootstrap@
 SSL_SUPPORT=	@ssl_support@
 
+.if empty(BOOTSTRAP)
 LIBS=		-linstall -lnetpgpverify -larchive -lbz2 -lz -lfetch
 .if !empty(SSL_SUPPORT)
 LIBS+=		-lssl -lcrypto
+CPPFLAGS+=	-DHAVE_SSL
 .endif
 LIBS+=		@LIBS@
+.else
+LIBS=		-linstall ${STATIC_LIBARCHIVE} @LIBS@
+CPPFLAGS+=	-DBOOTSTRAP
+.endif
 
 INSTALL=	@INSTALL@
 
