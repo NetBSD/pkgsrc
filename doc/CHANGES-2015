@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5112 2015/12/27 11:31:45 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.5113 2015/12/27 11:32:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8418,3 +8418,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/sparsehash to 2.0.3 [joerg 2015-12-27]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2015Q4 branch [jperkin 2015-12-27]
 	Updated x11/libXi to 1.7.6 [wiz 2015-12-27]
+	Updated x11/xorg-cf-files to 1.0.6 [wiz 2015-12-27]
