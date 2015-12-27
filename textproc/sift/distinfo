@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/12/27 20:50:40 wiz Exp $
+
+SHA1 (sift-0.6.0.tar.gz) = eae22261ed09cff6bb1b21bb2fcb0d0c28f6ab81
+RMD160 (sift-0.6.0.tar.gz) = ee9c6119e53503496b3c748fec292130e015cda5
+SHA512 (sift-0.6.0.tar.gz) = 7a42a793cde876834468ef800e109dfb18dde28451cb05e3e3e9ac3cbe07d4f1c9bdc007c7e2ef84ebd3162753c698c177017e19cefa0a6d2cc2822d308204c9
+Size (sift-0.6.0.tar.gz) = 34032 bytes
