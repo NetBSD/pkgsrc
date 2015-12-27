@@ -1,0 +1,17 @@
+$NetBSD: patch-configure,v 1.1 2015/12/27 18:36:06 ryoon Exp $
+
+Fix NetBSD build, undefined u_short etc.
+
+--- configure.orig	2015-12-08 15:59:04.000000000 +0000
++++ configure
+@@ -3082,10 +3082,6 @@ $as_echo "#define _GNU_SOURCE 1" >>confd
+ 
+ $as_echo "#define _DARWIN_C_SOURCE 1" >>confdefs.h
+ 
+-# OSX does not declare chroot() with newer _XOPEN_SOURCE versions
+-
+-$as_echo "#define _XOPEN_SOURCE 500" >>confdefs.h
+-
+ # Solaris does not declare IPv6 structures without __EXTENSIONS__
+ 
+ $as_echo "#define __EXTENSIONS__ 1" >>confdefs.h
