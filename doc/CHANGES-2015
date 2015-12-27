@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5109 2015/12/26 23:55:50 dholland Exp $
+$NetBSD: CHANGES-2015,v 1.5110 2015/12/27 09:28:13 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8415,3 +8415,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated mail/im to 152 [taca 2015-12-26]
 	Updated devel/libjit to 0.1.2nb1 [dholland 2015-12-26]
 	Updated devel/monodevelop-database to 2.4nb39 [dholland 2015-12-26]
+	Updated devel/sparsehash to 2.0.3 [joerg 2015-12-27]
