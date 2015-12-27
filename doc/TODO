@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15210 2015/12/27 11:32:14 wiz Exp $
+$NetBSD: TODO,v 1.15211 2015/12/27 11:33:35 wiz Exp $
 
 Suggested new packages
 ======================
@@ -934,6 +934,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o htmldoc-1.8.28
 	o htop-1.0.3
 	o http_load-20140814
+	o hunspell-de-20151222
 	o icc11-13.0
 	o icdprog-0.5
 	o icedtea-web-1.6
@@ -1015,6 +1016,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libbpg-0.9.5
 	o libburn-1.4.0
 	o libcanberra-0.28 [drops support for GNOME2; don't update for now -- wiz]
+	o libcdr-0.1.2
 	o libchamplain08-0.12.10
 	o libdatrie-0.2.9
 	o libetonyek-0.1.5
@@ -1059,6 +1061,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libva-1.6.0
 	o libvdpau-1.1.1
 	o libvirt-1.2.17
+	o libvisio-0.1.4
 	o libxdg-basedir-1.2.0
 	o libxklavier-5.3
 	o libxml++-2.38.0
@@ -1443,6 +1446,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pks-0.9.6
 	o plan-1.10.1
 	o plasma-5.4.1
+	o playitslowly-1.5.0
 	o ploticus-examples-230
 	o ply-3.6
 	o poco-1.6.1
@@ -1476,13 +1480,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-HappyDoc-3.0
 	o py-Scientific-doc-2.5.5
 	o py-Unidecode-0.04.18
+	o py-backports.ssl_match_hostname-3.5.0.1
 	o py-bleach-1.4.1
 	o py-borg-0.29.0
 	o py-bsddb3-6.1.0
 	o py-buildbot-0.9.0b5
 	o py-buildbot-slave-0.9.0b5
 	o py-cassa-1.11.0
-	o py-cffi-1.4.1
+	o py-cffi-1.4.2
 	o py-colorama-0.3.3
 	o py-creole-1.1.1
 	o py-cups-1.9.73
@@ -1494,6 +1499,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-django-registration-1.0
 	o py-djangorestframework-2.3.12
 	o py-doctor-15.0.0
+	o py-enum34-1.1.2
 	o py-flake8-2.4.1
 	o py-gmpy-1.17
 	o py-gnome-menus-3.8.0
@@ -1522,7 +1528,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-requests-toolbelt-0.5.1
 	o py-rope-0.9.4
 	o py-serpent-1.11
-	o py-setuptools-19.1.1
+	o py-setuptools-19.2
 	o py-simpletal-5.1
 	o py-smb-1.1.16
 	o py-spf-2.0.11
@@ -1538,6 +1544,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-uliweb-0.4.1
 	o py-unittest2-1.1.0
 	o py-uwsgi-2.0.11.1
+	o py-vdirsyncer-0.7.4
 	o py-wxWidgets-3.0.0
 	o py-yubiauth-0.3.10
 	o py-zconfig-3.0.3
@@ -1818,7 +1825,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wpa_supplicant-2.4
 	o wwwoffle-2.9i
 	o wxRemind-101
-	o x264-devel-20151219
+	o x264-devel-20151226
 	o x2vnc-1.31
 	o xa65-2.3.7
 	o xenkernel46-4.6.0
