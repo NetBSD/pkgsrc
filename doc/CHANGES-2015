@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5120 2015/12/27 16:30:03 richard Exp $
+$NetBSD: CHANGES-2015,v 1.5121 2015/12/27 18:26:10 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8437,3 +8437,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated multimedia/mpv to 0.14.0 [leot 2015-12-27]
 	Added sysutils/py-diffoscope version 44 [wiz 2015-12-27]
 	Updated finance/py-ofxparse to 0.14 [richard 2015-12-27]
+	Updated www/firefox to 43.0.2 [ryoon 2015-12-27]
