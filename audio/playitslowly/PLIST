@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/08/07 20:36:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/12/27 22:54:21 wiz Exp $
 bin/playitslowly
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/playitslowly-py${PYVERSSUFFIX}.install-info
@@ -8,9 +8,9 @@ ${PYSITELIB}/playitslowly/__init__.pyo
 ${PYSITELIB}/playitslowly/app.py
 ${PYSITELIB}/playitslowly/app.pyc
 ${PYSITELIB}/playitslowly/app.pyo
-${PYSITELIB}/playitslowly/mygtk.py
-${PYSITELIB}/playitslowly/mygtk.pyc
-${PYSITELIB}/playitslowly/mygtk.pyo
+${PYSITELIB}/playitslowly/myGtk.py
+${PYSITELIB}/playitslowly/myGtk.pyc
+${PYSITELIB}/playitslowly/myGtk.pyo
 ${PYSITELIB}/playitslowly/pipeline.py
 ${PYSITELIB}/playitslowly/pipeline.pyc
 ${PYSITELIB}/playitslowly/pipeline.pyo
