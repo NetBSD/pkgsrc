@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.525 2015/12/27 22:48:07 wiz Exp $
+# $NetBSD: Makefile,v 1.526 2015/12/27 23:37:15 kamil Exp $
 #
 
 COMMENT=	Audio tools
@@ -457,6 +457,7 @@ SUBDIR+=	trm
 SUBDIR+=	tunapie
 SUBDIR+=	twolame
 SUBDIR+=	ubs
+SUBDIR+=	vamp-plugin-sdk
 SUBDIR+=	vcf
 SUBDIR+=	vorbis-tools
 SUBDIR+=	vorbisgain
