@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2015/06/12 10:51:21 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2015/12/27 21:53:23 wiz Exp $
 
-DISTNAME=	igerman98-20131206
+DISTNAME=	igerman98-20151222
 PKGNAME=	${DISTNAME:S/igerman98/hunspell-de/}
-PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.j3e.de/ispell/igerman98/dict/
 EXTRACT_SUFX=	.tar.bz2
