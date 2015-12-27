@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.373 2015/11/07 20:00:19 sevan Exp $
+# $NetBSD: bsd.prefs.mk,v 1.374 2015/12/27 12:37:29 joerg Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -536,6 +536,7 @@ _MAKE_CLEAN_AS_ROOT=	no
 _MAKE_INSTALL_AS_ROOT=	no
 .  endif
 .else
+PKG_FAIL_REASON+=	"USE_DESTDIR=no is no longer supported."
 DESTDIR=
 .endif
 
