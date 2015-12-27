@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2015/12/27 20:50:40 wiz Exp $
+bin/sift
+gopkg/pkg/${GO_PLATFORM}/github.com/svent/sift/gitignore.a
+gopkg/src/github.com/svent/sift/LICENSE
+gopkg/src/github.com/svent/sift/README.md
+gopkg/src/github.com/svent/sift/filetypes.go
+gopkg/src/github.com/svent/sift/gitignore/gitignore.go
+gopkg/src/github.com/svent/sift/matching.go
+gopkg/src/github.com/svent/sift/matching_cgo.go
+gopkg/src/github.com/svent/sift/matching_other.go
+gopkg/src/github.com/svent/sift/options.go
+gopkg/src/github.com/svent/sift/output.go
+gopkg/src/github.com/svent/sift/sift.go

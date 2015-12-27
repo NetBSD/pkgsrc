@@ -1,0 +1,22 @@
+All the features you expect from a modern grep alternative.
+
+RegEx - perl compatible regular expression syntax (no more escape
+hell)
+
+usable defaults - basic options known from grep but with usable
+defaults
+
+multiline support - find matches spanning over multiple lines
+replace - replace output to reformat it to your needs without
+relying on awk/sed
+
+gzip files - search through normal and gzip'ed files in one program
+call
+
+multiple patterns - search for multiple patterns in one run
+target selection - select or exclude search targets based on file
+name, directory name, path and type
+
+handling big data - sift handles big files without problems: files
+>50GB, >5,000,000,000 lines and >5,000,000,000 matches successfully
+tested
