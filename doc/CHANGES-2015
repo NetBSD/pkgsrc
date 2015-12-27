@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5118 2015/12/27 15:45:02 leot Exp $
+$NetBSD: CHANGES-2015,v 1.5119 2015/12/27 15:45:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8435,3 +8435,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated meta-pkgs/boost to 1.60.0 [adam 2015-12-27]
 	Updated time/khal to 0.7.0 [wiz 2015-12-27]
 	Updated multimedia/mpv to 0.14.0 [leot 2015-12-27]
+	Added sysutils/py-diffoscope version 44 [wiz 2015-12-27]
