@@ -1,1 +1,0 @@
-bin/borg @PREFIX@/bin/borg@PYVERSSUFFIX@
