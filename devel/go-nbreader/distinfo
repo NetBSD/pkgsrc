@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/12/27 20:44:13 wiz Exp $
+
+SHA1 (go-nbreader-0.0.20150201-7cef48da76dca6a496faa7fe63e39ed665cbd219.tar.gz) = 274cfb6f6fef8f3501da02b211c880b880a5ee83
+RMD160 (go-nbreader-0.0.20150201-7cef48da76dca6a496faa7fe63e39ed665cbd219.tar.gz) = 62a48e3a2410f2d5e51c1133917e55acad3f851f
+SHA512 (go-nbreader-0.0.20150201-7cef48da76dca6a496faa7fe63e39ed665cbd219.tar.gz) = c1a95b61d9848accf26863635cf9a4668724de9578c47242d5b444d5cb0723bdb6c79f807ce686f67862f35de2333aeed754ed99abd0aea5302303b0cd49060a
+Size (go-nbreader-0.0.20150201-7cef48da76dca6a496faa7fe63e39ed665cbd219.tar.gz) = 2781 bytes

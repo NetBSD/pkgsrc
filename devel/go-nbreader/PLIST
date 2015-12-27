@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2015/12/27 20:44:13 wiz Exp $
+gopkg/pkg/${GO_PLATFORM}/github.com/svent/go-nbreader.a
+gopkg/src/github.com/svent/go-nbreader/LICENSE
+gopkg/src/github.com/svent/go-nbreader/README.md
+gopkg/src/github.com/svent/go-nbreader/nbreader.go
