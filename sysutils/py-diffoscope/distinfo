@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2015/12/27 15:43:59 wiz Exp $
+
+SHA1 (diffoscope-44.tar.gz) = a8e991292fe101caab0350ffa43f3341f513b9f3
+RMD160 (diffoscope-44.tar.gz) = 3b49f689fde98434c193acba588555af9669ea22
+SHA512 (diffoscope-44.tar.gz) = 0f344c6b5781d312b0dda9711cde5117983d358c629f6137aa745d367ed4cc5c3d46c8d62704a4f8f1df60034c24117c04a44ec09221fb481f0431df13bd2c8e
+Size (diffoscope-44.tar.gz) = 334834 bytes
