@@ -1,9 +1,9 @@
-$NetBSD: patch-ag,v 1.4 2013/07/17 06:13:22 dholland Exp $
+$NetBSD: patch-ag,v 1.5 2015/12/27 11:31:54 wiz Exp $
 
 Add __ppc64__ and __arm__
 Recognize __sun as well as sun
 
---- Imake.cf.orig	2010-09-03 23:19:43.000000000 +0000
+--- Imake.cf.orig	2015-12-22 01:28:02.000000000 +0000
 +++ Imake.cf
 @@ -25,9 +25,10 @@ XCOMM $XFree86: xc/config/cf/Imake.cf,v 
  # define MacroIncludeFile <darwin.cf>
@@ -17,29 +17,7 @@ Recognize __sun as well as sun
  # endif
  # ifdef __i386__
  #  define i386DarwinArchitecture
-@@ -238,8 +239,9 @@ XCOMM $XFree86: xc/config/cf/Imake.cf,v 
- # ifdef mc68000
- #   define Mc68020Architecture
- # endif
--# ifdef __arm32__
-+# if defined(__arm__) || defined(__arm32__)
- #   define Arm32Architecture
-+#   undef __arm__
- #   undef __arm32__
- # endif
- # ifdef __vax__
-@@ -250,6 +252,10 @@ XCOMM $XFree86: xc/config/cf/Imake.cf,v 
- #   define PpcArchitecture
- #   undef __powerpc__
- # endif
-+# ifdef __x86_64__
-+#  define AMD64Architecture
-+#  undef __x86_64__
-+# endif
- #endif /* NetBSD */
- 
- /* Systems based on kernel of NetBSD */
-@@ -347,7 +353,7 @@ XCOMM $XFree86: xc/config/cf/Imake.cf,v 
+@@ -352,7 +357,7 @@ XCOMM $XFree86: xc/config/cf/Imake.cf,v 
  # endif
  #endif /* AMOEBA */
  
