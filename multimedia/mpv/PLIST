@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2014/10/22 20:10:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/12/27 15:44:37 leot Exp $
 bin/mpv
 man/man1/mpv.1
 share/applications/mpv.desktop
@@ -10,3 +10,4 @@ share/examples/mpv/encoding-profiles.conf
 share/icons/hicolor/16x16/apps/mpv.png
 share/icons/hicolor/32x32/apps/mpv.png
 share/icons/hicolor/64x64/apps/mpv.png
+share/icons/hicolor/scalable/apps/mpv.svg
