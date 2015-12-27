@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.29 2015/09/07 09:06:05 jperkin Exp $
+# $NetBSD: Makefile.in,v 1.30 2015/12/27 12:18:20 joerg Exp $
 
 srcdir=		@srcdir@
 
@@ -27,19 +27,20 @@ INSTALL=	@INSTALL@
 PROG=		pkg_admin
 SCRIPTS=	audit-packages download-vulnerability-list
 
+CPPFLAGS=	@CPPFLAGS@ -I. -I$(srcdir) -I../lib
+
 .if empty(BOOTSTRAP)
 LIBS=		-linstall -lnetpgpverify -larchive -lbz2 -lz -lfetch
 .if !empty(SSL_SUPPORT)
 LIBS+=		-lssl -lcrypto
-CFLAGS+=	-DHAVE_SSL
+CPPFLAGS+=	-DHAVE_SSL
 .endif
 LIBS+=		@LIBS@
 OBJS=		audit.o check.o main.o
-CPPFLAGS=	@CPPFLAGS@ -I. -I$(srcdir) -I../lib
 .else
 LIBS=		-linstall @LIBS@
 OBJS=		check.o main.o
-CPPFLAGS=	@CPPFLAGS@ -I. -I$(srcdir) -I../lib -DBOOTSTRAP
+CPPFLAGS+=	-DBOOTSTRAP
 .endif
 
 all: $(PROG) $(SCRIPTS)
