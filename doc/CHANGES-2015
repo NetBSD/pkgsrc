@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5127 2015/12/27 20:44:45 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.5128 2015/12/27 20:51:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8444,3 +8444,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added security/go-crypto version 0.0.20151215 [wiz 2015-12-27]
 	Added devel/go-flags-svent version 0.0.20141123 [wiz 2015-12-27]
 	Added devel/go-nbreader version 0.0.20150201 [wiz 2015-12-27]
+	Added textproc/sift version 0.6.0 [wiz 2015-12-27]
