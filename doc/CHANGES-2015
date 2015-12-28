@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5154 2015/12/28 12:03:44 bsiegert Exp $
+$NetBSD: CHANGES-2015,v 1.5155 2015/12/28 13:10:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8474,3 +8474,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated multimedia/x264-devel to 20151227 [adam 2015-12-28]
 	Updated devel/go-tools to 1.5 [bsiegert 2015-12-28]
 	Updated net/darkstat to 3.0.719 [bsiegert 2015-12-28]
+	Updated converters/librevenge to 0.0.3 [adam 2015-12-28]
