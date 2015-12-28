@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2014/05/31 15:56:26 wiz Exp $
+# $NetBSD: options.mk,v 1.6 2015/12/28 13:31:37 bsiegert Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.emacs
 PKG_SUPPORTED_OPTIONS=	dbus xft2 svg xml gnutls
@@ -105,6 +105,7 @@ CONFIGURE_ARGS+=	--without-xft --without-otf --without-m17n-flt
 .  if !empty(PKG_OPTIONS:Mgtk3)
 USE_TOOLS+=		pkg-config
 .include "../../x11/gtk3/buildlink3.mk"
+.include "../../graphics/adwaita-icon-theme/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-x-toolkit=gtk3
 
 ###
