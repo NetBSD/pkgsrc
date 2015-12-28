@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/11 14:45:32 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/12/28 11:58:12 bsiegert Exp $
 bin/benchcmp
 bin/callgraph
+bin/cover
 bin/digraph
 bin/eg
+bin/fiximports
 bin/godex
 bin/godoc
 bin/goimports
@@ -16,8 +18,7 @@ bin/ssadump
 bin/stress
 bin/stringer
 bin/tipgodoc
-go/pkg/tool/${GO_PLATFORM}/cover
-go/pkg/tool/${GO_PLATFORM}/vet
+bin/vet
 gopkg/pkg/${GO_PLATFORM}/golang.org/x/tools/benchmark/parse.a
 gopkg/pkg/${GO_PLATFORM}/golang.org/x/tools/blog.a
 gopkg/pkg/${GO_PLATFORM}/golang.org/x/tools/blog/atom.a
@@ -93,6 +94,16 @@ gopkg/src/golang.org/x/tools/cmd/cover/testdata/test.go
 gopkg/src/golang.org/x/tools/cmd/digraph/digraph.go
 gopkg/src/golang.org/x/tools/cmd/digraph/digraph_test.go
 gopkg/src/golang.org/x/tools/cmd/eg/eg.go
+gopkg/src/golang.org/x/tools/cmd/fiximports/main.go
+gopkg/src/golang.org/x/tools/cmd/fiximports/main_test.go
+gopkg/src/golang.org/x/tools/cmd/fiximports/testdata/src/fruit.io/banana/banana.go
+gopkg/src/golang.org/x/tools/cmd/fiximports/testdata/src/fruit.io/orange/orange.go
+gopkg/src/golang.org/x/tools/cmd/fiximports/testdata/src/fruit.io/pear/pear.go
+gopkg/src/golang.org/x/tools/cmd/fiximports/testdata/src/new.com/one/one.go
+gopkg/src/golang.org/x/tools/cmd/fiximports/testdata/src/old.com/bad/bad.go
+gopkg/src/golang.org/x/tools/cmd/fiximports/testdata/src/old.com/one/one.go
+gopkg/src/golang.org/x/tools/cmd/fiximports/testdata/src/titanic.biz/bar/bar.go
+gopkg/src/golang.org/x/tools/cmd/fiximports/testdata/src/titanic.biz/foo/foo.go
 gopkg/src/golang.org/x/tools/cmd/godex/doc.go
 gopkg/src/golang.org/x/tools/cmd/godex/gc.go
 gopkg/src/golang.org/x/tools/cmd/godex/gccgo.go
@@ -153,6 +164,7 @@ gopkg/src/golang.org/x/tools/cmd/stringer/testdata/num.go
 gopkg/src/golang.org/x/tools/cmd/stringer/testdata/number.go
 gopkg/src/golang.org/x/tools/cmd/stringer/testdata/prime.go
 gopkg/src/golang.org/x/tools/cmd/stringer/testdata/unum.go
+gopkg/src/golang.org/x/tools/cmd/stringer/testdata/unum2.go
 gopkg/src/golang.org/x/tools/cmd/stringer/util_test.go
 gopkg/src/golang.org/x/tools/cmd/tipgodoc/Dockerfile
 gopkg/src/golang.org/x/tools/cmd/tipgodoc/README
@@ -196,6 +208,8 @@ gopkg/src/golang.org/x/tools/cmd/vet/testdata/rangeloop.go
 gopkg/src/golang.org/x/tools/cmd/vet/testdata/shadow.go
 gopkg/src/golang.org/x/tools/cmd/vet/testdata/shift.go
 gopkg/src/golang.org/x/tools/cmd/vet/testdata/structtag.go
+gopkg/src/golang.org/x/tools/cmd/vet/testdata/tagtest/file1.go
+gopkg/src/golang.org/x/tools/cmd/vet/testdata/tagtest/file2.go
 gopkg/src/golang.org/x/tools/cmd/vet/testdata/unsafeptr.go
 gopkg/src/golang.org/x/tools/cmd/vet/testdata/unused.go
 gopkg/src/golang.org/x/tools/cmd/vet/types.go
@@ -261,6 +275,7 @@ gopkg/src/golang.org/x/tools/go/importer/import_test.go
 gopkg/src/golang.org/x/tools/go/importer/predefined.go
 gopkg/src/golang.org/x/tools/go/loader/cgo.go
 gopkg/src/golang.org/x/tools/go/loader/doc.go
+gopkg/src/golang.org/x/tools/go/loader/example14_test.go
 gopkg/src/golang.org/x/tools/go/loader/example_test.go
 gopkg/src/golang.org/x/tools/go/loader/loader.go
 gopkg/src/golang.org/x/tools/go/loader/loader_test.go
@@ -398,7 +413,6 @@ gopkg/src/golang.org/x/tools/go/types/issues_test.go
 gopkg/src/golang.org/x/tools/go/types/labels.go
 gopkg/src/golang.org/x/tools/go/types/lookup.go
 gopkg/src/golang.org/x/tools/go/types/methodset.go
-gopkg/src/golang.org/x/tools/go/types/methodsetcache.go
 gopkg/src/golang.org/x/tools/go/types/object.go
 gopkg/src/golang.org/x/tools/go/types/objset.go
 gopkg/src/golang.org/x/tools/go/types/operand.go
@@ -459,6 +473,7 @@ gopkg/src/golang.org/x/tools/go/types/typeutil/imports.go
 gopkg/src/golang.org/x/tools/go/types/typeutil/imports_test.go
 gopkg/src/golang.org/x/tools/go/types/typeutil/map.go
 gopkg/src/golang.org/x/tools/go/types/typeutil/map_test.go
+gopkg/src/golang.org/x/tools/go/types/typeutil/methodsetcache.go
 gopkg/src/golang.org/x/tools/go/types/typeutil/ui.go
 gopkg/src/golang.org/x/tools/go/types/typexpr.go
 gopkg/src/golang.org/x/tools/go/types/universe.go
@@ -492,7 +507,6 @@ gopkg/src/golang.org/x/tools/godoc/redirect/hash.go
 gopkg/src/golang.org/x/tools/godoc/redirect/redirect.go
 gopkg/src/golang.org/x/tools/godoc/search.go
 gopkg/src/golang.org/x/tools/godoc/server.go
-gopkg/src/golang.org/x/tools/godoc/server_test.go
 gopkg/src/golang.org/x/tools/godoc/snippet.go
 gopkg/src/golang.org/x/tools/godoc/spec.go
 gopkg/src/golang.org/x/tools/godoc/spot.go
@@ -671,6 +685,12 @@ gopkg/src/golang.org/x/tools/refactor/eg/testdata/E1.golden
 gopkg/src/golang.org/x/tools/refactor/eg/testdata/F.template
 gopkg/src/golang.org/x/tools/refactor/eg/testdata/F1.go
 gopkg/src/golang.org/x/tools/refactor/eg/testdata/F1.golden
+gopkg/src/golang.org/x/tools/refactor/eg/testdata/G.template
+gopkg/src/golang.org/x/tools/refactor/eg/testdata/G1.go
+gopkg/src/golang.org/x/tools/refactor/eg/testdata/G1.golden
+gopkg/src/golang.org/x/tools/refactor/eg/testdata/H.template
+gopkg/src/golang.org/x/tools/refactor/eg/testdata/H1.go
+gopkg/src/golang.org/x/tools/refactor/eg/testdata/H1.golden
 gopkg/src/golang.org/x/tools/refactor/eg/testdata/bad_type.template
 gopkg/src/golang.org/x/tools/refactor/eg/testdata/expr_type_mismatch.template
 gopkg/src/golang.org/x/tools/refactor/eg/testdata/no_after_return.template
