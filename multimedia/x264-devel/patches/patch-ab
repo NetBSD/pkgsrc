@@ -1,7 +1,16 @@
-$NetBSD: patch-ab,v 1.22 2015/07/18 11:08:22 adam Exp $
+$NetBSD: patch-ab,v 1.23 2015/12/28 11:37:03 adam Exp $
 
---- Makefile.orig	2015-07-17 20:45:05.000000000 +0000
+--- Makefile.orig	2015-10-24 20:45:04.000000000 +0000
 +++ Makefile
+@@ -34,7 +34,7 @@ OBJS =
+ OBJSO =
+ OBJCLI =
+ 
+-OBJCHK = tools/checkasm.o
++OBJCHK = tools/checkasm.lo
+ 
+ OBJEXAMPLE = example.o
+ 
 @@ -99,9 +99,9 @@ endif
  
  ifdef ARCH_X86
@@ -14,16 +23,29 @@ $NetBSD: patch-ab,v 1.22 2015/07/18 11:08:22 adam Exp $
  endif
  endif
  
-@@ -121,7 +121,7 @@ ASMSRC += common/arm/cpu-a.S common/arm/
+@@ -121,8 +121,8 @@ ASMSRC += common/arm/cpu-a.S common/arm/
            common/arm/dct-a.S common/arm/quant-a.S common/arm/deblock-a.S \
-           common/arm/predict-a.S
+           common/arm/predict-a.S common/arm/bitstream-a.S
  SRCS   += common/arm/mc-c.c common/arm/predict-c.c
 -OBJASM  = $(ASMSRC:%.S=%.o)
+-OBJCHK += tools/checkasm-arm.o
 +OBJASM  = $(ASMSRC:%.S=%.lo)
++OBJCHK += tools/checkasm-arm.lo
  endif
  endif
  
-@@ -162,20 +162,23 @@ GENERATED += common/oclobj.h
+@@ -140,8 +140,8 @@ ASMSRC += common/aarch64/bitstream-a.S \
+ SRCS   += common/aarch64/asm-offsets.c \
+           common/aarch64/mc-c.c        \
+           common/aarch64/predict-c.c
+-OBJASM  = $(ASMSRC:%.S=%.o)
+-OBJCHK += tools/checkasm-aarch64.o
++OBJASM  = $(ASMSRC:%.S=%.lo)
++OBJCHK += tools/checkasm-aarch64.lo
+ endif
+ endif
+ 
+@@ -173,20 +173,23 @@ GENERATED += common/oclobj.h
  SRCS += common/opencl.c encoder/slicetype-cl.c
  endif
  
@@ -36,7 +58,7 @@ $NetBSD: patch-ab,v 1.22 2015/07/18 11:08:22 adam Exp $
  .PHONY: all default fprofiled clean distclean install install-* uninstall cli lib-* etags
  
 +%.lo: %.c
-+	${LIBTOOL} --mode=compile ${CC} -c ${CFLAGS} ${PICFLAGS} -o $@ $<
++	${LIBTOOL} --mode=compile ${CC} -c ${CFLAGS} ${PICFLAG} -o $@ $<
 +
  cli: x264$(EXE)
 -lib-static: $(LIBX264)
@@ -54,7 +76,7 @@ $NetBSD: patch-ab,v 1.22 2015/07/18 11:08:22 adam Exp $
  
  $(SONAME): $(GENERATED) .depend $(OBJS) $(OBJASM) $(OBJSO)
  	$(LD)$@ $(OBJS) $(OBJASM) $(OBJSO) $(SOFLAGS) $(LDFLAGS)
-@@ -187,20 +190,19 @@ checkasm: checkasm$(EXE)
+@@ -198,20 +201,19 @@ checkasm: checkasm$(EXE)
  example: example$(EXE)
  endif
  
@@ -81,7 +103,7 @@ $NetBSD: patch-ab,v 1.22 2015/07/18 11:08:22 adam Exp $
  
  %.o: %.S
  	$(AS) $(ASFLAGS) -o $@ $<
-@@ -270,8 +272,7 @@ distclean: clean
+@@ -281,8 +283,7 @@ distclean: clean
  	rm -f config.mak x264_config.h config.h config.log x264.pc x264.def conftest*
  
  install-cli: cli
@@ -91,7 +113,7 @@ $NetBSD: patch-ab,v 1.22 2015/07/18 11:08:22 adam Exp $
  
  install-lib-dev:
  	$(INSTALL) -d $(DESTDIR)$(includedir)
-@@ -282,8 +283,7 @@ install-lib-dev:
+@@ -293,8 +294,7 @@ install-lib-dev:
  	$(INSTALL) -m 644 x264.pc $(DESTDIR)$(libdir)/pkgconfig
  
  install-lib-static: lib-static install-lib-dev
