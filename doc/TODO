@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15233 2015/12/28 10:04:10 adam Exp $
+$NetBSD: TODO,v 1.15234 2015/12/28 11:47:52 adam Exp $
 
 Suggested new packages
 ======================
@@ -1803,7 +1803,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wpa_supplicant-2.4
 	o wwwoffle-2.9i
 	o wxRemind-101
-	o x264-devel-20151226
 	o x2vnc-1.31
 	o xa65-2.3.7
 	o xenkernel46-4.6.0
