@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.24 2015/06/11 13:44:23 adam Exp $
+# $NetBSD: Makefile.common,v 1.25 2015/12/28 13:44:03 adam Exp $
 #
 # used by lang/perl5/Makefile
 # used by databases/p5-gdbm/Makefile
 
-DISTNAME=	perl-5.22.0
+DISTNAME=	perl-5.22.1
 CATEGORIES=	lang devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:S,/modules/by-module/$,/src/5.0/,}
 DISTFILES+=	${DISTNAME}${EXTRACT_SUFX}
