@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5158 2015/12/28 14:35:12 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.5159 2015/12/28 15:10:27 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8478,3 +8478,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/perl5 to 5.22.1 [adam 2015-12-28]
 	Updated devel/boost-headers to 1.60.0nb1 [ryoon 2015-12-28]
 	Updated math/py-pandas to 0.17.1 [wiz 2015-12-28]
+	Added graphics/wm-icons version 0.4.0 [tsutsui 2015-12-28]
