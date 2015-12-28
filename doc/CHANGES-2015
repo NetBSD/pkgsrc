@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5153 2015/12/28 11:47:52 adam Exp $
+$NetBSD: CHANGES-2015,v 1.5154 2015/12/28 12:03:44 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8472,3 +8472,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Added audio/rubberband version 1.8.1 [kamil 2015-12-28]
 	Updated www/py-djangocms-admin-style to 1.0.7 [adam 2015-12-28]
 	Updated multimedia/x264-devel to 20151227 [adam 2015-12-28]
+	Updated devel/go-tools to 1.5 [bsiegert 2015-12-28]
+	Updated net/darkstat to 3.0.719 [bsiegert 2015-12-28]
