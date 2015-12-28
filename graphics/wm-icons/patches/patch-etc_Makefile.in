@@ -1,0 +1,15 @@
+$NetBSD: patch-etc_Makefile.in,v 1.1 2015/12/28 15:08:55 tsutsui Exp $
+
+- no need to build system specific files for debian
+
+--- etc/Makefile.in.orig	2015-12-13 04:34:28.000000000 +0000
++++ etc/Makefile.in
+@@ -92,7 +92,7 @@ userdir = @userdir@
+ 
+ AUTOMAKE_OPTIONS = foreign
+ 
+-SUBDIRS = debian-menu-system
++#SUBDIRS = debian-menu-system
+ 
+ configdir = @datadir@/wm-icons
+ 
