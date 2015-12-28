@@ -1,0 +1,34 @@
+$NetBSD: patch-Makefile.in,v 1.1 2015/12/28 15:08:55 tsutsui Exp $
+
+- no need to build rpm in pkgsrc
+- handle $(DESTDIR) in installation scripts
+
+--- Makefile.in.orig	2006-04-09 20:04:28.000000000 +0000
++++ Makefile.in
+@@ -92,7 +92,7 @@ userdir = @userdir@
+ 
+ AUTOMAKE_OPTIONS = foreign
+ 
+-SUBDIRS = bin doc icons etc devel rpm
++SUBDIRS = bin doc icons etc devel #rpm
+ subdir = .
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+@@ -240,7 +240,7 @@ distcleancheck_listfiles = find . -type 
+ distdir: $(DISTFILES)
+ 	$(am__remove_distdir)
+ 	mkdir $(distdir)
+-	$(mkinstalldirs) $(distdir)/bin $(distdir)/doc $(distdir)/rpm
++	$(mkinstalldirs) $(distdir)/bin $(distdir)/doc #$(distdir)/rpm
+ 	@list='$(DISTFILES)'; for file in $$list; do \
+ 	  if test -f $$file || test -d $$file; then d=.; else d=$(srcdir); fi; \
+ 	  dir=`echo "$$file" | sed -e 's,/[^/]*$$,,'`; \
+@@ -417,7 +417,7 @@ uninstall-info: uninstall-info-recursive
+ # is for a distribution package building.
+ # Set the default icon set aliases (symlinks).
+ install-data-local:
+-	$(bindir)/wm-icons-config --user-dir="$(icondir)" --defaults --quiet
++	$(DESTDIR)$(bindir)/wm-icons-config --user-dir="$(DESTDIR)$(icondir)" --defaults --quiet
+ 
+ wm-configs _pack-symlinks _unpack-symlinks:
+ 	cd devel/bin && $(MAKE) $(AM_MAKEFLAGS) $@

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.723 2015/11/19 07:39:08 wiz Exp $
+# $NetBSD: Makefile,v 1.724 2015/12/28 15:08:54 tsutsui Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -658,6 +658,7 @@ SUBDIR+=	vp
 SUBDIR+=	vtk
 SUBDIR+=	vtk-data
 SUBDIR+=	vtk-docs
+SUBDIR+=	wm-icons
 SUBDIR+=	wmphoto
 SUBDIR+=	wxsvg
 SUBDIR+=	x11rec

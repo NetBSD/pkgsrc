@@ -1,0 +1,17 @@
+$NetBSD: patch-configure,v 1.1 2015/12/28 15:08:55 tsutsui Exp $
+
+- avoid using non-portable '-c' option in fmt(1) to print configure result
+
+--- configure.orig	2006-04-09 20:04:34.000000000 +0000
++++ configure
+@@ -2910,8 +2912,8 @@ fi
+ FMT_ALL_ICON_SETS="$ALL_ICON_SETS"
+ FMT_SELECTED_ICON_SETS="$SELECTED_ICON_SETS"
+ if test -x /usr/bin/fmt; then
+-	FMT_ALL_ICON_SETS="`echo '   ' $ALL_ICON_SETS | fmt -c`"
+-	FMT_SELECTED_ICON_SETS="`echo '   ' $SELECTED_ICON_SETS | fmt -c`"
++	FMT_ALL_ICON_SETS="`echo '   ' $ALL_ICON_SETS | fmt`"
++	FMT_SELECTED_ICON_SETS="`echo '   ' $SELECTED_ICON_SETS | fmt`"
+ fi
+ 
+ echo "
