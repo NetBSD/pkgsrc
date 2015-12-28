@@ -1,0 +1,39 @@
+$NetBSD: patch-icons_Makefile.in,v 1.1 2015/12/28 15:08:55 tsutsui Exp $
+
+- handle $(DESTDIR) in install scripts
+
+--- icons/Makefile.in.orig	2015-12-13 04:55:01.000000000 +0000
++++ icons/Makefile.in
+@@ -223,12 +223,12 @@ install-data-local:
+ 	chmod -R o-w,go+rX *
+ 	cd $(top_srcdir)/icons; \
+ 	for iconset in $(SELECTED_ICON_SETS); do \
+-		rm -rf $(icondir)/$$iconset; \
++		rm -rf $(DESTDIR)$(icondir)/$$iconset; \
+ 		tar cpf - "$$iconset" \
+-			| (cd "$(icondir)" && tar xfBp -); \
+-		find "$(icondir)/$$iconset" -name CVS \
++			| (cd "$(DESTDIR)$(icondir)" && tar xfBp -); \
++		find "$(DESTDIR)$(icondir)/$$iconset" -name CVS \
+ 			-exec rm -r {} \; 2>/dev/null; \
+-		(cd "$(icondir)/$$iconset" && [ -f $(SYMLINKS_LST) ] \
++		(cd "$(DESTDIR)$(icondir)/$$iconset" && [ -f $(SYMLINKS_LST) ] \
+ 			&& $(AWK) '{ system("ln -sf " $$1 " " $$2) }' \
+ 				< $(SYMLINKS_LST) \
+ 			&& rm $(SYMLINKS_LST) || true \
+@@ -237,12 +237,12 @@ install-data-local:
+ 
+ uninstall-local:
+ 	for iconset in $(SELECTED_ICON_SETS); do \
+-		rm -rf $(icondir)/$$iconset; \
++		rm -rf $(DESTDIR)$(icondir)/$$iconset; \
+ 	done
+-	for i in $(icondir)/*; do \
++	for i in $(DESTDIR)$(icondir)/*; do \
+ 		if [ -L "$$i" ] && [ ! -e "$$i" ]; then rm -f "$$i"; fi; \
+ 	done
+-	-rmdir $(icondir)
++	-rmdir $(DESTDIR)$(icondir)
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
