@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2015/12/12 19:11:47 markd Exp $
+# $NetBSD: Makefile,v 1.42 2015/12/28 00:21:23 dholland Exp $
 
 DISTNAME=	texlive-20150521-source
 PKGNAME=	luatex-0.80.0
@@ -68,6 +68,8 @@ BUILDLINK_API_DEPENDS.kpathsea+= kpathsea>=6.2.1
 .include "../../print/kpathsea/buildlink3.mk"
 .include "../../print/poppler/buildlink3.mk"
 .include "../../print/poppler-includes/buildlink3.mk"
+BUILDLINK_DEPMETHOD.libX11?=    build
+.include "../../x11/libX11/buildlink3.mk"    
 .include "../../x11/pixman/buildlink3.mk"
 
 do-install:
