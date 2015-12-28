@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2015/12/28 13:08:56 adam Exp $
+$NetBSD: distinfo,v 1.7 2015/12/28 21:00:16 ryoon Exp $
 
 SHA1 (librevenge-0.0.3.tar.xz) = 5f97be508eb6786157b9c02aa867a8944f085762
 RMD160 (librevenge-0.0.3.tar.xz) = cf0cac49b92118af747c08684fc180db4a825bc4
 SHA512 (librevenge-0.0.3.tar.xz) = 568ad98c861c13cda3461aad50df164a37f53e8e169231da7043dbfcab963b7870169badbe67c73532278ea229fea36c7dba4f0f03ea95730c17f49d01c0a2be
 Size (librevenge-0.0.3.tar.xz) = 420288 bytes
+SHA1 (patch-librevenge.pc.in) = ff56576f4fc40a1ea8619d8ca3660b7821dbc18a
