@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2015/03/12 17:50:30 tnn Exp $
+# $NetBSD: Makefile.common,v 1.11 2015/12/28 22:35:12 leot Exp $
 #
 # used by security/dsniff/Makefile
 # used by security/dsniff-nox11/Makefile
@@ -10,6 +10,7 @@ MASTER_SITES+=	http://monkey.org/~dugsong/dsniff/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://monkey.org/~dugsong/dsniff/
+LICENSE=	modified-bsd
 
 GNU_CONFIGURE=	yes
 MAKE_JOBS_SAFE=	no
