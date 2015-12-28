@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.526 2015/12/27 23:37:15 kamil Exp $
+# $NetBSD: Makefile,v 1.527 2015/12/28 03:30:37 kamil Exp $
 #
 
 COMMENT=	Audio tools
@@ -410,6 +410,7 @@ SUBDIR+=	rosegarden
 SUBDIR+=	rplay
 SUBDIR+=	rsynth
 SUBDIR+=	rtunes
+SUBDIR+=	rubberband
 SUBDIR+=	ruby-mp3info
 SUBDIR+=	ruby-taglib
 SUBDIR+=	schismtracker
