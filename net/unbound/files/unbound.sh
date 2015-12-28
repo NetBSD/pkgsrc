@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: unbound.sh,v 1.4 2015/03/19 22:37:06 pettai Exp $
+# $NetBSD: unbound.sh,v 1.5 2015/12/28 13:48:30 bsiegert Exp $
 #
 # PROVIDE: unbound
 # REQUIRE: DAEMON
@@ -33,5 +33,5 @@ if [ -f /etc/rc.subr ]; then
 	run_rc_command "$1"
 else
 	echo -n " ${name}"
-	${command} ${nsd_flags}
+	${command} ${unbound_flags}
 fi
