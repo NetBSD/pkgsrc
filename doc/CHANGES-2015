@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5160 2015/12/28 21:01:40 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.5161 2015/12/28 21:17:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8480,3 +8480,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated math/py-pandas to 0.17.1 [wiz 2015-12-28]
 	Added graphics/wm-icons version 0.4.0 [tsutsui 2015-12-28]
 	Updated converters/librevenge to 0.0.3nb1 [ryoon 2015-12-28]
+	Updated audio/mp3diags to 1.2.02 [adam 2015-12-28]
