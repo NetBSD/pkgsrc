@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2014/12/14 08:39:56 obache Exp $
+# $NetBSD: Makefile,v 1.17 2015/12/28 12:02:10 bsiegert Exp $
 
-DISTNAME=		darkstat-3.0.718
+DISTNAME=		darkstat-3.0.719
 CATEGORIES=		net
 MASTER_SITES=		http://unix4lyfe.org/darkstat/
 EXTRACT_SUFX=		.tar.bz2
