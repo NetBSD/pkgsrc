@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 03:27:29 agc Exp $
+$NetBSD: distinfo,v 1.3 2015/12/28 11:58:12 bsiegert Exp $
 
-SHA1 (tools-d00f0cb57d.tar.gz) = f0b894faa4e42166e82ca3176ec114ff7011005d
-RMD160 (tools-d00f0cb57d.tar.gz) = 784b144c11b3b5b56829390d5597252a55a390d1
-SHA512 (tools-d00f0cb57d.tar.gz) = b890c4996b12259d85e572829f992bbf6369b08fe132656aade09f4aa44f8a2ad9543bd86bae619fe45a97f3b42e61c57acad2f36b278e96f3728cce4c206c12
-Size (tools-d00f0cb57d.tar.gz) = 1618876 bytes
+SHA1 (tools-d02228d.tar.gz) = 329d8da1b9b894d1e3f2aaacdb338f141ec6022e
+RMD160 (tools-d02228d.tar.gz) = 55bfe5ee2a9b49439ccc56cf6897bbe083538bfb
+SHA512 (tools-d02228d.tar.gz) = 80813c2da74c7b25fa2cfd15b2505757e7f466469ac701cb22d190dc83a607f091c4dea207a2e371e53d7a1f5459e7b53e5eea53c95565e958a6eb7fcb212359
+Size (tools-d02228d.tar.gz) = 1633388 bytes
