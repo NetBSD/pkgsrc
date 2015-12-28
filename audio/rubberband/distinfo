@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2015/12/28 03:29:33 kamil Exp $
+
+SHA1 (rubberband-1.8.1.tar.bz2) = ae1faaef211d612db745d66d77266cf6789fd4ee
+RMD160 (rubberband-1.8.1.tar.bz2) = 21178218aeffb0a0827ba8c4fd32e95f5a08b295
+SHA512 (rubberband-1.8.1.tar.bz2) = 9721eaa36b80574f90b8ae5cfae388159a239e4257b8c85b9e55e7cf0dbbb9a996b857213a6a172a4ada5ff712e6936a16adbe08396e2ab1df3fd8d5a02a3620
+Size (rubberband-1.8.1.tar.bz2) = 177501 bytes
+SHA1 (patch-src_StretcherImpl.cpp) = 609774b9d573fa92ce79f1b11bd7af8e585e3cef
+SHA1 (patch-src_StretcherProcess.cpp) = 45c23ddd2ba92b11c6d5063597ea1594690e33ec
+SHA1 (patch-src_system_sysutils.h) = bd97bca9c18ce66d05a1870d63cfc5107584949a
