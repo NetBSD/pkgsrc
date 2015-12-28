@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5151 2015/12/28 03:32:37 kamil Exp $
+$NetBSD: CHANGES-2015,v 1.5152 2015/12/28 10:04:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8468,4 +8468,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-tortoisehg to 3.6.2 [wiz 2015-12-27]
 	Updated misc/p5-Business-ISBN-Data to 20140910.003 [wiz 2015-12-27]
 	Updated devel/global to 6.5.2 [wiz 2015-12-27]
+	Updated www/apache24 to 2.4.18 [adam 2015-12-27]
 	Added audio/rubberband version 1.8.1 [kamil 2015-12-28]
+	Updated www/py-djangocms-admin-style to 1.0.7 [adam 2015-12-28]
