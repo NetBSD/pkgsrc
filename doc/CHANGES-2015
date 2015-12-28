@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5156 2015/12/28 13:46:15 adam Exp $
+$NetBSD: CHANGES-2015,v 1.5157 2015/12/28 13:53:21 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8476,3 +8476,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/darkstat to 3.0.719 [bsiegert 2015-12-28]
 	Updated converters/librevenge to 0.0.3 [adam 2015-12-28]
 	Updated lang/perl5 to 5.22.1 [adam 2015-12-28]
+	Updated devel/boost-headers to 1.60.0nb1 [ryoon 2015-12-28]
