@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2015/12/06 12:13:13 taca Exp $
+# $NetBSD: Makefile,v 1.17 2015/12/29 03:23:50 dholland Exp $
 #
 
 .include "../../www/phraseanet/Makefile.common"
-PKGNAME=        phraseanet-${VERS}
+PKGNAME=	phraseanet-${VERS}
 PKGREVISION=	5
 
 USE_TOOLS+=	pax
@@ -37,6 +37,8 @@ DEPENDS+=	p5-Image-ExifTool-[0-9]*:../../graphics/p5-Image-ExifTool
 
 PHP_VERSIONS_ACCEPTED=	55 56
 
+.include "../../mk/bsd.prefs.mk"
+
 PHRASEANETDIR?=		${PREFIX}/share/phraseanet
 APACHE_USER?=		www
 APACHE_GROUP?=		www
@@ -68,7 +70,7 @@ MAKE_DIRS_PERMS+= ${PHRASEANETDIR}/tmp/batches ${APACHE_DIRS_PERMS}
 do-build:
 
 pre-install:
-	${FIND} ${WRKSRC:Q} -name "*.orig*" -exec ${RM} -f {} \;
+	${FIND} ${WRKSRC} -name "*.orig*" -exec ${RM} -f {} \;
 	${RM} -rf ${WRKSRC}/bin/src
 
 do-install:
