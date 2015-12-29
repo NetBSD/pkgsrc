@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2015/06/02 14:53:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.20 2015/12/29 19:39:21 adam Exp $
 bin/7z
 bin/7za
 ${PLIST.dll}lib/7z.so
@@ -27,6 +27,7 @@ share/doc/p7zip/switches/ar_exclude.htm
 share/doc/p7zip/switches/ar_include.htm
 share/doc/p7zip/switches/ar_no.htm
 share/doc/p7zip/switches/charset.htm
+share/doc/p7zip/switches/email.htm
 share/doc/p7zip/switches/exclude.htm
 share/doc/p7zip/switches/include.htm
 share/doc/p7zip/switches/index.htm
@@ -38,9 +39,11 @@ share/doc/p7zip/switches/overwrite.htm
 share/doc/p7zip/switches/password.htm
 share/doc/p7zip/switches/recurse.htm
 share/doc/p7zip/switches/sa.htm
+share/doc/p7zip/switches/scc.htm
 share/doc/p7zip/switches/scrc.htm
 share/doc/p7zip/switches/sdel.htm
 share/doc/p7zip/switches/sfx.htm
+share/doc/p7zip/switches/shared.htm
 share/doc/p7zip/switches/sni.htm
 share/doc/p7zip/switches/sns.htm
 share/doc/p7zip/switches/spf.htm

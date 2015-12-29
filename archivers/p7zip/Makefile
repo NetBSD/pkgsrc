@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2015/06/02 14:53:10 adam Exp $
+# $NetBSD: Makefile,v 1.59 2015/12/29 19:39:21 adam Exp $
 
-DISTNAME=	p7zip_9.38.1_src_all
-PKGNAME=	p7zip-9.38.1
+DISTNAME=	p7zip_15.09_src_all
+PKGNAME=	p7zip-15.09
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=p7zip/}
 EXTRACT_SUFX=	.tar.bz2
@@ -70,11 +70,11 @@ do-install:
 .endif
 	${INSTALL_DATA} ${WRKSRC}/README \
 		${DESTDIR}${PREFIX}/share/doc/p7zip
-	${INSTALL_DATA} ${WRKSRC}/DOC/MANUAL/*.* \
+	${INSTALL_DATA} ${WRKSRC}/DOC/MANUAL/cmdline/*.* \
 		${DESTDIR}${PREFIX}/share/doc/p7zip
-	${INSTALL_DATA} ${WRKSRC}/DOC/MANUAL/commands/*.* \
+	${INSTALL_DATA} ${WRKSRC}/DOC/MANUAL/cmdline/commands/*.* \
 		${DESTDIR}${PREFIX}/share/doc/p7zip/commands
-	${INSTALL_DATA} ${WRKSRC}/DOC/MANUAL/switches/*.* \
+	${INSTALL_DATA} ${WRKSRC}/DOC/MANUAL/cmdline/switches/*.* \
 		${DESTDIR}${PREFIX}/share/doc/p7zip/switches
 	${INSTALL_MAN} ${WRKSRC}/man1/7z.1 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
