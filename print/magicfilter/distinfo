@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2015/11/04 01:01:35 agc Exp $
+$NetBSD: distinfo,v 1.8 2015/12/29 04:04:30 dholland Exp $
 
 SHA1 (magicfilter-1.2.tar.gz) = f1aff1c38065d9e00e0bfb748b70445829ecc0a6
 RMD160 (magicfilter-1.2.tar.gz) = 064aeb611d461664afa5c71d8f8d2edc63480fa2
@@ -7,4 +7,4 @@ Size (magicfilter-1.2.tar.gz) = 53176 bytes
 SHA1 (patch-aa) = 6fe946d6adc7db746c4ff70ed6a946aebf115d5d
 SHA1 (patch-ab) = d55a2db4b9048a41be60c51f651ef0dfcb3f315e
 SHA1 (patch-ac) = eb8aad07704ebe1ab744307523c846827a6afe93
-SHA1 (patch-ad) = 15997d146ce7b64c773e545ba30242ab3ffcd506
+SHA1 (patch-ad) = 66e3e6396add9ac0739b837b58f1f524d0701867

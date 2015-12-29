@@ -1,3 +1,5 @@
+$NetBSD: patch-kmines_Makefile.in,v 1.2 2015/12/29 04:04:28 dholland Exp $
+
 --- kmines/Makefile.in.orig	2008-08-20 17:43:06.000000000 +0200
 +++ kmines/Makefile.in	2011-11-02 12:54:17.713830056 +0100
 @@ -849,28 +849,28 @@ install-data-local:

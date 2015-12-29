@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2015/11/04 01:18:02 agc Exp $
+$NetBSD: distinfo,v 1.8 2015/12/29 04:04:31 dholland Exp $
 
 SHA1 (prelude-pflogger-0.9.0-rc2.tar.gz) = ae354809dae5f04392a1c93a88be4cf9993c3b43
 RMD160 (prelude-pflogger-0.9.0-rc2.tar.gz) = 7c5808b0ca515c8080c64b52aa0aae166831e4d4
@@ -6,4 +6,4 @@ SHA512 (prelude-pflogger-0.9.0-rc2.tar.gz) = 5f73ac0b37c4e95cf1c2316ca6ec3efb020
 Size (prelude-pflogger-0.9.0-rc2.tar.gz) = 303763 bytes
 SHA1 (patch-aa) = b7f7623e75c324e593aec10d921ee5364a2fa542
 SHA1 (patch-ab) = e13fe4c090a1bb17fc552a0c6ca061da0f7ad1a4
-SHA1 (patch-ac) = 18e596f3de2835fa31062e42d3760f70707c8812
+SHA1 (patch-ac) = 105160b3ea38d70b6b845612d9027b3ace050204

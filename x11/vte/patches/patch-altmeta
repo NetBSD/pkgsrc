@@ -1,3 +1,5 @@
+$NetBSD: patch-altmeta,v 1.2 2015/12/29 04:04:32 dholland Exp $
+
 From 180dcc578e13c6096e277fb853e7162db640f207 Mon Sep 17 00:00:00 2001
 From: Alexandre Rostovtsev <tetromino@gentoo.org>
 Date: Tue, 15 Nov 2011 03:06:40 -0500
