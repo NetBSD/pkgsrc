@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2015/10/14 14:37:43 leot Exp $
+# $NetBSD: Makefile,v 1.4 2015/12/29 23:26:15 wiz Exp $
 
-DISTNAME=	Hack-v2_015-ttf
-PKGNAME=	Hack-ttf-2.015
+DISTNAME=	Hack-v2_018-ttf
+PKGNAME=	Hack-ttf-2.018
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=chrissimpkins/}
 GITHUB_PROJECT=	Hack
