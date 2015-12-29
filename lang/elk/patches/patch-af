@@ -1,4 +1,6 @@
-$NetBSD: patch-af,v 1.5 2006/01/09 23:00:09 joerg Exp $
+$NetBSD: patch-af,v 1.6 2015/12/29 23:34:46 dholland Exp $
+
+Don't declare own errno.
 
 --- lib/unix/unix.h.orig	2006-01-09 22:28:37.000000000 +0000
 +++ lib/unix/unix.h

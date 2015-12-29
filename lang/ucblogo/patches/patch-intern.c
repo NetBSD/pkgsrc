@@ -1,4 +1,6 @@
-$NetBSD: patch-intern.c,v 1.1 2015/11/06 20:33:21 joerg Exp $
+$NetBSD: patch-intern.c,v 1.2 2015/12/29 23:34:56 dholland Exp $
+
+Fix a number of cases of plainly invalid C and portability issues.
 
 --- intern.c.orig	2015-11-06 16:15:17.000000000 +0000
 +++ intern.c

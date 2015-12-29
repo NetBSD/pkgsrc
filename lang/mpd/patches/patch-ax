@@ -1,4 +1,6 @@
-$NetBSD: patch-ax,v 1.1.1.1 2005/10/17 16:16:48 is Exp $
+$NetBSD: patch-ax,v 1.2 2015/12/29 23:34:52 dholland Exp $
+
+Use standard headers.
 
 --- mpdm/filter.c.orig	2005-03-01 16:26:14.000000000 +0000
 +++ mpdm/filter.c

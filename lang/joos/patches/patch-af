@@ -1,4 +1,6 @@
-$NetBSD: patch-af,v 1.1 2007/08/08 21:43:35 joerg Exp $
+$NetBSD: patch-af,v 1.2 2015/12/29 23:34:49 dholland Exp $
+
+Use standard headers.
 
 --- A-/joos.y.orig	2007-08-08 19:25:08.000000000 +0000
 +++ A-/joos.y

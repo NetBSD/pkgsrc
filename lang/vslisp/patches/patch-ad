@@ -1,4 +1,6 @@
-$NetBSD: patch-ad,v 1.1 2002/03/15 00:22:43 jmc Exp $
+$NetBSD: patch-ad,v 1.2 2015/12/29 23:34:57 dholland Exp $
+
+Handle floating values properly.
 
 --- src/lc.c.orig	Fri Mar 15 00:16:37 2002
 +++ src/lc.c	Fri Mar 15 00:16:49 2002

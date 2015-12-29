@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2015/11/03 22:50:32 agc Exp $
+$NetBSD: distinfo,v 1.13 2015/12/29 23:34:44 dholland Exp $
 
 SHA1 (cl74unix.tar.gz) = feae4a53af78b6c500a03c618dc11444e8b5dc47
 RMD160 (cl74unix.tar.gz) = a00a8de15e042080041076fcf3ad2592d9deb469
@@ -25,8 +25,8 @@ SHA1 (patch-ar) = aba9a829916af887d1115b51a57b449aced8535f
 SHA1 (patch-as) = 5d462ae1a1bf72ae1a0f19ff73d4b1b4226dbb32
 SHA1 (patch-at) = 83c69c1635a0c8f038bcd23d00acc4dc406c0684
 SHA1 (patch-au) = 4fe5ac20d7526e782143874b0ce9c7367716dbce
-SHA1 (patch-yacc_error.c) = ca57d272ddb1b7d4da6eb501abd687f3426bd8d4
+SHA1 (patch-yacc_error.c) = ff1dd4d57fa7b4dbcc286c72bd21a4a884c05f94
 SHA1 (patch-yacc_main_c) = 1a4670c718c4a3ef3e1ace7dd56c2516a8d3fef3
-SHA1 (patch-yacc_output.c) = 2490fcf4ae844c31419f771ccef1a272f948bef5
-SHA1 (patch-yacc_reader.c) = 5bf63ccb86d9e689cc7320424ab918b5de6f9000
-SHA1 (patch-yacc_verbose.c) = 61f3d64819abaf23e02c888ec916c59b29297847
+SHA1 (patch-yacc_output.c) = c8e8f412c2b911ff0924bc2d080bf490a04c4a73
+SHA1 (patch-yacc_reader.c) = 49c8b66bdb2c3b2712decdab4066e98a52894627
+SHA1 (patch-yacc_verbose.c) = 314a4d0a379028fcc0c0ab4d6d4bf5648312ab48

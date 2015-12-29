@@ -1,4 +1,6 @@
-$NetBSD: patch-packages_base_configure.ac,v 1.1 2014/10/14 14:04:19 joerg Exp $
+$NetBSD: patch-packages_base_configure.ac,v 1.2 2015/12/29 23:34:48 dholland Exp $
+
+Have configure script probe for execvpe.
 
 --- packages/base/configure.ac.orig	2014-10-14 12:09:57.000000000 +0000
 +++ packages/base/configure.ac

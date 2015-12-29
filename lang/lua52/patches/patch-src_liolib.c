@@ -1,4 +1,5 @@
-$NetBSD: patch-src_liolib.c,v 1.1 2015/01/02 15:50:44 alnsn Exp $
+$NetBSD: patch-src_liolib.c,v 1.2 2015/12/29 23:34:51 dholland Exp $
+
 Fix build on Darwin powerpc: pkg/49526.
 
 --- src/liolib.c.orig	2013-04-12 18:48:47.000000000 +0000

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2015/11/03 22:50:37 agc Exp $
+$NetBSD: distinfo,v 1.8 2015/12/29 23:34:48 dholland Exp $
 
 SHA1 (gawk-3.0.6.tar.gz) = 01543b1832a604ebd1510b39b4bd44be0aea0c62
 RMD160 (gawk-3.0.6.tar.gz) = 67f52f9a2a1c168c5480c66df7b955adc9907329
@@ -8,7 +8,7 @@ SHA1 (gawkmb115.diff.gz) = ba4637157766440f097b6252c1f127a8b7e26591
 RMD160 (gawkmb115.diff.gz) = 1a9c337e2ef7f5f0e4dc6705941bef1870b434d5
 SHA512 (gawkmb115.diff.gz) = 23efdecb491c0176150e0a5316ee349bfdcd435247b97c613ae1421eeb224b1ea24b378efad38e647b77dc6d99315f146829795b0e1347f39e751adae0627d23
 Size (gawkmb115.diff.gz) = 86858 bytes
-SHA1 (patch-aa) = 0e67b1f5b426532c24d03673dd64a7bd82dce311
-SHA1 (patch-ab) = c888364b061b9ef85033e170805e9357a07c0a4c
-SHA1 (patch-ac) = e26be5eebbfe7c18d1cf7e6b27e06190e9cea8a2
-SHA1 (patch-ad) = e95d23a4a39160d9eebba975ab54c8398e884458
+SHA1 (patch-aa) = cd6f3128a8a13583688113b45db579321cb18c35
+SHA1 (patch-ab) = bfe0b091773c12a27bba9729e3b1359c55a678c1
+SHA1 (patch-ac) = 6cf7cd111d07dbb64cf5a4f103e87c1407ab9406
+SHA1 (patch-ad) = 08aaeb3edb1ee664618010b1605672a0457504f9

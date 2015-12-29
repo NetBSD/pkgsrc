@@ -1,4 +1,6 @@
-$NetBSD: patch-lib_computil.c,v 1.1 2015/01/25 13:12:54 joerg Exp $
+$NetBSD: patch-lib_computil.c,v 1.2 2015/12/29 23:34:43 dholland Exp $
+
+Avoid symbol name conflict with strtoi.
 
 --- lib/computil.c.orig	2015-01-24 16:18:51.000000000 +0000
 +++ lib/computil.c

@@ -1,7 +1,8 @@
-$NetBSD: patch-asmrun_power-bsd.S,v 1.2 2014/10/09 19:08:28 jaapb Exp $
+$NetBSD: patch-asmrun_power-bsd.S,v 1.3 2015/12/29 23:34:52 dholland Exp $
 
 Add profiling to power architecture
---- asmrun/power-bsd.S.orig	2014-08-19 13:37:35.000000000 +0000
+
+   --- asmrun/power-bsd.S.orig	2014-08-19 13:37:35.000000000 +0000
 +++ asmrun/power-bsd.S
 @@ -11,6 +11,35 @@
  /*                                                                     */

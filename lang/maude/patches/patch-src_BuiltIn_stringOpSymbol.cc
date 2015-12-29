@@ -1,4 +1,7 @@
-$NetBSD: patch-src_BuiltIn_stringOpSymbol.cc,v 1.1 2013/11/29 18:30:10 joerg Exp $
+$NetBSD: patch-src_BuiltIn_stringOpSymbol.cc,v 1.2 2015/12/29 23:34:51 dholland Exp $
+
+Don't use <rope> with clang, but fall back to <string>. Untested for
+functionality.
 
 --- src/BuiltIn/stringOpSymbol.cc.orig	2013-11-28 00:39:08.000000000 +0000
 +++ src/BuiltIn/stringOpSymbol.cc

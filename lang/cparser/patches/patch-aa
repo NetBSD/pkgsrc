@@ -1,4 +1,7 @@
-$NetBSD: patch-aa,v 1.4 2014/11/10 16:54:12 asau Exp $
+$NetBSD: patch-aa,v 1.5 2015/12/29 23:34:45 dholland Exp $
+
+Configure for pkgsrc.
+Use libtool.
 
 --- Makefile.orig	2012-11-21 17:50:43.000000000 +0000
 +++ Makefile

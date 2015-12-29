@@ -1,4 +1,6 @@
-$NetBSD: patch-extension_gawkfts.c,v 1.1 2014/07/15 14:58:08 ryoon Exp $
+$NetBSD: patch-extension_gawkfts.c,v 1.2 2015/12/29 23:34:47 dholland Exp $
+
+Fix build under SCO OpenServer 5.0.7/3.2.
 
 --- extension/gawkfts.c.orig	2013-05-02 19:51:30.000000000 +0000
 +++ extension/gawkfts.c

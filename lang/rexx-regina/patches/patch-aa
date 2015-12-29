@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/09/02 17:22:26 agc Exp $
+$NetBSD: patch-aa,v 1.2 2015/12/29 23:34:54 dholland Exp $
+
+Don't use the root /etc. XXX: it shouldn't use the etc in PREFIX either...
 
 --- configure	2002/09/02 17:06:11	1.1
 +++ configure	2002/09/02 17:07:26

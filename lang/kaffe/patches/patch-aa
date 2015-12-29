@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.17 2006/05/12 07:29:37 joerg Exp $
+$NetBSD: patch-aa,v 1.18 2015/12/29 23:34:49 dholland Exp $
+
+Fix path to fastjar.
 
 --- kaffe/scripts/jar.in.orig	2006-05-12 07:04:33.000000000 +0000
 +++ kaffe/scripts/jar.in

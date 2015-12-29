@@ -1,4 +1,6 @@
-$NetBSD: patch-snprintfv_snprintfv_format.c,v 1.1 2013/03/24 16:54:59 joerg Exp $
+$NetBSD: patch-snprintfv_snprintfv_format.c,v 1.2 2015/12/29 23:34:55 dholland Exp $
+
+Avoid name conflict with math.h.
 
 --- snprintfv/snprintfv/format.c.orig	2013-03-23 17:56:22.000000000 +0000
 +++ snprintfv/snprintfv/format.c

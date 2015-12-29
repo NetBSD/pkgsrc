@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.17 2015/11/03 22:50:36 agc Exp $
+$NetBSD: distinfo,v 1.18 2015/12/29 23:34:47 dholland Exp $
 
 SHA1 (hugs98-Sep2006.tar.gz) = bf3fec6b28ab812839d20a6c19d0f39e8190b4cc
 RMD160 (hugs98-Sep2006.tar.gz) = 99b6b88bd7256efa16e97684f265932d29133c40
 SHA512 (hugs98-Sep2006.tar.gz) = d09fb0d7da2fc701896cd25dba2823f30891f84190163de8bea916be3942f156b8647361fbbb394d5322e49c65f21ec864ae947287d4d056c9bb5530a1393b22
 Size (hugs98-Sep2006.tar.gz) = 2157369 bytes
-SHA1 (patch-packages_base_cbits_execvpe.c) = 4ed8e023a12f67d8687f1f32d1c20b7045f5bda9
-SHA1 (patch-packages_base_configure) = 60ef62c4d20c6f1552b2564f8b67c4495f514130
-SHA1 (patch-packages_base_configure.ac) = 1101dd23e1a2dedc38cfa12ff5b07ecfc8bea129
-SHA1 (patch-packages_base_include_HsBase.h) = 1f3071c6afa6d0aaa5aa01bfb77abdf0147f795b
-SHA1 (patch-packages_base_include_HsBaseConfig.h.in) = 64be85306e04edc429168e68725e6ad76b758d88
+SHA1 (patch-packages_base_cbits_execvpe.c) = 34ea441872bcb684bf9aafccebfa92030592b584
+SHA1 (patch-packages_base_configure) = ebd2c0b0d169ae091cd23f03bc8b8d6d9431450a
+SHA1 (patch-packages_base_configure.ac) = 9653d4dba5085402d77346a570c5202dddd5c4bc
+SHA1 (patch-packages_base_include_HsBase.h) = b71d74c302bd8974176e55d076ac32ca029a6763
+SHA1 (patch-packages_base_include_HsBaseConfig.h.in) = 3cbe42c0752952238f23069d9524c7015337434d

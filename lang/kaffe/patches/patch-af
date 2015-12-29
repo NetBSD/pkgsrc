@@ -1,4 +1,6 @@
-$NetBSD: patch-af,v 1.8 2007/07/10 21:16:44 minskim Exp $
+$NetBSD: patch-af,v 1.9 2015/12/29 23:34:49 dholland Exp $
+
+Honor PKGLOCALEDIR.
 
 --- po/Makefile.in.in.orig	2004-02-01 08:28:40.000000000 -0800
 +++ po/Makefile.in.in

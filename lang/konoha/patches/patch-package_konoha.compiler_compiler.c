@@ -1,4 +1,6 @@
-$NetBSD: patch-package_konoha.compiler_compiler.c,v 1.1 2015/03/31 15:44:47 joerg Exp $
+$NetBSD: patch-package_konoha.compiler_compiler.c,v 1.2 2015/12/29 23:34:50 dholland Exp $
+
+All the world's not an 80386.
 
 --- package/konoha.compiler/compiler.c.orig	2015-03-28 23:05:26.000000000 +0000
 +++ package/konoha.compiler/compiler.c

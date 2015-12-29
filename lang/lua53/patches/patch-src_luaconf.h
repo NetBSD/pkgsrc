@@ -1,4 +1,7 @@
-$NetBSD: patch-src_luaconf.h,v 1.1.1.1 2015/01/17 17:50:23 alnsn Exp $
+$NetBSD: patch-src_luaconf.h,v 1.2 2015/12/29 23:34:51 dholland Exp $
+
+- allow LUA_ROOT to be set by the pkgsrc makefile
+- solaris fix for PR 43350
 
 --- src/luaconf.h.orig	2014-12-29 13:27:55.000000000 +0000
 +++ src/luaconf.h

@@ -1,4 +1,10 @@
-$NetBSD: patch-af,v 1.1.1.1 2004/06/22 18:38:47 drochner Exp $
+$NetBSD: patch-af,v 1.2 2015/12/29 23:34:50 dholland Exp $
+
+Honor pkgsrc LDFLAGS. (don't mix it with LD_FLAGS)
+Set rpaths.
+Set the library suffixes properly on various platforms.
+Work around an old compiler bug. XXX this is probably obsolete.
+NetBSD configuration fixes.
 
 --- tcl.m4.orig	Mon Mar  1 18:58:59 2004
 +++ tcl.m4

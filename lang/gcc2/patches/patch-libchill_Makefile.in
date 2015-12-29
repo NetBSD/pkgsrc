@@ -1,4 +1,6 @@
-$NetBSD: patch-libchill_Makefile.in,v 1.1 2015/04/25 10:32:07 wiz Exp $
+$NetBSD: patch-libchill_Makefile.in,v 1.2 2015/12/29 23:34:47 dholland Exp $
+
+DESTDIR support.
 
 --- libchill/Makefile.in.orig	1999-08-07 05:36:10.000000000 +0000
 +++ libchill/Makefile.in

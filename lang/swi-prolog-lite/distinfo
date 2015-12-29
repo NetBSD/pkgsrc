@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.20 2015/11/03 22:50:45 agc Exp $
+$NetBSD: distinfo,v 1.21 2015/12/29 23:34:56 dholland Exp $
 
 SHA1 (swi-prolog/pl-6.6.6.tar.gz) = 38cc6772a48fd412f50fc06e24e6e4673eb71d3b
 RMD160 (swi-prolog/pl-6.6.6.tar.gz) = 0bb257d261189f09fe1a49262ce0f03774a6e8f5
@@ -6,5 +6,5 @@ SHA512 (swi-prolog/pl-6.6.6.tar.gz) = a850b0f6b283d34aa77d5e9d8a0053161fa534fa6d
 Size (swi-prolog/pl-6.6.6.tar.gz) = 14838653 bytes
 SHA1 (patch-ad) = a6c0b88f4e2f2a26ba1f2e56eb620d8a467f939f
 SHA1 (patch-packages_Dialect.defs.in) = f75ceac51bae428a81ba2001d39d8408ccb099f9
-SHA1 (patch-packages_clib_sha1_brg_endian.h) = 6ab1f8e87be6193a5dc11bff4b1cf7bfe959a243
+SHA1 (patch-packages_clib_sha1_brg_endian.h) = e7bc21953cedafce67e0070b9ec326446bf474fa
 SHA1 (patch-src_pl-funcs.h) = fd821e245ca49a42e595096d05a21ee20d25c41c

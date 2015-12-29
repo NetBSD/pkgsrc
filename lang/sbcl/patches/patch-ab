@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.4 2012/11/02 20:59:07 asau Exp $
+$NetBSD: patch-ab,v 1.5 2015/12/29 23:34:55 dholland Exp $
+
+Honor PREFIX.
 
 --- doc/sbcl.1.orig	2012-11-02 09:42:10.000000000 +0000
 +++ doc/sbcl.1

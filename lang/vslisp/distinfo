@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.7 2015/11/03 22:50:46 agc Exp $
+$NetBSD: distinfo,v 1.8 2015/12/29 23:34:57 dholland Exp $
 
 SHA1 (vslisp-4.0-1.tar.gz) = ccd21360f6bd2a7f47638797a7a5d25d2f8cb797
 RMD160 (vslisp-4.0-1.tar.gz) = e958c708ae1b63e9761f61a02b44ad639f23df4f
 SHA512 (vslisp-4.0-1.tar.gz) = ce15ef01d0aab623069105cd8c84d0ff65908a2f03cd170128ba836485fe42b2a71d02b7876094701ae65022b859d3f353c1449285c87a8326e765b27f0bbe6d
 Size (vslisp-4.0-1.tar.gz) = 167403 bytes
-SHA1 (patch-aa) = 5a397669bed7663ccdbd86d57e7669a70d16b5e1
-SHA1 (patch-ab) = e5ab8da3d66831d3d25f8765bd9f7e4729c9f5e1
-SHA1 (patch-ac) = 490975b1e19ee6aaaf05fb2ade1d79e805257540
-SHA1 (patch-ad) = a08e31d1c11aa8aae909c2641f4f80f4ca39413a
-SHA1 (patch-ae) = b39473d8008d48ba19fc980e374bc95c28996705
-SHA1 (patch-af) = 8cd43805f9951d61535b69d3d309dbc705737028
+SHA1 (patch-aa) = aeab47abe89d5815743e3cd71b779f7f04303d12
+SHA1 (patch-ab) = 62e4ab3ce617a41dad80cd23b451bddf34e48013
+SHA1 (patch-ac) = ef5a45398eb11e306de07ff0d9002a0df132b854
+SHA1 (patch-ad) = db08fdf9f1e2cbcc74eae1b8ed25afaf1cb79f6f
+SHA1 (patch-ae) = 44ee54ce869bcb275dbcb1f0bc6dad65eda62b0f
+SHA1 (patch-af) = 96b6c609c45b2586f92881515ed4c09d19de39c4

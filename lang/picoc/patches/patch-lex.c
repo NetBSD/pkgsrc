@@ -1,4 +1,6 @@
-$NetBSD: patch-lex.c,v 1.1 2013/12/17 23:23:38 joerg Exp $
+$NetBSD: patch-lex.c,v 1.2 2015/12/29 23:34:53 dholland Exp $
+
+Fix build.
 
 --- lex.c.orig	2013-12-15 18:41:56.000000000 +0000
 +++ lex.c

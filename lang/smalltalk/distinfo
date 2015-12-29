@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.26 2015/11/03 22:50:44 agc Exp $
+$NetBSD: distinfo,v 1.27 2015/12/29 23:34:55 dholland Exp $
 
 SHA1 (smalltalk-3.2.4.tar.gz) = 6b164e145c1118ad74770bb15614478d47f55523
 RMD160 (smalltalk-3.2.4.tar.gz) = d8ca6b888311a70748071ff4024e31adeb0a920f
@@ -7,4 +7,4 @@ Size (smalltalk-3.2.4.tar.gz) = 5877496 bytes
 SHA1 (patch-ae) = aa64f95b4aec8117655ebd7fe07a6c0ffa7018fe
 SHA1 (patch-ah) = eaa03cf41f1c30acd1762cb6389dfe0157ce551b
 SHA1 (patch-libgst_input.c) = 06168ed6decd6d42838e76ada81717e3f599d733
-SHA1 (patch-snprintfv_snprintfv_format.c) = 3e44d61ac38197066b0a56e15c2e519a2b7d1661
+SHA1 (patch-snprintfv_snprintfv_format.c) = 03eed55ade8f78ae1cf73b82df9d18629314945b

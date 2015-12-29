@@ -1,6 +1,7 @@
-$NetBSD: patch-asmrun_arm.S,v 1.2 2015/01/20 14:12:25 jaapb Exp $
+$NetBSD: patch-asmrun_arm.S,v 1.3 2015/12/29 23:34:52 dholland Exp $
 
 pkgsrc_runtime flag
+
 --- asmrun/arm.S.orig	2014-11-20 13:12:25.000000000 +0000
 +++ asmrun/arm.S
 @@ -44,7 +44,7 @@

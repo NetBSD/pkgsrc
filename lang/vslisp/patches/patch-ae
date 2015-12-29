@@ -1,4 +1,6 @@
-$NetBSD: patch-ae,v 1.1 2002/03/15 00:22:43 jmc Exp $
+$NetBSD: patch-ae,v 1.2 2015/12/29 23:34:57 dholland Exp $
+
+Handle floating values properly.
 
 --- src/lcore.c.orig	Fri Mar 15 00:16:32 2002
 +++ src/lcore.c	Fri Mar 15 00:16:44 2002

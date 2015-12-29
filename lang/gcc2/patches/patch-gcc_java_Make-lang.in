@@ -1,4 +1,6 @@
-$NetBSD: patch-gcc_java_Make-lang.in,v 1.1 2015/04/25 10:32:07 wiz Exp $
+$NetBSD: patch-gcc_java_Make-lang.in,v 1.2 2015/12/29 23:34:47 dholland Exp $
+
+DESTDIR support.
 
 --- gcc/java/Make-lang.in.orig	1999-06-25 08:26:23.000000000 +0000
 +++ gcc/java/Make-lang.in

@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2002/05/08 15:42:02 jschauma Exp $
+$NetBSD: patch-ab,v 1.2 2015/12/29 23:34:49 dholland Exp $
+
+Avoid void main.
 
 --- A+/main.c.orig	Wed May  8 10:32:57 2002
 +++ A+/main.c	Wed May  8 10:33:14 2002

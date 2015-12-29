@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2015/11/03 22:50:40 agc Exp $
+$NetBSD: distinfo,v 1.8 2015/12/29 23:34:52 dholland Exp $
 
 SHA1 (objc-3.2.10.tar.gz) = cee6e425a458ac04ac3cb321b449721ea27c1202
 RMD160 (objc-3.2.10.tar.gz) = ba6fca9743f217c1de473d6b4845421c066d4e7c
@@ -9,5 +9,5 @@ RMD160 (objc-bootstrap-3.2.8.tar.gz) = 686fb5bb2a1c7fde18f2582063e44eb7fb7a5bff
 SHA512 (objc-bootstrap-3.2.8.tar.gz) = fcd289a49cd4080270d4f5feca88fc298bb4130ae415f0cb83bf21504a5eea4e55d6c1730a461446d43bda09418702a16b783cc670d5aa997a93171d59150ec5
 Size (objc-bootstrap-3.2.8.tar.gz) = 354774 bytes
 SHA1 (patch-Makefile_in) = 304253fb7f0b53b1d9cae84dab4b6204fdd235c6
-SHA1 (patch-aa) = ad26cc667e248c87010c3df0e24885b330b4c342
-SHA1 (patch-ab) = 1b9ce954711131bfd8153f0ec390f8b0c6d78cda
+SHA1 (patch-aa) = a5993df88e245d0126abf05629380ea38a1223fb
+SHA1 (patch-ab) = f46d4717b990c4ebe82bbd7f5d3dce1126912f85

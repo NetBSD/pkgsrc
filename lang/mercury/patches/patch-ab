@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.4 2012/01/30 05:40:02 asau Exp $
+$NetBSD: patch-ab,v 1.5 2015/12/29 23:34:51 dholland Exp $
+
+Install docs in the right place.
 
 --- scripts/Mmake.vars.in.orig	2010-12-20 19:29:08.000000000 +0300
 +++ scripts/Mmake.vars.in	2011-04-17 14:21:26.000000000 +0400

@@ -1,4 +1,6 @@
-$NetBSD: patch-ah,v 1.1 2003/05/10 00:26:34 jtb Exp $
+$NetBSD: patch-ah,v 1.2 2015/12/29 23:34:43 dholland Exp $
+
+Avoid rebuilding the manual at install time. (?)
 
 --- Doc/Reference/Makefile.orig
 +++ Doc/Reference/Makefile

@@ -1,4 +1,8 @@
-$NetBSD: patch-ae,v 1.5 2003/09/27 18:33:56 kristerw Exp $
+$NetBSD: patch-ae,v 1.6 2015/12/29 23:34:52 dholland Exp $
+
+Instead of trying to probe whether unaligned accesses work, wire it
+down safely.
+
 --- config/auto-aux/align.c.orig	Sat Sep 27 19:00:30 2003
 +++ config/auto-aux/align.c	Sat Sep 27 19:53:24 2003
 @@ -98,6 +98,14 @@

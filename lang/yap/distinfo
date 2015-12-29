@@ -1,19 +1,19 @@
-$NetBSD: distinfo,v 1.21 2015/11/03 22:50:46 agc Exp $
+$NetBSD: distinfo,v 1.22 2015/12/29 23:34:57 dholland Exp $
 
 SHA1 (yap-6.3.3.tar.gz) = d191e419e5cf74b11e003aae5fe148f3f2f26ac5
 RMD160 (yap-6.3.3.tar.gz) = 6c92880670d58b1e885cbb52709b61773db65808
 SHA512 (yap-6.3.3.tar.gz) = 4ef45277ec84b6e072fa54afc7d6c18f11c3a0cdf477e35e35a0ce2181c9ff2e693f8735f63a1899373f6baf79ce0a972b37e1ae6ed8271bec60663f477bbe80
 Size (yap-6.3.3.tar.gz) = 7879301 bytes
-SHA1 (patch-aa) = 113f443f57fac208632701fc7eddca18d98d240d
+SHA1 (patch-aa) = 41b755767d18031ea5a6dc1c225dd8cf29e1d758
 SHA1 (patch-ad) = e3765c0d6729b4d531cdea59dc8e442055091d10
-SHA1 (patch-ae) = 1bc060490ff5e2ba698a4f680a6d030f69683e01
+SHA1 (patch-ae) = 7464217cd29c7a99d8f5262f0d8f268a39358791
 SHA1 (patch-af) = a042950ee63fac0f5863c3caa3f7c07227c46b4b
 SHA1 (patch-ah) = 572e29729d97d5e9942a3d2c22e121d4e756d648
 SHA1 (patch-aj) = 9d8c1cde65c52f963f72b4f5364e611db96e59c7
-SHA1 (patch-configure) = ceecff9a53b8fbeed0912dc9df397670bcc2d10f
-SHA1 (patch-configure.in) = fea4c56c929b3ad51a43294321c3e013254f5634
-SHA1 (patch-os_pl-rl.c) = 5343f62a191e5c1327d7b86a0476f309eb8973f2
-SHA1 (patch-packages_CLPBN_horus_HorusCli.cpp) = 82879fa9e998c993a10850bce729e658f73bec11
-SHA1 (patch-packages_CLPBN_horus_Util.h) = 2c6b3cf10c12c3abd724a58132bc7ea03613d34e
-SHA1 (patch-packages_pldoc_Makefile.in) = 821a281c2066f6ebb7e03e197e3e5eb32ac299e8
-SHA1 (patch-packages_swi-minisat2_C_SolverTypes.h) = 88ee9ab4dd7fc43e3433d02633513c204981ece2
+SHA1 (patch-configure) = 4fcd4816d85c6f90cba2d7396474659b821279fa
+SHA1 (patch-configure.in) = ad9307e07031fddc981ad694aee90a500f2d6a19
+SHA1 (patch-os_pl-rl.c) = 3e79716dbceec96cc71a0549c0b06c7ae1cba1fb
+SHA1 (patch-packages_CLPBN_horus_HorusCli.cpp) = 96ad59f1c8e41ee9e0074ec6c86f075490708126
+SHA1 (patch-packages_CLPBN_horus_Util.h) = b6d7e28cf09d484aacda284c1466f65b29192e01
+SHA1 (patch-packages_pldoc_Makefile.in) = a8c7bd5a25e9a25924d9610933b9e4e796be078e
+SHA1 (patch-packages_swi-minisat2_C_SolverTypes.h) = d652cc73a608a593868f01ec47feb8ba1d745669

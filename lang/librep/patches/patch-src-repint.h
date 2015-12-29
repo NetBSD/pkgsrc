@@ -1,4 +1,6 @@
-$NetBSD: patch-src-repint.h,v 1.1 2011/08/20 15:35:24 joerg Exp $
+$NetBSD: patch-src-repint.h,v 1.2 2015/12/29 23:34:50 dholland Exp $
+
+Patch up gcc inline mess.
 
 --- src/repint.h.orig	2011-08-19 14:37:20.000000000 +0000
 +++ src/repint.h

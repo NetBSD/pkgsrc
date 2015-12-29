@@ -1,4 +1,10 @@
-$NetBSD: patch-ab,v 1.5 2007/10/13 12:36:14 rillig Exp $
+$NetBSD: patch-ab,v 1.6 2015/12/29 23:34:45 dholland Exp $
+
+Use sys/param.h to detect timing configuration.
+XXX: don't use sys/param.h.
+All the world's not a Sun.
+Avoid illegal lvalue cast.
+Support more systems when looking inside FILE.
 
 --- include.h.orig	1995-01-27 08:38:48.000000000 +0100
 +++ include.h	2007-10-13 14:34:37.000000000 +0200

@@ -1,4 +1,6 @@
-$NetBSD: patch-ac,v 1.4 2015/05/20 07:27:21 wen Exp $
+$NetBSD: patch-ac,v 1.5 2015/12/29 23:34:44 dholland Exp $
+
+Primitively roffify the doc so it can be installed as a man page.
 
 --- bwbasic.doc.orig	2015-05-20 14:17:40.000000000 +0000
 +++ bwbasic.doc

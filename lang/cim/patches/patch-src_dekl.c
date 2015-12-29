@@ -1,4 +1,8 @@
-$NetBSD: patch-src_dekl.c,v 1.1 2012/10/26 20:37:15 joerg Exp $
+$NetBSD: patch-src_dekl.c,v 1.2 2015/12/29 23:34:44 dholland Exp $
+
+Avoid implicit int.
+Use C89.
+Call own functions correctly.
 
 --- src/dekl.c.orig	2012-10-26 12:55:39.000000000 +0000
 +++ src/dekl.c

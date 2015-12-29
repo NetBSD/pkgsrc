@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/02/17 18:47:25 jtb Exp $
+$NetBSD: patch-aa,v 1.2 2015/12/29 23:34:47 dholland Exp $
+
+Make build noninteractive.
 
 --- ../gcc-2.95.3/gcc/p/config-lang.in.orig	Fri Apr 26 22:15:55 2002
 +++ ../gcc-2.95.3/gcc/p/config-lang.in	Fri Jan 17 21:58:29 2003

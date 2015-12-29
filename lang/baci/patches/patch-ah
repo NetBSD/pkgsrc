@@ -1,4 +1,6 @@
-$NetBSD: patch-ah,v 1.1 2005/02/19 15:40:54 wiz Exp $
+$NetBSD: patch-ah,v 1.2 2015/12/29 23:34:43 dholland Exp $
+
+Use standard headers.
 
 --- pascomp/bapascal.l.orig	1999-08-31 18:19:08.000000000 +0200
 +++ pascomp/bapascal.l

@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.8 2015/12/06 00:25:26 alnsn Exp $
+$NetBSD: distinfo,v 1.9 2015/12/29 23:34:50 dholland Exp $
 
 SHA1 (lua-5.2.4.tar.gz) = ef15259421197e3d85b7d6e4871b8c26fd82c1cf
 RMD160 (lua-5.2.4.tar.gz) = 3bad2da85f354132da6a53b45882006f0a451b5c
 SHA512 (lua-5.2.4.tar.gz) = cd77148aba4b707b6c159758b5e8444e04f968092eb98f6b4c405b2fb647e709370d5a8dcf604176101d3407e196a7433b5dcdce4fe9605c76191d3649d61a8c
 Size (lua-5.2.4.tar.gz) = 252651 bytes
-SHA1 (patch-aa) = ce0763ed1515f670b8a5d543af3753320cf06309
-SHA1 (patch-ab) = c88a72c20924021622aa285a8992a3d8122bcbad
-SHA1 (patch-ac) = b8b9c0068210795e5eb22512767ac2e98bca8cbc
-SHA1 (patch-src_liolib.c) = e85afa1ab7060be2c027ecd619fd9c9fd721a8b5
-SHA1 (patch-src_lua.c) = 393ef8161b28e201abd5b27d7c4c92b19de4601e
+SHA1 (patch-aa) = abcc38841386df3072dce282a6139d541564c90f
+SHA1 (patch-ab) = 16c84008b67a272c7bb1d90448ffdd0d43f9d0fe
+SHA1 (patch-ac) = 76d0d9d28a8d3c0a26aeabc5459d443e2f984981
+SHA1 (patch-src_liolib.c) = 28de216dec83bfdc94fbd1d2d28fe1159ea009c9
+SHA1 (patch-src_lua.c) = c7954061f0ae6fb70853877851a9a38bf491ed3d

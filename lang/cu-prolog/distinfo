@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2015/11/03 22:50:33 agc Exp $
+$NetBSD: distinfo,v 1.8 2015/12/29 23:34:45 dholland Exp $
 
 SHA1 (cu-prolog-3.94/cupsrc.tar.gz) = bc292c39bf58d142e8810e0c7e7aa25a5e44ad16
 RMD160 (cu-prolog-3.94/cupsrc.tar.gz) = 201c44c668602d1bdb1dfba5db767937fb8c5301
@@ -8,9 +8,9 @@ SHA1 (cu-prolog-3.94/cupdoc.tar.gz) = 1d63be56d044fc51fc034c248e2d0cbca35756f3
 RMD160 (cu-prolog-3.94/cupdoc.tar.gz) = 58dce5374dffe7a68504c6976982fd2613ec3e0c
 SHA512 (cu-prolog-3.94/cupdoc.tar.gz) = db7675c915d483411324ded76817ff940c947ad099db5fda7a0c4371c58026af664fd522140289fe042a32720cefcc6ca422be79d268695a07f91575a047de4a
 Size (cu-prolog-3.94/cupdoc.tar.gz) = 136474 bytes
-SHA1 (patch-aa) = 5a62457aa989665b52f8413ae649b4b2eb4a7e0e
-SHA1 (patch-ab) = 91187bfa019c2c37d58c540dd49d3c4762cf91ca
-SHA1 (patch-ac) = e30a669d5f455ad1063a3e53244c429d5b981625
-SHA1 (patch-ad) = 3099002c96faf988499f5f7cde79dd8416aa360d
-SHA1 (patch-ae) = aff538343572cf4e786177aa27d1c934255646b8
-SHA1 (patch-af) = b4c423f887321223c6c45e4a3f77126734b9d83f
+SHA1 (patch-aa) = 6cb2d0a2812c0cbc6abbcd8f0b7a5ddab6937edf
+SHA1 (patch-ab) = 995665d4c1ab7234a7fb7ee506d3f5387af698db
+SHA1 (patch-ac) = 9a0dd57ef2ed0f0f87f0a89138f1b4b866b492d2
+SHA1 (patch-ad) = 9100405bf56849b7c36aced94968c297982d96d8
+SHA1 (patch-ae) = 5153f729c5835367ab374e15b8da2e07b83c45be
+SHA1 (patch-af) = 423d78f7e10ec7cef7bd73a273767844874207d0

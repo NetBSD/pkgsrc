@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.20 2009/11/23 15:30:29 tnn Exp $
+$NetBSD: patch-aa,v 1.21 2015/12/29 23:34:46 dholland Exp $
+
+Fix syntax.
 
 --- src/gram.expr.orig	2003-02-11 13:53:48.000000000 +0100
 +++ src/gram.expr

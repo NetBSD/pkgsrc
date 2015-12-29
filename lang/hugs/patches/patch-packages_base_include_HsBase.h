@@ -1,4 +1,7 @@
-$NetBSD: patch-packages_base_include_HsBase.h,v 1.2 2014/10/14 14:04:19 joerg Exp $
+$NetBSD: patch-packages_base_include_HsBase.h,v 1.3 2015/12/29 23:34:48 dholland Exp $
+
+Don't declare own execvpe() if the system already has it.
+Patch up gcc inline mess.
 
 --- packages/base/include/HsBase.h.orig	2006-09-20 22:01:52.000000000 +0000
 +++ packages/base/include/HsBase.h

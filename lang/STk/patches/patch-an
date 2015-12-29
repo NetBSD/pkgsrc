@@ -1,4 +1,6 @@
-$NetBSD: patch-an,v 1.1 2006/01/12 15:04:18 joerg Exp $
+$NetBSD: patch-an,v 1.2 2015/12/29 23:34:43 dholland Exp $
+
+Dragonfly support.
 
 --- Src/dump.c.orig	2006-01-12 14:35:48.000000000 +0000
 +++ Src/dump.c

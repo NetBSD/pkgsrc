@@ -1,4 +1,6 @@
-$NetBSD: patch-ay,v 1.6 2006/03/19 15:57:36 joerg Exp $
+$NetBSD: patch-ay,v 1.7 2015/12/29 23:34:48 dholland Exp $
+
+Support Dragonfly.
 
 --- ipl/cfuncs/fpoll.c.orig	2006-03-19 15:06:16.000000000 +0000
 +++ ipl/cfuncs/fpoll.c

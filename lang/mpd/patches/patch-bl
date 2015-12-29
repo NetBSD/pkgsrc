@@ -1,4 +1,6 @@
-$NetBSD: patch-bl,v 1.1 2006/05/18 12:57:15 is Exp $
+$NetBSD: patch-bl,v 1.2 2015/12/29 23:34:52 dholland Exp $
+
+Fix the output formatting (for faster machines, I take it)
 
 --- vsuite/timings/report.sh.orig	2000-10-31 23:54:09.000000000 +0100
 +++ vsuite/timings/report.sh

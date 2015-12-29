@@ -1,4 +1,6 @@
-$NetBSD: patch-packages_CLPBN_horus_HorusCli.cpp,v 1.1 2013/07/19 12:51:56 joerg Exp $
+$NetBSD: patch-packages_CLPBN_horus_HorusCli.cpp,v 1.2 2015/12/29 23:34:57 dholland Exp $
+
+Compare pointers to NULL, not a boolean.
 
 --- packages/CLPBN/horus/HorusCli.cpp.orig	2013-07-19 10:05:58.000000000 +0000
 +++ packages/CLPBN/horus/HorusCli.cpp

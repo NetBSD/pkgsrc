@@ -1,4 +1,6 @@
-$NetBSD: patch-as,v 1.4 2003/06/06 08:58:43 jtb Exp $
+$NetBSD: patch-as,v 1.5 2015/12/29 23:34:48 dholland Exp $
+
+Use the right library path at runtime.
 
 --- src/runtime/imain.r.orig
 +++ src/runtime/imain.r

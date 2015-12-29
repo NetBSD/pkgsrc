@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2015/11/03 22:50:35 agc Exp $
+$NetBSD: distinfo,v 1.12 2015/12/29 23:34:47 dholland Exp $
 
 SHA1 (gforth-0.7.3.tar.gz) = 4ef40d8427249b4367ac5e8965b55ca113c18baa
 RMD160 (gforth-0.7.3.tar.gz) = 6261b9b568695421148063a17e0dbf2983132062
@@ -6,6 +6,6 @@ SHA512 (gforth-0.7.3.tar.gz) = f034234acfb0fc727f28b564432219a100b916c6df4b84779
 Size (gforth-0.7.3.tar.gz) = 2523433 bytes
 SHA1 (patch-aa) = 405a78dab65952f599b3f201053ae73c25da4576
 SHA1 (patch-ae) = 5ed4c1b54d6c2af55580183cdc9d66b70fffa955
-SHA1 (patch-configure) = f93b18e8602baec9b21c3f78978f652a9796fb31
-SHA1 (patch-configure.in) = 4886054414beda7de68323143eecb03ef20c10f9
-SHA1 (patch-engine_Makefile.in) = 4ae831fb6f2a7f09f58230a9450985cb2b96ee59
+SHA1 (patch-configure) = 405b75bc920f5709fcaa90aa63d91d10c23f5b32
+SHA1 (patch-configure.in) = 9f916f1d40817f2781baeed7197d1a6336c39a2a
+SHA1 (patch-engine_Makefile.in) = 3403d2c2c5a2594a35894df2950dc28d36a701aa

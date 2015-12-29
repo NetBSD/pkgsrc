@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2006/05/02 13:31:55 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2015/12/29 23:34:51 dholland Exp $
+
+Use own headers.
 
 --- src/Core/argVec.hh.orig	2006-05-02 13:02:12.000000000 +0000
 +++ src/Core/argVec.hh

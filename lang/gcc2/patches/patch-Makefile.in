@@ -1,4 +1,6 @@
-$NetBSD: patch-Makefile.in,v 1.1 2015/04/25 10:32:07 wiz Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2015/12/29 23:34:47 dholland Exp $
+
+DESTDIR support.
 
 --- Makefile.in.orig	1999-06-22 22:44:42.000000000 +0000
 +++ Makefile.in

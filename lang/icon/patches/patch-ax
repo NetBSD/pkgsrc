@@ -1,4 +1,7 @@
-$NetBSD: patch-ax,v 1.6 2009/02/08 12:51:05 asau Exp $
+$NetBSD: patch-ax,v 1.7 2015/12/29 23:34:48 dholland Exp $
+
+Don't strip the executable.
+Install the libraries in a library dir.
 
 --- src/runtime/Makefile.orig	2005-07-07 21:36:06.000000000 +0400
 +++ src/runtime/Makefile	2009-02-08 01:43:04.000000000 +0300

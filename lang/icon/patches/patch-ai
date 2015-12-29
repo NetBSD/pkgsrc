@@ -1,4 +1,6 @@
-$NetBSD: patch-ai,v 1.7 2009/02/08 12:51:05 asau Exp $
+$NetBSD: patch-ai,v 1.8 2015/12/29 23:34:48 dholland Exp $
+
+NetBSD configuration.
 
 --- /dev/null
 +++ config/bsd/status.netbsd

@@ -1,4 +1,6 @@
-$NetBSD: patch-aj,v 1.1 2006/10/22 20:27:22 rillig Exp $
+$NetBSD: patch-aj,v 1.2 2015/12/29 23:34:47 dholland Exp $
+
+Remove bashism.
 
 --- gcc/p/diffs/mkdiff.orig	2001-06-01 14:22:26.000000000 +0200
 +++ gcc/p/diffs/mkdiff	2006-10-22 22:25:16.000000000 +0200

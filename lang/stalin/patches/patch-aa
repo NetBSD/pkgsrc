@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2001/06/25 17:49:33 jtb Exp $
+$NetBSD: patch-aa,v 1.5 2015/12/29 23:34:56 dholland Exp $
+
+Provide a makefile.
 
 --- /dev/null	Mon Jun 25 10:07:21 2001
 +++ Makefile

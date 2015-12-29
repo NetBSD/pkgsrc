@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.24 2015/11/07 22:56:13 he Exp $
+$NetBSD: distinfo,v 1.25 2015/12/29 23:34:46 dholland Exp $
 
 SHA1 (g95_source.tgz) = b5e503fd6459b65cbda73190685f9490230d9cff
 RMD160 (g95_source.tgz) = 98d03e9a1835f4b3553a72a798bdf1d90a757176
@@ -21,15 +21,15 @@ SHA1 (patch-gcc_config_i386_dragonfly64.h) = 9d2d8512a913e58055fa5c1b7d85a109117
 SHA1 (patch-gcc_config_t-dragonfly) = dd8d5919af737dfb9e3c18be9a41b4e2c6f31155
 SHA1 (patch-gcc_config_t-dragonfly-thread) = ebdb58dacf0dc5d0bf2f1f1707a7c6ab29ee308c
 SHA1 (patch-gcc_ginclude_stddef.h) = 60f51a470e03173803b5e20b1fa4d6882e8d1fe9
-SHA1 (patch-gcc_toplev.h) = 4894b45bf0fd30de0610a36827ef1089e0ec6bd5
+SHA1 (patch-gcc_toplev.h) = 6a51de1296e3a4711ce8fd37b1c95fe68b1e2c4e
 SHA1 (patch-libf95.a-0.92_io_atof.c) = 0c3a209815be3a97d984cb9a15ee888f93110d1d
 SHA1 (patch-libf95.a-0.93_Makefile.am) = a5e6a8fa0cd05e6e4a581c027d97cdf68dd2a6f8
 SHA1 (patch-libf95.a-0.93_configure.in) = b81b36f574f6f40ce43bbd371cdb93d388d83b5d
-SHA1 (patch-libf95.a-0.93_intrinsics_dot__product10.c) = a2fe19bab2a6f719f541692fd4ef7e67766a18e5
-SHA1 (patch-libf95.a-0.93_intrinsics_matmul10.c) = 30609c3183a98610e4005fd4c0d12cccec0855a1
-SHA1 (patch-libf95.a-0.93_intrinsics_random.c) = 5445f78b267f742a2bf711aa0f5e06683dda1a68
-SHA1 (patch-libf95.a-0.93_io_read.c) = 594bcfb15e59dcaaec5a6a21a58af17e8f41eae9
-SHA1 (patch-libf95.a-0.93_math_ff.c) = 353121bc08a86765d18b0e6f051ba91f7e65e9c2
-SHA1 (patch-libf95.a-0.93_math_x87.S) = d1eb02bd2358b6abb9b8dc3e32629cba540adcc4
-SHA1 (patch-libf95.a-0.93_quad_power16.c) = fc7375aa90ecf75bb8ba26d41739614040b16e09
+SHA1 (patch-libf95.a-0.93_intrinsics_dot__product10.c) = 44677d0004c68597519b0cea8b899ae4f63b8807
+SHA1 (patch-libf95.a-0.93_intrinsics_matmul10.c) = a4b49b8579b6ebce57715d8b56f4d4eac2ee7f88
+SHA1 (patch-libf95.a-0.93_intrinsics_random.c) = 56319be898fd2df8b0fd1d98d05db272ce303fe3
+SHA1 (patch-libf95.a-0.93_io_read.c) = 46b4c4f6df2cc488c0a7622121a4456bb8b05416
+SHA1 (patch-libf95.a-0.93_math_ff.c) = d873e3fd699d9c9fd06681c1e136cf16cf013a1a
+SHA1 (patch-libf95.a-0.93_math_x87.S) = 25dc2b613969947ae60fdc9b1dc6d9524b0157be
+SHA1 (patch-libf95.a-0.93_quad_power16.c) = eb6711bcd1018cac675dbbe212cd22a831a9d191
 SHA1 (patch-libf95.a-0.93_runtime_main.c) = dfde68072f38bf5bbb9c54ebeea5b9ce07d0c6be

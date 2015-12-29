@@ -1,4 +1,6 @@
-$NetBSD: patch-ar,v 1.1.1.1 2005/10/17 16:16:48 is Exp $
+$NetBSD: patch-ar,v 1.2 2015/12/29 23:34:52 dholland Exp $
+
+Remove trailing whitespace. (Really?)
 
 --- vsuite/quick/easy/Make.std.orig	1999-07-28 22:43:18.000000000 +0200
 +++ vsuite/quick/easy/Make.std

@@ -1,6 +1,7 @@
-$NetBSD: patch-asmcomp_asmlink.ml,v 1.1 2015/01/20 14:12:25 jaapb Exp $
+$NetBSD: patch-asmcomp_asmlink.ml,v 1.2 2015/12/29 23:34:52 dholland Exp $
 
 pkgsrc_runtime flag
+
 --- asmcomp/asmlink.ml.orig	2014-05-21 15:08:11.000000000 +0000
 +++ asmcomp/asmlink.ml
 @@ -98,6 +98,13 @@ let add_ccobjs l =

@@ -1,6 +1,7 @@
-$NetBSD: patch-driver_optmain.ml,v 1.1 2015/01/20 14:12:25 jaapb Exp $
+$NetBSD: patch-driver_optmain.ml,v 1.2 2015/12/29 23:34:53 dholland Exp $
 
 pkgsrc_runtime flag
+
 --- driver/optmain.ml.orig	2014-08-28 16:24:52.000000000 +0000
 +++ driver/optmain.ml
 @@ -111,6 +111,7 @@ module Options = Main_args.Make_optcomp_
