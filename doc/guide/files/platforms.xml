@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.84 2013/11/15 10:11:47 asau Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.85 2015/12/29 19:27:34 sevan Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -98,7 +98,7 @@
     <sect2 id="darwin">
       <title>Darwin (Mac OS X)</title>
       <!-- Mention which MacOS X versions this corresponds to! -->
-      <para>Darwin 5.x and up are supported.</para>
+      <para>Darwin 8.x and up are supported.</para>
 
       <para>Before you start, you need to download and install
       the Mac OS X Developer Tools from Apple's Developer Connection.
