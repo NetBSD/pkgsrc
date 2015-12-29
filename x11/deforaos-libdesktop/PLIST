@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2015/05/25 17:52:37 khorben Exp $
+@comment $NetBSD: PLIST,v 1.6 2015/12/29 06:00:28 dholland Exp $
 include/Desktop.h
 include/Desktop/about.h
 include/Desktop/accel.h
@@ -20,8 +20,8 @@ share/gtk-doc/html/libDesktop/deprecated-api-index.html
 share/gtk-doc/html/libDesktop/home.png
 share/gtk-doc/html/libDesktop/index.html
 share/gtk-doc/html/libDesktop/index.sgml
-share/gtk-doc/html/libDesktop/left.png
 share/gtk-doc/html/libDesktop/left-insensitive.png
+share/gtk-doc/html/libDesktop/left.png
 share/gtk-doc/html/libDesktop/libDesktop-about.html
 share/gtk-doc/html/libDesktop/libDesktop-accel.html
 share/gtk-doc/html/libDesktop/libDesktop-compat.html
@@ -31,8 +31,8 @@ share/gtk-doc/html/libDesktop/libDesktop-message.html
 share/gtk-doc/html/libDesktop/libDesktop-mime.html
 share/gtk-doc/html/libDesktop/libDesktop-toolbar.html
 share/gtk-doc/html/libDesktop/libDesktop.devhelp2
-share/gtk-doc/html/libDesktop/right.png
 share/gtk-doc/html/libDesktop/right-insensitive.png
+share/gtk-doc/html/libDesktop/right.png
 share/gtk-doc/html/libDesktop/style.css
-share/gtk-doc/html/libDesktop/up.png
 share/gtk-doc/html/libDesktop/up-insensitive.png
+share/gtk-doc/html/libDesktop/up.png
