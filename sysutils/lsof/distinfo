@@ -1,15 +1,15 @@
-$NetBSD: distinfo,v 1.85 2015/11/04 01:32:20 agc Exp $
+$NetBSD: distinfo,v 1.86 2015/12/29 12:42:57 bsiegert Exp $
 
-SHA1 (lsof_4.87.tar.bz2) = 68e61e0a45491420ace80770157206328c27d8c4
-RMD160 (lsof_4.87.tar.bz2) = 27aff2ec91dd8ece34ffee6f2be7e328c78552e3
-SHA512 (lsof_4.87.tar.bz2) = 5e811225dd65366e3ef49628d567864fadda1dbda2d66a5e473123e73c468f5a3a577ae4e1b701a55ac49c2a759dab5c413663121c260a2804fca10ece902766
-Size (lsof_4.87.tar.bz2) = 773664 bytes
+SHA1 (lsof_4.88.tar.bz2) = 09db6d2cd96bc6832d9b767084b9c67cf5cf52bb
+RMD160 (lsof_4.88.tar.bz2) = fdfc5a5c8c8d4915c8bbd0c2ebe4ec3393fd98d9
+SHA512 (lsof_4.88.tar.bz2) = acf3901ac08bac5acaa123af835de03fcf86c1cb851a2cba5bb6d08c53dff62570e4129c18ffa241ae84a83d5e6fc5207fb12e43b5ff5a21a0c1967ca117848b
+Size (lsof_4.88.tar.bz2) = 778563 bytes
 SHA1 (patch-aa) = 4469a5fed540e3c5635b6082efedc477ea96a382
 SHA1 (patch-ab) = 1501d8b0e6fd2c61949ba0d447c7b726655725c4
 SHA1 (patch-ac) = dac0fcdfee97d42c8f23684a4321519b9f8698d9
 SHA1 (patch-ad) = 4bd73dea4770c7f5a43be0d096c26e7d6728dd2c
 SHA1 (patch-ae) = 1d8c1c3baf9575631c23d3ced7b12fab1df95cd6
 SHA1 (patch-af) = b52c15a507960ecf33a61a3cbd608a92ebac1188
-SHA1 (patch-ag) = 5a48b4036d65af7cb6da0a1c89e06f02ae921ac6
+SHA1 (patch-ag) = 6f3236ff8d84c79c830e521c9e7c5a5760adb04e
 SHA1 (patch-ah) = 2de22b9a3733f958298af5e33b66c0653c320f59
 SHA1 (patch-dialects_n+obsd_dnode1.c) = dc8c766760aca4eb2e7d7af3944260dd49795c09
