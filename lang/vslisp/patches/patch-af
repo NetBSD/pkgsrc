@@ -1,4 +1,6 @@
-$NetBSD: patch-af,v 1.1 2004/05/23 23:28:29 danw Exp $
+$NetBSD: patch-af,v 1.2 2015/12/29 23:34:57 dholland Exp $
+
+Remove silly include.
 
 --- src/functions/funct.c.orig	Sun May  7 16:26:24 2000
 +++ src/functions/funct.c

@@ -1,4 +1,6 @@
-$NetBSD: patch-ae,v 1.6 2001/06/25 17:49:33 jtb Exp $
+$NetBSD: patch-ae,v 1.7 2015/12/29 23:34:56 dholland Exp $
+
+Don't use nonstandard headers.
 
 --- stalin-sparc.c.orig	Mon Jun 25 08:05:20 2001
 +++ stalin-sparc.c

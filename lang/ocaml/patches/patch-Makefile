@@ -1,6 +1,7 @@
-$NetBSD: patch-Makefile,v 1.6 2015/08/07 11:16:30 jaapb Exp $
+$NetBSD: patch-Makefile,v 1.7 2015/12/29 23:34:52 dholland Exp $
 
 Use BSD_INSTALL_* instead of mkdir and cp; remove ocamlrun before cold start
+
 --- Makefile.orig	2015-07-20 14:10:11.000000000 +0000
 +++ Makefile
 @@ -186,8 +186,10 @@ LIBFILES=stdlib.cma std_exit.cmo *.cmi c

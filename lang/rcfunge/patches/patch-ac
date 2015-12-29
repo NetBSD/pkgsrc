@@ -1,4 +1,7 @@
-$NetBSD: patch-ac,v 1.1.1.1 2009/11/20 12:06:48 drochner Exp $
+$NetBSD: patch-ac,v 1.2 2015/12/29 23:34:54 dholland Exp $
+
+Configure for pkgsrc.
+Honor pkgsrc CFLAGS and LDFLAGS.
 
 --- Makefile.orig	2008-12-19 19:52:46.000000000 +0100
 +++ Makefile
@@ -14,7 +17,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2009/11/20 12:06:48 drochner Exp $
  	-DNCRS -DFOBJ -DSORT -DICAL -DSCKE -DIMTH -DBOOL -DSGNL -DFORK -DSGNE\
  	-DIPMD -DUNIX\
 -		-D$(PLATFORM) -Wall
-+		-D$(PLATFORM) $(CFLAGS)
++		-D$(PLATFORM) $(CFLAGS) -Wall
  INCPATH=-I /usr/openwin/include
  # solaris
  #LIBS=-lm -lX11 -lsocket -lnsl

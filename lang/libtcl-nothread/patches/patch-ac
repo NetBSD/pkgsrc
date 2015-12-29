@@ -1,4 +1,6 @@
-$NetBSD: patch-ac,v 1.1.1.1 2004/06/22 18:38:47 drochner Exp $
+$NetBSD: patch-ac,v 1.2 2015/12/29 23:34:50 dholland Exp $
+
+Set the machine type name at runtime on NetBSD.
 
 --- tclUnixInit.c.orig	2004-02-17 17:46:54.000000000 -0600
 +++ tclUnixInit.c
