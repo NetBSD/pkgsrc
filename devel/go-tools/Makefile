@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/12/28 11:58:12 bsiegert Exp $
+# $NetBSD: Makefile,v 1.4 2015/12/29 22:07:20 bsiegert Exp $
 #
 
 DISTNAME=		tools
@@ -17,7 +17,8 @@ GO_SRCPATH=		golang.org/x/tools
 GO_DIST_BASE=		${DISTNAME}-${GITHUB_TAG}*
 
 USE_TOOLS+=		bash
-REPLACE_BASH=		cmd/godoc/setup-godoc-app.bash
+REPLACE_BASH+=		cmd/godoc/setup-godoc-app.bash
+REPLACE_BASH+=		cmd/oracle/emacs-test.bash
 
 .include "../../lang/go/go-package.mk"
 .include "../../devel/google-api-go-client/buildlink3.mk"
