@@ -1,0 +1,22 @@
+$NetBSD: patch-Makefile,v 1.1 2015/12/29 02:04:08 agc Exp $
+
+Make user destdir ready
+Use make(1) variables properly
+Don't hardcode installation PREFIX
+
+--- Makefile	2015/10/16 22:41:45	1.1
++++ Makefile	2015/10/16 22:41:49
+@@ -27,11 +27,9 @@
+ 	cd test-high; $(MAKE)
+ 	cd sample; $(MAKE)
+ 
+-PREFIX = /usr/local
+-
+ install: all
+-	install src/libpcg_random.a $PREFIX/lib
+-	install -m 0644 include/pcg_variants.h $PREFIX/include
++	install src/libpcg_random.a ${DESTDIR}${PREFIX}/lib
++	install -m 0644 include/pcg_variants.h ${DESTDIR}${PREFIX}/include
+ 
+ test:   all
+ 	cd test-low; $(MAKE) test
