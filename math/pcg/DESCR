@@ -1,0 +1,17 @@
+The PCG family of Random Number Generators combines properties not
+previously seen together in the same generation scheme:
+
++ It's really easy to use, and yet its very flexible and offers
+powerful features (including some that allow you to perform silly
+party tricks).
+
++ It's very fast, and can occupy very little space.
+
++ It has small code size.
+
++ It's performance in statistical tests is excellent (see the PCG
+paper for full details).
+
++ It's much less predictable and thus more secure than most generators.
+
++ It's open source software, with a permissive license (the Apache license).
