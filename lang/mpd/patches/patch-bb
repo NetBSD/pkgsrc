@@ -1,4 +1,6 @@
-$NetBSD: patch-bb,v 1.1 2005/10/17 19:45:18 is Exp $
+$NetBSD: patch-bb,v 1.2 2015/12/29 23:34:52 dholland Exp $
+
+Use socklen_t.
 
 --- rts/socket.c.orig	2005-03-02 14:17:00.000000000 +0000
 +++ rts/socket.c

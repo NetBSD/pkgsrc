@@ -1,4 +1,6 @@
-$NetBSD: patch-al,v 1.1 2005/06/24 22:44:58 minskim Exp $
+$NetBSD: patch-al,v 1.2 2015/12/29 23:34:43 dholland Exp $
+
+Don't use nonstandard headers.
 
 --- lib/genutil.c.orig	1999-09-15 21:38:06.000000000 -0500
 +++ lib/genutil.c

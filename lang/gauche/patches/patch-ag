@@ -1,4 +1,6 @@
-$NetBSD: patch-ag,v 1.6 2007/01/19 12:59:02 uebayasi Exp $
+$NetBSD: patch-ag,v 1.7 2015/12/29 23:34:47 dholland Exp $
+
+Honor pkgsrc LDFLAGS.
 
 --- ext/charconv/Makefile.in.orig	2005-09-10 18:04:04.000000000 +0900
 +++ ext/charconv/Makefile.in

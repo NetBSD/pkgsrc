@@ -1,4 +1,9 @@
-$NetBSD: patch-wrksp.c,v 1.2 2015/11/06 20:33:21 joerg Exp $
+$NetBSD: patch-wrksp.c,v 1.3 2015/12/29 23:34:56 dholland Exp $
+
+Use standard headers.
+Use <ctype.h> correctly.
+Use snprintf.
+Pass the right type for printf %.* lengths.
 
 --- wrksp.c.orig	2008-08-23 19:51:14.000000000 +0000
 +++ wrksp.c

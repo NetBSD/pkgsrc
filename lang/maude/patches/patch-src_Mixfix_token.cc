@@ -1,4 +1,7 @@
-$NetBSD: patch-src_Mixfix_token.cc,v 1.1 2013/11/29 18:30:10 joerg Exp $
+$NetBSD: patch-src_Mixfix_token.cc,v 1.2 2015/12/29 23:34:51 dholland Exp $
+
+Don't use <rope> with clang, but fall back to <string>. Untested for
+functionality.
 
 --- src/Mixfix/token.cc.orig	2013-11-28 00:50:24.000000000 +0000
 +++ src/Mixfix/token.cc

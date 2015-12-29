@@ -1,4 +1,6 @@
-$NetBSD: patch-docs_makefile,v 1.1 2015/10/11 07:02:39 ryoon Exp $
+$NetBSD: patch-docs_makefile,v 1.2 2015/12/29 23:34:56 dholland Exp $
+
+DESTDIR support.
 
 --- docs/makefile.orig	2008-08-19 19:56:59.000000000 +0000
 +++ docs/makefile

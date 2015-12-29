@@ -1,4 +1,8 @@
-$NetBSD: patch-ac,v 1.4 2010/02/20 08:14:44 obache Exp $
+$NetBSD: patch-ac,v 1.5 2015/12/29 23:34:48 dholland Exp $
+
+Use "j" as the installation prefix, and honor it fully.
+Don't install the info file.
+DESTDIR support.
 
 --- doc/Makefile.in.orig	2000-06-07 08:48:18.000000000 +0000
 +++ doc/Makefile.in

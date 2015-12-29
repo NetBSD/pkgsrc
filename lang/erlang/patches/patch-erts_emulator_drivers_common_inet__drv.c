@@ -1,4 +1,6 @@
-$NetBSD: patch-erts_emulator_drivers_common_inet__drv.c,v 1.1 2015/11/20 14:30:02 joerg Exp $
+$NetBSD: patch-erts_emulator_drivers_common_inet__drv.c,v 1.2 2015/12/29 23:34:46 dholland Exp $
+
+Unbreak build due to differences in the NetBSD SCTP implementation.
 
 --- erts/emulator/drivers/common/inet_drv.c.orig	2015-11-17 11:35:14.000000000 +0000
 +++ erts/emulator/drivers/common/inet_drv.c

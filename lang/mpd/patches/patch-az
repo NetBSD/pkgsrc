@@ -1,4 +1,6 @@
-$NetBSD: patch-az,v 1.1 2005/10/17 19:45:18 is Exp $
+$NetBSD: patch-az,v 1.2 2015/12/29 23:34:52 dholland Exp $
+
+Print pointers properly.
 
 --- csw/cstest.c.orig	1999-07-28 20:42:21.000000000 +0000
 +++ csw/cstest.c

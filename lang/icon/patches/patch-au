@@ -1,4 +1,6 @@
-$NetBSD: patch-au,v 1.4 2003/06/06 08:58:43 jtb Exp $
+$NetBSD: patch-au,v 1.5 2015/12/29 23:34:48 dholland Exp $
+
+Don't strip the executables during the build.
 
 --- src/iconc/Makefile.orig
 +++ src/iconc/Makefile

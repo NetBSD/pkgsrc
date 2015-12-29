@@ -1,4 +1,6 @@
-$NetBSD: patch-ah,v 1.1 2008/04/04 01:56:16 bjs Exp $
+$NetBSD: patch-ah,v 1.2 2015/12/29 23:34:53 dholland Exp $
+
+Support more OSes.
 
 --- src/jsosdep.h.orig	2005-07-07 18:35:39.000000000 -0400
 +++ src/jsosdep.h

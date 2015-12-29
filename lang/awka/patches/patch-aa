@@ -1,4 +1,7 @@
-$NetBSD: patch-aa,v 1.1 2005/11/02 15:54:04 tv Exp $
+$NetBSD: patch-aa,v 1.2 2015/12/29 23:34:43 dholland Exp $
+
+Remove setmode() declaration that is different from BSD's. Caused
+build failure on Interix.
 
 --- awka/fin.h.orig	2001-07-06 01:03:46.000000000 -0400
 +++ awka/fin.h
