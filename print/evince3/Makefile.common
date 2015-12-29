@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2015/12/29 04:25:31 dholland Exp $
+# $NetBSD: Makefile.common,v 1.12 2015/12/29 04:30:29 dholland Exp $
 #
 # used by print/evince3/Makefile
 # would probably be used by print/evince3-nautilus/Makefile if that existed
@@ -12,8 +12,9 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://wiki.gnome.org/Apps/Evince
 LICENSE=		gnu-gpl-v2
 
-PATCHDIR=		../../evince3/patches
-DISTINFO_FILE=		../../evince3/distinfo
+#FILESDIR=		../../print/evince3/files
+#PATCHDIR=		../../print/evince3/patches
+DISTINFO_FILE=		../../print/evince3/distinfo
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
@@ -30,13 +31,13 @@ BUILD_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 
 # XXX fake for "configure" to allow build w/o a gs installed
 # (avoid hard dependency on a specific version)
-CONFIGURE_ARGS+=	--with-gs=${LOCALBASE}/bin/gs
+CONFIGURE_ARGS+=	--with-gs=${PREFIX}/bin/gs
 pre-configure:
 	${ECHO} "echo 8.51" >${BUILDLINK_DIR}/bin/gs
 	${CHMOD} +x ${BUILDLINK_DIR}/bin/gs
 
 .include "../../databases/shared-mime-info/buildlink3.mk"
-BUILDLINK_API_DEPENDS.glib2+=   glib2>=2.36.0
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.36.0
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.adwaita-icon-theme+=	adwaita-icon-theme>=2.17.1
 .include "../../graphics/adwaita-icon-theme/buildlink3.mk"
