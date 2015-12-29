@@ -1,4 +1,6 @@
-$NetBSD: patch-examples_iOS_build-gambit-iOS,v 1.1 2012/04/16 10:19:34 asau Exp $
+$NetBSD: patch-examples_iOS_build-gambit-iOS,v 1.2 2015/12/29 23:34:46 dholland Exp $
+
+Remove bashisms.
 
 --- examples/iOS/build-gambit-iOS.orig	2012-02-21 15:03:22.000000000 +0000
 +++ examples/iOS/build-gambit-iOS

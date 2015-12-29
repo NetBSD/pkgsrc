@@ -1,4 +1,7 @@
-$NetBSD: patch-libpolyml_elfexport.cpp,v 1.3 2014/09/13 18:23:38 asau Exp $
+$NetBSD: patch-libpolyml_elfexport.cpp,v 1.4 2015/12/29 23:34:54 dholland Exp $
+
+Fix build on NetBSD.
+Fix build on Dragonfly.
 
 --- libpolyml/elfexport.cpp.orig	2013-10-15 16:25:39.000000000 +0000
 +++ libpolyml/elfexport.cpp

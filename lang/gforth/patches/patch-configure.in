@@ -1,4 +1,6 @@
-$NetBSD: patch-configure.in,v 1.1 2013/06/13 21:43:26 joerg Exp $
+$NetBSD: patch-configure.in,v 1.2 2015/12/29 23:34:47 dholland Exp $
+
+-export-dynamic is a linker option, pass it down as such.
 
 --- configure.in.orig	2013-06-13 17:24:38.000000000 +0000
 +++ configure.in

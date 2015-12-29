@@ -1,4 +1,7 @@
-$NetBSD: patch-ac,v 1.9 2014/01/19 14:06:41 ryoon Exp $
+$NetBSD: patch-ac,v 1.10 2015/12/29 23:34:45 dholland Exp $
+
+Fix handling of installation directories.
+Install static libs with the right permissions.
 
 --- Makefile.rules.orig	2013-11-14 23:51:29.000000000 +0000
 +++ Makefile.rules

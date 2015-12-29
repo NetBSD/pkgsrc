@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 22:50:46 agc Exp $
+$NetBSD: distinfo,v 1.6 2015/12/29 23:34:57 dholland Exp $
 
 SHA1 (wsbasic-1_2_7.tar.gz) = c27e5c95fd9b5c8cc8366600df6f83b67d223829
 RMD160 (wsbasic-1_2_7.tar.gz) = 2c194087f59af350bcbebc674e1016035bbcb126
 SHA512 (wsbasic-1_2_7.tar.gz) = eed92c9b9b63e40abab0f6af0c6751549c503fc22ec052fca9dd042559f0604bc1892c0bd2f7525cd980709cc8f9a7bb602b41c86cd7b9cab4eecfb0c34006d2
 Size (wsbasic-1_2_7.tar.gz) = 23516 bytes
-SHA1 (patch-aa) = a113d2a0236f5f6fc9977dd154e26b81a8200779
+SHA1 (patch-aa) = e54f9ecd01dcdb3c8879bc9cdaab7ca5fba4e099

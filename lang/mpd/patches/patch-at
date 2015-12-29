@@ -1,4 +1,9 @@
-$NetBSD: patch-at,v 1.1.1.1 2005/10/17 16:16:48 is Exp $
+$NetBSD: patch-at,v 1.2 2015/12/29 23:34:52 dholland Exp $
+
+Build with optimization.
+Hardwire asm.o to be built from the netbsd context switch code.
+Link in a static copy of libpthread.
+XXX: The logic here should probably be revisited.
 
 --- csw/Makefile.orig	1999-07-30 05:01:50.000000000 +0000
 +++ csw/Makefile

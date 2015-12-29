@@ -1,4 +1,6 @@
-$NetBSD: patch-guiserver_guiserver.lsp,v 1.1 2014/07/07 14:25:31 ryoon Exp $
+$NetBSD: patch-guiserver_guiserver.lsp,v 1.2 2015/12/29 23:34:52 dholland Exp $
+
+Don't hardwire paths.
 
 --- guiserver/guiserver.lsp.orig	2014-04-08 14:02:28.000000000 +0000
 +++ guiserver/guiserver.lsp

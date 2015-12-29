@@ -1,4 +1,6 @@
-$NetBSD: patch-ad,v 1.1 2003/07/24 18:39:16 jtb Exp $
+$NetBSD: patch-ad,v 1.2 2015/12/29 23:34:53 dholland Exp $
+
+Update for recent (as in 2003 recent) emacs.
 
 --- rsrc/OOC/emacs/oberon2.el.orig	2003-05-11 16:04:46.000000000 +0100
 +++ rsrc/OOC/emacs/oberon2.el	2003-07-24 19:15:08.000000000 +0100

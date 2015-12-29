@@ -1,4 +1,6 @@
-$NetBSD: patch-src_ObjectSystem_objectSystemRewritingContext.hh,v 1.1 2013/11/29 18:30:10 joerg Exp $
+$NetBSD: patch-src_ObjectSystem_objectSystemRewritingContext.hh,v 1.2 2015/12/29 23:34:51 dholland Exp $
+
+Fix C++ build issues.
 
 --- src/ObjectSystem/objectSystemRewritingContext.hh.orig	2013-11-28 00:46:15.000000000 +0000
 +++ src/ObjectSystem/objectSystemRewritingContext.hh

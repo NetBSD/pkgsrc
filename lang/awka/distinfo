@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.8 2015/11/03 22:50:32 agc Exp $
+$NetBSD: distinfo,v 1.9 2015/12/29 23:34:43 dholland Exp $
 
 SHA1 (awka-0.7.5.tar.gz) = b626a77ee716b9218ef78bee96e6ba2533055514
 RMD160 (awka-0.7.5.tar.gz) = 74d953efd395938572317b24fc702a0646d94f10
 SHA512 (awka-0.7.5.tar.gz) = d488ed4757e142cf2baa4564f1b7d4413833e7a6ac33610e0994318dc2e113048b72aa34c8cea18dcf073cb9d4b35be5bac7ef98e43effbfcf4b77d483882851
 Size (awka-0.7.5.tar.gz) = 395499 bytes
-SHA1 (patch-aa) = ab553c4e7878011f19f51c15a5885220b5c378d7
-SHA1 (patch-ab) = 9cab1c88b6fd7b6af175023f575226c90c011cd7
-SHA1 (patch-doc_awka-elm.5) = 70c19258d1f9e7554c0a2e0ed017390b5d74ad56
-SHA1 (patch-doc_awka-elmref.5) = 760e5768f087ee8054ed442d5cb9f15c8659560c
-SHA1 (patch-doc_awka.1) = c0b10cca61bd618127c5e56a5565daaa4e00c48a
+SHA1 (patch-aa) = e721a4513fb16ca08cbf2658d3573b8034780efb
+SHA1 (patch-ab) = c5db58909c34408d2dc984095909ecca8f95c25a
+SHA1 (patch-doc_awka-elm.5) = 3f66ed179cf25364c38862c61b4132265dda2fe4
+SHA1 (patch-doc_awka-elmref.5) = e9d80cc867172a79c5a5e2ce107d03457ae430e2
+SHA1 (patch-doc_awka.1) = a280b016190abfc8c8055c7bf69b4121b9f8d2ed

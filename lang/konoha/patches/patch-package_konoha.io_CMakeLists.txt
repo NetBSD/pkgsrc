@@ -1,4 +1,6 @@
-$NetBSD: patch-package_konoha.io_CMakeLists.txt,v 1.1 2015/03/31 15:44:47 joerg Exp $
+$NetBSD: patch-package_konoha.io_CMakeLists.txt,v 1.2 2015/12/29 23:34:50 dholland Exp $
+
+Set -fPIC correctly.
 
 --- package/konoha.io/CMakeLists.txt.orig	2015-03-28 23:09:49.000000000 +0000
 +++ package/konoha.io/CMakeLists.txt

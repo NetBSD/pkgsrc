@@ -1,4 +1,6 @@
-$NetBSD: patch-ak,v 1.1 2008/09/05 05:27:31 dholland Exp $
+$NetBSD: patch-ak,v 1.2 2015/12/29 23:34:44 dholland Exp $
+
+Fix build with recent readline.
 
 --- readline/readline.h~	2005-05-06 04:48:54.000000000 -0400
 +++ readline/readline.h	2008-09-05 00:22:54.000000000 -0400
