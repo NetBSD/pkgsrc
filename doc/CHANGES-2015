@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5162 2015/12/29 00:06:45 dholland Exp $
+$NetBSD: CHANGES-2015,v 1.5163 2015/12/29 02:05:35 agc Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8482,3 +8482,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated converters/librevenge to 0.0.3nb1 [ryoon 2015-12-28]
 	Updated audio/mp3diags to 1.2.02 [adam 2015-12-28]
 	Updated comms/hylafax to 6.0.6nb1 [dholland 2015-12-29]
+	Added math/pcg version 0.94 [agc 2015-12-29]
