@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 17:41:18 agc Exp $
+$NetBSD: distinfo,v 1.5 2015/12/29 23:26:15 wiz Exp $
 
-SHA1 (Hack-v2_015-ttf.zip) = 25c05d50c286af2b893962d0e1b199ebaa1f6109
-RMD160 (Hack-v2_015-ttf.zip) = 7912e5c0895c4f8252e9f4d145f421435760e01a
-SHA512 (Hack-v2_015-ttf.zip) = 01d8b5192244c1ada3281d6e18e7de5e9c340aa39c8b628c28d9e28f21d77eb4227054eb171df321ef946ffd9b35c09c8d1b93f89e62c64a21486adc7289aab8
-Size (Hack-v2_015-ttf.zip) = 690406 bytes
+SHA1 (Hack-v2_018-ttf.zip) = 51ff3bc549ee22a70992f2abdb89c4fc7b6787fb
+RMD160 (Hack-v2_018-ttf.zip) = c03723d3793748138360942cf216ede124cc2bfc
+SHA512 (Hack-v2_018-ttf.zip) = 19c94f215ff2b137321c9ad9c11a12a289a8b447f833d9e4b07e192e40d45581380b0e33279edb5e508b4be59f4f44a94d07aa9e277a5b740610e02ae88a6804
+Size (Hack-v2_018-ttf.zip) = 708015 bytes
