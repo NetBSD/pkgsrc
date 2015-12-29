@@ -1,4 +1,4 @@
-# $NetBSD: go-package.mk,v 1.6 2015/12/27 19:41:10 wiz Exp $
+# $NetBSD: go-package.mk,v 1.7 2015/12/29 21:47:48 bsiegert Exp $
 #
 # This file implements common logic for compiling Go programs in pkgsrc.
 # The compiled Go code is tied to a specific compiler version, and the
@@ -61,7 +61,7 @@ post-extract:
 	${MV} ${WRKDIR}/`basename ${GO_DIST_BASE}`/* ${WRKSRC}
 
 do-build:
-	env GOPATH=${WRKDIR}:${PREFIX}/gopkg go install -v ${GO_BUILD_PATTERN}
+	env GOPATH=${WRKDIR}:${BUILDLINK_DIR}/gopkg go install -v ${GO_BUILD_PATTERN}
 
 do-install:
 	-cd ${WRKDIR} && [ -d bin ] && ${PAX} -rw bin ${DESTDIR}${PREFIX}
