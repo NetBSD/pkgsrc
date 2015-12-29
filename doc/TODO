@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15235 2015/12/29 19:40:14 adam Exp $
+$NetBSD: TODO,v 1.15236 2015/12/29 23:23:11 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1288,7 +1288,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Math-BigInt-Pari-1.18
 	o p5-Math-Derivative-0.04
 	o p5-Math-MatrixReal-2.12
-	o p5-Math-Pari-2.01080800
 	o p5-Math-Permute-List-1.007
 	o p5-Math-Prime-Util-0.51
 	o p5-Math-Random-MT-Perl-1.13
