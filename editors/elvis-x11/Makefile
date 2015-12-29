@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2013/04/06 03:45:12 rodent Exp $
+# $NetBSD: Makefile,v 1.18 2015/12/29 04:22:50 dholland Exp $
 
 PKGNAME=	${PKGNAME_BASE:S/-/-x11-/}
 COMMENT=	Clone of vi with regex-search, hex-edit, HTML/LaTeX preview (X11)
 
-FILESDIR=	${.CURDIR}/../../editors/elvis/files
+#FILESDIR=	${.CURDIR}/../../editors/elvis/files
 PATCHDIR=	${.CURDIR}/../../editors/elvis/patches
 PKGDIR=		${.CURDIR}/../../editors/elvis
 
