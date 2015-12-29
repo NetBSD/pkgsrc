@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2013/07/05 16:15:59 ryoon Exp $
+# $NetBSD: Makefile,v 1.24 2015/12/29 04:54:35 dholland Exp $
 #
 
 DISTNAME=		mp3splt-2.5.2
@@ -11,8 +11,8 @@ COMMENT=		Command line utility to split MP3 (VBR supported) and OGG files
 LICENSE=		gnu-gpl-v2
 
 USE_PKGLOCALEDIR=	yes
-GNU_CONFIGURE=	 	yes
-USE_FEATURES= 	 	getopt_long
+GNU_CONFIGURE=		yes
+USE_FEATURES=		getopt_long
 USE_TOOLS+=		pkg-config
 
 CONFIGURE_ARGS+=	--disable-nls

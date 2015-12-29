@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.3 2012/10/20 13:01:30 darcy Exp $
+# $NetBSD: options.mk,v 1.4 2015/12/29 04:54:36 dholland Exp $
 
-PKG_OPTIONS_VAR=         PKG_OPTIONS.freeswitch
-PKG_SUPPORTED_OPTIONS=   freeswitch-08k freeswitch-16k freeswitch-32k freeswitch-48k
-PKG_SUGGESTED_OPTIONS=   freeswitch-08k freeswitch-16k
+PKG_OPTIONS_VAR=	PKG_OPTIONS.freeswitch
+PKG_SUPPORTED_OPTIONS=	freeswitch-08k freeswitch-16k freeswitch-32k freeswitch-48k
+PKG_SUGGESTED_OPTIONS=	freeswitch-08k freeswitch-16k
 
 .include "../../mk/bsd.options.mk"
 
