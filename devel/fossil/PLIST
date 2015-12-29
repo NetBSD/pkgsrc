@@ -1,2 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/10/11 09:32:30 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/12/29 15:31:13 nros Exp $
 bin/fossil
+man/man1/fossil.1
+share/doc/fossil/COPYRIGHT-BSD2.txt
+share/doc/fossil/linenoise.h
