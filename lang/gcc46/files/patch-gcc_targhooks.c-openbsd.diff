@@ -1,3 +1,5 @@
+$NetBSD: patch-gcc_targhooks.c-openbsd.diff,v 1.2 2015/12/29 04:04:28 dholland Exp $
+
 --- gcc/targhooks.c.orig	2014-01-25 15:53:51.000000000 +0900
 +++ gcc/targhooks.c	2014-01-25 15:38:03.000000000 +0900
 @@ -56,6 +56,7 @@
