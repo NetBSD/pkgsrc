@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/11/10 17:10:10 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/12/29 06:07:40 dholland Exp $
 bin/mwm
 bin/uil
 bin/xmbind
@@ -563,8 +563,8 @@ man/man3/XmLabel.3
 man/man3/XmLabelGadget.3
 man/man3/XmList.3
 man/man3/XmListAddItem.3
-man/man3/XmListAddItems.3
 man/man3/XmListAddItemUnselected.3
+man/man3/XmListAddItems.3
 man/man3/XmListAddItemsUnselected.3
 man/man3/XmListDeleteAllItems.3
 man/man3/XmListDeleteItem.3
