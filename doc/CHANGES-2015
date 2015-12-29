@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5169 2015/12/29 20:47:00 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.5170 2015/12/29 20:53:06 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8491,3 +8491,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated archivers/p7zip to 15.09 [adam 2015-12-29]
 	Updated lang/nodejs4 to 4.2.4 [fhajny 2015-12-29]
 	Updated textproc/libodfgen to 0.1.5 [wiz 2015-12-29]
+	Updated lang/nodejs to 5.3.0 [fhajny 2015-12-29]
