@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.18 2015/11/12 08:54:52 msaitoh Exp $
+$NetBSD: distinfo,v 1.19 2015/12/29 04:04:31 dholland Exp $
 
 SHA1 (pciutils-3.3.0.tar.gz) = cb1ad848c3a4384a43b5e516fb72e0aa6eb3d380
 RMD160 (pciutils-3.3.0.tar.gz) = 0a48d5327279a8eb1ba7e85740b6d9da01dc5525
 SHA512 (pciutils-3.3.0.tar.gz) = 7505bdb6801710db61b2f987c2dbfaed998aa504c71a30d21b220fe5be4651672e32094c756fb1e79412259ecaf01ea5460dfc6cc67485caa8a794b1d7096a52
 Size (pciutils-3.3.0.tar.gz) = 419917 bytes
-SHA1 (patch-aa) = 7be11cd0eff91f6fe51d795fa7b9e05fdefb038d
-SHA1 (patch-ab) = 8837e3a6e6c87802614b50ac511d1c1b7375b908
+SHA1 (patch-aa) = 90a4457c954ccc89c9b141ae572ec92ee2934758
+SHA1 (patch-ab) = 881db39792c9d72f527438e2b475ac2ea842b536
 SHA1 (patch-ac) = 4b90e99c051391b9cd3a6c1f5781f41b4a855c29
 SHA1 (patch-ad) = bfe9069e96fd46798afec73c93ad71db3a0e0e37
-SHA1 (patch-lib_nbsd_libpci.c) = 76e00bf7fe0e9e3319603ed55aaff3cf6ff6464a
+SHA1 (patch-lib_nbsd_libpci.c) = 1fb1f3bddf939fa9c663f16327fa7d7f39c0d354

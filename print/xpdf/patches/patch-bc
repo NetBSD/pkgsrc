@@ -1,4 +1,4 @@
-$NetbBSD$
+$NetBSD: patch-bc,v 1.3 2015/12/29 04:04:31 dholland Exp $
 
 Fix for CVE-2010-3702
 from http://www.openbsd.org/cgi-bin/cvsweb/ports/textproc/xpdf/patches/patch-xpdf_Gfx_cc.diff?r1=1.3;r2=1.4

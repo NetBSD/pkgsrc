@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST.javascript,v 1.2 2015/12/29 04:04:29 dholland Exp $
 ${PKGNAME}/program/classes/ScriptProviderForJavaScript.jar
 ${PKGNAME}/program/classes/js.jar
 ${PKGNAME}/program/services/scriptproviderforjavascript.rdb

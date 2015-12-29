@@ -1,4 +1,4 @@
-# $NetBSD: patch-src_nss-pgsql.h,v 1.2 2014/03/20 18:58:31 asau Exp $
+$NetBSD: patch-src_nss-pgsql.h,v 1.3 2015/12/29 04:04:27 dholland Exp $
 
 Adds checks for header files
 

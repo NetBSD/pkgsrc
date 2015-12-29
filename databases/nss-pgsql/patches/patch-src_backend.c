@@ -1,4 +1,4 @@
-# $NetBSD: patch-src_backend.c,v 1.1.1.1 2013/03/17 14:12:02 asau Exp $
+$NetBSD: patch-src_backend.c,v 1.2 2015/12/29 04:04:27 dholland Exp $
 
 Changes name of libpq-fe.h so it works on our PostgreSQL installation
 Reorders list of copy_attr_colname as it references copy_attr_string

@@ -1,3 +1,5 @@
+$NetBSD: patch-icons.c,v 1.2 2015/12/29 04:04:29 dholland Exp $
+
 Use a more relevant icon to represent NetBSD
 
 --- icons.c.orig	2014-08-26 16:09:22.000000000 -0500

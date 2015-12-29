@@ -1,4 +1,5 @@
-/* $NetBSD: patch-memo.c,v 1.1 2015/05/19 10:58:46 bad Exp $ */
+$NetBSD: patch-memo.c,v 1.2 2015/12/29 04:04:27 dholland Exp $
+
 Only sort memos alphabetically when enabled in the app_info.
 
 --- memo.c.orig	2014-05-25 03:25:20.000000000 +0000

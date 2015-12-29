@@ -1,3 +1,5 @@
+$NetBSD: patch-klickety_Makefile.in,v 1.2 2015/12/29 04:04:28 dholland Exp $
+
 --- klickety/Makefile.in.orig	2008-08-20 17:43:06.000000000 +0200
 +++ klickety/Makefile.in	2011-11-02 12:57:45.964380911 +0100
 @@ -881,28 +881,28 @@ install-data-local:

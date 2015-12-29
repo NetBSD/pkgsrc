@@ -1,4 +1,4 @@
-$NetBSD: patch-msgs.c,v 1.1 2013/11/04 15:34:38 christos Exp $ 
+$NetBSD: patch-msgs.c,v 1.2 2015/12/29 04:04:28 dholland Exp $
 
 Avoid pointer<->integer conversions
 

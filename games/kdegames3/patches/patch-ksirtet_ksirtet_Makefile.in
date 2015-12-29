@@ -1,3 +1,5 @@
+$NetBSD: patch-ksirtet_ksirtet_Makefile.in,v 1.2 2015/12/29 04:04:28 dholland Exp $
+
 --- ksirtet/ksirtet/Makefile.in.orig	2008-08-20 17:43:06.000000000 +0200
 +++ ksirtet/ksirtet/Makefile.in	2011-11-02 12:56:14.974702886 +0100
 @@ -820,28 +820,28 @@ install-data-local:
