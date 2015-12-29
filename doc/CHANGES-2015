@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5167 2015/12/29 19:40:14 adam Exp $
+$NetBSD: CHANGES-2015,v 1.5168 2015/12/29 20:34:10 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8489,3 +8489,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated sysutils/lsof to 4.88 [bsiegert 2015-12-29]
 	Updated graphics/GMT to 4.1.4nb6 [dholland 2015-12-29]
 	Updated archivers/p7zip to 15.09 [adam 2015-12-29]
+	Updated lang/nodejs4 to 4.2.4 [fhajny 2015-12-29]
