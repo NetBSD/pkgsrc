@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.39 2015/11/20 14:30:02 joerg Exp $
+$NetBSD: distinfo,v 1.40 2015/12/29 23:34:46 dholland Exp $
 
 SHA1 (erlang/otp_src_18.1.tar.gz) = 99361cb597548298cb14b104ebafa4e5a40ff442
 RMD160 (erlang/otp_src_18.1.tar.gz) = 8afe4824fe1142ef7121a426c3233f982412dada
 SHA512 (erlang/otp_src_18.1.tar.gz) = 31e3a4f3d8da7877757fa4df427c59462cb68e0177f93698146ce17127406fd0ee77f819044cef10e4a18ed075deb44343d915148cf1fd4bce09a1e39edaaee6
 Size (erlang/otp_src_18.1.tar.gz) = 68231709 bytes
 SHA1 (patch-ab) = 5f1602f3a49c05fd4c45884a7cd6be8d3f287ac3
-SHA1 (patch-am) = 11ff769b6954f950d6447e69b033cdc0bfa767e9
-SHA1 (patch-ao) = 77f64f1e000357c0b7c28d14c9b42107d6cd1021
+SHA1 (patch-am) = b2124f362657d5c6c0c17f0ede74448573fe7912
+SHA1 (patch-ao) = e5801f2a1f1f7e8b75dc35abbc485dc310666a37
 SHA1 (patch-ay) = f5f1accdb11e404ba4779b056228431e3080e4cd
-SHA1 (patch-erts_emulator_drivers_common_inet__drv.c) = d1a520f7e44d8d8ac85bf2e0e99c18a0f82a04b4
+SHA1 (patch-erts_emulator_drivers_common_inet__drv.c) = b7784e5e8e025ca75d5279a63e0cb3f74c54bd6a

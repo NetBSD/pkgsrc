@@ -1,4 +1,6 @@
-$NetBSD: patch-gcc_cp_Make-lang.in,v 1.1 2015/04/25 10:32:07 wiz Exp $
+$NetBSD: patch-gcc_cp_Make-lang.in,v 1.2 2015/12/29 23:34:47 dholland Exp $
+
+DESTDIR support.
 
 --- gcc/cp/Make-lang.in.orig	1999-04-26 23:50:36.000000000 +0000
 +++ gcc/cp/Make-lang.in

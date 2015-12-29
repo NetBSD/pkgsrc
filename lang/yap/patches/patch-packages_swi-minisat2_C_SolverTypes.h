@@ -1,4 +1,6 @@
-$NetBSD: patch-packages_swi-minisat2_C_SolverTypes.h,v 1.3 2013/07/19 12:51:56 joerg Exp $
+$NetBSD: patch-packages_swi-minisat2_C_SolverTypes.h,v 1.4 2015/12/29 23:34:57 dholland Exp $
+
+Fix C++ dialect.
 
 --- packages/swi-minisat2/C/SolverTypes.h.orig	2012-06-29 21:19:52.000000000 +0000
 +++ packages/swi-minisat2/C/SolverTypes.h

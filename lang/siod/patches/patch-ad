@@ -1,4 +1,6 @@
-$NetBSD: patch-ad,v 1.1 2002/08/12 16:21:13 agc Exp $
+$NetBSD: patch-ad,v 1.2 2015/12/29 23:34:55 dholland Exp $
+
+Use sdbm instead of ndbm on BSD. XXX: does not match the pkgsrc makefile.
 
 --- ndbm.c	2002/08/12 16:08:46	1.1
 +++ ndbm.c	2002/08/12 16:10:13

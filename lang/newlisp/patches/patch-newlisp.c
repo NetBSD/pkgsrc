@@ -1,4 +1,6 @@
-$NetBSD: patch-newlisp.c,v 1.2 2015/06/10 14:59:43 joerg Exp $
+$NetBSD: patch-newlisp.c,v 1.3 2015/12/29 23:34:52 dholland Exp $
+
+Fix build with recent readline.
 
 --- newlisp.c.orig	2014-04-08 14:02:27.000000000 +0000
 +++ newlisp.c

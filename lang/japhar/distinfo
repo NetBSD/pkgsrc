@@ -1,19 +1,19 @@
-$NetBSD: distinfo,v 1.11 2015/11/09 05:50:05 dholland Exp $
+$NetBSD: distinfo,v 1.12 2015/12/29 23:34:48 dholland Exp $
 
 SHA1 (japhar-0.08.tar.gz) = 3f450610ca31061c1c183c8e86d1fcd47660f86d
 RMD160 (japhar-0.08.tar.gz) = 283f47db3a54f8f51d755a61fab94c611de13988
 SHA512 (japhar-0.08.tar.gz) = d8efe9dcc37a0d61b7de13a20285f02a20d704cca8e486325b7a635389e72afdebd46387c971aa022c252e206a0b5c706fea4303e781c587dd0aa39093beb9ec
 Size (japhar-0.08.tar.gz) = 903160 bytes
-SHA1 (patch-aa) = dadaf2075c9be6fcf6cdfda161e4c0c4e0d03869
-SHA1 (patch-ab) = a6c80ee5d1814002e7dd7b2a68964170af81ddc2
+SHA1 (patch-aa) = 6dd390d4fba8b27436201148444b09bf713922af
+SHA1 (patch-ab) = f367d0a6b34e8507159dba1e58123ebd29e8d22b
 SHA1 (patch-ac) = 26b8f7321fad1944d5df4eba757c35f9e32fa015
 SHA1 (patch-ad) = 640ebdda8fe1a6d51de69dde2626c62f6b2cf1e0
 SHA1 (patch-ae) = 25e5f05ad68b1788247d31144410a87fc2deec1f
-SHA1 (patch-af) = d41e8e516225e5d637882c44e44ac73e91e12941
-SHA1 (patch-ag) = 6be1a157dae74f79bd6848d8507fe2abf997be2e
-SHA1 (patch-ai) = c1ec2114b2fdaa00e4d8b5c5bcafc042b50ea077
+SHA1 (patch-af) = e8ebfa2c662e4998bb2fdf4ba98666063285938b
+SHA1 (patch-ag) = 39bd3194296b46102b0bfbae82ed144a39718dac
+SHA1 (patch-ai) = 1168953136bfcadc46489b74abbb93ba0a0ca7f8
 SHA1 (patch-aj) = 592306809df6b5f0dd00bf8cfe1c73478222f2dc
-SHA1 (patch-ak) = 0075ab705a19ca055ee3c69d31031efa7091661d
-SHA1 (patch-al) = 8d94f91ad6ec7ff069dc74f6c6b9bc22c5c6885f
-SHA1 (patch-am) = a1b75b9a11bac76fc4c8a46a225f10b72534bd54
-SHA1 (patch-lib_libnative_java.lang_system.c) = b53fe5ea61d130467a2cf4eff6a0e27dd458f80b
+SHA1 (patch-ak) = 7a6871a126ffa1ceebc3566dd10fba71d34e2734
+SHA1 (patch-al) = 8df3f73089da6ff76ae352da422f2d113117167b
+SHA1 (patch-am) = b1228cd072579e886b7b604dec6d2dfd1c59b0b8
+SHA1 (patch-lib_libnative_java.lang_system.c) = 8cfe821cb76e110bc3024921197e14c428f51468
