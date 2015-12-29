@@ -1,3 +1,5 @@
+$NetBSD: patch-kfouleggs_Makefile.in,v 1.2 2015/12/29 04:04:28 dholland Exp $
+
 --- kfouleggs/Makefile.in.orig	2008-08-20 17:43:05.000000000 +0200
 +++ kfouleggs/Makefile.in	2011-11-02 12:57:01.562496478 +0100
 @@ -905,28 +905,28 @@ install-data-local:

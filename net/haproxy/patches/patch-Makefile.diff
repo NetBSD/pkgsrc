@@ -1,5 +1,5 @@
---- Makefile.orig	2015-10-30 11:52:16.000000000 +0000
-+++ Makefile	2015-10-30 11:52:35.000000000 +0000
+$NetBSD: patch-Makefile.diff,v 1.2 2015/12/29 04:04:29 dholland Exp $
+
 --- Makefile.orig	2015-11-03 10:22:06.000000000 +0000
 +++ Makefile
 @@ -801,9 +801,6 @@ DOCUMENTATION = $(filter-out $(EXCLUDE_D
