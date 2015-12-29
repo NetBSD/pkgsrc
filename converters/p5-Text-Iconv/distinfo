@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2015/11/03 01:43:52 agc Exp $
+$NetBSD: distinfo,v 1.8 2015/12/29 04:04:27 dholland Exp $
 
 SHA1 (Text-Iconv-1.7.tar.gz) = 542849325b2d66c72e19ffb48bdc67fdd7e4bbea
 RMD160 (Text-Iconv-1.7.tar.gz) = ca248984bd161c3f57a15dac48f48d79f7221bbd
 SHA512 (Text-Iconv-1.7.tar.gz) = ea801640e3595d2daa063ec04feae6ef2847fc50e999c173d2f6322288c8053c20e00c9c707f4f66240d28b7e451566ee7327224e6770a75aa0252c28ae2a290
 Size (Text-Iconv-1.7.tar.gz) = 10454 bytes
-SHA1 (patch-aa) = 845377e663d17b08495aac67222e017a2e321c21
+SHA1 (patch-aa) = 25598d62967022821779ea4788a8f522b25481e1
