@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/12/27 20:50:40 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2015/12/29 21:56:29 wiz Exp $
 
 DISTNAME=	sift-0.6.0
 CATEGORIES=	textproc
@@ -10,12 +10,11 @@ HOMEPAGE=	https://sift-tool.org/
 COMMENT=	Fast and powerful open source alternative to grep
 LICENSE=	gnu-gpl-v3
 
-BUILD_DEPENDS+=	go-crypto-[0-9]*:../../security/go-crypto
-BUILD_DEPENDS+=	go-nbreader-[0-9]*:../../devel/go-nbreader
-BUILD_DEPENDS+=	go-flags-svent-[0-9]*:../../devel/go-flags-svent
-
 GO_DIST_BASE=	${DISTNAME}
 GO_SRCPATH=	github.com/svent/sift
 
+.include "../../security/go-crypto/buildlink3.mk"
+.include "../../devel/go-nbreader/buildlink3.mk"
+.include "../../devel/go-flags-svent/buildlink3.mk"
 .include "../../lang/go/go-package.mk"
 .include "../../mk/bsd.pkg.mk"
