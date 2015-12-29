@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2014/01/20 19:20:09 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2015/12/29 04:54:39 dholland Exp $
 #
 
 DISTNAME=	Tix${TIX_VERSION}-src
@@ -23,14 +23,14 @@ CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}/lib
 CONFIGURE_ARGS+=	--with-tk=${BUILDLINK_PREFIX.tk}/lib
 CONFIGURE_ARGS+=	--disable-stubs
-CONFIGURE_ARGS+=        --x-includes=${X11BASE:Q}/include
-CONFIGURE_ARGS+=        --x-libraries=${X11BASE:Q}/lib${LIBABISUFFIX:Q}
+CONFIGURE_ARGS+=	--x-includes=${X11BASE:Q}/include
+CONFIGURE_ARGS+=	--x-libraries=${X11BASE:Q}/lib${LIBABISUFFIX:Q}
 MAKE_ENV+=		TCL_DIR=${BUILDLINK_PREFIX.tcl}
 MAKE_ENV+=		TK_DIR=${BUILDLINK_PREFIX.tk}
 MAKE_ENV+=		LIBS=${X11_LDFLAGS:Q}
 INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR}
 TEST_TARGET=		test
-INSTALLATION_DIRS+= 	${PKGMANDIR}/mann
+INSTALLATION_DIRS+=	${PKGMANDIR}/mann
 INSTALLATION_DIRS+=	lib/Tix${TIX_VERSION}/docs
 USE_TOOLS+=		tar
 

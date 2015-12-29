@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/10/21 18:50:53 darcy Exp $
+# $NetBSD: Makefile,v 1.2 2015/12/29 04:54:36 dholland Exp $
 
 DISTNAME=		freeswitch-sounds-en-${VERSION}
 VERSION=		1.0.22
@@ -10,12 +10,12 @@ MAINTAINER= darcy@NetBSD.org
 COMMENT=	FreeSwitch Sounds (English)
 LICENSE=	mpl-1.1
 
-SOUNDSDIR=   share/freeswitch/sounds
+SOUNDSDIR=	share/freeswitch/sounds
 USE_TOOLS+=	tar
 INSTALLATION_DIRS+=	${SOUNDSDIR}
 GENERATE_PLIST+= ${FIND} ${WRKDIR}/en \( -type f -o -type l \) -print \
         | ${SORT} | ${SED} -e "s,${WRKDIR}/,${SOUNDSDIR}/,g";
-NO_BUILD=   yes
+NO_BUILD=	yes
 
 do-install:
 	@${ECHO_MSG} "Installing files..."

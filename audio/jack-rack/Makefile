@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2015/04/25 14:20:21 tnn Exp $
+# $NetBSD: Makefile,v 1.42 2015/12/29 04:54:35 dholland Exp $
 #
 
 DISTNAME=	jack-rack-1.4.7
@@ -24,7 +24,7 @@ BUILD_DEFS+=		LADSPA_PLUGIN_PATH
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 LDFLAGS.DragonFly=	-lm
 LDFLAGS.SunOS+=		-lm
-CFLAGS.SunOS+=          -std=c99 -D_XOPEN_SOURCE=600 -D__EXTENSIONS__
+CFLAGS.SunOS+=		-std=c99 -D_XOPEN_SOURCE=600 -D__EXTENSIONS__
 
 ###
 ### NOTE: this is a colon-delimited list like e.g. PATH.

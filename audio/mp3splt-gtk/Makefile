@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2015/04/25 14:20:22 tnn Exp $
+# $NetBSD: Makefile,v 1.32 2015/12/29 04:54:36 dholland Exp $
 #
 
 DISTNAME=	mp3splt-gtk-0.8.2
@@ -11,7 +11,7 @@ HOMEPAGE=	http://mp3splt.sourceforge.net/
 COMMENT=	Utility to split MP3 (VBR supported) and OGG files
 
 USE_PKGLOCALEDIR=	yes
-GNU_CONFIGURE=	 	yes
+GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config msgfmt gmake
 
 LIBS.SunOS+=		-lnsl

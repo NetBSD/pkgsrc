@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2013/05/25 01:37:59 rodent Exp $
+# $NetBSD: options.mk,v 1.3 2015/12/29 04:54:36 dholland Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libfishsound
 PKG_SUPPORTED_OPTIONS=	doc valgrind
@@ -19,7 +19,7 @@ PLIST.nodoc=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mflac)
-BUILDLINK_DEPMETHOD.flac=       build
+BUILDLINK_DEPMETHOD.flac=	build
 .include "../../audio/flac/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-flac

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2015/02/18 08:47:12 tnn Exp $
+# $NetBSD: options.mk,v 1.3 2015/12/29 04:54:37 dholland Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.hexchat
 PKG_SUPPORTED_OPTIONS=	dbus gtk2 inet6 libcanberra libnotify libpci libproxy
@@ -77,7 +77,7 @@ CONFIGURE_ARGS+=	--enable-openssl=no
 USE_TOOLS+=		perl
 PLIST.perl=		yes
 .else
-CONFIGURE_ARGS+=        --disable-perl
+CONFIGURE_ARGS+=	--disable-perl
 .endif
 
 .if !empty(PKG_OPTIONS:Mpython)

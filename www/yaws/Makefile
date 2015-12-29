@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2015/08/13 10:59:39 is Exp $
+# $NetBSD: Makefile,v 1.13 2015/12/29 04:54:38 dholland Exp $
 #
 
 DISTNAME=		yaws-1.97
@@ -43,12 +43,12 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 INSTALLATION_DIRS+=	${PKGMANDIR}/man5
 
 # remove after upgrading to a now()-less yaws:
-SUBST_CLASSES+=         now
-SUBST_STAGE.now=        post-patch
-SUBST_FILES.now=        */*.erl
-SUBST_SED.now=          -e 's|\([^:a-zA-Z]\)now()|\1erlang:timestamp()|g'
-SUBST_SED.now+=         -e 's|\([^:a-zA-Z]\)erlang:now()|\1erlang:timestamp()|g'
-SUBST_MESSAGE.now=      Replacing now().
+SUBST_CLASSES+=		now
+SUBST_STAGE.now=	post-patch
+SUBST_FILES.now=	*/*.erl
+SUBST_SED.now=		-e 's|\([^:a-zA-Z]\)now()|\1erlang:timestamp()|g'
+SUBST_SED.now+=		-e 's|\([^:a-zA-Z]\)erlang:now()|\1erlang:timestamp()|g'
+SUBST_MESSAGE.now=	Replacing now().
 
 post-patch:
 	${RM} ${WRKDIR}/yaws
