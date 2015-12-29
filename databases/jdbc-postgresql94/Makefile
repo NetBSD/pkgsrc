@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2015/07/19 13:14:58 asau Exp $
+# $NetBSD: Makefile,v 1.2 2015/12/29 04:54:37 dholland Exp $
 
 DISTNAME=		postgresql-jdbc-9.4-${PGBUILD}.src
 PKGNAME=		jdbc-postgresql94-${PGBUILD}
@@ -13,13 +13,13 @@ COMMENT=		PostgreSQL 9.4 JDBC4 driver
 PGBUILD=		1201
 JARDIST=		postgresql-9.4-${PGBUILD}.jdbc4.jar
 JARFILE=		postgresql94.jar
-EXTRACT_ONLY=           ${DISTFILES:N*.jar}
+EXTRACT_ONLY=		${DISTFILES:N*.jar}
 
 INSTALLATION_DIRS=	lib/java ${DOCDIR}
 
 USE_JAVA=		run
 USE_JAVA2=		6
-NO_BUILD=       	YES
+NO_BUILD=		YES
 
 DOCDIR=                 share/doc/java/${PKGBASE}
 PLIST_SUBST+=		JARFILE=${JARFILE:Q}
