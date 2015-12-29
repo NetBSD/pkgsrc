@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2014/02/12 23:17:58 tron Exp $
+# $NetBSD: Makefile,v 1.42 2015/12/29 06:42:54 dholland Exp $
 
 DISTNAME=	GMT4.1.4
 PKGNAME=	GMT-4.1.4
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	graphics
 MASTER_SITES=	ftp://ftp.scc.u-tokai.ac.jp/pub/gmt/4/	\
 				ftp://ftp.iris.washington.edu/pub/gmt/4/
@@ -62,5 +62,5 @@ post-install:
 
 .include "../../devel/netcdf/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
-.include "../../x11/libXp/buildlink3.mk"
+#.include "../../x11/libXp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
