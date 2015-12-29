@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2014/10/09 14:06:57 wiz Exp $
+# $NetBSD: Makefile.common,v 1.13 2015/12/29 05:06:06 dholland Exp $
 #
 # used by sysutils/cdrdao/Makefile
 # used by sysutils/gcdmaster/Makefile
@@ -43,7 +43,7 @@ post-extract:
 	${CP} ${WRKSRC}/scsilib/RULES/os-freebsd.id ${WRKSRC}/scsilib/RULES/os-dragonfly.id
 
 post-configure:
-	cd ${WRKSRC}/scsilib/RULES ; \
+	set -e; cd ${WRKSRC}/scsilib/RULES ; \
 	${TEST} -f netbsd-cc.rul || ${MV} i386-netbsd-cc.rul netbsd-cc.rul; \
 	${TEST} -f netbsd-gcc.rul || ${MV} i386-netbsd-gcc.rul netbsd-gcc.rul; \
 	${LN} -sf netbsd-gcc.rul ${MACHINE}-netbsd-gcc.rul; \
