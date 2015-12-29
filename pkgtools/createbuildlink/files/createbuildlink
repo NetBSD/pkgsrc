@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-#	$NetBSD: createbuildlink,v 1.36 2015/07/04 16:18:39 joerg Exp $
+#	$NetBSD: createbuildlink,v 1.37 2015/12/29 21:21:20 wiz Exp $
 #
 # Copyright (c) 2002 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -39,7 +39,7 @@
 # Create an initial buildlink3.mk from a package's Makefile and PLIST
 #
 
-REV=`echo '$Revision: 1.36 $' | sed 's/\\$//g'`
+REV=`echo '$Revision: 1.37 $' | sed 's/\\$//g'`
 tmpdir=/tmp
 spacesintab=8
 makefile=Makefile
@@ -90,6 +90,7 @@ PKGNAME=`@MAKE@ show-var VARNAME=PKGNAME`
 PKGVER=`echo $PKGNAME | sed -e 's/^.*-//'`
 PKGNOVER=`echo $PKGNAME | sed -e 's/-[^-]*$//'`
 PKGUPPER=`echo $PKGNOVER | tr '[:lower:]' '[:upper:]' | tr - _`
+GO_PACKAGE=`@MAKE@ show-var VARNAME=GO_SRCPATH`
 PREFIX=LOCALBASE
 
 ##
@@ -138,6 +139,15 @@ BUILDLINK_TREE+=	$PKGNOVER
 ${PKGUPPER}_BUILDLINK3_MK:=
 
 EOF
+
+if [ -n "$GO_PACKAGE" ]
+then
+	sed -f $sedrules <<EOF
+BUILDLINK_CONTENTS_FILTER.$PKGNOVER=	\${EGREP} gopkg/
+BUILDLINK_DEPMETHOD.$PKGNOVER?=		build
+
+EOF
+fi
 
 sed -f $sedrules <<EOF
 BUILDLINK_API_DEPENDS.$PKGNOVER+=	$PKGNOVER>=$PKGVER
