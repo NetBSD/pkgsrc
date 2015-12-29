@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2013/01/15 16:21:36 morr Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2015/12/29 04:54:39 dholland Exp $
 
 BUILDLINK_TREE+=	neXtaw
 
@@ -9,7 +9,7 @@ BUILDLINK_API_DEPENDS.neXtaw+=	neXtaw>=0.15.1
 BUILDLINK_ABI_DEPENDS.neXtaw+=	neXtaw>=0.15.1nb2
 BUILDLINK_PKGSRCDIR.neXtaw?=	../../x11/neXtaw
 
-BUILDLINK_TRANSFORM+=           l:Xaw:neXtaw
+BUILDLINK_TRANSFORM+=		l:Xaw:neXtaw
 
 .include "../../mk/bsd.fast.prefs.mk"
 
