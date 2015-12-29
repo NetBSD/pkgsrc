@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/06/12 10:48:23 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2015/12/29 04:54:35 dholland Exp $
 
 DISTNAME=	nas-1.9.1.src
 PKGNAME=	nas-auscope-1.9.1
@@ -14,7 +14,7 @@ DEPENDS+=	p5-perl-headers-${OS_VERSION}{,nb*}:../../devel/p5-perl-headers
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/.src//}/clients/audio/auscope
 USE_TOOLS+=	perl:run
-REPLACE_PERL=   auscope
+REPLACE_PERL=	auscope
 
 NO_BUILD=	yes
 

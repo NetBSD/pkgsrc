@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/04/25 14:25:02 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2015/12/29 04:54:39 dholland Exp $
 
 DISTNAME=	appmenu-qt-0.2.6
 PKGREVISION=	2
@@ -12,8 +12,8 @@ COMMENT=	Allows Qt applications to export menus over DBus to a menu applet
 LICENSE=	gnu-lgpl-v2.1
 
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES=  c c++
-USE_CMAKE=      yes
+USE_LANGUAGES=	c c++
+USE_CMAKE=	yes
 
 pre-configure:
 	${LN} -sf ${QTDIR}/bin/qmake ${BUILDLINK_DIR}/bin/

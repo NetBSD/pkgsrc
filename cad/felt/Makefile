@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2015/10/14 20:17:24 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2015/12/29 04:54:37 dholland Exp $
 
 DISTNAME=		felt-3.05.src
 PKGNAME=		felt-3.05
@@ -17,7 +17,7 @@ WRKSRC=			${WRKDIR}/FElt-3.05
 USE_TOOLS+=		gzcat
 XAW_TYPE?=		3d
 # does not directly support Xaw3d
-BUILDLINK_TRANSFORM+=   l:Xaw:Xaw3d
+BUILDLINK_TRANSFORM+=	l:Xaw:Xaw3d
 .PHONY: buildlink-Xaw3d-inc-hack
 pre-configure: buildlink-Xaw3d-inc-hack
 

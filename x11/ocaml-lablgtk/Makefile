@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2015/10/10 01:57:57 ryoon Exp $
+# $NetBSD: Makefile,v 1.10 2015/12/29 04:54:40 dholland Exp $
 
 DISTNAME=	lablgtk-2.18.3
 PKGREVISION=	6
@@ -41,7 +41,7 @@ PLIST.stubs=	yes
 .include "../../mk/ocaml.mk"
 
 .if ${OCAML_USE_OPT_COMPILER} == "yes"
-PLIST.opt=      yes
+PLIST.opt=	yes
 .endif
 
 .include "options.mk"

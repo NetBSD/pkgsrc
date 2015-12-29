@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/10/25 20:05:01 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2015/12/29 04:54:40 dholland Exp $
 
 DISTNAME=	xorg-server-1.17.2
 PKGNAME=	${DISTNAME:S/xorg-server/modular-xorg-xquartz/}
@@ -18,12 +18,12 @@ USE_LANGUAGES=	c c++ objc
 
 ONLY_FOR_PLATFORM=	Darwin-*-*
 
-BUILD_DEFS+=            VARBASE
-BUILD_DEFS_EFFECTS+=    XKB_OUTPUT_DIR
+BUILD_DEFS+=		VARBASE
+BUILD_DEFS_EFFECTS+=	XKB_OUTPUT_DIR
 
-OWN_DIRS+=              ${VARBASE}/log
-OWN_DIRS+=              ${XKB_OUTPUT_DIR}
-XKB_OUTPUT_DIR?=        ${VARBASE}/db/xkb # XXX sync with xkeyboard-config
+OWN_DIRS+=		${VARBASE}/log
+OWN_DIRS+=		${XKB_OUTPUT_DIR}
+XKB_OUTPUT_DIR?=	${VARBASE}/db/xkb # XXX sync with xkeyboard-config
 
 DEPENDS+=		xkbcomp-[0-9]*:../../x11/xkbcomp
 DEPENDS+=		xkeyboard-config-[0-9]*:../../x11/xkeyboard-config
@@ -36,49 +36,49 @@ DEPENDS+=		xinit-[0-9]*:../../x11/xinit
 LEGACY_FONT_PATHS=
 DEFAULT_FONT_PATHS=
 .for f in misc TTF OTF Type1 100dpi 75dpi cyrillic
-DEFAULT_FONT_PATHS+=    ${PREFIX}/share/fonts/X11/${f}
-LEGACY_FONT_PATHS+=     ${PREFIX}/lib/X11/fonts/${f}
+DEFAULT_FONT_PATHS+=	${PREFIX}/share/fonts/X11/${f}
+LEGACY_FONT_PATHS+=	${PREFIX}/lib/X11/fonts/${f}
 .endfor
-FONT_PATHS=             ${DEFAULT_FONT_PATHS} ${LEGACY_FONT_PATHS}
+FONT_PATHS=		${DEFAULT_FONT_PATHS} ${LEGACY_FONT_PATHS}
 
 CONFIGURE_ARGS+=	--enable-xquartz
-CONFIGURE_ARGS+=        --disable-xorg
-CONFIGURE_ARGS+=        --disable-xephyr
-CONFIGURE_ARGS+=        --disable-kdrive
-CONFIGURE_ARGS+=        --disable-config-hal
-CONFIGURE_ARGS+=        --disable-dmx
-CONFIGURE_ARGS+=        --disable-xwin
-CONFIGURE_ARGS+=        --disable-xfake
-CONFIGURE_ARGS+=        --disable-xfbdev
+CONFIGURE_ARGS+=	--disable-xorg
+CONFIGURE_ARGS+=	--disable-xephyr
+CONFIGURE_ARGS+=	--disable-kdrive
+CONFIGURE_ARGS+=	--disable-config-hal
+CONFIGURE_ARGS+=	--disable-dmx
+CONFIGURE_ARGS+=	--disable-xwin
+CONFIGURE_ARGS+=	--disable-xfake
+CONFIGURE_ARGS+=	--disable-xfbdev
 
-CONFIGURE_ARGS+=        --localstatedir=${VARBASE:Q}
-CONFIGURE_ARGS+=        --with-xkb-output=${XKB_OUTPUT_DIR:Q}
-CONFIGURE_ARGS+=        --with-fontrootdir=${PREFIX}/share/fonts/X11
-CONFIGURE_ARGS+=        --with-default-font-path=${FONT_PATHS:ts,:Q}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
+CONFIGURE_ARGS+=	--with-xkb-output=${XKB_OUTPUT_DIR:Q}
+CONFIGURE_ARGS+=	--with-fontrootdir=${PREFIX}/share/fonts/X11
+CONFIGURE_ARGS+=	--with-default-font-path=${FONT_PATHS:ts,:Q}
 
-CONFIGURE_ARGS+=        --with-builder-addr="tech-x11@NetBSD.org"
-CONFIGURE_ARGS+=        --with-os-vendor="The NetBSD Foundation"
-CONFIGURE_ARGS+=        --with-os-name=${MACHINE_PLATFORM:Q}
+CONFIGURE_ARGS+=	--with-builder-addr="tech-x11@NetBSD.org"
+CONFIGURE_ARGS+=	--with-os-vendor="The NetBSD Foundation"
+CONFIGURE_ARGS+=	--with-os-name=${MACHINE_PLATFORM:Q}
 
-CONFIGURE_ARGS+=        --enable-xtrans-send-fds
-CONFIGURE_ARGS+=        --enable-dri
-CONFIGURE_ARGS+=        --enable-dri2
-CONFIGURE_ARGS+=        --enable-dri3
-CONFIGURE_ARGS+=        --enable-glx
-CONFIGURE_ARGS+=        --enable-aiglx
-CONFIGURE_ARGS+=        --enable-glamor
-CONFIGURE_ARGS+=        --enable-ipv6
+CONFIGURE_ARGS+=	--enable-xtrans-send-fds
+CONFIGURE_ARGS+=	--enable-dri
+CONFIGURE_ARGS+=	--enable-dri2
+CONFIGURE_ARGS+=	--enable-dri3
+CONFIGURE_ARGS+=	--enable-glx
+CONFIGURE_ARGS+=	--enable-aiglx
+CONFIGURE_ARGS+=	--enable-glamor
+CONFIGURE_ARGS+=	--enable-ipv6
 
 CONFIGURE_ARGS+=	--with-apple-applications-dir=${PREFIX}/Applications/Utilities
 
-CONFIGURE_ENV+=         APP_MAN_SUFFIX=1 FILE_MAN_SUFFIX=5
-CONFIGURE_ENV+=         DRIVER_MAN_SUFFIX=4
+CONFIGURE_ENV+=		APP_MAN_SUFFIX=1 FILE_MAN_SUFFIX=5
+CONFIGURE_ENV+=		DRIVER_MAN_SUFFIX=4
 
 BUILD_DEPENDS+=		tradcpp-[0-9]*:../../devel/tradcpp
 CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/tradcpp -Uunix"
 
 .include "../../security/nettle/buildlink3.mk"
-CONFIGURE_ARGS+=        --with-sha1=libnettle
+CONFIGURE_ARGS+=	--with-sha1=libnettle
 
 .if exists(/usr/bin/xcrun) && exists(/usr/bin/sw_vers)
 MY_OSX_VERS!=		/usr/bin/sw_vers -productVersion

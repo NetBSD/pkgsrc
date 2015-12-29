@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2015/12/25 23:09:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.103 2015/12/29 04:54:36 dholland Exp $
 
 DISTNAME=	pulseaudio-7.1
 PKGREVISION=	2
@@ -35,7 +35,7 @@ USE_PKGLOCALEDIR=	yes
 
 # Wrong sys/capability.h assumptions, incompatible implementation:
 .if ${OPSYS} == "FreeBSD"
-CONFIGURE_ARGS+=       --without-caps
+CONFIGURE_ARGS+=	--without-caps
 .endif
 
 CONFIGURE_ENV+=		EGDIR=${EGDIR}
