@@ -1,4 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2013/10/20 18:15:32 joerg Exp $
+$NetBSD: patch-ab,v 1.5 2015/12/29 04:22:33 dholland Exp $
+
+ - Support passing sysconfdir as a configure option.
+ - Honor COMPILER_RPATH_FLAG.
+ - Use pkgconfig to find freetype.
 
 --- configure.orig	2003-10-20 22:32:25.000000000 -0400
 +++ configure
