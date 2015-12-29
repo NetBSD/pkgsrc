@@ -1,4 +1,9 @@
-$NetBSD: patch-ag,v 1.5 2007/07/28 13:10:59 wiz Exp $
+$NetBSD: patch-ag,v 1.6 2015/12/29 18:17:04 dholland Exp $
+
+Configure for pkgsrc. Honor COMPILER_RPATH_FLAG.
+Use pkgsrc boehm-gc.
+
+XXX: why does this change the version number?
 
 --- System/Common/CONFIG.proto.orig	Wed Nov  3 18:48:17 1999
 +++ System/Common/CONFIG.proto
