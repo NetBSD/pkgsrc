@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5165 2015/12/29 12:44:42 bsiegert Exp $
+$NetBSD: CHANGES-2015,v 1.5166 2015/12/29 17:56:34 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8485,4 +8485,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated comms/hylafax to 6.0.6nb1 [dholland 2015-12-29]
 	Added math/pcg version 0.94 [agc 2015-12-29]
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.559 [tsutsui 2015-12-29]
+	Updated graphics/GMT to 4.1.4nb5 [dholland 2015-12-29]
 	Updated sysutils/lsof to 4.88 [bsiegert 2015-12-29]
+	Updated graphics/GMT to 4.1.4nb6 [dholland 2015-12-29]
