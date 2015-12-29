@@ -1,4 +1,6 @@
-$NetBSD: patch-as,v 1.1.1.1 2002/05/04 00:45:37 jtb Exp $
+$NetBSD: patch-as,v 1.2 2015/12/29 18:17:04 dholland Exp $
+
+Don't hardwire interpreter paths.
 
 --- Browser/Web/graph2dot.orig	Sun Jul 25 15:36:23 1999
 +++ Browser/Web/graph2dot	Thu May  2 19:27:17 2002

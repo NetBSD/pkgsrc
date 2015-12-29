@@ -1,4 +1,6 @@
-$NetBSD: patch-ap,v 1.1.1.1 2002/05/04 00:45:36 jtb Exp $
+$NetBSD: patch-ap,v 1.2 2015/12/29 18:17:04 dholland Exp $
+
+Don't hardwire interpreter paths.
 
 --- Browser/Web/gen_html_top_level.orig	Sun Jul 25 15:36:23 1999
 +++ Browser/Web/gen_html_top_level	Thu May  2 19:26:27 2002

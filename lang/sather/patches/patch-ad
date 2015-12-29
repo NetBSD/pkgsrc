@@ -1,4 +1,6 @@
-$NetBSD: patch-ad,v 1.6 2015/03/31 15:46:41 joerg Exp $
+$NetBSD: patch-ad,v 1.7 2015/12/29 18:17:04 dholland Exp $
+
+Add config for NetBSD.
 
 --- /dev/null	Thu May  2 17:26:15 2002
 +++ System/Platforms/netbsd/CONFIG	Thu May  2 17:34:27 2002
