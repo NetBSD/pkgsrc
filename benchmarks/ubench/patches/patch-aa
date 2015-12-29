@@ -1,4 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/09/03 05:57:45 xtraeme Exp $
+$NetBSD: patch-aa,v 1.2 2015/12/29 19:49:17 dholland Exp $
+
+ - configure for pkgsrc
+ - install the man page and readme
 
 --- Makefile.orig	2005-09-03 07:50:21.000000000 +0200
 +++ Makefile	2005-09-03 07:51:42.000000000 +0200
@@ -7,23 +10,25 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/09/03 05:57:45 xtraeme Exp $
  
  #DEFINES=-DDEBUG
 -INSTALLDIR= /usr/local/bin
-+INSTALLDIR=/usr/local/bin
++INSTALLDIR=$(DESTDIR)$(PREFIX)/bin
  
 -CC = gcc
 -CFLAGS = -O2 -m486 -Wall -malign-loops=2 -malign-jumps=2 -malign-functions=2 -fomit-frame-pointer
 -LDFLAGS = -s -lm
 +#CC = gcc
-+#CFLAGS = -O2 -m486 -Wall -malign-loops=2 -malign-jumps=2 -malign-functions=2 -fomit-frame-pointer
++CFLAGS += -Wall
 +LDFLAGS += -s -lm
  INCLUDES = -I.
  
  objects = signals.o cpubench.o membench.o ubench.o
-@@ -29,7 +29,7 @@
+@@ -29,7 +29,9 @@
  default: ubench
  
  install: ubench
 -	install -c -m 0555 ubench $(INSTALLDIR)
 +	$(BSD_INSTALL_PROGRAM) ubench $(INSTALLDIR)
++	${BSD_INSTALL_MAN} ubench.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
++	${BSD_INSTALL_DATA} README ${DESTDIR}${PREFIX}/share/doc/ubench
  
  utime:	$(utimeobjects)
  	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $^
