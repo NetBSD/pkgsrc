@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.64 2013/04/08 11:17:09 rodent Exp $
+# $NetBSD: Makefile.common,v 1.65 2015/12/29 04:54:37 dholland Exp $
 #
 # used by chat/xchat/Makefile
 # used by chat/xchat-perl/Makefile
@@ -22,7 +22,7 @@ USE_TOOLS+=	gmake pkg-config
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Darwin"
-CONFIGURE_ARGS+=        --disable-mmx
+CONFIGURE_ARGS+=	--disable-mmx
 .endif
 
 .include "../../devel/glib2/buildlink3.mk"
