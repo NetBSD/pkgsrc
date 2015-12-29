@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.6 2015/08/10 08:23:49 dholland Exp $
+$NetBSD: patch-aa,v 1.7 2015/12/29 23:21:11 wiz Exp $
 
---- Makefile.PL.orig	2010-03-03 21:26:10.000000000 +0000
+--- Makefile.PL.orig	2014-06-01 19:12:16.000000000 +0000
 +++ Makefile.PL
 @@ -2,9 +2,6 @@
  use ExtUtils::MakeMaker;
@@ -12,9 +12,9 @@ $NetBSD: patch-aa,v 1.6 2015/08/10 08:23:49 dholland Exp $
  # Uncomment and change this line if I fail to find it
  # $paridir = "..";
  
-@@ -16,137 +13,16 @@ unless (-t STDOUT) {		# Better reports i
-     select $odef;
- }
+@@ -18,137 +15,16 @@ unless (-t STDOUT) {		# Better reports i
+ 
+ chmod 0400, 'typemap' if $^O =~ /cygwin/ and -f 'typemap' and not -r 'typemap';	# bug in some installations of cygwin???
  
 -my $ok23 = 0;
 -grep {/^machine=(.*)$/i		 and $common::machine = $1}  @ARGV;
@@ -26,7 +26,7 @@ $NetBSD: patch-aa,v 1.6 2015/08/10 08:23:49 dholland Exp $
 -grep {/^version23_ok=(.*)$/i	 and $ok23 = $1}  @ARGV;
 -
 -# The REx should anchored-match versions to skip
--$common::skip_versions = $ok23 ? '(?!)' : '2\.(?:[3-9]|\d\d+)\.';
+-$common::skip_versions = $ok23 ? '2\.(?:[4-9]|\d\d+)\.' : '2\.(?:[3-9]|\d\d+)\.';
 -
 -@ARGV = grep !/^((machine|paridir|pari_tgz|parilib|version23_ok)=.*|configure|force_download)$/i, @ARGV;
 -
@@ -51,7 +51,7 @@ $NetBSD: patch-aa,v 1.6 2015/08/10 08:23:49 dholland Exp $
 -EOP
 -
 -if ($common::parilib) {
--  $pari_version = '2001004';	# XXXX How to get a correct one?
+-  $pari_version = '2001007';	# XXXX How to get a correct one?
 -  $define = '-DNO_HIGHLEVEL_PARI';
 -  print <<EOP;
 -Trying to use existing PARI library (at $common::parilib)
@@ -97,7 +97,14 @@ $NetBSD: patch-aa,v 1.6 2015/08/10 08:23:49 dholland Exp $
 -}
 -
 -$os = $Config{osname};
--
++my $pariprefix;
++my $addlibs;
++my $libpari = "pari";
++
++grep {/^pariprefix=(.*)$/i      and $pariprefix = $1}  @ARGV;
++grep {/^addlibs=(.*)$/i                 and $addlibs = $1}  @ARGV;
++grep {/^libpari=(.*)$/i                 and $libpari = $1}  @ARGV;
+ 
 -$define .= " -DPARI_VERSION_EXP=$pari_version -DDEBUG_PARI";
 -$define .= " -DUSE_SLOW_ARRAY_ACCESS -DUSE_SLOW_NARGS_ACCESS" if $] >= 5.009;
 -$libs = "-lm";
@@ -124,14 +131,7 @@ $NetBSD: patch-aa,v 1.6 2015/08/10 08:23:49 dholland Exp $
 -} elsif ($os eq 'linux') {
 -  $noexp2 = 1;
 -}
-+my $pariprefix;
-+my $addlibs;
-+my $libpari = "pari";
-+ 
-+grep {/^pariprefix=(.*)$/i	 and $pariprefix = $1}  @ARGV;
-+grep {/^addlibs=(.*)$/i		 and $addlibs = $1}  @ARGV;
-+grep {/^libpari=(.*)$/i		 and $libpari = $1}  @ARGV;
- 
+-
 -my %opts;
 -unless ($common::parilib) {
 -  build_tests $paridir;		# Convert the test suite
@@ -159,7 +159,7 @@ $NetBSD: patch-aa,v 1.6 2015/08/10 08:23:49 dholland Exp $
  
  # We want to find the offset of the least significant byte
  # of SV.flags inside an SV.
-@@ -164,67 +40,40 @@ my $perl_int_size = $Config{'ivsize'} ||
+@@ -166,74 +42,36 @@ my $perl_int_size = $Config{'ivsize'} ||
  $define .= ' -DLONG_SHORTER_THAN_IV' if $perl_int_size > $longsize;
  
  $define .= ' -Derr=pari_err'; # On linux it can get a wrong dynamic loading
@@ -172,10 +172,10 @@ $NetBSD: patch-aa,v 1.6 2015/08/10 08:23:49 dholland Exp $
 -# XXXX because functions_hash = NULL???
 -# $define .= ' -DNO_HIGHLEVEL_PARI' if $pari_version >= 2003000;
 -$define .= ' -DNO_GRAPHICS_PARI' if $pari_version >= 2003000;
--
+ 
 -# This is done in Makefile in GP/PARI, and in paricfg.h without do_configure
 -$define .= ' -DDL_DFLT_NAME=NULL' if $common::do_configure;
- 
+-
 -my $extra_inc = extra_includes($paridir);
 +$define .= " -DNO_HIGHLEVEL_PARI";
  
@@ -199,12 +199,15 @@ $NetBSD: patch-aa,v 1.6 2015/08/10 08:23:49 dholland Exp $
 -	       macro	     => { %patchrc,
 -				  PARI_DIR	  => $paridir,
 -				},
-+#	       clean	     => { FILES => 'pari.ps test_eng/ex.t- libPARI.dumb.pod libPARI.pod t/55_*.t ftp-cmd' },
-+#	       macro	     => { %patchrc,
-+#				  PARI_DIR	  => $paridir,
-+#				},
  	      );
  
+-if (not $common::patches_run or @common::patches_fail) {
+-  my @patches_needed = patches_for($pari_version);
+-  my $msg = $common::patches_run ? "failed when applied" : "were not applied";
+-  push @common::patches_fail, @patches_needed unless $common::patches_run;
+-  warn "\nThe following patches were judged to be beneficial, but $msg:\n\t@common::patches_fail\n";
+-}
+-
 -
 -# Remake POD if the source changed.
 -# Go to a subdirectory to build the headers and the library.
@@ -238,15 +241,15 @@ $NetBSD: patch-aa,v 1.6 2015/08/10 08:23:49 dholland Exp $
 +    open( $fh, "<", "${pariprefix}/include/pari/paricfg.h" ) or die $!;
 +    while( my $line = <$fh> )
 +    {
-+	next unless ( $line =~ m/^#define\s+PARIVERSION.*(\d+)\.(\d+)\.(\d+)/ );
-+	$formatted_version = sprintf( "%d%03d%03d", $1, $2, $3 );
++       next unless ( $line =~ m/^#define\s+PARIVERSION.*(\d+)\.(\d+)\.(\d+)/ );
++       $formatted_version = sprintf( "%d%03d%03d", $1, $2, $3 );
 +    }
 +    close($fh);
 +    return $formatted_version;
  }
  
  # Rewrite pic option to PIC in CCCDLFLAGS,
-@@ -234,7 +83,8 @@ sub MY::const_config
+@@ -243,7 +81,8 @@ sub MY::const_config
   my $self = shift;
   my $flags = $self->{'CCCDLFLAGS'}; # Tmp var needed with Perl4 !
   $flags =~ s/(-[fK]?\s*)pic\b/${1}PIC/; 

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.47 2015/06/12 10:50:29 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2015/12/29 23:21:11 wiz Exp $
 
-DISTNAME=	Math-Pari-2.01080605
-PKGNAME=	p5-${DISTNAME:S/01080605/010806.05/}
-PKGREVISION=	4
+DISTNAME=	Math-Pari-2.010808
+PKGNAME=	p5-${DISTNAME}
 CATEGORIES+=	perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Math/}
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Math-Pari/
