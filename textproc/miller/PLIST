@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1 2015/08/28 09:27:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/12/29 23:43:18 wiz Exp $
 bin/mlr
+man/man1/mlr.1
