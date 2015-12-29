@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5178 2015/12/29 23:31:10 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.5179 2015/12/29 23:35:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8499,3 +8499,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated math/p5-Math-Pari to 2.010808 [wiz 2015-12-29]
 	Updated fonts/Hack-ttf to 2.018 [wiz 2015-12-29]
 	Updated print/cups-filters to 1.5.0 [wiz 2015-12-29]
+	Updated www/libmicrohttpd to 0.9.48 [wiz 2015-12-29]
