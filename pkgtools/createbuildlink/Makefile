@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.53 2014/10/09 14:06:49 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2015/12/29 21:21:20 wiz Exp $
 
-PKGNAME=	createbuildlink-3.16
+PKGNAME=	createbuildlink-3.17
 CATEGORIES=	pkgtools sysutils
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
