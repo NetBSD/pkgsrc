@@ -1,4 +1,6 @@
-$NetBSD: patch-ai,v 1.1 2008/09/05 05:27:31 dholland Exp $
+$NetBSD: patch-ai,v 1.2 2015/12/29 23:34:44 dholland Exp $
+
+Add NetBSD to list of cases.
 
 --- lib/posix/posix.h~	2005-05-06 04:48:49.000000000 -0400
 +++ lib/posix/posix.h	2008-09-05 00:02:39.000000000 -0400

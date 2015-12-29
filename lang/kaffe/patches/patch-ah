@@ -1,4 +1,7 @@
-$NetBSD: patch-ah,v 1.7 2009/12/22 12:44:59 joerg Exp $
+$NetBSD: patch-ah,v 1.8 2015/12/29 23:34:49 dholland Exp $
+
+Be consistent and always link rt.jar. It seems like the creation was
+timing dependent. Fixes PR 42458.
 
 --- libraries/javalib/Makefile.in.orig	2009-12-22 11:10:05.000000000 +0000
 +++ libraries/javalib/Makefile.in

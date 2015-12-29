@@ -1,4 +1,6 @@
-$NetBSD: patch-native_jni_gtk-peer_gnu__java__awt__peer__gtk__GdkFontPeer.c,v 1.1 2014/04/19 15:00:37 joerg Exp $
+$NetBSD: patch-native_jni_gtk-peer_gnu__java__awt__peer__gtk__GdkFontPeer.c,v 1.2 2015/12/29 23:34:45 dholland Exp $
+
+Include freetype headers according to the directions on the tin.
 
 --- native/jni/gtk-peer/gnu_java_awt_peer_gtk_GdkFontPeer.c.orig	2014-04-19 12:54:37.000000000 +0000
 +++ native/jni/gtk-peer/gnu_java_awt_peer_gtk_GdkFontPeer.c

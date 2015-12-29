@@ -1,4 +1,6 @@
-$NetBSD: patch-src_racket_configure.ac,v 1.1 2015/12/18 01:10:14 asau Exp $
+$NetBSD: patch-src_racket_configure.ac,v 1.2 2015/12/29 23:34:54 dholland Exp $
+
+Remove bashisms.
 
 --- src/racket/configure.ac.orig	2015-10-20 15:10:35.000000000 +0000
 +++ src/racket/configure.ac

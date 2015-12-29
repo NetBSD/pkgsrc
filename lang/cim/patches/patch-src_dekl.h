@@ -1,4 +1,7 @@
-$NetBSD: patch-src_dekl.h,v 1.1 2012/10/26 20:37:15 joerg Exp $
+$NetBSD: patch-src_dekl.h,v 1.2 2015/12/29 23:34:44 dholland Exp $
+
+Avoid implicit int.
+Use C89.
 
 --- src/dekl.h.orig	2012-10-26 12:56:08.000000000 +0000
 +++ src/dekl.h

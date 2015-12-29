@@ -1,4 +1,7 @@
-$NetBSD: patch-except.c,v 1.1 2012/11/19 02:54:42 joerg Exp $
+$NetBSD: patch-except.c,v 1.2 2015/12/29 23:34:57 dholland Exp $
+
+Use NORETURN.
+Don't declare standard functions.
 
 --- except.c.orig	2012-11-19 01:59:57.000000000 +0000
 +++ except.c

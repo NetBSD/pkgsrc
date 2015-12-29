@@ -1,4 +1,6 @@
-$NetBSD: patch-byterun_caml_mlvalues.h,v 1.1 2015/09/08 18:54:41 joerg Exp $
+$NetBSD: patch-byterun_caml_mlvalues.h,v 1.2 2015/12/29 23:34:52 dholland Exp $
+
+Avoid undefined behavior.
 
 --- byterun/caml/mlvalues.h.orig	2015-09-03 12:17:44.000000000 +0000
 +++ byterun/caml/mlvalues.h
