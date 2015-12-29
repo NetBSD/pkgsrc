@@ -1,4 +1,4 @@
-#y$NetBSD: Makefile,v 1.4 2015/12/05 21:25:54 adam Exp $
+# $NetBSD: Makefile,v 1.5 2015/12/29 04:04:30 dholland Exp $
 
 DISTNAME=	netifaces-0.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
