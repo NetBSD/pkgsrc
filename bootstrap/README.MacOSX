@@ -1,4 +1,4 @@
-$NetBSD: README.MacOSX,v 1.27 2015/11/28 23:24:54 sevan Exp $
+$NetBSD: README.MacOSX,v 1.28 2015/12/29 19:14:35 dholland Exp $
 
 This file describes the use of current versions of pkgsrc with
 multiple versions of Darwin and OS X, omitting information about previous pkgsrc
@@ -19,6 +19,13 @@ The only known project is:
   http://www.puredarwin.org/
 
 Until then, this file remains OS X-centric.
+
+* OS X specific bootstrap arguments
+
+Providing the --binary-macpkg flag to the bootstrap script causes it
+to prepare a bootstrap kit as a native OS X package instead of using
+the conventional .tar.bz2 format.  This requires the package-maker
+application to be installed.
 
 * system tools issues
 
