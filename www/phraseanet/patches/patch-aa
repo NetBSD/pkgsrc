@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 2015/12/29 03:23:31 dholland Exp $
+
 --- ./www/login/index.php.orig	2011-09-11 07:16:52.000000000 +0200
 +++ ./www/login/index.php	2011-09-11 07:18:12.000000000 +0200
 @@ -114,8 +114,13 @@
