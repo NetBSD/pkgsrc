@@ -1,4 +1,6 @@
-$NetBSD: patch-ref.c,v 1.1 2009/10/03 10:14:18 ahoka Exp $
+$NetBSD: patch-ref.c,v 1.2 2015/12/29 04:22:33 dholland Exp $
+
+Fix symbol name conflict with posix getline().
 
 --- ref.c.orig	2003-10-21 04:32:25.000000000 +0200
 +++ ref.c
