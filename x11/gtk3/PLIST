@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2015/06/14 22:02:08 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.16 2015/12/29 06:06:30 dholland Exp $
 bin/gtk-encode-symbolic-svg
 bin/gtk-launch
 bin/gtk-query-immodules-3.0
@@ -467,7 +467,7 @@ share/gtk-doc/html/gdk3/api-index-3-0.html
 share/gtk-doc/html/gdk3/api-index-3-10.html
 share/gtk-doc/html/gdk3/api-index-3-12.html
 share/gtk-doc/html/gdk3/api-index-3-14.html
-share/gtk-doc/html/gtk3/api-index-3-16.html
+share/gtk-doc/html/gdk3/api-index-3-16.html
 share/gtk-doc/html/gdk3/api-index-3-2.html
 share/gtk-doc/html/gdk3/api-index-3-4.html
 share/gtk-doc/html/gdk3/api-index-3-6.html
@@ -832,7 +832,7 @@ share/gtk-doc/html/gtk3/api-index-3-0.html
 share/gtk-doc/html/gtk3/api-index-3-10.html
 share/gtk-doc/html/gtk3/api-index-3-12.html
 share/gtk-doc/html/gtk3/api-index-3-14.html
-share/gtk-doc/html/gdk3/api-index-3-16.html
+share/gtk-doc/html/gtk3/api-index-3-16.html
 share/gtk-doc/html/gtk3/api-index-3-2.html
 share/gtk-doc/html/gtk3/api-index-3-4.html
 share/gtk-doc/html/gtk3/api-index-3-6.html
