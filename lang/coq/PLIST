@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2015/04/25 13:41:18 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.17 2015/12/29 06:22:21 dholland Exp $
 bin/coq-tex
 bin/coq_makefile
 bin/coqc
@@ -683,8 +683,8 @@ lib/coq/theories/NArith/Ndiv_def.vo
 lib/coq/theories/NArith/Ngcd_def.vo
 lib/coq/theories/NArith/Nnat.vo
 lib/coq/theories/NArith/Nsqrt_def.vo
-lib/coq/theories/Numbers/BinNums.vo
 lib/coq/theories/Numbers/BigNumPrelude.vo
+lib/coq/theories/Numbers/BinNums.vo
 lib/coq/theories/Numbers/Cyclic/Abstract/CyclicAxioms.vo
 lib/coq/theories/Numbers/Cyclic/Abstract/NZCyclic.vo
 lib/coq/theories/Numbers/Cyclic/DoubleCyclic/DoubleAdd.vo
@@ -710,8 +710,8 @@ lib/coq/theories/Numbers/Integer/Abstract/ZDivEucl.vo
 lib/coq/theories/Numbers/Integer/Abstract/ZDivFloor.vo
 lib/coq/theories/Numbers/Integer/Abstract/ZDivTrunc.vo
 lib/coq/theories/Numbers/Integer/Abstract/ZGcd.vo
-lib/coq/theories/Numbers/Integer/Abstract/ZLt.vo
 lib/coq/theories/Numbers/Integer/Abstract/ZLcm.vo
+lib/coq/theories/Numbers/Integer/Abstract/ZLt.vo
 lib/coq/theories/Numbers/Integer/Abstract/ZMaxMin.vo
 lib/coq/theories/Numbers/Integer/Abstract/ZMul.vo
 lib/coq/theories/Numbers/Integer/Abstract/ZMulOrder.vo
@@ -811,8 +811,8 @@ lib/coq/theories/Reals/DiscrR.vo
 lib/coq/theories/Reals/Exp_prop.vo
 lib/coq/theories/Reals/Integration.vo
 lib/coq/theories/Reals/LegacyRfield.vo
-lib/coq/theories/Reals/Machin.vo
 lib/coq/theories/Reals/MVT.vo
+lib/coq/theories/Reals/Machin.vo
 lib/coq/theories/Reals/NewtonInt.vo
 lib/coq/theories/Reals/PSeries_reg.vo
 lib/coq/theories/Reals/PartSum.vo
