@@ -1,4 +1,6 @@
-$NetBSD: patch-ah,v 1.1.1.1 2002/05/04 00:45:35 jtb Exp $
+$NetBSD: patch-ah,v 1.2 2015/12/29 18:17:04 dholland Exp $
+
+Don't hardwire own paths.
 
 --- Library/System/unix.sa.orig	Wed Oct 13 13:34:47 1999
 +++ Library/System/unix.sa

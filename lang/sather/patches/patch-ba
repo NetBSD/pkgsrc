@@ -1,4 +1,6 @@
-$NetBSD: patch-ba,v 1.1 2006/01/12 00:05:04 joerg Exp $
+$NetBSD: patch-ba,v 1.2 2015/12/29 18:17:04 dholland Exp $
+
+Handle Dragonfly like FreeBSD.
 
 --- System/Common/runtime.h.orig	2006-01-11 22:04:54.000000000 +0000
 +++ System/Common/runtime.h

@@ -1,4 +1,6 @@
-$NetBSD: patch-aj,v 1.4 2014/06/28 23:10:39 dholland Exp $
+$NetBSD: patch-aj,v 1.5 2015/12/29 18:17:04 dholland Exp $
+
+Use pkgsrc tcl.
 
 --- System/Platforms/tcltk/Make.target.inc.orig	Thu May  2 17:21:52 2002
 +++ System/Platforms/tcltk/Make.target.inc	Thu May  2 17:21:35 2002

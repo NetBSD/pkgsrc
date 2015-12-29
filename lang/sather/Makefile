@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2015/06/12 10:50:16 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2015/12/29 18:17:04 dholland Exp $
 
 DISTNAME=		sather-1.2.3
 PKGREVISION=		11
@@ -22,7 +22,7 @@ INFO_FILES=		yes
 REPLACE_PERL=		Browser/Web/ps2gif
 
 SUBST_CLASSES+=		sather-configure
-SUBST_STAGE.sather-configure=	post-wrapper
+SUBST_STAGE.sather-configure=	pre-configure
 SUBST_MESSAGE.sather-configure=	Configuring sources
 SUBST_FILES.sather-configure=			\
 	Boot/sacomp.code/Makefile		\
@@ -39,33 +39,32 @@ SUBST_FILES.sather-configure=			\
 	Browser/Web/gen_mml_sa_files		\
 	Browser/Web/gen_mml_shortflat		\
 	Browser/Web/graph2dot
-SUBST_SED.sather-configure= 	-e 's:@CC@:${CC}:g'
-SUBST_SED.sather-configure+=	-e 's:@CFLAGS@:${CFLAGS}:g'
-SUBST_SED.sather-configure+=	-e 's:@GMAKE@:${GMAKE}:g'
-SUBST_SED.sather-configure+=	-e 's:@PREFIX@:${PREFIX}:g'
-SUBST_SED.sather-configure+=	-e 's:@X11BASE@:${X11BASE}:g'
-SUBST_SED.sather-configure+=	-e 's:@GC_PREFIX@:${BUILDLINK_PREFIX.boehm-gc}:g'
-SUBST_SED.sather-configure+=	-e 's:@TCL_PREFIX@:${BUILDLINK_PREFIX.tcl}:g'
-SUBST_SED.sather-configure+=	-e 's:@TK_PREFIX@:${BUILDLINK_PREFIX.tk}:g'
-SUBST_SED.sather-configure+=	-e 's:@LINKER_RPATH_FLAG@:${LINKER_RPATH_FLAG}:g'
-SUBST_SED.sather-configure+=	-e 's:@COMPILER_RPATH_FLAG@:${COMPILER_RPATH_FLAG}:g'
+SUBST_SED.sather-configure=	-e s:@CC@:${CC:Q}:g
+SUBST_SED.sather-configure+=	-e s:@CFLAGS@:${CFLAGS:Q}:g
+SUBST_SED.sather-configure+=	-e s:@GMAKE@:${GMAKE:Q}:g
+SUBST_SED.sather-configure+=	-e s:@PREFIX@:${PREFIX}:g
+SUBST_SED.sather-configure+=	-e s:@X11BASE@:${X11BASE}:g
+SUBST_SED.sather-configure+=	-e s:@GC_PREFIX@:${BUILDLINK_PREFIX.boehm-gc}:g
+SUBST_SED.sather-configure+=	-e s:@TCL_PREFIX@:${BUILDLINK_PREFIX.tcl}:g
+SUBST_SED.sather-configure+=	-e s:@TK_PREFIX@:${BUILDLINK_PREFIX.tk}:g
+SUBST_SED.sather-configure+=	-e s:@LINKER_RPATH_FLAG@:${LINKER_RPATH_FLAG}:g
+SUBST_SED.sather-configure+=	-e s:@COMPILER_RPATH_FLAG@:${COMPILER_RPATH_FLAG}:g
 
-INSTALLATION_DIRS=	bin ${PKGINFODIR} ${PKGMANDIR}/man1 lib/sather \
-			share/doc/sather share/emacs/site-lisp
+INSTALLATION_DIRS=	bin ${PKGINFODIR} ${PKGMANDIR}/man1 share/doc/sather \
+			lib/sather lib/sather/Bin share/emacs/site-lisp
 
 post-patch:
 	ln -s netbsd ${WRKSRC}/System/Platforms/dragonfly
 	ln -s netbsd ${WRKSRC}/System/Platforms/darwin
 
 post-build:
-	cd ${WRKSRC}/Emacs;						\
-		makeinfo sather.texinfo; 				\
-		makeinfo sather-tutorial.texinfo; 			\
+	cd ${WRKSRC}/Emacs &&						\
+		makeinfo sather.texinfo && 				\
+		makeinfo sather-tutorial.texinfo && 			\
 		makeinfo sather-mode.texinfo
 	${RM} -fr ${WRKSRC}/System/Platforms/dualgui/dual_gui_server.code
 
 do-install:
-	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/lib/sather/Bin
 	${INSTALL_PROGRAM} ${WRKSRC}/Bin/sacomp ${WRKSRC}/Bin/sabrowse	\
 		${DESTDIR}${PREFIX}/lib/sather/Bin
 	${INSTALL_SCRIPT} ${WRKSRC}/Bin/PP ${WRKSRC}/Bin/gen_html	\
@@ -86,7 +85,7 @@ do-install:
 	${FIND} ${DESTDIR}${PREFIX}/lib/sather				\
 		-name \*.config -o -name Makefile 			\
 		-o -name \*.orig -print | ${XARGS} ${RM} -f
-	cd ${WRKSRC}/Emacs; for f in *.info *.info-[0-9]*; do		\
+	set -e; cd ${WRKSRC}/Emacs; for f in *.info *.info-[0-9]*; do	\
 		${TEST} ! -f "$$f" ||					\
 		${INSTALL_DATA} "$$f" ${DESTDIR}${PREFIX}/${PKGINFODIR};\
 	done

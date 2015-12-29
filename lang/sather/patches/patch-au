@@ -1,4 +1,6 @@
-$NetBSD: patch-au,v 1.1.1.1 2002/05/04 00:45:37 jtb Exp $
+$NetBSD: patch-au,v 1.2 2015/12/29 18:17:04 dholland Exp $
+
+Create an entry in the info index.
 
 --- Emacs/sather.texinfo.orig	Sun Jul 25 17:23:34 1999
 +++ Emacs/sather.texinfo	Thu May  2 22:01:13 2002
