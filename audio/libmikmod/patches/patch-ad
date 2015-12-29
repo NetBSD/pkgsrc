@@ -1,4 +1,6 @@
-$NetBSD: patch-ad,v 1.8 2012/06/03 21:44:59 wiz Exp $
+$NetBSD: patch-ad,v 1.9 2015/12/29 19:35:39 dholland Exp $
+
+Update default audio device path.
 
 --- drivers/drv_sun.c.orig	2012-03-14 17:02:59.000000000 +0000
 +++ drivers/drv_sun.c
