@@ -1,4 +1,7 @@
-$NetBSD: patch-ae,v 1.4 2013/08/30 22:36:51 joerg Exp $
+$NetBSD: patch-ae,v 1.5 2015/12/29 18:17:04 dholland Exp $
+
+Configure for pkgsrc.
+Use tradcpp for cpping.
 
 --- Makefile.orig	Thu Nov  4 08:04:28 1999
 +++ Makefile	Thu May  2 17:09:46 2002
