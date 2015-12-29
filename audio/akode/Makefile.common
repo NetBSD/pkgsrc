@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2013/01/27 00:13:29 wiz Exp $
+# $NetBSD: Makefile.common,v 1.5 2015/12/29 04:54:35 dholland Exp $
 #
 # used by audio/akode/Makefile
 # used by audio/akode-plugins-alsa/Makefile
@@ -28,15 +28,15 @@ USE_TOOLS+=		gmake pkg-config
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 
-CONFIGURE_ARGS+=        --without-flac
-CONFIGURE_ARGS+=        --without-speex
-CONFIGURE_ARGS+=        --without-libmad
-CONFIGURE_ARGS+=        --without-libsamplerate
-CONFIGURE_ARGS+=        --without-jack
-CONFIGURE_ARGS+=        --without-polypaudio
-CONFIGURE_ARGS+=        --without-ffmpeg
-CONFIGURE_ARGS+=        --without-oss
-CONFIGURE_ARGS+=        --without-sun
-CONFIGURE_ARGS+=        --without-alsa
-CONFIGURE_ARGS+=        --without-vorbis
+CONFIGURE_ARGS+=	--without-flac
+CONFIGURE_ARGS+=	--without-speex
+CONFIGURE_ARGS+=	--without-libmad
+CONFIGURE_ARGS+=	--without-libsamplerate
+CONFIGURE_ARGS+=	--without-jack
+CONFIGURE_ARGS+=	--without-polypaudio
+CONFIGURE_ARGS+=	--without-ffmpeg
+CONFIGURE_ARGS+=	--without-oss
+CONFIGURE_ARGS+=	--without-sun
+CONFIGURE_ARGS+=	--without-alsa
+CONFIGURE_ARGS+=	--without-vorbis
 CONFIGURE_ARGS+=	--without-mpc
