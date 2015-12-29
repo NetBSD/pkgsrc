@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.7 2014/10/09 21:42:03 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.8 2015/12/29 06:20:30 dholland Exp $
 bin/camlp5
 bin/camlp5o
 bin/camlp5r
 bin/camlp5sch
 bin/mkcamlp5
 bin/ocpp5
-bin/mkcamlp5
 lib/ocaml/camlp5/camlp5.cma
 lib/ocaml/camlp5/camlp5_top.cma
 lib/ocaml/camlp5/camlp5o.cma
@@ -61,24 +60,21 @@ lib/ocaml/camlp5/pa_mkast.cmo
 lib/ocaml/camlp5/pa_mkast.o
 lib/ocaml/camlp5/pa_mktest.cmo
 lib/ocaml/camlp5/pa_mktest.o
-lib/ocaml/camlp5/pa_reloc.cmo
-lib/ocaml/camlp5/pa_reloc.o
-lib/ocaml/camlp5/reloc.cmi
-lib/ocaml/camlp5/reloc.mli
-lib/ocaml/camlp5/versdep.cmi
 lib/ocaml/camlp5/pa_o.cmo
 lib/ocaml/camlp5/pa_o.o
+lib/ocaml/camlp5/pa_o_fast.o
 lib/ocaml/camlp5/pa_oop.cmo
 lib/ocaml/camlp5/pa_oop.o
 lib/ocaml/camlp5/pa_op.cmo
 lib/ocaml/camlp5/pa_op.o
-lib/ocaml/camlp5/pa_o_fast.o
 lib/ocaml/camlp5/pa_pprintf.cmo
 lib/ocaml/camlp5/pa_pprintf.o
 lib/ocaml/camlp5/pa_pragma.cmo
 lib/ocaml/camlp5/pa_pragma.o
 lib/ocaml/camlp5/pa_r.cmo
 lib/ocaml/camlp5/pa_r.o
+lib/ocaml/camlp5/pa_reloc.cmo
+lib/ocaml/camlp5/pa_reloc.o
 lib/ocaml/camlp5/pa_rp.cmo
 lib/ocaml/camlp5/pa_rp.o
 lib/ocaml/camlp5/pa_scheme.cmo
@@ -133,10 +129,13 @@ lib/ocaml/camlp5/q_phony.cmo
 lib/ocaml/camlp5/q_phony.o
 lib/ocaml/camlp5/quotation.cmi
 lib/ocaml/camlp5/quotation.mli
+lib/ocaml/camlp5/reloc.cmi
+lib/ocaml/camlp5/reloc.mli
 lib/ocaml/camlp5/stdpp.cmi
 lib/ocaml/camlp5/stdpp.mli
 lib/ocaml/camlp5/token.cmi
 lib/ocaml/camlp5/token.mli
+lib/ocaml/camlp5/versdep.cmi
 lib/ocaml/site-lib/camlp5/META
 man/man1/camlp5.1
 man/man1/camlp5o.1
