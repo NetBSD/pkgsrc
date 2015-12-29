@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.19 2015/11/04 00:35:16 agc Exp $
+$NetBSD: distinfo,v 1.20 2015/12/29 05:57:02 dholland Exp $
 
 SHA1 (nocol-4.3.1.tar.gz) = a8cb88727bc3a3ddd544792407d431b3ef13a325
 RMD160 (nocol-4.3.1.tar.gz) = 77a57ae447f0a8f1ce2417d9b828710f21865cc8
@@ -23,7 +23,6 @@ SHA1 (patch-ar) = 758be995183713f7d390f6642a7d66ab147cefe0
 SHA1 (patch-as) = 7a49170bbeb04812ad83c294777d9d364e60823f
 SHA1 (patch-at) = c49b96d1c2158d0a8f67228922f0e4bff5df2908
 SHA1 (patch-au) = a8bbcb0eef41ac514bb1106c5feedb5bc087aac7
-SHA1 (patch-cmu-snmp_snmp_new-parse.c) = da39a3ee5e6b4b0d3255bfef95601890afd80709
 SHA1 (patch-etherload_bpf_c) = 2d11b411693b8bca39954da47bc2fc9afb1fc273
 SHA1 (patch-etherload_get__devlist_c) = dc03458a5ba5d825371dafced876de4c80228fb3
 SHA1 (patch-etherload_main_c) = 0ee5cffa70b42be6eca2e5de90b5583a7d684d50
