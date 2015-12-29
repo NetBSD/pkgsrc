@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.71 2015/03/12 15:23:39 tnn Exp $
+# $NetBSD: Makefile,v 1.72 2015/12/29 00:05:54 dholland Exp $
 
 DISTNAME=	hylafax-6.0.6
+PKGREVISION=	1
 CATEGORIES=	comms
 MASTER_SITES=	ftp://ftp.hylafax.org/source/
 
@@ -32,7 +33,7 @@ MANCOMPRESSED=		yes
 
 FAXUSER?=	uucp
 FAXGROUP?=	dialer
-RCD_SCRIPTS=	hylafax
+RCD_SCRIPTS=	hfaxd faxq
 
 EGDIR=		share/examples/hylafax
 
