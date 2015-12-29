@@ -1,28 +1,8 @@
-$NetBSD: patch-ag,v 1.7 2013/01/12 03:27:21 dholland Exp $
+$NetBSD: patch-ag,v 1.8 2015/12/29 12:42:57 bsiegert Exp $
 
---- Configure.orig	2010-07-29 15:59:32.000000000 +0000
+--- Configure.orig	2014-10-13 22:31:13.000000000 +0000
 +++ Configure
-@@ -105,6 +105,7 @@ LSOF_VF=version
- #	$LSOF_LOCALSUFFIX   local suffix for Makefile
- #	$LSOF_NBSD_BUFQH    NetBSD <sys/bufq.h> copy status
- #	$LSOF_NBSD_PTYFS    NetBSD ${NETBSD_SYS}/sys/fs/ptyfs/ copy status
-+#	$LSOF_NBSD_TMPFS    NetBSD ${NETBSD_SYS}/sys/fs/tmpfs/ copy status
- #	$LSOF_N_UNIXV	    *BSD system's kernel file
- #	$LSOF_PL	    patch level
- #	$LSOF_RANLIB	    randomizing command for the lsof library
-@@ -2782,6 +2783,11 @@ return(0); }
-       # Validate the NetBSD version.
- 
-       case $LSOF_VSTR in	# {
-+      0*|1.[01]*)
-+	LSOF_VERS="1006000"
-+	echo "!!!WARNING!!!  Unsupported NetBSD version: $LSOF_VSTR"
-+	echo "!!!WARNING!!!  Configuring for NetBSD 1.2"
-+	;;
-       1.2*)
- 	LSOF_VERS="1002000"
- 	;;
-@@ -2838,10 +2844,44 @@ return(0); }
+@@ -2966,32 +2966,62 @@ return(0); }
  	echo "!!!WARNING!!!  Unsupported NetBSD version: $LSOF_VSTR"
  	echo "!!!WARNING!!!  Configuring for NetBSD 3.0"
  	;;
@@ -52,7 +32,7 @@ $NetBSD: patch-ag,v 1.7 2013/01/12 03:27:21 dholland Exp $
 +	echo "!!!WARNING!!!  Unsupported NetBSD version: $LSOF_VSTR"
 +	echo "!!!WARNING!!!  Configuring for NetBSD 5.0"
 +	;;
-+      6.0*)
++      6.[01]*)
 +	LSOF_TSTBIGF=" "
 +	LSOF_VERS="6000000"
 +	;;
@@ -60,41 +40,50 @@ $NetBSD: patch-ag,v 1.7 2013/01/12 03:27:21 dholland Exp $
 +	LSOF_TSTBIGF=" "
 +	LSOF_VERS="6099000"
 +	;;
++      7.[01]*)
++	LSOF_TSTBIGF=" "
++	LSOF_VERS="7000000"
++	;;
++      7.99.*)
++	LSOF_TSTBIGF=" "
++	LSOF_VERS="7099000"
++	;;
        *)
-+	LSOF_VERS="5000000"
  	echo "Unknown NetBSD release: $LSOF_VSTR"
 -	echo Assuming NetBSD 1.6
 -	LSOF_VERS="1006000"
-+	echo "!!!WARNING!!!  Configuring for NetBSD 5.0"
++	echo Assuming NetBSD 7.0
++	LSOF_VERS="7000000"
  	;;
        esac	# }
      fi	# }
-@@ -2855,6 +2895,12 @@ return(0); }
-       ;;
-     3000000|3099000)
-       ;;
-+    4000000|4099000)
-+      ;;
-+    5000000|5099000)
-+      ;;
-+    6000000|6099000)
-+      ;;
-     *)
-       echo "Unknown NetBSD version: $LSOF_VERS"
-       rm -f $LSOF_HLP
-@@ -2863,7 +2909,10 @@ return(0); }
-     esac	# }
+ 
+-    # Test for legal NetBSD version.
+-
+-    case $LSOF_VERS in	# {
+-    1002000|1003000|1004000|1005000|1006000)
+-      ;;
+-    2000000|2099009|2099010)
+-      ;;
+-    3000000|3099000)
+-      ;;
+-    *)
+-      echo "Unknown NetBSD version: $LSOF_VERS"
+-      rm -f $LSOF_HLP
+-      exit 1
+-      ;;
+-    esac	# }
      LSOF_CFGF="$LSOF_CFGF -DNETBSDV=$LSOF_VERS"
      LSOF_TMP1="-DN_UNIXV=/netbsd"
 -    if test -r ${LSOF_INCLUDE}/util.h	# {
-+    if test -r /dev/ksyms		# {
++    if test -r /dev/ksyms              # {
 +    then
 +      LSOF_TMP1="-DN_UNIXV=/dev/ksyms"
-+    elif test -r ${LSOF_INCLUDE}/util.h	# {
++    elif test -r ${LSOF_INCLUDE}/util.h        # {
      then
        grep -q getbootfile ${LSOF_INCLUDE}/util.h
        if test $? -eq 0	# {
-@@ -3262,6 +3311,7 @@ return(0); }
+@@ -3390,6 +3420,7 @@ return(0); }
      fi	# }
      LSOF_TMP2="sys/vnode.h"
      LSOF_NBSD_PTYFS=0
@@ -102,61 +91,63 @@ $NetBSD: patch-ag,v 1.7 2013/01/12 03:27:21 dholland Exp $
      if test -r ${LSOF_INCLUDE}/$LSOF_TMP2	# {
      then
        LSOF_TMP3="${LSOF_INCLUDE}/$LSOF_TMP2"
-@@ -3339,6 +3389,24 @@ return(0); }
+@@ -3467,7 +3498,25 @@ return(0); }
  	  fi	# }
  	fi	# }
        fi	# }
+-      if test "X$NETBSD_UVM" = "X"	# {
 +      grep -q VT_TMPFS $LSOF_TMP3
 +      if test $? -eq 0   # {
 +      then
-+	LSOF_TMP2="fs/tmpfs/tmpfs.h"
-+	if test -r ${LSOF_INCLUDE}/$LSOF_TMP2	# {
-+	then
-+	  LSOF_CFGF="$LSOF_CFGF -DHASTMPFS"
-+	else
-+	  if test -r ${NETBSD_SYS}/$LSOF_TMP2	# {
-+	  then
-+	    if test $NETBSD_SYS != $LSOF_INCLUDE	# {
-+	    then
-+	      LSOF_CFGF="$LSOF_CFGF -DHASTMPFS"
-+	      LSOF_NBSD_TMPFS=1
-+	    fi	# }
-+	  fi	# }
-+	fi	# }
-+      fi	# }
-       if test "X$NETBSD_UVM" = "X"	# {
++       LSOF_TMP2="fs/tmpfs/tmpfs.h"
++       if test -r ${LSOF_INCLUDE}/$LSOF_TMP2   # {
++       then
++         LSOF_CFGF="$LSOF_CFGF -DHASTMPFS"
++       else
++         if test -r ${NETBSD_SYS}/$LSOF_TMP2   # {
++         then
++           if test $NETBSD_SYS != $LSOF_INCLUDE        # {
++           then
++             LSOF_CFGF="$LSOF_CFGF -DHASTMPFS"
++             LSOF_NBSD_TMPFS=1
++           fi  # }
++         fi    # }
++       fi      # }
++      fi       # }
++     if test "X$NETBSD_UVM" = "X"	# {
        then
  	grep -q UVM $LSOF_TMP3
-@@ -3624,6 +3692,28 @@ return(0); }
+ 	if test $? -ne 0	# {
+@@ -3752,6 +3801,28 @@ return(0); }
  	LSOF_CFGF="$LSOF_CFGF -I`pwd`/dialects/n+obsd/include"
        fi	# }
      fi	# }
-+    if test $LSOF_NBSD_TMPFS -eq 1	# {
++    if test $LSOF_NBSD_TMPFS -eq 1     # {
 +    then
 +
 +    # Make a local copy of $NETBSD_SYS/sys/fs/tmpfs/tmpfs.h.
 +
-+      if test ! -d dialects/n+obsd/include	# {
++      if test ! -d dialects/n+obsd/include     # {
 +      then
-+	mkdir dialects/n+obsd/include
-+      fi	# }
-+      if test ! -d dialects/n+obsd/include/fs	# {
++       mkdir dialects/n+obsd/include
++      fi       # }
++      if test ! -d dialects/n+obsd/include/fs  # {
 +      then
-+	mkdir dialects/n+obsd/include/fs
-+      fi	# }
++       mkdir dialects/n+obsd/include/fs
++      fi       # }
 +      rm -rf dialects/n+obsd/include/fs/tmpfs
 +      mkdir dialects/n+obsd/include/fs/tmpfs
 +      cp $NETBSD_SYS/fs/tmpfs/tmpfs.h dialects/n+obsd/include/fs/tmpfs
 +      echo $LSOF_CFGF | grep /dialects/n+obsd/include > /dev/null 2>&1
-+      if test $? -ne 0	# {
++      if test $? -ne 0 # {
 +      then
-+	LSOF_CFGF="$LSOF_CFGF -I`pwd`/dialects/n+obsd/include"
-+      fi	# }
-+    fi	# }
++       LSOF_CFGF="$LSOF_CFGF -I`pwd`/dialects/n+obsd/include"
++      fi       # }
++    fi # }
      LSOF_CFGL="$LSOF_CFGL -lkvm"
      LSOF_DIALECT_DIR=n+obsd
      ;;
-@@ -5309,7 +5399,7 @@ fi	# }
+@@ -5488,7 +5559,7 @@ fi	# }
  echo "" >> $LSOF_MKFC
  if test "X$LSOF_DEBUG" = "X"	# {
  then
