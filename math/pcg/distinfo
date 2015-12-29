@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2015/12/29 02:04:08 agc Exp $
+
+SHA1 (pcg-c-0.94.zip) = b70a455def217fedb30645a3d2e00b60b6a5ae6b
+RMD160 (pcg-c-0.94.zip) = fadc610f9ace596a0595f09ba7c91168d08fedf3
+SHA512 (pcg-c-0.94.zip) = df1afc788b3c9ef12fde7bdb1057144ea0963345506be37c646575ac5e1432609e06ffd175bcf8245ad7d527a7c3832daff51b7d39317592e8741afc7a74cf51
+Size (pcg-c-0.94.zip) = 207717 bytes
+SHA1 (patch-Makefile) = 8ababb41930af81dbbe1fcf807cf3f4b71c4437b
