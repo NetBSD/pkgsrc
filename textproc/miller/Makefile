@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2015/09/21 13:25:38 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2015/12/29 23:43:18 wiz Exp $
 
-DISTNAME=	miller-2.2.0
+DISTNAME=	miller-3.2.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=johnkerl/}
 GITHUB_PROJECT=	miller
@@ -13,9 +13,12 @@ LICENSE=	2-clause-bsd
 
 BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
+USE_TOOLS+=	autoreconf autoconf automake
 BUILDLINK_TRANSFORM+=	rm:-Werror
-MAKE_JOBS_SAFE=		no
-MAKE_FLAGS+=		INSTALLDIR=${DESTDIR}${PREFIX}/bin
-INSTALLATION_DIRS+=	bin
+
+pre-configure:
+	cd ${WRKSRC} && autoreconf -fiv
 
 .include "../../mk/bsd.pkg.mk"
