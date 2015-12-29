@@ -1,4 +1,6 @@
-$NetBSD: patch-ae,v 1.1 2006/06/26 10:21:55 rillig Exp $
+$NetBSD: patch-ae,v 1.2 2015/12/29 04:22:33 dholland Exp $
+
+Fix symbol name conflict with freetype.
 
 --- guix11/xdialog.h.orig	2006-06-26 12:17:12.000000000 +0200
 +++ guix11/xdialog.h	2006-06-26 12:19:24.000000000 +0200
