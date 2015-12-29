@@ -1,4 +1,4 @@
-# $NetBSD: patch-config.h.in,v 1.1.1.1 2013/03/17 14:12:02 asau Exp $
+$NetBSD: patch-config.h.in,v 1.2 2015/12/29 04:04:27 dholland Exp $
 
 Defines NSSWITCH_H and SHADOW_H variables
 

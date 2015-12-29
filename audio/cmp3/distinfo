@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.12 2015/11/03 01:12:27 agc Exp $
+$NetBSD: distinfo,v 1.13 2015/12/29 04:04:26 dholland Exp $
 
 SHA1 (cmp3-2.0pre6.tar.gz) = 5c1454117be282cf673de7a701f8d08f6224d2f8
 RMD160 (cmp3-2.0pre6.tar.gz) = c7d5f774c05734e8fca8ec8d536b2843cb99ad80
 SHA512 (cmp3-2.0pre6.tar.gz) = 809ceb9e141a13a3670a0fbc2b330a56470f3d0c643bab92160aa57cbf4d910e8766399048d34bcda4870b98689b6da21b6366bde7d554e9ed93dc2f339785ad
 Size (cmp3-2.0pre6.tar.gz) = 183749 bytes
 SHA1 (patch-aa) = e31bc4ba77b769ae3a45c21d90b87b46322233cc
-SHA1 (patch-ab) = e9875ca0ef595f55170f288bcf1df34d79930cec
+SHA1 (patch-ab) = 88c131c68bbc1e7d8d0cda93afa84d33f8ef519a
 SHA1 (patch-ac) = 03a9b0660a6167dd2b8ef3c58f16ec0c95a9921a
 SHA1 (patch-ad) = a50d87140e557eb3bef1a5d68ad3e18bba73e03e
 SHA1 (patch-ae) = 4ddb74587d34dc2698c2a49ca7c476b5b90540d9

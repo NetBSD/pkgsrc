@@ -1,3 +1,5 @@
+$NetBSD: patch-qmerge2,v 1.2 2015/12/29 04:04:29 dholland Exp $
+
 --- clients.h.orig	2009-04-21 23:43:02.000000000 -0400
 +++ clients.h
 @@ -0,0 +1,7 @@
