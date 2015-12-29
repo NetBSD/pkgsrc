@@ -1,19 +1,19 @@
-$NetBSD: distinfo,v 1.41 2015/11/03 20:56:54 agc Exp $
+$NetBSD: distinfo,v 1.42 2015/12/29 04:04:28 dholland Exp $
 
 SHA1 (kdegames-3.5.10.tar.bz2) = 287aa0d1ae19b8f04d64c4449fed6a7cec58844d
 RMD160 (kdegames-3.5.10.tar.bz2) = a185104b0048b0554f4638b482e69455eb10daa5
 SHA512 (kdegames-3.5.10.tar.bz2) = 11a23768d1e8b6d7485a57c14d91418333be8676623267064f15602e9a916b570d88e14de0e8267ced7cf06f7070318d576a714596fff577ae4909325b61d0dd
 Size (kdegames-3.5.10.tar.bz2) = 10783059 bytes
-SHA1 (patch-kfouleggs_Makefile.in) = 53fc5088a5f6221f17f766fd37095950643da7e3
+SHA1 (patch-kfouleggs_Makefile.in) = aad12e2339850017702d3dac433231ac196778a5
 SHA1 (patch-kfouleggs_piece.cpp) = 38b19b6954ee554f723c0c4f5008499b7edb06e0
 SHA1 (patch-kjumpingcube_brain.cpp) = 7f0e31e5e91c74b19494de128c07151c344b7a6d
 SHA1 (patch-kjumpingcube_cubebox.cpp) = c8c652ff4c71954b5440eb76fe2d8c1088e0c9b5
-SHA1 (patch-klickety_Makefile.in) = eac00e6ac57e5e6c0a5fadb5cb2d03e72f263a4d
-SHA1 (patch-kmines_Makefile.in) = 279c24b558b48323a25ff1e4e50d2b942b96b1b2
+SHA1 (patch-klickety_Makefile.in) = dfbc07e51da92d95cbc10dfdeb1a74c64f1ba5c9
+SHA1 (patch-kmines_Makefile.in) = 56c3873bdeb670095fff2062a99ffb3d30d3cf1a
 SHA1 (patch-kolf_floater.cpp) = eac067c86f2f51b339e0050455331ecff7c9a909
 SHA1 (patch-kolf_slope.cpp) = b074c39b3c913eadc3008f81d9d35239960cfd8b
 SHA1 (patch-kolf_vector.cpp) = 3d5c260249def2ee91629ad414bd0d0e1b3045de
 SHA1 (patch-konquest_gameboard.cc) = c645846f5dbb0c5859f07ebecf08e0cf2d803a82
 SHA1 (patch-kpat_dealer.cpp) = 29bf8e5681413a851a900485a620974be506e807
 SHA1 (patch-kpat_dealer.h) = 14f0c0fc03122db1a23a38f1c384b0e1258be3a6
-SHA1 (patch-ksirtet_ksirtet_Makefile.in) = cc9b7c9bba6039d5d5291e6e53c7afdf289b36b9
+SHA1 (patch-ksirtet_ksirtet_Makefile.in) = 9e636ac63c873d92881bf10f048f26c91069b9cf

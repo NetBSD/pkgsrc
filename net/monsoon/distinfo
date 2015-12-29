@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 00:35:12 agc Exp $
+$NetBSD: distinfo,v 1.5 2015/12/29 04:04:30 dholland Exp $
 
 SHA1 (monsoon-0.20.tar.gz) = dc89d0539a91ec43524efd812a07b21e2b1130fc
 RMD160 (monsoon-0.20.tar.gz) = e9068436d5afe4231ad8adc75a179bbf7080de53
 SHA512 (monsoon-0.20.tar.gz) = bf8feff39ec5991e065b3619542047630c6cb909c08b0dac58668dcb15e1bb63d080a4568ceb4b150659c19f0f0c5d68f4fe6c42ebe8e68491ae1bef267fde31
 Size (monsoon-0.20.tar.gz) = 540409 bytes
 SHA1 (patch-aa) = 7309947d0a5db5abca2654502ef2eea3e58baaf4
-SHA1 (patch-ab) = 67306c96540d4c8025b74cb6e424cca4a1b5a7bc
+SHA1 (patch-ab) = c76d7568ed42a2d8b76bc5c25024ea88b0a4e832

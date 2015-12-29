@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 2015/12/29 04:04:30 dholland Exp $
+
 --- device/device.cpp.orig	2008-09-17 11:47:24 +0300
 +++ device/device.cpp	2008-09-17 11:45:26 +0300
 @@ -31,6 +31,8 @@

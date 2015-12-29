@@ -1,4 +1,4 @@
-$NetBSD $
+$NetBSD: patch-aa,v 1.4 2015/12/29 04:04:29 dholland Exp $
 
 --- src/netstatus-iface.c.orig	2007-02-13 10:39:19.000000000 +0100
 +++ src/netstatus-iface.c

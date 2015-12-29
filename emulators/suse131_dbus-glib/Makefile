@@ -1,4 +1,4 @@
-# $NetBSD
+# $NetBSD: Makefile,v 1.5 2015/12/29 04:04:28 dholland Exp $
 
 PKGNAME=	suse_dbus-glib-${SUSE_VERSION}
 CATEGORIES=	emulators

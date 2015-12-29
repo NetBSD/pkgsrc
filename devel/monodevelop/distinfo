@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2015/11/03 03:27:50 agc Exp $
+$NetBSD: distinfo,v 1.19 2015/12/29 04:04:27 dholland Exp $
 
 SHA1 (monodevelop-5.0.1-0.tar.bz2) = fdfc20e4d90c153eabb270c0a7c029eb10883008
 RMD160 (monodevelop-5.0.1-0.tar.bz2) = 8da98b4d374a158614d0c54f52ec4cbbbd38056e
@@ -12,5 +12,5 @@ SHA1 (patch-af) = cebb95c6e3a9d4299ae45a6d1384242c5991c7fc
 SHA1 (patch-ag) = d283abc804c84bc5400a4b59aa687c0bd35c99c3
 SHA1 (patch-ah) = 245dfc303a825f50e24152a3d444f336cd80f948
 SHA1 (patch-ai) = 5c538b8af742e1efa9b599bc006e3c0f37ef06fc
-SHA1 (patch-mdtool) = bb41b5232f2f5efe6df852d96e92b21c5abc919d
-SHA1 (patch-monodevelop) = 1d94dafa16b780fbe05052aaded5f9064ea9bc63
+SHA1 (patch-mdtool) = 7ec02962d095e665f1fe598c9bc70976d686569e
+SHA1 (patch-monodevelop) = ceb1e01e642c916f074475771decf5619328c532

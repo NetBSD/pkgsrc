@@ -1,4 +1,8 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2015/12/29 04:04:28 dholland Exp $
+
 After the installation of this R package is complete
 copy the files R.cgi and .Rprofile in
     ${PREFIX}/lib/R/library/CGIwithR/cgi-bin/
 to the cgi-bin area of your Web server.
+===========================================================================

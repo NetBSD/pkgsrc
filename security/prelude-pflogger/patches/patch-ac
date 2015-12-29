@@ -1,3 +1,5 @@
+$NetBSD: patch-ac,v 1.2 2015/12/29 04:04:31 dholland Exp $
+
 --- src/process_packet.c.orig	2005-09-18 16:29:54 +0200
 +++ src/process_packet.c
 @@ -40,8 +40,14 @@
