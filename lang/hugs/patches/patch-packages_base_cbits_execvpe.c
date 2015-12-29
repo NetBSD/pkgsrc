@@ -1,4 +1,6 @@
-$NetBSD: patch-packages_base_cbits_execvpe.c,v 1.1 2014/10/14 14:04:19 joerg Exp $
+$NetBSD: patch-packages_base_cbits_execvpe.c,v 1.2 2015/12/29 23:34:48 dholland Exp $
+
+Don't provide own execvpe if the system already has it.
 
 --- packages/base/cbits/execvpe.c.orig	2014-10-14 12:37:00.000000000 +0000
 +++ packages/base/cbits/execvpe.c

@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.4 2008/04/04 01:56:16 bjs Exp $
+$NetBSD: distinfo,v 1.5 2015/12/29 23:34:53 dholland Exp $
 
 SHA1 (js-1.6.20070208.tar.gz) = 3c8c4b81637b84fa344334a2c0bb093244620d9e
 RMD160 (js-1.6.20070208.tar.gz) = e2e5a1f50026d50caae672bf1122f728991ca377
 Size (js-1.6.20070208.tar.gz) = 1109930 bytes
-SHA1 (patch-aa) = 92a1f440ea8f2686216ad4b2f04cc8ef502eae02
-SHA1 (patch-ab) = a994f01aea48b20085c9f37fadf6683d0200f7ca
+SHA1 (patch-aa) = 72ffc2a98eabcb8b79bb38cdb85f97295b7f0db2
+SHA1 (patch-ab) = 5afa5340fa65cba59d1f0b13ea3cbbe560621267
 SHA1 (patch-ac) = cfb32539e82762755090c90fd22978d541edb1d7
-SHA1 (patch-ad) = 9cee1435756bd1d6dec029d81444ec45418a4b18
-SHA1 (patch-ae) = 0a031230be8fc001e510a26d296b5bfdc2a7e1d7
+SHA1 (patch-ad) = 19a6a56b12da0026d7ccda0a3389be261f0d79f9
+SHA1 (patch-ae) = 09588dc661f9c60ad3f662346a9f8c06b0176f9c
 SHA1 (patch-af) = 214c8061cb3ff5969b9b0bfbf150c945bb3367a3
 SHA1 (patch-ag) = 5d6e87ebc3bef9123dd36e1041b2b575a427a664
-SHA1 (patch-ah) = 24889cbf3624aac2ff97f87244644b1b2e3bd9a2
-SHA1 (patch-ai) = c0d4fdf957b185ca172ddc2edc935c1ba7149c3e
+SHA1 (patch-ah) = f3438490305fb6469e41e03671d4ed79d4136a03
+SHA1 (patch-ai) = 99dd42e59db687b03b00c7da7a12bdfe938628d4

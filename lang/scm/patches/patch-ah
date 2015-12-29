@@ -1,4 +1,6 @@
-$NetBSD: patch-ah,v 1.1 2006/02/19 17:50:11 joerg Exp $
+$NetBSD: patch-ah,v 1.2 2015/12/29 23:34:55 dholland Exp $
+
+Dragonfly support.
 
 --- ioext.c.orig	2006-02-19 17:41:00.000000000 +0000
 +++ ioext.c

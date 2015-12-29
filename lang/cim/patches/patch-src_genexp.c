@@ -1,4 +1,8 @@
-$NetBSD: patch-src_genexp.c,v 1.1 2012/10/26 20:37:15 joerg Exp $
+$NetBSD: patch-src_genexp.c,v 1.2 2015/12/29 23:34:44 dholland Exp $
+
+Avoid implicit int.
+Use C89.
+Use standard headers.
 
 --- src/genexp.c.orig	2012-10-26 13:04:17.000000000 +0000
 +++ src/genexp.c

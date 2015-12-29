@@ -1,4 +1,6 @@
-$NetBSD: patch-src_lispbibl.d,v 1.1 2013/06/18 19:58:20 joerg Exp $
+$NetBSD: patch-src_lispbibl.d,v 1.2 2015/12/29 23:34:45 dholland Exp $
+
+Support clang on x86_64.
 
 --- src/lispbibl.d.orig	2013-06-17 14:15:17.000000000 +0000
 +++ src/lispbibl.d

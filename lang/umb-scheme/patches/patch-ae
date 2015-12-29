@@ -1,4 +1,6 @@
-$NetBSD: patch-ae,v 1.1 2001/04/12 21:06:45 jtb Exp $
+$NetBSD: patch-ae,v 1.2 2015/12/29 23:34:56 dholland Exp $
+
+Honor PREFIX.
 
 --- SLIB-for-umb-scheme.init.orig	Thu Apr 12 20:08:58 2001
 +++ SLIB-for-umb-scheme.init

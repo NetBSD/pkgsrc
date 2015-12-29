@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2007/05/01 11:07:45 rillig Exp $
+$NetBSD: patch-aa,v 1.2 2015/12/29 23:34:49 dholland Exp $
+
+Avoid illegal lvalue casts.
 
 --- src/iostream.c.orig	1998-11-25 10:06:10.000000000 +0200
 +++ src/iostream.c

@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.9 2015/11/03 22:50:40 agc Exp $
+$NetBSD: distinfo,v 1.10 2015/12/29 23:34:53 dholland Exp $
 
 SHA1 (onyx-5.1.2.tar.bz2) = 1164431e4c5d4fd5122b7d41698baefc1c70d63d
 RMD160 (onyx-5.1.2.tar.bz2) = 0ecca943f37eb9dfb6370c57e9932567a955ed59
 SHA512 (onyx-5.1.2.tar.bz2) = 0dca456a25117599d91be802748ba35c48670dac7e2f45b2b7497ea35bdab7b36400a5e69cd25c98248f006fbe522e7a66e57e4b65b93154f453031592515178
 Size (onyx-5.1.2.tar.bz2) = 1397404 bytes
-SHA1 (patch-Cookfile.in) = 2f6d863d1f5b3cb62c9d0c1ae13ff4cb11070986
-SHA1 (patch-bin_onyx_Cookfile.inc.in) = 8babf137c15514ee613cc81be81dec77dfe166cb
-SHA1 (patch-bin_onyx__config_Cookfile.inc.in) = 225d5e570e05e73e4b14ba74304117673af38713
-SHA1 (patch-doc_latex_onyx_Cookfile.inc.in) = 6d560afe66ed73968341e3dd434f6b900d561af9
-SHA1 (patch-lib_libonyx_Cookfile.inc.in) = 0d50270348d45f2f11ae90fd198bb6bf736e95e5
-SHA1 (patch-mod_modclopt_Cookfile.inc.in) = ac0488df5307e23050daa7c43ba4fe4d862fd843
-SHA1 (patch-mod_modprompt_Cookfile.inc.in) = e0a846e5539197813fd76a9a98820bda940707c3
+SHA1 (patch-Cookfile.in) = 55453d66c7dab512b1c65afa9d6937678d708f66
+SHA1 (patch-bin_onyx_Cookfile.inc.in) = bdabf724e953b933b2d463f5ef7e85cca7b3a1b3
+SHA1 (patch-bin_onyx__config_Cookfile.inc.in) = fada70f113d3446b3cc2e17f19c8b2e14e148acf
+SHA1 (patch-doc_latex_onyx_Cookfile.inc.in) = 78820495be8b31f8bbe5b59bb3289f9134cc241f
+SHA1 (patch-lib_libonyx_Cookfile.inc.in) = 836a144e5a32b3bb0805e0aa2b09cd6b3cf37392
+SHA1 (patch-mod_modclopt_Cookfile.inc.in) = edb3c4e9b0c3e446921891f6521ddfb673f129d7
+SHA1 (patch-mod_modprompt_Cookfile.inc.in) = 8e86609bed11ca3c24cad9767551d3a5a0a02ecc

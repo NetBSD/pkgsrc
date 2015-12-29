@@ -1,4 +1,6 @@
-$NetBSD: patch-src_Mixfix_lexerAux.cc,v 1.1 2013/11/29 18:30:10 joerg Exp $
+$NetBSD: patch-src_Mixfix_lexerAux.cc,v 1.2 2015/12/29 23:34:51 dholland Exp $
+
+Fix build with newer bison.
 
 --- src/Mixfix/lexerAux.cc.orig	2013-11-28 00:54:41.000000000 +0000
 +++ src/Mixfix/lexerAux.cc

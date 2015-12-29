@@ -1,4 +1,7 @@
-$NetBSD: patch-gsc_makefile.in,v 1.1 2013/12/15 19:39:34 joerg Exp $
+$NetBSD: patch-gsc_makefile.in,v 1.2 2015/12/29 23:34:46 dholland Exp $
+
+Disable optimization on certain files when using clang to avoid
+excessive memory consumption.
 
 --- gsc/makefile.in.orig	2013-12-15 14:34:50.000000000 +0000
 +++ gsc/makefile.in

@@ -1,4 +1,6 @@
-$NetBSD: patch-af,v 1.1 2006/02/24 18:37:20 joerg Exp $
+$NetBSD: patch-af,v 1.2 2015/12/29 23:34:45 dholland Exp $
+
+Don't compare pointers by subtraction.
 
 --- tr_sub.c.orig	2006-02-24 18:32:10.000000000 +0000
 +++ tr_sub.c

@@ -1,4 +1,6 @@
-$NetBSD: patch-gcc_toplev.h,v 1.1 2013/05/20 05:47:34 adam Exp $
+$NetBSD: patch-gcc_toplev.h,v 1.2 2015/12/29 23:34:46 dholland Exp $
+
+Patch up gcc inline mess.
 
 --- ../gcc-4.1.2/gcc/toplev.h.orig	2005-09-09 00:47:05.000000000 +0000
 +++ ../gcc-4.1.2/gcc/toplev.h

@@ -1,6 +1,7 @@
-$NetBSD: patch-stdlib_Makefile.shared,v 1.4 2015/08/07 11:16:30 jaapb Exp $
+$NetBSD: patch-stdlib_Makefile.shared,v 1.5 2015/12/29 23:34:53 dholland Exp $
 
 Use BSD_INSTALL_* instead of mkdir and cp
+
 --- stdlib/Makefile.shared.orig	2015-07-20 14:10:11.000000000 +0000
 +++ stdlib/Makefile.shared
 @@ -45,16 +45,16 @@ all: stdlib.cma std_exit.cmo camlheader 

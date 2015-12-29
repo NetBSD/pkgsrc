@@ -1,4 +1,6 @@
-$NetBSD: patch-aj,v 1.1 2008/09/05 05:27:31 dholland Exp $
+$NetBSD: patch-aj,v 1.2 2015/12/29 23:34:44 dholland Exp $
+
+Don't fail in clean. (Is this actually needed?)
 
 --- tool/ifdef/Makefile.base~	2005-05-06 04:49:09.000000000 -0400
 +++ tool/ifdef/Makefile.base	2008-09-05 00:10:44.000000000 -0400

@@ -1,4 +1,6 @@
-$NetBSD: patch-include_computil.h,v 1.1 2015/01/25 13:12:54 joerg Exp $
+$NetBSD: patch-include_computil.h,v 1.2 2015/12/29 23:34:43 dholland Exp $
+
+Avoid symbol name conflict with strtoi.
 
 --- include/computil.h.orig	2015-01-24 16:18:49.000000000 +0000
 +++ include/computil.h

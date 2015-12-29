@@ -1,4 +1,6 @@
-$NetBSD: patch-os_pl-rl.c,v 1.1 2014/04/21 18:15:32 joerg Exp $
+$NetBSD: patch-os_pl-rl.c,v 1.2 2015/12/29 23:34:57 dholland Exp $
+
+Fix build with readline 6.3.
 
 --- os/pl-rl.c.orig	2014-04-20 18:59:41.000000000 +0000
 +++ os/pl-rl.c

@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.6 2012/01/22 18:11:05 asau Exp $
+$NetBSD: patch-ab,v 1.7 2015/12/29 23:34:46 dholland Exp $
+
+Honor --without-xaw as configure argument.
 
 --- configure.orig	2011-06-18 15:08:11.000000000 +0400
 +++ configure	2012-01-22 19:22:24.000000000 +0400

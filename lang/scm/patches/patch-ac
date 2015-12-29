@@ -1,4 +1,6 @@
-$NetBSD: patch-ac,v 1.1 2006/02/19 17:50:11 joerg Exp $
+$NetBSD: patch-ac,v 1.2 2015/12/29 23:34:55 dholland Exp $
+
+Don't declare own errno.
 
 --- scmfig.h.orig	2006-02-08 17:51:31.000000000 +0000
 +++ scmfig.h

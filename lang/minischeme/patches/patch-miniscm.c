@@ -1,4 +1,7 @@
-$NetBSD: patch-miniscm.c,v 1.1 2013/01/11 23:27:38 joerg Exp $
+$NetBSD: patch-miniscm.c,v 1.2 2015/12/29 23:34:51 dholland Exp $
+
+Avoid implicit int.
+Use C89.
 
 --- miniscm.c.orig	2013-01-11 15:16:49.000000000 +0000
 +++ miniscm.c

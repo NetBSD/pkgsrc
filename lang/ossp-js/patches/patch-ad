@@ -1,4 +1,6 @@
-$NetBSD: patch-ad,v 1.1.1.1 2008/02/06 04:22:33 bjs Exp $
+$NetBSD: patch-ad,v 1.2 2015/12/29 23:34:53 dholland Exp $
+
+Use memcpy correctly. See patch-ac.
 
 --- config.h.in.orig	2007-02-08 04:39:29.000000000 -0500
 +++ config.h.in

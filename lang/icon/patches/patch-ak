@@ -1,4 +1,6 @@
-$NetBSD: patch-ak,v 1.4 2004/08/28 16:40:43 danw Exp $
+$NetBSD: patch-ak,v 1.5 2015/12/29 23:34:48 dholland Exp $
+
+Use the right library path.
 
 --- src/icont/tunix.c.orig	Thu Aug  5 19:42:45 2004
 +++ src/icont/tunix.c	Thu Aug  5 19:43:16 2004

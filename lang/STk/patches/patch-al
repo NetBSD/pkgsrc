@@ -1,4 +1,6 @@
-$NetBSD: patch-al,v 1.1 2006/01/11 17:43:34 joerg Exp $
+$NetBSD: patch-al,v 1.2 2015/12/29 23:34:43 dholland Exp $
+
+Dragonfly support.
 
 --- Src/io.c.orig	2006-01-11 17:16:11.000000000 +0000
 +++ Src/io.c

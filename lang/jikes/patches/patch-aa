@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2004/04/30 16:55:05 tv Exp $
+$NetBSD: patch-aa,v 1.5 2015/12/29 23:34:49 dholland Exp $
+
+errno.h is not linked to iconv.h.
 
 --- src/platform.h.orig	Fri Apr 30 12:25:28 2004
 +++ src/platform.h

@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2000/11/02 04:52:13 itojun Exp $
+$NetBSD: patch-aa,v 1.2 2015/12/29 23:34:51 dholland Exp $
+
+Build as BSD, not SYSV. XXX: this should probably be reexamined nowadays.
 
 --- Makefile-	Thu Nov  2 13:44:52 2000
 +++ Makefile	Thu Nov  2 13:45:03 2000

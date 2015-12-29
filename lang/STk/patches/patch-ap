@@ -1,4 +1,6 @@
-$NetBSD: patch-ap,v 1.1 2008/09/07 00:23:58 dholland Exp $
+$NetBSD: patch-ap,v 1.2 2015/12/29 23:34:43 dholland Exp $
+
+Fix shell quoting bug.
 
 --- Tcl/configure~	2008-09-06 18:51:25.000000000 -0400
 +++ Tcl/configure	2008-09-06 19:11:07.000000000 -0400

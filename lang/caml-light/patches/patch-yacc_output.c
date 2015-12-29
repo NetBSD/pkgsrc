@@ -1,4 +1,8 @@
-$NetBSD: patch-yacc_output.c,v 1.1 2012/10/20 22:11:30 joerg Exp $
+$NetBSD: patch-yacc_output.c,v 1.2 2015/12/29 23:34:44 dholland Exp $
+
+Avoid implicit int.
+Use C89.
+Mark private functions static.
 
 --- yacc/output.c.orig	2012-10-20 13:08:10.000000000 +0000
 +++ yacc/output.c

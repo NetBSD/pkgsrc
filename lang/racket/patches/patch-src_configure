@@ -1,4 +1,6 @@
-$NetBSD: patch-src_configure,v 1.3 2015/12/18 01:10:14 asau Exp $
+$NetBSD: patch-src_configure,v 1.4 2015/12/29 23:34:54 dholland Exp $
+
+Remove bashisms.
 
 --- src/configure.orig	2015-10-20 15:10:35.000000000 +0000
 +++ src/configure

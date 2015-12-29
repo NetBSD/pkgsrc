@@ -1,25 +1,25 @@
-$NetBSD: distinfo,v 1.18 2011/03/01 10:08:26 wiz Exp $
+$NetBSD: distinfo,v 1.19 2015/12/29 23:34:48 dholland Exp $
 
 SHA1 (icon.v943src.tgz) = 92bd3347807b333fb903edf61a2805f2e1159577
 RMD160 (icon.v943src.tgz) = af75af7f106920cd59a7f8ac85954aa472ae78e7
 Size (icon.v943src.tgz) = 3218627 bytes
-SHA1 (patch-aa) = 5d9a996a9957e391333c4b934f9f1d8ed7a681d6
-SHA1 (patch-ab) = 077c92c85e689084fe2b0d4c57a01a5f967a4c78
-SHA1 (patch-ac) = 10e4dd6d012aab3853cd3af279b44f5a03443c4f
-SHA1 (patch-ai) = 16cbd079625d81d38d6cd58a976e5f3062098677
-SHA1 (patch-aj) = d185665dde98edd90e69e100f5740c4961e5b47c
-SHA1 (patch-ak) = 64a2cc88155db10b618b314a23f101587ec86761
-SHA1 (patch-al) = c4705ab795093189196eb512c9182d8b55fa7c96
-SHA1 (patch-am) = fe2a7e2a41d27e1c26fab74235ecc0ed7e6bb80d
-SHA1 (patch-an) = 487bd5d35d94026ac2ef7ce08e197a2d378b73e7
-SHA1 (patch-ao) = 68cd2c4e4c7320127f66a0abd5d94a73c35ccf35
-SHA1 (patch-ap) = 3f8cc180a440feb42a0c4ae1475f5ac8d3709b2c
-SHA1 (patch-as) = e8749720bce4362c708c266a0f049f49742eddd2
-SHA1 (patch-at) = 7588ea1056dde3f8776c04e4f8786ca56462aedb
-SHA1 (patch-au) = de4bba2ee4c08ab4e20ec29132b46ed17bd03de4
-SHA1 (patch-av) = c7eda8b5e28a03b13ec6f037c168fab33c1bb214
-SHA1 (patch-aw) = 2474d54ce778118a74ebac66018c8ae382b051ea
-SHA1 (patch-ax) = 834f3f62fd5ec7f4501d518957ccfb7c71198e8c
-SHA1 (patch-ay) = 34186d788599e3e62fd1f27e931feb240c5aab2d
-SHA1 (patch-az) = 682d436f650731b771021be67a06b955ee5f058e
-SHA1 (patch-ba) = ffc6650779867e2b6c6521c64bc153d5357211dc
+SHA1 (patch-aa) = 1ce78a978e74a05db2ac1ee7eb33c61e63918a8c
+SHA1 (patch-ab) = 704a75e155e3d9152cffc56e4146fcf5f0163814
+SHA1 (patch-ac) = fb66321b3749d3ff266229fdfbd7acce99c2d1a4
+SHA1 (patch-ai) = 0e834c2280913134dba6607e245cf841ad69a5d6
+SHA1 (patch-aj) = 0fc06e3a627a9dc9fcfabbe08a7a726bdc2d03ac
+SHA1 (patch-ak) = 4e6759a56625f0b4c290b281f205061d82687aa1
+SHA1 (patch-al) = 4d9b269d980a073954eefdc571907b5aa29eba79
+SHA1 (patch-am) = ac90fc1327f2e5fed4d40e61348b0b3432ac52af
+SHA1 (patch-an) = e0889b14551ea90e7ca975ce0272721195210e85
+SHA1 (patch-ao) = 8844f622e085274fb1deb5641853c7f5fd9edaab
+SHA1 (patch-ap) = 482cbeb043a46b59473de6974e54f0c1ec40970f
+SHA1 (patch-as) = ab1c81e73e1ff87adbb4331eb9009b47aae84a93
+SHA1 (patch-at) = a4ba1921c57488d904a460da8621d8e7858844ef
+SHA1 (patch-au) = bd89997f88ddf736aa1a2cf4e78990b5c5e6f8f6
+SHA1 (patch-av) = 661a2759aabdd2ce5f8d39903e53a7e224b3de9d
+SHA1 (patch-aw) = 70333380a5420650b93866c3e36590c52233dca2
+SHA1 (patch-ax) = ef175d7bf331c14e1cda14b178ba72942fb11259
+SHA1 (patch-ay) = 0e07669d8de49057c26618f7945d9b83b3ae374b
+SHA1 (patch-az) = 505e6f5a2d69b5bb6a547024fc67ce9ac6d4e23a
+SHA1 (patch-ba) = 29651ca20ac674def8dfb91ea9efe9d72cd75832

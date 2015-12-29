@@ -1,4 +1,8 @@
-$NetBSD: patch-aj,v 1.9 2011/03/01 10:08:26 wiz Exp $
+$NetBSD: patch-aj,v 1.10 2015/12/29 23:34:48 dholland Exp $
+
+Use patchstr.
+DESTDIR support.
+Install with proper tools and permissions.
 
 --- Makefile.orig	2005-11-09 00:24:34.000000000 +0100
 +++ Makefile

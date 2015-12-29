@@ -1,4 +1,8 @@
-$NetBSD: patch-ag,v 1.2 2005/02/19 15:40:54 wiz Exp $
+$NetBSD: patch-ag,v 1.3 2015/12/29 23:34:43 dholland Exp $
+
+Use standard headers.
+Don't redeclare standard functions.
+Fix yacc syntax errors.
 
 --- pascomp/bapascal.y.orig	1999-08-31 18:19:08.000000000 +0200
 +++ pascomp/bapascal.y

@@ -1,4 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/08/30 21:23:44 jtb Exp $
+$NetBSD: patch-aa,v 1.2 2015/12/29 23:34:50 dholland Exp $
+
+Set rpath.
+XXX: should honor COMPILER_RPATH_FLAG.
 
 --- ksi-config.in.orig	2000-07-25 19:56:09.000000000 +0100
 +++ ksi-config.in	2003-08-08 14:58:52.000000000 +0100

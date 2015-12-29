@@ -1,4 +1,6 @@
-$NetBSD: patch-src_os_bsd_x86__64_callNative.S,v 1.1 2013/02/26 11:08:41 joerg Exp $
+$NetBSD: patch-src_os_bsd_x86__64_callNative.S,v 1.2 2015/12/29 23:34:48 dholland Exp $
+
+Fix assembler syntax.
 
 --- src/os/bsd/x86_64/callNative.S.orig	2013-02-25 20:16:25.000000000 +0000
 +++ src/os/bsd/x86_64/callNative.S

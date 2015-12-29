@@ -1,4 +1,6 @@
-$NetBSD: patch-ba,v 1.1 2005/10/17 19:45:18 is Exp $
+$NetBSD: patch-ba,v 1.2 2015/12/29 23:34:52 dholland Exp $
+
+Use intptr_t instead of int for pointer-sized ints.
 
 --- rts/misc.c.orig	2005-03-02 13:56:52.000000000 +0000
 +++ rts/misc.c

@@ -1,4 +1,6 @@
-$NetBSD: patch-src_Mixfix_interact.cc,v 1.1 2013/11/29 18:30:10 joerg Exp $
+$NetBSD: patch-src_Mixfix_interact.cc,v 1.2 2015/12/29 23:34:51 dholland Exp $
+
+Fix build with newer bison.
 
 --- src/Mixfix/interact.cc.orig	2013-11-28 01:17:11.000000000 +0000
 +++ src/Mixfix/interact.cc

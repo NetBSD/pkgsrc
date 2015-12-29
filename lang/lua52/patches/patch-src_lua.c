@@ -1,4 +1,7 @@
-$NetBSD: patch-src_lua.c,v 1.1 2015/03/05 13:39:20 ryoon Exp $
+$NetBSD: patch-src_lua.c,v 1.2 2015/12/29 23:34:51 dholland Exp $
+
+Disable Lua module version check under Cygwin.
+XXX: This workaround should be investigated deeper.
 
 --- src/lua.c.orig	2013-04-12 18:48:47.000000000 +0000
 +++ src/lua.c

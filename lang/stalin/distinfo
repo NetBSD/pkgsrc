@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.7 2015/11/03 22:50:45 agc Exp $
+$NetBSD: distinfo,v 1.8 2015/12/29 23:34:56 dholland Exp $
 
 SHA1 (stalin-0.9.tgz) = e2f98792fcfb582d031b480bc9fe4b800681ddd5
 RMD160 (stalin-0.9.tgz) = 55b29e062900046f647c0e4b42d8d8377c9eb604
 SHA512 (stalin-0.9.tgz) = c7ef9cc467ee60c63f208c61ed263e8cda9bd3c242a035b96c72675a24e03ed5429477939adb32205b316e9fec096fb65a38ff7181349ae607eb15beb8fdb802
 Size (stalin-0.9.tgz) = 12652154 bytes
-SHA1 (patch-aa) = dd9f3fcd1d38fc64a22a79049a55c472444435ae
-SHA1 (patch-ab) = 2fde348b86616e2d790c687be55038e420e920bf
-SHA1 (patch-ac) = 0027fef60522b2ad7e20744946ffa49560715ada
-SHA1 (patch-ad) = f07e6f35f1bf5b0eb116dd8f9b589ca86eb99d71
-SHA1 (patch-ae) = e64ded48229b6b6ac2d23a1572423b1583cceeef
+SHA1 (patch-aa) = 85663c719c875859e6168e18776e6e2799b5923f
+SHA1 (patch-ab) = 848290bf4d2c98b3afda404fca944884b81cdac6
+SHA1 (patch-ac) = e23244d64732b5e4faf42b48fb0866ba5de7bbe0
+SHA1 (patch-ad) = 89a2f5f21666fea4809f099ae397d9cee1c01c91
+SHA1 (patch-ae) = 7dd1b815120700eac0b3891bdacff11d07f29db9

@@ -1,4 +1,6 @@
-$NetBSD: patch-examples_iOS_make-keys,v 1.1 2012/04/16 10:19:34 asau Exp $
+$NetBSD: patch-examples_iOS_make-keys,v 1.2 2015/12/29 23:34:46 dholland Exp $
+
+Remove bashism.
 
 --- examples/iOS/make-keys.orig	2011-07-25 18:21:39.000000000 +0000
 +++ examples/iOS/make-keys

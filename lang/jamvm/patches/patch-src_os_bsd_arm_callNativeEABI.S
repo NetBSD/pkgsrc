@@ -1,4 +1,6 @@
-$NetBSD: patch-src_os_bsd_arm_callNativeEABI.S,v 1.1 2015/03/31 15:43:34 joerg Exp $
+$NetBSD: patch-src_os_bsd_arm_callNativeEABI.S,v 1.2 2015/12/29 23:34:48 dholland Exp $
+
+Use unified asm syntax.
 
 --- src/os/bsd/arm/callNativeEABI.S.orig	2015-03-27 13:37:56.000000000 +0000
 +++ src/os/bsd/arm/callNativeEABI.S

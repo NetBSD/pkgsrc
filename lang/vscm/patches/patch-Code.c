@@ -1,4 +1,6 @@
-$NetBSD: patch-Code.c,v 1.1 2012/11/19 02:54:42 joerg Exp $
+$NetBSD: patch-Code.c,v 1.2 2015/12/29 23:34:57 dholland Exp $
+
+Use NORETURN.
 
 --- Code.c.orig	2012-11-19 01:59:02.000000000 +0000
 +++ Code.c

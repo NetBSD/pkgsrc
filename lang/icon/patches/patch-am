@@ -1,4 +1,6 @@
-$NetBSD: patch-am,v 1.4 2003/03/24 12:12:10 jtb Exp $
+$NetBSD: patch-am,v 1.5 2015/12/29 23:34:48 dholland Exp $
+
+Use the right library path.
 
 --- ipl/BuildExe.orig	Sat Jun 23 20:10:50 2001
 +++ ipl/BuildExe

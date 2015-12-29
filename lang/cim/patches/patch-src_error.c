@@ -1,4 +1,8 @@
-$NetBSD: patch-src_error.c,v 1.1 2012/10/26 20:37:15 joerg Exp $
+$NetBSD: patch-src_error.c,v 1.2 2015/12/29 23:34:44 dholland Exp $
+
+Use standard headers.
+Avoid implicit int.
+Use C89.
 
 --- src/error.c.orig	2012-10-26 12:50:41.000000000 +0000
 +++ src/error.c

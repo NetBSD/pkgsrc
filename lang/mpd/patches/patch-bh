@@ -1,4 +1,6 @@
-$NetBSD: patch-bh,v 1.1 2005/10/17 20:18:34 is Exp $
+$NetBSD: patch-bh,v 1.2 2015/12/29 23:34:52 dholland Exp $
+
+Add error declaration to support patch-bg.
 
 --- runerr.h.orig	2005-03-11 09:28:59.000000000 +0100
 +++ runerr.h

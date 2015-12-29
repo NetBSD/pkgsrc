@@ -1,4 +1,6 @@
-$NetBSD: patch-print.c,v 1.2 2015/11/06 20:33:21 joerg Exp $
+$NetBSD: patch-print.c,v 1.3 2015/12/29 23:34:56 dholland Exp $
+
+Use snprintf; fix printf format types.
 
 --- print.c.orig	2008-03-01 01:04:41.000000000 +0000
 +++ print.c

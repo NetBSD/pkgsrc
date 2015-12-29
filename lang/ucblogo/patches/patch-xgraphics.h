@@ -1,4 +1,6 @@
-$NetBSD: patch-xgraphics.h,v 1.1 2012/11/01 19:55:37 joerg Exp $
+$NetBSD: patch-xgraphics.h,v 1.2 2015/12/29 23:34:56 dholland Exp $
+
+Fix a number of cases of plainly invalid C and portability issues.
 
 --- xgraphics.h.orig	2012-10-30 22:03:25.000000000 +0000
 +++ xgraphics.h

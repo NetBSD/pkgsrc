@@ -1,4 +1,8 @@
-$NetBSD: patch-ae,v 1.1.1.1 2008/02/06 04:22:33 bjs Exp $
+$NetBSD: patch-ae,v 1.2 2015/12/29 23:34:53 dholland Exp $
+
+Use memcpy correctly. See patch-ac.
+
+XXX: what's the ac_xexeext hunk about?
 
 ${LIBM} is defined as -lm if we're using the system math library; otherwise
 it's blank.  This should configure everything properly downstream.

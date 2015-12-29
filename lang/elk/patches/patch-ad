@@ -1,4 +1,6 @@
-$NetBSD: patch-ad,v 1.4 2006/01/09 23:00:09 joerg Exp $
+$NetBSD: patch-ad,v 1.5 2015/12/29 23:34:46 dholland Exp $
+
+Don't declare own errno.
 
 --- src/libelk.c.orig	2003-12-05 12:38:37.000000000 +0000
 +++ src/libelk.c

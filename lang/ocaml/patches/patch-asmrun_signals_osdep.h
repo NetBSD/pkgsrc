@@ -1,10 +1,11 @@
-$NetBSD: patch-asmrun_signals_osdep.h,v 1.6 2015/06/30 11:08:47 jaapb Exp $
+$NetBSD: patch-asmrun_signals_osdep.h,v 1.7 2015/12/29 23:34:52 dholland Exp $
 
 Use correct data structures for power architecture; also do signal
 handling correctly for i386 and amd64/NetBSD.
  
 First hunk taken from upstream tracker at:
   http://caml.inria.fr/mantis/view.php?id=6772
+
 --- asmrun/signals_osdep.h.orig	2015-05-06 15:18:50.000000000 +0000
 +++ asmrun/signals_osdep.h
 @@ -135,6 +135,23 @@

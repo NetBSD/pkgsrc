@@ -1,4 +1,7 @@
-$NetBSD: patch-libf95.a-0.93_quad_power16.c,v 1.1 2013/03/02 18:05:46 joerg Exp $
+$NetBSD: patch-libf95.a-0.93_quad_power16.c,v 1.2 2015/12/29 23:34:46 dholland Exp $
+
+Declare own functions.
+Avoid implicit int.
 
 --- libf95.a-0.93/quad/power16.c.orig	2013-03-01 11:16:07.000000000 +0000
 +++ libf95.a-0.93/quad/power16.c

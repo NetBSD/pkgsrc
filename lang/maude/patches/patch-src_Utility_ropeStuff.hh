@@ -1,4 +1,7 @@
-$NetBSD: patch-src_Utility_ropeStuff.hh,v 1.1 2013/11/29 18:30:10 joerg Exp $
+$NetBSD: patch-src_Utility_ropeStuff.hh,v 1.2 2015/12/29 23:34:51 dholland Exp $
+
+Don't use <rope> with clang, but fall back to <string>. Untested for
+functionality.
 
 --- src/Utility/ropeStuff.hh.orig	2005-10-06 19:59:42.000000000 +0000
 +++ src/Utility/ropeStuff.hh

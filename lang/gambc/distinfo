@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.8 2015/11/03 22:50:34 agc Exp $
+$NetBSD: distinfo,v 1.9 2015/12/29 23:34:46 dholland Exp $
 
 SHA1 (gambc-v4_6_5.tgz) = 16a73446440714aa1985c861aa225d0238528544
 RMD160 (gambc-v4_6_5.tgz) = 2ab84686483c541b1a2e182520740bf8293d266c
 SHA512 (gambc-v4_6_5.tgz) = c665eb90065f5effed88426fb280d2adcf249eeea5a89ffcd49941f0daf9db74d0ebd36206151b1d43cc161ae93b7b4da04ccc036de86c3eac7a91505e8b263e
 Size (gambc-v4_6_5.tgz) = 10699787 bytes
-SHA1 (patch-aa) = 0c87076ccab2483865d269a6a3542e83b76563c5
-SHA1 (patch-ab) = fb2adfbe600706d291876b858a4144be50c7c6e0
-SHA1 (patch-examples_iOS_build-gambit-iOS) = 73afbc3aeb7a10c844403ae526539498e9730148
-SHA1 (patch-examples_iOS_make-keys) = d556004fe8f87d66c3522a603ee6592047de992a
-SHA1 (patch-gsc_makefile.in) = d9a0ff66425ffc804e397e8720f224fe059d90d6
-SHA1 (patch-lib_makefile.in) = e60ff2e037a1a301a776ce2c01aec10064abc818
+SHA1 (patch-aa) = c7a5033115590fc6aa9906ff70419641fc1a80e1
+SHA1 (patch-ab) = 8a7a5fe2b51688ea7c5088bcf53a53631f80bfa9
+SHA1 (patch-examples_iOS_build-gambit-iOS) = 47e60052caf49458f78328ecc1ea90e27f52ad4f
+SHA1 (patch-examples_iOS_make-keys) = bb30f96ba117e8cb00921b24309f0927e4b3dd12
+SHA1 (patch-gsc_makefile.in) = 60419432e32f0fa7e4bc33965dc159e4969eabe1
+SHA1 (patch-lib_makefile.in) = 87a9ff2a0d5ce5b4f5929d228de07d6afaa69979

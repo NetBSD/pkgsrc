@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/10/17 16:16:48 is Exp $
+$NetBSD: patch-aa,v 1.2 2015/12/29 23:34:52 dholland Exp $
+
+Configure for pkgsrc.
 
 --- Configuration.orig	2004-01-20 23:13:18.000000000 +0100
 +++ Configuration

@@ -1,4 +1,6 @@
-$NetBSD: patch-libf95.a-0.93_io_read.c,v 1.1 2013/03/02 18:05:46 joerg Exp $
+$NetBSD: patch-libf95.a-0.93_io_read.c,v 1.2 2015/12/29 23:34:46 dholland Exp $
+
+Fix assembler instructions.
 
 --- libf95.a-0.93/io/read.c.orig	2013-03-01 11:14:56.000000000 +0000
 +++ libf95.a-0.93/io/read.c

@@ -1,4 +1,6 @@
-$NetBSD: patch-packages_pldoc_Makefile.in,v 1.1 2013/06/13 21:44:06 joerg Exp $
+$NetBSD: patch-packages_pldoc_Makefile.in,v 1.2 2015/12/29 23:34:57 dholland Exp $
+
+Don't attempt to strip scripts, it doesn't work.
 
 --- packages/pldoc/Makefile.in.orig	2013-06-13 17:35:04.000000000 +0000
 +++ packages/pldoc/Makefile.in

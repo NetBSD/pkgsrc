@@ -1,4 +1,7 @@
-$NetBSD: patch-aa,v 1.4 2007/08/02 14:47:25 obache Exp $
+$NetBSD: patch-aa,v 1.5 2015/12/29 23:34:55 dholland Exp $
+
+Configure for pkgsrc.
+Fix installation rules.
 
 --- Makefile.orig	2006-10-25 01:47:17.000000000 +0000
 +++ Makefile

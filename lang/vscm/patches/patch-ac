@@ -1,4 +1,7 @@
-$NetBSD: patch-ac,v 1.2 2012/11/19 02:54:42 joerg Exp $
+$NetBSD: patch-ac,v 1.3 2015/12/29 23:34:57 dholland Exp $
+
+Include own headers.
+Use NORETURN.
 
 --- main.c.orig	1999-02-09 05:05:17.000000000 +0000
 +++ main.c

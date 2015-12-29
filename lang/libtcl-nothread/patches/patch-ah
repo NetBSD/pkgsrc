@@ -1,4 +1,6 @@
-$NetBSD: patch-ah,v 1.1.1.1 2004/06/22 18:38:47 drochner Exp $
+$NetBSD: patch-ah,v 1.2 2015/12/29 23:34:50 dholland Exp $
+
+Add TclpCreateDirectory.
 
 --- tclUnixFCmd.c.orig	2003-10-03 19:45:37.000000000 +0200
 +++ tclUnixFCmd.c

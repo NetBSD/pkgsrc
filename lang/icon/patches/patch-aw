@@ -1,4 +1,8 @@
-$NetBSD: patch-aw,v 1.6 2009/02/08 12:51:05 asau Exp $
+$NetBSD: patch-aw,v 1.7 2015/12/29 23:34:48 dholland Exp $
+
+Build patchstr as part of the build.
+Correct paths in include files.
+Install libraries in a library directory.
 
 --- src/common/Makefile.orig	2003-07-05 21:30:35.000000000 +0400
 +++ src/common/Makefile	2009-02-08 01:41:40.000000000 +0300

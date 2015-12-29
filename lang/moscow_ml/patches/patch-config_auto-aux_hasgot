@@ -1,4 +1,6 @@
-$NetBSD: patch-config_auto-aux_hasgot,v 1.1 2013/03/24 16:55:49 joerg Exp $
+$NetBSD: patch-config_auto-aux_hasgot,v 1.2 2015/12/29 23:34:52 dholland Exp $
+
+Fix strerror detection.
 
 --- config/auto-aux/hasgot.orig	2013-03-23 15:54:44.000000000 +0000
 +++ config/auto-aux/hasgot

@@ -1,4 +1,8 @@
-$NetBSD: patch-ac,v 1.4 2005/12/21 18:21:31 joerg Exp $
+$NetBSD: patch-ac,v 1.5 2015/12/29 23:34:56 dholland Exp $
+
+Don't use nonstandard headers.
+In Standard C labels are not allowed to end blocks, so insert breaks.
+Remove illegal use of FILE.
 
 --- stalin-ia32.c.orig	2000-06-15 23:01:19.000000000 +0000
 +++ stalin-ia32.c

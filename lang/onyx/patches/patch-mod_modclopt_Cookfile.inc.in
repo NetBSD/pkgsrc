@@ -1,4 +1,6 @@
-$NetBSD: patch-mod_modclopt_Cookfile.inc.in,v 1.1 2011/03/30 22:17:49 asau Exp $
+$NetBSD: patch-mod_modclopt_Cookfile.inc.in,v 1.2 2015/12/29 23:34:53 dholland Exp $
+
+DESTDIR support.
 
 --- mod/modclopt/Cookfile.inc.in.orig	2005-03-17 07:54:59.000000000 +0000
 +++ mod/modclopt/Cookfile.inc.in

@@ -1,4 +1,6 @@
-$NetBSD: patch-bb,v 1.1 2009/10/19 06:03:16 dholland Exp $
+$NetBSD: patch-bb,v 1.2 2015/12/29 23:34:49 dholland Exp $
+
+Add x86_64 netbsd config.
 
 --- /dev/null	2009-10-19 01:12:00.000000000 -0400
 +++ config/x86_64/netbsd1/md.h	2009-10-19 01:22:18.000000000 -0400

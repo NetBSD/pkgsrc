@@ -1,4 +1,6 @@
-$NetBSD: patch-az,v 1.7 2009/02/08 12:51:05 asau Exp $
+$NetBSD: patch-az,v 1.8 2015/12/29 23:34:48 dholland Exp $
+
+Support Dragonfly and Bitrig.
 
 --- ipl/cfuncs/mklib.sh.orig	2005-07-07 21:36:06.000000000 +0400
 +++ ipl/cfuncs/mklib.sh	2009-02-08 01:44:18.000000000 +0300
@@ -7,7 +9,7 @@ $NetBSD: patch-az,v 1.7 2009/02/08 12:51:05 asau Exp $
  set -x
  case "$SYS" in
 -   Linux*|*BSD*|GNU*)
-+   Linux*|*BSD*|GNU*|DragonFly*)
++   Linux*|*BSD*|GNU*|DragonFly*|Bitrig*)
        gcc -shared -o $LIBNAME -fPIC "$@";;
     Darwin*)
        cc -bundle -undefined suppress -flat_namespace -o $LIBNAME "$@";;

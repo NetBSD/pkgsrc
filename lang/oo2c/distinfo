@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2011/05/27 13:16:04 obache Exp $
+$NetBSD: distinfo,v 1.10 2015/12/29 23:34:53 dholland Exp $
 
 SHA1 (oo2c_32-2.0.11.tar.bz2) = b8962b7fdf9505dc1769602ade44d8e56eda8d45
 RMD160 (oo2c_32-2.0.11.tar.bz2) = c51dc82ec09c9d2f82cb1f10ee7814b3cce38502
@@ -7,7 +7,7 @@ SHA1 (oo2c_64-2.0.11.tar.bz2) = 047992978c584cdd8c47ff07c40dfba79ea97ebe
 RMD160 (oo2c_64-2.0.11.tar.bz2) = ac44ecd15e447326dc851f99b1d064193322a140
 Size (oo2c_64-2.0.11.tar.bz2) = 1504997 bytes
 SHA1 (patch-Makefile) = 7a2e9bcdc36fb56117303f483596dd9d2fff8cd2
-SHA1 (patch-aa) = 0d2e00b36fe9bb022ff499b49408dc420f57b0d0
-SHA1 (patch-ab) = c53da4768af73eebfea2a747876054fa1d9fb733
-SHA1 (patch-ac) = 9313e4b921f18d69abaa0a07f356ebf2734a46db
-SHA1 (patch-ad) = 2dd2ae037c1d7185ae2e87b04428431e3244ff5b
+SHA1 (patch-aa) = 2653852548475f5eab7b5b88703ec356e9eeb5a0
+SHA1 (patch-ab) = 246c0edabfefac3406dbce46baee4ddd8c90f2fe
+SHA1 (patch-ac) = d31a5920d189a0201f10fc0526330c903ae0abc5
+SHA1 (patch-ad) = ff9564734be4774d1b57edfdc349c860f5063b55

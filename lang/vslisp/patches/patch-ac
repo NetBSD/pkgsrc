@@ -1,4 +1,6 @@
-$NetBSD: patch-ac,v 1.1 2002/03/15 00:22:42 jmc Exp $
+$NetBSD: patch-ac,v 1.2 2015/12/29 23:34:57 dholland Exp $
+
+Handle floating values properly.
 
 --- src/l_defs.h.orig	Fri Mar 15 00:16:28 2002
 +++ src/l_defs.h	Fri Mar 15 00:16:40 2002

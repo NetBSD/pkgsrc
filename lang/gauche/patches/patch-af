@@ -1,4 +1,6 @@
-$NetBSD: patch-af,v 1.5 2009/11/27 09:26:07 enami Exp $
+$NetBSD: patch-af,v 1.6 2015/12/29 23:34:47 dholland Exp $
+
+Honor pkgsrc LDFLAGS.
 
 --- ext/dbm/Makefile.in.orig	2009-04-06 11:47:55.000000000 +0900
 +++ ext/dbm/Makefile.in	2009-11-23 09:12:23.000000000 +0900

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 22:50:35 agc Exp $
+$NetBSD: distinfo,v 1.3 2015/12/29 23:34:47 dholland Exp $
 
 SHA1 (gcc-2.95.3.tar.gz) = 535d27038d161c0e7c2662702e11a48aa97ef622
 RMD160 (gcc-2.95.3.tar.gz) = 2c506b7e80cb2b4d9953f4f9753d581cb885f610
@@ -8,26 +8,26 @@ SHA1 (gcc-2.95.3-diff-2002-08-29.gz) = 9e54a31e78070cba3f6840275350bd0cbf20fe84
 RMD160 (gcc-2.95.3-diff-2002-08-29.gz) = cdfa97ed33ad01b5b33f745bdfacf26ec2568b53
 SHA512 (gcc-2.95.3-diff-2002-08-29.gz) = bce31d37f36d9ce1f96c1df617c093940e16efda529b27837e387f71dbd8634e77900312ca8a2fe1124d1f5b89d884ae2521456189a53d57a45c1246199bb9d7
 Size (gcc-2.95.3-diff-2002-08-29.gz) = 564720 bytes
-SHA1 (patch-Makefile.in) = 1d13564b97e2bf97f0bf807e7bd42647e918bc84
+SHA1 (patch-Makefile.in) = 2df7afd44aaf19a1d21ff3f528eb0ea9de1efe65
 SHA1 (patch-aa) = 1d9db3e2fecfd3070abcc930dbe4b37669efb3a7
 SHA1 (patch-ab) = 527cc1593adb1d3e56546fc9791b430921137621
-SHA1 (patch-ac) = 1f95d19e3ee2ea61d366745a330df085c530fd50
+SHA1 (patch-ac) = 723f51fa26a21ac8feb4514bc12d20d23e099662
 SHA1 (patch-ad) = 2fb8cda55220bd202a4b7948277d00f293718caf
 SHA1 (patch-ae) = b9721d3e89a93736b926e1efcfb9d0fb4904277f
 SHA1 (patch-af) = 72d27bfecb2633a1f184cfe9cc8b1194c0d57dfe
 SHA1 (patch-ag) = bb4d84561d20d2379a71a442b8711b2c54cf4bf2
 SHA1 (patch-ah) = 777b4c19c7d86007c69ec9b8c157c73294695241
-SHA1 (patch-ai) = ce25852c0694163b3e880a700304e56edbc9069d
+SHA1 (patch-ai) = 630dc4cf7aa167639f43d78fe40533288e157005
 SHA1 (patch-aj) = 9c957c4e61b67efdb92796fe04e22931cb103b5d
 SHA1 (patch-ak) = cf546c843a3370220360c01b7c7b09365ac1b506
 SHA1 (patch-al) = 4ac1f94d5f12d4419fe7d92f5e3c9aa3b3158a33
-SHA1 (patch-am) = bc18d2055d5af97d648a04af8c89be2627db700b
-SHA1 (patch-gcc_Makefile.in) = 145c9069fd0214c6728f49dc3ee7e8ab5192e828
-SHA1 (patch-gcc_ch_Make-lang.in) = b1d623bd160a68ec5bbb06d7e35420a4d4d4a691
-SHA1 (patch-gcc_cp_Make-lang.in) = 139f754fb020974956d803f6ff920d473b538a90
-SHA1 (patch-gcc_f_Make-lang.in) = 377e02b3a5e2db5dbdc6a0cd27afaba21b9ef1b9
-SHA1 (patch-gcc_intl_Makefile.in) = ee25ce37bb5cd14486e00f40c306a56cd8904d9c
-SHA1 (patch-gcc_java_Make-lang.in) = cd26e7b2dfd5e836eec1078c814ab0dbdd534106
-SHA1 (patch-libchill_Makefile.in) = af050b445fced4f1d54bd88b782c8321975c782d
-SHA1 (patch-libf2c_Makefile.in) = 655592a4107c6f67d4edfd364633dc2f3bd7bba7
-SHA1 (patch-libio_Makefile.in) = fbced91c499898f49ff06913b51a7528be0ea4ee
+SHA1 (patch-am) = 7bf96bdb967d804fa802df3c5241dcbe7c9027b7
+SHA1 (patch-gcc_Makefile.in) = f840040178c68d49d9c124cb3e3b176847462c0c
+SHA1 (patch-gcc_ch_Make-lang.in) = b98b068719449a9ac1e90919005a5db87bf11d3c
+SHA1 (patch-gcc_cp_Make-lang.in) = 5a1ad4e3ad005223b6c0e85ab4206de341683b32
+SHA1 (patch-gcc_f_Make-lang.in) = 4d42f056848411461799637531fbaeac6f2577c9
+SHA1 (patch-gcc_intl_Makefile.in) = d4371c5fa7d29bd474e99243c5cbe0b21fb6467c
+SHA1 (patch-gcc_java_Make-lang.in) = 69cc282b4971e70685e15b189e08a764443aaf36
+SHA1 (patch-libchill_Makefile.in) = a8242832332abf92f9e37698a24cc2c8035e086f
+SHA1 (patch-libf2c_Makefile.in) = 369e306b5641d72f383918d5c0d10027e51cace2
+SHA1 (patch-libio_Makefile.in) = d4fa2ea823198b45d3a17daa03d4cd3ea2657b56

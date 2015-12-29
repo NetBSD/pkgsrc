@@ -1,4 +1,6 @@
-$NetBSD: patch-ad,v 1.1 2001/04/12 21:06:45 jtb Exp $
+$NetBSD: patch-ad,v 1.2 2015/12/29 23:34:56 dholland Exp $
+
+Honor PREFIX.
 
 --- prelude.scheme.orig	Thu Apr 12 19:36:23 2001
 +++ prelude.scheme

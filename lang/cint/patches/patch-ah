@@ -1,4 +1,6 @@
-$NetBSD: patch-ah,v 1.1 2008/09/05 05:27:31 dholland Exp $
+$NetBSD: patch-ah,v 1.2 2015/12/29 23:34:44 dholland Exp $
+
+Silence integer/pointer size warnings.
 
 --- src/bc_exec.cxx~	2005-05-06 11:37:47.000000000 -0400
 +++ src/bc_exec.cxx	2008-09-04 23:52:56.000000000 -0400
