@@ -1,4 +1,6 @@
-$NetBSD: patch-packages_CLPBN_horus_Util.h,v 1.1 2014/01/06 22:13:39 joerg Exp $
+$NetBSD: patch-packages_CLPBN_horus_Util.h,v 1.2 2015/12/29 23:34:57 dholland Exp $
+
+Fix C++ dialect.
 
 --- packages/CLPBN/horus/Util.h.orig	2014-01-06 14:34:17.000000000 +0000
 +++ packages/CLPBN/horus/Util.h

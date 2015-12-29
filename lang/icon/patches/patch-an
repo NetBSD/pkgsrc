@@ -1,4 +1,6 @@
-$NetBSD: patch-an,v 1.5 2003/06/06 08:58:43 jtb Exp $
+$NetBSD: patch-an,v 1.6 2015/12/29 23:34:48 dholland Exp $
+
+Use the right library path.
 
 --- ipl/Makefile.orig
 +++ ipl/Makefile

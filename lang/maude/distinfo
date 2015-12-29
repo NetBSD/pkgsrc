@@ -1,21 +1,21 @@
-$NetBSD: distinfo,v 1.11 2015/11/03 22:50:38 agc Exp $
+$NetBSD: distinfo,v 1.12 2015/12/29 23:34:51 dholland Exp $
 
 SHA1 (Maude-2.6.tar.gz) = 3f1ec2f39a22942bb096102d1d8d6eed4510483e
 RMD160 (Maude-2.6.tar.gz) = a9387701016e04ba4a256c3db8c9f10195147183
 SHA512 (Maude-2.6.tar.gz) = 3931a540f72acdf2de532eff7b55ba4c9496b38a4b036f4e37d16b860f87728d6df5b9e377fd3489e55f7c369bca5eb9cded9b7a75032c410eff9a6e85da3fab
 Size (Maude-2.6.tar.gz) = 1600026 bytes
-SHA1 (patch-ab) = ff1caa60e4b57dd6a847e28d25efa9be8474f15a
-SHA1 (patch-ac) = d77e8e817cb33c2594eacfa0cb44b20b63e71b8f
-SHA1 (patch-src_BuiltIn_stringOpSymbol.cc) = bb79d812dbb5d217ba50c71568e4b9da071917bc
-SHA1 (patch-src_Mixfix_bottom.yy) = 778f004b2590612a693867f44e0803e557076b69
-SHA1 (patch-src_Mixfix_commands.yy) = 8764520a8e2417408e1d9cd5820dac96cb7b5de1
-SHA1 (patch-src_Mixfix_interact.cc) = 0d15aad293cf28bde3b2a659c52dab8fe5a05357
-SHA1 (patch-src_Mixfix_lexerAux.cc) = c8bd0d1e68aec2aa2b21b69520172f2de851d661
-SHA1 (patch-src_Mixfix_lexerAux.hh) = 1e52d2346dfde0477b7db1882c5d67c1dce4502a
-SHA1 (patch-src_Mixfix_modules.yy) = cfa794edd400f1934a8bbba3bdb5051d53a09090
-SHA1 (patch-src_Mixfix_token.cc) = f8317efc2f5636749f597e8f252398d6be5c2dec
-SHA1 (patch-src_Mixfix_top.yy) = 884758d2b2e3f5d55dca51e35bf5d0c4e8ad79a0
-SHA1 (patch-src_ObjectSystem_configSymbol.hh) = c5ea2818a62a363e0fd598b98051abdeb095b503
-SHA1 (patch-src_ObjectSystem_objectMap.cc) = bb6f20ba7fd73133a5e5799e6bac0ebbb744bb55
-SHA1 (patch-src_ObjectSystem_objectSystemRewritingContext.hh) = f3000c8528b550096fb7355669033061db1ad68b
-SHA1 (patch-src_Utility_ropeStuff.hh) = 421c3d104aef7e4e908383220c502d3d21b3e51b
+SHA1 (patch-ab) = 8c20e9f3c8142a93355bf4e153f2004ce8a90a81
+SHA1 (patch-ac) = 5b3eb5bb70989d1d7b699ff41577ca7426de249d
+SHA1 (patch-src_BuiltIn_stringOpSymbol.cc) = 77dce3ecc2311374cdc325b5b36bbaab37ba9766
+SHA1 (patch-src_Mixfix_bottom.yy) = 0f296d2f2f14f7a7671a3881941a60c640421f99
+SHA1 (patch-src_Mixfix_commands.yy) = fb0b64a970634e58e97e98259e739b5f7ea807d9
+SHA1 (patch-src_Mixfix_interact.cc) = b1dd55d6edf7d0084a8bdf3dbecc9252515e693c
+SHA1 (patch-src_Mixfix_lexerAux.cc) = ba9916527e3618efa6173c4c84b2dbf4b8baf67d
+SHA1 (patch-src_Mixfix_lexerAux.hh) = fb2d20bba9050b9ea16952f6bb22123072ffb1e7
+SHA1 (patch-src_Mixfix_modules.yy) = d1b5a65d92aed7c32ffe2e5e854fa3aa750610c1
+SHA1 (patch-src_Mixfix_token.cc) = ff3637adc38007886f3086354b5ef05d053c4e96
+SHA1 (patch-src_Mixfix_top.yy) = 6e4c3d1bf434a9f6807d51e2c811cf9d61cd0ca0
+SHA1 (patch-src_ObjectSystem_configSymbol.hh) = 8a09e7d56f2838e3212c546a8fc3230dfa83db98
+SHA1 (patch-src_ObjectSystem_objectMap.cc) = c5fa4e5f50cf97f379776265ebb348c0ea11230e
+SHA1 (patch-src_ObjectSystem_objectSystemRewritingContext.hh) = ec1f2d654f49cdfca4245537731ce49749d4da80
+SHA1 (patch-src_Utility_ropeStuff.hh) = 6f9a674853ecc576e6938261ec5593a34b2e7bc1

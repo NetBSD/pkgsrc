@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/04/22 13:51:26 agc Exp $
+$NetBSD: patch-aa,v 1.2 2015/12/29 23:34:49 dholland Exp $
+
+Honor PREFIX.
 
 --- bin/jasmin.orig	Mon Mar 25 13:43:14 2002
 +++ bin/jasmin	Mon Mar 25 13:44:04 2002

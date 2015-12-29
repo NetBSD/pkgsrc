@@ -1,4 +1,6 @@
-$NetBSD: patch-bm,v 1.1 2010/03/03 13:31:54 is Exp $
+$NetBSD: patch-bm,v 1.2 2015/12/29 23:34:52 dholland Exp $
+
+DESTDIR support.
 
 --- install.sh.orig	2000-10-31 23:53:40.000000000 +0100
 +++ install.sh

@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.6 2014/07/06 17:46:12 jakllsch Exp $
+$NetBSD: patch-ab,v 1.7 2015/12/29 23:34:56 dholland Exp $
+
+Agree on who installs what vs. the pkgsrc makefile.
 
 --- Makefile2.m4.orig	2005-12-06 21:10:59.000000000 -0500
 +++ Makefile2.m4	2008-07-14 00:02:37.000000000 -0400

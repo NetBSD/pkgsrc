@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.8 2015/11/03 22:50:37 agc Exp $
+$NetBSD: distinfo,v 1.9 2015/12/29 23:34:48 dholland Exp $
 
 SHA1 (intercal-0.29.tar.gz) = 6f496b158e5f9dbf05a81c5e75f2d61698e65b15
 RMD160 (intercal-0.29.tar.gz) = 980b83dfb9aa0c738e6135f65ff9e9bb4c01c8ff
 SHA512 (intercal-0.29.tar.gz) = ec28a1117bd973a9ee4ee4f1fe1c6e8544d050dd5e0f60ed77980273b926f08849dbdb005d670ad84454b83527c47c204123fcac7393f7b7794e7cac1af3f5f0
 Size (intercal-0.29.tar.gz) = 924828 bytes
-SHA1 (patch-aa) = 4ed418a3fd4fd1e690a64b14bf5cb674db450e79
-SHA1 (patch-ae) = a919353b39286ab51d3167ff755e5fed1bc4be65
-SHA1 (patch-ag) = c7aa0d9090e4e9d6c1342447b1390003c5b4376c
+SHA1 (patch-aa) = b6f7d5e4a46361f5af3ce3e1a646bc70c5b01ca6
+SHA1 (patch-ae) = bb28fb6edd30e5d3dd1c41b42a1784cadb9428b0
+SHA1 (patch-ag) = faf03857ad487796879632749489ad33b8648ba2
