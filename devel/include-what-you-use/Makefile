@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/12/30 16:16:13 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2 2015/12/30 16:23:52 wiz Exp $
 
 DISTNAME=	include-what-you-use-0.5.src
 PKGNAME=	${DISTNAME:.src=}
@@ -12,12 +12,11 @@ COMMENT=	Analyze \#includes in C and C++ source files
 
 WRKSRC=		${WRKDIR}/include-what-you-use
 USE_CMAKE=	yes
-CMAKE_ARGS=     -DIWYU_LLVM_ROOT_PATH=${BUILDLINK_DIR}
+CMAKE_ARGS=     -DIWYU_LLVM_ROOT_PATH:PATH=${BUILDLINK_PREFIX.clang}
 USE_LANGUAGES=	c c++
 GCC_REQD=	4.8
 
-USE_TOOLS=	python:run
-REPLACE_PYTHON= iwyu_tool.py fix_includes.py
+REPLACE_PYTHON= *.py
 
 .include "../../lang/clang/buildlink3.mk"
 .include "../../lang/python/application.mk"
