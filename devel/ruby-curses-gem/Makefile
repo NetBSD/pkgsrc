@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/08/18 07:31:05 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2015/12/30 15:49:10 taca Exp $
 
 DISTNAME=	curses-1.0.1
 PKGREVISION=	1
@@ -9,7 +9,7 @@ HOMEPAGE=	https://github.com/ruby/curses
 COMMENT=	Ruby binding for curses, ncurses, and PDCurses
 LICENSE=	2-clause-bsd
 
-RUBY_VERSION_SUPPORTED= 21 # 22
+RUBY_VERSION_SUPPORTED= 21 22 23
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/curses.buildlink3.mk"
