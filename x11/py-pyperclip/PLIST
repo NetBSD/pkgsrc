@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/08/23 14:15:55 leot Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/12/30 15:03:45 leot Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -6,6 +6,12 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/pyperclip/__init__.py
 ${PYSITELIB}/pyperclip/__init__.pyc
 ${PYSITELIB}/pyperclip/__init__.pyo
-${PYSITELIB}/pyperclip/pyperclip.py
-${PYSITELIB}/pyperclip/pyperclip.pyc
-${PYSITELIB}/pyperclip/pyperclip.pyo
+${PYSITELIB}/pyperclip/clipboards.py
+${PYSITELIB}/pyperclip/clipboards.pyc
+${PYSITELIB}/pyperclip/clipboards.pyo
+${PYSITELIB}/pyperclip/exceptions.py
+${PYSITELIB}/pyperclip/exceptions.pyc
+${PYSITELIB}/pyperclip/exceptions.pyo
+${PYSITELIB}/pyperclip/windows.py
+${PYSITELIB}/pyperclip/windows.pyc
+${PYSITELIB}/pyperclip/windows.pyo
