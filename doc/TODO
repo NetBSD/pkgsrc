@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15249 2015/12/30 15:02:30 leot Exp $
+$NetBSD: TODO,v 1.15250 2015/12/30 15:44:25 taca Exp $
 
 Suggested new packages
 ======================
@@ -1566,7 +1566,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o rtcw-1.41.3
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o rubber-1.2
-	o ruby-2.3.0
 	o ruby-actionmailer-4.2.5
 	o ruby-actionpack-4.2.5
 	o ruby-activemodel-4.2.5
