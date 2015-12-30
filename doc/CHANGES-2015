@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5184 2015/12/30 00:12:13 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.5185 2015/12/30 00:18:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8505,3 +8505,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated devel/py-enum34 to 1.1.2 [wiz 2015-12-30]
 	Updated misc/calibre to 2.47.0 [wiz 2015-12-30]
 	Updated devel/py-decorator to 4.0.6 [wiz 2015-12-30]
+	Updated converters/libcdr to 0.1.2 [wiz 2015-12-30]
