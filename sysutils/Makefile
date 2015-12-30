@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.657 2015/12/30 14:17:58 leot Exp $
+# $NetBSD: Makefile,v 1.658 2015/12/30 14:23:22 leot Exp $
 #
 
 COMMENT=	System utilities
@@ -428,6 +428,7 @@ SUBDIR+=	py-setconf
 SUBDIR+=	py-setproctitle
 SUBDIR+=	py-structlog
 SUBDIR+=	py-syslog-ng
+SUBDIR+=	py-watchdog
 SUBDIR+=	py-xattr
 SUBDIR+=	qlogtools
 SUBDIR+=	radeontool
