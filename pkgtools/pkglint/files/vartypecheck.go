@@ -193,7 +193,7 @@ func (cv *VartypeCheck) DistSuffix() {
 func (cv *VartypeCheck) EmulPlatform() {
 
 	if m, opsys, arch := match2(cv.value, `^(\w+)-(\w+)$`); m {
-		if !matches(opsys, `^(?:bsdos|cygwin|darwin|dragonfly|freebsd|haiku|hpux|interix|irix|linux|netbsd|openbsd|osf1|sunos|solaris)$`) {
+		if !matches(opsys, `^(?:bitrig|bsdos|cygwin|darwin|dragonfly|freebsd|haiku|hpux|interix|irix|linux|mirbsd|netbsd|openbsd|osf1|sunos|solaris)$`) {
 			cv.line.warnf("Unknown operating system: %s", opsys)
 		}
 		// no check for os_version
@@ -451,7 +451,7 @@ func (cv *VartypeCheck) PlatformTriple() {
 	rePart := `(?:\[[^\]]+\]|[^-\[])+`
 	reTriple := `^(` + rePart + `)-(` + rePart + `)-(` + rePart + `)$`
 	if m, opsys, _, arch := match3(cv.value, reTriple); m {
-		if !matches(opsys, `^(?:\*|BSDOS|Cygwin|Darwin|DragonFly|FreeBSD|Haiku|HPUX|Interix|IRIX|Linux|NetBSD|OpenBSD|OSF1|QNX|SunOS)$`) {
+		if !matches(opsys, `^(?:\*|Bitrig|BSDOS|Cygwin|Darwin|DragonFly|FreeBSD|Haiku|HPUX|Interix|IRIX|Linux|MirBSD|NetBSD|OpenBSD|OSF1|QNX|SunOS)$`) {
 			cv.line.warnf("Unknown operating system: %s", opsys)
 		}
 		// no check for os_version
