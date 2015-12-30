@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2015/07/01 13:54:22 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2015/12/30 15:00:27 leot Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -46,9 +46,6 @@ ${PYSITELIB}/pyasn1/compat/__init__.pyo
 ${PYSITELIB}/pyasn1/compat/binary.py
 ${PYSITELIB}/pyasn1/compat/binary.pyc
 ${PYSITELIB}/pyasn1/compat/binary.pyo
-${PYSITELIB}/pyasn1/compat/iterfunc.py
-${PYSITELIB}/pyasn1/compat/iterfunc.pyc
-${PYSITELIB}/pyasn1/compat/iterfunc.pyo
 ${PYSITELIB}/pyasn1/compat/octets.py
 ${PYSITELIB}/pyasn1/compat/octets.pyc
 ${PYSITELIB}/pyasn1/compat/octets.pyo
