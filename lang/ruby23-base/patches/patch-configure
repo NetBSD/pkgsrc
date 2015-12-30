@@ -1,0 +1,110 @@
+$NetBSD: patch-configure,v 1.1 2015/12/30 14:59:42 taca Exp $
+
+* Adding Interix support.
+* Ignore doxygen.
+
+--- configure.orig	2015-12-24 16:44:18.000000000 +0000
++++ configure
+@@ -5676,7 +5676,7 @@ esac
+ else
+     if test x"$target_alias" = x; then
+ 	case "$target_os" in #(
+-  darwin*) :
++  notdarwin*) :
+ 
+ 	    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for real target cpu" >&5
+ $as_echo_n "checking for real target cpu... " >&6; }
+@@ -9172,6 +9172,10 @@ esac
+ 		ac_cv_func_isinf=yes
+ 		ac_cv_func_isnan=yes
+ 		 ;; #(
++  interix*) :
++	LIBS="-lm $LIBS"
++	ac_cv_func_getpgrp_void=yes
++		 ;; #(
+   nacl) :
+ 
+   LIBS="-lm $LIBS"
+@@ -17900,6 +17904,8 @@ else
+ # ifdef _MSC_VER
+ #  include <malloc.h>
+ #  define alloca _alloca
++# elif defined(__NetBSD__) || defined(__FreeBSD__) || defined(__DragonFly__) || defined(__OpenBSD__)
++#   include <stdlib.h>
+ # else
+ #  ifdef HAVE_ALLOCA_H
+ #   include <alloca.h>
+@@ -22340,7 +22346,9 @@ esac ;; #(
+   interix*) :
+     	: ${LDSHARED='$(CC) -shared'}
+ 			XLDFLAGS="$XLDFLAGS -Wl,-E"
++			DLDFLAGS="$DLDFLAGS "'-Wl,-h,$(.TARGET) -Wl,--image-base,$$(($$RANDOM %4096/2*262144+1342177280))'
+ 			LIBPATHFLAG=" -L%1\$-s"
++			RPATHFLAG=' -Wl,-R%1$-s'
+ 			rb_cv_dlopen=yes ;; #(
+   freebsd*|dragonfly*) :
+ 
+@@ -23518,7 +23526,7 @@ esac
+   freebsd*|dragonfly*) :
+ 
+ 	SOLIBS='$(LIBS)'
+-	LIBRUBY_SO='lib$(RUBY_SO_NAME).so.$(MAJOR)$(MINOR)'
++	LIBRUBY_SO='lib$(RUBY_SO_NAME).so.$(MAJOR)$(MINOR)$(TEENY)'
+ 	if test "$rb_cv_binary_elf" != "yes" ; then
+ 	    LIBRUBY_SO="$LIBRUBY_SO.\$(TEENY)"
+ 	    LIBRUBY_ALIASES=''
+@@ -23587,7 +23595,12 @@ esac
+ 	 ;; #(
+   interix*) :
+ 
+-	LIBRUBYARG_SHARED='-L. -L${libdir} -l$(RUBY_SO_NAME)'
++	SOLIBS='$(LIBS)'
++	LIBRUBY_SO='lib$(RUBY_SO_NAME).so.$(MAJOR)$(MINOR).$(TEENY)'
++	# link explicitly to 0x48000000
++	LIBRUBY_DLDFLAGS='-Wl,-h,lib$(RUBY_SO_NAME).so.$(MAJOR)$(MINOR) -Wl,--image-base,1207959552'
++	LIBRUBYARG_SHARED='-Wl,-R -Wl,${PREFIX}/lib} -L${libdir} -L. -l$(RUBY_SO_NAME)'
++	LIBRUBY_ALIASES='lib$(RUBY_SO_NAME).so.$(MAJOR)$(MINOR) lib$(RUBY_SO_NAME).so'
+ 	 ;; #(
+   mingw*|cygwin*|mswin*) :
+ 
+@@ -23755,7 +23768,7 @@ if test "$enable_rpath" = yes; then
+ esac
+     rpathflag=`IFS="$PATH_SEPARATOR"
+         echo x "$rpathflag" |
+-        sed "s/^x *//;s${IFS}"'%1\\$-s'"${IFS}${libprefix}${IFS}g;s${IFS}%s${IFS}${libprefix}${IFS}g"
++        sed "s/^x *//;s${IFS}"'%1\\$-s'"${IFS}${libprefix}${IFS}g;s${IFS}%s${IFS}${PREFIX}/lib${IFS}g"
+     `
+     LIBRUBY_RPATHFLAGS="$LIBRUBY_RPATHFLAGS${rpathflag}"
+     LIBRUBYARG_SHARED="$LIBRUBY_RPATHFLAGS $LIBRUBYARG_SHARED"
+@@ -24146,11 +24159,7 @@ if test "$install_doc" != no; then
+     else
+ 	RDOCTARGET="nodoc"
+     fi
+-    if test "$install_capi" != no -a -n "$DOXYGEN"; then
+-	CAPITARGET="capi"
+-    else
+-	CAPITARGET="nodoc"
+-    fi
++    CAPITARGET="nodoc"
+ else
+     RDOCTARGET="nodoc"
+     CAPITARGET="nodoc"
+@@ -26183,17 +26192,7 @@ which seems to be undefined.  Please mak
+     "Makefile":F)
+     tmpmk=confmk$$.tmp
+     {
+-	if test ${VCS+set}; then
+-	    :
+-	elif svn info "$srcdir" > /dev/null 2>&1; then
+-	    VCS='svn'
+-	elif test -d "$srcdir/.git/svn"; then
+-	    VCS='git svn'
+-	elif test -d "$srcdir/.git"; then
+-	    VCS='git'
+-	else
+-	    VCS='echo cannot'
+-	fi
++	VCS='echo cannot'
+ 	case "$VCS" in #(
+   svn) :
+     VCSUP='$(VCS) up $(SVNUPOPTIONS)' ;; #(
