@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.50 2015/11/27 13:52:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.51 2015/12/30 00:08:33 wiz Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -64,9 +64,6 @@ lib/calibre/calibre/devices/android/driver.py
 lib/calibre/calibre/devices/apple/__init__.py
 lib/calibre/calibre/devices/apple/driver.py
 lib/calibre/calibre/devices/apple/itunes.py
-lib/calibre/calibre/devices/bambook/__init__.py
-lib/calibre/calibre/devices/bambook/driver.py
-lib/calibre/calibre/devices/bambook/libbambookcore.py
 lib/calibre/calibre/devices/binatone/__init__.py
 lib/calibre/calibre/devices/binatone/driver.py
 lib/calibre/calibre/devices/blackberry/__init__.py
@@ -450,6 +447,7 @@ lib/calibre/calibre/ebooks/oeb/polish/css.py
 lib/calibre/calibre/ebooks/oeb/polish/embed.py
 lib/calibre/calibre/ebooks/oeb/polish/errors.py
 lib/calibre/calibre/ebooks/oeb/polish/fonts.py
+lib/calibre/calibre/ebooks/oeb/polish/images.py
 lib/calibre/calibre/ebooks/oeb/polish/import_book.py
 lib/calibre/calibre/ebooks/oeb/polish/jacket.py
 lib/calibre/calibre/ebooks/oeb/polish/main.py
@@ -800,6 +798,7 @@ lib/calibre/calibre/gui2/dialogs/drm_error_ui.py
 lib/calibre/calibre/gui2/dialogs/duplicates.py
 lib/calibre/calibre/gui2/dialogs/edit_authors_dialog.py
 lib/calibre/calibre/gui2/dialogs/edit_authors_dialog_ui.py
+lib/calibre/calibre/gui2/dialogs/exim.py
 lib/calibre/calibre/gui2/dialogs/job_view_ui.py
 lib/calibre/calibre/gui2/dialogs/jobs_ui.py
 lib/calibre/calibre/gui2/dialogs/match_books.py
@@ -958,10 +957,12 @@ lib/calibre/calibre/gui2/store/search/search.py
 lib/calibre/calibre/gui2/store/search/search_ui.py
 lib/calibre/calibre/gui2/store/search_result.py
 lib/calibre/calibre/gui2/store/stores/__init__.py
+lib/calibre/calibre/gui2/store/stores/amazon_au_plugin.py
 lib/calibre/calibre/gui2/store/stores/amazon_ca_plugin.py
 lib/calibre/calibre/gui2/store/stores/amazon_de_plugin.py
 lib/calibre/calibre/gui2/store/stores/amazon_es_plugin.py
 lib/calibre/calibre/gui2/store/stores/amazon_fr_plugin.py
+lib/calibre/calibre/gui2/store/stores/amazon_in_plugin.py
 lib/calibre/calibre/gui2/store/stores/amazon_it_plugin.py
 lib/calibre/calibre/gui2/store/stores/amazon_plugin.py
 lib/calibre/calibre/gui2/store/stores/amazon_uk_plugin.py
@@ -1137,7 +1138,6 @@ lib/calibre/calibre/library/custom_columns.py
 lib/calibre/calibre/library/database.py
 lib/calibre/calibre/library/database2.py
 lib/calibre/calibre/library/field_metadata.py
-lib/calibre/calibre/library/move.py
 lib/calibre/calibre/library/prefs.py
 lib/calibre/calibre/library/restore.py
 lib/calibre/calibre/library/save_to_disk.py
@@ -1156,7 +1156,6 @@ lib/calibre/calibre/library/server/xml.py
 lib/calibre/calibre/library/sqlite.py
 lib/calibre/calibre/library/test.py
 lib/calibre/calibre/libunzip.py
-lib/calibre/calibre/libwand.py
 lib/calibre/calibre/linux.py
 lib/calibre/calibre/plugins/_patiencediff_c.so
 lib/calibre/calibre/plugins/_regex.so
@@ -1244,6 +1243,7 @@ lib/calibre/calibre/utils/config.py
 lib/calibre/calibre/utils/config_base.py
 lib/calibre/calibre/utils/date.py
 lib/calibre/calibre/utils/dbus_service.py
+lib/calibre/calibre/utils/exim.py
 lib/calibre/calibre/utils/file_associations.py
 lib/calibre/calibre/utils/file_type_icons.py
 lib/calibre/calibre/utils/filenames.py
@@ -1313,7 +1313,6 @@ lib/calibre/calibre/utils/opensearch/description.py
 lib/calibre/calibre/utils/opensearch/query.py
 lib/calibre/calibre/utils/opensearch/url.py
 lib/calibre/calibre/utils/ordered_dict.py
-lib/calibre/calibre/utils/pdftk.py
 lib/calibre/calibre/utils/podofo/__init__.py
 lib/calibre/calibre/utils/pyconsole/__init__.py
 lib/calibre/calibre/utils/pyconsole/console.py
@@ -1571,6 +1570,7 @@ share/calibre/images/character-set.png
 share/calibre/images/clear_left.png
 share/calibre/images/code.png
 share/calibre/images/column.png
+share/calibre/images/compress-image.png
 share/calibre/images/config.png
 share/calibre/images/connect_share.png
 share/calibre/images/connect_share_on.png
