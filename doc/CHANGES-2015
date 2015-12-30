@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5193 2015/12/30 14:24:18 leot Exp $
+$NetBSD: CHANGES-2015,v 1.5194 2015/12/30 14:40:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8515,3 +8515,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated misc/dpkg to 1.16.17 [bsiegert 2015-12-30]
 	Added sysutils/py-pathtools version 0.1.2 [leot 2015-12-30]
 	Added sysutils/py-watchdog version 0.8.3 [leot 2015-12-30]
+	Updated net/rabbiter to 2.0.1nb1 [taca 2015-12-30]
