@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.87 2015/06/14 21:46:34 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.88 2015/12/30 10:15:07 prlw1 Exp $
 bin/gtk-builder-convert
 bin/gtk-demo
 bin/gtk-query-immodules-2.0
@@ -360,7 +360,6 @@ share/gtk-doc/html/gail-libgail-util/gail-libgail-util-GailTextUtil.html
 share/gtk-doc/html/gail-libgail-util/gail-libgail-util.devhelp2
 share/gtk-doc/html/gail-libgail-util/home.png
 share/gtk-doc/html/gail-libgail-util/index.html
-share/gtk-doc/html/gail-libgail-util/index.sgml
 share/gtk-doc/html/gail-libgail-util/left-insensitive.png
 share/gtk-doc/html/gail-libgail-util/left.png
 share/gtk-doc/html/gail-libgail-util/libgail-util-main.html
@@ -449,7 +448,6 @@ share/gtk-doc/html/gdk2/heart.png
 share/gtk-doc/html/gdk2/home.png
 share/gtk-doc/html/gdk2/icon.png
 share/gtk-doc/html/gdk2/index.html
-share/gtk-doc/html/gdk2/index.sgml
 share/gtk-doc/html/gdk2/iron_cross.png
 share/gtk-doc/html/gdk2/left-insensitive.png
 share/gtk-doc/html/gdk2/left.png
@@ -900,7 +898,6 @@ share/gtk-doc/html/gtk2/icon-view.png
 share/gtk-doc/html/gtk2/image-missing.png
 share/gtk-doc/html/gtk2/image.png
 share/gtk-doc/html/gtk2/index.html
-share/gtk-doc/html/gtk2/index.sgml
 share/gtk-doc/html/gtk2/label.png
 share/gtk-doc/html/gtk2/layout-btlr.png
 share/gtk-doc/html/gtk2/layout-btrl.png
