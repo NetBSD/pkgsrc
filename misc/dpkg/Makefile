@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2015/08/18 07:31:13 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2015/12/30 12:47:57 bsiegert Exp $
 #
 
-DISTNAME=	dpkg_1.16.10
+DISTNAME=	dpkg_1.16.17
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	4
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/d/dpkg/}
 EXTRACT_SUFX=	.tar.xz
@@ -21,7 +20,7 @@ BUILD_DEFS+=	VARBASE
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		gmake msgfmt perl:run gtar:run
+USE_TOOLS+=		gmake msgfmt perl:run gtar:run pod2man
 USE_NCURSES=		yes	# needs tigetstr()
 
 REPLACE_PERL=		scripts/*.pl
