@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2015/12/12 01:28:15 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.5 2015/12/30 04:37:27 kamil Exp $
 # used by mail/thunderbird-enigmail/Makefile
 # used by mail/seamonkey-enigmail/Makefile
 
@@ -45,7 +45,7 @@ XPIFILE=	${WRKSRC}/build/${ENIGMAILXPI}
 # Installation of extensions: http://kb.mozillazine.org/Installing_extensions
 # Model installation: https://aur.archlinux.org/packages/th/thunderbird-enigmail/PKGBUILD
 do-install:
-	${RUN} EMID=`${SED} -n '/.*<em:id>\\(.*\\)<\\/em:id>.*/{s//\\1/p;q}' \
+	${RUN} EMID=`${SED} -n '/.*<em:id>\\(.*\\)<\\/em:id>.*/{s//\\1/p;q;}' \
 		${WRKSRC}/package/install.rdf` && \
 		${INSTALL_DATA_DIR} ${DESTDIR}${XPIDIR}/"$$EMID" && \
 		unzip -d ${DESTDIR}${XPIDIR}/"$$EMID" \
