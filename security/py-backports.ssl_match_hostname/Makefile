@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2015/12/05 21:25:56 adam Exp $
+# $NetBSD: Makefile,v 1.4 2015/12/30 15:02:06 leot Exp $
 
-DISTNAME=	backports.ssl_match_hostname-3.4.0.2
+DISTNAME=	backports.ssl_match_hostname-3.5.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	python security www
-MASTER_SITES=	https://pypi.python.org/packages/source/b/backports.ssl_match_hostname/
+MASTER_SITES=	${MASTER_SITE_PYPI}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pypi.python.org/pypi/backports.ssl_match_hostname
@@ -12,5 +12,5 @@ LICENSE=	python-software-foundation
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # included in 3.2+
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
