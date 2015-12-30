@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2015/12/30 16:16:13 bsiegert Exp $
+bin/fix_includes.py
+bin/include-what-you-use
+bin/iwyu_tool.py
