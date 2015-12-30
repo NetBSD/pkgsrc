@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2013/06/30 14:14:10 rodent Exp $
+# $NetBSD: Makefile,v 1.18 2015/12/30 02:59:07 dholland Exp $
 #
 
 DISTNAME=	Cg-3.1_April2012_x86${DIST_ARCH}
 PKGNAME=	${DISTNAME:S/-/-compiler-/:S/_April2012_x86${DIST_ARCH}//}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://developer.download.nvidia.com/cg/Cg_3.1/
 EXTRACT_SUFX=	.tgz
@@ -41,7 +42,7 @@ PLIST_SRC=		PLIST.common
 .endif
 
 INSTALLATION_DIRS+=	bin include/Cg share/doc/Cg-compiler \
-			share/doc/html/Cg-compiler \
+			share/doc/Cg-compiler/html \
 			share/examples/Cg-compiler/Direct3D10/advanced/cgfx_buffer_lighting \
 			share/examples/Cg-compiler/Direct3D10/advanced/combine_programs \
 			share/examples/Cg-compiler/Direct3D10/advanced/custom_state_assignments \
@@ -162,7 +163,7 @@ do-install:
 		${DESTDIR}${PREFIX}/include/Cg
 	${INSTALL_DATA} ${WRKSRC}/usr/local/Cg/README ${DESTDIR}${PREFIX}/share/doc/Cg-compiler
 	${INSTALL_DATA} ${WRKSRC}/usr/local/Cg/docs/Cg* ${DESTDIR}${PREFIX}/share/doc/Cg-compiler
-	${INSTALL_DATA} ${WRKSRC}/usr/local/Cg/docs/html/* ${DESTDIR}${PREFIX}/share/doc/html/Cg-compiler
+	${INSTALL_DATA} ${WRKSRC}/usr/local/Cg/docs/html/* ${DESTDIR}${PREFIX}/share/doc/Cg-compiler/html
 	cd ${WRKSRC}/usr/local/Cg/examples && \
 		${INSTALL_DATA} Direct3D10/advanced/Direct3D10_Advanced_20* \
 			${DESTDIR}${PREFIX}/share/examples/Cg-compiler/Direct3D10/advanced && \
