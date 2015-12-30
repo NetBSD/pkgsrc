@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.656 2015/12/27 21:06:49 wiz Exp $
+# $NetBSD: Makefile,v 1.657 2015/12/30 14:17:58 leot Exp $
 #
 
 COMMENT=	System utilities
@@ -421,6 +421,7 @@ SUBDIR+=	py-kazoo
 SUBDIR+=	py-magic
 SUBDIR+=	py-notify
 SUBDIR+=	py-notify-python
+SUBDIR+=	py-pathtools
 SUBDIR+=	py-pefile
 SUBDIR+=	py-psutil
 SUBDIR+=	py-setconf
