@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.154 2015/12/29 00:57:28 rillig Exp $
+# $NetBSD: rubyversion.mk,v 1.155 2015/12/30 14:49:37 taca Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -10,7 +10,7 @@
 # RUBY_VERSION_DEFAULT
 #	The preferered Ruby version to use.
 #
-#		Possible values: 18 200 21 22
+#		Possible values: 18 200 21 22 23
 #		Default: 200
 #
 # RUBY_BUILD_RDOC
@@ -41,8 +41,8 @@
 # RUBY_VERSION_SUPPORTED
 #	The Ruby versions that are acceptable for the package.
 #
-#		Possible values: 18 200 21 22
-#		Default: 200 21
+#		Possible values: 18 200 21 22 23
+#		Default: 200 21 22 23
 #
 # RUBY_NOVERSION
 #	If "Yes", the package dosen't depend on any version of Ruby, such
@@ -69,7 +69,7 @@
 # RUBY_VER
 #	Really selected version of ruby.
 #
-#		Possible values: 18 200 21 22
+#		Possible values: 18 200 21 22 23
 #
 #	Use this variable in pkgsrc's Makefile
 #
@@ -80,7 +80,7 @@
 #	The value of RUBY_PKGPREFIX is "ruby-" and concatination of Ruby's
 #	major and minor version unless RUBY_VER is "200".
 #
-#		Example values: ruby18 ruby200 ruby21 ruby22
+#		Example values: ruby18 ruby200 ruby21 ruby22 ruby23
 #
 # RUBY_ABI_VERSION
 #	Ruby's ABI version.
@@ -111,7 +111,7 @@
 #	The value of RUBY_SUFFIX is concatination of Ruby's major and minor
 #	unless RUBY_VER is "200".
 #
-#		Possible values: 18 200 21 22
+#		Possible values: 18 200 21 22 23
 #
 # RUBY_VERSION
 #	Version of real Ruby's version excluding patchlevel.
@@ -230,16 +230,21 @@ RUBY18_VERSION=		1.8.7
 RUBY200_VERSION=	2.0.0
 RUBY21_VERSION=		2.1.8
 RUBY22_VERSION=		2.2.4
+RUBY23_VERSION=		2.3.0
 
-# patch
+# patch level
 RUBY18_PATCHLEVEL=	pl374
 RUBY200_PATCHLEVEL=	p648
+#RUBY21_PATCHLEVEL=	p440
+#RUBY22_PATCHLEVEL=	p230
+#RUBY23_PATCHLEVEL=	p0
 
 # current API compatible version; used for version of shared library
 RUBY18_API_VERSION=	1.8.7
 RUBY200_API_VERSION=	2.0.0
 RUBY21_API_VERSION=	2.1.0
 RUBY22_API_VERSION=	2.2.0
+RUBY23_API_VERSION=	2.3.0
 
 # pkgsrc's rubygems's version
 RUBY_GEMS_PKGSRC_VERS=	2.4.8
@@ -250,7 +255,7 @@ RUBY_RDOC_PKGSRC_VERS=	4.2.0
 #
 RUBY_VERSION_DEFAULT?=	200
 
-RUBY_VERSION_SUPPORTED?= 200 21 22
+RUBY_VERSION_SUPPORTED?= 200 21 22 23
 
 .if defined(RUBY_VERSION_REQD)
 . for rv in ${RUBY_VERSION_SUPPORTED}
@@ -318,6 +323,18 @@ RUBY_GEMS_VERSION=	2.4.5
 RUBY_RDOC_VERSION=	4.2.0
 RUBY_RAKE_VERSION=	10.4.2
 RUBY_JSON_VERSION=	1.8.1
+
+RUBY_SUFFIX=	${_RUBY_VER_MAJOR}${_RUBY_VER_MINOR}
+
+.elif ${RUBY_VER} == "23"
+RUBY_VERSION=		${RUBY23_VERSION}
+RUBY_VERSION_FULL=	${RUBY_VERSION}
+RUBY_ABI_VERSION=	${RUBY_VERSION}
+
+RUBY_GEMS_VERSION=	2.5.1
+RUBY_RDOC_VERSION=	4.2.1
+RUBY_RAKE_VERSION=	10.4.2
+RUBY_JSON_VERSION=	1.8.3
 
 RUBY_SUFFIX=	${_RUBY_VER_MAJOR}${_RUBY_VER_MINOR}
 
