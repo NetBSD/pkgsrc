@@ -1,7 +1,10 @@
-$NetBSD: CHANGES-pkgsrc-2015Q4,v 1.1.2.2 2015/12/29 21:42:09 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q4,v 1.1.2.3 2015/12/30 17:01:05 bsiegert Exp $
 
 Changes to the packages collection and infrastructure on the 2015Q4 branch:
 
 Pullup ticket #4880 - requested by wiz
 multimedia/adobe-flash-plugin11: security fix
+
+Pullup ticket #4882 - requested by sevan
+multimedia/ffmpeg2: security fix
 
