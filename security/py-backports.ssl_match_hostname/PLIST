@@ -1,13 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2014/01/27 19:53:30 wiz Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2015/12/30 15:02:06 leot Exp $
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/backports/__init__.py
 ${PYSITELIB}/backports/__init__.pyc
 ${PYSITELIB}/backports/__init__.pyo
-${PYSITELIB}/backports/ssl_match_hostname/LICENSE.txt
-${PYSITELIB}/backports/ssl_match_hostname/README.txt
 ${PYSITELIB}/backports/ssl_match_hostname/__init__.py
 ${PYSITELIB}/backports/ssl_match_hostname/__init__.pyc
 ${PYSITELIB}/backports/ssl_match_hostname/__init__.pyo

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:18:03 agc Exp $
+$NetBSD: distinfo,v 1.3 2015/12/30 15:02:06 leot Exp $
 
-SHA1 (backports.ssl_match_hostname-3.4.0.2.tar.gz) = da4e41f3b110279d2382df47ac1e4f10c63cf954
-RMD160 (backports.ssl_match_hostname-3.4.0.2.tar.gz) = 4f87ff790bdd53b4095ffc4b9e214d4ffc9bb41d
-SHA512 (backports.ssl_match_hostname-3.4.0.2.tar.gz) = 7e6033afbb5298a5eaafe91c3e2f7ba583706977826cc9441c9926a81b945714be95963f0261f88f4cb5df56673ca231e528cecbe84dff9e422fd11819842985
-Size (backports.ssl_match_hostname-3.4.0.2.tar.gz) = 5151 bytes
+SHA1 (backports.ssl_match_hostname-3.5.0.1.tar.gz) = 0567c136707a5f53b95aa793b79cc8d5c61d8e22
+RMD160 (backports.ssl_match_hostname-3.5.0.1.tar.gz) = 3e7112fd62bcef2bb526b7c60e782aa75ee5daac
+SHA512 (backports.ssl_match_hostname-3.5.0.1.tar.gz) = 414c2b6f302a4655c3db3ef09e1dca4916ae4e8c4aa69e43c63bbb920303ea4b2618150c2c35d8a2e1e1283b1d65ccd10a350888fd771addda533c19c20b7e82
+Size (backports.ssl_match_hostname-3.5.0.1.tar.gz) = 5605 bytes
