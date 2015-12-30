@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1142 2015/12/14 13:54:32 taca Exp $
+# $NetBSD: Makefile,v 1.1143 2015/12/30 17:42:06 adam Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -160,6 +160,7 @@ SUBDIR+=	libmrss
 SUBDIR+=	libproxy
 SUBDIR+=	librest
 SUBDIR+=	librest07
+SUBDIR+=	libsass
 SUBDIR+=	libwww
 SUBDIR+=	liferea
 SUBDIR+=	lighttpd
@@ -759,6 +760,7 @@ SUBDIR+=	ruby-url_mount
 SUBDIR+=	ruby-webrobots
 SUBDIR+=	ruby-websocket
 SUBDIR+=	ruby-webunit
+SUBDIR+=	sassc
 SUBDIR+=	screws
 SUBDIR+=	seamonkey
 SUBDIR+=	seamonkey-l10n
