@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2015/09/11 16:54:56 tnn Exp $
+@comment $NetBSD: PLIST,v 1.17 2015/12/30 04:13:07 dholland Exp $
 bin/arbfplight
 bin/arbfslight
 bin/arbocclude
@@ -77,8 +77,8 @@ bin/gltestperf
 bin/glthreads
 bin/glxcontexts
 bin/glxdemo
-bin/glxgears_mesademos
 bin/glxgears_fbconfig
+bin/glxgears_mesademos
 bin/glxgears_pixmap
 bin/glxheads
 bin/glxinfo_mesademos
