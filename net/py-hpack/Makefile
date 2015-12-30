@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2015/08/23 14:06:11 leot Exp $
+# $NetBSD: Makefile,v 1.2 2015/12/30 14:59:02 leot Exp $
 
-DISTNAME=	hpack-1.1.0
+DISTNAME=	hpack-2.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net
-MASTER_SITES=	${MASTER_SITE_PYPI:=h/hpack/}
+MASTER_SITES=	${MASTER_SITE_PYPI}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://hyper.rtfd.org/
