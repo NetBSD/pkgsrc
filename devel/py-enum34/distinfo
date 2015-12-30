@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/12/06 11:44:10 wiz Exp $
+$NetBSD: distinfo,v 1.5 2015/12/30 00:01:13 wiz Exp $
 
-SHA1 (enum34-1.1.1.tar.gz) = 3ca7ba44fc491633e97283fca76b964a40f102c6
-RMD160 (enum34-1.1.1.tar.gz) = dca8448e23b1703f9cae4100547dfa2cf3c9cd58
-SHA512 (enum34-1.1.1.tar.gz) = da2e024df5e7c728c43cbd1d3ec78bedef49a651266dcdc8d6eb3637ccbb0fbda0c309cbdb05bc401ab9b94bceda08c5bdca4fd0f812457785fed08198c48667
-Size (enum34-1.1.1.tar.gz) = 46678 bytes
+SHA1 (enum34-1.1.2.tar.gz) = 98f4db4b3455533c4433e8294764eef8d90a2219
+RMD160 (enum34-1.1.2.tar.gz) = 803bd3c0fbcc2c653879483348b3ec9a6209c3ad
+SHA512 (enum34-1.1.2.tar.gz) = 61e47d27969237f5e0de814f42e8f9217147f3d2d3081a1fadaf665cee293af1dd978420fb918000ac9f0fe323249faf7993f204660acdebff880bca1dde2487
+Size (enum34-1.1.2.tar.gz) = 46757 bytes
