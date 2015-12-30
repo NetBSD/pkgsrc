@@ -1,0 +1,1 @@
+golint lints the Go source files named on its command line.
