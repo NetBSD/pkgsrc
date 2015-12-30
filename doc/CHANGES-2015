@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5191 2015/12/30 12:51:44 bsiegert Exp $
+$NetBSD: CHANGES-2015,v 1.5192 2015/12/30 14:18:35 leot Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8513,3 +8513,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated x11/gtk2 to 2.24.29 [prlw1 2015-12-30]
 	Updated misc/p5-Business-ISBN to 2.010 [wiz 2015-12-30]
 	Updated misc/dpkg to 1.16.17 [bsiegert 2015-12-30]
+	Added sysutils/py-pathtools version 0.1.2 [leot 2015-12-30]
