@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5197 2015/12/30 14:57:27 leot Exp $
+$NetBSD: CHANGES-2015,v 1.5198 2015/12/30 14:59:24 leot Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8519,3 +8519,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added devel/golint version 20151230 [bsiegert 2015-12-30]
 	Updated devel/py-configargparse to 0.10.0 [leot 2015-12-30]
 	Updated devel/py-pyparsing to 2.0.6 [leot 2015-12-30]
+	Updated net/py-hpack to 2.0.1 [leot 2015-12-30]
