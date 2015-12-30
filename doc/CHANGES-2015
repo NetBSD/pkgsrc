@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5188 2015/12/30 04:19:35 dholland Exp $
+$NetBSD: CHANGES-2015,v 1.5189 2015/12/30 10:15:39 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8510,3 +8510,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated lang/Cg-compiler to 3.1nb1 [dholland 2015-12-30]
 	Updated pkgtools/pkglint to 5.2.2.2 [dholland 2015-12-30]
 	Updated pkgtools/pkglint4 to 4.160 [dholland 2015-12-30]
+	Updated x11/gtk2 to 2.24.29 [prlw1 2015-12-30]
