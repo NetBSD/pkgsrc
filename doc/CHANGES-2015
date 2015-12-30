@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5204 2015/12/30 15:10:52 taca Exp $
+$NetBSD: CHANGES-2015,v 1.5205 2015/12/30 15:43:33 taca Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8527,3 +8527,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated net/mitmproxy to 0.15 [leot 2015-12-30]
 	Added lang/ruby23-base version 2.3.0 [taca 2015-12-30]
 	Added lang/ruby23 version 2.3.0 [taca 2015-12-30]
+	Updated devel/ruby-mode to 2.3.0 [taca 2015-12-30]
