@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/11/16 18:33:51 leot Exp $
+@comment $NetBSD: PLIST,v 1.5 2015/12/30 15:08:08 leot Exp $
 bin/mitmdump
 bin/mitmproxy
 bin/mitmweb
@@ -133,6 +133,9 @@ ${PYSITELIB}/libmproxy/filt.pyo
 ${PYSITELIB}/libmproxy/flow.py
 ${PYSITELIB}/libmproxy/flow.pyc
 ${PYSITELIB}/libmproxy/flow.pyo
+${PYSITELIB}/libmproxy/flow_format_compat.py
+${PYSITELIB}/libmproxy/flow_format_compat.pyc
+${PYSITELIB}/libmproxy/flow_format_compat.pyo
 ${PYSITELIB}/libmproxy/main.py
 ${PYSITELIB}/libmproxy/main.pyc
 ${PYSITELIB}/libmproxy/main.pyo
@@ -163,7 +166,6 @@ ${PYSITELIB}/libmproxy/onboarding/static/fontawesome/fonts/fontawesome-webfont.s
 ${PYSITELIB}/libmproxy/onboarding/static/fontawesome/fonts/fontawesome-webfont.ttf
 ${PYSITELIB}/libmproxy/onboarding/static/fontawesome/fonts/fontawesome-webfont.woff
 ${PYSITELIB}/libmproxy/onboarding/static/mitmproxy.css
-${PYSITELIB}/libmproxy/onboarding/static/mitmproxy.js.map
 ${PYSITELIB}/libmproxy/onboarding/templates/frame.html
 ${PYSITELIB}/libmproxy/onboarding/templates/index.html
 ${PYSITELIB}/libmproxy/onboarding/templates/layout.html
@@ -227,9 +229,21 @@ ${PYSITELIB}/libmproxy/proxy/root_context.pyo
 ${PYSITELIB}/libmproxy/proxy/server.py
 ${PYSITELIB}/libmproxy/proxy/server.pyc
 ${PYSITELIB}/libmproxy/proxy/server.pyo
-${PYSITELIB}/libmproxy/script.py
-${PYSITELIB}/libmproxy/script.pyc
-${PYSITELIB}/libmproxy/script.pyo
+${PYSITELIB}/libmproxy/script/__init__.py
+${PYSITELIB}/libmproxy/script/__init__.pyc
+${PYSITELIB}/libmproxy/script/__init__.pyo
+${PYSITELIB}/libmproxy/script/concurrent.py
+${PYSITELIB}/libmproxy/script/concurrent.pyc
+${PYSITELIB}/libmproxy/script/concurrent.pyo
+${PYSITELIB}/libmproxy/script/reloader.py
+${PYSITELIB}/libmproxy/script/reloader.pyc
+${PYSITELIB}/libmproxy/script/reloader.pyo
+${PYSITELIB}/libmproxy/script/script.py
+${PYSITELIB}/libmproxy/script/script.pyc
+${PYSITELIB}/libmproxy/script/script.pyo
+${PYSITELIB}/libmproxy/script/script_context.py
+${PYSITELIB}/libmproxy/script/script_context.pyc
+${PYSITELIB}/libmproxy/script/script_context.pyo
 ${PYSITELIB}/libmproxy/stateobject.py
 ${PYSITELIB}/libmproxy/stateobject.pyc
 ${PYSITELIB}/libmproxy/stateobject.pyo
@@ -250,8 +264,6 @@ ${PYSITELIB}/libmproxy/web/app.pyc
 ${PYSITELIB}/libmproxy/web/app.pyo
 ${PYSITELIB}/libmproxy/web/static/app.css
 ${PYSITELIB}/libmproxy/web/static/app.js
-${PYSITELIB}/libmproxy/web/static/css/app.css.map
-${PYSITELIB}/libmproxy/web/static/css/vendor.css.map
 ${PYSITELIB}/libmproxy/web/static/fonts/fontawesome-webfont.eot
 ${PYSITELIB}/libmproxy/web/static/fonts/fontawesome-webfont.svg
 ${PYSITELIB}/libmproxy/web/static/fonts/fontawesome-webfont.ttf
@@ -267,8 +279,6 @@ ${PYSITELIB}/libmproxy/web/static/images/resourceImageIcon.png
 ${PYSITELIB}/libmproxy/web/static/images/resourceJavaIcon.png
 ${PYSITELIB}/libmproxy/web/static/images/resourceNotModifiedIcon.png
 ${PYSITELIB}/libmproxy/web/static/images/resourceRedirectIcon.png
-${PYSITELIB}/libmproxy/web/static/js/app.js.map
-${PYSITELIB}/libmproxy/web/static/js/vendor.js.map
 ${PYSITELIB}/libmproxy/web/static/vendor.css
 ${PYSITELIB}/libmproxy/web/static/vendor.js
 ${PYSITELIB}/libmproxy/web/templates/index.html
@@ -280,6 +290,5 @@ ${PYSITELIB}/${EGG_FILE}/PKG-INFO
 ${PYSITELIB}/${EGG_FILE}/SOURCES.txt
 ${PYSITELIB}/${EGG_FILE}/dependency_links.txt
 ${PYSITELIB}/${EGG_FILE}/entry_points.txt
-${PYSITELIB}/${EGG_FILE}/pbr.json
 ${PYSITELIB}/${EGG_FILE}/requires.txt
 ${PYSITELIB}/${EGG_FILE}/top_level.txt
