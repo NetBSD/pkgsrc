@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15243 2015/12/30 00:08:43 wiz Exp $
+$NetBSD: TODO,v 1.15244 2015/12/30 00:12:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1471,7 +1471,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-d2to1-0.2.12
 	o py-daemon-2.0.5
 	o py-datapkg-0.9
-	o py-decorator-4.0.6
 	o py-django-photologue-2.7
 	o py-django-registration-1.0
 	o py-djangorestframework-2.3.12
