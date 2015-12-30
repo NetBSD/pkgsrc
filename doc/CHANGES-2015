@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5181 2015/12/29 23:58:41 wiz Exp $
+$NetBSD: CHANGES-2015,v 1.5182 2015/12/30 00:01:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8502,3 +8502,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/libmicrohttpd to 0.9.48 [wiz 2015-12-29]
 	Updated textproc/miller to 3.2.2 [wiz 2015-12-29]
 	Updated net/samba4 to 4.3.3 [wiz 2015-12-29]
+	Updated devel/py-enum34 to 1.1.2 [wiz 2015-12-30]
