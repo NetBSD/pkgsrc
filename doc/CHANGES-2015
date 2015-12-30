@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5187 2015/12/30 03:01:45 dholland Exp $
+$NetBSD: CHANGES-2015,v 1.5188 2015/12/30 04:19:35 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8508,3 +8508,5 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated converters/libcdr to 0.1.2 [wiz 2015-12-30]
 	Updated converters/libvisio to 0.1.4 [wiz 2015-12-30]
 	Updated lang/Cg-compiler to 3.1nb1 [dholland 2015-12-30]
+	Updated pkgtools/pkglint to 5.2.2.2 [dholland 2015-12-30]
+	Updated pkgtools/pkglint4 to 4.160 [dholland 2015-12-30]
