@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/06/03 13:47:18 taca Exp $
+# $NetBSD: Makefile,v 1.12 2015/12/30 15:02:13 taca Exp $
 #
 
 DISTNAME=		${RUBY_DISTNAME}
@@ -12,8 +12,10 @@ HOMEPAGE=		${RUBY_HOMEPAGE}
 COMMENT=		Ruby fiddle library to wrap libffi
 
 USE_RUBY_EXTCONF=	yes
-EXTRACT_ELEMENTS=	${RUBY_DISTNAME}/ext/fiddle
+EXTRACT_ELEMENTS=	${RUBY_DISTNAME}/ext/fiddle \
+			${RUBY_DISTNAME}/internal.h
 WRKSRC=			${RUBY_WRKSRC}/ext/fiddle
+MAKE_ENV+=		top_srcdir=../..
 
 .include "../../lang/ruby/modules.mk"
 .include "../../lang/ruby/Makefile.common"
