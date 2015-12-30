@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5202 2015/12/30 15:05:57 leot Exp $
+$NetBSD: CHANGES-2015,v 1.5203 2015/12/30 15:08:31 leot Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8524,3 +8524,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated security/py-backports.ssl_match_hostname to 3.5.0.1 [leot 2015-12-30]
 	Updated x11/py-pyperclip to 1.5.25 [leot 2015-12-30]
 	Updated net/py-netlib to 0.15.1 [leot 2015-12-30]
+	Updated net/mitmproxy to 0.15 [leot 2015-12-30]
