@@ -1,0 +1,31 @@
+$NetBSD: distinfo,v 1.1 2015/12/30 14:59:42 taca Exp $
+
+SHA1 (ruby-2.3.0.tar.bz2) = 6c8a832d49d22755ea8c45b6d53faf2ccc6d6ac9
+RMD160 (ruby-2.3.0.tar.bz2) = 4e9066b169b1b00435ba154069416e14457fe22e
+SHA512 (ruby-2.3.0.tar.bz2) = 77b707359e754c3616699d21697752741497c719dc3d6fdfb55ed639e76d52560d293ae54cbe5c63be78dc73fbe60f1b8615d704d017bdfe1994aa9747d26a6c
+Size (ruby-2.3.0.tar.bz2) = 14185617 bytes
+SHA1 (patch-configure) = ccddb80f90f75a09dc7d802d1ddad6255ba13ffa
+SHA1 (patch-eval.c) = 16e6eadca15c95ac3e2291a2003cb0fc606eafeb
+SHA1 (patch-eval__error.c) = 8ed04dec5c3c0bf4d9ca8516888b331676f7c957
+SHA1 (patch-ext_dbm_extconf.rb) = c998f8735db54b1ae2bc8b6caa359ce88bc7a45b
+SHA1 (patch-ext_fiddle_depend) = f1de70280e55a036d1063635bfc24f8856a4d508
+SHA1 (patch-ext_readline_depend) = 9c5f22eac751c9333f9292ce32860e3b714a61b8
+SHA1 (patch-lib_mkmf.rb) = d01302bac014ec1d72bbf19df64bc2c93c07ec5e
+SHA1 (patch-lib_rdoc_ri_driver.rb) = bdbe04aa1dd1719d901233b16bcb318172a42b6c
+SHA1 (patch-lib_rubygems.rb) = d8968f54bdc973379675a3ebb5ca68325cff6644
+SHA1 (patch-lib_rubygems_commands_setup__command.rb) = 7f5af0331a7e16f6c3ed472cf33ddaf762c5c4b2
+SHA1 (patch-lib_rubygems_config__file.rb) = 6c45b2adaa35284d32e5c3035d8435897bd22bda
+SHA1 (patch-lib_rubygems_defaults.rb) = 3a4bfa91441a7416d079e51719d7df646d1aa940
+SHA1 (patch-lib_rubygems_dependency__installer.rb) = 91741a1836d3635d3b89dd7d775c3ae549f6363c
+SHA1 (patch-lib_rubygems_install__update__options.rb) = 167cfeeb47842d20eaadd15ed89ea886cbfd33db
+SHA1 (patch-lib_rubygems_installer.rb) = 37218b0ebf874095dce8b92bc30b5beb720e13a2
+SHA1 (patch-lib_rubygems_platform.rb) = 244a6698636012235882ae606ae3a3b4dffd3faf
+SHA1 (patch-man_erb.1) = a03758f5ae399463b140fbac92c39e6ccc9d18bd
+SHA1 (patch-man_irb.1) = bf3cd43511ddc51a41dced16f2be1c9f8018d226
+SHA1 (patch-man_ri.1) = d8917e7a08bbc3eb41349570cc658d40c1b3463f
+SHA1 (patch-man_ruby.1) = c6d1de29fe470024b926226615d97d485dececd9
+SHA1 (patch-test_rubygems_test__gem.rb) = 47cc7af18fc5f30d6d695e70851cfaf3205a9266
+SHA1 (patch-thread.c) = f837a1ca5c66034331fbbde32017d14e1161c978
+SHA1 (patch-tool_rbinstall.rb) = 159b657293029cb5bc096d7c23ae85fe05c88ba2
+SHA1 (patch-vm__eval.c) = 79124a03a2a97a5e07f4106b2a8393089d474ed3
+SHA1 (patch-vm__trace.c) = 26a2ae6e76fc31d9ea5c8858de3a075f146b6338
