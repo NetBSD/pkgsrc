@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2015/12/30 14:17:07 leot Exp $
+
+SHA1 (pathtools-0.1.2.tar.gz) = 765b6a002a23d802d6a02d5c1bd14922339c98c1
+RMD160 (pathtools-0.1.2.tar.gz) = cdc2001f64f953bcff70e1dd85d2527665a12272
+Size (pathtools-0.1.2.tar.gz) = 11006 bytes
