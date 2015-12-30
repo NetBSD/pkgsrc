@@ -1,0 +1,1 @@
+bin/padrino @PREFIX@/bin/padrino@RUBY_SUFFIX@
