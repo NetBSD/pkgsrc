@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2184 2015/12/30 16:16:13 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2185 2015/12/31 13:29:36 jnemeth Exp $
 #
 
 COMMENT=	Development utilities
@@ -369,8 +369,8 @@ SUBDIR+=	hugs-unix
 SUBDIR+=	idiff
 SUBDIR+=	idutils
 SUBDIR+=	imake
-SUBDIR+=	iniparser
 SUBDIR+=	include-what-you-use
+SUBDIR+=	iniparser
 SUBDIR+=	intel2gas
 SUBDIR+=	intellij-idea-ce
 SUBDIR+=	isect
