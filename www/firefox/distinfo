@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.227 2015/12/27 18:25:33 ryoon Exp $
+$NetBSD: distinfo,v 1.228 2015/12/31 08:45:42 ryoon Exp $
 
-SHA1 (firefox-43.0.2.source.tar.xz) = 1ba1da32a1472a88f644bdb1373c40a97e721170
-RMD160 (firefox-43.0.2.source.tar.xz) = ac088a775eb5840e12f836964979ee5c91096eac
-SHA512 (firefox-43.0.2.source.tar.xz) = 17380bd4f10601b015e7812cc11ea23b4880fe9909ebed03d59b6476f5d05a2a6d0baafb6cccc66d79b141abf8eea15f7c36ed6b59e4dc7279a3512ae0776ee9
-Size (firefox-43.0.2.source.tar.xz) = 175425028 bytes
+SHA1 (firefox-43.0.3.source.tar.xz) = 88bd73e51df9d884288709879e4cea6205b5d1da
+RMD160 (firefox-43.0.3.source.tar.xz) = baf9998e137732e45a7812f7da230c1230482846
+SHA512 (firefox-43.0.3.source.tar.xz) = 3751519bcf5205a0bcc329b5cfdeaf86728e4fcf3279e446a963916f829a75ab2d44e05706fa01a9491b2cc4015d8e62343608c4379e7a12603e16e005b7ae89
+Size (firefox-43.0.3.source.tar.xz) = 175427272 bytes
 SHA1 (patch-aa) = c1cdfa90f0334bfb0493502ea19e85092a60bc88
 SHA1 (patch-ao) = ca7e6723a10b9f6e3306cd12557e1856727edee9
 SHA1 (patch-as) = 05f31f318155e0f927e13754c0fec5f4d50a39dc
@@ -78,7 +78,7 @@ SHA1 (patch-js_xpconnect_src_XPCConvert.cpp) = 915777e9bb5366be41866cdb6ea0ad2b1
 SHA1 (patch-js_xpconnect_src_xpcprivate.h) = 8a15ff542c9d3fce448d9ec63706f7dfb411d926
 SHA1 (patch-media_libcubeb_AUTHORS) = 3db32086f98c2bbe16e9394bb5121d7a95cdb4af
 SHA1 (patch-media_libcubeb_src_cubeb.c) = effe8771e42adddb478ecb302352ef003bdd01db
-SHA1 (patch-media_libcubeb_src_cubeb__alsa.c) = 81e695c5cb20be3e864157c19ed07f9713490be5
+SHA1 (patch-media_libcubeb_src_cubeb__alsa.c) = 3f0c6295115a0cbcaaa924ccbdeda99570d455db
 SHA1 (patch-media_libcubeb_src_cubeb__oss.c) = 54e2a210411c7083bc395033fbf519d581bc4a62
 SHA1 (patch-media_libcubeb_src_moz.build) = 23a194c97402590b05af6a6423882528c7cf02ef
 SHA1 (patch-media_libpng_pngpriv.h) = c9cefd1b5dd85fbd0c875c3f9bc108975398fe3a
