@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/10/11 01:14:56 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2015/12/31 21:42:50 ryoon Exp $
 cross-arm-none-eabi/arm-none-eabi/include/_ansi.h
 cross-arm-none-eabi/arm-none-eabi/include/_syslist.h
 cross-arm-none-eabi/arm-none-eabi/include/alloca.h
@@ -140,6 +140,7 @@ cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/parse_numbers.h
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/postypes.h
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/predefined_ops.h
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/ptr_traits.h
+cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/quoted_string.h
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/random.h
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/random.tcc
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/range_access.h
