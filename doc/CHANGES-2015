@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5219 2015/12/31 12:07:56 adam Exp $
+$NetBSD: CHANGES-2015,v 1.5220 2015/12/31 12:22:41 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8543,3 +8543,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/redis to 3.0.6 [root 2015-12-31]
 	Updated databases/elasticsearch to 2.1.1 [root 2015-12-31]
 	Updated net/nmap to 7.01 [adam 2015-12-31]
+	Updated textproc/p5-Text-Xslate to 3.3.9 [wen 2015-12-31]
