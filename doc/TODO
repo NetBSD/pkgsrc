@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15250 2015/12/30 15:44:25 taca Exp $
+$NetBSD: TODO,v 1.15251 2015/12/31 09:09:54 fhajny Exp $
 
 Suggested new packages
 ======================
@@ -1540,7 +1540,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o rc-1.7.4
 	o rdp-1.6
 	o re-alpine-2.03 [pkg/47802]
-	o redis-3.0.6
 	o regionset-0.2
 	o relay-ctrl-3.2
 	o remind-03.01.15
