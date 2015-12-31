@@ -1,4 +1,4 @@
-$NetBSD: patch-libiberty_Makefile.in,v 1.1 2015/12/10 03:02:16 joerg Exp $
+$NetBSD: patch-libiberty_Makefile.in,v 1.2 2015/12/31 21:42:50 ryoon Exp $
 
 --- libiberty/Makefile.in.orig	2014-12-24 16:22:51.000000000 +0000
 +++ libiberty/Makefile.in
@@ -13,10 +13,10 @@ $NetBSD: patch-libiberty_Makefile.in,v 1.1 2015/12/10 03:02:16 joerg Exp $
 -		$(INSTALL_DATA) $(TARGETLIB) $(DESTDIR)$(libdir)/$(MULTIOSDIR)/$(TARGETLIB)n; \
 -		( cd $(DESTDIR)$(libdir)/$(MULTIOSDIR) ; chmod 644 $(TARGETLIB)n ;$(RANLIB) $(TARGETLIB)n ); \
 -		mv -f $(DESTDIR)$(libdir)/$(MULTIOSDIR)/$(TARGETLIB)n $(DESTDIR)$(libdir)/$(MULTIOSDIR)/$(TARGETLIB); \
-+		${mkinstalldirs} $(DESTDIR)$(libdir)
-+		$(INSTALL_DATA) $(TARGETLIB) $(DESTDIR)$(libdir)/$(TARGETLIB)n
-+		( cd $(DESTDIR)$(libdir) ; chmod 644 $(TARGETLIB)n ;$(RANLIB) $(TARGETLIB)n )
-+		mv -f $(DESTDIR)$(libdir)/$(TARGETLIB)n $(DESTDIR)$(libdir)/$(TARGETLIB)
++		${mkinstalldirs} $(DESTDIR)$(libdir); \
++		$(INSTALL_DATA) $(TARGETLIB) $(DESTDIR)$(libdir)/$(TARGETLIB)n; \
++		( cd $(DESTDIR)$(libdir) ; chmod 644 $(TARGETLIB)n ;$(RANLIB) $(TARGETLIB)n ); \
++		mv -f $(DESTDIR)$(libdir)/$(TARGETLIB)n $(DESTDIR)$(libdir)/$(TARGETLIB); \
  		case "${target_header_dir}" in \
  		  /*)    thd=${target_header_dir};; \
  		  *)     thd=${includedir}/${target_header_dir};; \
