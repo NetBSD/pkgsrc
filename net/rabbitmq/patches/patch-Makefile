@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile,v 1.1 2015/12/31 22:16:33 fhajny Exp $
+
+Use absolute paths for the sbin links.
+
+--- Makefile.orig	2015-12-21 16:52:25.000000000 +0000
++++ Makefile
+@@ -380,7 +380,7 @@ install-bin: install-scripts
+ 	$(verbose) mkdir -p $(DESTDIR)$(RMQ_BINDIR)
+ 	$(inst_verbose) for script in $(SCRIPTS); do \
+ 		test -e $(DESTDIR)$(RMQ_BINDIR)/$$script || \
+-			ln -sf ../lib/$(notdir $(RMQ_ERLAPP_DIR))/sbin/$$script \
++			ln -sf $(RMQ_ERLAPP_DIR)/sbin/$$script \
+ 			 $(DESTDIR)$(RMQ_BINDIR)/$$script; \
+ 	done
+ 
