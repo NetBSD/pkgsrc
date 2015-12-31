@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1.1.1 2015/12/31 02:57:35 agc Exp $
+
+SHA1 (boringssl-20151230.tar.gz) = eb3681358044990bc54c9ab58a3ce8d951edd022
+RMD160 (boringssl-20151230.tar.gz) = cf2b15e5dc261efcba44cb493947e9c48d346c36
+SHA512 (boringssl-20151230.tar.gz) = 868e53f5cc695c115b261cae67855f95bc017278aecb86b57941a8f0bfa553cb01ebc8cef65d82c18c65cf34b36fbd33a663805b1fcde37f40a88a11c30d7b73
+Size (boringssl-20151230.tar.gz) = 21984504 bytes
+SHA1 (patch-crypto__bio__bio_test.cc) = 441f14b565c566528d175d56fec34b905c1400cf
+SHA1 (patch-crypto__bio__internal.h) = ca998dc82f208fcc46144c932154c456474a9e88
+SHA1 (patch-crypto__bio__socket_helper.c) = 6ac17f5899817522d3ba883a88d87b5d8541213e
+SHA1 (patch-crypto__lhash__lhash_test.c) = 9f411a45fcb8d861911f8ef69651f591a70211b2
+SHA1 (patch-crypto__mem.c) = 186c7f7af8b28defc80266a351456328df0976cc
+SHA1 (patch-include__openssl__thread.h) = 0faf11db8591026c10ae3271936b1ef6381d977a
