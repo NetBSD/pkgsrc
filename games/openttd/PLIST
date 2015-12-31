@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2015/07/03 12:37:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.21 2015/12/31 18:48:55 leot Exp $
 bin/openttd
 man/man6/openttd.6
 share/applications/openttd.desktop
@@ -30,6 +30,10 @@ share/openttd/baseset/orig_dos_de.obg
 share/openttd/baseset/orig_win.obg
 share/openttd/baseset/orig_win.obm
 share/openttd/baseset/orig_win.obs
+share/openttd/game/compat_1.2.nut
+share/openttd/game/compat_1.3.nut
+share/openttd/game/compat_1.4.nut
+share/openttd/game/compat_1.5.nut
 share/openttd/lang/afrikaans.lng
 share/openttd/lang/arabic_egypt.lng
 share/openttd/lang/basque.lng
