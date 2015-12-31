@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2015/09/25 15:15:58 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.20 2015/12/31 19:47:40 fhajny Exp $
 bin/ct_run
 bin/dialyzer
 bin/epmd
@@ -2113,6 +2113,7 @@ lib/erlang/lib/inets-${VERSION.inets}/ebin/httpd_cgi.beam
 lib/erlang/lib/inets-${VERSION.inets}/ebin/httpd_conf.beam
 lib/erlang/lib/inets-${VERSION.inets}/ebin/httpd_connection_sup.beam
 lib/erlang/lib/inets-${VERSION.inets}/ebin/httpd_custom.beam
+lib/erlang/lib/inets-${VERSION.inets}/ebin/httpd_custom_api.beam
 lib/erlang/lib/inets-${VERSION.inets}/ebin/httpd_esi.beam
 lib/erlang/lib/inets-${VERSION.inets}/ebin/httpd_example.beam
 lib/erlang/lib/inets-${VERSION.inets}/ebin/httpd_file.beam
@@ -2331,6 +2332,7 @@ lib/erlang/lib/inets-${VERSION.inets}/src/http_server/httpd_cgi.erl
 lib/erlang/lib/inets-${VERSION.inets}/src/http_server/httpd_conf.erl
 lib/erlang/lib/inets-${VERSION.inets}/src/http_server/httpd_connection_sup.erl
 lib/erlang/lib/inets-${VERSION.inets}/src/http_server/httpd_custom.erl
+lib/erlang/lib/inets-${VERSION.inets}/src/http_server/httpd_custom_api.erl
 lib/erlang/lib/inets-${VERSION.inets}/src/http_server/httpd_esi.erl
 lib/erlang/lib/inets-${VERSION.inets}/src/http_server/httpd_example.erl
 lib/erlang/lib/inets-${VERSION.inets}/src/http_server/httpd_file.erl
@@ -3321,6 +3323,7 @@ lib/erlang/lib/public_key-${VERSION.public_key}/include/public_key.hrl
 lib/erlang/lib/public_key-${VERSION.public_key}/src/pubkey_cert.erl
 lib/erlang/lib/public_key-${VERSION.public_key}/src/pubkey_cert_records.erl
 lib/erlang/lib/public_key-${VERSION.public_key}/src/pubkey_crl.erl
+lib/erlang/lib/public_key-${VERSION.public_key}/src/pubkey_moduli.hrl
 lib/erlang/lib/public_key-${VERSION.public_key}/src/pubkey_pbe.erl
 lib/erlang/lib/public_key-${VERSION.public_key}/src/pubkey_pem.erl
 lib/erlang/lib/public_key-${VERSION.public_key}/src/pubkey_ssh.erl
@@ -4224,6 +4227,7 @@ lib/erlang/lib/wx-${VERSION.wx}/ebin/wxControl.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxControlWithItems.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxCursor.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxDC.beam
+lib/erlang/lib/wx-${VERSION.wx}/ebin/wxDCOverlay.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxDataObject.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxDateEvent.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxDatePickerCtrl.beam
@@ -4321,6 +4325,7 @@ lib/erlang/lib/wx-${VERSION.wx}/ebin/wxNavigationKeyEvent.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxNotebook.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxNotebookEvent.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxNotifyEvent.beam
+lib/erlang/lib/wx-${VERSION.wx}/ebin/wxOverlay.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxPageSetupDialog.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxPageSetupDialogData.beam
 lib/erlang/lib/wx-${VERSION.wx}/ebin/wxPaintDC.beam
@@ -4563,6 +4568,7 @@ lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxControl.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxControlWithItems.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxCursor.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxDC.erl
+lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxDCOverlay.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxDataObject.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxDateEvent.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxDatePickerCtrl.erl
@@ -4660,6 +4666,7 @@ lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxNavigationKeyEvent.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxNotebook.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxNotebookEvent.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxNotifyEvent.erl
+lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxOverlay.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxPageSetupDialog.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxPageSetupDialogData.erl
 lib/erlang/lib/wx-${VERSION.wx}/src/gen/wxPaintDC.erl

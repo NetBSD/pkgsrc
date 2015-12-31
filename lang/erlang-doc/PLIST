@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2015/09/25 15:15:58 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.20 2015/12/31 19:47:40 fhajny Exp $
 lib/erlang/doc/applications.html
 lib/erlang/doc/design_principles/applications.html
 lib/erlang/doc/design_principles/appup_cookbook.html
@@ -1445,6 +1445,7 @@ lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxControl.html
 lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxControlWithItems.html
 lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxCursor.html
 lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxDC.html
+lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxDCOverlay.html
 lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxDataObject.html
 lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxDateEvent.html
 lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxDatePickerCtrl.html
@@ -1542,6 +1543,7 @@ lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxNavigationKeyEvent.html
 lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxNotebook.html
 lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxNotebookEvent.html
 lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxNotifyEvent.html
+lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxOverlay.html
 lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxPageSetupDialog.html
 lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxPageSetupDialogData.html
 lib/erlang/lib/wx-${VERSION.wx}/doc/html/wxPaintDC.html
