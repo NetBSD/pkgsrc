@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2015/11/10 05:18:14 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.4 2015/12/31 13:27:10 jnemeth Exp $
 bin/pygrub
 bin/qemu-img-xen
 bin/xen-detect
@@ -250,7 +250,6 @@ sbin/xen-lowmemd
 sbin/xen-mfndump
 sbin/xen-ringwatch
 sbin/xen-tmem-list-parse
-sbin/xenbackendd
 sbin/xenbaked
 sbin/xenconsoled
 sbin/xencov
