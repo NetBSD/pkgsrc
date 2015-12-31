@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.3 2015/12/10 03:02:16 joerg Exp $
+$NetBSD: distinfo,v 1.4 2015/12/31 21:42:50 ryoon Exp $
 
-SHA1 (gcc-5.2.0.tar.bz2) = fe3f5390949d47054b613edc36c557eb1d51c18e
-RMD160 (gcc-5.2.0.tar.bz2) = eaedd62e7a738f6bdc0e97a0c40fbbd75d35925b
-SHA512 (gcc-5.2.0.tar.bz2) = 844120349ec04465dcea52d8ec747f1cbbc9d76a39fe3d8ef5e6b93614e63d718862d60d0a1c1cbf59ffc7815562287d0a2e536a6b220cebcd0b8de4ba35e715
-Size (gcc-5.2.0.tar.bz2) = 95221552 bytes
+SHA1 (gcc-5.3.0.tar.bz2) = 0612270b103941da08376df4d0ef4e5662a2e9eb
+RMD160 (gcc-5.3.0.tar.bz2) = b06fec59ceb37aeb042bdb9e1703e53d0834d085
+SHA512 (gcc-5.3.0.tar.bz2) = d619847383405fd389f5a2d7225f97fedb01f81478dbb8339047ccba7561a5c20045ab500a8744bffd19ea51892ce09fc37f862f2cfcb42de0f0f8cd8f8da37a
+Size (gcc-5.3.0.tar.bz2) = 95441837 bytes
 SHA1 (newlib-2.2.0.tar.gz) = 16fc7bc82e445341b9e741a3fc57b818691fa375
 RMD160 (newlib-2.2.0.tar.gz) = f295a83d08c4ccb4ccde355fbbd55f54352ff2ad
 SHA512 (newlib-2.2.0.tar.gz) = ab9161f16845367c823b6709e3c5708969f29f05c77edb1cf969ff4202f358648f1e55080974599dcefed2fbced4694dc73748596e76c1aa37c50cddff6e4be3
@@ -11,4 +11,4 @@ Size (newlib-2.2.0.tar.gz) = 16521910 bytes
 SHA1 (patch-gcc_system.h) = 72a75ff773b9b5f3d2f16f4ec7d29e032aba5f53
 SHA1 (patch-libcc1_connection.cc) = 2acd56a6f62b29ed3f02eecb7bf103e4564a442c
 SHA1 (patch-libgo_mksysinfo.sh) = f14e68a0c8cc823442661e3523b3b6b9b9a5fd1c
-SHA1 (patch-libiberty_Makefile.in) = 6f61bd7bb473e8825adf5c25bc57ff3f3602beb5
+SHA1 (patch-libiberty_Makefile.in) = 7ea2578b5b77cb4adcd4afe3d63739efc68a1540
