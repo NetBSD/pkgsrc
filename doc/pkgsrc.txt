@@ -481,13 +481,13 @@ build the packages for himself, which is a time-costly task.
 
 pkgsrc currently contains several thousand packages, including:
 
-  * www/apache - The Apache web server
+  * www/apache22 - The Apache web server
 
   * www/firefox - The Firefox web browser
 
   * meta-pkgs/gnome - The GNOME Desktop Environment
 
-  * meta-pkgs/kde3 - The K Desktop Environment
+  * meta-pkgs/kde4 - The K Desktop Environment
 
 ...just to name a few.
 
@@ -592,8 +592,6 @@ Table 1.1. Platforms supported by pkgsrc
 |Cygwin                                |   Mar 2013    |README.Cygwin         |
 |--------------------------------------+---------------+----------------------|
 |GNU/kFreeBSD                          |   Jul 2013    |README.GNUkFreeBSD    |
-|--------------------------------------+---------------+----------------------|
-|Bitrig                                |   Jun 2014    |README.Bitrig         |
 +-----------------------------------------------------------------------------+
 
 
