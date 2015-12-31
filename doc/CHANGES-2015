@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5224 2015/12/31 18:54:32 agc Exp $
+$NetBSD: CHANGES-2015,v 1.5225 2015/12/31 19:48:52 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8548,3 +8548,6 @@ Changes to the packages collection and infrastructure in 2015:
 	Added misc/pkgng version 1.6.2 [agc 2015-12-31]
 	Updated games/openttd to 1.5.3 [leot 2015-12-31]
 	Removed misc/pkgng successor pkgtools/pkg [agc 2015-12-31]
+	Updated lang/erlang to 18.2.1 [fhajny 2015-12-31]
+	Updated lang/erlang-doc to 18.2.1 [fhajny 2015-12-31]
+	Updated lang/erlang-man to 18.2.1 [fhajny 2015-12-31]
