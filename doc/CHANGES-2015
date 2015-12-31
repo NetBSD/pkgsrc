@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5209 2015/12/31 03:39:21 wen Exp $
+$NetBSD: CHANGES-2015,v 1.5210 2015/12/31 03:46:14 wen Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8533,3 +8533,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Added security/boringssl version 20151230 [agc 2015-12-30]
 	Updated databases/p5-DBD-mysql to 4.033 [wen 2015-12-31]
 	Updated textproc/p5-Text-Sass to 1.0.3 [wen 2015-12-31]
+	Updated textproc/p5-XML-XPath to 1.16 [wen 2015-12-31]
