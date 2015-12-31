@@ -1,4 +1,4 @@
-$NetBSD: patch-bin_elasticsearch.in.sh,v 1.1 2015/11/12 15:37:08 fhajny Exp $
+$NetBSD: patch-bin_elasticsearch.in.sh,v 1.2 2015/12/31 09:57:31 fhajny Exp $
 
 Fix paths.
 
@@ -8,8 +8,8 @@ Fix paths.
      exit 1
  fi
  
--ES_CLASSPATH="$ES_HOME/lib/elasticsearch-2.0.0.jar:$ES_HOME/lib/*"
-+ES_CLASSPATH="@ES_LIBDIR@/elasticsearch-2.0.0.jar:@ES_LIBDIR@/*"
+-ES_CLASSPATH="$ES_HOME/lib/elasticsearch-2.1.1.jar:$ES_HOME/lib/*"
++ES_CLASSPATH="@ES_LIBDIR@/elasticsearch-2.1.1.jar:@ES_LIBDIR@/*"
  
  if [ "x$ES_MIN_MEM" = "x" ]; then
      ES_MIN_MEM=256m
