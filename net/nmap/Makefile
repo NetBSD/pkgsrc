@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.125 2015/11/20 15:37:40 adam Exp $
+# $NetBSD: Makefile,v 1.126 2015/12/31 12:06:34 adam Exp $
 
-DISTNAME=	nmap-7.00
+DISTNAME=	nmap-7.01
 CATEGORIES=	net security
 MASTER_SITES=	http://nmap.org/dist/
 EXTRACT_SUFX=	.tar.bz2
@@ -36,6 +36,7 @@ CHECK_INTERPRETER_SKIP+=	share/nmap/nselib/data/passwords.lst
 CHECK_INTERPRETER_SKIP+=	share/nmap/nselib/data/rtsp-urls.txt
 CHECK_INTERPRETER_SKIP+=	share/nmap/nselib/data/snmpcommunities.lst
 CHECK_PORTABILITY_SKIP+=	libpcap/configure
+CHECK_PORTABILITY_SKIP+=	zenmap/install_scripts/macosx/launcher.sh
 
 .include "../../mk/bsd.prefs.mk"
 
