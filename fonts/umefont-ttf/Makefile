@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2015/11/02 16:04:55 ryoon Exp $
+# $NetBSD: Makefile,v 1.56 2015/12/31 08:08:40 ryoon Exp $
 #
 
-DISTNAME=	umefont_560
+DISTNAME=	umefont_580
 PKGNAME=	${DISTNAME:S/_/-ttf-0./}
 CATEGORIES=	fonts japanese
 MASTER_SITES=	${MASTER_SITE_OSDN:=ume-font/22212/}
@@ -12,8 +12,7 @@ HOMEPAGE=	http://osdn.jp/projects/ume-font/wiki/FrontPage
 COMMENT=	Ume 18 Japanese fonts (Mincho and Gothic)
 LICENSE=	mplusfont
 
-#WRKSRC=		${WRKDIR}/${DISTNAME:C/([a-z]+)-//}
-WRKSRC=		${WRKDIR}/umefont_570
+WRKSRC=		${WRKDIR}/${DISTNAME:C/([a-z]+)-//}
 
 CONFLICTS=	umefont<=0.421
 SUPERSEDES=	umefont<=0.421
