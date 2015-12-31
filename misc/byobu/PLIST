@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2014/07/13 07:13:21 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.3 2015/12/31 22:16:20 ryoon Exp $
 bin/byobu
 bin/byobu-config
 bin/byobu-ctrl-a
@@ -30,6 +30,7 @@ bin/byobu-ugraph
 bin/byobu-ulevel
 bin/col1
 bin/ctail
+bin/vigpg
 bin/wifi-status
 lib/byobu/apport
 lib/byobu/arch
@@ -118,8 +119,10 @@ man/man1/byobu-ulevel.1
 man/man1/byobu.1
 man/man1/col1.1
 man/man1/ctail.1
+man/man1/vigpg.1
 man/man1/wifi-status.1
-share/applications/byobu.desktop
+share/byobu/desktop/byobu.desktop
+share/byobu/desktop/byobu.desktop.old
 share/byobu/keybindings/common
 share/byobu/keybindings/f-keys
 share/byobu/keybindings/f-keys.screen
@@ -143,6 +146,7 @@ share/byobu/status/status
 share/byobu/status/statusrc
 share/byobu/tests/byobu-time-notifications
 share/byobu/windows/common
+share/dbus-1/services/us.kirkland.terminals.byobu.service
 share/doc/byobu/help.screen.txt
 share/doc/byobu/help.tmux.txt
 share/examples/byobu/byobu/backend
