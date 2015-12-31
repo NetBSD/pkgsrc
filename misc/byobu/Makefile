@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.7 2015/12/05 21:25:49 adam Exp $
+# $NetBSD: Makefile,v 1.8 2015/12/31 22:16:20 ryoon Exp $
 
-BYOBUVER=	5.81
+BYOBUVER=	5.100
 DISTNAME=	byobu_${BYOBUVER}.orig
 PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
 PKGREVISION=	1
 CATEGORIES=	misc
-MASTER_SITES=	http://byobu.co/download/
+MASTER_SITES=	https://launchpad.net/byobu/trunk/${BYOBUVER}/+download/
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://byobu.co/download/
+HOMEPAGE=	http://byobu.co/
 COMMENT=	Open source text-based window manager and terminal multiplexer
 LICENSE=	gnu-gpl-v3
 
