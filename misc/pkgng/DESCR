@@ -1,0 +1,5 @@
+Pkg is the Next Generation package management tool for FreeBSD.  It is
+the replacement for the current pkg_info/pkg_create/pkg_add tools that
+ports use to register local packages and which provide remote
+packages.  Its main goals are to faciliate remote binary package
+upgrades.  It also works with ports without remote binary packages.
