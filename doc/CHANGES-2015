@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5222 2015/12/31 18:32:04 agc Exp $
+$NetBSD: CHANGES-2015,v 1.5223 2015/12/31 18:49:20 leot Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8546,3 +8546,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated textproc/p5-Text-Xslate to 3.3.9 [wen 2015-12-31]
 	Updated sysutils/xentools45 to 4.5.1nb8 [jnemeth 2015-12-31]
 	Added misc/pkgng version 1.6.2 [agc 2015-12-31]
+	Updated games/openttd to 1.5.3 [leot 2015-12-31]
