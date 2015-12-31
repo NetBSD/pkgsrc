@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5210 2015/12/31 03:46:14 wen Exp $
+$NetBSD: CHANGES-2015,v 1.5211 2015/12/31 07:08:01 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8534,3 +8534,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated databases/p5-DBD-mysql to 4.033 [wen 2015-12-31]
 	Updated textproc/p5-Text-Sass to 1.0.3 [wen 2015-12-31]
 	Updated textproc/p5-XML-XPath to 1.16 [wen 2015-12-31]
+	Updated misc/tmux to 2.1 [ryoon 2015-12-31]
