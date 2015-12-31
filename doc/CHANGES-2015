@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5215 2015/12/31 08:50:01 leot Exp $
+$NetBSD: CHANGES-2015,v 1.5216 2015/12/31 08:56:13 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8539,3 +8539,4 @@ Changes to the packages collection and infrastructure in 2015:
 	Updated www/firefox to 43.0.3 [ryoon 2015-12-31]
 	Updated www/firefox-l10n to 43.0.3 [ryoon 2015-12-31]
 	Updated www/liferea to 1.10.17 [leot 2015-12-31]
+	Updated graphics/flickrnet to 3.17.0 [ryoon 2015-12-31]
