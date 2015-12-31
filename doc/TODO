@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15253 2015/12/31 22:02:35 ryoon Exp $
+$NetBSD: TODO,v 1.15254 2015/12/31 22:19:20 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -495,7 +495,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bugzilla-5.0
 	o bwa-0.7.12 [needs shm_open(3), please contact MAINTAINER]
 	o byacc-20150711
-	o byobu-5.94
 	o bzr-explorer-1.3.0
 	o bzr-gtk-0.103.0
 	o bzr-svn-1.2.2
