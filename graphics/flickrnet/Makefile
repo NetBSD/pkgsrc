@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.4 2015/11/08 06:56:54 dholland Exp $
+# $NetBSD: Makefile,v 1.5 2015/12/31 08:55:48 ryoon Exp $
 
-DISTNAME=	3.16
-PKGREVISION=	2
-PKGNAME=	flickrnet-${DISTNAME}
+DISTNAME=	FlickrNet-3.17.0
+PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_GITHUB:=samjudson/flickr-net/archive/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=samjudson/}
+GITHUB_PROJECT=	flickr-net
+GITHUB_TAG=	${PKGVERSION_NOREV:S/.0//}
 
 COMMENT=	.NET library for accessing Flickr
 LICENSE=	gnu-lgpl-v2.1
 
-WRKSRC=		${WRKDIR}/flickr-net-${DISTNAME}
+WRKSRC=		${WRKDIR}/flickr-net-${PKGVERSION_NOREV:S/.0//}
 USE_TOOLS+=	pkg-config
 
 SUBST_CLASSES+=			fix-prefix
