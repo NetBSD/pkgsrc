@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2015/09/25 15:15:58 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.18 2015/12/31 19:47:41 fhajny Exp $
 lib/erlang/man/man1/cdv.1
 lib/erlang/man/man1/ct_run.1
 lib/erlang/man/man1/diameterc.1
@@ -421,6 +421,7 @@ lib/erlang/man/man3/wxControl.3
 lib/erlang/man/man3/wxControlWithItems.3
 lib/erlang/man/man3/wxCursor.3
 lib/erlang/man/man3/wxDC.3
+lib/erlang/man/man3/wxDCOverlay.3
 lib/erlang/man/man3/wxDataObject.3
 lib/erlang/man/man3/wxDateEvent.3
 lib/erlang/man/man3/wxDatePickerCtrl.3
@@ -518,6 +519,7 @@ lib/erlang/man/man3/wxNavigationKeyEvent.3
 lib/erlang/man/man3/wxNotebook.3
 lib/erlang/man/man3/wxNotebookEvent.3
 lib/erlang/man/man3/wxNotifyEvent.3
+lib/erlang/man/man3/wxOverlay.3
 lib/erlang/man/man3/wxPageSetupDialog.3
 lib/erlang/man/man3/wxPageSetupDialogData.3
 lib/erlang/man/man3/wxPaintDC.3
