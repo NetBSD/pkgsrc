@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.14 2016/01/01 15:34:45 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.15 2016/01/01 15:35:15 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -16,3 +16,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added devel/R-magrittr version 1.5 [wen 2016-01-01]
 	Updated textproc/R-stringr to 1.0.0 [wen 2016-01-01]
 	Updated sysutils/rsyslog to 8.15.0 [fhajny 2016-01-01]
+	Added textproc/libfastjson version 0.99.0 [fhajny 2016-01-01]
