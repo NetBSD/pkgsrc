@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/01/01 05:23:13 wen Exp $
+
+SHA1 (R/SparseM_1.7.tar.gz) = 137dd6627d948497b768509b83826f9211067db3
+RMD160 (R/SparseM_1.7.tar.gz) = 65d21275bc5c233963be32647175c1e8da7c90ee
+SHA512 (R/SparseM_1.7.tar.gz) = 3b45456fd4250cccdc62180e4103e04a7bfe4839f422aaa4eda852b0e44c7cb7476553565899f91ae05a2d4270168a4d1392ef1f1011ae3e72bc4a5aa6fcc40a
+Size (R/SparseM_1.7.tar.gz) = 598188 bytes
