@@ -1,11 +1,7 @@
-# $NetBSD: options.mk,v 1.2 2012/05/29 21:37:03 cheusov Exp $
+# $NetBSD: options.mk,v 1.3 2016/01/01 01:42:53 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gmake
 PKG_SUPPORTED_OPTIONS=	nls
-PKG_SUGGESTED_OPTIONS=
-.if ${OPSYS} == "NetBSD"
-PKG_SUGGESTED_OPTIONS+=	nls
-.endif
 
 PKG_OPTIONS_LEGACY_VARS+=	GMAKE_LOCALE
 
