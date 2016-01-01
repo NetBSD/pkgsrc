@@ -1,0 +1,3 @@
+Provides a mechanism for chaining commands with a new forward-pipe
+operator, %>%. This operator will forward a value, or the result of
+an expression, into the next function call/expression.
