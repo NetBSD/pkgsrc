@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2015/11/12 16:41:27 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.16 2016/01/01 15:34:24 fhajny Exp $
 # used by sysutils/rsyslog/Makefile
 # used by sysutils/rsyslog-dbi/Makefile
 # used by sysutils/rsyslog-elasticsearch/Makefile
@@ -12,7 +12,7 @@
 
 .include "../../mk/bsd.prefs.mk"
 
-DISTNAME=		rsyslog-8.14.0
+DISTNAME=		rsyslog-8.15.0
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.rsyslog.com/files/download/rsyslog/
 
@@ -52,4 +52,4 @@ BUILDLINK_DEPMETHOD.libuuid+=		build
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/pyversion.mk"
 .include "../../sysutils/liblogging/buildlink3.mk"
-.include "../../textproc/json-c/buildlink3.mk"
+.include "../../textproc/libfastjson/buildlink3.mk"
