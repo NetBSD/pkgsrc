@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2015/08/04 08:47:19 tnn Exp $
+# $NetBSD: Makefile,v 1.30 2016/01/01 01:29:30 ryoon Exp $
 #
 
 DISTNAME=	expat-2.1.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=expat/}
 
@@ -13,7 +13,6 @@ LICENSE=	mit
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
-USE_TOOLS+=		gmake
 
 PKGCONFIG_OVERRIDE+=	expat.pc.in
 
