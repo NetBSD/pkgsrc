@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/01/01 05:38:54 wen Exp $
+
+SHA1 (R/MatrixModels_0.4-1.tar.gz) = a5c3ba4361903ef19eaf4cbb31a14bf14ddb60ad
+RMD160 (R/MatrixModels_0.4-1.tar.gz) = 66e31feaa7d783615bf96cea5ea457b9da97ba16
+SHA512 (R/MatrixModels_0.4-1.tar.gz) = 058c229c7a56e06c3b38ed1e93ef4ca02ac73f91a4c7536a892a8d2579c5ad75ad4b726d1b8efd5f0389e6584e6abbd4c8715d190d573c1f1aa13f9efd7fc665
+Size (R/MatrixModels_0.4-1.tar.gz) = 23065 bytes
