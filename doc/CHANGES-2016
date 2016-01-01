@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.5 2016/01/01 03:49:34 wen Exp $
+$NetBSD: CHANGES-2016,v 1.6 2016/01/01 05:26:06 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -7,3 +7,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/gmake to 4.1nb2 [ryoon 2016-01-01]
 	Updated devel/p5-Cache-FastMmap to 1.43 [wen 2016-01-01]
 	Updated devel/p5-CPAN-Meta-Requirements to 2.140 [wen 2016-01-01]
+	Added math/R-SparseM version 1.7 [wen 2016-01-01]
