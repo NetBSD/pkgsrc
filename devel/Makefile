@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2185 2015/12/31 13:29:36 jnemeth Exp $
+# $NetBSD: Makefile,v 1.2186 2016/01/01 13:24:01 wen Exp $
 #
 
 COMMENT=	Development utilities
@@ -12,6 +12,7 @@ SUBDIR+=	ObjectiveLib
 SUBDIR+=	ProjectCenter
 SUBDIR+=	R-Rcpp
 SUBDIR+=	R-evaluate
+SUBDIR+=	R-magrittr
 SUBDIR+=	RBTools
 SUBDIR+=	RTFM
 SUBDIR+=	RTx-RightsMatrix
