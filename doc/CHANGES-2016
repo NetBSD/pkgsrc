@@ -1,0 +1,5 @@
+$NetBSD: CHANGES-2016,v 1.1 2016/01/01 01:31:26 ryoon Exp $
+
+Changes to the packages collection and infrastructure in 2016:
+
+	Updated textproc/expat to 2.1.0nb2 [ryoon 2016-01-01]
