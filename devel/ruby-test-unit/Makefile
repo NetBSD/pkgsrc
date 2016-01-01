@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2015/12/30 04:22:59 taca Exp $
+# $NetBSD: Makefile,v 1.22 2016/01/01 16:14:46 taca Exp $
 
 DISTNAME=	test-unit-3.1.5
 CATEGORIES=	devel
@@ -8,9 +8,13 @@ HOMEPAGE=	https://github.com/test-unit/test-unit/
 COMMENT=	Improved version of Test::Unit
 LICENSE=	ruby-license
 
-DEPENDS+=	${RUBY_PKGPREFIX}-power_assert>=0:../../devel/ruby-power_assert
-
 USE_LANGUAGES=	# none
+
+.include "../../lang/ruby/rubyversion.mk"
+
+.if ${RUBY_VER} != "23"
+DEPENDS+=	${RUBY_PKGPREFIX}-power_assert>=0:../../devel/ruby-power_assert
+.endif
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
