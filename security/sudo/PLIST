@@ -1,15 +1,23 @@
-@comment $NetBSD: PLIST,v 1.7 2014/07/28 20:07:42 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.8 2016/01/01 17:00:49 spz Exp $
 bin/sudo
 bin/sudoedit
 bin/sudoreplay
-${PLIST.noexec}libexec/sudo_noexec.so
+include/sudo_plugin.h
+lib/sudo/group_file.la
+lib/sudo/libsudo_util.la
+${PLIST.noexec}lib/sudo/sudo_noexec.la
+lib/sudo/sudoers.la
+lib/sudo/system_group.la
+man/man5/sudo.conf.5
 man/man5/sudoers.5
 ${PLIST.ldap}man/man5/sudoers.ldap.5
 man/man8/sudo.8
+man/man8/sudo_plugin.8
 man/man8/sudoedit.8
 man/man8/sudoreplay.8
 man/man8/visudo.8
 sbin/visudo
+share/doc/sudo/CONTRIBUTORS
 share/doc/sudo/ChangeLog
 share/doc/sudo/HISTORY
 share/doc/sudo/LICENSE
@@ -18,11 +26,11 @@ share/doc/sudo/README
 ${PLIST.ldap}share/doc/sudo/README.LDAP
 share/doc/sudo/TROUBLESHOOTING
 share/doc/sudo/UPGRADE
-share/doc/sudo/sample.pam
-share/doc/sudo/sample.sudoers
-share/doc/sudo/sample.syslog.conf
 ${PLIST.ldap}share/doc/sudo/schema.ActiveDirectory
 ${PLIST.ldap}share/doc/sudo/schema.OpenLDAP
 ${PLIST.ldap}share/doc/sudo/schema.iPlanet
 ${PLIST.ldap}share/doc/sudo/sudoers2ldif
+share/examples/sudo/pam.conf
+share/examples/sudo/sudo.conf
 share/examples/sudo/sudoers
+share/examples/sudo/syslog.conf
