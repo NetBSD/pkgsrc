@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2016/01/01 12:59:19 wen Exp $
+
+SHA1 (R/stringi_1.0-1.tar.gz) = b9fdcd23ae8950ea527574b74139ad74678b739f
+RMD160 (R/stringi_1.0-1.tar.gz) = df1e9d90a7ba33cad66bfc37fcd54f02b43e4db4
+SHA512 (R/stringi_1.0-1.tar.gz) = 5ec12d90234f28ac882785ddf2040130d2861870004f76a04bc68261129d77e4b4ef3c3cc9824023ead5be62726ce6a7cce0d10815f3173a28b8d8ca4681b38d
+Size (R/stringi_1.0-1.tar.gz) = 3643002 bytes
+SHA1 (patch-configure) = b466f9106db9c326a89e431ded9bad2172e1689a

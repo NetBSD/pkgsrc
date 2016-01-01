@@ -1,0 +1,73 @@
+$NetBSD: patch-configure,v 1.1 2016/01/01 12:59:19 wen Exp $
+Fix configure
+--- configure.orig	2016-01-01 12:33:03.000000000 +0000
++++ configure
+@@ -2205,7 +2205,7 @@ if test "${enable_gcc_debug+set}" = set;
+   enableval=$enable_gcc_debug;
+ fi
+ 
+-if test "x$enable_gcc_debug" == "xyes"; then
++if test "x$enable_gcc_debug" = "xyes"; then
+    enable_gcc_debug="yes"
+ else
+    enable_gcc_debug="no"
+@@ -2216,7 +2216,7 @@ if test "${enable_gcc_pedantic+set}" = s
+   enableval=$enable_gcc_pedantic;
+ fi
+ 
+-if test "x$enable_gcc_pedantic" == "xyes"; then
++if test "x$enable_gcc_pedantic" = "xyes"; then
+    enable_gcc_pedantic="yes"
+ else
+    enable_gcc_pedantic="no"
+@@ -2304,13 +2304,13 @@ $as_echo "$R_PATH" >&6; }
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for R >= 3.1.0" >&5
+ $as_echo_n "checking for R >= 3.1.0... " >&6; }
+ R_GE_31=`"${R_PATH}" --vanilla --slave -e 'cat(if (getRversion() >= numeric_version("3.1.0")) "yes" else "no")'`
+-if test "x$R_GE_31" == "xyes"; then
++if test "x$R_GE_31" = "xyes"; then
+    { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+ $as_echo "yes" >&6; }
+ else
+    { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+ $as_echo "no" >&6; }
+-   if test "x$enable_cxx11" == "xyes"; then
++   if test "x$enable_cxx11" = "xyes"; then
+       echo "*** disabling C++11 use"
+       enable_cxx11="no"
+    fi
+@@ -2369,14 +2369,14 @@ fi
+ 
+ ###### SETUP COMPILER FLAGS FOR TESTING ######################################
+ 
+-if test "x$enable_gcc_debug" == "xyes"; then
++if test "x$enable_gcc_debug" = "xyes"; then
+    #  -fsanitize=address -fno-omit-frame-pointer
+    with_extra_cppflags="${with_extra_cppflags} -DDEBUG -UNDEBUG"
+ else
+    with_extra_cppflags="${with_extra_cppflags} -UDEBUG -DNDEBUG"
+ fi
+ 
+-if test "x$enable_gcc_pedantic" == "xyes"; then
++if test "x$enable_gcc_pedantic" = "xyes"; then
+    with_extra_cflags="${with_extra_cflags} -Wall -Wextra -ansi -pedantic -std=c99"
+    with_extra_cxxflags="${with_extra_cxxflags} -Wall -Wextra -ansi -pedantic -std=c++98 -Wlong-long"
+ fi
+@@ -2389,7 +2389,7 @@ CPPFLAGS=`"${R_PATH}" CMD config CPPFLAG
+ LIBS=
+ LDFLAGS=
+ 
+-if test "x$enable_cxx11" == "xyes"; then
++if test "x$enable_cxx11" = "xyes"; then
+    CXX="`\"${R_PATH}\" CMD config CXX1X` `\"${R_PATH}\" CMD config CXX1XSTD`"
+    CXXFLAGS=`"${R_PATH}" CMD config CXX1XFLAGS`
+    STRINGI_CXXSTD="CXX_STD=CXX11"
+@@ -4054,7 +4054,7 @@ CPP_OK=0
+ check_cpp
+ 
+ if test $CPP_OK = 0; then
+-   if test "x$enable_cxx11" == "xyes"; then
++   if test "x$enable_cxx11" = "xyes"; then
+       echo "*** trying with disabled C++11 compiler"
+       CXX=`"${R_PATH}" CMD config CXX`
+       CXXFLAGS=`"${R_PATH}" CMD config CXXFLAGS`
