@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2016/01/01 15:25:43 fhajny Exp $
+include/libfastjson/arraylist.h
+include/libfastjson/bits.h
+include/libfastjson/debug.h
+include/libfastjson/json.h
+include/libfastjson/json_c_version.h
+include/libfastjson/json_config.h
+include/libfastjson/json_inttypes.h
+include/libfastjson/json_object.h
+include/libfastjson/json_object_iterator.h
+include/libfastjson/json_object_private.h
+include/libfastjson/json_tokener.h
+include/libfastjson/json_util.h
+include/libfastjson/linkhash.h
+include/libfastjson/math_compat.h
+include/libfastjson/printbuf.h
+include/libfastjson/random_seed.h
+lib/libfastjson.la
+lib/pkgconfig/libfastjson.pc
