@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2015/11/03 03:27:59 agc Exp $
+$NetBSD: distinfo,v 1.10 2016/01/01 03:43:16 wen Exp $
 
-SHA1 (Cache-FastMmap-1.40.tar.gz) = 473093ea59d82aa0b89bf4081e3eb9e4e9f0dfba
-RMD160 (Cache-FastMmap-1.40.tar.gz) = d30b3c658b7d4a48892cd9b4ab2b6eb74fbcb384
-SHA512 (Cache-FastMmap-1.40.tar.gz) = 55c038cc99b4f6177f45f1610c72a57eb893bfc4598909a6f10352422b8c64376e938b1b175dd417667f7fb0732a420e23bb037ce51b16ee2db2d1a712c892d1
-Size (Cache-FastMmap-1.40.tar.gz) = 47952 bytes
+SHA1 (Cache-FastMmap-1.43.tar.gz) = 9e3c09ee23da72a5e2d246fe863990d6e737ae70
+RMD160 (Cache-FastMmap-1.43.tar.gz) = 8e63223c04143bddecd77baa99fd78fb29272485
+SHA512 (Cache-FastMmap-1.43.tar.gz) = 57b30c4071a0ecacfc3cc398d40e546ac7db4267a64a0523979445a4afa74853436751404f1827192c89baba9d5bd5ffb28375e61b2b841e3ec94c4fbef95050
+Size (Cache-FastMmap-1.43.tar.gz) = 48725 bytes
