@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/01/01 13:19:40 wen Exp $
+
+SHA1 (R/magrittr_1.5.tar.gz) = 174f9188eb2c87702c3ad28f19cf6250cda021f5
+RMD160 (R/magrittr_1.5.tar.gz) = 6e188859e85d5a1af583430af7655fc71f541f2c
+SHA512 (R/magrittr_1.5.tar.gz) = d1e66bab279a08f85405fedee0efea0dc4af058e76d8c0151c620825e01a8cf766bf89eaf24a64c67cadbad05c18f780006837ae0e9ded32c2637ed4df984279
+Size (R/magrittr_1.5.tar.gz) = 200504 bytes
