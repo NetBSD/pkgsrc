@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15254 2015/12/31 22:19:20 ryoon Exp $
+$NetBSD: TODO,v 1.15255 2016/01/01 12:11:52 wen Exp $
 
 Suggested new packages
 ======================
@@ -375,7 +375,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o R-akima-11
 	o R-car-25
 	o R-chron-47
-	o R-classInt-22
 	o R-evaluate-0.7
 	o R-formatR-1.2
 	o R-gdata-2.17.0
