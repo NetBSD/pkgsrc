@@ -1,11 +1,11 @@
-$NetBSD: patch-logging.c,v 1.4 2014/03/08 11:51:56 kim Exp $
+$NetBSD: patch-plugins_sudoers_logging.c,v 1.1 2016/01/01 17:00:49 spz Exp $
 
 Make sure CODESET is actually defined, for the sake of
 old NetBSD versions
 
---- logging.c.orig	2013-03-01 11:08:30.000000000 -0500
-+++ logging.c	2014-03-08 06:35:19.000000000 -0500
-@@ -691,7 +691,7 @@
+--- ./plugins/sudoers/logging.c.orig	2015-10-31 23:35:25.000000000 +0000
++++ ./plugins/sudoers/logging.c
+@@ -722,7 +722,7 @@ send_mail(const char *fmt, ...)
  	    (void) fputc(*p, mail);
      }
  
