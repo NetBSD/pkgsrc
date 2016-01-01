@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.9 2016/01/01 12:04:17 wen Exp $
+$NetBSD: CHANGES-2016,v 1.10 2016/01/01 12:11:52 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -11,3 +11,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added math/R-MatrixModels version 0.4-1 [wen 2016-01-01]
 	Added math/R-quantreg version 5.19 [wen 2016-01-01]
 	Updated math/R-e1071 to 1.6.7 [wen 2016-01-01]
+	Updated math/R-classInt to 0.1.23 [wen 2016-01-01]
