@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.146 2015/07/11 15:12:27 sevan Exp $
+# $NetBSD: Makefile,v 1.147 2016/01/01 17:00:49 spz Exp $
 #
 
-DISTNAME=		sudo-1.7.10p9
+DISTNAME=		sudo-1.8.15
 #PKGREVISION=		0
 CATEGORIES=		security
 MASTER_SITES=		http://www.sudo.ws/dist/ \
@@ -29,13 +29,21 @@ CONFIGURE_ENV+=		mansectsu=8
 CONFIGURE_ENV+=		mansectform=5
 CONFIGURE_ARGS+=	--disable-root-mailer --with-ignore-dot
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--with-timedir=${VARBASE}/run/sudo
+CONFIGURE_ARGS+=	--with-rundir=${VARBASE}/run/sudo
 CONFIGURE_ARGS+=	--with-logpath=${VARBASE}/log/sudo.log
+CONFIGURE_ARGS+=	--libexecdir=${PREFIX}/lib # for a bunch of shared libs
 
 .if ${OPSYS} == "Darwin"
 CONFIGURE_ARGS+=	--with-noexec=no
 .else
 PLIST.noexec=		yes
+.endif
+
+.if !empty(MACHINE_PLATFORM:MNetBSD-[7-9].*-*)
+CFLAGS+=		-D_OPENBSD_SOURCE=1
+.endif
+.if !empty(MACHINE_PLATFORM:MNetBSD-[5-6].*-*)
+CFLAGS+=                -D_INCOMPLETE_XOPEN_C063=1
 .endif
 
 .include "options.mk"
@@ -54,8 +62,8 @@ INSTALLATION_DIRS+=	${DOCDIR} ${EGDIR}
 NOT_FOR_UNPRIVILEGED=	yes
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/UPGRADE ${DESTDIR}${PREFIX}/${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/sudoers ${DESTDIR}${PREFIX}/${EGDIR}/sudoers
+	${INSTALL_DATA} ${WRKSRC}/doc/UPGRADE ${DESTDIR}${PREFIX}/${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/plugins/sudoers/sudoers ${DESTDIR}${PREFIX}/${EGDIR}/sudoers
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/${DOCDIR}
 
 .include "../../devel/zlib/buildlink3.mk"
