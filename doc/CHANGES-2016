@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.12 2016/01/01 13:31:52 wen Exp $
+$NetBSD: CHANGES-2016,v 1.13 2016/01/01 13:40:22 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -14,3 +14,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated math/R-classInt to 0.1.23 [wen 2016-01-01]
 	Added textproc/R-stringi version 1.0.1 [wen 2016-01-01]
 	Added devel/R-magrittr version 1.5 [wen 2016-01-01]
+	Updated textproc/R-stringr to 1.0.0 [wen 2016-01-01]
