@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/01/02 10:17:45 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2016/01/02 11:03:30 wiz Exp $
 
 DISTNAME=	urllib3-1.14
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -22,6 +22,8 @@ DEPENDS+=	${PYPKGPREFIX}-Socks-[0-9]*:../../net/py-Socks
 BUILD_DEPENDS+=	${PYPKGPREFIX}-tornado-[0-9]*:../../www/py-tornado
 BUILD_DEPENDS+=	${PYPKGPREFIX}-mock-[0-9]*:../../devel/py-mock
 BUILD_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
+BUILD_DEPENDS+=	${PYPKGPREFIX}-nose-exclude-[0-9]*:../../devel/py-nose-exclude
+BUILD_DEPENDS+=	${PYPKGPREFIX}-coverage-[0-9]*:../../devel/py-coverage
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
 
 # four test failures as of 1.14, reported as
