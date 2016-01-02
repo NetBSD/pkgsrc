@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2016/01/02 10:10:10 wiz Exp $
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/socks.py
+${PYSITELIB}/socks.pyc
+${PYSITELIB}/socks.pyo
+${PYSITELIB}/sockshandler.py
+${PYSITELIB}/sockshandler.pyc
+${PYSITELIB}/sockshandler.pyo
