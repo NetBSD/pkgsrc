@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2016/01/02 10:46:01 wiz Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/pytest_httpbin/__init__.py
+${PYSITELIB}/pytest_httpbin/__init__.pyc
+${PYSITELIB}/pytest_httpbin/__init__.pyo
+${PYSITELIB}/pytest_httpbin/certs.py
+${PYSITELIB}/pytest_httpbin/certs.pyc
+${PYSITELIB}/pytest_httpbin/certs.pyo
+${PYSITELIB}/pytest_httpbin/certs/cacert.pem
+${PYSITELIB}/pytest_httpbin/certs/cert.pem
+${PYSITELIB}/pytest_httpbin/certs/key.pem
+${PYSITELIB}/pytest_httpbin/plugin.py
+${PYSITELIB}/pytest_httpbin/plugin.pyc
+${PYSITELIB}/pytest_httpbin/plugin.pyo
+${PYSITELIB}/pytest_httpbin/serve.py
+${PYSITELIB}/pytest_httpbin/serve.pyc
+${PYSITELIB}/pytest_httpbin/serve.pyo
+${PYSITELIB}/pytest_httpbin/version.py
+${PYSITELIB}/pytest_httpbin/version.pyc
+${PYSITELIB}/pytest_httpbin/version.pyo
