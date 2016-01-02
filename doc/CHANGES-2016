@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.26 2016/01/02 13:44:10 wen Exp $
+$NetBSD: CHANGES-2016,v 1.27 2016/01/02 16:45:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -28,3 +28,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/wireshark to 1.12.9 [ryoon 2016-01-02]
 	Updated databases/p5-DBM-Deep to 2.0013 [wen 2016-01-02]
 	Updated devel/p5-Proc-Daemon to 0.23 [wen 2016-01-02]
+	Updated emulators/mame to 0.169 [wiz 2016-01-02]
