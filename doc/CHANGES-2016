@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.22 2016/01/02 10:49:57 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.23 2016/01/02 11:00:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -24,3 +24,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added www/py-httpbin version 0.4.0 [wiz 2016-01-02]
 	Added www/py-test-httpbin version 0.2.0 [wiz 2016-01-02]
 	Updated devel/py-requests to 2.9.1 [wiz 2016-01-02]
+	Added devel/py-nose-exclude version 0.4.1 [wiz 2016-01-02]
