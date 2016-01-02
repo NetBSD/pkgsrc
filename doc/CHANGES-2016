@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.20 2016/01/02 10:47:04 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.21 2016/01/02 10:47:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -22,3 +22,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added net/py-Socks version 1.5.6 [wiz 2016-01-02]
 	Updated www/py-urllib3 to 1.14 [wiz 2016-01-02]
 	Added www/py-httpbin version 0.4.0 [wiz 2016-01-02]
+	Added www/py-test-httpbin version 0.2.0 [wiz 2016-01-02]
