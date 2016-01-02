@@ -1,0 +1,2 @@
+nose-exclude is a Nose plugin that allows you to easily specify
+directories to be excluded from testing.
