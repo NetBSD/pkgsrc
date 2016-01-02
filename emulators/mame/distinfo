@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.44 2015/11/25 12:34:36 wiz Exp $
+$NetBSD: distinfo,v 1.45 2016/01/02 16:45:03 wiz Exp $
 
-SHA1 (mame-0.168.tar.gz) = aa71ca6911749cb5d6bf5d8148866ccff0e649af
-RMD160 (mame-0.168.tar.gz) = 677a398c2854c7bd7e3f007a6846cfd7ff9007cc
-SHA512 (mame-0.168.tar.gz) = e0895bbf8152c00c4ef3da8a3beddb191203c4be3d7b30da7a35ffe2931def9bcaef08ec7cf28651a2ae9adad6d3731f5444691ed07a4516c2e84c3092f312c2
-Size (mame-0.168.tar.gz) = 88471983 bytes
+SHA1 (mame-0.169.tar.gz) = cf4f08ea8d3657ed436be536e361816d6f932440
+RMD160 (mame-0.169.tar.gz) = 83c1cf7eb9757aa4df35a0a4d8eb649b3757e496
+SHA512 (mame-0.169.tar.gz) = 3eab159e398d0f11ce2457fdd456bf8215b0587afd92e84d5d4779deeaf21070d336c0d065694cf573f7f9e4aa837b37607c8d2bb92d7efba210a003bbe4d2b7
+Size (mame-0.169.tar.gz) = 88618742 bytes

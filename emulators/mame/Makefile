@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2015/12/05 21:25:41 adam Exp $
+# $NetBSD: Makefile,v 1.51 2016/01/02 16:45:03 wiz Exp $
 
-DISTNAME=	mame-0.168
+DISTNAME=	mame-0.169
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mamedev/}
 GITHUB_TAG=	${DISTNAME:S/-//S/.//}
@@ -22,6 +22,8 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 DEPENDS+=		liberation-ttf-[0-9]*:../../fonts/liberation-ttf
 
 USE_LANGUAGES=		c99 c++
+# 4.9 is enough, but doesn't build with SSP support on NetBSD
+GCC_REQD=		5.3
 USE_TOOLS+=		bsdtar gmake pkg-config
 UNLIMIT_RESOURCES+=	datasize
 MAKE_FILE=		makefile
