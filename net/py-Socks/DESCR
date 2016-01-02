@@ -1,0 +1,11 @@
+This package contains an updated and actively maintained version
+of SocksiPy, with bug fixes and extra features.
+
+It acts as a drop-in replacement to the socket module.
+
+Features
+
+* SOCKS proxy client for Python 2.6 - 3.x
+* TCP and UDP both supported
+* HTTP proxy client included but not supported or recommended (you
+  should use urllib2's or requests' own HTTP proxy interface)
