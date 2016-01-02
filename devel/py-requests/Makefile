@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2015/12/27 23:38:46 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2016/01/02 10:49:49 wiz Exp $
 
-DISTNAME=	requests-2.9.0
+DISTNAME=	requests-2.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel www
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/requests/}
@@ -14,6 +14,10 @@ USE_LANGUAGES=	c
 REPLACE_PYTHON=	requests/certs.py requests/packages/chardet/chardetect.py
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-test-[0-9]*:../../devel/py-test
+BUILD_DEPENDS+=	${PYPKGPREFIX}-test-httpbin-[0-9]*:../../www/py-test-httpbin
+
+do-test:
+	cd ${WRKSRC} && py.test-${PYVERSSUFFIX}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
