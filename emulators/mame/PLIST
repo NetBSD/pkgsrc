@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2015/11/25 12:34:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2016/01/02 16:45:03 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -40,6 +40,7 @@ share/doc/mame/newvideo.txt
 share/doc/mame/nscsi.txt
 share/doc/mame/windows.txt
 share/mame/artwork/adapture-grill.png
+share/mame/artwork/monochrome-matrix.png
 share/mame/artwork/shadow-mask.png
 share/mame/artwork/slot-mask.png
 share/mame/artwork/white.png
@@ -100,6 +101,7 @@ share/mame/hash/bbc_65c102_flop.xml
 share/mame/hash/bbc_68000_flop.xml
 share/mame/hash/bbc_80186_flop.xml
 share/mame/hash/bbc_arm_flop.xml
+share/mame/hash/bbc_torch_flop.xml
 share/mame/hash/bbc_z80_flop.xml
 share/mame/hash/bbca_cass.xml
 share/mame/hash/bbcb_cass.xml
@@ -187,6 +189,7 @@ share/mame/hash/gmaster.xml
 share/mame/hash/gp32.xml
 share/mame/hash/guab.xml
 share/mame/hash/gx4000.xml
+share/mame/hash/h21.xml
 share/mame/hash/horizon.xml
 share/mame/hash/hp9835a_rom.xml
 share/mame/hash/hp9845a_rom.xml
@@ -337,6 +340,7 @@ share/mame/hash/ql_cart.xml
 share/mame/hash/ql_cass.xml
 share/mame/hash/ql_flop.xml
 share/mame/hash/qx10_flop.xml
+share/mame/hash/r9751.xml
 share/mame/hash/radio86_cart.xml
 share/mame/hash/radio86_cass.xml
 share/mame/hash/rainbow.xml
@@ -361,6 +365,7 @@ share/mame/hash/snes.xml
 share/mame/hash/snes_bspack.xml
 share/mame/hash/snes_strom.xml
 share/mame/hash/snes_vkun.xml
+share/mame/hash/snotec.xml
 share/mame/hash/snread.xml
 share/mame/hash/snspell.xml
 share/mame/hash/socrates.xml
