@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/11 13:27:16 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/01/03 20:39:35 bsiegert Exp $
 gopkg/pkg/${GO_PLATFORM}/golang.org/x/oauth2.a
+gopkg/pkg/${GO_PLATFORM}/golang.org/x/oauth2/bitbucket.a
 gopkg/pkg/${GO_PLATFORM}/golang.org/x/oauth2/clientcredentials.a
 gopkg/pkg/${GO_PLATFORM}/golang.org/x/oauth2/facebook.a
 gopkg/pkg/${GO_PLATFORM}/golang.org/x/oauth2/github.a
@@ -16,6 +17,7 @@ gopkg/src/golang.org/x/oauth2/CONTRIBUTING.md
 gopkg/src/golang.org/x/oauth2/CONTRIBUTORS
 gopkg/src/golang.org/x/oauth2/LICENSE
 gopkg/src/golang.org/x/oauth2/README.md
+gopkg/src/golang.org/x/oauth2/bitbucket/bitbucket.go
 gopkg/src/golang.org/x/oauth2/client_appengine.go
 gopkg/src/golang.org/x/oauth2/clientcredentials/clientcredentials.go
 gopkg/src/golang.org/x/oauth2/clientcredentials/clientcredentials_test.go
@@ -24,10 +26,12 @@ gopkg/src/golang.org/x/oauth2/facebook/facebook.go
 gopkg/src/golang.org/x/oauth2/github/github.go
 gopkg/src/golang.org/x/oauth2/google/appengine.go
 gopkg/src/golang.org/x/oauth2/google/appengine_hook.go
+gopkg/src/golang.org/x/oauth2/google/appenginevm_hook.go
 gopkg/src/golang.org/x/oauth2/google/default.go
 gopkg/src/golang.org/x/oauth2/google/example_test.go
 gopkg/src/golang.org/x/oauth2/google/google.go
 gopkg/src/golang.org/x/oauth2/google/google_test.go
+gopkg/src/golang.org/x/oauth2/google/jwt.go
 gopkg/src/golang.org/x/oauth2/google/sdk.go
 gopkg/src/golang.org/x/oauth2/google/sdk_test.go
 gopkg/src/golang.org/x/oauth2/google/testdata/gcloud/credentials
@@ -37,6 +41,7 @@ gopkg/src/golang.org/x/oauth2/internal/oauth2_test.go
 gopkg/src/golang.org/x/oauth2/internal/token.go
 gopkg/src/golang.org/x/oauth2/internal/token_test.go
 gopkg/src/golang.org/x/oauth2/internal/transport.go
+gopkg/src/golang.org/x/oauth2/internal/transport_test.go
 gopkg/src/golang.org/x/oauth2/jws/jws.go
 gopkg/src/golang.org/x/oauth2/jwt/example_test.go
 gopkg/src/golang.org/x/oauth2/jwt/jwt.go
