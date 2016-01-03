@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.57 2016/01/03 17:14:28 morr Exp $
+$NetBSD: CHANGES-2016,v 1.58 2016/01/03 17:58:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -61,3 +61,9 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/findutils to 4.6.0 [wiz 2016-01-03]
 	Updated converters/libvisio to 0.1.5 [wiz 2016-01-03]
 	Updated net/haproxy to 1.6.3 [morr 2016-01-03]
+	Updated multimedia/gstreamer1 to 1.6.2 [wiz 2016-01-03]
+	Updated multimedia/gst-plugins1-base to 1.6.2 [wiz 2016-01-03]
+	Updated multimedia/gst-plugins1-good to 1.6.2 [wiz 2016-01-03]
+	Updated multimedia/gst-plugins1-bad to 1.6.2 [wiz 2016-01-03]
+	Updated multimedia/gst-plugins1-libav to 1.6.2 [wiz 2016-01-03]
+	Updated multimedia/gst-plugins1-ugly to 1.6.2 [wiz 2016-01-03]
