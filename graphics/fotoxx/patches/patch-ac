@@ -1,14 +1,14 @@
-$NetBSD: patch-ac,v 1.15 2014/03/27 19:13:06 ryoon Exp $
+$NetBSD: patch-ac,v 1.16 2016/01/03 04:33:49 ryoon Exp $
 
 * Add NetBSD support
 
---- zfuncs.h.orig	2014-03-05 07:17:10.000000000 +0000
+--- zfuncs.h.orig	2016-01-01 08:20:29.000000000 +0000
 +++ zfuncs.h
 @@ -22,7 +22,6 @@
  
- //     zfuncs.h   version  v.5.8
+ //     zfuncs.h   version  v.6.2
  
--#include <sys/sysinfo.h> 
+-#include <sys/sysinfo.h>
  #include <sys/time.h>
  #include <sys/stat.h>
  #include <sys/resource.h>
@@ -18,5 +18,5 @@ $NetBSD: patch-ac,v 1.15 2014/03/27 19:13:06 ryoon Exp $
  #include <gtk/gtk.h>
 +#include <sys/wait.h>
  
- #define VERTICAL GTK_ORIENTATION_VERTICAL                                  //  GTK shortcuts
+ #define VERTICAL GTK_ORIENTATION_VERTICAL                                        //  GTK shortcuts
  #define HORIZONTAL GTK_ORIENTATION_HORIZONTAL
