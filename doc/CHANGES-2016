@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.54 2016/01/03 16:53:39 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.55 2016/01/03 17:00:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -58,3 +58,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/wordpress to 4.4 [morr 2016-01-03]
 	Updated editors/vim-share to 7.4.1040 [morr 2016-01-03]
 	Updated devel/py-mercurial to 3.6.3 [wiz 2016-01-03]
+	Updated sysutils/findutils to 4.6.0 [wiz 2016-01-03]
