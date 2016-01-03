@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.64 2016/01/03 21:56:10 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.65 2016/01/03 23:41:02 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -74,3 +74,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/google-api-go-client to 20151217 [bsiegert 2016-01-03]
 	Added converters/py-yenc version 0.4.0 [bsiegert 2016-01-03]
 	Updated textproc/mdoclint to 1.36 [wiz 2016-01-03]
+	Updated www/otter-browser to 0.9.09 [kamil 2016-01-04]
