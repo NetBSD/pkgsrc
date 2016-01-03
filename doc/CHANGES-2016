@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.32 2016/01/03 05:18:23 taca Exp $
+$NetBSD: CHANGES-2016,v 1.33 2016/01/03 05:32:58 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -34,3 +34,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added time/ruby-tzinfo03 version 0.3.46 [taca 2016-01-03]
 	Updated databases/ruby-activerecord32 to 3.2.22nb1 [taca 2016-01-03]
 	Updated time/ruby-tzinfo to 1.2.2 [taca 2016-01-03]
+	Updated archivers/ruby-xz to 0.2.3 [taca 2016-01-03]
