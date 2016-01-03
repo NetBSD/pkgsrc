@@ -1,0 +1,1 @@
+bin/httpclient @PREFIX@/bin/httpclient@RUBY_SUFFIX@
