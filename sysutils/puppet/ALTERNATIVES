@@ -1,0 +1,1 @@
+bin/puppet @PREFIX@/bin/puppet@RUBY_SUFFIX@

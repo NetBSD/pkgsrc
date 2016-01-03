@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2015/11/23 15:46:59 taca Exp $
+# $NetBSD: Makefile,v 1.22 2016/01/03 06:44:40 taca Exp $
 
 DISTNAME=		puppet-3.8.4
+PKGREVISION=		1
 CATEGORIES=		sysutils
 #MASTER_SITES=		http://puppetlabs.com/downloads/puppet/
 
@@ -9,16 +10,17 @@ HOMEPAGE=		http://www.puppetlabs.com/
 COMMENT=		Configuration management framework written in Ruby
 LICENSE=		apache-2.0
 
-DEPENDS+=		${RUBY_PKGPREFIX}-facter>=1.7.0<3:../../sysutils/ruby-facter
-DEPENDS+=		${RUBY_PKGPREFIX}-hiera>=1.0.0<3:../../databases/ruby-hiera
-DEPENDS+=		${RUBY_PKGPREFIX}-io-console>=0.3:../../devel/ruby-io-console
-DEPENDS+=		${RUBY_PKGPREFIX}-json-pure>=0:../../textproc/ruby-json-pure
-DEPENDS+=		${RUBY_PKGPREFIX}-minitest>=2.5.1:../../devel/ruby-minitest
-DEPENDS+=		${RUBY_PKGPREFIX}-shadow>=2.0.0:../../security/ruby-shadow
+DEPENDS+=	${RUBY_PKGPREFIX}-facter>=1.7.0<3:../../sysutils/ruby-facter
+DEPENDS+=	${RUBY_PKGPREFIX}-hiera>=1.0.0<3:../../databases/ruby-hiera
+DEPENDS+=	${RUBY_PKGPREFIX}-minitest>=2.5.1:../../devel/ruby-minitest
+DEPENDS+=	${RUBY_PKGPREFIX}-shadow>=2.0.0:../../security/ruby-shadow
+# io-console is bundled in ruby base package.
+#DEPENDS+=	${RUBY_PKGPREFIX}-io-console>=0.3:../../devel/ruby-io-console
 
 RUBY_VERSION_SUPPORTED=	200 21
-
-CONFLICTS+=		ruby[1-9][0-9]-puppet-[0-9]* puppet-[0-9]*
+RUBY_JSON_REQD=		1.7.0
+RUBY_JSON_TYPE=		pure
+RUBYGEM_OPTIONS+=	--format-executable
 
 PKG_SYSCONFSUBDIR=	puppet
 RCD_SCRIPTS=		puppetd puppetmasterd
