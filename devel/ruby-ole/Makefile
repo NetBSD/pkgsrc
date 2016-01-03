@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.10 2015/03/15 17:09:00 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.11 2016/01/03 06:57:05 taca Exp $
 #
 
-DISTNAME=	ruby-ole-1.2.11.8
+DISTNAME=	ruby-ole-1.2.12
 PKGNAME=	${DISTNAME:S/ruby-/${RUBY_PKGPREFIX}-/}
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/ruby-ole/
+HOMEPAGE=	https://github.com/aquasync/ruby-ole
 COMMENT=	Ruby library for read/write access to OLE compound documents
 LICENSE=	mit
 
