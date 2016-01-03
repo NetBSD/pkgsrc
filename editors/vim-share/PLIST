@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2015/07/04 12:46:30 morr Exp $
+@comment $NetBSD: PLIST,v 1.25 2016/01/03 16:49:49 morr Exp $
 bin/xxd
 man/man1/evim.1
 man/man1/vim.1
@@ -280,6 +280,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/automake.vim
 share/vim/${VIM_SUBDIR}/ftplugin/bdf.vim
 share/vim/${VIM_SUBDIR}/ftplugin/bst.vim
 share/vim/${VIM_SUBDIR}/ftplugin/btm.vim
+share/vim/${VIM_SUBDIR}/ftplugin/bzl.vim
 share/vim/${VIM_SUBDIR}/ftplugin/c.vim
 share/vim/${VIM_SUBDIR}/ftplugin/calendar.vim
 share/vim/${VIM_SUBDIR}/ftplugin/cdrdaoconf.vim
@@ -335,6 +336,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/haml.vim
 share/vim/${VIM_SUBDIR}/ftplugin/hamster.vim
 share/vim/${VIM_SUBDIR}/ftplugin/haskell.vim
 share/vim/${VIM_SUBDIR}/ftplugin/help.vim
+share/vim/${VIM_SUBDIR}/ftplugin/hog.vim
 share/vim/${VIM_SUBDIR}/ftplugin/hostconf.vim
 share/vim/${VIM_SUBDIR}/ftplugin/hostsaccess.vim
 share/vim/${VIM_SUBDIR}/ftplugin/html.vim
@@ -435,6 +437,7 @@ share/vim/${VIM_SUBDIR}/ftplugin/sshconfig.vim
 share/vim/${VIM_SUBDIR}/ftplugin/sudoers.vim
 share/vim/${VIM_SUBDIR}/ftplugin/svg.vim
 share/vim/${VIM_SUBDIR}/ftplugin/sysctl.vim
+share/vim/${VIM_SUBDIR}/ftplugin/systemd.vim
 share/vim/${VIM_SUBDIR}/ftplugin/systemverilog.vim
 share/vim/${VIM_SUBDIR}/ftplugin/tcl.vim
 share/vim/${VIM_SUBDIR}/ftplugin/tcsh.vim
@@ -475,6 +478,7 @@ share/vim/${VIM_SUBDIR}/indent/automake.vim
 share/vim/${VIM_SUBDIR}/indent/awk.vim
 share/vim/${VIM_SUBDIR}/indent/bib.vim
 share/vim/${VIM_SUBDIR}/indent/bst.vim
+share/vim/${VIM_SUBDIR}/indent/bzl.vim
 share/vim/${VIM_SUBDIR}/indent/c.vim
 share/vim/${VIM_SUBDIR}/indent/cdl.vim
 share/vim/${VIM_SUBDIR}/indent/ch.vim
@@ -508,6 +512,7 @@ share/vim/${VIM_SUBDIR}/indent/gitolite.vim
 share/vim/${VIM_SUBDIR}/indent/go.vim
 share/vim/${VIM_SUBDIR}/indent/haml.vim
 share/vim/${VIM_SUBDIR}/indent/hamster.vim
+share/vim/${VIM_SUBDIR}/indent/hog.vim
 share/vim/${VIM_SUBDIR}/indent/html.vim
 share/vim/${VIM_SUBDIR}/indent/htmldjango.vim
 share/vim/${VIM_SUBDIR}/indent/idlang.vim
@@ -558,9 +563,11 @@ share/vim/${VIM_SUBDIR}/indent/sh.vim
 share/vim/${VIM_SUBDIR}/indent/sml.vim
 share/vim/${VIM_SUBDIR}/indent/sql.vim
 share/vim/${VIM_SUBDIR}/indent/sqlanywhere.vim
+share/vim/${VIM_SUBDIR}/indent/systemd.vim
 share/vim/${VIM_SUBDIR}/indent/systemverilog.vim
 share/vim/${VIM_SUBDIR}/indent/tcl.vim
 share/vim/${VIM_SUBDIR}/indent/tcsh.vim
+share/vim/${VIM_SUBDIR}/indent/teraterm.vim
 share/vim/${VIM_SUBDIR}/indent/tex.vim
 share/vim/${VIM_SUBDIR}/indent/tf.vim
 share/vim/${VIM_SUBDIR}/indent/tilde.vim
@@ -723,6 +730,7 @@ share/vim/${VIM_SUBDIR}/syntax/bindzone.vim
 share/vim/${VIM_SUBDIR}/syntax/blank.vim
 share/vim/${VIM_SUBDIR}/syntax/bst.vim
 share/vim/${VIM_SUBDIR}/syntax/btm.vim
+share/vim/${VIM_SUBDIR}/syntax/bzl.vim
 share/vim/${VIM_SUBDIR}/syntax/bzr.vim
 share/vim/${VIM_SUBDIR}/syntax/c.vim
 share/vim/${VIM_SUBDIR}/syntax/cabal.vim
@@ -1165,6 +1173,7 @@ share/vim/${VIM_SUBDIR}/syntax/syncolor.vim
 share/vim/${VIM_SUBDIR}/syntax/synload.vim
 share/vim/${VIM_SUBDIR}/syntax/syntax.vim
 share/vim/${VIM_SUBDIR}/syntax/sysctl.vim
+share/vim/${VIM_SUBDIR}/syntax/systemd.vim
 share/vim/${VIM_SUBDIR}/syntax/systemverilog.vim
 share/vim/${VIM_SUBDIR}/syntax/tads.vim
 share/vim/${VIM_SUBDIR}/syntax/tags.vim
@@ -1177,6 +1186,7 @@ share/vim/${VIM_SUBDIR}/syntax/taskedit.vim
 share/vim/${VIM_SUBDIR}/syntax/tasm.vim
 share/vim/${VIM_SUBDIR}/syntax/tcl.vim
 share/vim/${VIM_SUBDIR}/syntax/tcsh.vim
+share/vim/${VIM_SUBDIR}/syntax/teraterm.vim
 share/vim/${VIM_SUBDIR}/syntax/terminfo.vim
 share/vim/${VIM_SUBDIR}/syntax/tex.vim
 share/vim/${VIM_SUBDIR}/syntax/texinfo.vim
