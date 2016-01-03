@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.59 2016/01/03 18:08:52 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.60 2016/01/03 20:07:34 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -68,3 +68,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated multimedia/gst-plugins1-libav to 1.6.2 [wiz 2016-01-03]
 	Updated multimedia/gst-plugins1-ugly to 1.6.2 [wiz 2016-01-03]
 	Updated audio/gst-plugins0.10-fluendo-mp3 to 0.10.32 [wiz 2016-01-03]
+	Updated textproc/go-text to 20151217 [bsiegert 2016-01-03]
