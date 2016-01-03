@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.114 2015/12/02 21:14:16 leot Exp $
+$NetBSD: distinfo,v 1.115 2016/01/03 19:56:18 bsiegert Exp $
 
 SHA1 (cups-2.1.2-source.tar.bz2) = 7b5bcd0da7a11185ab01f5ab5cd8d1168c7c8b3f
 RMD160 (cups-2.1.2-source.tar.bz2) = 91307395a9d027d10f9bb89d8c8326c54b27cdf4
 SHA512 (cups-2.1.2-source.tar.bz2) = c1bd15acdd8ac55a731c9267f0dcf9159a02c3a895d4b032b0e0d0bbb1189eb4b3b4600a9f025a8359a55ce93a5911014058f361f2bc954d1fb2cdbf219e183d
 Size (cups-2.1.2-source.tar.bz2) = 8831726 bytes
 SHA1 (patch-ae) = 04f314bbbb05538b67a0f68adc241a09e836a4e2
-SHA1 (patch-af) = 7f026ca33f3dcf1fc9d741a47afb0f0581cbbcf0
+SHA1 (patch-af) = 6ae6ae6006387db69bf7c15f7c8500708c9e8f56
 SHA1 (patch-ai) = 2c1ca67ea6f6c1dedb4c8ff97736f328a2b9a7c6
 SHA1 (patch-at) = ef6303936daf0826dc4725f5369bfb1add832b1f
 SHA1 (patch-conf_Makefile) = bb8313e493c02959edfe1e53f50b9f16ce6f42e0
@@ -19,3 +19,4 @@ SHA1 (patch-cups-tls.c) = f89c25f8089d9e11a983a270adbb2cbde3c22511
 SHA1 (patch-ppdc_Makefile) = 575ab7d75bebf086cde52956679164c9f01fd37e
 SHA1 (patch-scheduler_auth.c) = ca675a6e903d4b41cd69a0cab27180653e11f501
 SHA1 (patch-scheduler_dirsvc.c) = aae5b924fb8fb39007cf04d8b83747e8724485cf
+SHA1 (patch-test_ippfind.c) = 6db56b9b1b9a26d5c40336af4dc6cde98abd9c19
