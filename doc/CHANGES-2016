@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.49 2016/01/03 11:18:39 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.50 2016/01/03 11:29:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -53,3 +53,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/SDL2 to 2.0.4 [wiz 2016-01-03]
 	Updated net/py-ipaddress to 1.0.16 [wiz 2016-01-03]
 	Updated x11/xterm to 322 [wiz 2016-01-03]
+	Updated misc/calibre to 2.48.0 [wiz 2016-01-03]
