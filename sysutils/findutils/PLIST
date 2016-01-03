@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.12 2015/08/26 12:44:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2016/01/03 17:00:48 wiz Exp $
 bin/gfind
 bin/glocate
-bin/goldfind
 bin/gupdatedb
 bin/gxargs
 gnu/bin/find
@@ -48,6 +47,7 @@ share/locale/ko/LC_MESSAGES/findutils.mo
 share/locale/lg/LC_MESSAGES/findutils.mo
 share/locale/lt/LC_MESSAGES/findutils.mo
 share/locale/ms/LC_MESSAGES/findutils.mo
+share/locale/nb/LC_MESSAGES/findutils.mo
 share/locale/nl/LC_MESSAGES/findutils.mo
 share/locale/pl/LC_MESSAGES/findutils.mo
 share/locale/pt/LC_MESSAGES/findutils.mo
