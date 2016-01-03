@@ -1,0 +1,6 @@
+This a meta package including Ruby 2.3 full release.
+
+It includes ruby23-base, ruby23-gdbm, ruby23-fiddle, ruby23-readline and
+ruby23-tk package.
+
+No package should depend on this package directly.
