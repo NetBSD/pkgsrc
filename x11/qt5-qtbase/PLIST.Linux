@@ -1,9 +1,13 @@
-@comment $NetBSD: PLIST.Linux,v 1.1 2015/08/30 04:13:46 markd Exp $
+@comment $NetBSD: PLIST.Linux,v 1.2 2016/01/03 21:15:57 markd Exp $
 qt5/lib/cmake/Qt5Gui/Qt5Gui_QEvdevKeyboardPlugin.cmake
 qt5/lib/cmake/Qt5Gui/Qt5Gui_QEvdevMousePlugin.cmake
 qt5/lib/cmake/Qt5Gui/Qt5Gui_QEvdevTabletPlugin.cmake
 qt5/lib/cmake/Qt5Gui/Qt5Gui_QEvdevTouchScreenPlugin.cmake
 qt5/lib/cmake/Qt5Gui/Qt5Gui_QLinuxFbIntegrationPlugin.cmake
+qt5/lib/cmake/Qt5Network/Qt5Network_QConnmanEnginePlugin.cmake
+qt5/lib/cmake/Qt5Network/Qt5Network_QNetworkManagerEnginePlugin.cmake
+qt5/plugins/bearer/libqconnmanbearer.la
+qt5/plugins/bearer/libqnmbearer.la
 qt5/plugins/generic/libqevdevkeyboardplugin.la
 qt5/plugins/generic/libqevdevmouseplugin.la
 qt5/plugins/generic/libqevdevtabletplugin.la
