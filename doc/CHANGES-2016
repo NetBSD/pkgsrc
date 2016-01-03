@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.43 2016/01/03 08:20:23 taca Exp $
+$NetBSD: CHANGES-2016,v 1.44 2016/01/03 08:46:09 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -46,3 +46,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/ruby-http to 1.0.1 [taca 2016-01-03]
 	Updated www/ruby-httpclient to 2.7.1 [taca 2016-01-03]
 	Updated www/ruby-jekyll-sass-converter to 1.4.0 [taca 2016-01-03]
+	Updated www/ruby-mechanize to 2.7.4 [taca 2016-01-03]
