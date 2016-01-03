@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15257 2016/01/03 04:34:22 ryoon Exp $
+$NetBSD: TODO,v 1.15258 2016/01/03 10:15:59 wiz Exp $
 
 Suggested new packages
 ======================
@@ -395,6 +395,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o R-plyr-1.8.3
 	o R-stringr-1.0.0
 	o ROMInfo-28
+	o SDL2-2.0.4
 	o Sigil-0.9.2
 	o TeXmacs-devel-1.0.7.21
 	o TiffIO-140a
@@ -503,6 +504,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cacti-spine-0.8.8f
 	o cal3d-0.11.0
 	o calcoo-2.1.0
+	o calibre-2.48
 	o calligra-2.9.9 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o catdoc-1.1
@@ -682,6 +684,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o filerunner-14.06.18.10
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
+	o findutils-4.6.0
 	o fish-2.2.0
 	o flashplayer-0.4.13
 	o flashrom-0.9.8
@@ -742,6 +745,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gentoo-0.20.4
 	o geoclue-2.1.10
 	o gerbv-2.6.1
+	o gettext-0.19.7
 	o gfract-0.33
 	o ghc7-7.10.1
 	o gifsicle-1.88
@@ -1043,6 +1047,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libva-1.6.0
 	o libvdpau-1.1.1
 	o libvirt-1.2.17
+	o libvisio-0.1.5
 	o libxdg-basedir-1.2.0
 	o libxklavier-5.3
 	o libxml++-2.38.0
@@ -1062,6 +1067,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o lottanzb-0.6
 	o lq-sp-1.3.4.14
 	o lsh-2.1
+	o lv2-5.4
 	o lwm-1.2.3
 	o lyx-2.1.4
 	o mDNSResponder-567
@@ -1110,6 +1116,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mlterm-3.6.2
 	o moc-2.5.0
 	o modular-xorg-server-1.18.0
+	o modular-xorg-xephyr-1.18.0
 	o modular-xorg-xquartz-1.17.4
 	o molden-4.8 [after which PR 40252 can be closed]
 	o molden-5.4
@@ -1470,11 +1477,13 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-gmpy-1.17
 	o py-gnome-menus-3.8.0
 	o py-input-pad-1.4.2
+	o py-ipaddress-1.0.16
 	o py-ipython-4.0
 	o py-jaraco_util-11.0
 	o py-junos-eznc-1.2.2
 	o py-markdown-2.6.5
 	o py-matplotlib-1.4.3
+	o py-mercurial-3.6.3
 	o py-metar-0.20
 	o py-mezzanine-4.0.1
 	o py-munkres-1.0.7
@@ -1765,7 +1774,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wbm-virtual-server-4.152
 	o wcalc-2.4
 	o webalizer-2.23.05
-	o webmin-1.690
+	o webmin-1.780
 	o websvn-2.3.3
 	o whohas-0.29.1
 	o whowatch-1.8.5
@@ -1831,6 +1840,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xsc-1.6
 	o xscorch-0.2.1
 	o xsd-3.3.0
+	o xterm-322
 	o xtraceroute-0.9.1
 	o xtux-20030306
 	o xvidcap-1.1.7
