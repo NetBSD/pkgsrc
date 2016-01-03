@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.46 2016/01/03 10:57:32 adam Exp $
+$NetBSD: CHANGES-2016,v 1.47 2016/01/03 11:15:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -50,3 +50,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added time/ruby-tzinfo-data version 1.2015.7 [taca 2016-01-03]
 	Updated databases/py-sqlalchemy to 1.0.11 [adam 2016-01-03]
 	Updated www/py-django to 1.8.8 [adam 2016-01-03]
+	Updated devel/SDL2 to 2.0.4 [wiz 2016-01-03]
