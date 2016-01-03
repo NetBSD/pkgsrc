@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.38 2016/01/03 06:58:03 taca Exp $
+$NetBSD: CHANGES-2016,v 1.39 2016/01/03 07:44:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -41,3 +41,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/puppet to 3.8.4nb1 [taca 2016-01-03]
 	Removed devel/ruby-io-console [taca 2016-01-03]
 	Updated devel/ruby-ole to 1.2.12 [taca 2016-01-03]
+	Updated net/ruby-amq-protocol to 2.0.1 [taca 2016-01-03]
