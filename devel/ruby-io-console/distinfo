@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 03:29:24 agc Exp $
-
-SHA1 (io-console-0.4.2.gem) = 0580e983149ce8305278fc52cadcca3912bfa111
-RMD160 (io-console-0.4.2.gem) = 4c6b14d455ecc359ca318696958310154b901484
-SHA512 (io-console-0.4.2.gem) = 8bcac52f10ee2e8d8290d50b6747a3bafabbe254f1a73d05125564c68d8097453e7053138825bbae2ca57fd6332a0df4f072be992797915e652e64e0d1959fcc
-Size (io-console-0.4.2.gem) = 9216 bytes
