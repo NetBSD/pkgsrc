@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.224 2015/12/02 21:14:16 leot Exp $
+# $NetBSD: Makefile,v 1.225 2016/01/03 19:56:18 bsiegert Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -8,6 +8,7 @@ DISTNAME=	cups-${DIST_VERS}-source
 PKGNAME=	cups-${DIST_VERS:S/-/./g}
 BASE_VERS=	2.1.2
 DIST_VERS=	${BASE_VERS}
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	http://www.cups.org/software/${BASE_VERS}/
 EXTRACT_SUFX=	.tar.bz2
@@ -142,6 +143,10 @@ SUBST_SED.piefix=	-e 's|@PIEFLAGS@||g'
 SUBST_STAGE.piefix=	post-patch
 .endif
 
+.if ${OPSYS} == "Darwin"
+PLIST_SRC=		PLIST.Darwin
+.endif
+
 INSTALLATION_DIRS=	${DOCDIR} ${EGDIR} ${MIMEDIR} ${CUPS_CONFDIR}
 INSTALL_ENV+=		DSTROOT=${DESTDIR}
 
@@ -169,7 +174,7 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/cups.pam ${DESTDIR}${EGDIR}
 .endif
 .if !empty(PKG_OPTIONS:Mdnssd)
-	${LN} -s ${DESTDIR}${PREFIX}/libexec/cups/backend/dnssd ${DESTDIR}${PREFIX}/libexec/cups/backend/mdns
+	${LN} -sf ${DESTDIR}${PREFIX}/libexec/cups/backend/dnssd ${DESTDIR}${PREFIX}/libexec/cups/backend/mdns
 .endif
 
 .include "../../converters/libiconv/buildlink3.mk"
