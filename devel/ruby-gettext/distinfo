@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.23 2015/11/03 03:29:23 agc Exp $
+$NetBSD: distinfo,v 1.24 2016/01/03 05:36:05 taca Exp $
 
-SHA1 (gettext-3.1.7.gem) = 104f2f2333a6ef6aeda25bb92d9ac18991546b76
-RMD160 (gettext-3.1.7.gem) = 789d16377cca86daa93f2033325bb0acbd95ab8a
-SHA512 (gettext-3.1.7.gem) = e7cd1674b0e40ac8593d398a874355216544cba9e5aa082dab4aecd8ab8ee5a30ba3003bda4f097db2ac10bd3861ff8fa6a0c389f68b4467f22d90b88120cad5
-Size (gettext-3.1.7.gem) = 283136 bytes
+SHA1 (gettext-3.2.0.gem) = 3cfbbfc2a3aae976007350ca1e9ec002944a10b3
+RMD160 (gettext-3.2.0.gem) = 6e4878bcb2bdd7fd80750089ea1515f647e11181
+SHA512 (gettext-3.2.0.gem) = 4ebb1a5a1eb4c6fe0fb6e78ae1dbc6c477649d2c73bc422ecaf285bc4dd2a1567ff027416740d30b9c746ca2e16cac2b04f115e68c7e1be2e67050018f4a4b93
+Size (gettext-3.2.0.gem) = 283136 bytes
