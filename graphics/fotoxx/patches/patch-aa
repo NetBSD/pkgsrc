@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.15 2014/03/15 05:37:03 ryoon Exp $
+$NetBSD: patch-aa,v 1.16 2016/01/03 04:33:49 ryoon Exp $
 
 * Pass LDFLAGS from pkgsrc's Makefile
 
---- Makefile.orig	2014-03-05 07:17:10.000000000 +0000
+--- Makefile.orig	2016-01-01 08:20:29.000000000 +0000
 +++ Makefile
 @@ -15,7 +15,7 @@ DATADIR = $(SHAREDIR)/data
  ICONDIR = $(SHAREDIR)/icons
@@ -10,6 +10,15 @@ $NetBSD: patch-aa,v 1.15 2014/03/15 05:37:03 ryoon Exp $
  DOCDIR = $(PREFIX)/share/doc/fotoxx
 -MANDIR = $(PREFIX)/share/man/man1
 +MANDIR = $(PREFIX)/${PKGMANDIR}/man1
+ APPDATADIR = $(PREFIX)/share/appdata
  MENUFILE = $(PREFIX)/share/applications/fotoxx.desktop
  
- CFLAGS = $(CXXFLAGS) -c `pkg-config --cflags gtk+-3.0`
+@@ -94,7 +94,7 @@ install: fotoxx uninstall
+ 	cp -f -R  data/* $(DESTDIR)$(DATADIR)
+ 	cp -f -R  icons/* $(DESTDIR)$(ICONDIR)
+ 	cp -f -R  locales/* $(DESTDIR)$(LOCALESDIR)
+-	cp -n -R  doc/* $(DESTDIR)$(DOCDIR)
++	cp -R  doc/* $(DESTDIR)$(DOCDIR)
+ 	gzip -f -9 $(DESTDIR)$(DOCDIR)/changelog
+ 	cp -f -R  appdata/* $(DESTDIR)$(APPDATADIR)
+ 	# man page
