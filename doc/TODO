@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15264 2016/01/03 17:00:56 wiz Exp $
+$NetBSD: TODO,v 1.15265 2016/01/03 17:11:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1044,7 +1044,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libva-1.6.0
 	o libvdpau-1.1.1
 	o libvirt-1.2.17
-	o libvisio-0.1.5
 	o libxdg-basedir-1.2.0
 	o libxklavier-5.3
 	o libxml++-2.38.0
