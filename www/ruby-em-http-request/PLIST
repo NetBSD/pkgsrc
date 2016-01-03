@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2014/03/14 19:00:25 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/01/03 07:56:35 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gemtest
 ${GEM_LIBDIR}/.gitignore
@@ -56,6 +56,7 @@ ${GEM_LIBDIR}/spec/multi_spec.rb
 ${GEM_LIBDIR}/spec/pipelining_spec.rb
 ${GEM_LIBDIR}/spec/redirect_spec.rb
 ${GEM_LIBDIR}/spec/socksify_proxy_spec.rb
+${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_LIBDIR}/spec/ssl_spec.rb
 ${GEM_LIBDIR}/spec/stallion.rb
 ${GEM_LIBDIR}/spec/stub_server.rb

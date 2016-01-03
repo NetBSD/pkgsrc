@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2014/03/14 19:00:25 taca Exp $
+# $NetBSD: Makefile,v 1.3 2016/01/03 07:56:35 taca Exp $
 
-DISTNAME=	em-http-request-1.1.2
+DISTNAME=	em-http-request-1.1.3
 CATEGORIES=	net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/igrigorik/em-http-request
+HOMEPAGE=	https://github.com/igrigorik/em-http-request
 COMMENT=	EventMachine based, async HTTP Request client
 LICENSE=	mit
 
