@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2015/11/07 16:58:13 tnn Exp $
+# $NetBSD: options.mk,v 1.10 2016/01/03 11:35:21 wiz Exp $
 
 # Global and legacy options
 
@@ -6,8 +6,8 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.ffmpeg2
 PKG_SUPPORTED_OPTIONS=	ass faac fdk-aac fontconfig freetype gnutls lame \
 			libvpx opencore-amr openssl theora vorbis x264 x265 \
 			xcb xvid
-PKG_SUGGESTED_OPTIONS=	lame ass freetype fontconfig libvpx theora vorbis x264 \
-			xvid
+PKG_SUGGESTED_OPTIONS=	lame ass freetype fontconfig libvpx openssl \
+			theora vorbis x264 xvid
 
 # Add VDPAU if it is available
 .include "../../multimedia/libvdpau/available.mk"
