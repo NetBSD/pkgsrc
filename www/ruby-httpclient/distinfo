@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.18 2015/12/13 15:37:44 taca Exp $
+$NetBSD: distinfo,v 1.19 2016/01/03 08:12:11 taca Exp $
 
-SHA1 (httpclient-2.7.0.1.gem) = e546f71fd64c0f69e258039ca0afe7b3e5c0a1b5
-RMD160 (httpclient-2.7.0.1.gem) = b5d27aa47f7467bd9dc3d1b0cbb6a49ec1a7e967
-SHA512 (httpclient-2.7.0.1.gem) = cf6c3b86a34acef60d3a0e8740057b55869cd5217fd38dc8c0ae0375e9c75ce7e5a9889c7a27ab27875f0418e10f1013724efee1b50a08efc6898ade58dde15b
-Size (httpclient-2.7.0.1.gem) = 378368 bytes
+SHA1 (httpclient-2.7.1.gem) = 5d0a605e42a7f591734c05c494b9b58aba162a5c
+RMD160 (httpclient-2.7.1.gem) = 293321725112a038f78f727cfe757c3b46db291a
+SHA512 (httpclient-2.7.1.gem) = 11b2d7a17a89d40139641586b3257384b695fc8041a91584a8f86c8ccb81fdc64aea5f5947a5982fb0e8bd27a3d52ead1d7ec302ee85c28a184be7055f9500a1
+Size (httpclient-2.7.1.gem) = 378880 bytes
