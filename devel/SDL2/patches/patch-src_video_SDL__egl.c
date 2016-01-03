@@ -1,8 +1,8 @@
-$NetBSD: patch-src_video_SDL__egl.c,v 1.2 2015/02/13 19:21:12 jmcneill Exp $
+$NetBSD: patch-src_video_SDL__egl.c,v 1.3 2016/01/03 11:15:12 wiz Exp $
 
---- src/video/SDL_egl.c.orig	2014-03-16 02:31:44.000000000 +0000
+--- src/video/SDL_egl.c.orig	2016-01-02 19:56:31.000000000 +0000
 +++ src/video/SDL_egl.c
-@@ -29,10 +29,10 @@
+@@ -40,10 +40,10 @@
  
  #if SDL_VIDEO_DRIVER_RPI
  /* Raspbian places the OpenGL ES/EGL binaries in a non standard path */
@@ -15,5 +15,5 @@ $NetBSD: patch-src_video_SDL__egl.c,v 1.2 2015/02/13 19:21:12 jmcneill Exp $
 +#define DEFAULT_OGL_ES_PVR PREFIX "/lib/libGLESv2.so"
 +#define DEFAULT_OGL_ES PREFIX "/lib/libGLESv2.so"
  
- #elif SDL_VIDEO_DRIVER_ANDROID
+ #elif SDL_VIDEO_DRIVER_ANDROID || SDL_VIDEO_DRIVER_VIVANTE
  /* Android */
