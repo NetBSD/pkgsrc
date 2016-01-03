@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.35 2016/01/03 05:45:45 taca Exp $
+$NetBSD: CHANGES-2016,v 1.36 2016/01/03 06:45:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -38,3 +38,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated audio/ruby-taglib to 0.7.1 [taca 2016-01-03]
 	Updated devel/ruby-gettext to 3.2.0 [taca 2016-01-03]
 	Updated devel/ruby-gettext_i18n_rails to 1.3.2 [taca 2016-01-03]
+	Updated sysutils/puppet to 3.8.4nb1 [taca 2016-01-03]
