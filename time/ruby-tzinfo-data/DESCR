@@ -1,0 +1,11 @@
+TZInfo::Data contains data from the IANA Time Zone database packaged as Ruby
+modules for use with TZInfo.
+
+TZInfo::Data is the public domain [IANA Time Zone
+Database](http://www.iana.org/time-zones) packaged as a set of Ruby modules
+for use with [TZInfo](http://tzinfo.github.io).
+
+If TZInfo::Data is installed, TZInfo will automatically use it as its source
+of time zone data. If TZInfo::Data is not available, TZInfo will attempt to
+use the system zoneinfo files instead. Please refer to the [TZInfo
+documentation](http://rubydoc.info/gems/tzinfo/frames) for further details.
