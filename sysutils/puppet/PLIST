@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.15 2015/08/17 13:20:43 fhajny Exp $
-bin/puppet
+@comment $NetBSD: PLIST,v 1.16 2016/01/03 06:44:40 taca Exp $
+bin/puppet${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/COMMITTERS.md
 ${GEM_LIBDIR}/CONTRIBUTING.md
