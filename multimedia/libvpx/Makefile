@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.62 2015/11/25 13:00:43 jperkin Exp $
+# $NetBSD: Makefile,v 1.63 2016/01/03 20:59:17 markd Exp $
 
 DISTNAME=	libvpx-1.5.0
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=webmproject/}
 GITHUB_PROJECT=	libvpx
@@ -128,6 +129,9 @@ BUILD_TARGET=	# none
 
 post-extract:
 	${CP} ${FILESDIR}/strip_fPIC.sh ${WRKSRC}
+
+PKGCONFIG_OVERRIDE+=		vpx.pc
+PKGCONFIG_OVERRIDE_STAGE=	post-build
 
 # PR pkg/48508: newer gas from binutils is required to compile ssse3 code.
 .if !empty(MACHINE_PLATFORM:MNetBSD-5.*) || \
