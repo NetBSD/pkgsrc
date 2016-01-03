@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2015/10/04 13:49:30 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2016/01/03 08:00:59 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.coveralls.yml
 ${GEM_LIBDIR}/.gitignore
@@ -13,7 +13,6 @@ ${GEM_LIBDIR}/Guardfile
 ${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/examples/parallel_requests_with_celluloid.rb
 ${GEM_LIBDIR}/http.gemspec
 ${GEM_LIBDIR}/lib/http.rb
 ${GEM_LIBDIR}/lib/http/chainable.rb
