@@ -1,36 +1,48 @@
-$NetBSD: patch-ab,v 1.14 2014/03/27 19:13:06 ryoon Exp $
+$NetBSD: patch-ab,v 1.15 2016/01/03 04:33:49 ryoon Exp $
 
 * Add NetBSD support
 
---- fotoxx-14.03.1.cc.orig	2014-03-05 07:17:10.000000000 +0000
-+++ fotoxx-14.03.1.cc
-@@ -512,7 +512,11 @@ int initzfunc(void *)
-    }
- 
-    contx = 0;
-+#if defined(__NetBSD__)
-+   while ((pp = command_output(contx,"find /var/shm/fotoxx-*",0))) {
-+#else
-    while ((pp = command_output(contx,"find /run/shm/fotoxx-*",0))) {
-+#endif
-       pp2 = strchr(pp,'-');
-       if (! pp2) continue;
-       npid = atoi(pp2+1);                                                  //  pid of fotoxx owner process
-@@ -556,7 +560,7 @@ int initzfunc(void *)
- 
-    //  miscellaneous
- 
--   Nwt = get_nprocs();                                                     //  get SMP CPU count
-+   Nwt = sysconf(_SC_NPROCESSORS_ONLN);                                    //  get SMP CPU count
-    if (Nwt <= 0) Nwt = 2;
-    if (Nwt > max_threads) Nwt = max_threads;                               //  compile time limit
-    printz("using %d threads \n",Nwt);
-@@ -641,7 +645,7 @@ int initzfunc(void *)
-    err = stat(favorites_config,&statb);
+--- fotoxx-16.01.cc.orig	2016-01-01 08:20:29.000000000 +0000
++++ fotoxx-16.01.cc
+@@ -465,28 +465,28 @@ int initzfunc(void *)
     if (err) {
-       printz("create default favorites menu \n");
--      shell_quiet("cp -R -n %s/favorites/* %s",get_zdatadir(),favorites_dirk);
-+      shell_quiet("yes 'n' | cp -R -i %s/favorites/* %s",get_zdatadir(),favorites_dirk);
+       printz("copy default pattern files \n");
+       mkdir(pattern_dirk,0750);
+-      shell_quiet("cp -n %s/patterns/* %s",get_zdatadir(),pattern_dirk);
++      shell_quiet("yes 'n' | cp -i %s/patterns/* %s",get_zdatadir(),pattern_dirk);
     }
  
-    //  if no slide show pause tone file, copy installation default
+    err = stat(retouch_combo_dirk,&statb);                                        //  retouch combo settings
+    if (err) {
+       printz("copy default retouch_combo files \n");
+       mkdir(retouch_combo_dirk,0750);
+-      shell_quiet("cp -n %s/retouch_combo/* %s",get_zdatadir(),retouch_combo_dirk);
++      shell_quiet("yes 'n' | cp -i %s/retouch_combo/* %s",get_zdatadir(),retouch_combo_dirk);
+    }
+ 
+    err = stat(custom_kernel_dirk,&statb);                                        //  custom convolution kernels
+    if (err) {
+       printz("copy default custom_kernel files \n");
+       mkdir(custom_kernel_dirk,0750);
+-      shell_quiet("cp -n %s/custom_kernel/* %s",get_zdatadir(),custom_kernel_dirk);
++      shell_quiet("yes 'n' | cp -i %s/custom_kernel/* %s",get_zdatadir(),custom_kernel_dirk);
+    }
+ 
+    err = stat(favorites_dirk,&statb);                                            //  favorites menu
+    if (err) {
+       printz("copy default favorites menu \n");
+       mkdir(favorites_dirk,0750);
+-      shell_quiet("cp -n %s/favorites/* %s",get_zdatadir(),favorites_dirk);
++      shell_quiet("yes 'n' | cp -i %s/favorites/* %s",get_zdatadir(),favorites_dirk);
+    }
+ 
+    err = stat(tags_defined_file,&statb);                                         //  tags_defined file
+@@ -510,7 +510,7 @@ int initzfunc(void *)
+    screenhh = gdk_screen_get_height(screen);
+    printz("screen width: %d  height: %d \n",screenww,screenhh);
+ 
+-   NWT = get_nprocs();                                                           //  get SMP CPU count
++   NWT = sysconf(_SC_NPROCESSORS_ONLN);           //  get SMP CPU count
+    if (NWT <= 0) NWT = 2;
+    if (NWT > max_threads) NWT = max_threads;                                     //  compile time limit
+    printz("using %d threads \n",NWT);
