@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2015/06/12 10:48:26 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2016/01/03 23:08:34 asau Exp $
 
 DISTNAME=	mpqc-2.3.1
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mpqc/}
 EXTRACT_SUFX=	.tar.bz2
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.mpqc.org/
 COMMENT=	The Massively Parallel Quantum Chemistry Program
 
 USE_LANGUAGES=	c c++ fortran77
+PKGSRC_FORTRAN=	f2c # XXX force f2c for now
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--with-libdirs="-L${PREFIX}/lib $(COMPILER_RPATH_FLAG)$(PREFIX)/lib"	# fixme
 #CONFIGURE_ARGS=	-without-f77	# this doesn't work out of the box
