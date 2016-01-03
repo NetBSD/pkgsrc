@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.61 2016/01/03 20:42:18 bsiegert Exp $
+$NetBSD: CHANGES-2016,v 1.62 2016/01/03 20:58:13 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -71,3 +71,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/go-text to 20151217 [bsiegert 2016-01-03]
 	Updated net/go-net to 20151229 [bsiegert 2016-01-03]
 	Updated security/go-oauth2 to 20151204 [bsiegert 2016-01-03]
+	Updated devel/google-api-go-client to 20151217 [bsiegert 2016-01-03]
