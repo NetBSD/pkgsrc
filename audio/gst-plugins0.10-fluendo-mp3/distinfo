@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 01:12:34 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/01/03 18:05:13 wiz Exp $
 
-SHA1 (gst-fluendo-mp3-0.10.15.tar.bz2) = 7627ae4f1e12ef68f7552cd449fcf63745b08243
-RMD160 (gst-fluendo-mp3-0.10.15.tar.bz2) = 6b74320836c19b95cbb6a3e75f5b1c31268b7f6b
-SHA512 (gst-fluendo-mp3-0.10.15.tar.bz2) = 7eac5bc52f7e0cd0c4baa91fdeb05ed6e1429426da92dd09e51a30f380052ea318ece865a69f6a12728b36fca40daeb6ffda02636d778cd5762f3403793fc5ea
-Size (gst-fluendo-mp3-0.10.15.tar.bz2) = 373220 bytes
-SHA1 (patch-aa) = c9769f9c8509acc089860375695bac80fdc4971a
+SHA1 (gst-fluendo-mp3-0.10.32.tar.bz2) = b96823c0d773c7068be77fe139870b50989a7773
+RMD160 (gst-fluendo-mp3-0.10.32.tar.bz2) = 3b287b0f539ec826588b317314dec4909ceff651
+SHA512 (gst-fluendo-mp3-0.10.32.tar.bz2) = 535a5167af828cb4d5988077892f5a353f53a6179d923e1d0b016ecf68f43995ecdd7d4b09cb2b0399ab8c63742e7f67268d036a255ccc4fe19f331bffac380a
+Size (gst-fluendo-mp3-0.10.32.tar.bz2) = 406173 bytes
+SHA1 (patch-configure) = 70598decc332f7ff789d78a8c9ca3e3c9954e76d
