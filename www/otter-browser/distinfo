@@ -1,6 +1,10 @@
-$NetBSD: distinfo,v 1.1 2015/12/12 05:04:19 kamil Exp $
+$NetBSD: distinfo,v 1.2 2016/01/03 23:37:39 kamil Exp $
 
-SHA1 (otter-browser-0.9.08.tar.gz) = 1d9a9be6afd361e59b6828221c6d20b97b01b262
-RMD160 (otter-browser-0.9.08.tar.gz) = 821237e7f3fe68de73c67c51b91433b6096075af
-SHA512 (otter-browser-0.9.08.tar.gz) = 9244a84490bb8dda12b932f6b39a41000a96740ef9c194e8f52a31122d763f857462e88219f086e8ad886dd6e0d79d4143060ddb801aaeb30c2952cef283e5ff
-Size (otter-browser-0.9.08.tar.gz) = 3124966 bytes
+SHA1 (otter-browser-0.9.09.tar.gz) = f0ee5031f09243d5c78cd638d95655b04fada05c
+RMD160 (otter-browser-0.9.09.tar.gz) = 4368fe02e58178f78419c53c8969ff97b1e15a3b
+SHA512 (otter-browser-0.9.09.tar.gz) = 269d896784f6cdcc051c4d6c1b182910d62c10998b10993cb90387cc81a8ca032a36cbe0182695d441b3e470a7a5ba7f54ffb5436cbf566a3ccd9bf3911734b1
+Size (otter-browser-0.9.09.tar.gz) = 3197615 bytes
+SHA1 (patch-src_ui_Dialog.cpp) = 25b1edcfe270420f257ab7c40ad09f1b4c2894c8
+SHA1 (patch-src_ui_OptionDelegate.cpp) = 10177e96e516ed6f2d28d574ad0026e64161c4ba
+SHA1 (patch-src_ui_OptionDelegate.h) = f1118416e8252fb97576be5fd8558450df346144
+SHA1 (patch-src_ui_Window.cpp) = 4c3dd60a09800a7d3155693474ef451086648a1e
