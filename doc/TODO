@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15258 2016/01/03 10:15:59 wiz Exp $
+$NetBSD: TODO,v 1.15259 2016/01/03 11:15:21 wiz Exp $
 
 Suggested new packages
 ======================
@@ -395,7 +395,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o R-plyr-1.8.3
 	o R-stringr-1.0.0
 	o ROMInfo-28
-	o SDL2-2.0.4
 	o Sigil-0.9.2
 	o TeXmacs-devel-1.0.7.21
 	o TiffIO-140a
