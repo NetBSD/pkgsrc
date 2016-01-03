@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/31 11:19:49 asau Exp $
+# $NetBSD: Makefile,v 1.3 2016/01/03 20:41:58 markd Exp $
 
 DISTNAME=	tclap-1.2.1
 CATEGORIES=	devel
@@ -12,6 +12,8 @@ LICENSE=	mit
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+
+CONFIGURE_ARGS+=	--disable-doxygen
 
 pre-configure:
 	rm -fr ${WRKSRC}/docs/html/CVS
