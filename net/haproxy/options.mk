@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.3 2015/11/12 16:32:29 morr Exp $
+# $NetBSD: options.mk,v 1.4 2016/01/03 17:13:40 morr Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.haproxy
-PKG_SUPPORTED_OPTIONS=	pcre ssl
+PKG_SUPPORTED_OPTIONS=	pcre ssl deviceatlas
 PKG_SUGGESTED_OPTIONS=	pcre ssl
 
 .include "../../mk/bsd.options.mk"
@@ -20,7 +20,7 @@ BUILD_MAKE_FLAGS+=	USE_PCRE=1
 .if !empty(PKG_OPTIONS:Mpcre) && !empty(PKG_OPTIONS:Mdeviceatlas)
 DEVICEATLAS_VERSION=	2.1
 DEVICEATLAS_DISTFILE=	deviceatlas-enterprise-c-${DEVICEATLAS_VERSION}
-DISTFILES+=		${DEVICEATLAS_DISTFILE}.zip
+DISTFILES=		${DISTNAME}.tar.gz ${DEVICEATLAS_DISTFILE}.zip
 DEVICEATLAS_HOMEPAGE=	https://www.deviceatlas.com/deviceatlas-haproxy-module
 
 BUILD_MAKE_FLAGS+=	USE_DEVICEATLAS=1 DEVICEATLAS_SRC=../${DEVICEATLAS_DISTFILE}
