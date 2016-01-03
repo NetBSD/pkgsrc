@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2015/12/30 04:22:59 taca Exp $
+# $NetBSD: Makefile,v 1.12 2016/01/03 07:43:45 taca Exp $
 
-DISTNAME=	amq-protocol-2.0.0
+DISTNAME=	amq-protocol-2.0.1
 CATEGORIES=	net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/ruby-amqp/amq-protocol
+HOMEPAGE=	https://github.com/ruby-amqp/amq-protocol
 COMMENT=	AMQP 0.9.1 encoder & decoder
 LICENSE=	mit
 
