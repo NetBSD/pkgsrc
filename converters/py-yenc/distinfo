@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2016/01/03 21:02:29 bsiegert Exp $
+
+SHA1 (yenc-0.4.0.tar.gz) = 7e84dbadae82a48b9037262756a3f64c5c0482d8
+RMD160 (yenc-0.4.0.tar.gz) = 36356363bddd6626a9e6659df126284591b5952a
+Size (yenc-0.4.0.tar.gz) = 63156 bytes
