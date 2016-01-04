@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2015/09/01 21:43:53 markd Exp $
+# $NetBSD: Makefile,v 1.6 2016/01/04 01:57:24 markd Exp $
 
 DISTNAME=	collection-pictures
-PKGNAME=	texlive-${DISTNAME}-2015pre3
+PKGNAME=	texlive-${DISTNAME}-2015pre4
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	37604
@@ -109,7 +109,7 @@ DEPENDS+=	tex-pictex-[0-9]*:../../graphics/tex-pictex
 # depend texdraw
 # depend ticollege
 # depend tipfr
-# depend tikz-3dplot
+DEPENDS+=	tex-tikz-3dplot-[0-9]*:../../graphics/tex-tikz-3dplot
 # depend tikz-bayesnet
 # depend tikz-cd
 # depend tikz-dependency
@@ -119,14 +119,14 @@ DEPENDS+=	tex-pictex-[0-9]*:../../graphics/tex-pictex
 # depend tikz-palattice
 # depend tikz-qtree
 # depend tikz-timing
-# depend tikzinclude
-# depend tikzmark
-# depend tikzorbital
-# depend tikzpagenodes
-# depend tikzpfeile
+DEPENDS+=	tex-tikzinclude-[0-9]*:../../graphics/tex-tikzinclude
+DEPENDS+=	tex-tikzmark-[0-9]*:../../graphics/tex-tikzmark
+DEPENDS+=	tex-tikzorbital-[0-9]*:../../graphics/tex-tikzorbital
+DEPENDS+=	tex-tikzpagenodes-[0-9]*:../../graphics/tex-tikzpagenodes
+DEPENDS+=	tex-tikzpfeile-[0-9]*:../../graphics/tex-tikzpfeile
 DEPENDS+=	tex-tikzposter-[0-9]*:../../graphics/tex-tikzposter
-# depend tikzscale
-# depend tikzsymbols
+DEPENDS+=	tex-tikzscale-[0-9]*:../../graphics/tex-tikzscale
+DEPENDS+=	tex-tikzsymbols-[0-9]*:../../graphics/tex-tikzsymbols
 # depend timing-diagrams
 # depend tqft
 # depend tkz-base
