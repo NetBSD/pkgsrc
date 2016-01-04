@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2016/01/04 01:49:43 markd Exp $
+share/texmf-dist/tex/latex/media9/javascript/3Dmenu.js
+share/texmf-dist/tex/latex/media9/javascript/3Dspintool.js
+share/texmf-dist/tex/latex/media9/javascript/animation.js
+share/texmf-dist/tex/latex/media9/javascript/asylabels.js
+share/texmf-dist/tex/latex/media9/media9.sty
+share/texmf-dist/tex/latex/media9/players/APlayer.swf
+share/texmf-dist/tex/latex/media9/players/APlayer9.swf
+share/texmf-dist/tex/latex/media9/players/SlideShow.swf
+share/texmf-dist/tex/latex/media9/players/StrobeMediaPlayback.swf
+share/texmf-dist/tex/latex/media9/players/VPlayer.swf
+share/texmf-dist/tex/latex/media9/players/VPlayer9.swf
