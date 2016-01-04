@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2014/05/22 21:34:24 szptvlfn Exp $
-bin/xmonad
+@comment $NetBSD: PLIST,v 1.2 2016/01/04 12:45:36 szptvlfn Exp $
 lib/${PKGNAME}/${HASKELL_VERSION}/HS${PKGNAME}.o
+lib/${PKGNAME}/${HASKELL_VERSION}/Paths_xmonad.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/XMonad.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/XMonad/Config.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/XMonad/Core.hi
