@@ -1,12 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2014/05/18 21:16:55 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/01/04 12:22:20 szptvlfn Exp $
 lib/utf8-string-${PKGVERSION}/${HASKELL_VERSION}/Codec/Binary/UTF8/Generic.hi
 lib/utf8-string-${PKGVERSION}/${HASKELL_VERSION}/Codec/Binary/UTF8/String.hi
 lib/utf8-string-${PKGVERSION}/${HASKELL_VERSION}/Data/ByteString/Lazy/UTF8.hi
 lib/utf8-string-${PKGVERSION}/${HASKELL_VERSION}/Data/ByteString/UTF8.hi
 lib/utf8-string-${PKGVERSION}/${HASKELL_VERSION}/Data/String/UTF8.hi
 lib/utf8-string-${PKGVERSION}/${HASKELL_VERSION}/HSutf8-string-${PKGVERSION}.o
-lib/utf8-string-${PKGVERSION}/${HASKELL_VERSION}/System/Environment/UTF8.hi
-lib/utf8-string-${PKGVERSION}/${HASKELL_VERSION}/System/IO/UTF8.hi
 lib/utf8-string-${PKGVERSION}/${HASKELL_VERSION}/libHSutf8-string-${PKGVERSION}.a
 lib/utf8-string-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/utf8-string-${PKGVERSION}/LICENSE
@@ -15,8 +13,6 @@ ${PLIST.doc}share/doc/utf8-string-${PKGVERSION}/html/Codec-Binary-UTF8-String.ht
 ${PLIST.doc}share/doc/utf8-string-${PKGVERSION}/html/Data-ByteString-Lazy-UTF8.html
 ${PLIST.doc}share/doc/utf8-string-${PKGVERSION}/html/Data-ByteString-UTF8.html
 ${PLIST.doc}share/doc/utf8-string-${PKGVERSION}/html/Data-String-UTF8.html
-${PLIST.doc}share/doc/utf8-string-${PKGVERSION}/html/System-Environment-UTF8.html
-${PLIST.doc}share/doc/utf8-string-${PKGVERSION}/html/System-IO-UTF8.html
 ${PLIST.doc}share/doc/utf8-string-${PKGVERSION}/html/doc-index.html
 ${PLIST.doc}share/doc/utf8-string-${PKGVERSION}/html/frames.html
 ${PLIST.doc}share/doc/utf8-string-${PKGVERSION}/html/haddock-util.js
@@ -28,8 +24,6 @@ ${PLIST.doc}share/doc/utf8-string-${PKGVERSION}/html/mini_Codec-Binary-UTF8-Stri
 ${PLIST.doc}share/doc/utf8-string-${PKGVERSION}/html/mini_Data-ByteString-Lazy-UTF8.html
 ${PLIST.doc}share/doc/utf8-string-${PKGVERSION}/html/mini_Data-ByteString-UTF8.html
 ${PLIST.doc}share/doc/utf8-string-${PKGVERSION}/html/mini_Data-String-UTF8.html
-${PLIST.doc}share/doc/utf8-string-${PKGVERSION}/html/mini_System-Environment-UTF8.html
-${PLIST.doc}share/doc/utf8-string-${PKGVERSION}/html/mini_System-IO-UTF8.html
 ${PLIST.doc}share/doc/utf8-string-${PKGVERSION}/html/minus.gif
 ${PLIST.doc}share/doc/utf8-string-${PKGVERSION}/html/ocean.css
 ${PLIST.doc}share/doc/utf8-string-${PKGVERSION}/html/plus.gif
