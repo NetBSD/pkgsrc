@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2015/05/31 12:59:15 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2016/01/04 12:24:24 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-data-default
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-data-default
 HS_DATA_DEFAULT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-data-default+=	hs-data-default>=0.5.3
-BUILDLINK_ABI_DEPENDS.hs-data-default+=	hs-data-default>=0.5.3nb2
+BUILDLINK_ABI_DEPENDS.hs-data-default+=	hs-data-default>=0.5.3nb3
 BUILDLINK_PKGSRCDIR.hs-data-default?=	../../devel/hs-data-default
 
 .include "../../devel/hs-data-default-class/buildlink3.mk"
