@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15270 2016/01/04 12:46:19 szptvlfn Exp $
+$NetBSD: TODO,v 1.15271 2016/01/04 12:53:07 szptvlfn Exp $
 
 Suggested new packages
 ======================
@@ -1809,7 +1809,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xmlstarlet-1.5.0
 	o xmms-crossfade-0.3.14
 	o xmms-musepack-1.8.0 [http://dl.slik.org/musepack/xmms-musepack-1.8.0.tar.gz]
-	o xmonad-contrib-0.11.4
 	o xnap-2.5r3
 	o xorp-1.8.5
 	o xosview-1.16
