@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2016/01/04 12:25:08 szptvlfn Exp $
+lib/setlocale-${PKGVERSION}/${HASKELL_VERSION}/HSsetlocale-${PKGVERSION}.o
+lib/setlocale-${PKGVERSION}/${HASKELL_VERSION}/System/Locale/SetLocale.hi
+lib/setlocale-${PKGVERSION}/${HASKELL_VERSION}/libHSsetlocale-${PKGVERSION}.a
+lib/setlocale-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/setlocale-${PKGVERSION}/LICENSE
+${PLIST.doc}share/doc/setlocale-${PKGVERSION}/html/System-Locale-SetLocale.html
+${PLIST.doc}share/doc/setlocale-${PKGVERSION}/html/doc-index.html
+${PLIST.doc}share/doc/setlocale-${PKGVERSION}/html/frames.html
+${PLIST.doc}share/doc/setlocale-${PKGVERSION}/html/haddock-util.js
+${PLIST.doc}share/doc/setlocale-${PKGVERSION}/html/hslogo-16.png
+${PLIST.doc}share/doc/setlocale-${PKGVERSION}/html/index-frames.html
+${PLIST.doc}share/doc/setlocale-${PKGVERSION}/html/index.html
+${PLIST.doc}share/doc/setlocale-${PKGVERSION}/html/mini_System-Locale-SetLocale.html
+${PLIST.doc}share/doc/setlocale-${PKGVERSION}/html/minus.gif
+${PLIST.doc}share/doc/setlocale-${PKGVERSION}/html/ocean.css
+${PLIST.doc}share/doc/setlocale-${PKGVERSION}/html/plus.gif
+${PLIST.doc}share/doc/setlocale-${PKGVERSION}/html/setlocale.haddock
+${PLIST.doc}share/doc/setlocale-${PKGVERSION}/html/synopsis.png
