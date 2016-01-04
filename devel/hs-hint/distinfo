@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 03:27:33 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/01/04 12:23:05 szptvlfn Exp $
 
-SHA1 (hint-0.4.2.0.tar.gz) = 9be1428f9610df007504a68a66c6197592389804
-RMD160 (hint-0.4.2.0.tar.gz) = c97a6962ed90370743827ddef8e691ab2b58e65d
-SHA512 (hint-0.4.2.0.tar.gz) = 01409f4b927bf859cf7120fc0dbe84d80d046afde1cdde697ac7de24236ff27979369f5d7085941ab4dbcbf859cba61c4f1b11da0b59864936dd3f981f97dcd6
-Size (hint-0.4.2.0.tar.gz) = 29449 bytes
+SHA1 (hint-0.4.2.3.tar.gz) = 076b16672b2726a4c46140ac4a79b41dfc536cc7
+RMD160 (hint-0.4.2.3.tar.gz) = 7de0ce6953ee7865818a3727e955292867f25648
+SHA512 (hint-0.4.2.3.tar.gz) = e70d49cb3c7af54c5eb8d189c80d2ac92f64befc51e38f538cca28f0d74b6b43761c8fc8ebd5c8eeb295060b245e1351cfc3a1667413715cb533f49109831b24
+Size (hint-0.4.2.3.tar.gz) = 30117 bytes
