@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2016/01/04 01:40:36 markd Exp $
+share/texmf-dist/doc/latex/tikz-3dplot/CHANGELOG
+share/texmf-dist/doc/latex/tikz-3dplot/README
+share/texmf-dist/doc/latex/tikz-3dplot/externalize_images.bat
+share/texmf-dist/doc/latex/tikz-3dplot/tikz-3dplot_documentation.pdf
+share/texmf-dist/doc/latex/tikz-3dplot/tikz-3dplot_documentation.tex
+share/texmf-dist/doc/latex/tikz-3dplot/tikz-3dplot_documentation_figures.tex

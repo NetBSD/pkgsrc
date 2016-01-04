@@ -1,0 +1,10 @@
+The package provides straightforward ways to define three-
+dimensional coordinate frames through which to plot in TikZ.
+The user can specify the orientation of the main coordinate
+frame, and use standard TikZ commands and coordinates to render
+their tikzfigure. A secondary coordinate frame is provided to
+allow rotations and translations with respect to the main
+coordinate frame. In addition, the package can also handle
+plotting user-specified functions in spherical polar
+coordinates, where both the radius and fill color can be
+expressed as parametric functions of polar angles.
