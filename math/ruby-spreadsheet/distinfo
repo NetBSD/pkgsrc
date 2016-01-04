@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.40 2015/12/12 14:44:11 taca Exp $
+$NetBSD: distinfo,v 1.41 2016/01/04 00:12:17 taca Exp $
 
-SHA1 (spreadsheet-1.1.0.gem) = aa00cf537edb619a98de65ec4b61ce21cd128f67
-RMD160 (spreadsheet-1.1.0.gem) = 1be4cdd1f7c54cb5aef7591a18de07083791157e
-SHA512 (spreadsheet-1.1.0.gem) = 20479151156d3152c41d744eb5d81a947e5c94b5242360746cca93db023f9ef154bafdef52928add82e8ef62cb91cefa9ed7236aabafdd39e72ee18dee38b691
-Size (spreadsheet-1.1.0.gem) = 4479488 bytes
+SHA1 (spreadsheet-1.1.1.gem) = 2689c26513b08a3279ed980ba2215ff313eb2047
+RMD160 (spreadsheet-1.1.1.gem) = dd69b965deb4c3db82f9847dc2b5fb325c50e1dc
+SHA512 (spreadsheet-1.1.1.gem) = 7e2bca7cd501810d791c0be3cfc579e0c621b6f259522f8ffdf6dfad61a71b87f8cbc08e005a9c71b35fdf2e2d92213b5c6a4195c05410cbfd38debb7bda0a2e
+Size (spreadsheet-1.1.1.gem) = 4479488 bytes
