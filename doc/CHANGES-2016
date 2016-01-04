@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.65 2016/01/03 23:41:02 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.66 2016/01/04 00:13:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -75,3 +75,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added converters/py-yenc version 0.4.0 [bsiegert 2016-01-03]
 	Updated textproc/mdoclint to 1.36 [wiz 2016-01-03]
 	Updated www/otter-browser to 0.9.09 [kamil 2016-01-04]
+	Updated math/ruby-spreadsheet to 1.1.1 [taca 2016-01-04]
