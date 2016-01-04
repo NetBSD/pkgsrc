@@ -1,0 +1,5 @@
+In a document with a lot of diagrams created with PGF/TikZ,
+there is a possibility of the reader being distracted by
+different sorts of arrowheads in the diagrams and in the text
+(as, e.g., in \rightarrow). The package defines macros to
+create all arrows using PGF/TikZ, so as to avoid the problem.
