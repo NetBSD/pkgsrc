@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.70 2016/01/04 12:23:32 szptvlfn Exp $
+$NetBSD: CHANGES-2016,v 1.71 2016/01/04 12:25:39 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -101,3 +101,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/hs-dlist to 0.7.1.2 [szptvlfn 2016-01-04]
 	Updated devel/hs-utf8-string to 1.0.1.1 [szptvlfn 2016-01-04]
 	Updated devel/hs-hint to 0.4.2.3 [szptvlfn 2016-01-04]
+	Added devel/hs-setlocale version 1.0.0.3 [szptvlfn 2016-01-04]
