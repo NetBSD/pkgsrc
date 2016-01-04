@@ -1,0 +1,4 @@
+The package provides a \makecommand command, which is like
+\(re)newcommand except it always (re)defines a command. There
+is also \makeenvironment and \provideenvironment for
+environments.
