@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.74 2016/01/04 14:24:46 leot Exp $
+$NetBSD: CHANGES-2016,v 1.75 2016/01/04 14:46:49 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -105,3 +105,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated wm/xmonad to 0.12 [szptvlfn 2016-01-04]
 	Updated wm/xmonad-contrib to 0.12 [szptvlfn 2016-01-04]
 	Updated net/libsoup to 2.53.2 [leot 2016-01-04]
+	Updated net/libsoup to 2.52.2 [leot 2016-01-04]
