@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.653 2015/12/12 22:46:30 markd Exp $
+# $NetBSD: Makefile,v 1.654 2016/01/04 01:51:30 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -762,6 +762,8 @@ SUBDIR+=	tex-luatex-doc
 SUBDIR+=	tex-macros2e-doc
 SUBDIR+=	tex-magaz
 SUBDIR+=	tex-magaz-doc
+SUBDIR+=	tex-makecmds
+SUBDIR+=	tex-makecmds-doc
 SUBDIR+=	tex-marginnote
 SUBDIR+=	tex-marginnote-doc
 SUBDIR+=	tex-math-e-doc
@@ -774,6 +776,8 @@ SUBDIR+=	tex-mdframed
 SUBDIR+=	tex-mdframed-doc
 SUBDIR+=	tex-mdwtools
 SUBDIR+=	tex-mdwtools-doc
+SUBDIR+=	tex-media9
+SUBDIR+=	tex-media9-doc
 SUBDIR+=	tex-memdesign-doc
 SUBDIR+=	tex-memoir
 SUBDIR+=	tex-memoir-doc
