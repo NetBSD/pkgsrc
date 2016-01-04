@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.8 2016/01/04 12:43:06 nros Exp $
+@comment $NetBSD: PLIST,v 1.9 2016/01/04 14:24:31 leot Exp $
 include/libsoup-2.4/libsoup/soup-address.h
 include/libsoup-2.4/libsoup/soup-auth-domain-basic.h
 include/libsoup-2.4/libsoup/soup-auth-domain-digest.h
 include/libsoup-2.4/libsoup/soup-auth-domain.h
 include/libsoup-2.4/libsoup/soup-auth-manager.h
 include/libsoup-2.4/libsoup/soup-auth.h
+include/libsoup-2.4/libsoup/soup-autocleanups.h
 include/libsoup-2.4/libsoup/soup-cache.h
 include/libsoup-2.4/libsoup/soup-content-decoder.h
 include/libsoup-2.4/libsoup/soup-content-sniffer.h
@@ -48,6 +49,7 @@ include/libsoup-2.4/libsoup/soup-value-utils.h
 include/libsoup-2.4/libsoup/soup-version.h
 include/libsoup-2.4/libsoup/soup-websocket-connection.h
 include/libsoup-2.4/libsoup/soup-websocket.h
+include/libsoup-2.4/libsoup/soup-xmlrpc-old.h
 include/libsoup-2.4/libsoup/soup-xmlrpc.h
 include/libsoup-2.4/libsoup/soup.h
 include/libsoup-gnome-2.4/libsoup/soup-cookie-jar-sqlite.h
@@ -104,7 +106,6 @@ share/gtk-doc/html/libsoup-2.4/index.sgml
 share/gtk-doc/html/libsoup-2.4/ix01.html
 share/gtk-doc/html/libsoup-2.4/left-insensitive.png
 share/gtk-doc/html/libsoup-2.4/left.png
-share/gtk-doc/html/libsoup-2.4/libsoup-2.4-GValue-Support.html
 share/gtk-doc/html/libsoup-2.4/libsoup-2.4-HTML-Form-Support.html
 share/gtk-doc/html/libsoup-2.4/libsoup-2.4-Soup-Miscellaneous-Utilities.html
 share/gtk-doc/html/libsoup-2.4/libsoup-2.4-SoupServer-deprecated-API.html
@@ -161,6 +162,7 @@ share/locale/ml/LC_MESSAGES/libsoup.mo
 share/locale/mr/LC_MESSAGES/libsoup.mo
 share/locale/nb/LC_MESSAGES/libsoup.mo
 share/locale/nl/LC_MESSAGES/libsoup.mo
+share/locale/oc/LC_MESSAGES/libsoup.mo
 share/locale/or/LC_MESSAGES/libsoup.mo
 share/locale/pa/LC_MESSAGES/libsoup.mo
 share/locale/pl/LC_MESSAGES/libsoup.mo
