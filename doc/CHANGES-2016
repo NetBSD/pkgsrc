@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.66 2016/01/04 00:13:21 taca Exp $
+$NetBSD: CHANGES-2016,v 1.67 2016/01/04 02:25:22 markd Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -76,3 +76,25 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/mdoclint to 1.36 [wiz 2016-01-03]
 	Updated www/otter-browser to 0.9.09 [kamil 2016-01-04]
 	Updated math/ruby-spreadsheet to 1.1.1 [taca 2016-01-04]
+	Added graphics/tex-tikz-3dplot version 2015 [markd 2016-01-04]
+	Added graphics/tex-tikz-3dplot-doc version 2015 [markd 2016-01-04]
+	Added graphics/tex-tikzscale version 0.2.6 [markd 2016-01-04]
+	Added graphics/tex-tikzscale-doc version 0.2.6 [markd 2016-01-04]
+	Added graphics/tex-tikzsymbols version 3.0f [markd 2016-01-04]
+	Added graphics/tex-tikzsymbols-doc version 3.0f [markd 2016-01-04]
+	Added graphics/tex-tikzinclude version 1.0 [markd 2016-01-04]
+	Added graphics/tex-tikzinclude-doc version 1.0 [markd 2016-01-04]
+	Added graphics/tex-tikzmark version 1.0 [markd 2016-01-04]
+	Added graphics/tex-tikzmark-doc version 1.0 [markd 2016-01-04]
+	Added graphics/tex-tikzorbital version 2015 [markd 2016-01-04]
+	Added graphics/tex-tikzorbital-doc version 2015 [markd 2016-01-04]
+	Added graphics/tex-tikzpagenodes version 1.1 [markd 2016-01-04]
+	Added graphics/tex-tikzpagenodes-doc version 1.1 [markd 2016-01-04]
+	Added graphics/tex-tikzpfeile version 1.0 [markd 2016-01-04]
+	Added graphics/tex-tikzpfeile-doc version 1.0 [markd 2016-01-04]
+	Added print/tex-media9 version 0.57 [markd 2016-01-04]
+	Added print/tex-media9-doc version 0.57 [markd 2016-01-04]
+	Added print/tex-makecmds version 1.0a [markd 2016-01-04]
+	Added print/tex-makecmds-doc version 1.0a [markd 2016-01-04]
+	Updated editors/xournal to 0.4.8 [markd 2016-01-04]
+	Updated mail/p5-Net-ManageSieve to 0.12 [markd 2016-01-04]
