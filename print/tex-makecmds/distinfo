@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/01/04 01:49:43 markd Exp $
+
+SHA1 (tex-makecmds-15878/makecmds.tar.xz) = f4c24e78161594daf200e7cc036ac66f49309ead
+RMD160 (tex-makecmds-15878/makecmds.tar.xz) = 6e0382e22e3d7442c51d6167000e0eedbe67073f
+SHA512 (tex-makecmds-15878/makecmds.tar.xz) = b1e3f49393633c261a72998d845ad1083a1b19aad3b4aa8e9753647ae994f54fb78350ad3be354721d33d080562efe9acfdd887d78bc62eb047f58c0774a923e
+Size (tex-makecmds-15878/makecmds.tar.xz) = 1324 bytes
