@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/01/04 12:25:08 szptvlfn Exp $
+
+SHA1 (setlocale-1.0.0.3.tar.gz) = c9f024b9c03d4522412cf14f087c65108c4916da
+RMD160 (setlocale-1.0.0.3.tar.gz) = 53be149596a40a386ceff8ed43a9c8c88619b32d
+SHA512 (setlocale-1.0.0.3.tar.gz) = a0bbb989572050e3e256e7b7e3782abfee74faf74eb81a99706c5ae88894694b6101a9725ad367b57f56ea5077dad41ca7a7988e292e4403d94f0a3cb5c40b49
+Size (setlocale-1.0.0.3.tar.gz) = 2136 bytes
