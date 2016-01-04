@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2188 2016/01/03 06:49:06 taca Exp $
+# $NetBSD: Makefile,v 1.2189 2016/01/04 12:27:19 szptvlfn Exp $
 #
 
 COMMENT=	Development utilities
@@ -348,6 +348,7 @@ SUBDIR+=	hs-random
 SUBDIR+=	hs-reflection
 SUBDIR+=	hs-resourcet
 SUBDIR+=	hs-safe
+SUBDIR+=	hs-setlocale
 SUBDIR+=	hs-split
 SUBDIR+=	hs-stm
 SUBDIR+=	hs-syb
