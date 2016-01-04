@@ -1,0 +1,8 @@
+===========================================================================
+# $NetBSD: MESSAGE,v 1.1 2016/01/04 12:45:36 szptvlfn Exp $
+
+    1. create ~/.xmonad/xmonad.hs
+    2. $ ghc --make ~/.xmonad/xmonad.hs
+    3. add exec xmonad to .xinitrc
+    4. add ~/.xmonad to your $PATH
+===========================================================================
