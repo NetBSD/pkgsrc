@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2015/10/10 01:57:54 ryoon Exp $
+# $NetBSD: Makefile,v 1.19 2016/01/04 12:43:06 nros Exp $
 
 DISTNAME=	libsoup-2.50.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libsoup/2.50/}
 EXTRACT_SUFX=	.tar.xz
@@ -21,10 +21,9 @@ CONFIGURE_ENV+=		DATADIRNAME=share
 DEPENDS+=	glib-networking-[0-9]*:../../net/glib-networking
 
 PKGCONFIG_OVERRIDE+=	libsoup-2.4.pc.in
+PKGCONFIG_OVERRIDE+=    libsoup-gnome-2.4.pc.in
 
 TEST_TARGET=	check
-
-.include "options.mk"
 
 # gcc>=4.2 specific -Werror=XXX flags will be added unconditionally.
 .include "../../mk/compiler.mk"
