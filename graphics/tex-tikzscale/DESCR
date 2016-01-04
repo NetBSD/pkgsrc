@@ -1,0 +1,3 @@
+The package extends the \includegraphics command to support
+tikzpictures. It allows scaling of TikZ images and PGFPlots to
+a given width or height without changing the text size.

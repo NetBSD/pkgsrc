@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2016/01/04 01:40:37 markd Exp $
+share/texmf-dist/doc/latex/tikzscale/3Dplot.tikz
+share/texmf-dist/doc/latex/tikzscale/README
+share/texmf-dist/doc/latex/tikzscale/alt.tikz
+share/texmf-dist/doc/latex/tikzscale/histogramNormal.tikz
+share/texmf-dist/doc/latex/tikzscale/invisible.tikz
+share/texmf-dist/doc/latex/tikzscale/linewidth.tikz
+share/texmf-dist/doc/latex/tikzscale/only.tikz
+share/texmf-dist/doc/latex/tikzscale/onslide.tikz
+share/texmf-dist/doc/latex/tikzscale/pause.tikz
+share/texmf-dist/doc/latex/tikzscale/pgfplots-test.tikz
+share/texmf-dist/doc/latex/tikzscale/pgfplots.randn.dat
+share/texmf-dist/doc/latex/tikzscale/temporal.tikz
+share/texmf-dist/doc/latex/tikzscale/test-tikzscale.pdf
+share/texmf-dist/doc/latex/tikzscale/test-tikzscale.tex
+share/texmf-dist/doc/latex/tikzscale/testNode.tikz
+share/texmf-dist/doc/latex/tikzscale/testRectangle.tikz
+share/texmf-dist/doc/latex/tikzscale/testgraphic2D.tikz
+share/texmf-dist/doc/latex/tikzscale/tikzscale-beamer.tex
+share/texmf-dist/doc/latex/tikzscale/tikzscale.pdf
+share/texmf-dist/doc/latex/tikzscale/uncover.tikz
+share/texmf-dist/doc/latex/tikzscale/visible.tikz
