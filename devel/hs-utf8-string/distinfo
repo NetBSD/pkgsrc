@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/03 03:27:34 agc Exp $
+$NetBSD: distinfo,v 1.4 2016/01/04 12:22:20 szptvlfn Exp $
 
-SHA1 (utf8-string-0.3.8.tar.gz) = 43ba98eb1441f378aa172712f4b4a7cd955bd39a
-RMD160 (utf8-string-0.3.8.tar.gz) = 110a0150066132028055df47168dcdc1fe336dd3
-SHA512 (utf8-string-0.3.8.tar.gz) = 70f6ceaf4d9d6e6fe7b787facbb733f276ac5ba10c49c43e0da283b481f0579e0933f6343f5158973a6f0aac342f5b76258281dbd0c420bf652ad3c3787eb1fb
-Size (utf8-string-0.3.8.tar.gz) = 9129 bytes
+SHA1 (utf8-string-1.0.1.1.tar.gz) = f975afafeae267c6974a2cb58e22e57bf8357eb3
+RMD160 (utf8-string-1.0.1.1.tar.gz) = ac92ac61b67a2a028ccdf1749dac6f47d44e665a
+SHA512 (utf8-string-1.0.1.1.tar.gz) = 2dd647625478c9738b3af5e23e1e5ff92968449ad74e6d53dc308fa0f2b08b63c421a1cbe5491dd260b9b32770ec626843d320a09b80eb984211dba53934b965
+Size (utf8-string-1.0.1.1.tar.gz) = 8667 bytes
