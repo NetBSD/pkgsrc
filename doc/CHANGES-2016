@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.67 2016/01/04 02:25:22 markd Exp $
+$NetBSD: CHANGES-2016,v 1.68 2016/01/04 12:21:37 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -98,3 +98,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added print/tex-makecmds-doc version 1.0a [markd 2016-01-04]
 	Updated editors/xournal to 0.4.8 [markd 2016-01-04]
 	Updated mail/p5-Net-ManageSieve to 0.12 [markd 2016-01-04]
+	Updated devel/hs-dlist to 0.7.1.2 [szptvlfn 2016-01-04]
