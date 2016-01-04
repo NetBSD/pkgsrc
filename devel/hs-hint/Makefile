@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2014/11/23 12:52:32 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.4 2016/01/04 12:23:05 szptvlfn Exp $
 
-DISTNAME=	hint-0.4.2.0
-PKGREVISION=	2
+DISTNAME=	hint-0.4.2.3
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
@@ -15,5 +14,4 @@ LICENSE=	modified-bsd
 .include "../../devel/hs-ghc-paths/buildlink3.mk"
 .include "../../devel/hs-mtl/buildlink3.mk"
 .include "../../devel/hs-random/buildlink3.mk"
-.include "../../devel/hs-utf8-string/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
