@@ -1,0 +1,5 @@
+This package is the official portable version of LibreSSL
+
+LibreSSL is a fork of OpenSSL developed by the OpenBSD project
+(http://www.openbsd.org). LibreSSL is developed on OpenBSD. This
+package then adds portability shims for other operating systems.
