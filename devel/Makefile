@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2189 2016/01/04 12:27:19 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.2190 2016/01/05 10:27:39 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1633,6 +1633,7 @@ SUBDIR+=	py-click-threading
 SUBDIR+=	py-compizconfig
 SUBDIR+=	py-configargparse
 SUBDIR+=	py-configobj
+SUBDIR+=	py-constants
 SUBDIR+=	py-construct
 SUBDIR+=	py-coverage
 SUBDIR+=	py-cparser
