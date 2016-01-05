@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2015/04/27 08:47:16 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2016/01/05 13:11:42 tnn Exp $
 
 DISTNAME=	xf86-input-void-1.4.1
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
