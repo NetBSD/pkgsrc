@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2016/01/05 10:27:27 wiz Exp $
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/constants.py
+${PYSITELIB}/constants.pyc
+${PYSITELIB}/constants.pyo
