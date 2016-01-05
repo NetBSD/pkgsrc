@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2015/09/25 00:57:16 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2016/01/05 13:04:23 tnn Exp $
 
 BUILDLINK_TREE+=	modular-xorg-server
 
@@ -13,7 +13,7 @@ USE_OLD_MODULAR_XORG_SERVER?=	no
 BUILDLINK_API_DEPENDS.modular-xorg-server+=	modular-xorg-server>=1.12.4nb12<1.17
 BUILDLINK_PKGSRCDIR.modular-xorg-server?=	../../x11/modular-xorg-server112
 .else
-BUILDLINK_API_DEPENDS.modular-xorg-server+=	modular-xorg-server>=1.17
+BUILDLINK_API_DEPENDS.modular-xorg-server+=	modular-xorg-server>=1.18
 BUILDLINK_PKGSRCDIR.modular-xorg-server?=	../../x11/modular-xorg-server
 .endif
 
@@ -34,6 +34,7 @@ BUILDLINK_DEPMETHOD.libpciaccess=	full
 .include "../../x11/presentproto/buildlink3.mk"
 .endif
 .include "../../x11/inputproto/buildlink3.mk"
+.include "../../x11/libXfont/buildlink3.mk"
 .include "../../x11/randrproto/buildlink3.mk"
 .include "../../x11/renderproto/buildlink3.mk"
 .include "../../x11/videoproto/buildlink3.mk"
