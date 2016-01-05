@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2014/12/06 09:14:11 obache Exp $
+# $NetBSD: options.mk,v 1.2 2016/01/05 21:38:07 joerg Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.corebird
@@ -11,7 +11,7 @@ PKG_SUGGESTED_OPTIONS=	gstreamer
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 DEPENDS+=	gst-plugins1-bad-[0-9]*:../../multimedia/gst-plugins1-bad
 DEPENDS+=	gst-plugins1-good-[0-9]*:../../multimedia/gst-plugins1-good
-DEPENDS+=	gst-libav-[0-9]*:../../multimedia/gst-plugins1-libav
+DEPENDS+=	gst-plugins1-libav-[0-9]*:../../multimedia/gst-plugins1-libav
 CONFIGURE_ARGS+=	--enable-video
 .else
 CONFIGURE_ARGS+=	--disable-video
