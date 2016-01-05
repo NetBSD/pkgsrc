@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.76 2016/01/05 10:26:54 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.77 2016/01/05 10:27:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -107,3 +107,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/libsoup to 2.53.2 [leot 2016-01-04]
 	Updated net/libsoup to 2.52.2 [leot 2016-01-04]
 	Updated security/py-rsa to 3.2.3 [wiz 2016-01-05]
+	Added devel/py-constants version 0.6.0 [wiz 2016-01-05]
