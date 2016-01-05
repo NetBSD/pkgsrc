@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2015/12/29 04:30:29 dholland Exp $
+# $NetBSD: Makefile.common,v 1.13 2016/01/05 21:39:13 joerg Exp $
 #
 # used by print/evince3/Makefile
 # would probably be used by print/evince3-nautilus/Makefile if that existed
@@ -14,7 +14,7 @@ LICENSE=		gnu-gpl-v2
 
 #FILESDIR=		../../print/evince3/files
 #PATCHDIR=		../../print/evince3/patches
-DISTINFO_FILE=		../../print/evince3/distinfo
+DISTINFO_FILE=		${.CURDIR}/../../print/evince3/distinfo
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
