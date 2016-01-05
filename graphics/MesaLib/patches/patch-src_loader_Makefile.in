@@ -1,10 +1,10 @@
-$NetBSD: patch-src_loader_Makefile.in,v 1.2 2015/09/26 08:45:02 tnn Exp $
+$NetBSD: patch-src_loader_Makefile.in,v 1.3 2016/01/05 13:02:57 tnn Exp $
 
 FreeBSD & DragonFly support for libdevq.
 
---- src/loader/Makefile.in.orig	2015-09-12 12:09:49.000000000 +0000
+--- src/loader/Makefile.in.orig	2015-12-15 14:52:32.000000000 +0000
 +++ src/loader/Makefile.in
-@@ -313,6 +313,8 @@ LEXLIB = @LEXLIB@
+@@ -321,6 +321,8 @@ LEXLIB = @LEXLIB@
  LEX_OUTPUT_ROOT = @LEX_OUTPUT_ROOT@
  LIBCLC_INCLUDEDIR = @LIBCLC_INCLUDEDIR@
  LIBCLC_LIBEXECDIR = @LIBCLC_LIBEXECDIR@
@@ -13,12 +13,12 @@ FreeBSD & DragonFly support for libdevq.
  LIBDRM_CFLAGS = @LIBDRM_CFLAGS@
  LIBDRM_LIBS = @LIBDRM_LIBS@
  LIBOBJS = @LIBOBJS@
-@@ -505,7 +507,7 @@ EXTRA_DIST = SConscript
- noinst_LTLIBRARIES = libloader.la
- libloader_la_CPPFLAGS = $(DEFINES) -I$(top_srcdir)/include \
- 	-I$(top_srcdir)/src $(VISIBILITY_CFLAGS) $(LIBUDEV_CFLAGS) \
--	$(am__append_1) $(am__append_3)
-+	$(LIBDEVQ_CFLAGS) $(am__append_1) $(am__append_3)
+@@ -531,7 +533,7 @@ AM_CPPFLAGS = \
+ 	$(LIBDRM_CFLAGS) \
+ 	$(LIBUDEV_CFLAGS)
+ 
+-libloader_la_CPPFLAGS = $(AM_CPPFLAGS) $(am__append_1)
++libloader_la_CPPFLAGS = $(AM_CPPFLAGS) $(am__append_1) $(LIBDEVQ_CFLAGS)
  libloader_la_SOURCES = $(LOADER_C_FILES)
- libloader_la_LIBADD = $(am__append_2) $(am__append_4)
- all: all-am
+ libloader_la_LIBADD = $(am__append_2) $(am__append_3)
+ @HAVE_DRI3_TRUE@libloader_dri3_helper_la_SOURCES = \
