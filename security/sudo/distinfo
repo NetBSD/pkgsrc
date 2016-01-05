@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.84 2016/01/01 17:00:49 spz Exp $
+$NetBSD: distinfo,v 1.85 2016/01/05 17:05:00 adam Exp $
 
 SHA1 (sudo-1.8.15.tar.gz) = acb5ff3f38fa9e0365f6a91a6620b9846e2ad843
 RMD160 (sudo-1.8.15.tar.gz) = 676ee3249c2ddacd64de54d6555b820912b56f6f
@@ -7,7 +7,6 @@ Size (sudo-1.8.15.tar.gz) = 2660128 bytes
 SHA1 (patch-aa) = de75d916f2b2ce9ac24c9b69f99df984fd0c41fe
 SHA1 (patch-af) = 9ef912344d9cd4c3811a4d705d3424cd88621710
 SHA1 (patch-ag) = c62f063ffc9e8fb3fce7c94a8cba531ecb8b76ff
-SHA1 (patch-config.h.in) = 48a6445f5a2525184376ba2d863661d236384cc3
 SHA1 (patch-plugins_sudoers_Makefile.in) = d8612ac7bf2f5a892d9720c4df91810ca807f4ed
 SHA1 (patch-plugins_sudoers_logging.c) = a42e54af2b6057804aecb3b6a48c565e8ac4df82
 SHA1 (patch-src_Makefile.in) = 43f7266d3d106fca69003ee040342c3b201fd262
