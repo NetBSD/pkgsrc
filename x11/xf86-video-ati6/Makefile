@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2015/09/25 00:44:44 tnn Exp $
+# $NetBSD: Makefile,v 1.12 2016/01/05 13:11:43 tnn Exp $
 
 DISTNAME=	xf86-video-ati-6.14.6
 PKGNAME=	${DISTNAME:S/ati/ati6/}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
