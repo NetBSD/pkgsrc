@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.75 2016/01/04 14:46:49 leot Exp $
+$NetBSD: CHANGES-2016,v 1.76 2016/01/05 10:26:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -106,3 +106,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated wm/xmonad-contrib to 0.12 [szptvlfn 2016-01-04]
 	Updated net/libsoup to 2.53.2 [leot 2016-01-04]
 	Updated net/libsoup to 2.52.2 [leot 2016-01-04]
+	Updated security/py-rsa to 3.2.3 [wiz 2016-01-05]
