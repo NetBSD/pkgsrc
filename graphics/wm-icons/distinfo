@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2015/12/28 15:08:54 tsutsui Exp $
+$NetBSD: distinfo,v 1.2 2016/01/05 21:37:21 joerg Exp $
 
 SHA1 (wm-icons-0.4.0.tar.bz2) = c293ff64350224c1130ac5471e6cc871f9048023
 RMD160 (wm-icons-0.4.0.tar.bz2) = a44f722109ce5f43ce1e7f0332393c34062e7355
@@ -7,4 +7,4 @@ SHA1 (patch-Makefile.in) = 81022dd01bbb53c87a01917075473decda5e8e76
 SHA1 (patch-configure) = 4dd0712b3da77ae454a7dc7a21944ab8f82890c8
 SHA1 (patch-configure.in) = 2f50fc63f227bdc0c765b63f0266aec163db72de
 SHA1 (patch-etc_Makefile.in) = b01bae5d1d1e65584aa2ec8ba9a10faad9db062a
-SHA1 (patch-icons_Makefile.in) = f569d4054853a62cddff416fa9c9942493b9f183
+SHA1 (patch-icons_Makefile.in) = bc1c643e4352f7c198c816a508b9e004f7aee35c
