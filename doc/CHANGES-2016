@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.77 2016/01/05 10:27:49 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.78 2016/01/05 13:14:25 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -108,3 +108,7 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/libsoup to 2.52.2 [leot 2016-01-04]
 	Updated security/py-rsa to 3.2.3 [wiz 2016-01-05]
 	Added devel/py-constants version 0.6.0 [wiz 2016-01-05]
+	Updated graphics/MesaLib to 11.1.0 [tnn 2016-01-05]
+	Updated x11/modular-xorg-server to 1.18.0 [tnn 2016-01-05]
+	Updated x11/modular-xorg-server to 1.18.0 [tnn 2016-01-05]
+	Updated x11/modular-xorg-xephyr to 1.18.0 [tnn 2016-01-05]
