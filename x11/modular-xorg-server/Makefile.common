@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.4 2015/11/08 15:08:00 sevan Exp $
+# $NetBSD: Makefile.common,v 1.5 2016/01/05 13:04:23 tnn Exp $
 # used by x11/modular-xorg-server/Makefile
 # used by x11/modular-xorg-xephyr/Makefile
 
-XORG_VERSION=	1.17.4
+XORG_VERSION=	1.18.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=xserver/}
 EXTRACT_SUFX=	.tar.bz2
@@ -38,6 +38,7 @@ DEPENDS+=	xkeyboard-config-[0-9]*:../../x11/xkeyboard-config
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "NetBSD"
+CPPFLAGS+=		-D_OPENBSD_SOURCE	# for reallocarray(3)
 CONFIGURE_ARGS+=	--with-builder-addr="tech-x11@NetBSD.org"
 CONFIGURE_ARGS+=	--with-os-vendor="The NetBSD Foundation"
 # TLS is not supported by NetBSD<6
@@ -120,7 +121,7 @@ BUILDLINK_API_DEPENDS.glproto+=		glproto>=1.4.16
 BUILDLINK_API_DEPENDS.inputproto+=	inputproto>=2.1.99.6
 BUILDLINK_API_DEPENDS.kbproto+=		kbproto>=1.0.3
 BUILDLINK_API_DEPENDS.pixman+=		pixman>=0.21.8
-BUILDLINK_API_DEPENDS.randrproto+=	randrproto>=1.4.0
+BUILDLINK_API_DEPENDS.randrproto+=	randrproto>=1.5.0
 BUILDLINK_API_DEPENDS.renderproto+=	renderproto>=0.11
 BUILDLINK_API_DEPENDS.xf86dgaproto+=	xf86dgaproto>=2.0.3
 BUILDLINK_API_DEPENDS.xf86driproto+=	xf86driproto>=2.1.0
