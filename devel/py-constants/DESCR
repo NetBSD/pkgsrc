@@ -1,0 +1,9 @@
+Most applications use constants. Many constants take different
+values based on the environment the application is executed in.
+
+Think database credentials over development, testing, staging,
+production or stock market execution over development, testing,
+paper, production ...
+
+Shamelessly inspired by the app_constants_ gem, ``constants`` aims
+to solve that problem (and that problem only).
