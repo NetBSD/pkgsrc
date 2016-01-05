@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15271 2016/01/04 12:53:07 szptvlfn Exp $
+$NetBSD: TODO,v 1.15272 2016/01/05 10:15:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1487,6 +1487,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-quixote-2.8
 	o py-reportlab-3.0
 	o py-rope-0.9.4
+	o py-rsa-3.2.3
 	o py-serpent-1.11
 	o py-simpletal-5.1
 	o py-smb-1.1.16
@@ -1699,7 +1700,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o texworks-0.4.6
 	o tfmxplay-1.1.6
 	o thaixfonts-1.2.7
-	o tidy-5.0.0 [wip]
+	o tidy-5.1.25 [wip]
 	o tig-2.1.1
 	o tigervnc-1.6.0
 	o tightvnc-2.7.10
