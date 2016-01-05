@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2015/12/31 02:57:35 agc Exp $
+# $NetBSD: Makefile,v 1.2 2016/01/05 19:47:12 agc Exp $
 
 DISTNAME=	boringssl-20151230
 CATEGORIES=	security
@@ -10,6 +10,8 @@ COMMENT=	Fork of OpenSSL designed to meet Google's needs
 LICENSE=	openssl
 
 WRKSRC=		${WRKDIR}/boringssl
+
+BUILD_DEPENDS+=	go>=1.4:../../lang/go
 
 USE_TOOLS+=	cmake perl
 USE_LANGUAGES+=	c c++
