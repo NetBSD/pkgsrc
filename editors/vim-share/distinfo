@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.148 2016/01/03 16:49:49 morr Exp $
+$NetBSD: distinfo,v 1.149 2016/01/05 21:36:04 joerg Exp $
 
 SHA1 (vim-7.4.1040.tar.bz2) = aa9439cfc4bbabae2862ac3668414d696f3c8aec
 RMD160 (vim-7.4.1040.tar.bz2) = 34c84099f8151b1457a6d69a4de167dac70457fa
 SHA512 (vim-7.4.1040.tar.bz2) = 2d01e742c3ddb029c6cff594cffdac13b36cb399fdfa8a2dc03c9ea15f180f50a1fa0e894c3314e18d3aafd138ada906a145aa6a437dae2ba9e9590eaaa40380
 Size (vim-7.4.1040.tar.bz2) = 10147321 bytes
-SHA1 (patch-Makefile) = 741f2b59d843094dbc1677aef9df93cf97c8d5a1
+SHA1 (patch-Makefile) = 51e66d150f01deb40c9fad2cffe4ebc71d30b544
 SHA1 (patch-auto_configure) = e25c8821182231074033132d70dab077c273d5f8
 SHA1 (patch-configure) = ae5970dec6d557d81da8a8f1da36d05ddc59ca56
 SHA1 (patch-feature.h) = 7fc572f7d94e5342b32b9395c2632fa7ae528c39
