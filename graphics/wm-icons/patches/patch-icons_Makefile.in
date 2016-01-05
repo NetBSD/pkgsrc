@@ -1,10 +1,15 @@
-$NetBSD: patch-icons_Makefile.in,v 1.1 2015/12/28 15:08:55 tsutsui Exp $
+$NetBSD: patch-icons_Makefile.in,v 1.2 2016/01/05 21:37:21 joerg Exp $
 
 - handle $(DESTDIR) in install scripts
 
 --- icons/Makefile.in.orig	2015-12-13 04:55:01.000000000 +0000
 +++ icons/Makefile.in
-@@ -223,12 +223,12 @@ install-data-local:
+@@ -219,16 +219,16 @@ uninstall-am: uninstall-info-am uninstal
+ 
+ 
+ install-data-local:
+-	$(mkinstalldirs) $(icondir)
++	$(mkinstalldirs) $(DESTDIR)$(icondir)
  	chmod -R o-w,go+rX *
  	cd $(top_srcdir)/icons; \
  	for iconset in $(SELECTED_ICON_SETS); do \
