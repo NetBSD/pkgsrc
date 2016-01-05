@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2015/07/04 06:44:49 richard Exp $
+# $NetBSD: Makefile,v 1.3 2016/01/05 13:11:42 tnn Exp $
 
 DISTNAME=	xf86-input-mutouch-1.3.0
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
