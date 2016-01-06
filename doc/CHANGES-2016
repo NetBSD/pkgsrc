@@ -116,3 +116,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/squidanalyzer to 6.5 [adam 2016-01-06]
 	Updated net/youtube-dl to 20160101 [adam 2016-01-06]
 	Updated graphics/libwebp to 0.5.0 [adam 2016-01-06]
+	Updated devel/ruby-test-unit-notify to 1.0.4nb1 [taca 2016-01-06]
