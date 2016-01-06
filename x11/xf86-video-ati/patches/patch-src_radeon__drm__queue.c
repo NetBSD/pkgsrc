@@ -1,6 +1,10 @@
-$NetBSD: patch-src_radeon__drm__queue.c,v 1.1 2015/12/11 13:08:22 tnn Exp $
+$NetBSD: patch-src_radeon__drm__queue.c,v 1.2 2016/01/06 14:53:04 wiz Exp $
 
 Fix use of uninitialized pointers. Fixes Xorg SEGV when compiled with clang.
+
+Fixed upstream in xserver instead, see
+http://cgit.freedesktop.org/xorg/xserver/commit/?id=63f83d1b7f496d05b409352749cdb6674d71cf80
+so patch can be removed once this is in pkgsrc modular-xorg-server.
 
 --- src/radeon_drm_queue.c.orig	2015-11-12 02:57:33.000000000 +0000
 +++ src/radeon_drm_queue.c
