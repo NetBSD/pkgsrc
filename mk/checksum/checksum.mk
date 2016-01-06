@@ -1,4 +1,4 @@
-# $NetBSD: checksum.mk,v 1.21 2015/10/12 18:23:48 agc Exp $
+# $NetBSD: checksum.mk,v 1.22 2016/01/06 07:38:25 dholland Exp $
 #
 # See bsd.checksum.mk for helpful comments.
 #
@@ -41,7 +41,7 @@ checksum checksum-phase:
 	case ${.TARGET:Q} in						\
 	*-phase)	${TEST} ! -f ${_COOKIE.checksum} || exit 0 ;;	\
 	esac;								\
-	if cd ${DISTDIR} && ${_CHECKSUM_CMD} ${DISTINFO_FILE} ${_CKSUMFILES}; then \
+	if cd ${DISTDIR} && ${_CHECKSUM_CMD} ${DISTINFO_FILE:tA} ${_CKSUMFILES}; then \
 		${TRUE};						\
 	else								\
 		${ERROR_MSG} "Make sure the Makefile and checksum file (${DISTINFO_FILE})"; \
