@@ -120,3 +120,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ruby-test-unit to 3.1.5nb1 [taca 2016-01-06]
 	Updated databases/ruby-sequel to 4.30.0 [taca 2016-01-06]
 	Updated devel/ruby-msgpack to 0.7.2 [taca 2016-01-06]
+	Updated devel/ruby-pkg-config to 1.1.7 [taca 2016-01-06]
