@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2012/10/29 05:06:06 asau Exp $
+# $NetBSD: Makefile,v 1.32 2016/01/06 21:42:27 leot Exp $
 #
 
 DISTNAME=		Xaw-XPM-1.1
@@ -11,7 +11,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.zip.com.au/~bb/XawXpm/
 COMMENT=		Enhanced 3-D widgets based on the Athena Widget set and Xaw3d
 
-CONFLICTS=		Xaw3d-[0-9]*
+CONFLICTS=		libXaw3d-[0-9]*
 
 WRKSRC=			${WRKDIR}/XawXpm
 USE_IMAKE=		YES
