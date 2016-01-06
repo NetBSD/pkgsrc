@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.103 2015/12/29 04:54:36 dholland Exp $
+# $NetBSD: Makefile,v 1.104 2016/01/06 10:24:43 markd Exp $
 
 DISTNAME=	pulseaudio-7.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	http://freedesktop.org/software/pulseaudio/releases/
 EXTRACT_SUFX=	.tar.xz
@@ -59,6 +59,11 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR:Q}
 PLIST.evdev=		yes
 .endif
 
+.if ${OPSYS} == "Linux"
+PLIST.alsa=		yes
+.include "../../audio/alsa-lib/buildlink3.mk"
+.endif
+
 .include "options.mk"
 
 PKGCONFIG_OVERRIDE+=	libpulse-mainloop-glib.pc.in
@@ -85,7 +90,7 @@ CONF_FILES+=	${EGDIR}/system.pa ${PKG_SYSCONFDIR}/system.pa
 CONF_FILES+=	${EGDIR}/pulseaudio-system.conf \
 		${PKG_SYSCONFBASE}/dbus-1/system.d/pulseaudio-system.conf
 
-PLIST_VARS+=		bonjour coreaudio evdev oss sun
+PLIST_VARS+=		alsa bonjour coreaudio evdev oss sun
 
 .if ${OPSYS} == "SunOS"
 PLIST.sun=		yes
