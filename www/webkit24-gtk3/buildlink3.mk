@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2015/08/23 00:41:27 leot Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2016/01/06 10:46:50 adam Exp $
 
 BUILDLINK_TREE+=	webkit24-gtk3
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	webkit24-gtk3
 WEBKIT24_GTK3_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.webkit24-gtk3+=	webkit24-gtk3>=2.0
-BUILDLINK_ABI_DEPENDS.webkit24-gtk3?=	webkit24-gtk3>=2.4.8nb2
+BUILDLINK_ABI_DEPENDS.webkit24-gtk3?=	webkit24-gtk3>=2.4.9nb2
 BUILDLINK_PKGSRCDIR.webkit24-gtk3?=	../../www/webkit24-gtk3
 
 # Linking with this library may require newer libstdc++ features than are

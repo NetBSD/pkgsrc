@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2015/11/08 20:05:35 markd Exp $
+# $NetBSD: Makefile,v 1.3 2016/01/06 10:46:52 adam Exp $
 
 PKGNAME=	opencv-contrib-face-3.0.0
+PKGREVISION=	1
 DISTNAME=	opencv_contrib-3.0.0
 CATEGORIES=	graphics devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Itseez/}
