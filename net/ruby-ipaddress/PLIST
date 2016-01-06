@@ -1,18 +1,23 @@
-@comment $NetBSD: PLIST,v 1.1 2014/06/03 13:46:00 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/01/06 15:32:08 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.rock.yml
 ${GEM_LIBDIR}/CHANGELOG.rdoc
-${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LICENSE.txt
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/VERSION
 ${GEM_LIBDIR}/ipaddress.gemspec
 ${GEM_LIBDIR}/lib/ipaddress.rb
 ${GEM_LIBDIR}/lib/ipaddress/ipv4.rb
 ${GEM_LIBDIR}/lib/ipaddress/ipv6.rb
+${GEM_LIBDIR}/lib/ipaddress/mongoid.rb
 ${GEM_LIBDIR}/lib/ipaddress/prefix.rb
+${GEM_LIBDIR}/lib/ipaddress/version.rb
 ${GEM_LIBDIR}/test/ipaddress/ipv4_test.rb
 ${GEM_LIBDIR}/test/ipaddress/ipv6_test.rb
+${GEM_LIBDIR}/test/ipaddress/mongoid_test.rb
 ${GEM_LIBDIR}/test/ipaddress/prefix_test.rb
 ${GEM_LIBDIR}/test/ipaddress_test.rb
 ${GEM_LIBDIR}/test/test_helper.rb
