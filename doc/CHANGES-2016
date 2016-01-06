@@ -121,3 +121,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/ruby-sequel to 4.30.0 [taca 2016-01-06]
 	Updated devel/ruby-msgpack to 0.7.2 [taca 2016-01-06]
 	Updated devel/ruby-pkg-config to 1.1.7 [taca 2016-01-06]
+	Updated net/ruby-ipaddress to 0.8.2 [taca 2016-01-06]
