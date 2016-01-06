@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2015/12/15 17:40:36 kleink Exp $
+$NetBSD: distinfo,v 1.11 2016/01/06 17:28:31 kleink Exp $
 
-SHA1 (py-werkzeug/Werkzeug-0.11.2.tar.gz) = 3cb7316582e0f42af1fe2dba61aa01d759ffd870
-RMD160 (py-werkzeug/Werkzeug-0.11.2.tar.gz) = 3d6874cf5f0e07b4c1af460a3ac84b77b56a7c3a
-SHA512 (py-werkzeug/Werkzeug-0.11.2.tar.gz) = 99b522726de37da1d29e71f8e069f30fae4b92105009c9aeebd18868a5734c0f00cbb39ae983f187bf5f049598785e239b580bb811450cae8687877f771a8896
-Size (py-werkzeug/Werkzeug-0.11.2.tar.gz) = 1167356 bytes
+SHA1 (Werkzeug-0.11.3.tar.gz) = 0a89f56ec1b072320cb682197d147f656f5d7bb6
+RMD160 (Werkzeug-0.11.3.tar.gz) = cf693f5086a24b12aa5a3d24b0f0e924025c9b18
+SHA512 (Werkzeug-0.11.3.tar.gz) = c94311507a6fee8a0ea33738ce4f4f171f69a7ad2268e18db4b6257f51cdbb51475c34c7005409558cbd5204c32f088bcd0245d24b9cb54e2f0a67a5295d4fef
+Size (Werkzeug-0.11.3.tar.gz) = 1167529 bytes
