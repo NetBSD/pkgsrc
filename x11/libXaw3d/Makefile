@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/07/08 12:00:25 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2016/01/06 21:42:27 leot Exp $
 #
 
 DISTNAME=	libXaw3d-1.6.2
@@ -11,7 +11,7 @@ HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	X 3D Athena Widget Set
 #LICENSE=	x11 # AND others
 
-CONFLICTS+=	Xaw3d-[0-9]*
+CONFLICTS+=	Xaw-Xpm-[0-9]*
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
