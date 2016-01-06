@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.13 2015/12/29 23:34:45 dholland Exp $
+$NetBSD: distinfo,v 1.14 2016/01/06 07:21:31 dholland Exp $
 
 SHA1 (classpath-0.93.tar.gz) = 336cae589ec91a4fe212c2149c57b51dab2ca002
 RMD160 (classpath-0.93.tar.gz) = 4c72b68766e35adbb2c89170fbdf7f30dd788836
 SHA512 (classpath-0.93.tar.gz) = 69d831361085514bb7c5607fa694914cc01bc9fe589b7744d5534c97d434722193a1b68a336642d0dba9a3b50e9acea0364741790e9f19d196e5956a51c320b0
 Size (classpath-0.93.tar.gz) = 9534222 bytes
-SHA1 (patch-aa) = 2f9c0a113997ea2de885521f22b90f6ad5b4ef38
+SHA1 (patch-aa) = e504f08e55020d6ca5cb4615000c70972801f041
 SHA1 (patch-ab) = 15a42f42e6cb7768dc77598cb9aa6dabf8e6d47f
 SHA1 (patch-ac) = ea5a749f064a35be6b5411c5967139103f1481ae
 SHA1 (patch-native_jni_gtk-peer_gnu__java__awt__peer__gtk__FreetypeGlyphVector.c) = ffb175228d637cfb72e883cab4d1438ad9aa4ecf
