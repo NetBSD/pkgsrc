@@ -115,3 +115,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-setuptools_scm to 1.10.1 [wiz 2016-01-06]
 	Updated www/squidanalyzer to 6.5 [adam 2016-01-06]
 	Updated net/youtube-dl to 20160101 [adam 2016-01-06]
+	Updated graphics/libwebp to 0.5.0 [adam 2016-01-06]
