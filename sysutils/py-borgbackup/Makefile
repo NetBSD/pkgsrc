@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/12/27 21:06:06 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2016/01/06 05:31:53 wiz Exp $
 
 DISTNAME=	borgbackup-0.29.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,6 +10,7 @@ HOMEPAGE=	https://github.com/borgbackup/borg
 COMMENT=	Deduplicating backup program with compression and encryption
 LICENSE=	modified-bsd
 
+BUILD_DEPENDS+=	${PYPKGPREFIX}-setuptools_scm-[0-9]*:../../devel/py-setuptools_scm
 DEPENDS+=	${PYPKGPREFIX}-msgpack>=0.4.6:../../devel/py-msgpack
 
 PYTHON_VERSIONS_INCOMPATIBLE=	27
