@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2015/10/21 09:39:10 adam Exp $
+$NetBSD: distinfo,v 1.8 2016/01/06 07:23:24 adam Exp $
 
-SHA1 (squidanalyzer-6.3-1.tar.gz) = aa60cf58b6a95a23415118b00e618f0a801f688e
-RMD160 (squidanalyzer-6.3-1.tar.gz) = 3d9bcb30a7fec2da7e8003e80ad409590a00d6d9
-SHA512 (squidanalyzer-6.3-1.tar.gz) = 394ef4d7b182b8ba9fd00ef8c25f0a74cbb2c4a4ee927064a584c27a65a618e03af14f90fa78c97c66049d8e916d1d7b06daf9fd6d08169a6e2ed1c5c80618eb
-Size (squidanalyzer-6.3-1.tar.gz) = 155160 bytes
+SHA1 (squidanalyzer-6.5.tar.gz) = d24ca6866caa4eed9ee8983e77128ac03b3c232b
+RMD160 (squidanalyzer-6.5.tar.gz) = b0138fc252a4ab043532b842a39fcb707b01f0e2
+SHA512 (squidanalyzer-6.5.tar.gz) = c57b2f240a9d732857c4f7e31a2a9b095251456c5f8d62eefdf7fff765c9f7848c498c59e31cac49e68b5cc1b8268ae66f9015087b3d70ba6822062a4486193a
+Size (squidanalyzer-6.5.tar.gz) = 156839 bytes
 SHA1 (patch-Makefile.PL) = c9c916c929d8349c6d4aa0d904ec8783c54995d0

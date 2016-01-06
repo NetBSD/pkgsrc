@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2015/10/21 09:39:10 adam Exp $
+# $NetBSD: Makefile,v 1.10 2016/01/06 07:23:24 adam Exp $
 
-DISTNAME=	squidanalyzer-6.3-1
-PKGNAME=	squidanalyzer-6.3.1
+DISTNAME=	squidanalyzer-6.5
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=squid-report/}
 
