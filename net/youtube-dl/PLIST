@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2015/12/24 00:54:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2016/01/06 09:47:42 adam Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -476,6 +476,9 @@ ${PYSITELIB}/youtube_dl/extractor/footyroom.pyo
 ${PYSITELIB}/youtube_dl/extractor/fourtube.py
 ${PYSITELIB}/youtube_dl/extractor/fourtube.pyc
 ${PYSITELIB}/youtube_dl/extractor/fourtube.pyo
+${PYSITELIB}/youtube_dl/extractor/fox.py
+${PYSITELIB}/youtube_dl/extractor/fox.pyc
+${PYSITELIB}/youtube_dl/extractor/fox.pyo
 ${PYSITELIB}/youtube_dl/extractor/foxgay.py
 ${PYSITELIB}/youtube_dl/extractor/foxgay.pyc
 ${PYSITELIB}/youtube_dl/extractor/foxgay.pyo
@@ -614,6 +617,9 @@ ${PYSITELIB}/youtube_dl/extractor/hornbunny.pyo
 ${PYSITELIB}/youtube_dl/extractor/hotnewhiphop.py
 ${PYSITELIB}/youtube_dl/extractor/hotnewhiphop.pyc
 ${PYSITELIB}/youtube_dl/extractor/hotnewhiphop.pyo
+${PYSITELIB}/youtube_dl/extractor/hotstar.py
+${PYSITELIB}/youtube_dl/extractor/hotstar.pyc
+${PYSITELIB}/youtube_dl/extractor/hotstar.pyo
 ${PYSITELIB}/youtube_dl/extractor/howcast.py
 ${PYSITELIB}/youtube_dl/extractor/howcast.pyc
 ${PYSITELIB}/youtube_dl/extractor/howcast.pyo
@@ -680,9 +686,6 @@ ${PYSITELIB}/youtube_dl/extractor/jove.pyo
 ${PYSITELIB}/youtube_dl/extractor/jpopsukitv.py
 ${PYSITELIB}/youtube_dl/extractor/jpopsukitv.pyc
 ${PYSITELIB}/youtube_dl/extractor/jpopsukitv.pyo
-${PYSITELIB}/youtube_dl/extractor/jukebox.py
-${PYSITELIB}/youtube_dl/extractor/jukebox.pyc
-${PYSITELIB}/youtube_dl/extractor/jukebox.pyo
 ${PYSITELIB}/youtube_dl/extractor/jwplatform.py
 ${PYSITELIB}/youtube_dl/extractor/jwplatform.pyc
 ${PYSITELIB}/youtube_dl/extractor/jwplatform.pyo
@@ -911,6 +914,9 @@ ${PYSITELIB}/youtube_dl/extractor/newstube.pyo
 ${PYSITELIB}/youtube_dl/extractor/nextmedia.py
 ${PYSITELIB}/youtube_dl/extractor/nextmedia.pyc
 ${PYSITELIB}/youtube_dl/extractor/nextmedia.pyo
+${PYSITELIB}/youtube_dl/extractor/nextmovie.py
+${PYSITELIB}/youtube_dl/extractor/nextmovie.pyc
+${PYSITELIB}/youtube_dl/extractor/nextmovie.pyo
 ${PYSITELIB}/youtube_dl/extractor/nfb.py
 ${PYSITELIB}/youtube_dl/extractor/nfb.pyc
 ${PYSITELIB}/youtube_dl/extractor/nfb.pyo
@@ -920,6 +926,9 @@ ${PYSITELIB}/youtube_dl/extractor/nfl.pyo
 ${PYSITELIB}/youtube_dl/extractor/nhl.py
 ${PYSITELIB}/youtube_dl/extractor/nhl.pyc
 ${PYSITELIB}/youtube_dl/extractor/nhl.pyo
+${PYSITELIB}/youtube_dl/extractor/nick.py
+${PYSITELIB}/youtube_dl/extractor/nick.pyc
+${PYSITELIB}/youtube_dl/extractor/nick.pyo
 ${PYSITELIB}/youtube_dl/extractor/niconico.py
 ${PYSITELIB}/youtube_dl/extractor/niconico.pyc
 ${PYSITELIB}/youtube_dl/extractor/niconico.pyo
@@ -977,9 +986,15 @@ ${PYSITELIB}/youtube_dl/extractor/onionstudios.pyo
 ${PYSITELIB}/youtube_dl/extractor/ooyala.py
 ${PYSITELIB}/youtube_dl/extractor/ooyala.pyc
 ${PYSITELIB}/youtube_dl/extractor/ooyala.pyo
+${PYSITELIB}/youtube_dl/extractor/ora.py
+${PYSITELIB}/youtube_dl/extractor/ora.pyc
+${PYSITELIB}/youtube_dl/extractor/ora.pyo
 ${PYSITELIB}/youtube_dl/extractor/orf.py
 ${PYSITELIB}/youtube_dl/extractor/orf.pyc
 ${PYSITELIB}/youtube_dl/extractor/orf.pyo
+${PYSITELIB}/youtube_dl/extractor/pandoratv.py
+${PYSITELIB}/youtube_dl/extractor/pandoratv.pyc
+${PYSITELIB}/youtube_dl/extractor/pandoratv.pyo
 ${PYSITELIB}/youtube_dl/extractor/parliamentliveuk.py
 ${PYSITELIB}/youtube_dl/extractor/parliamentliveuk.pyc
 ${PYSITELIB}/youtube_dl/extractor/parliamentliveuk.pyo
@@ -1097,6 +1112,9 @@ ${PYSITELIB}/youtube_dl/extractor/rds.pyo
 ${PYSITELIB}/youtube_dl/extractor/redtube.py
 ${PYSITELIB}/youtube_dl/extractor/redtube.pyc
 ${PYSITELIB}/youtube_dl/extractor/redtube.pyo
+${PYSITELIB}/youtube_dl/extractor/regiotv.py
+${PYSITELIB}/youtube_dl/extractor/regiotv.pyc
+${PYSITELIB}/youtube_dl/extractor/regiotv.pyo
 ${PYSITELIB}/youtube_dl/extractor/restudy.py
 ${PYSITELIB}/youtube_dl/extractor/restudy.pyc
 ${PYSITELIB}/youtube_dl/extractor/restudy.pyo
@@ -1259,9 +1277,9 @@ ${PYSITELIB}/youtube_dl/extractor/sportbox.pyo
 ${PYSITELIB}/youtube_dl/extractor/sportdeutschland.py
 ${PYSITELIB}/youtube_dl/extractor/sportdeutschland.pyc
 ${PYSITELIB}/youtube_dl/extractor/sportdeutschland.pyo
-${PYSITELIB}/youtube_dl/extractor/srf.py
-${PYSITELIB}/youtube_dl/extractor/srf.pyc
-${PYSITELIB}/youtube_dl/extractor/srf.pyo
+${PYSITELIB}/youtube_dl/extractor/srgssr.py
+${PYSITELIB}/youtube_dl/extractor/srgssr.pyc
+${PYSITELIB}/youtube_dl/extractor/srgssr.pyo
 ${PYSITELIB}/youtube_dl/extractor/srmediathek.py
 ${PYSITELIB}/youtube_dl/extractor/srmediathek.pyc
 ${PYSITELIB}/youtube_dl/extractor/srmediathek.pyo
@@ -1355,6 +1373,9 @@ ${PYSITELIB}/youtube_dl/extractor/testurl.pyo
 ${PYSITELIB}/youtube_dl/extractor/tf1.py
 ${PYSITELIB}/youtube_dl/extractor/tf1.pyc
 ${PYSITELIB}/youtube_dl/extractor/tf1.pyo
+${PYSITELIB}/youtube_dl/extractor/theintercept.py
+${PYSITELIB}/youtube_dl/extractor/theintercept.pyc
+${PYSITELIB}/youtube_dl/extractor/theintercept.pyo
 ${PYSITELIB}/youtube_dl/extractor/theonion.py
 ${PYSITELIB}/youtube_dl/extractor/theonion.pyc
 ${PYSITELIB}/youtube_dl/extractor/theonion.pyo
@@ -1436,6 +1457,9 @@ ${PYSITELIB}/youtube_dl/extractor/tvc.pyo
 ${PYSITELIB}/youtube_dl/extractor/tvigle.py
 ${PYSITELIB}/youtube_dl/extractor/tvigle.pyc
 ${PYSITELIB}/youtube_dl/extractor/tvigle.pyo
+${PYSITELIB}/youtube_dl/extractor/tvland.py
+${PYSITELIB}/youtube_dl/extractor/tvland.pyc
+${PYSITELIB}/youtube_dl/extractor/tvland.pyo
 ${PYSITELIB}/youtube_dl/extractor/tvp.py
 ${PYSITELIB}/youtube_dl/extractor/tvp.pyc
 ${PYSITELIB}/youtube_dl/extractor/tvp.pyo
@@ -1520,6 +1544,9 @@ ${PYSITELIB}/youtube_dl/extractor/videofyme.pyo
 ${PYSITELIB}/youtube_dl/extractor/videomega.py
 ${PYSITELIB}/youtube_dl/extractor/videomega.pyc
 ${PYSITELIB}/youtube_dl/extractor/videomega.pyo
+${PYSITELIB}/youtube_dl/extractor/videomore.py
+${PYSITELIB}/youtube_dl/extractor/videomore.pyc
+${PYSITELIB}/youtube_dl/extractor/videomore.pyo
 ${PYSITELIB}/youtube_dl/extractor/videopremium.py
 ${PYSITELIB}/youtube_dl/extractor/videopremium.pyc
 ${PYSITELIB}/youtube_dl/extractor/videopremium.pyo
