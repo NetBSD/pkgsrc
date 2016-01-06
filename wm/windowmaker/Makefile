@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.113 2015/10/16 10:42:23 adam Exp $
+# $NetBSD: Makefile,v 1.114 2016/01/06 10:46:55 adam Exp $
 
 DISTNAME=	WindowMaker-0.95.7
 PKGNAME=	${DISTNAME:S/WindowMaker/windowmaker/}
+PKGREVISION=	1
 CATEGORIES=	x11 wm windowmaker
 MASTER_SITES=	http://windowmaker.info/pub/source/release/
 

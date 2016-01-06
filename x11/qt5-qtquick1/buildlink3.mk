@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2015/10/26 19:04:00 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2016/01/06 10:46:50 adam Exp $
 
 BUILDLINK_TREE+=	qt5-qtquick1
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qt5-qtquick1
 QT5_QTQUICK1_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qt5-qtquick1+=	qt5-qtquick1>=5.5.1
-BUILDLINK_ABI_DEPENDS.qt5-qtquick1+=	qt5-qtquick1>=5.5.1
+BUILDLINK_ABI_DEPENDS.qt5-qtquick1+=	qt5-qtquick1>=5.5.1nb1
 BUILDLINK_PKGSRCDIR.qt5-qtquick1?=	../../x11/qt5-qtquick1
 
 BUILDLINK_INCDIRS.qt5-qtquick1+=	qt5/include
