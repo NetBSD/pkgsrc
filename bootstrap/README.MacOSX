@@ -1,4 +1,4 @@
-$NetBSD: README.MacOSX,v 1.28 2015/12/29 19:14:35 dholland Exp $
+$NetBSD: README.MacOSX,v 1.29 2016/01/06 07:15:23 yyamano Exp $
 
 This file describes the use of current versions of pkgsrc with
 multiple versions of Darwin and OS X, omitting information about previous pkgsrc
@@ -148,9 +148,9 @@ and slower G4 Macs.
 
 Clearly, it is desirable for a bulk build to be useful on as many
 computers as possible.  The main issues are which ABI and which OS X
-version.  Targetting older versions makes a build run on more systems,
-and targetting newer versions makes the build closer to what would be
-obtained from bootstrappping on a newer version and thus avoids some
+version.  Targeting older versions makes a build run on more systems,
+and targeting newer versions makes the build closer to what would be
+obtained from bootstrapping on a newer version and thus avoids some
 issues.   This section has pointers to active bulk builds.
 
 ** 10.4, --abi=32 powerpc, gcc
