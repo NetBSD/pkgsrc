@@ -1,6 +1,8 @@
-$NetBSD: patch-src_radeon__kms.c,v 1.1 2015/02/21 11:45:35 tnn Exp $
+$NetBSD: patch-src_radeon__kms.c,v 1.2 2016/01/06 14:53:04 wiz Exp $
 
-https://bugs.freedesktop.org/show_bug.cgi?id=47160
+Should be fixed by xserver commit:
+http://cgit.freedesktop.org/xorg/xserver/commit/?id=63f83d1b7f496d05b409352749cdb6674d71cf80
+so patch can be removed once this is in pkgsrc modular-xorg-server.
 
 --- src/radeon_kms.c.orig	2014-10-02 03:31:27.000000000 +0000
 +++ src/radeon_kms.c
