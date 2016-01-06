@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2015/03/15 19:57:40 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.14 2016/01/06 15:28:31 taca Exp $
 
-DISTNAME=	pkg-config-1.1.6
+DISTNAME=	pkg-config-1.1.7
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_RUBYGEMS}
 EXTRACT_SUFX=	.gem
