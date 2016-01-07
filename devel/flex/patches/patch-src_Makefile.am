@@ -1,0 +1,25 @@
+$NetBSD: patch-src_Makefile.am,v 1.1 2016/01/07 12:05:31 wiz Exp $
+
+libfl* do not need to be linked against libintl, only the binaries do.
+https://sourceforge.net/p/flex/bugs/198/
+
+--- src/Makefile.am.orig	2015-11-13 19:32:53.000000000 +0000
++++ src/Makefile.am
+@@ -1,7 +1,7 @@
+ AM_YFLAGS = -d
+ localedir = $(datadir)/locale
+ AM_CPPFLAGS = -DLOCALEDIR=\"$(localedir)\" -I$(top_srcdir)/intl
+-LIBS = @LIBINTL@ @LIBS@
++LIBS = @LIBS@
+ 
+ m4 = @M4@
+ 
+@@ -33,7 +33,7 @@ flex_SOURCES = \
+ 	filter.c \
+ 	regex.c
+ 
+-LDADD = ../lib/libcompat.la
++LDADD = ../lib/libcompat.la @LIBINTL@
+ 
+ libfl_la_SOURCES = \
+ 	libmain.c \
