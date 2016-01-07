@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.98 2016/01/07 15:15:43 darcy Exp $
+$NetBSD: CHANGES-2016,v 1.99 2016/01/07 15:19:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -130,3 +130,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/flex to 2.6.0 [wiz 2016-01-07]
 	Updated devel/py-unittest2 to 1.1.0 [wiz 2016-01-07]
 	Updated textproc/py-sphinx-theme-cloud to 1.7.1. [darcy 2016-01-07]
+	Updated mail/mutt to 1.5.24nb1 [wiz 2016-01-07]
