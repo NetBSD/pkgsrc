@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2015/11/04 17:41:16 agc Exp $
+$NetBSD: distinfo,v 1.9 2016/01/07 16:09:02 fhajny Exp $
 
-SHA1 (elasticsearch-py-2.0.0.tar.gz) = 0cbb4c1f251169222976ada265bcb1965c4739f9
-RMD160 (elasticsearch-py-2.0.0.tar.gz) = 6b4581f6e9791c7ef76ec9e8be94bf8805c2584e
-SHA512 (elasticsearch-py-2.0.0.tar.gz) = 511f2ed9b4fb87c64de91c0e8cdf636fa2b514dcf24f0e7b721fd584227670e8c5d3a8b338f5f83d63d58940e1d25f82811f09582c02a97e63d5bd171d9b8cc0
-Size (elasticsearch-py-2.0.0.tar.gz) = 72620 bytes
+SHA1 (elasticsearch-py-2.2.0.tar.gz) = d204aed10cf1aa075b8a79d7349837c08a72edfd
+RMD160 (elasticsearch-py-2.2.0.tar.gz) = 13e648020646b3d1b4429337259491fcb375b52f
+SHA512 (elasticsearch-py-2.2.0.tar.gz) = fcdcb72064920aeaaaba644166184d6826d5bd26542824744cb9bc899d01b50f972bbee4e92dce2f24fc81d66201d807d89fb2b9ccda446986eb79c9c131171e
+Size (elasticsearch-py-2.2.0.tar.gz) = 74228 bytes
