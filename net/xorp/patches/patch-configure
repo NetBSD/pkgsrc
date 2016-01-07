@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2016/01/07 15:51:59 jperkin Exp $
+
+Don't remove -g badly.
+
+--- configure.orig	2009-01-07 18:47:14.000000000 +0000
++++ configure
+@@ -43363,8 +43363,6 @@ rm -f conftest*
+ 
+ 
+ if test "${GCC}" = "yes" ; then
+-                CFLAGS=`echo $CFLAGS |  sed 's/-g//g'`
+-    CXXFLAGS=`echo $CXXFLAGS |  sed 's/-g//g'`
+ 
+                 if test "${enable_debug}" = "yes" ; then
+ 
