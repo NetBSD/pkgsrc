@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.100 2016/01/07 15:19:59 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.101 2016/01/07 16:05:14 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -132,3 +132,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/py-sphinx-theme-cloud to 1.7.1. [darcy 2016-01-07]
 	Updated mail/mutt to 1.5.24nb1 [wiz 2016-01-07]
 	Updated mail/mutt-kz to 1.5.23.1rc1nb2 [wiz 2016-01-07]
+	Updated textproc/py-xlsxwriter to 0.7.8 [fhajny 2016-01-07]
