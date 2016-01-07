@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.96 2016/01/07 12:05:40 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.97 2016/01/07 12:11:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -128,3 +128,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/p5-Mozilla-CA to 20160104 [wiz 2016-01-07]
 	Updated devel/p5-Sub-Identify to 0.12 [wiz 2016-01-07]
 	Updated devel/flex to 2.6.0 [wiz 2016-01-07]
+	Updated devel/py-unittest2 to 1.1.0 [wiz 2016-01-07]
