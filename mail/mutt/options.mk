@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.17 2016/01/07 15:19:41 wiz Exp $
+# $NetBSD: options.mk,v 1.18 2016/01/07 15:25:15 wiz Exp $
 
 # Global and legacy options
 
@@ -9,7 +9,7 @@ PKG_SUPPORTED_OPTIONS=	debug gpgme idn ssl smime sasl
 PKG_SUPPORTED_OPTIONS+=	mutt-hcache tokyocabinet mutt-smtp
 PKG_SUPPORTED_OPTIONS+=	mutt-compressed-mbox
 PKG_SUPPORTED_OPTIONS+=	mutt-sidebar
-PKG_SUGGESTED_OPTIONS=	curses gpgme smime ssl
+PKG_SUGGESTED_OPTIONS=	curses gpgme mutt-smtp smime ssl
 # un-comment out the following lines whenever updating distinfo
 # and patches are up-to-date
 #PKG_SUGGESTED_OPTIONS+=	mutt-compressed-mbox
