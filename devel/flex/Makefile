@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2014/08/23 07:46:38 obache Exp $
+# $NetBSD: Makefile,v 1.44 2016/01/07 12:05:30 wiz Exp $
 
-DISTNAME=	flex-2.5.39
-PKGREVISION=	2
+DISTNAME=	flex-2.6.0
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=flex/}
 EXTRACT_SUFX=	.tar.xz
@@ -13,7 +12,7 @@ LICENSE=	2-clause-bsd
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gm4:run
+USE_TOOLS+=		gm4:run bison
 GNU_CONFIGURE=		yes
 INFO_FILES=		yes
 
@@ -32,6 +31,8 @@ LDFLAGS.SCO_SV+=	-lsocket
 
 #.if !empty(PKGSRC_RUN_TEST:M[Yy][Ee][Ss])
 USE_LANGUAGES=		c c++
+USE_TOOLS+=		bash:build
+REPLACE_BASH=		tests/testwrapper.sh tests/options.cn
 USE_TOOLS+=		gmake	# bmake has problems with the test suite
 #.endif
 
