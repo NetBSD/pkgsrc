@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.21 2015/11/04 01:32:40 agc Exp $
+$NetBSD: distinfo,v 1.22 2016/01/07 17:53:58 bouyer Exp $
 
 SHA1 (ipxe-git-v1.0.0.tar.gz) = da052c8de5f3485fe0253c19cf52ed6d72528485
 RMD160 (ipxe-git-v1.0.0.tar.gz) = dcd9b6eaafa1ce05c1ebf2a15f2f73ad7a8c5547
@@ -8,6 +8,9 @@ SHA1 (xen-4.2.5.tar.gz) = f42741e4ec174495ace70c4b17a6b9b0e60e798a
 RMD160 (xen-4.2.5.tar.gz) = 7d4f7f1b32ee541d341a756b1f8da02816438d19
 SHA512 (xen-4.2.5.tar.gz) = 42c0fc241952fc55fc44480fb6752b004b54ae40e946159ec047adf229b65cbfbd810271d01b064ad8fdbddb73c640dcdcb6bc19f91e8968829889c129920dac
 Size (xen-4.2.5.tar.gz) = 15671925 bytes
+<<<<<<< distinfo
+=======
+>>>>>>> 1.21
 SHA1 (patch-.._.._ipxe_src_Makefile.housekeeping) = 5ec8020a9705b2f64096c2942473a8de4db578bb
 SHA1 (patch-.._.._ipxe_src_arch_i386_include_librm.h) = 4549ac641b112321b4731a918d85219c3fce6808
 SHA1 (patch-.._.._ipxe_src_arch_i386_scripts_i386.lds) = 4c0cbb7f535be43e1b6f53c284340a8bafc37c0b
@@ -34,6 +37,8 @@ SHA1 (patch-CVE-2015-3456) = e1600393860110c3093559f2f58273ba47478dd8
 SHA1 (patch-CVE-2015-5154) = 29e0f8ad5696b6b1f4d5dbcc8d35579fb8d67375
 SHA1 (patch-CVE-2015-5165) = c0b5324cb85ced435f869a0aa7232c5670a9995d
 SHA1 (patch-CVE-2015-5166) = 947ac0945091027d5973963765a3ab8975d2226a
+SHA1 (patch-CVE-2015-8550) = 63613ca0dd9fe06f5c88774151f72e1c540e62c5
+SHA1 (patch-CVE-2015-8554) = 908783cf619fc130d5a107ba2c4997fca0f0da88
 SHA1 (patch-Makefile) = 3a474d28a5b838bae4a67b5ca76e23b950bf0133
 SHA1 (patch-Rules.mk) = 25a04293f6fe638ba5f3bd5e09b2b091cd201023
 SHA1 (patch-blktap_drivers_Makefile) = c6be57154a403a64e3d6bc22d6bd833fe33fc9af
