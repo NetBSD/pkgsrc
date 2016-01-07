@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2015/12/31 13:27:10 jnemeth Exp $
+$NetBSD: distinfo,v 1.15 2016/01/07 17:48:34 bouyer Exp $
 
 SHA1 (ipxe-git-9a93db3f0947484e30e753bbd61a10b17336e20e.tar.gz) = fecadf952821e830ce1a1d19655288eef8488f88
 RMD160 (ipxe-git-9a93db3f0947484e30e753bbd61a10b17336e20e.tar.gz) = 539bfa12db7054228250d6dd380bbf96c1a040f8
@@ -17,6 +17,9 @@ SHA1 (patch-.._docs_man_xl.cfg.pod.5) = e2058495b6fe85af338e22560d46996d36aeedab
 SHA1 (patch-.._docs_man_xl.conf.pod.5) = 015da24a45388468d56f1ecfa60f6acf07bdfef8
 SHA1 (patch-.._docs_man_xl.pod.1) = b194f2c5608c6f0e80a4abd8655808cf91355cd5
 SHA1 (patch-.._docs_man_xlcpupool.cfg.pod.5) = b44813af965e4d9d0d51c18b22d286736a4663b2
+SHA1 (patch-CVE-2015-8341) = 9d4cb191f023c6d6ff9de85028a19ca13aa69e1f
+SHA1 (patch-CVE-2015-8550) = 27f9214b9df78e04ec30e8ca56970c5b1d5dc50d
+SHA1 (patch-CVE-2015-8554) = 908783cf619fc130d5a107ba2c4997fca0f0da88
 SHA1 (patch-Makefile) = eb5d3211b26c5f10a24fcca658c83d5f60990d9f
 SHA1 (patch-Rules.mk) = e0dc4234c35dc2d78afad4a90b0af829a6a10b50
 SHA1 (patch-XSA135) = c27b9c495d7348864e9939f54574e3afc37a816a
