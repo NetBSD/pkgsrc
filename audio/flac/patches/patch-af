@@ -1,4 +1,6 @@
-$NetBSD: patch-af,v 1.4 2007/02/22 19:11:26 rillig Exp $
+$NetBSD: patch-af,v 1.5 2016/01/07 15:34:33 jperkin Exp $
+
+Support -kPIC and simplify.
 
 --- strip_non_asm_libtool_args.sh.orig	2004-07-29 08:43:23.000000000 +0200
 +++ strip_non_asm_libtool_args.sh	2007-02-22 20:11:41.000000000 +0100
