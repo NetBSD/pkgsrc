@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/04 02:00:04 agc Exp $
+$NetBSD: distinfo,v 1.4 2016/01/07 15:14:26 darcy Exp $
 
-SHA1 (cloud_sptheme-1.5.tar.gz) = c0b76e26296ba6897ed4ba262a7aabc879b29e8e
-RMD160 (cloud_sptheme-1.5.tar.gz) = 7f7e49aca840eb7623d6511a86e47a2730f323a3
-SHA512 (cloud_sptheme-1.5.tar.gz) = 8c28c86f659447447eed64a90b872c04f94f1efcd6615f15ef8836c39674233fce34df8fe226f49f2142ce43c0a3daca2c1666c860e98ce5d66ac269c398d2c2
-Size (cloud_sptheme-1.5.tar.gz) = 391221 bytes
-SHA1 (patch-cloud_sptheme.make_helper.py) = 49bbea0ab44ab53757a89fb23b877bcf54a9a848
+SHA1 (cloud_sptheme-1.7.1.tar.gz) = c958224970376e43a2fbb7cecc63fe9df8753eff
+RMD160 (cloud_sptheme-1.7.1.tar.gz) = eed8bcb53e0cd6bb7ce9bc0e385165c63a061a19
+SHA512 (cloud_sptheme-1.7.1.tar.gz) = 364e32d5b43ce673b2269a3bb84ea1e8560a9811d08a4857222f2b2fea3f7fd988daa729c09529f0c0b3fc66e15a845fad74c0b3fe1a629785dd1d56b4dfebd5
+Size (cloud_sptheme-1.7.1.tar.gz) = 103871 bytes
