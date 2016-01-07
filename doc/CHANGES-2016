@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.102 2016/01/07 16:09:11 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.103 2016/01/07 17:30:06 roy Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -134,3 +134,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/mutt-kz to 1.5.23.1rc1nb2 [wiz 2016-01-07]
 	Updated textproc/py-xlsxwriter to 0.7.8 [fhajny 2016-01-07]
 	Updated databases/py-elasticsearch to 2.2.0 [fhajny 2016-01-07]
+	Updated net/dhcpcd to 6.10.0 [roy 2016-01-07]
