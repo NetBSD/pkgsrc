@@ -124,3 +124,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/ruby-ipaddress to 0.8.2 [taca 2016-01-06]
 	Updated www/py-werkzeug to 0.11.3 [kleink 2016-01-06]
 	Updated www/py-werkzeug-docs to 0.11.3 [kleink 2016-01-06]
+	Updated lang/nodejs to 5.4.0 [fhajny 2016-01-07]
