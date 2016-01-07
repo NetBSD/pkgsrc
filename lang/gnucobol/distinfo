@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 22:50:36 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/01/07 16:01:10 jperkin Exp $
 
 SHA1 (gnu-cobol-2.0_nightly_r411.tar.gz) = 009215c090b9a90fbf02bbc913095ce2a9b31910
 RMD160 (gnu-cobol-2.0_nightly_r411.tar.gz) = a5a219a7d08ea498dab653a02fc54f0fa1205d99
 SHA512 (gnu-cobol-2.0_nightly_r411.tar.gz) = 9b8dfd284ced007e16c449790f28264cb982ecae6e5bf3f70cef560b8ca5d7c3d47c1811d5a6a0197ad45ff869a43a3621f0b08d7bcdde72e5aa6c2be2efc878
 Size (gnu-cobol-2.0_nightly_r411.tar.gz) = 1748284 bytes
-SHA1 (patch-configure) = d0b3241e95c5910d083ff56cd33527cf871190b1
+SHA1 (patch-configure) = 6c4cd54fff47adfe818ecac5eff5f30b17c748c5
