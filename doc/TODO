@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15277 2016/01/07 11:29:27 wiz Exp $
+$NetBSD: TODO,v 1.15278 2016/01/07 11:30:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1331,7 +1331,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Spreadsheet-WriteExcel-2.40
 	o p5-Starman-0.4014
 	o p5-Statistics-Descriptive-3.0609
-	o p5-Sub-Identify-0.12
 	o p5-Switch-2.17
 	o p5-Syntax-Highlight-Engine-Kate-0.10
 	o p5-Sys-Filesystem-1.406
