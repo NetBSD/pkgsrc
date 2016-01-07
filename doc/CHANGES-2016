@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.103 2016/01/07 17:30:06 roy Exp $
+$NetBSD: CHANGES-2016,v 1.104 2016/01/07 17:57:50 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -135,3 +135,9 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/py-xlsxwriter to 0.7.8 [fhajny 2016-01-07]
 	Updated databases/py-elasticsearch to 2.2.0 [fhajny 2016-01-07]
 	Updated net/dhcpcd to 6.10.0 [roy 2016-01-07]
+	Updated sysutils/xentools45 to 4.5.1nb9 [bouyer 2016-01-07]
+	Updated sysutils/xenkernel45 to 4.5.1nb2 [bouyer 2016-01-07]
+	Updated sysutils/xentools42 to 4.2.5nb14 [bouyer 2016-01-07]
+	Updated sysutils/xenkernel42 to 4.2.5nb10 [bouyer 2016-01-07]
+	Updated sysutils/xentools41 to 4.1.6.1nb14 [bouyer 2016-01-07]
+	Updated sysutils/xenkernel41 to 4.1.6.1nb13 [bouyer 2016-01-07]
