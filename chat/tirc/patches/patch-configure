@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2016/01/07 15:46:29 jperkin Exp $
+
+Don't munge CFLAGS badly.
+
+--- configure.orig	1999-05-14 20:02:48.000000000 +0000
++++ configure
+@@ -5138,8 +5138,6 @@ EOF
+ 	fi
+ fi
+ 
+-CFLAGS=`echo $CFLAGS | sed -e 's/-O.//' -e 's/-g//'`
+-
+ if test "$tirc_cv_efence" = yes; then
+ 	LIBS="$LIBS -L/usr/local/lib -lefence"
+ fi

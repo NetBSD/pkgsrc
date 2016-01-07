@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 01:20:25 agc Exp $
+$NetBSD: distinfo,v 1.7 2016/01/07 15:46:29 jperkin Exp $
 
 SHA1 (tirc-1.2.tar.gz) = eae51ae46282943a3c1a3aa134aaec9455e0f65b
 RMD160 (tirc-1.2.tar.gz) = 31ad3e1796e28a5cbadb1ff30c4753a72775968e
@@ -13,3 +13,4 @@ SHA1 (patch-af) = 649f4b57ff56bc297f33a0511c6b11bb0016ef73
 SHA1 (patch-ag) = 34cfac73b5438ff108f96e57a4196994d50e0a23
 SHA1 (patch-ah) = dd9c67e8a51d63b7efa98d8addd6ccd320b7b87e
 SHA1 (patch-ai) = 117f8de13192e4123df68860d817a366d6395e76
+SHA1 (patch-configure) = e37b8df9682e38e256b6aefa8c4b45fe4701d012
