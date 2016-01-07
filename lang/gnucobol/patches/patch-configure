@@ -1,7 +1,8 @@
-$NetBSD: patch-configure,v 1.1 2015/07/01 14:23:55 ryoon Exp $
+$NetBSD: patch-configure,v 1.2 2016/01/07 16:01:10 jperkin Exp $
 
 * Improve POSIX shell compatibility.
 * Detect pkgsrc berkeley db library.
+* Don't remove -g.
 
 --- configure.orig	2014-08-21 18:24:14.000000000 +0000
 +++ configure
@@ -23,3 +24,20 @@ $NetBSD: patch-configure,v 1.1 2015/07/01 14:23:55 ryoon Exp $
  	do
  		LIBS="$MYOLDLIBS -l$cobdb"
  		if test "$cross_compiling" = yes; then :
+@@ -16902,7 +16902,7 @@ COB_EXEEXT="$EXEEXT"
+ 
+ if test "$enable_debug" != "yes" -a "x$CFLAGS" != "x"
+ then
+-	CFLAGS=`echo "$CFLAGS" | sed -e 's/-g//' -e 's/^ //' -e 's/ $//'`
++	: CFLAGS=`echo "$CFLAGS" | sed -e 's/-g//' -e 's/^ //' -e 's/ $//'`
+ fi
+ 
+ # Include CFLAGS in COB_CFLAGS without optimization/debug options
+@@ -16910,7 +16910,6 @@ fi
+ cob_temp_flags=""
+ if test "x$CFLAGS" != "x"
+ then
+-	cob_temp_flags=`echo "$CFLAGS" | sed -e 's/-g//' -e 's/ $//' -e 's/^ //'`
+ 	cob_temp_flags=`echo "$cob_temp_flags" | sed -e 's/[+-]O[0-9s]//' -e 's/ $//' -e 's/^ //'`
+ 	cob_temp_flags=`echo "$cob_temp_flags" | sed -e 's/-O//' -e 's/ $//' -e 's/^ //'`
+ 	cob_temp_flags=`echo "$cob_temp_flags" | sed -e 's/-fmessage-length=0//'`
