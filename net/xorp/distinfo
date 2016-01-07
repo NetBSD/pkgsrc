@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.25 2015/11/04 00:35:46 agc Exp $
+$NetBSD: distinfo,v 1.26 2016/01/07 15:51:58 jperkin Exp $
 
 SHA1 (xorp-1.6.tar.gz) = 366d32068ed76b8ec69958b601d4fbde61ef4cbb
 RMD160 (xorp-1.6.tar.gz) = 32b3f6d03defc816ed983088e61b5e808de17f98
@@ -13,6 +13,7 @@ SHA1 (patch-bgp_route__table__fanout.hh) = 95f25dfe17299a30a07a30d9867b83180a663
 SHA1 (patch-bgp_route__table__policy__im.cc) = a1d2a98e7542def7fdea977501bbd9ad82842302
 SHA1 (patch-bgp_route__table__ribin.cc) = bc04827ee42f9cff23cd3a2243044fee2af7d240
 SHA1 (patch-cli_cli__client.cc) = 6c0b026eb5f8c3cd35e29662da6b3b40a1061fd1
+SHA1 (patch-configure) = e8194c465acc129f0bae4ff90404f1ba956148c9
 SHA1 (patch-contrib_olsr_policy__varrw.cc) = 5445e7a57a90f96ad8bc1c9551c4cb9b9d0d8b8e
 SHA1 (patch-contrib_olsr_policy__varrw.hh) = 687c448a8b7a9e84baed6e3c7d6b6dd4628f0071
 SHA1 (patch-fea_data__plane_control__socket_click__socket.hh) = 1e0ea2de08a131a99b3cbc5e9522b1c8370cd4fe
