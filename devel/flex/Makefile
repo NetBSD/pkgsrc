@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2016/01/07 12:05:30 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2016/01/08 11:59:36 wiz Exp $
 
 DISTNAME=	flex-2.6.0
 CATEGORIES=	lang
@@ -12,7 +12,7 @@ LICENSE=	2-clause-bsd
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gm4:run bison
+USE_TOOLS+=		gm4:run
 GNU_CONFIGURE=		yes
 INFO_FILES=		yes
 
