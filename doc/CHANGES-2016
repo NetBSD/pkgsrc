@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.124 2016/01/08 21:20:10 adam Exp $
+$NetBSD: CHANGES-2016,v 1.125 2016/01/08 23:54:07 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -166,3 +166,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/py-flask-security to 1.7.5 [kleink 2016-01-08]
 	Updated sysutils/entr to 3.4 [leot 2016-01-08]
 	Updated devel/git to 2.7.0 [adam 2016-01-08]
+	Added misc/libreoffice5-bin version 5.0.4 [ryoon 2016-01-08]
