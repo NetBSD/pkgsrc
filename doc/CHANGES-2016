@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.118 2016/01/08 16:57:34 kleink Exp $
+$NetBSD: CHANGES-2016,v 1.119 2016/01/08 17:06:22 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -160,3 +160,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-MooX-Options to 4.022 [wen 2016-01-08]
 	Updated sysutils/bsdinstall to 20160108 [jperkin 2016-01-08]
 	Updated www/py-wtforms to 2.1 [kleink 2016-01-08]
+	Updated www/py-flask-admin to 1.4.0 [kleink 2016-01-08]
