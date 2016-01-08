@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2015/12/31 22:16:33 fhajny Exp $
+# $NetBSD: Makefile,v 1.24 2016/01/08 15:14:33 fhajny Exp $
 
 DISTNAME=		rabbitmq-server-3.6.0
 PKGNAME=		${DISTNAME:S/-server//}
@@ -15,6 +15,7 @@ USE_TOOLS+=		bash:run gmake unzip zip
 
 BUILD_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
 BUILD_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+BUILD_DEPENDS+=		rsync-[0-9]*:../../net/rsync
 BUILD_DEPENDS+=		xmlto-[0-9]*:../../textproc/xmlto
 DEPENDS+=		${PYPKGPREFIX}-simplejson>=2:../../converters/py-simplejson
 
@@ -74,6 +75,7 @@ REPLACE_BASH+=		${SCRIPTS_DIR}/rabbitmq-server
 MAKE_ENV+=		MANDIR="${PREFIX}/${PKGMANDIR}"
 MAKE_ENV+=		RMQ_BINDIR="${PREFIX}/sbin"
 MAKE_ENV+=		RMQ_LIBDIR="${PREFIX}/lib/erlang/lib"
+MAKE_ENV+=		RSYNC="${PREFIX}/bin/rsync"
 
 INSTALL_TARGET=		install-erlapp install-scripts install-bin install-man
 
