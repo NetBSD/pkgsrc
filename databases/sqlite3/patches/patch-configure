@@ -1,8 +1,10 @@
-$NetBSD: patch-configure,v 1.1 2015/10/15 20:59:18 ryoon Exp $
+$NetBSD: patch-configure,v 1.2 2016/01/08 14:43:10 adam Exp $
 
---- configure.orig	2015-10-14 12:53:34.000000000 +0000
+Portability fixes.
+
+--- configure.orig	2016-01-06 12:03:05.000000000 +0000
 +++ configure
-@@ -12613,7 +12613,7 @@ else
+@@ -13327,7 +13327,7 @@ else
    enable_fts5=no
  fi
  
@@ -11,7 +13,7 @@ $NetBSD: patch-configure,v 1.1 2015/10/15 20:59:18 ryoon Exp $
    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for library containing log" >&5
  $as_echo_n "checking for library containing log... " >&6; }
  if ${ac_cv_search_log+:} false; then :
-@@ -12685,7 +12685,7 @@ else
+@@ -13399,7 +13399,7 @@ else
    enable_json1=no
  fi
  
@@ -20,3 +22,12 @@ $NetBSD: patch-configure,v 1.1 2015/10/15 20:59:18 ryoon Exp $
    JSON1_FLAGS=-DSQLITE_ENABLE_JSON1
  fi
  
+@@ -13415,7 +13415,7 @@ else
+   enable_static_shell=yes
+ fi
+ 
+-if test x"$enable_static_shell" == "xyes"; then
++if test x"$enable_static_shell" = "xyes"; then
+   EXTRA_SHELL_OBJ=sqlite3.$OBJEXT
+ else
+   EXTRA_SHELL_OBJ=libsqlite3.la
