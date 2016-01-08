@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2015/12/13 14:27:05 ryoon Exp $
+# $NetBSD: Makefile,v 1.15 2016/01/08 23:57:17 ryoon Exp $
 
 DISTNAME=		libreoffice4-bin	# overridden below
 PKGNAME=		libreoffice4-bin-${OO_RELEASE}
@@ -18,6 +18,7 @@ CONFLICTS+=		openoffice3-[0-9]*
 CONFLICTS+=		openoffice3-bin-[0-9]*
 CONFLICTS+=		openoffice-linux-[0-9]*
 CONFLICTS+=		libreoffice3-bin-[0-9]*
+CONFLICTS+=		libreoffice5-bin-[0-9]*
 
 OO_VER=			4
 OO_BASEVER=		${OO_VER}.4
