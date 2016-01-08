@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.105 2016/01/08 03:30:29 taca Exp $
+$NetBSD: CHANGES-2016,v 1.106 2016/01/08 12:52:39 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -144,3 +144,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/php55 to 5.5.31 [taca 2016-01-08]
 	Updated lang/php56 to 5.6.17 [taca 2016-01-08]
 	Updated lang/php70 to 7.0.2 [taca 2016-01-08]
+	Updated print/py-weasyprint to 0.25 [kleink 2016-01-08]
