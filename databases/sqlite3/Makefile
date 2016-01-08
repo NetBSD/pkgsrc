@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2016/01/08 14:43:10 adam Exp $
+# $NetBSD: Makefile,v 1.101 2016/01/08 21:41:36 ryoon Exp $
 
 DISTNAME=	sqlite-autoconf-${SQLITE3_DISTVERSION}
 PKGNAME=	sqlite3-${SQLITE3_VERSION}
@@ -53,5 +53,11 @@ LDFLAGS.SCO_SV+=	-lpthread
 .endif
 
 .include "../../mk/readline.buildlink3.mk"
+.if ${READLINE_TYPE} == "editline" && ${IS_BUILTIN.editline} == "yes" && \
+	(!empty(MACHINE_PLATFORM:MNetBSD-7.99*-*) || \
+	!empty(MACHINE_PLATFORM:MNetBSD-[89]*-*))
+LIBS+=	-ledit
+.endif
+
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
