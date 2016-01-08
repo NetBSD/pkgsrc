@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.115 2016/01/08 14:50:54 bouyer Exp $
+$NetBSD: CHANGES-2016,v 1.116 2016/01/08 14:52:53 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -157,3 +157,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/sqlite3-tcl to 3.10.0 [adam 2016-01-08]
 	Updated sysutils/xentools45 to 4.5.2 [bouyer 2016-01-08]
 	Updated sysutils/xenkernel45 to 4.5.2 [bouyer 2016-01-08]
+	Updated devel/p5-MooX-Options to 4.022 [wen 2016-01-08]
