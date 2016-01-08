@@ -1,0 +1,17 @@
+#!/bin/sh
+#
+#	$NetBSD: soffice,v 1.1 2016/01/08 23:53:13 ryoon Exp $
+#
+SOINST=@@PREFIX@@/opt/libreoffice@@OO_BASEVER@@
+
+# make sure we can find `whoami` on solaris
+PATH=${PATH}:/usr/ucb
+
+# add the chosen java directory to $PATH to allow OOo to
+# automatically find it
+PATH=${PATH}:@@JAVA_HOME@@
+
+# default data seg size is too small for java
+ulimit -d `ulimit -H -d`
+
+exec ${SOINST}/program/soffice "$@"
