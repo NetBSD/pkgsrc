@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15285 2016/01/08 14:47:05 adam Exp $
+$NetBSD: TODO,v 1.15286 2016/01/08 20:19:27 leot Exp $
 
 Suggested new packages
 ======================
@@ -631,7 +631,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o embryo-1.7.10
 	o emerillon-0.1.90
 	o enlightenment-0.20.1
-	o entr-3.2
 	o eog-plugins-3.6.1
 	o epiphany-3.16.0
 	o epiphany-extensions-3.2.0
