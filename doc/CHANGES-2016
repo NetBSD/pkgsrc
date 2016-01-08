@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.107 2016/01/08 12:53:37 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.108 2016/01/08 13:55:43 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -146,3 +146,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/php70 to 7.0.2 [taca 2016-01-08]
 	Updated print/py-weasyprint to 0.25 [kleink 2016-01-08]
 	Added devel/ruby-zookeeper version 1.4.11 [fhajny 2016-01-08]
+	Updated www/p5-URI to 1.71 [wen 2016-01-08]
