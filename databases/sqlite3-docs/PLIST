@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.47 2015/11/04 06:32:25 adam Exp $
+@comment $NetBSD: PLIST,v 1.48 2016/01/08 14:43:10 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -84,6 +84,7 @@ share/doc/sqlite3/c3ref/create_function.html
 share/doc/sqlite3/c3ref/create_module.html
 share/doc/sqlite3/c3ref/data_count.html
 share/doc/sqlite3/c3ref/data_directory.html
+share/doc/sqlite3/c3ref/db_cacheflush.html
 share/doc/sqlite3/c3ref/db_config.html
 share/doc/sqlite3/c3ref/db_filename.html
 share/doc/sqlite3/c3ref/db_handle.html
@@ -143,6 +144,10 @@ share/doc/sqlite3/c3ref/result_blob.html
 share/doc/sqlite3/c3ref/result_subtype.html
 share/doc/sqlite3/c3ref/set_authorizer.html
 share/doc/sqlite3/c3ref/sleep.html
+share/doc/sqlite3/c3ref/snapshot.html
+share/doc/sqlite3/c3ref/snapshot_free.html
+share/doc/sqlite3/c3ref/snapshot_get.html
+share/doc/sqlite3/c3ref/snapshot_open.html
 share/doc/sqlite3/c3ref/soft_heap_limit.html
 share/doc/sqlite3/c3ref/soft_heap_limit64.html
 share/doc/sqlite3/c3ref/sql.html
@@ -157,6 +162,7 @@ share/doc/sqlite3/c3ref/stmt_scanstatus_reset.html
 share/doc/sqlite3/c3ref/stmt_status.html
 share/doc/sqlite3/c3ref/strglob.html
 share/doc/sqlite3/c3ref/stricmp.html
+share/doc/sqlite3/c3ref/strlike.html
 share/doc/sqlite3/c3ref/table_column_metadata.html
 share/doc/sqlite3/c3ref/temp_directory.html
 share/doc/sqlite3/c3ref/test_control.html
@@ -316,6 +322,7 @@ share/doc/sqlite3/images/foreignlogos/bloomberg.gif
 share/doc/sqlite3/images/foreignlogos/bosch_logo1.gif
 share/doc/sqlite3/images/foreignlogos/dropbox.gif
 share/doc/sqlite3/images/foreignlogos/expensify.png
+share/doc/sqlite3/images/foreignlogos/fb.gif
 share/doc/sqlite3/images/foreignlogos/firefox.gif
 share/doc/sqlite3/images/foreignlogos/flame.gif
 share/doc/sqlite3/images/foreignlogos/ge.gif
@@ -332,6 +339,7 @@ share/doc/sqlite3/images/foreignlogos/philips.gif
 share/doc/sqlite3/images/foreignlogos/php.gif
 share/doc/sqlite3/images/foreignlogos/python.gif
 share/doc/sqlite3/images/foreignlogos/realbasic.gif
+share/doc/sqlite3/images/foreignlogos/rpm_logo.png
 share/doc/sqlite3/images/foreignlogos/skype.gif
 share/doc/sqlite3/images/foreignlogos/sony.gif
 share/doc/sqlite3/images/foreignlogos/sunmicro.gif
@@ -529,6 +537,7 @@ share/doc/sqlite3/releaselog/3_0_5.html
 share/doc/sqlite3/releaselog/3_0_6.html
 share/doc/sqlite3/releaselog/3_0_7.html
 share/doc/sqlite3/releaselog/3_0_8.html
+share/doc/sqlite3/releaselog/3_10_0.html
 share/doc/sqlite3/releaselog/3_1_0.html
 share/doc/sqlite3/releaselog/3_1_1.html
 share/doc/sqlite3/releaselog/3_1_2.html
