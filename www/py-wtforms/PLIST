@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2015/01/30 21:12:58 kleink Exp $
+@comment $NetBSD: PLIST,v 1.7 2016/01/08 16:56:23 kleink Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -106,10 +106,14 @@ ${PYSITELIB}/wtforms/form.pyo
 ${PYSITELIB}/wtforms/i18n.py
 ${PYSITELIB}/wtforms/i18n.pyc
 ${PYSITELIB}/wtforms/i18n.pyo
+${PYSITELIB}/wtforms/locale/ar/LC_MESSAGES/wtforms.mo
+${PYSITELIB}/wtforms/locale/ar/LC_MESSAGES/wtforms.po
 ${PYSITELIB}/wtforms/locale/ca/LC_MESSAGES/wtforms.mo
 ${PYSITELIB}/wtforms/locale/ca/LC_MESSAGES/wtforms.po
 ${PYSITELIB}/wtforms/locale/cs_CZ/LC_MESSAGES/wtforms.mo
 ${PYSITELIB}/wtforms/locale/cs_CZ/LC_MESSAGES/wtforms.po
+${PYSITELIB}/wtforms/locale/cy/LC_MESSAGES/wtforms.mo
+${PYSITELIB}/wtforms/locale/cy/LC_MESSAGES/wtforms.po
 ${PYSITELIB}/wtforms/locale/de/LC_MESSAGES/wtforms.mo
 ${PYSITELIB}/wtforms/locale/de/LC_MESSAGES/wtforms.po
 ${PYSITELIB}/wtforms/locale/de_CH/LC_MESSAGES/wtforms.mo
@@ -128,6 +132,8 @@ ${PYSITELIB}/wtforms/locale/fr/LC_MESSAGES/wtforms.mo
 ${PYSITELIB}/wtforms/locale/fr/LC_MESSAGES/wtforms.po
 ${PYSITELIB}/wtforms/locale/it/LC_MESSAGES/wtforms.mo
 ${PYSITELIB}/wtforms/locale/it/LC_MESSAGES/wtforms.po
+${PYSITELIB}/wtforms/locale/ja/LC_MESSAGES/wtforms.mo
+${PYSITELIB}/wtforms/locale/ja/LC_MESSAGES/wtforms.po
 ${PYSITELIB}/wtforms/locale/ko/LC_MESSAGES/wtforms.mo
 ${PYSITELIB}/wtforms/locale/ko/LC_MESSAGES/wtforms.po
 ${PYSITELIB}/wtforms/locale/nb/LC_MESSAGES/wtforms.mo
