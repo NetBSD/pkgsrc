@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2015/08/25 15:58:55 kleink Exp $
+@comment $NetBSD: PLIST,v 1.11 2016/01/08 17:05:47 kleink Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -35,9 +35,12 @@ ${PYSITELIB}/flask_admin/contrib/appengine/__init__.pyo
 ${PYSITELIB}/flask_admin/contrib/appengine/view.py
 ${PYSITELIB}/flask_admin/contrib/appengine/view.pyc
 ${PYSITELIB}/flask_admin/contrib/appengine/view.pyo
-${PYSITELIB}/flask_admin/contrib/fileadmin.py
-${PYSITELIB}/flask_admin/contrib/fileadmin.pyc
-${PYSITELIB}/flask_admin/contrib/fileadmin.pyo
+${PYSITELIB}/flask_admin/contrib/fileadmin/__init__.py
+${PYSITELIB}/flask_admin/contrib/fileadmin/__init__.pyc
+${PYSITELIB}/flask_admin/contrib/fileadmin/__init__.pyo
+${PYSITELIB}/flask_admin/contrib/fileadmin/s3.py
+${PYSITELIB}/flask_admin/contrib/fileadmin/s3.pyc
+${PYSITELIB}/flask_admin/contrib/fileadmin/s3.pyo
 ${PYSITELIB}/flask_admin/contrib/geoa/__init__.py
 ${PYSITELIB}/flask_admin/contrib/geoa/__init__.pyc
 ${PYSITELIB}/flask_admin/contrib/geoa/__init__.pyo
@@ -277,10 +280,9 @@ ${PYSITELIB}/flask_admin/static/vendor/x-editable/js/bootstrap2-editable.min.js
 ${PYSITELIB}/flask_admin/static/vendor/x-editable/js/bootstrap3-editable.min.js
 ${PYSITELIB}/flask_admin/templates/bootstrap2/admin/actions.html
 ${PYSITELIB}/flask_admin/templates/bootstrap2/admin/base.html
-${PYSITELIB}/flask_admin/templates/bootstrap2/admin/file/edit.html
 ${PYSITELIB}/flask_admin/templates/bootstrap2/admin/file/form.html
 ${PYSITELIB}/flask_admin/templates/bootstrap2/admin/file/list.html
-${PYSITELIB}/flask_admin/templates/bootstrap2/admin/file/rename.html
+${PYSITELIB}/flask_admin/templates/bootstrap2/admin/file/modals/form.html
 ${PYSITELIB}/flask_admin/templates/bootstrap2/admin/index.html
 ${PYSITELIB}/flask_admin/templates/bootstrap2/admin/layout.html
 ${PYSITELIB}/flask_admin/templates/bootstrap2/admin/lib.html
@@ -301,10 +303,9 @@ ${PYSITELIB}/flask_admin/templates/bootstrap2/admin/rediscli/response.html
 ${PYSITELIB}/flask_admin/templates/bootstrap2/admin/static.html
 ${PYSITELIB}/flask_admin/templates/bootstrap3/admin/actions.html
 ${PYSITELIB}/flask_admin/templates/bootstrap3/admin/base.html
-${PYSITELIB}/flask_admin/templates/bootstrap3/admin/file/edit.html
 ${PYSITELIB}/flask_admin/templates/bootstrap3/admin/file/form.html
 ${PYSITELIB}/flask_admin/templates/bootstrap3/admin/file/list.html
-${PYSITELIB}/flask_admin/templates/bootstrap3/admin/file/rename.html
+${PYSITELIB}/flask_admin/templates/bootstrap3/admin/file/modals/form.html
 ${PYSITELIB}/flask_admin/templates/bootstrap3/admin/index.html
 ${PYSITELIB}/flask_admin/templates/bootstrap3/admin/layout.html
 ${PYSITELIB}/flask_admin/templates/bootstrap3/admin/lib.html
@@ -382,6 +383,12 @@ ${PYSITELIB}/flask_admin/tests/sqla/test_inlineform.pyo
 ${PYSITELIB}/flask_admin/tests/sqla/test_multi_pk.py
 ${PYSITELIB}/flask_admin/tests/sqla/test_multi_pk.pyc
 ${PYSITELIB}/flask_admin/tests/sqla/test_multi_pk.pyo
+${PYSITELIB}/flask_admin/tests/sqla/test_postgres.py
+${PYSITELIB}/flask_admin/tests/sqla/test_postgres.pyc
+${PYSITELIB}/flask_admin/tests/sqla/test_postgres.pyo
+${PYSITELIB}/flask_admin/tests/sqla/test_translation.py
+${PYSITELIB}/flask_admin/tests/sqla/test_translation.pyc
+${PYSITELIB}/flask_admin/tests/sqla/test_translation.pyo
 ${PYSITELIB}/flask_admin/tests/templates/method.html
 ${PYSITELIB}/flask_admin/tests/templates/mock.html
 ${PYSITELIB}/flask_admin/tests/test_base.py
@@ -396,9 +403,6 @@ ${PYSITELIB}/flask_admin/tests/test_model.pyo
 ${PYSITELIB}/flask_admin/tests/test_tools.py
 ${PYSITELIB}/flask_admin/tests/test_tools.pyc
 ${PYSITELIB}/flask_admin/tests/test_tools.pyo
-${PYSITELIB}/flask_admin/tests/tmp/copyleft.jpeg
-${PYSITELIB}/flask_admin/tests/tmp/copyleft.jpg
-${PYSITELIB}/flask_admin/tests/tmp/inner/test1.txt
 ${PYSITELIB}/flask_admin/tools.py
 ${PYSITELIB}/flask_admin/tools.pyc
 ${PYSITELIB}/flask_admin/tools.pyo
@@ -458,6 +462,8 @@ ${PYSITELIB}/flask_admin/translations/ro/LC_MESSAGES/admin.mo
 ${PYSITELIB}/flask_admin/translations/ro/LC_MESSAGES/admin.po
 ${PYSITELIB}/flask_admin/translations/ru/LC_MESSAGES/admin.mo
 ${PYSITELIB}/flask_admin/translations/ru/LC_MESSAGES/admin.po
+${PYSITELIB}/flask_admin/translations/sk/LC_MESSAGES/admin.mo
+${PYSITELIB}/flask_admin/translations/sk/LC_MESSAGES/admin.po
 ${PYSITELIB}/flask_admin/translations/sr/LC_MESSAGES/admin.mo
 ${PYSITELIB}/flask_admin/translations/sr/LC_MESSAGES/admin.po
 ${PYSITELIB}/flask_admin/translations/sv/LC_MESSAGES/admin.mo
