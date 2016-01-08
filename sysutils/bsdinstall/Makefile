@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2015/06/04 17:21:06 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2016/01/08 15:43:35 jperkin Exp $
 
-DISTNAME=	bsdinstall-20130905
+DISTNAME=	bsdinstall-20160108
 CATEGORIES=	sysutils
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -21,6 +21,8 @@ do-extract:
 
 CPPFLAGS+=	-D_PATH_DEVNULL=\"/dev/null\"
 CPPFLAGS+=	-DTARGET_STRIP=\"${TOOLS_PLATFORM.strip:Q}\"
+
+CPPFLAGS.SunOS+=	-D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
 
 .include "../../mk/bsd.prefs.mk"
 .if !empty(MACHINE_PLATFORM:MSunOS-5.11-*)
