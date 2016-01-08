@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.113 2016/01/08 14:44:20 wen Exp $
+$NetBSD: CHANGES-2016,v 1.114 2016/01/08 14:47:05 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -152,3 +152,6 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/p5-YAML-Tiny to 1.69 [wen 2016-01-08]
 	Updated textproc/p5-Test-YAML to 1.06 [wen 2016-01-08]
 	Updated devel/p5-CPAN-Meta-YAML to 0.018 [wen 2016-01-08]
+	Updated databases/sqlite3 to 3.10.0 [adam 2016-01-08]
+	Updated databases/sqlite3-docs to 3.10.0 [adam 2016-01-08]
+	Updated databases/sqlite3-tcl to 3.10.0 [adam 2016-01-08]
