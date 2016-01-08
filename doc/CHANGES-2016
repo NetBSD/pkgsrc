@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.122 2016/01/08 17:53:04 kleink Exp $
+$NetBSD: CHANGES-2016,v 1.123 2016/01/08 20:19:27 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -164,3 +164,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/py-flask-uploads to 0.2.0 [kleink 2016-01-08]
 	Updated www/py-flask-frozen to 0.12 [kleink 2016-01-08]
 	Updated www/py-flask-security to 1.7.5 [kleink 2016-01-08]
+	Updated sysutils/entr to 3.4 [leot 2016-01-08]
