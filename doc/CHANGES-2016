@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.117 2016/01/08 15:43:44 jperkin Exp $
+$NetBSD: CHANGES-2016,v 1.118 2016/01/08 16:57:34 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -159,3 +159,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/xenkernel45 to 4.5.2 [bouyer 2016-01-08]
 	Updated devel/p5-MooX-Options to 4.022 [wen 2016-01-08]
 	Updated sysutils/bsdinstall to 20160108 [jperkin 2016-01-08]
+	Updated www/py-wtforms to 2.1 [kleink 2016-01-08]
