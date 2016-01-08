@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.153 2015/11/18 14:19:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.154 2016/01/08 19:54:53 richard Exp $
 
 DISTNAME=	graphviz-2.38.0
 PKGREVISION=	10
@@ -16,7 +16,7 @@ PRIVILEGED_STAGES+=	clean
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		automake bison lex pkg-config
+USE_TOOLS+=		automake bison flex pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-java
 CONFIGURE_ARGS+=	--disable-php
