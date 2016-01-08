@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2015/04/21 23:26:42 khorben Exp $
+# $NetBSD: Makefile,v 1.43 2016/01/08 14:43:10 adam Exp $
 
 DISTNAME=	sqlite-doc-${SQLITE3_DISTVERSION}
 PKGNAME=	sqlite3-docs-${SQLITE3_VERSION}
 CATEGORIES=	databases
-MASTER_SITES=	http://www.hwaci.com/sw/sqlite/2015/ \
-		http://www.sqlite.org/2015/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
