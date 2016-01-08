@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2016/01/08 12:53:11 fhajny Exp $
+
+SHA1 (zookeeper-1.4.11.gem) = 5f52d51207926aadd83e285250cc8d0bda71b8ac
+RMD160 (zookeeper-1.4.11.gem) = 3d597e963677c9b4ed56ac1b31e4bdbdd73b47dd
+SHA512 (zookeeper-1.4.11.gem) = 101d3e50b7f3f800454e4c2d5b3c0c1d1516ba71f55584609551d9770f56703e45b049feb93a66097d601937f407ebeec7b7dfd3b34d1e6a5e7c3cbfd4c752ff
+Size (zookeeper-1.4.11.gem) = 933888 bytes
+SHA1 (patch-ext_c__zookeeper.rb) = 787f51a72b00b9375f0b86d0752cf4f876b4f2b6
+SHA1 (patch-ext_extconf.rb) = ad70116a048ef299f886fae37f9cf14eff081ffd
