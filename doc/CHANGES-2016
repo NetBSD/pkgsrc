@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.120 2016/01/08 17:14:45 kleink Exp $
+$NetBSD: CHANGES-2016,v 1.121 2016/01/08 17:46:12 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -162,3 +162,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/py-wtforms to 2.1 [kleink 2016-01-08]
 	Updated www/py-flask-admin to 1.4.0 [kleink 2016-01-08]
 	Updated www/py-flask-uploads to 0.2.0 [kleink 2016-01-08]
+	Updated www/py-flask-frozen to 0.12 [kleink 2016-01-08]
