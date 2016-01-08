@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2015/11/04 01:59:59 agc Exp $
+$NetBSD: distinfo,v 1.16 2016/01/08 14:18:32 wen Exp $
 
-SHA1 (YAML-Tiny-1.63.tar.gz) = 50706653c2712534864cfe9e68b720be3f76a912
-RMD160 (YAML-Tiny-1.63.tar.gz) = 3cb1f19b3c46682e3e574fce4e4a0d6d2edee797
-SHA512 (YAML-Tiny-1.63.tar.gz) = 6da30035d4dae0cdf7b23a1e709f0e1817fd4c19c87f8719b4f71d361a1bff9263b8d7b146996eeccac0631203d6ae94cbd834d2b84585ff3a2d7099788e37f8
-Size (YAML-Tiny-1.63.tar.gz) = 74758 bytes
+SHA1 (YAML-Tiny-1.69.tar.gz) = 36c0e030a610ff81164a39c1ef089fe7d448bdaa
+RMD160 (YAML-Tiny-1.69.tar.gz) = 02a158ef5719e5eaeefec7d35cfee80b0d64c6de
+SHA512 (YAML-Tiny-1.69.tar.gz) = 64c3428691f78d94bedf7f3b3276f7868d7280ca6d3c9a7a2e8137568d0da2fc94c766f9873f2796898386d6e7d3d1010c790fcc119f3d4d743becfa39d56a2c
+Size (YAML-Tiny-1.69.tar.gz) = 71513 bytes
