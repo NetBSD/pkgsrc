@@ -1,0 +1,31 @@
+$NetBSD: patch-tests_Makefile.in,v 1.1 2016/01/08 11:59:36 wiz Exp $
+
+Disable bison tests since we don't want to build with bison
+to avoid a dependency cycle, since bison depends on flex.
+
+--- tests/Makefile.in.orig	2015-11-17 16:19:46.000000000 +0000
++++ tests/Makefile.in
+@@ -131,8 +131,8 @@ CONFIG_HEADER = $(top_builddir)/src/conf
+ CONFIG_CLEAN_FILES =
+ CONFIG_CLEAN_VPATH_FILES =
+ am__EXEEXT_1 = alloc_extra$(EXEEXT) array_nr$(EXEEXT) array_r$(EXEEXT) \
+-	basic_nr$(EXEEXT) basic_r$(EXEEXT) bison_nr$(EXEEXT) \
+-	bison_yylloc$(EXEEXT) bison_yylval$(EXEEXT) c_cxx_nr$(EXEEXT) \
++	basic_nr$(EXEEXT) basic_r$(EXEEXT) \
++	c_cxx_nr$(EXEEXT) \
+ 	c_cxx_r$(EXEEXT) ccl$(EXEEXT) cxx_basic$(EXEEXT) \
+ 	cxx_multiple_scanners$(EXEEXT) debug_nr$(EXEEXT) \
+ 	debug_r$(EXEEXT) extended$(EXEEXT) header_nr$(EXEEXT) \
+@@ -1440,12 +1440,6 @@ string_r_SOURCES = string_r.l
+ top_SOURCES = top.l top_main.c
+ yyextra_SOURCES = yyextra.l
+ BUILT_SOURCES = \
+-	bison_nr_parser.h \
+-	bison_nr_scanner.h \
+-	bison_yylloc_parser.h \
+-	bison_yylloc_scanner.h \
+-	bison_yylval_parser.h \
+-	bison_yylval_scanner.h \
+ 	header_nr_scanner.h \
+ 	header_r_scanner.h \
+ 	multiple_scanners_nr_1.h \
