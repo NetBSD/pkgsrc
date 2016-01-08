@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.104 2016/01/07 17:57:50 bouyer Exp $
+$NetBSD: CHANGES-2016,v 1.105 2016/01/08 03:30:29 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -141,3 +141,6 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/xenkernel42 to 4.2.5nb10 [bouyer 2016-01-07]
 	Updated sysutils/xentools41 to 4.1.6.1nb14 [bouyer 2016-01-07]
 	Updated sysutils/xenkernel41 to 4.1.6.1nb13 [bouyer 2016-01-07]
+	Updated lang/php55 to 5.5.31 [taca 2016-01-08]
+	Updated lang/php56 to 5.6.17 [taca 2016-01-08]
+	Updated lang/php70 to 7.0.2 [taca 2016-01-08]
