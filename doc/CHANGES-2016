@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.126 2016/01/09 03:54:43 wen Exp $
+$NetBSD: CHANGES-2016,v 1.127 2016/01/09 04:06:53 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -168,3 +168,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/git to 2.7.0 [adam 2016-01-08]
 	Added misc/libreoffice5-bin version 5.0.4 [ryoon 2016-01-08]
 	Updated www/p5-Dancer2 to 0.165000 [wen 2016-01-09]
+	Updated www/p5-Dancer-Session-Cookie to 0.27 [wen 2016-01-09]
