@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.31 2016/01/01 17:00:49 spz Exp $
+$NetBSD: patch-aa,v 1.32 2016/01/09 11:22:12 adam Exp $
 
 * Don't setuid here.
 
@@ -10,7 +10,7 @@ $NetBSD: patch-aa,v 1.31 2016/01/01 17:00:49 spz Exp $
  INSTALL = $(SHELL) $(top_srcdir)/install-sh -c
 -INSTALL_OWNER = -o $(install_uid) -g $(install_gid)
 +#INSTALL_OWNER = -o $(install_uid) -g $(install_gid)
-+INSTALL_OWNER = ""
++INSTALL_OWNER =
  
  ECHO_N = @ECHO_N@
  ECHO_C = @ECHO_C@
