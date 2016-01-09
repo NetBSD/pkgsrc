@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2015/12/31 07:07:16 ryoon Exp $
+# $NetBSD: Makefile,v 1.33 2016/01/09 11:13:15 wiz Exp $
 
 DISTNAME=	tmux-2.1
 CATEGORIES=	misc
@@ -14,7 +14,7 @@ LICENSE=	modified-bsd
 GNU_CONFIGURE=	yes
 USE_TERMINFO=	yes
 
-USE_TOOLS+=	automake
+USE_TOOLS+=	automake pkg-config
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/compiler.mk"
