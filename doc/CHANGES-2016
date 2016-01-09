@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.140 2016/01/09 15:50:25 taca Exp $
+$NetBSD: CHANGES-2016,v 1.141 2016/01/09 18:39:55 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -195,3 +195,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated math/R-PHYLOGR to 1.0.8 [wen 2016-01-09]
 	Updated math/R-R2HTML to 2.3.1 [wen 2016-01-09]
 	Updated net/ntp4 to 4.2.8p5 [taca 2016-01-09]
+	Added devel/ruby-memoist version 0.14.0 [tsutsui 2016-01-09]
