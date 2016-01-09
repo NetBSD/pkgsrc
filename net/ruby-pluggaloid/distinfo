@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/01/09 19:01:20 tsutsui Exp $
+
+SHA1 (pluggaloid-1.0.2.gem) = dd024ff41cbcadeb16f1a5e0bcca142adda2511a
+RMD160 (pluggaloid-1.0.2.gem) = 6b55a8b3d2cbdbb6a5023c9a89809e46754f211d
+SHA512 (pluggaloid-1.0.2.gem) = e9ba908f477bf254e7c3ae9f3736d21aeeb38848bcbd43e2ab995c3d592547c22572d07965096353d82ef38e81d4a489a495e80f9af3927fc937caa04d435275
+Size (pluggaloid-1.0.2.gem) = 11776 bytes
