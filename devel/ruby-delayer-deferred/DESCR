@@ -1,0 +1,2 @@
+Delayer::Deferred is ruby version of jsdeferred using Delayer and
+also expands Thread and Enumerator.
