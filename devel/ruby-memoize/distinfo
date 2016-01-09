@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2015/11/03 03:29:24 agc Exp $
-
-SHA1 (memoize-1.3.1.tar.gz) = 421dd0587ff836bbb38d018ee460be343ca06d80
-RMD160 (memoize-1.3.1.tar.gz) = 6206c7c262122486be2c8461e23b0c86a84529ed
-SHA512 (memoize-1.3.1.tar.gz) = 3e66c301c564f2823389aae33bd5cfcfea49d4ddce37492b51d7804bfd80242670d446596b1e15ad663b90fdd4cabaf358370932f5cfb3a90b8780711b13ef69
-Size (memoize-1.3.1.tar.gz) = 4492 bytes
-SHA1 (patch-Rakefile) = 2aae743427bf3f816126c469754f1c8691044209
