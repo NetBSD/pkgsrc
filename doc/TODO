@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15288 2016/01/09 08:25:44 ryoon Exp $
+$NetBSD: TODO,v 1.15289 2016/01/09 13:54:50 wen Exp $
 
 Suggested new packages
 ======================
@@ -1196,7 +1196,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Bytes-Random-Secure-0.29
 	o p5-CDB_File-0.98
 	o p5-CDDB-2.00
-	o p5-CPANPLUS-2.101
 	o p5-Captcha-reCAPTCHA-0.97
 	o p5-Catalyst-DispatchType-Regex-5.90035
 	o p5-Catalyst-Engine-PSGI-0.14
