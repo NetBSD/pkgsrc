@@ -1,0 +1,22 @@
+$NetBSD: patch-configure.ac,v 1.4 2016/01/09 11:13:15 wiz Exp $
+
+Fix quoting issue. If the macro is put in square brackets,
+it's not expanded.
+
+--- configure.ac.orig	2015-10-18 17:10:43.000000000 +0000
++++ configure.ac
+@@ -130,14 +130,12 @@ PKG_CHECK_MODULES(
+ 		LIBS="$LIBEVENT_LIBS $LIBS"
+ 		found_libevent=yes
+ 	],
+-	[
+ 		AC_SEARCH_LIBS(
+ 			event_init,
+ 			[event event-1.4 event2],
+ 			found_libevent=yes,
+ 			found_libevent=no
+ 		)
+-	]
+ )
+ if test "x$found_libevent" = xno; then
+ 	AC_MSG_ERROR("libevent not found")
