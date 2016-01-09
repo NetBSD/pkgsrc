@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2016/01/09 13:27:46 wiz Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/pbr.json
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/traceback2/__init__.py
+${PYSITELIB}/traceback2/__init__.pyc
+${PYSITELIB}/traceback2/__init__.pyo
+${PYSITELIB}/traceback2/tests/__init__.py
+${PYSITELIB}/traceback2/tests/__init__.pyc
+${PYSITELIB}/traceback2/tests/__init__.pyo
+${PYSITELIB}/traceback2/tests/test_traceback.py
+${PYSITELIB}/traceback2/tests/test_traceback.pyc
+${PYSITELIB}/traceback2/tests/test_traceback.pyo
