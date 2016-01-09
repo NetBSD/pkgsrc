@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.136 2016/01/09 13:54:50 wen Exp $
+$NetBSD: CHANGES-2016,v 1.137 2016/01/09 14:07:59 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -191,3 +191,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-CPAN-Perl-Releases to 2.54 [wen 2016-01-09]
 	Updated devel/p5-CPAN-Uploader to 0.103012 [wen 2016-01-09]
 	Updated devel/p5-CPANPLUS to 0.9156 [wen 2016-01-09]
+	Updated textproc/R-highr to 0.5.1 [wen 2016-01-09]
