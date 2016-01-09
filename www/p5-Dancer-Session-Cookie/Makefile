@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2015/06/12 10:51:58 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2016/01/09 04:06:02 wen Exp $
 
-DISTNAME=	Dancer-Session-Cookie-0.25
+DISTNAME=	Dancer-Session-Cookie-0.27
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Dancer/}
 
@@ -13,8 +12,6 @@ LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST= auto/Dancer/Session/Cookie/.packlist
-
-PERL5_MODULE_TYPE=	Module::Build
 
 DEPENDS+=	p5-Crypt-CBC-[0-9]*:../../security/p5-Crypt-CBC
 DEPENDS+=	p5-Crypt-Rijndael-[0-9]*:../../security/p5-Crypt-Rijndael
