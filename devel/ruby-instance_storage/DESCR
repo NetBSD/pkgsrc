@@ -1,0 +1,2 @@
+InstanceStorage provides functionality to access instances via symbols
+that are assigned per class instance.
