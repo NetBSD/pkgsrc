@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/01/09 22:36:45 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2016/01/09 22:38:27 wiz Exp $
 
 DISTNAME=		linecache2-1.0.0
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -13,6 +13,8 @@ LICENSE=		python-software-foundation
 
 DEPENDS+=		${PYPKGPREFIX}-pbr-[0-9]*:../../devel/py-pbr
 
+# https://github.com/testing-cabal/linecache2/issues/2
+# https://bugs.python.org/issue24054
 post-extract:
 	${RM} ${WRKSRC}/linecache2/tests/inspect_fodder2.py
 
