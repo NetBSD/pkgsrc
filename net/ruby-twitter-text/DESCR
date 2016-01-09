@@ -1,0 +1,3 @@
+Twitter-text gem provides text processing routines for Twitter Tweets.
+The major reason for this is to unify the various auto-linking and
+extraction of usernames, lists, hashtags and URLs.
