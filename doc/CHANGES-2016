@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.142 2016/01/09 18:45:17 tsutsui Exp $
+$NetBSD: CHANGES-2016,v 1.143 2016/01/09 18:52:22 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -197,3 +197,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/ntp4 to 4.2.8p5 [taca 2016-01-09]
 	Added devel/ruby-memoist version 0.14.0 [tsutsui 2016-01-09]
 	Added devel/ruby-delayer-deferred version 1.0.3 [tsutsui 2016-01-09]
+	Added devel/ruby-instance_storage version 1.0.0 [tsutsui 2016-01-09]
