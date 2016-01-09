@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/01/09 18:50:43 tsutsui Exp $
+
+SHA1 (instance_storage-1.0.0.gem) = 84fc7da9d362ecf6e806b2eb785fa19d75eff9e9
+RMD160 (instance_storage-1.0.0.gem) = 2a1dc3a35cd3db8ec37525a749aa949e5b9383c9
+SHA512 (instance_storage-1.0.0.gem) = 45ff98b3d0ab47d3459d868eb1b0075abb83b23bbc3a9b84f261077bdddc385ed016e81d01c19f93fa6cffd7cb9020ce1e22411636709f18af09a76c7d44598f
+Size (instance_storage-1.0.0.gem) = 7680 bytes
