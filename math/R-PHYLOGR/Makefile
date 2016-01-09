@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2013/12/07 19:32:48 dholland Exp $
+# $NetBSD: Makefile,v 1.7 2016/01/09 14:12:48 wen Exp $
 #
 
 CATEGORIES=		databases math
@@ -10,7 +10,7 @@ COMMENT=		Manipulation of phylogenetically simulated data sets using GLS
 LICENSE=		gnu-gpl-v2
 
 R_PKGNAME=		PHYLOGR
-R_PKGVER=		1.0.7
+R_PKGVER=		1.0.8
 
 post-extract:
 	echo 'exportPattern("^[^\\.]")' > ${WRKSRC}/NAMESPACE
