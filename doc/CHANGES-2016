@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.144 2016/01/09 18:56:45 tsutsui Exp $
+$NetBSD: CHANGES-2016,v 1.145 2016/01/09 19:35:41 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -199,3 +199,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added devel/ruby-delayer-deferred version 1.0.3 [tsutsui 2016-01-09]
 	Added devel/ruby-instance_storage version 1.0.0 [tsutsui 2016-01-09]
 	Added net/ruby-twitter-text version 1.13.0 [tsutsui 2016-01-09]
+	Added net/ruby-pluggaloid version 1.0.2 [tsutsui 2016-01-09]
