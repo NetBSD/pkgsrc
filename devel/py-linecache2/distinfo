@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/01/09 13:30:21 wiz Exp $
+
+SHA1 (linecache2-1.0.0.tar.gz) = d84b2e1479ff5939f7d330894a8cf797803cc457
+RMD160 (linecache2-1.0.0.tar.gz) = da6bcf3bd6f14c244a0b387c5b43fc9bab2fccdf
+SHA512 (linecache2-1.0.0.tar.gz) = e585a6e4c054c1965bc4241a1e36b57cb04f32b2d778df0ae4381975700497975251f509354d3622e36c82973c726a207b815f8b12060d9d583b6669a9eb279e
+Size (linecache2-1.0.0.tar.gz) = 11013 bytes
