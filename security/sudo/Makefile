@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.149 2016/01/09 11:22:12 adam Exp $
+# $NetBSD: Makefile,v 1.150 2016/01/09 13:16:41 adam Exp $
 
 DISTNAME=	sudo-1.8.15
 CATEGORIES=	security
@@ -18,6 +18,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-path-info
 CONFIGURE_ARGS+=	--disable-root-mailer
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-exampledir=${PREFIX}/${EGDIR}
 CONFIGURE_ARGS+=	--with-ignore-dot
 CONFIGURE_ARGS+=	--with-nbsdops
 CONFIGURE_ARGS+=	--libexecdir=${PREFIX}/lib # for a bunch of shared libs
