@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.129 2016/01/09 05:58:14 ryoon Exp $
+$NetBSD: CHANGES-2016,v 1.130 2016/01/09 08:25:44 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -171,3 +171,17 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-Dancer-Session-Cookie to 0.27 [wen 2016-01-09]
 	Updated www/firefox to 43.0.4 [ryoon 2016-01-09]
 	Updated www/firefox-l10n to 43.0.4 [ryoon 2016-01-09]
+	Updated graphics/gimp-docs-de to 2.8.2 [ryoon 2016-01-09]
+	Updated graphics/gimp-docs-en to 2.8.2 [ryoon 2016-01-09]
+	Updated graphics/gimp-docs-es to 2.8.2 [ryoon 2016-01-09]
+	Updated graphics/gimp-docs-fr to 2.8.2 [ryoon 2016-01-09]
+	Updated graphics/gimp-docs-it to 2.8.2 [ryoon 2016-01-09]
+	Updated graphics/gimp-docs-ja to 2.8.2 [ryoon 2016-01-09]
+	Updated graphics/gimp-docs-ko to 2.8.2 [ryoon 2016-01-09]
+	Updated graphics/gimp-docs-nl to 2.8.2 [ryoon 2016-01-09]
+	Updated graphics/gimp-docs-nn to 2.8.2 [ryoon 2016-01-09]
+	Updated graphics/gimp-docs-pl to 2.8.2 [ryoon 2016-01-09]
+	Updated graphics/gimp-docs-ru to 2.8.2 [ryoon 2016-01-09]
+	Updated graphics/gimp-docs-sv to 2.8.2 [ryoon 2016-01-09]
+	Updated graphics/gimp-docs-zh_CN to 2.8.2 [ryoon 2016-01-09]
+	Updated meta-pkgs/gimp-docs to 2.8.2 [ryoon 2016-01-09]
