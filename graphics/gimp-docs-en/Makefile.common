@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2015/12/05 21:25:44 adam Exp $
+# $NetBSD: Makefile.common,v 1.12 2016/01/09 08:21:58 ryoon Exp $
 #
 # used by graphics/gimp-docs-de/Makefile
 # used by graphics/gimp-docs-en/Makefile
@@ -45,7 +45,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 2.8.0
 CONFLICTS=	gimp-docs<=2.4.0
 SUPERSEDES=	gimp-docs<=2.4.0
 
-GIMPDOCVER=	2.8.1
+GIMPDOCVER=	2.8.2
 
 GNU_CONFIGURE=	yes
 
