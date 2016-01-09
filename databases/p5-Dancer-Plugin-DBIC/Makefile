@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2015/10/07 14:51:38 wen Exp $
+# $NetBSD: Makefile,v 1.10 2016/01/09 13:21:05 wen Exp $
 
-DISTNAME=	Dancer-Plugin-DBIC-0.2102
+DISTNAME=	Dancer-Plugin-DBIC-0.2104
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Dancer/}
