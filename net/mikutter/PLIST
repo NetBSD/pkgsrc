@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2015/12/19 11:32:45 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.33 2016/01/09 19:36:12 tsutsui Exp $
 bin/mikutter
 share/applications/mikutter.desktop
 share/doc/mikutter/README
@@ -8,6 +8,7 @@ share/mikutter/core/boot/delayer.rb
 share/mikutter/core/boot/load_plugin.rb
 share/mikutter/core/boot/mainloop.rb
 share/mikutter/core/boot/option.rb
+share/mikutter/core/boot/shell/account.rb
 share/mikutter/core/boot/shell/generate.rb
 share/mikutter/core/boot/shell/makepot.rb
 share/mikutter/core/boot/shell/spec.rb
@@ -15,14 +16,6 @@ share/mikutter/core/config.rb
 share/mikutter/core/configloader.rb
 share/mikutter/core/entity.rb
 share/mikutter/core/environment.rb
-share/mikutter/core/event.rb
-share/mikutter/core/event_filter.rb
-share/mikutter/core/event_listener.rb
-share/mikutter/core/lib/deferred.rb
-share/mikutter/core/lib/deferred/deferred.rb
-share/mikutter/core/lib/deferred/deferredable.rb
-share/mikutter/core/lib/deferred/test.deferred.rb
-share/mikutter/core/lib/instance_storage.rb
 share/mikutter/core/lib/lazy.rb
 share/mikutter/core/lib/mikutwitter.rb
 share/mikutter/core/lib/mikutwitter/api_call_support.rb
@@ -95,8 +88,10 @@ share/mikutter/core/mui/cairo_markup_generator.rb
 share/mikutter/core/mui/cairo_miracle_painter.rb
 share/mikutter/core/mui/cairo_pseudo_message_widget.rb
 share/mikutter/core/mui/cairo_replyviewer.rb
+share/mikutter/core/mui/cairo_special_edge.rb
 share/mikutter/core/mui/cairo_sub_parts_favorite.rb
 share/mikutter/core/mui/cairo_sub_parts_helper.rb
+share/mikutter/core/mui/cairo_sub_parts_quote.rb
 share/mikutter/core/mui/cairo_sub_parts_retweet.rb
 share/mikutter/core/mui/cairo_sub_parts_voter.rb
 share/mikutter/core/mui/cairo_textselector.rb
@@ -226,7 +221,9 @@ share/mikutter/core/plugin/console/po/vi/console.po
 share/mikutter/core/plugin/console/po/zh/console.po
 share/mikutter/core/plugin/console/po/zh_CN/console.po
 share/mikutter/core/plugin/console/po/zh_TW/console.po
-share/mikutter/core/plugin/core.rb
+share/mikutter/core/plugin/core/.mikutter.yml
+share/mikutter/core/plugin/core/configuration.json
+share/mikutter/core/plugin/core/core.rb
 share/mikutter/core/plugin/direct_message/.mikutter.yml
 share/mikutter/core/plugin/direct_message/direct_message.rb
 share/mikutter/core/plugin/direct_message/dmlistview.rb
@@ -385,6 +382,8 @@ share/mikutter/core/plugin/mentions/po/vi/mentions.po
 share/mikutter/core/plugin/mentions/po/zh/mentions.po
 share/mikutter/core/plugin/mentions/po/zh_CN/mentions.po
 share/mikutter/core/plugin/mentions/po/zh_TW/mentions.po
+share/mikutter/core/plugin/notification/.mikutter.yml
+share/mikutter/core/plugin/notification/notification.rb
 share/mikutter/core/plugin/notify/.mikutter.yml
 share/mikutter/core/plugin/notify/notify.rb
 share/mikutter/core/plugin/notify/po/ar/notify.po
@@ -449,6 +448,8 @@ share/mikutter/core/plugin/proxy/po/zh/proxy.po
 share/mikutter/core/plugin/proxy/po/zh_CN/proxy.po
 share/mikutter/core/plugin/proxy/po/zh_TW/proxy.po
 share/mikutter/core/plugin/proxy/proxy.rb
+share/mikutter/core/plugin/quoted_message/.mikutter.yml
+share/mikutter/core/plugin/quoted_message/quoted_message.rb
 share/mikutter/core/plugin/ratelimit/.mikutter.yml
 share/mikutter/core/plugin/ratelimit/po/ar/ratelimit.po
 share/mikutter/core/plugin/ratelimit/po/de/ratelimit.po
@@ -614,6 +615,8 @@ share/mikutter/core/plugin/streaming/po/zh_TW/streaming.po
 share/mikutter/core/plugin/streaming/streamer.rb
 share/mikutter/core/plugin/streaming/streamer_error.rb
 share/mikutter/core/plugin/streaming/streaming.rb
+share/mikutter/core/plugin/streaming_connection_status/.mikutter.yml
+share/mikutter/core/plugin/streaming_connection_status/streaming_connection_status.rb
 share/mikutter/core/plugin/tco/.mikutter.yml
 share/mikutter/core/plugin/tco/tco.rb
 share/mikutter/core/plugin/template
@@ -653,6 +656,8 @@ share/mikutter/core/skin/data/notfound.png
 share/mikutter/core/skin/data/overbutton.png
 share/mikutter/core/skin/data/overbutton_mouseover.png
 share/mikutter/core/skin/data/post.png
+share/mikutter/core/skin/data/protected.png
+share/mikutter/core/skin/data/quote.png
 share/mikutter/core/skin/data/reply.png
 share/mikutter/core/skin/data/retweet.png
 share/mikutter/core/skin/data/retweet_cancel.png
@@ -683,6 +688,7 @@ share/mikutter/core/skin/data/tab-bg.png
 share/mikutter/core/skin/data/timeline.png
 share/mikutter/core/skin/data/underconstruction.png
 share/mikutter/core/skin/data/unfav.png
+share/mikutter/core/skin/data/verified.png
 share/mikutter/core/user.rb
 share/mikutter/core/userconfig.rb
 share/mikutter/core/userlist.rb
