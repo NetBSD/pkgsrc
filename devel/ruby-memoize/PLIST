@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/25 02:34:13 obache Exp $
-${RUBY_VENDORLIB}/memoize.rb
