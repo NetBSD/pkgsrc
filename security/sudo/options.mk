@@ -1,8 +1,7 @@
-# $NetBSD: options.mk,v 1.18 2015/07/11 15:12:27 sevan Exp $
-#
+# $NetBSD: options.mk,v 1.19 2016/01/09 11:22:12 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sudo
-PKG_SUPPORTED_OPTIONS=	ldap
+PKG_SUPPORTED_OPTIONS=	ldap nls
 PKG_OPTIONS_OPTIONAL_GROUPS= auth
 PKG_OPTIONS_GROUP.auth=	kerberos pam skey
 
@@ -15,6 +14,14 @@ PKG_SUGGESTED_OPTIONS=	pam
 .endif
 
 .include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mnls)
+.  include "../../devel/gettext-lib/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-nls
+PLIST.nls=		yes
+.else
+CONFIGURE_ARGS+=	--disable-nls
+.endif
 
 .if !empty(PKG_OPTIONS:Mpam)
 .  include "../../mk/pam.buildlink3.mk"
