@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2193 2016/01/09 13:30:38 wiz Exp $
+# $NetBSD: Makefile,v 1.2194 2016/01/09 18:39:27 tsutsui Exp $
 #
 
 COMMENT=	Development utilities
@@ -1917,6 +1917,7 @@ SUBDIR+=	ruby-log4r
 SUBDIR+=	ruby-logging
 SUBDIR+=	ruby-loquacious
 SUBDIR+=	ruby-memcache
+SUBDIR+=	ruby-memoist
 SUBDIR+=	ruby-memoize
 SUBDIR+=	ruby-mercenary
 SUBDIR+=	ruby-metaclass
