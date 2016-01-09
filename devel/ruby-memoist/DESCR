@@ -1,0 +1,2 @@
+Memoist a ruby library that provides memoize methods,
+which is an extraction of ActiveSupport::Memoizable.
