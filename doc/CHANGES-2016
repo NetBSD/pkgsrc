@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.138 2016/01/09 14:13:45 wen Exp $
+$NetBSD: CHANGES-2016,v 1.139 2016/01/09 14:18:39 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -193,3 +193,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-CPANPLUS to 0.9156 [wen 2016-01-09]
 	Updated textproc/R-highr to 0.5.1 [wen 2016-01-09]
 	Updated math/R-PHYLOGR to 1.0.8 [wen 2016-01-09]
+	Updated math/R-R2HTML to 2.3.1 [wen 2016-01-09]
