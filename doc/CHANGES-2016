@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.134 2016/01/09 13:35:35 wen Exp $
+$NetBSD: CHANGES-2016,v 1.135 2016/01/09 13:45:30 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -189,3 +189,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added devel/py-traceback2 version 1.4.0 [wiz 2016-01-09]
 	Added devel/py-linecache2 version 1.0.0 [wiz 2016-01-09]
 	Updated devel/p5-CPAN-Perl-Releases to 2.54 [wen 2016-01-09]
+	Updated devel/p5-CPAN-Uploader to 0.103012 [wen 2016-01-09]
