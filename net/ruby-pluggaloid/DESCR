@@ -1,0 +1,2 @@
+Pluggaloid is an extensible plugin system for mikutter
+which allows registered plugins communicate each other via events.
