@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.132 2016/01/09 13:28:22 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.133 2016/01/09 13:30:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -187,3 +187,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated meta-pkgs/gimp-docs to 2.8.2 [ryoon 2016-01-09]
 	Updated databases/p5-Dancer-Plugin-DBIC to 0.2104 [wen 2016-01-09]
 	Added devel/py-traceback2 version 1.4.0 [wiz 2016-01-09]
+	Added devel/py-linecache2 version 1.0.0 [wiz 2016-01-09]
