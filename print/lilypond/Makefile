@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2015/12/05 21:25:55 adam Exp $
+# $NetBSD: Makefile,v 1.107 2016/01/09 00:22:57 wiz Exp $
 
 DISTNAME=	lilypond-2.18.2
 PKGREVISION=	5
@@ -58,6 +58,9 @@ PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 2.18.0
 PLIST_SUBST+=	PKGVERSION=${PKGVERSION:S/nb${PKGREVISION}//}
 
 # needs FlexLexer.h
+# make sure we use the same version for that file and the flex binary
+FLEX_REQD=		2.6.0
+BUILDLINK_API_DEPENDS.flex+=	flex>=2.6.0
 .include "../../devel/flex/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
