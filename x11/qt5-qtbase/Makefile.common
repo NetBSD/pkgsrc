@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2015/10/26 19:03:59 adam Exp $
+# $NetBSD: Makefile.common,v 1.17 2016/01/09 05:40:58 ryoon Exp $
 # used by x11/qt5-mysql/Makefile
 # used by x11/qt5-odbc/Makefile
 # used by x11/qt5-psql/Makefile
@@ -34,8 +34,6 @@ BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:M*}
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake perl:build pkg-config
-
-CONFIG_SHELL=		${PERL5}
 
 # wcstof(3) etc. is used in C++ code.
 CFLAGS.NetBSD+=		-D_NETBSD_SOURCE
