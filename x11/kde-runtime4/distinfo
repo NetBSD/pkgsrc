@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.12 2015/11/04 03:28:34 agc Exp $
+$NetBSD: distinfo,v 1.13 2016/01/10 19:05:27 markd Exp $
 
-SHA1 (kde-runtime-4.14.3.tar.xz) = d25357bf7e5d3922ce0c9b60921fb2fd738b7251
-RMD160 (kde-runtime-4.14.3.tar.xz) = dcbc8624066d83cc8dca85d5ceeb5b4cc327a8fa
-SHA512 (kde-runtime-4.14.3.tar.xz) = 63b13f947915bb2eca5b85886610d1af480956b9e95a1ae77ce7c10b11576883a71bebf519335323a1f6c5dfcebe2ee0561b727cea6243756d412d9323feb244
-Size (kde-runtime-4.14.3.tar.xz) = 7867308 bytes
+SHA1 (kde-runtime-15.12.0.tar.xz) = 30da08dfb51fade220df7f8cf3e3eab5669a2e18
+RMD160 (kde-runtime-15.12.0.tar.xz) = 37e6c3693e81b31a4b92a5eeb35f8c84602bf86d
+SHA512 (kde-runtime-15.12.0.tar.xz) = 453f0538147bb3ea95d4d9e6c503f128f30a383ebe139dcf6df411688d9c245779e931c609e38ca7b94b58907e496af3299646654f53518bf2cb7aa22c8f9137
+Size (kde-runtime-15.12.0.tar.xz) = 7903824 bytes
 SHA1 (patch-ab) = f6af1c3e2502a91add9ceaa5375e76aee1e8c20c
 SHA1 (patch-ac) = fadc0c0d3b7c8f893a9249724f26e2fc2c7f0f1e
 SHA1 (patch-ad) = 285fbd72b3be665776acc61a55f3d65f35e338c4
@@ -12,6 +12,5 @@ SHA1 (patch-af) = 1a8f15ac1c8dadd59fe00ca7ca304ba41521f896
 SHA1 (patch-ag) = 5ca9064552379792c32577875d07562d3f736ab7
 SHA1 (patch-ai) = 3742a827c4b18cde06828ff585d3130062803b9a
 SHA1 (patch-ak) = 4fee3877613afddf179a7a8376586a6391b53c89
-SHA1 (patch-kioslave_bookmarks_kio_bookmarks.cpp) = 03b1c2680bc024604372cab0c1d7829fea68f658
-SHA1 (patch-kioslave_nfs_nfs__prot__xdr.c) = 3b779d367a90dbdf158e8f299b4f1de818a6180a
+SHA1 (patch-kioslave_nfs_rpc__nfs2__prot__xdr.c) = f1d8dc8224e68ef323f06602bf4b856c785f15e4
 SHA1 (patch-kwalletd_backend_blowfish.h) = 23bd9bf9671a770d203a10c46dc602145d2b9457
