@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2015/08/02 11:27:05 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2016/01/10 11:49:10 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-blaze-html
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-blaze-html
 HS_BLAZE_HTML_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-blaze-html+=	hs-blaze-html>=0.7.0
-BUILDLINK_ABI_DEPENDS.hs-blaze-html+=	hs-blaze-html>=0.7.0.3nb4
+BUILDLINK_ABI_DEPENDS.hs-blaze-html+=	hs-blaze-html>=0.7.0.3nb5
 BUILDLINK_PKGSRCDIR.hs-blaze-html?=	../../textproc/hs-blaze-html
 
 .include "../../devel/hs-blaze-builder/buildlink3.mk"
