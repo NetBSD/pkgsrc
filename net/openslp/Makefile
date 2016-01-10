@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2014/12/30 15:13:20 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2016/01/10 06:49:33 richard Exp $
 
 DISTNAME=	openslp-1.2.1
 PKGREVISION=	7
@@ -9,7 +9,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.openslp.org/
 COMMENT=	Open-source implementation of the Service Location Protocol
 
-USE_TOOLS+=		automake bison lex pax
+USE_TOOLS+=		automake bison flex pax
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
