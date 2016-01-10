@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2015/08/02 11:27:05 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2016/01/10 11:49:10 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-scientific
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-scientific
 HS_SCIENTIFIC_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-scientific+=	hs-scientific>=0.3.3
-BUILDLINK_ABI_DEPENDS.hs-scientific+=	hs-scientific>=0.3.3.5nb3
+BUILDLINK_ABI_DEPENDS.hs-scientific+=	hs-scientific>=0.3.3.5nb4
 BUILDLINK_PKGSRCDIR.hs-scientific?=	../../math/hs-scientific
 
 .include "../../devel/hs-hashable/buildlink3.mk"
