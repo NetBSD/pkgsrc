@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/11/14 08:03:31 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/01/10 19:51:46 markd Exp $
 include/libkomparediff2/diff2export.h
 include/libkomparediff2/difference.h
 include/libkomparediff2/diffhunk.h
@@ -14,4 +14,4 @@ lib/cmake/libkomparediff2/LibKompareDiff2Targets-${TARGET}.cmake
 lib/cmake/libkomparediff2/LibKompareDiff2Targets.cmake
 lib/libkomparediff2.so
 lib/libkomparediff2.so.4
-lib/libkomparediff2.so.${PKGVERSION}
+lib/libkomparediff2.so.${KDELIBSVER}
