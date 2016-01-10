@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2015/11/03 21:34:06 agc Exp $
+$NetBSD: distinfo,v 1.11 2016/01/10 19:45:46 markd Exp $
 
-SHA1 (kolourpaint-4.14.3.tar.xz) = 0cc58931f5bf94ace252667df248d7fa10309c3c
-RMD160 (kolourpaint-4.14.3.tar.xz) = 7e1fb9111bbe44e57439d221493d9165c594275e
-SHA512 (kolourpaint-4.14.3.tar.xz) = 3deead0511e70a11b749e1fe8e5756fec4a50ca60a660b300c177ece4b0b42b936940d806468f1f2ce2403c9290219e7882ff0a09ed925d7a1f350877a78ead2
-Size (kolourpaint-4.14.3.tar.xz) = 1164576 bytes
+SHA1 (kolourpaint-15.12.0.tar.xz) = 19ebaf38e09f5b3bd4d3b906fdf24fabf3f95a46
+RMD160 (kolourpaint-15.12.0.tar.xz) = 25fe6eb9fa07f2d5d3b8b6a8e98ccb7958648447
+SHA512 (kolourpaint-15.12.0.tar.xz) = 172c0f258a5c78e194a7090e972cafcb1e727a73697a470f5acf2b25c6743f795f15df2972399a014b0e2e5ee622916892d1460f16ef03c97db0b0ae7c1a705b
+Size (kolourpaint-15.12.0.tar.xz) = 1171552 bytes
