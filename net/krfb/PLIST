@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2013/11/07 13:03:08 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/01/10 19:18:03 markd Exp $
 bin/krfb
 lib/kde4/krfb_framebuffer_qt.so
 lib/kde4/krfb_framebuffer_x11.so
-lib/libkrfbprivate.so.${PKGVERSION}
+lib/libkrfbprivate.so.${KDELIBSVER}
 share/applications/kde4/krfb.desktop
 share/doc/kde/HTML/en/krfb/common
 share/doc/kde/HTML/en/krfb/configuration_network.png
