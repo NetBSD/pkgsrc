@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2015/04/25 14:23:45 tnn Exp $
+# $NetBSD: Makefile,v 1.13 2016/01/10 19:19:30 markd Exp $
 
-DISTNAME=	kppp-${_KDE_VERSION}
-PKGREVISION=	2
+DISTNAME=	kppp-15.12.0
 CATEGORIES=	net
 COMMENT=	Dialer and front end for pppd
+MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.12.0/src/}
 
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
