@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2015/04/25 14:23:35 tnn Exp $
+# $NetBSD: Makefile,v 1.12 2016/01/10 19:28:58 markd Exp $
 
-DISTNAME=	ktux-${_KDE_VERSION}
-PKGREVISION=	2
+DISTNAME=	ktux-15.08.3
 CATEGORIES=	misc
 COMMENT=	Tux Screen Saver
+MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.08.3/src/}
 
 .include "../../meta-pkgs/kde4/Makefile.kde4"
 
