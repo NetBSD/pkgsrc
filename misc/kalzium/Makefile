@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2015/04/25 14:23:33 tnn Exp $
+# $NetBSD: Makefile,v 1.30 2016/01/10 19:37:10 markd Exp $
 
-DISTNAME=	kalzium-${_KDE_VERSION}
-PKGREVISION=	2
+DISTNAME=	kalzium-15.12.0
 CATEGORIES=	misc
 COMMENT=	Periodic table of elements
+MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.12.0/src/}
 
 .include "../../meta-pkgs/kde4/Makefile.kde4"
 
