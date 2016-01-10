@@ -1,0 +1,13 @@
+$NetBSD: patch-dolphin_src_dolphin.desktop,v 1.1 2016/01/10 19:03:55 markd Exp $
+
+--- dolphin/src/dolphin.desktop.orig	2015-12-08 07:04:21.000000000 +0000
++++ dolphin/src/dolphin.desktop
+@@ -86,7 +86,7 @@ Name[wa]=Dolphin
+ Name[x-test]=xxDolphinxx
+ Name[zh_CN]=Dolphin
+ Name[zh_TW]=Dolphin
+-Exec=dolphin %i -caption %c %u
++Exec=dolphin4 %i -caption %c %u
+ Icon=system-file-manager
+ Type=Application
+ X-DocPath=dolphin/index.html
