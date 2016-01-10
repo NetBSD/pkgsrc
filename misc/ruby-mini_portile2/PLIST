@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2016/01/10 11:51:36 tsutsui Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/CHANGELOG.md
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LICENSE.txt
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/appveyor.yml
+${GEM_LIBDIR}/lib/mini_portile2.rb
+${GEM_LIBDIR}/lib/mini_portile2/mini_portile.rb
+${GEM_LIBDIR}/lib/mini_portile2/version.rb
+${GEM_LIBDIR}/mini_portile2.gemspec
+${GEM_LIBDIR}/test/assets/git/config
+${GEM_LIBDIR}/test/assets/patch 1.diff
+${GEM_LIBDIR}/test/assets/test mini portile-1.0.0/configure
+${GEM_LIBDIR}/test/assets/test-download-archive.tar.gz
+${GEM_LIBDIR}/test/helper.rb
+${GEM_LIBDIR}/test/test_cook.rb
+${GEM_LIBDIR}/test/test_digest.rb
+${GEM_LIBDIR}/test/test_download.rb
+${GEM_LIBDIR}/test/test_proxy.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
