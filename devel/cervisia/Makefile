@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2015/04/25 14:20:32 tnn Exp $
+# $NetBSD: Makefile,v 1.30 2016/01/10 19:54:45 markd Exp $
 
-DISTNAME=	cervisia-${_KDE_VERSION}
-PKGREVISION=	2
+DISTNAME=	cervisia-15.12.0
 CATEGORIES=	devel
 COMMENT=	CVS frontend
+MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.12.0/src/}
 
 .include "../../meta-pkgs/kde4/Makefile.kde4"
 
