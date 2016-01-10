@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2015/12/13 15:26:42 taca Exp $
+@comment $NetBSD: PLIST,v 1.18 2016/01/10 11:55:44 tsutsui Exp $
 bin/nokogiri${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
@@ -166,6 +166,14 @@ ${GEM_LIBDIR}/patches/libxml2/0007-Fix-an-error-in-previous-Conditional-section-
 ${GEM_LIBDIR}/patches/libxml2/0008-CVE-2015-8035-Fix-XZ-compression-support-loop.patch
 ${GEM_LIBDIR}/patches/libxml2/0009-Updated-config.guess.patch
 ${GEM_LIBDIR}/patches/libxml2/0010-Fix-parsering-short-unclosed-comment-uninitialized-access.patch
+${GEM_LIBDIR}/patches/libxml2/0011-Avoid-extra-processing-of-MarkupDecl-when-EOF.patch
+${GEM_LIBDIR}/patches/libxml2/0012-Avoid-processing-entities-after-encoding-conversion-.patch
+${GEM_LIBDIR}/patches/libxml2/0013-CVE-2015-7497-Avoid-an-heap-buffer-overflow-in-xmlDi.patch
+${GEM_LIBDIR}/patches/libxml2/0014-CVE-2015-5312-Another-entity-expansion-issue.patch
+${GEM_LIBDIR}/patches/libxml2/0015-Add-xmlHaltParser-to-stop-the-parser.patch
+${GEM_LIBDIR}/patches/libxml2/0016-Detect-incoherency-on-GROW.patch
+${GEM_LIBDIR}/patches/libxml2/0017-CVE-2015-7500-Fix-memory-access-error-due-to-incorre.patch
+${GEM_LIBDIR}/patches/libxml2/0018-CVE-2015-8242-Buffer-overead-with-HTML-parser-in-pus.patch
 ${GEM_LIBDIR}/patches/libxslt/0001-Adding-doc-update-related-to-1.1.28.patch
 ${GEM_LIBDIR}/patches/libxslt/0002-Fix-a-couple-of-places-where-f-printf-parameters-wer.patch
 ${GEM_LIBDIR}/patches/libxslt/0003-Initialize-pseudo-random-number-generator-with-curre.patch
