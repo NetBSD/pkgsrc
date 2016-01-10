@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/04/03 12:23:51 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/01/10 19:24:50 markd Exp $
 include/libkcddb/cdinfo.h
 include/libkcddb/cdinfodialog.h
 include/libkcddb/client.h
@@ -13,7 +13,7 @@ lib/cmake/libkcddb/LibkcddbTargets.cmake
 lib/kde4/kcm_cddb.so
 lib/libkcddb.so
 lib/libkcddb.so.4
-lib/libkcddb.so.${PKGVERSION}
+lib/libkcddb.so.${KDELIBSVER}
 share/doc/kde/HTML/en/kcontrol/cddbretrieval/common
 share/doc/kde/HTML/en/kcontrol/cddbretrieval/index.cache.bz2
 share/doc/kde/HTML/en/kcontrol/cddbretrieval/index.docbook
