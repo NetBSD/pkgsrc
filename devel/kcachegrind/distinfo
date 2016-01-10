@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 03:27:36 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/01/10 19:54:13 markd Exp $
 
-SHA1 (kcachegrind-4.14.3.tar.xz) = b9b3199039771e6a8605b9c123b66786453c62bf
-RMD160 (kcachegrind-4.14.3.tar.xz) = b0188e11e8846a87bc7c444a1207a199fb4df77d
-SHA512 (kcachegrind-4.14.3.tar.xz) = 85cbf7f882c8b2523624030ef08894abd847e7b6369213a4f20d85390ba94e6239c6a3dde7781de00715f7b4e295f7b90c419f1c109f34e1964b4c5ad7aec219
-Size (kcachegrind-4.14.3.tar.xz) = 235316 bytes
+SHA1 (kcachegrind-15.12.0.tar.xz) = bf9642d5b8fb02ef5ef6f5c7d007dd5be06f3feb
+RMD160 (kcachegrind-15.12.0.tar.xz) = 65018a25421e0cd69100b0df412f0c59c8bf1132
+SHA512 (kcachegrind-15.12.0.tar.xz) = 7751107f0051ac71d4f59f9f5580399e1ee5df7ec8118c84ef58fc04f1c06674264dec3e3a9b4cc267c2a7a13f4ddf517e317f520d5e44257382d774814fc235
+Size (kcachegrind-15.12.0.tar.xz) = 238128 bytes
