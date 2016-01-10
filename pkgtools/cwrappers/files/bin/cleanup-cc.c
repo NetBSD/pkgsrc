@@ -1,4 +1,4 @@
-/* $NetBSD: cleanup-cc.c,v 1.2 2015/04/19 14:30:07 jperkin Exp $ */
+/* $NetBSD: cleanup-cc.c,v 1.3 2016/01/10 19:13:05 bsiegert Exp $ */
 
 /*-
  * Copyright (c) 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -65,7 +65,7 @@ cleanup_cc(struct arglist *args)
 		if (strncmp(arg->val, "-I", 2) == 0 ||
 		    strncmp(arg->val, "-L", 2) == 0 ||
 		    strncmp(arg->val, "-Wl,-rpath,", 11) == 0 ||
-		    strncmp(arg->val, "-Wl,-rpath-link,", 15) == 0) {
+		    strncmp(arg->val, "-Wl,-rpath-link,", 16) == 0) {
 			i = wrapper_hash(arg->val) & (CLEANUP_HASH - 1);
 			TAILQ_FOREACH(arg3, hashtab + i, tmp_link) {
 				if (strcmp(arg->val, arg3->val) == 0) {
