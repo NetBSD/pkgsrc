@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2015/04/25 14:20:35 tnn Exp $
+# $NetBSD: Makefile,v 1.12 2016/01/10 19:52:55 markd Exp $
 
-DISTNAME=	kdesdk-strigi-analyzers-${_KDE_VERSION}
-PKGREVISION=	2
+DISTNAME=	kdesdk-strigi-analyzers-15.12.0
 CATEGORIES=	devel
 COMMENT=	Strigi analyzers for various tools
+MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.12.0/src/}
 
 .include "../../meta-pkgs/kde4/Makefile.kde4"
 
