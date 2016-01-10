@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.5 2015/11/04 00:35:07 agc Exp $
+$NetBSD: distinfo,v 1.6 2016/01/10 19:20:07 markd Exp $
 
-SHA1 (kopete-4.14.3.tar.xz) = 298937c6fe06b409881592a4b50dceff9dcf9c87
-RMD160 (kopete-4.14.3.tar.xz) = acbba218e24ba051aedab0296a0b2bad25815f8f
-SHA512 (kopete-4.14.3.tar.xz) = 33a433da426e7a4a519f033bb14635f31c92954f8e6c46b41759f4e1e41197aed9d07894b163a1e484648ac0e9f92914afe20dfbaa8ddff56b8751d426afd9fc
-Size (kopete-4.14.3.tar.xz) = 6317288 bytes
+SHA1 (kopete-15.12.0.tar.xz) = ca45500e134b4fff6a05d7b021ab7d982d95b197
+RMD160 (kopete-15.12.0.tar.xz) = 2e1e660a921e2c5d482cf4d1136ae37c2eef2d98
+SHA512 (kopete-15.12.0.tar.xz) = 48f49df8594ea2d437a82e56159d68753581405e3230fa4070fc5e5d027bd43383ee91e55f42c0c6a0d773cb648f8d967ad9067ad3fa87bb0a1f5694edb30ef0
+Size (kopete-15.12.0.tar.xz) = 6328468 bytes
 SHA1 (patch-libkopete_avdevice_videodevice.h) = 9864dd808cf375bcc48ec9ed0c6d939da382ea67
 SHA1 (patch-protocols_jabber_libiris_src_jdns_jdns_sys.c) = 3bb68fd63bbd98ac106402a1c647f23556e6cea8
 SHA1 (patch-protocols_winpopup_winpopup-install) = 538f1f079439d3c86454583f2863dbbcb3a63b95

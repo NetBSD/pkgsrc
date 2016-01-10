@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2014/11/30 03:14:45 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2016/01/10 19:20:07 markd Exp $
 bin/kopete
 bin/kopete_latexconvert.sh
 bin/winpopup-install
@@ -127,16 +127,16 @@ lib/kde4/libchattexteditpart.so
 lib/kde4/plugins/accessible/chatwindowaccessiblewidgetfactory.so
 lib/libkopete.so
 lib/libkopete.so.4
-lib/libkopete.so.${PKGVERSION}
+lib/libkopete.so.${KDELIBSVER}
 lib/libkopete_oscar.so
 lib/libkopete_oscar.so.4
-lib/libkopete_oscar.so.${PKGVERSION}
+lib/libkopete_oscar.so.${KDELIBSVER}
 lib/libkopete_otr_shared.so
 lib/libkopete_otr_shared.so.1
 lib/libkopete_otr_shared.so.1.0.0
 lib/libkopete_videodevice.so
 lib/libkopete_videodevice.so.4
-lib/libkopete_videodevice.so.${PKGVERSION}
+lib/libkopete_videodevice.so.${KDELIBSVER}
 lib/libkopeteaddaccountwizard.so
 lib/libkopeteaddaccountwizard.so.1
 lib/libkopeteaddaccountwizard.so.1.0.0
@@ -206,6 +206,7 @@ share/doc/kde/HTML/en/kopete/Kopetetutorial_snap018_otrsuccess.png
 share/doc/kde/HTML/en/kopete/Kopetetutorial_snap019_otrauth.png
 share/doc/kde/HTML/en/kopete/chatstyle.docbook
 share/doc/kde/HTML/en/kopete/common
+share/doc/kde/HTML/en/kopete/emoticonspec.docbook
 share/doc/kde/HTML/en/kopete/icq.docbook
 share/doc/kde/HTML/en/kopete/index.cache.bz2
 share/doc/kde/HTML/en/kopete/index.docbook
