@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.155 2016/01/10 13:15:32 wen Exp $
+$NetBSD: CHANGES-2016,v 1.156 2016/01/10 13:20:42 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -210,3 +210,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added misc/ruby-mini_portile2 version 2.1.0 [tsutsui 2016-01-10]
 	Updated textproc/ruby-nokogiri to 1.6.7.1 [tsutsui 2016-01-10]
 	Updated textproc/p5-Regexp-Common to 2016010801 [wen 2016-01-10]
+	Updated devel/p5-Test-BDD-Cucumber to 0.40 [schmonz 2016-01-10]
