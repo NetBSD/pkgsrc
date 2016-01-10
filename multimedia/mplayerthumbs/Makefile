@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2015/04/25 14:23:40 tnn Exp $
+# $NetBSD: Makefile,v 1.19 2016/01/10 19:22:52 markd Exp $
 
-DISTNAME=	mplayerthumbs-${_KDE_VERSION}
-PKGREVISION=	2
+DISTNAME=	mplayerthumbs-15.12.0
 CATEGORIES=	multimedia
 COMMENT=	thumbnail generator for all KDE file managers
+MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.12.0/src/}
 
 .include "../../meta-pkgs/kde4/Makefile.kde4"
 
