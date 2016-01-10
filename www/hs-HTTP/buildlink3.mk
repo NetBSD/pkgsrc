@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2015/08/02 11:27:06 szptvlfn Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2016/01/10 11:49:11 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-HTTP
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	hs-HTTP
 HS_HTTP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.hs-HTTP+=	hs-HTTP>=4000.2.17
-BUILDLINK_ABI_DEPENDS.hs-HTTP+=	hs-HTTP>=4000.2.17nb9
+BUILDLINK_ABI_DEPENDS.hs-HTTP+=	hs-HTTP>=4000.2.17nb10
 BUILDLINK_PKGSRCDIR.hs-HTTP?=	../../www/hs-HTTP
 
 .include "../../devel/hs-mtl/buildlink3.mk"
