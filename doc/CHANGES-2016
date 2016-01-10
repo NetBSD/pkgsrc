@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.161 2016/01/10 20:05:36 markd Exp $
+$NetBSD: CHANGES-2016,v 1.162 2016/01/10 20:33:28 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -265,3 +265,8 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/kcachegrind to 15.12.0 [markd 2016-01-10]
 	Updated devel/cervisia to 15.12.0 [markd 2016-01-10]
 	Added devel/extra-cmake-modules version 5.18.0 [markd 2016-01-10]
+	Added www/p5-HTML-Display version 0.40 [bsiegert 2016-01-10]
+	Added www/p5-WWW-Mechanize-FormFiller version 0.11 [bsiegert 2016-01-10]
+	Updated textproc/p5-Text-Autoformat to 1.74 [bsiegert 2016-01-10]
+	Updated devel/p5-Term-Shell to 0.07 [bsiegert 2016-01-10]
+	Added www/p5-WWW-Mechanize-Shell version 0.55 [bsiegert 2016-01-10]
