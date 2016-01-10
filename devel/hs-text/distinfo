@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2015/11/03 03:27:34 agc Exp $
+$NetBSD: distinfo,v 1.9 2016/01/10 11:48:07 szptvlfn Exp $
 
-SHA1 (text-1.2.1.3.tar.gz) = a816d89deb40513f2f9d03c6dc5c247ef417f253
-RMD160 (text-1.2.1.3.tar.gz) = d70752179a02d97e24d44fd8d4f6e0bf829f8e19
-SHA512 (text-1.2.1.3.tar.gz) = 2428db4122c7b0989661bc42870e18068315ec7a0a4a2a051749a4c9b18cff1781d83aac064b73b032f44862c3f8fd849f96d2257df87401d1be6c109f84614d
-Size (text-1.2.1.3.tar.gz) = 145946 bytes
+SHA1 (text-1.2.2.0.tar.gz) = 07416e015efefee3714ca81115f07fe8e03889b8
+RMD160 (text-1.2.2.0.tar.gz) = 771986ac6138cfc26e297e5470354c02425b90b3
+SHA512 (text-1.2.2.0.tar.gz) = 832b0430581a06cfdfa2a5c83fa2720e3f4825ee0aa9c6b12ff6ccd424a9e3a061c9ae7eeda48fe7a9f077c50e379abe2eee3fb05bdbdec4d38115b5e3695f20
+Size (text-1.2.2.0.tar.gz) = 148894 bytes
