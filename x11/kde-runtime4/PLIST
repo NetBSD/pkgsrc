@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2014/11/13 10:53:49 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2016/01/10 19:05:27 markd Exp $
 bin/kcmshell4
 bin/kde-cp
 bin/kde-mv
@@ -257,10 +257,10 @@ lib/libkdeinit4_kwalletd.so
 lib/libknotifyplugin.so
 lib/libkwalletbackend.so
 lib/libkwalletbackend.so.4
-lib/libkwalletbackend.so.${PKGVERSION}
+lib/libkwalletbackend.so.${KDELIBSVER}
 lib/libmolletnetwork.so
 lib/libmolletnetwork.so.4
-lib/libmolletnetwork.so.${PKGVERSION}
+lib/libmolletnetwork.so.${KDELIBSVER}
 man/man1/kdesu.1
 man/man1/plasmapkg.1
 share/PolicyKit/policy/org.kde.kcontrol.kcmremotewidgets.policy
