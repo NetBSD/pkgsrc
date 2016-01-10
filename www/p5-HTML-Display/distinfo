@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/01/10 20:01:48 bsiegert Exp $
+
+SHA1 (HTML-Display-0.40.tar.gz) = 3acd8c0fe644daec8f33d60e648d3fd5ea4be3bc
+RMD160 (HTML-Display-0.40.tar.gz) = cadaba9e27efa1501af27cc0bc5d1d670ddf9370
+SHA512 (HTML-Display-0.40.tar.gz) = ef871f87ed7b512c6684a38bce0f660690c9e498bc3bcef1c376742adbd0ffc0b50b69418327d1f74b4deef5ff3a27cc8a4b51821aa20814122ae6dae938da20
+Size (HTML-Display-0.40.tar.gz) = 14233 bytes
