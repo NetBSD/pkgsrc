@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.11 2015/11/04 03:28:51 agc Exp $
+$NetBSD: distinfo,v 1.12 2016/01/10 19:07:58 markd Exp $
 
 SHA1 (pykde4-4.14.3.tar.xz) = 9cc8e70d3b107a876cf579beab1f582861cd2c48
 RMD160 (pykde4-4.14.3.tar.xz) = 3ea2492cd31704e559456cb78dd85660fae7e74c
 SHA512 (pykde4-4.14.3.tar.xz) = 42430f83bf41dc5d7511369250ff480fd7b90954b4ace8dbda2d6151ee3f3c979fe3d9b0163cda76df52107e982d4ac518fa1c28bc1d711d97f2d8739eaff1f3
 Size (pykde4-4.14.3.tar.xz) = 2006504 bytes
-SHA1 (patch-CMakeLists.txt) = dc1e12cc62e4c25f563f1b1c9c5901739f7e8920
+SHA1 (patch-CMakeLists.txt) = f09b05a952c3ad4e08cfde47a24ffb17e22edd6c
 SHA1 (patch-__init__.py) = 721287a0ec82b79ea4a502526ed98ba44c6d979f
