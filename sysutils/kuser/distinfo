@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2015/11/25 07:22:58 mrg Exp $
+$NetBSD: distinfo,v 1.6 2016/01/10 19:10:38 markd Exp $
 
-SHA1 (kuser-4.14.3.tar.xz) = 691245fd406fa044453e03f5f38e19575a8f7259
-RMD160 (kuser-4.14.3.tar.xz) = 3cacd62f6d70cc1d185fd4a5df6f97d1837df33c
-SHA512 (kuser-4.14.3.tar.xz) = 914fd084f2d0442b8cc2bb09e4ed6af5040848af698d8d53441924c0f85cb7aee7d0b1dd47703bbb1f45c1e69ef7718c046f50bfd1c37557b8220b0b88e161af
-Size (kuser-4.14.3.tar.xz) = 134772 bytes
+SHA1 (kuser-15.12.0.tar.xz) = f51eecb3e376521129af914154d6347a9fc3323f
+RMD160 (kuser-15.12.0.tar.xz) = 1e6bd1018bff598ca7680ec5bdd69f1d585e831d
+SHA512 (kuser-15.12.0.tar.xz) = 3fcbc5a61c2d71e5043408f07b7df2141edf54870b126228d00c18484b2212a234762c455fa554e4575f35dd63d00da67a756dc8fd9714f29eaf0ace096f00a3
+Size (kuser-15.12.0.tar.xz) = 135500 bytes
 SHA1 (patch-CMakeLists.txt) = 552ecddd1e547e3fb57ccfc61f6aca914c9de2a2
