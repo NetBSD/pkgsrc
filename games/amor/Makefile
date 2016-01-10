@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2015/04/25 14:22:52 tnn Exp $
+# $NetBSD: Makefile,v 1.27 2016/01/10 19:50:45 markd Exp $
 
-DISTNAME=	amor-${_KDE_VERSION}
-PKGREVISION=	2
+DISTNAME=	amor-15.08.3
 CATEGORIES=	games
 COMMENT=	KDE creature for your desktop
+MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.08.3/src/}
 
 .include "../../meta-pkgs/kde4/Makefile.kde4"
 
