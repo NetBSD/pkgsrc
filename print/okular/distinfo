@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.10 2015/11/04 01:01:36 agc Exp $
+$NetBSD: distinfo,v 1.11 2016/01/10 19:17:22 markd Exp $
 
-SHA1 (okular-4.14.3.tar.xz) = 54b931bdee75f6a247bc738177f29e96faeff110
-RMD160 (okular-4.14.3.tar.xz) = 55b4b2324346c611e145c7dba018fb13e6e56307
-SHA512 (okular-4.14.3.tar.xz) = a32b3e3f0591d6d20caf37bb98eb15d1c4cef5e55238c459d55e753e9d9d6b0afebad6d2548fdfdffc99779d477f4a991038c47d841a322db8e44a39378f165a
-Size (okular-4.14.3.tar.xz) = 1574360 bytes
+SHA1 (okular-15.12.0.tar.xz) = 8c4a3d17741b8b3bda8386fb8698a47e33af407d
+RMD160 (okular-15.12.0.tar.xz) = 637fadf030e4463383ff68d13f7eddf91658471f
+SHA512 (okular-15.12.0.tar.xz) = ee227189c5c205fdf0ff3d45d3d1152b1a0bd34aca43a7a5dc28f33e1d485313021b6594cee0648f88e6b2efa4f291856a76d78a6885c1510218a8288b946ac8
+Size (okular-15.12.0.tar.xz) = 1756496 bytes
 SHA1 (patch-ui_pageview.cpp) = 15651ffbcd74727e64b34215fa507c8851462358
