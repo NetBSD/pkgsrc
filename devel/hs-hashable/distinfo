@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 03:27:33 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/01/10 11:48:24 szptvlfn Exp $
 
-SHA1 (hashable-1.2.3.2.tar.gz) = 69b2f72f5e1881067da882923746e87db3b26ea3
-RMD160 (hashable-1.2.3.2.tar.gz) = 2255b02974580791d2bed688b5365979b07533a0
-SHA512 (hashable-1.2.3.2.tar.gz) = e5c646881ebe3c73c598ee4c24f5454524867c823137702ab3010b346ee8dec6b93623834838e43413d19d97c3c011bcc54e915d1055d76f90d2315fc25a600b
-Size (hashable-1.2.3.2.tar.gz) = 23903 bytes
+SHA1 (hashable-1.2.3.3.tar.gz) = e0410b1171413a94cf6ee8ef74c903c1fd54bfdf
+RMD160 (hashable-1.2.3.3.tar.gz) = 0212986f89acc40bde327d78d64f7f1f191eb7eb
+SHA512 (hashable-1.2.3.3.tar.gz) = f2e693ecdd96591b703f584b501818215379ce56e8fc7591307fe15d2745d1eb7d2ca7c130dde84a66337c81089c783f227f6215d868958caecc58bf996c7a22
+Size (hashable-1.2.3.3.tar.gz) = 23944 bytes
