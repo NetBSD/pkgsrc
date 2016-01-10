@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.30 2015/08/16 22:00:38 leot Exp $
+# $NetBSD: Makefile,v 1.31 2016/01/10 19:42:20 markd Exp $
 
-DISTNAME=	libksane-${_KDE_VERSION}
-PKGREVISION=	3
+DISTNAME=	libksane-15.08.3
 CATEGORIES=	graphics
 COMMENT=	SANE Library interface for KDE
+MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.08.3/src/}
 
 .include "../../meta-pkgs/kde4/Makefile.kde4"
 
