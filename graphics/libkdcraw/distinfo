@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.20 2015/11/03 21:34:08 agc Exp $
+$NetBSD: distinfo,v 1.21 2016/01/10 19:43:46 markd Exp $
 
-SHA1 (libkdcraw-4.14.3.tar.xz) = 52b8c0031baec1f2231c07e646383bfa299d6759
-RMD160 (libkdcraw-4.14.3.tar.xz) = 28d68f4ebcecaa8658c2d3838ab3c71ff1d9f50b
-SHA512 (libkdcraw-4.14.3.tar.xz) = 5c8a3ba54ada6aeb41898afaa87853cdb320c3bab1ab5f768baeaf077974a98262ec426c36b4697c4b7fadc054d3622104cda6bf66e6165cb5d13ce55eb31888
-Size (libkdcraw-4.14.3.tar.xz) = 100176 bytes
-SHA1 (patch-libkdcraw_CMakeLists.txt) = 8a9ba09a06e50383670d9fbb7d8291a09593b0fc
+SHA1 (libkdcraw-15.08.3.tar.xz) = faf93404a36162a381abcafd289e3de811774a25
+RMD160 (libkdcraw-15.08.3.tar.xz) = a70f999dc10b4ed473ecec8ea0548a1f5c969e29
+SHA512 (libkdcraw-15.08.3.tar.xz) = f77902a768df26368a67f680cb1e5c54eec5f44b5598ff9966c30abdfd977ea683a738cf01749557f144d58a85121afea61a8e5f7ec80d1c2d55a3bdf9549c39
+Size (libkdcraw-15.08.3.tar.xz) = 102308 bytes
