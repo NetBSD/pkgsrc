@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/11/13 11:05:43 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/01/10 19:15:11 markd Exp $
 include/baloo/filemetadataconfigwidget.h
 include/baloo/filemetadatawidget.h
 include/baloo/tagwidget.h
@@ -9,4 +9,4 @@ lib/cmake/BalooWidgets/BalooWidgetsTargetsWithPrefix-${TARGET}.cmake
 lib/cmake/BalooWidgets/BalooWidgetsTargetsWithPrefix.cmake
 lib/libbaloowidgets.so
 lib/libbaloowidgets.so.4
-lib/libbaloowidgets.so.${PKGVERSION}
+lib/libbaloowidgets.so.${KDELIBSVER}
