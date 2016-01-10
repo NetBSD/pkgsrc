@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.159 2016/01/10 13:42:51 kleink Exp $
+$NetBSD: CHANGES-2016,v 1.160 2016/01/10 19:41:58 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -214,3 +214,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Data-Dump-Streamer to 2.39 [wen 2016-01-10]
 	Updated devel/p5-Devel-CheckLib to 1.05 [wen 2016-01-10]
 	Updated geography/py-google-maps-services-python to 2.4.2 [kleink 2016-01-10]
+	Added devel/p5-Data-Random version 0.12 [bsiegert 2016-01-10]
+	Updated time/p5-Time-Piece to 1.31 [bsiegert 2016-01-10]
