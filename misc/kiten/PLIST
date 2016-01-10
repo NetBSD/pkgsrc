@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/11/13 19:19:07 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2016/01/10 19:31:19 markd Exp $
 bin/kiten
 bin/kitengen
 bin/kitenkanjibrowser
@@ -17,7 +17,7 @@ include/libkiten/kromajiedit.h
 include/libkiten/libkitenexport.h
 lib/libkiten.so
 lib/libkiten.so.4
-lib/libkiten.so.${PKGVERSION}
+lib/libkiten.so.${KDELIBSVER}
 share/appdata/kiten.appdata.xml
 share/applications/kde4/kiten.desktop
 share/applications/kde4/kitenkanjibrowser.desktop
