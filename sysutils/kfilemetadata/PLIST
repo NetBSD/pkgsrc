@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/11/13 11:05:43 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/01/10 19:12:13 markd Exp $
 include/kfilemetadata/extractionresult.h
 include/kfilemetadata/extractorplugin.h
 include/kfilemetadata/extractorpluginmanager.h
@@ -22,7 +22,7 @@ lib/kde4/kfilemetadata_popplerextractor.so
 lib/kde4/kfilemetadata_taglibextractor.so
 lib/libkfilemetadata.so
 lib/libkfilemetadata.so.4
-lib/libkfilemetadata.so.${PKGVERSION}
+lib/libkfilemetadata.so.${KDELIBSVER}
 share/kde4/services/kfilemetadata_epubextractor.desktop
 share/kde4/services/kfilemetadata_exiv2extractor.desktop
 share/kde4/services/kfilemetadata_ffmpegextractor.desktop
