@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2197 2016/01/09 19:55:17 tsutsui Exp $
+# $NetBSD: Makefile,v 1.2198 2016/01/10 19:38:49 bsiegert Exp $
 #
 
 COMMENT=	Development utilities
@@ -822,6 +822,7 @@ SUBDIR+=	p5-Data-Pageset
 SUBDIR+=	p5-Data-Peek
 SUBDIR+=	p5-Data-Perl
 SUBDIR+=	p5-Data-Printer
+SUBDIR+=	p5-Data-Random
 SUBDIR+=	p5-Data-Record
 SUBDIR+=	p5-Data-Section
 SUBDIR+=	p5-Data-Section-Simple
