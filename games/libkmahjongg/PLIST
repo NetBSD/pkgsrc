@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2013/04/03 12:03:29 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/01/10 19:49:24 markd Exp $
 include/kmahjonggbackground.h
 include/kmahjonggconfigdialog.h
 include/kmahjonggtileset.h
 include/libkmahjongg_export.h
 lib/libkmahjongglib.so
 lib/libkmahjongglib.so.4
-lib/libkmahjongglib.so.${PKGVERSION}
+lib/libkmahjongglib.so.${KDELIBSVER}
 share/kde/apps/kmahjongglib/backgrounds/chinese_landscape.copyright
 share/kde/apps/kmahjongglib/backgrounds/chinese_landscape.desktop
 share/kde/apps/kmahjongglib/backgrounds/chinese_landscape.svgz

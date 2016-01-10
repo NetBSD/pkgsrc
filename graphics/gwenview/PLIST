@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.19 2014/11/13 20:06:29 markd Exp $
+@comment $NetBSD: PLIST,v 1.20 2016/01/10 19:48:50 markd Exp $
 bin/gwenview
 bin/gwenview_importer
 lib/kde4/gvpart.so
 lib/libgwenviewlib.so
 lib/libgwenviewlib.so.4
-lib/libgwenviewlib.so.${PKGVERSION}
+lib/libgwenviewlib.so.${KDELIBSVER}
 share/applications/kde4/gwenview.desktop
 share/doc/kde/HTML/en/gwenview/browse_mode.png
 share/doc/kde/HTML/en/gwenview/common
