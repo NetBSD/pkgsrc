@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2014/11/13 19:19:08 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2016/01/10 19:31:46 markd Exp $
 bin/lancelot
 include/KDE/Lancelot/ActionListModel
 include/KDE/Lancelot/ActionListView
@@ -197,7 +197,7 @@ lib/liblancelot.so.1.9.0
 lib/liblancelot.so.2
 lib/libplasma_groupingcontainment.so
 lib/libplasma_groupingcontainment.so.4
-lib/libplasma_groupingcontainment.so.${PKGVERSION}
+lib/libplasma_groupingcontainment.so.${KDELIBSVER}
 lib/libplasmacomicprovidercore.so
 lib/libplasmacomicprovidercore.so.1
 lib/libplasmacomicprovidercore.so.1.0.0
@@ -206,10 +206,10 @@ lib/libplasmapotdprovidercore.so.1
 lib/libplasmapotdprovidercore.so.1.0.0
 lib/libplasmaweather.so
 lib/libplasmaweather.so.4
-lib/libplasmaweather.so.${PKGVERSION}
+lib/libplasmaweather.so.${KDELIBSVER}
 lib/librtm.so
 lib/librtm.so.4
-lib/librtm.so.${PKGVERSION}
+lib/librtm.so.${KDELIBSVER}
 share/icons/hicolor/128x128/apps/bball.png
 share/icons/hicolor/128x128/apps/eyes.png
 share/icons/hicolor/128x128/apps/lancelot-start.png
