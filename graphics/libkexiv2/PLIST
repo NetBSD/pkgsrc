@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2014/11/13 20:06:28 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2016/01/10 19:43:10 markd Exp $
 include/libkexiv2/altlangstredit.h
 include/libkexiv2/countryselector.h
 include/libkexiv2/kexiv2.h
@@ -9,12 +9,12 @@ include/libkexiv2/msgtextedit.h
 include/libkexiv2/rotationmatrix.h
 include/libkexiv2/subjectwidget.h
 include/libkexiv2/version.h
-lib/cmake/libkexiv2-2.3.2/libkexiv2-config-version.cmake
-lib/cmake/libkexiv2-2.3.2/libkexiv2-config.cmake
-lib/cmake/libkexiv2-2.3.2/libkexiv2-export-relwithdebinfo.cmake
-lib/cmake/libkexiv2-2.3.2/libkexiv2-export.cmake
+lib/cmake/libkexiv2-2.4.0/libkexiv2-config-version.cmake
+lib/cmake/libkexiv2-2.4.0/libkexiv2-config.cmake
+lib/cmake/libkexiv2-2.4.0/libkexiv2-export-relwithdebinfo.cmake
+lib/cmake/libkexiv2-2.4.0/libkexiv2-export.cmake
 lib/libkexiv2.so
 lib/libkexiv2.so.11
-lib/libkexiv2.so.11.2.0
+lib/libkexiv2.so.11.3.0
 lib/pkgconfig/libkexiv2.pc
 share/kde/apps/libkexiv2/data/topicset.iptc-subjectcode.xml
