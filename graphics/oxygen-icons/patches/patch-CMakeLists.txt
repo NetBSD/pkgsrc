@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2016/01/10 20:01:05 markd Exp $
+
+Dont do tests as requires Qt5
+
+--- CMakeLists.txt.orig	2016-01-10 01:07:43.000000000 +0000
++++ CMakeLists.txt
+@@ -18,7 +18,7 @@ include(KDECompilerSettings)
+ # Dependencies
+ set(REQUIRED_QT_VERSION "5.3.0")
+ 
+-add_subdirectory(autotests)
++#add_subdirectory(autotests)
+ 
+ ########### install files ###############
+ 
