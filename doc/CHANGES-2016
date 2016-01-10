@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.163 2016/01/10 20:57:55 bsiegert Exp $
+$NetBSD: CHANGES-2016,v 1.164 2016/01/10 21:17:34 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -271,3 +271,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Term-Shell to 0.07 [bsiegert 2016-01-10]
 	Added www/p5-WWW-Mechanize-Shell version 0.55 [bsiegert 2016-01-10]
 	Updated mail/exim to 4.86 [bsiegert 2016-01-10]
+	Updated graphics/freetype2 to 2.6.2 [bsiegert 2016-01-10]
