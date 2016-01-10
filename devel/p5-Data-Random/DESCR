@@ -1,0 +1,3 @@
+Data::Random is a Perl module for generating random data.  You might
+find it helpful mostly in test programs to easily generate
+pseudo-realistic distributions of data.
