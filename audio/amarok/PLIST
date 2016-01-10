@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.45 2014/11/14 09:10:37 markd Exp $
+@comment $NetBSD: PLIST,v 1.46 2016/01/10 19:55:20 markd Exp $
 bin/amarok
 bin/amarok_afttagger
 bin/amarokcollectionscanner
@@ -55,7 +55,7 @@ lib/libamaroklib.so.1
 lib/libamaroklib.so.1.0.0
 lib/libamarokocsclient.so
 lib/libamarokocsclient.so.4
-lib/libamarokocsclient.so.4.14.3
+lib/libamarokocsclient.so.${KDELIBSVER}
 lib/libamarokpud.so
 lib/libamarokpud.so.1
 lib/libamarokpud.so.1.0.0
