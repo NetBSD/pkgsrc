@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.59 2015/04/25 14:23:34 tnn Exp $
+# $NetBSD: Makefile,v 1.60 2016/01/10 19:34:35 markd Exp $
 
-DISTNAME=	kdepim-runtime-${_KDE_VERSION}
+DISTNAME=	kdepim-runtime-4.14.10
 PKGNAME=	${DISTNAME:S/-4/4-4/}
-PKGREVISION=	2
 CATEGORIES=	misc
 COMMENT=	Runtime requirements for the KDE PIM tools
+MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.04.3/src/}
 
 .include "../../meta-pkgs/kde4/Makefile.kde4"
 
