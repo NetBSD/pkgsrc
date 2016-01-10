@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2015/11/04 01:32:18 agc Exp $
+$NetBSD: distinfo,v 1.15 2016/01/10 19:13:18 markd Exp $
 
-SHA1 (kdf-4.14.3.tar.xz) = 0c56449beca617a588af935817db3d2385a2a292
-RMD160 (kdf-4.14.3.tar.xz) = ae84351ebf746f8febc09575db6be11c19a650c8
-SHA512 (kdf-4.14.3.tar.xz) = 6dcf12fc1eca7fe1b46e5bfb49ee1391c1f54c477dbd3f04e8c1bc5fb7e2262d210fa1c150c4c76a9281af9920afdf75050c4cf085d9e590c6bd61852b4ce8f8
-Size (kdf-4.14.3.tar.xz) = 148708 bytes
+SHA1 (kdf-15.12.0.tar.xz) = 5b21835defa47176bdd86789e27579ae5d59a5e4
+RMD160 (kdf-15.12.0.tar.xz) = abd4b9f5a3187b3d21720f0e8b903b8b3ed4994d
+SHA512 (kdf-15.12.0.tar.xz) = b7d75e45306db3a7196ed2c8c099045c9b6cd54160daeaad40ca146f67b0b010edd44d30b1ddf03d7e19d20874f8ad19727cd1db366c0e8377622aaf3db6dd7a
+Size (kdf-15.12.0.tar.xz) = 149144 bytes
