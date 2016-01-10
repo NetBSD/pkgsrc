@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2015/04/25 14:23:14 tnn Exp $
+# $NetBSD: Makefile,v 1.19 2016/01/10 19:47:54 markd Exp $
 
-DISTNAME=	kde-base-artwork-${_KDE_VERSION}
-PKGREVISION=	2
+DISTNAME=	kde-base-artwork-15.08.3
 CATEGORIES=	graphics
 COMMENT=	KDE KSplash theme
+MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.08.3/src/}
 
 .include "../../meta-pkgs/kde4/Makefile.kde4"
 
