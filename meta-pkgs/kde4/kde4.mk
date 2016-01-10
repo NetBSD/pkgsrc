@@ -1,4 +1,4 @@
-# $NetBSD: kde4.mk,v 1.3 2011/08/31 19:40:43 brook Exp $
+# $NetBSD: kde4.mk,v 1.4 2016/01/10 08:55:51 markd Exp $
 #
 # This Makefile fragment is included by packages that use the KDE4
 # configure-and-build process.
@@ -22,6 +22,11 @@ CMAKE_ARGS+=	-DAUTOSTART_INSTALL_DIR=${PREFIX}/share/kde/autostart
 CMAKE_ARGS+=	-DSYSCONF_INSTALL_DIR=${PKG_SYSCONFDIR:Q}
 CMAKE_ARGS+=	-DINFO_INSTALL_DIR=${PREFIX}/${PKGINFODIR}
 CMAKE_ARGS+=	-DMAN_INSTALL_DIR=${PREFIX}/${PKGMANDIR}
+
+KDELIBSVER=	4.14.15
+KDELIBSPVER=	${KDELIBSVER:S/4/5/}
+PLIST_SUBST+=	KDELIBSVER=${KDELIBSVER}
+PLIST_SUBST+=	KDELIBSPVER=${KDELIBSPVER}
 
 pre-configure: qmake-bin-add
 
