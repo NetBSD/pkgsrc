@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2015/04/25 14:23:34 tnn Exp $
+# $NetBSD: Makefile,v 1.29 2016/01/10 19:30:52 markd Exp $
 
-DISTNAME=	kmag-${_KDE_VERSION}
-PKGREVISION=	2
+DISTNAME=	kmag-15.12.0
 CATEGORIES=	misc
 COMMENT=	KDE screen magnifier
+MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.12.0/src/}
 
 .include "../../meta-pkgs/kde4/Makefile.kde4"
 
