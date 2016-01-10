@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2015/11/03 23:49:39 agc Exp $
+$NetBSD: distinfo,v 1.10 2016/01/10 19:36:30 markd Exp $
 
-SHA1 (kde-wallpapers-4.14.3.tar.xz) = 3e8181d510e384c1ff328c888d78c6eb8453f20e
-RMD160 (kde-wallpapers-4.14.3.tar.xz) = 8b9b64ffbfb6327678d7f4690806cd6146835a06
-SHA512 (kde-wallpapers-4.14.3.tar.xz) = a09d01caacb54a6a5a9aecac34d8b4422b3c2086c661ae0483405cf0f014b0dcbb981a1dc314e193f1a0e8b33c6d5c20fbc7f7edee508a71f32e937bb7451dfc
-Size (kde-wallpapers-4.14.3.tar.xz) = 90372808 bytes
+SHA1 (kde-wallpapers-15.08.3.tar.xz) = 1daa0daa7f85f234f865366f304b6b9ba4ad1b3a
+RMD160 (kde-wallpapers-15.08.3.tar.xz) = 93b79b4bdfb475026fae34eb23163ba80ac0ae4b
+SHA512 (kde-wallpapers-15.08.3.tar.xz) = 7fe81eb4f4256a67e817356f15f7a5daa36ac08b61ee1a462dd471c6fbec6d33586d2f74a7a3e22e68a2263c06cfd1ebe5245d4cfef8409de1657e6c3de7eeff
+Size (kde-wallpapers-15.08.3.tar.xz) = 90373308 bytes
