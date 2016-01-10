@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2015/11/03 23:49:40 agc Exp $
+$NetBSD: distinfo,v 1.10 2016/01/10 19:30:52 markd Exp $
 
-SHA1 (kmag-4.14.3.tar.xz) = 2ec27ba8b380f6a3c8a14908ec1a913f99b8b70f
-RMD160 (kmag-4.14.3.tar.xz) = 019de8e6b15f24628fd9c32927cc43fe3c4cafcd
-SHA512 (kmag-4.14.3.tar.xz) = e420027e03dc4b097b1f2930358de1d38672b25da08d9a5c815b36a8f0b86c692dd59d196a6568679b178035bdb996b2939fb183d93d19c6e5245fbd4802d697
-Size (kmag-4.14.3.tar.xz) = 86264 bytes
+SHA1 (kmag-15.12.0.tar.xz) = 2e8c923e5c4b91337fcafab5d18212f199e817d3
+RMD160 (kmag-15.12.0.tar.xz) = d740caada7803b90ebe764f1508c15645c68969a
+SHA512 (kmag-15.12.0.tar.xz) = 9929fdf10fbd4d85cfa754542b85c7037031a60563c3ec74acf1fb5f3a552ab69644351984811b20a793e17d9af5b48e9480e3d36ebcbefb2d9965e9447a683e
+Size (kmag-15.12.0.tar.xz) = 86544 bytes
