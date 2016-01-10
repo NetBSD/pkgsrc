@@ -1,9 +1,14 @@
-$NetBSD: distinfo,v 1.32 2015/11/03 23:49:39 agc Exp $
+$NetBSD: distinfo,v 1.33 2016/01/10 19:33:04 markd Exp $
 
-SHA1 (kdepimlibs-4.14.3.tar.xz) = bbfff3ea5775bfb0f1692828c679e549deaf4fb3
-RMD160 (kdepimlibs-4.14.3.tar.xz) = 95af39ad4848fe48efbd4e3be8b4b0767530ec60
-SHA512 (kdepimlibs-4.14.3.tar.xz) = 0106f3b03cb7541f54fe568276ca3e5c5d14da244b8b1e73a9a34ca1b1f3b6d2ce3922cb499d79fca53f27429c84f1fcb1472fa3b9df80531cd1542825aa27d7
-Size (kdepimlibs-4.14.3.tar.xz) = 2790888 bytes
+SHA1 (kdepimlibs-4.14.10.tar.xz) = 8db2f59b8a33f4d1bbebfdff8b772d30669c9932
+RMD160 (kdepimlibs-4.14.10.tar.xz) = 4df52569c41b3af12aaf6f457e213f31feb78343
+SHA512 (kdepimlibs-4.14.10.tar.xz) = 64f396957ae1f70a19ba689fabc0850aed04e4e4bce58a4bbc27af2b5cfa27b50472614b4096d8424ee6b4463faaed37d98e6cccfe36d208e9193ba20dc6766a
+Size (kdepimlibs-4.14.10.tar.xz) = 2831160 bytes
+SHA1 (patch-akonadi_itemsync.cpp) = c033adc348bd9c881bfcbc4c7344d028d4678472
+SHA1 (patch-akonadi_itemsync.h) = 9e5a300958754f69be5310c822ecf5da180a4bf5
+SHA1 (patch-akonadi_resourcebase.cpp) = b0195b6f6ec2a56d7fdcd2bf79a87236d601da32
+SHA1 (patch-akonadi_resourcebase.h) = e0a6910c198ace215631dffb380cb67e15061927
+SHA1 (patch-akonadi_tests_itemsynctest.cpp) = 309873e79d59ae81021a88db725ce63769ec0160
 SHA1 (patch-gpgmexx_config-gpgmexx.h.cmake) = bd8fd1e9a619d6bd52185f37adb5dc7f7b97423c
 SHA1 (patch-kblog_CMakeLists.txt) = b03068672c39492ef4883125c65f7951c7cc8f01
 SHA1 (patch-kimap_loginjob.cpp) = 8a0fe3c1779b981d9c9ca6cb34121219f2f97c9f
