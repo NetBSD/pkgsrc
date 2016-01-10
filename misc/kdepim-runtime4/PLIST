@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2014/11/13 19:19:09 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2016/01/10 19:34:35 markd Exp $
 bin/accountwizard
 bin/akonadi_birthdays_resource
 bin/akonadi_davgroupware_resource
@@ -80,19 +80,19 @@ lib/kde4/kcm_akonadi_server.so
 lib/kde4/kio_akonadi.so
 lib/libakonadi-filestore.so
 lib/libakonadi-filestore.so.4
-lib/libakonadi-filestore.so.${PKGVERSION}
+lib/libakonadi-filestore.so.${KDELIBSVER}
 lib/libfolderarchivesettings.so
 lib/libfolderarchivesettings.so.4
-lib/libfolderarchivesettings.so.${PKGVERSION}
+lib/libfolderarchivesettings.so.${KDELIBSVER}
 lib/libkdepim-copy.so
 lib/libkdepim-copy.so.4
-lib/libkdepim-copy.so.${PKGVERSION}
+lib/libkdepim-copy.so.${KDELIBSVER}
 lib/libkmindexreader.so
 lib/libkmindexreader.so.4
-lib/libkmindexreader.so.${PKGVERSION}
+lib/libkmindexreader.so.${KDELIBSVER}
 lib/libmaildir.so
 lib/libmaildir.so.4
-lib/libmaildir.so.${PKGVERSION}
+lib/libmaildir.so.${KDELIBSVER}
 share/akonadi/agents/akonadinepomukfeederagent.desktop
 share/akonadi/agents/akonotesresource.desktop
 share/akonadi/agents/birthdaysresource.desktop
@@ -164,6 +164,7 @@ share/kde/apps/akonadi/accountwizard/vcard/vcardwizard.ui
 share/kde/apps/akonadi/accountwizard/vcarddir/vcarddirwizard.desktop
 share/kde/apps/akonadi/accountwizard/vcarddir/vcarddirwizard.es
 share/kde/apps/akonadi/accountwizard/vcarddir/vcarddirwizard.ui
+share/kde/apps/akonadi/firstrun/birthdaycalendar
 share/kde/apps/akonadi/firstrun/defaultaddressbook
 share/kde/apps/akonadi/firstrun/defaultcalendar
 share/kde/apps/akonadi/firstrun/defaultnotebook
