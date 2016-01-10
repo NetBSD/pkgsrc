@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.22 2015/11/03 23:27:01 agc Exp $
+$NetBSD: distinfo,v 1.23 2016/01/10 19:40:30 markd Exp $
 
 SHA1 (akonadi-1.13.0.tar.bz2) = 9d594b5840e2e5d90057a7e5d8545004a3476bc0
 RMD160 (akonadi-1.13.0.tar.bz2) = 411e4e3b203cd9681b10d21af75806f723a687ec
@@ -8,3 +8,5 @@ SHA1 (patch-agentserver_CMakeLists.txt) = 01249fd521e23a8cb8c7119ad9c8cd9877338c
 SHA1 (patch-cmake_modules_FindSqlite.cmake) = 3deefae90ec3485affeda4de283d4166d85c41fc
 SHA1 (patch-git_21465191) = 735e05bfa08c113ec196049dcea035f889cd7b6d
 SHA1 (patch-libs_xdgbasedirs.cpp) = eccf2de9445ea63eb09529e077d36f43303bd0ee
+SHA1 (patch-server_src_storage_partstreamer.cpp) = c8de60299129673d5cfb699c8c73a9275088fd61
+SHA1 (patch-server_tests_unittest_partstreamertest.cpp) = 1068831b3abeb855f759941d5e38bd86ef89cf0a
