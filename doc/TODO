@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15294 2016/01/10 11:48:36 szptvlfn Exp $
+$NetBSD: TODO,v 1.15295 2016/01/10 20:33:28 bsiegert Exp $
 
 Suggested new packages
 ======================
@@ -1317,7 +1317,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Sys-Hostname-Long-1.5
 	o p5-Sys-SigAction-0.21
 	o p5-Sys-Utmp-1.7
-	o p5-Term-Shell-0.06
 	o p5-Text-MicroTemplate-0.24
 	o p5-Text-Reflow-1.10
 	o p5-Tie-DBI-1.06
