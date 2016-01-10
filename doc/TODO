@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15293 2016/01/10 09:58:32 wiz Exp $
+$NetBSD: TODO,v 1.15294 2016/01/10 11:48:36 szptvlfn Exp $
 
 Suggested new packages
 ======================
@@ -870,7 +870,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hs-cgrep-6.5.2
 	o hs-deepseq-generics-0.1.1.2
 	o hs-exceptions-0.8.0.2
-	o hs-hashable-1.2.3.3
 	o hs-hscolour-1.23
 	o hs-lifted-base-0.2.3.6
 	o hs-monad-control-1.0.0.4

@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.151 2016/01/10 11:48:16 szptvlfn Exp $
+$NetBSD: CHANGES-2016,v 1.152 2016/01/10 11:48:36 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -206,3 +206,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/postgresql-postgis2 to 2.2.1nb1 [gdt 2016-01-10]
 	Updated devel/re2c to 0.15.3 [adam 2016-01-10]
 	Updated devel/hs-text to 1.2.2.0 [szptvlfn 2016-01-10]
+	Updated devel/hs-hashable to 1.2.3.3 [szptvlfn 2016-01-10]
