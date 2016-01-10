@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2013/04/03 10:52:23 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2016/01/10 19:27:41 markd Exp $
 bin/superkaramba
 lib/kde4/plasma_package_superkaramba.so
 lib/kde4/plasma_scriptengine_superkaramba.so
 lib/libsuperkaramba.so
 lib/libsuperkaramba.so.4
-lib/libsuperkaramba.so.${PKGVERSION}
+lib/libsuperkaramba.so.${KDELIBSVER}
 share/applications/kde4/superkaramba.desktop
 share/dbus-1/interfaces/org.kde.superkaramba.xml
 share/icons/hicolor/128x128/apps/superkaramba.png
