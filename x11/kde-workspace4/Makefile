@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.49 2015/12/05 21:26:08 adam Exp $
+# $NetBSD: Makefile,v 1.50 2016/01/10 19:06:41 markd Exp $
 
-DISTNAME=	kde-workspace-4.11.14
+DISTNAME=	kde-workspace-4.11.22
 PKGNAME=	${DISTNAME:S/-4/4-4/}
-PKGREVISION=	2
 CATEGORIES=	x11
 COMMENT=	Base workspace for the KDE 4 integrated X11 desktop
+MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.08.0/src/}
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 4.11.3
 
@@ -59,8 +59,6 @@ REPLACE_PERL+= \
 REPLACE_SH+=		libs/plasmagenericshell/widgetsexplorer/package/Messages.sh
 
 PY_PATCHPLIST=	yes
-
-PLIST_SUBST+=		KDE_VERSION=${_KDE_VERSION}
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
