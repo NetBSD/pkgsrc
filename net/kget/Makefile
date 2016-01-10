@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.19 2015/10/10 01:58:16 ryoon Exp $
+# $NetBSD: Makefile,v 1.20 2016/01/10 19:20:48 markd Exp $
 
-DISTNAME=	kget-${_KDE_VERSION}
-PKGREVISION=	4
+DISTNAME=	kget-15.12.0
 CATEGORIES=	net
 COMMENT=	download manager for KDE
+MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.12.0/src/}
 
 .include "../../meta-pkgs/kde4/Makefile.kde4"
 
 CMAKE_ARGS+=	-DWITH_NepomukCore:BOOL=OFF
 CMAKE_ARGS+=	-DWITH_NepomukWidgets:BOOL=OFF
+CMAKE_ARGS+=	-DWITH_KTorrent:BOOL=OFF
 
 REPLACE_PERL+= \
 	conf/kget_limitdownloads.pl \
