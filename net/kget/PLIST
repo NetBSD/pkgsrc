@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2014/11/13 11:50:26 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/01/10 19:20:48 markd Exp $
 bin/kget
 lib/kde4/kcm_kget_checksumsearchfactory.so
 lib/kde4/kcm_kget_metalinkfactory.so
@@ -16,7 +16,7 @@ lib/kde4/plasma_kget_barapplet.so
 lib/kde4/plasma_kget_piechart.so
 lib/libkgetcore.so
 lib/libkgetcore.so.4
-lib/libkgetcore.so.${PKGVERSION}
+lib/libkgetcore.so.${KDELIBSVER}
 share/applications/kde4/kget.desktop
 share/dbus-1/services/org.kde.kget.service
 share/doc/kde/HTML/en/kget/common
