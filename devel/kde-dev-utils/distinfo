@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 03:27:36 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/01/10 19:53:32 markd Exp $
 
-SHA1 (kde-dev-utils-4.14.3.tar.xz) = 2ed97adf9bf2d2ec4a8472335decdfc6f2077311
-RMD160 (kde-dev-utils-4.14.3.tar.xz) = 71b0e7b02fac2bb93504e695c249a2c07f132581
-SHA512 (kde-dev-utils-4.14.3.tar.xz) = 506d3d88adca8764ef118bd7db5793ceebc5caf7b26d1ff465b72b8e5d04c9a269c48b5186c45c2a9086262e1a8ac6a7ac723d28d98e95b01eab6f27ed97742a
-Size (kde-dev-utils-4.14.3.tar.xz) = 51568 bytes
+SHA1 (kde-dev-utils-15.12.0.tar.xz) = 4835f0667e19faaac44a8959d895c3dd7a4b0ef5
+RMD160 (kde-dev-utils-15.12.0.tar.xz) = 1d7b8fd211a3d8bf1bfc0df2c8f077f44bb9d654
+SHA512 (kde-dev-utils-15.12.0.tar.xz) = eb9b87061d2f1eaf56932116b7a4d36d4f54be06b5c3a078acb883c0dbdf11b716ef76460a459e1e2ed9ca221ebcf10a54382460c4f28234b6d2563a8ec1e040
+Size (kde-dev-utils-15.12.0.tar.xz) = 51668 bytes
