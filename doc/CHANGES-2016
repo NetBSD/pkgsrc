@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.149 2016/01/10 01:21:37 gdt Exp $
+$NetBSD: CHANGES-2016,v 1.150 2016/01/10 10:01:54 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -204,3 +204,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Removed devel/ruby-memoize [tsutsui 2016-01-09]
 	Updated devel/py-linecache2 to 1.0.0nb1 [wiz 2016-01-09]
 	Updated databases/postgresql-postgis2 to 2.2.1nb1 [gdt 2016-01-10]
+	Updated devel/re2c to 0.15.3 [adam 2016-01-10]
