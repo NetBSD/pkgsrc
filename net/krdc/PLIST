@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/11/07 13:03:07 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/01/10 19:18:48 markd Exp $
 bin/krdc
 include/krdc/hostpreferences.h
 include/krdc/remoteview.h
@@ -10,7 +10,7 @@ lib/kde4/krdc_testplugin.so
 lib/kde4/krdc_vncplugin.so
 lib/libkrdccore.so
 lib/libkrdccore.so.4
-lib/libkrdccore.so.${PKGVERSION}
+lib/libkrdccore.so.${KDELIBSVER}
 share/applications/kde4/krdc.desktop
 share/doc/kde/HTML/en/krdc/address_input.png
 share/doc/kde/HTML/en/krdc/bookmarks_menu.png
