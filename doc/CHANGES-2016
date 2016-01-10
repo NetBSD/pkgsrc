@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.153 2016/01/10 11:52:36 tsutsui Exp $
+$NetBSD: CHANGES-2016,v 1.154 2016/01/10 11:56:20 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -208,3 +208,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/hs-text to 1.2.2.0 [szptvlfn 2016-01-10]
 	Updated devel/hs-hashable to 1.2.3.3 [szptvlfn 2016-01-10]
 	Added misc/ruby-mini_portile2 version 2.1.0 [tsutsui 2016-01-10]
+	Updated textproc/ruby-nokogiri to 1.6.7.1 [tsutsui 2016-01-10]
