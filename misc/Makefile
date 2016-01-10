@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.464 2016/01/08 23:54:31 ryoon Exp $
+# $NetBSD: Makefile,v 1.465 2016/01/10 11:52:05 tsutsui Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -286,6 +286,7 @@ SUBDIR+=	ruby-launchy
 SUBDIR+=	ruby-memoizable
 SUBDIR+=	ruby-method_source
 SUBDIR+=	ruby-mini_portile
+SUBDIR+=	ruby-mini_portile2
 SUBDIR+=	ruby-naught
 SUBDIR+=	ruby-ohai
 SUBDIR+=	ruby-parallel
