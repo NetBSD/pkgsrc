@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 23:54:28 agc Exp $
+$NetBSD: distinfo,v 1.7 2016/01/10 19:24:50 markd Exp $
 
-SHA1 (libkcddb-4.14.3.tar.xz) = e6728da9420aefe0b2c545ac33f638cede7835a4
-RMD160 (libkcddb-4.14.3.tar.xz) = 9eddeaba1c1f1b8b5faf0af848336ad134117000
-SHA512 (libkcddb-4.14.3.tar.xz) = 6fc251feb8ff3652d46262ad779f9ebf45426063c9089d5ae97167fbf3586fc4d4d7702cad3f0e576361e20cfb39cc62f07caededceb3bd7332f5e555e30737a
-Size (libkcddb-4.14.3.tar.xz) = 157824 bytes
+SHA1 (libkcddb-15.12.0.tar.xz) = 8266083b54c3b1ed94529799a1d90573b418356f
+RMD160 (libkcddb-15.12.0.tar.xz) = 06bac82879e3b2d7098f3b11e80079e282ed3b52
+SHA512 (libkcddb-15.12.0.tar.xz) = 0b6c965e65fd95323da66ce7686f871b163ca083143b032d53b40219d947769c6926472323a5494d25383c7f09052fb762316fed65d4a577b6c5ae35ad2fa10a
+Size (libkcddb-15.12.0.tar.xz) = 158644 bytes
