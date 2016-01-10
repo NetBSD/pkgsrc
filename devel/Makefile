@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2198 2016/01/10 19:38:49 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2199 2016/01/10 19:58:44 markd Exp $
 #
 
 COMMENT=	Development utilities
@@ -219,6 +219,7 @@ SUBDIR+=	ethos
 SUBDIR+=	etrace
 SUBDIR+=	exctags
 SUBDIR+=	exempi
+SUBDIR+=	extra-cmake-modules
 SUBDIR+=	fann
 SUBDIR+=	fastdep
 SUBDIR+=	ffcall
