@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2013/04/03 12:03:38 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/01/10 19:49:48 markd Exp $
 bin/kolf
 lib/libkolfprivate.so
 lib/libkolfprivate.so.4
-lib/libkolfprivate.so.${PKGVERSION}
+lib/libkolfprivate.so.${KDELIBSVER}
 share/applications/kde4/kolf.desktop
 share/doc/kde/HTML/en/kolf/common
 share/doc/kde/HTML/en/kolf/index.cache.bz2

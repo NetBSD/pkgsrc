@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2014/11/14 08:49:38 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2016/01/10 19:50:10 markd Exp $
 bin/khangman
 include/khangman/khangman_engine_export.h
 include/khangman/khangmanengine.h
 include/khangman/prefs.h
 lib/libkhangmanengine.so
 lib/libkhangmanengine.so.4
-lib/libkhangmanengine.so.${PKGVERSION}
+lib/libkhangmanengine.so.${KDELIBSVER}
 man/man6/khangman.6
 share/appdata/khangman.appdata.xml
 share/applications/kde4/khangman.desktop
