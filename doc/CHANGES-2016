@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.157 2016/01/10 13:33:14 wen Exp $
+$NetBSD: CHANGES-2016,v 1.158 2016/01/10 13:38:09 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -212,3 +212,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/p5-Regexp-Common to 2016010801 [wen 2016-01-10]
 	Updated devel/p5-Test-BDD-Cucumber to 0.40 [schmonz 2016-01-10]
 	Updated devel/p5-Data-Dump-Streamer to 2.39 [wen 2016-01-10]
+	Updated devel/p5-Devel-CheckLib to 1.05 [wen 2016-01-10]
