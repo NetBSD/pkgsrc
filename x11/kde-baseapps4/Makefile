@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.32 2015/04/25 14:25:07 tnn Exp $
+# $NetBSD: Makefile,v 1.33 2016/01/10 19:03:55 markd Exp $
 
-DISTNAME=	kde-baseapps-${_KDE_VERSION}
-PKGNAME=	${DISTNAME:S/-4/4-4/}
-PKGREVISION=	2
+DISTNAME=	kde-baseapps-15.12.0
+PKGNAME=	${DISTNAME:S/-1/4-1/}
 CATEGORIES=	x11
 COMMENT=	Base modules for the KDE 4 integrated X11 desktop
+MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.12.0/src/}
 
 .include "../../meta-pkgs/kde4/Makefile.kde4"
 
