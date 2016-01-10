@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2015/11/04 01:59:50 agc Exp $
+$NetBSD: distinfo,v 1.10 2016/01/10 20:20:00 bsiegert Exp $
 
-SHA1 (Text-Autoformat-1.669006.tar.gz) = bb9f799ef3ae25fa5e7ad98e9112c1966b53b1d4
-RMD160 (Text-Autoformat-1.669006.tar.gz) = 0c9975d82f93bcf05f152aff454982d852b4fdca
-SHA512 (Text-Autoformat-1.669006.tar.gz) = 301d01057ad8e415eb9d61f53624b6516915102dcc40317a6f9da9e3fe1f064162513d197697c069e445f42f3a3b2b1fdc2d5b21434cc24ae99bab2e05c1a95a
-Size (Text-Autoformat-1.669006.tar.gz) = 21345 bytes
+SHA1 (Text-Autoformat-1.74.tar.gz) = 0674f0bf338c2cda41606cee10de996a26a3d694
+RMD160 (Text-Autoformat-1.74.tar.gz) = 1d9850e7873b253ef0716ca7492f25bac2a402e7
+SHA512 (Text-Autoformat-1.74.tar.gz) = 276e97a0db20032919a6aeacba701350fa8fadf6c1bda7dcda714ef4f1c168b8cc3150a126719d940194c8b20dd534543ec914f03c50e27e4a61b1083ca312c6
+Size (Text-Autoformat-1.74.tar.gz) = 29485 bytes
