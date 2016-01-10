@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2013/04/03 12:23:51 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/01/10 19:23:30 markd Exp $
 include/libkcompactdisc/kcompactdisc.h
 lib/cmake/libkcompactdisc/LibkcompactdiscConfig.cmake
 lib/cmake/libkcompactdisc/LibkcompactdiscTargets-${TARGET}.cmake
 lib/cmake/libkcompactdisc/LibkcompactdiscTargets.cmake
 lib/libkcompactdisc.so
 lib/libkcompactdisc.so.4
-lib/libkcompactdisc.so.${PKGVERSION}
+lib/libkcompactdisc.so.${KDELIBSVER}
