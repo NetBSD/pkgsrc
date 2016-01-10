@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.49 2015/04/25 14:23:34 tnn Exp $
+# $NetBSD: Makefile,v 1.50 2016/01/10 19:35:37 markd Exp $
 
-DISTNAME=	kdeartwork-${_KDE_VERSION}
-PKGNAME=	${DISTNAME:S/-4/4-4/}
-PKGREVISION=	2
+DISTNAME=	kdeartwork-15.08.3
+PKGNAME=	${DISTNAME:S/-1/4-1/}
 CATEGORIES=	misc
 COMMENT=	Artwork for the KDE integrated X11 desktop
+MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.08.3/src/}
 
 .include "../../meta-pkgs/kde4/Makefile.kde4"
 
