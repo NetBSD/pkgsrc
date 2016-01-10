@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2014/11/13 20:10:09 markd Exp $
+@comment $NetBSD: PLIST,v 1.10 2016/01/10 19:51:22 markd Exp $
 bin/kate
 bin/kwrite
 include/kate/application.h
@@ -42,10 +42,10 @@ lib/kde4/ktexteditor_lumen.so
 lib/kde4/plasma_applet_katesession.so
 lib/libkateinterfaces.so
 lib/libkateinterfaces.so.4
-lib/libkateinterfaces.so.${PKGVERSION}
+lib/libkateinterfaces.so.${KDELIBSVER}
 lib/libkatepartinterfaces.so
 lib/libkatepartinterfaces.so.4
-lib/libkatepartinterfaces.so.${PKGVERSION}
+lib/libkatepartinterfaces.so.${KDELIBSVER}
 lib/libkdeinit4_kate.so
 lib/libkdeinit4_kwrite.so
 ${PYSITELIB}/PyKate4/__init__.py

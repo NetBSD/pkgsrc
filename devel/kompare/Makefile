@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2015/04/25 14:20:35 tnn Exp $
+# $NetBSD: Makefile,v 1.16 2016/01/10 19:52:07 markd Exp $
 
 DISTNAME=	kompare-${_KDE_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 COMMENT=	Diff/Patch Frontend
 
