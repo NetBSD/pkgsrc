@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.21 2015/11/03 23:49:39 agc Exp $
+$NetBSD: distinfo,v 1.22 2016/01/10 19:33:43 markd Exp $
 
-SHA1 (kdepim-4.14.3.tar.xz) = da7ae7e595119a92f5f2399cbe60b0a6cb38817f
-RMD160 (kdepim-4.14.3.tar.xz) = 7dabf2be18cc9d3a0e42c9be855ebbe45dc54181
-SHA512 (kdepim-4.14.3.tar.xz) = e7a125f36cc8b9e827808d9503861c3f0a6b518034c3cacf544739626907e2392c6e1d778fad058457f00cdae180cd01511f65633a76afeeeb169a56422b04a7
-Size (kdepim-4.14.3.tar.xz) = 14483432 bytes
+SHA1 (kdepim-4.14.10.tar.xz) = 6f74763dda68dbb44394e807eab9204777bddf0a
+RMD160 (kdepim-4.14.10.tar.xz) = a9ba786e76ad0fe44bff5298a413aca514dbca82
+SHA512 (kdepim-4.14.10.tar.xz) = aa7e5a488964d11d355557e89053993bb0bed4860072dbb8ae1851df881713a15ec5aa4e428de9b85a8bef678ace307b33f186314fe5a8011521e30331a1691b
+Size (kdepim-4.14.10.tar.xz) = 14585020 bytes
 SHA1 (patch-ad) = 9c7fbc7223b74cafc30626a024b0177d9e80ad8f
 SHA1 (patch-kleopatra_newcertificatewizard_newcertificatewizard.cpp) = 9769a802e6900f37d2720df35a5c9bc2beb0de79
 SHA1 (patch-kleopatra_smartcard_readerstatus.cpp) = a1e60b97f75f3490873df0dd53bed7d5302eba48
