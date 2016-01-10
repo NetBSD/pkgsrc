@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 00:08:44 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/01/10 13:42:02 kleink Exp $
 
-SHA1 (google-maps-services-python-2.1.1.tar.gz) = b502965560ec29d49eaa115e51173d78f8672e76
-RMD160 (google-maps-services-python-2.1.1.tar.gz) = 59165b8af44315c21134ba17d11b84906130357b
-SHA512 (google-maps-services-python-2.1.1.tar.gz) = db219172d826e7d107f6ea087d9dc1f6f7104970c149e73a02fc287eb2441086610463fc8216ed3f6615a844847ec3ca1561417ec7d80ad8a01f68fbe15e6d88
-Size (google-maps-services-python-2.1.1.tar.gz) = 25636 bytes
+SHA1 (google-maps-services-python-2.4.2.tar.gz) = 622d94dbd3e375ed87369bc48e580b17ac36bc30
+RMD160 (google-maps-services-python-2.4.2.tar.gz) = f1c275851a52c738fd7dcecc67692bb1a91ca6e0
+SHA512 (google-maps-services-python-2.4.2.tar.gz) = 8b0f926b33acf9f12fa425bd2e5bc72593c12292e805e805d9811fe2d5bb59c28e861bf62666deb3f29d72d844bbfff39dcd789143f1eb10ed1266fb22f0c60d
+Size (google-maps-services-python-2.4.2.tar.gz) = 30895 bytes
+SHA1 (patch-setup.py) = efca23a1a4d08138165e191318e20394c1f7aeeb
