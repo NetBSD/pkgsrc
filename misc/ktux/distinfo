@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 23:49:41 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/01/10 19:28:58 markd Exp $
 
-SHA1 (ktux-4.14.3.tar.xz) = 13157abb78fc1a42362a992be0d2c2f61f805fc5
-RMD160 (ktux-4.14.3.tar.xz) = 12a9f111efbb6c05fea69d85cbb69c0ae3b8616f
-SHA512 (ktux-4.14.3.tar.xz) = 2929c1f4db1e7b8f6527c0b90bcc29d76aac9e3b4bd44daa5b535c9611a7f4ac14a8d903d4cc901e9444e5cad0ab3595a02bf06844f56cc074991bb1748a46a1
-Size (ktux-4.14.3.tar.xz) = 108632 bytes
+SHA1 (ktux-15.08.3.tar.xz) = 28022db9913b10b15de519f1e40a759d9d0518ba
+RMD160 (ktux-15.08.3.tar.xz) = e9c42da70e13538f575c4c58493540d4c95dffe2
+SHA512 (ktux-15.08.3.tar.xz) = a099f158ef5addadf4dea70e6ea410bc3cb1090ec4680752c666a9e8ab6bcf9b29294cc8e332ed4c2c3ff8bc74955d4635c55033ccb3b7572fc4fe658acb884e
+Size (ktux-15.08.3.tar.xz) = 108852 bytes
