@@ -1,0 +1,42 @@
+$NetBSD: patch-dolphin_src_CMakeLists.txt,v 1.1 2016/01/10 19:03:55 markd Exp $
+
+Install config files until such time as we have a kf5-based dolphin
+package.
+
+--- dolphin/src/CMakeLists.txt.orig	2015-12-08 07:04:21.000000000 +0000
++++ dolphin/src/CMakeLists.txt
+@@ -347,17 +347,17 @@ install(TARGETS kio_filenamesearch DESTI
+ ########### install files ###############
+ 
+ # Disabled since Applications/15.08 contains kf5-based dolphin from dolphin.git
+-#install( PROGRAMS dolphin.desktop DESTINATION ${XDG_APPS_INSTALL_DIR} )
++install( PROGRAMS dolphin.desktop DESTINATION ${XDG_APPS_INSTALL_DIR} )
+ 
+-#install( FILES settings/dolphin_directoryviewpropertysettings.kcfg
+-#settings/dolphin_generalsettings.kcfg
+-#settings/dolphin_compactmodesettings.kcfg
+-#settings/dolphin_iconsmodesettings.kcfg
+-#settings/dolphin_detailsmodesettings.kcfg
+-#settings/dolphin_versioncontrolsettings.kcfg
+-#DESTINATION ${KCFG_INSTALL_DIR} )
++install( FILES settings/dolphin_directoryviewpropertysettings.kcfg
++settings/dolphin_generalsettings.kcfg
++settings/dolphin_compactmodesettings.kcfg
++settings/dolphin_iconsmodesettings.kcfg
++settings/dolphin_detailsmodesettings.kcfg
++settings/dolphin_versioncontrolsettings.kcfg
++DESTINATION ${KCFG_INSTALL_DIR} )
+ install( FILES dolphinui.rc DESTINATION ${DATA_INSTALL_DIR}/dolphin )
+ #install( FILES dolphin.appdata.xml DESTINATION ${SHARE_INSTALL_PREFIX}/appdata )
+ install( FILES search/filenamesearch.protocol DESTINATION ${SERVICES_INSTALL_DIR} )
+ install( FILES settings/kcm/kcmdolphinviewmodes.desktop DESTINATION
+ ${SERVICES_INSTALL_DIR} )
+@@ -365,6 +365,6 @@ install( FILES settings/kcm/kcmdolphinna
+ install( FILES settings/kcm/kcmdolphinservices.desktop DESTINATION ${SERVICES_INSTALL_DIR} )
+ install( FILES settings/kcm/kcmdolphingeneral.desktop DESTINATION ${SERVICES_INSTALL_DIR} )
+ install( FILES settings/services/servicemenu.knsrc DESTINATION ${CONFIG_INSTALL_DIR} )
+-#install( PROGRAMS settings/services/servicemenuinstallation DESTINATION ${BIN_INSTALL_DIR} )
+-#install( PROGRAMS settings/services/servicemenudeinstallation DESTINATION ${BIN_INSTALL_DIR} )
++install( PROGRAMS settings/services/servicemenuinstallation DESTINATION ${BIN_INSTALL_DIR} )
++install( PROGRAMS settings/services/servicemenudeinstallation DESTINATION ${BIN_INSTALL_DIR} )
+ 
