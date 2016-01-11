@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.178 2016/01/11 23:48:48 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.179 2016/01/11 23:51:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -290,3 +290,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/libLLVM to 3.7.1 [ryoon 2016-01-11]
 	Updated games/vms-empire to 1.14 [leot 2016-01-11]
 	Updated devel/ruby-pkg-config to 1.1.7nb1 [wiz 2016-01-11]
+	Added graphics/ruby-cairo version 1.14.3 [wiz 2016-01-11]
+	Removed graphics/ruby-rcairo successor graphics/ruby-cairo [wiz 2016-01-11]
