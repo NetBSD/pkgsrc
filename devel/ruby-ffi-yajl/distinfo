@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 03:29:23 agc Exp $
+$NetBSD: distinfo,v 1.6 2016/01/11 15:56:19 taca Exp $
 
-SHA1 (ffi-yajl-2.2.2.gem) = 57499271b96fc4270c938df30d59d770ba100fb5
-RMD160 (ffi-yajl-2.2.2.gem) = c1c7cbe63a69c8c1313a99bda8fbd06279a1b9a2
-SHA512 (ffi-yajl-2.2.2.gem) = 87b292686ddaa0c6bd7eea0c94d0774365b223993e7ba14aecaf9277600cb5865ea29648c6a95459b6e689fe1bda6b8277cabff3374b31226aadbed1b15d5e1b
-Size (ffi-yajl-2.2.2.gem) = 141824 bytes
+SHA1 (ffi-yajl-2.2.3.gem) = 348866cf95928af238ffb6956ac56e98912173a9
+RMD160 (ffi-yajl-2.2.3.gem) = 812381bc4c67c1d26b93bd0ce5f035191b36c1a5
+SHA512 (ffi-yajl-2.2.3.gem) = f3624e6213d1d576f3edea89c9e9a30a50e97f360f0dad628fbf82eda942af71ee028fa9d941c9f0af8f8b0476ba0b7cc5c9779ed98121c2c4f087487db01ec0
+Size (ffi-yajl-2.2.3.gem) = 142336 bytes
