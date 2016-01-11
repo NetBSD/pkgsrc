@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2015/10/01 21:38:44 kamil Exp $
+# $NetBSD: Makefile,v 1.4 2016/01/11 07:11:20 kamil Exp $
 
-DISTNAME=	logswan-1.01
+DISTNAME=	logswan-1.04
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fcambus/}
 
@@ -11,24 +11,7 @@ LICENSE=	modified-bsd
 
 USE_CMAKE=	yes
 
-SUBST_CLASSES+=		geoip
-SUBST_STAGE.geoip=	post-patch
-SUBST_FILES.geoip+=	src/logswan.c
-SUBST_SED.geoip+=	-e 's,/usr/local,${PREFIX},g'
-
-DOCDIR=		share/doc/logswan
-EGDIR=		share/examples/logswan
-
-CONF_FILES+=	${EGDIR}/logswan.json ${PKG_SYSCONFDIR}/logswan.json
-
-AUTO_MKDIRS=	yes
-
-post-install:
-.for f in AUTHORS README.md THANKS TODO
-	${RUN}${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/${DOCDIR}
-.endfor
-	${RUN}${INSTALL_DATA} ${WRKSRC}/examples/logswan.json \
-	                      ${DESTDIR}${PREFIX}/${EGDIR}
+CMAKE_ARGS+=	-DGEOIPDIR=${PREFIX}/share/GeoIP
 
 .include "../../textproc/jansson/buildlink3.mk"
 .include "../../net/GeoIP/buildlink3.mk"
