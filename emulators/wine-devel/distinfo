@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.25 2015/11/03 20:31:10 agc Exp $
+$NetBSD: distinfo,v 1.26 2016/01/11 22:53:48 joerg Exp $
 
 SHA1 (wine-1.7.36.tar.bz2) = 69c8bf7116572a4c1e5b1113612f461d88489663
 RMD160 (wine-1.7.36.tar.bz2) = 2cde7505154c656eb58145b4ad7df55251362931
@@ -6,8 +6,7 @@ SHA512 (wine-1.7.36.tar.bz2) = c2d9687e1ab0a53ebff6973fdd83e4b54c397e2b51c172b7c
 Size (wine-1.7.36.tar.bz2) = 22010371 bytes
 SHA1 (patch-configure) = 77b5259dfe3644ca17bb9af8aa1be045b5f88c7f
 SHA1 (patch-dlls_ntdll_signal__x86__64.c) = 92ad434b5d8de9d4dcca5004d2fadede58cfeea8
+SHA1 (patch-dlls_ntdll_string.c) = 5da7614b1ad59ac29d8582ef3104dc79a1a045e6
 SHA1 (patch-dlls_wineoss.drv_mmdevdrv.c) = 89f9d1c08dbfbed3eac971ee534944f7403246a4
 SHA1 (patch-dlls_ws2__32_socket.c) = 98ebaa7b0831e558f49a484ffb3a1b28adb9bcf2
-SHA1 (patch-include_msvcrt_crtdefs.h) = a0ceb8e03b6c85133a8cb4b6c91018b2f2bcc860
-SHA1 (patch-include_windef.h) = af09d491cdbdd50a1cc78442c656e26364a53c39
 SHA1 (patch-include_wine_test.h) = af33ec675c67e2fc56cf52e9c6634cab3e6fdfd2
