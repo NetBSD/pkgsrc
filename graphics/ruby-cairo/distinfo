@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/01/11 23:46:50 wiz Exp $
+
+SHA1 (cairo-1.14.3.gem) = 95801969f90ab2e7e1f349f80b4f5e64a49952e8
+RMD160 (cairo-1.14.3.gem) = ddf4ac180e4d00bc05cb62c5a9bcebba6b0b55dc
+SHA512 (cairo-1.14.3.gem) = aba56403ca813bdcc56c01fed76642e4115a683ed3e3d056675195d2d86fc7dfa44f0077ca47407eeea27789824171251222e6300f3f3c395bc186afb616c772
+Size (cairo-1.14.3.gem) = 97792 bytes
