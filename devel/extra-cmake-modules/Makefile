@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/01/10 19:57:38 markd Exp $
+# $NetBSD: Makefile,v 1.2 2016/01/11 00:02:32 markd Exp $
 
 DISTNAME=	extra-cmake-modules-5.18.0
 CATEGORIES=	graphics kde
@@ -20,6 +20,7 @@ CONFIGURE_DIRS=	_KDE_build
 
 CMAKE_ARGS+=	-DBUILD_TESTING=OFF
 CMAKE_ARGS+=	-DBUILD_HTML_DOCS=OFF
+CMAKE_ARGS+=	-DBUILD_MAN_DOCS=OFF
 
 pre-configure:
 	${MKDIR} ${WRKSRC}/_KDE_build
