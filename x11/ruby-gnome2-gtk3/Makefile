@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2015/12/13 10:52:16 tsutsui Exp $
-#
+# $NetBSD: Makefile,v 1.19 2016/01/11 23:49:34 wiz Exp $
 
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-gtk3-${VERSION}
+PKGREVISION=		1
 COMMENT=		Ruby binding of GTK+-3.x
 CATEGORIES=		x11
 
@@ -21,7 +21,7 @@ BUILDLINK_API_DEPENDS.ruby-gnome2-glib+=	${RUBY_PKGPREFIX}-gnome2-glib>=${VERSIO
 BUILDLINK_API_DEPENDS.ruby-gnome2-pango+=	${RUBY_PKGPREFIX}-gnome2-pango>=${VERSION}
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/ruby-gnome2-pango/buildlink3.mk"
-.include "../../graphics/ruby-rcairo/buildlink3.mk"
+.include "../../graphics/ruby-cairo/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../devel/ruby-pkg-config/tool.mk"
 .include "../../meta-pkgs/ruby-gnome2/Makefile.common"

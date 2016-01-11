@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2015/05/17 06:45:23 tsutsui Exp $
-#
+# $NetBSD: Makefile,v 1.48 2016/01/11 23:49:33 wiz Exp $
 
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-pango-${VERSION}
 COMMENT=		Ruby binding of pango-1.x
@@ -16,6 +15,6 @@ do-test:
 	${RUN} cd ${WRKSRC}/pango/test; ${SETENV} ${TEST_ENV} ${RUBY} run-test.rb
 
 .include "../../devel/pango/buildlink3.mk"
-.include "../../graphics/ruby-rcairo/buildlink3.mk"
+.include "../../graphics/ruby-cairo/buildlink3.mk"
 .include "../../devel/ruby-pkg-config/tool.mk"
 .include "../../meta-pkgs/ruby-gnome2/Makefile.common"
