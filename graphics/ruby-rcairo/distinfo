@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.25 2015/11/03 21:34:19 agc Exp $
-
-SHA1 (rcairo-1.14.1.tar.gz) = 5004067d807dfd8c81c5d0093f431ea61d0c7b82
-RMD160 (rcairo-1.14.1.tar.gz) = f9cd702fcb3baece2c29b58775daf8caa7cc7ff5
-SHA512 (rcairo-1.14.1.tar.gz) = 5cf36e03e8609cd267ca14687cceb848e89c140cc3d405e33ad7f4481a5cae8c9c0f4defd304bbea56dccc65e43a9220fe4a7fcd2b96f41005eab36e6e599f2d
-Size (rcairo-1.14.1.tar.gz) = 101350 bytes
