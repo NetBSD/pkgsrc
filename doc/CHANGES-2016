@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.164 2016/01/10 21:17:34 bsiegert Exp $
+$NetBSD: CHANGES-2016,v 1.165 2016/01/11 04:26:15 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -272,3 +272,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added www/p5-WWW-Mechanize-Shell version 0.55 [bsiegert 2016-01-10]
 	Updated mail/exim to 4.86 [bsiegert 2016-01-10]
 	Updated graphics/freetype2 to 2.6.2 [bsiegert 2016-01-10]
+	Added net/py-google-cloud-sdk version 91.0.1 [ryoon 2016-01-11]
