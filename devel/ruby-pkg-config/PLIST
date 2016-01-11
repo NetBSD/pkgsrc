@@ -1,3 +1,13 @@
-@comment $NetBSD: PLIST,v 1.2 2013/03/14 13:42:57 obache Exp $
-${RUBY_VENDORLIB}/pkg-config.rb
-${RUBY_VENDORLIB}/pkg-config/version.rb
+@comment $NetBSD: PLIST,v 1.3 2016/01/11 23:48:38 wiz Exp $
+${GEM_HOME}/build_info/${GEM_NAME}.info
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/LGPL-2.1
+${GEM_LIBDIR}/NEWS
+${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/lib/pkg-config.rb
+${GEM_LIBDIR}/lib/pkg-config/version.rb
+${GEM_LIBDIR}/test/run-test.rb
+${GEM_LIBDIR}/test/test_pkg_config.rb
