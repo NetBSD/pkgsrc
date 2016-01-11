@@ -1,11 +1,15 @@
-$NetBSD: patch-aa,v 1.4 2013/10/17 16:28:02 roy Exp $
+$NetBSD: patch-aa,v 1.5 2016/01/11 19:37:43 leot Exp $
 
---- Makefile.orig	2004-09-27 15:32:07.000000000 +0000
+o Turn off optimizations present in DEBUG
+o Link against (generic) curses
+o Honors user's CFLAGS and LDFLAGS
+
+--- Makefile.orig	2016-01-11 18:19:51.000000000 +0000
 +++ Makefile
-@@ -18,17 +18,17 @@ SYS = LINUX
- # Use -g to compile the program for debugging.
+@@ -8,18 +8,18 @@ VERS=1.14
  
- #DEBUG = -g -DDEBUG -Wall
+ # Use -g to compile the program for debugging.
+ #DEBUG = -g -DDEBUG
 -DEBUG = -O2
 +#DEBUG = -O2
  
@@ -18,17 +22,18 @@ $NetBSD: patch-aa,v 1.4 2013/10/17 16:28:02 roy Exp $
  
  # You shouldn't have to modify anything below this line.
  
--CFLAGS = $(DEBUG) $(PROFILE) -D$(SYS)
-+CFLAGS += $(DEBUG) $(PROFILE) -D$(SYS)
+ # There's a dynamic format in the object-display routines; suppress the warning
+-CFLAGS = $(DEBUG) $(PROFILE) -Wall -Wno-format-security
++CFLAGS += $(DEBUG) $(PROFILE) -Wall -Wno-format-security
  
  FILES = \
  	attack.c \
-@@ -67,7 +67,7 @@ OFILES = \
+@@ -58,7 +58,7 @@ OFILES = \
  all: vms-empire
  
  vms-empire: $(OFILES)
 -	$(CC) $(PROFILE) -o vms-empire $(OFILES) $(LIBS)
 +	$(CC) $(PROFILE) -o vms-empire $(OFILES) $(LIBS) $(LDFLAGS)
  
- TAGS: $(HEADERS) $(FILES)
- 	etags $(HEADERS) $(FILES)
+ attack.o:: extern.h empire.h
+ compmove.o:: extern.h empire.h
