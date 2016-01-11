@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.165 2016/01/11 04:26:15 ryoon Exp $
+$NetBSD: CHANGES-2016,v 1.166 2016/01/11 07:26:39 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -273,3 +273,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/exim to 4.86 [bsiegert 2016-01-10]
 	Updated graphics/freetype2 to 2.6.2 [bsiegert 2016-01-10]
 	Added net/py-google-cloud-sdk version 91.0.1 [ryoon 2016-01-11]
+	Updated www/logswan to 1.04 [kamil 2016-01-10]
