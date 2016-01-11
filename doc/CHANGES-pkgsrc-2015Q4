@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q4,v 1.1.2.5 2016/01/07 20:33:33 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q4,v 1.1.2.6 2016/01/11 22:14:11 bsiegert Exp $
 
 Changes to the packages collection and infrastructure on the 2015Q4 branch:
 
@@ -13,4 +13,19 @@ net/samba4: security fix
 
 Pullup ticket #4883 - requested by wiz
 print/cups-filters: security fix
+
+Pullup ticket #4885 - requested by sborrill
+sysutils/py-psutil: build fix
+
+Pullup ticket #4886 - requested by bouyer
+sysutils/xenkernel42: security fix
+sysutils/xentools42: security fix
+
+Pullup ticket #4887 - requested by bouyer
+sysutils/xenkernel41: security fix
+sysutils/xentools41: security fix
+
+Pullup ticket #4888 - requested by bouyer
+sysutils/xenkernel45: security fix
+sysutils/xentools45: security fix
 
