@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2016/01/06 09:47:42 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2016/01/11 09:10:10 adam Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -671,6 +671,9 @@ ${PYSITELIB}/youtube_dl/extractor/ir90tv.pyo
 ${PYSITELIB}/youtube_dl/extractor/ivi.py
 ${PYSITELIB}/youtube_dl/extractor/ivi.pyc
 ${PYSITELIB}/youtube_dl/extractor/ivi.pyo
+${PYSITELIB}/youtube_dl/extractor/ivideon.py
+${PYSITELIB}/youtube_dl/extractor/ivideon.pyc
+${PYSITELIB}/youtube_dl/extractor/ivideon.pyo
 ${PYSITELIB}/youtube_dl/extractor/izlesene.py
 ${PYSITELIB}/youtube_dl/extractor/izlesene.pyc
 ${PYSITELIB}/youtube_dl/extractor/izlesene.pyo
@@ -959,6 +962,9 @@ ${PYSITELIB}/youtube_dl/extractor/nowtv.pyo
 ${PYSITELIB}/youtube_dl/extractor/npo.py
 ${PYSITELIB}/youtube_dl/extractor/npo.pyc
 ${PYSITELIB}/youtube_dl/extractor/npo.pyo
+${PYSITELIB}/youtube_dl/extractor/npr.py
+${PYSITELIB}/youtube_dl/extractor/npr.pyc
+${PYSITELIB}/youtube_dl/extractor/npr.pyo
 ${PYSITELIB}/youtube_dl/extractor/nrk.py
 ${PYSITELIB}/youtube_dl/extractor/nrk.pyc
 ${PYSITELIB}/youtube_dl/extractor/nrk.pyo
@@ -1121,6 +1127,9 @@ ${PYSITELIB}/youtube_dl/extractor/restudy.pyo
 ${PYSITELIB}/youtube_dl/extractor/reverbnation.py
 ${PYSITELIB}/youtube_dl/extractor/reverbnation.pyc
 ${PYSITELIB}/youtube_dl/extractor/reverbnation.pyo
+${PYSITELIB}/youtube_dl/extractor/revision3.py
+${PYSITELIB}/youtube_dl/extractor/revision3.pyc
+${PYSITELIB}/youtube_dl/extractor/revision3.pyo
 ${PYSITELIB}/youtube_dl/extractor/ringtv.py
 ${PYSITELIB}/youtube_dl/extractor/ringtv.pyc
 ${PYSITELIB}/youtube_dl/extractor/ringtv.pyo
@@ -1364,9 +1373,6 @@ ${PYSITELIB}/youtube_dl/extractor/teletask.pyo
 ${PYSITELIB}/youtube_dl/extractor/tenplay.py
 ${PYSITELIB}/youtube_dl/extractor/tenplay.pyc
 ${PYSITELIB}/youtube_dl/extractor/tenplay.pyo
-${PYSITELIB}/youtube_dl/extractor/testtube.py
-${PYSITELIB}/youtube_dl/extractor/testtube.pyc
-${PYSITELIB}/youtube_dl/extractor/testtube.pyo
 ${PYSITELIB}/youtube_dl/extractor/testurl.py
 ${PYSITELIB}/youtube_dl/extractor/testurl.pyc
 ${PYSITELIB}/youtube_dl/extractor/testurl.pyo
@@ -1472,6 +1478,9 @@ ${PYSITELIB}/youtube_dl/extractor/tweakers.pyo
 ${PYSITELIB}/youtube_dl/extractor/twentyfourvideo.py
 ${PYSITELIB}/youtube_dl/extractor/twentyfourvideo.pyc
 ${PYSITELIB}/youtube_dl/extractor/twentyfourvideo.pyo
+${PYSITELIB}/youtube_dl/extractor/twentymin.py
+${PYSITELIB}/youtube_dl/extractor/twentymin.pyc
+${PYSITELIB}/youtube_dl/extractor/twentymin.pyo
 ${PYSITELIB}/youtube_dl/extractor/twentytwotracks.py
 ${PYSITELIB}/youtube_dl/extractor/twentytwotracks.pyc
 ${PYSITELIB}/youtube_dl/extractor/twentytwotracks.pyo
