@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.173 2016/01/11 16:06:18 taca Exp $
+$NetBSD: CHANGES-2016,v 1.174 2016/01/11 16:10:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -283,3 +283,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ruby-ffi-yajl to 2.2.3 [taca 2016-01-11]
 	Updated devel/ruby-getopt to 1.4.3 [taca 2016-01-11]
 	Updated devel/ruby-msgpack to 0.7.4 [taca 2016-01-11]
+	Updated net/ruby-net-ldap to 0.13.0 [taca 2016-01-11]
