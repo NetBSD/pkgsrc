@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1097 2016/01/09 19:02:24 tsutsui Exp $
+# $NetBSD: Makefile,v 1.1098 2016/01/11 04:26:48 ryoon Exp $
 #
 
 COMMENT=	Networking tools
@@ -593,6 +593,7 @@ SUBDIR+=	py-eventlib
 SUBDIR+=	py-foolscap
 SUBDIR+=	py-gevent
 SUBDIR+=	py-google
+SUBDIR+=	py-google-cloud-sdk
 SUBDIR+=	py-hatop
 SUBDIR+=	py-hpack
 SUBDIR+=	py-ipaddress
