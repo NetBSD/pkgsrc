@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.167 2016/01/11 08:36:13 adam Exp $
+$NetBSD: CHANGES-2016,v 1.168 2016/01/11 10:05:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -275,3 +275,6 @@ Changes to the packages collection and infrastructure in 2016:
 	Added net/py-google-cloud-sdk version 91.0.1 [ryoon 2016-01-11]
 	Updated www/logswan to 1.04 [kamil 2016-01-10]
 	Updated mail/exim-html to 4.86 [adam 2016-01-11]
+	Updated www/squid3 to 3.5.13 [adam 2016-01-11]
+	Updated net/youtube-dl to 20160109 [adam 2016-01-06]
+	Updated net/miniupnpd to 1.9.20151212 [adam 2016-01-11]
