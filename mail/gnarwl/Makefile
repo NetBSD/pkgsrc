@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2014/08/21 09:37:21 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2016/01/11 22:55:49 joerg Exp $
 
 DISTNAME=	gnarwl-3.6
 PKGREVISION=	1
@@ -12,6 +12,9 @@ COMMENT=	LDAP based mail autoresponder
 LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+# data/Makefile depends on legacy rule execution order
+MAKE_JOBS_SAFE=	no
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake groff
