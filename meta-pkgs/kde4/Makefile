@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2016/01/10 20:02:01 markd Exp $
+# $NetBSD: Makefile,v 1.32 2016/01/11 03:07:29 markd Exp $
 
 DISTNAME=	kde4-4.14.3
 PKGREVISION=	3
@@ -147,7 +147,7 @@ DEPENDS+=	kwalletmanager-4.14.3{,nb[0-9]*}:../../security/kwalletmanager
 DEPENDS+=	kgpg-15.12.0{,nb[0-9]*}:../../security/kgpg
 DEPENDS+=	superkaramba-15.08.3{,nb[0-9]*}:../../misc/superkaramba
 DEPENDS+=	sweeper-15.12.0{,nb[0-9]*}:../../misc/sweeper
-DEPENDS+=	kdewebdev4-5.12.0{,nb[0-9]*}:../../www/kdewebdev4
+DEPENDS+=	kdewebdev4-15.12.0{,nb[0-9]*}:../../www/kdewebdev4
 
 META_PACKAGE=	yes
 
