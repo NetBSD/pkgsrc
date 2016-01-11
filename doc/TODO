@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15299 2016/01/11 19:17:04 ryoon Exp $
+$NetBSD: TODO,v 1.15300 2016/01/11 19:37:59 leot Exp $
 
 Suggested new packages
 ======================
@@ -1728,7 +1728,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o virtuoso-7.2.0p1
 	o visual-regexp-3.1
 	o vm-8.0.7.522 [pkg/37707]
-	o vms-empire-1.13 [pkg/50624]
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
 	o vte-0.36.0
 	o vtk-5.10.1
