@@ -1,7 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1 2015/09/28 22:33:43 kamil Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/01/11 07:11:20 kamil Exp $
 bin/logswan
-share/doc/logswan/AUTHORS
-share/doc/logswan/README.md
-share/doc/logswan/THANKS
-share/doc/logswan/TODO
-share/examples/logswan/logswan.json
+man/man1/logswan.1
