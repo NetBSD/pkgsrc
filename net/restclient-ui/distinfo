@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2016/01/11 13:47:01 abs Exp $
+
+SHA1 (restclient-ui-3.5-jar-with-dependencies.jar) = da57411b52f6b65d541e2a4900c42f8951c75d4b
+RMD160 (restclient-ui-3.5-jar-with-dependencies.jar) = 7435755409ee981447088aa56af7960a363886b5
+SHA512 (restclient-ui-3.5-jar-with-dependencies.jar) = 742dcdb848738d3502a2878e0d874a2d257a04139d14b30ee93b6b77753604365fd20ff2d92ea8aeac12745320bc625056da78c4c60c679fcdc5baf62786ab6e
+Size (restclient-ui-3.5-jar-with-dependencies.jar) = 14279701 bytes
