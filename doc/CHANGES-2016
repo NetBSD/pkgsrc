@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.175 2016/01/11 16:22:39 kleink Exp $
+$NetBSD: CHANGES-2016,v 1.176 2016/01/11 19:17:04 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -285,3 +285,6 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ruby-msgpack to 0.7.4 [taca 2016-01-11]
 	Updated net/ruby-net-ldap to 0.13.0 [taca 2016-01-11]
 	Updated textproc/py-pyphen to 0.9.3 [kleink 2016-01-11]
+	Updated lang/clang to 3.7.1 [ryoon 2016-01-11]
+	Updated lang/clang-static-analyzer to 3.7.1 [ryoon 2016-01-11]
+	Updated lang/libLLVM to 3.7.1 [ryoon 2016-01-11]
