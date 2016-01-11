@@ -1,25 +1,25 @@
-$NetBSD: distinfo,v 1.38 2015/12/29 23:34:44 dholland Exp $
+$NetBSD: distinfo,v 1.39 2016/01/11 19:16:08 ryoon Exp $
 
-SHA1 (cfe-3.7.0.src.tar.xz) = 4ff8100565528b13d99a73f807e9b426c3b3bed9
-RMD160 (cfe-3.7.0.src.tar.xz) = b59a82dcc44d16f1152f5204584bbc47861d223e
-SHA512 (cfe-3.7.0.src.tar.xz) = 099d34cb019ea548c6ee85efd22b150beba0aa92061394fa3e423b1ebfe4a5c98c0586e5d56fc5c39e2b1606d36db59f442c056cc59473e32df76c8790c9d0ae
-Size (cfe-3.7.0.src.tar.xz) = 9147204 bytes
-SHA1 (compiler-rt-3.7.0.src.tar.xz) = b61362b409bb7909a6d11097b5f69fded061073c
-RMD160 (compiler-rt-3.7.0.src.tar.xz) = 94cc920bce769e8b6234376ce8c517cdccd96e0c
-SHA512 (compiler-rt-3.7.0.src.tar.xz) = 2ba6abb3d6ec7f1469cfe1d48fde2069e9a767d19144f80f05516ac63f353ace90a9df3e9d1c1f708f3c397aba0ec61b12e4f105b25a2e1cd26b25b0dd252bc9
-Size (compiler-rt-3.7.0.src.tar.xz) = 1192832 bytes
-SHA1 (libcxx-3.7.0.src.tar.xz) = 73adf9fdca5086dd47a32b34a398d2c1d492d18e
-RMD160 (libcxx-3.7.0.src.tar.xz) = d78a0948483ff593ab2c39dc5ca745b4d08e8620
-SHA512 (libcxx-3.7.0.src.tar.xz) = e71d04efa0fafab129a97ca6f4fd7b5f185258de7455c7a25d0964f459bc6068c69c5d67199f6d7cd3541bdce630106cbaf3b7099e4737dddbdd57c77a3fe054
-Size (libcxx-3.7.0.src.tar.xz) = 994580 bytes
-SHA1 (llvm-3.7.0.src.tar.xz) = 0355c2fe01a8d17c3315069e6f2ef80c281e7dad
-RMD160 (llvm-3.7.0.src.tar.xz) = 1e47ce5e07df267a921c60e526673b2908ffb99b
-SHA512 (llvm-3.7.0.src.tar.xz) = fe3bfefd3d49423831ad12b89f944ac9f469aaaaafdea1dd94fc7fb6d5cc9fbe66b6463796aeaabfc145ae474ec3ad68da41c4a011e8aa4bc650f1835af75388
-Size (llvm-3.7.0.src.tar.xz) = 14636252 bytes
+SHA1 (cfe-3.7.1.src.tar.xz) = 15475a2c1e750a13755812785a4796cf4d9fa4c2
+RMD160 (cfe-3.7.1.src.tar.xz) = 185b0f75970bc50682766a21794440578db87b5d
+SHA512 (cfe-3.7.1.src.tar.xz) = 8e3285a32ad0fd4721fa77c4fb9709f31bb4e4f7cb5245357aaf57b0767b6ef18a30d902b59d1437a6febffb6c2128214f9ce5aa913bb298743221a28c4f9de5
+Size (cfe-3.7.1.src.tar.xz) = 9110616 bytes
+SHA1 (compiler-rt-3.7.1.src.tar.xz) = 8ad98fcc0bc801ba448c9bc43942fd3f545a6923
+RMD160 (compiler-rt-3.7.1.src.tar.xz) = d80d61d0352e4a88265999e081a745779ccc4897
+SHA512 (compiler-rt-3.7.1.src.tar.xz) = bf434519ea0838264c30de1e1e8681320aa868df0ecc825a45c659077b963a4120c18216946558cbf8aea24a8ac8ec39af2066dab906bc7cabc0894d51d61325
+Size (compiler-rt-3.7.1.src.tar.xz) = 1181772 bytes
+SHA1 (libcxx-3.7.1.src.tar.xz) = fcdb0e3e150f10d9a28a8e8eade818df379ce930
+RMD160 (libcxx-3.7.1.src.tar.xz) = b63d75f0547eb17e3f3f4df0875dfe1d0c32525d
+SHA512 (libcxx-3.7.1.src.tar.xz) = 08d2399a8b36aa15290733256c896c9fa43f1a1223bc5c73bbcd014fddf8880e514d2a6dcc456bcf18b537c01fb6911b092e6d9958bccd8e64e9f375ed7a1ab9
+Size (libcxx-3.7.1.src.tar.xz) = 995724 bytes
+SHA1 (llvm-3.7.1.src.tar.xz) = 5dbdcafac105273dcbff94c68837a66c6dd78cef
+RMD160 (llvm-3.7.1.src.tar.xz) = 677e652107e53ec1edeccaf479eff186a9f4c7d6
+SHA512 (llvm-3.7.1.src.tar.xz) = ac521debc02f6deba96ef975d6a546b0c5c77299c1dbf5e1b87a7974ff5e7fd715bd7e384b92d9adf572ce47130bdbf6d3c648eb0d7f72f16f976292e4909e90
+Size (llvm-3.7.1.src.tar.xz) = 14592544 bytes
 SHA1 (patch-ab) = c5e3acb30f824e35fbe60efa72bcaa8303d84450
 SHA1 (patch-ac) = 30406cda5a0d04d738e4807e10f3a5a62d399e2b
 SHA1 (patch-ad) = 143c01e05aad86ebee7ba55ce69bf46a491bd7cf
 SHA1 (patch-configure) = 5c9974c9077084fdf1dcbe0973280df824f5d0e1
 SHA1 (patch-include_llvm_Support_Host.h) = 545f9542cd2aaa6cea58d3653902b4e1a9e7189a
 SHA1 (patch-tools_clang_tools_scan-build_scan-build) = a671f1e513fb43ddc0e73751a78235ab39aeaf9d
-SHA1 (patch-tools_llvm-shlib_Makefile) = 5cd529e824a935abfe91c4b820cfd9c318e03102
+SHA1 (patch-tools_llvm-shlib_Makefile) = dbd159e13d1096a2543bc5832f775808e19c4a18
