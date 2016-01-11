@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.170 2016/01/11 13:52:15 abs Exp $
+$NetBSD: CHANGES-2016,v 1.171 2016/01/11 15:57:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -280,3 +280,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/miniupnpd to 1.9.20151212 [adam 2016-01-11]
 	Added devel/visualvm version 1.3.8 [abs 2016-01-11]
 	Added net/restclient-ui version 3.5 [abs 2016-01-11]
+	Updated devel/ruby-ffi-yajl to 2.2.3 [taca 2016-01-11]
