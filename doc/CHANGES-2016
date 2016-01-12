@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.181 2016/01/12 01:03:03 rillig Exp $
+$NetBSD: CHANGES-2016,v 1.182 2016/01/12 09:40:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -294,3 +294,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Removed graphics/ruby-rcairo successor graphics/ruby-cairo [wiz 2016-01-11]
 	Updated net/Radicale to 1.1.1 [prlw1 2016-01-12]
 	Updated pkgtools/pkglint to 5.3 [rillig 2016-01-12]
+	Added math/ruby-roo version 2.3.1 [wiz 2016-01-12]
