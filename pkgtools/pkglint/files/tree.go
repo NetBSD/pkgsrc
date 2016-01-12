@@ -1,5 +1,9 @@
 package main
 
+import (
+	"fmt"
+)
+
 type Tree struct {
 	name string
 	args []interface{}
@@ -14,7 +18,9 @@ func NewTree(name string, args ...interface{}) *Tree {
 // If the match is partially successful, some or all of the variables
 // may have been copied or not.
 func (t *Tree) Match(pattern *Tree) bool {
-	defer tracecall("Tree.Match", t, pattern)()
+	if G.opts.DebugTrace {
+		defer tracecall(t, pattern)()
+	}
 	if t.name != pattern.name || len(t.args) != len(pattern.args) {
 		return false
 	}
@@ -55,10 +61,10 @@ func (t *Tree) String() string {
 			continue
 		}
 		if arg, ok := arg.(string); ok {
-			s += sprintf(" %q", arg)
+			s += fmt.Sprintf(" %q", arg)
 			continue
 		} else {
-			s += sprintf(" %v", arg)
+			s += fmt.Sprintf(" %v", arg)
 		}
 	}
 	return s + ")"

@@ -28,9 +28,7 @@ DDEESSCCRRIIPPTTIIOONN
      --WW{{[[nnoo--]]wwaarrnn,,......}}   Enable or disable specific warnings.  For a list of
                          warnings, see below.
 
-     --ee|----eexxppllaaiinn        Print further explanations for diagnostics.  Some-
-                         times the reasons for diagnostics are not obvious and
-                         need further explanation.
+     --ee|----eexxppllaaiinn        Print verbose explanations for diagnostics.
 
      --gg|----ggcccc--oouuttppuutt--ffoorrmmaatt
                          Use a format for the diagnostics that is understood
@@ -51,7 +49,8 @@ DDEESSCCRRIIPPTTIIOONN
 
      --ss|----ssoouurrccee         For all diagnostics having file and line number
                          information, show the source code along with the
-                         diagnostics.
+                         diagnostics.  This is especially useful together with
+                         the --ff|----sshhooww--aauuttooffiixx option.
 
    CChheecckkss
      aallll                 Enable all checks.
@@ -127,27 +126,13 @@ DDEESSCCRRIIPPTTIIOONN
                          variable (e.g. sed instead of ${SED}).
 
      [[nnoo--]]eexxttrraa          Emit some additional warnings that are not enabled by
-                         default, for whatever reason.
+                         default.
 
      [[nnoo--]]oorrddeerr          Warn if Makefile variables are not in the preferred
                          order.
 
-     [[nnoo--]]ppeerrmm           Warn if a variable is used or defined outside its
-                         specified scope.  The available permissions are:
-                         append
-                              append something using +=
-                         default
-                              set a default value using ?=
-                         preprocess
-                              use a variable during preprocessing
-                         runtime
-                              use a variable at runtime
-                         set  set a variable using :=, =, !=
-                         unknown
-                              permissions for this variable currently not
-                              known
-                         A `?' means that it is not yet clear which permis-
-                         sions are allowed and which aren't.
+     [[nnoo--]]ppeerrmm           Warn if a variable is used or modified outside its
+                         specified scope.
 
      [[nnoo--]]pplliisstt--ddeepprr     Warn if deprecated pathnames are used in _P_L_I_S_T files.
                          This warning is disabled by default.
@@ -184,10 +169,6 @@ EEXXAAMMPPLLEESS
                  Checks the category Makefile and reports any warnings it can
                  find.
 
-     ppkkgglliinntt --rr --RR ''NNeettBBSSDD||IIdd'' //uussrr//ppkkggssrrcc
-                 Check the whole pkgsrc tree while allowing `NetBSD' or `Id'
-                 as the RCS Id.
-
 DDIIAAGGNNOOSSTTIICCSS
      Diagnostics are written to the standard output.
 
@@ -204,4 +185,4 @@ BBUUGGSS
      If you don't understand the messages, feel free to ask on the
      <tech-pkg@NetBSD.org> mailing list.
 
-NetBSD 6.1                     November 25, 2015                    NetBSD 6.1
+NetBSD 7.0                     January 12, 2016                     NetBSD 7.0
