@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.474 2015/12/30 04:16:56 dholland Exp $
+# $NetBSD: Makefile,v 1.475 2016/01/12 01:02:48 rillig Exp $
 
-PKGNAME=	pkglint-5.2.2.2
+PKGNAME=	pkglint-5.3
 DISTFILES=	# none
 CATEGORIES=	pkgtools
 
-OWNER=		wiz@NetBSD.org
+OWNER=		rillig@NetBSD.org
 HOMEPAGE=	http://www.NetBSD.org/docs/pkgsrc/
 COMMENT=	Verifier for NetBSD packages
 LICENSE=	2-clause-bsd
