@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.186 2016/01/12 14:57:59 reed Exp $
+$NetBSD: CHANGES-2016,v 1.187 2016/01/12 20:09:52 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -298,3 +298,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated finance/gnucash to 2.6.11 [wiz 2016-01-12]
 	Updated finance/gnucash-docs to 2.6.11 [wiz 2016-01-12]
 	Added print/pdf-redact-tools version 0.1 [leot 2016-01-12]
+	Updated meta-pkgs/pkg_developer to 1.2.1 [rillig 2016-01-12]
