@@ -5,46 +5,46 @@ type Toplevel struct {
 	subdirs        []string
 }
 
-func checkdirToplevel() {
-	defer tracecall("checkdirToplevel", G.currentDir)()
+func CheckdirToplevel() {
+	if G.opts.DebugTrace {
+		defer tracecall1(G.CurrentDir)()
+	}
 
 	ctx := new(Toplevel)
-
-	fname := G.currentDir + "/Makefile"
+	fname := G.CurrentDir + "/Makefile"
 
 	lines := LoadNonemptyLines(fname, true)
 	if lines == nil {
 		return
 	}
 
-	ParselinesMk(lines)
-
 	for _, line := range lines {
-		if m, commentedOut, indentation, subdir, comment := match4(line.text, `^(#?)SUBDIR\s*\+=(\s*)(\S+)\s*(?:#\s*(.*?)\s*|)$`); m {
+		if m, commentedOut, indentation, subdir, comment := match4(line.Text, `^(#?)SUBDIR\s*\+=(\s*)(\S+)\s*(?:#\s*(.*?)\s*|)$`); m {
 			ctx.checkSubdir(line, commentedOut == "#", indentation, subdir, comment)
 		}
 	}
 
-	ChecklinesMk(lines)
+	NewMkLines(lines).Check()
 
 	if G.opts.Recursive {
 		if G.opts.CheckGlobal {
-			G.ipcUsedLicenses = make(map[string]bool)
+			G.UsedLicenses = make(map[string]bool)
+			G.Hash = make(map[string]*Hash)
 		}
-		G.todo = append(G.todo, ctx.subdirs...)
+		G.Todo = append(G.Todo, ctx.subdirs...)
 	}
 }
 
 func (ctx *Toplevel) checkSubdir(line *Line, commentedOut bool, indentation, subdir, comment string) {
 	if commentedOut && comment == "" {
-		line.warnf("%q commented out without giving a reason.", subdir)
+		line.Warn1("%q commented out without giving a reason.", subdir)
 	}
 
 	if indentation != "\t" {
-		line.warnf("Indentation should be a single tab character.")
+		line.Warn0("Indentation should be a single tab character.")
 	}
 
-	if contains(subdir, "$") || !fileExists(G.currentDir+"/"+subdir+"/Makefile") {
+	if contains(subdir, "$") || !fileExists(G.CurrentDir+"/"+subdir+"/Makefile") {
 		return
 	}
 
@@ -53,15 +53,15 @@ func (ctx *Toplevel) checkSubdir(line *Line, commentedOut bool, indentation, sub
 	case subdir > prev:
 		// Correctly ordered
 	case subdir == prev:
-		line.errorf("Each subdir must only appear once.")
+		line.Error0("Each subdir must only appear once.")
 	case subdir == "archivers" && prev == "x11":
 		// This exception is documented in the top-level Makefile.
 	default:
-		line.warnf("%s should come before %s", subdir, prev)
+		line.Warn2("%s should come before %s", subdir, prev)
 	}
 	ctx.previousSubdir = subdir
 
 	if !commentedOut {
-		ctx.subdirs = append(ctx.subdirs, G.currentDir+"/"+subdir)
+		ctx.subdirs = append(ctx.subdirs, G.CurrentDir+"/"+subdir)
 	}
 }
