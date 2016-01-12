@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.374 2015/12/27 12:37:29 joerg Exp $
+# $NetBSD: bsd.prefs.mk,v 1.375 2016/01/12 19:55:41 rillig Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -27,7 +27,7 @@
 #	directory. Typical values look like editors/emacs or
 #	misc/openoffice-bin.
 #
-# Keywords: mk.conf user
+# Keywords: mk.conf user platform
 #
 
 .if !defined(BSD_PKG_MK)
