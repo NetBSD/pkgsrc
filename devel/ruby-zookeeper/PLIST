@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2016/01/08 12:53:11 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/01/12 14:19:14 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/gem.build_complete
+${GEM_EXTSDIR}/zookeeper_c.${RUBY_DLEXT}
 ${GEM_LIBDIR}/.ctags_paths
 ${GEM_LIBDIR}/.dotfiles/ruby-gemset
 ${GEM_LIBDIR}/.dotfiles/ruby-version
