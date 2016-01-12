@@ -3685,9 +3685,22 @@ that are not supported, e.g.
 PYTHON_VERSIONS_INCOMPATIBLE=       27
 </pre>
 <p>
-If the packaged software is a Python module, include
-<span class="quote">&#8220;<span class="quote"><code class="filename">../../lang/python/extension.mk</code></span>&#8221;</span>.
-In this case, the package directory should be called
+If the packaged software is a Python module, include one of
+<code class="filename">../../lang/python/egg.mk</code>,
+<code class="filename">../../lang/python/distutils.mk</code>, or
+<code class="filename">../../lang/python/extension.mk</code>.</p>
+<p>Most Python packages use either <span class="quote">&#8220;<span class="quote">distutils</span>&#8221;</span> or
+easy-setup/setuptools (<span class="quote">&#8220;<span class="quote">eggs</span>&#8221;</span>).
+if the packaged software is using setuptools, you only need
+to include <span class="quote">&#8220;<span class="quote"><code class="filename">../../lang/python/egg.mk</code></span>&#8221;</span>.
+Otherwise, if the software uses <span class="quote">&#8220;<span class="quote">distutils</span>&#8221;</span>, include 
+<span class="quote">&#8220;<span class="quote"><code class="filename">../../lang/python/distutils.mk</code></span>&#8221;</span>.
+so pkgsrc will use this framework.
+<span class="quote">&#8220;<span class="quote">distutils</span>&#8221;</span> uses a script called <code class="filename">setup.py</code>,
+if the <span class="quote">&#8220;<span class="quote">distutils</span>&#8221;</span> driver is not called
+<code class="filename">setup.py</code>, set the <code class="varname">PYSETUP</code> variable
+to the name of the script.</p>
+<p>Either way, the package directory should be called
 <span class="quote">&#8220;<span class="quote">py-software</span>&#8221;</span> and <code class="varname">PKGNAME</code> should be set to
 <span class="quote">&#8220;<span class="quote">${PYPKGPREFIX}-${DISTNAME}</span>&#8221;</span>, e.g.
 </p>
@@ -3705,18 +3718,6 @@ For example:
 <pre class="programlisting">
 REPLACE_PYTHON=   *.py
 </pre>
-<p>Most Python packages use either <span class="quote">&#8220;<span class="quote">distutils</span>&#8221;</span> or
-easy-setup (<span class="quote">&#8220;<span class="quote">eggs</span>&#8221;</span>).
-If the software uses <span class="quote">&#8220;<span class="quote">distutils</span>&#8221;</span>, include 
-<span class="quote">&#8220;<span class="quote"><code class="filename">../../lang/python/distutils.mk</code></span>&#8221;</span>.
-so pkgsrc will use this framework.
-<span class="quote">&#8220;<span class="quote">distutils</span>&#8221;</span> uses a script called <code class="filename">setup.py</code>,
-if the <span class="quote">&#8220;<span class="quote">distutils</span>&#8221;</span> driver is not called
-<code class="filename">setup.py</code>, set the <code class="varname">PYSETUP</code> variable
-to the name of the script.</p>
-<p>Otherwise, if the packaged software is egg-aware, you only need
-to include
-<span class="quote">&#8220;<span class="quote"><code class="filename">../../lang/python/egg.mk</code></span>&#8221;</span>.</p>
 <p>Some Python modules have separate distributions for Python-2.x
 and Python-3.x support. In pkgsrc this is handled by the
 <code class="filename">versioned_dependencies.mk</code> file. Set
@@ -7353,7 +7354,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="tools.questions"></a>18.4. Questions regarding the tools</h2></div></div></div>
 <div class="qandaset">
-<a name="idm80761616"></a><dl>
+<a name="idm76299152"></a><dl>
 <dt>18.4.1. <a href="#tools.new">How do I add a new tool?</a>
 </dt>
 <dt>18.4.2. <a href="#tools.listall">How do I get a list of all available
@@ -7372,7 +7373,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.new"></a><a name="idm80761232"></a><p><b>18.4.1.</b></p>
+<a name="tools.new"></a><a name="idm76298768"></a><p><b>18.4.1.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I add a new tool?</p></td>
 </tr>
@@ -7382,7 +7383,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.listall"></a><a name="idm80760208"></a><p><b>18.4.2.</b></p>
+<a name="tools.listall"></a><a name="idm76297744"></a><p><b>18.4.2.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I get a list of all available
 	tools?</p></td>
@@ -7393,7 +7394,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.used"></a><a name="idm80759184"></a><p><b>18.4.3.</b></p>
+<a name="tools.used"></a><a name="idm76296720"></a><p><b>18.4.3.</b></p>
 </td>
 <td align="left" valign="top"><p>How can I get a list of all the tools that a
 	package is using while being built? I want to know whether it
@@ -9554,7 +9555,7 @@ place.</p></li>
 	and if you still don't have the answer, ask on the
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset">
-<a name="idm80160784"></a><dl>
+<a name="idm77828240"></a><dl>
 <dt>22.1. <a href="#devfaq.makeflags">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
@@ -9599,7 +9600,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="idm80160400"></a><p><b>22.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="idm77827856"></a><p><b>22.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9615,7 +9616,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="idm80156432"></a><p><b>22.2.</b></p>
+<a name="devfaq.make"></a><a name="idm77823888"></a><p><b>22.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9633,7 +9634,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="idm80151952"></a><p><b>22.3.</b></p>
+<a name="devfaq.cc"></a><a name="idm77819408"></a><p><b>22.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9651,7 +9652,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="idm80147728"></a><p><b>22.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="idm77815312"></a><p><b>22.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9664,7 +9665,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="idm80145552"></a><p><b>22.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="idm77813008"></a><p><b>22.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9680,7 +9681,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="idm80142480"></a><p><b>22.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="idm77809936"></a><p><b>22.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9704,7 +9705,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="idm80126224"></a><p><b>22.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="idm77801872"></a><p><b>22.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9729,7 +9730,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="idm80122384"></a><p><b>22.8.</b></p>
+<a name="devfaq.documentation"></a><a name="idm77798160"></a><p><b>22.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9777,7 +9778,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="idm80115984"></a><p><b>22.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="idm77791632"></a><p><b>22.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
