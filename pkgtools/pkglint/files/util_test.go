@@ -73,8 +73,16 @@ func (s *Suite) TestIsEmptyDirAndGetSubdirs(c *check.C) {
 	if nodir := s.tmpdir + "/nonexistent"; true {
 		c.Check(isEmptyDir(nodir), equals, true) // Counts as empty.
 		defer s.ExpectFatalError(func() {
-			c.Check(s.Output(), equals, "FATAL: "+nodir+": Cannot be read: open "+nodir+": The system cannot find the file specified.\n")
+			c.Check(s.Output(), check.Matches, `FATAL: (.+): Cannot be read: open (.+): (.+)\n`)
 		})
 		c.Check(getSubdirs(nodir), check.DeepEquals, []string(nil))
+		c.FailNow()
 	}
+}
+
+func (s *Suite) TestPrefixReplacer_Since(c *check.C) {
+	repl := NewPrefixReplacer("hello, world")
+	mark := repl.Mark()
+	repl.AdvanceRegexp(`^\w+`)
+	c.Check(repl.Since(mark), equals, "hello")
 }

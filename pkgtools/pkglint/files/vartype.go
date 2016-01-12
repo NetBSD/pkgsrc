@@ -11,10 +11,10 @@ type Vartype struct {
 	kindOfList KindOfList
 	checker    *VarChecker
 	aclEntries []AclEntry
-	guessed    Guessed
+	guessed    bool
 }
 
-type KindOfList int
+type KindOfList uint8
 
 const (
 	lkNone  KindOfList = iota // Plain data type
@@ -24,64 +24,86 @@ const (
 
 type AclEntry struct {
 	glob        string // Examples: "Makefile", "*.mk"
-	permissions string // Some of: "a"ppend, "d"efault, "s"et; "p"reprocessing, "u"se
+	permissions AclPermissions
 }
 
-// Guessed says whether the type definition is guessed (based on the
-// variable name) or explicitly defined (see vardefs.go).
-type Guessed bool
+type AclPermissions uint8
 
 const (
-	guNotGuessed Guessed = false
-	guGuessed    Guessed = true
+	aclpSet         AclPermissions = 1 << iota // VAR = value
+	aclpSetDefault                             // VAR ?= value
+	aclpAppend                                 // VAR += value
+	aclpUseLoadtime                            // OTHER := ${VAR}, OTHER != ${VAR}
+	aclpUse                                    // OTHER = ${VAR}
+	aclpUnknown
+	aclpAll        AclPermissions = aclpAppend | aclpSetDefault | aclpSet | aclpUseLoadtime | aclpUse
+	aclpAllRuntime AclPermissions = aclpAppend | aclpSetDefault | aclpSet | aclpUse
+	aclpAllWrite   AclPermissions = aclpSet | aclpSetDefault | aclpAppend
+	aclpAllRead    AclPermissions = aclpUseLoadtime | aclpUse
 )
 
-// The allowed actions in this file, or "?" if unknown.
-func (vt *Vartype) effectivePermissions(fname string) string {
+func (perms AclPermissions) Contains(subset AclPermissions) bool {
+	return perms&subset == subset
+}
+
+func (perms AclPermissions) String() string {
+	if perms == 0 {
+		return "none"
+	}
+	result := "" +
+		ifelseStr(perms.Contains(aclpSet), "set, ", "") +
+		ifelseStr(perms.Contains(aclpSetDefault), "set-default, ", "") +
+		ifelseStr(perms.Contains(aclpAppend), "append, ", "") +
+		ifelseStr(perms.Contains(aclpUseLoadtime), "use-loadtime, ", "") +
+		ifelseStr(perms.Contains(aclpUse), "use, ", "") +
+		ifelseStr(perms.Contains(aclpUnknown), "unknown, ", "")
+	return strings.TrimRight(result, ", ")
+}
+
+func (perms AclPermissions) HumanString() string {
+	result := "" +
+		ifelseStr(perms.Contains(aclpSet), "set, ", "") +
+		ifelseStr(perms.Contains(aclpSetDefault), "given a default value, ", "") +
+		ifelseStr(perms.Contains(aclpAppend), "appended to, ", "") +
+		ifelseStr(perms.Contains(aclpUseLoadtime), "used at load time, ", "") +
+		ifelseStr(perms.Contains(aclpUse), "used, ", "")
+	return strings.TrimRight(result, ", ")
+}
+
+func (vt *Vartype) EffectivePermissions(fname string) AclPermissions {
 	for _, aclEntry := range vt.aclEntries {
 		if m, _ := path.Match(aclEntry.glob, path.Base(fname)); m {
 			return aclEntry.permissions
 		}
 	}
-	return "?"
-}
-
-func ReadableVartypePermissions(perms string) string {
-	result := ""
-	for _, c := range perms {
-		switch c {
-		case 'a':
-			result += "append, "
-		case 'd':
-			result += "default, "
-		case 'p':
-			result += "preprocess, "
-		case 's':
-			result += "set, "
-		case 'u':
-			result += "runtime, "
-		case '?':
-			result += "unknown, "
-		}
-	}
-	return strings.TrimRight(result, ", ")
+	return aclpUnknown
 }
 
 // Returns the union of all possible permissions. This can be used to
 // check whether a variable may be defined or used at all, or if it is
 // read-only.
-func (vt *Vartype) union() string {
-	var permissions string
+func (vt *Vartype) Union() AclPermissions {
+	var permissions AclPermissions
 	for _, aclEntry := range vt.aclEntries {
-		permissions += aclEntry.permissions
+		permissions |= aclEntry.permissions
 	}
 	return permissions
+}
+
+func (vt *Vartype) AllowedFiles(perms AclPermissions) string {
+	files := make([]string, 0, len(vt.aclEntries))
+	for _, aclEntry := range vt.aclEntries {
+		if aclEntry.permissions.Contains(perms) {
+			files = append(files, aclEntry.glob)
+		}
+	}
+	return strings.Join(files, ", ")
 }
 
 // Returns whether the type is considered a shell list.
 // This distinction between “real lists” and “considered a list” makes
 // the implementation of checklineMkVartype easier.
-func (vt *Vartype) isConsideredList() bool {
+func (vt *Vartype) IsConsideredList() bool {
 	switch vt.kindOfList {
 	case lkShell:
 		return true
@@ -89,16 +111,14 @@ func (vt *Vartype) isConsideredList() bool {
 		return false
 	}
 	switch vt.checker {
-	case CheckvarSedCommands, CheckvarShellCommand:
+	case CheckvarAwkCommand, CheckvarSedCommands, CheckvarShellCommand, CheckvarShellCommands:
 		return true
 	}
 	return false
 }
 
-func (vt *Vartype) mayBeAppendedTo() bool {
-	return vt.kindOfList != lkNone ||
-		vt.checker == CheckvarAwkCommand ||
-		vt.checker == CheckvarSedCommands
+func (vt *Vartype) MayBeAppendedTo() bool {
+	return vt.kindOfList != lkNone || vt.IsConsideredList()
 }
 
 func (vt *Vartype) String() string {
@@ -123,7 +143,7 @@ func (vc *VarChecker) IsEnum() bool {
 	return hasPrefix(vc.name, "enum: ")
 }
 func (vc *VarChecker) HasEnum(value string) bool {
-	return !matches(value, `\s`) && contains(vc.name, " "+value+" ")
+	return !contains(value, " ") && contains(vc.name, " "+value+" ")
 }
 func (vc *VarChecker) AllowedEnums() string {
 	return vc.name[6 : len(vc.name)-1]
@@ -168,6 +188,7 @@ var (
 	CheckvarSedCommand             = &VarChecker{"SedCommand", (*VartypeCheck).SedCommand}
 	CheckvarSedCommands            = &VarChecker{"SedCommands", nil}
 	CheckvarShellCommand           = &VarChecker{"ShellCommand", nil}
+	CheckvarShellCommands          = &VarChecker{"ShellCommands", nil}
 	CheckvarShellWord              = &VarChecker{"ShellWord", nil}
 	CheckvarStage                  = &VarChecker{"Stage", (*VartypeCheck).Stage}
 	CheckvarString                 = &VarChecker{"String", (*VartypeCheck).String}
@@ -189,5 +210,6 @@ var (
 func init() { // Necessary due to circular dependency
 	CheckvarSedCommands.checker = (*VartypeCheck).SedCommands
 	CheckvarShellCommand.checker = (*VartypeCheck).ShellCommand
+	CheckvarShellCommands.checker = (*VartypeCheck).ShellCommands
 	CheckvarShellWord.checker = (*VartypeCheck).ShellWord
 }

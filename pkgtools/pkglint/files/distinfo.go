@@ -3,29 +3,34 @@ package main
 import (
 	"bytes"
 	"crypto/sha1"
+	"fmt"
 	"io/ioutil"
 	"strings"
 )
 
-func checklinesDistinfo(lines []*Line) {
-	defer tracecall("checklinesDistinfo", lines[0].fname)()
+func ChecklinesDistinfo(lines []*Line) {
+	if G.opts.DebugTrace {
+		defer tracecall1(lines[0].Fname)()
+	}
 
-	fname := lines[0].fname
+	fname := lines[0].Fname
 	var patchesDir = "patches"
-	if G.pkgContext != nil && dirExists(G.currentDir+"/"+G.pkgContext.patchdir) {
-		patchesDir = G.pkgContext.patchdir
+	if G.Pkg != nil && hasSuffix(fname, "/lang/php55/distinfo") {
+		patchesDir = G.CurPkgsrcdir + "/lang/php55/patches"
+	} else if G.Pkg != nil && dirExists(G.CurrentDir+"/"+G.Pkg.Patchdir) {
+		patchesDir = G.Pkg.Patchdir
 	}
-	if G.pkgContext != nil && hasSuffix(fname, "/lang/php54/distinfo") {
-		patchesDir = G.curPkgsrcdir + "/lang/php54/patches"
+	if G.opts.DebugMisc {
+		Debugf(fname, noLines, "patchesDir=%q", patchesDir)
 	}
-	_ = G.opts.DebugMisc && debugf(fname, noLines, "patchesDir=%q", patchesDir)
 
 	ck := &distinfoLinesChecker{
 		fname, patchesDir, isCommitted(fname),
-		make(map[string]bool), "", false, nil}
+		make(map[string]bool), nil, "", false, nil}
 	ck.checkLines(lines)
-	checklinesTrailingEmptyLines(lines)
+	ChecklinesTrailingEmptyLines(lines)
 	ck.checkUnrecordedPatches()
+	SaveAutofixChanges(lines)
 }
 
 type distinfoLinesChecker struct {
@@ -34,28 +39,29 @@ type distinfoLinesChecker struct {
 	distinfoIsCommitted bool
 
 	patches          map[string]bool // "patch-aa" => true
-	previousFilename string
+	currentFirstLine *Line
+	currentFilename  string
 	isPatch          bool
 	algorithms       []string
 }
 
 func (ck *distinfoLinesChecker) checkLines(lines []*Line) {
-	checklineRcsid(lines[0], ``, "")
-	if 1 < len(lines) && lines[1].text != "" {
-		lines[1].notef("Empty line expected.")
+	lines[0].CheckRcsid(``, "")
+	if 1 < len(lines) && lines[1].Text != "" {
+		lines[1].Note0("Empty line expected.")
 	}
 
 	for i, line := range lines {
 		if i < 2 {
 			continue
 		}
-		m, alg, filename, hash := match3(line.text, `^(\w+) \((\w[^)]*)\) = (.*)(?: bytes)?$`)
+		m, alg, filename, hash := match3(line.Text, `^(\w+) \((\w[^)]*)\) = (.*)(?: bytes)?$`)
 		if !m {
-			line.errorf("Invalid line.")
+			line.Error0("Invalid line.")
 			continue
 		}
 
-		if filename != ck.previousFilename {
+		if filename != ck.currentFilename {
 			ck.onFilenameChange(line, filename)
 		}
 		ck.algorithms = append(ck.algorithms, alg)
@@ -63,33 +69,40 @@ func (ck *distinfoLinesChecker) checkLines(lines []*Line) {
 		ck.checkGlobalMismatch(line, filename, alg, hash)
 		ck.checkUncommittedPatch(line, filename, hash)
 	}
-	ck.onFilenameChange(NewLine(ck.distinfoFilename, "EOF", "", nil), "")
+	ck.onFilenameChange(NewLineEOF(ck.distinfoFilename), "")
 }
 
 func (ck *distinfoLinesChecker) onFilenameChange(line *Line, nextFname string) {
-	prevFname := ck.previousFilename
-	if prevFname != "" {
+	currentFname := ck.currentFilename
+	if currentFname != "" {
 		algorithms := strings.Join(ck.algorithms, ", ")
 		if ck.isPatch {
 			if algorithms != "SHA1" {
-				line.errorf("Expected SHA1 hash for %s, got %s.", prevFname, algorithms)
+				line.Error2("Expected SHA1 hash for %s, got %s.", currentFname, algorithms)
 			}
-		} else {
-			if algorithms != "SHA1, RMD160, Size" && algorithms != "SHA1, RMD160, SHA512, Size" {
-				line.errorf("Expected SHA1, RMD160, SHA512, Size checksums for %q, got %s.", prevFname, algorithms)
-			}
+		} else if hasPrefix(currentFname, "patch-") && algorithms == "SHA1" {
+			ck.currentFirstLine.Warn2("Patch file %q does not exist in directory %q.", currentFname, cleanpath(ck.patchdir))
+			Explain(
+				"If the patches directory looks correct, the patch may have been",
+				"removed without updating the distinfo file.  In such a case please",
+				"update the distinfo file.",
+				"",
+				"If the patches directory looks wrong, pkglint needs to be improved.")
+		} else if algorithms != "SHA1, RMD160, Size" && algorithms != "SHA1, RMD160, SHA512, Size" {
+			line.Error2("Expected SHA1, RMD160, SHA512, Size checksums for %q, got %s.", currentFname, algorithms)
 		}
 	}
 
-	ck.isPatch = matches(nextFname, `^patch-.+$`) && fileExists(G.currentDir+"/"+ck.patchdir+"/"+nextFname)
-	ck.previousFilename = nextFname
+	ck.isPatch = hasPrefix(nextFname, "patch-") && fileExists(G.CurrentDir+"/"+ck.patchdir+"/"+nextFname)
+	ck.currentFilename = nextFname
+	ck.currentFirstLine = line
 	ck.algorithms = nil
 }
 
 func (ck *distinfoLinesChecker) checkPatchSha1(line *Line, patchFname, distinfoSha1Hex string) {
-	patchBytes, err := ioutil.ReadFile(G.currentDir + "/" + patchFname)
+	patchBytes, err := ioutil.ReadFile(G.CurrentDir + "/" + patchFname)
 	if err != nil {
-		line.errorf("%s does not exist.", patchFname)
+		line.Error1("%s does not exist.", patchFname)
 		return
 	}
 
@@ -100,39 +113,43 @@ func (ck *distinfoLinesChecker) checkPatchSha1(line *Line, patchFname, distinfoS
 			h.Write(patchLine)
 		}
 	}
-	fileSha1Hex := sprintf("%x", h.Sum(nil))
+	fileSha1Hex := fmt.Sprintf("%x", h.Sum(nil))
 	if distinfoSha1Hex != fileSha1Hex {
-		line.errorf("%s hash of %s differs (distinfo has %s, patch file has %s). Run \"%s makepatchsum\".", "SHA1", patchFname, distinfoSha1Hex, fileSha1Hex, confMake)
+		if !line.AutofixReplace(distinfoSha1Hex, fileSha1Hex) {
+			line.Errorf("%s hash of %s differs (distinfo has %s, patch file has %s). Run \"%s makepatchsum\".", "SHA1", patchFname, distinfoSha1Hex, fileSha1Hex, confMake)
+		}
 	}
 }
 
 func (ck *distinfoLinesChecker) checkUnrecordedPatches() {
-	files, err := ioutil.ReadDir(G.currentDir + "/" + ck.patchdir)
+	files, err := ioutil.ReadDir(G.CurrentDir + "/" + ck.patchdir)
 	if err != nil {
-		_ = G.opts.DebugUnchecked && debugf(ck.distinfoFilename, noLines, "Cannot read patchesDir %q: %s", ck.patchdir, err)
+		if G.opts.DebugUnchecked {
+			Debugf(ck.distinfoFilename, noLines, "Cannot read patchesDir %q: %s", ck.patchdir, err)
+		}
 		return
 	}
 
 	for _, file := range files {
 		patch := file.Name()
 		if file.Mode().IsRegular() && !ck.patches[patch] {
-			errorf(ck.distinfoFilename, noLines, "patch %q is not recorded. Run \"%s makepatchsum\".", ck.patchdir+"/"+patch, confMake)
+			Errorf(ck.distinfoFilename, noLines, "patch %q is not recorded. Run \"%s makepatchsum\".", ck.patchdir+"/"+patch, confMake)
 		}
 	}
 }
 
 // Inter-package check for differing distfile checksums.
 func (ck *distinfoLinesChecker) checkGlobalMismatch(line *Line, fname, alg, hash string) {
-	if G.ipcDistinfo != nil && !ck.isPatch {
+	if G.Hash != nil && !hasPrefix(fname, "patch-") { // Intentionally checking the filename instead of ck.isPatch
 		key := alg + ":" + fname
-		otherHash := G.ipcDistinfo[key]
+		otherHash := G.Hash[key]
 		if otherHash != nil {
 			if otherHash.hash != hash {
-				line.errorf("The hash %s for %s is %s, ...", alg, fname, hash)
-				otherHash.line.errorf("... which differs from %s.", otherHash.hash)
+				line.Errorf("The hash %s for %s is %s, ...", alg, fname, hash)
+				otherHash.line.Error1("... which differs from %s.", otherHash.hash)
 			}
 		} else {
-			G.ipcDistinfo[key] = &Hash{hash, line}
+			G.Hash[key] = &Hash{hash, line}
 		}
 	}
 }
@@ -140,8 +157,8 @@ func (ck *distinfoLinesChecker) checkGlobalMismatch(line *Line, fname, alg, hash
 func (ck *distinfoLinesChecker) checkUncommittedPatch(line *Line, patchName, sha1Hash string) {
 	if ck.isPatch {
 		patchFname := ck.patchdir + "/" + patchName
-		if ck.distinfoIsCommitted && !isCommitted(G.currentDir+"/"+patchFname) {
-			line.warnf("%s is registered in distinfo but not added to CVS.", patchFname)
+		if ck.distinfoIsCommitted && !isCommitted(G.CurrentDir+"/"+patchFname) {
+			line.Warn1("%s is registered in distinfo but not added to CVS.", patchFname)
 		}
 		ck.checkPatchSha1(line, patchFname, sha1Hash)
 		ck.patches[patchName] = true

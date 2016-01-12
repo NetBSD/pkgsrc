@@ -2,10 +2,12 @@ package main
 
 import (
 	"bytes"
+	"fmt"
 	"io/ioutil"
 	"os"
 	"path"
 	"path/filepath"
+	"strings"
 	"testing"
 
 	check "gopkg.in/check.v1"
@@ -35,12 +37,49 @@ func (s *Suite) Output() string {
 	return s.Stdout() + s.Stderr()
 }
 
-func (s *Suite) NewLines(fname string, lines ...string) []*Line {
-	result := make([]*Line, len(lines))
-	for i, line := range lines {
-		result[i] = NewLine(fname, sprintf("%d", i+1), line, []*RawLine{{i + 1, line + "\n"}})
+func (s *Suite) OutputCleanTmpdir() string {
+	if s.tmpdir == "" {
+		return "error: OutputCleanTmpdir must only be called when s.tmpdir is actually set."
+	}
+	return strings.Replace(s.Output(), s.tmpdir, "~", -1)
+}
+
+// Arguments are either (lineno, orignl) or (lineno, orignl, textnl).
+func (s *Suite) NewRawLines(args ...interface{}) []*RawLine {
+	rawlines := make([]*RawLine, len(args)/2)
+	j := 0
+	for i := 0; i < len(args); i += 2 {
+		lineno := args[i].(int)
+		orignl := args[i+1].(string)
+		textnl := orignl
+		if i+2 < len(args) {
+			if s, ok := args[i+2].(string); ok {
+				textnl = s
+				i++
+			}
+		}
+		rawlines[j] = &RawLine{lineno, orignl, textnl}
+		j++
+	}
+	return rawlines[:j]
+}
+
+func (s *Suite) NewLines(fname string, texts ...string) []*Line {
+	result := make([]*Line, len(texts))
+	for i, text := range texts {
+		textnl := text + "\n"
+		result[i] = NewLine(fname, i+1, text, s.NewRawLines(i+1, textnl))
 	}
 	return result
+}
+
+func (s *Suite) NewMkLines(fname string, lines ...string) *MkLines {
+	return NewMkLines(s.NewLines(fname, lines...))
+}
+
+func (s *Suite) DebugToStdout() {
+	G.debugOut = os.Stdout
+	G.opts.DebugTrace = true
 }
 
 func (s *Suite) UseCommandLine(c *check.C, args ...string) {
@@ -51,27 +90,37 @@ func (s *Suite) UseCommandLine(c *check.C, args ...string) {
 }
 
 func (s *Suite) RegisterTool(toolname, varname string, varRequired bool) {
-	if G.globalData.tools == nil {
-		G.globalData.tools = make(map[string]bool)
-		G.globalData.vartools = make(map[string]string)
+	if G.globalData.Tools == nil {
+		G.globalData.Tools = make(map[string]bool)
+		G.globalData.Vartools = make(map[string]string)
 		G.globalData.toolsVarRequired = make(map[string]bool)
+		G.globalData.PredefinedTools = make(map[string]bool)
 	}
-	G.globalData.tools[toolname] = true
-	G.globalData.vartools[toolname] = varname
+	G.globalData.Tools[toolname] = true
+	G.globalData.Vartools[toolname] = varname
 	if varRequired {
 		G.globalData.toolsVarRequired[toolname] = true
 	}
+	G.globalData.PredefinedTools[toolname] = true
 }
 
-func (s *Suite) CreateTmpFile(c *check.C, fname, content string) {
+func (s *Suite) CreateTmpFile(c *check.C, relFname, content string) (absFname string) {
 	if s.tmpdir == "" {
 		s.tmpdir = filepath.ToSlash(c.MkDir())
 	}
-	err := os.MkdirAll(s.tmpdir+"/"+path.Dir(fname), 0777)
-	c.Check(err, check.IsNil)
+	absFname = s.tmpdir + "/" + relFname
+	err := os.MkdirAll(path.Dir(absFname), 0777)
+	c.Assert(err, check.IsNil)
 
-	err = ioutil.WriteFile(s.tmpdir+"/"+fname, []byte(content), 0666)
+	err = ioutil.WriteFile(absFname, []byte(content), 0666)
 	c.Check(err, check.IsNil)
+	return
+}
+
+func (s *Suite) LoadTmpFile(c *check.C, relFname string) string {
+	bytes, err := ioutil.ReadFile(s.tmpdir + "/" + relFname)
+	c.Assert(err, check.IsNil)
+	return string(bytes)
 }
 
 func (s *Suite) ExpectFatalError(action func()) {
@@ -85,14 +134,15 @@ func (s *Suite) ExpectFatalError(action func()) {
 }
 
 func (s *Suite) SetUpTest(c *check.C) {
-	G = new(GlobalVars)
-	G.logOut, G.logErr, G.traceOut = &s.stdout, &s.stderr, &s.stdout
+	G = GlobalVars{TestingData: &TestingData{VerifiedBits: make(map[string]bool)}}
+	G.logOut, G.logErr, G.debugOut = &s.stdout, &s.stderr, &s.stdout
+	s.UseCommandLine(c /* no arguments */)
 }
 
 func (s *Suite) TearDownTest(c *check.C) {
-	G = nil
+	G = GlobalVars{}
 	if out := s.Output(); out != "" {
-		c.Logf("Unchecked output; check with: c.Check(s.Output(), equals, %q)", out)
+		fmt.Fprintf(os.Stderr, "Unchecked output in %q; check with: c.Check(s.Output(), equals, %q)", c.TestName(), out)
 	}
 	s.tmpdir = ""
 }

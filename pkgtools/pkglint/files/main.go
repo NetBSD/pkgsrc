@@ -12,14 +12,13 @@ const confMake = "@BMAKE@"
 const confVersion = "@VERSION@"
 
 func main() {
-	G = new(GlobalVars)
-	G.logOut, G.logErr, G.traceOut = os.Stdout, os.Stderr, os.Stdout
+	G.logOut, G.logErr, G.debugOut = os.Stdout, os.Stderr, os.Stdout
 	os.Exit(new(Pkglint).Main(os.Args...))
 }
 
 type Pkglint struct{}
 
-func (p *Pkglint) Main(args ...string) (exitcode int) {
+func (pkglint *Pkglint) Main(args ...string) (exitcode int) {
 	defer func() {
 		if r := recover(); r != nil {
 			if _, ok := r.(pkglintFatal); ok {
@@ -30,7 +29,7 @@ func (p *Pkglint) Main(args ...string) (exitcode int) {
 		}
 	}()
 
-	if exitcode := p.ParseCommandLine(args); exitcode != nil {
+	if exitcode := pkglint.ParseCommandLine(args); exitcode != nil {
 		return *exitcode
 	}
 
@@ -42,34 +41,38 @@ func (p *Pkglint) Main(args ...string) (exitcode int) {
 	if G.opts.Profiling {
 		f, err := os.Create("pkglint.pprof")
 		if err != nil {
-			dummyLine.fatalf("Cannot create profiling file: %s", err)
+			dummyLine.Fatalf("Cannot create profiling file: %s", err)
 		}
 		pprof.StartCPUProfile(f)
 		defer pprof.StopCPUProfile()
 		G.rematch = NewHistogram()
 		G.renomatch = NewHistogram()
+		G.retime = NewHistogram()
+		G.loghisto = NewHistogram()
 	}
 
 	for _, arg := range G.opts.args {
-		G.todo = append(G.todo, filepath.ToSlash(arg))
+		G.Todo = append(G.Todo, filepath.ToSlash(arg))
 	}
-	if len(G.todo) == 0 {
-		G.todo = []string{"."}
+	if len(G.Todo) == 0 {
+		G.Todo = []string{"."}
 	}
 
 	G.globalData.Initialize()
 
-	for len(G.todo) != 0 {
-		item := G.todo[0]
-		G.todo = G.todo[1:]
+	for len(G.Todo) != 0 {
+		item := G.Todo[0]
+		G.Todo = G.Todo[1:]
 		CheckDirent(item)
 	}
 
 	checktoplevelUnusedLicenses()
-	printSummary()
+	pkglint.PrintSummary()
 	if G.opts.Profiling {
-		G.rematch.printStats("rematch", G.logOut)
-		G.renomatch.printStats("renomatch", G.logOut)
+		G.loghisto.PrintStats("loghisto", G.logOut, 0)
+		G.rematch.PrintStats("rematch", G.logOut, 10)
+		G.renomatch.PrintStats("renomatch", G.logOut, 10)
+		G.retime.PrintStats("retime", G.logOut, 10)
 	}
 	if G.errors != 0 {
 		return 1
@@ -77,7 +80,7 @@ func (p *Pkglint) Main(args ...string) (exitcode int) {
 	return 0
 }
 
-func (p *Pkglint) ParseCommandLine(args []string) *int {
+func (pkglint *Pkglint) ParseCommandLine(args []string) *int {
 	gopts := &G.opts
 	opts := NewOptions()
 
@@ -152,20 +155,20 @@ func (p *Pkglint) ParseCommandLine(args []string) *int {
 	return nil
 }
 
-func printSummary() {
+func (pkglint *Pkglint) PrintSummary() {
 	if !G.opts.Quiet {
 		if G.errors != 0 || G.warnings != 0 {
 			fmt.Fprintf(G.logOut, "%d %s and %d %s found.\n",
 				G.errors, ifelseStr(G.errors == 1, "error", "errors"),
 				G.warnings, ifelseStr(G.warnings == 1, "warning", "warnings"))
 			if G.explanationsAvailable && !G.opts.Explain {
-				fmt.Fprint(G.logOut, "(Run pkglint with the -e option to show explanations.)\n")
+				fmt.Fprint(G.logOut, "(Run \"pkglint -e\" to show explanations.)\n")
 			}
 			if G.autofixAvailable && !G.opts.PrintAutofix && !G.opts.Autofix {
-				fmt.Fprint(G.logOut, "(Run pkglint with the -f option to show what can be fixed automatically.)\n")
+				fmt.Fprint(G.logOut, "(Run \"pkglint -fs\" to show what can be fixed automatically.)\n")
 			}
 			if G.autofixAvailable && !G.opts.Autofix {
-				fmt.Fprint(G.logOut, "(Run pkglint with the -F option to automatically fix some issues.)\n")
+				fmt.Fprint(G.logOut, "(Run \"pkglint -F\" to automatically fix some issues.)\n")
 			}
 		} else {
 			io.WriteString(G.logOut, "looks fine.\n")

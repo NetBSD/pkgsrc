@@ -2,8 +2,6 @@ package main
 
 import (
 	check "gopkg.in/check.v1"
-	"io/ioutil"
-	"path/filepath"
 )
 
 func (s *Suite) TestConvertToLogicalLines_nocont(c *check.C) {
@@ -58,27 +56,41 @@ func (s *Suite) TestSplitRawLine(c *check.C) {
 	c.Check(continuation, equals, "\\")
 }
 
-func (s *Suite) TestAutofix(c *check.C) {
+func (s *Suite) TestAutofix_show(c *check.C) {
 	s.UseCommandLine(c, "--show-autofix")
-	tmpdir := c.MkDir()
-	fname := filepath.ToSlash(tmpdir + "/Makefile")
-	lines := s.NewLines(fname,
-		"line1",
-		"line2",
-		"line3")
-	lines[1].replaceRegex(`.`, "X")
+	fname := s.CreateTmpFile(c, "Makefile", ""+
+		"line1\n"+
+		"line2\n"+
+		"line3\n")
+	lines := LoadExistingLines(fname, true)
 
-	saveAutofixChanges(lines)
+	if !lines[1].AutofixReplaceRegexp(`.`, "X") {
+		lines[1].Warn0("Something's wrong here.") // Prints the autofix NOTE afterwards
+	}
+	SaveAutofixChanges(lines)
 
-	c.Assert(fileExists(fname), equals, false)
-	c.Check(s.Output(), equals, "NOTE: "+fname+":2: Autofix: replacing regular expression \".\" with \"X\".\n")
+	c.Check(lines[1].raw[0].textnl, equals, "XXXXX\n")
+	c.Check(s.LoadTmpFile(c, "Makefile"), equals, "line1\nline2\nline3\n")
+	c.Check(s.OutputCleanTmpdir(), equals, ""+
+		"WARN: ~/Makefile:2: Something's wrong here.\n"+
+		"AUTOFIX: ~/Makefile:2: Replacing regular expression \".\" with \"X\".\n")
+}
 
+func (s *Suite) TestAutofix_fix(c *check.C) {
 	s.UseCommandLine(c, "--autofix")
+	fname := s.CreateTmpFile(c, "Makefile", ""+
+		"line1\n"+
+		"line2\n"+
+		"line3\n")
+	lines := LoadExistingLines(fname, true)
 
-	saveAutofixChanges(lines)
+	if !lines[1].AutofixReplaceRegexp(`.`, "X") {
+		lines[1].Warn0("Something's wrong here.") // Prints the autofix NOTE afterwards
+	}
+	SaveAutofixChanges(lines)
 
-	content, err := ioutil.ReadFile(fname)
-	c.Assert(err, check.IsNil)
-	c.Check(string(content), equals, "line1\nXXXXX\nline3\n")
-	c.Check(s.Output(), equals, "NOTE: "+fname+": Has been auto-fixed. Please re-run pkglint.\n")
+	c.Check(s.LoadTmpFile(c, "Makefile"), equals, "line1\nXXXXX\nline3\n")
+	c.Check(s.OutputCleanTmpdir(), equals, ""+
+		"AUTOFIX: ~/Makefile:2: Replacing regular expression \".\" with \"X\".\n"+
+		"AUTOFIX: ~/Makefile: Has been auto-fixed. Please re-run pkglint.\n")
 }

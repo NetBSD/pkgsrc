@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkglint.1,v 1.49 2015/11/25 13:29:07 rillig Exp $
+.\"	$NetBSD: pkglint.1,v 1.50 2016/01/12 01:02:49 rillig Exp $
 .\"	From FreeBSD: portlint.1,v 1.8 1997/11/25 14:53:14 itojun Exp
 .\"
 .\" Copyright (c) 1997 by Jun-ichiro Itoh <itojun@itojun.org>.
@@ -6,9 +6,9 @@
 .\"
 .\" Roland Illig <roland.illig@gmx.de>, 2004, 2005.
 .\" Thomas Klausner <wiz@NetBSD.org>, 2012.
-.\" Roland Illig <rillig@NetBSD.org>, 2015.
+.\" Roland Illig <rillig@NetBSD.org>, 2015, 2016.
 .\"
-.Dd November 25, 2015
+.Dd January 12, 2016
 .Dt PKGLINT 1
 .Os
 .Sh NAME
@@ -50,9 +50,7 @@ version number and exit.
 Enable or disable specific warnings.
 For a list of warnings, see below.
 .It Fl e Ns | Ns Fl -explain
-Print further explanations for diagnostics.
-Sometimes the reasons for diagnostics are not obvious and need further
-explanation.
+Print verbose explanations for diagnostics.
 .It Fl g Ns | Ns Fl -gcc-output-format
 Use a format for the diagnostics that is understood by most programs,
 especially editors, so they can provide a point-and-goto interface.
@@ -71,6 +69,9 @@ line.
 .It Fl s Ns | Ns Fl -source
 For all diagnostics having file and line number information, show the
 source code along with the diagnostics.
+This is especially useful together with the
+.Fl f Ns | Ns Fl -show-autofix
+option.
 .El
 .\" =======================================================================
 .Ss Checks
@@ -148,30 +149,11 @@ Warn if a file contains an absolute pathname.
 Warn if a system command name is used instead of a variable (e.g. sed
 instead of ${SED}).
 .It Cm [no-]extra
-Emit some additional warnings that are not enabled by default,
-for whatever reason.
+Emit some additional warnings that are not enabled by default.
 .It Cm [no-]order
 Warn if Makefile variables are not in the preferred order.
 .It Cm [no-]perm
-Warn if a variable is used or defined outside its specified scope.
-The available permissions are:
-.Bl -tag -width 3n -compact
-.It append
-append something using +=
-.It default
-set a default value using ?=
-.It preprocess
-use a variable during preprocessing
-.It runtime
-use a variable at runtime
-.It set
-set a variable using :=, =, !=
-.It unknown
-permissions for this variable currently not known
-.El
-A
-.Sq \&?
-means that it is not yet clear which permissions are allowed and which aren't.
+Warn if a variable is used or modified outside its specified scope.
 .It Cm [no-]plist-depr
 Warn if deprecated pathnames are used in
 .Pa PLIST
@@ -215,12 +197,6 @@ Files from the pkgsrc infrastructure.
 Checks the patches of the package in the current directory.
 .It Ic pkglint \-Wall /usr/pkgsrc/devel
 Checks the category Makefile and reports any warnings it can find.
-.It Ic pkglint -r \-R 'NetBSD|Id' /usr/pkgsrc
-Check the whole pkgsrc tree while allowing
-.Ql NetBSD
-or
-.Ql Id
-as the RCS Id.
 .El
 .Sh DIAGNOSTICS
 Diagnostics are written to the standard output.
