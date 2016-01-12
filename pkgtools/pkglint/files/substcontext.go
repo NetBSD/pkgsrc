@@ -17,17 +17,16 @@ func (ctx *SubstContext) Varassign(mkline *MkLine) {
 		return
 	}
 
-	line:=mkline.line
-	varname := line.extra["varname"].(string)
-	op := line.extra["op"].(string)
-	value := line.extra["value"].(string)
+	varname := mkline.Varname()
+	op := mkline.Op()
+	value := mkline.Value()
 	if varname == "SUBST_CLASSES" {
 		classes := splitOnSpace(value)
 		if len(classes) > 1 {
-			line.warnf("Please add only one class at a time to SUBST_CLASSES.")
+			mkline.Warn0("Please add only one class at a time to SUBST_CLASSES.")
 		}
 		if ctx.id != "" {
-			line.warnf("SUBST_CLASSES should only appear once in a SUBST block.")
+			mkline.Warn0("SUBST_CLASSES should only appear once in a SUBST block.")
 		}
 		ctx.id = classes[0]
 		return
@@ -36,13 +35,13 @@ func (ctx *SubstContext) Varassign(mkline *MkLine) {
 	m, varbase, varparam := match2(varname, `^(SUBST_(?:STAGE|MESSAGE|FILES|SED|VARS|FILTER_CMD))\.([\-\w_]+)$`)
 	if !m {
 		if ctx.id != "" {
-			line.warnf("Foreign variable %q in SUBST block.", varname)
+			mkline.Warn1("Foreign variable %q in SUBST block.", varname)
 		}
 		return
 	}
 
 	if ctx.id == "" {
-		line.warnf("SUBST_CLASSES should come before the definition of %q.", varname)
+		mkline.Warn1("SUBST_CLASSES should come before the definition of %q.", varname)
 		ctx.id = varparam
 	}
 
@@ -56,26 +55,26 @@ func (ctx *SubstContext) Varassign(mkline *MkLine) {
 			// but from a technically viewpoint, it is incorrect.
 			ctx.id = varparam
 		} else {
-			line.warnf("Variable %q does not match SUBST class %q.", varname, ctx.id)
+			mkline.Warn2("Variable %q does not match SUBST class %q.", varname, ctx.id)
 		}
 		return
 	}
 
 	switch varbase {
 	case "SUBST_STAGE":
-		ctx.dup(line, &ctx.stage, varname, value)
+		ctx.dup(mkline, &ctx.stage, varname, value)
 	case "SUBST_MESSAGE":
-		ctx.dup(line, &ctx.message, varname, value)
+		ctx.dup(mkline, &ctx.message, varname, value)
 	case "SUBST_FILES":
-		ctx.duplist(line, &ctx.files, varname, op, value)
+		ctx.duplist(mkline, &ctx.files, varname, op, value)
 	case "SUBST_SED":
-		ctx.duplist(line, &ctx.sed, varname, op, value)
+		ctx.duplist(mkline, &ctx.sed, varname, op, value)
 	case "SUBST_FILTER_CMD":
-		ctx.dup(line, &ctx.filterCmd, varname, value)
+		ctx.dup(mkline, &ctx.filterCmd, varname, value)
 	case "SUBST_VARS":
-		ctx.duplist(line, &ctx.vars, varname, op, value)
+		ctx.duplist(mkline, &ctx.vars, varname, op, value)
 	default:
-		line.warnf("Foreign variable %q in SUBST block.", varname)
+		mkline.Warn1("Foreign variable %q in SUBST block.", varname)
 	}
 }
 
@@ -87,18 +86,17 @@ func (ctx *SubstContext) IsComplete() bool {
 }
 
 func (ctx *SubstContext) Finish(mkline *MkLine) {
-	line:=mkline.line
 	if ctx.id == "" || !G.opts.WarnExtra {
 		return
 	}
 	if ctx.stage == "" {
-		line.warnf("Incomplete SUBST block: %s missing.", ctx.varname("SUBST_STAGE"))
+		mkline.Warn1("Incomplete SUBST block: %s missing.", ctx.varname("SUBST_STAGE"))
 	}
 	if len(ctx.files) == 0 {
-		line.warnf("Incomplete SUBST block: %s missing.", ctx.varname("SUBST_FILES"))
+		mkline.Warn1("Incomplete SUBST block: %s missing.", ctx.varname("SUBST_FILES"))
 	}
 	if len(ctx.sed) == 0 && len(ctx.vars) == 0 && ctx.filterCmd == "" {
-		line.warnf("Incomplete SUBST block: %s, %s or %s missing.",
+		mkline.Line.Warnf("Incomplete SUBST block: %s, %s or %s missing.",
 			ctx.varname("SUBST_SED"), ctx.varname("SUBST_VARS"), ctx.varname("SUBST_FILTER_CMD"))
 	}
 	ctx.id = ""
@@ -111,6 +109,8 @@ func (ctx *SubstContext) Finish(mkline *MkLine) {
 }
 
 func (ctx *SubstContext) varname(varbase string) string {
+	switch { // prevent inlining
+	}
 	if ctx.id != "" {
 		return varbase + "." + ctx.id
 	} else {
@@ -118,16 +118,16 @@ func (ctx *SubstContext) varname(varbase string) string {
 	}
 }
 
-func (ctx *SubstContext) dup(line *Line, pstr *string, varname, value string) {
+func (ctx *SubstContext) dup(mkline *MkLine, pstr *string, varname, value string) {
 	if *pstr != "" {
-		line.warnf("Duplicate definition of %q.", varname)
+		mkline.Warn1("Duplicate definition of %q.", varname)
 	}
 	*pstr = value
 }
 
-func (ctx *SubstContext) duplist(line *Line, plist *[]string, varname, op, value string) {
-	if len(*plist) > 0 && op != "+=" {
-		line.warnf("All but the first %q lines should use the \"+=\" operator.", varname)
+func (ctx *SubstContext) duplist(mkline *MkLine, plist *[]string, varname string, op MkOperator, value string) {
+	if len(*plist) > 0 && op != opAssignAppend {
+		mkline.Warn1("All but the first %q lines should use the \"+=\" operator.", varname)
 	}
 	*plist = append(*plist, value)
 }

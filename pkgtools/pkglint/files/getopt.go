@@ -19,6 +19,8 @@ func NewOptions() *Options {
 }
 
 func (o *Options) AddFlagGroup(shortName rune, longName, argDescription, description string) *FlagGroup {
+	switch { // prevent inlining
+	}
 	grp := new(FlagGroup)
 	opt := &option{shortName, longName, argDescription, description, grp}
 	o.options = append(o.options, opt)
@@ -26,6 +28,8 @@ func (o *Options) AddFlagGroup(shortName rune, longName, argDescription, descrip
 }
 
 func (o *Options) AddFlagVar(shortName rune, longName string, pflag *bool, defval bool, description string) {
+	switch { // prevent inlining
+	}
 	*pflag = defval
 	opt := &option{shortName, longName, "", description, pflag}
 	o.options = append(o.options, opt)
@@ -123,14 +127,14 @@ optchar:
 				case *FlagGroup:
 					argarg := optchars[ai+utf8.RuneLen(optchar):]
 					if argarg != "" {
-						return 0, data.parse(sprintf("-%c", optchar), argarg)
+						return 0, data.parse(string([]rune{'-', optchar}), argarg)
 					} else {
-						return 1, data.parse(sprintf("-%c", optchar), args[i+1])
+						return 1, data.parse(string([]rune{'-', optchar}), args[i+1])
 					}
 				}
 			}
 		}
-		return 0, optErr(sprintf("unknown option: -%c", optchar))
+		return 0, optErr("unknown option: -" + string([]rune{optchar}))
 	}
 	return 0, nil
 }
@@ -138,8 +142,8 @@ optchar:
 func (o *Options) Help(out io.Writer, generalUsage string) {
 	wr := tabwriter.NewWriter(out, 1, 0, 2, ' ', tabwriter.TabIndent)
 
-	fmt.Fprintf(wr, "usage: %s\n", generalUsage)
-	fmt.Fprintln(wr)
+	io.WriteString(wr, "usage: "+generalUsage+"\n")
+	io.WriteString(wr, "\n")
 	wr.Flush()
 
 	for _, opt := range o.options {
@@ -158,10 +162,10 @@ func (o *Options) Help(out io.Writer, generalUsage string) {
 		switch flagGroup := opt.data.(type) {
 		case *FlagGroup:
 			hasFlagGroups = true
-			fmt.Fprintln(wr)
+			io.WriteString(wr, "\n")
 			fmt.Fprintf(wr, "  Flags for -%c, --%s:\n", opt.shortName, opt.longName)
-			fmt.Fprintf(wr, "    all\t all of the following\n")
-			fmt.Fprintf(wr, "    none\t none of the following\n")
+			io.WriteString(wr, "    all\t all of the following\n")
+			io.WriteString(wr, "    none\t none of the following\n")
 			for _, flag := range flagGroup.flags {
 				fmt.Fprintf(wr, "    %s\t %s (%v)\n", flag.name, flag.help, ifelseStr(*flag.value, "enabled", "disabled"))
 			}
@@ -169,8 +173,8 @@ func (o *Options) Help(out io.Writer, generalUsage string) {
 		}
 	}
 	if hasFlagGroups {
-		fmt.Fprintln(wr)
-		fmt.Fprint(wr, "  (Prefix a flag with \"no-\" to disable it.)\n")
+		io.WriteString(wr, "\n")
+		io.WriteString(wr, "  (Prefix a flag with \"no-\" to disable it.)\n")
 		wr.Flush()
 	}
 }
@@ -188,6 +192,8 @@ type FlagGroup struct {
 }
 
 func (fg *FlagGroup) AddFlagVar(name string, flag *bool, defval bool, help string) {
+	switch { // prevent inlining
+	}
 	opt := &groupFlag{name, flag, help}
 	fg.flags = append(fg.flags, opt)
 	*flag = defval

@@ -1,54 +1,41 @@
 package main
 
 import (
+	"strings"
+
 	check "gopkg.in/check.v1"
 )
 
 func (s *Suite) TestDetermineUsedVariables_simple(c *check.C) {
-	G.mkContext = newMkContext()
-	line := NewLine("fname", "1", "${VAR}", nil)
-	lines := []*Line{line}
+	mklines := s.NewMkLines("fname",
+		"\t${VAR}")
+	mkline := mklines.mklines[0]
+	G.Mk = mklines
 
-	determineUsedVariables(lines)
+	mklines.DetermineUsedVariables()
 
-	c.Check(len(G.mkContext.varuse), equals, 1)
-	c.Check(G.mkContext.varuse["VAR"], equals, line)
+	c.Check(len(mklines.varuse), equals, 1)
+	c.Check(mklines.varuse["VAR"], equals, mkline)
 }
 
 func (s *Suite) TestDetermineUsedVariables_nested(c *check.C) {
-	G.mkContext = newMkContext()
-	line := NewLine("fname", "2", "${outer.${inner}}", nil)
-	lines := []*Line{line}
+	mklines := s.NewMkLines("fname",
+		"\t${outer.${inner}}")
+	mkline := mklines.mklines[0]
+	G.Mk = mklines
 
-	determineUsedVariables(lines)
+	mklines.DetermineUsedVariables()
 
-	c.Check(len(G.mkContext.varuse), equals, 3)
-	c.Check(G.mkContext.varuse["inner"], equals, line)
-	c.Check(G.mkContext.varuse["outer."], equals, line)
-	c.Check(G.mkContext.varuse["outer.*"], equals, line)
-}
-
-func (s *Suite) TestReShellword(c *check.C) {
-	re := `^(?:` + reShellword + `)$`
-	matches := check.NotNil
-	doesntMatch := check.IsNil
-
-	c.Check(match("", re), doesntMatch)
-	c.Check(match("$var", re), matches)
-	c.Check(match("$var$var", re), matches)
-	c.Check(match("$var;;", re), doesntMatch) // More than one shellword
-	c.Check(match("'single-quoted'", re), matches)
-	c.Check(match("\"", re), doesntMatch)       // Incomplete string
-	c.Check(match("'...'\"...\"", re), matches) // Mixed strings
-	c.Check(match("\"...\"", re), matches)
-	c.Check(match("`cat file`", re), matches)
+	c.Check(len(mklines.varuse), equals, 3)
+	c.Check(mklines.varuse["inner"], equals, mkline)
+	c.Check(mklines.varuse["outer."], equals, mkline)
+	c.Check(mklines.varuse["outer.*"], equals, mkline)
 }
 
 func (s *Suite) TestResolveVariableRefs_CircularReference(c *check.C) {
-	line := NewLine("fname", "1", "dummy", nil)
-	line.extra["value"] = "${GCC_VERSION}"
-	G.pkgContext = newPkgContext(".")
-	G.pkgContext.vardef["GCC_VERSION"] = line // circular reference
+	mkline := NewMkLine(NewLine("fname", 1, "GCC_VERSION=${GCC_VERSION}", nil))
+	G.Pkg = NewPackage(".")
+	G.Pkg.vardef["GCC_VERSION"] = mkline
 
 	resolved := resolveVariableRefs("gcc-${GCC_VERSION}")
 
@@ -56,16 +43,13 @@ func (s *Suite) TestResolveVariableRefs_CircularReference(c *check.C) {
 }
 
 func (s *Suite) TestResolveVariableRefs_Multilevel(c *check.C) {
-	line1 := NewLine("fname", "dummy", "dummy", nil)
-	line1.extra["value"] = "${SECOND}"
-	line2 := NewLine("fname", "dummy", "dummy", nil)
-	line2.extra["value"] = "${THIRD}"
-	line3 := NewLine("fname", "dummy", "dummy", nil)
-	line3.extra["value"] = "got it"
-	G.pkgContext = newPkgContext(".")
-	G.pkgContext.vardef["FIRST"] = line1
-	G.pkgContext.vardef["SECOND"] = line2
-	G.pkgContext.vardef["THIRD"] = line3
+	mkline1 := NewMkLine(NewLine("fname", 10, "_=${SECOND}", nil))
+	mkline2 := NewMkLine(NewLine("fname", 11, "_=${THIRD}", nil))
+	mkline3 := NewMkLine(NewLine("fname", 12, "_=got it", nil))
+	G.Pkg = NewPackage(".")
+	defineVar(mkline1, "FIRST")
+	defineVar(mkline2, "SECOND")
+	defineVar(mkline3, "THIRD")
 
 	resolved := resolveVariableRefs("you ${FIRST}")
 
@@ -73,10 +57,9 @@ func (s *Suite) TestResolveVariableRefs_Multilevel(c *check.C) {
 }
 
 func (s *Suite) TestResolveVariableRefs_SpecialChars(c *check.C) {
-	line := NewLine("fname", "dummy", "dummy", nil)
-	line.extra["value"] = "x11"
-	G.pkgContext = newPkgContext("category/pkg")
-	G.pkgContext.vardef["GST_PLUGINS0.10_TYPE"] = line
+	mkline := NewMkLine(NewLine("fname", 10, "_=x11", nil))
+	G.Pkg = NewPackage("category/pkg")
+	G.Pkg.vardef["GST_PLUGINS0.10_TYPE"] = mkline
 
 	resolved := resolveVariableRefs("gst-plugins0.10-${GST_PLUGINS0.10_TYPE}/distinfo")
 
@@ -92,7 +75,7 @@ func (s *Suite) TestChecklineRcsid(c *check.C) {
 		"$"+"FreeBSD$")
 
 	for _, line := range lines {
-		checklineRcsid(line, ``, "")
+		line.CheckRcsid(``, "")
 	}
 
 	c.Check(s.Output(), equals, ""+
@@ -102,11 +85,93 @@ func (s *Suite) TestChecklineRcsid(c *check.C) {
 }
 
 func (s *Suite) TestMatchVarassign(c *check.C) {
-	m, varname, op, value, comment := matchVarassign("C++=c11")
+	checkVarassign := func(text string, ck check.Checker, varname, op, value, comment string) {
+		type va struct {
+			varname, op, value, comment string
+		}
+		expected := va{varname, op, value, comment}
+		am, avarname, aop, avalue, acomment := MatchVarassign(text)
+		if !am {
+			c.Errorf("Text %q doesn’t match variable assignment", text)
+			return
+		}
+		actual := va{avarname, aop, avalue, acomment}
+		c.Check(actual, ck, expected)
+	}
+	checkNotVarassign := func(text string) {
+		m, _, _, _, _ := MatchVarassign(text)
+		if m {
+			c.Errorf("Text %q matches variable assignment, but shouldn’t.", text)
+		}
+	}
 
-	c.Check(m, equals, true)
-	c.Check(varname, equals, "C+")
-	c.Check(op, equals, "+=")
-	c.Check(value, equals, "c11")
-	c.Check(comment, equals, "")
+	checkVarassign("C++=c11", equals, "C+", "+=", "c11", "")
+	checkVarassign("V=v", equals, "V", "=", "v", "")
+	checkVarassign("VAR=#comment", equals, "VAR", "=", "", "#comment")
+	checkVarassign("VAR=\\#comment", equals, "VAR", "=", "#comment", "")
+	checkVarassign("VAR=\\\\\\##comment", equals, "VAR", "=", "\\\\#", "#comment")
+	checkVarassign("VAR=\\", equals, "VAR", "=", "\\", "")
+	checkVarassign("VAR += value", equals, "VAR", "+=", "value", "")
+	checkVarassign(" VAR=value", equals, "VAR", "=", "value", "")
+	checkNotVarassign("\tVAR=value")
+	checkNotVarassign("?=value")
+	checkNotVarassign("<=value")
+}
+
+func (s *Suite) TestPackage_LoadPackageMakefile(c *check.C) {
+	makefile := s.CreateTmpFile(c, "category/package/Makefile", ""+
+		"# $"+"NetBSD$\n"+
+		"\n"+
+		"PKGNAME=pkgname-1.67\n"+
+		"DISTNAME=distfile_1_67\n"+
+		".include \"../../category/package/Makefile\"\n")
+	pkg := NewPackage("category/package")
+	G.CurrentDir = s.tmpdir + "/category/package"
+	G.CurPkgsrcdir = "../.."
+	G.Pkg = pkg
+
+	pkg.loadPackageMakefile(makefile)
+
+	c.Check(s.OutputCleanTmpdir(), equals, "")
+}
+
+func (s *Suite) TestChecklinesDescr(c *check.C) {
+	lines := s.NewLines("DESCR",
+		strings.Repeat("X", 90),
+		"", "", "", "", "", "", "", "", "10",
+		"Try ${PREFIX}",
+		"", "", "", "", "", "", "", "", "20",
+		"", "", "", "", "", "", "", "", "", "30")
+
+	ChecklinesDescr(lines)
+
+	c.Check(s.Output(), equals, ""+
+		"WARN: DESCR:1: Line too long (should be no more than 80 characters).\n"+
+		"NOTE: DESCR:11: Variables are not expanded in the DESCR file.\n"+
+		"WARN: DESCR:25: File too long (should be no more than 24 lines).\n")
+}
+
+func (s *Suite) TestChecklinesMessage_short(c *check.C) {
+	lines := s.NewLines("MESSAGE",
+		"one line")
+
+	ChecklinesMessage(lines)
+
+	c.Check(s.Output(), equals, "WARN: MESSAGE:1: File too short.\n")
+}
+
+func (s *Suite) TestChecklinesMessage_malformed(c *check.C) {
+	lines := s.NewLines("MESSAGE",
+		"1",
+		"2",
+		"3",
+		"4",
+		"5")
+
+	ChecklinesMessage(lines)
+
+	c.Check(s.Output(), equals, ""+
+		"WARN: MESSAGE:1: Expected a line of exactly 75 \"=\" characters.\n"+
+		"ERROR: MESSAGE:2: Expected \"$"+"NetBSD$\".\n"+
+		"WARN: MESSAGE:5: Expected a line of exactly 75 \"=\" characters.\n")
 }

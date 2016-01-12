@@ -4,76 +4,75 @@ import (
 	"sort"
 )
 
-type subdir struct {
-	name   string
-	line   *Line
-	active bool
-}
+func CheckdirCategory() {
+	if G.opts.DebugTrace {
+		defer tracecall1(G.CurrentDir)()
+	}
 
-func checkdirCategory() {
-	defer tracecall("checkdirCategory", G.currentDir)()
-
-	fname := G.currentDir + "/Makefile"
-	lines := LoadNonemptyLines(fname, true)
+	lines := LoadNonemptyLines(G.CurrentDir+"/Makefile", true)
 	if lines == nil {
 		return
 	}
-	ParselinesMk(lines)
+
+	mklines := NewMkLines(lines)
+	mklines.Check()
 
 	exp := NewExpecter(lines)
-	if checklineRcsid(exp.currentLine(), `#\s+`, "# ") {
-		exp.advance()
+	for exp.AdvanceIfPrefix("#") {
 	}
+	exp.ExpectEmptyLine()
 
-	for !exp.eof() && exp.advanceIfMatches(`^#`) != nil {
-	}
-	exp.expectEmptyLine()
-
-	if exp.advanceIfMatches(`^COMMENT=\t*(.*)`) != nil {
-		checklineValidCharactersInValue(exp.previousLine(), `[- '(),/0-9A-Za-z]`)
+	if exp.AdvanceIfMatches(`^COMMENT=\t*(.*)`) {
+		mklines.mklines[exp.index-1].CheckValidCharactersInValue(`[- '(),/0-9A-Za-z]`)
 	} else {
-		exp.currentLine().errorf("COMMENT= line expected.")
+		exp.CurrentLine().Error0("COMMENT= line expected.")
 	}
-	exp.expectEmptyLine()
+	exp.ExpectEmptyLine()
+
+	type subdir struct {
+		name   string
+		line   *Line
+		active bool
+	}
 
 	// And now to the most complicated part of the category Makefiles,
 	// the (hopefully) sorted list of SUBDIRs. The first step is to
 	// collect the SUBDIRs in the Makefile and in the file system.
 
-	fSubdirs := getSubdirs(G.currentDir)
+	fSubdirs := getSubdirs(G.CurrentDir)
 	sort.Sort(sort.StringSlice(fSubdirs))
 	var mSubdirs []subdir
 
 	prevSubdir := ""
-	for !exp.eof() {
-		line := exp.currentLine()
-		text := line.text
+	for !exp.EOF() {
+		line := exp.CurrentLine()
+		text := line.Text
 
 		if m, commentFlag, indentation, name, comment := match4(text, `^(#?)SUBDIR\+=(\s*)(\S+)\s*(?:#\s*(.*?)\s*|)$`); m {
 			commentedOut := commentFlag == "#"
 			if commentedOut && comment == "" {
-				line.warnf("%q commented out without giving a reason.", name)
+				line.Warn1("%q commented out without giving a reason.", name)
 			}
 
 			if indentation != "\t" {
-				line.warnf("Indentation should be a single tab character.")
+				line.Warn0("Indentation should be a single tab character.")
 			}
 
 			if name == prevSubdir {
-				line.errorf("%q must only appear once.", name)
+				line.Error1("%q must only appear once.", name)
 			} else if name < prevSubdir {
-				line.warnf("%q should come before %q.", name, prevSubdir)
+				line.Warn2("%q should come before %q.", name, prevSubdir)
 			} else {
 				// correctly ordered
 			}
 
 			mSubdirs = append(mSubdirs, subdir{name, line, !commentedOut})
 			prevSubdir = name
-			exp.advance()
+			exp.Advance()
 
 		} else {
-			if line.text != "" {
-				line.errorf("SUBDIR+= line or empty line expected.")
+			if line.Text != "" {
+				line.Error0("SUBDIR+= line or empty line expected.")
 			}
 			break
 		}
@@ -104,7 +103,7 @@ func checkdirCategory() {
 			mNeednext = false
 			if mIndex >= len(mSubdirs) {
 				mAtend = true
-				line = exp.currentLine()
+				line = exp.CurrentLine()
 				continue
 			} else {
 				mCurrent = mSubdirs[mIndex].name
@@ -127,15 +126,17 @@ func checkdirCategory() {
 
 		if !fAtend && (mAtend || fCurrent < mCurrent) {
 			if !mCheck[fCurrent] {
-				line.errorf("%q exists in the file system, but not in the Makefile.", fCurrent)
-				line.insertBefore("SUBDIR+=\t" + fCurrent)
+				if !line.AutofixInsertBefore("SUBDIR+=\t" + fCurrent) {
+					line.Error1("%q exists in the file system, but not in the Makefile.", fCurrent)
+				}
 			}
 			fNeednext = true
 
 		} else if !mAtend && (fAtend || mCurrent < fCurrent) {
 			if !fCheck[mCurrent] {
-				line.errorf("%q exists in the Makefile, but not in the file system.", mCurrent)
-				line.delete()
+				if !line.AutofixDelete() {
+					line.Error1("%q exists in the Makefile, but not in the file system.", mCurrent)
+				}
 			}
 			mNeednext = true
 
@@ -143,34 +144,26 @@ func checkdirCategory() {
 			fNeednext = true
 			mNeednext = true
 			if mActive {
-				subdirs = append(subdirs, G.currentDir+"/"+mCurrent)
+				subdirs = append(subdirs, G.CurrentDir+"/"+mCurrent)
 			}
 		}
 	}
 
 	// the pkgsrc-wip category Makefile defines its own targets for
 	// generating indexes and READMEs. Just skip them.
-	if G.isWip {
+	if G.Wip {
 		exp.index = len(exp.lines) - 2
 	}
 
-	exp.expectEmptyLine()
-
-	if exp.currentLine().text == ".include \"../mk/bsd.pkg.subdir.mk\"" {
-		exp.advance()
-	} else {
-		exp.expectText(".include \"../mk/misc/category.mk\"")
+	exp.ExpectEmptyLine()
+	exp.ExpectText(".include \"../mk/misc/category.mk\"")
+	if !exp.EOF() {
+		exp.CurrentLine().Error0("The file should end here.")
 	}
 
-	if !exp.eof() {
-		exp.currentLine().errorf("The file should end here.")
-	}
-
-	ChecklinesMk(lines)
-
-	saveAutofixChanges(lines)
+	SaveAutofixChanges(lines)
 
 	if G.opts.Recursive {
-		G.todo = append(append([]string(nil), subdirs...), G.todo...)
+		G.Todo = append(append([]string(nil), subdirs...), G.Todo...)
 	}
 }

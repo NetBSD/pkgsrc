@@ -3,17 +3,18 @@ package main
 import (
 	"io/ioutil"
 	"os"
+	"strconv"
 	"strings"
 )
 
 func LoadNonemptyLines(fname string, joinContinuationLines bool) []*Line {
 	lines, err := readLines(fname, joinContinuationLines)
 	if err != nil {
-		errorf(fname, noLines, "Cannot be read.")
+		Errorf(fname, noLines, "Cannot be read.")
 		return nil
 	}
 	if len(lines) == 0 {
-		errorf(fname, noLines, "Must not be empty.")
+		Errorf(fname, noLines, "Must not be empty.")
 		return nil
 	}
 	return lines
@@ -22,18 +23,28 @@ func LoadNonemptyLines(fname string, joinContinuationLines bool) []*Line {
 func LoadExistingLines(fname string, foldBackslashLines bool) []*Line {
 	lines, err := readLines(fname, foldBackslashLines)
 	if err != nil {
-		fatalf(fname, noLines, "Cannot be read.")
+		Fatalf(fname, noLines, "Cannot be read.")
 	}
 	if lines == nil {
-		fatalf(fname, noLines, "Must not be empty.")
+		Fatalf(fname, noLines, "Must not be empty.")
 	}
 	return lines
 }
 
 func getLogicalLine(fname string, rawLines []*RawLine, pindex *int) *Line {
+	{ // Handle the common case efficiently
+		index := *pindex
+		rawLine := rawLines[*pindex]
+		textnl := rawLine.textnl
+		if hasSuffix(textnl, "\n") && !hasSuffix(textnl, "\\\n") {
+			*pindex = index + 1
+			return NewLine(fname, rawLine.Lineno, textnl[:len(textnl)-1], rawLines[index:index+1])
+		}
+	}
+
 	text := ""
 	index := *pindex
-	firstlineno := rawLines[index].lineno
+	firstlineno := rawLines[index].Lineno
 	var lineRawLines []*RawLine
 	interestingRawLines := rawLines[index:]
 
@@ -46,7 +57,7 @@ func getLogicalLine(fname string, rawLines []*RawLine, pindex *int) *Line {
 		text += rawText
 		lineRawLines = append(lineRawLines, rawLine)
 
-		if cont == "\\" && i != len(interestingRawLines)-1 {
+		if cont != "" && i != len(interestingRawLines)-1 {
 			text += " "
 			index++
 		} else {
@@ -55,22 +66,40 @@ func getLogicalLine(fname string, rawLines []*RawLine, pindex *int) *Line {
 		}
 	}
 
-	lastlineno := rawLines[index].lineno
+	lastlineno := rawLines[index].Lineno
 	*pindex = index + 1
 
-	if firstlineno == lastlineno {
-		return NewLine(fname, sprintf("%d", firstlineno), text, lineRawLines)
-	} else {
-		return NewLine(fname, sprintf("%d--%d", firstlineno, lastlineno), text, lineRawLines)
-	}
+	return NewLineMulti(fname, firstlineno, lastlineno, text, lineRawLines)
 }
 
 func splitRawLine(textnl string) (leadingWhitespace, text, trailingWhitespace, cont string) {
-	m1234 := strings.TrimSuffix(textnl, "\n")
-	m234 := strings.TrimLeft(m1234, " \t")
-	m23 := strings.TrimSuffix(m234, "\\")
-	m2 := strings.TrimRight(m23, " \t")
-	return m1234[:len(m1234)-len(m234)], m2, m23[len(m2):], m234[len(m23):]
+	i, m := 0, len(textnl)
+
+	if m > i && textnl[m-1] == '\n' {
+		m--
+	}
+
+	if m > i && textnl[m-1] == '\\' {
+		m--
+		cont = textnl[m : m+1]
+	}
+
+	trailingEnd := m
+	for m > i && (textnl[m-1] == ' ' || textnl[m-1] == '\t') {
+		m--
+	}
+	trailingStart := m
+	trailingWhitespace = textnl[trailingStart:trailingEnd]
+
+	leadingStart := i
+	for i < m && (textnl[i] == ' ' || textnl[i] == '\t') {
+		i++
+	}
+	leadingEnd := i
+	leadingWhitespace = textnl[leadingStart:leadingEnd]
+
+	text = textnl[leadingEnd:trailingStart]
+	return
 }
 
 func readLines(fname string, joinContinuationLines bool) ([]*Line, error) {
@@ -86,7 +115,7 @@ func convertToLogicalLines(fname string, rawText string, joinContinuationLines b
 	var rawLines []*RawLine
 	for lineno, rawLine := range strings.SplitAfter(rawText, "\n") {
 		if rawLine != "" {
-			rawLines = append(rawLines, &RawLine{1 + lineno, rawLine})
+			rawLines = append(rawLines, &RawLine{1 + lineno, rawLine, rawLine})
 		}
 	}
 
@@ -97,19 +126,26 @@ func convertToLogicalLines(fname string, rawText string, joinContinuationLines b
 		}
 	} else {
 		for _, rawLine := range rawLines {
-			loglines = append(loglines, NewLine(fname, sprintf("%d", rawLine.lineno), strings.TrimSuffix(rawLine.textnl, "\n"), []*RawLine{rawLine}))
+			text := strings.TrimSuffix(rawLine.textnl, "\n")
+			logline := NewLine(fname, rawLine.Lineno, text, []*RawLine{rawLine})
+			loglines = append(loglines, logline)
 		}
 	}
 
 	if 0 < len(rawLines) && !hasSuffix(rawLines[len(rawLines)-1].textnl, "\n") {
-		errorf(fname, sprintf("%d", rawLines[len(rawLines)-1].lineno), "File must end with a newline.")
+		Errorf(fname, strconv.Itoa(rawLines[len(rawLines)-1].Lineno), "File must end with a newline.")
 	}
 
 	return loglines
 }
 
-func saveAutofixChanges(lines []*Line) {
+func SaveAutofixChanges(lines []*Line) (autofixed bool) {
 	if !G.opts.Autofix {
+		for _, line := range lines {
+			if line.changed {
+				G.autofixAvailable = true
+			}
+		}
 		return
 	}
 
@@ -117,9 +153,9 @@ func saveAutofixChanges(lines []*Line) {
 	changed := make(map[string]bool)
 	for _, line := range lines {
 		if line.changed {
-			changed[line.fname] = true
+			changed[line.Fname] = true
 		}
-		changes[line.fname] = append(changes[line.fname], line.rawLines()...)
+		changes[line.Fname] = append(changes[line.Fname], line.rawLines()...)
 	}
 
 	for fname := range changed {
@@ -129,16 +165,18 @@ func saveAutofixChanges(lines []*Line) {
 		for _, rawLine := range rawLines {
 			text += rawLine.textnl
 		}
-		err := ioutil.WriteFile(tmpname, []byte(text), 0777)
+		err := ioutil.WriteFile(tmpname, []byte(text), 0666)
 		if err != nil {
-			errorf(tmpname, noLines, "Cannot write.")
+			Errorf(tmpname, noLines, "Cannot write.")
 			continue
 		}
 		err = os.Rename(tmpname, fname)
 		if err != nil {
-			errorf(fname, noLines, "Cannot overwrite with auto-fixed content.")
+			Errorf(fname, noLines, "Cannot overwrite with auto-fixed content.")
 			continue
 		}
-		notef(fname, noLines, "Has been auto-fixed. Please re-run pkglint.")
+		autofixf(fname, noLines, "Has been auto-fixed. Please re-run pkglint.")
+		autofixed = true
 	}
+	return
 }

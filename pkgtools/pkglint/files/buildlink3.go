@@ -1,161 +1,202 @@
 package main
 
 import (
-	"regexp"
 	"strings"
 )
 
-func checklinesBuildlink3Mk(lines []*Line) {
-	defer tracecall("checklinesBuildlink3Mk", lines[0].fname)()
+func ChecklinesBuildlink3Mk(mklines *MkLines) {
+	if G.opts.DebugTrace {
+		defer tracecall1(mklines.lines[0].Fname)()
+	}
 
-	ParselinesMk(lines)
-	ChecklinesMk(lines)
+	mklines.Check()
 
-	exp := NewExpecter(lines)
+	exp := NewExpecter(mklines.lines)
 
-	for exp.advanceIfMatches(`^#`) != nil {
-		if hasPrefix(exp.previousLine().text, "# XXX") {
-			exp.previousLine().notef("Please read this comment and remove it if appropriate.")
+	for exp.AdvanceIfPrefix("#") {
+		line := exp.PreviousLine()
+		// See pkgtools/createbuildlink/files/createbuildlink
+		if hasPrefix(line.Text, "# XXX This file was created automatically") {
+			line.Error0("This comment indicates unfinished work (url2pkg).")
 		}
 	}
 
-	exp.expectEmptyLine()
+	exp.ExpectEmptyLine()
 
-	if exp.advanceIfMatches(`^BUILDLINK_DEPMETHOD\.(\S+)\?=.*$`) != nil {
-		exp.previousLine().warnf("This line belongs inside the .ifdef block.")
-		for exp.advanceIfMatches(`^$`) != nil {
+	if exp.AdvanceIfMatches(`^BUILDLINK_DEPMETHOD\.(\S+)\?=.*$`) {
+		exp.PreviousLine().Warn0("This line belongs inside the .ifdef block.")
+		for exp.AdvanceIfEquals("") {
 		}
 	}
 
-	pkgbaseLine, pkgbase := (*Line)(nil), ""
-	pkgidLine, pkgid := exp.currentLine(), ""
-	abiLine, abiPkg, abiVersion := (*Line)(nil), "", ""
-	apiLine, apiPkg, apiVersion := (*Line)(nil), "", ""
+	pkgbaseLine, pkgbase := exp.CurrentLine(), ""
+	var abiLine, apiLine *Line
+	var abi, api *DependencyPattern
 
 	// First paragraph: Introduction of the package identifier
-	if m := exp.advanceIfMatches(`^BUILDLINK_TREE\+=\s*(\S+)$`); m != nil {
-		pkgid = m[1]
-	} else {
-		exp.currentLine().warnf("Expected a BUILDLINK_TREE line.")
+	if !exp.AdvanceIfMatches(`^BUILDLINK_TREE\+=\s*(\S+)$`) {
+		exp.CurrentLine().Warn0("Expected a BUILDLINK_TREE line.")
 		return
 	}
-	exp.expectEmptyLine()
+	pkgbase = exp.m[1]
+	if containsVarRef(pkgbase) {
+		warned := false
+		for _, pair := range []struct{ varuse, simple string }{
+			{"${PYPKGPREFIX}", "py"},
+			{"${RUBY_BASE}", "ruby"},
+			{"${RUBY_PKGPREFIX}", "ruby"},
+			{"${PHP_PKG_PREFIX}", "php"},
+		} {
+			if contains(pkgbase, pair.varuse) && !pkgbaseLine.AutofixReplace(pair.varuse, pair.simple) {
+				pkgbaseLine.Warn2("Please use %q instead of %q.", pair.simple, pair.varuse)
+				warned = true
+			}
+		}
+		if !warned {
+			if m, varuse := match1(pkgbase, `(\$\{\w+\})`); m {
+				pkgbaseLine.Warn1("Please replace %q with a simple string.", varuse)
+				warned = true
+			}
+		}
+		if warned {
+			Explain(
+				"Having variable package names in the BUILDLINK_TREE is not",
+				"necessary, since other packages depend on this package only for",
+				"a specific version of Python, Ruby or PHP.  Since these",
+				"package identifiers are only used at build time, they should",
+				"not include the specific version of the language interpreter.")
+		}
+	}
+
+	exp.ExpectEmptyLine()
 
 	// Second paragraph: multiple inclusion protection and introduction
 	// of the uppercase package identifier.
-	if m := exp.advanceIfMatches(`^\.if !defined\((\S+)_BUILDLINK3_MK\)$`); m != nil {
-		pkgbaseLine = exp.previousLine()
-		pkgbase = m[1]
-	} else {
+	if !exp.AdvanceIfMatches(`^\.if !defined\((\S+)_BUILDLINK3_MK\)$`) {
 		return
 	}
-	if !exp.expectText(pkgbase + "_BUILDLINK3_MK:=") {
-		exp.currentLine().errorf("Expected the multiple-inclusion guard.")
-		return
-	}
-	exp.expectEmptyLine()
+	pkgupperLine, pkgupper := exp.PreviousLine(), exp.m[1]
 
-	ucPkgid := strings.ToUpper(strings.Replace(pkgid, "-", "_", -1))
-	if ucPkgid != pkgbase {
-		pkgbaseLine.errorf("Package name mismatch between %q ...", pkgbase)
-		pkgidLine.errorf("... and %q.", pkgid)
+	if !exp.ExpectText(pkgupper + "_BUILDLINK3_MK:=") {
+		return
 	}
-	if G.pkgContext != nil {
-		if mkbase := G.pkgContext.effectivePkgbase; mkbase != "" && mkbase != pkgid {
-			pkgidLine.errorf("Package name mismatch between %q ...", pkgid)
-			G.pkgContext.effectivePkgnameLine.errorf("... and %q.", mkbase)
+	exp.ExpectEmptyLine()
+
+	// See pkgtools/createbuildlink/files/createbuildlink, keyword PKGUPPER
+	ucPkgbase := strings.ToUpper(strings.Replace(pkgbase, "-", "_", -1))
+	if ucPkgbase != pkgupper && !containsVarRef(pkgbase) {
+		pkgupperLine.Error2("Package name mismatch between multiple-inclusion guard %q (expected %q) ...", pkgupper, ucPkgbase)
+		pkgbaseLine.Error1("... and package name %q.", pkgbase)
+	}
+	if G.Pkg != nil {
+		if mkbase := G.Pkg.EffectivePkgbase; mkbase != "" && mkbase != pkgbase {
+			pkgbaseLine.Error1("Package name mismatch between %q in this file ...", pkgbase)
+			G.Pkg.EffectivePkgnameLine.Line.Error1("... and %q from the package Makefile.", mkbase)
 		}
 	}
 
 	// Third paragraph: Package information.
 	indentLevel := 1 // The first .if is from the second paragraph.
 	for {
-		if exp.eof() {
-			exp.currentLine().warnf("Expected .endif")
+		if exp.EOF() {
+			exp.CurrentLine().Warn0("Expected .endif")
 			return
 		}
 
-		line := exp.currentLine()
+		line := exp.CurrentLine()
+		mkline := mklines.mklines[exp.index]
 
-		if m := exp.advanceIfMatches(reVarassign); m != nil {
-			varname, value := m[1], m[3]
+		if mkline.IsVarassign() {
+			exp.Advance()
+			varname, value := mkline.Varname(), mkline.Value()
 			doCheck := false
 
-			if varname == "BUILDLINK_ABI_DEPENDS."+pkgid {
+			const (
+				reDependencyCmp      = `^((?:\$\{[\w_]+\}|[\w_\.+]|-[^\d])+)[<>]=?(\d[^-*?\[\]]*)$`
+				reDependencyWildcard = `^(-(?:\[0-9\]\*|\d[^-]*)$`
+			)
+
+			if varname == "BUILDLINK_ABI_DEPENDS."+pkgbase {
 				abiLine = line
-				if m, p, v := match2(value, reDependencyCmp); m {
-					abiPkg, abiVersion = p, v
-				} else if m, p := match1(value, reDependencyWildcard); m {
-					abiPkg, abiVersion = p, ""
-				} else {
-					_ = G.opts.DebugUnchecked && line.debugf("Unchecked dependency pattern %q.", value)
+				parser := NewParser(value)
+				if dp := parser.Dependency(); dp != nil && parser.EOF() {
+					abi = dp
 				}
 				doCheck = true
 			}
-			if varname == "BUILDLINK_API_DEPENDS."+pkgid {
+			if varname == "BUILDLINK_API_DEPENDS."+pkgbase {
 				apiLine = line
-				if m, p, v := match2(value, reDependencyCmp); m {
-					apiPkg, apiVersion = p, v
-				} else if m, p := match1(value, reDependencyWildcard); m {
-					apiPkg, apiVersion = p, ""
-				} else {
-					_ = G.opts.DebugUnchecked && line.debugf("Unchecked dependency pattern %q.", value)
+				parser := NewParser(value)
+				if dp := parser.Dependency(); dp != nil && parser.EOF() {
+					api = dp
 				}
 				doCheck = true
 			}
-			if doCheck && abiPkg != "" && apiPkg != "" && abiPkg != apiPkg {
-				abiLine.warnf("Package name mismatch between %q ...", abiPkg)
-				apiLine.warnf("... and %q.", apiPkg)
+			if doCheck && abi != nil && api != nil && abi.pkgbase != api.pkgbase && !hasPrefix(api.pkgbase, "{") {
+				abiLine.Warn1("Package name mismatch between ABI %q ...", abi.pkgbase)
+				apiLine.Warn1("... and API %q.", api.pkgbase)
 			}
-			if doCheck && abiVersion != "" && apiVersion != "" && pkgverCmp(abiVersion, apiVersion) < 0 {
-				abiLine.warnf("ABI version (%s) should be at least ...", abiVersion)
-				apiLine.warnf("... API version (%s).", apiVersion)
+			if doCheck {
+				if abi != nil && abi.lower != "" && !containsVarRef(abi.lower) {
+					if api != nil && api.lower != "" && !containsVarRef(api.lower) {
+						if pkgverCmp(abi.lower, api.lower) < 0 {
+							abiLine.Warn1("ABI version %q should be at least ...", abi.lower)
+							apiLine.Warn1("... API version %q.", api.lower)
+						}
+					}
+				}
 			}
 
-			if m, varparam := match1(varname, `^BUILDLINK_[\w_]+\.(.*)$`); m {
-				if varparam != pkgid {
-					line.warnf("Only buildlink variables for %q, not %q may be set in this file.", pkgid, varparam)
+			if varparam := mkline.Varparam(); varparam != "" && varparam != pkgbase {
+				if hasPrefix(varname, "BUILDLINK_") && mkline.Varcanon() != "BUILDLINK_API_DEPENDS.*" {
+					line.Warn2("Only buildlink variables for %q, not %q may be set in this file.", pkgbase, varparam)
 				}
 			}
 
 			if varname == "pkgbase" {
-				exp.advanceIfMatches(`^\.\s*include "../../mk/pkg-build-options\.mk"$`)
+				exp.AdvanceIfMatches(`^\.\s*include "../../mk/pkg-build-options\.mk"$`)
 			}
 
-		} else if exp.advanceIfMatches(`^(?:#.*)?$`) != nil {
+		} else if exp.AdvanceIfEquals("") || exp.AdvanceIfPrefix("#") {
 			// Comments and empty lines are fine here.
 
-		} else if exp.advanceIfMatches(`^\.\s*include "\.\./\.\./([^/]+/[^/]+)/buildlink3\.mk"$`) != nil ||
-			exp.advanceIfMatches(`^\.\s*include "\.\./\.\./mk/(\S+)\.buildlink3\.mk"$`) != nil {
+		} else if exp.AdvanceIfMatches(`^\.\s*include "\.\./\.\./([^/]+/[^/]+)/buildlink3\.mk"$`) ||
+			exp.AdvanceIfMatches(`^\.\s*include "\.\./\.\./mk/(\S+)\.buildlink3\.mk"$`) {
 			// TODO: Maybe check dependency lines.
 
-		} else if exp.advanceIfMatches(`^\.if\s`) != nil {
+		} else if exp.AdvanceIfMatches(`^\.if\s`) {
 			indentLevel++
 
-		} else if exp.advanceIfMatches(`^\.endif.*$`) != nil {
+		} else if exp.AdvanceIfMatches(`^\.endif.*$`) {
 			indentLevel--
 			if indentLevel == 0 {
 				break
 			}
 
 		} else {
-			_ = G.opts.DebugUnchecked && exp.currentLine().warnf("Unchecked line in third paragraph.")
-			exp.advance()
+			if G.opts.DebugUnchecked {
+				exp.CurrentLine().Debugf("Unchecked line in third paragraph.")
+			}
+			exp.Advance()
 		}
 	}
 	if apiLine == nil {
-		exp.currentLine().warnf("Definition of BUILDLINK_API_DEPENDS is missing.")
+		exp.CurrentLine().Warn0("Definition of BUILDLINK_API_DEPENDS is missing.")
 	}
-	exp.expectEmptyLine()
+	exp.ExpectEmptyLine()
 
 	// Fourth paragraph: Cleanup, corresponding to the first paragraph.
-	if exp.advanceIfMatches(`^BUILDLINK_TREE\+=\s*-`+regexp.QuoteMeta(pkgid)+`$`) == nil {
-		exp.currentLine().warnf("Expected BUILDLINK_TREE line.")
+	if !exp.ExpectText("BUILDLINK_TREE+=\t-" + pkgbase) {
+		return
 	}
 
-	if !exp.eof() {
-		exp.currentLine().warnf("The file should end here.")
+	if !exp.EOF() {
+		exp.CurrentLine().Warn0("The file should end here.")
 	}
 
-	checklinesBuildlink3Inclusion(lines)
+	if G.Pkg != nil {
+		G.Pkg.checklinesBuildlink3Inclusion(mklines)
+	}
+
+	SaveAutofixChanges(mklines.lines)
 }
