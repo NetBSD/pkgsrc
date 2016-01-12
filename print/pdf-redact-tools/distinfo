@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/01/12 14:03:54 leot Exp $
+
+SHA1 (pdf-redact-tools-0.1.tar.gz) = 35c99e52d631305e84ecdd82daa7f352f6cf983a
+RMD160 (pdf-redact-tools-0.1.tar.gz) = d1314c767cdeb8a971423a21db343eb999e22664
+SHA512 (pdf-redact-tools-0.1.tar.gz) = 069b5f5df52ceb412baff40f658f6a4d6abe6c3ec854af2cf0fbb46b77b7b0bad8c0efd38101b563f13ed59f4c462b0ac55c189bd433d07defedbaa85fc9a1d4
+Size (pdf-redact-tools-0.1.tar.gz) = 15858 bytes
