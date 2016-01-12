@@ -1,0 +1,8 @@
+Roo implements read access for all common spreadsheet types. It can handle:
+
+* Excel 2007 - 2013 formats (xlsx, xlsm)
+* LibreOffice / OpenOffice.org formats (ods)
+* CSV
+* Excel 97, Excel 2002 XML, and Excel 2003 XML formats when using
+  the roo-xls gem (xls, xml)
+* Google spreadsheets with read/write access when using roo-google
