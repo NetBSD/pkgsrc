@@ -242,7 +242,7 @@ func (cv *VartypeCheck) EmulPlatform() {
 
 	if m, opsys, arch := match2(cv.value, `^(\w+)-(\w+)$`); m {
 		if !matches(opsys, `^(?:bitrig|bsdos|cygwin|darwin|dragonfly|freebsd|haiku|hpux|interix|irix|linux|mirbsd|netbsd|openbsd|osf1|sunos|solaris)$`) {
-			cv.line.Warnf("Unknown operating system: %s", opsys)
+			cv.line.Warn1("Unknown operating system: %s", opsys)
 		}
 		// no check for os_version
 		if !matches(arch, `^(?:i386|alpha|amd64|arc|arm|arm32|cobalt|convex|dreamcast|hpcmips|hpcsh|hppa|ia64|m68k|m88k|mips|mips64|mipsel|mipseb|mipsn32|ns32k|pc532|pmax|powerpc|rs6000|s390|sparc|sparc64|vax|x86_64)$`) {
@@ -520,7 +520,7 @@ func (cv *VartypeCheck) PlatformTriple() {
 	reTriple := `^(` + rePart + `)-(` + rePart + `)-(` + rePart + `)$`
 	if m, opsys, _, arch := match3(cv.value, reTriple); m {
 		if !matches(opsys, `^(?:\*|Bitrig|BSDOS|Cygwin|Darwin|DragonFly|FreeBSD|Haiku|HPUX|Interix|IRIX|Linux|MirBSD|NetBSD|OpenBSD|OSF1|QNX|SunOS)$`) {
-			cv.line.Warnf("Unknown operating system: %s", opsys)
+			cv.line.Warn1("Unknown operating system: %s", opsys)
 		}
 		// no check for os_version
 		if !matches(arch, `^(?:\*|i386|alpha|amd64|arc|arm|arm32|cobalt|convex|dreamcast|hpcmips|hpcsh|hppa|ia64|m68k|m88k|mips|mips64|mipsel|mipseb|mipsn32|ns32k|pc532|pmax|powerpc|rs6000|s390|sparc|sparc64|vax|x86_64)$`) {

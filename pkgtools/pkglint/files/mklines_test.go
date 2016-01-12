@@ -25,7 +25,7 @@ func (s *Suite) TestMkLines_AutofixConditionalIndentation(c *check.C) {
 		"AUTOFIX: ~/fname.mk:6: Replacing \".\" with \".  \".\n"+
 		"AUTOFIX: ~/fname.mk: Has been auto-fixed. Please re-run pkglint.\n")
 	c.Check(s.LoadTmpFile(c, "fname.mk"), equals, ""+
-		"# $NetBSD: mklines_test.go,v 1.1 2016/01/12 01:02:49 rillig Exp $\n"+
+		"# $"+"NetBSD$\n"+
 		".if defined(A)\n"+
 		".  for a in ${A}\n"+
 		".    if defined(C)\n"+
