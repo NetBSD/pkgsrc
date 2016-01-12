@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.179 2016/01/11 23:51:11 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.180 2016/01/12 00:17:31 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -292,3 +292,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ruby-pkg-config to 1.1.7nb1 [wiz 2016-01-11]
 	Added graphics/ruby-cairo version 1.14.3 [wiz 2016-01-11]
 	Removed graphics/ruby-rcairo successor graphics/ruby-cairo [wiz 2016-01-11]
+	Updated net/Radicale to 1.1.1 [prlw1 2016-01-12]
