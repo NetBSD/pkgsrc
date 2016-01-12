@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2015/09/25 16:49:32 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.7 2016/01/12 00:17:11 prlw1 Exp $
 bin/radicale
 ${PYSITELIB}/${EGG_FILE}/PKG-INFO
 ${PYSITELIB}/${EGG_FILE}/SOURCES.txt
@@ -44,6 +44,9 @@ ${PYSITELIB}/radicale/ical.pyo
 ${PYSITELIB}/radicale/log.py
 ${PYSITELIB}/radicale/log.pyc
 ${PYSITELIB}/radicale/log.pyo
+${PYSITELIB}/radicale/pathutils.py
+${PYSITELIB}/radicale/pathutils.pyc
+${PYSITELIB}/radicale/pathutils.pyo
 ${PYSITELIB}/radicale/rights/__init__.py
 ${PYSITELIB}/radicale/rights/__init__.pyc
 ${PYSITELIB}/radicale/rights/__init__.pyo
