@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.183 2016/01/12 10:33:54 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.184 2016/01/12 11:48:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -296,3 +296,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated pkgtools/pkglint to 5.3 [rillig 2016-01-12]
 	Added math/ruby-roo version 2.3.1 [wiz 2016-01-12]
 	Updated finance/gnucash to 2.6.11 [wiz 2016-01-12]
+	Updated finance/gnucash-docs to 2.6.11 [wiz 2016-01-12]
