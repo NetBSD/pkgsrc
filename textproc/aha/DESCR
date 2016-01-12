@@ -1,0 +1,5 @@
+aha - Ansi HTML Adapter
+
+aha takes SGR-colored Input and prints W3C conform HTML-Code.
+
+aha reads the Input from a file or stdin and writes HTML-Code to stdout.
