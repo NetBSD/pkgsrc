@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/01/12 09:39:55 wiz Exp $
+
+SHA1 (roo-2.3.1.gem) = 76205334df8aaac0bf7a88dea7488ea10088e977
+RMD160 (roo-2.3.1.gem) = c65742bf6b3be747df9857aa117a7c554a58fb3e
+SHA512 (roo-2.3.1.gem) = a06af1429be0490358f21a1b23c99e9b4fd4c64a277fa4e86c05c0d82bc1ee18c6c57c71797320d10390d80d41860eddaec70b3ddcd881edf3c276230c03de19
+Size (roo-2.3.1.gem) = 77312 bytes
