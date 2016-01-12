@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.185 2016/01/12 14:04:58 leot Exp $
+$NetBSD: CHANGES-2016,v 1.186 2016/01/12 14:57:59 reed Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -260,7 +260,7 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/kde-base-artwork to 15.08.3 [markd 2016-01-10]
 	Updated graphics/kcolorchooser to 15.12.0 [markd 2016-01-10]
 	Updated games/amor to 15.08.3 [markd 2016-01-10]
-	Updated devel/kdesdk-strigi-analyzer to 15.12.0 [markd 2016-01-10]
+	Updated devel/kdesdk-strigi-analyzers to 15.12.0 [markd 2016-01-10]
 	Updated devel/kde-dev-utils to 15.12.0 [markd 2016-01-10]
 	Updated devel/kcachegrind to 15.12.0 [markd 2016-01-10]
 	Updated devel/cervisia to 15.12.0 [markd 2016-01-10]
