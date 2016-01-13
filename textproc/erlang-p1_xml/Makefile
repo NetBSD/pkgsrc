@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2015/11/04 13:45:46 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2016/01/13 15:34:15 fhajny Exp $
 
-DISTNAME=	p1_xml-0.20151023
+DISTNAME=	p1_xml-1.1.1
 PKGNAME=	erlang-${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
@@ -8,13 +8,12 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://github.com/processone/xml/
 COMMENT=	Fast Expat based Erlang XML parsing library
-LICENSE=	gnu-gpl-v2
+LICENSE=	apache-2.0
 
 BUILD_DEPENDS+=	rebar-[0-9]*:../../devel/rebar
-DEPENDS+=	erlang-p1_utils-[0-9]*:../../misc/erlang-p1_utils
+DEPENDS+=	erlang-p1_utils>=1.0.0:../../misc/erlang-p1_utils
 
 GITHUB_PROJECT=	xml
-GITHUB_TAG=	1c8b016b0ac7986efb823baf1682a43565449e65
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}
 
 GNU_CONFIGURE=	yes
