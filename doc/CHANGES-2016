@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.200 2016/01/13 21:09:23 schmonz Exp $
+$NetBSD: CHANGES-2016,v 1.201 2016/01/13 22:25:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -322,3 +322,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/xapian to 1.2.22 [schmonz 2016-01-13]
 	Updated textproc/xapian-omega to 1.2.22 [schmonz 2016-01-13]
 	Updated textproc/p5-Search-Xapian to 1.2.22.0 [schmonz 2016-01-13]
+	Updated chat/pidgin to 2.10.12 [wiz 2016-01-13]
