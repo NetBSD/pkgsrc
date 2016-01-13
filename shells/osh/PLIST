@@ -1,6 +1,15 @@
-@comment $NetBSD: PLIST,v 1.7 2008/11/23 03:26:14 reed Exp $
+@comment $NetBSD: PLIST,v 1.8 2016/01/13 13:14:21 nros Exp $
 bin/osh
 man/man1/fd2.1
 man/man1/goto.1
 man/man1/if.1
 man/man1/osh.1
+share/doc/${PKGNAME}/AUTHORS
+share/doc/${PKGNAME}/CHANGES
+share/doc/${PKGNAME}/CHANGES6
+share/doc/${PKGNAME}/DEDICATIONS
+share/doc/${PKGNAME}/INSTALL
+share/doc/${PKGNAME}/LICENSE
+share/doc/${PKGNAME}/NOTES
+share/doc/${PKGNAME}/PROJECT
+share/doc/${PKGNAME}/README
