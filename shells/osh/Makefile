@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2014/10/09 14:06:56 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2016/01/13 13:14:21 nros Exp $
 
-DISTNAME=	osh-20100430
-PKGREVISION=	1
+DISTNAME=	osh-20160108
 CATEGORIES=	shells
 MASTER_SITES=	http://v6shell.org/src/
 
@@ -10,10 +9,10 @@ HOMEPAGE=	http://v6shell.org/
 COMMENT=	Port of the Sixth Edition UNIX shell
 LICENSE=	original-bsd
 
-PKG_SHELL=		bin/osh
+PKG_SHELL=	bin/osh
 
 BUILD_TARGET=	oshall
-INSTALL_TARGET=	install-oshall
+INSTALL_TARGET=	install-oshall install-doc
 
 MAKE_ENV+=	MANDIR=${PREFIX}/${PKGMANDIR}/man1
 MAKE_ENV+=	SYSCONFDIR=${PKG_SYSCONFDIR}
