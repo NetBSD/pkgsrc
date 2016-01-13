@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.43 2015/11/03 01:20:21 agc Exp $
+$NetBSD: distinfo,v 1.44 2016/01/13 22:25:38 wiz Exp $
 
-SHA1 (pidgin-2.10.11.tar.bz2) = 5e0062b81bdb01300804e12bc0b6a04a91984631
-RMD160 (pidgin-2.10.11.tar.bz2) = 93802d5884b5ffd0714cb91dbe31f4e311f17e6d
-SHA512 (pidgin-2.10.11.tar.bz2) = 774710ab087cb56e349dc1d5e45dbfcbe06b9a8f792abe5d201b0860620d502009f31563cfe5316f4c815345427b6c273b8f9694deb600848957c825fd967029
-Size (pidgin-2.10.11.tar.bz2) = 9458050 bytes
+SHA1 (pidgin-2.10.12.tar.bz2) = 4550a447f35b869554c2d7d7bc1c7d84a01ce238
+RMD160 (pidgin-2.10.12.tar.bz2) = 22b14ba35cef488cb25d89b59aeb6c9923a4d924
+SHA512 (pidgin-2.10.12.tar.bz2) = 4756bed3ae78b48bfeaa586def3c7a0014db76ce14ae8c6773c96bdca24b65e92b2805270af43960e2a11a600aeac35e030faa3f79dbe3301084ca9d970a5f03
+Size (pidgin-2.10.12.tar.bz2) = 9837598 bytes
+SHA1 (patch-configure) = 74d033d148d74d0233c7ad33411b9ebcfbab7851
 SHA1 (patch-libpurple_plugins_perl_common_Makefile.PL.in) = 40326826000ed42e7570486f89f3196b58093d48
-SHA1 (patch-libpurple_protocols_mxit_profile.c) = 8f6e74f3a04976743c433d8b4b3f7b0b117f8b69
+SHA1 (patch-libpurple_protocols_mxit_profile.c) = e14883061131da2a3d31479584c5b267e451b721

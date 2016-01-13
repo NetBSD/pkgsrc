@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.63 2015/08/17 17:11:20 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2016/01/13 22:25:38 wiz Exp $
 
 PKGNAME=	finch-${PIDGIN_VERSION}
-PKGREVISION=	3
 
 COMMENT=	Multi-protocol Instant Messaging client console frontend
 
@@ -10,6 +9,7 @@ COMMENT=	Multi-protocol Instant Messaging client console frontend
 USE_TOOLS+=	intltool msgfmt perl
 
 CONFIGURE_ARGS+=	--enable-consoleui
+CONFIGURE_ARGS+=	--without-x
 CONFIGURE_ENV+=		ac_cv_path_pythonpath=
 
 #CONFIGURE_ARGS+=	--disable-plugins
@@ -34,6 +34,10 @@ pre-build:
 	  ln -s ${BUILDLINK_DIR}/lib/libpurple.la ${WRKSRC}/libpurple
 
 INSTALL_DIRS=		finch doc
+
+# this was an option, but doesn't seem to be one as of 2.10.12
+.  include "../../multimedia/gstreamer1/buildlink3.mk"
+.  include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 
 BUILDLINK_API_DEPENDS.libpurple+=	libpurple-${PIDGIN_VERSION}{,nb*}
 .include "../../chat/libpurple/buildlink3.mk"

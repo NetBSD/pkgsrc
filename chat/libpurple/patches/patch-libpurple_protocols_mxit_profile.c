@@ -1,18 +1,15 @@
-$NetBSD: patch-libpurple_protocols_mxit_profile.c,v 1.1 2014/12/07 08:45:59 obache Exp $
+$NetBSD: patch-libpurple_protocols_mxit_profile.c,v 1.2 2016/01/13 22:25:38 wiz Exp $
 
-* prevent to overwrite _XOPEN_SOURCE setting, and 500 is good enough for
-  localtime_r(3).
+* prevent overwriting _XOPEN_SOURCE setting
+  otherwise breaks build on NetBSD due to missing struct sockaddr_storage definition
 
---- libpurple/protocols/mxit/profile.c.orig	2014-11-23 16:41:26.000000000 +0000
+--- libpurple/protocols/mxit/profile.c.orig	2015-12-31 23:19:41.000000000 +0000
 +++ libpurple/protocols/mxit/profile.c
-@@ -23,7 +23,9 @@
+@@ -23,7 +23,6 @@
   * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02111-1301  USA
   */
  
--#define		_XOPEN_SOURCE
-+#ifndef		_XOPEN_SOURCE
-+#define		_XOPEN_SOURCE 500
-+#endif
+-#define		_XOPEN_SOURCE	1
  #include	<time.h>
  
  #include	"internal.h"
