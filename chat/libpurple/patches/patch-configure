@@ -1,0 +1,101 @@
+$NetBSD: patch-configure,v 1.1 2016/01/13 22:25:38 wiz Exp $
+
+Fix unportable test(1) construct.
+
+--- configure.orig	2015-12-31 23:19:55.000000000 +0000
++++ configure
+@@ -17931,7 +17931,7 @@ else
+ fi
+ 
+ if test "x$enable_gst" != "xno"; then
+-	if test "x$with_gstreamer" == "xauto"; then
++	if test "x$with_gstreamer" = "xauto"; then
+ 
+ pkg_failed=no
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for GSTREAMER" >&5
+@@ -18208,7 +18208,7 @@ $as_echo "#define USE_GSTREAMER 1" >>con
+ 
+ 
+ fi
+-	elif test "x$with_gstreamer" == "x1.0"; then
++	elif test "x$with_gstreamer" = "x1.0"; then
+ 
+ pkg_failed=no
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for GSTREAMER" >&5
+@@ -18306,7 +18306,7 @@ $as_echo "#define USE_GSTREAMER 1" >>con
+ 
+ 
+ fi
+-	elif test "x$with_gstreamer" == "x0.10"; then
++	elif test "x$with_gstreamer" = "x0.10"; then
+ 
+ pkg_failed=no
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for GSTREAMER" >&5
+@@ -18409,14 +18409,14 @@ fi
+ 	fi
+ fi
+ 
+-if test "x$with_gtk" == "x3" -a "x$with_gstreamer" == "x0.10"; then
++if test "x$with_gtk" = "x3" -a "x$with_gstreamer" = "x0.10"; then
+ 	as_fn_error $? "WebKitGTK+ 3.0 cannot be mixed with GStreamer 0.10.
+ Please switch to WebKitGTK+ 2.0 or GStreamer 1.0." "$LINENO" 5
+-elif test "x$with_gtk" == "x2" -a "x$with_gstreamer" == "x1.0"; then
++elif test "x$with_gtk" = "x2" -a "x$with_gstreamer" = "x1.0"; then
+ 	as_fn_error $? "WebKitGTK+ 2.0 cannot be mixed with GStreamer 1.0.
+ Please switch to WebKitGTK+ 3.0 or GStreamer 0.10." "$LINENO" 5
+ fi
+-if test "x$with_gstreamer" == "x0.10" -o "x$with_gstreamer" == "x1.0"; then
++if test "x$with_gstreamer" = "x0.10" -o "x$with_gstreamer" = "x1.0"; then
+ 	GSTREAMER_VER=$with_gstreamer
+ 
+ else
+@@ -18424,7 +18424,7 @@ else
+ 
+ fi
+ 
+-if test "x$enable_gst" != "xno" -a "x$with_gstreamer" == "x1.0"; then
++if test "x$enable_gst" != "xno" -a "x$with_gstreamer" = "x1.0"; then
+ 	# Check whether --enable-gstreamer-video was given.
+ if test "${enable_gstreamer_video+set}" = set; then :
+   enableval=$enable_gstreamer_video; enable_gstvideo="$enableval"
+@@ -18519,7 +18519,7 @@ else
+ 	enable_gstvideo="no"
+ fi
+ 
+-if test "x$enable_gst" != "xno" -a "x$with_gstreamer" == "x0.10"; then
++if test "x$enable_gst" != "xno" -a "x$with_gstreamer" = "x0.10"; then
+ 	# Check whether --enable-gstreamer-interfaces was given.
+ if test "${enable_gstreamer_interfaces+set}" = set; then :
+   enableval=$enable_gstreamer_interfaces; enable_gstinterfaces="$enableval"
+@@ -18622,7 +18622,7 @@ else
+ fi
+ 
+ if test "x$enable_farstream" != "xno"; then
+-	if test "x$with_gstreamer" == "x1.0"; then
++	if test "x$with_gstreamer" = "x1.0"; then
+ 
+ pkg_failed=no
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for FARSTREAM" >&5
+@@ -18953,11 +18953,11 @@ else
+ fi
+ 
+ if test "x$enable_vv" != "xno"; then
+-	if test "x$enable_gst" != "xno" -a "x$with_gstreamer" == "x1.0" -a "x$enable_gstvideo" != "xno" -a "x$enable_farstream" != "xno"; then
++	if test "x$enable_gst" != "xno" -a "x$with_gstreamer" = "x1.0" -a "x$enable_gstvideo" != "xno" -a "x$enable_farstream" != "xno"; then
+ 
+ $as_echo "#define USE_VV 1" >>confdefs.h
+ 
+-	elif test "x$enable_gst" != "xno" -a "x$with_gstreamer" == "x0.10" -a "x$enable_gstinterfaces" != "xno" -a "x$enable_farstream" != "xno"; then
++	elif test "x$enable_gst" != "xno" -a "x$with_gstreamer" = "x0.10" -a "x$enable_gstinterfaces" != "xno" -a "x$enable_farstream" != "xno"; then
+ 
+ $as_echo "#define USE_VV 1" >>confdefs.h
+ 
+@@ -18981,7 +18981,7 @@ else
+ fi
+ 
+ 
+-if test "x$enable_vv" != "xno" -a "x$with_gstreamer" == "x1.0"; then
++if test "x$enable_vv" != "xno" -a "x$with_gstreamer" = "x1.0"; then
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for raw data support in Farstream" >&5
+ $as_echo_n "checking for raw data support in Farstream... " >&6; }
+ 
