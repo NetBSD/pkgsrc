@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2015/11/04 13:45:45 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2016/01/13 15:18:07 fhajny Exp $
 
-DISTNAME=	p1_zlib-0.20150223
+DISTNAME=	p1_zlib-1.0.0
 PKGNAME=	erlang-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
@@ -13,7 +13,6 @@ LICENSE=	gnu-gpl-v2
 BUILD_DEPENDS+=	rebar-[0-9]*:../../devel/rebar
 
 GITHUB_PROJECT=	zlib
-GITHUB_TAG=	e3d4222b7aae616d7ef2e7e2fa0bbf451516c602
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}
 
 GNU_CONFIGURE=	yes
