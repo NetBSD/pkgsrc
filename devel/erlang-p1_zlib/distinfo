@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/11/04 13:45:45 fhajny Exp $
+$NetBSD: distinfo,v 1.2 2016/01/13 15:18:07 fhajny Exp $
 
-SHA1 (p1_zlib-0.20150223-e3d4222b7aae616d7ef2e7e2fa0bbf451516c602.tar.gz) = eebc513a748bb7f3ff9edfbfb3ee733db6284777
-RMD160 (p1_zlib-0.20150223-e3d4222b7aae616d7ef2e7e2fa0bbf451516c602.tar.gz) = efeb4caff67db7393bab2972d502b7eb0e059ddb
-SHA512 (p1_zlib-0.20150223-e3d4222b7aae616d7ef2e7e2fa0bbf451516c602.tar.gz) = 50e0df992b664acaa2eb4dd07c4a45ee9e7aab5ad2732507b2d7bf1b27a266a57cc6ce428773ef1ab95af4221b53f541d1a5ba171bbd2448e230942afc6408ed
-Size (p1_zlib-0.20150223-e3d4222b7aae616d7ef2e7e2fa0bbf451516c602.tar.gz) = 44811 bytes
+SHA1 (p1_zlib-1.0.0.tar.gz) = cdf1aa990c89d3de2ea77839bc4bb183cdecc50a
+RMD160 (p1_zlib-1.0.0.tar.gz) = 7084ec36577729441416832c5280e495a0d22f38
+SHA512 (p1_zlib-1.0.0.tar.gz) = 3dc46013fd327f52dd6625277e65420b9ede060b96cc866691ef5ae62e500929ef476d4872d0dc1b34c3f6d2aadd4df34cc9b2be0ed34873c171318f6f9d7161
+Size (p1_zlib-1.0.0.tar.gz) = 44784 bytes
