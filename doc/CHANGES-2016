@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.194 2016/01/13 20:14:39 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.195 2016/01/13 20:16:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -316,3 +316,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/erlang-p1_xml to 1.1.1 [fhajny 2016-01-13]
 	Updated mail/getmail to 4.49.0 [schmonz 2016-01-13]
 	Added devel/SDL2_ttf version 2.0.13 [wiz 2016-01-13]
+	Updated textproc/iso-codes to 3.64 [wiz 2016-01-13]
