@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2015/11/04 13:45:44 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2016/01/13 15:03:47 fhajny Exp $
 
-DISTNAME=	p1_iconv-0.20150624
+DISTNAME=	p1_iconv-0.9.0
 PKGNAME=	erlang-${DISTNAME}
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
@@ -13,7 +13,6 @@ LICENSE=	gnu-gpl-v2
 BUILD_DEPENDS+=	rebar-[0-9]*:../../devel/rebar
 
 GITHUB_PROJECT=	eiconv
-GITHUB_TAG=	8b7542b1aaf0a851f335e464956956985af6d9a2
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}
 
 GNU_CONFIGURE=	yes
