@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.188 2016/01/12 22:07:46 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.189 2016/01/13 04:44:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -300,3 +300,7 @@ Changes to the packages collection and infrastructure in 2016:
 	Added print/pdf-redact-tools version 0.1 [leot 2016-01-12]
 	Updated meta-pkgs/pkg_developer to 1.2.1 [rillig 2016-01-12]
 	Added textproc/aha version 0.4.8 [kamil 2016-01-12]
+	Updated net/isc-dhcp4 to 4.3.3p1 [taca 2016-01-13]
+	Updated net/isc-dhclient4 to 4.3.3p1 [taca 2016-01-13]
+	Updated net/isc-dhcpd4 to 4.3.3p1 [taca 2016-01-13]
+	Updated net/isc-dhcrelay4 to 4.3.3p1 [taca 2016-01-13]
