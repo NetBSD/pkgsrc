@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.3 2016/01/05 20:41:34 nros Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2016/01/13 12:31:41 nros Exp $
 
 BUILDLINK_TREE+=	pcre2
 
 .if !defined(PCRE2_BUILDLINK3_MK)
 PCRE2_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.pcre2+=	pcre2>=10.20nb1
+BUILDLINK_API_DEPENDS.pcre2+=	pcre2>=10.21
 BUILDLINK_PKGSRCDIR.pcre2?=	../../devel/pcre2
 .endif	# PCRE2_BUILDLINK3_MK
 
