@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15309 2016/01/13 21:33:59 wiz Exp $
+$NetBSD: TODO,v 1.15310 2016/01/13 22:25:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1377,7 +1377,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o phraseanet-indexer-3.8.6
 	o picp-0.6.8
 	o picprg-3.01
-	o pidgin-2.10.12
 	o pidgin-icb-20100207
 	o pim6dd-20040819a
 	o pim6sd-20040824a
