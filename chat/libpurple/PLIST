@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2014/12/07 08:45:59 obache Exp $
+@comment $NetBSD: PLIST,v 1.31 2016/01/13 22:25:38 wiz Exp $
 include/libpurple/account.h
 include/libpurple/accountopt.h
 include/libpurple/blist.h
@@ -102,12 +102,15 @@ ${PLIST.gnome}share/gconf/schemas/purple.schemas
 share/locale/af/LC_MESSAGES/pidgin.mo
 share/locale/am/LC_MESSAGES/pidgin.mo
 share/locale/ar/LC_MESSAGES/pidgin.mo
+share/locale/as/LC_MESSAGES/pidgin.mo
 share/locale/ast/LC_MESSAGES/pidgin.mo
 share/locale/az/LC_MESSAGES/pidgin.mo
 share/locale/be@latin/LC_MESSAGES/pidgin.mo
 share/locale/bg/LC_MESSAGES/pidgin.mo
 share/locale/bn/LC_MESSAGES/pidgin.mo
 share/locale/bn_IN/LC_MESSAGES/pidgin.mo
+share/locale/br/LC_MESSAGES/pidgin.mo
+share/locale/brx/LC_MESSAGES/pidgin.mo
 share/locale/bs/LC_MESSAGES/pidgin.mo
 share/locale/ca/LC_MESSAGES/pidgin.mo
 share/locale/ca@valencia/LC_MESSAGES/pidgin.mo
@@ -121,6 +124,7 @@ share/locale/en_CA/LC_MESSAGES/pidgin.mo
 share/locale/en_GB/LC_MESSAGES/pidgin.mo
 share/locale/eo/LC_MESSAGES/pidgin.mo
 share/locale/es/LC_MESSAGES/pidgin.mo
+share/locale/es_AR/LC_MESSAGES/pidgin.mo
 share/locale/et/LC_MESSAGES/pidgin.mo
 share/locale/eu/LC_MESSAGES/pidgin.mo
 share/locale/fa/LC_MESSAGES/pidgin.mo
@@ -141,6 +145,7 @@ share/locale/kk/LC_MESSAGES/pidgin.mo
 share/locale/km/LC_MESSAGES/pidgin.mo
 share/locale/kn/LC_MESSAGES/pidgin.mo
 share/locale/ko/LC_MESSAGES/pidgin.mo
+share/locale/ks/LC_MESSAGES/pidgin.mo
 share/locale/ku/LC_MESSAGES/pidgin.mo
 share/locale/ku_IQ/LC_MESSAGES/pidgin.mo
 share/locale/lt/LC_MESSAGES/pidgin.mo
@@ -148,8 +153,10 @@ share/locale/lv/LC_MESSAGES/pidgin.mo
 share/locale/mai/LC_MESSAGES/pidgin.mo
 share/locale/mhr/LC_MESSAGES/pidgin.mo
 share/locale/mk/LC_MESSAGES/pidgin.mo
+share/locale/ml/LC_MESSAGES/pidgin.mo
 share/locale/mn/LC_MESSAGES/pidgin.mo
 share/locale/mr/LC_MESSAGES/pidgin.mo
+share/locale/ms_MY/LC_MESSAGES/pidgin.mo
 share/locale/my_MM/LC_MESSAGES/pidgin.mo
 share/locale/nb/LC_MESSAGES/pidgin.mo
 share/locale/ne/LC_MESSAGES/pidgin.mo
@@ -164,6 +171,7 @@ share/locale/pt/LC_MESSAGES/pidgin.mo
 share/locale/pt_BR/LC_MESSAGES/pidgin.mo
 share/locale/ro/LC_MESSAGES/pidgin.mo
 share/locale/ru/LC_MESSAGES/pidgin.mo
+share/locale/sd/LC_MESSAGES/pidgin.mo
 share/locale/si/LC_MESSAGES/pidgin.mo
 share/locale/sk/LC_MESSAGES/pidgin.mo
 share/locale/sl/LC_MESSAGES/pidgin.mo
@@ -179,6 +187,7 @@ share/locale/tr/LC_MESSAGES/pidgin.mo
 share/locale/tt/LC_MESSAGES/pidgin.mo
 share/locale/uk/LC_MESSAGES/pidgin.mo
 share/locale/ur/LC_MESSAGES/pidgin.mo
+share/locale/uz/LC_MESSAGES/pidgin.mo
 share/locale/vi/LC_MESSAGES/pidgin.mo
 share/locale/xh/LC_MESSAGES/pidgin.mo
 share/locale/zh_CN/LC_MESSAGES/pidgin.mo
@@ -190,6 +199,8 @@ share/purple/ca-certs/America_Online_Root_Certification_Authority_1.pem
 share/purple/ca-certs/Baltimore_CyberTrust_Root.pem
 share/purple/ca-certs/CAcert_Class3.pem
 share/purple/ca-certs/CAcert_Root.pem
+share/purple/ca-certs/Certum_Root_CA.pem
+share/purple/ca-certs/Certum_Trusted_Network_CA.pem
 share/purple/ca-certs/Deutsche_Telekom_Root_CA_2.pem
 share/purple/ca-certs/DigiCertHighAssuranceCA-3.pem
 share/purple/ca-certs/DigiCertHighAssuranceEVRootCA.pem
