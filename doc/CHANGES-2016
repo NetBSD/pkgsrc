@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.195 2016/01/13 20:16:17 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.196 2016/01/13 20:20:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -317,3 +317,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/getmail to 4.49.0 [schmonz 2016-01-13]
 	Added devel/SDL2_ttf version 2.0.13 [wiz 2016-01-13]
 	Updated textproc/iso-codes to 3.64 [wiz 2016-01-13]
+	Updated multimedia/mediainfo to 0.7.81 [wiz 2016-01-13]
