@@ -1,7 +1,13 @@
-$NetBSD: distinfo,v 1.32 2015/11/03 03:32:14 agc Exp $
+$NetBSD: distinfo,v 1.33 2016/01/13 23:55:42 joerg Exp $
 
 SHA1 (Sigil-0.8.7.tar.gz) = bc0b2f7fc741d2392823120ddf652b820ce682a0
 RMD160 (Sigil-0.8.7.tar.gz) = 48494b5ea61194ddb76a7eae53ea308546d441e7
 SHA512 (Sigil-0.8.7.tar.gz) = 24b74c835ae1f8fb887c9d2c59b3ccc6720ce1fe8d19a6b0056754ab5ea6e63c34c4b229f4e4b3a880e722876d288e58385f5a0ad15b295f147b77b1acf28652
 Size (Sigil-0.8.7.tar.gz) = 19394061 bytes
+SHA1 (patch-src_Sigil_BookManipulation_Headings.cpp) = 1c932c0cbcf01c87bbcfc53413eb9c7060ec903c
+SHA1 (patch-src_Sigil_Importers_ImportHTML.cpp) = 5c9340eddfd26b045734f09768029f163d40c537
+SHA1 (patch-src_Sigil_SourceUpdates_AnchorUpdates.cpp) = 33f57b457cbec464b0428f3c4a62232abfccf2c4
+SHA1 (patch-src_Sigil_SourceUpdates_LinkUpdates.cpp) = 3d628d458909017f974a39a885acba4e5aca0cdf
+SHA1 (patch-src_Sigil_SourceUpdates_UniversalUpdates.cpp) = f99956c9e3b4a281f459e45cc5a8a955de80b357
+SHA1 (patch-src_Sigil_SourceUpdates_WordUpdates.cpp) = db78170e0e094988dec3be55cc41ceed1e4ba745
 SHA1 (patch-src_minizip_ioapi.c) = 0a227daf214ceeb1fe8483aeed700fce05b21ccd
