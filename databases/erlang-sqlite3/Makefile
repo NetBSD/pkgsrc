@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2015/11/04 13:45:45 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2016/01/13 15:08:15 fhajny Exp $
 
-DISTNAME=	sqlite3-1.1.5.20150809
+DISTNAME=	sqlite3-1.1.5.20151221
 PKGNAME=	erlang-${DISTNAME:S/_/-/g}
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=alexeyr/}
@@ -13,7 +13,7 @@ LICENSE=	erlang-public-license
 BUILD_DEPENDS+=	rebar-[0-9]*:../../devel/rebar
 
 GITHUB_PROJECT=	erlang-sqlite3
-GITHUB_TAG=	8350dc603804c503f99c92bfd2eab1dd6885758e
+GITHUB_TAG=	cbc3505f7a131254265d3ef56191b2581b8cc172
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}
 
 NO_CONFIGURE=	yes
