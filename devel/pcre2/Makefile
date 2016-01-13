@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2016/01/05 20:41:34 nros Exp $
+# $NetBSD: Makefile,v 1.4 2016/01/13 12:31:41 nros Exp $
 
-DISTNAME=	pcre2-10.20
-PKGREVISION=	1
+DISTNAME=	pcre2-10.21
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/ \
 		${MASTER_SITE_SOURCEFORGE:=pcre/}
