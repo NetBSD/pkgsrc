@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.29 2015/06/17 06:48:22 khorben Exp $
+# $NetBSD: options.mk,v 1.30 2016/01/13 22:25:38 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.libpurple
-PKG_SUPPORTED_OPTIONS+=		avahi dbus debug farsight gnome gnutls
+PKG_SUPPORTED_OPTIONS+=		avahi dbus debug farstream gnome gnutls
 PKG_SUPPORTED_OPTIONS+=		gstreamer perl sasl tcl
-PKG_SUGGESTED_OPTIONS+=		dbus farsight gnome gstreamer
+PKG_SUGGESTED_OPTIONS+=		dbus farstream gnome gstreamer
 
 .include "../../mk/bsd.options.mk"
 
@@ -81,19 +81,19 @@ CONFIGURE_ARGS+=	--enable-cyrus-sasl
 .  include "../../security/cyrus-sasl/buildlink3.mk"
 .endif
 
-# voice/video support requires both farsight and gstreamer
-.if !empty(PKG_OPTIONS:Mfarsight) && !empty(PKG_OPTIONS:Mgstreamer)
+# voice/video support requires both farstream and gstreamer
+.if !empty(PKG_OPTIONS:Mfarstream) && !empty(PKG_OPTIONS:Mgstreamer)
 CONFIGURE_ARGS+=	--enable-vv
 PLIST.vv=		yes
 .endif
 
-.if !empty(PKG_OPTIONS:Mfarsight)
+.if !empty(PKG_OPTIONS:Mfarstream)
 CONFIGURE_ARGS+=	--enable-farstream
-.  include "../../multimedia/farsight2/buildlink3.mk"
+.  include "../../chat/farstream/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mgstreamer)
 CONFIGURE_ARGS+=	--enable-gstreamer
-.  include "../../multimedia/gstreamer0.10/buildlink3.mk"
-.  include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
+.  include "../../multimedia/gstreamer1/buildlink3.mk"
+.  include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .endif
