@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2015/11/04 13:45:45 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2016/01/13 15:24:48 fhajny Exp $
 
-DISTNAME=	p1_utils-0.20151016
+DISTNAME=	p1_utils-1.0.2
 PKGNAME=	erlang-${DISTNAME}
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
@@ -8,12 +8,11 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://github.com/processone/p1_utils/
 COMMENT=	Erlang Utility Modules from ProcessOne
-LICENSE=	gnu-gpl-v2
+LICENSE=	apache-2.0
 
 BUILD_DEPENDS+=	rebar-[0-9]*:../../devel/rebar
 
 GITHUB_PROJECT=	p1_utils
-GITHUB_TAG=	d7800881e6702723ce58b7646b60c9e4cd25d563
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}
 
 NO_CONFIGURE=	yes
