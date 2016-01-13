@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2015/12/06 11:35:55 wiz Exp $
+# $NetBSD: Makefile,v 1.95 2016/01/13 07:54:31 jperkin Exp $
 
 DISTNAME=	dbus-1.10.6
 CATEGORIES=	sysutils
@@ -103,8 +103,8 @@ BUILDLINK_TRANSFORM+=	rm:-lrt
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/introspect.* \
 		${DESTDIR}${PREFIX}/share/doc/dbus/
-	${RM} ${DESTDIR}${PREFIX}/etc/dbus-1/s*.conf
-	${RMDIR} ${DESTDIR}${PREFIX}/etc/dbus-1
+	${RM} -f ${DESTDIR}${PREFIX}/etc/dbus-1/s*.conf
+	${RMDIR} ${DESTDIR}${PREFIX}/etc/dbus-1 || ${TRUE}
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
