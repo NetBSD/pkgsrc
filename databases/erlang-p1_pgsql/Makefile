@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2015/11/04 13:45:45 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2016/01/13 15:06:34 fhajny Exp $
 
-DISTNAME=	p1_pgsql-0.20150428
+DISTNAME=	p1_pgsql-1.0.0
 PKGNAME=	erlang-${DISTNAME}
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
@@ -13,7 +13,6 @@ LICENSE=	erlang-public-license
 BUILD_DEPENDS+=	rebar-[0-9]*:../../devel/rebar
 
 GITHUB_PROJECT=	pgsql
-GITHUB_TAG=	e72c03c60bfcb56bbb5d259342021d9cb3581dac
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}
 
 NO_CONFIGURE=	yes
