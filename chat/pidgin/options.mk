@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.14 2016/01/13 22:25:38 wiz Exp $
+# $NetBSD: options.mk,v 1.15 2016/01/13 22:26:53 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.pidgin
 PKG_SUPPORTED_OPTIONS+=		dbus debug gtkspell farstream x11
-#PKG_SUGGESTED_OPTIONS+=		dbus gtkspell farstream x11
+PKG_SUGGESTED_OPTIONS+=		dbus gtkspell farstream x11
 
 .include "../../mk/bsd.options.mk"
 
@@ -25,7 +25,7 @@ CONFIGURE_ARGS+=	--disable-vv
 
 .if !empty(PKG_OPTIONS:Mfarstream)
 CONFIGURE_ARGS+=	--enable-farstream
-.  include "../../multimedia/farstream/buildlink3.mk"
+.  include "../../chat/farstream/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mgtkspell)
