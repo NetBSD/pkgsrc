@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.190 2016/01/13 13:01:39 nros Exp $
+$NetBSD: CHANGES-2016,v 1.191 2016/01/13 13:17:26 nros Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -305,3 +305,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/isc-dhcpd4 to 4.3.3p1 [taca 2016-01-13]
 	Updated net/isc-dhcrelay4 to 4.3.3p1 [taca 2016-01-13]
 	Updated devel/pcre2 to 10.21 [nros 2016-01-13]
+	Updated shells/osh to 20160108 [nros 2016-01-13]
