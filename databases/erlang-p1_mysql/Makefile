@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2015/11/04 13:45:45 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2016/01/13 15:05:23 fhajny Exp $
 
-DISTNAME=	p1_mysql-0.20150922
+DISTNAME=	p1_mysql-1.0.0
 PKGNAME=	erlang-${DISTNAME}
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
@@ -13,7 +13,6 @@ LICENSE=	modified-bsd
 BUILD_DEPENDS+=	rebar-[0-9]*:../../devel/rebar
 
 GITHUB_PROJECT=	mysql
-GITHUB_TAG=	dfa87da95f8fdb92e270741c2a53f796b682f918
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}
 
 NO_CONFIGURE=	yes
