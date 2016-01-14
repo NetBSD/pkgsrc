@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.15 2016/01/13 22:26:53 wiz Exp $
+# $NetBSD: options.mk,v 1.16 2016/01/14 23:12:41 wiz Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.pidgin
-PKG_SUPPORTED_OPTIONS+=		dbus debug gtkspell farstream x11
-PKG_SUGGESTED_OPTIONS+=		dbus gtkspell farstream x11
+PKG_SUPPORTED_OPTIONS+=		dbus debug gtkspell x11
+PKG_SUGGESTED_OPTIONS+=		dbus gtkspell x11
 
 .include "../../mk/bsd.options.mk"
 
@@ -13,19 +13,6 @@ CONFIGURE_ARGS+=	--enable-dbus
 PLIST.dbus=		yes
 .  include "../../sysutils/dbus/buildlink3.mk"
 .  include "../../sysutils/dbus-glib/buildlink3.mk"
-.endif
-
-# voice/video support requires both farstream
-.if !empty(PKG_OPTIONS:Mfarstream)
-CONFIGURE_ARGS+=	--enable-vv
-PLIST.vv=		yes
-.else
-CONFIGURE_ARGS+=	--disable-vv
-.endif
-
-.if !empty(PKG_OPTIONS:Mfarstream)
-CONFIGURE_ARGS+=	--enable-farstream
-.  include "../../chat/farstream/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mgtkspell)
