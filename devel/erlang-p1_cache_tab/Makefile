@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2016/01/13 15:16:02 fhajny Exp $
+# $NetBSD: Makefile,v 1.3 2016/01/14 23:22:51 joerg Exp $
 
 DISTNAME=	cache_tab-1.0.1
-PKGNAME=	erlang-${DISTNAME}
+PKGNAME=	erlang-p1_${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 
