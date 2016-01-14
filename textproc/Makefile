@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.859 2016/01/12 22:06:35 kamil Exp $
+# $NetBSD: Makefile,v 1.860 2016/01/14 03:32:50 jnemeth Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -16,8 +16,8 @@ SUBDIR+=	R-markdown
 SUBDIR+=	R-stringi
 SUBDIR+=	R-stringr
 SUBDIR+=	WordNet
-SUBDIR+=	aiksaurus
 SUBDIR+=	aha
+SUBDIR+=	aiksaurus
 SUBDIR+=	antiword
 SUBDIR+=	artha
 SUBDIR+=	asciidoc
