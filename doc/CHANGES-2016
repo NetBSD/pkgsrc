@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.208 2016/01/15 10:56:33 wen Exp $
+$NetBSD: CHANGES-2016,v 1.209 2016/01/15 11:09:38 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -331,3 +331,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated meta-pkgs/texlive-collection-binextra to 2014pre4 [wiz 2016-01-15]
 	Updated misc/calibre to 2.49.0 [wiz 2016-01-15]
 	Updated time/p5-Time-Warp to 0.52 [wen 2016-01-15]
+	Updated devel/rebar to 2.6.1 [fhajny 2016-01-15]
