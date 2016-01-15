@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/01/15 07:54:39 wiz Exp $
+
+SHA1 (pianobar-2015.11.22.tar.bz2) = 1c44080f483bd5ceb68a54c038d81b5112dcbbc3
+RMD160 (pianobar-2015.11.22.tar.bz2) = 3ea3aa7cd0fcbbf70387934b3fc374b0637f1507
+SHA512 (pianobar-2015.11.22.tar.bz2) = cd8f7307f0d7bd0359954202d2fc3b6d9fdcdc7238a2057c1541f85d62d69fafb22c4a6466d873c35727c1ad1576755ac2f9224dd5ce4ccba2d9c1c8b9a0205a
+Size (pianobar-2015.11.22.tar.bz2) = 45973 bytes
