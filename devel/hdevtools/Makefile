@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2016/01/10 11:49:11 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.17 2016/01/15 15:26:39 szptvlfn Exp $
 
-DISTNAME=	hdevtools-0.1.0.5
+DISTNAME=	hdevtools-0.1.2.2
 PKGNAME=	${DISTNAME}
-PKGREVISION=	15
 CATEGORIES=	devel #haskell
 
 MAINTAINER=	szptvlfn@NetBSD.org
@@ -15,4 +14,5 @@ LICENSE=	mit
 .include "../../devel/hs-ghc-paths/buildlink3.mk"
 .include "../../net/hs-network/buildlink3.mk"
 .include "../../devel/hs-syb/buildlink3.mk"
+.include "../../devel/hs-transformers/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
