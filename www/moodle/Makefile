@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.44 2015/11/21 11:17:13 wen Exp $
+# $NetBSD: Makefile,v 1.45 2016/01/15 06:50:55 wen Exp $
 
-DISTNAME=	moodle-3.0
-PKGREVISION=	1
+DISTNAME=	moodle-3.0.2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=moodle/}
 EXTRACT_SUFX=	.tgz
@@ -86,9 +85,11 @@ WRKSRC=			${WRKDIR}/moodle
 post-extract:
 	${CP} ${FILESDIR}/moodle.conf ${WRKDIR}/moodle.conf
 
-do-install:
+post-patch:
 	cd ${WRKDIR} && ${FIND} moodle -type f -print \
 		| ${SED} -e 's,^,share/,' > ${WRKDIR}/PLIST.AUTO
+
+do-install:
 	cd ${WRKSRC} && ${PAX} -rw . ${DESTDIR}${MOODLEDIR}/
 	${INSTALL_DATA} ${WRKDIR}/moodle.conf \
 		${DESTDIR}${PREFIX}/${EGDIR}/moodle.conf
