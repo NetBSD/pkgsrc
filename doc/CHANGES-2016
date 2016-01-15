@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.205 2016/01/15 08:58:44 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.206 2016/01/15 08:59:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -328,3 +328,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added audio/pianobar version 2015.11.22 [wiz 2016-01-15]
 	Added textproc/tex-latexdiff-doc version 1.1.1 [wiz 2016-01-15]
 	Added textproc/tex-latexdiff version 1.1.1 [wiz 2016-01-15]
+	Updated meta-pkgs/texlive-collection-binextra to 2014pre4 [wiz 2016-01-15]
