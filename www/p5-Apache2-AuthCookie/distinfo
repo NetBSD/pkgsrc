@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/23 09:21:34 mef Exp $
+$NetBSD: distinfo,v 1.6 2016/01/15 15:03:04 mef Exp $
 
-SHA1 (Apache-AuthCookie-3.23.tar.gz) = 370e9ae76ce8bc1e54c8947ec254acccb0b9f3e6
-RMD160 (Apache-AuthCookie-3.23.tar.gz) = de1d3b94294a4bae49a3e707a26370dbb8abe6c4
-SHA512 (Apache-AuthCookie-3.23.tar.gz) = e8948725c1f2ae3631004ec666ecd20b9c3b5fda86408b980e5d0a3e0d36a8780d905718b1c7b5ca117fc15e130bf35f59ef83c598870dc5b874ee362a4fdcb7
-Size (Apache-AuthCookie-3.23.tar.gz) = 45053 bytes
+SHA1 (Apache-AuthCookie-3.24.tar.gz) = 81988a4966291eaa0bb667b5d201c8ce04f766ae
+RMD160 (Apache-AuthCookie-3.24.tar.gz) = f948270879d84b43d0ae10bb1be5c725ce02c861
+SHA512 (Apache-AuthCookie-3.24.tar.gz) = 023cc9c695d5b43a92a46b80a2c8ce556d89f0f3ed83d05cb068db5b50d96e1a0e4cd52491d2eb5f0e680e073bc16b36c214b2527a5c5d31eee1a37ed6cd2f60
+Size (Apache-AuthCookie-3.24.tar.gz) = 48349 bytes
