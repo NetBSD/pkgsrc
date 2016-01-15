@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2016/01/15 08:58:21 wiz Exp $
+bin/latexdiff-vc
+bin/latexdiff
+bin/latexrevise
+share/texmf-dist/scripts/latexdiff/latexdiff-vc.pl
+share/texmf-dist/scripts/latexdiff/latexdiff.pl
+share/texmf-dist/scripts/latexdiff/latexrevise.pl
