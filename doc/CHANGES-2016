@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.209 2016/01/15 11:09:38 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.210 2016/01/15 12:06:01 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -332,3 +332,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated misc/calibre to 2.49.0 [wiz 2016-01-15]
 	Updated time/p5-Time-Warp to 0.52 [wen 2016-01-15]
 	Updated devel/rebar to 2.6.1 [fhajny 2016-01-15]
+	Updated textproc/p5-Text-MicroTemplate to 0.24 [wen 2016-01-15]
