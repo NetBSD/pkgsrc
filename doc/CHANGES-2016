@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.207 2016/01/15 10:39:54 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.208 2016/01/15 10:56:33 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -330,3 +330,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added textproc/tex-latexdiff version 1.1.1 [wiz 2016-01-15]
 	Updated meta-pkgs/texlive-collection-binextra to 2014pre4 [wiz 2016-01-15]
 	Updated misc/calibre to 2.49.0 [wiz 2016-01-15]
+	Updated time/p5-Time-Warp to 0.52 [wen 2016-01-15]
