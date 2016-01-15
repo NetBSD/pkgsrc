@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.59 2015/11/03 03:27:24 agc Exp $
+$NetBSD: distinfo,v 1.60 2016/01/15 18:04:06 tron Exp $
 
 SHA1 (doxygen-1.8.9.1.src.tar.gz) = eb6b7e5f8dc8302e67053aba841f485017f246fd
 RMD160 (doxygen-1.8.9.1.src.tar.gz) = 103d45b36129a0a04b809050b7251acf6f9dacde
@@ -10,6 +10,11 @@ SHA1 (patch-ac) = 87c68a2ce598c10d90d775764f4c05739eb51435
 SHA1 (patch-af) = 878aabc8bcd800e691edabf664f5c50c70af57a0
 SHA1 (patch-ah) = c1a7f35fe2adcfd094c3ba0f81fee47a027bcf82
 SHA1 (patch-aj) = 504dfce5474e017e7872208b15a436be669c293c
+SHA1 (patch-src_code.l) = 4793f3b6cd908921dfb73652b47b70af0cf8bc7f
+SHA1 (patch-src_commentscan.l) = 755458f2b603bbb3de4414025bbbe75a455082fd
+SHA1 (patch-src_fortrancode.l) = d28b2d4e34170ceb0af96a46069e58bac076803d
 SHA1 (patch-src_latexgen.cpp) = c9fd545284c99adac3c292aa1395a316f90c7c80
 SHA1 (patch-src_portable__c.c) = 88bb2ae294f8eaf16d48d9f07a1e95e754647947
+SHA1 (patch-src_pycode.l) = d40e0089eb26d886787188971e40654b94d0343e
+SHA1 (patch-src_vhdlcode.l) = b878e9169ddd7f0ee489fc2c447f463865513efc
 SHA1 (patch-tmake_lib_macosx-c++_tmake.conf) = 6f5278524ee1c62fb45b23996bc34e37d0e63c51
