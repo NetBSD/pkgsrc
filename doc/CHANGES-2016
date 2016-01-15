@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.203 2016/01/15 07:05:47 wen Exp $
+$NetBSD: CHANGES-2016,v 1.204 2016/01/15 07:55:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -325,3 +325,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated chat/pidgin to 2.10.12 [wiz 2016-01-13]
 	Updated www/moodle to 3.0.2 [wen 2016-01-15]
 	Updated textproc/p5-PDF-Create to 1.27 [wen 2016-01-15]
+	Added audio/pianobar version 2015.11.22 [wiz 2016-01-15]
