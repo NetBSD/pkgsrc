@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.527 2015/12/28 03:30:37 kamil Exp $
+# $NetBSD: Makefile,v 1.528 2016/01/15 07:54:49 wiz Exp $
 #
 
 COMMENT=	Audio tools
@@ -367,6 +367,7 @@ SUBDIR+=	paprefs
 SUBDIR+=	pavucontrol
 SUBDIR+=	pavumeter
 SUBDIR+=	pd
+SUBDIR+=	pianobar
 SUBDIR+=	picard
 SUBDIR+=	playitslowly
 SUBDIR+=	pocketsphinx
