@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.204 2016/01/15 07:55:00 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.205 2016/01/15 08:58:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -326,3 +326,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/moodle to 3.0.2 [wen 2016-01-15]
 	Updated textproc/p5-PDF-Create to 1.27 [wen 2016-01-15]
 	Added audio/pianobar version 2015.11.22 [wiz 2016-01-15]
+	Added textproc/tex-latexdiff-doc version 1.1.1 [wiz 2016-01-15]
+	Added textproc/tex-latexdiff version 1.1.1 [wiz 2016-01-15]
