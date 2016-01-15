@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/12/11 19:33:05 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/01/15 14:32:25 jmmv Exp $
 bin/markdown2social
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/markdown2social/__init__.py
@@ -7,6 +7,12 @@ ${PYSITELIB}/markdown2social/__init__.pyo
 ${PYSITELIB}/markdown2social/__main__.py
 ${PYSITELIB}/markdown2social/__main__.pyc
 ${PYSITELIB}/markdown2social/__main__.pyo
+${PYSITELIB}/markdown2social/config.py
+${PYSITELIB}/markdown2social/config.pyc
+${PYSITELIB}/markdown2social/config.pyo
+${PYSITELIB}/markdown2social/config_test.py
+${PYSITELIB}/markdown2social/config_test.pyc
+${PYSITELIB}/markdown2social/config_test.pyo
 ${PYSITELIB}/markdown2social/converter.py
 ${PYSITELIB}/markdown2social/converter.pyc
 ${PYSITELIB}/markdown2social/converter.pyo
@@ -25,3 +31,5 @@ share/doc/markdown2social/CONTRIBUTORS
 share/doc/markdown2social/LICENSE
 share/doc/markdown2social/NEWS.md
 share/doc/markdown2social/README.md
+share/man/man1/markdown2social.1
+share/man/man5/markdown2social.conf.5

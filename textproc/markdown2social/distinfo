@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/12/11 19:33:05 jmmv Exp $
+$NetBSD: distinfo,v 1.2 2016/01/15 14:32:25 jmmv Exp $
 
-SHA1 (markdown2social-0.2.tar.gz) = 4b0c103b0cd4081a505a826073f9da84d70e89d9
-RMD160 (markdown2social-0.2.tar.gz) = 1635cec53960dd8d1b8be3fcedb69b344917c39f
-SHA512 (markdown2social-0.2.tar.gz) = 8c53246f5048921955ca4c4d83039c3a0e672314ee8d4274114f7ee81befdafdde5a743b4ee9431d68071331b55e5b98608f6d41e2c87f3154fded2b72e19ac9
-Size (markdown2social-0.2.tar.gz) = 17223 bytes
+SHA1 (markdown2social-0.3.tar.gz) = b5807e6c8391cc194f8514566f7c8b860bc53728
+RMD160 (markdown2social-0.3.tar.gz) = 5f34f1e90f6cc139ab9db95fa30e9e7b2bf5d0fc
+SHA512 (markdown2social-0.3.tar.gz) = 0867f26d853d8e0b9de0c65e02228501099c98fb33c9bc05a976bf01ffb1f79e80e6e87253332dfb29bebf9bc9f71837e827703845d77b477f97567ca7305fad
+Size (markdown2social-0.3.tar.gz) = 20948 bytes
