@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2016/01/15 08:58:21 wiz Exp $
+man/man1/latexdiff-vc.1
+man/man1/latexdiff.1
+man/man1/latexrevise.1
+share/texmf-dist/doc/support/latexdiff/COPYING
+share/texmf-dist/doc/support/latexdiff/Makefile
+share/texmf-dist/doc/support/latexdiff/README
+share/texmf-dist/doc/support/latexdiff/contrib/README.latexchanges
+share/texmf-dist/doc/support/latexdiff/contrib/latexchanges.py
+share/texmf-dist/doc/support/latexdiff/contrib/latexdiff-wrap
+share/texmf-dist/doc/support/latexdiff/contrib/latexdiff.spec
+share/texmf-dist/doc/support/latexdiff/doc/example-diff.tex
+share/texmf-dist/doc/support/latexdiff/doc/latexdiff-man.pdf
+share/texmf-dist/doc/support/latexdiff/doc/latexdiff-man.tex
+share/texmf-dist/doc/support/latexdiff/example/example-draft.tex
+share/texmf-dist/doc/support/latexdiff/example/example-rev.tex
+share/texmf-dist/doc/support/latexdiff/latexdiff
+share/texmf-dist/doc/support/latexdiff/latexdiff-fast
