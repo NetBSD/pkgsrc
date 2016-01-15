@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.210 2016/01/15 12:06:01 wen Exp $
+$NetBSD: CHANGES-2016,v 1.211 2016/01/15 14:26:36 darcy Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -333,3 +333,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated time/p5-Time-Warp to 0.52 [wen 2016-01-15]
 	Updated devel/rebar to 2.6.1 [fhajny 2016-01-15]
 	Updated textproc/p5-Text-MicroTemplate to 0.24 [wen 2016-01-15]
+	Updated textproc/py-sphinx to 1.3.4 [darcy 2016-01-15]
