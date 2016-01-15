@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2015/12/11 19:33:05 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2016/01/15 14:32:25 jmmv Exp $
 
-DISTNAME=	markdown2social-0.2
+DISTNAME=	markdown2social-0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_PYPI:M=/markdown2social/} \
