@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2015/02/24 11:07:55 markd Exp $
+# $NetBSD: Makefile,v 1.27 2016/01/15 14:24:41 darcy Exp $
 
-DISTNAME=	Sphinx-1.2.3
+DISTNAME=	Sphinx-1.3.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	1
 CATEGORIES=	textproc python
 MASTER_SITES=	http://pypi.python.org/packages/source/S/Sphinx/
 
