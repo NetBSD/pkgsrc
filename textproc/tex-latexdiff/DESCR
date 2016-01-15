@@ -1,0 +1,10 @@
+Latexdiff is a Perl script for visual mark up and revision of
+significant differences between two LaTeX files. Various
+options are available for visual markup using standard LaTeX
+packages such as color. Changes not directly affecting visible
+text, for example in formatting commands, are still marked in
+the LaTeX source. A rudimentary revision facilility is provided
+by another Perl script, latexrevise, which accepts or rejects
+all changes. Manual editing of the difference file can be used
+to override this default behaviour and accept or reject
+selected changes only.
