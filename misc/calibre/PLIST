@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.51 2015/12/30 00:08:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.52 2016/01/15 10:39:44 wiz Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -1280,6 +1280,7 @@ lib/calibre/calibre/utils/icu_test.py
 lib/calibre/calibre/utils/img.py
 lib/calibre/calibre/utils/imghdr.py
 lib/calibre/calibre/utils/inotify.py
+lib/calibre/calibre/utils/ip_routing.py
 lib/calibre/calibre/utils/ipc/__init__.py
 lib/calibre/calibre/utils/ipc/job.py
 lib/calibre/calibre/utils/ipc/launch.py
@@ -1288,6 +1289,7 @@ lib/calibre/calibre/utils/ipc/proxy.py
 lib/calibre/calibre/utils/ipc/server.py
 lib/calibre/calibre/utils/ipc/simple_worker.py
 lib/calibre/calibre/utils/ipc/worker.py
+lib/calibre/calibre/utils/iphlpapi.py
 lib/calibre/calibre/utils/ipython.py
 lib/calibre/calibre/utils/linux_trash.py
 lib/calibre/calibre/utils/localization.py
@@ -2118,7 +2120,6 @@ share/calibre/recipes/diario_el_pueblo.recipe
 share/calibre/recipes/diario_extra.recipe
 share/calibre/recipes/diario_ibiza.recipe
 share/calibre/recipes/diario_la_republica.recipe
-share/calibre/recipes/diario_salto.recipe
 share/calibre/recipes/diario_sport.recipe
 share/calibre/recipes/diariovasco.recipe
 share/calibre/recipes/diepresse.recipe
@@ -2575,7 +2576,6 @@ share/calibre/recipes/kyungyhang.recipe
 share/calibre/recipes/l_espresso.recipe
 share/calibre/recipes/l_vivs_ghazieta.recipe
 share/calibre/recipes/la_cuarta.recipe
-share/calibre/recipes/la_diaria.recipe
 share/calibre/recipes/la_gazetta_del_mezzogiorno.recipe
 share/calibre/recipes/la_gazzeta_dello_sport.recipe
 share/calibre/recipes/la_jornada.recipe
@@ -2655,6 +2655,7 @@ share/calibre/recipes/london_free_press.recipe
 share/calibre/recipes/los_tiempos_bo.recipe
 share/calibre/recipes/losandes.recipe
 share/calibre/recipes/losservatoreromano_it.recipe
+share/calibre/recipes/lr21.recipe
 share/calibre/recipes/lrb.recipe
 share/calibre/recipes/lrb_payed.recipe
 share/calibre/recipes/ludwig_mises.recipe
@@ -3271,7 +3272,6 @@ share/calibre/recipes/unica.recipe
 share/calibre/recipes/uninohimitu.recipe
 share/calibre/recipes/united_daily.recipe
 share/calibre/recipes/universe_today.recipe
-share/calibre/recipes/unoticias.recipe
 share/calibre/recipes/unperiodico.recipe
 share/calibre/recipes/upi.recipe
 share/calibre/recipes/usatoday.recipe
@@ -3395,10 +3395,19 @@ share/calibre/viewer/hyphenation.js
 share/calibre/viewer/images.js
 share/calibre/viewer/jquery_scrollTo.js
 share/calibre/viewer/mathjax/MathJax.js
+share/calibre/viewer/mathjax/extensions/AssistiveMML.js
+share/calibre/viewer/mathjax/extensions/CHTML-preview.js
 share/calibre/viewer/mathjax/extensions/FontWarnings.js
+share/calibre/viewer/mathjax/extensions/HTML-CSS/handle-floats.js
+share/calibre/viewer/mathjax/extensions/HelpDialog.js
+share/calibre/viewer/mathjax/extensions/MatchWebFonts.js
 share/calibre/viewer/mathjax/extensions/MathEvents.js
+share/calibre/viewer/mathjax/extensions/MathML/content-mathml.js
+share/calibre/viewer/mathjax/extensions/MathML/mml3.js
 share/calibre/viewer/mathjax/extensions/MathMenu.js
 share/calibre/viewer/mathjax/extensions/MathZoom.js
+share/calibre/viewer/mathjax/extensions/Safe.js
+share/calibre/viewer/mathjax/extensions/TeX/AMScd.js
 share/calibre/viewer/mathjax/extensions/TeX/AMSmath.js
 share/calibre/viewer/mathjax/extensions/TeX/AMSsymbols.js
 share/calibre/viewer/mathjax/extensions/TeX/HTML.js
@@ -3413,6 +3422,7 @@ share/calibre/viewer/mathjax/extensions/TeX/color.js
 share/calibre/viewer/mathjax/extensions/TeX/enclose.js
 share/calibre/viewer/mathjax/extensions/TeX/extpfeil.js
 share/calibre/viewer/mathjax/extensions/TeX/mathchoice.js
+share/calibre/viewer/mathjax/extensions/TeX/mediawiki-texvc.js
 share/calibre/viewer/mathjax/extensions/TeX/mhchem.js
 share/calibre/viewer/mathjax/extensions/TeX/newcommand.js
 share/calibre/viewer/mathjax/extensions/TeX/noErrors.js
@@ -3420,6 +3430,7 @@ share/calibre/viewer/mathjax/extensions/TeX/noUndefined.js
 share/calibre/viewer/mathjax/extensions/TeX/unicode.js
 share/calibre/viewer/mathjax/extensions/TeX/verb.js
 share/calibre/viewer/mathjax/extensions/asciimath2jax.js
+share/calibre/viewer/mathjax/extensions/fast-preview.js
 share/calibre/viewer/mathjax/extensions/jsMath2jax.js
 share/calibre/viewer/mathjax/extensions/mml2jax.js
 share/calibre/viewer/mathjax/extensions/tex2jax.js
