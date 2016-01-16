@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/01/16 16:42:24 fhajny Exp $
+# $NetBSD: Makefile,v 1.3 2016/01/16 19:17:11 fhajny Exp $
 
 DISTNAME=	oauth2-0.6.0
 PKGNAME=	erlang-${DISTNAME}.20150911
@@ -13,6 +13,8 @@ LICENSE=	mit
 GITHUB_PROJECT=	oauth2
 GITHUB_TAG=	8d129fbf8866930b4ffa6dd84e65bd2b32b9acb8
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}
+
+ERL_MOD_DIR=	lib/erlang/lib/${DISTNAME}
 
 BUILD_TARGET=	compile
 
