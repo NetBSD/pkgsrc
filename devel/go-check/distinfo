@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/01/16 23:56:23 rillig Exp $
+
+SHA1 (go-check-1-4f90aea.tar.gz) = 0b6c9098a710289e495f76aee044af76bab4385e
+RMD160 (go-check-1-4f90aea.tar.gz) = 6a5aa83e8fc78bf26ce24d3f9dfa80762b21efbc
+SHA512 (go-check-1-4f90aea.tar.gz) = 5a0b15ce76bcb675b4374ed4670ec02f6c1278afe8509d154367df62cf9af669776775be6969ec6c511379c2f9dda243a28cdddb96bfc3252af7b1f883fc620b
+Size (go-check-1-4f90aea.tar.gz) = 30343 bytes
