@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2015/11/04 13:45:46 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2016/01/16 17:33:51 fhajny Exp $
 
-DISTNAME=	goldrush-0.1.7
-PKGNAME=	erlang-${DISTNAME}
+DISTNAME=	goldrush-0.1.8
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=DeadZen/}
 
@@ -10,19 +9,7 @@ HOMEPAGE=	http://github.com/DeadZen/goldrush/
 COMMENT=	Small, Fast event processing and monitoring for Erlang/OTP apps
 LICENSE=	mit
 
-BUILD_DEPENDS+=	rebar-[0-9]*:../../devel/rebar
-
 GITHUB_PROJECT=	goldrush
-GITHUB_TAG=	${PKGVERSION_NOREV}
 
-NO_CONFIGURE=	yes
-USE_TOOLS+=	pax
-
-INSTALLATION_DIRS+=	lib/erlang/lib/goldrush
-
-do-install:
-	cd ${WRKSRC} && ${PAX} -rw -pp ebin priv \
-		${DESTDIR}${PREFIX}/lib/erlang/lib/goldrush/
-
-.include "../../lang/erlang/buildlink3.mk"
+.include "../../lang/erlang/module.mk"
 .include "../../mk/bsd.pkg.mk"
