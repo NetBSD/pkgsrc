@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2016/01/13 15:24:48 fhajny Exp $
-lib/erlang/lib/p1_utils/ebin/p1_edoc_layout.beam
-lib/erlang/lib/p1_utils/ebin/p1_fsm.beam
-lib/erlang/lib/p1_utils/ebin/p1_nif_utils.beam
-lib/erlang/lib/p1_utils/ebin/p1_server.beam
-lib/erlang/lib/p1_utils/ebin/p1_time_compat.beam
-lib/erlang/lib/p1_utils/ebin/p1_utils.app
-lib/erlang/lib/p1_utils/ebin/treap.beam
+@comment $NetBSD: PLIST,v 1.3 2016/01/16 18:55:38 fhajny Exp $
+lib/erlang/lib/p1_utils-${PKGVERSION}/ebin/p1_edoc_layout.beam
+lib/erlang/lib/p1_utils-${PKGVERSION}/ebin/p1_fsm.beam
+lib/erlang/lib/p1_utils-${PKGVERSION}/ebin/p1_nif_utils.beam
+lib/erlang/lib/p1_utils-${PKGVERSION}/ebin/p1_server.beam
+lib/erlang/lib/p1_utils-${PKGVERSION}/ebin/p1_time_compat.beam
+lib/erlang/lib/p1_utils-${PKGVERSION}/ebin/p1_utils.app
+lib/erlang/lib/p1_utils-${PKGVERSION}/ebin/treap.beam
