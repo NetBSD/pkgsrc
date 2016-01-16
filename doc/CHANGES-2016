@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.222 2016/01/16 17:04:48 leot Exp $
+$NetBSD: CHANGES-2016,v 1.223 2016/01/16 18:11:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -349,3 +349,6 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/scamper to 20141211d [leot 2016-01-16]
 	Updated pkgtools/pkglint to 5.3.1 [rillig 2016-01-16]
 	Updated multimedia/ffmpeg2 to 2.8.5 [leot 2016-01-16]
+	Updated databases/sqlite3 to 3.10.1 [adam 2016-01-16]
+	Updated databases/sqlite3-docs to 3.10.1 [adam 2016-01-16]
+	Updated databases/sqlite3-tcl to 3.10.1 [adam 2016-01-16]
