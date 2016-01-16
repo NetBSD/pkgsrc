@@ -1,33 +1,25 @@
-# $NetBSD: Makefile,v 1.1 2015/11/04 13:45:45 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2016/01/16 18:42:25 fhajny Exp $
 
-DISTNAME=	p1_stun-0.20150916
-PKGNAME=	erlang-${DISTNAME}
+DISTNAME=	p1_stun-0.9.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://github.com/processone/stun/
 COMMENT=	STUN for ejabberd
-LICENSE=	gnu-gpl-v2
+LICENSE=	apache-2.0
 
-BUILD_DEPENDS+=	rebar-[0-9]*:../../devel/rebar
-DEPENDS+=	erlang-p1_tls-[0-9]*:../../security/erlang-p1_tls
-DEPENDS+=	erlang-p1_utils-[0-9]*:../../misc/erlang-p1_utils
+DEPENDS+=	erlang-p1_tls>=1.0.0:../../security/erlang-p1_tls
+DEPENDS+=	erlang-p1_utils>=1.0.2:../../misc/erlang-p1_utils
 
 GITHUB_PROJECT=	stun
-GITHUB_TAG=	061bdae484268cbf0457ad4797e74b8516df3ad1
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}
-
-NO_CONFIGURE=	yes
-USE_TOOLS+=	pax
 
 BUILD_TARGET=	src
 
-INSTALLATION_DIRS+=	lib/erlang/lib/p1_stun
+# Leave a non-versioned symlink in place for net/erlang-p1_sip to find
+post-install:
+	${LN} -sf ${DISTNAME} ${DESTDIR}${PREFIX}/lib/erlang/lib/p1_stun
 
-do-install:
-	cd ${WRKSRC} && ${PAX} -rw -pp ebin include \
-		${DESTDIR}${PREFIX}/lib/erlang/lib/p1_stun/
-
-.include "../../lang/erlang/buildlink3.mk"
+.include "../../lang/erlang/module.mk"
 .include "../../mk/bsd.pkg.mk"
