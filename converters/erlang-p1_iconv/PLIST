@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2015/11/04 13:45:44 fhajny Exp $
-lib/erlang/lib/p1_iconv/ebin/iconv.beam
-lib/erlang/lib/p1_iconv/ebin/iconv_app.beam
-lib/erlang/lib/p1_iconv/ebin/iconv_sup.beam
-lib/erlang/lib/p1_iconv/ebin/p1_iconv.app
-lib/erlang/lib/p1_iconv/priv/lib/iconv.so
+@comment $NetBSD: PLIST,v 1.2 2016/01/16 18:49:22 fhajny Exp $
+lib/erlang/lib/p1_iconv-${PKGVERSION}/ebin/iconv.beam
+lib/erlang/lib/p1_iconv-${PKGVERSION}/ebin/iconv_app.beam
+lib/erlang/lib/p1_iconv-${PKGVERSION}/ebin/iconv_sup.beam
+lib/erlang/lib/p1_iconv-${PKGVERSION}/ebin/p1_iconv.app
+lib/erlang/lib/p1_iconv-${PKGVERSION}/priv/lib/iconv.so
