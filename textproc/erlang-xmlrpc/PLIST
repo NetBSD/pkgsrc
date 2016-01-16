@@ -1,11 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1 2015/11/04 13:45:46 fhajny Exp $
-lib/erlang/lib/xmlrpc/ebin/beam_util.beam
-lib/erlang/lib/xmlrpc/ebin/tcp_serv.beam
-lib/erlang/lib/xmlrpc/ebin/url_util.beam
-lib/erlang/lib/xmlrpc/ebin/xmlrpc.beam
-lib/erlang/lib/xmlrpc/ebin/xmlrpc_decode.beam
-lib/erlang/lib/xmlrpc/ebin/xmlrpc_encode.beam
-lib/erlang/lib/xmlrpc/ebin/xmlrpc_http.beam
-lib/erlang/lib/xmlrpc/ebin/xmlrpc_tests.beam
-lib/erlang/lib/xmlrpc/ebin/xmlrpc_util.beam
-lib/erlang/lib/xmlrpc/include/xmlrpc.hrl
+@comment $NetBSD: PLIST,v 1.2 2016/01/16 18:58:24 fhajny Exp $
+lib/erlang/lib/xmlrpc-1.15/ebin/beam_util.beam
+lib/erlang/lib/xmlrpc-1.15/ebin/tcp_serv.beam
+lib/erlang/lib/xmlrpc-1.15/ebin/url_util.beam
+lib/erlang/lib/xmlrpc-1.15/ebin/xmlrpc.app
+lib/erlang/lib/xmlrpc-1.15/ebin/xmlrpc.beam
+lib/erlang/lib/xmlrpc-1.15/ebin/xmlrpc_decode.beam
+lib/erlang/lib/xmlrpc-1.15/ebin/xmlrpc_encode.beam
+lib/erlang/lib/xmlrpc-1.15/ebin/xmlrpc_http.beam
+lib/erlang/lib/xmlrpc-1.15/ebin/xmlrpc_tests.beam
+lib/erlang/lib/xmlrpc-1.15/ebin/xmlrpc_util.beam
+lib/erlang/lib/xmlrpc-1.15/include/xmlrpc.hrl
