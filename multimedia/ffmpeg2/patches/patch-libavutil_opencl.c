@@ -1,10 +1,10 @@
-$NetBSD: patch-libavutil_opencl.c,v 1.2 2015/04/02 22:40:04 wiz Exp $
+$NetBSD: patch-libavutil_opencl.c,v 1.3 2016/01/16 17:04:33 leot Exp $
 
 Fix undeclared identifier error.
 
---- libavutil/opencl.c.orig	2015-03-16 19:26:04.000000000 +0000
+--- libavutil/opencl.c.orig	2016-01-15 16:58:37.000000000 +0000
 +++ libavutil/opencl.c
-@@ -423,7 +423,7 @@ cl_program av_opencl_compile(const char 
+@@ -457,7 +457,7 @@ cl_program av_opencl_compile(const char 
      cl_program program = NULL;
  
      LOCK_OPENCL;

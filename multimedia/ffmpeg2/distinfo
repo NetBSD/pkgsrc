@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.44 2015/12/28 11:44:46 adam Exp $
+$NetBSD: distinfo,v 1.45 2016/01/16 17:04:32 leot Exp $
 
-SHA1 (ffmpeg-2.8.4.tar.xz) = 5c1d76f503c76c9a1f497656a8248e1354b2e15a
-RMD160 (ffmpeg-2.8.4.tar.xz) = 0757a4a12f4fe2996e8be2c917f25075c879c00e
-SHA512 (ffmpeg-2.8.4.tar.xz) = 3167d5758843afc198ecebb9c4c13543a1a224ef63695d9f1cbba1cd7ff043024eb5d844474052f46d9319a7261ec0514a1f139919263b5ef47f4fd54c3bf4cb
-Size (ffmpeg-2.8.4.tar.xz) = 7197652 bytes
-SHA1 (patch-Makefile) = ff8a7a5fdfd4987ef2835bd7360a78efd4310253
-SHA1 (patch-configure) = bc0dcdb5605b5a112de556ecb466265ef8ff5ca9
-SHA1 (patch-libavcodec_x86_ac3dsp_init.c) = f997271f4f4604987591d7f17c571aaaa8a6188a
-SHA1 (patch-libavutil_common.h) = ebbd0c169f228af37ae2dd54b27d5dba11a34c5e
-SHA1 (patch-libavutil_opencl.c) = 2404f98c677c9fe92bcc49be01ebf76bebba0eea
-SHA1 (patch-libavutil_x86_asm.h) = 3fe732ec6da9f0920d3c6e3a5db9bed65b0a3e40
-SHA1 (patch-libavutil_x86_cpu.c) = ece66a5b22130754c11c643dae48171d04d3246f
+SHA1 (ffmpeg-2.8.5.tar.xz) = 5f46c7e1d80f37e41f69f5eadbdd6f97f56eca39
+RMD160 (ffmpeg-2.8.5.tar.xz) = 64433cf03b24568ea58418b4d3f50d3dca08e0ad
+SHA512 (ffmpeg-2.8.5.tar.xz) = c1b79f905559b0d134d213c3c06289def162fe5fdda964e7192a1b7bccd539353b7515e9a6dfff1c5a7c64620216f61cd63ca89bd76ec9950b5aac97a44660f8
+Size (ffmpeg-2.8.5.tar.xz) = 7201100 bytes
+SHA1 (patch-Makefile) = e3cb5cedccd2840f36ab90cd2f4b7987e1098a56
+SHA1 (patch-configure) = c739d4f002b0ed1850f88b5a961672b5e93f1dc1
+SHA1 (patch-libavcodec_x86_ac3dsp__init.c) = 268dc75dfe3b907feb8ad730bcdd1d4556be664a
+SHA1 (patch-libavutil_common.h) = de36efed3a8a2069e170e5afe77eb122a46d14b2
+SHA1 (patch-libavutil_opencl.c) = 00ea04f9febe60b9428ac8c3b7e14ae01a955685
+SHA1 (patch-libavutil_x86_asm.h) = 85c5403e97449639253d3c97391dfbb4cadb2548
+SHA1 (patch-libavutil_x86_cpu.c) = 499b0fc3081971a2bba2724bd051aab14c531239
