@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2015/11/04 13:45:45 fhajny Exp $
-lib/erlang/lib/oauth2/ebin/oauth2.app
-lib/erlang/lib/oauth2/ebin/oauth2.beam
-lib/erlang/lib/oauth2/ebin/oauth2_backend.beam
-lib/erlang/lib/oauth2/ebin/oauth2_config.beam
-lib/erlang/lib/oauth2/ebin/oauth2_priv_set.beam
-lib/erlang/lib/oauth2/ebin/oauth2_response.beam
-lib/erlang/lib/oauth2/ebin/oauth2_token.beam
-lib/erlang/lib/oauth2/ebin/oauth2_token_generation.beam
+@comment $NetBSD: PLIST,v 1.2 2016/01/16 16:42:24 fhajny Exp $
+lib/erlang/lib/oauth2-0.6.0/ebin/oauth2.app
+lib/erlang/lib/oauth2-0.6.0/ebin/oauth2.beam
+lib/erlang/lib/oauth2-0.6.0/ebin/oauth2_backend.beam
+lib/erlang/lib/oauth2-0.6.0/ebin/oauth2_config.beam
+lib/erlang/lib/oauth2-0.6.0/ebin/oauth2_priv_set.beam
+lib/erlang/lib/oauth2-0.6.0/ebin/oauth2_response.beam
+lib/erlang/lib/oauth2-0.6.0/ebin/oauth2_token.beam
+lib/erlang/lib/oauth2-0.6.0/ebin/oauth2_token_generation.beam
