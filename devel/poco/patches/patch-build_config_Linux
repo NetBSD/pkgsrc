@@ -1,18 +1,18 @@
-$NetBSD: patch-build_config_Linux,v 1.1 2011/10/17 07:56:57 sbd Exp $
+$NetBSD: patch-build_config_Linux,v 1.2 2016/01/16 12:15:12 ryoon Exp $
 
 # Build a full set of shared library search paths, rather than
 # *assuming* everything is under PREFIX.
 
---- build/config/Linux.orig	2010-12-16 05:43:24.000000000 +0000
+--- build/config/Linux.orig	2015-08-04 05:20:55.000000000 +0000
 +++ build/config/Linux
 @@ -21,6 +21,8 @@ LINK    = $(CXX)
- LIB     = ar -cr
- RANLIB  = ranlib
+ LIB     = ${CROSS_COMPILE}ar -cr
+ RANLIB  = ${CROSS_COMPILE}ranlib
  SHLIB   = $(CXX) -shared -Wl,-soname,$(notdir $@) -o $@
 +SHLIBFLAGS = $(LDFLAGS) -Wl,-R$(POCO_PREFIX)/lib \
 +		$(foreach p,$(sort $(POCO_ADD_LIBRARY)),-L$(p) -Wl,-R$(p))
  SHLIBLN = $(POCO_BASE)/build/script/shlibln
- STRIP   = strip
+ STRIP   = ${CROSS_COMPILE}strip
  DEP     = $(POCO_BASE)/build/script/makedepend.gcc 
 @@ -44,7 +46,7 @@ CFLAGS64        =
  CXXFLAGS        = -Wall -Wno-sign-compare

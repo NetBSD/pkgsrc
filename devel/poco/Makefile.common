@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2015/06/25 07:30:30 dholland Exp $
+# $NetBSD: Makefile.common,v 1.12 2016/01/16 12:15:12 ryoon Exp $
 #
 # used by devel/poco/Makefile
 # used by databases/poco-data/Makefile
@@ -6,10 +6,10 @@
 # used by databases/poco-data-mysql/Makefile
 # used by databases/poco-data-odbc/Makefile
 
-POCO_VERSION=1.4.2p1
+POCO_VERSION=1.6.1
 
 DISTNAME=	poco-${POCO_VERSION}-all
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=poco/}
+MASTER_SITES=	http://pocoproject.org/releases/poco-${POCO_VERSION}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.pocoproject.org/
@@ -27,7 +27,10 @@ USE_TOOLS+=	gmake
 # error: unable to open output file '.../poco-1.4.2p1-all/Foundation/obj/NetBSD/amd64/debug_shared/Ascii.o'
 MAKE_JOBS_SAFE=	no
 
-CONFIGURE_ARGS+=	--prefix=${PREFIX} --omit=Data
+# Fix Net/sample build at least.
+BUILDLINK_TRANSFORM+=	l:PocoUtil:PocoUtil:PocoJSON
+
+CONFIGURE_ARGS+=	--prefix=${PREFIX} --omit=Data,MongoDB
 # don't use the bundled versions of SQLite, zlib, etc..
 CONFIGURE_ARGS+=	--unbundled
 
