@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2015/04/26 11:52:18 ryoon Exp $
+# $NetBSD: Makefile,v 1.10 2016/01/16 12:15:12 ryoon Exp $
 #
 
 PKGNAME=	poco-data-odbc-${POCO_VERSION}
-PKGREVISION=	3
 CATEGORIES=	databases
 
 COMMENT=	POCO C++ ODBC RDBMS Accessor libraries
@@ -14,6 +13,8 @@ CONFIGURE_ARGS+=	--omit=Data/MySQL,Data/SQLite,Zip,XML
 CONFIGURE_ARGS+=	--omit=Foundation,Net,NetSSL_OpenSSL
 CONFIGURE_ARGS+=	--no-tests
 CONFIGURE_ARGS+=	--no-samples
+CONFIGURE_ARGS+=	--odbc-lib=${BUILDLINK_PREFIX.unixodbc}/lib
+CONFIGURE_ARGS+=	--odbc-include=${BUILDLINK_PREFIX.unixodbc}/include
 
 USE_TOOLS+=	pax
 
@@ -28,13 +29,6 @@ do-install:
 						    ${DESTDIR}${PREFIX}/lib \;
 	cd ${WRKSRC}/Data/ODBC && \
 	    ${PAX} -rw -v -pp include ${DESTDIR}${PREFIX}
-
-SUBST_CLASSES+=		paths
-SUBST_MESSAGE.paths=	pkgsrc-izing paths
-SUBST_STAGE.paths=	post-patch
-SUBST_FILES.paths=	Data/ODBC/Makefile
-SUBST_SED.paths=    -e 's,@ODBCLIBDIR@,${BUILDLINK_DIR}/${BUILDLINK_LIBDIRS.unixodbc},g'
-SUBST_SED.paths+=   -e 's,@ODBCINCDIR@,${BUILDLINK_DIR}/${BUILDLINK_INCDIRS.unixodbc},g'
 
 # should make which odbc we use an option.. but.. :D
 .include "../../databases/unixodbc/buildlink3.mk"
