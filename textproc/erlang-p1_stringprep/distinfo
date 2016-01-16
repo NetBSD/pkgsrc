@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2015/11/04 13:45:46 fhajny Exp $
+$NetBSD: distinfo,v 1.2 2016/01/16 17:53:48 fhajny Exp $
 
-SHA1 (p1_stringprep-0.20150204-3c640237a3a7831dc39de6a6d329d3a9af25c579.tar.gz) = cef7c0fbc400f59a05b4517ca7aaf759142c3304
-RMD160 (p1_stringprep-0.20150204-3c640237a3a7831dc39de6a6d329d3a9af25c579.tar.gz) = 895584df8fe59a105c382284abb1c482fc6e8d85
-SHA512 (p1_stringprep-0.20150204-3c640237a3a7831dc39de6a6d329d3a9af25c579.tar.gz) = 3bc6166750be919b4b8853be5e47ee09d91ac0cf45d6c3f24cc49019ba3df2c282f00d65db24cac3d03628f19f4689c3c5a8fea2624ccaa92ada2e2cc21064a6
-Size (p1_stringprep-0.20150204-3c640237a3a7831dc39de6a6d329d3a9af25c579.tar.gz) = 82296 bytes
+SHA1 (p1_stringprep-1.0.0.tar.gz) = 4a91d1241c62ababf0cdd3fdb034a3345cdd3747
+RMD160 (p1_stringprep-1.0.0.tar.gz) = bc2f22c04a7cc45cb745a4b975c89e8571b733ee
+SHA512 (p1_stringprep-1.0.0.tar.gz) = 5b6cba3d23f1db8d38a4c1a4663226f22032a7ac32ae671fb7cce40cf24d28e34cb9fa3c3984920ad1eb51e198ef3773de6c9bd1443d5cd78f3034b4306f8023
+Size (p1_stringprep-1.0.0.tar.gz) = 94973 bytes
+SHA1 (patch-rebar.config) = adb2299195962dc79b00d544b5e45b727b63ab50

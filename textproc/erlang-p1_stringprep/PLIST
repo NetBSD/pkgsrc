@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2015/11/04 13:45:46 fhajny Exp $
-lib/erlang/lib/p1_stringprep/ebin/p1_stringprep.app
-lib/erlang/lib/p1_stringprep/ebin/stringprep.beam
-lib/erlang/lib/p1_stringprep/ebin/stringprep_app.beam
-lib/erlang/lib/p1_stringprep/ebin/stringprep_sup.beam
-lib/erlang/lib/p1_stringprep/priv/lib/stringprep.so
+@comment $NetBSD: PLIST,v 1.2 2016/01/16 17:53:48 fhajny Exp $
+lib/erlang/lib/p1_stringprep-${PKGVERSION}/ebin/p1_stringprep.app
+lib/erlang/lib/p1_stringprep-${PKGVERSION}/ebin/stringprep.beam
+lib/erlang/lib/p1_stringprep-${PKGVERSION}/ebin/stringprep_app.beam
+lib/erlang/lib/p1_stringprep-${PKGVERSION}/ebin/stringprep_sup.beam
+lib/erlang/lib/p1_stringprep-${PKGVERSION}/priv/lib/stringprep.so
