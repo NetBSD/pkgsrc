@@ -1,14 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1 2015/11/04 13:45:45 fhajny Exp $
-lib/erlang/lib/p1_stun/ebin/p1_stun.app
-lib/erlang/lib/p1_stun/ebin/stun.beam
-lib/erlang/lib/p1_stun/ebin/stun_app.beam
-lib/erlang/lib/p1_stun/ebin/stun_codec.beam
-lib/erlang/lib/p1_stun/ebin/stun_listener.beam
-lib/erlang/lib/p1_stun/ebin/stun_shaper.beam
-lib/erlang/lib/p1_stun/ebin/stun_sup.beam
-lib/erlang/lib/p1_stun/ebin/stun_test.beam
-lib/erlang/lib/p1_stun/ebin/stun_tmp_sup.beam
-lib/erlang/lib/p1_stun/ebin/turn.beam
-lib/erlang/lib/p1_stun/ebin/turn_sm.beam
-lib/erlang/lib/p1_stun/ebin/turn_tmp_sup.beam
-lib/erlang/lib/p1_stun/include/stun.hrl
+@comment $NetBSD: PLIST,v 1.2 2016/01/16 18:42:25 fhajny Exp $
+lib/erlang/lib/p1_stun
+lib/erlang/lib/p1_stun-${PKGVERSION}/ebin/p1_stun.app
+lib/erlang/lib/p1_stun-${PKGVERSION}/ebin/stun.beam
+lib/erlang/lib/p1_stun-${PKGVERSION}/ebin/stun_app.beam
+lib/erlang/lib/p1_stun-${PKGVERSION}/ebin/stun_codec.beam
+lib/erlang/lib/p1_stun-${PKGVERSION}/ebin/stun_listener.beam
+lib/erlang/lib/p1_stun-${PKGVERSION}/ebin/stun_shaper.beam
+lib/erlang/lib/p1_stun-${PKGVERSION}/ebin/stun_sup.beam
+lib/erlang/lib/p1_stun-${PKGVERSION}/ebin/stun_test.beam
+lib/erlang/lib/p1_stun-${PKGVERSION}/ebin/stun_tmp_sup.beam
+lib/erlang/lib/p1_stun-${PKGVERSION}/ebin/turn.beam
+lib/erlang/lib/p1_stun-${PKGVERSION}/ebin/turn_sm.beam
+lib/erlang/lib/p1_stun-${PKGVERSION}/ebin/turn_tmp_sup.beam
+lib/erlang/lib/p1_stun-${PKGVERSION}/include/stun.hrl
