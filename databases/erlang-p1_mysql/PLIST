@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2015/11/04 13:45:45 fhajny Exp $
-lib/erlang/lib/p1_mysql/ebin/p1_mysql.app
-lib/erlang/lib/p1_mysql/ebin/p1_mysql.beam
-lib/erlang/lib/p1_mysql/ebin/p1_mysql_app.beam
-lib/erlang/lib/p1_mysql/ebin/p1_mysql_auth.beam
-lib/erlang/lib/p1_mysql/ebin/p1_mysql_conn.beam
-lib/erlang/lib/p1_mysql/ebin/p1_mysql_recv.beam
-lib/erlang/lib/p1_mysql/ebin/p1_mysql_sup.beam
-lib/erlang/lib/p1_mysql/include/p1_mysql.hrl
+@comment $NetBSD: PLIST,v 1.2 2016/01/16 18:51:35 fhajny Exp $
+lib/erlang/lib/p1_mysql-${PKGVERSION}/ebin/p1_mysql.app
+lib/erlang/lib/p1_mysql-${PKGVERSION}/ebin/p1_mysql.beam
+lib/erlang/lib/p1_mysql-${PKGVERSION}/ebin/p1_mysql_app.beam
+lib/erlang/lib/p1_mysql-${PKGVERSION}/ebin/p1_mysql_auth.beam
+lib/erlang/lib/p1_mysql-${PKGVERSION}/ebin/p1_mysql_conn.beam
+lib/erlang/lib/p1_mysql-${PKGVERSION}/ebin/p1_mysql_recv.beam
+lib/erlang/lib/p1_mysql-${PKGVERSION}/ebin/p1_mysql_sup.beam
+lib/erlang/lib/p1_mysql-${PKGVERSION}/include/p1_mysql.hrl
