@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.223 2016/01/16 18:11:30 adam Exp $
+$NetBSD: CHANGES-2016,v 1.224 2016/01/16 19:33:33 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -352,3 +352,24 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/sqlite3 to 3.10.1 [adam 2016-01-16]
 	Updated databases/sqlite3-docs to 3.10.1 [adam 2016-01-16]
 	Updated databases/sqlite3-tcl to 3.10.1 [adam 2016-01-16]
+	Updated chat/ejabberd to 16.01 [fhajny 2016-01-16]
+	Updated converters/erlang-p1_iconv to 0.9.0nb1 [fhajny 2016-01-16]
+	Updated databases/erlang-eredis to 1.0.8.20150910nb1 [fhajny 2016-01-16]
+	Updated databases/erlang-p1_mysql to 1.0.0nb1 [fhajny 2016-01-16]
+	Updated databases/erlang-p1_pgsql to 1.0.0nb1 [fhajny 2016-01-16]
+	Updated databases/erlang-sqlite3 to 1.1.5.20151221nb1 [fhajny 2016-01-16]
+	Updated devel/erlang-p1_cache_tab to 1.0.1nb1 [fhajny 2016-01-16]
+	Updated devel/erlang-p1_zlib to 1.0.0nb1 [fhajny 2016-01-16]
+	Updated misc/erlang-p1_utils to 1.0.2nb1 [fhajny 2016-01-16]
+	Updated net/erlang-p1_sip to 1.0.0 [fhajny 2016-01-16]
+	Updated net/erlang-p1_stun to 0.9.0 [fhajny 2016-01-16]
+	Updated security/erlang-oauth2 to 0.6.0.20150911 [fhajny 2016-01-16]
+	Updated security/erlang-p1_pam to 1.0.0 [fhajny 2016-01-16]
+	Updated security/erlang-p1_tls to 1.0.0 [fhajny 2016-01-16]
+	Updated sysutils/erlang-goldrush to 0.1.8 [fhajny 2016-01-16]
+	Updated sysutils/erlang-lager to 3.0.2 [fhajny 2016-01-16]
+	Updated textproc/erlang-jiffy to 0.14.5 [fhajny 2016-01-16]
+	Updated textproc/erlang-p1_stringprep to 1.0.0 [fhajny 2016-01-16]
+	Updated textproc/erlang-p1_xml to 1.1.1nb1 [fhajny 2016-01-16]
+	Updated textproc/erlang-p1_yaml to 1.0.0nb1 [fhajny 2016-01-16]
+	Updated textproc/erlang-xmlrpc to 1.15.20150506nb1 [fhajny 2016-01-16]
