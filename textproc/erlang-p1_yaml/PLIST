@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2015/11/04 13:45:46 fhajny Exp $
-lib/erlang/lib/p1_yaml/ebin/p1_yaml.app
-lib/erlang/lib/p1_yaml/ebin/p1_yaml.beam
-lib/erlang/lib/p1_yaml/ebin/p1_yaml_app.beam
-lib/erlang/lib/p1_yaml/ebin/p1_yaml_sup.beam
-lib/erlang/lib/p1_yaml/priv/lib/p1_yaml.so
+@comment $NetBSD: PLIST,v 1.2 2016/01/16 18:57:43 fhajny Exp $
+lib/erlang/lib/p1_yaml-${PKGVERSION}/ebin/p1_yaml.app
+lib/erlang/lib/p1_yaml-${PKGVERSION}/ebin/p1_yaml.beam
+lib/erlang/lib/p1_yaml-${PKGVERSION}/ebin/p1_yaml_app.beam
+lib/erlang/lib/p1_yaml-${PKGVERSION}/ebin/p1_yaml_sup.beam
+lib/erlang/lib/p1_yaml-${PKGVERSION}/priv/lib/p1_yaml.so
