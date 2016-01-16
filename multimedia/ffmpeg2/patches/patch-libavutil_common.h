@@ -1,8 +1,8 @@
-$NetBSD: patch-libavutil_common.h,v 1.1 2013/08/04 10:29:02 adam Exp $
+$NetBSD: patch-libavutil_common.h,v 1.2 2016/01/16 17:04:33 leot Exp $
 
---- libavutil/common.h.orig	2013-01-06 21:53:29.000000000 +0000
+--- libavutil/common.h.orig	2016-01-15 16:58:36.000000000 +0000
 +++ libavutil/common.h
-@@ -39,6 +39,22 @@
+@@ -43,6 +43,22 @@
  #include "version.h"
  #include "libavutil/avconfig.h"
  
