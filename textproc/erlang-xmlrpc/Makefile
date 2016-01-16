@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/11/04 13:45:46 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2016/01/16 18:58:24 fhajny Exp $
 
-DISTNAME=	xmlrpc-1.15.20150506
-PKGNAME=	erlang-${DISTNAME:S/_/-/g}
+DISTNAME=	xmlrpc-1.15
+PKGNAME=	erlang-${DISTNAME}.20150506
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=rds13/}
 
@@ -14,14 +15,8 @@ GITHUB_PROJECT=	xmlrpc
 GITHUB_TAG=	42e6e96a0fe7106830274feed915125feb1056f3
 WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}
 
-NO_CONFIGURE=	yes
-USE_TOOLS+=	gmake pax
+do-build:
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${REBAR} compile
 
-INSTALLATION_DIRS+=	lib/erlang/lib/xmlrpc
-
-do-install:
-	cd ${WRKSRC} && ${PAX} -rw -pp ebin include \
-		${DESTDIR}${PREFIX}/lib/erlang/lib/xmlrpc/
-
-.include "../../lang/erlang/buildlink3.mk"
+.include "../../lang/erlang/module.mk"
 .include "../../mk/bsd.pkg.mk"
