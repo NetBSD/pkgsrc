@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2015/11/28 20:50:07 wiedi Exp $
+# $NetBSD: Makefile,v 1.22 2016/01/16 20:30:11 ryoon Exp $
 #
 
 DISTNAME=		valgrind-3.11.0
@@ -7,7 +7,7 @@ MASTER_SITES=		http://valgrind.org/downloads/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		alnsn@NetBSD.org
-HOMEPAGE=		http://valgrind.org/downloads/
+HOMEPAGE=		http://valgrind.org/
 COMMENT=		Debugging and profiling tools
 LICENSE=		gnu-gpl-v2
 
