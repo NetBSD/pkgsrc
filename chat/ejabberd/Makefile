@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.61 2015/11/23 15:30:26 fhajny Exp $
+# $NetBSD: Makefile,v 1.62 2016/01/16 19:28:01 fhajny Exp $
 
-DISTNAME=	ejabberd-15.11
+DISTNAME=	ejabberd-16.01
 CATEGORIES=	chat
 MASTER_SITES=	http://www.process-one.net/downloads/ejabberd/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tgz
@@ -10,24 +10,24 @@ HOMEPAGE=	http://www.ejabberd.im/
 COMMENT=	Free and Open Source distributed fault-tolerant Jabber server
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	erlang-goldrush-[0-9]*:../../sysutils/erlang-goldrush
-DEPENDS+=	erlang-jiffy-[0-9]*:../../textproc/erlang-jiffy
-DEPENDS+=	erlang-lager-[0-9]*:../../sysutils/erlang-lager
-DEPENDS+=	erlang-oauth2-[0-9]*:../../security/erlang-oauth2
-DEPENDS+=	erlang-p1_cache_tab-[0-9]*:../../devel/erlang-p1_cache_tab
-DEPENDS+=	erlang-p1_iconv-[0-9]*:../../converters/erlang-p1_iconv
-DEPENDS+=	erlang-p1_mysql-[0-9]*:../../databases/erlang-p1_mysql
-DEPENDS+=	erlang-p1_pam-[0-9]*:../../security/erlang-p1_pam
-DEPENDS+=	erlang-p1_pgsql-[0-9]*:../../databases/erlang-p1_pgsql
-DEPENDS+=	erlang-p1_sip-[0-9]*:../../net/erlang-p1_sip
-DEPENDS+=	erlang-p1_stringprep-[0-9]*:../../textproc/erlang-p1_stringprep
-DEPENDS+=	erlang-p1_stun-[0-9]*:../../net/erlang-p1_stun
-DEPENDS+=	erlang-p1_tls-[0-9]*:../../security/erlang-p1_tls
-DEPENDS+=	erlang-p1_utils-[0-9]*:../../misc/erlang-p1_utils
-DEPENDS+=	erlang-p1_xml-[0-9]*:../../textproc/erlang-p1_xml
-DEPENDS+=	erlang-p1_yaml-[0-9]*:../../textproc/erlang-p1_yaml
-DEPENDS+=	erlang-p1_zlib-[0-9]*:../../devel/erlang-p1_zlib
-DEPENDS+=	erlang-xmlrpc-[0-9]*:../../textproc/erlang-xmlrpc
+DEPENDS+=	erlang-cache_tab>=1.0.1:../../devel/erlang-p1_cache_tab
+DEPENDS+=	erlang-goldrush-0.1.*:../../sysutils/erlang-goldrush
+DEPENDS+=	erlang-jiffy>=0.14.5:../../textproc/erlang-jiffy
+DEPENDS+=	erlang-lager>=3.0.2:../../sysutils/erlang-lager
+DEPENDS+=	erlang-oauth2>=0.6.0.20150911:../../security/erlang-oauth2
+DEPENDS+=	erlang-p1_iconv-0.9.*:../../converters/erlang-p1_iconv
+DEPENDS+=	erlang-p1_mysql>=1.0.0:../../databases/erlang-p1_mysql
+DEPENDS+=	erlang-p1_pam>=1.0.0:../../security/erlang-p1_pam
+DEPENDS+=	erlang-p1_pgsql>=1.0.0:../../databases/erlang-p1_pgsql
+DEPENDS+=	erlang-p1_sip>=1.0.0:../../net/erlang-p1_sip
+DEPENDS+=	erlang-p1_stringprep>=1.0.0:../../textproc/erlang-p1_stringprep
+DEPENDS+=	erlang-p1_stun-0.9.*:../../net/erlang-p1_stun
+DEPENDS+=	erlang-p1_tls>=1.0.0:../../security/erlang-p1_tls
+DEPENDS+=	erlang-p1_utils>=1.0.2:../../misc/erlang-p1_utils
+DEPENDS+=	erlang-p1_xml>=1.1.1:../../textproc/erlang-p1_xml
+DEPENDS+=	erlang-p1_yaml>=1.0.0:../../textproc/erlang-p1_yaml
+DEPENDS+=	erlang-p1_zlib>=1.0.0:../../devel/erlang-p1_zlib
+DEPENDS+=	erlang-xmlrpc>=1.15.20150506:../../textproc/erlang-xmlrpc
 CONFLICTS+=	jabberd-[0-9]*
 
 GNU_CONFIGURE=		yes
@@ -39,7 +39,6 @@ CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--enable-iconv
 CONFIGURE_ARGS+=	--enable-lager
 CONFIGURE_ARGS+=	--enable-mysql
-CONFIGURE_ARGS+=	--enable-nif
 CONFIGURE_ARGS+=	--enable-odbc
 CONFIGURE_ARGS+=	--enable-pam
 CONFIGURE_ARGS+=	--enable-pgsql
@@ -80,7 +79,7 @@ PKG_SHELL.${EJABBERD_USER}=	${SH}
 EGDIR=			share/examples/ejabberd
 
 INSTALLATION_DIRS+=	share/doc/${PKGBASE} ${EGDIR} share/bash-completion.d
-INSTALLATION_DIRS+=	lib/erlang/lib/ejabberd/priv/sql
+INSTALLATION_DIRS+=	lib/erlang/lib/${DISTNAME}/priv/sql
 
 CONF_FILES_PERMS=	${EGDIR}/ejabberd.yml ${PKG_SYSCONFDIR}/ejabberd.yml \
 			${ROOT_USER} ${EJABBERD_GROUP} 0640
@@ -107,7 +106,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/tools/ejabberdctl.bc			\
 		${DESTDIR}${PREFIX}/share/bash-completion.d/ejabberd
 	cd ${WRKSRC}/sql && ${INSTALL_DATA} *.sql			\
-		${DESTDIR}${PREFIX}/lib/erlang/lib/ejabberd/priv/sql
+		${DESTDIR}${PREFIX}/lib/erlang/lib/${DISTNAME}/priv/sql
 
 .include "../../lang/erlang/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
