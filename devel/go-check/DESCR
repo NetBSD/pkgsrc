@@ -1,0 +1,20 @@
+The check package builds on the standard testing library from Go to offer
+a richer testing framework for libraries and applications to use.
+
+gocheck includes features such as:
+* Helpful error reporting to aid on figuring problems out (see below)
+* Richer test helpers: assertions which interrupt the test immediately,
+  deep multi-type comparisons, string matching, etc
+* Suite-based grouping of tests
+* Fixtures: per suite and/or per test set up and tear down
+* Benchmarks integrated in the suite logic (with fixtures, etc)
+* Management of temporary directories
+* Panic-catching logic, with proper error reporting
+* Proper counting of successes, failures, panics, missed tests, skips, etc
+* Explicit test skipping
+* Support for expected failures
+* Verbosity flag which disables output caching (helpful to debug hanging
+  tests, for instance)
+* Multi-line string reporting for more comprehensible failures
+* Inclusion of comments surrounding checks on failure reports
+* Fully tested (it manages to test itself reliably)
