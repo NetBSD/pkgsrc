@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.5 2015/12/28 12:15:19 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.6 2016/01/16 16:13:15 leot Exp $
 bin/sc_ally
 bin/sc_analysis_dump
 bin/sc_attach
+bin/sc_filterpolicy
 bin/sc_ipiddump
 bin/sc_speedtrap
+bin/sc_tbitblind
 bin/sc_tracediff
 bin/sc_warts2csv
 bin/sc_warts2json
@@ -29,8 +31,10 @@ lib/libscamperfile.la
 man/man1/sc_ally.1
 man/man1/sc_analysis_dump.1
 man/man1/sc_attach.1
+man/man1/sc_filterpolicy.1
 man/man1/sc_ipiddump.1
 man/man1/sc_speedtrap.1
+man/man1/sc_tbitblind.1
 man/man1/sc_tracediff.1
 man/man1/sc_warts2json.1
 man/man1/sc_warts2pcap.1
