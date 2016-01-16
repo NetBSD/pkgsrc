@@ -1,18 +1,18 @@
-$NetBSD: patch-ah,v 1.1.1.1 2011/02/06 05:55:15 schnoebe Exp $
+$NetBSD: patch-ah,v 1.2 2016/01/16 12:15:12 ryoon Exp $
 
 # simplify the search for the MySQL components, since we know
 # where they are..
 
---- Data/MySQL/Makefile.orig	2009-05-12 13:22:14.000000000 -0500
+--- Data/MySQL/Makefile.orig	2015-08-04 05:21:04.000000000 +0000
 +++ Data/MySQL/Makefile
 @@ -8,8 +8,8 @@
  
  include $(POCO_BASE)/build/rules/global
  
--SYSLIBS += -L/usr/local/lib/mysql -L/usr/lib/mysql -L/usr/mysql/lib/mysql -L/usr/local/mysql/lib -lmysqlclient
--INCLUDE += -I/usr/local/include/mysql/ -I/usr/include/mysql -I/usr/mysql/include/mysql -I/usr/local/mysql/include
+-SYSLIBS += -L/usr/local/lib$(LIB64SUFFIX)/mysql -L/usr/lib$(LIB64SUFFIX)/mysql -L/usr/mysql/lib$(LIB64SUFFIX) -L/usr/mysql/lib$(LIB64SUFFIX)/mysql -L/usr/local/mysql/lib$(LIB64SUFFIX) -lmysqlclient
+-INCLUDE += -I/usr/local/include/mysql/ -I/usr/include/mysql/ -I/usr/mysql/include/mysql -I/usr/local/mysql/include
 +SYSLIBS += -L@MYSQLLIBDIR@ -lmysqlclient
-+INCLUDE += -I@MYSQLINCDIR@ 
++INCLUDE += -I@MYSQLINCDIR@
  SYSFLAGS += -DTHREADSAFE -DNO_TCL
  
  objects = Binder Extractor SessionImpl Connector \
