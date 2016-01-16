@@ -1,6 +1,6 @@
-$NetBSD: patch-libavutil_x86_cpu.c,v 1.3 2014/04/01 10:51:49 adam Exp $
+$NetBSD: patch-libavutil_x86_cpu.c,v 1.4 2016/01/16 17:04:33 leot Exp $
 
---- libavutil/x86/cpu.c.orig	2014-03-23 22:07:55.000000000 +0000
+--- libavutil/x86/cpu.c.orig	2016-01-15 16:58:37.000000000 +0000
 +++ libavutil/x86/cpu.c
 @@ -116,6 +116,7 @@ int ff_get_cpu_flags_x86(void)
  #if HAVE_SSE

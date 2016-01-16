@@ -1,8 +1,8 @@
-$NetBSD: patch-configure,v 1.8 2015/06/29 13:12:27 adam Exp $
+$NetBSD: patch-configure,v 1.9 2016/01/16 17:04:33 leot Exp $
 
---- configure.orig	2015-06-19 20:47:55.000000000 +0000
+--- configure.orig	2016-01-15 16:59:29.000000000 +0000
 +++ configure
-@@ -4197,6 +4197,11 @@ case $target_os in
+@@ -4300,6 +4300,11 @@ case $target_os in
          ;;
      netbsd)
          disable symver
@@ -14,7 +14,7 @@ $NetBSD: patch-configure,v 1.8 2015/06/29 13:12:27 adam Exp $
          oss_indev_extralibs="-lossaudio"
          oss_outdev_extralibs="-lossaudio"
          enabled gcc || check_ldflags -Wl,-zmuldefs
-@@ -4602,10 +4607,13 @@ check_cc <<EOF && enable attribute_may_a
+@@ -4718,10 +4723,13 @@ check_cc <<EOF && enable attribute_may_a
  union { int x; } __attribute__((may_alias)) x;
  EOF
  
@@ -31,7 +31,7 @@ $NetBSD: patch-configure,v 1.8 2015/06/29 13:12:27 adam Exp $
  
  if ! enabled ppc64 || enabled bigendian; then
      disable vsx
-@@ -5426,6 +5434,7 @@ enabled xmm_clobber_test &&
+@@ -5589,6 +5597,7 @@ enabled xmm_clobber_test &&
                    -Wl,--wrap,sws_scale ||
      disable xmm_clobber_test
  
@@ -39,7 +39,7 @@ $NetBSD: patch-configure,v 1.8 2015/06/29 13:12:27 adam Exp $
  echo "X{};" > $TMPV
  if test_ldflags -Wl,--version-script,$TMPV; then
      append SHFLAGS '-Wl,--version-script,\$(SUBDIR)lib\$(NAME).ver'
-@@ -5438,6 +5447,7 @@ __asm__(".symver ff_foo,av_foo@VERSION")
+@@ -5601,6 +5610,7 @@ __asm__(".symver ff_foo,av_foo@VERSION")
  void ff_foo(void) {}
  EOF
  fi
@@ -47,7 +47,7 @@ $NetBSD: patch-configure,v 1.8 2015/06/29 13:12:27 adam Exp $
  
  if [ -z "$optflags" ]; then
      if enabled small; then
-@@ -6041,7 +6051,7 @@ Version: $version
+@@ -6233,7 +6243,7 @@ Version: $version
  Requires: $(enabled shared || echo $requires)
  Requires.private: $(enabled shared && echo $requires)
  Conflicts:
