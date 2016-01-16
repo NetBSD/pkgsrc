@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.224 2016/01/16 19:33:33 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.225 2016/01/16 23:34:40 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -373,3 +373,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/erlang-p1_xml to 1.1.1nb1 [fhajny 2016-01-16]
 	Updated textproc/erlang-p1_yaml to 1.0.0nb1 [fhajny 2016-01-16]
 	Updated textproc/erlang-xmlrpc to 1.15.20150506nb1 [fhajny 2016-01-16]
+	Updated www/p5-Catalyst-Plugin-Session to 0.40 [mef 2016-01-16]
