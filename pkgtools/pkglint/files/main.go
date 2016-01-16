@@ -5,6 +5,7 @@ import (
 	"io"
 	"os"
 	"path/filepath"
+	"runtime"
 	"runtime/pprof"
 )
 
@@ -39,12 +40,14 @@ func (pkglint *Pkglint) Main(args ...string) (exitcode int) {
 	}
 
 	if G.opts.Profiling {
-		f, err := os.Create("pkglint.pprof")
-		if err != nil {
-			dummyLine.Fatalf("Cannot create profiling file: %s", err)
+		if runtime.GOOS != "netbsd" { // See https://github.com/golang/go/issues/13914
+			f, err := os.Create("pkglint.pprof")
+			if err != nil {
+				dummyLine.Fatalf("Cannot create profiling file: %s", err)
+			}
+			pprof.StartCPUProfile(f)
+			defer pprof.StopCPUProfile()
 		}
-		pprof.StartCPUProfile(f)
-		defer pprof.StopCPUProfile()
 		G.rematch = NewHistogram()
 		G.renomatch = NewHistogram()
 		G.retime = NewHistogram()
