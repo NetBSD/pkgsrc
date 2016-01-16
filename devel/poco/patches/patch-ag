@@ -1,15 +1,15 @@
-$NetBSD: patch-ag,v 1.1.1.1 2011/02/06 05:55:15 schnoebe Exp $
+$NetBSD: patch-ag,v 1.2 2016/01/16 12:15:12 ryoon Exp $
 
 # Only include only the non-omitted components 
 
---- Makefile.orig	2010-12-16 05:43:33.000000000 +0000
+--- Makefile.orig	2015-08-04 05:21:07.000000000 +0000
 +++ Makefile
-@@ -24,7 +24,9 @@ endif
+@@ -27,7 +27,9 @@ poco: libexecs $(if $(TESTS),tests) $(if
  all: libexecs tests samples
  
  INSTALLDIR = $(DESTDIR)$(POCO_PREFIX)
--COMPONENTS = Foundation XML Util Net Crypto NetSSL_OpenSSL Data Data/SQLite Data/ODBC Data/MySQL Zip PageCompiler PageCompiler/File2Page
-+Master_COMPONENTS = Foundation XML Util Net Crypto NetSSL_OpenSSL Data Data/SQLite Data/ODBC Data/MySQL Zip PageCompiler PageCompiler/File2Page
+-COMPONENTS = Foundation XML JSON Util Net Crypto NetSSL_OpenSSL Data Data/SQLite Data/ODBC Data/MySQL MongoDB Zip PageCompiler PageCompiler/File2Page
++Master_COMPONENTS = Foundation XML JSON Util Net Crypto NetSSL_OpenSSL Data Data/SQLite Data/ODBC Data/MySQL MongoDB Zip PageCompiler PageCompiler/File2Page
 +
 +COMPONENTS=$(filter-out $(foreach f,$(OMIT),$f%),$(Master_COMPONENTS))
  
