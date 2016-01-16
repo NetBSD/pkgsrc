@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.218 2016/01/16 09:43:59 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.219 2016/01/16 12:16:24 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -341,3 +341,8 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-CGI-Compile to 0.21 [mef 2016-01-16]
 	Added devel/p5-XML-Compile-Tester version 0.90 [wen 2016-01-16]
 	Updated lang/go to 1.5.3 [fhajny 2016-01-16]
+	Updated devel/poco to 1.6.1 [ryoon 2016-01-16]
+	Updated databases/poco-data to 1.6.1 [ryoon 2016-01-16]
+	Updated databases/poco-data-mysql to 1.6.1 [ryoon 2016-01-16]
+	Updated databases/poco-data-odbc to 1.6.1 [ryoon 2016-01-16]
+	Updated databases/poco-data-sqlite to 1.6.1 [ryoon 2016-01-16]
