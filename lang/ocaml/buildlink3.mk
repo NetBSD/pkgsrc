@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.34 2015/09/07 12:02:05 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.35 2016/01/16 10:32:53 jaapb Exp $
 
 BUILDLINK_TREE+=	ocaml
 
@@ -15,7 +15,7 @@ BUILDLINK_PASSTHRU_DIRS+=     ${BUILDLINK_PREFIX.ocaml}/lib/ocaml
 BUILDLINK_TARGETS+=	ocaml-wrappers
 OCAML_WRAPPERS=		ocamlc ocamlc.opt ocamlcp ocamlmklib ocamlmktop \
 			ocamlopt ocamlopt.opt
-OCAMLBIN_WRAPPERS=	ocaml
+OCAMLBIN_WRAPPERS=	ocaml ocamldep ocamllex ocamlyacc
 
 .PHONY: ocaml-wrappers
 ocaml-wrappers:
