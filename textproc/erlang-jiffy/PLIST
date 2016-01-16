@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2015/11/04 13:45:46 fhajny Exp $
-lib/erlang/lib/jiffy/ebin/jiffy.app
-lib/erlang/lib/jiffy/ebin/jiffy.beam
-lib/erlang/lib/jiffy/ebin/jiffy_utf8.beam
-lib/erlang/lib/jiffy/priv/jiffy.so
+@comment $NetBSD: PLIST,v 1.2 2016/01/16 17:39:57 fhajny Exp $
+lib/erlang/lib/jiffy-${PKGVERSION}/ebin/jiffy.app
+lib/erlang/lib/jiffy-${PKGVERSION}/ebin/jiffy.beam
+lib/erlang/lib/jiffy-${PKGVERSION}/ebin/jiffy_utf8.beam
+lib/erlang/lib/jiffy-${PKGVERSION}/priv/jiffy.so
