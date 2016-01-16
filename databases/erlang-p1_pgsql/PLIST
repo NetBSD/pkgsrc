@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2015/11/04 13:45:45 fhajny Exp $
-lib/erlang/lib/p1_pgsql/ebin/p1_pgsql.app
-lib/erlang/lib/p1_pgsql/ebin/pgsql.beam
-lib/erlang/lib/p1_pgsql/ebin/pgsql_app.beam
-lib/erlang/lib/p1_pgsql/ebin/pgsql_proto.beam
-lib/erlang/lib/p1_pgsql/ebin/pgsql_sup.beam
-lib/erlang/lib/p1_pgsql/ebin/pgsql_tcp.beam
-lib/erlang/lib/p1_pgsql/ebin/pgsql_util.beam
+@comment $NetBSD: PLIST,v 1.2 2016/01/16 18:52:46 fhajny Exp $
+lib/erlang/lib/p1_pgsql-${PKGVERSION}/ebin/p1_pgsql.app
+lib/erlang/lib/p1_pgsql-${PKGVERSION}/ebin/pgsql.beam
+lib/erlang/lib/p1_pgsql-${PKGVERSION}/ebin/pgsql_app.beam
+lib/erlang/lib/p1_pgsql-${PKGVERSION}/ebin/pgsql_proto.beam
+lib/erlang/lib/p1_pgsql-${PKGVERSION}/ebin/pgsql_sup.beam
+lib/erlang/lib/p1_pgsql-${PKGVERSION}/ebin/pgsql_tcp.beam
+lib/erlang/lib/p1_pgsql-${PKGVERSION}/ebin/pgsql_util.beam
