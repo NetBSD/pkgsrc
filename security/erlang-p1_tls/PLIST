@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2015/11/04 13:45:46 fhajny Exp $
-lib/erlang/lib/p1_tls/ebin/p1_sha.beam
-lib/erlang/lib/p1_tls/ebin/p1_tls.app
-lib/erlang/lib/p1_tls/ebin/p1_tls.beam
-lib/erlang/lib/p1_tls/ebin/p1_tls_app.beam
-lib/erlang/lib/p1_tls/ebin/p1_tls_sup.beam
-lib/erlang/lib/p1_tls/priv/lib/p1_sha.so
-lib/erlang/lib/p1_tls/priv/lib/p1_tls_drv.so
+@comment $NetBSD: PLIST,v 1.2 2016/01/16 17:31:45 fhajny Exp $
+lib/erlang/lib/p1_tls-${PKGVERSION}/ebin/p1_sha.beam
+lib/erlang/lib/p1_tls-${PKGVERSION}/ebin/p1_tls.app
+lib/erlang/lib/p1_tls-${PKGVERSION}/ebin/p1_tls.beam
+lib/erlang/lib/p1_tls-${PKGVERSION}/ebin/p1_tls_app.beam
+lib/erlang/lib/p1_tls-${PKGVERSION}/ebin/p1_tls_sup.beam
+lib/erlang/lib/p1_tls-${PKGVERSION}/priv/lib/p1_sha.so
+lib/erlang/lib/p1_tls-${PKGVERSION}/priv/lib/p1_tls_drv.so
