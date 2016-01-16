@@ -1,22 +1,23 @@
-@comment $NetBSD: PLIST,v 1.2 2011/10/17 02:10:31 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/01/16 12:15:12 ryoon Exp $
 include/Poco/Data/ODBC/Binder.h
 include/Poco/Data/ODBC/ConnectionHandle.h
 include/Poco/Data/ODBC/Connector.h
-include/Poco/Data/ODBC/DataTypes.h
 include/Poco/Data/ODBC/Diagnostics.h
 include/Poco/Data/ODBC/EnvironmentHandle.h
 include/Poco/Data/ODBC/Error.h
 include/Poco/Data/ODBC/Extractor.h
 include/Poco/Data/ODBC/Handle.h
 include/Poco/Data/ODBC/ODBC.h
-include/Poco/Data/ODBC/ODBCColumn.h
 include/Poco/Data/ODBC/ODBCException.h
+include/Poco/Data/ODBC/ODBCMetaColumn.h
 include/Poco/Data/ODBC/ODBCStatementImpl.h
 include/Poco/Data/ODBC/Parameter.h
-include/Poco/Data/ODBC/Preparation.h
+include/Poco/Data/ODBC/Preparator.h
 include/Poco/Data/ODBC/SessionImpl.h
+include/Poco/Data/ODBC/TypeInfo.h
+include/Poco/Data/ODBC/Unicode.h
+include/Poco/Data/ODBC/Unicode_UNIXODBC.h
+include/Poco/Data/ODBC/Unicode_WIN32.h
 include/Poco/Data/ODBC/Utility.h
 lib/libPocoDataODBC.so
-lib/libPocoDataODBC.so.11
-lib/libPocoDataODBCd.so
-lib/libPocoDataODBCd.so.11
+lib/libPocoDataODBC.so.31
