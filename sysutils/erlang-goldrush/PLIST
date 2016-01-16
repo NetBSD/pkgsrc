@@ -1,17 +1,17 @@
-@comment $NetBSD: PLIST,v 1.1 2015/11/04 13:45:46 fhajny Exp $
-lib/erlang/lib/goldrush/ebin/glc.beam
-lib/erlang/lib/goldrush/ebin/glc_code.beam
-lib/erlang/lib/goldrush/ebin/glc_lib.beam
-lib/erlang/lib/goldrush/ebin/glc_ops.beam
-lib/erlang/lib/goldrush/ebin/goldrush.app
-lib/erlang/lib/goldrush/ebin/gr_app.beam
-lib/erlang/lib/goldrush/ebin/gr_context.beam
-lib/erlang/lib/goldrush/ebin/gr_counter.beam
-lib/erlang/lib/goldrush/ebin/gr_counter_sup.beam
-lib/erlang/lib/goldrush/ebin/gr_manager.beam
-lib/erlang/lib/goldrush/ebin/gr_manager_sup.beam
-lib/erlang/lib/goldrush/ebin/gr_param.beam
-lib/erlang/lib/goldrush/ebin/gr_param_sup.beam
-lib/erlang/lib/goldrush/ebin/gr_sup.beam
-lib/erlang/lib/goldrush/ebin/gre.beam
-lib/erlang/lib/goldrush/priv/edoc.css
+@comment $NetBSD: PLIST,v 1.2 2016/01/16 17:33:51 fhajny Exp $
+lib/erlang/lib/goldrush-${PKGVERSION}/ebin/glc.beam
+lib/erlang/lib/goldrush-${PKGVERSION}/ebin/glc_code.beam
+lib/erlang/lib/goldrush-${PKGVERSION}/ebin/glc_lib.beam
+lib/erlang/lib/goldrush-${PKGVERSION}/ebin/glc_ops.beam
+lib/erlang/lib/goldrush-${PKGVERSION}/ebin/goldrush.app
+lib/erlang/lib/goldrush-${PKGVERSION}/ebin/gr_app.beam
+lib/erlang/lib/goldrush-${PKGVERSION}/ebin/gr_context.beam
+lib/erlang/lib/goldrush-${PKGVERSION}/ebin/gr_counter.beam
+lib/erlang/lib/goldrush-${PKGVERSION}/ebin/gr_counter_sup.beam
+lib/erlang/lib/goldrush-${PKGVERSION}/ebin/gr_manager.beam
+lib/erlang/lib/goldrush-${PKGVERSION}/ebin/gr_manager_sup.beam
+lib/erlang/lib/goldrush-${PKGVERSION}/ebin/gr_param.beam
+lib/erlang/lib/goldrush-${PKGVERSION}/ebin/gr_param_sup.beam
+lib/erlang/lib/goldrush-${PKGVERSION}/ebin/gr_sup.beam
+lib/erlang/lib/goldrush-${PKGVERSION}/ebin/gre.beam
+lib/erlang/lib/goldrush-${PKGVERSION}/priv/edoc.css
