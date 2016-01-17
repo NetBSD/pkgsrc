@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2016/01/17 14:22:11 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2016/01/17 16:03:13 wiz Exp $
 
 DISTNAME=	Pygments-2.0.2
 PKGREVISION=	1
@@ -13,7 +13,8 @@ LICENSE=	2-clause-bsd
 
 # test dependencies
 BUILD_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
-BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+# can't depend on sphinx since sphinx depends on pygments
+#BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 
 USE_LANGUAGES=		# none
 PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
