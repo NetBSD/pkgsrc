@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.242 2016/01/17 15:05:31 jaapb Exp $
+$NetBSD: CHANGES-2016,v 1.243 2016/01/17 15:07:19 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -390,3 +390,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added chat/ktp-common-internals version 0.9.0 [jaapb 2016-01-17]
 	Added chat/ktp-contact-list version 0.9.0 [jaapb 2016-01-17]
 	Added meta-pkgs/kde-telepathy version 0.9.0nb2 [jaapb 2016-01-17]
+	Added chat/ktp-accounts-kcm version 0.9.0 [jaapb 2016-01-17]
