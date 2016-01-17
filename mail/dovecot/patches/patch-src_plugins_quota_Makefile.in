@@ -1,0 +1,13 @@
+$NetBSD: patch-src_plugins_quota_Makefile.in,v 1.1 2016/01/17 15:15:28 joerg Exp $
+
+--- src/plugins/quota/Makefile.in.orig	2016-01-16 14:33:45.000000000 +0000
++++ src/plugins/quota/Makefile.in
+@@ -606,7 +606,7 @@ uninstall-am: uninstall-moduleLTLIBRARIE
+ 	mostlyclean-generic mostlyclean-libtool pdf pdf-am ps ps-am \
+ 	tags uninstall uninstall-am uninstall-moduleLTLIBRARIES
+ 
+-@HAVE_RQUOTA_TRUE@rquota_xdr.c: Makefile $(RQUOTA_X)
++@HAVE_RQUOTA_TRUE@rquota_xdr.c: Makefile $(RQUOTA_X) rquota.h
+ @HAVE_RQUOTA_TRUE@	if [ "$(top_srcdir)" != "$(top_builddir)" ]; then \
+ @HAVE_RQUOTA_TRUE@	  cp $(RQUOTA_X) $(top_builddir)/src/plugins/quota/; \
+ @HAVE_RQUOTA_TRUE@	fi; \
