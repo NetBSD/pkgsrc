@@ -1,4 +1,4 @@
-<!-- $NetBSD: introduction.xml,v 1.35 2015/12/31 07:08:44 ryoon Exp $ -->
+<!-- $NetBSD: introduction.xml,v 1.36 2016/01/17 22:02:20 sevan Exp $ -->
 
 <chapter id="introduction">
   <title>What is pkgsrc?</title>
@@ -221,6 +221,11 @@ minutes!</para>
         <entry><ulink url="http://www.debian.org/ports/kfreebsd-gnu/">GNU/kFreeBSD</ulink></entry>
         <entry align="center">Jul 2013</entry>
 	<entry><ulink url="http://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/bootstrap/README.GNUkFreeBSD">README.GNUkFreeBSD</ulink></entry>
+      </row>
+      <row>
+	<entry><ulink url="http://www.bitrig.org/">Bitrig</ulink></entry>
+	<entry align="center">Jun 2014</entry>
+	<entry><ulink url="http://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/bootstrap/README.Bitrig">README.Bitrig</ulink></entry>
       </row>
     </tbody>
   </tgroup>
