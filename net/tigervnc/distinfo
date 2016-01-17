@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 00:35:40 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/01/17 15:18:04 joerg Exp $
 
 SHA1 (tigervnc-1.5.0.tar.gz) = e03e618c06153b83d1fec756cd817885c371cd0b
 RMD160 (tigervnc-1.5.0.tar.gz) = 57240c4a5db8c0d013dbc12322e48901f5750d90
@@ -12,6 +12,7 @@ SHA1 (patch-CMakeLists.txt) = 8528782142ef7bc95151f8a130bc8626ad9ee93c
 SHA1 (patch-common_CMakeLists.txt) = d879e36df9db9978adaa5545758f43097d40f10a
 SHA1 (patch-media_CMakeLists.txt) = cd50f9b7a9405aa523412ef823a32437a3c19ffa
 SHA1 (patch-unix_vncserver) = 8baacca2d1083f330781caff7da2ac996af91aa4
-SHA1 (patch-unix_xserver117.patch) = 5e5d2a98f0b765ae0d6bb5f200808126b03dcc51
+SHA1 (patch-unix_xserver117.patch) = 5894ec9008a0ee9cae79b49af69e91f8bbdfb676
 SHA1 (patch-unix_xserver_hw_vnc_InputXKB.cc) = 58dfddf27233b534bbb0e05edd4db3392a8a38df
 SHA1 (patch-unix_xserver_hw_vnc_Makefile.am) = d2d61050cdc5a54b46a2c41cd8ea394fa0b1a574
+SHA1 (patch-unix_xserver_hw_vnc_vncModule.c) = 6f6868032bc9d0b45231f73e719464a0de118fb7
