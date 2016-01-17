@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/01/17 13:38:25 wiz Exp $
+
+SHA1 (alabaster-0.7.7.tar.gz) = ff3e575ee7eb4ba1721f17d91ec5a54b16283603
+RMD160 (alabaster-0.7.7.tar.gz) = 73c38b8fded8cbbab3c28aa32c47f7cd7c5e1b44
+SHA512 (alabaster-0.7.7.tar.gz) = e19ec193d49ff5adf4552c1e3f9c77845045fd97cdb26285e774124960866bf790922a421cc70a8346f1bc98c1a5aa8b70211d4589e8429a9df4d4577880c0df
+Size (alabaster-0.7.7.tar.gz) = 18996 bytes
