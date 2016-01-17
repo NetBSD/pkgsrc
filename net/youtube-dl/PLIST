@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2016/01/11 09:10:10 adam Exp $
+@comment $NetBSD: PLIST,v 1.11 2016/01/17 10:10:33 adam Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -77,6 +77,9 @@ ${PYSITELIB}/youtube_dl/extractor/adobetv.pyo
 ${PYSITELIB}/youtube_dl/extractor/adultswim.py
 ${PYSITELIB}/youtube_dl/extractor/adultswim.pyc
 ${PYSITELIB}/youtube_dl/extractor/adultswim.pyo
+${PYSITELIB}/youtube_dl/extractor/ae.py
+${PYSITELIB}/youtube_dl/extractor/ae.pyc
+${PYSITELIB}/youtube_dl/extractor/ae.pyo
 ${PYSITELIB}/youtube_dl/extractor/aftonbladet.py
 ${PYSITELIB}/youtube_dl/extractor/aftonbladet.pyc
 ${PYSITELIB}/youtube_dl/extractor/aftonbladet.pyo
@@ -161,6 +164,9 @@ ${PYSITELIB}/youtube_dl/extractor/behindkink.pyo
 ${PYSITELIB}/youtube_dl/extractor/bet.py
 ${PYSITELIB}/youtube_dl/extractor/bet.pyc
 ${PYSITELIB}/youtube_dl/extractor/bet.pyo
+${PYSITELIB}/youtube_dl/extractor/bigflix.py
+${PYSITELIB}/youtube_dl/extractor/bigflix.pyc
+${PYSITELIB}/youtube_dl/extractor/bigflix.pyo
 ${PYSITELIB}/youtube_dl/extractor/bild.py
 ${PYSITELIB}/youtube_dl/extractor/bild.pyc
 ${PYSITELIB}/youtube_dl/extractor/bild.pyo
@@ -206,6 +212,9 @@ ${PYSITELIB}/youtube_dl/extractor/canalc2.pyo
 ${PYSITELIB}/youtube_dl/extractor/canalplus.py
 ${PYSITELIB}/youtube_dl/extractor/canalplus.pyc
 ${PYSITELIB}/youtube_dl/extractor/canalplus.pyo
+${PYSITELIB}/youtube_dl/extractor/canvas.py
+${PYSITELIB}/youtube_dl/extractor/canvas.pyc
+${PYSITELIB}/youtube_dl/extractor/canvas.pyo
 ${PYSITELIB}/youtube_dl/extractor/cbs.py
 ${PYSITELIB}/youtube_dl/extractor/cbs.pyc
 ${PYSITELIB}/youtube_dl/extractor/cbs.pyo
@@ -305,6 +314,9 @@ ${PYSITELIB}/youtube_dl/extractor/cspan.pyo
 ${PYSITELIB}/youtube_dl/extractor/ctsnews.py
 ${PYSITELIB}/youtube_dl/extractor/ctsnews.pyc
 ${PYSITELIB}/youtube_dl/extractor/ctsnews.pyo
+${PYSITELIB}/youtube_dl/extractor/cwtv.py
+${PYSITELIB}/youtube_dl/extractor/cwtv.pyc
+${PYSITELIB}/youtube_dl/extractor/cwtv.pyo
 ${PYSITELIB}/youtube_dl/extractor/dailymotion.py
 ${PYSITELIB}/youtube_dl/extractor/dailymotion.pyc
 ${PYSITELIB}/youtube_dl/extractor/dailymotion.pyo
@@ -605,9 +617,6 @@ ${PYSITELIB}/youtube_dl/extractor/hentaistigma.pyo
 ${PYSITELIB}/youtube_dl/extractor/historicfilms.py
 ${PYSITELIB}/youtube_dl/extractor/historicfilms.pyc
 ${PYSITELIB}/youtube_dl/extractor/historicfilms.pyo
-${PYSITELIB}/youtube_dl/extractor/history.py
-${PYSITELIB}/youtube_dl/extractor/history.pyc
-${PYSITELIB}/youtube_dl/extractor/history.pyo
 ${PYSITELIB}/youtube_dl/extractor/hitbox.py
 ${PYSITELIB}/youtube_dl/extractor/hitbox.pyc
 ${PYSITELIB}/youtube_dl/extractor/hitbox.pyo
