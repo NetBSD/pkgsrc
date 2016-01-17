@@ -1,4 +1,4 @@
-<!-- $NetBSD: introduction.xml,v 1.36 2016/01/17 22:02:20 sevan Exp $ -->
+<!-- $NetBSD: introduction.xml,v 1.37 2016/01/17 22:06:16 sevan Exp $ -->
 
 <chapter id="introduction">
   <title>What is pkgsrc?</title>
@@ -19,7 +19,7 @@ packages for himself, which is a time-costly task.</para>
 
     <itemizedlist>
       <listitem>
-	<para><filename role="pkg">www/apache22</filename> - The Apache
+	<para><filename role="pkg">www/apache24</filename> - The Apache
 	  web server</para>
       </listitem>
 
@@ -62,10 +62,10 @@ pkgsrc provides the following key features:
 <listitem><para>All packages are installed in a consistent directory tree,
   including binaries, libraries, man pages and other
   documentation.</para></listitem>
-<listitem><para>Package dependencies, including when performing package updates,
-  are handled automatically. The configuration files of various
-  packages are handled automatically during updates, so local changes
-  are preserved.</para></listitem>
+<listitem><para>Tracking of package dependencies automatically, including when
+  performing updates, to ensure required packages are installed. The
+  configuration files of various packages are handled automatically during
+  updates, so local changes are preserved.</para></listitem>
 <listitem><para>Like NetBSD, pkgsrc is designed with portability in mind and
   consists of highly portable code. This allows the greatest speed of
   development when porting to a new platform. This portability also
