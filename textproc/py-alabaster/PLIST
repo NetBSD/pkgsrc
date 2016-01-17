@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2016/01/17 13:38:25 wiz Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/pbr.json
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/alabaster/__init__.py
+${PYSITELIB}/alabaster/__init__.pyc
+${PYSITELIB}/alabaster/__init__.pyo
+${PYSITELIB}/alabaster/_version.py
+${PYSITELIB}/alabaster/_version.pyc
+${PYSITELIB}/alabaster/_version.pyo
+${PYSITELIB}/alabaster/about.html
+${PYSITELIB}/alabaster/donate.html
+${PYSITELIB}/alabaster/layout.html
+${PYSITELIB}/alabaster/navigation.html
+${PYSITELIB}/alabaster/relations.html
+${PYSITELIB}/alabaster/static/alabaster.css_t
+${PYSITELIB}/alabaster/support.py
+${PYSITELIB}/alabaster/support.pyc
+${PYSITELIB}/alabaster/support.pyo
+${PYSITELIB}/alabaster/theme.conf
