@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.250 2016/01/17 15:20:54 jaapb Exp $
+$NetBSD: CHANGES-2016,v 1.251 2016/01/17 15:23:05 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -398,3 +398,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added chat/ktp-desktop-applets version 0.9.0 [jaapb 2016-01-17]
 	Added chat/ktp-filetransfer-handler version 0.9.0 [jaapb 2016-01-17]
 	Added chat/ktp-contact-runner version 0.9.0 [jaapb 2016-01-17]
+	Added chat/ktp-send-file version 0.9.0 [jaapb 2016-01-17]
