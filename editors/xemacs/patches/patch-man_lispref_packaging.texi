@@ -1,0 +1,13 @@
+$NetBSD: patch-man_lispref_packaging.texi,v 1.1 2016/01/17 07:51:34 richard Exp $
+http://tracker.xemacs.org/XEmacs/its/issue859
+--- man/lispref/packaging.texi.orig	2015-01-29 15:04:29.000000000 +0000
++++ man/lispref/packaging.texi
+@@ -600,7 +600,7 @@ Builds the HTML versions of the document
+ Does most of the work.  Builds the elcs, infos at a minimum.
+ @end table
+ 
+-@subsection The targets that most people would be interested in would be:
++@section The targets that most people would be interested in would be:
+ 
+ @itemize @bullet
+ @item @code{all}
