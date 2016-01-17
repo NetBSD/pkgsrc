@@ -1,0 +1,4 @@
+Plasma widgets for the KDE Telepathy suite (presence applet which acts as the
+central system tray icon of traditional IM clients, a simplified contact list,
+an applet which represents a single contact and can be used to trigger actions
+like "send mail", "initiate conversation", ...)
