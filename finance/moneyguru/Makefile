@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2015/04/22 10:57:15 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2016/01/17 19:05:09 wiz Exp $
 #
 # any of ~* is fine, they are the same and just there for Ubuntu
 # so moneyguru's built for all releases
 DISTNAME=	moneyguru-2.8.2
+PKGREVISION=	1
 CATEGORIES=	finance
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hsoft/}
 
@@ -13,7 +14,7 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-polib-[0-9]*:../../devel/py-polib
 DEPENDS+=	${PYPKGPREFIX}-qt4-[0-9]*:../../x11/py-qt4
-DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
+DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.3.4nb1:../../textproc/py-sphinx
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
 
