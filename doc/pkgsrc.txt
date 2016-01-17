@@ -481,7 +481,7 @@ build the packages for himself, which is a time-costly task.
 
 pkgsrc currently contains several thousand packages, including:
 
-  * www/apache22 - The Apache web server
+  * www/apache24 - The Apache web server
 
   * www/firefox - The Firefox web browser
 
@@ -507,9 +507,10 @@ pkgsrc provides the following key features:
   * All packages are installed in a consistent directory tree, including
     binaries, libraries, man pages and other documentation.
 
-  * Package dependencies, including when performing package updates, are
-    handled automatically. The configuration files of various packages are
-    handled automatically during updates, so local changes are preserved.
+  * Tracking of package dependencies automatically, including when performing
+    updates, to ensure required packages are installed. The configuration files
+    of various packages are handled automatically during updates, so local
+    changes are preserved.
 
   * Like NetBSD, pkgsrc is designed with portability in mind and consists of
     highly portable code. This allows the greatest speed of development when
@@ -592,6 +593,8 @@ Table 1.1. Platforms supported by pkgsrc
 |Cygwin                                |   Mar 2013    |README.Cygwin         |
 |--------------------------------------+---------------+----------------------|
 |GNU/kFreeBSD                          |   Jul 2013    |README.GNUkFreeBSD    |
+|--------------------------------------+---------------+----------------------|
+|Bitrig                                |   Jun 2014    |README.Bitrig         |
 +-----------------------------------------------------------------------------+
 
 
