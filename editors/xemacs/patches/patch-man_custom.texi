@@ -1,0 +1,67 @@
+$NetBSD: patch-man_custom.texi,v 1.1 2016/01/17 07:51:34 richard Exp $
+http://tracker.xemacs.org/XEmacs/its/issue859
+--- man/custom.texi.orig	2015-01-29 15:04:29.000000000 +0000
++++ man/custom.texi
+@@ -60,7 +60,7 @@ automatically created from the options n
+ 
+ @node Declaring Groups, Declaring Variables, Top, Top
+ @comment  node-name,  next,  previous,  up
+-@section Declaring Groups
++@chapter Declaring Groups
+ 
+ Use @code{defgroup} to declare new customization groups.
+ 
+@@ -92,7 +92,7 @@ tag for that member.
+ 
+ @node Declaring Variables, Declaring Faces, Declaring Groups, Top
+ @comment  node-name,  next,  previous,  up
+-@section Declaring Variables
++@chapter Declaring Variables
+ 
+ Use @code{defcustom} to declare user editable variables.
+ 
+@@ -176,7 +176,7 @@ member.  For other types of variables, t
+ 
+ @node Declaring Faces, Usage for Package Authors, Declaring Variables, Top
+ @comment  node-name,  next,  previous,  up
+-@section Declaring Faces
++@chapter Declaring Faces
+ 
+ Faces are declared with @code{defface}.
+ 
+@@ -228,7 +228,7 @@ documentation string.@refill
+ 
+ @node Usage for Package Authors, Utilities, Declaring Faces, Top
+ @comment  node-name,  next,  previous,  up
+-@section Usage for Package Authors
++@chapter Usage for Package Authors
+ 
+ The recommended usage for the author of a typical emacs lisp package is
+ to create one group identifying the package, and make all user options
+@@ -244,7 +244,7 @@ keyword.
+ 
+ @node  Utilities, The Init File, Usage for Package Authors, Top
+ @comment  node-name,  next,  previous,  up
+-@section Utilities
++@chapter Utilities
+ 
+ These utilities can come in handy when adding customization support.
+ 
+@@ -276,7 +276,7 @@ The menu is in a format applicable to @c
+ 
+ @node The Init File, Wishlist, Utilities, Top
+ @comment  node-name,  next,  previous,  up
+-@section The Init File
++@chapter The Init File
+ 
+ Customizations are saved to the file specified by @code{custom-file}, as
+ calls to @code{custom-set-variables} and @code{custom-set-faces}.
+@@ -299,7 +299,7 @@ about enforcing its idea of the correct
+ 
+ @node Wishlist,  , The Init File, Top
+ @comment  node-name,  next,  previous,  up
+-@section Wishlist
++@chapter Wishlist
+ 
+ @itemize @bullet
+ @item
