@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2014/10/09 14:07:08 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2016/01/17 15:19:41 joerg Exp $
 #
 
 DISTNAME=	pwm-20060517
@@ -10,6 +10,9 @@ MASTER_SITES=	http://modeemi.fi/~tuomov/pwm/dl/
 MAINTAINER=	salo@NetBSD.org
 HOMEPAGE=	http://modeemi.fi/~tuomov/ion/pwm.html
 COMMENT=	Window manager that frames multiple client windows in a single frame
+
+# pwm is linked against libtu.a before it is build.
+MAKE_JOBS_SAFE=	no
 
 CONFLICTS+=	ion<=20040729nb2
 
