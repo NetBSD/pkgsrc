@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.185 2015/12/03 06:06:08 jnemeth Exp $
+# $NetBSD: Makefile,v 1.186 2016/01/17 15:23:47 jaapb Exp $
 #
 
 COMMENT=	Communication programs
@@ -62,6 +62,17 @@ SUBDIR+=	kgb-bot
 SUBDIR+=	kmess
 SUBDIR+=	konversation
 SUBDIR+=	konversation-kde3
+SUBDIR+=	ktp-accounts-kcm
+SUBDIR+=	ktp-approver
+SUBDIR+=	ktp-auth-handler
+SUBDIR+=	ktp-common-internals
+SUBDIR+=	ktp-contact-list
+SUBDIR+=	ktp-contact-runner
+SUBDIR+=	ktp-desktop-applets
+SUBDIR+=	ktp-filetransfer-handler
+SUBDIR+=	ktp-kded-integration-module
+SUBDIR+=	ktp-send-file
+SUBDIR+=	ktp-text-ui
 SUBDIR+=	libfolks
 SUBDIR+=	libirc
 SUBDIR+=	libmsn
