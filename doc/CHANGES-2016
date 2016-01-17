@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.247 2016/01/17 15:14:11 jaapb Exp $
+$NetBSD: CHANGES-2016,v 1.248 2016/01/17 15:15:38 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -395,3 +395,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added chat/ktp-auth-handler version 0.9.0 [jaapb 2016-01-17]
 	Added chat/ktp-kded-integration-module version 0.9.0 [jaapb 2016-01-17]
 	Added chat/ktp-approver version 0.9.0 [jaapb 2016-01-17]
+	Added chat/ktp-desktop-applets version 0.9.0 [jaapb 2016-01-17]
