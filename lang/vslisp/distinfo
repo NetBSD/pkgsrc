@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2015/12/29 23:34:57 dholland Exp $
+$NetBSD: distinfo,v 1.9 2016/01/17 15:14:47 joerg Exp $
 
 SHA1 (vslisp-4.0-1.tar.gz) = ccd21360f6bd2a7f47638797a7a5d25d2f8cb797
 RMD160 (vslisp-4.0-1.tar.gz) = e958c708ae1b63e9761f61a02b44ad639f23df4f
@@ -8,5 +8,10 @@ SHA1 (patch-aa) = aeab47abe89d5815743e3cd71b779f7f04303d12
 SHA1 (patch-ab) = 62e4ab3ce617a41dad80cd23b451bddf34e48013
 SHA1 (patch-ac) = ef5a45398eb11e306de07ff0d9002a0df132b854
 SHA1 (patch-ad) = db08fdf9f1e2cbcc74eae1b8ed25afaf1cb79f6f
-SHA1 (patch-ae) = 44ee54ce869bcb275dbcb1f0bc6dad65eda62b0f
+SHA1 (patch-ae) = 635c2a435baf27cd093d9ab99350fb507e083ecc
 SHA1 (patch-af) = 96b6c609c45b2586f92881515ed4c09d19de39c4
+SHA1 (patch-src_bin2c.c) = f492009182730bbbcb19ec6b369f6facd7b10160
+SHA1 (patch-src_functions_funcn.c) = 4f091554d0e8cd79f67bf2b1482a18e5b9f9e673
+SHA1 (patch-src_functions_funcs.c) = 9671a569c762edd629da4940f164cec091fb9790
+SHA1 (patch-src_mkfuns.c) = 225aac9ecf274e3834feeb9cac791f904b808c27
+SHA1 (patch-src_newhash.c) = ee057d8d6d11d209f6d62a0f9cabd5d55c1ae966
