@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.229 2016/01/17 13:17:32 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.230 2016/01/17 13:30:30 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -378,3 +378,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-Catalyst-Plugin-Session-Store-DBIC to 0.14 [mef 2016-01-17]
 	Updated net/youtube-dl to 20160115 [adam 2016-01-17]
 	Added textproc/py-snowballstemmer version 1.2.1 [wiz 2016-01-17]
+	Updated www/p5-Catalyst-View-Excel-Template-Plus to 0.04 [mef 2016-01-17]
