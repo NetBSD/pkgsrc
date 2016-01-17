@@ -1,0 +1,3 @@
+This is the workspace integration module for the KDE Telepathy suite. It
+provides several plugins like auto-away, the infamous 'Now listening to...'
+and also an error handler (important!!)
