@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.226 2016/01/16 23:57:16 rillig Exp $
+$NetBSD: CHANGES-2016,v 1.227 2016/01/17 03:50:22 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -375,3 +375,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/erlang-xmlrpc to 1.15.20150506nb1 [fhajny 2016-01-16]
 	Updated www/p5-Catalyst-Plugin-Session to 0.40 [mef 2016-01-16]
 	Added devel/go-check version 1 [rillig 2016-01-16]
+	Updated www/p5-Catalyst-Plugin-Session-Store-DBIC to 0.14 [mef 2016-01-17]
