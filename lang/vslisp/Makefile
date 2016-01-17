@@ -1,14 +1,19 @@
-# $NetBSD: Makefile,v 1.19 2013/04/06 14:09:33 rodent Exp $
+# $NetBSD: Makefile,v 1.20 2016/01/17 15:14:47 joerg Exp $
 
 DISTNAME=	vslisp-4.0-1
 PKGNAME=	vslisp-4.0.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vslisp/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://vslisp.sourceforge.net/
 COMMENT=	Embeddable Lisp library and standalone interpreter
+
+# funcs.c:153:17: error: use of undeclared identifier 'r'
+# funct.c:336:15: error: expected expression
+# and similar
+MAKE_JOBS_SAFE=	no
 
 WRKSRC=		${WRKDIR}/vslisp-4.0
 GNU_CONFIGURE=	yes
