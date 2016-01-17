@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.241 2016/01/17 14:28:31 wiz Exp $
+# $NetBSD: Makefile,v 1.242 2016/01/17 20:47:34 wiz Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -62,7 +62,7 @@ SUBDIR+=	freebsd_lib
 SUBDIR+=	fs-uae
 SUBDIR+=	fs-uae-launcher
 SUBDIR+=	fuse-emulator
-SUBDIR+=	fuse-utils
+SUBDIR+=	fuse-emulator-utils
 SUBDIR+=	gambatte
 SUBDIR+=	gcube
 SUBDIR+=	generator
