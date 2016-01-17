@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.41 2016/01/13 22:25:38 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.42 2016/01/17 18:48:15 wiz Exp $
 
 BUILDLINK_TREE+=	libpurple
 
@@ -20,11 +20,16 @@ pkgbase := libpurple
 .if !empty(PKG_BUILD_OPTIONS.libpurple:Mfarstream)
 .  include "../../chat/farstream/buildlink3.mk"
 .endif
+.if !empty(PKG_BUILD_OPTIONS.libpurple:Mgstreamer)
+.  include "../../multimedia/gstreamer1/buildlink3.mk"
+.  include "../../multimedia/gst-plugins1-base/buildlink3.mk"
+.endif
 .if empty(PKG_BUILD_OPTIONS.libpurple:Mgnutls)
 .  include "../../devel/nss/buildlink3.mk"
 .endif
 
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .endif # LIBPURPLE_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libpurple
