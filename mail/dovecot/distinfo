@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.122 2015/11/03 23:27:03 agc Exp $
+$NetBSD: distinfo,v 1.123 2016/01/17 15:15:27 joerg Exp $
 
 SHA1 (dovecot-1.2-managesieve-0.11.13.tar.gz) = cd5d2149250072aa8079f9db967cfeffc1b57c53
 RMD160 (dovecot-1.2-managesieve-0.11.13.tar.gz) = 9deed0637f1b5942a1b4996a343fed1b23301023
@@ -25,4 +25,5 @@ SHA1 (patch-src_imap-login_client.c) = 9385443757ab53499385b099bc65e6aee0b4edbf
 SHA1 (patch-src_login-common_ssl-proxy-openssl.c) = dc965b545681f09a74758033c0665924377ff551
 SHA1 (patch-src_login-common_ssl-proxy.c) = b1cf551a2f68d9acad3e2ce4b768a91683dc6e2f
 SHA1 (patch-src_login-common_ssl-proxy.h) = ec9bfc3eb70cdff8983f17ab05e47bdefece1c63
+SHA1 (patch-src_plugins_quota_Makefile.in) = aea380c29ff8917f5e9a7fde5dbe7aef94a89320
 SHA1 (patch-src_pop3-login_client.c) = 290427f221d1f8bfae89aef07b61798cdabc29ca
