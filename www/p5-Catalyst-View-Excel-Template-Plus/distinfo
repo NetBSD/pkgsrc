@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/04 02:47:05 agc Exp $
+$NetBSD: distinfo,v 1.4 2016/01/17 13:30:21 mef Exp $
 
-SHA1 (Catalyst-View-Excel-Template-Plus-0.03.tar.gz) = 69fa6c9d07fe6f7ecdbbc39c86d1d365d58c2bf7
-RMD160 (Catalyst-View-Excel-Template-Plus-0.03.tar.gz) = f61a06f629684058b2504de0264e5ca8b39aa9bb
-SHA512 (Catalyst-View-Excel-Template-Plus-0.03.tar.gz) = 80411e417604d7858aca6cb5fd6da24e8c413cf37eeec9e6b6b632e14709dbe3b565b1495d8657f08393390097dc70b1be646806e1d684cd5d29914dbe6699c5
-Size (Catalyst-View-Excel-Template-Plus-0.03.tar.gz) = 6143 bytes
+SHA1 (Catalyst-View-Excel-Template-Plus-0.04.tar.gz) = ebeae7ff0507ee905e558730132a654ce0f49d3e
+RMD160 (Catalyst-View-Excel-Template-Plus-0.04.tar.gz) = 8806c8f905939cc43a99b12a6a7d6860d1edc5b7
+SHA512 (Catalyst-View-Excel-Template-Plus-0.04.tar.gz) = bf2df35ff1f9a56ba0471ca33b639021d44cb06072ecf65a561604ccb9dbb7be108313bc4838a4ed00d12b925f6c2dbf14c7216ee68b1da2b7d0012861c66869
+Size (Catalyst-View-Excel-Template-Plus-0.04.tar.gz) = 7030 bytes
