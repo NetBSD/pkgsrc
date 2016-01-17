@@ -1,11 +1,12 @@
-$NetBSD: patch-mozilla_config_system-headers,v 1.2 2015/09/07 15:19:10 ryoon Exp $
+$NetBSD: patch-mozilla_config_system-headers,v 1.3 2016/01/17 15:16:09 joerg Exp $
 
 --- mozilla/config/system-headers.orig	2015-05-07 18:53:47.000000000 +0000
 +++ mozilla/config/system-headers
-@@ -415,6 +415,7 @@ freetype/ftbitmap.h
+@@ -415,6 +415,8 @@ freetype/ftbitmap.h
  freetype/ftxf86.h
  freetype.h
  ftcache.h
++freetype/ftfntfmt.h
 +ftfntfmt.h
  ftglyph.h
  ftsynth.h
