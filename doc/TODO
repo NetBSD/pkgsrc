@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15319 2016/01/17 13:30:30 mef Exp $
+$NetBSD: TODO,v 1.15320 2016/01/17 14:10:00 mef Exp $
 
 Suggested new packages
 ======================
@@ -1225,7 +1225,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-GraphViz2-2.34
 	o p5-Gtk2-1.223
 	o p5-HTML-TreeBuilder-LibXML-0.25
-	o p5-HTTP-Lite-2.44
 	o p5-HTTP-Proxy-0.304
 	o p5-HTTP-Server-EV-0.69
 	o p5-IO-Interface-1.09
