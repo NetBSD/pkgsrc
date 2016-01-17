@@ -1,8 +1,37 @@
-$NetBSD: patch-config_system-headers,v 1.2 2013/04/09 19:07:04 ryoon Exp $
+$NetBSD: patch-config_system-headers,v 1.3 2016/01/17 15:13:34 joerg Exp $
 
 --- config/system-headers.orig	2013-03-28 18:07:40.000000000 +0000
 +++ config/system-headers
-@@ -1065,5 +1065,9 @@ gst/gst.h
+@@ -260,6 +260,7 @@ frame/log.h
+ frame/req.h
+ freetype/freetype.h
+ freetype/ftcache.h
++freetype/ftfntfmt.h
+ freetype/ftglyph.h
+ freetype/ftsynth.h
+ freetype/ftoutln.h
+@@ -271,6 +272,20 @@ freetype/ftsizes.h
+ freetype/ftadvanc.h
+ freetype/ftbitmap.h
+ freetype/ftxf86.h
++freetype.h
++ftcache.h
++ftfntfmt.h
++ftglyph.h
++ftsynth.h
++ftoutln.h
++ttnameid.h
++tttables.h
++t1tables.h
++ftlcdfil.h
++ftsizes.h
++ftadvanc.h
++ftbitmap.h
++ftxf86.h
+ fribidi/fribidi.h
+ FSp_fopen.h
+ fstream
+@@ -1065,5 +1080,10 @@ gst/gst.h
  gst/app/gstappsink.h
  gst/app/gstappsrc.h
  gst/video/video.h
@@ -12,3 +41,4 @@ $NetBSD: patch-config_system-headers,v 1.2 2013/04/09 19:07:04 ryoon Exp $
 +spawn.h
  sys/msg.h
  sys/ipc.h
++unwind.h
