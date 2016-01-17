@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2015/12/27 23:44:26 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2016/01/17 19:33:09 wiz Exp $
 
 DISTNAME=		tortoisehg-3.6.2
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		devel python
 MASTER_SITES=		http://bitbucket.org/tortoisehg/targz/downloads/
 
@@ -12,7 +13,7 @@ LICENSE=		gnu-gpl-v2
 
 REPLACE_PYTHON+=	thg
 
-BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.2.3nb1:../../textproc/py-sphinx
+BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.3.4nb1:../../textproc/py-sphinx
 DEPENDS+=	${PYPKGPREFIX}-iniparse>=0.4:../../textproc/py-iniparse
 DEPENDS+=	${PYPKGPREFIX}-pygments>=1.6:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-mercurial>=2.8.1:../../devel/py-mercurial
