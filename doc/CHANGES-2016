@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.227 2016/01/17 03:50:22 mef Exp $
+$NetBSD: CHANGES-2016,v 1.228 2016/01/17 10:11:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -376,3 +376,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-Catalyst-Plugin-Session to 0.40 [mef 2016-01-16]
 	Added devel/go-check version 1 [rillig 2016-01-16]
 	Updated www/p5-Catalyst-Plugin-Session-Store-DBIC to 0.14 [mef 2016-01-17]
+	Updated net/youtube-dl to 20160115 [adam 2016-01-17]
