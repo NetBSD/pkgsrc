@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/12/02 06:57:13 wiz Exp $
+$NetBSD: distinfo,v 1.6 2016/01/18 23:01:37 wiz Exp $
 
-SHA1 (opus-1.1.1.tar.gz) = 33f83cdccc36e875fea378425003bba448b15b8b
-RMD160 (opus-1.1.1.tar.gz) = f85e4bf9d7fa574ab44c6edd3516218cb9423dc3
-SHA512 (opus-1.1.1.tar.gz) = 1e55ed19f07ed399371aaf92544b3c5fb3d214c8ae67210a709edfede2102a5fa5c6f5b8287d26dcacad62b5c0a591bfe14ee7ae7d846629e5a814a05da4e149
-Size (opus-1.1.1.tar.gz) = 957948 bytes
-SHA1 (patch-configure) = 707ab1c9e5a9ad404b822fa7931d57a54568ead9
+SHA1 (opus-1.1.2.tar.gz) = c8a8ada1f471bd3ab1e3f6bdfe7fc6549fa913e0
+RMD160 (opus-1.1.2.tar.gz) = 37255f04f5985fbbcd03aaad8f6e24bf7b99d0fe
+SHA512 (opus-1.1.2.tar.gz) = 12ec6613190a09bf6f300fac70bcf927731b707eae2511cebe7098cb49c4bf43dd21a0af4d22900958636949226df50243c432d53dedeacd46a4978729b5fc0d
+Size (opus-1.1.2.tar.gz) = 959767 bytes
