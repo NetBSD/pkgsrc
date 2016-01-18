@@ -1,8 +1,8 @@
-$NetBSD: patch-scp.c,v 1.3 2015/07/09 16:14:23 taca Exp $
+$NetBSD: patch-scp.c,v 1.4 2016/01/18 12:53:26 jperkin Exp $
 
 Interix support
 
---- scp.c.orig	2015-07-01 02:35:31.000000000 +0000
+--- scp.c.orig	2015-08-21 04:49:03.000000000 +0000
 +++ scp.c
 @@ -478,7 +478,11 @@ main(int argc, char **argv)
  	argc -= optind;

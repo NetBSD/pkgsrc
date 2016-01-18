@@ -1,11 +1,11 @@
-$NetBSD: patch-sshd.c,v 1.5 2015/08/14 08:57:00 jperkin Exp $
+$NetBSD: patch-sshd.c,v 1.6 2016/01/18 12:53:26 jperkin Exp $
 
 * Interix support
 * Revive tcp_wrappers support.
 
---- sshd.c.orig	2015-07-01 02:35:31.000000000 +0000
+--- sshd.c.orig	2015-08-21 04:49:03.000000000 +0000
 +++ sshd.c
-@@ -125,6 +125,13 @@
+@@ -126,6 +126,13 @@
  #include "version.h"
  #include "ssherr.h"
  
@@ -19,7 +19,7 @@ $NetBSD: patch-sshd.c,v 1.5 2015/08/14 08:57:00 jperkin Exp $
  #ifndef O_NOCTTY
  #define O_NOCTTY	0
  #endif
-@@ -236,7 +243,11 @@ int *startup_pipes = NULL;
+@@ -237,7 +244,11 @@ int *startup_pipes = NULL;
  int startup_pipe;		/* in child */
  
  /* variables used for privilege separation */
@@ -31,7 +31,7 @@ $NetBSD: patch-sshd.c,v 1.5 2015/08/14 08:57:00 jperkin Exp $
  struct monitor *pmonitor = NULL;
  int privsep_is_preauth = 1;
  
-@@ -643,10 +654,15 @@ privsep_preauth_child(void)
+@@ -644,10 +655,15 @@ privsep_preauth_child(void)
  	/* XXX not ready, too heavy after chroot */
  	do_setusercontext(privsep_pw);
  #else
@@ -47,7 +47,7 @@ $NetBSD: patch-sshd.c,v 1.5 2015/08/14 08:57:00 jperkin Exp $
  #endif
  }
  
-@@ -714,11 +730,18 @@ privsep_preauth(Authctxt *authctxt)
+@@ -715,11 +731,18 @@ privsep_preauth(Authctxt *authctxt)
  		set_log_handler(mm_log_handler, pmonitor);
  
  		/* Demote the child */
@@ -67,7 +67,7 @@ $NetBSD: patch-sshd.c,v 1.5 2015/08/14 08:57:00 jperkin Exp $
  
  		return 0;
  	}
-@@ -732,7 +755,7 @@ privsep_postauth(Authctxt *authctxt)
+@@ -733,7 +756,7 @@ privsep_postauth(Authctxt *authctxt)
  #ifdef DISABLE_FD_PASSING
  	if (1) {
  #else
@@ -76,7 +76,7 @@ $NetBSD: patch-sshd.c,v 1.5 2015/08/14 08:57:00 jperkin Exp $
  #endif
  		/* File descriptor passing is broken or root login */
  		use_privsep = 0;
-@@ -1485,8 +1508,10 @@ main(int ac, char **av)
+@@ -1489,8 +1512,10 @@ main(int ac, char **av)
  	av = saved_argv;
  #endif
  
@@ -88,7 +88,7 @@ $NetBSD: patch-sshd.c,v 1.5 2015/08/14 08:57:00 jperkin Exp $
  
  	/* Ensure that fds 0, 1 and 2 are open or directed to /dev/null */
  	sanitise_stdfd();
-@@ -1915,7 +1940,7 @@ main(int ac, char **av)
+@@ -1919,7 +1944,7 @@ main(int ac, char **av)
  		    (st.st_uid != getuid () ||
  		    (st.st_mode & (S_IWGRP|S_IWOTH)) != 0))
  #else
@@ -97,7 +97,7 @@ $NetBSD: patch-sshd.c,v 1.5 2015/08/14 08:57:00 jperkin Exp $
  #endif
  			fatal("%s must be owned by root and not group or "
  			    "world-writable.", _PATH_PRIVSEP_CHROOT_DIR);
-@@ -1938,8 +1963,10 @@ main(int ac, char **av)
+@@ -1942,8 +1967,10 @@ main(int ac, char **av)
  	 * to create a file, and we can't control the code in every
  	 * module which might be used).
  	 */
@@ -108,7 +108,7 @@ $NetBSD: patch-sshd.c,v 1.5 2015/08/14 08:57:00 jperkin Exp $
  
  	if (rexec_flag) {
  		rexec_argv = xcalloc(rexec_argc + 2, sizeof(char *));
-@@ -2135,6 +2162,25 @@ main(int ac, char **av)
+@@ -2139,6 +2166,25 @@ main(int ac, char **av)
  	audit_connection_from(remote_ip, remote_port);
  #endif
  

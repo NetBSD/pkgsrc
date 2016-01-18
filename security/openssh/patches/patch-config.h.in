@@ -1,9 +1,9 @@
-$NetBSD: patch-config.h.in,v 1.4 2015/07/09 16:14:23 taca Exp $
+$NetBSD: patch-config.h.in,v 1.5 2016/01/18 12:53:26 jperkin Exp $
 
 * Added Interix and define new path to if_tun.h.
 * Revive tcp_wrappers support.
 
---- config.h.in.orig	2015-07-01 02:41:59.000000000 +0000
+--- config.h.in.orig	2015-08-21 05:09:20.000000000 +0000
 +++ config.h.in
 @@ -640,6 +640,9 @@
  /* define if you have int64_t data type */
