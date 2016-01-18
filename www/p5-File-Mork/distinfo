@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 02:47:07 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/01/18 11:05:31 mef Exp $
 
-SHA1 (File-Mork-0.3.tar.gz) = fcf24bc66e19734ccacdcc713b44f5ba188ced1e
-RMD160 (File-Mork-0.3.tar.gz) = 6ac5577617de89cdbc6e31fd935fd158c51fcec1
-SHA512 (File-Mork-0.3.tar.gz) = 373ead66345d7f9abb44bdcc949890e75530512b0df70f6f8cde4cd120d7bcba6b696424ceab190ce3d11e8d34c8809642536f9905003e6190996cba10f9a9f9
-Size (File-Mork-0.3.tar.gz) = 9934 bytes
+SHA1 (File-Mork-0.4.tar.gz) = 1dd610b721617451c2a34318c247b196b4326004
+RMD160 (File-Mork-0.4.tar.gz) = e33f35b08b0b11856949c232a74f4d78dffcc6c9
+SHA512 (File-Mork-0.4.tar.gz) = 4cabdab4fba3f29f0f87fa9aa9853b6f93cfe620745234d97813992d211fd1fb258d27a79ae6eb1d534a0f8bbd2be962da09fb843638c2b06f99a053dd883bac
+Size (File-Mork-0.4.tar.gz) = 12038 bytes
