@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2015/12/05 21:25:53 adam Exp $
+# $NetBSD: Makefile,v 1.16 2016/01/18 23:03:03 wiz Exp $
 
-DISTNAME=	foolscap-0.9.1
+DISTNAME=	foolscap-0.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	http://pypi.python.org/packages/source/f/foolscap/
@@ -12,7 +12,7 @@ COMMENT=	Foolscap contains an RPC protocol for Twisted
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-ZopeInterface>=3.6.1:../../devel/py-ZopeInterface
-DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
+DEPENDS+=	${PYPKGPREFIX}-twisted>=15.3.0:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=0.6:../../security/py-OpenSSL
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-twisted
