@@ -1,4 +1,4 @@
-$NetBSD: patch-build_config_Linux,v 1.2 2016/01/16 12:15:12 ryoon Exp $
+$NetBSD: patch-build_config_Linux,v 1.3 2016/01/18 20:46:52 joerg Exp $
 
 # Build a full set of shared library search paths, rather than
 # *assuming* everything is under PREFIX.
@@ -9,7 +9,7 @@ $NetBSD: patch-build_config_Linux,v 1.2 2016/01/16 12:15:12 ryoon Exp $
  LIB     = ${CROSS_COMPILE}ar -cr
  RANLIB  = ${CROSS_COMPILE}ranlib
  SHLIB   = $(CXX) -shared -Wl,-soname,$(notdir $@) -o $@
-+SHLIBFLAGS = $(LDFLAGS) -Wl,-R$(POCO_PREFIX)/lib \
++SHLIBFLAGS = $(LDFLAGS) -Wl,-rpath,$(POCO_PREFIX)/lib -L$(POCO_PREFIX)/lib \
 +		$(foreach p,$(sort $(POCO_ADD_LIBRARY)),-L$(p) -Wl,-R$(p))
  SHLIBLN = $(POCO_BASE)/build/script/shlibln
  STRIP   = ${CROSS_COMPILE}strip
@@ -28,7 +28,7 @@ $NetBSD: patch-build_config_Linux,v 1.2 2016/01/16 12:15:12 ryoon Exp $
  SHAREDOPT_CC    = -fPIC
  SHAREDOPT_CXX   = -fPIC
 -SHAREDOPT_LINK  = -Wl,-rpath,$(LIBPATH)
-+SHAREDOPT_LINK  = -Wl,-rpath,$(POCO_PREFIX)/lib -L$(LIBPATH)
++SHAREDOPT_LINK  = -Wl,-rpath,$(POCO_PREFIX)/lib -L$(POCO_PREFIX)/lib -L -L$(LIBPATH)
  DEBUGOPT_CC     = -g -D_DEBUG
  DEBUGOPT_CXX    = -g -D_DEBUG
  DEBUGOPT_LINK   = -g
