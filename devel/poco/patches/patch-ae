@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.1.1.1 2011/02/06 05:55:15 schnoebe Exp $
+$NetBSD: patch-ae,v 1.2 2016/01/18 20:46:52 joerg Exp $
 
 # clean up the FreeBSD configuration to fit better with pkgsrc
 
@@ -12,9 +12,9 @@ $NetBSD: patch-ae,v 1.1.1.1 2011/02/06 05:55:15 schnoebe Exp $
  LIB     = ar -cr
  RANLIB  = ranlib
 -SHLIB   = $(CXX) -shared -Wl,-soname,$(notdir $@) -o $@
-+SHLIBFLAGS = -L$(POCO_PREFIX)/lib -Wl,-R$(POCO_PREFIX)/lib \
++SHLIBFLAGS = -L$(POCO_PREFIX)/lib -Wl,-rpath,$(POCO_PREFIX)/lib \
 +		$(foreach p,$(sort $(POCO_ADD_LIBRARY)),-L$(p) -Wl,-R$(p))
-+SHLIB   = $(CXX) -Wl,-R$(POCO_PREFIX)/lib -shared -Wl,-soname,$(notdir $@) -o $@
++SHLIB   = $(CXX) -Wl,-rpath,$(POCO_PREFIX)/lib -shared -Wl,-soname,$(notdir $@) -o $@
  SHLIBLN = $(POCO_BASE)/build/script/shlibln
  DEP     = $(POCO_BASE)/build/script/makedepend.gcc 
  STRIP   = strip
@@ -23,7 +23,7 @@ $NetBSD: patch-ae,v 1.1.1.1 2011/02/06 05:55:15 schnoebe Exp $
  SHAREDOPT_CC    = -fPIC
  SHAREDOPT_CXX   = -fPIC
 -SHAREDOPT_LINK  = -Wl,-rpath,$(LIBPATH)
-+SHAREDOPT_LINK  = -Wl,-rpath,$(POCO_PREFIX)/lib -L$(LIBPATH)
++SHAREDOPT_LINK  = -Wl,-rpath,$(POCO_PREFIX)/lib -L$(POCO_PREFIX)/lib -L$(LIBPATH)
  DEBUGOPT_CC     = -g -D_DEBUG
  DEBUGOPT_CXX    = -g -D_DEBUG
  DEBUGOPT_LINK   = -g
