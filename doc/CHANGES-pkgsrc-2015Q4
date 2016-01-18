@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q4,v 1.1.2.7 2016/01/18 05:52:21 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q4,v 1.1.2.8 2016/01/18 23:14:27 bsiegert Exp $
 
 Changes to the packages collection and infrastructure on the 2015Q4 branch:
 
@@ -29,9 +29,39 @@ Pullup ticket #4888 - requested by bouyer
 sysutils/xenkernel45: security fix
 sysutils/xentools45: security fix
 
+Pullup ticket #4889 - requested by leot
+print/gv: bugfix
+
 Pullup ticket #4878 - requested by bsiegert
 devel/pcre2: security update
 
 Pullup ticket #4879 - requested by bsiegert
 audio/vorbis-tools: security fix
+
+Pullup ticket #4891 - requested by taca
+lang/php55: security fix
+
+Pullup ticket #4892 - requested by taca
+lang/php56: security fix
+
+Pullup ticket #4893 - requested by taca
+lang/php70: security fix
+
+Pullup ticket #4894 - requested by taca
+databases/php-do_sqlite: PKGREVISION reset
+meta-pkgs/php55-extensions: PKGREVISION reset
+textproc/php-intl: PKGREVISION reset
+
+Pullup ticket #4895 - requested by taca
+net/ntp4: security fix
+
+Pullup ticket #4896 - requested by taca
+devel/ruby-debugger: build fix
+devel/ruby-debugger-linecache: build fix
+
+Pullup ticket #4897 - requested by taca
+devel/ruby-debugger-ruby_core_source: build fix
+
+Pullup ticket #4898 - requested by taca
+devel/ruby-test-unit: build fix
 
