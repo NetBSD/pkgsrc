@@ -1,10 +1,10 @@
-$NetBSD: patch-sshd.8,v 1.1 2015/07/09 16:14:23 taca Exp $
+$NetBSD: patch-sshd.8,v 1.2 2016/01/18 12:53:26 jperkin Exp $
 
 * Revive tcp_wrappers support.
 
---- sshd.8.orig	2015-07-01 02:35:31.000000000 +0000
+--- sshd.8.orig	2015-08-21 04:49:03.000000000 +0000
 +++ sshd.8
-@@ -853,6 +853,12 @@ the user's home directory becomes access
+@@ -850,6 +850,12 @@ the user's home directory becomes access
  This file should be writable only by the user, and need not be
  readable by anyone else.
  .Pp
@@ -17,7 +17,7 @@ $NetBSD: patch-sshd.8,v 1.1 2015/07/09 16:14:23 taca Exp $
  .It Pa /etc/hosts.equiv
  This file is for host-based authentication (see
  .Xr ssh 1 ) .
-@@ -956,6 +962,7 @@ The content of this file is not sensitiv
+@@ -953,6 +959,7 @@ The content of this file is not sensitiv
  .Xr ssh-keygen 1 ,
  .Xr ssh-keyscan 1 ,
  .Xr chroot 2 ,

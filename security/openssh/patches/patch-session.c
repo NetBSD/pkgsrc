@@ -1,8 +1,8 @@
-$NetBSD: patch-session.c,v 1.4 2015/07/09 16:14:23 taca Exp $
+$NetBSD: patch-session.c,v 1.5 2016/01/18 12:53:26 jperkin Exp $
 
 Interix support
 
---- session.c.orig	2015-07-01 02:35:31.000000000 +0000
+--- session.c.orig	2015-08-21 04:49:03.000000000 +0000
 +++ session.c
 @@ -1093,7 +1093,7 @@ read_etc_default_login(char ***env, u_in
  	if (tmpenv == NULL)

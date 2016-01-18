@@ -1,10 +1,10 @@
-$NetBSD: patch-channels.c,v 1.2 2015/07/09 16:14:23 taca Exp $
+$NetBSD: patch-channels.c,v 1.3 2016/01/18 12:53:26 jperkin Exp $
 
 Fix X11 forwarding under Mac OS X Yosemite. Patch taken from MacPorts.
 
 https://trac.macports.org/browser/trunk/dports/net/openssh/files/launchd.patch?rev=121205
 
---- channels.c.orig	2015-07-01 02:35:31.000000000 +0000
+--- channels.c.orig	2015-08-21 04:49:03.000000000 +0000
 +++ channels.c
 @@ -4037,15 +4037,35 @@ x11_connect_display(void)
  	 * connection to the real X server.

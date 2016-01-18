@@ -1,8 +1,8 @@
-$NetBSD: patch-openbsd-compat_port-tun.c,v 1.2 2015/07/09 16:14:23 taca Exp $
+$NetBSD: patch-openbsd-compat_port-tun.c,v 1.3 2016/01/18 12:53:26 jperkin Exp $
 
 if_tun.h can be found in net/tun
 
---- openbsd-compat/port-tun.c.orig	2015-07-01 02:35:31.000000000 +0000
+--- openbsd-compat/port-tun.c.orig	2015-08-21 04:49:03.000000000 +0000
 +++ openbsd-compat/port-tun.c
 @@ -111,6 +111,10 @@ sys_tun_open(int tun, int mode)
  #include <sys/socket.h>

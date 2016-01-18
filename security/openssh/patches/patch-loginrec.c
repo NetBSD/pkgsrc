@@ -1,8 +1,8 @@
-$NetBSD: patch-loginrec.c,v 1.4 2015/08/14 08:57:00 jperkin Exp $
+$NetBSD: patch-loginrec.c,v 1.5 2016/01/18 12:53:26 jperkin Exp $
 
 Interix support and related fixes. Fix build on FreeBSD.
 
---- loginrec.c.orig	2015-07-01 02:35:31.000000000 +0000
+--- loginrec.c.orig	2015-08-21 04:49:03.000000000 +0000
 +++ loginrec.c
 @@ -432,8 +432,8 @@ login_set_addr(struct logininfo *li, con
  int

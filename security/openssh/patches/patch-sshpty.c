@@ -1,8 +1,8 @@
-$NetBSD: patch-sshpty.c,v 1.2 2015/07/09 16:14:23 taca Exp $
+$NetBSD: patch-sshpty.c,v 1.3 2016/01/18 12:53:26 jperkin Exp $
 
 Replace uid 0 with ROOTUID macro
 
---- sshpty.c.orig	2015-07-01 02:35:31.000000000 +0000
+--- sshpty.c.orig	2015-08-21 04:49:03.000000000 +0000
 +++ sshpty.c
 @@ -86,7 +86,7 @@ void
  pty_release(const char *tty)

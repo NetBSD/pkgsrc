@@ -1,8 +1,8 @@
-$NetBSD: patch-includes.h,v 1.3 2015/07/09 16:14:23 taca Exp $
+$NetBSD: patch-includes.h,v 1.4 2016/01/18 12:53:26 jperkin Exp $
 
 Interix support
 
---- includes.h.orig	2015-07-01 02:35:31.000000000 +0000
+--- includes.h.orig	2015-08-21 04:49:03.000000000 +0000
 +++ includes.h
 @@ -127,6 +127,10 @@
  #ifdef HAVE_READPASSPHRASE_H

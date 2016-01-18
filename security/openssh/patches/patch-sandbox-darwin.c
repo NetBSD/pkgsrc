@@ -1,8 +1,8 @@
-$NetBSD: patch-sandbox-darwin.c,v 1.1 2015/08/14 08:57:00 jperkin Exp $
+$NetBSD: patch-sandbox-darwin.c,v 1.2 2016/01/18 12:53:26 jperkin Exp $
 
 Support sandbox on newer OSX, from MacPorts.
 
---- sandbox-darwin.c.orig	2015-07-01 02:35:31.000000000 +0000
+--- sandbox-darwin.c.orig	2015-08-21 04:49:03.000000000 +0000
 +++ sandbox-darwin.c
 @@ -62,8 +62,16 @@ ssh_sandbox_child(struct ssh_sandbox *bo
  	struct rlimit rl_zero;
