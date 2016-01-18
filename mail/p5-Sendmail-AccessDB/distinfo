@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 23:27:15 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/01/18 14:41:01 mef Exp $
 
-SHA1 (Sendmail-AccessDB-0.09.tar.gz) = 467ddb17b6d5fe1d964a43e764cc191628b1e218
-RMD160 (Sendmail-AccessDB-0.09.tar.gz) = 9b3259501d946a080d837531dcc9a1a0a3d1a0b8
-SHA512 (Sendmail-AccessDB-0.09.tar.gz) = eeed6613f8692e94ca2e9e867695785584a82336fe9975b82476c6ca97505976c42c721f2a540c4d3be7523cf89c9a7337c76703192c37492557bc85ae37df69
-Size (Sendmail-AccessDB-0.09.tar.gz) = 15129 bytes
+SHA1 (Sendmail-AccessDB-1.04.tar.gz) = 6cc22b7c3ad2b3e5c388b160db8b5f20592b8408
+RMD160 (Sendmail-AccessDB-1.04.tar.gz) = 7a1227437245d24d721c16a17b4a3f427cfebd64
+SHA512 (Sendmail-AccessDB-1.04.tar.gz) = 7ff314131c01ab0d119256bfe799616e170495a875f99f2fd97f11637e7883c12d0a3ea8edc5ac32f35e6d61e41d9ae143752aa68d7121a6b508e31f84d13d8f
+Size (Sendmail-AccessDB-1.04.tar.gz) = 74582 bytes
