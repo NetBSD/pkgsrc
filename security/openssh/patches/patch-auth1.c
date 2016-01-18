@@ -1,8 +1,8 @@
-$NetBSD: patch-auth1.c,v 1.3 2015/07/09 16:14:23 taca Exp $
+$NetBSD: patch-auth1.c,v 1.4 2016/01/18 12:53:26 jperkin Exp $
 
 Replace uid 0 with ROOTUID macro
 
---- auth1.c.orig	2015-07-01 02:35:31.000000000 +0000
+--- auth1.c.orig	2015-08-21 04:49:03.000000000 +0000
 +++ auth1.c
 @@ -322,7 +322,7 @@ do_authloop(Authctxt *authctxt)
  
