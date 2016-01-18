@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2015/12/02 06:57:13 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2016/01/18 23:01:37 wiz Exp $
 
-DISTNAME=	opus-1.1.1
+DISTNAME=	opus-1.1.2
 PKGNAME=	lib${DISTNAME}
 CATEGORIES=	audio
 MASTER_SITES=	http://downloads.xiph.org/releases/opus/
