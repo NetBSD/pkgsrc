@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/04/08 01:42:41 rodent Exp $
-#
+# $NetBSD: Makefile,v 1.5 2016/01/18 23:07:24 wiz Exp $
 
 DISTNAME=	SourceCodePro_FontsOnly-1.017
 PKGNAME=	${DISTNAME:S/SourceCodePro_FontsOnly/sourcecodepro-fonts/}
@@ -8,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sourcecodepro.adobe/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/sourcecodepro.adobe/
+HOMEPAGE=	https://adobe-fonts.github.io/source-code-pro/
 COMMENT=	Set of monospaced OpenType fonts designed for coding environments
 LICENSE=	ofl-v1.1
 
