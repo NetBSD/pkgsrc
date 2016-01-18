@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2016/01/18 14:34:36 leot Exp $
+# $NetBSD: Makefile.common,v 1.10 2016/01/18 19:02:56 leot Exp $
 # used by graphics/giflib/Makefile
 # used by graphics/giflib-util/Makefile
 
@@ -17,9 +17,6 @@ DISTINFO_FILE=	${.CURDIR}/../../graphics/giflib/distinfo
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--disable-rle
-CONFIGURE_ARGS+=	--disable-x11
-CONFIGURE_ARGS+=	--disable-gl
 
 SUBST_CLASSES+=		split
 SUBST_FILES.split+=	util/Makefile.in
