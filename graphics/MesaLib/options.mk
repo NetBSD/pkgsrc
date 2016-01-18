@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.45 2016/01/05 13:02:57 tnn Exp $
+# $NetBSD: options.mk,v 1.46 2016/01/18 18:01:30 jperkin Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=		llvm dri
@@ -40,7 +40,6 @@ PLIST_VARS+=		gbm wayland xatracker
 .if !empty(PKG_OPTIONS:Mdri)
 
 CONFIGURE_ARGS+=	--enable-dri
-CONFIGURE_ARGS+=	--enable-dri2
 CONFIGURE_ARGS+=	--enable-dri3
 CFLAGS+=		-DHAVE_DRI3
 CONFIGURE_ARGS+=	--enable-egl
