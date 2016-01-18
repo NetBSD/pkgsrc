@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2015/09/30 19:24:35 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2016/01/18 23:03:03 wiz Exp $
 bin/flappclient
 bin/flappserver
 bin/flogtool
@@ -82,6 +82,9 @@ ${PYSITELIB}/foolscap/logging/dumper.pyo
 ${PYSITELIB}/foolscap/logging/filter.py
 ${PYSITELIB}/foolscap/logging/filter.pyc
 ${PYSITELIB}/foolscap/logging/filter.pyo
+${PYSITELIB}/foolscap/logging/flogfile.py
+${PYSITELIB}/foolscap/logging/flogfile.pyc
+${PYSITELIB}/foolscap/logging/flogfile.pyo
 ${PYSITELIB}/foolscap/logging/gatherer.py
 ${PYSITELIB}/foolscap/logging/gatherer.pyc
 ${PYSITELIB}/foolscap/logging/gatherer.pyo
