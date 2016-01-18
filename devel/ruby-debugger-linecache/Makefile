@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/11/23 15:46:58 taca Exp $
+# $NetBSD: Makefile,v 1.2.2.1 2016/01/18 20:39:57 bsiegert Exp $
 
 DISTNAME=	debugger-linecache-1.2.0
 CATEGORIES=	devel
@@ -8,7 +8,7 @@ HOMEPAGE=	https://github.com/cldwalker/debugger-linecache
 COMMENT=	Read file with caching
 LICENSE=	mit
 
-RUBY_VERSION_SUPPORTED=	200 21
+RUBY_VERSION_SUPPORTED=	200
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
