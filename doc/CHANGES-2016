@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.280 2016/01/18 22:53:14 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.281 2016/01/18 22:53:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -429,3 +429,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/nodejs to 5.4.1 [fhajny 2016-01-18]
 	Updated textproc/py-xlsxwriter to 0.8.4 [fhajny 2016-01-18]
 	Updated sysutils/dbus-glib to 0.106 [wiz 2016-01-18]
+	Updated devel/waf to 1.8.18 [wiz 2016-01-18]
