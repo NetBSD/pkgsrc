@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.286 2016/01/18 23:03:12 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.287 2016/01/18 23:04:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -435,3 +435,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated fonts/harfbuzz to 1.1.3 [wiz 2016-01-18]
 	Updated audio/libopus to 1.1.2 [wiz 2016-01-18]
 	Updated net/py-foolscap to 0.10.0 [wiz 2016-01-18]
+	Updated devel/py-setuptools to 19.4 [wiz 2016-01-18]
