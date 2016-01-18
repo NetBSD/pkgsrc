@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.260 2016/01/18 04:21:43 mef Exp $
+$NetBSD: CHANGES-2016,v 1.261 2016/01/18 05:18:19 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -409,3 +409,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-Catalyst-View-TT to 0.44 [mef 2016-01-18]
 	Updated www/p5-Cookie-Baker to 0.06 [mef 2016-01-18]
 	Updated www/p5-Dancer2 to 0.166000 [mef 2016-01-18]
+	Updated emulators/sys161 to 2.0.6 [dholland 2016-01-18]
