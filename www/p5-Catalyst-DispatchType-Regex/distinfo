@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 02:47:04 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/01/18 03:45:40 mef Exp $
 
-SHA1 (Catalyst-DispatchType-Regex-5.90033.tar.gz) = 45b47b2d825c1364c50f60fbdc33064eb713ae34
-RMD160 (Catalyst-DispatchType-Regex-5.90033.tar.gz) = 8105d71f3c1564394c769ffad1e2c1c71254a004
-SHA512 (Catalyst-DispatchType-Regex-5.90033.tar.gz) = 99fc37b732a94913169aac81c4fc45546c8bfde9f6a9ebd8594155b491e10b9c82530d7132d684cbbcccd6248e943c0d4f662570f49d5699e48dfcc68e581fbb
-Size (Catalyst-DispatchType-Regex-5.90033.tar.gz) = 14384 bytes
+SHA1 (Catalyst-DispatchType-Regex-5.90035.tar.gz) = 8f3e3ad7b060ebb647aa98ce1ea2e5bb517be3db
+RMD160 (Catalyst-DispatchType-Regex-5.90035.tar.gz) = 671f2d9b976641947b47482e7ca8d772153408a9
+SHA512 (Catalyst-DispatchType-Regex-5.90035.tar.gz) = b5073bb2510b48df6adee18c6ab02dfdb9c63873f26d3c5050a29fcd968c3b8612ef406cbae15dc24d598bff1c232be76e3075a1bec973de22c0f12a11b409a0
+Size (Catalyst-DispatchType-Regex-5.90035.tar.gz) = 14626 bytes
