@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.259 2016/01/18 03:55:13 mef Exp $
+$NetBSD: CHANGES-2016,v 1.260 2016/01/18 04:21:43 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -408,3 +408,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-Catalyst-DispatchType-Regex to 5.90035 [mef 2016-01-18]
 	Updated www/p5-Catalyst-View-TT to 0.44 [mef 2016-01-18]
 	Updated www/p5-Cookie-Baker to 0.06 [mef 2016-01-18]
+	Updated www/p5-Dancer2 to 0.166000 [mef 2016-01-18]
