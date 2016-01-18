@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.270 2016/01/18 13:46:10 wen Exp $
+$NetBSD: CHANGES-2016,v 1.271 2016/01/18 13:55:17 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -419,3 +419,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Test-Cmd to 1.09 [wen 2016-01-18]
 	Updated devel/p5-Test-Warnings to 0.024 [wen 2016-01-18]
 	Updated textproc/p5-podlators to 4.05 [wen 2016-01-18]
+	Updated devel/p5-Pod-Usage to 1.68 [wen 2016-01-18]
