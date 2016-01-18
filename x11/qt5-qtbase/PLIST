@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2015/11/10 12:18:44 abs Exp $
+@comment $NetBSD: PLIST,v 1.11 2016/01/18 20:52:43 nros Exp $
 lib/pkgconfig/Qt5Bootstrap.pc
 lib/pkgconfig/Qt5Concurrent.pc
 lib/pkgconfig/Qt5Core.pc
@@ -2355,6 +2355,7 @@ ${PLIST.unix}qt5/lib/cmake/Qt5Gui/Qt5Gui_QComposePlatformInputContextPlugin.cmak
 ${PLIST.egl}qt5/lib/cmake/Qt5Gui/Qt5Gui_QEglFSIntegrationPlugin.cmake
 ${PLIST.egl}qt5/lib/cmake/Qt5Gui/Qt5Gui_QEglFSX11IntegrationPlugin.cmake
 qt5/lib/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake
+${PLIST.gtk2}qt5/lib/cmake/Qt5Gui/Qt5Gui_QGtk2ThemePlugin.cmake
 qt5/lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake
 ${PLIST.unix}qt5/lib/cmake/Qt5Gui/Qt5Gui_QIbusPlatformInputContextPlugin.cmake
 qt5/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake
@@ -2934,6 +2935,7 @@ qt5/plugins/platforms/libqminimal.la
 ${PLIST.egl}qt5/plugins/platforms/libqminimalegl.la
 qt5/plugins/platforms/libqoffscreen.la
 ${PLIST.unix}qt5/plugins/platforms/libqxcb.la
+${PLIST.gtk2}qt5/plugins/platformthemes/libqgtk2.la
 ${PLIST.mac}qt5/plugins/printsupport/libcocoaprintersupport.la
 ${PLIST.cups}qt5/plugins/printsupport/libcupsprintersupport.la
 ${PLIST.unix}qt5/plugins/xcbglintegrations/libqxcb-glx-integration.la
