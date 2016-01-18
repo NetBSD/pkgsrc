@@ -1,8 +1,8 @@
-$NetBSD: patch-uidswap.c,v 1.4 2015/08/14 08:57:00 jperkin Exp $
+$NetBSD: patch-uidswap.c,v 1.5 2016/01/18 12:53:26 jperkin Exp $
 
 Interix support
 
---- uidswap.c.orig	2015-07-01 02:35:31.000000000 +0000
+--- uidswap.c.orig	2015-08-21 04:49:03.000000000 +0000
 +++ uidswap.c
 @@ -67,13 +67,13 @@ temporarily_use_uid(struct passwd *pw)
  	    (u_int)pw->pw_uid, (u_int)pw->pw_gid,
