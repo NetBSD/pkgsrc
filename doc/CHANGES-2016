@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.263 2016/01/18 11:05:43 mef Exp $
+$NetBSD: CHANGES-2016,v 1.264 2016/01/18 11:44:09 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -412,3 +412,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated emulators/sys161 to 2.0.6 [dholland 2016-01-18]
 	Added lang/micropython version 1.5.2 [agc 2016-01-18]
 	Updated www/p5-File-Mork to 0.4 [mef 2016-01-18]
+	Updated www/p5-HTML-Entities-Interpolate to 1.09 [mef 2016-01-18]
