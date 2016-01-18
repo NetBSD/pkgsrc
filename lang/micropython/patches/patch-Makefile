@@ -1,0 +1,54 @@
+$NetBSD: patch-Makefile,v 1.1 2016/01/18 07:54:51 agc Exp $
+
+Invoke gmake properly
+
+--- Makefile	2016/01/09 21:43:06	1.1
++++ Makefile	2016/01/09 21:51:39
+@@ -149,14 +149,13 @@
+ 
+ # install micropython in /usr/local/bin
+ TARGET = micropython
+-PREFIX = $(DESTDIR)/usr/local
+-BINDIR = $(PREFIX)/bin
++BINDIR = $(DESTDIR)${PREFIX}/bin
+ PIPSRC = ../tools/pip-micropython
+ PIPTARGET = pip-micropython
+ 
+ install: micropython
+-	install -D $(TARGET) $(BINDIR)/$(TARGET)
+-	install -D $(PIPSRC) $(BINDIR)/$(PIPTARGET)
++	${BSD_INSTALL_PROGRAM} $(TARGET) $(BINDIR)/$(TARGET)
++	${BSD_INSTALL_SCRIPT} $(PIPSRC) $(BINDIR)/$(PIPTARGET)
+ 
+ # uninstall micropython
+ uninstall:
+@@ -196,12 +195,12 @@
+ 	../tools/make-frozen.py $(dir $^) > $@
+ 
+ # Select latest upip version available
+-UPIP_TARBALL := $(shell ls -1 -v ../tools/micropython-upip-*.tar.gz | tail -n1)
++UPIP_TARBALL := $(shell ls -1 ../tools/micropython-upip-*.tar.gz | tail -n1)
+ 
+ $(BUILD)/frozen_upip/upip.py: $(UPIP_TARBALL)
+ 	$(ECHO) "MISC Preparing upip as frozen module"
+ 	$(Q)rm -rf $(BUILD)/micropython-upip-*
+-	$(Q)tar -C $(BUILD) -xz -f $^
++	$(Q)tar -C $(BUILD) -x -z -f $^
+ 	$(Q)rm -rf $(dir $@)
+ 	$(Q)mkdir -p $(dir $@)
+ 	$(Q)cp $(BUILD)/micropython-upip-*/upip*.py $(dir $@)
+@@ -224,10 +223,10 @@
+ 	cd ../lib/libffi; ./autogen.sh
+ 	mkdir -p ../lib/libffi/build_dir; cd ../lib/libffi/build_dir; \
+ 	../configure $(CROSS_COMPILE_HOST) --prefix=$$PWD/out CC="$(CC)" CXX="$(CXX)" LD="$(LD)"; \
+-	make install-exec-recursive; make -C include install-data-am
++	${MAKE} install-exec-recursive; ${MAKE} -C include install-data-am
+ 
+ axtls:
+ 	cd ../lib/axtls; cp config/upyconfig config/.config
+-	cd ../lib/axtls; make oldconfig -B
+-	cd ../lib/axtls; make clean
+-	cd ../lib/axtls; make all CC="$(CC)" LD="$(LD)"
++	cd ../lib/axtls; ${MAKE} oldconfig -B
++	cd ../lib/axtls; ${MAKE} clean
++	cd ../lib/axtls; ${MAKE} all CC="$(CC)" LD="$(LD)"
