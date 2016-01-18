@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.256 2016/01/18 00:29:35 abs Exp $
+$NetBSD: CHANGES-2016,v 1.257 2016/01/18 03:45:51 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -405,3 +405,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Renamed emulators/fuse-utils to emulators/fuse-emulator-utils [wiz 2016-01-17]
 	Updated net/syncthing to 0.12.15 [abs 2016-01-17]
 	Updated net/syncthing-gtk to 0.8.1 [abs 2016-01-18]
+	Updated www/p5-Catalyst-DispatchType-Regex to 5.90035 [mef 2016-01-18]
