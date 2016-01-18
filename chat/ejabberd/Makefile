@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.62 2016/01/16 19:28:01 fhajny Exp $
+# $NetBSD: Makefile,v 1.63 2016/01/18 10:23:18 fhajny Exp $
 
 DISTNAME=	ejabberd-16.01
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	http://www.process-one.net/downloads/ejabberd/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tgz
@@ -89,7 +90,7 @@ CONF_FILES_PERMS+=	${EGDIR}/inetrc ${PKG_SYSCONFDIR}/inetrc \
 			${ROOT_USER} ${EJABBERD_GROUP} 0640
 SPECIAL_PERMS+=		sbin/ejabberdctl ${ROOT_USER} ${EJABBERD_GROUP} 0750
 
-REPLACE_BASH=		tools/captcha.sh
+REPLACE_BASH=		ejabberdctl.template tools/captcha.sh
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Localizing paths
