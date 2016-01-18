@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.275 2016/01/18 15:53:24 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.276 2016/01/18 17:11:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -424,3 +424,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/giflib to 5.1.2 [leot 2016-01-18]
 	Updated mail/p5-Sendmail-AccessDB to 1.04 [mef 2016-01-18]
 	Updated databases/py-peewee to 2.8.0 [fhajny 2016-01-18]
+	Updated databases/py-ldap to 2.4.25 [adam 2016-01-18]
