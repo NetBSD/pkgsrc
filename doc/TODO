@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15327 2016/01/18 11:57:18 mef Exp $
+$NetBSD: TODO,v 1.15328 2016/01/18 13:55:17 wen Exp $
 
 Suggested new packages
 ======================
@@ -1281,7 +1281,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Plack-Middleware-ConsoleLogger-0.05
 	o p5-Plack-Middleware-Session-0.30
 	o p5-Plack-Test-ExternalServer-0.02
-	o p5-Pod-Usage-1.67
 	o p5-Publican-4.3.2
 	o p5-Quota-1.7.2
 	o p5-RADIUS-2.30
