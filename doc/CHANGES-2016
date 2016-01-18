@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.266 2016/01/18 12:01:25 mef Exp $
+$NetBSD: CHANGES-2016,v 1.267 2016/01/18 12:53:42 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -415,3 +415,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-HTML-Entities-Interpolate to 1.09 [mef 2016-01-18]
 	Updated www/p5-HTML-TreeBuilder-LibXML to 0.25 [mef 2016-01-18]
 	Updated www/p5-HTTP-Headers-Fast to 0.20 [mef 2016-01-18]
+	Updated security/openssh to 7.1.1nb2 [jperkin 2016-01-18]
