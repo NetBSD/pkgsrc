@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.261 2016/01/18 05:18:19 dholland Exp $
+$NetBSD: CHANGES-2016,v 1.262 2016/01/18 07:57:45 agc Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -410,3 +410,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-Cookie-Baker to 0.06 [mef 2016-01-18]
 	Updated www/p5-Dancer2 to 0.166000 [mef 2016-01-18]
 	Updated emulators/sys161 to 2.0.6 [dholland 2016-01-18]
+	Added lang/micropython version 1.5.2 [agc 2016-01-18]
