@@ -1,10 +1,10 @@
-$NetBSD: patch-openbsd-compat_openbsd-compat.h,v 1.3 2015/07/09 16:14:23 taca Exp $
+$NetBSD: patch-openbsd-compat_openbsd-compat.h,v 1.4 2016/01/18 12:53:26 jperkin Exp $
 
 strtoll() declaration
 
---- openbsd-compat/openbsd-compat.h.orig	2015-07-01 02:35:31.000000000 +0000
+--- openbsd-compat/openbsd-compat.h.orig	2015-08-21 04:49:03.000000000 +0000
 +++ openbsd-compat/openbsd-compat.h
-@@ -91,6 +91,10 @@ size_t strlcat(char *dst, const char *sr
+@@ -99,6 +99,10 @@ size_t strlcat(char *dst, const char *sr
  int setenv(register const char *name, register const char *value, int rewrite);
  #endif
  
