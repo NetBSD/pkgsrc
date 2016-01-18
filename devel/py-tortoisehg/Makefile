@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2016/01/17 19:33:09 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2016/01/18 22:57:37 wiz Exp $
 
-DISTNAME=		tortoisehg-3.6.2
+DISTNAME=		tortoisehg-3.6.3
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=		1
 CATEGORIES=		devel python
 MASTER_SITES=		http://bitbucket.org/tortoisehg/targz/downloads/
 
