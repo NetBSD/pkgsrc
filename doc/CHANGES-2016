@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.265 2016/01/18 11:57:18 mef Exp $
+$NetBSD: CHANGES-2016,v 1.266 2016/01/18 12:01:25 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -414,3 +414,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-File-Mork to 0.4 [mef 2016-01-18]
 	Updated www/p5-HTML-Entities-Interpolate to 1.09 [mef 2016-01-18]
 	Updated www/p5-HTML-TreeBuilder-LibXML to 0.25 [mef 2016-01-18]
+	Updated www/p5-HTTP-Headers-Fast to 0.20 [mef 2016-01-18]
