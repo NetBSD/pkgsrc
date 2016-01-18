@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2015/10/26 19:03:59 adam Exp $
+# $NetBSD: Makefile,v 1.29 2016/01/18 20:52:43 nros Exp $
 
 DISTNAME=	qtbase-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtbase-${QTVERSION}
+PKGREVISION=	1
 COMMENT=	C++ X GUI toolkit
 
 .include "../../x11/qt5-qtbase/Makefile.common"
@@ -26,9 +27,15 @@ CONFIGURE_ARGS+=	-openssl-linked
 CONFIGURE_ARGS+=	-nomake examples
 CONFIGURE_ARGS+=	-nomake tests
 CONFIGURE_ARGS+=	-no-pch
+CONFIGURE_ARGS+=        -no-sql-db2
+CONFIGURE_ARGS+=        -no-sql-ibase
 CONFIGURE_ARGS+=	-no-sql-mysql
+CONFIGURE_ARGS+=        -no-sql-oci
+CONFIGURE_ARGS+=        -no-sql-odbc
 CONFIGURE_ARGS+=	-no-sql-psql
 CONFIGURE_ARGS+=	-no-sql-sqlite
+CONFIGURE_ARGS+=        -no-sql-sqlite2
+CONFIGURE_ARGS+=	-no-sql-tds
 CONFIGURE_ARGS+=	-no-strip
 CONFIGURE_ARGS+=	-system-harfbuzz
 CONFIGURE_ARGS+=	-system-libjpeg
