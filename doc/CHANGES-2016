@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.273 2016/01/18 14:34:50 leot Exp $
+$NetBSD: CHANGES-2016,v 1.274 2016/01/18 14:41:15 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -422,3 +422,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Pod-Usage to 1.68 [wen 2016-01-18]
 	Updated mail/p5-Email-Address to 1.908 [mef 2016-01-18]
 	Updated graphics/giflib to 5.1.2 [leot 2016-01-18]
+	Updated mail/p5-Sendmail-AccessDB to 1.04 [mef 2016-01-18]
