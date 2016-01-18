@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q4,v 1.1.2.6 2016/01/11 22:14:11 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q4,v 1.1.2.7 2016/01/18 05:52:21 spz Exp $
 
 Changes to the packages collection and infrastructure on the 2015Q4 branch:
 
@@ -28,4 +28,10 @@ sysutils/xentools41: security fix
 Pullup ticket #4888 - requested by bouyer
 sysutils/xenkernel45: security fix
 sysutils/xentools45: security fix
+
+Pullup ticket #4878 - requested by bsiegert
+devel/pcre2: security update
+
+Pullup ticket #4879 - requested by bsiegert
+audio/vorbis-tools: security fix
 
