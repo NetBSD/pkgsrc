@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.23 2015/04/27 11:03:42 jperkin Exp $
+# $NetBSD: Makefile,v 1.24 2016/01/19 10:51:16 leot Exp $
 
-DISTNAME=	libproxy-0.4.11
+DISTNAME=	libproxy-0.4.12
 CATEGORIES=	www gnome
-MASTER_SITES=	http://libproxy.googlecode.com/files/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=libproxy/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/libproxy/
+HOMEPAGE=	http://libproxy.github.io/libproxy/
 COMMENT=	Library that provides automatic proxy configuration management
 LICENSE=	gnu-lgpl-v2.1
 
