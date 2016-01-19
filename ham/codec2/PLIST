@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2014/08/01 06:13:46 dbj Exp $
+@comment $NetBSD: PLIST,v 1.4 2016/01/19 04:02:07 dbj Exp $
 bin/c2dec
 bin/c2demo
 bin/c2enc
@@ -10,11 +10,20 @@ bin/fdmdv_mod
 bin/fdmdv_put_test_bits
 bin/fec_dec
 bin/fec_enc
+bin/fm_demod
 bin/insert_errors
 include/codec2/codec2.h
+include/codec2/codec2_cohpsk.h
 include/codec2/codec2_fdmdv.h
 include/codec2/codec2_fifo.h
+include/codec2/codec2_fm.h
 include/codec2/comp.h
+include/codec2/comp_prim.h
+include/codec2/freedv_api.h
+include/codec2/freedv_api_internal.h
 include/codec2/golay23.h
+include/codec2/kiss_fft.h
+include/codec2/modem_stats.h
+include/codec2/varicode.h
 lib/libcodec2.so
-lib/libcodec2.so.0.3
+lib/libcodec2.so.0.5
