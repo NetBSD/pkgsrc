@@ -1,4 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2013/06/15 02:30:57 ryoon Exp $
+$NetBSD: patch-aa,v 1.7 2016/01/19 03:44:03 dbj Exp $
+
+Support for dragonfly
+Shell portability fixes
+Use X11 and OpenGL Libs on Darwin
 
 --- configure.orig	2011-03-22 12:16:57.000000000 +0000
 +++ configure
@@ -51,6 +55,15 @@ $NetBSD: patch-aa,v 1.6 2013/06/15 02:30:57 ryoon Exp $
  
  if test "$build" != "$host" -a "$GCC" = yes; then
                      if cross_root=`$CC -print-prog-name=ld 2>/dev/null`; then
+@@ -33191,7 +33193,7 @@ echo "$as_me: WARNING: wxGLCanvas not im
+     elif test "$wxUSE_MSW" = 1; then
+         OPENGL_LIBS="-lopengl32 -lglu32"
+     elif test "$USE_DARWIN" = 1; then
+-        OPENGL_LIBS=""
++        OPENGL_LIBS="-L/usr/X11/lib -lGL -lGLU"
+     else
+                         echo "$as_me:$LINENO: checking for OpenGL headers" >&5
+ echo $ECHO_N "checking for OpenGL headers... $ECHO_C" >&6
 @@ -39590,6 +39592,9 @@ echo "$as_me: WARNING: BeOS threads are 
                      THREAD_OPTS="-mt $THREAD_OPTS"
                  fi
