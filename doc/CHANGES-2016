@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.287 2016/01/18 23:04:23 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.288 2016/01/19 10:52:08 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -436,3 +436,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated audio/libopus to 1.1.2 [wiz 2016-01-18]
 	Updated net/py-foolscap to 0.10.0 [wiz 2016-01-18]
 	Updated devel/py-setuptools to 19.4 [wiz 2016-01-18]
+	Updated www/libproxy to 0.4.12 [leot 2016-01-19]
