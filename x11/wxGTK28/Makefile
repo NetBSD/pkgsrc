@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2016/01/19 03:48:06 dbj Exp $
+# $NetBSD: Makefile,v 1.44 2016/01/19 04:18:35 dbj Exp $
 #
 
 .include "../../x11/wxGTK28/Makefile.common"
@@ -36,6 +36,7 @@ post-install:
 	${LN} -sf ../libexec/wx-2.8/wxrc ${DESTDIR}${PREFIX}/bin/wxrc
 	${LN} -sf ../libexec/wx-2.8/wxrc-2.8 ${DESTDIR}${PREFIX}/bin/wxrc-2.8
 	${LN} -sf ../libexec/wx-2.8/wx-config ${DESTDIR}${PREFIX}/bin/wx-config
+	${LN} -sf ../libexec/wx-2.8/wx-config ${DESTDIR}${PREFIX}/bin/wx-config-2.8
 
 .include "../../mk/bsd.prefs.mk"
 
