@@ -1,0 +1,15 @@
+$NetBSD: patch-setup.h.in,v 1.1 2016/01/19 03:44:03 dbj Exp $
+
+Don't assume native interfaces on __APPLE__
+
+--- setup.h.in.orig	2011-03-22 12:16:57.000000000 +0000
++++ setup.h.in
+@@ -552,7 +552,7 @@
+ #define wxUSE_RICHEDIT2 0
+ #endif
+ 
+-#if !defined(__WIN32__) && !defined(__APPLE__)
++#if !defined(__WIN32__) && !defined(__WXMAC__) && !defined(__WXCOCOA__)
+ #define wxUSE_CAIRO 1
+ #else
+ #define wxUSE_CAIRO 0
