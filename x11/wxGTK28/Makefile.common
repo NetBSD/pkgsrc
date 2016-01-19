@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2014/05/25 18:21:31 bouyer Exp $
+# $NetBSD: Makefile.common,v 1.17 2016/01/19 03:48:06 dbj Exp $
 #
 # used by x11/wxGTK28/Makefile
 # used by x11/wxGTK28-contrib/Makefile
@@ -20,7 +20,6 @@ PATCH_DIST_STRIP.${DISTNAME}-libtool.diff.bz2= -p1
 
 USE_TOOLS+=		pkg-config msgfmt
 USE_LIBTOOL=		yes
-USE_PKGLOCALEDIR=	YES
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
 USE_GNU_CONFIGURE_HOST=	no
@@ -34,13 +33,12 @@ CONFIGURE_ARGS+=	--with-zlib=sys
 CONFIGURE_ARGS+=	--with-regex=builtin
 CONFIGURE_ARGS+=	--enable-mediactrl
 CONFIGURE_ARGS+=	--enable-graphics_ctx
+CONFIGURE_ARGS+=	--bindir=${PREFIX}/libexec/wx-2.8
+CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/wx-2.8
 
-DOCDIR=			${PREFIX}/share/doc/wxGTK
-PKGLOCALEDIR=		share
+DOCDIR=			${PREFIX}/share/wx-2.8/doc/wxGTK
 
 CONFIGURE_DIRS=	build-non-unicode build-unicode
-
-INSTALL_MAKE_FLAGS+=	LN_S="ln -fs"
 
 #CONFIGURE_ARGS+=	--enable-debug
 #PLIST_SUBST+=	DEBUG_LIB=d DEBUG_CONFIG=-config
@@ -53,6 +51,7 @@ SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
 SUBST_FILES.fix-paths=		configure
 SUBST_SED.fix-paths=		-e 's,/usr/pkg/include,${PREFIX}/include,g'
 SUBST_SED.fix-paths+=		-e 's,@PREFIX@,${PREFIX},g'
+SUBST_SED.fix-paths+=		-e 's,/usr/X11/,${X11BASE}/,g'
 
 pre-configure:
 	mkdir ${WRKSRC}/build-non-unicode ${WRKSRC}/build-unicode
