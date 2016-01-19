@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q4,v 1.1.2.8 2016/01/18 23:14:27 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q4,v 1.1.2.9 2016/01/19 19:08:12 bsiegert Exp $
 
 Changes to the packages collection and infrastructure on the 2015Q4 branch:
 
@@ -64,4 +64,7 @@ devel/ruby-debugger-ruby_core_source: build fix
 
 Pullup ticket #4898 - requested by taca
 devel/ruby-test-unit: build fix
+
+Pullup ticket #4900 - requested by wiz
+textproc/py-pygments: security fix
 
