@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.289 2016/01/19 12:19:07 ryoon Exp $
+$NetBSD: CHANGES-2016,v 1.290 2016/01/19 14:02:25 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -438,3 +438,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-setuptools to 19.4 [wiz 2016-01-18]
 	Updated www/libproxy to 0.4.12 [leot 2016-01-19]
 	Updated devel/gdb to 7.10.1 [ryoon 2016-01-19]
+	Updated ham/fldigi to 3.23.07.19 [mef 2016-01-19]
