@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2015/12/29 04:54:40 dholland Exp $
+# $NetBSD: Makefile,v 1.11 2016/01/19 03:49:29 dbj Exp $
 
 VERSION=	3.0.2
-PKGREVISION=	2
+PKGREVISION=	3
 DISTNAME=	wxWidgets-${VERSION}
 PKGNAME=	wxGTK30-${VERSION}
 CATEGORIES=	x11
@@ -20,7 +20,6 @@ PATCH_DIST_STRIP.${DISTNAME}-libtool.diff.bz2= -p1
 
 USE_TOOLS+=		pkg-config msgfmt
 USE_LIBTOOL=		YES
-USE_PKGLOCALEDIR=	YES
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
 USE_GNU_CONFIGURE_HOST=	no
@@ -36,13 +35,15 @@ CONFIGURE_ARGS+=	--enable-mediactrl
 # wxregexu symbols are not exported properly as of 3.0.1
 # http://trac.wxwidgets.org/ticket/16571
 CONFIGURE_ARGS+=	--disable-visibility
+CONFIGURE_ARGS+=	--bindir=${PREFIX}/libexec/wx-3.0
+CONFIGURE_ARGS+=	--datarootdir=${PREFIX}/share/wx-3.0
 
-DOCDIR=			share/doc/wxGTK
-PKGLOCALEDIR=		share
+DOCDIR=			share/wx-3.0/doc/wxGTK
 
 INSTALL_MAKE_FLAGS+=	LN_S="ln -fs"
 
-INSTALLATION_DIRS=	${DOCDIR}
+INSTALLATION_DIRS+=	${DOCDIR}
+INSTALLATION_DIRS+=	bin
 
 REPLACE_SH=		wx-config.in wx-config-inplace.in
 
@@ -83,6 +84,10 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/lgpl.txt ${DESTDIR}${PREFIX}/${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/docs/changes.txt ${DESTDIR}${PREFIX}/${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/docs/readme.txt ${DESTDIR}${PREFIX}/${DOCDIR}
+	# Create symlinks for now.  Eventually we may want to use ALTERNATIVES
+	${LN} -sf ../libexec/wx-3.0/wxrc ${DESTDIR}${PREFIX}/bin/wxrc
+	${LN} -sf ../libexec/wx-3.0/wxrc-3.0 ${DESTDIR}${PREFIX}/bin/wxrc-3.0
+	${LN} -sf ../libexec/wx-3.0/wx-config ${DESTDIR}${PREFIX}/bin/wx-config
 
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
