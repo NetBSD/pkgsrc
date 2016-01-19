@@ -1,8 +1,8 @@
-$NetBSD: patch-config_system-headers,v 1.15 2015/11/03 15:52:57 ryoon Exp $
+$NetBSD: patch-config_system-headers,v 1.16 2016/01/19 10:23:29 ryoon Exp $
 
---- config/system-headers.orig	2015-10-22 22:30:30.000000000 +0000
+--- config/system-headers.orig	2016-01-06 00:44:00.000000000 +0000
 +++ config/system-headers
-@@ -626,6 +626,7 @@ libgnome/libgnome.h
+@@ -627,6 +627,7 @@ libgnome/libgnome.h
  libgnomeui/gnome-icon-lookup.h
  libgnomeui/gnome-icon-theme.h
  libgnomeui/gnome-ui-init.h
@@ -10,7 +10,15 @@ $NetBSD: patch-config_system-headers,v 1.15 2015/11/03 15:52:57 ryoon Exp $
  lib$routines.h
  limits
  limits.h
-@@ -1322,10 +1323,13 @@ vorbis/codec.h
+@@ -721,6 +722,7 @@ mapiutil.h
+ mapix.h
+ Math64.h
+ math.h
++complex
+ mbstring.h
+ #ifdef ANDROID
+ media/AudioEffect.h
+@@ -1324,10 +1326,13 @@ vorbis/codec.h
  theora/theoradec.h
  tremor/ivorbiscodec.h
  speex/speex_resampler.h
@@ -24,7 +32,7 @@ $NetBSD: patch-config_system-headers,v 1.15 2015/11/03 15:52:57 ryoon Exp $
  #endif
  gst/gst.h
  gst/app/gstappsink.h
-@@ -1355,3 +1359,43 @@ unicode/utypes.h
+@@ -1359,3 +1364,43 @@ unicode/utypes.h
  #endif
  libutil.h
  unwind.h
