@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2016/01/19 03:49:29 dbj Exp $
+# $NetBSD: Makefile,v 1.12 2016/01/19 04:19:15 dbj Exp $
 
 VERSION=	3.0.2
 PKGREVISION=	3
@@ -88,6 +88,7 @@ post-install:
 	${LN} -sf ../libexec/wx-3.0/wxrc ${DESTDIR}${PREFIX}/bin/wxrc
 	${LN} -sf ../libexec/wx-3.0/wxrc-3.0 ${DESTDIR}${PREFIX}/bin/wxrc-3.0
 	${LN} -sf ../libexec/wx-3.0/wx-config ${DESTDIR}${PREFIX}/bin/wx-config
+	${LN} -sf ../libexec/wx-3.0/wx-config ${DESTDIR}${PREFIX}/bin/wx-config-3.0
 
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
