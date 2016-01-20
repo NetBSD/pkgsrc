@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/04/29 16:00:59 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2016/01/20 09:27:37 prlw1 Exp $
 share/pkgconfig/yelp-xsl.pc
 share/yelp-xsl/icons/hicolor/24x24/status/yelp-note-bug.png
 share/yelp-xsl/icons/hicolor/24x24/status/yelp-note-important.png
@@ -65,6 +65,7 @@ share/yelp-xsl/xslt/common/utils.xsl
 share/yelp-xsl/xslt/docbook/common/db-chunk.xsl
 share/yelp-xsl/xslt/docbook/common/db-common.xsl
 share/yelp-xsl/xslt/docbook/common/db-profile.xsl
+share/yelp-xsl/xslt/docbook/common/db-selectors.mod
 share/yelp-xsl/xslt/docbook/common/db-title.xsl
 share/yelp-xsl/xslt/docbook/common/db-xref.xsl
 share/yelp-xsl/xslt/docbook/html/db2html-bibliography.xsl
@@ -79,7 +80,6 @@ share/yelp-xsl/xslt/docbook/html/db2html-footnote.xsl
 share/yelp-xsl/xslt/docbook/html/db2html-funcsynopsis.xsl
 share/yelp-xsl/xslt/docbook/html/db2html-index.xsl
 share/yelp-xsl/xslt/docbook/html/db2html-inline.xsl
-share/yelp-xsl/xslt/docbook/html/db2html-l10n.xsl
 share/yelp-xsl/xslt/docbook/html/db2html-links.xsl
 share/yelp-xsl/xslt/docbook/html/db2html-list.xsl
 share/yelp-xsl/xslt/docbook/html/db2html-math.xsl
