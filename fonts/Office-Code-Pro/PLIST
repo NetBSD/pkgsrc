@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2016/01/20 11:37:52 wiz Exp $
+share/fonts/X11/OTF/OfficeCodePro-Bold.otf
+share/fonts/X11/OTF/OfficeCodePro-BoldItalic.otf
+share/fonts/X11/OTF/OfficeCodePro-Light.otf
+share/fonts/X11/OTF/OfficeCodePro-LightItalic.otf
+share/fonts/X11/OTF/OfficeCodePro-Medium.otf
+share/fonts/X11/OTF/OfficeCodePro-MediumItalic.otf
+share/fonts/X11/OTF/OfficeCodePro-Regular.otf
+share/fonts/X11/OTF/OfficeCodePro-RegularItalic.otf
+share/fonts/X11/OTF/OfficeCodeProD-Bold.otf
+share/fonts/X11/OTF/OfficeCodeProD-BoldItalic.otf
+share/fonts/X11/OTF/OfficeCodeProD-Light.otf
+share/fonts/X11/OTF/OfficeCodeProD-LightItalic.otf
+share/fonts/X11/OTF/OfficeCodeProD-Medium.otf
+share/fonts/X11/OTF/OfficeCodeProD-MediumItalic.otf
+share/fonts/X11/OTF/OfficeCodeProD-Regular.otf
+share/fonts/X11/OTF/OfficeCodeProD-RegularItalic.otf
