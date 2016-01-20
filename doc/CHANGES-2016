@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.295 2016/01/20 11:41:52 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.296 2016/01/20 11:49:22 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -449,3 +449,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added fonts/FiraCode version 1.102 [wiz 2016-01-20]
 	Added fonts/Hasklig version 0.9 [wiz 2016-01-20]
 	Added fonts/Office-Code-Pro version 1.004 [wiz 2016-01-20]
+	Updated sysutils/checkperms to 1.11nb1 [jperkin 2016-01-20]
