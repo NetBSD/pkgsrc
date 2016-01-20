@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2013/09/08 16:33:59 joerg Exp $
+# $NetBSD: Makefile,v 1.29 2016/01/20 11:49:13 jperkin Exp $
 #
 
 DISTNAME=	checkperms-1.11
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.roland-illig.de/checkperms/
 
@@ -13,6 +14,8 @@ LICENSE=	modified-bsd
 AUTO_MKDIRS=		yes
 
 USE_BSD_MAKEFILE=	yes
+
+CPPFLAGS.SunOS+=	-D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
 
 .include "../../mk/compiler.mk"
 
