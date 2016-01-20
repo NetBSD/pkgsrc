@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q4,v 1.1.2.9 2016/01/19 19:08:12 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q4,v 1.1.2.10 2016/01/20 19:35:23 bsiegert Exp $
 
 Changes to the packages collection and infrastructure on the 2015Q4 branch:
 
@@ -67,4 +67,10 @@ devel/ruby-test-unit: build fix
 
 Pullup ticket #4900 - requested by wiz
 textproc/py-pygments: security fix
+
+Pullup ticket #4901 - requested by taca
+net/bind910: security fix
+
+Pullup ticket #4902 - requested by taca
+net/bind99: security fix
 
