@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2016/01/20 11:38:44 wiz Exp $
+share/fonts/X11/OTF/FiraCode-Bold.otf
+share/fonts/X11/OTF/FiraCode-Light.otf
+share/fonts/X11/OTF/FiraCode-Medium.otf
+share/fonts/X11/OTF/FiraCode-Regular.otf
+share/fonts/X11/OTF/FiraCode-Retina.otf
