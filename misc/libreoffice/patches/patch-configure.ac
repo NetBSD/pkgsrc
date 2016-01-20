@@ -1,13 +1,22 @@
-$NetBSD: patch-configure.ac,v 1.1 2015/08/12 00:57:20 ryoon Exp $
+$NetBSD: patch-configure.ac,v 1.2 2016/01/20 13:37:25 tnn Exp $
 
 * Use gstreamer under OpenBSD
 * Add FreeBSD support (GNU patch is not needed)
 * Detect pkgsrc apache-ant library
 * Fix installation directory
 
---- configure.ac.orig	2015-07-31 00:32:43.000000000 +0000
+--- configure.ac.orig	2015-12-11 02:29:35.000000000 +0000
 +++ configure.ac
-@@ -7882,7 +7882,7 @@ no|disable)
+@@ -6797,7 +6797,7 @@ dnl ====================================
+ dnl Set target Java bytecode version
+ dnl ===================================================================
+ if test "$ENABLE_JAVA" != ""; then
+-    if test "$HAVE_JAVA9" == "TRUE"; then
++    if test "$HAVE_JAVA9" = "TRUE"; then
+         _java_target_ver="1.6"
+     else
+         _java_target_ver="1.5"
+@@ -7894,7 +7894,7 @@ no|disable)
      else
          # Unset variables set by the above AM_PATH_PYTHON so that
          # we actually do check anew.
@@ -16,7 +25,7 @@ $NetBSD: patch-configure.ac,v 1.1 2015/08/12 00:57:20 ryoon Exp $
          AM_PATH_PYTHON([3.3],, [:])
          if test "$PYTHON" = ":"; then
              if test -z "$PYTHON_FOR_BUILD"; then
-@@ -7935,9 +7935,9 @@ if test $enable_python = system; then
+@@ -7947,9 +7947,9 @@ if test $enable_python = system; then
      elif test "$cross_compiling" != yes; then
          # Unset variables set by the above AM_PATH_PYTHON so that
          # we actually do check anew.
@@ -28,7 +37,7 @@ $NetBSD: patch-configure.ac,v 1.1 2015/08/12 00:57:20 ryoon Exp $
          python_include=`$PYTHON -c "import distutils.sysconfig; print(distutils.sysconfig.get_config_var('INCLUDEPY'));"`
          python_version=`$PYTHON -c "import distutils.sysconfig; print(distutils.sysconfig.get_config_var('VERSION'));"`
          python_libs=`$PYTHON -c "import distutils.sysconfig; print(distutils.sysconfig.get_config_var('LIBS'));"`
-@@ -12069,7 +12069,7 @@ EOF
+@@ -12083,7 +12083,7 @@ EOF
      dnl Checking for ant.jar
      if test "$ANT_HOME" != "NO_ANT_HOME"; then
          AC_MSG_CHECKING([Ant lib directory])
@@ -37,7 +46,7 @@ $NetBSD: patch-configure.ac,v 1.1 2015/08/12 00:57:20 ryoon Exp $
              ANT_LIB="$ANT_HOME/lib"
          else
              if test -f $ANT_HOME/ant.jar; then
-@@ -12513,7 +12513,7 @@ AC_SUBST(MANDIR)
+@@ -12527,7 +12527,7 @@ AC_SUBST(MANDIR)
  DOCDIR=[$(eval echo $(eval echo $docdir))]
  AC_SUBST(DOCDIR)
  
