@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.300 2016/01/20 22:57:48 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.301 2016/01/20 23:00:52 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -454,3 +454,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/dhcpcd to 6.10.1 [roy 2016-01-20]
 	Updated multimedia/mpv to 0.15.0 [leot 2016-01-20]
 	Updated misc/ruby-progressbar to 1.7.5 [wiz 2016-01-20]
+	Updated sysutils/py-psutil to 3.4.2 [ryoon 2016-01-20]
