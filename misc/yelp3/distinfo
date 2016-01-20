@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2015/11/03 23:49:55 agc Exp $
+$NetBSD: distinfo,v 1.9 2016/01/20 09:32:28 prlw1 Exp $
 
-SHA1 (yelp-3.16.1.tar.xz) = 19c6287e54478d5458e5b87da8d0c19d7307cab2
-RMD160 (yelp-3.16.1.tar.xz) = bbd6876189f69bda6842f338d8037234f7422038
-SHA512 (yelp-3.16.1.tar.xz) = bfbce5c86dd6ee6d95cd4fc14acf8285616f4aef52b14d0b68f6844fbdad17631c84c2bc029e7ee0599055c00dd8599bf20341686290060b8c27ffddc2265103
-Size (yelp-3.16.1.tar.xz) = 1416752 bytes
+SHA1 (yelp-3.18.1.tar.xz) = 94fe10547b2a84051c88daf79ab14f803ab47815
+RMD160 (yelp-3.18.1.tar.xz) = b6f529d62f612b64df959d1f637fa7e73d97cb5d
+SHA512 (yelp-3.18.1.tar.xz) = ebff55bb3eb0caad208abfad3d83fa996d63bb97647ff446d25590b5c84d341161f3fdb9987353bd55e73ef2634baa692928fbc21b4ed16b6070500228fc2425
+Size (yelp-3.18.1.tar.xz) = 1386044 bytes
