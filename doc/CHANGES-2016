@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.290 2016/01/19 14:02:25 mef Exp $
+$NetBSD: CHANGES-2016,v 1.291 2016/01/20 02:18:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -439,3 +439,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/libproxy to 0.4.12 [leot 2016-01-19]
 	Updated devel/gdb to 7.10.1 [ryoon 2016-01-19]
 	Updated ham/fldigi to 3.23.07.19 [mef 2016-01-19]
+	Updated net/bind910 to 9.10.3pl3 [taca 2016-01-20]
+	Updated net/bind99 to 9.9.8pl3 [taca 2016-01-20]
