@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2016/01/17 15:16:09 joerg Exp $
+$NetBSD: distinfo,v 1.4 2016/01/20 22:14:13 ryoon Exp $
 
 SHA1 (enigmail-1.7.2.tar.gz) = e72eeff5a47491267981090129b0b2594b5dc96f
 RMD160 (enigmail-1.7.2.tar.gz) = 1dcd10e758321846eb20ac7f1d3ae6465c47bfe7
@@ -50,7 +50,7 @@ SHA1 (patch-mozilla_config_baseconfig.mk) = e8594d03d0db21e0731d85dcdb38ab9c465e
 SHA1 (patch-mozilla_config_external_moz.build) = 61d9d60ad4e360b6d9511205ebe0d68422a2501b
 SHA1 (patch-mozilla_config_stl__wrappers_ios) = 066a9f3db9203afa8131b2ff91d212033e5950e0
 SHA1 (patch-mozilla_config_stl__wrappers_ostream) = 67559c5ab17088680b86dea6b081a48b781f59b5
-SHA1 (patch-mozilla_config_system-headers) = 9614069b2f124348b05857a78bf2f24c212009b2
+SHA1 (patch-mozilla_config_system-headers) = eb009f99d689ca9568187b86e7c5d4e7ccb5abbb
 SHA1 (patch-mozilla_content_base_src_moz.build) = 0a7f7665a23a50d6c60a99c58e7d074465f4917c
 SHA1 (patch-mozilla_content_media_AudioStream.cpp) = 9faaa001b9a8d142ee0027622e773151de8c7287
 SHA1 (patch-mozilla_content_media_AudioStream.h) = 5970af4cfae07e02943a0411dfb195f2bcf10226

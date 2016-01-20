@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.131 2016/01/17 15:20:08 joerg Exp $
+$NetBSD: distinfo,v 1.132 2016/01/20 22:14:14 ryoon Exp $
 
 SHA1 (seamonkey-2.39.source.tar.xz) = cae3d2cf38f85190d0639a391f04953d9313d48b
 RMD160 (seamonkey-2.39.source.tar.xz) = 35d442092e359145ff4799d82576e1e8c0ee5a06
@@ -22,7 +22,7 @@ SHA1 (patch-mozilla_config_external_moz.build) = 3cc238e147eff66de1fd42671547b83
 SHA1 (patch-mozilla_config_rules.mk) = ce24fd149c05a252acffc05a72dc0f86eabe16b4
 SHA1 (patch-mozilla_config_stl__wrappers_ios) = 9200935d025d899a5810dc615345b9a7005369b2
 SHA1 (patch-mozilla_config_stl__wrappers_ostream) = 232e253bca5d8f7f0de1b880dc34b613f8852ee7
-SHA1 (patch-mozilla_config_system-headers) = 6ecb7ceec986f124f8a1bec8a5afcba9be17af46
+SHA1 (patch-mozilla_config_system-headers) = 41d86b02ecff5bcb06903c18b487cafad8ec544f
 SHA1 (patch-mozilla_dom_base_DOMRequest.cpp) = 3c01dd16ea83b2d972e437e92b2126aeec68a7a1
 SHA1 (patch-mozilla_dom_base_moz.build) = de05328ca4339e0e3a92da3e4517697df9d3b53a
 SHA1 (patch-mozilla_dom_events_MessageEvent.h) = 6be0cb8c8c6b60cf9e2604e2deb018bc69b6e2d5

@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_config_system-headers,v 1.7 2015/12/23 12:55:02 ryoon Exp $
+$NetBSD: patch-mozilla_config_system-headers,v 1.8 2016/01/20 22:14:13 ryoon Exp $
 
---- mozilla/config/system-headers.orig	2015-08-13 14:57:14.000000000 +0000
+--- mozilla/config/system-headers.orig	2015-12-21 22:32:58.000000000 +0000
 +++ mozilla/config/system-headers
 @@ -189,7 +189,6 @@ asm/signal.h
  ASRegistry.h
@@ -10,7 +10,7 @@ $NetBSD: patch-mozilla_config_system-headers,v 1.7 2015/12/23 12:55:02 ryoon Exp
  atlcom.h
  atlconv.h
  atlctl.cpp
-@@ -636,6 +636,7 @@ libgnomevfs/gnome-vfs-mime-handlers.h
+@@ -638,6 +637,7 @@ libgnomevfs/gnome-vfs-mime-handlers.h
  libgnomevfs/gnome-vfs-mime-utils.h
  libgnomevfs/gnome-vfs-ops.h
  libgnomevfs/gnome-vfs-standard-callbacks.h
@@ -18,7 +18,15 @@ $NetBSD: patch-mozilla_config_system-headers,v 1.7 2015/12/23 12:55:02 ryoon Exp
  lib$routines.h
  limits
  limits.h
-@@ -1266,7 +1267,6 @@ X11/Xlocale.h
+@@ -732,6 +732,7 @@ mapiutil.h
+ mapix.h
+ Math64.h
+ math.h
++complex
+ mbstring.h
+ #ifdef ANDROID
+ media/AudioEffect.h
+@@ -1268,7 +1269,6 @@ X11/Xlocale.h
  X11/Xos.h
  X11/Xutil.h
  zmouse.h
@@ -26,7 +34,7 @@ $NetBSD: patch-mozilla_config_system-headers,v 1.7 2015/12/23 12:55:02 ryoon Exp
  #if MOZ_NATIVE_PNG==1
  png.h
  #endif
-@@ -1328,10 +1328,13 @@ vorbis/codec.h
+@@ -1330,10 +1330,13 @@ vorbis/codec.h
  theora/theoradec.h
  tremor/ivorbiscodec.h
  speex/speex_resampler.h
@@ -40,7 +48,7 @@ $NetBSD: patch-mozilla_config_system-headers,v 1.7 2015/12/23 12:55:02 ryoon Exp
  #endif
  gst/gst.h
  gst/app/gstappsink.h
-@@ -1360,3 +1363,43 @@ unicode/utypes.h
+@@ -1362,3 +1365,43 @@ unicode/utypes.h
  #endif
  libutil.h
  unwind.h
