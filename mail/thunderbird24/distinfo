@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2015/09/15 20:58:15 joerg Exp $
+$NetBSD: distinfo,v 1.5 2016/01/20 22:14:13 ryoon Exp $
 
 SHA1 (enigmail-1.7.2.tar.gz) = e72eeff5a47491267981090129b0b2594b5dc96f
 RMD160 (enigmail-1.7.2.tar.gz) = 1dcd10e758321846eb20ac7f1d3ae6465c47bfe7
@@ -43,7 +43,7 @@ SHA1 (patch-mozilla_config_Makefile.in) = 033df80250dc77fad1fa1dc69e74aa8218260f
 SHA1 (patch-mozilla_config_baseconfig.mk) = 106b9b1cafa2865b6014d61c6eb3bf6821c7fb56
 SHA1 (patch-mozilla_config_stl__wrappers_ios) = 066a9f3db9203afa8131b2ff91d212033e5950e0
 SHA1 (patch-mozilla_config_stl__wrappers_ostream) = 67559c5ab17088680b86dea6b081a48b781f59b5
-SHA1 (patch-mozilla_config_system-headers) = 3e5a58e35edb136913cbf66d49f441592f206e94
+SHA1 (patch-mozilla_config_system-headers) = 9f14d17f9a8b6f78e5c1de918a1d593cf34885d7
 SHA1 (patch-mozilla_content_media_gstreamer_GStreamerFormatHelper.cpp) = 0e0f18e19b54e42814207dfdfeb1ea6cacc656d3
 SHA1 (patch-mozilla_content_svg_content_src_SVGComponentTransferFunctionElement.h) = 2ecd1de12b1d1ce885c5ca0bf0e1d7ecdfb9a514
 SHA1 (patch-mozilla_content_svg_content_src_nsSVGFilters.cpp) = 5a75926b80154dadf676e67248b6256c665001fb

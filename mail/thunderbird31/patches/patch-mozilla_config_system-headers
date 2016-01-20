@@ -1,4 +1,4 @@
-$NetBSD: patch-mozilla_config_system-headers,v 1.3 2016/01/17 15:16:09 joerg Exp $
+$NetBSD: patch-mozilla_config_system-headers,v 1.4 2016/01/20 22:14:13 ryoon Exp $
 
 --- mozilla/config/system-headers.orig	2015-05-07 18:53:47.000000000 +0000
 +++ mozilla/config/system-headers
@@ -11,7 +11,15 @@ $NetBSD: patch-mozilla_config_system-headers,v 1.3 2016/01/17 15:16:09 joerg Exp
  ftglyph.h
  ftsynth.h
  ftoutln.h
-@@ -1048,8 +1049,6 @@ X11/Xlocale.h
+@@ -645,6 +647,7 @@ mapiutil.h
+ mapix.h
+ Math64.h
+ math.h
++complex
+ mbstring.h
+ mem.h
+ memory
+@@ -1048,8 +1051,6 @@ X11/Xlocale.h
  X11/Xos.h
  X11/Xutil.h
  zmouse.h
@@ -20,7 +28,7 @@ $NetBSD: patch-mozilla_config_system-headers,v 1.3 2016/01/17 15:16:09 joerg Exp
  #if MOZ_NATIVE_PNG==1
  png.h
  #endif
-@@ -1117,6 +1116,8 @@ ogg/ogg.h
+@@ -1117,6 +1118,8 @@ ogg/ogg.h
  ogg/os_types.h
  nestegg/nestegg.h
  cubeb/cubeb.h
@@ -29,7 +37,7 @@ $NetBSD: patch-mozilla_config_system-headers,v 1.3 2016/01/17 15:16:09 joerg Exp
  #endif
  gst/gst.h
  gst/app/gstappsink.h
-@@ -1145,3 +1146,37 @@ unicode/utypes.h
+@@ -1145,3 +1148,37 @@ unicode/utypes.h
  #endif
  libutil.h
  unwind.h

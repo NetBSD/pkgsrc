@@ -1,6 +1,6 @@
-$NetBSD: patch-config_system-headers,v 1.3 2016/01/17 15:13:34 joerg Exp $
+$NetBSD: patch-config_system-headers,v 1.4 2016/01/20 22:14:13 ryoon Exp $
 
---- config/system-headers.orig	2013-03-28 18:07:40.000000000 +0000
+--- config/system-headers.orig	2013-11-13 23:35:07.000000000 +0000
 +++ config/system-headers
 @@ -260,6 +260,7 @@ frame/log.h
  frame/req.h
@@ -31,7 +31,15 @@ $NetBSD: patch-config_system-headers,v 1.3 2016/01/17 15:13:34 joerg Exp $
  fribidi/fribidi.h
  FSp_fopen.h
  fstream
-@@ -1065,5 +1080,10 @@ gst/gst.h
+@@ -491,6 +506,7 @@ mapiutil.h
+ mapix.h
+ Math64.h
+ math.h
++complex
+ mbstring.h
+ mem.h
+ memory
+@@ -1065,5 +1081,10 @@ gst/gst.h
  gst/app/gstappsink.h
  gst/app/gstappsrc.h
  gst/video/video.h
