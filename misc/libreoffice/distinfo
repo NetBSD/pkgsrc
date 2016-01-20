@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2015/12/18 22:50:38 ryoon Exp $
+$NetBSD: distinfo,v 1.14 2016/01/20 13:37:25 tnn Exp $
 
 SHA1 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = 452eba922e4f41603539c9dc39947d2271e47093
 RMD160 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = dbeb7a7f8c89961ca2e544b810345d025561866b
@@ -172,7 +172,7 @@ SHA1 (patch-Repository.mk) = 01a1fe049fc192a2b8b171b7162e3d34da1480c0
 SHA1 (patch-bin_distro-install-desktop-integration) = 292abb5c40018547bc58efa092eb7014dc28dced
 SHA1 (patch-bin_distro-install-file-lists) = 782e2943a8438fb0ff033b97eda8ad4923453774
 SHA1 (patch-bridges_source_cpp__uno_gcc3__linux__x86-64_share.hxx) = 9d7bb01d816003e90f36631c21b71c53b8ec0127
-SHA1 (patch-configure.ac) = 4314429f4e612e340413e45c0b2dcec1db3b8495
+SHA1 (patch-configure.ac) = 50e867eafc89b0e262b9c09ef3b495cf70508d79
 SHA1 (patch-desktop_Library__sofficeapp.mk) = 320ab924a87607ed98c3404ed9d8688cbbed820a
 SHA1 (patch-include_LibreOfficeKit_LibreOfficeKitInit.h) = ce962b5d8646038150d57b02fd25a03eef592bb6
 SHA1 (patch-libreofficekit_Executable__gtktiledviewer.mk) = aa0967fe3e4d0f74dae899ac0b2d293a447af630
