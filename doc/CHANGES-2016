@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.297 2016/01/20 14:34:51 leot Exp $
+$NetBSD: CHANGES-2016,v 1.298 2016/01/20 19:27:17 roy Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -451,3 +451,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added fonts/Office-Code-Pro version 1.004 [wiz 2016-01-20]
 	Updated sysutils/checkperms to 1.11nb1 [jperkin 2016-01-20]
 	Updated misc/dvtm to 0.15 [leot 2016-01-20]
+	Updated net/dhcpcd to 6.10.1 [roy 2016-01-20]
