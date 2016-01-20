@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.291 2016/01/20 02:18:04 taca Exp $
+$NetBSD: CHANGES-2016,v 1.292 2016/01/20 06:58:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -441,3 +441,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated ham/fldigi to 3.23.07.19 [mef 2016-01-19]
 	Updated net/bind910 to 9.10.3pl3 [taca 2016-01-20]
 	Updated net/bind99 to 9.9.8pl3 [taca 2016-01-20]
+	Updated www/p5-HTML-Parser to 3.72 [wiz 2016-01-20]
