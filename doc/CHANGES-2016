@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.294 2016/01/20 09:32:49 prlw1 Exp $
+$NetBSD: CHANGES-2016,v 1.295 2016/01/20 11:41:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -444,3 +444,8 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-HTML-Parser to 3.72 [wiz 2016-01-20]
 	Updated textproc/yelp-xsl to 3.18.1 [prlw1 2016-01-20]
 	Updated misc/yelp3 to 3.18.1 [prlw1 2016-01-20]
+	Added fonts/Code-New-Roman version 2.1beta1 [wiz 2016-01-20]
+	Added fonts/CutiveFont version 0.0.20121026 [wiz 2016-01-20]
+	Added fonts/FiraCode version 1.102 [wiz 2016-01-20]
+	Added fonts/Hasklig version 0.9 [wiz 2016-01-20]
+	Added fonts/Office-Code-Pro version 1.004 [wiz 2016-01-20]
