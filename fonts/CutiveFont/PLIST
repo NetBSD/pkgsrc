@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2016/01/20 11:40:13 wiz Exp $
+share/fonts/X11/OTF/Cutive-Mono-Regular.otf
+share/fonts/X11/OTF/Cutive.otf
+share/fonts/X11/OTF/CutiveMono-Regular.otf
