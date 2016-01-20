@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2015/12/27 12:50:54 adam Exp $
+# $NetBSD: Makefile,v 1.42 2016/01/20 13:29:30 khorben Exp $
 
 DISTNAME=	httpd-2.4.18
 PKGNAME=	${DISTNAME:S/httpd/apache/}
@@ -15,7 +15,6 @@ LICENSE=	apache-2.0
 
 BUILD_DEFS+=	IPV6_READY
 BUILD_DEFS+=	VARBASE
-BUILD_DEFS+=	APACHE_CUSTOM_CFLAGS
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pax perl pkg-config
@@ -28,7 +27,6 @@ CONFIGURE_ARGS+=	--with-apr-util=${BUILDLINK_PREFIX.apr-util}
 CONFIGURE_ARGS+=	--with-port=80
 CONFIGURE_ENV+=		perlbin=${PERL5:Q}
 CONFIGURE_ENV+=		ac_cv_path_RSYNC=/nonexistent
-CONFIGURE_ENV+=		CFLAGS=${APACHE_CUSTOM_CFLAGS:M*:Q}
 
 CFLAGS.SunOS+=	-D_XOPEN_SOURCE -D_XOPEN_SOURCE_EXTENDED=1 -D__EXTENSIONS__
 
