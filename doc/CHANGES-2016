@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.301 2016/01/20 23:00:52 ryoon Exp $
+$NetBSD: CHANGES-2016,v 1.302 2016/01/21 00:16:06 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -455,3 +455,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated multimedia/mpv to 0.15.0 [leot 2016-01-20]
 	Updated misc/ruby-progressbar to 1.7.5 [wiz 2016-01-20]
 	Updated sysutils/py-psutil to 3.4.2 [ryoon 2016-01-20]
+	Updated net/py-netlib to 0.15.1nb1 [leot 2016-01-21]
