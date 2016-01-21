@@ -1,0 +1,4 @@
+Python LiveReload is a web server library and command line utility, designed
+for web developers who know Python.  It comes with the livereload command for
+starting up a server in an arbitrary directory, serving up files inside that
+directory, and watching for changes to files which trigger regeneration.
