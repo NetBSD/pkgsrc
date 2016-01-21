@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.213 2016/01/21 18:10:19 joerg Exp $
+# $NetBSD: Makefile,v 1.214 2016/01/21 18:11:31 joerg Exp $
 
 # Notes to package maintainers:
 #
@@ -107,6 +107,7 @@ VERSION!=		${AWK} '/PKGTOOLS_VERSION/ {print $$3}' \
 BUILDLINK_API_DEPENDS.libarchive+=	libarchive>=2.8.0
 
 .include "../../archivers/bzip2/builtin.mk"
+.include "../../archivers/xz/builtin.mk"
 .include "../../archivers/libarchive/builtin.mk"
 .include "../../devel/zlib/builtin.mk"
 .include "../../security/openssl/builtin.mk"
@@ -147,6 +148,13 @@ LDFLAGS+=	-L${WRKDIR}/libarchive/.libs
 .  if empty(USE_BUILTIN.openssl:M[Yy][Ee][Ss])
 LIBARCHIVE_CONFIGURE_ARGS+=	--without-openssl
 .  endif
+
+# Only use XZ if we actually have builtin support for it. Some systems
+# install the header, but without usable library or prefer to not use
+# the system version, so give them some control.
+.  if empty(USE_BUILTIN.xz:M[Yy][Ee][Ss])
+LIBARCHIVE_CONFIGURE_ARGS+=	--without-lzma
+ .  endif
 
 LIBARCHIVE_LIBS=	${SED} -n -e 's/^Libs.private://p' \
     ${WRKDIR}/libarchive/build/pkgconfig/libarchive.pc 2>/dev/null || echo
