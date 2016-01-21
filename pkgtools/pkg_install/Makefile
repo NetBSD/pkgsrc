@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.212 2015/10/20 08:18:12 jperkin Exp $
+# $NetBSD: Makefile,v 1.213 2016/01/21 18:10:19 joerg Exp $
 
 # Notes to package maintainers:
 #
@@ -145,7 +145,7 @@ LDFLAGS+=	-L${WRKDIR}/libarchive/.libs
 # Until we support pkgsrc openssl at bootstrap time, disable it completely
 # if asked to avoid the builtin.
 .  if empty(USE_BUILTIN.openssl:M[Yy][Ee][Ss])
-LIBARCHIVE_CONFIGURE_ARGS=	--without-openssl
+LIBARCHIVE_CONFIGURE_ARGS+=	--without-openssl
 .  endif
 
 LIBARCHIVE_LIBS=	${SED} -n -e 's/^Libs.private://p' \
