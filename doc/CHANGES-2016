@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.305 2016/01/21 11:53:15 jperkin Exp $
+$NetBSD: CHANGES-2016,v 1.306 2016/01/21 11:53:55 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -460,3 +460,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/nodejs4 to 4.2.5 [fhajny 2016-01-21]
 	Updated lang/nodejs to 5.5.0 [fhajny 2016-01-21]
 	Updated lang/gcc49 to 4.9.3nb1 [jperkin 2016-01-21]
+	Updated lang/gcc49-libs to 4.9.3nb2 [jperkin 2016-01-21]
