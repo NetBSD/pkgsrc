@@ -1,6 +1,6 @@
-$NetBSD: patch-Source_JavaScriptCore_runtime_Options.cpp,v 1.1 2015/09/26 10:16:38 leot Exp $
+$NetBSD: patch-Source_JavaScriptCore_runtime_Options.cpp,v 1.2 2016/01/21 13:42:33 leot Exp $
 
---- Source/JavaScriptCore/runtime/Options.cpp.orig	2015-09-21 07:29:46.000000000 +0000
+--- Source/JavaScriptCore/runtime/Options.cpp.orig	2016-01-20 12:13:00.000000000 +0000
 +++ Source/JavaScriptCore/runtime/Options.cpp
 @@ -610,7 +610,7 @@ bool Option::operator==(const Option& ot
      case Options::Type::unsignedType:

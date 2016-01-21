@@ -1,6 +1,6 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2015/10/26 10:53:25 jmcneill Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2016/01/21 13:42:33 leot Exp $
 
---- CMakeLists.txt.orig	2015-10-25 17:30:21.000000000 +0000
+--- CMakeLists.txt.orig	2016-01-20 12:12:59.000000000 +0000
 +++ CMakeLists.txt
 @@ -87,6 +87,8 @@ else ()
  endif ()

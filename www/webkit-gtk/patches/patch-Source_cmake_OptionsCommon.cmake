@@ -1,8 +1,8 @@
-$NetBSD: patch-Source_cmake_OptionsCommon.cmake,v 1.2 2015/09/26 10:16:38 leot Exp $
+$NetBSD: patch-Source_cmake_OptionsCommon.cmake,v 1.3 2016/01/21 13:42:33 leot Exp $
 
 Using the T option of GNU ar lead to malformed .a archive on NetBSD. Disable it.
 
---- Source/cmake/OptionsCommon.cmake.orig	2015-09-21 07:29:46.000000000 +0000
+--- Source/cmake/OptionsCommon.cmake.orig	2016-01-20 12:13:00.000000000 +0000
 +++ Source/cmake/OptionsCommon.cmake
 @@ -17,10 +17,10 @@ endif ()
  
