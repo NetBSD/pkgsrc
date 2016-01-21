@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.315 2016/01/21 20:34:10 jperkin Exp $
+$NetBSD: CHANGES-2016,v 1.316 2016/01/21 20:34:40 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -470,3 +470,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added www/py-livereload version 2.4.1 [jperkin 2016-01-21]
 	Added textproc/py-mkdocs version 0.15.0 [jperkin 2016-01-21]
 	Added textproc/py-mkdocs-bootstrap version 0.1.1 [jperkin 2016-01-21]
+	Added textproc/py-mkdocs-bootswatch version 0.1.0 [jperkin 2016-01-21]
