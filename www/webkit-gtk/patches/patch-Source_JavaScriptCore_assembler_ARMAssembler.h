@@ -1,6 +1,6 @@
-$NetBSD: patch-Source_JavaScriptCore_assembler_ARMAssembler.h,v 1.5 2015/10/26 10:53:25 jmcneill Exp $
+$NetBSD: patch-Source_JavaScriptCore_assembler_ARMAssembler.h,v 1.6 2016/01/21 13:42:33 leot Exp $
 
---- Source/JavaScriptCore/assembler/ARMAssembler.h.orig	2015-10-15 08:20:12.000000000 +0000
+--- Source/JavaScriptCore/assembler/ARMAssembler.h.orig	2016-01-20 12:12:59.000000000 +0000
 +++ Source/JavaScriptCore/assembler/ARMAssembler.h
 @@ -29,6 +29,11 @@
  
