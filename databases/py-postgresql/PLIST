@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.10 2013/01/03 16:56:22 darcy Exp $
+@comment $NetBSD: PLIST,v 1.11 2016/01/21 22:17:55 darcy Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/_pg.so
 ${PYSITELIB}/pg.py
@@ -10,23 +11,7 @@ ${PYSITELIB}/pg.pyo
 ${PYSITELIB}/pgdb.py
 ${PYSITELIB}/pgdb.pyc
 ${PYSITELIB}/pgdb.pyo
-share/doc/${PYPKGPREFIX}-postgresql/docs/announce.html
-share/doc/${PYPKGPREFIX}-postgresql/docs/announce.txt
-share/doc/${PYPKGPREFIX}-postgresql/docs/changelog.html
-share/doc/${PYPKGPREFIX}-postgresql/docs/changelog.txt
-share/doc/${PYPKGPREFIX}-postgresql/docs/default.css
-share/doc/${PYPKGPREFIX}-postgresql/docs/docs.css
-share/doc/${PYPKGPREFIX}-postgresql/docs/future.html
-share/doc/${PYPKGPREFIX}-postgresql/docs/future.txt
 share/doc/${PYPKGPREFIX}-postgresql/docs/index.html
-share/doc/${PYPKGPREFIX}-postgresql/docs/install.html
-share/doc/${PYPKGPREFIX}-postgresql/docs/install.txt
-share/doc/${PYPKGPREFIX}-postgresql/docs/pg.html
-share/doc/${PYPKGPREFIX}-postgresql/docs/pg.txt
-share/doc/${PYPKGPREFIX}-postgresql/docs/pgdb.html
-share/doc/${PYPKGPREFIX}-postgresql/docs/pgdb.txt
-share/doc/${PYPKGPREFIX}-postgresql/docs/readme.html
-share/doc/${PYPKGPREFIX}-postgresql/docs/readme.txt
 share/doc/${PYPKGPREFIX}-postgresql/tutorial/advanced.py
 share/doc/${PYPKGPREFIX}-postgresql/tutorial/basics.py
 share/doc/${PYPKGPREFIX}-postgresql/tutorial/func.py
