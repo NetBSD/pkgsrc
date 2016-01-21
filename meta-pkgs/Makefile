@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2016/01/17 15:05:58 jaapb Exp $
+# $NetBSD: Makefile,v 1.86 2016/01/21 03:52:31 jnemeth Exp $
 #
 
 COMMENT=	Collections of other packages
@@ -21,7 +21,7 @@ SUBDIR+=	gnome-platform
 SUBDIR+=	gnuradio
 SUBDIR+=	gnustep
 SUBDIR+=	gstreamer0.10-plugins
-SUBDIR+=  kde-telepathy
+SUBDIR+=	kde-telepathy
 SUBDIR+=	kde3
 SUBDIR+=	kde4
 SUBDIR+=	matchbox
