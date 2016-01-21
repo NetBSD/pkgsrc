@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.44 2015/06/11 14:15:33 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.45 2016/01/21 18:36:38 schmonz Exp $
 bin/ikiwiki
 bin/ikiwiki-calendar
 bin/ikiwiki-comment
@@ -129,6 +129,7 @@ share/ikiwiki/examples/blog/comments.mdwn
 share/ikiwiki/examples/blog/index.mdwn
 share/ikiwiki/examples/blog/posts.mdwn
 share/ikiwiki/examples/blog/posts/first_post.mdwn
+share/ikiwiki/examples/blog/posts/second_post.mdwn
 share/ikiwiki/examples/blog/sidebar.mdwn
 share/ikiwiki/examples/blog/tags.mdwn
 share/ikiwiki/examples/softwaresite.mdwn
