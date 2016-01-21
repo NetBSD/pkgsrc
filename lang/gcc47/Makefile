@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2015/10/20 10:26:40 jperkin Exp $
+# $NetBSD: Makefile,v 1.35 2016/01/21 11:55:58 jperkin Exp $
 
 GCC_PKGNAME=		gcc47
 .include		"version.mk"
@@ -8,6 +8,7 @@ PKGNAME=	${GCC_PKGNAME}-${GCC47_DIST_VERSION}
 ## When bumping the PKGREVISION of this package the PKGREVISION of
 ## lang/gcc47-libs needs to be bump to be at least 1 more than the
 ## PKGREVISION of this package!
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC47_DIST_VERSION}/}
 EXTRACT_SUFX=	.tar.bz2
@@ -93,6 +94,15 @@ CONFIGURE_ARGS+=	STRIP_FOR_TARGET=${TOOLS_PLATFORM.strip}
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || !empty(MACHINE_PLATFORM:MLinux-*-i386)
 CONFIGURE_ARGS+=	--with-arch=i486 --with-tune=i486
+.endif
+
+# Disable fixincludes on SmartOS, header changes result in broken includes
+# being generated, see https://github.com/joyent/pkgsrc/issues/270
+.if ${OS_VARIANT} == "SmartOS"
+SUBST_CLASSES+=		fixinc
+SUBST_STAGE.fixinc=	pre-configure
+SUBST_FILES.fixinc=	gcc/Makefile.in
+SUBST_SED.fixinc=	-e "s,\./fixinc.sh,-c true,"
 .endif
 
 .include "options.mk"
