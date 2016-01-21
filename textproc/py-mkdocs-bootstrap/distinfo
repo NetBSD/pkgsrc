@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/01/21 20:32:27 jperkin Exp $
+
+SHA1 (mkdocs-bootstrap-0.1.1.tar.gz) = c6ac1c68e82a56acbc66787b5a7437e67c70bac2
+RMD160 (mkdocs-bootstrap-0.1.1.tar.gz) = 6eb68756ca722f0866011b3d966bf57c3bfa7678
+SHA512 (mkdocs-bootstrap-0.1.1.tar.gz) = c3f91ea22f0393f4ffcb5158ae5401e74abe6f937cc964c605e1ba40ecf0b17a27841558c49d9a79f302fdc8198fff5b8c5d278374ab0c59646b243488cbf719
+Size (mkdocs-bootstrap-0.1.1.tar.gz) = 366609 bytes
