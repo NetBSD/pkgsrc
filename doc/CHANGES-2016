@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.314 2016/01/21 20:33:54 jperkin Exp $
+$NetBSD: CHANGES-2016,v 1.315 2016/01/21 20:34:10 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -469,3 +469,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/ikiwiki to 3.20160121 [schmonz 2016-01-21]
 	Added www/py-livereload version 2.4.1 [jperkin 2016-01-21]
 	Added textproc/py-mkdocs version 0.15.0 [jperkin 2016-01-21]
+	Added textproc/py-mkdocs-bootstrap version 0.1.1 [jperkin 2016-01-21]
