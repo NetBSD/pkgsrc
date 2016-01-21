@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.214 2016/01/21 18:11:31 joerg Exp $
+# $NetBSD: Makefile,v 1.215 2016/01/21 21:32:22 tron Exp $
 
 # Notes to package maintainers:
 #
@@ -154,7 +154,7 @@ LIBARCHIVE_CONFIGURE_ARGS+=	--without-openssl
 # the system version, so give them some control.
 .  if empty(USE_BUILTIN.xz:M[Yy][Ee][Ss])
 LIBARCHIVE_CONFIGURE_ARGS+=	--without-lzma
- .  endif
+.  endif
 
 LIBARCHIVE_LIBS=	${SED} -n -e 's/^Libs.private://p' \
     ${WRKDIR}/libarchive/build/pkgconfig/libarchive.pc 2>/dev/null || echo
