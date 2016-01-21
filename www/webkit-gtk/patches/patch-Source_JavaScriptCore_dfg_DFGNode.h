@@ -1,6 +1,6 @@
-$NetBSD: patch-Source_JavaScriptCore_dfg_DFGNode.h,v 1.4 2015/09/26 10:16:38 leot Exp $
+$NetBSD: patch-Source_JavaScriptCore_dfg_DFGNode.h,v 1.5 2016/01/21 13:42:33 leot Exp $
 
---- Source/JavaScriptCore/dfg/DFGNode.h.orig	2015-09-21 07:29:46.000000000 +0000
+--- Source/JavaScriptCore/dfg/DFGNode.h.orig	2016-01-20 12:12:59.000000000 +0000
 +++ Source/JavaScriptCore/dfg/DFGNode.h
 @@ -221,7 +221,7 @@ struct OpInfo {
      OpInfo() : m_value(0) { }

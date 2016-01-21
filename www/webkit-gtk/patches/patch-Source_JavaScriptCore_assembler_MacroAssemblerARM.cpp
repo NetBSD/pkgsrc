@@ -1,6 +1,6 @@
-$NetBSD: patch-Source_JavaScriptCore_assembler_MacroAssemblerARM.cpp,v 1.4 2015/09/26 10:16:38 leot Exp $
+$NetBSD: patch-Source_JavaScriptCore_assembler_MacroAssemblerARM.cpp,v 1.5 2016/01/21 13:42:33 leot Exp $
 
---- Source/JavaScriptCore/assembler/MacroAssemblerARM.cpp.orig	2015-09-21 07:29:46.000000000 +0000
+--- Source/JavaScriptCore/assembler/MacroAssemblerARM.cpp.orig	2016-01-20 12:12:59.000000000 +0000
 +++ Source/JavaScriptCore/assembler/MacroAssemblerARM.cpp
 @@ -38,6 +38,8 @@
  #include <unistd.h>
