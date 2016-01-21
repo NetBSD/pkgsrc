@@ -1,18 +1,18 @@
-$NetBSD: distinfo,v 1.86 2015/11/22 08:46:35 leot Exp $
+$NetBSD: distinfo,v 1.87 2016/01/21 13:42:32 leot Exp $
 
-SHA1 (webkitgtk-2.10.4.tar.xz) = 45f368823c806542b24db3fd06442c0ccedc875f
-RMD160 (webkitgtk-2.10.4.tar.xz) = 99dc267c6fb5690b394e2541520c42bcfa53be58
-SHA512 (webkitgtk-2.10.4.tar.xz) = 1d1c79fb863be192639304c5616fb875ccfe541617fdc5c973e79d8159131080ba734199959a01760b9d06accaae7e2e87bec3bcc42dcd2e6b0d19a5b82ed039
-Size (webkitgtk-2.10.4.tar.xz) = 11015164 bytes
-SHA1 (patch-CMakeLists.txt) = e5834d3935c4a25ab4aeb7210d0ccbffc012b670
-SHA1 (patch-Source_JavaScriptCore_assembler_ARMAssembler.h) = 2b1eadc7a11b37dc36a7491f30bf72a6dddf5725
-SHA1 (patch-Source_JavaScriptCore_assembler_MacroAssemblerARM.cpp) = 1c5e0113e939163a69115809148dc184e64839ae
-SHA1 (patch-Source_JavaScriptCore_dfg_DFGNode.h) = 9b36b50f28bcb9421ac8b0ed17bba02de6d34e16
-SHA1 (patch-Source_JavaScriptCore_runtime_Options.cpp) = f8244c0f22bdb1ad29cb9abcfe0654173cedbe04
+SHA1 (webkitgtk-2.10.5.tar.xz) = 337225d2f132c797f30430be0283b9555cbecceb
+RMD160 (webkitgtk-2.10.5.tar.xz) = 343e98fc2698cdf4f7ff615e7c1fd97bd02fc2c7
+SHA512 (webkitgtk-2.10.5.tar.xz) = 51a5c469b1251b643055a1fb9d7b7be6e5497ebaba93d08d03f4e34a8c708666c3f18c1ddc1faa51af8200bf823f075a0fd031bb390a3fd92e17b51b0f0ccdc4
+Size (webkitgtk-2.10.5.tar.xz) = 10986648 bytes
+SHA1 (patch-CMakeLists.txt) = c48c0e5d33f378b7ecf31fffef609fb2501e5cd3
+SHA1 (patch-Source_JavaScriptCore_assembler_ARMAssembler.h) = 99e46f9d9b26a8d9ba6b29c66d7ce5326c4ffeb6
+SHA1 (patch-Source_JavaScriptCore_assembler_MacroAssemblerARM.cpp) = f78e6150ed8901b3fe046b2ef182f50f1c7500a4
+SHA1 (patch-Source_JavaScriptCore_dfg_DFGNode.h) = 0d82552c6cc1f4885a2bcc539963c966216c977c
+SHA1 (patch-Source_JavaScriptCore_runtime_Options.cpp) = 3f3e5b0e3c944656fc614bad9578e625be0296d2
 SHA1 (patch-Source_ThirdParty_gtest_include_gtest_internal_gtest-port.h) = f1eee7f9d3012edee1915234c837cff820f97092
-SHA1 (patch-Source_WTF_wtf_MathExtras.h) = ba957541a8b70e77707013bb5a93abbeb1829c75
-SHA1 (patch-Source_WebCore_bindings_js_JSInspectorFrontendHostCustom.cpp) = dfc5d06c3ec7112bdacabd0e66dd2ee6564f4ab3
-SHA1 (patch-Source_cmake_OptionsCommon.cmake) = f7b869cc197e9f2341566e5bcd4c4190e394ea29
-SHA1 (patch-Source_cmake_OptionsGTK.cmake) = 18f161fd72dd8d95ab382ca077f3773f0762a2a1
-SHA1 (patch-ai) = f0b059fe71022e961903655f5c2a5205fe452968
+SHA1 (patch-Source_WTF_wtf_MathExtras.h) = 01195978abe07154fbc28de9efc47b3f3105fd89
+SHA1 (patch-Source_WebCore_bindings_js_JSInspectorFrontendHostCustom.cpp) = 67bac371dff2afd7a1c7fad8763e05b722a11424
+SHA1 (patch-Source_cmake_OptionsCommon.cmake) = 09a837ee65cdc79cc22220ce713e346fe8752c50
+SHA1 (patch-Source_cmake_OptionsGTK.cmake) = 475fda65f9ffd157a12306f6be71026e5602850e
+SHA1 (patch-ai) = b8a45f2f5c1aa5aed178527ecd6cbd93baf76f8e
 SHA1 (patch-aj) = 8247194bd8d62fcc356650c946756898fbe22982
