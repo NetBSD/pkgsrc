@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2015/12/30 15:05:35 leot Exp $
+# $NetBSD: Makefile,v 1.9 2016/01/21 00:15:50 leot Exp $
 
 DISTNAME=	netlib-0.15.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_PYPI}
 
