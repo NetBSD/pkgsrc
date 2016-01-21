@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.310 2016/01/21 14:47:42 mef Exp $
+$NetBSD: CHANGES-2016,v 1.311 2016/01/21 15:54:59 richard Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -465,3 +465,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/gcc47-libs to 4.7.4nb2 [jperkin 2016-01-21]
 	Updated www/webkit-gtk to 2.10.5 [leot 2016-01-21]
 	Updated ham/fldigi to 3.23.07.21 [mef 2016-01-21]
+	Updated fonts/dejavu-ttf to 2.35 [richard 2016-01-21]
