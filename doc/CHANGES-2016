@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.327 2016/01/22 21:12:27 markd Exp $
+$NetBSD: CHANGES-2016,v 1.328 2016/01/22 21:57:58 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -487,3 +487,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/imlib2 to 1.4.7 [leot 2016-01-22]
 	Added print/tex-babel-spanglish version 0.3 [markd 2016-01-22]
 	Updated meta-pkgs/texlive-collection-langspanish to 2015 [markd 2016-01-22]
+	Updated cad/pcb to 20140316 [dmcmahill 2016-01-22]
