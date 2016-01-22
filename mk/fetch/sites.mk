@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.135 2015/10/10 15:17:17 ryoon Exp $
+# $NetBSD: sites.mk,v 1.136 2016/01/22 07:56:01 zafer Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -62,7 +62,6 @@ MASTER_SITE_TEX_CTAN+= \
 
 MASTER_SITE_SUNSITE+=   \
 	ftp://sunsite.unc.edu/pub/Linux/ \
-	ftp://ftp.kddlabs.co.jp/Linux/metalab.unc.edu/ \
 	ftp://ftp.icm.edu.pl/pub/Linux/sunsite/ \
 	ftp://ftp.nvg.ntnu.no/pub/mirrors/metalab.unc.edu/ \
 	ftp://ftp.lip6.fr/pub/linux/sunsite/ \
@@ -75,7 +74,6 @@ MASTER_SITE_GNOME+=     \
 	http://ftp.tuwien.ac.at/hci/gnome.org/ \
 	ftp://ftp.cse.buffalo.edu/pub/Gnome/ \
 	ftp://ftp.kddlabs.co.jp/pub/GNOME/ \
-	ftp://ftp.dit.upm.es/linux/gnome/ \
 	https://download.gnome.org/
 
 MASTER_SITE_KDE+=	\
@@ -83,11 +81,9 @@ MASTER_SITE_KDE+=	\
 	ftp://www.dnsbalance.ring.gr.jp/pub/X/kde/stable/ \
 	http://www.dnsbalance.ring.gr.jp/archives/X/kde/stable/ \
 	ftp://ftp.kddlabs.co.jp/pub/X/kde/stable/ \
-	http://mirrors.isc.org/pub/kde/stable/ \
 	ftp://ftp.gtlib.gatech.edu/pub/kde/stable/ \
 	ftp://kde.mirrors.tds.net/pub/kde/stable/ \
 	http://gd.tuwien.ac.at/kde/stable/ \
-	ftp://ftp.solnet.ch/mirror/KDE/stable/ \
 	ftp://ftp-stud.fht-esslingen.de/pub/Mirrors/ftp.kde.org/pub/kde/stable/ \
 	ftp://mirrors.dotsrc.org/kde/stable/ \
 	ftp://ftp.fi.muni.cz/pub/kde/stable/
@@ -110,7 +106,6 @@ MASTER_SITE_MOZILLA+=	\
 	http://releases.mozilla.org/pub/mozilla.org/ \
 	http://mirror.atlanticmetro.net/mozilla/ \
 	http://ftp.cvut.cz/mozilla/ \
-	http://ftp.heanet.ie/mirrors/ftp.mozilla.org/pub/mozilla.org/ \
 	http://mirror.waia.asn.au/pub/mozilla/ \
 	http://download-origin.cdn.mozilla.net/pub/mozilla.org/
 
@@ -133,9 +128,7 @@ MASTER_SITE_XEMACS+=    \
 MASTER_SITE_APACHE+=    \
 	http://www.apache.org/dist/ \
 	http://www.eu.apache.org/dist/ \
-	http://apache.mirror.aussiehq.net.au/ \
 	http://apache.oregonstate.edu/ \
-	http://mirror.nyi.net/apache/ \
 	http://apache.mirrors.tds.net/ \
 	http://ftp.unicamp.br/pub/apache/ \
 	http://www.mirrorservice.org/sites/ftp.apache.org/ \
@@ -143,7 +136,6 @@ MASTER_SITE_APACHE+=    \
 	http://ftp.twaren.net/Unix/Web/apache/ \
 	http://ftp.cuhk.edu.hk/pub/packages/apache.org/ \
 	ftp://ftp.oregonstate.edu/pub/apache/ \
-	ftp://mirror.nyi.net/apache/ \
 	ftp://apache.mirrors.tds.net/pub/apache.org/ \
 	ftp://ftp.mirrorservice.org/sites/ftp.apache.org/ \
 	http://gd.tuwien.ac.at/pub/infosys/servers/http/apache/dist/ \
@@ -152,12 +144,10 @@ MASTER_SITE_APACHE+=    \
 
 MASTER_SITE_MYSQL+=	\
 	http://mysql.mirror.kangaroot.net/Downloads/ \
-	ftp://mysql.mirror.kangaroot.net/pub/mysql/Downloads/ \
 	http://mysql.linux.cz/Downloads/ \
 	ftp://ftp.fi.muni.cz/pub/mysql/Downloads/ \
 	http://mirrors.dotsrc.org/mysql/Downloads/ \
 	ftp://mirrors.dotsrc.org/mysql/Downloads/ \
-	http://mysql.borsen.dk/Downloads/ \
 	http://mirrors.ircam.fr/pub/mysql/Downloads/ \
 	ftp://mirrors.ircam.fr/pub/mysql/Downloads/ \
 	http://ftp.gwdg.de/pub/misc/mysql/Downloads/ \
@@ -172,36 +162,22 @@ MASTER_SITE_MYSQL+=	\
 	http://ftp.heanet.ie/mirrors/www.mysql.com/Downloads/ \
 	ftp://ftp.heanet.ie/mirrors/www.mysql.com/Downloads/ \
 	http://na.mirror.garr.it/mirrors/MySQL/Downloads/ \
-	http://mysql.nfsi.pt/Downloads/ \
-	ftp://ftp.nfsi.pt/pub/mysql/Downloads/ \
 	http://mirrors.xservers.ro/mysql/Downloads/ \
-	http://mysql.dataphone.se/Downloads/ \
-	ftp://mirror2.dataphone.se/pub/mysql/Downloads/ \
-	ftp://ftp.solnet.ch/mirror/mysql/Downloads/ \
 	http://mirror.switch.ch/ftp/mirror/mysql/Downloads/ \
 	ftp://mirror.switch.ch/mirror/mysql/Downloads/ \
-	http://ftp.itu.edu.tr/Mirror/Mysql/Downloads/ \
-	ftp://ftp.itu.edu.tr/Mirror/Mysql/Downloads/ \
 	http://mysql.infocom.ua/Downloads/ \
 	http://mirrors.dedipower.com/www.mysql.com/Downloads/ \
 	http://www.mirrorservice.org/sites/ftp.mysql.com/Downloads/ \
 	ftp://ftp.mirrorservice.org/sites/ftp.mysql.com/Downloads/ \
-	http://mysql.mirror.rafal.ca/Downloads/ \
-	ftp://mysql.mirror.rafal.ca/pub/mysql/Downloads/ \
 	http://mirror.csclub.uwaterloo.ca/mysql/Downloads/ \
 	ftp://mirror.csclub.uwaterloo.ca/mysql/Downloads/ \
 	http://mirror.trouble-free.net/mysql_mirror/Downloads/ \
 	http://mysql.llarian.net/Downloads/ \
-	ftp://mirror.anl.gov/pub/mysql/Downloads/ \
 	http://mysql.he.net/Downloads/ \
 	http://mysql.mirrors.arminco.com/Downloads/ \
 	http://mysql.spd.co.il/Downloads/ \
 	http://ftp.iij.ad.jp/pub/db/mysql/Downloads/ \
 	ftp://ftp.iij.ad.jp/pub/db/mysql/Downloads/ \
-	http://mysql.cs.pu.edu.tw/Downloads/ \
-	http://mysql.ntu.edu.tw/Downloads/ \
-	ftp://ftp.ntu.edu.tw/pub/MySQL/Downloads/ \
-	http://mysql.cdpa.nsysu.edu.tw/Downloads/ \
 	ftp://mysql.cdpa.nsysu.edu.tw/Unix/Database/MySQL/Downloads/ \
 	http://mirror-fpt-telecom.fpt.net/mysql/Downloads/ \
 	http://mysql.mirror.ac.za/Downloads/ \
@@ -238,23 +214,13 @@ MASTER_SITE_DEBIAN+= \
 	http://ftp.us.debian.org/debian/
 
 MASTER_SITE_OPENOFFICE+=	\
-	http://mirrors.isc.org/pub/openoffice/ \
-	http://openoffice.mirrors.ilisys.com.au/ \
 	ftp://ftp.ussg.iu.edu/pub/openoffice/ \
 	http://gd.tuwien.ac.at/office/openoffice/ \
-	http://ftp.sh.cvut.cz/MIRRORS/OpenOffice/ \
-	ftp://ftp.funet.fi/pub/mirrors/openoffice.org/ \
 	ftp://sunsite.informatik.rwth-aachen.de/pub/mirror/OpenOffice/ \
 	ftp://ftp-stud.fht-esslingen.de/pub/Mirrors/ftp.openoffice.org/ \
 	http://ftp.ntua.gr/pub/OpenOffice/ \
 	http://na.mirror.garr.it/mirrors/openoffice/ \
 	http://vlaai.snt.utwente.nl/pub/software/openoffice/ \
-	http://niihau.student.utwente.nl/openoffice/ \
-	http://borft.student.utwente.nl/openoffice/ \
-	http://ftp.iasi.roedu.net/mirrors/openoffice.org/ \
-	ftp://ftp.arnes.si/packages/OpenOffice.org/ \
-	ftp://ftp.saix.net/pub/OpenOffice.org/ \
-	ftp://mirror.switch.ch/mirror/OpenOffice/ \
 	ftp://ftp.kddlabs.co.jp/office/openoffice/ \
 	ftp://ftp.dnsbalance.ring.gr.jp/pub/misc/openoffice/ \
 	ftp://ftp.kr.freebsd.org/pub/openoffice/
@@ -282,7 +248,6 @@ MASTER_SITE_GENTOO+= \
 	http://ftp.ds.karen.hj.se/gentoo/ \
 	ftp://ftp.free.fr/mirrors/ftp.gentoo.org/ \
 	ftp://sunsite.informatik.rwth-aachen.de/pub/Linux/gentoo/ \
-	http://darkstar.ist.utl.pt/gentoo/ \
 	http://gentoo-euetib.upc.es/mirror/gentoo/ \
 	http://ftp.ntua.gr/pub/linux/gentoo/ \
 	http://www.las.ic.unicamp.br/pub/gentoo/ \
@@ -290,7 +255,6 @@ MASTER_SITE_GENTOO+= \
 	http://ftp.swin.edu.au/gentoo/ \
 	http://ftp.iij.ad.jp/pub/linux/gentoo/ \
 	http://ftp.jaist.ac.jp/pub/Linux/Gentoo/ \
-	http://ftp.cs.pu.edu.tw/Linux/Gentoo/ \
 	http://distfiles.gentoo.org/
 
 MASTER_SITE_XORG+= \
