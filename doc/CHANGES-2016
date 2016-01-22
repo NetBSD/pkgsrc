@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.323 2016/01/22 15:01:19 gson Exp $
+$NetBSD: CHANGES-2016,v 1.324 2016/01/22 15:26:45 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -482,3 +482,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/oracle-jre8 to 8.0.72 [ryoon 2016-01-22]
 	Updated lang/oracle-jdk8 to 8.0.72 [ryoon 2016-01-22]
 	Added math/ffts version 20140106 [gson 2016-01-22]
+	Updated benchmarks/glmark2 to 2014.03nb2 [prlw1 2016-01-22]
