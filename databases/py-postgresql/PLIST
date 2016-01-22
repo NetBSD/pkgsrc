@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2016/01/21 22:17:55 darcy Exp $
+@comment $NetBSD: PLIST,v 1.12 2016/01/22 19:57:05 darcy Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -11,8 +11,3 @@ ${PYSITELIB}/pg.pyo
 ${PYSITELIB}/pgdb.py
 ${PYSITELIB}/pgdb.pyc
 ${PYSITELIB}/pgdb.pyo
-share/doc/${PYPKGPREFIX}-postgresql/docs/index.html
-share/doc/${PYPKGPREFIX}-postgresql/tutorial/advanced.py
-share/doc/${PYPKGPREFIX}-postgresql/tutorial/basics.py
-share/doc/${PYPKGPREFIX}-postgresql/tutorial/func.py
-share/doc/${PYPKGPREFIX}-postgresql/tutorial/syscat.py
