@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.321 2016/01/22 12:12:07 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.322 2016/01/22 14:25:03 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -479,3 +479,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/isc-dhcpd4 to 4.3.3p1nb1 [jperkin 2016-01-22]
 	Updated net/isc-dhcrelay4 to 4.3.3p1nb1 [jperkin 2016-01-22]
 	Updated x11/xf86-video-r128 to 6.10.1 [wiz 2016-01-22]
+	Updated lang/oracle-jre8 to 8.0.72 [ryoon 2016-01-22]
+	Updated lang/oracle-jdk8 to 8.0.72 [ryoon 2016-01-22]
