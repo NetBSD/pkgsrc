@@ -1,0 +1,8 @@
+The package provides very simplified (or ultra sloppy) support
+for Spanish in Babel, mostly as a fallback in case spanish.ldf
+fails for some reason. The package provides basic support for
+Spanish hyphenation, captions, date, frenchspacing,
+indentfirst, symbolic footnotes, enumerations, small caps roman
+numerals, and a handful of shorthands and Spanish mathematical
+operators. No options or attributes for customization are
+provided.
