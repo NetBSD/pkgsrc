@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.4 2015/09/27 06:58:11 taca Exp $
+$NetBSD: patch-ac,v 1.5 2016/01/22 12:06:41 jperkin Exp $
 
 * Honor PKG_SYSCONFDIR and PREFIX.
 
@@ -9,7 +9,7 @@ $NetBSD: patch-ac,v 1.4 2015/09/27 06:58:11 taca Exp $
  
  #ifndef _PATH_DHCPD_CONF
 -#define _PATH_DHCPD_CONF	"/etc/dhcpd.conf"
-+#define _PATH_DHCPD_CONF	"/usr/pkg/etc/dhcp/dhcpd.conf"
++#define _PATH_DHCPD_CONF	"@PKG_SYSCONFDIR@/dhcpd.conf"
  #endif /* DEBUG */
  
  #ifndef _PATH_DHCPD_DB
@@ -18,12 +18,12 @@ $NetBSD: patch-ac,v 1.4 2015/09/27 06:58:11 taca Exp $
  
  #ifndef _PATH_DHCLIENT_CONF
 -#define _PATH_DHCLIENT_CONF	"/etc/dhclient.conf"
-+#define _PATH_DHCLIENT_CONF	"/usr/pkg/etc/dhcp/dhclient.conf"
++#define _PATH_DHCLIENT_CONF	"@PKG_SYSCONFDIR@/dhclient.conf"
  #endif
  
  #ifndef _PATH_DHCLIENT_SCRIPT
 -#define _PATH_DHCLIENT_SCRIPT	"/sbin/dhclient-script"
-+#define _PATH_DHCLIENT_SCRIPT	"/usr/pkg/sbin/dhclient-script"
++#define _PATH_DHCLIENT_SCRIPT	"@PREFIX@/sbin/dhclient-script"
  #endif
  
  #ifndef _PATH_DHCLIENT_PID
