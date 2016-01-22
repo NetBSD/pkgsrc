@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2016/01/06 10:24:43 markd Exp $
+@comment $NetBSD: PLIST,v 1.21 2016/01/22 19:29:11 ryoon Exp $
 bin/esdcompat
 bin/pacat
 bin/pacmd
@@ -49,7 +49,7 @@ lib/cmake/PulseAudio/PulseAudioConfigVersion.cmake
 lib/libpulse-mainloop-glib.la
 lib/libpulse-simple.la
 lib/libpulse.la
-lib/libpulsecore-6.0.la
+lib/pulseaudio/libpulsecore-6.0.la
 lib/pkgconfig/libpulse-mainloop-glib.pc
 lib/pkgconfig/libpulse-simple.pc
 lib/pkgconfig/libpulse.pc

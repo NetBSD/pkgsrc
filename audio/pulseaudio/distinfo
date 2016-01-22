@@ -1,22 +1,16 @@
-$NetBSD: distinfo,v 1.57 2015/12/25 23:09:49 ryoon Exp $
+$NetBSD: distinfo,v 1.58 2016/01/22 19:29:11 ryoon Exp $
 
-SHA1 (pulseaudio-7.1.tar.xz) = dc35a8aa66c513ac989319e13a18e317d8e432b3
-RMD160 (pulseaudio-7.1.tar.xz) = 34e4a7644673d96806234042fc50a6f513b885c9
-SHA512 (pulseaudio-7.1.tar.xz) = 21f621bd76268b9dd6e5be2231b0e779a8e0cfdece44c46c8ac96a4e1d4df52fe5b9791ef95a0909a3c177bbfa5eab7d52fed9b43362840a9c8a6001e821175e
-Size (pulseaudio-7.1.tar.xz) = 1506504 bytes
-SHA1 (patch-aa) = 4e8a38810453d0efad287528b7f18c056a5cdd8b
-SHA1 (patch-configure.ac) = 10f976daa163b985312d4dc29933e87cf2e89c96
+SHA1 (pulseaudio-8.0.tar.xz) = 1399a2f6288ad743184b6c2192129fef033343ac
+RMD160 (pulseaudio-8.0.tar.xz) = fc2700ec34ae9cbecd85c1ad6253b4c224541c96
+SHA512 (pulseaudio-8.0.tar.xz) = 7008abf768f720839353038ffd3e35e442f82452aa7e27d446f75d403096b042643d2b2b1d153454302bd5a51f9217f4979c8995b80ba2695f141e6a29e164fa
+Size (pulseaudio-8.0.tar.xz) = 1517656 bytes
+SHA1 (patch-aa) = a86e04f6ada98d643b90069f78f13e3bc1050ed9
+SHA1 (patch-configure.ac) = ae2df43966a21992dc1c53d5f0a2c428d4e60e3f
 SHA1 (patch-src_Makefile.am) = debe40be5d1155f6cb0d5ae90119dece4e090b02
-SHA1 (patch-src_Makefile.in) = acbd3abee7225a7b3f1c422e30d9efe2adb1253c
-SHA1 (patch-src_daemon_main.c) = 746d520fce6c076d45a6e36730d5345325f19e03
-SHA1 (patch-src_modules_module-detect.c) = e376b088d939abc70425310875882a0daf90dca2
+SHA1 (patch-src_modules_module-detect.c) = f202194b03a2023959d772392d58297f963f0ada
 SHA1 (patch-src_modules_module-solaris.c) = 03ea8912da4bb76294ca23271e47d40a8c9a61a7
 SHA1 (patch-src_modules_oss_module-oss.c) = 399ac178ae832619253ce8dd985edbed23db86e7
-SHA1 (patch-src_pulsecore_core-util.c) = 186c805ac4083446afe3ce8db5c6157da92871be
 SHA1 (patch-src_pulsecore_mix__neon.c) = 6f6d33d38024d65045d637d48276e1ba92b81342
-SHA1 (patch-src_pulsecore_packet.c) = f5d0bcfd8027f65782fc7a8b6a9b5cb3b3aa7e41
-SHA1 (patch-src_pulsecore_sample-util.h) = b6bd83cfdc1c337453d9a728f07205a2cf0af831
 SHA1 (patch-src_pulsecore_svolume__mmx.c) = c34d153e3bfdb812eb7bd70fa330a9ec674c2dc2
 SHA1 (patch-src_pulsecore_svolume__sse.c) = 47c97c1af947133f2a7b330aed38792bb0e7ef09
-SHA1 (patch-src_tests_mult-s16-test.c) = 3a0fbec804ebefbd88688e84b8d45e0aca597b84
 SHA1 (patch-src_tests_rtpoll-test.c) = 3584aeda2b6f7eb14af9cb5c665a31d972a306ae
