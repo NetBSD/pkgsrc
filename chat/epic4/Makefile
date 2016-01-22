@@ -1,17 +1,11 @@
-# $NetBSD: Makefile,v 1.40 2015/11/07 21:36:57 dholland Exp $
+# $NetBSD: Makefile,v 1.41 2016/01/22 09:12:37 zafer Exp $
 #
 
 DISTNAME=	epic4-2.10.2
 PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	ftp://ftp.epicsol.org/pub/epic/EPIC4-PRODUCTION/ \
-		ftp://ftp.freenet.de/pub/ftp.prbh.org/pub/epic/EPIC4-PRODUCTION/ \
-		http://ftp.freenet.de/pub/ftp.prbh.org/pub/epic/EPIC4-PRODUCTION/ \
-		ftp://totem.fix.no/pub/mirrors/epic/EPIC4-PRODUCTION/ \
-		ftp://ftp.eu.uu.net/pub/unix/irc/epic/EPIC4-PRODUCTION/ \
-		ftp://ftp.parodius.com/pub/epic/EPIC4-PRODUCTION/ \
-		ftp://ftp.archive.de.uu.net/pub/unix/irc/epic/EPIC4-PRODUCTION/ \
-		ftp://ftp.nl.uu.net/pub/unix/irc/epic/EPIC4-PRODUCTION/
+		ftp://totem.fix.no/pub/mirrors/epic/EPIC4-PRODUCTION/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
