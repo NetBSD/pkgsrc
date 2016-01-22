@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.27 2016/01/13 04:43:00 taca Exp $
+# $NetBSD: Makefile.common,v 1.28 2016/01/22 12:06:40 jperkin Exp $
 #
 # used by net/isc-dhcp4/Makefile
 # used by net/isc-dhcpd4/Makefile
@@ -7,6 +7,7 @@
 
 DISTNAME=		dhcp-${VERSION}
 DHVER=			${DISTNAME:S/dhcp-//:S/-P/p/}
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.isc.org/isc/dhcp/${VERSION}/ \
 			http://ftp.isc.org/isc/dhcp/${VERSION}/
@@ -26,7 +27,7 @@ DHCP_HOME?=		${VARBASE}/db/isc-dhcp
 DHCP_PID?=		${VARBASE}/run/isc-dhcp
 PKG_SYSCONFSUBDIR=	dhcp
 
-USE_TOOLS+=		gmake gzip tar
+USE_TOOLS+=		gmake gunzip gzip tar
 USE_LANGUAGES+=		c c++
 
 PATCHDIR=		${.CURDIR}/../isc-dhcp4/patches
@@ -60,10 +61,9 @@ CONFIGURE_ARGS+=	--with-randomdev=/dev/random
 .endif
 
 SUBST_CLASSES+=		config
-SUBST_STAGE.config=	post-patch
+SUBST_STAGE.config=	pre-configure
 SUBST_FILES.config=	includes/dhcpd.h
-SUBST_SED.config=       -e "s|@@PREFIX@@|${PREFIX}|g"
-SUBST_SED.config+=      -e "s|@@PKG_SYSCONFDIR@@|${PKG_SYSCONFDIR}|g"
+SUBST_VARS.config=	PREFIX PKG_SYSCONFDIR
 SUBST_MESSAGE.config=   Fixing configuration files.
 
 BUILD_DIRS=	${BUILD_SUBDIR}
