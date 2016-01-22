@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.130 2015/12/22 20:55:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.131 2016/01/22 08:39:51 zafer Exp $
 
 DISTNAME=	gnupg-1.4.20
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/gnupg/ \
 		http://gd.tuwien.ac.at/privacy/gnupg/gnupg/ \
-		ftp://ftp.jyu.fi/pub/crypt/gcrypt/gnupg/ \
 		ftp://ftp.ring.gr.jp/pub/net/gnupg/gnupg/
 EXTRACT_SUFX=	.tar.bz2
 
