@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.319 2016/01/22 09:47:17 leot Exp $
+$NetBSD: CHANGES-2016,v 1.320 2016/01/22 12:08:11 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -474,3 +474,7 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/py-postgresql to 4.2 [darcy 2016-01-21]
 	Updated ham/uhd to 3.9.2 [mef 2016-01-22]
 	Updated fonts/Hack-ttf to 2.019 [leot 2016-01-22]
+	Updated net/isc-dhclient4 to 4.3.3p1nb1 [jperkin 2016-01-22]
+	Updated net/isc-dhcp4 to 4.3.3p1nb1 [jperkin 2016-01-22]
+	Updated net/isc-dhcpd4 to 4.3.3p1nb1 [jperkin 2016-01-22]
+	Updated net/isc-dhcrelay4 to 4.3.3p1nb1 [jperkin 2016-01-22]
