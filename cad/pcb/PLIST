@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.17 2011/12/09 12:42:09 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.18 2016/01/22 21:56:36 dmcmahill Exp $
 bin/MergePCBPS
 bin/Merge_dimPCBPS
 bin/pcb
-include/gts.h
 info/pcb.info
-lib/libgts.a
 man/man1/pcb.1
+share/appdata/pcb.appdata.xml
 share/applications/pcb.desktop
 share/doc/pcb/examples/LED.net
 share/doc/pcb/examples/LED.pcb
@@ -58,6 +57,7 @@ share/icons/hicolor/scalable/mimetypes/application-x-pcb-layout.svg
 share/icons/hicolor/scalable/mimetypes/application-x-pcb-netlist.svg
 ${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/pcb.mo
 ${PKGLOCALEDIR}/locale/nl/LC_MESSAGES/pcb.mo
+${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/pcb.mo
 ${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/pcb.mo
 share/mime/packages/pcb.xml
 share/mimelnk/application/x-excellon.desktop
@@ -437,6 +437,7 @@ share/pcb/pcblib-newlib/geda/DIP28M.fp
 share/pcb/pcblib-newlib/geda/DIP28N.fp
 share/pcb/pcblib-newlib/geda/DIP32.fp
 share/pcb/pcblib-newlib/geda/DIP36.fp
+share/pcb/pcblib-newlib/geda/DIP4.fp
 share/pcb/pcblib-newlib/geda/DIP40.fp
 share/pcb/pcblib-newlib/geda/DIP42.fp
 share/pcb/pcblib-newlib/geda/DIP44.fp
@@ -1175,3 +1176,4 @@ share/pcb/tools/Merge_dimPCBPS
 share/pcb/tools/apctools.zip
 share/pcb/tools/gerbertotk.c
 share/pcb/tools/pcb2ncap.tgz
+share/pcb/tools/pcbdiff
