@@ -1,0 +1,2 @@
+A BSD-licensed Fast Fourier Transform library based on dynamic
+generation of SIMD code, supporting Intel SSE and ARM Neon.
