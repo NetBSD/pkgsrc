@@ -1,14 +1,15 @@
-$NetBSD: patch-imlib2-config.in,v 1.2 2014/05/20 16:18:38 adam Exp $
+$NetBSD: patch-imlib2-config.in,v 1.3 2016/01/22 21:07:00 leot Exp $
 
---- imlib2-config.in.orig	2013-03-01 19:12:59.000000000 +0000
+Add the COMPILER_RPATH_FLAG to imlib2-config.
+
+--- imlib2-config.in.orig	2014-12-20 16:19:20.000000000 +0000
 +++ imlib2-config.in
-@@ -45,8 +45,7 @@ while test $# -gt 0; do
+@@ -45,7 +45,7 @@ while test $# -gt 0; do
        echo $includes
        ;;
      --libs)
 -      libdirs=-L@libdir@
--      echo $libdirs -lImlib2 @my_libs@
-+      echo -L@libdir@ @COMPILER_RPATH_FLAG@@libdir@ -lImlib2
++      libdirs="-L@libdir@ @COMPILER_RPATH_FLAG@@libdir@"
+       echo $libdirs -lImlib2
        ;;
      *)
-       echo "${usage}" 1>&2
