@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.23 2016/01/13 04:43:00 taca Exp $
+$NetBSD: distinfo,v 1.24 2016/01/22 12:06:40 jperkin Exp $
 
 SHA1 (dhcp-4.3.3-P1.tar.gz) = 4e76757a0aebcb9200c1d2ca0f28ff41a5c56586
 RMD160 (dhcp-4.3.3-P1.tar.gz) = 97d7b10ef1e86c938cc25660048b90165301cd9d
@@ -6,7 +6,7 @@ SHA512 (dhcp-4.3.3-P1.tar.gz) = 7e14268b4acaa82c807af9d956f76f4327a9a75d36273a24
 Size (dhcp-4.3.3-P1.tar.gz) = 9204043 bytes
 SHA1 (patch-aa) = da090b3b824f5d437f8d05ce00e2ac4dfc65d6af
 SHA1 (patch-ab) = 0683dd2259e48184713559aa0356ee352aa52c39
-SHA1 (patch-ac) = cce2b5c32cd2a8bec50690c10edd59133d7ee049
+SHA1 (patch-ac) = a7e6808a6e1e93c520eb085f31259f6c142750f4
 SHA1 (patch-bind_bind-9.9.7-P3_configure) = 78e631a2e7b3a310ebef09b69af837f3a0d3e4f3
 SHA1 (patch-bind_bind-9.9.7-P3_lib_export_dns_Makefile.in) = 6a6fce1a6518821bd1033c31e368f02829c4de39
 SHA1 (patch-common_dlpi.c) = 76e30ca92a7d3ba10ed73b4f03de0582bccb2acc
