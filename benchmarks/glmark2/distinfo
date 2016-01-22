@@ -1,9 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 00:25:50 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/01/22 15:26:25 prlw1 Exp $
 
-SHA1 (glmark2-2014.03-499aa81a68fb4c8aac1c80f0d6a4cce05941c4cc.tar.gz) = 2cedb183b5ee5cb1a4448200a63835862a2796a7
-RMD160 (glmark2-2014.03-499aa81a68fb4c8aac1c80f0d6a4cce05941c4cc.tar.gz) = d20f6500c02b3eda2ae7d0f04910a79b977be6c0
-SHA512 (glmark2-2014.03-499aa81a68fb4c8aac1c80f0d6a4cce05941c4cc.tar.gz) = e72694971fd89ed9f06484ad46d9d6b611ef3f67efc72bac440b8c97a904344db29be6dfc7d8bb6ae6bfcf736ee57148b068a833f666c7cd637fee01da59582e
-Size (glmark2-2014.03-499aa81a68fb4c8aac1c80f0d6a4cce05941c4cc.tar.gz) = 7811333 bytes
-SHA1 (patch-src_image-reader.h) = d3a39e6129a956b1021213976d4e9caf0296d136
-SHA1 (patch-src_scene-buffer.cpp) = 7016ed9d986f2d6b5e978862028480d17fee2a61
-SHA1 (patch-src_scene-refract.cpp) = e0217ba76e238b1d23e8fb43b7fe75ebbe5ef843
+SHA1 (glmark2-2014.03-acac90b257a14bd14a1492cd442b79dcaa1c13cf.tar.gz) = e9730fd2850ceace5e93029c1759531dcec4b2b4
+RMD160 (glmark2-2014.03-acac90b257a14bd14a1492cd442b79dcaa1c13cf.tar.gz) = e4eb87716a77048a0c40383c3f1d99e7e316c5b5
+SHA512 (glmark2-2014.03-acac90b257a14bd14a1492cd442b79dcaa1c13cf.tar.gz) = 1f69541be3b585a2791bcf2d5e4904f89444a7ba92918347adb668299fc8d2399796faf69b427cb046f3c20a53bb1bf21f54d7b7042a24fc80e632d3c0d98bbf
+Size (glmark2-2014.03-acac90b257a14bd14a1492cd442b79dcaa1c13cf.tar.gz) = 7811479 bytes
