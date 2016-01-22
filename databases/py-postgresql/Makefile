@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2016/01/22 19:53:59 darcy Exp $
+# $NetBSD: Makefile,v 1.75 2016/01/22 19:57:05 darcy Exp $
 
 DISTNAME=		PyGreSQL-4.2
 PKGNAME=		${PYPKGPREFIX}-postgresql-4.2
@@ -24,20 +24,6 @@ REPLACE_PYTHON=		pg.py pgdb.py
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 4.1.1
 
 DOCDIR=			${PREFIX}/share/doc/${PYPKGPREFIX}-postgresql
-
-INSTALLATION_DIRS=	${DOCDIR}/tutorial ${DOCDIR}/docs
-
-post-install:
-	set -e;								\
-	cd ${WRKSRC}/tutorial;						\
-	for f in *.py; do						\
-		${INSTALL_DATA} "$$f" ${DESTDIR}${DOCDIR}/tutorial;	\
-	done
-	set -e;								\
-	cd ${WRKSRC}/docs;						\
-	for f in *; do							\
-		${INSTALL_DATA} "$$f" ${DESTDIR}${DOCDIR}/docs;		\
-	done
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
