@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2015/12/29 23:26:15 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2016/01/22 09:46:49 leot Exp $
 
-DISTNAME=	Hack-v2_018-ttf
-PKGNAME=	Hack-ttf-2.018
+DISTNAME=	Hack-v2_019-ttf
+PKGNAME=	Hack-ttf-2.019
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_GITHUB:=chrissimpkins/}
 GITHUB_PROJECT=	Hack
@@ -18,7 +18,7 @@ NO_BUILD=	yes
 
 WRKSRC=		${WRKDIR}
 
-FONTS_DIRS.ttf=	${PREFIX}/share/fonts/X11/TTF
+FONTS_DIRS.ttf=		${PREFIX}/share/fonts/X11/TTF
 INSTALLATION_DIRS=	${FONTS_DIRS.ttf}
 
 do-install:
