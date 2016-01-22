@@ -1,10 +1,10 @@
-$NetBSD: patch-src_modules_module-detect.c,v 1.3 2015/12/25 23:09:49 ryoon Exp $
+$NetBSD: patch-src_modules_module-detect.c,v 1.4 2016/01/22 19:29:11 ryoon Exp $
 
 Hack to set proper sound device on NetBSD.
 
---- src/modules/module-detect.c.orig	2015-09-10 04:51:41.000000000 +0000
+--- src/modules/module-detect.c.orig	2014-01-23 18:57:55.000000000 +0000
 +++ src/modules/module-detect.c
-@@ -120,6 +120,17 @@ static int detect_oss(pa_core *c, int ju
+@@ -122,6 +122,17 @@ static int detect_oss(pa_core *c, int ju
      FILE *f;
      int n = 0, b = 0;
  
@@ -22,7 +22,7 @@ Hack to set proper sound device on NetBSD.
      if (!(f = pa_fopen_cloexec("/dev/sndstat", "r")) &&
          !(f = pa_fopen_cloexec("/proc/sndstat", "r")) &&
          !(f = pa_fopen_cloexec("/proc/asound/oss/sndstat", "r"))) {
-@@ -171,6 +182,7 @@ static int detect_oss(pa_core *c, int ju
+@@ -173,6 +184,7 @@ static int detect_oss(pa_core *c, int ju
      }
  
      fclose(f);
