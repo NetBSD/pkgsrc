@@ -1,4 +1,6 @@
-$NetBSD: patch-src_lib_amd64__blend.S,v 1.1 2012/06/15 18:52:26 joerg Exp $
+$NetBSD: patch-src_lib_amd64__blend.S,v 1.2 2016/01/22 21:07:00 leot Exp $
+
+Drop .extern, it is ignored by GNU as and not supported by LLVM.
 
 --- src/lib/amd64_blend.S.orig	2012-06-15 15:25:04.000000000 +0000
 +++ src/lib/amd64_blend.S
