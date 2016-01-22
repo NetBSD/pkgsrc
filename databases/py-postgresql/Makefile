@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.73 2016/01/21 22:17:55 darcy Exp $
+# $NetBSD: Makefile,v 1.74 2016/01/22 19:53:59 darcy Exp $
 
 DISTNAME=		PyGreSQL-4.2
 PKGNAME=		${PYPKGPREFIX}-postgresql-4.2
 CATEGORIES=		databases python
 MASTER_SITES=		http://pygresql.org/files/
-EXTRACT_SUFX=		.tgz
+EXTRACT_SUFX=		.tar.gz
 
 OWNER=			darcy@NetBSD.org
 HOMEPAGE=		http://www.PyGreSQL.org/
