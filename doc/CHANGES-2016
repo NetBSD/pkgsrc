@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.320 2016/01/22 12:08:11 jperkin Exp $
+$NetBSD: CHANGES-2016,v 1.321 2016/01/22 12:12:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -478,3 +478,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/isc-dhcp4 to 4.3.3p1nb1 [jperkin 2016-01-22]
 	Updated net/isc-dhcpd4 to 4.3.3p1nb1 [jperkin 2016-01-22]
 	Updated net/isc-dhcrelay4 to 4.3.3p1nb1 [jperkin 2016-01-22]
+	Updated x11/xf86-video-r128 to 6.10.1 [wiz 2016-01-22]
