@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.80 2015/11/18 14:19:48 ryoon Exp $
+# $NetBSD: Makefile,v 1.81 2016/01/22 21:56:36 dmcmahill Exp $
 #
 
-DISTNAME=	pcb-20110918
-PKGREVISION=	19
+DISTNAME=	pcb-20140316
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pcb/}
 
@@ -30,7 +29,7 @@ CONFIGURE_ARGS+=	--disable-update-mime-database
 USE_TOOLS+=		bison gm4:run gmake intltool lex wish:run pkg-config
 USE_PKGLOCALEDIR=	yes
 INFO_FILES=		yes
-LDFLAGS+=		-lstdc++  # direct link as required by ld v2.22
+LDFLAGS+=		-lstdc++  -lm # direct link as required by ld v2.22
 
 USE_LANGUAGES=		c c++
 
@@ -62,7 +61,7 @@ PKG_FAIL_REASON=	Invalid options
 .include "../../sysutils/dbus/buildlink3.mk"
 .endif
 
-EXPORTERS=	bom gerber ps
+EXPORTERS=	bom gcode gerber ps
 .if !empty(PKG_OPTIONS:Mpng)
 EXPORTERS+=	png
 .include "../../graphics/gd/buildlink3.mk"
