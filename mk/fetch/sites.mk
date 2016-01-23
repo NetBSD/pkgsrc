@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.136 2016/01/22 07:56:01 zafer Exp $
+# $NetBSD: sites.mk,v 1.137 2016/01/23 02:46:39 mef Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -172,7 +172,6 @@ MASTER_SITE_MYSQL+=	\
 	http://mirror.csclub.uwaterloo.ca/mysql/Downloads/ \
 	ftp://mirror.csclub.uwaterloo.ca/mysql/Downloads/ \
 	http://mirror.trouble-free.net/mysql_mirror/Downloads/ \
-	http://mysql.llarian.net/Downloads/ \
 	http://mysql.he.net/Downloads/ \
 	http://mysql.mirrors.arminco.com/Downloads/ \
 	http://mysql.spd.co.il/Downloads/ \
