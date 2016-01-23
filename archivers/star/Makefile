@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.35 2015/11/07 20:41:32 dholland Exp $
+# $NetBSD: Makefile,v 1.36 2016/01/23 03:43:11 zafer Exp $
 #
 
 DISTNAME=	star-1.4.3
 PKGREVISION=	4
 CATEGORIES=	archivers
-MASTER_SITES=	ftp://ftp.berlios.de/pub/star/
+MASTER_SITES=	http://downloads.sourceforge.net/project/s-tar/
 
 MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	http://cdrecord.berlios.de/old/private/star.html
