@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.23 2014/10/09 14:05:53 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2016/01/23 05:15:22 zafer Exp $
 #
 
 DISTNAME=	nulibdist-220
 PKGNAME=	nulib2-2.2.0
 CATEGORIES=	archivers
-MASTER_SITES=	http://www.nulib.com/downloads/
+MASTER_SITES=	http://nulib.com/downloads/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.nulib.com/
