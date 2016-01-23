@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.18 2013/06/06 12:55:19 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2016/01/23 06:23:59 zafer Exp $
 #
 
 DISTNAME=		matchbox-common-0.9.1
 PKGREVISION=		10
 CATEGORIES=		x11
-MASTER_SITES=		http://matchbox-project.org/sources/matchbox-common/0.9/
+MASTER_SITES=		http://downloads.yoctoproject.org/releases/matchbox/matchbox-common/0.9/ \
+			http://mirrors.kernel.org/yocto/matchbox/matchbox-common/0.9/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
