@@ -1,0 +1,13 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2016/01/23 01:25:31 markd Exp $
+
+Build with recent cmake - patch from slackware
+
+--- CMakeLists.txt.orig	2015-09-03 21:22:45.000000000 +0000
++++ CMakeLists.txt
+@@ -1,4 +1,6 @@
+ cmake_minimum_required(VERSION 2.8.12)
++cmake_policy(SET CMP0022 OLD)
++cmake_policy(SET CMP0059 OLD)
+ project(kvkontakte)
+ 
+ # the version number, needed for
