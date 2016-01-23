@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.38 2014/10/09 14:05:52 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2016/01/23 05:56:39 zafer Exp $
 
 DISTNAME=	hpack79src
 PKGNAME=	hpack-0.79
 PKGREVISION=	2
 CATEGORIES=	archivers
-MASTER_SITES=	ftp://ftp.franken.de/pub/crypt/misc/
+MASTER_SITES=	ftp://ftp.csc.fi/index/crypt/archive/idea.sec.dsi.unimi.it/code/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Multi-System Archiver with open keys PGP-based security
