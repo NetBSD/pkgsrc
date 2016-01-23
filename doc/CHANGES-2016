@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.329 2016/01/23 05:11:34 zafer Exp $
+$NetBSD: CHANGES-2016,v 1.330 2016/01/23 08:50:57 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -489,3 +489,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated meta-pkgs/texlive-collection-langspanish to 2015 [markd 2016-01-22]
 	Updated cad/pcb to 20140316 [dmcmahill 2016-01-22]
 	Updated archivers/pbzip2 to 1.1.13 [zafer 2016-01-23]
+	Updated devel/p5-Devel-Cover to 1.21 [wen 2016-01-23]
