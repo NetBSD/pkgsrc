@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.334 2016/01/23 09:22:22 wen Exp $
+$NetBSD: CHANGES-2016,v 1.335 2016/01/23 14:19:21 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -494,3 +494,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Exporter-Lite to 0.08 [wen 2016-01-23]
 	Updated www/p5-Dancer2 to 0.166001 [wen 2016-01-23]
 	Updated devel/p5-Module-Build to 0.4216 [wen 2016-01-23]
+	Updated ham/fldigi to 3.23.07 [mef 2016-01-23]
