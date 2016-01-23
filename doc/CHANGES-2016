@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.335 2016/01/23 14:19:21 mef Exp $
+$NetBSD: CHANGES-2016,v 1.336 2016/01/23 17:17:34 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -495,3 +495,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-Dancer2 to 0.166001 [wen 2016-01-23]
 	Updated devel/p5-Module-Build to 0.4216 [wen 2016-01-23]
 	Updated ham/fldigi to 3.23.07 [mef 2016-01-23]
+	Updated graphics/p5-Image-ExifTool to 10.10 [adam 2016-01-23]
