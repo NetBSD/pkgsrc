@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.332 2016/01/23 09:00:57 wen Exp $
+$NetBSD: CHANGES-2016,v 1.333 2016/01/23 09:11:49 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -492,3 +492,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Devel-Cover to 1.21 [wen 2016-01-23]
 	Updated devel/p5-Devel-PPPort to 3.32 [wen 2016-01-23]
 	Updated devel/p5-Exporter-Lite to 0.08 [wen 2016-01-23]
+	Updated www/p5-Dancer2 to 0.166001 [wen 2016-01-23]
