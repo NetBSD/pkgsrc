@@ -1,4 +1,4 @@
-# $NetBSD: go-package.mk,v 1.7 2015/12/29 21:47:48 bsiegert Exp $
+# $NetBSD: go-package.mk,v 1.8 2016/01/23 12:42:57 rillig Exp $
 #
 # This file implements common logic for compiling Go programs in pkgsrc.
 # The compiled Go code is tied to a specific compiler version, and the
@@ -56,13 +56,18 @@ PRINT_PLIST_AWK+=	{ gsub(/${GO_PLATFORM}/, \
 			print; next; }
 
 post-extract:
-	${MKDIR} ${WRKSRC}
-	${RM} -fr ${WRKDIR}/`basename ${GO_DIST_BASE}`/.hg
-	${MV} ${WRKDIR}/`basename ${GO_DIST_BASE}`/* ${WRKSRC}
+	${RUN} ${MKDIR} ${WRKSRC}
+	${RUN} ${RM} -fr ${WRKDIR}/`basename ${GO_DIST_BASE}`/.hg
+	${RUN} ${MV} ${WRKDIR}/`basename ${GO_DIST_BASE}`/* ${WRKSRC}
 
 do-build:
-	env GOPATH=${WRKDIR}:${BUILDLINK_DIR}/gopkg go install -v ${GO_BUILD_PATTERN}
+	${RUN} env GOPATH=${WRKDIR}:${BUILDLINK_DIR}/gopkg go install -v ${GO_BUILD_PATTERN}
+
+.if !target(do-test)
+do-test:
+	${RUN} env GOPATH=${WRKDIR}:${BUILDLINK_DIR}/gopkg go test -v ${GO_BUILD_PATTERN}
+.endif
 
 do-install:
-	-cd ${WRKDIR} && [ -d bin ] && ${PAX} -rw bin ${DESTDIR}${PREFIX}
-	-cd ${WRKDIR} && [ -d pkg ] && ${PAX} -rw src pkg ${DESTDIR}${PREFIX}/gopkg
+	${RUN} cd ${WRKDIR}; [ ! -d bin ] || ${PAX} -rw bin ${DESTDIR}${PREFIX}
+	${RUN} cd ${WRKDIR}; [ ! -d pkg ] || ${PAX} -rw src pkg ${DESTDIR}${PREFIX}/gopkg
