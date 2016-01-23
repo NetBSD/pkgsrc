@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.328 2016/01/22 21:57:58 dmcmahill Exp $
+$NetBSD: CHANGES-2016,v 1.329 2016/01/23 05:11:34 zafer Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -488,3 +488,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added print/tex-babel-spanglish version 0.3 [markd 2016-01-22]
 	Updated meta-pkgs/texlive-collection-langspanish to 2015 [markd 2016-01-22]
 	Updated cad/pcb to 20140316 [dmcmahill 2016-01-22]
+	Updated archivers/pbzip2 to 1.1.13 [zafer 2016-01-23]
