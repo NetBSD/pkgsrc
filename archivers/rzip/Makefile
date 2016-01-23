@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2012/09/11 19:47:01 asau Exp $
+# $NetBSD: Makefile,v 1.12 2016/01/23 05:47:38 zafer Exp $
 
 DISTNAME=	rzip-2.1
 CATEGORIES=	archivers
-MASTER_SITES=	http://rzip.samba.org/ftp/rzip/
+MASTER_SITES=	https://rzip.samba.org/ftp/rzip/
 
 MAINTAINER=	carton@Ivy.NET
 HOMEPAGE=	http://rzip.samba.org/
