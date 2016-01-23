@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-i386,v 1.3 2016/01/22 14:18:42 ryoon Exp $
+@comment $NetBSD: PLIST.linux-i386,v 1.4 2016/01/23 04:12:08 ryoon Exp $
 bin/oracle8-java
 bin/oracle8-javaws
 bin/oracle8-keytool
@@ -30,6 +30,15 @@ java/oracle-8/bin/rmiregistry
 java/oracle-8/bin/servertool
 java/oracle-8/bin/tnameserv
 java/oracle-8/bin/unpack200
+${PLIST.native}java/oracle-8/lib/i386/jli/libX11.so.6
+${PLIST.native}java/oracle-8/lib/i386/libasound.so.2
+${PLIST.native}java/oracle-8/lib/i386/libodbcinst.so
+${PLIST.native}java/oracle-8/lib/i386/libodbc.so
+${PLIST.native}java/oracle-8/lib/i386/libX11.so.6
+${PLIST.native}java/oracle-8/lib/i386/libXext.so.6
+${PLIST.native}java/oracle-8/lib/i386/libXi.so.6
+${PLIST.native}java/oracle-8/lib/i386/libXt.so.6
+${PLIST.native}java/oracle-8/lib/i386/libXtst.so.6
 java/oracle-8/lib/calendars.properties.default
 java/oracle-8/lib/charsets.jar
 java/oracle-8/lib/classlist
