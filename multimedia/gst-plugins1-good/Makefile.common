@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2016/01/03 17:56:53 wiz Exp $
+# $NetBSD: Makefile.common,v 1.17 2016/01/24 14:43:51 ryoon Exp $
 #
 # used by audio/gst-plugins1-flac/Makefile
 # used by audio/gst-plugins1-jack/Makefile
@@ -15,7 +15,7 @@
 # used by x11/gst-plugins1-x11/Makefile
 
 GST_PLUGINS1_TYPE=	good
-GST_PLUGINS1_VER=	1.6.2
+GST_PLUGINS1_VER=	1.6.3
 
 # Disable all drivers and features by default.
 .for driver in	aalib \
