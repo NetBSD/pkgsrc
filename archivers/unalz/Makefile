@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.17 2016/01/23 05:44:14 zafer Exp $
+# $NetBSD: Makefile,v 1.18 2016/01/24 04:32:54 zafer Exp $
 #
 
-DISTNAME=		unalz_0.65.orig
-PKGNAME=		unalz-0.65
+DISTNAME=		unalz-0.65
 CATEGORIES=		archivers
-MASTER_SITES=		https://launchpad.net/ubuntu/+archive/primary/+files/
+MASTER_SITES=		https://kippler.com/win/unalz/
+EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.kipple.pe.kr/win/unalz/
+HOMEPAGE=		https://kippler.com/win/unalz/
 COMMENT=		Alzip archive (.alz) extractor
 
 BUILD_TARGET=		posix-utf8
