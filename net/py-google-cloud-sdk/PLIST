@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/01/11 04:25:41 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/01/24 04:03:23 ryoon Exp $
 ${PYPKGPREFIX}-google-cloud-sdk/.install/bq-nix.manifest
 ${PYPKGPREFIX}-google-cloud-sdk/.install/bq-nix.snapshot.json
 ${PYPKGPREFIX}-google-cloud-sdk/.install/bq.manifest
@@ -1541,14 +1541,14 @@ ${PYPKGPREFIX}-google-cloud-sdk/lib/googlecloudsdk/third_party/appengine/tools/a
 ${PYPKGPREFIX}-google-cloud-sdk/lib/googlecloudsdk/third_party/appengine/tools/appengine_rpc_httplib2.py
 ${PYPKGPREFIX}-google-cloud-sdk/lib/googlecloudsdk/third_party/appengine/tools/appengine_rpc_test_util.py
 ${PYPKGPREFIX}-google-cloud-sdk/lib/googlecloudsdk/third_party/appengine/tools/value_mixin.py
-${PYPKGPREFIX}-google-cloud-sdk/lib/googlecloudsdk/third_party/${PYPKGPREFIX}/__init__.py
-${PYPKGPREFIX}-google-cloud-sdk/lib/googlecloudsdk/third_party/${PYPKGPREFIX}/mirror/__init__.py
-${PYPKGPREFIX}-google-cloud-sdk/lib/googlecloudsdk/third_party/${PYPKGPREFIX}/mirror/_abcoll.py
-${PYPKGPREFIX}-google-cloud-sdk/lib/googlecloudsdk/third_party/${PYPKGPREFIX}/mirror/collections.py
-${PYPKGPREFIX}-google-cloud-sdk/lib/googlecloudsdk/third_party/${PYPKGPREFIX}/mirror/copy.py
-${PYPKGPREFIX}-google-cloud-sdk/lib/googlecloudsdk/third_party/${PYPKGPREFIX}/${PYPKGPREFIX}_collections.py
-${PYPKGPREFIX}-google-cloud-sdk/lib/googlecloudsdk/third_party/${PYPKGPREFIX}/${PYPKGPREFIX}_copy.py
-${PYPKGPREFIX}-google-cloud-sdk/lib/googlecloudsdk/third_party/${PYPKGPREFIX}/${PYPKGPREFIX}_subprocess.py
+${PYPKGPREFIX}-google-cloud-sdk/lib/googlecloudsdk/third_party/py27/__init__.py
+${PYPKGPREFIX}-google-cloud-sdk/lib/googlecloudsdk/third_party/py27/mirror/__init__.py
+${PYPKGPREFIX}-google-cloud-sdk/lib/googlecloudsdk/third_party/py27/mirror/_abcoll.py
+${PYPKGPREFIX}-google-cloud-sdk/lib/googlecloudsdk/third_party/py27/mirror/collections.py
+${PYPKGPREFIX}-google-cloud-sdk/lib/googlecloudsdk/third_party/py27/mirror/copy.py
+${PYPKGPREFIX}-google-cloud-sdk/lib/googlecloudsdk/third_party/py27/py27_collections.py
+${PYPKGPREFIX}-google-cloud-sdk/lib/googlecloudsdk/third_party/py27/py27_copy.py
+${PYPKGPREFIX}-google-cloud-sdk/lib/googlecloudsdk/third_party/py27/py27_subprocess.py
 ${PYPKGPREFIX}-google-cloud-sdk/lib/third_party/__init__.py
 ${PYPKGPREFIX}-google-cloud-sdk/lib/third_party/antlr3/LICENSE
 ${PYPKGPREFIX}-google-cloud-sdk/lib/third_party/antlr3/__init__.py
