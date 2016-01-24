@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.339 2016/01/24 10:40:46 adam Exp $
+$NetBSD: CHANGES-2016,v 1.340 2016/01/24 11:08:05 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -522,3 +522,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/sqlite3 to 3.10.2 [adam 2016-01-24]
 	Updated databases/sqlite3-docs to 3.10.2 [adam 2016-01-24]
 	Updated databases/sqlite3-tcl to 3.10.2 [adam 2016-01-24]
+	Updated sysutils/di to 4.40 [leot 2016-01-24]
