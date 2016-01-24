@@ -1,0 +1,66 @@
+#!/usr/pkg/bin/perl
+# $NetBSD: texlive.pkg.doc,v 1.1 2016/01/24 19:34:44 markd Exp $
+
+$pkgname = $ARGV[0];
+$revision= $ARGV[1];
+$version = $ARGV[2];
+$license = $ARGV[3];
+$homepage = $ARGV[4];
+$pkgdocname = $shortdesc = $revdoc = $longdesc = $depend = "";
+$plist = $other = $maps = "";
+
+while (<STDIN>) {
+      $pkgdocname = $1,next if (/^name (\S+)/);
+      $shortdesc = $1,next if (/^shortdesc +(.+)/);
+      $revdoc = $1,next if (/^revision (\S+)/);
+      $license = $1,next if (/^catalogue-license (\S+)/);
+      $version = $1,next if (/^catalogue-version +(.+)/);
+      next if (/^category /);
+      next if (/^catalogue-ctan /);
+      next if (/^catalogue-date /);
+      next if (/^relocated /);
+      next if (/^runfiles /);
+      next if (/^docfiles /);
+      next if (/^longdesc /);
+      
+      $plist .= "share/texmf-dist$1\n", next if (/^ RELOC(.+)/);
+      $plist .= "share/$1\n",next if (/^ (.+)/);
+
+      $other .= "# " . $_;
+}
+
+die "pkgname doesn't match" if ($pkgname . ".doc" ne $pkgdocname);
+die "revision doesn't match" if ($revision ne $revdoc);
+
+mkdir "tex-${pkgname}-doc";
+
+open(DESCR, ">tex-${pkgname}-doc/DESCR");
+print DESCR "Documentation for tex-${pkgname}.\n";
+close(DESCR);
+
+open(PLIST, ">tex-${pkgname}-doc/PLIST");
+print PLIST "\@comment \$NetBSD\$\n";
+print PLIST "$plist";
+close(PLIST);
+
+open(MAKE, ">tex-${pkgname}-doc/Makefile");
+
+print MAKE <<OUT;
+# \$NetBSD\$
+
+DISTNAME=	${pkgname}.doc
+PKGNAME=	tex-\${DISTNAME:S/./-/}-$version
+TEXLIVE_REV=	$revision
+
+MAINTAINER=	pkgsrc-users\@NetBSD.org
+HOMEPAGE=	http://ctan.org/pkg/$homepage
+COMMENT=	Documentation for tex-${pkgname}
+LICENSE=	$license
+
+.include "../../print/texlive/package.mk"
+.include "../../mk/bsd.pkg.mk"
+OUT
+
+close(MAKE);
+
+exit 0;

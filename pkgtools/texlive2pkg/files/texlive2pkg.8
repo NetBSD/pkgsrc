@@ -1,0 +1,81 @@
+.\"	$NetBSD: texlive2pkg.8,v 1.1 2016/01/24 19:34:44 markd Exp $
+.\"
+.\" Copyright (c) 2016
+.\"	Mark Davies.  All rights reserved.
+.\"
+.\" Redistribution and use in source and binary forms, with or without
+.\" modification, are permitted provided that the following conditions
+.\" are met:
+.\" 1. Redistributions of source code must retain the above copyright
+.\"    notice, this list of conditions and the following disclaimer.
+.\" 2. Redistributions in binary form must reproduce the above copyright
+.\"    notice, this list of conditions and the following disclaimer in the
+.\"    documentation and/or other materials provided with the distribution.
+.\" 3. Neither the name of the author nor the names of any contributors
+.\"    may be used to endorse or promote products derived from this software
+.\"    without specific prior written permission.
+.\"
+.\" THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND
+.\" ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+.\" IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+.\" ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
+.\" FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+.\" DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+.\" OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+.\" HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+.\" LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+.\" OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+.\" SUCH DAMAGE.
+.\"
+.\"
+.Dd January 24, 2016
+.Dt texlive2pkg 8
+.Os
+.Sh NAME
+.Nm texlive2pkg
+.Nd create a pkgsrc package for a texlive package
+.Sh SYNOPSIS
+.Nm
+.Ar package-tarball
+.Op Ar doc-tarball
+.Sh DESCRIPTION
+.Nm
+takes a texlive
+.Ar package-tarball
+and optional 
+.Ar doc-tarball
+that should be turned into
+.Xr pkgsrc 7
+packages under the current directory.  The generated packages include a
+.Pa Makefile
+and a mostly complete set of files to get the package going.  However, the files should be reviewed and perhaps adjusted manually after 
+.Nm
+has finished its job.
+.Pp
+.Nm
+is intended to help the process of creating a package but is not
+intended to fly on autopilot.
+.Sh EXAMPLES
+Use the following commands to create a
+.Xr pkgsrc 7
+package for the texlive package
+.Ar foo :
+.Dl cd pkgsrc/print
+.Dl texlive2pkg foo.tar.xz foo.doc.tar.xz
+Remember to test the resulting package.
+.Sh BUGS
+.Nm
+does not create a finished package; instead, it facilitates the task.
+However, the resulting files must be reviewed and possibly edited by
+hand.  Although dependencies are included in the generated
+.Pa Makefile ,
+they are only comments; no attempt is made to find corresponding
+packages within 
+.Xr pkgsrc 7 .
+As a consequence, the category of dependencies is also not determined.
+.Sh SEE ALSO
+.Xr pkgsrc 7
+.Sh AUTHORS
+.Nm
+was written by
+.An Mark Davies Aq Mt markd@NetBSD.org .
