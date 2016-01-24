@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.21 2015/12/28 11:37:03 adam Exp $
+$NetBSD: patch-aa,v 1.22 2016/01/24 14:34:11 ryoon Exp $
 
 Add support for DragonFly.
 Use 'amd64' as a synonym for 'x86_64'.
 Avoid endian test failure for -flto.
 Do not force compiler optimisations.
 
---- configure.orig	2015-10-24 20:45:04.000000000 +0000
+--- configure.orig	2016-01-23 21:45:04.000000000 +0000
 +++ configure
 @@ -578,6 +578,10 @@ case $host_os in
          SYS="FREEBSD"
@@ -18,7 +18,7 @@ Do not force compiler optimisations.
      kfreebsd*-gnu)
          SYS="FREEBSD"
          define HAVE_MALLOC_H
-@@ -689,7 +693,7 @@ case $host_cpu in
+@@ -678,7 +682,7 @@ case $host_cpu in
              ASFLAGS="$ASFLAGS -f elf32"
          fi
          ;;
@@ -27,7 +27,7 @@ Do not force compiler optimisations.
          ARCH="X86_64"
          AS="${AS-yasm}"
          AS_EXT=".asm"
-@@ -713,14 +717,15 @@ case $host_cpu in
+@@ -702,14 +706,15 @@ case $host_cpu in
          fi
          ;;
      powerpc*)
@@ -44,7 +44,7 @@ Do not force compiler optimisations.
                  CFLAGS="$CFLAGS -maltivec -mabi=altivec"
                  define HAVE_ALTIVEC_H
              fi
-@@ -902,7 +907,7 @@ ASFLAGS="$ASFLAGS -DSTACK_ALIGNMENT=$sta
+@@ -891,7 +896,7 @@ ASFLAGS="$ASFLAGS -DSTACK_ALIGNMENT=$sta
  CPU_ENDIAN="little-endian"
  if [ $compiler = GNU ]; then
      echo "int i[2] = {0x42494745,0}; double f[2] = {0x1.0656e6469616ep+102,0};" > conftest.c
@@ -53,16 +53,16 @@ Do not force compiler optimisations.
      if (${cross_prefix}strings -a conftest.o | grep -q BIGE) && (${cross_prefix}strings -a conftest.o | grep -q FPendian) ; then
          define WORDS_BIGENDIAN
          CPU_ENDIAN="big-endian"
-@@ -927,7 +932,7 @@ fi
- # pthread-win32 is lgpl, prevent its use if --disable-gpl is specified and targeting windows
- [ "$SYS" = "WINDOWS" -a "$gpl" = "no" -a "$thread" = "auto" ] && thread="win32"
+@@ -913,7 +918,7 @@ fi
+ 
+ # autodetect options that weren't forced nor disabled
  
 -libpthread=""
 +libpthread="$PTHREAD_LDFLAGS $PTHREAD_LIBS"
- if [ "$thread" = "auto" ]; then
-     thread="no"
-     case $SYS in
-@@ -1141,10 +1146,10 @@ fi
+ if [ "$SYS" = "WINDOWS" -a "$thread" = "posix" ] ; then
+     if [ "$gpl" = "no" ] ; then
+         echo "Warning: pthread-win32 is LGPL and is therefore not supported with --disable-gpl"
+@@ -1124,10 +1129,10 @@ fi
  cc_check "stdint.h" "" "uint32_t test_vec __attribute__ ((vector_size (16))) = {0,1,2,3};" && define HAVE_VECTOREXT
  
  if [ "$pic" = "yes" ] ; then
@@ -75,7 +75,7 @@ Do not force compiler optimisations.
      [ $SYS = SunOS -a "$ARCH" = "X86" ] && SOFLAGS="$SOFLAGS -mimpure-text"
  fi
  
-@@ -1158,8 +1163,6 @@ fi
+@@ -1141,8 +1146,6 @@ fi
  
  if [ "$debug" = "yes" ]; then
      CFLAGS="-O1 -g $CFLAGS"
@@ -84,7 +84,7 @@ Do not force compiler optimisations.
  fi
  
  if cc_check '' -fno-tree-vectorize ; then
-@@ -1288,7 +1291,7 @@ else # gcc/icc
+@@ -1271,7 +1274,7 @@ else # gcc/icc
      DEPMM="$DEPMM -g0"
      AR="$AR rc "
      LD="$CC -o "
