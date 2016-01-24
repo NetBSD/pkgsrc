@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1149 2016/01/24 10:45:59 wiz Exp $
+# $NetBSD: Makefile,v 1.1150 2016/01/24 17:09:06 leot Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -807,6 +807,7 @@ SUBDIR+=	urlget
 SUBDIR+=	urlgrabber
 SUBDIR+=	varnish
 SUBDIR+=	viewvc
+SUBDIR+=	vimb
 SUBDIR+=	visitors
 SUBDIR+=	w3
 SUBDIR+=	w3c-httpd
