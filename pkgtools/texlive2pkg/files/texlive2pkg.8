@@ -1,4 +1,4 @@
-.\"	$NetBSD: texlive2pkg.8,v 1.1 2016/01/24 19:34:44 markd Exp $
+.\"	$NetBSD: texlive2pkg.8,v 1.2 2016/01/24 19:45:30 wiz Exp $
 .\"
 .\" Copyright (c) 2016
 .\"	Mark Davies.  All rights reserved.
@@ -29,7 +29,7 @@
 .\"
 .\"
 .Dd January 24, 2016
-.Dt texlive2pkg 8
+.Dt TEXLIVE2PKG 8
 .Os
 .Sh NAME
 .Nm texlive2pkg
@@ -42,13 +42,15 @@
 .Nm
 takes a texlive
 .Ar package-tarball
-and optional 
+and optional
 .Ar doc-tarball
 that should be turned into
 .Xr pkgsrc 7
-packages under the current directory.  The generated packages include a
+packages under the current directory.
+The generated packages include a
 .Pa Makefile
-and a mostly complete set of files to get the package going.  However, the files should be reviewed and perhaps adjusted manually after 
+and a mostly complete set of files to get the package going.
+However, the files should be reviewed and perhaps adjusted manually after
 .Nm
 has finished its job.
 .Pp
@@ -63,19 +65,20 @@ package for the texlive package
 .Dl cd pkgsrc/print
 .Dl texlive2pkg foo.tar.xz foo.doc.tar.xz
 Remember to test the resulting package.
-.Sh BUGS
-.Nm
-does not create a finished package; instead, it facilitates the task.
-However, the resulting files must be reviewed and possibly edited by
-hand.  Although dependencies are included in the generated
-.Pa Makefile ,
-they are only comments; no attempt is made to find corresponding
-packages within 
-.Xr pkgsrc 7 .
-As a consequence, the category of dependencies is also not determined.
 .Sh SEE ALSO
 .Xr pkgsrc 7
 .Sh AUTHORS
 .Nm
 was written by
 .An Mark Davies Aq Mt markd@NetBSD.org .
+.Sh BUGS
+.Nm
+does not create a finished package; instead, it facilitates the task.
+However, the resulting files must be reviewed and possibly edited by
+hand.
+Although dependencies are included in the generated
+.Pa Makefile ,
+they are only comments; no attempt is made to find corresponding
+packages within
+.Xr pkgsrc 7 .
+As a consequence, the category of dependencies is also not determined.
