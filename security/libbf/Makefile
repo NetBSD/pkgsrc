@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2013/04/08 11:17:21 rodent Exp $
+# $NetBSD: Makefile,v 1.17 2016/01/24 16:14:45 jperkin Exp $
 #
 
 DISTNAME=	libbf-0.8.2b
@@ -14,7 +14,7 @@ CRYPTO=		YES
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${LOWER_ARCH} == "i386" && ${OBJECT_FMT} == "ELF"
+.if ${MACHINE_ARCH} == "i386" && ${OBJECT_FMT} == "ELF"
 BF_ENC=asm/bx86-elf.o
 .else
 BF_ENC=bf_enc.o
