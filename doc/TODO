@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15343 2016/01/24 08:20:08 wiz Exp $
+$NetBSD: TODO,v 1.15344 2016/01/24 11:00:15 wiz Exp $
 
 Suggested new packages
 ======================
@@ -825,6 +825,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o groonga-5.0.6
 	o gsharutils-4.15.2
 	o gss-1.0.3
+	o gst-plugins1-base-1.6.3
 	o gthumb-3.4.0
 	o gtk-gnutella-0.98.4
 	o gtk-systrace-20030623
@@ -1434,6 +1435,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-djangorestframework-2.3.12
 	o py-doctor-15.0.0
 	o py-flake8-2.4.1
+	o py-foolscap-0.10.1
 	o py-gmpy-1.17
 	o py-gnome-menus-3.8.0
 	o py-html2text-2016.1.8
@@ -1457,6 +1459,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-proteus-3.6.1
 	o py-ptt-1.10.2
 	o py-quixote-2.8
+	o py-radare2-0.10.0
 	o py-reportlab-3.0
 	o py-rope-0.9.4
 	o py-serpent-1.11
@@ -1469,9 +1472,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-stdnum-1.1
 	o py-suds-0.4.1
 	o py-sybase-0.37
+	o py-test-2.8.6
 	o py-tlslite-0.4.6
 	o py-uliweb-0.4.1
 	o py-uwsgi-2.0.11.1
+	o py-virtualenv-14.0.1
 	o py-wxWidgets-3.0.0
 	o py-yubiauth-0.3.10
 	o py-zconfig-3.0.3
@@ -1487,6 +1492,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o qt4-creator-3.4.0
 	o quodlibet2-3.4.1
 	o racket-6.3
+	o radare2-0.10.0
+	o radare2-valabind-0.10.0
 	o radiance-4R1
 	o rails-4.1.5
 	o rainbowcrack-1.5
@@ -1746,7 +1753,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wpa_supplicant-2.4
 	o wwwoffle-2.9i
 	o wxRemind-101
-	o x264-devel-20160116
+	o x264-devel-20160123
 	o x2vnc-1.31
 	o xa65-2.3.7
 	o xbindkeys-1.8.6
