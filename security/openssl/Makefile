@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.218 2015/12/11 10:20:13 jperkin Exp $
+# $NetBSD: Makefile,v 1.219 2016/01/24 16:14:45 jperkin Exp $
 
 DISTNAME=	openssl-1.0.2e
 CATEGORIES=	security
@@ -40,7 +40,9 @@ CC=			gcc
 
 .if ${OPSYS} == "SunOS"
 .  if ${MACHINE_ARCH} == "sparc"
-OPENSSL_MACHINE_ARCH=	${SPARC_TARGET_ARCH}
+OPENSSL_MACHINE_ARCH=	sparcv7
+.  elif ${MACHINE_ARCH} == "sparc64"
+OPENSSL_MACHINE_ARCH=	sparcv9
 .  elif ${MACHINE_ARCH} == "i386"
 OPENSSL_MACHINE_ARCH=	x86
 .  elif ${MACHINE_ARCH} == "x86_64"
