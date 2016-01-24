@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2016/01/17 20:17:21 leot Exp $
+# $NetBSD: Makefile,v 1.40 2016/01/24 11:18:48 wiz Exp $
 
-DISTNAME=	cups-filters-1.6.0
+DISTNAME=	cups-filters-1.8.1
 CATEGORIES=	print
 MASTER_SITES=	http://openprinting.org/download/cups-filters/
 EXTRACT_SUFX=	.tar.xz
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND mit
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	bash:run pkg-config
+USE_TOOLS+=	bash:run pkg-config gmake
 USE_LANGUAGES=	c c++
 
 BUILD_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
@@ -24,6 +24,12 @@ PKGCONFIG_OVERRIDE+=	libfontembed.pc.in
 CONFLICTS+=	cups<1.6
 
 REPLACE_BASH+=	filter/textonly
+REPLACE_BASH+=	filter/braille/drivers/generic/brftoembosser.in
+REPLACE_BASH+=	filter/braille/drivers/index/imageubrltoindexv3.in
+REPLACE_BASH+=	filter/braille/drivers/index/imageubrltoindexv4.in
+REPLACE_BASH+=	filter/braille/drivers/index/textbrftoindexv3.in
+REPLACE_BASH+=	filter/braille/filters/imagetobrf.in
+REPLACE_BASH+=	filter/braille/filters/texttobrf.in
 
 .include "../../mk/bsd.prefs.mk"
 
