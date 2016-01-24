@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2013/01/30 12:29:06 obache Exp $
+# $NetBSD: Makefile,v 1.2 2016/01/24 11:07:49 leot Exp $
 #
 
-DISTNAME=	di-4.34
+DISTNAME=	di-4.40
 CATEGORIES=	sysutils
 MASTER_SITES=	http://gentoo.com/di/
 
