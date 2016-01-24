@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2015/12/29 04:54:38 dholland Exp $
+# $NetBSD: Makefile,v 1.8 2016/01/24 16:14:45 jperkin Exp $
 
 DISTNAME=	elementary-1.7.7
 PKGREVISION=	4
@@ -26,7 +26,7 @@ MAKEFLAGS+=	AUTOMAKE="automake -af"
 PKGCONFIG_OVERRIDE=	elementary
 
 # currently it is like it is
-MODULE_ARCH=	${LOWER_OPSYS}-${LOWER_ARCH}-1.7.7
+MODULE_ARCH=	${LOWER_OPSYS}-${MACHINE_ARCH}-1.7.7
 PLIST_SUBST=	MODULE_ARCH=${MODULE_ARCH}
 PRINT_PLIST_AWK+=	 { gsub(/${MODULE_ARCH}/, "$${MODULE_ARCH}") }
 
