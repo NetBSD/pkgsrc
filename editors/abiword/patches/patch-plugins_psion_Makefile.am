@@ -1,4 +1,4 @@
-$NetBSD: patch-plugins_psion_Makefile.am,v 1.1 2015/09/13 21:32:13 nros Exp $
+$NetBSD: patch-plugins_psion_Makefile.am,v 1.2 2016/01/24 15:30:47 nros Exp $
 GCC 4.6+ chokes on "--no-undefined" which older versions of GCC let fall 
 to the linker.  Prefix with "-Wl," to fix build.
 Use CXX for linking.
@@ -9,7 +9,7 @@ Use CXX for linking.
  	-avoid-version \
  	-module \
 -	-no-undefined
-+	-Wl,-no-undefined
++	-Wl,--no-undefined
  
  psion_la_SOURCES = 
 +nodist_EXTRA_psion_la_SOURCES = dummy.cpp
