@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.341 2016/01/24 11:18:58 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.342 2016/01/24 14:35:00 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -524,3 +524,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/sqlite3-tcl to 3.10.2 [adam 2016-01-24]
 	Updated sysutils/di to 4.40 [leot 2016-01-24]
 	Updated print/cups-filters to 1.8.1 [wiz 2016-01-24]
+	Updated multimedia/x264-devel to 20160123 [ryoon 2016-01-24]
