@@ -117,6 +117,14 @@ func (s *Suite) CreateTmpFile(c *check.C, relFname, content string) (absFname st
 	return
 }
 
+func (s *Suite) CreateTmpFileLines(c *check.C, relFname string, rawTexts ...string) (absFname string) {
+	text := ""
+	for _, rawText := range rawTexts {
+		text += rawText + "\n"
+	}
+	return s.CreateTmpFile(c, relFname, text)
+}
+
 func (s *Suite) LoadTmpFile(c *check.C, relFname string) string {
 	bytes, err := ioutil.ReadFile(s.tmpdir + "/" + relFname)
 	c.Assert(err, check.IsNil)
