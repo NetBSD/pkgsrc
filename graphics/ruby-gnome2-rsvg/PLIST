@@ -1,4 +1,23 @@
-@comment $NetBSD: PLIST,v 1.4 2009/10/12 03:09:32 obache Exp $
-lib/pkgconfig/ruby-rsvg2.pc
-${RUBY_VENDORLIB}/rsvg2.rb
-${RUBY_VENDORARCHLIB}/rsvg2.${RUBY_DLEXT}
+@comment $NetBSD: PLIST,v 1.5 2016/01/24 05:03:23 tsutsui Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/gem.build_complete
+${GEM_EXTSDIR}/rsvg2.${RUBY_DLEXT}
+${GEM_LIBDIR}/README
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/ext/rsvg2/depend
+${GEM_LIBDIR}/ext/rsvg2/extconf.rb
+${GEM_LIBDIR}/ext/rsvg2/rbrsvg.c
+${GEM_LIBDIR}/ext/rsvg2/rbrsvgdimensiondata.c
+${GEM_LIBDIR}/ext/rsvg2/rbrsvghandle.c
+${GEM_LIBDIR}/ext/rsvg2/rsvg2.def
+${GEM_LIBDIR}/ext/rsvg2/rsvg2.h
+${GEM_LIBDIR}/extconf.rb
+${GEM_LIBDIR}/lib/rsvg2.rb
+${GEM_LIBDIR}/lib/rsvg2.${RUBY_DLEXT}
+${GEM_LIBDIR}/sample/svg-viewer.rb
+${GEM_LIBDIR}/sample/svg2.rb
+${GEM_LIBDIR}/test/rsvg2-test-utils.rb
+${GEM_LIBDIR}/test/run-test.rb
+${GEM_LIBDIR}/test/test-handle.rb
+${GEM_LIBDIR}/test/test-version.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
