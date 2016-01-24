@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1148 2016/01/21 20:27:37 jperkin Exp $
+# $NetBSD: Makefile,v 1.1149 2016/01/24 10:45:59 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -494,9 +494,7 @@ SUBDIR+=	p5-Test-HTTP-Server-Simple
 SUBDIR+=	p5-Test-WWW-Declare
 SUBDIR+=	p5-Test-WWW-Mechanize
 SUBDIR+=	p5-Test-WWW-Mechanize-Catalyst
-SUBDIR+=	p5-Test-WWW-Mechanize-FormFiller
 SUBDIR+=	p5-Test-WWW-Mechanize-PSGI
-SUBDIR+=	p5-Test-WWW-Mechanize-Shell
 SUBDIR+=	p5-Twiggy
 SUBDIR+=	p5-URI
 SUBDIR+=	p5-URI-Escape-XS
@@ -512,7 +510,9 @@ SUBDIR+=	p5-WWW-Curl
 SUBDIR+=	p5-WWW-Facebook-API
 SUBDIR+=	p5-WWW-Mechanize
 SUBDIR+=	p5-WWW-Mechanize-Cached
+SUBDIR+=	p5-WWW-Mechanize-FormFiller
 SUBDIR+=	p5-WWW-Mechanize-GZip
+SUBDIR+=	p5-WWW-Mechanize-Shell
 SUBDIR+=	p5-WWW-Mechanize-Timed
 SUBDIR+=	p5-WWW-Pastebin-PastebinCom-Create
 SUBDIR+=	p5-WWW-Pastebin-RafbNet-Create
