@@ -1,4 +1,29 @@
-@comment $NetBSD: PLIST,v 1.3 2009/10/12 03:09:33 obache Exp $
-lib/pkgconfig/ruby-gtksourceview2.pc
-${RUBY_VENDORLIB}/gtksourceview2.rb
-${RUBY_VENDORARCHLIB}/gtksourceview2.${RUBY_DLEXT}
+@comment $NetBSD: PLIST,v 1.4 2016/01/24 05:03:24 tsutsui Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/gem.build_complete
+${GEM_EXTSDIR}/gtksourceview2.${RUBY_DLEXT}
+${GEM_LIBDIR}/README
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/ext/gtksourceview2/depend
+${GEM_LIBDIR}/ext/gtksourceview2/extconf.rb
+${GEM_LIBDIR}/ext/gtksourceview2/gtksourceview2.def
+${GEM_LIBDIR}/ext/gtksourceview2/rbgtksourcebuffer.c
+${GEM_LIBDIR}/ext/gtksourceview2/rbgtksourceiter.c
+${GEM_LIBDIR}/ext/gtksourceview2/rbgtksourcelanguage.c
+${GEM_LIBDIR}/ext/gtksourceview2/rbgtksourcelanguagemanager.c
+${GEM_LIBDIR}/ext/gtksourceview2/rbgtksourcemain.c
+${GEM_LIBDIR}/ext/gtksourceview2/rbgtksourcemain.h
+${GEM_LIBDIR}/ext/gtksourceview2/rbgtksourcemark.c
+${GEM_LIBDIR}/ext/gtksourceview2/rbgtksourceprintcompositor.c
+${GEM_LIBDIR}/ext/gtksourceview2/rbgtksourcestyle.c
+${GEM_LIBDIR}/ext/gtksourceview2/rbgtksourcestylescheme.c
+${GEM_LIBDIR}/ext/gtksourceview2/rbgtksourcestyleschememanager.c
+${GEM_LIBDIR}/ext/gtksourceview2/rbgtksourceview.c
+${GEM_LIBDIR}/extconf.rb
+${GEM_LIBDIR}/lib/gtksourceview2.rb
+${GEM_LIBDIR}/lib/gtksourceview2.${RUBY_DLEXT}
+${GEM_LIBDIR}/sample/sourcelanguagemanager.rb
+${GEM_LIBDIR}/sample/test.rb
+${GEM_LIBDIR}/test/run-test.rb
+${GEM_LIBDIR}/test/test_source_view.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec

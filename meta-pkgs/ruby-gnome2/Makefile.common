@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.48 2015/12/13 10:52:15 tsutsui Exp $
+# $NetBSD: Makefile.common,v 1.49 2016/01/24 05:03:23 tsutsui Exp $
 #
 # used by devel/ruby-gnome2-atk/Makefile
 # used by devel/ruby-gnome2-gio/Makefile
@@ -22,26 +22,10 @@
 # used by x11/ruby-gnome2-gtksourceview3/Makefile
 # used by x11/ruby-gnome2-vte/Makefile
 
-DISTNAME=		ruby-gnome2-all-${VERSION}
 CATEGORIES+=		ruby
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ruby-gnome2/}
 
-DISTINFO_FILE=		${.CURDIR}/../../meta-pkgs/ruby-gnome2/distinfo
-PATCHDIR=		${.CURDIR}/../../meta-pkgs/ruby-gnome2/patches
-
-MAINTAINER=		pkgsrc-users@NetBSD.org
+MAINTAINER=		tsutsui@NetBSD.org
 HOMEPAGE=		http://ruby-gnome2.osdn.jp/
 LICENSE=		gnu-lgpl-v2.1
 
 VERSION=		3.0.7
-USE_RUBY_EXTCONF?=	yes
-CONFIGURE_ENV+=		RUBYOPT="-Ku"
-
-INSTALL_TARGET=		install
-
-.if defined(USE_RUBY_EXTCONF) && empty(USE_RUBY_EXTCONF:M[Nn][Oo])
-CONFIGURE_ARGS+=	--with-pkg-config-dir=${DESTDIR:Q}${PREFIX:Q}/lib/pkgconfig
-.endif
-
-.include "../../lang/ruby/modules.mk"
-.include "../../mk/bsd.pkg.mk"

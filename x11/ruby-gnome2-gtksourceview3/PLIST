@@ -1,5 +1,13 @@
-@comment $NetBSD: PLIST,v 1.2 2015/12/13 10:52:16 tsutsui Exp $
-${RUBY_VENDORLIB}/gtksourceview3.rb
-${RUBY_VENDORLIB}/gtksourceview3/deprecated.rb
-${RUBY_VENDORLIB}/gtksourceview3/loader.rb
-${RUBY_VENDORLIB}/gtksourceview3/mark-attributes.rb
+@comment $NetBSD: PLIST,v 1.3 2016/01/24 05:03:24 tsutsui Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/lib/gtksourceview3.rb
+${GEM_LIBDIR}/lib/gtksourceview3/deprecated.rb
+${GEM_LIBDIR}/lib/gtksourceview3/loader.rb
+${GEM_LIBDIR}/lib/gtksourceview3/mark-attributes.rb
+${GEM_LIBDIR}/test/run-test.rb
+${GEM_LIBDIR}/test/test-mark-attributes.rb
+${GEM_LIBDIR}/test/test-source-gutter-renderer.rb
+${GEM_LIBDIR}/test/test-source-language-manager.rb
+${GEM_LIBDIR}/test/test-source-view.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec

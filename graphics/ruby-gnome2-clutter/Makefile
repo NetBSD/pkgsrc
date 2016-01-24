@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2014/12/30 08:53:44 obache Exp $
+# $NetBSD: Makefile,v 1.3 2016/01/24 05:03:23 tsutsui Exp $
 #
 
-PKGNAME=		${RUBY_PKGPREFIX}-gnome2-clutter-${VERSION}
+DISTNAME=		clutter-${VERSION}
+PKGNAME=		${RUBY_PKGPREFIX}-gnome2-${DISTNAME}
+PKGREVISION=		1
 COMMENT=		Ruby binding of Clutter
 CATEGORIES=		graphics
 
@@ -10,13 +12,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-pango>=${VERSION}:../../devel/ruby-gnome2-pan
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-cairo-gobject>=${VERSION}:../../graphics/ruby-gnome2-cairo-gobject
 DEPENDS+=	clutter>=1.0:../../graphics/clutter
 
-RUBY_SETUP_SUBDIRS=	clutter
-
-USE_RUBY_EXTCONF=	no
-USE_RUBY_SETUP=		yes
-USE_RUBY_SETUP_PKG=	yes
-
-do-test:
-	${RUN} cd ${WRKSRC}/clutter/test; ${SETENV} ${TEST_ENV} ${RUBY} run-test.rb
-
+.include "../../graphics/clutter/buildlink3.mk"
 .include "../../meta-pkgs/ruby-gnome2/Makefile.common"
+.include "../../lang/ruby/gem.mk"
+.include "../../mk/bsd.pkg.mk"

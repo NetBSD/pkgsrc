@@ -1,21 +1,17 @@
-# $NetBSD: Makefile,v 1.1 2014/01/05 09:15:59 obache Exp $
+# $NetBSD: Makefile,v 1.2 2016/01/24 05:03:23 tsutsui Exp $
 #
 
-PKGNAME=		${RUBY_PKGPREFIX}-gnome2-clutter-gstreamer-${VERSION}
+DISTNAME=		clutter-gstreamer-${VERSION}
+PKGNAME=		${RUBY_PKGPREFIX}-gnome2-${DISTNAME}
+PKGREVISION=		1
 COMMENT=		Ruby binding of Clutter-GStreamer
 CATEGORIES=		graphics
 
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-clutter>=${VERSION}:../../graphics/ruby-gnome2-clutter
+DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gdkpixbuf>=${VERSION}:../../graphics/ruby-gnome2-gdkpixbuf
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gstreamer>=${VERSION}:../../multimedia/ruby-gnome2-gstreamer
 DEPENDS+=	clutter-gst>=2.0:../../multimedia/clutter-gst
 
-RUBY_SETUP_SUBDIRS=	clutter-gstreamer
-
-USE_RUBY_EXTCONF=	no
-USE_RUBY_SETUP=		yes
-USE_RUBY_SETUP_PKG=	yes
-
-do-test:
-	${RUN} cd ${WRKSRC}/clutter-gstreamer/test; ${SETENV} ${TEST_ENV} ${RUBY} run-test.rb
-
 .include "../../meta-pkgs/ruby-gnome2/Makefile.common"
+.include "../../lang/ruby/gem.mk"
+.include "../../mk/bsd.pkg.mk"
