@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.126 2015/12/31 12:06:34 adam Exp $
+# $NetBSD: Makefile,v 1.127 2016/01/24 13:46:49 richard Exp $
 
 DISTNAME=	nmap-7.01
 CATEGORIES=	net security
@@ -25,6 +25,8 @@ CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 CONFIGURE_ARGS+=	--without-subversion
 
 BUILD_DEFS+=		IPV6_READY
+
+TEST_TARGET+=		check
 
 .include "options.mk"
 
@@ -58,6 +60,11 @@ CFLAGS.SunOS+=	-D__FUNCTION__=__FILE__
 pre-build:
 	${ECHO} "# ignored" > ${WRKSRC}/makefile.dep
 .endif
+
+# Remove eventual uninstall_ndiff and/or uninstall_zenmap files.
+# This also avoids check-interpreter.mk issues with "/usr/bin/env python".
+post-install:
+	${RM} -f ${DESTDIR}${PREFIX}/bin/uninstall_*
 
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../math/liblinear/buildlink3.mk"

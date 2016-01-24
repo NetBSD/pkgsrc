@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.21 2015/11/20 15:37:40 adam Exp $
+@comment $NetBSD: PLIST,v 1.22 2016/01/24 13:46:49 richard Exp $
 bin/ncat
 ${PLIST.ndiff}bin/ndiff
+${PLIST.ndiff}${PYSITELIB}/ndiff.py
+${PLIST.ndiff}${PYSITELIB}/ndiff.pyc
 bin/nmap
 ${PLIST.zenmap}bin/nmapfe
 bin/nping
-${PLIST.zenmap}bin/uninstall_zenmap
 ${PLIST.zenmap}bin/xnmap
 ${PLIST.zenmap}bin/zenmap
 ${PLIST.zenmap}${PYSITELIB}/radialnet/__init__.py
@@ -75,6 +76,8 @@ ${PLIST.zenmap}${PYSITELIB}/radialnet/util/misc.py
 ${PLIST.zenmap}${PYSITELIB}/radialnet/util/misc.pyc
 ${PLIST.zenmap}${PYSITELIB}/zenmapCore/BasePaths.py
 ${PLIST.zenmap}${PYSITELIB}/zenmapCore/BasePaths.pyc
+${PLIST.zenmap}${PYSITELIB}/zenmapCore/DelayedObject.py
+${PLIST.zenmap}${PYSITELIB}/zenmapCore/DelayedObject.pyc
 ${PLIST.zenmap}${PYSITELIB}/zenmapCore/Diff.py
 ${PLIST.zenmap}${PYSITELIB}/zenmapCore/Diff.pyc
 ${PLIST.zenmap}${PYSITELIB}/zenmapCore/I18N.py
@@ -930,12 +933,14 @@ ${PLIST.zenmap}share/zenmap/config/zenmap_version
 ${PLIST.zenmap}share/zenmap/docs/help.html
 ${PLIST.zenmap}share/zenmap/locale/de/LC_MESSAGES/zenmap.mo
 ${PLIST.zenmap}share/zenmap/locale/fr/LC_MESSAGES/zenmap.mo
+${PLIST.zenmap}share/zenmap/locale/hi/LC_MESSAGES/zenmap.mo
 ${PLIST.zenmap}share/zenmap/locale/hr/LC_MESSAGES/zenmap.mo
 ${PLIST.zenmap}share/zenmap/locale/it/LC_MESSAGES/zenmap.mo
 ${PLIST.zenmap}share/zenmap/locale/ja/LC_MESSAGES/zenmap.mo
 ${PLIST.zenmap}share/zenmap/locale/pl/LC_MESSAGES/zenmap.mo
 ${PLIST.zenmap}share/zenmap/locale/pt_BR/LC_MESSAGES/zenmap.mo
 ${PLIST.zenmap}share/zenmap/locale/ru/LC_MESSAGES/zenmap.mo
+${PLIST.zenmap}share/zenmap/locale/zh/LC_MESSAGES/zenmap.mo
 ${PLIST.zenmap}share/zenmap/misc/profile_editor.xml
 ${PLIST.zenmap}share/zenmap/pixmaps/default_32.png
 ${PLIST.zenmap}share/zenmap/pixmaps/default_75.png
