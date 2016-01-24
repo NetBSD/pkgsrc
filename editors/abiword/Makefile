@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.156 2015/09/21 11:28:45 nros Exp $
+# $NetBSD: Makefile,v 1.157 2016/01/24 15:30:46 nros Exp $
 
 .include 	"Makefile.common"
 DISTNAME=	abiword-${ABIVERSION}
@@ -30,6 +30,8 @@ PKGCONFIG_OVERRIDE+=	libabiword.pc.in
 pre-configure:
 	cd ${WRKSRC}; \
 	autoreconf --force --install
+
+BUILDLINK_TRANSFORM+=	opt:-no-undefined:-Wl,--no-undefined
 
 .include "options.mk"
 
