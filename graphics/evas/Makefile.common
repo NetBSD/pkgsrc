@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2015/03/17 21:30:27 joerg Exp $
+# $NetBSD: Makefile.common,v 1.15 2016/01/24 16:14:44 jperkin Exp $
 
 # used by graphics/evas-buffer/Makefile
 # used by graphics/evas-edb/Makefile
@@ -58,7 +58,7 @@ CONFIGURE_ARGS+=	--enable-cpu-altivec
 .endif
 
 # currently it is like it is
-MODULE_ARCH=	${LOWER_OPSYS}-${LOWER_ARCH}-${EVAS_VERSION}
+MODULE_ARCH=	${LOWER_OPSYS}-${MACHINE_ARCH}-${EVAS_VERSION}
 PLIST_SUBST=	MODULE_ARCH=${MODULE_ARCH}
 PRINT_PLIST_AWK+=        { gsub(/${MODULE_ARCH}/, "$${MODULE_ARCH}") }
 
