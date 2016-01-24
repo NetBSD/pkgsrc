@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2013/01/11 00:04:22 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2016/01/24 16:14:45 jperkin Exp $
 
 DISTNAME=	traceroute-nanog_6.4.2.orig
 PKGNAME=	${DISTNAME:S/.orig//:S/_/-/}
@@ -26,7 +26,7 @@ USE_FEATURES+=	snprintf
 CPPFLAGS+=	-DSOLARIS
 LIBS+=	-lresolv -lsocket -lnsl
 .endif
-.if ${LOWER_ARCH} == "i386"
+.if ${MACHINE_ARCH} == "i386"
 CPPFLAGS+=	-DBYTESWAP_IP_LEN
 .endif
 .endif

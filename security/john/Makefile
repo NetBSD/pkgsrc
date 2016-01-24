@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2014/09/14 13:20:08 shattered Exp $
+# $NetBSD: Makefile,v 1.23 2016/01/24 16:14:45 jperkin Exp $
 #
 
 DISTNAME=	john-1.8.0
@@ -18,18 +18,15 @@ TEST_TARGET=	check
 .include "../../mk/compiler.mk"
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "SunOS" && ${MACHINE_ARCH} == "sparc"
-.  if !empty(CC_VERSION:MSun)
-.    if defined(SPARC_TARGET_ARCH) && ${SPARC_TARGET_ARCH} == "sparcv9"
-BUILD_TARGET=	solaris-sparc-v9-cc
-.    else
-BUILD_TARGET=	solaris-sparc-v8-cc
-.    endif
-.  else
-BUILD_TARGET=	solaris-sparc-gcc
-.  endif
-.elif ${OPSYS} == "SunOS" && ${MACHINE_ARCH} == "i386"
-BUILD_TARGET=	solaris-x86-any
+.if ${OPSYS} == "SunOS"
+.  if ${MACHINE_ARCH} == "sparc"
+BUILD_TARGET=	solaris-sparc-${${PKGSRC_COMPILER}==gcc:?gcc:cc}
+.  elif ${MACHINE_ARCH} == "sparc64"
+BUILD_TARGET=	solaris-sparcv9-${${PKGSRC_COMPILER}==gcc:?gcc:cc}
+.  elif ${MACHINE_ARCH} == "i386"
+BUILD_TARGET=	solaris-x86-any-${${PKGSRC_COMPILER}==gcc:?gcc:cc}
+.  elif ${MACHINE_ARCH} == "x86_64"
+BUILD_TARGET=	solaris-x86_64-${${PKGSRC_COMPILER}==gcc:?gcc:cc}
 .elif ${OPSYS} == "NetBSD"
 .  if ${MACHINE_ARCH} == "i386"
 BUILD_TARGET=	openbsd-x86-any

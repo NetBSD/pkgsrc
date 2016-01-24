@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2015/10/20 10:30:54 jperkin Exp $
+# $NetBSD: Makefile,v 1.20 2016/01/24 16:14:44 jperkin Exp $
 
 DISTNAME=		gcc-${GCC_VERSION}
 PKGNAME=		gcc45-${GCC_VERSION}
@@ -118,7 +118,7 @@ CFLAGS+=		-I${BUILDLINK_DIR}/include
 
 # Somone should fix this so it will match the NetBSD system compiler
 #.if ${OPSYS} == "NetBSD"
-#GCC_PLATFORM=	${LOWER_ARCH}--${LOWER_OPSYS}${APPEND_ELF}
+#GCC_PLATFORM=	${MACHINE_ARCH}--${LOWER_OPSYS}${APPEND_ELF}
 #CONFIGURE_ARGS+=	--host=${GCC_PLATFORM:Q}
 #MAKE_ENV+=		AR=/usr/bin/ar
 #.endif # NetBSD

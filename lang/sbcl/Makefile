@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2015/12/09 22:48:10 asau Exp $
+# $NetBSD: Makefile,v 1.64 2016/01/24 16:14:44 jperkin Exp $
 
 DISTNAME=		${PKGNAME_NOREV}-source
 PKGNAME=		sbcl-1.3.1
@@ -94,7 +94,7 @@ do-test:
 #	for f in compiler.pure.lisp interface.pure.lisp compiler.impure.lisp debug.impure.lisp interface.impure.lisp; do mv ${WRKSRC}/tests/$$f ${WRKSRC}/tests/$$f.off || :; done
 	cd ${WRKSRC}/tests && ${SH} ./run-tests.sh
 
-.if $(LOWER_ARCH) == "amd64" || $(LOWER_ARCH) == "x86_64"
+.if ${MACHINE_ARCH} == "x86_64"
 PLIST_SUBST+=	SUFX64=-64
 .else
 PLIST_SUBST+=	SUFX64=

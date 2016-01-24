@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2015/08/18 07:31:16 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2016/01/24 16:14:45 jperkin Exp $
 
 DISTNAME=	nn-6.7.3
 PKGREVISION=	4
@@ -30,7 +30,7 @@ MFILE=		m-i80386.h
 .elif ${MACHINE_ARCH} == "mipseb"
 MFILE=         m-mipsel.h
 .else
-MFILE=		m-${LOWER_ARCH}.h
+MFILE=		m-${MACHINE_ARCH}.h
 .endif
 
 .if ${OPSYS} == "IRIX"

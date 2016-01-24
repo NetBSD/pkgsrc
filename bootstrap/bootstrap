@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.226 2016/01/06 17:59:58 jperkin Exp $
+# $NetBSD: bootstrap,v 1.227 2016/01/24 16:14:44 jperkin Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -76,10 +76,6 @@ usage="Usage: $0 "'
     [ --varbase <varbase> ]
     [ --workdir <workdir> ]
 '
-
-# this replicates some of the logic in bsd.prefs.mk. until
-# bootstrap-pkgsrc is merged into pkgsrc, we need to determine the
-# right value for OPSYS and MACHINE_ARCH.
 
 # strip / for BSD/OS, strip - for HP-UX
 opsys=`uname -s | tr -d /-`
@@ -183,15 +179,6 @@ get_abi()
 	fi
 
 	case "$abi_opsys" in
-	Darwin)
-		if [ -z "$abi" ]; then
-			case `uname -m` in
-			x86_64)
-				abi="64"
-				;;
-			esac
-		fi
-		;;
 	IRIX)
 		if [ `uname -r` -ge 6 ]; then
 		abi=`sed -e 's/.*\(abi=\)\([on]*[36][24]\).*/\2/' /etc/compiler.defaults`
@@ -224,6 +211,24 @@ get_machine_arch_aix()
 	else
 		echo powerpc
 	fi
+}
+
+get_machine_arch_darwin()
+{
+	case `uname -p` in
+	i386)
+		# Returns "i386" or "x86_64" depending on CPU
+		echo `uname -m`
+		;;
+	powerpc)
+		# sysctl mib exists on 64-bit hardware
+		if [ `sysctl -n hw.optional.64bitops 2>/dev/null` = "1" ]; then
+			echo "powerpc64"
+		else
+			echo "powerpc"
+		fi
+		;;
+	esac
 }
 
 check_prog()
@@ -503,7 +508,6 @@ overpath=""
 root_user=root
 bmakexargs=
 need_extras=no
-set_machine_arch=no
 use_bsdinstall=
 case "$opsys" in
 AIX)
@@ -523,10 +527,6 @@ Bitrig)
 	need_sed=no
 	set_opsys=no
 	machine_arch=`arch -s`
-	if [ "$machine_arch" = "amd64" ]; then
-		machine_arch=x86_64
-		bmakexargs="MACHINE_ARCH=$machine_arch"
-	fi
 	check_compiler=yes
 	;;
 CYGWIN_*)
@@ -554,11 +554,7 @@ Darwin)
 	need_awk=no
 	need_sed=no
 	set_opsys=no
-	get_abi "Darwin"
-	machine_arch=`uname -p`
-	if [ "$machine_arch" = "i386" -a "$abi" = "64" ]; then
-		machine_arch=x86_64
-	fi
+	machine_arch=`get_machine_arch_darwin`
 	CC=${CC:-"cc -isystem /usr/include"}; export CC
 	check_compiler=yes
 	osrev=`uname -r`
@@ -590,10 +586,6 @@ DragonFly)
 	set_opsys=no
 	check_prog tarprog tar
 	machine_arch=`uname -p`
-	if [ "$machine_arch" = "amd64" ]; then
-		machine_arch=x86_64
-		bmakexargs="MACHINE_ARCH=$machine_arch"
-	fi
 	;;
 FreeBSD)
 	root_group=wheel
@@ -602,10 +594,6 @@ FreeBSD)
 	need_sed=no
 	set_opsys=no
 	machine_arch=`uname -p`
-	if [ "$machine_arch" = "amd64" ]; then
-		machine_arch=x86_64
-		bmakexargs="MACHINE_ARCH=$machine_arch"
-	fi
 	check_compiler=yes
 	;;
 FreeMiNT)
@@ -705,7 +693,6 @@ IRIX*)
 	need_sed=yes
 	set_opsys=yes
 	machine_arch=mipseb
-	bmakexargs="MACHINE_ARCH=$machine_arch"
 	check_compiler=yes
 	if [ `uname -r` -lt 6 ]; then
 # IRIX 5's mkdir bails out with an error when trying to create with the -p
@@ -730,12 +717,6 @@ Linux)
 	need_sed=no
 	set_opsys=no
 	machine_arch=`uname -m | sed -e 's/i.86/i386/'`
-	# Support multiarch systems.
-	if [ "$machine_arch" = "x86_64" -a "$abi" = "32" ]; then
-		machine_arch=i386
-		set_machine_arch=yes
-		bmakexargs="MACHINE_ARCH=$machine_arch"
-	fi
 	;;
 Minix)
 	root_group=operator
@@ -789,10 +770,6 @@ OpenBSD)
 	need_sed=no
 	set_opsys=no
 	machine_arch=`arch -s`
-	if [ "$machine_arch" = "amd64" ]; then
-		machine_arch=x86_64
-		bmakexargs="MACHINE_ARCH=$machine_arch"
-	fi
 	;;
 OSF1)
 	root_group=system
@@ -871,6 +848,34 @@ UnixWare)
 	;;
 esac
 
+# Fixup MACHINE_ARCH to use canonical pkgsrc variants, and support multiarch
+# systems via --abi, setting a default $abi based on MACHINE_ARCH if not set.
+#
+case "$machine_arch/$abi" in
+# "amd64" translates to "x86_64", defaults to 64-bit
+amd64/32)	abi=32	machine_arch=i386	;;
+amd64/*)	abi=64	machine_arch=x86_64	;;
+# XXX: hppa untested
+hppa/64)	abi=64	machine_arch=hppa64	;;
+hppa/*)		abi=32	machine_arch=hppa	;;
+hppa64/32)	abi=32	machine_arch=hppa	;;
+hppa64/*)	abi=64	machine_arch=hppa64	;;
+# "i386" can support 64-bit, e.g. SunOS, defaults to 32-bit.
+i386/64)	abi=64	machine_arch=x86_64	;;
+i386/*)		abi=32	machine_arch=i386	;;
+# XXX: powerpc untested
+powerpc/64)	abi=64	machine_arch=powerpc64	;;
+powerpc/*)	abi=32	machine_arch=powerpc	;;
+powerpc64/32)	abi=32	machine_arch=powerpc	;;
+powerpc64/*)	abi=64	machine_arch=powerpc64	;;
+# "sparc" can support 64-bit, e.g. SunOS, defaults to 32-bit.
+sparc/64)	abi=64	machine_arch=sparc64	;;
+sparc/*)	abi=32	machine_arch=sparc	;;
+# x86_64 supports 32-bit/64-bit, defaults to 64-bit.
+x86_64/32)	abi=32	machine_arch=i386	;;
+x86_64/*)	abi=64	machine_arch=x86_64	;;
+esac
+
 # If "--full" is specified, then install all of the platform-independent
 # bootstrap software.
 #
@@ -898,14 +903,9 @@ if [ $? -ne 0 ]; then
 	die "ERROR: --make-jobs must be a positive integer argument"
 fi
 
-# export OPSYS and MACHINE_ARCH for pkg_install. we only set
-# MACHINE_ARCH on platforms where we override bmake's value.
-OPSYS=${opsys}
-export OPSYS
-if [ "${machine_arch}" != "" ]; then
-	MACHINE_ARCH=${machine_arch}
-	export MACHINE_ARCH
-fi
+# export MACHINE_ARCH and OPSYS for bmake and pkg_install.
+MACHINE_ARCH=${machine_arch}; export MACHINE_ARCH
+OPSYS=${opsys}; export OPSYS
 
 if [ "x$preserve_path" != "xyes" ]; then
 	PATH="$overpath:$PATH"
@@ -1020,9 +1020,6 @@ fi
 
 if [ -n "$abi" ]; then
 	echo "ABI=			$abi" >> ${TARGET_MKCONF}
-fi
-if [ "$set_machine_arch" = "yes" ]; then
-	echo "MACHINE_ARCH=		$machine_arch" >> ${TARGET_MKCONF}
 fi
 if [ "$compiler" != "" ]; then
 	echo "PKGSRC_COMPILER=	$compiler" >> ${TARGET_MKCONF}
@@ -1140,7 +1137,7 @@ $shprog ./bootstrap.sh)"
 bootstrap_bmake() {
 	echo_msg "Bootstrapping bmake"
 	copy_src $pkgsrcdir/devel/bmake/files bmake
-	run_cmd "(cd $wrkdir/bmake && $shprog configure $configure_quiet_flags --with-default-sys-path=$wrkdir/share/mk --prefix=$wrkdir $bmakexargs)"
+	run_cmd "(cd $wrkdir/bmake && $shprog configure $configure_quiet_flags --prefix=$wrkdir --with-default-sys-path=$wrkdir/share/mk --with-machine-arch=${machine_arch} $bmakexargs)"
 	run_cmd "(cd $wrkdir/bmake && $shprog make-bootstrap.sh)"
 	run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/bmake/bmake $wrkdir/bin/bmake"
 }

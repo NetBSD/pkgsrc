@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2013/02/01 22:21:07 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2016/01/24 16:14:44 jperkin Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
@@ -89,7 +89,7 @@ CPPFLAGS+=	-I${BUILDLINK_DIR}/include
 CFLAGS+=	-I${BUILDLINK_DIR}/include
 .if ${OPSYS} == "NetBSD"
 # thread / crtbegin / __cxa_atexit support depend on a "netbsd2" OS name
-GCC_PLATFORM=	${LOWER_ARCH}--${LOWER_OPSYS}${APPEND_ELF}${LOWER_OS_VERSION:C/[_a-z].*//}
+GCC_PLATFORM=	${MACHINE_ARCH}--${LOWER_OPSYS}${APPEND_ELF}${LOWER_OS_VERSION:C/[_a-z].*//}
 CONFIGURE_ARGS+=	--host=${GCC_PLATFORM:Q}
 ABI_BASELINE_PAIR=	${GCC_PLATFORM:C/--/-/}
 MAKE_ENV+=	ABI_BASELINE_PAIR=${ABI_BASELINE_PAIR:Q}
@@ -97,10 +97,10 @@ MAKE_ENV+=	ABI_BASELINE_PAIR=${ABI_BASELINE_PAIR:Q}
 
 post-patch:
 .if ${OPSYS} == "NetBSD"
-.  if exists(${FILESDIR}/${LOWER_ARCH}-baseline_symbols${LOWER_OS_VERSION:C/\..*//}.txt)
+.  if exists(${FILESDIR}/${MACHINE_ARCH}-baseline_symbols${LOWER_OS_VERSION:C/\..*//}.txt)
 	(${TEST} -d ${WRKSRC}/libstdc++-v3/config/abi/${ABI_BASELINE_PAIR} || \
 		${MKDIR} ${WRKSRC}/libstdc++-v3/config/abi/${ABI_BASELINE_PAIR})
-	${CP} ${FILESDIR}/${LOWER_ARCH}-baseline_symbols${LOWER_OS_VERSION:C/\..*//}.txt \
+	${CP} ${FILESDIR}/${MACHINE_ARCH}-baseline_symbols${LOWER_OS_VERSION:C/\..*//}.txt \
 		${WRKSRC}/libstdc++-v3/config/abi/${ABI_BASELINE_PAIR}/baseline_symbols.txt
 .  endif
 .endif
