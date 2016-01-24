@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.477 2016/01/18 15:33:44 fhajny Exp $
+# $NetBSD: Makefile,v 1.478 2016/01/24 02:03:28 rillig Exp $
 
-PKGNAME=	pkglint-5.3.1
-PKGREVISION=	1
+PKGNAME=	pkglint-5.3.2
 DISTFILES=	# none
 CATEGORIES=	pkgtools
 
@@ -14,6 +13,7 @@ CONFLICTS+=	pkglint4-[0-9]*
 WRKSRC=		${WRKDIR}/netbsd.org/pkglint
 NO_CHECKSUM=	yes
 USE_LANGUAGES=	# none
+USE_TOOLS+=	pax
 AUTO_MKDIRS=	yes
 GO_SRCPATH=	netbsd.org/pkglint
 
@@ -24,17 +24,14 @@ SUBST_SED.pkglint+=	-e s\|@VERSION@\|${PKGNAME:S/pkglint-//}\|g
 SUBST_SED.pkglint+=	-e s\|@BMAKE@\|${MAKE:Q}\|g
 
 do-extract:
-	mkdir -p ${WRKDIR}/pkglint/plist-clash
-	cd ${FILESDIR} && ${PAX} -rw *.go */*.go pkglint.[01] ${WRKDIR}/pkglint
-
-do-test:
-	cd ${WRKSRC} && go test
+	${RUN} mkdir -p ${WRKDIR}/pkglint/plist-clash
+	${RUN} cd ${FILESDIR} && ${PAX} -rw *.go */*.go pkglint.[01] ${WRKDIR}/pkglint
 
 do-install: do-install-man
 
 .include "../../mk/bsd.prefs.mk"
 
-do-install-man:
+do-install-man: .PHONY
 .if !empty(MANINSTALL:Mcatinstall)
 .  if defined(CATMAN_SECTION_SUFFIX) && !empty(CATMAN_SECTION_SUFFIX:M[Yy][Ee][Ss])
 	${INSTALL_MAN} ${WRKSRC}/pkglint.0 ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat1/pkglint.1
@@ -47,4 +44,7 @@ do-install-man:
 .endif
 
 .include "../../lang/go/go-package.mk"
+.if !empty(PKGSRC_RUN_TEST:M[yY][eE][sS])
+.include "../../devel/go-check/buildlink3.mk"
+.endif
 .include "../../mk/bsd.pkg.mk"
