@@ -1,5 +1,22 @@
-@comment $NetBSD: PLIST,v 1.4 2011/10/03 14:19:43 obache Exp $
-lib/pkgconfig/ruby-vte.pc
-${RUBY_VENDORLIB}/vte.rb
-${RUBY_VENDORLIB}/vte/deprecated.rb
-${RUBY_VENDORARCHLIB}/vte.${RUBY_DLEXT}
+@comment $NetBSD: PLIST,v 1.5 2016/01/24 05:03:24 tsutsui Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_EXTSDIR}/gem.build_complete
+${GEM_EXTSDIR}/vte.${RUBY_DLEXT}
+${GEM_LIBDIR}/README
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/ext/vte/depend
+${GEM_LIBDIR}/ext/vte/extconf.rb
+${GEM_LIBDIR}/ext/vte/rbvte-charattributes.c
+${GEM_LIBDIR}/ext/vte/rbvte-pty.c
+${GEM_LIBDIR}/ext/vte/rbvte-reaper.c
+${GEM_LIBDIR}/ext/vte/rbvte-terminal.c
+${GEM_LIBDIR}/ext/vte/rbvte-terminalaccessible.c
+${GEM_LIBDIR}/ext/vte/rbvte.c
+${GEM_LIBDIR}/ext/vte/rbvte.h
+${GEM_LIBDIR}/extconf.rb
+${GEM_LIBDIR}/lib/vte.rb
+${GEM_LIBDIR}/lib/vte.${RUBY_DLEXT}
+${GEM_LIBDIR}/lib/vte/deprecated.rb
+${GEM_LIBDIR}/sample/multiterm.rb
+${GEM_LIBDIR}/sample/terminal.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
