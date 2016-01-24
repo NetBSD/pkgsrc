@@ -1,2 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1 2014/01/05 09:06:05 obache Exp $
-${RUBY_VENDORLIB}/clutter-gtk.rb
+@comment $NetBSD: PLIST,v 1.2 2016/01/24 05:03:23 tsutsui Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/lib/clutter-gtk.rb
+${GEM_LIBDIR}/sample/events.rb
+${GEM_LIBDIR}/sample/multistage.rb
+${GEM_LIBDIR}/sample/redhand.png
+${GEM_LIBDIR}/sample/test-actor.rb
+${GEM_LIBDIR}/sample/test-scroll.rb
+${GEM_LIBDIR}/sample/test.rb
+${GEM_LIBDIR}/sample/window-test.rb
+${GEM_LIBDIR}/sample/window-test2.rb
+${GEM_LIBDIR}/test/clutter-gtk-test-utils.rb
+${GEM_LIBDIR}/test/run-test.rb
+${GEM_LIBDIR}/test/test-clutter-gtk-embed.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec

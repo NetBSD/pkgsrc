@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.37 2015/04/25 14:20:40 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.38 2016/01/24 05:03:23 tsutsui Exp $
 
 BUILDLINK_TREE+=	ruby-gnome2-pango
 
@@ -12,6 +12,7 @@ BUILDLINK_PKGSRCDIR.ruby-gnome2-pango?=	../../devel/ruby-gnome2-pango
 
 .include "../../devel/ruby-gnome2-glib/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
+.include "../../graphics/ruby-cairo/buildlink3.mk"
 .include "../../lang/ruby/buildlink3.mk"
 .endif # RUBY_GNOME2_PANGO_BUILDLINK3_MK
 
