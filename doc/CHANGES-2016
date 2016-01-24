@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.344 2016/01/24 16:37:10 tsutsui Exp $
+$NetBSD: CHANGES-2016,v 1.345 2016/01/24 17:09:27 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -532,3 +532,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated multimedia/gst-plugins1-bad to 1.6.3 [ryoon 2016-01-24]
 	Updated multimedia/gst-plugins1-libav to 1.6.3 [ryoon 2016-01-24]
 	Updated net/mikutter to 3.3.4 [tsutsui 2016-01-24]
+	Added www/vimb version 2.11 [leot 2016-01-24]
