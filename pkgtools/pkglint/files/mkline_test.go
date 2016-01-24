@@ -32,49 +32,208 @@ func (s *Suite) TestChecklineMkVartype(c *check.C) {
 	mkline.CheckVartype("DISTNAME", opAssign, "gcc-${GCC_VERSION}", "")
 }
 
-func (s *Suite) TestChecklineMkVaralign(c *check.C) {
+func (s *Suite) TestMkLine_CheckVaralign_Autofix(c *check.C) {
 	s.UseCommandLine(c, "-Wspace", "-f")
 	lines := s.NewLines("file.mk",
 		"VAR=   value",    // Indentation 7, fixed to 8.
+		"",                //
 		"VAR=    value",   // Indentation 8, fixed to 8.
-		"VAR=     value",  // Indentation 9, fixed to 16.
+		"",                //
+		"VAR=     value",  // Indentation 9, fixed to 8.
+		"",                //
 		"VAR= \tvalue",    // Mixed indentation 8, fixed to 8.
+		"",                //
 		"VAR=   \tvalue",  // Mixed indentation 8, fixed to 8.
-		"VAR=    \tvalue", // Mixed indentation 16, fixed to 16.
+		"",                //
+		"VAR=    \tvalue", // Mixed indentation 16, fixed to 8.
+		"",                //
 		"VAR=\tvalue")     // Already aligned with tabs only, left unchanged.
 
+	varalign := new(VaralignBlock)
 	for _, line := range lines {
-		NewMkLine(line).CheckVaralign()
+		varalign.Check(NewMkLine(line))
 	}
+	varalign.Finish()
 
 	c.Check(lines[0].changed, equals, true)
 	c.Check(lines[0].rawLines()[0].String(), equals, "1:VAR=\tvalue\n")
-	c.Check(lines[1].changed, equals, true)
-	c.Check(lines[1].rawLines()[0].String(), equals, "2:VAR=\tvalue\n")
 	c.Check(lines[2].changed, equals, true)
-	c.Check(lines[2].rawLines()[0].String(), equals, "3:VAR=\t\tvalue\n")
-	c.Check(lines[3].changed, equals, true)
-	c.Check(lines[3].rawLines()[0].String(), equals, "4:VAR=\tvalue\n")
+	c.Check(lines[2].rawLines()[0].String(), equals, "3:VAR=\tvalue\n")
 	c.Check(lines[4].changed, equals, true)
 	c.Check(lines[4].rawLines()[0].String(), equals, "5:VAR=\tvalue\n")
-	c.Check(lines[5].changed, equals, true)
-	c.Check(lines[5].rawLines()[0].String(), equals, "6:VAR=\t\tvalue\n")
-	c.Check(lines[6].changed, equals, false)
+	c.Check(lines[6].changed, equals, true)
 	c.Check(lines[6].rawLines()[0].String(), equals, "7:VAR=\tvalue\n")
+	c.Check(lines[8].changed, equals, true)
+	c.Check(lines[8].rawLines()[0].String(), equals, "9:VAR=\tvalue\n")
+	c.Check(lines[10].changed, equals, true)
+	c.Check(lines[10].rawLines()[0].String(), equals, "11:VAR=\tvalue\n")
+	c.Check(lines[12].changed, equals, false)
+	c.Check(lines[12].rawLines()[0].String(), equals, "13:VAR=\tvalue\n")
 	c.Check(s.Output(), equals, ""+
-		"NOTE: file.mk:1: Alignment of variable values should be done with tabs, not spaces.\n"+
+		"NOTE: file.mk:1: This variable value should be aligned with tabs, not spaces, to column 9.\n"+
 		"AUTOFIX: file.mk:1: Replacing \"VAR=   \" with \"VAR=\\t\".\n"+
-		"NOTE: file.mk:2: Alignment of variable values should be done with tabs, not spaces.\n"+
-		"AUTOFIX: file.mk:2: Replacing \"VAR=    \" with \"VAR=\\t\".\n"+
-		"NOTE: file.mk:3: Alignment of variable values should be done with tabs, not spaces.\n"+
-		"AUTOFIX: file.mk:3: Replacing \"VAR=     \" with \"VAR=\\t\\t\".\n"+
-		"NOTE: file.mk:4: Alignment of variable values should be done with tabs, not spaces.\n"+
-		"AUTOFIX: file.mk:4: Replacing \"VAR= \\t\" with \"VAR=\\t\".\n"+
-		"NOTE: file.mk:5: Alignment of variable values should be done with tabs, not spaces.\n"+
-		"AUTOFIX: file.mk:5: Replacing \"VAR=   \\t\" with \"VAR=\\t\".\n"+
-		"NOTE: file.mk:6: Alignment of variable values should be done with tabs, not spaces.\n"+
-		"AUTOFIX: file.mk:6: Replacing \"VAR=    \\t\" with \"VAR=\\t\\t\".\n")
-	c.Check(tabLength("VAR=    \t"), equals, 16)
+		"NOTE: file.mk:3: Variable values should be aligned with tabs, not spaces.\n"+
+		"AUTOFIX: file.mk:3: Replacing \"VAR=    \" with \"VAR=\\t\".\n"+
+		"NOTE: file.mk:5: This variable value should be aligned with tabs, not spaces, to column 9.\n"+
+		"AUTOFIX: file.mk:5: Replacing \"VAR=     \" with \"VAR=\\t\".\n"+
+		"NOTE: file.mk:7: Variable values should be aligned with tabs, not spaces.\n"+
+		"AUTOFIX: file.mk:7: Replacing \"VAR= \\t\" with \"VAR=\\t\".\n"+
+		"NOTE: file.mk:9: Variable values should be aligned with tabs, not spaces.\n"+
+		"AUTOFIX: file.mk:9: Replacing \"VAR=   \\t\" with \"VAR=\\t\".\n"+
+		"NOTE: file.mk:11: This variable value should be aligned with tabs, not spaces, to column 9.\n"+
+		"AUTOFIX: file.mk:11: Replacing \"VAR=    \\t\" with \"VAR=\\t\".\n")
+}
+
+func (s *Suite) TestMkLine_CheckVaralign_ReduceIndentation(c *check.C) {
+	s.UseCommandLine(c, "-Wspace")
+	mklines := s.NewMkLines("file.mk",
+		"VAR= \tvalue",
+		"VAR=    \tvalue",
+		"VAR=\t\t\t\tvalue",
+		"",
+		"VAR=\t\t\tneedlessly", // Nothing to be fixed here, since it looks good.
+		"VAR=\t\t\tdeep",
+		"VAR=\t\t\tindentation")
+
+	varalign := new(VaralignBlock)
+	for _, mkline := range mklines.mklines {
+		varalign.Check(mkline)
+	}
+	varalign.Finish()
+
+	c.Check(s.Output(), equals, ""+
+		"NOTE: file.mk:1: Variable values should be aligned with tabs, not spaces.\n"+
+		"NOTE: file.mk:2: This variable value should be aligned with tabs, not spaces, to column 9.\n"+
+		"NOTE: file.mk:3: This variable value should be aligned to column 9.\n")
+}
+
+func (s *Suite) TestMkLine_CheckVaralign_LongestLineEmptyAlignment(c *check.C) {
+	s.UseCommandLine(c, "-Wspace")
+	mklines := s.NewMkLines("file.mk",
+		"SUBST_CLASSES+= aaaaaaaa",
+		"SUBST_STAGE.aaaaaaaa= pre-configure",
+		"SUBST_FILES.aaaaaaaa= *.pl",
+		"SUBST_FILTER_CMD.aaaaaaaa=cat")
+
+	varalign := new(VaralignBlock)
+	for _, mkline := range mklines.mklines {
+		varalign.Check(mkline)
+	}
+	varalign.Finish()
+
+	c.Check(s.Output(), equals, ""+
+		"NOTE: file.mk:1: This variable value should be aligned with tabs, not spaces, to column 33.\n"+
+		"NOTE: file.mk:2: This variable value should be aligned with tabs, not spaces, to column 33.\n"+
+		"NOTE: file.mk:3: This variable value should be aligned with tabs, not spaces, to column 33.\n"+
+		"NOTE: file.mk:4: This variable value should be aligned to column 33.\n")
+}
+
+func (s *Suite) TestMkLine_CheckVaralign_OnlySpaces(c *check.C) {
+	s.UseCommandLine(c, "-Wspace")
+	mklines := s.NewMkLines("file.mk",
+		"SUBST_CLASSES+= aaaaaaaa",
+		"SUBST_STAGE.aaaaaaaa= pre-configure",
+		"SUBST_FILES.aaaaaaaa= *.pl",
+		"SUBST_FILTER_CMD.aaaaaaaa= cat")
+
+	varalign := new(VaralignBlock)
+	for _, mkline := range mklines.mklines {
+		varalign.Check(mkline)
+	}
+	varalign.Finish()
+
+	c.Check(s.Output(), equals, ""+
+		"NOTE: file.mk:1: This variable value should be aligned with tabs, not spaces, to column 33.\n"+
+		"NOTE: file.mk:2: This variable value should be aligned with tabs, not spaces, to column 33.\n"+
+		"NOTE: file.mk:3: This variable value should be aligned with tabs, not spaces, to column 33.\n"+
+		"NOTE: file.mk:4: This variable value should be aligned with tabs, not spaces, to column 33.\n")
+}
+
+func (s *Suite) TestMkLine_CheckVaralign_Advanced(c *check.C) {
+	s.UseCommandLine(c, "-Wspace")
+	fname := s.CreateTmpFileLines(c, "Makefile",
+		"# $"+"NetBSD$",
+		"",
+		"VAR= \\", // In continuation lines, indenting with spaces is ok
+		"\tvalue",
+		"",
+		"VAR= indented with one space",   // Exactly one space is ok in general
+		"VAR=  indented with two spaces", // Two spaces are uncommon
+		"",
+		"BLOCK=\tindented with tab",
+		"BLOCK_LONGVAR= indented with space", // This is ok, to prevent the block from being indented further
+		"",
+		"BLOCK=\tshort",
+		"BLOCK_LONGVAR=\tlong",
+		"",
+		"GRP_A= avalue", // The values in a block should be aligned
+		"GRP_AA= value",
+		"GRP_AAA= value",
+		"GRP_AAAA= value",
+		"",
+		"VAR=\t${VAR}${BLOCK}${BLOCK_LONGVAR} # suppress warnings about unused variables",
+		"VAR=\t${GRP_A}${GRP_AA}${GRP_AAA}${GRP_AAAA}")
+	mklines := NewMkLines(LoadExistingLines(fname, true))
+
+	mklines.Check()
+
+	c.Check(s.OutputCleanTmpdir(), equals, ""+
+		"NOTE: ~/Makefile:6: This variable value should be aligned with tabs, not spaces, to column 9.\n"+
+		"NOTE: ~/Makefile:7: This variable value should be aligned with tabs, not spaces, to column 9.\n"+
+		"NOTE: ~/Makefile:12: This variable value should be aligned to column 17.\n"+
+		"NOTE: ~/Makefile:15: This variable value should be aligned with tabs, not spaces, to column 17.\n"+
+		"NOTE: ~/Makefile:16: This variable value should be aligned with tabs, not spaces, to column 17.\n"+
+		"NOTE: ~/Makefile:17: This variable value should be aligned with tabs, not spaces, to column 17.\n"+
+		"NOTE: ~/Makefile:18: This variable value should be aligned with tabs, not spaces, to column 17.\n")
+
+	s.UseCommandLine(c, "-Wspace", "--autofix")
+
+	mklines.Check()
+
+	c.Check(s.OutputCleanTmpdir(), equals, ""+
+		"AUTOFIX: ~/Makefile:6: Replacing \"VAR= \" with \"VAR=\\t\".\n"+
+		"AUTOFIX: ~/Makefile:7: Replacing \"VAR=  \" with \"VAR=\\t\".\n"+
+		"AUTOFIX: ~/Makefile:12: Replacing \"BLOCK=\\t\" with \"BLOCK=\\t\\t\".\n"+
+		"AUTOFIX: ~/Makefile:15: Replacing \"GRP_A= \" with \"GRP_A=\\t\\t\".\n"+
+		"AUTOFIX: ~/Makefile:16: Replacing \"GRP_AA= \" with \"GRP_AA=\\t\\t\".\n"+
+		"AUTOFIX: ~/Makefile:17: Replacing \"GRP_AAA= \" with \"GRP_AAA=\\t\".\n"+
+		"AUTOFIX: ~/Makefile:18: Replacing \"GRP_AAAA= \" with \"GRP_AAAA=\\t\".\n"+
+		"AUTOFIX: ~/Makefile: Has been auto-fixed. Please re-run pkglint.\n")
+	c.Check(s.LoadTmpFile(c, "Makefile"), equals, ""+
+		"# $NetBSD: mkline_test.go,v 1.7 2016/01/24 02:03:28 rillig Exp $\n"+
+		"\n"+
+		"VAR= \\\n"+
+		"\tvalue\n"+
+		"\n"+
+		"VAR=\tindented with one space\n"+
+		"VAR=\tindented with two spaces\n"+
+		"\n"+
+		"BLOCK=\tindented with tab\n"+
+		"BLOCK_LONGVAR= indented with space\n"+
+		"\n"+
+		"BLOCK=\t\tshort\n"+
+		"BLOCK_LONGVAR=\tlong\n"+
+		"\n"+
+		"GRP_A=\t\tavalue\n"+
+		"GRP_AA=\t\tvalue\n"+
+		"GRP_AAA=\tvalue\n"+
+		"GRP_AAAA=\tvalue\n"+
+		"\n"+
+		"VAR=\t${VAR}${BLOCK}${BLOCK_LONGVAR} # suppress warnings about unused variables\n"+
+		"VAR=\t${GRP_A}${GRP_AA}${GRP_AAA}${GRP_AAAA}\n")
+}
+
+func (s *Suite) TestMkLine_CheckVaralign_Misc(c *check.C) {
+	s.UseCommandLine(c, "-Wspace")
+	mklines := s.NewMkLines("Makefile",
+		"# $"+"NetBSD$",
+		"",
+		"VAR=    space",
+		"VAR=\ttab ${VAR}")
+
+	mklines.Check()
+
+	c.Check(s.Output(), equals, "NOTE: Makefile:3: Variable values should be aligned with tabs, not spaces.\n")
 }
 
 func (s *Suite) TestMkLine_fields(c *check.C) {
@@ -285,7 +444,8 @@ func (s *Suite) TestMkLine_CheckVarusePermissions(c *check.C) {
 		"WARN: options.mk:3: PKGBASE should not be evaluated at load time.\n"+
 		"WARN: options.mk:4: The variable PYPKGPREFIX may not be set in this file; it would be ok in pyversion.mk.\n"+
 		"WARN: options.mk:4: \"${PKGBASE}\" is not valid for PYPKGPREFIX. Use one of { py27 py33 py34 } instead.\n"+
-		"WARN: options.mk:4: PKGBASE should not be evaluated indirectly at load time.\n")
+		"WARN: options.mk:4: PKGBASE should not be evaluated indirectly at load time.\n"+
+		"NOTE: options.mk:4: This variable value should be aligned to column 17.\n")
 }
 
 func (s *Suite) TestMkLine_WarnVaruseLocalbase(c *check.C) {
