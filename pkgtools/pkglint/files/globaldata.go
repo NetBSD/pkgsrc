@@ -75,7 +75,7 @@ func (gd *GlobalData) loadDistSites() {
 	names := make(map[string]bool)
 	url2name := make(map[string]string)
 	for _, line := range lines {
-		if m, varname, _, urls, _ := MatchVarassign(line.Text); m {
+		if m, varname, _, _, urls, _ := MatchVarassign(line.Text); m {
 			if hasPrefix(varname, "MASTER_SITE_") && varname != "MASTER_SITE_BACKUP" {
 				names[varname] = true
 				for _, url := range splitOnSpace(urls) {
@@ -139,7 +139,7 @@ func (gd *GlobalData) loadTools() {
 		fname := G.globalData.Pkgsrcdir + "/mk/tools/" + basename
 		lines := LoadExistingLines(fname, true)
 		for _, line := range lines {
-			if m, varname, _, value, _ := MatchVarassign(line.Text); m {
+			if m, varname, _, _, value, _ := MatchVarassign(line.Text); m {
 				if varname == "TOOLS_CREATE" && (value == "[" || matches(value, `^?[-\w.]+$`)) {
 					tools[value] = true
 				} else if m, toolname := match1(varname, `^(?:_TOOLS_VARNAME)\.([-\w.]+|\[)$`); m {
@@ -169,7 +169,7 @@ func (gd *GlobalData) loadTools() {
 		for _, line := range lines {
 			text := line.Text
 
-			if m, varname, _, value, _ := MatchVarassign(text); m {
+			if m, varname, _, _, value, _ := MatchVarassign(text); m {
 				if varname == "USE_TOOLS" {
 					if G.opts.DebugTools {
 						line.Debugf("[condDepth=%d] %s", condDepth, value)

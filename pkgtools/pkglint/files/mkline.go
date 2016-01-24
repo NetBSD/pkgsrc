@@ -15,6 +15,7 @@ type MkLine struct {
 	xtype      uint8
 	xmustexist bool
 	xop        MkOperator
+	xvalign    string
 	xs1        string
 	xs2        string
 	xs3        string
@@ -44,7 +45,7 @@ func NewMkLine(line *Line) (mkline *MkLine) {
 			"white-space.")
 	}
 
-	if m, varname, op, value, comment := MatchVarassign(text); m {
+	if m, varname, op, valueAlign, value, comment := MatchVarassign(text); m {
 		value = strings.Replace(value, "\\#", "#", -1)
 		varparam := varnameParam(varname)
 
@@ -53,6 +54,7 @@ func NewMkLine(line *Line) (mkline *MkLine) {
 		mkline.xs2 = varnameCanon(varname)
 		mkline.xs3 = varparam
 		mkline.xop = NewMkOperator(op)
+		mkline.xvalign = valueAlign
 		mkline.xvalue = value
 		mkline.xcomment = comment
 		mkline.Tokenize(value)
@@ -122,6 +124,7 @@ func (mkline *MkLine) Varname() string     { return mkline.xs1 }
 func (mkline *MkLine) Varcanon() string    { return mkline.xs2 }
 func (mkline *MkLine) Varparam() string    { return mkline.xs3 }
 func (mkline *MkLine) Op() MkOperator      { return mkline.xop }
+func (mkline *MkLine) ValueAlign() string  { return mkline.xvalign }
 func (mkline *MkLine) Value() string       { return mkline.xvalue }
 func (mkline *MkLine) Comment() string     { return mkline.xcomment }
 func (mkline *MkLine) IsShellcmd() bool    { return mkline.xtype == 2 }
@@ -749,25 +752,6 @@ func (mkline *MkLine) withoutMakeVariables(value string, qModifierAllowed bool) 
 			}
 		} else {
 			return valueNovar
-		}
-	}
-}
-
-func (mkline *MkLine) CheckVaralign() {
-	if !G.opts.WarnSpace {
-		return
-	}
-
-	if m, prefix, align := match2(mkline.Line.Text, `^( *[-*+A-Z_a-z0-9.${}\[]+\s*[!:?]?=)(\s*)`); m {
-		if align != " " && strings.Trim(align, "\t") != "" {
-			alignedWidth := tabLength(prefix + align)
-			tabs := ""
-			for tabLength(prefix+tabs) < alignedWidth {
-				tabs += "\t"
-			}
-			if !mkline.Line.AutofixReplace(prefix+align, prefix+tabs) {
-				mkline.Note0("Alignment of variable values should be done with tabs, not spaces.")
-			}
 		}
 	}
 }
