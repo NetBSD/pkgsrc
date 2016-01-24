@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.865 2016/01/21 20:33:39 jperkin Exp $
+# $NetBSD: Makefile,v 1.866 2016/01/24 10:46:38 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -708,7 +708,7 @@ SUBDIR+=	py-markupsafe
 SUBDIR+=	py-mecab
 SUBDIR+=	py-mkdocs
 SUBDIR+=	py-mkdocs-bootstrap
-SUBDIR+=	py-mkdocs-bootswitch
+SUBDIR+=	py-mkdocs-bootswatch
 SUBDIR+=	py-numpydoc
 SUBDIR+=	py-openpyxl
 SUBDIR+=	py-pdf-parser
