@@ -1,13 +1,13 @@
-$NetBSD: patch-ba,v 1.4 2012/11/08 19:55:56 adam Exp $
+$NetBSD: patch-ba,v 1.5 2016/01/24 14:34:11 ryoon Exp $
 
---- encoder/analyse.c.orig	2011-07-07 20:45:05.000000000 +0000
+--- encoder/analyse.c.orig	2016-01-23 21:45:04.000000000 +0000
 +++ encoder/analyse.c
-@@ -285,7 +285,7 @@ float *x264_analyse_prepare_costs( x264_
-         return NULL;
+@@ -322,7 +322,7 @@ int x264_analyse_init_costs( x264_t *h )
+ 
      logs[0] = 0.718f;
      for( int i = 1; i <= 2*4*2048; i++ )
--        logs[i] = log2f(i+1)*2 + 1.718f;
+-        logs[i] = log2f( i+1 ) * 2.0f + 1.718f;
 +        logs[i] = logf(i+1)*2.88539f + 1.718f;
-     return logs;
- }
  
+     for( int qp = X264_MIN( h->param.rc.i_qp_min, QP_MAX_SPEC ); qp <= h->param.rc.i_qp_max; qp++ )
+         if( init_costs( h, logs, qp ) )
