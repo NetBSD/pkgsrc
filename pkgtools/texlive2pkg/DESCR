@@ -1,0 +1,3 @@
+The texlive2pkg program creates a new pkgsrc package for the
+corresponding texlive package.  It is intended to help pkgsrc
+developers create new texlive packages quickly and easily.
