@@ -1,2 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2013/06/15 09:39:34 obache Exp $
-${RUBY_VENDORLIB}/webkit-gtk2.rb
+@comment $NetBSD: PLIST,v 1.2 2016/01/24 05:03:24 tsutsui Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/lib/webkit-gtk2.rb
+${GEM_LIBDIR}/sample/brower.rb
+${GEM_LIBDIR}/test/run-test.rb
+${GEM_LIBDIR}/test/test_webkit_gtk_webview.rb
+${GEM_LIBDIR}/test/webkit-gtk-test-utils.rb
+${GEM_LIBDIR}/test/webkit-gtk-test-utils/omissions.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
