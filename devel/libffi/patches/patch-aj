@@ -1,6 +1,8 @@
-$NetBSD: patch-aj,v 1.4 2012/09/14 23:45:27 asau Exp $
+$NetBSD: patch-aj,v 1.5 2016/01/25 17:56:39 jperkin Exp $
 
---- src/m68k/ffi.c.orig	2012-04-12 02:46:06.000000000 +0000
+NetBSD/m68k support.
+
+--- src/m68k/ffi.c.orig	2014-11-08 12:47:24.000000000 +0000
 +++ src/m68k/ffi.c
 @@ -9,8 +9,11 @@
  
@@ -15,7 +17,7 @@ $NetBSD: patch-aj,v 1.4 2012/09/14 23:45:27 asau Exp $
  #else
  #include <sys/syscall.h>
  #ifdef __MINT__
-@@ -335,8 +338,10 @@ ffi_prep_closure_loc (ffi_closure* closu
+@@ -345,8 +348,10 @@ ffi_prep_closure_loc (ffi_closure* closu
    else
      *(void **)(closure->tramp + 8) = ffi_closure_SYSV;
  

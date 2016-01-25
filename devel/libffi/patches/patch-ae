@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.6 2014/02/11 07:21:28 dholland Exp $
+$NetBSD: patch-ae,v 1.7 2016/01/25 17:56:39 jperkin Exp $
 
 Make a minimal adjustment to support the various NetBSD mips ports.
 
---- src/mips/ffitarget.h.orig	2012-04-12 02:46:06.000000000 +0000
+--- src/mips/ffitarget.h.orig	2014-11-08 12:47:24.000000000 +0000
 +++ src/mips/ffitarget.h
 @@ -32,7 +32,7 @@
  #error "Please do not include ffitarget.h directly into your source.  Use ffi.h instead."

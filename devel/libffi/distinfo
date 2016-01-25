@@ -1,17 +1,17 @@
-$NetBSD: distinfo,v 1.41 2015/11/03 03:27:40 agc Exp $
+$NetBSD: distinfo,v 1.42 2016/01/25 17:56:38 jperkin Exp $
 
 SHA1 (libffi-3.2.1.tar.gz) = 280c265b789e041c02e5c97815793dfc283fb1e6
 RMD160 (libffi-3.2.1.tar.gz) = 9b546a3d002380bec3f00d86fc47d730abf51dfd
 SHA512 (libffi-3.2.1.tar.gz) = 980ca30a8d76f963fca722432b1fe5af77d7a4e4d2eac5144fbc5374d4c596609a293440573f4294207e1bdd9fda80ad1e1cafb2ffb543df5a275bc3bd546483
 Size (libffi-3.2.1.tar.gz) = 940837 bytes
-SHA1 (patch-aa) = 7748465dc903b53568999fc8e0caf4ea3fbc5778
-SHA1 (patch-ac) = f3c6324f4334d23e684b4eca25173a13be5d37eb
-SHA1 (patch-ad) = 8bb3ec9ea69a8c06b0b1963b3f24018c6384c249
-SHA1 (patch-ae) = 3d8cd3bcd834876f6e60ae519dca8c0b0ba0d4d1
-SHA1 (patch-af) = 2c7ca79ef980a2561333bf79a18df1ecb0bbb9f7
-SHA1 (patch-ag) = 6333317170f6e92f89db966315276dcd8e3484f2
-SHA1 (patch-aj) = d130b2b20b94ca26c70dcc46614e36c6d0ac9153
-SHA1 (patch-src_alpha_osf.S) = 3fa2aab1924bc445fa2f76835c3fd38e5a3898f9
-SHA1 (patch-src_arm_sysv.S) = ea294af156566c6e6f63810358de89cba6213c4f
-SHA1 (patch-src_m88k_elfbsd.S) = fae3e425dcff3e924ef195eab165f9bbc6ec4077
+SHA1 (patch-aa) = 5218c8d895f97c812b7ca8d07c55b82ebcdc87d4
+SHA1 (patch-ac) = 63fba2e9486b73485a4f633927f5041110c43239
+SHA1 (patch-ad) = db57395ff721d7b56edec8a3a64b4b529258341c
+SHA1 (patch-ae) = cf294d57eb0c8aa11033ec9ec26bc7b73c43cba2
+SHA1 (patch-af) = d7dbe79be31cbcc5726269b26271bd0e598e47fd
+SHA1 (patch-ag) = ae6a89f6b2be00c52139be6dcd14d0ebfe85d8f7
+SHA1 (patch-aj) = 5179cfd150bc7de15eb1c5ee0a327016c2c32b3e
+SHA1 (patch-src_alpha_osf.S) = 50d564a1d88284f04f6896719fa3613e9b0be70b
+SHA1 (patch-src_arm_sysv.S) = 2c97e0d069a4df2e1f5b6604e54b2d02c92691e2
+SHA1 (patch-src_m88k_elfbsd.S) = 6572c7fa39c00096cb4a80bb88993ff1b4aaa8cc
 SHA1 (patch-src_x86_win32.S) = 8a41cbc7237d6a171605a66e91d8d92a57181569
