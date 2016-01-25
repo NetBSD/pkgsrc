@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.346 2016/01/24 19:37:16 markd Exp $
+$NetBSD: CHANGES-2016,v 1.347 2016/01/25 08:53:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -534,3 +534,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/mikutter to 3.3.4 [tsutsui 2016-01-24]
 	Added www/vimb version 2.11 [leot 2016-01-24]
 	Added pkgtools/texlive2pkg version 1.0 [markd 2016-01-24]
+	Updated net/youtube-dl to 20160123 [adam 2016-01-24]
