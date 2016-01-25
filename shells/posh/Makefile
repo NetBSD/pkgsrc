@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2015/04/28 01:08:30 mef Exp $
+# $NetBSD: Makefile,v 1.20 2016/01/25 15:09:01 ryoon Exp $
 #
 
-DISTNAME=	posh_0.12.4
+DISTNAME=	posh_0.12.5
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/p/posh/}
