@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.349 2016/01/25 11:23:36 adam Exp $
+$NetBSD: CHANGES-2016,v 1.350 2016/01/25 13:01:49 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -537,3 +537,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/youtube-dl to 20160123 [adam 2016-01-24]
 	Updated net/syncthing to 0.12.16 [abs 2016-01-25]
 	Updated devel/cmake to 3.4.2 [adam 2016-01-25]
+	Updated chat/prosody to 0.9.9 [fhajny 2016-01-25]
