@@ -1,7 +1,7 @@
 #!@PERL5@
 #
-# $OpenBSD: mdoclint,v 1.42 2014/03/18 22:36:30 miod Exp $
-# $NetBSD: mdoclint,v 1.55 2016/01/03 21:56:01 wiz Exp $
+# $OpenBSD: mdoclint,v 1.48 2016/01/24 20:10:48 schwarze Exp $
+# $NetBSD: mdoclint,v 1.56 2016/01/25 15:57:24 wiz Exp $
 #
 # Copyright (c) 2001-2013 Thomas Klausner
 # All rights reserved.
@@ -275,10 +275,13 @@ sub verify_xref
 	# try to find corresponding man page
 	if (OPENBSD) {
 		open my $saveout, '>&', STDOUT;
+		open my $saveerr, '>&', STDERR;
 		open STDOUT, '>', '/dev/null';
+		open STDERR, '>', '/dev/null';
 		my $irc = system 'man', '-M', '/usr/share/man:/usr/X11R6/man',
 		    '-s', $section, '-f', $page;
 		open STDOUT, '>&', $saveout;
+		open STDERR, '>&', $saveerr;
 		return 1 unless $irc;
 	} else {
 		for my $dir ('/usr/share/man', '/usr/X11R7/man') {
