@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2014/03/11 14:04:59 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.7 2016/01/25 13:01:39 fhajny Exp $
 bin/prosody
 bin/prosodyctl
 lib/prosody/core/certmanager.lua
@@ -134,10 +134,8 @@ lib/prosody/util/xmppstream.lua
 man/man1/prosodyctl.1
 share/examples/prosody/certs/Makefile
 share/examples/prosody/certs/example.com.cnf
-share/examples/prosody/certs/example.com.crt
 share/examples/prosody/certs/example.com.key
 share/examples/prosody/certs/localhost.cnf
-share/examples/prosody/certs/localhost.crt
 share/examples/prosody/certs/localhost.key
 share/examples/prosody/certs/openssl.cnf
 share/examples/prosody/prosody.cfg.lua

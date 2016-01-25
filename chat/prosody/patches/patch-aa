@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.5 2015/04/15 14:05:46 nros Exp $
+$NetBSD: patch-aa,v 1.6 2016/01/25 13:01:39 fhajny Exp $
 
 Fix installation directories and scripts
---- Makefile.orig	2015-03-24 19:18:04.000000000 +0000
+--- Makefile.orig	2016-01-08 13:07:07.000000000 +0000
 +++ Makefile
 @@ -3,10 +3,11 @@ include config.unix
  
@@ -27,7 +27,7 @@ Fix installation directories and scripts
 -	install -d $(SOURCE)/core $(SOURCE)/net $(SOURCE)/util
 -	install -m755 ./prosody.install $(BIN)/prosody
 -	install -m755 ./prosodyctl.install $(BIN)/prosodyctl
--	install -m644 core/* $(SOURCE)/core
+-	install -m644 core/*.lua $(SOURCE)/core
 -	install -m644 net/*.lua $(SOURCE)/net
 -	install -d $(SOURCE)/net/http
 -	install -m644 net/http/*.lua $(SOURCE)/net/http
@@ -51,7 +51,7 @@ Fix installation directories and scripts
 +	$(BSD_INSTALL_LIB_DIR) $(SOURCE)/util
 +	$(BSD_INSTALL_SCRIPT) ./prosody.install $(BIN)/prosody
 +	$(BSD_INSTALL_SCRIPT) ./prosodyctl.install $(BIN)/prosodyctl
-+	$(BSD_INSTALL_DATA) core/* $(SOURCE)/core
++	$(BSD_INSTALL_DATA) core/*.lua $(SOURCE)/core
 +	$(BSD_INSTALL_DATA) net/*.lua $(SOURCE)/net
 +	$(BSD_INSTALL_LIB_DIR) $(SOURCE)/net/http
 +	$(BSD_INSTALL_DATA) net/http/*.lua $(SOURCE)/net/http
