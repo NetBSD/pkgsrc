@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.10 2015/11/03 01:20:23 agc Exp $
+$NetBSD: distinfo,v 1.11 2016/01/25 13:01:39 fhajny Exp $
 
-SHA1 (prosody-0.9.8.tar.gz) = e338eb995f3c594ab6d1f03a7f36224e93c31c0b
-RMD160 (prosody-0.9.8.tar.gz) = d140de5c5bbfc176550e65db053c5adc87884811
-SHA512 (prosody-0.9.8.tar.gz) = 08ca8c8028a947a22d68ddc1d7eb93d3d205894102c900ece9e537ef9dd9332e8509e4b170069383e4f9717b52fd41aec2aa9d959e16ddebf0c3d54fe31aef3c
-Size (prosody-0.9.8.tar.gz) = 268716 bytes
-SHA1 (patch-aa) = db9f0e384e64069101a62e11284dd8b75032512b
+SHA1 (prosody-0.9.9.tar.gz) = 687cef7fe1c39c0309e35fd0718e1906c797bdff
+RMD160 (prosody-0.9.9.tar.gz) = 94a2aa93c4f820a1eb1b8bfadd4b12492e437320
+SHA512 (prosody-0.9.9.tar.gz) = f1b40d312819ba9f7eef0656e3e009319179a6c931fae6886ce8ad0e57c79365431ab3d115c3a9b2c8742e6027e5370af9c4732e01116038f64e0a5af5d396f3
+Size (prosody-0.9.9.tar.gz) = 269415 bytes
+SHA1 (patch-aa) = a51829983e9b4b28ee769a101df3dec00daf677d
 SHA1 (patch-ab) = 755dd6d77689ef56ea4468f943f149933be72378
 SHA1 (patch-ad) = abcae34982fee846c00252be1c0b033a44ad65d0
 SHA1 (patch-prosodyctl) = e3e3a8f03c6d7c74b9026cf7ada765ee86c8397e
