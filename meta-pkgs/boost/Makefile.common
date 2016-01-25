@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.56 2015/12/27 12:41:42 adam Exp $
+# $NetBSD: Makefile.common,v 1.57 2016/01/25 09:51:07 jperkin Exp $
 #
 # used by devel/boost-build/Makefile
 # used by devel/boost-docs/Makefile
@@ -42,6 +42,8 @@ USE_LANGUAGES=		c c++
 .    if ${MACHINE_ARCH} != "sparc64"
 GCC_REQD+=		4.6
 .    endif
+.  elif ${LOWER_VENDOR} == "redhat"
+GCC_REQD+=		4.4
 .  else
 GCC_REQD+=		4.5
 .  endif
