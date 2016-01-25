@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.38 2015/12/27 12:41:42 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.39 2016/01/25 09:51:07 jperkin Exp $
 
 BUILDLINK_TREE+=	boost-libs
 
@@ -14,6 +14,8 @@ BUILDLINK_PKGSRCDIR.boost-libs?=	../../devel/boost-libs
 # Sync with meta-pkgs/boost/Makefile.common
 .if ${OPSYS} == "OpenBSD"
 GCC_REQD+=		4.6
+.elif ${LOWER_VENDOR} == "redhat"
+GCC_REQD+=		4.4
 .else
 GCC_REQD+=		4.5
 .endif
