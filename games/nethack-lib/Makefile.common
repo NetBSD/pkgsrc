@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.28 2012/10/06 11:54:47 asau Exp $
+# $NetBSD: Makefile.common,v 1.29 2016/01/25 11:07:38 leot Exp $
 #
 # used by games/nethack/Makefile
 # used by games/nethack-lib/Makefile
@@ -13,7 +13,7 @@ NETHACK_DIR=		nethackdir340
 
 DISTNAME=		nethack-${NETHACK_DISTVER}-src
 CATEGORIES=		games
-MASTER_SITES=		ftp://ftp.sourceforge.net/pub/sourceforge/n/ne/nethack/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=nethack/${NETHACK_BASEVER}/}
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pooka@NetBSD.org
