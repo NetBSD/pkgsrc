@@ -1,10 +1,10 @@
-$NetBSD: patch-ag,v 1.1 2009/05/26 12:27:12 he Exp $
+$NetBSD: patch-ag,v 1.2 2016/01/25 17:56:39 jperkin Exp $
 
 The %Lf printf format expects "long double", so cast args accordingly.
 
---- testsuite/libffi.call/float2.c.orig	2008-01-29 16:15:20.000000000 +0100
+--- testsuite/libffi.call/float2.c.orig	2014-11-08 12:47:24.000000000 +0000
 +++ testsuite/libffi.call/float2.c
-@@ -44,7 +44,7 @@ int main (void)
+@@ -45,7 +45,7 @@ int main (void)
    /* This is ifdef'd out for now. long double support under SunOS/gcc
       is pretty much non-existent.  You'll get the odd bus error in library
       routines like printf().  */
