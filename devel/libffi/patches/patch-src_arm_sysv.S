@@ -1,6 +1,8 @@
-$NetBSD: patch-src_arm_sysv.S,v 1.6 2014/11/10 21:29:40 joerg Exp $
+$NetBSD: patch-src_arm_sysv.S,v 1.7 2016/01/25 17:56:39 jperkin Exp $
 
---- src/arm/sysv.S.orig	2014-04-25 17:45:13.000000000 +0000
+ARM fixes.
+
+--- src/arm/sysv.S.orig	2014-11-08 12:47:24.000000000 +0000
 +++ src/arm/sysv.S
 @@ -25,6 +25,8 @@
     DEALINGS IN THE SOFTWARE.
