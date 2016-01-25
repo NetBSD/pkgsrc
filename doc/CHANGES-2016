@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.347 2016/01/25 08:53:07 adam Exp $
+$NetBSD: CHANGES-2016,v 1.348 2016/01/25 09:17:08 abs Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -535,3 +535,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added www/vimb version 2.11 [leot 2016-01-24]
 	Added pkgtools/texlive2pkg version 1.0 [markd 2016-01-24]
 	Updated net/youtube-dl to 20160123 [adam 2016-01-24]
+	Updated net/syncthing to 0.12.16 [abs 2016-01-25]
