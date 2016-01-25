@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/01/17 15:01:06 jaapb Exp $
+# $NetBSD: Makefile,v 1.2 2016/01/25 19:59:17 joerg Exp $
 
 .include "../../meta-pkgs/kde-telepathy/Makefile.common"
 DISTNAME=	ktp-common-internals-${KTP_VERSION}
@@ -15,6 +15,7 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	msgfmt
 
 DEPENDS+=	telepathy-mission-control5>=5.7.9:../../chat/telepathy-mission-control5
+BUILD_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
 
 .include "../../chat/libotr/buildlink3.mk"
 .include "../../chat/telepathy-qt/buildlink3.mk"
