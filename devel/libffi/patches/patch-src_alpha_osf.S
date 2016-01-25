@@ -1,11 +1,11 @@
-$NetBSD: patch-src_alpha_osf.S,v 1.1 2015/01/09 15:10:51 martin Exp $
+$NetBSD: patch-src_alpha_osf.S,v 1.2 2016/01/25 17:56:39 jperkin Exp $
 
 Band-aid update of the alpha asm code to make it compile past the addition
 of type complex. Someone with clue on the alpha ELF ABI should provide
 real support for complex arguments.
 
---- src/alpha/osf.S.orig	2014-11-08 13:47:24.000000000 +0100
-+++ src/alpha/osf.S	2014-12-26 13:02:32.000000000 +0100
+--- src/alpha/osf.S.orig	2014-11-08 12:47:24.000000000 +0000
++++ src/alpha/osf.S
 @@ -279,6 +279,7 @@ $load_table:
  	.gprel32 $load_64	# FFI_TYPE_SINT64
  	.gprel32 $load_none	# FFI_TYPE_STRUCT

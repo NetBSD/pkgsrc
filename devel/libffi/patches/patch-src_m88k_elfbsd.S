@@ -1,6 +1,8 @@
-$NetBSD: patch-src_m88k_elfbsd.S,v 1.1 2013/11/03 23:51:51 jklos Exp $
+$NetBSD: patch-src_m88k_elfbsd.S,v 1.2 2016/01/25 17:56:39 jperkin Exp $
 
---- src/m88k/elfbsd.S.orig	2013-11-03 22:57:57.000000000 +0000
+m88k support.
+
+--- src/m88k/elfbsd.S.orig	2016-01-25 17:24:51.000000000 +0000
 +++ src/m88k/elfbsd.S
 @@ -0,0 +1,195 @@
 +/*
