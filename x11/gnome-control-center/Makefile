@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2015/10/10 01:57:56 ryoon Exp $
+# $NetBSD: Makefile,v 1.79 2016/01/25 19:58:45 joerg Exp $
 #
 
 DISTNAME=	gnome-control-center-2.32.1
@@ -39,8 +39,6 @@ CONF_FILES+=		${EGDIR}/gnomecc.menu \
 			${PKG_SYSCONFDIR}/xdg/menus/gnomecc.menu
 
 .include "options.mk"
-
-_TOOLS_USE_MSGFMT_SH=	yes
 
 .include "../../audio/libcanberra/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
