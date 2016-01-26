@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/01/21 18:00:52 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2016/01/26 10:18:26 markd Exp $
 
 DISTNAME=	xltxtra
 PKGNAME=	tex-${DISTNAME}-0.5e
@@ -6,6 +6,7 @@ TEXLIVE_REV=	19809
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Extras files for LaTeX users of XeTeX
+LICENSE=	lppl-1.3c
 
 DEPENDS+=	tex-ifluatex-[0-9]*:../../print/tex-ifluatex
 DEPENDS+=	tex-ifxetex-[0-9]*:../../print/tex-ifxetex
