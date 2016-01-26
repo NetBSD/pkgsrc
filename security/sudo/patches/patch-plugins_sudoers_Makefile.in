@@ -1,0 +1,15 @@
+$NetBSD: patch-plugins_sudoers_Makefile.in,v 1.1.2.2 2016/01/26 19:52:04 bsiegert Exp $
+
+* don't install the sudoers file to etc
+
+--- plugins/sudoers/Makefile.in.orig	2015-10-31 23:35:25.000000000 +0000
++++ plugins/sudoers/Makefile.in
+@@ -305,7 +305,7 @@ pre-install:
+ 	    ./visudo -c -f $(DESTDIR)$(sudoersdir)/sudoers; \
+ 	fi
+ 
+-install: install-plugin install-binaries install-sudoers install-doc
++install: install-plugin install-binaries install-doc
+ 
+ install-dirs:
+ 	$(SHELL) $(top_srcdir)/mkinstalldirs $(DESTDIR)$(plugindir) \
