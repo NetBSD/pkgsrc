@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.90 2015/08/26 12:44:30 leot Exp $
+# $NetBSD: Makefile,v 1.91 2016/01/26 16:19:25 leot Exp $
 
 DISTNAME=		nmh-1.6
+PKGREVISION=		4
 CATEGORIES=		mail
 MASTER_SITES=		http://savannah.nongnu.org/download/nmh/
-PKGREVISION=		3
 
 MAINTAINER=		leot@NetBSD.org
 HOMEPAGE=		http://www.nongnu.org/nmh/
@@ -98,5 +98,6 @@ CONFIGURE_ARGS+=	--with-ndbm='gdbm_compat -lgdbm'
 CONFIGURE_ARGS+=	--with-ndbmheader=ndbm.h
 .endif
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/terminfo.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
