@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:17:16 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2016/01/26 09:01:28 dbj Exp $
 bin/agrep
 bin/buildcast
 bin/cast
@@ -12,5 +12,5 @@ man/man1/agrep.1
 man/man1/glimpse.1
 man/man1/glimpseindex.1
 man/man1/glimpseserver.1
-share/doc/glimpse/COPYRIGHT
+share/doc/glimpse/LICENSE
 share/doc/glimpse/README
