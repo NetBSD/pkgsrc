@@ -118,3 +118,26 @@ func (s *Suite) TestPackage_DetermineEffectivePkgVars_Precedence(c *check.C) {
 	c.Check(pkg.EffectivePkgname, equals, "pkgname-1.0nb13")
 	c.Check(pkg.EffectivePkgversion, equals, "1.0")
 }
+
+func (s *Suite) TestPackage_CheckPossibleDowngrade(c *check.C) {
+	G.Pkg = NewPackage("category/pkgbase")
+	G.Pkg.EffectivePkgname = "package-1.0nb15"
+	G.Pkg.EffectivePkgnameLine = NewMkLine(NewLine("Makefile", 5, "PKGNAME=dummy", nil))
+	G.globalData.LastChange = map[string]*Change{
+		"category/pkgbase": &Change{
+			Action:  "Updated",
+			Version: "1.8",
+			Line:    NewLine("doc/CHANGES", 116, "dummy", nil),
+		},
+	}
+
+	G.Pkg.checkPossibleDowngrade()
+
+	c.Check(s.Output(), equals, "WARN: Makefile:5: The package is being downgraded from 1.8 (see doc/CHANGES:116) to 1.0nb15\n")
+
+	G.globalData.LastChange["category/pkgbase"].Version = "1.0nb22"
+
+	G.Pkg.checkPossibleDowngrade()
+
+	c.Check(s.Output(), equals, "")
+}
