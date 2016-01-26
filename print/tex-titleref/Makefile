@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/24 16:19:45 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2016/01/26 10:55:08 markd Exp $
 
 DISTNAME=	titleref
 PKGNAME=	tex-${DISTNAME}-2.0
@@ -6,6 +6,7 @@ TEXLIVE_REV=	18729
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	\\titleref command to cross-reference section titles
+LICENSE=	public-domain
 
 CONFLICTS+=	tex-ltxmisc<2010
 
