@@ -1,7 +1,10 @@
-$NetBSD: distinfo,v 1.4 2015/11/02 23:57:24 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/01/26 09:10:39 dbj Exp $
 
 SHA1 (rtl-sdr-0.5.3.tar.gz) = f6f20f7b0562a6d3f7b9ff7bff38a15bff175982
 RMD160 (rtl-sdr-0.5.3.tar.gz) = 3b30938053870ed2d4b261ac9e27ad0863762ca4
 SHA512 (rtl-sdr-0.5.3.tar.gz) = b2887b5df2728f8481b07fb4d8b9bee18b98c5c0ccd0c8e65c2e784a32826cc2301631e95e54071324e5dfbdaa11f0a5aa483cc619b864d4788c3700980b38b6
 Size (rtl-sdr-0.5.3.tar.gz) = 117414 bytes
+SHA1 (patch-cmake_Modules_FindLibUSB.cmake) = 95df1dd9ff3b9d5cf7afc55cc5f80cabe1d90491
+SHA1 (patch-src_librtlsdr.c) = 881418afaff87e98511e955cb0ed4d40fba19237
 SHA1 (patch-src_rtl__fm_c) = 04ec7142f38f26d2ed431765017f53e8e79a3a36
+SHA1 (patch-src_tuner__r82xx.c) = 54763a749eaa64e2c7f816cfe04df8b76eff93c9
