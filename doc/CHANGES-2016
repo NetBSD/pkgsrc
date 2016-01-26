@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.363 2016/01/26 17:59:22 joerg Exp $
+$NetBSD: CHANGES-2016,v 1.364 2016/01/26 21:10:57 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -551,3 +551,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/cmake to 3.4.3 [adam 2016-01-26]
 	Updated www/nginx to 1.8.1 [joerg 2016-01-26]
 	Updated www/nginx-devel to 1.9.10 [joerg 2016-01-26]
+	Updated pkgtools/pkglint to 5.3.3 [rillig 2016-01-26]
