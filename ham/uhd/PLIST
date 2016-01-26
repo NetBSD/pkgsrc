@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/12/13 11:54:06 mef Exp $
+@comment $NetBSD: PLIST,v 1.5 2016/01/26 08:13:23 mef Exp $
 bin/octoclock_firmware_burner
 bin/uhd_cal_rx_iq_balance
 bin/uhd_cal_tx_dc_offset
@@ -78,6 +78,7 @@ include/uhd/usrp/subdev_spec.hpp
 include/uhd/usrp/usrp.h
 include/uhd/usrp_clock/multi_usrp_clock.hpp
 include/uhd/usrp_clock/octoclock_eeprom.hpp
+include/uhd/usrp_clock/usrp_clock.h
 include/uhd/utils/algorithm.hpp
 include/uhd/utils/assert_has.hpp
 include/uhd/utils/assert_has.ipp
