@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/09/17 22:51:05 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2016/01/26 11:10:11 markd Exp $
 
 DISTNAME=	statex
 PKGNAME=	tex-${DISTNAME}-1.6
@@ -6,6 +6,7 @@ TEXLIVE_REV=	20306
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Statistics style
+LICENSE=	lppl-1.3c
 
 DEPENDS+=	tex-amsfonts-[0-9]*:../../fonts/tex-amsfonts
 DEPENDS+=	tex-amsmath-[0-9]*:../../print/tex-amsmath
