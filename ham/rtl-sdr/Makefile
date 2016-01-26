@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2016/01/26 10:12:31 dbj Exp $
+# $NetBSD: Makefile,v 1.7 2016/01/26 16:22:01 wiz Exp $
 
 DISTNAME=		rtl-sdr-0.5.3
 PKGREVISION=		1
@@ -13,7 +13,7 @@ COMMENT=		Turns your Realtek RTL2832 based DVB dongle into a SDR receiver
 LICENSE=		gnu-gpl-v2
 
 USE_LANGUAGES+=		c c++
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pkg-config
 
 USE_CMAKE=		yes
 CONFIGURE_DIRS=build
