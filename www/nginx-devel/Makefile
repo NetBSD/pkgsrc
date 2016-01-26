@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2015/09/30 13:36:47 imil Exp $
+# $NetBSD: Makefile,v 1.19 2016/01/26 17:59:13 joerg Exp $
 
-DISTNAME=		nginx-1.9.5
-PKGREVISION=		1
+DISTNAME=		nginx-1.9.10
 MAINTAINER=		imil@NetBSD.org
 NGINX_HTTP_V2=		yes
 
