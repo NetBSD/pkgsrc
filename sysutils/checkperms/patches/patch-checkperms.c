@@ -1,4 +1,6 @@
-$NetBSD: patch-checkperms.c,v 1.1 2014/03/14 22:30:36 ryoon Exp $
+$NetBSD: patch-checkperms.c,v 1.2 2016/01/26 00:13:20 rillig Exp $
+
+Fix build under SCO OpenServer 5.0.7/3.2 It has no S_ISSOCK.
 
 --- checkperms.c.orig	2009-12-05 09:56:11.000000000 +0000
 +++ checkperms.c
