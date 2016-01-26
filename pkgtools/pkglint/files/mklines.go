@@ -176,7 +176,14 @@ func (mklines *MkLines) determineDefinedVariables() {
 			}
 
 		case "USE_TOOLS":
-			for _, tool := range splitOnSpace(mkline.Value()) {
+			tools := mkline.Value()
+			if matches(tools, `\bautoconf213\b`) {
+				tools += " autoconf autoheader-2.13 autom4te-2.13 autoreconf-2.13 autoscan-2.13 autoupdate-2.13 ifnames-2.13"
+			}
+			if matches(tools, `\bautoconf\b`) {
+				tools += " autoheader autom4te autoreconf autoscan autoupdate ifnames"
+			}
+			for _, tool := range splitOnSpace(tools) {
 				tool = strings.Split(tool, ":")[0]
 				mklines.tools[tool] = true
 				if G.opts.DebugMisc {
