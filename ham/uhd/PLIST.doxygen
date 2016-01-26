@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.doxygen,v 1.4 2015/12/13 11:54:06 mef Exp $
+@comment $NetBSD: PLIST.doxygen,v 1.5 2016/01/26 08:13:23 mef Exp $
 share/doc/uhd/doxygen/html/Ettus_Logo.png
 share/doc/uhd/doxygen/html/N2xx-JTAG.jpg
 share/doc/uhd/doxygen/html/TRRS.png
@@ -363,7 +363,7 @@ share/doc/uhd/doxygen/html/e3x0_gpio_conn.png
 share/doc/uhd/doxygen/html/e3x0_imu_demo.png
 share/doc/uhd/doxygen/html/e3x0_jtag_conn.png
 share/doc/uhd/doxygen/html/e3x0_rp_overlay.png
-share/doc/uhd/doxygen/html/e3xx_conn_photo.png
+share/doc/uhd/doxygen/html/e3xx_conn_photo.jpg
 share/doc/uhd/doxygen/html/endianness_8hpp.html
 share/doc/uhd/doxygen/html/endianness_8hpp.js
 share/doc/uhd/doxygen/html/endianness_8hpp_source.html
