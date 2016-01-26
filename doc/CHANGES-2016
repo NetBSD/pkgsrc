@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.357 2016/01/26 13:56:33 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.358 2016/01/26 14:39:10 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -545,3 +545,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/redis to 3.0.7 [fhajny 2016-01-26]
 	Updated devel/mr to 1.20160123 [schmonz 2016-01-26]
 	Updated graphics/graphite2 to 1.3.5 [wiz 2016-01-26]
+	Updated lang/nodejs4 to 4.2.6 [fhajny 2016-01-26]
