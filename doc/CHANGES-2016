@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.362 2016/01/26 17:54:31 joerg Exp $
+$NetBSD: CHANGES-2016,v 1.363 2016/01/26 17:59:22 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -550,3 +550,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/nmh to 1.6nb4 [leot 2016-01-26]
 	Updated devel/cmake to 3.4.3 [adam 2016-01-26]
 	Updated www/nginx to 1.8.1 [joerg 2016-01-26]
+	Updated www/nginx-devel to 1.9.10 [joerg 2016-01-26]
