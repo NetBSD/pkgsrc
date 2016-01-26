@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.15 2015/11/03 03:27:50 agc Exp $
+$NetBSD: distinfo,v 1.16 2016/01/26 12:56:34 schmonz Exp $
 
-SHA1 (myrepos_1.20141024.tar.gz) = e1cf7fac548ceaa60ebe855363cec916f5302cb8
-RMD160 (myrepos_1.20141024.tar.gz) = dacfaf333fb669f7c279cfa0d7d080243acb90ec
-SHA512 (myrepos_1.20141024.tar.gz) = 79d908d12e09a872cfeb4a2255d161887d47f16ffb47b6674c0fb1c5218a305e33b1b080d579a772387f3ef8d893e9858db7635a1576719f87b3e54ab85679a3
-Size (myrepos_1.20141024.tar.gz) = 44947 bytes
-SHA1 (patch-Makefile) = ecba0066c07532ab3c445e9c50ba6d4beeecea4b
-SHA1 (patch-mr) = 85b67b89019c5b96ee24337b8b2a86650cbdb978
+SHA1 (myrepos_1.20160123.tar.gz) = 32336af97d957efc100e0235e98e13c37ce3b4cd
+RMD160 (myrepos_1.20160123.tar.gz) = a1fa230442dd287ce202c672eee261dd665050de
+SHA512 (myrepos_1.20160123.tar.gz) = 7d697a87fd61ecf0380eec6c6c464e037f93a03e217a145989fffb4e35aa3cdce0225848988be5fcc12f4f326e7968ba9ba733ef34fe605cbdb3f27e511f1d51
+Size (myrepos_1.20160123.tar.gz) = 49884 bytes
+SHA1 (patch-Makefile) = c37a1e55371f9193e3c28dd099bd9c23143987d5
+SHA1 (patch-mr) = 04f93525ab134975c388572b80c06a0e4d785f58
