@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/10/13 13:05:36 mef Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/01/26 09:10:39 dbj Exp $
 bin/rtl_adsb
 bin/rtl_eeprom
 bin/rtl_fm
@@ -12,3 +12,4 @@ lib/librtlsdr.a
 lib/librtlsdr.so
 lib/librtlsdr.so.0
 lib/librtlsdr.so.${PKGVERSION}
+lib/pkgconfig/librtlsdr.pc
