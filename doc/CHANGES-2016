@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.355 2016/01/26 12:03:51 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.356 2016/01/26 12:56:48 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -543,3 +543,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/mdoclint to 1.37 [wiz 2016-01-25]
 	Updated devel/libffi to 3.2.1nb1 [jperkin 2016-01-25]
 	Updated databases/redis to 3.0.7 [fhajny 2016-01-26]
+	Updated devel/mr to 1.20160123 [schmonz 2016-01-26]
