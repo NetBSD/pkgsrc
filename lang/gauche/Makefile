@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2015/11/25 12:51:16 jperkin Exp $
+# $NetBSD: Makefile,v 1.69 2016/01/26 14:46:46 szptvlfn Exp $
 #
 
 DISTNAME=	Gauche-0.9.4
@@ -10,6 +10,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	enami@NetBSD.org
 HOMEPAGE=	http://practical-scheme.net/gauche/
 COMMENT=	R7RS Scheme implementation aimed to be a handy tool for daily works
+LICENSE=	modified-bsd # see work/${DISTNAME}/COPYING
 
 DEPENDS+=		slib-[0-9]*:../../devel/slib
 
