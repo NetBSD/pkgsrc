@@ -1,8 +1,8 @@
-$NetBSD: patch-mr,v 1.4 2014/10/25 15:34:54 schmonz Exp $
+$NetBSD: patch-mr,v 1.5 2016/01/26 12:56:34 schmonz Exp $
 
 Other package systems install ack(1) as "ack-grep", but we don't.
 
---- mr.orig	2014-10-24 17:10:13.000000000 +0000
+--- mr.orig	2016-01-23 13:17:12.000000000 +0000
 +++ mr
 @@ -126,7 +126,7 @@ Show the commit log.
  =item grep pattern
@@ -13,7 +13,7 @@ Other package systems install ack(1) as "ack-grep", but we don't.
  
  =item run command [param ...]
  
-@@ -2147,12 +2147,12 @@ vcsh_log = vcsh run "$MR_REPO" git log "
+@@ -2208,12 +2208,12 @@ vcsh_log = vcsh run "$MR_REPO" git log "
  veracity_log = vv log "$@"
  
  hg_grep = hg grep "$@"
