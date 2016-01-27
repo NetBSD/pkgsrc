@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2015/12/16 16:03:12 taca Exp $
+# $NetBSD: Makefile,v 1.19 2016/01/27 12:12:19 jperkin Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	${RUBY_LICENSE}
 
 RUBY_VERSION_SUPPORTED=	21
 
-USE_LANGUAGES=		c
+USE_LANGUAGES=		c c99
 USE_TOOLS+=		pax yacc pkg-config
 GNU_CONFIGURE=		yes
 TEST_TARGET=		test
