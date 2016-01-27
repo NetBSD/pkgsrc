@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2015/12/06 12:13:13 taca Exp $
+# $NetBSD: Makefile,v 1.36 2016/01/27 14:15:06 jperkin Exp $
 #
 
 DISTNAME=	fengoffice_3.2.2.1
@@ -49,6 +49,12 @@ INSTALLATION_DIRS=	${FO_DIR}
 
 post-extract:
 	cd ${WRKSRC}; ${FIND} . -type f -exec ${CHMOD} -x {} \;
+	for f in environment/classes/encoding/EncodingConverter.class.php \
+		 public/assets/themes/default/stylesheets/og/co.css \
+		 plugins/mail/application/helpers/MailUtilities.class.php; do \
+		${TR} -d '\r' < ${WRKSRC}/$${f} > ${WRKSRC}/$${f}.new; \
+		${MV} ${WRKSRC}/$${f}.new ${WRKSRC}/$${f}; \
+	done
 
 pre-install:
 	${RM} -f ${WRKSRC}/config/empty.config.php
