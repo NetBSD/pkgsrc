@@ -1,12 +1,13 @@
-$NetBSD: distinfo,v 1.110 2016/01/05 13:02:57 tnn Exp $
+$NetBSD: distinfo,v 1.111 2016/01/27 07:39:54 wiz Exp $
 
-SHA1 (mesa-11.1.0.tar.xz) = a57c3b741a465cfd189416bb036323d2ec581d94
-RMD160 (mesa-11.1.0.tar.xz) = 386684fe856ab3acfa914fb8809886330c7696c4
-SHA512 (mesa-11.1.0.tar.xz) = 49817dbe599fdeb3e9d69f149283a5414d3101177040e04ec2c07c9bc57c2e86dcd74c0eb9e5784eb74ec5adff01f4fc8fd07fce650ce0afc18c81265e369192
-Size (mesa-11.1.0.tar.xz) = 7557948 bytes
-SHA1 (patch-configure) = 3e0c3402bfbc4ad286fe938b8b117add23d51454
+SHA1 (mesa-11.1.1.tar.xz) = 77eeb75660e8d0851457151ef18c87540c6fd6bc
+RMD160 (mesa-11.1.1.tar.xz) = 2ebeefdec30be12a32977f46611f0aa28c677c38
+SHA512 (mesa-11.1.1.tar.xz) = 1d41bb4e58042230a38784477c425a2517ef57b17055413884dfb1b7a635a7d8ec68b9be705cbd5608910d75d73988d7c18467c779c48547c5c533750e722521
+Size (mesa-11.1.1.tar.xz) = 7561216 bytes
+SHA1 (patch-configure) = c4d69982863b1752891339a9dd3c0c37bc896006
 SHA1 (patch-include_GL_glxext.h) = 830902f2d38a8395cda682c059fc5223e1b0e89e
 SHA1 (patch-src_egl_drivers_dri2_platform__drm.c) = 99b6dd6739c29551ae2c885eabd7babd159fc3e5
+SHA1 (patch-src_egl_main_eglglobals.c) = 2d81ae27f09162d23bc684456cc5fef48c042652
 SHA1 (patch-src_gallium_auxiliary_util_u__cpu__detect.c) = 5f4c3db54620739da0fe7dfb57c58728ecbbb6e0
 SHA1 (patch-src_gallium_auxiliary_util_u__format__tests.c) = 4d5e4677c2825778c43440ab131b8807f6840975
 SHA1 (patch-src_gallium_auxiliary_util_u__math.h) = 812e4a5291aea47e06505f09891e0434c4d9c34d
@@ -20,11 +21,12 @@ SHA1 (patch-src_gallium_winsys_radeon_drm_radeon__drm__winsys.c) = 2358b7d5ea89e
 SHA1 (patch-src_gallium_winsys_svga_drm_vmw__screen.c) = 4b2ae565377b1a0396c8bf6b2663c261592b8e5e
 SHA1 (patch-src_gallium_winsys_svga_drm_vmw__screen__ioctl.c) = e4b891e8b4ebe5b8e8c7b8c2c1dbed11b9c417df
 SHA1 (patch-src_gbm_main_gbm.c) = 70225ab7352f123c9efc68b6d4ff0d9675b6f9dc
+SHA1 (patch-src_glsl_glsl__parser__extras.cpp) = eb05a70782edb0ccb82c04ef17de60352c840268
 SHA1 (patch-src_glsl_ralloc.c) = 7443d00ff05ee1e1dcfa2b76972b55abadebcad8
 SHA1 (patch-src_glx_apple_apple__glapi.c) = df70afc24759978f954ac3a774a14e6518dde97a
 SHA1 (patch-src_glx_glxclient.h) = e15256851559dafb7a86e1eb7e9d6afc86de581b
 SHA1 (patch-src_glx_glxcurrent.c) = 713f75bcafb186c7123d19a6aae3deaed9d5fa69
-SHA1 (patch-src_loader_Makefile.in) = be0eb34d814366c14ba5165b8081d18f37d262eb
+SHA1 (patch-src_loader_Makefile.in) = 30454c207924183c881a84d31458fdc0ddb1680b
 SHA1 (patch-src_loader_loader.c) = f99b13451f4f932031e876cd611ab746ec5caf1b
 SHA1 (patch-src_mapi_entry__x86-64__tls.h) = e1cc896dd9cf7d77b837104557c0e0bf9d41ff55
 SHA1 (patch-src_mapi_entry__x86__tls.h) = 3d6c11281b57c9c713899022bfc8fcea54d07d56
@@ -39,6 +41,7 @@ SHA1 (patch-src_mesa_drivers_dri_i915_intel__screen.c) = fd8436e4e3a69250256c2cd
 SHA1 (patch-src_mesa_drivers_dri_i965_intel__screen.c) = 7c1a1e5c549f64d4c390e0c87984c44a88d4abfe
 SHA1 (patch-src_mesa_drivers_dri_swrast_swrast.c) = b8a6cca517e1cccbdb2c59cf67a6d2481cdfebd4
 SHA1 (patch-src_mesa_main_context.c) = 695b0e04cbd08dfed46b4dae5f9602b35e21f5b3
+SHA1 (patch-src_mesa_main_extensions.c) = d650d7ddfe22ddbcd8a4c24b64feb27126521ae0
 SHA1 (patch-src_mesa_main_macros.h) = e0e98dff37bbf96fea2f3adf0dc9ef9911b711d9
 SHA1 (patch-src_mesa_main_shader__query.cpp) = 6273c74161f045363c58f38adeb672287f6a0898
 SHA1 (patch-src_mesa_tnl_t__pipeline.c) = afc7d5f27aeadacc7c6a762e5aa892e01a0c1317
