@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.364 2016/01/26 21:10:57 rillig Exp $
+$NetBSD: CHANGES-2016,v 1.365 2016/01/27 00:09:15 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -552,3 +552,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/nginx to 1.8.1 [joerg 2016-01-26]
 	Updated www/nginx-devel to 1.9.10 [joerg 2016-01-26]
 	Updated pkgtools/pkglint to 5.3.3 [rillig 2016-01-26]
+	Updated www/firefox to 44.0 [ryoon 2016-01-27]
