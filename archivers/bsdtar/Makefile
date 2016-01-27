@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2015/01/17 12:44:51 adam Exp $
+# $NetBSD: Makefile,v 1.23 2016/01/27 12:26:11 jperkin Exp $
 
 .include "../../archivers/libarchive/Makefile.common"
 
@@ -13,6 +13,7 @@ CONFIGURE_ARGS+=	--disable-bsdcpio
 CONFIGURE_ARGS+=	--disable-shared
 
 .include "../../archivers/bzip2/builtin.mk"
+.include "../../archivers/xz/builtin.mk"
 .include "../../devel/zlib/builtin.mk"
 CHECK_BUILTIN.openssl:=	yes
 .include "../../security/openssl/builtin.mk"
@@ -28,6 +29,9 @@ LDFLAGS+=	-L${WRKDIR}/zlib
 .endif
 .if empty(USE_BUILTIN.openssl:M[yY][eE][sS])
 CONFIGURE_ARGS+=	--without-openssl
+.endif
+.if empty(USE_BUILTIN.xz:M[yY][eE][sS])
+CONFIGURE_ARGS+=	--without-lzma
 .endif
 
 FILESDIR.bzip2?=	${.CURDIR}/../../archivers/bzip2/files
