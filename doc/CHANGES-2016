@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.370 2016/01/27 08:58:31 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.371 2016/01/27 09:01:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -558,3 +558,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated x11/xkeyboard-config to 2.17 [wiz 2016-01-27]
 	Updated graphics/MesaLib to 11.1.1 [wiz 2016-01-27]
 	Updated devel/py-test to 2.8.6 [wiz 2016-01-27]
+	Updated devel/py-virtualenv to 14.0.1 [wiz 2016-01-27]
