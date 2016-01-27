@@ -1,0 +1,15 @@
+$NetBSD: patch-solaris_quagga.init.in,v 1.3 2016/01/27 13:48:01 jperkin Exp $
+
+Disable the broken upgrade function, unsuitable and unnecessary for pkgsrc.
+
+--- solaris/quagga.init.in.orig	2015-03-07 06:58:00.000000000 +0000
++++ solaris/quagga.init.in
+@@ -229,7 +229,7 @@ else
+ 	fi
+ fi
+ 
+-upgrade_config "$DAEMON"
++#upgrade_config "$DAEMON"
+ 
+ if [ ! -f "@sysconfdir@/${DAEMON}.conf" ] ; then
+ 	echo "Could not find config file, @sysconfdir@/${DAEMON}.conf"
