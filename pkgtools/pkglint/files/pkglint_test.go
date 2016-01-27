@@ -132,7 +132,7 @@ func (s *Suite) TestPackage_LoadPackageMakefile(c *check.C) {
 
 	pkg.loadPackageMakefile(makefile)
 
-	c.Check(s.OutputCleanTmpdir(), equals, "")
+	c.Check(s.Output(), equals, "")
 }
 
 func (s *Suite) TestChecklinesDescr(c *check.C) {

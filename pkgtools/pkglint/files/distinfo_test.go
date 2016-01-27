@@ -39,8 +39,7 @@ func (s *Suite) TestChecklinesDistinfo_GlobalHashMismatch(c *check.C) {
 		"SHA512 (pkgname-1.0.tar.gz) = 12341234"))
 
 	c.Check(s.Output(), equals, ""+
-		"ERROR: distinfo:3: The hash SHA512 for pkgname-1.0.tar.gz is 12341234, ...\n"+
-		"ERROR: other/distinfo:7: ... which differs from asdfasdf.\n"+
+		"ERROR: distinfo:3: The hash SHA512 for pkgname-1.0.tar.gz is 12341234, which differs from asdfasdf in other/distinfo:7.\n"+
 		"ERROR: distinfo:EOF: Expected SHA1, RMD160, SHA512, Size checksums for \"pkgname-1.0.tar.gz\", got SHA512.\n")
 }
 
@@ -62,7 +61,7 @@ func (s *Suite) TestChecklinesDistinfo_UncommittedPatch(c *check.C) {
 		"",
 		"SHA1 (patch-aa) = 5ad1fb9b3c328fff5caa1a23e8f330e707dd50c0"))
 
-	c.Check(s.OutputCleanTmpdir(), equals, ""+
+	c.Check(s.Output(), equals, ""+
 		"WARN: ~/distinfo:3: patches/patch-aa is registered in distinfo but not added to CVS.\n")
 }
 
@@ -80,7 +79,7 @@ func (s *Suite) TestChecklinesDistinfo_UnrecordedPatches(c *check.C) {
 		"SHA512 (distfile.tar.gz) = ...",
 		"Size (distfile.tar.gz) = 1024 bytes"))
 
-	c.Check(s.OutputCleanTmpdir(), equals, ""+
+	c.Check(s.Output(), equals, ""+
 		"ERROR: ~/distinfo: patch \"patches/patch-aa\" is not recorded. Run \""+confMake+" makepatchsum\".\n"+
 		"ERROR: ~/distinfo: patch \"patches/patch-src-Makefile\" is not recorded. Run \""+confMake+" makepatchsum\".\n")
 }

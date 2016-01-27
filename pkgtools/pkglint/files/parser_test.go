@@ -130,7 +130,11 @@ func (s *Suite) TestParser_MkTokens(c *check.C) {
 	token("${empty(CFLAGS):?:-cflags ${CFLAGS:Q}}", varuse("empty(CFLAGS)", "?:-cflags ${CFLAGS:Q}"))
 	token("${${${PKG_INFO} -E ${d} || echo:L:sh}:L:C/[^[0-9]]*/ /g:[1..3]:ts.}",
 		varuse("${${PKG_INFO} -E ${d} || echo:L:sh}", "L", "C/[^[0-9]]*/ /g", "[1..3]", "ts."))
+	token("${VAR:S/-//S/.//}", varuse("VAR", "S/-//", "S/.//")) // For :S and :C, the colon can be left out.
+	token("${VAR:ts}", varuse("VAR", "ts"))                     // The separator character can be left out.
+	token("${VAR:ts\\000012}", varuse("VAR", "ts\\000012"))     // The separator character can be a long octal number.
+	token("${VAR:ts\\124}", varuse("VAR", "ts\\124"))           // Or even decimal.
 
-	parse("${VAR)", nil, "${VAR)")
-	parse("$(VAR}", nil, "$(VAR}")
+	parse("${VAR)", nil, "${VAR)") // Opening brace, closing parenthesis
+	parse("$(VAR}", nil, "$(VAR}") // Opening parenthesis, closing brace
 }

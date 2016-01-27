@@ -33,15 +33,13 @@ func (s *Suite) Stderr() string {
 }
 
 // Returns and consumes the output from both stdout and stderr.
+// The temporary directory is replaced with a tilde (~).
 func (s *Suite) Output() string {
-	return s.Stdout() + s.Stderr()
-}
-
-func (s *Suite) OutputCleanTmpdir() string {
-	if s.tmpdir == "" {
-		return "error: OutputCleanTmpdir must only be called when s.tmpdir is actually set."
+	output := s.Stdout() + s.Stderr()
+	if s.tmpdir != "" {
+		output = strings.Replace(output, s.tmpdir, "~", -1)
 	}
-	return strings.Replace(s.Output(), s.tmpdir, "~", -1)
+	return output
 }
 
 // Arguments are either (lineno, orignl) or (lineno, orignl, textnl).

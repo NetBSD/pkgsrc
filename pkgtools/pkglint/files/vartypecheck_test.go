@@ -344,6 +344,16 @@ func (s *Suite) TestVartypeCheck_URL(c *check.C) {
 	c.Check(s.Output(), equals, "WARN: fname:3: \"http://example.org/download?fname=<distfile>;version=<version>\" is not a valid URL.\n")
 }
 
+func (s *Suite) TestVartypeCheck_Varname(c *check.C) {
+	runVartypeChecks("BUILD_DEFS", opAssign, (*VartypeCheck).Varname,
+		"VARBASE",
+		"VarBase",
+		"PKG_OPTIONS_VAR.pkgbase",
+		"${INDIRECT}")
+
+	c.Check(s.Output(), equals, "WARN: fname:2: \"VarBase\" is not a valid variable name.\n")
+}
+
 func (s *Suite) TestVartypeCheck_Yes(c *check.C) {
 	runVartypeChecks("APACHE_MODULE", opAssign, (*VartypeCheck).Yes,
 		"yes",
@@ -353,6 +363,29 @@ func (s *Suite) TestVartypeCheck_Yes(c *check.C) {
 	c.Check(s.Output(), equals, ""+
 		"WARN: fname:2: APACHE_MODULE should be set to YES or yes.\n"+
 		"WARN: fname:3: APACHE_MODULE should be set to YES or yes.\n")
+}
+
+func (s *Suite) TestVartypeCheck_YesNo(c *check.C) {
+	runVartypeChecks("GNU_CONFIGURE", opAssign, (*VartypeCheck).YesNo,
+		"yes",
+		"no",
+		"ja",
+		"${YESVAR}")
+
+	c.Check(s.Output(), equals, ""+
+		"WARN: fname:3: GNU_CONFIGURE should be set to YES, yes, NO, or no.\n"+
+		"WARN: fname:4: GNU_CONFIGURE should be set to YES, yes, NO, or no.\n")
+}
+
+func (s *Suite) TestVartypeCheck_YesNoIndirectly(c *check.C) {
+	runVartypeChecks("GNU_CONFIGURE", opAssign, (*VartypeCheck).YesNoIndirectly,
+		"yes",
+		"no",
+		"ja",
+		"${YESVAR}")
+
+	c.Check(s.Output(), equals, ""+
+		"WARN: fname:3: GNU_CONFIGURE should be set to YES, yes, NO, or no.\n")
 }
 
 func runVartypeChecks(varname string, op MkOperator, checker func(*VartypeCheck), values ...string) {

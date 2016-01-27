@@ -189,12 +189,26 @@ func (p *Parser) VarUseModifiers(closing string) []string {
 	repl := p.repl
 
 	var modifiers []string
-	for repl.AdvanceStr(":") {
+	mayOmitColon := false
+	for repl.AdvanceStr(":") || mayOmitColon {
+		mayOmitColon = false
 		modifierMark := repl.Mark()
 
 		switch repl.PeekByte() {
 		case 'E', 'H', 'L', 'O', 'Q', 'R', 'T', 's', 't', 'u':
-			if repl.AdvanceRegexp(`^(E|H|L|Ox?|Q|R|T|sh|tA|tW|tl|ts.|tu|tw|u)`) {
+			if repl.AdvanceRegexp(`^(E|H|L|Ox?|Q|R|T|sh|tA|tW|tl|tu|tw|u)`) {
+				modifiers = append(modifiers, repl.Since(modifierMark))
+				continue
+			}
+			if repl.AdvanceStr("ts") {
+				rest := repl.rest
+				if len(rest) >= 2 && (rest[1] == closing[0] || rest[1] == ':') {
+					repl.Skip(1)
+				} else if len(rest) >= 1 && (rest[0] == closing[0] || rest[0] == ':') {
+				} else if repl.AdvanceRegexp(`^\\\d+`) {
+				} else {
+					break
+				}
 				modifiers = append(modifiers, repl.Since(modifierMark))
 				continue
 			}
@@ -221,6 +235,7 @@ func (p *Parser) VarUseModifiers(closing string) []string {
 					if repl.AdvanceStr(separator) {
 						repl.AdvanceRegexp(`^[1gW]`)
 						modifiers = append(modifiers, repl.Since(modifierMark))
+						mayOmitColon = true
 						continue
 					}
 				}

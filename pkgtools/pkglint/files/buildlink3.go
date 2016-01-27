@@ -85,13 +85,13 @@ func ChecklinesBuildlink3Mk(mklines *MkLines) {
 	// See pkgtools/createbuildlink/files/createbuildlink, keyword PKGUPPER
 	ucPkgbase := strings.ToUpper(strings.Replace(pkgbase, "-", "_", -1))
 	if ucPkgbase != pkgupper && !containsVarRef(pkgbase) {
-		pkgupperLine.Error2("Package name mismatch between multiple-inclusion guard %q (expected %q) ...", pkgupper, ucPkgbase)
-		pkgbaseLine.Error1("... and package name %q.", pkgbase)
+		pkgupperLine.Errorf("Package name mismatch between multiple-inclusion guard %q (expected %q) and package name %q (from %s).",
+			pkgupper, ucPkgbase, pkgbase, pkgbaseLine.ReferenceFrom(pkgupperLine))
 	}
 	if G.Pkg != nil {
 		if mkbase := G.Pkg.EffectivePkgbase; mkbase != "" && mkbase != pkgbase {
-			pkgbaseLine.Error1("Package name mismatch between %q in this file ...", pkgbase)
-			G.Pkg.EffectivePkgnameLine.Line.Error1("... and %q from the package Makefile.", mkbase)
+			pkgbaseLine.Errorf("Package name mismatch between %q in this file and %q from %s.",
+				pkgbase, mkbase, G.Pkg.EffectivePkgnameLine.Line.ReferenceFrom(pkgbaseLine))
 		}
 	}
 
@@ -133,15 +133,15 @@ func ChecklinesBuildlink3Mk(mklines *MkLines) {
 				doCheck = true
 			}
 			if doCheck && abi != nil && api != nil && abi.pkgbase != api.pkgbase && !hasPrefix(api.pkgbase, "{") {
-				abiLine.Warn1("Package name mismatch between ABI %q ...", abi.pkgbase)
-				apiLine.Warn1("... and API %q.", api.pkgbase)
+				abiLine.Warnf("Package name mismatch between ABI %q and API %q (from %s).",
+					abi.pkgbase, api.pkgbase, apiLine.ReferenceFrom(abiLine))
 			}
 			if doCheck {
 				if abi != nil && abi.lower != "" && !containsVarRef(abi.lower) {
 					if api != nil && api.lower != "" && !containsVarRef(api.lower) {
 						if pkgverCmp(abi.lower, api.lower) < 0 {
-							abiLine.Warn1("ABI version %q should be at least ...", abi.lower)
-							apiLine.Warn1("... API version %q.", api.lower)
+							abiLine.Warnf("ABI version %q should be at least API version %q (see %s).",
+								abi.lower, api.lower, apiLine.ReferenceFrom(abiLine))
 						}
 					}
 				}
