@@ -65,7 +65,7 @@ func (s *Suite) TestChecklinesPlist_commonEnd(c *check.C) {
 
 	ChecklinesPlist(LoadExistingLines(fname, false))
 
-	c.Check(s.OutputCleanTmpdir(), equals, "")
+	c.Check(s.Output(), equals, "")
 }
 
 func (s *Suite) TestChecklinesPlist_conditional(c *check.C) {
@@ -122,7 +122,7 @@ func (s *Suite) TestPlistChecker_sort(c *check.C) {
 
 	NewPlistLineSorter(plines).Sort()
 
-	c.Check(s.OutputCleanTmpdir(), equals, ""+
+	c.Check(s.Output(), equals, ""+
 		"AUTOFIX: ~/PLIST:1: Sorting the whole file.\n"+
 		"AUTOFIX: ~/PLIST: Has been auto-fixed. Please re-run pkglint.\n")
 	c.Check(s.LoadTmpFile(c, "PLIST"), equals, ""+

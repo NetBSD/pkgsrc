@@ -24,7 +24,7 @@ func (s *Suite) TestCheckdirToplevel(c *check.C) {
 	G.CurrentDir = s.tmpdir
 	CheckdirToplevel()
 
-	c.Check(s.OutputCleanTmpdir(), equals, ""+
+	c.Check(s.Output(), equals, ""+
 		"WARN: ~/Makefile:3: Indentation should be a single tab character.\n"+
 		"ERROR: ~/Makefile:6: Each subdir must only appear once.\n"+
 		"WARN: ~/Makefile:7: \"ignoreme\" commented out without giving a reason.\n"+
