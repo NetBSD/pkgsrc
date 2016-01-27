@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.42 2015/12/16 09:34:56 ryoon Exp $
+$NetBSD: patch-aa,v 1.43 2016/01/27 00:08:26 ryoon Exp $
 
 * The profiler does not support Darwin/PPC so don't try to enable it
   on that platform.
@@ -13,17 +13,17 @@ $NetBSD: patch-aa,v 1.42 2015/12/16 09:34:56 ryoon Exp $
   heavy patching. Ideally they should be fixed individually but that
   will be an extremely hard work, so don't define XP_MACOSX for now.
 
---- configure.in.orig	2015-12-04 00:37:01.000000000 +0000
+--- configure.in.orig	2016-01-15 01:01:40.000000000 +0000
 +++ configure.in
-@@ -1996,7 +1996,6 @@ case "$target" in
-         AC_DEFINE(XP_DARWIN)
+@@ -1974,7 +1974,6 @@ case "$target" in
          _PLATFORM_DEFAULT_TOOLKIT='cairo-uikit'
+         direct_nspr_config=1
      else
 -        AC_DEFINE(XP_MACOSX)
          AC_DEFINE(XP_DARWIN)
          _PLATFORM_DEFAULT_TOOLKIT='cairo-cocoa'
          # The ExceptionHandling framework is needed for Objective-C exception
-@@ -2579,8 +2578,7 @@ MOZ_CXX11
+@@ -2554,8 +2553,7 @@ MOZ_CXX11
  
  AC_LANG_C
  
@@ -33,7 +33,7 @@ $NetBSD: patch-aa,v 1.42 2015/12/16 09:34:56 ryoon Exp $
  dnl ===============================================================
  if test "$GNU_CC" -a "$OS_TARGET" != WINNT; then
    AC_DEFINE(HAVE_VISIBILITY_HIDDEN_ATTRIBUTE)
-@@ -3493,6 +3491,14 @@ if test -n "$YASM"; then
+@@ -3464,6 +3462,14 @@ if test -n "$YASM"; then
    _YASM_BUILD=`        echo ${YASM_VERSION} | $AWK -F\. '{ print $4 }'`
  fi
  
@@ -48,7 +48,7 @@ $NetBSD: patch-aa,v 1.42 2015/12/16 09:34:56 ryoon Exp $
  if test -z "$SKIP_LIBRARY_CHECKS"; then
  dnl system JPEG support
  dnl ========================================================
-@@ -3520,11 +3526,7 @@ if test "$MOZ_NATIVE_JPEG" = 1; then
+@@ -3491,11 +3497,7 @@ if test "$MOZ_NATIVE_JPEG" = 1; then
                       #include <jpeglib.h> ],
                     [ #if JPEG_LIB_VERSION < $MOZJPEG
                       #error "Insufficient JPEG library version ($MOZJPEG required)."
@@ -61,7 +61,7 @@ $NetBSD: patch-aa,v 1.42 2015/12/16 09:34:56 ryoon Exp $
                     MOZ_NATIVE_JPEG=1,
                     AC_MSG_ERROR([Insufficient JPEG library version for --with-system-jpeg]))
  fi
-@@ -4255,6 +4257,10 @@ cairo-gonk)
+@@ -4235,6 +4237,10 @@ cairo-gonk)
  
  esac
  
@@ -72,7 +72,7 @@ $NetBSD: patch-aa,v 1.42 2015/12/16 09:34:56 ryoon Exp $
  AC_SUBST(MOZ_PDF_PRINTING)
  if test "$MOZ_PDF_PRINTING"; then
     PDF_SURFACE_FEATURE="#define CAIRO_HAS_PDF_SURFACE 1"
-@@ -4994,6 +5000,9 @@ if test -n "$MOZ_WEBRTC"; then
+@@ -5006,6 +5012,9 @@ if test -n "$MOZ_WEBRTC"; then
      MOZ_VPX=1
      MOZ_VPX_ERROR_CONCEALMENT=1
  
@@ -82,7 +82,7 @@ $NetBSD: patch-aa,v 1.42 2015/12/16 09:34:56 ryoon Exp $
  dnl enable once Signaling lands
      MOZ_WEBRTC_SIGNALING=1
      AC_DEFINE(MOZ_WEBRTC_SIGNALING)
-@@ -5137,6 +5146,142 @@ if test "${ac_cv_c_attribute_aligned}" !
+@@ -5149,6 +5158,142 @@ if test "${ac_cv_c_attribute_aligned}" !
  fi
  
  dnl ========================================================
@@ -225,7 +225,7 @@ $NetBSD: patch-aa,v 1.42 2015/12/16 09:34:56 ryoon Exp $
  dnl = Disable VP8 decoder support
  dnl ========================================================
  MOZ_ARG_DISABLE_BOOL(webm,
-@@ -5539,6 +5684,67 @@ fi
+@@ -5551,6 +5696,67 @@ fi
  AC_SUBST(MOZ_WEBM_ENCODER)
  
  dnl ==================================
@@ -293,7 +293,7 @@ $NetBSD: patch-aa,v 1.42 2015/12/16 09:34:56 ryoon Exp $
  dnl = Check alsa availability on Linux
  dnl ==================================
  
-@@ -5552,12 +5758,23 @@ MOZ_ARG_ENABLE_BOOL(alsa,
+@@ -5564,12 +5770,23 @@ MOZ_ARG_ENABLE_BOOL(alsa,
     MOZ_ALSA=1,
     MOZ_ALSA=)
  
@@ -317,7 +317,7 @@ $NetBSD: patch-aa,v 1.42 2015/12/16 09:34:56 ryoon Exp $
  AC_SUBST(MOZ_ALSA)
  
  dnl ========================================================
-@@ -8136,6 +8353,49 @@ if test "$USE_FC_FREETYPE"; then
+@@ -8148,6 +8365,49 @@ if test "$USE_FC_FREETYPE"; then
  fi
  
  dnl ========================================================
