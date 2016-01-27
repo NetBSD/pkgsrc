@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/04/25 14:23:20 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2016/01/27 06:37:27 dbj Exp $
 #
 
 DISTNAME=	chirp-0.4.1
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v3
 USE_LANGUAGES=	#none
 REPLACE_PYTHON= *.py chirp/*.py chirpui/*.py
 
-DEPENDS+=       py27-serial>=2.7:../../comms/py-serial
+DEPENDS+=       ${PYPKGPREFIX}-serial>=2.7:../../comms/py-serial
 
 .include "../../mk/bsd.prefs.mk"
 
