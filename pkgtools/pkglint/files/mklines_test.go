@@ -18,7 +18,7 @@ func (s *Suite) TestMkLines_AutofixConditionalIndentation(c *check.C) {
 
 	mklines.Check()
 
-	c.Check(s.OutputCleanTmpdir(), equals, ""+
+	c.Check(s.Output(), equals, ""+
 		"AUTOFIX: ~/fname.mk:3: Replacing \".\" with \".  \".\n"+
 		"AUTOFIX: ~/fname.mk:4: Replacing \".\" with \".    \".\n"+
 		"AUTOFIX: ~/fname.mk:5: Replacing \".\" with \".    \".\n"+
