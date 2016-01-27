@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2015/06/14 12:50:04 markd Exp $
+# $NetBSD: Makefile,v 1.16 2016/01/27 10:21:54 markd Exp $
 
 DISTNAME=	luatex
 PKGNAME=	tex-${DISTNAME}-0.70.1pl37242
@@ -7,6 +7,7 @@ TEXLIVE_REV=	37242
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.luatex.org/
 COMMENT=	LuaTeX basic definition package
+LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	luatex>=0.60.1:../../print/luatex
 DEPENDS+=	tex-etex-[0-9]*:../../print/tex-etex
