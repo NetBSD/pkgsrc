@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/04/26 17:17:40 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2016/01/27 10:42:26 markd Exp $
 # TeX Live Revision 17382
 
 DISTNAME=	fncylab.doc
@@ -6,6 +6,7 @@ PKGNAME=	tex-${DISTNAME:S/./-/}-1.0
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-fncylab
+LICENSE=	lppl-1.3c
 
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
