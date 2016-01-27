@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2011/09/18 03:30:26 minskim Exp $
+# $NetBSD: Makefile,v 1.17 2016/01/27 09:46:18 markd Exp $
 
 DISTNAME=	prosper
 PKGNAME=	tex-${DISTNAME}-1.5
@@ -7,6 +7,7 @@ TEXLIVE_REV=	15878
 MAINTAINER=	nico@orgrim.net
 HOMEPAGE=	http://sourceforge.net/projects/prosper/
 COMMENT=	LaTeX class for high quality slides
+LICENSE=	lppl-1.2
 
 DEPENDS+=	tex-amsfonts-[0-9]*:../../fonts/tex-amsfonts
 DEPENDS+=	tex-fp-[0-9]*:../../math/tex-fp
