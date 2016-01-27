@@ -16,6 +16,7 @@ package main
 import (
 	"fmt"
 	"io"
+	"path"
 	"strconv"
 	"strings"
 )
@@ -77,7 +78,7 @@ func (line *Line) linenos() string {
 
 func (line *Line) ReferenceFrom(other *Line) string {
 	if line.Fname != other.Fname {
-		return line.Fname + ":" + line.linenos()
+		return cleanpath(relpath(path.Dir(other.Fname), line.Fname)) + ":" + line.linenos()
 	}
 	return "line " + line.linenos()
 }

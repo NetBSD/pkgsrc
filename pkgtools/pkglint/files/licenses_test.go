@@ -17,11 +17,11 @@ func (s *Suite) TestChecklineLicense(c *check.C) {
 
 	checklineLicense(mkline, "gpl-v2")
 
-	c.Check(s.OutputCleanTmpdir(), equals, "WARN: Makefile:7: License file ~/licenses/gpl-v2 does not exist.\n")
+	c.Check(s.Output(), equals, "WARN: Makefile:7: License file ~/licenses/gpl-v2 does not exist.\n")
 
 	checklineLicense(mkline, "no-profit shareware")
 
-	c.Check(s.OutputCleanTmpdir(), equals, ""+
+	c.Check(s.Output(), equals, ""+
 		"WARN: Makefile:7: License file ~/licenses/no-profit does not exist.\n"+
 		"WARN: Makefile:7: License \"no-profit\" is deprecated.\n"+
 		"WARN: Makefile:7: License file ~/licenses/shareware does not exist.\n"+
