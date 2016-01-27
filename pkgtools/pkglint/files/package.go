@@ -362,26 +362,23 @@ func (pkg *Package) checkfilePackageMakefile(fname string, mklines *MkLines) {
 		}
 	}
 
-	if vardef["REPLACE_PERL"] != nil && vardef["NO_CONFIGURE"] != nil {
-		vardef["REPLACE_PERL"].Warn0("REPLACE_PERL is ignored when ...")
-		vardef["NO_CONFIGURE"].Warn0("... NO_CONFIGURE is set.")
+	if perlLine, noconfLine := vardef["REPLACE_PERL"], vardef["NO_CONFIGURE"]; perlLine != nil && noconfLine != nil {
+		perlLine.Warn1("REPLACE_PERL is ignored when NO_CONFIGURE is set (in %s)", noconfLine.Line.ReferenceFrom(perlLine.Line))
 	}
 
 	if vardef["LICENSE"] == nil {
 		Errorf(fname, noLines, "Each package must define its LICENSE.")
 	}
 
-	if vardef["GNU_CONFIGURE"] != nil && vardef["USE_LANGUAGES"] != nil {
-		languagesLine := vardef["USE_LANGUAGES"]
-
-		if matches(languagesLine.Comment(), `(?-i)\b(?:c|empty|none)\b`) {
+	if gnuLine, useLine := vardef["GNU_CONFIGURE"], vardef["USE_LANGUAGES"]; gnuLine != nil && useLine != nil {
+		if matches(useLine.Comment(), `(?-i)\b(?:c|empty|none)\b`) {
 			// Don't emit a warning, since the comment
 			// probably contains a statement that C is
 			// really not needed.
 
-		} else if !matches(languagesLine.Value(), `(?:^|\s+)(?:c|c99|objc)(?:\s+|$)`) {
-			vardef["GNU_CONFIGURE"].Warn0("GNU_CONFIGURE almost always needs a C compiler, ...")
-			languagesLine.Warn0("... but \"c\" is not added to USE_LANGUAGES.")
+		} else if !matches(useLine.Value(), `(?:^|\s+)(?:c|c99|objc)(?:\s+|$)`) {
+			gnuLine.Warn1("GNU_CONFIGURE almost always needs a C compiler, but \"c\" is not added to USE_LANGUAGES in %s.",
+				useLine.Line.ReferenceFrom(gnuLine.Line))
 		}
 	}
 
