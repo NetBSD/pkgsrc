@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2015/11/23 10:30:15 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2016/01/27 10:31:29 wiz Exp $
 #
 
 DISTNAME=		gummi-0.6.5
-PKGREVISION=		21
+PKGREVISION=		22
 CATEGORIES=		editors
 MASTER_SITES=		http://dev.midnightcoding.org/attachments/download/301/
 
