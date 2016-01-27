@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/05/10 23:12:09 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2016/01/27 10:53:20 markd Exp $
 
 DISTNAME=	elsarticle
 PKGNAME=	tex-${DISTNAME}-1.20
@@ -6,6 +6,7 @@ TEXLIVE_REV=	15878
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Class for articles for submission to Elsevier journals
+LICENSE=	lppl-1.2
 
 DEPENDS+=	tex-geometry-[0-9]*:../../print/tex-geometry
 DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
