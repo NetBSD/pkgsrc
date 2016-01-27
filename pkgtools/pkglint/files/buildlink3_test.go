@@ -59,9 +59,7 @@ func (s *Suite) TestChecklinesBuildlink3_NameMismatch(c *check.C) {
 
 	ChecklinesBuildlink3Mk(mklines)
 
-	c.Check(s.Output(), equals, ""+
-		"ERROR: buildlink3.mk:3: Package name mismatch between \"hs-X11\" in this file ...\n"+
-		"ERROR: Makefile:3: ... and \"X11\" from the package Makefile.\n")
+	c.Check(s.Output(), equals, "ERROR: buildlink3.mk:3: Package name mismatch between \"hs-X11\" in this file and \"X11\" from Makefile:3.\n")
 }
 
 func (s *Suite) TestChecklinesBuildlink3_NameMismatchMultipleInclusion(c *check.C) {
@@ -81,8 +79,7 @@ func (s *Suite) TestChecklinesBuildlink3_NameMismatchMultipleInclusion(c *check.
 	ChecklinesBuildlink3Mk(mklines)
 
 	c.Check(s.Output(), equals, ""+
-		"ERROR: buildlink3.mk:5: Package name mismatch between multiple-inclusion guard \"PKGBASE2\" (expected \"PKGBASE1\") ...\n"+
-		"ERROR: buildlink3.mk:3: ... and package name \"pkgbase1\".\n"+
+		"ERROR: buildlink3.mk:5: Package name mismatch between multiple-inclusion guard \"PKGBASE2\" (expected \"PKGBASE1\") and package name \"pkgbase1\" (from line 3).\n"+
 		"WARN: buildlink3.mk:9: Definition of BUILDLINK_API_DEPENDS is missing.\n")
 }
 
@@ -105,9 +102,7 @@ func (s *Suite) TestChecklinesBuildlink3_NameMismatchAbiApi(c *check.C) {
 
 	ChecklinesBuildlink3Mk(mklines)
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: buildlink3.mk:9: Package name mismatch between ABI \"hs-X12\" ...\n"+
-		"WARN: buildlink3.mk:8: ... and API \"hs-X11\".\n")
+	c.Check(s.Output(), equals, "WARN: buildlink3.mk:9: Package name mismatch between ABI \"hs-X12\" and API \"hs-X11\" (from line 8).\n")
 }
 
 func (s *Suite) TestChecklinesBuildlink3_AbiApiVersions(c *check.C) {
@@ -130,8 +125,7 @@ func (s *Suite) TestChecklinesBuildlink3_AbiApiVersions(c *check.C) {
 	ChecklinesBuildlink3Mk(mklines)
 
 	c.Check(s.Output(), equals, ""+
-		"WARN: buildlink3.mk:9: ABI version \"1.6.0\" should be at least ...\n"+
-		"WARN: buildlink3.mk:8: ... API version \"1.6.1\".\n")
+		"WARN: buildlink3.mk:9: ABI version \"1.6.0\" should be at least API version \"1.6.1\" (see line 8).\n")
 }
 
 func (s *Suite) TestChecklinesBuildlink3_NoBuildlinkTreeAtBeginning(c *check.C) {

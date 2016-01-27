@@ -9,7 +9,7 @@ func (s *Suite) TestCheckDirent_outside(c *check.C) {
 
 	CheckDirent(s.tmpdir)
 
-	c.Check(s.OutputCleanTmpdir(), equals, "ERROR: ~: Cannot determine the pkgsrc root directory for \"~\".\n")
+	c.Check(s.Output(), equals, "ERROR: ~: Cannot determine the pkgsrc root directory for \"~\".\n")
 }
 
 func (s *Suite) TestCheckDirent(c *check.C) {
@@ -21,17 +21,17 @@ func (s *Suite) TestCheckDirent(c *check.C) {
 
 	CheckDirent(s.tmpdir)
 
-	c.Check(s.OutputCleanTmpdir(), equals, "ERROR: ~/Makefile: Must not be empty.\n")
+	c.Check(s.Output(), equals, "ERROR: ~/Makefile: Must not be empty.\n")
 
 	CheckDirent(s.tmpdir + "/category")
 
-	c.Check(s.OutputCleanTmpdir(), equals, "ERROR: ~/category/Makefile: Must not be empty.\n")
+	c.Check(s.Output(), equals, "ERROR: ~/category/Makefile: Must not be empty.\n")
 
 	CheckDirent(s.tmpdir + "/category/package")
 
-	c.Check(s.OutputCleanTmpdir(), equals, "ERROR: ~/category/package/Makefile: Must not be empty.\n")
+	c.Check(s.Output(), equals, "ERROR: ~/category/package/Makefile: Must not be empty.\n")
 
 	CheckDirent(s.tmpdir + "/category/package/nonexistent")
 
-	c.Check(s.OutputCleanTmpdir(), equals, "ERROR: ~/category/package/nonexistent: No such file or directory.\n")
+	c.Check(s.Output(), equals, "ERROR: ~/category/package/nonexistent: No such file or directory.\n")
 }

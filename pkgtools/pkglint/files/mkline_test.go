@@ -177,7 +177,7 @@ func (s *Suite) TestMkLine_CheckVaralign_Advanced(c *check.C) {
 
 	mklines.Check()
 
-	c.Check(s.OutputCleanTmpdir(), equals, ""+
+	c.Check(s.Output(), equals, ""+
 		"NOTE: ~/Makefile:6: This variable value should be aligned with tabs, not spaces, to column 9.\n"+
 		"NOTE: ~/Makefile:7: This variable value should be aligned with tabs, not spaces, to column 9.\n"+
 		"NOTE: ~/Makefile:12: This variable value should be aligned to column 17.\n"+
@@ -190,7 +190,7 @@ func (s *Suite) TestMkLine_CheckVaralign_Advanced(c *check.C) {
 
 	mklines.Check()
 
-	c.Check(s.OutputCleanTmpdir(), equals, ""+
+	c.Check(s.Output(), equals, ""+
 		"AUTOFIX: ~/Makefile:6: Replacing \"VAR= \" with \"VAR=\\t\".\n"+
 		"AUTOFIX: ~/Makefile:7: Replacing \"VAR=  \" with \"VAR=\\t\".\n"+
 		"AUTOFIX: ~/Makefile:12: Replacing \"BLOCK=\\t\" with \"BLOCK=\\t\\t\".\n"+

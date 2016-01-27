@@ -17,7 +17,7 @@ func (s *Suite) TestCheckdirCategory_TotallyBroken(c *check.C) {
 	G.CurrentDir = s.tmpdir + "/archivers"
 	CheckdirCategory()
 
-	c.Check(s.OutputCleanTmpdir(), equals, ""+
+	c.Check(s.Output(), equals, ""+
 		"ERROR: ~/archivers/Makefile:1: Expected \"# $"+"NetBSD$\".\n"+
 		"WARN: ~/archivers/Makefile:4: Line contains invalid characters (U+2019).\n"+
 		"WARN: ~/archivers/Makefile:4: SUBDIR- is defined but not used. Spelling mistake?\n"+
@@ -49,5 +49,5 @@ func (s *Suite) TestCheckdirCategory_InvalidComment(c *check.C) {
 
 	CheckdirCategory()
 
-	c.Check(s.OutputCleanTmpdir(), equals, "WARN: ~/archivers/Makefile:2: COMMENT contains invalid characters (U+005C U+0024 U+0024 U+0024 U+0024 U+0022).\n")
+	c.Check(s.Output(), equals, "WARN: ~/archivers/Makefile:2: COMMENT contains invalid characters (U+005C U+0024 U+0024 U+0024 U+0024 U+0022).\n")
 }
