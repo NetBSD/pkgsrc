@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.374 2016/01/27 13:59:32 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.375 2016/01/27 18:56:53 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -562,3 +562,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated print/poppler to 0.40.0 [wiz 2016-01-27]
 	Updated net/quagga to 0.99.24.1nb2 [jperkin 2016-01-27]
 	Updated emulators/mame to 0.170 [wiz 2016-01-27]
+	Updated mail/sylpheed to 3.5.0 [szptvlfn 2016-01-27]
