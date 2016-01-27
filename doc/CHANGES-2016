@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.367 2016/01/27 06:31:30 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.368 2016/01/27 06:33:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -555,3 +555,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/firefox to 44.0 [ryoon 2016-01-27]
 	Updated www/firefox-l10n to 44.0 [ryoon 2016-01-27]
 	Updated security/gnupg21 to 2.1.11 [wiz 2016-01-27]
+	Updated x11/xkeyboard-config to 2.17 [wiz 2016-01-27]
