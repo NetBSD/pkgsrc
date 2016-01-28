@@ -1,21 +1,21 @@
-$NetBSD: patch-af,v 1.7 2011/08/01 14:54:51 bouyer Exp $
+$NetBSD: patch-af,v 1.8 2016/01/28 15:51:34 prlw1 Exp $
 
---- src/Makefile.orig		2009-09-30 01:20:45.000000000 +0200
-+++ src/Makefile		2011-08-01 16:07:24.000000000 +0200
-@@ -23,7 +23,7 @@
+--- src/Makefile.orig	2014-11-04 19:17:43.000000000 +0000
++++ src/Makefile
+@@ -27,7 +27,7 @@ smtp_obj        := $(call SRC2OBJ,$(smtp
  SRCS = $(common_srcs) $(apcupsd_srcs) $(apcaccess_srcs) \
         $(apctest_srcs) $(smtp_srcs) 
  
--all-targets: apcupsd apcaccess apctest smtp 
-+all-targets: apcupsd apcaccess apctest 
+-all-targets: apcupsd$(EXE) apcaccess$(EXE) apctest$(EXE) smtp$(EXE) 
++all-targets: apcupsd$(EXE) apcaccess$(EXE) apctest$(EXE)
  
- apcupsd: $(common_obj) $(apcupsd_obj) $(APCDRVLIBS) $(APCLIBS)
- 	$(LINK) $(DRVLIBS)
-@@ -45,7 +45,6 @@
- 	$(call INSTPROG,700,apcupsd,$(sbindir)/apcupsd)
- 	$(call INSTPROG,700,apctest,$(sbindir)/apctest)
- 	$(call INSTPROG,755,apcaccess,$(sbindir)/apcaccess)
--	$(call INSTPROG,755,smtp,$(sbindir)/smtp)
+ apcupsd$(EXE): $(common_obj) $(apcupsd_obj) $(APCDRVLIBS) $(APCLIBS)
+ 	$(LINK) $(DRVLIBS) $(BG)
+@@ -49,7 +49,6 @@ install-base:
+ 	$(call INSTPROG,700,apcupsd,$(sbindir)/apcupsd$(EXE))
+ 	$(call INSTPROG,700,apctest,$(sbindir)/apctest$(EXE))
+ 	$(call INSTPROG,755,apcaccess,$(sbindir)/apcaccess$(EXE))
+-	$(call INSTPROG,755,smtp,$(sbindir)/smtp$(EXE))
  
  uninstall-base:
- 	$(call UNINST,$(sbindir)/apcupsd)
+ 	$(call UNINST,$(sbindir)/apcupsd$(EXE))
