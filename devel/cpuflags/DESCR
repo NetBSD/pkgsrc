@@ -1,2 +1,6 @@
-cpuflags returns the appropriate gcc flags to optimise compilation for the
-current CPU.
+cpuflags returns the appropriate gcc flags to optimise compilation
+for the current CPU.
+
+With modern gcc it is probably best to just set -march=native for
+at least x86, but cpuflags may still be useful for older and less
+usual architectures
