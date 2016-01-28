@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.152 2015/01/04 04:48:10 dholland Exp $
+# $NetBSD: Makefile,v 1.153 2016/01/28 19:11:30 abs Exp $
 
-DISTNAME=	cpuflags-1.42
+DISTNAME=	cpuflags-1.43
 CATEGORIES=	devel sysutils
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	abs@NetBSD.org
 COMMENT=	Determine compiler flags to best target current cpu
+LICENSE=	2-clause-bsd
 
 # each OS needs explicit support (files/subr_*)
 ONLY_FOR_PLATFORM= NetBSD-*-* Linux-*-* SunOS-*-* FreeBSD-*-* Darwin-*-*
