@@ -1,9 +1,17 @@
-$NetBSD: patch-src_task-manager-bsd.c,v 1.1 2015/04/21 08:56:41 jperkin Exp $
+$NetBSD: patch-src_task-manager-bsd.c,v 1.2 2016/01/28 12:47:00 martin Exp $
 
 Attempt to bring netbsd, DragonFly while keeping OpenBSD support.
---- src/task-manager-bsd.c.orig	2014-12-23 20:40:14.000000000 +0000
-+++ src/task-manager-bsd.c
-@@ -25,8 +25,18 @@
+--- src/task-manager-bsd.c.orig	2014-12-23 21:40:14.000000000 +0100
++++ src/task-manager-bsd.c	2016-01-28 13:44:44.128899084 +0100
+@@ -16,6 +16,7 @@
+  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+  */
+ 
++#define _KMEMUSER	/* NetBSD hides many types for regular userland */
+ #include <stdlib.h>
+ #include <err.h>
+ /* for getpwuid() */
+@@ -25,8 +26,18 @@
  #include <sys/param.h>
  #include <sys/sched.h>
  #include <sys/sysctl.h>
@@ -22,7 +30,7 @@ Attempt to bring netbsd, DragonFly while keeping OpenBSD support.
  /* for strlcpy() */
  #include <string.h>
  /* for getpagesize() */
-@@ -46,108 +56,107 @@ char	*state_abbrev[] = {
+@@ -46,108 +57,107 @@ char	*state_abbrev[] = {
  
  gboolean get_task_list (GArray *task_list)
  {
@@ -229,7 +237,7 @@ Attempt to bring netbsd, DragonFly while keeping OpenBSD support.
  
  	return TRUE;
  }
-@@ -156,26 +165,26 @@ gboolean
+@@ -156,26 +166,26 @@ gboolean
  pid_is_sleeping (guint pid)
  {
  	int mib[6];
@@ -266,7 +274,7 @@ Attempt to bring netbsd, DragonFly while keeping OpenBSD support.
  #endif
  	mib[5] = 1;
  	if (sysctl(mib, 6, &kp, &size, NULL, 0) < 0)
-@@ -184,7 +193,11 @@ pid_is_sleeping (guint pid)
+@@ -184,7 +194,11 @@ pid_is_sleeping (guint pid)
  #else
  		errx(1, "could not read kern.proc2 for pid %d", pid);
  #endif
@@ -278,7 +286,7 @@ Attempt to bring netbsd, DragonFly while keeping OpenBSD support.
  }
  
  gboolean get_cpu_usage (gushort *cpu_count, gfloat *cpu_user, gfloat *cpu_system)
-@@ -192,12 +205,31 @@ gboolean get_cpu_usage (gushort *cpu_cou
+@@ -192,12 +206,31 @@ gboolean get_cpu_usage (gushort *cpu_cou
  	static gulong cur_user = 0, cur_system = 0, cur_total = 0;
  	static gulong old_user = 0, old_system = 0, old_total = 0;
  
@@ -314,7 +322,7 @@ Attempt to bring netbsd, DragonFly while keeping OpenBSD support.
  	old_user = cur_user;
  	old_system = cur_system;
  	old_total = cur_total;
-@@ -217,65 +249,72 @@ gboolean get_cpu_usage (gushort *cpu_cou
+@@ -217,65 +250,72 @@ gboolean get_cpu_usage (gushort *cpu_cou
  		errx(1,"failed to get cpu count");
  	return TRUE;
  }
