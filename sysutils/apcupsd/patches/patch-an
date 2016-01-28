@@ -1,26 +1,29 @@
-$NetBSD: patch-an,v 1.7 2011/08/14 21:42:14 shattered Exp $
+$NetBSD: patch-an,v 1.8 2016/01/28 15:51:34 prlw1 Exp $
 
---- src/cgi/Makefile.orig	2009-09-20 19:41:26.000000000 +0000
+--- src/cgi/Makefile.orig	2014-11-04 19:17:43.000000000 +0000
 +++ src/cgi/Makefile
-@@ -16,7 +16,7 @@ upsimage_obj   := $(call SRC2OBJ,$(upsim
- SRCS = $(common_srcs) $(multimon_srcs) $(upsstats_srcs) \
+@@ -17,9 +17,9 @@ SRCS = $(common_srcs) $(multimon_srcs) $
         $(upsfstats_srcs) $(upsimage_srcs)
+ 
+ # libgd needs -DNONDLL on Windows, otherwise it defaults to DLL
+-upsimage.cgi: CPPFLAGS += -DNONDLL
++apcupsimage.cgi: CPPFLAGS += -DNONDLL
  
 -all-targets: multimon.cgi upsstats.cgi upsfstats.cgi upsimage.cgi
 +all-targets: multimon.cgi upsstats.cgi upsfstats.cgi apcupsimage.cgi
  
  multimon.cgi: $(common_obj) $(multimon_obj) $(APCLIBS)
  	$(LINK)
-@@ -27,7 +27,7 @@ upsstats.cgi: $(common_obj) $(upsstats_o
+@@ -30,7 +30,7 @@ upsstats.cgi: $(common_obj) $(upsstats_o
  upsfstats.cgi: $(common_obj) $(upsfstats_obj) $(APCLIBS)
  	$(LINK)
  
 -upsimage.cgi: $(common_obj) $(upsimage_obj) $(APCLIBS)
 +apcupsimage.cgi: $(common_obj) $(upsimage_obj) $(APCLIBS)
- 	$(LINK) $(X_LIBS) $(LIBGD)
+ 	$(LINK) $(LIBGD)
  
  all-install: install-cgi
-@@ -38,23 +38,13 @@ install-cgi:
+@@ -41,23 +41,13 @@ install-cgi:
  	$(call INSTPROG,755,multimon.cgi,$(cgibin))
  	$(call INSTPROG,755,upsstats.cgi,$(cgibin))
  	$(call INSTPROG,755,upsfstats.cgi,$(cgibin))

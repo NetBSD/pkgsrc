@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.79 2015/11/18 14:19:54 ryoon Exp $
+# $NetBSD: Makefile,v 1.80 2016/01/28 15:51:34 prlw1 Exp $
 
-DISTNAME=		apcupsd-3.14.9
-PKGREVISION=		12
+DISTNAME=		apcupsd-3.14.13r2365
 CATEGORIES=		sysutils
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=apcupsd/}
+#MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=apcupsd/}
+MASTER_SITES=		${MASTER_SITE_LOCAL}
 
 MAINTAINER=		bouyer@NetBSD.org
 HOMEPAGE=		http://www.apcupsd.org/
 COMMENT=		UPS power management for APCC Products
+LICENSE=		gnu-gpl-v2
 
 USE_TOOLS+=		gmake msgfmt sh makedepend
 USE_LANGUAGES=		c c++
@@ -15,6 +16,7 @@ USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
 
 PKG_SYSCONFSUBDIR=	apcupsd
+WRKSRC=			${WRKDIR}/apcupsd
 
 .include "options.mk"
 
@@ -34,8 +36,6 @@ PKG_SYSCONFSUBDIR=	apcupsd
 
 CONFIGURE_ARGS+=	--enable-net		# enable NIS network driver
 CONFIGURE_ARGS+=	--enable-usb		# enable USB network driver
-CONFIGURE_ARGS+=	--with-catgets		# use catgets functions
-CONFIGURE_ARGS+=	--enable-nls		# i18n support
 CONFIGURE_ARGS+=	--enable-snmp		# enable SNMP driver
 CONFIGURE_ARGS+=	--with-lock-dir=${VARBASE}/spool/lock
 # XXX is this supposed to be the full filename?
@@ -91,9 +91,7 @@ SUBST_MESSAGE.strip=	Fixing conflicting STRIP variable name
 # XXX we should probably allow the tty to be set in /etc/mk.conf too
 #
 
-HTMLDOCS= apcupsd.gif bclogo.gif bugs.html index.html license.html \
-	lists.html mail16d.png support.html systems.html
-HTMLMANUALS=	manual.html apcupsd.png charging.png commlost.png \
+HTMLDOCS=	manual.html apcupsd.png charging.png commlost.png \
 	main_configs.png multimon.png onbatt.png online.png status.png \
 	thanks.png wininstall6.png
 
@@ -107,12 +105,8 @@ post-install:
 		${DESTDIR}${PREFIX}/share/examples/apcupsd
 .endfor
 .for file in ${HTMLDOCS}
-	${INSTALL_DATA} ${WRKSRC}/doc/home-page/${file} \
-		${DESTDIR}${PREFIX}/share/doc/html/apcupsd
-.endfor
-.for file in ${HTMLMANUALS}
 	${INSTALL_DATA} ${WRKSRC}/doc/manual/${file} \
-		${DESTDIR}${PREFIX}/share/doc/html/apcupsd/manual
+		${DESTDIR}${PREFIX}/share/doc/html/apcupsd
 .endfor
 
 .include "../../devel/gettext-lib/buildlink3.mk"
