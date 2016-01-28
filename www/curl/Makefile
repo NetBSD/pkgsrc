@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.157 2016/01/28 11:46:02 mef Exp $
+# $NetBSD: Makefile,v 1.158 2016/01/28 12:04:45 wiz Exp $
 
 DISTNAME=	curl-7.47.0
 CATEGORIES=	www
@@ -15,9 +15,7 @@ LICENSE=	mit
 # list it into IPv6-ready packages
 BUILD_DEFS+=	IPV6_READY
 
-USE_TOOLS+=		nroff
-# https://github.com/bagder/curl/issues/555
-USE_TOOLS+=		gmake perl
+USE_TOOLS+=		nroff perl
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
