@@ -1,9 +1,9 @@
-$NetBSD: patch-Makefile.shared,v 1.4 2015/12/08 16:53:32 jperkin Exp $
+$NetBSD: patch-Makefile.shared,v 1.5 2016/01/28 16:30:43 jperkin Exp $
 
 Adjust build procedure.
 Fix SunOS -h linker argument.
 
---- Makefile.shared.orig	2015-12-03 14:04:23.000000000 +0000
+--- Makefile.shared.orig	2016-01-28 13:38:30.000000000 +0000
 +++ Makefile.shared
 @@ -315,6 +315,11 @@ link_o.alpha-osf1:
  	@ if $(DETECT_GNU_LD); then \

@@ -1,15 +1,15 @@
-$NetBSD: distinfo,v 1.119 2015/12/08 16:53:32 jperkin Exp $
+$NetBSD: distinfo,v 1.120 2016/01/28 16:30:42 jperkin Exp $
 
-SHA1 (openssl-1.0.2e.tar.gz) = 2c5691496761cb18f98476eefa4d35c835448fb6
-RMD160 (openssl-1.0.2e.tar.gz) = 324ed411043364af2ea908124225eece7d604a94
-SHA512 (openssl-1.0.2e.tar.gz) = b73f114a117ccab284cf5891dac050e3016d28e0b1fc71639442cdb42accef676115af90a12deff4bcc1f599cc0cbdeb38142cbf4570bd7d03634786ad32c95f
-Size (openssl-1.0.2e.tar.gz) = 5256555 bytes
-SHA1 (patch-Configure) = 2e39c50188600e7e491b77dd47b14a27198c1860
-SHA1 (patch-Makefile.org) = f4525cbd71e8b537033c0f39d695b73ae8cdb9e3
-SHA1 (patch-Makefile.shared) = 15b0238b1e0be0e8ca05f1a557b1cb55039ed5fd
-SHA1 (patch-apps_Makefile) = 15150b4f4325c4a74ebb513994faf7649976282f
-SHA1 (patch-config) = 1476fa7bcc3469fb940825650b550a920b84a945
-SHA1 (patch-crypto_bn_bn__prime.pl) = 834e11bc0b214fc5dcb9a651e13369003708b4ce
-SHA1 (patch-crypto_des_Makefile) = f5f92b1e9597c068ab63332e38904a6e115a0a0d
-SHA1 (patch-engines_ccgost_Makefile) = 68b46f01f06f98e860d3fd585fe8c72627ea7675
-SHA1 (patch-tools_Makefile) = 52bac15bd2aa02725545f5168c95c8ba4721b409
+SHA1 (openssl-1.0.2f.tar.gz) = 2047c592a6e5a42bd37970bdb4a931428110a927
+RMD160 (openssl-1.0.2f.tar.gz) = 1065dfc99a4c549c34249700e834a08e6de9881c
+SHA512 (openssl-1.0.2f.tar.gz) = 50abf6dc94cafd06e7fd20770808bdc675c88daa369e4f752bd584ab17f72a57357c1ca1eca3c83e6745b5a3c9c73c99dce70adaa904d73f6df4c75bc7138351
+Size (openssl-1.0.2f.tar.gz) = 5258384 bytes
+SHA1 (patch-Configure) = bebb9c435914b89ab9d5afabceb7d95903d4b56a
+SHA1 (patch-Makefile.org) = d2a9295003a8b88718a328b01ff6bcbbc102ec0b
+SHA1 (patch-Makefile.shared) = d317004d6ade167fc3b6e533bb8a1e93657188b2
+SHA1 (patch-apps_Makefile) = 60113291f2a25f5f1c1dba35e8173087bcd4cc30
+SHA1 (patch-config) = 345cadece3bdf0ef0a273a6c9ba6d0cbb1026a31
+SHA1 (patch-crypto_bn_bn__prime.pl) = a516f3709a862d85e659d466e895419b1e0a94c8
+SHA1 (patch-crypto_des_Makefile) = 7a23f9883ff6c93ec0e5d08e1332cc95de8cdba2
+SHA1 (patch-engines_ccgost_Makefile) = 5ff1e2705f6cb46075d5e005af9e804bb81d65e5
+SHA1 (patch-tools_Makefile) = 67f0b9b501969382fd89b678c277d32bf5d294bc
