@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2014/03/11 14:05:14 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.17 2016/01/28 15:51:34 prlw1 Exp $
 ${PLIST.cgi}libexec/cgi-bin/upsstats.cgi
 ${PLIST.cgi}libexec/cgi-bin/upsfstats.cgi
 ${PLIST.cgi}libexec/cgi-bin/apcupsimage.cgi
@@ -11,26 +11,17 @@ man/man8/apcupsd.8
 sbin/apcaccess
 sbin/apctest
 sbin/apcupsd
-share/doc/html/apcupsd/apcupsd.gif
-share/doc/html/apcupsd/bclogo.gif
-share/doc/html/apcupsd/bugs.html
-share/doc/html/apcupsd/index.html
-share/doc/html/apcupsd/license.html
-share/doc/html/apcupsd/lists.html
-share/doc/html/apcupsd/mail16d.png
-share/doc/html/apcupsd/manual/apcupsd.png
-share/doc/html/apcupsd/manual/charging.png
-share/doc/html/apcupsd/manual/commlost.png
-share/doc/html/apcupsd/manual/main_configs.png
-share/doc/html/apcupsd/manual/manual.html
-share/doc/html/apcupsd/manual/multimon.png
-share/doc/html/apcupsd/manual/onbatt.png
-share/doc/html/apcupsd/manual/online.png
-share/doc/html/apcupsd/manual/status.png
-share/doc/html/apcupsd/manual/thanks.png
-share/doc/html/apcupsd/manual/wininstall6.png
-share/doc/html/apcupsd/support.html
-share/doc/html/apcupsd/systems.html
+share/doc/html/apcupsd/apcupsd.png
+share/doc/html/apcupsd/charging.png
+share/doc/html/apcupsd/commlost.png
+share/doc/html/apcupsd/main_configs.png
+share/doc/html/apcupsd/manual.html
+share/doc/html/apcupsd/multimon.png
+share/doc/html/apcupsd/onbatt.png
+share/doc/html/apcupsd/online.png
+share/doc/html/apcupsd/status.png
+share/doc/html/apcupsd/thanks.png
+share/doc/html/apcupsd/wininstall6.png
 share/examples/apcupsd/apccontrol
 share/examples/apcupsd/apcupsd.conf
 share/examples/apcupsd/apcupsd.css
