@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/01/17 15:09:55 jaapb Exp $
+# $NetBSD: Makefile,v 1.2 2016/01/28 15:26:40 joerg Exp $
 
 .include "../../meta-pkgs/kde-telepathy/Makefile.common"
 DISTNAME=	ktp-auth-handler-${KTP_VERSION}
@@ -15,6 +15,7 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	msgfmt
 
 DEPENDS+=	qca2-ossl-[0-9]*:../../security/qca2-ossl
+BUILD_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
 
 .include "../../chat/ktp-common-internals/buildlink3.mk"
 .include "../../devel/qjson/buildlink3.mk"
