@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.232 2016/01/27 13:44:27 ryoon Exp $
+$NetBSD: distinfo,v 1.233 2016/01/28 06:48:50 ryoon Exp $
 
 SHA1 (firefox-44.0.source.tar.xz) = 47189b0a15087dd8f27999f5d920ad204fde8dca
 RMD160 (firefox-44.0.source.tar.xz) = 7942b5a565f2b2e50a5d38c9f88dc30640a162fd
@@ -39,7 +39,7 @@ SHA1 (patch-gfx_skia_moz.build) = 019f502ee236c67ab3cba8c0e31591899c2c857c
 SHA1 (patch-gfx_skia_skia_src_core_SkUtilsArm.cpp) = 80283dd702be199ec7d038f4b2bb3385e0c4b482
 SHA1 (patch-gfx_skia_skia_src_opts_SkBitmapProcState__opts__arm.cpp) = 99fad319f00a72754f3596791f353b8ab1359d2b
 SHA1 (patch-gfx_skia_skia_src_opts_memset.arm.S) = a7ecacb40b482b2713ec71af197528bbe4bea00d
-SHA1 (patch-gfx_thebes_moz.build) = f64917350eaf693866b0e7196cb7f1cc9e9470fc
+SHA1 (patch-gfx_thebes_moz.build) = bbc67642604042c8d63e6de1a02d2c62fcf16d83
 SHA1 (patch-gfx_ycbcr__row__arm.s) = cddf801b7ffc113a3e26bcc1f8d4a0aa3ced60c7
 SHA1 (patch-gfx_ycbcr_moz.build) = 121386ef62ff7425e6f93bc624555199f2ac3485
 SHA1 (patch-gfx_ycbcr_yuv__row__arm.S) = f9909ded72762b2c3547dd002707db43745f2b9d
