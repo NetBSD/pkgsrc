@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.381 2016/01/28 15:52:00 prlw1 Exp $
+$NetBSD: CHANGES-2016,v 1.382 2016/01/28 16:30:54 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -569,3 +569,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/curl to 7.47.0 [mef 2016-01-28]
 	Updated www/lighttpd to 1.4.39 [mef 2016-01-28]
 	Updated sysutils/apcupsd to 3.14.13r2365 [prlw1 2016-01-28]
+	Updated security/openssl to 1.0.2f [jperkin 2016-01-28]
