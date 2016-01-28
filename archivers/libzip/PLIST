@@ -1,12 +1,14 @@
-@comment $NetBSD: PLIST,v 1.8 2015/05/03 12:11:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2016/01/28 09:01:02 wiz Exp $
 bin/zipcmp
 bin/zipmerge
+bin/ziptool
 include/zip.h
 lib/libzip.la
 lib/libzip/include/zipconf.h
 lib/pkgconfig/libzip.pc
 man/man1/zipcmp.1
 man/man1/zipmerge.1
+man/man1/ziptool.1
 man/man3/ZIP_SOURCE_GET_ARGS.3
 man/man3/libzip.3
 man/man3/zip_add.3
