@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.376 2016/01/27 21:56:16 rillig Exp $
+$NetBSD: CHANGES-2016,v 1.377 2016/01/28 09:01:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -564,3 +564,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated emulators/mame to 0.170 [wiz 2016-01-27]
 	Updated mail/sylpheed to 3.5.0 [szptvlfn 2016-01-27]
 	Updated pkgtools/pkglint to 5.3.4 [rillig 2016-01-27]
+	Updated archivers/libzip to 1.1 [wiz 2016-01-28]
