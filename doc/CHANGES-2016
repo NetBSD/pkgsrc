@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.378 2016/01/28 11:34:57 jperkin Exp $
+$NetBSD: CHANGES-2016,v 1.379 2016/01/28 11:46:12 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -566,3 +566,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated pkgtools/pkglint to 5.3.4 [rillig 2016-01-27]
 	Updated archivers/libzip to 1.1 [wiz 2016-01-28]
 	Updated math/liblinear to 2.1nb1 [jperkin 2016-01-28]
+	Updated www/curl to 7.47.0 [mef 2016-01-28]
