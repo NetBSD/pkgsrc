@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.379 2016/01/28 11:46:12 mef Exp $
+$NetBSD: CHANGES-2016,v 1.380 2016/01/28 13:10:29 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -567,3 +567,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated archivers/libzip to 1.1 [wiz 2016-01-28]
 	Updated math/liblinear to 2.1nb1 [jperkin 2016-01-28]
 	Updated www/curl to 7.47.0 [mef 2016-01-28]
+	Updated www/lighttpd to 1.4.39 [mef 2016-01-28]
