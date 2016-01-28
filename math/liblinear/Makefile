@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2015/11/20 14:47:20 adam Exp $
+# $NetBSD: Makefile,v 1.3 2016/01/28 11:34:48 jperkin Exp $
 
 DISTNAME=	liblinear-2.1
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	http://www.csie.ntu.edu.tw/~cjlin/liblinear/
 
@@ -9,8 +10,8 @@ HOMEPAGE=	http://www.csie.ntu.edu.tw/~cjlin/liblinear/
 COMMENT=	Library for large linear classification
 LICENSE=	modified-bsd
 
-USE_LANGUAGES=		c c++
-USE_LIBTOOL=		yes
+USE_LANGUAGES=	c c++
+USE_LIBTOOL=	yes
 
 BUILD_TARGET=	all lib
 AUTO_MKDIRS=	yes
