@@ -1,8 +1,8 @@
-$NetBSD: patch-gfx_thebes_moz.build,v 1.1 2014/12/01 18:11:14 ryoon Exp $
+$NetBSD: patch-gfx_thebes_moz.build,v 1.2 2016/01/28 06:48:50 ryoon Exp $
 
---- gfx/thebes/moz.build.orig	2014-11-21 03:37:31.000000000 +0000
+--- gfx/thebes/moz.build.orig	2016-01-23 23:23:35.000000000 +0000
 +++ gfx/thebes/moz.build
-@@ -276,6 +276,12 @@ CXXFLAGS += CONFIG['TK_CFLAGS']
+@@ -291,6 +291,12 @@ CXXFLAGS += CONFIG['TK_CFLAGS']
  CFLAGS += CONFIG['MOZ_CAIRO_CFLAGS']
  CFLAGS += CONFIG['TK_CFLAGS']
  
@@ -15,3 +15,11 @@ $NetBSD: patch-gfx_thebes_moz.build,v 1.1 2014/12/01 18:11:14 ryoon Exp $
  if CONFIG['MOZ_WIDGET_TOOLKIT'] in ('android', 'gonk', 'qt'):
      CXXFLAGS += CONFIG['CAIRO_FT_CFLAGS']
  
+@@ -304,7 +310,5 @@ if CONFIG['MOZ_WIDGET_TOOLKIT'] in ('gtk
+ 
+ LOCAL_INCLUDES += CONFIG['SKIA_INCLUDES']
+ 
+-DEFINES['GRAPHITE2_STATIC'] = True
+-
+ if CONFIG['OS_ARCH'] == 'WINNT':
+     del DEFINES['UNICODE']
