@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2016/01/24 16:14:45 jperkin Exp $
+# $NetBSD: Makefile,v 1.24 2016/01/28 10:04:38 wiz Exp $
 #
 
 DISTNAME=	john-1.8.0
@@ -27,6 +27,7 @@ BUILD_TARGET=	solaris-sparcv9-${${PKGSRC_COMPILER}==gcc:?gcc:cc}
 BUILD_TARGET=	solaris-x86-any-${${PKGSRC_COMPILER}==gcc:?gcc:cc}
 .  elif ${MACHINE_ARCH} == "x86_64"
 BUILD_TARGET=	solaris-x86_64-${${PKGSRC_COMPILER}==gcc:?gcc:cc}
+.  endif
 .elif ${OPSYS} == "NetBSD"
 .  if ${MACHINE_ARCH} == "i386"
 BUILD_TARGET=	openbsd-x86-any
