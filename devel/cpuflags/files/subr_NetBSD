@@ -1,4 +1,4 @@
-# $NetBSD: subr_NetBSD,v 1.12 2010/12/05 11:19:39 abs Exp $
+# $NetBSD: subr_NetBSD,v 1.13 2016/01/28 19:11:30 abs Exp $
 
 AWK=awk
 SED=sed
@@ -44,9 +44,10 @@ extract_x86_cpu_vars()
     #      cpu_name="NAME" taken from the first cpu0: line
     #      cpu_brand="BRAND" the CPU branding string
     echo "$cpu_details" | $AWK '
+    { gsub("[()]","") }
     { if (/cpu0:/ && !n) { sub("cpu0: ",""); n=1; print "cpu_name=\""$0"\"" } }
     /cpu0: ".*"/ { sub("[^\"]*", ""); print "cpu_brand="$0 }
-    /cpu0: features/ {
+    /cpu0: features\d?/ {
 	sub(".*<","");
 	sub(">.*","");
 	gsub("[^,A-Z0-9]","_");
@@ -57,7 +58,6 @@ extract_x86_cpu_vars()
     /cpu0: family/ {
 	for (i = 2; i < NF; i = i + 2) {
 	    f=$(i+1);
-	    sub(/^0/, "", f);
 	    print "cpu_"$i"="f
 	    }
 	}
