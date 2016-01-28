@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/10/25 06:56:08 asau Exp $
+# $NetBSD: Makefile,v 1.24 2016/01/28 14:08:10 jperkin Exp $
 
 DISTNAME=		nbsed-20120308
 CATEGORIES=		textproc pkgtools
@@ -8,6 +8,7 @@ DISTFILES=		# empty
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.NetBSD.org/
 COMMENT=		NetBSD-current's sed(1)
+LICENSE=		original-bsd AND modified-bsd
 
 BOOTSTRAP_PKG=	yes
 
