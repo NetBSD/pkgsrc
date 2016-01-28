@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/01/08 15:43:35 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2016/01/28 13:38:53 jperkin Exp $
 
 DISTNAME=	bsdinstall-20160108
 CATEGORIES=	sysutils
@@ -7,6 +7,7 @@ DISTFILES=	# empty
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Portable version of the BSD install(1) program
+LICENSE=	modified-bsd
 
 BOOTSTRAP_PKG=	yes
 
