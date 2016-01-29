@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2013/09/12 11:18:40 jperkin Exp $
+# $NetBSD: Makefile,v 1.50 2016/01/29 10:53:07 jperkin Exp $
 
 DISTNAME=		pax-20080110
 PKGREVISION=		2
@@ -9,6 +9,7 @@ DISTFILES=		# empty
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://www.NetBSD.org/
 COMMENT=		POSIX standard archiver with many extensions
+LICENSE=		2-clause-bsd AND modified-bsd AND public-domain
 
 BOOTSTRAP_PKG=	yes
 CHECK_PERMS=		no
