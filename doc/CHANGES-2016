@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.383 2016/01/28 19:12:20 abs Exp $
+$NetBSD: CHANGES-2016,v 1.384 2016/01/29 23:02:05 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -571,3 +571,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/apcupsd to 3.14.13r2365 [prlw1 2016-01-28]
 	Updated security/openssl to 1.0.2f [jperkin 2016-01-28]
 	Updated devel/cpuflags to 1.43 [abs 2016-01-28]
+	Updated pkgtools/pkglint4 to 4.161 [rillig 2016-01-29]
