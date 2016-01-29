@@ -1,4 +1,4 @@
-# $NetBSD: Makefile-example,v 1.23 2014/10/09 14:06:32 wiz Exp $
+# $NetBSD: Makefile-example,v 1.24 2016/01/29 23:10:18 rillig Exp $
 
 # First paragraph - distfile and binary package data
 # DISTNAME PKGNAME PKGREVISION CATEGORIES MASTER_SITES
@@ -16,7 +16,7 @@ HOMEPAGE=		http://www.gnu.org/software/make/make.html
 COMMENT=		GNU version of 'make' utility	# start with a capital, no articles at start
 LICENSE=		hptools-license # Licenses should be added to the pkgsrc/licenses directory.
 
-# Parapraph for any build or run dependencies -- not libraries,
+# Paragraph for any build or run dependencies -- not libraries,
 # those should be handled using buildlink3.mk files.
 # Not needed for gmake, just an example:
 # BUILD_DEPENDS+=	automoc4-[0-9]*:../../devel/automoc4
