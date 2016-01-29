@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2015/12/30 04:18:13 dholland Exp $
+# $NetBSD: Makefile,v 1.4 2016/01/29 23:01:46 rillig Exp $
 
-PKGNAME=	pkglint4-4.160
+PKGNAME=	pkglint4-4.161
 CATEGORIES=	pkgtools
 
-OWNER=		wiz@NetBSD.org
+OWNER=		rillig@NetBSD.org
 HOMEPAGE=	http://www.NetBSD.org/docs/pkgsrc/
 COMMENT=	Verifier for NetBSD packages (old version, for all platforms)
 LICENSE=	2-clause-bsd
@@ -13,9 +13,6 @@ DEPENDS+=	p5-enum>=1.016:../../devel/p5-enum
 DEPENDS+=	p5-pkgsrc-Dewey>=1.0:../../pkgtools/p5-pkgsrc-Dewey
 CONFLICTS+=	pkglint>=5.0
 
-#BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
-#BUILD_DEPENDS+=	p5-Test-Trap-[0-9]*:../../devel/p5-Test-Trap
-
 WRKSRC=		${WRKDIR}
 NO_CHECKSUM=	yes
 USE_LANGUAGES=	# none
@@ -24,6 +21,11 @@ AUTO_MKDIRS=	yes
 PREV_PKGPATH=	pkgtools/pkglint
 
 .include "../../mk/bsd.prefs.mk"
+
+.if !empty(PKGSRC_RUN_TEST:M[yY][eE][sS])
+BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
+BUILD_DEPENDS+=	p5-Test-Trap-[0-9]*:../../devel/p5-Test-Trap
+.endif
 
 SUBST_CLASSES+=		pkglint
 SUBST_STAGE.pkglint=	post-configure
