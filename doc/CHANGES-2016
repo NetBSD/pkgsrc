@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.389 2016/01/30 09:08:58 mef Exp $
+$NetBSD: CHANGES-2016,v 1.390 2016/01/30 09:29:40 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -577,3 +577,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-JavaScript-Value-Escape to 0.07 [mef 2016-01-30]
 	Updated security/stunnel to 5.30 [richard 2016-01-30]
 	Updated www/p5-LWP-Protocol-PSGI to 0.08 [mef 2016-01-30]
+	Updated www/p5-Mojolicious to 6.42 [mef 2016-01-30]
