@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2016/01/30 11:09:18 alnsn Exp $
+
+SHA1 (LDoc-1.4.3.tar.gz) = 60d7ae1cb0c1a2e4904d567518ca35e0ec48b092
+RMD160 (LDoc-1.4.3.tar.gz) = c61fe4e8ce05a018ace4cdaea6a2e4fd88a393e7
+SHA512 (LDoc-1.4.3.tar.gz) = fa720eb5ded0c189b4f67696a0fb5cf181f9d8983f1ce6ecede9a437fbb0fe0f00cb17755b39036d4291b4a7d0e437fbddbf39d32620accd7377880278c58751
+Size (LDoc-1.4.3.tar.gz) = 122763 bytes
