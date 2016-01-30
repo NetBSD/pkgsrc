@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2013/11/17 18:31:35 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2016/01/30 04:56:42 markd Exp $
 
 DISTNAME=	latex-fonts
 PKGNAME=	tex-${DISTNAME}-2013
@@ -7,6 +7,7 @@ TEXLIVE_REV=	28888
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Collection of fonts used in LaTeX distributions
+LICENSE=	lppl-1.3c
 
 CONFLICTS+=	teTeX-texmf<=3.0nb12
 

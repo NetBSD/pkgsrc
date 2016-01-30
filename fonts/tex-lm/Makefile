@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/12/03 22:33:45 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2016/01/30 04:56:43 markd Exp $
 
 DISTNAME=	lm
 PKGNAME=	tex-${DISTNAME}-2.004
@@ -7,6 +7,7 @@ TEXLIVE_REV=	28119
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Latin modern fonts in outline formats
+LICENSE=	gfsl
 
 CONFLICTS+=	teTeX-texmf<=3.0nb16
 
