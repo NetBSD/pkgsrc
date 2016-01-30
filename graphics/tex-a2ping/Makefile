@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/06/12 10:50:13 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2016/01/30 04:05:49 markd Exp $
 
 DISTNAME=	a2ping
 PKGNAME=	tex-${DISTNAME}-2.77p
@@ -7,6 +7,7 @@ TEXLIVE_REV=	29725
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Advanced PS, PDF, EPS converter
+LICENSE=	gnu-gpl-v2
 
 CONFLICTS+=	teTeX-bin<=3.0nb34
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/18 21:38:37 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2016/01/30 04:05:52 markd Exp $
 
 DISTNAME=	pst-gr3d
 PKGNAME=	tex-${DISTNAME}-1.34
@@ -6,6 +6,7 @@ TEXLIVE_REV=	15878
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Three dimensional grids with PSTricks
+LICENSE=	lppl-1.3c
 
 DEPENDS+=	tex-multido-[0-9]*:../../devel/tex-multido
 DEPENDS+=	tex-pst-3d-[0-9]*:../../graphics/tex-pst-3d
