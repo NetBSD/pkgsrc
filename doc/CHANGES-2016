@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.386 2016/01/30 03:39:45 mef Exp $
+$NetBSD: CHANGES-2016,v 1.387 2016/01/30 06:45:46 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -574,3 +574,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated pkgtools/pkglint4 to 4.161 [rillig 2016-01-29]
 	Updated www/p5-HTTP-Server-Simple to 0.51 [mef 2016-01-30]
 	Updated www/p5-Hijk to 0.26 [mef 2016-01-30]
+	Updated www/p5-JavaScript-Value-Escape to 0.07 [mef 2016-01-30]
