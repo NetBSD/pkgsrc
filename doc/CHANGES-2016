@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.384 2016/01/29 23:02:05 rillig Exp $
+$NetBSD: CHANGES-2016,v 1.385 2016/01/30 02:48:10 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -572,3 +572,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/openssl to 1.0.2f [jperkin 2016-01-28]
 	Updated devel/cpuflags to 1.43 [abs 2016-01-28]
 	Updated pkgtools/pkglint4 to 4.161 [rillig 2016-01-29]
+	Updated www/p5-HTTP-Server-Simple to 0.51 [mef 2016-01-30]
