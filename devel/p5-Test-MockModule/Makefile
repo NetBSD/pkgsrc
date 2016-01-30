@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2015/09/06 10:10:49 mef Exp $
+# $NetBSD: Makefile,v 1.13 2016/01/30 20:49:31 rillig Exp $
 #
 
 DISTNAME=	Test-MockModule-0.10
@@ -16,10 +16,9 @@ BUILD_DEPENDS+=	p5-Test-Pod-Coverage-[0-9]*:../../devel/p5-Test-Pod-Coverage
 BUILD_DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
 BUILD_DEPENDS+=	p5-SUPER-[0-9]*:../../devel/p5-SUPER
 
-USE_LANGUAGES=	# empty
+USE_LANGUAGES=		# empty
 PERL5_MODULE_TYPE=	Module::Build
-PERL5_PACKLIST=	auto/Test/MockModule/.packlist
+PERL5_PACKLIST=		auto/Test/MockModule/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
-drwxr-xr-x  3 makoto  wheel  512 Feb 25 08:05 ../../devel/p5-Test-Pod-Coverage
