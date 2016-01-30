@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.391 2016/01/30 11:11:53 alnsn Exp $
+$NetBSD: CHANGES-2016,v 1.392 2016/01/30 13:24:28 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -579,3 +579,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-LWP-Protocol-PSGI to 0.08 [mef 2016-01-30]
 	Updated www/p5-Mojolicious to 6.42 [mef 2016-01-30]
 	Added textproc/LDoc version 1.4.3 [alnsn 2016-01-30]
+	Updated www/p5-POE-Filter-HTTP-Parser to 1.08 [mef 2016-01-30]
