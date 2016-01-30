@@ -1,5 +1,5 @@
 #!/usr/pkg/bin/perl
-# $NetBSD: texlive.pkg,v 1.1 2016/01/24 19:34:44 markd Exp $
+# $NetBSD: texlive.pkg,v 1.2 2016/01/30 04:59:57 markd Exp $
 
 $version = "2015";
 $pkgname = $shortdesc = $revision = $license = $longdesc = $depend = $homepage = "";
@@ -36,9 +36,11 @@ $version =~ s: :_:g; # 5th edition
 $version =~ s:-::g;  # 2013-05-12
 $license = "apache-2.0" if ($license eq "apache2");
 $license = "gnu-fdl-v1.3" if ($license eq "fdl");
+$license = "gnu-lgpl-v2" if ($license eq "lgpl");
 $license = "gnu-gpl-v2" if ($license eq "gpl");
 $license = "gnu-gpl-v2" if ($license eq "gpl2");
 $license = "gnu-gpl-v3" if ($license eq "gpl3");
+$license = "lppl-1.0" if ($license eq "lppl1");
 $license = "lppl-1.2" if ($license eq "lppl1.2");
 $license = "lppl-1.3c" if ($license eq "lppl");
 $license = "lppl-1.3c" if ($license eq "lppl1.3");
