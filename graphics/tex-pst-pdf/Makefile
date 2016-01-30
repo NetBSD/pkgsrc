@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/11/25 12:50:44 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2016/01/30 04:05:53 markd Exp $
 
 DISTNAME=	pst-pdf
 PKGNAME=	tex-${DISTNAME}-1.1v
@@ -7,6 +7,7 @@ PKGREVISION=	2
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Make PDF versions of graphics by processing between runs
+LICENSE=	lppl-1.3c
 
 CONFLICTS=	texlive-pdftools<2011
 DEPENDS+=	dvipsk-[0-9]*:../../print/dvipsk
