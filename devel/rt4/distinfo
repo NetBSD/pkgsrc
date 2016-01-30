@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.12 2015/11/03 03:29:20 agc Exp $
+$NetBSD: distinfo,v 1.13 2016/01/30 23:54:20 ryoon Exp $
 
-SHA1 (rt-4.2.11.tar.gz) = c40063b4265a983343804f2056b22964a8ba7be9
-RMD160 (rt-4.2.11.tar.gz) = f113e30452137c6cd1fdd5c0a2083be4a7d84943
-SHA512 (rt-4.2.11.tar.gz) = dec4db4c2e3ec8c167e6fde16817fb07441a297cbdf6e035f100aa94d9eb1831f11b8d4dbfb8376a5da689ff2378647de2a52683692f91d3ab6b1044aecd9c43
-Size (rt-4.2.11.tar.gz) = 7537515 bytes
+SHA1 (rt-4.2.12.tar.gz) = ddbf70752c2b96354caf7687534addf075859d4d
+RMD160 (rt-4.2.12.tar.gz) = 6726a687ba8042b35aa78337609c3d710d98264c
+SHA512 (rt-4.2.12.tar.gz) = e816c5481bdb158209bd78bc82af4abc0243af500abe55ae3aac666259e983282d82577de6207899745b4781fb0a50d3094901a248e7ac958dd852343b6f2676
+Size (rt-4.2.12.tar.gz) = 7537620 bytes
 SHA1 (patch-Makefile.in) = d46b5cd6e9de77409ac8d6b6c172bc9dd3ed96be
 SHA1 (patch-config.layout) = 1e237d38d4e3a2ad6c240feb3e58f1345c7ff476
