@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/06 23:28:17 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2016/01/30 04:56:43 markd Exp $
 
 DISTNAME=	mathpazo.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-1.003
@@ -6,6 +6,7 @@ TEXLIVE_REV=	15878
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-mathpazo
+LICENSE=	lppl-1.3c
 
 CONFLICTS=	teTeX-texmf<=3.0nb29
 

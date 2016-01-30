@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/04/26 12:09:55 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2016/01/30 04:56:45 markd Exp $
 
 DISTNAME=	wasysym
 PKGNAME=	tex-${DISTNAME}-2.0
@@ -7,6 +7,7 @@ TEXLIVE_REV=	15878
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	LaTeX support file to use the WASY2 fonts
+LICENSE=	lppl-1.3c
 
 CONFLICTS=	teTeX-texmf<=3.0nb29
 DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin

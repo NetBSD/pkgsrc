@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/11/06 08:43:30 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2016/01/30 04:56:44 markd Exp $
 
 DISTNAME=	pxfonts
 PKGNAME=	tex-${DISTNAME}-2010
@@ -7,6 +7,7 @@ TEXLIVE_REV=	15878
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Palatino-like fonts in support of mathematics
+LICENSE=	lppl-1.3c
 
 CONFLICTS=	teTeX-texmf<=3.0nb29
 

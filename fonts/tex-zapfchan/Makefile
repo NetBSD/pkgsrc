@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/04/25 08:39:42 markd Exp $
+# $NetBSD: Makefile,v 1.4 2016/01/30 04:56:45 markd Exp $
 
 DISTNAME=	zapfchan
 PKGNAME=	tex-${DISTNAME}-2014
@@ -6,6 +6,7 @@ TEXLIVE_REV=	31835
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Zapf Chancery fonts
+LICENSE=	gnu-gpl-v2
 
 CONFLICTS=	teTeX-texmf<=3.0nb29
 

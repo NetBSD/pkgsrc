@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/04/25 08:43:35 markd Exp $
+# $NetBSD: Makefile,v 1.6 2016/01/30 04:56:45 markd Exp $
 
 DISTNAME=	zapfding
 PKGNAME=	tex-${DISTNAME}-2014
@@ -6,6 +6,7 @@ TEXLIVE_REV=	31835
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Dingbat typeface designed by Hermann Zapf
+LICENSE=	gnu-gpl-v2
 
 CONFLICTS+=	teTeX-texmf<=3.0nb14
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/04/25 05:34:54 markd Exp $
+# $NetBSD: Makefile,v 1.5 2016/01/30 04:56:40 markd Exp $
 
 DISTNAME=	adobemapping
 PKGNAME=	tex-${DISTNAME}-2014
@@ -7,6 +7,7 @@ TEXLIVE_REV=	28079
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Adobe cmap and pdfmapping files
+LICENSE=	modified-bsd
 
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
