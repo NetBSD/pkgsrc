@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.387 2016/01/30 06:45:46 mef Exp $
+$NetBSD: CHANGES-2016,v 1.388 2016/01/30 08:51:01 richard Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -575,3 +575,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-HTTP-Server-Simple to 0.51 [mef 2016-01-30]
 	Updated www/p5-Hijk to 0.26 [mef 2016-01-30]
 	Updated www/p5-JavaScript-Value-Escape to 0.07 [mef 2016-01-30]
+	Updated security/stunnel to 5.30 [richard 2016-01-30]
