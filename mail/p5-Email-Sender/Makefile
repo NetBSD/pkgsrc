@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2015/10/17 09:49:32 wen Exp $
+# $NetBSD: Makefile,v 1.22 2016/01/30 14:57:56 mef Exp $
 
 DISTNAME=	Email-Sender-1.300021
 PKGNAME=	p5-${DISTNAME}
@@ -19,6 +19,9 @@ DEPENDS+=	p5-Moo>=1.000008:../../devel/p5-Moo
 #DEPENDS+=	{perl>=5.10,p5-Net-[0-9]*}:../../net/p5-Net
 DEPENDS+=	p5-Throwable>=0.200003:../../devel/p5-Throwable
 DEPENDS+=	p5-Try-Tiny-[0-9]*:../../devel/p5-Try-Tiny
+
+# for make test
+BUILD_DEPENDS+=	p5-MooX-Types-MooseLike-[0-9]*:../../devel/p5-MooX-Types-MooseLike
 
 PERL5_PACKLIST=	auto/Email/Sender/.packlist
 
