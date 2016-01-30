@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2011/11/06 08:43:31 minskim Exp $
+# $NetBSD: Makefile,v 1.13 2016/01/30 03:26:11 markd Exp $
 
 DISTNAME=	chemarrow
 PKGNAME=	tex-${DISTNAME}-0.9
@@ -7,6 +7,7 @@ TEXLIVE_REV=	17146
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Arrows for use in chemistry
+LICENSE=	public-domain
 
 TEX_MAP_FILES+=	chemarrow.map
 

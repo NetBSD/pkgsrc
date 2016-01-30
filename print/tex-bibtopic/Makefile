@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/06 21:48:54 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2016/01/30 03:26:08 markd Exp $
 
 DISTNAME=	bibtopic
 PKGNAME=	tex-${DISTNAME}-1.1a
@@ -6,6 +6,7 @@ TEXLIVE_REV=	15878
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Include multiple bibliographies in a document
+LICENSE=	gnu-gpl-v2
 
 CONFLICTS=	teTeX-texmf<=3.0nb29
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex

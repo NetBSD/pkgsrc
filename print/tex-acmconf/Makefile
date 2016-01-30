@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/05/05 17:42:59 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2016/01/30 03:26:05 markd Exp $
 # TeX Live Revision 15878
 
 DISTNAME=	acmconf
@@ -7,6 +7,7 @@ PKGREVISION=	1
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Class for ACM conference proceedings
+LICENSE=	lppl-1.3c
 
 DEPENDS+=	tex-sttools-[0-9]*:../../print/tex-sttools
 
