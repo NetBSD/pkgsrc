@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.396 2016/01/30 18:16:04 tsutsui Exp $
+$NetBSD: CHANGES-2016,v 1.397 2016/01/30 19:34:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -584,3 +584,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/p5-Email-MessageID to 1.406 [mef 2016-01-30]
 	Updated mail/p5-Email-Reply to 1.204 [mef 2016-01-30]
 	Updated net/mikutter to 3.3.5 [tsutsui 2016-01-30]
+	Updated graphics/py-Pillow to 3.1.0 [adam 2016-01-30]
