@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/10/27 21:32:03 alnsn Exp $
+# $NetBSD: Makefile,v 1.9 2016/01/30 10:52:43 alnsn Exp $
 #
 
 DISTNAME=	penlight-${PL_VERSION}
@@ -18,6 +18,8 @@ DIST_SUBDIR=	lua-penlight
 
 NO_BUILD=	yes
 USE_TOOLS+=	pax
+
+DEPENDS+=	${LUA_PKGPREFIX}-filesystem-[0-9]*:../../devel/lua-filesystem
 
 WRKSRC=			${WRKDIR}/Penlight-${PL_VERSION}
 INSTALLATION_DIRS+=	${LUA_LDIR}
