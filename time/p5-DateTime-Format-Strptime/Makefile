@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2015/11/15 05:11:51 wen Exp $
+# $NetBSD: Makefile,v 1.22 2016/01/30 10:01:02 mef Exp $
 
 DISTNAME=	DateTime-Format-Strptime-1.61
 PKGNAME=	p5-${DISTNAME}00
@@ -15,6 +15,9 @@ DEPENDS+=	p5-DateTime-Locale>=0.45:../../time/p5-DateTime-Locale
 DEPENDS+=	p5-DateTime-TimeZone>=0.79:../../time/p5-DateTime-TimeZone
 DEPENDS+=	p5-Params-Validate>=1.20:../../devel/p5-Params-Validate
 DEPENDS+=	p5-Package-DeprecationManager>=0.15:../../devel/p5-Package-DeprecationManager
+# for make test
+BUILD_DEPENDS+=	p5-Package-Stash-[0-9]*:../../devel/p5-Package-Stash
+BUILD_DEPENDS+=	p5-Test-Warnings-[0-9]*:../../devel/p5-Test-Warnings
 
 PERL5_PACKLIST=		auto/DateTime/Format/Strptime/.packlist
 
