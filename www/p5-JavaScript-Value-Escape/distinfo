@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 02:47:12 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/01/30 06:44:58 mef Exp $
 
-SHA1 (JavaScript-Value-Escape-0.06.tar.gz) = c703a7412d29af28fa7f9f112b11846fa4d36693
-RMD160 (JavaScript-Value-Escape-0.06.tar.gz) = fe6d290a69e2679a3e034375a65d5772d3d168aa
-SHA512 (JavaScript-Value-Escape-0.06.tar.gz) = 6fdf7c875a3fa08e036b2f8da4ca48efcc2a1aea8917eee8fd8909919da5b181017b46405b57ca0ffccc7e2aa32c0d40f0be59bd4a753cea617f3ba6408c992a
-Size (JavaScript-Value-Escape-0.06.tar.gz) = 20892 bytes
+SHA1 (JavaScript-Value-Escape-0.07.tar.gz) = 6e1fb1528e0eb68c26fe692f30804eb1b69f124f
+RMD160 (JavaScript-Value-Escape-0.07.tar.gz) = 0fd7caefe90a3092073eecb08024d96331585e21
+SHA512 (JavaScript-Value-Escape-0.07.tar.gz) = 2a44dc9143f51dcdc55f0d961de7fb41577a7525116412fa9de2be8118e3f3a43528b3bcfccb887fb5f481f1e96ce355b36db72576b9e382deea514ab7b39454
+Size (JavaScript-Value-Escape-0.07.tar.gz) = 10789 bytes
