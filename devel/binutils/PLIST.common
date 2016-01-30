@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.25 2015/06/17 14:02:40 sborrill Exp $
+@comment $NetBSD: PLIST.common,v 1.26 2016/01/30 22:15:11 ryoon Exp $
 ${MACHINE_GNU_PLATFORM}/bin/ar
 ${MACHINE_GNU_PLATFORM}/bin/as
 ${MACHINE_GNU_PLATFORM}/bin/ld
@@ -8,6 +8,7 @@ ${MACHINE_GNU_PLATFORM}/bin/nm
 ${MACHINE_GNU_PLATFORM}/bin/objcopy
 ${MACHINE_GNU_PLATFORM}/bin/objdump
 ${MACHINE_GNU_PLATFORM}/bin/ranlib
+${MACHINE_GNU_PLATFORM}/bin/readelf
 ${MACHINE_GNU_PLATFORM}/bin/strip
 ${PLIST.gold}bin/gdwp
 bin/gaddr2line
@@ -100,6 +101,7 @@ man/man1/gwindres.1
 share/locale/bg/LC_MESSAGES/binutils.mo
 ${PLIST.gprof}share/locale/bg/LC_MESSAGES/gprof.mo
 share/locale/bg/LC_MESSAGES/ld.mo
+share/locale/ca/LC_MESSAGES/binutils.mo
 share/locale/da/LC_MESSAGES/bfd.mo
 share/locale/da/LC_MESSAGES/binutils.mo
 ${PLIST.gprof}share/locale/da/LC_MESSAGES/gprof.mo
@@ -125,6 +127,7 @@ share/locale/fi/LC_MESSAGES/opcodes.mo
 share/locale/fr/LC_MESSAGES/bfd.mo
 share/locale/fr/LC_MESSAGES/binutils.mo
 share/locale/fr/LC_MESSAGES/gas.mo
+share/locale/fr/LC_MESSAGES/gold.mo
 ${PLIST.gprof}share/locale/fr/LC_MESSAGES/gprof.mo
 share/locale/fr/LC_MESSAGES/ld.mo
 share/locale/fr/LC_MESSAGES/opcodes.mo
@@ -194,6 +197,8 @@ share/locale/vi/LC_MESSAGES/ld.mo
 share/locale/vi/LC_MESSAGES/opcodes.mo
 share/locale/zh_CN/LC_MESSAGES/bfd.mo
 share/locale/zh_CN/LC_MESSAGES/binutils.mo
+share/locale/zh_CN/LC_MESSAGES/gas.mo
+share/locale/zh_CN/LC_MESSAGES/gold.mo
 share/locale/zh_CN/LC_MESSAGES/ld.mo
 share/locale/zh_CN/LC_MESSAGES/opcodes.mo
 ${PLIST.gprof}share/locale/vi/LC_MESSAGES/gprof.mo
