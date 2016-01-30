@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/11/09 16:28:44 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2016/01/30 03:26:10 markd Exp $
 
 DISTNAME=	cellspace
 PKGNAME=	tex-${DISTNAME}-1.6
@@ -6,6 +6,7 @@ TEXLIVE_REV=	15878
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Ensure minimal spacing of table cells
+LICENSE=	lppl-1.3c
 
 DEPENDS+=	tex-amsmath>=2.13nb1:../../print/tex-amsmath
 DEPENDS+=	tex-latex>=2009:../../print/tex-latex

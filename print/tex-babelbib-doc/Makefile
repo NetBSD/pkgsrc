@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/04/22 10:08:25 markd Exp $
+# $NetBSD: Makefile,v 1.3 2016/01/30 03:26:08 markd Exp $
 # TeX Live Revision 15878
 
 DISTNAME=	babelbib.doc
@@ -7,6 +7,7 @@ TEXLIVE_REV=	25245
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-babelbib
+LICENSE=	lppl-1.0
 
 .include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"
