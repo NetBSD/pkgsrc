@@ -1,0 +1,13 @@
+$NetBSD: patch-ld_configure,v 1.1 2016/01/30 22:15:11 ryoon Exp $
+
+--- ld/configure.orig	2016-01-25 08:54:11.000000000 +0000
++++ ld/configure
+@@ -17134,7 +17134,7 @@ do
+   fi
+ done
+ 
+-if test x$ac_default_compressed_debug_sections == xyes ; then
++if test x$ac_default_compressed_debug_sections = xyes ; then
+ 
+ $as_echo "#define DEFAULT_FLAG_COMPRESS_DEBUG 1" >>confdefs.h
+ 
