@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/11/07 19:52:46 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2016/01/30 03:26:05 markd Exp $
 
 DISTNAME=	abc
 PKGNAME=	tex-${DISTNAME}-1.0
@@ -7,6 +7,7 @@ TEXLIVE_REV=	15878
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Support ABC music notation in LaTeX
+LICENSE=	lppl-1.2
 
 DEPENDS+=	abcm2ps-[0-9]*:../../print/abcm2ps
 DEPENDS+=	ps2eps-[0-9]*:../../graphics/ps2eps
