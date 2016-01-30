@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.395 2016/01/30 15:23:06 mef Exp $
+$NetBSD: CHANGES-2016,v 1.396 2016/01/30 18:16:04 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -583,3 +583,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/p5-Email-MIME to 1.937 [mef 2016-01-30]
 	Updated mail/p5-Email-MessageID to 1.406 [mef 2016-01-30]
 	Updated mail/p5-Email-Reply to 1.204 [mef 2016-01-30]
+	Updated net/mikutter to 3.3.5 [tsutsui 2016-01-30]
