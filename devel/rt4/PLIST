@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2015/05/18 13:35:30 manu Exp $
+@comment $NetBSD: PLIST,v 1.10 2016/01/30 23:54:20 ryoon Exp $
 share/examples/rt4/RT_Config.pm
 share/examples/rt4/RT_SiteConfig.pm
 share/rt4/bin/rt
@@ -1229,7 +1229,7 @@ share/rt4/etc/upgrade/4.1.8/schema.SQLite
 share/rt4/etc/upgrade/4.1.8/schema.mysql
 share/rt4/etc/upgrade/4.1.9/content
 share/rt4/etc/upgrade/4.2.1/content
-share/rt4/etc/upgrade/${PKGVERSION}/content
+share/rt4/etc/upgrade/4.2.11/content
 share/rt4/etc/upgrade/4.2.2/content
 share/rt4/etc/upgrade/4.2.2/schema.mysql
 share/rt4/etc/upgrade/4.2.4/content
