@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/10/11 01:14:27 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/01/30 22:20:51 ryoon Exp $
 cross-arm-none-eabi/arm-none-eabi/bin/ar
 cross-arm-none-eabi/arm-none-eabi/bin/as
 cross-arm-none-eabi/arm-none-eabi/bin/ld
@@ -7,6 +7,7 @@ cross-arm-none-eabi/arm-none-eabi/bin/nm
 cross-arm-none-eabi/arm-none-eabi/bin/objcopy
 cross-arm-none-eabi/arm-none-eabi/bin/objdump
 cross-arm-none-eabi/arm-none-eabi/bin/ranlib
+cross-arm-none-eabi/arm-none-eabi/bin/readelf
 cross-arm-none-eabi/arm-none-eabi/bin/strip
 cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.x
 cross-arm-none-eabi/arm-none-eabi/lib/ldscripts/armelf.xbn
