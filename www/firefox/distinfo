@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.233 2016/01/28 06:48:50 ryoon Exp $
+$NetBSD: distinfo,v 1.234 2016/01/30 00:34:10 ryoon Exp $
 
 SHA1 (firefox-44.0.source.tar.xz) = 47189b0a15087dd8f27999f5d920ad204fde8dca
 RMD160 (firefox-44.0.source.tar.xz) = 7942b5a565f2b2e50a5d38c9f88dc30640a162fd
@@ -49,6 +49,7 @@ SHA1 (patch-ipc_chromium_Makefile.in) = edd85b79cd3879f7595b932442bb0e93505d5506
 SHA1 (patch-ipc_chromium_src_base_atomicops.h) = 24b63a6e51d9ab27f2788ee02f2ffa7e1c36f29a
 SHA1 (patch-ipc_chromium_src_base_file__util__posix.cc) = 70772ab2a474b7d3d15cf401c636ca843cfe2034
 SHA1 (patch-ipc_chromium_src_base_message__loop.cc) = 16158489773bbcba35e224d30bebace0c93599ae
+SHA1 (patch-ipc_chromium_src_base_message__pump__libevent.cc) = 28578aa6cdc739b5265e4b4e0302c8e97a759ecf
 SHA1 (patch-ipc_chromium_src_base_platform__thread.h) = e6d7ac39a8b2a1b232638f7671e8530acfed0b97
 SHA1 (patch-ipc_chromium_src_base_platform__thread__posix.cc) = ff1371ffb84abf2d2adcf25e66502943992d5109
 SHA1 (patch-ipc_chromium_src_base_process__util.h) = 4b24c3467866a601d68bb83f44e5fd38fb27188d
