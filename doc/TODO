@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15357 2016/01/30 06:45:46 mef Exp $
+$NetBSD: TODO,v 1.15358 2016/01/30 22:15:49 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -475,7 +475,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bibtool-2.61
 	o bin86-0.16.21
 	o binkd-104
-	o binutils-2.26
 	o bird-1.5.0
 	o bird6-1.5.0
 	o bliz++-0.10
