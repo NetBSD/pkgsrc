@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2015/06/12 10:50:22 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2016/01/30 13:51:50 mef Exp $
 #
 
-DISTNAME=	Email-Reply-1.203
+DISTNAME=	Email-Reply-1.204
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/R/RJ/RJBS/
 
