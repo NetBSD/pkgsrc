@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.866 2016/01/24 10:46:38 wiz Exp $
+# $NetBSD: Makefile,v 1.867 2016/01/30 11:10:10 alnsn Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -8,6 +8,7 @@ SUBDIR+=	DWB
 SUBDIR+=	FlightCrew
 SUBDIR+=	GutenMark
 SUBDIR+=	GutenMark-words
+SUBDIR+=	LDoc
 SUBDIR+=	Markdown
 SUBDIR+=	OdfConverter
 SUBDIR+=	R-formatR
