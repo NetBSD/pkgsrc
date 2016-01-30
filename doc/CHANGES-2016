@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.393 2016/01/30 15:21:06 mef Exp $
+$NetBSD: CHANGES-2016,v 1.394 2016/01/30 15:22:11 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -581,3 +581,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added textproc/LDoc version 1.4.3 [alnsn 2016-01-30]
 	Updated www/p5-POE-Filter-HTTP-Parser to 1.08 [mef 2016-01-30]
 	Updated mail/p5-Email-MIME to 1.937 [mef 2016-01-30]
+	Updated mail/p5-Email-MessageID to 1.406 [mef 2016-01-30]
