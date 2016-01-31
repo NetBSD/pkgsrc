@@ -532,5 +532,8 @@ func (gd *GlobalData) loadDeprecatedVars() {
 		// October 2014
 		"SVR4_PKGNAME":           "Just remove it.",
 		"PKG_INSTALLATION_TYPES": "Just remove it.",
+
+		// January 2016
+		"SUBST_POSTCMD.*": "Has been removed, as it seemed unused.",
 	}
 }

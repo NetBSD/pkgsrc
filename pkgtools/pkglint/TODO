@@ -1,11 +1,10 @@
-$NetBSD: TODO,v 1.83 2015/11/25 13:29:07 rillig Exp $
+$NetBSD: TODO,v 1.84 2016/01/31 17:18:54 rillig Exp $
 
 Please add your own entries at the bottom of this file. If possible,
 include the name of an example package where a warning should occur.
 
 * warn about the use of ${WRKDIR:=...}, as this construct should only
   be used with lists.
-* Add checks for binary packages. See Debian/lintian for ideas.
 * Of the user-defined variables, some may be used at load-time and some
   don't. Find out how pkglint can distinguish them.
 * Make sure that no variable is modified at load-time after it has been
@@ -19,8 +18,6 @@ include the name of an example package where a warning should occur.
   depend on the same option in the buildlink3.mk file.
 * Complain about ${PKGSRC_COMPILER} == "sunpro", which should be
   !empty(PKGSRC_COMPILER:Msunpro).
-* If USE_TOOLS has autoconf213, and the package does stuff like
-  cd ${WRKSRC} && autoconf, then an incorrect warning is issued.
 * don't complain about "procedure calls", like for pkg-build-options in
   the various buildlink3.mk files.
 * if package A conflicts with B, then B should also conflict with A.
