@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.52 2016/01/15 10:39:44 wiz Exp $
+@comment $NetBSD: PLIST,v 1.53 2016/01/31 08:36:29 wiz Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -154,6 +154,7 @@ lib/calibre/calibre/devices/usbobserver/test.py
 lib/calibre/calibre/devices/user_defined/__init__.py
 lib/calibre/calibre/devices/user_defined/driver.py
 lib/calibre/calibre/devices/utils.py
+lib/calibre/calibre/devices/winusb.py
 lib/calibre/calibre/ebooks/BeautifulSoup.py
 lib/calibre/calibre/ebooks/__init__.py
 lib/calibre/calibre/ebooks/azw4/__init__.py
@@ -2412,7 +2413,6 @@ share/calibre/recipes/heritage_foundation.recipe
 share/calibre/recipes/high_country_news.recipe
 share/calibre/recipes/hindu.recipe
 share/calibre/recipes/hindu_business_line.recipe
-share/calibre/recipes/hindustan_times.recipe
 share/calibre/recipes/hira.recipe
 share/calibre/recipes/histmag.recipe
 share/calibre/recipes/historia_news.recipe
