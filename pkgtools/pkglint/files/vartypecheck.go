@@ -25,8 +25,9 @@ const (
 	opAssignEval                      // :=
 	opAssignAppend                    // +=
 	opAssignDefault                   // ?=
-	opUseLoadtime
-	opUse
+	opUse                             //
+	opUseLoadtime                     //
+	opUseMatch                        // Used in the :M operator
 )
 
 func NewMkOperator(op string) MkOperator {
@@ -46,7 +47,7 @@ func NewMkOperator(op string) MkOperator {
 }
 
 func (op MkOperator) String() string {
-	return [...]string{"=", "!=", ":=", "+=", "?=", "use", "use-loadtime"}[op]
+	return [...]string{"=", "!=", ":=", "+=", "?=", "use", "use-loadtime", "use-match"}[op]
 }
 
 func (cv *VartypeCheck) AwkCommand() {
@@ -91,6 +92,9 @@ func (cv *VartypeCheck) Category() {
 
 // A single option to the C/C++ compiler.
 func (cv *VartypeCheck) CFlag() {
+	if cv.op == opUseMatch {
+		return
+	}
 	cflag := cv.value
 	switch {
 	case matches(cflag, `^-[DILOUWfgm]`),
@@ -291,6 +295,8 @@ func (cv *VartypeCheck) FetchURL() {
 // See http://www.opengroup.org/onlinepubs/009695399/basedefs/xbd_chap03.html#tag_03_169
 func (cv *VartypeCheck) Filename() {
 	switch {
+	case cv.op == opUseMatch:
+		break
 	case contains(cv.valueNovar, "/"):
 		cv.line.Warn0("A filename should not contain a slash.")
 	case !matches(cv.valueNovar, `^[-0-9@A-Za-z.,_~+%]*$`):
@@ -299,6 +305,9 @@ func (cv *VartypeCheck) Filename() {
 }
 
 func (cv *VartypeCheck) Filemask() {
+	if cv.op == opUseMatch {
+		return
+	}
 	if !matches(cv.valueNovar, `^[-0-9A-Za-z._~+%*?]*$`) {
 		cv.line.Warn1("%q is not a valid filename mask.", cv.value)
 	}
@@ -316,6 +325,12 @@ func (cv *VartypeCheck) FileMode() {
 }
 
 func (cv *VartypeCheck) Identifier() {
+	if cv.op == opUseMatch {
+		if cv.value == cv.valueNovar && !matches(cv.value, `^[\w*?]`) {
+			cv.line.Warn2("Invalid identifier pattern %q for %s.", cv.value, cv.varname)
+		}
+		return
+	}
 	if cv.value != cv.valueNovar {
 		//line.logWarning("Identifiers should be given directly.")
 	}
@@ -336,6 +351,9 @@ func (cv *VartypeCheck) Integer() {
 }
 
 func (cv *VartypeCheck) LdFlag() {
+	if cv.op == opUseMatch {
+		return
+	}
 	ldflag := cv.value
 	if m, rpathFlag := match1(ldflag, `^(-Wl,(?:-R|-rpath|--rpath))`); m {
 		cv.line.Warn1("Please use \"${COMPILER_RPATH_FLAG}\" instead of %q.", rpathFlag)
@@ -452,6 +470,9 @@ func (cv *VartypeCheck) Pathlist() {
 // Shell globbing including slashes.
 // See Filemask
 func (cv *VartypeCheck) Pathmask() {
+	if cv.op == opUseMatch {
+		return
+	}
 	if !matches(cv.valueNovar, `^[#\-0-9A-Za-z._~+%*?/\[\]]*`) {
 		cv.line.Warn1("%q is not a valid pathname mask.", cv.value)
 	}
@@ -461,6 +482,9 @@ func (cv *VartypeCheck) Pathmask() {
 // Like Filename, but including slashes
 // See http://www.opengroup.org/onlinepubs/009695399/basedefs/xbd_chap03.html#tag_03_266
 func (cv *VartypeCheck) Pathname() {
+	if cv.op == opUseMatch {
+		return
+	}
 	if !matches(cv.valueNovar, `^[#\-0-9A-Za-z._~+%/]*$`) {
 		cv.line.Warn1("%q is not a valid pathname.", cv.value)
 	}
@@ -474,7 +498,7 @@ func (cv *VartypeCheck) Perl5Packlist() {
 }
 
 func (cv *VartypeCheck) PkgName() {
-	if cv.value == cv.valueNovar && !matches(cv.value, rePkgname) {
+	if cv.op != opUseMatch && cv.value == cv.valueNovar && !matches(cv.value, rePkgname) {
 		cv.line.Warn1("%q is not a valid package name. A valid package name has the form packagename-version, where version consists only of digits, letters and dots.", cv.value)
 	}
 }
@@ -642,6 +666,9 @@ func (cv *VartypeCheck) SedCommands() {
 }
 
 func (cv *VartypeCheck) ShellCommand() {
+	if cv.op == opUseMatch {
+		return
+	}
 	setE := true
 	NewShellLine(cv.mkline).CheckShellCommand(cv.value, &setE)
 }
@@ -680,7 +707,7 @@ func (cv *VartypeCheck) Tool() {
 		default:
 			cv.line.Error1("Unknown tool dependency %q. Use one of \"build\", \"pkgsrc\" or \"run\".", tooldep)
 		}
-	} else {
+	} else if cv.op != opUseMatch {
 		cv.line.Error1("Invalid tool syntax: %q.", cv.value)
 	}
 }
@@ -741,7 +768,11 @@ func (cv *VartypeCheck) Varname() {
 }
 
 func (cv *VartypeCheck) Version() {
-	if !matches(cv.value, `^([\d.])+$`) {
+	if cv.op == opUseMatch {
+		if !matches(cv.value, `^[\d?\[][\w\-.*?\[\]]+$`) {
+			cv.line.Warn1("Invalid version number pattern %q.", cv.value)
+		}
+	} else if cv.value == cv.valueNovar && !matches(cv.value, `^\d[\w.]+$`) {
 		cv.line.Warn1("Invalid version number %q.", cv.value)
 	}
 }
@@ -786,31 +817,47 @@ func (cv *VartypeCheck) WrksrcSubdirectory() {
 	}
 }
 
-// Used for variables that are checked using `.if defined(VAR)`.
 func (cv *VartypeCheck) Yes() {
-	if !matches(cv.value, `^(?:YES|yes)(?:\s+#.*)?$`) {
-		cv.line.Warn1("%s should be set to YES or yes.", cv.varname)
-		Explain4(
-			"This variable means \"yes\" if it is defined, and \"no\" if it is",
-			"undefined.  Even when it has the value \"no\", this means \"yes\".",
-			"Therefore when it is defined, its value should correspond to its",
-			"meaning.")
+	switch cv.op {
+	case opUseMatch:
+		cv.line.Warn1("%s should only be used in a \".if defined(...)\" conditional.", cv.varname)
+		Explain(
+			"This variable can have only two values: defined or undefined.",
+			"When it is defined, it means \"yes\", even when its value is",
+			"\"no\" or the empty string.",
+			"",
+			"Therefore, it should not be checked by comparing its value",
+			"but using \".if defined(VARNAME)\" alone.")
+
+	default:
+		if !matches(cv.value, `^(?:YES|yes)(?:\s+#.*)?$`) {
+			cv.line.Warn1("%s should be set to YES or yes.", cv.varname)
+			Explain4(
+				"This variable means \"yes\" if it is defined, and \"no\" if it is",
+				"undefined.  Even when it has the value \"no\", this means \"yes\".",
+				"Therefore when it is defined, its value should correspond to its",
+				"meaning.")
+		}
 	}
 }
 
-// The type YesNo is used for variables that are checked using
-//     .if defined(VAR) && !empty(VAR:M[Yy][Ee][Ss])
-//
 func (cv *VartypeCheck) YesNo() {
-	if !matches(cv.value, `^(?:YES|yes|NO|no)(?:\s+#.*)?$`) {
+	if cv.op == opUseMatch {
+		switch cv.value {
+		case "[yY][eE][sS]":
+		case "[Yy][Ee][Ss]":
+		case "[nN][oO]":
+		case "[Nn][Oo]":
+		default:
+			cv.line.Warnf("%s should be matched against %q or %q, not %q.", cv.varname, "[yY][eE][sS]", "[nN][oO]", cv.value)
+		}
+	} else if !matches(cv.value, `^(?:YES|yes|NO|no)(?:\s+#.*)?$`) {
 		cv.line.Warn1("%s should be set to YES, yes, NO, or no.", cv.varname)
 	}
 }
 
-// Like YesNo, but the value may be produced by a shell command using the
-// != operator.
 func (cv *VartypeCheck) YesNoIndirectly() {
-	if cv.valueNovar != "" && !matches(cv.value, `^(?:YES|yes|NO|no)(?:\s+#.*)?$`) {
-		cv.line.Warn1("%s should be set to YES, yes, NO, or no.", cv.varname)
+	if cv.valueNovar != "" {
+		cv.YesNo()
 	}
 }

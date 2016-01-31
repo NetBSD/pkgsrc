@@ -683,7 +683,10 @@ func (pkg *Package) ChecklinesPackageMakefileVarorder(mklines *MkLines) {
 		default:
 			for varindex < len(vars) {
 				if vars[varindex].count == once && !maySkipSection {
-					line.Warn1("%s should be set here.", vars[varindex].varname)
+					line.Warn1("The canonical position for the required variable %s is here.", vars[varindex].varname)
+					Explain(
+						"See doc/Makefile-example or the pkgsrc guide, section",
+						"\"Package components\", subsection \"Makefile\" for more information.")
 				}
 				below[vars[varindex].varname] = belowWhat
 				varindex++
