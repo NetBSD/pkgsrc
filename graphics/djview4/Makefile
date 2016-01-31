@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2015/04/25 14:23:09 tnn Exp $
+# $NetBSD: Makefile,v 1.34 2016/01/31 07:27:04 ryoon Exp $
 #
 
-DISTNAME=	djview-4.8
+DISTNAME=	djview-4.10.5
 PKGNAME=	${DISTNAME:S/djview/djview4/}
-PKGREVISION=	17
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=djvu/}
 
@@ -14,7 +13,8 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	pkg-config
+USE_LIBTOOL=	yes
+USE_TOOLS+=	gmake pkg-config
 
 SUBST_CLASSES+=		nsdejavu
 SUBST_STAGE.nsdejavu=	post-patch
