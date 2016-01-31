@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/09/24 23:13:34 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.5 2016/01/31 07:22:54 ryoon Exp $
 bin/pdf2djvu
 man/de/man1/pdf2djvu.1
 man/fr/man1/pdf2djvu.1
@@ -6,7 +6,6 @@ man/man1/pdf2djvu.1
 man/pl/man1/pdf2djvu.1
 man/pt/man1/pdf2djvu.1
 man/ru/man1/pdf2djvu.1
-man/uk/man1/pdf2djvu.1
 share/locale/de/LC_MESSAGES/pdf2djvu.mo
 share/locale/pl/LC_MESSAGES/pdf2djvu.mo
 share/locale/pt/LC_MESSAGES/pdf2djvu.mo
