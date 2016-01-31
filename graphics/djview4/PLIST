@@ -1,17 +1,17 @@
-@comment $NetBSD: PLIST,v 1.4 2010/08/15 07:09:27 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2016/01/31 07:27:04 ryoon Exp $
 bin/djview4
-lib/netscape/plugins/nsdejavu.so
+lib/mozilla/plugins/nsdejavu.la
 man/man1/djview4.1
 man/man1/nsdejavu.1
-share/djvu/djview4/desktop/djvulibre-djview4.desktop
-share/djvu/djview4/desktop/hi-djview4.svgz
-share/djvu/djview4/desktop/hi32-djview4.png
-share/djvu/djview4/desktop/hi64-djview4.png
-share/djvu/djview4/desktop/prebuilt-hi32-djview4.png
-share/djvu/djview4/desktop/prebuilt-hi64-djview4.png
-share/djvu/djview4/desktop/register-djview-menu
+share/applications/djvulibre-djview4.desktop
 share/djvu/djview4/djview_cs.qm
 share/djvu/djview4/djview_de.qm
+share/djvu/djview4/djview_es.qm
 share/djvu/djview4/djview_fr.qm
 share/djvu/djview4/djview_ru.qm
 share/djvu/djview4/djview_uk.qm
+share/djvu/djview4/djview_zh_cn.qm
+share/djvu/djview4/djview_zh_tw.qm
+share/icons/hicolor/32x32/mimetypes/djvulibre-djview4.png
+share/icons/hicolor/64x64/mimetypes/djvulibre-djview4.png
+share/icons/hicolor/scalable/mimetypes/djvulibre-djview4.svgz
