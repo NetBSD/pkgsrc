@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2015/10/31 18:54:46 nros Exp $
+@comment $NetBSD: PLIST,v 1.23 2016/01/31 13:37:08 nros Exp $
 bin/claws-mail
 bin/sylpheed-claws
 include/claws-mail/account.h
@@ -50,6 +50,7 @@ include/claws-mail/common/stringtable.h
 include/claws-mail/common/tags.h
 include/claws-mail/common/template.h
 include/claws-mail/common/timing.h
+include/claws-mail/common/tlds.h
 include/claws-mail/common/utils.h
 include/claws-mail/common/uuencode.h
 include/claws-mail/common/version.h
@@ -228,12 +229,10 @@ share/examples/claws-mail/mime.types
 share/icons/hicolor/128x128/apps/claws-mail.png
 share/icons/hicolor/48x48/apps/claws-mail.png
 share/icons/hicolor/64x64/apps/claws-mail.png
-share/locale/bg/LC_MESSAGES/claws-mail.mo
 share/locale/ca/LC_MESSAGES/claws-mail.mo
 share/locale/cs/LC_MESSAGES/claws-mail.mo
 share/locale/de/LC_MESSAGES/claws-mail.mo
 share/locale/en_GB/LC_MESSAGES/claws-mail.mo
-share/locale/eo/LC_MESSAGES/claws-mail.mo
 share/locale/es/LC_MESSAGES/claws-mail.mo
 share/locale/fi/LC_MESSAGES/claws-mail.mo
 share/locale/fr/LC_MESSAGES/claws-mail.mo
@@ -244,6 +243,7 @@ share/locale/lt/LC_MESSAGES/claws-mail.mo
 share/locale/nb/LC_MESSAGES/claws-mail.mo
 share/locale/nl/LC_MESSAGES/claws-mail.mo
 share/locale/pt_BR/LC_MESSAGES/claws-mail.mo
+share/locale/ru/LC_MESSAGES/claws-mail.mo
 share/locale/sk/LC_MESSAGES/claws-mail.mo
 share/locale/sv/LC_MESSAGES/claws-mail.mo
 share/locale/zh_TW/LC_MESSAGES/claws-mail.mo
