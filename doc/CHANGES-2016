@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.415 2016/01/31 08:53:57 markd Exp $
+$NetBSD: CHANGES-2016,v 1.416 2016/01/31 09:22:33 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -604,3 +604,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/cgit to 0.12 [ryoon 2016-01-31]
 	Updated devel/libdbusmenu-qt to 0.9.3.15.10.20150604 [markd 2016-01-31]
 	Added devel/libdbusmenu-qt5 version 0.9.3.15.10.20150604 [markd 2016-01-31]
+	Updated sysutils/coreutils to 8.25 [ryoon 2016-01-31]
+	Updated misc/gnuls to 8.25 [ryoon 2016-01-31]
