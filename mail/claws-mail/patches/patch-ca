@@ -1,4 +1,4 @@
-$NetBSD: patch-ca,v 1.3 2014/01/15 17:19:30 drochner Exp $
+$NetBSD: patch-ca,v 1.4 2016/01/31 13:37:08 nros Exp $
 
 --- src/plugins/vcalendar/vcal_folder.c.orig	2014-01-14 12:32:26.000000000 +0000
 +++ src/plugins/vcalendar/vcal_folder.c
@@ -10,13 +10,3 @@ $NetBSD: patch-ca,v 1.3 2014/01/15 17:19:30 drochner Exp $
 +				time_t duration = (time_t) 0;
  				struct icaldurationtype ical_dur;
  				int i = 0;
- 
-@@ -1158,7 +1158,7 @@ static void vcal_set_mtime(Folder *folde
- 	}
- 
- 	item->mtime = s.st_mtime;
--	debug_print("VCAL: forced mtime of %s to %ld\n", item->name?item->name:"(null)", item->mtime);
-+	debug_print("VCAL: forced mtime of %s to %lld\n", item->name?item->name:"(null)", (long long)item->mtime);
- 	g_free(path);
- }
- 
