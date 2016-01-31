@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2015/10/17 10:16:35 adam Exp $
+# $NetBSD: options.mk,v 1.12 2016/01/31 07:49:23 ryoon Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.apache
 PKG_SUPPORTED_OPTIONS=		apache-mpm-event apache-mpm-prefork apache-mpm-worker \
@@ -91,6 +91,10 @@ CONFIGURE_ARGS+=	--without-nghttp2
 .if !empty(PKG_OPTIONS:Mlua)
 .include "../../lang/lua/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-lua
+CONFIGURE_ARGS+=	--with-lua=${PREFIX}
+BUILDLINK_TRANSFORM+=	l:lua-5.1:lua5.1
+BUILDLINK_TRANSFORM+=	l:lua-5.2:lua5.2
+BUILDLINK_TRANSFORM+=	l:lua-5.3:lua5.3
 PLIST.lua=		yes
 .else
 CONFIGURE_ARGS+=	--disable-lua
