@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.170 2016/01/20 22:14:13 ryoon Exp $
+$NetBSD: distinfo,v 1.171 2016/01/31 23:43:48 joerg Exp $
 
 SHA1 (thunderbird-38.5.0.source.tar.bz2) = 75ae57e7ae018a07a55ce4402ae9f88e7867559f
 RMD160 (thunderbird-38.5.0.source.tar.bz2) = 649fbff7746387024b1bc87ad5d6cd24407344f4
@@ -40,8 +40,7 @@ SHA1 (patch-mozilla_config_baseconfig.mk) = e8594d03d0db21e0731d85dcdb38ab9c465e
 SHA1 (patch-mozilla_config_external_moz.build) = ee26e7573fe6d6c7f6e8497d8d1f928174ce4a36
 SHA1 (patch-mozilla_config_stl__wrappers_ios) = 066a9f3db9203afa8131b2ff91d212033e5950e0
 SHA1 (patch-mozilla_config_stl__wrappers_ostream) = 67559c5ab17088680b86dea6b081a48b781f59b5
-SHA1 (patch-mozilla_config_system-headers) = dd93fa354f79a320735063792fdcc87cf44bde75
-SHA1 (patch-mozilla_config_system__wrappers_unwind.h) = 32d4ab3fbf80bf19783dab7c4a875a7262f419cf
+SHA1 (patch-mozilla_config_system-headers) = a42f21a5647cc7832d26e12c2ebca5adea57dae9
 SHA1 (patch-mozilla_dom_base_moz.build) = dce93f4c00bb662d5c702b442ee169bb8888237d
 SHA1 (patch-mozilla_dom_events_MessageEvent.h) = 677c3531230147baf260aca9e39d7a04b2a7c673
 SHA1 (patch-mozilla_dom_media_AudioStream.h) = b5092adaf26c8c1809b4ad62eb92be101c07ac88
@@ -54,10 +53,11 @@ SHA1 (patch-mozilla_dom_system_OSFileConstants.cpp) = 665007aa3640bdc7d2dfb26c25
 SHA1 (patch-mozilla_extensions_spellcheck_hunspell_src_mozHunspell.cpp) = 3865b172e85ee0146baf0641c1181bd01e955b35
 SHA1 (patch-mozilla_gfx_graphite2_moz-gr-update.sh) = 49a7d2d4de18565ca256e000fedaab1cb3e714f2
 SHA1 (patch-mozilla_gfx_graphite2_src_Bidi.cpp) = 5b5190da8a8e4eabd793d9bd5932f773b685dbf4
+SHA1 (patch-mozilla_gfx_graphite2_src_moz.build) = 12601e295244497f5b3a255350ee2b67c20d4f0c
 SHA1 (patch-mozilla_gfx_moz.build) = 93f0eba2ea5a4d678c6356b254a1a91bf0ad7ea9
 SHA1 (patch-mozilla_gfx_skia_generate__mozbuild.py) = 7d1f1b85ec1a332d1370f2030f941c38ef83d021
 SHA1 (patch-mozilla_gfx_skia_moz.build) = c7298e883ec7a77c7fb85929dac8eced022cd438
-SHA1 (patch-mozilla_gfx_thebes_moz.build) = 57966be80ca5ce9f24350114bc7cb151b42adffd
+SHA1 (patch-mozilla_gfx_thebes_moz.build) = 4d09f500e5caa17ec71ddcd032a01fcb4acf1508
 SHA1 (patch-mozilla_gfx_ycbcr_moz.build) = fcd9af6d97c2d7cf85856d8f11e1a13c0ebe8f52
 SHA1 (patch-mozilla_gfx_ycbcr_yuv__row__arm.S) = 5562543a67b0dec358a4ecc44612f2faa669d8b0
 SHA1 (patch-mozilla_image_decoders_nsJPEGDecoder.cpp) = bd08482f32102412517b3150e5c70500e8f921fa

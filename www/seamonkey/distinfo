@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.132 2016/01/20 22:14:14 ryoon Exp $
+$NetBSD: distinfo,v 1.133 2016/01/31 23:43:48 joerg Exp $
 
 SHA1 (seamonkey-2.39.source.tar.xz) = cae3d2cf38f85190d0639a391f04953d9313d48b
 RMD160 (seamonkey-2.39.source.tar.xz) = 35d442092e359145ff4799d82576e1e8c0ee5a06
@@ -22,7 +22,7 @@ SHA1 (patch-mozilla_config_external_moz.build) = 3cc238e147eff66de1fd42671547b83
 SHA1 (patch-mozilla_config_rules.mk) = ce24fd149c05a252acffc05a72dc0f86eabe16b4
 SHA1 (patch-mozilla_config_stl__wrappers_ios) = 9200935d025d899a5810dc615345b9a7005369b2
 SHA1 (patch-mozilla_config_stl__wrappers_ostream) = 232e253bca5d8f7f0de1b880dc34b613f8852ee7
-SHA1 (patch-mozilla_config_system-headers) = 41d86b02ecff5bcb06903c18b487cafad8ec544f
+SHA1 (patch-mozilla_config_system-headers) = fb1deec06c10aa858c235a95c2ae6f9c72a149dc
 SHA1 (patch-mozilla_dom_base_DOMRequest.cpp) = 3c01dd16ea83b2d972e437e92b2126aeec68a7a1
 SHA1 (patch-mozilla_dom_base_moz.build) = de05328ca4339e0e3a92da3e4517697df9d3b53a
 SHA1 (patch-mozilla_dom_events_MessageEvent.h) = 6be0cb8c8c6b60cf9e2604e2deb018bc69b6e2d5
@@ -37,13 +37,14 @@ SHA1 (patch-mozilla_gfx_cairo_libpixman_src_pixman-arm-neon-asm.S) = 818a1b1cb48
 SHA1 (patch-mozilla_gfx_gl_GLContextProviderGLX.cpp) = d4d0cdf25ae15f7cc07d1ad213ec7d2b015e4168
 SHA1 (patch-mozilla_gfx_graphite2_moz-gr-update.sh) = ba55405496adf27442dd26a5420397e51a784539
 SHA1 (patch-mozilla_gfx_graphite2_src_Bidi.cpp) = fb97becdfeeea742e8c0bc51e10efc124a2a11f3
+SHA1 (patch-mozilla_gfx_graphite2_src_moz.build) = 844b567da0d6f054054b0e9dfb2263e7bc9ee4d6
 SHA1 (patch-mozilla_gfx_moz.build) = 9cd67c170321c399b85f9f7729a6d130bb331f17
 SHA1 (patch-mozilla_gfx_skia_generate__mozbuild.py) = da3f8c9581d879099e8efbf852049a0f61cb7b24
 SHA1 (patch-mozilla_gfx_skia_moz.build) = 8f82fa997976f39d601fe2b003e91e9a63956d88
 SHA1 (patch-mozilla_gfx_skia_skia_src_core_SkUtilsArm.cpp) = d830e2aa24ad6b9a68580273a636b1a0a845f5c4
 SHA1 (patch-mozilla_gfx_skia_skia_src_opts_SkBitmapProcState__opts__arm.cpp) = 7d1f2ca05efbaef16f9058ac98c8b80c05784aeb
 SHA1 (patch-mozilla_gfx_skia_skia_src_opts_memset.arm.S) = 7e7e9ba1638935b81128bdf5bc01005797add4cb
-SHA1 (patch-mozilla_gfx_thebes_moz.build) = c9fc7811cf24c735f1f829f206af5d8bba27d505
+SHA1 (patch-mozilla_gfx_thebes_moz.build) = a90dce52fcd9ebdb502acf041d7e861dd0194937
 SHA1 (patch-mozilla_gfx_ycbcr_moz.build) = 263c37980558d485e868a7097689cdf35c5f678d
 SHA1 (patch-mozilla_gfx_ycbcr_yuv__row__arm.S) = 74c70bad49b9781dae6be4fd46c33da886bcfd34
 SHA1 (patch-mozilla_image_decoders_nsJPEGDecoder.cpp) = ff09ce62a57b0024cf664e807afc813fc25eefdf

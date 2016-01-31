@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2016/01/20 22:14:13 ryoon Exp $
+$NetBSD: distinfo,v 1.5 2016/01/31 23:43:48 joerg Exp $
 
 SHA1 (enigmail-1.7.2.tar.gz) = e72eeff5a47491267981090129b0b2594b5dc96f
 RMD160 (enigmail-1.7.2.tar.gz) = 1dcd10e758321846eb20ac7f1d3ae6465c47bfe7
@@ -50,7 +50,7 @@ SHA1 (patch-mozilla_config_baseconfig.mk) = e8594d03d0db21e0731d85dcdb38ab9c465e
 SHA1 (patch-mozilla_config_external_moz.build) = 61d9d60ad4e360b6d9511205ebe0d68422a2501b
 SHA1 (patch-mozilla_config_stl__wrappers_ios) = 066a9f3db9203afa8131b2ff91d212033e5950e0
 SHA1 (patch-mozilla_config_stl__wrappers_ostream) = 67559c5ab17088680b86dea6b081a48b781f59b5
-SHA1 (patch-mozilla_config_system-headers) = eb009f99d689ca9568187b86e7c5d4e7ccb5abbb
+SHA1 (patch-mozilla_config_system-headers) = bfd31db600ef160b212ed16e3e5e601977705f98
 SHA1 (patch-mozilla_content_base_src_moz.build) = 0a7f7665a23a50d6c60a99c58e7d074465f4917c
 SHA1 (patch-mozilla_content_media_AudioStream.cpp) = 9faaa001b9a8d142ee0027622e773151de8c7287
 SHA1 (patch-mozilla_content_media_AudioStream.h) = 5970af4cfae07e02943a0411dfb195f2bcf10226
@@ -65,9 +65,11 @@ SHA1 (patch-mozilla_dom_plugins_ipc_PluginProcessChild.cpp) = aa4e89010af5bf2844
 SHA1 (patch-mozilla_dom_system_OSFileConstants.cpp) = 8880a3956dd13628f898b79326620ec9f122d362
 SHA1 (patch-mozilla_extensions_spellcheck_hunspell_src_mozHunspell.cpp) = ecc46454804bd1f2dc97621e0d788e16bb2eaea9
 SHA1 (patch-mozilla_gfx_graphite2_src_Bidi.cpp) = 5b5190da8a8e4eabd793d9bd5932f773b685dbf4
+SHA1 (patch-mozilla_gfx_graphite2_src_moz.build) = a7a0efc38f808b97025e0823c8426dd337466f63
 SHA1 (patch-mozilla_gfx_moz.build) = 93f0eba2ea5a4d678c6356b254a1a91bf0ad7ea9
 SHA1 (patch-mozilla_gfx_skia_Makefile.in) = c67f4c4fd47b6d00b6f2f951a8ebebf22087ddf6
 SHA1 (patch-mozilla_gfx_thebes_Makefile.in) = b8295dfd28fbd9d21d83734f2b8928486df09344
+SHA1 (patch-mozilla_gfx_thebes_moz.build) = c1785f95010f168197df490213940cf834969400
 SHA1 (patch-mozilla_image_decoders_nsJPEGDecoder.cpp) = 9f25aae0c01f3341540ed4b821265b0921c5f74f
 SHA1 (patch-mozilla_intl_hyphenation_src_hnjalloc.h) = 23b4045d687d2823f3078a5f81adc4b4309d7a11
 SHA1 (patch-mozilla_intl_unicharutil_util_Makefile.in) = 1cf07aec1f7f38d465608fe8137d1f5e030ebf3f

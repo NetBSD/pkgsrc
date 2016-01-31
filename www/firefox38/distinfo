@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2016/01/20 22:14:13 ryoon Exp $
+$NetBSD: distinfo,v 1.11 2016/01/31 23:43:48 joerg Exp $
 
 SHA1 (firefox-38.5.0esr.source.tar.bz2) = 9a3fe6b51f4a786b1fc6a47f2eb512ef806cffd9
 RMD160 (firefox-38.5.0esr.source.tar.bz2) = e14a751a20c0183f5d97620ef7541756f1b40772
@@ -25,8 +25,7 @@ SHA1 (patch-config_external_moz.build) = ee5fe1672333a7d71e61a23f3739ffefcca692d
 SHA1 (patch-config_rules.mk) = d7f7060b246092eae3d7a792e43b14e462a37abd
 SHA1 (patch-config_stl__wrappers_ios) = 00d723e2f2f252485350ede5833f0bb84c1235c1
 SHA1 (patch-config_stl__wrappers_ostream) = 7be7fe36704ffbdc070a113b46b4f391a598206b
-SHA1 (patch-config_system-headers) = 1119b8d99b6b0fe40c79f9b331342a0ca61fa522
-SHA1 (patch-config_system__wrappers_unwind.h) = b3bdac0710179b9c8f8eabd824216d0114504491
+SHA1 (patch-config_system-headers) = c9ac68ecbe1ce74e1aa62d792541955c31797f2d
 SHA1 (patch-dom_base_moz.build) = 8b59c33958b7037c4c051742c64f1455096ced46
 SHA1 (patch-dom_events_MessageEvent.h) = c7caec0955a7cff777ef84599fe9a6eec7c78a66
 SHA1 (patch-dom_media_AudioStream.h) = 96b5a1a2b1c930cfcfa77a125d47b6eb93fac1c6
@@ -39,10 +38,11 @@ SHA1 (patch-dom_system_OSFileConstants.cpp) = 4fe5d4ecf6116c7163ee6d2322db8b1b78
 SHA1 (patch-extensions_spellcheck_hunspell_src_mozHunspell.cpp) = 747354373bcaf2c76bdff71677f354d47837704b
 SHA1 (patch-gfx_graphite2_moz-gr-update.sh) = b987dad1bd4513b8a04fb280bd1c5280a03af746
 SHA1 (patch-gfx_graphite2_src_Bidi.cpp) = 5e80b4a32a47ae44d237fec69ea87bdd612a76ce
+SHA1 (patch-gfx_graphite2_src_moz.build) = 1715ac0814dce4004454013b9675517152726a7a
 SHA1 (patch-gfx_moz.build) = a98bda4727538f4a0f09a20b84f9dd883edaf7d9
 SHA1 (patch-gfx_skia_generate__mozbuild.py) = e0bf45842ae74f896678b1c29d97606165cf5914
 SHA1 (patch-gfx_skia_moz.build) = ce83717ec6e386d52af75a0f5592fa866b83b3bc
-SHA1 (patch-gfx_thebes_moz.build) = f64917350eaf693866b0e7196cb7f1cc9e9470fc
+SHA1 (patch-gfx_thebes_moz.build) = fa468f388322819bfa87681bf0a443fbd16568d1
 SHA1 (patch-gfx_ycbcr_moz.build) = 121386ef62ff7425e6f93bc624555199f2ac3485
 SHA1 (patch-gfx_ycbcr_yuv__row__arm.S) = f9909ded72762b2c3547dd002707db43745f2b9d
 SHA1 (patch-image_decoders_nsJPEGDecoder.cpp) = ec12085f52b3614bc67b797c3a6b36ab5daee9ea
