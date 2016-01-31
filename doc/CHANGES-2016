@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.407 2016/01/31 06:46:03 mef Exp $
+$NetBSD: CHANGES-2016,v 1.408 2016/01/31 07:23:33 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -595,3 +595,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/p5-String-Random to 0.29 [mef 2016-01-31]
 	Updated devel/p5-Exception-Class to 1.40 [mef 2016-01-31]
 	Updated devel/p5-ExtUtils-MakeMaker to 7.10 [mef 2016-01-31]
+	Updated print/pdf2djvu to 0.9.3 [ryoon 2016-01-31]
