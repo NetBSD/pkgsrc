@@ -1,58 +1,13 @@
-$NetBSD: patch-configure,v 1.1 2014/04/04 18:25:51 asau Exp $
+$NetBSD: patch-configure,v 1.2 2016/01/31 07:27:04 ryoon Exp $
 
---- configure.orig	2014-04-03 17:59:03.942029000 +0000
+--- configure.orig	2016-01-07 12:28:36.000000000 +0000
 +++ configure
-@@ -9242,7 +9242,7 @@ if test -z "$aix_libpath"; then aix_libp
-       hardcode_shlibpath_var=no
-       ;;
+@@ -20132,7 +20132,7 @@ $as_echo "$as_me: WARNING: Disabling plu
+     fi
+ fi
  
--    freebsd1*)
-+    freebsd1|freebsd1.*)
-       ld_shlibs=no
-       ;;
- 
-@@ -10117,7 +10117,7 @@ dgux*)
-   shlibpath_var=LD_LIBRARY_PATH
-   ;;
- 
--freebsd1*)
-+freebsd1|freebsd1.*)
-   dynamic_linker=no
-   ;;
- 
-@@ -10128,7 +10128,7 @@ freebsd* | dragonfly*)
-     objformat=`/usr/bin/objformat`
-   else
-     case $host_os in
--    freebsd[123]*) objformat=aout ;;
-+    freebsd[123]|freebsd[123].*) objformat=aout ;;
-     *) objformat=elf ;;
-     esac
-   fi
-@@ -11824,7 +11824,7 @@ if test -z "$aix_libpath"; then aix_libp
-         esac
-         ;;
- 
--      freebsd[12]*)
-+      freebsd[12]|freebsd[12].*)
-         # C++ shared libraries reported to be fairly broken before
- 	# switch to ELF
-         ld_shlibs_CXX=no
-@@ -13585,7 +13585,7 @@ dgux*)
-   shlibpath_var=LD_LIBRARY_PATH
-   ;;
- 
--freebsd1*)
-+freebsd1|freebsd1.*)
-   dynamic_linker=no
-   ;;
- 
-@@ -13596,7 +13596,7 @@ freebsd* | dragonfly*)
-     objformat=`/usr/bin/objformat`
-   else
-     case $host_os in
--    freebsd[123]*) objformat=aout ;;
-+    freebsd[123]|freebsd[123].*) objformat=aout ;;
-     *) objformat=elf ;;
-     esac
-   fi
+-if test "$ac_nsdejavu" != no && test "$qtversion" == "qt4" ; then
++if test "$ac_nsdejavu" != no && test "$qtversion" = "qt4" ; then
+     ac_qt_x11=no
+     ac_ext=cpp
+ ac_cpp='$CXXCPP $CPPFLAGS'
