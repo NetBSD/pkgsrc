@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2016/01/27 10:31:31 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2016/01/31 07:22:54 ryoon Exp $
 #
 
-DISTNAME=	pdf2djvu-0.8.2
-PKGREVISION=	3
+DISTNAME=	pdf2djvu-0.9.3
 CATEGORIES=	print
 MASTER_SITES=	https://bitbucket.org/jwilk/pdf2djvu/downloads/
 EXTRACT_SUFX=	.tar.xz
