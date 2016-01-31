@@ -1,7 +1,13 @@
-$NetBSD: patch-e_data_book_factory_c,v 1.1 2012/02/06 10:44:43 drochner Exp $
+$NetBSD: patch-e_data_book_factory_c,v 1.2 2016/01/31 07:01:55 richard Exp $
 
 Replace deprecated g_atomic_int_exchange_and_add()
 1886d3d0573388aa5c13af99f714687ba6a66ec6
+
+The e-calendar-factory process did not terminate automatically
+when the user logged out of the graphical desktop environment, and
+e-calendar-factory thus redundantly consumed system resources.
+(https://bugzilla.redhat.com/show_bug.cgi?id=1141760 and upstream
+https://bugzilla.gnome.org/show_bug.cgi?id=646117)
 
 --- addressbook/libedata-book/e-data-book-factory.c.orig	2011-04-21 19:36:35.000000000 +0000
 +++ addressbook/libedata-book/e-data-book-factory.c
@@ -14,3 +20,15 @@ Replace deprecated g_atomic_int_exchange_and_add()
  }
  
  static gboolean
+@@ -569,6 +569,11 @@ on_name_lost (GDBusConnection *connectio
+ 	}
+ 
+ 	g_mutex_unlock (factory->priv->connections_lock);
++	if (g_strcmp0 (name, E_DATA_BOOK_FACTORY_SERVICE_NAME) == 0) {
++		g_print ("Quitting on the D-Bus name lost...\n");
++		g_main_loop_quit (loop);
++	}
++ 
+ }
+ 
+ gint
