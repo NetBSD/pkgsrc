@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.4 2015/03/14 13:47:44 tnn Exp $
+# $NetBSD: Makefile,v 1.5 2016/01/31 08:47:45 ryoon Exp $
 
-DISTNAME=	cgit-0.10.2
+DISTNAME=	cgit-0.12
 CATEGORIES=	www
 MASTER_SITES=	http://git.zx2c4.com/cgit/snapshot/
 EXTRACT_SUFX=	.tar.xz
 # cgit builds its own libgit using a known-good version
 # check release notes or README when updating the package
-GIT_VER=	2.0.1
+GIT_VER=	2.7.0
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} git-${GIT_VER}${EXTRACT_SUFX}
 SITES.git-${GIT_VER}${EXTRACT_SUFX}=	http://hjemli.net/git/git/snapshot/
 
-HOMEPAGE=	http://hjemli.net/git/cgit
+HOMEPAGE=	http://git.zx2c4.com/cgit/
 COMMENT=	Fast web interface for git
 MAINTAINER=	pkgsrc-users@NetBSD.org
 LICENSE=	gnu-gpl-v2
