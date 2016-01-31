@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.402 2016/01/31 02:49:52 mef Exp $
+$NetBSD: CHANGES-2016,v 1.403 2016/01/31 05:37:41 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -590,3 +590,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/rt4 to 4.2.12 [ryoon 2016-01-30]
 	Updated multimedia/ffmpeg2theora to 0.30 [mef 2016-01-31]
 	Updated security/p5-IO-Socket-SSL to 2.023 [mef 2016-01-31]
+	Updated security/p5-Net-OpenSSH to 0.70 [mef 2016-01-31]
