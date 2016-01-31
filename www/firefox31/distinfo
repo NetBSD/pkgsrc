@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.19 2015/11/04 02:46:53 agc Exp $
+$NetBSD: distinfo,v 1.20 2016/01/31 23:43:48 joerg Exp $
 
 SHA1 (firefox-31.8.0esr.source.tar.bz2) = 1b09b4ac975f521b48d0ef794f00c4e3696cb1d7
 RMD160 (firefox-31.8.0esr.source.tar.bz2) = c7cd74d1a5cde5c6419becddcb3333d7ec46bf68
@@ -30,7 +30,7 @@ SHA1 (patch-config_external_moz.build) = f437c4802de266caf512dc470879c8ed0961559
 SHA1 (patch-config_rules.mk) = ec74e2e385e95252a1325c8c9c859a0b2dcee693
 SHA1 (patch-config_stl__wrappers_ios) = 00d723e2f2f252485350ede5833f0bb84c1235c1
 SHA1 (patch-config_stl__wrappers_ostream) = 7be7fe36704ffbdc070a113b46b4f391a598206b
-SHA1 (patch-config_system-headers) = 1e7349fcba8a8575bf97093148b0a65494bdb0f0
+SHA1 (patch-config_system-headers) = 7680a9e45eb6467d878df59d9476bff0c515dafe
 SHA1 (patch-content_base_src_moz.build) = fc2660dcc82f11c89d6d5a5772f27c9827f58f44
 SHA1 (patch-content_media_AudioStream.cpp) = 70021dfd1cc86e8999f144b49a23bfb27dd24157
 SHA1 (patch-content_media_AudioStream.h) = 11cd8649f35c001fa0bf9e0f6119e49bd41ab9b4
@@ -46,9 +46,11 @@ SHA1 (patch-dom_plugins_ipc_PluginProcessChild.cpp) = 5ab28cc0398b72cb5e1b058640
 SHA1 (patch-dom_system_OSFileConstants.cpp) = fec01c3c2c1b7e1c57abe9ec269067ee98eede3d
 SHA1 (patch-extensions_spellcheck_hunspell_src_mozHunspell.cpp) = a2a0652d0eac018fda06e729bf5ba786dd8a3866
 SHA1 (patch-gfx_graphite2_src_Bidi.cpp) = 5e80b4a32a47ae44d237fec69ea87bdd612a76ce
+SHA1 (patch-gfx_graphite2_src_moz.build) = c2ddbec41d624732e191f79100d6df6db435396b
 SHA1 (patch-gfx_moz.build) = a98bda4727538f4a0f09a20b84f9dd883edaf7d9
 SHA1 (patch-gfx_skia_Makefile.in) = 03349db0ff9b14c2012c36d746adf2ee6cb87e62
 SHA1 (patch-gfx_thebes_Makefile.in) = 16b63bc42870aa8c042416c6e04b3513981ca6f0
+SHA1 (patch-gfx_thebes_moz.build) = 1330ff2b9f4f6a5e1027340799766d9228a4c459
 SHA1 (patch-gfx_ycbcr_moz.build) = b11c2c15957861eefa33af554aee58e4403e9cfc
 SHA1 (patch-gfx_ycbcr_yuv__row__arm.S) = d3a5437507e3d0fcf64e506c9c5cb5b7dce87970
 SHA1 (patch-image_decoders_nsJPEGDecoder.cpp) = e5df11499b1ec14e1d4c9a1408c0611d1c4e0574

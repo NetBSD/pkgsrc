@@ -1,4 +1,4 @@
-$NetBSD: patch-config_system-headers,v 1.4 2016/01/20 22:14:14 ryoon Exp $
+$NetBSD: patch-config_system-headers,v 1.5 2016/01/31 23:43:48 joerg Exp $
 
 --- config/system-headers.orig	2015-12-14 23:36:05.000000000 +0000
 +++ config/system-headers
@@ -48,13 +48,15 @@ $NetBSD: patch-config_system-headers,v 1.4 2016/01/20 22:14:14 ryoon Exp $
  #endif
  gst/gst.h
  gst/app/gstappsink.h
-@@ -1362,3 +1365,43 @@ unicode/utypes.h
+@@ -1362,3 +1365,45 @@ unicode/utypes.h
  #endif
  libutil.h
  unwind.h
 +#if MOZ_NATIVE_GRAPHITE2==1
 +graphite2/Font.h
++graphite2/Log.h
 +graphite2/Segment.h
++graphite2/Types.h
 +#endif
 +#if MOZ_NATIVE_HARFBUZZ==1
 +harfbuzz/hb-ot.h

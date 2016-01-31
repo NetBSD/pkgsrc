@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_gfx_thebes_moz.build,v 1.1 2015/07/09 15:17:34 ryoon Exp $
+$NetBSD: patch-mozilla_gfx_thebes_moz.build,v 1.2 2016/01/31 23:43:48 joerg Exp $
 
---- mozilla/gfx/thebes/moz.build.orig	2015-06-08 17:49:17.000000000 +0000
+--- mozilla/gfx/thebes/moz.build.orig	2015-12-21 22:32:53.000000000 +0000
 +++ mozilla/gfx/thebes/moz.build
 @@ -287,6 +287,12 @@ CXXFLAGS += CONFIG['TK_CFLAGS']
  CFLAGS += CONFIG['MOZ_CAIRO_CFLAGS']
@@ -15,3 +15,11 @@ $NetBSD: patch-mozilla_gfx_thebes_moz.build,v 1.1 2015/07/09 15:17:34 ryoon Exp 
  if CONFIG['MOZ_WIDGET_TOOLKIT'] in ('android', 'gonk', 'qt'):
      CXXFLAGS += CONFIG['CAIRO_FT_CFLAGS']
  
+@@ -298,7 +304,5 @@ if CONFIG['MOZ_WIDGET_TOOLKIT'] == 'andr
+ if CONFIG['MOZ_WIDGET_TOOLKIT'] in ('gtk2', 'gtk3', 'qt'):
+     CXXFLAGS += CONFIG['MOZ_PANGO_CFLAGS']
+ 
+-DEFINES['GRAPHITE2_STATIC'] = True
+-
+ if CONFIG['GKMEDIAS_SHARED_LIBRARY']:
+     DEFINES['OTS_DLL'] = True
