@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.17 2014/02/02 07:08:24 richard Exp $
+@comment $NetBSD: PLIST,v 1.18 2016/01/31 09:20:50 ryoon Exp $
 bin/g[
+bin/gbase32
 bin/gbase64
 bin/gbasename
 bin/gcat
@@ -308,7 +309,8 @@ gnu/man/man1/who.1
 gnu/man/man1/whoami.1
 gnu/man/man1/yes.1
 info/coreutils.info
-${PLIST.stdbuf}libexec/coreutils/glibstdbuf.so
+${PLIST.stdbuf}libexec/coreutils/libstdbuf.so
+man/man1/gbase32.1
 man/man1/gbase64.1
 man/man1/gbasename.1
 man/man1/gcat.1
@@ -447,6 +449,7 @@ share/locale/ro/LC_MESSAGES/coreutils.mo
 share/locale/ru/LC_MESSAGES/coreutils.mo
 share/locale/sk/LC_MESSAGES/coreutils.mo
 share/locale/sl/LC_MESSAGES/coreutils.mo
+share/locale/sr/LC_MESSAGES/coreutils.mo
 share/locale/sv/LC_MESSAGES/coreutils.mo
 share/locale/tr/LC_MESSAGES/coreutils.mo
 share/locale/uk/LC_MESSAGES/coreutils.mo
@@ -489,6 +492,7 @@ share/locale/ro/LC_TIME/coreutils.mo
 share/locale/ru/LC_TIME/coreutils.mo
 share/locale/sk/LC_TIME/coreutils.mo
 share/locale/sl/LC_TIME/coreutils.mo
+share/locale/sr/LC_TIME/coreutils.mo
 share/locale/sv/LC_TIME/coreutils.mo
 share/locale/tr/LC_TIME/coreutils.mo
 share/locale/uk/LC_TIME/coreutils.mo
