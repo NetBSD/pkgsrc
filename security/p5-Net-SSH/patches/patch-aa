@@ -1,15 +1,15 @@
-$NetBSD: patch-aa,v 1.2 2008/11/18 16:19:04 he Exp $
+$NetBSD: patch-aa,v 1.3 2016/01/31 05:49:47 mef Exp $
 
-XXX YMMV
+Without this, make test hungs
 
---- t/03-packet.t.orig	2008-10-21 15:41:51.000000000 +0000
-+++ t/03-packet.t
+--- t/03-packet.t.orig	2016-01-31 14:48:58.000000000 +0900
++++ t/03-packet.t	2016-01-31 14:49:25.000000000 +0900
 @@ -99,7 +99,7 @@ $ssh->{session}{sock} = $fh;
      # (which dups some handles), we're likely to have as many as 8
      # real handles open, if not more
  	# However, too high and we run into problems with the shell
--    sub FILENO { 25 }
-+    sub FILENO { 16 }
+-    sub FILENO { 24 }
++    sub FILENO { 18 }
  
      sub READ
      {
