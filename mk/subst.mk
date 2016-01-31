@@ -1,4 +1,4 @@
-# $NetBSD: subst.mk,v 1.54 2013/10/13 21:38:36 dholland Exp $
+# $NetBSD: subst.mk,v 1.55 2016/01/31 17:27:41 rillig Exp $
 #
 # This Makefile fragment implements a general text replacement facility.
 # Package makefiles define a ``class'', for each of which a particular
@@ -40,10 +40,6 @@
 #	Filter used to perform the actual substitution on the specified
 #	files.  Defaults to ${SED} ${SUBST_SED.<class>}.
 #
-# SUBST_POSTCMD.<class>
-#	Command to clean up after sed(1). Defaults to ${RM} -f
-#	$$file${_SUBST_BACKUP_SUFFIX}. For debugging, set it to ${DO_NADA}.
-#
 # SUBST_SKIP_TEXT_CHECK.<class>
 #	By default, each file is checked whether it really is a text file
 #	before any substitutions are done to it. Since that test is not
@@ -59,7 +55,7 @@ _VARGROUPS+=		subst
 _PKG_VARS.subst=	SUBST_CLASSES
 .for c in ${SUBST_CLASSES}
 .  for pv in SUBST_STAGE SUBST_MESSAGE SUBST_FILES SUBST_SED SUBST_VARS	\
-	SUBST_FILTER_CMD SUBST_POSTCMD SUBST_SKIP_TEXT_CHECK
+	SUBST_FILTER_CMD SUBST_SKIP_TEXT_CHECK
 _PKG_VARS.subst+=	${pv}.${c}
 .  endfor
 .endfor
@@ -84,7 +80,7 @@ SUBST_MESSAGE.${_class_}?=	Substituting "${_class_}" in ${SUBST_FILES.${_class_}
 .  for v in ${SUBST_VARS.${_class_}}
 SUBST_FILTER_CMD.${_class_} +=	-e s,@${v}@,${${v}:S|\\|\\\\|gW:S|,|\\,|gW:S|&|\\\&|gW:Q},g
 .  endfor
-SUBST_POSTCMD.${_class_}?=	${RM} -f "$$tmpfile"
+_SUBST_KEEP.${_class_}?=	${DO_NADA}
 SUBST_SKIP_TEXT_CHECK.${_class_}?=	no
 
 .if !empty(SUBST_SKIP_TEXT_CHECK.${_class_}:M[Yy][Ee][Ss])
@@ -117,18 +113,18 @@ ${_SUBST_COOKIE.${_class_}}:
 		if [ ! -f "$$file" ]; then				\
 			${WARNING_MSG} "[subst.mk:${_class_}] Ignoring non-existent file \"$$file\"."; \
 		elif ${_SUBST_IS_TEXT_FILE.${_class_}}; then		\
-			${MV} -f "$$file" "$$tmpfile" || exit 1;	\
 			${SUBST_FILTER_CMD.${_class_}}			\
-			< "$$tmpfile"					\
-			> "$$file";					\
-			if ${TEST} -x "$$tmpfile"; then			\
-				${CHMOD} +x "$$file";			\
+			< "$$file"					\
+			> "$$tmpfile";					\
+			if ${TEST} -x "$$file"; then			\
+				${CHMOD} +x "$$tmpfile";		\
 			fi;						\
 			if ${CMP} -s "$$tmpfile" "$$file"; then 	\
 				${INFO_MSG} "[subst.mk:${_class_}] Nothing changed in $$file."; \
-				${MV} -f "$$tmpfile" "$$file";		\
+				${RM} -f "$$tmpfile";			\
 			else						\
-				${SUBST_POSTCMD.${_class_}};		\
+				${_SUBST_KEEP.${_class_}};		\
+				${MV} -f "$$tmpfile" "$$file"; 		\
 				${ECHO} "$$file" >> ${.TARGET};		\
 			fi;						\
 		else							\
