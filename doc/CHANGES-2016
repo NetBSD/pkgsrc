@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.421 2016/01/31 17:19:59 rillig Exp $
+$NetBSD: CHANGES-2016,v 1.422 2016/01/31 20:29:32 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -611,3 +611,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-WWW-Shorten to 3.08 [mef 2016-01-31]
 	Updated mail/claws-mail to 3.13.2 [nros 2016-01-31]
 	Updated pkgtools/pkglint to 5.3.5 [rillig 2016-01-31]
+	Updated net/samba4 to 4.3.4 [ryoon 2016-01-31]
