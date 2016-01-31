@@ -29,7 +29,7 @@ func (gd *GlobalData) InitVartypes() {
 	usr("PKGSRC_SLEEPSECS", lkNone, CheckvarInteger)
 	usr("USETBL", lkNone, CheckvarYes)
 	usr("ABI", lkNone, enum("32 64"))
-	usr("PKG_DEVELOPER", lkNone, CheckvarYes)
+	usr("PKG_DEVELOPER", lkNone, CheckvarYesNo)
 	usr("USE_ABI_DEPENDS", lkNone, CheckvarYesNo)
 	usr("PKG_REGISTER_SHELLS", lkNone, enum("YES NO"))
 	usr("PKGSRC_COMPILER", lkShell, enum("ccache ccc clang distcc f2c gcc hp icc ido gcc mipspro mipspro-ucode pcc sunpro xlc"))
@@ -270,11 +270,11 @@ func (gd *GlobalData) InitVartypes() {
 	sys("EMULSUBDIR", lkNone, CheckvarPathname)
 	sys("OPSYS_EMULDIR", lkNone, CheckvarPathname)
 	sys("EMULSUBDIRSLASH", lkNone, CheckvarPathname)
-	sys("EMUL_ARCH", lkNone, enum("i386 none x86_64"))
+	sys("EMUL_ARCH", lkNone, enum("arm i386 m68k none ns32k sparc vax x86_64"))
 	sys("EMUL_DISTRO", lkNone, CheckvarIdentifier)
 	sys("EMUL_IS_NATIVE", lkNone, CheckvarYes)
 	pkg("EMUL_MODULES.*", lkShell, CheckvarIdentifier)
-	sys("EMUL_OPSYS", lkNone, enum("freebsd hpux irix linux osf1 solaris sunos none"))
+	sys("EMUL_OPSYS", lkNone, enum("darwin freebsd hpux irix linux osf1 solaris sunos none"))
 	pkg("EMUL_PKG_FMT", lkNone, enum("plain rpm"))
 	usr("EMUL_PLATFORM", lkNone, CheckvarEmulPlatform)
 	pkg("EMUL_PLATFORMS", lkShell, CheckvarEmulPlatform)
@@ -537,7 +537,7 @@ func (gd *GlobalData) InitVartypes() {
 	acl("PKG_HACKS", lkShell, CheckvarIdentifier, "hacks.mk: append")
 	sys("PKG_INFO", lkNone, CheckvarShellCommand)
 	sys("PKG_JAVA_HOME", lkNone, CheckvarPathname)
-	jvms := enum("blackdown-jdk13 jdk jdk14 kaffe run-jdk13 sun-jdk14 sun-jdk15 sun-jdk6 openjdk7 openjdk7-bin sun-jdk7")
+	jvms := enum("blackdown-jdk13 jdk jdk14 kaffe run-jdk13 sun-jdk14 sun-jdk15 sun-jdk6 openjdk7 openjdk7-bin sun-jdk7 openjdk8 oracle-jdk8")
 	sys("PKG_JVM", lkNone, jvms)
 	acl("PKG_JVMS_ACCEPTED", lkShell, jvms, "Makefile: set; Makefile.common: default, set")
 	usr("PKG_JVM_DEFAULT", lkNone, jvms)
@@ -587,7 +587,7 @@ func (gd *GlobalData) InitVartypes() {
 	acl("PTHREAD_OPTS", lkShell, enum("native optional require"), "Makefile: set, append; Makefile.common: append; buildlink3.mk: append")
 	sys("PTHREAD_TYPE", lkNone, CheckvarIdentifier) // Or "native" or "none".
 	pkg("PY_PATCHPLIST", lkNone, CheckvarYes)
-	acl("PYPKGPREFIX", lkNone, enum("py27 py33 py34"), "pyversion.mk: set; *: use-loadtime, use")
+	acl("PYPKGPREFIX", lkNone, enum("py27 py33 py34 py35"), "pyversion.mk: set; *: use-loadtime, use")
 	pkg("PYTHON_FOR_BUILD_ONLY", lkNone, CheckvarYes)
 	pkglist("REPLACE_PYTHON", lkShell, CheckvarPathmask)
 	pkg("PYTHON_VERSIONS_ACCEPTED", lkShell, CheckvarVersion)
@@ -670,6 +670,7 @@ func (gd *GlobalData) InitVartypes() {
 	acl("USE_BUILTIN.*", lkNone, CheckvarYesNoIndirectly, "builtin.mk: set")
 	pkg("USE_CMAKE", lkNone, CheckvarYes)
 	acl("USE_CROSSBASE", lkNone, CheckvarYes, "Makefile: set")
+	usr("USE_DESTDIR", lkNone, CheckvarYes)
 	pkg("USE_FEATURES", lkShell, CheckvarIdentifier)
 	pkg("USE_GCC_RUNTIME", lkNone, CheckvarYesNo)
 	pkg("USE_GNU_CONFIGURE_HOST", lkNone, CheckvarYesNo)
@@ -705,9 +706,26 @@ func enum(values string) *VarChecker {
 		vmap[value] = true
 	}
 	name := "enum: " + values + " " // See IsEnum
-	return &VarChecker{name, func(ctx *VartypeCheck) {
-		if !vmap[ctx.value] {
-			ctx.line.Warnf("%q is not valid for %s. Use one of { %s } instead.", ctx.value, ctx.varname, values)
+	return &VarChecker{name, func(cv *VartypeCheck) {
+		if cv.op == opUseMatch {
+			if !vmap[cv.value] && cv.value == cv.valueNovar {
+				canMatch := false
+				for value := range vmap {
+					if ok, err := path.Match(cv.value, value); err != nil {
+						cv.line.Warnf("Invalid match pattern %q.", cv.value)
+					} else if ok {
+						canMatch = true
+					}
+				}
+				if !canMatch {
+					cv.line.Warnf("The pattern %q cannot match any of { %s } for %s.", cv.value, values, cv.varname)
+				}
+			}
+			return
+		}
+
+		if !vmap[cv.value] {
+			cv.line.Warnf("%q is not valid for %s. Use one of { %s } instead.", cv.value, cv.varname, values)
 		}
 	}}
 }

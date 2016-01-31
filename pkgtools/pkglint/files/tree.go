@@ -13,46 +13,6 @@ func NewTree(name string, args ...interface{}) *Tree {
 	return &Tree{name, args}
 }
 
-// Checks whether this tree matches the given pattern, and if so,
-// copies the corresponding nodes from the tree to the pattern.
-// If the match is partially successful, some or all of the variables
-// may have been copied or not.
-func (t *Tree) Match(pattern *Tree) bool {
-	if G.opts.DebugTrace {
-		defer tracecall(t, pattern)()
-	}
-	if t.name != pattern.name || len(t.args) != len(pattern.args) {
-		return false
-	}
-
-	for i, targ := range t.args {
-		parg := pattern.args[i]
-		switch parg := parg.(type) {
-		case *Tree:
-			if targ, ok := targ.(*Tree); ok {
-				if !targ.Match(parg) {
-					return false
-				}
-			} else {
-				return false
-			}
-		case **string:
-			if targ, ok := targ.(string); ok {
-				if *parg == nil {
-					*parg = &targ
-				} else if **parg != targ {
-					return false
-				}
-			} else {
-				return false
-			}
-		default:
-			return false
-		}
-	}
-	return true
-}
-
 func (t *Tree) String() string {
 	s := "(" + t.name
 	for _, arg := range t.args {
@@ -63,9 +23,19 @@ func (t *Tree) String() string {
 		if arg, ok := arg.(string); ok {
 			s += fmt.Sprintf(" %q", arg)
 			continue
-		} else {
-			s += fmt.Sprintf(" %v", arg)
 		}
+		s += fmt.Sprintf(" %v", arg)
 	}
 	return s + ")"
+}
+
+func (t *Tree) Visit(nodename string, action func(t *Tree)) {
+	if t.name == nodename {
+		action(t)
+	}
+	for _, arg := range t.args {
+		if child, ok := arg.(*Tree); ok {
+			child.Visit(nodename, action)
+		}
+	}
 }

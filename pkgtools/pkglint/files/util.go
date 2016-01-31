@@ -357,6 +357,9 @@ func (pr *PrefixReplacer) Reset(mark string) {
 func (pr *PrefixReplacer) Skip(n int) {
 	pr.rest = pr.rest[n:]
 }
+func (pr *PrefixReplacer) SkipSpace() {
+	pr.rest = strings.TrimLeft(pr.rest, " \t")
+}
 func (pr *PrefixReplacer) Since(mark string) string {
 	return mark[:len(mark)-len(pr.rest)]
 }

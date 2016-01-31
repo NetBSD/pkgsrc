@@ -305,39 +305,31 @@ func (s *Suite) TestMkLine_checkVarassign(c *check.C) {
 	c.Check(s.Output(), equals, "")
 }
 
-func (s *Suite) TestParseMkCond_NotEmptyMatch(c *check.C) {
-	mkline := NewMkLine(NewLine("fname", 1, ".if !empty(USE_LIBTOOL:M[Yy][Ee][Ss])", nil))
-
-	cond := mkline.parseMkCond(mkline.Args())
-
-	c.Check(cond, check.DeepEquals, NewTree("not", NewTree("empty", NewTree("match", "USE_LIBTOOL", "[Yy][Ee][Ss]"))))
-}
-
-func (s *Suite) TestParseMkCond_Compare(c *check.C) {
-	mkline := NewMkLine(NewLine("fname", 1, ".if ${VARNAME} != \"Value\"", nil))
-
-	cond := mkline.parseMkCond(mkline.Args())
-
-	c.Check(cond, check.DeepEquals, NewTree("compareVarStr", "VARNAME", "!=", "Value"))
-}
-
 func (s *Suite) TestChecklineMkCondition(c *check.C) {
 	s.UseCommandLine(c, "-Wtypes")
 	G.globalData.InitVartypes()
 
-	NewMkLine(NewLine("fname", 1, ".if !empty(PKGSRC_COMPILER:Mmycc)", nil)).CheckIf()
+	NewMkLine(NewLine("fname", 1, ".if !empty(PKGSRC_COMPILER:Mmycc)", nil)).CheckCond()
 
-	c.Check(s.Stdout(), equals, "WARN: fname:1: Invalid :M value \"mycc\". "+
-		"Only { ccache ccc clang distcc f2c gcc hp icc ido gcc mipspro "+
-		"mipspro-ucode pcc sunpro xlc } are allowed.\n")
+	c.Check(s.Stdout(), equals, "WARN: fname:1: The pattern \"mycc\" cannot match any of "+
+		"{ ccache ccc clang distcc f2c gcc hp icc ido "+
+		"gcc mipspro mipspro-ucode pcc sunpro xlc } for PKGSRC_COMPILER.\n")
 
-	NewMkLine(NewLine("fname", 1, ".elif ${A} != ${B}", nil)).CheckIf()
+	NewMkLine(NewLine("fname", 1, ".elif ${A} != ${B}", nil)).CheckCond()
 
-	c.Check(s.Stdout(), equals, "") // Unknown condition types are silently ignored
+	c.Check(s.Stdout(), equals, "")
 
-	NewMkLine(NewLine("fname", 1, ".if ${HOMEPAGE} == \"mailto:someone@example.org\"", nil)).CheckIf()
+	NewMkLine(NewLine("fname", 1, ".if ${HOMEPAGE} == \"mailto:someone@example.org\"", nil)).CheckCond()
 
 	c.Check(s.Output(), equals, "WARN: fname:1: \"mailto:someone@example.org\" is not a valid URL.\n")
+
+	NewMkLine(NewLine("fname", 1, ".if !empty(PKGSRC_RUN_TEST:M[Y][eE][sS])", nil)).CheckCond()
+
+	c.Check(s.Output(), equals, "WARN: fname:1: PKGSRC_RUN_TEST should be matched against \"[yY][eE][sS]\" or \"[nN][oO]\", not \"[Y][eE][sS]\".\n")
+
+	NewMkLine(NewLine("fname", 1, ".if !empty(IS_BUILTIN.Xfixes:M[yY][eE][sS])", nil)).CheckCond()
+
+	c.Check(s.Output(), equals, "")
 }
 
 func (s *Suite) TestMkLine_variableNeedsQuoting(c *check.C) {
@@ -443,7 +435,7 @@ func (s *Suite) TestMkLine_CheckVarusePermissions(c *check.C) {
 		"WARN: options.mk:2: The user-defined variable GAMES_USER is used but not added to BUILD_DEFS.\n"+
 		"WARN: options.mk:3: PKGBASE should not be evaluated at load time.\n"+
 		"WARN: options.mk:4: The variable PYPKGPREFIX may not be set in this file; it would be ok in pyversion.mk.\n"+
-		"WARN: options.mk:4: \"${PKGBASE}\" is not valid for PYPKGPREFIX. Use one of { py27 py33 py34 } instead.\n"+
+		"WARN: options.mk:4: \"${PKGBASE}\" is not valid for PYPKGPREFIX. Use one of { py27 py33 py34 py35 } instead.\n"+
 		"WARN: options.mk:4: PKGBASE should not be evaluated indirectly at load time.\n"+
 		"NOTE: options.mk:4: This variable value should be aligned to column 17.\n")
 }

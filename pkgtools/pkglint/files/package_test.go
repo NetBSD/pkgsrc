@@ -39,8 +39,8 @@ func (s *Suite) TestChecklinesPackageMakefileVarorder(c *check.C) {
 		".include \"../../mk/bsd.pkg.mk\""))
 
 	c.Check(s.Output(), equals, ""+
-		"WARN: Makefile:6: COMMENT should be set here.\n"+
-		"WARN: Makefile:6: LICENSE should be set here.\n")
+		"WARN: Makefile:6: The canonical position for the required variable COMMENT is here.\n"+
+		"WARN: Makefile:6: The canonical position for the required variable LICENSE is here.\n")
 }
 
 func (s *Suite) TestGetNbpart(c *check.C) {
