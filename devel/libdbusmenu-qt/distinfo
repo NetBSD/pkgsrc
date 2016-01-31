@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 03:27:39 agc Exp $
+$NetBSD: distinfo,v 1.6 2016/01/31 06:42:28 markd Exp $
 
-SHA1 (libdbusmenu-qt-0.9.2.tar.bz2) = 308cc53a4a1f2db40f8ffbcfc71e987a4839ec45
-RMD160 (libdbusmenu-qt-0.9.2.tar.bz2) = e50cbffbf57329a26742ddf32d0f54248fe672cc
-SHA512 (libdbusmenu-qt-0.9.2.tar.bz2) = 07f5ea2a7ce32f82dbd11ca3fa5f5b7c10d3cca8dcd2e942d46452f978cbb5bc312d6b10058554330b0b983047e61a4b84cf3a6ae53ba43e89e1e0b81edba126
-Size (libdbusmenu-qt-0.9.2.tar.bz2) = 37882 bytes
+SHA1 (libdbusmenu-qt_0.9.3+15.10.20150604.orig.tar.gz) = b24d7a063de3344d4f2dfc3560c840d3fc0051b4
+RMD160 (libdbusmenu-qt_0.9.3+15.10.20150604.orig.tar.gz) = 93fc6c4ce7a2338a82d813f8bb0d1bc732bb7acf
+SHA512 (libdbusmenu-qt_0.9.3+15.10.20150604.orig.tar.gz) = efb596c18088ab498c2534e2d10e72b542af7b8a572ccb603f3c3517318daa4d2bf118c980e46971ce44333c63130c8967388fc0c8359470cb96f9ea526c6fb3
+Size (libdbusmenu-qt_0.9.3+15.10.20150604.orig.tar.gz) = 46318 bytes
 SHA1 (patch-tools_CMakeLists.txt) = 1e270795ee3ee1d6a0a3a75b1c7e7c8806129aa5

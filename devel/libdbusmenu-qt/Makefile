@@ -1,24 +1,13 @@
-# $NetBSD: Makefile,v 1.23 2015/04/25 14:20:36 tnn Exp $
+# $NetBSD: Makefile,v 1.24 2016/01/31 06:42:28 markd Exp $
 
-DISTNAME=	libdbusmenu-qt-0.9.2
-PKGREVISION=	12
-CATEGORIES=	devel
-MASTER_SITES=	http://launchpad.net/libdbusmenu-qt/trunk/0.9.2/+download/
-EXTRACT_SUFX=	.tar.bz2
+.include "../../devel/libdbusmenu-qt/Makefile.common"
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://people.canonical.com/~agateau/dbusmenu/index.html
-COMMENT=	Dbusmenu library for Qt
-LICENSE=	gnu-lgpl-v2.1
+DISTNAME=	libdbusmenu-qt_${_VER}
+PKGNAME=	${DISTNAME:S/_/-/:S/+/./}
 
-USE_LANGUAGES=  c c++
-USE_CMAKE=      yes
-CMAKE_ARGS+=	-DWITH_DOC=OFF
+COMMENT=	Dbusmenu library for Qt4
 
-pre-configure:
-	${LN} -sf ${QTDIR}/bin/qmake ${BUILDLINK_DIR}/bin/
-
-PKGCONFIG_OVERRIDE+=	dbusmenu-qt.pc.in
+CMAKE_ARGS+=	-DUSE_QT4=ON
 
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
