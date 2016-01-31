@@ -1,4 +1,4 @@
-$NetBSD: patch-mozilla_config_system-headers,v 1.4 2016/01/20 22:14:13 ryoon Exp $
+$NetBSD: patch-mozilla_config_system-headers,v 1.5 2016/01/31 23:43:48 joerg Exp $
 
 --- mozilla/config/system-headers.orig	2015-05-07 18:53:47.000000000 +0000
 +++ mozilla/config/system-headers
@@ -37,13 +37,15 @@ $NetBSD: patch-mozilla_config_system-headers,v 1.4 2016/01/20 22:14:13 ryoon Exp
  #endif
  gst/gst.h
  gst/app/gstappsink.h
-@@ -1145,3 +1148,37 @@ unicode/utypes.h
+@@ -1145,3 +1148,39 @@ unicode/utypes.h
  #endif
  libutil.h
  unwind.h
 +#if MOZ_NATIVE_GRAPHITE2==1
 +graphite2/Font.h
++graphite2/Log.h
 +graphite2/Segment.h
++graphite2/Types.h
 +#endif
 +#if MOZ_NATIVE_HARFBUZZ==1
 +harfbuzz/hb-ot.h
