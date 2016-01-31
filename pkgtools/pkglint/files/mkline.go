@@ -811,32 +811,37 @@ func (mkline *MkLine) CheckText(text string) {
 	}
 }
 
-func (mkline *MkLine) CheckIf() {
+func (mkline *MkLine) CheckCond() {
 	if G.opts.DebugTrace {
 		defer tracecall0()()
 	}
 
-	tree := mkline.parseMkCond(mkline.Args())
+	p := NewParser(mkline.Args())
+	cond := p.MkCond()
+	if !p.EOF() {
+		mkline.Warn1("Invalid conditional %q.", mkline.Args())
+		return
+	}
 
-	{
-		var pvarname, ppattern *string
-		if tree.Match(NewTree("not", NewTree("empty", NewTree("match", &pvarname, &ppattern)))) {
-			vartype := mkline.getVariableType(*pvarname)
-			if vartype != nil && vartype.checker.IsEnum() {
-				if !matches(*ppattern, `[\$\[*]`) && !vartype.checker.HasEnum(*ppattern) {
-					mkline.Warn2("Invalid :M value %q. Only { %s } are allowed.", *ppattern, vartype.checker.AllowedEnums())
-				}
+	cond.Visit("empty", func(node *Tree) {
+		varuse := node.args[0].(MkVarUse)
+		varname := varuse.varname
+		for _, modifier := range varuse.modifiers {
+			if modifier[0] == 'M' || modifier[0] == 'N' {
+				mkline.CheckVartype(varname, opUseMatch, modifier[1:], "")
 			}
-			return
 		}
-	}
+	})
 
-	{
-		var pop, pvarname, pvalue *string
-		if tree.Match(NewTree("compareVarStr", &pvarname, &pop, &pvalue)) {
-			mkline.CheckVartype(*pvarname, opUse, *pvalue, "")
+	cond.Visit("compareVarStr", func(node *Tree) {
+		varuse := node.args[0].(MkVarUse)
+		varname := varuse.varname
+		varmods := varuse.modifiers
+		value := node.args[2].(string)
+		if len(varmods) == 0 || len(varmods) == 1 && matches(varmods[0], `^[MN]`) && value != "" {
+			mkline.CheckVartype(varname, opUseMatch, value, "")
 		}
-	}
+	})
 }
 
 func (mkline *MkLine) CheckValidCharactersInValue(reValid string) {
@@ -948,37 +953,6 @@ func matchMkCond(text string) (m bool, indent, directive, args string) {
 	indent = text[indentStart:indentEnd]
 	args = text[argsStart:argsEnd]
 	return
-}
-
-func (mkline *MkLine) parseMkCond(cond string) *Tree {
-	if G.opts.DebugTrace {
-		defer tracecall1(cond)()
-	}
-
-	const (
-		repartVarname = `[A-Z_][A-Z0-9_]*(?:\.[\w_+\-]+)?`
-		reDefined     = `^defined\((` + repartVarname + `)\)`
-		reEmpty       = `^empty\((` + repartVarname + `)\)`
-		reEmptyMatch  = `^empty\((` + repartVarname + `):M([^\$:{})]+)\)`
-		reCompare     = `^\$\{(` + repartVarname + `)\}\s+(==|!=)\s+"([^"\$\\]*)"`
-	)
-
-	if m, rest := replaceFirst(cond, `^!`, ""); m != nil {
-		return NewTree("not", mkline.parseMkCond(rest))
-	}
-	if m, rest := replaceFirst(cond, reDefined, ""); m != nil {
-		return NewTree("defined", mkline.parseMkCond(rest))
-	}
-	if m, _ := replaceFirst(cond, reEmpty, ""); m != nil {
-		return NewTree("empty", m[1])
-	}
-	if m, _ := replaceFirst(cond, reEmptyMatch, ""); m != nil {
-		return NewTree("empty", NewTree("match", m[1], m[2]))
-	}
-	if m, _ := replaceFirst(cond, reCompare, ""); m != nil {
-		return NewTree("compareVarStr", m[1], m[2], m[3])
-	}
-	return NewTree("unknown", cond)
 }
 
 type NeedsQuoting uint8
