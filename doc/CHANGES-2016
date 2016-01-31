@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.419 2016/01/31 13:25:43 mef Exp $
+$NetBSD: CHANGES-2016,v 1.420 2016/01/31 16:19:56 nros Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -609,3 +609,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-Rose-URI to 1.02 [mef 2016-01-31]
 	Updated www/p5-Rose-HTML-Objects to 0.623 [mef 2016-01-31]
 	Updated www/p5-WWW-Shorten to 3.08 [mef 2016-01-31]
+	Updated mail/claws-mail to 3.13.2 [nros 2016-01-31]
