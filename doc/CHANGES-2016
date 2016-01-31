@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.404 2016/01/31 05:50:30 mef Exp $
+$NetBSD: CHANGES-2016,v 1.405 2016/01/31 06:02:58 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -592,3 +592,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/p5-IO-Socket-SSL to 2.023 [mef 2016-01-31]
 	Updated security/p5-Net-OpenSSH to 0.70 [mef 2016-01-31]
 	Updated security/p5-Net-SSH to 1.42 [mef 2016-01-31]
+	Updated security/p5-String-Random to 0.29 [mef 2016-01-31]
