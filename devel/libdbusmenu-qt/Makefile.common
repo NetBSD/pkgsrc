@@ -1,0 +1,26 @@
+# $NetBSD: Makefile.common,v 1.1 2016/01/31 06:42:28 markd Exp $
+# used by devel/libdbusmenu-qt/Makefile
+# used by devel/libdbusmenu-qt5/Makefile
+
+_VER=		0.9.3+15.10.20150604
+CATEGORIES=	devel
+MASTER_SITES=	http://archive.ubuntu.com/ubuntu/pool/main/libd/libdbusmenu-qt/
+EXTRACT_SUFX=	.orig.tar.gz
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://launchpad.net/libdbusmenu-qt
+LICENSE=	gnu-lgpl-v2.1
+
+PATCHDIR=	${.CURDIR}/../../devel/libdbusmenu-qt/patches
+DISTINFO_FILE=	${.CURDIR}/../../devel/libdbusmenu-qt/distinfo
+
+WRKSRC=		${WRKDIR}/${DISTNAME:S/_/-/}
+
+USE_LANGUAGES=  c c++
+USE_CMAKE=      yes
+CMAKE_ARGS+=	-DWITH_DOC=OFF
+
+pre-configure:
+	${LN} -sf ${QTDIR}/bin/qmake ${BUILDLINK_DIR}/bin/
+
+PKGCONFIG_OVERRIDE+=	dbusmenu-qt.pc.in
