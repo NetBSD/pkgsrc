@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.84 2015/11/03 23:27:04 agc Exp $
+$NetBSD: distinfo,v 1.85 2016/01/31 07:01:55 richard Exp $
 
 SHA1 (evolution-data-server-2.32.3.tar.bz2) = cbf32c3438c4f1650b35b87007a337ebc1c56cec
 RMD160 (evolution-data-server-2.32.3.tar.bz2) = adc8b07aef41a89d16fc426541c12190a3688b8f
@@ -6,9 +6,11 @@ SHA512 (evolution-data-server-2.32.3.tar.bz2) = 863ccea7717a7fe743155513e74fc8ea
 Size (evolution-data-server-2.32.3.tar.bz2) = 4322281 bytes
 SHA1 (patch-aa) = 117f3ce1f2c948cae502486afdb62078e952afc0
 SHA1 (patch-ab) = fd27fd0a521899be568c843b24d9b6eeeb99a2bb
+SHA1 (patch-addressbook_libebook_e-book.c) = ac32dc97eb0a66bf0c912d384655fdde47d178ee
 SHA1 (patch-bd) = 8df85b9ab7ae71558fb939565e944b614de628bb
 SHA1 (patch-ca) = e879d29105997045e1293fe627ec55a05e5ba88d
 SHA1 (patch-calendar_backends_caldav_e-cal-backend-caldav.c) = 756ce60a8b684369bf7b0c14f2f52e735253c381
+SHA1 (patch-calendar_libecal_e-cal.c) = 0478b795b298bbab23db39f7a63bd3529691dd95
 SHA1 (patch-calendar_libedata-cal_e-cal-backend-intervaltree.c) = af78b5854666325a9dd1229702968c093805ec03
 SHA1 (patch-calendar_libegdbus_Makefile.in) = ac5aabae5160967c498f12c0f29be3e206e03622
 SHA1 (patch-cc) = a59bbc664a96f467888cae89cb00eb9a9033a925
@@ -16,7 +18,7 @@ SHA1 (patch-cd) = 6e366e65e68cd0c5a8eafa67c7f9152c6521de12
 SHA1 (patch-ce) = 1da2a3773ff89319bc79bbb7375e8259f0be89e4
 SHA1 (patch-cg) = ef8059123df8b774b75549e0cbb46d2976ed6aff
 SHA1 (patch-e_data_book_c) = b52f6f50cc19794b2acb9df401bc34eaf8ea7ec7
-SHA1 (patch-e_data_book_factory_c) = 889cc05bb7fb1656b7f770ce8caee2a6f14c061c
-SHA1 (patch-e_data_cal_factory_c) = 73d811a3a1b4881e0391ff2b81ad11f916ca1b8e
+SHA1 (patch-e_data_book_factory_c) = 263be8ddce6883293f68be0d90ca4c7e1afa6aca
+SHA1 (patch-e_data_cal_factory_c) = 0aad627e34d186e987884bab5259ab8859ae3f3e
 SHA1 (patch-e_data_server_util_c) = fb7d01a036883b22e51a11082ae15e3fe81d81f0
 SHA1 (patch-libedataserver_e-categories_c) = f4045926c8bfd7b6dd0f5905825dd4ece7c09ad1
