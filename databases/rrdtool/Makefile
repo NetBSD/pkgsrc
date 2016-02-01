@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.119 2015/08/18 12:29:44 mef Exp $
+# $NetBSD: Makefile,v 1.120 2016/02/01 09:41:59 adam Exp $
 #
 # Please, also update databases/ruby-rrdtool
 
-DISTNAME=	rrdtool-1.5.4
+DISTNAME=	rrdtool-1.5.5
 CATEGORIES=	databases graphics net
 MASTER_SITES=	http://oss.oetiker.ch/rrdtool/pub/
 
@@ -39,7 +39,11 @@ SUBST_FILES.prefix=	examples/cgi-demo.cgi
 SUBST_SED.prefix=	-e '1s,^\#! \$${prefix},\#! ${PREFIX},'
 
 REPLACE_PYTHON=		examples/stripes.py
-TEST_TARGET=		# *** No rule to make target 'test'. 
+TEST_TARGET=		# *** No rule to make target 'test'.
+
+# rrd_config.h is needed for databases/ruby-rrdtool
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/src/rrd_config.h ${DESTDIR}${PREFIX}/include/
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
