@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.426 2016/02/01 09:53:29 prlw1 Exp $
+$NetBSD: CHANGES-2016,v 1.427 2016/02/01 11:23:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -618,3 +618,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/rrdtool to 1.5.5 [adam 2016-02-01]
 	Updated databases/ruby-rrdtool to 1.5.5 [adam 2016-02-01]
 	Updated devel/lua-ljsyscall to 0.11 [prlw1 2016-02-01]
+	Updated devel/waf to 1.8.19 [wiz 2016-02-01]
