@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2015/04/03 20:20:54 alnsn Exp $
+# $NetBSD: Makefile,v 1.2 2016/02/01 09:53:08 prlw1 Exp $
 
-DISTNAME=	ljsyscall-0.10
+DISTNAME=	ljsyscall-0.11
 PKGNAME=	${DISTNAME:S/ljsyscall/${LUA_PKGPREFIX}-ljsyscall/}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=justincormack/}
@@ -18,6 +18,8 @@ NO_BUILD=	yes
 USE_TOOLS+=	pax
 
 INSTALLATION_DIRS+=	${LUA_LDIR}
+
+DEPENDS+=	LuaJIT2>=2.0.2:../../lang/LuaJIT2
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/syscall.lua \
