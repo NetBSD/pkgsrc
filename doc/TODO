@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15369 2016/02/01 02:42:40 jmmv Exp $
+$NetBSD: TODO,v 1.15370 2016/02/01 09:23:03 wiz Exp $
 
 Suggested new packages
 ======================
@@ -930,7 +930,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o jetty7-7.6.17
 	o jools-1.0
 	o jove-4.16.0.73
-	o jpeg-9b
 	o jpilot-syncmal-0.81
 	o kadu-0.11.1
 	o kaffe-1.1.9
