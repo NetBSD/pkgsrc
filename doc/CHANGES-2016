@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.423 2016/02/01 02:42:40 jmmv Exp $
+$NetBSD: CHANGES-2016,v 1.424 2016/02/01 09:23:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -613,3 +613,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated pkgtools/pkglint to 5.3.5 [rillig 2016-01-31]
 	Updated net/samba4 to 4.3.4 [ryoon 2016-01-31]
 	Updated filesystems/fuse-unionfs to 1.0 [jmmv 2016-02-01]
+	Updated graphics/jpeg to 9b [wiz 2016-02-01]
