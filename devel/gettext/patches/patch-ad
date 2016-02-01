@@ -1,17 +1,17 @@
-$NetBSD: patch-ad,v 1.5 2013/01/31 21:45:04 adam Exp $
+$NetBSD: patch-ad,v 1.6 2016/02/01 14:56:30 adam Exp $
 
---- gettext-tools/Makefile.in.orig	2012-12-25 05:33:31.000000000 +0000
+--- gettext-tools/Makefile.in.orig	2015-12-27 23:09:39.000000000 +0000
 +++ gettext-tools/Makefile.in
-@@ -1500,7 +1500,7 @@ top_builddir = @top_builddir@
+@@ -1865,7 +1865,7 @@ top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
  AUTOMAKE_OPTIONS = 1.5 gnu no-dependencies
  ACLOCAL_AMFLAGS = -I m4 -I ../gettext-runtime/m4 -I ../m4 -I gnulib-m4 -I libgrep/gnulib-m4 -I libgettextpo/gnulib-m4
--SUBDIRS = doc intl gnulib-lib libgrep src libgettextpo po projects styles misc man m4 tests gnulib-tests examples
+-SUBDIRS = doc intl gnulib-lib libgrep src libgettextpo po projects styles misc man m4 tests gnulib-tests examples its
 +SUBDIRS = doc intl gnulib-lib libgrep src libgettextpo po man tests
  
  # Allow users to use "gnulib-tool --update".
  
-@@ -2029,8 +2029,7 @@ info: info-recursive
+@@ -2370,8 +2370,7 @@ info: info-recursive
  
  info-am:
  
