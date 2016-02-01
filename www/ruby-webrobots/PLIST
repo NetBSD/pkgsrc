@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/03/14 16:27:28 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/02/01 14:08:23 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/.gitignore
@@ -13,6 +13,8 @@ ${GEM_LIBDIR}/lib/webrobots/robotstxt.rb
 ${GEM_LIBDIR}/lib/webrobots/robotstxt.ry
 ${GEM_LIBDIR}/lib/webrobots/version.rb
 ${GEM_LIBDIR}/test/helper.rb
+${GEM_LIBDIR}/test/simplecov_start.rb
 ${GEM_LIBDIR}/test/test_webrobots.rb
+${GEM_LIBDIR}/test/vcr_cassettes/major_sites.yml
 ${GEM_LIBDIR}/webrobots.gemspec
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
