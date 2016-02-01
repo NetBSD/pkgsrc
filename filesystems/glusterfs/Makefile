@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2015/12/10 02:55:58 joerg Exp $
+# $NetBSD: Makefile,v 1.60 2016/02/01 14:27:02 manu Exp $
 
-DISTNAME=	glusterfs-3.7.6
-PKGREVISION=	1
+DISTNAME=	glusterfs-3.7.7
+#PKGREVISION=	1
 CATEGORIES=	filesystems
 MASTER_SITES=	http://bits.gluster.org/pub/gluster/glusterfs/src/
 
@@ -21,7 +21,7 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 # Only libfl.a is available, and libtool wants libfl.so
 MAKE_FLAGS+=		LEXLIB=""
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # only 2.x supported as of 3.6.0
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # only 2.x supported as of 3.6.0
 
 REPLACE_PYTHON+=	contrib/ipaddr-py/ipaddr.py
 REPLACE_PYTHON+=	extras/snap_scheduler/gcron.py
@@ -116,7 +116,6 @@ CONFIGURE_ARGS+=	--enable-debug
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/userspace-rcu/buildlink3.mk"
-.include "../../devel/argp/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 
