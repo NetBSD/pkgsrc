@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/11/04 02:47:38 agc Exp $
+$NetBSD: distinfo,v 1.7 2016/02/01 14:08:23 taca Exp $
 
-SHA1 (webrobots-0.1.1.gem) = 9d5db38f4fedd5201429f7e082b36fe194ade66b
-RMD160 (webrobots-0.1.1.gem) = 8325d0d9b95d6ca47d5d7c5911c9651216170d1b
-SHA512 (webrobots-0.1.1.gem) = f303c238620d17cb64064d11eb352d2afb32529f7092609484e5e232ccbc903683f89116a0e5232605b6d0286a4a76b82e71e44884a7b77d12125f3b3c6c5a34
-Size (webrobots-0.1.1.gem) = 17408 bytes
+SHA1 (webrobots-0.1.2.gem) = c0db0eb3e383be42319a0614b878a4044420ed0f
+RMD160 (webrobots-0.1.2.gem) = 2da85b8ba194677cfba8671a49293f81bb7c756b
+SHA512 (webrobots-0.1.2.gem) = 8b2a27a1758e613bced16b59a2b1708f468921388882d7ea483c7b6cbb5173fa24032f4db271734820225c5e90d3f30d07c5fb682d0d807c637f535ef7256097
+Size (webrobots-0.1.2.gem) = 24064 bytes
