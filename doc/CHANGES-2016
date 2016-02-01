@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.447 2016/02/01 13:51:57 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.448 2016/02/01 13:53:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -638,3 +638,11 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/nettle to 3.2 [wiz 2016-02-01]
 	Updated finance/moneyguru to 2.9.4 [wiz 2016-02-01]
 	Updated finance/gnucash to 2.6.11nb1 [wiz 2016-02-01]
+	Updated devel/ruby-activesupport32 to 3.2.22.1 [taca 2016-02-01]
+	Updated devel/ruby-activemodel32 to 3.2.22.1 [taca 2016-02-01]
+	Updated databases/ruby-activerecord32 to 3.2.22.1 [taca 2016-02-01]
+	Updated www/ruby-activeresource32 to 3.2.22.1 [taca 2016-02-01]
+	Updated www/ruby-actionpack32 to 3.2.22.1 [taca 2016-02-01]
+	Updated mail/ruby-actionmailer32 to 3.2.22.1 [taca 2016-02-01]
+	Updated devel/ruby-railties32 to 3.2.22.1 [taca 2016-02-01]
+	Updated www/ruby-rails32 to 3.2.22.1 [taca 2016-02-01]
