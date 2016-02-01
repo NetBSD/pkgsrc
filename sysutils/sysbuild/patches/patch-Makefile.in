@@ -1,0 +1,13 @@
+$NetBSD: patch-Makefile.in,v 1.1 2016/02/01 03:21:30 jmmv Exp $
+
+--- Makefile.in.orig	2016-01-31 15:50:39.000000000 -0500
++++ Makefile.in	2016-01-31 15:50:48.000000000 -0500
+@@ -294,7 +294,7 @@ EXTRA_DIST = $(doc_DATA) INSTALL README 
+ 	sysbuild.1.in $(am__append_2)
+ BUILD_SED = \
+ 	sed -e 's,__ATF_SH__,$(ATF_SH),g' \
+-	    -e 's,__SYSBUILD_BINDIR__,$(exec_prefix),g' \
++	    -e 's,__SYSBUILD_BINDIR__,$(exec_prefix)/bin,g' \
+ 	    -e 's,__SYSBUILD_ETCDIR__,$(sysbuild_confdir),g' \
+ 	    -e 's,__SYSBUILD_SHAREDIR__,$(pkgdatadir),g'
+ 
