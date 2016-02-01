@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15377 2016/02/01 12:17:37 mef Exp $
+$NetBSD: TODO,v 1.15378 2016/02/01 12:21:56 mef Exp $
 
 Suggested new packages
 ======================
@@ -1301,7 +1301,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Text-Reflow-1.10
 	o p5-Tie-DBI-1.06
 	o p5-Tree-DAG_Node-1.27
-	o p5-URI-Escape-XS-0.13
 	o p5-Unicode-LineBreak-2015.07.16
 	o p5-Unicode-Normalize-1.19
 	o p5-User-Identity-0.94
