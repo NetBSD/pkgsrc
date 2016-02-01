@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.442 2016/02/01 13:12:02 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.443 2016/02/01 13:20:19 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -633,3 +633,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-setuptools to 19.6.1 [wiz 2016-02-01]
 	Updated devel/py-virtualenv to 14.0.3 [wiz 2016-02-01]
 	Updated time/py-vdirsyncer to 0.8.1 [wiz 2016-02-01]
+	Updated www/p5-WWW-Curl to 4.17 [mef 2016-02-01]
