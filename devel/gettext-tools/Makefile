@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2015/09/30 20:58:32 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2016/02/01 18:21:25 adam Exp $
 
 .include "../../devel/gettext/Makefile.common"
 
@@ -48,6 +48,5 @@ post-install:
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
