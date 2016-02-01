@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.23 2015/08/25 11:59:23 leot Exp $
+# $NetBSD: package.mk,v 1.24 2016/02/01 18:47:23 leot Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # TeX Live packages.
@@ -36,6 +36,9 @@
 #
 # TEX_TEXMF_DIRS
 #	See ../../print/kpathsea/texmf.mk.
+#
+# Keywords: latex tex texlive
+#
 
 CATEGORIES?=	print
 .if empty(TEXLIVE_USE_CTAN)
