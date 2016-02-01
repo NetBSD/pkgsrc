@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.108 2015/07/18 11:11:53 adam Exp $
+# $NetBSD: Makefile,v 1.109 2016/02/01 10:28:20 jperkin Exp $
 
 PKGNAME=	qt4-libs-${QTVERSION}
 COMMENT=	C++ X GUI toolkit
@@ -24,6 +24,8 @@ CONFIGURE_ARGS+=	-no-sql-sqlite
 
 # kdelibs4 requires openssl support!
 CONFIGURE_ARGS+=	-openssl-linked
+
+CONFIGURE_ARGS+=	-iconv
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
@@ -150,6 +152,7 @@ do-install:
 .include "../../x11/libXrandr/buildlink3.mk"
 .endif
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
