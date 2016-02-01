@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2015/11/03 01:34:54 agc Exp $
+$NetBSD: distinfo,v 1.9 2016/02/01 17:10:38 richard Exp $
 
 SHA1 (libopensync-0.22.tar.bz2) = 47860a8c6621aa89fbff2af2517787747af7cc30
 RMD160 (libopensync-0.22.tar.bz2) = a1e9715d037a7c474b80d609e6c96a24cbb6692f
@@ -10,4 +10,5 @@ SHA1 (patch-ac) = f6a8c12e9344a7f68439b06f8797bfa30106d0e3
 SHA1 (patch-ad) = d2a199b04788512378dbd5024b34d367da6add5d
 SHA1 (patch-ae) = 39b5cf27a5b1722f5d8550b97deb1a8763a4ace1
 SHA1 (patch-af) = 07666352a1cd68ae00b10fc5eefeb8001673abe7
+SHA1 (patch-opensync_opensync__group.c) = da6cb5ae9a2c8067126f9cec3d27bf4d8c0b56df
 SHA1 (patch-opensync_opensync_time.c) = cb6cf27e1ba3fcd6a0cb139759d4da7306817e10
