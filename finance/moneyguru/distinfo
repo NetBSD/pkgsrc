@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 00:12:12 agc Exp $
+$NetBSD: distinfo,v 1.6 2016/02/01 13:32:10 wiz Exp $
 
-SHA1 (moneyguru-2.8.2.tar.gz) = 09598cdde924612bf37ce34c56e785d0406ba14c
-RMD160 (moneyguru-2.8.2.tar.gz) = f3a5d922ff08841727d9809ef51ee11e4f543a24
-SHA512 (moneyguru-2.8.2.tar.gz) = f7d72254e259b0ffa7f16b809d66f430c0306dd0a06d35a6216767bada3e21a4129314dfa317a37cc89914ae2597167caffe95057d7c9df087bccb8eca101ed1
-Size (moneyguru-2.8.2.tar.gz) = 4124870 bytes
+SHA1 (moneyguru-2.9.4.tar.gz) = 7936001e25aa45b62503e512dc1e3b803e32be98
+RMD160 (moneyguru-2.9.4.tar.gz) = a1117d15dc43a8e8b1ef5af49d8562599c2be2c3
+SHA512 (moneyguru-2.9.4.tar.gz) = 9a5a7e748353ee7a156599fa31e092ad1943dde045655cd0eb001d08f0cf66cf01576a4b14686d94e736e7e7831848bd1b781fc764d62a23155ddf0b5a75c27f
+Size (moneyguru-2.9.4.tar.gz) = 4191381 bytes
