@@ -5,4 +5,4 @@ having a number of directories merged under one mountpoint.
 This utility is implemented at the user level - to mount a series
 of roots, simply use:
 
-	fuse-unionfs /dir1:/dir2:/dir3 /mnt
+	unionfs /dir1:/dir2:/dir3 /mnt
