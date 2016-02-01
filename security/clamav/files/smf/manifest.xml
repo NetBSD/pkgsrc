@@ -52,6 +52,21 @@
         </documentation>
       </template>
     </instance>
+    <instance name='clamav-milter' enabled='false'>
+      <dependency name='config-file' grouping='require_all' restart_on='refresh' type='path'>
+        <service_fmri value='file://localhost@PKG_SYSCONFDIR@/clamav-milter.conf'/>
+      </dependency>
+      <exec_method name='start' type='method' exec='@PREFIX@/sbin/clamav-milter' timeout_seconds='60'/>
+      <exec_method name='stop' type='method' exec=':kill' timeout_seconds='60'/>
+      <template>
+        <common_name>
+          <loctext xml:lang='C'>ClamAV anti-virus sendmail filter</loctext>
+        </common_name>
+        <documentation>
+          <manpage title='clamav-milter' section='8' manpath='man'/>
+        </documentation>
+      </template>
+    </instance>
     <stability value='Unstable'/>
   </service>
 </service_bundle>

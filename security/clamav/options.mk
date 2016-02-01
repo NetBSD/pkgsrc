@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2015/12/11 16:31:06 adam Exp $
+# $NetBSD: options.mk,v 1.5 2016/02/01 12:45:38 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.clamav
 PKG_SUPPORTED_OPTIONS=	milter clamav-experimental unit-test
@@ -15,6 +15,7 @@ USE_BUILTIN.libmilter=	no
 .  include "../../mail/libmilter/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-milter
 PLIST.milter=		yes
+SMF_INSTANCES+=		clamav-milter
 .else
 CONFIGURE_ARGS+=	--disable-milter
 # XXX --disable-milter doesn't work as expected, so we need this
