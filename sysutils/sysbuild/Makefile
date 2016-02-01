@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2014/10/09 14:07:00 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2016/02/01 03:21:30 jmmv Exp $
 
 DISTNAME=	sysbuild-2.7
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	https://github.com/jmmv/sysbuild/releases/download/sysbuild-2.7/
 
