@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.446 2016/02/01 13:32:19 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.447 2016/02/01 13:51:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -637,3 +637,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-requests-toolbelt to 0.6.0 [wiz 2016-02-01]
 	Updated security/nettle to 3.2 [wiz 2016-02-01]
 	Updated finance/moneyguru to 2.9.4 [wiz 2016-02-01]
+	Updated finance/gnucash to 2.6.11nb1 [wiz 2016-02-01]
