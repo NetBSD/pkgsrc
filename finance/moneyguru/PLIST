@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2016/01/17 19:05:09 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2016/02/01 13:32:10 wiz Exp $
 bin/moneyguru
 share/applications/moneyguru.desktop
 share/moneyguru/ambuttonbar/AMButtonBar.h
@@ -240,6 +240,10 @@ share/moneyguru/build/locale/nl/LC_MESSAGES/columns.mo
 share/moneyguru/build/locale/nl/LC_MESSAGES/core.mo
 share/moneyguru/build/locale/nl/LC_MESSAGES/qtlib.mo
 share/moneyguru/build/locale/nl/LC_MESSAGES/ui.mo
+share/moneyguru/build/locale/ru/LC_MESSAGES/columns.mo
+share/moneyguru/build/locale/ru/LC_MESSAGES/core.mo
+share/moneyguru/build/locale/ru/LC_MESSAGES/qtlib.mo
+share/moneyguru/build/locale/ru/LC_MESSAGES/ui.mo
 share/moneyguru/build/temp.${LOWER_OPSYS}-${OS_VERSION}-${BASE_ARCH}-${PYVERSSUFFIX}/core/modules/amount.o
 share/moneyguru/cocoa/InfoTemplate.plist
 share/moneyguru/cocoa/MGConst.h
@@ -656,8 +660,18 @@ share/moneyguru/core/model/transaction_list.pyc
 share/moneyguru/core/model/undo.py
 share/moneyguru/core/model/undo.pyc
 share/moneyguru/core/modules/amount.c
-share/moneyguru/core/plugin.py
-share/moneyguru/core/plugin.pyc
+share/moneyguru/core/plugin/__init__.py
+share/moneyguru/core/plugin/__init__.pyc
+share/moneyguru/core/plugin/account_list.py
+share/moneyguru/core/plugin/api.py
+share/moneyguru/core/plugin/api.pyc
+share/moneyguru/core/plugin/base_import_actions.py
+share/moneyguru/core/plugin/base_import_bind.py
+share/moneyguru/core/plugin/boc_currency_provider.py
+share/moneyguru/core/plugin/currency_rates.py
+share/moneyguru/core/plugin/payee_breakdown.py
+share/moneyguru/core/plugin/stale_currency_provider.py
+share/moneyguru/core/plugin/yahoo_currency_provider.py
 share/moneyguru/core/saver/__init__.py
 share/moneyguru/core/saver/__init__.pyc
 share/moneyguru/core/saver/csv.py
@@ -730,6 +744,7 @@ share/moneyguru/core/tests/model/account_test.py
 share/moneyguru/core/tests/model/amount_test.py
 share/moneyguru/core/tests/model/currency_test.py
 share/moneyguru/core/tests/model/date_test.py
+share/moneyguru/core/tests/plugin_test.py
 share/moneyguru/core/tests/pref_test.py
 share/moneyguru/core/tests/reconciliation_test.py
 share/moneyguru/core/tests/recurrence_test.py
@@ -755,6 +770,8 @@ share/moneyguru/core/tests/testdata/moneyguru/account_in_group.moneyguru
 share/moneyguru/core/tests/testdata/moneyguru/invalid_account_type.moneyguru
 share/moneyguru/core/tests/testdata/moneyguru/multi_currency.moneyguru
 share/moneyguru/core/tests/testdata/moneyguru/multiple_transfer_references.moneyguru
+share/moneyguru/core/tests/testdata/moneyguru/no_balance_account.moneyguru
+share/moneyguru/core/tests/testdata/moneyguru/off_currency_reconciliations.moneyguru
 share/moneyguru/core/tests/testdata/moneyguru/payee_description.moneyguru
 share/moneyguru/core/tests/testdata/moneyguru/simple.moneyguru
 share/moneyguru/core/tests/testdata/moneyguru/with_references1.moneyguru
@@ -951,6 +968,19 @@ share/moneyguru/help/it/forecast.rst
 share/moneyguru/help/it/import.rst
 share/moneyguru/help/it/index.rst
 share/moneyguru/help/it/reconciliation.rst
+share/moneyguru/help/ru/basics.rst
+share/moneyguru/help/ru/cash.rst
+share/moneyguru/help/ru/changelog.tmpl
+share/moneyguru/help/ru/contribute.rst
+share/moneyguru/help/ru/credits.tmpl
+share/moneyguru/help/ru/currencies.rst
+share/moneyguru/help/ru/editing.rst
+share/moneyguru/help/ru/faq.rst
+share/moneyguru/help/ru/forecast.rst
+share/moneyguru/help/ru/import.rst
+share/moneyguru/help/ru/index.rst
+share/moneyguru/help/ru/plugins.rst
+share/moneyguru/help/ru/reconciliation.rst
 share/moneyguru/hscommon/.gitignore
 share/moneyguru/hscommon/LICENSE
 share/moneyguru/hscommon/README
@@ -1102,12 +1132,14 @@ share/moneyguru/locale/nl/LC_MESSAGES/core.po
 share/moneyguru/locale/nl/LC_MESSAGES/qtlib.mo
 share/moneyguru/locale/nl/LC_MESSAGES/ui.mo
 share/moneyguru/locale/nl/LC_MESSAGES/ui.po
+share/moneyguru/locale/ru/LC_MESSAGES/columns.mo
+share/moneyguru/locale/ru/LC_MESSAGES/columns.po
+share/moneyguru/locale/ru/LC_MESSAGES/core.mo
+share/moneyguru/locale/ru/LC_MESSAGES/core.po
+share/moneyguru/locale/ru/LC_MESSAGES/qtlib.mo
+share/moneyguru/locale/ru/LC_MESSAGES/ui.mo
+share/moneyguru/locale/ru/LC_MESSAGES/ui.po
 share/moneyguru/locale/ui.pot
-share/moneyguru/plugin_examples/__init__.py
-share/moneyguru/plugin_examples/account_list.py
-share/moneyguru/plugin_examples/currency_rates.py
-share/moneyguru/plugin_examples/payee_breakdown.py
-share/moneyguru/plugin_examples/yahoo_currency_provider.py
 share/moneyguru/psmtabbarcontrol/.gitignore
 share/moneyguru/psmtabbarcontrol/Info.plist
 share/moneyguru/psmtabbarcontrol/NSBezierPath_AMShading.h
@@ -1158,7 +1190,6 @@ share/moneyguru/psmtabbarcontrol/images/overflowImagePressed.tif
 share/moneyguru/psmtabbarcontrol/images/pi.png
 share/moneyguru/psmtabbarcontrol/waf
 share/moneyguru/psmtabbarcontrol/wscript
-share/moneyguru/qt/ABOUT_LICENSE
 share/moneyguru/qt/__init__.py
 share/moneyguru/qt/app.py
 share/moneyguru/qt/const.py

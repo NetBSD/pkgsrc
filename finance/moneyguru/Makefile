@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2016/01/17 19:05:09 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2016/02/01 13:32:10 wiz Exp $
 #
 # any of ~* is fine, they are the same and just there for Ubuntu
 # so moneyguru's built for all releases
-DISTNAME=	moneyguru-2.8.2
-PKGREVISION=	1
+DISTNAME=	moneyguru-2.9.4
 CATEGORIES=	finance
 MASTER_SITES=	${MASTER_SITE_GITHUB:=hsoft/}
 
@@ -56,7 +55,7 @@ do-build:
 	${CHMOD} +x ${WRKSRC}/run.py
 
 do-install:
-	cd ${WRKSRC} && pax -pp -rw ambuttonbar build cocoa cocoalib core data help hscommon images locale plugin_examples psmtabbarcontrol qt qtlib run.py ${DESTDIR}${PREFIX}/share/moneyguru
+	cd ${WRKSRC} && pax -pp -rw ambuttonbar build cocoa cocoalib core data help hscommon images locale psmtabbarcontrol qt qtlib run.py ${DESTDIR}${PREFIX}/share/moneyguru
 	${INSTALL_DATA} ${WRKSRC}/debian/moneyguru.desktop ${DESTDIR}${PREFIX}/share/applications
 	${LN} -s ${DESTDIR}${PREFIX}/share/moneyguru/run.py ${DESTDIR}${PREFIX}/bin/moneyguru
 
