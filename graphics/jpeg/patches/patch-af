@@ -1,4 +1,6 @@
-$NetBSD: patch-af,v 1.5 2013/01/24 21:49:18 adam Exp $
+$NetBSD: patch-af,v 1.6 2016/02/01 09:22:53 wiz Exp $
+
+Build and install jpegexiforient.
 
 --- Makefile.am.orig	2012-05-09 13:13:36.000000000 +0000
 +++ Makefile.am

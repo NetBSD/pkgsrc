@@ -1,17 +1,19 @@
-$NetBSD: patch-ag,v 1.3 2013/01/24 21:49:18 adam Exp $
+$NetBSD: patch-ag,v 1.4 2016/02/01 09:22:53 wiz Exp $
 
---- Makefile.in.orig	2013-01-03 18:58:55.000000000 +0000
+Build and install jpegexiforient.
+
+--- Makefile.in.orig	2015-09-10 08:04:54.000000000 +0000
 +++ Makefile.in
-@@ -61,7 +61,7 @@ host_triplet = @host@
+@@ -99,7 +99,7 @@ host_triplet = @host@
  target_triplet = @target@
  @HAVE_LD_VERSION_SCRIPT_TRUE@am__append_1 = -Wl,--version-script=$(srcdir)/libjpeg.map
  bin_PROGRAMS = cjpeg$(EXEEXT) djpeg$(EXEEXT) jpegtran$(EXEEXT) \
 -	rdjpgcom$(EXEEXT) wrjpgcom$(EXEEXT)
 +	rdjpgcom$(EXEEXT) wrjpgcom$(EXEEXT) jpegexiforient$(EXEEXT)
  subdir = .
- DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/Makefile.am \
- 	$(top_srcdir)/configure $(am__configure_deps) \
-@@ -148,6 +148,9 @@ rdjpgcom_LDADD = $(LDADD)
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+ am__aclocal_m4_deps = $(top_srcdir)/configure.ac
+@@ -184,6 +184,9 @@ rdjpgcom_LDADD = $(LDADD)
  am_wrjpgcom_OBJECTS = wrjpgcom.$(OBJEXT)
  wrjpgcom_OBJECTS = $(am_wrjpgcom_OBJECTS)
  wrjpgcom_LDADD = $(LDADD)
@@ -21,7 +23,7 @@ $NetBSD: patch-ag,v 1.3 2013/01/24 21:49:18 adam Exp $
  AM_V_P = $(am__v_P_@AM_V@)
  am__v_P_ = $(am__v_P_@AM_DEFAULT_V@)
  am__v_P_0 = false
-@@ -183,7 +186,8 @@ am__v_CCLD_ = $(am__v_CCLD_@AM_DEFAULT_V
+@@ -219,7 +222,8 @@ am__v_CCLD_ = $(am__v_CCLD_@AM_DEFAULT_V
  am__v_CCLD_0 = @echo "  CCLD    " $@;
  am__v_CCLD_1 = 
  SOURCES = $(libjpeg_la_SOURCES) $(cjpeg_SOURCES) $(djpeg_SOURCES) \
@@ -31,7 +33,7 @@ $NetBSD: patch-ag,v 1.3 2013/01/24 21:49:18 adam Exp $
  am__can_run_installinfo = \
    case $$AM_UPDATE_INFO_DIR in \
      n|no|NO) false;; \
-@@ -424,6 +428,8 @@ jpegtran_SOURCES = jpegtran.c rdswitch.c
+@@ -461,6 +465,8 @@ jpegtran_SOURCES = jpegtran.c rdswitch.c
  jpegtran_LDADD = libjpeg.la
  rdjpgcom_SOURCES = rdjpgcom.c
  wrjpgcom_SOURCES = wrjpgcom.c
@@ -40,7 +42,7 @@ $NetBSD: patch-ag,v 1.3 2013/01/24 21:49:18 adam Exp $
  
  # Manual pages to install
  man_MANS = $(DISTMANS)
-@@ -598,6 +603,9 @@ rdjpgcom$(EXEEXT): $(rdjpgcom_OBJECTS) $
+@@ -640,6 +646,9 @@ rdjpgcom$(EXEEXT): $(rdjpgcom_OBJECTS) $
  wrjpgcom$(EXEEXT): $(wrjpgcom_OBJECTS) $(wrjpgcom_DEPENDENCIES) $(EXTRA_wrjpgcom_DEPENDENCIES) 
  	@rm -f wrjpgcom$(EXEEXT)
  	$(AM_V_CCLD)$(LINK) $(wrjpgcom_OBJECTS) $(wrjpgcom_LDADD) $(LIBS)
@@ -50,7 +52,7 @@ $NetBSD: patch-ag,v 1.3 2013/01/24 21:49:18 adam Exp $
  
  mostlyclean-compile:
  	-rm -f *.$(OBJEXT)
-@@ -651,6 +659,7 @@ distclean-compile:
+@@ -693,6 +702,7 @@ distclean-compile:
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/jidctfst.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/jidctint.Plo@am__quote@
  @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/jmemmgr.Plo@am__quote@
