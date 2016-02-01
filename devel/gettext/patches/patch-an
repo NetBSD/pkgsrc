@@ -1,13 +1,13 @@
-$NetBSD: patch-an,v 1.4 2013/01/31 21:45:04 adam Exp $
+$NetBSD: patch-an,v 1.5 2016/02/01 14:56:30 adam Exp $
 
---- Makefile.in.orig	2010-06-06 20:12:52.000000000 +0000
+--- Makefile.in.orig	2015-12-27 23:09:49.000000000 +0000
 +++ Makefile.in
-@@ -249,7 +249,7 @@ top_builddir = @top_builddir@
+@@ -312,7 +312,7 @@ top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
  AUTOMAKE_OPTIONS = 1.5 gnu no-dependencies
  ACLOCAL_AMFLAGS = -I m4
 -SUBDIRS = gnulib-local gettext-runtime gettext-tools
 +SUBDIRS = gettext-runtime gettext-tools
- 
- # DJGPP port.
- 
+ changelog_etc = \
+   gettext-runtime/ChangeLog.0 \
+   gettext-runtime/doc/ChangeLog.0 \
