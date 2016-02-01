@@ -1,17 +1,17 @@
-$NetBSD: distinfo,v 1.33 2015/11/03 03:27:27 agc Exp $
+$NetBSD: distinfo,v 1.34 2016/02/01 14:56:29 adam Exp $
 
-SHA1 (gettext-0.19.6.tar.gz) = 4d236852bd8d63e14d09eb6fc1f4da20a99f568b
-RMD160 (gettext-0.19.6.tar.gz) = bb056f4b187474dc3c6803b8af61934b5b8d25e7
-SHA512 (gettext-0.19.6.tar.gz) = 46adfd4a6d0038aba999658bebe51117e3ab3dc149a9054c1087d3e79ec7ba3371a7e78a8ca30a8872d162c2dc44aba6e67e4d64808c4f92e1e2bd674174f1db
-Size (gettext-0.19.6.tar.gz) = 18619659 bytes
+SHA1 (gettext-0.19.7.tar.gz) = d8fc932196cc78b83ca1b63c8687ec3d513b40b6
+RMD160 (gettext-0.19.7.tar.gz) = b0a6eda49031f66bfa67f88cc79228a19cdbd3f8
+SHA512 (gettext-0.19.7.tar.gz) = 7ba89074d3eddd0b4a5e2980e1ec74b53c49b7a04a1fa91c70c4bc11ce9c30415e4df9d79698148eaaed325fb4feb25a340a2e8e01fbe86b1a66b1376a4c9e3d
+Size (gettext-0.19.7.tar.gz) = 19235781 bytes
 SHA1 (patch-aa) = ec9cad88d5a0de67b70d417915ec0f1cfb3552b2
 SHA1 (patch-ab) = caf95d3fa21ce5cab9febc9f6e9164e633ab39e0
-SHA1 (patch-ad) = e53a4a500ce70ba1dd6c6aae6d6032d5d91f5d16
+SHA1 (patch-ad) = 3e04eca9d824ed1bed282f3d49d5ce60ebac576f
 SHA1 (patch-ae) = 662975f811495f13604001964fcc6e3d13b1276c
 SHA1 (patch-ag) = 57cd120015eeddcb8ca1d7605c42af3374755c96
 SHA1 (patch-aj) = d5e66478ddf343ad74eb8429de47c567a81a8481
 SHA1 (patch-ak) = 05b06eae21fcf49af91479a63c5b9bbc1388101c
 SHA1 (patch-al) = 15563935bd43886309dd95a0816a5c2153b5da3c
-SHA1 (patch-an) = c78b531f1a55bb5509c89d5fbba2a8da425486e5
+SHA1 (patch-an) = ec67e2bf66950190b2077b3d888efdf5ca2d6785
 SHA1 (patch-ao) = d0ab5520f53f38c7b2eb76395c5d6dd24407ef4f
 SHA1 (patch-gettext-tools_tests_Makefile.in) = 7ea89df2c45e6c544e2ec6c91cde6d135d964679
