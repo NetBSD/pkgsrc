@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.434 2016/02/01 12:21:56 mef Exp $
+$NetBSD: CHANGES-2016,v 1.435 2016/02/01 12:25:48 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -625,3 +625,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/p5-Server-Starter to 0.32 [mef 2016-02-01]
 	Updated www/p5-Starman to 0.4014 [mef 2016-02-01]
 	Updated www/p5-URI-Escape-XS to 0.13 [mef 2016-02-01]
+	Updated www/p5-URI-db to 0.16 [mef 2016-02-01]
