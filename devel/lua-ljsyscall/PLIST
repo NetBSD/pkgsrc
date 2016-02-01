@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2015/04/03 20:20:54 alnsn Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/02/01 09:53:08 prlw1 Exp $
 ${LUA_LDIR}/syscall.lua
 ${LUA_LDIR}/syscall/abi.lua
 ${LUA_LDIR}/syscall/bit.lua
@@ -6,7 +6,6 @@ ${LUA_LDIR}/syscall/bsd/ffi.lua
 ${LUA_LDIR}/syscall/bsd/syscalls.lua
 ${LUA_LDIR}/syscall/bsd/types.lua
 ${LUA_LDIR}/syscall/compat.lua
-${LUA_LDIR}/syscall/ffifunctions.lua
 ${LUA_LDIR}/syscall/ffitypes.lua
 ${LUA_LDIR}/syscall/freebsd/c.lua
 ${LUA_LDIR}/syscall/freebsd/constants.lua
@@ -26,6 +25,10 @@ ${LUA_LDIR}/syscall/linux/arm/constants.lua
 ${LUA_LDIR}/syscall/linux/arm/ffi.lua
 ${LUA_LDIR}/syscall/linux/arm/ioctl.lua
 ${LUA_LDIR}/syscall/linux/arm/nr.lua
+${LUA_LDIR}/syscall/linux/arm64/constants.lua
+${LUA_LDIR}/syscall/linux/arm64/ffi.lua
+${LUA_LDIR}/syscall/linux/arm64/ioctl.lua
+${LUA_LDIR}/syscall/linux/arm64/nr.lua
 ${LUA_LDIR}/syscall/linux/c.lua
 ${LUA_LDIR}/syscall/linux/cgroup.lua
 ${LUA_LDIR}/syscall/linux/constants.lua
@@ -44,6 +47,10 @@ ${LUA_LDIR}/syscall/linux/ppc/constants.lua
 ${LUA_LDIR}/syscall/linux/ppc/ffi.lua
 ${LUA_LDIR}/syscall/linux/ppc/ioctl.lua
 ${LUA_LDIR}/syscall/linux/ppc/nr.lua
+${LUA_LDIR}/syscall/linux/ppc64le/constants.lua
+${LUA_LDIR}/syscall/linux/ppc64le/ffi.lua
+${LUA_LDIR}/syscall/linux/ppc64le/ioctl.lua
+${LUA_LDIR}/syscall/linux/ppc64le/nr.lua
 ${LUA_LDIR}/syscall/linux/sockopt.lua
 ${LUA_LDIR}/syscall/linux/syscalls.lua
 ${LUA_LDIR}/syscall/linux/types.lua
