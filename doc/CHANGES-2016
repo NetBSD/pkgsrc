@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.437 2016/02/01 12:35:44 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.438 2016/02/01 13:03:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -628,3 +628,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-URI-db to 0.16 [mef 2016-02-01]
 	Updated www/p5-WWW-Amazon-Wishlist to 2.014 [mef 2016-02-01]
 	Updated chat/prosody to 0.9.10 [fhajny 2016-02-01]
+	Updated devel/py-test to 2.8.7 [wiz 2016-02-01]
