@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2016/01/19 10:51:16 leot Exp $
+# $NetBSD: Makefile,v 1.25 2016/02/01 15:02:16 leot Exp $
 
 DISTNAME=	libproxy-0.4.12
 CATEGORIES=	www gnome
@@ -14,6 +14,7 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake
 USE_LANGUAGES=	c99 c++
 CMAKE_ARGS+=	-DWITH_PYTHON:BOOL=OFF
+CMAKE_ARGS+=	-DWITH_KDE4=OFF
 
 OPSYSVARS+=	CMAKE_ARGS
 
