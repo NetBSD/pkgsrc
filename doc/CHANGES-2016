@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.450 2016/02/01 14:17:27 taca Exp $
+$NetBSD: CHANGES-2016,v 1.451 2016/02/01 14:29:19 manu Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -648,3 +648,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/ruby-rails32 to 3.2.22.1 [taca 2016-02-01]
 	Updated www/ruby-webrobots to 0.1.2 [taca 2016-02-01]
 	Updated audio/ruby-mp3info to 0.8.8 [taca 2016-02-01]
+	Updated filesystems/gluserfs to 3.7.7 [manu 2015-02-011
