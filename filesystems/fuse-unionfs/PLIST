@@ -1,2 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/03/10 12:51:03 agc Exp $
-bin/fuse-unionfs
+@comment $NetBSD: PLIST,v 1.2 2016/02/01 02:41:21 jmmv Exp $
+bin/unionfs
+bin/unionfsctl
+man/man8/unionfs.8
