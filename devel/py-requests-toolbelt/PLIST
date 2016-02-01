@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/12/04 21:48:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2016/02/01 13:23:56 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -13,6 +13,9 @@ ${PYSITELIB}/requests_toolbelt/_compat.pyo
 ${PYSITELIB}/requests_toolbelt/adapters/__init__.py
 ${PYSITELIB}/requests_toolbelt/adapters/__init__.pyc
 ${PYSITELIB}/requests_toolbelt/adapters/__init__.pyo
+${PYSITELIB}/requests_toolbelt/adapters/appengine.py
+${PYSITELIB}/requests_toolbelt/adapters/appengine.pyc
+${PYSITELIB}/requests_toolbelt/adapters/appengine.pyo
 ${PYSITELIB}/requests_toolbelt/adapters/fingerprint.py
 ${PYSITELIB}/requests_toolbelt/adapters/fingerprint.pyc
 ${PYSITELIB}/requests_toolbelt/adapters/fingerprint.pyo
