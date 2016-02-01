@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.429 2016/02/01 11:58:28 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.430 2016/02/01 12:00:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -621,3 +621,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/waf to 1.8.19 [wiz 2016-02-01]
 	Updated security/py-cryptography to 1.2.2 [wiz 2016-02-01]
 	Updated net/py-foolscap to 0.10.1 [wiz 2016-02-01]
+	Updated misc/dialog to 1.3.20160126 [wiz 2016-02-01]
