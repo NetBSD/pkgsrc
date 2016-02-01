@@ -1,7 +1,7 @@
-$NetBSD: patch-doc_examples_getredirect_c,v 1.1 2016/02/01 13:13:10 mef Exp $
+$NetBSD: patch-doc_examples_getredirect_c,v 1.2 2016/02/01 13:15:27 mef Exp $
 
 Simple typo in examle code, but this needs make test to pass
-(when PKGSRC_TEST_RUN= yes).
+(when PKGSRC_RUN_TEST= yes).
 I've reported this to upstream.
 
 --- docs/examples/getredirect.c~	2016-01-15 00:37:49.000000000 +0900
