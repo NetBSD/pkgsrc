@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.435 2016/02/01 12:25:48 mef Exp $
+$NetBSD: CHANGES-2016,v 1.436 2016/02/01 12:30:58 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -626,3 +626,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-Starman to 0.4014 [mef 2016-02-01]
 	Updated www/p5-URI-Escape-XS to 0.13 [mef 2016-02-01]
 	Updated www/p5-URI-db to 0.16 [mef 2016-02-01]
+	Updated www/p5-WWW-Amazon-Wishlist to 2.014 [mef 2016-02-01]
