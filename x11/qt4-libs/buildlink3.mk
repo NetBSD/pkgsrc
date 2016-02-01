@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.43 2015/04/25 14:25:16 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.44 2016/02/01 10:28:20 jperkin Exp $
 
 BUILDLINK_TREE+=	qt4-libs
 
@@ -18,6 +18,7 @@ PTHREAD_OPTS+=	require
 
 .include "../../mk/bsd.fast.prefs.mk"
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
