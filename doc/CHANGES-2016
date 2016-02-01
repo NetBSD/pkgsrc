@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.451 2016/02/01 14:29:19 manu Exp $
+$NetBSD: CHANGES-2016,v 1.452 2016/02/01 15:06:46 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -649,3 +649,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/ruby-webrobots to 0.1.2 [taca 2016-02-01]
 	Updated audio/ruby-mp3info to 0.8.8 [taca 2016-02-01]
 	Updated filesystems/gluserfs to 3.7.7 [manu 2015-02-011
+	Added x11/tabbed version 0.6 [leot 2016-02-01]
