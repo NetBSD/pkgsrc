@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.20 2015/11/03 21:34:04 agc Exp $
+$NetBSD: distinfo,v 1.21 2016/02/01 09:22:53 wiz Exp $
 
-SHA1 (jpegsrc.v9a.tar.gz) = d65ed6f88d318f7380a3a5f75d578744e732daca
-RMD160 (jpegsrc.v9a.tar.gz) = 885898b3db086ad3b65169d0149bf1f270dff1b5
-SHA512 (jpegsrc.v9a.tar.gz) = 9b21cc115e22c68bea46db462263c5c7a0d10beb192a919ecccbd801a25982b518ce44d8c301dd582ecaba1850e0e0f20e322be82b0e24ae917b9949b4f10d3b
-Size (jpegsrc.v9a.tar.gz) = 1000034 bytes
-SHA1 (patch-af) = aba44e1e3520d2a232f6bd949a82c150e0b3e0f4
-SHA1 (patch-ag) = 4fc698186d149f1152d30bf65a96461bc331c812
+SHA1 (jpegsrc.v9b.tar.gz) = 15dd867617a88abd07573e06a86ace9bdb998ac2
+RMD160 (jpegsrc.v9b.tar.gz) = 7e261205cc653b8a0fafb3bd2267204c6bae8c42
+SHA512 (jpegsrc.v9b.tar.gz) = 74ea5af3545657d4ac03f8f7933913112cc2d982f0e379d0e5647f1acac21931468e53806297c30ebe180c7bcf84919a0ac20a4195afb03db03060d57904ef6c
+Size (jpegsrc.v9b.tar.gz) = 1022609 bytes
+SHA1 (patch-af) = 925604706574009aacd452dab2d736039b0654e9
+SHA1 (patch-ag) = 46164c00386d1968356f1b61d144bc9168410654
 SHA1 (patch-jmorecfg.h) = c00f81ba94e2ad6b55ca9892553eedbe4eca3ad1
 SHA1 (patch-jpeglib.h) = 635453c5a2b1223ef5af729edcbfcfa3ed78a8b5
