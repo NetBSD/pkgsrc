@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15373 2016/02/01 11:53:54 wiz Exp $
+$NetBSD: TODO,v 1.15374 2016/02/01 11:58:28 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1425,7 +1425,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-djangorestframework-2.3.12
 	o py-doctor-15.0.0
 	o py-flake8-2.4.1
-	o py-foolscap-0.10.1
 	o py-gmpy-1.17
 	o py-gnome-menus-3.8.0
 	o py-html2text-2016.1.8
