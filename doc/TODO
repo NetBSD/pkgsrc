@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15388 2016/02/02 04:45:25 dbj Exp $
+$NetBSD: TODO,v 1.15389 2016/02/02 11:42:35 jaapb Exp $
 
 Suggested new packages
 ======================
@@ -1144,7 +1144,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o obby-0.4.8
 	o objc-3.2.13
 	o ocaml-cmdliner-0.9.7
-	o ocaml-findlib-1.6.1
 	o ocaml-graphics-4.02.3
 	o ocaml-mysql-1.2.0
 	o ocaml-oasis-0.4.5

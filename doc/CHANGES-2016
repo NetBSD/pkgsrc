@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.459 2016/02/02 08:02:49 rillig Exp $
+$NetBSD: CHANGES-2016,v 1.460 2016/02/02 11:42:35 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -658,3 +658,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/firefox38 to 38.6.0 [ryoon 2016-02-02]
 	Updated www/firefox38-l10n to 38.6.0 [ryoon 2016-02-02]
 	Updated pkgtools/pkglint4 to 4.162 [rillig 2016-02-02]
+	Updated devel/ocaml-findlib to 1.6.1 [jaapb 2016-02-02]
