@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.469 2016/02/02 13:34:06 mef Exp $
+$NetBSD: CHANGES-2016,v 1.470 2016/02/02 16:08:16 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -668,3 +668,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-CGI-Lite to 3.01 [mef 2016-02-02]
 	Updated www/mknmz-wwwoffle to 0.7.2 [mef 2016-02-02]
 	Updated www/pound to 2.7f [mef 2016-02-02]
+	Updated net/socat to 1.7.3.1 [leot 2016-02-02]
