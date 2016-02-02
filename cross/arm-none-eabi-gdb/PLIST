@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2015/10/11 01:15:18 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/02/02 06:30:34 dbj Exp $
 cross-arm-none-eabi/bin/arm-none-eabi-gdb
 cross-arm-none-eabi/bin/arm-none-eabi-run
 cross-arm-none-eabi/include/gdb/jit-reader.h
 cross-arm-none-eabi/info/annotate.info
 cross-arm-none-eabi/info/gdb.info
 cross-arm-none-eabi/info/stabs.info
-cross-arm-none-eabi/lib/charset.alias
+${PLIST.charsetalias}cross-arm-none-eabi/lib/charset.alias
 cross-arm-none-eabi/lib/libarm-none-eabi-sim.a
 cross-arm-none-eabi/man/man1/arm-none-eabi-gdb.1
 cross-arm-none-eabi/man/man1/arm-none-eabi-gdbserver.1
