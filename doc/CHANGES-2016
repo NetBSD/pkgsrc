@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.467 2016/02/02 12:49:07 mef Exp $
+$NetBSD: CHANGES-2016,v 1.468 2016/02/02 13:24:17 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -666,3 +666,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-Plack-Middleware-Auth-Digest to 0.05 [mef 2016-02-02]
 	Updated www/p5-Apache-Test to 1.39 [mef 2016-02-02]
 	Updated www/p5-CGI-Lite to 3.01 [mef 2016-02-02]
+	Updated www/mknmz-wwwoffle to 0.7.2 [mef 2016-02-02]
