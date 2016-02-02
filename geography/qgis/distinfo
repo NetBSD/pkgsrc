@@ -1,25 +1,15 @@
-$NetBSD: distinfo,v 1.7 2015/11/03 00:08:45 agc Exp $
+$NetBSD: distinfo,v 1.8 2016/02/02 04:33:57 dbj Exp $
 
-SHA1 (qgis-1.7.4.tar.bz2) = 0dae5cb933d1ce621e5fe30c1937887d813a2098
-RMD160 (qgis-1.7.4.tar.bz2) = dae51556b09a57ce9537ca4ed75830f15e3be5a4
-SHA512 (qgis-1.7.4.tar.bz2) = c4672023d5b815b7335f6348916bfdc75111fde04078d0cd3a5cc847b452b5e059eb7870dbb9e4fb871169960d6b77827cc0e755656740a427144511fb8456e5
-Size (qgis-1.7.4.tar.bz2) = 25618352 bytes
-SHA1 (patch-CMakeLists.txt) = 544c1ea142978b5762028aeabf21b3b81982b3e0
-SHA1 (patch-ad) = c5fbccce3eb93c3181d19eb9b1b29463a3fba1c1
-SHA1 (patch-al) = d3910f1dc5ddcdafef21d214b84289c51bc0f84a
-SHA1 (patch-am) = 69864d921b4438b9a90f0bfb8f727d96a41d00d9
-SHA1 (patch-cmake_FindGEOS.cmake) = f3d2cfc454a3da938cdfa9b1c25aead96674d796
-SHA1 (patch-src_app_CMakeLists.txt) = 9862723ae1cc432aabb53eca5b3eb29bc6906b1a
-SHA1 (patch-src_core_qgsapplication.cpp) = 336de19802fdfb0cbe8e83f62f230404324af3e7
-SHA1 (patch-src_core_qgsmaplayer.cpp) = 581435f5a50484a76db7c63ec81388a2c7447fc7
-SHA1 (patch-src_core_qgsmaplayer.h) = ba05cddca7c5c7d1ac6a1cd8bb9190ffb7371a7e
-SHA1 (patch-src_core_qgsvectorlayer.cpp) = d4fc76490d8d710add8fb2632f8bbc79dcbaa4d1
-SHA1 (patch-src_core_qgsvectorlayer.h) = 091f6bd54a2a8d3d504f95dc4a6cec3fc6735d83
-SHA1 (patch-src_core_raster_qgsrasterlayer.cpp) = 9501fb0c31096613cd9da3f928704532d1c0aa23
-SHA1 (patch-src_core_raster_qgsrasterlayer.h) = 50ad211252064b51d875b217c8f91315cedb9ea5
-SHA1 (patch-src_core_spatialindex_include_Tools.h) = ccee3200f1a4d6807d0da2fb3f2307bfc345f83d
-SHA1 (patch-src_core_spatialindex_storagemanager_DiskStorageManager.cc) = 651fbb687c366d3fe0b3812be327659995f6f299
-SHA1 (patch-src_core_spatialindex_tools_TemporaryFile.cc) = 375968005b185704624646ba76d2272bfed199b0
-SHA1 (patch-src_core_spatialite_spatialite.c) = a6b8ad377311a4a3e122a1336ccc32a2b1638cd7
-SHA1 (patch-src_core_symbology-ng_qgssymbolv2.h) = 4ffe326210e77a37d3f984798ec2c9cc51865716
-SHA1 (patch-src_helpviewer_CMakeLists.txt) = 209347863b9b3719d0eb04b142c831a2bfdb77ea
+SHA1 (qgis-2.12.3.tar.bz2) = b2b8b6bda01ebec7ccbc8ab41d0e00fa6be217be
+RMD160 (qgis-2.12.3.tar.bz2) = 6b3350e978d27397020b01983ceaa00104d1bd17
+SHA512 (qgis-2.12.3.tar.bz2) = 62e3f67e418a17ddf5b91e237959f1d7f1fa8b20aa2db9d107d587e6d02f9acd2b34a32858e960638ccaa4b29d099d4d5b008abbd649684ae82b3000b2d8cb86
+Size (qgis-2.12.3.tar.bz2) = 69119328 bytes
+SHA1 (patch-CMakeLists.txt) = d9f670b121f508ac6565668e2f57975b19edde76
+SHA1 (patch-cmake_FindGDAL.cmake) = aad87704be813306d2727bac748c3df826ed709e
+SHA1 (patch-cmake_FindGEOS.cmake) = f11f1bead1e31aba3f6167dd8eaf1ad10cf7d6ab
+SHA1 (patch-cmake_FindPostgres.cmake) = ac665b3ae7f9dc4dd5a61aa8e1263267dc4ee143
+SHA1 (patch-cmake_SIPMacros.cmake) = 796e55b74455751d3dfbef41ba48e3324e7d64dc
+SHA1 (patch-mac_CMakeLists.txt) = 2468c0a629738ce78cccb784395eb1f41049cc73
+SHA1 (patch-mac_cmake_1qt.cmake.in) = d74f7201849ef6dd83f39251e466eb04c791c0e6
+SHA1 (patch-src_core_CMakeLists.txt) = 4c504717fbce05984e9ac5867d407f9dcfa11d25
+SHA1 (patch-src_core_qgsapplication.cpp) = f6e81f86220c6bf85b55ee2f5fd8d6c7667ec385

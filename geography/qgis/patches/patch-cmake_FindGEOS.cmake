@@ -1,33 +1,25 @@
-$NetBSD: patch-cmake_FindGEOS.cmake,v 1.1 2012/01/23 08:58:00 adam Exp $
+$NetBSD: patch-cmake_FindGEOS.cmake,v 1.2 2016/02/02 04:33:58 dbj Exp $
 
-Avoid application bundles.
+use FIND_LIBRARY instead of using a possibly multiple-valued
+GEOS_LINK_DIRECTORIES_PATH as an absolute path
 
---- cmake/FindGEOS.cmake.orig	2011-06-07 06:45:26.000000000 +0000
+--- cmake/FindGEOS.cmake.orig	2016-01-15 12:00:55.000000000 +0000
 +++ cmake/FindGEOS.cmake
-@@ -45,7 +45,7 @@ ELSE(WIN32)
+@@ -140,16 +140,7 @@ ELSE(WIN32)
+         ENDIF (GEOS_LIB_NAME_WITH_PREFIX)
+         #MESSAGE("DBG  GEOS_LIB_NAME=${GEOS_LIB_NAME}")
  
-     # try to use framework on mac
-     # want clean framework path, not unix compatibility path
--    IF (APPLE)
-+    IF (ELPPA)
-       IF (CMAKE_FIND_FRAMEWORK MATCHES "FIRST"
-           OR CMAKE_FRAMEWORK_PATH MATCHES "ONLY"
-           OR NOT CMAKE_FIND_FRAMEWORK)
-@@ -70,7 +70,7 @@ ELSE(WIN32)
-         ENDIF (GEOS_LIBRARY)
-         SET (CMAKE_FIND_FRAMEWORK ${CMAKE_FIND_FRAMEWORK_save} CACHE STRING "" FORCE)
-       ENDIF ()
--    ENDIF (APPLE)
-+    ENDIF (ELPPA)
+-        IF (APPLE)
+-          IF (NOT GEOS_LIBRARY)
+-            # work around empty GEOS_LIBRARY left by framework check
+-            # while still preserving user setting if given
+-            # ***FIXME*** need to improve framework check so below not needed
+-            SET(GEOS_LIBRARY ${GEOS_LINK_DIRECTORIES}/lib${GEOS_LIB_NAME}.dylib CACHE STRING INTERNAL FORCE)
+-          ENDIF (NOT GEOS_LIBRARY)
+-        ELSE (APPLE)
+-          SET(GEOS_LIBRARY ${GEOS_LINK_DIRECTORIES}/lib${GEOS_LIB_NAME}.so CACHE STRING INTERNAL)
+-        ENDIF (APPLE)
++        FIND_LIBRARY(GEOS_LIBRARY NAMES ${GEOS_LIB_NAME} PATHS ${GEOS_LINK_DIRECTORIES})
+         #MESSAGE("DBG  GEOS_LIBRARY=${GEOS_LIBRARY}")
  
-     IF (NOT GEOS_INCLUDE_DIR OR NOT GEOS_LIBRARY OR NOT GEOS_CONFIG)
-       # didn't find OS X framework, and was not set by user
-@@ -114,7 +114,7 @@ ELSE(WIN32)
-         ## split off the link dirs (for rpath)
-         ## use regular expression to match wildcard equivalent "-L*<endchar>"
-         ## with <endchar> is a space or a semicolon
--        STRING(REGEX MATCHALL "[-][L]([^ ;])+" 
-+        STRING(REGEX MATCH "[-][L]([^ ;])+" 
-             GEOS_LINK_DIRECTORIES_WITH_PREFIX 
-             "${GEOS_CONFIG_LIBS}" )
-         #MESSAGE("DBG  GEOS_LINK_DIRECTORIES_WITH_PREFIX=${GEOS_LINK_DIRECTORIES_WITH_PREFIX}")
+       ELSE(GEOS_CONFIG)
