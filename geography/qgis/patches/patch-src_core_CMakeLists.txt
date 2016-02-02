@@ -1,0 +1,23 @@
+$NetBSD: patch-src_core_CMakeLists.txt,v 1.1 2016/02/02 04:33:58 dbj Exp $
+
+Add ApplicationServices framework
+Use Q_WS_MAC to conditionalize frameworks
+This sort-of matches Q_OS_MACX conditionals in main.cpp and qgisapp.cpp
+but more importantly avoids using APPLE which we overwrite in the
+pkgsrc Makefile to disable the MAC application bundle
+
+--- src/core/CMakeLists.txt.orig	2016-01-15 12:00:55.000000000 +0000
++++ src/core/CMakeLists.txt
+@@ -849,9 +849,9 @@ IF (WIN32)
+   TARGET_LINK_LIBRARIES(qgis_core wsock32 ${SETUPAPI_LIBRARY})
+ ENDIF (WIN32)
+ 
+-IF(APPLE)
+-  TARGET_LINK_LIBRARIES(qgis_core "-framework CoreFoundation -framework IOKit")
+-ENDIF(APPLE)
++IF(Q_WS_MAC)
++  TARGET_LINK_LIBRARIES(qgis_core "-framework CoreFoundation -framework IOKit -framework ApplicationServices")
++ENDIF(Q_WS_MAC)
+ 
+ IF (NOT WITH_INTERNAL_QEXTSERIALPORT)
+   TARGET_LINK_LIBRARIES(qgis_core ${QEXTSERIALPORT_LIBRARY})

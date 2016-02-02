@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST.Darwin,v 1.1 2012/01/23 08:58:39 adam Exp $
-lib/qgis/plugins/libogrconverterplugin.so
-lib/qgis/plugins/libquickprintplugin.so
