@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15387 2016/02/01 13:32:19 wiz Exp $
+$NetBSD: TODO,v 1.15388 2016/02/02 04:45:25 dbj Exp $
 
 Suggested new packages
 ======================
@@ -1464,7 +1464,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pythontidy-1.23
 	o qbzr-0.22.4
 	o qcad-3.7.5.0
-	o qgis-2.12.0
 	o qhull-2009.1.3
 	o qlandkartegt-1.8.1 [pkg/49910]
 	o qnetwalk-1.4

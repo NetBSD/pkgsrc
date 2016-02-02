@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.455 2016/02/01 23:34:31 asau Exp $
+$NetBSD: CHANGES-2016,v 1.456 2016/02/02 04:45:25 dbj Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -436,6 +436,8 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated audio/libopus to 1.1.2 [wiz 2016-01-18]
 	Updated net/py-foolscap to 0.10.0 [wiz 2016-01-18]
 	Updated devel/py-setuptools to 19.4 [wiz 2016-01-18]
+	Updated ham/codec2 to 0.5 [dbj 2016-01-19]
+	Updated ham/freedv to 1.1 [dbj 2016-01-19]
 	Updated www/libproxy to 0.4.12 [leot 2016-01-19]
 	Updated devel/gdb to 7.10.1 [ryoon 2016-01-19]
 	Updated ham/fldigi to 3.23.07.19 [mef 2016-01-19]
@@ -652,3 +654,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added x11/tabbed version 0.6 [leot 2016-02-01]
 	Updated devel/gettext to 0.19.7 [adam 2016-02-01]
 	Updated lang/sbcl to 1.3.2 [asau 2016-02-01]
+	Updated geography/qgis to 2.12.3 [dbj 2016-02-02]
