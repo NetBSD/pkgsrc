@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.27 2015/11/03 01:12:51 agc Exp $
+$NetBSD: distinfo,v 1.28 2016/02/02 06:12:10 dbj Exp $
 
 SHA1 (sox-14.4.2.tar.gz) = f69f38f8a7ad6a88ecab3862d74db4edcd796695
 RMD160 (sox-14.4.2.tar.gz) = 2fd48904a7d8c7d85e194a001020901d061ced98
@@ -6,5 +6,6 @@ SHA512 (sox-14.4.2.tar.gz) = b5c6203f4f5577503a034fe5b3d6a033ee97fe4d171c533933e
 Size (sox-14.4.2.tar.gz) = 1134299 bytes
 SHA1 (patch-aa) = e6f3d06450862795648622a017b2c696328872f5
 SHA1 (patch-ak) = 28675f56a0e2969d0facd98282667c53eb10c0ed
+SHA1 (patch-src_coreaudio.c) = baee5596ec5efdc12f99ea9dab9e9c691a17b08d
 SHA1 (patch-src_oss.c) = dca4dcf55d4bfa1da80b789cbddb48a9302e694b
 SHA1 (patch-src_sunaudio.c) = 286ad890a32d69d499f76faa255473889b091d56
