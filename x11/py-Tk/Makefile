@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2015/07/04 16:18:42 joerg Exp $
+# $NetBSD: Makefile,v 1.62 2016/02/02 07:38:29 dbj Exp $
 
 PKGNAME=	${PYPKGPREFIX}-Tk-${PY_DISTVERSION}
 PKGREVISION=	4
@@ -44,4 +44,5 @@ do-patch:
 .include "../../lang/python/srcdist.mk"
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
+.include "../../x11/libX11/builtin.mk"
 .include "../../mk/bsd.pkg.mk"
