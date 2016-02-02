@@ -1,0 +1,37 @@
+@comment $NetBSD: PLIST,v 1.1 2016/02/02 17:53:54 nros Exp $
+share/doc/${PKGNAME}/STIX Font License 2010.pdf
+share/doc/${PKGNAME}/STIXv${PKGVERSION}.pdf
+share/fonts/X11/OTF/STIX-Bold.otf
+share/fonts/X11/OTF/STIX-BoldItalic.otf
+share/fonts/X11/OTF/STIX-Italic.otf
+share/fonts/X11/OTF/STIX-Regular.otf
+share/fonts/X11/OTF/STIXGeneral-Bold.otf
+share/fonts/X11/OTF/STIXGeneral-BoldItalic.otf
+share/fonts/X11/OTF/STIXGeneral-Italic.otf
+share/fonts/X11/OTF/STIXGeneral-Regular.otf
+share/fonts/X11/OTF/STIXIntegralsD-Bold.otf
+share/fonts/X11/OTF/STIXIntegralsD-Regular.otf
+share/fonts/X11/OTF/STIXIntegralsSm-Bold.otf
+share/fonts/X11/OTF/STIXIntegralsSm-Regular.otf
+share/fonts/X11/OTF/STIXIntegralsUp-Bold.otf
+share/fonts/X11/OTF/STIXIntegralsUp-Regular.otf
+share/fonts/X11/OTF/STIXIntegralsUpD-Bold.otf
+share/fonts/X11/OTF/STIXIntegralsUpD-Regular.otf
+share/fonts/X11/OTF/STIXIntegralsUpSm-Bold.otf
+share/fonts/X11/OTF/STIXIntegralsUpSm-Regular.otf
+share/fonts/X11/OTF/STIXMath-Regular.otf
+share/fonts/X11/OTF/STIXNonUnicode-Bold.otf
+share/fonts/X11/OTF/STIXNonUnicode-BoldItalic.otf
+share/fonts/X11/OTF/STIXNonUnicode-Italic.otf
+share/fonts/X11/OTF/STIXNonUnicode-Regular.otf
+share/fonts/X11/OTF/STIXSizeFiveSym-Regular.otf
+share/fonts/X11/OTF/STIXSizeFourSym-Bold.otf
+share/fonts/X11/OTF/STIXSizeFourSym-Regular.otf
+share/fonts/X11/OTF/STIXSizeOneSym-Bold.otf
+share/fonts/X11/OTF/STIXSizeOneSym-Regular.otf
+share/fonts/X11/OTF/STIXSizeThreeSym-Bold.otf
+share/fonts/X11/OTF/STIXSizeThreeSym-Regular.otf
+share/fonts/X11/OTF/STIXSizeTwoSym-Bold.otf
+share/fonts/X11/OTF/STIXSizeTwoSym-Regular.otf
+share/fonts/X11/OTF/STIXVariants-Bold.otf
+share/fonts/X11/OTF/STIXVariants-Regular.otf
