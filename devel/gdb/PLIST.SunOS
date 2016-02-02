@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST.SunOS,v 1.1 2016/02/02 07:24:47 fhajny Exp $
+bin/gcore
+include/ansidecl.h
+include/bfd.h
+include/bfdlink.h
+include/dis-asm.h
+include/symcat.h
+lib/libbfd.la
+lib/libopcodes.la
+man/man1/gcore.1
