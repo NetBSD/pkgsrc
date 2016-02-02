@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2016/02/02 16:31:43 leot Exp $
+
+SHA1 (st-0.6.tar.gz) = a1ce3252f391f9fac63c2ebf1ed12b3f696348d6
+RMD160 (st-0.6.tar.gz) = 22009370a4d891ac0383d41f863dcbf732ec6442
+Size (st-0.6.tar.gz) = 40271 bytes
