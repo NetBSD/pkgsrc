@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15394 2016/02/02 12:44:59 mef Exp $
+$NetBSD: TODO,v 1.15395 2016/02/02 13:24:17 mef Exp $
 
 Suggested new packages
 ======================
@@ -1078,7 +1078,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o miredo-1.2.4
 	o mit-krb5-1.12.1
 	o mit-scheme-bin-9.2
-	o mknmz-wwwoffle-0.7.2
 	o mkvtoolnix-8.7.0
 	o mlterm-3.6.2
 	o moc-2.5.0
