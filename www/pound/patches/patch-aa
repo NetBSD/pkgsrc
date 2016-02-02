@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2009/10/16 02:48:06 obache Exp $
+$NetBSD: patch-aa,v 1.3 2016/02/02 13:33:13 mef Exp $
+
+user-destdir support
 
 --- Makefile.in.orig	2009-06-29 15:53:58.000000000 +0000
 +++ Makefile.in
