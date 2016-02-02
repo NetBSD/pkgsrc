@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2016/01/27 06:31:20 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2016/02/02 15:06:46 fhajny Exp $
 
 DISTNAME=	gnupg-2.1.11
 PKGNAME=	${DISTNAME:S/gnupg-/gnupg21-/}
@@ -24,6 +24,12 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-g13
 
 .include "../../mk/bsd.fast.prefs.mk"
+
+# SunOS does have getaddrinfo() and the code knows how to use it
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ARGS+=	ac_cv_func_getaddrinfo=yes
+.endif
+
 .if ${OPSYS} == "Darwin"
 LDFLAGS+=	-lresolv
 .endif
