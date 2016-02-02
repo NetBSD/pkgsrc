@@ -1,70 +1,29 @@
-$NetBSD: patch-CMakeLists.txt,v 1.2 2012/02/26 23:19:02 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.3 2016/02/02 04:33:57 dbj Exp $
 
-Avoid application bundle on Mac OS X.
+use correct linker flags for undefined symbols with Clang
 
---- CMakeLists.txt.orig	2012-02-22 20:48:14.000000000 +0000
+--- CMakeLists.txt.orig	2016-01-15 12:00:55.000000000 +0000
 +++ CMakeLists.txt
-@@ -5,11 +5,7 @@ SET(COMPLETE_VERSION ${CPACK_PACKAGE_VER
- SET(RELEASE_NAME "Wroclaw")
- SET(PROJECT_VERSION ${COMPLETE_VERSION})
- PROJECT(qgis${PROJECT_VERSION})
--IF (APPLE)
--  SET(QGIS_APP_NAME "QGIS")
--ELSE (APPLE)
--  SET(QGIS_APP_NAME "qgis")
--ENDIF (APPLE)
-+SET(QGIS_APP_NAME "qgis")
+@@ -610,11 +610,17 @@ ELSE (WIN32)
+     SET(DLLEXPORT "")
+   ENDIF()
  
- # Note the version no is Mmmpp for Major/minor/patch, 0-padded, thus '10100' for 1.1.0
- MATH(EXPR QGIS_VERSION_INT "${CPACK_PACKAGE_VERSION_MAJOR}*10000+${CPACK_PACKAGE_VERSION_MINOR}*100+${CPACK_PACKAGE_VERSION_PATCH}")
-@@ -286,10 +282,7 @@ ELSE (WIN32)
+-  IF(PEDANTIC AND NOT APPLE)
+-    SET(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -Wl,--no-undefined")
+-    SET(CMAKE_MODULE_LINKER_FLAGS "${CMAKE_MODULE_LINKER_FLAGS} -Wl,--no-undefined")
+-    SET(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,--no-undefined")
+-  ENDIF(PEDANTIC AND NOT APPLE)
++  IF(PEDANTIC)
++    IF (CMAKE_CXX_COMPILER_ID MATCHES "Clang")
++      SET(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -Wl,-undefined,error")
++      SET(CMAKE_MODULE_LINKER_FLAGS "${CMAKE_MODULE_LINKER_FLAGS} -Wl,-undefined,error")
++      SET(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,-undefined,error")
++    ELSE()
++      SET(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -Wl,--no-undefined")
++      SET(CMAKE_MODULE_LINKER_FLAGS "${CMAKE_MODULE_LINKER_FLAGS} -Wl,--no-undefined")
++      SET(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,--no-undefined")
++    ENDIF()
++  ENDIF(PEDANTIC)
  
-   IF (APPLE)
-     # for Mac OS X, everything is put inside an application bundle
--    SET (QGIS_MACAPP_PREFIX ${CMAKE_INSTALL_PREFIX}/${QGIS_APP_NAME}.app/Contents)
--    SET (CMAKE_INSTALL_PREFIX ${QGIS_MACAPP_PREFIX}/MacOS)
-     # path for library references
--    SET (CMAKE_INSTALL_NAME_DIR @executable_path/lib)
-     # 4 bundling levels, each includes previous
-     #   0  nothing
-     #   1  Qt frameworks
-@@ -307,18 +300,16 @@ ELSE (WIN32)
- 
-     SET (DEFAULT_BIN_SUBDIR      bin)
-     SET (QGIS_BIN_SUBDIR_REV     ..)
--    SET (DEFAULT_CGIBIN_SUBDIR   fcgi-bin)
-+    SET (DEFAULT_CGIBIN_SUBDIR   bin)
-     SET (QGIS_CGIBIN_SUBDIR_REV  ..)
-     SET (DEFAULT_LIB_SUBDIR      lib)
-     SET (QGIS_LIB_SUBDIR_REV     ..)
--    SET (QGIS_FW_SUBDIR          ../Frameworks)
--    SET (QGIS_FW_SUBDIR_REV      ../MacOS)
--    SET (DEFAULT_DATA_SUBDIR     ../Resources)
--    SET (QGIS_DATA_SUBDIR_REV    ../MacOS)
-+    SET (QGIS_DATA_SUBDIR_REV    ../..)
-     SET (DEFAULT_LIBEXEC_SUBDIR  lib/qgis)
-     SET (QGIS_LIBEXEC_SUBDIR_REV ../..)
--    SET (DEFAULT_PLUGIN_SUBDIR   ../PlugIns/qgis)
--    SET (QGIS_PLUGIN_SUBDIR_REV  ../../MacOS)
-+    SET (DEFAULT_DATA_SUBDIR     share/qgis)
-+    SET (DEFAULT_PLUGIN_SUBDIR   lib/qgis/plugins)
-+    SET (QGIS_PLUGIN_SUBDIR_REV  ../../..)
-     SET (DEFAULT_INCLUDE_SUBDIR  include/qgis)
- 
-   ELSE (APPLE)
-@@ -496,13 +487,12 @@ ENDIF (ENABLE_TESTS)
- 
- IF (APPLE)
-   # must be last for install, so install_name_tool can do its work
--  SUBDIRS (mac)
- ENDIF (APPLE)
- 
- # manual page - makes sense only on unix systems
--IF (UNIX AND NOT APPLE)
-+IF (UNIX)
-   INSTALL (FILES qgis.1 DESTINATION ${QGIS_MANUAL_DIR}/man1)
--ENDIF (UNIX AND NOT APPLE)
-+ENDIF (UNIX)
- 
- INSTALL(FILES cmake/FindQGIS.cmake DESTINATION ${QGIS_DATA_DIR})
+ ENDIF(WIN32)
  
