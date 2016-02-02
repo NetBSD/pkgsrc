@@ -1,14 +1,18 @@
-@comment $NetBSD: PLIST,v 1.8 2012/10/16 17:23:33 shattered Exp $
+@comment $NetBSD: PLIST,v 1.9 2016/02/02 18:15:44 nros Exp $
 bin/latex2png
 bin/latex2rtf
 info/latex2rtf.info
 man/man1/latex2png.1
 man/man1/latex2rtf.1
+share/doc/latex2rtf/latex2rtf.html
+share/doc/latex2rtf/latex2rtf.pdf
+share/doc/latex2rtf/latex2rtf.txt
 share/latex2rtf/cfg/afrikaans.cfg
 share/latex2rtf/cfg/bahasa.cfg
 share/latex2rtf/cfg/basque.cfg
 share/latex2rtf/cfg/brazil.cfg
 share/latex2rtf/cfg/breton.cfg
+share/latex2rtf/cfg/british.cfg
 share/latex2rtf/cfg/catalan.cfg
 share/latex2rtf/cfg/croatian.cfg
 share/latex2rtf/cfg/czech.cfg
@@ -21,11 +25,12 @@ share/latex2rtf/cfg/estonian.cfg
 share/latex2rtf/cfg/finnish.cfg
 share/latex2rtf/cfg/fonts.cfg
 share/latex2rtf/cfg/french.cfg
+share/latex2rtf/cfg/frenchb.cfg
 share/latex2rtf/cfg/galician.cfg
 share/latex2rtf/cfg/german.cfg
+share/latex2rtf/cfg/greek.cfg
 share/latex2rtf/cfg/icelandic.cfg
 share/latex2rtf/cfg/ignore.cfg
-share/latex2rtf/cfg/inc_test.tex
 share/latex2rtf/cfg/irish.cfg
 share/latex2rtf/cfg/italian.cfg
 share/latex2rtf/cfg/latin.cfg
@@ -49,5 +54,3 @@ share/latex2rtf/cfg/turkish.cfg
 share/latex2rtf/cfg/ukrainian.cfg
 share/latex2rtf/cfg/usorbian.cfg
 share/latex2rtf/cfg/welsh.cfg
-share/doc/latex2rtf/latex2rtf.html
-share/doc/latex2rtf/latex2rtf.pdf
