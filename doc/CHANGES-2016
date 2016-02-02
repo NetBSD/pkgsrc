@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.473 2016/02/02 17:56:33 nros Exp $
+$NetBSD: CHANGES-2016,v 1.474 2016/02/02 18:16:33 nros Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -672,3 +672,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/msmtp to 1.6.4 [leot 2016-02-02]
 	Added x11/st-term version 0.6 [leot 2016-02-02]
 	Added fonts/stix-otf version 1.1.0 [nros 2016-02-02]
+	Updated converters/latex2rtf to 2.3.10 [nros 2016-02-02]

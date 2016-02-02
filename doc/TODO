@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15396 2016/02/02 13:34:06 mef Exp $
+$NetBSD: TODO,v 1.15397 2016/02/02 18:16:33 nros Exp $
 
 Suggested new packages
 ======================
@@ -957,7 +957,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o krusader-2.0
 	o ktorrent3-3.3.4
 	o labelnation-1.218
-	o latex2rtf-2.3.8
 	o latexmk-443a
 	o lbdb-0.39
 	o lcc-4.2
