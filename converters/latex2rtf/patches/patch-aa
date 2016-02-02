@@ -1,53 +1,68 @@
-$NetBSD: patch-aa,v 1.7 2012/10/16 17:23:33 shattered Exp $
-
---- Makefile.orig	2007-11-18 06:10:57.000000000 +0000
+$NetBSD: patch-aa,v 1.8 2016/02/02 18:15:44 nros Exp $
+* add prefix to install dirs and set correct man, info and doc dirs.
+* don't run checkdir since the test dir is missing
+* define the correct configuration dir
+* use BSD_INSTALL* to get the right permissions
+--- Makefile.orig	2015-11-19 15:02:58.000000000 +0000
 +++ Makefile
-@@ -2,3 +2,3 @@
+@@ -27,11 +27,11 @@ DESTDIR?=/usr/local
+ BINARY_NAME=latex2rtf$(EXE_SUFFIX)
  
--CC=gcc
-+CC?=gcc
- MKDIR=mkdir -p
-@@ -25,3 +25,3 @@ LINK_FLAGS = -lm
- #Base directory - adapt as needed
--PREFIX=$(PREFIX_DRIVE)/usr/local
-+PREFIX?=$(PREFIX_DRIVE)/usr/local
+ # Location of binary, man, info, and support files - adapt as needed
+-BINDIR=/bin
+-MANDIR=/share/$(PKGMANDIR)/man1
+-INFODIR=/share/info
+-SUPPORTDIR=/share/latex2rtf
+-CFGDIR=/share/latex2rtf/cfg
++BINDIR=$(PREFIX)/bin
++MANDIR=$(PREFIX)/$(PKGMANDIR)/man1
++INFODIR=$(PREFIX)/$(PKGINFODIR)
++SUPPORTDIR=$(PREFIX)/share/doc/latex2rtf
++CFGDIR=$(PREFIX)/share/latex2rtf/cfg
  
-@@ -32,3 +32,3 @@ BINARY_NAME=latex2rtf$(EXE_SUFFIX)
- BIN_INSTALL=$(PREFIX)/bin
--MAN_INSTALL=$(PREFIX)/man/man1
-+MAN_INSTALL=$(PREFIX)/$(PKGMANDIR)/man1
- INFO_INSTALL=$(PREFIX)/info
-@@ -205,13 +205,13 @@ install: latex2rtf doc/latex2rtf.1 $(CFG
- 	cd doc && $(MAKE)
--	$(MKDIR) $(BIN_INSTALL)
--	$(MKDIR) $(MAN_INSTALL)
--	$(MKDIR) $(CFG_INSTALL)
--	cp $(BINARY_NAME)     $(BIN_INSTALL)
--	cp scripts/latex2png  $(BIN_INSTALL)
--	cp doc/latex2rtf.1    $(MAN_INSTALL)
--	cp doc/latex2png.1    $(MAN_INSTALL)
--	cp $(CFGS)            $(CFG_INSTALL)
--	cp doc/latex2rtf.html $(SUPPORT_INSTALL)
--	cp doc/latex2rtf.pdf  $(SUPPORT_INSTALL)
--	cp doc/latex2rtf.txt  $(SUPPORT_INSTALL)
-+	$(MKDIR) $(DESTDIR)$(BIN_INSTALL)
-+	$(MKDIR) $(DESTDIR)$(MAN_INSTALL)
-+	$(MKDIR) $(DESTDIR)$(CFG_INSTALL)
-+	cp $(BINARY_NAME)     $(DESTDIR)$(BIN_INSTALL)
-+	cp scripts/latex2png  $(DESTDIR)$(BIN_INSTALL)
-+	cp doc/latex2rtf.1    $(DESTDIR)$(MAN_INSTALL)
-+	cp doc/latex2png.1    $(DESTDIR)$(MAN_INSTALL)
-+	cp $(CFGS)            $(DESTDIR)$(CFG_INSTALL)
-+	cp doc/latex2rtf.html $(DESTDIR)$(PREFIX)/share/doc/latex2rtf
-+	cp doc/latex2rtf.pdf  $(DESTDIR)$(PREFIX)/share/doc/latex2rtf
-+#	cp doc/latex2rtf.txt  $(DESTDIR)$(SUPPORT_INSTALL)
+ #Uncomment next 5 lines for Windows
+ #BINDIR=
+@@ -145,16 +145,16 @@ OBJS=fonts.o direct.o encodings.o comman
+ 	mygetopt.o styles.o preparse.o vertical.o fields.o \
+ 	labels.o biblio.o auxfile.o	acronyms.o
+ 
+-all : checkdir latex2rtf    # Windows: remove "checkdir"
++all : latex2rtf    # Windows: remove "checkdir"
+ 
+ latex2rtf: $(OBJS) $(HDRS)
+ 	$(CC) $(CFLAGS) $(LDFLAGS) $(OBJS)	$(LIBS) -o $(BINARY_NAME)
+ 
+ cfg.o: Makefile cfg.c
+-	$(CC) $(CFLAGS) -DCFGDIR=\"$(DESTDIR)$(CFGDIR)\" -c cfg.c -o cfg.o
++	$(CC) $(CFLAGS) -DCFGDIR=\"$(CFGDIR)\" -c cfg.c -o cfg.o
+ 
+ main.o: Makefile main.c
+-	$(CC) $(CFLAGS) -DCFGDIR=\"$(DESTDIR)$(CFGDIR)\" -c main.c -o main.o
++	$(CC) $(CFLAGS) -DCFGDIR=\"$(CFGDIR)\" -c main.c -o main.o
+ 
+ check test: latex2rtf
+ 	cd test && $(MAKE) clean
+@@ -213,14 +213,15 @@ install: latex2rtf doc/latex2rtf.1 $(CFG
+ 	$(MKDIR) $(DESTDIR)$(BINDIR)
+ 	$(MKDIR) $(DESTDIR)$(MANDIR)
+ 	$(MKDIR) $(DESTDIR)$(CFGDIR)
+-	cp -p scripts/latex2png  $(DESTDIR)$(BINDIR)
+-	cp -p doc/latex2rtf.1    $(DESTDIR)$(MANDIR)
+-	cp -p doc/latex2png.1    $(DESTDIR)$(MANDIR)
+-	cp -p $(CFGS)            $(DESTDIR)$(CFGDIR)
+-	cp -p doc/latex2rtf.html $(DESTDIR)$(SUPPORTDIR)
+-	cp -p doc/latex2rtf.pdf  $(DESTDIR)$(SUPPORTDIR)
+-	cp -p doc/latex2rtf.txt  $(DESTDIR)$(SUPPORTDIR)
+-	cp -p $(BINARY_NAME)     $(DESTDIR)$(BINDIR)
++	$(MKDIR) $(DESTDIR)$(SUPPORTDIR)
++	$(BSD_INSTALL_SCRIPT) scripts/latex2png  $(DESTDIR)$(BINDIR)
++	$(BSD_INSTALL_MAN) doc/latex2rtf.1 $(DESTDIR)$(MANDIR)
++	$(BSD_INSTALL_MAN) doc/latex2png.1 $(DESTDIR)$(MANDIR)
++	$(BSD_INSTALL_DATA) $(CFGS)  $(DESTDIR)$(CFGDIR)
++	$(BSD_INSTALL_DATA) doc/latex2rtf.html $(DESTDIR)$(SUPPORTDIR)
++	$(BSD_INSTALL_DATA) doc/latex2rtf.pdf  $(DESTDIR)$(SUPPORTDIR)
++	$(BSD_INSTALL_DATA) doc/latex2rtf.txt  $(DESTDIR)$(SUPPORTDIR)
++	$(BSD_INSTALL_PROGRAM) $(BINARY_NAME)     $(DESTDIR)$(BINDIR)
  	@echo "******************************************************************"
-@@ -232,5 +232,5 @@ install: latex2rtf doc/latex2rtf.1 $(CFG
- install-info: doc/latex2rtf.info
--	$(MKDIR) $(INFO_INSTALL)
--	cp doc/latex2rtf.info $(INFO_INSTALL)
--	install-info --info-dir=$(INFO_INSTALL) doc/latex2rtf.info
-+	$(MKDIR) $(DESTDIR)$(INFO_INSTALL)
-+	cp doc/latex2rtf.info $(DESTDIR)$(INFO_INSTALL)
-+	install-info --info-dir=$(DESTDIR)$(INFO_INSTALL) doc/latex2rtf.info
- 
+ 	@echo "*** latex2rtf successfully installed as \"$(BINARY_NAME)\""
+ 	@echo "*** in directory \"$(DESTDIR)$(BINDIR)\""
