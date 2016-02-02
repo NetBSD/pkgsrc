@@ -1,0 +1,15 @@
+$NetBSD: patch-mac_CMakeLists.txt,v 1.1 2016/02/02 04:33:58 dbj Exp $
+
+Make sure QCATOOL_EXECUTABLE is available to 1qt.cmake
+This is in conjunction with patch-mac_cmake_1qt.cmake.in
+
+--- mac/CMakeLists.txt.orig	2016-01-15 12:00:55.000000000 +0000
++++ mac/CMakeLists.txt
+@@ -10,6 +10,7 @@ IF (APPLE)
+     # start with Qt
+     CONFIGURE_FILE (cmake/1osg.cmake.in 1osg.cmake @ONLY)
+     INSTALL (SCRIPT ${CMAKE_BINARY_DIR}/mac/1osg.cmake)
++    FIND_QCATOOL(1)
+     CONFIGURE_FILE (cmake/1qt.cmake.in 1qt.cmake @ONLY)
+     INSTALL (SCRIPT ${CMAKE_BINARY_DIR}/mac/1qt.cmake)
+     IF (QGIS_MACAPP_BUNDLE GREATER 1)

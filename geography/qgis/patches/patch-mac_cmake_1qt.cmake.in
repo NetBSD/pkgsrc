@@ -1,0 +1,16 @@
+$NetBSD: patch-mac_cmake_1qt.cmake.in,v 1.1 2016/02/02 04:33:58 dbj Exp $
+
+Make sure QCATOOL_EXECUTABLE is available to QCAMacros.cmake
+so that FIND_QCATOOL works when running install scripts
+This is in conjunction with patch-mac-CMakeLists.txt
+
+--- mac/cmake/1qt.cmake.in.orig	2016-01-15 12:00:55.000000000 +0000
++++ mac/cmake/1qt.cmake.in
+@@ -8,6 +8,7 @@ CMAKE_POLICY (SET CMP0012 NEW)
+ 
+ INCLUDE ("@CMAKE_BINARY_DIR@/mac/0vars.cmake")
+ INCLUDE ("@CMAKE_SOURCE_DIR@/cmake/MacBundleMacros.cmake")
++SET (QCATOOL_EXECUTABLE @QCATOOL_EXECUTABLE@)
+ INCLUDE ("@CMAKE_SOURCE_DIR@/cmake/QCAMacros.cmake")
+ 
+ # Qt framework version is major version
