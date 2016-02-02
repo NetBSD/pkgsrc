@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2015/06/30 11:52:57 jaapb Exp $
+# $NetBSD: Makefile,v 1.25 2016/02/02 11:41:45 jaapb Exp $
 
-DISTNAME=		findlib-1.5.5
-PKGREVISION=	2
+DISTNAME=		findlib-1.6.1
 CATEGORIES=		devel
 MASTER_SITES=		http://download.camlcity.org/download/
 
@@ -9,8 +8,6 @@ MAINTAINER=		jaapb@NetBSD.org
 HOMEPAGE=		http://www.camlcity.org/
 COMMENT=		Library finder for OCaml
 LICENSE=		mit
-
-MAKE_JOBS_SAFE=		no
 
 .include "../../mk/ocaml.mk"
 
@@ -31,7 +28,7 @@ BUILD_TARGET+=	opt
 
 EGDIR=			${PREFIX}/share/examples/ocaml-findlib
 INSTALL_MAKE_FLAGS+=	OCAMLFIND_CONF=${EGDIR}/ocamlfind.conf
-INSTALLATION_DIRS=	lib/ocaml libexec bin
+INSTALLATION_DIRS=	lib/ocaml libexec bin ${OCAML_SITELIBDIR}
 
 CONF_FILES=		${EGDIR}/ocamlfind.conf ${PKG_SYSCONFDIR}/ocamlfind.conf
 
