@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.290 2016/01/20 11:40:59 wiz Exp $
+# $NetBSD: Makefile,v 1.291 2016/02/02 17:55:13 nros Exp $
 #
 
 COMMENT=	Fonts
@@ -193,6 +193,7 @@ SUBDIR+=	sgi-fonts
 SUBDIR+=	sourcecodepro-fonts
 SUBDIR+=	sourcehansans-fonts
 SUBDIR+=	sourcesans-fonts
+SUBDIR+=	stix-otf
 SUBDIR+=	symbola-ttf
 SUBDIR+=	t1lib
 SUBDIR+=	t1utils
