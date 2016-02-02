@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2015/03/15 19:42:34 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.15 2016/02/02 20:32:18 fhajny Exp $
 #
 
 DISTNAME=	tokyocabinet-java-1.24
@@ -17,6 +17,8 @@ USE_LANGUAGES=	c
 MAKE_ENV+=	INCLUDEDIR=${BUILDLINK_PREFIX.tokyocabinet}/include
 
 TEST_TARGET=	check
+
+CPPFLAGS.SunOS+=	-D__EXTENSIONS__
 
 INSTALLATION_DIRS+=	share/tokyocabinet/doc/java
 
