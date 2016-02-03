@@ -1,4 +1,4 @@
-$NetBSD: patch-Source_cmake_OptionsGTK.cmake,v 1.7 2016/01/21 13:42:33 leot Exp $
+$NetBSD: patch-Source_cmake_OptionsGTK.cmake,v 1.8 2016/02/03 17:19:18 leot Exp $
 
 o Do not require GCC 4.9.0 (should be build *without* IndexedDB support)
 o Do not conflict with CMAKE_MODULE_PATH during the linking phase of
@@ -15,7 +15,7 @@ o Disable DatabaseProcess and IndexedDB support.
 
 --- Source/cmake/OptionsGTK.cmake.orig	2016-01-20 12:45:56.000000000 +0000
 +++ Source/cmake/OptionsGTK.cmake
-@@ -6,13 +6,6 @@ set(PROJECT_VERSION_MICRO 5)
+@@ -6,13 +6,6 @@ set(PROJECT_VERSION_MICRO 7)
  set(PROJECT_VERSION ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}.${PROJECT_VERSION_MICRO})
  set(WEBKITGTK_API_VERSION 4.0)
  
@@ -28,7 +28,7 @@ o Disable DatabaseProcess and IndexedDB support.
 -
  # Libtool library version, not to be confused with API version.
  # See http://www.gnu.org/software/libtool/manual/html_node/Libtool-versioning.html
- CALCULATE_LIBRARY_VERSIONS_FROM_LIBTOOL_TRIPLE(WEBKIT2 48 8 11)
+ CALCULATE_LIBRARY_VERSIONS_FROM_LIBTOOL_TRIPLE(WEBKIT2 48 10 11)
 @@ -106,7 +99,7 @@ else ()
      WEBKIT_OPTION_DEFAULT_PORT_VALUE(ENABLE_MINIBROWSER PUBLIC OFF)
      WEBKIT_OPTION_DEFAULT_PORT_VALUE(ENABLE_API_TESTS PRIVATE OFF)
