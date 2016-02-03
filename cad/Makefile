@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2015/08/25 02:03:53 mef Exp $
+# $NetBSD: Makefile,v 1.83 2016/02/03 19:42:38 bouyer Exp $
 #
 
 COMMENT=	CAD tools
@@ -35,6 +35,8 @@ SUBDIR+=	gtkwave
 SUBDIR+=	gwave
 SUBDIR+=	kicad
 SUBDIR+=	kicad-doc
+SUBDIR+=	kicad-footprints
+SUBDIR+=	kicad-i18n
 SUBDIR+=	kicad-lib
 SUBDIR+=	librecad
 SUBDIR+=	libwcalc
