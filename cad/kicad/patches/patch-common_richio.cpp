@@ -1,11 +1,11 @@
-$NetBSD: patch-common_richio.cpp,v 1.1.1.1 2014/02/17 20:38:59 bouyer Exp $
+$NetBSD: patch-common_richio.cpp,v 1.2 2016/02/03 19:34:33 bouyer Exp $
 
 Fix non-portable use of setvbuf()
 Reported upstream as bug id 1280897
 
---- common/richio.cpp.orig	2014-02-15 20:22:32.000000000 +0100
-+++ common/richio.cpp	2014-02-15 20:23:12.000000000 +0100
-@@ -157,7 +157,7 @@
+--- common/richio.cpp.orig	2015-12-11 17:40:20.000000000 +0100
++++ common/richio.cpp	2015-12-11 17:39:05.000000000 +0100
+@@ -215,7 +215,7 @@
  {
      if( doOwn && ftell( aFile ) == 0L )
      {

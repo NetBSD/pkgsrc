@@ -1,0 +1,16 @@
+$NetBSD: patch-cvpcb_CMakeLists.txt,v 1.1 2016/02/03 19:34:33 bouyer Exp $
+
+Force proper LDFLAGS for MODULE, as cmake doens't set rpath for theses
+
+--- cvpcb/CMakeLists.txt.orig	2015-12-16 14:47:20.000000000 +0100
++++ cvpcb/CMakeLists.txt	2015-12-16 14:49:49.000000000 +0100
+@@ -173,6 +173,9 @@
+     set_target_properties( cvpcb_kiface PROPERTIES
+         LINK_FLAGS "${TO_LINKER},-cref ${TO_LINKER},-Map=_cvpcb.kiface.map" )
+ endif()
++
++set_property(TARGET cvpcb_kiface APPEND_STRING
++	PROPERTY LINK_FLAGS " $ENV{LDFLAGS}")
+ 
+ # these 2 binaries are a matched set, keep them together:
+ if( APPLE )

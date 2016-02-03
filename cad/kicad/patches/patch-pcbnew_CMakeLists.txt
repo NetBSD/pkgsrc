@@ -1,11 +1,13 @@
-$NetBSD: patch-pcbnew_CMakeLists.txt,v 1.1.1.1 2014/02/17 20:38:59 bouyer Exp $
+$NetBSD: patch-pcbnew_CMakeLists.txt,v 1.2 2016/02/03 19:34:34 bouyer Exp $
 
 Don't use ${CMAKE_MODULE_PATH} directly as it will be changed
 and containt multiple directories
 
---- pcbnew/CMakeLists.txt.orig	2014-02-14 20:06:34.000000000 +0100
-+++ pcbnew/CMakeLists.txt	2014-02-14 20:06:38.000000000 +0100
-@@ -229,7 +229,7 @@
+Force proper LDFLAGS for MODULE, as cmake doens't set rpath for theses
+
+--- pcbnew/CMakeLists.txt.orig	2015-12-09 17:21:54.000000000 +0100
++++ pcbnew/CMakeLists.txt	2015-12-16 14:52:03.000000000 +0100
+@@ -521,7 +521,7 @@
      COMMAND ${CMAKE_COMMAND}
          -DinputFile=${CMAKE_CURRENT_SOURCE_DIR}/dialogs/dialog_freeroute_exchange_help.html
          -DoutputFile=${CMAKE_CURRENT_SOURCE_DIR}/dialogs/dialog_freeroute_exchange_help_html.h
@@ -14,3 +16,13 @@ and containt multiple directories
      DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/dialogs/dialog_freeroute_exchange_help.html
      COMMENT "creating ${CMAKE_CURRENT_SOURCE_DIR}/dialogs/dialog_freeroute_exchange_help_html.h
         from ${CMAKE_CURRENT_SOURCE_DIR}/dialogs/dialog_freeroute_exchange_help.html"
+@@ -613,6 +613,9 @@
+         LINK_FLAGS "${TO_LINKER},-cref ${TO_LINKER},-Map=pcbnew.map"
+         )
+ endif()
++
++set_property(TARGET pcbnew_kiface APPEND_STRING
++	PROPERTY LINK_FLAGS " $ENV{LDFLAGS}")
+ 
+ # if building pcbnew, then also build pcbnew_kiface if out of date.
+ add_dependencies( pcbnew pcbnew_kiface )
