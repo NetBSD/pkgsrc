@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.482 2016/02/03 13:03:17 jaapb Exp $
+$NetBSD: CHANGES-2016,v 1.483 2016/02/03 13:15:26 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -680,3 +680,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/p5-Encode to 2.80 [mef 2016-02-03]
 	Updated textproc/p5-Lingua-EN-FindNumber to 1.32 [mef 2016-02-03]
 	Updated devel/pcre-ocaml to 7.1.6 [jaapb 2016-02-03]
+	Updated textproc/p5-PDF-Create to 1.28 [mef 2016-02-03]
