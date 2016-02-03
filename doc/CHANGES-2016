@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.486 2016/02/03 16:06:57 nros Exp $
+$NetBSD: CHANGES-2016,v 1.487 2016/02/03 17:19:36 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -685,3 +685,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/ocamlnet to 4.0.4 [jaapb 2016-02-03]
 	Updated sysutils/collectd to 5.5.0nb11 [he 2016-02-03]
 	Updated math/qhull to 2015.2 [nros 2016-02-03]
+	Updated www/webkit-gtk to 2.10.7 [leot 2016-02-03]
