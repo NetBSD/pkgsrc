@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15399 2016/02/03 12:45:23 mef Exp $
+$NetBSD: TODO,v 1.15400 2016/02/03 13:19:59 jaapb Exp $
 
 Suggested new packages
 ======================
@@ -1154,7 +1154,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ocaml-oasis-0.4.5
 	o ocaml-uutf-0.9.4
 	o ocamlgraph-1.8.6
-	o ocamlnet-4.0.4
 	o ocrad-0.25
 	o octave-4.0.0
 	o odbc-postgresql-09.03.0400
