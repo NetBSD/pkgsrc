@@ -1,12 +1,12 @@
-$NetBSD: patch-gold_options.h,v 1.1 2014/05/12 16:33:20 marino Exp $
+$NetBSD: patch-gold_options.h,v 1.2 2016/02/03 19:56:34 jperkin Exp $
 
  The NetBSD and OpenBSD real-time linkers do not understand DT_RUNPATH
  or DT_INIT_ARRAY.  The current gold defaults are not suitable for them.
  The last couple of DragonFly and FreeBSD releases do support these tags.
 
---- gold/options.h.orig	2013-11-04 15:33:39.000000000 +0000
+--- gold/options.h.orig	2015-11-13 08:27:42.000000000 +0000
 +++ gold/options.h
-@@ -716,9 +716,15 @@ class General_options
+@@ -713,9 +713,15 @@ class General_options
  	      N_("Output cross reference table"),
  	      N_("Do not output cross reference table"));
  
@@ -22,7 +22,7 @@ $NetBSD: patch-gold_options.h,v 1.1 2014/05/12 16:33:20 marino Exp $
  
    DEFINE_bool(define_common, options::TWO_DASHES, 'd', false,
  	      N_("Define common symbols"),
-@@ -949,7 +955,11 @@ class General_options
+@@ -956,7 +962,11 @@ class General_options
  	      N_("Do not page align data, do not make text readonly"),
  	      N_("Page align data, make text readonly"));
  

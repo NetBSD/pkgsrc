@@ -1,6 +1,6 @@
-$NetBSD: patch-include_safe-ctype.h,v 1.1 2015/03/24 14:23:14 joerg Exp $
+$NetBSD: patch-include_safe-ctype.h,v 1.2 2016/02/03 19:56:34 jperkin Exp $
 
---- include/safe-ctype.h.orig	2015-03-23 13:28:20.000000000 +0000
+--- include/safe-ctype.h.orig	2015-11-13 08:27:42.000000000 +0000
 +++ include/safe-ctype.h
 @@ -120,6 +120,8 @@ extern const unsigned char  _sch_tolower
     So we include ctype.h here and then immediately redefine its macros.  */

@@ -1,6 +1,6 @@
-$NetBSD: patch-gold_system.h,v 1.3 2015/06/09 20:24:39 ryoon Exp $
+$NetBSD: patch-gold_system.h,v 1.4 2016/02/03 19:56:34 jperkin Exp $
 
---- gold/system.h.orig	2014-10-14 07:32:04.000000000 +0000
+--- gold/system.h.orig	2015-11-13 08:27:42.000000000 +0000
 +++ gold/system.h
 @@ -118,7 +118,7 @@ struct hash<std::string>
  {
