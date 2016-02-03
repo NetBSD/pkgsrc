@@ -1,0 +1,28 @@
+$NetBSD: patch-eeschema_CMakeLists.txt,v 1.1 2016/02/03 19:34:33 bouyer Exp $
+
+Don't use ${CMAKE_MODULE_PATH} directly as it will be changed
+and containt multiple directories
+
+Force proper LDFLAGS for MODULE, as cmake doens't set rpath for theses
+
+--- eeschema/CMakeLists.txt.orig	2015-12-09 17:21:54.000000000 +0100
++++ eeschema/CMakeLists.txt	2015-12-16 14:50:58.000000000 +0100
+@@ -199,7 +199,7 @@
+     COMMAND ${CMAKE_COMMAND}
+         -DinputFile=${CMAKE_CURRENT_SOURCE_DIR}/dialogs/dialog_bom_help.html
+         -DoutputFile=${CMAKE_CURRENT_SOURCE_DIR}/dialogs/dialog_bom_help_html.h
+-        -P ${CMAKE_MODULE_PATH}/Html2C.cmake
++        -P ${PROJECT_SOURCE_DIR}/CMakeModules/Html2C.cmake
+     DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/dialogs/dialog_bom_help.html
+     COMMENT "creating ${CMAKE_CURRENT_SOURCE_DIR}/dialogs/dialog_bom_help_html.h
+        from ${CMAKE_CURRENT_SOURCE_DIR}/dialogs/dialog_bom_help.html"
+@@ -278,6 +278,9 @@
+         LINK_FLAGS "${TO_LINKER},-cref ${TO_LINKER},-Map=eeschema.map"
+         )
+ endif()
++
++set_property(TARGET eeschema_kiface APPEND_STRING
++	PROPERTY LINK_FLAGS " $ENV{LDFLAGS}")
+ 
+ # these 2 binaries are a matched set, keep them together:
+ if( APPLE )
