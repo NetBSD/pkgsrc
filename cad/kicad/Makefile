@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2015/04/25 14:20:27 tnn Exp $
+# $NetBSD: Makefile,v 1.8 2016/02/03 19:34:33 bouyer Exp $
 #
 
-V=		20140214
-DISTNAME=	kicad-stable-${V}
-PKGNAME=	kicad-${V}
-PKGREVISION=	5
+V=		4.0.1
+DISTNAME=	kicad-${V}
 CATEGORIES=	cad
-MASTER_SITES=	http://ftp.fr.NetBSD.org/~bouyer/kicad/
+MASTER_SITES=	https://launchpad.net/kicad/4.0/${V}/+download/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	bouyer@NetBSD.org
 HOMEPAGE=	http://www.kicad-pcb.org/
@@ -17,8 +16,8 @@ USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 USE_CMAKE=		yes
 
-CMAKE_ARGS+=		-DKICAD_STABLE_VERSION=ON
-CMAKE_ARGS+=		-DCMAKE_BUILD_TYPE=Release
+CMAKE_ARGS+=		-DKICAD_REPO_NAME=stable -DKICAD_BUILD_VERSION=${V}
+CMAKE_ARGS+=		-DCMAKE_BUILD_TYPE=Release -DKICAD_SKIP_BOOST=ON
 
 CMAKE_MODULE_PATH_OVERRIDE = \
 			bitmaps_png/CMakeLists.txt \
@@ -28,13 +27,13 @@ CMAKE_MODULE_PATH_OVERRIDE = \
 SUBST_CLASSES+=		macosx
 SUBST_STAGE.macosx=	pre-configure
 SUBST_MESSAGE.macosx=	Eliminating Mac OS X build specific for ${PKGNAME}
-SUBST_FILES.macosx=	bitmap2component/CMakeLists.txt			\
-			eeschema/CMakeLists.txt				\
-			cvpcb/CMakeLists.txt				\
-			gerbview/CMakeLists.txt				\
-			kicad/CMakeLists.txt				\
-			pcb_calculator/CMakeLists.txt			\
-			pcbnew/CMakeLists.txt
+SUBST_FILES.macosx=	cvpcb/CMakeLists.txt \
+			eeschema/CMakeLists.txt \
+			gerbview/CMakeLists.txt \
+			kicad/CMakeLists.txt \
+			pagelayout_editor/CMakeLists.txt \
+			pcbnew/CMakeLists.txt \
+			pcb_calculator/CMakeLists.txt
 SUBST_SED.macosx=	-e 's/[[:<:]]MACOSX_BUNDLE[[:>:]]//'
 
 .include "../../mk/bsd.prefs.mk"
@@ -49,11 +48,14 @@ SUBST_FILES.netbsd5=	pcbnew/legacy_plugin.cpp        \
 SUBST_SED.netbsd5=	-e 's/fabsl/fabs/g'
 .endif
 
+.include "../../devel/swig/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/cmake/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/Mesa/buildlink3.mk"
-.include "../../x11/wxGTK28/buildlink3.mk"
+.include "../../graphics/glew/buildlink3.mk"
+.include "../../graphics/cairo/buildlink3.mk"
+.include "../../x11/wxGTK30/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.prefs.mk"

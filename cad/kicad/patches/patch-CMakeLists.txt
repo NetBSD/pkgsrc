@@ -1,36 +1,16 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1.1.1 2014/02/17 20:38:59 bouyer Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2016/02/03 19:34:33 bouyer Exp $
 
-Trust wxWidgets when locating its components.
+Don't use ${CMAKE_MODULE_PATH} directly as it will be changed
+and containt multiple directories
 
---- CMakeLists.txt.orig	2011-07-04 10:40:16.000000000 +0000
-+++ CMakeLists.txt
-@@ -176,11 +176,17 @@ check_find_package_result(OPENGL_FOUND "
- # http://www.wxwidgets.org/manuals/2.8/wx_librarieslist.html
- 
- # On Apple only wxwidgets 2.9 or higher doesn't need to find aui part of base
--if(APPLE)
-+EXECUTE_PROCESS(
-+  COMMAND sh "${wxWidgets_CONFIG_EXECUTABLE}" --release
-+  OUTPUT_VARIABLE _wx_release
-+  RESULT_VARIABLE _wx_result
-+  ERROR_QUIET
-+)
-+IF(_wx_result EQUAL 0 AND _wx_release EQUAL "2.9" AND APPLE)
-     find_package(wxWidgets COMPONENTS gl adv html core net base xml QUIET)
--else(APPLE)
-+else(_wx_result EQUAL 0 AND _wx_release EQUAL "2.9" AND APPLE)
-     find_package(wxWidgets COMPONENTS gl aui adv html core net base xml QUIET)
--endif(APPLE)
-+endif(_wx_result EQUAL 0 AND _wx_release EQUAL "2.9" AND APPLE)
- check_find_package_result(wxWidgets_FOUND "wxWidgets")
- 
- 
-@@ -264,7 +270,7 @@ endif()
- # make uninstall rules
+--- CMakeLists.txt.orig	2015-12-14 20:13:21.000000000 +0100
++++ CMakeLists.txt	2015-12-14 20:15:13.000000000 +0100
+@@ -826,7 +826,7 @@
+ # "make uninstall" rules
  #================================================
  configure_file(
--  "${CMAKE_MODULE_PATH}/cmake_uninstall.cmake.in"
-+  "${PROJECT_SOURCE_DIR}/CMakeModules/cmake_uninstall.cmake.in"
-   "${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake"
-   IMMEDIATE @ONLY)
+-    "${CMAKE_MODULE_PATH}/cmake_uninstall.cmake.in"
++    "${PROJECT_SOURCE_DIR}/CMakeModules/cmake_uninstall.cmake.in"
+     "${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake"
+     IMMEDIATE @ONLY )
  

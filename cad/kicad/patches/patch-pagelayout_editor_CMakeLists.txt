@@ -1,0 +1,16 @@
+$NetBSD: patch-pagelayout_editor_CMakeLists.txt,v 1.1 2016/02/03 19:34:34 bouyer Exp $
+
+Force proper LDFLAGS for MODULE, as cmake doens't set rpath for theses
+
+--- pagelayout_editor/CMakeLists.txt.orig	2015-12-16 14:47:22.000000000 +0100
++++ pagelayout_editor/CMakeLists.txt	2015-12-16 14:51:27.000000000 +0100
+@@ -117,6 +117,9 @@
+     set_target_properties( pl_editor_kiface PROPERTIES
+         LINK_FLAGS "${TO_LINKER},-cref ${TO_LINKER},-Map=_pl_editor.kiface.map" )
+ endif()
++
++set_property(TARGET pl_editor_kiface APPEND_STRING
++	PROPERTY LINK_FLAGS " $ENV{LDFLAGS}")
+ 
+ # if building pl_editor, then also build pl_editor_kiface if out of date.
+ add_dependencies( pl_editor pl_editor_kiface )

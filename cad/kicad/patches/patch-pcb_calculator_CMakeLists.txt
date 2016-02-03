@@ -1,0 +1,16 @@
+$NetBSD: patch-pcb_calculator_CMakeLists.txt,v 1.1 2016/02/03 19:34:34 bouyer Exp $
+
+Force proper LDFLAGS for MODULE, as cmake doens't set rpath for theses
+
+--- pcb_calculator/CMakeLists.txt.orig	2015-12-16 14:47:22.000000000 +0100
++++ pcb_calculator/CMakeLists.txt	2015-12-16 14:51:42.000000000 +0100
+@@ -99,6 +99,9 @@
+     set_target_properties( pcb_calculator_kiface PROPERTIES
+         LINK_FLAGS "${TO_LINKER},-cref ${TO_LINKER},-Map=_pcb_calculator.kiface.map" )
+ endif()
++
++set_property(TARGET pcb_calculator_kiface APPEND_STRING
++	PROPERTY LINK_FLAGS " $ENV{LDFLAGS}")
+ 
+ # if building pcb_calculator, then also build pcb_calculator_kiface if out of date.
+ add_dependencies( pcb_calculator pcb_calculator_kiface )
