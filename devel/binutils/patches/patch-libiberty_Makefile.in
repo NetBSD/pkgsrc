@@ -1,10 +1,10 @@
-$NetBSD: patch-libiberty_Makefile.in,v 1.2 2014/01/06 14:58:41 wiz Exp $
+$NetBSD: patch-libiberty_Makefile.in,v 1.3 2016/02/03 19:56:34 jperkin Exp $
 
 Disable multilib.
 
---- libiberty/Makefile.in.orig	2013-11-04 15:33:40.000000000 +0000
+--- libiberty/Makefile.in.orig	2015-11-13 08:27:42.000000000 +0000
 +++ libiberty/Makefile.in
-@@ -353,7 +353,6 @@ install-strip: install
+@@ -364,7 +364,6 @@ install-strip: install
  # multilib-specific flags, it's overridden by FLAGS_TO_PASS from the
  # default multilib, so we have to take CFLAGS into account as well,
  # since it will be passed the multilib flags.
