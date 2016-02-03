@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15401 2016/02/03 16:06:57 nros Exp $
+$NetBSD: TODO,v 1.15402 2016/02/03 17:19:36 leot Exp $
 
 Suggested new packages
 ======================
@@ -1714,7 +1714,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wbm-virtual-server-4.152
 	o wcalc-2.4
 	o webalizer-2.23.05
-	o webkit-gtk-2.10.7
 	o webmin-1.780
 	o websvn-2.3.3
 	o weechat-1.4
