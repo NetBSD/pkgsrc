@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.26 2016/01/30 22:15:11 ryoon Exp $
+@comment $NetBSD: PLIST.common,v 1.27 2016/02/03 18:40:18 jperkin Exp $
 ${MACHINE_GNU_PLATFORM}/bin/ar
 ${MACHINE_GNU_PLATFORM}/bin/as
 ${MACHINE_GNU_PLATFORM}/bin/ld
@@ -127,7 +127,7 @@ share/locale/fi/LC_MESSAGES/opcodes.mo
 share/locale/fr/LC_MESSAGES/bfd.mo
 share/locale/fr/LC_MESSAGES/binutils.mo
 share/locale/fr/LC_MESSAGES/gas.mo
-share/locale/fr/LC_MESSAGES/gold.mo
+${PLIST.gold}share/locale/fr/LC_MESSAGES/gold.mo
 ${PLIST.gprof}share/locale/fr/LC_MESSAGES/gprof.mo
 share/locale/fr/LC_MESSAGES/ld.mo
 share/locale/fr/LC_MESSAGES/opcodes.mo
@@ -198,7 +198,7 @@ share/locale/vi/LC_MESSAGES/opcodes.mo
 share/locale/zh_CN/LC_MESSAGES/bfd.mo
 share/locale/zh_CN/LC_MESSAGES/binutils.mo
 share/locale/zh_CN/LC_MESSAGES/gas.mo
-share/locale/zh_CN/LC_MESSAGES/gold.mo
+${PLIST.gold}share/locale/zh_CN/LC_MESSAGES/gold.mo
 share/locale/zh_CN/LC_MESSAGES/ld.mo
 share/locale/zh_CN/LC_MESSAGES/opcodes.mo
 ${PLIST.gprof}share/locale/vi/LC_MESSAGES/gprof.mo
