@@ -1,0 +1,25 @@
+$NetBSD: patch-common_CMakeLists.txt,v 1.1 2016/02/03 19:34:33 bouyer Exp $
+
+Don't use ${CMAKE_MODULE_PATH} directly as it will be changed
+and containt multiple directories
+
+--- common/CMakeLists.txt.orig	2015-12-14 20:13:21.000000000 +0100
++++ common/CMakeLists.txt	2015-12-14 20:16:14.000000000 +0100
+@@ -17,7 +17,7 @@
+     COMMAND ${CMAKE_COMMAND}
+         -DinputFiles="${PROJECT_SOURCE_DIR}/common/gal/opengl/shader.vert\\;${PROJECT_SOURCE_DIR}/common/gal/opengl/shader.frag"
+         -DoutputFile="shader_src.h"
+-        -P ${CMAKE_MODULE_PATH}/Shaders.cmake
++        -P ${PROJECT_SOURCE_DIR}/CMakeModules/Shaders.cmake
+     WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/common/gal/opengl
+     COMMENT "Generating headers containing GLSL source code"
+     )
+@@ -127,7 +127,7 @@
+         -DOUTPUT_FILE=${CMAKE_BINARY_DIR}/kicad_build_version.h
+         -DSRC_PATH=${PROJECT_SOURCE_DIR}
+         -DCMAKE_MODULE_PATH=${CMAKE_MODULE_PATH}
+-        -P ${CMAKE_MODULE_PATH}/WriteVersionHeader.cmake
++        -P ${PROJECT_SOURCE_DIR}/CMakeModules/WriteVersionHeader.cmake
+     WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
+     COMMENT "Generating version string header"
+     )
