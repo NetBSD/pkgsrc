@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.475 2016/02/03 05:07:54 mef Exp $
+$NetBSD: CHANGES-2016,v 1.476 2016/02/03 12:35:57 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -674,3 +674,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added fonts/stix-otf version 1.1.0 [nros 2016-02-02]
 	Updated converters/latex2rtf to 2.3.10 [nros 2016-02-02]
 	Updated devel/p5-File-LibMagic to 1.15 [mef 2016-02-03]
+	Updated textproc/iso-codes to 3.65 [mef 2016-02-03]
