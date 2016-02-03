@@ -1,8 +1,8 @@
-$NetBSD: patch-configure,v 1.10 2015/09/17 11:24:11 he Exp $
+$NetBSD: patch-configure,v 1.11 2016/02/03 13:10:27 he Exp $
 
 Regen from configure.ac.
 
---- configure.orig	2015-09-10 18:56:19.000000000 +0000
+--- configure.orig	2015-05-27 07:51:50.000000000 +0000
 +++ configure
 @@ -797,6 +797,8 @@ BUILD_PLUGIN_NFS_FALSE
  BUILD_PLUGIN_NFS_TRUE
@@ -125,7 +125,7 @@ Regen from configure.ac.
 +$as_echo_n "checking for sysctl kern.cp_time... " >&6; }
 +if test -x /sbin/sysctl
 +then
-+	/sbin/sysctl kern.cp_times 2>/dev/null
++	/sbin/sysctl kern.cp_time 2>/dev/null
 +	if test $? -eq 0
 +	then
 +		{ $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
