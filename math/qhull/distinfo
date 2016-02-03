@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/03 23:33:43 agc Exp $
+$NetBSD: distinfo,v 1.4 2016/02/03 16:05:56 nros Exp $
 
-SHA1 (qhull-2003.1.tar.gz) = 2e783b5e45cecc053b1dc08c682b871dfbb59dd2
-RMD160 (qhull-2003.1.tar.gz) = 6c82ad27601f9aa12498e3bc08f06c7b777a5f4d
-SHA512 (qhull-2003.1.tar.gz) = 4d72b99d13fb7c61549c248805338ef9232fa79ddf9a8e265f23a3cf1e7e74b3725db8b08ac4c5756b33c8cf0353e7b7957afe4b2f959558fa2d779a85a269e8
-Size (qhull-2003.1.tar.gz) = 724313 bytes
-SHA1 (patch-aa) = 5ad003e5dd81c41ed402b3b1c390a153640cce4e
+SHA1 (qhull-2015-src-7.2.0.tgz) = 8188765b9f9f004e38e9906fd2a68e81119f05fb
+RMD160 (qhull-2015-src-7.2.0.tgz) = 1176d0477771294eb096cf6ed2d26cb8186b8613
+SHA512 (qhull-2015-src-7.2.0.tgz) = a544f88b5fbabc592fdc4c5533ba58a8f856e018b85128f43d0532a1143123ceb0d5ca9ae1d27722efa5d08092c017bf7715c157d1019f447e6746f23f02dcd4
+Size (qhull-2015-src-7.2.0.tgz) = 1010153 bytes
