@@ -1,4 +1,4 @@
-$NetBSD: patch-src_irq.c,v 1.1 2015/08/18 07:47:46 he Exp $
+$NetBSD: patch-src_irq.c,v 1.2 2016/02/03 15:10:43 he Exp $
 
 Provide a port to NetBSD.
 
@@ -36,7 +36,7 @@ Provide a port to NetBSD.
  static int irq_read (void)
  {
  	FILE *fh;
-@@ -183,6 +196,63 @@ static int irq_read (void)
+@@ -183,6 +196,64 @@ static int irq_read (void)
  
  	return (0);
  } /* int irq_read */
@@ -60,6 +60,7 @@ Provide a port to NetBSD.
 +		size_t newlen;
 +		int error;
 +
++		newlen = buflen;
 +		if (buflen)
 +			buf = malloc(buflen);
 +		error = sysctl(mib, __arraycount(mib),
@@ -93,7 +94,7 @@ Provide a port to NetBSD.
 +		buflen -= evs->ev_len;
 +		evs =(const void*)((const uint64_t *)evs + evs->ev_len);
 +	}
-+	      
++	free(buf);
 +	return 0;
 +}
 +#endif /* KERNEL_NETBSD */
