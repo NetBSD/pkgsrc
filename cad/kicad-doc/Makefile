@@ -1,20 +1,24 @@
-# $NetBSD: Makefile,v 1.1.1.1 2014/02/17 20:40:48 bouyer Exp $
+# $NetBSD: Makefile,v 1.2 2016/02/03 19:37:14 bouyer Exp $
 #
 
-V=		20140214
+V=		4.0.1
 DISTNAME=	kicad-doc-${V}
 CATEGORIES=	cad
-MASTER_SITES=	http://ftp.fr.NetBSD.org/~bouyer/kicad/
+MASTER_SITES=	http://downloads.kicad-pcb.org/docs/
 
 MAINTAINER=	bouyer@NetBSD.org
-HOMEPAGE=	http://iut-tice.ujf-grenoble.fr/kicad/
-COMMENT=	Documentation for the schematic and PCB CAD software
+HOMEPAGE=	http://kicad-pcb.org/
+COMMENT=	Documentation for the PCB CAD software
 LICENSE=	gnu-gpl-v2
 
-USE_PKGLOCALEDIR=	yes
-USE_LANGUAGES=		c c++
-USE_CMAKE=		yes
+DOCDIR=		${DESTDIR}${PREFIX}/share/doc/kicad
 
-.include "../../devel/cmake/buildlink3.mk"
+do-build:
+do-install:
+	${INSTALL_DATA_DIR} ${DOCDIR}
+	${CP} -R ${WRKSRC}/share/doc/kicad/help ${DOCDIR}/
+	${FIND} ${DOCDIR} -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
+	${FIND} ${DOCDIR} -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE}
+
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.pkg.mk"
