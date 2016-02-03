@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.489 2016/02/03 19:44:34 bouyer Exp $
+$NetBSD: CHANGES-2016,v 1.490 2016/02/03 19:56:57 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -692,3 +692,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated cad/kicad-lib to 4.0.1 [bouyer 2016-02-03]
 	Added cad/kicad-footprints version 4.0.1 [bouyer 2016-02-03]
 	Added cad/kicad-i18n version 4.0.1 [bouyer 2016-02-03]
+	Updated devel/binutils to 2.26nb1 [jperkin 2016-02-03]
