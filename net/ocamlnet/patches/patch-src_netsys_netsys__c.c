@@ -1,14 +1,10 @@
-$NetBSD: patch-src_netsys_netsys__c.c,v 1.5 2014/10/13 12:37:50 jaapb Exp $
+$NetBSD: patch-src_netsys_netsys__c.c,v 1.6 2016/02/03 13:19:33 jaapb Exp $
 
-DragonFly doesn't define AT_SYMLINK_FOLLOW.  The added patch will
-at least unbreak the build for some code that obviously won't work.
-https://sourceforge.net/tracker/?func=detail&aid=3545170&group_id=19774&atid=319774
-
-Also work around absence of AT_REMOVEDIR, as on NetBSD 6.0.
---- src/netsys/netsys_c.c.orig	2014-09-16 11:51:39.000000000 +0000
+Work around absence of AT_REMOVEDIR, as on NetBSD 6.0.
+--- src/netsys/netsys_c.c.orig	2015-06-21 15:26:42.000000000 +0000
 +++ src/netsys/netsys_c.c
-@@ -428,6 +428,10 @@ CAMLprim value netsys_at_fdcwd(value dum
- #define AT_SYMLINK_NOFOLLOW 0
+@@ -432,6 +432,10 @@ CAMLprim value netsys_at_fdcwd(value dum
+ #define AT_SYMLINK_FOLLOW 0
  #endif
  
 +#ifndef AT_REMOVEDIR
@@ -16,9 +12,9 @@ Also work around absence of AT_REMOVEDIR, as on NetBSD 6.0.
 +#endif
 +
  static int at_flags_table[] = {
-     AT_EACCESS, AT_SYMLINK_NOFOLLOW, AT_REMOVEDIR
+     AT_EACCESS, AT_SYMLINK_NOFOLLOW, AT_SYMLINK_FOLLOW, AT_REMOVEDIR
  };
-@@ -545,7 +549,7 @@ CAMLprim value netsys_renameat(value old
+@@ -549,7 +553,7 @@ CAMLprim value netsys_renameat(value old
  CAMLprim value netsys_linkat(value olddirfd, value oldpath,
  			     value newdirfd, value newpath, value flags)
  {
