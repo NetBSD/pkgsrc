@@ -1,4 +1,4 @@
-$NetBSD: patch-configure.ac,v 1.8 2015/09/17 11:24:11 he Exp $
+$NetBSD: patch-configure.ac,v 1.9 2016/02/03 13:10:27 he Exp $
 
 Add KERNEL_NETBSD, add entry and disk plugins for NetBSD,
 and also do swap for "have_swapctl_three_args" (as for NetBSD).
@@ -43,7 +43,7 @@ Also, the start of process support, but that's not yet finished.
 +AC_MSG_CHECKING([for sysctl kern.cp_time])
 +if test -x /sbin/sysctl
 +then
-+	/sbin/sysctl kern.cp_times 2>/dev/null
++	/sbin/sysctl kern.cp_time 2>/dev/null
 +	if test $? -eq 0
 +	then
 +		AC_MSG_RESULT([yes])
