@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.479 2016/02/03 12:52:14 jaapb Exp $
+$NetBSD: CHANGES-2016,v 1.480 2016/02/03 12:55:15 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -677,3 +677,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/iso-codes to 3.65 [mef 2016-02-03]
 	Updated textproc/ispell-de to 20151222nb3 [mef 2016-02-03]
 	Updated security/ocaml-ssl to 0.5.2 [jaapb 2016-02-03]
+	Updated textproc/p5-Encode to 2.80 [mef 2016-02-03]
