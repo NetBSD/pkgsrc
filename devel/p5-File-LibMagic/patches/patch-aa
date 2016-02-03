@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.7 2015/09/23 06:43:48 mef Exp $
+$NetBSD: patch-aa,v 1.8 2016/02/03 05:07:11 mef Exp $
 
 (1)
 Incompatible change in the newer ExtUtils-MakeMaker:
@@ -20,7 +20,7 @@ http://mail-index.netbsd.org/pkgsrc-users/2015/09/19/msg022238.html
    "INC" => "-I. -Ic",
 -  "LDFROM" => "LibMagic\$(OBJ_EXT)",
 -  "LIBS" => "-lmagic",
-+  "LDFROM" => "lib/File/LibMagic\$(OBJ_EXT)",
++  "LDFROM" => "LibMagic\$(OBJ_EXT)",
 +  'LIBS' => "$ENV{LDFLAGS}  -lmagic -lz", # e.g., '-lm'
    "LICENSE" => "perl",
    "MIN_PERL_VERSION" => "5.008",
