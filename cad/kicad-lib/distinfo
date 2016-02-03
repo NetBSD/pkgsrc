@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 00:21:18 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/02/03 19:36:49 bouyer Exp $
 
-SHA1 (kicad-lib-20140214.tar.gz) = effdbaf079a7cc8df6791a90689e798dea93e7a2
-RMD160 (kicad-lib-20140214.tar.gz) = 01897ec2d1fbf980a837707a0803ba51c2b1a915
-SHA512 (kicad-lib-20140214.tar.gz) = 84213e73e7c6d7a2ac22e16a4762e0e8cea4730b10bd693e39fd44ac41e22531151aa2fd12bd19b896a4b4f7014258bc7e0be0b1ffe5b183e983d54db3507ff8
-Size (kicad-lib-20140214.tar.gz) = 48623882 bytes
-SHA1 (patch-CMakeLists.txt) = a24893bbca87d03fe3103095766fcb6f746252f7
+SHA1 (kicad-library-4.0.1.tar.gz) = 11afc09ea53a098975a53192045b21d04c469372
+RMD160 (kicad-library-4.0.1.tar.gz) = 02e612e16e445a04d4ab19412232217d4ff3e26a
+SHA512 (kicad-library-4.0.1.tar.gz) = 88b9d31230ac85e4b4341b0b2194d6fc622c03d62e80c65d82d999e02324d902ce90881fd5592bde9e8c2695370cb0c35e8e4473f640d1a25eddf453637b6b6f
+Size (kicad-library-4.0.1.tar.gz) = 105054096 bytes
