@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.488 2016/02/03 17:40:23 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.489 2016/02/03 19:44:34 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -687,3 +687,8 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated math/qhull to 2015.2 [nros 2016-02-03]
 	Updated www/webkit-gtk to 2.10.7 [leot 2016-02-03]
 	Updated devel/py-mercurial to 3.7 [wiz 2016-02-03]
+	Updated cad/kicad to 4.0.1 [bouyer 2016-02-03]
+	Updated cad/kicad-doc to 4.0.1 [bouyer 2016-02-03]
+	Updated cad/kicad-lib to 4.0.1 [bouyer 2016-02-03]
+	Added cad/kicad-footprints version 4.0.1 [bouyer 2016-02-03]
+	Added cad/kicad-i18n version 4.0.1 [bouyer 2016-02-03]
