@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2015/11/02 10:28:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2016/02/03 17:40:10 wiz Exp $
 bin/hg
 ${PYSITELIB}/hgext/__init__.py
 ${PYSITELIB}/hgext/__init__.pyc
@@ -15,6 +15,9 @@ ${PYSITELIB}/hgext/bugzilla.pyo
 ${PYSITELIB}/hgext/censor.py
 ${PYSITELIB}/hgext/censor.pyc
 ${PYSITELIB}/hgext/censor.pyo
+${PYSITELIB}/hgext/chgserver.py
+${PYSITELIB}/hgext/chgserver.pyc
+${PYSITELIB}/hgext/chgserver.pyo
 ${PYSITELIB}/hgext/children.py
 ${PYSITELIB}/hgext/children.pyc
 ${PYSITELIB}/hgext/children.pyo
@@ -153,9 +156,6 @@ ${PYSITELIB}/hgext/pager.pyo
 ${PYSITELIB}/hgext/patchbomb.py
 ${PYSITELIB}/hgext/patchbomb.pyc
 ${PYSITELIB}/hgext/patchbomb.pyo
-${PYSITELIB}/hgext/progress.py
-${PYSITELIB}/hgext/progress.pyc
-${PYSITELIB}/hgext/progress.pyo
 ${PYSITELIB}/hgext/purge.py
 ${PYSITELIB}/hgext/purge.pyc
 ${PYSITELIB}/hgext/purge.pyo
@@ -325,6 +325,9 @@ ${PYSITELIB}/mercurial/help/hgignore.5.txt
 ${PYSITELIB}/mercurial/help/hgignore.txt
 ${PYSITELIB}/mercurial/help/hgrc.5.txt
 ${PYSITELIB}/mercurial/help/hgweb.txt
+${PYSITELIB}/mercurial/help/internals/bundles.txt
+${PYSITELIB}/mercurial/help/internals/changegroups.txt
+${PYSITELIB}/mercurial/help/internals/revlogs.txt
 ${PYSITELIB}/mercurial/help/merge-tools.txt
 ${PYSITELIB}/mercurial/help/multirevs.txt
 ${PYSITELIB}/mercurial/help/patterns.txt
@@ -467,6 +470,27 @@ ${PYSITELIB}/mercurial/posix.pyo
 ${PYSITELIB}/mercurial/progress.py
 ${PYSITELIB}/mercurial/progress.pyc
 ${PYSITELIB}/mercurial/progress.pyo
+${PYSITELIB}/mercurial/pure/__init__.py
+${PYSITELIB}/mercurial/pure/__init__.pyc
+${PYSITELIB}/mercurial/pure/__init__.pyo
+${PYSITELIB}/mercurial/pure/base85.py
+${PYSITELIB}/mercurial/pure/base85.pyc
+${PYSITELIB}/mercurial/pure/base85.pyo
+${PYSITELIB}/mercurial/pure/bdiff.py
+${PYSITELIB}/mercurial/pure/bdiff.pyc
+${PYSITELIB}/mercurial/pure/bdiff.pyo
+${PYSITELIB}/mercurial/pure/diffhelpers.py
+${PYSITELIB}/mercurial/pure/diffhelpers.pyc
+${PYSITELIB}/mercurial/pure/diffhelpers.pyo
+${PYSITELIB}/mercurial/pure/mpatch.py
+${PYSITELIB}/mercurial/pure/mpatch.pyc
+${PYSITELIB}/mercurial/pure/mpatch.pyo
+${PYSITELIB}/mercurial/pure/osutil.py
+${PYSITELIB}/mercurial/pure/osutil.pyc
+${PYSITELIB}/mercurial/pure/osutil.pyo
+${PYSITELIB}/mercurial/pure/parsers.py
+${PYSITELIB}/mercurial/pure/parsers.pyc
+${PYSITELIB}/mercurial/pure/parsers.pyo
 ${PYSITELIB}/mercurial/pushkey.py
 ${PYSITELIB}/mercurial/pushkey.pyc
 ${PYSITELIB}/mercurial/pushkey.pyo
@@ -476,6 +500,9 @@ ${PYSITELIB}/mercurial/pvec.pyo
 ${PYSITELIB}/mercurial/py3kcompat.py
 ${PYSITELIB}/mercurial/py3kcompat.pyc
 ${PYSITELIB}/mercurial/py3kcompat.pyo
+${PYSITELIB}/mercurial/registrar.py
+${PYSITELIB}/mercurial/registrar.pyc
+${PYSITELIB}/mercurial/registrar.pyo
 ${PYSITELIB}/mercurial/repair.py
 ${PYSITELIB}/mercurial/repair.pyc
 ${PYSITELIB}/mercurial/repair.pyo
