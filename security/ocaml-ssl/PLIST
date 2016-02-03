@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/10/09 21:06:57 jaapb Exp $
-@unexec %D/libexec/ocaml-findlib-register del %D/${OCAML_SITELIB}/ssl
+@comment $NetBSD: PLIST,v 1.5 2016/02/03 12:48:38 jaapb Exp $
 ${OCAML_SITELIB}/ssl/META
 ${OCAML_SITELIB}/ssl/libssl_stubs.a
 ${OCAML_SITELIB}/ssl/libssl_threads_stubs.a
@@ -17,4 +16,3 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/ssl/ssl_threads.cmxa
 ${OCAML_SITELIB}/ssl/ssl_threads.mli
 ${OCAML_SITELIB}/ssl/dllssl_stubs.so
 ${OCAML_SITELIB}/ssl/dllssl_threads_stubs.so
-@exec %D/libexec/ocaml-findlib-register add %D/${OCAML_SITELIB}/ssl
