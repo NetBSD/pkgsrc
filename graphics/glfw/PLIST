@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2016/02/04 11:38:10 leot Exp $
+include/GLFW/glfw3.h
+include/GLFW/glfw3native.h
+lib/cmake/glfw/glfw3Config.cmake
+lib/cmake/glfw/glfw3ConfigVersion.cmake
+lib/cmake/glfw/glfwTargets-noconfig.cmake
+lib/cmake/glfw/glfwTargets.cmake
+lib/libglfw.so
+lib/libglfw.so.3
+lib/libglfw.so.3.1
+lib/pkgconfig/glfw3.pc
