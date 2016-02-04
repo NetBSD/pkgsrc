@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2015/04/25 14:20:33 tnn Exp $
+# $NetBSD: Makefile,v 1.32 2016/02/04 12:13:30 wiz Exp $
 
-PKGREVISION= 2
+PKGREVISION= 3
 .include "../../devel/dconf/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/dconf/dconf-editor/}
