@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.10 2015/11/11 17:08:25 leot Exp $
+@comment $NetBSD: PLIST,v 1.11 2016/02/04 11:50:24 leot Exp $
 bin/mujstest
 bin/mupdf
+${PLIST.glfw}bin/mupdf-gl
 bin/mutool
 include/mupdf/fitz.h
 include/mupdf/fitz/annotation.h

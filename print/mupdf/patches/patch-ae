@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.4 2014/04/21 16:14:40 wiz Exp $
+$NetBSD: patch-ae,v 1.5 2016/02/04 11:50:24 leot Exp $
 
 Avoid namespace conflicts with bswap(3).
 
---- source/fitz/crypt-sha2.c.orig	2014-04-11 15:10:41.000000000 +0000
+--- source/fitz/crypt-sha2.c.orig	2015-11-10 16:19:51.000000000 +0000
 +++ source/fitz/crypt-sha2.c
 @@ -17,7 +17,7 @@ static inline int isbigendian(void)
  	return *(char*)&one == 0;

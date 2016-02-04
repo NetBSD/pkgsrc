@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.22 2015/11/12 21:11:31 leot Exp $
+$NetBSD: distinfo,v 1.23 2016/02/04 11:50:24 leot Exp $
 
 SHA1 (mupdf-1.8-source.tar.gz) = 9fbc9e06f0b74fe904745c363324eaca3517bfce
 RMD160 (mupdf-1.8-source.tar.gz) = 2708f5650f23101a66cef92b7903aafb716f9c02
 SHA512 (mupdf-1.8-source.tar.gz) = 938fbed4afc0dd0aa621911cd70b9289c6a4f13d026f9390b11fc86d5b37845a76943c9fa42f218f67fe298295f15d6664a18be7bf73b5d952724122510f9deb
 Size (mupdf-1.8-source.tar.gz) = 14169777 bytes
-SHA1 (patch-Makethird) = 5ec66437c5695558f5e6497182d1f0c197ee5299
-SHA1 (patch-ab) = 8f8f167d9207734891c68e358c802107f5600da2
-SHA1 (patch-ac) = 51cfd962d498c70308053507b159df2634b2fbd6
-SHA1 (patch-ae) = bad4b6b8c669c752c6318bb564d1176daac30d19
-SHA1 (patch-source_fitz_load-jpx.c) = e5271cf60aff104e05ff60333be54712475d5a33
+SHA1 (patch-Makethird) = a44207c6c33fabec7e35c5f94bf30ab4172a93bc
+SHA1 (patch-ab) = a8ea41737aee65ad36ff52089d772844fb96d464
+SHA1 (patch-ac) = 75447e4a2ab2ba9f9691a860499897e15d2498fa
+SHA1 (patch-ae) = c6b113818b32cb4470e8549c00a16e0b2f364ede
+SHA1 (patch-source_fitz_load-jpx.c) = 661b6a7f1d4da4f0cf5de3762db2f77d91239a6b
