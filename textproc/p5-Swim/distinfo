@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/10/25 01:20:16 schmonz Exp $
+$NetBSD: distinfo,v 1.6 2016/02/04 14:45:38 schmonz Exp $
 
-SHA1 (Swim-0.1.41.tar.gz) = 983732108bf8da029eb007780458ff4e0ccb35ce
-RMD160 (Swim-0.1.41.tar.gz) = e60346f93f0e37d890ccef982b9046e66b5344e8
-SHA512 (Swim-0.1.41.tar.gz) = a76fef6f4fce52b598c56cc11ed45332e1a530b78445c8095f6013a1045fb5243ce1b9d8cd553fcdafdb446307107c0a34980b2ef0fd40fa52dcbbc375cc7d2a
-Size (Swim-0.1.41.tar.gz) = 47124 bytes
+SHA1 (Swim-0.1.42.tar.gz) = 3f227dfdd89302314832583813f865b7d86a8eca
+RMD160 (Swim-0.1.42.tar.gz) = b9a3074670ae2b9bb32cf7a8a170c23d46dc1b8e
+SHA512 (Swim-0.1.42.tar.gz) = c24a009335bb432bd0e19da11f892ab629e0cdfead8d529a3ae90aca3bf576066ac994a1eb847cf3f1f3cb8d782acedf9301d6ef7bbafe0420b5551837269583
+Size (Swim-0.1.42.tar.gz) = 47051 bytes
