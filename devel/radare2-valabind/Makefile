@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2015/07/19 16:42:55 kamil Exp $
+# $NetBSD: Makefile,v 1.5 2016/02/04 12:13:30 wiz Exp $
 
 .include "../../devel/radare2/Makefile.common"
 
 PKGNAME=	radare2-valabind-0.9.2
-PKGREVISION=	1
+PKGREVISION=	2
 DISTNAME=	valabind-0.9.2
 CATEGORIES=	devel
 
