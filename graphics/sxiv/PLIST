@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2016/02/04 13:49:06 leot Exp $
+bin/sxiv
+man/man1/sxiv.1
+share/sxiv/exec/image-info
+share/sxiv/exec/key-handler
