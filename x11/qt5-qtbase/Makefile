@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2016/01/18 20:52:43 nros Exp $
+# $NetBSD: Makefile,v 1.30 2016/02/04 10:41:12 markd Exp $
 
 DISTNAME=	qtbase-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtbase-${QTVERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	C++ X GUI toolkit
 
 .include "../../x11/qt5-qtbase/Makefile.common"
@@ -121,12 +121,17 @@ CHECK_INTERPRETER_SKIP+=qt5/examples/widgets/tools/plugandpaintplugins/extrafilt
 CHECK_INTERPRETER_SKIP+=qt5/examples/widgets/tools/styleplugin/plugin/plugin.pro
 CHECK_INTERPRETER_SKIP+=qt5/mkspecs/macx-ios-clang/rename_main.sh
 
-SUBST_CLASSES+=		opt
+SUBST_CLASSES+=		opt path
 SUBST_STAGE.opt=	pre-configure
 SUBST_MESSAGE.opt=	Removing some Qt5 default compiler flags.
 SUBST_FILES.opt=	mkspecs/common/gcc-base.conf
 SUBST_SED.opt=		-e 's,-O[23],,'
 SUBST_SED.opt+=		-e 's,-fvisibility=hidden,,'
+
+SUBST_STAGE.path=	pre-configure
+SUBST_MESSAGE.path=	Add to default XDG path.
+SUBST_FILES.path=	src/corelib/io/qstandardpaths_unix.cpp
+SUBST_VARS.path=	LOCALBASE
 
 BROKEN_FILES=		qt5/mkspecs/modules/qt_lib_bootstrap_private.pri
 
