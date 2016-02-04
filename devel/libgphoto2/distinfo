@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.26 2015/11/03 03:27:41 agc Exp $
+$NetBSD: distinfo,v 1.27 2016/02/04 11:57:50 wiz Exp $
 
 SHA1 (libgphoto2-2.5.8.tar.bz2) = 976feb07d51026e6ca647f9fa333c500c5e0c041
 RMD160 (libgphoto2-2.5.8.tar.bz2) = bbb57fdace9783f9829bafbd89818949f6d0fce3
@@ -8,3 +8,7 @@ SHA1 (patch-aj) = 111b26861d59dddf7a8d0998cb7ae6513114fe38
 SHA1 (patch-ak) = ecba9efbf66eda280258a504caaaf6fff50657cd
 SHA1 (patch-an) = 60d109d29834c01cdae29bcebde153e35af17884
 SHA1 (patch-ao) = 01e7eea353ef12b97b54aeb34f00abfd1f50c3ff
+SHA1 (patch-camlibs_ax203_jpeg__memsrcdest.c) = 763f39f07023aa82de6e91014a3fbf19e9e79afa
+SHA1 (patch-camlibs_ax203_jpeg__memsrcdest.h) = a78c6fd04f1fb72863ce609ac3ad25ebe12dc51c
+SHA1 (patch-camlibs_jl2005c_jpeg__memsrcdest.c) = 0b178dc031b0b051a230eff6cc6c322596d1a8ee
+SHA1 (patch-camlibs_jl2005c_jpeg__memsrcdest.h) = 49bff8c0523d9cf87be92856cef3dd9127b983a0
