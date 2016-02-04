@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2015/11/11 17:08:25 leot Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2016/02/04 11:50:24 leot Exp $
 
 BUILDLINK_TREE+=	mupdf
 
@@ -14,6 +14,11 @@ pkgbase := mupdf
 .if !empty(PKG_BUILD_OPTIONS.mupdf:Mcurl)
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
+.endif
+
+.if !empty(PKG_BUILD_OPTIONS.mupdf:Mglfw)
+.include "../../graphics/glut/buildlink3.mk"
+.include "../../graphics/glfw/buildlink3.mk"
 .endif
 
 .include "../../graphics/jbig2dec/buildlink3.mk"

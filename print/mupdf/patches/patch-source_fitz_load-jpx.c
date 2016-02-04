@@ -1,9 +1,9 @@
-$NetBSD: patch-source_fitz_load-jpx.c,v 1.1 2014/05/18 08:12:22 wiz Exp $
+$NetBSD: patch-source_fitz_load-jpx.c,v 1.2 2016/02/04 11:50:24 leot Exp $
 
 Fix build with openjpeg-2.1.
 I have misgivings about the code though.
 
---- source/fitz/load-jpx.c.orig	2014-04-11 15:10:41.000000000 +0000
+--- source/fitz/load-jpx.c.orig	2015-11-10 16:19:51.000000000 +0000
 +++ source/fitz/load-jpx.c
 @@ -117,7 +117,8 @@ fz_load_jpx(fz_context *ctx, unsigned ch
  	opj_stream_set_read_function(stream, fz_opj_stream_read);
