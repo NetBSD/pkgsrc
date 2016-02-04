@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2015/12/07 09:04:50 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2016/02/04 09:41:13 wiz Exp $
 
-DISTNAME=	httplib2-0.9
+DISTNAME=	httplib2-0.9.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	${MASTER_SITE_PYPI:=h/httplib2/}
 
