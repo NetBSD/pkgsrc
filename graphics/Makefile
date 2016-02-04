@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.726 2016/01/11 23:50:27 wiz Exp $
+# $NetBSD: Makefile,v 1.727 2016/02/04 11:38:57 leot Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -172,6 +172,7 @@ SUBDIR+=	gimp2-wideangle
 SUBDIR+=	giram
 SUBDIR+=	gle
 SUBDIR+=	glew
+SUBDIR+=	glfw
 SUBDIR+=	glitz
 SUBDIR+=	gliv
 SUBDIR+=	glm
