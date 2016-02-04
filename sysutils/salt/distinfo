@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.16 2015/12/11 00:27:06 wiz Exp $
+$NetBSD: distinfo,v 1.17 2016/02/04 22:05:36 khorben Exp $
 
 SHA1 (salt-2015.8.3.tar.gz) = 0457866d5619febc3cdf3b27b2e736b0c4ae3623
 RMD160 (salt-2015.8.3.tar.gz) = 607db5d35545cfb6c4e8676482133a1560f3e896
 SHA512 (salt-2015.8.3.tar.gz) = 18a2c63d5e54d09468189450557974e47f87d8b7dde52beaae678120da1da1e7aecfff18cf0fdfb63a11cd5f6bab102c229462f0afe5e3e858c0c467761c7121
 Size (salt-2015.8.3.tar.gz) = 6757678 bytes
+SHA1 (patch-salt_modules_status.py) = 5253782b046c2f7b809682f52ce4d04dab1c81ac
