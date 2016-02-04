@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15402 2016/02/03 17:19:36 leot Exp $
+$NetBSD: TODO,v 1.15403 2016/02/04 09:41:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1420,7 +1420,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-gmpy-1.17
 	o py-gnome-menus-3.8.0
 	o py-html2text-2016.1.8
-	o py-httplib2-0.9.2
 	o py-input-pad-1.4.2
 	o py-ipython-4.0
 	o py-jaraco_util-11.0
