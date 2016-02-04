@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.10 2015/11/11 17:08:25 leot Exp $
+$NetBSD: patch-ab,v 1.11 2016/02/04 11:50:24 leot Exp $
 
 o Handle the various operating systems in the same way avoiding hardcoding
 o Build and link with openjpeg-2.1
 
---- Makerules.orig	2015-10-21 14:45:11.000000000 +0000
+--- Makerules.orig	2015-11-10 16:19:51.000000000 +0000
 +++ Makerules
 @@ -29,46 +29,6 @@ ifeq "$(largefile)" "yes"
  CFLAGS += -DFZ_LARGEFILE
@@ -52,7 +52,26 @@ o Build and link with openjpeg-2.1
  HAVE_X11 ?= yes
  HAVE_GLUT ?= yes
  
-@@ -98,8 +58,6 @@ SYS_JBIG2DEC_LIBS = -ljbig2dec
+@@ -87,8 +47,16 @@ SYS_CURL_DEPS = -lpthread -lrt
+ SYS_X11_CFLAGS = $(shell pkg-config --cflags x11 xext)
+ SYS_X11_LIBS = $(shell pkg-config --libs x11 xext)
+ 
+-SYS_GLUT_CFLAGS =
+-SYS_GLUT_LIBS = -lglut -lGL
++ifeq "$(shell pkg-config --exists glut && echo yes)" "yes"
++SYS_GLUT_CFLAGS = $(shell pkg-config --cflags glut)
++SYS_GLUT_LIBS = $(shell pkg-config --libs glut)
++endif
++
++ifeq "$(shell pkg-config --exists glfw3 && echo yes)" "yes"
++HAVE_GLFW = yes
++SYS_GLFW_CFLAGS = $(shell pkg-config --cflags glfw3)
++SYS_GLFW_LIBS = $(shell pkg-config --libs glfw3)
++endif
+ 
+ SYS_FREETYPE_CFLAGS = $(shell pkg-config --cflags freetype2)
+ SYS_FREETYPE_LIBS = $(shell pkg-config --libs freetype2)
+@@ -98,8 +66,6 @@ SYS_JBIG2DEC_LIBS = -ljbig2dec
  SYS_JPEG_LIBS = -ljpeg
  SYS_ZLIB_LIBS = -lz
  
