@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.12 2015/11/12 21:11:31 leot Exp $
+$NetBSD: patch-ac,v 1.13 2016/02/04 11:50:24 leot Exp $
 
 o libtool support 
 o Install target cleanup
@@ -171,7 +171,7 @@ o libmujs support: install like a non-thirdparty mupdf's library
  $(MUTOOL_OBJ): $(FITZ_HDR) $(PDF_HDR)
  $(MUTOOL) : $(MUPDF_LIB) $(THIRD_LIBS)
  $(MUTOOL) : $(MUTOOL_OBJ)
-@@ -251,19 +244,19 @@ $(MUTOOL) : $(MUTOOL_OBJ)
+@@ -251,27 +244,27 @@ $(MUTOOL) : $(MUTOOL_OBJ)
  
  MJSGEN := $(OUT)/mjsgen
  $(MJSGEN) : $(MUPDF_LIB) $(THIRD_LIBS)
@@ -195,11 +195,12 @@ o libmujs support: install like a non-thirdparty mupdf's library
  $(MUVIEW_X11_OBJ) : $(FITZ_HDR) $(PDF_HDR)
  $(MUVIEW_X11) : $(MUPDF_LIB) $(THIRD_LIBS)
  $(MUVIEW_X11) : $(MUVIEW_X11_OBJ)
-@@ -271,7 +264,7 @@ $(MUVIEW_X11) : $(MUVIEW_X11_OBJ)
+ 	$(LINK_CMD) $(X11_LIBS)
  
  ifeq "$(HAVE_GLFW)" "yes"
- MUVIEW_GLFW := $(OUT)/mupdf-gl
+-MUVIEW_GLFW := $(OUT)/mupdf-gl
 -MUVIEW_GLFW_OBJ := $(addprefix $(OUT)/platform/gl/, gl-font.o gl-input.o gl-main.o)
++MUVIEW_GLFW := $(OUT)/platform/gl/mupdf-gl
 +MUVIEW_GLFW_OBJ := $(addprefix $(OUT)/platform/gl/, gl-font.lo gl-input.lo gl-main.lo)
  $(MUVIEW_GLFW_OBJ) : $(FITZ_HDR) $(PDF_HDR) platform/gl/gl-app.h
  $(MUVIEW_GLFW) : $(MUPDF_LIB) $(THIRD_LIBS) $(GLFW_LIB)
@@ -215,7 +216,7 @@ o libmujs support: install like a non-thirdparty mupdf's library
  $(MUVIEW_X11_CURL_OBJ) : $(FITZ_HDR) $(PDF_HDR)
  $(MUVIEW_X11_CURL) : $(MUPDF_LIB) $(THIRD_LIBS) $(CURL_LIB)
  $(MUVIEW_X11_CURL) : $(MUVIEW_X11_CURL_OBJ)
-@@ -290,7 +283,7 @@ endif
+@@ -290,17 +283,27 @@ endif
  
  ifeq "$(HAVE_WIN32)" "yes"
  MUVIEW_WIN32 := $(OUT)/mupdf
@@ -224,11 +225,14 @@ o libmujs support: install like a non-thirdparty mupdf's library
  $(MUVIEW_WIN32_OBJ) : $(FITZ_HDR) $(PDF_HDR)
  $(MUVIEW_WIN32) : $(MUPDF_LIB) $(THIRD_LIBS)
  $(MUVIEW_WIN32) : $(MUVIEW_WIN32_OBJ)
-@@ -300,7 +293,12 @@ endif
- MUVIEW := $(MUVIEW_X11) $(MUVIEW_WIN32) $(MUVIEW_GLFW)
- MUVIEW_CURL := $(MUVIEW_X11_CURL) $(MUVIEW_WIN32_CURL)
+ 	$(LINK_CMD) $(WIN32_LIBS)
+ endif
  
--INSTALL_APPS := $(MUTOOL) $(MUVIEW) $(MUJSTEST) $(MUVIEW_CURL)
+-MUVIEW := $(MUVIEW_X11) $(MUVIEW_WIN32) $(MUVIEW_GLFW)
++MUVIEW := $(MUVIEW_X11) $(MUVIEW_WIN32)
+ MUVIEW_CURL := $(MUVIEW_X11_CURL) $(MUVIEW_WIN32_CURL)
++MUVIEW_GLFW := $(MUVIEW_GLFW)
++
 +INSTALL_APPS := $(MUTOOL) $(MUJSTEST)
 +ifeq "$(HAVE_CURL)" "yes"
 +INSTALL_APPS += $(MUVIEW_CURL)
@@ -236,9 +240,14 @@ o libmujs support: install like a non-thirdparty mupdf's library
 +INSTALL_APPS += $(MUVIEW)
 +endif
  
+-INSTALL_APPS := $(MUTOOL) $(MUVIEW) $(MUJSTEST) $(MUVIEW_CURL)
++ifeq "$(HAVE_GLFW)" "yes"
++INSTALL_APPS += $(MUVIEW_GLFW)
++endif
+ 
  # --- Examples ---
  
-@@ -343,24 +341,26 @@ libs: $(INSTALL_LIBS)
+@@ -343,24 +346,26 @@ libs: $(INSTALL_LIBS)
  apps: $(INSTALL_APPS)
  
  install: libs apps
