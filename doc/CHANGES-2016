@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.491 2016/02/03 21:00:46 adam Exp $
+$NetBSD: CHANGES-2016,v 1.492 2016/02/04 09:41:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -694,3 +694,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added cad/kicad-i18n version 4.0.1 [bouyer 2016-02-03]
 	Updated devel/binutils to 2.26nb1 [jperkin 2016-02-03]
 	Updated multimedia/ffmpeg2 to 2.8.6 [adam 2016-02-03]
+	Updated www/py-httplib2 to 0.9.2 [wiz 2016-02-04]
