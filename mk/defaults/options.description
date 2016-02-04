@@ -232,6 +232,7 @@ gimp1-helpbrowser	Link against gnome1 to get a help browser.
 git			Enable Git support.
 git-gui			Build the GUI in Tcl/Tk.
 glade			Enable Glade support
+glfw			Enable GLFW support
 gmp			Enable gmp (GNU Multiple Precision Arithmetic Library) support.
 gmp-fat			Build-in all x86 assembler code, detecting CPU at run-time.
 gnome			Enable GNOME support.
