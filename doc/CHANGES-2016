@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.493 2016/02/04 11:39:14 leot Exp $
+$NetBSD: CHANGES-2016,v 1.494 2016/02/04 11:43:51 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -696,3 +696,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated multimedia/ffmpeg2 to 2.8.6 [adam 2016-02-03]
 	Updated www/py-httplib2 to 0.9.2 [wiz 2016-02-04]
 	Added graphics/glfw version 3.1.2 [leot 2016-02-04]
+	Updated textproc/p5-Lingua-Stem-Ru to 0.02 [mef 2016-02-04]
