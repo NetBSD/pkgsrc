@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.496 2016/02/04 11:50:53 leot Exp $
+$NetBSD: CHANGES-2016,v 1.497 2016/02/04 11:51:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -699,3 +699,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/p5-Lingua-Stem-Ru to 0.02 [mef 2016-02-04]
 	Updated www/librest to 0.6nb17 [wiz 2016-02-04]
 	Updated print/mupdf to 1.8nb2 [leot 2016-02-04]
+	Updated devel/pkgconf to 0.9.12.20151211nb2 [wiz 2016-02-04]
