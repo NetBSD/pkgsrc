@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2016/02/04 12:12:36 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2016/02/04 12:16:42 wiz Exp $
 
 DISTNAME=	vala-0.30.0
 CATEGORIES=	lang gnome
@@ -15,6 +15,7 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		bison flex gmake pkg-config
 
 PKGCONFIG_OVERRIDE+=	libvala.pc.in
+PKGCONFIG_OVERRIDE+=	vapigen/vapigen.pc.in
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.24.0
 
