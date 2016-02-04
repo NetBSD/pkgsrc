@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2015/10/05 04:47:02 richard Exp $
+# $NetBSD: Makefile,v 1.65 2016/02/04 11:57:50 wiz Exp $
 
 DISTNAME=	libgphoto2-2.5.8
 PKGREVISION=	1
@@ -20,6 +20,8 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		ac_cv_path_DOXYGEN=false
 CONFIGURE_ARGS+=	--with-gdlib=no
 PKGCONFIG_OVERRIDE+=	libgphoto2.pc.in libgphoto2_port/libgphoto2_port.pc.in
+
+REPLACE_SH=		packaging/generic/check-ptp-camera
 
 .include "../../mk/bsd.prefs.mk"
 
