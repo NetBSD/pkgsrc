@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.497 2016/02/04 11:51:04 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.498 2016/02/04 12:12:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -700,3 +700,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/librest to 0.6nb17 [wiz 2016-02-04]
 	Updated print/mupdf to 1.8nb2 [leot 2016-02-04]
 	Updated devel/pkgconf to 0.9.12.20151211nb2 [wiz 2016-02-04]
+	Updated lang/vala to 0.30.0 [wiz 2016-02-04]
