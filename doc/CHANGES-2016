@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.501 2016/02/04 14:45:44 schmonz Exp $
+$NetBSD: CHANGES-2016,v 1.502 2016/02/04 20:03:05 abs Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -709,3 +709,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/p5-Syntax-Highlight-Engine-Kate to 0.10 [mef 2016-02-04]
 	Added graphics/sxiv version 1.3.2 [leot 2016-02-04]
 	Updated textproc/p5-Swim to 0.1.42 [schmonz 2016-02-04]
+	Updated net/syncthing to 0.12.17 [abs 2016-02-04]
