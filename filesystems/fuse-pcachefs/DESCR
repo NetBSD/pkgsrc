@@ -1,0 +1,8 @@
+The FUSE-based pCacheFS file system provides a simple caching layer for
+other filesystems.  This makes slow, remote filesystems seem very fast
+to access.  Moreover, the cache does not disappear when you start or
+stop pCacheFS or if you reboot your computer -- it is persistent.
+
+pCacheFS is designed for caching large amounts of data on remote
+filesystems that don't change very much, such as movie or music
+libraries.
