@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.503 2016/02/04 20:56:52 reed Exp $
+$NetBSD: CHANGES-2016,v 1.504 2016/02/05 09:13:04 nonaka Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -710,3 +710,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added graphics/sxiv version 1.3.2 [leot 2016-02-04]
 	Updated textproc/p5-Swim to 0.1.42 [schmonz 2016-02-04]
 	Updated net/syncthing to 0.12.17 [abs 2016-02-04]
+	Updated security/keepassx to 2.0.2 [nonaka 2016-02-05]
