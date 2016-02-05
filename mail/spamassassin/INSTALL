@@ -1,8 +1,7 @@
-# $NetBSD: INSTALL,v 1.1 2010/03/24 21:41:10 heinz Exp $
+# $NetBSD: INSTALL,v 1.2 2016/02/05 16:06:08 prlw1 Exp $
 
 case ${STAGE} in
 POST-INSTALL)
 	sa-update --verbose --install @RULESARCHIVE@
 	;;
 esac
-
