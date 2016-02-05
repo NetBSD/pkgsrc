@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.505 2016/02/05 12:15:50 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.506 2016/02/05 17:41:21 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -712,3 +712,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/syncthing to 0.12.17 [abs 2016-02-04]
 	Updated security/keepassx to 2.0.2 [nonaka 2016-02-05]
 	Updated x11/pixman to 0.34.0 [wiz 2016-02-05]
+	Updated www/py-django to 1.8.9 [adam 2016-02-05]
