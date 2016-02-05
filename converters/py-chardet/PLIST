@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.7 2014/01/02 17:55:40 wiz Exp $
-bin/chardetect
+@comment $NetBSD: PLIST,v 1.8 2016/02/05 12:40:56 wiz Exp $
+bin/chardetect-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
