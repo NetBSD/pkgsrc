@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15405 2016/02/04 12:30:01 mef Exp $
+$NetBSD: TODO,v 1.15406 2016/02/05 11:38:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -393,7 +393,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ROMInfo-28
 	o SOGo-2.3.6
 	o SOPE-2.3.6
-	o Sigil-0.9.2
+	o Sigil-0.9.3
 	o TeXmacs-devel-1.0.7.21
 	o TiffIO-140a
 	o YoSucker-81
@@ -626,7 +626,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o emacs-muse-3.20
 	o embryo-1.7.10
 	o emerillon-0.1.90
-	o enlightenment-0.20.1
+	o enlightenment-0.20.4
 	o eog-plugins-3.6.1
 	o epiphany-3.16.0
 	o epiphany-extensions-3.2.0
@@ -1139,6 +1139,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ns-3.14.1
 	o ns-plugger-common-5.1.3
 	o nslint-3.1
+	o nss-3.22
 	o ntop-5.0
 	o nts-82
 	o nuitka-0.5.13.4
@@ -1360,6 +1361,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pinfo-0.6.10
 	o pingus-0.7.4
 	o pioneers-15.3
+	o pixman-0.34.0
 	o pks-0.9.6
 	o plan-1.10.1
 	o plasma-5.4.1
@@ -1717,7 +1719,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o whohas-0.29.1
 	o whowatch-1.8.5
 	o windowlab-1.40
-	o wine-1.8
+	o wine-1.8.1
 	o wine-devel-1.9.2
 	o wmi-11
 	o wmii+ixp-3.9.2 [pkg/43459; wip (wmii-devel); see also libixp entry]
