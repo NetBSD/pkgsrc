@@ -1,0 +1,1 @@
+bin/chardetect @PREFIX@/bin/chardetect-@PYVERSSUFFIX@
