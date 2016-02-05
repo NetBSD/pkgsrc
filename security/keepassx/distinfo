@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2015/12/11 13:37:32 wiz Exp $
+$NetBSD: distinfo,v 1.11 2016/02/05 09:08:56 nonaka Exp $
 
-SHA1 (keepassx-2.0.tar.gz) = e5dc2e55c9ec22a769abac177f2c3b6dfb0a315c
-RMD160 (keepassx-2.0.tar.gz) = 559418be72c22cff2c397b822220765ec5e26234
-SHA512 (keepassx-2.0.tar.gz) = 6c8b8ee6a22cab5da5f262b281ed914e9cce99607312124b068a3386d9da560a3584acea4ce1be6700e40087febcc269273ab67ea472b99e6d3f75048d164788
-Size (keepassx-2.0.tar.gz) = 1524638 bytes
+SHA1 (keepassx-2.0.2.tar.gz) = 9591e89484e3c62f7de040915ebf0ddd33fa85d7
+RMD160 (keepassx-2.0.2.tar.gz) = c1edfc81e7ac1c11dcddf4fc76b39eef36fad982
+SHA512 (keepassx-2.0.2.tar.gz) = 3f661d3b5807c5acafc65310ecd8bd4d0bcd51a0c919e219bba616cb3f54434f8f81ba533ab5ccec00d454838355ff048f4ffbc308442fad4f973d1766b95072
+Size (keepassx-2.0.2.tar.gz) = 1532353 bytes
