@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2015/08/07 11:20:32 jaapb Exp $
+# $NetBSD: Makefile,v 1.6 2016/02/06 12:10:33 jaapb Exp $
 
 
 DISTNAME=	type_conv-${VERS}
-VERS=			111.13.00
-PKGREVISION=	4
+PKGNAME=	ocaml-${DISTNAME}
+VERS=			113.00.02
 CATEGORIES=	devel
-MASTER_SITES=	https://github.com/janestreet/type_conv/archive/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=janestreet/type_conv/archive/}
 DISTFILES=	${VERS}${EXTRACT_SUFX}
 DIST_SUBDIR=	ocaml-type_conv
 
