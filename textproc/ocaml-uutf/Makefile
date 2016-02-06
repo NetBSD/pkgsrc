@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2016/02/06 12:10:34 jaapb Exp $
+# $NetBSD: Makefile,v 1.7 2016/02/06 12:45:35 jaapb Exp $
 
-DISTNAME=	uutf-0.9.3
+DISTNAME=	uutf-0.9.4
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	http://erratique.ch/software/uutf/releases/
 EXTRACT_SUFX=	.tbz
@@ -19,9 +18,11 @@ OCAML_USE_FINDLIB=	yes
 
 do-build:
 .if ${OCAML_USE_OPT_COMPILER} == "yes"
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./pkg/build true
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ocaml ./pkg/build.ml \
+		native=true native-dynlink=true cmdliner=false
 .else
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./pkg/build false
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ocaml ./pkg/build.ml \
+		native=false native-dynlink=false cmdliner=false
 .endif
 
 do-install:
