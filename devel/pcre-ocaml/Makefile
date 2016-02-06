@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2016/02/03 13:16:31 jaapb Exp $
+# $NetBSD: Makefile,v 1.22 2016/02/06 12:10:32 jaapb Exp $
 
 DISTNAME=		pcre-ocaml-7.1.6
-PKGNAME=	${DISTNAME} # avoid prefixing with ocaml
 CATEGORIES=		devel
 MASTER_SITES=          ${MASTER_SITE_GITHUB:=mmottl/}
 GITHUB_RELEASE=                v${PKGVERSION_NOREV}
