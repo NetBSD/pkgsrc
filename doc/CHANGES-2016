@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.518 2016/02/06 12:35:12 jaapb Exp $
+$NetBSD: CHANGES-2016,v 1.519 2016/02/06 12:45:51 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -729,3 +729,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ocaml-reactiveData to 0.2 [jaapb 2016-02-06]
 	Updated devel/ocaml-lwt to 2.5.1 [jaapb 2016-02-06]
 	Updated textproc/ocaml-text to 0.8 [jaapb 2016-02-06]
+	Updated textproc/ocaml-uutf to 0.9.4 [jaapb 2016-02-06]
