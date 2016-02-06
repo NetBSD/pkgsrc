@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 03:27:52 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/02/06 11:23:41 jaapb Exp $
 
-SHA1 (ocaml-reactiveData/0.1.tar.gz) = ea52b18d332e6aa08a86d1509d9282b3c1aacfab
-RMD160 (ocaml-reactiveData/0.1.tar.gz) = 120b4cc506923c0937c695eaa4323112873d9907
-SHA512 (ocaml-reactiveData/0.1.tar.gz) = 4c1d000d7c8713d365473e924ad22cc285a0d30009e4f3a4c23cb2fed9678209860cbfe9787b4aef24c9d1fe3b8bf2f71609e45bd52abdff5e27adc3afa651c0
-Size (ocaml-reactiveData/0.1.tar.gz) = 17074 bytes
+SHA1 (reactiveData-0.2.tar.gz) = 2bf38de89be39110e8538203719067edda3ac27d
+RMD160 (reactiveData-0.2.tar.gz) = 1d1fd32c0f70cb2131132344b112c13e83e17ba7
+SHA512 (reactiveData-0.2.tar.gz) = ed6c82b499f7a740dcf3c39825dd9a98b73ab32d15159e372253a2ca9c8406301cd569654d02f5be2530b491b101587bb628984b0b6f1ce1cc21aab010e518cf
+Size (reactiveData-0.2.tar.gz) = 21063 bytes
