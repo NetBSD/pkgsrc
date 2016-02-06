@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.235 2016/01/30 00:43:42 ryoon Exp $
+$NetBSD: distinfo,v 1.236 2016/02/06 22:13:22 ryoon Exp $
 
 SHA1 (firefox-44.0.source.tar.xz) = 47189b0a15087dd8f27999f5d920ad204fde8dca
 RMD160 (firefox-44.0.source.tar.xz) = 7942b5a565f2b2e50a5d38c9f88dc30640a162fd
@@ -135,6 +135,7 @@ SHA1 (patch-toolkit_xre_nsEmbedFunctions.cpp) = 6ee6fba04a3ecc6596f8aed67f752a10
 SHA1 (patch-webapprt_moz.build) = 177468d5e12c49db1ad5376f0f3df34fa9df070c
 SHA1 (patch-xpcom_base_nscore.h) = f4fe66cc9e714a2101a4d1287359d1c300574438
 SHA1 (patch-xpcom_build_PoisonIOInterposer.h) = b0a53ec580bf5c2277d19618c1240a447575ae68
+SHA1 (patch-xpcom_components_Module.h) = 35c5d831b0f916be4cbed18f904ab561dde72ab0
 SHA1 (patch-xpcom_reflect_xptcall_md_unix_Makefile.in) = 6083e298140357bc5f2fa018885fed42eecb1ac4
 SHA1 (patch-xpcom_reflect_xptcall_md_unix_moz.build) = 4717f2a285200ccb5f580e12ffd73c51ae9e9c00
 SHA1 (patch-xpcom_reflect_xptcall_md_unix_xptcinvoke__arm__netbsd.cpp) = 493d1433ae72bbd0c65ab3f51de43fb864a6f58d
