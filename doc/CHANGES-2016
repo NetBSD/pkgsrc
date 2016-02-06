@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.528 2016/02/06 15:05:41 jaapb Exp $
+$NetBSD: CHANGES-2016,v 1.529 2016/02/06 16:08:54 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -739,3 +739,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added devel/ocaml-ppx_tools version 0.99.3 [jaapb 2016-02-06]
 	Updated www/eliom to 5.0.0 [jaapb 2016-02-06]
 	Added databases/pgocaml version 2.2 [jaapb 2016-02-06]
+	Updated lang/coq to 8.5 [jaapb 2016-02-06]
