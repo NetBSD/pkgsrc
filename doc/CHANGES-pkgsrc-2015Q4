@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q4,v 1.1.2.12 2016/01/30 13:37:33 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q4,v 1.1.2.13 2016/02/06 19:52:01 spz Exp $
 
 Changes to the packages collection and infrastructure on the 2015Q4 branch:
 
@@ -83,3 +83,5 @@ security/sudo: build fix
 Pullup ticket #4907 - requested by rillig
 meta-pkgs/pkg_developer: build fix
 
+Pullup ticket #4908 - requested by bsiegert
+lang/go: bugfix
