@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2205 2016/01/31 06:46:16 markd Exp $
+# $NetBSD: Makefile,v 1.2206 2016/02/06 01:17:58 youri Exp $
 #
 
 COMMENT=	Development utilities
@@ -1585,6 +1585,7 @@ SUBDIR+=	php-sysvshm
 SUBDIR+=	php-xcache
 SUBDIR+=	php-xdebug
 SUBDIR+=	physfs
+SUBDIR+=	picopb
 SUBDIR+=	picp
 SUBDIR+=	picprg
 SUBDIR+=	pilrc
