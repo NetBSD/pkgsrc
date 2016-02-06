@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.84 2015/10/10 01:58:10 ryoon Exp $
+# $NetBSD: Makefile,v 1.85 2016/02/06 16:08:36 jaapb Exp $
 #
 
-DISTNAME=	coq-8.4pl6
-PKGNAME=	${DISTNAME} # to avoid prefixing with ocaml-
-PKGREVISION=	3
+DISTNAME=	coq-8.5
 CATEGORIES=	lang math
 MASTER_SITES=	http://coq.inria.fr/distrib/V${PKGVERSION_NOREV}/files/
 
@@ -51,7 +49,7 @@ PLIST_VARS+=		coqide natdynlink doc
 .include "options.mk"
 
 EGDIR=		${PREFIX}/share/coq/examples
-CONF_FILES=	${EGDIR}/coqide-gtk2rc ${PKG_SYSCONFDIR}/xdg/coq/coqide-gtk2rc
+#CONF_FILES=	{EGDIR}/coqide-gtk2rc ${PKG_SYSCONFDIR}/xdg/coq/coqide-gtk2rc
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../lang/camlp5/buildlink3.mk"
