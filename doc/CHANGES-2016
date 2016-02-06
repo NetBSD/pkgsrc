@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.531 2016/02/06 22:09:30 ryoon Exp $
+$NetBSD: CHANGES-2016,v 1.532 2016/02/06 22:10:32 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -742,3 +742,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/coq to 8.5 [jaapb 2016-02-06]
 	Updated misc/gaupol to 0.28.2 [wiz 2016-02-06]
 	Updated devel/nspr to 4.11 [ryoon 2016-02-06]
+	Updated devel/nss to 3.22 [ryoon 2016-02-06]
