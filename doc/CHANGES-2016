@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.524 2016/02/06 13:28:22 jaapb Exp $
+$NetBSD: CHANGES-2016,v 1.525 2016/02/06 13:35:08 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -735,3 +735,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ocaml-sexplib to 113.00.00 [jaapb 2016-02-06]
 	Updated www/ocsigen to 2.6 [jaapb 2016-02-06]
 	Added devel/ocaml-base64 version 2.0.0 [jaapb 2016-02-06]
+	Added devel/ocaml-cppo version 1.3.1 [jaapb 2016-02-06]
