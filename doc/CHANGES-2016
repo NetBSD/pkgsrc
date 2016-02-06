@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.514 2016/02/06 11:04:39 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.515 2016/02/06 11:07:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -724,3 +724,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/mozilla-rootcerts to 1.0.20150804nb1 [tron 2016-02-06]
 	Updated devel/ruby-rdoc to 4.2.1 [taca 2016-02-06]
 	Updated devel/py-mercurial to 3.7.1 [wiz 2016-02-06]
+	Updated devel/py-tortoisehg to 3.7.1 [wiz 2016-02-06]
