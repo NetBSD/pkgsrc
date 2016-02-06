@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.515 2016/02/06 11:07:19 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.516 2016/02/06 11:25:39 tron Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -725,3 +725,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ruby-rdoc to 4.2.1 [taca 2016-02-06]
 	Updated devel/py-mercurial to 3.7.1 [wiz 2016-02-06]
 	Updated devel/py-tortoisehg to 3.7.1 [wiz 2016-02-06]
+	Updated lang/python27 to 2.7.11nb1 [tron 2016-02-06]
