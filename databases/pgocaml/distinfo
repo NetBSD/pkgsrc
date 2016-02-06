@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/02/06 15:05:14 jaapb Exp $
+
+SHA1 (pgocaml-2.2.tgz) = 7aada76c483f6a2e3fa21267db9dad0838515252
+RMD160 (pgocaml-2.2.tgz) = c42989a0750cc2c764983c1d0f85f5d4d22af1af
+SHA512 (pgocaml-2.2.tgz) = 1358e377d46aeb8fa00f44ba47dcc61097919584accc96264ae751cd2d6b8380dd2135109d5f6bf7963f3b448ee59046210c6335a3750deed4ad0ce5fc0a9d8d
+Size (pgocaml-2.2.tgz) = 88613 bytes
