@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2016/02/02 12:28:30 mef Exp $
+# $NetBSD: Makefile,v 1.14 2016/02/06 00:35:10 mef Exp $
 
 DISTNAME=	Plack-Middleware-ConsoleLogger-0.05
 PKGNAME=	p5-${DISTNAME}
@@ -12,13 +12,12 @@ LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST= auto/Plack/Middleware/ConsoleLogger/.packlist
-PERL5_MODULE_TYPE=	Module::Build
+PERL5_MODULE_TYPE=	Module::Build::Tiny
 
 BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
 DEPENDS+=	p5-Plack>=0.99:../../www/p5-Plack
 #DEPENDS+=	{perl>=5.10.1,p5-parent-[0-9]*}:../../devel/p5-parent
 DEPENDS+=	p5-JavaScript-Value-Escape-[0-9]*:../../www/p5-JavaScript-Value-Escape
-BUILD_DEPENDS+=	p5-Module-Build-Tiny-[0-9]*:../../devel/p5-Module-Build-Tiny
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
