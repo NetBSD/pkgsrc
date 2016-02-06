@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2016/02/06 11:23:41 jaapb Exp $
+# $NetBSD: Makefile,v 1.4 2016/02/06 12:10:33 jaapb Exp $
 
 GITHUB_PROJECT=	reactiveData
 DISTNAME=	${GITHUB_PROJECT}-0.2
+PKGNAME=	ocaml-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocsigen/}
 
