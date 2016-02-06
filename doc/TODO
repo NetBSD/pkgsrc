@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15408 2016/02/06 09:00:59 wiz Exp $
+$NetBSD: TODO,v 1.15409 2016/02/06 12:45:51 jaapb Exp $
 
 Suggested new packages
 ======================
@@ -1152,7 +1152,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ocaml-graphics-4.02.3
 	o ocaml-mysql-1.2.0
 	o ocaml-oasis-0.4.5
-	o ocaml-uutf-0.9.4
 	o ocamlgraph-1.8.6
 	o ocrad-0.25
 	o octave-4.0.0
