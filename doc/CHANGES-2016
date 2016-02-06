@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.530 2016/02/06 16:30:13 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.531 2016/02/06 22:09:30 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -741,3 +741,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added databases/pgocaml version 2.2 [jaapb 2016-02-06]
 	Updated lang/coq to 8.5 [jaapb 2016-02-06]
 	Updated misc/gaupol to 0.28.2 [wiz 2016-02-06]
+	Updated devel/nspr to 4.11 [ryoon 2016-02-06]
