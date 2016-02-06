@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2015/12/11 12:31:03 ryoon Exp $
+# $NetBSD: Makefile,v 1.8 2016/02/06 22:19:55 ryoon Exp $
 
 GCC_PKGNAME=		gcc5
 .include		"version.mk"
+PKGREVISION=	1
 
 DISTNAME=	gcc-${GCC5_DIST_VERSION}
 PKGNAME=	${GCC_PKGNAME}-${GCC5_DIST_VERSION}
@@ -63,6 +64,14 @@ BOOT_LDFLAGS=		-static-libstdc++ -static-libgcc ${LDFLAGS_FOR_TARGET}
 BOOT_LDFLAGS+=		${LDFLAGS:M-Wl,-syslibroot*}
 # GCC does not understand this option; remove it, or stage build will fail
 BUILDLINK_TRANSFORM+=	rm:-stdlib=libc++
+
+# Avoid ssp.h not found error.
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-*)
+SUBST_CLASSES+=		fixinc
+SUBST_STAGE.fixinc=	pre-configure
+SUBST_FILES.fixinc=	gcc/Makefile.in
+SUBST_SED.fixinc=	-e "s,\./fixinc.sh,-c true,"
+.endif
 
 .include "options.mk"
 
