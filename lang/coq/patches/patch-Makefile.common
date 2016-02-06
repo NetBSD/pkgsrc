@@ -1,0 +1,14 @@
+$NetBSD: patch-Makefile.common,v 1.1 2016/02/06 16:08:36 jaapb Exp $
+
+Use BSD_INSTALL_*
+--- Makefile.common.orig	2015-12-16 23:44:44.000000000 +0000
++++ Makefile.common
+@@ -35,7 +35,7 @@ else
+ endif
+ 
+ INSTALLBIN:=install
+-INSTALLLIB:=install -m 644 
++INSTALLLIB:=${BSD_INSTALL_LIB}
+ INSTALLSH:=./install.sh
+ MKDIR:=install -d
+ 
