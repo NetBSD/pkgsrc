@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.10 2015/01/25 16:14:23 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2016/02/06 10:59:55 taca Exp $
 bin/rdoc
 bin/ri
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.autotest
 ${GEM_LIBDIR}/.document
-${GEM_LIBDIR}/.gemtest
 ${GEM_LIBDIR}/CONTRIBUTING.rdoc
 ${GEM_LIBDIR}/CVE-2013-0256.rdoc
 ${GEM_LIBDIR}/ExampleMarkdown.md
@@ -105,6 +104,9 @@ ${GEM_LIBDIR}/lib/rdoc/generator/template/json_index/.document
 ${GEM_LIBDIR}/lib/rdoc/generator/template/json_index/js/navigation.js
 ${GEM_LIBDIR}/lib/rdoc/generator/template/json_index/js/searcher.js
 ${GEM_LIBDIR}/lib/rdoc/ghost_method.rb
+${GEM_LIBDIR}/lib/rdoc/i18n.rb
+${GEM_LIBDIR}/lib/rdoc/i18n/locale.rb
+${GEM_LIBDIR}/lib/rdoc/i18n/text.rb
 ${GEM_LIBDIR}/lib/rdoc/include.rb
 ${GEM_LIBDIR}/lib/rdoc/known_classes.rb
 ${GEM_LIBDIR}/lib/rdoc/markdown.kpeg
