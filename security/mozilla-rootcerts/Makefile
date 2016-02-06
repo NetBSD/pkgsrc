@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2015/10/18 19:24:39 tnn Exp $
+# $NetBSD: Makefile,v 1.22 2016/02/06 10:22:54 tron Exp $
 
 DISTNAME=	mozilla-rootcerts-1.0.${CERTDATA_DATE}
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	-https://hg.mozilla.org/mozilla-central/raw-file/2f1a37cb43ac/security/nss/lib/ckfw/builtins/certdata.txt
 DISTFILES=	${CERTDATA}
@@ -18,7 +19,6 @@ CERTDATA_DATE=	20150804
 CERTDATA=	certdata-${CERTDATA_DATE}.txt
 
 WRKSRC=		${WRKDIR}
-BUILD_DIRS=	# empty
 DATADIR=	${PREFIX}/share/${PKGBASE}
 
 CHECK_BUILTIN.openssl=	yes
@@ -30,22 +30,31 @@ SSLDIR=		/etc/openssl/certs
 SSLDIR=		${PKG_SYSCONFDIR}/openssl/certs
 .endif
 
+CERT_SCRIPT=		mozilla-rootcerts.sh
+
 SUBST_CLASSES=		paths
 SUBST_MESSAGE.paths=	Replacing hard-coded paths.
 SUBST_STAGE.paths=	post-configure
-SUBST_FILES.paths=	mozilla-rootcerts.sh
+SUBST_FILES.paths=	${CERT_SCRIPT}
 SUBST_VARS.paths=	AWK ECHO EXPR LN LOCALBASE LS RM DATADIR MKDIR SSLDIR
 SUBST_SED.paths=	-e 's,@OPENSSL@,${TOOLS_PATH.openssl},g'
 
 INSTALLATION_DIRS=	sbin ${DATADIR}
 
 do-extract:
-	${CP} ${FILESDIR}/mozilla-rootcerts.sh ${WRKSRC}
+	${CP} ${FILESDIR}/${CERT_SCRIPT} ${WRKSRC}
 	${CP} ${DISTDIR}/${CERTDATA} ${WRKSRC}
 
+do-build:
+	${MKDIR} ${WRKSRC}/certs
+	cd ${WRKSRC}/certs && \
+	${SH} ${WRKSRC}/${CERT_SCRIPT} -f ${WRKSRC}/${CERTDATA} extract
+	${LS} -rt ${WRKSRC}/certs/*.pem | ${XARGS} ${CAT} >${WRKSRC}/cacert.pem
+
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/mozilla-rootcerts.sh \
+	${INSTALL_SCRIPT} ${WRKSRC}/${CERT_SCRIPT} \
 		${DESTDIR}${PREFIX}/sbin/mozilla-rootcerts
 	${INSTALL_DATA} ${WRKSRC}/${CERTDATA} ${DESTDIR}${DATADIR}/certdata.txt
+	${INSTALL_DATA} ${WRKSRC}/cacert.pem ${DESTDIR}${DATADIR}/cacert.pem
 
 .include "../../mk/bsd.pkg.mk"
