@@ -1,4 +1,4 @@
-# $NetBSD: ocaml.mk,v 1.4 2015/04/20 02:36:05 hiramatsu Exp $
+# $NetBSD: ocaml.mk,v 1.5 2016/02/06 12:10:34 jaapb Exp $
 #
 # This Makefile fragment handles the common variables used by OCaml packages.
 #
@@ -40,8 +40,6 @@ _DEF_VARS.ocaml=	\
 	OCAML_USE_OPT_COMPILER
 _SYS_VARS.ocaml=	\
 	OCAML_SITELIBDIR
-
-PKGNAME?=	ocaml-${DISTNAME}
 
 # Default value of OCAML_USE_FINDLIB
 OCAML_USE_FINDLIB?=	no
