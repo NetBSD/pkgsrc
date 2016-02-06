@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.3 2015/06/30 11:52:57 jaapb Exp $
+# $NetBSD: Makefile,v 1.4 2016/02/06 12:10:33 jaapb Exp $
 
-PKGNAME= ${DISTNAME} # defined to avoid prefixing with ocaml-
 DISTNAME=	ocamlify-0.0.2
 PKGREVISION=	2
 CATEGORIES=	devel
