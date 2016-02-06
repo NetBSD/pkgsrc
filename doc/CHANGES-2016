@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.509 2016/02/06 01:18:41 youri Exp $
+$NetBSD: CHANGES-2016,v 1.510 2016/02/06 07:15:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -717,3 +717,6 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/nghttp2 to 1.7.0 [adam 2016-02-05]
 	Added filesystems/fuse-pcachefs version 0.0.20160203 [jmmv 2016-02-05]
 	Added devel/picopb version 20150628 [youri 2016-02-06]
+	Updated lang/php55 to 5.5.32 [taca 2016-02-06]
+	Updated lang/php56 to 5.6.18 [taca 2016-02-06]
+	Updated lang/php70 to 7.0.3 [taca 2016-02-06]
