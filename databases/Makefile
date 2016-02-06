@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.507 2015/12/11 21:41:21 riz Exp $
+# $NetBSD: Makefile,v 1.508 2016/02/06 15:06:16 jaapb Exp $
 
 COMMENT=	Databases
 
@@ -236,6 +236,7 @@ SUBDIR+=	percona-toolkit
 SUBDIR+=	pgadmin3
 SUBDIR+=	pgbouncer
 SUBDIR+=	pgbuildfarm
+SUBDIR+=	pgocaml
 SUBDIR+=	pgpool
 SUBDIR+=	pgtcl
 SUBDIR+=	pgtclng
