@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.521 2016/02/06 13:05:54 jaapb Exp $
+$NetBSD: CHANGES-2016,v 1.522 2016/02/06 13:06:25 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -732,3 +732,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/ocaml-uutf to 0.9.4 [jaapb 2016-02-06]
 	Updated textproc/ocaml-tyxml to 3.6.0 [jaapb 2016-02-06]
 	Updated devel/ocaml-type_conv to 113.00.02 [jaapb 2016-02-06]
+	Updated devel/ocaml-sexplib to 113.00.00 [jaapb 2016-02-06]
