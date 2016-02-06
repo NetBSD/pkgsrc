@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2016/02/06 13:34:52 jaapb Exp $
+bin/cppo
+${OCAML_SITELIB}/cppo_ocamlbuild/META
+${PLIST.ocaml-opt}${OCAML_SITELIB}/cppo_ocamlbuild/ocamlbuild_cppo.a
+${OCAML_SITELIB}/cppo_ocamlbuild/ocamlbuild_cppo.cma
+${OCAML_SITELIB}/cppo_ocamlbuild/ocamlbuild_cppo.cmi
+${PLIST.ocaml-opt}${OCAML_SITELIB}/cppo_ocamlbuild/ocamlbuild_cppo.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/cppo_ocamlbuild/ocamlbuild_cppo.cmxs
