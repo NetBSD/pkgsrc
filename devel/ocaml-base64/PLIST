@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2016/02/06 13:28:07 jaapb Exp $
+${OCAML_SITELIB}/base64/META
+${OCAML_SITELIB}/base64/b64.annot
+${OCAML_SITELIB}/base64/b64.cmi
+${OCAML_SITELIB}/base64/b64.cmt
+${OCAML_SITELIB}/base64/b64.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/base64/b64.cmx
+${OCAML_SITELIB}/base64/b64.mli
+${PLIST.ocaml-opt}${OCAML_SITELIB}/base64/base64.a
+${OCAML_SITELIB}/base64/base64.cma
+${PLIST.ocaml-opt}${OCAML_SITELIB}/base64/base64.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/base64/base64.cmxs
