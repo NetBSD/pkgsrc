@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/02/06 01:17:35 youri Exp $
+
+SHA1 (picopb-20150628.tgz) = f71e7b665c8c2c983b9a5d3efd2efaf20bdd837a
+RMD160 (picopb-20150628.tgz) = 9a123bf5d331e64d5fbdae0af7b88cb509c17736
+SHA512 (picopb-20150628.tgz) = 395ff0b3899b4b4cc4af49eee2c6ee601914d8b18ecfbd447c7588a4ed242d69954060ce371265258210556f1539b4fffdd595768249936acb06f6cefa14e70d
+Size (picopb-20150628.tgz) = 716713 bytes

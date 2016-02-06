@@ -1,0 +1,5 @@
+picopb is an implementation of Google protocol buffers in C.
+
+The picopbc utility converts a .proto description to C source code that
+can be used with the libpicopb library to process, encode, and decode
+protocol buffers messages.
