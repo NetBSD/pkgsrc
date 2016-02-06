@@ -1,0 +1,3 @@
+PG'OCaml provides an interface to PostgreSQL databases for OCaml applications.
+It uses Camlp4 to extend the OCaml syntax, enabling one to directly embed SQL
+statements inside the OCaml code.
