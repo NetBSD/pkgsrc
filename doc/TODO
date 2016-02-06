@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15409 2016/02/06 12:45:51 jaapb Exp $
+$NetBSD: TODO,v 1.15410 2016/02/06 16:30:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -718,7 +718,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ganglia-webfrontend-3.6.2
 	o gap-4r4p9
 	o gated-3.6
-	o gaupol-0.25
 	o gbrainy-2.25
 	o gcal-4
 	o gcc-5.1
