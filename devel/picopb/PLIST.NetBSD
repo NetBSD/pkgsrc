@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.NetBSD,v 1.1 2016/02/06 18:49:57 agc Exp $
+lib/libpicopbprop.la
