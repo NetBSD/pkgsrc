@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.511 2016/02/06 09:40:12 tron Exp $
+$NetBSD: CHANGES-2016,v 1.512 2016/02/06 10:23:42 tron Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -721,3 +721,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/php56 to 5.6.18 [taca 2016-02-06]
 	Updated lang/php70 to 7.0.3 [taca 2016-02-06]
 	Updated net/youtube-dl to 201602051 [tron 2016-02-06]
+	Updated security/mozilla-rootcerts to 1.0.20150804nb1 [tron 2016-02-06]
