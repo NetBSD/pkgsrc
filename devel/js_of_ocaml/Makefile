@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2015/08/07 11:20:33 jaapb Exp $
+# $NetBSD: Makefile,v 1.11 2016/02/06 14:00:13 jaapb Exp $
 #
 
-DISTNAME=	2.5
-PKGNAME=	js_of_ocaml-${DISTNAME}
-PKGREVISION=	3
+GITHUB_PROJECT=	js_of_ocaml
+DISTNAME=	${GITHUB_PROJECT}-2.7
 CATEGORIES=	devel
-MASTER_SITES=	https://github.com/ocsigen/js_of_ocaml/archive/
-DIST_SUBDIR=	js_of_ocaml
+MASTER_SITES=	${MASTER_SITE_GITHUB:=ocsigen/}
 
 MAINTAINER=	jaapb@NetBSD.org
 HOMEPAGE=	http://ocsigen.org/js_of_ocaml/
@@ -23,10 +21,13 @@ MAKE_ENV=	BINDIR=${DESTDIR}/${PREFIX}/bin DESTDIR=${DESTDIR} OCAML_SITELIBDIR=${
 MAKE_JOBS_SAFE=	no
 
 .include "options.mk"
+.include "../../devel/ocaml-base64/buildlink3.mk"
 .include "../../devel/ocaml-cmdliner/buildlink3.mk"
+.include "../../devel/ocaml-cppo/buildlink3.mk"
 .include "../../devel/ocaml-lwt/buildlink3.mk"
 .include "../../devel/ocaml-optcomp/buildlink3.mk"
 BUILDLINK_API_DEPENDS.ocaml-optcomp+=   ocaml-optcomp>=1.6
+.include "../../devel/ocaml-ppx_tools/buildlink3.mk"
 .include "../../lang/camlp4/buildlink3.mk"
 .include "../../mk/ocaml.mk"
 .include "../../mk/bsd.pkg.mk"
