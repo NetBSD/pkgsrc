@@ -1,14 +1,17 @@
-# $NetBSD: Makefile,v 1.54 2015/12/06 18:22:35 adam Exp $
+# $NetBSD: Makefile,v 1.55 2016/02/06 11:25:09 tron Exp $
 
 .include "dist.mk"
 
 PKGNAME=	python27-${PY_DISTVERSION}
+PKGREVISION=	1
 CATEGORIES=	lang python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.python.org/
 COMMENT=	Interpreted, interactive, object-oriented programming language
 LICENSE=	python-software-foundation
+
+DEPENDS=	mozilla-rootcerts>=1.0.20150804nb1:../../security/mozilla-rootcerts
 
 CONFLICTS+=	python-[0-9]*
 
@@ -170,6 +173,12 @@ SUBST_MESSAGE.sslbase=	Fixing find-file for openssl with SSLBASE.
 SUBST_STAGE.sslbase=	pre-configure
 SUBST_FILES.sslbase=	setup.py
 SUBST_VARS.sslbase=	SSLBASE
+
+SUBST_CLASSES+=		cacert
+SUBST_MESSAGE.cacert=	Configuring location of default CA certificate file.
+SUBST_STAGE.cacert=	pre-configure
+SUBST_FILES.cacert=	Modules/_ssl.c
+SUBST_SED.cacert=	-e 's,@PREFIX@,${PREFIX},'
 
 post-extract:
 	${LN} -s ${WRKSRC}/Lib/smtpd.py ${WRKSRC}/Tools/scripts/smtpd${PY_VER_SUFFIX}.py
