@@ -1,0 +1,26 @@
+$NetBSD: patch-Makefile,v 1.1 2016/02/06 13:34:52 jaapb Exp $
+
+Proper installation and detection of configuration
+--- Makefile.orig	2015-09-20 07:39:36.000000000 +0000
++++ Makefile
+@@ -24,7 +24,7 @@ export BINDIR
+ 
+ 
+ 
+-BEST = $(shell if ocamlopt 2>/dev/null; then echo .native; else echo .byte; fi)
++BEST ?= $(shell if ocamlopt 2>/dev/null; then echo .native; else echo .byte; fi)
+ NATDYNLINK ?= $(shell if [ -f `ocamlc -where`/dynlink.cmxa ]; then \
+                         echo YES; \
+                       else \
+@@ -76,8 +76,9 @@ install-bin:
+ 		install -m 0755 cppo.exe $(BINDIR)
+ 
+ install-lib:
+-	ocamlfind install -patch-version ${VERSION} "cppo_ocamlbuild" \
+-		META $(OCAMLBUILD_INSTALL)
++	ocamlfind install -ldconf ignore -patch-version ${VERSION} \
++	  -destdir ${DESTDIR}/${PREFIX}/${OCAML_SITELIBDIR} \
++		"cppo_ocamlbuild" META $(OCAMLBUILD_INSTALL)
+ 
+ cppo_version.ml: Makefile
+ 	echo 'let cppo_version = "$(VERSION)"' > cppo_version.ml
