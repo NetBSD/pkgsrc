@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2015/02/11 13:45:02 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.6 2016/02/06 13:20:33 jaapb Exp $
 @unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/ocsigenserver
 bin/ocsigenserver
 ${PLIST.ocaml-opt}bin/ocsigenserver.opt
@@ -103,6 +103,8 @@ lib/ocaml/site-lib/ocsigenserver/ocsigen_messages.cmi
 lib/ocaml/site-lib/ocsigenserver/ocsigen_messages.mli
 lib/ocaml/site-lib/ocsigenserver/ocsigen_parseconfig.cmi
 lib/ocaml/site-lib/ocsigenserver/ocsigen_parseconfig.mli
+lib/ocaml/site-lib/ocsigenserver/ocsigen_request_info.cmi
+lib/ocaml/site-lib/ocsigenserver/ocsigen_request_info.mli
 lib/ocaml/site-lib/ocsigenserver/ocsigen_senders.cmi
 lib/ocaml/site-lib/ocsigenserver/ocsigen_senders.mli
 lib/ocaml/site-lib/ocsigenserver/ocsigen_server.cmi
