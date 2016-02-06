@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2016/02/06 13:39:49 jaapb Exp $
+${OCAML_SITELIB}/ppx_tools/META
+${OCAML_SITELIB}/ppx_tools/ast_convenience.cmi
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_tools/ast_convenience.cmx
+${OCAML_SITELIB}/ppx_tools/ast_mapper_class.cmi
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_tools/ast_mapper_class.cmx
+${OCAML_SITELIB}/ppx_tools/dumpast
+${OCAML_SITELIB}/ppx_tools/genlifter
+${OCAML_SITELIB}/ppx_tools/ppx_metaquot
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_tools/ppx_tools.a
+${OCAML_SITELIB}/ppx_tools/ppx_tools.cma
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_tools/ppx_tools.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_tools/ppx_tools.cmxs
+${OCAML_SITELIB}/ppx_tools/rewriter
