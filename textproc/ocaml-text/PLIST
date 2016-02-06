@@ -1,25 +1,37 @@
-@comment $NetBSD: PLIST,v 1.2 2012/08/15 08:23:10 wiz Exp $
-@unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/text
-lib/ocaml/site-lib/text/META
-lib/ocaml/site-lib/text/dlltext-bigarray_stubs.so
-lib/ocaml/site-lib/text/dlltext_stubs.so
-lib/ocaml/site-lib/text/encoding.cmi
-${PLIST.opt}lib/ocaml/site-lib/text/encoding.cmx
-lib/ocaml/site-lib/text/encoding.mli
-lib/ocaml/site-lib/text/encoding_bigarray.cmi
-${PLIST.opt}lib/ocaml/site-lib/text/encoding_bigarray.cmx
-lib/ocaml/site-lib/text/encoding_bigarray.mli
-${PLIST.opt}lib/ocaml/site-lib/text/libtext-bigarray_stubs.a
-${PLIST.opt}lib/ocaml/site-lib/text/libtext_stubs.a
-${PLIST.opt}lib/ocaml/site-lib/text/text-bigarray.a
-lib/ocaml/site-lib/text/text-bigarray.cma
-${PLIST.opt}lib/ocaml/site-lib/text/text-bigarray.cmxa
-${PLIST.opt}lib/ocaml/site-lib/text/text-bigarray.cmxs
-${PLIST.opt}lib/ocaml/site-lib/text/text.a
-lib/ocaml/site-lib/text/text.cma
-lib/ocaml/site-lib/text/text.cmi
-${PLIST.opt}lib/ocaml/site-lib/text/text.cmx
-${PLIST.opt}lib/ocaml/site-lib/text/text.cmxa
-${PLIST.opt}lib/ocaml/site-lib/text/text.cmxs
-lib/ocaml/site-lib/text/text.mli
-@exec %D/libexec/ocaml-findlib-register add %D/lib/ocaml/site-lib/text
+@comment $NetBSD: PLIST,v 1.3 2016/02/06 12:33:06 jaapb Exp $
+@unexec %D/libexec/ocaml-findlib-register del %D/${OCAML_SITELIB}/text
+${OCAML_SITELIB}/text/META
+${PLIST.ocaml-opt}${OCAML_SITELIB}/text/bigarray.a
+${OCAML_SITELIB}/text/bigarray.cma
+${PLIST.ocaml-opt}${OCAML_SITELIB}/text/bigarray.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/text/bigarray.cmxs
+${OCAML_SITELIB}/text/dllbigarray_stubs.so
+${OCAML_SITELIB}/text/dlltext_stubs.so
+${OCAML_SITELIB}/text/encoding.annot
+${OCAML_SITELIB}/text/encoding.cmi
+${PLIST.ocaml-opt}${OCAML_SITELIB}/text/encoding.cmx
+${OCAML_SITELIB}/text/encoding.cmt
+${OCAML_SITELIB}/text/encoding.cmti
+${OCAML_SITELIB}/text/encoding.mli
+${OCAML_SITELIB}/text/encoding_bigarray.annot
+${OCAML_SITELIB}/text/encoding_bigarray.cmi
+${OCAML_SITELIB}/text/encoding_bigarray.cmt
+${OCAML_SITELIB}/text/encoding_bigarray.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/text/encoding_bigarray.cmx
+${OCAML_SITELIB}/text/encoding_bigarray.mli
+${PLIST.ocaml-opt}${OCAML_SITELIB}/text/libbigarray_stubs.a
+${PLIST.ocaml-opt}${OCAML_SITELIB}/text/libtext_stubs.a
+${PLIST.ocaml-opt}${OCAML_SITELIB}/text/bigarray.a
+${PLIST.ocaml-opt}${OCAML_SITELIB}/text/bigarray.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/text/bigarray.cmxs
+${PLIST.ocaml-opt}${OCAML_SITELIB}/text/text.a
+${OCAML_SITELIB}/text/text.annot
+${OCAML_SITELIB}/text/text.cma
+${OCAML_SITELIB}/text/text.cmi
+${OCAML_SITELIB}/text/text.cmt
+${OCAML_SITELIB}/text/text.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/text/text.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/text/text.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/text/text.cmxs
+${OCAML_SITELIB}/text/text.mli
+@exec %D/libexec/ocaml-findlib-register add %D/${OCAML_SITELIB}/text
