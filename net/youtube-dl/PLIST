@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2016/01/24 18:35:41 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2016/02/06 09:39:20 tron Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -803,6 +803,9 @@ ${PYSITELIB}/youtube_dl/extractor/makertv.pyo
 ${PYSITELIB}/youtube_dl/extractor/malemotion.py
 ${PYSITELIB}/youtube_dl/extractor/malemotion.pyc
 ${PYSITELIB}/youtube_dl/extractor/malemotion.pyo
+${PYSITELIB}/youtube_dl/extractor/matchtv.py
+${PYSITELIB}/youtube_dl/extractor/matchtv.pyc
+${PYSITELIB}/youtube_dl/extractor/matchtv.pyo
 ${PYSITELIB}/youtube_dl/extractor/mdr.py
 ${PYSITELIB}/youtube_dl/extractor/mdr.pyc
 ${PYSITELIB}/youtube_dl/extractor/mdr.pyo
