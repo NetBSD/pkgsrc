@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.30 2015/12/22 20:44:40 bsiegert Exp $
+$NetBSD: distinfo,v 1.30.2.1 2016/02/06 19:50:15 spz Exp $
 
 SHA1 (go1.5.2.src.tar.gz) = c7d78ba4df574b5f9a9bb5d17505f40c4d89b81c
 RMD160 (go1.5.2.src.tar.gz) = 38aec8e0f7f93c4616db58ccfc6152b3b35bbd08
@@ -9,4 +9,5 @@ SHA1 (patch-misc_io_clangwrap.sh) = cd91c47ba0fe7b6eb8009dd261c0c26c7d581c29
 SHA1 (patch-src_cmd_go_pkg.go) = ccc470577951bd00741c39229599c0c06be52d0a
 SHA1 (patch-src_math_big_nat.go) = 3043a3883c6dbb5d4b75a07cb18effea5069ea74
 SHA1 (patch-src_math_big_nat_test.go) = c64bdd6b7ec1d28c0af4f7cf92a40d6f8262d346
+SHA1 (patch-src_crypto_x509_root__bsd.go) = 0eca1eafa967268ae9b224be4aeda347ebc91901
 SHA1 (patch-src_syscall_syscall__solaris.go) = 436371947897dcba574a6dfecc6bbcd04f6e25b2
