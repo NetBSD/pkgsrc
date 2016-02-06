@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2208 2016/02/06 13:35:47 jaapb Exp $
+# $NetBSD: Makefile,v 1.2209 2016/02/06 13:40:47 jaapb Exp $
 #
 
 COMMENT=	Development utilities
@@ -631,6 +631,7 @@ SUBDIR+=	ocaml-lwt
 SUBDIR+=	ocaml-oasis
 SUBDIR+=	ocaml-odn
 SUBDIR+=	ocaml-optcomp
+SUBDIR+=	ocaml-ppx_tools
 SUBDIR+=	ocaml-re
 SUBDIR+=	ocaml-react
 SUBDIR+=	ocaml-reactiveData
