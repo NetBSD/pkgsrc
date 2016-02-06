@@ -1,46 +1,24 @@
-# $NetBSD: Makefile,v 1.11 2015/08/07 11:20:35 jaapb Exp $
+# $NetBSD: Makefile,v 1.12 2016/02/06 12:33:06 jaapb Exp $
 #
 
-DISTNAME=	ocaml-text-0.6
-PKGREVISION=	6
+DISTNAME=	ocaml-text-0.8
 CATEGORIES=	textproc
-MASTER_SITES=	http://forge.ocamlcore.org/frs/download.php/937/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=vbmithr/}
 
-MAINTAINER=	jaapb@kerguelen.org
-HOMEPAGE=	http://ocaml-text.forge.ocamlcore.org/
+MAINTAINER=	jaapb@NetBSD.org
+HOMEPAGE=	http://github.com/vbmithr/ocaml-text
 COMMENT=	OCaml Unicode library
 LICENSE=	modified-bsd
 
 HAS_CONFIGURE=		yes
-CONFIGURE_ARGS+= 	--prefix ${PREFIX} --destdir ${DESTDIR}
 
-DEPENDS+=       ocaml-findlib-[0-9]*:../../devel/ocaml-findlib
+#SUBST_CLASSES+=		destdir
+#SUBST_STAGE.destdir=	post-configure
+#SUBST_MESSAGE.destdir=	Changing install location to DESTDIR
+#SUBST_FILES.destdir=	setup.ml
+#SUBST_SED.destdir=	-e 's,"install" :: findlib_name,"install" :: "-destdir ${DESTDIR}${PREFIX}/lib/ocaml/site-lib" :: "-ldconf /dev/null" :: findlib_name,'
 
-SUBST_CLASSES+=		destdir
-SUBST_STAGE.destdir=	post-configure
-SUBST_MESSAGE.destdir=	Changing install location to DESTDIR
-SUBST_FILES.destdir=	setup.ml
-SUBST_SED.destdir=	-e 's,"install" :: findlib_name,"install" :: "-destdir ${DESTDIR}${PREFIX}/lib/ocaml/site-lib" :: "-ldconf /dev/null" :: findlib_name,'
+OCAML_USE_OASIS=	yes
 
-.include "../../mk/bsd.prefs.mk"
-
-PLIST_VARS=	opt
-.if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || \
-    (${MACHINE_ARCH} == "sparc") || (${MACHINE_ARCH} == "x86_64")
-PLIST.opt=	yes
-.endif
-
-do-configure:
-	cd ${WRKSRC} && ocaml setup.ml -configure ${CONFIGURE_ARGS}
-
-do-build:
-	cd ${WRKSRC} && ocaml setup.ml -build
-
-pre-install:
-	${MKDIR} ${DESTDIR}/${PREFIX}/lib/ocaml/site-lib
-
-do-install:
-	cd ${WRKSRC} && ocaml setup.ml -install
-
-.include "../../lang/ocaml/buildlink3.mk"
+.include "../../mk/ocaml.mk"
 .include "../../mk/bsd.pkg.mk"
