@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.169 2015/08/05 13:11:36 ryoon Exp $
+# $NetBSD: Makefile,v 1.170 2016/02/07 22:30:09 markd Exp $
 #
 
 COMMENT=	Editors
@@ -135,6 +135,7 @@ SUBDIR+=	ted-pl
 SUBDIR+=	ted-pt
 SUBDIR+=	ted-sv
 SUBDIR+=	texmaker
+SUBDIR+=	texstudio
 SUBDIR+=	texworks
 SUBDIR+=	tomboy
 SUBDIR+=	tweak
