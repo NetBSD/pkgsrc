@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.538 2016/02/07 04:42:38 mef Exp $
+$NetBSD: CHANGES-2016,v 1.539 2016/02/07 07:31:46 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -750,3 +750,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated misc/p5-Business-CreditCard to 0.34 [mef 2016-02-07]
 	Updated misc/p5-Locale-Codes to 3.37 [mef 2016-02-07]
 	Updated misc/p5-Locale-US to 3.04 [mef 2016-02-07]
+	Updated www/php-concrete5 to 5.7.5.6 [ryoon 2016-02-07]
