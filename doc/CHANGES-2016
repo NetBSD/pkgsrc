@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.540 2016/02/07 07:38:24 ryoon Exp $
+$NetBSD: CHANGES-2016,v 1.541 2016/02/07 08:18:55 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -752,3 +752,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated misc/p5-Locale-US to 3.04 [mef 2016-02-07]
 	Updated www/php-concrete5 to 5.7.5.6 [ryoon 2016-02-07]
 	Updated devel/gitolite to 3.6.4 [ryoon 2016-02-07]
+	Updated comms/asterisk to 11.21.1 [jnemeth 2016-02-07]
