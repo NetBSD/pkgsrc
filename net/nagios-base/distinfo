@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.27 2015/12/18 00:55:17 rodent Exp $
+$NetBSD: distinfo,v 1.28 2016/02/07 12:41:11 bouyer Exp $
 
 SHA1 (nagios-4.0.8.tar.gz) = d49586db6905a8e58a082251d8f89ef5c2cab872
 RMD160 (nagios-4.0.8.tar.gz) = b53631755e0a23aba918a99f58b7bea237fdd799
@@ -10,6 +10,7 @@ SHA512 (nagios-netbsd40-icons.tar.gz) = 27cd564ef6dbe076b43dc2207f8f4f49bfb575f2
 Size (nagios-netbsd40-icons.tar.gz) = 5659 bytes
 SHA1 (patch-Makefile.in) = 953eea6b276beba75ab5c64c14d10cdcf1ca2188
 SHA1 (patch-base_Makefile.in) = 2b0162bb4d395b1d529f5fc1fdf9eab3ddaeb161
+SHA1 (patch-base_logging.c) = a37151fbf36b4f0858a4eaad3c6704a32fb493da
 SHA1 (patch-cgi_Makefile.in) = 25c22914986c0b781f5dd665a7a53778e1031a63
 SHA1 (patch-cgi_cmd.c) = 90dfbfc78b08c5d72f168003d6c9fb56d67a8743
 SHA1 (patch-cgi_extinfo.c) = 8cad0787fbe0a782edb93ca299462a5718a34a4b
