@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2016/02/07 14:09:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.33 2016/02/07 15:53:31 adam Exp $
 bin/fontforge
 bin/fontimage
 bin/fontlint
@@ -80,9 +80,7 @@ lib/libgutils.la
 lib/pkgconfig/libfontforge.pc
 lib/pkgconfig/libfontforgeexe.pc
 ${PYSITELIB}/fontforge.la
-${PYSITELIB}/fontforge.so
 ${PYSITELIB}/psMat.la
-${PYSITELIB}/psMat.so
 man/man1/fontforge.1
 man/man1/fontimage.1
 man/man1/fontlint.1
