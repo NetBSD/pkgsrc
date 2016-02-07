@@ -1,21 +1,23 @@
-# $NetBSD: Makefile,v 1.2 2015/12/05 23:42:44 jnemeth Exp $
+# $NetBSD: Makefile,v 1.3 2016/02/07 09:13:34 jnemeth Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked
 
-DISTNAME=	asterisk-13.6.0
-DIST_SUBDIR=	${PKGNAME_NOREV}
-DISTFILES=	${DEFAULT_DISTFILES}
-EXTRACT_ONLY=	${DISTNAME}.tar.gz
+DISTNAME=	asterisk-13.7.2
 CATEGORIES=	comms net audio
 MASTER_SITES=	http://downloads.asterisk.org/pub/telephony/asterisk/ \
 		http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/ \
 		http://downloads.asterisk.org/pub/telephony/sounds/releases/
+DIST_SUBDIR=	${PKGNAME_NOREV}
+DISTFILES=	${DEFAULT_DISTFILES}
 
-OWNER=		jnemeth@NetBSD.org
-HOMEPAGE=	http://www.asterisk.org/
 COMMENT=	The Asterisk Software PBX
 LICENSE=	gnu-gpl-v2
+
+EXTRACT_ONLY=	${DISTNAME}.tar.gz
+OWNER=		jnemeth@NetBSD.org
+HOMEPAGE=	http://www.asterisk.org/
+
 MAKE_JOBS_SAFE=	NO
 
 # known to have issues on i386, block the package until the bug is fixed
@@ -55,17 +57,17 @@ INSTALLATION_DIRS+=	${ASTDATADIR}/sounds/en ${ASTDATADIR}/moh
 
 BUILD_DEFS+=		VARBASE
 
-ASTERISK_USER?=		asterisk
-ASTERISK_GROUP?=	asterisk
-PKG_GROUPS=		${ASTERISK_GROUP}
-PKG_USERS=		${ASTERISK_USER}:${ASTERISK_GROUP}
+ASTERISK_USER?=			asterisk
+ASTERISK_GROUP?=		asterisk
+PKG_GROUPS=			${ASTERISK_GROUP}
+PKG_USERS=			${ASTERISK_USER}:${ASTERISK_GROUP}
 PKG_GECOS.${ASTERISK_USER}=	Asterisk PBX
-PKG_GROUPS_VARS=	ASTERISK_GROUP
-PKG_USERS_VARS=		ASTERISK_USER
-FILES_SUBST+=		ASTERISK_USER=${ASTERISK_USER}
-FILES_SUBST+=		ASTERISK_GROUP=${ASTERISK_GROUP}
-MESSAGE_SUBST+=		ASTERISK_USER=${ASTERISK_USER}
-MESSAGE_SUBST+=		ASTERISK_GROUP=${ASTERISK_GROUP}
+PKG_GROUPS_VARS=		ASTERISK_GROUP
+PKG_USERS_VARS=			ASTERISK_USER
+FILES_SUBST+=			ASTERISK_USER=${ASTERISK_USER}
+FILES_SUBST+=			ASTERISK_GROUP=${ASTERISK_GROUP}
+MESSAGE_SUBST+=			ASTERISK_USER=${ASTERISK_USER}
+MESSAGE_SUBST+=			ASTERISK_GROUP=${ASTERISK_GROUP}
 
 # Various path settings for Asterisk
 PKG_SYSCONFSUBDIR=	asterisk
@@ -117,7 +119,7 @@ PLIST_VARS+=	mgcp
 # if the grep fails
 NOSIGPIPE!=	${GREP} SO_NOSIGPIPE /usr/include/sys/socket.h || echo ""
 .if ${NOSIGPIPE} != ""
-PLIST.mgcp= yes
+PLIST.mgcp=	yes
 .endif
 
 .include "options.mk"
