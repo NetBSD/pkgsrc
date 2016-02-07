@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.120 2016/02/01 09:41:59 adam Exp $
+# $NetBSD: Makefile,v 1.121 2016/02/07 17:32:56 khorben Exp $
 #
 # Please, also update databases/ruby-rrdtool
 
 DISTNAME=	rrdtool-1.5.5
+PKGREVISION=	1
 CATEGORIES=	databases graphics net
 MASTER_SITES=	http://oss.oetiker.ch/rrdtool/pub/
 
@@ -41,9 +42,22 @@ SUBST_SED.prefix=	-e '1s,^\#! \$${prefix},\#! ${PREFIX},'
 REPLACE_PYTHON=		examples/stripes.py
 TEST_TARGET=		# *** No rule to make target 'test'.
 
+RCD_SCRIPTS=		rrdcached
+
 # rrd_config.h is needed for databases/ruby-rrdtool
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/src/rrd_config.h ${DESTDIR}${PREFIX}/include/
+
+.include "../../mk/bsd.prefs.mk"
+
+RRDCACHED_USER?=	rrdcached
+RRDCACHED_GROUP?=	${RRDCACHED_USER}
+
+PKG_USERS_VARS=		RRDCACHED_USER
+PKG_GROUPS_VARS=	RRDCACHED_GROUP
+PKG_GROUPS=		${RRDCACHED_GROUP}
+PKG_USERS=		${RRDCACHED_USER}:${RRDCACHED_GROUP}
+PKG_GECOS.${RRDCACHED_USER}=	RRDCacheD daemon user
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
