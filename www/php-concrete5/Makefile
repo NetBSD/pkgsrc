@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2015/05/31 02:16:11 ryoon Exp $
+# $NetBSD: Makefile,v 1.14 2016/02/07 07:31:12 ryoon Exp $
 #
 
-DISTNAME=	concrete5.7.4.2
+DISTNAME=	concrete5.7.5.6
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/concrete5/concrete5-5/}
 CATEGORIES=	www
-MASTER_SITES=	http://www.concrete5.org/download_file/-/view/79252/
+MASTER_SITES=	http://www.concrete5.org/download_file/-/view/85780/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	ryoon@NetBSD.org
@@ -19,6 +19,8 @@ DEPENDS+=	${PHP_PKG_PREFIX}-curl>=5.3.3:../../www/php-curl
 DEPENDS+=	${PHP_PKG_PREFIX}-mcrypt>=5.3.3:../../security/php-mcrypt
 DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.3.3:../../textproc/php-json
 DEPENDS+=	${PHP_PKG_PREFIX}-zip>=5.3.3:../../archivers/php-zip
+DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=5.3.3:../../converters/php-iconv
+DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=5.3.3:../../converters/php-mbstring
 
 USE_LANGUAGES=	# none
 NO_BUILD=	yes
