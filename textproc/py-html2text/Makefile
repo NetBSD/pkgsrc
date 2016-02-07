@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2015/11/13 15:48:02 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2016/02/07 14:32:08 wiz Exp $
 
-DISTNAME=		html2text-2015.11.4
+DISTNAME=		html2text-2016.1.8
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		textproc python
 MASTER_SITES=		http://pypi.python.org/packages/source/h/html2text/
