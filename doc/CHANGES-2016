@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.553 2016/02/07 14:11:43 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.554 2016/02/07 14:13:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -766,3 +766,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated archivers/libzip to 1.1.1 [wiz 2016-02-07]
 	Updated fonts/fontforge to 20150824 [adam 2016-02-07]
 	Updated fonts/SDL2_ttf to 2.0.14 [wiz 2016-02-07]
+	Updated devel/py-setuptools to 19.7 [wiz 2016-02-07]
