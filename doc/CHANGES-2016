@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.552 2016/02/07 14:10:14 adam Exp $
+$NetBSD: CHANGES-2016,v 1.553 2016/02/07 14:11:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -765,3 +765,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated multimedia/mencoder to 1.2.1 [leot 2016-02-07]
 	Updated archivers/libzip to 1.1.1 [wiz 2016-02-07]
 	Updated fonts/fontforge to 20150824 [adam 2016-02-07]
+	Updated fonts/SDL2_ttf to 2.0.14 [wiz 2016-02-07]
