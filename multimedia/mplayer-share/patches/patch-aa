@@ -1,14 +1,15 @@
-$NetBSD: patch-aa,v 1.33 2015/11/21 09:47:23 leot Exp $
+$NetBSD: patch-aa,v 1.34 2016/02/07 13:34:33 leot Exp $
 
 o Handle properly sh3 and evbarm ports on NetBSD.
 o Fix CPU family detection on NetBSD with /proc mounted with "-o linux"
   (please see also kern/25076).
+o Delete not needed -Iffmpeg from the CFLAGS.
 o Fix a bug which broke the detection of a lot of X11 libraries.
 o Add necessary libs for aalib support even if the aa option is turned on with
   --enable-aa.
 o Add support for dvb capture on NetBSD.
 
---- configure.orig	2015-10-02 20:29:04.000000000 +0000
+--- configure.orig	2016-01-08 12:39:01.000000000 +0000
 +++ configure
 @@ -1640,7 +1640,7 @@ else
        cc_name=$cc_name_tmp
@@ -84,6 +85,17 @@ o Add support for dvb capture on NetBSD.
      WARNFLAGS="-W -Wall $WARNFLAGS"
      _install_strip=
    fi
+@@ -2807,8 +2813,8 @@ else
+   warn_cflags=yes
+ fi
+ 
+-CFLAGS="-D_ISOC99_SOURCE -I. -Iffmpeg $CFLAGS"
+-HOSTCFLAGS="-D_ISOC99_SOURCE -I. -Iffmpeg -O3"
++CFLAGS="-D_ISOC99_SOURCE -I. $CFLAGS"
++HOSTCFLAGS="-D_ISOC99_SOURCE -I. -O3"
+ 
+ # On glibc, add some more CPPFLAGS for enabling required functionality.
+ cpp_condition_check features.h "defined __GLIBC__" &&
 @@ -4591,7 +4597,11 @@ if test "$_x11" = auto && test "$_x11_he
             -L/usr/X11/lib -L/usr/lib32 -L/usr/openwin/lib -L/usr/local/lib64 -L/usr/X11R6/lib64 \
             -L/usr/lib ; do
