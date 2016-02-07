@@ -1,11 +1,10 @@
-$NetBSD: distinfo,v 1.60 2015/11/03 20:44:33 agc Exp $
+$NetBSD: distinfo,v 1.61 2016/02/07 14:09:08 adam Exp $
 
-SHA1 (fontforge_full-20120731-b.tar.bz2) = b520f532b48e557c177dffa29120225066cc4e84
-RMD160 (fontforge_full-20120731-b.tar.bz2) = f752e70df3a1433ed2ddd10201c5cf88367f2959
-SHA512 (fontforge_full-20120731-b.tar.bz2) = 2be710332c1186de792a1fe8abf037a2a1e92991a97fa6ca296fe14423bcdb347c1246b91eb571996b907a83f999a8a02cfaae54959b161d1ff852cf60eef19f
-Size (fontforge_full-20120731-b.tar.bz2) = 5541994 bytes
-SHA1 (patch-aa) = 106c5adbeb2cdb7b468ef795cf1fdb973ada89f1
-SHA1 (patch-ab) = ec93a47051186bcb901fd145edffad7c457c33fd
-SHA1 (patch-ae) = 18c976e7723641eda13c70f276113026bae18bc0
-SHA1 (patch-fontforge_macbinary.c) = 263fc55f334d0f3bdd59d4dcca64c4033cb13bad
-SHA1 (patch-gutils_giomime.c) = 77235fc0247dd65066491a44256d6d8531e581ff
+SHA1 (fontforge-20150824.tar.gz) = 2dd442baee9cd16efb5928bf51cc3d6b9c73d9af
+RMD160 (fontforge-20150824.tar.gz) = e26fca6affc11d1ea6c927751a63dae0bfeab47b
+SHA512 (fontforge-20150824.tar.gz) = 82a33b41667b5637706aa11ca56695cf0d7a485c66cb37b8c3346087ca3b738967b77141f9aaaaddd90c8a4c2cec7e4924609de0ff18133a91e5862b1ad1ae2d
+Size (fontforge-20150824.tar.gz) = 20796482 bytes
+SHA1 (patch-Makefile.in) = 5a7cad2f9516540048008a13a257d6c9720a22c9
+SHA1 (patch-configure) = 47cd1d1ff60d40114aa08308d4e73b7c2da4716e
+SHA1 (patch-fontforge_python.c) = 1c1cb83feada6e8588754a728863ee92d7f9368f
+SHA1 (patch-fontforge_splinefont.h) = b518e61e3ba88c7fb86ebe53fb62109447791121
