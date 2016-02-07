@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2013/02/28 15:47:41 agc Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2016/02/07 10:59:18 adam Exp $
 
 BUILDLINK_TREE+=	libsodium
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libsodium
 LIBSODIUM_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libsodium+=	libsodium>=0.3
-BUILDLINK_PKGSRCDIR.libsodium?=	../../security/libsodium
+BUILDLINK_PKGSRCDIR.libsodium?=		../../security/libsodium
 .endif	# LIBSODIUM_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libsodium
