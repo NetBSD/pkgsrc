@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2016/01/04 01:53:43 markd Exp $
+# $NetBSD: Makefile,v 1.14 2016/02/07 21:56:01 markd Exp $
 
 DISTNAME=	collection-latexextra
-PKGNAME=	texlive-${DISTNAME}-2015pre7
+PKGNAME=	texlive-${DISTNAME}-2015pre8
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	37946
@@ -869,7 +869,7 @@ DEPENDS+=	tex-sidecap-[0-9]*:../../print/tex-sidecap
 # depend slantsc
 # depend smalltableof
 # depend smartref
-# depend snapshot
+DEPENDS+=	tex-snapshot-[0-9]*:../../print/tex-snapshot
 # depend snotez
 DEPENDS+=	tex-soul-[0-9]*:../../print/tex-soul
 # depend sparklines
