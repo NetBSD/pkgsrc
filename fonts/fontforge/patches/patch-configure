@@ -1,0 +1,23 @@
+$NetBSD: patch-configure,v 1.1 2016/02/07 14:09:08 adam Exp $
+
+Fix building on OS X.
+
+--- configure.orig	2016-02-07 11:36:39.000000000 +0000
++++ configure
+@@ -15139,7 +15139,6 @@ $as_echo "#define __Mac 1" >>confdefs.h
+        MACAPP=""
+       fi
+ 
+-      RAW_COMPILE_PLATFORM_CFLAGS=" $CFLAGS -arch x86_64 -arch i386 "
+ 
+ 
+ 
+@@ -32762,7 +32761,7 @@ fi
+ #--------------------------------------------------------------------------
+ 
+ # Check whether --enable-breakpad was given.
+-if test "${enable_breakpad+set}" = set; then :
++if test "${enable_breakpad+set}" = set; then
+   enableval=$enable_breakpad; have_breakpad=yes
+ fi
+ 
