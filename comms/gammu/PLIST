@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2015/08/17 16:42:53 leot Exp $
+@comment $NetBSD: PLIST,v 1.7 2016/02/07 15:29:34 leot Exp $
 bin/gammu
 bin/gammu-config
 bin/gammu-smsd
@@ -178,6 +178,7 @@ share/doc/gammu/manual/python/index.rst
 share/doc/gammu/manual/python/objects.rst
 share/doc/gammu/manual/python/smsd.rst
 share/doc/gammu/manual/python/worker.rst
+share/doc/gammu/manual/quick/index.rst
 share/doc/gammu/manual/smsd/backends.rst
 share/doc/gammu/manual/smsd/code.rst
 share/doc/gammu/manual/smsd/config.rst
