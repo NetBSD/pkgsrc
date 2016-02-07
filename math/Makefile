@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.316 2016/01/22 14:59:09 gson Exp $
+# $NetBSD: Makefile,v 1.317 2016/02/07 21:44:18 markd Exp $
 
 COMMENT=	Mathematics
 
@@ -163,6 +163,7 @@ SUBDIR+=	newmat
 SUBDIR+=	nickle
 SUBDIR+=	nlopt
 SUBDIR+=	ntl
+SUBDIR+=	ocaml-zarith
 SUBDIR+=	octave
 SUBDIR+=	odepack
 SUBDIR+=	openaxiom
