@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2016/02/07 17:49:22 wiz Exp $
+share/doc/paratype-ttf/OT_TT_Install_E.txt
+share/doc/paratype-ttf/OT_TT_Install_R.txt
+share/doc/paratype-ttf/PT Free Font License_eng_1.2.txt
+share/doc/paratype-ttf/PT Free Font License_eng_1.3.txt
+share/doc/paratype-ttf/PT Free Font License_rus_1.2.txt
+share/doc/paratype-ttf/PT Free Font License_rus_1.3.txt
+share/fonts/X11/TTF/PTC55F.ttf
+share/fonts/X11/TTF/PTC75F.ttf
+share/fonts/X11/TTF/PTF55F.ttf
+share/fonts/X11/TTF/PTF56F.ttf
+share/fonts/X11/TTF/PTF75F.ttf
+share/fonts/X11/TTF/PTF76F.ttf
+share/fonts/X11/TTF/PTM55F.ttf
+share/fonts/X11/TTF/PTM75F.ttf
+share/fonts/X11/TTF/PTN57F.ttf
+share/fonts/X11/TTF/PTN77F.ttf
+share/fonts/X11/TTF/PTS55F.ttf
+share/fonts/X11/TTF/PTS56F.ttf
+share/fonts/X11/TTF/PTS75F.ttf
+share/fonts/X11/TTF/PTS76F.ttf
+share/fonts/X11/TTF/PTZ55F.ttf
+share/fonts/X11/TTF/PTZ56F.ttf
