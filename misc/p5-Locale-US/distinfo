@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/03 23:49:46 agc Exp $
+$NetBSD: distinfo,v 1.4 2016/02/07 04:41:55 mef Exp $
 
-SHA1 (Locale-US-2.112150.tar.gz) = 14134db7bdbde6396af1156e98f935a02a963415
-RMD160 (Locale-US-2.112150.tar.gz) = b3b0281bea40b5d1e78659ae611a1b9c424ff67a
-SHA512 (Locale-US-2.112150.tar.gz) = 0cec0ef61c1742dedabd33fb13d5cf828f1f210c8ba60c274cf7fedfcde98bdc97071d2bbd926f0581c023bde4669ca8d71d663a24836466aeb485e73db4d8e1
-Size (Locale-US-2.112150.tar.gz) = 10735 bytes
+SHA1 (Locale-US-3.04.tar.gz) = e8a53b36a6774588522e26c6fa79671b28d42895
+RMD160 (Locale-US-3.04.tar.gz) = c5e0ff3d7aaa54478cf0238551c9e9acf20caa5a
+SHA512 (Locale-US-3.04.tar.gz) = 3971ef5f6afd3bcb5eb7ef5759a7cff317acee9684e74e483214139200873fc75cc447fc82409b4eb5aeda51e25073a7906a6fa2df3d72118cff60ef66b68f6b
+Size (Locale-US-3.04.tar.gz) = 10768 bytes
