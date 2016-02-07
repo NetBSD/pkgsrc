@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.544 2016/02/07 10:29:30 adam Exp $
+$NetBSD: CHANGES-2016,v 1.545 2016/02/07 11:07:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -756,3 +756,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/openldap to 2.4.44 [adam 2016-02-07]
 	Updated comms/asterisk13 to 13.7.2 [jnemeth 2016-02-07]
 	Updated devel/git to 2.7.1 [adam 2016-02-07]
+	Updated security/libsodium to 1.0.8 [adam 2016-02-07]
+	Updated net/zeromq to 4.1.4 [adam 2016-02-07]
