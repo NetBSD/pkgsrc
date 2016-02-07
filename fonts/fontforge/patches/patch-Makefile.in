@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.in,v 1.1 2016/02/07 14:09:08 adam Exp $
+
+Do not install OS X bundle.
+
+--- Makefile.in.orig	2016-02-07 11:51:25.000000000 +0000
++++ Makefile.in
+@@ -165,7 +165,7 @@ DIST_COMMON = $(top_srcdir)/mk/layout.am
+ @LIBZMQ_TRUE@am__append_1 = collab
+ @GRAPHICAL_USER_INTERFACE_TRUE@am__append_2 = gdraw
+ @PYTHON_EXTENSION_TRUE@am__append_3 = pyhook
+-@MACINTOSH_TRUE@am__append_4 = mackeys osx
++@MACINTOSH_TRUE@am__append_4 = mackeys
+ @XDG_DESKTOP_TRUE@am__append_5 = desktop
+ subdir = .
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
