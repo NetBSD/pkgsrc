@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2016/02/06 16:30:02 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2016/02/07 17:51:35 wiz Exp $
 
 DISTNAME=	gaupol-0.28.2
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://download.gna.org/gaupol/0.28/
 EXTRACT_SUFX=	.tar.xz
@@ -22,10 +23,10 @@ DEPENDS+=	gst-plugins1-good-[0-9]*:../../multimedia/gst-plugins1-good
 DEPENDS+=	gst-plugins1-libav-[0-9]*:../../multimedia/gst-plugins1-libav
 DEPENDS+=	gst-plugins1-ugly-[0-9]*:../../multimedia/gst-plugins1-ugly
 DEPENDS+=	gst-plugins1-x11-[0-9]*:../../x11/gst-plugins1-x11
+DEPENDS+=	paratype-ttf-[0-9]*:../../fonts/paratype-ttf
 # suggests installing either mplayer or vlc for preview
 # but that's not necessary with gst* installed
-# also suggests [PT Sans Caption and PT Mono fonts][11] - not packaged yet
- 
+
 USE_LANGUAGES=			# none
 USE_TOOLS+=			intltool msgfmt
 
