@@ -1,17 +1,17 @@
-$NetBSD: patch-main_sched.c,v 1.2 2015/10/27 08:49:01 jnemeth Exp $
+$NetBSD: patch-main_sched.c,v 1.3 2016/02/07 08:18:43 jnemeth Exp $
 
---- main/sched.c.orig	2015-10-09 22:23:39.000000000 +0000
+--- main/sched.c.orig	2016-02-03 21:23:32.000000000 +0000
 +++ main/sched.c
-@@ -474,7 +474,7 @@ static int sched_settime(struct timeval 
- {
- 	struct timeval now = ast_tvnow();
+@@ -492,7 +492,7 @@ static int sched_settime(struct timeval 
+ 		ast_assert(0);
+ 	}
  
 -	/*ast_debug(1, "TV -> %lu,%lu\n", tv->tv_sec, tv->tv_usec);*/
-+	/*ast_debug(1, "TV -> %jd,%jd\n", tv->tv_sec, tv->tv_usec);*/
++	/*ast_debug(1, "TV -> %jd,%lu\n", (intmax_t)tv->tv_sec, tv->tv_usec);*/
  	if (ast_tvzero(*t))	/* not supplied, default to now */
  		*t = now;
  	*t = ast_tvadd(*t, ast_samp2tv(when, 1000));
-@@ -688,11 +688,11 @@ void ast_sched_dump(struct ast_sched_con
+@@ -706,11 +706,11 @@ void ast_sched_dump(struct ast_sched_con
  		struct timeval delta;
  		q = ast_heap_peek(con->sched_heap, x);
  		delta = ast_tvsub(q->when, when);
