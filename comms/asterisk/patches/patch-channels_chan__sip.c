@@ -1,8 +1,8 @@
-$NetBSD: patch-channels_chan__sip.c,v 1.2 2015/05/19 07:52:14 jnemeth Exp $
+$NetBSD: patch-channels_chan__sip.c,v 1.3 2016/02/07 08:18:43 jnemeth Exp $
 
---- channels/chan_sip.c.orig	2015-03-19 09:39:28.000000000 +0000
+--- channels/chan_sip.c.orig	2016-02-03 21:23:32.000000000 +0000
 +++ channels/chan_sip.c
-@@ -17515,6 +17515,8 @@ static int get_rdnis(struct sip_pvt *p, 
+@@ -17571,6 +17571,8 @@ static int get_rdnis(struct sip_pvt *p, 
  	return 0;
  }
  
@@ -11,7 +11,7 @@ $NetBSD: patch-channels_chan__sip.c,v 1.2 2015/05/19 07:52:14 jnemeth Exp $
  /*!
   * \brief Find out who the call is for.
   *
-@@ -17532,7 +17534,7 @@ static int get_rdnis(struct sip_pvt *p, 
+@@ -17588,7 +17590,7 @@ static int get_rdnis(struct sip_pvt *p, 
  static enum sip_get_dest_result get_destination(struct sip_pvt *p, struct sip_request *oreq, int *cc_recall_core_id)
  {
  	char tmp[256] = "", *uri, *unused_password, *domain;
@@ -20,7 +20,7 @@ $NetBSD: patch-channels_chan__sip.c,v 1.2 2015/05/19 07:52:14 jnemeth Exp $
  	char *from = NULL;
  	struct sip_request *req;
  	char *decoded_uri;
-@@ -18405,6 +18407,8 @@ static enum check_auth_result check_peer
+@@ -18467,6 +18469,8 @@ static enum check_auth_result check_peer
  	return res;
  }
  
@@ -29,7 +29,7 @@ $NetBSD: patch-channels_chan__sip.c,v 1.2 2015/05/19 07:52:14 jnemeth Exp $
  
  /*! \brief  Check if matching user or peer is defined
   	Match user on From: user name and peer on IP/port
-@@ -18416,8 +18420,8 @@ static enum check_auth_result check_user
+@@ -18478,8 +18482,8 @@ static enum check_auth_result check_user
  					      struct ast_sockaddr *addr, struct sip_peer **authpeer)
  {
  	char *of, *name, *unused_password, *domain;
@@ -40,7 +40,7 @@ $NetBSD: patch-channels_chan__sip.c,v 1.2 2015/05/19 07:52:14 jnemeth Exp $
  	enum check_auth_result res = AUTH_DONT_KNOW;
  	char calleridname[256];
  	char *uri2 = ast_strdupa(uri);
-@@ -19054,7 +19058,7 @@ static int manager_show_registry(struct 
+@@ -19116,7 +19120,7 @@ static int manager_show_registry(struct 
  			"DomainPort: %d\r\n"
  			"Refresh: %d\r\n"
  			"State: %s\r\n"
@@ -49,7 +49,7 @@ $NetBSD: patch-channels_chan__sip.c,v 1.2 2015/05/19 07:52:14 jnemeth Exp $
  			"\r\n",
  			idtext,
  			iterator->hostname,
-@@ -19064,7 +19068,7 @@ static int manager_show_registry(struct 
+@@ -19126,7 +19130,7 @@ static int manager_show_registry(struct 
  			iterator->regdomainport ? iterator->regdomainport : STANDARD_SIP_PORT,
  			iterator->refresh,
  			regstate2str(iterator->regstate),
@@ -58,7 +58,7 @@ $NetBSD: patch-channels_chan__sip.c,v 1.2 2015/05/19 07:52:14 jnemeth Exp $
  		ASTOBJ_UNLOCK(iterator);
  		total++;
  	} while(0));
-@@ -29112,8 +29116,8 @@ static int check_rtp_timeout(struct sip_
+@@ -29237,8 +29241,8 @@ static int check_rtp_timeout(struct sip_
  					 */
  					return 0;
  				}
@@ -68,4 +68,4 @@ $NetBSD: patch-channels_chan__sip.c,v 1.2 2015/05/19 07:52:14 jnemeth Exp $
 +					ast_channel_name(dialog->owner), (intmax_t) (t - dialog->lastrtprx));
  				manager_event(EVENT_FLAG_CALL, "SessionTimeout", "Source: RTPTimeout\r\n"
  						"Channel: %s\r\nUniqueid: %s\r\n", ast_channel_name(dialog->owner), ast_channel_uniqueid(dialog->owner));
- 				/* Issue a softhangup */
+ 				/* Issue a softhangup - cause 44 (as used by Cisco for RTP timeouts) */
