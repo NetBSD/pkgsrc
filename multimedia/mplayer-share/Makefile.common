@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.55 2015/11/21 09:47:23 leot Exp $
+# $NetBSD: Makefile.common,v 1.56 2016/02/07 13:34:33 leot Exp $
 # used by multimedia/gmplayer/Makefile
 # used by multimedia/mencoder/Makefile
 # used by multimedia/mplayer/Makefile
 
-MPLAYER_VERSION=	1.2
+MPLAYER_VERSION=	1.2.1
 
 DISTNAME=		MPlayer-${MPLAYER_VERSION}
 
@@ -38,10 +38,9 @@ HAS_CONFIGURE=		YES
 
 PTHREAD_OPTS+=		require
 
-CONFIGURE_ARGS+=	--prefix=${PREFIX} \
-			#--with-extraincdir="${LOCALBASE}/include:${LOCALBASE}/include/faad2:${LOCALBASE}/include/cdparanoia:${LOCALBASE}/include/freetype2" \
-			--with-extralibdir=${LOCALBASE}/lib \
-			--disable-dvdread-internal --disable-smb
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--disable-smb
+CONFIGURE_ARGS+=	--disable-ffmpeg_a
 
 # The configure script attempts to test-execute compiled programs in /tmp,
 # but that directory may be mounted as noexec; work this around by setting
@@ -57,16 +56,6 @@ CONFIGURE_ARGS+=	--enable-big-endian
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-arm*) || \
     !empty(MACHINE_PLATFORM:MNetBSD-*-earm*)
-# Avoid crash with system include file:
-pre-patch:
-	mv ${WRKSRC}/ffmpeg/libavutil/arm/bswap.h \
-	   ${WRKSRC}/ffmpeg/libavutil/arm/avbswap.h
-
-SUBST_CLASSES+=			arm_bswap
-SUBST_STAGE.arm_bswap=		pre-configure
-SUBST_FILES.arm_bswap=		ffmpeg/libavutil/bswap.h
-SUBST_SED.arm_bswap=		-e s,\"arm/bswap.h\",\"arm/avbswap.h\",g
-SUBST_MESSAGE.arm_bswap=	Fixing "arm/bswap.h" conflict in libavutil
 
 # autodetect code enables these options on NetBSD/arm but it should not
 CONFIGURE_ARGS+=	--disable-armv5te --disable-armv6 --disable-armv6t2
