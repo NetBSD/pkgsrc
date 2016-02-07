@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2014/06/18 09:26:10 wiz Exp $
+# $NetBSD: options.mk,v 1.3 2016/02/07 20:34:54 szptvlfn Exp $
 #
 PKG_OPTIONS_VAR=	PKG_OPTIONS.netatalk
 PKG_SUPPORTED_OPTIONS=	cups debug dnssd kerberos ldap pam
@@ -37,7 +37,7 @@ CONFIGURE_ARGS+=	--with-gssapi --enable-krbV-uam
 CONFIGURE_ENV+=		GSSAPI_LIBS="-lkrb5 -lroken -lasn1 -lcrypto -lcom_err"
 PLIST.gssapi=		yes
 .else
-CONFIGURE_ARGS+=	--without-gssapi
+CONFIGURE_ARGS+=	--without-kerberos
 .endif
 
 .if !empty(PKG_OPTIONS:Mldap)
