@@ -2,8 +2,8 @@ $NetBSD$
 
 64bit time_t workaround
 
---- base/logging.c.orig	2016-02-07 13:23:57.000000000 +0100
-+++ base/logging.c	2016-02-07 13:24:50.000000000 +0100
+--- base/logging.c.orig	2014-08-12 17:00:01.000000000 +0200
++++ base/logging.c	2016-02-07 21:57:26.000000000 +0100
 @@ -184,7 +184,7 @@
  	strip(buffer);
  
@@ -13,3 +13,12 @@ $NetBSD$
  	fflush(fp);
  
  #ifdef USE_EVENT_BROKER
+@@ -495,7 +495,7 @@
+ 
+ 	/* write the timestamp */
+ 	gettimeofday(&current_time, NULL);
+-	fprintf(debug_file_fp, "[%lu.%06lu] [%03d.%d] [pid=%lu] ", current_time.tv_sec, current_time.tv_usec, level, verbosity, (unsigned long)getpid());
++	fprintf(debug_file_fp, "[%lu.%06lu] [%03d.%d] [pid=%lu] ", (unsigned long)current_time.tv_sec, (unsigned long)current_time.tv_usec, level, verbosity, (unsigned long)getpid());
+ 
+ 	/* write the data */
+ 	va_start(ap, fmt);
