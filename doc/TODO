@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15416 2016/02/07 11:29:45 leot Exp $
+$NetBSD: TODO,v 1.15417 2016/02/07 13:35:25 leot Exp $
 
 Suggested new packages
 ======================
@@ -1098,7 +1098,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mp3splt-2.6.2
 	o mp3splt-gtk-0.9.0
 	o mpeg4ip-1.6.1
-	o mplayer-1.2.1
 	o mpop-1.2.4
 	o mr-1.20150503
 	o mserv-devel-0.41
