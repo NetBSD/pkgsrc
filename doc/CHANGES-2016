@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.549 2016/02/07 13:35:44 leot Exp $
+$NetBSD: CHANGES-2016,v 1.550 2016/02/07 13:36:34 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -762,3 +762,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated multimedia/mplayer-share to 1.2.1 [leot 2016-02-07]
 	Updated multimedia/mplayer to 1.2.1 [leot 2016-02-07]
 	Updated multimedia/gmplayer to 1.2.1 [leot 2016-02-07]
+	Updated multimedia/mencoder to 1.2.1 [leot 2016-02-07]
