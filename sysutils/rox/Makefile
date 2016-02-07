@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2015/04/25 14:24:54 tnn Exp $
+# $NetBSD: Makefile,v 1.78 2016/02/07 05:14:37 ryoon Exp $
 #
 
 DISTNAME=	rox-filer-2.10
@@ -44,6 +44,7 @@ CONFIGURE_DIRS=		ROX-Filer/src
 CONFIGURE_SCRIPT=	./configure.tmp
 LIBS.SunOS+=		-lm
 LDFLAGS.DragonFly+=	-lm
+LIBS.Linux+=		-ldl -lm
 
 post-patch:
 	${MV} ${WRKSRC}/ROX-Filer/src/configure ${WRKSRC}/ROX-Filer/src/${CONFIGURE_SCRIPT}
@@ -66,6 +67,7 @@ do-install:
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
+.include "../../mk/dlopen.buildlink3.mk"
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
