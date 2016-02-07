@@ -1,0 +1,14 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2016/02/07 22:10:47 markd Exp $
+
+Fix build error with Qt >= 5.3.2
+
+--- CMakeLists.txt.orig	2015-09-10 04:26:44.095679440 +0000
++++ CMakeLists.txt
+@@ -29,6 +29,7 @@ find_package(Qt5Xml)
+ find_package(Qt5Sql)
+ find_package(Qt5Network)
+ find_package(Qt5LinguistTools)
++find_package(Qt5PrintSupport)
+ IF(WIN32)
+ 	find_package(Qt5WinExtras)
+ ENDIF()

@@ -1,0 +1,12 @@
+Luminance HDR is a graphical user interface (based on the Qt5 toolkit)
+that provides a workflow for HDR imaging.
+
+Supported HDR formats:
+* OpenEXR (extension: exr)
+* Radiance RGBE (extension: hdr)
+* Tiff formats: 16bit, 32bit (float) and LogLuv (extension: tiff)
+* Raw image formats (extension: various)
+* PFS native format (extension: pfs)
+
+Supported LDR formats:
+* JPEG, PNG, PPM, PBM, TIFF, FITS
