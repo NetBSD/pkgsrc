@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15424 2016/02/07 14:32:20 wiz Exp $
+$NetBSD: TODO,v 1.15425 2016/02/07 15:35:42 leot Exp $
 
 Suggested new packages
 ======================
@@ -1459,7 +1459,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o qpdfview-0.4.15
 	o qt4-creator-3.4.0
 	o quodlibet2-3.4.1
-	o racket-6.3
 	o radare2-0.10.0
 	o radare2-valabind-0.10.0
 	o radiance-4R1
