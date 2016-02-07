@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2016/02/06 13:34:52 jaapb Exp $
+# $NetBSD: Makefile,v 1.2 2016/02/07 10:44:47 wiz Exp $
 
 DISTNAME=	cppo-1.3.1
 PKGNAME=	ocaml-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mjambon/}
+GITHUB_PROJECT=	cppo
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	jaapb@NetBSD.org
