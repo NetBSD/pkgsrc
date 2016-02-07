@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.543 2016/02/07 09:14:13 jnemeth Exp $
+$NetBSD: CHANGES-2016,v 1.544 2016/02/07 10:29:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -755,3 +755,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated comms/asterisk to 11.21.1 [jnemeth 2016-02-07]
 	Updated databases/openldap to 2.4.44 [adam 2016-02-07]
 	Updated comms/asterisk13 to 13.7.2 [jnemeth 2016-02-07]
+	Updated devel/git to 2.7.1 [adam 2016-02-07]
