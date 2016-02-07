@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.3 2015/11/03 01:12:45 agc Exp $
+$NetBSD: distinfo,v 1.4 2016/02/07 21:22:03 markd Exp $
 
-SHA1 (pavucontrol-0.9.10.tar.gz) = 6e95bd7e74219eb886b18ab4fcf0e4a223405e40
-RMD160 (pavucontrol-0.9.10.tar.gz) = 2ed2a2cbcb3352a1effeb3819632732ad5397a28
-SHA512 (pavucontrol-0.9.10.tar.gz) = b555b48e190494d0b2a98d4aecb5a15a0e8b395bb8f3bf405f8c97c78c4e302da41dfa52c9958ca821156e10d66b91a8d0ea58a04c9eee1e375f6c84e6396ab8
-Size (pavucontrol-0.9.10.tar.gz) = 227735 bytes
+SHA1 (pavucontrol-3.0.tar.xz) = df427f09dbb14ca3200a6eb5e53f9d4138648b5b
+RMD160 (pavucontrol-3.0.tar.xz) = f292f697df05ef91b9e92b2f2b3be9ce9be89b96
+Size (pavucontrol-3.0.tar.xz) = 145092 bytes

@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2011/04/24 13:27:57 shattered Exp $
+@comment $NetBSD: PLIST,v 1.4 2016/02/07 21:22:03 markd Exp $
 bin/pavucontrol
 share/applications/pavucontrol.desktop
-share/doc/pavucontrol/README
 share/doc/pavucontrol/README.html
 share/doc/pavucontrol/style.css
 share/locale/as/LC_MESSAGES/pavucontrol.mo
