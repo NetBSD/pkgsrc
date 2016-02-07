@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2015/12/05 23:42:44 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/02/07 09:13:34 jnemeth Exp $
 include/asterisk.h
 include/asterisk/_private.h
 include/asterisk/abstract_jb.h
@@ -348,6 +348,7 @@ lib/asterisk/modules/func_frame_trace.so
 lib/asterisk/modules/func_global.so
 lib/asterisk/modules/func_groupcount.so
 lib/asterisk/modules/func_hangupcause.so
+lib/asterisk/modules/func_holdintercept.so
 lib/asterisk/modules/func_iconv.so
 lib/asterisk/modules/func_jitterbuffer.so
 lib/asterisk/modules/func_lock.so
@@ -414,6 +415,7 @@ lib/asterisk/modules/res_format_attr_h263.so
 lib/asterisk/modules/res_format_attr_h264.so
 lib/asterisk/modules/res_format_attr_opus.so
 lib/asterisk/modules/res_format_attr_silk.so
+lib/asterisk/modules/res_format_attr_vp8.so
 lib/asterisk/modules/res_hep.so
 lib/asterisk/modules/res_hep_rtcp.so
 lib/asterisk/modules/res_http_websocket.so
