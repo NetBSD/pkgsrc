@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.94 2015/11/23 22:47:59 leot Exp $
+$NetBSD: distinfo,v 1.95 2016/02/07 13:34:34 leot Exp $
 
 SHA1 (mplayer/Abyss-1.7.tar.bz2) = 46d122cb60496eecbc96f26a0cfe0bda883fd725
 RMD160 (mplayer/Abyss-1.7.tar.bz2) = ca1e1c77177dc23300d011c1e00711c6bb81756a
@@ -76,10 +76,10 @@ SHA1 (mplayer/Linea-1.0.tar.bz2) = e6cbd705e285e117fc97c231b7fe0f9abf1db656
 RMD160 (mplayer/Linea-1.0.tar.bz2) = 558647aede2d009519f08191d45bbd1d50ed3ee9
 SHA512 (mplayer/Linea-1.0.tar.bz2) = a55e11b6ac40e17acf54b290e2763448085e5962da992ec24bc8c3ecd9df40d5ad2965079c930ce30338d64b8a2544dc5ba7f5fcdd84c0ffd14a7e6d1a9ac3d8
 Size (mplayer/Linea-1.0.tar.bz2) = 46965 bytes
-SHA1 (mplayer/MPlayer-1.2.tar.xz) = 64fad840dfae466ab5ef3be2b6c74058892cd981
-RMD160 (mplayer/MPlayer-1.2.tar.xz) = 6d4c83370affbc7a1f79e59af8d78a2346a2b846
-SHA512 (mplayer/MPlayer-1.2.tar.xz) = ac10dd4facd0d8fbc3454a3a2eae0e0d2ed76fa60f30ebd6f8495632e4541af712ab2d005e88bc2baa8302ccb98d63ba80a051db80d2b76ac928a2bd779b47aa
-Size (mplayer/MPlayer-1.2.tar.xz) = 13019196 bytes
+SHA1 (mplayer/MPlayer-1.2.1.tar.xz) = cf988d8c7fe7bcf15a48970f0cf9e46837d78e1b
+RMD160 (mplayer/MPlayer-1.2.1.tar.xz) = 91e0f9078c22948666139fd122857381aa46eecd
+SHA512 (mplayer/MPlayer-1.2.1.tar.xz) = e6dd6de73ede9743855fab7f7316de2e957ac5a5b8fc8324ef3d57ca9796b0cb03676dee46b3827d932050836d43a6ad08f925cad3d28493a26933dbafdbb506
+Size (mplayer/MPlayer-1.2.1.tar.xz) = 13029936 bytes
 SHA1 (mplayer/MidnightLove-1.6.tar.bz2) = 27d1105777c1195adbe33f04741bf4be939d3a7f
 RMD160 (mplayer/MidnightLove-1.6.tar.bz2) = 44886ffed5e6167324727fab42251866c6f1ca2c
 SHA512 (mplayer/MidnightLove-1.6.tar.bz2) = 30b5e267d84382c8b9adbf86f21f5f95845ccf017d827241460ab1c050c7ce5f2dfc001209783281ef555190a6ccf62e5a95e009810505a1bb24fb80b2f9f193
@@ -284,21 +284,12 @@ SHA1 (mplayer/xmmplayer-1.5.tar.bz2) = 2d4cb1d30b0519a80c4cd49d042d5d4db5474e7c
 RMD160 (mplayer/xmmplayer-1.5.tar.bz2) = 984ff462de6ea9bc903fda4e59232481bea79845
 SHA512 (mplayer/xmmplayer-1.5.tar.bz2) = 170a7aec3b0cd284d8f7fb79e72f2463efc84b05710aa70f3360b145e86e424138f2c11abaa2db6a2e937822ed91396d4833ea59685d7067bfc916578187e30f
 Size (mplayer/xmmplayer-1.5.tar.bz2) = 74184 bytes
-SHA1 (patch-aa) = 81383178c34b89c2e2eb6132e379294ca1f824f3
+SHA1 (patch-Makefile) = be30a8e90383d6af5902380587b5075fd9c73b83
+SHA1 (patch-aa) = b1492302b7d4e41f362453b6316b17df1300827c
 SHA1 (patch-ae) = 286f5ac075ea4123a1a6276f97e02a4dda9b3e67
 SHA1 (patch-an) = 330c427e30b686165fda15a85b730a3f53e0d217
-SHA1 (patch-ffmpeg_Makefile) = c42d63935e824bd4006b40575b3e56e1645a32d2
-SHA1 (patch-ffmpeg_configure) = 43adffa6ff6a781875950a20adeb837b4eafd9b7
-SHA1 (patch-ffmpeg_libavcodec_libvpxenc.c) = 85fb37d2cf8361faa649b41fc6c36ac261314d39
-SHA1 (patch-ffmpeg_libavcodec_x86_ac3dsp_init.c) = bbf84edc6b74721e31c0952b461131eac4499026
-SHA1 (patch-ffmpeg_libavutil_common.h) = 20fe12a85d253caeeca90e09fcecdc929d2d9e34
-SHA1 (patch-ffmpeg_libavutil_opencl.c) = 5146acb650e699f1e1d05efa4575cec825b7c2eb
-SHA1 (patch-ffmpeg_libavutil_x86_asm.h) = 4010a5f5a7fd6e22c81f7e56fde5f0a474ad89e2
-SHA1 (patch-ffmpeg_libavutil_x86_cpu.c) = a298feb778bc1d50e1abf4c0b56b9db97ab13c42
 SHA1 (patch-gui_interface.c) = 04c347b6cb0a54132e6b089142c8ed282f583a1c
-SHA1 (patch-gui_wm_ws.c) = cdffd469d7b1fcc63016fa506d53304b24624235
 SHA1 (patch-libao2_ao_sun.c) = ce7042b394b9b8c051597c734b70290c8bf0a8d5
-SHA1 (patch-libmpdemux_demux__gif.c) = 6c7f6d0a89835b64eecead148597bb277be38fd9
 SHA1 (patch-libvo_vo__corevideo.h) = c29a24266edb6727dda68a378fac413b5b0ab7ec
 SHA1 (patch-libvo_vo__gif89a.c) = f7ee649bebef4b7f3fd4659613f61667109ee825
 SHA1 (patch-stream_dvb_tune.c) = 46cb5fb4700d7da5ed997dd468033c1edbe9be03

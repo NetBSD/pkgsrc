@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.cflags,v 1.7 2014/12/03 15:08:02 bouyer Exp $
+# $NetBSD: Makefile.cflags,v 1.8 2016/02/07 13:34:33 leot Exp $
 
 # This must be included after everything else to truly clear ${CFLAGS}
 # in the non-runtime-cpu-detection case. If ${CFLAGS} is non-empty, the
@@ -12,16 +12,6 @@
 # cpu detection).
 
 .    include "../../mk/compiler.mk"
-
-# alignment flags for builtin ffmpeg
-# --yasm='' disables asm altogether for gcc < 4.2
-
-.    if !empty(CC_VERSION:Mgcc-[123]*) || \
-        !empty(CC_VERSION:Mgcc-4.[01].*)
-CONFIGURE_ARGS+=        --yasm=''
-.    elif !empty(CC_VERSION:Mgcc-4.*)
-CFLAGS+=-mstackrealign -mpreferred-stack-boundary=4
-.    endif
 
 .    if !empty(CC_VERSION:Mgcc-4*)
 CFLAGS+=	-O3 -ffast-math -fomit-frame-pointer -mtune=pentiumpro

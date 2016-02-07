@@ -1,0 +1,16 @@
+$NetBSD: patch-Makefile,v 1.1 2016/02/07 13:34:33 leot Exp $
+
+Do not treat codec-cfg specially. It needs ffmpeg headers altough they were
+previously hardcoded via HOSTCFLAGS. Adjust that like other executables.
+
+--- Makefile.orig	2015-06-03 11:58:05.000000000 +0000
++++ Makefile
+@@ -752,7 +752,7 @@ mencoder$(EXESUF) mplayer$(EXESUF):
+ codec-cfg-test$(EXESUF): HOSTCFLAGS := $(HOSTCFLAGS) -DTESTING
+ codec-cfg$(EXESUF) codecs2html$(EXESUF):  HOSTCFLAGS := $(HOSTCFLAGS) -DCODECS2HTML
+ codec-cfg$(EXESUF) codec-cfg-test$(EXESUF) codecs2html$(EXESUF): codec-cfg.c codec-cfg.h help_mp.h
+-	$(HOST_CC) $(HOSTCFLAGS) -o $@ $<
++	$(HOST_CC) $(CC_DEPFLAGS) $(CFLAGS) $(HOSTCFLAGS) -o $@ $<
+ 
+ codecs.conf.h: codec-cfg$(EXESUF) etc/codecs.conf
+ 	./$^ > $@
