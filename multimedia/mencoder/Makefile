@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2015/11/21 09:47:23 leot Exp $
+# $NetBSD: Makefile,v 1.66 2016/02/07 13:34:34 leot Exp $
 
 PKGNAME=	mencoder-${MPLAYER_VERSION}
 
@@ -7,10 +7,6 @@ COMMENT=	Simple movie encoder for MPlayer-playable movies
 USE_TOOLS+=	pkg-config
 
 .include "../../multimedia/mplayer-share/Makefile.common"
-
-.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
-BUILD_DEPENDS+=		yasm-[0-9]*:../../devel/yasm
-.endif
 
 # Fix build under Mac OS X, please see here for details:
 # http://lists.mplayerhq.hu/pipermail/mplayer-dev-eng/2009-May/061515.html
