@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.557 2016/02/07 14:18:55 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.558 2016/02/07 14:32:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -770,3 +770,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated audio/chromaprint to 1.3 [wiz 2016-02-07]
 	Updated security/p5-IO-Socket-SSL to 2.024 [wiz 2016-02-07]
 	Updated devel/py-virtualenv to 14.0.5 [wiz 2016-02-07]
+	Updated textproc/py-html2text to 2016.1.8 [wiz 2016-02-07]
