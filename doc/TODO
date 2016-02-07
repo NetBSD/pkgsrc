@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15417 2016/02/07 13:35:25 leot Exp $
+$NetBSD: TODO,v 1.15418 2016/02/07 14:10:14 adam Exp $
 
 Suggested new packages
 ======================
@@ -691,7 +691,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o fltk2-2.0pre8323
 	o fluxbox-1.3.7
 	o fmsx-4.4
-	o fontforge-20150228
 	o foomatic-filters-4.0.12
 	o fop-2.0
 	o fox-1.7.54
