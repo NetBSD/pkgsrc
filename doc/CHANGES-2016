@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.541 2016/02/07 08:18:55 jnemeth Exp $
+$NetBSD: CHANGES-2016,v 1.542 2016/02/07 08:43:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -753,3 +753,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/php-concrete5 to 5.7.5.6 [ryoon 2016-02-07]
 	Updated devel/gitolite to 3.6.4 [ryoon 2016-02-07]
 	Updated comms/asterisk to 11.21.1 [jnemeth 2016-02-07]
+	Updated databases/openldap to 2.4.44 [adam 2016-02-07]
