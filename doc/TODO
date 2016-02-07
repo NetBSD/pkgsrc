@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15411 2016/02/06 22:10:32 ryoon Exp $
+$NetBSD: TODO,v 1.15412 2016/02/07 04:37:07 mef Exp $
 
 Suggested new packages
 ======================
@@ -1228,7 +1228,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-IO-Interface-1.09
 	o p5-IP-Country-3.03
 	o p5-JSON-Any-1.39
-	o p5-Locale-Codes-3.35
 	o p5-Locale-Currency-Format-1.33
 	o p5-Log-Handler-0.87
 	o p5-MIME-EncWords-1.014.3
