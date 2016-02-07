@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2016/01/26 13:56:23 wiz Exp $
+$NetBSD: distinfo,v 1.6 2016/02/07 01:05:11 ryoon Exp $
 
 SHA1 (graphite2-1.3.5.tgz) = 044f65d5b4ade3169f5fcd75a25f047c81f5d33e
 RMD160 (graphite2-1.3.5.tgz) = 49c0c9d919a23ab215402d082670083b7cfba61e
 SHA512 (graphite2-1.3.5.tgz) = 70e85ff44d63dcca6beb55aa68966888453610c4ec1fca0d0986910a8f396ad64fd0b9f393270fd403c93e7e5d45cdc134c3965f47761cd40cd659b92b8abcec
 Size (graphite2-1.3.5.tgz) = 3880214 bytes
-SHA1 (patch-src_CMakeLists.txt) = 6466c211c92374ddafe009ff9e79bfd0be986be9
+SHA1 (patch-src_CMakeLists.txt) = 4751d4cb699a368b9b612a18c45176346e29968b
