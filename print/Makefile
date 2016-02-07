@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.656 2016/01/22 21:07:52 markd Exp $
+# $NetBSD: Makefile,v 1.657 2016/02/07 21:54:25 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1006,6 +1006,8 @@ SUBDIR+=	tex-skak
 SUBDIR+=	tex-skak-doc
 SUBDIR+=	tex-skaknew
 SUBDIR+=	tex-skaknew-doc
+SUBDIR+=	tex-snapshot
+SUBDIR+=	tex-snapshot-doc
 SUBDIR+=	tex-soul
 SUBDIR+=	tex-soul-doc
 SUBDIR+=	tex-spanish-mx
