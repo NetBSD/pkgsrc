@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/02/07 21:53:16 markd Exp $
+
+SHA1 (tex-snapshot-15878/snapshot.tar.xz) = 7caa83975e5c1a41bafa0c3774de9298f27a4253
+RMD160 (tex-snapshot-15878/snapshot.tar.xz) = b473c5d963143020815afa4d405b77208e01410f
+SHA512 (tex-snapshot-15878/snapshot.tar.xz) = c59c57706276c20760f384eab0be049aa349b41e37bf3461c423323580c72204f99437b8d0b91987c98a94d3d92006b80a20d49ba944c7ebff16ab8fd9173a67
+Size (tex-snapshot-15878/snapshot.tar.xz) = 3908 bytes
