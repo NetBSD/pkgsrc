@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.130 2015/11/23 22:47:59 leot Exp $
+# $NetBSD: Makefile,v 1.131 2016/02/07 13:34:34 leot Exp $
 #
 # NOTE: if you are updating both mplayer and gmplayer, you must ensure
 # that *both* distinfo files contain the correct, up-to-date files and
@@ -8,7 +8,6 @@
 #
 
 PKGNAME=	gmplayer-${MPLAYER_VERSION}
-PKGREVISION=	3
 
 SKIN_SITES=	http://www1.mplayerhq.hu/MPlayer/skins/		\
 		http://www2.mplayerhq.hu/MPlayer/skins/		\
@@ -19,10 +18,6 @@ SKIN_SITES=	http://www1.mplayerhq.hu/MPlayer/skins/		\
 
 .include "../../multimedia/mplayer-share/Makefile.common"
 SKIN_EXTRACT_SUFX=	.tar.bz2
-
-.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
-BUILD_DEPENDS+=		yasm-[0-9]*:../../devel/yasm
-.endif
 
 COMMENT=	Fast, cross-platform movie player with GTK2+ interface
 
