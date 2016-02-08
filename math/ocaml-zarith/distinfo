@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2016/02/08 03:40:20 markd Exp $
+
+SHA1 (ocaml-zarith-1.4.1.tar.gz) = 684d686a5e5234876dc41d247b6cecf47bd81d89
+RMD160 (ocaml-zarith-1.4.1.tar.gz) = b0c858cb3757ce9bbd8f191b90ffeb76e81c5aa1
+SHA512 (ocaml-zarith-1.4.1.tar.gz) = ef6717e3b6c19ef94fb0e02eb33b1d9f2b2103a9fe0334cb89b01b344ee953fbeeaed8a75b17daa32760faaf93d582e6778ae50e59e9cf878663f2ecba1d5659
+Size (ocaml-zarith-1.4.1.tar.gz) = 88831 bytes
+SHA1 (patch-configure) = aa021e0a35d671b804a489b60f5cfba1b4c4034f
