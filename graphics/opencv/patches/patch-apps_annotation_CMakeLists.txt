@@ -1,0 +1,15 @@
+$NetBSD: patch-apps_annotation_CMakeLists.txt,v 1.1 2016/02/08 02:04:18 dbj Exp $
+
+Fix library id handling on Darwin
+
+--- apps/annotation/CMakeLists.txt.orig	2015-06-03 17:21:34.000000000 +0000
++++ apps/annotation/CMakeLists.txt
+@@ -21,7 +21,7 @@ set_target_properties(${the_target} PROP
+                       DEBUG_POSTFIX "${OPENCV_DEBUG_POSTFIX}"
+                       ARCHIVE_OUTPUT_DIRECTORY ${LIBRARY_OUTPUT_PATH}
+                       RUNTIME_OUTPUT_DIRECTORY ${EXECUTABLE_OUTPUT_PATH}
+-                      INSTALL_NAME_DIR lib
++                      INSTALL_NAME_DIR ${CMAKE_INSTALL_PREFIX}/${OPENCV_LIB_INSTALL_PATH}
+                       OUTPUT_NAME "opencv_annotation")
+ 
+ if(ENABLE_SOLUTION_FOLDERS)
