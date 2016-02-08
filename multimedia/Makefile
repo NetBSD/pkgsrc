@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.242 2015/11/17 14:57:20 jmcneill Exp $
+# $NetBSD: Makefile,v 1.243 2016/02/08 01:18:51 markd Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -179,6 +179,7 @@ SUBDIR+=	ruby-ming
 SUBDIR+=	schroedinger
 SUBDIR+=	smpeg
 SUBDIR+=	smpeg2
+SUBDIR+=	ssr
 SUBDIR+=	subtitleeditor
 SUBDIR+=	swfdec
 SUBDIR+=	swfdec-gnome
