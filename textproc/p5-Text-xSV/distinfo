@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/02/08 02:56:23 markd Exp $
+
+SHA1 (Text-xSV-0.21.tar.gz) = 2cb6d8d40690bb7a422506294ad1bafbcf65c435
+RMD160 (Text-xSV-0.21.tar.gz) = 8b700801500419b4703d867cb64c46a152f1208d
+SHA512 (Text-xSV-0.21.tar.gz) = f04d83477805f6f43654d6ca15ee16c7bc213895b05cce4e784432c8ada070fe22de2e34464c2de5ce8ce3fb9c155ad1aaa1b9f19a032c49935fe9dd1eca25bb
+Size (Text-xSV-0.21.tar.gz) = 15529 bytes
