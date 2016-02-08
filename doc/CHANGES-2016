@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.564 2016/02/08 05:50:21 agc Exp $
+$NetBSD: CHANGES-2016,v 1.565 2016/02/08 13:27:51 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -790,3 +790,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated misc/p5-File-Tail to 1.3 [mef 2016-02-08]
 	Added devel/re2 version 20160201 [agc 2016-02-08]
 	Added devel/cre2 version 0.1b6 [agc 2016-02-08]
+	Updated net/libfetch to 2.36nb2 [jperkin 2016-02-08]
