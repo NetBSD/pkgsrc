@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.528 2016/01/15 07:54:49 wiz Exp $
+# $NetBSD: Makefile,v 1.529 2016/02/08 01:54:33 markd Exp $
 #
 
 COMMENT=	Audio tools
@@ -347,6 +347,7 @@ SUBDIR+=	nspmod
 SUBDIR+=	ocp
 SUBDIR+=	oggasm
 SUBDIR+=	openal
+SUBDIR+=	openal-soft
 SUBDIR+=	opencore-amr
 SUBDIR+=	opus-tools
 SUBDIR+=	opusfile
