@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q4,v 1.1.2.13 2016/02/06 19:52:01 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q4,v 1.1.2.14 2016/02/08 10:18:38 bsiegert Exp $
 
 Changes to the packages collection and infrastructure on the 2015Q4 branch:
 
@@ -85,3 +85,10 @@ meta-pkgs/pkg_developer: build fix
 
 Pullup ticket #4908 - requested by bsiegert
 lang/go: bugfix
+
+Pullup ticket #4913 - requested by bouyer
+net/nagios-base: build fix
+
+Pullup ticket #4914 - requested by joerg
+textproc/mdocml: fix packaging issue
+
