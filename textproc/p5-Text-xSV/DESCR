@@ -1,0 +1,17 @@
+This module is for reading and writing a common variation of character
+separated data. The most common example is comma-separated. However
+that is far from the only possibility, the same basic format is
+exported by Microsoft products using tabs, colons, or other
+characters.
+The format is a series of rows separated by returns. Within each row
+you have a series of fields separated by your character
+separator. Fields may either be unquoted, in which case they do not
+contain a double-quote, separator, or return, or they are quoted, in
+which case they may contain anything, and will encode double-quotes by
+pairing them. In Microsoft products, quoted fields are strings and
+unquoted fields can be interpreted as being of various datatypes based
+on a set of heuristics. By and large this fact is irrelevant in Perl
+because Perl is largely untyped. The one exception that this module
+handles that empty unquoted fields are treated as nulls which are
+represented in Perl as undefined values. If you want a zero-length
+string, quote it.
