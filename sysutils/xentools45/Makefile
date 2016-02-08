@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2016/01/08 13:24:29 bouyer Exp $
+# $NetBSD: Makefile,v 1.25 2016/02/08 21:23:09 abs Exp $
 
 VERSION=	4.5.2
+PKGREVISION=	1
 VERSION_IPXE=	9a93db3f0947484e30e753bbd61a10b17336e20e
 
 DISTNAME=		xen-${VERSION}
@@ -23,6 +24,7 @@ BUILD_DEPENDS+= dev86-[0-9]*:../../devel/dev86 # needed to build firmware
 .if !exists(/usr/bin/iasl)
 BUILD_DEPENDS+= acpica-utils-[0-9]*:../../sysutils/acpica-utils
 .endif
+DEPENDS+=   ${PYPKGPREFIX}-curses>=0:../../devel/py-curses
 
 PKG_SYSCONFSUBDIR=	xen
 
