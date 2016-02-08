@@ -1,11 +1,11 @@
-$NetBSD: patch-common_autoconf_boot-jdk.m4,v 1.1 2015/06/27 22:37:42 joerg Exp $
+$NetBSD: patch-common_autoconf_boot-jdk.m4,v 1.2 2016/02/08 14:45:39 ryoon Exp $
 
---- common/autoconf/boot-jdk.m4.orig	2015-06-27 20:05:32.000000000 +0000
+--- common/autoconf/boot-jdk.m4.orig	2016-02-08 13:44:13.000000000 +0000
 +++ common/autoconf/boot-jdk.m4
-@@ -324,16 +324,15 @@ AC_DEFUN_ONCE([BOOTJDK_SETUP_BOOT_JDK_AR
+@@ -334,16 +334,15 @@ AC_DEFUN_ONCE([BOOTJDK_SETUP_BOOT_JDK_AR
    # Maximum amount of heap memory.
    # Maximum stack size.
-   if test "x$BUILD_NUM_BITS" = x32; then
+   if test "x$BOOT_JDK_BITS" = x32; then
 -    JVM_MAX_HEAP=1100M
      STACK_SIZE=768
    else
