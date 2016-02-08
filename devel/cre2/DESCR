@@ -1,0 +1,4 @@
+The CRE2 distribution is a C language wrapper for the RE2 library,
+which is implemented in C++.  RE2 is a fast, safe, thread-friendly
+alternative to backtracking regular expression engines like those used
+in PCRE, Perl, and Python.
