@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.56 2016/02/07 13:34:33 leot Exp $
+# $NetBSD: Makefile.common,v 1.57 2016/02/08 10:23:36 leot Exp $
 # used by multimedia/gmplayer/Makefile
 # used by multimedia/mencoder/Makefile
 # used by multimedia/mplayer/Makefile
@@ -41,6 +41,7 @@ PTHREAD_OPTS+=		require
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--disable-smb
 CONFIGURE_ARGS+=	--disable-ffmpeg_a
+CONFIGURE_ARGS+=	--yasm=""
 
 # The configure script attempts to test-execute compiled programs in /tmp,
 # but that directory may be mounted as noexec; work this around by setting
