@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.868 2016/02/08 02:49:55 markd Exp $
+# $NetBSD: Makefile,v 1.869 2016/02/08 02:57:40 markd Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -560,6 +560,7 @@ SUBDIR+=	p5-Text-Wrapper
 SUBDIR+=	p5-Text-Xslate
 SUBDIR+=	p5-Text-vCard
 SUBDIR+=	p5-Text-vFile-asData
+SUBDIR+=	p5-Text-xSV
 SUBDIR+=	p5-Unicode-CaseFold
 SUBDIR+=	p5-Unicode-LineBreak
 SUBDIR+=	p5-XML-Atom
