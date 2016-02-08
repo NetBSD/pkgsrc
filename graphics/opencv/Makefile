@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2016/01/06 10:46:52 adam Exp $
+# $NetBSD: Makefile,v 1.59 2016/02/08 02:04:18 dbj Exp $
 
 DISTNAME=	opencv-3.0.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Itseez/}
 EXTRACT_SUFX=	.zip
@@ -13,7 +13,6 @@ LICENSE=	modified-bsd
 
 USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
-USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config
 
@@ -25,8 +24,6 @@ PKGCONFIG_OVERRIDE+=	opencv.pc.cmake.in
 
 PY_PATCHPLIST=		yes
 REPLACE_PYTHON+=	samples/python/*.py
-
-WRKSRC=		${WRKDIR}/${DISTNAME:S/a$//}
 
 # includes configure output and paths to gmake etc.
 CHECK_WRKREF_SKIP=	${PREFIX}/lib/libopencv_core.*
