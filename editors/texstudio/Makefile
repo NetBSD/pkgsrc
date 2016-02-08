@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/02/07 22:29:04 markd Exp $
+# $NetBSD: Makefile,v 1.2 2016/02/08 20:15:35 markd Exp $
 
 DISTNAME=	texstudio-2.10.8
 CATEGORIES=	editors
@@ -17,9 +17,17 @@ USE_LIBTOOL=	yes
 
 INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR}
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD"
+_CRASH_HANDLER=NO_CRASH_HANDLER=yes
+.else
+_CRASH_HANDLER=
+.endif
+
 do-configure:
 	cd ${WRKSRC} && env ${CONFIGURE_ENV} \
-	${QTDIR}/bin/qmake PREFIX=${PREFIX} texstudio.pro DESKTOPDIR=${PREFIX}/share/applications NO_APPDATA=yes
+	${QTDIR}/bin/qmake PREFIX=${PREFIX} texstudio.pro DESKTOPDIR=${PREFIX}/share/applications NO_APPDATA=yes ${_CRASH_HANDLER}
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
