@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.567 2016/02/08 16:26:58 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.568 2016/02/08 16:39:39 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -793,3 +793,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/libfetch to 2.36nb2 [jperkin 2016-02-08]
 	Updated lang/openjdk8 to 1.8.72 [ryoon 2016-02-08]
 	Updated devel/xdelta3 to 3.0.11 [wiz 2016-02-08]
+	Updated pkgtools/pkgin to 0.9.4 [jperkin 2016-02-08]
