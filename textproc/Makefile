@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.867 2016/01/30 11:10:10 alnsn Exp $
+# $NetBSD: Makefile,v 1.868 2016/02/08 02:49:55 markd Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -504,6 +504,7 @@ SUBDIR+=	p5-Text-Brew
 SUBDIR+=	p5-Text-CSV
 SUBDIR+=	p5-Text-CSV-Encoded
 SUBDIR+=	p5-Text-CSV-Hash
+SUBDIR+=	p5-Text-CSV-Simple
 SUBDIR+=	p5-Text-CSV_XS
 SUBDIR+=	p5-Text-ChaSen
 SUBDIR+=	p5-Text-CharWidth
