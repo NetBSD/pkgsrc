@@ -1,0 +1,15 @@
+$NetBSD: patch-modules_java_CMakeLists.txt,v 1.1 2016/02/08 02:04:18 dbj Exp $
+
+Fix library id handling on Darwin
+
+--- modules/java/CMakeLists.txt.orig	2015-06-03 17:21:34.000000000 +0000
++++ modules/java/CMakeLists.txt
+@@ -363,7 +363,7 @@ set_target_properties(${the_module} PROP
+     ARCHIVE_OUTPUT_DIRECTORY ${LIBRARY_OUTPUT_PATH}
+     LIBRARY_OUTPUT_DIRECTORY ${LIBRARY_OUTPUT_PATH}
+     RUNTIME_OUTPUT_DIRECTORY ${EXECUTABLE_OUTPUT_PATH}
+-    INSTALL_NAME_DIR ${OPENCV_LIB_INSTALL_PATH}
++    INSTALL_NAME_DIR ${CMAKE_INSTALL_PREFIX}/${OPENCV_LIB_INSTALL_PATH}
+     LINK_INTERFACE_LIBRARIES ""
+     )
+ 
