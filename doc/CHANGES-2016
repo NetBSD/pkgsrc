@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.568 2016/02/08 16:39:39 jperkin Exp $
+$NetBSD: CHANGES-2016,v 1.569 2016/02/08 17:36:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -794,3 +794,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/openjdk8 to 1.8.72 [ryoon 2016-02-08]
 	Updated devel/xdelta3 to 3.0.11 [wiz 2016-02-08]
 	Updated pkgtools/pkgin to 0.9.4 [jperkin 2016-02-08]
+	Updated www/curl to 7.47.1 [adam 2016-02-08]
