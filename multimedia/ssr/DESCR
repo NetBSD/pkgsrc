@@ -1,0 +1,8 @@
+SimpleScreenRecorder is a Linux program that I've created to record
+programs and games. There were already a few programs that could do
+this, but I wasn't 100% happy with any of them, so I created my own.
+My original goal was to create a program that was just really simple
+to use, but as I was writing it I started adding more and more
+features, and the result is actually a pretty powerful program. It's
+'simple' in the sense that it's easier to use than ffmpeg/avconv or
+VLC, because it has a straightforward user interface.
