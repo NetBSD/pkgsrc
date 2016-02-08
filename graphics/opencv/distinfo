@@ -1,16 +1,21 @@
-$NetBSD: distinfo,v 1.32 2015/11/03 21:34:11 agc Exp $
+$NetBSD: distinfo,v 1.33 2016/02/08 02:04:18 dbj Exp $
 
 SHA1 (opencv-3.0.0.zip) = 7b7cd6cb3b7bad537cacad04bb7aa264a897d545
 RMD160 (opencv-3.0.0.zip) = 7b4dff26502e71e6570c2452c35fd03a1982bc7e
 SHA512 (opencv-3.0.0.zip) = 108d0fdcc60b5688ebf61c930fb965ec81f0d3c36bb1797f6cc571fac35331f540773207fd1cb81b12c05c8f4d1af20c4a2452d9f75cd0cae4acd8131be92375
 Size (opencv-3.0.0.zip) = 100980799 bytes
 SHA1 (patch-3rdparty_ippicv_downloader.cmake) = 8d99b26a39aa184a4dfc03e4928ea7b7b62e71d9
+SHA1 (patch-apps_annotation_CMakeLists.txt) = 4c3a00b0dfef5e978b10ba966f68d050a06208fe
+SHA1 (patch-apps_createsamples_CMakeLists.txt) = 2d60ecc0e1674cde4414e91e837c24fa464d42aa
+SHA1 (patch-apps_traincascade_CMakeLists.txt) = 7114cc4c2057e12dc8e47bc61334cb8e175987eb
 SHA1 (patch-cmake_OpenCVDetectCXXCompiler.cmake) = 221b0551d0f29d7e79afe3da8a33b1b3a4f7bf20
+SHA1 (patch-cmake_OpenCVModule.cmake) = 440788935a55ae1056407243b730fc13328e12f5
 SHA1 (patch-modules_core_include_opencv2_core_types_c.h) = 75444e65677be99af8167f9060419d7970a7adaa
 SHA1 (patch-modules_core_src_downhill__simplex.cpp) = 1ad7c2fa126d15050b87785e8eec20dbe796b471
 SHA1 (patch-modules_core_src_parallel__pthreads.cpp) = dba43f8252eda7807379469cf9359581bf4d41ad
 SHA1 (patch-modules_core_src_system.cpp) = 3b7ac545585a430d28c7077f360357079f127580
 SHA1 (patch-modules_flann_include_opencv2_flann_defines.h) = ab848e67c4e03219670598ac2d21071a617a5c33
+SHA1 (patch-modules_java_CMakeLists.txt) = 020a8d2048d927e5d3819867df0d889bb516d8b4
 SHA1 (patch-modules_objdetect_include_opencv_objdetect_detection__based__tracker.hpp) = 2f4d2f43afe370eef748e05bec199bc963e1ecab
-SHA1 (patch-modules_python_common.cmake) = d6289a316712bb8be4d590965c87f6bb3525a938
+SHA1 (patch-modules_python_common.cmake) = 23d5c21ad4b2e09f1223f02c45bd51e373d1b520
 SHA1 (patch-modules_ts_src_ts.cpp) = b9a3992014b02dbd89d46375a2476385e91dc24c
