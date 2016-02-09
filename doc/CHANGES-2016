@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.600 2016/02/09 21:20:56 ryoon Exp $
+$NetBSD: CHANGES-2016,v 1.601 2016/02/09 21:22:44 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -825,3 +825,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/pstree to 2.39 [mef 2016-02-09]
 	Updated audio/SDL2_mixer to 2.0.1 [wiz 2016-02-09]
 	Updated mail/thunderbird to 38.5.1 [ryoon 2016-02-09]
+	Updated mail/thunderbird-l10n to 38.5.1 [ryoon 2016-02-09]
