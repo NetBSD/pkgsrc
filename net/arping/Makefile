@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2015/01/28 00:27:43 mef Exp $
+# $NetBSD: Makefile,v 1.25 2016/02/09 12:00:19 mef Exp $
 
-DISTNAME=	arping-2.15
+DISTNAME=	arping-2.16
 CATEGORIES=	net
 MASTER_SITES=	http://www.habets.pp.se/synscan/files/
 
