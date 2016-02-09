@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.570 2016/02/08 23:47:59 sevan Exp $
+$NetBSD: CHANGES-2016,v 1.571 2016/02/09 00:25:48 schnoebe Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -796,3 +796,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated pkgtools/pkgin to 0.9.4 [jperkin 2016-02-08]
 	Updated www/curl to 7.47.1 [adam 2016-02-08]
 	Updated sysutils/salt to 2015.8.5 [sevan 2016-02-08]
+	Updated chat/jabberd2 to 2.3.5 [schnoebe 2016-02-09]
