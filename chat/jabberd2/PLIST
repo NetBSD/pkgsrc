@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2014/03/11 14:04:59 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.19 2016/02/09 00:21:59 schnoebe Exp $
 bin/bdbdump.pl
 bin/c2s
 bin/jabberd
@@ -40,6 +40,7 @@ lib/jabberd/mod_status.la
 lib/jabberd/mod_template-roster.la
 lib/jabberd/mod_vacation.la
 lib/jabberd/mod_validate.la
+lib/jabberd/mod_verify.la
 lib/jabberd/storage_fs.la
 ${PLIST.db}lib/jabberd/storage_db.la
 ${PLIST.ldap}lib/jabberd/storage_ldapvcard.la
@@ -53,14 +54,16 @@ man/man8/s2s.8
 man/man8/sm.8
 share/doc/jabberd/NEWS
 share/doc/jabberd/README
-share/doc/jabberd/README.protocol
 share/doc/jabberd/README.config
+share/doc/jabberd/README.md
+share/doc/jabberd/README.protocol
 share/examples/jabberd/c2s.xml
 share/examples/jabberd/db-jd14-2-jd2.sql
 share/examples/jabberd/db-setup.mysql
 share/examples/jabberd/db-setup.pgsql
 share/examples/jabberd/db-setup.sqlite
 share/examples/jabberd/db-update.mysql
+share/examples/jabberd/db-update.pgsql
 share/examples/jabberd/db-update.sqlite
 share/examples/jabberd/jabberd.cfg
 share/examples/jabberd/roster.xml

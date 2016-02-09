@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.101 2015/12/13 23:46:11 schnoebe Exp $
+# $NetBSD: Makefile,v 1.102 2016/02/09 00:21:59 schnoebe Exp $
 
-DISTNAME=	jabberd-2.3.4
+DISTNAME=	jabberd-2.3.5
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_GITHUB:=jabberd2/jabberd2/releases/download/${DISTNAME}/}
 EXTRACT_SUFX=	.tar.xz
@@ -64,8 +64,9 @@ DOCDIR=			${PREFIX}/share/doc/jabberd
 FILES=			jabberd.cfg c2s.xml router.xml router-users.xml \
 			router-filter.xml s2s.xml sm.xml
 DBFILES=		db-jd14-2-jd2.sql db-setup.mysql db-setup.pgsql \
-			db-update.mysql	db-setup.sqlite db-update.sqlite
-DOCFILES=		README.protocol README README.config NEWS
+			db-setup.sqlite db-update.mysql	db-update.pgsql \
+			db-update.sqlite
+DOCFILES=		README README.config README.md README.protocol NEWS
 
 INSTALLATION_DIRS=	bin ${EGDIR} ${DOCDIR}
 
@@ -124,7 +125,6 @@ post-install:
 .endfor
 
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../devel/cppunit/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../net/udns/buildlink3.mk"
 .include "../../security/gsasl/buildlink3.mk"
