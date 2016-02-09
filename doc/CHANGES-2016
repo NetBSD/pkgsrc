@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.583 2016/02/09 12:47:52 ryoon Exp $
+$NetBSD: CHANGES-2016,v 1.584 2016/02/09 12:55:31 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -809,3 +809,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated multimedia/x265 to 1.9 [adam 2016-02-09]
 	Updated net/ddclient to 3.8.3 [mef 2016-02-09]
 	Updated www/firefox to 44.0.1 [ryoon 2016-02-09]
+	Updated www/firefox-l10n to 44.0.1 [ryoon 2016-02-09]
