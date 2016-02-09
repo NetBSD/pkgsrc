@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.571 2016/02/09 00:25:48 schnoebe Exp $
+$NetBSD: CHANGES-2016,v 1.572 2016/02/09 01:18:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -797,3 +797,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/curl to 7.47.1 [adam 2016-02-08]
 	Updated sysutils/salt to 2015.8.5 [sevan 2016-02-08]
 	Updated chat/jabberd2 to 2.3.5 [schnoebe 2016-02-09]
+	Updated x11/modular-xorg-server to 1.18.1 [wiz 2016-02-09]
