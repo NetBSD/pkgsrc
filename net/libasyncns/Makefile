@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2012/10/23 17:18:32 asau Exp $
+# $NetBSD: Makefile,v 1.3 2016/02/09 11:30:47 mef Exp $
 #
 
-DISTNAME=	libasyncns-0.7
+DISTNAME=	libasyncns-0.8
 CATEGORIES=	net
 MASTER_SITES=	http://0pointer.de/lennart/projects/libasyncns/
 
