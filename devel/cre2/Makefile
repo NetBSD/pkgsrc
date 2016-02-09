@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/02/08 05:48:07 agc Exp $
+# $NetBSD: Makefile,v 1.2 2016/02/09 03:37:38 agc Exp $
 
 DISTNAME=	cre2
 PKGNAME=	cre2-0.1b6
@@ -22,6 +22,6 @@ INFO_FILES=	yes
 pre-configure:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} sh ./autogen.sh
 
-.include "../../local/re2/buildlink3.mk"
+.include "../../devel/re2/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
