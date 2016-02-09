@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.585 2016/02/09 12:57:32 mef Exp $
+$NetBSD: CHANGES-2016,v 1.586 2016/02/09 13:07:25 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -811,3 +811,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/firefox to 44.0.1 [ryoon 2016-02-09]
 	Updated www/firefox-l10n to 44.0.1 [ryoon 2016-02-09]
 	Updated sysutils/dbus to 1.11.0 [mef 2016-02-09]
+	Updated sysutils/p5-GTop to 0.18 [mef 2016-02-09]
