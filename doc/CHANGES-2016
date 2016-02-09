@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.576 2016/02/09 10:14:34 bouyer Exp $
+$NetBSD: CHANGES-2016,v 1.577 2016/02/09 11:05:38 manu Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -802,3 +802,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated x11/modular-xorg-xephyr to 1.18.1 [wiz 2016-02-09]
 	Updated audio/icecast to 2.4.3 [adam 2016-02-09]
 	Updated net/nagios-base to 4.0.8nb5 [bouyer 2016-02-09]
+	Updated filesystems/glusterfs to 3.7.8 [manu 2015-02-09]
