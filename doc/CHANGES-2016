@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.579 2016/02/09 11:40:23 mef Exp $
+$NetBSD: CHANGES-2016,v 1.580 2016/02/09 12:01:08 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -805,3 +805,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated filesystems/glusterfs to 3.7.8 [manu 2015-02-09]
 	Updated net/libasyncns to 0.8 [mef 2016-02-09]
 	Updated net/lft to 3.73 [mef 2016-02-09]
+	Updated net/arping to 2.16 [mef 2016-02-09]
