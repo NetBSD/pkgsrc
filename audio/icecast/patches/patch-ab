@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.10 2015/05/12 07:49:16 kim Exp $
+$NetBSD: patch-ab,v 1.11 2016/02/09 07:02:54 adam Exp $
 
 Allow for paths, user and group to be set via pkgsrc Makefile.
 Decrease amount of logging a little bit by default.
 
---- conf/icecast.fixme.orig	2015-04-08 08:06:13.000000000 +0000
-+++ conf/icecast.fixme	2015-05-12 07:19:45.000000000 +0000
+--- conf/icecast.xml.in.orig	2015-04-08 08:06:13.000000000 +0000
++++ conf/icecast.xml.in		2015-05-12 07:19:45.000000000 +0000
 @@ -191,14 +191,14 @@
  
      <paths>
