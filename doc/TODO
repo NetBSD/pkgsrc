@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15430 2016/02/09 13:38:26 mef Exp $
+$NetBSD: TODO,v 1.15431 2016/02/09 14:14:09 mef Exp $
 
 Suggested new packages
 ======================
@@ -1280,7 +1280,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Switch-2.17
 	o p5-Sys-Filesystem-1.406
 	o p5-Sys-Hostname-Long-1.5
-	o p5-Sys-SigAction-0.21
 	o p5-Sys-Utmp-1.7
 	o p5-Text-Reflow-1.10
 	o p5-Tie-DBI-1.06
