@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.171 2016/01/31 23:43:48 joerg Exp $
+$NetBSD: distinfo,v 1.172 2016/02/09 21:20:15 ryoon Exp $
 
-SHA1 (thunderbird-38.5.0.source.tar.bz2) = 75ae57e7ae018a07a55ce4402ae9f88e7867559f
-RMD160 (thunderbird-38.5.0.source.tar.bz2) = 649fbff7746387024b1bc87ad5d6cd24407344f4
-SHA512 (thunderbird-38.5.0.source.tar.bz2) = fed8376375c3ad7df8b773ced7944fb07edbd28e82c907dc6451ad538b8944d6f2a1d5632399f255ab1c7f74a40a9170912fefdbb2fdf423d7dc35108d1baa65
-Size (thunderbird-38.5.0.source.tar.bz2) = 204393357 bytes
+SHA1 (thunderbird-38.5.1.source.tar.bz2) = ab7a64361601ff38a4c03cb6fe96b2862ea9b304
+RMD160 (thunderbird-38.5.1.source.tar.bz2) = 7890cf1f6cb6f45d6991a16f0c3f78d3fd8b58fd
+SHA512 (thunderbird-38.5.1.source.tar.bz2) = 2e9be4bcdfe37ad8251365e6b3dfa5be88013a82c56e26723747920bff3c86dd3836165d48a5d09a4185eba842d80c9c659039032d4aa1e72aaffa400c0960b1
+Size (thunderbird-38.5.1.source.tar.bz2) = 204383650 bytes
 SHA1 (patch-aa) = 199400ee6dc3c727c950e33ccc65cf57b81cdcb7
 SHA1 (patch-al) = 81a733e9b13a47abfef818ecd10d7ef18a191855
 SHA1 (patch-ao) = 2b4cfb8f06cb137058be7aa47ab7a3cada7cbfe1
@@ -157,6 +157,7 @@ SHA1 (patch-mozilla_widget_gtk_nsNativeThemeGTK.cpp) = bc23ce979c1da98e98ee5cf19
 SHA1 (patch-mozilla_xpcom_base_nscore.h) = 80dc90ac315e3c74340498a877f58c32d94e6ac3
 SHA1 (patch-mozilla_xpcom_build_PoisonIOInterposer.h) = f2803b8690e59cdccccf63f84b2616901a5f5c82
 SHA1 (patch-mozilla_xpcom_build_XPCOMInit.cpp) = 3539557001b0f2f449f4d122f0c696f00d9587df
+SHA1 (patch-mozilla_xpcom_components_Module.h) = 7e331c94779bb85342132b87d8ddb2b420f38a57
 SHA1 (patch-mozilla_xpcom_glue_standalone_nsXPCOMGlue.cpp) = d7c469f51e4b5baeb0ac3c1403875cf66324214c
 SHA1 (patch-mozilla_xpcom_reflect_xptcall_md_unix_Makefile.in) = b29d07bf379c02c7ee0f5765a25af703051f9c8b
 SHA1 (patch-mozilla_xpcom_reflect_xptcall_md_unix_moz.build) = 7642b01dd558c098bcb3aad32f62aeb4bd0984f2
