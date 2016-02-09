@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2016/02/01 12:25:06 mef Exp $
+$NetBSD: distinfo,v 1.6 2016/02/09 13:44:57 mef Exp $
 
-SHA1 (URI-db-0.16.tar.gz) = e61736d30d5e7549105cf7c75f86ffc3de69063e
-RMD160 (URI-db-0.16.tar.gz) = 7d6d0f6ee264bcb17225ba2fdb776a62c45e5917
-SHA512 (URI-db-0.16.tar.gz) = d955a33d5812d0f25db3f0c2a89e3543e5df8716ef3ddacd5e5a8946b726977396de3f44c24dac146412f5a6eb0b42b8a928ff04703405a2dc95dda5cf7ea60a
-Size (URI-db-0.16.tar.gz) = 21113 bytes
+SHA1 (URI-db-0.17.tar.gz) = 46c8c0b9448e64a726f854827813a7f9d19bf9b0
+RMD160 (URI-db-0.17.tar.gz) = e5182e2ee5e7e6dfba5141fa335ce8288db297ec
+SHA512 (URI-db-0.17.tar.gz) = 31e7284e7662d11c3b27c4f232d023b610187d82d17b5cc2ea3519a5a759a91d8b36f3a3947a905e516a92ebab5201f2a696b479cf95c2b5fdf43f797b4f6a12
+Size (URI-db-0.17.tar.gz) = 22456 bytes
