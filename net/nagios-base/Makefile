@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.62 2016/02/07 12:41:11 bouyer Exp $
+# $NetBSD: Makefile,v 1.63 2016/02/09 10:12:53 bouyer Exp $
 #
 
 DISTNAME=		nagios-4.0.8
 PKGNAME=		${DISTNAME:S/-/-base-/}
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		net sysutils
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=nagios/}
@@ -15,7 +15,7 @@ HOMEPAGE=		http://www.nagios.org/
 COMMENT=		Network monitor
 LICENSE=		gnu-gpl-v2
 
-PKG_DESTDIR_SUPPORT=	destdir
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../net/nagios-base/Makefile.common"
@@ -52,8 +52,6 @@ BUILD_DEFS+=		NAGIOSDIR
 PKG_GROUPS+=		${NAGIOS_GROUP}
 PKG_GROUPS+=		${NAGIOSCMD_GROUP}
 
-USERGROUP_PHASE+=	pre-install
-
 PKG_USERS+=		${NAGIOS_USER}:${NAGIOS_GROUP}
 
 PKG_GECOS.${NAGIOS_USER}=	Nagios Runtime User
@@ -79,6 +77,10 @@ OWN_DIRS_PERMS+=${NAGIOSDIR} ${NAGIOS_USER} ${NAGIOS_GROUP} 0775
 OWN_DIRS_PERMS+=${NAGIOSDIR}/archives ${NAGIOS_USER} ${NAGIOS_GROUP} 0775
 OWN_DIRS_PERMS+=${NAGIOSDIR}/rw ${NAGIOS_USER} ${NAGIOSCMD_GROUP} 0775
 OWN_DIRS_PERMS+=${NAGIOSDIR}/checkresults ${NAGIOS_USER} ${NAGIOSCMD_GROUP} 0775
+
+SPECIAL_PERMS+=	${DESTDIR}/${PREFIX}/share/nagios/jsonquery.html ${NAGIOS_USER} ${NAGIOSCMD_GROUP} 0644
+SPECIAL_PERMS+=	${DESTDIR}/${PREFIX}/share/nagios/rss-corefeed.html ${NAGIOS_USER} ${NAGIOSCMD_GROUP} 0644
+SPECIAL_PERMS+=	${DESTDIR}/${PREFIX}/share/nagios/rss-newsfeed.html ${NAGIOS_USER} ${NAGIOSCMD_GROUP} 0644
 
 SUBST_CLASSES+=		files
 SUBST_STAGE.files=	post-build
