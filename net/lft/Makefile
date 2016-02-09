@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2013/02/06 19:30:58 jperkin Exp $
+# $NetBSD: Makefile,v 1.11 2016/02/09 11:39:40 mef Exp $
 #
 
-DISTNAME=		lft-3.31
-PKGREVISION=		1
+DISTNAME=		lft-3.73
 CATEGORIES=		net
 MASTER_SITES=	http://pwhois.org/dl/index.who?file=
 
