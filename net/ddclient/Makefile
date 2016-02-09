@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2015/06/12 10:50:40 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2016/02/09 12:23:37 mef Exp $
 
-DISTNAME=	ddclient-3.8.2
-PKGREVISION=	2
+DISTNAME=	ddclient-3.8.3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ddclient/}
 EXTRACT_SUFX=	.tar.bz2
@@ -30,19 +29,14 @@ REPLACE_FILES.sh+=	sample-etc_rc.d_init.d_ddclient
 
 INSTALLATION_DIRS=	sbin share/doc/ddclient share/examples/ddclient
 
-do-configure:
-	cd ${WRKSRC}; for f in ddclient; do				\
-		${SED}	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"	\
-			-e "s|@VARBASE@|${VARBASE}|g"			\
-			-e "s|@PERL5@|${PERL5}|g"			\
-			$${f} > $${f}.fixed;			\
-		if [ -x $${f} ]; then				\
-			${CHMOD} +x $${f}.fixed;			\
-		fi;							\
-		${MV} -f $${f}.fixed $${f};			\
-	done
+SUBST_CLASSES+=		config
+SUBST_MESSAGE.config=	Adjust variables: PKG_SYSCONFIGDIR VARBASE PERL5 (in patch-aa)
+SUBST_FILES.config+=	ddclient
+SUBST_STAGE.config=	post-patch
+SUBST_VARS.config=	PKG_SYSCONFIGDIR VARBASE PERL5
 
-do-build:	# empty
+NO_CONFIGURE=		yes
+NO_BUILD=		yes
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/ddclient ${DESTDIR}${PREFIX}/sbin
