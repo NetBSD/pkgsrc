@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.580 2016/02/09 12:01:08 mef Exp $
+$NetBSD: CHANGES-2016,v 1.581 2016/02/09 12:05:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -806,3 +806,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/libasyncns to 0.8 [mef 2016-02-09]
 	Updated net/lft to 3.73 [mef 2016-02-09]
 	Updated net/arping to 2.16 [mef 2016-02-09]
+	Updated multimedia/x265 to 1.9 [adam 2016-02-09]
