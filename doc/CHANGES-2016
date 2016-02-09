@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.593 2016/02/09 14:17:35 mef Exp $
+$NetBSD: CHANGES-2016,v 1.594 2016/02/09 14:20:17 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -820,3 +820,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-URI-db to 0.17 [mef 2016-02-09]
 	Updated sysutils/p5-Sys-SigAction to 0.21 [mef 2016-02-09]
 	Updated sysutils/p5-SSH-Batch to 0.030 [mef 2016-02-09]
+	Updated sysutils/p5-Sys-Filesystem to 1.406 [mef 2016-02-09]
