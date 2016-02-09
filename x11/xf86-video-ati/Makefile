@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2016/01/05 13:11:43 tnn Exp $
+# $NetBSD: Makefile,v 1.36 2016/02/09 01:20:44 wiz Exp $
 
 DISTNAME=	xf86-video-ati-7.6.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
@@ -26,8 +26,7 @@ CONFIGURE_ARGS+=	--enable-glamor
 CONFIGURE_ENV+=	DRIVER_MAN_SUFFIX=4
 .endif
 
-BUILDLINK_API_DEPENDS.modular-xorg-server+=	\
-	modular-xorg-server>=1.17.2nb6
+BUILDLINK_API_DEPENDS.modular-xorg-server+=	modular-xorg-server>=1.18.1
 .include "../../x11/modular-xorg-server/buildlink3.mk"
 
 .include "../../devel/zlib/buildlink3.mk"
