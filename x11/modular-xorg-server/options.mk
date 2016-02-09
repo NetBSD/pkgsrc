@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.13 2015/09/26 08:47:17 tnn Exp $
+# $NetBSD: options.mk,v 1.14 2016/02/09 01:17:37 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.modular-xorg-server
 PKG_SUPPORTED_OPTIONS=	dri inet6 debug dtrace
@@ -34,7 +34,7 @@ CONFIGURE_ARGS+=	--disable-glx
 pre-build: disable-modesetting
 .PHONY: disable-modesetting
 disable-modesetting:
-	(echo "all:"; echo "install:") > ${WRKSRC}/hw/xfree86/drivers/modesetting/Makefile
+	(${ECHO} "all:"; ${ECHO} "install:") > ${WRKSRC}/hw/xfree86/drivers/modesetting/Makefile
 .endif
 
 .if !empty(PKG_OPTIONS:Minet6)
