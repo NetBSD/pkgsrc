@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:32:24 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/02/09 13:24:45 mef Exp $
 
-SHA1 (File-chmod-0.32.tar.gz) = fd4d6b0d14ac484fe8060c3db604ad0b067e8ac2
-RMD160 (File-chmod-0.32.tar.gz) = 523a907ac86e6f7f00681eefca4b9ed2dfa61b26
-SHA512 (File-chmod-0.32.tar.gz) = 80adabb9a7ea7491901915e2c9e8c482b0e91674ccc4162d3b4f2a92fbe45a270ab3fd51c7d49fea09f378d62d3cb0f68e580133b23025e04a1365a43885bdf3
-Size (File-chmod-0.32.tar.gz) = 7200 bytes
+SHA1 (File-chmod-0.42.tar.gz) = 9d14773532ad6c6b1e3b3f45a67d994340d79635
+RMD160 (File-chmod-0.42.tar.gz) = c127abeb2776e9960ba29758e8da505ca8ee4a8f
+SHA512 (File-chmod-0.42.tar.gz) = 1b6bc41c43434914c0cb160a063f4cc6cbdfef85233b962c5a6885a23aebd7cafe05eb2d59253c7dc7f1cd323cdd3888d82a6ce19a9b7a00aaa8212d40c064d8
+Size (File-chmod-0.42.tar.gz) = 24940 bytes
