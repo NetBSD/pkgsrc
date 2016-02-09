@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2013/05/09 15:41:23 wen Exp $
+# $NetBSD: Makefile,v 1.28 2016/02/09 14:27:57 mef Exp $
 #
 
-DISTNAME=	pstree-2.36
+DISTNAME=	pstree-2.39
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.thp.uni-duisburg.de/pub/source/
 #		http://fresh.t-systems-sfr.com/unix/src/misc/
@@ -9,6 +9,7 @@ MASTER_SITES=	ftp://ftp.thp.uni-duisburg.de/pub/source/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Display processes in a tree
 HOMEPAGE=	http://www.thp.uni-duisburg.de/pstree/
+LICENSE=	gnu-gpl-v1
 
 WRKSRC=		${WRKDIR}
 
