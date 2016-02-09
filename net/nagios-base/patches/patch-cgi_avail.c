@@ -1,4 +1,4 @@
-$NetBSD: patch-cgi_avail.c,v 1.3 2016/02/07 21:52:06 bouyer Exp $
+$NetBSD: patch-cgi_avail.c,v 1.4 2016/02/09 10:12:53 bouyer Exp $
 
 64bit time_t workaround
 
