@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.27 2015/12/13 23:46:11 schnoebe Exp $
+# $NetBSD: options.mk,v 1.28 2016/02/09 00:21:59 schnoebe Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.jabberd2
 PKG_OPTIONS_REQUIRED_GROUPS=	auth storage mio
@@ -79,6 +79,7 @@ CONFIGURE_ARGS+=	--enable-developer
 # CONFIGURE_ARGS+=	--enable-nad-debug
 # CONFIGURE_ARGS+=	--enable-pool-debug
 # CONFIGURE_ARGS+=	--enable-mio-debug
+.   include "../../devel/cppunit/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mmio-kqueue)
