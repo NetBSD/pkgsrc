@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2008/02/06 13:43:58 abs Exp $
+$NetBSD: patch-aa,v 1.5 2016/02/09 14:27:58 mef Exp $
+
+Add DragonFly
 
 --- pstree.c.orig	2008-02-05 05:56:52.000000000 -0800
 +++ pstree.c	2008-02-05 05:58:25.000000000 -0800
