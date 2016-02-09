@@ -1,4 +1,4 @@
-$NetBSD: patch-common_downtime.c,v 1.1 2016/02/07 21:52:06 bouyer Exp $
+$NetBSD: patch-common_downtime.c,v 1.2 2016/02/09 10:12:53 bouyer Exp $
 
 64bit time_t workaround
 

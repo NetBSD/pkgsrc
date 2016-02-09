@@ -1,9 +1,10 @@
-$NetBSD: patch-lib_worker.c,v 1.1 2016/02/07 21:52:06 bouyer Exp $
+$NetBSD: patch-lib_worker.c,v 1.2 2016/02/09 10:12:53 bouyer Exp $
 
 64bit time_t workaround
+Workaround for poll(2) returning spurious POLLIN
 
 --- lib/worker.c.orig	2014-08-12 17:00:01.000000000 +0200
-+++ lib/worker.c	2016-02-07 22:08:53.000000000 +0100
++++ lib/worker.c	2016-02-08 12:31:57.000000000 +0100
 @@ -194,7 +194,7 @@
  
  #define kvvec_add_tv(kvv, key, value) \
@@ -13,3 +14,12 @@ $NetBSD: patch-lib_worker.c,v 1.1 2016/02/07 21:52:06 bouyer Exp $
  		kvvec_addkv_wlen(kvv, key, sizeof(key) - 1, buf, strlen(buf)); \
  	} while (0)
  
+@@ -439,6 +439,8 @@
+ 
+ 		rd = read(io->fd, buf, sizeof(buf));
+ 		if (rd < 0) {
++			if (!final && errno == EAGAIN)
++				return;
+ 			if (errno == EINTR || errno == EAGAIN)
+ 				continue;
+ 			if (!final && errno != EAGAIN)
