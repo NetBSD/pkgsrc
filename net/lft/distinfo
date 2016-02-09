@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 00:35:08 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/02/09 11:39:40 mef Exp $
 
-SHA1 (lft-3.31.tar.gz) = 88013cd465d9fd5b3ea76b6d16a054405e3ae533
-RMD160 (lft-3.31.tar.gz) = 93c4a6b4b8c0a3be18640d9b32cce4b05c108a9c
-SHA512 (lft-3.31.tar.gz) = 5fc1957e0acbabdd47c9c3a9a022737db97dad5e635dd76f92a2d34e32157f87ac5d10312ba2c45f9fbea96e416b5d8919cf26cc2e66d408efd8c96fbfc7278d
-Size (lft-3.31.tar.gz) = 173875 bytes
+SHA1 (lft-3.73.tar.gz) = c5a37bef74d7466d5202ee8136acc3213711252e
+RMD160 (lft-3.73.tar.gz) = 2734df8ff0b9f67132e5d8c0853c8320040cd390
+SHA512 (lft-3.73.tar.gz) = ae0fac196aa4cee7a4f9832c1d4ee9e6bb012513b95e73f7818bd0d66c9347c8ee776532defdcd7425cc4866c95b37a93f8117c53cdbe22d229bbb4453dc552b
+Size (lft-3.73.tar.gz) = 373097 bytes
