@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.595 2016/02/09 14:22:44 mef Exp $
+$NetBSD: CHANGES-2016,v 1.596 2016/02/09 14:23:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -822,3 +822,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/p5-SSH-Batch to 0.030 [mef 2016-02-09]
 	Updated sysutils/p5-Sys-Filesystem to 1.406 [mef 2016-02-09]
 	Updated sysutils/p5-Sys-Hostname-Long to 1.5 [mef 2016-02-09]
+	Updated sysutils/salt to 2015.8.5nb1 [wiz 2016-02-09]
