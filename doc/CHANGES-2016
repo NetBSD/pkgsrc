@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.589 2016/02/09 13:38:26 mef Exp $
+$NetBSD: CHANGES-2016,v 1.590 2016/02/09 13:43:04 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -816,3 +816,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/p5-File-chmod to 0.42 [mef 2016-02-09]
 	Updated www/firefox38 to 38.6.0nb1 [ryoon 2016-02-09]
 	Updated sysutils/p5-Quota to 1.7.2 [mef 2016-02-09]
+	Updated www/p5-Mojolicious to 6.44 [mef 2016-02-09]
