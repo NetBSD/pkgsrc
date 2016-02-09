@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.581 2016/02/09 12:05:50 adam Exp $
+$NetBSD: CHANGES-2016,v 1.582 2016/02/09 12:28:20 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -807,3 +807,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/lft to 3.73 [mef 2016-02-09]
 	Updated net/arping to 2.16 [mef 2016-02-09]
 	Updated multimedia/x265 to 1.9 [adam 2016-02-09]
+	Updated net/ddclient to 3.8.3 [mef 2016-02-09]
