@@ -1,10 +1,10 @@
-$NetBSD: patch-html_Makefile.in,v 1.3 2015/04/08 23:25:25 rodent Exp $
+$NetBSD: patch-html_Makefile.in,v 1.4 2016/02/09 10:12:53 bouyer Exp $
 
 Adjustments to build procedure.
 
---- html/Makefile.in.orig	2014-08-12 15:00:01.000000000 +0000
-+++ html/Makefile.in
-@@ -7,7 +7,7 @@ exec_prefix=@exec_prefix@
+--- html/Makefile.in.orig	2014-08-12 17:00:01.000000000 +0200
++++ html/Makefile.in	2016-02-08 13:16:12.000000000 +0100
+@@ -7,7 +7,7 @@
  LOGDIR=@localstatedir@
  CFGDIR=@sysconfdir@
  BINDIR=@bindir@
@@ -13,7 +13,7 @@ Adjustments to build procedure.
  HTMLDIR=@datadir@
  datarootdir=@datarootdir@
  INSTALL=@INSTALL@
-@@ -35,21 +35,21 @@ distclean: clean
+@@ -35,58 +35,58 @@
  devclean: distclean
  
  install:
@@ -50,9 +50,13 @@ Adjustments to build procedure.
  # Remove old HTML files (PHP files are used now)
  	rm -f $(DESTDIR)$(HTMLDIR)/index.html
  	rm -f $(DESTDIR)$(HTMLDIR)/main.html
-@@ -58,35 +58,35 @@ install:
- 	$(INSTALL) -m 664 $(INSTALL_OPTS) rss-corefeed.html $(DESTDIR)$(HTMLDIR)
- 	$(INSTALL) -m 664 $(INSTALL_OPTS) rss-newsfeed.html $(DESTDIR)$(HTMLDIR)
+ 	rm -f $(DESTDIR)$(HTMLDIR)/side.html
+-	$(INSTALL) -m 664 $(INSTALL_OPTS) jsonquery.html $(DESTDIR)$(HTMLDIR)
+-	$(INSTALL) -m 664 $(INSTALL_OPTS) rss-corefeed.html $(DESTDIR)$(HTMLDIR)
+-	$(INSTALL) -m 664 $(INSTALL_OPTS) rss-newsfeed.html $(DESTDIR)$(HTMLDIR)
++	$(BSD_INSTALL_DATA) jsonquery.html $(DESTDIR)$(HTMLDIR)
++	$(BSD_INSTALL_DATA) rss-corefeed.html $(DESTDIR)$(HTMLDIR)
++	$(BSD_INSTALL_DATA) rss-newsfeed.html $(DESTDIR)$(HTMLDIR)
  	for file in *.php; \
 -	do $(INSTALL) -m 664 $(INSTALL_OPTS) $$file $(DESTDIR)$(HTMLDIR); done
 +	do $(BSD_INSTALL_DATA) $$file $(DESTDIR)$(HTMLDIR); done
