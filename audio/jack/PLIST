@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2013/02/09 19:59:44 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.9 2016/02/10 09:19:22 wiz Exp $
 bin/jack_alias
 bin/jack_bufsize
 bin/jack_connect
@@ -17,6 +17,7 @@ bin/jack_midiseq
 bin/jack_midisine
 bin/jack_monitor_client
 bin/jack_netsource
+bin/jack_property
 bin/jack_rec
 bin/jack_samplerate
 bin/jack_server_control
@@ -32,14 +33,16 @@ bin/jackd
 include/jack/control.h
 include/jack/intclient.h
 include/jack/jack.h
+include/jack/jslist.h
+include/jack/metadata.h
 include/jack/midiport.h
 include/jack/ringbuffer.h
 include/jack/session.h
 include/jack/statistics.h
 include/jack/thread.h
-include/jack/timestamps.h
 include/jack/transport.h
 include/jack/types.h
+include/jack/uuid.h
 include/jack/weakjack.h
 include/jack/weakmacros.h
 lib/jack/inprocess.la
