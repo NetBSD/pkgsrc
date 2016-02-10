@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.159 2016/02/08 17:35:31 adam Exp $
+# $NetBSD: Makefile,v 1.160 2016/02/10 07:38:47 tron Exp $
 
 DISTNAME=	curl-7.47.1
 CATEGORIES=	www
-MASTER_SITES=	http://curl.haxx.se/download/ \
+MASTER_SITES=	https://curl.haxx.se/download/ \
 		ftp://ftp.sunet.se/pub/www/utilities/curl/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://curl.haxx.se/
+HOMEPAGE=	https://curl.haxx.se/
 COMMENT=	Client that groks URLs
 # not completely, but near enough
 LICENSE=	mit
