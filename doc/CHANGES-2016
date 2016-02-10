@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.613 2016/02/10 12:55:18 kleink Exp $
+$NetBSD: CHANGES-2016,v 1.614 2016/02/10 13:03:08 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -838,3 +838,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/nodejs to 5.6.0 [fhajny 2016-02-10]
 	Updated lang/nodejs4 to 4.3.0 [fhajny 2016-02-10]
 	Updated geography/py-geojson to 1.3.2 [kleink 2016-02-10]
+	Updated geography/py-geojson to 1.3.2nb1 [kleink 2016-02-10]
