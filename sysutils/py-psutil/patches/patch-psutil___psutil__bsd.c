@@ -1,9 +1,11 @@
-$NetBSD: patch-psutil___psutil__bsd.c,v 1.4 2016/02/10 06:31:28 wiz Exp $
+$NetBSD: patch-psutil___psutil__bsd.c,v 1.5 2016/02/10 13:20:28 wiz Exp $
 
 1. chunk: Workaround for DTYPE_VNODE not being available in public
 headers, even with _KERNEL set, on NetBSD-6.
 
 2. chunk: MNT_DISCARD not available on NetBSD-6.
+
+https://github.com/giampaolo/psutil/pull/764
 
 --- psutil/_psutil_bsd.c.orig	2016-01-20 16:26:28.000000000 +0000
 +++ psutil/_psutil_bsd.c
