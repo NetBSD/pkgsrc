@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 02:47:27 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/02/10 10:20:10 kleink Exp $
 
-SHA1 (Flask-BabelEx-0.9.2.tar.gz) = 439aa76d8172f7208e3fccd0b4ef0e568f4ac7d1
-RMD160 (Flask-BabelEx-0.9.2.tar.gz) = 462bc3fa51abd9cce0ffa9cda6f8a9d4e554b146
-SHA512 (Flask-BabelEx-0.9.2.tar.gz) = 06d6bc08eda7a12a23a908fc01b699b24d6031c2128713ff88befee847183e169a77a74c4796039f0f6cd01b1fcb23f9f4cc2a723e973f40d575b568933df897
-Size (Flask-BabelEx-0.9.2.tar.gz) = 41010 bytes
+SHA1 (Flask-BabelEx-0.9.3.tar.gz) = 37e50950f6e12407c4e3fb88cc4366fcc2a91765
+RMD160 (Flask-BabelEx-0.9.3.tar.gz) = e44be885c7c036c341274874bdb0235cfe0c1f95
+SHA512 (Flask-BabelEx-0.9.3.tar.gz) = c759f990c4c96dab7cf2fbe83c1ac6dde4606adfd2f5d03ed293578bec621170be319b71fc3e38c1910d2edaba3e4394f32ede3754940e315abd917beaf3982c
+Size (Flask-BabelEx-0.9.3.tar.gz) = 41040 bytes
