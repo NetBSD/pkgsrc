@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.74 2015/09/13 11:22:22 leot Exp $
+# $NetBSD: license.mk,v 1.75 2016/02/10 10:50:18 wiz Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -131,6 +131,7 @@ DEFAULT_ACCEPTABLE_LICENSES= \
 	openssl \
 	original-bsd modified-bsd 2-clause-bsd \
 	osl \
+	paratype \
 	php \
 	png-license \
 	postgresql-license \
