@@ -1,19 +1,19 @@
-$NetBSD: distinfo,v 1.17 2015/11/03 01:12:35 agc Exp $
+$NetBSD: distinfo,v 1.18 2016/02/10 09:19:22 wiz Exp $
 
-SHA1 (jack-audio-connection-kit-0.121.3.tar.gz) = 7d6e2219660222d1512ee704dd88a534b3e3089e
-RMD160 (jack-audio-connection-kit-0.121.3.tar.gz) = 0b41b17b0606a6cffdab765ba6a47d0bc6ac9705
-SHA512 (jack-audio-connection-kit-0.121.3.tar.gz) = 57323393d5209baefe73cc0cd9a0e818b1cfd260cf9aa36cd6ad800252e22e3ddb7fc46649c54b8e840696878147c2d06c8d39fd7300b5bb92aeb69f44ed710f
-Size (jack-audio-connection-kit-0.121.3.tar.gz) = 1083545 bytes
+SHA1 (jack-audio-connection-kit-0.124.1.tar.gz) = e9ba4a4c754ec95fbe653dcf7344edd6cc47cd60
+RMD160 (jack-audio-connection-kit-0.124.1.tar.gz) = 075c6ce5342d31e359908c01d7123f20818021aa
+SHA512 (jack-audio-connection-kit-0.124.1.tar.gz) = 9c885da516f2ca246edba94db26c851229d063f1557ea91ec76ca57d675a510d16cc4baad5adb316cf46aaaa8b8d7579b484a53b9a803b34fc9bb34c983a8fe2
+Size (jack-audio-connection-kit-0.124.1.tar.gz) = 1113456 bytes
 SHA1 (patch-aa) = f2346262d7590491f005af1c450f4436ec60c58e
 SHA1 (patch-ab) = 8531e1af0c3781a238d3793bdd58577ed598b67a
-SHA1 (patch-ad) = 4e37eaee3bd8674e20d116be80174b99dd9d6e20
+SHA1 (patch-ad) = 3f13c886c7564f7f0b494c7891fcc3c945cf15ba
 SHA1 (patch-af) = 2a40f3a51a088e62352d7cdcc27eb41f3064ae7e
-SHA1 (patch-ah) = e70d2783d79c7177b774e8256cd2eb5c803a6488
-SHA1 (patch-aj) = 90b38c6b2c883d21ea0d058f7e4426f3d16c8b07
+SHA1 (patch-ah) = 09965c317dfabfc9f867cfd69d68e69724d17b38
+SHA1 (patch-aj) = af1b33de7e1e2a938f6a21fa3a32ea2834ee1c36
 SHA1 (patch-ak) = 90006096f7c4035edea75ebebeff58c18f04e39e
 SHA1 (patch-ao) = 60930e5ecd408ebccbca8342083189b7d2d06a1b
-SHA1 (patch-ap) = 64b06cb300940f3e119bfcce033bf47195ab665f
-SHA1 (patch-aq) = cf735dd28af1373b4b2511978fca6af032591859
+SHA1 (patch-ap) = f80d1547051324d9b241ce64027f13a5120ce5da
+SHA1 (patch-aq) = aad14525e2edf5a665e4de794e5e25930a27eec0
 SHA1 (patch-ar) = 892dcd268eef033a9dcb2251560fc48662b54916
 SHA1 (patch-as) = 46c609026d53fdebf1d46263d8f196cd8ecbac77
 SHA1 (patch-config_os_macosx_pThreadUtilities.h) = 7df929e00bac3612ceb5685d297dd998155b9dd1
