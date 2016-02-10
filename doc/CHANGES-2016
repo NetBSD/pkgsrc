@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.606 2016/02/10 04:33:02 wen Exp $
+$NetBSD: CHANGES-2016,v 1.607 2016/02/10 07:33:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -831,3 +831,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/p5-Crypt-OpenSSL-DSA to 0.15 [wen 2016-02-10]
 	Updated security/p5-Crypt-OpenSSL-Random to 0.11 [wen 2016-02-10]
 	Updated security/p5-Crypt-RIPEMD160 to 0.06 [wen 2016-02-10]
+	Updated devel/p5-Scalar-List-Utils to 1.43 [wiz 2016-02-10]
