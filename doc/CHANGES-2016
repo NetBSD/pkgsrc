@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.610 2016/02/10 10:20:54 kleink Exp $
+$NetBSD: CHANGES-2016,v 1.611 2016/02/10 11:09:33 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -835,3 +835,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated editors/obby to 0.4.8 [mef 2016-02-10]
 	Updated audio/jack to 0.124.1 [wiz 2016-02-10]
 	Updated www/py-flask-babelex to 0.9.3 [kleink 2016-02-10]
+	Updated lang/nodejs to 5.6.0 [fhajny 2016-02-10]
