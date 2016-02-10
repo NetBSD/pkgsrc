@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/02/07 17:49:22 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2016/02/10 10:49:26 wiz Exp $
 
 DISTNAME=	paratype-ttf-20140616
 CATEGORIES=	fonts
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.paratype.com/public/
 COMMENT=	Public Fonts for Minority Languages of Russia
-LICENSE=	paratype-license
+LICENSE=	paratype
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none
