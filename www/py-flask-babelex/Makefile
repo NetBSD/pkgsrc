@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2014/12/31 13:57:32 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2016/02/10 10:20:10 kleink Exp $
 
-DISTNAME=	Flask-BabelEx-0.9.2
+DISTNAME=	Flask-BabelEx-0.9.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www python
 MASTER_SITES=	http://pypi.python.org/packages/source/F/Flask-BabelEx/
