@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.605 2016/02/10 04:26:46 wen Exp $
+$NetBSD: CHANGES-2016,v 1.606 2016/02/10 04:33:02 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -830,3 +830,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/syncthing to 0.12.18 [abs 2016-02-09]
 	Updated security/p5-Crypt-OpenSSL-DSA to 0.15 [wen 2016-02-10]
 	Updated security/p5-Crypt-OpenSSL-Random to 0.11 [wen 2016-02-10]
+	Updated security/p5-Crypt-RIPEMD160 to 0.06 [wen 2016-02-10]
