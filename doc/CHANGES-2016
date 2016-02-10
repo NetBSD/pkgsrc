@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.603 2016/02/09 22:26:31 abs Exp $
+$NetBSD: CHANGES-2016,v 1.604 2016/02/10 04:19:43 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -828,3 +828,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/thunderbird-l10n to 38.5.1 [ryoon 2016-02-09]
 	Updated devel/xulrunner38 to 38.6.0 [ryoon 2016-02-09]
 	Updated net/syncthing to 0.12.18 [abs 2016-02-09]
+	Updated security/p5-Crypt-OpenSSL-DSA to 0.15 [wen 2016-02-10]
