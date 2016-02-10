@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.608 2016/02/10 08:10:24 mef Exp $
+$NetBSD: CHANGES-2016,v 1.609 2016/02/10 09:19:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -833,3 +833,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/p5-Crypt-RIPEMD160 to 0.06 [wen 2016-02-10]
 	Updated devel/p5-Scalar-List-Utils to 1.43 [wiz 2016-02-10]
 	Updated editors/obby to 0.4.8 [mef 2016-02-10]
+	Updated audio/jack to 0.124.1 [wiz 2016-02-10]
