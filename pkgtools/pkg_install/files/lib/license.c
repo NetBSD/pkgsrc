@@ -1,4 +1,4 @@
-/*	$NetBSD: license.c,v 1.44 2015/09/13 11:25:52 leot Exp $	*/
+/*	$NetBSD: license.c,v 1.45 2016/02/10 10:50:18 wiz Exp $	*/
 
 /*-
  * Copyright (c) 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -75,6 +75,7 @@ const char *default_acceptable_licenses =
     "ofl-v1.0 ofl-v1.1 "
     "openssl "
     "original-bsd modified-bsd 2-clause-bsd "
+    "paratype "
     "php "
     "png-license "
     "postgresql-license "
