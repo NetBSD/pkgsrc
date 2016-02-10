@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/18 06:44:50 taca Exp $
+@comment $NetBSD: PLIST,v 1.1.1.1.32.1 2016/02/10 19:22:41 bsiegert Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/MIT-LICENSE
@@ -183,6 +183,7 @@ ${GEM_LIBDIR}/lib/active_support/ordered_options.rb
 ${GEM_LIBDIR}/lib/active_support/railtie.rb
 ${GEM_LIBDIR}/lib/active_support/rescuable.rb
 ${GEM_LIBDIR}/lib/active_support/ruby/shim.rb
+${GEM_LIBDIR}/lib/active_support/security_utils.rb
 ${GEM_LIBDIR}/lib/active_support/string_inquirer.rb
 ${GEM_LIBDIR}/lib/active_support/tagged_logging.rb
 ${GEM_LIBDIR}/lib/active_support/test_case.rb
