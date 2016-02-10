@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2016/02/10 12:54:39 kleink Exp $
+# $NetBSD: Makefile,v 1.7 2016/02/10 13:02:31 kleink Exp $
 
 DISTNAME=	geojson-1.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	geography python
 MASTER_SITES=	http://pypi.python.org/packages/source/g/geojson/
 
