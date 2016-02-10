@@ -1,4 +1,4 @@
-# $NetBSD: rails.mk,v 1.52 2015/06/22 13:49:38 taca Exp $
+# $NetBSD: rails.mk,v 1.52.6.1 2016/02/10 19:22:41 bsiegert Exp $
 
 .if !defined(_RUBY_RAILS_MK)
 _RUBY_RAILS_MK=	# defined
@@ -38,7 +38,7 @@ _RUBY_RAILS_MK=	# defined
 #
 # current Ruby on Rails versions.
 #
-RUBY_RAILS32_VERSION?=	3.2.22
+RUBY_RAILS32_VERSION?=	3.2.22.1
 
 RUBY_RAILS_SUPPORTED?=	# defined
 RUBY_RAILS_DEFAULT?=	32
@@ -69,9 +69,9 @@ RUBY_RAILS_VERSION:=	${RUBY_RAILS32_VERSION}
 #
 # Components of Ruby's version.
 #
-_RAILS_MAJOR=	${RUBY_RAILS_VERSION:C/([0-9]+)\.([0-9]+)\.([0-9]+)/\1/}
-_RAILS_MINOR=	${RUBY_RAILS_VERSION:C/([0-9]+)\.([0-9]+)\.([0-9]+)/\2/}
-_RAILS_TEENY=	${RUBY_RAILS_VERSION:C/([0-9]+)\.([0-9]+)\.([0-9]+)/\3/}
+_RAILS_MAJOR=	${RUBY_RAILS_VERSION:C/([0-9]+)\..*/\1/}
+_RAILS_MINOR=	${RUBY_RAILS_VERSION:C/([0-9]+)\.([0-9]+)\..*/\2/}
+_RAILS_TEENY=	${RUBY_RAILS_VERSION:C/([0-9]+)\.([0-9]+)\.([0-9]+).*/\3/}
 
 #
 # If RUBY_RAILS_STRICT_DEP is defined, match exact current Ruby no Rails
