@@ -1,11 +1,20 @@
-$NetBSD: patch-aj,v 1.4 2013/02/09 19:59:44 ryoon Exp $
+$NetBSD: patch-aj,v 1.5 2016/02/10 09:19:22 wiz Exp $
 
 Kill all of the overzealous optimization; if the user wants this,
 there is devel/cpuflags and mk.conf.
 
---- configure.orig	2011-09-28 13:10:13.000000000 +0000
+--- configure.orig	2014-01-22 20:23:47.000000000 +0000
 +++ configure
-@@ -15794,7 +15794,7 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -14969,7 +14969,7 @@ _ACEOF
+ fi
+ 
+ # headers
+-for ac_header in string.h strings.h alloca.h db.h
++for ac_header in string.h strings.h db.h
+ do :
+   as_ac_Header=`$as_echo "ac_cv_header_$ac_header" | $as_tr_sh`
+ ac_fn_c_check_header_mongrel "$LINENO" "$ac_header" "$as_ac_Header" "$ac_includes_default"
+@@ -15793,7 +15793,7 @@ rm -f core conftest.err conftest.$ac_obj
  
  $as_echo "#define x86 1" >>confdefs.h
  
@@ -14,7 +23,7 @@ there is devel/cpuflags and mk.conf.
  
  
      if test x$with_cpu_target != x ; then
-@@ -15832,7 +15832,7 @@ if test "x$enable_dynsimd" = xyes; then
+@@ -15828,7 +15828,7 @@ if test "x$enable_dynsimd" = xyes; then
  
  $as_echo "#define USE_DYNSIMD 1" >>confdefs.h
  
