@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q4,v 1.1.2.14 2016/02/08 10:18:38 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q4,v 1.1.2.15 2016/02/10 20:48:45 bsiegert Exp $
 
 Changes to the packages collection and infrastructure on the 2015Q4 branch:
 
@@ -91,4 +91,23 @@ net/nagios-base: build fix
 
 Pullup ticket #4914 - requested by joerg
 textproc/mdocml: fix packaging issue
+
+Pullup ticket #4915 - requested by taca
+databases/ruby-activerecord32: security fix
+devel/ruby-activemodel32: security fix
+devel/ruby-activesupport32: security fix
+devel/ruby-railties32: security fix
+mail/ruby-actionmailer32: security fix
+www/ruby-actionpack32: security fix
+www/ruby-activeresource32: security fix
+www/ruby-rails32: security fix
+
+Pullup ticket #4916 - requested by taca
+lang/php55: security fix
+
+Pullup ticket #4917 - requested by taca
+lang/php56: security fix
+
+Pullup ticket #4918 - requested by taca
+lang/php70: security fix
 
