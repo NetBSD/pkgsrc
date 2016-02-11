@@ -1,10 +1,8 @@
-$NetBSD: patch-solenv_gbuild_AllLangResTarget.mk,v 1.1 2015/08/12 00:57:20 ryoon Exp $
+$NetBSD: patch-solenv_gbuild_AllLangResTarget.mk,v 1.2 2016/02/11 09:45:27 ryoon Exp $
 
-* Fix build. rsc command does not acceprt "-pthread", it is not needed.
-
---- solenv/gbuild/AllLangResTarget.mk.orig	2013-08-21 11:40:03.000000000 +0000
+--- solenv/gbuild/AllLangResTarget.mk.orig	2016-01-27 00:58:25.000000000 +0000
 +++ solenv/gbuild/AllLangResTarget.mk
-@@ -86,7 +86,6 @@ $(call gb_Helper_abbreviate_dirs,\
+@@ -88,7 +88,6 @@ $(call gb_Helper_abbreviate_dirs,\
  	echo "-s \
  		$(INCLUDE) \
  		-I$(dir $(3)) \
