@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2015/12/30 15:08:08 leot Exp $
+# $NetBSD: Makefile,v 1.9 2016/02/11 11:07:58 leot Exp $
 
 DISTNAME=	mitmproxy-0.15
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://mitmproxy.org/download/
 
