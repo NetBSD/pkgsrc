@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15439 2016/02/11 09:47:08 ryoon Exp $
+$NetBSD: TODO,v 1.15440 2016/02/11 13:37:49 wiz Exp $
 
 Suggested new packages
 ======================
@@ -815,12 +815,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gramps-4.1.0
 	o grantlee-5.0.0
 	o greed-4.1
+	o grep-2.23
 	o grilo-0.2.12
 	o grilo-plugins-0.2.14
 	o gromacs-5.0.6
 	o groonga-5.0.6
 	o gsharutils-4.15.2
 	o gss-1.0.3
+	o gtexinfo-6.1
 	o gthumb-3.4.0
 	o gtk-gnutella-0.98.4
 	o gtk-systrace-20030623
@@ -974,6 +976,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libextractor-1.2 [requires shm_open()]
 	o libflash-0.4.13
 	o libfolks-0.10.1
+	o libgcrypt-1.6.5
 	o libgdiplus-3.0
 	o libgfshare-2.0.0
 	o libgiigic-1.1.2
