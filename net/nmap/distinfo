@@ -1,11 +1,12 @@
-$NetBSD: distinfo,v 1.68 2016/01/26 10:31:39 jklos Exp $
+$NetBSD: distinfo,v 1.69 2016/02/11 06:08:39 jklos Exp $
 
 SHA1 (nmap-7.01.tar.bz2) = c1a44558c72aed3c78d63d54b5b008db69f0aaac
 RMD160 (nmap-7.01.tar.bz2) = 4f79df88e836adb260966ddf1d322b18e16251a2
 SHA512 (nmap-7.01.tar.bz2) = 8b37616c2af2134a5a3bb292f25f2bc0232e20e08405620734c07d84bbc9070a87db4d4b14e8a10c67a3684960035ed202be5dd6feddfb613c134208fc62a2a7
 Size (nmap-7.01.tar.bz2) = 8922697 bytes
 SHA1 (patch-configure) = 5fc39f084eadd6ea0560cd8e6f52074113566600
-SHA1 (patch-libnetutil_netutil.cc) = 7bd1059d6cbcf4f6d129730d6c6f6bc3ab54c0a0
+SHA1 (patch-libnetutil_netutil.cc) = e650098b7e6ef13c48f60d0bc184d6fbb7ad2869
 SHA1 (patch-ndiff_setup.py) = 4e4af27cb896fd1bffc2c9089f930d7075daeb22
+SHA1 (patch-nmap__dns.cc) = f2fc895b2f241a39913fed4e3947379a776fef00
 SHA1 (patch-nsock_tests_run__tests.sh) = 88a7447f93dd3377e7e24e317c55528a73a17401
 SHA1 (patch-zenmap_test_run__tests.py) = 46b2445eed4255cf838e37123c23121eeaf360b6
