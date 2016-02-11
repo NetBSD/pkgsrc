@@ -1,10 +1,10 @@
-$NetBSD: patch-configure,v 1.4 2015/03/11 21:05:09 tnn Exp $
+$NetBSD: patch-configure,v 1.5 2016/02/11 05:55:19 jklos Exp $
 
 Ensure consistent manual page locations.
 
---- configure.orig	2015-03-09 19:22:07.000000000 +0000
+--- configure.orig	2015-04-22 20:19:15.000000000 +0000
 +++ configure
-@@ -6857,8 +6857,6 @@ fi
+@@ -6879,8 +6879,6 @@ fi
  # Individual cases can override this.
  #
  DYEXT="none"
@@ -13,7 +13,16 @@ Ensure consistent manual page locations.
  case "$host_os" in
  
  aix*)
-@@ -7133,6 +7131,9 @@ fi
+@@ -6978,7 +6976,7 @@ fi
+ 			LDFLAGS="$LDFLAGS -arch ppc -arch ppc64 -arch i386 -arch x86_64"
+ 			;;
+ 
+-		darwin9.*)
++		darwin9*)
+ 			#
+ 			# Leopard.  Build for 32-bit PowerPC, 64-bit
+ 			# PowerPC, x86, and x86-64, with 32-bit PowerPC
+@@ -7155,6 +7153,9 @@ fi
  
  test "x$enable_shared" = "xno" && DYEXT="none"
  
@@ -23,7 +32,7 @@ Ensure consistent manual page locations.
  if test -n "$ac_tool_prefix"; then
    # Extract the first word of "${ac_tool_prefix}ranlib", so it can be a program name with args.
  set dummy ${ac_tool_prefix}ranlib; ac_word=$2
-@@ -8125,7 +8126,7 @@ else
+@@ -8147,7 +8148,7 @@ else
  fi
  
  
