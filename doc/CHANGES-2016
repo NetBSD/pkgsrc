@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.622 2016/02/11 13:36:48 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.623 2016/02/11 14:51:59 he Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -847,3 +847,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/mitmproxy to 0.15nb1 [leot 2016-02-11]
 	Updated devel/p5-Test-BDD-Cucumber to 0.45 [schmonz 2016-02-11]
 	Updated security/libgcrypt to 1.6.5 [wiz 2016-02-11]
+	Updated devel/p5-PathTools to 3.62 [he 2016-02-11]
