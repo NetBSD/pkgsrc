@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.621 2016/02/11 13:11:01 schmonz Exp $
+$NetBSD: CHANGES-2016,v 1.622 2016/02/11 13:36:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -846,3 +846,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated misc/libreoffice to 5.1.0.3 [ryoon 2016-02-11]
 	Updated net/mitmproxy to 0.15nb1 [leot 2016-02-11]
 	Updated devel/p5-Test-BDD-Cucumber to 0.45 [schmonz 2016-02-11]
+	Updated security/libgcrypt to 1.6.5 [wiz 2016-02-11]
