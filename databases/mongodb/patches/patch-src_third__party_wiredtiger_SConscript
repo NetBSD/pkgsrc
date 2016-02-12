@@ -1,24 +1,19 @@
-$NetBSD: patch-src_third__party_wiredtiger_SConscript,v 1.2 2015/06/23 13:31:24 ryoon Exp $
+$NetBSD: patch-src_third__party_wiredtiger_SConscript,v 1.3 2016/02/12 03:37:24 ryoon Exp $
 
 * Add NetBSD case.
 
---- src/third_party/wiredtiger/SConscript.orig	2015-06-15 15:43:51.000000000 +0000
+--- src/third_party/wiredtiger/SConscript.orig	2016-01-05 18:31:44.000000000 +0000
 +++ src/third_party/wiredtiger/SConscript
-@@ -2,7 +2,7 @@
- import re
- import textwrap
- 
--Import("env windows darwin solaris linux freebsd openbsd debugBuild")
-+Import("env windows darwin solaris linux freebsd openbsd netbsd debugBuild")
- Import("get_option")
- 
- env = env.Clone()
-@@ -32,6 +32,8 @@ elif freebsd:
+@@ -48,8 +48,12 @@ elif env.TargetOSIs('osx'):
+     env.Append(CPPPATH=["build_darwin"])
+ elif env.TargetOSIs('solaris'):
+     env.Append(CPPPATH=["build_solaris"])
++elif env.TargetOSIs('dragonfly'):
++    env.Append(CPPPATH=["build_dragonfly"])
+ elif env.TargetOSIs('freebsd'):
      env.Append(CPPPATH=["build_freebsd"])
- elif openbsd:
-     env.Append(CPPPATH=["build_openbsd"])
-+elif netbsd:
++elif env.TargetOSIs('netbsd'):
 +    env.Append(CPPPATH=["build_netbsd"])
- elif linux:
-     env.Append(CPPPATH=["build_linux"])
-     env.Append(CPPDEFINES=["_GNU_SOURCE"])
+ elif env.TargetOSIs('openbsd'):
+     env.Append(CPPPATH=["build_openbsd"])
+ elif env.TargetOSIs('linux'):

@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2015/12/05 21:25:31 adam Exp $
+# $NetBSD: Makefile,v 1.10 2016/02/12 03:37:24 ryoon Exp $
 
-DISTNAME=	mongodb-src-r3.0.7
+DISTNAME=	mongodb-src-r3.2.1
 PKGNAME=	${DISTNAME:S/src-r//:S/-rc/rc/}
 CATEGORIES=	databases
 MASTER_SITES=	http://fastdl.mongodb.org/src/
@@ -17,28 +17,18 @@ BUILD_DEPENDS+=	scons-[0-9]*:../../devel/scons
 
 SCONS_BIN=	${PREFIX}/bin/scons
 SCONS_ARGS=	${_MAKE_JOBS}
-SCONS_ARGS+=	--c++11=on
-SCONS_ARGS+=	--cc=${WRAPPER_BINDIR}/${CC:Q}
-SCONS_ARGS+=	--cxx=${WRAPPER_BINDIR}/${CXX:Q}
-SCONS_ARGS+=	--use-system-boost=USE-SYSTEM-BOOST
-SCONS_ARGS+=	--use-system-pcre=USE-SYSTEM-PCRE
-SCONS_ARGS+=	--use-system-snappy=USE-SYSTEM-SNAPPY
-SCONS_ARGS+=	--use-system-tcmalloc=USE-SYSTEM-TCMALLOC
-SCONS_ARGS+=	--js-engine=v8-3.25
-# Avoid Argument list too long from mongod linking
-SCONS_ARGS+=	--variant-dir=pkgsrc
+SCONS_ARGS+=	--use-system-boost
+SCONS_ARGS+=	--use-system-pcre
+SCONS_ARGS+=	--use-system-snappy
+SCONS_ARGS+=	--use-system-tcmalloc
+SCONS_ARGS+=	--js-engine=mozjs
+SCONS_ARGS+=	--release
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet supported as of 3.0.4
 
 .include "../../mk/bsd.prefs.mk"
 
 GCC_REQD+=	4.8.2
-
-.if ${MACHINE_ARCH} == "x86_64"
-SCONS_ARGS+=	--64
-.else
-SCONS_ARGS+=	--32
-.endif
 
 CPPFLAGS+=	-fno-jump-tables
 
@@ -101,6 +91,10 @@ CONF_FILES+=		share/examples/mongodb/mongod.conf \
 
 post-extract:
 	chmod -R g-w ${WRKSRC}
+	cp -r ${WRKSRC}/src/third_party/mozjs-38/platform/x86_64/freebsd \
+		${WRKSRC}/src/third_party/mozjs-38/platform/x86_64/dragonfly
+	cp -r ${WRKSRC}/src/third_party/mozjs-38/platform/x86_64/openbsd \
+		${WRKSRC}/src/third_party/mozjs-38/platform/x86_64/netbsd
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SCONS_BIN} ${SCONS_ARGS} core
