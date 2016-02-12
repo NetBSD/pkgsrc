@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15441 2016/02/11 13:38:26 wiz Exp $
+$NetBSD: TODO,v 1.15442 2016/02/12 14:13:00 mef Exp $
 
 Suggested new packages
 ======================
@@ -413,7 +413,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o alsa-utils-1.1.0
 	o amavis-perl-0.3.12 [called just amavis]
 	o amaya-11.4.4 [wip]
-	o amtterm-1.4
 	o angband-3.2
 	o anjuta-3.16.0
 	o anope-1.8.7
