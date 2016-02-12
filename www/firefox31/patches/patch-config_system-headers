@@ -1,4 +1,4 @@
-$NetBSD: patch-config_system-headers,v 1.4 2016/01/31 23:43:48 joerg Exp $
+$NetBSD: patch-config_system-headers,v 1.5 2016/02/12 14:08:15 ryoon Exp $
 
 https://hg.mozilla.org/integration/mozilla-inbound/rev/afd840d66e6a
 
@@ -20,7 +20,15 @@ https://hg.mozilla.org/integration/mozilla-inbound/rev/afd840d66e6a
  ftglyph.h
  ftsynth.h
  ftoutln.h
-@@ -1048,8 +1050,6 @@ X11/Xlocale.h
+@@ -645,6 +647,7 @@ mapiutil.h
+ mapix.h
+ Math64.h
+ math.h
++complex
+ mbstring.h
+ mem.h
+ memory
+@@ -1048,8 +1051,6 @@ X11/Xlocale.h
  X11/Xos.h
  X11/Xutil.h
  zmouse.h
@@ -29,7 +37,7 @@ https://hg.mozilla.org/integration/mozilla-inbound/rev/afd840d66e6a
  #if MOZ_NATIVE_PNG==1
  png.h
  #endif
-@@ -1117,6 +1117,8 @@ ogg/ogg.h
+@@ -1117,6 +1118,8 @@ ogg/ogg.h
  ogg/os_types.h
  nestegg/nestegg.h
  cubeb/cubeb.h
@@ -38,7 +46,7 @@ https://hg.mozilla.org/integration/mozilla-inbound/rev/afd840d66e6a
  #endif
  gst/gst.h
  gst/app/gstappsink.h
-@@ -1145,3 +1147,39 @@ unicode/utypes.h
+@@ -1145,3 +1148,39 @@ unicode/utypes.h
  #endif
  libutil.h
  unwind.h

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.20 2016/01/31 23:43:48 joerg Exp $
+$NetBSD: distinfo,v 1.21 2016/02/12 14:08:15 ryoon Exp $
 
 SHA1 (firefox-31.8.0esr.source.tar.bz2) = 1b09b4ac975f521b48d0ef794f00c4e3696cb1d7
 RMD160 (firefox-31.8.0esr.source.tar.bz2) = c7cd74d1a5cde5c6419becddcb3333d7ec46bf68
@@ -30,7 +30,7 @@ SHA1 (patch-config_external_moz.build) = f437c4802de266caf512dc470879c8ed0961559
 SHA1 (patch-config_rules.mk) = ec74e2e385e95252a1325c8c9c859a0b2dcee693
 SHA1 (patch-config_stl__wrappers_ios) = 00d723e2f2f252485350ede5833f0bb84c1235c1
 SHA1 (patch-config_stl__wrappers_ostream) = 7be7fe36704ffbdc070a113b46b4f391a598206b
-SHA1 (patch-config_system-headers) = 7680a9e45eb6467d878df59d9476bff0c515dafe
+SHA1 (patch-config_system-headers) = 9adca6267642e3771914044c5ffb491d1b5dcb12
 SHA1 (patch-content_base_src_moz.build) = fc2660dcc82f11c89d6d5a5772f27c9827f58f44
 SHA1 (patch-content_media_AudioStream.cpp) = 70021dfd1cc86e8999f144b49a23bfb27dd24157
 SHA1 (patch-content_media_AudioStream.h) = 11cd8649f35c001fa0bf9e0f6119e49bd41ab9b4
