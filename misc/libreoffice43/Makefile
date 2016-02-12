@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2016/01/27 10:31:30 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2016/02/12 13:39:20 wiz Exp $
 
 VERREL=		4.3.7
 VERRC=		2
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
 PKGNAME=	libreoffice43-${VER}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -271,7 +271,7 @@ post-install:
 .include "../../devel/gperf/buildlink3.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../devel/liblangtag/buildlink3.mk"
-.include "../../devel/mdds/buildlink3.mk"
+.include "../../devel/mdds0.12/buildlink3.mk"
 .include "../../devel/nss/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
