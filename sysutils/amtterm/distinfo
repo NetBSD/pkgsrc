@@ -1,11 +1,7 @@
-$NetBSD: distinfo,v 1.5 2015/11/04 01:32:06 agc Exp $
+$NetBSD: distinfo,v 1.6 2016/02/12 14:11:24 mef Exp $
 
-SHA1 (amtterm-1.3.tar.gz) = cfd199cc870f48a59caa89408b039239eab85322
-RMD160 (amtterm-1.3.tar.gz) = 382f9869b849f7cf6180b68f2a2481225ca575af
-SHA512 (amtterm-1.3.tar.gz) = 04514b7d7a38f7e579739186829f1aba95b3580d24a47fe82382e1c85e8a24a11983117e5cc75c1f7e1f360927b40a5adc1d2ed65a2e325e7abcc01320aa654b
-Size (amtterm-1.3.tar.gz) = 37671 bytes
-SHA1 (patch-GNUmakefile) = f0ff91d80b01ea9d4b42ea752b786ce16a698c7d
-SHA1 (patch-RedirectionConstants.h) = 8124cf1f580d75f9b60ca6c34d576146b6d4e7fd
+SHA1 (amtterm-1.4.tar.gz) = 4a5ee5bf6fda4785708e4822954d1157d3e51d54
+RMD160 (amtterm-1.4.tar.gz) = fac39807990870f88884e541f4b062db8b8d1236
+SHA512 (amtterm-1.4.tar.gz) = 64bad394a2526291daa72fd211952caff20c0aa1f1c580dcbae3c92882c9fd57238c140e14749a9d58580e49890abd447e7ca466b39221301e4108c19298502f
+Size (amtterm-1.4.tar.gz) = 38445 bytes
 SHA1 (patch-mk_Variables.mk) = cb2d2fae3c0e650386308bd9290fa62c64a137f7
-SHA1 (patch-redir.c) = 930b9623d75e843a28708bbeb9c50e64332681e0
-SHA1 (patch-redir.h) = d910de3c4efd118b8d001cf17673c47857c72a3a

@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/13 13:24:01 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/02/12 14:11:24 mef Exp $
 bin/amtterm
 ${PLIST.gamt}bin/gamt
 bin/amttool
 man/man1/amtterm.1
 man/man1/amttool.1
-${PLIST.gamt}man/man1/gamt.1
+man/man1/gamt.1
 man/man7/amt-howto.7
-${PLIST.gamt}share/applications/gamt.desktop
+share/applications/gamt.desktop
