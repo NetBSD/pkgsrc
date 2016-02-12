@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2015/12/05 21:25:33 adam Exp $
+# $NetBSD: Makefile,v 1.28 2016/02/12 14:08:22 jperkin Exp $
 
 DISTNAME=	tdb-1.3.8
 CATEGORIES=	databases
@@ -27,6 +27,18 @@ REPLACE_PYTHON+= buildtools/bin/waf
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 1.2.12
 
 USE_GCC_RUNTIME=	yes
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+post-build:
+	@install_name_tool -id ${PREFIX}/lib/libtdb.dylib \
+		${WRKSRC}/bin/default/libtdb.dylib
+
+post-install:
+	@install_name_tool -id ${PREFIX}/lib/libtdb.dylib \
+		${DESTDIR}${PREFIX}/lib/libtdb.${PKGVERSION_NOREV}.dylib
+.endif
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
