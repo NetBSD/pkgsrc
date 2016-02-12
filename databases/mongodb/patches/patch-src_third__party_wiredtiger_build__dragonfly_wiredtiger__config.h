@@ -1,9 +1,7 @@
-$NetBSD: patch-src_third__party_wiredtiger_build__netbsd_wiredtiger__config.h,v 1.2 2016/02/12 03:37:24 ryoon Exp $
+$NetBSD: patch-src_third__party_wiredtiger_build__dragonfly_wiredtiger__config.h,v 1.1 2016/02/12 03:37:24 ryoon Exp $
 
-* Copy from OpenBSD case.
-
---- src/third_party/wiredtiger/build_netbsd/wiredtiger_config.h.orig	2016-02-11 11:07:20.607136772 +0000
-+++ src/third_party/wiredtiger/build_netbsd/wiredtiger_config.h
+--- src/third_party/wiredtiger/build_dragonfly/wiredtiger_config.h.orig	2016-02-11 11:07:15.049932059 +0000
++++ src/third_party/wiredtiger/build_dragonfly/wiredtiger_config.h
 @@ -0,0 +1,154 @@
 +/* wiredtiger_config.h.  Generated from config.hin by configure.  */
 +/* build_posix/config.hin.  Generated from configure.ac by autoheader.  */
@@ -39,7 +37,7 @@ $NetBSD: patch-src_third__party_wiredtiger_build__netbsd_wiredtiger__config.h,v 
 +#define HAVE_FCNTL 1
 +
 +/* Define to 1 if you have the `fdatasync' function. */
-+#define HAVE_FDATASYNC 1
++/* #undef HAVE_FDATASYNC */
 +
 +/* Define to 1 if you have the `fread_unlocked' function. */
 +/* #undef HAVE_FREAD_UNLOCKED */
@@ -66,7 +64,7 @@ $NetBSD: patch-src_third__party_wiredtiger_build__netbsd_wiredtiger__config.h,v 
 +#define HAVE_LIBPTHREAD 1
 +
 +/* Define to 1 if you have the `rt' library (-lrt). */
-+/* #undef HAVE_LIBRT */
++#define HAVE_LIBRT 1
 +
 +/* Define to 1 if you have the `snappy' library (-lsnappy). */
 +/* #undef HAVE_LIBSNAPPY */
@@ -78,10 +76,10 @@ $NetBSD: patch-src_third__party_wiredtiger_build__netbsd_wiredtiger__config.h,v 
 +#define HAVE_MEMORY_H 1
 +
 +/* Define to 1 if you have the `posix_fadvise' function. */
-+/* #undef HAVE_POSIX_FADVISE */
++#define HAVE_POSIX_FADVISE 1
 +
 +/* Define to 1 if you have the `posix_fallocate' function. */
-+/* #undef HAVE_POSIX_FALLOCATE */
++#define HAVE_POSIX_FALLOCATE 1
 +
 +/* Define to 1 if you have the `posix_madvise' function. */
 +#define HAVE_POSIX_MADVISE 1
@@ -90,7 +88,7 @@ $NetBSD: patch-src_third__party_wiredtiger_build__netbsd_wiredtiger__config.h,v 
 +#define HAVE_POSIX_MEMALIGN 1
 +
 +/* Define to 1 if you have the <pthread_np.h> header file. */
-+/* #undef HAVE_PTHREAD_NP_H */
++#define HAVE_PTHREAD_NP_H 1
 +
 +/* Build the LevelDB API with RocksDB support. */
 +/* #undef HAVE_ROCKSDB */
