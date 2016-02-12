@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2015/12/27 12:41:42 adam Exp $
+# $NetBSD: Makefile,v 1.20 2016/02/12 14:24:50 ryoon Exp $
 
+PKGREVISION=	1
 BOOST_PACKAGE=	meta-pkg
 BOOST_COMMENT=	(meta package)
 
