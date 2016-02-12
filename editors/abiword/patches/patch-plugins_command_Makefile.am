@@ -1,15 +1,11 @@
-$NetBSD: patch-plugins_command_Makefile.am,v 1.2 2016/01/24 15:30:46 nros Exp $
-GCC 4.6+ chokes on "--no-undefined" which older versions of GCC let fall 
-to the linker.  Prefix with "-Wl," to fix build.
+$NetBSD: patch-plugins_command_Makefile.am,v 1.3 2016/02/12 23:42:15 jperkin Exp $
+
 Use CXX for linking.
+
 --- plugins/command/Makefile.am.orig	2011-11-15 21:25:46.000000000 +0000
 +++ plugins/command/Makefile.am
-@@ -13,8 +13,9 @@ command_la_LIBADD = \
- command_la_LDFLAGS = \
- 	-avoid-version \
- 	-module \
--	-no-undefined
-+	-Wl,--no-undefined
+@@ -16,5 +16,6 @@ command_la_LDFLAGS = \
+ 	-no-undefined
  
  command_la_SOURCES = 
 +nodist_EXTRA_command_la_SOURCES = dummy.cpp
