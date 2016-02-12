@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.157 2016/01/24 15:30:46 nros Exp $
+# $NetBSD: Makefile,v 1.158 2016/02/12 23:42:15 jperkin Exp $
 
 .include 	"Makefile.common"
 DISTNAME=	abiword-${ABIVERSION}
@@ -24,14 +24,17 @@ CONFIGURE_ARGS+=	--enable-plugins=""
 # disable to make sure it's not found somewhere else
 CONFIGURE_ARGS+=        --with-evolution-data-server=no
 
-
 PKGCONFIG_OVERRIDE+=	libabiword.pc.in
 
 pre-configure:
 	cd ${WRKSRC}; \
 	autoreconf --force --install
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} != "Darwin"
 BUILDLINK_TRANSFORM+=	opt:-no-undefined:-Wl,--no-undefined
+.endif
 
 .include "options.mk"
 
