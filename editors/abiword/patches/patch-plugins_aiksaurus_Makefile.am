@@ -1,15 +1,11 @@
-$NetBSD: patch-plugins_aiksaurus_Makefile.am,v 1.2 2016/01/24 15:30:46 nros Exp $
-GCC 4.6+ chokes on "--no-undefined" which older versions of GCC let fall 
-to the linker.  Prefix with "-Wl," to fix build.
+$NetBSD: patch-plugins_aiksaurus_Makefile.am,v 1.3 2016/02/12 23:42:15 jperkin Exp $
+
 Use CXX for linking.
+
 --- plugins/aiksaurus/Makefile.am.orig	2014-03-21 23:51:31.000000000 +0000
 +++ plugins/aiksaurus/Makefile.am
-@@ -28,7 +28,8 @@ aiksaurus_la_LIBADD = \
- aiksaurus_la_LDFLAGS = \
- 	-avoid-version \
- 	-module \
--	-no-undefined
-+	-Wl,--no-undefined
+@@ -31,4 +31,5 @@ aiksaurus_la_LDFLAGS = \
+ 	-no-undefined
  
  aiksaurus_la_SOURCES = 
 +nodist_EXTRA_aiksaurus_la_SOURCES = dummy.cpp
