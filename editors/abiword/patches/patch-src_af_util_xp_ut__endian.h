@@ -1,4 +1,6 @@
-$NetBSD: patch-src_af_util_xp_ut__endian.h,v 1.1 2015/09/13 21:32:13 nros Exp $
+$NetBSD: patch-src_af_util_xp_ut__endian.h,v 1.2 2016/02/12 23:42:15 jperkin Exp $
+
+Support DragonFly.
 
 --- src/af/util/xp/ut_endian.h.orig	2013-04-07 13:53:03.000000000 +0000
 +++ src/af/util/xp/ut_endian.h

@@ -1,26 +1,26 @@
-$NetBSD: distinfo,v 1.68 2016/01/24 15:30:46 nros Exp $
+$NetBSD: distinfo,v 1.69 2016/02/12 23:42:15 jperkin Exp $
 
 SHA1 (abiword-3.0.1.tar.gz) = 7badf9663564a144e16764a456cadda18df70991
 RMD160 (abiword-3.0.1.tar.gz) = 05d92a7304e4e419776970d7b35065ceb59f7681
 SHA512 (abiword-3.0.1.tar.gz) = c655aabe0ba0a9880f30808e26c02ec3280c750625faa482a68d4d336742f85659a7af7d6413d8813b82d3de0a3f6b61b6f6898f030bb921d792ad866879dbcf
 Size (abiword-3.0.1.tar.gz) = 11144990 bytes
-SHA1 (patch-configure.ac) = bbffa133509affe43fdef7e420e3a96a14edf58f
+SHA1 (patch-configure.ac) = 239c0635c2c616c7e0a986a5fd92428393af38b7
 SHA1 (patch-plugin-configure.m4) = a8b8db3bdbd69339e32eefec1de7b1b59467db40
-SHA1 (patch-plugins_aiksaurus_Makefile.am) = df642d973dfa453670807d639da11bb112cbd0bd
-SHA1 (patch-plugins_command_Makefile.am) = c26cd671390aa2bfd6f306a62d39fc6d50c56939
+SHA1 (patch-plugins_aiksaurus_Makefile.am) = 1529d5098b7fb798c428fe02cc50879374cb3e9d
+SHA1 (patch-plugins_command_Makefile.am) = e003a6bf9a6e0566abc85f09868fdf1aa93234d7
 SHA1 (patch-plugins_gimp_xp_AbiGimp.cpp) = 15692cf15fd4099e7ad4ad854b6b57b103717269
-SHA1 (patch-plugins_goffice_Makefile.am) = 37afe59c96df7b0a3702a6df99abe42249e339d9
+SHA1 (patch-plugins_goffice_Makefile.am) = 1959eea3b4e19f085aeb56870f682ce44561d445
 SHA1 (patch-plugins_grammar_linkgrammarwrap_LinkGrammarWrap.cpp) = f3916dbc0b208bfe9dbb55eac850a3094683694c
 SHA1 (patch-plugins_paint_xp_AbiGeneric.cpp) = 0c29c7ddf0dbd55d4bb6ab90311e40f2cff7130b
 SHA1 (patch-plugins_paint_xp_AbiPaint.cpp) = bf1ea7eb25fb384014523554f7ca55e6507bcbe6
-SHA1 (patch-plugins_psion_Makefile.am) = 0d883b06e7f0368826e0d729c84cf9711555ab54
+SHA1 (patch-plugins_psion_Makefile.am) = d18356c2a273d99918076d5aefafec595af3f898
 SHA1 (patch-plugins_wordperfect_xp_Makefile.am) = e5cba76cfdba5caca672b801fa222b277a7522c1
 SHA1 (patch-plugins_wordperfect_xp_ie__imp__WordPerfect.cpp) = 10a6d88e21f98e743b4443a09cd73ab8b7812fc9
 SHA1 (patch-plugins_wordperfect_xp_ie__imp__WordPerfect.h) = 6e1e264506edabf0e1cb359f664ed455d16fa05e
 SHA1 (patch-plugins_wordperfect_xp_ie__impexp__WordPerfect.cpp) = c87bc227eebcfcc2ab11ee6b5237ef8fcc47c0bc
 SHA1 (patch-plugins_wordperfect_xp_ie__impexp__WordPerfect.h) = 0a75276dc0d1d99b97155f61d9f98de7126fb0a3
 SHA1 (patch-plugins_wpg_xp_ie__impGraphic__WPG.cpp) = 36d7ca7855ddc504701e392c28e3d8530f78b81e
-SHA1 (patch-src_af_util_xp_ut__endian.h) = e73aef0db6ddef0316cca3f7a77fd4c71c870637
+SHA1 (patch-src_af_util_xp_ut__endian.h) = e1dd4cc0df3b0eb66dbd673fb5c0d2e3b24b30a4
 SHA1 (patch-src_af_util_xp_ut__iconv.cpp) = 613f162d4db0ba9520e0481a98564e59ccd862d4
 SHA1 (patch-src_af_util_xp_ut__iconv.h) = bbcfa2098ea77d393feb50d69de9ae29fcce302f
 SHA1 (patch-src_af_util_xp_ut__mbtowc.cpp) = 01f6793651533e7e39f665e5c15e6c12e1c7b96d
