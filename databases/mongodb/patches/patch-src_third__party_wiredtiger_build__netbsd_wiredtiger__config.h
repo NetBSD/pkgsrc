@@ -1,10 +1,10 @@
-$NetBSD: patch-src_third__party_wiredtiger_build__netbsd_wiredtiger__config.h,v 1.1 2015/05/02 08:10:33 ryoon Exp $
+$NetBSD: patch-src_third__party_wiredtiger_build__netbsd_wiredtiger__config.h,v 1.2 2016/02/12 03:37:24 ryoon Exp $
 
 * Copy from OpenBSD case.
 
---- src/third_party/wiredtiger/build_netbsd/wiredtiger_config.h.orig	2015-05-02 04:35:05.000000000 +0000
+--- src/third_party/wiredtiger/build_netbsd/wiredtiger_config.h.orig	2016-02-11 11:07:20.607136772 +0000
 +++ src/third_party/wiredtiger/build_netbsd/wiredtiger_config.h
-@@ -0,0 +1,151 @@
+@@ -0,0 +1,154 @@
 +/* wiredtiger_config.h.  Generated from config.hin by configure.  */
 +/* build_posix/config.hin.  Generated from configure.ac by autoheader.  */
 +
@@ -124,6 +124,9 @@ $NetBSD: patch-src_third__party_wiredtiger_build__netbsd_wiredtiger__config.h,v 
 +
 +/* Enable verbose message configuration. */
 +/* #undef HAVE_VERBOSE */
++
++/* Define to 1 if you have the <x86intrin.h> header file. */
++/* #undef HAVE_X86INTRIN_H */
 +
 +/* Spinlock type from mutex.h. */
 +#define SPINLOCK_TYPE SPINLOCK_PTHREAD_MUTEX
