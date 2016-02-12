@@ -1,8 +1,21 @@
-$NetBSD: patch-configure.ac,v 1.1 2015/09/13 21:32:13 nros Exp $
+$NetBSD: patch-configure.ac,v 1.2 2016/02/12 23:42:15 jperkin Exp $
+
 Use the installed libabiword instead of the one in the build directory
 This is needed for the plugins so the can build as a separate package
---- configure.ac.orig	2015-06-06 23:11:58.000000000 +0000
+
+Disable Cocoa configuration on Darwin, it doesn't build.
+
+--- configure.ac.orig	2014-12-21 04:51:43.000000000 +0000
 +++ configure.ac
+@@ -146,7 +146,7 @@ fi
+ TOOLKIT_IS_GTK2="no"
+ AC_MSG_CHECKING([for platform and toolkit])
+ case ${host_os} in
+-  *darwin*)
++  *notdarwin*)
+     PLATFORM="unix"
+     TOOLKIT="cocoa"
+     ;;
 @@ -893,7 +893,7 @@ if test "$TOOLKIT" = "gtk"  && 
     test "$enable_shared" = "yes"; then
  	# link plugins to work around gcc visibility issue with 
