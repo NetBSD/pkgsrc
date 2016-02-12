@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2211 2016/02/08 05:48:07 agc Exp $
+# $NetBSD: Makefile,v 1.2212 2016/02/12 13:37:56 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -580,6 +580,7 @@ SUBDIR+=	mantis
 SUBDIR+=	matio
 SUBDIR+=	mcpp
 SUBDIR+=	mdds
+SUBDIR+=	mdds0.12
 SUBDIR+=	meld
 SUBDIR+=	mell
 SUBDIR+=	memcached
