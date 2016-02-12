@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.1 2016/02/12 13:34:45 wiz Exp $
+
+SHA1 (mdds_0.12.1.tar.bz2) = e7469349f8d0c65545896fe553918f3ea93bd84d
+RMD160 (mdds_0.12.1.tar.bz2) = 351e681e04558a7cd4f8e16d8130c60c4760c7da
+SHA512 (mdds_0.12.1.tar.bz2) = 852f58e1f3c18aef78646c2bd6b34dc544fc06cba7ef6bda2a44fd5e681bf47bbf7389505061ddd81797b0bdf343e55f060397a1ccc582c73990bc74d36575a6
+Size (mdds_0.12.1.tar.bz2) = 153265 bytes
+SHA1 (patch-include_mdds_flat__segment__tree.hpp) = 3b5a0c3687ff5a5c53362fda4271d6eded2f327c
+SHA1 (patch-include_mdds_flat__segment__tree__def.inl) = 111c1c0d3e4d1bca421f962c41572a5f805d4e80
+SHA1 (patch-include_mdds_mixed__type__matrix__def.inl) = 602b7a2edfb7321404c5603265e553bf771de26c
+SHA1 (patch-include_mdds_mixed__type__matrix__storage__filled__linear.inl) = bd5c00d8032a74fab956bc64d691f0da1bf0acf6
+SHA1 (patch-include_mdds_multi__type__vector__itr.hpp) = ac5db6ee22a6aced27346088ce3b597c91d01cc5
+SHA1 (patch-include_mdds_point__quad__tree.hpp) = 2237a712ef0b031d59846b08b087dc4e5ad5ac8e
+SHA1 (patch-src_flat__segment__tree__test.cpp) = 1b3345d1e7e97c503d757d163f47b14e2f43a707
