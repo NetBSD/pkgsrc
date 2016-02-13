@@ -1,6 +1,7 @@
-$NetBSD: patch-configure,v 1.4 2015/09/08 19:40:59 wiz Exp $
+$NetBSD: patch-configure,v 1.5 2016/02/13 08:46:02 wiz Exp $
 
 Fix unportable test(1) operator.
+Adapt for mdds-1.0.
 
 --- configure.orig	2015-06-18 23:43:37.000000000 +0000
 +++ configure
@@ -12,4 +13,63 @@ Fix unportable test(1) operator.
 +if test x"$enable_werror" = "xyes"; then :
  
  	CXXFLAGS="$CXXFLAGS -Werror"
+ 
+@@ -19229,7 +19229,7 @@ fi
+ fi
+ 
+ # ============
+-# mdds support
++# mdds-1.0 support
+ # ============
+ 
+ pkg_failed=no
+@@ -19240,12 +19240,12 @@ if test -n "$MDDS_CFLAGS"; then
+     pkg_cv_MDDS_CFLAGS="$MDDS_CFLAGS"
+  elif test -n "$PKG_CONFIG"; then
+     if test -n "$PKG_CONFIG" && \
+-    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"mdds >= 0.11.0\""; } >&5
+-  ($PKG_CONFIG --exists --print-errors "mdds >= 0.11.0") 2>&5
++    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"mdds-1.0 >= 0.11.0\""; } >&5
++  ($PKG_CONFIG --exists --print-errors "mdds-1.0 >= 0.11.0") 2>&5
+   ac_status=$?
+   $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+   test $ac_status = 0; }; then
+-  pkg_cv_MDDS_CFLAGS=`$PKG_CONFIG --cflags "mdds >= 0.11.0" 2>/dev/null`
++  pkg_cv_MDDS_CFLAGS=`$PKG_CONFIG --cflags "mdds-1.0 >= 0.11.0" 2>/dev/null`
+ 		      test "x$?" != "x0" && pkg_failed=yes
+ else
+   pkg_failed=yes
+@@ -19257,12 +19257,12 @@ if test -n "$MDDS_LIBS"; then
+     pkg_cv_MDDS_LIBS="$MDDS_LIBS"
+  elif test -n "$PKG_CONFIG"; then
+     if test -n "$PKG_CONFIG" && \
+-    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"mdds >= 0.11.0\""; } >&5
+-  ($PKG_CONFIG --exists --print-errors "mdds >= 0.11.0") 2>&5
++    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"mdds-1.0 >= 0.11.0\""; } >&5
++  ($PKG_CONFIG --exists --print-errors "mdds-1.0 >= 0.11.0") 2>&5
+   ac_status=$?
+   $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+   test $ac_status = 0; }; then
+-  pkg_cv_MDDS_LIBS=`$PKG_CONFIG --libs "mdds >= 0.11.0" 2>/dev/null`
++  pkg_cv_MDDS_LIBS=`$PKG_CONFIG --libs "mdds-1.0 >= 0.11.0" 2>/dev/null`
+ 		      test "x$?" != "x0" && pkg_failed=yes
+ else
+   pkg_failed=yes
+@@ -19283,14 +19283,14 @@ else
+         _pkg_short_errors_supported=no
+ fi
+         if test $_pkg_short_errors_supported = yes; then
+-	        MDDS_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "mdds >= 0.11.0" 2>&1`
++	        MDDS_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "mdds-1.0 >= 0.11.0" 2>&1`
+         else
+-	        MDDS_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "mdds >= 0.11.0" 2>&1`
++	        MDDS_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "mdds-1.0 >= 0.11.0" 2>&1`
+         fi
+ 	# Put the nasty error message in config.log where it belongs
+ 	echo "$MDDS_PKG_ERRORS" >&5
+ 
+-	as_fn_error $? "Package requirements (mdds >= 0.11.0) were not met:
++	as_fn_error $? "Package requirements (mdds-1.0 >= 0.11.0) were not met:
+ 
+ $MDDS_PKG_ERRORS
  
