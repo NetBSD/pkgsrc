@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.46 2015/12/13 14:31:03 ryoon Exp $
+$NetBSD: distinfo,v 1.47 2016/02/13 08:46:03 wiz Exp $
 
 SHA1 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = 452eba922e4f41603539c9dc39947d2271e47093
 RMD160 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = dbeb7a7f8c89961ca2e544b810345d025561866b
@@ -194,7 +194,7 @@ SHA512 (libreoffice/libreoffice-translations-4.4.7.2.tar.xz) = 3a9288867dc23c9a6
 Size (libreoffice/libreoffice-translations-4.4.7.2.tar.xz) = 128072392 bytes
 SHA1 (patch-Makefile.in) = e34092a731f4da0d8c048945c75287327b6b9cb2
 SHA1 (patch-bin_distro-install-desktop-integration) = 78921a0fb6db8b87f5d64c09579dc6f9211949b5
-SHA1 (patch-configure.ac) = ff940ab10b913d24bc6b7a8e7c2f8f3c16673ab7
+SHA1 (patch-configure.ac) = b8ffdfad5501feeec88ec0b0d249a399b9d63e3d
 SHA1 (patch-desktop_Library__sofficeapp.mk) = e445b1a265fadf4f83f1c40bc541c11c26860352
 SHA1 (patch-external_jfreereport_java_sac_build.xml) = 675a37dcf3a813f890ec2c28cb7c6b0948610445
 SHA1 (patch-external_libebook_ExternalProject__libebook.mk) = a9c2f7d30cf8efc7acea4d4a0523bad801c9b930
