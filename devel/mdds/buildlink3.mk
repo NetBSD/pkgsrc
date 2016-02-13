@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.3 2013/10/09 14:29:47 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2016/02/13 08:40:22 wiz Exp $
 
 BUILDLINK_TREE+=	mdds
 
 .if !defined(MDDS_BUILDLINK3_MK)
 MDDS_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.mdds+=	mdds>=0.9.0nb1
+BUILDLINK_API_DEPENDS.mdds+=	mdds>=1.0.0
 BUILDLINK_PKGSRCDIR.mdds?=	../../devel/mdds
 # only contains header files
 BUILDLINK_DEPMETHOD.mdds?=	build
