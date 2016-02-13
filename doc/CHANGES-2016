@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.642 2016/02/13 18:11:34 tsutsui Exp $
+$NetBSD: CHANGES-2016,v 1.643 2016/02/13 18:52:30 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -869,3 +869,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/ruby-http to 1.0.2 [tsutsui 2016-02-13]
 	Updated net/ruby-twitter 5.16.0 [tsutsui 2016-02-13]
 	Updated emulators/xnp2 to 0.85 [tsutsui 2016-02-13]
+	Added devel/go-review version 20160213 [bsiegert 2016-02-13]
