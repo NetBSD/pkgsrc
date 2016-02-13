@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2015/11/04 00:35:14 agc Exp $
+$NetBSD: distinfo,v 1.18.2.1 2016/02/13 16:25:41 bsiegert Exp $
 
 SHA1 (nagios-plugins-2.0.3.tar.gz) = 29b6183ab9d796299dc17c395eef493415d1e9d6
 RMD160 (nagios-plugins-2.0.3.tar.gz) = b682b126c78df51f64d9cb8599d2f9dfd411d5f4
@@ -11,4 +11,5 @@ SHA1 (patch-ai) = 645ebd4ac16a71bd5944fe3850c809cb45bf6a4c
 SHA1 (patch-ak) = 093638669dd5b524d8a9b31d452f1ba737e684b3
 SHA1 (patch-an) = 6ba8dec0eb62cd0097809daf8075248afd448695
 SHA1 (patch-configure) = 8a06bbd0fa0649625ffb1c8e2f4b667714a40fe4
+SHA1 (patch-plugins-root_Makefile.in) = e4352f38bd0085f5c0acd9d058f1aa5d76676fff
 SHA1 (patch-plugins__check_swap.c) = 4a32398b3e8e596b9f67b3ea95a3acce37287b0b
