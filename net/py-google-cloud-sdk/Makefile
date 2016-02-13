@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2016/01/11 04:25:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2016/02/13 02:35:16 ryoon Exp $
 
-GCLOUDVER=	91.0.1
+GCLOUDVER=	96.0.0
 DISTNAME=	google-cloud-sdk-${GCLOUDVER}-linux-x86
 PKGNAME=	${PYPKGPREFIX}-google-cloud-sdk-${GCLOUDVER}
 CATEGORIES=	net
