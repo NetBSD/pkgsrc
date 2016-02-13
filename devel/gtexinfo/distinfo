@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.45 2015/11/03 03:27:30 agc Exp $
+$NetBSD: distinfo,v 1.46 2016/02/13 07:02:07 ryoon Exp $
 
-SHA1 (texinfo-6.0.tar.gz) = 110d45256c4219c88dc2fdb8c9c1a20749e4e7c5
-RMD160 (texinfo-6.0.tar.gz) = 13e4b6d95ee71d0acd5f59a4ee7aff6dd8bd5f18
-SHA512 (texinfo-6.0.tar.gz) = 2e586167b73117938f04f953cd0832ef2d33c127af9b1eb8e6595975aa88b5e7726b8b6e1a9146c256cb66af3dc16be868ed213ee88230d04cdbf98604b6ed81
-Size (texinfo-6.0.tar.gz) = 8349669 bytes
-SHA1 (patch-ab) = 4fd54f537470642394292f35539cf308873e156a
+SHA1 (texinfo-6.1.tar.gz) = b6ed8b4af3fe9a4aa7c72081dc61f095f73d895c
+RMD160 (texinfo-6.1.tar.gz) = 6ab09576dab209cf8784c8052039126e0b21d941
+SHA512 (texinfo-6.1.tar.gz) = 633d7b8c6d5001d751ab94eaefe8d6e2562f4ac5952d20fb8629b964fbb8e77c2002124b38b25e4bf5f5fc0a6b59f4618dad161be06b52573717016580cba681
+Size (texinfo-6.1.tar.gz) = 8951151 bytes
+SHA1 (patch-ab) = 1191eb02e87c51b62f45b8d92ffd124a4d5eda05
 SHA1 (patch-ac) = 7f7226ee521fddba9f967be4fe199f6bedcfa148
 SHA1 (patch-gnulib_lib_mbiter.h) = 34c291e6994c6eb51aba803f3ebf5f09d46e9bdd
 SHA1 (patch-gnulib_lib_mbuiter.h) = be293674c37cb91746527be07aa40acbd285d2f4
