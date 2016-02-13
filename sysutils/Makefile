@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.658 2015/12/30 14:23:22 leot Exp $
+# $NetBSD: Makefile,v 1.659 2016/02/13 15:00:10 tsutsui Exp $
 #
 
 COMMENT=	System utilities
@@ -463,7 +463,6 @@ SUBDIR+=	ruby-childprocess
 SUBDIR+=	ruby-directory-watcher
 SUBDIR+=	ruby-facter
 SUBDIR+=	ruby-fssm
-SUBDIR+=	ruby-libnotify
 SUBDIR+=	ruby-listen
 SUBDIR+=	ruby-notify
 SUBDIR+=	ruby-quota
