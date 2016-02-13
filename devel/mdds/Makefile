@@ -1,39 +1,20 @@
-# $NetBSD: Makefile,v 1.28 2015/08/12 00:45:18 ryoon Exp $
+# $NetBSD: Makefile,v 1.29 2016/02/13 08:40:22 wiz Exp $
 
-DISTNAME=	mdds_0.12.1
+DISTNAME=	mdds_1.0.0
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	devel
 MASTER_SITES=	http://kohei.us/files/mdds/src/
 EXTRACT_SUFX=	.tar.bz2
-EXTRACT_USING=	gtar
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://code.google.com/p/multidimalgorithm/
+HOMEPAGE=	https://gitlab.com/mdds/mdds
 COMMENT=	Collection of multi-dimensional data structure and indexing algorithms
 LICENSE=	mit
 
-USE_LANGUAGES=		c++
 GNU_CONFIGURE=		yes
-#NO_BUILD=		yes
-INSTALLATION_DIRS=	include/mdds/compat include/mdds/hash_container \
-			share/pkgconfig
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		gmake
 PKGCONFIG_OVERRIDE+=	misc/mdds.pc.in
-
-do-install:
-	for i in ${WRKSRC}/include/mdds/*.hpp; do \
-		${INSTALL_DATA} $$i ${DESTDIR}${PREFIX}/include/mdds; \
-	done
-	for i in ${WRKSRC}/include/mdds/*.inl; do \
-		${INSTALL_DATA} $$i ${DESTDIR}${PREFIX}/include/mdds; \
-	done
-	for i in ${WRKSRC}/include/mdds/compat/*.hpp; do \
-		${INSTALL_DATA} $$i ${DESTDIR}${PREFIX}/include/mdds/compat; \
-	done
-	for i in ${WRKSRC}/include/mdds/hash_container/*.hpp; do \
-		${INSTALL_DATA} $$i \
-			${DESTDIR}${PREFIX}/include/mdds/hash_container; \
-	done
-	${INSTALL_DATA} ${WRKSRC}/misc/mdds.pc ${DESTDIR}${PREFIX}/share/pkgconfig
 
 BUILDLINK_DEPMETHOD.boost-headers?=	build
 .include "../../devel/boost-headers/buildlink3.mk"
