@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 01:43:49 agc Exp $
+$NetBSD: distinfo,v 1.6 2016/02/13 08:37:45 wiz Exp $
 
-SHA1 (libetonyek-0.1.2.tar.bz2) = 9d48326ee688256010a631bfcd62dac706dbcff1
-RMD160 (libetonyek-0.1.2.tar.bz2) = 819e93e3f6a2857099cf5cf5a1488e8df01ce79b
-SHA512 (libetonyek-0.1.2.tar.bz2) = c390f3d37d1a6228b98a57fea425b748a074a2ca4f9e4885123f08138b34917de17600ffda41b4514e310577eff3c7f47a383498af905d22c1929cddf269a9fc
-Size (libetonyek-0.1.2.tar.bz2) = 430157 bytes
+SHA1 (libetonyek-0.1.6.tar.bz2) = 0d432c7ca6cc00f2f83b2b4e949e124d496a27f0
+RMD160 (libetonyek-0.1.6.tar.bz2) = 60fa88175030a4a3781cb1e48083ef02a0767a67
+SHA512 (libetonyek-0.1.6.tar.bz2) = f8d4d4bde19c738ec33a8e4d7956a30fd77d3cc07a1b981c9a5c6c1e29594ab887b014cdeb6660e689e9089bf68e80d64c02329706e8f5c62f40940a9018ab3d
+Size (libetonyek-0.1.6.tar.bz2) = 1696455 bytes
