@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.27.2.1 2016/02/08 10:12:10 bsiegert Exp $
+$NetBSD: distinfo,v 1.27.2.2 2016/02/13 16:25:40 bsiegert Exp $
 
 SHA1 (nagios-4.0.8.tar.gz) = d49586db6905a8e58a082251d8f89ef5c2cab872
 RMD160 (nagios-4.0.8.tar.gz) = b53631755e0a23aba918a99f58b7bea237fdd799
@@ -27,14 +27,14 @@ SHA1 (patch-common_comments.c) = 7739c9c74333c45e86242383073dfa78785445ec
 SHA1 (patch-common_downtime.c) = 000f1e33ab1ca1c433c3fd0de3d5bf750df6f57f
 SHA1 (patch-configure) = f57db3a43c1abc1aa0d6fe007308089c620624a4
 SHA1 (patch-daemon-init.in) = 1e50bb84fde9780d5b13edb4e232c0e3a90ac3f4
-SHA1 (patch-html_Makefile.in) = 33ca19b5cf37839be6fbd851a5dcf29d4d701c8b
+SHA1 (patch-html_Makefile.in) = cef5febcedfaaa38cdf73283e2bda43b4c114379
 SHA1 (patch-include_comments.h) = c86328a4f1437ee1dc2b6f97be61693414dd4fce
 SHA1 (patch-include_locations.h.in) = 0ee376f6737b24f0d4ea8b37781aca70147c5e70
 SHA1 (patch-include_statusjson.h) = c5a84b9ef3114f2e2480d719bbb4a24c8965e052
 SHA1 (patch-lib_nsock.c) = bd8801e4aff13ebac26e512b44764c2da1e2e5a5
 SHA1 (patch-lib_runcmd.c) = fb34fe5cdc39aca973c1a6e125b125867e6ed262
 SHA1 (patch-lib_test-squeue.c) = 1bc197da815a069f0f37525f1acbf5fb4110d399
-SHA1 (patch-lib_worker.c) = c70fd4cec230cefc94cd82a20a20c7ecef3cae2a
+SHA1 (patch-lib_worker.c) = fe1b6d00429556caaefe43afe7bb1c6d9f6fcb0b
 SHA1 (patch-sample-config_nagios.cfg.in) = 4ad00840ad66d2e01b19c6db76c810fc3fb80795
 SHA1 (patch-t-tap_test__xsddefault.c) = db7166fae411a461d8b4a4a31f55af693aeb03b0
 SHA1 (patch-xdata_xcddefault.c) = ba14af868cd773d07e029a2773a44614eedc3e46
