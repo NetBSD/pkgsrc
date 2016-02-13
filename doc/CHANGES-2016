@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.640 2016/02/13 15:54:15 tsutsui Exp $
+$NetBSD: CHANGES-2016,v 1.641 2016/02/13 15:55:17 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -867,3 +867,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Removed sysutils/ruby-libnotify [tsutsui 2016-02-13]
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.569 [tsutsui 2016-02-13]
 	Updated www/ruby-http to 1.0.2 [tsutsui 2016-02-13]
+	Updated net/ruby-twitter 5.16.0 [tsutsui 2016-02-13]
