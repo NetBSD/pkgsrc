@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.641 2016/02/13 15:55:17 tsutsui Exp $
+$NetBSD: CHANGES-2016,v 1.642 2016/02/13 18:11:34 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -868,3 +868,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.569 [tsutsui 2016-02-13]
 	Updated www/ruby-http to 1.0.2 [tsutsui 2016-02-13]
 	Updated net/ruby-twitter 5.16.0 [tsutsui 2016-02-13]
+	Updated emulators/xnp2 to 0.85 [tsutsui 2016-02-13]
