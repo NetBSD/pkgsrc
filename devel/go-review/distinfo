@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/02/13 18:07:55 bsiegert Exp $
+
+SHA1 (review-36fe892ba0.tar.gz) = 089fad97f560101e4c71e2d03a60b01e3ae303f1
+RMD160 (review-36fe892ba0.tar.gz) = 860bf127f5398b1f6db684f4df8dbd32d7f8da2f
+SHA512 (review-36fe892ba0.tar.gz) = c16aab6e0ae76d7007762cbe6e711449b9837f03f4ef64fbf4c623fa6406f90f809ba0254402655d80c65aac60031a3fe1219028954f01128736de5fce71fcaf
+Size (review-36fe892ba0.tar.gz) = 48148 bytes
