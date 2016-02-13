@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.636 2016/02/13 09:55:46 leot Exp $
+$NetBSD: CHANGES-2016,v 1.637 2016/02/13 11:45:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -863,3 +863,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated converters/libetonyek to 0.1.6 [wiz 2016-02-13]
 	Updated devel/mdds to 1.0.0 [wiz 2016-02-13]
 	Updated www/liferea to 1.10.18 [leot 2016-02-13]
+	Updated graphics/MesaLib to 11.1.2 [wiz 2016-02-13]
