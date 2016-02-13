@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.638 2016/02/13 15:02:40 tsutsui Exp $
+$NetBSD: CHANGES-2016,v 1.639 2016/02/13 15:25:06 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -865,3 +865,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/liferea to 1.10.18 [leot 2016-02-13]
 	Updated graphics/MesaLib to 11.1.2 [wiz 2016-02-13]
 	Removed sysutils/ruby-libnotify [tsutsui 2016-02-13]
+	Updated multimedia/adobe-flash-plugin11 to 11.2.202.569 [tsutsui 2016-02-13]
