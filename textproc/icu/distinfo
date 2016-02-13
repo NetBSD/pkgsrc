@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.59 2015/11/04 01:59:35 agc Exp $
+$NetBSD: distinfo,v 1.60 2016/02/13 20:41:58 bsiegert Exp $
 
 SHA1 (icu4c-56_1-src.tgz) = e4494ce9425c469f138bb6e1ae06faf7fa0cf3de
 RMD160 (icu4c-56_1-src.tgz) = 1ef7f377283a379654ebb051b7439c2cc6151da0
@@ -22,3 +22,4 @@ SHA1 (patch-configure) = 429c0b3eb3f7d0a8cf3d01a9bc359132eebe8cf4
 SHA1 (patch-configure.ac) = b0291cf02351cbad9b0c7340baea9eb81cabb158
 SHA1 (patch-tools-toolutil-pkg_genc.c) = b5a9eb679908d9f579ff095c5389ec1aa8df8e1e
 SHA1 (patch-tools_pkgdata_pkgdata.cpp) = 1c87fcc511f0e6cedbaf01c5164e522c33f19458
+SHA1 (patch-tools_toolutil_flagparser.c) = 08606a67b5e9e1308ef470524576fc000ca1907b
