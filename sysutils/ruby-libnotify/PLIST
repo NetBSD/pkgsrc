@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2013/08/14 12:51:16 obache Exp $
-${RUBY_SITELIB}/RNotify.rb
-${RUBY_SITEARCHLIB}/rnotify.${RUBY_DLEXT}
