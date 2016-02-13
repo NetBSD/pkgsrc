@@ -1,14 +1,13 @@
-$NetBSD: distinfo,v 1.112 2016/02/12 11:49:53 tnn Exp $
+$NetBSD: distinfo,v 1.113 2016/02/13 11:45:17 wiz Exp $
 
-SHA1 (mesa-11.1.1.tar.xz) = 77eeb75660e8d0851457151ef18c87540c6fd6bc
-RMD160 (mesa-11.1.1.tar.xz) = 2ebeefdec30be12a32977f46611f0aa28c677c38
-SHA512 (mesa-11.1.1.tar.xz) = 1d41bb4e58042230a38784477c425a2517ef57b17055413884dfb1b7a635a7d8ec68b9be705cbd5608910d75d73988d7c18467c779c48547c5c533750e722521
-Size (mesa-11.1.1.tar.xz) = 7561216 bytes
+SHA1 (mesa-11.1.2.tar.xz) = f6c306828427ad694885ebd488d3b7681eaafa87
+RMD160 (mesa-11.1.2.tar.xz) = 6d47d523dc79260dfbc57fa24724cef804c794b3
+SHA512 (mesa-11.1.2.tar.xz) = 4037728cbe7c5c492cf1e6d20c61250c0ff4fe82cf89ba1cd6ff029776220160359dce197582d2c3f3f7ba5d76fe6b055515210fc46b59f821fc66f453cb77ae
+Size (mesa-11.1.2.tar.xz) = 7561920 bytes
 SHA1 (patch-configure) = 87f0f2e60f342c91b3aecab02d3a4d8940eadf0a
 SHA1 (patch-include_GL_glxext.h) = 830902f2d38a8395cda682c059fc5223e1b0e89e
 SHA1 (patch-src_egl_drivers_dri2_platform__drm.c) = 99b6dd6739c29551ae2c885eabd7babd159fc3e5
 SHA1 (patch-src_egl_main_eglglobals.c) = 2d81ae27f09162d23bc684456cc5fef48c042652
-SHA1 (patch-src_gallium_auxiliary_util_u__cpu__detect.c) = 5f4c3db54620739da0fe7dfb57c58728ecbbb6e0
 SHA1 (patch-src_gallium_auxiliary_util_u__format__tests.c) = 4d5e4677c2825778c43440ab131b8807f6840975
 SHA1 (patch-src_gallium_auxiliary_util_u__math.h) = 812e4a5291aea47e06505f09891e0434c4d9c34d
 SHA1 (patch-src_gallium_auxiliary_util_u__network.c) = 283f505af780071dc9fd7914f8065e3fb7d8a4fd
