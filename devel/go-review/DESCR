@@ -1,0 +1,5 @@
+This package contains the git-codereview tool that the upstream Go
+project uses for working with Gerrit.
+
+It is probably mainly useful if you want to submit code to Go itself,
+though it may be usable for other projects too.
