@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2016/01/11 04:25:41 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2016/02/13 02:35:16 ryoon Exp $
 
-SHA1 (google-cloud-sdk-91.0.1-linux-x86.tar.gz) = 4153933cebbc0975e3f13c36f3b3dfe1b1abfe70
-RMD160 (google-cloud-sdk-91.0.1-linux-x86.tar.gz) = 9c3206152c7347af15bdeeebf3cef0615d6569ec
-SHA512 (google-cloud-sdk-91.0.1-linux-x86.tar.gz) = 0ecc9306baa90eb8d357ac18a7c69edbd955710ccc8cb573e3c46f29544a6c83372e7c28acde5105f72aaabbe70f9f42166b1834e136c414ff72799c0f529d36
-Size (google-cloud-sdk-91.0.1-linux-x86.tar.gz) = 6093755 bytes
+SHA1 (google-cloud-sdk-96.0.0-linux-x86.tar.gz) = 191c992a7da513b3780478b2f9b3b2372d440eab
+RMD160 (google-cloud-sdk-96.0.0-linux-x86.tar.gz) = 0ab3332290dcbbe69261dbcee8611b443b5e117f
+SHA512 (google-cloud-sdk-96.0.0-linux-x86.tar.gz) = 750fc52e6f369709e4050a758a79c6071f9a7e4af6290d1637504305b5fd7002bf9e52ed2c15aa59857e6917f45ff9bf11c86a5b7611f89d15611d5c2c8ff812
+Size (google-cloud-sdk-96.0.0-linux-x86.tar.gz) = 7109144 bytes
