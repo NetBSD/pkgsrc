@@ -1,0 +1,30 @@
+$NetBSD: patch-plugins-root_Makefile.in,v 1.1.2.2 2016/02/13 16:25:41 bsiegert Exp $
+user-destdir install fixes.
+
+--- plugins-root/Makefile.in.orig	2016-02-08 13:26:51.000000000 +0100
++++ plugins-root/Makefile.in	2016-02-08 13:27:43.000000000 +0100
+@@ -1312,10 +1312,6 @@
+ 	p=$$f; \
+ 	echo " $(INSTALL_PROGRAM) $$p $(DESTDIR)$(libexecdir)/$$p"; \
+ 	$(INSTALL_PROGRAM) $$p $(DESTDIR)$(libexecdir)/$$p; \
+-	echo " chown root $(DESTDIR)$(libexecdir)/$$p"; \
+-	chown root $(DESTDIR)$(libexecdir)/$$p; \
+-	echo " chmod $(setuid_root_mode) $(DESTDIR)$(libexecdir)/$$p"; \
+-	chmod $(setuid_root_mode) $(DESTDIR)$(libexecdir)/$$p; \
+ 	done
+ 
+ 
+@@ -1748,12 +1744,7 @@
+ 	  && chmod $(setuid_root_mode) $$TMPFILE > /dev/null 2>&1 \
+ 	  && can_create_suid_root_executable=yes; \
+ 	rm -f $$TMPFILE; \
+-	if test $$can_create_suid_root_executable = yes; then \
+-	  $(INSTALL_SUID); \
+-	else \
+-	  echo "WARNING: insufficient access; not installing setuid plugins"; \
+-	  echo "NOTE: to install setuid plugins, run 'make install-root' as root"; \
+-	fi
++	$(INSTALL_SUID); \
+ 
+ clean-local:
+ 	rm -f NP-VERSION-FILE
