@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15443 2016/02/12 23:29:14 ryoon Exp $
+$NetBSD: TODO,v 1.15444 2016/02/13 07:02:40 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -820,7 +820,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o groonga-5.0.6
 	o gsharutils-4.15.2
 	o gss-1.0.3
-	o gtexinfo-6.1
 	o gthumb-3.4.0
 	o gtk-gnutella-0.98.4
 	o gtk-systrace-20030623
