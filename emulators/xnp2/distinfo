@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/06/06 17:30:35 tsutsui Exp $
+$NetBSD: distinfo,v 1.7 2016/02/13 18:10:17 tsutsui Exp $
 
-SHA1 (xnp2-0.84.tar.bz2) = db31d71b5e52121a01eda9c6a4356248408c3fe7
-RMD160 (xnp2-0.84.tar.bz2) = 7742ae9f06518d60dc7695083ee4ee93986d5feb
-Size (xnp2-0.84.tar.bz2) = 1801065 bytes
+SHA1 (xnp2-0.85.tar.bz2) = 89a3a56a6f8562f02ba4f60ed73958e405faf8a0
+RMD160 (xnp2-0.85.tar.bz2) = a5f420eb27c8c06190763e87ea7a6a25d894ea7e
+SHA512 (xnp2-0.85.tar.bz2) = d16977d2aa291cf709546b201cd07bc324a8dce1e18a1b7450a0a39048988376f2f5c56421a47855750691f11ad19f9d2405ccc15793692bff4e056e17b5ac75
+Size (xnp2-0.85.tar.bz2) = 1215247 bytes
