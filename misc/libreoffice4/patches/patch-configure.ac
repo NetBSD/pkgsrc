@@ -1,11 +1,12 @@
-$NetBSD: patch-configure.ac,v 1.9 2015/09/23 20:45:50 joerg Exp $
+$NetBSD: patch-configure.ac,v 1.10 2016/02/13 08:46:03 wiz Exp $
 
 * Use gstreamer under OpenBSD
 * Add FreeBSD support (GNU patch is not needed)
 * Detect pkgsrc apache-ant library
 * Fix installation directory
+* Adapt for mdds-1.0.
 
---- configure.ac.orig	2015-01-22 20:05:28.000000000 +0000
+--- configure.ac.orig	2015-11-25 12:55:38.000000000 +0000
 +++ configure.ac
 @@ -713,6 +713,8 @@ aix*)
  
@@ -16,7 +17,7 @@ $NetBSD: patch-configure.ac,v 1.9 2015/09/23 20:45:50 joerg Exp $
      test_tde=yes
      test_kde=yes
      test_freetype=yes
-@@ -6203,7 +6205,7 @@ if test \( "$_os" != "WINNT" -o "$WITH_M
+@@ -6212,7 +6214,7 @@ if test \( "$_os" != "WINNT" -o "$WITH_M
  
      # Assume visibility is not broken with libc++. The below test is very much designed for libstdc++
      # only.
@@ -25,7 +26,7 @@ $NetBSD: patch-configure.ac,v 1.9 2015/09/23 20:45:50 joerg Exp $
          dnl gcc#19664, gcc#22482, rhbz#162935
          AC_MSG_CHECKING([if STL headers are visibility safe (GCC bug 22482)])
          AC_EGREP_HEADER(visibility push, string, stlvisok=yes, stlvisok=no)
-@@ -6695,7 +6697,7 @@ dnl ====================================
+@@ -6704,7 +6706,7 @@ dnl ====================================
  dnl Set target Java bytecode version
  dnl ===================================================================
  if test "$ENABLE_JAVA" != ""; then
@@ -34,7 +35,7 @@ $NetBSD: patch-configure.ac,v 1.9 2015/09/23 20:45:50 joerg Exp $
          _java_target_ver="1.6"
      else
          _java_target_ver="1.5"
-@@ -6755,30 +6757,7 @@ dnl ====================================
+@@ -6764,30 +6766,7 @@ dnl ====================================
  dnl Checks for javadoc
  dnl ===================================================================
  if test "$ENABLE_JAVA" != ""; then
@@ -66,7 +67,7 @@ $NetBSD: patch-configure.ac,v 1.9 2015/09/23 20:45:50 joerg Exp $
  fi
  AC_SUBST(JAVADOCISGJDOC)
  
-@@ -7780,7 +7782,7 @@ no|disable)
+@@ -7789,7 +7768,7 @@ no|disable)
      else
          # Unset variables set by the above AM_PATH_PYTHON so that
          # we actually do check anew.
@@ -75,7 +76,7 @@ $NetBSD: patch-configure.ac,v 1.9 2015/09/23 20:45:50 joerg Exp $
          AM_PATH_PYTHON([3.3],, [:])
          if test "$PYTHON" = ":"; then
              if test -z "$PYTHON_FOR_BUILD"; then
-@@ -7833,9 +7835,9 @@ if test $enable_python = system; then
+@@ -7842,9 +7821,9 @@ if test $enable_python = system; then
      elif test "$cross_compiling" != yes; then
          # Unset variables set by the above AM_PATH_PYTHON so that
          # we actually do check anew.
@@ -87,7 +88,16 @@ $NetBSD: patch-configure.ac,v 1.9 2015/09/23 20:45:50 joerg Exp $
          python_include=`$PYTHON -c "import distutils.sysconfig; print(distutils.sysconfig.get_config_var('INCLUDEPY'));"`
          python_version=`$PYTHON -c "import distutils.sysconfig; print(distutils.sysconfig.get_config_var('VERSION'));"`
          python_libs=`$PYTHON -c "import distutils.sysconfig; print(distutils.sysconfig.get_config_var('LIBS'));"`
-@@ -9679,8 +9681,8 @@ if test -z "$PATCH"; then
+@@ -8528,7 +8507,7 @@ AC_SUBST(SYSTEM_BOOST)
+ dnl ===================================================================
+ dnl Check for system mdds
+ dnl ===================================================================
+-libo_CHECK_SYSTEM_MODULE([mdds], [MDDS], [mdds >= 0.11.2], ["-I${WORKDIR}/UnpackedTarball/mdds/include"])
++libo_CHECK_SYSTEM_MODULE([mdds], [MDDS], [mdds-1.0 >= 0.11.2], ["-I${WORKDIR}/UnpackedTarball/mdds/include"])
+ 
+ dnl ===================================================================
+ dnl Check for system glm
+@@ -9688,8 +9667,8 @@ if test -z "$PATCH"; then
      AC_MSG_ERROR(["patch" not found in \$PATH, install it])
  fi
  
@@ -98,7 +108,7 @@ $NetBSD: patch-configure.ac,v 1.9 2015/09/23 20:45:50 joerg Exp $
      if test -z "$with_gnu_patch"; then
          GNUPATCH=$PATCH
      else
-@@ -11959,7 +11961,7 @@ EOF
+@@ -11968,7 +11947,7 @@ EOF
      dnl Checking for ant.jar
      if test "$ANT_HOME" != "NO_ANT_HOME"; then
          AC_MSG_CHECKING([Ant lib directory])
@@ -107,7 +117,7 @@ $NetBSD: patch-configure.ac,v 1.9 2015/09/23 20:45:50 joerg Exp $
              ANT_LIB="$ANT_HOME/lib"
          else
              if test -f $ANT_HOME/ant.jar; then
-@@ -12378,7 +12380,7 @@ AC_SUBST(MANDIR)
+@@ -12389,7 +12368,7 @@ AC_SUBST(MANDIR)
  DOCDIR=[$(eval echo $(eval echo $docdir))]
  AC_SUBST(DOCDIR)
  
