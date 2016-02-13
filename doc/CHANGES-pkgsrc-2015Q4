@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q4,v 1.1.2.15 2016/02/10 20:48:45 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q4,v 1.1.2.16 2016/02/13 16:30:39 bsiegert Exp $
 
 Changes to the packages collection and infrastructure on the 2015Q4 branch:
 
@@ -110,4 +110,11 @@ lang/php56: security fix
 
 Pullup ticket #4918 - requested by taca
 lang/php70: security fix
+
+Pullup ticket #4920 - requested by bouyer
+net/nagios-base: bugfix
+net/nagios-plugins: fix packaging issue
+
+Pullup ticket #4921 - requested by rillig
+pkgtools/pkglint: bugfix
 
