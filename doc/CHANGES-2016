@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.634 2016/02/13 08:37:57 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.635 2016/02/13 08:46:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -861,3 +861,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/py-google-cloud-sdk to 96.0.0 [ryoon 2016-02-13]
 	Updated devel/gtexinfo to 6.1 [ryoon 2016-02-13]
 	Updated converters/libetonyek to 0.1.6 [wiz 2016-02-13]
+	Updated devel/mdds to 1.0.0 [wiz 2016-02-13]
