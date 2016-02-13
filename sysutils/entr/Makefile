@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/01/08 20:19:12 leot Exp $
+# $NetBSD: Makefile,v 1.3 2016/02/13 00:46:06 leot Exp $
 #
 
 DISTNAME=	entr-3.4
@@ -6,7 +6,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	http://entrproject.org/code/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://entrproject.org/code/
+HOMEPAGE=	http://entrproject.org/
 COMMENT=	Run arbitrary commands when files change
 LICENSE=	isc AND 2-clause-bsd
 
