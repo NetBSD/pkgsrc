@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2015/06/06 17:30:35 tsutsui Exp $
+# $NetBSD: Makefile,v 1.20 2016/02/13 18:10:17 tsutsui Exp $
 
-DISTNAME=		xnp2-0.84
+DISTNAME=		xnp2-0.85
 CATEGORIES=		emulators
 MASTER_SITES=		http://www.nonakap.org/np2/release/
 EXTRACT_SUFX=		.tar.bz2
@@ -17,6 +17,9 @@ CONFIGURE_DIRS=		x11
 GNU_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--enable-build-all
+# XXX audio/SDL2_mixer requires multimedia/smpeg2 but it conflicts with
+#     multimedia/smpeg which is required by audio/SDL_mixer
+CONFIGURE_ARGS+=	--disable-sdl2
 
 INSTALLATION_DIRS+=	share/doc/xnp2 ${PKGMANDIR}/ja/man1
 
@@ -32,4 +35,5 @@ BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.6.0
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../audio/SDL_mixer/buildlink3.mk"
+.include "../../devel/libusb1/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
