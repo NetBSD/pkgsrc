@@ -1,7 +1,19 @@
-$NetBSD: patch-configure.ac,v 1.3 2016/02/11 09:45:27 ryoon Exp $
+$NetBSD: patch-configure.ac,v 1.4 2016/02/13 08:46:03 wiz Exp $
+
+* Adapt for mdds-1.0.
+* Adapt ant path for pkgsrc.
 
 --- configure.ac.orig	2016-01-27 00:58:25.000000000 +0000
 +++ configure.ac
+@@ -8768,7 +8768,7 @@ AC_SUBST(SYSTEM_BOOST)
+ dnl ===================================================================
+ dnl Check for system mdds
+ dnl ===================================================================
+-libo_CHECK_SYSTEM_MODULE([mdds], [MDDS], [mdds >= 0.12.0], ["-I${WORKDIR}/UnpackedTarball/mdds/include"])
++libo_CHECK_SYSTEM_MODULE([mdds], [MDDS], [mdds-1.0 >= 0.12.0], ["-I${WORKDIR}/UnpackedTarball/mdds/include"])
+ 
+ dnl ===================================================================
+ dnl Check for system glm
 @@ -11998,8 +11998,8 @@ EOF
      dnl Checking for ant.jar
      if test "$ANT_HOME" != "NO_ANT_HOME"; then
