@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 23:33:39 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/02/14 11:49:17 wen Exp $
 
-SHA1 (Math-Permute-List-1.004.tar.gz) = 45b70c964543579ded1f8a250aa274289d9cba52
-RMD160 (Math-Permute-List-1.004.tar.gz) = 82cbb73c86c3c80cc83ae2fc9fad690c0341a54b
-SHA512 (Math-Permute-List-1.004.tar.gz) = a141b3abbb40f3130ab8222ba49d6e8e5356677cc6ffb15ed8678f08f5a0c78451f162564fe1823f7cddf4632d43bf2171a31ed5801d1d1cadb4ebed53a8b557
-Size (Math-Permute-List-1.004.tar.gz) = 3095 bytes
+SHA1 (Math-Permute-List-1.007.tar.gz) = da6e582aaaa7754f3eba4e996f3779ce43e343bc
+RMD160 (Math-Permute-List-1.007.tar.gz) = 175171dac0c31e6a0f34c5c67e84819e7874f694
+SHA512 (Math-Permute-List-1.007.tar.gz) = c02b005f6f07bd5a4930b74063aef04dfad11bd69dfb7959e6e7bcd8f0d82851190958c4dfd5bd64c2df11e9a3d320613b880be1d74401e5d89aa736956e8dbd
+Size (Math-Permute-List-1.007.tar.gz) = 3616 bytes
