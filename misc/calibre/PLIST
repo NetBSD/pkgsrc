@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.53 2016/01/31 08:36:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.54 2016/02/14 10:07:26 wiz Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -1785,6 +1785,7 @@ share/calibre/localization/pykakasi/kanwadict2.pickle
 share/calibre/localization/stats.pickle
 share/calibre/metadata_sqlite.sql
 share/calibre/mime.types
+share/calibre/mozilla-ca-certs.pem
 share/calibre/quick_start/deu.epub
 share/calibre/quick_start/eng.epub
 share/calibre/quick_start/fra.epub
@@ -2030,7 +2031,6 @@ share/calibre/recipes/colta.recipe
 share/calibre/recipes/columbusdispatch.recipe
 share/calibre/recipes/common_dreams.recipe
 share/calibre/recipes/computer_active.recipe
-share/calibre/recipes/computer_woche.recipe
 share/calibre/recipes/computerworld_pl.recipe
 share/calibre/recipes/conowego_pl.recipe
 share/calibre/recipes/consortium_news.recipe
