@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 23:33:39 agc Exp $
+$NetBSD: distinfo,v 1.7 2016/02/14 11:55:10 wen Exp $
 
-SHA1 (Math-MatrixReal-2.08.tar.gz) = 44751511f0fab359c1e5e88f83ec28aa1e4b2533
-RMD160 (Math-MatrixReal-2.08.tar.gz) = 8b4ef40be0adac275d9b678e44c17d82f9a5cd1e
-SHA512 (Math-MatrixReal-2.08.tar.gz) = 2cf6dec1ffd047a9aed29ab9af07551d26d8d9236de7cc51a93d5e0686db7b527c4debb6d917a2fbd572da6065531a7758e193636d33467c72ed5a0b3c61e9a4
-Size (Math-MatrixReal-2.08.tar.gz) = 80582 bytes
+SHA1 (Math-MatrixReal-2.12.tar.gz) = 24ca9eeca5c74d82c35ca9c32498e5ec1d4988fc
+RMD160 (Math-MatrixReal-2.12.tar.gz) = 344ce28cac9fc9c6ee36ecc17f27f854b81f8f21
+SHA512 (Math-MatrixReal-2.12.tar.gz) = d6a03936fb8c74c187af47aedafc9af95b4118bea1a8eda975dc93478145023647cccab479b83aa5f3c5eb69cfcc5ba6ebc6d61bdfa5c61aadf35a02744f764d
+Size (Math-MatrixReal-2.12.tar.gz) = 82731 bytes
