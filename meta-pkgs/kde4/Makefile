@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2016/01/11 03:07:29 markd Exp $
+# $NetBSD: Makefile,v 1.33 2016/02/14 04:21:25 markd Exp $
 
 DISTNAME=	kde4-4.14.3
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	meta-pkgs x11 kde
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -10,7 +10,7 @@ MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://www.kde.org/
 COMMENT=	"meta-package" for the KDE4 integrated X11 desktop
 
-DEPENDS+=	oxygen-icons-5.18.0{,nb[0-9]*}:../../graphics/oxygen-icons
+DEPENDS+=	oxygen-icons-5.19.0{,nb[0-9]*}:../../graphics/oxygen-icons
 DEPENDS+=	kdelibs4-4.14.15{,nb[0-9]*}:../../x11/kdelibs4
 DEPENDS+=	kdepimlibs4-4.14.10{,nb[0-9]*}:../../misc/kdepimlibs4
 DEPENDS+=	kde-runtime4-15.12.0{,nb[0-9]*}:../../x11/kde-runtime4
