@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/11/07 18:58:06 wiz Exp $
+$NetBSD: distinfo,v 1.2 2016/02/14 10:46:35 wiz Exp $
 
-SHA1 (pytest-runner-2.6.2.tar.gz) = 838dcf336c9763d46ab6fe60399e266a0494baa5
-RMD160 (pytest-runner-2.6.2.tar.gz) = 6f7d1a78de240f4393b9c8bb24af6e075c829e16
-SHA512 (pytest-runner-2.6.2.tar.gz) = 6a993e8729d5e203986f2526d46e96b7ac19e65fc26493a55a98e858304ecde0c47576476864a0ee1817ea1a7b02cfda952fc03f79b84fff249021f140f3d00d
-Size (pytest-runner-2.6.2.tar.gz) = 6379 bytes
+SHA1 (pytest-runner-2.7.tar.gz) = b3ebefd7ea840a57ce168e16226aa7c2729904d2
+RMD160 (pytest-runner-2.7.tar.gz) = 174e6fdaf68daa8ee69401d40bbc07ef513c4b72
+SHA512 (pytest-runner-2.7.tar.gz) = 0c73a0a0340854cfd9fdb88a01bb10e6b4ffa574f9fab78d6addf36d1e6b125bf64b539832a879a9c5750f4cbed19e63ad178b47e580bf05dc6dba7f1d47a88e
+Size (pytest-runner-2.7.tar.gz) = 6525 bytes
