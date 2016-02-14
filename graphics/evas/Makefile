@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2015/09/05 11:55:28 jperkin Exp $
+# $NetBSD: Makefile,v 1.20 2016/02/14 13:14:06 jperkin Exp $
 
 PKGREVISION=	2
 
@@ -33,7 +33,13 @@ PLIST_SRC+=	PLIST.cserve
 PLIST_SRC+=	PLIST.Darwin
 .endif
 
-CPPFLAGS.SunOS+=	-std=gnu99 -D_XOPEN_SOURCE=600
+# Explicitly select cserve, avoids epoll/inotify.
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ARGS+=	--enable-evas-cserve
+CONFIGURE_ARGS+=	--disable-evas-cserve2
+.endif
+
+LIBS.SunOS+=	-lsocket
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/AUTHORS ${WRKSRC}/COPYING \
