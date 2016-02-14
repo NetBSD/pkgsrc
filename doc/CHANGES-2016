@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.651 2016/02/14 10:07:36 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.652 2016/02/14 10:45:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -879,3 +879,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated archivers/p7zip to 15.09nb1 [ryoon 2016-02-14]
 	Updated devel/p5-Params-Validate to 1.22 [wiz 2016-02-14]
 	Updated misc/calibre to 2.51.0 [wiz 2016-02-14]
+	Updated print/cups-filters to 1.8.2 [wiz 2016-02-14]
