@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q4,v 1.1.2.16 2016/02/13 16:30:39 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q4,v 1.1.2.17 2016/02/14 17:56:57 spz Exp $
 
 Changes to the packages collection and infrastructure on the 2015Q4 branch:
 
@@ -118,3 +118,5 @@ net/nagios-plugins: fix packaging issue
 Pullup ticket #4921 - requested by rillig
 pkgtools/pkglint: bugfix
 
+Pullup ticket #4922 - requested by he
+www/curl: security update
