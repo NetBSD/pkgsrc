@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2016/02/14 07:54:51 ryoon Exp $
+bin/pcasc
+bin/pcxm
+bin/pcym
+bin/pczm
+bin/picocom
+man/man1/picocom.1
