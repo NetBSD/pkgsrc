@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.70 2016/02/07 14:12:55 wiz Exp $
+$NetBSD: distinfo,v 1.71 2016/02/14 10:53:17 wiz Exp $
 
-SHA1 (setuptools-19.7.tar.gz) = 4c753c43096da6adf46a1f430a493bc848667189
-RMD160 (setuptools-19.7.tar.gz) = 5fdba0976ce9f8f9aec5360e730782edd3b35dc2
-SHA512 (setuptools-19.7.tar.gz) = fe74b10eb1afef5d78cc5cd4d6dbd53ed16f975c693c138181dfb1661276255d214037eb036186d0cdc9dd31d636f9f1067d67bf591542e8ef933afca267ee4c
-Size (setuptools-19.7.tar.gz) = 641634 bytes
+SHA1 (setuptools-20.1.1.tar.gz) = bb2774945cdbf1137772d81993b4d41d15e9a0a6
+RMD160 (setuptools-20.1.1.tar.gz) = f139b3953c3e4e48be1db64315e43962ddb2309c
+SHA512 (setuptools-20.1.1.tar.gz) = 72da2f5a4e07c14975b3e13246264cb4b9eb52bd6da22fce0ef0f0bb8d902249067e6c23bf263cda45de92a0cdb794f454dff95e52505045e03c7a6ab28cb2ca
+Size (setuptools-20.1.1.tar.gz) = 641777 bytes
 SHA1 (patch-setup.py) = be1078e5e2b6e9ec8c859c2c6e2a4a44fe3c2840
