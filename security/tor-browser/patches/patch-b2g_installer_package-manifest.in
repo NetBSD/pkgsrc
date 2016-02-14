@@ -1,0 +1,13 @@
+$NetBSD: patch-b2g_installer_package-manifest.in,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+
+--- b2g/installer/package-manifest.in.orig	2015-02-17 21:40:34.000000000 +0000
++++ b2g/installer/package-manifest.in
+@@ -609,7 +609,7 @@
+ @BINPATH@/components/EngineeringModeAPI.js
+ @BINPATH@/components/EngineeringModeService.js
+ 
+-#ifdef MOZ_DEBUG
++#if defined(ENABLE_TESTS) && defined(MOZ_DEBUG)
+ @BINPATH@/components/TestInterfaceJS.js
+ @BINPATH@/components/TestInterfaceJS.manifest
+ #endif
