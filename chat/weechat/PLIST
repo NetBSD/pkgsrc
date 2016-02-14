@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2015/08/01 19:10:15 tonio Exp $
+@comment $NetBSD: PLIST,v 1.22 2016/02/14 12:52:13 ryoon Exp $
 bin/weechat
 include/weechat/weechat-plugin.h
 lib/pkgconfig/weechat.pc
@@ -12,6 +12,7 @@ lib/weechat/plugins/relay.so
 lib/weechat/plugins/script.so
 lib/weechat/plugins/trigger.so
 lib/weechat/plugins/xfer.so
+man/cs/man1/weechat.1
 man/de/man1/weechat.1
 man/fr/man1/weechat.1
 man/it/man1/weechat.1
