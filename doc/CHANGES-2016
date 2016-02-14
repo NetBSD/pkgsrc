@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.673 2016/02/14 14:11:21 tsutsui Exp $
+$NetBSD: CHANGES-2016,v 1.674 2016/02/14 14:50:35 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -903,3 +903,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added print/zathura-pdf-poppler version 0.2.6 [leot 2016-02-14]
 	Added print/zathura-ps version 0.2.3 [leot 2016-02-14]
 	Updated net/mikutter to 3.3.6 [tsutsui 2016-02-14]
+	Updated games/onscripter to 20150820 [tsutsui 2016-02-14]
