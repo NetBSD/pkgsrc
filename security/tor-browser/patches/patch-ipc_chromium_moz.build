@@ -1,0 +1,18 @@
+$NetBSD: patch-ipc_chromium_moz.build,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+
+Don't assume cocoa toolkit just because OS_ARCH is Darwin.
+
+--- ipc/chromium/moz.build.orig	2014-05-06 22:55:41.000000000 +0000
++++ ipc/chromium/moz.build
+@@ -19,7 +19,10 @@ if CONFIG['OS_ARCH'] == 'WINNT':
+ else:
+     os_posix = 1
+     if CONFIG['OS_ARCH'] == 'Darwin':
+-        os_macosx = 1
++        if CONFIG['MOZ_WIDGET_TOOLKIT'] == 'cocoa':
++            os_macosx = 1
++        else:
++            os_bsd = 1
+     elif CONFIG['OS_ARCH'] == 'DragonFly':
+         os_dragonfly = 1
+         os_bsd = 1
