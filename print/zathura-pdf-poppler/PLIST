@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2016/02/14 14:03:09 leot Exp $
+lib/zathura/pdf.so
+share/appdata/zathura-pdf-poppler.metainfo.xml
+share/applications/zathura-pdf-poppler.desktop
