@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2015/11/03 21:33:56 agc Exp $
+$NetBSD: distinfo,v 1.19 2016/02/14 13:14:06 jperkin Exp $
 
 SHA1 (evas-1.7.7.tar.bz2) = 680e85a60363df84b81298138cc19629f9f139bc
 RMD160 (evas-1.7.7.tar.bz2) = 306b36018c5ab07712553a554e4a2deac13854ed
@@ -6,9 +6,12 @@ SHA512 (evas-1.7.7.tar.bz2) = 9976f9c1f2774335ab24eb3a7aff37bb582f83e96966e98672
 Size (evas-1.7.7.tar.bz2) = 9408256 bytes
 SHA1 (patch-configure) = b7bda6085449a0fdcc51d58371101bb2f8bbc232
 SHA1 (patch-configure.ac) = d9330c131859794beb29414c9afe66a08b6fe55d
+SHA1 (patch-src_bin_evas__cserve2__shm.c) = cbdc53b04b17d7e0d994c3a9bd9ff6525f7608e8
+SHA1 (patch-src_bin_loaders_psd_evas__image__load__psd.c) = 9d30a6fb9de19151c7fe26b3c942475fe3b83799
+SHA1 (patch-src_lib_cserve2_evas__cs2.h) = 6df29afcb553239f9ef2ea91c772ebaa2aada2a9
 SHA1 (patch-src_lib_engines_common_evas__font__load.c) = b6a0cb75692efc95e81b000f48216f6dd0f1ea27
 SHA1 (patch-src_lib_engines_common_evas__op__blend_op__blend__color__neon.c) = 44254a9b9f3baa0bf54e2732f225cf9247db84cf
 SHA1 (patch-src_lib_engines_common_evas__op__blend_op__blend__pixel__neon.c) = 29b4d5953aba050cab07a87c05f04951e4959599
 SHA1 (patch-src_lib_engines_common_evas__op__copy_op__copy__color__neon.c) = 25d27e9dbc486544cce1f3fded721679421b5e0d
 SHA1 (patch-src_modules_loaders_gif_evas__image__load__gif.c) = 5a61a54fc67f64ba71aed37aba5a094e8d47294a
-SHA1 (patch-src_modules_loaders_psd_evas__image__load__psd.c) = 386f375a68eb4d49b05cc69c041641d11c306082
+SHA1 (patch-src_modules_loaders_psd_evas__image__load__psd.c) = 454c008696f0045726fc227d8f3e60aec187bc2b
