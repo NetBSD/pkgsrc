@@ -1,0 +1,13 @@
+$NetBSD: patch-memory_jemalloc_src_configure,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+
+--- memory/jemalloc/src/configure.orig	2015-03-27 02:20:26.000000000 +0000
++++ memory/jemalloc/src/configure
+@@ -6566,7 +6566,7 @@ else
+   LG_PAGE="detect"
+ fi
+ 
+-if test "x$LG_PAGE" == "xdetect"; then
++if test "x$LG_PAGE" = "xdetect"; then
+   { $as_echo "$as_me:${as_lineno-$LINENO}: checking LG_PAGE" >&5
+ $as_echo_n "checking LG_PAGE... " >&6; }
+ if ${je_cv_lg_page+:} false; then :

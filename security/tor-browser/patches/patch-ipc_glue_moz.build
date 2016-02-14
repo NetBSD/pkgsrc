@@ -1,0 +1,15 @@
+$NetBSD: patch-ipc_glue_moz.build,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+
+Don't assume cocoa toolkit just because OS_ARCH is Darwin.
+
+--- ipc/glue/moz.build.orig	2015-01-29 12:45:33.000000000 +0000
++++ ipc/glue/moz.build
+@@ -87,7 +87,7 @@ elif CONFIG['OS_ARCH'] in ('DragonFly', 
+     UNIFIED_SOURCES += [
+         'ProcessUtils_bsd.cpp'
+     ]
+-elif CONFIG['OS_ARCH'] in ('Darwin'):
++elif CONFIG['MOZ_WIDGET_TOOLKIT'] == 'cocoa':
+     UNIFIED_SOURCES += [
+         'ProcessUtils_mac.mm'
+     ]

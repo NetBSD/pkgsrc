@@ -1,0 +1,16 @@
+$NetBSD: patch-rc,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+
+--- browser/branding/unofficial/locales/en-US/brand.dtd.orig	2015-05-04 00:43:19.000000000 +0000
++++ browser/branding/unofficial/locales/en-US/brand.dtd
+@@ -2,8 +2,8 @@
+    - License, v. 2.0. If a copy of the MPL was not distributed with this
+    - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+ 
+-<!ENTITY  brandShorterName      "Mozilla Developer Preview">
+-<!ENTITY  brandShortName        "Mozilla Developer Preview">
+-<!ENTITY  brandFullName         "Mozilla Developer Preview">
++<!ENTITY  brandShorterName      "Browser">
++<!ENTITY  brandShortName        "Browser">
++<!ENTITY  brandFullName         "Browser">
+ <!ENTITY  vendorShortName       "mozilla.org">
+ <!ENTITY  trademarkInfo.part1   " ">

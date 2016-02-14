@@ -1,0 +1,15 @@
+$NetBSD: patch-gfx_graphite2_src_moz.build,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+
+--- gfx/graphite2/src/moz.build.orig	2016-01-31 20:42:26.674057599 +0000
++++ gfx/graphite2/src/moz.build
+@@ -60,10 +60,6 @@ MSVC_ENABLE_PGO = True
+ if CONFIG['GKMEDIAS_SHARED_LIBRARY']:
+     NO_VISIBILITY_FLAGS = True
+     DEFINES['GRAPHITE2_EXPORTING'] = True
+-else:
+-    # tell graphite2 not to export symbols, we'll be linking it directly with
+-    # thebes
+-    DEFINES['GRAPHITE2_STATIC'] = True
+ 
+ FINAL_LIBRARY = 'gkmedias'
+ 

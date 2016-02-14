@@ -1,0 +1,48 @@
+$NetBSD: patch-media_libcubeb_src_moz.build,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+
+Don't assume cocoa toolkit just because OS_TARGET is Darwin.
+
+--- media/libcubeb/src/moz.build.orig	2014-11-21 03:37:42.000000000 +0000
++++ media/libcubeb/src/moz.build
+@@ -17,6 +17,12 @@ if CONFIG['MOZ_ALSA']:
+     ]
+     DEFINES['USE_ALSA'] = True
+ 
++if CONFIG['MOZ_OSS']:
++    SOURCES += [
++        'cubeb_oss.c',
++    ]
++    DEFINES['USE_OSS'] = True
++
+ if CONFIG['MOZ_PULSEAUDIO']:
+     SOURCES += [
+         'cubeb_pulse.c',
+@@ -31,7 +37,7 @@ if CONFIG['OS_ARCH'] == 'OpenBSD':
+     ]
+     DEFINES['USE_SNDIO'] = True
+ 
+-if CONFIG['OS_TARGET'] == 'Darwin':
++if CONFIG['MOZ_WIDGET_TOOLKIT'] == 'cocoa':
+     SOURCES += [
+         'cubeb_audiounit.c',
+         'cubeb_osx_run_loop.c'
+@@ -65,6 +71,9 @@ if CONFIG['GKMEDIAS_SHARED_LIBRARY']:
+ 
+ FINAL_LIBRARY = 'gkmedias'
+ 
++if CONFIG['MOZ_NATIVE_SPEEX']:
++    SOURCES['cubeb_resampler.cpp'].flags += CONFIG['MOZ_SPEEX_CFLAGS']
++
+ if CONFIG['MOZ_WIDGET_TOOLKIT'] == 'gonk':
+     CFLAGS += [
+         '-I%s/%s' % (CONFIG['ANDROID_SOURCE'], d) for d in [
+@@ -73,7 +82,9 @@ if CONFIG['MOZ_WIDGET_TOOLKIT'] == 'gonk
+         ]
+     ]
+ 
++CFLAGS += CONFIG['MOZ_OSS_CFLAGS']
+ FAIL_ON_WARNINGS = True
+ 
++CFLAGS += CONFIG['MOZ_OSS_CFLAGS']
+ CFLAGS += CONFIG['MOZ_ALSA_CFLAGS']
+ CFLAGS += CONFIG['MOZ_PULSEAUDIO_CFLAGS']

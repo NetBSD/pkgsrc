@@ -1,0 +1,42 @@
+$NetBSD: patch-as,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+
+Treat DragonFly like FreeBSD.
+
+--- js/src/configure.in.orig	2015-01-23 05:59:58.000000000 +0000
++++ js/src/configure.in	2015-02-16 11:09:33.000000000 +0000
+@@ -2180,8 +2180,7 @@
+ 
+ MOZ_CXX11
+ 
+-dnl Check for .hidden assembler directive and visibility attribute.
+-dnl Borrowed from glibc configure.in
++dnl Setup default hidden visibility and wrapped system headers.
+ dnl ===============================================================
+ if test "$GNU_CC" -a "$OS_TARGET" != WINNT; then
+   AC_DEFINE(HAVE_VISIBILITY_HIDDEN_ATTRIBUTE)
+@@ -3095,7 +3094,7 @@
+   *-darwin*)
+     AC_DEFINE(MOZ_MEMORY_DARWIN)
+     ;;
+-  *-*freebsd*)
++  *-*freebsd*|*-*dragonfly*)
+     AC_DEFINE(MOZ_MEMORY_BSD)
+     ;;
+   *-android*|*-linuxandroid*)
+@@ -3989,6 +3988,16 @@
+ dnl ========================================================
+ dnl JavaScript shell
+ dnl ========================================================
++ICU_LIB_NAMES=
++MOZ_NATIVE_ICU=
++MOZ_ARG_WITH_BOOL(system-icu,
++[  --with-system-icu
++                          Use system icu (located with pkgconfig)],
++    MOZ_NATIVE_ICU=1)
++
++if test -n "$MOZ_NATIVE_ICU"; then
++    PKG_CHECK_MODULES(MOZ_ICU, icu-i18n >= 50.1)
++fi
+ 
+ MALLOC_HEADERS="malloc.h malloc_np.h malloc/malloc.h sys/malloc.h"
+ MALLOC_H=

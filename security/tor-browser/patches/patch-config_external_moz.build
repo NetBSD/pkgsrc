@@ -1,0 +1,48 @@
+$NetBSD: patch-config_external_moz.build,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+
+--- config/external/moz.build.orig	2015-05-04 00:43:23.000000000 +0000
++++ config/external/moz.build
+@@ -19,10 +19,19 @@ if CONFIG['MOZ_UPDATER']:
+ # There's no "native brotli" yet, but probably in the future...
+ external_dirs += ['modules/brotli']
+ 
+-if CONFIG['MOZ_VORBIS']:
++if not CONFIG['MOZ_NATIVE_OGG']:
++    external_dirs += ['media/libogg']
++
++if not CONFIG['MOZ_NATIVE_CELT'] or not CONFIG['MOZ_NATIVE_OPUS']:
++    external_dirs += ['media/libopus']
++
++if not CONFIG['MOZ_NATIVE_THEORA']:
++    external_dirs += ['media/libtheora']
++
++if CONFIG['MOZ_VORBIS'] and not CONFIG['MOZ_NATIVE_VORBIS']:
+     external_dirs += ['media/libvorbis']
+ 
+-if CONFIG['MOZ_TREMOR']:
++if CONFIG['MOZ_TREMOR'] and not CONFIG['MOZ_NATIVE_TREMOR']:
+     external_dirs += ['media/libtremor']
+ 
+ if CONFIG['MOZ_WEBM']:
+@@ -37,15 +46,16 @@ if CONFIG['MOZ_VPX'] and not CONFIG['MOZ
+ if not CONFIG['MOZ_NATIVE_PNG']:
+     external_dirs += ['media/libpng']
+ 
++if not CONFIG['MOZ_NATIVE_SPEEX']:
++    external_dirs += ['media/libspeex_resampler']
++
++if not CONFIG['MOZ_NATIVE_SOUNDTOUCH']:
++    external_dirs += ['media/libsoundtouch']
++
+ external_dirs += [
+     'media/kiss_fft',
+     'media/libcubeb',
+-    'media/libogg',
+-    'media/libopus',
+-    'media/libtheora',
+-    'media/libspeex_resampler',
+     'media/libstagefright',
+-    'media/libsoundtouch',
+ ]
+ 
+ DIRS += ['../../' + i for i in external_dirs]

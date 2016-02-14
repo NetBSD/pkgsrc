@@ -1,0 +1,14 @@
+$NetBSD: patch-media_libtremor_Makefile.in,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+
+--- media/libtremor/Makefile.in.orig	2014-03-20 11:09:40.000000000 +0000
++++ media/libtremor/Makefile.in
+@@ -0,0 +1,9 @@
++# This Source Code Form is subject to the terms of the Mozilla Public
++# License, v. 2.0. If a copy of the MPL was not distributed with this
++# file, You can obtain one at http://mozilla.org/MPL/2.0/.
++
++include $(topsrcdir)/config/rules.mk
++
++ifdef MOZ_NATIVE_OGG
++CFLAGS += $(MOZ_OGG_CFLAGS)
++endif
