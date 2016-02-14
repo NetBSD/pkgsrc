@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.643 2016/02/13 18:52:30 bsiegert Exp $
+$NetBSD: CHANGES-2016,v 1.644 2016/02/14 02:55:40 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -870,3 +870,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/ruby-twitter 5.16.0 [tsutsui 2016-02-13]
 	Updated emulators/xnp2 to 0.85 [tsutsui 2016-02-13]
 	Added devel/go-review version 20160213 [bsiegert 2016-02-13]
+	Updated devel/cmockery2 to 1.3.9 [mef 2016-02-14]
