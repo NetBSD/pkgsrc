@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.649 2016/02/14 08:40:10 ryoon Exp $
+$NetBSD: CHANGES-2016,v 1.650 2016/02/14 08:48:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -877,3 +877,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added security/tor-browser version 5.5.2 [ryoon 2016-02-14]
 	Added comms/picocom version 2.1 [ryoon 2016-02-14]
 	Updated archivers/p7zip to 15.09nb1 [ryoon 2016-02-14]
+	Updated devel/p5-Params-Validate to 1.22 [wiz 2016-02-14]
