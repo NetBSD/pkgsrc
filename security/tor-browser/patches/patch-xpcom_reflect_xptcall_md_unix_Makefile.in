@@ -1,0 +1,44 @@
+$NetBSD: patch-xpcom_reflect_xptcall_md_unix_Makefile.in,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+
+--- xpcom/reflect/xptcall/md/unix/Makefile.in.orig	2014-10-11 09:06:50.000000000 +0000
++++ xpcom/reflect/xptcall/md/unix/Makefile.in
+@@ -56,6 +56,39 @@ endif
+ # SPARC
+ ######################################################################
+ #
++# Linux/SPARC
++#
++ifeq ($(OS_ARCH),Linux)
++ifneq (,$(findstring sparc,$(OS_TEST)))
++ASFILES		:= xptcinvoke_asm_sparc_linux_GCC3.s xptcstubs_asm_sparc_solaris.s
++endif
++endif
++#
++# NetBSD/SPARC
++#
++ifeq ($(OS_ARCH)$(OS_TEST),NetBSDsparc)
++ASFILES		:= xptcinvoke_asm_sparc_netbsd.s xptcstubs_asm_sparc_netbsd.s
++endif
++#
++# OpenBSD/SPARC
++#
++ifeq ($(OS_ARCH)$(OS_TEST),OpenBSDsparc)
++ASFILES		:= xptcinvoke_asm_sparc_openbsd.s xptcstubs_asm_sparc_openbsd.s
++endif
++#
++# OpenBSD/SPARC64
++#
++ifneq (,$(filter OpenBSDsparc64 FreeBSDsparc64,$(OS_ARCH)$(OS_TEST)))
++ASFILES		:= xptcinvoke_asm_sparc64_openbsd.s xptcstubs_asm_sparc64_openbsd.s
++endif
++#
++# NetBSD/SPARC64
++#
++ifeq ($(OS_ARCH)$(OS_TEST),NetBSDsparc64)
++CPPSRCS                := xptcinvoke_sparc64_netbsd.cpp xptcstubs_sparc64_openbsd.cpp
++ASFILES                := xptcinvoke_asm_sparc64_openbsd.s xptcstubs_asm_sparc64_netbsd.s
++endif
++#
+ # Solaris/SPARC
+ #
+ ifeq ($(OS_ARCH),SunOS)
