@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2016/02/11 09:45:26 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.8 2016/02/14 05:12:42 ryoon Exp $
 bin/libreoffice
 bin/lobase
 bin/localc
@@ -143,6 +143,7 @@ ${PLIST.kde4}${PKGNAME}/lib/libreoffice/program/libkde4be1lo.so
 ${PKGNAME}/lib/libreoffice/program/libldapbe2lo.so
 ${PKGNAME}/lib/libreoffice/program/liblnglo.so
 ${PKGNAME}/lib/libreoffice/program/liblnthlo.so
+${PLIST.gtk3}${PKGNAME}/lib/libreoffice/program/liblibreofficekitgtk.so
 ${PKGNAME}/lib/libreoffice/program/liblocalebe1lo.so
 ${PKGNAME}/lib/libreoffice/program/liblocaledata_en.so
 ${PKGNAME}/lib/libreoffice/program/liblocaledata_es.so
