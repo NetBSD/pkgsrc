@@ -1,15 +1,15 @@
-# $NetBSD: options.mk,v 1.10 2015/12/19 11:43:24 tsutsui Exp $
+# $NetBSD: options.mk,v 1.11 2016/02/14 14:04:16 tsutsui Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mlterm
-PKG_SUPPORTED_OPTIONS=	cairo canna fribidi gdk_pixbuf2 ibus libind m17nlib mlterm-fb scim uim wnn4 xft2
-PKG_SUGGESTED_OPTIONS=	cairo fribidi gdk_pixbuf2 xft2
+PKG_SUPPORTED_OPTIONS=	cairo canna fribidi gdk_pixbuf2 ibus libind m17nlib mlterm-fb otl scim uim wnn4 xft2
+PKG_SUGGESTED_OPTIONS=	cairo fribidi gdk_pixbuf2 m17nlib otl xft2
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux"
 PKG_SUGGESTED_OPTIONS+=	mlterm-fb
 .endif
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		bidi cairo canna fb ibus ind m17nlib scim uim wnn xft2
+PLIST_VARS+=		bidi cairo canna fb ibus ind m17nlib otl scim uim wnn xft2
 
 .if !empty(PKG_OPTIONS:Mmlterm-fb)
 CONFIGURE_ARGS+=	--with-gui=xlib,fb
@@ -69,6 +69,14 @@ PLIST.m17nlib=		yes
 CONFIGURE_ARGS+=	--disable-m17nlib
 .endif
 
+.if !empty(PKG_OPTIONS:Motl)
+.include "../../fonts/harfbuzz/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-otl
+PLIST.otl=		yes
+.else
+CONFIGURE_ARGS+=	--disable-otl
+.endif
+
 .if !empty(PKG_OPTIONS:Mscim)
 .include "../../inputmethod/scim/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-scim
@@ -103,6 +111,10 @@ PLIST.xft2=		yes
 
 .if !empty(PKG_OPTIONS:Mcairo) && !empty(PKG_OPTIONS:Mxft2)
 CONFIGURE_ARGS+=	--with-type-engines=xcore,xft,cairo
+.if !empty(PKG_OPTIONS:Mmlterm-fb)
+# --enable-anti-alias is also required for mlterm-fb
+CONFIGURE_ARGS+=	--enable-anti-alias
+.endif
 .elif !empty(PKG_OPTIONS:Mcairo)
 CONFIGURE_ARGS+=	--with-type-engines=xcore,cairo
 .elif !empty(PKG_OPTIONS:Mxft2)
