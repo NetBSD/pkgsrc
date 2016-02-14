@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2016/02/14 02:51:19 mef Exp $
+# $NetBSD: Makefile,v 1.3 2016/02/14 02:55:23 mef Exp $
 
-VERS=		1.3.8
+VERS=		1.3.9
 DISTNAME=	cmockery2-${VERS}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=lpabon/}
