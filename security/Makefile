@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.570 2016/01/05 01:15:41 sevan Exp $
+# $NetBSD: Makefile,v 1.571 2016/02/14 07:34:00 ryoon Exp $
 #
 
 COMMENT=	Security tools
@@ -486,6 +486,7 @@ SUBDIR+=	tcl-tls
 SUBDIR+=	tcp_wrappers
 SUBDIR+=	tct
 SUBDIR+=	tkpasman
+SUBDIR+=	tor-browser
 SUBDIR+=	tripwire
 SUBDIR+=	uvscan
 SUBDIR+=	validns
