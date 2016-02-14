@@ -1,19 +1,19 @@
-$NetBSD: patch-aj,v 1.5 2016/02/10 09:19:22 wiz Exp $
+$NetBSD: patch-aj,v 1.6 2016/02/14 09:22:48 jperkin Exp $
 
 Kill all of the overzealous optimization; if the user wants this,
 there is devel/cpuflags and mk.conf.
 
 --- configure.orig	2014-01-22 20:23:47.000000000 +0000
 +++ configure
-@@ -14969,7 +14969,7 @@ _ACEOF
+@@ -14980,7 +14980,7 @@ eval as_val=\$$as_ac_Header
+ _ACEOF
+ 
+ else
+-  as_fn_error "*** a required header file is missing" "$LINENO" 5
++  : as_fn_error "*** a required header file is missing" "$LINENO" 5
  fi
  
- # headers
--for ac_header in string.h strings.h alloca.h db.h
-+for ac_header in string.h strings.h db.h
- do :
-   as_ac_Header=`$as_echo "ac_cv_header_$ac_header" | $as_tr_sh`
- ac_fn_c_check_header_mongrel "$LINENO" "$ac_header" "$as_ac_Header" "$ac_includes_default"
+ done
 @@ -15793,7 +15793,7 @@ rm -f core conftest.err conftest.$ac_obj
  
  $as_echo "#define x86 1" >>confdefs.h
