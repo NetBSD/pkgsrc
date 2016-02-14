@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.660 2016/02/14 11:03:31 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.661 2016/02/14 11:45:46 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -888,3 +888,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-Mojolicious to 6.46 [wiz 2016-02-14]
 	Updated devel/py-decorator to 4.0.9 [wiz 2016-02-14]
 	Updated misc/dialog to 1.3.20160209 [wiz 2016-02-14]
+	Updated math/p5-Math-Prime-Util to 0.57 [wen 2016-02-14]
