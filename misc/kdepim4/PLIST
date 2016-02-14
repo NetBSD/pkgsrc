@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2016/01/10 19:33:43 markd Exp $
+@comment $NetBSD: PLIST,v 1.15 2016/02/14 04:18:40 markd Exp $
 bin/akonadi_archivemail_agent
 bin/akonadi_followupreminder_agent
 bin/akonadi_mailfilter_agent
@@ -690,20 +690,13 @@ share/icons/locolor/16x16/actions/ktnef_extract_all_to.png
 share/icons/locolor/16x16/actions/ktnef_extract_to.png
 share/icons/locolor/16x16/apps/ktnef.png
 share/icons/locolor/32x32/apps/ktnef.png
-share/icons/oxygen/128x128/mimetypes/x-mail-distribution-list.png
 share/icons/oxygen/16x16/actions/edit-delete-page.png
 share/icons/oxygen/16x16/actions/smallclock.png
 share/icons/oxygen/16x16/actions/upindicator.png
-share/icons/oxygen/16x16/mimetypes/x-mail-distribution-list.png
 share/icons/oxygen/22x22/actions/checkmark.png
 share/icons/oxygen/22x22/actions/edit-delete-page.png
-share/icons/oxygen/22x22/mimetypes/x-mail-distribution-list.png
-share/icons/oxygen/256x256/mimetypes/x-mail-distribution-list.png
 share/icons/oxygen/32x32/actions/edit-delete-page.png
-share/icons/oxygen/32x32/mimetypes/x-mail-distribution-list.png
 share/icons/oxygen/48x48/actions/edit-delete-page.png
-share/icons/oxygen/48x48/mimetypes/x-mail-distribution-list.png
-share/icons/oxygen/512x512/mimetypes/x-mail-distribution-list.png
 share/icons/oxygen/scalable/actions/edit-delete-page.svgz
 share/icons/oxygen/scalable/mimetypes/x-mail-distribution-list.svgz
 share/kde/apps/akonadi_archivemail_agent/akonadi_archivemail_agent.notifyrc
