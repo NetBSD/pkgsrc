@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2015/12/19 11:43:24 tsutsui Exp $
+@comment $NetBSD: PLIST,v 1.35 2016/02/14 14:04:16 tsutsui Exp $
 bin/mlcc
 bin/mlclient
 bin/mlclientx
@@ -40,13 +40,14 @@ ${PLIST.ind}lib/mlterm/libind_punjabi.la
 ${PLIST.ind}lib/mlterm/libind_roman.la
 ${PLIST.ind}lib/mlterm/libind_tamil.la
 ${PLIST.ind}lib/mlterm/libind_telugu.la
-${PLIST.cairo}lib/mlterm/libtype_cairo.la
-${PLIST.xft2}lib/mlterm/libtype_xft.la
 lib/mlterm/libmotif.la
 lib/mlterm/libmozmodern.la
+${PLIST.otl}lib/mlterm/libotl.la
 lib/mlterm/libnext.la
 lib/mlterm/libpixmap_engine.la
 lib/mlterm/libsample.la
+${PLIST.cairo}lib/mlterm/libtype_cairo.la
+${PLIST.xft2}lib/mlterm/libtype_xft.la
 libexec/mlterm/mlconfig
 libexec/mlterm/mlimgloader
 libexec/mlterm/mlterm-menu
