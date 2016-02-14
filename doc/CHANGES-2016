@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.656 2016/02/14 10:56:46 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.657 2016/02/14 10:58:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -884,3 +884,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-cffi to 1.5.2 [wiz 2016-02-14]
 	Updated devel/py-setuptools to 20.1.1 [wiz 2016-02-14]
 	Updated devel/afl to 2.00b [wiz 2016-02-14]
+	Updated devel/py-virtualenv to 14.0.6 [wiz 2016-02-14]
