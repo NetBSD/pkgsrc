@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.137 2016/01/23 02:46:39 mef Exp $
+# $NetBSD: sites.mk,v 1.138 2016/02/14 06:55:08 taca Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -279,7 +279,7 @@ MASTER_SITE_OPENBSD+= \
 	ftp://ftp.jaist.ac.jp/pub/OpenBSD/
 
 MASTER_SITE_RUBYGEMS+= \
-	http://rubygems.org/downloads/
+	https://rubygems.org/gems/
 
 MASTER_SITE_PYPI+= \
 	https://pypi.python.org/packages/source/
