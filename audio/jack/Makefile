@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2016/02/10 09:19:22 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2016/02/14 09:53:10 wiz Exp $
 
 DISTNAME=	jack-audio-connection-kit-${JACK_VERSION}
 PKGNAME=	jack-${JACK_VERSION}
@@ -117,8 +117,7 @@ CONFIGURE_ARGS+=	--disable-dynsimd
 .  endif
 .endif
 
-BDB_ACCEPTED=		db2 db3 db4
-BUILDLINK_TRANSFORM+=	l:db:${BDB_TYPE}
+BUILDLINK_TRANSFORM+=	l:db:db4
 
 post-extract:
 	${RUN} ${MKDIR} ${WRKSRC}/config/os/netbsd && \
@@ -126,7 +125,7 @@ post-extract:
 
 .include "../../audio/libsamplerate/buildlink3.mk"
 .include "../../devel/libuuid/buildlink3.mk"
-.include "../../mk/bdb.buildlink3.mk"
+.include "../../databases/db4/buildlink3.mk"
 .include "../../mk/readline.buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
