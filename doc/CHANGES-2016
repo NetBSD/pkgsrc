@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.671 2016/02/14 14:05:45 tsutsui Exp $
+$NetBSD: CHANGES-2016,v 1.672 2016/02/14 14:09:24 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -899,3 +899,6 @@ Changes to the packages collection and infrastructure in 2016:
 	Added graphics/zathura-cb version 0.1.5 [leot 2016-02-14]
 	Added graphics/zathura-djvu version 0.2.5 [leot 2016-02-14]
 	Updated x11/mlterm to 3.6.3 [tsutsui 2016-02-14]
+	Added print/zathura-pdf-mupdf version 0.2.9 [leot 2016-02-14]
+	Added print/zathura-pdf-poppler version 0.2.6 [leot 2016-02-14]
+	Added print/zathura-ps version 0.2.3 [leot 2016-02-14]
