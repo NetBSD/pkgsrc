@@ -1,0 +1,9 @@
+$NetBSD: patch-media_libcubeb_AUTHORS,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+
+--- media/libcubeb/AUTHORS.orig	2014-10-11 09:06:39.000000000 +0000
++++ media/libcubeb/AUTHORS
+@@ -4,3 +4,4 @@ Michael Wu <mwu@mozilla.com>
+ Paul Adenot <paul@paul.cx>
+ David Richards <drichards@mozilla.com>
+ Sebastien Alaiwan <sebastien.alaiwan@gmail.com>
++Evgeniy Vodolazskiy <waterlaz@gmail.com>

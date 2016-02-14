@@ -1,0 +1,14 @@
+$NetBSD: patch-dom_base_moz.build,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+
+--- dom/base/moz.build.orig	2015-02-17 21:40:41.000000000 +0000
++++ dom/base/moz.build
+@@ -361,6 +361,9 @@ if CONFIG['INTEL_ARCHITECTURE']:
+     SOURCES += ['nsTextFragmentSSE2.cpp']
+     SOURCES['nsTextFragmentSSE2.cpp'].flags += CONFIG['SSE2_FLAGS']
+ 
++if CONFIG['MOZ_NATIVE_HARFBUZZ']:
++    SOURCES['nsContentUtils.cpp'].flags += CONFIG['MOZ_HARFBUZZ_CFLAGS']
++
+ EXTRA_COMPONENTS += [
+     'ConsoleAPI.manifest',
+     'ConsoleAPIStorage.js',
