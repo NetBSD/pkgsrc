@@ -1,0 +1,15 @@
+$NetBSD: patch-webapprt_moz.build,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+
+Don't assume cocoa toolkit just because OS_ARCH is Darwin.
+
+--- webapprt/moz.build.orig	2014-09-24 01:05:40.000000000 +0000
++++ webapprt/moz.build
+@@ -6,7 +6,7 @@
+ 
+ if CONFIG['OS_ARCH'] == 'WINNT':
+     DIRS += ['win']
+-elif CONFIG['OS_ARCH'] == 'Darwin':
++elif CONFIG['MOZ_WIDGET_TOOLKIT'] == 'cocoa':
+     DIRS += ['mac']
+ elif CONFIG['MOZ_ENABLE_GTK']:
+     DIRS += ['gtk']
