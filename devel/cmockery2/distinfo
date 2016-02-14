@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 03:27:19 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/02/14 02:51:19 mef Exp $
 
-SHA1 (v1.3.8.zip) = c50311fdcbbb207affacce9628c743c7e940aff9
-RMD160 (v1.3.8.zip) = 21dd89e27608a5e1a5cb091bc2fa39dceae31432
-SHA512 (v1.3.8.zip) = 5cbe7171b70da8ae57eeecf36d7112b0a2bf91d22a880e0891fa64f58478f13145bc226f982273121041722f94a69ee09b3a7fd896e23638ab163b8b021a2f91
-Size (v1.3.8.zip) = 83204 bytes
+SHA1 (cmockery2-1.3.8.zip) = 7d43c8162137fb1b85bc820a320d8ed39d3c70f7
+RMD160 (cmockery2-1.3.8.zip) = 9bcfdd609d481857f624fbba061ce3a49ac5ef81
+SHA512 (cmockery2-1.3.8.zip) = f768bb8d177f684d1967cc69009c2147b07c8795c06e2c7d92e361830f751ee2241c31ea1da49ed041c01da56ca3ccabb47e0044219c150fcb5faf6b8109f182
+Size (cmockery2-1.3.8.zip) = 83204 bytes
 SHA1 (patch-autogen.sh) = 91a064f8af52b48cdf91f1a285dd549e22a53351
