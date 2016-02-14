@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2016/01/11 00:02:32 markd Exp $
+# $NetBSD: Makefile,v 1.3 2016/02/14 04:13:32 markd Exp $
 
-DISTNAME=	extra-cmake-modules-5.18.0
-CATEGORIES=	graphics kde
-MASTER_SITES=	${MASTER_SITE_KDE:=frameworks/5.18/}
+DISTNAME=	extra-cmake-modules-5.19.0
+CATEGORIES=	devel kde
+MASTER_SITES=	${MASTER_SITE_KDE:=frameworks/5.19/}
 EXTRACT_SUFX=	.tar.xz
-EXTRACT_USING=	bsdtar
 
 MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://projects.kde.org/projects/kdesupport/extra-cmake-modules
 COMMENT=	Extra modules and scripts for CMake
-LICENSE=	gnu-lgpl-v3
+LICENSE=	modified-bsd
 
 #BUILD_DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.2:../../textproc/py-sphinx
 
