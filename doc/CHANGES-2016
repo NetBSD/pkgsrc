@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.669 2016/02/14 13:54:15 leot Exp $
+$NetBSD: CHANGES-2016,v 1.670 2016/02/14 14:00:07 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -897,3 +897,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added graphics/girara version 0.2.5 [leot 2016-02-14]
 	Added print/zathura version 0.3.4 [leot 2016-02-14]
 	Added graphics/zathura-cb version 0.1.5 [leot 2016-02-14]
+	Added graphics/zathura-djvu version 0.2.5 [leot 2016-02-14]
