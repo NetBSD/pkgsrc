@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.658 2016/02/14 13:44:09 leot Exp $
+# $NetBSD: Makefile,v 1.659 2016/02/14 14:05:24 leot Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1243,5 +1243,8 @@ SUBDIR+=	xpdfopen
 SUBDIR+=	xpp
 SUBDIR+=	yup
 SUBDIR+=	zathura
+SUBDIR+=	zathura-pdf-mupdf
+SUBDIR+=	zathura-pdf-poppler
+SUBDIR+=	zathura-ps
 
 .include "../mk/misc/category.mk"
