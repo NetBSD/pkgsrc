@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.645 2016/02/14 04:22:32 markd Exp $
+$NetBSD: CHANGES-2016,v 1.646 2016/02/14 07:26:18 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -873,3 +873,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/cmockery2 to 1.3.9 [mef 2016-02-14]
 	Updated devel/extra-cmake-modules to 5.19.0 [markd 2016-02-14]
 	Updated graphics/oxygen-icons to 5.19.0 [markd 2016-02-14]
+	Updated converters/dos2unix to 7.3.3 [ryoon 2016-02-14]
