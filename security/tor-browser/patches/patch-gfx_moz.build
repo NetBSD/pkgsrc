@@ -1,0 +1,26 @@
+$NetBSD: patch-gfx_moz.build,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+
+--- gfx/moz.build.orig	2014-03-15 05:19:16.000000000 +0000
++++ gfx/moz.build
+@@ -7,6 +7,12 @@
+ if CONFIG['MOZ_TREE_CAIRO']:
+     DIRS += ['cairo']
+ 
++if not CONFIG['MOZ_NATIVE_GRAPHITE2']:
++    DIRS += ['graphite2/src' ]
++
++if not CONFIG['MOZ_NATIVE_HARFBUZZ']:
++    DIRS += ['harfbuzz/src']
++
+ DIRS += [
+     '2d',
+     'ycbcr',
+@@ -15,8 +21,6 @@ DIRS += [
+     'qcms',
+     'gl',
+     'layers',
+-    'graphite2/src',
+-    'harfbuzz/src',
+     'ots/src',
+     'thebes',
+     'ipc',

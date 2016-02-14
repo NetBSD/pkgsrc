@@ -1,0 +1,15 @@
+$NetBSD: patch-b2g_installer_Makefile.in,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+
+--- b2g/installer/Makefile.in.orig	2015-02-17 21:40:34.000000000 +0000
++++ b2g/installer/Makefile.in
+@@ -79,6 +79,10 @@ ifneq (,$(filter rtsp,$(NECKO_PROTOCOLS)
+ DEFINES += -DMOZ_RTSP
+ endif
+ 
++ifdef MOZ_DEBUG
++DEFINES += -DMOZ_DEBUG=1
++endif
++
+ ifdef GKMEDIAS_SHARED_LIBRARY
+ DEFINES += -DGKMEDIAS_SHARED_LIBRARY
+ endif

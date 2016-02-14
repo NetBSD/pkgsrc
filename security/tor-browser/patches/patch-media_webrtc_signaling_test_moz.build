@@ -1,0 +1,26 @@
+$NetBSD: patch-media_webrtc_signaling_test_moz.build,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+
+--- media/webrtc/signaling/test/moz.build.orig	2015-02-17 21:40:43.000000000 +0000
++++ media/webrtc/signaling/test/moz.build
+@@ -112,15 +112,19 @@ if CONFIG['JS_SHARED_LIBRARY']:
+         'js',
+     ]
+ 
++OS_LIBS += CONFIG['MOZ_LIBV4L2_LIBS']
+ OS_LIBS += CONFIG['MOZ_WEBRTC_X11_LIBS']
+ OS_LIBS += CONFIG['REALTIME_LIBS']
+ 
+-if CONFIG['MOZ_ALSA']:
+-    OS_LIBS += CONFIG['MOZ_ALSA_LIBS']
++if CONFIG['MOZ_OSS']:
++    OS_LIBS += CONFIG['MOZ_OSS_LIBS']
+ 
+ if CONFIG['MOZ_NATIVE_JPEG']:
+     OS_LIBS += CONFIG['MOZ_JPEG_LIBS']
+ 
++if CONFIG['MOZ_NATIVE_OPUS']:
++    OS_LIBS += CONFIG['MOZ_OPUS_LIBS']
++
+ if CONFIG['MOZ_NATIVE_LIBVPX']:
+     OS_LIBS += CONFIG['MOZ_LIBVPX_LIBS']
+ 
