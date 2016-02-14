@@ -4798,7 +4798,7 @@ fi
 done
 
 
-for ac_header in assert.h ctype.h dirent.h err.h errno.h fnctl.h \
+for ac_header in assert.h ctype.h dirent.h err.h errno.h fcntl.h \
 	fnmatch.h glob.h grp.h inttypes.h limits.h pwd.h signal.h \
 	stdarg.h stdio.h stdlib.h string.h time.h unistd.h vis.h
 do :
