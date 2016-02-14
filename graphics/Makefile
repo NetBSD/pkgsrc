@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.731 2016/02/14 13:39:24 leot Exp $
+# $NetBSD: Makefile,v 1.732 2016/02/14 13:53:52 leot Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -699,6 +699,7 @@ SUBDIR+=	xplot-devel
 SUBDIR+=	xsane
 SUBDIR+=	xv
 SUBDIR+=	xzgv
+SUBDIR+=	zathura-cb
 SUBDIR+=	zphoto
 
 .include "../mk/misc/category.mk"
