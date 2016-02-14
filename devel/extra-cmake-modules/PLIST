@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/01/10 19:57:38 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/02/14 04:13:32 markd Exp $
 share/ECM/cmake/ECMConfig.cmake
 share/ECM/cmake/ECMConfigVersion.cmake
 share/ECM/find-modules/ECMFindModuleHelpersStub.cmake
@@ -7,6 +7,7 @@ share/ECM/find-modules/FindKF5.cmake
 share/ECM/find-modules/FindLibGit2.cmake
 share/ECM/find-modules/FindOpenEXR.cmake
 share/ECM/find-modules/FindPng2Ico.cmake
+share/ECM/find-modules/FindPoppler.cmake
 share/ECM/find-modules/FindQtWaylandScanner.cmake
 share/ECM/find-modules/FindSharedMimeInfo.cmake
 share/ECM/find-modules/FindWayland.cmake
