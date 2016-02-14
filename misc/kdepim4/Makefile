@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.74 2016/01/10 19:33:43 markd Exp $
+# $NetBSD: Makefile,v 1.75 2016/02/14 04:18:40 markd Exp $
 
 DISTNAME=	kdepim-4.14.10
 PKGNAME=	${DISTNAME:S/-4/4-4/}
+PKGREVISION=	1
 CATEGORIES=	misc
 COMMENT=	Personal Information Management tools for the KDE desktop
 MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.04.3/src/}
@@ -56,6 +57,9 @@ SUBST_STAGE.perlfix=	pre-configure
 SUBST_MESSAGE.perlfix=	Fix perl path in cmake script
 SUBST_FILES.perlfix=	korganizer/data/ical2vcal.cmake
 SUBST_SED.perlfix=	-e 's:@PERL@:${PERL5}:g'
+
+post-install:
+	${RM} ${DESTDIR}${PREFIX}/share/icons/oxygen/*/mimetypes/x-mail-distribution-list.png
 
 BUILDLINK_DEPMETHOD.qt4-tools=full
 
