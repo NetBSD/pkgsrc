@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.661 2016/02/14 11:45:46 wen Exp $
+$NetBSD: CHANGES-2016,v 1.662 2016/02/14 11:50:30 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -889,3 +889,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-decorator to 4.0.9 [wiz 2016-02-14]
 	Updated misc/dialog to 1.3.20160209 [wiz 2016-02-14]
 	Updated math/p5-Math-Prime-Util to 0.57 [wen 2016-02-14]
+	Updated math/p5-Math-Permute-List to 1.007 [wen 2016-02-14]
