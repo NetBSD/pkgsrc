@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.644 2016/02/14 02:55:40 mef Exp $
+$NetBSD: CHANGES-2016,v 1.645 2016/02/14 04:22:32 markd Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -871,3 +871,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated emulators/xnp2 to 0.85 [tsutsui 2016-02-13]
 	Added devel/go-review version 20160213 [bsiegert 2016-02-13]
 	Updated devel/cmockery2 to 1.3.9 [mef 2016-02-14]
+	Updated devel/extra-cmake-modules to 5.19.0 [markd 2016-02-14]
+	Updated graphics/oxygen-icons to 5.19.0 [markd 2016-02-14]
