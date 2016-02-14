@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/02/14 07:54:51 ryoon Exp $
+
+SHA1 (picocom-2.1.tar.gz) = ddcc98cdeefe1fa57b0349d86254932ae3b0edfe
+RMD160 (picocom-2.1.tar.gz) = 0315b5767cee7077762bdb9937df17574d4f8fc5
+SHA512 (picocom-2.1.tar.gz) = 0df692118e3cfa27edd8ff9d5abbde8a9dc02fb015476ab1469337d616eb69411db125a967107276fb50bc58e7b9748429b9ded4943712a082a10827d595c03e
+Size (picocom-2.1.tar.gz) = 89281 bytes
