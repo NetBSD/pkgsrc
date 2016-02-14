@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.102 2015/12/05 23:43:54 jnemeth Exp $
+# $NetBSD: Makefile,v 1.103 2016/02/14 07:55:55 ryoon Exp $
 #
 
 COMMENT=	Communication utilities
@@ -61,6 +61,7 @@ SUBDIR+=	p5-Device-SerialPort
 SUBDIR+=	p5-Device-XBee-API
 SUBDIR+=	p5-SMS-Send
 SUBDIR+=	p5-pilot-link
+SUBDIR+=	picocom
 SUBDIR+=	pilot-link
 SUBDIR+=	pilot-link-libs
 SUBDIR+=	pilotmgr
