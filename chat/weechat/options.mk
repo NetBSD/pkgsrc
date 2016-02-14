@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.13 2015/12/06 22:36:46 tonio Exp $
+# $NetBSD: options.mk,v 1.14 2016/02/14 12:52:13 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.weechat
 PKG_SUPPORTED_OPTIONS=	gnutls python lua wide-curses perl ruby
@@ -21,6 +21,7 @@ PLIST_VARS+=		lua plugin python perl ruby
 .if !empty(PKG_OPTIONS:Mpython)
 .include "../../lang/python/extension.mk"
 CMAKE_ARGS+=		-DENABLE_PYTHON:BOOL=ON
+CMAKE_ARGS+=		-DPYTHON_LIBRARY:FILEPATH=${PREFIX}/lib/libpython${PYVERSSUFFIX}.so
 PLIST.python=		yes
 .else
 CMAKE_ARGS+=		-DENABLE_PYTHON:BOOL=OFF
