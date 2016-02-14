@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.663 2016/02/14 11:56:21 wen Exp $
+$NetBSD: CHANGES-2016,v 1.664 2016/02/14 12:02:45 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -891,3 +891,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated math/p5-Math-Prime-Util to 0.57 [wen 2016-02-14]
 	Updated math/p5-Math-Permute-List to 1.007 [wen 2016-02-14]
 	Updated math/p5-Math-MatrixReal to 2.12 [wen 2016-02-14]
+	Updated math/p5-Math-Interpolate to 1.06 [wen 2016-02-14]
