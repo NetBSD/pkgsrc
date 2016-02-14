@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.50 2016/01/10 19:06:41 markd Exp $
+# $NetBSD: Makefile,v 1.51 2016/02/14 04:20:24 markd Exp $
 
 DISTNAME=	kde-workspace-4.11.22
 PKGNAME=	${DISTNAME:S/-4/4-4/}
+PKGREVISION=	1
 CATEGORIES=	x11
 COMMENT=	Base workspace for the KDE 4 integrated X11 desktop
 MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.08.0/src/}
@@ -123,6 +124,7 @@ post-install:
                 kdmrc > ${WRKDIR}/kdmrc.ad;				\
 	${CP} -f ${WRKDIR}/kdmrc.ad kdmrc
 .endif
+	${RM} ${DESTDIR}${PREFIX}/share/icons/oxygen/*/mimetypes/fonts-package.png
 
 CFLAGS.SunOS+=	-D__EXTENSIONS__ -D__uint16_t=uint16_t
 LDFLAGS.SunOS+=	-lsocket
