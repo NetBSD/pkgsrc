@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2015/10/25 08:18:00 adam Exp $
+# $NetBSD: Makefile,v 1.37 2016/02/14 10:19:22 jperkin Exp $
 
 DISTNAME=	unixODBC-2.3.4
 PKGNAME=	${DISTNAME:S/ODBC/odbc/}
@@ -49,10 +49,16 @@ CONF_FILES=		${EGDIR}/odbc.ini ${PKG_SYSCONFDIR}/odbc.ini
 OWN_DIRS=		${PKG_SYSCONFDIR}/ODBCDataSources
 
 SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	${WRKDIR}/odbc.ini
 SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_SED.paths+=	-e 's,@UNIXODBC_DRIVERS_DIR@,${UNIXODBC_DRIVERS_DIR},g'
-SUBST_STAGE.paths=	post-patch
+
+SUBST_CLASSES+=		mutex
+SUBST_STAGE.mutex=	pre-configure
+SUBST_FILES.mutex=	DriverManager/__handles.c odbcinst/_logging.c
+SUBST_FILES.mutex+=	odbcinst/SQLGetPrivateProfileString.c
+SUBST_SED.mutex=	-e 's,mutex_exit,odbc_mutex_exit,g'
 
 INSTALLATION_DIRS=	${EGDIR}
 
