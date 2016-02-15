@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2016/02/14 13:43:21 leot Exp $
+# $NetBSD: Makefile,v 1.2 2016/02/15 03:05:41 leot Exp $
 
-DISTNAME=	zathura-0.3.4
+DISTNAME=	zathura-0.3.5
 CATEGORIES=	print
 MASTER_SITES=	http://pwmt.org/projects/zathura/download/
 
