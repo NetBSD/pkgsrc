@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/04 01:18:04 agc Exp $
+$NetBSD: distinfo,v 1.4 2016/02/15 10:45:40 wiz Exp $
 
-SHA1 (oauth2client-1.4.2.tar.gz) = f55972b85b2cbba0b1eca6202a0b4834626dbc9b
-RMD160 (oauth2client-1.4.2.tar.gz) = 4df0594eaeb65c212c3571c1674e336106d0696d
-SHA512 (oauth2client-1.4.2.tar.gz) = 91ae93d40184a752d44fa2e5bba6767373c3a143d58f833381070612248a8f74185c92e2718c688cbe5b7d27357ed1d0191977be1aa26844fe34466a210e9c51
-Size (oauth2client-1.4.2.tar.gz) = 1028497 bytes
+SHA1 (oauth2client-1.5.2.tar.gz) = a269d0b07126bd09a6fa983c473d793c12c67c35
+RMD160 (oauth2client-1.5.2.tar.gz) = bbdea991db5a654ca4590b34a503c97c2fe8fe87
+SHA512 (oauth2client-1.5.2.tar.gz) = 15f10b52aa93fc10289658d5ff671a247e5c92c5ff2be424a04617fee1a3a82439b829b0f5dcb04e3e84802e02580e366e08356df7ec6e24563a530d2f6b1db5
+Size (oauth2client-1.5.2.tar.gz) = 131665 bytes
