@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1152 2016/02/08 02:32:15 markd Exp $
+# $NetBSD: Makefile,v 1.1153 2016/02/15 16:37:24 jperkin Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -13,6 +13,7 @@ SUBDIR+=	amaya
 SUBDIR+=	analog
 SUBDIR+=	ap-auth-kerb
 SUBDIR+=	ap-auth-mysql
+SUBDIR+=	ap-authnz-crowd
 SUBDIR+=	ap-fastcgi
 SUBDIR+=	ap-geoip2
 SUBDIR+=	ap-mono
