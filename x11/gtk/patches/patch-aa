@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.22 2001/04/26 17:42:55 rh Exp $
+$NetBSD: patch-aa,v 1.23 2016/02/15 11:46:02 jperkin Exp $
 
---- configure.orig	Wed Mar 28 23:11:45 2001
+--- configure.orig	2001-03-28 21:11:45.000000000 +0000
 +++ configure
-@@ -22,8 +22,8 @@
+@@ -22,8 +22,8 @@ ac_default_prefix=/usr/local
  #
  GTK_MAJOR_VERSION=1
  GTK_MINOR_VERSION=2
@@ -13,7 +13,7 @@ $NetBSD: patch-aa,v 1.22 2001/04/26 17:42:55 rh Exp $
  GTK_BINARY_AGE=10
  GTK_VERSION=$GTK_MAJOR_VERSION.$GTK_MINOR_VERSION.$GTK_MICRO_VERSION
  ac_help="$ac_help
-@@ -4106,7 +4106,7 @@
+@@ -4106,7 +4106,7 @@ LIBS="$LIBS $INTLLIBS"
  
  # AM_GTK_GNU_GETTEXT above substs $DATADIRNAME
  # this is the directory where the *.{mo,gmo} files are installed
@@ -22,3 +22,19 @@ $NetBSD: patch-aa,v 1.22 2001/04/26 17:42:55 rh Exp $
  
  
  echo $ac_n "checking for extra flags to get ANSI library prototypes""... $ac_c" 1>&6
+@@ -6718,7 +6718,6 @@ cat > conftest.$ac_ext <<EOF
+ #line 6719 "configure"
+ #include "confdefs.h"
+ #include <stdlib.h>
+-int main() {
+ 
+ #if (defined(HAVE_WCTYPE_H) || defined(HAVE_WCHAR_H))
+ #  ifdef HAVE_WCTYPE_H
+@@ -6731,6 +6730,7 @@ int main() {
+ #else
+ #  define iswalnum(c) ((wchar_t)(c) <= 0xFF && isalnum(c))
+ #endif
++int main() {
+ iswalnum((wchar_t) 0);
+ 
+ ; return 0; }
