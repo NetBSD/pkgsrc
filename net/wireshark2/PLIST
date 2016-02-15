@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/01/02 23:59:02 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/02/15 14:39:25 adam Exp $
 bin/androiddump
 bin/capinfos
 bin/captype
@@ -40,11 +40,11 @@ man/man1/rawshark.1
 man/man1/reordercap.1
 man/man1/text2pcap.1
 man/man1/tshark.1
-${PLIST.icons}man/man1/wireshark.1
+${PLIST.mans}man/man1/wireshark.1
 man/man4/wireshark-filter.4
 ${PLIST.icons}share/appdata/wireshark.appdata.xml
 ${PLIST.icons}share/applications/wireshark-gtk.desktop
-${PLIST.icons}share/applications/wireshark.desktop
+${PLIST.gtk3}share/applications/wireshark.desktop
 ${PLIST.icons}share/icons/hicolor/128x128/apps/wireshark.png
 ${PLIST.icons}share/icons/hicolor/128x128/mimetypes/application-vnd.tcpdump.pcap.png
 ${PLIST.icons}share/icons/hicolor/128x128/mimetypes/application-wireshark-doc.png
