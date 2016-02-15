@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.1 2016/01/02 23:59:02 ryoon Exp $
+# $NetBSD: options.mk,v 1.2 2016/02/15 14:39:25 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.wireshark
 PKG_SUPPORTED_OPTIONS=	gtk3 lua qt5
 PKG_SUGGESTED_OPTIONS=	gtk3 lua
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		gtk3 icons qt5
+PLIST_VARS+=		gtk3 icons lua mans qt5
 
 .if empty(PKG_OPTIONS:Mqt5)
 CONFIGURE_ARGS+=	--without-qt
@@ -40,7 +40,7 @@ POST_INSTALL_TARGETS+=	install-gtk-desktop
 .PHONY: install-gtk-desktop
 install-gtk-desktop:
 	${INSTALL_DATA} ${WRKSRC}/wireshark.desktop \
-		${DESTDIR}${PREFIX}/share/applications
+		${DESTDIR}${PREFIX}/share/applications/
 
 .endif
 
@@ -48,23 +48,25 @@ install-gtk-desktop:
 # so have a generic icon target
 .if !empty(PKG_OPTIONS:Mgtk3) || !empty(PKG_OPTIONS:Mqt5)
 CONFIGURE_ARGS+=	--enable-wireshark
+PLIST.mans=		yes
+INSTALLATION_DIRS+=	share/applications
+.  if ${OPSYS} != "Darwin"
 PLIST.icons=		yes
 POST_INSTALL_TARGETS+=	install-icons
-INSTALLATION_DIRS+=	share/applications
 INSTALLATION_DIRS+=	share/icons/hicolor/scalable/apps
 ICON_COLORS=		hi lo
 ICON_SIZES=		16 32 48
 MIMEICON_SIZES=		16 24 32 48 64 128 256
 
-.  for c in ${ICON_COLORS}
-.    for d in ${ICON_SIZES}
+.    for c in ${ICON_COLORS}
+.      for d in ${ICON_SIZES}
 INSTALLATION_DIRS+=	share/icons/${c}color/${d}x${d}/apps
+.      endfor
 .    endfor
-.  endfor
 
-.  for d in ${MIMEICON_SIZES}
+.    for d in ${MIMEICON_SIZES}
 INSTALLATION_DIRS+=	share/icons/hicolor/${d}x${d}/mimetypes
-.  endfor
+.    endfor
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
@@ -73,22 +75,21 @@ INSTALLATION_DIRS+=	share/icons/hicolor/${d}x${d}/mimetypes
 install-icons:
 	${INSTALL_DATA} ${WRKSRC}/image/wsicon.svg \
 		${DESTDIR}${PREFIX}/share/icons/hicolor/scalable/apps/wireshark.svg
-.  for c in ${ICON_COLORS}
-.    for d in ${ICON_SIZES}
+.    for c in ${ICON_COLORS}
+.      for d in ${ICON_SIZES}
 	${INSTALL_DATA} ${WRKSRC}/image/${c}${d}-app-wireshark.png \
 		${DESTDIR}${PREFIX}/share/icons/${c}color/${d}x${d}/apps/wireshark.png
+.      endfor
 .    endfor
-.  endfor
 
-.  for d in ${MIMEICON_SIZES}
+.    for d in ${MIMEICON_SIZES}
 	${INSTALL_DATA} ${WRKSRC}/image/WiresharkDoc-${d}.png \
 		${DESTDIR}${PREFIX}/share/icons/hicolor/${d}x${d}/mimetypes/application-vnd.tcpdump.pcap.png
-.  endfor
+.    endfor
+.  endif
 .else
 CONFIGURE_ARGS+=	--disable-wireshark
 .endif
-
-PLIST_VARS+=		lua
 
 .if empty(PKG_OPTIONS:Mlua)
 CONFIGURE_ARGS+=	--with-lua=no
