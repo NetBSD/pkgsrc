@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2015/06/12 10:51:49 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2016/02/15 15:11:09 mef Exp $
 
 DISTNAME=	h2o-1.2.0
 PKGREVISION=	1
 CATEGORIES=	www
-MASTER_SITES=	-https://github.com/h2o/h2o/archive/v1.2.0${EXTRACT_SUFX}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=h2o/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://github.com/h2o/h2o
