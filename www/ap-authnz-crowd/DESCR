@@ -1,0 +1,5 @@
+Crowd is an application security framework that handles authentication
+and authorisation for your web-based applications. With Crowd you can
+quickly integrate multiple web applications into a single security
+architecture that supports single sign-on (SSO) and centralised identity
+management.
