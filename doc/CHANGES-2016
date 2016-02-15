@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.679 2016/02/15 03:05:55 leot Exp $
+$NetBSD: CHANGES-2016,v 1.680 2016/02/15 06:31:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -909,3 +909,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/pciutils to 3.4.1 [msaitoh 2016-02-15]
 	Updated print/zathura-pdf-mupdf to 0.3.0 [leot 2016-02-15]
 	Updated print/zathura to 0.3.5 [leot 2016-02-15]
+	Updated net/youtube-dl to 20160213 [adam 2016-02-15]
