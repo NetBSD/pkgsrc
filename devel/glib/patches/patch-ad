@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.15 2005/06/06 18:57:30 jmmv Exp $
+$NetBSD: patch-ad,v 1.16 2016/02/15 11:42:11 jperkin Exp $
 
---- configure.orig	2001-03-15 16:44:01.000000000 +0100
+--- configure.orig	2001-03-15 15:44:01.000000000 +0000
 +++ configure
 @@ -26,7 +26,7 @@ ac_default_prefix=/usr/local
  #
@@ -11,6 +11,22 @@ $NetBSD: patch-ad,v 1.15 2005/06/06 18:57:30 jmmv Exp $
  GLIB_INTERFACE_AGE=10
  GLIB_BINARY_AGE=10
  GLIB_VERSION=$GLIB_MAJOR_VERSION.$GLIB_MINOR_VERSION.$GLIB_MICRO_VERSION
+@@ -3871,7 +3871,6 @@ cat > conftest.$ac_ext <<EOF
+ #line 3872 "configure"
+ #include "confdefs.h"
+ #include <stdlib.h>
+-int main() {
+ 
+ #if (defined(HAVE_WCTYPE_H) || defined(HAVE_WCHAR_H))
+ #  ifdef HAVE_WCTYPE_H
+@@ -3884,6 +3883,7 @@ int main() {
+ #else
+ #  define iswalnum(c) ((wchar_t)(c) <= 0xFF && isalnum(c))
+ #endif
++int main() {
+ iswalnum((wchar_t) 0);
+ 
+ ; return 0; }
 @@ -5177,6 +5177,9 @@ G_THREAD_CFLAGS="$G_THREAD_CFLAGS -D_REE
              	        G_THREAD_CFLAGS="$G_THREAD_CFLAGS -mthreads"
  		fi
