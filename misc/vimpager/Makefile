@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2014/09/20 12:00:42 obache Exp $
+# $NetBSD: Makefile,v 1.6 2016/02/15 12:39:21 mef Exp $
 
 DISTNAME=	vimpager-1.8.9
 CATEGORIES=	misc
-MASTER_SITES=	-https://github.com/rkitover/vimpager/archive/${PKGVERSION_NOREV}${EXTRACT_SUFX}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=rkitover/}
 
 MAINTAINER=	nonakap@gmail.com
 HOMEPAGE=	http://www.vim.org/scripts/script.php?script_id=1723
