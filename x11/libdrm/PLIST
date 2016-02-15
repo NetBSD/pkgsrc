@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2015/12/29 23:05:09 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2016/02/15 23:13:32 wiz Exp $
 ${PLIST.arm}include/freedreno/freedreno_drmif.h
 ${PLIST.arm}include/freedreno/freedreno_ringbuffer.h
 include/libdrm/amdgpu.h
@@ -36,6 +36,7 @@ include/libdrm/radeon_surface.h
 include/libdrm/savage_drm.h
 include/libdrm/sis_drm.h
 include/libdrm/tegra_drm.h
+include/libdrm/vc4_drm.h
 include/libdrm/via_drm.h
 include/libdrm/vmwgfx_drm.h
 include/xf86drm.h
