@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.683 2016/02/15 11:42:30 jperkin Exp $
+$NetBSD: CHANGES-2016,v 1.684 2016/02/15 11:46:24 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -914,3 +914,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/py-werkzeug to 0.11.4 [kleink 2016-02-15]
 	Updated www/py-werkzeug-docs to 0.11.4 [kleink 2016-02-15]
 	Updated devel/glib to 1.2.10nb11 [jperkin 2016-02-15]
+	Updated x11/gtk to 1.2.10nb15 [jperkin 2016-02-15]
