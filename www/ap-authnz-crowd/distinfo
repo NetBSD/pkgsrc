@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1 2016/02/15 16:34:32 jperkin Exp $
+
+SHA1 (mod_authnz_crowd-2.2.2.tar.gz) = 72678d22e520dd4cb10b3ecc537897a1260bca20
+RMD160 (mod_authnz_crowd-2.2.2.tar.gz) = 22e5053b62a812b44c75af6c5fefbb0694d53ad8
+SHA512 (mod_authnz_crowd-2.2.2.tar.gz) = 9e8c8aaa1b30285f03d10e442feabd3fdc838b10d0358a6fb5bb7c7ba5629ac8073217ead0e5bc581532f3670484b85ff30b1bda08d54cd1928b7065ee90b05a
+Size (mod_authnz_crowd-2.2.2.tar.gz) = 30782 bytes
+SHA1 (patch-configure.ac) = e0b270bd58b9fa7d64160ca18791eedaf3d585b4
+SHA1 (patch-src_Makefile.am) = 001c70912cb56f2b8aa4f2153fda9c66684b08d3
+SHA1 (patch-src_crowd__client.c) = d41cfc2de553c31459a1bd9d14847c222e75587b
+SHA1 (patch-src_mod__authnz__crowd.c) = 044aca7b1ebee0d113efec82814fc5f7dbcc34f3
+SHA1 (patch-src_svn_Makefile.am) = 204b979d8974a6a636baeb89510e3c60e459e40d
+SHA1 (patch-src_svn_mod__authz__svn__crowd.c) = a639496e96e196a9094168f8aef70de427ee25f8
