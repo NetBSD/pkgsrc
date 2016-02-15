@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.686 2016/02/15 23:13:42 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.687 2016/02/15 23:28:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -917,3 +917,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated x11/gtk to 1.2.10nb15 [jperkin 2016-02-15]
 	Added www/ap-authnz-crowd version 2.2.2 [jperkin 2016-02-15]
 	Updated x11/libdrm to 2.4.67 [wiz 2016-02-15]
+	Updated net/php-baikal to 0.3.1 [wiz 2016-02-15]
