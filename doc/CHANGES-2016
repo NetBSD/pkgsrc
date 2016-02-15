@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.684 2016/02/15 11:46:24 jperkin Exp $
+$NetBSD: CHANGES-2016,v 1.685 2016/02/15 16:34:49 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -915,3 +915,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/py-werkzeug-docs to 0.11.4 [kleink 2016-02-15]
 	Updated devel/glib to 1.2.10nb11 [jperkin 2016-02-15]
 	Updated x11/gtk to 1.2.10nb15 [jperkin 2016-02-15]
+	Added www/ap-authnz-crowd version 2.2.2 [jperkin 2016-02-15]
