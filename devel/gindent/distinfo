@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.12 2015/11/03 03:27:28 agc Exp $
+$NetBSD: distinfo,v 1.13 2016/02/15 09:38:10 jperkin Exp $
 
 SHA1 (indent-2.2.10.tar.gz) = 20fa8a7a4af6670c3254c8b87020291c3db37ed1
 RMD160 (indent-2.2.10.tar.gz) = 66164db3f28ddc9726a56fb184795a335aac34b0
 SHA512 (indent-2.2.10.tar.gz) = a90faf1bf855ecc1e0b0f47f4133e4a46be8b2c42bd0aa7f6cf6d764b7883b34b558e3ca443b193b1a747f64cd2653640f1aecbc8a17265c66260f6d6d621e19
 Size (indent-2.2.10.tar.gz) = 702667 bytes
-SHA1 (patch-aa) = 4fec5c93c44b5635f828cba92e5b955379a39fc9
-SHA1 (patch-ab) = 99a3d46d1713042038deeba323ffe8ce37e3ce75
-SHA1 (patch-src_lexi.c) = 5c7270265ca58c6ce63dd11d2f7c84f0a7fc8812
+SHA1 (patch-aa) = c3c8286cfb8152e5168e48f409cab6605faa2bc7
+SHA1 (patch-ab) = edc861a2db0ba16e34c41e9d8984099dedcdc6e7
+SHA1 (patch-src_lexi.c) = 9b8c02c6b77293a55ec534d7758ef39536b9b4ef
