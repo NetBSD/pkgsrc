@@ -1,0 +1,12 @@
+$NetBSD: patch-src_svn_Makefile.am,v 1.1 2016/02/15 16:34:32 jperkin Exp $
+
+Fix automake failures.
+
+--- src/svn/Makefile.am.orig	2013-07-26 05:20:50.000000000 +0000
++++ src/svn/Makefile.am
+@@ -3,4 +3,4 @@ mod_authz_svn_crowd_la_SOURCES = mod_aut
+ mod_authz_svn_crowd_la_LDFLAGS = -module
+ AM_CFLAGS = `apr-1-config --cflags`
+ AM_CPPFLAGS = -I@APACHE_INCLUDE_DIR@ `apr-1-config --cppflags --includes` -I@SVN_DIR@/include/subversion-1
+-CFLAGS=-g -O1   # -O2 causes mysterious crashes
++AM_CFLAGS += -g -O1   # -O2 causes mysterious crashes

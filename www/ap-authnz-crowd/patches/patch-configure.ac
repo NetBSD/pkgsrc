@@ -1,0 +1,66 @@
+$NetBSD: patch-configure.ac,v 1.1 2016/02/15 16:34:32 jperkin Exp $
+
+Fix hardcoded paths and automake failures.
+
+--- configure.ac.orig	2013-07-26 05:20:50.000000000 +0000
++++ configure.ac
+@@ -1,5 +1,6 @@
+ AC_INIT([mod_authnz_crowd], m4_esyscmd([./version-gen]), [support@atlassian.com])
+ AM_INIT_AUTOMAKE([-Wall -Werror foreign])
++AM_PROG_AR
+ AC_PROG_CC
+ AC_PROG_LIBTOOL
+ AC_CONFIG_HEADERS([config.h])
+@@ -16,7 +17,7 @@ AC_CHECK_LIB([curl], [curl_global_init],
+ 
+ AC_CHECK_LIB([xml2], [xmlFree], [CFLAGS+=" `xml2-config --cflags`" LIBS+=" `xml2-config --libs`"], [AC_MSG_ERROR([libxml2 was not found])])
+ 
+-AC_CHECK_FILE([/usr/local/apache2/include/httpd.h], [APACHE_INCLUDE_DIR="/usr/local/apache2/include"], [
++AC_CHECK_FILE([${BUILDLINK_PREFIX_apache}/include/httpd/httpd.h], [APACHE_INCLUDE_DIR="${BUILDLINK_PREFIX_apache}/include/httpd"], [
+     AC_CHECK_FILE([/usr/include/httpd/httpd.h], [APACHE_INCLUDE_DIR="/usr/include/httpd"], [
+         AC_CHECK_FILE([/usr/include/apache2/httpd.h], [APACHE_INCLUDE_DIR="/usr/include/apache2"], [
+             AC_MSG_ERROR([Could not locate Apache include directory])
+@@ -29,14 +30,14 @@ AC_PATH_PROG([HTTPD], [httpd], , [/usr/l
+ APACHE_BIN_DIR=`AS_DIRNAME($HTTPD)`
+ AC_SUBST([APACHE_BIN_DIR])
+ 
+-AC_CHECK_FILE([/usr/local/include/subversion-1/svn_client.h], [SVN_DIR="/usr/local"], [
++AC_CHECK_FILE([${BUILDLINK_PREFIX_subversion}/include/subversion-1/svn_client.h], [SVN_DIR="${BUILDLINK_PREFIX_subversion}"], [
+     AC_CHECK_FILE([/usr/include/subversion-1/svn_client.h], [SVN_DIR="/usr"], [
+         AC_MSG_ERROR([Could not locate Subversion directory])
+     ])
+ ])
+ AC_SUBST([SVN_DIR])
+ 
+-AC_CHECK_FILE([/usr/libexec/apache2/mod_dav.so], [APACHE_MODULES_DIR="/usr/libexec/apache2"], [
++AC_CHECK_FILE([${BUILDLINK_PREFIX_apache}/lib/httpd/mod_dav.so], [APACHE_MODULES_DIR="${BUILDLINK_PREFIX_apache}/lib/httpd"], [
+     AC_CHECK_FILE([/usr/lib64/httpd/modules/mod_dav.so], [APACHE_MODULES_DIR="/usr/lib64/httpd/modules"], [
+         AC_CHECK_FILE([/usr/lib/httpd/modules/mod_dav.so], [APACHE_MODULES_DIR="/usr/lib/httpd/modules"], [
+             AC_CHECK_FILE([/usr/lib/apache2/modules/mod_dav.so], [APACHE_MODULES_DIR="/usr/lib/apache2/modules"], [
+@@ -47,7 +48,7 @@ AC_CHECK_FILE([/usr/libexec/apache2/mod_
+ ])
+ AC_SUBST([APACHE_MODULES_DIR])
+ 
+-AC_CHECK_FILE([/usr/local/apache2/conf/httpd.conf], [HTTPD_CONF="/usr/local/apache2/conf/httpd.conf"], [
++AC_CHECK_FILE([$PKG_SYSCONFDIR/httpd/httpd.conf], [HTTPD_CONF="$PKG_SYSCONFDIR/httpd/httpd.conf"], [
+     AC_CHECK_FILE([/etc/httpd/conf/httpd.conf], [HTTPD_CONF="/etc/httpd/conf/httpd.conf"], [
+         AC_CHECK_FILE([/etc/apache2/httpd.conf], [HTTPD_CONF="/etc/apache2/httpd.conf"], [
+             AC_CHECK_FILE([/etc/apache2/apache2.conf], [HTTPD_CONF="/etc/apache2/apache2.conf"], [
+@@ -58,7 +59,7 @@ AC_CHECK_FILE([/usr/local/apache2/conf/h
+ ])
+ AC_SUBST([HTTPD_CONF])
+ 
+-AC_CHECK_FILE([/usr/local/apache2/bin/apxs], [APXS="/usr/local/apache2/bin/apxs"], [
++AC_CHECK_FILE([$APXS], [APXS="$APXS"], [
+     AC_CHECK_FILE([/usr/sbin/apxs], [APXS="/usr/sbin/apxs"], [
+         AC_CHECK_FILE([/usr/bin/apxs2], [APXS="/usr/bin/apxs2"], [
+             AC_MSG_ERROR([Could not locate Apache apxs binary])
+@@ -67,7 +68,7 @@ AC_CHECK_FILE([/usr/local/apache2/bin/ap
+ ])
+ AC_SUBST([APXS])
+ 
+-AC_CHECK_FILE([/usr/local/apache2/bin/apachectl], [APACHECTL="/usr/local/apache2/bin/apachectl"], [
++AC_CHECK_FILE([${BUILDLINK_PREFIX_apache}/sbin/apachectl], [APACHECTL="${BUILDLINK_PREFIX_apache}/sbin/apachectl"], [
+     AC_CHECK_FILE([/usr/sbin/apache2ctl], [APACHECTL="/usr/sbin/apache2ctl"], [
+         AC_CHECK_FILE([/usr/sbin/apachectl], [APACHECTL="/usr/sbin/apachectl"], [
+             AC_MSG_ERROR([Could not locate Apache apachectl binary])
