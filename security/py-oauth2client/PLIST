@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/11/24 14:43:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/02/15 10:45:40 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -7,6 +7,15 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/oauth2client/__init__.py
 ${PYSITELIB}/oauth2client/__init__.pyc
 ${PYSITELIB}/oauth2client/__init__.pyo
+${PYSITELIB}/oauth2client/_helpers.py
+${PYSITELIB}/oauth2client/_helpers.pyc
+${PYSITELIB}/oauth2client/_helpers.pyo
+${PYSITELIB}/oauth2client/_openssl_crypt.py
+${PYSITELIB}/oauth2client/_openssl_crypt.pyc
+${PYSITELIB}/oauth2client/_openssl_crypt.pyo
+${PYSITELIB}/oauth2client/_pycrypto_crypt.py
+${PYSITELIB}/oauth2client/_pycrypto_crypt.pyc
+${PYSITELIB}/oauth2client/_pycrypto_crypt.pyo
 ${PYSITELIB}/oauth2client/appengine.py
 ${PYSITELIB}/oauth2client/appengine.pyc
 ${PYSITELIB}/oauth2client/appengine.pyo
@@ -19,12 +28,18 @@ ${PYSITELIB}/oauth2client/clientsecrets.pyo
 ${PYSITELIB}/oauth2client/crypt.py
 ${PYSITELIB}/oauth2client/crypt.pyc
 ${PYSITELIB}/oauth2client/crypt.pyo
+${PYSITELIB}/oauth2client/devshell.py
+${PYSITELIB}/oauth2client/devshell.pyc
+${PYSITELIB}/oauth2client/devshell.pyo
 ${PYSITELIB}/oauth2client/django_orm.py
 ${PYSITELIB}/oauth2client/django_orm.pyc
 ${PYSITELIB}/oauth2client/django_orm.pyo
 ${PYSITELIB}/oauth2client/file.py
 ${PYSITELIB}/oauth2client/file.pyc
 ${PYSITELIB}/oauth2client/file.pyo
+${PYSITELIB}/oauth2client/flask_util.py
+${PYSITELIB}/oauth2client/flask_util.pyc
+${PYSITELIB}/oauth2client/flask_util.pyo
 ${PYSITELIB}/oauth2client/gce.py
 ${PYSITELIB}/oauth2client/gce.pyc
 ${PYSITELIB}/oauth2client/gce.pyo
@@ -37,9 +52,6 @@ ${PYSITELIB}/oauth2client/locked_file.pyo
 ${PYSITELIB}/oauth2client/multistore_file.py
 ${PYSITELIB}/oauth2client/multistore_file.pyc
 ${PYSITELIB}/oauth2client/multistore_file.pyo
-${PYSITELIB}/oauth2client/old_run.py
-${PYSITELIB}/oauth2client/old_run.pyc
-${PYSITELIB}/oauth2client/old_run.pyo
 ${PYSITELIB}/oauth2client/service_account.py
 ${PYSITELIB}/oauth2client/service_account.pyc
 ${PYSITELIB}/oauth2client/service_account.pyo
