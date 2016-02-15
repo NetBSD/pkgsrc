@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.1 2016/02/14 14:01:49 leot Exp $
+$NetBSD: distinfo,v 1.2 2016/02/15 03:04:27 leot Exp $
 
-SHA1 (zathura-pdf-mupdf-0.2.9.tar.gz) = 55b47ed2962589eeef88168554aa5bd2f6557ed3
-RMD160 (zathura-pdf-mupdf-0.2.9.tar.gz) = 1a84d28e655bb05eddef857d46fa46f8a4d30456
-SHA512 (zathura-pdf-mupdf-0.2.9.tar.gz) = 09507df8fa568d64667e8456ba64cb94353322140cb37b2412b46cfdf443142b331d13ac3a5939b8635a185e08b44430578a7cf1d075b6be239cab01a0a4b883
-Size (zathura-pdf-mupdf-0.2.9.tar.gz) = 9909 bytes
+SHA1 (zathura-pdf-mupdf-0.3.0.tar.gz) = ae0be41ea7c75b8ddc083fe01f1366673ea9751a
+RMD160 (zathura-pdf-mupdf-0.3.0.tar.gz) = 377e7848a5ea7f43f020e131aacc24c51453bf8f
+SHA512 (zathura-pdf-mupdf-0.3.0.tar.gz) = c83eef453176c6317be338260e311c39e049b8ae1ae719445c6303725b4e993758ed3f3a61f0af31032d09f1f2f03574f862d24e36b27fa38732e0b6c7aa18ea
+Size (zathura-pdf-mupdf-0.3.0.tar.gz) = 9914 bytes
 SHA1 (patch-document.c) = dfef8e98cf6f5fbe65a904c7d53c369775b9f1b1
-SHA1 (patch-render.c) = 9726f68aeaca657cbf9205c786b0e32b42b36949
