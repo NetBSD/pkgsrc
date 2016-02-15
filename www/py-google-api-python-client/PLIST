@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1 2014/11/24 14:45:53 wiz Exp $
-${PYSITELIB}/apiclient/__init__.py
-${PYSITELIB}/apiclient/__init__.pyc
-${PYSITELIB}/apiclient/__init__.pyo
+@comment $NetBSD: PLIST,v 1.2 2016/02/15 10:46:39 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/apiclient/__init__.py
+${PYSITELIB}/apiclient/__init__.pyc
+${PYSITELIB}/apiclient/__init__.pyo
 ${PYSITELIB}/googleapiclient/__init__.py
 ${PYSITELIB}/googleapiclient/__init__.pyc
 ${PYSITELIB}/googleapiclient/__init__.pyo
@@ -16,6 +16,18 @@ ${PYSITELIB}/googleapiclient/channel.pyo
 ${PYSITELIB}/googleapiclient/discovery.py
 ${PYSITELIB}/googleapiclient/discovery.pyc
 ${PYSITELIB}/googleapiclient/discovery.pyo
+${PYSITELIB}/googleapiclient/discovery_cache/__init__.py
+${PYSITELIB}/googleapiclient/discovery_cache/__init__.pyc
+${PYSITELIB}/googleapiclient/discovery_cache/__init__.pyo
+${PYSITELIB}/googleapiclient/discovery_cache/appengine_memcache.py
+${PYSITELIB}/googleapiclient/discovery_cache/appengine_memcache.pyc
+${PYSITELIB}/googleapiclient/discovery_cache/appengine_memcache.pyo
+${PYSITELIB}/googleapiclient/discovery_cache/base.py
+${PYSITELIB}/googleapiclient/discovery_cache/base.pyc
+${PYSITELIB}/googleapiclient/discovery_cache/base.pyo
+${PYSITELIB}/googleapiclient/discovery_cache/file_cache.py
+${PYSITELIB}/googleapiclient/discovery_cache/file_cache.pyc
+${PYSITELIB}/googleapiclient/discovery_cache/file_cache.pyo
 ${PYSITELIB}/googleapiclient/errors.py
 ${PYSITELIB}/googleapiclient/errors.pyc
 ${PYSITELIB}/googleapiclient/errors.pyo
