@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2016/02/01 18:21:25 adam Exp $
+# $NetBSD: Makefile,v 1.33 2016/02/15 09:06:59 jperkin Exp $
 
 .include "../../devel/gettext/Makefile.common"
 
@@ -12,6 +12,7 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		xz:run
 USE_PKGLOCALEDIR=	yes
 CONFIGURE_ARGS+=	--disable-csharp
+CONFIGURE_ARGS+=	--disable-java
 CONFIGURE_ARGS+=	--with-included-libcroco
 CONFIGURE_ARGS+=	--without-git
 CONFIGURE_ARGS+=	--with-xz
