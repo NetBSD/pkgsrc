@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2015/06/12 10:50:42 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2016/02/15 12:45:28 he Exp $
 
 DISTNAME=	ldns-1.6.17
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://www.nlnetlabs.nl/downloads/ldns/
 
@@ -61,5 +61,7 @@ CONFIGURE_ARGS+=	--disable-sha2
 .endif
 CONFIGURE_ARGS+=	--with-ssl=${SSLBASE}
 CONFIGURE_ARGS+=	DOXYGEN=${FALSE}
+
+CONFIGURE_ARGS+=	--with-examples
 
 .include "../../mk/bsd.pkg.mk"
