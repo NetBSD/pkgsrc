@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.8 2013/12/31 16:14:15 jakllsch Exp $
+$NetBSD: patch-ab,v 1.9 2016/02/15 09:38:10 jperkin Exp $
+
+Fix includes.
 
 --- man/texinfo2man.c.orig	2008-03-11 18:50:42.000000000 +0000
 +++ man/texinfo2man.c
