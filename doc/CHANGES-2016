@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.681 2016/02/15 10:45:52 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.682 2016/02/15 11:37:01 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -911,3 +911,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated print/zathura to 0.3.5 [leot 2016-02-15]
 	Updated net/youtube-dl to 20160213 [adam 2016-02-15]
 	Updated security/py-oauth2client to 1.5.2 [wiz 2016-02-15]
+	Updated www/py-werkzeug to 0.11.4 [kleink 2016-02-15]
+	Updated www/py-werkzeug-docs to 0.11.4 [kleink 2016-02-15]
