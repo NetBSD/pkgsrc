@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2016/02/06 09:39:20 tron Exp $
+@comment $NetBSD: PLIST,v 1.14 2016/02/15 06:30:51 adam Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -215,6 +215,9 @@ ${PYSITELIB}/youtube_dl/extractor/canalplus.pyo
 ${PYSITELIB}/youtube_dl/extractor/canvas.py
 ${PYSITELIB}/youtube_dl/extractor/canvas.pyc
 ${PYSITELIB}/youtube_dl/extractor/canvas.pyo
+${PYSITELIB}/youtube_dl/extractor/cbc.py
+${PYSITELIB}/youtube_dl/extractor/cbc.pyc
+${PYSITELIB}/youtube_dl/extractor/cbc.pyo
 ${PYSITELIB}/youtube_dl/extractor/cbs.py
 ${PYSITELIB}/youtube_dl/extractor/cbs.pyc
 ${PYSITELIB}/youtube_dl/extractor/cbs.pyo
@@ -299,6 +302,9 @@ ${PYSITELIB}/youtube_dl/extractor/condenast.pyo
 ${PYSITELIB}/youtube_dl/extractor/cracked.py
 ${PYSITELIB}/youtube_dl/extractor/cracked.pyc
 ${PYSITELIB}/youtube_dl/extractor/cracked.pyo
+${PYSITELIB}/youtube_dl/extractor/crackle.py
+${PYSITELIB}/youtube_dl/extractor/crackle.pyc
+${PYSITELIB}/youtube_dl/extractor/crackle.pyo
 ${PYSITELIB}/youtube_dl/extractor/criterion.py
 ${PYSITELIB}/youtube_dl/extractor/criterion.pyc
 ${PYSITELIB}/youtube_dl/extractor/criterion.pyo
@@ -734,6 +740,9 @@ ${PYSITELIB}/youtube_dl/extractor/khanacademy.pyo
 ${PYSITELIB}/youtube_dl/extractor/kickstarter.py
 ${PYSITELIB}/youtube_dl/extractor/kickstarter.pyc
 ${PYSITELIB}/youtube_dl/extractor/kickstarter.pyo
+${PYSITELIB}/youtube_dl/extractor/konserthusetplay.py
+${PYSITELIB}/youtube_dl/extractor/konserthusetplay.pyc
+${PYSITELIB}/youtube_dl/extractor/konserthusetplay.pyo
 ${PYSITELIB}/youtube_dl/extractor/kontrtube.py
 ${PYSITELIB}/youtube_dl/extractor/kontrtube.pyc
 ${PYSITELIB}/youtube_dl/extractor/kontrtube.pyo
@@ -1064,6 +1073,9 @@ ${PYSITELIB}/youtube_dl/extractor/played.pyo
 ${PYSITELIB}/youtube_dl/extractor/playfm.py
 ${PYSITELIB}/youtube_dl/extractor/playfm.pyc
 ${PYSITELIB}/youtube_dl/extractor/playfm.pyo
+${PYSITELIB}/youtube_dl/extractor/plays.py
+${PYSITELIB}/youtube_dl/extractor/plays.pyc
+${PYSITELIB}/youtube_dl/extractor/plays.pyo
 ${PYSITELIB}/youtube_dl/extractor/playtvak.py
 ${PYSITELIB}/youtube_dl/extractor/playtvak.pyc
 ${PYSITELIB}/youtube_dl/extractor/playtvak.pyo
