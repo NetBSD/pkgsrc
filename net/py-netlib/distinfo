@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.8 2016/01/21 00:15:50 leot Exp $
+$NetBSD: distinfo,v 1.9 2016/02/16 13:52:41 leot Exp $
 
-SHA1 (netlib-0.15.1.tar.gz) = c723ec71eb43b0829937df39c724de73abd95fed
-RMD160 (netlib-0.15.1.tar.gz) = 2f395e464ee931a8a734b2a0c8bc7ad180912f61
-SHA512 (netlib-0.15.1.tar.gz) = 169de515b200b40254b9f352b4a2153127cfacff67a05913f0510bd4b564a00efa7f79e85ea58ef6b70a45fdbb7a40a75d5d2d3e48c3f3222cef1b316b5b85d0
-Size (netlib-0.15.1.tar.gz) = 90878 bytes
-SHA1 (patch-setup.py) = 4575741a6f93da110af372da1dee187993287727
+SHA1 (netlib-0.16.tar.gz) = 78dc5598273513bf30c5f181ede2a02bed2d4967
+RMD160 (netlib-0.16.tar.gz) = 77b0605f59143e6591a7d17e0ecaee88c4beb768
+SHA512 (netlib-0.16.tar.gz) = 7beb7fa8bde6fb994d15af770d8e0e006d1bdeb499f7f0fbff1466ae99212904ff065f7b2257d6576e7c257c52010baf4dea38fc43ac3fd9832e3e5be41c969f
+Size (netlib-0.16.tar.gz) = 87595 bytes
+SHA1 (patch-setup.py) = 6daa82febe9bb8d2818d2815c42e710959e4492e
