@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.714 2016/02/16 14:43:26 taca Exp $
+$NetBSD: CHANGES-2016,v 1.715 2016/02/16 14:46:42 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -947,3 +947,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/p5-Barcode-Code128 to 2.21 [mef 2016-02-16]
 	Updated devel/SOPE to 2.3.8 [taca 2016-02-16]
 	Updated www/SOGo to 2.3.8 [taca 2016-02-16]
+	Updated graphics/p5-Chart to 2.4.10 [mef 2016-02-16]
