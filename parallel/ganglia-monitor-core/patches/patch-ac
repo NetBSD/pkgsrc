@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.5 2013/02/26 11:01:32 joerg Exp $
+$NetBSD: patch-ac,v 1.6 2016/02/16 12:48:18 fhajny Exp $
 
 First chunk: update sysctl name for changes in NetBSD.
 
@@ -12,7 +12,7 @@ also changed proc_run_func somewhat to only count actually running
 processes (having a look at NetBSD's ps(1) implementation) - without the
 change, I got around 30 running processes on an idle machine.
 
---- libmetrics/netbsd/metrics.c.orig	2009-01-28 23:23:20.000000000 +0000
+--- libmetrics/netbsd/metrics.c.orig	2015-07-01 19:49:35.000000000 +0000
 +++ libmetrics/netbsd/metrics.c
 @@ -9,10 +9,15 @@
   *  Tested on NetBSD 2.0.2 (i386)
@@ -42,7 +42,7 @@ change, I got around 30 running processes on an idle machine.
     if (sysctlbyname("machdep.est.frequency.target", &cpu_speed, &len, NULL, 0) == -1)
        val.uint32 = 0;
  #endif
-@@ -559,44 +567,40 @@ proc_total_func ( void )
+@@ -559,49 +567,56 @@ proc_total_func ( void )
  g_val_t
  proc_run_func( void )
  {
@@ -111,16 +111,33 @@ change, I got around 30 running processes on an idle machine.
  
  output:
     return val;
-@@ -1135,36 +1139,41 @@ get_netbw(double *in_bytes, double *out_
+ }
+ 
++/*
++** FIXME - This metric is not valid on NetBSD
++*/
++g_val_t
++cpu_steal_func ( void )
++{
++	static g_val_t val;
++	val.f = 0.0;
++	return val;
++}
++
+ g_val_t
+ mem_free_func ( void )
+ {
+@@ -1135,36 +1150,41 @@ get_netbw(double *in_bytes, double *out_
  
  	next = buf;
  	while (next < lim) {
 +		struct if_msghdr tmp;
  
  		ifm = (struct if_msghdr *)next;
-+		memcpy(&tmp, ifm, sizeof(tmp));
- 		
+-		
 -		if (ifm->ifm_type == RTM_IFINFO) {
++	 	memcpy(&tmp, ifm, sizeof(tmp));
++	
 +		if (tmp.ifm_type == RTM_IFINFO) {
  			sdl = (struct sockaddr_dl *)(ifm + 1);
  		} else {
@@ -132,7 +149,7 @@ change, I got around 30 running processes on an idle machine.
 +			fprintf(stderr, "msglen = %d\n", tmp.ifm_msglen);
  			fprintf(stderr, "buf:%p, next:%p, lim:%p\n", buf, next,
  				lim);
- 			exit (1);
+ 			goto output;
  		}
  
 -		next += ifm->ifm_msglen;
@@ -145,9 +162,9 @@ change, I got around 30 running processes on an idle machine.
  				break;
  
 -			next += nextifm->ifm_msglen;
-+			memcpy(&msglen, &nextifm->ifm_msglen,
-+					sizeof(nextifm->ifm_msglen));
-+			next += msglen;
++                        memcpy(&msglen, &nextifm->ifm_msglen,
++                                        sizeof(nextifm->ifm_msglen));
++                        next += msglen;
  		}
  
 -		if ((ifm->ifm_flags & IFF_LOOPBACK) || 
@@ -161,7 +178,7 @@ change, I got around 30 running processes on an idle machine.
  
  		/* If we don't have a previous value yet, make a slot. */
  		if (index >= indexes) {
-@@ -1187,25 +1196,25 @@ get_netbw(double *in_bytes, double *out_
+@@ -1187,25 +1207,25 @@ get_netbw(double *in_bytes, double *out_
  		 */
  		if (!seen[index]) {
  			seen[index] = 1;
