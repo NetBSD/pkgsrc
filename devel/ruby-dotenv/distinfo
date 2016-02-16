@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 03:29:22 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/02/16 14:55:34 taca Exp $
 
-SHA1 (dotenv-2.0.2.gem) = 18f3d5ed7dfecef4968131672ddc2b8ae4602dff
-RMD160 (dotenv-2.0.2.gem) = c3402e1abd957e9ba545c02bf89860d3a999393c
-SHA512 (dotenv-2.0.2.gem) = 8d2a0db0f298bd8c3f2e39cc58ef6b5b7a6e697195753e79e89d75c91a2b5a3439e73ca23bbd89d9c6f91060c29be3f06c92a43c0537ae22ab8e926df3175c0c
-Size (dotenv-2.0.2.gem) = 10240 bytes
+SHA1 (dotenv-2.1.0.gem) = cf327cf795016bcbea38b67fda961f6711c64f91
+RMD160 (dotenv-2.1.0.gem) = 296ab6d8a4802dbb51c0b0f3d23cc94fc07ca0da
+SHA512 (dotenv-2.1.0.gem) = d34addb9ac9af2b08fc8a70415eefa3ed3f9659878b3e23e714c35f356c148b826616445b80d5232b27b84c7812c6775980cac20217704476f599f829aca2a31
+Size (dotenv-2.1.0.gem) = 10240 bytes
