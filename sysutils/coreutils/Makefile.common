@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2016/02/16 08:51:57 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.14 2016/02/16 11:54:12 jperkin Exp $
 # used by sysutils/coreutils/Makefile
 # used by misc/gnuls/Makefile
 
@@ -43,8 +43,10 @@ CONFIGURE_ENV+=		ac_list_mounted_fs=found
 CONFIGURE_ENV+= 	gl_cv_search_pthread_join=-lpthread
 .endif
 
-.if ${OPSYS} == "Linux"
-CONFIGURE_ENV+=		FORCE_UNSAFE_CONFIGURE=1
+# Various tests rely on GCC's -O2 behaviour (e.g. -D__NO_INLINE__) and
+# without it we run into undefined symbol issues.
+.if ${OPSYS} == "Darwin" && ${PKGSRC_COMPILER} == "gcc"
+CFLAGS+=		-O2
 .endif
 
 # Explicitly disable inotify support whilst it is Linux-specific.
