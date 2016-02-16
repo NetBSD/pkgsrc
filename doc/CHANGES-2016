@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.690 2016/02/16 08:59:20 leot Exp $
+$NetBSD: CHANGES-2016,v 1.691 2016/02/16 12:19:41 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -921,3 +921,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/squid3 to 3.5.14 [taca 2016-02-16]
 	Updated audio/moc to 2.5.0 [leot 2016-02-16]
 	Removed audio/moc-devel successor audio/moc [leot 2016-02-16]
+	Updated databases/lmdb to 0.9.18 [mef 2016-02-16]
