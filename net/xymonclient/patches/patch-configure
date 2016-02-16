@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.1 2011/10/15 23:04:51 spz Exp $
+$NetBSD: patch-configure,v 1.2 2016/02/16 05:58:57 spz Exp $
 
 Make sure the toplevel configure script exits on failure.
 
@@ -8,13 +8,13 @@ Make sure the toplevel configure script exits on failure.
  
  case "$TARGET" in
    "--client")
--	$BASEDIR/configure.client $*
-+	$BASEDIR/configure.client "$@" || exit 1
+-	exec $BASEDIR/configure.client $*
++	exec $BASEDIR/configure.client "$@" || exit 1
  	;;
  
    "--server"|"")
--	$BASEDIR/configure.server $*
-+	$BASEDIR/configure.server "$@" || exit 1
+-	exec $BASEDIR/configure.server $*
++	exec $BASEDIR/configure.server "$@" || exit 1
  	;;
  
    "--help")
