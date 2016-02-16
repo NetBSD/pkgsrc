@@ -1,0 +1,89 @@
+$NetBSD: patch-configure,v 1.1 2016/02/16 12:48:18 fhajny Exp $
+
+- Portability.
+- Make local storage dir consistent.
+- Fix C99 handling on SunOS.
+
+--- configure.orig	2015-07-01 19:49:35.000000000 +0000
++++ configure
+@@ -12844,7 +12844,7 @@ if test "${with_memcached+set}" = set; t
+ fi
+ 
+ 
+-if test x"$memcache" == xyes; then
++if test x"$memcache" = xyes; then
+ 
+ pkg_failed=no
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for DEPS" >&5
+@@ -12948,7 +12948,7 @@ if test "${with_riemann+set}" = set; the
+ fi
+ 
+ 
+-if test x"$with_riemann" == xyes; then
++if test x"$with_riemann" = xyes; then
+ echo
+ echo Checking for Protocol Buffers
+ 
+@@ -13368,7 +13368,7 @@ if test x"$libpcrepath" != x && test x"$
+   echo "Added -I$libpcrepath/include to CFLAGS"
+   echo "Added -L$libpcrepath/${LIB_SUFFIX} to LDFLAGS"
+ fi
+-if test x"$libpcre" == xyes ; then
++if test x"$libpcre" = xyes ; then
+   for ac_header in pcre/pcre.h pcre.h
+ do :
+   as_ac_Header=`$as_echo "ac_cv_header_$ac_header" | $as_tr_sh`
+@@ -15779,7 +15779,7 @@ fi
+ rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
+ 
+ 
+-varstatedir="/var/lib"
++varstatedir="@GANGLIA_VARBASE@"
+ 
+ # Used when static linking requested
+ EXPORT_SYMBOLS="-export-dynamic"
+@@ -15901,11 +15901,7 @@ $as_echo "#define DARWIN 1" >>confdefs.h
+ $as_echo "#define SUPPORT_GEXEC 0" >>confdefs.h
+ 
+ 		CFLAGS="$CFLAGS -D__EXTENSIONS__ -DHAVE_STRERROR"
+-		if test x"$ac_cv_prog_cc_c99" = x -o x"$ac_cv_prog_cc_c99" = xno; then
+-		   CFLAGS="$CFLAGS -D_POSIX_C_SOURCE=199506L"
+-		else
+-		   CFLAGS="$CFLAGS -D_POSIX_C_SOURCE=200112L"
+-		fi
++		CFLAGS="$CFLAGS -D_POSIX_C_SOURCE=200112L"
+ 		if test x"$ac_cv_c_compiler_gnu" != xyes; then
+ 		   LIBS="-lm $LIBS"
+ 		fi
+@@ -15917,7 +15913,6 @@ $as_echo "#define SOLARIS 1" >>confdefs.
+ 
+ $as_echo "#define SUPPORT_GEXEC 0" >>confdefs.h
+ 
+-		varstatedir="/var/db"
+ 		osreldate=`awk '/^\#define[[:space:]]*__FreeBSD_version/ { print $3 }' /usr/include/osreldate.h`
+ 		if test $osreldate -lt 502102; then
+ 		   CFLAGS="-pthread $CFLAGS -D_REENTRANT"
+@@ -15930,7 +15925,6 @@ $as_echo "#define FREEBSD 1" >>confdefs.
+ 
+ $as_echo "#define SUPPORT_GEXEC 0" >>confdefs.h
+ 
+-		varstatedir="/var/db"
+ 
+ $as_echo "#define DRAGONFLYBSD 1" >>confdefs.h
+ 
+@@ -15938,7 +15932,6 @@ $as_echo "#define DRAGONFLYBSD 1" >>conf
+ *netbsd*)
+ $as_echo "#define SUPPORT_GEXEC 0" >>confdefs.h
+ 
+-		varstatedir="/var/db"
+ 
+ $as_echo "#define NETBSD 1" >>confdefs.h
+ 
+@@ -15946,7 +15939,6 @@ $as_echo "#define NETBSD 1" >>confdefs.h
+ *openbsd*)
+ $as_echo "#define SUPPORT_GEXEC 0" >>confdefs.h
+ 
+-		varstatedir="/var/db"
+ 
+ $as_echo "#define OPENBSD 1" >>confdefs.h
+ 

@@ -1,0 +1,15 @@
+$NetBSD: patch-lib_default__conf.h.in,v 1.1 2016/02/16 12:48:18 fhajny Exp $
+
+Default paths.
+
+--- lib/default_conf.h.in.orig	2015-07-01 19:49:35.000000000 +0000
++++ lib/default_conf.h.in
+@@ -393,7 +393,7 @@ collection_group {\n\
+   }\n\
+ }\n\
+ \n\
+-include (\"" SYSCONFDIR "/conf.d/*.conf\")\n\
++include (\"" SYSCONFDIR "/gmond.conf.d/*.conf\")\n\
+ \n\
+ "
+ 
