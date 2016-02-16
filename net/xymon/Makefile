@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2015/11/25 12:52:12 jperkin Exp $
+# $NetBSD: Makefile,v 1.44 2016/02/16 05:58:56 spz Exp $
 #
 
-DISTNAME=		xymon-4.3.17
-PKGREVISION=		3
+DISTNAME=		xymon-4.3.25
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xymon/}
 
