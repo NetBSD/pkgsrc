@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.695 2016/02/16 13:41:28 leot Exp $
+$NetBSD: CHANGES-2016,v 1.696 2016/02/16 13:43:34 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -926,3 +926,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/typo3_62 to 6.2.18 [taca 2016-02-16]
 	Updated www/ganglia-webfrontend to 3.7.1 [fhajny 2016-02-16]
 	Updated devel/py-pyparsing to 2.1.0 [leot 2016-02-16]
+	Updated net/py-hpack to 2.1.0 [leot 2016-02-16]
