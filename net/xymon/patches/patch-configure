@@ -1,20 +1,21 @@
-$NetBSD: patch-configure,v 1.3 2011/10/15 23:04:51 spz Exp $
+$NetBSD: patch-configure,v 1.4 2016/02/16 05:58:56 spz Exp $
 
 Make sure the toplevel configure script exits on failure.
 
---- configure.orig	2011-03-08 17:20:28.000000000 +0000
+--- configure.orig	2014-09-28 09:39:28.000000000 +0000
 +++ configure
 @@ -14,11 +14,11 @@ chmod 755 $BASEDIR/configure* $BASEDIR/b
  
  case "$TARGET" in
    "--client")
--	$BASEDIR/configure.client $*
-+	$BASEDIR/configure.client "$@" || exit 1
+-	exec $BASEDIR/configure.client $*
++	exec $BASEDIR/configure.client "$@" || exit 1
  	;;
  
    "--server"|"")
--	$BASEDIR/configure.server $*
-+	$BASEDIR/configure.server "$@" || exit 1
+-	exec $BASEDIR/configure.server $*
++	exec $BASEDIR/configure.server "$@" || exit 1
  	;;
  
    "--help")
+
