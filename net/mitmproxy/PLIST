@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2015/12/30 15:08:08 leot Exp $
+@comment $NetBSD: PLIST,v 1.6 2016/02/16 13:54:00 leot Exp $
 bin/mitmdump
 bin/mitmproxy
 bin/mitmweb
@@ -133,6 +133,9 @@ ${PYSITELIB}/libmproxy/filt.pyo
 ${PYSITELIB}/libmproxy/flow.py
 ${PYSITELIB}/libmproxy/flow.pyc
 ${PYSITELIB}/libmproxy/flow.pyo
+${PYSITELIB}/libmproxy/flow_export.py
+${PYSITELIB}/libmproxy/flow_export.pyc
+${PYSITELIB}/libmproxy/flow_export.pyo
 ${PYSITELIB}/libmproxy/flow_format_compat.py
 ${PYSITELIB}/libmproxy/flow_format_compat.pyc
 ${PYSITELIB}/libmproxy/flow_format_compat.pyo
@@ -193,6 +196,12 @@ ${PYSITELIB}/libmproxy/protocol/base.pyo
 ${PYSITELIB}/libmproxy/protocol/http.py
 ${PYSITELIB}/libmproxy/protocol/http.pyc
 ${PYSITELIB}/libmproxy/protocol/http.pyo
+${PYSITELIB}/libmproxy/protocol/http1.py
+${PYSITELIB}/libmproxy/protocol/http1.pyc
+${PYSITELIB}/libmproxy/protocol/http1.pyo
+${PYSITELIB}/libmproxy/protocol/http2.py
+${PYSITELIB}/libmproxy/protocol/http2.pyc
+${PYSITELIB}/libmproxy/protocol/http2.pyo
 ${PYSITELIB}/libmproxy/protocol/http_replay.py
 ${PYSITELIB}/libmproxy/protocol/http_replay.pyc
 ${PYSITELIB}/libmproxy/protocol/http_replay.pyo
