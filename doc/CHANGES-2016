@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.725 2016/02/16 15:13:57 taca Exp $
+$NetBSD: CHANGES-2016,v 1.726 2016/02/16 15:16:24 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -958,3 +958,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ruby-minitest to 5.8.4 [taca 2016-02-16]
 	Updated www/php-fpm to 5.5.32nb1 [jperkin 2016-02-16]
 	Updated devel/ruby-nenv to 0.3.0 [taca 2016-02-16]
+	Updated devel/ruby-parseconfig to 1.0.8 [taca 2016-02-16]
