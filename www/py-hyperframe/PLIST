@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2016/02/16 13:47:31 leot Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/hyperframe/__init__.py
+${PYSITELIB}/hyperframe/__init__.pyc
+${PYSITELIB}/hyperframe/__init__.pyo
+${PYSITELIB}/hyperframe/exceptions.py
+${PYSITELIB}/hyperframe/exceptions.pyc
+${PYSITELIB}/hyperframe/exceptions.pyo
+${PYSITELIB}/hyperframe/flags.py
+${PYSITELIB}/hyperframe/flags.pyc
+${PYSITELIB}/hyperframe/flags.pyo
+${PYSITELIB}/hyperframe/frame.py
+${PYSITELIB}/hyperframe/frame.pyc
+${PYSITELIB}/hyperframe/frame.pyo
