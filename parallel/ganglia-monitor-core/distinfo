@@ -1,10 +1,18 @@
-$NetBSD: distinfo,v 1.13 2015/11/02 23:46:12 agc Exp $
+$NetBSD: distinfo,v 1.14 2016/02/16 12:48:18 fhajny Exp $
 
-SHA1 (ganglia-3.1.2.tar.gz) = be5db246eb755d8c450140d1c80afef4f1179fe1
-RMD160 (ganglia-3.1.2.tar.gz) = 1f78cf1019759e12c3c65901fd74ac65dfddf4e3
-SHA512 (ganglia-3.1.2.tar.gz) = 788d6a369c2d5c9186b491659c9d3986fbebf0b34021e3b1d26eaf534d0457c922b33dcca735bd7e4ce302428d95040473d097f9363595c3c4e131272c4da07e
-Size (ganglia-3.1.2.tar.gz) = 1213196 bytes
-SHA1 (patch-aa) = e258e4efb1ae012db51901de87e614cede78812c
-SHA1 (patch-ab) = 260a78711c2c7f1111ce8c4b0d54d2edd60dde08
-SHA1 (patch-ac) = a7d4251eed047cb6ffb89c23d87b0db1dbe7b5f4
+SHA1 (ganglia-3.7.2.tar.gz) = 5ea23da8e5b85da53216dd7c742c8154e7aa576e
+RMD160 (ganglia-3.7.2.tar.gz) = 9b5c48bcf2aa489caea689713dabb12804d9cee2
+SHA512 (ganglia-3.7.2.tar.gz) = a88955e59421a447e5752a9bfe5f599d989a7a5a0141141ab3601d1ab250be4eebbede8bcef8baa151b2f9deaf3f56e30aef8ea709f3cc820a79fa3d3961e0df
+Size (ganglia-3.7.2.tar.gz) = 1302320 bytes
+SHA1 (patch-ac) = 5b9aaa5c8d5cb194e8c467e6e56ff5e235de7c69
+SHA1 (patch-configure) = d8f096263a8b2f04e30d4a053b4636ac5d1cd95f
+SHA1 (patch-gmetad_conf.c.in) = 75aa2d0c5d8af8a2864f7225444f1f263df4a60b
+SHA1 (patch-gmetad_data__thread.c) = 8dedb930e54872dab97d659f7d911a540171dbfd
+SHA1 (patch-gmetad_rrd__helpers.c) = 643c359f461e9616b547b276281bcc9a39a77a28
+SHA1 (patch-gmond_gmond.conf.5) = dfabfee6fb26cd5a384c1baed48fe631b957cf5b
+SHA1 (patch-gmond_modules_conf.d_modpython.conf.in) = 5b0d79efb34dae2f46dd911509759e8d75b4af96
 SHA1 (patch-lib__gm_protocol_dr.c) = 9d17d79bb1a6426a2547c00006819483aff47363
+SHA1 (patch-lib__update_pidfile.c) = a8ed4fbeabf5d46a523c5cd3b891e5752d74187b
+SHA1 (patch-lib_default__conf.h.in) = 70dbcbc39226369c9fb4f59240b8568854ac4e87
+SHA1 (patch-libmetrics__solaris__metrics.c) = 2b6ad945ed7eafa05fe4c24a535b00deba46173d
+SHA1 (patch-libmetrics_freebsd_metrics.c) = acb3485a603c13fd4a9f7d7af621988f777ede6e
