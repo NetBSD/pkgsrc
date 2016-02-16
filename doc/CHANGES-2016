@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.713 2016/02/16 14:42:09 mef Exp $
+$NetBSD: CHANGES-2016,v 1.714 2016/02/16 14:43:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -945,3 +945,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/ruby-do_sqlite3 to 0.10.17 [taca 2016-02-16]
 	Updated databases/ruby-sequel to 4.31.0 [taca 2016-02-16]
 	Updated graphics/p5-Barcode-Code128 to 2.21 [mef 2016-02-16]
+	Updated devel/SOPE to 2.3.8 [taca 2016-02-16]
+	Updated www/SOGo to 2.3.8 [taca 2016-02-16]
