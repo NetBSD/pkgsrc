@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.700 2016/02/16 13:53:00 leot Exp $
+$NetBSD: CHANGES-2016,v 1.701 2016/02/16 13:54:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -931,3 +931,6 @@ Changes to the packages collection and infrastructure in 2016:
 	Added www/py-hyperframe version 3.2.0 [leot 2016-02-16]
 	Added www/py-h2 version 2.1.1 [leot 2016-02-16]
 	Updated net/py-netlib to 0.16 [leot 2016-02-16]
+	Updated databases/sqlite3 to 3.11.0 [adam 2016-02-16]
+	Updated databases/sqlite3-docs to 3.11.0 [adam 2016-02-16]
+	Updated databases/sqlite3-tcl to 3.11.0 [adam 2016-02-16]
