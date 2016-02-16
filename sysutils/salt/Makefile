@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2016/02/09 14:23:04 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2016/02/16 00:00:08 khorben Exp $
 
 DISTNAME=	salt-2015.8.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_PYPI:=s/salt/}
 
@@ -37,7 +37,7 @@ PYSETUPINSTALLARGS+=	--salt-pidfile-dir=${VARBASE}/run
 
 REPLACE_PYTHON=	*.py */*.py */*/*.py
 
-RCD_SCRIPTS+=		salt_master salt_minion
+RCD_SCRIPTS+=		salt_master salt_minion salt_syndic
 SMF_INSTANCES=		master minion
 FILES_SUBST+=		PYTHON=${PYTHONBIN:Q}
 
