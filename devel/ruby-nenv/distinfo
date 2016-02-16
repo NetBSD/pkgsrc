@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 03:29:26 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/02/16 15:13:27 taca Exp $
 
-SHA1 (nenv-0.2.0.gem) = abadad26da4efca39096135b0a3bc864381e78ce
-RMD160 (nenv-0.2.0.gem) = fd6e02fa97c9cae27818e73953e67c58b11d86a5
-SHA512 (nenv-0.2.0.gem) = f95a98fbc8ae5abd3b4d434edd491082d958f002ce369412d85ce1a15302b102a666f73ca80482af9be740dd40df1c3f79b3c9ec78f2a7b4a0f886118774e180
-Size (nenv-0.2.0.gem) = 10240 bytes
+SHA1 (nenv-0.3.0.gem) = db4091f78609a24bba40d71b1ebcfa008032a6c0
+RMD160 (nenv-0.3.0.gem) = 2f2bc60021076f52dd1eef81e37f67ad58b93382
+SHA512 (nenv-0.3.0.gem) = dad9ec13f8122640f2c3bcc66a858a499ee17a8876103c86d3ceb98de2db03dbafb0ddcba7ec243fae78c14c4d69c4b4e2709a847e6dfa85eaf78183d7af61ec
+Size (nenv-0.3.0.gem) = 10240 bytes
