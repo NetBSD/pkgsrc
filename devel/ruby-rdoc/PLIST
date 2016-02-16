@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2016/02/06 10:59:55 taca Exp $
+@comment $NetBSD: PLIST,v 1.12 2016/02/16 14:16:43 taca Exp $
 bin/rdoc
 bin/ri
 ${GEM_HOME}/cache/${GEM_NAME}.gem
@@ -41,6 +41,9 @@ ${GEM_LIBDIR}/lib/rdoc/generator/darkfish.rb
 ${GEM_LIBDIR}/lib/rdoc/generator/json_index.rb
 ${GEM_LIBDIR}/lib/rdoc/generator/markup.rb
 ${GEM_LIBDIR}/lib/rdoc/generator/pot.rb
+${GEM_LIBDIR}/lib/rdoc/generator/pot/message_extractor.rb
+${GEM_LIBDIR}/lib/rdoc/generator/pot/po.rb
+${GEM_LIBDIR}/lib/rdoc/generator/pot/po_entry.rb
 ${GEM_LIBDIR}/lib/rdoc/generator/ri.rb
 ${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/.document
 ${GEM_LIBDIR}/lib/rdoc/generator/template/darkfish/_footer.rhtml
