@@ -1,0 +1,44 @@
+$NetBSD: patch-configure,v 1.3 2016/02/16 03:45:19 dbj Exp $
+
+Remove code that insists wx-config is in a directory named bin
+
+--- configure.orig	2014-12-15 15:10:17.000000000 +0000
++++ configure
+@@ -6466,15 +6466,6 @@ if test "${with_wx+set}" = set; then :
+ 
+ else
+ 
+-		WX_HOME=/usr/local/wx2
+-		if test ! -f "${WX_HOME}/bin/wx-config"
+-		then
+-			WX_HOME=/usr/local
+-			if test ! -f "${WX_HOME}/bin/wx-config"
+-			then
+-				WX_HOME=/usr
+-				if test ! -f "${WX_HOME}/bin/wx-config"
+-				then
+ 		    # Search the path
+ 				    for ac_prog in wx-config
+ do
+@@ -6527,10 +6518,6 @@ done
+ 		    else
+ 					   WX_HOME=`${WX_CONFIG} --prefix`
+ 		    fi
+-				fi
+-			fi
+-		fi
+-		WX_CONFIG=${WX_HOME}/bin/wx-config
+ 
+ fi
+ 
+@@ -6557,9 +6544,8 @@ $as_echo "failed" >&6; }
+ $as_echo "ok" >&6; }
+ 
+ 
+-	if test -n "${WX_HOME}"
++	if test -n "${WX_CONFIG}"
+ 	then
+-		LDFLAGS="$LDFLAGS -L${WX_HOME}/lib"
+ 		WX_OLD_LDFLAGS="$LDFLAGS"
+ 		WX_OLD_CPPFLAGS="$CPPFLAGS"
+ 
