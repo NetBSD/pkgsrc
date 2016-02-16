@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2015/10/04 12:07:04 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2016/02/16 14:52:27 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGES.md
 ${GEM_LIBDIR}/LICENSE.txt
@@ -74,7 +74,6 @@ ${GEM_LIBDIR}/lib/celluloid/task/threaded.rb
 ${GEM_LIBDIR}/lib/celluloid/test.rb
 ${GEM_LIBDIR}/lib/celluloid/thread.rb
 ${GEM_LIBDIR}/lib/celluloid/version.rb
-${GEM_LIBDIR}/spec/celluloid/actor/manager_spec.rb
 ${GEM_LIBDIR}/spec/celluloid/actor/system_spec.rb
 ${GEM_LIBDIR}/spec/celluloid/actor_spec.rb
 ${GEM_LIBDIR}/spec/celluloid/block_spec.rb
@@ -88,6 +87,7 @@ ${GEM_LIBDIR}/spec/celluloid/group/spawner_spec.rb
 ${GEM_LIBDIR}/spec/celluloid/mailbox/evented_spec.rb
 ${GEM_LIBDIR}/spec/celluloid/mailbox_spec.rb
 ${GEM_LIBDIR}/spec/celluloid/misc/leak_spec.rb
+${GEM_LIBDIR}/spec/celluloid/proxy_spec.rb
 ${GEM_LIBDIR}/spec/celluloid/task/fibered_spec.rb
 ${GEM_LIBDIR}/spec/celluloid/task/threaded_spec.rb
 ${GEM_LIBDIR}/spec/celluloid/timer_spec.rb
