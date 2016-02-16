@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.9 2013/06/15 16:08:09 taca Exp $
+$NetBSD: MESSAGE,v 1.10 2016/02/16 10:49:53 wiz Exp $
 
 Please refer to the following file on how to setup your RoundCube
 installation.
@@ -26,5 +26,9 @@ to httpd.conf:
 
 Make sure to enable access_compat_module if you are using Apache 2.3 or
 later.
+
+Make sure
+	${PREFIX}/share/roundcube/temp/
+exists and is writable by the web server user.
 
 ===========================================================================
