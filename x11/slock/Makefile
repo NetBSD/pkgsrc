@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2015/01/09 14:34:54 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2016/02/16 17:47:19 leot Exp $
 
-DISTNAME=		slock-1.2
+DISTNAME=		slock-1.3
 CATEGORIES=		x11
 MASTER_SITES=		http://dl.suckless.org/tools/
 
@@ -11,21 +11,20 @@ LICENSE=		mit
 
 MAKE_JOBS_SAFE=	no
 
-NO_CONFIGURE=		yes
-
 # Adjust config.mk
 SUBST_CLASSES+=		makefile
-SUBST_STAGE.makefile=	pre-build
+SUBST_STAGE.makefile=	pre-configure
 SUBST_MESSAGE.makefile=	Fixing config.mk
 SUBST_FILES.makefile=	config.mk
 SUBST_SED.makefile+=	-e 's,/usr/local,${PREFIX},g'
+SUBST_SED.makefile+=	-e 's,share/man,${PKGMANDIR},g'
 SUBST_SED.makefile+=	-e 's,/usr/X11R6,${X11BASE},'
 SUBST_SED.makefile+=	-e '/^CPPFLAGS/ s,-DHAVE_SHADOW_H,,'
 SUBST_SED.makefile+=	-e 's,^CFLAGS *= ,CFLAGS += ,'
 SUBST_SED.makefile+=	-e 's,^LDFLAGS *= ,LDFLAGS += ,'
 SUBST_SED.makefile+=	-e 's/cc/${CC:Q}/'
 
-INSTALLATION_DIRS=	bin share/doc/slock
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 .include "../../mk/bsd.prefs.mk"
 
