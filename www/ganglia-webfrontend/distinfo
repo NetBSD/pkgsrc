@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.6 2015/11/04 02:46:54 agc Exp $
+$NetBSD: distinfo,v 1.7 2016/02/16 13:05:23 fhajny Exp $
 
-SHA1 (ganglia-3.1.2.tar.gz) = be5db246eb755d8c450140d1c80afef4f1179fe1
-RMD160 (ganglia-3.1.2.tar.gz) = 1f78cf1019759e12c3c65901fd74ac65dfddf4e3
-SHA512 (ganglia-3.1.2.tar.gz) = 788d6a369c2d5c9186b491659c9d3986fbebf0b34021e3b1d26eaf534d0457c922b33dcca735bd7e4ce302428d95040473d097f9363595c3c4e131272c4da07e
-Size (ganglia-3.1.2.tar.gz) = 1213196 bytes
-SHA1 (patch-aa) = 7ccc7f4c807d0808c0cd9b1eb5dc7a24fb6e6897
-SHA1 (patch-ab) = 7b32ee769c7117361b8f81d35f74901a9a018b3d
+SHA1 (ganglia-web-3.7.1.tar.gz) = f7852fed1e3afdfa093c1c12a5db9dc7b7b91028
+RMD160 (ganglia-web-3.7.1.tar.gz) = b0693c44bbdc4b32b095957c1ccf4735b7941119
+SHA512 (ganglia-web-3.7.1.tar.gz) = 5a907a4d35b363713c3b0ba43964c0076e5f85972ba9721c1cf14c164bca2c96327b442e7cb92d11f1d5d94f15b10289cf71b2e3aa122ebcd73153be133c1a64
+Size (ganglia-web-3.7.1.tar.gz) = 854938 bytes
+SHA1 (patch-Makefile) = c246326e81b3df16b3289891e0b6ad37fb8fca55
+SHA1 (patch-conf__default.php.in) = 0d5d9417d20f74bd1b1e3ab4e83738779a19fda1
+SHA1 (patch-eval__conf.php) = ce40cbee4c9867f86a67009074d0d46308dcb561
