@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.736 2016/02/16 16:17:52 taca Exp $
+$NetBSD: CHANGES-2016,v 1.737 2016/02/16 16:19:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -969,3 +969,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ruby-simplecov to 0.11.2 [taca 2016-02-16]
 	Updated devel/ruby-test-unit to 3.1.7 [taca 2016-02-16]
 	Updated devel/ruby-tins to 1.8.2 [taca 2016-02-16]
+	Updated devel/ruby-sexp-processor to 4.6.1 [taca 2016-02-16]
