@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2015/11/03 01:56:30 agc Exp $
+$NetBSD: distinfo,v 1.13 2016/02/16 14:21:45 taca Exp $
 
-SHA1 (arel-6.0.3.gem) = ade532ea27f09748d7d6ac8778b15d4438860675
-RMD160 (arel-6.0.3.gem) = 2ea7cd33fcb75e11f360799895f2b308f6a453a4
-SHA512 (arel-6.0.3.gem) = abe0ba49438584681ea4a0ac0ab4bfa4e5fbb17a776e0d0845645fd479aa28f34ad7f653acdbf846a53ee3540bf7bf42cf631f8fc21571d5c36f68c1bbb74ff2
-Size (arel-6.0.3.gem) = 30720 bytes
+SHA1 (arel-7.0.0.gem) = 44e606426869f055c81c991cf29796c09a6b0eea
+RMD160 (arel-7.0.0.gem) = 9873f9ff3bf6b30aa3e1b59c7d17943e6b627c2d
+SHA512 (arel-7.0.0.gem) = dc226b0bb0c1cb0023897de8c8ec3de1657d5a47d78d7a841d8183b18df87bee0c56a3c18004f66f3d914acc1ede6f6a7bce998db64bcf1bac5e14240ddccaf1
+Size (arel-7.0.0.gem) = 31744 bytes
