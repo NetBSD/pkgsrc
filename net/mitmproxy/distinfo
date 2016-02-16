@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2016/02/11 11:07:58 leot Exp $
+$NetBSD: distinfo,v 1.8 2016/02/16 13:54:00 leot Exp $
 
-SHA1 (mitmproxy-0.15.tar.gz) = c26793c8ac957f8a4d75073ca22edc4ebdaf158e
-RMD160 (mitmproxy-0.15.tar.gz) = de16080adb8d218c21d62577afb9bcb14e265bd1
-SHA512 (mitmproxy-0.15.tar.gz) = 3130e82965fd12379ddc2ca0369900a668a6bf68b122781fc8e84079d2ebad0d3e3d7b553b397100cf40872f33ce0014edebed5b056602c30df51c9084014ce7
-Size (mitmproxy-0.15.tar.gz) = 1503247 bytes
-SHA1 (patch-setup.py) = 957ab39809084e7a1b1f0e1d63f14785d71f1a4a
+SHA1 (mitmproxy-0.16.tar.gz) = ca625a9daf65545c81039e91dd2bee367fced862
+RMD160 (mitmproxy-0.16.tar.gz) = 6fd3c16c4b2d78b746c03331639de477aa1383a6
+SHA512 (mitmproxy-0.16.tar.gz) = ee25190d23f3a9f5926d670b8af1dcf03e7aba89a52d909563e0803f25fe9bce334a51011119b23ea1fdaa19181b02a84448a0a96f571b0d93a45477f58650ab
+Size (mitmproxy-0.16.tar.gz) = 26439489 bytes
+SHA1 (patch-setup.py) = 490c81bc89c9bbb243927e5d5db5761bb897d0c6
