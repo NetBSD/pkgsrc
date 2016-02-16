@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.704 2016/02/16 14:17:36 taca Exp $
+$NetBSD: CHANGES-2016,v 1.705 2016/02/16 14:19:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -936,3 +936,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/sqlite3-docs to 3.11.0 [adam 2016-02-16]
 	Updated databases/sqlite3-tcl to 3.11.0 [adam 2016-02-16]
 	Updated devel/ruby-rdoc to 4.2.2 [taca 2016-02-16]
+	Updated audio/ruby-mp3info to 0.8.9 [taca 2016-02-16]
