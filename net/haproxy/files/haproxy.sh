@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: haproxy.sh,v 1.2 2014/04/27 01:28:01 rodent Exp $
+# $NetBSD: haproxy.sh,v 1.3 2016/02/16 21:59:45 morr Exp $
 #
 
 # PROVIDE: haproxy
@@ -16,6 +16,7 @@ required_files="${conf_file}"
 command_args="-f ${conf_file}"
 extra_commands="configtest"
 configtest_cmd="haproxy_configtest"
+haproxy_fdlimit=${haproxy_fdlimit-"1024"}
 
 haproxy_configtest()
 {
@@ -25,6 +26,18 @@ haproxy_configtest()
 	fi
 	${command} -c -f ${conf_file}
 }
+
+# A default limit of 64 (at least on NetBSD) may be too low for many people
+SOFT_FDLIMIT=`ulimit -S -n`
+HARD_FDLIMIT=`ulimit -H -n`
+
+if [ ${haproxy_fdlimit} -gt ${SOFT_FDLIMIT} ]; then
+  if [ ${haproxy_fdlimit} -le ${HARD_FDLIMIT} ]; then
+    ulimit -S -n ${haproxy_fdlimit}
+  else
+    ulimit -S -n ${HARD_FDLIMIT}
+  fi
+fi
 
 load_rc_config $name
 run_rc_command "$1"
