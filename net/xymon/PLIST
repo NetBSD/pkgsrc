@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 2014/03/11 14:05:12 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.7 2016/02/16 05:58:56 spz Exp $
 libexec/xymon/ackinfo.cgi
 libexec/xymon/acknowledge.cgi
+libexec/xymon/acknowledgements.cgi
 libexec/xymon/appfeed.cgi
 libexec/xymon/bb
 libexec/xymon/bbcmd
@@ -9,6 +10,7 @@ libexec/xymon/bbhostgrep
 libexec/xymon/bbhostshow
 libexec/xymon/beastat
 libexec/xymon/boilerplate.cgi
+libexec/xymon/cgi-bin/acknowledgements.sh
 libexec/xymon/cgi-bin/appfeed-critical.sh
 libexec/xymon/cgi-bin/appfeed.sh
 libexec/xymon/cgi-bin/certreport.sh
@@ -36,9 +38,12 @@ libexec/xymon/cgi-bin/svcstatus.sh
 libexec/xymon/cgi-bin/topchanges.sh
 libexec/xymon/cgi-secure/ackinfo.sh
 libexec/xymon/cgi-secure/acknowledge.sh
+libexec/xymon/cgi-secure/chpasswd.sh
 libexec/xymon/cgi-secure/criticaleditor.sh
 libexec/xymon/cgi-secure/enadis.sh
 libexec/xymon/cgi-secure/useradm.sh
+libexec/xymon/cgiwrap
+libexec/xymon/chpasswd.cgi
 libexec/xymon/combostatus
 libexec/xymon/confreport.cgi
 libexec/xymon/convertnk
@@ -199,6 +204,7 @@ share/examples/xymon/www/gifs/favicon-purple.ico
 share/examples/xymon/www/gifs/favicon-red.ico
 share/examples/xymon/www/gifs/favicon-unknown.ico
 share/examples/xymon/www/gifs/favicon-yellow.ico
+share/examples/xymon/www/gifs/green-ack.gif
 share/examples/xymon/www/gifs/green-recent.gif
 share/examples/xymon/www/gifs/green.gif
 share/examples/xymon/www/gifs/purple-ack.gif
@@ -330,6 +336,12 @@ share/examples/xymon/xymonserver.cfg
 share/xymon/web/acknowledge_footer
 share/xymon/web/acknowledge_form
 share/xymon/web/acknowledge_header
+share/xymon/web/acknowledgements_footer
+share/xymon/web/acknowledgements_form
+share/xymon/web/acknowledgements_header
+share/xymon/web/chpasswd_footer
+share/xymon/web/chpasswd_form
+share/xymon/web/chpasswd_header
 share/xymon/web/columndoc_footer
 share/xymon/web/columndoc_header
 share/xymon/web/confreport_back
@@ -408,10 +420,10 @@ share/xymon/web/stdnormal_header
 share/xymon/web/topchanges_footer
 share/xymon/web/topchanges_form
 share/xymon/web/topchanges_header
+share/xymon/web/trends_footer
 share/xymon/web/trends_form
+share/xymon/web/trends_header
 share/xymon/web/useradm_footer
 share/xymon/web/useradm_form
 share/xymon/web/useradm_header
 share/xymon/web/zoom.js
-@pkgdir share/xymon/xymonhome
-@pkgdir etc/xymon
