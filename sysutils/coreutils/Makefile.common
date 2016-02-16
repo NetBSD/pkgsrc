@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2016/01/31 09:20:50 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.13 2016/02/16 08:51:57 jperkin Exp $
 # used by sysutils/coreutils/Makefile
 # used by misc/gnuls/Makefile
 
@@ -47,7 +47,7 @@ CONFIGURE_ENV+= 	gl_cv_search_pthread_join=-lpthread
 CONFIGURE_ENV+=		FORCE_UNSAFE_CONFIGURE=1
 .endif
 
-# Explicitly disable inotify support whilst it is Linux-specific.
+# Explicitly disable inotify support whilst it is Linux-specific.
 .if ${OPSYS} == "SunOS"
 CONFIGURE_ENV+=		ac_cv_func_inotify_init=no
 .endif
