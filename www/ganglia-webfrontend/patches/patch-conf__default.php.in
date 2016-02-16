@@ -1,0 +1,35 @@
+$NetBSD: patch-conf__default.php.in,v 1.1 2016/02/16 13:05:23 fhajny Exp $
+
+Assert proper paths.
+
+--- conf_default.php.in.orig	2015-10-01 15:47:41.000000000 +0000
++++ conf_default.php.in
+@@ -11,6 +11,7 @@
+ #
+ $conf['gweb_root'] = dirname(__FILE__);
+ $conf['gweb_confdir'] = "@vargwebstatedir@";
++$conf['gweb_sysconfdir'] = "@etcdir@";
+ 
+ include_once $conf['gweb_root'] . "/version.php";
+ 
+@@ -42,16 +43,16 @@ $conf['dwoo_compiled_dir'] = "${conf['gw
+ $conf['dwoo_cache_dir'] = "${conf['gweb_confdir']}/dwoo/cache";
+ 
+ # Where to store web-based configuration
+-$conf['views_dir'] = $conf['gweb_confdir'] . '/conf';
+-$conf['conf_dir'] = $conf['gweb_confdir'] . '/conf';
++$conf['views_dir'] = $conf['gweb_sysconfdir'];
++$conf['conf_dir'] = $conf['gweb_sysconfdir'];
+ 
+ # Where to find filter configuration files, if not set filtering
+ # will be disabled
+-#$conf['filter_dir'] = "${conf['gweb_confdir']}/filters";
++#$conf['filter_dir'] = "${conf['gweb_sysconfdir']}/filters";
+ 
+ # Leave this alone if rrdtool is installed in $conf['gmetad_root'],
+ # otherwise, change it if it is installed elsewhere (like /usr/bin)
+-$conf['rrdtool'] = "/usr/bin/rrdtool";
++$conf['rrdtool'] = "@PREFIX@/bin/rrdtool";
+ 
+ # Render graphs with rrdtool's --slope-mode option
+ $conf['rrdtool_slope_mode'] = true;
