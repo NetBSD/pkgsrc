@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.706 2016/02/16 14:20:55 taca Exp $
+$NetBSD: CHANGES-2016,v 1.707 2016/02/16 14:22:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -938,3 +938,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ruby-rdoc to 4.2.2 [taca 2016-02-16]
 	Updated audio/ruby-mp3info to 0.8.9 [taca 2016-02-16]
 	Updated converters/ruby-unf_ext to 0.0.7.2 [taca 2016-02-16]
+	Updated databases/ruby-arel to 7.0.0 [taca 2016-02-16]
