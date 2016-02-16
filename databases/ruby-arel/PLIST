@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2015/02/17 14:22:57 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2016/02/16 14:21:45 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/History.txt
 ${GEM_LIBDIR}/MIT-LICENSE.txt
@@ -22,6 +22,7 @@ ${GEM_LIBDIR}/lib/arel/nodes/and.rb
 ${GEM_LIBDIR}/lib/arel/nodes/ascending.rb
 ${GEM_LIBDIR}/lib/arel/nodes/binary.rb
 ${GEM_LIBDIR}/lib/arel/nodes/bind_param.rb
+${GEM_LIBDIR}/lib/arel/nodes/casted.rb
 ${GEM_LIBDIR}/lib/arel/nodes/count.rb
 ${GEM_LIBDIR}/lib/arel/nodes/delete_statement.rb
 ${GEM_LIBDIR}/lib/arel/nodes/descending.rb
@@ -41,6 +42,7 @@ ${GEM_LIBDIR}/lib/arel/nodes/named_function.rb
 ${GEM_LIBDIR}/lib/arel/nodes/node.rb
 ${GEM_LIBDIR}/lib/arel/nodes/outer_join.rb
 ${GEM_LIBDIR}/lib/arel/nodes/over.rb
+${GEM_LIBDIR}/lib/arel/nodes/regexp.rb
 ${GEM_LIBDIR}/lib/arel/nodes/right_outer_join.rb
 ${GEM_LIBDIR}/lib/arel/nodes/select_core.rb
 ${GEM_LIBDIR}/lib/arel/nodes/select_statement.rb
@@ -71,6 +73,7 @@ ${GEM_LIBDIR}/lib/arel/visitors/informix.rb
 ${GEM_LIBDIR}/lib/arel/visitors/mssql.rb
 ${GEM_LIBDIR}/lib/arel/visitors/mysql.rb
 ${GEM_LIBDIR}/lib/arel/visitors/oracle.rb
+${GEM_LIBDIR}/lib/arel/visitors/oracle12.rb
 ${GEM_LIBDIR}/lib/arel/visitors/postgresql.rb
 ${GEM_LIBDIR}/lib/arel/visitors/reduce.rb
 ${GEM_LIBDIR}/lib/arel/visitors/sqlite.rb
