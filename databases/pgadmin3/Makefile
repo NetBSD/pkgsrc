@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2016/02/16 01:07:22 dbj Exp $
+# $NetBSD: Makefile,v 1.51 2016/02/16 03:45:18 dbj Exp $
 
 DISTNAME=	pgadmin3-1.20.0
 CATEGORIES=	databases
@@ -17,8 +17,6 @@ REPLACE_SH=		pgadmin/ver_svn.sh
 
 .include "options.mk"
 
-CONFIGURE_ARGS+=	--with-wx=${BUILDLINK_PREFIX.wxGTK30}
-CONFIGURE_ARGS+=	--with-wx-version=3.0
 CONFIGURE_ARGS+=	--with-libxml2=${BUILDLINK_PREFIX.libxml2}
 CONFIGURE_ARGS+=	--with-libxslt=${BUILDLINK_PREFIX.libxslt}
 
