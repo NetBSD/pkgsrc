@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.720 2016/02/16 15:03:17 taca Exp $
+$NetBSD: CHANGES-2016,v 1.721 2016/02/16 15:05:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -953,3 +953,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ruby-dotenv to 2.1.0 [taca 2016-02-16]
 	Updated devel/ruby-eventmachine to 1.0.9.1 [taca 2016-02-16]
 	Updated devel/ruby-flexmock to 2.0.4 [taca 2016-02-16]
+	Updated devel/ruby-gettext to 3.2.1 [taca 2016-02-16]
