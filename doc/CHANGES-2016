@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.688 2016/02/16 06:50:52 taca Exp $
+$NetBSD: CHANGES-2016,v 1.689 2016/02/16 08:46:32 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -919,3 +919,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated x11/libdrm to 2.4.67 [wiz 2016-02-15]
 	Updated net/php-baikal to 0.3.1 [wiz 2016-02-15]
 	Updated www/squid3 to 3.5.14 [taca 2016-02-16]
+	Updated audio/moc to 2.5.0 [leot 2016-02-16]
