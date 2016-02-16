@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2016/01/19 04:19:15 dbj Exp $
+# $NetBSD: Makefile,v 1.13 2016/02/16 03:40:44 dbj Exp $
 
 VERSION=	3.0.2
-PKGREVISION=	3
+PKGREVISION=	4
 DISTNAME=	wxWidgets-${VERSION}
 PKGNAME=	wxGTK30-${VERSION}
 CATEGORIES=	x11
@@ -85,9 +85,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/docs/changes.txt ${DESTDIR}${PREFIX}/${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/docs/readme.txt ${DESTDIR}${PREFIX}/${DOCDIR}
 	# Create symlinks for now.  Eventually we may want to use ALTERNATIVES
-	${LN} -sf ../libexec/wx-3.0/wxrc ${DESTDIR}${PREFIX}/bin/wxrc
 	${LN} -sf ../libexec/wx-3.0/wxrc-3.0 ${DESTDIR}${PREFIX}/bin/wxrc-3.0
-	${LN} -sf ../libexec/wx-3.0/wx-config ${DESTDIR}${PREFIX}/bin/wx-config
 	${LN} -sf ../libexec/wx-3.0/wx-config ${DESTDIR}${PREFIX}/bin/wx-config-3.0
 
 .include "../../graphics/MesaLib/buildlink3.mk"
