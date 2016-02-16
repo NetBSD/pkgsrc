@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.19 2015/11/03 21:34:17 agc Exp $
+$NetBSD: distinfo,v 1.20 2016/02/16 20:17:41 drochner Exp $
 
 SHA1 (python/Imaging-1.1.7.tar.gz) = 76c37504251171fda8da8e63ecb8bc42a69a5c81
 RMD160 (python/Imaging-1.1.7.tar.gz) = 9af570fe100e250a4860314341fe3e6d695d7fde
@@ -9,6 +9,7 @@ SHA1 (patch-PIL_IcnsImagePlugin.py) = 04d5ff3c666413178071eea2512162d6954bfc01
 SHA1 (patch-PIL_Image.py) = 871994b3c8823c90ae23e6248762e403192e33fc
 SHA1 (patch-PIL_IptcImagePlugin.py) = bb809394b8c6f6e5b79aa1c90f429c3362e812e3
 SHA1 (patch-PIL_JpegImagePlugin.py) = d4fd6d5d60ea011def2e42460d7faa2e0f47b65e
+SHA1 (patch-PcdDecode) = 75457d449e359c25dfe4c8b7ff017b8ca6b1d2ff
 SHA1 (patch-_imagingft.c) = b935ce5ebdd57061ace324f7b53055113782f89c
 SHA1 (patch-ab) = f4b850da1ba15843b2d8b124c2ca8dfd17163c26
 SHA1 (patch-ac) = 2ad2a988c7fdddb34812959ddfd60442282a48ea

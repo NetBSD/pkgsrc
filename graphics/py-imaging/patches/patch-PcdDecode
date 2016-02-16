@@ -1,0 +1,24 @@
+$NetBSD: patch-PcdDecode,v 1.1 2016/02/16 20:17:42 drochner Exp $
+
+https://github.com/python-pillow/Pillow/pull/1706
+
+--- libImaging/PcdDecode.c.orig	2016-02-16 20:03:07.000000000 +0000
++++ libImaging/PcdDecode.c
+@@ -47,7 +47,7 @@ ImagingPcdDecode(Imaging im, ImagingCode
+ 	    out[0] = ptr[x];
+ 	    out[1] = ptr[(x+4*state->xsize)/2];
+ 	    out[2] = ptr[(x+5*state->xsize)/2];
+-	    out += 4;
++	    out += 3;
+ 	}
+ 
+ 	state->shuffle((UINT8*) im->image[state->y],
+@@ -62,7 +62,7 @@ ImagingPcdDecode(Imaging im, ImagingCode
+ 	    out[0] = ptr[x+state->xsize];
+ 	    out[1] = ptr[(x+4*state->xsize)/2];
+ 	    out[2] = ptr[(x+5*state->xsize)/2];
+-	    out += 4;
++	    out += 3;
+ 	}
+ 
+ 	state->shuffle((UINT8*) im->image[state->y],
