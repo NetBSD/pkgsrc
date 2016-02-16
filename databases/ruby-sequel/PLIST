@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2016/01/06 15:21:02 taca Exp $
+@comment $NetBSD: PLIST,v 1.39 2016/02/16 14:31:58 taca Exp $
 bin/sequel${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -119,6 +119,7 @@ ${GEM_LIBDIR}/doc/release_notes/4.28.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.29.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.3.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.30.0.txt
+${GEM_LIBDIR}/doc/release_notes/4.31.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.4.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.5.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.6.0.txt
@@ -548,11 +549,17 @@ ${GEM_LIBDIR}/spec/files/convert_to_timestamp_migrations/002_create_nodes.rb
 ${GEM_LIBDIR}/spec/files/convert_to_timestamp_migrations/003_3_create_users.rb
 ${GEM_LIBDIR}/spec/files/convert_to_timestamp_migrations/1273253850_create_artists.rb
 ${GEM_LIBDIR}/spec/files/convert_to_timestamp_migrations/1273253852_create_albums.rb
+${GEM_LIBDIR}/spec/files/double_migration/001_create_sessions.rb
+${GEM_LIBDIR}/spec/files/double_migration/002_create_nodes.rb
+${GEM_LIBDIR}/spec/files/double_migration/003_3_create_users.rb
 ${GEM_LIBDIR}/spec/files/duplicate_integer_migrations/001_create_alt_advanced.rb
 ${GEM_LIBDIR}/spec/files/duplicate_integer_migrations/001_create_alt_basic.rb
 ${GEM_LIBDIR}/spec/files/duplicate_timestamped_migrations/1273253849_create_sessions.rb
 ${GEM_LIBDIR}/spec/files/duplicate_timestamped_migrations/1273253853_create_nodes.rb
 ${GEM_LIBDIR}/spec/files/duplicate_timestamped_migrations/1273253853_create_users.rb
+${GEM_LIBDIR}/spec/files/empty_migration/001_create_sessions.rb
+${GEM_LIBDIR}/spec/files/empty_migration/002_create_nodes.rb
+${GEM_LIBDIR}/spec/files/empty_migration/003_3_create_users.rb
 ${GEM_LIBDIR}/spec/files/integer_migrations/001_create_sessions.rb
 ${GEM_LIBDIR}/spec/files/integer_migrations/002_create_nodes.rb
 ${GEM_LIBDIR}/spec/files/integer_migrations/003_3_create_users.rb
