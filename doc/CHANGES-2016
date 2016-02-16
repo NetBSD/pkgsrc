@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.718 2016/02/16 14:55:59 taca Exp $
+$NetBSD: CHANGES-2016,v 1.719 2016/02/16 14:57:33 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -951,3 +951,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ruby-backports to 3.6.8 [taca 2016-02-16]
 	Updated devel/ruby-celluloid to 0.17.3 [taca 2016-02-16]
 	Updated devel/ruby-dotenv to 2.1.0 [taca 2016-02-16]
+	Updated devel/ruby-eventmachine to 1.0.9.1 [taca 2016-02-16]
