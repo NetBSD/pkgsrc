@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.728 2016/02/16 15:26:03 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.729 2016/02/16 15:26:42 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -961,3 +961,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ruby-parseconfig to 1.0.8 [taca 2016-02-16]
 	Updated devel/ruby-power_assert to 0.2.7 [taca 2016-02-16]
 	Updated devel/libbson to 1.3.3 [fhajny 2016-02-16]
+	Updated databases/mongo-c-driver to 1.3.3 [fhajny 2016-02-16]
