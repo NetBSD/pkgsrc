@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.730 2016/02/16 15:57:39 taca Exp $
+$NetBSD: CHANGES-2016,v 1.731 2016/02/16 16:00:12 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -963,3 +963,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/libbson to 1.3.3 [fhajny 2016-02-16]
 	Updated databases/mongo-c-driver to 1.3.3 [fhajny 2016-02-16]
 	Updated devel/ruby-parser to 3.7.3 [taca 2016-02-16]
+	Updated devel/ruby-rspec-core to 3.4.2 [taca 2016-02-16]
