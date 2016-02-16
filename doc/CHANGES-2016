@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.710 2016/02/16 14:30:11 taca Exp $
+$NetBSD: CHANGES-2016,v 1.711 2016/02/16 14:31:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -942,3 +942,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/ruby-data_objects to 0.10.17 [taca 2016-02-16]
 	Updated databases/ruby-do_mysql to 0.10.17 [taca 2016-02-16]
 	Updated databases/ruby-do_postgres to 0.10.17 [taca 2016-02-16]
+	Updated databases/ruby-do_sqlite3 to 0.10.17 [taca 2016-02-16]
