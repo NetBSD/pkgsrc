@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2015/09/13 13:57:25 taca Exp $
+# $NetBSD: Makefile,v 1.2 2016/02/16 14:55:34 taca Exp $
 
-DISTNAME=	dotenv-2.0.2
+DISTNAME=	dotenv-2.1.0
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
