@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/29 14:39:25 taca Exp $
+$NetBSD: distinfo,v 1.6 2016/02/16 15:20:40 taca Exp $
 
-SHA1 (power_assert-0.2.6.gem) = 7fdc06c8b9a5c9e0342ae2b0303a5b1b846f97d9
-RMD160 (power_assert-0.2.6.gem) = 89b36a18bfdeeb9e824862ed6527cafb93609d4c
-SHA512 (power_assert-0.2.6.gem) = 75d5ee443d00da12e0f103bd9a53eb84837978dd2d6b84cb149bc4ba3a912268a8b0272fa617356f4eab88dcd2e7a65ac5e305935ab2c5750745e7d4ceda3ec2
-Size (power_assert-0.2.6.gem) = 13312 bytes
+SHA1 (power_assert-0.2.7.gem) = 13dcf2cab9c78e0c01a7b92020a19905fdc0b7c4
+RMD160 (power_assert-0.2.7.gem) = 985f2bdb8a8cf06247ff80276928b669a8656d92
+SHA512 (power_assert-0.2.7.gem) = 8d673a10b8b9939c15ad84a7a66cc447a51dcb348c7dc316f45e0865952ad5ebd4d043f7a90c02cfe6f7b41cb66a3230e42ab5d57757657ae5f879e03ecf4310
+Size (power_assert-0.2.7.gem) = 13312 bytes
