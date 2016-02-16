@@ -1,0 +1,32 @@
+$NetBSD: patch-libinterp_Makefile.in,v 1.1 2016/02/16 04:21:40 dbj Exp $
+
+install .oct loadable modules with INSTALL_LIB to avoid stripping them
+
+--- libinterp/Makefile.in.orig	2015-05-26 16:21:46.000000000 +0000
++++ libinterp/Makefile.in
+@@ -2009,6 +2009,7 @@ INCLUDE_NEXT = @INCLUDE_NEXT@
+ INCLUDE_NEXT_AS_FIRST_DIRECTIVE = @INCLUDE_NEXT_AS_FIRST_DIRECTIVE@
+ INSTALL = @INSTALL@
+ INSTALL_DATA = @INSTALL_DATA@
++INSTALL_LIB = @INSTALL_LIB@
+ INSTALL_PROGRAM = @INSTALL_PROGRAM@
+ INSTALL_SCRIPT = @INSTALL_SCRIPT@
+ INSTALL_STRIP_PROGRAM = @INSTALL_STRIP_PROGRAM@
+@@ -8760,7 +8761,7 @@ corefcn/oct-tex-parser.yy: corefcn/oct-t
+ 	$(AM_V_GEN)$(call subst-bison-api-decls,octave_tex_)
+ 
+ @AMCOND_ENABLE_DYNAMIC_LINKING_TRUE@%.oct : %.la
+-@AMCOND_ENABLE_DYNAMIC_LINKING_TRUE@	$(AM_V_GEN)$(INSTALL_PROGRAM) dldfcn/.libs/$(shell $(SED) -n -e "s/dlname='\([^']*\)'/\1/p" < $<) $@
++@AMCOND_ENABLE_DYNAMIC_LINKING_TRUE@	$(AM_V_GEN)$(INSTALL_LIB) dldfcn/.libs/$(shell $(SED) -n -e "s/dlname='\([^']*\)'/\1/p" < $<) $@
+ dldfcn/__delaunayn__.df: CPPFLAGS += $(QHULL_CPPFLAGS)
+ dldfcn/__eigs__.df: CPPFLAGS += $(ARPACK_CPPFLAGS) $(SPARSE_XCPPFLAGS)
+ dldfcn/__fltk_uigetfile__.df: CPPFLAGS += $(FLTK_CPPFLAGS) $(FT2_CPPFLAGS)
+@@ -8868,7 +8869,7 @@ uninstall-local: uninstall-oct uninstall
+ @AMCOND_ENABLE_DYNAMIC_LINKING_TRUE@	  f=`echo $$ltlib | $(SED) 's,.*/,,'`; \
+ @AMCOND_ENABLE_DYNAMIC_LINKING_TRUE@	  dl=`$(SED) -n -e "s/dlname='\([^']*\)'/\1/p" < $$f`; \
+ @AMCOND_ENABLE_DYNAMIC_LINKING_TRUE@	  if [ -n "$$dl" ]; then \
+-@AMCOND_ENABLE_DYNAMIC_LINKING_TRUE@	    $(INSTALL_PROGRAM) $$dl $(DESTDIR)$(octfiledir)/`echo $$f | $(SED) 's,^lib,,; s,\.la$$,.oct,'`; \
++@AMCOND_ENABLE_DYNAMIC_LINKING_TRUE@	    $(INSTALL_LIB) $$dl $(DESTDIR)$(octfiledir)/`echo $$f | $(SED) 's,^lib,,; s,\.la$$,.oct,'`; \
+ @AMCOND_ENABLE_DYNAMIC_LINKING_TRUE@	  else \
+ @AMCOND_ENABLE_DYNAMIC_LINKING_TRUE@	    echo "error: dlname is empty in $$ltlib!"; \
+ @AMCOND_ENABLE_DYNAMIC_LINKING_TRUE@	    exit 1; \
