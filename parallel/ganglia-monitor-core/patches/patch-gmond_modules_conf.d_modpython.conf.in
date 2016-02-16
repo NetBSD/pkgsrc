@@ -1,0 +1,17 @@
+$NetBSD: patch-gmond_modules_conf.d_modpython.conf.in,v 1.1 2016/02/16 12:48:18 fhajny Exp $
+
+Default paths.
+
+--- gmond/modules/conf.d/modpython.conf.in.orig	2015-07-01 19:49:35.000000000 +0000
++++ gmond/modules/conf.d/modpython.conf.in
+@@ -9,8 +9,8 @@ modules {
+   module {
+     name = "python_module"
+     path = "modpython.so"
+-    params = "@moduledir@/python_modules"
++    params = "@moduledir@"
+   }
+ }
+ 
+-include ("@sysconfdir@/conf.d/*.pyconf")
++include ("@sysconfdir@/gmond.conf.d/*.pyconf")
