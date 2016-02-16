@@ -1,8 +1,8 @@
-$NetBSD: patch-libgnu_string.in.h,v 1.1 2011/12/24 23:46:02 asau Exp $
+$NetBSD: patch-libgnu_string.in.h,v 1.2 2016/02/16 04:21:40 dbj Exp $
 
---- libgnu/string.in.h.orig	2011-08-04 03:59:53.000000000 +0000
+--- libgnu/string.in.h.orig	2015-05-23 14:36:17.000000000 +0000
 +++ libgnu/string.in.h
-@@ -187,6 +187,12 @@ _GL_WARN_ON_USE (mempcpy, "mempcpy is un
+@@ -184,6 +184,12 @@ _GL_WARN_ON_USE (mempcpy, "mempcpy is un
  #endif
  
  /* Search backwards through a block for a byte (specified as an int).  */
@@ -15,7 +15,7 @@ $NetBSD: patch-libgnu_string.in.h,v 1.1 2011/12/24 23:46:02 asau Exp $
  #if @GNULIB_MEMRCHR@
  # if ! @HAVE_DECL_MEMRCHR@
  _GL_FUNCDECL_SYS (memrchr, void *, (void const *, int, size_t)
-@@ -213,6 +219,7 @@ _GL_WARN_ON_USE (memrchr, "memrchr is un
+@@ -210,6 +216,7 @@ _GL_WARN_ON_USE (memrchr, "memrchr is un
                   "use gnulib module memrchr for portability");
  # endif
  #endif
