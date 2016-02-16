@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 21:34:12 agc Exp $
+$NetBSD: distinfo,v 1.7 2016/02/16 14:45:57 mef Exp $
 
-SHA1 (Chart-2.4.5.tar.gz) = c0c92d760a0a0b377ade5b7e6661f70164388e8a
-RMD160 (Chart-2.4.5.tar.gz) = 8cc29c6bc221531b7121d0eb16dde5f17e78093a
-SHA512 (Chart-2.4.5.tar.gz) = dcac59971ee3959c6c18fc068a30bb58e80fd276720cbcac96ce36aaeeb37e4668d706c6b004839d402cc2f7e43afa928f4c946846bd1237c20f6e3e6d537c71
-Size (Chart-2.4.5.tar.gz) = 1478273 bytes
+SHA1 (Chart-2.4.10.tar.gz) = fb3633dcabfa07eabc335bdfc9ea84970d11fe4f
+RMD160 (Chart-2.4.10.tar.gz) = cd78772b1698d0c263cc50238d7013b424c33147
+SHA512 (Chart-2.4.10.tar.gz) = e8327c46e0cbcea0ed8f723b7b369f4b694c0d7050d3fab35371e0717938292b5bacd3e367ed87e272dc258db020c378690405f93d23ba0ed546dc29dd59e37d
+Size (Chart-2.4.10.tar.gz) = 1698207 bytes
