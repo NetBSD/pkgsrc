@@ -1,0 +1,21 @@
+$NetBSD: patch-gmond_gmond.conf.5,v 1.1 2016/02/16 12:48:18 fhajny Exp $
+
+Default paths.
+
+--- gmond/gmond.conf.5.orig	2015-07-01 19:49:35.000000000 +0000
++++ gmond/gmond.conf.5
+@@ -718,12 +718,12 @@ to be garbled.)
+ This directive allows the user to include additional configuration files
+ rather than having to add all gmond configuration directives to the
+ gmond.conf file.  The following example includes any file with the extension
+-of .conf contained in the directory conf.d as if the contents of the included 
++of .conf contained in the directory gmond.conf.d as if the contents of the included 
+ configuration files were part of the original gmond.conf file. This allows 
+ the user to modularize their configuration file.  One usage example might 
+ be to load individual metric modules by including module specific .conf files.
+ .PP
+-include ('/etc/ganglia/conf.d/*.conf')
++include ('/etc/ganglia/gmond.conf.d/*.conf')
+ .SH "ACCESS CONTROL"
+ .IX Header "ACCESS CONTROL"
+ The \fBudp_recv_channel\fR and \fBtcp_accept_channel\fR directives
