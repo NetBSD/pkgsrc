@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2015/10/07 10:15:12 fhajny Exp $
+# $NetBSD: Makefile,v 1.5 2016/02/16 12:16:28 mef Exp $
 
-DISTNAME=	LMDB-0.9.16
+DISTNAME=	LMDB-0.9.18
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=LMDB/}
