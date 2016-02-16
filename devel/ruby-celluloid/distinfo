@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 03:29:21 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/02/16 14:52:27 taca Exp $
 
-SHA1 (celluloid-0.17.2.gem) = 23bb425254be72689d6679da85e18fef80c905e9
-RMD160 (celluloid-0.17.2.gem) = 712dd6590c03711fd62f52d44dd5e43f342f12a3
-SHA512 (celluloid-0.17.2.gem) = 9203cadbcae2b1d5f7e197e9aa682d0077e007ab9d2140ed4d65657c3d63e27382f0c53dff3de6dc4fb6afec592b3a093b9aaa53c27a69cafc093c713ffde771
-Size (celluloid-0.17.2.gem) = 61440 bytes
+SHA1 (celluloid-0.17.3.gem) = bca83104beee5600b014108270a5d25218da2a91
+RMD160 (celluloid-0.17.3.gem) = 07041fbd4d109c419feff0c709274d6b0af46885
+SHA512 (celluloid-0.17.3.gem) = bb5005452ef7a2da1fb6b6515a6ad9df992dfd043caa605d1282a24b874c1f0798da0d19ee00f434486f9ef2c9467b1d6d2cadaa7883db98b885eeb842f1b94c
+Size (celluloid-0.17.3.gem) = 61952 bytes
