@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST,v 1.7 2016/01/19 04:19:15 dbj Exp $
-bin/wx-config
+@comment $NetBSD: PLIST,v 1.8 2016/02/16 03:40:44 dbj Exp $
 bin/wx-config-3.0
-bin/wxrc
 bin/wxrc-3.0
 include/wx-3.0/wx/aboutdlg.h
 include/wx-3.0/wx/accel.h
