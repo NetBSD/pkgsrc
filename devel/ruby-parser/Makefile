@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2015/12/12 04:10:02 taca Exp $
+# $NetBSD: Makefile,v 1.22 2016/02/16 15:57:00 taca Exp $
 
-DISTNAME=	ruby_parser-3.7.2
+DISTNAME=	ruby_parser-3.7.3
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/ruby_//}
-PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
