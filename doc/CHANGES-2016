@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.693 2016/02/16 13:00:40 taca Exp $
+$NetBSD: CHANGES-2016,v 1.694 2016/02/16 13:05:54 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -924,3 +924,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/lmdb to 0.9.18 [mef 2016-02-16]
 	Updated parallel/ganglia-monitor-core to 3.7.2 [fhajny 2016-02-16]
 	Updated www/typo3_62 to 6.2.18 [taca 2016-02-16]
+	Updated www/ganglia-webfrontend to 3.7.1 [fhajny 2016-02-16]
