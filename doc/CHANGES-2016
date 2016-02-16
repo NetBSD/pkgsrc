@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.697 2016/02/16 13:45:24 leot Exp $
+$NetBSD: CHANGES-2016,v 1.698 2016/02/16 13:48:30 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -928,3 +928,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-pyparsing to 2.1.0 [leot 2016-02-16]
 	Updated net/py-hpack to 2.1.0 [leot 2016-02-16]
 	Updated security/py-certifi to 2015.11.20.1 [leot 2016-02-16]
+	Added www/py-hyperframe version 3.2.0 [leot 2016-02-16]
