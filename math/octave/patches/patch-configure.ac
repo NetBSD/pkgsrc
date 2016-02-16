@@ -1,9 +1,11 @@
-$NetBSD: patch-configure.ac,v 1.1 2015/04/23 06:50:41 dbj Exp $
+$NetBSD: patch-configure.ac,v 1.2 2016/02/16 04:21:40 dbj Exp $
 
---- configure.ac.orig	2013-02-21 20:19:23.000000000 +0000
+install .oct loadable modules with INSTALL_LIB to avoid stripping them
+
+--- configure.ac.orig	2015-05-26 16:16:39.000000000 +0000
 +++ configure.ac
-@@ -1927,8 +1927,10 @@ OCTAVE_PROG_BISON
- AC_PROG_LN_S
+@@ -149,8 +149,10 @@ AC_PROG_LN_S
+ AC_PROG_MKDIR_P
  
  AC_PROG_INSTALL
 -INSTALL_SCRIPT='${INSTALL}'
