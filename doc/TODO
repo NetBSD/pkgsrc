@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15464 2016/02/16 09:53:02 taca Exp $
+$NetBSD: TODO,v 1.15465 2016/02/16 13:05:54 fhajny Exp $
 
 Suggested new packages
 ======================
@@ -719,7 +719,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gallery3-3.0.2
 	o gama-1.16
 	o ganglia-3.7.1
-	o ganglia-webfrontend-3.6.2
 	o gap-4r4p9
 	o gated-3.6
 	o gbrainy-2.25
