@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.529 2016/02/08 01:54:33 markd Exp $
+# $NetBSD: Makefile,v 1.530 2016/02/16 08:54:42 leot Exp $
 #
 
 COMMENT=	Audio tools
@@ -299,7 +299,6 @@ SUBDIR+=	milkytracker
 SUBDIR+=	mixer.app
 SUBDIR+=	mkcdtoc
 SUBDIR+=	moc
-SUBDIR+=	moc-devel
 SUBDIR+=	moodbar
 SUBDIR+=	moss
 SUBDIR+=	mp32ogg
