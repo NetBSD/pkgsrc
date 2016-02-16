@@ -1,22 +1,37 @@
-# $NetBSD: options.mk,v 1.5 2008/05/24 23:05:27 tnn Exp $
+# $NetBSD: options.mk,v 1.6 2016/02/16 08:46:01 leot Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.moc
-PKG_SUPPORTED_OPTIONS=	sndfile flac vorbis speex curl samplerate
+PKG_SUPPORTED_OPTIONS=	sndfile flac vorbis speex curl samplerate jack
 PKG_SUGGESTED_OPTIONS=	sndfile flac vorbis curl
 
 .include "../../mk/bsd.options.mk"
 
 PLIST_VARS+=		flac sndfile speex vorbis
 
+.if !empty(PKG_OPTIONS:Mjack)
+CONFIGURE_ARGS+=	--with-jack
+###
+### Resampling support is usually required with jack.
+###
+.  include "../../audio/jack/buildlink3.mk"
+.  if empty(PKG_OPTIONS:Msamplerate)
+PKG_OPTIONS+=		samplerate
+.  endif
+.else
+CONFIGURE_ARGS+=	--without-jack
+.endif
+
 .if !empty(PKG_OPTIONS:Msamplerate)
-PKG_OPTIONS+=		sndfile
 CONFIGURE_ARGS+=	--with-samplerate
+.  if empty(PKG_OPTIONS:Msndfile)
+PKG_OPTIONS+=		sndfile
+.  endif
 .  include "../../audio/libsamplerate/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-samplerate
 .endif
 
-.if !empty(PKG_OPTIONS:Msndfile) || defined(PKG_OPTIONS:Msamplerate)
+.if !empty(PKG_OPTIONS:Msndfile)
 PLIST.sndfile=		yes
 CONFIGURE_ARGS+=	--with-sndfile
 .  include "../../audio/libsndfile/buildlink3.mk"

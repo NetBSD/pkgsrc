@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2015/08/18 07:31:02 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2016/02/16 08:46:01 leot Exp $
 
-DISTNAME=		moc-2.4.4
-PKGREVISION=		3
+DISTNAME=		moc-2.5.0
 CATEGORIES=		audio
 MASTER_SITES=		http://ftp.daper.net/pub/soft/moc/stable/
 EXTRACT_SUFX=		.tar.bz2
@@ -9,17 +8,14 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		peter.schuller@infidyne.com
 HOMEPAGE=		http://moc.daper.net/
 COMMENT=		Curses based console audio player
-
-CONFLICTS=		moc-devel-[0-9]*
+LICENSE=		gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
-USE_NCURSES=		yes
 USE_TOOLS+=		pkg-config
-
-# We require ncurses because with curses arrow key navigation is buggy
-CONFIGURE_ARGS+=	--with-ncurses
+# XXX: Only needed to regen configure script
+#USE_TOOLS+=		autoconf automake
 
 SUBST_CLASSES+=		oss
 SUBST_STAGE.oss=	pre-configure
@@ -27,21 +23,27 @@ SUBST_FILES.oss=	config.example options.c
 SUBST_SED.oss=		-e s,/dev/dsp,${DEVOSSAUDIO},g
 SUBST_MESSAGE.oss=	Fixing hardcoded audio device.
 
-.include "options.mk"
-###
-### This target is [currently] for regenerating configure to add the
-### sched_get_priority_max check of librt.
-###
-#USE_TOOLS+=		autoconf automake
+BUILDLINK_TRANSFORM+=	l:db:db4
+
+LDFLAGS.SunOS+=		-lsocket
+
+# ${PREFIX}/bin/mocp contains path to pkg-config in work/.tools/.
+# It is harmless.
+CHECK_WRKREF_SKIP=	bin/mocp
+
+# XXX: This target is [currently] for regenerating configure to add the
+# XXX: sched_get_priority_max check of librt.
 #pre-configure:
 #	cd ${WRKSRC} && autoreconf -v -i
 
-LIBS.SunOS+=	-lsocket
+.include "options.mk"
 
 .include "../../audio/libid3tag/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
+.include "../../databases/db4/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../devel/libltdl/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

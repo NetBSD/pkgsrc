@@ -1,12 +1,13 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:32:18 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2016/02/16 08:46:01 leot Exp $
 bin/mocp
 ${PLIST.flac}lib/moc/decoder_plugins/libflac_decoder.la
 lib/moc/decoder_plugins/libmp3_decoder.la
-${PLIST.vorbis}lib/moc/decoder_plugins/libvorbis_decoder.la
-${PLIST.sndfile}lib/moc/decoder_plugins/libsndfile_formats_decoder.la
+${PLIST.sndfile}lib/moc/decoder_plugins/libsndfile_decoder.la
 ${PLIST.speex}lib/moc/decoder_plugins/libspeex_decoder.la
+${PLIST.vorbis}lib/moc/decoder_plugins/libvorbis_decoder.la
 man/man1/mocp.1
 share/doc/moc/README
+share/doc/moc/README_equalizer
 share/doc/moc/THANKS
 share/doc/moc/config.example
 share/doc/moc/keymap.example
