@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.715 2016/02/16 14:46:42 mef Exp $
+$NetBSD: CHANGES-2016,v 1.716 2016/02/16 14:48:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -948,3 +948,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/SOPE to 2.3.8 [taca 2016-02-16]
 	Updated www/SOGo to 2.3.8 [taca 2016-02-16]
 	Updated graphics/p5-Chart to 2.4.10 [mef 2016-02-16]
+	Updated devel/ruby-backports to 3.6.8 [taca 2016-02-16]
