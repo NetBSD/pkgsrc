@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2015/06/01 12:54:54 taca Exp $
+# $NetBSD: Makefile,v 1.13 2016/02/16 14:28:23 taca Exp $
 
-DISTNAME=	do_mysql-0.10.16
+DISTNAME=	do_mysql-0.10.17
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
