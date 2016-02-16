@@ -1,9 +1,9 @@
-$NetBSD: patch-fseeko-fpos_t.c,v 1.1 2012/03/23 22:32:59 christos Exp $
+$NetBSD: patch-fseeko-fpos_t.c,v 1.2 2016/02/16 04:21:40 dbj Exp $
 
---- libgnu/fseeko.c.orig	2011-08-09 22:10:48.000000000 -0400
-+++ libgnu/fseeko.c	2012-03-23 18:24:47.000000000 -0400
-@@ -25,6 +25,9 @@
- /* Get off_t and lseek.  */
+--- libgnu/fseeko.c.orig	2015-05-23 14:36:16.000000000 +0000
++++ libgnu/fseeko.c
+@@ -22,6 +22,9 @@
+ /* Get off_t, lseek, _POSIX_VERSION.  */
  #include <unistd.h>
  
 +/* mem* */
@@ -12,7 +12,7 @@ $NetBSD: patch-fseeko-fpos_t.c,v 1.1 2012/03/23 22:32:59 christos Exp $
  #include "stdio-impl.h"
  
  int
-@@ -115,19 +118,12 @@
+@@ -132,19 +135,12 @@ fseeko (FILE *fp, off_t offset, int when
        /* fp_->_offset is typed as an integer.  */
        fp_->_offset = pos;
  # else
