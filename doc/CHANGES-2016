@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.740 2016/02/17 03:33:33 mef Exp $
+$NetBSD: CHANGES-2016,v 1.741 2016/02/17 08:50:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -973,3 +973,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated x11/slock to 1.3 [leot 2016-02-16]
 	Updated net/syncthing to 0.12.19 [abs 2016-02-16]
 	Updated graphics/p5-GD-SecurityImage to 1.73 [mef 2016-02-17]
+	Updated net/p5-Net-Domain-TLD to 1.74 [wiz 2016-02-17]
