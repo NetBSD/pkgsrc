@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 21:34:12 agc Exp $
+$NetBSD: distinfo,v 1.6 2016/02/17 03:32:50 mef Exp $
 
-SHA1 (GD-SecurityImage-1.72.tar.gz) = 346dc154c6cd336888bc3075e05be4ea4403a5b5
-RMD160 (GD-SecurityImage-1.72.tar.gz) = 53de774e9d5ab96ff9a743e52ed3cc2163f4fea6
-SHA512 (GD-SecurityImage-1.72.tar.gz) = e2e8f4540ecbb1279ee8f25666a63870745d0136c427c2a68b8397abed0910d5ea7f644d605e2e9d944418c0a3bf43aa67e0649c617529757d7e390793d96271
-Size (GD-SecurityImage-1.72.tar.gz) = 88727 bytes
+SHA1 (GD-SecurityImage-1.73.tar.gz) = bf979a78352735a2044f838c8cd2292a00699027
+RMD160 (GD-SecurityImage-1.73.tar.gz) = 20a1db00b110f2db34f19932b1e7792e8e74c2ae
+SHA512 (GD-SecurityImage-1.73.tar.gz) = 7255c7d0745f4912103777fda6dd1d96563dc6e7c8454c5e0bd61009ac190224f8c58c8c4b7ffd3dbbb896fa5875d51234a3e0922872f6ca9398de0cf0002490
+Size (GD-SecurityImage-1.73.tar.gz) = 88513 bytes
