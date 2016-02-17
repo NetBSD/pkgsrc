@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/06/05 21:04:36 mrg Exp $
+# $NetBSD: Makefile,v 1.4 2016/02/17 04:52:25 dbj Exp $
 
 DISTNAME=	lilv-0.20.0
 PKGREVISION=	1
@@ -21,6 +21,14 @@ CONFIGURE_ENV+=		LV2_PATH=${BUILDLINK_PREFIX.lv2}/lib/lv2
 EGDIR=			share/examples/lilv
 CONF_FILES=		${EGDIR}/lilv ${PKG_SYSCONFDIR}/bash_completion.d/lilv
 INSTALLATION_DIRS+=	${PKG_SYSCONFDIR}/bash_completion.d ${EGDIR}
+
+.include "../../mk/bsd.prefs.mk"
+
+PLIST_VARS+= lv2bench
+.if ${OPSYS} != "Darwin"
+# Darwin doesn't have CLOCK_GETTIME so it doesn't compile this
+PLIST.lv2bench=	yes
+.endif
 
 .include "options.mk"
 
