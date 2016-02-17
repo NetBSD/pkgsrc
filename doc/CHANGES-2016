@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.748 2016/02/17 14:58:50 taca Exp $
+$NetBSD: CHANGES-2016,v 1.749 2016/02/17 15:03:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -982,3 +982,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Path-Class to 0.36 [wen 2016-02-17]
 	Updated devel/p5-Moose to 2.1605 [wen 2016-02-17]
 	Updated time/ruby-tzinfo-data to 1.2016.1 [taca 2016-02-17]
+	Updated graphics/ruby-mini-magick to 4.4.0 [taca 2016-02-17]
