@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2015/04/20 03:21:58 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/02/17 04:52:25 dbj Exp $
 bin/lilv-bench
-bin/lv2bench
+${PLIST.lv2bench}bin/lv2bench
 bin/lv2info
 bin/lv2ls
 include/lilv-0/lilv/lilv.h
