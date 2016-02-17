@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2015/04/13 23:12:43 rodent Exp $
+# $NetBSD: Makefile,v 1.4 2016/02/17 11:42:47 he Exp $
 
-DISTNAME=	junos-eznc-1.0.1
+DISTNAME=	junos-eznc-1.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	https://pypi.python.org/packages/source/j/junos-eznc/
