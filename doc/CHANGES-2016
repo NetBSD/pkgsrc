@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.754 2016/02/17 20:32:44 he Exp $
+$NetBSD: CHANGES-2016,v 1.755 2016/02/17 21:59:20 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -988,3 +988,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ocaml-lwt to 2.5.1nb1 [jaapb 2016-02-17]
 	Updated devel/js_of_ocaml to 2.7nb1 [jaapb 2016-02-17]
 	Updated sysutils/ansible to 1.9.4nb1 [he 2016-02-17]
+	Updated devel/nspr to 4.12 [ryoon 2016-02-17]
