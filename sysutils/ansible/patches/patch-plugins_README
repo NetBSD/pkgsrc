@@ -1,0 +1,15 @@
+$NetBSD: patch-plugins_README,v 1.1 2016/02/17 20:31:45 he Exp $
+
+Fix hardcoded paths to be replaced with SUBST framework.
+
+--- plugins/README.md.orig	2015-08-19 12:07:33.000000000 +0000
++++ plugins/README.md
+@@ -25,7 +25,7 @@ Inventory plugins allow you to store you
+ you like.  Examples include discovering inventory from EC2 or pulling it from
+ Cobbler.  These could also be used to interface with LDAP or database.
+ 
+-chmod +x an inventory plugin and either name it /etc/ansible/hosts or use ansible
++chmod +x an inventory plugin and either name it @PKG_SYSCONFDIR@/ansible/hosts or use ansible
+ with -i to designate the path to the plugin.
+ 
+ contributions welcome

@@ -1,0 +1,33 @@
+$NetBSD: patch-docs_man_man1_ansible-galaxy,v 1.1 2016/02/17 20:31:45 he Exp $
+
+Fix hardcoded paths to be replaced with SUBST framework.
+
+--- docs/man/man1/ansible-galaxy.1.orig	2015-06-25 20:39:08.000000000 +0000
++++ docs/man/man1/ansible-galaxy.1
+@@ -109,7 +109,7 @@ The path to the directory containing you
+ \fBroles_path\fR
+ configured in your
+ \fBansible\&.cfg\fR
+-file (/etc/ansible/roles if not configured)
++file (@PKG_SYSCONFDIR@/ansible/roles if not configured)
+ .RE
+ .PP
+ \fB\-r\fR \fIROLE_FILE\fR, \fB\-\-role\-file=\fR\fIROLE_FILE\fR
+@@ -130,7 +130,7 @@ The path to the directory containing you
+ \fBroles_path\fR
+ configured in your
+ \fBansible\&.cfg\fR
+-file (/etc/ansible/roles if not configured)
++file (@PKG_SYSCONFDIR@/ansible/roles if not configured)
+ .RE
+ .SH "INIT"
+ .sp
+@@ -168,7 +168,7 @@ The path to the directory containing you
+ \fBroles_path\fR
+ configured in your
+ \fBansible\&.cfg\fR
+-file (/etc/ansible/roles if not configured)
++file (@PKG_SYSCONFDIR@/ansible/roles if not configured)
+ .RE
+ .SH "AUTHOR"
+ .sp
