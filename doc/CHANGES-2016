@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.746 2016/02/17 14:05:20 wen Exp $
+$NetBSD: CHANGES-2016,v 1.747 2016/02/17 14:24:57 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -980,3 +980,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/py-ncclient to 0.4.6 [he 2016-02-17]
 	Updated devel/p5-version to 0.9913 [wen 2016-02-17]
 	Updated devel/p5-Path-Class to 0.36 [wen 2016-02-17]
+	Updated devel/p5-Moose to 2.1605 [wen 2016-02-17]
