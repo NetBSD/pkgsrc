@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/04 00:35:20 agc Exp $
+$NetBSD: distinfo,v 1.4 2016/02/17 08:50:16 wiz Exp $
 
-SHA1 (Net-Domain-TLD-1.73.tar.gz) = 44503ca02341f3ecf7f17a377525474c7301d08c
-RMD160 (Net-Domain-TLD-1.73.tar.gz) = 4cc95b3bc9c1493724dc44e7f93d758aed8c988b
-SHA512 (Net-Domain-TLD-1.73.tar.gz) = eaebc600edfc8bb3a1eed42689c630f5e1790fdb49a6848f36e230dce05035257caf448cbc63833b1d2119362f867d18cbec4b3a7ceac31bc5d757e1e278a513
-Size (Net-Domain-TLD-1.73.tar.gz) = 29105 bytes
+SHA1 (Net-Domain-TLD-1.74.tar.gz) = 7e55af1123bf5051f51b0651bbb1df8f4d3f9a69
+RMD160 (Net-Domain-TLD-1.74.tar.gz) = 529019bcd678b0cf744ee43d5ea1a0a61e384bc7
+SHA512 (Net-Domain-TLD-1.74.tar.gz) = 40e9e4776b078c525e886e6f7c5151aee44ce9187bb348128221927c8c92ae72318328d420a3626c0b5a1c05a742e4fefe8ca1d2eb4fac6a2e74c65ebc1c4507
+Size (Net-Domain-TLD-1.74.tar.gz) = 36300 bytes
