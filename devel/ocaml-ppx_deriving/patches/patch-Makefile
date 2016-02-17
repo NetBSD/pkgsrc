@@ -1,0 +1,19 @@
+$NetBSD: patch-Makefile,v 1.1 2016/02/17 16:44:44 jaapb Exp $
+
+Do not remove package before installing and use DESTDIR
+--- Makefile.orig	2016-02-17 05:38:04.000000000 +0000
++++ Makefile
+@@ -49,11 +49,11 @@ release:
+ 	rm -rf $(NAME_VERSION)
+ 
+ install:
+-	ocamlfind remove ppx_deriving
++#	ocamlfind remove ppx_deriving
+ 	grep -E '^[[:space:]]+' ppx_deriving.install | \
+ 		awk '{ print $$1 }' | \
+ 		sed -e 's:"?*::g'  | \
+ 		xargs ocamlfind install ppx_deriving
+-	mv `ocamlfind query ppx_deriving`/ppx_deriving_main.native `ocamlfind query ppx_deriving`/ppx_deriving$(EXE)
++	mv ${DESTDIR}${PREFIX}/${OCAML_SITELIBDIR}/ppx_deriving/ppx_deriving_main.native ${DESTDIR}${PREFIX}/${OCAML_SITELIBDIR}/ppx_deriving/ppx_deriving$(EXE)
+ 
+ .PHONY: gh-pages release
