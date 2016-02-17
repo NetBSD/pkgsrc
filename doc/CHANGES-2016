@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.750 2016/02/17 16:32:54 jperkin Exp $
+$NetBSD: CHANGES-2016,v 1.751 2016/02/17 16:45:01 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -984,3 +984,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated time/ruby-tzinfo-data to 1.2016.1 [taca 2016-02-17]
 	Updated graphics/ruby-mini-magick to 4.4.0 [taca 2016-02-17]
 	Updated www/ap-authnz-crowd to 2.2.2nb1 [jperkin 2016-02-17]
+	Added devel/ocaml-ppx_deriving version 3.1 [jaapb 2016-02-17]
