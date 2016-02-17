@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2015/11/11 16:12:10 leot Exp $
+# $NetBSD: Makefile,v 1.16 2016/02/17 09:53:50 leot Exp $
 #
 
 DISTNAME=	dwm-6.1
@@ -10,18 +10,20 @@ HOMEPAGE=	http://dwm.suckless.org/
 COMMENT=	Dynamic window manager
 LICENSE=	mit
 
-NO_CONFIGURE=	yes
 USE_LANGUAGES=	c99
+
+CPPFLAGS+=	-D_XOPEN_SOURCE=600
 
 # Adjust config.mk
 SUBST_CLASSES+=		makefile
-SUBST_STAGE.makefile=	pre-patch
+SUBST_STAGE.makefile=	pre-configure
 SUBST_MESSAGE.makefile=	Fixing config.mk
 SUBST_FILES.makefile=	config.mk
 SUBST_SED.makefile=	-e 's,/usr/local,${PREFIX},g'
 SUBST_SED.makefile+=	-e 's,share/man,${PKGMANDIR},g'
 SUBST_SED.makefile+=	-e 's,/usr/X11R6,${X11BASE},'
 SUBST_SED.makefile+=	-e 's,^CFLAGS *= ,CFLAGS += ,'
+SUBST_SED.makefile+=	-e 's,^CPPFLAGS *= ,CPPFLAGS += ,'
 SUBST_SED.makefile+=	-e 's,^LDFLAGS *= ,LDFLAGS += ,'
 SUBST_SED.makefile+=	-e 's/-I$${FREETYPEINC}/$${FREETYPEINC}/'
 SUBST_SED.makefile+=	-e 's,^FREETYPEINC *=.*,FREETYPEINC != freetype-config --cflags,'
