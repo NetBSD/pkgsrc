@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2015/11/03 03:28:39 agc Exp $
+$NetBSD: distinfo,v 1.15 2016/02/17 14:03:48 wen Exp $
 
-SHA1 (Path-Class-0.35.tar.gz) = d2b622240e32d9bd9df2e449cce7fb26f092e36c
-RMD160 (Path-Class-0.35.tar.gz) = f522843bfbdc8f944a43b0a0c0c3efea8c731940
-SHA512 (Path-Class-0.35.tar.gz) = cfbd27bf4756bade7a9abd081eda79058c0225d4a803a34a2bfe2a6c2eef954908b33843f352c562599edc420ca7a0063e9f7fd9fdd1d608ecea230e585287e2
-Size (Path-Class-0.35.tar.gz) = 34086 bytes
+SHA1 (Path-Class-0.36.tar.gz) = b3ac1918ac5694705017ea889058255193f46879
+RMD160 (Path-Class-0.36.tar.gz) = ccd9d40da2812cfc676f9e4058fb115fe61fc45f
+SHA512 (Path-Class-0.36.tar.gz) = 17ab96c897537a5964efecc3d4883fedc048145f4980d3959cf501a7646f2f7837614da9e379411f7ecb1f8de1bf23615ee57555cc437878470865b3fabc4c2d
+Size (Path-Class-0.36.tar.gz) = 37033 bytes
