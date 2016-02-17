@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: bcmfw.sh,v 1.1.1.1 2006/12/07 20:30:48 plunky Exp $
+# $NetBSD: bcmfw.sh,v 1.2 2016/02/17 10:58:19 plunky Exp $
 #
 
 # PROVIDE: bcmfw
@@ -12,7 +12,7 @@ $_rc_subr_loaded . /etc/rc.subr
 name="bcmfw"
 rcvar=${name}
 command="@PREFIX@/sbin/${name}"
-command_args="${bcmfw_args:-ugen0}"
+command_args="${bcmfw_args:--q ugen0}"
 
 load_rc_config ${name}
 run_rc_command "$1"
