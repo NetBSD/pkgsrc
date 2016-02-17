@@ -1,9 +1,6 @@
-$NetBSD: manual-bakefile.diff,v 1.1 2014/07/21 06:53:24 dbj Exp $
-This is a patch to the bakefile-0.2.9 rules to use libtool.
-
 diff -ru rules.orig/autoconf.bkl rules/autoconf.bkl
 --- rules.orig/autoconf.bkl	2011-02-02 14:04:25.000000000 -0800
-+++ rules/autoconf.bkl	2013-04-06 21:35:57.000000000 -0700
++++ rules/autoconf.bkl	2016-02-13 16:51:17.000000000 -0800
 @@ -200,82 +200,19 @@
  
          <set var="__linkname1">$(__linkname)</set>
@@ -103,13 +100,9 @@ diff -ru rules.orig/autoconf.bkl rules/autoconf.bkl
  
          <modify-target target="install_$(id)">
              <command>(cd $(DESTDIR)$(value) ; $(ref('__so_symlinks_inst_cmd',id)))</command>
-Only in rules: autoconf.bkl.orig
-Only in rules: autoconf.bkl.rej
-Only in rules: autoconf.bkl.save1
-Only in rules: autoconf.bkl.~1~
 diff -ru rules.orig/makefile.bkl rules/makefile.bkl
 --- rules.orig/makefile.bkl	2011-02-02 14:04:25.000000000 -0800
-+++ rules/makefile.bkl	2013-04-06 21:30:45.000000000 -0700
++++ rules/makefile.bkl	2016-02-13 16:51:17.000000000 -0800
 @@ -749,7 +749,7 @@
          <define-tag name="install-to" rules="exe">
              <modify-target target="install_$(id)">
@@ -140,7 +133,7 @@ diff -ru rules.orig/makefile.bkl rules/makefile.bkl
              <modify-target target="uninstall_$(id)">
 diff -ru rules.orig/makefile_defs_gnu.bkl rules/makefile_defs_gnu.bkl
 --- rules.orig/makefile_defs_gnu.bkl	2011-02-02 14:04:25.000000000 -0800
-+++ rules/makefile_defs_gnu.bkl	2013-04-06 21:30:45.000000000 -0700
++++ rules/makefile_defs_gnu.bkl	2016-02-13 16:51:17.000000000 -0800
 @@ -62,12 +62,12 @@
  
              <template id="__commands_templ_C">
@@ -158,7 +151,7 @@ diff -ru rules.orig/makefile_defs_gnu.bkl rules/makefile_defs_gnu.bkl
  
 diff -ru rules.orig/makefile_defs_unix.bkl rules/makefile_defs_unix.bkl
 --- rules.orig/makefile_defs_unix.bkl	2011-02-02 14:04:25.000000000 -0800
-+++ rules/makefile_defs_unix.bkl	2013-04-06 21:30:45.000000000 -0700
++++ rules/makefile_defs_unix.bkl	2016-02-13 18:27:40.000000000 -0800
 @@ -39,22 +39,23 @@
  
      <set var="DIRSEP">/</set>
@@ -189,7 +182,7 @@ diff -ru rules.orig/makefile_defs_unix.bkl rules/makefile_defs_unix.bkl
  
      <set var="UNINSTALL_PROGRAM" overwrite="0">$(RM)</set>
      <set var="UNINSTALL_DATA" overwrite="0">$(RM)</set>
-@@ -122,12 +123,12 @@
+@@ -122,24 +123,24 @@
      <if cond="FORMAT not in ['gnu','suncc']">
          <template id="__commands_templ_C">
              <set var="__COMPILE_C_CMD" eval="0">
@@ -204,6 +197,20 @@ diff -ru rules.orig/makefile_defs_unix.bkl rules/makefile_defs_unix.bkl
              </set>
          </template>
          <!-- FIXME: We should allow for a different Objective-C compiler -->
+         <template id="__commands_templ_OBJC">
+             <set var="__COMPILE_OBJC_CMD" eval="0">
+-                $(CCC) -c -o $@ $(__objcflags) $(src)
++                $(LIBTOOL) --mode=compile --tag=CC $(CCC) -c -o $@ $(__objcflags) $(src)
+             </set>
+         </template>
+         <!-- FIXME: We should allow for a different Objective-C++ compiler -->
+         <template id="__commands_templ_OBJCXX">
+             <set var="__COMPILE_OBJCXX_CMD" eval="0">
+-                $(CXXC) -c -o $@ $(__objcxxflags) $(src)
++                $(LIBTOOL) --mode=compile --tag=CXX $(CXXC) -c -o $@ $(__objcxxflags) $(src)
+             </set>
+         </template>
+     </if>
 @@ -154,18 +155,16 @@
          </set>
  
@@ -219,12 +226,13 @@ diff -ru rules.orig/makefile_defs_unix.bkl rules/makefile_defs_unix.bkl
          </set>
          <set var="__LINK_DLL_CMD" eval="0">
 -            $(__dll_linker) $@ $(__objects_var) $(__ldargs)
-+	    $(LIBTOOL) --mode=link --tag=CC $(__linker) -rpath $(libdir) -o $@ $(__objects_var) $(__ldflags) $(__ldlibs)
++	    $(LIBTOOL) --mode=link --tag=CC $(__linker) -rpath $(libdir) -shared -o $@ $(__objects_var) $(__ldflags) $(__ldlibs)
          </set>
          <set var="__LINK_MODULE_CMD" eval="0">
 -            $(__module_linker) $@ $(__objects_var) $(__ldargs)
-+	    $(LIBTOOL) --mode=link --tag=CC $(__linker) -rpath $(libdir) -o $@ $(__objects_var) $(__ldflags) $(__ldlibs)
++	    $(LIBTOOL)--mode=link --tag=CC $(__linker) -rpath $(libdir) -module -o $@ $(__objects_var) $(__ldflags) $(__ldlibs)
          </set>
      </template>
      
-Only in rules: makefile_defs_unix.bkl.orig
+Only in rules: makefile_defs_unix.bkl.~1~
+Only in rules: makefile_defs_unix.bkl.~2~

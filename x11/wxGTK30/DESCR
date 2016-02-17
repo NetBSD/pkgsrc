@@ -1,4 +1,4 @@
-A GTK+-based implementation of the wxWidgets cross-platform GUI library.
+The wxWidgets cross-platform GUI library.
 
 wxWidgets is a set of libraries that allows C++ applications to compile and
 run on several different types of computer, with minimal source code changes.
