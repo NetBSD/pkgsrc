@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2016/02/06 14:00:13 jaapb Exp $
+# $NetBSD: Makefile,v 1.12 2016/02/17 17:02:30 jaapb Exp $
 #
 
 GITHUB_PROJECT=	js_of_ocaml
 DISTNAME=	${GITHUB_PROJECT}-2.7
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocsigen/}
 
@@ -12,6 +13,7 @@ COMMENT=	Compiler of OCaml bytecode to Javascript
 LICENSE=	gnu-lgpl-v2
 
 DEPENDS+=	ocaml-deriving-ocsigen>=0.6:../../devel/ocaml-deriving-ocsigen
+DEPENDS+=	ocaml-ppx_deriving>=3.1:../../devel/ocaml-ppx_deriving
 DEPENDS+=	menhir-[0-9]*:../../devel/menhir
 
 USE_TOOLS=	gmake

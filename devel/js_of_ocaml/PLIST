@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2016/02/06 14:00:13 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.7 2016/02/17 17:02:30 jaapb Exp $
 @unexec %D/libexec/ocaml-findlib-register del %D/${OCAML_SITELIB}/js_of_ocaml
 bin/js_of_ocaml
 bin/jsoo_minify
@@ -111,6 +111,11 @@ ${OCAML_SITELIB}/js_of_ocaml/pa_js.cmo
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml/pa_js.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml/pa_js.cmxs
 ${OCAML_SITELIB}/js_of_ocaml/parsing.js
+${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml/ppx_deriving_json.a
+${OCAML_SITELIB}/js_of_ocaml/ppx_deriving_json.cma
+${OCAML_SITELIB}/js_of_ocaml/ppx_deriving_json.cmi
+${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml/ppx_deriving_json.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml/ppx_deriving_json.cmxs
 ${OCAML_SITELIB}/js_of_ocaml/ppx_js
 ${OCAML_SITELIB}/js_of_ocaml/ppx_js.cma
 ${OCAML_SITELIB}/js_of_ocaml/ppx_js.cmi
