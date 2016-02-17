@@ -1,3 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2016/02/15 16:34:32 jperkin Exp $
-lib/mod_authnz_crowd.la
-lib/mod_authz_svn_crowd.la
+@comment $NetBSD: PLIST,v 1.2 2016/02/17 16:32:44 jperkin Exp $
+lib/httpd/mod_authnz_crowd.so
+lib/httpd/mod_authnz_crowd.so.0.0.0
+lib/httpd/mod_authz_svn_crowd.so
+lib/httpd/mod_authz_svn_crowd.so.0.0.0
