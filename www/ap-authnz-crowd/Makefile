@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2016/02/15 16:34:32 jperkin Exp $
+# $NetBSD: Makefile,v 1.2 2016/02/17 16:32:44 jperkin Exp $
 #
 
 DISTNAME=	mod_authnz_crowd-2.2.2
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://downloads.atlassian.com/software/crowd/downloads/cwdapache/
 
@@ -27,8 +28,17 @@ CONFIGURE_ENV+=	BUILDLINK_PREFIX_subversion=${BUILDLINK_PREFIX.subversion-base}
 
 BUILDLINK_TRANSFORM+=	opt:-O2:-O1
 
+INSTALLATION_DIRS+=	lib/httpd
+
 pre-configure:
 	cd ${WRKSRC} && autoreconf -fiv
+
+do-install:
+	for mod in mod_authnz_crowd.la svn/mod_authz_svn_crowd.la; do \
+		${PREFIX}/share/httpd/build/instdso.sh \
+		    SH_LIBTOOL=${PREFIX}/share/httpd/build/libtool \
+		    ${WRKSRC}/src/$$mod ${DESTDIR}${PREFIX}/lib/httpd; \
+	done
 
 .include "../../devel/subversion-base/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
