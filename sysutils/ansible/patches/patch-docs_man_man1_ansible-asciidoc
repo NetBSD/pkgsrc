@@ -1,0 +1,39 @@
+$NetBSD: patch-docs_man_man1_ansible-asciidoc,v 1.1 2016/02/17 20:31:45 he Exp $
+
+Fix hardcoded paths to be replaced with SUBST framework.
+
+--- docs/man/man1/ansible.1.asciidoc.in.orig	2015-06-25 20:39:08.000000000 +0000
++++ docs/man/man1/ansible.1.asciidoc.in
+@@ -41,7 +41,7 @@ up to three times for more output.
+ 
+ *-i* 'PATH', *--inventory=*'PATH'::
+ 
+-The 'PATH' to the inventory hosts file, which defaults to '/etc/ansible/hosts'.
++The 'PATH' to the inventory hosts file, which defaults to '@PKG_SYSCONFDIR@/ansible/hosts'.
+ 
+ 
+ *-f* 'NUM', *--forks=*'NUM'::
+@@ -61,7 +61,7 @@ Execute the module called 'NAME'.
+ *-M* 'DIRECTORY', *--module-path=*'DIRECTORY'::
+ 
+ The 'DIRECTORY' search path to load modules from. The default is
+-'/usr/share/ansible'. This can also be set with the ANSIBLE_LIBRARY
++'@PREFIX@/share/ansible'. This can also be set with the ANSIBLE_LIBRARY
+ environment variable.
+ 
+ *-a* \'_ARGUMENTS_', *--args=*\'_ARGUMENTS_'::
+@@ -140,11 +140,11 @@ additional options, see the documentatio
+ FILES
+ -----
+ 
+-/etc/ansible/hosts -- Default inventory file
++@PKG_SYSCONFDIR@/ansible/hosts -- Default inventory file
+ 
+-/usr/share/ansible/ -- Default module library
++@PREFIX@/share/ansible/ -- Default module library
+ 
+-/etc/ansible/ansible.cfg -- Config file, used if present
++@PKG_SYSCONFDIR@/ansible/ansible.cfg -- Config file, used if present
+ 
+ ~/.ansible.cfg -- User config file, overrides the default config if present
+ 
