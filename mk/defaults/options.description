@@ -68,6 +68,7 @@ bugzilla-xmlimportbugs	Bulk import/export of bugs in XML format.
 bzip2			Enable compression using bzip2.
 caca			Enable libcaca support.
 cairo			Enable cairo support.
+camlp4	Enable camlp4 support.
 camlzip			Enable camlzip support (for zip/gz/jar).
 canna			Use Canna as Japanese conversion program.
 cares			Use the c-ares library for asynchronous name resolution.
@@ -573,6 +574,7 @@ portaudio		Enable PortAudio audio library support.
 postfix-milter		Build the milter with support for the Postfix MTA.
 postfix-stress		Enable Postfix stress-adaptive behaviour.
 postgrey-targrey	Enable the Postgrey taRgrey tarpitting patch.
+ppx	Enable PPX support.
 prime			Use Prime for Kana-to-Kanji conversion.
 proftpd-readme		Enable mod_readme.
 psiconv			Enable psiconv support (for PSION 5 file formats).
