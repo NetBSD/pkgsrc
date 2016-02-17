@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15468 2016/02/16 14:53:32 taca Exp $
+$NetBSD: TODO,v 1.15469 2016/02/17 03:33:33 mef Exp $
 
 Suggested new packages
 ======================
@@ -1204,7 +1204,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Font-TTF-1.05
 	o p5-FormValidator-Simple-1.00
 	o p5-Fsdb-2.58
-	o p5-GD-SecurityImage-1.73
 	o p5-GDGraph-1.49
 	o p5-GStreamer-0.20
 	o p5-Geo-IPfree-1.151940
