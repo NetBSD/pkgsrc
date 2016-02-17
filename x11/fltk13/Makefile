@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2016/01/26 08:47:28 dbj Exp $
+# $NetBSD: Makefile,v 1.23 2016/02/17 06:05:41 dbj Exp $
 
 DISTNAME=	fltk-1.3.3-source
-PKGREVISION=	1
+PKGREVISION=	2
 PKGNAME=	${DISTNAME:S/-source//}
 VERS=		${DISTNAME:S/fltk-//:S/-source//}
 CATEGORIES=	x11
@@ -48,7 +48,9 @@ PLIST.cs=		yes
 #.endif
 
 .if !empty(PKG_OPTIONS:Mopengl)
+.if ${OPSYS} != "Darwin"
 .  include "../../graphics/Mesa/buildlink3.mk"
+.endif
 CONFIGURE_ARGS+=	--enable-gl
 PLIST.opengl=	yes
 .else
@@ -59,14 +61,16 @@ CONFIGURE_ARGS+=	--enable-shared
 # Use pkgsrc versions, not package's bundled versions.
 CONFIGURE_ARGS+=	--disable-localjpeg --disable-localzlib --disable-localpng
 
+.if ${OPSYS} != "Darwin"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
-.include "../../mk/jpeg.buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
 BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../x11/libXt/buildlink3.mk"
+.endif
+.include "../../mk/jpeg.buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
