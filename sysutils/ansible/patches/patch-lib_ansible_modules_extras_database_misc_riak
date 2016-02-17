@@ -1,9 +1,18 @@
-$NetBSD: patch-library_database_riak,v 1.3 2015/06/25 13:21:03 jperkin Exp $
+$NetBSD: patch-lib_ansible_modules_extras_database_misc_riak,v 1.1 2016/02/17 20:31:45 he Exp $
 
 Fix hardcoded paths to be replaced with SUBST framework.
 
---- library/database/riak.orig	2014-07-25 20:48:49.000000000 +0000
-+++ library/database/riak
+--- lib/ansible/modules/extras/database/misc/riak.py.orig	2015-06-25 20:39:17.000000000 +0000
++++ lib/ansible/modules/extras/database/misc/riak.py
+@@ -38,7 +38,7 @@ options:
+     description:
+       - The path to the riak configuration directory
+     required: false
+-    default: /etc/riak
++    default: @PKG_SYSCONFDIR@/riak
+     aliases: []
+   http_conn:
+     description:
 @@ -118,7 +118,7 @@ def main():
          argument_spec=dict(
          command=dict(required=False, default=None, choices=[

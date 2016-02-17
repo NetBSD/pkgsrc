@@ -1,0 +1,48 @@
+$NetBSD: patch-lib_ansible_constants,v 1.1 2016/02/17 20:31:45 he Exp $
+
+Fix hardcoded paths to be replaced with SUBST framework.
+
+--- lib/ansible/constants.py.orig	2015-06-25 20:39:08.000000000 +0000
++++ lib/ansible/constants.py
+@@ -67,7 +67,7 @@ def load_config_file():
+         path0 = os.path.expanduser(path0)
+     path1 = os.getcwd() + "/ansible.cfg"
+     path2 = os.path.expanduser("~/.ansible.cfg")
+-    path3 = "/etc/ansible/ansible.cfg"
++    path3 = "@PKG_SYSCONFDIR@/ansible/ansible.cfg"
+ 
+     for path in [path0, path1, path2, path3]:
+         if path is not None and os.path.exists(path):
+@@ -98,9 +98,9 @@ YAML_FILENAME_EXTENSIONS = [ "", ".yml",
+ DEFAULTS='defaults'
+ 
+ # configurable things
+-DEFAULT_HOST_LIST         = shell_expand_path(get_config(p, DEFAULTS, 'inventory', 'ANSIBLE_INVENTORY', get_config(p, DEFAULTS,'hostfile','ANSIBLE_HOSTS', '/etc/ansible/hosts')))
++DEFAULT_HOST_LIST         = shell_expand_path(get_config(p, DEFAULTS, 'inventory', 'ANSIBLE_INVENTORY', get_config(p, DEFAULTS,'hostfile','ANSIBLE_HOSTS', '@PKG_SYSCONFDIR@/ansible/hosts')))
+ DEFAULT_MODULE_PATH       = get_config(p, DEFAULTS, 'library',          'ANSIBLE_LIBRARY',          None)
+-DEFAULT_ROLES_PATH        = shell_expand_path(get_config(p, DEFAULTS, 'roles_path',       'ANSIBLE_ROLES_PATH',       '/etc/ansible/roles'))
++DEFAULT_ROLES_PATH        = shell_expand_path(get_config(p, DEFAULTS, 'roles_path',       'ANSIBLE_ROLES_PATH',       '@PKG_SYSCONFDIR@/ansible/roles'))
+ DEFAULT_REMOTE_TMP        = get_config(p, DEFAULTS, 'remote_tmp',       'ANSIBLE_REMOTE_TEMP',      '$HOME/.ansible/tmp')
+ DEFAULT_MODULE_NAME       = get_config(p, DEFAULTS, 'module_name',      None,                       'command')
+ DEFAULT_PATTERN           = get_config(p, DEFAULTS, 'pattern',          None,                       '*')
+@@ -152,13 +152,13 @@ DEFAULT_BECOME_EXE = None
+ #DEFAULT_BECOME_FLAGS      = get_config(p, DEFAULTS, 'become_flags', 'ANSIBLE_BECOME_FLAGS',DEFAULT_SUDO_FLAGS if DEFAULT_SUDO else DEFAULT_SU_FLAGS if DEFAULT_SU else '-H')
+ 
+ 
+-DEFAULT_ACTION_PLUGIN_PATH     = get_config(p, DEFAULTS, 'action_plugins',     'ANSIBLE_ACTION_PLUGINS', '~/.ansible/plugins/action_plugins:/usr/share/ansible_plugins/action_plugins')
+-DEFAULT_CACHE_PLUGIN_PATH      = get_config(p, DEFAULTS, 'cache_plugins',      'ANSIBLE_CACHE_PLUGINS', '~/.ansible/plugins/cache_plugins:/usr/share/ansible_plugins/cache_plugins')
+-DEFAULT_CALLBACK_PLUGIN_PATH   = get_config(p, DEFAULTS, 'callback_plugins',   'ANSIBLE_CALLBACK_PLUGINS', '~/.ansible/plugins/callback_plugins:/usr/share/ansible_plugins/callback_plugins')
+-DEFAULT_CONNECTION_PLUGIN_PATH = get_config(p, DEFAULTS, 'connection_plugins', 'ANSIBLE_CONNECTION_PLUGINS', '~/.ansible/plugins/connection_plugins:/usr/share/ansible_plugins/connection_plugins')
+-DEFAULT_LOOKUP_PLUGIN_PATH     = get_config(p, DEFAULTS, 'lookup_plugins',     'ANSIBLE_LOOKUP_PLUGINS', '~/.ansible/plugins/lookup_plugins:/usr/share/ansible_plugins/lookup_plugins')
+-DEFAULT_VARS_PLUGIN_PATH       = get_config(p, DEFAULTS, 'vars_plugins',       'ANSIBLE_VARS_PLUGINS', '~/.ansible/plugins/vars_plugins:/usr/share/ansible_plugins/vars_plugins')
+-DEFAULT_FILTER_PLUGIN_PATH     = get_config(p, DEFAULTS, 'filter_plugins',     'ANSIBLE_FILTER_PLUGINS', '~/.ansible/plugins/filter_plugins:/usr/share/ansible_plugins/filter_plugins')
++DEFAULT_ACTION_PLUGIN_PATH     = get_config(p, DEFAULTS, 'action_plugins',     'ANSIBLE_ACTION_PLUGINS', '~/.ansible/plugins/action_plugins:@PREFIX@/share/ansible_plugins/action_plugins')
++DEFAULT_CACHE_PLUGIN_PATH      = get_config(p, DEFAULTS, 'cache_plugins',      'ANSIBLE_CACHE_PLUGINS', '~/.ansible/plugins/cache_plugins:@PREFIX@/share/ansible_plugins/cache_plugins')
++DEFAULT_CALLBACK_PLUGIN_PATH   = get_config(p, DEFAULTS, 'callback_plugins',   'ANSIBLE_CALLBACK_PLUGINS', '~/.ansible/plugins/callback_plugins:@PREFIX@/share/ansible_plugins/callback_plugins')
++DEFAULT_CONNECTION_PLUGIN_PATH = get_config(p, DEFAULTS, 'connection_plugins', 'ANSIBLE_CONNECTION_PLUGINS', '~/.ansible/plugins/connection_plugins:@PREFIX@/share/ansible_plugins/connection_plugins')
++DEFAULT_LOOKUP_PLUGIN_PATH     = get_config(p, DEFAULTS, 'lookup_plugins',     'ANSIBLE_LOOKUP_PLUGINS', '~/.ansible/plugins/lookup_plugins:@PREFIX@/share/ansible_plugins/lookup_plugins')
++DEFAULT_VARS_PLUGIN_PATH       = get_config(p, DEFAULTS, 'vars_plugins',       'ANSIBLE_VARS_PLUGINS', '~/.ansible/plugins/vars_plugins:@PREFIX@/share/ansible_plugins/vars_plugins')
++DEFAULT_FILTER_PLUGIN_PATH     = get_config(p, DEFAULTS, 'filter_plugins',     'ANSIBLE_FILTER_PLUGINS', '~/.ansible/plugins/filter_plugins:@PREFIX@/share/ansible_plugins/filter_plugins')
+ 
+ CACHE_PLUGIN                   = get_config(p, DEFAULTS, 'fact_caching', 'ANSIBLE_CACHE_PLUGIN', 'memory')
+ CACHE_PLUGIN_CONNECTION        = get_config(p, DEFAULTS, 'fact_caching_connection', 'ANSIBLE_CACHE_PLUGIN_CONNECTION', None)
