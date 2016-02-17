@@ -1,0 +1,39 @@
+$NetBSD: patch-docs_man_man1_ansible,v 1.1 2016/02/17 20:31:45 he Exp $
+
+Fix hardcoded paths to be replaced with SUBST framework.
+
+--- docs/man/man1/ansible.1.orig	2015-06-25 20:39:08.000000000 +0000
++++ docs/man/man1/ansible.1
+@@ -53,7 +53,7 @@ Verbose mode, more output from successfu
+ The
+ \fIPATH\fR
+ to the inventory hosts file, which defaults to
+-\fI/etc/ansible/hosts\fR\&.
++\fI@PKG_SYSCONFDIR@/ansible/hosts\fR\&.
+ .RE
+ .PP
+ \fB\-f\fR \fINUM\fR, \fB\-\-forks=\fR\fINUM\fR
+@@ -79,7 +79,7 @@ Execute the module called
+ The
+ \fIDIRECTORY\fR
+ search path to load modules from\&. The default is
+-\fI/usr/share/ansible\fR\&. This can also be set with the ANSIBLE_LIBRARY environment variable\&.
++\fI@PREFIX@/share/ansible\fR\&. This can also be set with the ANSIBLE_LIBRARY environment variable\&.
+ .RE
+ .PP
+ \fB\-a\fR \*(Aq\fIARGUMENTS\fR\*(Aq, \fB\-\-args=\fR\*(Aq\fIARGUMENTS\fR\*(Aq
+@@ -182,11 +182,11 @@ Ansible stores the hosts it can potentia
+ Ranges of hosts are also supported\&. For more information and additional options, see the documentation on http://docs\&.ansible\&.com/\&.
+ .SH "FILES"
+ .sp
+-/etc/ansible/hosts \(em Default inventory file
++@PKG_SYSCONFDIR@/ansible/hosts \(em Default inventory file
+ .sp
+-/usr/share/ansible/ \(em Default module library
++@PREFIX@/share/ansible/ \(em Default module library
+ .sp
+-/etc/ansible/ansible\&.cfg \(em Config file, used if present
++@PKG_SYSCONFDIR@/ansible/ansible\&.cfg \(em Config file, used if present
+ .sp
+ ~/\&.ansible\&.cfg \(em User config file, overrides the default config if present
+ .SH "ENVIRONMENT"

@@ -1,15 +1,23 @@
-$NetBSD: distinfo,v 1.9 2015/11/04 01:32:06 agc Exp $
+$NetBSD: distinfo,v 1.10 2016/02/17 20:31:45 he Exp $
 
-SHA1 (ansible-1.6.10.tar.gz) = 35d4af5beaff73de339442962da286bd3d7bacf4
-RMD160 (ansible-1.6.10.tar.gz) = 2e9160769d06b14fcd4446a8337c5ef3447139bc
-SHA512 (ansible-1.6.10.tar.gz) = 0566a0bbedf00d5e9677f05244fe684d30443fadf8527e72c4f77a3fb618394cd649f925bb5e86ac04a97a8cb5de25c63147dad089ef23deeaad70d3856abe9a
-Size (ansible-1.6.10.tar.gz) = 654605 bytes
-SHA1 (patch-examples_ansible.cfg) = aa743238d77edc4abfeddae69456067a53f6afeb
-SHA1 (patch-lib_ansible_callbacks.py) = 786a30966784b2c0bbf749cb48786f50d42c8894
-SHA1 (patch-lib_ansible_constants.py) = 170f57a2f651c4fd1678a8ad695ce1848c0b7282
-SHA1 (patch-lib_ansible_module__utils_facts.py) = b44b9d03be1e30f5a2590100a62853516700fbd2
-SHA1 (patch-library-system-ping) = 11be10c2c6617b48dba54823ead462628702708b
-SHA1 (patch-library_database_riak) = cffae39d5a5e591938818655b78729a8e39084f1
-SHA1 (patch-library_monitoring_nagios) = 7e40fb967bbb03fb52d0478a8d2caeb213e2fb7f
-SHA1 (patch-library_packaging_pkgin) = 0dcc1699822251b7cc69db60d286e71964a99e0c
-SHA1 (patch-library_system_setup) = d19520ddfa5f69f281fe18ccc9a31a2f6fb30d86
+SHA1 (ansible-1.9.4.tar.gz) = f71f451d96239d08396d20fff2d9b8840426f714
+RMD160 (ansible-1.9.4.tar.gz) = a88a7a1a19a82e6ca17ca77ae8d64a428cf37fe8
+Size (ansible-1.9.4.tar.gz) = 937120 bytes
+SHA1 (patch-docs_man_man1_ansible) = af150377f41d2feb239111346fc5d3101aa8bcea
+SHA1 (patch-docs_man_man1_ansible-asciidoc) = 6c2b4eae3d8213d8ee0870727003bb128df44f10
+SHA1 (patch-docs_man_man1_ansible-galaxy) = fa8e683620d53d81a88afe7446bef96071aa0edd
+SHA1 (patch-docs_man_man1_ansible-galaxy-asciidoc) = e1a699f7b23d373405a2f18db6658c1ca50fc7d9
+SHA1 (patch-docs_man_man1_ansible-playbook) = ca06a883d02f28895ad5ae9392f47e4024c6ec06
+SHA1 (patch-docs_man_man1_ansible-playbook-asciidoc) = ac1d24661de7d6292252ce696b17f7317b2c43df
+SHA1 (patch-examples_ansible) = f29fedf979a7ef0255d88d6e593eb84ca92fa3de
+SHA1 (patch-examples_hosts) = ed21ed3f6f3db7d4ec9cd273e15adf075cec953d
+SHA1 (patch-lib_ansible_callbacks) = bdcec47047b5361012472f6276df21618cc664bb
+SHA1 (patch-lib_ansible_constants) = 0e95e2b3bd2b1b2b9deb95c64d6131d850260b39
+SHA1 (patch-lib_ansible_modules_core_system_ping) = 1b91dbdb74e8cfc5e0bf99628e5ebb4bbd54dead
+SHA1 (patch-lib_ansible_modules_core_system_setup) = a9a92a4a8786e0f96155cbd6d4d7b459d7728f0c
+SHA1 (patch-lib_ansible_modules_extras_database_misc_riak) = 26fcb21fe56613a151913398c677d2fdcdaa3703
+SHA1 (patch-lib_ansible_modules_extras_monitoring_nagios) = 0af8b51bc5e34dbb516a3b0be1c8670ea7c863b6
+SHA1 (patch-lib_ansible_modules_extras_packaging_os_pkgin) = a8e2be00ff309be676435b7333e9b9ceebaba810
+SHA1 (patch-plugins_README) = 05039fb081fce16754404adf746ef9594ef9f701
+SHA1 (patch-plugins_inventory_cobbler) = bbc1a6c48d65229091d6c247e27ee28fe374e731
+SHA1 (patch-plugins_inventory_collins) = 8eccebae0ea739d890696d27c663c8c65e8b8832

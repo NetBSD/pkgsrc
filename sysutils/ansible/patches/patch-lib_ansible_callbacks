@@ -1,0 +1,49 @@
+$NetBSD: patch-lib_ansible_callbacks,v 1.1 2016/02/17 20:31:45 he Exp $
+
+Fix hardcoded paths to be replaced with SUBST framework.
+
+--- lib/ansible/callbacks.py.orig	2015-06-25 20:39:08.000000000 +0000
++++ lib/ansible/callbacks.py
+@@ -58,9 +58,9 @@ def get_cowsay_info():
+         cowsay = "/usr/bin/cowsay"
+     elif os.path.exists("/usr/games/cowsay"):
+         cowsay = "/usr/games/cowsay"
+-    elif os.path.exists("/usr/local/bin/cowsay"):
++    elif os.path.exists("@PREFIX@/bin/cowsay"):
+         # BSD path for cowsay
+-        cowsay = "/usr/local/bin/cowsay"
++        cowsay = "@PREFIX@/bin/cowsay"
+     elif os.path.exists("/opt/local/bin/cowsay"):
+         # MacPorts path for cowsay
+         cowsay = "/opt/local/bin/cowsay"
+@@ -370,10 +370,10 @@ class DefaultRunnerCallbacks(object):
+ ########################################################################
+ 
+ class CliRunnerCallbacks(DefaultRunnerCallbacks):
+-    ''' callbacks for use by /usr/bin/ansible '''
++    ''' callbacks for use by @PREFIX@/bin/ansible '''
+ 
+     def __init__(self):
+-        # set by /usr/bin/ansible later
++        # set by @PREFIX@/bin/ansible later
+         self.options = None
+         self._async_notified = {}
+ 
+@@ -440,7 +440,7 @@ class CliRunnerCallbacks(DefaultRunnerCa
+ ########################################################################
+ 
+ class PlaybookRunnerCallbacks(DefaultRunnerCallbacks):
+-    ''' callbacks used for Runner() from /usr/bin/ansible-playbook '''
++    ''' callbacks used for Runner() from @PREFIX@/bin/ansible-playbook '''
+ 
+     def __init__(self, stats, verbose=None):
+ 
+@@ -590,7 +590,7 @@ class PlaybookRunnerCallbacks(DefaultRun
+ ########################################################################
+ 
+ class PlaybookCallbacks(object):
+-    ''' playbook.py callbacks used by /usr/bin/ansible-playbook '''
++    ''' playbook.py callbacks used by @PREFIX@/bin/ansible-playbook '''
+ 
+     def __init__(self, verbose=False):
+ 
