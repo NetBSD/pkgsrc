@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.751 2016/02/17 16:45:01 jaapb Exp $
+$NetBSD: CHANGES-2016,v 1.752 2016/02/17 17:00:58 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -985,3 +985,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/ruby-mini-magick to 4.4.0 [taca 2016-02-17]
 	Updated www/ap-authnz-crowd to 2.2.2nb1 [jperkin 2016-02-17]
 	Added devel/ocaml-ppx_deriving version 3.1 [jaapb 2016-02-17]
+	Updated devel/ocaml-lwt to 2.5.1nb1 [jaapb 2016-02-17]
