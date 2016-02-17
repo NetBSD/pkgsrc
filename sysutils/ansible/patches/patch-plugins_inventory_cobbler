@@ -1,0 +1,20 @@
+$NetBSD: patch-plugins_inventory_cobbler,v 1.1 2016/02/17 20:31:45 he Exp $
+
+Fix hardcoded paths to be replaced with SUBST framework.
+
+--- plugins/inventory/cobbler.py.orig	2015-06-25 20:39:08.000000000 +0000
++++ plugins/inventory/cobbler.py
+@@ -4,11 +4,11 @@
+ Cobbler external inventory script
+ =================================
+ 
+-Ansible has a feature where instead of reading from /etc/ansible/hosts
++Ansible has a feature where instead of reading from @PKG_SYSCONFDIR@/ansible/hosts
+ as a text file, it can query external programs to obtain the list
+ of hosts, groups the hosts are in, and even variables to assign to each host.
+ 
+-To use this, copy this file over /etc/ansible/hosts and chmod +x the file.
++To use this, copy this file over @PKG_SYSCONFDIR@//ansible/hosts and chmod +x the file.
+ This, more or less, allows you to keep one central database containing
+ info about all of your managed instances.
+ 

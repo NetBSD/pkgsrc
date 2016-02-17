@@ -1,0 +1,27 @@
+$NetBSD: patch-lib_ansible_modules_extras_packaging_os_pkgin,v 1.1 2016/02/17 20:31:45 he Exp $
+
+Fix hardcoded paths to be replaced with SUBST framework.
+
+--- lib/ansible/modules/extras/packaging/os/pkgin.py.orig	2015-08-19 13:22:23.000000000 +0000
++++ lib/ansible/modules/extras/packaging/os/pkgin.py
+@@ -93,7 +93,10 @@ def query_package(module, pkgin_path, na
+         #     '<' - installed but out of date
+         #     '=' - installed and up to date
+         #     '>' - installed but newer than the repository version
+-        pkgname_with_version, raw_state = out.split(' ')[0:2]
++        if len(out.split(';')) >= 3:
++            pkgname_with_version, raw_state = out.split(';')[0:2]
++        else:
++            pkgname_with_version, raw_state = out.split(' ')[0:2]
+ 
+         # Strip version
+         # (results in sth like 'gcc47-libs')
+@@ -192,7 +195,7 @@ def main():
+                 name         = dict(aliases=["pkg"], required=True)),
+             supports_check_mode = True)
+ 
+-    pkgin_path = module.get_bin_path('pkgin', True, ['/opt/local/bin'])
++    pkgin_path = module.get_bin_path('pkgin', True, ['@PREFIX@/bin'])
+ 
+     p = module.params
+ 

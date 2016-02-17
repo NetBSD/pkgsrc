@@ -1,0 +1,24 @@
+$NetBSD: patch-plugins_inventory_collins,v 1.1 2016/02/17 20:31:45 he Exp $
+
+Fix hardcoded paths to be replaced with SUBST framework.
+
+--- plugins/inventory/collins.py.orig	2015-06-25 20:39:08.000000000 +0000
++++ plugins/inventory/collins.py
+@@ -4,7 +4,7 @@
+ Collins external inventory script
+ =================================
+ 
+-Ansible has a feature where instead of reading from /etc/ansible/hosts
++Ansible has a feature where instead of reading from @PKG_SYSCONFDIR@/ansible/hosts
+ as a text file, it can query external programs to obtain the list
+ of hosts, groups the hosts are in, and even variables to assign to each host.
+ 
+@@ -25,7 +25,7 @@ Cobbler inventory script.
+ 
+ To use it, copy it to your repo and pass -i <collins script> to the ansible or
+ ansible-playbook command; if you'd like to use it by default, simply copy collins.ini
+-to /etc/ansible and this script to /etc/ansible/hosts.
++to @PKG_SYSCONFDIR@/ansible and this script to @PKG_SYSCONFDIR@/ansible/hosts.
+ 
+ Alongside the options set in collins.ini, there are several environment variables
+ that will be used instead of the configured values if they are set:

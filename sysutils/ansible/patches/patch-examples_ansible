@@ -1,8 +1,8 @@
-$NetBSD: patch-examples_ansible.cfg,v 1.4 2015/06/25 13:21:03 jperkin Exp $
+$NetBSD: patch-examples_ansible,v 1.1 2016/02/17 20:31:45 he Exp $
 
 Fix hardcoded paths to be replaced with SUBST framework.
 
---- examples/ansible.cfg.orig	2014-07-25 20:48:49.000000000 +0000
+--- examples/ansible.cfg.orig	2015-06-25 20:39:08.000000000 +0000
 +++ examples/ansible.cfg
 @@ -4,15 +4,15 @@
  # nearly all parameters can be overridden in ansible-playbook 
@@ -16,15 +16,33 @@ Fix hardcoded paths to be replaced with SUBST framework.
  
  # some basic default values...
  
--hostfile       = /etc/ansible/hosts
--library        = /usr/share/ansible
-+hostfile       = @PKG_SYSCONFDIR@/ansible/hosts
-+library        = @PREFIX@/share/ansible
+-inventory      = /etc/ansible/hosts
+-#library        = /usr/share/my_modules/
++inventory      = @PKG_SYSCONFDIR@/ansible/hosts
++#library        = @PREFIX@/share/my_modules/
  remote_tmp     = $HOME/.ansible/tmp
  pattern        = *
  forks          = 5
-@@ -103,12 +103,12 @@ ansible_managed = Ansible managed: {file
- #deprecation_warnings = True
+@@ -33,7 +33,7 @@ module_lang    = C
+ gathering = implicit
+ 
+ # additional paths to search for roles in, colon separated
+-#roles_path    = /etc/ansible/roles
++#roles_path    = @PKG_SYSCONFDIR@/ansible/roles
+ 
+ # uncomment this to disable SSH key host checking
+ #host_key_checking = False
+@@ -55,7 +55,7 @@ timeout = 10
+ # if so defined, consider logrotate
+ #log_path = /var/log/ansible.log
+ 
+-# default module name for /usr/bin/ansible
++# default module name for @PREFIX@/bin/ansible
+ #module_name = command
+ 
+ # use this shell for commands executed under sudo
+@@ -112,12 +112,12 @@ ansible_managed = Ansible managed: {file
+ 
  
  # set plugin path directories here, separate with colons
 -action_plugins     = /usr/share/ansible_plugins/action_plugins
@@ -40,5 +58,5 @@ Fix hardcoded paths to be replaced with SUBST framework.
 +vars_plugins       = @PREFIX@/share/ansible_plugins/vars_plugins
 +filter_plugins     = @PREFIX@/share/ansible_plugins/filter_plugins
  
- # don't like cows?  that's unfortunate.
- # set to 1 if you don't want cowsay support or export ANSIBLE_NOCOWS=1 
+ # by default callbacks are not loaded for /bin/ansible, enable this if you
+ # want, for example, a notification or logging callback to also apply to 
