@@ -1,4 +1,4 @@
-$NetBSD: patch-src_Makefile.am,v 1.1 2016/02/15 16:34:32 jperkin Exp $
+$NetBSD: patch-src_Makefile.am,v 1.2 2016/02/17 16:32:44 jperkin Exp $
 
 Fix automake failures.
 
@@ -13,12 +13,3 @@ Fix automake failures.
  TESTS = test.py
  TESTS_ENVIRONMENT = APACHE_BIN_DIR=@APACHE_BIN_DIR@
  
-@@ -17,7 +17,7 @@ httpd/conf/common.conf : httpd/conf/comm
- httpd/conf/httpd_svn.conf : httpd/conf/httpd_svn.conf.in
- 	APACHE_MODULES_DIR=@APACHE_MODULES_DIR@ CURDIR=$(CURDIR) envsubst < httpd/conf/httpd_svn.conf.in > httpd/conf/httpd_svn.conf
- 
--install:
-+notinstall:
- 	cp @HTTPD_CONF@ /tmp/httpd.conf.bak
- 	@APXS@ -i -a mod_authnz_crowd.la
- 	@APXS@ -e -a -n dav_svn modules/mod_dav_svn.so
