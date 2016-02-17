@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/09/03 07:10:25 he Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/02/17 11:42:47 he Exp $
 ${PYSITELIB}/jnpr/junos/__init__.py
 ${PYSITELIB}/jnpr/junos/__init__.pyc
 ${PYSITELIB}/jnpr/junos/__init__.pyo
@@ -30,6 +30,9 @@ ${PYSITELIB}/jnpr/junos/cfgro/__init__.py
 ${PYSITELIB}/jnpr/junos/cfgro/__init__.pyc
 ${PYSITELIB}/jnpr/junos/cfgro/__init__.pyo
 ${PYSITELIB}/jnpr/junos/cfgro/srx.yml
+${PYSITELIB}/jnpr/junos/decorators.py
+${PYSITELIB}/jnpr/junos/decorators.pyc
+${PYSITELIB}/jnpr/junos/decorators.pyo
 ${PYSITELIB}/jnpr/junos/device.py
 ${PYSITELIB}/jnpr/junos/device.pyc
 ${PYSITELIB}/jnpr/junos/device.pyo
@@ -107,6 +110,14 @@ ${PYSITELIB}/jnpr/junos/op/bfd.py
 ${PYSITELIB}/jnpr/junos/op/bfd.pyc
 ${PYSITELIB}/jnpr/junos/op/bfd.pyo
 ${PYSITELIB}/jnpr/junos/op/bfd.yml
+${PYSITELIB}/jnpr/junos/op/ccc.py
+${PYSITELIB}/jnpr/junos/op/ccc.pyc
+${PYSITELIB}/jnpr/junos/op/ccc.pyo
+${PYSITELIB}/jnpr/junos/op/ccc.yml
+${PYSITELIB}/jnpr/junos/op/ethernetswitchingtable.py
+${PYSITELIB}/jnpr/junos/op/ethernetswitchingtable.pyc
+${PYSITELIB}/jnpr/junos/op/ethernetswitchingtable.pyo
+${PYSITELIB}/jnpr/junos/op/ethernetswitchingtable.yml
 ${PYSITELIB}/jnpr/junos/op/ethport.py
 ${PYSITELIB}/jnpr/junos/op/ethport.pyc
 ${PYSITELIB}/jnpr/junos/op/ethport.pyo
@@ -115,10 +126,22 @@ ${PYSITELIB}/jnpr/junos/op/fpc.py
 ${PYSITELIB}/jnpr/junos/op/fpc.pyc
 ${PYSITELIB}/jnpr/junos/op/fpc.pyo
 ${PYSITELIB}/jnpr/junos/op/fpc.yml
+${PYSITELIB}/jnpr/junos/op/idpattacks.py
+${PYSITELIB}/jnpr/junos/op/idpattacks.pyc
+${PYSITELIB}/jnpr/junos/op/idpattacks.pyo
+${PYSITELIB}/jnpr/junos/op/idpattacks.yml
+${PYSITELIB}/jnpr/junos/op/intopticdiag.py
+${PYSITELIB}/jnpr/junos/op/intopticdiag.pyc
+${PYSITELIB}/jnpr/junos/op/intopticdiag.pyo
+${PYSITELIB}/jnpr/junos/op/intopticdiag.yml
 ${PYSITELIB}/jnpr/junos/op/isis.py
 ${PYSITELIB}/jnpr/junos/op/isis.pyc
 ${PYSITELIB}/jnpr/junos/op/isis.pyo
 ${PYSITELIB}/jnpr/junos/op/isis.yml
+${PYSITELIB}/jnpr/junos/op/l2circuit.py
+${PYSITELIB}/jnpr/junos/op/l2circuit.pyc
+${PYSITELIB}/jnpr/junos/op/l2circuit.pyo
+${PYSITELIB}/jnpr/junos/op/l2circuit.yml
 ${PYSITELIB}/jnpr/junos/op/lacp.py
 ${PYSITELIB}/jnpr/junos/op/lacp.pyc
 ${PYSITELIB}/jnpr/junos/op/lacp.pyo
@@ -131,6 +154,14 @@ ${PYSITELIB}/jnpr/junos/op/lldp.py
 ${PYSITELIB}/jnpr/junos/op/lldp.pyc
 ${PYSITELIB}/jnpr/junos/op/lldp.pyo
 ${PYSITELIB}/jnpr/junos/op/lldp.yml
+${PYSITELIB}/jnpr/junos/op/nd.py
+${PYSITELIB}/jnpr/junos/op/nd.pyc
+${PYSITELIB}/jnpr/junos/op/nd.pyo
+${PYSITELIB}/jnpr/junos/op/nd.yml
+${PYSITELIB}/jnpr/junos/op/ospf.py
+${PYSITELIB}/jnpr/junos/op/ospf.pyc
+${PYSITELIB}/jnpr/junos/op/ospf.pyo
+${PYSITELIB}/jnpr/junos/op/ospf.yml
 ${PYSITELIB}/jnpr/junos/op/phyport.py
 ${PYSITELIB}/jnpr/junos/op/phyport.pyc
 ${PYSITELIB}/jnpr/junos/op/phyport.pyo
@@ -139,6 +170,10 @@ ${PYSITELIB}/jnpr/junos/op/routes.py
 ${PYSITELIB}/jnpr/junos/op/routes.pyc
 ${PYSITELIB}/jnpr/junos/op/routes.pyo
 ${PYSITELIB}/jnpr/junos/op/routes.yml
+${PYSITELIB}/jnpr/junos/op/teddb.py
+${PYSITELIB}/jnpr/junos/op/teddb.pyc
+${PYSITELIB}/jnpr/junos/op/teddb.pyo
+${PYSITELIB}/jnpr/junos/op/teddb.yml
 ${PYSITELIB}/jnpr/junos/op/vlan.py
 ${PYSITELIB}/jnpr/junos/op/vlan.pyc
 ${PYSITELIB}/jnpr/junos/op/vlan.pyo
