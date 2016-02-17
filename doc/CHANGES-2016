@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.749 2016/02/17 15:03:16 taca Exp $
+$NetBSD: CHANGES-2016,v 1.750 2016/02/17 16:32:54 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -983,3 +983,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Moose to 2.1605 [wen 2016-02-17]
 	Updated time/ruby-tzinfo-data to 1.2016.1 [taca 2016-02-17]
 	Updated graphics/ruby-mini-magick to 4.4.0 [taca 2016-02-17]
+	Updated www/ap-authnz-crowd to 2.2.2nb1 [jperkin 2016-02-17]
