@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.753 2016/02/17 17:02:43 jaapb Exp $
+$NetBSD: CHANGES-2016,v 1.754 2016/02/17 20:32:44 he Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -987,3 +987,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added devel/ocaml-ppx_deriving version 3.1 [jaapb 2016-02-17]
 	Updated devel/ocaml-lwt to 2.5.1nb1 [jaapb 2016-02-17]
 	Updated devel/js_of_ocaml to 2.7nb1 [jaapb 2016-02-17]
+	Updated sysutils/ansible to 1.9.4nb1 [he 2016-02-17]
