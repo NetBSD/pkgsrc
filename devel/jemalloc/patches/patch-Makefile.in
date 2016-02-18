@@ -1,0 +1,17 @@
+$NetBSD: patch-Makefile.in,v 1.1 2016/02/18 15:51:59 gson Exp $
+
+Fix permissions of installed static libraries.
+
+--- Makefile.in.orig	2015-10-24 14:56:52.000000000 +0000
++++ Makefile.in
+@@ -304,8 +304,8 @@ endif
+ install_lib_static: $(STATIC_LIBS)
+ 	install -d $(LIBDIR)
+ 	@for l in $(STATIC_LIBS); do \
+-	echo "install -m 755 $$l $(LIBDIR)"; \
+-	install -m 755 $$l $(LIBDIR); \
++	echo "install -m 644 $$l $(LIBDIR)"; \
++	install -m 644 $$l $(LIBDIR); \
+ done
+ 
+ install_lib_pc: $(PC)
