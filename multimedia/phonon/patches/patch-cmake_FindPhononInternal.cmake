@@ -1,8 +1,27 @@
-$NetBSD: patch-cmake_FindPhononInternal.cmake,v 1.1 2013/11/13 22:51:06 joerg Exp $
+$NetBSD: patch-cmake_FindPhononInternal.cmake,v 1.2 2016/02/18 20:53:39 jperkin Exp $
 
---- cmake/FindPhononInternal.cmake.orig	2013-11-13 13:44:42.000000000 +0000
+Disable Darwin section, creates unusable libraries.
+
+--- cmake/FindPhononInternal.cmake.orig	2014-12-04 09:30:26.000000000 +0000
 +++ cmake/FindPhononInternal.cmake
-@@ -320,16 +320,16 @@ if (CMAKE_COMPILER_IS_GNUCXX)
+@@ -199,14 +199,14 @@ set(INSTALL_TARGETS_DEFAULT_ARGS RUNTIME
+                                  ARCHIVE DESTINATION "${LIB_INSTALL_DIR}" COMPONENT Devel)
+ 
+ # on the Mac support an extra install directory for application bundles
+-if(APPLE)
++if(notAPPLE)
+     set(INSTALL_TARGETS_DEFAULT_ARGS ${INSTALL_TARGETS_DEFAULT_ARGS}
+                                      BUNDLE DESTINATION "${BUNDLE_INSTALL_DIR}")
+     set(CMAKE_SHARED_MODULE_CREATE_C_FLAGS   "${CMAKE_SHARED_MODULE_CREATE_C_FLAGS}   -flat_namespace -undefined dynamic_lookup")
+     set(CMAKE_SHARED_MODULE_CREATE_CXX_FLAGS "${CMAKE_SHARED_MODULE_CREATE_CXX_FLAGS} -flat_namespace -undefined dynamic_lookup")
+ 
+    set(CMAKE_INSTALL_NAME_DIR ${LIB_INSTALL_DIR})
+-endif(APPLE)
++endif(notAPPLE)
+ 
+ # RPATH Handling
+ 
+@@ -324,16 +324,16 @@ if (CMAKE_COMPILER_IS_GNUCXX)
     # Select flags.
     set(CMAKE_CXX_FLAGS_RELWITHDEBINFO "-O2 -g -DNDEBUG -DQT_NO_DEBUG")
     set(CMAKE_CXX_FLAGS_RELEASE        "-O2 -DNDEBUG -DQT_NO_DEBUG")
