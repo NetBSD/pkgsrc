@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2014/06/09 12:21:07 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.5 2016/02/18 15:15:57 wiz Exp $
 bin/aserver
 include/alsa/alisp.h
 include/alsa/asoundef.h
@@ -26,14 +26,17 @@ include/alsa/seq.h
 include/alsa/seq_event.h
 include/alsa/seq_midi_event.h
 include/alsa/seqmid.h
+include/alsa/sound/asoc.h
 include/alsa/sound/asound_fm.h
 include/alsa/sound/emu10k1.h
 include/alsa/sound/hdsp.h
 include/alsa/sound/hdspm.h
 include/alsa/sound/sb16_csp.h
 include/alsa/sound/sscape_ioctl.h
+include/alsa/sound/tlv.h
 include/alsa/sound/type_compat.h
 include/alsa/timer.h
+include/alsa/topology.h
 include/alsa/use-case.h
 include/alsa/version.h
 include/sys/asoundlib.h
@@ -79,6 +82,7 @@ share/alsa/cards/ICE1724.conf
 share/alsa/cards/ICH-MODEM.conf
 share/alsa/cards/ICH.conf
 share/alsa/cards/ICH4.conf
+share/alsa/cards/Loopback.conf
 share/alsa/cards/Maestro3.conf
 share/alsa/cards/NFORCE.conf
 share/alsa/cards/PC-Speaker.conf
@@ -114,6 +118,7 @@ share/alsa/pcm/iec958.conf
 share/alsa/pcm/modem.conf
 share/alsa/pcm/rear.conf
 share/alsa/pcm/side.conf
+share/alsa/pcm/surround21.conf
 share/alsa/pcm/surround40.conf
 share/alsa/pcm/surround41.conf
 share/alsa/pcm/surround50.conf
@@ -121,8 +126,14 @@ share/alsa/pcm/surround51.conf
 share/alsa/pcm/surround71.conf
 share/alsa/smixer.conf
 share/alsa/sndo-mixer.alisp
+share/alsa/topology/broadwell/broadwell.conf
 share/alsa/ucm/DAISY-I2S/DAISY-I2S.conf
 share/alsa/ucm/DAISY-I2S/HiFi.conf
+share/alsa/ucm/GoogleNyan/GoogleNyan.conf
+share/alsa/ucm/GoogleNyan/HiFi.conf
+share/alsa/ucm/PAZ00/HiFi.conf
+share/alsa/ucm/PAZ00/PAZ00.conf
+share/alsa/ucm/PAZ00/Record.conf
 share/alsa/ucm/PandaBoard/FMAnalog
 share/alsa/ucm/PandaBoard/PandaBoard.conf
 share/alsa/ucm/PandaBoard/hifi
@@ -144,4 +155,6 @@ share/alsa/ucm/SDP4430/hifiLP
 share/alsa/ucm/SDP4430/record
 share/alsa/ucm/SDP4430/voice
 share/alsa/ucm/SDP4430/voiceCall
+share/alsa/ucm/broadwell-rt286/HiFi
+share/alsa/ucm/broadwell-rt286/broadwell-rt286.conf
 share/alsa/ucm/tegraalc5632/tegraalc5632.conf
