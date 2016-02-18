@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/02/15 03:05:41 leot Exp $
+# $NetBSD: Makefile,v 1.3 2016/02/18 10:22:39 fhajny Exp $
 
 DISTNAME=	zathura-0.3.5
 CATEGORIES=	print
@@ -19,5 +19,6 @@ MAKE_ENV+=	MANPREFIX=${PREFIX}/${PKGMANDIR}
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/girara/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../sysutils/file/buildlink3.mk"
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
