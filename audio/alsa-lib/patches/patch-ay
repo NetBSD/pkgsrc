@@ -1,8 +1,8 @@
-$NetBSD: patch-ay,v 1.4 2014/03/25 23:06:07 asau Exp $
+$NetBSD: patch-ay,v 1.5 2016/02/18 15:15:57 wiz Exp $
 
---- src/pcm/pcm_null.c.orig	2008-10-29 08:42:10.000000000 -0400
+--- src/pcm/pcm_null.c.orig	2015-11-09 07:39:18.000000000 +0000
 +++ src/pcm/pcm_null.c
-@@ -26,12 +26,18 @@
+@@ -26,11 +26,17 @@
   *
   */
    
@@ -10,7 +10,6 @@ $NetBSD: patch-ay,v 1.4 2014/03/25 23:06:07 asau Exp $
  #include <byteswap.h>
 +#endif
  #include <limits.h>
- #include <sys/shm.h>
  #include "pcm_local.h"
  #include "pcm_plugin.h"
  
