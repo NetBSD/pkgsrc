@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2016/02/16 17:47:19 leot Exp $
+# $NetBSD: Makefile,v 1.9 2016/02/18 18:52:54 leot Exp $
 
 DISTNAME=		slock-1.3
 CATEGORIES=		x11
@@ -11,18 +11,26 @@ LICENSE=		mit
 
 MAKE_JOBS_SAFE=	no
 
-# Adjust config.mk
 SUBST_CLASSES+=		makefile
 SUBST_STAGE.makefile=	pre-configure
-SUBST_MESSAGE.makefile=	Fixing config.mk
+SUBST_MESSAGE.makefile=	Adjust config.mk
 SUBST_FILES.makefile=	config.mk
 SUBST_SED.makefile+=	-e 's,/usr/local,${PREFIX},g'
 SUBST_SED.makefile+=	-e 's,share/man,${PKGMANDIR},g'
 SUBST_SED.makefile+=	-e 's,/usr/X11R6,${X11BASE},'
 SUBST_SED.makefile+=	-e '/^CPPFLAGS/ s,-DHAVE_SHADOW_H,,'
 SUBST_SED.makefile+=	-e 's,^CFLAGS *= ,CFLAGS += ,'
+SUBST_SED.makefile+=	-e 's,^CPPFLAGS *= ,CPPFLAGS += ,'
 SUBST_SED.makefile+=	-e 's,^LDFLAGS *= ,LDFLAGS += ,'
 SUBST_SED.makefile+=	-e 's/cc/${CC:Q}/'
+
+# Bump _XOPEN_SOURCE version to 600 in order to avoid "Compiler or options
+# invalid for pre-UNIX 03 X/Open applications" error on SunOS.
+SUBST_CLASSES+=		slock
+SUBST_STAGE.slock=	pre-configure
+SUBST_MESSAGE.slock=	Bump _XOPEN_SOURCE version
+SUBST_FILES.slock=	slock.c
+SUBST_SED.slock+=	-e '/_XOPEN_SOURCE/ s/500/600/'
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
@@ -41,4 +49,5 @@ SPECIAL_PERMS+=	bin/slock ${SETUID_ROOT_PERMS}
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
