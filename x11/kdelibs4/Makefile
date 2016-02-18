@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2016/01/10 19:01:10 markd Exp $
+# $NetBSD: Makefile,v 1.82 2016/02/18 23:24:45 jperkin Exp $
 
 DISTNAME=	kdelibs-4.14.15
 PKGNAME=	${DISTNAME:S/-4/4-4/}
@@ -67,9 +67,15 @@ SUBST_FILES.phononrelpath=	_KDE_build/CMakeFiles/Export/${LOCALBASE:S^/^_^}/shar
 SUBST_SED.phononrelpath=	-e 's:[^"]*/\.buildlink/lib/libphonon\.so::'
 
 USE_TOOLS+=	flex gmake
-PLIST_VARS+=	kgrantpty
+PLIST_VARS+=	kgrantpty mac notmac
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+PLIST.mac=	yes
+.else
+PLIST.notmac=	yes
+.endif
 
 .if ${OPSYS} == "NetBSD"
 # make sure zone.tab is installed
