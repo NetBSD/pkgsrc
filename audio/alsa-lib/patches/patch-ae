@@ -1,50 +1,23 @@
-$NetBSD: patch-ae,v 1.6 2015/11/07 19:43:57 dholland Exp $
+$NetBSD: patch-ae,v 1.7 2016/02/18 15:15:57 wiz Exp $
 
  - Handle endian detection for assorted operating systems.
  - Fix up linuxism.
  - Don't assert GNU ld on Solaris, where it might not be true.
 
---- include/local.h.orig	2013-07-08 12:31:36.000000000 +0000
+--- include/local.h.orig	2015-11-09 07:39:18.000000000 +0000
 +++ include/local.h
-@@ -28,11 +28,37 @@
- #include <string.h>
- #include <fcntl.h>
- #include <assert.h>
-+#if defined(__NetBSD__) || defined(__FreeBSD__) || defined(__DragonFly__) || \
-+    defined(__OpenBSD__) || defined(__Bitrig__)
-+#include <sys/endian.h>
-+#elif defined(__APPLE__)
-+#include <machine/endian.h>
-+#elif defined(__sun)
-+#include <sys/byteorder.h>
-+#define __LITTLE_ENDIAN 1234
-+#define __BIG_ENDIAN 4321
-+#ifdef _BIG_ENDIAN
-+#define __BYTE_ORDER __BIG_ENDIAN
-+#else
-+#define __BYTE_ORDER __LITTLE_ENDIAN
-+#endif
-+#else
- #include <endian.h>
-+#endif
-+
-+#if !defined(__BYTE_ORDER) && defined(_BYTE_ORDER)
-+/* Older BSDs */
-+#define __BYTE_ORDER _BYTE_ORDER
-+#define __BIG_ENDIAN _BIG_ENDIAN
-+#define __LITTLE_ENDIAN _LITTLE_ENDIAN
-+#endif
-+
- #include <stdarg.h>
+@@ -50,8 +50,10 @@
  #include <sys/poll.h>
+ #include <sys/types.h>
  #include <errno.h>
 +#if defined(__linux__)
+ #include <linux/types.h>
  #include <linux/ioctl.h>
 +#endif
  
- #include "config.h"
  #ifdef SUPPORT_RESMGR
-@@ -228,7 +254,9 @@ extern snd_lib_error_handler_t snd_err_m
+ #include <resmgr.h>
+@@ -249,7 +251,9 @@ extern snd_lib_error_handler_t snd_err_m
  
  /*
   */
