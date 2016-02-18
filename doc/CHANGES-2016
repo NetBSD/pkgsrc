@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.768 2016/02/18 15:55:12 gson Exp $
+$NetBSD: CHANGES-2016,v 1.769 2016/02/18 17:30:53 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1002,3 +1002,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated audio/alsa-plugins-oss to 1.1.0 [wiz 2016-02-18]
 	Updated audio/alsa-plugins-pulse to 1.1.0 [wiz 2016-02-18]
 	Added devel/jemalloc version 4.0.4 [gson 2016-02-18]
+	Updated print/py-weasyprint to 0.26 [kleink 2016-02-18]
