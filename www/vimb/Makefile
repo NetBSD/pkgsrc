@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/01/24 17:08:39 leot Exp $
+# $NetBSD: Makefile,v 1.2 2016/02/18 19:06:09 leot Exp $
 
 DISTNAME=	vimb-2.11
 CATEGORIES=	www
@@ -12,6 +12,16 @@ LICENSE=	gnu-gpl-v3
 USE_TOOLS+=	gmake pkg-config
 
 CFLAGS.NetBSD+=	-D_NETBSD_SOURCE	# needed for LOCK_* macros in <fcntl.h>
+
+# Bump _XOPEN_SOURCE version to 600 in order to avoid "Compiler or options
+# invalid for pre-UNIX 03 X/Open applications" error on SunOS and correctly
+# define _POSIX_SOURCE
+SUBST_CLASSES+=		configmk
+SUBST_STAGE.configmk=	pre-configure
+SUBST_MESSAGE.configmk=	Bump _XOPEN_SOURCE version and correctly define _POSIX_SOURCE
+SUBST_FILES.configmk=	config.mk
+SUBST_SED.configmk+=	-e '/_XOPEN_SOURCE/ s/500/600/'
+SUBST_SED.configmk+=	-e '/_POSIX_SOURCE/ s/-DPOSIX_SOURCE/-DPOSIX_SOURCE=1/'
 
 EGDIR=		${PREFIX}/share/examples/vimb
 
