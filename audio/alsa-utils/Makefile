@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2015/08/18 07:31:01 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.17 2016/02/18 15:16:33 wiz Exp $
 
-DISTNAME=	alsa-utils-1.0.27.2
-PKGREVISION=	2
+DISTNAME=	alsa-utils-1.1.0
 CATEGORIES=	audio
 MASTER_SITES=	ftp://ftp.alsa-project.org/pub/utils/
 MASTER_SITES+=	ftp://gd.tuwien.ac.at/opsys/linux/alsa/utils/
@@ -23,7 +21,8 @@ CPPFLAGS.NetBSD+=	-Dbswap_16=bswap16 -Dbswap_32=bswap32
 
 CFLAGS+=		-g
 
-REPLACE_BASH=		alsaconf/alsaconf.in
+REPLACE_BASH+=		alsaconf/alsaconf.in
+REPLACE_BASH+=		alsa-info/alsa-info.sh
 
 BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 
@@ -31,4 +30,5 @@ CONFIGURE_ARGS+=	--disable-nls
 
 .include "../../audio/alsa-lib/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
+.include "../../math/fftw/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

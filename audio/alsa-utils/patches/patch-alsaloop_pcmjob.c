@@ -1,6 +1,6 @@
-$NetBSD: patch-alsaloop_pcmjob.c,v 1.1 2014/06/09 12:34:26 ryoon Exp $
+$NetBSD: patch-alsaloop_pcmjob.c,v 1.2 2016/02/18 15:16:33 wiz Exp $
 
---- alsaloop/pcmjob.c.orig	2013-07-09 15:28:37.000000000 +0000
+--- alsaloop/pcmjob.c.orig	2015-10-27 16:34:26.000000000 +0000
 +++ alsaloop/pcmjob.c
 @@ -25,6 +25,10 @@
  #include <stdlib.h>
@@ -24,15 +24,3 @@ $NetBSD: patch-alsaloop_pcmjob.c,v 1.1 2014/06/09 12:34:26 ryoon Exp $
  #define XRUN_PROFILE_UNKNOWN (-10000000)
  
  static int set_rate_shift(struct loopback_handle *lhandle, double pitch);
-@@ -63,7 +71,11 @@ static const char *src_types[] = {
- #endif
- 
- static pthread_mutex_t pcm_open_mutex =
-+#if defined(PTHREAD_RECURSIVE_MUTEX_INITIALIZER_NP)
-                                 PTHREAD_RECURSIVE_MUTEX_INITIALIZER_NP;
-+#else
-+				PTHREAD_MUTEX_INITIALIZER;
-+#endif
- 
- static inline void pcm_open_lock(void)
- {
