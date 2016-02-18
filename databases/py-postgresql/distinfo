@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.21 2016/01/24 07:35:04 richard Exp $
+$NetBSD: distinfo,v 1.22 2016/02/18 18:38:38 darcy Exp $
 
-SHA1 (PyGreSQL-4.2.tar.gz) = 38e16ab3fe6d5aa05e685259b618e6317a9b513c
-RMD160 (PyGreSQL-4.2.tar.gz) = 317a4d7dcaabc44c06eaca0e7d2588beabc65d5d
-SHA512 (PyGreSQL-4.2.tar.gz) = 10128e1eedfc228d1c991b185ea51fadd7d6ae124c4d68ea102a7d208e5e2111ffa18bfdb0d37fcba17a77d7b82420ccf0920ce53a0042dbbc48aca1a57feaf0
-Size (PyGreSQL-4.2.tar.gz) = 1355824 bytes
+SHA1 (PyGreSQL-4.2.1.tar.gz) = 93575cf33c47d88fb484b39687d75014dfd418e2
+RMD160 (PyGreSQL-4.2.1.tar.gz) = f2eca0f082d84aa076752f45119ccc5cf275af96
+SHA512 (PyGreSQL-4.2.1.tar.gz) = e6f2854ee2da3f87cae3fc56e52d7c5bec85d8b1fa50ccb894e3ab4d7a08a565bc09c7cd2c39e3ed369cb8ef18386622625c5f261764ba8bf692efb25a68533a
+Size (PyGreSQL-4.2.1.tar.gz) = 480155 bytes
