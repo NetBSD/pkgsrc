@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2015/12/05 21:25:40 adam Exp $
+# $NetBSD: Makefile,v 1.14 2016/02/18 14:39:51 gdt Exp $
 
 DISTNAME=	talloc-2.1.5
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.samba.org/ftp/talloc/
 
@@ -33,16 +34,29 @@ REPLACE_PYTHON+=	wscript
 
 .include "../../mk/bsd.prefs.mk"
 
-# Fix incorrect install_name of talloc library on Darwin.  Don't bother
-# fixing similar problem in pytalloc-util nor the Python talloc.so
-# since those reference other build-time paths in addition to having an
-# incorrect install_name; they will remain broken.
+# Fix install names of libraries on Darwin.
 # Upstream bug report: https://bugzilla.samba.org/show_bug.cgi?id=10791
 post-install:
 .if ${OPSYS} == "Darwin"
-	install_name_tool -id \
+	install_name_tool \
+	    -id \
+	    ${PREFIX}/lib/libpytalloc-util.${PKGVERSION_NOREV}.dylib \
+	    -change \
+	    ${WRKSRC}/bin/default/libtalloc.dylib \
+	    ${PREFIX}/lib/libtalloc.dylib \
+	    ${DESTDIR}${PREFIX}/lib/libpytalloc-util.${PKGVERSION_NOREV}.dylib
+	install_name_tool \
+	    -id \
 	    ${PREFIX}/lib/libtalloc.${PKGVERSION_NOREV}.dylib \
 	    ${DESTDIR}${PREFIX}/lib/libtalloc.${PKGVERSION_NOREV}.dylib
+	install_name_tool \
+	    -change \
+	    ${WRKSRC}/bin/default/libpytalloc-util.dylib \
+	    ${PREFIX}/lib/libpytalloc-util.dylib \
+	    -change \
+	    ${WRKSRC}/bin/default/libtalloc.dylib \
+	    ${PREFIX}/lib/libtalloc.dylib \
+	    ${DESTDIR}${PREFIX}/${PYSITELIB}/talloc.so
 .endif
 
 .include "../../lang/python/application.mk"
