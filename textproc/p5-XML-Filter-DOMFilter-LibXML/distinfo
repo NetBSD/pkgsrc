@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:59:56 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/02/18 04:41:34 wen Exp $
 
-SHA1 (XML-Filter-DOMFilter-LibXML-0.02.tar.gz) = 967a4e1bf01e08719d6ec0bd95d10cc67f096150
-RMD160 (XML-Filter-DOMFilter-LibXML-0.02.tar.gz) = a40e28b5eb83ed332bdae7aa65141b8755b97fc0
-SHA512 (XML-Filter-DOMFilter-LibXML-0.02.tar.gz) = 7a3d96c457f78c8390f66ca7c572251c81340939e3f4555061db50780c317cb9f75714935010601dcd724c82a0635b2e6fa1bd32ab24919bcf12bcbe8f6b6964
-Size (XML-Filter-DOMFilter-LibXML-0.02.tar.gz) = 4215 bytes
+SHA1 (XML-Filter-DOMFilter-LibXML-0.04.tar.gz) = 64abab7fadcf83f9c07caedb73fa81de71c29f08
+RMD160 (XML-Filter-DOMFilter-LibXML-0.04.tar.gz) = 2a18f5609766ed906047be2b5f64f3b971be7b90
+SHA512 (XML-Filter-DOMFilter-LibXML-0.04.tar.gz) = 7a82262ca50b95da663fcc4fdb8de75a8526c623da2e05d4932b3ad4fbc94f72e341e34c32ab92223a5e1161f0807b6fc7caa1b7cacb4724bb0cf8d648c32ae3
+Size (XML-Filter-DOMFilter-LibXML-0.04.tar.gz) = 5382 bytes
