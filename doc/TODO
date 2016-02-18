@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15472 2016/02/18 10:08:19 wiz Exp $
+$NetBSD: TODO,v 1.15473 2016/02/18 15:16:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -406,7 +406,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o alacarte-0.13.2
 	o allegro-5.10
 	o alpine-2.20
-	o alsa-lib-1.1.0
 	o alsa-plugins-1.1.0
 	o alsa-utils-1.1.0
 	o ampache-3.8.2
