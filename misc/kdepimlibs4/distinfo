@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.33 2016/01/10 19:33:04 markd Exp $
+$NetBSD: distinfo,v 1.34 2016/02/18 20:55:45 jperkin Exp $
 
 SHA1 (kdepimlibs-4.14.10.tar.xz) = 8db2f59b8a33f4d1bbebfdff8b772d30669c9932
 RMD160 (kdepimlibs-4.14.10.tar.xz) = 4df52569c41b3af12aaf6f457e213f31feb78343
@@ -9,6 +9,7 @@ SHA1 (patch-akonadi_itemsync.h) = 9e5a300958754f69be5310c822ecf5da180a4bf5
 SHA1 (patch-akonadi_resourcebase.cpp) = b0195b6f6ec2a56d7fdcd2bf79a87236d601da32
 SHA1 (patch-akonadi_resourcebase.h) = e0a6910c198ace215631dffb380cb67e15061927
 SHA1 (patch-akonadi_tests_itemsynctest.cpp) = 309873e79d59ae81021a88db725ce63769ec0160
+SHA1 (patch-cmake_modules_FindLdap.cmake) = 686bf45bb4c9ffb7a56b670547d1ba67d702ac19
 SHA1 (patch-gpgmexx_config-gpgmexx.h.cmake) = bd8fd1e9a619d6bd52185f37adb5dc7f7b97423c
 SHA1 (patch-kblog_CMakeLists.txt) = b03068672c39492ef4883125c65f7951c7cc8f01
 SHA1 (patch-kimap_loginjob.cpp) = 8a0fe3c1779b981d9c9ca6cb34121219f2f97c9f
