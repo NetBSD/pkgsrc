@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.9 2015/11/03 01:12:24 agc Exp $
+$NetBSD: distinfo,v 1.10 2016/02/18 15:16:33 wiz Exp $
 
-SHA1 (alsa-utils-1.0.27.2.tar.bz2) = dfec4691dde6b2cee292bbd10f0f368158713e8f
-RMD160 (alsa-utils-1.0.27.2.tar.bz2) = 05432f3f795a43a42d43e7589235060eb83298f6
-SHA512 (alsa-utils-1.0.27.2.tar.bz2) = c9a4943852ec1a71a5a8d2c99e1df0ba96a5d9d1196cabfdb6655f58c6a9a5a9d40dea62de019f5ed0fad0885800403c48a4a6c86b67af7fbd842097881c2bd6
-Size (alsa-utils-1.0.27.2.tar.bz2) = 1143802 bytes
+SHA1 (alsa-utils-1.1.0.tar.bz2) = 1ad980aa5a1f3118d686f74d3973d64909e3efc3
+RMD160 (alsa-utils-1.1.0.tar.bz2) = 7a2bb3dd79f8c4472725b1e0437ae71b277ac45e
+SHA512 (alsa-utils-1.1.0.tar.bz2) = c61f056959feba015bb4a6f49980c4beb6a0c34be09e7196864583897ea86373b593a8807999a07df9c87a3a0c714075b9aae516752e83a946d0d60bc8f90f98
+Size (alsa-utils-1.1.0.tar.bz2) = 1181085 bytes
 SHA1 (patch-aa) = 78087e7a7fe860e002d592b0c7b83e98b10ea2c3
 SHA1 (patch-ab) = 6bbdb3c16e49b6fba05120c243292c9ef51ebca4
 SHA1 (patch-ac) = 19f9570bedfb00068aad244033eb6e6436a6546d
 SHA1 (patch-ad) = 4da5adfbd3fcc0611c6394bf00f2b684e735dbd2
-SHA1 (patch-alsaloop_alsaloop.c) = 469b00a0ffa7ab3bca752bd61e458026100628fe
-SHA1 (patch-alsaloop_pcmjob.c) = ae340dde8532d3a1253d4ff38782f17fbf2d381e
+SHA1 (patch-alsaloop_alsaloop.c) = f281b7cdc75a31a4b06fbce56fc2c51b2371cd0b
+SHA1 (patch-alsaloop_pcmjob.c) = 9a09a103d390ee5d7586e19c688a2c621ee1c6f6
 SHA1 (patch-alsamixer_volume__mapping.c) = a543c74ba4f3f3b3cc7768623fbca760b06a7872
