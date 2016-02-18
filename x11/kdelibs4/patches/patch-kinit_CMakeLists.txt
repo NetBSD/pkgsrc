@@ -1,0 +1,25 @@
+$NetBSD: patch-kinit_CMakeLists.txt,v 1.1 2016/02/18 23:24:46 jperkin Exp $
+
+Disable Darwin bundles.
+
+--- kinit/CMakeLists.txt.orig	2015-12-08 15:49:30.000000000 +0000
++++ kinit/CMakeLists.txt
+@@ -41,15 +41,15 @@ endif (WIN32)
+ 
+ # on win32 kdeinit4 has to be a console application 
+ # to be able to catch stderr based --verbose output
+-if (Q_WS_MAC)
++if (notQ_WS_MAC)
+   # this has to be GUI on OSX because it launches GUI apps and need a quartz context
+   kde4_add_executable(kdeinit4 ${kdeinit_SRCS})
+   set_target_properties(kdeinit4 PROPERTIES MACOSX_BUNDLE_INFO_PLIST ${CMAKE_CURRENT_SOURCE_DIR}/Info.plist.template)
+   set_target_properties(kdeinit4 PROPERTIES MACOSX_BUNDLE_GUI_IDENTIFIER "org.kde.kdeinit4")
+   set_target_properties(kdeinit4 PROPERTIES MACOSX_BUNDLE_BUNDLE_NAME "KDE Init")
+-else (Q_WS_MAC)
++else (notQ_WS_MAC)
+   kde4_add_executable(kdeinit4 NOGUI ${kdeinit_SRCS})
+-endif (Q_WS_MAC)
++endif (notQ_WS_MAC)
+ 
+ target_link_libraries(kdeinit4 ${KDE4_KDEUI_LIBS} ${kdeinit_LIBS} ${KINIT_SOCKET_LIBRARY} )
+ if (Q_WS_X11)

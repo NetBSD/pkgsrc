@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.47 2016/01/10 19:01:10 markd Exp $
+$NetBSD: distinfo,v 1.48 2016/02/18 23:24:45 jperkin Exp $
 
 SHA1 (kdelibs-4.14.15.tar.xz) = 7a50824fbcd2a4a72c8780da7b1425b038415419
 RMD160 (kdelibs-4.14.15.tar.xz) = f56c85a572817c344ef3897512385c125a9046ac
 SHA512 (kdelibs-4.14.15.tar.xz) = a50dcf8bd06024efe4c4e62a7822cd4e20820452812e1a41961d32b8b8dd2ae52346220830a5ab2ebf6f7a99071852fa21f8dca6e4ba6ddb872b5023b7b2d6df
 Size (kdelibs-4.14.15.tar.xz) = 11633836 bytes
 SHA1 (patch-ConfigureChecks.cmake) = b03b38108d68d940782fbbb876affd011a39acf4
-SHA1 (patch-aa) = c3044205a964797a7718b7a7bd03bb99dd3ca37d
+SHA1 (patch-aa) = 86c801869ba1fd2608256519cc92088225c4dafc
 SHA1 (patch-ab) = 3f89ddfa9a6101a016128d82dbbd0e985e396cae
 SHA1 (patch-ac) = 200391c0cf0a89ef43f0cb57e39d56eee51da505
 SHA1 (patch-ad) = 08467b484f3df864d343d9151b13bedc4f001976
@@ -13,14 +13,15 @@ SHA1 (patch-ag) = 67561007567ba10f20d8e8572dd0a33c8139b7cd
 SHA1 (patch-ah) = 368f4f641ce55257409137185357e796666ae42f
 SHA1 (patch-aj) = 501e34c8fdf242c3718ecb26577ac5940d37fae5
 SHA1 (patch-ak) = 73cc1bb149039d2fe3c05ee631426a8773f951c6
-SHA1 (patch-al) = 5efa7d504fe75bec53837bfa062a4b3f910fd71f
+SHA1 (patch-al) = 20212d740191a699f7aa35db8c23a3b3cb55904e
 SHA1 (patch-am) = b6c315d152d2c3d3c66ad85050549d0b39b263e5
-SHA1 (patch-cmake_modules_FindKDE4Internal.cmake) = b5f00d1df3c35f499f86aa1d8d234612e8bd130a
+SHA1 (patch-cmake_modules_FindKDE4Internal.cmake) = becfce89d45fd9b70c2ca08a83ca0e650004996a
 SHA1 (patch-kdecore_io_kdirwatch__p.h) = 3c14e26f3962743f7d450e2a5ea2df43bc7524b5
 SHA1 (patch-kdecore_localization_klocale_kde.cpp) = b8a513a0c51e65d7e604a88c1d0e3325be6ad688
 SHA1 (patch-kdecore_network_ConfigureChecks.cmake) = 0ad9352974911ef78ec565f7b2a97c45ead2cf72
 SHA1 (patch-kdecore_tests_CMakeLists.txt) = bbe806b078f54201528c86489d3ac200145a8d2f
 SHA1 (patch-kdecore_util_kshareddatacache_p.h) = 6d064fe75fbecd489b0343960333864c717c0805
+SHA1 (patch-kinit_CMakeLists.txt) = bcbf273d79702a4f1a617df0c86c2d5771447364
 SHA1 (patch-kjs_JSImmediate.h) = ecc761c7c82f711f41cf47d706c1c22d22c2980a
 SHA1 (patch-kjs_interpreter.cpp) = 9d400daf7d96674b8d66e1cde46dcb3615635241
 SHA1 (patch-kjs_wtf_DisallowCType.h) = 6305dd274f1478ba0fe0a6f1717451ab8e3e50d2
