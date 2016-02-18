@@ -1,6 +1,6 @@
-$NetBSD: patch-alsaloop_alsaloop.c,v 1.2 2014/06/11 14:45:09 ryoon Exp $
+$NetBSD: patch-alsaloop_alsaloop.c,v 1.3 2016/02/18 15:16:33 wiz Exp $
 
---- alsaloop/alsaloop.c.orig	2013-07-09 15:28:37.000000000 +0000
+--- alsaloop/alsaloop.c.orig	2015-10-27 16:34:26.000000000 +0000
 +++ alsaloop/alsaloop.c
 @@ -24,6 +24,16 @@
  #include <stdlib.h>
@@ -20,7 +20,7 @@ $NetBSD: patch-alsaloop_alsaloop.c,v 1.2 2014/06/11 14:45:09 ryoon Exp $
  #include <getopt.h>
  #include <alsa/asoundlib.h>
 @@ -34,6 +44,10 @@
- #include <sys/signal.h>
+ #include <signal.h>
  #include "alsaloop.h"
  
 +#if !defined(ESTRPIPE)
