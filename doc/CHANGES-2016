@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.762 2016/02/18 09:57:23 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.763 2016/02/18 10:08:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -996,3 +996,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/p5-XML-Filter-DOMFilter-LibXML to 0.04 [wen 2016-02-18]
 	Updated sysutils/ansible to 1.9.4nb2 [he 2016-02-18]
 	Updated textproc/py-html2text to 2016.1.8nb1 [wiz 2016-02-18]
+	Updated textproc/miller to 3.4.0 [wiz 2016-02-18]

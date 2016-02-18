@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15470 2016/02/18 03:52:30 wen Exp $
+$NetBSD: TODO,v 1.15471 2016/02/18 10:08:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1070,7 +1070,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mg-20150323
 	o mgetty+sendfax-1.1.35
 	o micro_httpd-20140814
-	o miller-3.4.0
 	o milter-greylist-4.5.14
 	o milter-regex-2.0
 	o mime-construct-1.11
