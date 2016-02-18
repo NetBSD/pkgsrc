@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.758 2016/02/18 04:01:58 wen Exp $
+$NetBSD: CHANGES-2016,v 1.759 2016/02/18 04:20:05 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -992,3 +992,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/p5-Text-Unidecode to 2.17 [wen 2016-02-18]
 	Updated textproc/p5-Unicode-LineBreak to 2015.12 [wen 2016-02-18]
 	Updated textproc/p5-XML-Entities to 1.0002 [wen 2016-02-18]
+	Updated textproc/p5-XML-Feed to 0.53 [wen 2016-02-18]
