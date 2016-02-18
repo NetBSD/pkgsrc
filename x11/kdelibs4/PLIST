@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2016/01/10 19:01:10 markd Exp $
+@comment $NetBSD: PLIST,v 1.20 2016/02/18 23:24:45 jperkin Exp $
 bin/checkXML
 bin/kbuildsycoca4
 bin/kconfig_compiler
@@ -20,6 +20,7 @@ bin/makekdewidgets
 bin/meinproc4
 bin/meinproc4_simple
 bin/preparetips
+${PLIST.mac}bin/start-session-bus.sh
 include/KDE/ConversionCheck/QVconvertible
 include/KDE/ConversionCheck/type_toQString
 include/KDE/ConversionCheck/type_toQVariant
@@ -1064,7 +1065,7 @@ include/dom/html_list.h
 include/dom/html_misc.h
 include/dom/html_object.h
 include/dom/html_table.h
-include/fixx11h.h
+${PLIST.notmac}include/fixx11h.h
 include/k3aboutapplication.h
 include/k3aboutdialog.h
 include/k3activelabel.h
@@ -1396,7 +1397,8 @@ include/kjs/kjsobject.h
 include/kjs/kjsprototype.h
 include/kkeysequencewidget.h
 include/kkeyserver.h
-include/kkeyserver_x11.h
+${PLIST.mac}include/kkeyserver_mac.h
+${PLIST.notmac}include/kkeyserver_x11.h
 include/klanguagebutton.h
 include/klauncher_iface.h
 include/kled.h
@@ -2362,6 +2364,7 @@ share/kde/apps/kdeui/pics/kdeprint_nup4.png
 share/kde/apps/kdeui/pics/kdeprint_nupother.png
 share/kde/apps/kdeui/pics/ktip-bulb.png
 share/kde/apps/kdeui/pics/thumb_frame.png
+${PLIST.mac}share/kde/apps/kdeui/rgb.txt
 share/kde/apps/kdewidgets/pics/k3iconview.png
 share/kde/apps/kdewidgets/pics/k3listview.png
 share/kde/apps/kdewidgets/pics/kactionselector.png
