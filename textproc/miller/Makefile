@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2015/12/29 23:43:18 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2016/02/18 10:07:48 wiz Exp $
 
-DISTNAME=	miller-3.2.2
+DISTNAME=	mlr-3.4.0
+PKGNAME=	${DISTNAME:S/mlr/miller/}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=johnkerl/}
 GITHUB_PROJECT=	miller
-GITHUB_TAG=	v${PKGVERSION_NOREV}
+GITHUB_RELEASE=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://github.com/johnkerl/miller/
@@ -15,10 +16,6 @@ BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	autoreconf autoconf automake
-BUILDLINK_TRANSFORM+=	rm:-Werror
-
-pre-configure:
-	cd ${WRKSRC} && autoreconf -fiv
+TEST_TARGET=	check
 
 .include "../../mk/bsd.pkg.mk"

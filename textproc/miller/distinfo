@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/12/29 23:43:18 wiz Exp $
+$NetBSD: distinfo,v 1.7 2016/02/18 10:07:48 wiz Exp $
 
-SHA1 (miller-3.2.2.tar.gz) = c0e0d120111742498b63b0118959a3e266be2985
-RMD160 (miller-3.2.2.tar.gz) = 8bf4aed4bc3d152aec36593c3922f07aa99f24ab
-SHA512 (miller-3.2.2.tar.gz) = d008d286c6434065b940f07e31027950c5beb51b17d97f7e54fedd4b569eef8075eedcd9beb36bb9603f27ae77eb6d917242a9c3ca8429731f0cf9dfc2a57282
-Size (miller-3.2.2.tar.gz) = 3194155 bytes
+SHA1 (mlr-3.4.0.tar.gz) = 21885584296dc9bfa585137d472b45a3e8827300
+RMD160 (mlr-3.4.0.tar.gz) = 939b2c4b11b689864d6a2fa378c7d876be85e61d
+SHA512 (mlr-3.4.0.tar.gz) = 8886354e46763336c5b785bd44c2c6038ac9c0112dc21930cc80031d98084f62792bfd7bab904df8eb6f161cd8d77c2e193ead1ece12edf6f60c3ec49713901c
+Size (mlr-3.4.0.tar.gz) = 799412 bytes
