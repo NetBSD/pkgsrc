@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST.gtk2,v 1.2 2016/02/18 06:20:45 dbj Exp $
 include/wx-3.0/wx/aui/tabartgtk.h
 include/wx-3.0/wx/generic/icon.h
 include/wx-3.0/wx/generic/imaglist.h
