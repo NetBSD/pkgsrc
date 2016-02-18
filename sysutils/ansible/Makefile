@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2016/02/17 20:31:45 he Exp $
+# $NetBSD: Makefile,v 1.18 2016/02/18 09:24:25 he Exp $
 
 DISTNAME=	ansible-1.9.4
-PKGREVISION=	1
+PKGREVISION=	2
 #PKGNAME=   ${PYPKGPREFIX}-${DISTNAME} # XXX: for when package is py3x-ready
 CATEGORIES=	python sysutils
 MASTER_SITES=	http://releases.ansible.com/ansible/
@@ -56,6 +56,7 @@ MANPAGES+=      ansible-playbook.1 ansible.1
 
 INSTALLATION_DIRS=      bin ${PKGMANDIR}/man1 ${PKG_SYSCONFDIR}/ansible
 INSTALLATION_DIRS+=     ${EGDIR}/playbooks
+INSTALLATION_DIRS+=     share/ansible/roles
 
 CHECK_INTERPRETER_SKIP= share/ansible/*
 
