@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST.cocoa,v 1.2 2016/02/18 06:20:45 dbj Exp $
 include/wx-3.0/wx/generic/animate.h
 include/wx-3.0/wx/generic/clrpickerg.h
 include/wx-3.0/wx/generic/collpaneg.h
