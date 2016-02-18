@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.766 2016/02/18 15:17:15 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.767 2016/02/18 15:17:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1000,3 +1000,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated audio/alsa-lib to 1.1.0 [wiz 2016-02-18]
 	Updated audio/alsa-utils to 1.1.0 [wiz 2016-02-18]
 	Updated audio/alsa-plugins-oss to 1.1.0 [wiz 2016-02-18]
+	Updated audio/alsa-plugins-pulse to 1.1.0 [wiz 2016-02-18]
