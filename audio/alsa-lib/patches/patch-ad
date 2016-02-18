@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.5 2015/01/10 10:14:20 rumko Exp $
+$NetBSD: patch-ad,v 1.6 2016/02/18 15:15:57 wiz Exp $
 
---- include/global.h.orig	2013-07-08 12:31:36.000000000 +0000
+--- include/global.h.orig	2015-11-09 07:39:18.000000000 +0000
 +++ include/global.h
 @@ -30,6 +30,13 @@
  
@@ -16,10 +16,10 @@ $NetBSD: patch-ad,v 1.5 2015/01/10 10:14:20 rumko Exp $
  
  #ifdef __cplusplus
  extern "C" {
-@@ -133,7 +140,7 @@ int snd_shm_area_destroy(struct snd_shm_
- 
+@@ -134,7 +141,7 @@ int snd_shm_area_destroy(struct snd_shm_
  int snd_user_file(const char *file, char **result);
  
+ #ifdef __GLIBC__
 -#if !defined(_POSIX_C_SOURCE) && !defined(_POSIX_SOURCE)
 +#if !defined(_POSIX_C_SOURCE) && !defined(_POSIX_SOURCE) && !defined(__NetBSD__) && !defined(__FreeBSD__) && !defined(__DragonFly__) && !defined(__sun)
  struct timeval {
