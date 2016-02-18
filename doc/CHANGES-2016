@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.767 2016/02/18 15:17:25 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.768 2016/02/18 15:55:12 gson Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1001,3 +1001,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated audio/alsa-utils to 1.1.0 [wiz 2016-02-18]
 	Updated audio/alsa-plugins-oss to 1.1.0 [wiz 2016-02-18]
 	Updated audio/alsa-plugins-pulse to 1.1.0 [wiz 2016-02-18]
+	Added devel/jemalloc version 4.0.4 [gson 2016-02-18]
