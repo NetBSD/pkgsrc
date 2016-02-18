@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2016/02/17 06:05:41 dbj Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2016/02/18 10:12:59 wiz Exp $
 
 BUILDLINK_TREE+=	fltk
 
@@ -10,6 +10,7 @@ BUILDLINK_ABI_DEPENDS.fltk?=	fltk>=1.3.3nb1
 BUILDLINK_PKGSRCDIR.fltk?=	../../x11/fltk13
 BUILDLINK_FILES.fltk+=		include/Fl/*
 
+.include "../../mk/bsd.fast.prefs.mk"
 .if ${OPSYS} != "Darwin"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
