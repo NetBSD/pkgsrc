@@ -1,6 +1,7 @@
-$NetBSD: patch-lib_ansible_constants,v 1.1 2016/02/17 20:31:45 he Exp $
+$NetBSD: patch-lib_ansible_constants,v 1.2 2016/02/18 09:24:25 he Exp $
 
 Fix hardcoded paths to be replaced with SUBST framework.
+Move the ansible/roles tree out from under any etc/ directory to share/
 
 --- lib/ansible/constants.py.orig	2015-06-25 20:39:08.000000000 +0000
 +++ lib/ansible/constants.py
@@ -21,7 +22,7 @@ Fix hardcoded paths to be replaced with SUBST framework.
 +DEFAULT_HOST_LIST         = shell_expand_path(get_config(p, DEFAULTS, 'inventory', 'ANSIBLE_INVENTORY', get_config(p, DEFAULTS,'hostfile','ANSIBLE_HOSTS', '@PKG_SYSCONFDIR@/ansible/hosts')))
  DEFAULT_MODULE_PATH       = get_config(p, DEFAULTS, 'library',          'ANSIBLE_LIBRARY',          None)
 -DEFAULT_ROLES_PATH        = shell_expand_path(get_config(p, DEFAULTS, 'roles_path',       'ANSIBLE_ROLES_PATH',       '/etc/ansible/roles'))
-+DEFAULT_ROLES_PATH        = shell_expand_path(get_config(p, DEFAULTS, 'roles_path',       'ANSIBLE_ROLES_PATH',       '@PKG_SYSCONFDIR@/ansible/roles'))
++DEFAULT_ROLES_PATH        = shell_expand_path(get_config(p, DEFAULTS, 'roles_path',       'ANSIBLE_ROLES_PATH',       '@PREFIX@/share/ansible/roles'))
  DEFAULT_REMOTE_TMP        = get_config(p, DEFAULTS, 'remote_tmp',       'ANSIBLE_REMOTE_TEMP',      '$HOME/.ansible/tmp')
  DEFAULT_MODULE_NAME       = get_config(p, DEFAULTS, 'module_name',      None,                       'command')
  DEFAULT_PATTERN           = get_config(p, DEFAULTS, 'pattern',          None,                       '*')
