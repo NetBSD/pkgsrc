@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.771 2016/02/18 20:53:49 jperkin Exp $
+$NetBSD: CHANGES-2016,v 1.772 2016/02/18 23:25:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1005,3 +1005,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated print/py-weasyprint to 0.26 [kleink 2016-02-18]
 	Updated databases/py-postgresql to 4.2.1 [darcy 2016-02-18]
 	Updated multimedia/phonon to 4.8.3nb1 [jperkin 2016-02-18]
+	Updated net/php-baikal to 0.3.2 [wiz 2016-02-18]
