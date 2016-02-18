@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.770 2016/02/18 18:39:49 darcy Exp $
+$NetBSD: CHANGES-2016,v 1.771 2016/02/18 20:53:49 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1004,3 +1004,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added devel/jemalloc version 4.0.4 [gson 2016-02-18]
 	Updated print/py-weasyprint to 0.26 [kleink 2016-02-18]
 	Updated databases/py-postgresql to 4.2.1 [darcy 2016-02-18]
+	Updated multimedia/phonon to 4.8.3nb1 [jperkin 2016-02-18]
