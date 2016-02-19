@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.778 2016/02/19 15:15:52 jperkin Exp $
+$NetBSD: CHANGES-2016,v 1.779 2016/02/19 20:33:40 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1013,3 +1013,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/xulrunner38 to 38.6.1 [ryoon 2016-02-19]
 	Updated www/firefox38-l10n to 38.6.1 [ryoon 2016-02-19]
 	Updated lang/tcl to 8.6.4nb6 [jperkin 2016-02-19]
+	Updated devel/deforaos-libsystem to 0.3.0 [khorben 2016-02-19]
