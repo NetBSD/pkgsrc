@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.6 2015/12/29 06:00:28 dholland Exp $
+@comment $NetBSD: PLIST,v 1.7 2016/02/19 23:50:03 khorben Exp $
+bin/widget
 include/Desktop.h
 include/Desktop/about.h
 include/Desktop/accel.h
@@ -14,6 +15,8 @@ lib/libDesktop.so
 lib/libDesktop.so.0
 lib/libDesktop.so.0.0
 lib/pkgconfig/libDesktop.pc
+man/html1/widget.html
+man/man1/widget.1
 share/gtk-doc/html/libDesktop/api-index-full.html
 share/gtk-doc/html/libDesktop/ch01.html
 share/gtk-doc/html/libDesktop/deprecated-api-index.html
