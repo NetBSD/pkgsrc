@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.13 2016/02/09 13:26:12 ryoon Exp $
+$NetBSD: distinfo,v 1.14 2016/02/19 14:42:33 ryoon Exp $
 
-SHA1 (firefox-38.6.0esr.source.tar.bz2) = 816b392811024d6fc741f6046a08a4ef87ccffc9
-RMD160 (firefox-38.6.0esr.source.tar.bz2) = b8011022dcf9f59685d8e677e50849c7c4f2aa1d
-SHA512 (firefox-38.6.0esr.source.tar.bz2) = b9cfd1b873ed77f8f9e170562f313afdf76b5d2f4fefa9f9ab9e06bfb16c0888222cf4e81331e29843181c2d2de426538bd2d91e4b8c16867132e73ad6b54c3d
-Size (firefox-38.6.0esr.source.tar.bz2) = 181354489 bytes
+SHA1 (firefox-38.6.1esr.source.tar.bz2) = b3b5712ba27e70536cd589ec212b42518819871b
+RMD160 (firefox-38.6.1esr.source.tar.bz2) = f28f8245f5bfc197f9fd931520eab42a0ec6b441
+SHA512 (firefox-38.6.1esr.source.tar.bz2) = e80161a8cf95ab46cf49018c1105c986a412405e3bdb7535fc7ad5e68195f8ebe799624ed482576538a785ff2a4fdad5d1cf594566180035c2bfc9a4eb9b790c
+Size (firefox-38.6.1esr.source.tar.bz2) = 181332690 bytes
 SHA1 (patch-aa) = e9e8400fa86ae8d6910b49e3a98127122e714f1a
 SHA1 (patch-accessible_atk_Platform.cpp) = c2deb81b300de44c4500328589185bbd4b6b02fb
 SHA1 (patch-al) = cca5df21d018bb9f428ad26d00718f33afe88ec5
@@ -36,7 +36,6 @@ SHA1 (patch-dom_plugins_ipc_PluginModuleChild.h) = 0a7f3167e939822013ae619540665
 SHA1 (patch-dom_plugins_ipc_PluginProcessChild.cpp) = 0d10aa4c913d431fb8fa5f995f6e40cb364f069e
 SHA1 (patch-dom_system_OSFileConstants.cpp) = 4fe5d4ecf6116c7163ee6d2322db8b1b783fe5ec
 SHA1 (patch-extensions_spellcheck_hunspell_src_mozHunspell.cpp) = 747354373bcaf2c76bdff71677f354d47837704b
-SHA1 (patch-gfx_graphite2_moz-gr-update.sh) = b987dad1bd4513b8a04fb280bd1c5280a03af746
 SHA1 (patch-gfx_graphite2_src_Bidi.cpp) = 5e80b4a32a47ae44d237fec69ea87bdd612a76ce
 SHA1 (patch-gfx_graphite2_src_moz.build) = 1715ac0814dce4004454013b9675517152726a7a
 SHA1 (patch-gfx_moz.build) = a98bda4727538f4a0f09a20b84f9dd883edaf7d9
