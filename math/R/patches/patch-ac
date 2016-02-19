@@ -1,10 +1,10 @@
-$NetBSD: patch-ac,v 1.36 2015/08/14 12:40:19 wen Exp $
+$NetBSD: patch-ac,v 1.37 2016/02/19 21:57:42 jperkin Exp $
 
 Do not include system paths in R_LD_LIBRARY_PATH.
 FreeBSD 10 is not FreeBSD 1.
 Fix texi2any version check.
 
---- configure.orig	2015-08-14 19:37:48.000000000 +0000
+--- configure.orig	2015-08-13 09:21:16.000000000 +0000
 +++ configure
 @@ -4012,7 +4012,7 @@ fi
  
@@ -142,6 +142,20 @@ Fix texi2any version check.
        ;;
      *)
        { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: I could not determine CPICFLAGS." >&5
+@@ -26723,10 +26740,10 @@ case "${host_os}" in
+     DYLIB_EXT=".dylib"
+     dylib_ldflags="${darwin_dylib_ldflags}"
+     MAJR_VERSION=`echo "${PACKAGE_VERSION}" | sed  -e "s/[\.][1-9]$/.0/"`
+-    LIBR_LDFLAGS="-install_name libR.dylib -compatibility_version ${MAJR_VERSION}  -current_version ${PACKAGE_VERSION}  -headerpad_max_install_names"
+-    RLAPACK_LDFLAGS="-install_name libRlapack.dylib -compatibility_version ${MAJR_VERSION} -current_version ${PACKAGE_VERSION}  -headerpad_max_install_names"
++    LIBR_LDFLAGS="-install_name ${PREFIX}/lib/R/lib/libR.dylib -compatibility_version ${MAJR_VERSION}  -current_version ${PACKAGE_VERSION}  -headerpad_max_install_names"
++    RLAPACK_LDFLAGS="-install_name ${PREFIX}/lib/R/lib/libRlapack.dylib -compatibility_version ${MAJR_VERSION} -current_version ${PACKAGE_VERSION}  -headerpad_max_install_names"
+     ## don't use version in libRblas so we can replace it with any BLAS implementation
+-    RBLAS_LDFLAGS="-install_name libRblas.dylib -headerpad_max_install_names"
++    RBLAS_LDFLAGS="-install_name ${PREFIX}/lib/R/lib/libRblas.dylib -headerpad_max_install_names"
+     ;;
+   hpux*)
+     ## Needs to avoid embedding a relative path ../../../bin.
 @@ -27320,6 +27337,14 @@ _ACEOF
  ## Cygwin has rintl but not nearbyintl
  for ac_func in expm1 hypot log1p log1pl log2 log10 nearbyint nearbyintl powl rint rintl
