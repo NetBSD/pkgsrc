@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.86 2015/10/10 01:58:11 ryoon Exp $
+# $NetBSD: Makefile,v 1.87 2016/02/19 15:15:42 jperkin Exp $
 
 DISTNAME=	tcl${TCL_VERSION}-src
 PKGNAME=	tcl-${TCL_VERSION}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tcl/}
 
@@ -57,8 +57,13 @@ SUBST_SED.sqllink=	-e "/LIBS=/s|-lsqlite3|-L${BUILDLINK_PREFIX.sqlite3}/lib ${CO
 
 .if ${OPSYS} == "Darwin"
 post-build:
-.  for lib in tdbcmysql1.0.3/libtdbcmysql1.0.3.dylib \
-	      tdbcpostgres1.0.3/libtdbcpostgres1.0.3.dylib
+.  for lib in itcl4.0.3/libitcl4.0.3.dylib \
+	      sqlite3.8.8.3/libsqlite3.8.8.3.dylib \
+	      tdbc1.0.3/libtdbc1.0.3.dylib \
+	      tdbcmysql1.0.3/libtdbcmysql1.0.3.dylib \
+	      tdbcodbc1.0.3/libtdbcodbc1.0.3.dylib \
+	      tdbcpostgres1.0.3/libtdbcpostgres1.0.3.dylib \
+	      thread2.7.2/libthread2.7.2.dylib
 	install_name_tool -id ${PREFIX}/lib/${lib} ${WRKSRC}/unix/pkgs/${lib}
 .  endfor
 .endif
