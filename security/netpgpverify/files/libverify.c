@@ -33,6 +33,7 @@
 
 #include <inttypes.h>
 #include <limits.h>
+#include <stdbool.h>
 #include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -166,6 +167,71 @@
 static int read_all_packets(pgpv_t */*pgp*/, pgpv_mem_t */*mem*/, const char */*op*/);
 static int read_binary_file(pgpv_t */*pgp*/, const char */*op*/, const char */*fmt*/, ...) __printflike(3, 4);
 static int read_binary_memory(pgpv_t */*pgp*/, const char */*op*/, const void */*memory*/, size_t /*size*/);
+
+/* output buffer structure */
+typedef struct obuf_t {
+	size_t	 alloc;		/* amount of memory allocated */
+	size_t	 c;		/* # of chars used so far */
+	uint8_t	*v;		/* array of bytes */
+	uint32_t endian;	/* byte order of output stream */
+} obuf_t;
+
+/* grow the buffer, if needed */
+static bool
+growbuf(obuf_t *obuf, size_t cc)
+{
+	size_t	 newalloc;
+	uint8_t	*newv;
+
+	if (obuf->c + cc > obuf->alloc) {
+		newalloc = howmany(obuf->alloc + cc, 128) * 128;
+		newv = realloc(obuf->v, newalloc);
+		if (newv == NULL) {
+			return false;
+		}
+		obuf->v = newv;
+		obuf->alloc = newalloc;
+	}
+	return true;
+}
+
+/* add a fixed-length area of memory */
+static bool
+obuf_add_mem(obuf_t *obuf, const char *s, size_t len)
+{
+	if (obuf && s && len > 0) {
+		if (!growbuf(obuf, len)) {
+			return false;
+		}
+		memcpy(&obuf->v[obuf->c], s, len);
+		obuf->c += len;
+		return true;
+	}
+	return false;
+}
+
+/* varargs-based printf to string */
+static bool
+obuf_printf(obuf_t *obuf, const char *fmt, ...)
+{
+	va_list	 args;
+	char	*cp;
+	bool	 ret;
+	int	 cc;
+
+	if (obuf && fmt) {
+		ret = true;
+		va_start(args, fmt);
+		cc = vasprintf(&cp, fmt, args);
+		va_end(args);
+		if (cc > 0) {
+			ret = obuf_add_mem(obuf, cp, (size_t)cc);
+			free(cp);
+		}
+		return ret;
+	}
+	return false;
+}
 
 /* read a file into the pgpv_mem_t struct */
 static int
@@ -415,15 +481,16 @@ fmt_16(uint8_t *p, uint16_t a)
 
 /* format a binary string in memory */
 static size_t
-fmt_binary(char *s, size_t size, const uint8_t *bin, unsigned len)
+fmt_binary(obuf_t *obuf, const uint8_t *bin, unsigned len)
 {
 	unsigned	i;
-	size_t		cc;
 
-	for (cc = 0, i = 0 ; i < len && cc < size ; i++) {
-		cc += snprintf(&s[cc], size - cc, "%02x", bin[i]);
+	for (i = 0 ; i < len ; i++) {
+		if (!obuf_printf(obuf, "%02hhx", bin[i])) {
+			return false;
+		}
 	}
-	return cc;
+	return true;
 }
 
 /* format an mpi into memory */
@@ -552,19 +619,21 @@ pgpv_calc_fingerprint(pgpv_fingerprint_t *fingerprint, pgpv_pubkey_t *pubkey, co
 }
 
 /* format a fingerprint into memory */
-static size_t
-fmt_fingerprint(char *s, size_t size, pgpv_fingerprint_t *fingerprint, const char *name)
+static bool
+fmt_fingerprint(obuf_t *obuf, pgpv_fingerprint_t *fingerprint, const char *name)
 {
 	unsigned	i;
-	size_t		cc;
 
-	cc = snprintf(s, size, "%s ", name);
-	for (i = 0 ; i < fingerprint->len ; i++) {
-		cc += snprintf(&s[cc], size - cc, "%02hhx%s",
-			fingerprint->v[i], (i % 2 == 1) ? " " : "");
+	if (!obuf_printf(obuf, "%s ", name)) {
+		return false;
 	}
-	cc += snprintf(&s[cc], size - cc, "\n");
-	return cc;
+	for (i = 0 ; i < fingerprint->len ; i++) {
+		if (!obuf_printf(obuf, "%02hhx%s",
+			fingerprint->v[i], (i % 2 == 1) ? " " : "")) {
+				return false;
+		}
+	}
+	return obuf_printf(obuf, "\n");
 }
 
 /* calculate keyid from a pubkey */
@@ -659,30 +728,32 @@ get_32(uint8_t *p)
 
 /* format (human readable) time into memory */
 static size_t
-fmt_time(char *s, size_t size, const char *header, int64_t n, const char *trailer, int relative)
+fmt_time(obuf_t *obuf, const char *header, int64_t n, const char *trailer, int relative)
 {
 	struct tm	tm;
 	time_t		elapsed;
 	time_t		now;
 	time_t		t;
-	size_t		cc;
 
 	t = (time_t)n;
 	now = time(NULL);
 	elapsed = now - t;
 	gmtime_r(&t, &tm);            
-	cc = snprintf(s, size, "%s%04d-%02d-%02d", header,
-		tm.tm_year + 1900, tm.tm_mon + 1, tm.tm_mday);
+	if (!obuf_printf(obuf, "%s%04d-%02d-%02d", header,
+		tm.tm_year + 1900, tm.tm_mon + 1, tm.tm_mday)) {
+			return false;
+	}
 	if (relative) {
-		cc += snprintf(&s[cc], size - cc, " (%lldy %lldm %lldd %lldh %s)",
+		if (!obuf_printf(obuf, " (%lldy %lldm %lldd %lldh %s)",
 			llabs((long long)elapsed / YEARSECS),
 			llabs(((long long)elapsed % YEARSECS) / MONSECS),
 			llabs(((long long)elapsed % MONSECS) / DAYSECS),
 			llabs(((long long)elapsed % DAYSECS) / HOURSECS),
-			(now > t) ? "ago" : "ahead");
+			(now > t) ? "ago" : "ahead")) {
+				return false;
+		}
 	}
-	cc += snprintf(&s[cc], size - cc, "%s", trailer);
-	return cc;
+	return obuf_printf(obuf, "%s", trailer);
 }
 
 /* dump key mpis to stdout */
@@ -1431,82 +1502,100 @@ numkeybits(const pgpv_pubkey_t *pubkey)
 }
 
 /* print a public key */
-static size_t
-fmt_pubkey(char *s, size_t size, pgpv_pubkey_t *pubkey, const char *leader)
+static bool
+fmt_pubkey(obuf_t *obuf, pgpv_pubkey_t *pubkey, const char *leader)
 {
-	size_t	cc;
-
-	cc = snprintf(s, size, "%s %u/%s ", leader, numkeybits(pubkey), fmtkeyalg(pubkey->keyalg));
-	cc += fmt_binary(&s[cc], size - cc, pubkey->keyid, PGPV_KEYID_LEN);
-	cc += fmt_time(&s[cc], size - cc, " ", pubkey->birth, "", 0);
-	if (pubkey->expiry) {
-		cc += fmt_time(&s[cc], size - cc, " [Expiry ", pubkey->birth + pubkey->expiry, "]", 0);
+	if (!obuf_printf(obuf, "%s %u/%s ", leader, numkeybits(pubkey), fmtkeyalg(pubkey->keyalg))) {
+		return false;
 	}
-	cc += snprintf(&s[cc], size - cc, "\n");
-	cc += fmt_fingerprint(&s[cc], size - cc, &pubkey->fingerprint, "fingerprint  ");
-	return cc;
+	if (!fmt_binary(obuf, pubkey->keyid, PGPV_KEYID_LEN)) {
+		return false;
+	}
+	if (!fmt_time(obuf, " ", pubkey->birth, "", 0)) {
+		return false;
+	}
+	if (pubkey->expiry) {
+		if (!fmt_time(obuf, " [Expiry ", pubkey->birth + pubkey->expiry, "]", 0)) {
+			return false;
+		}
+	}
+	if (!obuf_printf(obuf, "\n")) {
+		return false;
+	}
+	return fmt_fingerprint(obuf, &pubkey->fingerprint, "fingerprint  ");
 }
 
 /* we add 1 to revocation value to denote compromised */
 #define COMPROMISED	(0x02 + 1)
 
 /* format a userid - used to order the userids when formatting */
-static size_t
-fmt_userid(char *s, size_t size, pgpv_primarykey_t *primary, uint8_t u)
+static bool
+fmt_userid(obuf_t *obuf, pgpv_primarykey_t *primary, uint8_t u)
 {
 	pgpv_signed_userid_t	*userid;
 
 	userid = &ARRAY_ELEMENT(primary->signed_userids, u);
-	return snprintf(s, size, "uid           %.*s%s\n",
+	return obuf_printf(obuf, "uid           %.*s%s\n",
 			(int)userid->userid.size, userid->userid.data,
 			(userid->revoked == COMPROMISED) ? " [COMPROMISED AND REVOKED]" :
 			(userid->revoked) ? " [REVOKED]" : "");
 }
 
 /* format a trust sig - used to order the userids when formatting */
-static size_t
-fmt_trust(char *s, size_t size, pgpv_signed_userid_t *userid, uint32_t u)
+static bool
+fmt_trust(obuf_t *obuf, pgpv_signed_userid_t *userid, uint32_t u)
 {
 	pgpv_signature_t	*sig;
-	size_t			 cc;
 
 	sig = &ARRAY_ELEMENT(userid->sigs, u);
-	cc = snprintf(s, size, "trust          ");
-	cc += fmt_binary(&s[cc], size - cc, sig->signer, 8);
-	return cc + snprintf(&s[cc], size - cc, "\n");
+	if (!obuf_printf(obuf, "trust          ")) {
+		return false;
+	}
+	if (!fmt_binary(obuf, sig->signer, 8)) {
+		return false;
+	}
+	return obuf_printf(obuf, "\n");
 }
 
 /* print a primary key, per RFC 4880 */
-static size_t
-fmt_primary(char *s, size_t size, pgpv_primarykey_t *primary, unsigned subkey, const char *modifiers)
+static bool
+fmt_primary(obuf_t *obuf, pgpv_primarykey_t *primary, unsigned subkey, const char *modifiers)
 {
 	pgpv_signed_userid_t	*userid;
 	pgpv_pubkey_t		*pubkey;
 	unsigned		 i;
 	unsigned		 j;
-	size_t			 cc;
 
 	pubkey = (subkey == 0) ? &primary->primary : &ARRAY_ELEMENT(primary->signed_subkeys, subkey - 1).subkey;
-	cc = fmt_pubkey(s, size, pubkey, "signature    ");
-	cc += fmt_userid(&s[cc], size - cc, primary, primary->primary_userid);
+	if (!fmt_pubkey(obuf, pubkey, "signature    ")) {
+		return false;
+	}
+	if (!fmt_userid(obuf, primary, primary->primary_userid)) {
+		return false;
+	}
 	for (i = 0 ; i < ARRAY_COUNT(primary->signed_userids) ; i++) {
 		if (i != primary->primary_userid) {
-			cc += fmt_userid(&s[cc], size - cc, primary, i);
+			if (!fmt_userid(obuf, primary, i)) {
+				return false;
+			}
 			if (strcasecmp(modifiers, "trust") == 0) {
 				userid = &ARRAY_ELEMENT(primary->signed_userids, i);
 				for (j = 0 ; j < ARRAY_COUNT(userid->sigs) ; j++) {
-					cc += fmt_trust(&s[cc], size - cc, userid, j);
+					if (!fmt_trust(obuf, userid, j)) {
+						return false;
+					}
 				}
 			}
 		}
 	}
 	if (strcasecmp(modifiers, "subkeys") == 0) {
 		for (i = 0 ; i < ARRAY_COUNT(primary->signed_subkeys) ; i++) {
-			cc += fmt_pubkey(&s[cc], size - cc, &ARRAY_ELEMENT(primary->signed_subkeys, i).subkey, "encryption");
+			if (!fmt_pubkey(obuf, &ARRAY_ELEMENT(primary->signed_subkeys, i).subkey, "encryption")) {
+				return false;
+			}
 		}
 	}
-	cc += snprintf(&s[cc], size - cc, "\n");
-	return cc;
+	return obuf_printf(obuf, "\n");
 }
 
 
@@ -2531,7 +2620,7 @@ pgpv_get_entry(pgpv_t *pgp, unsigned ent, char **s, const char *modifiers)
 {
 	unsigned	subkey;
 	unsigned	prim;
-	size_t		cc;
+	obuf_t		obuf;
 
 	prim = ((ent >> 8) & 0xffffff);
 	subkey = (ent & 0xff);
@@ -2539,17 +2628,15 @@ pgpv_get_entry(pgpv_t *pgp, unsigned ent, char **s, const char *modifiers)
 		return 0;
 	}
 	*s = NULL;
-	cc = ARRAY_ELEMENT(pgp->primaries, prim).fmtsize;
 	if (modifiers == NULL || (strcasecmp(modifiers, "trust") != 0 && strcasecmp(modifiers, "subkeys") != 0)) {
 		modifiers = "no-subkeys";
 	}
-	if (strcasecmp(modifiers, "trust") == 0) {
-		cc *= 2048;
-	}
-	if ((*s = calloc(1, cc)) == NULL) {
+	memset(&obuf, 0x0, sizeof(obuf));
+	if (!fmt_primary(&obuf, &ARRAY_ELEMENT(pgp->primaries, prim), subkey, modifiers)) {
 		return 0;
 	}
-	return fmt_primary(*s, cc, &ARRAY_ELEMENT(pgp->primaries, prim), subkey, modifiers);
+	*s = (char *)obuf.v;
+	return obuf.c;
 }
 
 /* fixup key id, with birth, keyalg and hashalg value from signature */
@@ -2678,7 +2765,7 @@ pgpv_verify(pgpv_cursor_t *cursor, pgpv_t *pgp, const void *p, ssize_t size)
 	pgpv_litdata_t		*litdata;
 	unsigned		 sub;
 	size_t			 pkt;
-	char			 strkeyid[PGPV_STR_KEYID_LEN];
+	obuf_t			 obuf;
 	int			 j;
 
 	if (cursor == NULL || pgp == NULL || p == NULL) {
@@ -2705,23 +2792,32 @@ pgpv_verify(pgpv_cursor_t *cursor, pgpv_t *pgp, const void *p, ssize_t size)
 	signature = &ARRAY_ELEMENT(cursor->pgp->pkts, pkt + 2).u.sigpkt.sig;
 	/* sanity check values in signature and onepass agree */
 	if (signature->birth == 0) {
-		fmt_time(cursor->why, sizeof(cursor->why), "Signature creation time [",
-			signature->birth, "] out of range", 0);
+		if (!fmt_time(&obuf, "Signature creation time [",
+				signature->birth, "] out of range", 0)) {
+		}
+		snprintf(cursor->why, sizeof(cursor->why), "%.*s", (int)obuf.c, (char *)obuf.v);
 		return 0;
 	}
+	memset(&obuf, 0x0, sizeof(obuf));
 	if (memcmp(onepass->keyid, signature->signer, PGPV_KEYID_LEN) != 0) {
-		fmt_binary(strkeyid, sizeof(strkeyid), onepass->keyid, (unsigned)sizeof(onepass->keyid));
-		snprintf(cursor->why, sizeof(cursor->why), "Signature key id %s does not match onepass keyid",
-			strkeyid);
+		if (!fmt_binary(&obuf, onepass->keyid, (unsigned)sizeof(onepass->keyid))) {
+			snprintf(cursor->why, sizeof(cursor->why), "Memory allocation failure");
+			return 0;
+		}
+		snprintf(cursor->why, sizeof(cursor->why),
+			"Signature key id %.*s does not match onepass keyid",
+			(int)obuf.c, (char *)obuf.v);
 		return 0;
 	}
 	if (onepass->hashalg != signature->hashalg) {
-		snprintf(cursor->why, sizeof(cursor->why), "Signature hashalg %u does not match onepass hashalg %u",
+		snprintf(cursor->why, sizeof(cursor->why),
+			"Signature hashalg %u does not match onepass hashalg %u",
 			signature->hashalg, onepass->hashalg);
 		return 0;
 	}
 	if (onepass->keyalg != signature->keyalg) {
-		snprintf(cursor->why, sizeof(cursor->why), "Signature keyalg %u does not match onepass keyalg %u",
+		snprintf(cursor->why, sizeof(cursor->why),
+			"Signature keyalg %u does not match onepass keyalg %u",
 			signature->keyalg, onepass->keyalg);
 		return 0;
 	}
@@ -2730,11 +2826,19 @@ pgpv_verify(pgpv_cursor_t *cursor, pgpv_t *pgp, const void *p, ssize_t size)
 	}
 	sub = 0;
 	if ((j = find_keyid(cursor->pgp, NULL, onepass->keyid, &sub)) < 0) {
-		fmt_binary(strkeyid, sizeof(strkeyid), onepass->keyid, (unsigned)sizeof(onepass->keyid));
-		snprintf(cursor->why, sizeof(cursor->why), "Signature key id %s not found ", strkeyid);
+		if (!fmt_binary(&obuf, onepass->keyid, (unsigned)sizeof(onepass->keyid))) {
+			snprintf(cursor->why, sizeof(cursor->why), "Memory allocation failure");
+			return 0;
+		}
+		snprintf(cursor->why, sizeof(cursor->why),
+			"Signature key id %.*s not found ",
+			(int)obuf.c, (char *)obuf.v);
 		return 0;
 	}
 	if (!match_sig_id(cursor, signature, litdata, (unsigned)j, sub)) {
+		snprintf(cursor->why, sizeof(cursor->why),
+			"Signature does not match %.*s",
+			(int)obuf.c, (char *)obuf.v);
 		return 0;
 	}
 	ARRAY_APPEND(cursor->datacookies, pkt);
