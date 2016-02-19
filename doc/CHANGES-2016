@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.773 2016/02/19 09:58:58 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.774 2016/02/19 10:14:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1007,3 +1007,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated multimedia/phonon to 4.8.3nb1 [jperkin 2016-02-18]
 	Updated net/php-baikal to 0.3.2 [wiz 2016-02-18]
 	Updated x11/xf86-video-amdgpu to 1.0.1 [wiz 2016-02-19]
+	Updated net/tigervnc to 1.6.0 [wiz 2016-02-19]
