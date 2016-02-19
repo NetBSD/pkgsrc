@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.775 2016/02/19 14:30:14 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.776 2016/02/19 14:43:21 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1009,3 +1009,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated x11/xf86-video-amdgpu to 1.0.1 [wiz 2016-02-19]
 	Updated net/tigervnc to 1.6.0 [wiz 2016-02-19]
 	Updated archivers/libzip to 1.1.2 [wiz 2016-02-19]
+	Updated www/firefox38 to 38.6.1 [ryoon 2016-02-19]
+	Updated devel/xulrunner38 to 38.6.1 [ryoon 2016-02-19]
