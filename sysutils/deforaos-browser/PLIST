@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2015/10/05 23:43:55 khorben Exp $
+@comment $NetBSD: PLIST,v 1.7 2016/02/20 00:12:55 khorben Exp $
 bin/browser
 bin/copy
 bin/delete
@@ -17,12 +17,14 @@ lib/Browser/plugins/dirtree.so
 lib/Browser/plugins/favorites.so
 lib/Browser/plugins/git.so
 lib/Browser/plugins/make.so
+lib/Browser/plugins/places.so
 lib/Browser/plugins/preview.so
 lib/Browser/plugins/properties.so
 lib/Browser/plugins/selection.so
 lib/Browser/plugins/subversion.so
 lib/Browser/plugins/trash.so
 lib/Browser/plugins/volumes.so
+lib/Desktop/widget/browser.so
 lib/libBrowser.a
 lib/libBrowser.so
 lib/libBrowser.so.0
