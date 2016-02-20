@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2015/12/11 00:27:06 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14.2.1 2016/02/20 21:24:10 spz Exp $
 bin/salt
 bin/salt-api
 bin/salt-call
@@ -458,6 +458,9 @@ ${PYSITELIB}/salt/grains/core.pyo
 ${PYSITELIB}/salt/grains/disks.py
 ${PYSITELIB}/salt/grains/disks.pyc
 ${PYSITELIB}/salt/grains/disks.pyo
+${PYSITELIB}/salt/grains/esxi.py
+${PYSITELIB}/salt/grains/esxi.pyc
+${PYSITELIB}/salt/grains/esxi.pyo
 ${PYSITELIB}/salt/grains/external_ip.py
 ${PYSITELIB}/salt/grains/external_ip.pyc
 ${PYSITELIB}/salt/grains/external_ip.pyo
@@ -764,6 +767,9 @@ ${PYSITELIB}/salt/modules/environ.pyo
 ${PYSITELIB}/salt/modules/eselect.py
 ${PYSITELIB}/salt/modules/eselect.pyc
 ${PYSITELIB}/salt/modules/eselect.pyo
+${PYSITELIB}/salt/modules/esxi.py
+${PYSITELIB}/salt/modules/esxi.pyc
+${PYSITELIB}/salt/modules/esxi.pyo
 ${PYSITELIB}/salt/modules/etcd_mod.py
 ${PYSITELIB}/salt/modules/etcd_mod.pyc
 ${PYSITELIB}/salt/modules/etcd_mod.pyo
@@ -1271,6 +1277,9 @@ ${PYSITELIB}/salt/modules/shadow.pyo
 ${PYSITELIB}/salt/modules/slack_notify.py
 ${PYSITELIB}/salt/modules/slack_notify.pyc
 ${PYSITELIB}/salt/modules/slack_notify.pyo
+${PYSITELIB}/salt/modules/slsutil.py
+${PYSITELIB}/salt/modules/slsutil.pyc
+${PYSITELIB}/salt/modules/slsutil.pyo
 ${PYSITELIB}/salt/modules/smartos_imgadm.py
 ${PYSITELIB}/salt/modules/smartos_imgadm.pyc
 ${PYSITELIB}/salt/modules/smartos_imgadm.pyo
@@ -1427,6 +1436,9 @@ ${PYSITELIB}/salt/modules/virt.pyo
 ${PYSITELIB}/salt/modules/virtualenv_mod.py
 ${PYSITELIB}/salt/modules/virtualenv_mod.pyc
 ${PYSITELIB}/salt/modules/virtualenv_mod.pyo
+${PYSITELIB}/salt/modules/vsphere.py
+${PYSITELIB}/salt/modules/vsphere.pyc
+${PYSITELIB}/salt/modules/vsphere.pyo
 ${PYSITELIB}/salt/modules/win_autoruns.py
 ${PYSITELIB}/salt/modules/win_autoruns.pyc
 ${PYSITELIB}/salt/modules/win_autoruns.pyo
@@ -1712,6 +1724,9 @@ ${PYSITELIB}/salt/proxy/__init__.pyo
 ${PYSITELIB}/salt/proxy/chronos.py
 ${PYSITELIB}/salt/proxy/chronos.pyc
 ${PYSITELIB}/salt/proxy/chronos.pyo
+${PYSITELIB}/salt/proxy/esxi.py
+${PYSITELIB}/salt/proxy/esxi.pyc
+${PYSITELIB}/salt/proxy/esxi.pyo
 ${PYSITELIB}/salt/proxy/fx2.py
 ${PYSITELIB}/salt/proxy/fx2.pyc
 ${PYSITELIB}/salt/proxy/fx2.pyo
@@ -1901,6 +1916,9 @@ ${PYSITELIB}/salt/roster/clustershell.pyo
 ${PYSITELIB}/salt/roster/flat.py
 ${PYSITELIB}/salt/roster/flat.pyc
 ${PYSITELIB}/salt/roster/flat.pyo
+${PYSITELIB}/salt/roster/range.py
+${PYSITELIB}/salt/roster/range.pyc
+${PYSITELIB}/salt/roster/range.pyo
 ${PYSITELIB}/salt/roster/scan.py
 ${PYSITELIB}/salt/roster/scan.pyc
 ${PYSITELIB}/salt/roster/scan.pyo
@@ -2213,6 +2231,9 @@ ${PYSITELIB}/salt/states/environ.pyo
 ${PYSITELIB}/salt/states/eselect.py
 ${PYSITELIB}/salt/states/eselect.pyc
 ${PYSITELIB}/salt/states/eselect.pyo
+${PYSITELIB}/salt/states/esxi.py
+${PYSITELIB}/salt/states/esxi.pyc
+${PYSITELIB}/salt/states/esxi.pyo
 ${PYSITELIB}/salt/states/etcd_mod.py
 ${PYSITELIB}/salt/states/etcd_mod.pyc
 ${PYSITELIB}/salt/states/etcd_mod.pyo
