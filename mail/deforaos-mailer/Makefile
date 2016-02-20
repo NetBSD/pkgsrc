@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2015/08/09 15:25:47 khorben Exp $
+# $NetBSD: Makefile,v 1.20 2016/02/20 14:52:09 khorben Exp $
 
-DISTNAME=	Mailer-0.1.6
-PKGNAME=	deforaos-mailer-0.1.6
-PKGREVISION=	5
+DISTNAME=	Mailer-0.1.7
+PKGNAME=	deforaos-mailer-0.1.7
 CATEGORIES=	mail
-MASTER_SITES=	http://www.defora.org/os/download/download/4029/
+MASTER_SITES=	http://www.defora.org/os/download/download/4426/
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	http://www.defora.org/
@@ -30,8 +29,11 @@ CONFLICTS=	john-[0-9]*
 
 .if ${PKGMANDIR} != "share/man"
 post-install:
+	${MV} ${DESTDIR}${PREFIX}/share/man/html1/compose.html ${DESTDIR}${PREFIX}/${PKGMANDIR}/html1/compose.html
+	${MV} ${DESTDIR}${PREFIX}/share/man/html1/mailer.html ${DESTDIR}${PREFIX}/${PKGMANDIR}/html1/mailer.html
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/compose.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/compose.1
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/mailer.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/mailer.1
+	${RMDIR} ${DESTDIR}${PREFIX}/share/man/html1
 	${RMDIR} ${DESTDIR}${PREFIX}/share/man/man1
 	${RMDIR} ${DESTDIR}${PREFIX}/share/man
 .endif
