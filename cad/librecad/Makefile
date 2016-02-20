@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.27 2015/04/25 14:20:27 tnn Exp $
+# $NetBSD: Makefile,v 1.28 2016/02/20 23:56:54 mef Exp $
 #
 
-DISTNAME=	LibreCAD-LibreCAD-v1.0.2-0-ga6826ad
-PKGNAME=	librecad-1.0.2
+DISTNAME=	librecad-1.0.2
 PKGREVISION=	19
 CATEGORIES=	cad
-MASTER_SITES=	-http://nodeload.github.com/LibreCAD/LibreCAD/legacy.tar.gz/v1.0.2
+MASTER_SITES=	${MASTER_SITE_GITHUB:=LibreCAD/}
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://librecad.org/
 COMMENT=	Free Open Source personal CAD application
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}/LibreCAD-LibreCAD-a5c34b2
+WRKSRC=		${WRKDIR}/LibreCAD-${PKGVERSION_NOREV}
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	bash pax
 
