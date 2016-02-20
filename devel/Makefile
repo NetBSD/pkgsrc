@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2217 2016/02/20 02:55:15 khorben Exp $
+# $NetBSD: Makefile,v 1.2218 2016/02/20 03:15:14 khorben Exp $
 #
 
 COMMENT=	Development utilities
@@ -172,6 +172,7 @@ SUBDIR+=	darts
 SUBDIR+=	dconf
 SUBDIR+=	dconf-editor
 SUBDIR+=	ddd
+SUBDIR+=	deforaos-asm
 SUBDIR+=	deforaos-coder
 SUBDIR+=	deforaos-configure
 SUBDIR+=	deforaos-cpp
