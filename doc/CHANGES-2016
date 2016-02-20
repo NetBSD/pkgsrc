@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.804 2016/02/20 21:12:44 khorben Exp $
+$NetBSD: CHANGES-2016,v 1.805 2016/02/20 23:25:29 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1040,3 +1040,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated x11/deforaos-notes to 0.1.0 [khorben 2016-02-20]
 	Updated games/xpat2 to 1.07nb4 [dholland 2016-02-20]
 	Updated time/deforaos-todo to 0.2.1 [khorben 2016-02-20]
+	Updated cad/gtkwave to 3.3.70 [mef 2016-02-20]
