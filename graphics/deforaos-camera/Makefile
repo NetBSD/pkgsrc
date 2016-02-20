@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2015/08/09 15:34:27 khorben Exp $
+# $NetBSD: Makefile,v 1.10 2016/02/20 01:18:22 khorben Exp $
 #
 
-DISTNAME=	Camera-0.0.1
-PKGNAME=	deforaos-camera-0.0.1
-PKGREVISION=	7
+DISTNAME=	Camera-0.2.0
+PKGNAME=	deforaos-camera-0.2.0
 CATEGORIES=	graphics
-MASTER_SITES=	http://www.defora.org/os/download/download/4284/
+MASTER_SITES=	http://www.defora.org/os/download/download/4419/
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	http://www.defora.org/
@@ -23,11 +22,18 @@ MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
 AUTO_MKDIRS=	yes
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${PKGMANDIR} != "share/man"
 post-install:
+	${MV} ${DESTDIR}${PREFIX}/share/man/html1/camera.html ${DESTDIR}${PREFIX}/${PKGMANDIR}/html1/camera.html
+	${MV} ${DESTDIR}${PREFIX}/share/man/html1/gallery.html ${DESTDIR}${PREFIX}/${PKGMANDIR}/html1/gallery.html
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/camera.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/camera.1
 	${MV} ${DESTDIR}${PREFIX}/share/man/man1/gallery.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/gallery.1
+	${RMDIR} ${DESTDIR}${PREFIX}/share/man/html1
 	${RMDIR} ${DESTDIR}${PREFIX}/share/man/man1
 	${RMDIR} ${DESTDIR}${PREFIX}/share/man
+.endif
 
 .include "options.mk"
 
