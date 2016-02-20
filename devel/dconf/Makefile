@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2016/02/04 12:13:30 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2016/02/20 09:57:10 jperkin Exp $
 
-PKGREVISION= 2
+PKGREVISION= 3
 .include "Makefile.common"
 
 CONFIGURE_ARGS+= --disable-editor
@@ -14,8 +14,12 @@ BUILDLINK_TRANSFORM+=	rm:-ldl
 .endif
 
 .if ${OPSYS} == "Darwin"
-BUILDLINK_TRANSFORM+=	rm:-Wl,-soname=libdconf-dbus-1.so.0
-BUILDLINK_TRANSFORM+=	rm:-Wl,-soname=libdconf.so.1
+SUBST_CLASSES+=		libname
+SUBST_STAGE.libname=	pre-configure
+SUBST_FILES.libname=	client/Makefile.in dbus-1/Makefile.in
+SUBST_FILES.libname+=	gsettings/Makefile.in
+SUBST_SED.libname=	-e "s|-Wl,-soname=|-install_name ${PREFIX}/lib/|g"
+SUBST_SED.libname+=	-e "/^libdconfsettings_so_LDFLAGS/s,$$, -install_name ${PREFIX}/lib/gio/modules/libdconfsettings.so,g"
 .endif
 
 BUILD_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
