@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2216 2016/02/18 15:53:24 gson Exp $
+# $NetBSD: Makefile,v 1.2217 2016/02/20 02:55:15 khorben Exp $
 #
 
 COMMENT=	Development utilities
@@ -174,6 +174,7 @@ SUBDIR+=	dconf-editor
 SUBDIR+=	ddd
 SUBDIR+=	deforaos-coder
 SUBDIR+=	deforaos-configure
+SUBDIR+=	deforaos-cpp
 SUBDIR+=	deforaos-libsystem
 SUBDIR+=	dejagnu
 SUBDIR+=	delta
