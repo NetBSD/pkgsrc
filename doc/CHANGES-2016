@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.782 2016/02/19 23:51:06 khorben Exp $
+$NetBSD: CHANGES-2016,v 1.783 2016/02/20 00:13:39 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1018,3 +1018,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/libnetpgpverify to 20160214 [agc 2016-02-19]
 	Updated lang/openjdk8 to 1.8.74 [ryoon 2016-02-19]
 	Updated x11/deforaos-libdesktop to 0.2.1 [khorben 2016-02-20]
+	Updated sysutils/deforaos-browser to 0.5.0 [khorben 2016-02-20]
