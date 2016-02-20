@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.797 2016/02/20 13:16:29 khorben Exp $
+$NetBSD: CHANGES-2016,v 1.798 2016/02/20 13:20:23 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1033,3 +1033,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated audio/audacious to 3.5.2nb2 [jperkin 2016-02-20]
 	Updated devel/capstone to 3.0.4nb1 [jperkin 2016-02-20]
 	Updated x11/deforaos-locker to 0.4.0 [khorben 2016-02-20]
+	Updated textproc/cdif to 2.14 [mef 2016-02-20]
