@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.794 2016/02/20 10:25:11 jperkin Exp $
+$NetBSD: CHANGES-2016,v 1.795 2016/02/20 11:28:37 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1030,3 +1030,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/feh to 2.14.2 [szptvlfn 2016-02-20]
 	Updated devel/dconf to 0.22.0nb3 [jperkin 2016-02-20]
 	Updated databases/sqlite3-tcl to 3.11.0nb1 [jperkin 2016-02-20]
+	Updated audio/audacious to 3.5.2nb2 [jperkin 2016-02-20]
