@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.792 2016/02/20 04:40:24 szptvlfn Exp $
+$NetBSD: CHANGES-2016,v 1.793 2016/02/20 09:57:20 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1028,3 +1028,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added devel/deforaos-asm version 0.2.3 [khorben 2016-02-20]
 	Updated graphics/deforaos-icon-theme to 0.1.2 [khorben 2016-02-20]
 	Updated graphics/feh to 2.14.2 [szptvlfn 2016-02-20]
+	Updated devel/dconf to 0.22.0nb3 [jperkin 2016-02-20]
