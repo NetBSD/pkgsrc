@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2016/02/20 02:54:45 khorben Exp $
+bin/cpp
+include/Devel/CPP.h
+lib/libcpp.a
+lib/libcpp.so
+lib/libcpp.so.0
+lib/libcpp.so.0.0
+lib/pkgconfig/cpp.pc
+share/gtk-doc/html/CPP/CPP-CPP:CAPS.html
+share/gtk-doc/html/CPP/CPP.devhelp2
+share/gtk-doc/html/CPP/api-index-full.html
+share/gtk-doc/html/CPP/ch01.html
+share/gtk-doc/html/CPP/deprecated-api-index.html
+share/gtk-doc/html/CPP/home.png
+share/gtk-doc/html/CPP/index.html
+share/gtk-doc/html/CPP/index.sgml
+share/gtk-doc/html/CPP/left-insensitive.png
+share/gtk-doc/html/CPP/left.png
+share/gtk-doc/html/CPP/right-insensitive.png
+share/gtk-doc/html/CPP/right.png
+share/gtk-doc/html/CPP/style.css
+share/gtk-doc/html/CPP/up-insensitive.png
+share/gtk-doc/html/CPP/up.png

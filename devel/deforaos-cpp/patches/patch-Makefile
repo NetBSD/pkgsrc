@@ -1,0 +1,14 @@
+$NetBSD: patch-Makefile,v 1.1 2016/02/20 02:54:45 khorben Exp $
+
+Do not run the tests
+
+--- Makefile.orig	2016-02-20 02:49:12.000000000 +0000
++++ Makefile
+@@ -1,6 +1,6 @@
+ PACKAGE	= CPP
+ VERSION	= 0.0.3
+-SUBDIRS	= data doc include src tests
++SUBDIRS	= data doc include src
+ RM	= rm -f
+ LN	= ln -f
+ TAR	= tar
