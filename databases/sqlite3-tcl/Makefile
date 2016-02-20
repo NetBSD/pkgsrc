@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.77 2016/01/08 14:43:10 adam Exp $
+# $NetBSD: Makefile,v 1.78 2016/02/20 10:25:02 jperkin Exp $
 
 DISTNAME=	sqlite-autoconf-${SQLITE3_DISTVERSION}
 PKGNAME=	sqlite3-tcl-${SQLITE3_VERSION}
+PKGREVISION=	1
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -24,6 +25,15 @@ BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.6.10
 # avoid conflict with lang/tcl
 post-extract:
 	mv ${WRKSRC}/doc/sqlite3.n ${WRKSRC}/doc/sqlite3-tcl.n
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+post-install:
+	install_name_tool -id \
+	    ${PREFIX}/lib/sqlite3/libsqlite${PKGVERSION_NOREV}.dylib \
+	    ${DESTDIR}${PREFIX}/lib/sqlite3/libsqlite${PKGVERSION_NOREV}.dylib
+.endif
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../lang/tcl/buildlink3.mk"
