@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 03:28:26 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/02/20 14:30:08 khorben Exp $
 
-SHA1 (Integration-0.0.1.tar.gz) = a303a72b142f0d5a0f754711fc08b389586b9057
-RMD160 (Integration-0.0.1.tar.gz) = b637bc940d1f9f2cf2ffba1bb03aa1f99c7459d3
-SHA512 (Integration-0.0.1.tar.gz) = a78347c2a3ce97c93f1a7908bd0d70af5241177a9232b09f3370466700f5f262219de00ba8bc7a2fcdb8589f333c8cae52926ab826853bb24daeb80665198d22
-Size (Integration-0.0.1.tar.gz) = 43523 bytes
+SHA1 (Integration-0.0.2.tar.gz) = 17f3727d8f62b85d2296b8389150f094bd9e6d78
+RMD160 (Integration-0.0.2.tar.gz) = e1be22ff805f9c7aa87a27e8ad9dde8ada33f160
+SHA512 (Integration-0.0.2.tar.gz) = d886937d4e83dc7db87a51c7b9a2599790c335a84d4ce5ba9a29f1fd47aca16345811d9178b36db81cf05aa62f9bc72ca8700199b3160b9472d9210959a2009f
+Size (Integration-0.0.2.tar.gz) = 43695 bytes
