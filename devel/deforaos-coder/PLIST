@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2016/02/20 01:42:23 khorben Exp $
+@comment $NetBSD: PLIST,v 1.5 2016/02/20 03:20:23 khorben Exp $
 bin/coder
 bin/console
 bin/debugger
+bin/gdeasm
 bin/sequel
 bin/simulator
 lib/Coder/backend/asm.so
@@ -24,6 +25,7 @@ share/Coder/Simulator/models/openmoko-gta02.conf
 share/Coder/Simulator/models/sharp-zaurus-sl-c3200.conf
 share/applications/deforaos-coder.desktop
 share/applications/deforaos-debugger.desktop
+share/applications/deforaos-gdeasm.desktop
 share/applications/deforaos-sequel.desktop
 share/applications/deforaos-simulator.desktop
 share/icons/hicolor/16x16/apps/simulator-jolla-jolla.png
