@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.802 2016/02/20 16:00:59 khorben Exp $
+$NetBSD: CHANGES-2016,v 1.803 2016/02/20 16:59:21 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1038,3 +1038,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/deforaos-mailer to 0.1.7 [khorben 2016-02-20]
 	Updated audio/deforaos-mixer to 0.2.0 [khorben 2016-02-20]
 	Updated x11/deforaos-notes to 0.1.0 [khorben 2016-02-20]
+	Updated games/xpat2 to 1.07nb4 [dholland 2016-02-20]
