@@ -1,26 +1,24 @@
-# $NetBSD: Makefile,v 1.28 2015/06/12 10:51:19 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2016/02/20 13:19:13 mef Exp $
 #
 
-DISTNAME=		cdif-1.19
-PKGREVISION=		4
+DISTNAME=		cdif-2.14
 CATEGORIES=		textproc
-MASTER_SITES=		http://ftp.freebsd.org/pub/FreeBSD/distfiles/
-EXTRACT_SUFX=		# empty
+MASTER_SITES=		${MASTER_SITE_GITHUB:=kaz-utashiro/}
+GITHUB_TAG=		v${PKGVERSION_NOREV}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.srekcah.org/~utashiro/perl/scripts/cdif/
+HOMEPAGE=		https://github.com/kaz-utashiro/cdif
 COMMENT=		Word context diff
 #LICENSE=		cdif-license # 1.19 can be used for any porpose
 
-WRKSRC=			${WRKDIR}
 USE_TOOLS+=		perl:run
 
 NO_BUILD=		yes
 INSTALLATION_DIRS=	bin
 
-REPLACE_PERL=		${DISTNAME}
+REPLACE_PERL=		${PKGBASE}
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/${DISTNAME} ${DESTDIR}${PREFIX}/bin/cdif
+	${INSTALL_SCRIPT} ${WRKSRC}/${PKGBASE} ${DESTDIR}${PREFIX}/bin/cdif
 
 .include "../../mk/bsd.pkg.mk"
