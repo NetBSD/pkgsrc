@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2015/10/06 16:50:03 khorben Exp $
+# $NetBSD: Makefile,v 1.7 2016/02/20 01:50:05 khorben Exp $
+#
 
-DISTNAME=	configure-0.2.2
-PKGNAME=	deforaos-configure-0.2.2
+DISTNAME=	configure-0.2.3
+PKGNAME=	deforaos-configure-0.2.3
 CATEGORIES=	devel
-MASTER_SITES=	http://www.defora.org/os/download/download/4378/
+MASTER_SITES=	http://www.defora.org/os/download/download/4395/
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	http://www.defora.org/
