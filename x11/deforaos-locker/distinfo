@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/11/04 03:28:27 agc Exp $
+$NetBSD: distinfo,v 1.7 2016/02/20 13:15:41 khorben Exp $
 
-SHA1 (Locker-0.3.1.tar.gz) = d2dab75ba9bbb0e9e6041a47ae5d2b2269d07a51
-RMD160 (Locker-0.3.1.tar.gz) = b707ab024e4482a1863812d24c56cd705f142078
-SHA512 (Locker-0.3.1.tar.gz) = ed2b5571a6bd4efc8a20e17f265ece34b1033a48b9bfc7b2f0db9d7942a837cada7f8a0c7814a95a6305c17f4b9cf8a4904f9515ab3efe927f26001144f3a1a4
-Size (Locker-0.3.1.tar.gz) = 61182 bytes
+SHA1 (Locker-0.4.0.tar.gz) = 8f4dbf9fd4f018e469ee1d9e9fc96d63c9277dd3
+RMD160 (Locker-0.4.0.tar.gz) = fa71db8a5f67f9b63f7d129e5ee12d43a8d77329
+SHA512 (Locker-0.4.0.tar.gz) = 989cb0ecf584f31eeb5a3e564c2a6e45501e63dd5f4873c68dcbe539109d3ebe8e01578e9e38ed3e267fe54271176b9e587651924a1ec51fd3287e2d1f3ded3d
+Size (Locker-0.4.0.tar.gz) = 62105 bytes
