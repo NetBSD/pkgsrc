@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2016/02/20 02:54:45 khorben Exp $
+
+SHA1 (CPP-0.0.3.tar.gz) = 0bafe0a4fe87f543fe121102f159034976c072cc
+RMD160 (CPP-0.0.3.tar.gz) = bc97f599da89c89c381a0736ac9cac1193dbc636
+SHA512 (CPP-0.0.3.tar.gz) = cc436c92f9ff55c3a4bbcc952546b09b7665b435561176e8cec0cc427d1a5bb92b0475dc0a1016db2c2f634649a1c73280e57508312ba632c9b1548e0b38b578
+Size (CPP-0.0.3.tar.gz) = 21742 bytes
+SHA1 (patch-Makefile) = 9772302b7f40b1f43e8b4d1f2e001b4841039bba
