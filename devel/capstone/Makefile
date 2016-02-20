@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2015/07/28 12:48:14 sevan Exp $
+# $NetBSD: Makefile,v 1.8 2016/02/20 11:40:30 jperkin Exp $
 
 DISTNAME=	capstone-3.0.4
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=aquynh/}
 

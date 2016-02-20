@@ -1,9 +1,11 @@
-$NetBSD: patch-Makefile,v 1.1 2015/07/28 12:48:14 sevan Exp $
+$NetBSD: patch-Makefile,v 1.2 2016/02/20 11:40:30 jperkin Exp $
 
 Unbreak build on FreeBSD and DragonflyBSD.
 
 Patch accepted upstream:
 https://github.com/aquynh/capstone/commit/453b41a29ed7f02f8319329cc86853d394b85a1e
+
+Fix install_name on Darwin.
 
 --- Makefile.orig	2015-07-15 07:44:42.000000000 +0000
 +++ Makefile
@@ -26,6 +28,15 @@ https://github.com/aquynh/capstone/commit/453b41a29ed7f02f8319329cc86853d394b85a
  
  INSTALL_BIN ?= install
  INSTALL_DATA ?= $(INSTALL_BIN) -m0644
+@@ -248,7 +254,7 @@ IS_APPLE := $(shell $(CC) -dM -E - < /de
+ ifeq ($(IS_APPLE),1)
+ EXT = dylib
+ VERSION_EXT = $(API_MAJOR).$(EXT)
+-$(LIBNAME)_LDFLAGS += -dynamiclib -install_name lib$(LIBNAME).$(VERSION_EXT) -current_version $(PKG_MAJOR).$(PKG_MINOR).$(PKG_EXTRA) -compatibility_version $(PKG_MAJOR).$(PKG_MINOR)
++$(LIBNAME)_LDFLAGS += -dynamiclib -install_name ${LIBDIR}/lib$(LIBNAME).$(VERSION_EXT) -current_version $(PKG_MAJOR).$(PKG_MINOR).$(PKG_EXTRA) -compatibility_version $(PKG_MAJOR).$(PKG_MINOR)
+ AR_EXT = a
+ # Homebrew wants to make sure its formula does not disable FORTIFY_SOURCE
+ # However, this is not really necessary because 'CAPSTONE_USE_SYS_DYN_MEM=yes' by default
 @@ -463,4 +469,3 @@ define generate-pkgcfg
  	echo 'Libs: -L$${libdir} -lcapstone' >> $(PKGCFGF)
  	echo 'Cflags: -I$${includedir}' >> $(PKGCFGF)
