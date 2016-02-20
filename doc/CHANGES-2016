@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.783 2016/02/20 00:13:39 khorben Exp $
+$NetBSD: CHANGES-2016,v 1.784 2016/02/20 00:48:18 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1019,3 +1019,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/openjdk8 to 1.8.74 [ryoon 2016-02-19]
 	Updated x11/deforaos-libdesktop to 0.2.1 [khorben 2016-02-20]
 	Updated sysutils/deforaos-browser to 0.5.0 [khorben 2016-02-20]
+	Updated x11/deforaos-panel to 0.3.6 [khorben 2016-02-20]
