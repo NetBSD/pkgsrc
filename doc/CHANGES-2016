@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.795 2016/02/20 11:28:37 jperkin Exp $
+$NetBSD: CHANGES-2016,v 1.796 2016/02/20 11:40:39 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1031,3 +1031,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/dconf to 0.22.0nb3 [jperkin 2016-02-20]
 	Updated databases/sqlite3-tcl to 3.11.0nb1 [jperkin 2016-02-20]
 	Updated audio/audacious to 3.5.2nb2 [jperkin 2016-02-20]
+	Updated devel/capstone to 3.0.4nb1 [jperkin 2016-02-20]
