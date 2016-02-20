@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/02/15 03:04:27 leot Exp $
+# $NetBSD: Makefile,v 1.3 2016/02/20 17:30:21 leot Exp $
 #
 
 DISTNAME=	zathura-pdf-mupdf-0.3.0
@@ -14,6 +14,8 @@ CONFLICTS+=	zathura-pdf-poppler-[0-9]*
 
 USE_TOOLS+=	pkg-config gmake
 USE_LIBTOOL=	yes
+
+CPPFLAGS+=	-D_XOPEN_SOURCE=600
 
 MAKE_ENV+=	MUPDF_LIB="-lmupdf -lmujs"
 
