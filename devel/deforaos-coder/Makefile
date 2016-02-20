@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2016/02/20 02:28:14 khorben Exp $
+# $NetBSD: Makefile,v 1.18 2016/02/20 03:20:23 khorben Exp $
 
 DISTNAME=	Coder-0.2.0
 PKGNAME=	deforaos-coder-0.2.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://www.defora.org/os/download/download/4420/
 
@@ -43,6 +43,7 @@ post-install:
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../databases/deforaos-libdatabase/buildlink3.mk"
+.include "../../devel/deforaos-asm/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
 .include "../../x11/deforaos-libdesktop/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
