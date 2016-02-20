@@ -1,25 +1,30 @@
-$NetBSD: patch-tools_Makefile,v 1.4 2015/08/29 15:12:33 khorben Exp $
+$NetBSD: patch-tools_Makefile,v 1.5 2016/02/20 01:42:24 khorben Exp $
 
 Do not build gdeasm for now (as it needs an additional library)
 
---- tools/Makefile.orig	2015-08-24 01:33:54.000000000 +0000
+--- tools/Makefile.orig	2016-02-20 01:28:33.000000000 +0000
 +++ tools/Makefile
 @@ -1,5 +1,5 @@
--SUBDIRS	= backend debug models
--TARGETS	= $(OBJDIR)debugger $(OBJDIR)gdeasm $(OBJDIR)sequel $(OBJDIR)simulator
-+SUBDIRS	= models
-+TARGETS	= $(OBJDIR)sequel $(OBJDIR)simulator
+ SUBDIRS	= backend debug models
+-TARGETS	= $(OBJDIR)console$(EXEEXT) $(OBJDIR)debugger$(EXEEXT) $(OBJDIR)gdeasm$(EXEEXT) $(OBJDIR)sequel$(EXEEXT) $(OBJDIR)simulator$(EXEEXT)
++TARGETS	= $(OBJDIR)console$(EXEEXT) $(OBJDIR)debugger$(EXEEXT) $(OBJDIR)sequel$(EXEEXT) $(OBJDIR)simulator$(EXEEXT)
  OBJDIR	=
  PREFIX	= /usr/local
  DESTDIR	=
-@@ -100,10 +100,6 @@ install: $(TARGETS)
- 		$(MAKE) OBJDIR="$(OBJDIR)$$i/" install; \
- 		else $(MAKE) install; fi) || exit; done
+@@ -115,8 +115,6 @@ install: $(TARGETS)
  	$(MKDIR) $(DESTDIR)$(BINDIR)
--	$(INSTALL) -m 0755 $(OBJDIR)debugger $(DESTDIR)$(BINDIR)/debugger
--	$(MKDIR) $(DESTDIR)$(BINDIR)
--	$(INSTALL) -m 0755 $(OBJDIR)gdeasm $(DESTDIR)$(BINDIR)/gdeasm
--	$(MKDIR) $(DESTDIR)$(BINDIR)
- 	$(INSTALL) -m 0755 $(OBJDIR)sequel $(DESTDIR)$(BINDIR)/sequel
+ 	$(INSTALL) -m 0755 $(OBJDIR)debugger$(EXEEXT) $(DESTDIR)$(BINDIR)/debugger$(EXEEXT)
  	$(MKDIR) $(DESTDIR)$(BINDIR)
- 	$(INSTALL) -m 0755 $(OBJDIR)simulator $(DESTDIR)$(BINDIR)/simulator
+-	$(INSTALL) -m 0755 $(OBJDIR)gdeasm$(EXEEXT) $(DESTDIR)$(BINDIR)/gdeasm$(EXEEXT)
+-	$(MKDIR) $(DESTDIR)$(BINDIR)
+ 	$(INSTALL) -m 0755 $(OBJDIR)sequel$(EXEEXT) $(DESTDIR)$(BINDIR)/sequel$(EXEEXT)
+ 	$(MKDIR) $(DESTDIR)$(BINDIR)
+ 	$(INSTALL) -m 0755 $(OBJDIR)simulator$(EXEEXT) $(DESTDIR)$(BINDIR)/simulator$(EXEEXT)
+@@ -128,7 +126,6 @@ uninstall:
+ 		else $(MAKE) uninstall; fi) || exit; done
+ 	$(RM) -- $(DESTDIR)$(BINDIR)/console$(EXEEXT)
+ 	$(RM) -- $(DESTDIR)$(BINDIR)/debugger$(EXEEXT)
+-	$(RM) -- $(DESTDIR)$(BINDIR)/gdeasm$(EXEEXT)
+ 	$(RM) -- $(DESTDIR)$(BINDIR)/sequel$(EXEEXT)
+ 	$(RM) -- $(DESTDIR)$(BINDIR)/simulator$(EXEEXT)
+ 
