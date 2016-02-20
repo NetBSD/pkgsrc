@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2015/08/24 23:46:03 khorben Exp $
+@comment $NetBSD: PLIST,v 1.6 2016/02/20 02:10:07 khorben Exp $
 bin/gprs
 bin/phone
 bin/phonectl
@@ -10,6 +10,7 @@ include/Desktop/Phone/plugin.h
 lib/Phone/modem/debug.so
 lib/Phone/modem/hayes.so
 lib/Phone/plugins/blacklist.so
+lib/Phone/plugins/console.so
 lib/Phone/plugins/debug.so
 lib/Phone/plugins/engineering.so
 lib/Phone/plugins/gprs.so
