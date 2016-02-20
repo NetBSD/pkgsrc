@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2016/02/20 00:12:55 khorben Exp $
+# $NetBSD: Makefile,v 1.21 2016/02/20 02:28:14 khorben Exp $
 #
 
 DISTNAME=	Browser-0.5.0
 PKGNAME=	deforaos-browser-0.5.0
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.defora.org/os/download/download/4418/
 
