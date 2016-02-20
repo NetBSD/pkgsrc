@@ -1,0 +1,18 @@
+This project is a multi-platform (de-)assembler. It has support for the
+following architectures:
+ * amd64
+ * arm (little and big endian)
+ * dalvik (Android bytecode)
+ * i386 and compatible
+ * java (bytecode)
+ * mips (little and big endian)
+ * sparc
+ * sparc64
+ * yasep (16 and 32-bits modes)
+
+It can handle the following file formats:
+ * Dex (inside Android applications)
+ * ELF
+ * flat files
+ * Java classes
+ * PE (Windows executables and libraries)
