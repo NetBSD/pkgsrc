@@ -1,0 +1,14 @@
+$NetBSD: patch-Makefile,v 1.1 2016/02/20 03:14:46 khorben Exp $
+
+Do not run the tests
+
+--- Makefile.orig	2016-02-20 03:08:46.000000000 +0000
++++ Makefile
+@@ -1,6 +1,6 @@
+ PACKAGE	= Asm
+ VERSION	= 0.2.3
+-SUBDIRS	= data doc include src tools tests
++SUBDIRS	= data doc include src tools
+ RM	= rm -f
+ LN	= ln -f
+ TAR	= tar
