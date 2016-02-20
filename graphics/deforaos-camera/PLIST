@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1 2013/03/04 23:10:50 khorben Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/02/20 01:18:22 khorben Exp $
 bin/camera
 bin/gallery
+lib/Desktop/widget/camera.so
+man/html1/camera.html
+man/html1/gallery.html
 man/man1/camera.1
 man/man1/gallery.1
-share/applications/camera.desktop
-share/applications/gallery.desktop
-share/doc/html/Camera/camera.html
-share/doc/html/Camera/gallery.html
+share/applications/deforaos-camera.desktop
+share/applications/deforaos-gallery.desktop
+share/locale/es/LC_MESSAGES/Camera.mo
 share/locale/fr/LC_MESSAGES/Camera.mo
