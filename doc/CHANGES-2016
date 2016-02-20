@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.785 2016/02/20 01:18:56 khorben Exp $
+$NetBSD: CHANGES-2016,v 1.786 2016/02/20 01:42:54 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1021,3 +1021,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/deforaos-browser to 0.5.0 [khorben 2016-02-20]
 	Updated x11/deforaos-panel to 0.3.6 [khorben 2016-02-20]
 	Updated graphics/deforaos-camera to 0.2.0 [khorben 2016-02-20]
+	Updated devel/deforaos-coder to 0.2.0 [khorben 2016-02-20]
