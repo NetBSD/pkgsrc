@@ -1,7 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2015/08/24 02:04:21 khorben Exp $
+@comment $NetBSD: PLIST,v 1.4 2016/02/20 01:42:23 khorben Exp $
 bin/coder
+bin/console
+bin/debugger
 bin/sequel
 bin/simulator
+lib/Coder/backend/asm.so
+lib/Coder/debug/ptrace.so
 man/html1/coder.html
 man/html1/sequel.html
 man/html1/simulator.html
@@ -19,6 +23,7 @@ share/Coder/Simulator/models/openmoko-gta01.conf
 share/Coder/Simulator/models/openmoko-gta02.conf
 share/Coder/Simulator/models/sharp-zaurus-sl-c3200.conf
 share/applications/deforaos-coder.desktop
+share/applications/deforaos-debugger.desktop
 share/applications/deforaos-sequel.desktop
 share/applications/deforaos-simulator.desktop
 share/icons/hicolor/16x16/apps/simulator-jolla-jolla.png
