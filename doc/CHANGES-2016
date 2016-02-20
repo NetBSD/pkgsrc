@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.788 2016/02/20 02:11:56 khorben Exp $
+$NetBSD: CHANGES-2016,v 1.789 2016/02/20 02:57:17 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1024,3 +1024,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/deforaos-coder to 0.2.0 [khorben 2016-02-20]
 	Updated devel/deforaos-configure to 0.2.3 [khorben 2016-02-20]
 	Updated comms/deforaos-phone to 0.5.0 [khorben 2016-02-20]
+	Added devel/deforaos-cpp version 0.0.3 [khorben 2016-02-20]
