@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.8 2015/11/03 03:27:17 agc Exp $
+$NetBSD: distinfo,v 1.9 2016/02/20 11:40:30 jperkin Exp $
 
 SHA1 (capstone-3.0.4.tar.gz) = 6153bbb4a4141fd9e6996d646cf7c81953cfe75a
 RMD160 (capstone-3.0.4.tar.gz) = 3f96993cc7cd2fbc1080e785bb7c7ae7f209d0f9
 SHA512 (capstone-3.0.4.tar.gz) = a5c29e7c559b5391d6a4ec9a7f766699ea6d321aa2f1fc57fdcec893107fa3ef2f5f6323629971c1129f1ca087df4f3ad03d0a8234d2eae368c8ccfec04dbf4d
 Size (capstone-3.0.4.tar.gz) = 2800818 bytes
-SHA1 (patch-Makefile) = 7720d97ba443e0bf3465dd5963535b4079956c1e
+SHA1 (patch-Makefile) = a29910046034f468101b6b291c4f995923d09528
