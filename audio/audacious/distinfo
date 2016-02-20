@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.8 2015/11/03 01:12:25 agc Exp $
+$NetBSD: distinfo,v 1.9 2016/02/20 11:28:26 jperkin Exp $
 
 SHA1 (audacious-3.5.2.tar.bz2) = 1c92ddb079ec1b0109cd4bc65a1329db5eb8cb1b
 RMD160 (audacious-3.5.2.tar.bz2) = dd41e56544d9563b47401a670d96a34d7be920b6
 SHA512 (audacious-3.5.2.tar.bz2) = 70fd5bf81fd86a867102917c9328e1e647e9566ecfbc773b15fe0d181f176cfb333976c817493b1e485f15a045da054f19a9d6d81106d55636fca14ac09f8008
 Size (audacious-3.5.2.tar.bz2) = 448436 bytes
+SHA1 (patch-configure) = 2f0dbdc037d80fcdf0fb993edb5d7ec59e1dc1a8
