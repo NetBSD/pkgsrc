@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.798 2016/02/20 13:20:23 mef Exp $
+$NetBSD: CHANGES-2016,v 1.799 2016/02/20 14:30:50 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1034,3 +1034,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/capstone to 3.0.4nb1 [jperkin 2016-02-20]
 	Updated x11/deforaos-locker to 0.4.0 [khorben 2016-02-20]
 	Updated textproc/cdif to 2.14 [mef 2016-02-20]
+	Updated x11/deforaos-integration to 0.0.2 [khorben 2016-02-20]
