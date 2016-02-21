@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.816 2016/02/21 15:20:41 wiedi Exp $
+$NetBSD: CHANGES-2016,v 1.817 2016/02/21 15:37:19 wiedi Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1052,3 +1052,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/deforaos-surfer to 0.2.10 [khorben 2016-02-21]
 	Updated graphics/opencv to 3.1.0 [fhajny 2016-02-21]
 	Updated sysutils/znapzend to 0.15.2 [wiedi 2016-02-21]
+	Updated editors/nano to 2.5.2 [wiedi 2016-02-21]
