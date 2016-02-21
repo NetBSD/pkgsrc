@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2016/01/18 23:00:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2016/02/21 10:29:12 wiz Exp $
 bin/hb-ot-shape-closure
 bin/hb-shape
 include/harfbuzz/hb-blob.h
@@ -82,6 +82,7 @@ share/gtk-doc/html/harfbuzz/harfbuzz.devhelp2
 share/gtk-doc/html/harfbuzz/hello-harfbuzz.html
 share/gtk-doc/html/harfbuzz/home.png
 share/gtk-doc/html/harfbuzz/index.html
+share/gtk-doc/html/harfbuzz/index.sgml
 share/gtk-doc/html/harfbuzz/install-harfbuzz.html
 share/gtk-doc/html/harfbuzz/left-insensitive.png
 share/gtk-doc/html/harfbuzz/left.png
