@@ -1,3 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2012/12/17 01:56:50 khorben Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/02/21 18:36:12 khorben Exp $
 bin/pdfviewer
-share/applications/pdfviewer.desktop
+man/html1/pdfviewer.html
+man/man1/pdfviewer.1
+share/applications/deforaos-pdfviewer.desktop
+share/locale/es/LC_MESSAGES/PDFViewer.mo
+share/locale/fr/LC_MESSAGES/PDFViewer.mo
