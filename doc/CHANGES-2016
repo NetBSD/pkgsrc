@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.805 2016/02/20 23:25:29 mef Exp $
+$NetBSD: CHANGES-2016,v 1.806 2016/02/21 05:50:46 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1041,3 +1041,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated games/xpat2 to 1.07nb4 [dholland 2016-02-20]
 	Updated time/deforaos-todo to 0.2.1 [khorben 2016-02-20]
 	Updated cad/gtkwave to 3.3.70 [mef 2016-02-20]
+	Updated net/mikutter to 3.3.7 [tsutsui 2016-02-21]
