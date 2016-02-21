@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2015/11/22 23:10:38 wiedi Exp $
+# $NetBSD: Makefile,v 1.11 2016/02/21 15:45:01 wiedi Exp $
 
-DISTNAME=	goaccess-0.9.6
+DISTNAME=	goaccess-0.9.7
 CATEGORIES=	www
 MASTER_SITES=	http://tar.goaccess.io/
 
