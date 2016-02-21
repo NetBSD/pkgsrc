@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.819 2016/02/21 16:04:53 wiedi Exp $
+$NetBSD: CHANGES-2016,v 1.820 2016/02/21 18:37:48 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1055,3 +1055,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated editors/nano to 2.5.2 [wiedi 2016-02-21]
 	Updated www/goaccess to 0.9.7 [wiedi 2016-02-21]
 	Updated devel/protobuf-c to 1.2.1 [wiedi 2016-02-21]
+	Updated print/deforaos-pdfviewer to 0.0.2 [khorben 2016-02-21]
