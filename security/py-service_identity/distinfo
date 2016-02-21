@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:18:05 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/02/21 10:47:20 wiz Exp $
 
-SHA1 (service_identity-14.0.0.tar.gz) = 10d7e29937f22d516659533f83af1e1427afdbd0
-RMD160 (service_identity-14.0.0.tar.gz) = 234a0b1ef7231d8e1215332f383b9d3073b4052b
-SHA512 (service_identity-14.0.0.tar.gz) = d504ad388defb38a86ca82c8ff9582dbb664a929e4b4ee7f6732b2da5326c33b1764384a8d849972f83ae7800c775daf90c1f3fbc61b8d2c29294f44c7cd36d2
-Size (service_identity-14.0.0.tar.gz) = 26033 bytes
+SHA1 (service_identity-16.0.0.tar.gz) = 42617f5abbd917c663aea58c4628b82e80d245ce
+RMD160 (service_identity-16.0.0.tar.gz) = 02d592f36c659bab4427838001f1cad2c84ac3f6
+SHA512 (service_identity-16.0.0.tar.gz) = 0ffa28b3dece2415a058ec159e4f85f3e86c0de520ed5d6933ec49edca91ccc79a57893ace40d5441455791433828ab55a939e90335dfdee8582627e33a896ae
+Size (service_identity-16.0.0.tar.gz) = 30270 bytes
