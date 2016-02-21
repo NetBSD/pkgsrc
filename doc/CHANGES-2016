@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.811 2016/02/21 10:35:46 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.812 2016/02/21 10:42:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1047,3 +1047,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/z80-asm to 2.3.7nb1 [ryoon 2016-02-21]
 	Updated fonts/harfbuzz to 1.2.0 [wiz 2016-02-21]
 	Updated devel/afl to 2.03b [wiz 2016-02-21]
+	Updated devel/py-atomicwrites to 0.1.9 [wiz 2016-02-21]
