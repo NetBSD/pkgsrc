@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 23:33:38 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/02/21 07:31:01 wen Exp $
 
-SHA1 (Math-Base36-0.10.tar.gz) = 9edd3aac11d7f75d56ce8ce84aad70068dad7868
-RMD160 (Math-Base36-0.10.tar.gz) = b496f91494370e69923257f630c6e3102ab32fdd
-SHA512 (Math-Base36-0.10.tar.gz) = 1bce9066f41d36d2527b21d839268144d119adfb712261e39e0980fdce338d63110a2e990a946eacb32233953b78b56f91e5d46673e7efa4b7374bb73dcb20f2
-Size (Math-Base36-0.10.tar.gz) = 20414 bytes
+SHA1 (Math-Base36-0.14.tar.gz) = 7e6f88ec400b0589fe22eba966128a3b3b197529
+RMD160 (Math-Base36-0.14.tar.gz) = c904769ed6c7991f2c0a42bf400ac8c955bc46d2
+SHA512 (Math-Base36-0.14.tar.gz) = d851ec86bf4d561d8f1c8b46de3dfd5108943d3d260296e0fddebf3e5ff6b069765260ae20af6ef5741c4677feb9a9ae588457197d44f57bb9434b64cd268e59
+Size (Math-Base36-0.14.tar.gz) = 20428 bytes
