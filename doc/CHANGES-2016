@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.813 2016/02/21 10:47:30 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.814 2016/02/21 12:40:30 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1049,3 +1049,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/afl to 2.03b [wiz 2016-02-21]
 	Updated devel/py-atomicwrites to 0.1.9 [wiz 2016-02-21]
 	Updated security/py-service_identity to 16.0.0 [wiz 2016-02-21]
+	Updated www/deforaos-surfer to 0.2.10 [khorben 2016-02-21]
