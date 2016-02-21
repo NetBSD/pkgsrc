@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15480 2016/02/21 10:35:46 wiz Exp $
+$NetBSD: TODO,v 1.15481 2016/02/21 10:42:35 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1383,7 +1383,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-Scientific-doc-2.5.5
 	o py-Unidecode-0.04.19
 	o py-apache-libcloud-0.20.1
-	o py-atomicwrites-0.1.9
 	o py-bleach-1.4.1
 	o py-bsddb3-6.1.0
 	o py-buildbot-0.9.0b5
