@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.810 2016/02/21 10:29:21 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.811 2016/02/21 10:35:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1046,3 +1046,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated math/p5-Math-Base36 to 0.14 [wen 2016-02-21]
 	Updated devel/z80-asm to 2.3.7nb1 [ryoon 2016-02-21]
 	Updated fonts/harfbuzz to 1.2.0 [wiz 2016-02-21]
+	Updated devel/afl to 2.03b [wiz 2016-02-21]
