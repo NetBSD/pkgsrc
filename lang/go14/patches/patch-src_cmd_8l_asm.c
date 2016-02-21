@@ -1,10 +1,18 @@
-$NetBSD: patch-src_cmd_8l_asm.c,v 1.1 2015/07/31 14:46:25 bsiegert Exp $
+$NetBSD: patch-src_cmd_8l_asm.c,v 1.2 2016/02/21 14:32:24 bsiegert Exp $
 
 Support cgo on illumos.
 
---- src/cmd/8l/asm.c.orig	2014-12-11 01:18:10.000000000 +0000
+--- src/cmd/8l/asm.c.orig	2015-09-23 04:37:36.000000000 +0000
 +++ src/cmd/8l/asm.c
-@@ -508,27 +508,8 @@ adddynsym(Link *ctxt, LSym *s)
+@@ -115,6 +115,7 @@ adddynrel(LSym *s, Reloc *r)
+ 		return;		
+ 	
+ 	case 256 + R_386_GOT32:
++	case 256 + R_386_GOT32X:
+ 		if(targ->type != SDYNIMPORT) {
+ 			// have symbol
+ 			if(r->off >= 2 && s->p[r->off-2] == 0x8b) {
+@@ -508,27 +509,8 @@ adddynsym(Link *ctxt, LSym *s)
  		adduint8(ctxt, d, t);
  		adduint8(ctxt, d, 0);
  	
