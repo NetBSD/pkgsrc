@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15477 2016/02/21 10:22:43 wiz Exp $
+$NetBSD: TODO,v 1.15478 2016/02/21 10:27:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -401,6 +401,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o adocman-0.13
 	o adodb-5.20
 	o aewm++-1.0.27
+	o afl-2.03b
 	o afterstep-2.2.12
 	o aget-0.4.1
 	o alacarte-0.13.2
@@ -843,6 +844,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hamster-applet-2.32.1 [GNOME 2.32]
 	o handbrake-0.10.2
 	o hanzim-3.5
+	o harfbuzz-1.2.0
 	o harminv-1.4
 	o haskell-mode-1.45
 	o hdf-4.2.8
@@ -1383,6 +1385,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-Scientific-doc-2.5.5
 	o py-Unidecode-0.04.19
 	o py-apache-libcloud-0.20.1
+	o py-atomicwrites-0.1.9
 	o py-bleach-1.4.1
 	o py-bsddb3-6.1.0
 	o py-buildbot-0.9.0b5
@@ -1413,6 +1416,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-musicbrainz-0.7.4
 	o py-ncclient-0.4.3
 	o py-netaddr-0.7.15
+	o py-nevow-0.13.0
 	o py-newt-0.52.18
 	o py-notify-0.3.1
 	o py-omniORBpy-3.7
@@ -1425,6 +1429,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-reportlab-3.0
 	o py-rope-0.9.4
 	o py-serpent-1.11
+	o py-service_identity-16.0.0
 	o py-simpletal-5.1
 	o py-smb-1.1.16
 	o py-spf-2.0.11
@@ -1437,6 +1442,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-tlslite-0.4.6
 	o py-uliweb-0.4.1
 	o py-uwsgi-2.0.11.1
+	o py-vdirsyncer-0.9.0
 	o py-wxWidgets-3.0.0
 	o py-yubiauth-0.3.10
 	o py-zconfig-3.0.3
@@ -1708,7 +1714,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wpa_supplicant-2.4
 	o wwwoffle-2.9i
 	o wxRemind-101
-	o x264-devel-20160213
+	o x264-devel-20160220
 	o x2vnc-1.31
 	o xa65-2.3.7
 	o xbindkeys-1.8.6
@@ -1720,6 +1726,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xemacs-current-21.5.31
 	o xenkernel46-4.6.0
 	o xentools44-4.4.0
+	o xerces-c-3.1.3
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.9.0
 	o xf86-video-geode-2.11.9 [wip]
