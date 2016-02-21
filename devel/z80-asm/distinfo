@@ -1,7 +1,12 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 03:29:39 agc Exp $
+$NetBSD: distinfo,v 1.7 2016/02/21 07:40:39 ryoon Exp $
 
 SHA1 (z80-asm-2.3.7.tar.gz) = a6355ab14f8e9de82e55fec5e4005e89d282cdb5
 RMD160 (z80-asm-2.3.7.tar.gz) = 65637277f2ab9b0d681fcbcc9034717419264915
 SHA512 (z80-asm-2.3.7.tar.gz) = 66c57404df21f85f695ed6c0a21755da8fb0a67ead10067421069d13175a49fced3050699bb750ed7253b76974f3dc5f989ab55d19459577f2277950a7f2e100
 Size (z80-asm-2.3.7.tar.gz) = 533983 bytes
+SHA1 (patch-Makefile) = 55e54eb99cff62d4163e20bbf59c190affccb7bf
 SHA1 (patch-aa) = f52a60e41d16936a49432febd592343b6aca6a10
+SHA1 (patch-hardware_analyzer.c) = f79f29c5d4810d83383d9b3245b3fccc26c646aa
+SHA1 (patch-interrupt.c) = 7a054b31d9d88d2c7272c956c8c41bf921e5226c
+SHA1 (patch-ports.c) = 782452b0e8941490513f3f0921708bf7c0f76ced
+SHA1 (patch-z80-cpu.h) = 5a22e7bb333f92aa5c38aaea9b3fc3b91deccfa2
