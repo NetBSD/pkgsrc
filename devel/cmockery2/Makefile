@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/02/14 02:55:23 mef Exp $
+# $NetBSD: Makefile,v 1.4 2016/02/21 22:35:20 wiz Exp $
 
 VERS=		1.3.9
 DISTNAME=	cmockery2-${VERS}
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	${MASTER_SITE_GITHUB:=lpabon/cmockery2/}
 COMMENT=	Reviving cmockery unit test framework from Google
 LICENSE=	apache-2.0
-
-FETCH_USING=	curl
 
 WRKSRC=		${WRKDIR}/cmockery2-${VERS}
 AUTOMAKE_REQD=	1.9
