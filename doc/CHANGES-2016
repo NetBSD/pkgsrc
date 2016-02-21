@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.822 2016/02/21 19:25:09 khorben Exp $
+$NetBSD: CHANGES-2016,v 1.823 2016/02/21 22:25:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1058,3 +1058,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated print/deforaos-pdfviewer to 0.0.2 [khorben 2016-02-21]
 	Updated editors/deforaos-editor to 0.4.0 [khorben 2016-02-21]
 	Updated meta-pkgs/deforaos-desktop to 0.0.10 [khorben 2016-02-21]
+	Updated textproc/xerces-c to 3.1.3 [wiz 2016-02-21]
