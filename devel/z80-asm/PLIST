@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2014/12/21 00:31:56 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/02/21 07:40:39 ryoon Exp $
 bin/z80-asm
 bin/z80-mon
 man/man1/z80-asm.1
@@ -11,3 +11,18 @@ man/man5/z80-file.5
 man/man5/z80-keyboard.5
 man/man5/z80-memory.5
 man/man5/z80-ports.5
+share/doc/z80-asm/CHANGELOG
+share/doc/z80-asm/README
+share/doc/z80-asm/SRC_FILES
+share/doc/z80-asm/TODO
+share/doc/z80-asm/Z80-cpu-pins
+share/doc/z80-asm/dizz80.dvi
+share/doc/z80-asm/dizz80.ps
+share/doc/z80-asm/execute_timing.txt
+share/doc/z80-asm/ti86ports.txt
+share/doc/z80-asm/z80-asm.html
+share/doc/z80-asm/z80-decoder.c
+share/doc/z80-asm/z80-decoder.h
+share/doc/z80-asm/z80-mon.html
+share/doc/z80-asm/z80instructions.txt
+share/doc/z80-asm/z80mnemonics.txt
