@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2015/08/09 15:36:19 khorben Exp $
+# $NetBSD: Makefile,v 1.15 2016/02/21 19:12:19 khorben Exp $
+#
 
-DISTNAME=	Editor-0.3.1
-PKGNAME=	deforaos-editor-0.3.1
+DISTNAME=	Editor-0.4.0
+PKGNAME=	deforaos-editor-0.4.0
 CATEGORIES=	editors
-MASTER_SITES=	http://www.defora.org/os/download/download/4356/
+MASTER_SITES=	http://www.defora.org/os/download/download/4398/
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	http://www.defora.org/
@@ -17,6 +18,7 @@ USE_TOOLS+=	xgettext
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
+MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
 AUTO_MKDIRS=	yes
 
 .include "../../mk/bsd.prefs.mk"
