@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15475 2016/02/19 10:14:58 wiz Exp $
+$NetBSD: TODO,v 1.15476 2016/02/21 07:32:07 wen Exp $
 
 Suggested new packages
 ======================
@@ -1222,7 +1222,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Mac-SystemDirectory-0.06
 	o p5-Mail-IMAPClient-3.35
 	o p5-Mail-Mbox-MessageParser-1.5105
-	o p5-Math-Base36-0.14
 	o p5-Math-BigInt-GMP-1.38
 	o p5-Math-BigInt-Pari-1.18
 	o p5-Math-Derivative-0.04

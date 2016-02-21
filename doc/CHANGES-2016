@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.807 2016/02/21 07:25:10 wen Exp $
+$NetBSD: CHANGES-2016,v 1.808 2016/02/21 07:32:07 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1043,3 +1043,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated cad/gtkwave to 3.3.70 [mef 2016-02-20]
 	Updated net/mikutter to 3.3.7 [tsutsui 2016-02-21]
 	Updated www/p5-Mojolicious to 6.47 [wen 2016-02-21]
+	Updated math/p5-Math-Base36 to 0.14 [wen 2016-02-21]
