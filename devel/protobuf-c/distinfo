@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 03:29:03 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/02/21 16:04:20 wiedi Exp $
 
-SHA1 (protobuf-c-1.1.1.tar.gz) = 9ab7586cd792b41c8f8d4a08d592f456d6e31482
-RMD160 (protobuf-c-1.1.1.tar.gz) = aed0d5a3e2241a8bd0d04fd01dbd1d2308e94b04
-SHA512 (protobuf-c-1.1.1.tar.gz) = a7c0f82464078ffe68afbe19ff8b136e880117038ed81493ab6dc175cc80769fb39adc88904d2ce4f82d999ea4266d668887089b977393de8ba8e003e6ff3bad
-Size (protobuf-c-1.1.1.tar.gz) = 116223 bytes
+SHA1 (protobuf-c-1.2.1.tar.gz) = 3ecd015299d5a8ab8304bf5eeea2fd0f75c1f6bb
+RMD160 (protobuf-c-1.2.1.tar.gz) = 16b5203a792b4db8adc18d5ec47546a7cdd377a1
+SHA512 (protobuf-c-1.2.1.tar.gz) = 1e9314dd93768067ecde981edc1e81cd54c53c8cbf7992cfc319e6ab56795dc5571e8f88d5f6fd428f27f6cda2bd7c14c48929b2944553afb7ab28b9589cf992
+Size (protobuf-c-1.2.1.tar.gz) = 117856 bytes
 SHA1 (patch-Makefile.am) = 7e037f255e8415cf3584adb0f652aabc71b4ecfe
