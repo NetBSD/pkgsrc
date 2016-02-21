@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2015/12/21 20:20:02 bsiegert Exp $
+# $NetBSD: Makefile,v 1.7 2016/02/21 14:32:24 bsiegert Exp $
 
 .include "../../lang/go/version.mk"
 
 DISTNAME=	go${GO14_VERSION}.src
 PKGNAME=	go14-${GO14_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	https://storage.googleapis.com/golang/
 PATCH_SITES=	https://codereview.appspot.com/download/
