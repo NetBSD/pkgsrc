@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.15 2016/02/14 10:56:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2016/02/21 10:35:37 wiz Exp $
 bin/afl-analyze
-bin/afl-as
 bin/afl-clang
 bin/afl-clang++
 bin/afl-cmin
