@@ -1,0 +1,26 @@
+$NetBSD: patch-src_Makefile,v 1.1 2016/02/22 12:42:56 khorben Exp $
+
+Always build libraries with -fPIC
+
+--- src/Makefile.orig	2016-02-20 14:42:07.000000000 +0000
++++ src/Makefile
+@@ -7,8 +7,8 @@ LIBDIR	= $(PREFIX)/lib
+ CC	= cc
+ CPPFLAGSF=
+ CPPFLAGS=
+-CFLAGSF	= -W `pkg-config --cflags libDesktop`
+-CFLAGS	= -Wall -g -O2 -pedantic -fPIC -D_FORTIFY_SOURCE=2 -fstack-protector-all
++CFLAGSF	= `pkg-config --cflags libDesktop`
++CFLAGS	= -W -Wall -g -O2 -pedantic -D_FORTIFY_SOURCE=2 -fstack-protector-all
+ LDFLAGSF= `pkg-config --libs libDesktop` -lintl
+ LDFLAGS	= -Wl,-z,relro -Wl,-z,now
+ EXEEXT	=
+@@ -34,7 +34,7 @@ subdirs:
+ 		else $(MAKE); fi) || exit; done
+ 
+ libMailer_OBJS = $(OBJDIR)account.o $(OBJDIR)callbacks.o $(OBJDIR)compose.o $(OBJDIR)folder.o $(OBJDIR)helper.o $(OBJDIR)mailer.o $(OBJDIR)message.o
+-libMailer_CFLAGS = $(CPPFLAGSF) $(CPPFLAGS) $(CFLAGSF) $(CFLAGS)
++libMailer_CFLAGS = $(CPPFLAGSF) $(CPPFLAGS) $(CFLAGSF) $(CFLAGS) -fPIC
+ libMailer_LDFLAGS = $(LDFLAGSF) $(LDFLAGS) `pkg-config --libs openssl` -lssl
+ 
+ $(OBJDIR)libMailer.a: $(libMailer_OBJS)
