@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.19 2015/11/04 00:35:17 agc Exp $
+$NetBSD: distinfo,v 1.20 2016/02/22 10:11:22 roy Exp $
 
-SHA1 (openresolv-3.7.2.tar.xz) = b8d5b8c063341749bc8c8087f24189c8100f06d4
-RMD160 (openresolv-3.7.2.tar.xz) = eb72b7b794fdc905d0be3fe2a6a7e2efe848362f
-SHA512 (openresolv-3.7.2.tar.xz) = cc5b54bf0d4e62c345cad9a4973447d38773d992ac9753ca873c472e8b5c4a3f5d926808c1627b54780ff7d70cd3d4e5f26fa169f7337323eae9e33326d7e349
-Size (openresolv-3.7.2.tar.xz) = 17340 bytes
+SHA1 (openresolv-3.7.3.tar.xz) = 1e463b31c2101e86b97f72825b7eb40c81ce2fd4
+RMD160 (openresolv-3.7.3.tar.xz) = 61eb560268ec5afa17d0fd7227b524b5e08eda78
+SHA512 (openresolv-3.7.3.tar.xz) = 1682ece8f9b476f34648c8c0e942832249cc66fface9bbea1547fe9cb41668e5b64bb446744cefddfbd5ff238f2dd1b1c25b1d2934fe7c7bf18e5e48145a3423
+Size (openresolv-3.7.3.tar.xz) = 17564 bytes
