@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.826 2016/02/22 10:11:34 roy Exp $
+$NetBSD: CHANGES-2016,v 1.827 2016/02/22 11:35:44 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1062,3 +1062,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated time/py-vdirsyncer to 0.9.0 [wiz 2016-02-21]
 	Updated www/py-nevow to 0.13.0 [wiz 2016-02-21]
 	Updated net/openresolv to 3.7.3 [roy 2016-02-22]
+	Updated databases/mongodb to 3.2.3 [fhajny 2016-02-22]
