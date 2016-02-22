@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2016/02/20 14:52:09 khorben Exp $
+# $NetBSD: Makefile,v 1.21 2016/02/22 12:42:56 khorben Exp $
 
 DISTNAME=	Mailer-0.1.7
 PKGNAME=	deforaos-mailer-0.1.7
@@ -21,6 +21,7 @@ MAKE_JOBS_SAFE=	no
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
+MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
 AUTO_MKDIRS=	yes
 
 CONFLICTS=	john-[0-9]*
