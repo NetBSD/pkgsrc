@@ -1,0 +1,17 @@
+$NetBSD: patch-src_account_Makefile,v 1.1 2016/02/22 12:42:56 khorben Exp $
+
+Always build plug-ins with -fPIC
+
+--- src/account/Makefile.orig	2016-02-20 14:42:07.000000000 +0000
++++ src/account/Makefile
+@@ -6,8 +6,8 @@ LIBDIR	= $(PREFIX)/lib
+ CC	= cc
+ CPPFLAGSF= -I ../../include
+ CPPFLAGS=
+-CFLAGSF	= -W `pkg-config --cflags openssl` `pkg-config --cflags glib-2.0`
+-CFLAGS	= -Wall -g -O2 -pedantic -fPIC -D_FORTIFY_SOURCE=2 -fstack-protector-all
++CFLAGSF	= `pkg-config --cflags openssl` `pkg-config --cflags glib-2.0` -fPIC
++CFLAGS	= -W -Wall -g -O2 -pedantic -D_FORTIFY_SOURCE=2 -fstack-protector-all
+ LDFLAGSF= `pkg-config --libs openssl` -lssl `pkg-config --libs glib-2.0`
+ LDFLAGS	= -Wl,-z,relro -Wl,-z,now
+ EXEEXT	=
