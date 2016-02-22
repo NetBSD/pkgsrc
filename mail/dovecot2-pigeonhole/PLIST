@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2015/05/17 00:13:51 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2016/02/22 12:41:01 taca Exp $
 bin/sieve-dump
 bin/sieve-filter
 bin/sieve-test
@@ -29,6 +29,7 @@ include/dovecot/sieve/sieve-error.h
 include/dovecot/sieve/sieve-ext-copy.h
 include/dovecot/sieve/sieve-ext-enotify.h
 include/dovecot/sieve/sieve-ext-environment.h
+include/dovecot/sieve/sieve-ext-imap4flags.h
 include/dovecot/sieve/sieve-ext-mailbox.h
 include/dovecot/sieve/sieve-ext-variables.h
 include/dovecot/sieve/sieve-extensions.h
@@ -55,6 +56,7 @@ include/dovecot/sieve/sieve-stringlist.h
 include/dovecot/sieve/sieve-types.h
 include/dovecot/sieve/sieve-validator.h
 include/dovecot/sieve/sieve.h
+include/dovecot/sieve/strtrim.h
 lib/dovecot/doveadm/lib10_doveadm_sieve_plugin.la
 lib/dovecot/lib90_sieve_plugin.la
 lib/dovecot/libdovecot-sieve.la
@@ -71,6 +73,7 @@ man/man1/sieve-test.1
 man/man1/sievec.1
 man/man1/sieved.1
 man/man7/pigeonhole.7
+share/aclocal/dovecot-pigeonhole.m4
 share/doc/dovecot/sieve/extensions/duplicate.txt
 share/doc/dovecot/sieve/extensions/editheader.txt
 share/doc/dovecot/sieve/extensions/include.txt
