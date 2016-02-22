@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2016/02/20 02:25:23 khorben Exp $
+# $NetBSD: Makefile,v 1.22 2016/02/22 11:52:39 khorben Exp $
 #
 
 DISTNAME=	libDesktop-0.2.1
@@ -18,6 +18,7 @@ USE_TOOLS+=	pkg-config
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
+MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
 AUTO_MKDIRS=	yes
 
 .include "../../mk/bsd.prefs.mk"
