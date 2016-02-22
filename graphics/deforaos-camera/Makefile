@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2016/02/20 02:28:14 khorben Exp $
+# $NetBSD: Makefile,v 1.12 2016/02/22 12:20:01 khorben Exp $
 #
 
 DISTNAME=	Camera-0.2.0
@@ -21,6 +21,7 @@ BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
+MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
 AUTO_MKDIRS=	yes
 
 .include "../../mk/bsd.prefs.mk"
