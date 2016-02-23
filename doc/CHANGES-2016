@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.835 2016/02/23 02:29:03 wen Exp $
+$NetBSD: CHANGES-2016,v 1.836 2016/02/23 11:23:43 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1071,3 +1071,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added devel/p5-PerlIO-via-Timeout version 0.32 [wen 2016-02-23]
 	Added net/p5-IO-Socket-Timeout version 0.32 [wen 2016-02-23]
 	Updated databases/p5-Redis to 1.982 [wen 2016-02-23]
+	Updated lang/nodejs to 5.7.0 [fhajny 2016-02-23]
