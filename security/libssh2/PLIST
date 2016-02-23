@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2015/07/26 17:15:34 nros Exp $
+@comment $NetBSD: PLIST,v 1.7 2016/02/23 22:47:18 wiz Exp $
 include/libssh2.h
 include/libssh2_publickey.h
 include/libssh2_sftp.h
@@ -89,6 +89,7 @@ man/man3/libssh2_publickey_remove.3
 man/man3/libssh2_publickey_remove_ex.3
 man/man3/libssh2_publickey_shutdown.3
 man/man3/libssh2_scp_recv.3
+man/man3/libssh2_scp_recv2.3
 man/man3/libssh2_scp_send.3
 man/man3/libssh2_scp_send64.3
 man/man3/libssh2_scp_send_ex.3
@@ -112,6 +113,7 @@ man/man3/libssh2_session_last_error.3
 man/man3/libssh2_session_method_pref.3
 man/man3/libssh2_session_methods.3
 man/man3/libssh2_session_set_blocking.3
+man/man3/libssh2_session_set_last_error.3
 man/man3/libssh2_session_set_timeout.3
 man/man3/libssh2_session_startup.3
 man/man3/libssh2_session_supported_algs.3
