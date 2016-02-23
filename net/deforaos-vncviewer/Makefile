@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2016/02/23 00:09:03 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2016/02/23 01:05:45 khorben Exp $
 #
 
 DISTNAME=	VNCViewer-0.0.0
 PKGNAME=	deforaos-vncviewer-0.0.0
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.defora.org/os/download/download/4407/
 
@@ -23,6 +24,6 @@ CONFLICTS=	tightvncviewer-[0-9]*
 CONFLICTS+=	vncviewer-[0-9]*
 
 .include "../../net/gtk-vnc/buildlink3.mk"
-.include "../../x11/deforaos-libdesktop/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
