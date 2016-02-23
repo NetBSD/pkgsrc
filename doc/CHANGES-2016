@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.840 2016/02/23 20:15:20 bsiegert Exp $
+$NetBSD: CHANGES-2016,v 1.841 2016/02/23 22:47:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1075,3 +1075,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/typo3_62 to 6.2.19 [taca 2016-02-23]
 	Updated security/libssh to 0.73 [wiz 2016-02-23]
 	Updated lang/go to 1.6 [bsiegert 2016-02-23]
+	Updated security/libssh2 to 1.7.0 [wiz 2016-02-23]
