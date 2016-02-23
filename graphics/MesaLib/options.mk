@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.47 2016/01/18 19:27:45 jperkin Exp $
+# $NetBSD: options.mk,v 1.48 2016/02/23 14:40:36 tnn Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=		llvm dri
@@ -10,7 +10,8 @@ PKG_SUGGESTED_OPTIONS=
 .if \
 	!empty(MACHINE_PLATFORM:MNetBSD-[789].*-i386) ||	\
 	!empty(MACHINE_PLATFORM:MNetBSD-[789].*-x86_64) ||	\
-	!empty(MACHINE_PLATFORM:MNetBSD-[789].*-sparc64)
+	!empty(MACHINE_PLATFORM:MNetBSD-[789].*-sparc64) ||	\
+	!empty(MACHINE_PLATFORM:MNetBSD-[789].*-*arm*)
 PKG_SUGGESTED_OPTIONS+=		llvm
 .endif
 
@@ -31,11 +32,12 @@ PKG_SUGGESTED_OPTIONS+=		dri
 .include "../../mk/bsd.options.mk"
 
 # gallium
-PLIST_VARS+=		swrast svga ilo i915 i965 nouveau r300 r600 radeonsi
+PLIST_VARS+=	freedreno ilo i915 i965 nouveau r300 r600 radeonsi	\
+		swrast svga vc4 virgl
 # classic DRI
-PLIST_VARS+=		dri swrast_dri i915_dri nouveau_dri i965_dri radeon_dri r200_dri
+PLIST_VARS+=	dri swrast_dri i915_dri nouveau_dri i965_dri radeon_dri r200_dri
 # other features
-PLIST_VARS+=		gbm wayland xatracker
+PLIST_VARS+=	gbm wayland xatracker
 
 .if !empty(PKG_OPTIONS:Mdri)
 
@@ -110,10 +112,19 @@ DRI_DRIVERS+=		i965
 # ARM drivers
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-*arm*)
 # Qualcomm SnapDragon, libdrm_freedreno.pc
-# GALLIUM_DRIVERS+=	freedreno
+GALLIUM_DRIVERS+=	freedreno
+PLIST.freedreno=	yes
 
 # Broadcom VideoCore 4
-# GALLIUM_DRIVERS+=	vc4
+GALLIUM_DRIVERS+=	vc4
+PLIST.vc4=		yes
+.endif
+
+# qemu Linux guest driver
+.if !empty(MACHINE_PLATFORM:MLinux-*-x86_64)
+# XXX test this
+#GALLIUM_DRIVERS+=	virgl
+#PLIST.virgl=		yes
 .endif
 
 # theoretically cross platform PCI drivers, but don't build on ARM

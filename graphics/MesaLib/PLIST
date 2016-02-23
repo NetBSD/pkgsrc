@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2016/01/05 13:02:57 tnn Exp $
+@comment $NetBSD: PLIST,v 1.33 2016/02/23 14:40:36 tnn Exp $
 ${PLIST.dri}include/EGL/egl.h
 ${PLIST.dri}include/EGL/eglext.h
 ${PLIST.dri}include/EGL/eglextchromium.h
@@ -33,7 +33,9 @@ ${PLIST.xatracker}include/xa_tracker.h
 ${PLIST.i915_dri}lib/dri/i915_dri.so
 ${PLIST.i965_dri}lib/dri/i965_dri.so
 ${PLIST.ilo}lib/dri/ilo_dri.so
+${PLIST.freedreno}lib/dri/kgsl_dri.so
 ${PLIST.swrast}lib/dri/kms_swrast_dri.so
+${PLIST.freedreno}lib/dri/msm_dri.so
 ${PLIST.nouveau}lib/dri/nouveau_dri.so
 ${PLIST.nouveau_dri}lib/dri/nouveau_vieux_dri.so
 ${PLIST.r200_dri}lib/dri/r200_dri.so
@@ -42,6 +44,7 @@ ${PLIST.r600}lib/dri/r600_dri.so
 ${PLIST.radeon_dri}lib/dri/radeon_dri.so
 ${PLIST.radeonsi}lib/dri/radeonsi_dri.so
 ${PLIST.swrast_dri}lib/dri/swrast_dri.so
+${PLIST.vc4}lib/dri/vc4_dri.so
 ${PLIST.svga}lib/dri/vmwgfx_dri.so
 ${PLIST.dri}lib/libEGL.la
 lib/libGL.la
