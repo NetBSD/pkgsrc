@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1100 2016/02/23 00:11:04 khorben Exp $
+# $NetBSD: Makefile,v 1.1101 2016/02/23 02:20:05 wen Exp $
 #
 
 COMMENT=	Networking tools
@@ -425,6 +425,7 @@ SUBDIR+=	p5-IO-Interface
 SUBDIR+=	p5-IO-SessionData
 SUBDIR+=	p5-IO-Socket-INET6
 SUBDIR+=	p5-IO-Socket-Multicast
+SUBDIR+=	p5-IO-Socket-Timeout
 SUBDIR+=	p5-IP-Country
 SUBDIR+=	p5-Net
 SUBDIR+=	p5-Net-AMQP
