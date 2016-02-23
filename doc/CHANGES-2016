@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.830 2016/02/22 12:41:30 taca Exp $
+$NetBSD: CHANGES-2016,v 1.831 2016/02/23 00:13:47 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1066,3 +1066,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-argcomplete to 1.1.0 [fhajny 2016-02-22]
 	Updated mail/mutt to 1.5.24nb2 [wiz 2016-02-22]
 	Updated mail/dovecot2-pigeonhole to 0.4.12 [taca 2016-02-22]
+	Added net/deforaos-vncviewer version 0.0.0 [khorben 2016-02-23]
