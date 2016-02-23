@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2016/02/10 11:09:23 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.31 2016/02/23 11:23:32 fhajny Exp $
 bin/node
 bin/npm
 include/node/android-ifaddrs.h
@@ -1810,53 +1810,28 @@ lib/node_modules/npm/node_modules/read/node_modules/mute-stream/mute.js
 lib/node_modules/npm/node_modules/read/node_modules/mute-stream/package.json
 lib/node_modules/npm/node_modules/read/package.json
 lib/node_modules/npm/node_modules/readable-stream/.npmignore
-lib/node_modules/npm/node_modules/readable-stream/.npmignore~8d21794... deps: upgrade npm to 3.6.0
-lib/node_modules/npm/node_modules/readable-stream/.npmignore~HEAD
 lib/node_modules/npm/node_modules/readable-stream/.travis.yml
 lib/node_modules/npm/node_modules/readable-stream/.zuul.yml
 lib/node_modules/npm/node_modules/readable-stream/LICENSE
-lib/node_modules/npm/node_modules/readable-stream/LICENSE~8d21794... deps: upgrade npm to 3.6.0
-lib/node_modules/npm/node_modules/readable-stream/LICENSE~8d21794... deps: upgrade npm to 3.6.0_0
-lib/node_modules/npm/node_modules/readable-stream/LICENSE~HEAD
-lib/node_modules/npm/node_modules/readable-stream/LICENSE~HEAD_0
 lib/node_modules/npm/node_modules/readable-stream/README.md
-lib/node_modules/npm/node_modules/readable-stream/README.md~HEAD
 lib/node_modules/npm/node_modules/readable-stream/doc/stream.markdown
 lib/node_modules/npm/node_modules/readable-stream/doc/wg-meetings/2015-01-30.md
 lib/node_modules/npm/node_modules/readable-stream/duplex.js
-lib/node_modules/npm/node_modules/readable-stream/duplex.js~8d21794... deps: upgrade npm to 3.6.0
-lib/node_modules/npm/node_modules/readable-stream/duplex.js~HEAD
 lib/node_modules/npm/node_modules/readable-stream/lib/_stream_duplex.js
-lib/node_modules/npm/node_modules/readable-stream/lib/_stream_duplex.js~HEAD
 lib/node_modules/npm/node_modules/readable-stream/lib/_stream_passthrough.js
-lib/node_modules/npm/node_modules/readable-stream/lib/_stream_passthrough.js~HEAD
 lib/node_modules/npm/node_modules/readable-stream/lib/_stream_readable.js
 lib/node_modules/npm/node_modules/readable-stream/lib/_stream_transform.js
-lib/node_modules/npm/node_modules/readable-stream/lib/_stream_transform.js~HEAD
 lib/node_modules/npm/node_modules/readable-stream/lib/_stream_writable.js
-lib/node_modules/npm/node_modules/readable-stream/lib/_stream_writable.js~HEAD
 lib/node_modules/npm/node_modules/readable-stream/node_modules/core-util-is/LICENSE
 lib/node_modules/npm/node_modules/readable-stream/node_modules/core-util-is/README.md
-lib/node_modules/npm/node_modules/readable-stream/node_modules/core-util-is/README.md~8d21794... deps: upgrade npm to 3.6.0
-lib/node_modules/npm/node_modules/readable-stream/node_modules/core-util-is/README.md~HEAD
 lib/node_modules/npm/node_modules/readable-stream/node_modules/core-util-is/float.patch
-lib/node_modules/npm/node_modules/readable-stream/node_modules/core-util-is/float.patch~8d21794... deps: upgrade npm to 3.6.0
-lib/node_modules/npm/node_modules/readable-stream/node_modules/core-util-is/float.patch~HEAD
 lib/node_modules/npm/node_modules/readable-stream/node_modules/core-util-is/lib/util.js
-lib/node_modules/npm/node_modules/readable-stream/node_modules/core-util-is/lib/util.js~8d21794... deps: upgrade npm to 3.6.0
-lib/node_modules/npm/node_modules/readable-stream/node_modules/core-util-is/lib/util.js~HEAD
 lib/node_modules/npm/node_modules/readable-stream/node_modules/core-util-is/package.json
 lib/node_modules/npm/node_modules/readable-stream/node_modules/core-util-is/test.js
 lib/node_modules/npm/node_modules/readable-stream/node_modules/isarray/README.md
-lib/node_modules/npm/node_modules/readable-stream/node_modules/isarray/README.md~8d21794... deps: upgrade npm to 3.6.0
-lib/node_modules/npm/node_modules/readable-stream/node_modules/isarray/README.md~HEAD
 lib/node_modules/npm/node_modules/readable-stream/node_modules/isarray/build/build.js
 lib/node_modules/npm/node_modules/readable-stream/node_modules/isarray/component.json
-lib/node_modules/npm/node_modules/readable-stream/node_modules/isarray/component.json~8d21794... deps: upgrade npm to 3.6.0
-lib/node_modules/npm/node_modules/readable-stream/node_modules/isarray/component.json~HEAD
 lib/node_modules/npm/node_modules/readable-stream/node_modules/isarray/index.js
-lib/node_modules/npm/node_modules/readable-stream/node_modules/isarray/index.js~8d21794... deps: upgrade npm to 3.6.0
-lib/node_modules/npm/node_modules/readable-stream/node_modules/isarray/index.js~HEAD
 lib/node_modules/npm/node_modules/readable-stream/node_modules/isarray/package.json
 lib/node_modules/npm/node_modules/readable-stream/node_modules/process-nextick-args/.travis.yml
 lib/node_modules/npm/node_modules/readable-stream/node_modules/process-nextick-args/index.js
@@ -1865,17 +1840,9 @@ lib/node_modules/npm/node_modules/readable-stream/node_modules/process-nextick-a
 lib/node_modules/npm/node_modules/readable-stream/node_modules/process-nextick-args/readme.md
 lib/node_modules/npm/node_modules/readable-stream/node_modules/process-nextick-args/test.js
 lib/node_modules/npm/node_modules/readable-stream/node_modules/string_decoder/.npmignore
-lib/node_modules/npm/node_modules/readable-stream/node_modules/string_decoder/.npmignore~8d21794... deps: upgrade npm to 3.6.0
-lib/node_modules/npm/node_modules/readable-stream/node_modules/string_decoder/.npmignore~HEAD
 lib/node_modules/npm/node_modules/readable-stream/node_modules/string_decoder/LICENSE
-lib/node_modules/npm/node_modules/readable-stream/node_modules/string_decoder/LICENSE~8d21794... deps: upgrade npm to 3.6.0
-lib/node_modules/npm/node_modules/readable-stream/node_modules/string_decoder/LICENSE~HEAD
 lib/node_modules/npm/node_modules/readable-stream/node_modules/string_decoder/README.md
-lib/node_modules/npm/node_modules/readable-stream/node_modules/string_decoder/README.md~8d21794... deps: upgrade npm to 3.6.0
-lib/node_modules/npm/node_modules/readable-stream/node_modules/string_decoder/README.md~HEAD
 lib/node_modules/npm/node_modules/readable-stream/node_modules/string_decoder/index.js
-lib/node_modules/npm/node_modules/readable-stream/node_modules/string_decoder/index.js~8d21794... deps: upgrade npm to 3.6.0
-lib/node_modules/npm/node_modules/readable-stream/node_modules/string_decoder/index.js~HEAD
 lib/node_modules/npm/node_modules/readable-stream/node_modules/string_decoder/package.json
 lib/node_modules/npm/node_modules/readable-stream/node_modules/util-deprecate/History.md
 lib/node_modules/npm/node_modules/readable-stream/node_modules/util-deprecate/LICENSE
@@ -1885,16 +1852,9 @@ lib/node_modules/npm/node_modules/readable-stream/node_modules/util-deprecate/no
 lib/node_modules/npm/node_modules/readable-stream/node_modules/util-deprecate/package.json
 lib/node_modules/npm/node_modules/readable-stream/package.json
 lib/node_modules/npm/node_modules/readable-stream/passthrough.js
-lib/node_modules/npm/node_modules/readable-stream/passthrough.js~8d21794... deps: upgrade npm to 3.6.0
-lib/node_modules/npm/node_modules/readable-stream/passthrough.js~HEAD
 lib/node_modules/npm/node_modules/readable-stream/readable.js
-lib/node_modules/npm/node_modules/readable-stream/readable.js~HEAD
 lib/node_modules/npm/node_modules/readable-stream/transform.js
-lib/node_modules/npm/node_modules/readable-stream/transform.js~8d21794... deps: upgrade npm to 3.6.0
-lib/node_modules/npm/node_modules/readable-stream/transform.js~HEAD
 lib/node_modules/npm/node_modules/readable-stream/writable.js
-lib/node_modules/npm/node_modules/readable-stream/writable.js~8d21794... deps: upgrade npm to 3.6.0
-lib/node_modules/npm/node_modules/readable-stream/writable.js~HEAD
 lib/node_modules/npm/node_modules/readdir-scoped-modules/.travis.yml
 lib/node_modules/npm/node_modules/readdir-scoped-modules/LICENSE
 lib/node_modules/npm/node_modules/readdir-scoped-modules/README.md
