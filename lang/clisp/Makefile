@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2015/01/04 03:17:17 dholland Exp $
+# $NetBSD: Makefile,v 1.106 2016/02/23 15:19:23 joerg Exp $
 #
 
 DISTNAME=		clisp-2.49
@@ -19,6 +19,9 @@ BROKEN_ON_PLATFORM+=	*-*-arm
 BROKEN_ON_PLATFORM+=	MirBSD-*-*
 
 MAKE_JOBS_SAFE=		no
+
+# Installs a copy of its own depcomp, avoid libtool dependency here.
+OVERRIDE_DIRDEPTH.depcomp=	0
 
 GNU_CONFIGURE=		yes
 CONFIGURE_DIRS=		.
