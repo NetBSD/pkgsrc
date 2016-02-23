@@ -1,0 +1,17 @@
+$NetBSD: patch-libltdl_config_depcomp,v 1.1 2016/02/23 15:17:41 joerg Exp $
+
+Sometimes, the same source file is compiled for both PIC and non-PIC use.
+Avoid using the same temporary file in this case as it will result in
+very hard to debug race conditions for parallel builds otherwise.
+
+--- libltdl/config/depcomp.orig	2016-01-25 14:51:26.100348213 +0000
++++ libltdl/config/depcomp
+@@ -65,7 +65,7 @@ fi
+ # Dependencies for sub/bar.o or sub/bar.obj go into sub/.deps/bar.Po.
+ depfile=${depfile-`echo "$object" |
+   sed 's|[^\\/]*$|'${DEPDIR-.deps}'/&|;s|\.\([^.]*\)$|.P\1|;s|Pobj$|Po|'`}
+-tmpdepfile=${tmpdepfile-`echo "$depfile" | sed 's/\.\([^.]*\)$/.T\1/'`}
++tmpdepfile=${tmpdepfile-`echo "$depfile" | sed 's/\.\([^.]*\)$/.T\1/'`}.$$
+ 
+ rm -f "$tmpdepfile"
+ 
