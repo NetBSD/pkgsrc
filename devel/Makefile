@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2218 2016/02/20 03:15:14 khorben Exp $
+# $NetBSD: Makefile,v 1.2219 2016/02/23 02:10:53 wen Exp $
 #
 
 COMMENT=	Development utilities
@@ -1286,6 +1286,7 @@ SUBDIR+=	p5-PerlIO-eol
 SUBDIR+=	p5-PerlIO-gzip
 SUBDIR+=	p5-PerlIO-utf8_strict
 SUBDIR+=	p5-PerlIO-via-Bzip2
+SUBDIR+=	p5-PerlIO-via-Timeout
 SUBDIR+=	p5-PerlIO-via-dynamic
 SUBDIR+=	p5-PerlIO-via-symlink
 SUBDIR+=	p5-Pod-Usage
