@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1099 2016/01/11 13:47:22 abs Exp $
+# $NetBSD: Makefile,v 1.1100 2016/02/23 00:11:04 khorben Exp $
 #
 
 COMMENT=	Networking tools
@@ -88,6 +88,7 @@ SUBDIR+=	dc_gui2
 SUBDIR+=	dcsharp
 SUBDIR+=	dctc
 SUBDIR+=	ddclient
+SUBDIR+=	deforaos-vncviewer
 SUBDIR+=	delegate
 SUBDIR+=	dgd
 SUBDIR+=	dhcpcd
