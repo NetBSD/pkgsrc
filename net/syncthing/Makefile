@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2016/02/16 23:07:12 gdt Exp $
+# $NetBSD: Makefile,v 1.13 2016/02/23 20:18:11 bsiegert Exp $
 
 # Upstream regularly breaks protocol compatibility.  While users of
 # pkgsrc syncthing on multiple systems can update synchronously, an
@@ -11,6 +11,7 @@
 # version from f-droid prior to commiting.  (This is an attempt to
 # avoid having to version syncthing in pkgsrc.)
 DISTNAME=	syncthing-0.12.19
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=syncthing/}
 
