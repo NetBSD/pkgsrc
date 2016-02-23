@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2015/07/26 17:15:34 nros Exp $
-#
+# $NetBSD: Makefile,v 1.13 2016/02/23 22:47:18 wiz Exp $
 
-DISTNAME=	libssh2-1.6.0
+DISTNAME=	libssh2-1.7.0
 CATEGORIES=	security
-MASTER_SITES=	http://www.libssh2.org/download/
+MASTER_SITES=	https://www.libssh2.org/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.libssh2.org/
+HOMEPAGE=	https://www.libssh2.org/
 COMMENT=	SSH2 protocol library
 LICENSE=	modified-bsd
 
