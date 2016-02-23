@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.837 2016/02/23 15:44:06 taca Exp $
+$NetBSD: CHANGES-2016,v 1.838 2016/02/23 15:49:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1073,3 +1073,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/p5-Redis to 1.982 [wen 2016-02-23]
 	Updated lang/nodejs to 5.7.0 [fhajny 2016-02-23]
 	Updated www/typo3_62 to 6.2.19 [taca 2016-02-23]
+	Updated security/libssh to 0.73 [wiz 2016-02-23]
