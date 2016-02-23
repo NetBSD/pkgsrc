@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.58 2014/10/07 23:18:36 prlw1 Exp $
+$NetBSD: patch-aa,v 1.59 2016/02/23 11:27:55 wiz Exp $
 
 - solaris sun studio check and fix
 - use pkgsrc libtool
@@ -7,9 +7,9 @@ $NetBSD: patch-aa,v 1.58 2014/10/07 23:18:36 prlw1 Exp $
 - remove unnecessary executions of libtool from configure
   https://bugzilla.gnome.org/show_bug.cgi?id=736710
 
---- configure.orig	2013-10-15 19:14:48.000000000 +0000
+--- configure.orig	2015-05-13 02:50:37.000000000 +0000
 +++ configure
-@@ -730,6 +730,7 @@ GIO
+@@ -734,6 +734,7 @@ GIO
  GSPAWN
  GLIB_DEBUG_FLAGS
  G_MODULE_NEED_USCORE
@@ -17,7 +17,7 @@ $NetBSD: patch-aa,v 1.58 2014/10/07 23:18:36 prlw1 Exp $
  G_MODULE_BROKEN_RTLD_GLOBAL
  G_MODULE_HAVE_DLERROR
  G_MODULE_LDFLAGS
-@@ -21145,6 +21146,8 @@ else
+@@ -21012,6 +21013,8 @@ else
  # ifdef _MSC_VER
  #  include <malloc.h>
  #  define alloca _alloca
@@ -26,7 +26,7 @@ $NetBSD: patch-aa,v 1.58 2014/10/07 23:18:36 prlw1 Exp $
  # else
  #  ifdef HAVE_ALLOCA_H
  #   include <alloca.h>
-@@ -22150,8 +22153,8 @@ else
+@@ -21979,8 +21982,8 @@ else
  fi
  
  
@@ -37,7 +37,7 @@ $NetBSD: patch-aa,v 1.58 2014/10/07 23:18:36 prlw1 Exp $
  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
  /* end confdefs.h.  */
  #if defined(__SUNPRO_C) || (__SUNPRO_C >= 0x550)
-@@ -24049,16 +24052,48 @@ fi
+@@ -23747,16 +23750,48 @@ fi
  
  case $host in
    *-*-solaris* )
@@ -87,7 +87,7 @@ $NetBSD: patch-aa,v 1.58 2014/10/07 23:18:36 prlw1 Exp $
  esac
  
  if test "$ac_cv_func_statfs" = yes; then :
-@@ -25050,10 +25085,11 @@ if test x"$glib_native_win32" = xyes; th
+@@ -24824,10 +24859,11 @@ if test x"$glib_native_win32" = xyes; th
      G_MODULE_LDFLAGS=
  else
    export SED
@@ -100,7 +100,7 @@ $NetBSD: patch-aa,v 1.58 2014/10/07 23:18:36 prlw1 Exp $
  G_MODULE_HAVE_DLERROR=0
  if test -z "$G_MODULE_IMPL"; then
    case "$host" in
-@@ -25271,13 +25307,12 @@ if  test "$G_MODULE_IMPL" = "G_MODULE_IM
+@@ -24953,13 +24989,12 @@ if  test "$G_MODULE_IMPL" = "G_MODULE_IM
  	LIBS="$G_MODULE_LIBS $LIBS"
  	LDFLAGS="$LDFLAGS $G_MODULE_LDFLAGS"
  	echo "void glib_plugin_test(void) { }" > plugin.c
@@ -116,7 +116,7 @@ $NetBSD: patch-aa,v 1.58 2014/10/07 23:18:36 prlw1 Exp $
  	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for RTLD_GLOBAL brokenness" >&5
  $as_echo_n "checking for RTLD_GLOBAL brokenness... " >&6; }
  if ${glib_cv_rtldglobal_broken+:} false; then :
-@@ -25387,6 +25423,56 @@ fi
+@@ -25069,6 +25104,56 @@ fi
  	LIBS="$LIBS_orig"
  
  fi
@@ -173,7 +173,7 @@ $NetBSD: patch-aa,v 1.58 2014/10/07 23:18:36 prlw1 Exp $
  if test -z "$G_MODULE_IMPL"; then
  	G_MODULE_IMPL=0
          G_MODULE_SUPPORTED=false
-@@ -25397,7 +25483,5 @@ fi
+@@ -25079,8 +25164,6 @@ fi
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for the suffix of module shared libraries" >&5
  $as_echo_n "checking for the suffix of module shared libraries... " >&6; }
  export SED
@@ -181,7 +181,8 @@ $NetBSD: patch-aa,v 1.58 2014/10/07 23:18:36 prlw1 Exp $
 -eval $shrext_cmds
  module=yes eval std_shrext=$shrext_cmds
  # chop the initial dot
-@@ -25421,6 +25507,7 @@ fi
+ glib_gmodule_suffix=`echo $std_shrext | sed 's/^\.//'`
+@@ -25103,6 +25186,7 @@ fi
  
  
  
@@ -189,7 +190,7 @@ $NetBSD: patch-aa,v 1.58 2014/10/07 23:18:36 prlw1 Exp $
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for gspawn implementation" >&5
  $as_echo_n "checking for gspawn implementation... " >&6; }
  case "$host" in
-@@ -26398,62 +26485,8 @@ if  test x"$have_threads" = xposix; then
+@@ -26077,62 +26161,8 @@ if  test x"$have_threads" = xposix; then
        G_THREAD_LIBS="-lpthread -lthread"
        ;;
      *)
