@@ -1,17 +1,17 @@
-$NetBSD: distinfo,v 1.212 2015/11/03 03:27:28 agc Exp $
+$NetBSD: distinfo,v 1.213 2016/02/23 11:27:55 wiz Exp $
 
 SHA1 (glib-2.44.1.tar.xz) = 88176375f97ecd9ff45e7b5fd5ab80d4b7db6b34
 RMD160 (glib-2.44.1.tar.xz) = 40db36e25c4baf5bdcdde34379d4968e9b35557c
 SHA512 (glib-2.44.1.tar.xz) = c24d307408e061b2657f7e7d1b8245c55605ebda26ee2dcc3497ee9d90bfc137d8e5f42f0cd5acf4b49ea28c424fa901e81f75ecf81833f6d0fe51d5e36e5888
 Size (glib-2.44.1.tar.xz) = 7132940 bytes
-SHA1 (patch-aa) = 03313c0ee430a127c07510b096c5d1556c8db74e
+SHA1 (patch-aa) = d197ded7ca05c2e37396e6c6b185797bd9bb2821
 SHA1 (patch-ab) = 04bde955a2a588011a8c77ada4923d5464a0d544
 SHA1 (patch-ac) = 96e153339675457356f71e35d20375bed669d337
 SHA1 (patch-ae) = 09f16e8e14bdea3ee0e478d335f65cb66939e5f5
 SHA1 (patch-af) = 6da2f31b5052a9b1d02b9a87f47896be238a88bd
 SHA1 (patch-ah) = 2e23c228047d07769ef5b03b0ff636daa0435ee5
 SHA1 (patch-aha) = 3249929122a567eec3c421a1efa0ac510f1474b7
-SHA1 (patch-ak) = cb5dd83fc44c3ecb1e27415126ac7ccdb118a584
+SHA1 (patch-ak) = edf116968bd3c787fea77787add7e0164b6f1ffb
 SHA1 (patch-al) = 4eb4e241488dabe254973f5ada92898af57cd0f5
 SHA1 (patch-am) = 99f54927d76580dfeda2a6b1909e1bea5dbdc293
 SHA1 (patch-an) = 8dfc12cf0c8f3b8c7948fe3b2543a56e0cacec98
@@ -25,6 +25,7 @@ SHA1 (patch-gio_gdbusauthmechanismsha1.c) = dfbd4a85ea842f11e4bb76d39c5509fb8b0d
 SHA1 (patch-gio_gresource-tool.c) = 4eb7c9df25e9ac3e977edf3be8fb977a6fb39182
 SHA1 (patch-gio_gtestdbus.c) = 562d8b2f3c235d27a2ba252ff1a778b8b3e4c413
 SHA1 (patch-gio_gunixmounts.c) = 40edf6a79d37bf8eca38d0f84521a7538443c00c
+SHA1 (patch-glib_gdate.c) = e3132f5f2ae024603af3d382d453e23c2a6d2e08
 SHA1 (patch-glib_gmain.c) = d09ff66e475ee52d37ac0dcb463110f690ce6511
 SHA1 (patch-glib_gthread-posix.c) = ca93c8dc358453eb79b518c884464c90d7628888
 SHA1 (patch-glib_gtimezone.c) = d9686da52f171a073d80cfd9f80aa490088a00a3
