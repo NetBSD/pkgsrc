@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/02/23 02:17:26 wen Exp $
+
+SHA1 (IO-Socket-Timeout-0.32.tar.gz) = 3db312bd1bc5a2738b5695fea131337c7826cd8a
+RMD160 (IO-Socket-Timeout-0.32.tar.gz) = 32369631d3fb77df0f2cd87985cd9f4ad17a2ab2
+SHA512 (IO-Socket-Timeout-0.32.tar.gz) = 013ad036c796880ab464b18f642260609095cf40c74f3127abaf3c8a596ba8ee85746129dc84d2d1e6f1bbfc86d75969e99c5a9b67736fa3e5e8bc7f5ddf83a6
+Size (IO-Socket-Timeout-0.32.tar.gz) = 16294 bytes
