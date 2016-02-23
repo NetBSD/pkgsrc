@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.831 2016/02/23 00:13:47 khorben Exp $
+$NetBSD: CHANGES-2016,v 1.832 2016/02/23 00:15:55 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1067,3 +1067,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/mutt to 1.5.24nb2 [wiz 2016-02-22]
 	Updated mail/dovecot2-pigeonhole to 0.4.12 [taca 2016-02-22]
 	Added net/deforaos-vncviewer version 0.0.0 [khorben 2016-02-23]
+	Updated meta-pkgs/deforaos-desktop to 0.0.11 [khorben 2016-02-23]
