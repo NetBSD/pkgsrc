@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.839 2016/02/23 19:07:18 reed Exp $
+$NetBSD: CHANGES-2016,v 1.840 2016/02/23 20:15:20 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1074,3 +1074,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/nodejs to 5.7.0 [fhajny 2016-02-23]
 	Updated www/typo3_62 to 6.2.19 [taca 2016-02-23]
 	Updated security/libssh to 0.73 [wiz 2016-02-23]
+	Updated lang/go to 1.6 [bsiegert 2016-02-23]
