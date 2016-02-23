@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/02/23 00:09:03 khorben Exp $
+
+SHA1 (VNCViewer-0.0.0.tar.gz) = 4fa52579ca26c7ed4746202771f15280c911291a
+RMD160 (VNCViewer-0.0.0.tar.gz) = c2138da80cde5475e08e747d31ccd0bdeaf7f1aa
+SHA512 (VNCViewer-0.0.0.tar.gz) = 941d45fd8001705878a0816b67eb66289753dee31bc579ba18880ae4607998de61c12b4c0438e4976d9f5302eeb12ef89267303b5dd03f7b712d92e2c8f29de4
+Size (VNCViewer-0.0.0.tar.gz) = 23379 bytes
