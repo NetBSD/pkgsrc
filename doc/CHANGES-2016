@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.833 2016/02/23 02:12:05 wen Exp $
+$NetBSD: CHANGES-2016,v 1.834 2016/02/23 02:21:02 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1069,3 +1069,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added net/deforaos-vncviewer version 0.0.0 [khorben 2016-02-23]
 	Updated meta-pkgs/deforaos-desktop to 0.0.11 [khorben 2016-02-23]
 	Added devel/p5-PerlIO-via-Timeout version 0.32 [wen 2016-02-23]
+	Added net/p5-IO-Socket-Timeout version 0.32 [wen 2016-02-23]
