@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2016/02/20 02:54:45 khorben Exp $
-bin/cpp
+@comment $NetBSD: PLIST,v 1.2 2016/02/23 00:30:27 khorben Exp $
+bin/deforaos-cpp
 include/Devel/CPP.h
 lib/libcpp.a
 lib/libcpp.so
