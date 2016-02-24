@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2219 2016/02/23 02:10:53 wen Exp $
+# $NetBSD: Makefile,v 1.2220 2016/02/24 23:04:09 kamil Exp $
 #
 
 COMMENT=	Development utilities
@@ -103,6 +103,7 @@ SUBDIR+=	bzr-svn
 SUBDIR+=	bzrtools
 SUBDIR+=	c-cpp-reference
 SUBDIR+=	capstone
+SUBDIR+=	catch
 SUBDIR+=	cbrowser
 SUBDIR+=	ccache
 SUBDIR+=	cdecl
