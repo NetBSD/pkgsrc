@@ -1,4 +1,4 @@
-# $NetBSD: check-portability.awk,v 1.8 2014/03/11 23:27:40 ryoon Exp $
+# $NetBSD: check-portability.awk,v 1.9 2016/02/24 08:54:23 jklos Exp $
 #
 # Checks a shell file for possible portability problems.
 #
@@ -31,6 +31,8 @@ function check_random(line) {
 
 function check_test_eqeq(line,  n, word, i) {
 
+	if (length(line) == 0)
+		return;
 	n = split(line, word);
 	for (i = 3; i < n; i++) {
 		if (word[i] == "==") {
