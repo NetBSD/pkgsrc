@@ -1,0 +1,8 @@
+Telegram is a cloud-based instant messaging service. Telegram clients exist for
+both mobile (Android, iOS, Windows Phone, Ubuntu Touch) and desktop systems
+(Windows, OS X, Linux). Users can send messages and exchange photos, videos,
+stickers and files of any type up to 1.5 GB in size. Telegram also provides
+optional end-to-end encrypted messaging with self-destruct timers.
+
+This package contains a libpurple protocol plugin that adds support for the
+Telegram messenger.

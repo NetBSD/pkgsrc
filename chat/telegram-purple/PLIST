@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2016/02/24 02:29:44 khorben Exp $
+lib/purple-2/telegram-purple.so
+share/appdata/telegram-purple.metainfo.xml
+share/examples/telegram-purple/server.tglpub
+share/locale/de_DE/LC_MESSAGES/telegram-purple.mo
+share/locale/es_AR/LC_MESSAGES/telegram-purple.mo
+share/locale/pl_PL/LC_MESSAGES/telegram-purple.mo
+share/locale/pt_BR/LC_MESSAGES/telegram-purple.mo
+share/locale/ru_RU/LC_MESSAGES/telegram-purple.mo
+share/locale/sq/LC_MESSAGES/telegram-purple.mo
+share/locale/uk/LC_MESSAGES/telegram-purple.mo
+share/pixmaps/pidgin/protocols/16/telegram.png
+share/pixmaps/pidgin/protocols/22/telegram.png
+share/pixmaps/pidgin/protocols/48/telegram.png

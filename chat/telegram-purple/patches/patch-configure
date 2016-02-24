@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2016/02/24 02:29:44 khorben Exp $
+
+Portability fix for the configure script
+
+--- configure.orig	2016-01-24 15:17:10.000000000 +0000
++++ configure
+@@ -4414,7 +4414,7 @@ if test "${enable_icons+set}" = set; the
+   enableval=$enable_icons;
+ fi
+ 
+-  if test "x$enable_icons" == "xno"; then :
++  if test "x$enable_icons" = "xno"; then :
+ 
+     { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Icons are deactivated. Pidgin needs icons. Finch and telepathy-haze don't." >&5
+ $as_echo "$as_me: WARNING: Icons are deactivated. Pidgin needs icons. Finch and telepathy-haze don't." >&2;}
