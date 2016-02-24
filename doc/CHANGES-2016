@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.846 2016/02/24 15:33:00 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.847 2016/02/24 17:34:04 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1081,3 +1081,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated math/R-geoR to 1.7.5.1 [wen 2016-02-24]
 	Updated math/R-geoRglm to 0.9.8 [wen 2016-02-24]
 	Updated x11/xrandr to 1.5.0 [wiz 2016-02-24]
+	Updated graphics/opencv-contrib-face to 3.1.0 [fhajny 2016-02-24]
