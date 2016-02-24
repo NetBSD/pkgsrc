@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.842 2016/02/24 02:31:40 khorben Exp $
+$NetBSD: CHANGES-2016,v 1.843 2016/02/24 06:39:42 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1077,3 +1077,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/go to 1.6 [bsiegert 2016-02-23]
 	Updated security/libssh2 to 1.7.0 [wiz 2016-02-23]
 	Added chat/telegram-purple version 1.2.5 [khorben 2016-02-24]
+	Updated www/squid3 to 3.5.15 [taca 2016-02-24]
