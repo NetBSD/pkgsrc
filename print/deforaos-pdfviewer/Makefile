@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2016/02/21 18:36:12 khorben Exp $
+# $NetBSD: Makefile,v 1.26 2016/02/24 22:56:32 khorben Exp $
 #
 
 DISTNAME=	PDFViewer-0.0.2
@@ -14,8 +14,11 @@ LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	pkg-config
 
-MAKE_FLAGS+=	PREFIX=${PREFIX}
+BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
+MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
 MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
 AUTO_MKDIRS=	yes
