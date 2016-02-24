@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.848 2016/02/24 17:40:48 ryoon Exp $
+$NetBSD: CHANGES-2016,v 1.849 2016/02/24 20:52:27 nils Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1083,3 +1083,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated x11/xrandr to 1.5.0 [wiz 2016-02-24]
 	Updated graphics/opencv-contrib-face to 3.1.0 [fhajny 2016-02-24]
 	Updated graphics/fotoxx to 16.02.1 [ryoon 2016-02-24]
+	Updated sysutils/logrotate to 0.9.2 [nils 2016-02-24]
