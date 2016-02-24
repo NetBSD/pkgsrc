@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2016/01/06 10:46:52 adam Exp $
+# $NetBSD: Makefile,v 1.4 2016/02/24 17:33:48 fhajny Exp $
 
-PKGNAME=	opencv-contrib-face-3.0.0
-PKGREVISION=	1
-DISTNAME=	opencv_contrib-3.0.0
+DISTNAME=	opencv_contrib-3.1.0
+PKGNAME=	${DISTNAME:S/_contrib/-contrib-face/}
 CATEGORIES=	graphics devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Itseez/}
 EXTRACT_SUFX=	.zip
@@ -13,7 +12,7 @@ HOMEPAGE=	http://code.opencv.org/projects/OpenCV/wiki/WikiStart
 COMMENT=	OpenCV face recognition contributed module
 LICENSE=	modified-bsd
 
-DISTFILES=      ${DEFAULT_DISTFILES} opencv-3.0.0.zip
+DISTFILES=	${DEFAULT_DISTFILES} opencv-${PKGVERSION_NOREV}.zip
 
 USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
@@ -23,7 +22,7 @@ USE_TOOLS+=		gmake pkg-config
 
 INSTALL_DIRS=	modules/face
 
-WRKSRC=		${WRKDIR}/opencv-3.0.0/
+WRKSRC=		${WRKDIR}/opencv-${PKGVERSION_NOREV}/
 
 PATCHDIR=	${.CURDIR}/../../graphics/opencv/patches
 
@@ -39,7 +38,7 @@ OPSYSVARS+=		CMAKE_ARGS
 CMAKE_ARGS+=		-DZLIB_ROOT=${BUILDLINK_PREFIX.zlib}
 CMAKE_ARGS.SunOS+=	-DENABLE_PRECOMPILED_HEADERS=NO
 
-CMAKE_ARGS+=		-DOPENCV_EXTRA_MODULES_PATH=${WRKDIR}/opencv_contrib-3.0.0/modules
+CMAKE_ARGS+=		-DOPENCV_EXTRA_MODULES_PATH=${WRKDIR}/${DISTNAME}/modules
 CMAKE_ARGS+=		-DBUILD_opencv_adas=OFF
 CMAKE_ARGS+=		-DBUILD_opencv_bgsegm=OFF
 CMAKE_ARGS+=		-DBUILD_opencv_bioinspired=OFF
@@ -63,13 +62,10 @@ CMAKE_ARGS+=		-DBUILD_opencv_xobjdetect=OFF
 CMAKE_ARGS+=		-DBUILD_opencv_xphoto=OFF
 
 CMAKE_ARGS+=		-DBUILD_opencv_flann=OFF
-CMAKE_ARGS+=		-DBUILD_opencv_ml=OFF
 CMAKE_ARGS+=		-DBUILD_opencv_photo=OFF
 CMAKE_ARGS+=		-DBUILD_opencv_video=OFF
-CMAKE_ARGS+=		-DBUILD_opencv_imgcodecs=OFF
 CMAKE_ARGS+=		-DBUILD_opencv_videoio=OFF
 CMAKE_ARGS+=		-DBUILD_opencv_highgui=OFF
-CMAKE_ARGS+=		-DBUILD_opencv_objdetect=OFF
 CMAKE_ARGS+=		-DBUILD_opencv_superres=OFF
 CMAKE_ARGS+=		-DBUILD_opencv_ts=OFF
 CMAKE_ARGS+=		-DBUILD_opencv_features2d=OFF
@@ -83,6 +79,7 @@ CONFIGURE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/jasper/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
+BUILDLINK_API_DEPENDS.opencv+=	opencv>=${PKGVERSION_NOREV}
 .include "../../graphics/opencv/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
