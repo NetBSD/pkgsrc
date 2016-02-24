@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/04/15 22:14:29 brook Exp $
+# $NetBSD: Makefile,v 1.2 2016/02/24 06:46:39 wen Exp $
 
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -9,9 +9,9 @@ COMMENT=	Generalised linear spatial models in R
 LICENSE=	gnu-gpl-v2
 
 R_PKGNAME=	geoRglm
-R_PKGVER=	0.9-2
+R_PKGVER=	0.9-8
 
-DEPENDS+=	R-geoR>=1.7.2:../../math/R-geoR
+DEPENDS+=	R-geoR>=1.7.5:../../math/R-geoR
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
