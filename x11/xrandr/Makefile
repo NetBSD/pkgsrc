@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2014/08/02 06:52:32 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2016/02/24 15:32:50 wiz Exp $
 
-DISTNAME=	xrandr-1.4.3
+DISTNAME=	xrandr-1.5.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2

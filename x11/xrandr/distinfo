@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2015/11/04 03:29:11 agc Exp $
+$NetBSD: distinfo,v 1.15 2016/02/24 15:32:50 wiz Exp $
 
-SHA1 (xrandr-1.4.3.tar.bz2) = 30fde46b9ed9f3fa8a9c05837723306299f62a37
-RMD160 (xrandr-1.4.3.tar.bz2) = d7107a6906ffc4bfc4e83f06b1e37d0b54fb33ac
-SHA512 (xrandr-1.4.3.tar.bz2) = eea2637484e744af305366606ec8fba77f54bb66bf45bd131367abb0f5ff90b858d85fbe4c17ee48f7b2f32f277d5f08b18e9cd61f147757828d415a3db9b9bc
-Size (xrandr-1.4.3.tar.bz2) = 169850 bytes
+SHA1 (xrandr-1.5.0.tar.bz2) = f402b2ed85817c2e111afafd6f5d0657328be2fa
+RMD160 (xrandr-1.5.0.tar.bz2) = 71638ee2a9d7cfc02025da9fd2e0c44a345bd15a
+SHA512 (xrandr-1.5.0.tar.bz2) = 11d8fb1b98fbe215555d5bb875d82f80a7fd6a61c93ebf175c226f4f747570e8d18980add54a4b88d20dc637155074b2a558b34f035d66a465f324281d65f9e4
+Size (xrandr-1.5.0.tar.bz2) = 182515 bytes
