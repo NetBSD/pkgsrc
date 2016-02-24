@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.845 2016/02/24 06:47:53 wen Exp $
+$NetBSD: CHANGES-2016,v 1.846 2016/02/24 15:33:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1080,3 +1080,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/squid3 to 3.5.15 [taca 2016-02-24]
 	Updated math/R-geoR to 1.7.5.1 [wen 2016-02-24]
 	Updated math/R-geoRglm to 0.9.8 [wen 2016-02-24]
+	Updated x11/xrandr to 1.5.0 [wiz 2016-02-24]
