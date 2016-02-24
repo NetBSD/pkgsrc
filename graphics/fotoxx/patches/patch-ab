@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.15 2016/01/03 04:33:49 ryoon Exp $
+$NetBSD: patch-ab,v 1.16 2016/02/24 17:39:18 ryoon Exp $
 
 * Add NetBSD support
 
---- fotoxx-16.01.cc.orig	2016-01-01 08:20:29.000000000 +0000
-+++ fotoxx-16.01.cc
+--- fotoxx-16.02.1.cc.orig	2016-01-01 08:20:29.000000000 +0000
++++ fotoxx-16.02.1.cc
 @@ -465,28 +465,28 @@ int initzfunc(void *)
     if (err) {
        printz("copy default pattern files \n");
