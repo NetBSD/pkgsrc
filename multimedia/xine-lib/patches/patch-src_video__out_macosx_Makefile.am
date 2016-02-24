@@ -1,0 +1,11 @@
+$NetBSD: patch-src_video__out_macosx_Makefile.am,v 1.1 2016/02/24 16:18:41 jperkin Exp $
+
+Libtool is unable to infer ObjC by itself.
+
+--- src/video_out/macosx/Makefile.am.orig	2012-02-05 19:17:03.000000000 +0000
++++ src/video_out/macosx/Makefile.am
+@@ -11,3 +11,4 @@ lib_LTLIBRARIES = libxineMacOSXVideo.la
+ libxineMacOSXVideo_la_SOURCES = XineOpenGLView.m XineVideoWindow.m
+ libxineMacOSXVideo_la_LDFLAGS = $(AM_LDFLAGS) -framework Cocoa -framework OpenGL \
+ 				-version-info $(XINE_LT_CURRENT):$(XINE_LT_REVISION):$(XINE_LT_AGE)
++libxineMacOSXVideo_la_LIBTOOLFLAGS = --tag=CC
