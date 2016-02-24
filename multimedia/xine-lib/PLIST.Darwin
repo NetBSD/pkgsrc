@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST.Darwin,v 1.1 2016/02/24 16:18:41 jperkin Exp $
+include/xine/XineOpenGLView.h
+include/xine/XineVideoWindow.h
+include/xine/video_window.h
+lib/libxineMacOSXVideo.la
+lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_ao_out_coreaudio.a
+lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_ao_out_coreaudio.so
+lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_macosx.a
+lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_macosx.so
