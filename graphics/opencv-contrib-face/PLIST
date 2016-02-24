@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2015/11/03 20:08:06 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/02/24 17:33:48 fhajny Exp $
 include/opencv2/face.hpp
 include/opencv2/face/facerec.hpp
+include/opencv2/face/predict_collector.hpp
 lib/libopencv_face.so
-lib/libopencv_face.so.3.0
+lib/libopencv_face.so.3.1
 lib/libopencv_face.so.${PKGVERSION}
