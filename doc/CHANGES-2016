@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.843 2016/02/24 06:39:42 taca Exp $
+$NetBSD: CHANGES-2016,v 1.844 2016/02/24 06:44:04 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1078,3 +1078,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/libssh2 to 1.7.0 [wiz 2016-02-23]
 	Added chat/telegram-purple version 1.2.5 [khorben 2016-02-24]
 	Updated www/squid3 to 3.5.15 [taca 2016-02-24]
+	Updated math/R-geoR to 1.7.5.1 [wen 2016-02-24]
