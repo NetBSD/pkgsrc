@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2015/11/03 01:12:54 agc Exp $
+$NetBSD: distinfo,v 1.12 2016/02/24 11:34:09 wiz Exp $
 
 SHA1 (WSoundServer-0.4.0.tar.gz) = b414025f0f19e66cd9146546ecf634564941b1e4
 RMD160 (WSoundServer-0.4.0.tar.gz) = ac58045fbe7f2c327b0c87514b06cb0941518b25
@@ -9,4 +9,4 @@ SHA1 (patch-ac) = 8595912bdc913dae46c82bc3a59fc96318350982
 SHA1 (patch-ad) = 66d2b1d3b7157040cf6f20449c85448ed117f757
 SHA1 (patch-ae) = 3a008dc50f6e78070ceb78b1f564d7c94be2dfea
 SHA1 (patch-af) = c1b88824803ff293bb78c130ab9bb6ae5404a133
-SHA1 (patch-configure) = baacdec4650d0792371284a67a557064188f91ed
+SHA1 (patch-configure) = 44b86d1810d8250642370ec206a48e900911a221
