@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15493 2016/02/24 09:40:48 wiz Exp $
+$NetBSD: TODO,v 1.15494 2016/02/24 15:33:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1745,7 +1745,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xpaint-2.9.9
 	o xpmroot-2.7.0
 	o xpuyopuyo-0.9.8
-	o xrandr-1.5
 	o xrmap-base-2.33.1
 	o xrmap-factbook_html-2008
 	o xrmap-factbook_text-2008
