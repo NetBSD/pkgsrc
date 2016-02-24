@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.7 2014/09/19 12:50:43 jperkin Exp $
+# $NetBSD: builtin.mk,v 1.8 2016/02/24 14:58:24 jperkin Exp $
 
 BUILTIN_PKG:=	libuuid
 
@@ -17,8 +17,8 @@ BUILTIN_FIND_LIBS:=		uuid
 ##
 .if !defined(IS_BUILTIN.libuuid)
 IS_BUILTIN.libuuid=	no
-.  if !empty(BUILTIN_LIB_FOUND.uuid:M[yY][eE][sS]) && \
-      empty(H_UUID:M__nonexistent__)
+.  if (${OPSYS} == "Darwin" || !empty(BUILTIN_LIB_FOUND.uuid:M[yY][eE][sS])) \
+      && empty(H_UUID:M__nonexistent__)
 IS_BUILTIN.libuuid=	yes
 .  endif
 .endif
