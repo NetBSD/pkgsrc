@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.77 2016/02/22 19:57:41 jperkin Exp $
+# $NetBSD: Darwin.mk,v 1.78 2016/02/24 14:59:56 jperkin Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -133,6 +133,7 @@ USE_BUILTIN.dl=		no	# Darwin-[56].* uses devel/dlcompat
 .endif
 
 # Builtin defaults which make sense for this platform.
+_OPSYS_PREFER.libuuid?=		native	# system headers assume uuid_string_t
 _OPSYS_PREFER.linux-pam?=	native
 _OPSYS_PREFER.mit-krb5?=	native
 .if ${OS_VERSION:R} >= 11
