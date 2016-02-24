@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.119 2015/11/04 03:28:43 agc Exp $
+$NetBSD: distinfo,v 1.120 2016/02/24 10:14:10 jperkin Exp $
 
 SHA1 (Daemon.README) = eb1e6af52adc02ded77af17e8953134b7e60d23b
 RMD160 (Daemon.README) = 39edd92ed4314397080f32a8caff0ac3f716ecf4
@@ -67,6 +67,7 @@ SHA1 (patch-kcheckpass_checkpass_pam.c) = b5dd2e50c5f1047d3c195836c8b2d06e11edea
 SHA1 (patch-kcontrol_access_kcmaccess.cpp) = f7eaec78fa13f2cfb5b97ca84c10f3e403b64919
 SHA1 (patch-kcontrol_arts_hardwaretab.ui) = 794be317ba42a3660b9f2b6d24565cdc681592fa
 SHA1 (patch-kcontrol_ebrowsing_plugins_ikws_ikwsopts_ui.ui) = 7df8baced10a7c57caa2bc744e17e60b642ef2b0
+SHA1 (patch-kcontrol_info_info__osx.cpp) = 29a2de37107069fa719bd41e019ed3ded4be6537
 SHA1 (patch-kcontrol_kfontinst_kfontinst_GetPid.c) = b56389ec10d4388ba10f01798b0119efbbb72c4c
 SHA1 (patch-kcontrol_kio_cache_ui.ui) = 7ff30b98aa9be5b386c8e983bcf54666846e9205
 SHA1 (patch-kcontrol_kio_envvarproxy_ui.ui) = 0d5d6c19fcce2a97c5c96d5d3152fb1591800e0e
