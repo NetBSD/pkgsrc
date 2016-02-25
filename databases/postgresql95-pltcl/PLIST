@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2016/02/25 21:37:36 tnn Exp $
+bin/pltcl_delmod
+bin/pltcl_listmod
+bin/pltcl_loadmod
+lib/postgresql/pltcl.so
+share/locale/cs/LC_MESSAGES/pltcl-9.5.mo
+share/locale/de/LC_MESSAGES/pltcl-9.5.mo
+share/locale/es/LC_MESSAGES/pltcl-9.5.mo
+share/locale/fr/LC_MESSAGES/pltcl-9.5.mo
+share/locale/it/LC_MESSAGES/pltcl-9.5.mo
+share/locale/ja/LC_MESSAGES/pltcl-9.5.mo
+share/locale/ko/LC_MESSAGES/pltcl-9.5.mo
+share/locale/pl/LC_MESSAGES/pltcl-9.5.mo
+share/locale/pt_BR/LC_MESSAGES/pltcl-9.5.mo
+share/locale/ro/LC_MESSAGES/pltcl-9.5.mo
+share/locale/ru/LC_MESSAGES/pltcl-9.5.mo
+share/locale/tr/LC_MESSAGES/pltcl-9.5.mo
+share/locale/zh_CN/LC_MESSAGES/pltcl-9.5.mo
+share/locale/zh_TW/LC_MESSAGES/pltcl-9.5.mo
+share/postgresql/extension/pltcl--1.0.sql
+share/postgresql/extension/pltcl--unpackaged--1.0.sql
+share/postgresql/extension/pltcl.control
+share/postgresql/extension/pltclu--1.0.sql
+share/postgresql/extension/pltclu--unpackaged--1.0.sql
+share/postgresql/extension/pltclu.control
+share/postgresql/unknown.pltcl

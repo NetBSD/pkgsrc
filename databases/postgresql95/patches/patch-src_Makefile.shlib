@@ -1,0 +1,61 @@
+$NetBSD: patch-src_Makefile.shlib,v 1.1 2016/02/25 21:37:35 tnn Exp $
+
+--- src/Makefile.shlib.orig	2016-02-08 21:12:28.000000000 +0000
++++ src/Makefile.shlib
+@@ -151,17 +151,11 @@ endif
+ 
+ ifeq ($(PORTNAME), freebsd)
+   ifdef ELF_SYSTEM
+-    ifdef SO_MAJOR_VERSION
+-      shlib		= lib$(NAME)$(DLSUFFIX).$(SO_MAJOR_VERSION)
+-    endif
+     LINK.shared		= $(COMPILER) -shared
+     ifdef soname
+       LINK.shared	+= -Wl,-x,-soname,$(soname)
+     endif
+   else
+-    ifdef SO_MAJOR_VERSION
+-      shlib		= lib$(NAME)$(DLSUFFIX).$(SO_MAJOR_VERSION).$(SO_MINOR_VERSION)
+-    endif
+     LINK.shared		= $(LD) -x -Bshareable -Bforcearchive
+   endif
+ endif
+@@ -177,6 +171,17 @@ ifeq ($(PORTNAME), netbsd)
+   endif
+ endif
+ 
++ifeq ($(PORTNAME), dragonfly)
++  ifdef ELF_SYSTEM
++    LINK.shared 	= $(COMPILER) -shared
++    ifdef soname
++      LINK.shared	+= -Wl,-x,-soname,$(soname)
++    endif
++  else
++    LINK.shared 	= $(LD) -x -Bshareable -Bforcearchive
++  endif
++endif
++
+ ifeq ($(PORTNAME), hpux)
+   ifdef SO_MAJOR_VERSION
+     shlib			= lib$(NAME)$(DLSUFFIX).$(SO_MAJOR_VERSION)
+@@ -474,8 +479,10 @@ ifdef soname
+ # we don't install $(shlib) on AIX
+ # (see http://archives.postgresql.org/message-id/52EF20B2E3209443BC37736D00C3C1380A6E79FE@EXADV1.host.magwien.gv.at)
+ ifneq ($(PORTNAME), aix)
++ifeq ($(PORTNAME), cygwin)
++	$(INSTALL_SHLIB) $< '$(DESTDIR)$(bindir)/$(shlib)'
++else
+ 	$(INSTALL_SHLIB) $< '$(DESTDIR)$(libdir)/$(shlib)'
+-ifneq ($(PORTNAME), cygwin)
+ ifneq ($(PORTNAME), win32)
+ ifneq ($(shlib), $(shlib_major))
+ 	cd '$(DESTDIR)$(libdir)' && \
+@@ -488,7 +495,7 @@ ifneq ($(shlib), $(shlib_bare))
+ 	$(LN_S) $(shlib) $(shlib_bare)
+ endif
+ endif # not win32
+-endif # not cygwin
++endif # cygwin
+ endif # not aix
+ ifneq (,$(findstring $(PORTNAME),win32 cygwin))
+ 	$(INSTALL_SHLIB) $< '$(DESTDIR)$(bindir)/$(shlib)'
