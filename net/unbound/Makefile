@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2015/12/28 13:48:30 bsiegert Exp $
+# $NetBSD: Makefile,v 1.42 2016/02/25 16:55:14 roy Exp $
 
 DISTNAME=	unbound-1.5.7
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://www.unbound.net/downloads/
 
@@ -20,6 +20,11 @@ CONFIGURE_ARGS+=	--with-libexpat=${BUILDLINK_PREFIX.expat}
 CONFIGURE_ARGS+=	--with-pidfile=${VARBASE}/run/unbound/unbound.pid
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 CONFIGURE_ARGS+=	--enable-allsymbols
+
+# unbound uses some OpenBSD libc functions such as reallocarray(3)
+# the existing tests just look for the symbol in libc regardless
+# of any
+CPPFLAGS+=		-D_OPENBSD_SOURCE
 
 # Add the same logic as for ldns, so sha2/gost is configured automatically
 CHECK_BUILTIN.openssl=	yes
