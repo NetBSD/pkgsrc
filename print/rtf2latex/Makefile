@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/08 13:45:46 asau Exp $
+# $NetBSD: Makefile,v 1.16 2016/02/25 17:52:45 jperkin Exp $
 
 DISTNAME=	rtf2LaTeX.1.5
 PKGNAME=	rtf2latex-1.5
@@ -14,11 +14,7 @@ NO_CONFIGURE=	yes
 post-extract:
 	${LN} -fs ${FILESDIR}/Makefile ${WRKSRC}
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-MAKE_ENV+=	XCFLAGS="${CPPFLAGS} -DSYSV" CC=${CC:Q}
-.endif
+MAKE_ENV.SunOS+=	XCFLAGS="${CPPFLAGS} -DSYSV" CC=${CC:Q}
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 
