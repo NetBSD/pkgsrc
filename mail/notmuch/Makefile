@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/11/22 23:55:33 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2016/02/25 15:00:51 jperkin Exp $
 
 DISTNAME=	notmuch-0.21
 CATEGORIES=	mail
@@ -21,12 +21,10 @@ MAKE_FLAGS+=	PYTHON=${PYTHONBIN}
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 
-.if ${OPSYS} == "SunOS"
-SUBST_CLASSES+=		gnuld
+SUBST_CLASSES.SunOS+=	gnuld
 SUBST_STAGE.gnuld=	pre-configure
 SUBST_FILES.gnuld=	lib/Makefile.local
 SUBST_SED.gnuld=	-e 's/-Wl,--[^ ]*//g'
-.endif
 
 SUBST_CLASSES+=		sphinx
 SUBST_SED.sphinx+=	-e "s,sphinx-build,sphinx-build${PYVERSSUFFIX},"
