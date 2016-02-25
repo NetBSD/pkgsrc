@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2013/02/06 19:30:59 jperkin Exp $
+# $NetBSD: Makefile,v 1.31 2016/02/25 16:20:52 jperkin Exp $
 
 DISTNAME=	ngrep-1.45
 PKGREVISION=	1
@@ -20,11 +20,9 @@ CONFIGURE_ARGS+=	--includedir=${BUILDLINK_PREFIX.libpcap}/include
 CONFIGURE_ARGS+=	--enable-ipv6
 BUILD_TARGET=		ngrep
 
-.include "../../mk/bsd.prefs.mk"
+CONFIGURE_ARGS.FreeBSD+=	--disable-pcap-restart
 
-.if ${OPSYS} == "FreeBSD"
-CONFIGURE_ARGS+=	--disable-pcap-restart
-.endif
+.include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS" || ${OPSYS} == "Linux"
 do-configure:

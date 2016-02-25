@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2015/10/17 10:07:54 adam Exp $
+# $NetBSD: Makefile,v 1.61 2016/02/25 16:20:51 jperkin Exp $
 
 DISTNAME=	libpcap-1.7.4
 CATEGORIES=	net
@@ -15,14 +15,10 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		bison flex gm4
 GNU_CONFIGURE=		yes
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-CONFIGURE_ARGS+=	--with-pcap=dlpi
 # Versions of SunOS which include getifaddrs confuse the configure script,
 # and result in dlpi stubs not being enabled.
-CONFIGURE_ENV+=		ac_cv_func_getifaddrs=no
-.endif
+CONFIGURE_ARGS.SunOS+=	--with-pcap=dlpi
+CONFIGURE_ENV.SunOS+=	ac_cv_func_getifaddrs=no
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/pcap-int.h ${DESTDIR}${PREFIX}/include

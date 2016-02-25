@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2015/11/20 09:32:53 jperkin Exp $
+# $NetBSD: Makefile,v 1.41 2016/02/25 16:20:51 jperkin Exp $
 
 DISTNAME=	mDNSResponder-258.14
 PKGREVISION=	2
@@ -18,30 +18,24 @@ MAKE_JOBS_SAFE=		no
 
 USE_GCC_RUNTIME=	yes
 
-.include "../../mk/bsd.prefs.mk"
+MAKE_ENV.NetBSD+=	os=netbsd
+MAKE_ENV.FreeBSD+=	os=freebsd
+MAKE_ENV.OpenBSD+=	os=openbsd
+MAKE_ENV.SunOS+=	os=solaris
+MAKE_ENV.Linux+=	os=linux
+MAKE_ENV.Darwin+=	os=x
+MAKE_ENV.*+=		os=netbsd
 
-SO_SUFFIX=	so
-.if ${OPSYS} == "NetBSD"
-MAKE_ENV+=	os=netbsd
-.elif ${OPSYS} == "FreeBSD"
-MAKE_ENV+=	os=freebsd
-.elif ${OPSYS} == "OpenBSD"
-MAKE_ENV+=	os=openbsd
-.elif ${OPSYS} == "SunOS"
-MAKE_ENV+=	os=solaris
-.elif ${OPSYS} == "Linux"
-MAKE_ENV+=	os=linux
-.elif ${OPSYS} == "Darwin"
-MAKE_ENV+=	os=x
-SO_SUFFIX=	dylib
-.else
-MAKE_ENV+=	os=netbsd
-.endif
-PLIST_SUBST+=	SO_SUFFIX=${SO_SUFFIX:Q}
+OPSYSVARS+=		SO_SUFFIX
+SO_SUFFIX.Darwin=	dylib
+SO_SUFFIX.*=		so
+PLIST_SUBST+=		SO_SUFFIX=${SO_SUFFIX:Q}
 
 BINARY=		mDNSClientPosix mDNSIdentify mDNSNetMonitor \
 		mDNSProxyResponderPosix mDNSResponderPosix
 SBINARY=	mdnsd dnsextd
+
+.include "../../mk/bsd.prefs.mk"
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-3.99.[1-7]-*) || \
     !empty(MACHINE_PLATFORM:MNetBSD-3.[0-9]-*) || \
