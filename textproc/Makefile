@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.869 2016/02/08 02:57:40 markd Exp $
+# $NetBSD: Makefile,v 1.870 2016/02/25 19:52:08 fhajny Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -12,6 +12,7 @@ SUBDIR+=	LDoc
 SUBDIR+=	Markdown
 SUBDIR+=	OdfConverter
 SUBDIR+=	R-formatR
+SUBDIR+=	R-gsubfn
 SUBDIR+=	R-highr
 SUBDIR+=	R-markdown
 SUBDIR+=	R-stringi
