@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.27 2015/11/25 12:51:16 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.28 2016/02/25 14:42:55 jperkin Exp $
 #
 # used by lang/gcc3/language.mk
 # used by lang/gcc3-c/Makefile
@@ -59,9 +59,7 @@ GCC_PLATFORM=		${MACHINE_GNU_PLATFORM}
 CONFIGURE_ARGS+=	--host=${GCC_PLATFORM:Q}
 PLIST_SUBST+=		GCC_PLATFORM=${GCC_PLATFORM:Q}
 
-.if ${OPSYS} == "AIX"
-CONFIGURE_ARGS+=    --disable-aix64
-.endif
+CONFIGURE_ARGS.AIX+=	--disable-aix64
 
 .if ${OPSYS} == "NetBSD"
 .  if !defined(USE_BINUTILS)

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2016/02/06 11:25:09 tron Exp $
+# $NetBSD: Makefile,v 1.56 2016/02/25 14:42:56 jperkin Exp $
 
 .include "dist.mk"
 
@@ -136,10 +136,8 @@ BUILDLINK_TRANSFORM+=	rm:-ldb
 .endif
 CFLAGS+=	-DHAVE_DB_185_H
 
-.if ${OPSYS} == "OSF1"
 # configure complains about buggy getaddrinfo()
-CONFIGURE_ARGS+=	--disable-ipv6
-.endif
+CONFIGURE_ARGS.OSF1+=	--disable-ipv6
 
 .if defined(BUILDLINK_TRANSFORM)
 MAKE_ENV+=	PY_BDB_TRANSFORM=${BUILDLINK_TRANSFORM:Q}

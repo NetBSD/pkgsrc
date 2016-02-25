@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2015/09/25 15:15:58 fhajny Exp $
+# $NetBSD: Makefile,v 1.73 2016/02/25 14:42:55 jperkin Exp $
 
 DISTNAME=		otp_src_${DIST_VERSION_MAJOR}.${DIST_VERSION_MINOR}
 PKGNAME=		${DISTNAME:S/otp_src_/erlang-/}
@@ -66,9 +66,8 @@ REPLACE_PERL+=		make/make_emakefile
 
 SMF_NAME=		epmd
 
-.if ${OPSYS} == "DragonFly"
-CONFIGURE_ARGS+=	--disable-sctp
-.endif
+CONFIGURE_ARGS.DragonFly+=	--disable-sctp
+
 ###
 ### XXX There may be others here.
 ###

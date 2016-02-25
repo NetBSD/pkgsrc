@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2015/12/14 23:05:11 asau Exp $
+# $NetBSD: Makefile,v 1.106 2016/02/25 14:42:56 jperkin Exp $
 
 JDK_MICRO=	80
 DISTNAME=	openjdk-1.7.${JDK_MICRO}-20150609
@@ -97,8 +97,7 @@ SUBST_SED.ccspath=	-e 's/UNIXCCS_PATH/UNIXCOMMAND_PATH/g'
 SUBST_SED.ccspath+=	-e 's,/usr/ccs/bin,/usr/bin,g'
 .endif
 
-.if ${OPSYS} == "SunOS"
-SUBST_CLASSES+=		mapfix
+SUBST_CLASSES.SunOS+=	mapfix
 SUBST_STAGE.mapfix=	pre-build
 SUBST_FILES.mapfix=	jdk/make/com/sun/java/pack/mapfile-vers
 SUBST_FILES.mapfix+=	jdk/make/java/main/java/mapfile-amd64
@@ -107,11 +106,10 @@ SUBST_SED.mapfix=	-e '/__fsr_init_value/d'
 SUBST_SED.mapfix+=	-e '/__progname/d'
 
 # environ should only be removed from this file (added by patches)
-SUBST_CLASSES+=		mapfix2
+SUBST_CLASSES.SunOS+=	mapfix2
 SUBST_STAGE.mapfix2=	pre-build
 SUBST_FILES.mapfix2=	jdk/make/com/sun/java/pack/mapfile-vers
 SUBST_SED.mapfix2=	-e '/environ/d'
-.endif
 
 CFLAGS+=	-D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
 CXXFLAGS+=	-D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS

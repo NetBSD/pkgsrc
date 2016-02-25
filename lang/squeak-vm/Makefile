@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2015/04/25 14:23:26 tnn Exp $
+# $NetBSD: Makefile,v 1.36 2016/02/25 14:42:57 jperkin Exp $
 #
 
 SQUEAK_VERSION=	4.10.2.2614
@@ -31,12 +31,8 @@ CMAKE_ARGS+=	-DDEVOSSAUDIO=${DEVOSSAUDIO}
 
 LDFLAGS.SunOS+=	-liconv -lsocket -lnsl -lm
 
-.include "../../mk/bsd.prefs.mk"
-
-.if $(OPSYS) == "NetBSD"
 # UUID routines are in libc:
-BUILDLINK_TRANSFORM+=	rm:-luuid
-.endif
+BUILDLINK_TRANSFORM.NetBSD+=	rm:-luuid
 
 PLIST_SUBST=	SQUEAK_VERSION=${SQUEAK_VERSION}
 
