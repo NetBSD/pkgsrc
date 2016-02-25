@@ -1,0 +1,34 @@
+$NetBSD: patch-configure,v 1.1 2016/02/25 21:37:35 tnn Exp $
+
+Finally, native solaris uses -lgss for gssapi on mit-krb5.
+
+--- configure.orig	2014-12-16 01:07:34.000000000 +0000
++++ configure
+@@ -2852,6 +2852,7 @@ case $host_os in
+   darwin*) template=darwin ;;
+ dragonfly*) template=netbsd ;;
+  freebsd*) template=freebsd ;;
++ dragonfly*) template=dragonfly ;;
+     hpux*) template=hpux ;;
+  linux*|gnu*|k*bsd*-gnu)
+            template=linux ;;
+@@ -7310,9 +7311,7 @@ if test "$PORTNAME" = "win32" ; then
+ perl_lib=`basename $perl_archlibexp/CORE/perl[5-9]*.lib .lib`
+ test -e "$perl_archlibexp/CORE/$perl_lib.lib" && perl_embed_ldflags="-L$perl_archlibexp/CORE -l$perl_lib"
+ else
+-pgac_tmp1=`$PERL -MExtUtils::Embed -e ldopts`
+-pgac_tmp2=`$PERL -MConfig -e 'print $Config{ccdlflags}'`
+-perl_embed_ldflags=`echo X"$pgac_tmp1" | sed -e "s/^X//" -e "s%$pgac_tmp2%%" -e "s/ -arch [-a-zA-Z0-9_]*//g"`
++perl_embed_ldflags=`$PERL -MExtUtils::Embed -e ldopts`
+ fi
+ if test -z "$perl_embed_ldflags" ; then
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+@@ -8407,7 +8406,7 @@ return gss_init_sec_context ();
+   return 0;
+ }
+ _ACEOF
+-for ac_lib in '' gssapi_krb5 gss 'gssapi -lkrb5 -lcrypto'; do
++for ac_lib in '' gssapi_krb5 gss 'gssapi -lkrb5 -lcrypto' 'gss -lkrb5 lcrypto'; do
+   if test -z "$ac_lib"; then
+     ac_res="none required"
+   else

@@ -1,0 +1,16 @@
+$NetBSD: patch-src_Makefile.global.in,v 1.1 2016/02/25 21:37:35 tnn Exp $
+
+--- src/Makefile.global.in.orig	2015-10-05 19:12:06.000000000 +0000
++++ src/Makefile.global.in
+@@ -570,6 +570,11 @@ ifeq ($(PORTNAME),win32)
+ LIBS += -lws2_32
+ endif
+ 
++# missing for link on cygwin ? 
++ifeq ($(PORTNAME),cygwin)
++LIBS +=  $(LDAP_LIBS_BE)
++endif
++
+ # Not really standard libc functions, used by the backend.
+ TAS         = @TAS@
+ 
