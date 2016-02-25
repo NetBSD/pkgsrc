@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/08 12:27:41 asau Exp $
+# $NetBSD: Makefile,v 1.12 2016/02/25 16:30:31 jperkin Exp $
 #
 
 DISTNAME=	newsfetch-1.3
@@ -12,11 +12,7 @@ COMMENT=	Downloads newsgroup messages in mail file format
 
 WRKSRC=		${WRKDIR}/newsfetch
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-LDFLAGS+=	-lsocket -lnsl -lresolv
-.endif
+LDFLAGS.SunOS+=	-lsocket -lnsl -lresolv
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 

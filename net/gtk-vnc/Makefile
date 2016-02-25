@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2015/08/23 14:30:35 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2016/02/25 16:20:51 jperkin Exp $
 #
 
 DISTNAME=	gtk-vnc-0.5.2
@@ -45,12 +45,10 @@ do-configure:
 	--with-gtk=3.0
 
 # The GTK3 build excludes some functions which are still listed in the mapfile.
-.if ${OPSYS} == "SunOS"
-SUBST_CLASSES+=		mapfile
+SUBST_CLASSES.SunOS+=	mapfile
 SUBST_STAGE.mapfile=	pre-build
 SUBST_FILES.mapfile=	gtk3-build/src/Makefile
 SUBST_SED.mapfile=	-e '/VERSION_SCRIPT_FLAGS.*GTK_VNC_VERSION_FILE/d'
-.endif
 
 #VIEW_REQUIRED=0.6.0
 #libview

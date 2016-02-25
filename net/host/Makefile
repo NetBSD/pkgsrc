@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2014/08/28 10:58:18 jperkin Exp $
+# $NetBSD: Makefile,v 1.30 2016/02/25 16:20:51 jperkin Exp $
 
 DISTNAME=	host-20070128
 CATEGORIES=	net
@@ -19,20 +19,18 @@ MAKE_FLAGS+=	__NetBSD__=1
 
 USE_TOOLS+=	nroff
 
+BUILDLINK_TRANSFORM.Darwin+=	rm:-Wl,--warn-common
+BUILDLINK_TRANSFORM.Darwin+=	rm:-static
+CPPFLAGS.Darwin+=		-DBIND_8_COMPAT
+
+BUILDLINK_TRANSFORM.SunOS+=	rm:-static
+LDFLAGS.SunOS+=			-lresolv -lsocket -lnsl
+
+BUILDLINK_TRANSFORM.Linux+=	rm:-static
+LDFLAGS.Linux+=			-lresolv
+
 .include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "Darwin"
-CPPFLAGS+=	-DBIND_8_COMPAT
-BUILDLINK_TRANSFORM+=	rm:-Wl,--warn-common
-BUILDLINK_TRANSFORM+=	rm:-static
-.endif
-.if ${OPSYS} == "SunOS"
-LDFLAGS+=	-lresolv -lsocket -lnsl
-BUILDLINK_TRANSFORM+=	rm:-static
-.endif
-.if ${OPSYS} == "Linux"
-LDFLAGS+=		-lresolv
-BUILDLINK_TRANSFORM+=	rm:-static
-.endif
+
 .if !empty(MACHINE_PLATFORM:MIRIX-5*)
 CPPFLAGS+=	-DIRIX5
 .endif

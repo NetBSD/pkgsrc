@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/10/23 17:18:22 asau Exp $
+# $NetBSD: Makefile,v 1.17 2016/02/25 16:20:50 jperkin Exp $
 #
 
 DISTNAME=	ftpproxy-${VERSION}
@@ -16,11 +16,10 @@ VERSION=	1.2.3
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "SunOS"
-LIBS+=		-lsocket -lnsl
-OSFLAG=		-DSOLARIS
-.endif
-MAKE_ENV+=	OSFLAG=${OSFLAG:Q} OSLIB=${LIBS:M*:Q} VERSION=${VERSION:Q}
+MAKE_ENV+=	OSLIB=${LIBS:M*:Q} VERSION=${VERSION:Q}
+
+LIBS.SunOS+=		-lsocket -lnsl
+MAKE_ENV.SunOS+=	OSFLAG=-DSOLARIS
 
 INSTALLATION_DIRS=	libexec ${PKGMANDIR}/man8
 

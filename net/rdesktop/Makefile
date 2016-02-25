@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2015/02/14 13:16:39 bad Exp $
+# $NetBSD: Makefile,v 1.46 2016/02/25 16:20:52 jperkin Exp $
 
 DISTNAME=		rdesktop-1.8.3
 CATEGORIES=		net
@@ -26,9 +26,7 @@ SUBST_MESSAGE.audio=	Fixing hardcoded audio device.
 
 .include "options.mk"
 
-.if ${OPSYS} == "NetBSD"
-CONFIGURE_ARGS+=	--with-sound=oss
-.endif
+CONFIGURE_ARGS.NetBSD+=	--with-sound=oss
 
 .if ${OPSYS} == "Linux"
 CONFIGURE_ARGS+=	--with-sound=alsa

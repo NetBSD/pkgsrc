@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/10/23 17:18:33 asau Exp $
+# $NetBSD: Makefile,v 1.22 2016/02/25 16:20:51 jperkin Exp $
 #
 
 DISTNAME=	libdnet-1.12
@@ -33,12 +33,7 @@ TEST_TARGET=	check
 CONFIGURE_ARGS+=	--without-check
 .endif
 
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "NetBSD"
-CONFIGURE_ENV+=	ac_cv_header_netinet_ip_fil_h=no
-.endif
-.if ${OPSYS} == "SunOS"
-CONFIGURE_ENV+=	ac_cv_dnet_linux_pf_packet=no
-.endif
+CONFIGURE_ENV.NetBSD+=	ac_cv_header_netinet_ip_fil_h=no
+CONFIGURE_ENV.SunOS+=	ac_cv_dnet_linux_pf_packet=no
 
 .include "../../mk/bsd.pkg.mk"
