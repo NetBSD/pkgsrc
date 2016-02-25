@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/10/08 13:45:42 asau Exp $
+# $NetBSD: Makefile,v 1.19 2016/02/25 17:52:45 jperkin Exp $
 #
 
 DISTNAME=	mpdist-3.7.1
@@ -14,12 +14,8 @@ COMMENT=	PostScript pretty printer
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-.else
-CONFIGURE_ARGS+=--enable-bsd-print
-.endif
+CONFIGURE_ARGS.SunOS+=	# empty
+CONFIGURE_ARGS.*+=	--enable-bsd-print
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 

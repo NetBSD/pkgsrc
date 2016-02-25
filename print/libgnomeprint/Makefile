@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2015/04/25 14:24:46 tnn Exp $
+# $NetBSD: Makefile,v 1.98 2016/02/25 17:52:45 jperkin Exp $
 #
 
 DISTNAME=	libgnomeprint-2.18.8
@@ -37,13 +37,9 @@ CONFIGURE_ARGS+=	--without-cups
 
 CONFIGURE_ARGS+=	--without-papi
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Darwin"
 # AC_LTDL_SHLIBEXT doesn't work on Darwin (and would give the wrong
 # answer here even if it did).
-CONFIGURE_ENV+=		libltdl_cv_shlibext=so
-.endif
+CONFIGURE_ENV.Darwin+=	libltdl_cv_shlibext=so
 
 PRINT_PLIST_AWK+=	/cups/ { print "$${USE_CUPS}" $$0; next; }
 
