@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/06/18 14:46:14 adam Exp $
+# $NetBSD: Makefile,v 1.4 2016/02/25 01:38:56 tnn Exp $
 
 PKGNAME=	${DISTNAME:C/-/94-plperl-/}
 COMMENT=	PL/Perl procedural language for the PostgreSQL backend
@@ -14,6 +14,10 @@ BUILD_MAKE_FLAGS=	PGXS=1
 
 BUILD_DIRS=		src/pl/plperl
 MAKE_FILE=		GNUmakefile
+
+# There is some dependency ordering problem in the Makefile,
+# so force the headers to be generated first.
+BUILD_TARGET=		perlchunks.h plperl_opmask.h all
 
 .include "../../databases/postgresql94-client/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
