@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2015/05/07 12:45:28 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.3 2016/02/25 11:46:21 jperkin Exp $
 #
 # used by databases/mariadb55-client/Makefile
 # used by databases/mariadb55-server/Makefile
@@ -43,9 +43,7 @@ PKG_GROUPS_VARS+=	MYSQL_GROUP
 
 CONFIG_SHELL=		${TOOLS_PATH.bash}
 
-.if ${OPSYS} == "IRIX"
-CFLAGS+=		-DIRIX5 -DNEEDS_BSTRING_H
-.endif
+CFLAGS.IRIX+=		-DIRIX5 -DNEEDS_BSTRING_H
 
 BUILD_DEFS+=		VARBASE
 
@@ -93,10 +91,8 @@ CXXFLAGS+=		-fPIC -DPIC
 
 # force HAVE_CURSES_H on Solaris since the configure script is broken
 # and does not properly detect this, breaking the build later on.
-.if ${OPSYS} == "SunOS"
-CFLAGS+=		-DHAVE_CURSES_H
-CXXFLAGS+=		-DHAVE_CURSES_H
-.endif
+CFLAGS.SunOS+=		-DHAVE_CURSES_H
+CXXFLAGS.SunOS+=	-DHAVE_CURSES_H
 
 # SCO OpenServer 5.0.7/3.2's readdir_r has 2 arguments and return struct dirent.
 .if ${OS_VARIANT} == "SCOOSR5"
