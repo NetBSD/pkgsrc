@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/04 09:19:17 asau Exp $
+# $NetBSD: Makefile,v 1.15 2016/02/25 13:22:00 jperkin Exp $
 #
 
 DISTNAME=		garmin-utils-2.5
@@ -21,15 +21,11 @@ MAKE_JOBS_SAFE=		no
 # so make everyone use a symlink.
 MAKE_FLAGS+=		GPS_SERIAL_PORT=/dev/gps
 
-.include "../../mk/bsd.prefs.mk"
-
 CPPFLAGS.Linux=		-DLINUX
 
-.if ${OPSYS} == "Linux"
-MAKE_FLAGS+=	SIO_TYPE=-DSIO_TYPE=Linux
-
+OPSYSVARS+=		MAKE_FLAGS
+MAKE_FLAGS.Linux+=	SIO_TYPE=-DSIO_TYPE=Linux
 # On Linux, libc apparently does not have strlcpy.
-MAKE_FLAGS+=	NEEDS_STRLCPY=1
-.endif
+MAKE_FLAGS.Linux+=	NEEDS_STRLCPY=1
 
 .include "../../mk/bsd.pkg.mk"
