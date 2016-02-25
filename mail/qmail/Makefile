@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2014/12/30 15:13:19 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2016/02/25 15:00:51 jperkin Exp $
 #
 
 DISTNAME=		${PKGNAME_NOREV}
@@ -133,11 +133,9 @@ SPECIAL_PERMS+=		${PREFIX}/bin/${f} root qmail 0711
 SPECIAL_PERMS+=		${PREFIX}/bin/${f} root qmail 0700
 .endfor
 
-.if ${OPSYS} == "Darwin"
-DARWINSUFX=		.doc
-.else
-DARWINSUFX=		# empty
-.endif
+OPSYSVARS+=		DARWINSUFX
+DARWINSUFX.Darwin=	.doc
+DARWINSUFX.*=		# empty
 
 post-extract: post-extract-viruscan
 	${CP} ${FILESDIR}/README.pkgsrc ${WRKSRC}
