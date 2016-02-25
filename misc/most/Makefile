@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2013/02/16 11:23:25 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2016/02/25 15:35:30 jperkin Exp $
 
 DISTNAME=	most-5.0.0a
 PKGREVISION=	5
@@ -16,12 +16,8 @@ CONFIGURE_ARGS+=	--without-x
 
 CONFIGURE_ARGS+=	--with-slang=${BUILDLINK_PREFIX.libslang2}
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Darwin"
 # prevent duplicate definition of zopen
-CFLAGS+= -D_POSIX_C_SOURCE
-.endif
+CFLAGS.Darwin+=	-D_POSIX_C_SOURCE
 
 .include "../../devel/libslang2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
