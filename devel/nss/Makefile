@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2016/02/17 22:00:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.108 2016/02/25 12:12:49 jperkin Exp $
 
 DISTNAME=		nss-${NSS_RELEASE:S/.0$//}
 NSS_RELEASE=		3.22.1
@@ -20,17 +20,13 @@ USE_TOOLS+=		gmake perl pax pkg-config
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "Darwin"
-SUBST_CLASSES+=			exec_path
+SUBST_CLASSES.Darwin+=		exec_path
 SUBST_STAGE.exec_path=		pre-configure
 SUBST_MESSAGE.exec_path=	Fixing @executable_path
 SUBST_FILES.exec_path=		nss/coreconf/Darwin.mk
 SUBST_SED.exec_path=		-e 's,@executable_path,${PREFIX}/lib/nss,g'
-.endif
 
-.if ${OPSYS} == "Linux"
-MAKE_ENV+=	FREEBL_NO_DEPEND=0
-.endif
+MAKE_ENV.Linux+=	FREEBL_NO_DEPEND=0
 
 .if ${OBJECT_FMT} == "ELF"
 SO_SUFFIX=		so

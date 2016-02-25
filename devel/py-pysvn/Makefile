@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2015/10/10 01:58:06 ryoon Exp $
+# $NetBSD: Makefile,v 1.30 2016/02/25 12:12:49 jperkin Exp $
 #
 
 VERS=			1.7.6
@@ -17,11 +17,7 @@ DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 USE_LANGUAGES=		c
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "DragonFly"
-BUILDLINK_TRANSFORM+=	rm:-lresolv
-.endif
+BUILDLINK_TRANSFORM.DragonFly+=	rm:-lresolv
 
 SUBST_CLASSES+=		rpath-flg
 SUBST_STAGE.rpath-flg=	pre-configure

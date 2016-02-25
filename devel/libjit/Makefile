@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2015/12/26 23:47:48 dholland Exp $
+# $NetBSD: Makefile,v 1.19 2016/02/25 12:12:48 jperkin Exp $
 #
 
 DISTNAME=	libjit-0.1.2
@@ -18,11 +18,7 @@ USE_TOOLS+=		gmake lex yacc makeinfo
 GNU_CONFIGURE=		yes
 INFO_FILES=	yes
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD"
-CONFIGURE_ARGS+=	ac_cv_header_tgmath_h=no
-.endif
+CONFIGURE_ARGS.NetBSD+=	ac_cv_header_tgmath_h=no
 
 # this is supposed to be generated, not shipped
 post-extract:
