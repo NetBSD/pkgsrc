@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.180 2016/02/22 16:13:31 jperkin Exp $
+# $NetBSD: Makefile,v 1.181 2016/02/25 08:27:04 jperkin Exp $
 
 DISTNAME=		gnome-panel-2.32.1
 PKGREVISION=		45
@@ -53,7 +53,6 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.gnome-panel
 PKG_SUPPORTED_OPTIONS=	evolution
 PKG_SUGGESTED_OPTIONS=	evolution
 
-OPSYSVARS+=		SUBST_CLASSES
 SUBST_CLASSES.Darwin+=	noundef
 SUBST_STAGE.noundef=	pre-configure
 SUBST_FILES.noundef=	bonobo/panel-module/Makefile.in

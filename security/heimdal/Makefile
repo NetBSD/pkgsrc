@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.116 2015/10/10 01:57:55 ryoon Exp $
+# $NetBSD: Makefile,v 1.117 2016/02/25 08:27:04 jperkin Exp $
 
 DISTNAME=	heimdal-1.5.3
 PKGREVISION=	10
@@ -53,7 +53,6 @@ CFLAGS.Darwin+=		-DBIND_8_COMPAT
 
 # Though Solaris has a <vis.h> header, it does something very unrelated
 # to the BSD <vis.h> header.
-OPSYSVARS+=		CONFIGURE_ENV
 CONFIGURE_ENV.SunOS+=	ac_cv_header_vis_h=no
 
 .include "../../mk/readline.buildlink3.mk"
