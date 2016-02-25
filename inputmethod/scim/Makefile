@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2015/06/12 10:50:15 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2016/02/25 13:43:54 jperkin Exp $
 #
 
 DISTNAME=		scim-1.4.15
@@ -44,13 +44,9 @@ INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples
 # for DLOPEN_REQUIRE_PTHREADS
 PTHREAD_AUTO_VARS=	yes
 
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "SunOS"
-CONFIGURE_ENV+=		ac_cv_func_gethostbyname_r=no
+CONFIGURE_ENV.NetBSD+=	ac_cv_func_gethostbyname_r=no
+CONFIGURE_ENV.SunOS+=	ac_cv_func_gethostbyname_r=no
 LDFLAGS.SunOS+=		-lsocket -lnsl
-.elif ${OPSYS} == "NetBSD"
-CONFIGURE_ENV+=		ac_cv_func_gethostbyname_r=no
-.endif
 
 # unused test script
 CHECK_PORTABILITY_SKIP+=	extras/immodules/tests/test-exec.sh.in

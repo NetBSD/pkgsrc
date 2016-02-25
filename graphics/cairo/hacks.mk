@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.6 2012/08/04 04:00:49 riastradh Exp $
+# $NetBSD: hacks.mk,v 1.7 2016/02/25 13:37:47 jperkin Exp $
 
 .if !defined(CAIRO_HACKS_MK)
 CAIRO_HACKS_MK=	defined
@@ -16,9 +16,8 @@ BUILDLINK_TRANSFORM+=	rm:-flto
 .endif
 
 # Workaround so that pthread is found on MirBSD
-.if ${OPSYS} == "MirBSD"
-PTHREAD_CFLAGS=-fhonour-copts
-.endif
+OPSYSVARS+=		PTHREAD_CFLAGS
+PTHREAD_CFLAGS.MirBSD=	-fhonour-copts
 
 #
 # Workaround for "the pixman problem" with netbsd-5 native X. The

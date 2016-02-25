@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2015/12/12 20:44:13 markd Exp $
+# $NetBSD: Makefile,v 1.21 2016/02/25 13:37:47 jperkin Exp $
 #
 
 DISTNAME=	asymptote-2.15
@@ -44,16 +44,13 @@ SUBST_FILES.python=	Makefile.in
 SUBST_MESSAGE.python=	Fixing path to python interpreter.
 SUBST_SED.python+=	-e "s|/usr/bin/env python|${PYTHONBIN:Q}|g"
 
+# DragonFly has stripped makeinfo in the base - without texi2dvi.
+OPSYSVARS+=			BUILD_DEPENDS
+BUILD_DEPENDS.DragonFly+=	gtexinfo-[0-9]*:../../devel/gtexinfo
+
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/xasy.1x \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/xasy.1
-
-.include "../../mk/bsd.prefs.mk"
-
-# DragonFly has stripped makeinfo in the base - without texi2dvi.
-.if ${OPSYS} == "DragonFly"
-BUILD_DEPENDS+=         gtexinfo-[0-9]*:../../devel/gtexinfo
-.endif
 
 .include "../../devel/boehm-gc/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2015/11/25 12:50:58 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.23 2016/02/25 13:43:53 jperkin Exp $
 # used by inputmethod/ibus-mozc/Makefile
 # used by inputmethod/mozc-elisp/Makefile
 # used by inputmethod/mozc-server/Makefile
@@ -63,11 +63,10 @@ SUBST_VARS.gyp+=	PREFIX QTDIR
 ALL_ENV+=	LINK=${CXX}
 
 .include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "NetBSD"
-OSDEST=		bsd
-.elif ${OPSYS} == "Linux"
-OSDEST=		linux
-.endif
+
+OPSYSVARS+=	OSDEST
+OSDEST.Linux=	linux
+OSDEST.NetBSD=	bsd
 
 MOZC_BUILD_MODE=	Release # or Debug
 

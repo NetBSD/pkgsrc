@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/12/05 21:25:45 adam Exp $
+# $NetBSD: Makefile,v 1.5 2016/02/25 13:37:46 jperkin Exp $
 
 DISTNAME?=	${MESA_DISTNAME}
 PKGNAME=	MesaLib7-${MESA_PKGVERSION}
@@ -54,10 +54,11 @@ MAKE_ENV+=		MAKE=${GMAKE:Q}
 CFLAGS+=	-D__FUNCTION__=__FILE__
 .endif
 
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "MirBSD"
-BUILDLINK_TRANSFORM+=	rm:-fvisibility=hidden
+.if !empty(PKGSRC_COMPILER:Mclang)
+CFLAGS+=	-no-integrated-as -fvisibility=hidden
 .endif
+
+BUILDLINK_TRANSFORM.MirBSD+=	rm:-fvisibility=hidden
 
 .if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
 # XXX This is not quite enough: we will need to patch the makefile
@@ -122,16 +123,6 @@ post-extract:
 #
 pre-install:
 	${RM} -f ${WRKSRC}/include/GL/glu*.h
-
-.include "../../mk/compiler.mk"
-
-.if !empty(PKGSRC_COMPILER:Mclang)
-CFLAGS+=	-no-integrated-as -fvisibility=hidden
-.endif
-
-.if ${OPSYS} == "MirBSD"
-BUILDLINK_TRANSFORM+=	rm:-fvisibility=hidden
-.endif
 
 .include "../../lang/python/tool.mk"
 BUILDLINK_DEPMETHOD.libxml2?=	build

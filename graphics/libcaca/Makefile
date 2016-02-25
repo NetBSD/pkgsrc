@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2015/09/08 11:57:49 jperkin Exp $
+# $NetBSD: Makefile,v 1.35 2016/02/25 13:37:47 jperkin Exp $
 
 DISTNAME=	libcaca-0.99.beta18
 PKGNAME=	${DISTNAME:S/beta//}
@@ -27,11 +27,7 @@ CONFIG_SUB_OVERRIDE+=	.auto/config.sub
 
 CONFIGURE_ARGS+=	--disable-doc
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Linux"
-LDFLAGS+=	-ldl
-.endif
+LDFLAGS.Linux+=	-ldl
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
 .include "../../mk/bsd.pkg.mk"
