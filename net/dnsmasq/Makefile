@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2015/08/15 12:38:17 leot Exp $
+# $NetBSD: Makefile,v 1.32 2016/02/25 16:20:50 jperkin Exp $
 
 DISTNAME=		dnsmasq-2.75
 CATEGORIES=		net
@@ -46,9 +46,7 @@ PLIST.dbus=	yes
 CFLAGS+=	-DNO_IPV6
 .endif
 
-.if ${OPSYS} == "SunOS"
-CFLAGS+=	-DNO_IPSET
-.endif
+CFLAGS.SunOS+=	-DNO_IPSET
 
 # Override the defaults
 AUTO_MKDIRS=yes

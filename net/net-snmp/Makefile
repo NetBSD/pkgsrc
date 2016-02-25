@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.112 2015/08/20 13:51:03 jperkin Exp $
+# $NetBSD: Makefile,v 1.113 2016/02/25 16:20:52 jperkin Exp $
 
 .include "Makefile.common"
 CATEGORIES=	net
@@ -23,9 +23,7 @@ MAKE_JOBS_SAFE=	no
 # Don't compress manual pages as they include each other.
 .undef MANZ
 
-.if ${OPSYS} == "DragonFly"
-MAKE_ENV+=	MIB_SYSTEM_LIBS=-lkinfo
-.endif
+MAKE_ENV.DragonFly+=	MIB_SYSTEM_LIBS=-lkinfo
 
 .if ${OPSYS} == "NetBSD"
 OSVERSION_SPECIFIC=	YES
@@ -93,13 +91,11 @@ CONFIGURE_ARGS+=	--with-dummy-values
 #
 CONFIGURE_ARGS+=	--enable-ucd-snmp-compatibility
 
-.if ${OPSYS} == "Darwin"
-CFLAGS+=		-framework ApplicationServices
-CFLAGS+=		-framework CoreFoundation
-CFLAGS+=		-framework CoreServices
-CFLAGS+=		-framework DiskArbitration
-CFLAGS+=		-framework IOKit
-.endif
+CFLAGS.Darwin+=		-framework ApplicationServices
+CFLAGS.Darwin+=		-framework CoreFoundation
+CFLAGS.Darwin+=		-framework CoreServices
+CFLAGS.Darwin+=		-framework DiskArbitration
+CFLAGS.Darwin+=		-framework IOKit
 
 # Handle ${PREFIX}/share/snmp in the DEINSTALL script since it may contain
 # leftover config files or pidfiles after deinstallation.

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2016/01/24 16:14:45 jperkin Exp $
+# $NetBSD: Makefile,v 1.8 2016/02/25 16:20:53 jperkin Exp $
 
 DISTNAME=	traceroute-nanog_6.4.2.orig
 PKGNAME=	${DISTNAME:S/.orig//:S/_/-/}
@@ -20,27 +20,25 @@ USE_FEATURES+=	snprintf
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "SunOS"
-.if ${OS_VERSION} >= 5.0
-.if ${OS_VERSION} != 5.4
-CPPFLAGS+=	-DSOLARIS
-LIBS+=	-lresolv -lsocket -lnsl
-.endif
 .if ${MACHINE_ARCH} == "i386"
 CPPFLAGS+=	-DBYTESWAP_IP_LEN
 .endif
-.endif
-.elif ${OPSYS} == "Linux"
-LIBS+=	-lresolv
-CPPFLAGS+=	-DSTRING
-.elif ${OPSYS} == "FreeBSD"
-CPPFLAGS+=	-DSTRING
-.elif ${OPSYS} == "Darwin"
+
+CPPFLAGS.FreeBSD+=	-DSTRING
+CPPFLAGS.Linux+=	-DSTRING
+CPPFLAGS.SunOS+=	-DSOLARIS
+
+LIBS.Linux+=		-lresolv
+LIBS.SunOS+=		-lresolv -lsocket -lnsl
+
+.if ${OPSYS} == "Darwin"
 CPPFLAGS+=	-DBIND_8_COMPAT -DRA_SERVICE=\"nicname\"
-.if !empty(OS_VERSION:M10.*) # MacOS X 10.6.X aka Snow Leopard
-LIBS+=	-lresolv
+.  if !empty(OS_VERSION:M10.*) # MacOS X 10.6.X aka Snow Leopard
+LIBS+=		-lresolv
+.  endif
 .endif
-.elif !empty(LOWER_OPSYS:Mirix5*)
+
+.if !empty(LOWER_OPSYS:Mirix5*)
 CPPFLAGS+=	-Dsocklen_t=int
 .endif
 
