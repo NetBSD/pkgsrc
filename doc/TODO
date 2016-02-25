@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15495 2016/02/25 02:01:35 wen Exp $
+$NetBSD: TODO,v 1.15496 2016/02/25 19:08:12 leot Exp $
 
 Suggested new packages
 ======================
@@ -1768,7 +1768,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o yaz-5.14.6
 	o yodl-2.14.3
 	o yorick-2.1.05
-	o youtube-dl-20160222
 	o yudit-2.9.6
 	o z26-2.14
 	o zenicb-1.31 (needs merge with lots of local changes)
