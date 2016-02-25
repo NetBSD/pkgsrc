@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2015/04/30 11:37:42 joerg Exp $
+# $NetBSD: Makefile,v 1.85 2016/02/25 13:37:48 jperkin Exp $
 
 DISTNAME=	tuxpaint-0.9.22
 PKGREVISION=	1
@@ -39,11 +39,7 @@ CONF_FILES=		${EGDIR}/tuxpaint.conf ${PKG_SYSCONFDIR}/tuxpaint.conf
 INSTALL_MAKE_FLAGS+=	PKG_ROOT=${DESTDIR}
 INSTALL_MAKE_FLAGS+=	CONFDIR=${DESTDIR}${PREFIX}/share/examples/tuxpaint
 
-.include "../../mk/bsd.fast.prefs.mk"
-
-.if ${OPSYS} == "NetBSD"
-CPPFLAGS+=		-DHAVE_STRCASESTR
-.endif
+CPPFLAGS.NetBSD+=	-DHAVE_STRCASESTR
 
 # this uses iconv and png functions directly, so link against them
 # explicitly.

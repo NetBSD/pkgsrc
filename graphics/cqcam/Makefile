@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2014/01/11 14:42:03 adam Exp $
+# $NetBSD: Makefile,v 1.43 2016/02/25 13:37:47 jperkin Exp $
 #
 
 DISTNAME=		cqcam-0.91
@@ -12,12 +12,10 @@ COMMENT=		Free Color QuickCam control program
 
 .include "../../mk/bsd.prefs.mk"
 
-#NOT_FOR_UNPRIVILEGED=	yes	# seems to need setuid for everything
-.if ${OPSYS} == "SunOS"
 # Tries to install a device driver with unrestricted access to all
 # hardware ports, which is also specific to i86pc platforms.
-NOT_FOR_UNPRIVILEGED=	yes
-.endif
+OPSYSVARS+=			NOT_FOR_UNPRIVILEGED
+NOT_FOR_UNPRIVILEGED.SunOS=	yes
 
 .if ${MACHINE_ARCH} != "i386"
 CONFIGURE_ARGS+=	--disable-asm
