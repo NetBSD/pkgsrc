@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2012/10/08 12:19:09 asau Exp $
+# $NetBSD: Makefile,v 1.50 2016/02/25 15:00:50 jperkin Exp $
 
 DISTNAME=		elm2.5.8
 PKGNAME=		elm-2.5.8
@@ -25,13 +25,9 @@ USE_TOOLS+=		nroff
 
 INSTALLATION_DIRS=	share/nls/C
 
-.include "../../mk/bsd.prefs.mk"
-
-.if (${OPSYS} == "Darwin")
-LIBC=			/usr/lib/libSystem.dylib
-.else
-LIBC=			/usr/lib/libc.so
-.endif
+OPSYSVARS+=		LIBC
+LIBC.Darwin=		/usr/lib/libSystem.dylib
+LIBC.*=			/usr/lib/libc.so
 
 SPECIAL_PERMS+=		bin/elm ${ROOT_USER} mail 2755
 

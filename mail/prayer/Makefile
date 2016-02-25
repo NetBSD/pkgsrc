@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2015/06/12 10:50:26 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2016/02/25 15:00:51 jperkin Exp $
 
 DISTNAME=	prayer-1.3.4
 PKGREVISION=	9
@@ -54,12 +54,8 @@ OWN_DIRS_PERMS+=${VAR_PREFIX} ${PRAYER_USER} ${PRAYER_GROUP} 0750
 FILES_SUBST+=	OPSYS=${OPSYS}
 FILES_SUBST+=	VAR_PREFIX=${VAR_PREFIX:Q}
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-BUILDLINK_TRANSFORM+=	opt:-lutil:"-lsocket -lnsl"
-BUILDLINK_TRANSFORM+=	rm:-lcom_err # XXX: handle pkgsrc krb
-.endif
+BUILDLINK_TRANSFORM.SunOS+=	opt:-lutil:"-lsocket -lnsl"
+BUILDLINK_TRANSFORM.SunOS+=	rm:-lcom_err # XXX: handle pkgsrc krb
 
 post-patch:
 	${FIND} ${WRKSRC} -name CVS -type d -print | ${SORT} -r | \

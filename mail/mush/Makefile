@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2015/08/18 07:31:11 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2016/02/25 15:00:51 jperkin Exp $
 
 DISTNAME=	mush-7.2.5
 PKGNAME=	mush-7.2.6.b4.pl1
@@ -32,13 +32,9 @@ BUILD_TARGET=	mush
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/misc
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "DragonFly"
-PLAT_MAKEFILE=	makefile.netbsd
-.else
-PLAT_MAKEFILE=	makefile.${LOWER_OPSYS}
-.endif
+OPSYSVARS+=			PLAT_MAKEFILE
+PLAT_MAKEFILE.DragonFly=	makefile.netbsd
+PLAT_MAKEFILE.*=		makefile.${LOWER_OPSYS}
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	config.h-dist ${PLAT_MAKEFILE}
