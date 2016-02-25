@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2013/10/27 20:47:53 joerg Exp $
+# $NetBSD: Makefile.common,v 1.16 2016/02/25 12:22:40 jperkin Exp $
 #
 # used by editors/emacs21/Makefile
 # used by editors/emacs21-nox11/Makefile
@@ -73,9 +73,7 @@ PLIST_SUBST+=	DOCTAIL="-${EMACSVERSION}.1"
 .endif
 
 # Disable W^X.
-.if ${OPSYS} == "OpenBSD"
-LDFLAGS+=	-Z
-.endif
+LDFLAGS.OpenBSD+=	-Z
 
 .include "../../mk/compiler.mk"
 .if !empty(CC_VERSION:Mgcc-3.*)
