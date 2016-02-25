@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/03/02 19:59:07 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2016/02/25 14:42:57 jperkin Exp $
 
 DISTNAME=	qore-0.8.11
 PKGREVISION=	2
@@ -20,9 +20,7 @@ FLEX_REQD=	2.5.31
 
 # make AC_CHECK_FUNC find gethost* etc on smartos
 # http://sourceforge.net/p/qore/code/6980
-.if "${OPSYS}" == "SunOS"
-LIBS+=		-lnsl
-.endif
+LIBS.SunOS+=	-lnsl
 
 PKGCONFIG_OVERRIDE+=	qore.pc.in
 REPLACE_QORE=		doxygen/qdx
