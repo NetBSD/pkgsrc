@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2015/08/18 07:31:13 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2016/02/25 15:35:31 jperkin Exp $
 #
 
 DISTNAME=	multitail-4.0.6
@@ -18,12 +18,8 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/multitail	\
 CONF_FILES=	${PREFIX:Q}/share/examples/multitail/multitail.conf	\
 		${PKG_SYSCONFDIR:Q}/multitail.conf
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-BUILDLINK_TRANSFORM+=	rm:-lutil
-LDFLAGS+=		-lsocket -lnsl
-.endif
+BUILDLINK_TRANSFORM.SunOS+=	rm:-lutil
+LDFLAGS.SunOS+=			-lsocket -lnsl
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC:Q}/multitail ${DESTDIR}${PREFIX:Q}/bin/
