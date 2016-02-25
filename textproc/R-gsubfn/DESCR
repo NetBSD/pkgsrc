@@ -1,0 +1,4 @@
+gsubfn is like gsub but can take a replacement function or certain
+other objects instead of the replacement string. Matches and back
+references are input to the replacement function and replaced by
+the function output.
