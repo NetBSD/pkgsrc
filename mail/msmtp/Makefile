@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2016/02/02 16:12:18 leot Exp $
+# $NetBSD: Makefile,v 1.63 2016/02/25 15:00:51 jperkin Exp $
 
 DISTNAME=	msmtp-1.6.4
 CATEGORIES=	mail
@@ -23,10 +23,7 @@ CONF_FILES=	${EGDIR}/msmtprc-user.example \
 INFO_FILES=	yes
 PLIST_VARS+=	scripts
 
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "Interix"
-CPPFLAGS+=	-D__WINSOCK
-.endif
+CPPFLAGS.Interix+=	-D__WINSOCK
 
 .include "options.mk"
 
