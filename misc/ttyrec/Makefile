@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2013/04/06 03:45:18 rodent Exp $
+# $NetBSD: Makefile,v 1.14 2016/02/25 15:35:31 jperkin Exp $
 
 DISTNAME=	ttyrec-1.0.8
 CATEGORIES=	misc
@@ -9,11 +9,7 @@ HOMEPAGE=	http://0xcc.net/ttyrec/
 COMMENT=	Tty recorder
 LICENSE=	original-bsd
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-CFLAGS+=	-DSVR4
-.endif
+CFLAGS.SunOS+=	-DSVR4
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
