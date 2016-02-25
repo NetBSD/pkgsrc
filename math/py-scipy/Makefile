@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2015/04/17 00:49:50 wen Exp $
+# $NetBSD: Makefile,v 1.18 2016/02/25 15:26:55 jperkin Exp $
 
 DISTNAME=	scipy-0.15.1
 PKGNAME=	${PYPKGPREFIX}-scipy-0.15.1
@@ -18,12 +18,10 @@ MAKE_ENV+=	ATLAS=None
 .include "../../mk/compiler.mk"
 
 .if defined(PKGSRC_FORTRAN) && !empty(PKGSRC_FORTRAN:Mg95)
-PYSETUPBUILDARGS+= --fcompiler=g95
+PYSETUPBUILDARGS+=	--fcompiler=g95
 .elif defined(PKGSRC_FORTRAN) && !empty(PKGSRC_FORTRAN:Mgfortran)
-PYSETUPBUILDARGS+= --fcompiler=gnu95
-.if ${OPSYS} == "Darwin"
-LDFLAGS+=	-undefined dynamic_lookup
-.endif
+PYSETUPBUILDARGS+=	--fcompiler=gnu95
+LDFLAGS.Darwin+=	-undefined dynamic_lookup
 .else
 BROKEN=		Requires fortran 95
 .endif
