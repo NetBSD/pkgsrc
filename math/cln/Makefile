@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2015/06/30 07:56:44 wen Exp $
+# $NetBSD: Makefile,v 1.27 2016/02/25 15:26:55 jperkin Exp $
 
 DISTNAME=	cln-1.3.4
 CATEGORIES=	math
@@ -19,12 +19,8 @@ PKGCONFIG_OVERRIDE=	cln.pc.in
 INFO_FILES=		yes
 TEST_TARGET=		check
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
 # Work around broken configure test
-CONFIGURE_ENV+=		cl_cv_proto_perror=yes
-.endif
+CONFIGURE_ENV.SunOS+=	cl_cv_proto_perror=yes
 
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
