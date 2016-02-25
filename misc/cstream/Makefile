@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/12/10 02:40:04 mef Exp $
+# $NetBSD: Makefile,v 1.12 2016/02/25 15:35:30 jperkin Exp $
 
 DISTNAME=	cstream-3.1.1
 CATEGORIES=	misc
@@ -11,10 +11,6 @@ LICENSE=	x11
 
 GNU_CONFIGURE=	yes
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-LDFLAGS+=	-lsocket -lnsl -lresolv
-.endif
+LDFLAGS.SunOS+=	-lsocket -lnsl -lresolv
 
 .include "../../mk/bsd.pkg.mk"
