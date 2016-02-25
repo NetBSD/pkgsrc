@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.858 2016/02/25 15:33:26 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.859 2016/02/25 18:28:02 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1155,3 +1155,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/drupal6 to 6.38 [taca 2016-02-25]
 	Updated www/drupal7 to 7.43 [taca 2016-02-25]
 	Added mail/postsrsd version 1.4 [wiz 2016-02-25]
+	Updated devel/p5-Test-BDD-Cucumber to 0.48 [schmonz 2016-02-25]
