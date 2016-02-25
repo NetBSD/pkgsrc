@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2015/11/08 21:41:25 dholland Exp $
+# $NetBSD: Makefile,v 1.29 2016/02/25 16:20:51 jperkin Exp $
 #
 
 DISTNAME=	icsi-finger-1.0.29
@@ -16,22 +16,19 @@ WRKSRC=		${WRKDIR}/finger
 XMPLD=		${DESTDIR}${PREFIX}/share/examples/icsi-finger
 XMPLDT=		${XMPLD}/targets
 
-.include "../../mk/compiler.mk"
-.include "../../mk/bsd.prefs.mk"
-
 INSTALLATION_DIRS=	bin libexec sbin
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/man5 ${PKGMANDIR}/man8
 INSTALLATION_DIRS+=	share/examples/icsi-finger/targets
 
 TOOL_DEPENDS+=	tradcpp-[0-9]*:../../devel/tradcpp
 
+.include "../../mk/compiler.mk"
+
 .if !empty(PKGSRC_COMPILER:Mclang)
 CPPFLAGS+=	-Wno-error=return-type
 .endif
 
-.if ${OPSYS} == "SunOS"
-MAKE_ENV+=	CPP_ARGS=-DSVR4
-.endif
+MAKE_ENV.SunOS+=	CPP_ARGS=-DSVR4
 
 pre-configure:
 		chmod +w ${WRKSRC}/config.h

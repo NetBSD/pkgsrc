@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2015/10/10 01:58:17 ryoon Exp $
+# $NetBSD: Makefile,v 1.63 2016/02/25 16:20:53 jperkin Exp $
 #
 
 DISTNAME=	vinagre-3.6.2
@@ -46,10 +46,8 @@ PLIST.telepathy= yes
 CONFIGURE_ARGS+= --without-telepathy
 .endif
 
-.if ${OPSYS} == "NetBSD"
 # Interface conflicts with glibc's version
-CONFIGURE_ARGS+=	ac_cv_func_ptsname_r=no
-.endif
+CONFIGURE_ARGS.NetBSD+=	ac_cv_func_ptsname_r=no
 
 .include "../../databases/shared-mime-info/mimedb.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.28.0

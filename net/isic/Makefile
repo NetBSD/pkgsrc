@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/10/23 17:18:30 asau Exp $
+# $NetBSD: Makefile,v 1.20 2016/02/25 16:20:51 jperkin Exp $
 #
 
 DISTNAME=	isic-0.07
@@ -15,20 +15,13 @@ GNU_CONFIGURE=	YES
 
 INSTALLATION_DIRS+=	share/doc
 
+# XXX: this was originally added for NetBSD/alpha gcc-2.95.3, but then was
+# XXX: made to apply to all NetBSD platforms without comment in -r1.18.  Check
+# XXX: it is still required.
+BUILDLINK_TRANSFORM.NetBSD+=	rm:-O[0-9]*
+
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/isic.README
 
 .include "../../devel/libnet11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
-
-# XXX On NetBSD, the egcs and gcc-2.95.3 for:
-# XXX
-# XXX     alpha
-# XXX
-# XXX has an optimization bug when compiling with -O2
-#
-.if ${OPSYS} == "NetBSD"
-#.  if (${MACHINE_ARCH} == "alpha")
-BUILDLINK_TRANSFORM+=	rm:-O[0-9]*
-#.  endif
-.endif

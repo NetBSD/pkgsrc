@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2014/02/12 23:18:25 tron Exp $
+# $NetBSD: Makefile,v 1.34 2016/02/25 16:20:52 jperkin Exp $
 
 DISTNAME=	pure-ftpd-1.0.35
 PKGREVISION=	4
@@ -26,11 +26,7 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 
 BUILD_DEFS+=		VARBASE
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Interix"
-CONFIGURE_ARGS+=	--without-privsep
-.endif
+CONFIGURE_ARGS.Interix+=	--without-privsep
 
 .include "options.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2015/11/08 21:55:11 dholland Exp $
+# $NetBSD: Makefile,v 1.23 2016/02/25 16:20:53 jperkin Exp $
 
 DISTNAME=		tspc-2.1.1-src
 PKGNAME=		${DISTNAME:S/-src//}
@@ -16,13 +16,9 @@ BROKEN_EXCEPT_ON_PLATFORM=	NetBSD-*-* OpenBSD-*-* FreeBSD-*-* Linux-*-* \
 
 AUTO_MKDIRS=		yes
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-TARGET=			solaris
-.else
-TARGET=			${LOWER_OPSYS}
-.endif
+OPSYSVARS+=		TARGET
+TARGET.SunOS=		solaris
+TARGET.*=		${LOWER_OPSYS}
 
 MAKE_ENV+=		target=${TARGET:Q}
 MAKE_ENV+=		configdir=${PREFIX}/share/tspc

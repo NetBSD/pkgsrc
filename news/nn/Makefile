@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2016/01/24 16:14:45 jperkin Exp $
+# $NetBSD: Makefile,v 1.48 2016/02/25 16:30:31 jperkin Exp $
 
 DISTNAME=	nn-6.7.3
 PKGREVISION=	4
@@ -14,16 +14,14 @@ PKG_SYSCONFSUBDIR=	nntp
 
 TOOL_DEPENDS+=	tradcpp-[0-9]*:../../devel/tradcpp
 
-.include "../../mk/bsd.prefs.mk"
-.include "../../mk/compiler.mk"
+CPPFLAGS.IRIX+=	-DHAVE_TERMIO_H
 
-.if ${OPSYS} == "SunOS"
-SFILE=		s-sunos5.h
-.elif ${OPSYS} == "Linux"
-SFILE=		s-linux.h
-.else
-SFILE=		s-netbsd.h
-.endif
+OPSYSVARS+=	SFILE
+SFILE.SunOS=	s-sunos5.h
+SFILE.Linux=	s-linux.h
+SFILE.*=	s-netbsd.h
+
+.include "../../mk/bsd.prefs.mk"
 
 .if ${MACHINE_ARCH} == "i386"
 MFILE=		m-i80386.h
@@ -31,10 +29,6 @@ MFILE=		m-i80386.h
 MFILE=         m-mipsel.h
 .else
 MFILE=		m-${MACHINE_ARCH}.h
-.endif
-
-.if ${OPSYS} == "IRIX"
-CPPFLAGS+=	-DHAVE_TERMIO_H
 .endif
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man8
