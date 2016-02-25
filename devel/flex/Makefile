@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2016/01/08 11:59:36 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2016/02/25 12:12:47 jperkin Exp $
 
 DISTNAME=	flex-2.6.0
 CATEGORIES=	lang
@@ -21,9 +21,7 @@ LIBS.SunOS+=		-lm
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${LOWER_OPSYS} == "aix"
-CFLAGS+=		-D_LINUX_SOURCE_COMPAT
-.endif
+CFLAGS.AIX+=		-D_LINUX_SOURCE_COMPAT
 
 .if ${OS_VARIANT} == "SCOOSR5"
 LDFLAGS.SCO_SV+=	-lsocket

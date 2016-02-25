@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2013/07/05 13:29:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.40 2016/02/25 12:12:48 jperkin Exp $
 
 DISTNAME=	libast-0.7
 PKGREVISION=	12
@@ -14,11 +14,8 @@ GNU_CONFIGURE=		YES
 TEST_TARGET=		test
 
 .include "options.mk"
-.include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "SunOS"
-LDFLAGS+=-lresolv
-.endif
+LDFLAGS.SunOS+=	-lresolv
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
