@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.141 2014/07/18 10:40:28 ryoon Exp $
+# $NetBSD: Makefile,v 1.142 2016/02/25 08:27:04 jperkin Exp $
 #
 # ATTENTION:
 # The Kerberos support in this software is known to be problematic. If you
@@ -33,9 +33,6 @@ WRKSRC=		${WRKDIR}/${DISTNAME:S/2$//}
 MAKE_JOBS_SAFE=	no
 
 .include "../../mk/bsd.prefs.mk"
-
-# Each platform has its own special target in the imap Makefiles.
-OPSYSVARS+=		BUILD_TARGET
 
 .include "../../mk/compiler.mk"
 .  if empty(CC_VERSION:Mgcc-)

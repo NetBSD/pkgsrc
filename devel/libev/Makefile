@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2015/10/17 09:53:31 adam Exp $
+# $NetBSD: Makefile,v 1.14 2016/02/25 08:27:03 jperkin Exp $
 
 DISTNAME=	libev-4.20
 CATEGORIES=	devel
@@ -17,7 +17,4 @@ CONFIGURE_ARGS+=	--includedir=${PREFIX}/include/ev
 CONFIGURE_ENV.SunOS+=	ac_cv_header_sys_inotify_h=no
 #TEST_TARGET=	verify
 
-OPSYSVARS+=	CONFIGURE_ENV
-
-#.include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.pkg.mk"
