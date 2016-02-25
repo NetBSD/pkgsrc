@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2016/02/20 09:57:10 jperkin Exp $
+# $NetBSD: Makefile,v 1.29 2016/02/25 12:12:47 jperkin Exp $
 
 PKGREVISION= 3
 .include "Makefile.common"
@@ -13,14 +13,12 @@ PKGCONFIG_OVERRIDE+=	client/dconf.pc.in dbus-1/dconf-dbus-1.pc.in
 BUILDLINK_TRANSFORM+=	rm:-ldl
 .endif
 
-.if ${OPSYS} == "Darwin"
-SUBST_CLASSES+=		libname
+SUBST_CLASSES.Darwin+=	libname
 SUBST_STAGE.libname=	pre-configure
 SUBST_FILES.libname=	client/Makefile.in dbus-1/Makefile.in
 SUBST_FILES.libname+=	gsettings/Makefile.in
 SUBST_SED.libname=	-e "s|-Wl,-soname=|-install_name ${PREFIX}/lib/|g"
 SUBST_SED.libname+=	-e "/^libdconfsettings_so_LDFLAGS/s,$$, -install_name ${PREFIX}/lib/gio/modules/libdconfsettings.so,g"
-.endif
 
 BUILD_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt

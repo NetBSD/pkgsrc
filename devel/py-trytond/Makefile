@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2015/08/24 14:49:41 richard Exp $
+# $NetBSD: Makefile,v 1.13 2016/02/25 12:12:49 jperkin Exp $
 TRYTON_MODULE_NAME=	trytond
 .include "../../devel/py-trytond/Makefile.common"
 CATEGORIES=	devel python
@@ -37,9 +37,8 @@ PLIST_SUBST+=			PYVERSSUFFIX=${PYVERSSUFFIX}
 
 .include "options.mk"
 
-.if ${OPSYS} == "Darwin"
-DEPENDS+=	${PYPKGPREFIX}-py2app-[0-9]*:../../devel/py-py2app
-.endif
+OPSYSVARS+=		DEPENDS
+DEPENDS.Darwin+=	${PYPKGPREFIX}-py2app-[0-9]*:../../devel/py-py2app
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/trytond \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2014/08/17 16:37:56 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2016/02/25 12:12:50 jperkin Exp $
 
 DISTNAME=	yasm-1.3.0
 CATEGORIES=	devel
@@ -18,13 +18,11 @@ TEST_TARGET=		check
 
 # Commit message suggests this is Darwin-specific.  Won't work to
 # cross-compile to Darwin, but that doesn't work at all anyway.
-.if ${OPSYS} == "Darwin"
-SUBST_CLASSES+=		link
+SUBST_CLASSES.Darwin+=	link
 SUBST_STAGE.link=	pre-configure
 SUBST_MESSAGE.link=	Fix linking command.
 SUBST_FILES.link=	Makefile.in
 SUBST_SED.link=		-e 's,$$(CCLD_FOR_BUILD) -o $$@,$$(LINK) -o $$@,'
-.endif
 
 .if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
 CONFIGURE_ENV+=		CC_FOR_BUILD=${NATIVE_CC:Q}

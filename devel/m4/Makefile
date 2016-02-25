@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2014/10/09 14:06:10 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2016/02/25 12:12:48 jperkin Exp $
 
 DISTNAME=	m4-1.4.17
 CATEGORIES=	devel
@@ -15,14 +15,9 @@ INFO_FILES=		yes
 TEST_TARGET=		check
 
 CONFIGURE_ARGS+=	--program-prefix=g
+CONFIGURE_ARGS.Cygwin+=	ac_cv_func___fpending=yes
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${LOWER_OPSYS} == "aix"
-CFLAGS+=	-D_LINUX_SOURCE_COMPAT
-.elif ${OPSYS} == "Cygwin"
-CONFIGURE_ARGS+=	ac_cv_func___fpending=yes
-.endif
+CFLAGS.AIX+=	-D_LINUX_SOURCE_COMPAT
 
 AUTO_MKDIRS=		yes
 

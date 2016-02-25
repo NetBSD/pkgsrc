@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2016/01/24 16:14:44 jperkin Exp $
+# $NetBSD: Makefile,v 1.73 2016/02/25 12:12:47 jperkin Exp $
 
 DISTNAME=	bmake-20150505
 CATEGORIES=	devel
@@ -39,9 +39,7 @@ CONFIGURE_ARGS+=	--with-defshell=/usr/bin/bash
 DEPENDS+=		pdksh-[0-9]*:../../shells/pdksh
 CONFIGURE_ARGS+=	--with-defshell=${PREFIX}/bin/pdksh
 .endif
-.if ${OPSYS} == "Interix"
-MAKE_ENV+=		XDEFS=-DUSE_SELECT
-.endif
+MAKE_ENV.Interix+=	XDEFS=-DUSE_SELECT
 
 do-extract:
 	${CP} -R ${FILESDIR} ${WRKSRC}

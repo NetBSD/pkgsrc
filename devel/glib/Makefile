@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2016/02/15 11:42:10 jperkin Exp $
+# $NetBSD: Makefile,v 1.91 2016/02/25 12:12:47 jperkin Exp $
 
 DISTNAME=		glib-1.2.10
 PKGREVISION=		11
@@ -30,9 +30,7 @@ PTHREAD_OPTS+=		require
 
 # Force the result of this configure test, because the testing technique
 # breaks with NetBSD's native libpthread.so.
-.if ${OPSYS} == "NetBSD"
-CONFIGURE_ENV+=		glib_cv_rtldglobal_broken=no
-.endif
+CONFIGURE_ENV.NetBSD+=	glib_cv_rtldglobal_broken=no
 
 # Tests are insufficient, override with correct values.
 .if ${OPSYS} == "Darwin" && ${PKGSRC_COMPILER} == "clang"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2015/01/03 01:33:59 dholland Exp $
+# $NetBSD: Makefile,v 1.29 2016/02/25 12:12:47 jperkin Exp $
 
 DISTNAME=		bcc
 PKGREVISION=		1
@@ -34,9 +34,7 @@ LDFLAGS+=		-m32
 .endif
 .endfor
 
-.if ${OPSYS} == "DragonFly"
-CPPFLAGS+=	-D_POSIX_SOURCE
-.endif
+CPPFLAGS.DragonFly+=	-D_POSIX_SOURCE
 
 post-extract:
 	set -e; \
