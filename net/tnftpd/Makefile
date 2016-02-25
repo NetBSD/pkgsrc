@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2015/02/24 08:58:56 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2016/02/25 08:27:04 jperkin Exp $
 
 DISTNAME=		tnftpd-20130325
 CATEGORIES=		net
@@ -25,7 +25,6 @@ CONF_FILES+=		${EXAMPLEDIR}/ftpusers ${PKG_SYSCONFDIR}/ftpusers
 
 .include "options.mk"
 
-OPSYSVARS+=		MAKE_ENV
 MAKE_ENV.SunOS+=	CPPFLAGS=""
 
 EXAMPLEDIR=		${PREFIX}/share/examples/tnftpd

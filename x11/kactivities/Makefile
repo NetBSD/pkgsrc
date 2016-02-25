@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2016/02/22 19:59:27 jperkin Exp $
+# $NetBSD: Makefile,v 1.34 2016/02/25 08:27:05 jperkin Exp $
 
 DISTNAME=	kactivities-4.13.3
 PKGREVISION=	2
@@ -11,7 +11,6 @@ MASTER_SITES=	${MASTER_SITE_KDE:=4.13.3/src/}
 # Needs C++11 features for kactivitymanager
 GCC_REQD+=	4.5
 
-OPSYSVARS+=	CMAKE_ARGS
 CMAKE_ARGS+=	-DWITH_NepomukCore:BOOL=OFF
 
 # The default MACOSX_DEPLOYMENT_TARGET is incompatible with the C++11 tests.

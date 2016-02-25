@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/02/24 17:33:48 fhajny Exp $
+# $NetBSD: Makefile,v 1.5 2016/02/25 08:27:03 jperkin Exp $
 
 DISTNAME=	opencv_contrib-3.1.0
 PKGNAME=	${DISTNAME:S/_contrib/-contrib-face/}
@@ -34,7 +34,6 @@ CMAKE_ARGS+=	-D BUILD_DOCS=OFF
 CXXFLAGS+=		-std=c++11
 .endif
 
-OPSYSVARS+=		CMAKE_ARGS
 CMAKE_ARGS+=		-DZLIB_ROOT=${BUILDLINK_PREFIX.zlib}
 CMAKE_ARGS.SunOS+=	-DENABLE_PRECOMPILED_HEADERS=NO
 

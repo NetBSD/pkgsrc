@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2015/12/27 12:36:37 adam Exp $
+# $NetBSD: Makefile,v 1.82 2016/02/25 08:27:03 jperkin Exp $
 #
 # when updating to a new release, update ABI depends in
 # the buildlink3.mk file as well, since the plugins' version
@@ -19,8 +19,6 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-ssldir=${SSLDIR}
-
-OPSYSVARS+=	CONFIGURE_ENV
 
 TEST_TARGET=	check
 
