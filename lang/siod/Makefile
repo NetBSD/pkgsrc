@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2014/07/25 15:21:39 jperkin Exp $
+# $NetBSD: Makefile,v 1.24 2016/02/25 14:42:57 jperkin Exp $
 
 DISTNAME=		siod
 PKGNAME=		siod-3.0
@@ -28,11 +28,7 @@ REPLACE.siod.old=	/usr/local/bin/siod
 REPLACE.siod.new=	${PREFIX}/bin/siod
 REPLACE_FILES.siod=	*.scm
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-MAKE_ENV+=		CPPFLAGS=
-.endif
+MAKE_ENV.SunOS+=	CPPFLAGS=
 
 post-patch:
 	${MV} ${WRKSRC}/siod.man ${WRKSRC}/prefix-siod.man

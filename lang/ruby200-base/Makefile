@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2016/01/27 12:12:19 jperkin Exp $
+# $NetBSD: Makefile,v 1.23 2016/02/25 14:42:57 jperkin Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -60,14 +60,10 @@ CONFIGURE_ENV+=	LDSHARED="${CC} -G"
 LIBS.SunOS+=	-lm
 .endif
 
-.if ${OPSYS} == "SunOS"
-CONFIGURE_ENV+=	OBJCOPY=:
-.endif
+CONFIGURE_ENV.SunOS+=	OBJCOPY=:
 
-.if ${OPSYS} == "MirBSD"
 # if present, an unsupported sysconf call is used
-CONFIGURE_ENV+=	ac_cv_func_getgrnam_r=no
-.endif
+CONFIGURE_ENV.MirBSD+=	ac_cv_func_getgrnam_r=no
 
 .if ${OPSYS} == "OpenBSD" || ${OPSYS} == "Bitrig"
 USE_TOOLS+= 	bash
