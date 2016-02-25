@@ -1,4 +1,4 @@
-# $NetBSD: kde3.mk,v 1.17 2009/07/22 09:01:35 wiz Exp $
+# $NetBSD: kde3.mk,v 1.18 2016/02/25 15:31:00 jperkin Exp $
 #
 # This Makefile fragment is included by packages that use the KDE3
 # configure-and-build process.
@@ -41,18 +41,13 @@ USE_PKGLOCALEDIR=	YES
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-.if ${OPSYS} == "Linux"
 # work-around bug noted in PR #25402
-BUILDLINK_TRANSFORM+=	rm:-Wl,--no-undefined
-.endif
+BUILDLINK_TRANSFORM.Linux+=	rm:-Wl,--no-undefined
 
-.if ${OPSYS} == "SunOS"
-GCC_REQD+=		3.3
-.endif
+OPSYSVARS+=		GCC_REQD
+GCC_REQD.SunOS+=	3.3
 
-.if ${OPSYS} == "NetBSD"
-CONFIGURE_ARGS+=	--disable-pie
-.endif
+CONFIGURE_ARGS.NetBSD+=	--disable-pie
 
 KDEDIR?=		${PREFIX}
 QTDIR?=			${PREFIX}/qt3
