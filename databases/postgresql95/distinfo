@@ -1,0 +1,24 @@
+$NetBSD: distinfo,v 1.1 2016/02/25 21:37:35 tnn Exp $
+
+SHA1 (postgresql-9.5.1.tar.bz2) = 905bc31bc4d500e9498340407740a61835a2022e
+RMD160 (postgresql-9.5.1.tar.bz2) = 4758bd11dea976147a6a698f9fb0e1acc4b17db3
+SHA512 (postgresql-9.5.1.tar.bz2) = fcb2b3bde51c4152b3a72764de1f9b4e607cb591571ed5bc1187b2c6938c33e21bdd512694a969a03c046e4889a129bb0e75fa676d55a1a1e77142da1e984192
+Size (postgresql-9.5.1.tar.bz2) = 18441638 bytes
+SHA1 (patch-config_missing) = c2d7d742922ba6861e7660c75b7b53f09e564813
+SHA1 (patch-config_perl.m4) = e035132b1c281a75752d570ac5e29a11176c25c5
+SHA1 (patch-configure) = 59fe9a768caf8a5d308acac60c28bc6bb2c40632
+SHA1 (patch-contrib_dblink_dblink.c) = a6f87ab9f2c28a72608d70267b71bd77437b0921
+SHA1 (patch-contrib_uuid-ossp_uuid-ossp.c) = efaffec2f51de70823430ca162d499b2886a9190
+SHA1 (patch-src_Makefile.global.in) = 2ab3affedc77b202f6749964287438d6179ca23a
+SHA1 (patch-src_Makefile.shlib) = 46b3a8591678f92892d3837cd31fa44e8a7e21b3
+SHA1 (patch-src_backend_Makefile) = b70b38ea23af6cdde9d2349f2441a429078cfaca
+SHA1 (patch-src_backend_utils_adt_datetime.c) = d1ea70986634d3bfb663eff789425252656e1289
+SHA1 (patch-src_interfaces_ecpg_pgtypeslib_interval.c) = 614aa5dbe586b8681a3a2852d4f84860dbbd1b49
+SHA1 (patch-src_interfaces_libpq_Makefile) = 61bcf84eb69b6ec9faabab0b61913766f4b20f8c
+SHA1 (patch-src_makefiles_Makefile.solaris) = 0168f5bc105ffc89d5db40907a08966d8465f5a0
+SHA1 (patch-src_pl_plperl_GNUmakefile) = 6ee3e431f46ce5c2a94df499504b2b8bd458bbef
+SHA1 (patch-src_pl_plperl_plperl.h) = bd663fa80a47f7b82ce689060750fa6e631fbc61
+SHA1 (patch-src_timezone_localtime.c) = 622f57bc1d10f07ab73f86765cbf587eece57085
+SHA1 (patch-src_timezone_private.h) = 85dac95e40efc16270885087f868aeb76e1b9214
+SHA1 (patch-src_timezone_strftime.c) = 25102dce1b9b22385353af23500636fb18e3bf64
+SHA1 (patch-src_timezone_zic.c) = ed04d781845239ce5dc7c6fca406ce62c10a9605
