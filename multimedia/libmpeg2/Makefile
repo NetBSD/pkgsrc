@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2015/02/21 00:12:26 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2016/02/25 15:49:43 jperkin Exp $
 
 DISTNAME=	libmpeg2-0.5.1
 PKGNAME=	libmpeg2-0.5.1
@@ -22,10 +22,6 @@ CONFIG_SUB_OVERRIDE+=	.auto/config.sub
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--disable-sdl
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Darwin"
-CONFIGURE_ENV+=		ac_cv_header_altivec_h=no
-.endif
+CONFIGURE_ENV.Darwin+=	ac_cv_header_altivec_h=no
 
 .include "../../mk/bsd.pkg.mk"

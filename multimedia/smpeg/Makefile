@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2015/09/05 11:39:51 jperkin Exp $
+# $NetBSD: Makefile,v 1.31 2016/02/25 15:49:44 jperkin Exp $
 #
 
 DISTNAME=	smpeg-0.4.4
@@ -33,9 +33,7 @@ post-wrapper:
 CONFIGURE_ARGS+=	--enable-mmx
 .endif
 
-.if ${OPSYS} == "SunOS"
-MAKE_ENV+=	SunOS_LDFLAGS="-shared -mimpure-text"
-.endif
+MAKE_ENV.SunOS+=	SunOS_LDFLAGS="-shared -mimpure-text"
 
 .include "options.mk"
 .include "../../devel/SDL/buildlink3.mk"
