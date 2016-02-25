@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2014/12/03 13:01:47 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2016/02/25 11:09:50 jperkin Exp $
 
 DISTNAME=	httperf-0.9.0
 PKGREVISION=	1
@@ -18,10 +18,6 @@ CFLAGS+=		-DFD_SETSIZE=16424
 INSTALL_MAKE_FLAGS+=	mandir=${PREFIX}/${PKGMANDIR} \
 			bindir=${PREFIX}/bin
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-LDFLAGS+=	-lsocket -lnsl -lresolv
-.endif
+LDFLAGS.SunOS+=	-lsocket -lnsl -lresolv
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2015/01/20 06:43:09 mef Exp $
+# $NetBSD: Makefile,v 1.13 2016/02/25 11:09:50 jperkin Exp $
 
 DISTNAME=	sysbench-0.4.12
 PKGREVISION=	4
@@ -14,11 +14,7 @@ GNU_CONFIGURE=		yes
 PTHREAD_AUTO_VARS=	yes
 MAKE_FLAGS+=		bin_SCRIPTS= # don't install problematic scripts
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD"
-CFLAGS+=		-D_NETBSD_SOURCE # hack for ulong along with patch-aa
-.endif
+CFLAGS.NetBSD+=		-D_NETBSD_SOURCE # hack for ulong along with patch-aa
 
 .include "../../mk/compiler.mk"
 .if !empty(MACHINE_PLATFORM:MSunOS-5.1[0-9]-*) && \
