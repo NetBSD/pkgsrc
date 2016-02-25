@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2014/01/26 08:43:29 obache Exp $
+# $NetBSD: options.mk,v 1.4 2016/02/25 13:37:47 jperkin Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cogl
@@ -37,9 +37,9 @@ BUILDLINK_API_DEPENDS.libXrandr+=	libXrandr>=1.2
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-x
+CONFIGURE_ARGS.Darwin+=	--with-quartz-image
 .include "../../mk/bsd.prefs.mk"
 .  if ${OPSYS} == Darwin
 PLIST.osx=		yes
-CONFIGURE_ARGS+=	--with-quartz-image
 .  endif
 .endif

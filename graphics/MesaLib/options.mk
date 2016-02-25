@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.48 2016/02/23 14:40:36 tnn Exp $
+# $NetBSD: options.mk,v 1.49 2016/02/25 13:37:46 jperkin Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=		llvm dri
@@ -66,9 +66,7 @@ CONFIGURE_ARGS+=	--disable-glx-tls
 .endif
 
 # DRI on Linux needs either sysfs or udev
-.if ${OPSYS} == "Linux"
-CONFIGURE_ARGS+=	--enable-sysfs
-.endif
+CONFIGURE_ARGS.Linux+=	--enable-sysfs
 
 PLIST.dri=	yes
 
