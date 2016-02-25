@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.861 2016/02/25 19:33:17 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.862 2016/02/25 19:42:18 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1158,3 +1158,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Test-BDD-Cucumber to 0.48 [schmonz 2016-02-25]
 	Updated net/youtube-dl to 20160222 [leot 2016-02-25]
 	Updated math/R-chron to 2.3.47 [fhajny 2016-02-25]
+	Added devel/R-proto version 0.3.10 [fhajny 2016-02-25]
