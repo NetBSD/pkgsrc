@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.215 2016/01/21 21:32:22 tron Exp $
+# $NetBSD: Makefile,v 1.216 2016/02/25 17:25:05 jperkin Exp $
 
 # Notes to package maintainers:
 #
@@ -165,20 +165,14 @@ CONFIG_GUESS_OVERRIDE+=	${WRKDIR}/libarchive/build/autoconf/config.guess \
 CONFIG_SUB_OVERRIDE+=	${WRKDIR}/libarchive/build/autoconf/config.sub \
 			${WRKSRC}/config.sub
 
-.  if ${OPSYS} == "Cygwin"
-CPPFLAGS+=	-DLIBARCHIVE_STATIC
-.  endif
+CPPFLAGS.Cygwin+=	-DLIBARCHIVE_STATIC
 
-.  if ${OPSYS} == "Darwin"
 # Make sure that the linker used our static library instead of the
 # (outdated) dynamic library "/usr/lib/libarchive.dylib".
-LDFLAGS+=	-Wl,-search_paths_first
-.  endif
+LDFLAGS.Darwin+=	-Wl,-search_paths_first
 
-.  if ${OPSYS} == "SunOS"
 # workaround for pkg/45491
-CONFIGURE_ENV+=	ac_cv_header_ext2fs_ext2_fs_h=no
-.  endif
+CONFIGURE_ENV.SunOS+=	ac_cv_header_ext2fs_ext2_fs_h=no
 
 # Hack to make sure that the libarchive version is replaced
 pre-configure: config-guess-override config-sub-override

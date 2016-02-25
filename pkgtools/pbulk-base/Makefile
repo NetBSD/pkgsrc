@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2015/12/07 16:52:40 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2016/02/25 17:25:05 jperkin Exp $
 
 DISTNAME=	pbulk-base-0.51
 COMMENT=	Core components of the modular bulk build framework
@@ -21,14 +21,10 @@ CONFLICTS=	pbulk<0.39
 CPPFLAGS+=	-Wno-clobbered
 .endif
 
-.if ${OPSYS} == "SunOS"
-LDADD+=		-lsocket -lresolv
-MAKE_ENV+=	LDADD=${LDADD:Q}
-.endif
+LDADD.SunOS+=		-lsocket -lresolv
+MAKE_ENV.SunOS+=	LDADD=${LDADD:Q}
 
-.if ${OPSYS} == "Linux"
-CPPFLAGS+=	-D_GNU_SOURCE
-.endif
+CPPFLAGS.Linux+=	-D_GNU_SOURCE
 
 BUILD_DIRS=	lib pbuild presolve pscan
 
