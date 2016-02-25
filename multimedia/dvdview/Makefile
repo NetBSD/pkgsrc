@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2013/02/16 11:23:31 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2016/02/25 15:49:43 jperkin Exp $
 
 DISTNAME=	dvdview-1.2.2
 PKGREVISION=	10
@@ -13,13 +13,8 @@ GNU_CONFIGURE=	YES
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 
-.include "../../mk/bsd.prefs.mk"
-
-.if (${OPSYS} == SunOS)
-MAKE_ENV+=	RTLIB=-lrt
-.else
-MAKE_ENV+=	RTLIB=
-.endif
+MAKE_ENV.SunOS+=	RTLIB=-lrt
+MAKE_ENV.*+=		RTLIB=
 
 INSTALLATION_DIRS+=	share/doc/dvdview
 
