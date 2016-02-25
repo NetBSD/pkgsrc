@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2015/09/27 02:03:54 tnn Exp $
+# $NetBSD: Makefile,v 1.85 2016/02/25 13:37:47 jperkin Exp $
 
 DISTNAME=	librsvg-2.40.9
 PKGREVISION=	2
@@ -29,11 +29,7 @@ TEST_TARGET=		check
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.2.0
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.24.0
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Darwin"
-CONFIGURE_ARGS+=	--disable-Bsymbolic
-.endif
+CONFIGURE_ARGS.Darwin+=	--disable-Bsymbolic
 
 BUILDLINK_DEPMETHOD.gobject-introspection+=	build
 .include "../../devel/gobject-introspection/buildlink3.mk"

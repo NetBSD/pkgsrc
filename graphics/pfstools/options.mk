@@ -1,15 +1,11 @@
-# $NetBSD: options.mk,v 1.3 2015/08/25 20:16:31 adam Exp $
+# $NetBSD: options.mk,v 1.4 2016/02/25 13:37:48 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pfstools
 PKG_SUPPORTED_OPTIONS=	imagemagick octave qt opengl
 
+PKG_SUGGESTED_OPTIONS.Darwin+=	opengl
+
 PLIST_VARS+=	im octave qt gl
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Darwin"
-PKG_SUGGESTED_OPTIONS+=	opengl
-.endif
 
 .include "../../mk/bsd.options.mk"
 
@@ -48,9 +44,7 @@ CMAKE_ARGS+=	-DWITH_QT=NO
 .include "../../graphics/glut/buildlink3.mk"
 .  endif
 # XXX nasty hack
-.  if ${OPSYS} == "NetBSD"
-CXXFLAGS+=	-lpthread
-.  endif
+CXXFLAGS.NetBSD+=	-lpthread
 PLIST.gl=	yes
 CMAKE_ARGS+=	-DWITH_pfsglview=YES
 .else
