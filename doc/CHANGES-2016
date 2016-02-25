@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.860 2016/02/25 19:08:12 leot Exp $
+$NetBSD: CHANGES-2016,v 1.861 2016/02/25 19:33:17 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1157,3 +1157,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added mail/postsrsd version 1.4 [wiz 2016-02-25]
 	Updated devel/p5-Test-BDD-Cucumber to 0.48 [schmonz 2016-02-25]
 	Updated net/youtube-dl to 20160222 [leot 2016-02-25]
+	Updated math/R-chron to 2.3.47 [fhajny 2016-02-25]
