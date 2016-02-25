@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/02/25 19:48:38 fhajny Exp $
+
+SHA1 (R/sqldf_0.4-10.tar.gz) = d207a8723e5fba4a32b3135899f21782d7e218f9
+RMD160 (R/sqldf_0.4-10.tar.gz) = 044602b6f9cb3ba71a1dc31d0e070412a120503e
+SHA512 (R/sqldf_0.4-10.tar.gz) = f864f73e848c82d6fdc2169364b6774f68a99b356f1005779d72d7a01e185164bbd4dd4d561b4744e2f8a10ba1040a49db6c46ba14e2767645534feab03a2fb3
+Size (R/sqldf_0.4-10.tar.gz) = 29205 bytes
