@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2016/02/07 13:34:34 leot Exp $
+# $NetBSD: Makefile,v 1.67 2016/02/25 15:49:44 jperkin Exp $
 
 PKGNAME=	mencoder-${MPLAYER_VERSION}
 
@@ -10,9 +10,7 @@ USE_TOOLS+=	pkg-config
 
 # Fix build under Mac OS X, please see here for details:
 # http://lists.mplayerhq.hu/pipermail/mplayer-dev-eng/2009-May/061515.html
-.if ${OPSYS} == "Darwin"
-LDFLAGS+=	-framework Carbon
-.endif
+LDFLAGS.Darwin+=	-framework Carbon
 
 CONFIGURE_ARGS+=	--confdir=${PREFIX}/share/mplayer
 
