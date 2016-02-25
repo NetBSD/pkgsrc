@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.28 2016/02/25 01:06:31 tnn Exp $
+# $NetBSD: Makefile.common,v 1.29 2016/02/25 11:46:21 jperkin Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -81,14 +81,11 @@ CONFIGURE_ARGS+=	--without-zlib
 
 # sys/ucred.h shouldn't be included on Solaris, causes conflicts between
 # procfs and largefile.
-.if ${OPSYS} == "SunOS"
-CONFIGURE_ENV+=		ac_cv_header_sys_ucred_h=no
-.endif
+CONFIGURE_ENV.SunOS+=	ac_cv_header_sys_ucred_h=no
 
 # configure fails on OpenBSD and MirBSD if thread safety is enabled.
-.if ${OPSYS} == "OpenBSD" || ${OPSYS} == "MirBSD"
-CONFIGURE_ARGS+=	--disable-thread-safety
-.endif
+CONFIGURE_ARGS.MirBSD+=		--disable-thread-safety
+CONFIGURE_ARGS.OpenBSD+=	--disable-thread-safety
 
 # PGSQL_BLCKSZ is the size in bytes of a PostgreSQL disk page or block.
 # This also limits the size of a tuple.  The valid values are powers
