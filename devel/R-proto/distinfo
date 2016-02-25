@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/02/25 19:42:00 fhajny Exp $
+
+SHA1 (R/proto_0.3-10.tar.gz) = cf5132335b810d73e1e828ae04ce7f151f771051
+RMD160 (R/proto_0.3-10.tar.gz) = 8b1038ce27a40b0164f23633eceead8c17e6d6ea
+SHA512 (R/proto_0.3-10.tar.gz) = 4a662e0f75c480caceb203edd4644399dcadc56a2b67fb2ebf915f947ece39950313c8572590e333a6e44f94a8a442f9116da64b7809f93684464f0cb03433fe
+Size (R/proto_0.3-10.tar.gz) = 530758 bytes
