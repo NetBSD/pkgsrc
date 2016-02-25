@@ -1,6 +1,4 @@
-# $NetBSD: hacks.mk,v 1.1 2012/07/09 16:42:37 bsiegert Exp $
+# $NetBSD: hacks.mk,v 1.2 2016/02/25 10:15:45 jperkin Exp $
 
 # gcc in MirBSD does not recognize these options
-.if ${OPSYS} == "MirBSD"
-BUILDLINK_TRANSFORM+=	rm:-fvisibility=hidden rm:-fvisibility-inlines-hidden
-.endif
+BUILDLINK_TRANSFORM.MirBSD+=	rm:-fvisibility=hidden rm:-fvisibility-inlines-hidden

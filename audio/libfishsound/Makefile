@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/09/10 15:59:34 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2016/02/25 10:15:45 jperkin Exp $
 #
 
 DISTNAME=	libfishsound-1.0.0
@@ -18,9 +18,7 @@ PKGCONFIG_OVERRIDE+=	fishsound.pc.in
 
 .include "options.mk"
 
-.if ${OPSYS} == "SunOS"
-BUILDLINK_TRANSFORM+=	rm:-Wl,--version-script=Version_script
-.endif
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=Version_script
 
 .include "../../multimedia/liboggz/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"

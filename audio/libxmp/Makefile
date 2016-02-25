@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2016/02/14 14:06:21 rxg Exp $
+# $NetBSD: Makefile,v 1.10 2016/02/25 10:15:45 jperkin Exp $
 
 DISTNAME=	libxmp-4.3.11
 CATEGORIES=	audio
@@ -15,10 +15,6 @@ GNU_CONFIGURE=		yes
 INSTALLATION_DIRS=	bin lib
 INSTALL_MAKE_FLAGS+=	INSTALL=${INSTALL:Q}
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-CONFIGURE_ENV+=		ac_cv_c_flag_f_visibility_hidden=no
-.endif
+CONFIGURE_ENV.SunOS+=	ac_cv_c_flag_f_visibility_hidden=no
 
 .include "../../mk/bsd.pkg.mk"

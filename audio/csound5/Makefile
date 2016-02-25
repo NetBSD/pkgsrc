@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2015/12/05 21:25:27 adam Exp $
+# $NetBSD: Makefile,v 1.37 2016/02/25 10:15:45 jperkin Exp $
 
 DISTNAME=		Csound${CSOUND_VERSION}
 PKGNAME=		csound5-${CSOUND_VERSION}
@@ -33,14 +33,10 @@ INSTALLATION_DIRS=	bin
 
 CHECK_PORTABILITY_SKIP+=	installer/misc/makedeb.sh
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-SUBST_CLASSES+=		strip
+SUBST_CLASSES.SunOS+=	strip
 SUBST_STAGE.strip=	pre-build
 SUBST_FILES.strip=	install.py installer/misc/mkpackage.py
 SUBST_SED.strip=	-e 's/--strip-unneeded//g'
-.endif
 
 do-build:
 	cd ${WRKSRC} && ${TOOLS_PATH.bison} -d -o frontends/beats/beats.tab.c frontends/beats/beats.y

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2015/04/25 14:20:24 tnn Exp $
+# $NetBSD: Makefile,v 1.74 2016/02/25 10:15:46 jperkin Exp $
 #
 
 DISTNAME=	streamtuner-0.99.99
@@ -24,9 +24,7 @@ CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc
 
 .include "options.mk"
 
-.if ${OPSYS} == "SunOS"
-BUILDLINK_TRANSFORM+=	rm:-lutil
-.endif
+BUILDLINK_TRANSFORM.SunOS+=	rm:-lutil
 
 .include "../../mk/omf-scrollkeeper.mk"
 .include "../../www/curl/buildlink3.mk"
