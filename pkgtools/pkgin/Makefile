@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2016/02/08 16:39:30 jperkin Exp $
+# $NetBSD: Makefile,v 1.65 2016/02/25 17:25:05 jperkin Exp $
 
 DISTNAME=		pkgin-0.9.4
 GITHUB_TAG=		v${PKGVERSION_NOREV}
@@ -38,13 +38,11 @@ USE_TOOLS+=		nroff
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "NetBSD"
-SUBST_CLASSES+=		osrel
+SUBST_CLASSES.NetBSD+=	osrel
 SUBST_STAGE.osrel=	pre-configure
 SUBST_MESSAGE.osrel=	Adjusting repository OS release
 SUBST_FILES.osrel=	REPOSITORIES
 SUBST_SED.osrel=	-e "s|@OSREL@|${OS_VERSION:C/_.*//}|"
-.endif
 
 CFLAGS.SunOS+=		-D_FILE_OFFSET_BITS=64
 
