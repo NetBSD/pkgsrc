@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2015/12/29 04:54:36 dholland Exp $
+# $NetBSD: Makefile,v 1.11 2016/02/25 10:15:46 jperkin Exp $
 
 DISTNAME=	pa_stable_v19_20140130
 PKGNAME=	portaudio-devel-20140130
@@ -39,11 +39,7 @@ SUBST_MESSAGE.pc=	Fixing pkgconfig directory
 SUBST_FILES.pc=		Makefile.in
 SUBST_SED.pc=		-e 's/$$(libdir)\/pkgconfig/$$(prefix)\/lib\/pkgconfig/g'
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Darwin"
-CFLAGS+=		-Wno-deprecated-declarations
-.endif
+CFLAGS.Darwin+=		-Wno-deprecated-declarations
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
