@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.472 2015/12/14 13:33:50 jperkin Exp $
+# $NetBSD: Makefile,v 1.473 2016/02/25 15:32:11 wiz Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -270,6 +270,7 @@ SUBDIR+=	postfix-pcre
 SUBDIR+=	postfix-pgsql
 SUBDIR+=	postfix-sqlite
 SUBDIR+=	postgrey
+SUBDIR+=	postsrsd
 SUBDIR+=	prayer
 SUBDIR+=	procmail
 SUBDIR+=	proxsmtp
