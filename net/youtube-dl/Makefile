@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.81 2016/02/15 06:30:51 adam Exp $
+# $NetBSD: Makefile,v 1.82 2016/02/25 19:07:59 leot Exp $
 
-VERSION_DATE=	2016.02.13
+VERSION_DATE=	2016.02.22
 DISTNAME=	youtube-dl-${VERSION_DATE}
 PKGNAME=	youtube-dl-${VERSION_DATE:S/.//g}
 CATEGORIES=	net
 MASTER_SITES=	http://youtube-dl.org/downloads/${VERSION_DATE}/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	http://rg3.github.io/youtube-dl/
 COMMENT=	Download videos from youtube.com
 LICENSE=	public-domain
