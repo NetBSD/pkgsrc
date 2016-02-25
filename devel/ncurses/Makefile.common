@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.31 2015/11/04 13:30:06 richard Exp $
+# $NetBSD: Makefile.common,v 1.32 2016/02/25 12:12:48 jperkin Exp $
 #
 # used by devel/ncurses/Makefile
 # used by devel/ncursesw/Makefile
@@ -38,9 +38,7 @@ SUBST_MESSAGE.rpath=	Fixing rpath in ncurses-config.
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "Darwin"
-CONFIGURE_ARGS+=	--disable-mixed-case
-.endif
+CONFIGURE_ARGS.Darwin+=	--disable-mixed-case
 
 .if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
 TOOL_DEPENDS+=		ncurses-${NC_VERS}:../../devel/ncurses
