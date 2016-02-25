@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2015/12/30 12:47:57 bsiegert Exp $
+# $NetBSD: Makefile,v 1.35 2016/02/25 15:35:30 jperkin Exp $
 #
 
 DISTNAME=	dpkg_1.16.17
@@ -35,11 +35,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/share/dpkg
 # or uses GCC version specific warning flags unconditionally. 
 CONFIGURE_ARGS+=	--disable-compiler-warnings
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Darwin"
-CONFIGURE_ARGS+=	--enable-linker-optimisations=no
-.endif
+CONFIGURE_ARGS.Darwin+=	--enable-linker-optimisations=no
 
 SUBST_CLASSES+=		tool-path
 SUBST_STAGE.tool-path=	pre-build

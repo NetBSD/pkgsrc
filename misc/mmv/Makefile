@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/10/08 09:57:30 asau Exp $
+# $NetBSD: Makefile,v 1.17 2016/02/25 15:35:30 jperkin Exp $
 #
 
 DISTNAME=	mmv_1.01b.orig
@@ -13,11 +13,7 @@ COMMENT=	Move, copy, append or link multiple files using wildcard patterns
 WRKSRC=		${WRKDIR}/mmv-1.01b.orig
 BUILD_TARGET=	mmv
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-CFLAGS+=	-DIS_SYSV
-.endif
+CFLAGS.SunOS+=	-DIS_SYSV
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
