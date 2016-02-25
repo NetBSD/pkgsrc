@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/12/29 04:54:37 dholland Exp $
+# $NetBSD: Makefile,v 1.5 2016/02/25 11:21:11 jperkin Exp $
 
 DISTNAME=	plink-1.07-src
 PKGNAME=	$(DISTNAME:-src=)
@@ -21,10 +21,7 @@ MAKE_FLAGS+=	LIBDL=${DL_LIBS:Q}
 LIB_LAPACK=	-L${LOCALBASE}/lib ${COMPILER_RPATH_FLAG}${LOCALBASE}/lib -llapack -lblas -lf2c
 MAKE_FLAGS+=	WITH_LAPACK=1 LIB_LAPACK=${LIB_LAPACK:Q}
 
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "SunOS"
-MAKE_ENV+=	LIB="-lsocket -lnsl"
-.endif
+MAKE_ENV.SunOS+=	LIB="-lsocket -lnsl"
 
 INSTALLATION_DIRS=	bin
 
