@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/02/25 15:29:15 wiz Exp $
+
+SHA1 (postsrsd-1.4.tar.gz) = 9b71bc8bbd40dab7d545cd2ec98cf69e4ff50450
+RMD160 (postsrsd-1.4.tar.gz) = 9402c4b9ab9f4bb356a07c67a74fd270c9c56655
+SHA512 (postsrsd-1.4.tar.gz) = e5b9d2091d562030dd8d35117a3c5fb7d99c0613120fc90f74be57af5e88a3fe0ce73a5ce702708047ae37f70c6aedb4a0df018dccbe480048ccb6ed4debbcef
+Size (postsrsd-1.4.tar.gz) = 26555 bytes
