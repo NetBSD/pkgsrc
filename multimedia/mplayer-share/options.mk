@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.54 2015/11/29 11:48:29 leot Exp $
+# $NetBSD: options.mk,v 1.55 2016/02/25 15:49:44 jperkin Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
@@ -54,12 +54,9 @@ PKG_SUPPORTED_OPTIONS+=	faac lame
 # OS-specific options.
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux" || ${OPSYS} == "NetBSD"
 PKG_SUPPORTED_OPTIONS+=	cdparanoia
-.elif ${OPSYS} == "SunOS"
-PKG_SUPPORTED_OPTIONS+=	mlib
 .endif
-.if ${OPSYS} == "Linux"
-PKG_SUPPORTED_OPTIONS+=	vidix
-.endif
+PKG_SUPPORTED_OPTIONS.SunOS+=	mlib
+PKG_SUPPORTED_OPTIONS.Linux+=	vidix
 
 # TODO: v4l2 option probably could be supported on Linux and OpenBSD too
 .if ${OPSYS} == "NetBSD" && exists(/usr/include/sys/videoio.h)
@@ -100,9 +97,7 @@ PKG_SUPPORTED_OPTIONS+= xvid
 PKG_SUGGESTED_OPTIONS+=	${o}
 .  endif
 .endfor
-.if ${OPSYS} == "Linux"
-PKG_SUGGESTED_OPTIONS+=	vidix
-.endif
+PKG_SUGGESTED_OPTIONS.Linux+=	vidix
 
 # -------------------------------------------------------------------------
 # Handle extra libraries (part 1)

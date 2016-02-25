@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2013/01/26 21:36:38 adam Exp $
+# $NetBSD: Makefile,v 1.23 2016/02/25 15:49:44 jperkin Exp $
 #
 
 DISTNAME=		${PKGNAME_NOREV}-src
@@ -19,13 +19,10 @@ GNU_CONFIGURE=		yes
 
 CONFIGURE_ENV+=		my_cv_comment=""
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
 # nbsed creates a config.h that is several megabytes big and contains
 # lots of non-printing characters.
-USE_TOOLS+=		gsed
-.endif
+OPSYSVARS+=		USE_TOOLS
+USE_TOOLS.SunOS+=	gsed
 
 INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}
 INSTALLATION_DIRS+=	bin lib
