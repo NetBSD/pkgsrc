@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.132 2016/02/16 04:21:40 dbj Exp $
+# $NetBSD: Makefile,v 1.133 2016/02/25 15:26:55 jperkin Exp $
 
 DISTNAME=	octave-4.0.0
 CATEGORIES=	math
@@ -41,14 +41,12 @@ CONFIGURE_ARGS+=	--disable-java
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "Darwin"
 # When __APPLE__ is defined, fltk headers typedef an alternate version of Window
 # which conflicts with the one in the X11 headers, so avoid pulling in X11.
-CONFIGURE_ARGS+=	--without-x
+CONFIGURE_ARGS.Darwin+=	--without-x
 
 # The OpenGL framework doesn't have osmesa and the X11 one has header conflicts with the framework
-CONFIGURE_ARGS+=	--without-OSMesa
-.endif
+CONFIGURE_ARGS.Darwin+=	--without-OSMesa
 
 # We use this to install .oct files so it doesn't strip them.
 CONFIGURE_ENV+=		INSTALL_LIB=${INSTALL_LIB:Q}
