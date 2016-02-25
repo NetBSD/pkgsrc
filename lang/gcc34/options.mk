@@ -1,13 +1,11 @@
-# $NetBSD: options.mk,v 1.5 2013/04/06 14:58:19 rodent Exp $
+# $NetBSD: options.mk,v 1.6 2016/02/25 14:42:55 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gcc34
 PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-c++ gcc-fortran gcc-java gcc-objc gcc-ada
 PKG_SUGGESTED_OPTIONS=	gcc-inplace-math gcc-c++ gcc-fortran gcc-java gcc-objc
-.if ${OPSYS} == "NetBSD"
-PKG_SUGGESTED_OPTIONS+=	nls
-.elif ${OPSYS} == "SunOS"
-PKG_SUGGESTED_OPTIONS+=	gcc-inplace-math
-.endif
+
+PKG_SUGGESTED_OPTIONS.NetBSD+=	nls
+PKG_SUGGESTED_OPTIONS.SunOS+=	gcc-inplace-math
 
 PKG_OPTIONS_LEGACY_VARS+=	BUILD_CXX:gcc-c++
 PKG_OPTIONS_LEGACY_VARS+=	BUILD_F77:gcc-fortran

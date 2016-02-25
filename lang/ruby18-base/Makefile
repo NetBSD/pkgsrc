@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2015/10/14 18:33:08 sevan Exp $
+# $NetBSD: Makefile,v 1.85 2016/02/25 14:42:57 jperkin Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -87,9 +87,7 @@ PLIST.io=	yes
 # Work around for ucontext(3). It was broken in older DragonFly
 # versions and is slow in newer ones.
 #
-.if ${OPSYS} == "DragonFly"
-CONFIGURE_ENV+=	ac_cv_header_ucontext_h=no
-.endif
+CONFIGURE_ENV.DragonFly+=	ac_cv_header_ucontext_h=no
 
 #
 # work around for getaddrinfo(3)
