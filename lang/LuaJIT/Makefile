@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/01/04 08:03:50 dholland Exp $
+# $NetBSD: Makefile,v 1.5 2016/02/25 08:27:03 jperkin Exp $
 #
 
 DISTNAME=	LuaJIT-1.1.5
@@ -18,9 +18,6 @@ USE_TOOLS+=	gmake
 
 MAKE_FLAGS+=	INSTALL_TOP=${PREFIX}
 
-.include "../../mk/bsd.prefs.mk"
-
-OPSYSVARS+=		BUILD_TARGET
 BUILD_TARGET.Linux=	linux
 BUILD_TARGET.FreeBSD=	bsd
 BUILD_TARGET.NetBSD=	bsd

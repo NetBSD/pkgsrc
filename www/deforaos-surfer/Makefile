@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2016/02/21 12:39:35 khorben Exp $
+# $NetBSD: Makefile,v 1.30 2016/02/25 08:27:04 jperkin Exp $
 
 DISTNAME=	Surfer-0.2.10
 PKGNAME=	deforaos-surfer-0.2.10
@@ -22,7 +22,6 @@ MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
 MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
 AUTO_MKDIRS=	yes
 
-OPSYSVARS+=		MAKE_ENV
 MAKE_ENV.SunOS+=	LDFLAGSF="-lnsl -lresolv"
 
 .include "../../mk/bsd.prefs.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2014/09/23 18:55:24 jperkin Exp $
+# $NetBSD: Makefile,v 1.21 2016/02/25 08:27:03 jperkin Exp $
 #
 
 DISTNAME=		tanked-0.90
@@ -16,7 +16,6 @@ USE_TOOLS=		imake
 SETGIDGAME=		yes
 INSTALLATION_DIRS+=	bin
 
-OPSYSVARS+=		MAKE_ENV
 MAKE_ENV.SunOS+=	EXTRALIBS="-lsocket -lnsl"
 
 SPECIAL_PERMS=		bin/tanked ${SETGID_GAMES_PERMS}

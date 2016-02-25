@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2014/10/09 14:06:45 wiz Exp $
+# $NetBSD: Makefile,v 1.61 2016/02/25 08:27:04 jperkin Exp $
 
 DISTNAME=	libIDL-0.8.14
 PKGREVISION=	4
@@ -20,7 +20,6 @@ INFO_FILES=		yes
 .include "../../mk/compiler.mk"
 
 .if !empty(PKGSRC_COMPILER:Msunpro)
-OPSYSVARS+=		CONFIGURE_ENV
 CONFIGURE_ENV.SunOS+=	CPP=/usr/lib/cpp
 .endif
 

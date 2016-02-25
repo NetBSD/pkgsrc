@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2015/04/25 14:20:43 tnn Exp $
+# $NetBSD: Makefile,v 1.25 2016/02/25 08:27:03 jperkin Exp $
 #
 
 DISTNAME=	scite339
@@ -19,8 +19,6 @@ BUILD_DIRS+=	gtk
 USE_TOOLS+=	gmake pkg-config
 MAKE_FILE=	makefile
 INSTALLATION_DIRS= share/applications share/pixmaps
-
-OPSYSVARS+=	BUILDLINK_TRANSFORM
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=lua.vers
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/04/23 09:18:57 jperkin Exp $
+# $NetBSD: Makefile,v 1.12 2016/02/25 08:27:02 jperkin Exp $
 #
 
 DISTNAME=	ecore-1.7.7
@@ -15,8 +15,6 @@ LICENSE=	2-clause-bsd
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
-
-OPSYSVARS+=	CONFIGURE_ARGS
 
 CONFIGURE_ARGS+=	--disable-ecore-directfb \
 			--enable-ecore-desktop \
