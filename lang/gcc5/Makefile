@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2016/02/06 22:19:55 ryoon Exp $
+# $NetBSD: Makefile,v 1.9 2016/02/25 14:42:56 jperkin Exp $
 
 GCC_PKGNAME=		gcc5
 .include		"version.mk"
@@ -98,20 +98,16 @@ CONFIGURE_ARGS+=	--enable-libssp
 .endif
 CONFIGURE_ARGS+=	--enable-threads=posix
 CONFIGURE_ARGS+=	--with-boot-ldflags=${BOOT_LDFLAGS:Q}
-.if ${OPSYS} == "NetBSD"
-CONFIGURE_ARGS+=	--with-gnu-ld --with-ld=/usr/bin/ld
-CONFIGURE_ARGS+=	--with-gnu-as --with-as=/usr/bin/as
-MAKE_ENV+=		ac_cv_func_clock_gettime=yes
-MAKE_ENV+=		ac_cv_func_gethostbyname_r=no
-MAKE_ENV+=		ac_cv_func_freelocale=no
-MAKE_ENV+=		ac_cv_func_newlocale=no
-MAKE_ENV+=		ac_cv_func_uselocale=no
-.endif
-.if ${OPSYS} == "DragonFly"
-CONFIGURE_ARGS+=	--disable-bootstrap
-.endif
 
+CONFIGURE_ARGS.NetBSD+=	--with-gnu-ld --with-ld=/usr/bin/ld
+CONFIGURE_ARGS.NetBSD+=	--with-gnu-as --with-as=/usr/bin/as
+MAKE_ENV.NetBSD+=	ac_cv_func_clock_gettime=yes
+MAKE_ENV.NetBSD+=	ac_cv_func_gethostbyname_r=no
+MAKE_ENV.NetBSD+=	ac_cv_func_freelocale=no
+MAKE_ENV.NetBSD+=	ac_cv_func_newlocale=no
+MAKE_ENV.NetBSD+=	ac_cv_func_uselocale=no
 
+CONFIGURE_ARGS.DragonFly+=	--disable-bootstrap
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || !empty(MACHINE_PLATFORM:MLinux-*-i386)
 CONFIGURE_ARGS+=	--with-arch=i486 --with-tune=i486

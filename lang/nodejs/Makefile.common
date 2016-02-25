@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2016/01/21 11:45:30 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.4 2016/02/25 14:42:56 jperkin Exp $
 # used by lang/nodejs/Makefile
 # used by lang/nodejs4/Makefile
 
@@ -26,10 +26,8 @@ CONFIG_SHELL=		${PYTHONBIN}
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--shared-zlib
 
-.if ${OPSYS} == "NetBSD"
-CONFIGURE_ENV+=		GYP_DEFINES="OS=netbsd"
-MAKE_ENV+=		GYP_DEFINES="OS=netbsd"
-.endif
+CONFIGURE_ENV.NetBSD+=	GYP_DEFINES="OS=netbsd"
+MAKE_ENV.NetBSD+=	GYP_DEFINES="OS=netbsd"
 
 REPLACE_PYTHON+=	configure
 REPLACE_PYTHON+=	tools/genv8constants.py
