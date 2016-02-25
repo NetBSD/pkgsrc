@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2014/01/09 12:11:12 jperkin Exp $
+# $NetBSD: Makefile,v 1.17 2016/02/25 13:37:47 jperkin Exp $
 #
 
 DISTNAME=	imp1.1b9
@@ -23,11 +23,7 @@ USE_LANGUAGES=	c++
 INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX}
 INSTALLATION_DIRS+=	bin
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-BUILDLINK_TRANSFORM+=	rm:-static
-.endif
+BUILDLINK_TRANSFORM.SunOS+=	rm:-static
 
 do-build:
 	cd ${WRKSRC} && make make_impress make_font3d
