@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2015/10/10 01:58:09 ryoon Exp $
+# $NetBSD: Makefile,v 1.58 2016/02/25 13:37:47 jperkin Exp $
 
 DISTNAME=	darktable-1.2.3
 PKGREVISION=	12
@@ -49,9 +49,7 @@ GCC_REQD+=	4.2
 CFLAGS+=	-mstackrealign -msse2 -march=i686
 .endif
 
-.if ${OPSYS} == "NetBSD"
-CFLAGS+=	-D_NETBSD_SOURCE
-.endif
+CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 
 CHECK_PORTABILITY_SKIP+= packaging/macosx/start
 
