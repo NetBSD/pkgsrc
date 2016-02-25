@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2016/01/29 10:53:07 jperkin Exp $
+# $NetBSD: Makefile,v 1.51 2016/02/25 09:28:37 jperkin Exp $
 
 DISTNAME=		pax-20080110
 PKGREVISION=		2
@@ -21,7 +21,6 @@ USE_FEATURES=		nbcompat
 
 .include "../../mk/bsd.prefs.mk"
 
-
 .if defined(NBPAX_PROGRAM_PREFIX) && ${NBPAX_PROGRAM_PREFIX} != ""
 CONFIGURE_ARGS+=	--program-prefix=${NBPAX_PROGRAM_PREFIX:Q}
 .endif
@@ -35,11 +34,9 @@ do-extract:
 	${CP} -R ${FILESDIR} ${WRKSRC}
 
 # Haiku (BeFS) cannot support hard link
-.if ${OPSYS} == "Haiku"
-SUBST_CLASSES+=		symlink
+SUBST_CLASSES.Haiku+=	symlink
 SUBST_STAGE.symlink=	pre-configure
 SUBST_FILES.symlink=	Makefile.in
 SUBST_SED.symlink=	-e 's,ln -f ,ln -sf ,g'
-.endif
 
 .include "../../mk/bsd.pkg.mk"
