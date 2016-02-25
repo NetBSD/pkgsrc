@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/02/07 09:13:34 jnemeth Exp $
+# $NetBSD: Makefile,v 1.4 2016/02/25 11:32:19 jperkin Exp $
 #
 # NOTE: when updating this package, there are two places that sound
 #       tarballs need to be checked
@@ -146,20 +146,18 @@ SUBST_SED.configs+=	-e "s|/usr/local/man|${ASTMANDIR}|"
 SUBST_SED.configs+=	-e "s|/usr/local|${PREFIX}|"
 SUBST_SED.configs+=	-e "s|/var|${VARBASE}|"
 
-.if (${OPSYS} == "NetBSD")
 # XXX gross hack, remove when item is fixed
-SUBST_CLASSES+=		autoconfig
+SUBST_CLASSES.NetBSD+=	autoconfig
 SUBST_STAGE.autoconfig=	post-configure
 SUBST_FILES.autoconfig=	include/asterisk/autoconfig.h
 SUBST_SED.autoconfig=	-e "s|^\#define HAVE_GCC_ATOMICS 1|\#undef HAVE_GCC_ATOMICS|"
 SUBST_SED.autoconfig+=	-e "s|^\#define HAVE_GETHOSTBYNAME_R_6 1|\#undef HAVE_GETHOSTBYNAME_R_6|"
 
 # XXX gross hack, IP_PKTINFO in NetBSD isn't compatible with anything else
-SUBST_CLASSES+=		pktinfo
+SUBST_CLASSES.NetBSD+=	pktinfo
 SUBST_STAGE.pktinfo=	post-configure
 SUBST_FILES.pktinfo=	include/asterisk/autoconfig.h
 SUBST_SED.pktinfo=	-e "s|^\#define HAVE_PKTINFO 1|\#undef HAVE_PKTINFO|"
-.endif
 
 RCD_SCRIPTS=		asterisk
 OWN_DIRS_PERMS+=	${ASTDBDIR} ${ASTERISK_USER} ${ASTERISK_GROUP} 0755
