@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2015/04/25 14:20:44 tnn Exp $
+# $NetBSD: Makefile,v 1.34 2016/02/25 12:50:49 jperkin Exp $
 #
 
 ETVER=				0.9.4
@@ -44,9 +44,7 @@ SUBST_MESSAGE.paths=	Fixing hardcoded paths.
 .include "options.mk"
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "Linux"
-CONFIGURE_ARGS+=	--enable-nfpci
-.endif
+CONFIGURE_ARGS.Linux+=	--enable-nfpci
 
 .if !empty(MACHINE_PLATFORM:MLinux-*-i386)
 CONFIGURE_ARGS+=	--enable-jit-compiler

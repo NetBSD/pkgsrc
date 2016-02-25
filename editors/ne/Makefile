@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2014/09/23 22:30:30 jperkin Exp $
+# $NetBSD: Makefile,v 1.17 2016/02/25 12:56:10 jperkin Exp $
 
 DISTNAME=	ne-1.31
 CATEGORIES=	editors
@@ -15,13 +15,8 @@ WRKSRC=		${WRKDIR}/src
 
 EXTRACT_ONLY=	${DISTNAME}.tar.gz
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-BUILD_TARGET=	SunOS5_gcc ne
-.else
-BUILD_TARGET=	NetBSD ne
-.endif
+BUILD_TARGET.SunOS=	SunOS5_gcc ne
+BUILD_TARGET.*=		NetBSD ne
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
