@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2015/07/04 16:18:35 joerg Exp $
+# $NetBSD: Makefile,v 1.53 2016/02/25 13:19:47 jperkin Exp $
 
 DISTNAME=	linuxdoom-1.10
 PKGNAME=	xdoom-1.10
@@ -24,9 +24,7 @@ BROKEN_ON_PLATFORM=	${LP64PLATFORMS}
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "Linux"
-CFLAGS+=	-DLINUX
-.endif
+CFLAGS.Linux+=	-DLINUX
 
 .include "../../mk/endian.mk"
 
