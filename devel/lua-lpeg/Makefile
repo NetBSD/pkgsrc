@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2015/09/29 19:18:00 alnsn Exp $
+# $NetBSD: Makefile,v 1.11 2016/02/25 12:56:10 jperkin Exp $
 #
 
 DISTNAME=	lpeg-1.0.0
@@ -11,18 +11,13 @@ HOMEPAGE=	http://www.inf.puc-rio.br/~roberto/lpeg/
 COMMENT=	Parsing Expression Grammars (PEGs) library for Lua
 LICENSE=	mit
 
-.include "../../mk/bsd.prefs.mk"
-
 NO_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 MAKE_FILE=	makefile
 TEST_TARGET=	test
 
-.if ${OPSYS} == "Darwin"
-BUILD_TARGET=	macosx
-.else
-BUILD_TARGET=	linux
-.endif
+BUILD_TARGET.Darwin=	macosx
+BUILD_TARGET.*=		linux
 
 REPLACE_LUA+=	test.lua
 

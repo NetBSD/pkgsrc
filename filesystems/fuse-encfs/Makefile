@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/02/12 23:17:53 tron Exp $
+# $NetBSD: Makefile,v 1.11 2016/02/25 12:59:32 jperkin Exp $
 #
 
 DISTNAME=	encfs-1.2.0-2
@@ -17,11 +17,7 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	autoconf gmake pkg-config
 USE_LANGUAGES=	c c++
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD"
-CPPFLAGS+=	-D_NETBSD_SOURCE
-.endif
+CPPFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 
 .include "../../devel/librlog/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
