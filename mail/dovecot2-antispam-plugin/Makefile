@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/08/23 14:30:38 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2016/02/25 15:00:50 jperkin Exp $
 
 DISTNAME=		dovecot-antispam-plugin-20130429
 PKGREVISION=		2
@@ -18,13 +18,9 @@ USE_TOOLS+=		aclocal autoheader automake autoconf gmake gawk gsed
 AUTOCONF_REQD=		2.54
 GNU_CONFIGURE=		yes
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Darwin"
-SUFX=			bundle
-.else
-SUFX=			so
-.endif
+OPSYSVARS+=		SUFX
+SUFX.Darwin=		bundle
+SUFX.*=			so
 
 PLIST_SUBST+=		SUFX=${SUFX:Q}
 
