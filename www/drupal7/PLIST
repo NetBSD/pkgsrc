@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2015/10/18 03:30:53 wen Exp $
+@comment $NetBSD: PLIST,v 1.14 2016/02/25 15:15:57 taca Exp $
 share/doc/drupal/CHANGELOG.txt
 share/doc/drupal/COPYRIGHT.txt
 share/doc/drupal/INSTALL.mysql.txt
@@ -861,6 +861,8 @@ share/drupal/modules/system/system.tokens.inc
 share/drupal/modules/system/system.updater.inc
 share/drupal/modules/system/tests/cron_queue_test.info
 share/drupal/modules/system/tests/cron_queue_test.module
+share/drupal/modules/system/tests/system_cron_test.info
+share/drupal/modules/system/tests/system_cron_test.module
 share/drupal/modules/system/theme.api.php
 share/drupal/modules/taxonomy/taxonomy-term.tpl.php
 share/drupal/modules/taxonomy/taxonomy.admin.inc
