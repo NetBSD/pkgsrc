@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.855 2016/02/25 02:01:35 wen Exp $
+$NetBSD: CHANGES-2016,v 1.856 2016/02/25 15:15:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1152,3 +1152,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/postgresql94-server to 9.4.6 [tnn 2016-02-25]
 	Updated databases/postgresql94-upgrade to 9.4.6 [tnn 2016-02-25]
 	Updated math/R-gstat to 1.1.2 [wen 2016-02-25]
+	Updated www/drupal6 to 6.38 [taca 2016-02-25]
