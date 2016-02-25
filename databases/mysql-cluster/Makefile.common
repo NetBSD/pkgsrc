@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2015/09/07 04:33:06 jnemeth Exp $
+# $NetBSD: Makefile.common,v 1.9 2016/02/25 11:46:21 jperkin Exp $
 #
 # used by databases/mysql-cluster/Makefile
 
@@ -37,9 +37,7 @@ PKG_GROUPS_VARS+=	MYSQL_GROUP
 
 CONFIG_SHELL=		${TOOLS_PATH.bash}
 
-.if ${OPSYS} == "IRIX"
-CFLAGS+=		-DIRIX5 -DNEEDS_BSTRING_H
-.endif
+CFLAGS.IRIX+=		-DIRIX5 -DNEEDS_BSTRING_H
 
 BUILD_DEFS+=		VARBASE
 
@@ -88,11 +86,9 @@ CXXFLAGS+=		-fPIC -DPIC
 # force HAVE_CURSES_H on Solaris since the configure script is broken
 # and does not properly detect this, breaking the build later on.  Also
 # explicitly disable epoll support as it is Linux-specific.
-.if ${OPSYS} == "SunOS"
-CMAKE_ARGS+=		-DHAVE_SYS_EPOLL_H=NO -DHAVE_EPOLL_CREATE=NO
-CFLAGS+=		-DHAVE_CURSES_H
-CXXFLAGS+=		-DHAVE_CURSES_H
-.endif
+CMAKE_ARGS.SunOS+=	-DHAVE_SYS_EPOLL_H=NO -DHAVE_EPOLL_CREATE=NO
+CFLAGS.SunOS+=		-DHAVE_CURSES_H
+CXXFLAGS.SunOS+=	-DHAVE_CURSES_H
 
 .include "../../mk/pthread.buildlink3.mk"
 

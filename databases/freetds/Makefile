@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2015/08/23 14:30:35 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2016/02/25 11:46:20 jperkin Exp $
 
 DISTNAME=	freetds-0.91
 PKGREVISION=	4
@@ -19,12 +19,8 @@ CONFIGURE_ARGS+=	--with-tdsver=7.0
 # no thread-safe resolver functions on NetBSD
 CONFIGURE_ARGS+=	--disable-threadsafe
 
-.include "../../mk/bsd.prefs.mk"
-
 # Fails to build the shared lib on SunOS with -O2 or greater
-.if ${OPSYS} == "SunOS"
-BUILDLINK_TRANSFORM+=	rm:-O[23]
-.endif
+BUILDLINK_TRANSFORM.SunOS+=	rm:-O[23]
 
 EGDIR=		${PREFIX}/share/examples/freetds
 CONF_FILES+=	${EGDIR}/freetds.conf ${PKG_SYSCONFDIR}/freetds.conf
