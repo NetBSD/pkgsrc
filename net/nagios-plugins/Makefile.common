@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2015/04/03 17:50:27 rodent Exp $
+# $NetBSD: Makefile.common,v 1.12 2016/02/25 16:20:51 jperkin Exp $
 #
 # used by net/nagios-plugin-mysql/Makefile
 # used by net/nagios-plugin-pgsql/Makefile
@@ -13,10 +13,7 @@ MASTER_SITES?=	http://nagios-plugins.org/download/
 .include "../../net/nagios-base/Makefile.common"
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "DragonFly"
-CONFIGURE_ARGS+=	fu_cv_sys_stat_statvfs=no
-.endif
-
+CONFIGURE_ARGS.DragonFly+=	fu_cv_sys_stat_statvfs=no
 
 CONFIGURE_ARGS+=	--with-nagios-user=${NAGIOS_USER:Q}
 CONFIGURE_ARGS+=	--with-nagios-group=${NAGIOS_GROUP:Q}

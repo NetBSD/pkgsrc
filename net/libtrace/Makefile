@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/09/06 07:40:00 jperkin Exp $
+# $NetBSD: Makefile,v 1.12 2016/02/25 16:20:51 jperkin Exp $
 #
 
 DISTNAME=	libtrace-3.0.10
@@ -19,12 +19,8 @@ GNU_CONFIGURE=	yes
 
 CONFIGURE_ENV+=	libtrace_doxygen='false'
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "DragonFly"
-CONFIGURE_ENV+=	ac_cv_have_decl_BIOCSETIF=no
-CFLAGS+=	-DHAVE_VSNPRINTF
-.endif
+CONFIGURE_ENV.DragonFly+=	ac_cv_have_decl_BIOCSETIF=no
+CFLAGS.DragonFly+=		-DHAVE_VSNPRINTF
 
 CFLAGS.Linux+=	-DHAVE_VSNPRINTF
 
