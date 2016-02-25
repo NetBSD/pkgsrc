@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2015/09/03 14:49:02 wiz Exp $
+# $NetBSD: Makefile.common,v 1.2 2016/02/25 15:00:51 jperkin Exp $
 #
 # used by mail/mutt/Makefile
 # used by mail/mutt-kz/Makefile
@@ -22,9 +22,7 @@ CONFIGURE_ARGS+=	--enable-imap
 CONFIGURE_ENV+=		SENDMAIL=/usr/sbin/sendmail
 .endif
 
-.if (${OPSYS} == "SunOS")
-CONFIGURE_ARGS+=	--without-wc-funcs
-.endif
+CONFIGURE_ARGS.SunOS+=	--without-wc-funcs
 
 # There is a problem using /bin/sh on old NetBSD releases, so use /bin/ksh
 # there.

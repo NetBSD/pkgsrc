@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2015/07/04 16:18:37 joerg Exp $
+# $NetBSD: Makefile,v 1.64 2016/02/25 15:00:50 jperkin Exp $
 
 DISTNAME=	faces-1.6.1
 PKGREVISION=	9
@@ -28,12 +28,10 @@ MAKE_FLAGS+=	MANDIR=${PREFIX:Q}/${PKGMANDIR:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "SunOS"
-MAKE_ENV+=	SVR4LIBS="-lnsl -lsocket -lgen"
-MAKE_ENV+=	SYSV=-DSYSV32
-MAKE_ENV+=	CC=gcc
-MAKE_ENV+=	CPPFLAGS=
-.endif
+MAKE_ENV.SunOS+=	SVR4LIBS="-lnsl -lsocket -lgen"
+MAKE_ENV.SunOS+=	SYSV=-DSYSV32
+MAKE_ENV.SunOS+=	CC=gcc
+MAKE_ENV.SunOS+=	CPPFLAGS=
 
 .if ${OPSYS} != "Interix"
 MAKE_ENV+=	NISLOOKUP=-DNISLOOKUP

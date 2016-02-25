@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.17 2015/07/09 15:17:34 ryoon Exp $
+# $NetBSD: options.mk,v 1.18 2016/02/25 15:00:51 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.thunderbird
 PKG_SUPPORTED_OPTIONS=	alsa debug mozilla-jemalloc gnome \
@@ -8,11 +8,8 @@ PKG_SUGGESTED_OPTIONS=	mozilla-lightning
 
 PLIST_VARS+=		branding nobranding debug gnome jemalloc
 
-.if ${OPSYS} == "Linux"
-PKG_SUGGESTED_OPTIONS+=	alsa mozilla-jemalloc
-.else
-PKG_SUGGESTED_OPTIONS+=	pulseaudio
-.endif
+PKG_SUGGESTED_OPTIONS.Linux+=	alsa mozilla-jemalloc
+PKG_SUGGESTED_OPTIONS.*+=	pulseaudio
 
 .include "../../mk/bsd.options.mk"
 

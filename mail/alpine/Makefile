@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2015/10/25 23:48:11 darcy Exp $
+# $NetBSD: Makefile,v 1.38 2016/02/25 15:00:50 jperkin Exp $
 #
 
 DISTNAME=	alpine-2.11
@@ -34,15 +34,13 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 CONFIGURE_ARGS+= --without-pthread
 .endif
 
-.if ${OPSYS} == "Darwin"
 # mach/mach.h defines panic, differently.
-SUBST_CLASSES+=	panic
+SUBST_CLASSES.Darwin+=	panic
 SUBST_STAGE.panic=	pre-configure
 SUBST_MESSAGE.panic=	Renaming the panic function
 SUBST_FILES.panic=	*/*.c
 SUBST_FILES.panic+=	pith/util.h
 SUBST_SED.panic+=	-e 's,panic(,Panic(,g'
-.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/alpine/alpine ${DESTDIR}${PREFIX}/bin/alpine

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2014/10/09 14:06:39 wiz Exp $
+# $NetBSD: Makefile.common,v 1.18 2016/02/25 15:00:50 jperkin Exp $
 #
 
 DISTNAME=	mini_sendmail-1.3.6
@@ -16,11 +16,7 @@ EGDIR=		share/examples/mini_sendmail
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin ${EGDIR}
 
-.include "../../mk/bsd.prefs.mk"
-
-.if (${OPSYS} == SunOS)
-MAKE_ENV+="SYSV_LIBS=-lsocket -lnsl"
-.endif
+MAKE_ENV.SunOS+=	"SYSV_LIBS=-lsocket -lnsl"
 
 post-build:
 	${SED} -e 's#@@PREFIX@@#${PREFIX}#g' \

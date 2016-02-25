@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.132 2015/08/18 07:31:12 wiz Exp $
+# $NetBSD: Makefile,v 1.133 2016/02/25 15:00:51 jperkin Exp $
 
 DISTNAME=	pine4.64
 PKGNAME=	pine-4.64
@@ -39,9 +39,7 @@ BUILDNAME=	neb
 BUILDFILE=	neb
 .endif
 
-.if ${OPSYS} == "OpenBSD"
-BUILDLINK_TRANSFORM+=	rm:-lcrypt
-.endif
+BUILDLINK_TRANSFORM.OpenBSD+=	rm:-lcrypt
 
 .if !empty(CC_VERSION:Mgcc-*)
 UNLIMIT_RESOURCES+=	datasize
