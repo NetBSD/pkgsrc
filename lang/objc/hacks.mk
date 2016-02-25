@@ -1,7 +1,3 @@
-# $NetBSD: hacks.mk,v 1.1 2012/04/30 02:51:40 dholland Exp $
+# $NetBSD: hacks.mk,v 1.2 2016/02/25 14:42:56 jperkin Exp $
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD"
-CFLAGS+=	-D__attribute__\(x\)=
-.endif
+CFLAGS.NetBSD+=	-D__attribute__\(x\)=
