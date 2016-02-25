@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/11/07 22:19:32 dholland Exp $
+# $NetBSD: Makefile,v 1.7 2016/02/25 11:28:58 jperkin Exp $
 
 DISTNAME=	phone-2.0
 PKGREVISION=	3
@@ -16,12 +16,8 @@ INSTALLATION_DIRS=	bin libexec ${PKGMANDIR}/man1 sbin
 # needs utmpx unless someone wants to patch legacy utmp support in
 BROKEN_ON_PLATFORM=	OpenBSD-*-*
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Darwin"
-BUILDLINK_TRANSFORM+=	rm:-Wa,--fatal-warnings
-CFLAGS+=		-DINFTIM=-1
-.endif
+BUILDLINK_TRANSFORM.Darwin+=	rm:-Wa,--fatal-warnings
+CFLAGS.Darwin+=			-DINFTIM=-1
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/phone.1 \
