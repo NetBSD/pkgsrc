@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2015/12/31 18:48:55 leot Exp $
+# $NetBSD: Makefile,v 1.62 2016/02/25 13:19:47 jperkin Exp $
 
 DISTNAME=	openttd-1.5.3-source
 PKGNAME=	${DISTNAME:S/-source//}
@@ -35,11 +35,9 @@ CONFIGURE_ARGS+=	--with-lzo2=${BUILDLINK_PREFIX.lzo}/lib
 
 .include "../../mk/bsd.prefs.mk"
 
-.if (${OPSYS} == "DragonFly")
-CONFIGURE_ARGS+=	--os=FREEBSD
-.endif
+CONFIGURE_ARGS.DragonFly+=	--os=FREEBSD
 
-.if (${OPSYS} == "Darwin")
+.if ${OPSYS} == "Darwin"
 CONFIGURE_ARGS+=	--disable-cocoa-quickdraw
 CONFIGURE_ARGS+=	--with-cocoa
 CONFIGURE_ARGS+=	--without-application-bundle
