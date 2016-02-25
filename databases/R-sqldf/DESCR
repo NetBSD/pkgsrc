@@ -1,0 +1,3 @@
+sqldf is an R package for running SQL statements on R data frames,
+optimized for convenience. sqldf works with the SQLite, H2,
+PostgreSQL or MySQL databases.
