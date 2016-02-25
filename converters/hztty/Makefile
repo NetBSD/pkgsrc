@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/10/09 14:06:03 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2016/02/25 12:56:10 jperkin Exp $
 
 DISTNAME=	hztty-2.0
 CATEGORIES=	converters
@@ -8,15 +8,9 @@ MAINTAINER=	rxg@NetBSD.org
 #HOMEPAGE=
 COMMENT=	Turns a tty session between Big5/GB/HZ/Unicode
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Interix"
-BUILD_TARGET=	svr4
-.elif ${OPSYS} == "Linux"
-BUILD_TARGET=	linux
-.else
-BUILD_TARGET=	bsd
-.endif
+BUILD_TARGET.Interix=	svr4
+BUILD_TARGET.Linux=	linux
+BUILD_TARGET.*=	bsd
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 

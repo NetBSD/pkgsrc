@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2015/01/01 10:56:23 dholland Exp $
+# $NetBSD: Makefile,v 1.14 2016/02/25 12:50:49 jperkin Exp $
 #
 
 DISTNAME=		tuxnes-0.75
@@ -23,14 +23,11 @@ SUBST_MESSAGE.dsp=	Adjusting sound device path.
 SUBST_FILES.dsp=	consts.h
 SUBST_SED.dsp=		-e "s|/dev/dsp|${DEVOSSAUDIO}|"
 
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "SunOS"
-SUBST_CLASSES+=		gld
+SUBST_CLASSES.SunOS+=	gld
 SUBST_STAGE.gld=	post-patch
 SUBST_MESSAGE.gld=	Using GNU ld to create table.o
 SUBST_FILES.gld=	Makefile.in
 SUBST_SED.gld=		-e "/ld -r/s/ld/gld/"
-.endif
 
 CPPFLAGS.SunOS+=	-D_XOPEN_SOURCE=500
 

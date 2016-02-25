@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2016/02/21 10:29:12 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2016/02/25 13:08:40 jperkin Exp $
 
 DISTNAME=	harfbuzz-1.2.0
 CATEGORIES=	fonts
@@ -26,9 +26,7 @@ LDFLAGS.OpenBSD+=	-lz
 .include "../../mk/bsd.prefs.mk"
 
 # gcc too old
-.if ${OPSYS} == "MirBSD"
-BUILDLINK_TRANSFORM+=	rm:-fvisibility-inlines-hidden
-.endif
+BUILDLINK_TRANSFORM.MirBSD+=	rm:-fvisibility-inlines-hidden
 
 PLIST_VARS+=	coretext
 
