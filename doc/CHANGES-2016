@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.865 2016/02/25 19:48:52 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.866 2016/02/25 21:48:08 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1162,3 +1162,17 @@ Changes to the packages collection and infrastructure in 2016:
 	Added textproc/R-gsubfn version 0.6.6 [fhajny 2016-02-25]
 	Added databases/R-RSQLite version 1.0.0 [fhajny 2016-02-25]
 	Added databases/R-sqldf version 0.4.10 [fhajny 2016-02-25]
+	Added databases/postgresql95 version 9.5.1 [tnn 2016-02-25]
+	Added databases/postgresql95-adminpack version 9.5.1 [tnn 2016-02-25]
+	Added databases/postgresql95-client version 9.5.1 [tnn 2016-02-25]
+	Added databases/postgresql95-datatypes version 9.5.1 [tnn 2016-02-25]
+	Added databases/postgresql95-dblink version 9.5.1 [tnn 2016-02-25]
+	Added databases/postgresql95-docs version 9.5.1 [tnn 2016-02-25]
+	Added databases/postgresql95-fuzzystrmatch version 9.5.1 [tnn 2016-02-25]
+	Added databases/postgresql95-monitoring version 9.5.1 [tnn 2016-02-25]
+	Added databases/postgresql95-pgcrypto version 9.5.1 [tnn 2016-02-25]
+	Added databases/postgresql95-plperl version 9.5.1 [tnn 2016-02-25]
+	Added databases/postgresql95-plpython version 9.5.1 [tnn 2016-02-25]
+	Added databases/postgresql95-pltcl version 9.5.1 [tnn 2016-02-25]
+	Added databases/postgresql95-replicationtools version 9.5.1 [tnn 2016-02-25]
+	Added databases/postgresql95-server version 9.5.1 [tnn 2016-02-25]
