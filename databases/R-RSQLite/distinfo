@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/02/25 19:46:54 fhajny Exp $
+
+SHA1 (R/RSQLite_1.0.0.tar.gz) = 2304d8c3e8768a4560947656977a8201a9129457
+RMD160 (R/RSQLite_1.0.0.tar.gz) = a2e2aeb636cbb2e3ba4248b845becaf9aa801227
+SHA512 (R/RSQLite_1.0.0.tar.gz) = 3ffde5bed18bde630d6130e2b9a15f17e77a2fe92aa2c7102fe59a20121f6aa704af1e8861269d1616231bc1d74193ebd101ee224112da667362897bc61e96db
+Size (R/RSQLite_1.0.0.tar.gz) = 1745731 bytes
