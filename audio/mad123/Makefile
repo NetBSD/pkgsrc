@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2014/02/12 23:17:34 tron Exp $
+# $NetBSD: Makefile,v 1.40 2016/02/25 10:15:45 jperkin Exp $
 #
 
 DISTNAME=	mad123-0.8.5
@@ -20,9 +20,7 @@ PKG_SUGGESTED_OPTIONS+=	oss
 .if ${OPSYS} != "DragonFly" && ${OPSYS} != "Linux" && ${OPSYS} != "SunOS"
 PKG_SUGGESTED_OPTIONS+=	sun
 .endif
-.if ${OPSYS} == "Linux"
-PKG_SUGGESTED_OPTIONS+= arts
-.endif
+PKG_SUGGESTED_OPTIONS.Linux+= arts
 
 .include "../../mk/bsd.options.mk"
 

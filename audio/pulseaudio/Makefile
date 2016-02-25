@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2016/01/22 19:29:11 ryoon Exp $
+# $NetBSD: Makefile,v 1.106 2016/02/25 10:15:46 jperkin Exp $
 
 DISTNAME=	pulseaudio-8.0
 CATEGORIES=	audio
@@ -21,9 +21,7 @@ REPLACE_BASH=	shell-completion/bash/pulseaudio git-version-gen
 
 .include "../../mk/bsd.prefs.mk"
 # Some tests are incompatible for NetBSD at least
-.if ${OPSYS} == "NetBSD"
-CONFIGURE_ARGS+=	--disable-default-build-tests
-.endif
+CONFIGURE_ARGS.NetBSD+=	--disable-default-build-tests
 .if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M[45].*)
 # broken test for TLS
 CONFIGURE_ENV+=		ac_cv_tls=none
@@ -33,9 +31,7 @@ CONFIGURE_ENV+=		DATADIRNAME=${PKGLOCALEDIR}
 USE_PKGLOCALEDIR=	yes
 
 # Wrong sys/capability.h assumptions, incompatible implementation:
-.if ${OPSYS} == "FreeBSD"
-CONFIGURE_ARGS+=	--without-caps
-.endif
+CONFIGURE_ARGS.FreeBSD+=	--without-caps
 
 CONFIGURE_ENV+=		EGDIR=${EGDIR}
 MAKE_ENV+=		EGDIR=${EGDIR}
