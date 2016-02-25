@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2014/10/09 14:05:59 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2016/02/25 11:09:50 jperkin Exp $
 
 DISTNAME=	NetPIPE-3.7.1
 PKGNAME=	netpipe-3.7.1
@@ -13,11 +13,7 @@ LICENSE=	gnu-gpl-v2
 MAKE_FILE=	makefile
 CFLAGS+=	-DHAVE_GETRUSAGE
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-MAKE_ENV+=	EXTRA_LIBS="-lsocket -lnsl"
-.endif
+MAKE_ENV.SunOS+=	EXTRA_LIBS="-lsocket -lnsl"
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
