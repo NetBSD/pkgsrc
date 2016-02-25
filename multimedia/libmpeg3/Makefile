@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2015/04/26 13:29:42 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2016/02/25 15:49:43 jperkin Exp $
 #
 
 DISTNAME=	libmpeg3-1.8-src
@@ -19,10 +19,8 @@ MAKE_ENV+=	USE_MMX=1
 MAKE_ENV+=	USE_CSS=1
 BUILD_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
 .else
-.  if ${OPSYS} == "DragonFly"
-MAKE_ENV+=	USE_MMX=0
-MAKE_ENV+=	USE_CSS=0
-.  endif
+MAKE_ENV.DragonFly+=	USE_MMX=0
+MAKE_ENV.DragonFly+=	USE_CSS=0
 .endif
 
 NO_CONFIGURE=	yes
