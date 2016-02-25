@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2016/01/21 11:55:58 jperkin Exp $
+# $NetBSD: Makefile,v 1.36 2016/02/25 14:42:56 jperkin Exp $
 
 GCC_PKGNAME=		gcc47
 .include		"version.mk"
@@ -75,22 +75,19 @@ CONFIGURE_ARGS+=	--with-local-prefix=${GCC_PREFIX:Q}
 CONFIGURE_ARGS+=	--enable-libssp
 CONFIGURE_ARGS+=	--enable-threads=posix
 CONFIGURE_ARGS+=	--with-boot-ldflags=${BOOT_LDFLAGS:Q}
-.if ${OPSYS} == "NetBSD"
-CONFIGURE_ARGS+=	--with-gnu-ld --with-ld=/usr/bin/ld
-CONFIGURE_ARGS+=	--with-gnu-as --with-as=/usr/bin/as
-MAKE_ENV+=		ac_cv_func_clock_gettime=yes
-MAKE_ENV+=		ac_cv_func_gethostbyname_r=no
-.endif
-.if ${OPSYS} == "DragonFly"
-CONFIGURE_ARGS+=	--disable-bootstrap
-.endif
-.if ${OPSYS} == "Darwin"
+
+CONFIGURE_ARGS.NetBSD+=	--with-gnu-ld --with-ld=/usr/bin/ld
+CONFIGURE_ARGS.NetBSD+=	--with-gnu-as --with-as=/usr/bin/as
+MAKE_ENV.NetBSD+=	ac_cv_func_clock_gettime=yes
+MAKE_ENV.NetBSD+=	ac_cv_func_gethostbyname_r=no
+
+CONFIGURE_ARGS.DragonFly+=	--disable-bootstrap
+
 # See ${WRKSRC}/libgcc/config/t-slibgcc-darwin: It uses strip(1) to
 # create a stub library, not just to remove symbols, so we must not
 # let strip(1) be a no-op regardless of ${INSTALL_UNSTRIPPED} or the
 # build fails for missing files.
-CONFIGURE_ARGS+=	STRIP_FOR_TARGET=${TOOLS_PLATFORM.strip}
-.endif
+CONFIGURE_ARGS.Darwin+=	STRIP_FOR_TARGET=${TOOLS_PLATFORM.strip}
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || !empty(MACHINE_PLATFORM:MLinux-*-i386)
 CONFIGURE_ARGS+=	--with-arch=i486 --with-tune=i486

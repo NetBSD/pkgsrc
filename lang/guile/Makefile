@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2013/11/13 22:49:31 joerg Exp $
+# $NetBSD: Makefile,v 1.105 2016/02/25 14:42:56 jperkin Exp $
 
 DISTNAME=		guile-1.8.8
 PKGREVISION=		6
@@ -48,9 +48,7 @@ post-patch:
 	${ECHO} "(define-module (ice-9 slib))" > ${WRKSRC}/ice-9/slib.scm
 	${ECHO} "(load-from-path \"slib/guile.init\")" >> ${WRKSRC}/ice-9/slib.scm
 
-.if ${OPSYS} == "DragonFly"
-CONFIGURE_ARGS+=	ac_cv_type_complex_double=no
-.endif
+CONFIGURE_ARGS.DragonFly+=	ac_cv_type_complex_double=no
 
 .if ${OPSYS} == "Darwin"
 #This define has been reported to break builds on 10.8.

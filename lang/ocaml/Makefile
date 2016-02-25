@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.100 2015/09/08 18:54:41 joerg Exp $
+# $NetBSD: Makefile,v 1.101 2016/02/25 14:42:56 jperkin Exp $
 
 .include "Makefile.common"
 
@@ -70,11 +70,9 @@ PLIST_SRC+=	${PKGDIR}/PLIST
 INSTALL_MAKE_FLAGS+=	SHELL=${SH:Q}
 .endif
 
-.if ${OPSYS} == "NetBSD"
-EXTRA_RT_LIBS=	-lcurses
-.else
-EXTRA_RT_LIBS=
-.endif
+OPSYSVARS+=		EXTRA_RT_LIBS
+EXTRA_RT_LIBS.NetBSD=	-lcurses
+EXTRA_RT_LIBS.*=
 
 SUBST_CLASSES+=		extra-rt-libs
 SUBST_FILES.extra-rt-libs=	bytecomp/bytelink.ml
