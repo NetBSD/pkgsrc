@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.163 2016/02/19 21:57:42 jperkin Exp $
+# $NetBSD: Makefile,v 1.164 2016/02/25 15:26:55 jperkin Exp $
 
 DISTNAME=		R-3.2.2
 CATEGORIES=		math
@@ -85,11 +85,7 @@ CONFIGURE_ENV+=		LIBnn=lib
 # been installed SHAREMODE
 SHAREMODE=		644
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Darwin"
-CONFIGURE_ARGS+=	--disable-openmp
-.endif
+CONFIGURE_ARGS.Darwin+=	--disable-openmp
 
 # R_PAPERSIZE can be: A4, Letter, Legal, Executive
 .if defined(PAPERSIZE)
