@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2014/12/12 06:45:34 mef Exp $
+# $NetBSD: Makefile,v 1.18 2016/02/25 11:09:50 jperkin Exp $
 
 DISTNAME=	dbench-4.0
 CATEGORIES=	benchmarks
@@ -12,11 +12,7 @@ LICENSE=	gnu-gpl-v3
 GNU_CONFIGURE=	yes
 USE_TOOLS=	autoconf
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-MAKE_ENV+=	DB_LDFLAGS="-lrt" TB_LDFLAGS="-lsocket -lnsl"
-.endif
+MAKE_ENV.SunOS+=	DB_LDFLAGS="-lrt" TB_LDFLAGS="-lsocket -lnsl"
 
 INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX} \
 			datadir=${DESTDIR}${PREFIX}/share/dbench \
