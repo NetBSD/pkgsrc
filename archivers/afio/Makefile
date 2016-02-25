@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2015/02/15 14:45:48 ryoon Exp $
+# $NetBSD: Makefile,v 1.17 2016/02/25 09:28:36 jperkin Exp $
 
 DISTNAME=	afio-2.5.1
 CATEGORIES=	archivers
@@ -11,11 +11,9 @@ COMMENT=	Data corruption handling cpio-format archive creator
 
 BUILD_TARGET=	afio
 
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "Darwin"
 # Don't define HAVE_LCHOWN
-MAKE_FLAGS+=	e2=
-.endif
+OPSYSVARS+=		MAKE_FLAGS
+MAKE_FLAGS.Darwin+=	e2=
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
