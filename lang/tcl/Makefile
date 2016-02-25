@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.87 2016/02/19 15:15:42 jperkin Exp $
+# $NetBSD: Makefile,v 1.88 2016/02/25 14:42:57 jperkin Exp $
 
 DISTNAME=	tcl${TCL_VERSION}-src
 PKGNAME=	tcl-${TCL_VERSION}
@@ -36,9 +36,7 @@ TEST_TARGET=		test
 CONFIGURE_ARGS+=	--enable-64bit
 .endif
 
-.if ${OPSYS} == "NetBSD"
-CONFIGURE_ARGS+=	ac_cv_func_gethostbyname_r=no
-.endif
+CONFIGURE_ARGS.NetBSD+=	ac_cv_func_gethostbyname_r=no
 
 SUBST_CLASSES+=		tcl-config
 SUBST_STAGE.tcl-config=	post-build
