@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2015/05/09 23:00:39 sevan Exp $
+# $NetBSD: Makefile,v 1.35 2016/02/25 09:28:36 jperkin Exp $
 
 DISTNAME=	gzip-1.6
 CATEGORIES=	archivers
@@ -19,11 +19,7 @@ MAKE_FLAGS+=	manlinks=so
 INFO_FILES=	yes
 CHECK_PERMS=	no	# can't depend on checkperms; it's distfile is gzipped
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "AIX"
 #bug 20453 in bug-gzip list, passed onto gnulib
-CONFIGURE_ENV+=	ac_cv_header_wctype_h=no
-.endif
+CONFIGURE_ENV.AIX+=	ac_cv_header_wctype_h=no
 
 .include "../../mk/bsd.pkg.mk"
