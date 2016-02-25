@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/12/02 09:53:31 jperkin Exp $
+# $NetBSD: Makefile,v 1.13 2016/02/25 08:27:05 jperkin Exp $
 
 DISTNAME=	libxkbcommon-0.5.0
 CATEGORIES=	x11
@@ -15,8 +15,6 @@ USE_TOOLS+=	bison gmake pkg-config
 USE_LIBTOOL=	yes
 
 PKGCONFIG_OVERRIDE+=	xkbcommon.pc.in
-
-OPSYSVARS+=	BUILDLINK_TRANSFORM
 
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=./xkbcommon.map
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=./xkbcommon-x11.map
