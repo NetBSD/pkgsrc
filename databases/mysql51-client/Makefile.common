@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.32 2014/05/28 10:16:54 markd Exp $
+# $NetBSD: Makefile.common,v 1.33 2016/02/25 11:46:21 jperkin Exp $
 #
 # used by databases/mysql51-client/Makefile
 # used by databases/mysql51-server/Makefile
@@ -42,11 +42,9 @@ CONFIGURE_ARGS+=	--localstatedir=${MYSQL_DATADIR}
 CONFIGURE_ARGS+=	--without-libwrap
 CONFIG_SHELL=		${TOOLS_PATH.bash}
 
-.if ${OPSYS} == "IRIX"
-CFLAGS+=		-DIRIX5 -DNEEDS_BSTRING_H
+CFLAGS.IRIX+=		-DIRIX5 -DNEEDS_BSTRING_H
 # libgen is incorrectly detected
-CONFIGURE_ENV+=		ac_cv_lib_gen_p2open="no"
-.endif
+CONFIGURE_ENV.IRIX+=	ac_cv_lib_gen_p2open="no"
 
 BUILD_DEFS+=		VARBASE
 
@@ -78,9 +76,7 @@ GNU_ARCH.i386=		i486
 CFLAGS+=		-march=i486
 .endif
 
-.if ${OPSYS} == "NetBSD"
-CONFIGURE_ENV+=		ac_cv_func_gethostbyname_r="no"
-.endif
+CONFIGURE_ENV.NetBSD+=	ac_cv_func_gethostbyname_r="no"
 
 CONFIGURE_ENV+=		mysql_cv_compress="yes"
 
@@ -94,10 +90,8 @@ CXXFLAGS+=		-fPIC -DPIC
 
 # force HAVE_CURSES_H on Solaris since the configure script is broken
 # and does not properly detect this, breaking the build later on.
-.if ${OPSYS} == "SunOS"
-CFLAGS+=		-DHAVE_CURSES_H
-CXXFLAGS+=		-DHAVE_CURSES_H
-.endif
+CFLAGS.SunOS+=		-DHAVE_CURSES_H
+CXXFLAGS.SunOS+=	-DHAVE_CURSES_H
 
 .include "../../mk/pthread.buildlink3.mk"
 
@@ -135,12 +129,10 @@ SUBST_SED.scr+=		-e "s,/bin/sh,${RCD_SCRIPTS_SHELL},g"
 SUBST_MESSAGE.scr=	Fixing scripts.
 
 # Fix broken shared library detection under Mac OS X
-.if ${OPSYS} == "Darwin"
-SUBST_CLASSES+=		dylib
+SUBST_CLASSES.Darwin+=	dylib
 SUBST_STAGE.dylib=	pre-configure
 SUBST_FILES.dylib=	configure
 SUBST_SED.dylib=	-e "s|\\\$$shrext_cmds|\\.dylib|g"
-.endif
 
 pre-configure:
 	${RM} -f ${WRKSRC}/configure~
