@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.57 2015/07/31 09:03:36 youri Exp $
+# $NetBSD: Makefile.common,v 1.58 2016/02/25 15:31:00 jperkin Exp $
 #
 # used by archivers/xfce4-thunar-archive/Makefile
 # used by audio/xfce4-mixer/Makefile
@@ -79,10 +79,6 @@ USE_TOOLS+=		gmake pkg-config msgfmt perl intltool
 
 XFCE4_EGBASE=		${PREFIX}/share/examples/xfce4
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Darwin"
-CONFIGURE_ARGS+=	--disable-visibility
-.endif
+CONFIGURE_ARGS.Darwin+=	--disable-visibility
 
 .include "../../x11/gtk2/buildlink3.mk"
