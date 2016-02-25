@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/10/09 13:44:37 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2016/02/25 12:12:48 jperkin Exp $
 
 ###########################################################################
 ###########################################################################
@@ -38,23 +38,17 @@ TEST_TARGET=	check
 
 OVERRIDE_DIRDEPTH.install-sh=	1
 
-.if ${OPSYS} == "AIX"
-
-# always build libraries and executables that use the runtime linker.
+# Always build libraries and executables that use the runtime linker.
 # in addition, disable libtool locking, as the test is broken on AIX,
 # and results in files being locked indefinitely.
-LDFLAGS+=		-Wl,-brtl
-CONFIGURE_ARGS+=	--disable-libtool-lock
-
-.elif ${OPSYS} == "IRIX"
+LDFLAGS.AIX+=		-Wl,-brtl
+CONFIGURE_ARGS.AIX+=	--disable-libtool-lock
 
 # The MIPSpro compiler doesn't support -c with -o, but the locking
 # workaround is itself broken.  Disable it unconditionally.
-CONFIGURE_ARGS+=	--disable-libtool-lock
+CONFIGURE_ARGS.IRIX+=	--disable-libtool-lock
 
-.elif ${OPSYS} == "SunOS"
-CFLAGS+=	${_COMPILER_ABI_FLAG.${ABI}}
-.endif
+CFLAGS.SunOS+=	${_COMPILER_ABI_FLAG.${ABI}}
 
 # We are going to want libtool to find the same versions of the C, C++,
 # and Fortran compilers.

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2016/02/04 11:57:50 wiz Exp $
+# $NetBSD: Makefile,v 1.66 2016/02/25 12:12:48 jperkin Exp $
 
 DISTNAME=	libgphoto2-2.5.8
 PKGREVISION=	1
@@ -27,14 +27,12 @@ REPLACE_SH=		packaging/generic/check-ptp-camera
 
 PLIST_VARS+=	libusb
 
-.if ${OPSYS} == "SunOS"
-BUILDLINK_TRANSFORM+=	opt:-Wl,--version-script=./libgphoto2_port.ver:-Wl,-M./libgphoto2_port.ver
+BUILDLINK_TRANSFORM.SunOS+=	opt:-Wl,--version-script=./libgphoto2_port.ver:-Wl,-M./libgphoto2_port.ver
 
-SUBST_CLASSES+=	mapfile
+SUBST_CLASSES.SunOS+=	mapfile
 SUBST_STAGE.mapfile=	post-patch
 SUBST_FILES.mapfile=	libgphoto2_port/libgphoto2_port/libgphoto2_port.ver
 SUBST_SED.mapfile=	-e '/gpi_gphoto_port_type_map/d'
-.endif
 
 # remove symbolic link
 post-install:
