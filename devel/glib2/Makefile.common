@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.45 2015/06/10 23:00:05 prlw1 Exp $
+# $NetBSD: Makefile.common,v 1.46 2016/02/25 12:12:47 jperkin Exp $
 #
 # used by devel/glib2/Makefile
 # used by devel/gdbus-codegen/Makefile
@@ -68,17 +68,10 @@ SUBST_MESSAGE.thr=	Fixing libgthread.
 CONFIGURE_ENV+=		gt_cv_c_wchar_t=no
 .endif
 
-.if ${OPSYS} == "Darwin"
-BUILDLINK_TRANSFORM+=	rm:-Werror=missing-prototypes
-.endif
+BUILDLINK_TRANSFORM.Darwin+=	rm:-Werror=missing-prototypes
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Werror=format=2
 
-.if ${OPSYS} == "HPUX"
-CONFIGURE_ENV+=		ac_cv_func_mmap_fixed_mapped=yes
-.endif
-
-.if ${OPSYS} == "SunOS"
-BUILDLINK_TRANSFORM+=	rm:-Werror=format=2
-.endif
+CONFIGURE_ENV.HPUX+=		ac_cv_func_mmap_fixed_mapped=yes
 
 .include "../../mk/dlopen.buildlink3.mk"
 

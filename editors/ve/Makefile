@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/02/24 13:13:08 wiedi Exp $
+# $NetBSD: Makefile,v 1.7 2016/02/25 12:22:40 jperkin Exp $
 
 DISTNAME=	ve-1.0
 CATEGORIES=	editors
@@ -11,11 +11,7 @@ COMMENT=	NTHU-CS Maple BBS 2.36 BBS-like editor
 
 INSTALLATION_DIRS=	bin
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-BUILDLINK_TRANSFORM+=   rm:-lcompat
-.endif
+BUILDLINK_TRANSFORM.SunOS+=	rm:-lcompat
 
 post-patch:
 	${SED} "s,/usr/local,${PREFIX},g" ${WRKSRC}/edit.c > ${WRKSRC}/edit.c.done

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/10/31 11:19:55 asau Exp $
+# $NetBSD: Makefile,v 1.19 2016/02/25 12:12:50 jperkin Exp $
 #
 
 DISTNAME=	xxgdb-1.12
@@ -12,11 +12,7 @@ COMMENT=	Graphical X11 interface for gdb
 WRKSRC=		${WRKDIR}/${DISTNAME}
 USE_IMAKE=	yes
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-MAKE_ENV+=	CPPFLAGS=
-.endif
+MAKE_ENV.SunOS+=	CPPFLAGS=
 
 INSTALLATION_DIRS=	bin lib/X11/app-defaults ${PKGMANDIR}/man1
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2016/02/23 12:42:16 jperkin Exp $
+# $NetBSD: Makefile,v 1.83 2016/02/25 12:12:49 jperkin Exp $
 
 DISTNAME=	nspr-${NSPR_RELEASE:S/.0$//}
 NSPR_RELEASE=	4.12.0
@@ -41,13 +41,11 @@ SUBST_SED.nspr-config=		-e 's|-L$$libdir|"${COMPILER_RPATH_FLAG}$$libdir -L$$lib
 CHECK_SHLIBS_SUPPORTED= no
 .endif
 
-.if ${OPSYS} == "Darwin"
-SUBST_CLASSES+=			exec_path
+SUBST_CLASSES.Darwin+=		exec_path
 SUBST_STAGE.exec_path=		pre-configure
 SUBST_MESSAGE.exec_path=	Fixing @executable_path
 SUBST_FILES.exec_path=		nspr/configure.in
 SUBST_SED.exec_path=		-e 's,@executable_path,${PREFIX}/lib/nspr,g'
-.endif
 
 .if ${OBJECT_FMT} == "ELF"
 SO_SUFFIX=		so

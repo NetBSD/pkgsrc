@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2015/12/04 11:32:40 hauke Exp $
+# $NetBSD: Makefile,v 1.35 2016/02/25 12:12:49 jperkin Exp $
 
 DISTNAME=	pkg-config-0.29
 CATEGORIES=	devel
@@ -20,10 +20,8 @@ CONFLICTS=		pkgconfig-[0-9]*
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "IRIX"
 # configure bails out in subdir after re-parsing the cache
-CONFIGURE_ARGS+=	--cache-file=/dev/null
-.endif
+CONFIGURE_ARGS.IRIX+=	--cache-file=/dev/null
 
 .if ${OPSYS} == "NetBSD"
 .if ${MACHINE_ARCH} == "i386" && !empty(OS_VERSION:M[12345].*)
@@ -41,10 +39,8 @@ post-configure:
 CONFIGURE_ENV+=		glib_cv_value_AF_INET6=yes
 .endif
 
-.if ${OPSYS} == "SunOS"
-CONFIGURE_ARGS+=	--disable-dtrace
-CFLAGS+=		-DENABLE_NLS # required due to __EXTENSIONS__
-.endif
+CONFIGURE_ARGS.SunOS+=	--disable-dtrace
+CFLAGS.SunOS+=		-DENABLE_NLS # required due to __EXTENSIONS__
 
 CONFIGURE_ARGS+=	${CONFIGURE_ARGS.${ICONV_TYPE}-iconv}
 CONFIGURE_ARGS.gnu-iconv=	--with-libiconv=gnu
