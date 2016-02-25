@@ -1,0 +1,10 @@
+$NetBSD: patch-src_makefiles_Makefile.solaris,v 1.1 2016/02/25 21:37:35 tnn Exp $
+
+--- src/makefiles/Makefile.solaris.orig	2011-09-23 00:00:48.000000000 +0200
++++ src/makefiles/Makefile.solaris	2011-10-11 11:53:51.948565783 +0200
+@@ -23,5 +23,3 @@ ifeq ($(GCC), yes)
+ else
+ 	$(CC) $(CFLAGS) $(LDFLAGS) $(LDFLAGS_SL) -G -o $@ $<
+ endif
+-
+-sqlmansect = 5sql
