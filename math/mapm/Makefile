@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2014/01/09 12:07:42 jperkin Exp $
+# $NetBSD: Makefile,v 1.12 2016/02/25 15:26:55 jperkin Exp $
 #
 
 DISTNAME=		mapm-4.9.5a
@@ -17,11 +17,7 @@ USE_LANGUAGES=	c c++
 
 INSTALLATION_DIRS=	bin include lib share/doc/mapm
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-BUILDLINK_TRANSFORM+=	rm:-static
-.endif
+BUILDLINK_TRANSFORM.SunOS+=	rm:-static
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/m_apm.h ${DESTDIR}${PREFIX}/include
