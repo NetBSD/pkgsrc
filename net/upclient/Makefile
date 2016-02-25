@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2013/04/06 15:46:38 rodent Exp $
+# $NetBSD: Makefile,v 1.30 2016/02/25 16:20:53 jperkin Exp $
 #
 
 DISTNAME=	upclient-4.2.1.23
@@ -10,15 +10,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://uptimes.hostingwired.com/
 COMMENT=	Keeps track of your server uptime, and compares it to other hosts
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "DragonFly"
-BUILD_TARGET=	dragonfly
-.elif ${OPSYS} == "SunOS"
-BUILD_TARGET=	solaris
-.else
-BUILD_TARGET=	bsd
-.endif
+BUILD_TARGET.DragonFly=	dragonfly
+BUILD_TARGET.SunOS=	solaris
+BUILD_TARGET.*=		bsd
 
 EGDIR=		${PREFIX}/share/examples/upclient
 CONF_FILES=	${EGDIR}/upclient.conf ${PKG_SYSCONFDIR}/upclient.conf
