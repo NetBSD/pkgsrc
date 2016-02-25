@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2016/01/10 21:16:33 bsiegert Exp $
+# $NetBSD: Makefile,v 1.102 2016/02/25 13:37:47 jperkin Exp $
 
 DISTNAME=	freetype-2.6.2
 PKGNAME=	${DISTNAME:S/-/2-/}
@@ -39,9 +39,7 @@ CFLAGS+=	-fno-strict-aliasing
 .endif
 
 # tell configure not to use unix-specific version of ftsystem.c on OpenBSD
-.if ${OPSYS} == "OpenBSD"
-CONFIGURE_ENV+=		ac_cv_func_mmap_fixed_mapped=no
-.endif
+CONFIGURE_ENV.OpenBSD+=	ac_cv_func_mmap_fixed_mapped=no
 
 .if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
 CONFIGURE_ENV+=		CC_BUILD=${NATIVE_CC:Q}

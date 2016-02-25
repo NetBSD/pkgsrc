@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2015/08/31 10:59:04 jperkin Exp $
+# $NetBSD: options.mk,v 1.10 2016/02/25 13:37:47 jperkin Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.clutter
@@ -38,7 +38,5 @@ BUILDLINK_API_DEPENDS.libXcomposite+=	libXcomposite>=0.4
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-x
-.  if ${OPSYS} == "Darwin"
-CONFIGURE_ARGS+=	--with-quartz-backend
-.  endif
+CONFIGURE_ARGS.Darwin+=	--with-quartz-backend
 .endif

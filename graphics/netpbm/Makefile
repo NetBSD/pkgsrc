@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.204 2015/06/12 10:50:11 wiz Exp $
+# $NetBSD: Makefile,v 1.205 2016/02/25 13:37:47 jperkin Exp $
 
 DISTNAME=	netpbm-10.68.02
 CATEGORIES=	graphics
@@ -51,16 +51,15 @@ SUBST_SED.rgb_txt+=	-e 's,/usr/share/netpbm/rgb.txt,${PREFIX}/share/netpbm/rgb.t
 # only used if NEED_RUNTIME_PATH is set, so set it unconditionally
 MAKE_FLAGS+=	NETPBMLIB_RUNTIME_PATH=${PREFIX}
 
-.if ${OPSYS} == "NetBSD"
-MAKE_FLAGS+=	NEED_RUNTIME_PATH=Y
-.elif ${OPSYS} == "Darwin"
-MAKE_FLAGS+=	NETPBMLIBTYPE=dylib
-MAKE_FLAGS+=	NETPBMLIBSUFFIX=dylib
-.elif ${OPSYS} == "SunOS"
-MAKE_FLAGS+=	LDSHLIB=-shared
-MAKE_FLAGS+=	NEED_RUNTIME_PATH=Y
-MAKE_FLAGS+=	NETWORKLD="-lsocket -lnsl"
-.elif ${OS_VARIANT} == "SCOOSR5"
+OPSYSVARS+=		MAKE_FLAGS
+MAKE_FLAGS.NetBSD+=	NEED_RUNTIME_PATH=Y
+MAKE_FLAGS.Darwin+=	NETPBMLIBTYPE=dylib
+MAKE_FLAGS.Darwin+=	NETPBMLIBSUFFIX=dylib
+MAKE_FLAGS.SunOS+=	LDSHLIB=-shared
+MAKE_FLAGS.SunOS+=	NEED_RUNTIME_PATH=Y
+MAKE_FLAGS.SunOS+=	NETWORKLD="-lsocket -lnsl"
+
+.if ${OS_VARIANT} == "SCOOSR5"
 MAKE_FLAGS+=	NETWORKLD="-lsocket -lresolv"
 .endif
 
