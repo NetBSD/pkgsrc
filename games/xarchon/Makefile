@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2015/04/25 14:23:05 tnn Exp $
+# $NetBSD: Makefile,v 1.59 2016/02/25 13:19:47 jperkin Exp $
 #
 
 DISTNAME=	xarchon-0.60
@@ -15,12 +15,7 @@ USE_TOOLS+=	gmake
 GNU_CONFIGURE=	YES
 USE_LANGUAGES=	c c++
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-CONFIGURE_ENV+=	CC=${CC:Q}
-.endif
-
+CONFIGURE_ENV.SunOS+=	CC=${CC:Q}
 LDFLAGS.DragonFly=	-lX11
 LIBS.SunOS+=		-lX11 -lsocket -lnsl
 
