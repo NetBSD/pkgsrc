@@ -1,19 +1,15 @@
-# $NetBSD: options.mk,v 1.11 2014/07/24 12:43:20 jperkin Exp $
+# $NetBSD: options.mk,v 1.12 2016/02/25 14:42:56 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${GCC_PKGNAME}
 PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-c++ gcc-fortran gcc-java \
 			gcc-go gcc-objc gcc-objc++
 PKG_SUGGESTED_OPTIONS=	gcc-c++ gcc-fortran gcc-objc gcc-objc++
 
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "Linux"
-PKG_SUGGESTED_OPTIONS+=	nls gcc-java
-.elif ${OPSYS} == "DragonFly"
-PKG_SUGGESTED_OPTIONS+= nls
-.elif ${OPSYS} == "SunOS"
-PKG_SUGGESTED_OPTIONS+=	gcc-go gcc-inplace-math
-.else
-PKG_SUGGESTED_OPTIONS+= gcc-java
-.endif
+PKG_SUGGESTED_OPTIONS.DragonFly+=	nls
+PKG_SUGGESTED_OPTIONS.Linux+=		nls gcc-java
+PKG_SUGGESTED_OPTIONS.NetBSD+=		nls gcc-java
+PKG_SUGGESTED_OPTIONS.SunOS+=		gcc-go gcc-inplace-math
+PKG_SUGGESTED_OPTIONS.*+= 		gcc-java
 
 ###
 ### Determine if multilib is avalible.
