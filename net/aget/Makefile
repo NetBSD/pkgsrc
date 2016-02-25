@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2014/10/09 14:06:44 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2016/02/25 16:20:50 jperkin Exp $
 #
 
 DISTNAME=	aget-0.4
@@ -12,8 +12,6 @@ COMMENT=	Multithreaded HTTP download accelerator
 
 NO_CONFIGURE=	yes
 
-.include "../../mk/bsd.prefs.mk"
-
 SUBST_CLASSES+=		options
 SUBST_MESSAGE.options=	Fixing build options.
 SUBST_STAGE.options=	post-patch
@@ -26,10 +24,8 @@ PTHREAD_OPTS+=		require
 LDFLAGS+=		${PTHREAD_LIBS}
 PTHREAD_AUTO_VARS=	yes
 
-.if ${OPSYS} == "SunOS"
-CFLAGS+=	-DSOLARIS
-LDFLAGS+=	-lsocket -lnsl -lresolv
-.endif
+CFLAGS.SunOS+=	-DSOLARIS
+LDFLAGS.SunOS+=	-lsocket -lnsl -lresolv
 
 INSTALLATION_DIRS=	bin
 
