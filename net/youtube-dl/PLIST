@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2016/02/15 06:30:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2016/02/25 19:07:59 leot Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -98,6 +98,9 @@ ${PYSITELIB}/youtube_dl/extractor/alphaporno.pyo
 ${PYSITELIB}/youtube_dl/extractor/amp.py
 ${PYSITELIB}/youtube_dl/extractor/amp.pyc
 ${PYSITELIB}/youtube_dl/extractor/amp.pyo
+${PYSITELIB}/youtube_dl/extractor/animeondemand.py
+${PYSITELIB}/youtube_dl/extractor/animeondemand.pyc
+${PYSITELIB}/youtube_dl/extractor/animeondemand.pyo
 ${PYSITELIB}/youtube_dl/extractor/anitube.py
 ${PYSITELIB}/youtube_dl/extractor/anitube.pyc
 ${PYSITELIB}/youtube_dl/extractor/anitube.pyo
@@ -992,6 +995,9 @@ ${PYSITELIB}/youtube_dl/extractor/nowness.pyo
 ${PYSITELIB}/youtube_dl/extractor/nowtv.py
 ${PYSITELIB}/youtube_dl/extractor/nowtv.pyc
 ${PYSITELIB}/youtube_dl/extractor/nowtv.pyo
+${PYSITELIB}/youtube_dl/extractor/noz.py
+${PYSITELIB}/youtube_dl/extractor/noz.pyc
+${PYSITELIB}/youtube_dl/extractor/noz.pyo
 ${PYSITELIB}/youtube_dl/extractor/npo.py
 ${PYSITELIB}/youtube_dl/extractor/npo.pyc
 ${PYSITELIB}/youtube_dl/extractor/npo.pyo
@@ -1244,6 +1250,9 @@ ${PYSITELIB}/youtube_dl/extractor/screencast.pyo
 ${PYSITELIB}/youtube_dl/extractor/screencastomatic.py
 ${PYSITELIB}/youtube_dl/extractor/screencastomatic.pyc
 ${PYSITELIB}/youtube_dl/extractor/screencastomatic.pyo
+${PYSITELIB}/youtube_dl/extractor/screenjunkies.py
+${PYSITELIB}/youtube_dl/extractor/screenjunkies.pyc
+${PYSITELIB}/youtube_dl/extractor/screenjunkies.pyo
 ${PYSITELIB}/youtube_dl/extractor/screenwavemedia.py
 ${PYSITELIB}/youtube_dl/extractor/screenwavemedia.pyc
 ${PYSITELIB}/youtube_dl/extractor/screenwavemedia.pyo
