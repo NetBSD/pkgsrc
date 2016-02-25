@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2015/09/07 12:02:05 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.7 2016/02/25 12:22:40 jperkin Exp $
 #
 # used by editors/emacs23/Makefile
 # used by editors/emacs23-nox11/Makefile
@@ -53,12 +53,10 @@ CHECK_WRKREF_SKIP+=	bin/emacs-${EMACS_VERSION}
 
 .include "../../mk/bsd.prefs.mk"
 
-.if (${OPSYS} == "Darwin")
 # Disable address randomization to fix build with Xcode 4.1.  This is from
 # upstream bug #8395.  Details in:
 # http://lists.gnu.org/archive/html/emacs-bug-tracker/2011-07/msg00445.html
-CFLAGS+=		-fno-pie
-.endif
+CFLAGS.Darwin+=		-fno-pie
 
 .if (${OPSYS} == "NetBSD") && \
     !exists(/usr/lib/libgcc_s.so) && !exists(/usr/lib/libgcc.a)

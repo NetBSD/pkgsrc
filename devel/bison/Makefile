@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2015/06/30 21:39:09 richard Exp $
+# $NetBSD: Makefile,v 1.102 2016/02/25 12:12:47 jperkin Exp $
 
 DISTNAME=	bison-3.0.4
 PKGREVISION=	2
@@ -24,11 +24,7 @@ TEST_TARGET=		check
 REPLACE_PERL+=		examples/extexi
 REPLACE_SH+=		examples/test examples/*/*.test
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Cygwin"
-CONFIGURE_ARGS+=	ac_cv_func___fpending=yes
-.endif
+CONFIGURE_ARGS.Cygwin+=	ac_cv_func___fpending=yes
 
 # Avoid rebuilding manpage
 pre-build:

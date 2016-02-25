@@ -1,12 +1,10 @@
-# $NetBSD: options.mk,v 1.1 2013/09/12 14:21:27 fhajny Exp $
+# $NetBSD: options.mk,v 1.2 2016/02/25 12:12:48 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libmemcached
 PKG_SUPPORTED_OPTIONS=	sasl
 PKG_SUGGESTED_OPTIONS=	sasl
 
-#.if ${OPSYS} == "SunOS"
-#PKG_SUGGESTED_OPTIONS+=	dtrace
-#.endif
+#PKG_SUGGESTED_OPTIONS.SunOS+=	dtrace
 
 .include "../../mk/bsd.options.mk"
 
