@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.28 2016/01/22 12:06:40 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.29 2016/02/25 16:20:51 jperkin Exp $
 #
 # used by net/isc-dhcp4/Makefile
 # used by net/isc-dhcpd4/Makefile
@@ -50,14 +50,12 @@ CONFIGURE_ARGS+=	--with-relay6-pid-file=${DHCP_PID}/isc-dhcrelay6.pid
 
 .if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
 CONFIGURE_ENV+=		BUILD_CC=${NATIVE_CC:Q}
-.  if ${OPSYS} == "NetBSD"
 # Target will have /dev/random.  For whatever reason this package
 # requires you to specify the random device to use, and for native
 # compilation it uses /dev/random, so we'll match that here even though
 # it is almost certainly the case that it should be using /dev/urandom.
-CONFIGURE_ENV+=		ac_cv_file__dev_random=yes
-CONFIGURE_ARGS+=	--with-randomdev=/dev/random
-.  endif
+CONFIGURE_ENV.NetBSD+=	ac_cv_file__dev_random=yes
+CONFIGURE_ARGS.NetBSD+=	--with-randomdev=/dev/random
 .endif
 
 SUBST_CLASSES+=		config

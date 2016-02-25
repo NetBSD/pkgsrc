@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/10/23 17:19:18 asau Exp $
+# $NetBSD: Makefile,v 1.19 2016/02/25 16:20:53 jperkin Exp $
 #
 
 DISTNAME=	waste-source
@@ -26,11 +26,7 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 
 USE_LANGUAGES=	c c++
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "DragonFly"
-LDFLAGS+=	-lmd
-.endif
+LDFLAGS.DragonFly+=	-lmd
 
 INSTALLATION_DIRS=	sbin share/doc/waste
 
