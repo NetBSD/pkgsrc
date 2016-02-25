@@ -1,0 +1,13 @@
+$NetBSD: patch-src_Makevars,v 1.1 2016/02/25 01:09:37 wen Exp $
+
+--- src/Makevars.orig	2016-02-25 08:53:40.000000000 +0000
++++ src/Makevars
+@@ -4,7 +4,7 @@ PKG_CPPFLAGS = -Iinclude -DUSING_R -DUSI
+ PKG_LIBS =
+ 
+ #clean after building
+-all: $(SHLIB) clean
++all: $(SHLIB)
+ 
+ clean: $(SHLIB)
+ 	$(RM) *.o core
