@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.226 2016/02/07 11:29:30 leot Exp $
+# $NetBSD: Makefile,v 1.227 2016/02/25 17:52:45 jperkin Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -70,9 +70,7 @@ PLIST.notmac=		yes
 # Avoid the following error when compiling with clang.
 # /usr/local/bin/ld: /usr/lib/crt1.o: relocation R_X86_64_32 against `_DYNAMIC'
 # can not be used when making a shared object; recompile with -fPIC
-.if ${OPSYS} == "FreeBSD"
-BUILDLINK_TRANSFORM+=	rm:-Wl,-pie
-.endif
+BUILDLINK_TRANSFORM.FreeBSD+=	rm:-Wl,-pie
 
 # CUPS_USER		user to run filter and CGI programs as
 # CUPS_GROUP		group to run filter and CGI programs as
