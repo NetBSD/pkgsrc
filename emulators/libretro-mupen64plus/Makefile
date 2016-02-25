@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2015/04/25 14:20:46 tnn Exp $
+# $NetBSD: Makefile,v 1.8 2016/02/25 12:50:49 jperkin Exp $
 
 DISTNAME=	mupen64plus-libretro-20150204
 PKGNAME=	libretro-mupen64plus-20150204
@@ -24,11 +24,7 @@ SUBST_SED.vc+=		-e 's;/opt/vc;${PREFIX};g'
 
 INSTALLATION_DIRS+=	${PREFIX}/lib/libretro
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD"
-CFLAGS+=	-DHAVE_POSIX_MEMALIGN=1
-.endif
+CFLAGS.NetBSD+=	-DHAVE_POSIX_MEMALIGN=1
 
 .include "options.mk"
 

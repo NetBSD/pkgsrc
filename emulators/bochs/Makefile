@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2015/08/18 07:31:07 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2016/02/25 12:50:49 jperkin Exp $
 
 DISTNAME=		bochs-2.6.8
 PKGREVISION=		1
@@ -80,16 +80,11 @@ CONFIGURE_ARGS+=	--enable-plugins
 CONFIGURE_ARGS+=	--enable-fast-function-calls
 .  endif
 
-.  if ${OPSYS} == "Darwin"
-CONFIGURE_ARGS+=	--enable-sb16=osx
-.  elif ${OPSYS} == "FreeBSD"
-CONFIGURE_ARGS+=	--enable-sb16=freebsd
-.  elif ${OPSYS} == "Linux"
-CONFIGURE_ARGS+=	--enable-sb16=linux
-CONFIGURE_ARGS+=	--enable-pcidev
-.  else
-CONFIGURE_ARGS+=	--enable-sb16=dummy
-.  endif
+CONFIGURE_ARGS.Darwin+=		--enable-sb16=osx
+CONFIGURE_ARGS.FreeBSD+=	--enable-sb16=freebsd
+CONFIGURE_ARGS.Linux+=		--enable-sb16=linux
+CONFIGURE_ARGS.Linux+=		--enable-pcidev
+CONFIGURE_ARGS.*+=		--enable-sb16=dummy
 .endif
 
 .if empty(PKG_OPTIONS:Mx11)
@@ -101,16 +96,13 @@ CONFIGURE_ARGS+=	--with-term
 PLIST.x11=		yes
 .endif
 
-.if ${OPSYS} == "Linux"
-BOCHSRC_SUBST+=		-e 's,@FLOPPY_BSD@,\#,'
-BOCHSRC_SUBST+=		-e 's,@FLOPPY_LINUX@,,'
-.elif ${OPSYS} == "Darwin"
-BOCHSRC_SUBST+=		-e 's,@FLOPPY_BSD@,\#,'
-BOCHSRC_SUBST+=		-e 's,@FLOPPY_LINUX@,\#,'
-.else
-BOCHSRC_SUBST+=		-e 's,@FLOPPY_BSD@,,'
-BOCHSRC_SUBST+=		-e 's,@FLOPPY_LINUX@,\#,'
-.endif
+OPSYSVARS+=		BOCHSRC_SUBST
+BOCHSRC_SUBST.Linux+=	-e 's,@FLOPPY_BSD@,\#,'
+BOCHSRC_SUBST.Linux+=	-e 's,@FLOPPY_LINUX@,,'
+BOCHSRC_SUBST.Darwin+=	-e 's,@FLOPPY_BSD@,\#,'
+BOCHSRC_SUBST.Darwin+=	-e 's,@FLOPPY_LINUX@,\#,'
+BOCHSRC_SUBST.*+=	-e 's,@FLOPPY_BSD@,,'
+BOCHSRC_SUBST.*+=	-e 's,@FLOPPY_LINUX@,\#,'
 
 .if ${OPSYS} == "Darwin"
 MESSAGE_SRC=		${.CURDIR}/MESSAGE.Darwin
