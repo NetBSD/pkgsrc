@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.40 2015/07/04 16:18:42 joerg Exp $
+# $NetBSD: Makefile.common,v 1.41 2016/02/25 08:27:05 jperkin Exp $
 # used by x11/qt4-docs/Makefile
 # used by x11/qt4-libs/Makefile
 # used by x11/qt4-mng/Makefile
@@ -38,7 +38,6 @@ CONFIGURE_ARGS+=	-prefix "${QTPREFIX}"
 CONFIGURE_ARGS+=	${CFLAGS:M-I*} ${LDFLAGS:M-L*} ${LDFLAGS:M-l*}
 CONFIGURE_ARGS+=	-opensource -confirm-license
 CONFIGURE_ARGS+=	-sysconfdir "${PKG_SYSCONFDIR}/xdg"
-OPSYSVARS+=		CONFIGURE_ARGS
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/10/10 01:58:10 ryoon Exp $
+# $NetBSD: Makefile,v 1.12 2016/02/25 08:27:03 jperkin Exp $
 
 .include "../../x11/qt5/Makefile.common"
 
@@ -26,8 +26,6 @@ USE_LANGUAGES=	c c++
 PKGCONFIG_OVERRIDE+=	uim.pc.in
 
 CONFIGURE_ENV+=		QMAKE5=${QTPREFIX}/bin/qmake
-
-OPSYSVARS+=		CONFIGURE_ENV
 CONFIGURE_ENV.SunOS+=	ac_cv_func_strcasecmp=yes
 
 CONFIGURE_ARGS+=	--with-qt5-immodule

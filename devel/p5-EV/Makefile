@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2015/07/27 14:30:34 mef Exp $
+# $NetBSD: Makefile,v 1.20 2016/02/25 08:27:03 jperkin Exp $
 
 DISTNAME=	EV-4.21
 PKGNAME=	p5-${DISTNAME}
@@ -15,8 +15,6 @@ DEPENDS+=	p5-Canary-Stability-[0-9]*:../../devel/p5-Canary-Stability
 
 MAKE_ENV+=	PERL_MM_USE_DEFAULT=1
 PERL5_PACKLIST=	auto/EV/.packlist
-
-OPSYSVARS+=	MAKE_ENV
 
 # Explicitly disable epoll and inotify on illumos, assumes Linux statfs.
 MAKE_ENV.SunOS+=	EV_EPOLL=0 EV_INOTIFY=0

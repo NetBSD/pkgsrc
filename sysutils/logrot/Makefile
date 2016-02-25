@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/02/24 08:58:57 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2016/02/25 08:27:04 jperkin Exp $
 
 DISTNAME=	logrot-1.7
 CATEGORIES=	sysutils
@@ -10,7 +10,6 @@ COMMENT=	Rotate log files in a safe and configurable manner
 
 GNU_CONFIGURE=	YES
 
-OPSYSVARS+=		CONFIGURE_ARGS
 CONFIGURE_ARGS.NetBSD+=	--with-pidfile=/var/run/syslogd.pid
 
 INSTALL_MAKE_FLAGS+=	bindir=${DESTDIR}${PREFIX}/bin \

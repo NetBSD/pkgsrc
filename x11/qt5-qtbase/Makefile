@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2016/02/04 10:41:12 markd Exp $
+# $NetBSD: Makefile,v 1.31 2016/02/25 08:27:05 jperkin Exp $
 
 DISTNAME=	qtbase-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtbase-${QTVERSION}
@@ -43,7 +43,6 @@ CONFIGURE_ARGS+=	-system-libpng
 CONFIGURE_ARGS+=	-system-pcre
 CONFIGURE_ARGS+=	-system-sqlite
 CONFIGURE_ARGS+=	-system-zlib
-OPSYSVARS+=		CONFIGURE_ARGS
 
 .include "../../mk/bsd.prefs.mk"
 

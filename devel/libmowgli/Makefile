@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/04/23 09:24:56 jperkin Exp $
+# $NetBSD: Makefile,v 1.7 2016/02/25 08:27:03 jperkin Exp $
 #
 
 DISTNAME=	libmowgli-0.7.1
@@ -17,8 +17,6 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE+=	libmowgli.pc.in
-
-OPSYSVARS+=	CONFIGURE_ENV
 
 # Explicitly disable epoll on illumos, provided for Linux compat only.
 CONFIGURE_ENV.SunOS+=	ac_cv_func_epoll_ctl=no
