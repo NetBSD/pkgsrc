@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.90 2015/05/03 14:32:11 sevan Exp $
+# $NetBSD: Makefile,v 1.91 2016/02/25 09:28:36 jperkin Exp $
 #
 # Please run 'make files/gtar.1' when updating version of this package
 # to regenerate the man page. converters/help2man is needed.
@@ -50,14 +50,10 @@ PLIST.rmt=		yes
 CONFIGURE_ENV+=		gt_cv_func_gnugettext3_libintl=yes
 .endif
 
-.if ${OPSYS} == "MirBSD"
-CPPFLAGS+=		-Dstrtoimax=strtoll -Dstrtoumax=strtoull
-.endif
+CPPFLAGS.MirBSD+=	-Dstrtoimax=strtoll -Dstrtoumax=strtoull
 
-.if ${OPSYS} == "AIX"
 #bug 20453 in bug-gzip list, passed onto gnulib
-CONFIGURE_ENV+= ac_cv_header_wctype_h=no
-.endif
+CONFIGURE_ENV.AIX+=	ac_cv_header_wctype_h=no
 
 SYMLINKS=		bin/gtar ${PKGGNUDIR}bin/tar \
 			${PKGMANDIR}/man1/gtar.1 ${PKGGNUDIR}${PKGMANDIR}/man1/tar.1

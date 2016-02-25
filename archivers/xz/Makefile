@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2015/10/01 05:11:36 adam Exp $
+# $NetBSD: Makefile,v 1.23 2016/02/25 09:28:37 jperkin Exp $
 
 DISTNAME=	xz-5.2.2
 CATEGORIES=	archivers
@@ -9,9 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tukaani.org/xz/
 COMMENT=	XZ utilities
 LICENSE=	public-domain AND gnu-gpl-v2
-
-.include "../../mk/bsd.prefs.mk"
-.include "options.mk"
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
@@ -27,10 +24,10 @@ CONFLICTS=	lzma-[0-9]* lzma-utils-[0-9]* lzmalib-[0-9]*
 CONFIGURE_ARGS+=	--disable-assembler
 .endif
 
-.if ${OPSYS} == "SunOS"
-CONFIGURE_ENV+=		ac_cv_have_decl_optreset=no
-CONFIGURE_ENV+=		gl_cv_cc_visibility=no
-.endif
+CONFIGURE_ENV.SunOS+=	ac_cv_have_decl_optreset=no
+CONFIGURE_ENV.SunOS+=	gl_cv_cc_visibility=no
+
+.include "options.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
