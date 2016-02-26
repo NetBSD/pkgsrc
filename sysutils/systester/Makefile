@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/04/25 14:24:55 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2016/02/26 10:24:13 jperkin Exp $
 
 DISTNAME=	systester-1.5.1
 PKGREVISION=	1
@@ -15,12 +15,8 @@ USE_LANGUAGES=	c c++
 
 MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR:Q}
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD"
 # ftime()
-LDFLAGS+=	-lcompat
-.endif
+LDFLAGS.NetBSD+=	-lcompat
 
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
