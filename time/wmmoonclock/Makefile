@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2015/08/06 22:38:28 khorben Exp $
+# $NetBSD: Makefile,v 1.24 2016/02/26 10:37:09 jperkin Exp $
 
 DISTNAME=	wmMoonClock-1.27
 PKGREVISION=	1
@@ -12,14 +12,9 @@ COMMENT=	Shows lunar ephemeris to fairly high accuracy
 WRKSRC=		${WRKDIR}/${DISTNAME}/Src
 USE_TOOLS+=	gmake
 
-MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
-MAKE_FLAGS+=	EXTRA_LOCAL_LIBS=${EXTRA_LOCAL_LIBS:Q}
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-EXTRA_LOCAL_LIBS=	-lsocket
-.endif
+OPSYSVARS+=		MAKE_FLAGS
+MAKE_FLAGS+=		CFLAGS=${CFLAGS:Q}
+MAKE_FLAGS.SunOS+=	EXTRA_LOCAL_LIBS=-lsocket
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 

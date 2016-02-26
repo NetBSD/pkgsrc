@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2015/06/14 21:02:46 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2016/02/26 10:38:36 jperkin Exp $
 
 DISTNAME=	notion-3-2015061300
 PKGNAME=	${DISTNAME:S/3-/3./}
@@ -63,14 +63,10 @@ INSTALLATION_DIRS=	${EGDIR}
 CONF_FILES+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
 # Abuse buildlink to add required libraries.
-BUILDLINK_TRANSFORM+=	opt:-Wl,--as-needed:-lsocket
-BUILDLINK_TRANSFORM+=	rm:-Wl,-whole-archive
-BUILDLINK_TRANSFORM+=	rm:-Wl,-no-whole-archive
-.endif
+BUILDLINK_TRANSFORM.SunOS+=	opt:-Wl,--as-needed:-lsocket
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-whole-archive
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-no-whole-archive
 
 post-install:
 	cd ${WRKSRC} && pax -rw contrib ${DESTDIR}${EGDIR}
