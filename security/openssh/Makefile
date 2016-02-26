@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.239 2016/01/18 12:53:25 jperkin Exp $
+# $NetBSD: Makefile,v 1.240 2016/02/26 09:41:06 jperkin Exp $
 
 DISTNAME=		openssh-7.1p1
 PKGNAME=		${DISTNAME:S/p1/.1/}
@@ -34,14 +34,11 @@ INSTALL_TARGET=		install-nokeys
 
 .include "options.mk"
 
-.if ${OPSYS} == "Darwin"
 # fixes: dyld: Symbol not found: _allow_severity
-CONFIGURE_ARGS+=	--disable-strip
-.endif
-
-.if ${OPSYS} == "Interix"
+CONFIGURE_ARGS.Darwin+=	--disable-strip
 
 # OpenSSH on Interix has some important caveats
+.if ${OPSYS} == "Interix"
 MESSAGE_SRC=		${.CURDIR}/MESSAGE.Interix
 BUILDLINK_PASSTHRU_DIRS+= /usr/local/lib/bind
 CONFIGURE_ENV+=		ac_cv_func_openpty=no
@@ -116,9 +113,8 @@ CONFIGURE_ENV+=		ac_cv_func_strnvis=no
 .if (${OPSYS} == "SunOS") && (${OS_VERSION} == "5.8" || ${OS_VERSION} == "5.9")
 CONFIGURE_ARGS+=	--disable-utmp --disable-wtmp
 .endif
-.if ${OPSYS} == "Linux"
-CONFIGURE_ARGS+=	--enable-md5-password
-.endif
+
+CONFIGURE_ARGS.Linux+=	--enable-md5-password
 
 # The ssh-askpass program is in ${X11BASE}/bin or ${PREFIX}/bin depending
 # on if it's part of the X11 distribution, or if it's installed from pkgsrc

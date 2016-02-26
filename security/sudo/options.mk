@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.19 2016/01/09 11:22:12 adam Exp $
+# $NetBSD: options.mk,v 1.20 2016/02/26 09:41:07 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sudo
 PKG_SUPPORTED_OPTIONS=	ldap nls
@@ -9,9 +9,7 @@ PKG_OPTIONS_GROUP.auth=	kerberos pam skey
 PKG_SUGGESTED_OPTIONS=	skey
 .endif
 
-.if ${OPSYS} == "Darwin"
-PKG_SUGGESTED_OPTIONS=	pam
-.endif
+PKG_SUGGESTED_OPTIONS.Darwin=	pam
 
 .include "../../mk/bsd.options.mk"
 
