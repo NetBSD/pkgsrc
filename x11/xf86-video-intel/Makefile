@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2016/01/05 13:05:37 tnn Exp $
+# $NetBSD: Makefile,v 1.38 2016/02/26 11:27:19 jperkin Exp $
 
 DISTNAME=	xf86-video-intel-2.99.917
 PKGREVISION=	4
@@ -18,11 +18,7 @@ GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
 USE_TOOLS+=	pkg-config
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-CONFIGURE_ENV+=	DRIVER_MAN_SUFFIX=4
-.endif
+CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
 
 BUILDLINK_API_DEPENDS.libdrm+=	libdrm>=2.4.7
 
