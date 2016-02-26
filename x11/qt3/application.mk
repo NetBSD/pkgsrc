@@ -1,4 +1,4 @@
-# $NetBSD: application.mk,v 1.3 2007/06/15 17:33:40 joerg Exp $
+# $NetBSD: application.mk,v 1.4 2016/02/26 11:27:16 jperkin Exp $
 #
 # This file provides useful definitions for packages that contain
 # QT applications.
@@ -13,12 +13,10 @@
 .if !defined(QT3_APPLICATION_MK)
 QT3_APPLICATION_MK=	# defined
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Linux"
 # work-around bug noted in PR #25402
-BUILDLINK_TRANSFORM+=	rm:-Wl,--no-undefined
-.endif
+BUILDLINK_TRANSFORM.Linux+=	rm:-Wl,--no-undefined
+
+.include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
 GCC_REQD+=		3.3

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2015/12/29 04:54:39 dholland Exp $
+# $NetBSD: Makefile,v 1.13 2016/02/26 11:27:15 jperkin Exp $
 
 DISTNAME=		libXrender-0.9.9
 CATEGORIES=		x11 devel
@@ -18,11 +18,7 @@ USE_TOOLS+=		pkg-config
 
 PKGCONFIG_OVERRIDE+=	xrender.pc.in
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD"
-CONFIGURE_ARGS+=	--disable-malloc0returnsnull
-.endif
+CONFIGURE_ARGS.NetBSD+=	--disable-malloc0returnsnull
 
 .include "../../meta-pkgs/modular-xorg/hacks.mk"
 

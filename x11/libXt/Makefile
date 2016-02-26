@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2015/05/01 08:44:16 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2016/02/26 11:27:15 jperkin Exp $
 
 DISTNAME=		libXt-1.1.5
 CATEGORIES=		x11 devel
@@ -18,11 +18,9 @@ CONFIGURE_ARGS+=	--with-appdefaultdir=${PREFIX}/lib/X11/app-defaults
 CONFIGURE_ENV+=		APP_MAN_SUFFIX=1 LIB_MAN_SUFFIX=3
 PKGCONFIG_OVERRIDE+=	xt.pc.in
 
-.include "../../mk/bsd.prefs.mk"
+CONFIGURE_ARGS.NetBSD+=	--disable-malloc0returnsnull
 
-.if ${OPSYS} == "NetBSD"
-CONFIGURE_ARGS+=	--disable-malloc0returnsnull
-.endif
+.include "../../mk/bsd.prefs.mk"
 
 .if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
 CONFIGURE_ENV+=	CC_FOR_BUILD=${NATIVE_CC:Q} CPPFLAGS_FOR_BUILD=-I${PREFIX}/include

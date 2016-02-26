@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2016/01/05 13:11:45 tnn Exp $
+# $NetBSD: Makefile,v 1.19 2016/02/26 11:27:21 jperkin Exp $
 #
 
 DISTNAME=	xf86-video-trident-1.3.7
@@ -15,11 +15,7 @@ USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-CONFIGURE_ENV+=	DRIVER_MAN_SUFFIX=4
-.endif
+CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
 
 .include "../../x11/modular-xorg-server/buildlink3.mk"
 .include "../../x11/randrproto/buildlink3.mk"

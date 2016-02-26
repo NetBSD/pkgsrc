@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2014/10/09 14:07:14 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2016/02/26 11:27:15 jperkin Exp $
 
 DISTNAME=	libXinerama-1.1.3
 CATEGORIES=	x11
@@ -16,11 +16,7 @@ USE_TOOLS+=	pkg-config
 CONFIGURE_ENV+=		LIB_MAN_SUFFIX=3
 PKGCONFIG_OVERRIDE+=	xinerama.pc.in
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD"
-CONFIGURE_ARGS+=	--disable-malloc0returnsnull
-.endif
+CONFIGURE_ARGS.NetBSD+=	--disable-malloc0returnsnull
 
 .include "../../meta-pkgs/modular-xorg/hacks.mk"
 
