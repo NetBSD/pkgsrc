@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.98 2016/01/18 12:53:25 jperkin Exp $
+$NetBSD: distinfo,v 1.99 2016/02/26 21:06:38 tez Exp $
 
 SHA1 (openssh-7.1p1-hpn-20150822.diff.bz2) = 444a2fbd80d57ff93b53ade84ec162e2a2f3aa67
 RMD160 (openssh-7.1p1-hpn-20150822.diff.bz2) = 87fb6887d9ccb4b305ff3c25fd5f67847d9996d1
 Size (openssh-7.1p1-hpn-20150822.diff.bz2) = 12173 bytes
 SHA1 (openssh-7.1p1.tar.gz) = ed22af19f962262c493fcc6ed8c8826b2761d9b6
 RMD160 (openssh-7.1p1.tar.gz) = 2c97ea10099fa8658156c0351d60d715655b9b07
+SHA512 (openssh-7.1p1.tar.gz) = f1491ca5a0a733eb27ede966590642a412cb7be7178dcb7b9e5844bbdc8383032f4b00435192b95fc0365b6fe74d6c5ac8d6facbe9d51e1532d049e2f784e8f7
 Size (openssh-7.1p1.tar.gz) = 1493170 bytes
 SHA1 (patch-Makefile.in) = 98960119bda68a663214c8880484552f1207bcfc
 SHA1 (patch-auth-passwd.c) = 92c487cc3c092efb56f8b4ac4ca08ccd67803a83
@@ -22,6 +23,7 @@ SHA1 (patch-loginrec.c) = 28082deb14258fe63cbecad8ac96afc016de439c
 SHA1 (patch-openbsd-compat_bsd-openpty.c) = eaac72830e36e307c19a7b679e6018ece9aebaac
 SHA1 (patch-openbsd-compat_openbsd-compat.h) = bedbede16ab2fe918419c994ba15a20167b411b4
 SHA1 (patch-openbsd-compat_port-tun.c) = 690dfb1f945d186dd3de5bea70ed8fab86e590ee
+SHA1 (patch-packet.c) = d302a0802861287e9a5230bbe2a1018c5dc17d28
 SHA1 (patch-platform.c) = f8f211dbc5e596c0f82eb86324d18a84c6151ec5
 SHA1 (patch-readconf.c) = e1663d4d9a7ca8de8f87ba42d7b764923cdcc5db
 SHA1 (patch-sandbox-darwin.c) = c9a1fe2e4dbf98e929d983b4206a244e0e354b75
