@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2014/01/09 11:46:46 jperkin Exp $
+# $NetBSD: Makefile,v 1.18 2016/02/26 09:43:09 jperkin Exp $
 
 DISTNAME=	rssh-2.3.4
 PKGREVISION= 1
@@ -46,11 +46,7 @@ CONFIGURE_ARGS+=	--with-rdist=${RSSH_RDIST_PATH:Q}
 CONFIGURE_ARGS+=	--with-rsync=${RSSH_RSYNC_PATH:Q}
 .endif
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-CONFIGURE_ARGS+=	--disable-static
-.endif
+CONFIGURE_ARGS.SunOS+=	--disable-static
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/rssh.conf.default ${DESTDIR}${EGDIR}/rssh.conf

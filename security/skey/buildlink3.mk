@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2012/05/07 01:53:58 dholland Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2016/02/26 09:41:06 jperkin Exp $
 
 BUILDLINK_TREE+=	skey
 
@@ -13,12 +13,10 @@ BUILDLINK_DEPMETHOD.skey?=	build
 .include "../../mk/bsd.fast.prefs.mk"
 
 # PR#40434
-.if ${OPSYS} == "SunOS"
-BUILDLINK_TRANSFORM+=	l:skey:skey:md5
+BUILDLINK_TRANSFORM.SunOS+=	l:skey:skey:md5
 # PR#44324
-.elif ${OPSYS} == "DragonFly" || ${OPSYS} == "FreeBSD"
-BUILDLINK_TRANSFORM+=	l:skey:skey:md
-.endif
+BUILDLINK_TRANSFORM.DragonFly+=	l:skey:skey:md
+BUILDLINK_TRANSFORM.FreeBSD+=	l:skey:skey:md
 .endif # SKEY_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-skey

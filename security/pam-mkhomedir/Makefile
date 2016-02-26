@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/06/10 13:45:16 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2016/02/26 09:41:06 jperkin Exp $
 
 DISTNAME=	pam-mkhomedir-1
 CATEGORIES=	security
@@ -31,12 +31,7 @@ do-install:
 
 # Fix (workaround?) a bug with openpam/NetBSD
 # The bug is described in PR security/39313.
-#
-.include "../../mk/bsd.prefs.mk"
-#
-.if ${OPSYS} == "NetBSD"
-CFLAGS+=		-DNO_STATIC_MODULES
-.endif
+CFLAGS.NetBSD+=		-DNO_STATIC_MODULES
 
 .include "../../mk/pam.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
