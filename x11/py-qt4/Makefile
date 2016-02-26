@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2016/01/31 08:09:22 dbj Exp $
+# $NetBSD: Makefile,v 1.79 2016/02/26 11:27:16 jperkin Exp $
 
 PKGNAME=	${PYPKGPREFIX}-qt4-${PYQT_VERSION}
 PYQT_VERSION=	4.11.4
@@ -62,20 +62,18 @@ DISTNAME=		PyQt-x11-gpl-${PYQT_VERSION}
 
 .include "../../lang/python/extension.mk"
 
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "Darwin"
 # configure-ng.py has Darwin specific code to avoid using sys.executable
 # that assumes the builtin python when configuring the path in pyuic/pyuic4.
 # Instead of patching that out, just do a manual replace-interpreter
 # on the configured result
-SUBST_CLASSES+=                 fix-pyuic4
-SUBST_STAGE.fix-pyuic4=         post-configure
-SUBST_MESSAGE.fix-pyuic4=       Fixing python interpreter path in pyuic4
-SUBST_FILES.fix-pyuic4=         pyuic/pyuic4
-SUBST_SED.fix-pyuic4=           -e 's,python[^ ]*,${PYTHONBIN},'
-.endif
+SUBST_CLASSES.Darwin+=		fix-pyuic4
+SUBST_STAGE.fix-pyuic4=		post-configure
+SUBST_MESSAGE.fix-pyuic4=	Fixing python interpreter path in pyuic4
+SUBST_FILES.fix-pyuic4=		pyuic/pyuic4
+SUBST_SED.fix-pyuic4=		-e 's,python[^ ]*,${PYTHONBIN},'
 
 CONFIGURE_ARGS+=	--verbose
+
 do-configure:
 	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
 		${PYTHONBIN} configure.py ${CONFIGURE_ARGS})

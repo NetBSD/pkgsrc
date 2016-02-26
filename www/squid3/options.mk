@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.16 2015/05/04 09:13:34 adam Exp $
+# $NetBSD: options.mk,v 1.17 2016/02/26 10:57:46 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.squid
 PKG_SUPPORTED_OPTIONS=	inet6 snmp ssl squid-backend-aufs squid-backend-diskd \
@@ -42,14 +42,10 @@ PKG_SUPPORTED_OPTIONS+=	squid-pf
 PKG_SUGGESTED_OPTIONS+=	squid-ipf
 .endif
 
-.if ${OPSYS} == "OpenBSD"
-PKG_SUGGESTED_OPTIONS+=	squid-pf
-.endif
+PKG_SUGGESTED_OPTIONS.OpenBSD+=	squid-pf
 
-.if ${OPSYS} == "Darwin"
-PKG_SUPPORTED_OPTIONS+=	squid-ipfw
-PKG_SUGGESTED_OPTIONS+=	squid-ipfw
-.endif
+PKG_SUPPORTED_OPTIONS.Darwin+=	squid-ipfw
+PKG_SUGGESTED_OPTIONS.Darwin+=	squid-ipfw
 
 # limited platform support squid-arp-acl
 .if !empty(OPSYS:MFreeBSD) || !empty(OPSYS:MNetBSD) || !empty(OPSYS:MOpenBSD) || !empty(OPSYS:MLinux) || !empty(OPSYS:MSunOS)

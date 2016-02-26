@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2015/07/04 16:18:42 joerg Exp $
+# $NetBSD: Makefile,v 1.58 2016/02/26 11:27:17 jperkin Exp $
 
 DISTNAME=		rxvt-2.7.10
 PKGREVISION=		6
@@ -47,9 +47,7 @@ CONFIGURE_ARGS+=	--with-xpm-library=${BUILDLINK_PREFIX.libXpm}/lib
 SPECIAL_PERMS=	${PREFIX}/bin/rxvt ${SETUID_ROOT_PERMS}
 .endif
 
-.if ${OPSYS} == "SunOS"
-CFLAGS+=	-DSunOS
-.endif
+CFLAGS.SunOS+=	-DSunOS
 
 post-patch:
 	${MV} ${WRKSRC}/src/feature.h  ${WRKSRC}/src/feature.h.orig

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2016/01/05 13:11:44 tnn Exp $
+# $NetBSD: Makefile,v 1.18 2016/02/26 11:27:19 jperkin Exp $
 
 DISTNAME=	xf86-video-openchrome-0.3.3
 PKGREVISION=	4
@@ -18,15 +18,13 @@ USE_TOOLS+=	pkg-config
 CONFIGURE_ARGS+=	--enable-maintainer-mode
 CONFIGURE_ARGS+=	--enable-dri
 
+CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
+
 .include "../../mk/bsd.prefs.mk"
 
 PLIST_VARS+=		XvMC
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 PLIST.XvMC=		yes
-.endif
-
-.if ${OPSYS} == "SunOS"
-CONFIGURE_ENV+=	DRIVER_MAN_SUFFIX=4
 .endif
 
 .include "../../x11/modular-xorg-server/buildlink3.mk"

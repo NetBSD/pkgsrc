@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/11/08 15:08:00 sevan Exp $
+# $NetBSD: Makefile,v 1.9 2016/02/26 11:27:16 jperkin Exp $
 
 DISTNAME=	xorg-server-1.12.4
 PKGNAME=	modular-${DISTNAME}
@@ -106,9 +106,7 @@ PLIST.sparc=		yes
 
 # Workaround for PR#41556.
 # Avoid to use bsd_kqueue_apm, force to use bsd_apm instead.
-.if ${OPSYS} == "NetBSD"
-CONFIGURE_ENV+=		ac_cv_header_sys_event_h=no
-.endif
+CONFIGURE_ENV.NetBSD+=	ac_cv_header_sys_event_h=no
 
 INSTALLATION_DIRS+=	lib/xorg/modules/drivers lib/xorg/modules/input
 
