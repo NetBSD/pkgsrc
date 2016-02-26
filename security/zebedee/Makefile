@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2015/06/12 10:51:11 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2016/02/26 09:41:07 jperkin Exp $
 
 DISTNAME=	zebedee-2.5.3
 PKGREVISION=	10
@@ -13,12 +13,9 @@ USE_TOOLS+=		gmake perl tclsh:run
 
 MAKE_ENV+=		PERL5=${PERL5:Q}
 
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "Darwin"
-MAKE_FLAGS+=		OS=macosx
-.else
-MAKE_FLAGS+=		OS=${LOWER_OPSYS:Q}
-.endif
+OPSYSVARS+=		MAKE_FLAGS
+MAKE_FLAGS.Darwin+=	OS=macosx
+MAKE_FLAGS.*+=		OS=${LOWER_OPSYS:Q}
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing tclsh paths.
@@ -35,5 +32,4 @@ PTHREAD_CFLAGS+=  -DHAVE_PTHREADS
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
