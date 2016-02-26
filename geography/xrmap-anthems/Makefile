@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2013/10/18 11:41:18 bsiegert Exp $
+# $NetBSD: Makefile,v 1.12 2016/02/26 14:05:14 jperkin Exp $
 #
 
 DISTNAME=		anthems-1.3
@@ -18,6 +18,6 @@ INSTALLATION_DIRS=	share/rmap/anthems
 USE_TOOLS+=		pax
 
 do-install:
-	cd ${WRKSRC} && pax -rw -pp * ${DESTDIR}${PREFIX}/share/rmap/anthems
+	cd ${WRKSRC} && ${PAX} -rw -pm * ${DESTDIR}${PREFIX}/share/rmap/anthems
 
 .include "../../mk/bsd.pkg.mk"
