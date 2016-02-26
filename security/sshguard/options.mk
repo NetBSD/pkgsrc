@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2014/07/26 19:57:44 tron Exp $
+# $NetBSD: options.mk,v 1.2 2016/02/26 09:41:07 jperkin Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.sshguard
 PKG_OPTIONS_REQUIRED_GROUPS=	firewall
@@ -11,25 +11,15 @@ PKG_OPTIONS_GROUP.firewall=	sshguard-aix sshguard-hosts sshguard-ipfilter \
 # Pick an appropriate default firewall depending on the platform. We however
 # don't restrict the firewall types. You can e.g. use "iptables" under NetBSD
 # to remotely manage a Linux firewall.
-.if ${OPSYS} == "AIX"
-PKG_SUGGESTED_OPTIONS=		sshguard-aix
-.elif ${OPSYS} == "Darwin"
-PKG_SUGGESTED_OPTIONS=		sshguard-ipfw
-.elif ${OPSYS} == "DragonFly"
-PKG_SUGGESTED_OPTIONS=		sshguard-pf
-.elif ${OPSYS} == "Linux"
-PKG_SUGGESTED_OPTIONS=		sshguard-iptables
-.elif ${OPSYS} == "FreeBSD"
-PKG_SUGGESTED_OPTIONS=		sshguard-ipfw
-.elif ${OPSYS} == "NetBSD"
-PKG_SUGGESTED_OPTIONS=		sshguard-ipfilter
-.elif ${OPSYS} == "OpenBSD"
-PKG_SUGGESTED_OPTIONS=		sshguard-pf
-.elif ${OPSYS} == "SunOS"
-PKG_SUGGESTED_OPTIONS=		sshguard-ipfilter
-.else
-PKG_SUGGESTED_OPTIONS=		sshguard-hosts
-.endif
+PKG_SUGGESTED_OPTIONS.AIX=		sshguard-aix
+PKG_SUGGESTED_OPTIONS.Darwin=		sshguard-ipfw
+PKG_SUGGESTED_OPTIONS.DragonFly=	sshguard-pf
+PKG_SUGGESTED_OPTIONS.FreeBSD=		sshguard-ipfw
+PKG_SUGGESTED_OPTIONS.Linux=		sshguard-iptables
+PKG_SUGGESTED_OPTIONS.NetBSD=		sshguard-ipfilter
+PKG_SUGGESTED_OPTIONS.OpenBSD=		sshguard-pf
+PKG_SUGGESTED_OPTIONS.SunOS=		sshguard-ipfilter
+PKG_SUGGESTED_OPTIONS.*=		sshguard-hosts
 
 .include "../../mk/bsd.options.mk"
 
@@ -41,9 +31,7 @@ CONFIGURE_ARGS+=	--with-firewall=hosts
 .elif !empty(PKG_OPTIONS:Msshguard-ipfilter)
 CONFIGURE_ARGS+=	--with-firewall=ipfilter
 # Set correct location of IPFilter configuration file under NetBSD.
-.  if ${OPSYS} == "NetbSD"
-CONFIGURE_ARGS+=	--with-ipfilterconf=/etc/ipf.conf
-.  endif
+CONFIGURE_ARGS.NetBSD+=	--with-ipfilterconf=/etc/ipf.conf
 .elif !empty(PKG_OPTIONS:Msshguard-ipfw)
 CONFIGURE_ARGS+=	--with-firewall=ipfw
 .elif !empty(PKG_OPTIONS:Msshguard-iptables)
