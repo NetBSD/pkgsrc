@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2015/03/15 16:45:04 tnn Exp $
+# $NetBSD: Makefile,v 1.13 2016/02/26 09:41:07 jperkin Exp $
 #
 
 DISTNAME=	validns-0.8
@@ -19,10 +19,7 @@ LICENSE=	2-clause-bsd
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "SunOS"
-MAKE_ENV+=	EXTRALIBS="-lsocket -lnsl"
-.endif
+MAKE_ENV.SunOS+=	EXTRALIBS="-lsocket -lnsl"
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM}

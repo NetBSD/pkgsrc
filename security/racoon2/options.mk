@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2012/01/11 20:08:39 drochner Exp $
+# $NetBSD: options.mk,v 1.2 2016/02/26 09:41:06 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.racoon2
 PKG_SUPPORTED_OPTIONS=	iked kinkd
@@ -28,6 +28,4 @@ CONFIGURE_ARGS+=	--disable-kinkd
 PLIST_SUBST+=		KINKD="@comment "
 .endif
 
-.if ${OPSYS} == "Darwin"
-CONFIGURE_ARGS+=	--disable-natt
-.endif
+CONFIGURE_ARGS.Darwin+=	--disable-natt

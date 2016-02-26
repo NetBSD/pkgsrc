@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2016/02/26 09:41:07 jperkin Exp $
 
 TORBVER=	5.5.2
 
@@ -40,13 +40,9 @@ LDFLAGS.SunOS+=		-lm
 
 ALL_ENV+=		MOZILLA_PKG_NAME=tor-browser
 
-.include "../../mk/bsd.prefs.mk"
-
 # Avoid ld "invalid section index" errors.
-.if ${OPSYS} == "SunOS"
-BUILDLINK_TRANSFORM+=	rm:-fdata-sections
-BUILDLINK_TRANSFORM+=	rm:-ffunction-sections
-.endif
+BUILDLINK_TRANSFORM.SunOS+=	rm:-fdata-sections
+BUILDLINK_TRANSFORM.SunOS+=	rm:-ffunction-sections
 
 LDFLAGS.DragonFly=	-lplc4 -lnspr4
 LDFLAGS.FreeBSD=	-lplc4 -lnspr4

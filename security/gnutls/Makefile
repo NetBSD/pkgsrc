@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.158 2015/09/14 00:29:45 mef Exp $
+# $NetBSD: Makefile,v 1.159 2016/02/26 09:41:05 jperkin Exp $
 
 DISTNAME=	gnutls-3.3.18
 CATEGORIES=	security devel
@@ -36,12 +36,8 @@ MAKE_ENV+=		TZ=UTC
 
 EGDIR=		${PREFIX}/share/examples/gnutls
 
-.include "../../mk/bsd.prefs.mk"
-
 # Assembler support is broken for SunOS in 3.2.9.
-.if ${OPSYS} == "SunOS"
-CONFIGURE_ARGS+=	--disable-hardware-acceleration
-.endif
+CONFIGURE_ARGS.SunOS+=	--disable-hardware-acceleration
 
 INSTALLATION_DIRS=	${DOCDIR} ${EGDIR} include/gnutls
 
