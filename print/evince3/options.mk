@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.5 2015/12/29 04:30:29 dholland Exp $
+# $NetBSD: options.mk,v 1.6 2016/02/26 02:24:34 leot Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.evince
-PKG_SUPPORTED_OPTIONS=	dbus djvu dvi xps
+PKG_SUPPORTED_OPTIONS=	dbus djvu dvi gstreamer xps
 PKG_SUGGESTED_OPTIONS=	dbus
 
 .include "../../mk/bsd.options.mk"
@@ -29,6 +29,14 @@ PLIST.djvu=		yes
 .include "../../graphics/djvulibre-lib/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-djvu
+.endif
+
+.if !empty(PKG_OPTIONS:Mgstreamer)
+PLIST.gstreamer=	yes
+.include "../../multimedia/gst-plugins1-base/buildlink3.mk"
+.include "../../multimedia/gstreamer1/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-multimedia
 .endif
 
 .if !empty(PKG_OPTIONS:Mxps)
