@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/10/21 21:29:14 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2016/02/26 09:41:05 jperkin Exp $
 
 DISTNAME=	Botan-1.11.16
 PKGNAME=	${DISTNAME:tl}
@@ -43,9 +43,8 @@ CONFIGURE_ARGS+=	--cpu=x86_64
 PLIST.x86=	yes
 .endif
 
-.if ${OPSYS} == "SunOS"
-MAKE_FLAGS+=	USER_APP_LINKS_TO=-lnsl
-.endif
+OPSYSVARS+=		MAKE_FLAGS
+MAKE_FLAGS.SunOS+=	USER_APP_LINKS_TO=-lnsl
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
