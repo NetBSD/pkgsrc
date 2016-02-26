@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2016/01/08 10:08:16 fhajny Exp $
+# $NetBSD: Makefile,v 1.35 2016/02/26 13:02:54 jperkin Exp $
 #
 
 DISTNAME=		rudiments-0.54
@@ -17,6 +17,8 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 PTHREAD_AUTO_VARS=	YES
+
+BUILDLINK_TRANSFORM+=	rm:-Wno-long-double
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
