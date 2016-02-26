@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2013/02/06 19:31:05 jperkin Exp $
+# $NetBSD: Makefile,v 1.17 2016/02/26 09:41:06 jperkin Exp $
 #
 
 DISTNAME=	sniff-2.0
@@ -11,12 +11,8 @@ COMMENT=	Program to sniff logins and passwords
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1 sbin
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-LIBS+=		-lsocket -lnsl
-MAKE_ENV+=	LIBS=${LIBS:M*:Q}
-.endif
+LIBS.SunOS+=		-lsocket -lnsl
+MAKE_ENV.SunOS+=	LIBS=${LIBS:M*:Q}
 
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2015/06/12 10:51:10 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2016/02/26 09:41:06 jperkin Exp $
 #
 
 DISTNAME=		skey-1.1.5
@@ -23,21 +23,17 @@ REPLACE_PERL=		skeyprune.pl
 
 INSTALLATION_DIRS=	bin include lib ${PKGMANDIR}/man1 ${PKGMANDIR}/man8
 
-.include "../../mk/bsd.prefs.mk"
-
 # PR#40434
-.if ${OPSYS} == "SunOS"
-CONFIGURE_ENV+=		ac_cv_header_md4_h=no
-CONFIGURE_ENV+=		ac_cv_header_sha1_h=no
-BUILDLINK_TRANSFORM+=	l:crypt:md5:crypt
-.endif
+CONFIGURE_ENV.SunOS+=		ac_cv_header_md4_h=no
+CONFIGURE_ENV.SunOS+=		ac_cv_header_sha1_h=no
+BUILDLINK_TRANSFORM.SunOS+=	l:crypt:md5:crypt
+
 # PR#44324
-.if ${OPSYS} == "DragonFly"
-CONFIGURE_ENV+=		ac_cv_header_rmd160_h=no
-.endif
-.if ${OPSYS} == "DragonFly" || ${OPSYS} == "FreeBSD"
-BUILDLINK_TRANSFORM+=	l:crypt:md:crypt
-.endif
+CONFIGURE_ENV.DragonFly+=	ac_cv_header_rmd160_h=no
+
+BUILDLINK_TRANSFORM.DragonFly+=	l:crypt:md:crypt
+BUILDLINK_TRANSFORM.FreeBSD+=	l:crypt:md:crypt
+
 # setusercontext() is in -lutil
 LIBS.DragonFly+=	-lutil
 LIBS.FreeBSD+=		-lutil

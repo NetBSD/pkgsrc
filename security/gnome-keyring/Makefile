@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2015/04/25 14:24:48 tnn Exp $
+# $NetBSD: Makefile,v 1.84 2016/02/26 09:41:05 jperkin Exp $
 
 DISTNAME=	gnome-keyring-2.32.1
 PKGREVISION=	19
@@ -25,10 +25,7 @@ CFLAGS.HPUX+=		-DMAP_ANON=MAP_ANONYMOUS
 #
 CFLAGS.NetBSD+=		-DNO_STATIC_MODULES
 
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "SunOS"
-CONFIGURE_ENV+=	ac_cv_header_security_pam_modules_h=yes
-.endif
+CONFIGURE_ENV.SunOS+=	ac_cv_header_security_pam_modules_h=yes
 
 .include "../../mk/dlopen.buildlink3.mk"
 
