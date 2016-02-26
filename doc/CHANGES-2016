@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.866 2016/02/25 21:48:08 tnn Exp $
+$NetBSD: CHANGES-2016,v 1.867 2016/02/26 02:24:50 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1176,3 +1176,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added databases/postgresql95-pltcl version 9.5.1 [tnn 2016-02-25]
 	Added databases/postgresql95-replicationtools version 9.5.1 [tnn 2016-02-25]
 	Added databases/postgresql95-server version 9.5.1 [tnn 2016-02-25]
+	Updated print/evince3 to 3.18.2 [leot 2016-02-26]
