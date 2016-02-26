@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2016/02/25 11:28:58 jperkin Exp $
+# $NetBSD: Makefile,v 1.25 2016/02/26 10:52:01 fhajny Exp $
 #
 
 DISTNAME=		prosody-0.9.10
+PKGREVISION=		1
 CATEGORIES=		chat
 MASTER_SITES=		http://prosody.im/downloads/source/
 
@@ -45,10 +46,7 @@ PKG_SHELL.${PROSODY_USER}=	${NOLOGIN}
 PKG_SYSCONFSUBDIR=	${PKGBASE}
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 CONF_FILES+=		${EGDIR}/prosody.cfg.lua ${PKG_SYSCONFDIR}/prosody.cfg.lua
-CONF_FILES+=		${EGDIR}/certs/example.com.cnf ${PKG_SYSCONFDIR}/certs/example.com.cnf
-CONF_FILES+=		${EGDIR}/certs/example.com.key ${PKG_SYSCONFDIR}/certs/example.com.key
 CONF_FILES+=		${EGDIR}/certs/localhost.cnf ${PKG_SYSCONFDIR}/certs/localhost.cnf
-CONF_FILES+=		${EGDIR}/certs/localhost.key ${PKG_SYSCONFDIR}/certs/localhost.key
 
 REPLACE_LUA+=		prosody prosodyctl
 
@@ -62,6 +60,7 @@ SUBST_VARS.path=	EGDIR PROSODY_DATA PROSODY_LOG PROSODY_RUN
 CONFIGURE_ARGS+=	--cflags=${CFLAGS:Q}
 CONFIGURE_ARGS+=	--datadir=${PROSODY_DATA}
 CONFIGURE_ARGS+=	--ldflags="-L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib -shared"
+CONFIGURE_ARGS+=	--no-example-certs
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-lua-include=${PREFIX}/${LUA_INCDIR}
