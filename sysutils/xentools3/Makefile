@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2015/12/05 21:26:00 adam Exp $
+# $NetBSD: Makefile,v 1.46 2016/02/26 10:24:14 jperkin Exp $
 
 VERSION=	3.1.4
 DISTNAME=	xen-${VERSION}
@@ -110,18 +110,15 @@ SUBST_FILES.prefix+=	python/xen/xend/osdep.py
 SUBST_FILES.prefix+=	misc/xen-python-path
 SUBST_SED.prefix=	-e "s,@PREFIX@,${PREFIX},g"
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD"
-SUBST_CLASSES+=		proc
+SUBST_CLASSES.NetBSD+=	proc
 SUBST_STAGE.proc=	pre-configure
 SUBST_FILES.proc=	python/xen/xend/XendVnet.py
 SUBST_FILES.proc+=	xenstore/xs_lib.c
 SUBST_SED.proc=		-e "s|/proc|/kern|g"
-PROCPATH=		/kern
-.else
-PROCPATH=		/proc
-.endif
+
+OPSYSVARS+=		PROCPATH
+PROCPATH.NetBSD=	/kern
+PROCPATH.*=		/proc
 
 RCD_SCRIPTS=		xend xenbackendd xendomains
 FILES_SUBST+=		RCD_INTERPRETER=${PYTHONBIN:Q}
