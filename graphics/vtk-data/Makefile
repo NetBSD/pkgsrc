@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/06 14:11:24 asau Exp $
+# $NetBSD: Makefile,v 1.7 2016/02/26 14:05:48 jperkin Exp $
 #
 
 DISTNAME=	VTKData-4.2
@@ -15,7 +15,7 @@ EXAMPLES_DIR=	share/vtk
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/${EXAMPLES_DIR}
-	cd ${WRKSRC} && pax -rw -pe -s '|.*/CVS/.*||' . \
+	cd ${WRKSRC} && ${PAX} -rw -pm -s '|.*/CVS/.*||' . \
 		${DESTDIR}${PREFIX}/${EXAMPLES_DIR}
 
 .include "../../graphics/vtk/Makefile.common"
