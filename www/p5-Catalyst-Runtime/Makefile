@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2015/11/27 23:19:57 mef Exp $
+# $NetBSD: Makefile,v 1.35 2016/02/26 22:23:13 abs Exp $
 
 DISTNAME=	Catalyst-Runtime-5.90103
+PKGREVISION=	1
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Catalyst/}
@@ -47,12 +48,12 @@ DEPENDS+=	p5-URI>=1.36:../../www/p5-URI
 DEPENDS+=	p5-JSON-MaybeXS>=1.36:../../converters/p5-JSON-MaybeXS
 DEPENDS+=	p5-CGI-Struct>=0:../../www/p5-CGI-Struct
 DEPENDS+=	p5-Catalyst-DispatchType-Regex>=5.90021:../../www/p5-Catalyst-DispatchType-Regex
+DEPENDS+=	p5-Plack-Middleware-FixMissingBodyInRedirect-[0-9]*:../../www/p5-Plack-Middleware-FixMissingBodyInRedirect
+DEPENDS+=	p5-Plack-Middleware-MethodOverride-[0-9]*:../../www/p5-Plack-Middleware-MethodOverride
+DEPENDS+=	p5-Plack-Middleware-RemoveRedundantBody-[0-9]*:../../www/p5-Plack-Middleware-RemoveRedundantBody
 
 BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 #BUILD_DEPENDS+=	p5-Test-MockObject>=1.07:../../devel/p5-Test-MockObject
-BUILD_DEPENDS+=	p5-Plack-Middleware-FixMissingBodyInRedirect-[0-9]*:../../www/p5-Plack-Middleware-FixMissingBodyInRedirect
-BUILD_DEPENDS+=	p5-Plack-Middleware-MethodOverride-[0-9]*:../../www/p5-Plack-Middleware-MethodOverride
-BUILD_DEPENDS+=	p5-Plack-Middleware-RemoveRedundantBody-[0-9]*:../../www/p5-Plack-Middleware-RemoveRedundantBody
 
 #MAKE_ENV+=	PERL_EXTUTILS_AUTOINSTALL=--skipdeps
 PERL5_PACKLIST= auto/Catalyst/Runtime/.packlist
