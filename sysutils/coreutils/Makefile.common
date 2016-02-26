@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.14 2016/02/16 11:54:12 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.15 2016/02/26 10:24:11 jperkin Exp $
 # used by sysutils/coreutils/Makefile
 # used by misc/gnuls/Makefile
 
@@ -35,13 +35,9 @@ TEST_TARGET=		check
 # Otherwise configure aborts when ran by root
 CONFIGURE_ENV+=		FORCE_UNSAFE_CONFIGURE=yes
 
-.if ${OPSYS} == "Interix"
-CONFIGURE_ENV+=		ac_list_mounted_fs=found
-.endif
+CONFIGURE_ENV.Interix+=	ac_list_mounted_fs=found
 
-.if ${OPSYS} == "DragonFly"
-CONFIGURE_ENV+= 	gl_cv_search_pthread_join=-lpthread
-.endif
+CONFIGURE_ENV.DragonFly+= 	gl_cv_search_pthread_join=-lpthread
 
 # Various tests rely on GCC's -O2 behaviour (e.g. -D__NO_INLINE__) and
 # without it we run into undefined symbol issues.
@@ -50,9 +46,7 @@ CFLAGS+=		-O2
 .endif
 
 # Explicitly disable inotify support whilst it is Linux-specific.
-.if ${OPSYS} == "SunOS"
-CONFIGURE_ENV+=		ac_cv_func_inotify_init=no
-.endif
+CONFIGURE_ENV.SunOS+=	ac_cv_func_inotify_init=no
 
 .if !empty(MACHINE_PLATFORM:MDarwin-[9].*-*)
 CONFIGURE_ENV+=		ac_cv_header_sys_acl_h=no jm_cv_func_svid_putenv=yes

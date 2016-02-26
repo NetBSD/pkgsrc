@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2016/01/28 15:51:34 prlw1 Exp $
+# $NetBSD: Makefile,v 1.81 2016/02/26 10:24:10 jperkin Exp $
 
 DISTNAME=		apcupsd-3.14.13r2365
 CATEGORIES=		sysutils
@@ -65,13 +65,12 @@ CONF_FILES_PERMS+= ${EGDIR}/onbattery ${PKG_SYSCONFDIR}/onbattery ${REAL_ROOT_US
 CONF_FILES_PERMS+= ${EGDIR}/apccontrol ${PKG_SYSCONFDIR}/apccontrol ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 755
 
 RCD_SCRIPTS=	apcupsd
-PLATFORM_SUBDIR=${OPSYS:tl}
-.if ${OPSYS} == "DragonFly"
-PLATFORM_SUBDIR=netbsd
-.endif
-.if ${OPSYS} == "SunOS"
-PLATFORM_SUBDIR=sun
-.endif
+
+OPSYSVARS+=			PLATFORM_SUBDIR
+PLATFORM_SUBDIR.DragonFly=	netbsd
+PLATFORM_SUBDIR.SunOS=		sun
+PLATFORM_SUBDIR.*=		${OPSYS:tl}
+
 RCD_SCRIPT_SRC.apcupsd=	${WRKSRC}/platforms/${PLATFORM_SUBDIR}/apcupsd
 
 EGFILES= ${PLATFORM_SUBDIR}/apccontrol etc/changeme etc/commfailure etc/commok \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2015/06/12 10:51:40 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2016/02/26 10:32:47 jperkin Exp $
 
 DISTNAME=	pod2mdoc-0.2
 PKGREVISION=	1
@@ -19,10 +19,6 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pod2mdoc ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/pod2mdoc.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD"
-CPPFLAGS+=	-DHAVE_OHASH=0
-.endif
+CPPFLAGS.NetBSD+=	-DHAVE_OHASH=0
 
 .include "../../mk/bsd.pkg.mk"

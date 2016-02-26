@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2015/12/29 05:06:06 dholland Exp $
+# $NetBSD: Makefile.common,v 1.14 2016/02/26 10:24:11 jperkin Exp $
 #
 # used by sysutils/cdrdao/Makefile
 # used by sysutils/gcdmaster/Makefile
@@ -27,10 +27,9 @@ CONFIGURE_ARGS+=	--with-gtkmm-exec-prefix=/dev/null
 LDFLAGS+=		-L../paranoia
 LDFLAGS.SunOS=		-lvolmgt -lnsl
 
+CONFIGURE_ARGS.SunOS+=	--with-scglib
+
 .include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "SunOS"
-CONFIGURE_ARGS+=--with-scglib
-.endif
 
 .if !empty(CC:M*gcc*)
 MAKE_ENV+=	CCOM=gcc

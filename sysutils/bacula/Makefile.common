@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.66 2015/06/22 16:50:38 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.67 2016/02/26 10:24:10 jperkin Exp $
 #
 # used by sysutils/bacula-clientonly/Makefile
 # used by sysutils/bacula-tray-monitor/Makefile
@@ -68,12 +68,9 @@ CONFIGURE_ARGS+=	--with-working-dir=${BACULA_WORKINGDIR}
 CONFIGURE_ARGS+=	--with-pid-dir=${BACULA_PIDDIR}
 CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.editlinereadline}/include/readline
 
-.if ${OPSYS} == "Linux"
-CONFIGURE_ARGS+=	--enable-smartalloc
-.endif
-.if ${OPSYS} == "DragonFly"
-CONFIGURE_ARGS+=	--disable-xattr
-.endif
+CONFIGURE_ARGS.Linux+=	--enable-smartalloc
+
+CONFIGURE_ARGS.DragonFly+=	--disable-xattr
 
 PTHREAD_OPTS+=		require
 PTHREAD_AUTO_VARS=	yes

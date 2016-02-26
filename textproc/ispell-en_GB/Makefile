@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/03/14 08:15:51 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2016/02/26 10:32:47 jperkin Exp $
 #
 
 DISTNAME=	ispell-3.4.00
@@ -25,12 +25,9 @@ MAKE_FLAGS+=	TMPDIR=${WRKDIR:Q}
 INSTALLATION_DIRS=	lib
 MAKE_JOBS_SAFE=		no
 
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "SunOS"
-WORDS=		/usr/dict/words
-.else
-WORDS=		/usr/share/dict/words
-.endif
+OPSYSVARS+=	WORDS
+WORDS.SunOS=	/usr/dict/words
+WORDS.*=	/usr/share/dict/words
 
 do-configure:
 	cd ${WRKSRC};							\

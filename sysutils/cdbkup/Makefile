@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2015/06/12 10:51:11 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2016/02/26 10:24:11 jperkin Exp $
 
 DISTNAME=		cdbkup-1.0
 PKGREVISION=		11
@@ -29,9 +29,7 @@ CDBKUP_SNARDIR?=	/var/db/${PKGBASE}
 CDBKUP_DUMPGRP?=	operator
 .endif
 
-.if ${OPSYS} == "NetBSD"
-CONFIGURE_ENV+=		MOUNT=/sbin/mount UMOUNT=/sbin/umount
-.endif
+CONFIGURE_ENV.NetBSD+=	MOUNT=/sbin/mount UMOUNT=/sbin/umount
 
 CONFIGURE_ARGS+=	--with-snardir=${CDBKUP_SNARDIR:Q} \
 			--with-dumpgrp=${CDBKUP_DUMPGRP:Q}

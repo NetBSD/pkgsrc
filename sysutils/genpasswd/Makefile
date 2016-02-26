@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/03/14 14:19:52 kim Exp $
+# $NetBSD: Makefile,v 1.9 2016/02/26 10:24:12 jperkin Exp $
 #
 
 DISTNAME=		genpasswd-1.5
@@ -15,10 +15,6 @@ INSTALL_TARGET=		install install.man		\
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Darwin"
-BUILD_TARGET=	gcc
-.endif
+BUILD_TARGET.Darwin=	gcc
 
 .include "../../mk/bsd.pkg.mk"

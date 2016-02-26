@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2016/01/20 11:49:13 jperkin Exp $
+# $NetBSD: Makefile,v 1.30 2016/02/26 10:24:11 jperkin Exp $
 #
 
 DISTNAME=	checkperms-1.11
@@ -28,9 +28,7 @@ CHECK_PERMS=		no
 IGNORE_CCACHE=		yes
 IGNORE_DISTCC=		yes
 
-.if ${OPSYS} == "Linux"
-MAKE_ENV+=	NOGCCERROR=yes		# see PR 35930
-.endif
+MAKE_ENV.Linux+=	NOGCCERROR=yes		# see PR 35930
 
 # Avoid catpage regeneration
 post-extract:

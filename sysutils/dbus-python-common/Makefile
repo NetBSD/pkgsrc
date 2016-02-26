@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/12/05 21:25:58 adam Exp $
+# $NetBSD: Makefile,v 1.9 2016/02/26 10:24:12 jperkin Exp $
 
 DISTNAME=	dbus-python-1.2.0
 PKGNAME=	dbus-python-common-1.2.0
@@ -22,10 +22,7 @@ USE_TOOLS+=	pkg-config gmake
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+= --disable-html-docs --disable-api-docs
 
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "SunOS"
-BUILDLINK_TRANSFORM+=	rm:-std=c9x
-.endif
+BUILDLINK_TRANSFORM.SunOS+=	rm:-std=c9x
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/dbus-1.0/dbus

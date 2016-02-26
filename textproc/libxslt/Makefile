@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2015/07/08 10:34:46 richard Exp $
+# $NetBSD: Makefile,v 1.102 2016/02/26 10:32:47 jperkin Exp $
 
 DISTNAME=	libxslt-1.1.28
 PKGREVISION=	5
@@ -11,6 +11,9 @@ HOMEPAGE=	http://xmlsoft.org/XSLT/
 COMMENT=	XSLT parser library from the GNOME project
 LICENSE=	mit # with advertisement clause
 
+BUILD_DEPENDS+=	docbook-xml-[0-9]*:../../textproc/docbook-xml
+BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake perl
 GNU_CONFIGURE=		yes
@@ -22,6 +25,8 @@ PKGCONFIG_OVERRIDE=	libxslt.pc.in
 PKGCONFIG_OVERRIDE+=	libexslt.pc.in
 TEST_TARGET=		check
 
+BUILDLINK_TRANSFORM.SunOS+=	opt:-Wl,./libxslt.syms:-Wl,./libxslt_solaris.syms
+
 .include "../../mk/bsd.prefs.mk"
 .if !empty(MACHINE_PLATFORM:MIRIX-5*)
 CPPFLAGS+=	-Dsocklen_t=int
@@ -29,13 +34,6 @@ CPPFLAGS+=	-Dsocklen_t=int
 
 post-extract:
 	cp ${WRKSRC}/libxslt/libxslt.syms ${WRKSRC}/libxslt/libxslt_solaris.syms
-
-.if ${OPSYS} == "SunOS"
-BUILDLINK_TRANSFORM+=	opt:-Wl,./libxslt.syms:-Wl,./libxslt_solaris.syms
-.endif
-
-BUILD_DEPENDS+=	docbook-xml-[0-9]*:../../textproc/docbook-xml
-BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
 BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=2.6.27
 

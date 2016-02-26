@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2015/06/12 10:51:13 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2016/02/26 10:24:12 jperkin Exp $
 #
 
 DISTNAME=	krusader-1.90.0
@@ -18,11 +18,7 @@ SET_LIBDIR=	YES
 
 SHLIBTOOL_OVERRIDE=	# empty
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "DragonFly"
-CONFIGURE_ARGS+= --without-acl
-.endif
+CONFIGURE_ARGS.DragonFly+= --without-acl
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"

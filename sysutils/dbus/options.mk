@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2015/09/07 23:24:46 gdt Exp $
+# $NetBSD: options.mk,v 1.10 2016/02/26 10:24:12 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dbus
 PKG_SUPPORTED_OPTIONS+=	debug x11
@@ -13,11 +13,9 @@ PKG_SUPPORTED_OPTIONS+=	kqueue
 PKG_SUGGESTED_OPTIONS+=	kqueue
 .endif
 
-.if ${OPSYS} == "Darwin"
 # We may want to make it SUGGESTED once we have a framework for
 # launchd support. See PR/49591.
-PKG_SUPPORTED_OPTIONS+=	launchd
-.endif
+PKG_SUPPORTED_OPTIONS.Darwin+=	launchd
 
 .include "../../mk/bsd.options.mk"
 
