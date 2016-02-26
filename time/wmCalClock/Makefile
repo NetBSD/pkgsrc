@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/23 10:24:12 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2016/02/26 10:37:09 jperkin Exp $
 #
 
 DISTNAME=	wmCalClock-1.25
@@ -17,11 +17,7 @@ USE_TOOLS+=	gmake
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-MAKE_ENV+=	EXTRALIBS="-lsocket -lnsl"
-.endif
+MAKE_ENV.SunOS+=	EXTRALIBS="-lsocket -lnsl"
 
 do-install:
 	${INSTALL_MAN} ${WRKSRC}/wmCalClock.1 \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.114 2015/04/25 14:24:59 tnn Exp $
+# $NetBSD: Makefile,v 1.115 2016/02/26 10:38:36 jperkin Exp $
 
 DISTNAME=	metacity-2.34.13
 PKGREVISION=	1
@@ -30,10 +30,8 @@ CONFIGURE_ARGS+=	--disable-xinerama
 CONFIGURE_ARGS+=	--disable-compositor
 .endif
 
-CFLAGS.SunOS+=		-std=c99 -D__EXTENSIONS__
-.if ${OPSYS} == "SunOS"
-BUILDLINK_TRANSFORM+=	rm:-ansi
-.endif
+CFLAGS.SunOS+=			-std=c99 -D__EXTENSIONS__
+BUILDLINK_TRANSFORM.SunOS+=	rm:-ansi
 
 BUILD_DEPENDS+=		itstool-[0-9]*:../../textproc/itstool
 
