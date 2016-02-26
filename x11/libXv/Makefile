@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2014/10/09 14:07:15 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2016/02/26 11:27:15 jperkin Exp $
 
 DISTNAME=		libXv-1.0.10
 CATEGORIES=		x11
@@ -14,11 +14,7 @@ PKGCONFIG_OVERRIDE+=	xv.pc.in
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD"
-CONFIGURE_ARGS+=	--disable-malloc0returnsnull
-.endif
+CONFIGURE_ARGS.NetBSD+=	--disable-malloc0returnsnull
 
 .include "../../meta-pkgs/modular-xorg/hacks.mk"
 

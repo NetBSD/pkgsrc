@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2016/01/24 16:14:45 jperkin Exp $
+# $NetBSD: Makefile,v 1.38 2016/02/26 11:27:14 jperkin Exp $
 #
 
 DISTNAME=	enlightenment-0.17.3
@@ -35,14 +35,12 @@ BUILD_DEFS+=		PKG_SYSCONFBASE
 
 INSTALLATION_DIRS=	${EGDIR}
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-SUBST_CLASSES+=		solhost
+SUBST_CLASSES.SunOS+=	solhost
 SUBST_STAGE.solhost=	pre-configure
 SUBST_FILES.solhost=	configure
 SUBST_SED.solhost=	-e '/^MODULE_ARCH=/s/.host_os/solaris/'
-.endif
+
+.include "../../mk/bsd.prefs.mk"
 
 .if ${X11_TYPE} == "modular"
 CPPFLAGS+=	-DPKGSRC_X11BASE=\"${X11BASE:Q}\"
