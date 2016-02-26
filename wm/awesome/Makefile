@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2015/04/25 14:24:58 tnn Exp $
+# $NetBSD: Makefile,v 1.55 2016/02/26 13:56:50 jperkin Exp $
 #
 
 DISTNAME=	awesome-3.5.5
@@ -46,9 +46,10 @@ BUILD_DEPENDS+=	asciidoc>=8.3.0:../../textproc/asciidoc
 BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 BUILD_DEPENDS+=	docbook-xml-[0-9]*:../../textproc/docbook-xml
 
-DEPENDS+=		${LUA_PKGPREFIX}-gi>=0.7.0:../../devel/lua-gi
+DEPENDS+=		lua51-gi>=0.7.0:../../devel/lua-gi
 DEPENDS+=		pango>=1.29.4nb2:../../devel/pango
 
+LDFLAGS.Darwin+=	-liconv
 LDFLAGS.SunOS+=		-liconv
 
 .include "../../converters/libiconv/buildlink3.mk"
@@ -58,7 +59,7 @@ LDFLAGS.SunOS+=		-liconv
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/cairo-gobject/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
-.include "../../lang/lua/buildlink3.mk"
+.include "../../lang/lua51/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libxcb/buildlink3.mk"
 .include "../../x11/libxdg-basedir/buildlink3.mk"
