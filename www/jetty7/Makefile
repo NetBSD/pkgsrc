@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/06/20 13:15:50 fhajny Exp $
+# $NetBSD: Makefile,v 1.7 2016/02/26 14:03:22 jperkin Exp $
 #
 
 JETTYVER=	7.6.8.v20121106
@@ -91,7 +91,7 @@ pre-configure:
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/etc/* ${DESTDIR}${EGDIR}
 	${RM} -r ${WRKSRC}/etc
-	(cd ${WRKSRC} && pax -rw -pmo . ${DESTDIR}${JETTY_HOME})
+	(cd ${WRKSRC} && ${PAX} -rw -pm . ${DESTDIR}${JETTY_HOME})
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
