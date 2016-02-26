@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2016/02/25 08:27:05 jperkin Exp $
+# $NetBSD: Makefile,v 1.14 2016/02/26 12:15:15 jperkin Exp $
 
 DISTNAME=	libxkbcommon-0.5.0
 CATEGORIES=	x11
@@ -16,10 +16,13 @@ USE_LIBTOOL=	yes
 
 PKGCONFIG_OVERRIDE+=	xkbcommon.pc.in
 
-BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=./xkbcommon.map
-BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=./xkbcommon-x11.map
-
 .include "options.mk"
+
+.if ${OPSYS} == "Darwin" || ${OPSYS} == "SunOS"
+BUILDLINK_TRANSFORM+=	rm:-Wl,--version-script=./xkbcommon.map
+BUILDLINK_TRANSFORM+=	rm:-Wl,--version-script=./xkbcommon-x11.map
+.endif
+
 .include "../../devel/xorg-util-macros/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libxcb+=	libxcb>=1.10
 .include "../../x11/libxcb/buildlink3.mk"
