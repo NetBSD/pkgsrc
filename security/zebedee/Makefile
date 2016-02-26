@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2016/02/26 09:41:07 jperkin Exp $
+# $NetBSD: Makefile,v 1.40 2016/02/26 11:40:30 jperkin Exp $
 
 DISTNAME=	zebedee-2.5.3
 PKGREVISION=	10
@@ -13,7 +13,6 @@ USE_TOOLS+=		gmake perl tclsh:run
 
 MAKE_ENV+=		PERL5=${PERL5:Q}
 
-OPSYSVARS+=		MAKE_FLAGS
 MAKE_FLAGS.Darwin+=	OS=macosx
 MAKE_FLAGS.*+=		OS=${LOWER_OPSYS:Q}
 
