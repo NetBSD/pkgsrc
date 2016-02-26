@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/07/03 23:23:40 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2016/02/26 11:27:19 jperkin Exp $
 
 DISTNAME=	xf86-video-modesetting-0.9.0
 CATEGORIES=	x11
@@ -14,13 +14,9 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 
-.include "../../mk/bsd.prefs.mk"
-
 USE_OLD_MODULAR_XORG_SERVER=		yes
 
-.if ${OPSYS} == "SunOS"
-CONFIGURE_ENV+=	DRIVER_MAN_SUFFIX=	4
-.endif
+CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
 
 BUILDLINK_API_DEPENDS.xextproto+=	xextproto>=7.0.99.1
 .include "../../x11/xextproto/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2014/10/09 14:07:13 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2016/02/26 11:27:14 jperkin Exp $
 
 DISTNAME=		libXfixes-2.0.1
 PKGNAME=		${DISTNAME:S/libX/X/}
@@ -25,9 +25,7 @@ PKGCONFIG_OVERRIDE+=	xfixes.pc.in
 PKG_FAIL_REASON+="This package is for native X11 only; use libXfixes instead."
 .endif
 
-.if (${OPSYS} == "Darwin")
-CFLAGS+=	-fno-common
-.endif
+CFLAGS.Darwin+=	-fno-common
 
 .include "../../x11/fixesproto4/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"

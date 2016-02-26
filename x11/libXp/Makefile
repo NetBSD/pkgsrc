@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2015/02/23 07:33:40 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2016/02/26 11:27:15 jperkin Exp $
 
 DISTNAME=		libXp-1.0.3
 CATEGORIES=		x11 print
@@ -16,11 +16,9 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		LIB_MAN_SUFFIX=3
 PKGCONFIG_OVERRIDE+=	xp.pc.in
 
-.include "../../mk/bsd.prefs.mk"
+CONFIGURE_ARGS.NetBSD+=	--disable-malloc0returnsnull
 
-.if ${OPSYS} == "NetBSD"
-CONFIGURE_ARGS+=	--disable-malloc0returnsnull
-.endif
+.include "../../mk/bsd.prefs.mk"
 
 .if ${X11_TYPE} == "native"
 XPRINT_CFLAGS=	-I${X11BASE}/include

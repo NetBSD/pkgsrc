@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/10/28 06:31:08 asau Exp $
+# $NetBSD: Makefile,v 1.27 2016/02/26 10:57:46 jperkin Exp $
 
 DISTNAME=	w3c-httpd-3.0A
 PKGREVISION=	1
@@ -16,22 +16,16 @@ BUILD_TARGET=	build-all
 # prevent conflict with directory All on non-case-sensitive file systems
 USE_TOOLS+=	csh
 
-.include "../../mk/bsd.prefs.mk"
-.if (${OPSYS} == "FreeBSD") || (${OPSYS} == "DragonFly" )
-OSNAME= freebsd
-.elif (${OPSYS} == "Darwin")
-OSNAME=darwin
-CPPFLAGS+=	-Dunix
-.elif (${OPSYS} == "IRIX")
-OSNAME=sgi
-.elif (${OPSYS} == "OSF1")
-OSNAME=osf1
-.elif (${OPSYS} == "Linux")
-OSNAME=linux
-.else
-#       covers OpenBSD, too
-OSNAME= netbsd
-.endif
+OPSYSVARS+=	OSNAME
+OSNAME.Darwin=		darwin
+OSNAME.DragonFly=	freebsd
+OSNAME.FreeBSD=		freebsd
+OSNAME.IRIX=		sgi
+OSNAME.Linux=		linux
+OSNAME.OSF1=		osf1
+OSNAME.*=		netbsd
+
+CPPFLAGS.Darwin+=	-Dunix
 
 CFLAGS+=	${CPPFLAGS}
 

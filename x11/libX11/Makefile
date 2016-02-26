@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2015/03/10 07:16:26 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2016/02/26 11:27:14 jperkin Exp $
 
 DISTNAME=		libX11-1.6.3
 CATEGORIES=		x11 devel
@@ -21,11 +21,7 @@ PKGCONFIG_OVERRIDE+=	x11.pc.in
 
 CONFIGURE_ENV+=		FILE_MAN_SUFFIX=5
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD"
-CONFIGURE_ARGS+=	--disable-malloc0returnsnull
-.endif
+CONFIGURE_ARGS.NetBSD+=	--disable-malloc0returnsnull
 
 .include "../../mk/pthread.buildlink3.mk"
 CPPFLAGS.OSF1+=		${PTHREAD_CFLAGS} # Required by compiler if including pthread.h
@@ -38,6 +34,8 @@ BUILDLINK_API_DEPENDS.xproto+=xproto>=7.0.17
 
 TOOL_DEPENDS+=		tradcpp-[0-9]*:../../devel/tradcpp
 CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/tradcpp -Uunix"
+
+.include "../../mk/bsd.prefs.mk"
 
 .if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
 CONFIGURE_ENV+=		CC_FOR_BUILD=${NATIVE_CC:Q}

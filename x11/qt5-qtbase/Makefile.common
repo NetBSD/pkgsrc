@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2016/01/28 17:00:29 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.19 2016/02/26 11:27:16 jperkin Exp $
 # used by x11/qt5-mysql/Makefile
 # used by x11/qt5-odbc/Makefile
 # used by x11/qt5-psql/Makefile
@@ -42,10 +42,8 @@ CFLAGS.NetBSD+=		-D_NETBSD_SOURCE
 BUILDLINK_TRANSFORM+=	rm:-Wundef
 
 # SunOS ld doesn't support -rpath-link
-.if ${OPSYS} == "SunOS"
-BUILDLINK_TRANSFORM+=	rm:-Wl,-rpath-link,${PREFIX}/qt5/lib
-BUILDLINK_TRANSFORM+=	rm:-Wl,-rpath-link,${WRKSRC}/lib
-.endif
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-rpath-link,${PREFIX}/qt5/lib
+BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,-rpath-link,${WRKSRC}/lib
 
 MAKE_ENV+=		QTPREFIX=${QTPREFIX:Q}
 PLIST_VARS+=		mac unix

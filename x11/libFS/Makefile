@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2015/05/01 08:34:56 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2016/02/26 11:27:14 jperkin Exp $
 
 DISTNAME=		libFS-1.0.7
 CATEGORIES=		x11 devel
@@ -15,11 +15,7 @@ USE_TOOLS+=		pkg-config
 
 PKGCONFIG_OVERRIDE+=	libfs.pc.in
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD"
-CONFIGURE_ARGS+=	--disable-malloc0returnsnull
-.endif
+CONFIGURE_ARGS.NetBSD+=	--disable-malloc0returnsnull
 
 .include "../../meta-pkgs/modular-xorg/hacks.mk"
 

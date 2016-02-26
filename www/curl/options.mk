@@ -1,14 +1,11 @@
-# $NetBSD: options.mk,v 1.13 2015/06/03 12:00:06 fhajny Exp $
+# $NetBSD: options.mk,v 1.14 2016/02/26 10:57:45 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.curl
 PKG_SUPPORTED_OPTIONS=	inet6 libssh2 gssapi ldap rtmp libidn http2
 PKG_SUGGESTED_OPTIONS=	inet6 libidn
 
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == NetBSD
 # Kerberos is built in - no additional dependency
-PKG_SUGGESTED_OPTIONS+=	gssapi
-.endif
+PKG_SUGGESTED_OPTIONS.NetBSD+=	gssapi
 
 .include "../../mk/bsd.options.mk"
 

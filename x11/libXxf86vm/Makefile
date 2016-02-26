@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2015/02/24 08:46:04 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2016/02/26 11:27:15 jperkin Exp $
 
 DISTNAME=		libXxf86vm-1.1.4
 CATEGORIES=		x11
@@ -17,11 +17,7 @@ GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	xxf86vm.pc.in
 CONFIGURE_ENV+=		LIB_MAN_SUFFIX=3
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD"
-CONFIGURE_ARGS+=	--disable-malloc0returnsnull
-.endif
+CONFIGURE_ARGS.NetBSD+=	--disable-malloc0returnsnull
 
 .include "../../meta-pkgs/modular-xorg/hacks.mk"
 

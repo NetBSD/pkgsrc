@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2015/05/27 06:44:09 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2016/02/26 11:27:15 jperkin Exp $
 
 DISTNAME=		libXrandr-1.5.0
 CATEGORIES=		x11 devel
@@ -18,11 +18,7 @@ USE_TOOLS+=		pkg-config
 CONFIGURE_ENV+=		LIB_MAN_SUFFIX=3
 PKGCONFIG_OVERRIDE+=	xrandr.pc.in
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD"
-CONFIGURE_ARGS+=	--disable-malloc0returnsnull
-.endif
+CONFIGURE_ARGS.NetBSD+=	--disable-malloc0returnsnull
 
 BUILDLINK_API_DEPENDS.libX11+=	libX11>=1.6
 .include "../../x11/libX11/buildlink3.mk"

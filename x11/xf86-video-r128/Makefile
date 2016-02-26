@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2016/01/22 12:11:57 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2016/02/26 11:27:20 jperkin Exp $
 
 DISTNAME=	xf86-video-r128-6.10.1
 CATEGORIES=	x11
@@ -17,11 +17,7 @@ USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake pkg-config
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-CONFIGURE_ENV+=	DRIVER_MAN_SUFFIX=4
-.endif
+CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
 
 .include "../../x11/modular-xorg-server/buildlink3.mk"
 

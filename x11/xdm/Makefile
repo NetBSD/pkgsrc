@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2015/04/22 19:49:09 tnn Exp $
+# $NetBSD: Makefile,v 1.30 2016/02/26 11:27:17 jperkin Exp $
 
 DISTNAME=	xdm-1.1.11
 PKGREVISION=	5
@@ -46,11 +46,7 @@ OWN_DIRS_PERMS+=	${VARBASE}/lib/xdm \
 TOOL_DEPENDS+=		tradcpp-[0-9]*:../../devel/tradcpp
 CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/tradcpp -Uunix"
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD"
-CONFIGURE_ARGS+=	--with-random-device=/dev/urandom
-.endif
+CONFIGURE_ARGS.NetBSD+=	--with-random-device=/dev/urandom
 
 # The following forces the X server to start on the 5th virtual terminal.
 # This is suboptimal but matches the defaults for the xdm configuration,
@@ -65,6 +61,7 @@ CONFIGURE_ARGS+=	--with-random-device=/dev/urandom
 # same terminal X used (the first one).  As a result, only one of them
 # will receive key presses.  And on slow machines, X will have lost access
 # to the keyboard.
+.include "../../mk/bsd.prefs.mk"
 .if (${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD") && \
     (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64")
 CONFIGURE_ARGS+=	--with-default-vt=vt05

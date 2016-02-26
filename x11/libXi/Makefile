@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2015/12/27 11:31:35 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2016/02/26 11:27:15 jperkin Exp $
 
 DISTNAME=		libXi-1.7.6
 CATEGORIES=		x11 devel
@@ -22,11 +22,7 @@ SUBST_STAGE.sosubdir=	pre-configure
 SUBST_FILES.sosubdir=	man/*.man
 SUBST_SED.sosubdir=	-e 's|\.so X|.so manlibmansuffix/X|'
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD"
-CONFIGURE_ARGS+=	--disable-malloc0returnsnull
-.endif
+CONFIGURE_ARGS.NetBSD+=	--disable-malloc0returnsnull
 
 BUILDLINK_API_DEPENDS.inputproto+=	inputproto>=2.3
 BUILDLINK_API_DEPENDS.libX11+=		libX11>=1.6

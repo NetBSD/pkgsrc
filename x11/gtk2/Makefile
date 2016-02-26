@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.273 2015/12/30 10:15:07 prlw1 Exp $
+# $NetBSD: Makefile,v 1.274 2016/02/26 11:27:14 jperkin Exp $
 
 DISTNAME=	gtk+-2.24.29
 PKGNAME=	${DISTNAME:S/gtk/gtk2/}
@@ -53,12 +53,10 @@ REQD_DIRS+=		${PREFIX}/libdata/gtk-2.0
 
 BUILD_DIRS=		. demos/gtk-demo
 
-.include "../../mk/bsd.prefs.mk"
-
 # fix for 'only weak aliases are supported on darwin' error
-.if ${OPSYS} == "Darwin"
-CONFIGURE_ARGS+=	--disable-visibility
-.endif
+CONFIGURE_ARGS.Darwin+=	--disable-visibility
+
+.include "../../mk/bsd.prefs.mk"
 
 # gtk/Makefile.am hardcodes 'grep -o' so require GNU grep on platforms
 # which do not have it.

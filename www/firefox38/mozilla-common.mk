@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.4 2015/12/05 21:26:04 adam Exp $
+# $NetBSD: mozilla-common.mk,v 1.5 2016/02/26 10:57:46 jperkin Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -157,9 +157,7 @@ PLIST.mozglue=	yes
 
 # See ${WRKSRC}/security/sandbox/mac/Sandbox.mm: On Darwin, sandboxing
 # support is only available when the toolkit is cairo-cocoa.
-.if ${OPSYS} == "Darwin"
-CONFIGURE_ARGS+=	--disable-sandbox
-.endif
+CONFIGURE_ARGS.Darwin+=	--disable-sandbox
 
 # See ${WRKSRC}/configure.in: It tries to use MacOS X 10.6 SDK by
 # default, which is not always possible.
@@ -185,13 +183,9 @@ create-rm-wrapper:
 	  ${WRAPPER_DIR}/bin/rm
 	chmod +x ${WRAPPER_DIR}/bin/rm
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD"
 # The configure test for __thread succeeds, but later we end up with:
 # dist/bin/libxul.so: undefined reference to `__tls_get_addr'
-CONFIGURE_ENV+=	ac_cv_thread_keyword=no
-.endif
+CONFIGURE_ENV.NetBSD+=	ac_cv_thread_keyword=no
 
 .if ${OPSYS} == "SunOS"
 # native libbz2.so hides BZ2_crc32Table

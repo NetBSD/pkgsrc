@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2016/02/17 10:16:05 dbj Exp $
+# $NetBSD: Makefile,v 1.15 2016/02/26 11:27:17 jperkin Exp $
 
 VERSION=	3.0.2
 PKGREVISION=	5
@@ -73,9 +73,7 @@ PLIST_SRC+=		PLIST.gtk2
 CONFIGURE_ARGS+=	--with-gtk=2
 .endif
 
-.if ${OPSYS} == "SunOS"
-CONFIGURE_ARGS+=	--disable-xlocale
-.endif
+CONFIGURE_ARGS.SunOS+=	--disable-xlocale
 
 post-configure:
 	echo 'install_qadll: install_xmldll' >> ${WRKSRC}/Makefile

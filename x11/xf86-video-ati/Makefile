@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2016/02/09 01:20:44 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2016/02/26 11:27:18 jperkin Exp $
 
 DISTNAME=	xf86-video-ati-7.6.1
 PKGREVISION=	3
@@ -18,13 +18,9 @@ USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake pkg-config
 
-.include "../../mk/bsd.prefs.mk"
-
 CONFIGURE_ARGS+=	--enable-glamor
 
-.if ${OPSYS} == "SunOS"
-CONFIGURE_ENV+=	DRIVER_MAN_SUFFIX=4
-.endif
+CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
 
 BUILDLINK_API_DEPENDS.modular-xorg-server+=	modular-xorg-server>=1.18.1
 .include "../../x11/modular-xorg-server/buildlink3.mk"

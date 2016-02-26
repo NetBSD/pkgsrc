@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/07/04 06:29:05 richard Exp $
+# $NetBSD: Makefile,v 1.3 2016/02/26 11:27:16 jperkin Exp $
 #
 
 DISTNAME=	mkcomposecache-1.2.1
@@ -14,10 +14,7 @@ COMMENT=	Used for creating global (system-wide) Compose cache files
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
 
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "SunOS"
-CONFIGURE_ENV+=	ADMIN_MAN_SUFFIX=8
-.endif
+CONFIGURE_ENV.SunOS+=	ADMIN_MAN_SUFFIX=8
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

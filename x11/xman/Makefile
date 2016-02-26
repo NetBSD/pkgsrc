@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2015/03/07 18:32:44 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2016/02/26 11:27:22 jperkin Exp $
 
 DISTNAME=		xman-1.1.4
 CATEGORIES=		x11
@@ -14,11 +14,7 @@ USE_TOOLS+=		pkg-config
 
 CONFIGURE_ENV+=		APP_MAN_SUFFIX=1
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD"
-CONFIGURE_ARGS+=	--with-manconfig=/etc/man.conf
-.endif
+CONFIGURE_ARGS.NetBSD+=	--with-manconfig=/etc/man.conf
 
 MAKE_FLAGS+=		appdefaultdir=${PREFIX}/lib/X11/app-defaults
 

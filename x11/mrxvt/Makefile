@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2015/02/08 18:12:49 tnn Exp $
+# $NetBSD: Makefile,v 1.34 2016/02/26 11:27:16 jperkin Exp $
 #
 
 DISTNAME=	mrxvt-0.5.4
@@ -21,11 +21,7 @@ CONFIGURE_ARGS+=	--enable-text-shadow
 CONFIGURE_ARGS+=	--enable-24bits
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "HPUX"
-CONFIGURE_ARGS+=	--disable-lastlog --disable-utmp --disable-wtmp
-.endif
+CONFIGURE_ARGS.HPUX+=	--disable-lastlog --disable-utmp --disable-wtmp
 
 EGDIR=			${PREFIX}/share/examples
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/mrxvt

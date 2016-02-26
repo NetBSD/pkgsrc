@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2016/01/05 13:11:45 tnn Exp $
+# $NetBSD: Makefile,v 1.7 2016/02/26 11:27:20 jperkin Exp $
 
 DISTNAME=	xf86-video-sunffb-1.2.2
 PKGREVISION=	4
@@ -17,9 +17,7 @@ USE_TOOLS+=	pkg-config
 
 .include "options.mk"
 
-.if ${OPSYS} == "SunOS"
-CONFIGURE_ENV+=	DRIVER_MAN_SUFFIX=4
-.endif
+CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
 
 BUILDLINK_API_DEPENDS.xextproto+=	xextproto>=7.0.99.1
 .include "../../x11/xextproto/buildlink3.mk"
