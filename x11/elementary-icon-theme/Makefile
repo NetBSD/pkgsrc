@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2014/01/27 18:41:15 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2016/02/26 14:02:26 jperkin Exp $
 
 DISTNAME=	elementary-icon-theme-3.0
 CATEGORIES=	graphics
@@ -19,6 +19,6 @@ USE_TOOLS+=	pax
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/icons
-	cd ${WRKSRC} && pax -rw -pe . ${DESTDIR}${PREFIX}/share/icons/
+	cd ${WRKSRC} && ${PAX} -rw -pm . ${DESTDIR}${PREFIX}/share/icons/
 
 .include "../../mk/bsd.pkg.mk"
