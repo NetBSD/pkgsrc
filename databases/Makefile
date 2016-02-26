@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.510 2016/02/25 21:48:08 tnn Exp $
+# $NetBSD: Makefile,v 1.511 2016/02/26 15:54:09 fhajny Exp $
 
 COMMENT=	Databases
 
@@ -505,6 +505,7 @@ SUBDIR+=	tokyotyrant
 SUBDIR+=	unixodbc
 SUBDIR+=	virtuoso
 SUBDIR+=	vsqlite++
+SUBDIR+=	wiredtiger
 SUBDIR+=	xsqlmenu
 SUBDIR+=	yap2lc
 SUBDIR+=	yasql
