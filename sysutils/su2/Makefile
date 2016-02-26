@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2013/04/06 21:07:35 rodent Exp $
+# $NetBSD: Makefile,v 1.17 2016/02/26 10:24:13 jperkin Exp $
 #
 
 DISTNAME=		su2-1.3
@@ -25,14 +25,9 @@ SUBST_FILES.preproc=	su2.c
 SUBST_SED.preproc=	-e 's,^\(\# *else\).*,\1,'
 SUBST_SED.preproc=	-e 's,^\(\# *endif\).*,\1,'
 
+OPSYSVARS+=		LDLIBS
 LDLIBS=			-lcrypt
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD"
-LDLIBS+=		-lcompat
-.endif
-
+LDLIBS.NetBSD+=		-lcompat
 MAKE_ENV+=		LDLIBS=${LDLIBS:Q}
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1

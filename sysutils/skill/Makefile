@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2015/01/04 04:15:21 dholland Exp $
+# $NetBSD: Makefile,v 1.28 2016/02/26 10:24:13 jperkin Exp $
 #
 
 DISTNAME=	skill-4.1.4
@@ -12,32 +12,22 @@ COMMENT=	Signal processes given user names, ttys, commands, or pids
 
 BROKEN_ON_PLATFORM+= Interix-*-* # currently no machdep support
 
-.include "../../mk/bsd.prefs.mk"
+MAKE_ENV.AIX+=		OSTYPE=aix-3
+MAKE_ENV.Darwin+=	OSTYPE=nbsd-44
+MAKE_ENV.DragonFly+=	OSTYPE=nbsd-44
+MAKE_ENV.FreeBSD+=	OSTYPE=nbsd-44
+MAKE_ENV.HPUX+=		OSTYPE=hpux-10
+MAKE_ENV.IRIX+=		OSTYPE=irix5
+MAKE_ENV.Linux+=	OSTYPE=linux-1
+MAKE_ENV.NetBSD+=	OSTYPE=nbsd-44
+MAKE_ENV.OSF+=		OSTYPE=mach-3
+MAKE_ENV.SunOS+=	OSTYPE=sys-5r4 BINGRP=sys CPPFLAGS=
 
-.if ${OPSYS} == "NetBSD"
-MAKE_ENV+=	OSTYPE=nbsd-44
-.elif ${OPSYS} == "Darwin"
-MAKE_ENV+=	OSTYPE=nbsd-44
-.elif ${OPSYS} == "DragonFly"
-MAKE_ENV+=	OSTYPE=nbsd-44
-CPPFLAGS+=	-DHAS_STRERROR=1
-.elif ${OPSYS} == "SunOS"
-BINMODE=	02555
-MAKE_ENV+=	OSTYPE=sys-5r4 BINGRP=sys CPPFLAGS=
-.elif ${OPSYS} == "FreeBSD"
-MAKE_ENV+=	OSTYPE=nbsd-44
-.elif ${OPSYS} == "Linux"
-MAKE_ENV+=	OSTYPE=linux-1
-CPPFLAGS+=	-DHAS_STRERROR=1
-.elif ${OPSYS} == "IRIX"
-MAKE_ENV+=	OSTYPE=irix5
-.elif ${OPSYS} == "OSF"
-MAKE_ENV+=	OSTYPE=mach-3
-.elif ${OPSYS} == "AIX"
-MAKE_ENV+=	OSTYPE=aix-3
-.elif ${OPSYS} == "HPUX"
-MAKE_ENV+=	OSTYPE=hpux-10
-.endif
+CPPFLAGS.DragonFly+=	-DHAS_STRERROR=1
+CPPFLAGS.Linux+=	-DHAS_STRERROR=1
+
+OPSYSVARS+=		BINMODE
+BINMODE.SunOS=		02555
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
