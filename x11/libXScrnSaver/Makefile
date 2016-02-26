@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2014/10/09 14:07:14 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2016/02/26 11:27:14 jperkin Exp $
 #
 
 DISTNAME=		libXScrnSaver-1.2.2
@@ -18,11 +18,7 @@ USE_TOOLS+=		pkg-config
 
 PKGCONFIG_OVERRIDE+=	xscrnsaver.pc.in
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD"
-CONFIGURE_ARGS+=	--disable-malloc0returnsnull
-.endif
+CONFIGURE_ARGS.NetBSD+=	--disable-malloc0returnsnull
 
 .include "../../meta-pkgs/modular-xorg/hacks.mk"
 

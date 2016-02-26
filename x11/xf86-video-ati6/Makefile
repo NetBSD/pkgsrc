@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2016/01/05 13:11:43 tnn Exp $
+# $NetBSD: Makefile,v 1.13 2016/02/26 11:27:18 jperkin Exp $
 
 DISTNAME=	xf86-video-ati-6.14.6
 PKGNAME=	${DISTNAME:S/ati/ati6/}
@@ -20,11 +20,8 @@ GNU_CONFIGURE=	YES
 USE_TOOLS+=	automake autoconf autoreconf gmake pkg-config
 
 .include "options.mk"
-.include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "SunOS"
-CONFIGURE_ENV+=	DRIVER_MAN_SUFFIX=4
-.endif
+CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -vif

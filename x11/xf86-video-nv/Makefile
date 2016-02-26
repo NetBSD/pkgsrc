@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2016/01/05 13:11:44 tnn Exp $
+# $NetBSD: Makefile,v 1.30 2016/02/26 11:27:19 jperkin Exp $
 
 DISTNAME=	xf86-video-nv-2.1.20
 PKGREVISION=	4
@@ -15,11 +15,7 @@ USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	pkg-config
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-CONFIGURE_ENV+=	DRIVER_MAN_SUFFIX=4
-.endif
+CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
 
 .include "../../x11/modular-xorg-server/buildlink3.mk"
 

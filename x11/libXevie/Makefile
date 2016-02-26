@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/10/09 14:07:14 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2016/02/26 11:27:14 jperkin Exp $
 #
 
 DISTNAME=		libXevie-1.0.3
@@ -16,11 +16,7 @@ USE_TOOLS+=		pkg-config autoconf
 
 PKGCONFIG_OVERRIDE+=	xevie.pc.in
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD"
-CONFIGURE_ARGS+=	--disable-malloc0returnsnull
-.endif
+CONFIGURE_ARGS.NetBSD+=	--disable-malloc0returnsnull
 
 pre-configure:
 	cd ${WRKSRC} && autoconf -f
