@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/05/15 17:36:06 tron Exp $
+# $NetBSD: Makefile,v 1.4 2016/02/26 09:41:07 jperkin Exp $
 
 DISTNAME=	sshguard-1.5
 PKGREVISION=	1
@@ -19,8 +19,6 @@ RCD_SCRIPTS=	sshguard
 
 # Claiming to be an X/Open applications hides inet_pton(3) under NetBSD
 # which this application needs.
-.if ${OPSYS} == "NetBSD"
-BUILDLINK_TRANSFORM+=	rm:-D_XOPEN_SOURCE
-.endif
+BUILDLINK_TRANSFORM.NetBSD+=	rm:-D_XOPEN_SOURCE
 
 .include "../../mk/bsd.pkg.mk"
