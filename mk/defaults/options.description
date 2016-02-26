@@ -648,6 +648,7 @@ slp			Enable Service Location Protocol support.
 small-net		Tune for a smaller networks.
 smime			Enable S/MIME support.
 smokeping-speedycgi	Enable SpeedyCGI.
+snappy			Enable Snappy support.
 sndfile			Enable sndfile support.
 snmp			Enable SNMP support.
 snort-flexresp		Flexible responses on hostile connection attempts.
