@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2015/10/17 09:14:43 adam Exp $
+# $NetBSD: Makefile,v 1.60 2016/02/26 16:31:50 fhajny Exp $
 
 DISTNAME=	aria2-1.19.2
 CATEGORIES=	net
@@ -25,6 +25,7 @@ CONFIGURE_ARGS+=	--enable-metalink
 CONFIGURE_ARGS+=	--with-included-gettext=no
 CONFIGURE_ARGS+=	--with-libexpat
 CONFIGURE_ARGS+=	--without-libxml2
+CONFIGURE_ARGS.SunOS+=	--disable-epoll
 
 GCC_REQD+=		3.4
 TEST_TARGET=		check
