@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.9 2015/11/04 02:47:02 agc Exp $
+$NetBSD: distinfo,v 1.10 2016/02/26 22:27:43 abs Exp $
 
 SHA1 (CGI-FormBuilder-3.09.tgz) = b255d05b4af376b304e752d122ce377915d2883f
 RMD160 (CGI-FormBuilder-3.09.tgz) = 01b3d3f410207258da65bd87d93fa3790048d15b
 SHA512 (CGI-FormBuilder-3.09.tgz) = 6907131de95ac0188a4a80e380fd81554bd9fb8d2566e961e5ff05a30e4498bccb157ecfdc77bdcd05427ebc5882caaea47b044aaaddae85f48231c0b7eef240
 Size (CGI-FormBuilder-3.09.tgz) = 163526 bytes
-SHA1 (patch-lib_CGI_FormBuilder.pm) = ea46077e1c5ceaf4409cf1a4f9459d00730a1069
-SHA1 (patch-lib_CGI_FormBuilder_Field.pm) = a4fc593652850402a258f60dc76041e2b99a48e5
