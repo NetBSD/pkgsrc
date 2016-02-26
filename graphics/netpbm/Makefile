@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.205 2016/02/25 13:37:47 jperkin Exp $
+# $NetBSD: Makefile,v 1.206 2016/02/26 11:40:30 jperkin Exp $
 
 DISTNAME=	netpbm-10.68.02
 CATEGORIES=	graphics
@@ -51,7 +51,6 @@ SUBST_SED.rgb_txt+=	-e 's,/usr/share/netpbm/rgb.txt,${PREFIX}/share/netpbm/rgb.t
 # only used if NEED_RUNTIME_PATH is set, so set it unconditionally
 MAKE_FLAGS+=	NETPBMLIB_RUNTIME_PATH=${PREFIX}
 
-OPSYSVARS+=		MAKE_FLAGS
 MAKE_FLAGS.NetBSD+=	NEED_RUNTIME_PATH=Y
 MAKE_FLAGS.Darwin+=	NETPBMLIBTYPE=dylib
 MAKE_FLAGS.Darwin+=	NETPBMLIBSUFFIX=dylib

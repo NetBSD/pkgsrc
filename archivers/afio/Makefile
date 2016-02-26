@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2016/02/25 09:28:36 jperkin Exp $
+# $NetBSD: Makefile,v 1.18 2016/02/26 11:40:29 jperkin Exp $
 
 DISTNAME=	afio-2.5.1
 CATEGORIES=	archivers
@@ -12,7 +12,6 @@ COMMENT=	Data corruption handling cpio-format archive creator
 BUILD_TARGET=	afio
 
 # Don't define HAVE_LCHOWN
-OPSYSVARS+=		MAKE_FLAGS
 MAKE_FLAGS.Darwin+=	e2=
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
