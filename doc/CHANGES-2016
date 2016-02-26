@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.868 2016/02/26 15:52:23 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.869 2016/02/26 21:08:08 tez Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1178,3 +1178,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added databases/postgresql95-server version 9.5.1 [tnn 2016-02-25]
 	Updated print/evince3 to 3.18.2 [leot 2016-02-26]
 	Added databases/wiredtiger version 2.7.0 [fhajny 2016-02-26]
+	Updated security/openssh to 7.1.1nb3 [tez 2016-02-26]
