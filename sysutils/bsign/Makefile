@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/23 19:50:53 asau Exp $
+# $NetBSD: Makefile,v 1.5 2016/02/26 10:24:10 jperkin Exp $
 
 DISTNAME=	bsign_0.4.5
 PKGNAME=	bsign-0.4.5
@@ -20,10 +20,7 @@ USE_LANGUAGES+=	c c++
 USE_TOOLS+=	gmake
 USE_FEATURES+=	fts_open
 
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "SunOS"
-BUILDLINK_TRANSFORM+=	rm:-static
-.endif
+BUILDLINK_TRANSFORM.SunOS+=	rm:-static
 
 CFLAGS.SunOS+=	-DMAP_FILE=0
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2015/08/17 17:11:29 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2016/02/26 10:24:11 jperkin Exp $
 #
 
 DISTNAME=		clex-4.6.4
@@ -18,12 +18,8 @@ GNU_CONFIGURE=		yes
 post-extract:
 	cd ${WRKSRC} && ${RM} -f src/*.orig
 
-.include "../../mk/bsd.prefs.mk"
-
 # libtinfo in DragonFly is linked with libncurses
-.if ${OPSYS} == "DragonFly"
-BUILDLINK_TRANSFORM+=	rm:-ltinfo
-.endif
+BUILDLINK_TRANSFORM.DragonFly+=	rm:-ltinfo
 
 .include "../../devel/ncursesw/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
