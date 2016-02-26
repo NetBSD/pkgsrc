@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15496 2016/02/25 19:08:12 leot Exp $
+$NetBSD: TODO,v 1.15497 2016/02/26 03:57:11 taca Exp $
 
 Suggested new packages
 ======================
@@ -1352,9 +1352,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o polsms-2.1.0
 	o poppass-4.0.14
 	o postal-0.72
-	o postfix-3.0.3
-	o postgresql-9.5.0
-	o postgresql-postgis-2.1.6
+	o postfix-3.0.4
+	o postfix-3.1.0
 	o powerdns-3.7.3
 	o powerdns-ldap-3.7.3
 	o powerdns-mysql-3.7.3
