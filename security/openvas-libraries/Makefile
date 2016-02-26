@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2015/08/23 14:30:41 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2016/02/26 09:41:06 jperkin Exp $
 #
 
 DISTNAME=	openvas-libraries-2.0.0
@@ -19,12 +19,8 @@ USE_TOOLS+=	pkg-config
 
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 
-.include "../../mk/bsd.prefs.mk"
-
 # DragonFly-2.8.2 has dn_expand(3) in libc, and not have libresolv.
-.if ${OPSYS} == "DragonFly"
-BUILDLINK_TRANSFORM+=	rm:-lresolv
-.endif
+BUILDLINK_TRANSFORM.DragonFly+=	rm:-lresolv
 
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
