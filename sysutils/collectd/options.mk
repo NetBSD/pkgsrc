@@ -1,33 +1,24 @@
-# $NetBSD: options.mk,v 1.6 2015/09/12 19:04:56 he Exp $
+# $NetBSD: options.mk,v 1.7 2016/02/26 10:24:11 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.collectd
 PKG_SUPPORTED_OPTIONS=	cpu df interface load memory syslog uptime
 PKG_SUGGESTED_OPTIONS+=	cpu df interface load memory syslog uptime
 
-.if ${OPSYS} == "NetBSD"
-PKG_SUPPORTED_OPTIONS+=	contextswitch disk entropy irq pf netstat_udp
-PKG_SUPPORTED_OPTIONS+= processes swap tcpconns users
+PKG_SUPPORTED_OPTIONS.NetBSD+=	contextswitch disk entropy irq pf netstat_udp
+PKG_SUPPORTED_OPTIONS.NetBSD+=	processes swap tcpconns users
+PKG_SUGGESTED_OPTIONS.NetBSD+=	contextswitch disk entropy irq pf netstat_udp
+PKG_SUGGESTED_OPTIONS.NetBSD+=	processes swap tcpconns users
 
-PKG_SUGGESTED_OPTIONS+=	contextswitch disk entropy irq pf netstat_udp
-PKG_SUGGESTED_OPTIONS+= processes swap tcpconns users
-.endif
+PKG_SUPPORTED_OPTIONS.FreeBSD+=	contextswitch pf processes swap tcpconns zfs-arc
+PKG_SUGGESTED_OPTIONS.FreeBSD+=	contextswitch pf processes swap tcpconns zfs-arc
 
-.if ${OPSYS} == "FreeBSD"
-PKG_SUPPORTED_OPTIONS+=	contextswitch pf processes swap tcpconns zfs-arc
-PKG_SUGGESTED_OPTIONS+=	contextswitch pf processes swap tcpconns zfs-arc
-.endif
+PKG_SUPPORTED_OPTIONS.Darwin+=	apple-sensors battery contextswitch disk
+PKG_SUPPORTED_OPTIONS.Darwin+=	processes swap tcpconns users
+PKG_SUGGESTED_OPTIONS.Darwin+=	apple-sensors battery contextswitch disk
+PKG_SUGGESTED_OPTIONS.Darwin+=	processes swap tcpconns users
 
-.if ${OPSYS} == "Darwin"
-PKG_SUPPORTED_OPTIONS+=	apple-sensors battery contextswitch disk processes swap	\
-			tcpconns users
-PKG_SUGGESTED_OPTIONS+=	apple-sensors battery contextswitch disk processes swap	\
-			tcpconns users
-.endif
-
-.if ${OPSYS} == "SunOS"
-PKG_SUPPORTED_OPTIONS+=	disk nfs swap users zfs-arc
-PKG_SUGGESTED_OPTIONS+=	disk nfs swap users zfs-arc
-.endif
+PKG_SUPPORTED_OPTIONS.SunOS+=	disk nfs swap users zfs-arc
+PKG_SUGGESTED_OPTIONS.SunOS+=	disk nfs swap users zfs-arc
 
 .include "../../mk/bsd.options.mk"
 

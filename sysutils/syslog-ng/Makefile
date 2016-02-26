@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2015/10/29 16:34:13 fhajny Exp $
+# $NetBSD: Makefile,v 1.24 2016/02/26 10:24:13 jperkin Exp $
 
 .include "../../sysutils/syslog-ng/Makefile.common"
 
@@ -6,11 +6,9 @@ CONFIGURE_ARGS+=	--enable-ssl
 CONFIGURE_ARGS+=	--enable-stomp
 CONFIGURE_ARGS+=	--enable-tcp-wrapper
 
-.if ${OPSYS} == "SunOS"
-CONFIGURE_ARGS+=	--enable-dynamic-linking
-CONFIGURE_ARGS+=	--enable-sun-streams
-CPPFLAGS+=		-D_XOPEN_SOURCE=600 -D__EXTENSIONS__
-.endif
+CONFIGURE_ARGS.SunOS+=	--enable-dynamic-linking
+CONFIGURE_ARGS.SunOS+=	--enable-sun-streams
+CPPFLAGS.SunOS+=	-D_XOPEN_SOURCE=600 -D__EXTENSIONS__
 
 .include "options.mk"
 

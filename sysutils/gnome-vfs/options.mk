@@ -1,16 +1,12 @@
-# $NetBSD: options.mk,v 1.6 2013/10/12 04:39:01 richard Exp $
+# $NetBSD: options.mk,v 1.7 2016/02/26 10:24:12 jperkin Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnome-vfs
 PKG_SUPPORTED_OPTIONS=	fam gssapi hal inet6 avahi
 PKG_SUGGESTED_OPTIONS=	fam hal inet6
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == NetBSD
 # Kerberos is built in - no additional dependency
-PKG_SUGGESTED_OPTIONS+= gssapi
-.endif
+PKG_SUGGESTED_OPTIONS.NetBSD+=	gssapi
 
 .include "../../mk/bsd.options.mk"
 
