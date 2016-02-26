@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/10/09 14:06:00 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2016/02/26 10:24:14 jperkin Exp $
 #
 
 DISTNAME=		wipe-2.2.0
@@ -13,10 +13,6 @@ LICENSE=		gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-MAKE_ENV+=	DEFINES="-Du_int32_t=uint32_t"
-.endif
+MAKE_ENV.SunOS+=	DEFINES="-Du_int32_t=uint32_t"
 
 .include "../../mk/bsd.pkg.mk"

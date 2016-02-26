@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2016/01/07 17:53:58 bouyer Exp $
+# $NetBSD: Makefile,v 1.42 2016/02/26 10:24:14 jperkin Exp $
 
 VERSION=	4.2.5
 VERSION_IPXE=	1.0.0
@@ -142,20 +142,19 @@ SUBST_FILES.conf+=	python/xen/xm/create.py
 SUBST_FILES.conf+=	ocaml/xenstored/define.ml
 SUBST_SED.conf=		-e "s,@XENDCONFDIR@,${PKG_SYSCONFDIR},g"
 
-.include "../../mk/bsd.prefs.mk"
-
 XEND_SCRIPTS=		block vif-bridge vif-ip qemu-ifup hotplugpath.sh
 
-.if ${OPSYS} == "NetBSD"
-SUBST_CLASSES+=		proc
+SUBST_CLASSES.NetBSD+=	proc
 SUBST_STAGE.proc=	pre-configure
 SUBST_FILES.proc=	python/xen/xend/XendVnet.py
 SUBST_FILES.proc+=	ocaml/xenstored/define.ml
 SUBST_SED.proc=		-e "s|/proc|/kern|g"
-PROCPATH=		/kern
-.else
-PROCPATH=		/proc
-.endif
+
+OPSYSVARS+=		PROCPATH
+PROCPATH.NetBSD=	/kern
+PROCPATH.*=		/proc
+
+.include "../../mk/bsd.prefs.mk"
 
 SUBST_CLASSES+=		procdev
 SUBST_STAGE.procdev=	pre-configure
