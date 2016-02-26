@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2016/02/26 11:27:21 jperkin Exp $
+# $NetBSD: Makefile,v 1.14 2016/02/26 11:40:30 jperkin Exp $
 #
 
 DISTNAME=	xflame-1.1.1
@@ -11,7 +11,6 @@ COMMENT=	Draws a flame on the screen
 
 USE_IMAKE=	yes
 
-OPSYSVARS+=		MAKE_FLAGS
 MAKE_FLAGS.SunOS+=	EXTRA_LOAD_FLAGS=-lrt
 
 .include "../../x11/libX11/buildlink3.mk"
