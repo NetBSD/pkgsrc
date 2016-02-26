@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2015/12/05 21:26:00 adam Exp $
+# $NetBSD: Makefile,v 1.29 2016/02/26 10:24:14 jperkin Exp $
 
 VERSION=		3.1.4
 DISTNAME=		xen-${VERSION}
@@ -64,13 +64,9 @@ SUBST_FILES.prefix=	python/xen/util/auxbin.py
 SUBST_FILES.prefix=	ioemu/vl.c
 SUBST_SED.prefix=	-e "s,@PREFIX@,${PREFIX},g"
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD"
-PROCPATH=		/kern
-.else
-PROCPATH=		/proc
-.endif
+OPSYSVARS+=		PROCPATH
+PROCPATH.NetBSD=	/kern
+PROCPATH.*=		/proc
 
 CONF_FILES_PERMS+=	${EGDIR}/qemu-ifup ${PKG_SYSCONFDIR}/scripts/qemu-ifup \
 			${ROOT_USER} ${ROOT_GROUP} 0755

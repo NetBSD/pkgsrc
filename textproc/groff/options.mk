@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2015/10/03 07:26:11 richard Exp $
+# $NetBSD: options.mk,v 1.8 2016/02/26 10:32:47 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.groff
 PKG_SUPPORTED_OPTIONS=	groff-docs x11
@@ -20,10 +20,7 @@ CONFIGURE_ARGS+=	--with-x
 CONFIGURE_ARGS+=	--with-appresdir=${PREFIX}/lib/X11/app-defaults
 PLIST_SRC+=		PLIST.x11
 .include "../../mk/xaw.buildlink3.mk"
-.include "../../mk/bsd.fast.prefs.mk"
-.if ${OPSYS} == "Interix"
-CONFIGURE_ENV+=		X_EXTRA_LIBS=-lXext
-.endif
+CONFIGURE_ENV.Interix+=	X_EXTRA_LIBS=-lXext
 .else
 CONFIGURE_ARGS+=	--without-x
 .endif

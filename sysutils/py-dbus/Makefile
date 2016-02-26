@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2014/01/25 10:30:21 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2016/02/26 10:24:13 jperkin Exp $
 
 DISTNAME=	dbus-python-1.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-python//}
@@ -19,10 +19,7 @@ PY_PATCHPLIST=			YES
 # py-expat is only needed at runtime
 DEPENDS+= ${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "SunOS"
-BUILDLINK_TRANSFORM+=	rm:-std=c9x
-.endif
+BUILDLINK_TRANSFORM.SunOS+=	rm:-std=c9x
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../lang/python/extension.mk"
