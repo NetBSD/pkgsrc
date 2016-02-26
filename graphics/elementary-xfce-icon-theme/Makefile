@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/11/25 12:50:43 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2016/02/26 14:01:09 jperkin Exp $
 
 GHCOMMIT=	a0b2b19231c3383f77f106d9cdacb2d148519cfd
 DISTNAME=	${GHCOMMIT}
@@ -28,8 +28,7 @@ PRINT_PLIST_AWK+=	/^share\/icons\/elemantary-xfce-darker\/icon-theme.cache$$/ { 
 INSTALLATION_DIRS+=	share/icons
 
 do-install:
-	cd ${WRKSRC} && pax -rw -pe e* ${DESTDIR}${PREFIX}/share/icons/
-
+	cd ${WRKSRC} && ${PAX} -rw -pm e* ${DESTDIR}${PREFIX}/share/icons/
 
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
