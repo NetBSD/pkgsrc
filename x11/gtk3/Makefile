@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2015/11/17 22:57:58 prlw1 Exp $
+# $NetBSD: Makefile,v 1.72 2016/02/26 11:27:14 jperkin Exp $
 
 DISTNAME=	gtk+-3.16.7
 PKGNAME=	${DISTNAME:S/gtk/gtk3/}
@@ -57,10 +57,8 @@ TOOLS_PATH.grep=	${LOCALBASE}/bin/ggrep
 .endif
 # isnan and isinf are part of libc, not libm on DragonFly
 # conf tests fail detection due to conflicting definitions, just skip them
-.if ${OPSYS} == "DragonFly"
-CONFIGURE_ENV+=		ac_cv_func_isnan=yes
-CONFIGURE_ENV+=		ac_cv_func_isinf=yes
-.endif
+CONFIGURE_ENV.DragonFly+=	ac_cv_func_isinf=yes
+CONFIGURE_ENV.DragonFly+=	ac_cv_func_isnan=yes
 
 CFLAGS.SunOS+=		-std=gnu99
 
