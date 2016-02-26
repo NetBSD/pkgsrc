@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.190 2015/07/04 16:18:42 joerg Exp $
+# $NetBSD: Makefile,v 1.191 2016/02/26 11:27:14 jperkin Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
 PKGREVISION=	38
@@ -194,12 +194,10 @@ post-install:
 CONFIGURE_ENV+= ac_cv_func_getutxent='no'
 .endif
 
-.if ${OPSYS} == "NetBSD"
 # We always use pkg-config for detecting the fontconfig version, since there
 # may exist an old version of fontconfig-config on systems that have been
 # updated from NetBSD 1.x.
-CONFIGURE_ENV+= kde_cv_path_fontconfig_config='NONE'
-.endif
+CONFIGURE_ENV.NetBSD+=	kde_cv_path_fontconfig_config='NONE'
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

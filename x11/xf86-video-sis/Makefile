@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2016/01/05 13:11:45 tnn Exp $
+# $NetBSD: Makefile,v 1.24 2016/02/26 11:27:20 jperkin Exp $
 
 DISTNAME=	xf86-video-sis-0.10.8
 PKGREVISION=	1
@@ -21,9 +21,7 @@ USE_TOOLS+=	pkg-config
 TOOL_DEPENDS+=		tradcpp-[0-9]*:../../devel/tradcpp
 CONFIGURE_ENV+=		ac_cv_path_RAWCPP="${PREFIX}/bin/tradcpp -Uunix"
 
-.if ${OPSYS} == "SunOS"
-CONFIGURE_ENV+=	DRIVER_MAN_SUFFIX=4
-.endif
+CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
 
 .include "../../x11/modular-xorg-server/buildlink3.mk"
 .include "../../x11/randrproto/buildlink3.mk"

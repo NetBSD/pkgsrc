@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2016/01/05 13:11:42 tnn Exp $
+# $NetBSD: Makefile,v 1.26 2016/02/26 11:27:17 jperkin Exp $
 
 DISTNAME=	xf86-input-mouse-1.9.1
 PKGREVISION=	3
@@ -14,11 +14,7 @@ USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	pkg-config
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "SunOS"
-CONFIGURE_ENV+=	DRIVER_MAN_SUFFIX=4
-.endif
+CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
 
 .include "../../x11/randrproto/buildlink3.mk"
 .include "../../x11/inputproto/buildlink3.mk"

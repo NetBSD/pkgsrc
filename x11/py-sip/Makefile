@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2015/10/26 21:40:01 adam Exp $
+# $NetBSD: Makefile,v 1.46 2016/02/26 11:27:16 jperkin Exp $
 
 DISTNAME=	sip-4.17
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,19 +15,16 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 
-.include "../../mk/bsd.prefs.mk"
-
 CONFIGURE_ARGS+=	-b ${PREFIX}/bin
 CONFIGURE_ARGS+=	-d ${PREFIX}/${PYSITELIB}
 CONFIGURE_ARGS+=	-e ${PREFIX}/${PYINC}
 CONFIGURE_ARGS+=	-v ${PREFIX}/share/sip${PYVERSSUFFIX}
-.if ${OPSYS} == "DragonFly"
-CONFIGURE_ARGS+=	-p freebsd-g++
-.endif
 CONFIGURE_ARGS+=	CFLAGS=${CFLAGS:Q}
 CONFIGURE_ARGS+=	CXXFLAGS=${CXXFLAGS:Q}
 CONFIGURE_ARGS+=	INCDIR=${PREFIX}/include
 CONFIGURE_ARGS+=	LIBDIR=${PREFIX}/lib
+
+CONFIGURE_ARGS.DragonFly+=	-p freebsd-g++
 
 PY_PATCHPLIST=		yes
 PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX:Q}

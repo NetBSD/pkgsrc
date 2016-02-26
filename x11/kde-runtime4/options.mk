@@ -1,12 +1,10 @@
-# $NetBSD: options.mk,v 1.4 2013/04/30 20:51:54 markd Exp $
+# $NetBSD: options.mk,v 1.5 2016/02/26 11:27:14 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.kde-runtime4
 PKG_SUPPORTED_OPTIONS=	samba alsa pulseaudio
 PKG_SUGGESTED_OPTIONS=	samba
 
-.if ${OPSYS} == "Linux"
-PKG_SUGGESTED_OPTIONS+= alsa
-.endif
+PKG_SUGGESTED_OPTIONS.Linux+=	alsa
 
 .include "../../mk/bsd.options.mk"
 
