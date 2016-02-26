@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/02/26 15:52:08 fhajny Exp $
+
+SHA1 (wiredtiger-2.7.0.tar.bz2) = 9e28fd4c04e358d907fbb36853d8e75b5eb5ab26
+RMD160 (wiredtiger-2.7.0.tar.bz2) = e7efe009da13f8b314dc33721ef2175e827c7a4d
+SHA512 (wiredtiger-2.7.0.tar.bz2) = b6f880fbed5b65cccc00aec55a5526ad6c8b5892ac9019d261120d739a83fd25dd59756d21b96ebb0c2800331ab2459f2dc94b5aed9dd4f35454a920c328c2e3
+Size (wiredtiger-2.7.0.tar.bz2) = 2844487 bytes
