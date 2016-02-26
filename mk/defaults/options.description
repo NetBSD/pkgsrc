@@ -779,6 +779,7 @@ webrtc			Enable web realtime communications API.
 webvmail		Install CGI script for voicemail.
 wide-curses		Enable wide curses support.
 winbind			Enable name-service switch daemon support using Windows Servers.
+wiredtiger		Enable WiredTiger support.
 wmf			Enable WMF support.
 wnn4			Use wnn for Kana-to-Kanji conversion.
 wxwidgets		Enable wxWidgets support.
