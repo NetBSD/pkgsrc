@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2015/01/15 13:02:26 joerg Exp $
+# $NetBSD: Makefile,v 1.38 2016/02/26 10:32:47 jperkin Exp $
 
 DISTNAME=	xmlrpc-c-1.25.26
 # the "super stable" branch
@@ -41,9 +41,7 @@ SUBST_FILES.pthread=	xmlrpc-c-config.* xmlrpc-c-config.test.*
 SUBST_SED.pthread=	-e 's/-lpthread/${PTHREAD_LINKFLAGS:Q}/'
 SUBST_SED.pthread+=	-e 's/-L\(.\)libdir/-L\1libdir ${COMPILER_RPATH_FLAG}\1libdir/'
 
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "MirBSD"
-SUBST_CLASSES+=		xopen
+SUBST_CLASSES.MirBSD+=	xopen
 SUBST_STAGE.xopen=	pre-configure
 SUBST_MESSAGE.xopen=	Removing _XOPEN_SOURCE lines.
 SUBST_FILES.xopen+=	lib/abyss/src/data.c lib/abyss/src/response.c lib/abyss/src/conf.c
@@ -56,7 +54,6 @@ SUBST_FILES.xopen+=	src/method.c src/xmlrpc_parse.c src/test/value_datetime.c sr
 SUBST_FILES.xopen+=	src/xmlrpc_server_info.c src/xmlrpc_server_abyss.c tools/lib/dumpvalue.c
 SUBST_FILES.xopen+=	tools/xmlrpc/xmlrpc.c tools/xmlrpc_transport/xmlrpc_transport.c
 SUBST_SED.xopen=	-e '/^\#define _XOPEN_SOURCE/d'
-.endif
 
 LDFLAGS.OpenBSD+=	${PTHREAD_LINKFLAGS}
 LDFLAGS.MirBSD+=	${PTHREAD_LINKFLAGS}

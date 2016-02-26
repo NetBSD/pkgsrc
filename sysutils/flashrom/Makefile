@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/02/26 10:31:40 wiedi Exp $
+# $NetBSD: Makefile,v 1.9 2016/02/26 10:24:12 jperkin Exp $
 #
 
 DISTNAME=	flashrom-0.9.7
@@ -20,24 +20,21 @@ USE_TOOLS+= gmake pkg-config
 DEPENDS+=	dmidecode-[0-9]*:../../sysutils/dmidecode
 .endif
 
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS"
-
-SUBST_CLASSES+=	pciutils
+SUBST_CLASSES.NetBSD+=	pciutils
+SUBST_CLASSES.SunOS+=	pciutils
 SUBST_FILES.pciutils=	Makefile
 SUBST_FILES.pciutils+=	hwaccess.h
 SUBST_MESSAGE.pciutils=	adjusting pciutils headers
 SUBST_STAGE.pciutils=	pre-configure
 SUBST_SED.pciutils+= -e 's,<pci/pci.h>,<pciutils/pci.h>,g'
 
-LDFLAGS+= -lpci
-CPPFLAGS+= -I/${PREFIX}/include
-
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS"
+LDFLAGS+=	-lpci
+CPPFLAGS+=	-I/${PREFIX}/include
 .endif
 
-LDFLAGS.SunOS+=	-lsocket -lnsl
-.if ${OPSYS} == "SunOS"
-MAKE_ENV+=	WARNERROR=0
-.endif
+LDFLAGS.SunOS+=		-lsocket -lnsl
+MAKE_ENV.SunOS+=	WARNERROR=0
 
 INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man8
 
