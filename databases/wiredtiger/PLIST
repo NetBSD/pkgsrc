@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2016/02/26 15:52:08 fhajny Exp $
+bin/wt
+include/wiredtiger.h
+include/wiredtiger_ext.h
+lib/libwiredtiger.la
+${PLIST.bzip2}lib/libwiredtiger_bzip2.la
+${PLIST.lz4}lib/libwiredtiger_lz4.la
+${PLIST.snappy}lib/libwiredtiger_snappy.la
+${PLIST.zlib}lib/libwiredtiger_zlib.la
+lib/pkgconfig/wiredtiger.pc
+man/man1/wt.1
+man/man3/wiredtiger.3
