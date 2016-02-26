@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/09/23 16:39:17 rodent Exp $
+# $NetBSD: Makefile,v 1.7 2016/02/26 11:27:19 jperkin Exp $
 
 DISTNAME=	xf86-video-newport-0.2.4
 PKGREVISION=	4
@@ -17,9 +17,7 @@ USE_TOOLS+=	pkg-config
 
 .include "options.mk"
 
-.if ${OPSYS} == "SunOS"
-CONFIGURE_ENV+=	DRIVER_MAN_SUFFIX=	4
-.endif
+CONFIGURE_ENV.SunOS+=	DRIVER_MAN_SUFFIX=4
 
 USE_OLD_MODULAR_XORG_SERVER=		yes
 

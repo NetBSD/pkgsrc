@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2016/02/09 01:18:15 wiz Exp $
+# $NetBSD: Makefile.common,v 1.7 2016/02/26 11:27:16 jperkin Exp $
 # used by x11/modular-xorg-server/Makefile
 # used by x11/modular-xorg-xephyr/Makefile
 
@@ -97,9 +97,7 @@ PLIST.sparc=		yes
 
 # Workaround for PR#41556.
 # Avoid to use bsd_kqueue_apm, force to use bsd_apm instead.
-.if ${OPSYS} == "NetBSD"
-CONFIGURE_ENV+=		ac_cv_header_sys_event_h=no
-.endif
+CONFIGURE_ENV.NetBSD+=	ac_cv_header_sys_event_h=no
 
 INSTALLATION_DIRS+=	lib/xorg/modules/drivers lib/xorg/modules/input
 

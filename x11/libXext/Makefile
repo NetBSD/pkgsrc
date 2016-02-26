@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2014/10/09 14:07:14 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2016/02/26 11:27:14 jperkin Exp $
 
 DISTNAME=		libXext-1.3.3
 CATEGORIES=		x11 devel
@@ -15,11 +15,7 @@ USE_TOOLS+=		pkg-config
 
 PKGCONFIG_OVERRIDE+=	xext.pc.in
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "NetBSD"
-CONFIGURE_ARGS+=	--disable-malloc0returnsnull
-.endif
+CONFIGURE_ARGS.NetBSD+=	--disable-malloc0returnsnull
 
 .include "../../mk/compiler.mk"
 

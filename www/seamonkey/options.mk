@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.32 2015/07/01 13:02:30 ryoon Exp $
+# $NetBSD: options.mk,v 1.33 2016/02/26 10:57:46 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.seamonkey
 PKG_SUPPORTED_OPTIONS=	alsa debug mozilla-jemalloc # gnome
@@ -6,9 +6,8 @@ PKG_SUPPORTED_OPTIONS+=	mozilla-lightning webrtc mozilla-chatzilla pulseaudio
 
 PLIST_VARS+=	debug gnome jemalloc
 
-.if ${OPSYS} == "Linux" || ${OPSYS} == "SunOS"
-PKG_SUGGESTED_OPTIONS+=	mozilla-jemalloc
-.endif
+PKG_SUGGESTED_OPTIONS.Linux+=	mozilla-jemalloc
+PKG_SUGGESTED_OPTIONS.SunOS+=	mozilla-jemalloc
 
 # On NetBSD/amd64 6.99.21 libxul.so is invalid when --enable-webrtc is set.
 .if (${OPSYS} == "FreeBSD") || (${OPSYS} == "Linux") || (${OPSYS} == "OpenBSD")

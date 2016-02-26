@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2013/03/14 17:04:27 kim Exp $
+# $NetBSD: Makefile,v 1.15 2016/02/26 10:57:46 jperkin Exp $
 #
 
 DISTNAME=		urlget-1.5
@@ -8,13 +8,9 @@ MASTER_SITES=		http://oss.gw.com/people/kim/
 MAINTAINER=		kim@tac.nyc.ny.us
 COMMENT=		Simple command-line tool to retrieve an HTTP URL
 
-.include "../../mk/bsd.prefs.mk"
+BUILD_TARGET.SunOS=	svr4
+BUILD_TARGET.*=		bsd
 
-.if ${OPSYS} == "SunOS"
-BUILD_TARGET=		svr4
-.else
-BUILD_TARGET=		bsd
-.endif
 INSTALL_TARGET=		inst-all
 INSTALL_MAKE_FLAGS+=	DEST=${DESTDIR}${PREFIX}
 INSTALL_MAKE_FLAGS+=	MANDIR=${DESTDIR}/${PREFIX}/${PKGMANDIR}/man1
