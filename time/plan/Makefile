@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2015/07/04 16:18:40 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2016/02/26 10:37:09 jperkin Exp $
 
 DISTNAME=	plan-1.9
 PKGREVISION=	1
@@ -11,20 +11,13 @@ COMMENT=	Schedule planner based on X/Motif
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 USE_TOOLS+=	yacc lex
-BUILD_TARGET=	${LOWER_OPSYS}
 
 INSTALLATION_DIRS=	libexec/plan ${PKGMANDIR}/man1 ${PKGMANDIR}/man4 \
 			share/plan/holiday
 
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "IRIX"
-BUILD_TARGET=	${LOWER_VENDOR}${OS_VERSION:C/.[0-9]//}
-.endif
-
-.if ${OPSYS} == "SunOS"
-BUILD_TARGET=	"solg"
-.endif
+BUILD_TARGET.IRIX=	${LOWER_VENDOR}${OS_VERSION:C/.[0-9]//}
+BUILD_TARGET.SunOS=	solg
+BUILD_TARGET.*=		${LOWER_OPSYS}
 
 .include "../../mk/compiler.mk"
 
