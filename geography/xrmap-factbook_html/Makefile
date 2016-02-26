@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/04 09:19:22 asau Exp $
+# $NetBSD: Makefile,v 1.9 2016/02/26 14:05:14 jperkin Exp $
 #
 
 DISTNAME=		factbook_html_2002
@@ -21,6 +21,6 @@ NO_BUILD=		yes
 INSTALLATION_DIRS=	share/rmap
 
 do-install:
-	cd ${WRKSRC} && pax -rw -pe factbook ${DESTDIR}${PREFIX}/share/rmap
+	cd ${WRKSRC} && ${PAX} -rw -pm factbook ${DESTDIR}${PREFIX}/share/rmap
 
 .include "../../mk/bsd.pkg.mk"
