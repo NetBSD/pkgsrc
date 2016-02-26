@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/02/25 08:27:04 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2016/02/26 12:17:18 jperkin Exp $
 
 DISTNAME=	libpinyin-1.0.0
 CATEGORIES=	textproc chinese
@@ -16,6 +16,7 @@ USE_LIBTOOL=	yes
 
 PKGCONFIG_OVERRIDE+=	libpinyin.pc.in
 
+BUILDLINK_TRANSFORM.Darwin+=	rm:-Wl,--version-script=./libpinyin.ver
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=./libpinyin.ver
 
 .include "../../databases/db4/buildlink3.mk"

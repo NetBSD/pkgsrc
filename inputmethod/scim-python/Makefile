@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2016/02/25 08:27:03 jperkin Exp $
+# $NetBSD: Makefile,v 1.31 2016/02/26 12:16:38 jperkin Exp $
 
 DISTNAME=	scim-python-0.1.13rc1
 PKGREVISION=	23
@@ -20,6 +20,7 @@ USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config msgfmt
 
+BUILDLINK_TRANSFORM.Darwin+=	rm:-Wl,--version-script=./scim.version-script
 BUILDLINK_TRANSFORM.SunOS+=	rm:-Wl,--version-script=./scim.version-script
 
 # taken from ${WRKSRC}/python/engine/PinYin/Makefile.in
