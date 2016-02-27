@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.872 2016/02/27 00:48:08 wen Exp $
+$NetBSD: CHANGES-2016,v 1.873 2016/02/27 01:33:16 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1182,3 +1182,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/p5-XML-XPath to 1.32 [wen 2016-02-27]
 	Updated textproc/p5-XML-Simple to 2.22 [wen 2016-02-27]
 	Updated textproc/p5-XML-RSS to 1.58 [wen 2016-02-27]
+	Updated www/trac to 1.0.10 [gdt 2016-02-27]
