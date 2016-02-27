@@ -1,0 +1,4 @@
+Sayaka is a light-weight terminal specific twitter client which
+supports userstream and sixel graphics etc.
+There are two variants (PHP based version and and Vala based version)
+in the sayaka distribution and this package uses the newer Vala based one.
