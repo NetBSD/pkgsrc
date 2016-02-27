@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2015/12/26 14:26:37 taca Exp $
+@comment $NetBSD: PLIST,v 1.9.2.1 2016/02/27 16:08:26 bsiegert Exp $
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/INSTALL.md
 ${TYPO3DIR}/${TYPO3NAME}/LICENSE.txt
@@ -1556,7 +1556,6 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/aboutmodules/ext_emconf.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/aboutmodules/ext_icon.gif
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/aboutmodules/ext_tables.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/Documentation/Index.rst
-${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/Documentation/typo3-adodb.diff
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/README.md
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/adodb-active-record.inc.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/adodb/adodb/adodb-active-recordx.inc.php
