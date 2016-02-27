@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:59:53 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/02/27 03:15:02 wen Exp $
 
-SHA1 (Text-Soundex-3.04.tar.gz) = 6de55ea2a02d0aa3c04565dbf4b7cfa121d75492
-RMD160 (Text-Soundex-3.04.tar.gz) = f5758a4b5f887994c6df9dc0ffe66582c795f11f
-SHA512 (Text-Soundex-3.04.tar.gz) = f0f1c14568ff34fea017854605de9d9ea1def34707c68979bfbeb77c823cb5e1935a36d7301da6dd445ce7c3c655d6ebc19f1621086df0bf479bd34aad025b1f
-Size (Text-Soundex-3.04.tar.gz) = 9024 bytes
+SHA1 (Text-Soundex-3.05.tar.gz) = aa846efe4da6f84dc33088f186b7984271334f5e
+RMD160 (Text-Soundex-3.05.tar.gz) = 3869b63744185544f5132a78206e837d07d7d101
+SHA512 (Text-Soundex-3.05.tar.gz) = f7ea405cb5960cc2e3f5e257c18c1bbb499c5244ad6a6d14612f07329fd2177ad71dcdde85129e65c65541d61e45d7e9e4097c37ca6cead9783838900b3ebbec
+Size (Text-Soundex-3.05.tar.gz) = 15527 bytes
