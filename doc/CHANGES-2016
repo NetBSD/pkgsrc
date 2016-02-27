@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.869 2016/02/26 21:08:08 tez Exp $
+$NetBSD: CHANGES-2016,v 1.870 2016/02/27 00:35:51 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1179,3 +1179,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated print/evince3 to 3.18.2 [leot 2016-02-26]
 	Added databases/wiredtiger version 2.7.0 [fhajny 2016-02-26]
 	Updated security/openssh to 7.1.1nb3 [tez 2016-02-26]
+	Updated textproc/p5-XML-XPath to 1.32 [wen 2016-02-27]
