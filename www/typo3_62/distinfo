@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.10 2015/12/26 14:26:37 taca Exp $
+$NetBSD: distinfo,v 1.10.2.1 2016/02/27 16:02:02 bsiegert Exp $
 
-SHA1 (typo3_src-6.2.17.tar.gz) = 3b9db1c4e638da4138411b3d0b6f516e63a2c4a8
-RMD160 (typo3_src-6.2.17.tar.gz) = 1bfa48a7d2b2d17d8e44c76298e97c9997f2c725
-SHA512 (typo3_src-6.2.17.tar.gz) = 89b114029fae0a487d9d0667286999c598b724125b073b57c9150dbf8167d576c6b7a2a463b65847c3503de6c6a36bb1a37ddb30937de07b3338fe4631a07346
-Size (typo3_src-6.2.17.tar.gz) = 21188594 bytes
+SHA1 (typo3_src-6.2.18.tar.gz) = feb56af83d87cb3bbe8ccac65c2ec28dcbc1c380
+RMD160 (typo3_src-6.2.18.tar.gz) = 4baf9c711da97af46a51104478bba05ad8add048
+SHA512 (typo3_src-6.2.18.tar.gz) = 9b53efe9c83bfe5bc3b4eb3533b410e7e225fe05069edb6024ee83c90c02a4a696881da78204fa460912a963674e390f9a9b03d240672f8ba86adc5f1a56aa16
+Size (typo3_src-6.2.18.tar.gz) = 21190256 bytes
 SHA1 (patch-typo3_sysext_core_Configuration_DefaultConfiguration.php) = e33544513630b4c931ca8e932847796d4bd694b2
