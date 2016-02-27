@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2015/06/07 12:40:10 gdt Exp $
+@comment $NetBSD: PLIST,v 1.26 2016/02/27 01:33:04 gdt Exp $
 bin/trac-admin
 bin/tracd
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -615,9 +615,6 @@ ${PYSITELIB}/trac/versioncontrol/web_ui/changeset.pyo
 ${PYSITELIB}/trac/versioncontrol/web_ui/log.py
 ${PYSITELIB}/trac/versioncontrol/web_ui/log.pyc
 ${PYSITELIB}/trac/versioncontrol/web_ui/log.pyo
-${PYSITELIB}/trac/versioncontrol/web_ui/main.py
-${PYSITELIB}/trac/versioncontrol/web_ui/main.pyc
-${PYSITELIB}/trac/versioncontrol/web_ui/main.pyo
 ${PYSITELIB}/trac/versioncontrol/web_ui/util.py
 ${PYSITELIB}/trac/versioncontrol/web_ui/util.pyc
 ${PYSITELIB}/trac/versioncontrol/web_ui/util.pyo
@@ -821,6 +818,7 @@ ${PYSITELIB}/tracopt/versioncontrol/svn/svn_prop.pyo
 libexec/trac/trac.cgi
 libexec/trac/trac.fcgi
 share/examples/trac/README
+share/examples/trac/appveyor.ps1
 share/examples/trac/bugzilla2trac.py
 share/examples/trac/cgi-bin/trac.cgi
 share/examples/trac/cgi-bin/trac.fcgi
