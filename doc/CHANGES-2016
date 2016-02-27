@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.876 2016/02/27 03:16:02 wen Exp $
+$NetBSD: CHANGES-2016,v 1.877 2016/02/27 03:21:21 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1186,3 +1186,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/mikutter to 3.3.8 [tsutsui 2016-02-27]
 	Updated textproc/p5-XML-Rabbit to 0.4.1 [wen 2016-02-27]
 	Updated textproc/p5-Text-Soundex to 3.0.5 [wen 2016-02-27]
+	Updated textproc/p5-Text-Reflow to 1.11 [wen 2016-02-27]
