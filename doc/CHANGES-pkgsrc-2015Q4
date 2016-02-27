@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q4,v 1.1.2.18 2016/02/20 21:25:11 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q4,v 1.1.2.19 2016/02/27 21:57:37 bsiegert Exp $
 
 Changes to the packages collection and infrastructure on the 2015Q4 branch:
 
@@ -123,3 +123,22 @@ www/curl: security update
 
 Pullup ticket #4926 - requested by bsiegert
 sysutils/salt: security fix
+
+Pullup ticket #4925 - requested by taca
+www/typo3_62: security fix
+
+Pullup ticket #4928 - requested by sevan
+security/libgcrypt: security fix
+
+Pullup ticket #4930 - requested by taca
+www/typo3_62: security fix
+
+Pullup ticket #4932 - requested by tnn
+databases/postgresql91: security fix
+
+Pullup ticket #4933 - requested by tnn
+databases/postgresql92: security fix
+
+Pullup ticket #4934 - requested by tnn
+databases/postgresql93: security fix
+
