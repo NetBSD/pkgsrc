@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.874 2016/02/27 02:31:18 tsutsui Exp $
+$NetBSD: CHANGES-2016,v 1.875 2016/02/27 03:05:27 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1184,3 +1184,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/p5-XML-RSS to 1.58 [wen 2016-02-27]
 	Updated www/trac to 1.0.10 [gdt 2016-02-27]
 	Updated net/mikutter to 3.3.8 [tsutsui 2016-02-27]
+	Updated textproc/p5-XML-Rabbit to 0.4.1 [2016-02-27]
