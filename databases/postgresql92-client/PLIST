@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/04/04 21:08:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.4.22.1 2016/02/27 17:54:56 bsiegert Exp $
 bin/clusterdb
 bin/createdb
 bin/createlang
@@ -322,6 +322,7 @@ include/postgresql/server/pg_config_manual.h
 include/postgresql/server/pg_config_os.h
 include/postgresql/server/pg_trace.h
 include/postgresql/server/pgstat.h
+include/postgresql/server/pgtar.h
 include/postgresql/server/pgtime.h
 include/postgresql/server/port.h
 include/postgresql/server/port/aix.h
