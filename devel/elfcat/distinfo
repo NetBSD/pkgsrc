@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/02/27 17:13:37 kamil Exp $
+
+SHA1 (elfcat-1.0.0.tar.gz) = e4102ffcfa7cccc7f7c31c160d4f2508060d505a
+RMD160 (elfcat-1.0.0.tar.gz) = 29c0ef8359187a6be5eb4f8a461ead73c83b48cc
+SHA512 (elfcat-1.0.0.tar.gz) = e06bc8f1639ae491b7fc0fa6f86d76d36aae96ca47a7aaa100512087cb9b5125f86c0dc82fc8b60a90b5a81f0f36c66c967be245b97d93d4b36ad77642c77164
+Size (elfcat-1.0.0.tar.gz) = 4615 bytes
