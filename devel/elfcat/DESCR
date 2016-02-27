@@ -1,0 +1,7 @@
+elfcat dumps requested parts (sections and segments) of an ELF file
+(executable, shared object, .o file) to stdout.
+
+Dumping sections can be achieved with "objcopy --dump-section" but this
+tools relies on BFD which abstracts all executable files and is not able
+to see some ELF sections.  Morever it cannot handle program header table
+entries.
