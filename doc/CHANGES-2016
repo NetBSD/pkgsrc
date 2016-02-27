@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.883 2016/02/27 08:11:09 wen Exp $
+$NetBSD: CHANGES-2016,v 1.884 2016/02/27 13:42:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1193,3 +1193,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated time/p5-DateTime-Format-Strptime to 1.64 [wen 2016-02-27]
 	Updated databases/p5-DBIx-Class-Helpers to 2.032000 [wen 2016-02-27]
 	Updated www/p5-Mojolicious to 6.50 [wen 2016-02-27]
+	Updated databases/mysql55-client to 5.5.48 [adam 2016-02-27]
+	Updated databases/mysql55-server to 5.5.48 [adam 2016-02-27]
