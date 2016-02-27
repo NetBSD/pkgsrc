@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.880 2016/02/27 07:40:23 wen Exp $
+$NetBSD: CHANGES-2016,v 1.881 2016/02/27 07:55:33 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1190,3 +1190,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/p5-DBIx-Class to 0.082821 [wen 2016-02-27]
 	Updated databases/p5-DBIx-Class-Schema-Loader to 0.07045 [wen 2016-02-27]
 	Updated databases/p5-DBIx-Class-RDBOHelpers to 0.12 [wen 2016-02-27]
+	Updated time/p5-DateTime-Format-Strptime to 1.64 [wen 2016-02-27]
