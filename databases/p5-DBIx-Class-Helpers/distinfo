@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2015/11/03 01:56:19 agc Exp $
+$NetBSD: distinfo,v 1.13 2016/02/27 08:01:44 wen Exp $
 
-SHA1 (DBIx-Class-Helpers-2.031000.tar.gz) = a5e890f12e6576e341ea9808c3a19cde9e257b94
-RMD160 (DBIx-Class-Helpers-2.031000.tar.gz) = 44482d5267d27da56ac7650392e7fa8a9e8b4d09
-SHA512 (DBIx-Class-Helpers-2.031000.tar.gz) = 40c642a0b3544a99b259fefe8bb5da97bb32cdacbf219969dcd9176c59790b84e704195696a97b60604540dce8b3978c0cb8c7166e08f31ae063207d6a812afe
-Size (DBIx-Class-Helpers-2.031000.tar.gz) = 78106 bytes
+SHA1 (DBIx-Class-Helpers-2.032000.tar.gz) = eda1b70534579ca532253d3c7792e3c2c474c754
+RMD160 (DBIx-Class-Helpers-2.032000.tar.gz) = f588283182e7a00d003c40ff0585785b43472746
+SHA512 (DBIx-Class-Helpers-2.032000.tar.gz) = 256ed9e44a32532d08403e1cea00cc39f2709fc3434f0164043f74d3b477be5b9475e8eb5c77ac52391d8eb9ea55545d1847e4b12873f7914be734e102361ae7
+Size (DBIx-Class-Helpers-2.032000.tar.gz) = 79357 bytes
