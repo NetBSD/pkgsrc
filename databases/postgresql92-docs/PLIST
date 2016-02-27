@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2015/10/11 10:59:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.14.2.1 2016/02/27 17:54:56 bsiegert Exp $
 man/man1/clusterdb.1
 man/man1/createdb.1
 man/man1/createlang.1
@@ -1051,6 +1051,7 @@ share/doc/postgresql/html/release-9-1-16.html
 share/doc/postgresql/html/release-9-1-17.html
 share/doc/postgresql/html/release-9-1-18.html
 share/doc/postgresql/html/release-9-1-19.html
+share/doc/postgresql/html/release-9-1-20.html
 share/doc/postgresql/html/release-9-1-2.html
 share/doc/postgresql/html/release-9-1-3.html
 share/doc/postgresql/html/release-9-1-4.html
@@ -1066,6 +1067,7 @@ share/doc/postgresql/html/release-9-2-11.html
 share/doc/postgresql/html/release-9-2-12.html
 share/doc/postgresql/html/release-9-2-13.html
 share/doc/postgresql/html/release-9-2-14.html
+share/doc/postgresql/html/release-9-2-15.html
 share/doc/postgresql/html/release-9-2-2.html
 share/doc/postgresql/html/release-9-2-3.html
 share/doc/postgresql/html/release-9-2-4.html
@@ -1079,6 +1081,7 @@ share/doc/postgresql/html/release.html
 share/doc/postgresql/html/resources.html
 share/doc/postgresql/html/role-attributes.html
 share/doc/postgresql/html/role-membership.html
+share/doc/postgresql/html/role-removal.html
 share/doc/postgresql/html/routine-reindex.html
 share/doc/postgresql/html/routine-vacuuming.html
 share/doc/postgresql/html/row-estimation-examples.html
