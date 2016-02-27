@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2015/12/07 15:54:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.40 2016/02/27 13:41:53 adam Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -1344,6 +1344,7 @@ share/mysql/test/std_data/bug48449.frm
 share/mysql/test/std_data/bug49823.CSM
 share/mysql/test/std_data/bug49823.CSV
 share/mysql/test/std_data/bug49823.frm
+share/mysql/test/std_data/ca-cert-verify.pem
 share/mysql/test/std_data/cacert.pem
 share/mysql/test/std_data/charset_utf8.txt
 share/mysql/test/std_data/checkDBI_DBD-mysql.pl
@@ -1450,7 +1451,11 @@ share/mysql/test/std_data/rpl_loaddata2.dat
 share/mysql/test/std_data/rpl_mixed.dat
 share/mysql/test/std_data/rpl_timezone.dat
 share/mysql/test/std_data/rpl_timezone2.dat
+share/mysql/test/std_data/server-cert-verify-fail.pem
+share/mysql/test/std_data/server-cert-verify-pass.pem
 share/mysql/test/std_data/server-cert.pem
+share/mysql/test/std_data/server-key-verify-fail.pem
+share/mysql/test/std_data/server-key-verify-pass.pem
 share/mysql/test/std_data/server-key.pem
 share/mysql/test/std_data/server8k-cert.pem
 share/mysql/test/std_data/server8k-key.pem
@@ -1460,6 +1465,8 @@ share/mysql/test/std_data/vchar.frm
 share/mysql/test/std_data/warnings_loaddata.dat
 share/mysql/test/std_data/words.dat
 share/mysql/test/std_data/words2.dat
+share/mysql/test/suite/auth_sec/r/cert_verify.result
+share/mysql/test/suite/auth_sec/t/cert_verify.test
 share/mysql/test/suite/binlog/combinations
 share/mysql/test/suite/binlog/r/binlog_base64_flag.result
 share/mysql/test/suite/binlog/r/binlog_bug23533.result
@@ -3887,6 +3894,7 @@ share/mysql/test/suite/rpl/r/rpl_auto_increment_11932.result
 share/mysql/test/suite/rpl/r/rpl_auto_increment_bug33029.result
 share/mysql/test/suite/rpl/r/rpl_auto_increment_bug45679.result
 share/mysql/test/suite/rpl/r/rpl_auto_increment_update_failure.result
+share/mysql/test/suite/rpl/r/rpl_autogen_query_multi_byte_char.result
 share/mysql/test/suite/rpl/r/rpl_begin_commit_rollback.result
 share/mysql/test/suite/rpl/r/rpl_binlog_corruption.result
 share/mysql/test/suite/rpl/r/rpl_binlog_errors.result
@@ -4173,6 +4181,7 @@ share/mysql/test/suite/rpl/r/rpl_truncate_3innodb.result
 share/mysql/test/suite/rpl/r/rpl_typeconv.result
 share/mysql/test/suite/rpl/r/rpl_typeconv_innodb.result
 share/mysql/test/suite/rpl/r/rpl_udf.result
+share/mysql/test/suite/rpl/r/rpl_unsafe_statements.result
 share/mysql/test/suite/rpl/r/rpl_user.result
 share/mysql/test/suite/rpl/r/rpl_user_variables.result
 share/mysql/test/suite/rpl/r/rpl_variables.result
@@ -4197,6 +4206,7 @@ share/mysql/test/suite/rpl/t/rpl_auto_increment_11932.test
 share/mysql/test/suite/rpl/t/rpl_auto_increment_bug33029.test
 share/mysql/test/suite/rpl/t/rpl_auto_increment_bug45679.test
 share/mysql/test/suite/rpl/t/rpl_auto_increment_update_failure.test
+share/mysql/test/suite/rpl/t/rpl_autogen_query_multi_byte_char.test
 share/mysql/test/suite/rpl/t/rpl_begin_commit_rollback-master.opt
 share/mysql/test/suite/rpl/t/rpl_begin_commit_rollback-slave.opt
 share/mysql/test/suite/rpl/t/rpl_begin_commit_rollback.test
@@ -4595,6 +4605,7 @@ share/mysql/test/suite/rpl/t/rpl_typeconv_innodb.test
 share/mysql/test/suite/rpl/t/rpl_udf-master.opt
 share/mysql/test/suite/rpl/t/rpl_udf-slave.opt
 share/mysql/test/suite/rpl/t/rpl_udf.test
+share/mysql/test/suite/rpl/t/rpl_unsafe_statements.test
 share/mysql/test/suite/rpl/t/rpl_user.test
 share/mysql/test/suite/rpl/t/rpl_user_variables.test
 share/mysql/test/suite/rpl/t/rpl_variables.test
