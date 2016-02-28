@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.896 2016/02/28 17:02:59 pettai Exp $
+$NetBSD: CHANGES-2016,v 1.897 2016/02/28 20:41:03 schnoebe Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1208,3 +1208,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/apache-tomcat8 to 8.0.32 [ryoon 2016-02-28]
 	Added textproc/cmark version 0.24.1 [kamil 2016-02-28]
 	Updated net/knot to 2.1.1 [pettai 2016-02-28]
+	Updated print/hplip to 3.16.2 [schnoebe 2016-02-28]
