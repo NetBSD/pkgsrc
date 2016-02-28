@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/02/04 11:38:10 leot Exp $
+# $NetBSD: Makefile,v 1.2 2016/02/28 19:44:56 joerg Exp $
 #
 
 DISTNAME=	glfw-3.1.2
@@ -30,6 +30,7 @@ SUBST_SED.soname=	-e '/soname/ s/libGL\.so\.1/libGL.so/'
 .include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libxkbcommon/buildlink3.mk"
