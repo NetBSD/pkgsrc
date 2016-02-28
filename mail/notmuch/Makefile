@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2016/02/25 15:00:51 jperkin Exp $
+# $NetBSD: Makefile,v 1.13 2016/02/28 00:54:15 schmonz Exp $
 
 DISTNAME=	notmuch-0.21
 CATEGORIES=	mail
@@ -20,6 +20,7 @@ MAKE_FLAGS+=	PYTHON=${PYTHONBIN}
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
+CONFIGURE_ARGS+=	--without-ruby
 
 SUBST_CLASSES.SunOS+=	gnuld
 SUBST_STAGE.gnuld=	pre-configure
