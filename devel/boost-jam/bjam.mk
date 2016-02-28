@@ -1,4 +1,4 @@
-# $NetBSD: bjam.mk,v 1.16 2015/12/27 12:41:42 adam Exp $
+# $NetBSD: bjam.mk,v 1.17 2016/02/28 23:54:11 minskim Exp $
 
 .include "../../devel/boost-jam/buildlink3.mk"
 
@@ -25,6 +25,9 @@ CXXFLAGS+=		-std=c++0x
 .  elif !empty(CC_VERSION:Mgcc-4.[89]*)
 BJAM_ARGS+=		cxxflags=-std=c++11
 CXXFLAGS+=		-std=c++11
+.  elif !empty(CC_VERSION:Mgcc-5.[0-9]*)
+BJAM_ARGS+=		cxxflags=-std=c++14
+CXXFLAGS+=		-std=c++14
 .  endif
 .endif
 
