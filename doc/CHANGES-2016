@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.887 2016/02/27 20:55:15 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.888 2016/02/28 08:59:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1198,3 +1198,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Added net/sayaka version 3.2.0 [tsutsui 2016-02-27]
 	Added devel/elfcat version 1.0.0 [kamil 2016-02-27]
 	Updated devel/py-boost to 1.60.0nb1 [wiz 2016-02-27]
+	Updated databases/mysql56-client to 5.6.29 [adam 2016-02-28]
+	Updated databases/mysql56-server to 5.6.29 [adam 2016-02-28]
