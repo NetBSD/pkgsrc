@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.47 2015/12/07 11:02:26 adam Exp $
+# $NetBSD: Makefile,v 1.48 2016/02/28 20:37:28 schnoebe Exp $
 
-DISTNAME=	hplip-3.15.11
+DISTNAME=	hplip-3.16.2
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hplip/}
 
@@ -171,7 +171,6 @@ post-install:
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../net/net-snmp/buildlink3.mk"
 .include "../../print/cups15/buildlink3.mk"
