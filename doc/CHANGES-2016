@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.889 2016/02/28 09:06:08 adam Exp $
+$NetBSD: CHANGES-2016,v 1.890 2016/02/28 09:56:18 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1201,3 +1201,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/mysql56-client to 5.6.29 [adam 2016-02-28]
 	Updated databases/mysql56-server to 5.6.29 [adam 2016-02-28]
 	Updated www/nghttp2 to 1.8.0 [adam 2016-02-28]
+	Updated mail/thunderbird to 38.6.0 [ryoon 2016-02-28]
