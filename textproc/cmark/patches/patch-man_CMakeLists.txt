@@ -1,0 +1,22 @@
+$NetBSD: patch-man_CMakeLists.txt,v 1.1 2016/02/28 13:33:58 kamil Exp $
+
+Patch accepted upstream.
+
+Fix installation of man-pages.
+
+--- man/CMakeLists.txt.orig	2016-01-18 05:53:29.000000000 +0000
++++ man/CMakeLists.txt
+@@ -1,8 +1,10 @@
+ if (NOT MSVC)
++
++include(GNUInstallDirs)
++
+   install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/man1/cmark.1
+-    DESTINATION share/man/man1)
++    DESTINATION ${CMAKE_INSTALL_MANDIR}/man1)
+ 
+   install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/man3/cmark.3
+-    DESTINATION share/man/man3)
++    DESTINATION ${CMAKE_INSTALL_MANDIR}/man3)
+ endif(NOT MSVC)
+-
