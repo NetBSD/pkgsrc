@@ -1,0 +1,125 @@
+$NetBSD: patch-configure,v 1.1 2016/02/28 19:47:41 joerg Exp $
+
+--- configure.orig	2016-02-24 13:44:02.424420285 +0000
++++ configure
+@@ -307902,6 +307902,7 @@ fi
+ 
+ 
+     # Unwind the index
++    
+     ompi_scope_index=`expr $ompi_scope_index - 1`
+     ompi_scope_test=`expr $ompi_scope_index \> 0`
+     if test "$ompi_scope_test" = "0"; then
+@@ -307922,112 +307923,6 @@ $as_echo "$as_me: WARNING: This usually 
+     done
+ 
+ 
+-    # If we found RPATH support, check for RUNPATH support, too
+-    if test "$WRAPPER_RPATH_SUPPORT" = "rpath"; then :
+-
+-
+-
+-    # Is the private index set?  If not, set it.
+-    if test "x$ompi_scope_index" = "x"; then
+-        ompi_scope_index=1
+-    fi
+-
+-    # First, check to see if any of these variables are already set.
+-    # This is a simple sanity check to ensure we're not already
+-    # overwriting pre-existing variables (that have a non-empty
+-    # value).  It's not a perfect check, but at least it's something.
+-    for ompi_var in LDFLAGS_save; do
+-        ompi_str="ompi_str=\"\$$ompi_var\""
+-        eval $ompi_str
+-
+-        if test "x$ompi_str" != "x"; then
+-            { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Found configure shell variable clash!" >&5
+-$as_echo "$as_me: WARNING: Found configure shell variable clash!" >&2;}
+-            { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: OPAL_VAR_SCOPE_PUSH called on \"$ompi_var\"," >&5
+-$as_echo "$as_me: WARNING: OPAL_VAR_SCOPE_PUSH called on \"$ompi_var\"," >&2;}
+-            { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: but it is already defined with value \"$ompi_str\"" >&5
+-$as_echo "$as_me: WARNING: but it is already defined with value \"$ompi_str\"" >&2;}
+-            { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: This usually indicates an error in configure." >&5
+-$as_echo "$as_me: WARNING: This usually indicates an error in configure." >&2;}
+-            as_fn_error $? "Cannot continue" "$LINENO" 5
+-        fi
+-    done
+-
+-    # Ok, we passed the simple sanity check.  Save all these names so
+-    # that we can unset them at the end of the scope.
+-    ompi_str="ompi_scope_$ompi_scope_index=\"LDFLAGS_save\""
+-    eval $ompi_str
+-    unset ompi_str
+-
+-    env | grep ompi_scope
+-    ompi_scope_index=`expr $ompi_scope_index + 1`
+-
+-
+-    { $as_echo "$as_me:${as_lineno-$LINENO}: checking if linker supports RUNPATH" >&5
+-$as_echo_n "checking if linker supports RUNPATH... " >&6; }
+-    # Set the output in $runpath_args
+-    runpath_args=
+-    LDFLAGS_save=$LDFLAGS
+-    LDFLAGS="$LDFLAGS -Wl,--enable-new-dtags"
+-    ac_ext=c
+-ac_cpp='$CPP $CPPFLAGS'
+-ac_compile='$CC -c $CFLAGS $CPPFLAGS conftest.$ac_ext >&5'
+-ac_link='$CC -o conftest$ac_exeext $CFLAGS $CPPFLAGS $LDFLAGS conftest.$ac_ext $LIBS >&5'
+-ac_compiler_gnu=$ac_cv_c_compiler_gnu
+-
+-    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+-/* end confdefs.h.  */
+-
+-int
+-main ()
+-{
+-return 7;
+-  ;
+-  return 0;
+-}
+-_ACEOF
+-if ac_fn_c_try_link "$LINENO"; then :
+-  WRAPPER_RPATH_SUPPORT=runpath
+-                    runpath_args="-Wl,--enable-new-dtags"
+-                    { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes (-Wl,--enable-new-dtags)" >&5
+-$as_echo "yes (-Wl,--enable-new-dtags)" >&6; }
+-else
+-  { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+-$as_echo "no" >&6; }
+-fi
+-rm -f core conftest.err conftest.$ac_objext \
+-    conftest$ac_exeext conftest.$ac_ext
+-    ac_ext=c
+-ac_cpp='$CPP $CPPFLAGS'
+-ac_compile='$CC -c $CFLAGS $CPPFLAGS conftest.$ac_ext >&5'
+-ac_link='$CC -o conftest$ac_exeext $CFLAGS $CPPFLAGS $LDFLAGS conftest.$ac_ext $LIBS >&5'
+-ac_compiler_gnu=$ac_cv_c_compiler_gnu
+-
+-    LDFLAGS=$LDFLAGS_save
+-
+-
+-    # Unwind the index
+-    ompi_scope_index=`expr $ompi_scope_index - 1`
+-    ompi_scope_test=`expr $ompi_scope_index \> 0`
+-    if test "$ompi_scope_test" = "0"; then
+-        { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: OPAL_VAR_SCOPE_POP popped too many OMPI configure scopes." >&5
+-$as_echo "$as_me: WARNING: OPAL_VAR_SCOPE_POP popped too many OMPI configure scopes." >&2;}
+-        { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: This usually indicates an error in configure." >&5
+-$as_echo "$as_me: WARNING: This usually indicates an error in configure." >&2;}
+-        as_fn_error $? "Cannot continue" "$LINENO" 5
+-    fi
+-
+-    # Get the variable names from that index
+-    ompi_str="ompi_str=\"\$ompi_scope_$ompi_scope_index\""
+-    eval $ompi_str
+-
+-    # Iterate over all the variables and unset them all
+-    for ompi_var in $ompi_str; do
+-        unset $ompi_var
+-    done
+-
+-
+-fi
+ 
+ fi
+     if test "$enable_wrapper_rpath" = "yes" -a "$WRAPPER_RPATH_SUPPORT" = "disabled"; then :
