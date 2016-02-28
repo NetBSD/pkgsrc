@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/02/28 13:33:58 kamil Exp $
+# $NetBSD: Makefile,v 1.2 2016/02/28 14:02:32 kamil Exp $
 
 DISTNAME=	cmark-0.24.1
 CATEGORIES=	textproc
@@ -15,18 +15,18 @@ USE_LANGUAGES=	c c++
 
 PYTHON_FOR_BUILD_ONLY=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	27
+PYTHON_VERSIONS_INCOMPATIBLE+=	27
 
 PKGCONFIG_OVERRIDE+=	src/libcmark.pc.in
 
-CONFIGURE_DIRS=		${WRKDIR}/build
+CONFIGURE_DIRS=		build
 CMAKE_ARG_PATH=		${WRKSRC}
 
-TEST_ENV+=	LD_LIBRARY_PATH=${WRKDIR}/build/src
+TEST_ENV+=	LD_LIBRARY_PATH=${WRKSRC}/build/src
 TEST_TARGET=	test
 
 post-extract:
-	${RUN} mkdir -p ${WRKDIR}/build
+	${RUN} mkdir -p ${WRKSRC}/build
 
 .include "../../lang/python/tool.mk"
 .include "../../mk/bsd.pkg.mk"
