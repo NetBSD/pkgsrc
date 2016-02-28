@@ -1,4 +1,6 @@
-$NetBSD: patch-diagnose_queues.py,v 1.1 2015/11/03 15:08:50 schnoebe Exp $
+$NetBSD: patch-diagnose_queues.py,v 1.2 2016/02/28 20:37:28 schnoebe Exp $
+
+Correct the spelling on the module name.
 
 --- diagnose_queues.py.orig	2015-08-19 13:25:37.000000000 +0000
 +++ diagnose_queues.py

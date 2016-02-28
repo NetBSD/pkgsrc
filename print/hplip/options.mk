@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2015/12/05 21:25:55 adam Exp $
+# $NetBSD: options.mk,v 1.9 2016/02/28 20:37:28 schnoebe Exp $
 #
 # HPLIP dependencies are detailed in the following page:
 # http://hplipopensource.com/hplip-web/install/manual/distros/other.html
@@ -52,6 +52,7 @@ EGFILES+=		dbus-1/system.d/com.hp.hplip.conf
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/dbus-1/system.d
 .include "../../x11/py-qt4/buildlink3.mk"
 .include "../../security/policykit/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 DEPENDS+=	${PYPKGPREFIX}-notify-[0-9]*:../../sysutils/py-notify
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-notify
 .else
