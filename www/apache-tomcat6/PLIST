@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2015/05/19 19:33:54 spz Exp $
+@comment $NetBSD: PLIST,v 1.12 2016/02/28 10:14:53 ryoon Exp $
 share/doc/tomcat/LICENSE
 share/doc/tomcat/NOTICE
 share/doc/tomcat/RELEASE-NOTES
@@ -464,6 +464,7 @@ share/tomcat/webapps/host-manager/images/fix.gif
 share/tomcat/webapps/host-manager/images/tomcat.gif
 share/tomcat/webapps/host-manager/images/update.gif
 share/tomcat/webapps/host-manager/images/void.gif
+share/tomcat/webapps/host-manager/index.jsp
 share/tomcat/webapps/host-manager/manager.xml
 share/tomcat/webapps/manager/META-INF/context.xml
 share/tomcat/webapps/manager/WEB-INF/jsp/401.jsp
@@ -480,6 +481,6 @@ share/tomcat/webapps/manager/images/fix.gif
 share/tomcat/webapps/manager/images/tomcat.gif
 share/tomcat/webapps/manager/images/update.gif
 share/tomcat/webapps/manager/images/void.gif
+share/tomcat/webapps/manager/index.jsp
 share/tomcat/webapps/manager/status.xsd
 share/tomcat/webapps/manager/xform.xsl
-@pkgdir share/tomcat/conf
