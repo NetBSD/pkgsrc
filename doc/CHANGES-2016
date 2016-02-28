@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.897 2016/02/28 20:41:03 schnoebe Exp $
+$NetBSD: CHANGES-2016,v 1.898 2016/02/28 21:59:53 schnoebe Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1209,3 +1209,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added textproc/cmark version 0.24.1 [kamil 2016-02-28]
 	Updated net/knot to 2.1.1 [pettai 2016-02-28]
 	Updated print/hplip to 3.16.2 [schnoebe 2016-02-28]
+	Updated chat/jabberd2 to 2.3.6 [schnoebe 2016-02-28]
