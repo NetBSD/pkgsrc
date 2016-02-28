@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q4,v 1.1.2.19 2016/02/27 21:57:37 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q4,v 1.1.2.20 2016/02/28 11:24:52 bsiegert Exp $
 
 Changes to the packages collection and infrastructure on the 2015Q4 branch:
 
@@ -141,4 +141,13 @@ databases/postgresql92: security fix
 
 Pullup ticket #4934 - requested by tnn
 databases/postgresql93: security fix
+
+Pullup ticket #4935 - requested by tnn
+databases/postgresql94: security fix
+
+Pullup ticket #4936 - requested by taca
+www/drupal7: security fix
+
+Pullup ticket #4937 - requested by taca
+www/drupal6: security fix
 
