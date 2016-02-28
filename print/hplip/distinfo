@@ -1,17 +1,17 @@
-$NetBSD: distinfo,v 1.21 2015/12/07 11:02:26 adam Exp $
+$NetBSD: distinfo,v 1.22 2016/02/28 20:37:28 schnoebe Exp $
 
-SHA1 (hplip-3.15.11.tar.gz) = c28f373e85a1355c10c3112e1274138372a9c832
-RMD160 (hplip-3.15.11.tar.gz) = 1d6c50650f2e6e1d4549d0b539023e4ce51bd8c6
-SHA512 (hplip-3.15.11.tar.gz) = 003789e30f45d71a78ebcd2fa57231381ba7bf7aba0ebbcfffda5b01a9c4e8bf763c03488883aba77368920d0dea31a2e80da2d036cf5cb7d07cf65511a7eb49
-Size (hplip-3.15.11.tar.gz) = 22277756 bytes
+SHA1 (hplip-3.16.2.tar.gz) = 28efa845832c77e7015442e7934fc01cc5c4b346
+RMD160 (hplip-3.16.2.tar.gz) = 9e83fbfc8517b13e664135006ea240bf1f7ff3cb
+SHA512 (hplip-3.16.2.tar.gz) = fa73f85cc255a30486ebde12d1615a4c164dd4ecb616a8d509b6ad5857aa52edca14c488e2b11ade4254f71d76bea1ca8d85dc2b0ee99ba32d9381ef42fc80a5
+Size (hplip-3.16.2.tar.gz) = 22285808 bytes
 SHA1 (patch-ab) = 82b8ab80f778a6a31c1031688d9a16dbd4c55462
 SHA1 (patch-ae) = c4bae69fce7d9061d4c7dc53f1f8c5404577c605
-SHA1 (patch-configure.in) = 329ff2e27acf3acb57c1afc182e8e32da45aab9a
-SHA1 (patch-diagnose_queues.py) = aa3e544dc131accf4f799d26924b50f511c8c69f
+SHA1 (patch-configure.in) = c5d3d88a4ae5b1c30c23bc27ac94caf6be493851
+SHA1 (patch-diagnose_queues.py) = 0ef5c12a3f3de217064d5b0c40611ba3f1e72c9e
 SHA1 (patch-installer_dcheck.py) = e381086ccdfbdcd84d3ffe29995d5d3643709be6
 SHA1 (patch-io_hpmud_musb.h) = ad634f5a1f426877e1c88916b6468fcdb7598555
 SHA1 (patch-prnt_hpijs_context2.cpp) = f81148c1c334a9074453b27ac055833cd1669bd0
 SHA1 (patch-prnt_hpijs_foomatic-rip-hplip) = a94c7bbdc90dd68d001ce0325b7aabcd470233eb
 SHA1 (patch-prnt_hpijs_hjzjscolor.cpp) = 5ca9c828ba4aff17a54a803d79c2dc169975d50c
-SHA1 (patch-protocol_discovery_mdns.c) = 3923ebc318e702b45ea69c533d275cc16986c979
+SHA1 (patch-protocol_discovery_mdns.c) = e2ca43f6ab13fe2124a38bcc0eff292a57b34b06
 SHA1 (patch-scan.py) = 4d942ee0580d5f1818e43164c07edd018529395d
