@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.898 2016/02/28 21:59:53 schnoebe Exp $
+$NetBSD: CHANGES-2016,v 1.899 2016/02/28 23:55:57 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1210,3 +1210,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/knot to 2.1.1 [pettai 2016-02-28]
 	Updated print/hplip to 3.16.2 [schnoebe 2016-02-28]
 	Updated chat/jabberd2 to 2.3.6 [schnoebe 2016-02-28]
+	Updated devel/boost-headers to 1.60.0nb3 [minskim 2016-02-28]
+	Updated devel/boost-libs to 1.60.0nb2 [minskim 2016-02-28]
