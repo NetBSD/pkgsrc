@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.Darwin,v 1.1 2016/02/29 19:48:43 jperkin Exp $
+lib/gstreamer-0.10/libgstapplemedia.la
