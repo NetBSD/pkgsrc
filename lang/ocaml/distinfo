@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.92 2015/12/29 23:34:52 dholland Exp $
+$NetBSD: distinfo,v 1.93 2016/02/29 13:53:58 jperkin Exp $
 
 SHA1 (ocaml-4.02.3.tar.gz) = e68ffd2b5bb491a6345f46b27675e1361a49b274
 RMD160 (ocaml-4.02.3.tar.gz) = 3946204b9396a7fb81ae1042ce67a494579c151b
@@ -15,7 +15,7 @@ SHA1 (patch-byterun_Makefile) = eb27cc004d099ce5a2bcf4aed341dd5a2b35967a
 SHA1 (patch-byterun_caml_mlvalues.h) = 310e49ecb718825395583ae4eacb91905118886b
 SHA1 (patch-config_auto__aux_gethostbyaddr.c) = 79159e1b9992ca11920832642b52c6c64717b567
 SHA1 (patch-config_auto__aux_gethostbyname.c) = dfb24714259938c59db0bf28a252d60f72abc421
-SHA1 (patch-configure) = d79689cf685827dd9ad2ce59ea3a8f63eb3c58a8
+SHA1 (patch-configure) = 2af864c6478404d33d5013d2035057474e56220e
 SHA1 (patch-debugger_Makefile.shared) = 2315c0f771ba2cb0d1f05d898db5023b5b44546b
 SHA1 (patch-driver_compenv.ml) = c011ba27c8d040c80408af6a4e6dcb5fc0a33902
 SHA1 (patch-driver_main.ml) = b843811b36277f5dea71953df74427394ceb2398
