@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/03/13 17:13:26 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2016/02/29 12:29:56 jperkin Exp $
 
 ATTR_VERS=	2.4.47
 PKGNAME=	attr-${ATTR_VERS}
@@ -18,15 +18,19 @@ USE_LIBTOOL=	yes
 BUILD_TARGET=	default
 INSTALL_SH_OVERRIDE=no
 
+LDFLAGS.Darwin+=	-lintl
+LDFLAGS.NetBSD+=	-lintl
+
+SUBST_CLASSES.Darwin+=	rmldarg
+SUBST_CLASSES.SunOS+=	rmldarg
+SUBST_STAGE.rmldarg=	pre-configure
+SUBST_FILES.rmldarg=	libattr/Makefile
+SUBST_SED.rmldarg=	-e '/version-script/d'
+
 pre-install:
 	cd ${WRKSRC}/libattr && env ${MAKE_ENV} \
             ${MAKE_PROGRAM} ${INSTALL_MAKE_FLAGS} \
                 -f ${MAKE_FILE} install-lib
-
-.include "../../mk/bsd.prefs.mk"
-
-LDFLAGS.NetBSD+=	-lintl
-#MAKE_ENV+=	LTCOMMAND="libtool --install"
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
