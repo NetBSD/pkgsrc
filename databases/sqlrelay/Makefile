@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2015/09/02 12:39:33 fhajny Exp $
+# $NetBSD: Makefile,v 1.45 2016/02/29 17:35:10 jperkin Exp $
 
 COMMENT=		Database connection pooling middleware and API
 
@@ -42,6 +42,11 @@ SUBST_SED.user=		-e '/runasuser/s/nobody/${SQLR_USER}/'
 SUBST_SED.user+=	-e '/runasgroup/s/nobody/${SQLR_GROUP}/'
 SUBST_SED.user+=	-e '/RUNASUSER/s/nobody/${SQLR_USER}/'
 SUBST_SED.user+=	-e '/RUNASGROUP/s/nobody/${SQLR_GROUP}/'
+
+OPSYSVARS+=		SOEXT
+SOEXT.Darwin=		bundle
+SOEXT.*=		so
+PLIST_SUBST+=		SOEXT=${SOEXT}
 
 FILES_SUBST+=		SQLR_USER=${SQLR_USER}
 FILES_SUBST+=		SQLR_GROUP=${SQLR_GROUP}
