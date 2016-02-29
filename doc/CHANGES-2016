@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.900 2016/02/29 10:51:49 adam Exp $
+$NetBSD: CHANGES-2016,v 1.901 2016/02/29 11:48:50 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1213,3 +1213,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/boost-headers to 1.60.0nb3 [minskim 2016-02-28]
 	Updated devel/boost-libs to 1.60.0nb2 [minskim 2016-02-28]
 	Updated devel/git to 2.7.2 [adam 2016-02-29]
+	Updated editors/abiword to 3.0.1nb1 [jperkin 2016-02-29]
