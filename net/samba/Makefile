@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.256 2015/10/23 19:07:58 tnn Exp $
+# $NetBSD: Makefile,v 1.257 2016/02/29 17:13:06 jperkin Exp $
 
 DISTNAME=	samba-${VERSION}
 CATEGORIES=	net
@@ -76,7 +76,6 @@ CONFIGURE_ARGS+=	--enable-merged-build=no
 .include "../../net/samba/options.mk"
 
 .if ${_OPSYS_SHLIB_TYPE} == "dylib"
-CHECK_SHLIBS_SKIP+=	lib/samba/*/*.dylib lib/security/pam_winbind.dylib
 PLIST_SUBST+=	LIBEXT=dylib
 SAMBA_LIBEXT=	dylib
 .else
@@ -152,6 +151,11 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/script/updatesmbpasswd.sh \
 		${DESTDIR}${PREFIX}/${EGDIR}
 	${CHMOD} ${SHAREMODE} ${DESTDIR}${PREFIX}/include/*.h
+.if ${_OPSYS_SHLIB_TYPE} == "dylib"
+	cd ${DESTDIR}${PREFIX}; ${FIND} lib/samba lib/security -name "*.dylib" | while read lib; do \
+		install_name_tool -id ${PREFIX}/$${lib} $${lib}; \
+	done
+.endif
 
 .include "../../net/samba/Makefile.mirrors"
 
