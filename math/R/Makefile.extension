@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.extension,v 1.19 2014/10/09 14:06:41 wiz Exp $
+# $NetBSD: Makefile.extension,v 1.20 2016/02/29 20:05:00 jperkin Exp $
 #
 # This Makefile fragment is included by packages for R library packages.
 #
@@ -25,6 +25,19 @@ do-build:
 do-install:
 	${PKGSRC_SETENV} ${INSTALL_ENV} ${MAKE_ENV} ${LOCALBASE}/bin/R \
 		CMD INSTALL ${R_PKG_INSTALL_ARGS} ${WRKDIR}/${R_PKGNAME}
+
+.include "../../mk/bsd.fast.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+.PHONY: fix-darwin-install-name
+post-install: fix-darwin-install-name
+fix-darwin-install-name:
+	${FIND} ${DESTDIR}${PREFIX} -name "*.so" | while read lib; do	\
+		libname=`basename $${lib}`;				\
+		libdir=`dirname $${lib} | sed -e 's,${DESTDIR},,'`;	\
+		install_name_tool -id $${libdir}/$${libname} $${lib};	\
+	done
+.endif
 
 R_LIB=			lib/R/library
 R_INST_DIRS?=		${R_PKGNAME}
