@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.19 2015/11/04 01:32:05 agc Exp $
+$NetBSD: distinfo,v 1.20 2016/02/29 05:50:40 mlelstv Exp $
 
 SHA1 (amanda-3.3.1.tar.gz) = 22273381f61319e46e1da9d7029ca2b3991eee98
 RMD160 (amanda-3.3.1.tar.gz) = 0d66ad25fd905901a1afd3651bd6c1e00db9af8d
@@ -8,6 +8,7 @@ SHA1 (patch-Makefile.am) = 005201b7a9b4e875c45362456e100c57fcf700f3
 SHA1 (patch-amandad-src_Makefile.am) = bdff2c06da0ee6c88237c56568fe20c5cefedd7a
 SHA1 (patch-application-src_Makefile.am) = 3a5f256ab7e2439c2e19c4f75234d3a677707cc2
 SHA1 (patch-client-src_Makefile.am) = 641ef76fd1ea413b416704e1e52e25a93a596442
+SHA1 (patch-client-src_getfsent.c) = 56ce707aa974d91864e7d8099ceae96c50281704
 SHA1 (patch-client-src_sendbackup-dump.c) = aea1aca0bbcdab0c393b012a592cbc5ca458acec
 SHA1 (patch-client-src_sendsize.c) = 32a1627c250b6413e4695a610bba59796c6e7ed6
 SHA1 (patch-common-src_Makefile.in) = 422e4d519d8797e686d62cfeca8cda2e8a4a8bb3
