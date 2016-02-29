@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2010/02/09 07:02:53 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2016/02/29 20:00:44 jperkin Exp $
 
 BUILDLINK_TREE+=	R
 
@@ -9,5 +9,7 @@ BUILDLINK_API_DEPENDS.R+=	R>=1.7.0
 BUILDLINK_ABI_DEPENDS.R+=	R>=2.2.1nb2
 BUILDLINK_PKGSRCDIR.R?=	../../math/R
 .endif # R_BUILDLINK3_MK
+
+.include "../../devel/gettext-lib/buildlink3.mk"
 
 BUILDLINK_TREE+=	-R
