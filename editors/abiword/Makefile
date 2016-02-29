@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.158 2016/02/12 23:42:15 jperkin Exp $
+# $NetBSD: Makefile,v 1.159 2016/02/29 11:48:38 jperkin Exp $
 
 .include 	"Makefile.common"
 DISTNAME=	abiword-${ABIVERSION}
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	http://www.abiword.com/downloads/abiword/${PKGVERSION_NOREV}/source/
 
@@ -11,6 +12,8 @@ COMMENT=	Open Source cross-platform word processor
 LICENSE=	gnu-gpl-v2
 
 CONFLICTS=      abiword-personal-[0-9]* abiword2-[0-9]*
+
+DEPENDS+=	adwaita-icon-theme>0:../../graphics/adwaita-icon-theme
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
