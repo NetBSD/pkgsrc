@@ -1,8 +1,48 @@
-$NetBSD: patch-af,v 1.12 2013/08/12 02:45:55 taca Exp $
+$NetBSD: patch-af,v 1.13 2016/02/29 17:13:06 jperkin Exp $
 
---- configure.orig	2013-07-29 18:57:14.000000000 +0000
+Fix HAVE_COMPILER_WILL_OPTIMIZE_OUT_FNS test, from upstream.
+
+--- configure.orig	2015-02-22 14:16:23.000000000 +0000
 +++ configure
-@@ -19513,6 +19513,7 @@ $as_echo "#define DARWINOS 1" >>confdefs
+@@ -15277,20 +15277,24 @@ else
+     cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
+-#include <stdio.h>
+-int
+-main ()
+-{
+-
+-		if (0) {
+-		   this_function_does_not_exist();
+-		} else {
+-		  return 1;
+-		}
+-
++#include <sys/types.h>
++size_t __unsafe_string_function_usage_here_size_t__(void);
++#define CHECK_STRING_SIZE(d, len) (sizeof(d) != (len) && sizeof(d) != sizeof(char *))
++static size_t push_string_check_fn(void *dest, const char *src, size_t dest_len) {
++    return 0;
++}
+ 
+-  ;
+-  return 0;
++#define push_string_check(dest, src, dest_len) \
++    (CHECK_STRING_SIZE(dest, dest_len) \
++    ? __unsafe_string_function_usage_here_size_t__()	\
++    : push_string_check_fn(dest, src, dest_len))
++
++int main(int argc, char **argv) {
++    char outbuf[1024];
++    char *p = outbuf;
++    const char *foo = "bar";
++    p += 31 + push_string_check(p + 31, foo, sizeof(outbuf) - (p + 31 - outbuf));
++    return 0;
+ }
+ _ACEOF
+ if ac_fn_c_try_link "$LINENO"; then :
+@@ -19513,6 +19517,7 @@ $as_echo "#define DARWINOS 1" >>confdefs
  
  			BLDSHARED="true"
  			LDSHFLAGS="-dynamiclib -flat_namespace -undefined suppress"
@@ -10,7 +50,7 @@ $NetBSD: patch-af,v 1.12 2013/08/12 02:45:55 taca Exp $
  			CFLAGS="$CFLAGS -fno-common"
  			SHLD="\${CC}"
  			SHLIBEXT="dylib"
-@@ -19562,7 +19563,7 @@ fi
+@@ -19562,7 +19567,7 @@ fi
  
  if test "x$enable_as_needed" != xno; then
      saved_before_as_needed_ldflags="$LDFLAGS"
@@ -19,7 +59,7 @@ $NetBSD: patch-af,v 1.12 2013/08/12 02:45:55 taca Exp $
  	saved_ldflags="$LDFLAGS"
  	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking if $flags works" >&5
  $as_echo_n "checking if $flags works... " >&6; }
-@@ -26638,9 +26639,9 @@ LIBS="-lcrypto $KRB5_LIBS  $LIBS"
+@@ -26638,9 +26643,9 @@ LIBS="-lcrypto $KRB5_LIBS  $LIBS"
  
  
  
@@ -32,7 +72,7 @@ $NetBSD: patch-af,v 1.12 2013/08/12 02:45:55 taca Exp $
    $as_echo_n "(cached) " >&6
  else
    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
-@@ -26652,31 +26653,31 @@ else
+@@ -26652,31 +26657,31 @@ else
  #ifdef __cplusplus
  extern "C"
  #endif
@@ -72,7 +112,7 @@ $NetBSD: patch-af,v 1.12 2013/08/12 02:45:55 taca Exp $
  _ACEOF
  
  fi
-@@ -36043,31 +36044,39 @@ case "$host_os" in
+@@ -36049,31 +36054,39 @@ case "$host_os" in
  		NSSSONAMEVERSIONSUFFIX=".2"
  		WINBIND_NSS_EXTRA_OBJS="../nsswitch/winbind_nss_linux.o"
  		;;
