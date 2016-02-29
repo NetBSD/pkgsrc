@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15498 2016/02/28 15:48:04 wiz Exp $
+$NetBSD: TODO,v 1.15499 2016/02/29 10:51:49 adam Exp $
 
 Suggested new packages
 ======================
@@ -740,7 +740,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gfract-0.33
 	o ghc7-7.10.1
 	o gifsicle-1.88
-	o git-base-2.7.2
 	o gkrellm-2.3.5
 	o gkrellm-multiping-2.0.13
 	o gkrellm-server-2.3.5
