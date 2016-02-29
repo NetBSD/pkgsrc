@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.35 2016/01/16 10:32:53 jaapb Exp $
+# $NetBSD: buildlink3.mk,v 1.36 2016/02/29 13:51:27 jperkin Exp $
 
 BUILDLINK_TREE+=	ocaml
 
@@ -25,6 +25,7 @@ ocaml-wrappers:
 			-e 's|@OCAML_PREFIX@|${BUILDLINK_PREFIX.ocaml}|g' \
 			-e 's|@CFLAGS@|'${CFLAGS:Q}'|g'			\
 			-e 's|@LDFLAGS@|'${LDFLAGS:Q}'|g'		\
+			-e 's|@WRAPPEE@|'$$w'|g'			\
 			< ${.CURDIR}/../../lang/ocaml/files/wrapper.sh	\
 			> ${BUILDLINK_DIR}/bin/"$$w";			\
 		${CHMOD} +x ${BUILDLINK_DIR}/bin/"$$w";			\
