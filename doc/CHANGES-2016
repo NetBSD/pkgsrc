@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.902 2016/02/29 13:54:07 jperkin Exp $
+$NetBSD: CHANGES-2016,v 1.903 2016/03/01 02:44:42 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1215,3 +1215,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/git to 2.7.2 [adam 2016-02-29]
 	Updated editors/abiword to 3.0.1nb1 [jperkin 2016-02-29]
 	Updated lang/ocaml to 4.02.3nb3 [jperkin 2016-02-29]
+	Updated www/py-google-api-python-client to 1.5.0 [mef 2016-03-01]
