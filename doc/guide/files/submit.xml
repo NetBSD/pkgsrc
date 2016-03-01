@@ -1,4 +1,4 @@
-<!-- $NetBSD: submit.xml,v 1.30 2014/08/12 05:12:41 schmonz Exp $ -->
+<!-- $NetBSD: submit.xml,v 1.31 2016/03/01 12:34:14 wiz Exp $ -->
 
 <chapter id="submit"> <?dbhtml filename="submit.html"?>
 <title>Submitting and Committing</title>
@@ -46,7 +46,7 @@
 
 	<para>Alternatively, you can also import new packages into
 	pkgsrc-wip (<quote>pkgsrc work-in-progress</quote>); see the
-	homepage at <ulink url="http://pkgsrc-wip.sourceforge.net/"/>
+	homepage at <ulink url="http://pkgsrc.org/wip/"/>
 	for details.</para>
 
 </sect1>
