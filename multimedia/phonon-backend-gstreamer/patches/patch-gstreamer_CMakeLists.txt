@@ -1,0 +1,12 @@
+$NetBSD: patch-gstreamer_CMakeLists.txt,v 1.1 2016/03/01 09:21:01 markd Exp $
+
+Dont install icons. Separated out into separate package.
+
+--- gstreamer/CMakeLists.txt.orig	2014-12-27 14:05:27.000000000 +0000
++++ gstreamer/CMakeLists.txt
+@@ -130,4 +130,4 @@ else()
+             DESTINATION ${SERVICES_INSTALL_DIR}/phononbackends)
+ endif()
+ 
+-add_subdirectory(icons)
++#add_subdirectory(icons)
