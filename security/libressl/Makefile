@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/01/05 01:09:21 sevan Exp $
+# $NetBSD: Makefile,v 1.2 2016/03/01 01:39:18 sevan Exp $
 
 DISTNAME=	libressl-2.2.5
 CATEGORIES=	security
@@ -32,6 +32,7 @@ CONF_FILES+= 		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 					
 # Handle subprefix
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${LIBRESSL_PREFIX:Q}/lib
+BUILDLINK_PASSTHRU_RPATHDIRS+=	${LIBRESSL_PREFIX:Q}/lib
 
 TEST_TARGET=	check
 
