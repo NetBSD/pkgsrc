@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2016/02/08 20:43:32 markd Exp $
+$NetBSD: distinfo,v 1.3 2016/03/01 20:11:35 joerg Exp $
 
 SHA1 (ssr-0.3.6.tar.gz) = 20f126aeebf6ca2480898de02efb13f46471aaad
 RMD160 (ssr-0.3.6.tar.gz) = 9e9c631a330e8d92c7ea3379b062be6892bdd313
@@ -7,3 +7,4 @@ Size (ssr-0.3.6.tar.gz) = 1640585 bytes
 SHA1 (patch-configure) = d92853ae320506da18ccaec91c5eb525d7d3b5a2
 SHA1 (patch-glinject_Hook.cpp) = b3e804e2e317194d99eeb634aa9fd3d565f18940
 SHA1 (patch-glinject_elfhacks.c) = 4d416e0ea6b160d34583e737ba5bd1981a8a94ef
+SHA1 (patch-src_Benchmark.cpp) = f4d572b4a9c0593175703bb3f62e4259ff5e0f1a
