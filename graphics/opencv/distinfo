@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.34 2016/02/21 14:10:46 fhajny Exp $
+$NetBSD: distinfo,v 1.35 2016/03/01 20:14:24 joerg Exp $
 
 SHA1 (opencv-3.1.0.zip) = 8c932b68fe2e1575e88dde759ab1ed1d53d6f41b
 RMD160 (opencv-3.1.0.zip) = d7a811c67cfb16243470822150760252d5770165
@@ -18,3 +18,4 @@ SHA1 (patch-modules_flann_include_opencv2_flann_defines.h) = ab848e67c4e03219670
 SHA1 (patch-modules_java_CMakeLists.txt) = 020a8d2048d927e5d3819867df0d889bb516d8b4
 SHA1 (patch-modules_objdetect_include_opencv_objdetect_detection__based__tracker.hpp) = 83575857156321ae07f3fb03d1b3c61b804b3832
 SHA1 (patch-modules_ts_src_ts.cpp) = b9a3992014b02dbd89d46375a2476385e91dc24c
+SHA1 (patch-modules_videoio_src_cap__v4l.cpp) = f8f786f97a9b8c047180b79e399b83f71735f91e
