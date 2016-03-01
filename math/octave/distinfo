@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.45 2016/02/16 04:21:40 dbj Exp $
+$NetBSD: distinfo,v 1.46 2016/03/01 20:13:19 joerg Exp $
 
 SHA1 (octave-4.0.0.tar.xz) = 795c7ef1fb8d92f4cf9cae9eabba374a0328b1a9
 RMD160 (octave-4.0.0.tar.xz) = 57a4c6a90fbe49ad5268b257a4847788061daa49
@@ -9,7 +9,7 @@ SHA1 (patch-configure.ac) = d70f77d12a660bf9542725c8085fb525f138ce75
 SHA1 (patch-fflush-fpos_t.c) = 83d3d731042862920de68f0457fea4f95568125c
 SHA1 (patch-fseeko-fpos_t.c) = b38e7a38be2e0b323cd7f168f1d22d3df998691c
 SHA1 (patch-libgnu_stdio.in.h) = 9b01e1e131b39ef69607387adefc679e0e11d653
-SHA1 (patch-libgnu_string.in.h) = b7b48879d0aa465f5492d2213e5782eb71b4c744
+SHA1 (patch-libgnu_string.in.h) = feac8dd3c9873d93918f9b5810c28a80f953a80a
 SHA1 (patch-libgui_graphics_Canvas.cc) = b8161fc9248af2160c6fea012bac85e2128dbad7
 SHA1 (patch-libgui_graphics_Object.cc) = f0c0064793d4650e845e217806597bb956cb49fd
 SHA1 (patch-libgui_qterminal_libqterminal_QTerminal.cc) = 48827b415a142518a6d764f670db0ce640cf4da4
