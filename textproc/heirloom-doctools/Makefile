@@ -1,23 +1,22 @@
-# $NetBSD: Makefile,v 1.2 2015/04/22 09:06:28 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2016/03/01 13:59:11 leot Exp $
 
-V=		150406
-DISTNAME=	heirloom-doctools-${V}
+DISTNAME=	heirloom-doctools-160217
 CATEGORIES=	textproc
-MASTER_SITES=	http://github.com/n-t-roff/heirloom-doctools/releases/download/${V}/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GITHUB:=n-t-roff/}
 
 MAINTAINER=	carsten.kunze@arcor.de
 HOMEPAGE=	http://n-t-roff.github.io/heirloom/doctools.html
 COMMENT=	Modernized troff implementation
 LICENSE=	cddl-1.0
 
-USE_LANGUAGES=	c c++
-USE_TOOLS+=	lex yacc
 MAKE_JOBS_SAFE=	no
 
-MAKE_FLAGS =	CC="${CC}" \
-		CCC="${CXX}" \
-		CFLAGS="${CFLAGS}" \
+USE_LANGUAGES=	c c++
+USE_TOOLS+=	lex yacc
+
+MAKE_FLAGS=	CC=${CC:Q} \
+		CCC=${CXX:Q} \
+		CFLAGS=${CFLAGS:Q} \
 		RANLIB=ranlib \
 		INSTALL=install \
 		ROOT=${DESTDIR} \
