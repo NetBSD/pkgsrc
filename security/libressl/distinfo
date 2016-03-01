@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2016/01/05 12:51:20 sevan Exp $
+$NetBSD: distinfo,v 1.3 2016/03/01 02:07:48 sevan Exp $
 
-SHA1 (libressl-2.2.5.tar.gz) = 893c60c9500a6e0ab6cdb50668b290313403ba77
-RMD160 (libressl-2.2.5.tar.gz) = 94cd17498bd449da6210de34a190d18b82ce5083
-SHA512 (libressl-2.2.5.tar.gz) = 501d04cb966260854082d374e60aabde21bcd65a331ff7c76044f2053b22ddab4914710b223b400a3a181873c6af5e2e7da5f04bdd9028fddbf420e259a2863a
-Size (libressl-2.2.5.tar.gz) = 2966527 bytes
+SHA1 (libressl-2.2.6.tar.gz) = 7dd05c3318ef0f9f15d43816cd892d212ca92e3c
+RMD160 (libressl-2.2.6.tar.gz) = ca39eba38a33ec61ea5616699de16f79a1c82a70
+SHA512 (libressl-2.2.6.tar.gz) = 41e29431ad9e8b18e2dbc30fe9df1d7be3ca372d5d7757b5b01f8904515bafd5333446957fbc9874f64f384dae56cf6bf29d6808a7c0df1836b55ea64804a4bf
+Size (libressl-2.2.6.tar.gz) = 2965531 bytes
 SHA1 (patch-apps_Makefile.am) = 0ae0a0176f68b08c5d3b5c05fa4f6fb37687cc07
 SHA1 (patch-apps_Makefile.in) = 668abb640ea091feee3d4be44f56660707d105d7
