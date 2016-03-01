@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.41 2016/01/07 17:55:55 bouyer Exp $
+$NetBSD: distinfo,v 1.42 2016/03/01 20:09:04 joerg Exp $
 
 SHA1 (xen-4.1.6.1.tar.gz) = e5f15feb0821578817a65ede16110c6eac01abd0
 RMD160 (xen-4.1.6.1.tar.gz) = bff11421fc44a26f2cc3156713267abcb36d7a19
@@ -41,6 +41,7 @@ SHA1 (patch-xen_Makefile) = d1c7e4860221f93d90818f45a77748882486f92b
 SHA1 (patch-xen_arch_x86_Rules.mk) = 6b9b4bfa28924f7d3f6c793a389f1a7ac9d228e2
 SHA1 (patch-xen_arch_x86_cpu_mcheck_vmce.c) = 5afd01780a13654f1d21bf1562f6431c8370be0b
 SHA1 (patch-xen_arch_x86_time.c) = 2c69ac1cb5e0ca06c4f70acb91d2723a32ce98a9
+SHA1 (patch-xen_arch_x86_x86__64_entry.S) = 92bea7885c418e643bd9697abb9655bee9d1750b
 SHA1 (patch-xen_drivers_char_console_c) = 0fe186369602ccffaeec6f4bfbee8bb4298d3ff0
 SHA1 (patch-xen_drivers_passthrough_vtd_x86_ats.c) = 012ccbb27069c4f2e0361bd127397fdd22027f29
 SHA1 (patch-xen_include_xen_stdarg.h) = e9df974a9b783ed442ab17497198432cb9844b70
