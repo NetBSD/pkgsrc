@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.243 2016/02/08 01:18:51 markd Exp $
+# $NetBSD: Makefile,v 1.244 2016/03/01 09:23:34 markd Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -163,7 +163,11 @@ SUBDIR+=	p5-GStreamer
 SUBDIR+=	p5-xmltv
 SUBDIR+=	phonon
 SUBDIR+=	phonon-backend-gstreamer
+SUBDIR+=	phonon-backend-gstreamer-shared
 SUBDIR+=	phonon-backend-vlc
+SUBDIR+=	phonon-qt5
+SUBDIR+=	phonon-qt5-backend-gstreamer
+SUBDIR+=	phonon-qt5-backend-vlc
 SUBDIR+=	php-ming
 SUBDIR+=	pitivi
 SUBDIR+=	pspvc
