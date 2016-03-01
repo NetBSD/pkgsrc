@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/02/24 23:03:19 kamil Exp $
+# $NetBSD: Makefile,v 1.2 2016/03/01 20:17:18 joerg Exp $
 
 DISTNAME=	Catch-1.3.4
 PKGNAME=	${DISTNAME:tl}
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	${MASTER_SITE_GITHUB:=philsquared/Catch/}
 COMMENT=	C++-native, framework for unit-tests, TDD and BDD
 LICENSE=	boost-license
+
+EXTRACT_USING=	bsdtar
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
