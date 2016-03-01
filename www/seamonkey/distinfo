@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.133 2016/01/31 23:43:48 joerg Exp $
+$NetBSD: distinfo,v 1.134 2016/03/01 20:05:13 joerg Exp $
 
 SHA1 (seamonkey-2.39.source.tar.xz) = cae3d2cf38f85190d0639a391f04953d9313d48b
 RMD160 (seamonkey-2.39.source.tar.xz) = 35d442092e359145ff4799d82576e1e8c0ee5a06
@@ -137,6 +137,7 @@ SHA1 (patch-mozilla_storage_SQLiteMutex.h) = 86ea7993493f2a1a513ec687b147fc75764
 SHA1 (patch-mozilla_storage_mozStorageConnection.cpp) = 61a2f1e0925d6723267a90109474bf8c239a1413
 SHA1 (patch-mozilla_toolkit_components_protobuf_src_google_protobuf_stubs_atomicops.h) = c4facd50567ec5ee6f9c13bcdc134224338d4756
 SHA1 (patch-mozilla_toolkit_components_protobuf_src_google_protobuf_stubs_platform__macros.h) = 0708a43577e786da4588bf318802ea035a9c1d52
+SHA1 (patch-mozilla_toolkit_library_libxul.mk) = 2a559d211cba812f73fecc4d11404bb423cecb22
 SHA1 (patch-mozilla_toolkit_library_moz.build) = ce5cf8db841d8161ee661f54bd30aa37cb08eaf5
 SHA1 (patch-mozilla_toolkit_xre_glxtest.cpp) = a8f6653760e33014c5e6f104b19fce8a0f331d24
 SHA1 (patch-mozilla_toolkit_xre_nsAppRunner.cpp) = 6ce047ed4a029f0935ebc9c297e99c8b9ccd76f1
@@ -144,6 +145,7 @@ SHA1 (patch-mozilla_toolkit_xre_nsEmbedFunctions.cpp) = 70030e59b2ed09b9bc9827d3
 SHA1 (patch-mozilla_webapprt_moz.build) = 8323bfea8fe835571bf60d95cfa59859b745083f
 SHA1 (patch-mozilla_xpcom_base_nscore.h) = a69c532d2891ac2a2227445e85e581749685153e
 SHA1 (patch-mozilla_xpcom_build_PoisonIOInterposer.h) = aa3e168c7c23ad6e63f521044336a03354ec9030
+SHA1 (patch-mozilla_xpcom_components_Module.h) = 666f8c4ab6d7df061f15bf9dd83c1868392dac3f
 SHA1 (patch-mozilla_xpcom_reflect_xptcall_md_unix_Makefile.in) = fa77d69500f1436e05c677723e485ccea213f4f4
 SHA1 (patch-mozilla_xpcom_reflect_xptcall_md_unix_moz.build) = 30bdef539886bda87e35306b5bf7e3a6ebefee53
 SHA1 (patch-mozilla_xpcom_reflect_xptcall_md_unix_xptcinvoke__arm__netbsd.cpp) = cb2a4769f04351e92580e3daaca88fc7f1dfedbd
