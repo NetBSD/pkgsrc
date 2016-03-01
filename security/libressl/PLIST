@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2016/03/01 01:39:18 sevan Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/03/01 01:49:48 sevan Exp $
 libressl/bin/openssl
 libressl/include/openssl/aes.h
 libressl/include/openssl/asn1.h
@@ -324,7 +324,7 @@ libressl/man/man3/BN_num_bits.3
 libressl/man/man3/BN_num_bits_word.3
 libressl/man/man3/BN_num_bytes.3
 libressl/man/man3/BN_one.3
-libressl/man/man3/BN_print.3
+${PLIST.man}libressl/man/man3/BN_print.3
 libressl/man/man3/BN_print_fp.3
 libressl/man/man3/BN_pseudo_rand.3
 libressl/man/man3/BN_pseudo_rand_range.3
