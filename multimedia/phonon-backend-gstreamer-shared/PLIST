@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2016/03/01 09:21:01 markd Exp $
+share/icons/hicolor/128x128/apps/phonon-gstreamer.png
+share/icons/hicolor/16x16/apps/phonon-gstreamer.png
+share/icons/hicolor/22x22/apps/phonon-gstreamer.png
+share/icons/hicolor/48x48/apps/phonon-gstreamer.png
+share/icons/hicolor/64x64/apps/phonon-gstreamer.png
+share/icons/hicolor/scalable/apps/phonon-gstreamer.svgz
