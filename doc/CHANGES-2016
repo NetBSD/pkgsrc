@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.907 2016/03/01 13:25:13 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.908 2016/03/01 13:59:25 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1223,3 +1223,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added filesystems/fuse-sshfs version 2.6 [jmmv 2016-03-01]
 	Updated net/miniupnpd to 1.9.20160222 [adam 2016-03-01]
 	Updated chat/swift to 3.0 [wiz 2016-03-01]
+	Updated textproc/heirloom-doctools to 160217 [leot 2016-03-01]
