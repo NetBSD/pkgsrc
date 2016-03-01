@@ -1,32 +1,15 @@
-# $NetBSD: Makefile,v 1.22 2015/09/01 22:17:02 markd Exp $
+# $NetBSD: Makefile,v 1.23 2016/03/01 09:21:01 markd Exp $
 
 DISTNAME=	phonon-backend-gstreamer-4.8.2
-CATEGORIES=	multimedia
-MASTER_SITES=	${MASTER_SITE_KDE:=phonon/phonon-backend-gstreamer/4.8.2/src/}
-EXTRACT_SUFX=	.tar.xz
+PKGREVISION=	1
 
-MAINTAINER=	markd@NetBSD.org
-HOMEPAGE=	http://phonon.kde.org/
 COMMENT=	Multimedia API for KDE and QT - GStreamer backend
-LICENSE=	gnu-lgpl-v2.1
 
-# BUILD_MAKE_FLAGS+= VERBOSE=1
+.include "Makefile.common"
 
 BUILD_DEPENDS+=	automoc4>=0.9.83:../../devel/automoc4
+DEPENDS+=	phonon-backend-gstreamer-shared-4.8.2:../../multimedia/phonon-backend-gstreamer-shared
 
-USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c c++
-USE_CMAKE=	yes
-CMAKE_ARG_PATH=	..
-CONFIGURE_DIRS=	_build
-#CMAKE_ARGS+=	-DWITH_PulseAudio:BOOL=OFF
-
-pre-configure:
-	${LN} -sf ${QTDIR}/bin/qmake ${BUILDLINK_DIR}/bin/
-	${MKDIR} ${WRKSRC}/_build
-
-.include "../../multimedia/gstreamer1/buildlink3.mk"
-.include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 .include "../../multimedia/phonon/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

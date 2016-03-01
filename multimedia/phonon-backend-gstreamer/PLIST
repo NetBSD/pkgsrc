@@ -1,9 +1,3 @@
-@comment $NetBSD: PLIST,v 1.2 2013/11/09 22:50:56 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/03/01 09:21:01 markd Exp $
 lib/kde4/plugins/phonon_backend/phonon_gstreamer.so
-share/icons/hicolor/128x128/apps/phonon-gstreamer.png
-share/icons/hicolor/16x16/apps/phonon-gstreamer.png
-share/icons/hicolor/22x22/apps/phonon-gstreamer.png
-share/icons/hicolor/48x48/apps/phonon-gstreamer.png
-share/icons/hicolor/64x64/apps/phonon-gstreamer.png
-share/icons/hicolor/scalable/apps/phonon-gstreamer.svgz
 share/kde4/services/phononbackends/gstreamer.desktop
