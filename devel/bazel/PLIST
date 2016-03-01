@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2016/03/01 20:45:31 jmmv Exp $
+bin/bazel
