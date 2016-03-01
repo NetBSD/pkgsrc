@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/06/11 20:13:27 agc Exp $
+$NetBSD: patch-aa,v 1.2 2016/03/01 20:16:17 joerg Exp $
 
---- src/loggedfs.cpp	2007/02/21 21:49:53	1.1
-+++ src/loggedfs.cpp	2007/02/21 21:51:15
+--- src/loggedfs.cpp.orig	2007-01-23 21:05:11.000000000 +0000
++++ src/loggedfs.cpp
 @@ -30,7 +30,11 @@
  #include <fcntl.h>
  #include <dirent.h>
@@ -14,7 +14,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/06/11 20:13:27 agc Exp $
  #ifdef HAVE_SETXATTR
  #include <sys/xattr.h>
  #endif
-@@ -85,12 +89,14 @@
+@@ -85,12 +89,14 @@ static bool isAbsolutePath( const char *
  
  static char* getAbsolutePath(const char *path)
  {
@@ -34,7 +34,16 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/06/11 20:13:27 agc Exp $
      return realPath;
  
  }
-@@ -156,7 +162,7 @@
+@@ -121,7 +127,7 @@ static char* getcallername()
+ 
+ static void loggedfs_log(const char* path,const char* action,const int returncode,const char *format,...)
+ {
+-    char *retname;
++    const char *retname;
+     if (returncode >= 0)
+         retname = "SUCCESS";
+     else
+@@ -156,7 +162,7 @@ static int loggedFS_getattr(const char *
  
      char *aPath=getAbsolutePath(path);
      path=getRelativePath(path);
@@ -43,7 +52,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/06/11 20:13:27 agc Exp $
      loggedfs_log(aPath,"getattr",res,"getattr %s",aPath);
      if(res == -1)
          return -errno;
-@@ -210,7 +216,7 @@
+@@ -210,7 +216,7 @@ static int loggedFS_readdir(const char *
      path=getRelativePath(path);
  
  
@@ -52,7 +61,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/06/11 20:13:27 agc Exp $
      if(dp == NULL) {
          res = -errno;
          loggedfs_log(aPath,"readdir",-1,"readdir %s",aPath);
-@@ -427,7 +433,7 @@
+@@ -427,7 +433,7 @@ static int loggedFS_truncate(const char 
      return 0;
  }
  
@@ -61,7 +70,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/06/11 20:13:27 agc Exp $
  static int loggedFS_utime(const char *path, struct utimbuf *buf)
  {
      int res;
-@@ -650,7 +656,11 @@
+@@ -650,7 +656,11 @@ bool processArgs(int argc, char *argv[],
  // logging the ~/.kde/share/config directory, in which hard links for lock
  // files are verified by their inode equivalency.
  
@@ -73,7 +82,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/06/11 20:13:27 agc Exp $
  
      while ((res = getopt (argc, argv, "hpfec:l:")) != -1)
      {
-@@ -770,7 +780,7 @@
+@@ -770,7 +780,7 @@ int main(int argc, char *argv[])
      loggedFS_oper.chmod	= loggedFS_chmod;
      loggedFS_oper.chown	= loggedFS_chown;
      loggedFS_oper.truncate	= loggedFS_truncate;
