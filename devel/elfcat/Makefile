@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/02/27 17:13:37 kamil Exp $
+# $NetBSD: Makefile,v 1.2 2016/03/01 20:17:46 joerg Exp $
 
 DISTNAME=	elfcat-1.0.0
 CATEGORIES=	devel
@@ -10,7 +10,7 @@ HOMEPAGE=	${MASTER_SITE_GITHUB:=randomstuff/elfcat/}
 COMMENT=	Dump sections or program entries from a ELF file
 LICENSE=	mit
 
-USE_TOOLS+=	automake autoconf autoreconf
+USE_TOOLS+=	automake autoconf autoreconf pkg-config
 
 GNU_CONFIGURE=	yes
 
