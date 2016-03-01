@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2016/02/05 21:01:46 jmmv Exp $
+# $NetBSD: Makefile,v 1.40 2016/03/01 11:30:43 jmmv Exp $
 #
 
 COMMENT=	File systems, and file system related packages
@@ -27,6 +27,7 @@ SUBDIR+=	fuse-ntfs-3g
 SUBDIR+=	fuse-obexfs
 SUBDIR+=	fuse-pcachefs
 SUBDIR+=	fuse-pod
+SUBDIR+=	fuse-sshfs
 SUBDIR+=	fuse-svnfs
 SUBDIR+=	fuse-unionfs
 SUBDIR+=	fuse-wdfs
