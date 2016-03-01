@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.906 2016/03/01 13:16:20 adam Exp $
+$NetBSD: CHANGES-2016,v 1.907 2016/03/01 13:25:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1222,3 +1222,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added multimedia/phonon-backend-gstreamer-shared version 4.8.2 [markd 2016-03-01]
 	Added filesystems/fuse-sshfs version 2.6 [jmmv 2016-03-01]
 	Updated net/miniupnpd to 1.9.20160222 [adam 2016-03-01]
+	Updated chat/swift to 3.0 [wiz 2016-03-01]
