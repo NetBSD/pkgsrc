@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2016/02/26 10:24:10 jperkin Exp $
+# $NetBSD: Makefile,v 1.18 2016/03/01 20:09:29 joerg Exp $
 #
 
 DISTNAME=	bbsload-0.2.6
@@ -12,6 +12,8 @@ COMMENT=	Small (in dimensions) tool to display the average load
 
 GNU_CONFIGURE=		YES
 USE_LANGUAGES=		c c++
+
+CPPFLAGS.NetBSD+=	-D_KERNTYPES
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
