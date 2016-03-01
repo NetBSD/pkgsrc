@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2016/03/01 11:30:07 jmmv Exp $
+$NetBSD: distinfo,v 1.2 2016/03/01 20:28:24 jmmv Exp $
 
-SHA1 (sshfs-2.6.tar.gz) = f2e67294f5523f2c78d32a871ae2d4e1ec25927f
-RMD160 (sshfs-2.6.tar.gz) = a4a0d0f6ce2d0468b1289b74e6186b453ce16dc3
-SHA512 (sshfs-2.6.tar.gz) = 3e6c80c6d66815279ce0610ac34b2c489048340daf03f636c8fb9f7e4d85bd97d979e32e6cc93674d818a7a6a8b2302d66befeb72272635050d2a7168bee9bb8
-Size (sshfs-2.6.tar.gz) = 123977 bytes
+SHA1 (sshfs-2.7.tar.gz) = 5a42b4592a4c9281ad160ca03838aac883564dda
+RMD160 (sshfs-2.7.tar.gz) = a360de1e961a40c13ac89374c8f289d404afe43a
+SHA512 (sshfs-2.7.tar.gz) = e8b00bc3661140d59c6735f1f76d1bd4c63ebc04b578cbcebca88c2f1df8b2cea18c86ff24bef5d40ce286319b55d906632bea53e6b37aff76744072250aec1b
+Size (sshfs-2.7.tar.gz) = 153014 bytes
