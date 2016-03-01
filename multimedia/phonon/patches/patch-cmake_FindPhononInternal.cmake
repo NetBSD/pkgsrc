@@ -1,6 +1,7 @@
-$NetBSD: patch-cmake_FindPhononInternal.cmake,v 1.2 2016/02/18 20:53:39 jperkin Exp $
+$NetBSD: patch-cmake_FindPhononInternal.cmake,v 1.3 2016/03/01 08:54:42 markd Exp $
 
 Disable Darwin section, creates unusable libraries.
+_include_dirs fix for qt-5.4.2
 
 --- cmake/FindPhononInternal.cmake.orig	2014-12-04 09:30:26.000000000 +0000
 +++ cmake/FindPhononInternal.cmake
@@ -41,3 +42,12 @@ Disable Darwin section, creates unusable libraries.
     # As of Qt 4.6.x we need to override the new exception macros if we want compile with -fno-exceptions
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wnon-virtual-dtor -Wno-long-long -Wundef -Wcast-align -Wchar-subscripts -Wall -W -Wpointer-arith -Wformat-security -fno-exceptions -DQT_NO_EXCEPTIONS -fno-check-new -fno-common")
  
+@@ -409,7 +409,7 @@ if (CMAKE_COMPILER_IS_GNUCXX)
+       file(WRITE "${_source_file}" "${_source}")
+       set(_include_dirs "-DINCLUDE_DIRECTORIES:STRING=${QT_INCLUDES}")
+ 
+-      try_compile(_compile_result ${CMAKE_BINARY_DIR} ${_source_file} CMAKE_FLAGS "${_include_dirs}" OUTPUT_VARIABLE _compile_output_var)
++      try_compile(_compile_result ${CMAKE_BINARY_DIR} ${_source_file} CMAKE_FLAGS "${CMAKE_CXX_FLAGS}" COMPILE_DEFINITIONS "${_include_dirs}" OUTPUT_VARIABLE _compile_output_var)
+ 
+       if(NOT _compile_result)
+          message("${_compile_output_var}")
