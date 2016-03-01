@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 16:08:32 asau Exp $
+# $NetBSD: Makefile,v 1.7 2016/03/01 20:16:17 joerg Exp $
 #
 
 DISTNAME=	loggedfs-0.4
 PKGNAME=	fuse-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	filesystems
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=loggedfs/}
 EXTRACT_SUFX=	.tar.bz2
@@ -11,6 +11,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	${MASTER_SITE_SOURCEFORGE:=loggedfs/}
 COMMENT=	FUSE file system which logs all operations
+
+CPPFLAGS.NetBSD+=	-D_KERNTYPES
 
 .if exists(/usr/include/sys/statvfs.h)
 CPPFLAGS+=	-DHAVE_SYS_STATVFS_H
