@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2014/04/26 13:19:18 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/03/01 13:25:01 wiz Exp $
 bin/swift-im
 bin/swift-open-uri
 man/man1/swift-im.1
@@ -13,6 +13,7 @@ share/icons/hicolor/scalable/apps/swift.svg
 share/pixmaps/swift.xpm
 share/swift/sounds/message-received.wav
 share/swift/translations/swift_ca.qm
+share/swift/translations/swift_cs.qm
 share/swift/translations/swift_de.qm
 share/swift/translations/swift_en.qm
 share/swift/translations/swift_es.qm
