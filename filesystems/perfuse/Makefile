@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2012/10/03 16:08:33 asau Exp $
+# $NetBSD: Makefile,v 1.34 2016/03/01 20:16:33 joerg Exp $
 #
 
 DISTNAME=	perfuse-20120206
@@ -13,8 +13,10 @@ LICENSE=	2-clause-bsd
 WRKSRC=	${WRKDIR}/src/
 BUILD_DIRS=	lib/libperfuse usr.sbin/perfused
 BUILDLINK_TRANSFORM=	rm:-Werror
-CFLAGS+=	-D_PATH_PERFUSED=\"${PREFIX}/sbin/perfused\"
-CFLAGS+=	-DPERFUSE_DEBUG -g
+CPPFLAGS+=	-DPERFUSE_DEBUG -D_PATH_PERFUSED=\"${PREFIX}/sbin/perfused\"
+CPPFLAGS.NetBSD+=	-D_KERNTYPES
+
+CFLAGS+=	-g
 
 INSTALLATION_DIRS=	include lib sbin
 
