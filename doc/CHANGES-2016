@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.908 2016/03/01 13:59:25 leot Exp $
+$NetBSD: CHANGES-2016,v 1.909 2016/03/01 14:35:42 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1224,3 +1224,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/miniupnpd to 1.9.20160222 [adam 2016-03-01]
 	Updated chat/swift to 3.0 [wiz 2016-03-01]
 	Updated textproc/heirloom-doctools to 160217 [leot 2016-03-01]
+	Updated security/openssl to 1.0.2g [jperkin 2016-03-01]
