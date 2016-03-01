@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2015/04/25 14:23:40 tnn Exp $
+# $NetBSD: Makefile,v 1.76 2016/03/01 20:12:26 joerg Exp $
 
 DISTNAME=	mkvtoolnix-5.0.1
 PKGREVISION=	26
@@ -28,8 +28,6 @@ LDFLAGS.SunOS+=		-lintl
 INSTALL_ENV+=	SHELL=${SH:Q}
 
 .include "../../mk/bsd.prefs.mk"
-
-CXXFLAGS+=	${CLANG_NO_VALUE_PROPAGATION_PASS}
 
 .if !empty(MAKE_JOBS)
 DRAKE_ARGS=	-j${MAKE_JOBS}
