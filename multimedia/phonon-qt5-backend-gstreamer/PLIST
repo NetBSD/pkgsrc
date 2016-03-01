@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2016/03/01 09:21:01 markd Exp $
+lib/qt5/plugins/phonon4qt5_backend/phonon_gstreamer.so
