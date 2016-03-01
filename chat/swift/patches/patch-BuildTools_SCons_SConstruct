@@ -1,4 +1,6 @@
-$NetBSD: patch-BuildTools_SCons_SConstruct,v 1.1 2014/12/12 10:50:49 joerg Exp $
+$NetBSD: patch-BuildTools_SCons_SConstruct,v 1.2 2016/03/01 13:25:01 wiz Exp $
+
+Don't strip environment so pkgsrc settings survive.
 
 --- BuildTools/SCons/SConstruct.orig	2014-12-11 23:38:09.000000000 +0000
 +++ BuildTools/SCons/SConstruct

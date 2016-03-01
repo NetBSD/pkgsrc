@@ -1,13 +1,8 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 01:20:24 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/03/01 13:25:01 wiz Exp $
 
-SHA1 (swift-2.0.tar.gz) = b04ba098fffb1edc2ef0215957371c249458f0be
-RMD160 (swift-2.0.tar.gz) = f1e8f38e650a3178e236ec8d6f3cb97fecb4910d
-SHA512 (swift-2.0.tar.gz) = 852304b330cbdae1550101de3fa8932ba525497abd86a1fe81e65ba56ba7412ce7f5795a2c0023b87c7a77e84a0f9405a8e77fab79d55d76bece55fa7f983946
-Size (swift-2.0.tar.gz) = 8816954 bytes
-SHA1 (patch-BuildTools_SCons_SConscript.boot) = dadfab9a521d9ef1c1e5de0a8bec080d0a7b3e63
-SHA1 (patch-BuildTools_SCons_SConstruct) = 3a6bc4e3a931c8fa0e299edac65c3e8101f661bc
-SHA1 (patch-BuildTools_SCons_Tools_qt4.py) = 9c1f20a0dae15f73db02bbfe0d11e077176f2fcc
-SHA1 (patch-Swift_QtUI_UserSearch_QtUserSearchWindow.cpp) = 1bb39d5b89bbd0d1d77c8cda7db55c3fbec066b8
-SHA1 (patch-Swiften_EventLoop_EventLoop.cpp) = a840ad43cd5082c3f511c6efd1a49e910c3fb6ea
-SHA1 (patch-Swiften_Serializer_StreamResumeSerializer.cpp) = 6db493f2bb45caf686289e2b93d204627e27abea
-SHA1 (patch-Swiften_Serializer_StreamResumedSerializer.cpp) = da36fb7f97c8b61092745733f79360deb7cc9820
+SHA1 (swift-3.0.tar.gz) = 2bafacd9cfffea1044bc8ff6b3547c771aa5547c
+RMD160 (swift-3.0.tar.gz) = 7b25e3655855f18446e0fb5053f37f490f68bda3
+SHA512 (swift-3.0.tar.gz) = 3d635e9a904a48a8553e153627242e44fad5d57c48152d3c698cdf73363bdc1c566a13692c7fb2d70f0f6b773f7ff9c2cd717687501940e3b8a30b6bebc44f63
+Size (swift-3.0.tar.gz) = 11084214 bytes
+SHA1 (patch-BuildTools_SCons_SConscript.boot) = f134f01b73e6862171c432c76088947d616c6d3d
+SHA1 (patch-BuildTools_SCons_SConstruct) = a2d68e60a41ea74ad753b17f97c7887cbd458c46
