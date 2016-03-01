@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/03/15 08:22:18 plunky Exp $
+# $NetBSD: Makefile,v 1.8 2016/03/01 20:16:33 joerg Exp $
 #
 
 DISTNAME=	obexfs-0.8
@@ -14,6 +14,8 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	autoconf gmake pkg-config
+
+CPPFLAGS.NetBSD+=	-D_KERNTYPES
 
 BUILDLINK_API_DEPENDS.openobex+=	openobex>=1.3nb2
 

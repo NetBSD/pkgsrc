@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2013/04/06 19:42:41 rodent Exp $
+# $NetBSD: Makefile,v 1.31 2016/03/01 20:16:52 joerg Exp $
 
 DISTNAME=	fMSX351
 PKGNAME=	fmsx-3.5.1
@@ -24,6 +24,9 @@ BUILD_DIRS=	fMSX/Unix
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/endian.mk"
 
+.if ${OPSYS} == "NetBSD"
+DEFS+=		-D_KERNTYPES
+.endif
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS"
 USE_SUN_AUDIO?=	YES
 .else
