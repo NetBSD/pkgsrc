@@ -1,0 +1,27 @@
+# $NetBSD: Makefile.common,v 1.1 2016/03/01 08:54:42 markd Exp $
+
+CATEGORIES=	multimedia
+MASTER_SITES=	${MASTER_SITE_KDE:=phonon/4.8.3/src/}
+EXTRACT_SUFX=	.tar.xz
+
+MAINTAINER=	markd@NetBSD.org
+HOMEPAGE=	http://phonon.kde.org/
+LICENSE=	gnu-lgpl-v2.1
+
+PATCHDIR=	${.CURDIR}/../../multimedia/phonon/patches
+DISTINFO_FILE=	${.CURDIR}/../../multimedia/phonon/distinfo
+
+USE_TOOLS+=	pkg-config gmake
+USE_LANGUAGES=	c c++
+USE_CMAKE=	yes
+CMAKE_ARG_PATH=	..
+CONFIGURE_DIRS=	_build
+CMAKE_ARGS+=	-DPHONON_INSTALL_QT_EXTENSIONS_INTO_SYSTEM_QT:BOOL=TRUE
+
+.include "../../multimedia/phonon/options.mk"
+
+PKGCONFIG_OVERRIDE+=	phonon.pc.cmake
+
+pre-configure:
+	${LN} -sf ${QTDIR}/bin/qmake ${BUILDLINK_DIR}/bin/
+	${MKDIR} ${WRKSRC}/_build
