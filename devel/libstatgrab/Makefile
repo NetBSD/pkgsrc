@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2015/08/20 17:13:47 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2016/03/01 20:18:23 joerg Exp $
 
 DISTNAME=	libstatgrab-0.91
 CATEGORIES=	devel
@@ -14,6 +14,8 @@ COMMENT=	Provides a useful interface to system statistics
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 
 .include "options.mk"
+
+CPPFLAGS.NetBSD+=	-D_KERNTYPES
 
 USE_TOOLS+=		pkg-config perl:run
 USE_LANGUAGES=		c c++
