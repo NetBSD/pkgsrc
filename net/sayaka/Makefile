@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/02/27 14:30:58 tsutsui Exp $
+# $NetBSD: Makefile,v 1.2 2016/03/01 20:09:49 joerg Exp $
 
 DISTNAME=	sayaka-3.2.0
 CATEGORIES=	net
@@ -13,7 +13,7 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	glib-networking-[0-9]*:../../net/glib-networking
 
-USE_TOOLS=	pax
+USE_TOOLS+=	pax pkg-config
 
 INSTALLATION_DIRS+=	bin share/sayaka
 
