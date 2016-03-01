@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.904 2016/03/01 09:27:22 markd Exp $
+$NetBSD: CHANGES-2016,v 1.905 2016/03/01 11:31:08 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1220,3 +1220,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added multimedia/phonon-qt5-backend-vlc version 0.8.2 [markd 2016-03-01]
 	Added multimedia/phonon-qt5-backend-gstreamer version 4.8.2 [markd 2016-03-01]
 	Added multimedia/phonon-backend-gstreamer-shared version 4.8.2 [markd 2016-03-01]
+	Added filesystems/fuse-sshfs version 2.6 [jmmv 2016-03-01]
