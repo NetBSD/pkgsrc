@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2016/03/01 20:45:31 jmmv Exp $
+
+SHA1 (bazel-0.2.0.tar.gz) = 113e3aea653ea4738eb2befa3b7d9e892829c9ac
+RMD160 (bazel-0.2.0.tar.gz) = 8cb4e15cd1701d7201c7a8b1142ae4ff572d9279
+SHA512 (bazel-0.2.0.tar.gz) = 6b337d06c5d8aa5133759e1b973739016490076caa4ed0e1652a50b2a3bac48af439a70cf27075f885c63e0d2199563242bef75aa3e715774381ca6a0a3673bb
+Size (bazel-0.2.0.tar.gz) = 56734337 bytes
+SHA1 (patch-src_tools_xcode_stdredirect_run_tests.sh) = 00b62b35f5cb7d3606a07f5061049a055ac8024d
