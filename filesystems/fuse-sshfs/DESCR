@@ -1,0 +1,15 @@
+This is a filesystem client based on the SSH File Transfer Protocol.
+Since most SSH servers already support this protocol it is very easy to
+set up: i.e. on the server side there's nothing to do.  On the client
+side mounting the filesystem is as easy as logging into the server with
+ssh.
+
+The idea of sshfs was taken from the SSHFS filesystem distributed with
+LUFS.  There were some limitations in that codebase, and this
+implementation features:
+
+- Based on FUSE
+- Multithreading
+- Large reads (max 64k)
+- Caching directory contents
+- Reconnect on failure
