@@ -7797,8 +7797,7 @@ If you want to submit several packages, please send a separate PR for each one,
 it's easier for us to track things that way.
 
 Alternatively, you can also import new packages into pkgsrc-wip ("pkgsrc
-work-in-progress"); see the homepage at http://pkgsrc-wip.sourceforge.net/ for
-details.
+work-in-progress"); see the homepage at http://pkgsrc.org/wip/ for details.
 
 21.3. General notes when adding, updating, or removing packages
 
