@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2016/03/02 23:08:22 ryoon Exp $
+# $NetBSD: Makefile,v 1.78 2016/03/02 23:12:13 ryoon Exp $
 
 DISTNAME=	Sigil-0.9.3
 CATEGORIES=	editors
@@ -16,12 +16,6 @@ LICENSE=	gnu-gpl-v3
 DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
-DEPENDS+=	${PYPKGPREFIX}-html5lib-[0-9]*:../../textproc/py-html5lib
-DEPENDS+=	${PYPKGPREFIX}-regex-[0-9]*:../../textproc/py-regex
-DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
-DEPENDS+=	${PYPKGPREFIX}-cssselect-[0-9]*:../../textproc/py-cssselect
-DEPENDS+=	${PYPKGPREFIX}-cssutils-[0-9]*:../../textproc/py-cssutils
-DEPENDS+=	${PYPKGPREFIX}-chardet-[0-9]*:../../converters/py-chardet
 
 Qt5_DIR=	${BUILDLINK_PREFIX.qt5-qtbase}/qt5
 ALL_ENV+=	Qt5_DIR=${Qt5_DIR}
