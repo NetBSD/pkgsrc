@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2016/02/25 12:12:47 jperkin Exp $
+# $NetBSD: Makefile,v 1.30 2016/03/02 13:32:06 ryoon Exp $
 
-PKGREVISION= 3
+PKGREVISION=	3
 .include "Makefile.common"
 
-CONFIGURE_ARGS+= --disable-editor
+CONFIGURE_ARGS+=	--disable-editor
 
 PKGCONFIG_OVERRIDE+=	client/dconf.pc.in dbus-1/dconf-dbus-1.pc.in
 
@@ -24,7 +24,7 @@ BUILD_DEPENDS+=	gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
-BUILDLINK_DEPMETHOD.vala= build
+BUILDLINK_DEPMETHOD.vala=	build
 BUILDLINK_API_DEPENDS.vala+=	vala>=0.18.0
 .include "../../lang/vala/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.39.1
