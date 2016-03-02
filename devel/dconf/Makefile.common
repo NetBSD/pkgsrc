@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2014/11/10 23:23:17 prlw1 Exp $
+# $NetBSD: Makefile.common,v 1.8 2016/03/02 22:45:01 ryoon Exp $
 #
 # used by devel/dconf-editor/Makefile
 
@@ -20,8 +20,9 @@ USE_TOOLS+=	pkg-config gmake intltool msgfmt
 SUBST_CLASSES+=		sysdir
 SUBST_MESSAGE.sysdir=	Fixes hard-coded dconf database directory name
 SUBST_STAGE.sysdir=	post-configure
-SUBST_FILES.sysdir=	engine/dconf-engine-source-system.c
+SUBST_FILES.sysdir+=	engine/dconf-engine-source-system.c
+SUBST_FILES.sysdir+=	engine/dconf-engine-profile.c
 SUBST_FILES.sysdir+=	tests/engine.c
 SUBST_FILES.sysdir+=	bin/dconf-update.c
 SUBST_FILES.sysdir+=	bin/dconf-update.vala
-SUBST_SED.sysdir=	-e s,/etc/dconf,${PKG_SYSCONFDIR}/dconf,g
+SUBST_SED.sysdir=	-e s,/etc,${PKG_SYSCONFDIR},g
