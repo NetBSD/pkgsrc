@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.913 2016/03/01 20:46:51 jmmv Exp $
+$NetBSD: CHANGES-2016,v 1.914 2016/03/02 01:07:04 sevan Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1215,6 +1215,7 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/git to 2.7.2 [adam 2016-02-29]
 	Updated editors/abiword to 3.0.1nb1 [jperkin 2016-02-29]
 	Updated lang/ocaml to 4.02.3nb3 [jperkin 2016-02-29]
+	Updated security/libressl to 2.2.6 [sevan 2016-03-01]
 	Updated www/py-google-api-python-client to 1.5.0 [mef 2016-03-01]
 	Added multimedia/phonon-qt5 version 4.8.3 [markd 2016-03-01]
 	Added multimedia/phonon-qt5-backend-vlc version 0.8.2 [markd 2016-03-01]
