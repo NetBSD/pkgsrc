@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15499 2016/02/29 10:51:49 adam Exp $
+$NetBSD: TODO,v 1.15500 2016/03/02 17:46:14 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1060,7 +1060,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mbedtls-2.0.0
 	o mbuf-20141227
 	o mcollective-2.3.2
-	o mcsim-5.6.4
+	o mcsim-5.6.5
 	o mednafen-0.9.38.2
 	o megatools-1.9.96
 	o menhir-20141215
@@ -1197,12 +1197,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-DBIx-DBSchema-0.45
 	o p5-Data-SimplePassword-0.10
 	o p5-Date-Extract-0.05
+	o p5-DateTime-1.2400
 	o p5-DateTime-Format-Mail-0.4020
 	o p5-DateTime-Format-Pg-0.16011
 	o p5-Device-XBee-API-0.8
 	o p5-Digest-Hashcash-1.1
 	o p5-Excel-Template-0.34
 	o p5-Excel-Template-Plus-0.06
+	o p5-File-Which-1.20
 	o p5-Font-FreeType-0.06
 	o p5-Font-TTF-1.05
 	o p5-FormValidator-Simple-1.00
@@ -1232,6 +1234,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Math-Derivative-0.04
 	o p5-Math-Random-MT-Perl-1.13
 	o p5-Memoize-Memcached-0.11
+	o p5-Moo-2.001000
 	o p5-Moose-Policy-0.05
 	o p5-Net-Amazon-S3-0.80
 	o p5-Net-DBus-1.1.0
@@ -1592,7 +1595,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o stegavorto-2011.05.26
 	o stella-4.7
 	o stellarium-0.13.3
-	o stgit-0.16
+	o stgit-0.17.1 [pkg/50875]
 	o stlport-4.6.2
 	o stow-2.2.2
 	o strace-4.11
