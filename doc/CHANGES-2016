@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.918 2016/03/02 21:30:35 leot Exp $
+$NetBSD: CHANGES-2016,v 1.919 2016/03/02 22:45:46 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1235,3 +1235,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/exim to 4.86.2 [wiedi 2016-03-02]
 	Updated mail/exim-html to 4.86.2 [wiedi 2016-03-02]
 	Updated multimedia/mpv to 0.16.0 [leot 2016-03-02]
+	Updated devel/dconf to 0.22.0nb4 [ryoon 2016-03-02]
