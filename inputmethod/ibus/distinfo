@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.16 2015/11/03 22:13:34 agc Exp $
+$NetBSD: distinfo,v 1.17 2016/03/02 22:59:00 ryoon Exp $
 
-SHA1 (ibus-1.5.11.tar.gz) = b8dbc12cc90c3e7ec036d7098bc661b26630242a
-RMD160 (ibus-1.5.11.tar.gz) = 5a6bbe9dae98d9114402ca82b207c775dee3f94a
-SHA512 (ibus-1.5.11.tar.gz) = 7745a06a4dc9502a957bdfa7faba3e6ff857ee102f34acfbc5d1c8ca5935eaf5660ebe6d837ee7bae584818c08a1769cf8a9daa012f87d43a1f10917c04615c2
-Size (ibus-1.5.11.tar.gz) = 2177026 bytes
+SHA1 (ibus-1.5.13.tar.gz) = 054a5a884329f2d3295d8f992566e7db72cf283b
+RMD160 (ibus-1.5.13.tar.gz) = 0c8177a9e66e31589bd070caf285797fef1da062
+SHA512 (ibus-1.5.13.tar.gz) = bffb3cecf984ec6e383a111b4e62506390f083476f59404e2e9b90251e6e06853d7f1dc06194456ab5064b5d375820510be1ab12ebd29b966d6a7f5b8aca07ab
+Size (ibus-1.5.13.tar.gz) = 2194054 bytes
 SHA1 (patch-client_gtk2_ibusimcontext.c) = 31e72d06884858476097f04591004ce46b6074c1
 SHA1 (patch-client_gtk3_ibusimcontext.c) = 543192191d14d61ae3e193de6ffda7b099969a1a

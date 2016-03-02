@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.8 2015/07/31 13:03:45 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.9 2016/03/02 22:59:00 ryoon Exp $
 #
 # used by inputmethod/ibus/Makefile
 # used by inputmethod/ibus-python/Makefile
 
-DISTNAME=	ibus-1.5.11
+DISTNAME=	ibus-1.5.13
 CATEGORIES=	inputmethod
 MASTER_SITES=	https://github.com/ibus/ibus/releases/download/${PKGVERSION_NOREV}/
 

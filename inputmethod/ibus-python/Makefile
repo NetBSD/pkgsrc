@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/12/05 21:25:46 adam Exp $
+# $NetBSD: Makefile,v 1.9 2016/03/02 22:59:00 ryoon Exp $
 
 .include "../../inputmethod/ibus/Makefile.common"
 
@@ -47,4 +47,5 @@ PY_PATCHPLIST=	yes
 BUILDLINK_API_DEPENDS.py-dbus+=	${PYPKGPREFIX}-dbus>=0.83.0
 .include "../../sysutils/py-dbus/buildlink3.mk"
 .include "../../textproc/iso-codes/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
