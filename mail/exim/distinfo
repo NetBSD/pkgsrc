@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.63 2016/01/10 20:55:56 bsiegert Exp $
+$NetBSD: distinfo,v 1.64 2016/03/02 20:13:18 wiedi Exp $
 
-SHA1 (exim-4.86.tar.bz2) = 5e2c2e5fcc83646e7d7dd308f1d13da0e49db924
-RMD160 (exim-4.86.tar.bz2) = bbcf683eb1397f350ff5b8789869ad8c34ff28ea
-SHA512 (exim-4.86.tar.bz2) = 0b90cd1b4d99bbb976336ccf9c2c3375f453a74bb306f1b0215f7ecca80fbda83cf5cc38c502516c2903c5d753f1f559c534fc4f4b1b32ee3300db86de6610ab
-Size (exim-4.86.tar.bz2) = 1804807 bytes
+SHA1 (exim-4.86.2.tar.bz2) = 539cb2edc784d439cae8f95940e9eff847e2695d
+RMD160 (exim-4.86.2.tar.bz2) = 06790977ad50fb19548826631df904d6bda62a83
+SHA512 (exim-4.86.2.tar.bz2) = 5869a7ae8fd66819f654f6617c7e77075a24b110074317b77135b8cc86f12632e79758d41819c6e91871e0145adaba4b91651f5c6c1d2ebd17927f0198876231
+Size (exim-4.86.2.tar.bz2) = 1799316 bytes
 SHA1 (patch-aa) = 4df21c2497e9fee8dfbcd4386bb1b70d69ca2932
 SHA1 (patch-ab) = 6af17f036ed02a3bc37c1f303269eea447fcb691
 SHA1 (patch-ae) = 7daf63727e222bbaa7e5b8289c4fcb6a8c0272cf
