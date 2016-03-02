@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.163 2015/07/26 22:13:17 khorben Exp $
+# $NetBSD: gcc.mk,v 1.164 2016/03/02 18:45:21 jperkin Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -821,9 +821,14 @@ _COMPILER_STRIP_VARS+=	${_GCC_VARS}
 IMAKEOPTS+=	-DHasGcc2=YES -DHasGcc2ForCplusplus=YES
 .endif
 
+.if ${OPSYS} == "AIX"
+# On AIX the GCC toolchain recognizes -maix32 and -maix64,
+# -m32 or -m64 are not recognized.
+_COMPILER_ABI_FLAG.32=	-maix32
+_COMPILER_ABI_FLAG.64=	-maix64
 # On HP-UX the GCC toolchain must be specifically targeted to an ABI,
 # -m32 or -m64 are not recognized.
-.if ${OPSYS} == "HPUX"
+.elif ${OPSYS} == "HPUX"
 _COMPILER_ABI_FLAG.32=	# empty
 _COMPILER_ABI_FLAG.64=	# empty
 .else
