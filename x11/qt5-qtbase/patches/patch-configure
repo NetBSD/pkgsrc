@@ -1,9 +1,9 @@
-$NetBSD: patch-configure,v 1.2 2015/10/26 19:03:59 adam Exp $
+$NetBSD: patch-configure,v 1.3 2016/03/02 23:04:00 ryoon Exp $
 
 * Don't use SDKs on OS X
 * Add NetBSD/sparc{,64} support
 
---- configure.orig	2015-06-29 20:03:05.000000000 +0000
+--- configure.orig	2015-10-13 04:35:07.000000000 +0000
 +++ configure
 @@ -337,7 +337,6 @@ getQMakeConf()
  {
@@ -21,7 +21,7 @@ $NetBSD: patch-configure,v 1.2 2015/10/26 19:03:59 adam Exp $
      fi
      getSingleQMakeVariable "$1" "$xspecvals"
  }
-@@ -2894,6 +2892,19 @@ if [ -z "$PLATFORM" ]; then
+@@ -2897,6 +2895,19 @@ if [ -z "$PLATFORM" ]; then
       UNIX_SV:*)
          PLATFORM=unixware-g++
          ;;
@@ -41,7 +41,23 @@ $NetBSD: patch-configure,v 1.2 2015/10/26 19:03:59 adam Exp $
       QNX:*)
          PLATFORM=unsupported/qnx-g++
          ;;
-@@ -4001,10 +4012,12 @@ if true; then ###[ '!' -f "$outpath/bin/
+@@ -3471,11 +3482,11 @@ if [ "$CFG_USE_GOLD_LINKER" != "no" ]; t
+ fi
+ 
+ # auto-detect --enable-new-dtags support
+-if linkerSupportsFlag $TEST_COMPILER --enable-new-dtags; then
+-    CFG_ENABLE_NEW_DTAGS=yes
+-else
++#if linkerSupportsFlag $TEST_COMPILER --enable-new-dtags; then
++#    CFG_ENABLE_NEW_DTAGS=yes
++#else
+     CFG_ENABLE_NEW_DTAGS=no
+-fi
++#fi
+ 
+ # auto-detect -fstack-protector-strong support (for QNX only currently)
+ if [ "$XPLATFORM_QNX" = "yes" ]; then
+@@ -4014,10 +4025,12 @@ if true; then ###[ '!' -f "$outpath/bin/
              EXTRA_CXXFLAGS="$EXTRA_CXXFLAGS \$(CARBON_CFLAGS)"
              EXTRA_OBJS="$EXTRA_OBJS \
                          qsettings_mac.o \
