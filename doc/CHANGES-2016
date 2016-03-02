@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.917 2016/03/02 20:14:09 wiedi Exp $
+$NetBSD: CHANGES-2016,v 1.918 2016/03/02 21:30:35 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1234,3 +1234,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-mercurial to 3.7.2 [wiz 2016-03-02]
 	Updated mail/exim to 4.86.2 [wiedi 2016-03-02]
 	Updated mail/exim-html to 4.86.2 [wiedi 2016-03-02]
+	Updated multimedia/mpv to 0.16.0 [leot 2016-03-02]
