@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.915 2016/03/02 14:37:22 nros Exp $
+$NetBSD: CHANGES-2016,v 1.916 2016/03/02 19:31:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1231,3 +1231,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated filesystems/fuse-sshfs to 2.7 [jmmv 2016-03-01]
 	Added devel/bazel version 0.2.0 [jmmv 2016-03-01]
 	Updated x11/gtk2 to 2.24.29nb1 [nros 2016-03-02]
+	Updated devel/py-mercurial to 3.7.2 [wiz 2016-03-02]
