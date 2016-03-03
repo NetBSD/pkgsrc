@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2016/03/03 14:37:46 jmmv Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/Gemfile
+${GEM_LIBDIR}/Guardfile
+${GEM_LIBDIR}/LICENSE.txt
+${GEM_LIBDIR}/README.md
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/bin/fsevent_watch
+${GEM_LIBDIR}/ext/LICENSE
+${GEM_LIBDIR}/ext/fsevent_watch/FSEventsFix.c
+${GEM_LIBDIR}/ext/fsevent_watch/FSEventsFix.h
+${GEM_LIBDIR}/ext/fsevent_watch/TSICTString.c
+${GEM_LIBDIR}/ext/fsevent_watch/TSICTString.h
+${GEM_LIBDIR}/ext/fsevent_watch/cli.c
+${GEM_LIBDIR}/ext/fsevent_watch/cli.h
+${GEM_LIBDIR}/ext/fsevent_watch/common.h
+${GEM_LIBDIR}/ext/fsevent_watch/compat.c
+${GEM_LIBDIR}/ext/fsevent_watch/compat.h
+${GEM_LIBDIR}/ext/fsevent_watch/defines.h
+${GEM_LIBDIR}/ext/fsevent_watch/main.c
+${GEM_LIBDIR}/ext/rakefile.rb
+${GEM_LIBDIR}/lib/rb-fsevent.rb
+${GEM_LIBDIR}/lib/rb-fsevent/fsevent.rb
+${GEM_LIBDIR}/lib/rb-fsevent/version.rb
+${GEM_LIBDIR}/rb-fsevent.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
