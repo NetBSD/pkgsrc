@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.934 2016/03/03 12:46:28 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.935 2016/03/03 12:49:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1277,3 +1277,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated audio/musicpd to 0.19.13 [wiz 2016-03-03]
 	Updated time/p5-DateTime to 1.2400 [wiz 2016-03-03]
 	Updated devel/p5-File-Which to 1.20 [wiz 2016-03-03]
+	Updated converters/p5-JSON-XS to 3.020 [wiz 2016-03-03]
