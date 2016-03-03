@@ -1,10 +1,10 @@
-$NetBSD: patch-unix_configure,v 1.1 2014/03/10 14:20:44 taca Exp $
+$NetBSD: patch-unix_configure,v 1.2 2016/03/03 21:16:46 bsiegert Exp $
 
 Add MirBSD and DragonFly support.
 
---- unix/configure.orig	2013-09-13 16:07:56.000000000 +0000
+--- unix/configure.orig	2016-02-08 20:44:53.000000000 +0000
 +++ unix/configure
-@@ -7560,7 +7560,7 @@ fi
+@@ -7565,7 +7565,7 @@ fi
  	    CC_SEARCH_FLAGS=""
  	    LD_SEARCH_FLAGS=""
  	    ;;
@@ -13,28 +13,28 @@ Add MirBSD and DragonFly support.
  	    arch=`arch -s`
  	    case "$arch" in
  	    vax)
-@@ -7642,11 +7642,10 @@ fi
- 		;;
- 	    esac
+@@ -7646,11 +7646,10 @@ fi
+ fi
+ 
  	    ;;
 -	FreeBSD-*)
 +	FreeBSD-*|DragonFly-*)
  	    # This configuration from FreeBSD Ports.
  	    SHLIB_CFLAGS="-fPIC"
  	    SHLIB_LD="${CC} -shared"
--	    TCL_SHLIB_LD_EXTRAS="-Wl,-soname,\$@"
+-	    SHLIB_LD_LIBS="${SHLIB_LD_LIBS} -Wl,-soname,\$@"
  	    SHLIB_SUFFIX=".so"
  	    DL_OBJS="tclLoadDl.o"
  	    DL_LIBS=""
-@@ -7672,7 +7671,6 @@ fi
- 	    TCL_LIB_VERSIONS_OK=nodots
+@@ -7680,7 +7679,6 @@ fi
+ 	    esac
  	    ;;
  	Darwin-*)
 -	    CFLAGS_OPTIMIZE="-Os"
  	    SHLIB_CFLAGS="-fno-common"
  	    # To avoid discrepancies between what headers configure sees during
  	    # preprocessing tests and compiling tests, move any -isysroot and
-@@ -8846,7 +8844,7 @@ fi
+@@ -8854,7 +8852,7 @@ fi
  	    BSD/OS*) ;;
  	    CYGWIN_*|MINGW32_*) ;;
  	    IRIX*) ;;
@@ -43,7 +43,7 @@ Add MirBSD and DragonFly support.
  	    Darwin-*) ;;
  	    SCO_SV-3.2*) ;;
  	    *) SHLIB_CFLAGS="-fPIC" ;;
-@@ -8877,7 +8875,11 @@ fi
+@@ -8885,7 +8883,11 @@ fi
  
  else
  
@@ -56,7 +56,7 @@ Add MirBSD and DragonFly support.
  
  fi
  
-@@ -8911,7 +8913,7 @@ fi
+@@ -8919,7 +8921,7 @@ fi
  else
  
          MAKE_STUB_LIB='${STLIB_LD} $@ ${STUB_LIB_OBJS} ; ${RANLIB} $@'
@@ -65,7 +65,7 @@ Add MirBSD and DragonFly support.
  
  fi
  
-@@ -18684,9 +18686,9 @@ fi
+@@ -18692,9 +18694,9 @@ fi
  #	building libtcl as a shared library instead of a static library.
  #--------------------------------------------------------------------
  
@@ -78,7 +78,7 @@ Add MirBSD and DragonFly support.
  
  # tclConfig.sh needs a version of the _LIB_SUFFIX that has been eval'ed
  # since on some platforms TCL_LIB_FILE contains shell escapes.
-@@ -18791,13 +18793,10 @@ _ACEOF
+@@ -18799,13 +18801,10 @@ _ACEOF
  else
      # libdir must be a fully qualified path and not ${exec_prefix}/lib
      eval libdir="$libdir"
@@ -95,7 +95,7 @@ Add MirBSD and DragonFly support.
  fi
  VERSION='${VERSION}'
  eval "CFG_TCL_SHARED_LIB_SUFFIX=${TCL_SHARED_LIB_SUFFIX}"
-@@ -18816,12 +18815,11 @@ if test "$FRAMEWORK_BUILD" = "1" ; then
+@@ -18824,12 +18823,11 @@ if test "$FRAMEWORK_BUILD" = "1" ; then
  	TCL_PACKAGE_PATH="~/Library/Tcl /Library/Tcl /System/Library/Tcl ~/Library/Frameworks /Library/Frameworks /System/Library/Frameworks"
      test -z "$TCL_MODULE_PATH"  && \
  	TCL_MODULE_PATH="~/Library/Tcl /Library/Tcl /System/Library/Tcl"
@@ -110,7 +110,7 @@ Add MirBSD and DragonFly support.
  #--------------------------------------------------------------------
  #       The statements below define various symbols relating to Tcl
  #       stub support.
-@@ -18834,12 +18832,7 @@ eval "TCL_STUB_LIB_FILE=libtclstub${TCL_
+@@ -18842,12 +18840,7 @@ eval "TCL_STUB_LIB_FILE=libtclstub${TCL_
  eval "TCL_STUB_LIB_FILE=\"${TCL_STUB_LIB_FILE}\""
  eval "TCL_STUB_LIB_DIR=${libdir}"
  
@@ -124,7 +124,7 @@ Add MirBSD and DragonFly support.
  TCL_BUILD_STUB_LIB_SPEC="-L`pwd | sed -e 's/ /\\\\ /g'` ${TCL_STUB_LIB_FLAG}"
  TCL_STUB_LIB_SPEC="-L${TCL_STUB_LIB_DIR} ${TCL_STUB_LIB_FLAG}"
  TCL_BUILD_STUB_LIB_PATH="`pwd`/${TCL_STUB_LIB_FILE}"
-@@ -18991,34 +18984,15 @@ fi
+@@ -18999,34 +18992,15 @@ fi
  # Transform confdefs.h into DEFS.
  # Protect against shell expansion while executing Makefile rules.
  # Protect against Makefile macro expansion.
@@ -168,7 +168,7 @@ Add MirBSD and DragonFly support.
  
  
  
-@@ -19639,6 +19613,7 @@ s,@EXTRA_BUILD_HTML@,$EXTRA_BUILD_HTML,;
+@@ -19648,6 +19622,7 @@ s,@EXTRA_BUILD_HTML@,$EXTRA_BUILD_HTML,;
  s,@EXTRA_TCLSH_LIBS@,$EXTRA_TCLSH_LIBS,;t t
  s,@DLTEST_LD@,$DLTEST_LD,;t t
  s,@DLTEST_SUFFIX@,$DLTEST_SUFFIX,;t t

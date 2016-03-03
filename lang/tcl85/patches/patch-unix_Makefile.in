@@ -1,10 +1,10 @@
-$NetBSD: patch-unix_Makefile.in,v 1.1 2014/03/10 14:20:44 taca Exp $
+$NetBSD: patch-unix_Makefile.in,v 1.2 2016/03/03 21:16:46 bsiegert Exp $
 
 Shared library handling on pkgsrc.
 
---- unix/Makefile.in.orig	2012-11-09 17:14:39.000000000 +0200
-+++ unix/Makefile.in	2013-04-08 17:05:01.000000000 +0300
-@@ -8,6 +8,7 @@
+--- unix/Makefile.in.orig	2016-02-08 20:44:53.000000000 +0000
++++ unix/Makefile.in
+@@ -8,6 +8,7 @@ VERSION 		= @TCL_VERSION@
  MAJOR_VERSION		= @TCL_MAJOR_VERSION@
  MINOR_VERSION		= @TCL_MINOR_VERSION@
  PATCH_LEVEL		= @TCL_PATCH_LEVEL@
@@ -12,7 +12,7 @@ Shared library handling on pkgsrc.
  
  #--------------------------------------------------------------------------
  # Things you can change to personalize the Makefile for your own site (you can
-@@ -54,6 +55,8 @@
+@@ -54,6 +55,8 @@ SCRIPT_INSTALL_DIR	= $(INSTALL_ROOT)$(TC
  
  # Directory in which to install the include file tcl.h:
  INCLUDE_INSTALL_DIR	= $(INSTALL_ROOT)$(includedir)
@@ -21,7 +21,7 @@ Shared library handling on pkgsrc.
  
  # Path to the private tcl header dir:
  PRIVATE_INCLUDE_DIR	= @PRIVATE_INCLUDE_DIR@
-@@ -100,7 +103,7 @@
+@@ -100,7 +103,7 @@ CFLAGS_OPTIMIZE		= @CFLAGS_OPTIMIZE@
  #CFLAGS			= $(CFLAGS_DEBUG)
  #CFLAGS			= $(CFLAGS_OPTIMIZE)
  #CFLAGS			= $(CFLAGS_DEBUG) $(CFLAGS_OPTIMIZE)
@@ -30,7 +30,7 @@ Shared library handling on pkgsrc.
  
  # Flags to pass to the linker
  LDFLAGS_DEBUG		= @LDFLAGS_DEBUG@
-@@ -194,6 +197,7 @@
+@@ -194,6 +197,7 @@ BUILD_DLTEST		= @BUILD_DLTEST@
  #BUILD_DLTEST		=
  
  TCL_LIB_FILE		= @TCL_LIB_FILE@
@@ -38,16 +38,16 @@ Shared library handling on pkgsrc.
  #TCL_LIB_FILE		= libtcl.a
  
  # Generic lib name used in rules that apply to tcl and tk
-@@ -542,7 +546,7 @@
+@@ -546,7 +550,7 @@ SRCS = $(GENERIC_SRCS) $(TOMMATH_SRCS) $
  
  all: binaries libraries doc
  
--binaries: ${LIB_FILE} $(STUB_LIB_FILE) ${TCL_EXE}
-+binaries: ${LIB_FILE} $(STUB_LIB_FILE) ${TCL_EXE} ${TCL_LIB_A_FILE}
+-binaries: ${LIB_FILE} ${TCL_EXE}
++binaries: ${LIB_FILE} ${TCL_EXE} ${TCL_LIB_A_FILE}
  
  libraries:
  
-@@ -558,6 +562,11 @@
+@@ -565,6 +569,11 @@ ${STUB_LIB_FILE}: ${STUB_LIB_OBJS}
  	rm -f $@
  	@MAKE_STUB_LIB@
  
@@ -59,11 +59,11 @@ Shared library handling on pkgsrc.
  # Make target which outputs the list of the .o contained in the Tcl lib useful
  # to build a single big shared library containing Tcl and other extensions.
  # Used for the Tcl Plugin.  -- dl
-@@ -719,9 +728,16 @@
+@@ -726,9 +735,16 @@ install-binaries: binaries
  	    done;
  	@echo "Installing $(LIB_FILE) to $(DLL_INSTALL_DIR)/"
  	@@INSTALL_LIB@
--	@chmod 555 "$(DLL_INSTALL_DIR)"/$(LIB_FILE)
+-	@chmod 555 "$(DLL_INSTALL_DIR)/$(LIB_FILE)"
 +	@cd "$(DLL_INSTALL_DIR)" && if test "$(SHLIB_SUFFIX)" = ".dylib"; then \
 +		ln -sf libtcl$(MAJOR_VERSION)$(MINOR_VERSION).$(SHLIB_VERSION)$(SHLIB_SUFFIX) $(LIB_FILE) ; \
 +	else \
@@ -72,13 +72,13 @@ Shared library handling on pkgsrc.
 +	@echo "Installing ${TCL_LIB_A_FILE} to $(DLL_INSTALL_DIR)/"
 +	@$(INSTALL_DATA) ${TCL_LIB_A_FILE} $(DLL_INSTALL_DIR)/${TCL_LIB_A_FILE}
  	@echo "Installing ${TCL_EXE} as $(BIN_INSTALL_DIR)/tclsh$(VERSION)@EXEEXT@"
- 	@$(INSTALL_PROGRAM) ${TCL_EXE} "$(BIN_INSTALL_DIR)"/tclsh$(VERSION)@EXEEXT@
+ 	@$(INSTALL_PROGRAM) ${TCL_EXE} "$(BIN_INSTALL_DIR)/tclsh$(VERSION)@EXEEXT@"
 +	@cd "$(BIN_INSTALL_DIR)" && ln -sf tclsh$(VERSION)@EXEEXT@ tclsh
  	@echo "Installing tclConfig.sh to $(CONFIG_INSTALL_DIR)/"
- 	@$(INSTALL_DATA) tclConfig.sh "$(CONFIG_INSTALL_DIR)"/tclConfig.sh
+ 	@$(INSTALL_DATA) tclConfig.sh "$(CONFIG_INSTALL_DIR)/tclConfig.sh"
  	@if test "$(STUB_LIB_FILE)" != "" ; then \
-@@ -731,7 +747,8 @@
- 	@EXTRA_INSTALL_BINARIES@
+@@ -741,7 +757,8 @@ install-binaries: binaries
+ 	@$(INSTALL_DATA) tcl.pc $(LIB_INSTALL_DIR)/pkgconfig/tcl.pc
  
  install-libraries: libraries $(INSTALL_TZDATA) install-msgs
 -	@for i in "$(INCLUDE_INSTALL_DIR)" "$(SCRIPT_INSTALL_DIR)"; \
@@ -87,7 +87,7 @@ Shared library handling on pkgsrc.
  	    do \
  	    if [ ! -d "$$i" ] ; then \
  		echo "Making directory $$i"; \
-@@ -739,7 +756,7 @@
+@@ -749,7 +766,7 @@ install-libraries: libraries $(INSTALL_T
  		else true; \
  		fi; \
  	    done;
@@ -96,7 +96,7 @@ Shared library handling on pkgsrc.
  	    do \
  	    if [ ! -d "$(SCRIPT_INSTALL_DIR)"/$$i ] ; then \
  		echo "Making directory $(SCRIPT_INSTALL_DIR)/$$i"; \
-@@ -748,12 +765,17 @@
+@@ -758,12 +775,17 @@ install-libraries: libraries $(INSTALL_T
  		fi; \
  	    done;
  	@echo "Installing header files to $(INCLUDE_INSTALL_DIR)/";
@@ -119,11 +119,11 @@ Shared library handling on pkgsrc.
  	    done;
  	@echo "Installing library files to $(SCRIPT_INSTALL_DIR)/";
  	@for i in $(TOP_DIR)/library/*.tcl $(TOP_DIR)/library/tclIndex \
-@@ -767,21 +789,26 @@
+@@ -777,21 +799,26 @@ install-libraries: libraries $(INSTALL_T
  	    $(INSTALL_DATA) $$i "$(SCRIPT_INSTALL_DIR)"/http1.0; \
  	    done;
- 	@echo "Installing package http 2.7.12 as a Tcl Module";
--	@$(INSTALL_DATA) $(TOP_DIR)/library/http/http.tcl "$(SCRIPT_INSTALL_DIR)"/../tcl8/8.4/http-2.7.12.tm;
+ 	@echo "Installing package http 2.7.13 as a Tcl Module";
+-	@$(INSTALL_DATA) $(TOP_DIR)/library/http/http.tcl "$(SCRIPT_INSTALL_DIR)"/../tcl8/8.4/http-2.7.13.tm;
 +	@$(INSTALL_DATA) $(TOP_DIR)/library/http/http.tcl "$(SCRIPT_INSTALL_DIR)"/http/http.tcl;
 +	@$(INSTALL_DATA) $(TOP_DIR)/library/http/pkgIndex.tcl "$(SCRIPT_INSTALL_DIR)"/http/pkgIndex.tcl;
  	@echo "Installing package opt0.4 files to $(SCRIPT_INSTALL_DIR)/opt0.4/";
@@ -133,15 +133,15 @@ Shared library handling on pkgsrc.
  	    done;
  	@echo "Installing package msgcat 1.5.2 as a Tcl Module";
 -	@$(INSTALL_DATA) $(TOP_DIR)/library/msgcat/msgcat.tcl "$(SCRIPT_INSTALL_DIR)"/../tcl8/8.5/msgcat-1.5.2.tm;
-+	@$(INSTALL_DATA) $(TOP_DIR)/library/msgcat/msgcat.tcl "$(SCRIPT_INSTALL_DIR)"/msgcat1.4/msgcat.tcl;
-+	@$(INSTALL_DATA) $(TOP_DIR)/library/msgcat/pkgIndex.tcl "$(SCRIPT_INSTALL_DIR)"/msgcat1.4/pkgIndex.tcl;
- 	@echo "Installing package tcltest 2.3.5 as a Tcl Module";
--	@$(INSTALL_DATA) $(TOP_DIR)/library/tcltest/tcltest.tcl "$(SCRIPT_INSTALL_DIR)"/../tcl8/8.5/tcltest-2.3.5.tm;
++	@$(INSTALL_DATA) $(TOP_DIR)/library/msgcat/msgcat.tcl "$(SCRIPT_INSTALL_DIR)"/msgcat1.5/msgcat.tcl;
++	@$(INSTALL_DATA) $(TOP_DIR)/library/msgcat/pkgIndex.tcl "$(SCRIPT_INSTALL_DIR)"/msgcat1.5/pkgIndex.tcl;
+ 	@echo "Installing package tcltest 2.3.8 as a Tcl Module";
+-	@$(INSTALL_DATA) $(TOP_DIR)/library/tcltest/tcltest.tcl "$(SCRIPT_INSTALL_DIR)"/../tcl8/8.5/tcltest-2.3.8.tm;
 +	@$(INSTALL_DATA) $(TOP_DIR)/library/tcltest/tcltest.tcl "$(SCRIPT_INSTALL_DIR)"/tcltest2.3/tcltest.tcl;
 +	@$(INSTALL_DATA) $(TOP_DIR)/library/tcltest/pkgIndex.tcl "$(SCRIPT_INSTALL_DIR)"/tcltest2.3/pkgIndex.tcl;
  
- 	@echo "Installing package platform 1.0.12 as a Tcl Module";
--	@$(INSTALL_DATA) $(TOP_DIR)/library/platform/platform.tcl "$(SCRIPT_INSTALL_DIR)"/../tcl8/8.4/platform-1.0.12.tm;
+ 	@echo "Installing package platform 1.0.14 as a Tcl Module";
+-	@$(INSTALL_DATA) $(TOP_DIR)/library/platform/platform.tcl "$(SCRIPT_INSTALL_DIR)"/../tcl8/8.4/platform-1.0.14.tm;
 +	@$(INSTALL_DATA) $(TOP_DIR)/library/platform/platform.tcl "$(SCRIPT_INSTALL_DIR)"/platform1.0/platform.tcl;
 +	@$(INSTALL_DATA) $(TOP_DIR)/library/platform/pkgIndex.tcl "$(SCRIPT_INSTALL_DIR)"/platform1.0/pkgIndex.tcl;
  	@echo "Installing package platform::shell 1.1.4 as a Tcl Module";

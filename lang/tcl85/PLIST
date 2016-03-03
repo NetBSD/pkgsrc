@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/03/10 14:20:44 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/03/03 21:16:46 bsiegert Exp $
 bin/tclsh
 bin/tclsh${BASEVER}
 include/tcl.h
@@ -26,9 +26,10 @@ include/tcl/unix/tclUnixThrd.h
 include/tclDecls.h
 include/tclPlatDecls.h
 lib/libtcl${SONUM}.a
-lib/libtcl${SONUM}.so
-lib/libtcl${SONUM}.so.1.0
+lib/libtcl${SONUM}.${SO}
+lib/libtcl${SONUM}.${SO_1_0}
 lib/libtclstub${SONUM}.a
+lib/pkgconfig/tcl.pc
 lib/tcl${BASEVER}/auto.tcl
 lib/tcl${BASEVER}/clock.tcl
 lib/tcl${BASEVER}/encoding/ascii.enc
@@ -115,8 +116,8 @@ lib/tcl${BASEVER}/http/pkgIndex.tcl
 lib/tcl${BASEVER}/http1.0/http.tcl
 lib/tcl${BASEVER}/http1.0/pkgIndex.tcl
 lib/tcl${BASEVER}/init.tcl
-lib/tcl${BASEVER}/msgcat1.4/msgcat.tcl
-lib/tcl${BASEVER}/msgcat1.4/pkgIndex.tcl
+lib/tcl${BASEVER}/msgcat1.5/msgcat.tcl
+lib/tcl${BASEVER}/msgcat1.5/pkgIndex.tcl
 lib/tcl${BASEVER}/msgs/af.msg
 lib/tcl${BASEVER}/msgs/af_za.msg
 lib/tcl${BASEVER}/msgs/ar.msg
@@ -255,8 +256,8 @@ lib/tcl${BASEVER}/shell1.1/pkgIndex.tcl
 lib/tcl${BASEVER}/shell1.1/shell.tcl
 lib/tcl${BASEVER}/tclAppInit.c
 lib/tcl${BASEVER}/tclIndex
-lib/tcl${BASEVER}/tcltest2.3/tcltest.tcl
 lib/tcl${BASEVER}/tcltest2.3/pkgIndex.tcl
+lib/tcl${BASEVER}/tcltest2.3/tcltest.tcl
 lib/tcl${BASEVER}/tm.tcl
 lib/tcl${BASEVER}/word.tcl
 lib/tclConfig.sh
@@ -805,6 +806,8 @@ man/man3/Tcl_UtfBackslash.3
 man/man3/Tcl_UtfCharComplete.3
 man/man3/Tcl_UtfFindFirst.3
 man/man3/Tcl_UtfFindLast.3
+man/man3/Tcl_UtfNcasecmp.3
+man/man3/Tcl_UtfNcmp.3
 man/man3/Tcl_UtfNext.3
 man/man3/Tcl_UtfPrev.3
 man/man3/Tcl_UtfToExternal.3

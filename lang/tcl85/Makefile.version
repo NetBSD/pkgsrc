@@ -1,5 +1,5 @@
-# $NetBSD: Makefile.version,v 1.1 2014/03/10 14:20:44 taca Exp $
+# $NetBSD: Makefile.version,v 1.2 2016/03/03 21:16:46 bsiegert Exp $
 
 TCL_SONUM=	85
 TCL_BASEVER=	8.5
-TCL_VERSION=	8.5.15
+TCL_VERSION=	8.5.19
