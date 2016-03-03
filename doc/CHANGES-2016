@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.925 2016/03/03 11:54:39 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.926 2016/03/03 11:58:30 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1268,3 +1268,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated pkgtools/mksandbox to 1.6 [agc 2016-03-02]
 	Updated devel/netbeans-ide to 8.1 [asau 2016-03-03]
 	Updated lang/nodejs to 5.7.1 [fhajny 2016-03-03]
+	Updated lang/nodejs4 to 4.3.2 [fhajny 2016-03-03]
