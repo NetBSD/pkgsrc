@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2015/12/04 20:43:14 wiz Exp $
+$NetBSD: distinfo,v 1.9 2016/03/03 12:55:36 wiz Exp $
 
-SHA1 (click-6.2.tar.gz) = 0fd1a5a25192e987338eac89dbed2d8f4ae15e58
-RMD160 (click-6.2.tar.gz) = 4deab06adbad350b336cface499ccae2fbf3f8f4
-SHA512 (click-6.2.tar.gz) = 3950bd4e05823dbd526b3e3d17f9eb6871e1591342bdc4d21b7d4cea8f66791b1ab1d79ec664dae55cfbeaa5086fabb0db596bc88593251002c6584eae823477
-Size (click-6.2.tar.gz) = 281717 bytes
+SHA1 (click-6.3.tar.gz) = 512519c16b75b7027269cf077ad4687d638556f4
+RMD160 (click-6.3.tar.gz) = 44a350d3786e8ee2e146ae32b59119d403812bff
+SHA512 (click-6.3.tar.gz) = c7518b9c595fe35efb6be4391006a471cdc909f6725b9b3c45b06ec7b8b24560543ee151ff3afabc76ea23f4367795c4e5ace9b4b780c18c48a3e512474e3bf8
+Size (click-6.3.tar.gz) = 283062 bytes
