@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2015/08/10 12:52:11 abs Exp $
+# $NetBSD: Makefile,v 1.18 2016/03/03 07:37:26 asau Exp $
 #
 
-DISTNAME=	netbeans-8.0.2-201411181905
-PKGNAME=	netbeans-ide-8.0.2
-PKGREVISION=	1
+DISTNAME=	netbeans-8.1-201510222201
+PKGNAME=	netbeans-ide-8.1
 CATEGORIES=	editors
-MASTER_SITES=	http://download.netbeans.org/netbeans/8.0.2/final/zip/
+MASTER_SITES=	http://download.netbeans.org/netbeans/8.1/final/zip/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	drue@users.sourceforge.net
@@ -14,7 +13,7 @@ COMMENT=	NetBeans Java IDE
 
 USE_TOOLS+=	pax
 USE_JAVA=	run
-PKG_JVMS_ACCEPTED=  sun-jdk15 sun-jdk6 sun-jdk7 openjdk7 openjdk8
+PKG_JVMS_ACCEPTED=  sun-jdk7 openjdk7 oracle-jdk8 openjdk8
 NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/netbeans
 
