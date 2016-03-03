@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.929 2016/03/03 12:16:47 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.930 2016/03/03 12:28:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1272,3 +1272,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/afl to 2.05b [wiz 2016-03-03]
 	Updated sysutils/dbus-python-common to 1.2.2 [wiz 2016-03-03]
 	Updated sysutils/py-dbus to 1.2.2 [wiz 2016-03-03]
+	Updated misc/calibre to 2.52.0 [wiz 2016-03-03]
