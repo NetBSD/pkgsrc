@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1 2016/03/03 13:30:27 wiz Exp $
+
+Fix build.
+
+--- ui/time_shift.c.orig	2014-11-12 18:49:17.000000000 +0000
++++ ui/time_shift.c	2014-11-14 10:08:51.000000000 +0000
+@@ -28,6 +28,9 @@
+ #include <stdio.h>
+ #include <string.h>
+ #include <math.h>
++#ifndef HAVE_FLOORL
++#define floorl(a) floor((double)(a))
++#endif
+ 
+ #include <glib.h>
+ 
