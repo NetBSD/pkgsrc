@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15512 2016/03/03 12:53:00 wiz Exp $
+$NetBSD: TODO,v 1.15513 2016/03/03 12:54:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1273,7 +1273,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-User-Identity-0.94
 	o p5-WebService-Google-Reader-0.23
 	o p5-Wx-0.9927
-	o p5-XML-LibXML-2.0124
 	o p5-eBay-API-0.29
 	o p5-gtk2-1.300
 	o p5-perl-ldap-0.65
