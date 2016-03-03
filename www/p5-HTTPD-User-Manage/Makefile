@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2015/06/12 10:52:04 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2016/03/03 19:42:30 shattered Exp $
 
 DISTNAME=	HTTPD-User-Manage-1.66
 PKGNAME=	p5-${DISTNAME}
@@ -22,7 +22,7 @@ SUBST_FILES.um=		user_manage
 SUBST_VARS.um=		PKG_SYSCONFDIR
 
 post-extract:
-	chmod -x ${WRKSRC}/lib/HTTPD/UserAdmin/DBM.pm
+	chmod a-x ${WRKSRC}/lib/HTTPD/UserAdmin/DBM.pm
 
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/user_manage ${DESTDIR}${PREFIX}/bin
