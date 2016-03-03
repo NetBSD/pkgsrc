@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2015/10/13 18:18:09 shattered Exp $
+# $NetBSD: Makefile,v 1.20 2016/03/03 19:35:13 shattered Exp $
 
 DISTNAME=		ocp-0.1.21
 PKGREVISION=		7
@@ -40,6 +40,7 @@ PLIST_VARS+=		sdl x11 desktop
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
