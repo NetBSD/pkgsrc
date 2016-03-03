@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.23 2012/06/11 11:41:25 adam Exp $
+$NetBSD: patch-aa,v 1.23.30.1 2016/03/03 20:22:52 bsiegert Exp $
 
---- Local/Makefile.pkgsrc.orig	2012-06-11 11:27:45.000000000 +0000
+--- Local/Makefile.pkgsrc.orig	2016-01-10 20:50:29.000000000 +0000
 +++ Local/Makefile.pkgsrc
 @@ -98,7 +98,7 @@
  # /usr/local/sbin. The installation script will try to create this directory,
@@ -56,7 +56,7 @@ $NetBSD: patch-aa,v 1.23 2012/06/11 11:41:25 adam Exp $
  
  
  #------------------------------------------------------------------------------
-@@ -578,15 +578,15 @@ FIXED_NEVER_USERS=root
+@@ -628,16 +628,16 @@ FIXED_NEVER_USERS=root
  # included in the Exim binary. You will then need to set up the run time
  # configuration to make use of the mechanism(s) selected.
  
@@ -72,10 +72,11 @@ $NetBSD: patch-aa,v 1.23 2012/06/11 11:41:25 adam Exp $
 -# AUTH_SPA=yes
 +AUTH_PLAINTEXT=yes
 +AUTH_SPA=yes
+ # AUTH_TLS=yes
  
  
  #------------------------------------------------------------------------------
-@@ -764,7 +764,7 @@ HEADERS_CHARSET="ISO-8859-1"
+@@ -822,7 +822,7 @@ HEADERS_CHARSET="ISO-8859-1"
  # %s. This will be replaced by one of the strings "main", "panic", or "reject"
  # to form the final file names. Some installations may want something like this:
  
@@ -84,7 +85,7 @@ $NetBSD: patch-aa,v 1.23 2012/06/11 11:41:25 adam Exp $
  
  # which results in files with names /var/log/exim_mainlog, etc. The directory
  # in which the log files are placed must exist; Exim does not try to create
-@@ -1016,13 +1016,13 @@ SYSTEM_ALIASES_FILE=/etc/aliases
+@@ -1080,13 +1080,13 @@ SYSTEM_ALIASES_FILE=/etc/aliases
  # haven't got Perl, Exim will still build and run; you just won't be able to
  # use those utilities.
  
@@ -105,7 +106,7 @@ $NetBSD: patch-aa,v 1.23 2012/06/11 11:41:25 adam Exp $
  
  
  #------------------------------------------------------------------------------
-@@ -1222,7 +1222,7 @@ TMPDIR="/tmp"
+@@ -1286,7 +1286,7 @@ TMPDIR="/tmp"
  # (process id) to a file so that it can easily be identified. The path of the
  # file can be specified here. Some installations may want something like this:
  
@@ -114,7 +115,7 @@ $NetBSD: patch-aa,v 1.23 2012/06/11 11:41:25 adam Exp $
  
  # If PID_FILE_PATH is not defined, Exim writes a file in its spool directory
  # using the name "exim-daemon.pid".
-@@ -1294,3 +1294,10 @@ TMPDIR="/tmp"
+@@ -1358,3 +1358,10 @@ TMPDIR="/tmp"
  # ENABLE_DISABLE_FSYNC=yes
  
  # End of EDITME for Exim 4.
