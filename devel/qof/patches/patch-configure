@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2016/03/03 13:16:20 jperkin Exp $
+
+Fix Darwin version test.
+
+--- configure.orig	2008-01-31 22:48:08.000000000 +0000
++++ configure
+@@ -22837,7 +22837,7 @@ fi
+ { echo "$as_me:$LINENO: checking for darwin" >&5
+ echo $ECHO_N "checking for darwin... $ECHO_C" >&6; }
+ case $host_os in
+-    rhapsody* | darwin1*)
++    rhapsody* | darwin1.*)
+         { echo "$as_me:$LINENO: result: yes, but too old" >&5
+ echo "${ECHO_T}yes, but too old" >&6; }
+         { { echo "$as_me:$LINENO: error: This platform is too old, please update to the latest darwin" >&5
