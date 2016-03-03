@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2015/08/15 12:39:58 mef Exp $
+# $NetBSD: Makefile,v 1.16 2016/03/03 19:42:29 shattered Exp $
 
 DISTNAME=	Config-Find-0.31
 PKGNAME=	p5-${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=	p5-File-HomeDir>=0.80:../../devel/p5-File-HomeDir
 PERL5_PACKLIST=		auto/Config/Find/.packlist
 
 post-extract:
-	cd ${WRKSRC} && chmod -x lib/Config/Find.pm lib/Config/Find/*.pm
+	cd ${WRKSRC} && chmod a-x lib/Config/Find.pm lib/Config/Find/*.pm
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
