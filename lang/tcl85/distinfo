@@ -1,18 +1,18 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 22:50:45 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/03/03 21:16:46 bsiegert Exp $
 
-SHA1 (tcl8.5.15-src.tar.gz) = ff20698d7f77617ea179ec225300f4ea4a905299
-RMD160 (tcl8.5.15-src.tar.gz) = 17f570c0f44da5cb49b4b7c56273544bad7b5a76
-SHA512 (tcl8.5.15-src.tar.gz) = 44c8a975ffaeca1f954fbc160fed966064340b5de883e53321691c6c457283716c4ab5c87c7c754ff5c1bd293d46eb14bbf356a0bf6a5ed0078d8789703df3df
-Size (tcl8.5.15-src.tar.gz) = 4536117 bytes
+SHA1 (tcl8.5.19-src.tar.gz) = 6113fcc4fc15c65f8a840037f37e9174c846bcd4
+RMD160 (tcl8.5.19-src.tar.gz) = 272dd86e28384d11894bdf9014e5ea6282b1b51a
+SHA512 (tcl8.5.19-src.tar.gz) = e04d8a9115a6903057d33a72e1971b6fba68d6be9eab2649ded0671a3ddbec80c0a027f9e5b0985c66cbf915ffbd28a8139b480480988338c203690051ef84ee
+Size (tcl8.5.19-src.tar.gz) = 4552371 bytes
 SHA1 (patch-generic_tclInt.h) = 2e83a0345bc7f87b2a0196d2c2d8d2462b28fbd6
 SHA1 (patch-generic_tclPort.h) = 2b1d78456b23206e5431a696f271d5ecebac7b52
 SHA1 (patch-generic_tclPosixStr.c) = 8c252a4f3d8898fb48544d15123d6a8ddc3172f0
 SHA1 (patch-tests_load.test) = 438695ab76e01646e49aadc01c44344a5495eabb
 SHA1 (patch-tests_pkgMkIndex.test) = 3091cc124a4e7ae6a1140f83c9f43bee7edccf98
-SHA1 (patch-unix_Makefile.in) = 956490fe37e5f8b5564c2f3ef3c474c49ba9f73a
-SHA1 (patch-unix_configure) = 1ec17ce4dbb78cbf42f5ee39bc10a6840b360913
-SHA1 (patch-unix_tclConfig.sh.in) = 6d1c69065d7c4ed1a7462f041094e91e33d7d0f4
+SHA1 (patch-unix_Makefile.in) = d8858c05b3ed829fd4234211e8cfed94a563b6c2
+SHA1 (patch-unix_configure) = eae8dd39c23971e432bae6ea3ab793347ce2ebfd
+SHA1 (patch-unix_tclConfig.sh.in) = ea3e0071e9e8b64a8ab46fec927c4acb6f917272
 SHA1 (patch-unix_tclUnixCompat.c) = 7ffa40a1a56345f5b86cd896e8e3b0d5748d8c5e
 SHA1 (patch-unix_tclUnixFCmd.c) = a56a12b8a0068e914d10336076347ca2b0ba9ac7
-SHA1 (patch-unix_tclUnixInit.c) = 4cbddb3e1a9ed4bbbf2d8de0df1a9032fc5b2629
+SHA1 (patch-unix_tclUnixInit.c) = 61e3419cad9f3a00825218f9d92b1d8088f4bd30
 SHA1 (patch-unix_tclUnixPort.h) = fde3e497b9c94958aaac1b14a4f97916f17cf951

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2014/03/10 14:20:44 taca Exp $
+# $NetBSD: Makefile,v 1.2 2016/03/03 21:16:46 bsiegert Exp $
 
 DISTNAME=	tcl${TCL_VERSION}-src
 PKGNAME=	tcl-${TCL_VERSION}
-PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tcl/}
 
@@ -39,6 +38,14 @@ SUBST_STAGE.tcl-config=	post-build
 SUBST_FILES.tcl-config=	unix/tclConfig.sh
 SUBST_SED.tcl-config+=	-e "s|${WRKSRC}/unix|${PREFIX}/lib|"
 SUBST_SED.tcl-config+=	-e "s|${WRKSRC}|${PREFIX}/include/tcl|"
+
+.if ${OPSYS} == "Darwin"
+PLIST_SUBST+=		SO=dylib
+PLIST_SUBST+=		SO_1_0=1.0.dylib
+.else
+PLIST_SUBST+=		SO=so
+PLIST_SUBST+=		SO_1_0=so.1.0
+.endif
 
 PLIST_SUBST+=		SONUM=${TCL_SONUM}
 PLIST_SUBST+=		BASEVER=${TCL_BASEVER}
