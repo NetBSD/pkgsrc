@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/03/03 14:37:46 jmmv Exp $
+
+SHA1 (rb-fsevent-0.9.7.gem) = 252020141319bdab830f128cc91797516be225e0
+RMD160 (rb-fsevent-0.9.7.gem) = cfa24ffbbf05ba0e4cdb2eb84bb1835323fe573e
+SHA512 (rb-fsevent-0.9.7.gem) = 224a17fe89304939b28a73f804aeb39307112ad75431afe59d1d1827016820b829646e92458f5ac87016b26e42d713bfd8e7dc2b551eeb6672904e23da481437
+Size (rb-fsevent-0.9.7.gem) = 51712 bytes
