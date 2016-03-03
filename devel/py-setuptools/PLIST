@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2016/02/14 10:53:17 wiz Exp $
+@comment $NetBSD: PLIST,v 1.29 2016/03/03 13:01:11 wiz Exp $
 bin/easy_install-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_FILE}/PKG-INFO
 ${PYSITELIB}/${EGG_FILE}/SOURCES.txt
@@ -7,12 +7,6 @@ ${PYSITELIB}/${EGG_FILE}/entry_points.txt
 ${PYSITELIB}/${EGG_FILE}/requires.txt
 ${PYSITELIB}/${EGG_FILE}/top_level.txt
 ${PYSITELIB}/${EGG_FILE}/zip-safe
-${PYSITELIB}/_markerlib/__init__.py
-${PYSITELIB}/_markerlib/__init__.pyc
-${PYSITELIB}/_markerlib/__init__.pyo
-${PYSITELIB}/_markerlib/markers.py
-${PYSITELIB}/_markerlib/markers.pyc
-${PYSITELIB}/_markerlib/markers.pyo
 ${PYSITELIB}/easy_install.py
 ${PYSITELIB}/easy_install.pyc
 ${PYSITELIB}/easy_install.pyo
@@ -34,12 +28,24 @@ ${PYSITELIB}/pkg_resources/_vendor/packaging/_compat.pyo
 ${PYSITELIB}/pkg_resources/_vendor/packaging/_structures.py
 ${PYSITELIB}/pkg_resources/_vendor/packaging/_structures.pyc
 ${PYSITELIB}/pkg_resources/_vendor/packaging/_structures.pyo
+${PYSITELIB}/pkg_resources/_vendor/packaging/markers.py
+${PYSITELIB}/pkg_resources/_vendor/packaging/markers.pyc
+${PYSITELIB}/pkg_resources/_vendor/packaging/markers.pyo
+${PYSITELIB}/pkg_resources/_vendor/packaging/requirements.py
+${PYSITELIB}/pkg_resources/_vendor/packaging/requirements.pyc
+${PYSITELIB}/pkg_resources/_vendor/packaging/requirements.pyo
 ${PYSITELIB}/pkg_resources/_vendor/packaging/specifiers.py
 ${PYSITELIB}/pkg_resources/_vendor/packaging/specifiers.pyc
 ${PYSITELIB}/pkg_resources/_vendor/packaging/specifiers.pyo
+${PYSITELIB}/pkg_resources/_vendor/packaging/utils.py
+${PYSITELIB}/pkg_resources/_vendor/packaging/utils.pyc
+${PYSITELIB}/pkg_resources/_vendor/packaging/utils.pyo
 ${PYSITELIB}/pkg_resources/_vendor/packaging/version.py
 ${PYSITELIB}/pkg_resources/_vendor/packaging/version.pyc
 ${PYSITELIB}/pkg_resources/_vendor/packaging/version.pyo
+${PYSITELIB}/pkg_resources/_vendor/pyparsing.py
+${PYSITELIB}/pkg_resources/_vendor/pyparsing.pyc
+${PYSITELIB}/pkg_resources/_vendor/pyparsing.pyo
 ${PYSITELIB}/pkg_resources/_vendor/six.py
 ${PYSITELIB}/pkg_resources/_vendor/six.pyc
 ${PYSITELIB}/pkg_resources/_vendor/six.pyo
