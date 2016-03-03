@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2015/04/17 15:53:02 adam Exp $
+# $NetBSD: Makefile,v 1.17 2016/03/03 19:42:29 shattered Exp $
 #
 
 DISTNAME=	vera++-1.1.1
@@ -30,7 +30,7 @@ MAKE_FLAGS+=	TCLINCLUDE_DIR=${BUILDLINK_PREFIX.tcl}/include
 INSTALLATION_DIRS=	bin share/doc/vera++ share/vera++
 
 post-extract:
-	cd ${WRKSRC} && find . -type f -exec chmod -x {} \;
+	cd ${WRKSRC} && find . -type f -exec chmod a-x {} \;
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/vera++ ${DESTDIR}${PREFIX}/bin/vera++

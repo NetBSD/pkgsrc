@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2015/07/12 18:56:09 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2016/03/03 19:42:29 shattered Exp $
 
 DISTNAME=	perl-ldap-0.63
 PKGREVISION=	2
@@ -40,7 +40,7 @@ DEPENDS+=	p5-IO-Socket-INET6-[0-9]*:../../net/p5-IO-Socket-INET6
 PERL5_PACKLIST=		auto/Net/LDAP/.packlist
 
 post-extract:
-	chmod -x ${WRKSRC}/lib/Net/LDAP/DSML.pm
+	chmod a-x ${WRKSRC}/lib/Net/LDAP/DSML.pm
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
