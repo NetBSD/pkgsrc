@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2014/06/19 07:14:04 asau Exp $
+# $NetBSD: Makefile,v 1.38 2016/03/03 13:43:48 jperkin Exp $
 #
 
 DISTNAME=		wv2-0.2.3
@@ -21,6 +21,8 @@ USE_LANGUAGES=		c c++
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
 USE_GNU_ICONV=		yes
+.elif ${OPSYS} == "Darwin"
+USE_BUILTIN.iconv=	no
 .endif
 
 CONFIGURE_ARGS+=	--disable-debug
