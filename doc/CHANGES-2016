@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.944 2016/03/03 13:28:32 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.945 2016/03/03 13:30:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1287,3 +1287,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/shared-mime-info to 1.6 [wiz 2016-03-03]
 	Updated net/wireshark2 to 2.0.2 [wiz 2016-03-03]
 	Updated math/pari to 2.7.5 [wiz 2016-03-03]
+	Added math/pari23 version 2.3.5nb19 [wiz 2016-03-03]
