@@ -1,0 +1,17 @@
+$NetBSD: patch-ac,v 1.1 2016/03/03 13:30:27 wiz Exp $
+
+Fix build problem caused by name space polution.
+
+--- epan/dissectors/packet-mtp3.h.orig	2008-10-20 20:19:32.000000000 +0100
++++ epan/dissectors/packet-mtp3.h	2008-10-26 13:41:50.000000000 +0000
+@@ -46,6 +46,10 @@
+   guint8		ni;
+ } mtp3_addr_pc_t;
+ 
++#if defined(__NetBSD__) && defined(si_code)
++#undef	si_code
++#endif
++
+ typedef struct _mtp3_tap_rec_t {
+   mtp3_addr_pc_t	addr_opc;
+   mtp3_addr_pc_t	addr_dpc;
