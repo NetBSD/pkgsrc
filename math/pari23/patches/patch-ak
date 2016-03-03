@@ -1,0 +1,96 @@
+$NetBSD: patch-ak,v 1.1 2016/03/03 13:23:22 wiz Exp $
+
+--- src/test/dotest.orig	2010-02-05 10:43:24.000000000 +0000
++++ src/test/dotest
+@@ -44,14 +44,8 @@ else
+ fi
+ $RM -f $file_bench
+ 
+-dotestSUF=${dotestSUF:-"sta dyn"}
+-for arg in $dotestSUF; do
+-  case "$arg" in
+-    sta|dyn) if test $x $execdir/gp-$arg; then SUF="$SUF $arg"; fi ;;
+-  esac
+-done
+ file_test=gp.out
+-for suf in $SUF; do eval time$suf=0 files$suf=; done
++eval time=0 files=
+ for testdata in $testlist; do
+   O=$IFS;IFS=_;set $testdata;IFS=$O;testname=$1;testmul=$2
+   file_in=$testdir/in/$testname
+@@ -65,44 +59,37 @@ for testdata in $testlist; do
+ 
+   testmul=${testmul:-1000}
+   wr "* Testing $testname $c"
+-  for suf in $SUF; do
+-    wr "	for gp-$suf..$c"
+-    case "$suf" in
+-      exe) file_diff=$testname.dif;;
+-      *)   file_diff=$testname-$suf.dif
+-           gp=$execdir/gp-$suf;;
+-    esac
++    wr "	for gp..$c"
++    file_diff=$testnamef.dif
++    gp=$execdir/gp
+     $gp -q --test < $file_in > $file_test 2>&1
+     diff -c $file_out $file_test > $file_diff
+     pat=`grep "^[-+!] " $file_diff | grep -v "Total time"`
+     time=`${tail}2 $file_test | sed -n 's,.*Total time spent: \(.*\),\1,p'`
+     if test -n "$time"; then
+-      eval t='$'time$suf
++      eval t='$'time
+       if test -n "$exprbug"; then
+         t=`expr $time \'\*\' $testmul / 1000 + $t`
+       else
+         t=`expr $time '*' $testmul / 1000 + $t`
+       fi
+-      eval time$suf=$t
++      eval time=$t
+     fi
+     if test -z "$pat"; then
+       wr "TIME=$time";
+     else
+       eval BUG$suf=BUG
+-      eval files$suf=\"'$'files$suf $file_diff\"
++      eval files=\"'$'files $file_diff\"
+       wr "BUG [${time:-0}]"
+     fi
+-  done
+   wrln
+ done
+ $RM -f $file_test
+ BUG=
+-for suf in $SUF; do
+-  B=`eval echo '$'BUG$suf`; BUG="$BUG$B"
+-  t=`eval echo '$'time$suf`
++  B=`eval echo '$'BUG`; BUG="$BUG$B"
++  t=`eval echo '$'time`
+   if test -n "$B"; then B=' [BUG]'; fi
+-  wrln "+++$B Total bench for gp-$suf is $t"
+-done
++  wrln "+++$B Total bench for gp is $t"
+ if test -z "$BUG"; then exit 0; fi
+ 
+ pwd=`pwd`
+@@ -110,18 +97,16 @@ wrln
+ wrln "PROBLEMS WERE NOTED. The following files list them in diff format: "
+ wrln "Directory: $pwd"
+ bugp=; buge=;
+-for suf in $SUF; do
+-  B=`eval echo '$'BUG$suf`; BUG="$BUG$B"
++  B=`eval echo '$'BUG`; BUG="$BUG$B"
+   if test -n "$B"; then
+-    flist=`eval echo '$'files$suf`
++    flist=`eval echo '$'files`
+     for f in $flist; do
+       wrln "	$f"
+       case "$f" in
+-        *program*)  bugp="$suf$bugp";;
++        *program*)  bugp="$bugp";;
+       esac
+     done
+   fi
+-done
+ 
+ case "x$bugp" in
+   x)  file_diff=;;
