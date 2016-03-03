@@ -1,0 +1,15 @@
+$NetBSD: patch-help_Makefile.in,v 1.1 2016/03/03 13:30:27 wiz Exp $
+
+Not all shells (E.g. pdksh) support '((', whereas '( (' is portable.
+
+--- help/Makefile.in.orig	2015-08-12 16:48:07.000000000 +0000
++++ help/Makefile.in
+@@ -684,7 +684,7 @@ uninstall-am: uninstall-helpDATA
+ # can use it exclusively.
+ faq.txt: $(srcdir)/faq.py
+ 	$(AM_V_GEN)$(srcdir)/faq.py >$@.tmp && \
+-	(( command -v elinks > /dev/null && elinks -dump -dump-width 72 -no-numbering -no-references < $@.tmp > $@ ) || \
++	( ( command -v elinks > /dev/null && elinks -dump -dump-width 72 -no-numbering -no-references < $@.tmp > $@ ) || \
+ 	 ( command -v links  > /dev/null && links -width 72 -html-numbered-links 0 -dump               $@.tmp > $@ ) || \
+ 	 ( command -v lynx   > /dev/null && lynx -dump -width=72 -nolist -stdin -force-html          < $@.tmp > $@ ) || \
+          $(srcdir)/../tools/html2text.py --width=72 --no-links $@.tmp > $@ ) && \

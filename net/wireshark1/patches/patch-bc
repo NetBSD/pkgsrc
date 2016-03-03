@@ -1,0 +1,15 @@
+$NetBSD: patch-bc,v 1.1 2016/03/03 13:30:27 wiz Exp $
+
+Avoid conflict with NetBSD's popcount(3).
+
+--- tools/process-x11-xcb.pl.orig	2010-08-29 23:15:01.000000000 +0100
++++ tools/process-x11-xcb.pl	2010-09-26 23:55:27.000000000 +0100
+@@ -436,7 +436,7 @@
+ 	    return '(' . $op->att('op') . "$left)";
+ 	}
+ 	when ('popcount') {
+-	    return "popcount($left)";
++	    return "my_popcount($left)";
+ 	}
+ 	default { die "Invalid unop element $op->name()\n"; }
+     }
