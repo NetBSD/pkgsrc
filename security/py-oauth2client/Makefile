@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2016/02/15 10:45:40 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2016/03/03 12:59:55 wiz Exp $
 
-DISTNAME=	oauth2client-1.5.2
+DISTNAME=	oauth2client-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security net python
 MASTER_SITES=	-https://github.com/google/oauth2client/archive/v${PKGVERSION_NOREV}${EXTRACT_SUFX}
