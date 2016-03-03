@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.931 2016/03/03 12:34:42 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.932 2016/03/03 12:42:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1274,3 +1274,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/py-dbus to 1.2.2 [wiz 2016-03-03]
 	Updated misc/calibre to 2.52.0 [wiz 2016-03-03]
 	Updated fonts/harfbuzz to 1.2.3 [wiz 2016-03-03]
+	Updated audio/musicpd to 0.19.13 [wiz 2016-03-03]
