@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.941 2016/03/03 13:01:21 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.942 2016/03/03 13:02:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1284,3 +1284,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-click to 6.3 [wiz 2016-03-03]
 	Updated security/py-oauth2client to 2.0.0 [wiz 2016-03-03]
 	Updated devel/py-setuptools to 20.2.2 [wiz 2016-03-03]
+	Updated databases/shared-mime-info to 1.6 [wiz 2016-03-03]
