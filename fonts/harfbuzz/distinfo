@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.51 2016/02/21 10:29:12 wiz Exp $
+$NetBSD: distinfo,v 1.52 2016/03/03 12:34:33 wiz Exp $
 
-SHA1 (harfbuzz-1.2.0.tar.bz2) = d3edcfe45645e22f310fd3316254130afc5a044a
-RMD160 (harfbuzz-1.2.0.tar.bz2) = f1e5d2cc9e6e47b2a1413ca23e277e3573caf85d
-SHA512 (harfbuzz-1.2.0.tar.bz2) = 92a2203ab3491992081c3cbcb7b151e1c632a98c9b2cc27863df377e08d3951387f513c7f5184a05b0523b99517775e083edfccac8386981c242ed02d34052c5
-Size (harfbuzz-1.2.0.tar.bz2) = 1333335 bytes
+SHA1 (harfbuzz-1.2.3.tar.bz2) = 5d9c84f6a8a00277491baae5079a5c9c5851a314
+RMD160 (harfbuzz-1.2.3.tar.bz2) = 7f85abb72bdabe0c96044810699308275692a930
+SHA512 (harfbuzz-1.2.3.tar.bz2) = 9df730dd07f726150252e6c1db1b9f49182492d9b0443388aa3bb102482749cb3299079dde8f83430e7947633ccf8d21bc41a95f02ba497bfd8195e702d3b031
+Size (harfbuzz-1.2.3.tar.bz2) = 1337003 bytes
