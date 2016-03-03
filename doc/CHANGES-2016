@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.933 2016/03/03 12:45:40 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.934 2016/03/03 12:46:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1276,3 +1276,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated fonts/harfbuzz to 1.2.3 [wiz 2016-03-03]
 	Updated audio/musicpd to 0.19.13 [wiz 2016-03-03]
 	Updated time/p5-DateTime to 1.2400 [wiz 2016-03-03]
+	Updated devel/p5-File-Which to 1.20 [wiz 2016-03-03]
