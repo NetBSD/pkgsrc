@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2016/01/08 23:57:17 ryoon Exp $
+# $NetBSD: Makefile,v 1.16 2016/03/03 22:05:42 youri Exp $
 
 DISTNAME=		libreoffice4-bin	# overridden below
 PKGNAME=		libreoffice4-bin-${OO_RELEASE}
@@ -65,7 +65,7 @@ MASTER_SITES=		http://download.documentfoundation.org/libreoffice/stable/${OO_RE
 
 .include "options.mk"
 
-INSTALLATION_DIRS= bin
+INSTALLATION_DIRS= bin share/applications
 
 do-install:
 	${UNIQ} ${RPM2PKG_PLIST} | \
@@ -76,6 +76,7 @@ do-install:
 		-e "s|@@OO_BASEVER@@|${OO_BASEVER}|g" \
 		< ${FILESDIR}/soffice > ${DESTDIR}${PREFIX}/bin/soffice
 	${CHMOD} +x ${DESTDIR}${PREFIX}/bin/soffice
+	${INSTALL_DATA} ${FILESDIR}/*.desktop ${DESTDIR}${PREFIX}/share/applications
 .for i in sbase scalc sdraw simpress smath swriter
 	${LN} -sf ../opt/libreoffice${OO_BASEVER}/program/${i} ${DESTDIR}${PREFIX}/bin/${i}
 .endfor
