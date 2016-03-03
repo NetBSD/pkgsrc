@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2015/04/13 23:12:40 rodent Exp $
+# $NetBSD: Makefile,v 1.8 2016/03/03 19:42:29 shattered Exp $
 
 DISTNAME=	orderedmultidict-0.7.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-six>=1.8.0:../../lang/py-six
 USE_LANGUAGES=	# none
 
 post-install:
-	chmod -x ${DESTDIR}${PREFIX}/${PYSITELIB}/${EGG_INFODIR}/*
+	chmod a-x ${DESTDIR}${PREFIX}/${PYSITELIB}/${EGG_INFODIR}/*
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
