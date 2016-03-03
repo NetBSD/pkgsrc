@@ -1,0 +1,50 @@
+$NetBSD: patch-ca,v 1.1 2016/03/03 13:30:27 wiz Exp $
+
+allow gnutls >= 3
+
+--- configure.orig	2012-08-15 15:34:16.000000000 +0000
++++ configure
+@@ -16599,12 +16599,12 @@ if test -n "$LIBGNUTLS_CFLAGS"; then
+     pkg_cv_LIBGNUTLS_CFLAGS="$LIBGNUTLS_CFLAGS"
+  elif test -n "$PKG_CONFIG"; then
+     if test -n "$PKG_CONFIG" && \
+-    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"gnutls >= 1.2.0 gnutls < 3\""; } >&5
+-  ($PKG_CONFIG --exists --print-errors "gnutls >= 1.2.0 gnutls < 3") 2>&5
++    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"gnutls >= 1.2.0\""; } >&5
++  ($PKG_CONFIG --exists --print-errors "gnutls >= 1.2.0") 2>&5
+   ac_status=$?
+   $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+   test $ac_status = 0; }; then
+-  pkg_cv_LIBGNUTLS_CFLAGS=`$PKG_CONFIG --cflags "gnutls >= 1.2.0 gnutls < 3" 2>/dev/null`
++  pkg_cv_LIBGNUTLS_CFLAGS=`$PKG_CONFIG --cflags "gnutls >= 1.2.0" 2>/dev/null`
+ 		      test "x$?" != "x0" && pkg_failed=yes
+ else
+   pkg_failed=yes
+@@ -16616,12 +16616,12 @@ if test -n "$LIBGNUTLS_LIBS"; then
+     pkg_cv_LIBGNUTLS_LIBS="$LIBGNUTLS_LIBS"
+  elif test -n "$PKG_CONFIG"; then
+     if test -n "$PKG_CONFIG" && \
+-    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"gnutls >= 1.2.0 gnutls < 3\""; } >&5
+-  ($PKG_CONFIG --exists --print-errors "gnutls >= 1.2.0 gnutls < 3") 2>&5
++    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"gnutls >= 1.2.0\""; } >&5
++  ($PKG_CONFIG --exists --print-errors "gnutls >= 1.2.0") 2>&5
+   ac_status=$?
+   $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+   test $ac_status = 0; }; then
+-  pkg_cv_LIBGNUTLS_LIBS=`$PKG_CONFIG --libs "gnutls >= 1.2.0 gnutls < 3" 2>/dev/null`
++  pkg_cv_LIBGNUTLS_LIBS=`$PKG_CONFIG --libs "gnutls >= 1.2.0" 2>/dev/null`
+ 		      test "x$?" != "x0" && pkg_failed=yes
+ else
+   pkg_failed=yes
+@@ -16642,9 +16642,9 @@ else
+         _pkg_short_errors_supported=no
+ fi
+         if test $_pkg_short_errors_supported = yes; then
+-	        LIBGNUTLS_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "gnutls >= 1.2.0 gnutls < 3" 2>&1`
++	        LIBGNUTLS_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "gnutls >= 1.2.0" 2>&1`
+         else
+-	        LIBGNUTLS_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "gnutls >= 1.2.0 gnutls < 3" 2>&1`
++	        LIBGNUTLS_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "gnutls >= 1.2.0" 2>&1`
+         fi
+ 	# Put the nasty error message in config.log where it belongs
+ 	echo "$LIBGNUTLS_PKG_ERRORS" >&5

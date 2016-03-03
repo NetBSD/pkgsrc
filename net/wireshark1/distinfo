@@ -1,0 +1,14 @@
+$NetBSD: distinfo,v 1.1 2016/03/03 13:30:27 wiz Exp $
+
+SHA1 (wireshark-1.12.9.tar.bz2) = 5a62c3a355289396af946e80aab741ae6ad7eacb
+RMD160 (wireshark-1.12.9.tar.bz2) = e2a5cec42205e378f6c7062f2fd00a506be54dfb
+SHA512 (wireshark-1.12.9.tar.bz2) = 65688f730f42f7bd052f722ef84c83e59e78b13132dd0a46c46de7763e476a837d0f01f72a11bf8117b9d48c74836ffad35c121ecc1907a80a71ffb9b3d2c2c3
+Size (wireshark-1.12.9.tar.bz2) = 29275437 bytes
+SHA1 (patch-aa) = 237c60ae1bd860bdc3ee42a17a46b4e212b97c0f
+SHA1 (patch-ac) = 470a2a32a5577f16aef4ba3e638eb6b97c483ba3
+SHA1 (patch-ba) = f2fa69d1254b94c7b6b28d5e056c211a019d1db9
+SHA1 (patch-bb) = 2f6b72aeb99d87821ee6917d6c4c29a276d2e3a8
+SHA1 (patch-bc) = 052ede4ba58502117fe7b355e22a906ff65b773e
+SHA1 (patch-ca) = 08c4ae23739fbec238b02a2d0398b4a157f9c077
+SHA1 (patch-help_Makefile.in) = 8d7c27aa5d2c8b7998e4f7235fefaedd52059386
+SHA1 (patch-ui_qt_Makefile.in) = b26c11d7515b3b333c9e9853281fc4e06d7d8007
