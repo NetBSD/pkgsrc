@@ -1,8 +1,8 @@
-$NetBSD: patch-unix_tclConfig.sh.in,v 1.1 2014/03/10 14:20:44 taca Exp $
+$NetBSD: patch-unix_tclConfig.sh.in,v 1.2 2016/03/03 21:16:46 bsiegert Exp $
 
 * Handling of thread PKG_OPTIONS.
 
---- unix/tclConfig.sh.in.orig	2012-07-25 16:45:05.000000000 +0000
+--- unix/tclConfig.sh.in.orig	2016-02-08 20:44:53.000000000 +0000
 +++ unix/tclConfig.sh.in
 @@ -9,6 +9,8 @@
  #
@@ -15,7 +15,7 @@ $NetBSD: patch-unix_tclConfig.sh.in,v 1.1 2014/03/10 14:20:44 taca Exp $
  TCL_MAJOR_VERSION='@TCL_MAJOR_VERSION@'
 @@ -167,3 +169,9 @@ TCL_STUB_LIB_PATH='@TCL_STUB_LIB_PATH@'
  
- # Flag, 1: we built Tcl with threads enables, 0 we didn't
+ # Flag, 1: we built Tcl with threads enabled, 0 we didn't
  TCL_THREADS=@TCL_THREADS@
 +
 +else
