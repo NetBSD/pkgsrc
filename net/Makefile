@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1102 2016/02/27 14:32:06 tsutsui Exp $
+# $NetBSD: Makefile,v 1.1103 2016/03/03 13:33:49 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -807,7 +807,7 @@ SUBDIR+=	whoson
 SUBDIR+=	wide-dhcpv6
 SUBDIR+=	wimon
 SUBDIR+=	wireshark
-SUBDIR+=	wireshark2
+SUBDIR+=	wireshark1
 SUBDIR+=	wistumbler
 SUBDIR+=	wistumbler2
 SUBDIR+=	wistumbler2-gtk
