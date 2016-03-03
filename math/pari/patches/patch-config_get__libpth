@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.2 2010/02/06 10:37:06 sno Exp $
+$NetBSD: patch-config_get__libpth,v 1.1 2016/03/03 13:28:22 wiz Exp $
 
---- config/get_libpth.orig	2008-01-16 15:56:55.000000000 +0000
+--- config/get_libpth.orig	2014-03-25 08:59:21.000000000 +0000
 +++ config/get_libpth
 @@ -1,7 +1,3 @@
 -case "$sizeof_long" in
