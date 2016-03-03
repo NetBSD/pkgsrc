@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.936 2016/03/03 12:51:43 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.937 2016/03/03 12:53:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1279,3 +1279,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-File-Which to 1.20 [wiz 2016-03-03]
 	Updated converters/p5-JSON-XS to 3.020 [wiz 2016-03-03]
 	Updated devel/p5-Moo to 2.001000 [wiz 2016-03-03]
+	Updated textproc/p5-Text-Diff to 1.44 [wiz 2016-03-03]
