@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2015/10/20 09:40:21 tnn Exp $
+# $NetBSD: Makefile,v 1.25 2016/03/03 13:05:38 jperkin Exp $
 #
 
 DISTNAME=	gtkmm-utils-0.4.1
@@ -11,9 +11,9 @@ HOMEPAGE=	http://code.google.com/p/gtkmm-utils/
 COMMENT=	C++ utility and widget library based on glibmm and gtkmm
 
 GNU_CONFIGURE=	yes
+USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c++
 CXXFLAGS+=	-std=c++11
 
 PKGCONFIG_OVERRIDE+=	glibmm-utils/glibmm-utils.pc.in
