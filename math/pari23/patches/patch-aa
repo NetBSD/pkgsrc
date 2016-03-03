@@ -1,0 +1,41 @@
+$NetBSD: patch-aa,v 1.1 2016/03/03 13:23:22 wiz Exp $
+
+--- config/get_PATH.orig	2008-01-16 15:57:16.000000000 +0000
++++ config/get_PATH
+@@ -4,35 +4,7 @@ if test -z "$OS2_SHELL"; then dir_sep=':
+ pth="\
+   /bin\
+   /usr/bin\
+-  /usr/locateal/bin\
+-  /usr/ucb\
+-  /usr/locateal\
+-  /usr/lbin\
+-  /usr/5bin\
+-  /etc\
+-  /usr/etc\
+-  /usr/gnu/bin\
+-  /usr/new\
+-  /usr/new/bin\
+-  /usr/nbin\
+-  /sys5.3/bin\
+-  /sys5.3/usr/bin\
+-  /bsd4.3/bin\
+-  /bsd4.3/usr/ucb\
+-  /bsd4.3/usr/bin\
+-  /usr/bsd\
+-  /bsd43/bin\
+-  /opt/ansic/bin\
+-  /usr/ccs/bin\
+-  /usr/lib\
+-  /usr/ucblib\
+-  /lib\
+-  /usr/ccs/lib\
+-  /sbin\
+-  /usr/sbin\
+-  /usr/libexec\
+-  /usr/openwin/bin\
+-  /usr/local/bin\
++  $LOCALBASE/bin\
+ "
+ # /usr/openwin/bin added for xmkmf
+ 

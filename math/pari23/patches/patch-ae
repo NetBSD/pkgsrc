@@ -1,0 +1,60 @@
+$NetBSD: patch-ae,v 1.1 2016/03/03 13:23:22 wiz Exp $
+
+--- config/get_readline.orig	2008-01-16 15:57:14.000000000 +0000
++++ config/get_readline
+@@ -33,21 +33,11 @@ if test -n "$readline"; then
+       $cygtop/H-${arch}-cygwin32/${arch}-cygwin32/include\
+       ";;
+     *) incpth="$incpth\
+-      /usr/local/include/readline\
+-      /usr/include/readline\
+-      /opt/include/readline\
+-      /opt/local/include/readline\
+-      /opt/gnu/include/readline\
+-      /usr/unsupported/include/readline\
+-      /usr/local/include\
+-      /usr/include\
+-      /opt/include\
+-      /opt/local/include\
+-      /opt/gnu/include\
++      $LOCALBASE/include\
+       ";;
+   esac
+   pth="$with_readline_include $readline_add $incpth"
+-  x=`./locate 'readline.h' '' $pth`
++  x=`./locate 'readline/readline.h' '' $pth`
+   CPPF_defined=
+   case $x in
+    ?:/*|/*) rl_include=`dirname $x`
+@@ -111,22 +101,11 @@ if test -n "$readline"; then
+   lib=$rl_fullname; sym=tgetent; . ./locatesymbol
+   need_tgetent="$try"
+   if test -n "$need_tgetent"; then
+-    opth=$pth; pth="$with_ncurses_lib $libpth"
+-    lib=ncurses; . ./locatelib
+-    if test -n "$try"; then # ncurses found. Does it contain tgetent ?
+-      lib=$try; . ./locatesymbol
+-    fi
+-    pth=$opth
+-    if test -n "$try"; then
+-      rl_ncurses=$ncurses
+-      need_tgetent=
+-    else # give termcap a try
+       lib=termcap; . ./locatelib
+       if test -n "$try"; then
+         rl_termcap=$termcap
+         need_tgetent=
+       fi
+-    fi
+   fi
+ # Readline -- CFLAGS
+   if (echo $rl_include | grep "readline$" > /dev/null); then
+@@ -135,7 +114,7 @@ if test -n "$readline"; then
+   else # in case headers are not installed correctly
+     RLINCLUDE="-I$rl_include -DREADLINE_LIBRARY"
+   fi
+-  RLLIBS="-L$readline -lreadline"
++  RLLIBS="-Wl,-R$readline -L$readline -lreadline"
+   if test -n "$rl_ncurses"; then
+     echo ..."Library ncurses needed by readline"
+     RLLIBS="$RLLIBS -L$rl_ncurses -lncurses"
