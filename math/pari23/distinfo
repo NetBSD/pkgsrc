@@ -1,0 +1,27 @@
+$NetBSD: distinfo,v 1.1 2016/03/03 13:23:22 wiz Exp $
+
+SHA1 (pari-2.3.5.tar.gz) = f211ccfe42a4b18dbcde832dfd1ece6f477f4966
+RMD160 (pari-2.3.5.tar.gz) = 488adf3af5398d0ab5390eb86b65cd79bd1044c5
+SHA512 (pari-2.3.5.tar.gz) = 0e49e6310b4c76ef3370786a13aa8cbc5bb0b7dc84ec1665866d623e6284f45db8584eea759e8b5954dc9b5c8a3e866e77a377d18073ed33f11708a7e88a4cca
+Size (pari-2.3.5.tar.gz) = 2018097 bytes
+SHA1 (patch-aa) = 34efbc67afe5a98874c4fb3f18f4591bfa859d1f
+SHA1 (patch-ab) = b008e8c3388fe7dae4eecbb6613408492ba03e14
+SHA1 (patch-ac) = a53784be5a94a289f86e1e6bae108adecd2d01c3
+SHA1 (patch-ad) = 5399688168b6f55073a460459fb3a89971583a6d
+SHA1 (patch-ae) = 34e174cf1c97ee8b627691f3a5bf19fbbea43324
+SHA1 (patch-af) = 985b3a35f4c69124336c23c9c78690eb7e7d1567
+SHA1 (patch-ag) = 8c50e5b01832bc876874d51df02905dddb7839f3
+SHA1 (patch-ah) = 3febc677f1b94a9b3f4dec79388fdb8f77fa184f
+SHA1 (patch-ai) = 19b1f467ee0e534c19cce5768de070950e147c67
+SHA1 (patch-aj) = 9231890613515ceb2c7018189dc549872f04a14d
+SHA1 (patch-ak) = 622a06c67fd16c61ca8219c01e7f9dc9de202df4
+SHA1 (patch-al) = 4b9fe2464fb1136449ab3f46dcd743e937db470f
+SHA1 (patch-am) = 09e158e5cd3a680d786aa876ce66d034df0c3b86
+SHA1 (patch-an) = 4e1f9c8e0c63e2f1922bb8b181212b3e09c56ce6
+SHA1 (patch-ao) = 44bf077f1585e20277dcd42a7c5fd38d12b19af5
+SHA1 (patch-ap) = 21a20b68b589f8be3036d1f2f9c4b2a7f43210a8
+SHA1 (patch-config_get_fltk) = 2c2aa271fad5880a44b2df70a7143d2aea690ca0
+SHA1 (patch-src_headers_paridecl.h) = ee02e487807d8ed1c1a11268965ade76a2f80cf2
+SHA1 (patch-src_language_anal.c) = d0028a51e8ef14cae766cb881fcfce82cec0346f
+SHA1 (patch-src_language_es.c) = 27c286da66ce1a2fc6e5179cfb3f4e222984813d
+SHA1 (patch-src_modules_mpqs.c) = 3dd164e5c686fd2eb8317569cf05906a4c527721
