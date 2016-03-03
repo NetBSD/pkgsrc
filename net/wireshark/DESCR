@@ -9,3 +9,5 @@ code as Wireshark, and with editcap, which is a program to read capture
 files and write the packets from that capture file, possibly in a
 different capture file format, and with some packets possibly removed
 from the capture.
+
+This package tracks version 2 stable branch.
