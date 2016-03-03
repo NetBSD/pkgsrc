@@ -1,0 +1,50 @@
+$NetBSD: patch-an,v 1.1 2016/03/03 13:23:22 wiz Exp $
+
+--- src/language/anal.h.orig	2008-06-10 15:43:14.000000000 +0000
++++ src/language/anal.h
+@@ -61,7 +61,6 @@ void   changevalue_p(entree *ep, GEN x);
+ void   changevalue(entree *ep, GEN val);
+ entree *do_alias(entree *ep);
+ int    is_identifier(char *s);
+-entree *is_entry_intern(char *s, entree **table, long *hash);
+ long   is_keyword_char(char c);
+ char   *readstring(char *src, char *s);
+ long   loop_break(void);
+@@ -80,23 +79,15 @@ void hit_return(void);
+ extern char *gp_function_name;
+ extern int  (*whatnow_fun)(char *, int);
+ extern void (*sigint_fun)(void);
+-extern void *foreignHandler;
+-extern GEN  (*foreignExprHandler)(char*);
+-extern char foreignExprSwitch;
+-extern entree * (*foreignAutoload)(char*, long);
+-extern void (*foreignFuncFree)(entree *);
+ extern int (*default_exception_handler)(long);
+ 
+ extern const long functions_tblsz;  /* hashcodes table size */
+ /* Variables containing the list of PARI functions */
+-extern entree **functions_hash;    /* functions hashtable */
+ extern entree **members_hash;      /* members hashtable */
+-extern entree functions_basic[];
+ 
+ /* Variables containing the list of specific GP functions */
+ extern entree  functions_gp[];
+ extern entree  gp_member_list[];
+-extern entree  functions_highlevel[];
+ 
+ /* Variables containing the list of old PARI fonctions (up to 1.39.15) */
+ extern entree **funct_old_hash;    /* hashtable */
+@@ -118,13 +109,6 @@ enum { RET_GEN, RET_INT, RET_LONG, RET_V
+ extern void *PARI_stack_limit;
+ #endif
+ 
+-/* entrees */
+-#define EpVALENCE(ep) ((ep)->valence & 0xFF)
+-#define EpSTATIC(ep) ((ep)->valence & 0x100)
+-#define EpSETSTATIC(ep) ((ep)->valence |= 0x100)
+-#define EpPREDEFINED(ep) (EpVALENCE(ep) < EpUSER)
+-enum { EpUSER = 100, EpNEW, EpALIAS, EpVAR, EpGVAR, EpMEMBER, EpINSTALL };
+-
+ /* defaults  */
+ char* get_sep(const char *t);
+ long get_int(const char *s, long dflt);
