@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2015/10/25 09:49:18 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2016/03/03 12:59:49 jperkin Exp $
 
 DISTNAME=	libmatroska-1.4.4
 CATEGORIES=	multimedia devel
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.matroska.org/
 COMMENT=	Extensible open standard Audio/Video container format
 LICENSE=	gnu-lgpl-v2.1
 
-USE_LANGUAGES=		c++
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
 PKGCONFIG_OVERRIDE=	libmatroska.pc.in
