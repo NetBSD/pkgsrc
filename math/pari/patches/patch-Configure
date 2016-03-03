@@ -1,0 +1,21 @@
+$NetBSD: patch-Configure,v 1.1 2016/03/03 13:28:22 wiz Exp $
+
+--- Configure.orig	2015-06-02 14:03:57.000000000 +0000
++++ Configure
+@@ -119,14 +119,14 @@ fi
+ . ./get_static  # static
+ # For dynamic linking, before and after installing
+ runpath=\"$libdir\"
+-LDDYN="-lpari"
++LDDYN="-Wl,-R$libdir -L$libdir -lpari"
+ # get_modld needs $includedir from get_install, static, and LDDYN
+ . ./get_modld   # $_modld_list
+ 
+ # Which copy, SHELL ?
+ case "$osname" in
+   os2) ln_s=cp;      make_sh=sh;;
+-  *)   ln_s="ln -s"; make_sh="/bin/sh";;
++  *)   ln_s="ln -sf"; make_sh="/bin/sh";;
+ esac
+ ####################### CONFIGURE - CLEANUP #################################
+ rm -f gmon.out # created by Configure -pg

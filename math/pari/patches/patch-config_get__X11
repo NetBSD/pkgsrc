@@ -1,11 +1,12 @@
-$NetBSD: patch-af,v 1.2 2010/02/06 10:37:06 sno Exp $
+$NetBSD: patch-config_get__X11,v 1.1 2016/03/03 13:28:22 wiz Exp $
 
---- config/get_X11.orig	2008-01-16 15:57:17.000000000 +0000
+--- config/get_X11.orig	2014-03-25 08:59:21.000000000 +0000
 +++ config/get_X11
-@@ -10,20 +10,7 @@ cd ..; rm -rf $tdir
+@@ -10,21 +10,8 @@ cd ..; rm -rf $tdir
+ # Check xmkmf answer
  # X11 -- Headers
  if test ! -f $Xincroot/X11/Xos.h; then
-   x11pth="\
+-  x11pth="$addlib64\
 -    /usr/openwin/share/lib\
 -    /usr/openwin/lib\
 -    /usr/X11R6/lib       /usr/X11R5/lib       /usr/X11R4/lib\
@@ -20,6 +21,7 @@ $NetBSD: patch-af,v 1.2 2010/02/06 10:37:06 sno Exp $
 -    /usr/lib\
 -    /usr/local/lib\
 -    /usr/athena/lib\
++  x11pth="\
 +    $X11BASE/lib\
    ";
    pth=`echo $x11pth | sed 's,/lib,/include,g'`

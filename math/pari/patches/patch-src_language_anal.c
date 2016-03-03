@@ -1,13 +1,13 @@
-$NetBSD: patch-src_language_anal.c,v 1.1 2015/01/23 15:07:53 joerg Exp $
+$NetBSD: patch-src_language_anal.c,v 1.2 2016/03/03 13:28:22 wiz Exp $
 
---- src/language/anal.c.orig	2015-01-22 19:57:33.000000000 +0000
+--- src/language/anal.c.orig	2014-10-01 14:57:39.000000000 +0000
 +++ src/language/anal.c
-@@ -2520,7 +2520,7 @@ int_read(char **s)
+@@ -496,7 +496,7 @@ int_read(const char **s)
  }
  
  GEN
--strtoi(char *s) { return int_read(&s); }
-+pari_strtoi(char *s) { return int_read(&s); }
+-strtoi(const char *s) { return int_read(&s); }
++pari_strtoi(const char *s) { return int_read(&s); }
  
- GEN 
- strtor(char *s, long PREC)
+ GEN
+ strtor(const char *s, long prec)

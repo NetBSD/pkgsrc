@@ -1,6 +1,6 @@
-$NetBSD: patch-ah,v 1.2 2010/02/06 10:37:06 sno Exp $
+$NetBSD: patch-config_get__install,v 1.1 2016/03/03 13:28:22 wiz Exp $
 
---- config/get_install.orig	2008-01-16 15:57:11.000000000 +0000
+--- config/get_install.orig	2014-07-30 13:38:47.000000000 +0000
 +++ config/get_install
 @@ -23,7 +23,7 @@ fi
  echo $n "...for architecture-independent files (share-prefix) ? $c"
@@ -8,6 +8,6 @@ $NetBSD: patch-ah,v 1.2 2010/02/06 10:37:06 sno Exp $
  
 -dfltman=$share_prefix/man/man1
 +dfltman=$prefix/man/man1
- dfltemacs=$share_prefix/emacs/site-lisp/pari
  dfltdata=$share_prefix/pari
  
+ echo "Installation directories for:"
