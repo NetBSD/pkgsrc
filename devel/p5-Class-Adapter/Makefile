@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2015/06/12 10:48:58 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2016/03/03 19:42:29 shattered Exp $
 
 DISTNAME=	Class-Adapter-1.08
 PKGNAME=	p5-${DISTNAME}
@@ -14,7 +14,7 @@ LICENSE=	${PERL5_LICENSE}
 PERL5_PACKLIST=	auto/Class/Adapter/.packlist
 
 post-extract:
-	chmod -x ${WRKSRC}/lib/Class/*.pm ${WRKSRC}/lib/Class/Adapter/*.pm
+	chmod a-x ${WRKSRC}/lib/Class/*.pm ${WRKSRC}/lib/Class/Adapter/*.pm
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

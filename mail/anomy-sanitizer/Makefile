@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2015/07/12 18:56:22 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2016/03/03 19:42:29 shattered Exp $
 #
 
 DISTNAME=	anomy-sanitizer-1.76
@@ -28,7 +28,7 @@ INSTALLATION_DIRS=	sbin
 
 post-extract:
 	chmod -R u+w,go-w,a+r ${WRKSRC}
-	cd ${WRKSRC}/bin/Anomy && chmod -x *.pm */*.pm
+	cd ${WRKSRC}/bin/Anomy && chmod a-x *.pm */*.pm
 
 do-build:
 	set -e; \

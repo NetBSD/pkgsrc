@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2016/02/16 15:02:45 taca Exp $
+# $NetBSD: Makefile,v 1.19 2016/03/03 19:42:29 shattered Exp $
 
 DISTNAME=	flexmock-2.0.4
 CATEGORIES=	devel
@@ -9,7 +9,7 @@ COMMENT=	Flexible mock object library for Ruby unit testing
 LICENSE=	isc
 
 pre-configure:
-	find ${WRKSRC}/doc -type f -exec chmod -x {} \;
+	find ${WRKSRC}/doc -type f -exec chmod a-x {} \;
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"

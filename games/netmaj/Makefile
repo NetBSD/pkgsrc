@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2015/08/17 17:11:23 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2016/03/03 19:42:29 shattered Exp $
 #
 
 DISTNAME=		netmaj-2.0.7
@@ -23,7 +23,7 @@ DOCDIR=			${PREFIX}/share/doc/netmaj
 pre-configure:
 	cp ${FILESDIR}/configure.sh ${WRKSRC}/configure
 	chmod +x ${WRKSRC}/configure
-	chmod -x ${WRKSRC}/auto.pf
+	chmod a-x ${WRKSRC}/auto.pf
 
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
