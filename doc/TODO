@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15519 2016/03/03 13:51:49 wiz Exp $
+$NetBSD: TODO,v 1.15520 2016/03/03 16:02:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1642,6 +1642,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o topgit-0.8
 	o totem-3.14.1
 	o totem-pl-parser-3.10.3
+	o transmission-2.90
 	o tripwire-2.3.1 [see also pkg/22362]
 	o trojita-0.6
 	o ts-0.7.5
@@ -1702,6 +1703,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wpa_gui-2.4
 	o wpa_supplicant-2.4
 	o wwwoffle-2.9i
+	o wxGTK-3.1.0
 	o wxRemind-101
 	o x264-devel-20160227
 	o x2vnc-1.31
