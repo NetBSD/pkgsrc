@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.143 2016/02/25 16:20:53 jperkin Exp $
+# $NetBSD: Makefile,v 1.144 2016/03/03 13:33:14 wiz Exp $
 
-DISTNAME=	wireshark-1.12.9
+DISTNAME=	wireshark-2.0.2
 CATEGORIES=	net
 MASTER_SITES=	https://www.wireshark.org/download/src/
 EXTRACT_SUFX=	.tar.bz2
@@ -21,11 +21,9 @@ CHECK_PORTABILITY_SKIP+=packaging/macosx/*/*
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-static=no
-CONFIGURE_ARGS+=	--enable-threads
 CONFIGURE_ARGS+=	--with-ssl=${SSLBASE:Q}
 CONFIGURE_ARGS+=	--with-pcap=${BUILDLINK_PREFIX.libpcap}
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
-CONFIGURE_ARGS+=	--with-pcre=${BUILDLINK_PREFIX.pcre}
 CONFIGURE_ENV+=		ac_cv_path_YACCDUMMY=${TOOLS_PATH.yacc}
 CONFIGURE_ENV+=		ac_cv_path_LEXDUMMY=${TOOLS_PATH.lex}
 
