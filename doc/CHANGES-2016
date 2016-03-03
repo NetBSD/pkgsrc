@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.948 2016/03/03 14:38:31 jmmv Exp $
+$NetBSD: CHANGES-2016,v 1.949 2016/03/03 17:40:23 youri Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1292,3 +1292,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Moved net/wireshark2 to net/wireshark [wiz 2016-03-03]
 	Updated net/wireshark1 to 1.12.10 [wiz 2016-03-03]
 	Added devel/ruby-rb-fsevent version 0.9.7 [jmmv 2016-03-03]
+	Updated x11/xfce4-whiskermenu-plugin to 1.5.2 [youri 2016-03-03]
