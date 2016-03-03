@@ -1,0 +1,163 @@
+$NetBSD: patch-bb,v 1.1 2016/03/03 13:30:27 wiz Exp $
+
+Avoid conflict with NetBSD's popcount(3).
+
+--- epan/dissectors/x11-extension-implementation.h.orig	2015-08-12 16:47:42.000000000 +0000
++++ epan/dissectors/x11-extension-implementation.h
+@@ -19990,8 +19990,8 @@ static int struct_size_xkb_DeviceLedInfo
+     int f_namesPresent;
+     f_namesPresent = VALUE32(tvb, *offsetp + size + 4);
+     f_mapsPresent = VALUE32(tvb, *offsetp + size + 8);
+-    size += popcount(f_namesPresent) * 4;
+-    size += popcount(f_mapsPresent) * 12;
++    size += my_popcount(f_namesPresent) * 4;
++    size += my_popcount(f_mapsPresent) * 12;
+     return size + 20;
+ }
+ 
+@@ -20018,8 +20018,8 @@ static void struct_xkb_DeviceLedInfo(tvb
+ 	*offsetp += 4;
+ 	proto_tree_add_item(t, hf_x11_struct_xkb_DeviceLedInfo_state, tvb, *offsetp, 4, byte_order);
+ 	*offsetp += 4;
+-	listOfCard32(tvb, offsetp, t, hf_x11_struct_xkb_DeviceLedInfo_names, hf_x11_struct_xkb_DeviceLedInfo_names_item, popcount(f_namesPresent), byte_order);
+-	struct_xkb_IndicatorMap(tvb, offsetp, t, byte_order, popcount(f_mapsPresent));
++	listOfCard32(tvb, offsetp, t, hf_x11_struct_xkb_DeviceLedInfo_names, hf_x11_struct_xkb_DeviceLedInfo_names_item, my_popcount(f_namesPresent), byte_order);
++	struct_xkb_IndicatorMap(tvb, offsetp, t, byte_order, my_popcount(f_mapsPresent));
+     }
+ }
+ 
+@@ -22060,7 +22060,7 @@ static void xkbGetMap_Reply(tvbuff_t *tv
+         struct_xkb_SetBehavior(tvb, offsetp, t, byte_order, f_totalKeyBehaviors);
+     }
+     if ((f_present & (1 << 6)) != 0) {
+-        listOfByte(tvb, offsetp, t, hf_x11_xkb_GetMap_reply_VirtualMods_vmods_rtrn, popcount(f_virtualMods), byte_order);
++        listOfByte(tvb, offsetp, t, hf_x11_xkb_GetMap_reply_VirtualMods_vmods_rtrn, my_popcount(f_virtualMods), byte_order);
+         if (*offsetp % 4) {
+             UNUSED(4 - *offsetp % 4);
+         }
+@@ -22210,8 +22210,8 @@ static void xkbSetMap(tvbuff_t *tvb, pac
+         length -= f_totalKeyBehaviors * 4;
+     }
+     if ((f_present & (1 << 6)) != 0) {
+-        listOfByte(tvb, offsetp, t, hf_x11_xkb_SetMap_VirtualMods_vmods, popcount(f_virtualMods), byte_order);
+-        length -= popcount(f_virtualMods) * 1;
++        listOfByte(tvb, offsetp, t, hf_x11_xkb_SetMap_VirtualMods_vmods, my_popcount(f_virtualMods), byte_order);
++        length -= my_popcount(f_virtualMods) * 1;
+     }
+     if ((f_present & (1 << 3)) != 0) {
+         struct_xkb_SetExplicit(tvb, offsetp, t, byte_order, f_totalKeyExplicit);
+@@ -22284,7 +22284,7 @@ static void xkbGetCompatMap_Reply(tvbuff
+     *offsetp += 2;
+     UNUSED(16);
+     struct_xkb_SymInterpret(tvb, offsetp, t, byte_order, f_nSIRtrn);
+-    struct_xkb_ModDef(tvb, offsetp, t, byte_order, popcount(f_groupsRtrn));
++    struct_xkb_ModDef(tvb, offsetp, t, byte_order, my_popcount(f_groupsRtrn));
+ }
+ 
+ static void xkbSetCompatMap(tvbuff_t *tvb, packet_info *pinfo _U_, int *offsetp, proto_tree *t, guint byte_order, int length _U_)
+@@ -22316,8 +22316,8 @@ static void xkbSetCompatMap(tvbuff_t *tv
+     UNUSED(2);
+     struct_xkb_SymInterpret(tvb, offsetp, t, byte_order, f_nSI);
+     length -= f_nSI * 10;
+-    struct_xkb_ModDef(tvb, offsetp, t, byte_order, popcount(f_groups));
+-    length -= popcount(f_groups) * 4;
++    struct_xkb_ModDef(tvb, offsetp, t, byte_order, my_popcount(f_groups));
++    length -= my_popcount(f_groups) * 4;
+ }
+ 
+ static void xkbGetIndicatorState(tvbuff_t *tvb, packet_info *pinfo _U_, int *offsetp, proto_tree *t, guint byte_order, int length _U_)
+@@ -22378,7 +22378,7 @@ static void xkbGetIndicatorMap_Reply(tvb
+     proto_tree_add_item(t, hf_x11_xkb_GetIndicatorMap_reply_nIndicators, tvb, *offsetp, 1, byte_order);
+     *offsetp += 1;
+     UNUSED(15);
+-    struct_xkb_IndicatorMap(tvb, offsetp, t, byte_order, popcount(f_which));
++    struct_xkb_IndicatorMap(tvb, offsetp, t, byte_order, my_popcount(f_which));
+ }
+ 
+ static void xkbSetIndicatorMap(tvbuff_t *tvb, packet_info *pinfo _U_, int *offsetp, proto_tree *t, guint byte_order, int length _U_)
+@@ -22390,8 +22390,8 @@ static void xkbSetIndicatorMap(tvbuff_t 
+     f_which = VALUE32(tvb, *offsetp);
+     proto_tree_add_item(t, hf_x11_xkb_SetIndicatorMap_which, tvb, *offsetp, 4, byte_order);
+     *offsetp += 4;
+-    struct_xkb_IndicatorMap(tvb, offsetp, t, byte_order, popcount(f_which));
+-    length -= popcount(f_which) * 12;
++    struct_xkb_IndicatorMap(tvb, offsetp, t, byte_order, my_popcount(f_which));
++    length -= my_popcount(f_which) * 12;
+ }
+ 
+ static void xkbGetNamedIndicator(tvbuff_t *tvb, packet_info *pinfo _U_, int *offsetp, proto_tree *t, guint byte_order, int length _U_)
+@@ -22806,13 +22806,13 @@ static void xkbGetNames_Reply(tvbuff_t *
+         listOfCard32(tvb, offsetp, t, hf_x11_xkb_GetNames_reply_KTLevelNames_ktLevelNames, hf_x11_xkb_GetNames_reply_KTLevelNames_ktLevelNames_item, sumof_nLevelsPerType, byte_order);
+     }
+     if ((f_which & (1 << 8)) != 0) {
+-        listOfCard32(tvb, offsetp, t, hf_x11_xkb_GetNames_reply_IndicatorNames_indicatorNames, hf_x11_xkb_GetNames_reply_IndicatorNames_indicatorNames_item, popcount(f_indicators), byte_order);
++        listOfCard32(tvb, offsetp, t, hf_x11_xkb_GetNames_reply_IndicatorNames_indicatorNames, hf_x11_xkb_GetNames_reply_IndicatorNames_indicatorNames_item, my_popcount(f_indicators), byte_order);
+     }
+     if ((f_which & (1 << 11)) != 0) {
+-        listOfCard32(tvb, offsetp, t, hf_x11_xkb_GetNames_reply_VirtualModNames_virtualModNames, hf_x11_xkb_GetNames_reply_VirtualModNames_virtualModNames_item, popcount(f_virtualMods), byte_order);
++        listOfCard32(tvb, offsetp, t, hf_x11_xkb_GetNames_reply_VirtualModNames_virtualModNames, hf_x11_xkb_GetNames_reply_VirtualModNames_virtualModNames_item, my_popcount(f_virtualMods), byte_order);
+     }
+     if ((f_which & (1 << 12)) != 0) {
+-        listOfCard32(tvb, offsetp, t, hf_x11_xkb_GetNames_reply_GroupNames_groups, hf_x11_xkb_GetNames_reply_GroupNames_groups_item, popcount(f_groupNames), byte_order);
++        listOfCard32(tvb, offsetp, t, hf_x11_xkb_GetNames_reply_GroupNames_groups, hf_x11_xkb_GetNames_reply_GroupNames_groups_item, my_popcount(f_groupNames), byte_order);
+     }
+     if ((f_which & (1 << 9)) != 0) {
+         struct_xkb_KeyName(tvb, offsetp, t, byte_order, f_nKeys);
+@@ -22957,16 +22957,16 @@ static void xkbSetNames(tvbuff_t *tvb, p
+         length -= sumof_nLevelsPerType * 4;
+     }
+     if ((f_which & (1 << 8)) != 0) {
+-        listOfCard32(tvb, offsetp, t, hf_x11_xkb_SetNames_IndicatorNames_indicatorNames, hf_x11_xkb_SetNames_IndicatorNames_indicatorNames_item, popcount(f_indicators), byte_order);
+-        length -= popcount(f_indicators) * 4;
++        listOfCard32(tvb, offsetp, t, hf_x11_xkb_SetNames_IndicatorNames_indicatorNames, hf_x11_xkb_SetNames_IndicatorNames_indicatorNames_item, my_popcount(f_indicators), byte_order);
++        length -= my_popcount(f_indicators) * 4;
+     }
+     if ((f_which & (1 << 11)) != 0) {
+-        listOfCard32(tvb, offsetp, t, hf_x11_xkb_SetNames_VirtualModNames_virtualModNames, hf_x11_xkb_SetNames_VirtualModNames_virtualModNames_item, popcount(f_virtualMods), byte_order);
+-        length -= popcount(f_virtualMods) * 4;
++        listOfCard32(tvb, offsetp, t, hf_x11_xkb_SetNames_VirtualModNames_virtualModNames, hf_x11_xkb_SetNames_VirtualModNames_virtualModNames_item, my_popcount(f_virtualMods), byte_order);
++        length -= my_popcount(f_virtualMods) * 4;
+     }
+     if ((f_which & (1 << 12)) != 0) {
+-        listOfCard32(tvb, offsetp, t, hf_x11_xkb_SetNames_GroupNames_groups, hf_x11_xkb_SetNames_GroupNames_groups_item, popcount(f_groupNames), byte_order);
+-        length -= popcount(f_groupNames) * 4;
++        listOfCard32(tvb, offsetp, t, hf_x11_xkb_SetNames_GroupNames_groups, hf_x11_xkb_SetNames_GroupNames_groups_item, my_popcount(f_groupNames), byte_order);
++        length -= my_popcount(f_groupNames) * 4;
+     }
+     if ((f_which & (1 << 9)) != 0) {
+         struct_xkb_KeyName(tvb, offsetp, t, byte_order, f_nKeys);
+@@ -23404,7 +23404,7 @@ static void xkbGetKbdByName_Reply(tvbuff
+             struct_xkb_SetBehavior(tvb, offsetp, t, byte_order, f_totalKeyBehaviors);
+         }
+         if ((f_present & (1 << 6)) != 0) {
+-            listOfByte(tvb, offsetp, t, hf_x11_xkb_GetKbdByName_reply_Types_VirtualMods_vmods_rtrn, popcount(f_virtualMods), byte_order);
++            listOfByte(tvb, offsetp, t, hf_x11_xkb_GetKbdByName_reply_Types_VirtualMods_vmods_rtrn, my_popcount(f_virtualMods), byte_order);
+         }
+         if ((f_present & (1 << 3)) != 0) {
+             struct_xkb_SetExplicit(tvb, offsetp, t, byte_order, f_totalKeyExplicit);
+@@ -23447,7 +23447,7 @@ static void xkbGetKbdByName_Reply(tvbuff
+         *offsetp += 2;
+         UNUSED(16);
+         struct_xkb_SymInterpret(tvb, offsetp, t, byte_order, f_nSIRtrn);
+-        struct_xkb_ModDef(tvb, offsetp, t, byte_order, popcount(f_groupsRtrn));
++        struct_xkb_ModDef(tvb, offsetp, t, byte_order, my_popcount(f_groupsRtrn));
+     }
+     if ((f_reported & (1 << 4)) != 0) {
+         int f_nIndicators;
+@@ -23601,13 +23601,13 @@ static void xkbGetKbdByName_Reply(tvbuff
+             listOfCard32(tvb, offsetp, t, hf_x11_xkb_GetKbdByName_reply_KeyNames_KTLevelNames_ktLevelNames, hf_x11_xkb_GetKbdByName_reply_KeyNames_KTLevelNames_ktLevelNames_item, sumof_nLevelsPerType, byte_order);
+         }
+         if ((f_which & (1 << 8)) != 0) {
+-            listOfCard32(tvb, offsetp, t, hf_x11_xkb_GetKbdByName_reply_KeyNames_IndicatorNames_indicatorNames, hf_x11_xkb_GetKbdByName_reply_KeyNames_IndicatorNames_indicatorNames_item, popcount(f_indicators), byte_order);
++            listOfCard32(tvb, offsetp, t, hf_x11_xkb_GetKbdByName_reply_KeyNames_IndicatorNames_indicatorNames, hf_x11_xkb_GetKbdByName_reply_KeyNames_IndicatorNames_indicatorNames_item, my_popcount(f_indicators), byte_order);
+         }
+         if ((f_which & (1 << 11)) != 0) {
+-            listOfCard32(tvb, offsetp, t, hf_x11_xkb_GetKbdByName_reply_KeyNames_VirtualModNames_virtualModNames, hf_x11_xkb_GetKbdByName_reply_KeyNames_VirtualModNames_virtualModNames_item, popcount(f_virtualMods), byte_order);
++            listOfCard32(tvb, offsetp, t, hf_x11_xkb_GetKbdByName_reply_KeyNames_VirtualModNames_virtualModNames, hf_x11_xkb_GetKbdByName_reply_KeyNames_VirtualModNames_virtualModNames_item, my_popcount(f_virtualMods), byte_order);
+         }
+         if ((f_which & (1 << 12)) != 0) {
+-            listOfCard32(tvb, offsetp, t, hf_x11_xkb_GetKbdByName_reply_KeyNames_GroupNames_groups, hf_x11_xkb_GetKbdByName_reply_KeyNames_GroupNames_groups_item, popcount(f_groupNames), byte_order);
++            listOfCard32(tvb, offsetp, t, hf_x11_xkb_GetKbdByName_reply_KeyNames_GroupNames_groups, hf_x11_xkb_GetKbdByName_reply_KeyNames_GroupNames_groups_item, my_popcount(f_groupNames), byte_order);
+         }
+         if ((f_which & (1 << 9)) != 0) {
+             struct_xkb_KeyName(tvb, offsetp, t, byte_order, f_nKeys);
