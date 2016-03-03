@@ -1,0 +1,15 @@
+$NetBSD: patch-ui_qt_Makefile.in,v 1.1 2016/03/03 13:30:27 wiz Exp $
+
+RCC is not configured; see also options.mk.
+
+--- ui/qt/Makefile.in.orig	2015-11-06 17:00:29.000000000 +0000
++++ ui/qt/Makefile.in
+@@ -1688,7 +1688,7 @@ wireshark-tap-register.c: $(WIRESHARK_QT
+ 
+ .qrc.rcc.cpp:
+ 	$(MKDIR_P) $(@D)
+-	$(AM_V_RCC)rcc -name `basename $< .qrc` -o $@ $<
++	$(AM_V_RCC)@RCC@ -name `basename $< .qrc` -o $@ $<
+ 
+ ui_%.h: %.ui
+ 	$(AM_V_UIC)$(UIC) $< -o $@
