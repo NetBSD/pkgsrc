@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15504 2016/03/03 12:16:48 wiz Exp $
+$NetBSD: TODO,v 1.15505 2016/03/03 12:28:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -495,7 +495,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cacti-spine-0.8.8f
 	o cal3d-0.11.0
 	o calcoo-2.1.0
-	o calibre-2.52
 	o calligra-2.9.9 [in wip; koffice successor]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o catdoc-1.1
@@ -795,7 +794,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnustep-gui-0.24.1
 	o gnustep-make-2.6.7
 	o gnustep-objc-1.8
-	o go-1.6
 	o goaccess-0.12
 	o gob-2.0.19
 	o gobby-0.5.0
