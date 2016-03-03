@@ -1,0 +1,30 @@
+$NetBSD: patch-ag,v 1.1 2016/03/03 13:23:22 wiz Exp $
+
+--- config/get_dlld.orig	2009-09-19 12:01:14.000000000 +0000
++++ config/get_dlld
+@@ -9,7 +9,7 @@ DLSUFFIX=so
+ soname=.$soname_num
+ do_dll=yes
+ case "$osname" in
+-  gnu*|aix|osf1|solaris|linux|freebsd|netbsd)
++  dragonfly*|gnu*|aix|osf1|solaris|linux|freebsd|netbsd)
+     case $pari_release_verbose in
+       *STABLE*)      sodest=.$version.$patch;; # released version
+       *DEVELOPMENT*) sodest=.$patch.0.0;;      # unstable version
+@@ -67,6 +67,7 @@ if test -n "$DLLD"; then
+       aix)     DLLDFLAGS='-r' ;;
+       darwin)  DLLD=; DLLDFLAGS='-dylib -flat_namespace -undefined suppress' ;;
+       freebsd) DLLDFLAGS='-Bshareable -x' ;;
++      dragonfly*) DLLDFLAGS='-Bshareable -x' ;;
+       hpux)    DLLDFLAGS='-b' ;;
+       irix)    DLLDFLAGS='-shared -elf -no_unresolved -all' ;;
+       osf1)    DLLDFLAGS='-shared' ;;
+@@ -91,7 +92,7 @@ if test -n "$DLLD"; then
+     DLLDFLAGS="-shared $extra \$(CFLAGS) \$(DLCFLAGS) $DLLDFLAGS"
+   fi
+   case "$osname" in
+-    gnu*|cygwin|osf1|freebsd|linux|sunos|solaris) EXTRADLLDFLAGS='-lc ${LIBS}';;
++    dragonfly*|gnu*|cygwin|osf1|freebsd|linux|sunos|solaris) EXTRADLLDFLAGS='-lc ${LIBS}';;
+   esac
+ 
+   if test "$fastread" != yes; then

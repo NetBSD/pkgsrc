@@ -1,0 +1,14 @@
+PARI-GP is a package which is aimed at efficient computations in
+number theory, but also contains a large number of other useful
+functions.  It is somewhat related to a Computer Algebra System, but
+is not really one since it treats symbolic expressions as mathematical
+entities such as matrices, polynomials, series, etc..., and not as
+expressions per se.  However it is often much faster than other CAS,
+and contains a large number of specific functions not found elsewhere,
+essentially for use in number theory.
+
+This package can be used in an interactive shell (GP) or as a C/C++
+library (PARI). It is free software, in the sense of freedom AND 'free
+of charge'.
+
+This is the old 2.3 version of pari.

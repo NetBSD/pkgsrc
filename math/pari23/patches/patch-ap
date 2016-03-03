@@ -1,0 +1,13 @@
+$NetBSD: patch-ap,v 1.1 2016/03/03 13:23:22 wiz Exp $
+
+--- config/TOP_Make.SH.orig	2008-10-23 16:30:37.000000000 +0000
++++ config/TOP_Make.SH
+@@ -40,7 +40,7 @@ dft target::
+ 	@echo "Available extra tests: test-all $top_test_extra"
+ 
+ all::
+-	@-cd doc && \$(MAKE) doc
++#	@-cd doc && \$(MAKE) doc
+ 	@\$(MAKE) gp
+ 
+ gp bench test-kernel test-all $top_test_extra $top_dotest_extra install cleanobj cleantest install-bin install-doc install-data install-lib-sta install-bin-sta dobench tune::

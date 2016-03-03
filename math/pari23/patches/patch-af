@@ -1,0 +1,26 @@
+$NetBSD: patch-af,v 1.1 2016/03/03 13:23:22 wiz Exp $
+
+--- config/get_X11.orig	2008-01-16 15:57:17.000000000 +0000
++++ config/get_X11
+@@ -10,20 +10,7 @@ cd ..; rm -rf $tdir
+ # X11 -- Headers
+ if test ! -f $Xincroot/X11/Xos.h; then
+   x11pth="\
+-    /usr/openwin/share/lib\
+-    /usr/openwin/lib\
+-    /usr/X11R6/lib       /usr/X11R5/lib       /usr/X11R4/lib\
+-    /usr/lib/X11R6       /usr/lib/X11R5       /usr/lib/X11R4\
+-    /usr/local/X11R6/lib /usr/local/X11R5/lib /usr/local/X11R4/lib\
+-    /usr/local/lib/X11R6 /usr/local/lib/X11R5 /usr/local/lib/X11R4\
+-    /usr/X11/lib\
+-    /usr/lib/X11\
+-    /usr/local/X11/lib\
+-    /usr/local/lib/X11\
+-    /usr/XFree86/lib/X11\
+-    /usr/lib\
+-    /usr/local/lib\
+-    /usr/athena/lib\
++    $X11BASE/lib\
+   ";
+   pth=`echo $x11pth | sed 's,/lib,/include,g'`
+   x=`./locate X11/Xos.h '' $pth`
