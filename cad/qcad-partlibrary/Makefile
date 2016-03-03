@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/08 13:25:16 asau Exp $
+# $NetBSD: Makefile,v 1.6 2016/03/03 19:42:29 shattered Exp $
 #
 
 DISTNAME=		partlibrary-2.0.1.2-1
@@ -20,7 +20,7 @@ DEPENDS+=	qcad>=2.0.0.0:../../cad/qcad
 
 post-extract:
 	chmod -R go-w ${WRKSRC}
-	cd ${WRKSRC}/electrical/denzuq && chmod -x */*/*.dxf
+	cd ${WRKSRC}/electrical/denzuq && chmod a-x */*/*.dxf
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/qcad/library
