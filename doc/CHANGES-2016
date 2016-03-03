@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.923 2016/03/03 04:42:09 agc Exp $
+$NetBSD: CHANGES-2016,v 1.924 2016/03/03 07:40:26 asau Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1266,3 +1266,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated x11/qt5 to 5.5.1nb1 [ryoon 2016-03-02]
 	Updated editors/Sigil to 0.9.3 [ryoon 2016-03-02]
 	Updated pkgtools/mksandbox to 1.6 [agc 2016-03-02]
+	Updated devel/netbeans-ide to 8.1 [asau 2016-03-03]
