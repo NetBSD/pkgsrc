@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.939 2016/03/03 12:55:45 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.940 2016/03/03 13:00:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1282,3 +1282,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/p5-Text-Diff to 1.44 [wiz 2016-03-03]
 	Updated textproc/p5-XML-LibXML to 2.0124 [wiz 2016-03-03]
 	Updated devel/py-click to 6.3 [wiz 2016-03-03]
+	Updated security/py-oauth2client to 2.0.0 [wiz 2016-03-03]
