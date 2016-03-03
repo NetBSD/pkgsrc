@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.67 2015/12/27 22:52:41 wiz Exp $
+$NetBSD: distinfo,v 1.68 2016/03/03 12:42:27 wiz Exp $
 
-SHA1 (mpd-0.19.12.tar.xz) = 9de55e24d2612526ca8eb688126d0784339f2ee8
-RMD160 (mpd-0.19.12.tar.xz) = 91eda64627568b9112417bf49b3a4f8a31e3920b
-SHA512 (mpd-0.19.12.tar.xz) = a608c99096d0ec9158cba5615be344a47d76c5be830ba34445e330f141aaa828784772d772df20d71d4c65e78ea5dfe9fb59ea4f4f823fa112a00517963a6e7e
-Size (mpd-0.19.12.tar.xz) = 703340 bytes
+SHA1 (mpd-0.19.13.tar.xz) = 1bbd8a9d80018d47867b205ea00e76bef9bbc351
+RMD160 (mpd-0.19.13.tar.xz) = ce373e724fb730debe24e7b70caa6c2cab7cd535
+SHA512 (mpd-0.19.13.tar.xz) = 32125963aa1d808b65dc9b19141044e924f5fbcb635435b250d64f25b6bd69c3069d8db013de34bf5cc601951c952c930e5c88e64609e91ee858853e58140725
+Size (mpd-0.19.13.tar.xz) = 703564 bytes
 SHA1 (patch-src_output_plugins_httpd_HttpdOutputPlugin.cxx) = b47d79cc49a27d732a7531e23d666bf9df748bec
 SHA1 (patch-src_system_ByteOrder.hxx) = 955af2aacf1c0a98c4c57728e1283eba81b457e7
