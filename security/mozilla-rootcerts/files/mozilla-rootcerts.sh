@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mozilla-rootcerts.sh,v 1.9 2015/04/18 20:11:35 dholland Exp $
+# $NetBSD: mozilla-rootcerts.sh,v 1.10 2016/03/03 03:02:21 dsainty Exp $
 #
 # This script is meant to be used as follows:
 #
@@ -130,7 +130,10 @@ extract)
 	# The resulting PEM format certificates are saved as
 	# "mozilla-rootcert-<n>.pem" in the current working directory.
 	#
-	cat "$certfile" | ${AWK} -v OPENSSL=${OPENSSL} '
+	# gawk will corrupt the output data stream in multibyte locales,
+	# so force the locale to "C".
+	#
+	cat "$certfile" | LANG=C ${AWK} -v OPENSSL=${OPENSSL} '
 	function base8to10(o,	octal, decimal, power, i, n) {
 		decimal = 0
 		n = split(o, octal, "")
