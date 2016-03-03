@@ -1,7 +1,8 @@
-/*	$NetBSD: digest.c,v 1.15 2007/09/21 18:44:36 joerg Exp $ */
+/*	$NetBSD: digest.c,v 1.16 2016/03/03 22:11:07 agc Exp $ */
 
-/*
- * Copyright (c) 2001-2005 Alistair G. Crooks.  All rights reserved.
+/*-
+ * Copyright (c) 2001-2016 Alistair Crooks <agc@NetBSD.org>
+ * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -11,35 +12,21 @@
  * 2. Redistributions in binary form must reproduce the above copyright
  *    notice, this list of conditions and the following disclaimer in the
  *    documentation and/or other materials provided with the distribution.
- * 3. All advertising materials mentioning features or use of this software
- *    must display the following acknowledgement:
- *	This product includes software developed by Alistair G. Crooks.
- * 4. The name of the author may not be used to endorse or promote
- *    products derived from this software without specific prior written
- *    permission.
  *
- * THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS
- * OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
- * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
- * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
- * DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
- * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
- * GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
- * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
- * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
- * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ * THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
+ * IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+ * OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+ * IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
+ * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+ * NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+ * DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+ * THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+ * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 #ifdef HAVE_CONFIG_H
 #include "config.h"
 #endif
-
-#ifndef lint
-__COPYRIGHT("@(#) Copyright (c) 2001-2005 \
-	        The NetBSD Foundation, Inc.  All rights reserved.");
-__RCSID("$NetBSD: digest.c,v 1.15 2007/09/21 18:44:36 joerg Exp $");
-#endif
-
 
 #ifdef HAVE_ERRNO_H
 #include <errno.h>
@@ -51,6 +38,7 @@ __RCSID("$NetBSD: digest.c,v 1.15 2007/09/21 18:44:36 joerg Exp $");
 #include <rmd160.h>
 #include <sha1.h>
 #include <sha2.h>
+#include <sha3.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -79,6 +67,10 @@ typedef struct alg_t {
 		RMD160_CTX		rmd;
 		SHA256_CTX		sha256;
 		SHA384_CTX		sha384;
+		SHA3_224_CTX		sha3_224;
+		SHA3_256_CTX		sha3_256;
+		SHA3_384_CTX		sha3_384;
+		SHA3_512_CTX		sha3_512;
 		SHA512_CTX		sha512;
 		tiger_context_t		tiger;
 		whirlpool_context_t	whirlpool;
@@ -99,6 +91,18 @@ static alg_t algorithms[] = {
 	{ "SHA256",	SHA256_DIGEST_LENGTH,
 	  (HASH_init) SHA256_Init,	(HASH_update) SHA256_Update,
 	  (HASH_end) SHA256_End,	(HASH_file) SHA256_File },
+	{ "SHA3_224",	SHA3_224_DIGEST_LENGTH,
+	  (HASH_init) SHA3_224_Init,	(HASH_update) SHA3_224_Update,
+	  (HASH_end) SHA3_224_End,	(HASH_file) SHA3_224_File },
+	{ "SHA3_256",	SHA3_256_DIGEST_LENGTH,
+	  (HASH_init) SHA3_256_Init,	(HASH_update) SHA3_256_Update,
+	  (HASH_end) SHA3_256_End,	(HASH_file) SHA3_256_File },
+	{ "SHA3_384",	SHA3_384_DIGEST_LENGTH,
+	  (HASH_init) SHA3_384_Init,	(HASH_update) SHA3_384_Update,
+	  (HASH_end) SHA3_384_End,	(HASH_file) SHA3_384_File },
+	{ "SHA3_512",	SHA3_512_DIGEST_LENGTH,
+	  (HASH_init) SHA3_512_Init,	(HASH_update) SHA3_512_Update,
+	  (HASH_end) SHA3_512_End,	(HASH_file) SHA3_512_File },
 	{ "SHA384",	SHA384_DIGEST_LENGTH,
 	  (HASH_init) SHA384_Init,	(HASH_update) SHA384_Update,
 	  (HASH_end) SHA384_End,	(HASH_file) SHA384_File },
@@ -161,46 +165,58 @@ int
 main(int argc, char **argv)
 {
 	alg_t  *alg;
-	int	rval;
+	int	test;
+	int	ok;
 	int	i;
 
 #ifdef HAVE_SETLOCALE
 	(void) setlocale(LC_ALL, "");
 #endif
-	while ((i = getopt(argc, argv, "V")) != -1) {
+	test = 0;
+	while ((i = getopt(argc, argv, "Vt")) != -1) {
 		switch(i) {
 		case 'V':
 			printf("%s\n", VERSION);
 			return EXIT_SUCCESS;
+		case 't':
+			test = 1;
+			break;
 		}
 	}
-	argc -= optind;
-	argv += optind;
-	
-	if (argc == 0) {
+	if (test) {
+		/* there's room for other tests here -- agc */
+		printf("self test mode starting\n");
+		ok = 1;
+		if (SHA3_Selftest() != 0) {
+			ok = 0;
+		}
+		printf("self test mode completed\n");
+		return (ok) ? EXIT_SUCCESS : EXIT_FAILURE;
+	}
+	/* check for correct usage */
+	if (argc == optind) {
 		(void) fprintf(stderr, "Usage: %s algorithm [file...]\n",
-		    argv[-optind]);
+		    argv[0]);
 		return EXIT_FAILURE;
 	}
-	if ((alg = find_algorithm(argv[0])) == NULL) {
-		(void) fprintf(stderr, "No such algorithm `%s'\n", argv[0]);
+	/* check we know the digest algorithm */
+	if ((alg = find_algorithm(argv[optind])) == NULL) {
+		(void) fprintf(stderr, "No such algorithm `%s'\n", argv[optind]);
 		exit(EXIT_FAILURE);
 	}
-	argc--;
-	argv++;
-	rval = EXIT_SUCCESS;
-	if (argc == 0) {
+	ok = 1;
+	if (argc == optind + 1) {
 		if (!digest_file(NULL, alg)) {
-			(void) fprintf(stderr, "stdin\n");
-			rval = EXIT_FAILURE;
+			fprintf(stderr, "stdin\n");
+			ok = 0;
 		}
 	} else {
-		for (i = 0 ; i < argc ; i++) {
+		for (i = optind + 1 ; i < argc ; i++) {
 			if (!digest_file(argv[i], alg)) {
-				(void) fprintf(stderr, "%s\n", argv[i]);
-				rval = EXIT_FAILURE;
+				fprintf(stderr, "%s\n", argv[i]);
+				ok = 0;
 			}
 		}
 	}
-	return rval;
+	return (ok) ? EXIT_SUCCESS : EXIT_FAILURE;
 }

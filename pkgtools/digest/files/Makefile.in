@@ -1,4 +1,4 @@
-# $Id: Makefile.in,v 1.5 2007/07/03 18:54:02 joerg Exp $
+# $Id: Makefile.in,v 1.6 2016/03/03 22:11:07 agc Exp $
 
 @SET_MAKE@
 SHELL = @SHELL@
@@ -42,12 +42,14 @@ LDFLAGS= @LDFLAGS@
 LINK= $(CCLD) $(CFLAGS) $(LDFLAGS) -o $@
 COMPILE= $(CC) $(DEFS) $(CPPFLAGS) $(CFLAGS)
 
-digest_OBJS = digest.o md5c.o rmd160.o rmd160hl.o sha2.o sha2hl.o \
-md5hl.o sha1.o sha1hl.o tiger.o whirlpool.o
+digest_OBJS = digest.o keccak.o md5c.o md5hl.o rmd160.o \
+rmd160hl.o sha1.o sha1hl.o sha2.o sha2hl.o sha3.o sha3hl.o \
+tiger.o whirlpool.o
 
-SRCS= digest.c md5c.c rmd160.c rmd160hl.c sha2.c sha2hl.c md5hl.c sha1.c \
-sha1hl.c md5.h rmd160.h sha1.h sha2.h tiger.c tiger.h whirlpool.c \
-whirlpool.h
+SRCS= digest.c keccak.c md5c.c md5hl.c rmd160.c \
+rmd160hl.c sha1.c sha1hl.c sha2.c sha2hl.c sha3.c sha3hl.c \
+tiger.c whirlpool.c \
+md5.h rmd160.h sha1.h sha2.h sha3.h tiger.h whirlpool.h
 
 DISTFILES= $(SRCS) AUTHORS COPYING DESCR INSTALL Makefile.in NEWS aclocal.m4 \
 config.guess config.h.in config.sub configure configure.ac install-sh \
