@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2014/02/25 09:32:57 obache Exp $
+# $NetBSD: options.mk,v 1.12 2016/03/03 13:28:22 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pari
 PKG_SUPPORTED_OPTIONS=	doc gmp x11
@@ -12,6 +12,7 @@ PLIST_VARS+=		doc
 .if !empty(PKG_OPTIONS:Mdoc)
 BUILD_DEPENDS+=		tex-amsfonts>=3.0:../../fonts/tex-amsfonts
 BUILD_DEPENDS+=		tex-pdftex>=1.40.11:../../print/tex-pdftex
+BUILD_DEPENDS+=		dvipsk-[0-9]*:../../print/dvipsk
 PLIST.doc=		yes
 BUILD_TARGET+=		doc
 INSTALL_TARGET+=	install-doc
