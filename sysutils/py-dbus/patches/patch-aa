@@ -1,16 +1,22 @@
-$NetBSD: patch-aa,v 1.1 2012/08/01 18:04:26 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2016/03/03 12:16:24 wiz Exp $
 
---- Makefile.in.orig	2012-07-31 22:25:22.000000000 +0000
+--- Makefile.in.orig	2016-02-22 16:35:24.000000000 +0000
 +++ Makefile.in
-@@ -956,9 +956,8 @@ info: info-recursive
+@@ -2067,15 +2067,8 @@ info: info-am
  
  info-am:
  
 -install-data-am: install-dbusincludeHEADERS install-dist_docDATA \
+-	install-installed_testLTLIBRARIES \
+-	install-installed_test_metaDATA \
+-	install-installed_test_testDATA \
+-	install-nobase_dist_installed_testPYTHON \
+-	install-nobase_dist_installed_testSCRIPTS \
+-	install-nobase_installed_testPROGRAMS \
 -	install-nobase_pythonPYTHON install-nodist_docDATA \
 -	install-pkgconfigDATA
 +install-data-am: \
 +	install-nobase_pythonPYTHON
  
- install-dvi: install-dvi-recursive
+ install-dvi: install-dvi-am
  
