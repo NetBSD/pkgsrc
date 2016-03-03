@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mksandbox,v 1.8 2015/07/05 11:47:14 jperkin Exp $
+# $NetBSD: mksandbox,v 1.9 2016/03/03 04:41:15 agc Exp $
 
 # Copyright (c) 2002,2012 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -28,7 +28,8 @@
 
 # Usage: mksandbox [--mounthost=host] [--rodirs=dir1,...] [--rwdirs=dir1,...]
 #		   [--pkgsrc=dir] [--src=srcdir] [--xsrc=xsrcdir]
-#		   [--without-pkgsrc] [--without-x] [--verbose] sandbox-dir
+#		   [--without-src] [--without-pkgsrc] [--without-x]
+#		   [--verbose] sandbox-dir
 #
 # A small shell script to set up a sandbox (usually for a pkgsrc bulk
 # build), using null mounts.
@@ -51,7 +52,8 @@ usage()
 {
 	echo "usage: mksandbox [--mounthost=host] [--rodirs=dir1,...] [--rwdirs=dir1,...]"
 	echo "                 [--pkgsrc=dir] [--src=srcdir] [--xsrc=xsrcdir]"
-	echo "                 [--without-pkgsrc] [--without-x] [--verbose] sandbox-dir"
+	echo "                 [--without-src] [--without-pkgsrc] [--without-x]"
+	echo "		       [--verbose] sandbox-dir"
  	exit 1
 }
 
@@ -178,6 +180,7 @@ while [ $# -gt 0 ]; do
 	--rodirs=*)		rodirs=`echo $1 | $sedprog -e 's|^--rodirs=||'` ;;
 	--rwdirs=*)		rwdirs=`echo $1 | $sedprog -e 's|^--rwdirs=||'` ;;
 	--without-pkgsrc)	with_pkgsrc=no ;;
+	--without-src)		need_src=no ;;
 	--without-x)		with_x=no ;;
 	--verbose)		set -x ;;
 	-*)			usage ;;
