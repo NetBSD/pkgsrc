@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.2 2010/02/06 10:37:06 sno Exp $
+$NetBSD: patch-config_get__dlld,v 1.1 2016/03/03 13:28:22 wiz Exp $
 
---- config/get_dlld.orig	2009-09-19 12:01:14.000000000 +0000
+--- config/get_dlld.orig	2015-03-18 10:33:24.000000000 +0000
 +++ config/get_dlld
 @@ -9,7 +9,7 @@ DLSUFFIX=so
  soname=.$soname_num
@@ -11,18 +11,18 @@ $NetBSD: patch-ag,v 1.2 2010/02/06 10:37:06 sno Exp $
      case $pari_release_verbose in
        *STABLE*)      sodest=.$version.$patch;; # released version
        *DEVELOPMENT*) sodest=.$patch.0.0;;      # unstable version
-@@ -67,6 +67,7 @@ if test -n "$DLLD"; then
+@@ -76,6 +76,7 @@ if test -n "$DLLD"; then
        aix)     DLLDFLAGS='-r' ;;
-       darwin)  DLLD=; DLLDFLAGS='-dylib -flat_namespace -undefined suppress' ;;
+       darwin)  DLLDFLAGS="-compatibility_version $compat_ver -current_version $num_ver" ;;
        freebsd) DLLDFLAGS='-Bshareable -x' ;;
 +      dragonfly*) DLLDFLAGS='-Bshareable -x' ;;
        hpux)    DLLDFLAGS='-b' ;;
        irix)    DLLDFLAGS='-shared -elf -no_unresolved -all' ;;
        osf1)    DLLDFLAGS='-shared' ;;
-@@ -91,7 +92,7 @@ if test -n "$DLLD"; then
-     DLLDFLAGS="-shared $extra \$(CFLAGS) \$(DLCFLAGS) $DLLDFLAGS"
+@@ -107,7 +108,7 @@ if test -n "$DLLD"; then
    fi
    case "$osname" in
+ # Beware: will run through 'eval' [ hence ${...} instead of \$(...) ]
 -    gnu*|cygwin|osf1|freebsd|linux|sunos|solaris) EXTRADLLDFLAGS='-lc ${LIBS}';;
 +    dragonfly*|gnu*|cygwin|osf1|freebsd|linux|sunos|solaris) EXTRADLLDFLAGS='-lc ${LIBS}';;
    esac
