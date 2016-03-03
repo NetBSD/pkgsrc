@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.950 2016/03/03 17:49:14 asau Exp $
+$NetBSD: CHANGES-2016,v 1.951 2016/03/03 21:04:29 tron Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1294,3 +1294,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added devel/ruby-rb-fsevent version 0.9.7 [jmmv 2016-03-03]
 	Updated x11/xfce4-whiskermenu-plugin to 1.5.2 [youri 2016-03-03]
 	Updated databases/sql-workbench to 119 [asau 2016-03-03]
+	Removed security/sslscan [tron 2016-03-03]
