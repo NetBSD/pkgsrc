@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2013/10/30 07:30:03 adam Exp $
+@comment $NetBSD: PLIST,v 1.13.18.1 2016/03/03 20:22:52 bsiegert Exp $
 share/doc/exim/html/spec_html/ch-access_control_lists.html
 share/doc/exim/html/spec_html/ch-adding_a_local_scan_function_to_exim.html
 share/doc/exim/html/spec_html/ch-adding_new_drivers_or_lookup_types.html
@@ -57,6 +57,7 @@ share/doc/exim/html/spec_html/ch-the_queryprogram_router.html
 share/doc/exim/html/spec_html/ch-the_redirect_router.html
 share/doc/exim/html/spec_html/ch-the_smtp_transport.html
 share/doc/exim/html/spec_html/ch-the_spa_authenticator.html
+share/doc/exim/html/spec_html/ch-the_tls_authenticator.html
 share/doc/exim/html/spec_html/ch-using_exim_as_a_nonqueueing_client.html
 share/doc/exim/html/spec_html/ch-variable_index.html
 share/doc/exim/html/spec_html/ch01.html
@@ -119,6 +120,7 @@ share/doc/exim/html/spec_html/ch57.html
 share/doc/exim/html/spec_html/ch58.html
 share/doc/exim/html/spec_html/ch59.html
 share/doc/exim/html/spec_html/ch60.html
+share/doc/exim/html/spec_html/ch61.html
 share/doc/exim/html/spec_html/filter.html
 share/doc/exim/html/spec_html/filter_ch-exim_filter_files.html
 share/doc/exim/html/spec_html/filter_ch-forwarding_and_filtering_in_exim.html
