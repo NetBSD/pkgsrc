@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2016/03/04 15:22:01 jaapb Exp $
+bin/gen
+bin/gen_ast_builder
+bin/gen_ast_pattern
+${OCAML_SITELIB}/ppx_core/META
+${OCAML_SITELIB}/ppx_core/ast_builder.mli
+${OCAML_SITELIB}/ppx_core/ast_builder_intf.ml
+${OCAML_SITELIB}/ppx_core/ast_pattern.mli
+${OCAML_SITELIB}/ppx_core/ast_pattern0.ml
+${OCAML_SITELIB}/ppx_core/ast_traverse.mli
+${OCAML_SITELIB}/ppx_core/attribute.mli
+${OCAML_SITELIB}/ppx_core/caller_id.ml
+${OCAML_SITELIB}/ppx_core/common.mli
+${OCAML_SITELIB}/ppx_core/extension.mli
+${OCAML_SITELIB}/ppx_core/file_path.mli
+${OCAML_SITELIB}/ppx_core/name.mli
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_core/ppx_core.a
+${OCAML_SITELIB}/ppx_core/ppx_core.cma
+${OCAML_SITELIB}/ppx_core/ppx_core.cmi
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_core/ppx_core.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_core/ppx_core.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_core/ppx_core.cmxs
+${OCAML_SITELIB}/ppx_core/spellcheck.ml
+${OCAML_SITELIB}/ppx_core/std.ml
