@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/09/26 08:42:19 tnn Exp $
+# $NetBSD: Makefile,v 1.7 2016/03/04 13:29:53 jperkin Exp $
 
 PKGNAME=		${DISTNAME:S/clang/libLLVM/}
 
@@ -34,5 +34,17 @@ SUBST_SED.fix-cnf+=	-e 's|"-L" << ActiveLibDir|"${COMPILER_RPATH_FLAG}" << Activ
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/libLLVM
 
 INSTALLATION_DIRS+=	lib/libLLVM
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+.PHONY: fix-darwin-install-name
+post-install: fix-darwin-install-name
+fix-darwin-install-name:
+	for lib in LLVMHello libLLVM-3.7; do \
+		install_name_tool -id ${PREFIX}/lib/libLLVM/$${lib}.dylib \
+		    ${DESTDIR}${PREFIX}/lib/libLLVM/$${lib}.dylib; \
+	done
+.endif
 
 .include "../../lang/clang/Makefile.common"
