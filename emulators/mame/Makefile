@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.52 2016/01/27 13:59:19 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2016/03/04 12:47:13 wiz Exp $
 
-DISTNAME=	mame-0.170
+DISTNAME=	mame-0.171
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mamedev/}
 GITHUB_TAG=	${DISTNAME:S/-//S/.//}
@@ -31,8 +31,15 @@ EXTRACT_USING=		bsdtar
 # 0.141 has too many conversion warnings
 MAKE_ENV=		NOWERROR=1
 
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+# also needs kvm and I didn't find the right place to add it in the build system
+MAKE_ENV+=	LDOPTS="-Wl,-R${BUILDLINK_PREFIX.flac}/lib -L${BUILDLINK_PREFIX.flac}/lib -lpthread -lkvm"
+.else
 # mongoose needs libpthread but somehow doesn't link against it
 MAKE_ENV+=	LDOPTS="-Wl,-R${BUILDLINK_PREFIX.flac}/lib -L${BUILDLINK_PREFIX.flac}/lib -lpthread"
+.endif
 
 # use pkgsrc packages for expat, zlib, jpeg, flac, lua, sqlite3
 MAKE_ENV+=	USE_SYSTEM_LIB_EXPAT=1
@@ -86,6 +93,10 @@ MAKE_ENV+=	BIGENDIAN=1
 
 PYTHON_FOR_BUILD_ONLY=	yes
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 0.151
+
+post-extract:
+	# will be chosen in preference to /usr/include/signal.h, but does not provide kill()
+	${RM} ${WRKSRC}/3rdparty/bx/include/compat/freebsd/signal.h
 
 pre-build:
 	# problems with mame-specific png.h
