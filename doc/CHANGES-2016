@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.968 2016/03/04 13:41:01 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.969 2016/03/04 14:02:28 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1312,3 +1312,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Want to 0.29 [wen 2016-03-04]
 	Updated devel/zookeeper to 3.4.8 [fhajny 2016-03-04]
 	Updated devel/libzookeeper to 3.4.8 [fhajny 2016-03-04]
+	Updated www/py-uliweb to 0.4.1 [wen 2016-03-04]
