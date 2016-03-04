@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/03/04 15:23:29 youri Exp $
+# $NetBSD: Makefile,v 1.3 2016/03/04 15:54:03 wiz Exp $
 
 DISTNAME=		arcanist-20160224
 CATEGORIES=		devel
@@ -11,7 +11,8 @@ HOMEPAGE=		https://github.com/phacility/arcanist/
 COMMENT=		Command line interface for Phabricator
 LICENSE=		apache-2.0
 
-USE_TOOLS+=		bash pax
+EXTRACT_USING=		bsdtar
+USE_TOOLS+=		bash bsdtar pax
 
 DEPENDS=		${PHP_PKG_PREFIX}-curl-[0-9]*:../../www/php-curl
 DEPENDS=		${PHP_PKG_PREFIX}-json-[0-9]*:../../textproc/php-json
@@ -38,9 +39,7 @@ INSTALLATION_DIRS+=	${ARCANISTDIR} bin
 
 do-install:
 	cd ${WRKSRC} && ${PAX} -rw * ${DESTDIR}${PREFIX}/${ARCANISTDIR}
-
-post-install:
-	ln -s ${PREFIX}/${ARCANISTDIR}/bin/arc ${PREFIX}/bin/arc
+	ln -s ${PREFIX}/${ARCANISTDIR}/bin/arc ${DESTDIR}${PREFIX}/bin/arc
 
 DEPENDS+=	${PHP_PKG_PREFIX}-json-[0-9]*:../../textproc/php-json
 DEPENDS+=	${PHP_PKG_PREFIX}-curl-[0-9]*:../../www/php-curl
