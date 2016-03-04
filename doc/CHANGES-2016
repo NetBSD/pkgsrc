@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.974 2016/03/04 15:49:18 jaapb Exp $
+$NetBSD: CHANGES-2016,v 1.975 2016/03/04 16:07:37 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1318,3 +1318,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added devel/ocaml-ppx_driver version 113.24.00 [jaapb 2016-03-04]
 	Added devel/ocaml-ppx_sexp_conv version 113.24.00 [jaapb 2016-03-04]
 	Added devel/ocaml-ppx_type_conv version 113.24.00 [jaapb 2016-03-04]
+	Updated devel/ocaml-sexplib to 113.24.00 [jaapb 2016-03-04]
