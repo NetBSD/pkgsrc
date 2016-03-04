@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.977 2016/03/04 16:55:59 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.978 2016/03/04 23:10:54 agc Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1321,3 +1321,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ocaml-sexplib to 113.24.00 [jaapb 2016-03-04]
 	Updated net/ocaml-ipaddr to 2.7.0 [jaapb 2016-03-04]
 	Updated databases/py-barman to 1.6.0 [fhajny 2016-03-04]
+	Updated pkgtools/digest to 20160304 [agc 2016-03-04]
