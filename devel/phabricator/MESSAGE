@@ -1,0 +1,27 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2016/03/04 10:56:17 youri Exp $
+
+To run the phabricator daemons from startup, add phd=yes
+in your /etc/rc.conf.
+
+Before starting the daemons, please finish configuring your Phabricator
+instance. This involves configuring a web server (Apache, NGINX, LightHTTP)
+and a database server (MySQL). You can find detailed instructions
+on how to finish your setup at:
+
+https://secure.phabricator.com/book/phabricator/article/configuration_guide/
+
+Please note that all files are located in ${PREFIX}/share/phabricator,
+so if the documentation refers to ./bin, this means
+
+  ${PREFIX}/share/phabricator/bin,
+
+if it refers to webroot, this means
+
+  ${PREFIX}/share/phabricator/webroot.
+
+When updating phabricator, run
+
+  ${PREFIX}/share/phabricator/bin/storage upgrade
+
+===========================================================================
