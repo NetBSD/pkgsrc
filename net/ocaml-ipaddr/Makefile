@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2015/08/07 11:20:32 jaapb Exp $
+# $NetBSD: Makefile,v 1.5 2016/03/04 16:15:21 jaapb Exp $
 
-VERSION=	2.5.0
-PKGNAME=	ocaml-ipaddr-${VERSION}
-PKGREVISION=	2
-DISTNAME=	${VERSION}
-DIST_SUBDIR=	ocaml-ipaddr
+VERSION=	2.7.0
+GITHUB_PROJECT=	ocaml-ipaddr
+DISTNAME=	${GITHUB_PROJECT}-${VERSION}
 CATEGORIES=	net
-MASTER_SITES=	https://github.com/mirage/ocaml-ipaddr/archive/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=mirage/}
 
 MAINTAINER=	jaapb@NetBSD.org
 HOMEPAGE=	https://github.com/mirage/ocaml-ipaddr/
@@ -19,5 +17,6 @@ OCAML_USE_FINDLIB=	yes
 OCAML_USE_OASIS=	yes
 
 .include "../../devel/ocaml-sexplib/buildlink3.mk"
+.include "../../devel/ocaml-ppx_sexp_conv/buildlink3.mk"
 .include "../../mk/ocaml.mk"
 .include "../../mk/bsd.pkg.mk"
