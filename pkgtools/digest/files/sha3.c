@@ -28,8 +28,6 @@
  * SHA-3: FIPS-202, Permutation-Based Hash and Extendable-Ouptut Functions
  */
 
-#define	_POSIX_C_SOURCE	200809L
-
 #include <assert.h>
 #include <stddef.h>
 #include <stdint.h>
@@ -43,7 +41,7 @@
 
 void *(*volatile sha3_explicit_memset_impl)(void *, int, size_t) = &memset;
 static void *
-explicit_memset(void *buf, int c, size_t n)
+sha3_explicit_memset(void *buf, int c, size_t n)
 {
 
 	return (*sha3_explicit_memset_impl)(buf, c, n);
@@ -213,7 +211,7 @@ sha3_final(uint8_t *h, unsigned d, struct sha3 *C, unsigned rw)
 			T >>= 8;
 		} while (--d);
 	}
-	(void)explicit_memset(C->A, 0, sizeof C->A);
+	(void)sha3_explicit_memset(C->A, 0, sizeof C->A);
 	C->nb = 0;
 }
 
@@ -264,7 +262,7 @@ shake_final(uint8_t *h, unsigned d, struct sha3 *C, unsigned rw)
 		}
 	}
 
-	(void)explicit_memset(C->A, 0, sizeof C->A);
+	(void)sha3_explicit_memset(C->A, 0, sizeof C->A);
 	C->nb = 0;
 }
 
