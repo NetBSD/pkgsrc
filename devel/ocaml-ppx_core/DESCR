@@ -1,0 +1,6 @@
+Ppx_core is a standard library for OCaml AST transformers. It contains:
+
+	* various auto-generated AST traversal using an open recursion scheme
+	* helpers for building AST fragments
+	* helpers for matching AST fragments
+	* a framework for dealing with attributes and extension points
