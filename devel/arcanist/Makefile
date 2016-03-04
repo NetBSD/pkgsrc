@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/03/04 15:54:03 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2016/03/04 16:00:12 youri Exp $
 
 DISTNAME=		arcanist-20160224
 CATEGORIES=		devel
@@ -14,9 +14,9 @@ LICENSE=		apache-2.0
 EXTRACT_USING=		bsdtar
 USE_TOOLS+=		bash bsdtar pax
 
-DEPENDS=		${PHP_PKG_PREFIX}-curl-[0-9]*:../../www/php-curl
-DEPENDS=		${PHP_PKG_PREFIX}-json-[0-9]*:../../textproc/php-json
-DEPENDS=		libphutil-[0-9]*:../../devel/libphutil
+DEPENDS+=		${PHP_PKG_PREFIX}-curl-[0-9]*:../../www/php-curl
+DEPENDS+=		${PHP_PKG_PREFIX}-json-[0-9]*:../../textproc/php-json
+DEPENDS+=		libphutil-[0-9]*:../../devel/libphutil
 
 REPLACE_BASH+=		bin/arc
 
@@ -31,18 +31,15 @@ SUBST_SED.php=		-e 's,/usr/bin/env php,${PREFIX}/bin/php,'
 
 REPLACE_PYTHON+=	scripts/breakout.py
 
-NO_BUILD=	yes
+NO_BUILD=		yes
 
-ARCANISTDIR=	share/arcanist
+ARCANISTDIR=		share/arcanist
 
 INSTALLATION_DIRS+=	${ARCANISTDIR} bin
 
 do-install:
 	cd ${WRKSRC} && ${PAX} -rw * ${DESTDIR}${PREFIX}/${ARCANISTDIR}
 	ln -s ${PREFIX}/${ARCANISTDIR}/bin/arc ${DESTDIR}${PREFIX}/bin/arc
-
-DEPENDS+=	${PHP_PKG_PREFIX}-json-[0-9]*:../../textproc/php-json
-DEPENDS+=	${PHP_PKG_PREFIX}-curl-[0-9]*:../../www/php-curl
 
 .include "../../lang/python/application.mk"
 .include "../../lang/php/phpversion.mk"
