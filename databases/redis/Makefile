@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2016/01/26 12:03:41 fhajny Exp $
+# $NetBSD: Makefile,v 1.19 2016/03/04 08:58:58 wiz Exp $
 
 DISTNAME=	redis-3.0.7
 CATEGORIES=	databases
@@ -11,6 +11,7 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES=		c99
 USE_TOOLS+=		gmake pax
+DIST_SUBDIR=	redis-3.0.7v2
 
 .include "../../mk/bsd.prefs.mk"
 
