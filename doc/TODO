@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15521 2016/03/04 12:47:26 wiz Exp $
+$NetBSD: TODO,v 1.15522 2016/03/04 14:02:28 wen Exp $
 
 Suggested new packages
 ======================
@@ -1265,7 +1265,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Statistics-Descriptive-3.0609
 	o p5-Switch-2.17
 	o p5-Sys-Utmp-1.7
-	o p5-Text-Reflow-1.10
 	o p5-Tie-DBI-1.06
 	o p5-Tree-DAG_Node-1.27
 	o p5-Unicode-Normalize-1.19
@@ -1427,7 +1426,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-suds-0.4.1
 	o py-sybase-0.37
 	o py-tlslite-0.4.6
-	o py-uliweb-0.4.1
 	o py-uwsgi-2.0.11.1
 	o py-wxWidgets-3.0.0
 	o py-yubiauth-0.3.10
