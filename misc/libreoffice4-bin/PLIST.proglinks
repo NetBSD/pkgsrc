@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.proglinks,v 1.4 2016/03/03 22:05:42 youri Exp $
+@comment $NetBSD: PLIST.proglinks,v 1.5 2016/03/04 00:31:49 youri Exp $
 bin/sbase
 bin/scalc
 bin/sdraw
@@ -6,9 +6,9 @@ bin/simpress
 bin/smath
 bin/soffice
 bin/swriter
-share/applications/base.desktop
-share/applications/calc.desktop
-share/applications/draw.desktop
-share/applications/impress.desktop
-share/applications/math.desktop
-share/applications/writer.desktop
+share/applications/libreoffice-bin-base.desktop
+share/applications/libreoffice-bin-calc.desktop
+share/applications/libreoffice-bin-draw.desktop
+share/applications/libreoffice-bin-impress.desktop
+share/applications/libreoffice-bin-math.desktop
+share/applications/libreoffice-bin-writer.desktop
