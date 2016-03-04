@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.953 2016/03/03 22:17:58 agc Exp $
+$NetBSD: CHANGES-2016,v 1.954 2016/03/04 01:28:26 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1297,3 +1297,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Removed security/sslscan [tron 2016-03-03]
 	Updated lang/tcl85 to 8.5.19 [bsiegert 2016-03-03]
 	Updated pkgtools/digest to 20160216 [agc 2016-03-03]
+	Updated www/netsurf to 3.4 [leot 2016-03-04]
