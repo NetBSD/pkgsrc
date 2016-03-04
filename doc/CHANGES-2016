@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.966 2016/03/04 13:26:54 wen Exp $
+$NetBSD: CHANGES-2016,v 1.967 2016/03/04 13:40:50 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1310,3 +1310,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-PPIx-Regexp to 0.048 [wen 2016-03-04]
 	Updated devel/p5-Proc-Simple to 1.32 [wen 2016-03-04]
 	Updated devel/p5-Want to 0.29 [wen 2016-03-04]
+	Updated devel/zookeeper to 3.4.8 [fhajny 2016-03-04]
