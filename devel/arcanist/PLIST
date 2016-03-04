@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/03/04 10:55:47 youri Exp $
-bin/arc
+@comment $NetBSD: PLIST,v 1.2 2016/03/04 15:23:29 youri Exp $
 share/arcanist/LICENSE
 share/arcanist/NOTICE
 share/arcanist/README.md
