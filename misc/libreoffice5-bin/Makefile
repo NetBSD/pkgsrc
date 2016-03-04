@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/03/03 23:22:34 youri Exp $
+# $NetBSD: Makefile,v 1.4 2016/03/04 00:34:23 youri Exp $
 
 DISTNAME=		libreoffice5-bin	# overridden below
 PKGNAME=		libreoffice5-bin-${OO_RELEASE}
@@ -82,4 +82,5 @@ do-install:
 	${LN} -sf ../opt/libreoffice${OO_BASEVER}/program/${i} ${DESTDIR}${PREFIX}/bin/${i}
 .endfor
 
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
