@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.970 2016/03/04 15:22:24 jaapb Exp $
+$NetBSD: CHANGES-2016,v 1.971 2016/03/04 15:30:03 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1314,3 +1314,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/libzookeeper to 3.4.8 [fhajny 2016-03-04]
 	Updated www/py-uliweb to 0.4.1 [wen 2016-03-04]
 	Added devel/ocaml-ppx_core version 113.24.00 [jaapb 2016-03-04]
+	Added devel/ocaml-ppx_optcomp version 113.24.00 [jaapb 2016-03-04]
