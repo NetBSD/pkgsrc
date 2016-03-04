@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2016/01/27 13:59:19 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2016/03/04 12:47:13 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -30,6 +30,7 @@ man/man6/mame.6
 man/man6/mess.6
 share/doc/mame/SDL.txt
 share/doc/mame/config.txt
+share/doc/mame/emscripten.txt
 share/doc/mame/floppy.txt
 share/doc/mame/hlsl.txt
 share/doc/mame/imgtool.txt
@@ -163,6 +164,7 @@ share/mame/hash/dps1.xml
 share/mame/hash/ec1841.xml
 share/mame/hash/einstein.xml
 share/mame/hash/electron_cart.xml
+share/mame/hash/electron_cass.xml
 share/mame/hash/ep64_cart.xml
 share/mame/hash/ep64_cass.xml
 share/mame/hash/ep64_flop.xml
@@ -170,6 +172,7 @@ share/mame/hash/epson_cpm.xml
 share/mame/hash/exl100.xml
 share/mame/hash/famicom_cass.xml
 share/mame/hash/famicom_flop.xml
+share/mame/hash/fidel_scc.xml
 share/mame/hash/fm77av.xml
 share/mame/hash/fm7_cass.xml
 share/mame/hash/fm7_disk.xml
@@ -220,6 +223,7 @@ share/mame/hash/iq151_flop.xml
 share/mame/hash/jaguar.xml
 share/mame/hash/juicebox.xml
 share/mame/hash/jupace_cass.xml
+share/mame/hash/k28m2.xml
 share/mame/hash/kayproii.xml
 share/mame/hash/kc_cart.xml
 share/mame/hash/kc_cass.xml
@@ -234,6 +238,7 @@ share/mame/hash/lynx.xml
 share/mame/hash/m20.xml
 share/mame/hash/m5_cart.xml
 share/mame/hash/m5_cass.xml
+share/mame/hash/m5_flop.xml
 share/mame/hash/mac_flop.xml
 share/mame/hash/mac_hdd.xml
 share/mame/hash/mbc200.xml

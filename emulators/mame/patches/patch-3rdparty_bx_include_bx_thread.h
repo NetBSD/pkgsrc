@@ -1,13 +1,13 @@
-$NetBSD: patch-3rdparty_bx_include_bx_thread.h,v 1.1 2016/01/27 13:59:19 wiz Exp $
+$NetBSD: patch-3rdparty_bx_include_bx_thread.h,v 1.2 2016/03/04 12:47:13 wiz Exp $
 
 Adapt to calling convention on NetBSD.
 
---- 3rdparty/bx/include/bx/thread.h.orig	2016-01-27 07:12:00.000000000 +0000
+--- 3rdparty/bx/include/bx/thread.h.orig	2016-02-24 07:02:17.000000000 +0000
 +++ 3rdparty/bx/include/bx/thread.h
-@@ -150,7 +150,11 @@ namespace bx
- #if BX_PLATFORM_OSX || BX_PLATFORM_IOS
- 			pthread_setname_np(_name);
- #elif (BX_PLATFORM_LINUX && defined(__GLIBC__)) || BX_PLATFORM_BSD
+@@ -159,7 +159,11 @@ namespace bx
+ 			prctl(PR_SET_NAME,_name, 0, 0, 0);
+ #	endif // defined(__GLIBC__) ...
+ #elif BX_PLATFORM_BSD
 +#ifdef __NetBSD__
 +			pthread_setname_np(m_handle, "%s", (void *)_name);
 +#else
