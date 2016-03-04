@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.965 2016/03/04 13:17:51 wen Exp $
+$NetBSD: CHANGES-2016,v 1.966 2016/03/04 13:26:54 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1309,3 +1309,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Perl-Tidy to 20160302 [wen 2016-03-04]
 	Updated devel/p5-PPIx-Regexp to 0.048 [wen 2016-03-04]
 	Updated devel/p5-Proc-Simple to 1.32 [wen 2016-03-04]
+	Updated devel/p5-Want to 0.29 [wen 2016-03-04]
