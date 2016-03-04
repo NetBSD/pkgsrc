@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.956 2016/03/04 10:58:05 youri Exp $
+$NetBSD: CHANGES-2016,v 1.957 2016/03/04 10:58:25 youri Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1300,3 +1300,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/netsurf to 3.4 [leot 2016-03-04]
 	Added devel/libphutil version 20160301 [youri 2016-03-04]
 	Added devel/arcanist version 20160224 [youri 2016-03-04]
+	Added devel/phabricator version 20160304 [youri 2016-03-04]
