@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2015/10/20 08:42:43 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/03/04 16:55:45 fhajny Exp $
 bin/barman
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -44,9 +44,18 @@ ${PYSITELIB}/barman/lockfile.pyo
 ${PYSITELIB}/barman/output.py
 ${PYSITELIB}/barman/output.pyc
 ${PYSITELIB}/barman/output.pyo
+${PYSITELIB}/barman/postgres.py
+${PYSITELIB}/barman/postgres.pyc
+${PYSITELIB}/barman/postgres.pyo
+${PYSITELIB}/barman/process.py
+${PYSITELIB}/barman/process.pyc
+${PYSITELIB}/barman/process.pyo
 ${PYSITELIB}/barman/recovery_executor.py
 ${PYSITELIB}/barman/recovery_executor.pyc
 ${PYSITELIB}/barman/recovery_executor.pyo
+${PYSITELIB}/barman/remote_status.py
+${PYSITELIB}/barman/remote_status.pyc
+${PYSITELIB}/barman/remote_status.pyo
 ${PYSITELIB}/barman/retention_policies.py
 ${PYSITELIB}/barman/retention_policies.pyc
 ${PYSITELIB}/barman/retention_policies.pyo
@@ -59,6 +68,9 @@ ${PYSITELIB}/barman/utils.pyo
 ${PYSITELIB}/barman/version.py
 ${PYSITELIB}/barman/version.pyc
 ${PYSITELIB}/barman/version.pyo
+${PYSITELIB}/barman/wal_archiver.py
+${PYSITELIB}/barman/wal_archiver.pyc
+${PYSITELIB}/barman/wal_archiver.pyo
 ${PYSITELIB}/barman/xlog.py
 ${PYSITELIB}/barman/xlog.pyc
 ${PYSITELIB}/barman/xlog.pyo
