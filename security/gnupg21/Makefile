@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2016/02/26 09:41:05 jperkin Exp $
+# $NetBSD: Makefile,v 1.16 2016/03/04 13:38:09 kleink Exp $
 
 DISTNAME=	gnupg-2.1.11
 PKGNAME=	${DISTNAME:S/gnupg-/gnupg21-/}
@@ -30,7 +30,7 @@ LDFLAGS.Darwin+=	-lresolv
 
 .include "options.mk"
 
-BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.16
+BUILDLINK_API_DEPENDS.libgpg-error+=	libgpg-error>=1.21
 .include "../../security/libgpg-error/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libassuan+=	libassuan>=2.4.1
 .include "../../security/libassuan2/buildlink3.mk"
