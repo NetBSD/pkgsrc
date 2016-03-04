@@ -24,8 +24,6 @@
  * SUCH DAMAGE.
  */
 
-#define	_POSIX_C_SOURCE	200809L
-
 #include <stdint.h>
 
 #include "keccak.h"
