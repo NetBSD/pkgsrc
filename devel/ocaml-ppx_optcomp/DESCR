@@ -1,0 +1,6 @@
+ppx_optcomp stands for Optional Compilation. It is a tool used to handle
+optional compilations of pieces of code depending of the word size, the version
+of the compiler, ...
+
+ppx_optcomp can be used a a standalone pre-processor, but is also integrated in
+the ppx_driver.
