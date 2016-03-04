@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2015/12/05 21:26:06 adam Exp $
+# $NetBSD: Makefile,v 1.7 2016/03/04 13:54:25 wen Exp $
 
-DISTNAME=	Uliweb-0.3.1
+DISTNAME=	Uliweb-0.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/U/u/}
 CATEGORIES=	www
 MASTER_SITES=	http://pypi.python.org/packages/source/U/Uliweb/
