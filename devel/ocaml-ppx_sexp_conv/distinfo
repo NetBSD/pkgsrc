@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/03/04 15:50:18 jaapb Exp $
+
+SHA1 (ppx_sexp_conv-113.24.00.tar.gz) = 52933578450189d61cf5905386bb42ba62970322
+RMD160 (ppx_sexp_conv-113.24.00.tar.gz) = 9f0c92fa715a31cb7af13f43de17d8d6237dc0ef
+SHA512 (ppx_sexp_conv-113.24.00.tar.gz) = c3ee772c5d6e89713d1c4a7fd0858cfcbc9a85e3278727db830ce0b73c0c4c9eb5fc31718644799292ee4e58da345fffa294f1b651287a09c99b7d84400bee82
+Size (ppx_sexp_conv-113.24.00.tar.gz) = 32961 bytes
