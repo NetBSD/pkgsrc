@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.959 2016/03/04 12:44:19 wen Exp $
+$NetBSD: CHANGES-2016,v 1.960 2016/03/04 12:47:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1303,3 +1303,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added devel/phabricator version 20160304 [youri 2016-03-04]
 	Added sysutils/xfburn version 0.5.4 [youri 2016-03-04]
 	Updated devel/p5-Moo to 2.001001 [wen 2016-03-04]
+	Updated emulators/mame to 0.171 [wiz 2016-03-04]
