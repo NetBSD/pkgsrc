@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.954 2016/03/04 01:28:26 leot Exp $
+$NetBSD: CHANGES-2016,v 1.955 2016/03/04 10:57:48 youri Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1298,3 +1298,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/tcl85 to 8.5.19 [bsiegert 2016-03-03]
 	Updated pkgtools/digest to 20160216 [agc 2016-03-03]
 	Updated www/netsurf to 3.4 [leot 2016-03-04]
+	Added devel/libphutil version 20160301 [youri 2016-03-04]
