@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.94 2016/01/31 17:27:41 rillig Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.95 2016/03/04 01:38:39 tnn Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -348,6 +348,7 @@ _WRAP_CMD_SINK.LD=	${WRAPPER_TMPDIR}/cmd-sink-hpux-ld
 .elif ${OPSYS} == "AIX"
 _WRAP_CMD_SINK.CC?=	${WRAPPER_TMPDIR}/cmd-sink-aix-cc
 _WRAP_CMD_SINK.CXX?=	${_WRAP_CMD_SINK.CC}
+_WRAP_CMD_SINK.AR=	${WRAPPER_TMPDIR}/cmd-sink-aix-ar
 _WRAP_CMD_SINK.LD=	${WRAPPER_TMPDIR}/cmd-sink-aix-ld
 _WRAP_CACHE_BODY.CC?=	${WRAPPER_TMPDIR}/cache-body-aix-cc
 _WRAP_CACHE_BODY.CC_R?=	${WRAPPER_TMPDIR}/cache-body-aix-cc
@@ -504,6 +505,7 @@ generate-wrappers: ${_target_}
 	arg-pp-darwin-gcc \
 	arg-pp-mipspro-cc \
 	arg-pp-sunpro-cxx \
+	cmd-sink-aix-ar \
 	cmd-sink-aix-cc \
 	cmd-sink-aix-ld \
 	cmd-sink-aix-xlc \
