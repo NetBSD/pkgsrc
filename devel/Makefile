@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2224 2016/03/03 14:38:01 jmmv Exp $
+# $NetBSD: Makefile,v 1.2225 2016/03/04 10:56:41 youri Exp $
 #
 
 COMMENT=	Development utilities
@@ -49,6 +49,7 @@ SUBDIR+=	apel
 SUBDIR+=	appdata-tools
 SUBDIR+=	apr
 SUBDIR+=	apr-util
+SUBDIR+=	arcanist
 SUBDIR+=	arena
 SUBDIR+=	argp
 SUBDIR+=	argtable
@@ -510,6 +511,7 @@ SUBDIR+=	libosip
 SUBDIR+=	libowfat
 SUBDIR+=	libpeas
 SUBDIR+=	libpgm
+SUBDIR+=	libphutil
 SUBDIR+=	libportlib
 SUBDIR+=	libproplist
 SUBDIR+=	librfuncs
@@ -1581,6 +1583,7 @@ SUBDIR+=	pcre-ocaml
 SUBDIR+=	pcre2
 SUBDIR+=	pdcurses
 SUBDIR+=	pedisassem
+SUBDIR+=	phabricator
 SUBDIR+=	php-gettext
 SUBDIR+=	php-gmp
 SUBDIR+=	php-igbinary
