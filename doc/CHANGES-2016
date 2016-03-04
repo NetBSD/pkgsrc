@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.957 2016/03/04 10:58:25 youri Exp $
+$NetBSD: CHANGES-2016,v 1.958 2016/03/04 11:11:50 youri Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1301,3 +1301,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added devel/libphutil version 20160301 [youri 2016-03-04]
 	Added devel/arcanist version 20160224 [youri 2016-03-04]
 	Added devel/phabricator version 20160304 [youri 2016-03-04]
+	Added sysutils/xfburn version 0.5.4 [youri 2016-03-04]
