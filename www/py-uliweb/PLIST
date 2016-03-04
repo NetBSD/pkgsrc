@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2014/07/29 02:42:01 wen Exp $
+@comment $NetBSD: PLIST,v 1.4 2016/03/04 13:54:25 wen Exp $
 bin/uliweb
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -6,6 +6,7 @@ ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/uliweb/.DS_Store
 ${PYSITELIB}/uliweb/__init__.py
 ${PYSITELIB}/uliweb/__init__.pyc
 ${PYSITELIB}/uliweb/__init__.pyo
@@ -134,11 +135,6 @@ ${PYSITELIB}/uliweb/contrib/generic/template_files/html/config.ini
 ${PYSITELIB}/uliweb/contrib/generic/template_files/html/templates/list.html
 ${PYSITELIB}/uliweb/contrib/generic/template_files/mmgrid/config.ini
 ${PYSITELIB}/uliweb/contrib/generic/template_files/mmgrid/templates/list.html
-${PYSITELIB}/uliweb/contrib/generic/templates/GenericView/add.html
-${PYSITELIB}/uliweb/contrib/generic/templates/GenericView/ajax_add.html
-${PYSITELIB}/uliweb/contrib/generic/templates/GenericView/ajax_edit.html
-${PYSITELIB}/uliweb/contrib/generic/templates/GenericView/edit.html
-${PYSITELIB}/uliweb/contrib/generic/templates/GenericView/view.html
 ${PYSITELIB}/uliweb/contrib/heroku/__init__.py
 ${PYSITELIB}/uliweb/contrib/heroku/__init__.pyc
 ${PYSITELIB}/uliweb/contrib/heroku/__init__.pyo
@@ -283,6 +279,18 @@ ${PYSITELIB}/uliweb/contrib/secretkey/conf.pyc
 ${PYSITELIB}/uliweb/contrib/secretkey/conf.pyo
 ${PYSITELIB}/uliweb/contrib/secretkey/info.ini
 ${PYSITELIB}/uliweb/contrib/secretkey/settings.ini
+${PYSITELIB}/uliweb/contrib/sequence/__init__.py
+${PYSITELIB}/uliweb/contrib/sequence/__init__.pyc
+${PYSITELIB}/uliweb/contrib/sequence/__init__.pyo
+${PYSITELIB}/uliweb/contrib/sequence/conf.py
+${PYSITELIB}/uliweb/contrib/sequence/conf.pyc
+${PYSITELIB}/uliweb/contrib/sequence/conf.pyo
+${PYSITELIB}/uliweb/contrib/sequence/config.ini
+${PYSITELIB}/uliweb/contrib/sequence/info.ini
+${PYSITELIB}/uliweb/contrib/sequence/models.py
+${PYSITELIB}/uliweb/contrib/sequence/models.pyc
+${PYSITELIB}/uliweb/contrib/sequence/models.pyo
+${PYSITELIB}/uliweb/contrib/sequence/settings.ini
 ${PYSITELIB}/uliweb/contrib/session/__init__.py
 ${PYSITELIB}/uliweb/contrib/session/__init__.pyc
 ${PYSITELIB}/uliweb/contrib/session/__init__.pyo
@@ -650,6 +658,8 @@ ${PYSITELIB}/uliweb/lib/weto/lockfile.pyo
 ${PYSITELIB}/uliweb/lib/weto/session.py
 ${PYSITELIB}/uliweb/lib/weto/session.pyc
 ${PYSITELIB}/uliweb/lib/weto/session.pyo
+${PYSITELIB}/uliweb/locale/.DS_Store
+${PYSITELIB}/uliweb/locale/zh_CN/.DS_Store
 ${PYSITELIB}/uliweb/locale/zh_CN/LC_MESSAGES/uliweb.mo
 ${PYSITELIB}/uliweb/locale/zh_CN/LC_MESSAGES/uliweb.po
 ${PYSITELIB}/uliweb/locale/zh_CN/LC_MESSAGES/uliweb.pot
@@ -707,6 +717,7 @@ ${PYSITELIB}/uliweb/template_files/project/apps/__init__.pyc
 ${PYSITELIB}/uliweb/template_files/project/apps/__init__.pyo
 ${PYSITELIB}/uliweb/template_files/project/apps/local_settings.ini
 ${PYSITELIB}/uliweb/template_files/project/apps/settings.ini
+${PYSITELIB}/uliweb/template_files/project/requirements.txt
 ${PYSITELIB}/uliweb/template_files/project/setup.py
 ${PYSITELIB}/uliweb/template_files/project/setup.pyc
 ${PYSITELIB}/uliweb/template_files/project/setup.pyo
@@ -748,6 +759,9 @@ ${PYSITELIB}/uliweb/template_files/support/tornado/tornado_handler.pyo
 ${PYSITELIB}/uliweb/utils/__init__.py
 ${PYSITELIB}/uliweb/utils/__init__.pyc
 ${PYSITELIB}/uliweb/utils/__init__.pyo
+${PYSITELIB}/uliweb/utils/_compat.py
+${PYSITELIB}/uliweb/utils/_compat.pyc
+${PYSITELIB}/uliweb/utils/_compat.pyo
 ${PYSITELIB}/uliweb/utils/coloredlog.py
 ${PYSITELIB}/uliweb/utils/coloredlog.pyc
 ${PYSITELIB}/uliweb/utils/coloredlog.pyo
