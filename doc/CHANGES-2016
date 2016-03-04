@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.963 2016/03/04 13:08:03 wen Exp $
+$NetBSD: CHANGES-2016,v 1.964 2016/03/04 13:13:33 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1307,3 +1307,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-Mojolicious to 6.53 [wen 2016-03-04]
 	Updated databases/p5-Data-Table to 1.73 [wen 2016-03-04]
 	Updated devel/p5-Perl-Tidy to 20160302 [wen 2016-03-04]
+	Updated devel/p5-PPIx-Regexp to 0.048 [wen 2016-03-04]
