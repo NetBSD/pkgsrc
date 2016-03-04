@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 03:27:52 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/03/04 16:06:19 jaapb Exp $
 
-SHA1 (ocaml-sexplib/112.01.00.tar.gz) = 393861050e20f6626cd3b9f52ccbcb847d21f56d
-RMD160 (ocaml-sexplib/112.01.00.tar.gz) = 9233b9765352d45d27b4f4075864d3001f01fa64
-SHA512 (ocaml-sexplib/112.01.00.tar.gz) = 44816b888abd4313aeb2d4e33465dafa9dbd5aa5bc77031fa8ce84e663212d7fa807bb67a011f067ae35f725dd75b63569c79ada01bd97fe5837648fc0f5348a
-Size (ocaml-sexplib/112.01.00.tar.gz) = 134716 bytes
+SHA1 (ocaml-sexplib/113.24.00.tar.gz) = 2809485197f8f0598b6cd9b807509cfe9f1190cc
+RMD160 (ocaml-sexplib/113.24.00.tar.gz) = 38372cac8dfe1fb1893476b0205121bbb65a7478
+SHA512 (ocaml-sexplib/113.24.00.tar.gz) = 0331437500a13bc26c6cc635e8f1a63454257c3c699a07562469f6ebe127c61b3428bf4465c12fead5f7ac416e664417b0f9473ab2953e9c446cbda762ba00ea
+Size (ocaml-sexplib/113.24.00.tar.gz) = 72087 bytes
