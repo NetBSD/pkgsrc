@@ -1,0 +1,2 @@
+The type_conv library factors out functionality needed by different
+preprocessors that generate code from type specifications.
