@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2016/03/04 11:11:39 youri Exp $
+
+Fix unportablet test(1) construct.
+
+--- configure.orig	2014-04-24 09:18:18.000000000 +0000
++++ configure
+@@ -15551,7 +15551,7 @@ else
+ fi
+ 
+ 
+-if test x"$GST_FOUND" == x"yes"; then
++if test x"$GST_FOUND" = x"yes"; then
+ 
+ 
+   # minimum supported version of pkg-config
