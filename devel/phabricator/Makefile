@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/03/04 11:55:01 youri Exp $
+# $NetBSD: Makefile,v 1.3 2016/03/04 15:23:56 youri Exp $
 
 DISTNAME=		phabricator-20160304
 CATEGORIES=		devel
@@ -21,7 +21,7 @@ DEPENDS+=		${PHP_PKG_PREFIX}-mysql-[0-9]*:../../databases/php-mysql
 DEPENDS+=		${PHP_PKG_PREFIX}-pcntl-[0-9]*:../../devel/php-pcntl
 DEPENDS+=		${PHP_PKG_PREFIX}-posix-[0-9]*:../../devel/php-posix
 DEPENDS+=		${PHP_PKG_PREFIX}-gd-[0-9]*:../../graphics/php-gd
-DEPENDS+=		${PHP_PKG_PREFIX}-zendopcache-[0-9]*:../../www/php-zendopcache
+DEPENDS+=		${PHP_PKG_PREFIX}-opcache-[0-9]*:../../devel/php-opcache
 DEPENDS+=		${PHP_PKG_PREFIX}-apcu-[0-9]*:../../www/php-apcu
 #DEPENDS+=		:../../textproc/py-pygments?
 DEPENDS+=		libphutil-[0-9]*:../../devel/libphutil
