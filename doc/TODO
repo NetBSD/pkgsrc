@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15532 2016/03/05 10:59:17 bsiegert Exp $
+$NetBSD: TODO,v 1.15533 2016/03/05 14:43:54 bsiegert Exp $
 
 Suggested new packages
 ======================
@@ -592,7 +592,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ec2-ami-tools-1.5.7
 	o eclipse-3.2.0
 	o ecore-1.7.10
-	o ed-1.13
 	o edbus-1.7.10
 	o ede-2.0
 	o edje-1.7.10
