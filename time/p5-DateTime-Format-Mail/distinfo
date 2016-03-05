@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/02 23:31:40 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/03/05 07:56:40 wen Exp $
 
-SHA1 (DateTime-Format-Mail-0.401.tar.gz) = 64bf3c24bce84e37463dddeac99dce3516c738ba
-RMD160 (DateTime-Format-Mail-0.401.tar.gz) = 2d3e1a93f9908a0b8eed2064ddf6ec59a30da143
-SHA512 (DateTime-Format-Mail-0.401.tar.gz) = d1e882c04c8b695391040da8e01c12423ee1e3aa7fa25ac77c1b84d510bc8093b6a477fdf076d1c704d61b5d329e14f1524a80a2ea342463f5a6136ed7743244
-Size (DateTime-Format-Mail-0.401.tar.gz) = 172403 bytes
+SHA1 (DateTime-Format-Mail-0.402.tar.gz) = f416541a446ed29f85dcaf045cd3be165a667507
+RMD160 (DateTime-Format-Mail-0.402.tar.gz) = f0d4bc591dec76a5c429edf4e8152d219cb7db0e
+SHA512 (DateTime-Format-Mail-0.402.tar.gz) = 079a4a4e3dbd8b585726b03809e42436d48a71c94f4a94a662e7955278374ff564ee0fae4a4999f84f2f35d78b0d695b917a737e262a7499940272abd66ac5c6
+Size (DateTime-Format-Mail-0.402.tar.gz) = 178213 bytes
