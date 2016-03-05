@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2015/05/20 13:29:58 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2016/03/05 11:28:20 jperkin Exp $
 
 PKGNAME=		${DISTNAME:S/sqlrelay/sqlrelay-odbc/}
+PKGREVISION=		1
 COMMENT=		ODBC support for SQL Relay
 
 .include "../../databases/sqlrelay/Makefile.common"

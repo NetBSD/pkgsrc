@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.44 2015/08/17 17:11:25 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2016/03/05 11:28:50 jperkin Exp $
 
 DISTNAME=	Mail-ClamAV-0.29
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Mail/}
 

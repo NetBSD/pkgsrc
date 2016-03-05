@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.29 2016/02/25 16:20:51 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.30 2016/03/05 11:29:05 jperkin Exp $
 #
 # used by net/isc-dhcp4/Makefile
 # used by net/isc-dhcpd4/Makefile
@@ -7,7 +7,7 @@
 
 DISTNAME=		dhcp-${VERSION}
 DHVER=			${DISTNAME:S/dhcp-//:S/-P/p/}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.isc.org/isc/dhcp/${VERSION}/ \
 			http://ftp.isc.org/isc/dhcp/${VERSION}/

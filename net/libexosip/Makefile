@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2014/07/12 16:48:26 schwarz Exp $
+# $NetBSD: Makefile,v 1.4 2016/03/05 11:27:52 jperkin Exp $
 
 DISTNAME=	libeXosip2-4.1.0
+PKGREVISION=	1
 CATEGORIES=	devel net
 MASTER_SITES=	http://download.savannah.nongnu.org/releases/exosip/
 

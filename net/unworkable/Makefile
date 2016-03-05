@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2014/02/12 23:18:27 tron Exp $
+# $NetBSD: Makefile,v 1.14 2016/03/05 11:29:13 jperkin Exp $
 
 DISTNAME=	unworkable-0.53
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://unworkable.googlecode.com/files/
 

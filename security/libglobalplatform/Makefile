@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2015/03/12 19:41:30 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2016/03/05 11:27:54 jperkin Exp $
 
 DISTNAME=	globalplatform-6.0.0
 PKGNAME=	lib${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	security
 # The pkgsrc guide says to do:
 # MASTER_SITES=${MASTER_SITE_SOURCEFORGE:=globalplatform/GlobalPlatform%20Library/GlobalPlatform%20Library%20${PKGVERSION_NOREV}/}

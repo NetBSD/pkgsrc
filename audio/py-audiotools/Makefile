@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2015/11/04 16:45:52 adam Exp $
+# $NetBSD: Makefile,v 1.19 2016/03/05 11:28:05 jperkin Exp $
 
 DISTNAME=	audiotools-3.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=audiotools/}
 #MASTER_SITES=	${MASTER_SITE_GITHUB:=tuffy/}

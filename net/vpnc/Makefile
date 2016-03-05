@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.39 2015/09/22 02:38:33 tnn Exp $
+# $NetBSD: Makefile,v 1.40 2016/03/05 11:29:14 jperkin Exp $
 #
 
 DISTNAME=		vpnc-0.5.3
-PKGREVISION=		12
+PKGREVISION=		13
 CATEGORIES=		net security
 MASTER_SITES=		http://www.unix-ag.uni-kl.de/~massar/vpnc/
 

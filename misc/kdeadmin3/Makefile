@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.78 2016/02/25 15:35:30 jperkin Exp $
+# $NetBSD: Makefile,v 1.79 2016/03/05 11:28:55 jperkin Exp $
 
 DISTNAME=	kdeadmin-${_KDE_VERSION}
-PKGREVISION=	29
+PKGREVISION=	30
 CATEGORIES=	misc
 COMMENT=	System administration tools for the KDE integrated X11 desktop
 

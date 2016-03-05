@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2016/01/28 15:26:40 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2016/03/05 11:28:08 jperkin Exp $
 
+PKGREVISION= 1
 .include "../../meta-pkgs/kde-telepathy/Makefile.common"
 DISTNAME=	ktp-approver-${KTP_VERSION}
 CATEGORIES=	chat kde

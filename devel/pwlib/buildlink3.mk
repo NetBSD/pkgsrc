@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2014/02/12 23:17:50 tron Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2016/03/05 11:27:46 jperkin Exp $
 
 BUILDLINK_TREE+=	pwlib
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	pwlib
 PWLIB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.pwlib+=	pwlib>=1.8.3nb1
-BUILDLINK_ABI_DEPENDS.pwlib+=	pwlib>=1.8.3nb11
+BUILDLINK_ABI_DEPENDS.pwlib+=	pwlib>=1.8.3nb12
 BUILDLINK_PKGSRCDIR.pwlib?=	../../devel/pwlib
 
 .include "../../security/openssl/buildlink3.mk"

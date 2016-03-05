@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2015/06/12 10:51:11 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2016/03/05 11:29:28 jperkin Exp $
 #
 
 DISTNAME=	boxbackup-0.11.1
 PKGNAME=	boxbackup-server-0.11.1
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=boxbackup/}
 EXTRACT_SUFX=	.tgz

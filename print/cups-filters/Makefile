@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2016/02/14 10:45:46 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2016/03/05 11:29:16 jperkin Exp $
 
 DISTNAME=	cups-filters-1.8.2
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	http://openprinting.org/download/cups-filters/
 EXTRACT_SUFX=	.tar.xz
