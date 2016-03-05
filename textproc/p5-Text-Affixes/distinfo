@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:59:49 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/03/05 03:32:09 wen Exp $
 
-SHA1 (Text-Affixes-0.07.tar.gz) = d8261c444013d6ed00aaf7bc25e523b75cf4a683
-RMD160 (Text-Affixes-0.07.tar.gz) = cbc5d788542d1d7ea829a11e0413c969f7c9f92e
-SHA512 (Text-Affixes-0.07.tar.gz) = e12b5ca4cc6fc65eda864f092748468cb5158d287091ca5877b6d18b53db10a5ff719774b606d8581404ddd66905e5328d5b603071090106e5ac2a7e04fd2b2b
-Size (Text-Affixes-0.07.tar.gz) = 3841 bytes
+SHA1 (Text-Affixes-0.09.tar.gz) = df41b2deaafe98a9fc313ee8019cee5804a97b0a
+RMD160 (Text-Affixes-0.09.tar.gz) = 3a51c2fa1713f9306b7cde8fa5be6b4c56a68ec7
+SHA512 (Text-Affixes-0.09.tar.gz) = 636c3a733da49d8ebdcb0d685eb535351b8d234df8e593233904e4de7e60d9bed6050babc44755e12efcbfabd1755b314503c3979df0d9591f9c8ef472c2e5d7
+Size (Text-Affixes-0.09.tar.gz) = 18444 bytes
