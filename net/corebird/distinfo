@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 00:34:56 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/03/05 09:40:53 ryoon Exp $
 
-SHA1 (corebird-0.9.tar.gz) = 4d67bbf521ac737e9c2a1b35d4a85eb4d95d975c
-RMD160 (corebird-0.9.tar.gz) = 1c9a99237f12b1b6c5a0152474ff23bd7a0addab
-SHA512 (corebird-0.9.tar.gz) = f35a2a835958815242d8ba309a309793f298337a710486d96acd0eb80f96a51353d84b3eef1d8b0e459f97379374ed34d4a7325c35473595bffb5d0bf2116f24
-Size (corebird-0.9.tar.gz) = 1666353 bytes
+SHA1 (corebird-1.2.tar.gz) = 8f498b39ba920bd1fb42dac90ced600c5a6e50a5
+RMD160 (corebird-1.2.tar.gz) = de605914ff91e257570a4d7fce5353c9e17d1607
+SHA512 (corebird-1.2.tar.gz) = fb71ac96e0e25aeacd5311d203d8f998eed8fb7dbc1d481881159d9aa71dd0bcaa7f2c5712eaf34174793f23ff6dff0f61088e2d47f4b1a3324fa3152f9f32f1
+Size (corebird-1.2.tar.gz) = 423619 bytes
