@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/03/04 16:00:12 youri Exp $
+# $NetBSD: Makefile,v 1.5 2016/03/05 17:11:22 youri Exp $
 
 DISTNAME=		arcanist-20160224
 CATEGORIES=		devel
@@ -17,6 +17,8 @@ USE_TOOLS+=		bash bsdtar pax
 DEPENDS+=		${PHP_PKG_PREFIX}-curl-[0-9]*:../../www/php-curl
 DEPENDS+=		${PHP_PKG_PREFIX}-json-[0-9]*:../../textproc/php-json
 DEPENDS+=		libphutil-[0-9]*:../../devel/libphutil
+
+CONFLICTS+=		arc-[0-9]*:../../archivers/arc
 
 REPLACE_BASH+=		bin/arc
 
