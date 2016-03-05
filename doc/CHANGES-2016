@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1014 2016/03/05 15:38:00 gson Exp $
+$NetBSD: CHANGES-2016,v 1.1015 2016/03/05 15:45:12 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1369,3 +1369,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated archivers/fastjar to 0.98 [bsiegert 2016-03-05]
 	Updated editors/emacs24 to 24.5nb9 [gson 2016-03-05]
 	Updated editors/emacs24-nox11 to 24.5nb1 [gson 2016-03-05]
+	Updated sysutils/file to 5.25 [bsiegert 2016-03-05]
