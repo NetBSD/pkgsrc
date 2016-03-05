@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2015/11/02 23:31:41 agc Exp $
+$NetBSD: distinfo,v 1.8 2016/03/05 07:24:32 wen Exp $
 
-SHA1 (MooseX-Types-DateTime-0.11.tar.gz) = 00f6de4ee08a11b36f7ca965ebe5e5498c4792d9
-RMD160 (MooseX-Types-DateTime-0.11.tar.gz) = 060fb0dd2a198f3bfa603570e9655c93df74f92e
-SHA512 (MooseX-Types-DateTime-0.11.tar.gz) = 4a0834e30a31ac66c43d2bf263109c69d4c3e91e4c8782891919392690b0688db48c6d74775818f64cc62f68efa728d7f4cf573d6fc053cc76b52b498db78ecb
-Size (MooseX-Types-DateTime-0.11.tar.gz) = 30044 bytes
+SHA1 (MooseX-Types-DateTime-0.13.tar.gz) = 0093640fb26de592889f042874467e86083ee00d
+RMD160 (MooseX-Types-DateTime-0.13.tar.gz) = 33d436ef56ad6e693be45e04993bbe3626f43440
+SHA512 (MooseX-Types-DateTime-0.13.tar.gz) = aadd07960d4d20ed5926ea6e14650bf2162a73e40e3e26797ad0323a083c1796f7d623b895e3a612da89315387082a9835380ff2ed7d74455a2074c818533dc5
+Size (MooseX-Types-DateTime-0.13.tar.gz) = 30494 bytes
