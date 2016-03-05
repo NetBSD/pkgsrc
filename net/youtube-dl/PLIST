@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2016/02/25 19:07:59 leot Exp $
+@comment $NetBSD: PLIST,v 1.16 2016/03/05 20:41:10 leot Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -185,6 +185,9 @@ ${PYSITELIB}/youtube_dl/extractor/blinkx.pyo
 ${PYSITELIB}/youtube_dl/extractor/bloomberg.py
 ${PYSITELIB}/youtube_dl/extractor/bloomberg.pyc
 ${PYSITELIB}/youtube_dl/extractor/bloomberg.pyo
+${PYSITELIB}/youtube_dl/extractor/bokecc.py
+${PYSITELIB}/youtube_dl/extractor/bokecc.pyc
+${PYSITELIB}/youtube_dl/extractor/bokecc.pyo
 ${PYSITELIB}/youtube_dl/extractor/bpb.py
 ${PYSITELIB}/youtube_dl/extractor/bpb.pyc
 ${PYSITELIB}/youtube_dl/extractor/bpb.pyo
@@ -1310,9 +1313,6 @@ ${PYSITELIB}/youtube_dl/extractor/soundgasm.pyo
 ${PYSITELIB}/youtube_dl/extractor/southpark.py
 ${PYSITELIB}/youtube_dl/extractor/southpark.pyc
 ${PYSITELIB}/youtube_dl/extractor/southpark.pyo
-${PYSITELIB}/youtube_dl/extractor/space.py
-${PYSITELIB}/youtube_dl/extractor/space.pyc
-${PYSITELIB}/youtube_dl/extractor/space.pyo
 ${PYSITELIB}/youtube_dl/extractor/spankbang.py
 ${PYSITELIB}/youtube_dl/extractor/spankbang.pyc
 ${PYSITELIB}/youtube_dl/extractor/spankbang.pyo
@@ -1562,6 +1562,9 @@ ${PYSITELIB}/youtube_dl/extractor/urort.pyo
 ${PYSITELIB}/youtube_dl/extractor/ustream.py
 ${PYSITELIB}/youtube_dl/extractor/ustream.pyc
 ${PYSITELIB}/youtube_dl/extractor/ustream.pyo
+${PYSITELIB}/youtube_dl/extractor/ustudio.py
+${PYSITELIB}/youtube_dl/extractor/ustudio.pyc
+${PYSITELIB}/youtube_dl/extractor/ustudio.pyo
 ${PYSITELIB}/youtube_dl/extractor/varzesh3.py
 ${PYSITELIB}/youtube_dl/extractor/varzesh3.pyc
 ${PYSITELIB}/youtube_dl/extractor/varzesh3.pyo
