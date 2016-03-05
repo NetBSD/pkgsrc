@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.995 2016/03/05 07:41:23 wen Exp $
+$NetBSD: CHANGES-2016,v 1.996 2016/03/05 07:45:56 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1349,3 +1349,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated time/p5-MooseX-Types-DateTime to 0.13 [wen 2016-03-05]
 	Updated time/p5-DateTime-Format-Pg to 0.16011 [wen 2016-03-05]
 	Updated time/p5-DateTime-Format-Natural to 1.03 [wen 2016-03-05]
+	Updated databases/sqlitebrowser to 3.8.0 [ryoon 2016-03-05]
