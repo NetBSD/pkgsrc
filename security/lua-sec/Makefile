@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2016/02/26 09:41:05 jperkin Exp $
+# $NetBSD: Makefile,v 1.14 2016/03/05 11:29:22 jperkin Exp $
 
 DISTNAME=		luasec-0.5
 PKGNAME=		${LUA_PKGPREFIX}-${DISTNAME:S/lua//}
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		security
 MASTER_SITES=		https://github.com/brunoos/luasec/archive/
 

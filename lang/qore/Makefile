@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2016/02/25 14:42:57 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2016/03/05 11:27:50 jperkin Exp $
 
 DISTNAME=	qore-0.8.11
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	lang
 MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=qore/}
 EXTRACT_SUFX=   .tar.bz2

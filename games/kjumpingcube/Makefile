@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2015/04/25 14:22:58 tnn Exp $
+# $NetBSD: Makefile,v 1.19 2016/03/05 11:28:33 jperkin Exp $
 
 DISTNAME=	kjumpingcube-${_KDE_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games
 COMMENT=	a simple tactical game for KDE
 

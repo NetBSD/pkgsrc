@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2016/02/23 15:03:16 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2016/03/05 11:28:24 jperkin Exp $
 #
 
 DISTNAME=	lwt-2.5.1
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 #MASTER_SITES=	http://github.com/ocsigen/lwt/archive/
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocsigen/}

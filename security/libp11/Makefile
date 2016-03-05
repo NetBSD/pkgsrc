@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2014/04/02 20:14:19 gdt Exp $
+# $NetBSD: Makefile,v 1.11 2016/03/05 11:27:54 jperkin Exp $
 #
 
 VERSION=		0.2.8
 DISTNAME=		libp11-${VERSION}
+PKGREVISION=		1
 CATEGORIES=		security
 MASTER_SITES=		https://github.com/OpenSC/libp11/archive/
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2015/06/12 10:51:03 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2016/03/05 11:29:22 jperkin Exp $
 
 DISTNAME=	munge-0.5.11
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	security
 MASTER_SITES=	http://munge.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2

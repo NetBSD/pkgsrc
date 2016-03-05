@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2014/12/09 14:37:06 khorben Exp $
+# $NetBSD: Makefile,v 1.4 2016/03/05 11:29:24 jperkin Exp $
 #
 
 DISTNAME=	pev-0.70
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pev/}
 
