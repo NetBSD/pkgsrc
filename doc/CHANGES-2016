@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.990 2016/03/05 05:36:13 taca Exp $
+$NetBSD: CHANGES-2016,v 1.991 2016/03/05 06:17:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1344,3 +1344,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ruby-railties32 to 3.2.22.2 [taca 2016-03-05]
 	Updated www/ruby-rails32 to 3.2.22.2 [taca 2016-03-05]
 	Removed www/ruby-rack-mount [taca 2016-03-05]
+	Updated www/contao35 to 3.5.8 [taca 2016-03-05]
