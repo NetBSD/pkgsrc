@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.31 2015/01/16 11:47:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.32 2016/03/05 01:12:13 ryoon Exp $
 share/examples/docbook-xsl/titlepage.xml
 share/examples/docbook-xsl/titlepage.xsl
 share/xsl/docbook/VERSION
 share/xsl/docbook/VERSION.xsl
 share/xsl/docbook/catalog.xml
+share/xsl/docbook/common/addns.xsl
 share/xsl/docbook/common/af.xml
 share/xsl/docbook/common/am.xml
 share/xsl/docbook/common/ar.xml
@@ -16,6 +17,7 @@ share/xsl/docbook/common/bg.xml
 share/xsl/docbook/common/bn.xml
 share/xsl/docbook/common/bn_in.xml
 share/xsl/docbook/common/bs.xml
+share/xsl/docbook/common/build.xml
 share/xsl/docbook/common/ca.xml
 share/xsl/docbook/common/charmap.xml
 share/xsl/docbook/common/charmap.xsl
@@ -96,6 +98,7 @@ share/xsl/docbook/common/titles.xsl
 share/xsl/docbook/common/tl.xml
 share/xsl/docbook/common/tr.xml
 share/xsl/docbook/common/uk.xml
+share/xsl/docbook/common/ur.xml
 share/xsl/docbook/common/utility.xml
 share/xsl/docbook/common/utility.xsl
 share/xsl/docbook/common/vi.xml
@@ -103,6 +106,7 @@ share/xsl/docbook/common/xh.xml
 share/xsl/docbook/common/zh.xml
 share/xsl/docbook/common/zh_cn.xml
 share/xsl/docbook/common/zh_tw.xml
+share/xsl/docbook/eclipse/build.xml
 share/xsl/docbook/eclipse/eclipse.xsl
 share/xsl/docbook/eclipse/eclipse3.xsl
 share/xsl/docbook/eclipse/profile-eclipse.xsl
@@ -117,6 +121,7 @@ share/xsl/docbook/fo/axf.xsl
 share/xsl/docbook/fo/biblio-iso690.xsl
 share/xsl/docbook/fo/biblio.xsl
 share/xsl/docbook/fo/block.xsl
+share/xsl/docbook/fo/build.xml
 share/xsl/docbook/fo/callout.xsl
 share/xsl/docbook/fo/component.xsl
 share/xsl/docbook/fo/division.xsl
@@ -147,6 +152,7 @@ share/xsl/docbook/fo/pi.xml
 share/xsl/docbook/fo/pi.xsl
 share/xsl/docbook/fo/profile-docbook.xsl
 share/xsl/docbook/fo/ptc.xsl
+share/xsl/docbook/fo/publishers.xsl
 share/xsl/docbook/fo/qandaset.xsl
 share/xsl/docbook/fo/refentry.xsl
 share/xsl/docbook/fo/sections.xsl
@@ -197,6 +203,7 @@ share/xsl/docbook/html/autotoc.xsl
 share/xsl/docbook/html/biblio-iso690.xsl
 share/xsl/docbook/html/biblio.xsl
 share/xsl/docbook/html/block.xsl
+share/xsl/docbook/html/build.xml
 share/xsl/docbook/html/callout.xsl
 share/xsl/docbook/html/changebars.xsl
 share/xsl/docbook/html/chunk-changebars.xsl
@@ -222,6 +229,7 @@ share/xsl/docbook/html/htmltbl.xsl
 share/xsl/docbook/html/index.xsl
 share/xsl/docbook/html/info.xsl
 share/xsl/docbook/html/inline.xsl
+share/xsl/docbook/html/its.xsl
 share/xsl/docbook/html/keywords.xsl
 share/xsl/docbook/html/lists.xsl
 share/xsl/docbook/html/maketoc.xsl
@@ -237,6 +245,7 @@ share/xsl/docbook/html/profile-chunk-code.xsl
 share/xsl/docbook/html/profile-chunk.xsl
 share/xsl/docbook/html/profile-docbook.xsl
 share/xsl/docbook/html/profile-onechunk.xsl
+share/xsl/docbook/html/publishers.xsl
 share/xsl/docbook/html/qandaset.xsl
 share/xsl/docbook/html/refentry.xsl
 share/xsl/docbook/html/sections.xsl
@@ -249,6 +258,7 @@ share/xsl/docbook/html/titlepage.xsl
 share/xsl/docbook/html/toc.xsl
 share/xsl/docbook/html/verbatim.xsl
 share/xsl/docbook/html/xref.xsl
+share/xsl/docbook/htmlhelp/build.xml
 share/xsl/docbook/htmlhelp/htmlhelp-common.xsl
 share/xsl/docbook/htmlhelp/htmlhelp.xsl
 share/xsl/docbook/htmlhelp/profile-htmlhelp-common.xsl
@@ -362,11 +372,14 @@ share/xsl/docbook/images/warning.gif
 share/xsl/docbook/images/warning.png
 share/xsl/docbook/images/warning.svg
 share/xsl/docbook/images/warning.tif
+share/xsl/docbook/javahelp/build.xml
 share/xsl/docbook/javahelp/javahelp.xsl
 share/xsl/docbook/javahelp/profile-javahelp.xsl
+share/xsl/docbook/lib/build.xml
 share/xsl/docbook/lib/lib.xsl
 share/xsl/docbook/manpages/ChangeLog.20020917
 share/xsl/docbook/manpages/block.xsl
+share/xsl/docbook/manpages/build.xml
 share/xsl/docbook/manpages/charmap.groff.xsl
 share/xsl/docbook/manpages/docbook.xsl
 share/xsl/docbook/manpages/endnotes.xsl
@@ -383,6 +396,7 @@ share/xsl/docbook/manpages/profile-docbook.xsl
 share/xsl/docbook/manpages/refentry.xsl
 share/xsl/docbook/manpages/synop.xsl
 share/xsl/docbook/manpages/table.xsl
+share/xsl/docbook/manpages/tbl.xsl
 share/xsl/docbook/manpages/utility.xsl
 share/xsl/docbook/params/abstract.notitle.enabled.xml
 share/xsl/docbook/params/abstract.properties.xml
@@ -409,6 +423,7 @@ share/xsl/docbook/params/arbortext.extensions.xml
 share/xsl/docbook/params/article.appendix.title.properties.xml
 share/xsl/docbook/params/author.othername.in.middle.xml
 share/xsl/docbook/params/autolayout-file.xml
+share/xsl/docbook/params/autolink.index.see.xml
 share/xsl/docbook/params/autotoc.label.in.hyperlink.xml
 share/xsl/docbook/params/autotoc.label.separator.xml
 share/xsl/docbook/params/axf.extensions.xml
@@ -504,6 +519,7 @@ share/xsl/docbook/params/default.table.frame.xml
 share/xsl/docbook/params/default.table.rules.xml
 share/xsl/docbook/params/default.table.width.xml
 share/xsl/docbook/params/default.units.xml
+share/xsl/docbook/params/dialogue.properties.xml
 share/xsl/docbook/params/dingbat.font.family.xml
 share/xsl/docbook/params/disable.collapsible.xml
 share/xsl/docbook/params/disable.incremental.xml
@@ -512,6 +528,7 @@ share/xsl/docbook/params/docbook.css.source.xml
 share/xsl/docbook/params/double.sided.xml
 share/xsl/docbook/params/draft.mode.xml
 share/xsl/docbook/params/draft.watermark.image.xml
+share/xsl/docbook/params/drama.properties.xml
 share/xsl/docbook/params/dry-run.xml
 share/xsl/docbook/params/dynamic.toc.xml
 share/xsl/docbook/params/ebnf.assignment.xml
@@ -712,10 +729,12 @@ share/xsl/docbook/params/informalexample.properties.xml
 share/xsl/docbook/params/informalfigure.properties.xml
 share/xsl/docbook/params/informaltable.properties.xml
 share/xsl/docbook/params/inherit.keywords.xml
+share/xsl/docbook/params/inlinestagedir.properties.xml
 share/xsl/docbook/params/inner.region.content.properties.xml
 share/xsl/docbook/params/insert.link.page.number.xml
 share/xsl/docbook/params/insert.olink.page.number.xml
 share/xsl/docbook/params/insert.olink.pdf.frag.xml
+share/xsl/docbook/params/insert.xref.page.number.para.xml
 share/xsl/docbook/params/insert.xref.page.number.xml
 share/xsl/docbook/params/itemizedlist.label.properties.xml
 share/xsl/docbook/params/itemizedlist.label.width.xml
@@ -729,11 +748,14 @@ share/xsl/docbook/params/l10n.gentext.use.xref.language.xml
 share/xsl/docbook/params/l10n.lang.value.rfc.compliant.xml
 share/xsl/docbook/params/label.from.part.xml
 share/xsl/docbook/params/line-height.xml
+share/xsl/docbook/params/line.properties.xml
+share/xsl/docbook/params/linegroup.properties.xml
 share/xsl/docbook/params/linenumbering.everyNth.xml
 share/xsl/docbook/params/linenumbering.extension.xml
 share/xsl/docbook/params/linenumbering.separator.xml
 share/xsl/docbook/params/linenumbering.width.xml
 share/xsl/docbook/params/link.mailto.url.xml
+share/xsl/docbook/params/link.to.self.for.mediaobject.xml
 share/xsl/docbook/params/list.block.properties.xml
 share/xsl/docbook/params/list.block.spacing.xml
 share/xsl/docbook/params/list.item.spacing.xml
@@ -800,6 +822,7 @@ share/xsl/docbook/params/margin.note.float.type.xml
 share/xsl/docbook/params/margin.note.properties.xml
 share/xsl/docbook/params/margin.note.title.properties.xml
 share/xsl/docbook/params/margin.note.width.xml
+share/xsl/docbook/params/mark.optional.procedure.steps.xml
 share/xsl/docbook/params/marker.section.level.xml
 share/xsl/docbook/params/menuchoice.menu.separator.xml
 share/xsl/docbook/params/menuchoice.separator.xml
@@ -873,6 +896,7 @@ share/xsl/docbook/params/pgwide.properties.xml
 share/xsl/docbook/params/phrase.propagates.style.xml
 share/xsl/docbook/params/pixels.per.inch.xml
 share/xsl/docbook/params/plus.image.xml
+share/xsl/docbook/params/poetry.properties.xml
 share/xsl/docbook/params/points.per.em.xml
 share/xsl/docbook/params/preface.autolabel.xml
 share/xsl/docbook/params/prefer.internal.olink.xml
@@ -888,6 +912,7 @@ share/xsl/docbook/params/profile.condition.xml
 share/xsl/docbook/params/profile.conformance.xml
 share/xsl/docbook/params/profile.lang.xml
 share/xsl/docbook/params/profile.os.xml
+share/xsl/docbook/params/profile.outputformat.xml
 share/xsl/docbook/params/profile.revision.xml
 share/xsl/docbook/params/profile.revisionflag.xml
 share/xsl/docbook/params/profile.role.xml
@@ -898,6 +923,7 @@ share/xsl/docbook/params/profile.userlevel.xml
 share/xsl/docbook/params/profile.value.xml
 share/xsl/docbook/params/profile.vendor.xml
 share/xsl/docbook/params/profile.wordsize.xml
+share/xsl/docbook/params/publishers.properties.xml
 share/xsl/docbook/params/punct.honorific.xml
 share/xsl/docbook/params/qanda.defaultlabel.xml
 share/xsl/docbook/params/qanda.in.toc.xml
@@ -984,6 +1010,7 @@ share/xsl/docbook/params/segmentedlist.as.table.xml
 share/xsl/docbook/params/sequential.links.xml
 share/xsl/docbook/params/shade.verbatim.style.xml
 share/xsl/docbook/params/shade.verbatim.xml
+share/xsl/docbook/params/show.bookmarks.xml
 share/xsl/docbook/params/show.comments.xml
 share/xsl/docbook/params/show.foil.number.xml
 share/xsl/docbook/params/show.revisionflag.xml
@@ -1013,8 +1040,10 @@ share/xsl/docbook/params/slidy.slidy.css.xml
 share/xsl/docbook/params/slidy.slidy.js.xml
 share/xsl/docbook/params/slidy.user.css.xml
 share/xsl/docbook/params/spacing.paras.xml
+share/xsl/docbook/params/speaker.properties.xml
 share/xsl/docbook/params/speakernote.properties.xml
 share/xsl/docbook/params/speakernotes.properties.xml
+share/xsl/docbook/params/stagedir.properties.xml
 share/xsl/docbook/params/subscript.properties.xml
 share/xsl/docbook/params/superscript.properties.xml
 share/xsl/docbook/params/suppress.footer.navigation.xml
@@ -1067,6 +1096,7 @@ share/xsl/docbook/params/toc.hide.show.xml
 share/xsl/docbook/params/toc.html.xml
 share/xsl/docbook/params/toc.image.xml
 share/xsl/docbook/params/toc.indent.width.xml
+share/xsl/docbook/params/toc.leader.properties.xml
 share/xsl/docbook/params/toc.line.properties.xml
 share/xsl/docbook/params/toc.list.type.xml
 share/xsl/docbook/params/toc.margin.properties.xml
@@ -1125,6 +1155,7 @@ share/xsl/docbook/params/xref.label-title.separator.xml
 share/xsl/docbook/params/xref.properties.xml
 share/xsl/docbook/params/xref.title-page.separator.xml
 share/xsl/docbook/params/xref.with.number.and.title.xml
+share/xsl/docbook/params/xsl1.1.bookmarks.xml
 share/xsl/docbook/profiling/profile-mode.xsl
 share/xsl/docbook/profiling/profile.xsl
 share/xsl/docbook/profiling/strip-attributes.xsl
@@ -1396,6 +1427,7 @@ share/xsl/docbook/slides/xhtml/plain.xsl
 share/xsl/docbook/slides/xhtml/s5.xsl
 share/xsl/docbook/slides/xhtml/slidy.xsl
 share/xsl/docbook/website/autolayout.xsl
+share/xsl/docbook/website/build.xml
 share/xsl/docbook/website/chunk-common.xsl
 share/xsl/docbook/website/chunk-tabular.xsl
 share/xsl/docbook/website/chunk-website.xsl
@@ -1422,6 +1454,7 @@ share/xsl/docbook/xhtml-1_1/autotoc.xsl
 share/xsl/docbook/xhtml-1_1/biblio-iso690.xsl
 share/xsl/docbook/xhtml-1_1/biblio.xsl
 share/xsl/docbook/xhtml-1_1/block.xsl
+share/xsl/docbook/xhtml-1_1/build.xml
 share/xsl/docbook/xhtml-1_1/callout.xsl
 share/xsl/docbook/xhtml-1_1/changebars.xsl
 share/xsl/docbook/xhtml-1_1/chunk-changebars.xsl
@@ -1447,6 +1480,7 @@ share/xsl/docbook/xhtml-1_1/htmltbl.xsl
 share/xsl/docbook/xhtml-1_1/index.xsl
 share/xsl/docbook/xhtml-1_1/info.xsl
 share/xsl/docbook/xhtml-1_1/inline.xsl
+share/xsl/docbook/xhtml-1_1/its.xsl
 share/xsl/docbook/xhtml-1_1/keywords.xsl
 share/xsl/docbook/xhtml-1_1/lists.xsl
 share/xsl/docbook/xhtml-1_1/maketoc.xsl
@@ -1460,6 +1494,7 @@ share/xsl/docbook/xhtml-1_1/profile-chunk-code.xsl
 share/xsl/docbook/xhtml-1_1/profile-chunk.xsl
 share/xsl/docbook/xhtml-1_1/profile-docbook.xsl
 share/xsl/docbook/xhtml-1_1/profile-onechunk.xsl
+share/xsl/docbook/xhtml-1_1/publishers.xsl
 share/xsl/docbook/xhtml-1_1/qandaset.xsl
 share/xsl/docbook/xhtml-1_1/refentry.xsl
 share/xsl/docbook/xhtml-1_1/sections.xsl
@@ -1481,6 +1516,7 @@ share/xsl/docbook/xhtml/autotoc.xsl
 share/xsl/docbook/xhtml/biblio-iso690.xsl
 share/xsl/docbook/xhtml/biblio.xsl
 share/xsl/docbook/xhtml/block.xsl
+share/xsl/docbook/xhtml/build.xml
 share/xsl/docbook/xhtml/callout.xsl
 share/xsl/docbook/xhtml/changebars.xsl
 share/xsl/docbook/xhtml/chunk-changebars.xsl
@@ -1507,6 +1543,7 @@ share/xsl/docbook/xhtml/htmltbl.xsl
 share/xsl/docbook/xhtml/index.xsl
 share/xsl/docbook/xhtml/info.xsl
 share/xsl/docbook/xhtml/inline.xsl
+share/xsl/docbook/xhtml/its.xsl
 share/xsl/docbook/xhtml/keywords.xsl
 share/xsl/docbook/xhtml/lists.xsl
 share/xsl/docbook/xhtml/maketoc.xsl
@@ -1520,6 +1557,7 @@ share/xsl/docbook/xhtml/profile-chunk-code.xsl
 share/xsl/docbook/xhtml/profile-chunk.xsl
 share/xsl/docbook/xhtml/profile-docbook.xsl
 share/xsl/docbook/xhtml/profile-onechunk.xsl
+share/xsl/docbook/xhtml/publishers.xsl
 share/xsl/docbook/xhtml/qandaset.xsl
 share/xsl/docbook/xhtml/refentry.xsl
 share/xsl/docbook/xhtml/sections.xsl
