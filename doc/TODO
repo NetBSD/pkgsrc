@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15531 2016/03/05 10:02:22 bsiegert Exp $
+$NetBSD: TODO,v 1.15532 2016/03/05 10:59:17 bsiegert Exp $
 
 Suggested new packages
 ======================
@@ -573,7 +573,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o desklaunch-1.1.7
 	o deskmenu-1.4.5
 	o dhcpcd-dbus-0.6.1
-	o diffstat-1.61
 	o digikam-4.12.0
 	o dinotrace-9.4d
 	o dmg2img-1.6.5
