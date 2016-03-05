@@ -1,11 +1,10 @@
-$NetBSD: distinfo,v 1.24 2016/01/19 12:18:24 ryoon Exp $
+$NetBSD: distinfo,v 1.25 2016/03/05 09:08:46 ryoon Exp $
 
-SHA1 (gdb-7.10.1.tar.gz) = f5a47daa50df3b79a73c7c717363ee3a7e040e07
-RMD160 (gdb-7.10.1.tar.gz) = a28765ef207459061165e64ea1a546047673c047
-SHA512 (gdb-7.10.1.tar.gz) = d32faddaab92dd407718dc3ee304a8f6267354f2ccad753d71b6ed9dd51524e2329eba13711f7ae4b690d81bc1510544fabc39b30328463930bd10a60b0939a0
-Size (gdb-7.10.1.tar.gz) = 34526368 bytes
+SHA1 (gdb-7.11.tar.gz) = 99f5795cf670e00a623266cb4ce59cc76ec6e5a2
+RMD160 (gdb-7.11.tar.gz) = 9181c3a79dc676d36e58162567051cf9f68d354d
+SHA512 (gdb-7.11.tar.gz) = 6854774bba73ecf02c4d8bb4e194b8fd8fd3c6c661cbead0b3b816b9d9f736df1b85f331a669808700b0ad0f945b58483fffb77d49f5b690e828a00f65c04893
+Size (gdb-7.11.tar.gz) = 35215975 bytes
 SHA1 (patch-ao) = fe55dc7245f438fccb7965ceb220be951f85a535
-SHA1 (patch-bfd_Makefile.in) = da5b56c9854e58d462f08577aac4dde4bb5b1830
 SHA1 (patch-gdb_bsd-kvm.c) = 837614b107181f79fd5c018ebd76a9010e5ab602
 SHA1 (patch-gdb_ppcnbsd-nat.c) = 94c9f552fd00e3641e7a0fa8372de538b4571d0b
 SHA1 (patch-opcodes_i386-dis_c) = 57b2b2ce85567faf112ec9f435b9aed0ffc943fb
