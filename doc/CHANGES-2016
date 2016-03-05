@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.983 2016/03/05 03:33:08 wen Exp $
+$NetBSD: CHANGES-2016,v 1.984 2016/03/05 03:39:23 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1325,6 +1325,7 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/docbook-xsl to 1.79.1 [ryoon 2016-03-05]
 	Updated textproc/dbtoepub to 1.79.1 [ryoon 2016-03-05]
 	Updated www/p5-HTTP-Proxy to 0.304 [wen 2016-03-05]
-	Updated math/p5-Spreadsheet-ParseExcel to 0.65 [wen 2016-03-04]
-	Updated time/p5-DateTime-Set to 0.3600 [wen 2016-03-04]
-	Updated textproc/p5-Text-Affixes to 0.09 [wen 2016-03-04]
+	Updated math/p5-Spreadsheet-ParseExcel to 0.65 [wen 2016-03-05]
+	Updated time/p5-DateTime-Set to 0.3600 [wen 2016-03-05]
+	Updated textproc/p5-Text-Affixes to 0.09 [wen 2016-03-05]
+	Updated textproc/p5-Text-CSV-Encoded to 0.25 [wen 2016-03-05
