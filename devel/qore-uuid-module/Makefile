@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2014/12/30 15:54:32 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2016/03/05 11:28:25 jperkin Exp $
 
 DISTNAME=	qore-uuid-module-1.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=qore/}
 EXTRACT_SUFX=   .tar.bz2

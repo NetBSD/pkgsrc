@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2015/11/30 16:50:16 joerg Exp $
+# $NetBSD: Makefile,v 1.33 2016/03/05 11:28:02 jperkin Exp $
 
 DISTNAME=	qwt-5.2.3
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qwt/}
 EXTRACT_SUFX=	.tar.bz2

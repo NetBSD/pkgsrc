@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.59 2015/04/25 14:25:13 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.60 2016/03/05 11:27:59 jperkin Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -8,7 +8,7 @@ BUILDLINK_TREE+=	kdelibs
 KDELIBS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.kdelibs+=	kdelibs>=3.5.6<4
-BUILDLINK_ABI_DEPENDS.kdelibs+=	kdelibs>=3.5.10nb37
+BUILDLINK_ABI_DEPENDS.kdelibs+=	kdelibs>=3.5.10nb39
 BUILDLINK_PKGSRCDIR.kdelibs?=	../../x11/kdelibs3
 
 pkgbase := kdelibs

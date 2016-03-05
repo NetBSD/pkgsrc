@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.123 2016/02/05 16:08:54 prlw1 Exp $
+# $NetBSD: Makefile,v 1.124 2016/03/05 11:28:51 jperkin Exp $
 
 DISTNAME=	Mail-SpamAssassin-3.4.1
 PKGNAME=	spamassassin-3.4.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_APACHE:=spamassassin/source/}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}

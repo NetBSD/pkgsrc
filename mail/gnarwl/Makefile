@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2016/01/11 22:55:49 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2016/03/05 11:28:48 jperkin Exp $
 
 DISTNAME=	gnarwl-3.6
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	http://www.onyxbits.de/sites/default/files/upload_cck/node/526/
 EXTRACT_SUFX=	.tgz
