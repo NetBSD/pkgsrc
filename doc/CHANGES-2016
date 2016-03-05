@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.988 2016/03/05 05:22:13 taca Exp $
+$NetBSD: CHANGES-2016,v 1.989 2016/03/05 05:30:35 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1335,3 +1335,11 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/php55 to 5.5.33 [taca 2016-03-05]
 	Updated lang/php56 to 5.6.19 [taca 2016-03-05]
 	Updated lang/php70 to 7.0.4 [taca 2016-03-05]
+	Updated devel/ruby-activesupport32 to 3.2.22.2 [taca 2016-03-05]
+	Updated devel/ruby-activemodel32 to 3.2.22.2 [taca 2016-03-05]
+	Updated databases/ruby-activerecord32 to 3.2.22.2 [taca 2016-03-05]
+	Updated www/ruby-activeresource32 to 3.2.22.2 [taca 2016-03-05]
+	Updated www/ruby-actionpack32 to 3.2.22.2 [taca 2016-03-05]
+	Updated mail/ruby-actionmailer32 to 3.2.22.2 [taca 2016-03-05]
+	Updated devel/ruby-railties32 to 3.2.22.2 [taca 2016-03-05]
+	Updated www/ruby-rails32 to 3.2.22.2 [taca 2016-03-05]
