@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2016/02/06 12:10:34 jaapb Exp $
+# $NetBSD: Makefile,v 1.12 2016/03/05 11:27:59 jperkin Exp $
 
 DISTNAME=	lablgtk-2.18.3
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	x11
 MASTER_SITES=	http://forge.ocamlcore.org/frs/download.php/1479/
 

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2015/04/13 08:10:29 manu Exp $
+# $NetBSD: Makefile,v 1.32 2016/03/05 11:29:34 jperkin Exp $
 #
 
 DISTNAME=	mod_auth_mellon-0.10.0
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//:S/_/-/g}
+PKGREVISION=	1
 #PKGREVISION=	1
 CATEGORIES=	www security
 MASTER_SITES=	https://github.com/UNINETT/mod_auth_mellon/releases/download/v${DISTNAME:C/.*-//}/

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.66 2015/04/25 14:23:16 tnn Exp $
+# $NetBSD: Makefile,v 1.67 2016/03/05 11:27:49 jperkin Exp $
 
 DISTNAME=	libkipi-${_KDE_VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 COMMENT=	KDE image plugin interface
 
