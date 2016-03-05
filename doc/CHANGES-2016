@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.984 2016/03/05 03:39:23 wen Exp $
+$NetBSD: CHANGES-2016,v 1.985 2016/03/05 03:48:49 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1328,4 +1328,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated math/p5-Spreadsheet-ParseExcel to 0.65 [wen 2016-03-05]
 	Updated time/p5-DateTime-Set to 0.3600 [wen 2016-03-05]
 	Updated textproc/p5-Text-Affixes to 0.09 [wen 2016-03-05]
-	Updated textproc/p5-Text-CSV-Encoded to 0.25 [wen 2016-03-05
+	Updated textproc/p5-Text-CSV-Encoded to 0.25 [wen 2016-03-05]
+	Updated textproc/p5-Text-CSV_XS to 1.22 [wen 2016-03-05]
