@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2014/09/25 19:18:01 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2016/03/05 11:29:24 jperkin Exp $
 
 DISTNAME=	pam_ssh_agent_auth-0.9.2
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pamsshagentauth/}
 EXTRACT_SUFX=	.tar.bz2

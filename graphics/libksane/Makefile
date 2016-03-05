@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2016/01/10 19:42:20 markd Exp $
+# $NetBSD: Makefile,v 1.32 2016/03/05 11:27:49 jperkin Exp $
 
 DISTNAME=	libksane-15.08.3
+PKGREVISION=	1
 CATEGORIES=	graphics
 COMMENT=	SANE Library interface for KDE
 MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.08.3/src/}

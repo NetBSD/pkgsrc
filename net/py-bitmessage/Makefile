@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/12/13 00:31:53 kamil Exp $
+# $NetBSD: Makefile,v 1.2 2016/03/05 11:29:11 jperkin Exp $
 
 GITHUB_PROJECT=	PyBitmessage
 DISTNAME=	${PYPKGPREFIX}-bitmessage-0.4.4
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Bitmessage/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}

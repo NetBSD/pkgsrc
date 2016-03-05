@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2014/02/12 23:18:31 tron Exp $
+# $NetBSD: Makefile,v 1.7 2016/03/05 11:29:19 jperkin Exp $
 
 PKGNAME=	${DISTNAME:S/cyrus-sasl/cy2-scram/}
-PKGREVISION=	2
+PKGREVISION=	3
 COMMENT=	Cyrus SASL SCRAM authentication plugin
 SASL_PLUGIN=	yes
 

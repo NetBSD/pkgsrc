@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2014/04/12 06:39:34 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2016/03/05 11:27:40 jperkin Exp $
 
 BUILDLINK_TREE+=	opusfile
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	opusfile
 OPUSFILE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.opusfile+=	opusfile>=0.5
+BUILDLINK_ABI_DEPENDS.opusfile?=	opusfile>=0.6nb2
 BUILDLINK_PKGSRCDIR.opusfile?=	../../audio/opusfile
 
 .include "../../security/openssl/buildlink3.mk"

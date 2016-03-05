@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2016/02/25 12:12:48 jperkin Exp $
+# $NetBSD: Makefile,v 1.50 2016/03/05 11:27:45 jperkin Exp $
 
+PKGREVISION= 1
 .include "../../devel/libevent/Makefile.common"
 
 PKGNAME=	libevent-${LIBEVENT_VERSION}

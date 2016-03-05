@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2015/08/31 14:31:05 nros Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2016/03/05 11:27:44 jperkin Exp $
 
 BUILDLINK_TREE+=	asio
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	asio
 ASIO_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.asio+=	asio>=1.10.4
-BUILDLINK_ABI_DEPENDS.asio+=	asio>=1.10.6
+BUILDLINK_ABI_DEPENDS.asio+=	asio>=1.10.6nb1
 BUILDLINK_PKGSRCDIR.asio?=	../../devel/asio
 BUILDLINK_DEPMETHOD.asio?=	build
 

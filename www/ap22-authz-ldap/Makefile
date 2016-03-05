@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2014/02/12 23:18:43 tron Exp $
+# $NetBSD: Makefile,v 1.3 2016/03/05 11:29:35 jperkin Exp $
 #
 
 DISTNAME=	mod_authz_ldap-0.30
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:C/^mod_//:C/_/-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://authzldap.othello.ch/download/
 

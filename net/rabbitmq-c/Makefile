@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2015/10/18 08:47:46 fhajny Exp $
+# $NetBSD: Makefile,v 1.10 2016/03/05 11:27:53 jperkin Exp $
 
 DISTNAME=	rabbitmq-c-0.7.1
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=alanxz/}
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2015/07/12 18:56:23 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2016/03/05 11:27:50 jperkin Exp $
 
 DISTNAME=	opendmarc-1.3.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=opendmarc/}
 

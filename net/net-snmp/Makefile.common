@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.4 2015/06/08 20:08:57 spz Exp $
+# $NetBSD: Makefile.common,v 1.5 2016/03/05 11:27:52 jperkin Exp $
 # used by net/net-snmp/Makefile
 # used by net/py-netsnmp/Makefile
 
 DISTNAME=	net-snmp-5.7.3
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=net-snmp/}
-PKGREVISION=	1
+PKGREVISION=	2
 
 HOMEPAGE=	http://www.net-snmp.org/
 LICENSE=	modified-bsd

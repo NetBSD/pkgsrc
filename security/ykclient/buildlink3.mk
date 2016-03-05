@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2014/02/12 23:18:37 tron Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2016/03/05 11:27:55 jperkin Exp $
 
 BUILDLINK_TREE+=	ykclient
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ykclient
 YKCLIENT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ykclient+=	ykclient>=2.7
-BUILDLINK_ABI_DEPENDS.ykclient?=	ykclient>=2.11nb1
+BUILDLINK_ABI_DEPENDS.ykclient?=	ykclient>=2.13nb1
 BUILDLINK_PKGSRCDIR.ykclient?=	../../security/ykclient
 
 .include "../../www/curl/buildlink3.mk"

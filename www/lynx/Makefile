@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.120 2015/08/18 07:31:19 wiz Exp $
+# $NetBSD: Makefile,v 1.121 2016/03/05 11:29:38 jperkin Exp $
 
 DISTNAME=	lynx2.8.8rel.2
 PKGNAME=	${DISTNAME:S/lynx/lynx-/:S/rel//}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://lynx.isc.org/${SUBDIR:Q}/ \
 		ftp://ftp.cyf-kr.edu.pl/pub/unix/lynx/${SUBDIR:Q}/

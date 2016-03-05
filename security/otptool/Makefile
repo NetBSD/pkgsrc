@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2014/02/12 23:18:34 tron Exp $
+# $NetBSD: Makefile,v 1.8 2016/03/05 11:29:23 jperkin Exp $
 
 DISTNAME=	mod_authn_otp-${DISTVERS}
 PKGNAME=	otptool-${DISTVERS}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	http://mod-authn-otp.googlecode.com/files/
 LICENSE=	apache-2.0

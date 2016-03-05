@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2015/10/29 16:34:14 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2016/03/05 11:29:32 jperkin Exp $
 
 SYSLOG_MOD=		smtp
 SYSLOG_MOD_DIR=		afsmtp
 COMMENT=		Syslog-ng SMTP module
+PKGREVISION=		1
 
 .include "../../sysutils/syslog-ng/Makefile.module"
 

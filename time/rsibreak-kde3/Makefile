@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2015/06/12 10:51:46 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2016/03/05 11:29:34 jperkin Exp $
 
 DISTNAME=		rsibreak-0.8.0
 PKGNAME=		rsibreak-0.8.0
-PKGREVISION=		35
+PKGREVISION=		36
 CATEGORIES=		time kde
 MASTER_SITES=		http://www.rsibreak.org/files/
 EXTRACT_SUFX=           .tar.bz2

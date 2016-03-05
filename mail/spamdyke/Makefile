@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2015/05/03 14:22:08 schmonz Exp $
+# $NetBSD: Makefile,v 1.35 2016/03/05 11:28:51 jperkin Exp $
 #
 
 DISTNAME=		spamdyke-5.0.1
+PKGREVISION=		1
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}releases/
 EXTRACT_SUFX=		.tgz

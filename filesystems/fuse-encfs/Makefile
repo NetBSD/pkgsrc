@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2016/02/25 12:59:32 jperkin Exp $
+# $NetBSD: Makefile,v 1.12 2016/03/05 11:28:29 jperkin Exp $
 #
 
 DISTNAME=	encfs-1.2.0-2
 PKGNAME=	fuse-${DISTNAME:S/-2/.2/}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	filesystems
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=encfs/}
 EXTRACT_SUFX=	.tgz

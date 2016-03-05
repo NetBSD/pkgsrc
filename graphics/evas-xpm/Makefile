@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2014/02/12 23:18:00 tron Exp $
+# $NetBSD: Makefile,v 1.14 2016/03/05 11:27:48 jperkin Exp $
 
 PKGNAME=	evas-xpm-${EVAS_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	Evas XPM image loader
 
 EVAS_IMAGE_LOADERS=	xpm

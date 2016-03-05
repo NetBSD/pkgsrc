@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2014/02/12 23:18:42 tron Exp $
+# $NetBSD: Makefile,v 1.4 2016/03/05 11:27:57 jperkin Exp $
 #
 
 DISTNAME=	libgcal-0.9.6
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	time
 MASTER_SITES=	http://libgcal.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2

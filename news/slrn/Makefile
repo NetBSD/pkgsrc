@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.59 2014/08/23 09:34:48 obache Exp $
+# $NetBSD: Makefile,v 1.60 2016/03/05 11:29:15 jperkin Exp $
 
 DISTNAME=	slrn-1.0.1
+PKGREVISION=	1
 CATEGORIES=	news
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=slrn/}
 

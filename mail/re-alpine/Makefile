@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2016/02/25 15:00:51 jperkin Exp $
+# $NetBSD: Makefile,v 1.15 2016/03/05 11:28:50 jperkin Exp $
 #
 
 DISTNAME=	re-alpine-2.02
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=re-alpine/}
 EXTRACT_SUFX=	.tar.bz2
