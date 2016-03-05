@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2002/12/14 04:34:40 jschauma Exp $
+$NetBSD: patch-ab,v 1.2 2016/03/05 15:08:30 bsiegert Exp $
+
+Add man page
 
 --- /dev/null	Fri Dec 13 23:11:57 2002
 +++ grepjar.1	Fri Dec 13 23:21:48 2002
