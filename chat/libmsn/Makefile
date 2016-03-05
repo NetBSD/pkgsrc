@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2014/02/12 23:17:36 tron Exp $
+# $NetBSD: Makefile,v 1.9 2016/03/05 11:27:41 jperkin Exp $
 
 DISTNAME=	libmsn-4.2.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libmsn/}
 EXTRACT_SUFX=	.tar.bz2

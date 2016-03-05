@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2015/11/18 14:19:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.22 2016/03/05 11:28:40 jperkin Exp $
 
 DISTNAME=		libsixel-1.4.11
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_GITHUB:=saitoha/}
 GITHUB_PROJECT=		libsixel
