@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2015/12/05 21:25:57 adam Exp $
+# $NetBSD: Makefile,v 1.15 2016/03/05 11:29:24 jperkin Exp $
 
 DISTNAME=	SSLCrypto-0.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	security python
 MASTER_SITES=	http://www.freenet.org.nz/python/SSLCrypto/
 

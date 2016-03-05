@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2014/02/12 23:18:09 tron Exp $
+# $NetBSD: Makefile,v 1.19 2016/03/05 11:28:50 jperkin Exp $
 #
 
 DISTNAME=	pulsar-0.1.1
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pulsar/}
 EXTRACT_SUFX=	.tar.bz2

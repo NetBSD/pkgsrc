@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2016/02/25 08:27:04 jperkin Exp $
+# $NetBSD: Makefile,v 1.41 2016/03/05 11:29:12 jperkin Exp $
 
 DISTNAME=		tnftp-20151004
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		# empty
 DISTFILES=		# empty

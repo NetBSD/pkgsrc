@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2014/12/30 15:52:04 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2016/03/05 11:27:56 jperkin Exp $
 
 DISTNAME=	qore-yaml-module-0.4
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	textproc
 MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=qore/}
 EXTRACT_SUFX=   .tar.bz2

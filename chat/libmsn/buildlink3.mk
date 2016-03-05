@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2014/02/12 23:17:36 tron Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2016/03/05 11:27:41 jperkin Exp $
 
 BUILDLINK_TREE+=	libmsn
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libmsn
 LIBMSN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libmsn+=	libmsn>=4.0beta2
-BUILDLINK_ABI_DEPENDS.libmsn+=	libmsn>=4.2.1nb2
+BUILDLINK_ABI_DEPENDS.libmsn+=	libmsn>=4.2.1nb3
 BUILDLINK_PKGSRCDIR.libmsn?=	../../chat/libmsn
 
 .include "../../security/openssl/buildlink3.mk"

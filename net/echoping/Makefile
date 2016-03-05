@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2015/04/25 09:16:49 mef Exp $
+# $NetBSD: Makefile,v 1.30 2016/03/05 11:29:03 jperkin Exp $
 #
 
 DISTNAME=	echoping-6.0.2
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=echoping/}
 

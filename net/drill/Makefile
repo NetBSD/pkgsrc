@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2015/03/14 14:41:07 tnn Exp $
+# $NetBSD: Makefile,v 1.12 2016/03/05 11:29:03 jperkin Exp $
 
 VERSION=	1.6.17
 DISTNAME=	ldns-${VERSION}
 PKGNAME=	drill-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.nlnetlabs.nl/downloads/ldns/
 

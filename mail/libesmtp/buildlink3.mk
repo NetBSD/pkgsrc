@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.17 2014/02/12 23:18:08 tron Exp $
+# $NetBSD: buildlink3.mk,v 1.18 2016/03/05 11:27:50 jperkin Exp $
 
 BUILDLINK_TREE+=	libesmtp
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libesmtp
 LIBESMTP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libesmtp+=	libesmtp>=1.0rc1nb1
-BUILDLINK_ABI_DEPENDS.libesmtp+=	libesmtp>=1.0.6nb2
+BUILDLINK_ABI_DEPENDS.libesmtp+=	libesmtp>=1.0.6nb3
 BUILDLINK_PKGSRCDIR.libesmtp?=	../../mail/libesmtp
 
 LIBESMTP=	-lesmtp

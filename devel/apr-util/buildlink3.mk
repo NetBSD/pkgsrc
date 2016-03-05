@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2014/02/12 23:17:45 tron Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2016/03/05 11:27:44 jperkin Exp $
 
 BUILDLINK_TREE+=	apr-util
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	apr-util
 APR_UTIL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.apr-util+=	apr-util>=1.2.8
-BUILDLINK_ABI_DEPENDS.apr-util+=	apr-util>=1.5.3nb2
+BUILDLINK_ABI_DEPENDS.apr-util+=	apr-util>=1.5.4nb4
 BUILDLINK_PKGSRCDIR.apr-util?=	../../devel/apr-util
 
 BUILDLINK_FILES.apr-util+=	bin/apu-1-config

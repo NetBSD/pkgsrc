@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2014/02/12 23:18:36 tron Exp $
+# $NetBSD: Makefile,v 1.36 2016/03/05 11:29:26 jperkin Exp $
 
 DISTNAME=	scanssh-2.1
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	security
 MASTER_SITES=	http://monkey.org/~provos/
 

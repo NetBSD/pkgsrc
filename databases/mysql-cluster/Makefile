@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2015/09/07 04:33:06 jnemeth Exp $
+# $NetBSD: Makefile,v 1.10 2016/03/05 11:27:42 jperkin Exp $
 
 PKGNAME=		${DISTNAME:S/-gpl//}
+PKGREVISION=		1
 COMMENT=		MySQL Cluster 7.4, a free SQL clustered database
 
 CONFLICTS=		mysql*-{client,server}-[0-9]*

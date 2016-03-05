@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2014/02/12 23:17:46 tron Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2016/03/05 11:27:44 jperkin Exp $
 
 BUILDLINK_TREE+=	eet
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	eet
 EET_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.eet+=	eet>=1.7.7
-BUILDLINK_ABI_DEPENDS.eet?=	eet>=1.7.7nb1
+BUILDLINK_ABI_DEPENDS.eet?=	eet>=1.7.7nb2
 BUILDLINK_PKGSRCDIR.eet?=	../../devel/eet
 
 .include "../../devel/eina/buildlink3.mk"

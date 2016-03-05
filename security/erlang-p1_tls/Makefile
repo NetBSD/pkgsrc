@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2016/01/16 17:31:45 fhajny Exp $
+# $NetBSD: Makefile,v 1.3 2016/03/05 11:29:20 jperkin Exp $
 
 DISTNAME=	p1_tls-1.0.0
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 

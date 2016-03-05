@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2014/02/12 23:18:37 tron Exp $
+# $NetBSD: Makefile,v 1.14 2016/03/05 11:29:26 jperkin Exp $
 #
 
 DISTNAME=		starttls-0.10
-PKGREVISION=		8
+PKGREVISION=		9
 CATEGORIES=		security
 MASTER_SITES=		ftp://opaopa.org/pub/elisp/
 

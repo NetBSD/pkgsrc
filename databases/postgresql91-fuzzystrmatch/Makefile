@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2014/02/23 11:25:52 adam Exp $
+# $NetBSD: Makefile,v 1.10 2016/03/05 11:28:13 jperkin Exp $
 
 PKGNAME=	${DISTNAME:C/-/91-fuzzystrmatch-/}
+PKGREVISION=	1
 COMMENT=	PostgreSQL fuzzystrmatch contribution
 
 DEPENDS+=	postgresql91-server>=${PKGVERSION_NOREV}:../../databases/postgresql91-server

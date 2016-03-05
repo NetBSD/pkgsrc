@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2014/02/12 23:17:47 tron Exp $
+# $NetBSD: Makefile,v 1.43 2016/03/05 11:28:22 jperkin Exp $
 #
 
 DISTNAME=	isect-1.6.2
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=isectd/}
 

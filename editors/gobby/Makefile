@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2015/11/03 19:10:07 joerg Exp $
+# $NetBSD: Makefile,v 1.42 2016/03/05 11:28:27 jperkin Exp $
 
 DISTNAME=	gobby-0.4.12
-PKGREVISION=	23
+PKGREVISION=	24
 CATEGORIES=	editors
 MASTER_SITES=	http://releases.0x539.de/gobby/
 

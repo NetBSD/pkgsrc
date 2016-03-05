@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2014/11/21 23:22:17 mef Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2016/03/05 11:27:40 jperkin Exp $
 
 BUILDLINK_TREE+=	libmusicbrainz
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libmusicbrainz
 LIBMUSICBRAINZ_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libmusicbrainz+=	libmusicbrainz>=3.0.0
-BUILDLINK_ABI_DEPENDS.libmusicbrainz+=	libmusicbrainz>=3.0.3nb4
+BUILDLINK_ABI_DEPENDS.libmusicbrainz+=	libmusicbrainz>=3.0.3nb5
 BUILDLINK_PKGSRCDIR.libmusicbrainz?=	../../audio/libmusicbrainz
 
 .include "../../audio/libdiscid/buildlink3.mk"

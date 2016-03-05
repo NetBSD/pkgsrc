@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2015/10/10 01:58:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.42 2016/03/05 11:28:10 jperkin Exp $
 #
 
 DISTNAME=	libopensync-plugin-kdepim-0.22
-PKGREVISION=	37
+PKGREVISION=	38
 CATEGORIES=	comms
 MASTER_SITES=	http://www.opensync.org/download/releases/0.22/
 EXTRACT_SUFX=	.tar.bz2

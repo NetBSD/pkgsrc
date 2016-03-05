@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2014/02/12 23:18:20 tron Exp $
+# $NetBSD: Makefile,v 1.19 2016/03/05 11:29:05 jperkin Exp $
 
 DISTNAME=	gnugk-2.2.0
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openh323gk/}
 EXTRACT_SUFX=	.tgz

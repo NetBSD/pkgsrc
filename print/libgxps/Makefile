@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2015/04/25 14:24:46 tnn Exp $
+# $NetBSD: Makefile,v 1.21 2016/03/05 11:29:17 jperkin Exp $
 #
 
 DISTNAME=	libgxps-0.2.2
-PKGREVISION=	16
+PKGREVISION=	17
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgxps/0.2/}
 EXTRACT_SUFX=	.tar.xz
