@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1013 2016/03/05 15:09:06 bsiegert Exp $
+$NetBSD: CHANGES-2016,v 1.1014 2016/03/05 15:38:00 gson Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1367,3 +1367,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-App-Cmd to 0.330 [wen 2016-03-05]
 	Updated editors/ed to 1.13 [bsiegert 2016-03-05]
 	Updated archivers/fastjar to 0.98 [bsiegert 2016-03-05]
+	Updated editors/emacs24 to 24.5nb9 [gson 2016-03-05]
+	Updated editors/emacs24-nox11 to 24.5nb1 [gson 2016-03-05]
