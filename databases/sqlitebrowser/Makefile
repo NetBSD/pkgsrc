@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2015/04/25 14:20:31 tnn Exp $
+# $NetBSD: Makefile,v 1.17 2016/03/05 07:26:58 ryoon Exp $
 
 DISTNAME=	sqlitebrowser_200_b1_src
 PKGNAME=	${DISTNAME:S/_200_b1_src/-2.0beta1/1}
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sqlitebrowser/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Qt4 lightweight GUI editor/viewer for SQLite Databases
-HOMEPAGE=	http://sqlitebrowser.sourceforge.net/
+HOMEPAGE=	http://sqlitebrowser.org/
 LICENSE=	public-domain
 
 WRKSRC=		${WRKDIR}/trunk/sqlitebrowser
