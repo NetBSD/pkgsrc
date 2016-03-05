@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15523 2016/03/05 01:54:42 wen Exp $
+$NetBSD: TODO,v 1.15524 2016/03/05 02:21:24 wen Exp $
 
 Suggested new packages
 ======================
@@ -1207,7 +1207,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-GraphViz-2.18
 	o p5-GraphViz2-2.34
 	o p5-Gtk2-1.223
-	o p5-HTTP-Proxy-0.304
 	o p5-HTTP-Server-EV-0.69
 	o p5-IO-Interface-1.09
 	o p5-IP-Country-3.03
