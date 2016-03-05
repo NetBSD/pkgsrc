@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 02:47:36 agc Exp $
-
-SHA1 (rack-mount-0.8.3.gem) = 42e7f96ace1c06fb657dcc18a64fb7bf5684f40c
-RMD160 (rack-mount-0.8.3.gem) = 4f0245d5a91c2747c18a3f0da7660dae2bea3586
-SHA512 (rack-mount-0.8.3.gem) = 993d1d3335ed3b7aed2665726969021119865b3b5310829ed8cf005a8ad2779d386afa75741880800e22ffc484e8837517a584e8072a6f8c3048cff9413093a6
-Size (rack-mount-0.8.3.gem) = 24576 bytes
