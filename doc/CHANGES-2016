@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1011 2016/03/05 12:43:42 wen Exp $
+$NetBSD: CHANGES-2016,v 1.1012 2016/03/05 14:43:54 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1365,3 +1365,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/dblatex to 0.3.7 [ryoon 2016-03-05]
 	Updated textproc/diffstat to 1.61 [bsiegert 2016-03-05]
 	Updated devel/p5-App-Cmd to 0.330 [wen 2016-03-05]
+	Updated editors/ed to 1.13 [bsiegert 2016-03-05]
