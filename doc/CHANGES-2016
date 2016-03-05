@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1012 2016/03/05 14:43:54 bsiegert Exp $
+$NetBSD: CHANGES-2016,v 1.1013 2016/03/05 15:09:06 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1366,3 +1366,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/diffstat to 1.61 [bsiegert 2016-03-05]
 	Updated devel/p5-App-Cmd to 0.330 [wen 2016-03-05]
 	Updated editors/ed to 1.13 [bsiegert 2016-03-05]
+	Updated archivers/fastjar to 0.98 [bsiegert 2016-03-05]
