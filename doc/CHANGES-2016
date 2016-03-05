@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.998 2016/03/05 07:59:07 wen Exp $
+$NetBSD: CHANGES-2016,v 1.999 2016/03/05 08:04:44 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -650,7 +650,7 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/ruby-rails32 to 3.2.22.1 [taca 2016-02-01]
 	Updated www/ruby-webrobots to 0.1.2 [taca 2016-02-01]
 	Updated audio/ruby-mp3info to 0.8.8 [taca 2016-02-01]
-	Updated filesystems/glusterfs to 3.7.7 [manu 2015-02-01]
+	Updated filesystems/glusterfs to 3.7.7 [manu 2016-02-01]
 	Added x11/tabbed version 0.6 [leot 2016-02-01]
 	Updated devel/gettext to 0.19.7 [adam 2016-02-01]
 	Updated lang/sbcl to 1.3.2 [asau 2016-02-01]
@@ -802,7 +802,7 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated x11/modular-xorg-xephyr to 1.18.1 [wiz 2016-02-09]
 	Updated audio/icecast to 2.4.3 [adam 2016-02-09]
 	Updated net/nagios-base to 4.0.8nb5 [bouyer 2016-02-09]
-	Updated filesystems/glusterfs to 3.7.8 [manu 2015-02-09]
+	Updated filesystems/glusterfs to 3.7.8 [manu 2016-02-09]
 	Updated net/libasyncns to 0.8 [mef 2016-02-09]
 	Updated net/lft to 3.73 [mef 2016-02-09]
 	Updated net/arping to 2.16 [mef 2016-02-09]
