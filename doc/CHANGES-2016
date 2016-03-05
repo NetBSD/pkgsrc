@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1000 2016/03/05 08:10:56 wen Exp $
+$NetBSD: CHANGES-2016,v 1.1001 2016/03/05 08:28:13 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1353,3 +1353,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated time/p5-DateTime-Format-MySQL to 0.06 [wen 2016-03-05]
 	Updated time/p5-DateTime-Format-Mail to 0.402 [wen 2016-03-05]
 	Updated time/p5-DateTime-Format-Epoch to 0.16 [wen 2016-03-05]
+	Updated time/p5-DateTime-Event-Recurrence to 0.18 [wen 2016-03-05]
