@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2016/02/26 10:24:13 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2016/03/05 11:29:32 jperkin Exp $
 
 DISTNAME=	systester-1.5.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=systester/}
 

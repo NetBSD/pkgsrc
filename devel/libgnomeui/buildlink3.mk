@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.58 2015/04/25 14:20:36 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.59 2016/03/05 11:27:45 jperkin Exp $
 
 BUILDLINK_TREE+=	libgnomeui
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libgnomeui
 LIBGNOMEUI_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libgnomeui+=		libgnomeui>=2.8.0
-BUILDLINK_ABI_DEPENDS.libgnomeui+=	libgnomeui>=2.24.5nb28
+BUILDLINK_ABI_DEPENDS.libgnomeui+=	libgnomeui>=2.24.5nb30
 BUILDLINK_PKGSRCDIR.libgnomeui?=	../../devel/libgnomeui
 
 .include "../../devel/GConf/buildlink3.mk"

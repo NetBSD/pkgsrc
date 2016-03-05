@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2015/04/25 14:23:04 tnn Exp $
+# $NetBSD: Makefile,v 1.12 2016/03/05 11:28:35 jperkin Exp $
 #
 
 DISTNAME=	supertuxkart-0.8.1-src
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=supertuxkart/}
 EXTRACT_SUFX=	.tar.bz2

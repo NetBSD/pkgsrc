@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2015/04/25 14:24:49 tnn Exp $
+# $NetBSD: Makefile,v 1.30 2016/03/05 11:29:23 jperkin Exp $
 #
 
 DISTNAME=	openvas-client-2.0.1
-PKGREVISION=	24
+PKGREVISION=	25
 CATEGORIES=	security
 MASTER_SITES=	http://wald.intevation.org/frs/download.php/552/
 
