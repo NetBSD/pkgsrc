@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15522 2016/03/04 14:02:28 wen Exp $
+$NetBSD: TODO,v 1.15523 2016/03/05 01:54:42 wen Exp $
 
 Suggested new packages
 ======================
@@ -1213,7 +1213,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-IP-Country-3.03
 	o p5-JSON-Any-1.39
 	o p5-Locale-Currency-Format-1.33
-	o p5-Log-Handler-0.87
 	o p5-MIME-EncWords-1.014.3
 	o p5-Mac-SystemDirectory-0.06
 	o p5-Mail-IMAPClient-3.35
