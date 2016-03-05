@@ -1,0 +1,58 @@
+$NetBSD: patch-configure,v 1.1 2016/03/05 08:52:23 ryoon Exp $
+
+--- configure.orig	2016-02-15 02:29:37.000000000 +0000
++++ configure
+@@ -4490,6 +4490,11 @@ case $target_os in
+         ;;
+     netbsd)
+         disable symver
++        # NetBSD/macppc *really* needs PIC enabled.  ffmpeg has repeatedly
++        # broken time and time again because PIC support has been removed
++        # from architectures that need it.  So, if you touch this, please
++        # be careful and make sure that your changes work.
++        test "${subarch}" != "x86_32" && enable pic
+         oss_indev_extralibs="-lossaudio"
+         oss_outdev_extralibs="-lossaudio"
+         enabled gcc || check_ldflags -Wl,-zmuldefs
+@@ -4943,10 +4948,13 @@ check_cc <<EOF && enable attribute_may_a
+ union { int x; } __attribute__((may_alias)) x;
+ EOF
+ 
+-check_cc <<EOF || die "endian test failed"
+-unsigned int endian = 'B' << 24 | 'I' << 16 | 'G' << 8 | 'E';
++check_exec <<EOF || enable bigendian
++int main()
++{
++ long one = 1;
++ return !(*((char *)(&one)));
++}
+ EOF
+-od -t x1 $TMPO | grep -q '42 *49 *47 *45' && enable bigendian
+ 
+ if ! enabled ppc64 || enabled bigendian; then
+     disable vsx
+@@ -5851,6 +5859,7 @@ enabled xmm_clobber_test &&
+                   -Wl,--wrap,sws_scale ||
+     disable xmm_clobber_test
+ 
++if false; then
+ echo "X { local: *; };" > $TMPV
+ if test_ldflags -Wl,--version-script,$TMPV; then
+     append SHFLAGS '-Wl,--version-script,\$(SUBDIR)lib\$(NAME).ver'
+@@ -5866,6 +5875,7 @@ EOF
+ __asm__(".symver ff_foo,av_foo@VERSION");
+ void ff_foo(void) {}
+ EOF
++fi
+ 
+ if [ -z "$optflags" ]; then
+     if enabled small; then
+@@ -6512,7 +6522,7 @@ Version: $version
+ Requires: $(enabled shared || echo $requires)
+ Requires.private: $(enabled shared && echo $requires)
+ Conflicts:
+-Libs: -L\${libdir} $(enabled rpath && echo "-Wl,-rpath,\${libdir}") -l${shortname} $(enabled shared || echo $libs)
++Libs: -L\${libdir} -Wl,-R\${libdir} $(enabled rpath && echo "-Wl,-rpath,\${libdir}") -l${shortname} $(enabled shared || echo $libs)
+ Libs.private: $(enabled shared && echo $libs)
+ Cflags: -I\${includedir}
+ EOF
