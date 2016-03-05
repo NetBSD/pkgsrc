@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.51 2016/01/19 12:18:24 ryoon Exp $
+# $NetBSD: Makefile,v 1.52 2016/03/05 09:08:46 ryoon Exp $
 
-DISTNAME=	gdb-7.10.1
+DISTNAME=	gdb-7.11
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=gdb/}
 
@@ -19,6 +19,13 @@ INSTALL_TARGET=		install install-info
 TEST_TARGET=		check
 INFO_FILES=		yes
 CONFIGURE_ENV+=		CONFIG_LDFLAGS=${LDFLAGS:M*:Q}
+
+# In gdb/configure, depcomp is parsed with sed.
+SUBST_CLASSES+=			fix-depcomp
+SUBST_STAGE.fix-depcomp+=	pre-configure
+SUBST_MESSAGE.fix-depcomp+=	Read depcomp directly
+SUBST_FILES.fix-depcomp+=	gdb/configure
+SUBST_SED.fix-depcomp+=		-e 's,< ./depcomp,${PREFIX}/share/libtool/config/depcomp,'
 
 AUTO_MKDIRS=		yes
 
