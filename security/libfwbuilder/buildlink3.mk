@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.42 2015/04/25 14:24:49 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.43 2016/03/05 11:27:54 jperkin Exp $
 
 BUILDLINK_TREE+=	libfwbuilder
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libfwbuilder
 LIBFWBUILDER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libfwbuilder+=	libfwbuilder>=4.1.3
-BUILDLINK_ABI_DEPENDS.libfwbuilder+=	libfwbuilder>=4.1.3nb19
+BUILDLINK_ABI_DEPENDS.libfwbuilder+=	libfwbuilder>=4.1.3nb20
 BUILDLINK_PKGSRCDIR.libfwbuilder?=	../../security/libfwbuilder
 
 .include "../../devel/zlib/buildlink3.mk"

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2016/01/22 09:12:37 zafer Exp $
+# $NetBSD: Makefile,v 1.42 2016/03/05 11:28:06 jperkin Exp $
 #
 
 DISTNAME=	epic4-2.10.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	chat
 MASTER_SITES=	ftp://ftp.epicsol.org/pub/epic/EPIC4-PRODUCTION/ \
 		ftp://totem.fix.no/pub/mirrors/epic/EPIC4-PRODUCTION/
