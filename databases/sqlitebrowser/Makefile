@@ -1,31 +1,20 @@
-# $NetBSD: Makefile,v 1.17 2016/03/05 07:26:58 ryoon Exp $
+# $NetBSD: Makefile,v 1.18 2016/03/05 07:45:21 ryoon Exp $
 
-DISTNAME=	sqlitebrowser_200_b1_src
-PKGNAME=	${DISTNAME:S/_200_b1_src/-2.0beta1/1}
-PKGREVISION=	5
+DISTNAME=	sqlitebrowser-3.8.0
 CATEGORIES=	databases x11
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sqlitebrowser/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=sqlitebrowser/}
+GITHUB_PROJECT=	sqlitebrowser
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Qt4 lightweight GUI editor/viewer for SQLite Databases
 HOMEPAGE=	http://sqlitebrowser.org/
-LICENSE=	public-domain
-
-WRKSRC=		${WRKDIR}/trunk/sqlitebrowser
+LICENSE=	mpl-2.0 OR gnu-gpl-v3
 
 USE_LANGUAGES=	c c++
-QMAKE=		${QTDIR}/bin/qmake
+USE_CMAKE=	yes
 
-INSTALLATION_DIRS=	bin
-
-BUILDLINK_DEPMETHOD.qt4-tools=	build
-
-do-configure:
-	cd ${WRKSRC} && ${QMAKE} QMAKE=${QMAKE:Q} sqlitedbbrowser.pro
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/sqlitebrowser/sqlitebrowser ${DESTDIR}${PREFIX}/bin
-
+.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

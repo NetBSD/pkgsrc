@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 01:56:35 agc Exp $
+$NetBSD: distinfo,v 1.7 2016/03/05 07:45:21 ryoon Exp $
 
-SHA1 (sqlitebrowser_200_b1_src.tar.gz) = e8e1a08a0f728df0984f0c08577c91863bf91b62
-RMD160 (sqlitebrowser_200_b1_src.tar.gz) = f5f1cf3f5d300a80a1cfec31a0f1631801f35ec3
-SHA512 (sqlitebrowser_200_b1_src.tar.gz) = 23eb86e4c69a78a4a87ab086d3aa2866fa95d49a99667b1f9d064022d732cc55f388dffed233bbd122a8818c2d84f5a095fd1711dfdcf060b89174da06633616
-Size (sqlitebrowser_200_b1_src.tar.gz) = 1136660 bytes
-SHA1 (patch-sqlitebrowser_sqlitedb.h) = a9e9a727fb1152ded78669ae76e7df9fa363646f
+SHA1 (sqlitebrowser-3.8.0.tar.gz) = 466ef6692c569e2e95158fcb6ac8a4f6ea38fc6f
+RMD160 (sqlitebrowser-3.8.0.tar.gz) = a4af8ecc97a02b042552f539ef67c907042f2c60
+SHA512 (sqlitebrowser-3.8.0.tar.gz) = 6e262e3bd3b26a1574a69cc9f306774cc9fe69f87c3253aba6b40c35f2491bc0636b6d5e705526e039ee9d8ed27d21a4529a624d62e8879a3917cfb502a65589
+Size (sqlitebrowser-3.8.0.tar.gz) = 1538043 bytes
