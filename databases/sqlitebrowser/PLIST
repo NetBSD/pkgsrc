@@ -1,2 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/05/25 08:04:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/03/05 07:45:21 ryoon Exp $
 bin/sqlitebrowser
+share/appdata/sqlitebrowser.desktop.appdata.xml
+share/applications/sqlitebrowser.desktop
+share/icons/hicolor/256x256/apps/sqlitebrowser.png
