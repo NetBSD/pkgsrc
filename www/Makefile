@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1156 2016/02/18 04:21:37 jnemeth Exp $
+# $NetBSD: Makefile,v 1.1157 2016/03/05 05:35:00 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -747,7 +747,6 @@ SUBDIR+=	ruby-pygments.rb
 SUBDIR+=	ruby-rack
 SUBDIR+=	ruby-rack-cache
 SUBDIR+=	ruby-rack-contrib
-SUBDIR+=	ruby-rack-mount
 SUBDIR+=	ruby-rack-protection
 SUBDIR+=	ruby-rack-rewrite
 SUBDIR+=	ruby-rack-ssl
