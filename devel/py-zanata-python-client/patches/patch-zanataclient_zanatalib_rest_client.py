@@ -1,4 +1,6 @@
-$NetBSD: patch-zanataclient_zanatalib_rest_client.py,v 1.1 2016/03/05 04:47:44 ryoon Exp $
+$NetBSD: patch-zanataclient_zanatalib_rest_client.py,v 1.2 2016/03/05 04:48:36 ryoon Exp $
+
+* Fix zanata push
 
 --- zanataclient/zanatalib/rest/client.py.orig	2016-01-20 23:38:42.000000000 +0000
 +++ zanataclient/zanatalib/rest/client.py
