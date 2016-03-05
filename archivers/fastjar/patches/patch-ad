@@ -1,13 +1,16 @@
-$NetBSD: patch-ad,v 1.6 2006/05/17 06:12:27 rillig Exp $
+$NetBSD: patch-ad,v 1.7 2016/03/05 15:08:30 bsiegert Exp $
 
---- jartool.c.orig	2001-01-11 09:38:15.000000000 +0100
-+++ jartool.c
-@@ -171,4 +171,2 @@
- 
--extern int errno;
--
- void usage(char*);
-@@ -1143,2 +1141,27 @@ int create_central_header(int fd){
+date: 2006-03-14 23:02:01 +0900;  author: joerg;  state: Exp;  lines: +51 -3;
+Normalise path names as relative under cwd as if they would have been
+extracted under chroot. Don't attempt to deal with existing symlinks
+to directories. This prevents directory traversal and therefore the
+creation of arbitrary files. Bump revision.
+     
+--- jartool.c.orig	2009-09-07 07:10:47.000000000 +0900
++++ jartool.c	2014-12-15 18:35:25.000000000 +0900
+@@ -1512,6 +1512,31 @@ int create_central_header(int fd){
+   return 0;
+ }
  
 +static void canonical_filename(char *filename)
 +{
@@ -34,24 +37,20 @@ $NetBSD: patch-ad,v 1.6 2006/05/17 06:12:27 rillig Exp $
 +    }
 +}
 +
- int extract_jar(int fd, char **files, int file_num){
-@@ -1251,2 +1274,9 @@ int extract_jar(int fd, char **files, in
+ int extract_jar(int fd, const char **files, int file_num){
+   size_t rdamt;
+   int out_a, in_a;
+@@ -1628,6 +1653,13 @@ int extract_jar(int fd, const char **fil
+     pb_read(&pbf, filename, fnlen);
+     filename[fnlen] = '\0';
  
-+     canonical_filename(filename);
++    canonical_filename(filename);
 +
-+     if (*filename == '\0') {
-+        fprintf(stderr, "Error extracting JAR archive, empty file name!\n");
-+        exit(1);
-+      }
++    if (*filename == '\0') {
++	 fprintf(stderr, "Error extracting JAR archive, empty file name!\n");
++	 exit(1);
++     }
 +
  #ifdef DEBUG    
-@@ -1563,2 +1593,9 @@ int list_jar(int fd, char **files, int f
-       filename[fnlen] = '\0';
-+
-+      canonical_filename(filename);
-+      if (*filename == '\0') {
-+          fprintf(stderr, "Error extracting JAR archive, empty file name!\n");
-+          exit(1);
-+      }
-+
-     
+     printf("filename is %s\n", filename);
+ #endif

@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.13 2015/11/03 00:56:20 agc Exp $
+$NetBSD: distinfo,v 1.14 2016/03/05 15:08:30 bsiegert Exp $
 
-SHA1 (fastjar-0.93.tgz) = 74acc8e8a920ea6da18a180cd0a691c5d7c4699f
-RMD160 (fastjar-0.93.tgz) = 1627f2316cc7bca6a477011d1b812b140900d987
-SHA512 (fastjar-0.93.tgz) = c2bf3d5d37bc93f24ffc7284eca45e8c268f4b5bf4787f1f407c6b9818f18f15bc902887995c751982aebbc8829c9d0408ab658e94d1ca99849d74393de1cbdf
-Size (fastjar-0.93.tgz) = 62419 bytes
-SHA1 (patch-aa) = 12cc5397a89c18d239164caa3955121ca6d01de0
-SHA1 (patch-ab) = c13f46e1a3e60a3bbe656af609a5c9fb047a4ca3
-SHA1 (patch-ac) = ce8eefb978a93d0043f8b98fbf4049f022ce663c
-SHA1 (patch-ad) = 7fe6657b18090e0d12c8a3b528370314e6ddca97
+SHA1 (fastjar-0.98.tar.gz) = c240a9e2115aad486329360d9166514261149af2
+RMD160 (fastjar-0.98.tar.gz) = 593ed2dfcc02599a3540028a0f0b5c77d6be7071
+Size (fastjar-0.98.tar.gz) = 717984 bytes
+SHA1 (patch-aa) = cdb20f779b32f423a49bcf3a7c64901aef5228c8
+SHA1 (patch-ab) = da635a3a6ce6c3f3406371e02a376e1d728f8b7e
+SHA1 (patch-ad) = bdb8f3c1affbcf3cc373f7b5d731b8122eaf4018

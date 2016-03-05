@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2002/12/14 04:34:39 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/03/05 15:08:30 bsiegert Exp $
 bin/fastjar
 bin/grepjar
+info/fastjar.info
+lib/charset.alias
 man/man1/fastjar.1
 man/man1/grepjar.1
