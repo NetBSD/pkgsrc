@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15525 2016/03/05 02:48:42 wen Exp $
+$NetBSD: TODO,v 1.15526 2016/03/05 07:13:18 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -307,10 +307,6 @@ Suggested new packages
 	Trinity
 	https://www.trinitydesktop.org/
 	KDE3 successor
-
-	Phabricator
-	http://phabricator.org/
-	Software engineering platform.
 
 	Geogebra
 	http://www.geogebra.org/
