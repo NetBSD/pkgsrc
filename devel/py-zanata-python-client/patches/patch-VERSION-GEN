@@ -1,14 +1,14 @@
-$NetBSD: patch-VERSION-GEN,v 1.1 2015/01/01 07:00:00 ryoon Exp $
+$NetBSD: patch-VERSION-GEN,v 1.2 2016/03/05 04:47:44 ryoon Exp $
 
 * Provide version number without git
 
---- VERSION-GEN.orig	2014-12-03 06:27:09.000000000 +0000
+--- VERSION-GEN.orig	2016-01-20 23:38:42.000000000 +0000
 +++ VERSION-GEN
 @@ -4,7 +4,7 @@
  # $ git tag -a -m "Version 0.2" v0.2 HEAD
  
  VF=zanataclient/VERSION-FILE
--DEFAULT_VERSION=UKNOWN
+-DEFAULT_VERSION=UNKNOWN
 +DEFAULT_VERSION=@PKGVERSION_NOREV@
  
  LF='
