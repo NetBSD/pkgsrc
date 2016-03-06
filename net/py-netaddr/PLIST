@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/09/02 13:48:13 he Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/03/06 15:07:07 adam Exp $
 bin/netaddr
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -37,6 +37,7 @@ ${PYSITELIB}/netaddr/ip/iana.pyc
 ${PYSITELIB}/netaddr/ip/iana.pyo
 ${PYSITELIB}/netaddr/ip/ipv4-address-space.xml
 ${PYSITELIB}/netaddr/ip/ipv6-address-space.xml
+${PYSITELIB}/netaddr/ip/ipv6-unicast-address-assignments.xml
 ${PYSITELIB}/netaddr/ip/multicast-addresses.xml
 ${PYSITELIB}/netaddr/ip/nmap.py
 ${PYSITELIB}/netaddr/ip/nmap.pyc
@@ -62,6 +63,3 @@ ${PYSITELIB}/netaddr/strategy/ipv4.pyo
 ${PYSITELIB}/netaddr/strategy/ipv6.py
 ${PYSITELIB}/netaddr/strategy/ipv6.pyc
 ${PYSITELIB}/netaddr/strategy/ipv6.pyo
-${PYSITELIB}/netaddr/tests/__init__.py
-${PYSITELIB}/netaddr/tests/__init__.pyc
-${PYSITELIB}/netaddr/tests/__init__.pyo
