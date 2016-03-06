@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.version,v 1.17 2015/06/28 17:11:12 joerg Exp $
+# $NetBSD: Makefile.version,v 1.18 2016/03/06 11:47:49 adam Exp $
 # used by cad/xcircuit/Makefile
 # used by devel/tcl-tclcl/Makefile
 # used by lang/tcl/Makefile
@@ -7,4 +7,4 @@
 
 TCL_SONUM=	86
 TCL_BASEVER=	8.6
-TCL_VERSION=	8.6.4
+TCL_VERSION=	8.6.5

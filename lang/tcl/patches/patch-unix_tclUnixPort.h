@@ -1,17 +1,8 @@
-$NetBSD: patch-unix_tclUnixPort.h,v 1.3 2014/01/11 14:41:05 adam Exp $
+$NetBSD: patch-unix_tclUnixPort.h,v 1.4 2016/03/06 11:47:49 adam Exp $
 
---- unix/tclUnixPort.h.orig	2013-05-31 19:30:55.000000000 +0000
+--- unix/tclUnixPort.h.orig	2016-02-25 20:12:38.000000000 +0000
 +++ unix/tclUnixPort.h
-@@ -141,19 +141,11 @@ typedef off_t		Tcl_SeekOffset;
- #if HAVE_INTTYPES_H
- #   include <inttypes.h>
- #endif
--#ifdef NO_LIMITS_H
--#   include "../compat/limits.h"
--#else
--#   include <limits.h>
--#endif
-+#include <limits.h>
+@@ -145,11 +145,7 @@ typedef off_t		Tcl_SeekOffset;
  #if HAVE_STDINT_H
  #   include <stdint.h>
  #endif
