@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2014/12/31 13:57:31 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2016/03/06 14:37:43 adam Exp $
 
-DISTNAME=	djangocms-teaser-0.1
+DISTNAME=	djangocms-teaser-0.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	http://pypi.python.org/packages/source/d/djangocms-teaser/
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	https://github.com/divio/djangocms-teaser/
-COMMENT=	Flash plugin for django CMS
+COMMENT=	Teaser plugin for django CMS
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-django-cms-[0-9]*:../../www/py-django-cms

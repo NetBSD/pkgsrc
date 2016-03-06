@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2014/11/30 10:18:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/03/06 14:34:45 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/djangocms_picture-0.2.0-py3.5.egg-info/requires.txt
 ${PYSITELIB}/djangocms_picture/__init__.py
 ${PYSITELIB}/djangocms_picture/__init__.pyc
 ${PYSITELIB}/djangocms_picture/__init__.pyo
@@ -161,16 +162,22 @@ ${PYSITELIB}/djangocms_picture/locale/zh_TW/LC_MESSAGES/django.po
 ${PYSITELIB}/djangocms_picture/migrations/0001_initial.py
 ${PYSITELIB}/djangocms_picture/migrations/0001_initial.pyc
 ${PYSITELIB}/djangocms_picture/migrations/0001_initial.pyo
+${PYSITELIB}/djangocms_picture/migrations/0002_auto_20151018_1927.py
+${PYSITELIB}/djangocms_picture/migrations/0002_auto_20151018_1927.pyc
+${PYSITELIB}/djangocms_picture/migrations/0002_auto_20151018_1927.pyo
 ${PYSITELIB}/djangocms_picture/migrations/__init__.py
 ${PYSITELIB}/djangocms_picture/migrations/__init__.pyc
 ${PYSITELIB}/djangocms_picture/migrations/__init__.pyo
-${PYSITELIB}/djangocms_picture/migrations_django/0001_initial.py
-${PYSITELIB}/djangocms_picture/migrations_django/0001_initial.pyc
-${PYSITELIB}/djangocms_picture/migrations_django/0001_initial.pyo
-${PYSITELIB}/djangocms_picture/migrations_django/__init__.py
-${PYSITELIB}/djangocms_picture/migrations_django/__init__.pyc
-${PYSITELIB}/djangocms_picture/migrations_django/__init__.pyo
 ${PYSITELIB}/djangocms_picture/models.py
 ${PYSITELIB}/djangocms_picture/models.pyc
 ${PYSITELIB}/djangocms_picture/models.pyo
+${PYSITELIB}/djangocms_picture/south_migrations/0001_initial.py
+${PYSITELIB}/djangocms_picture/south_migrations/0001_initial.pyc
+${PYSITELIB}/djangocms_picture/south_migrations/0001_initial.pyo
+${PYSITELIB}/djangocms_picture/south_migrations/0002_auto__add_field_picture_width__add_field_picture_height.py
+${PYSITELIB}/djangocms_picture/south_migrations/0002_auto__add_field_picture_width__add_field_picture_height.pyc
+${PYSITELIB}/djangocms_picture/south_migrations/0002_auto__add_field_picture_width__add_field_picture_height.pyo
+${PYSITELIB}/djangocms_picture/south_migrations/__init__.py
+${PYSITELIB}/djangocms_picture/south_migrations/__init__.pyc
+${PYSITELIB}/djangocms_picture/south_migrations/__init__.pyo
 ${PYSITELIB}/djangocms_picture/templates/cms/plugins/picture.html
