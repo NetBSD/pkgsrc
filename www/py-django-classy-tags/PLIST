@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2013/03/23 12:19:14 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2016/03/06 14:18:52 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -44,12 +44,6 @@ ${PYSITELIB}/classytags/test/project/__init__.pyo
 ${PYSITELIB}/classytags/test/project/models.py
 ${PYSITELIB}/classytags/test/project/models.pyc
 ${PYSITELIB}/classytags/test/project/models.pyo
-${PYSITELIB}/classytags/test/project/testrunner.py
-${PYSITELIB}/classytags/test/project/testrunner.pyc
-${PYSITELIB}/classytags/test/project/testrunner.pyo
-${PYSITELIB}/classytags/test/run_tests.py
-${PYSITELIB}/classytags/test/run_tests.pyc
-${PYSITELIB}/classytags/test/run_tests.pyo
 ${PYSITELIB}/classytags/tests.py
 ${PYSITELIB}/classytags/tests.pyc
 ${PYSITELIB}/classytags/tests.pyo
