@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.version,v 1.13 2016/02/16 13:46:04 adam Exp $
+# $NetBSD: Makefile.version,v 1.14 2016/03/06 09:57:51 adam Exp $
 # used by databases/sqlite3/Makefile
 # used by databases/sqlite3-docs/Makefile
 # used by databases/sqlite3-tcl/Makefile
 
-SQLITE3_DISTVERSION=	3110000
-SQLITE3_VERSION=	3.11.0
+SQLITE3_DISTVERSION=	3110100
+SQLITE3_VERSION=	3.11.1
 
 MASTER_SITES=	http://www.hwaci.com/sw/sqlite/2016/ \
 		http://www.sqlite.org/2016/
