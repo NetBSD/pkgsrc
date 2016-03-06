@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1020 2016/03/06 14:54:54 adam Exp $
+$NetBSD: CHANGES-2016,v 1.1021 2016/03/06 15:09:09 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1396,3 +1396,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/py-djangocms-video to 1.0.0 [adam 2016-03-06]
 	Updated www/py-django-tagging to 0.4.1 [adam 2016-03-06]
 	Updated www/py-django-registration to 2.0.4 [adam 2016-03-06]
+	Updated net/py-netaddr version 0.7.18 [adam 2016-03-06]
