@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/11/30 10:18:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/03/06 14:41:04 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -164,19 +164,22 @@ ${PYSITELIB}/djangocms_video/locale/zh_TW/LC_MESSAGES/django.po
 ${PYSITELIB}/djangocms_video/migrations/0001_initial.py
 ${PYSITELIB}/djangocms_video/migrations/0001_initial.pyc
 ${PYSITELIB}/djangocms_video/migrations/0001_initial.pyo
+${PYSITELIB}/djangocms_video/migrations/0002_set_related_name_for_cmsplugin_ptr.py
+${PYSITELIB}/djangocms_video/migrations/0002_set_related_name_for_cmsplugin_ptr.pyc
+${PYSITELIB}/djangocms_video/migrations/0002_set_related_name_for_cmsplugin_ptr.pyo
 ${PYSITELIB}/djangocms_video/migrations/__init__.py
 ${PYSITELIB}/djangocms_video/migrations/__init__.pyc
 ${PYSITELIB}/djangocms_video/migrations/__init__.pyo
-${PYSITELIB}/djangocms_video/migrations_django/0001_initial.py
-${PYSITELIB}/djangocms_video/migrations_django/0001_initial.pyc
-${PYSITELIB}/djangocms_video/migrations_django/0001_initial.pyo
-${PYSITELIB}/djangocms_video/migrations_django/__init__.py
-${PYSITELIB}/djangocms_video/migrations_django/__init__.pyc
-${PYSITELIB}/djangocms_video/migrations_django/__init__.pyo
 ${PYSITELIB}/djangocms_video/models.py
 ${PYSITELIB}/djangocms_video/models.pyc
 ${PYSITELIB}/djangocms_video/models.pyo
 ${PYSITELIB}/djangocms_video/settings.py
 ${PYSITELIB}/djangocms_video/settings.pyc
 ${PYSITELIB}/djangocms_video/settings.pyo
+${PYSITELIB}/djangocms_video/south_migrations/0001_initial.py
+${PYSITELIB}/djangocms_video/south_migrations/0001_initial.pyc
+${PYSITELIB}/djangocms_video/south_migrations/0001_initial.pyo
+${PYSITELIB}/djangocms_video/south_migrations/__init__.py
+${PYSITELIB}/djangocms_video/south_migrations/__init__.pyc
+${PYSITELIB}/djangocms_video/south_migrations/__init__.pyo
 ${PYSITELIB}/djangocms_video/templates/cms/plugins/video.html
