@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2015/11/03 03:28:02 agc Exp $
+$NetBSD: distinfo,v 1.11 2016/03/06 08:54:06 bsiegert Exp $
 
-SHA1 (Class-Method-Modifiers-2.11.tar.gz) = fc6f769003a8fd103d598a63cba9c34165490d39
-RMD160 (Class-Method-Modifiers-2.11.tar.gz) = 4859a4164fb231b1394dad5956e5438efb8ccc62
-SHA512 (Class-Method-Modifiers-2.11.tar.gz) = 668efc01207034f850d411936fc4e5b6900030710a25dda46cb6c5d6d8e081d0d37327945f1bf17e7cda34add1b33e5be3bc7c37b28eeab6a2275d0fbefd9285
-Size (Class-Method-Modifiers-2.11.tar.gz) = 35364 bytes
+SHA1 (Class-Method-Modifiers-2.12.tar.gz) = 89ebf05cb56d76daa823a5dd6cd3b591c3d90220
+RMD160 (Class-Method-Modifiers-2.12.tar.gz) = d4dee4ac8695299757afb6ecdc1f2b91f83ab5d2
+SHA512 (Class-Method-Modifiers-2.12.tar.gz) = 18c7cdff214d39a475b116cc5e6dda043c31765bcdfa9a1fa7242ce61e42583c4981d41a43ba556fb5a057e0cfbd5e52dd60048ea7dfae0fec3618dc47876dd4
+Size (Class-Method-Modifiers-2.12.tar.gz) = 38979 bytes
