@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.111 2015/12/22 23:52:00 ryoon Exp $
+$NetBSD: distinfo,v 1.112 2016/03/06 09:55:58 dbj Exp $
 
 SHA1 (qemu-2.5.0.tar.bz2) = ed6c02a267f9edf98058743f0f76a25743a0dfe7
 RMD160 (qemu-2.5.0.tar.bz2) = 51007a50ddbeae1ba2c986e0cb0b110efeae2dc9
 SHA512 (qemu-2.5.0.tar.bz2) = 12153f94cc7f834fd6a85f25690c36f2331d88d414426fb8b9ac20a34e6f9222b1eda30b727674af583580fae90dfd6d0614a905dce1567d94cd049d426b9dd3
 Size (qemu-2.5.0.tar.bz2) = 25464996 bytes
 SHA1 (patch-Makefile.objs) = 81274d0dde593a8379428df1f974d6c50a65dd92
-SHA1 (patch-configure) = fac9d221ced61d15c037bcf9ec0f13a0eb8229a2
+SHA1 (patch-configure) = fb89393c1f45b24cb7a85d53a516050b2249e8c9
 SHA1 (patch-default-configs_pci.mak) = 09567d0d56cdee3d72ae93c0609dee7ca749ef18
 SHA1 (patch-ef) = 6e57de87f91067e8a9a1388c91133a31b3582b3a
 SHA1 (patch-et) = e9b850ac5985cbe934b541acbfdb330cce421d50
