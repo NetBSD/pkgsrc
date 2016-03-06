@@ -1,0 +1,12 @@
+$NetBSD: patch-nsgenbind_src_Makefile,v 1.1.2.2 2016/03/06 12:26:31 spz Exp $
+
+Define _XOPEN_SOURCE needed for strdup(3) and strndup(3).
+
+--- nsgenbind/src/Makefile.orig	2016-02-16 18:10:55.000000000 +0000
++++ nsgenbind/src/Makefile
+@@ -1,4 +1,5 @@
+ CFLAGS := $(CFLAGS) -I$(BUILDDIR) -Isrc/ -g -DYYENABLE_NLS=0
++CFLAGS += -D_XOPEN_SOURCE=700
+ 
+ # Sources in this directory
+ DIR_SOURCES := nsgenbind.c utils.c webidl-ast.c nsgenbind-ast.c ir.c \
