@@ -1,10 +1,10 @@
-$NetBSD: patch-pkgs_itcl4.0.3_configure,v 1.2 2015/06/29 09:49:51 joerg Exp $
+$NetBSD: patch-pkgs_tdbc1.0.4_configure,v 1.1 2016/03/06 11:47:49 adam Exp $
 
 Add support for DragonFly.
 
---- pkgs/itcl4.0.3/configure.orig	2015-03-06 18:19:29.000000000 +0000
-+++ pkgs/itcl4.0.3/configure
-@@ -7338,8 +7338,7 @@ fi
+--- pkgs/tdbc1.0.4/configure.orig	2016-01-28 18:05:47.000000000 +0000
++++ pkgs/tdbc1.0.4/configure
+@@ -7518,8 +7518,7 @@ fi
  		    CC_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
  fi
  		LD_SEARCH_FLAGS=${CC_SEARCH_FLAGS}
@@ -14,7 +14,7 @@ Add support for DragonFly.
  		;;
  	    esac
  	    case "$arch" in
-@@ -7359,8 +7358,6 @@ fi
+@@ -7539,8 +7538,6 @@ fi
  
  fi
  	    # OpenBSD doesn't do version numbers with dots.
@@ -23,7 +23,7 @@ Add support for DragonFly.
  	    ;;
  	NetBSD-*)
  	    # NetBSD has ELF and can use 'cc -shared' to build shared libs
-@@ -7382,7 +7379,7 @@ fi
+@@ -7562,7 +7559,7 @@ fi
  
  fi
  	    ;;
@@ -32,7 +32,7 @@ Add support for DragonFly.
  	    # This configuration from FreeBSD Ports.
  	    SHLIB_CFLAGS="-fPIC"
  	    SHLIB_LD="${CC} -shared"
-@@ -7404,10 +7401,6 @@ fi
+@@ -7584,10 +7581,6 @@ fi
  	    case $system in
  	    FreeBSD-3.*)
  		# Version numbers are dot-stripped by system policy.
@@ -43,7 +43,7 @@ Add support for DragonFly.
  		;;
  	    esac
  	    ;;
-@@ -8018,7 +8011,7 @@ fi
+@@ -8198,7 +8191,7 @@ fi
  	    BSD/OS*) ;;
  	    CYGWIN_*|MINGW32_*) ;;
  	    IRIX*) ;;
