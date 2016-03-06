@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/11/30 10:18:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/03/06 14:31:58 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -167,13 +167,13 @@ ${PYSITELIB}/djangocms_googlemap/migrations/0001_initial.pyo
 ${PYSITELIB}/djangocms_googlemap/migrations/__init__.py
 ${PYSITELIB}/djangocms_googlemap/migrations/__init__.pyc
 ${PYSITELIB}/djangocms_googlemap/migrations/__init__.pyo
-${PYSITELIB}/djangocms_googlemap/migrations_django/0001_initial.py
-${PYSITELIB}/djangocms_googlemap/migrations_django/0001_initial.pyc
-${PYSITELIB}/djangocms_googlemap/migrations_django/0001_initial.pyo
-${PYSITELIB}/djangocms_googlemap/migrations_django/__init__.py
-${PYSITELIB}/djangocms_googlemap/migrations_django/__init__.pyc
-${PYSITELIB}/djangocms_googlemap/migrations_django/__init__.pyo
 ${PYSITELIB}/djangocms_googlemap/models.py
 ${PYSITELIB}/djangocms_googlemap/models.pyc
 ${PYSITELIB}/djangocms_googlemap/models.pyo
+${PYSITELIB}/djangocms_googlemap/south_migrations/0001_initial.py
+${PYSITELIB}/djangocms_googlemap/south_migrations/0001_initial.pyc
+${PYSITELIB}/djangocms_googlemap/south_migrations/0001_initial.pyo
+${PYSITELIB}/djangocms_googlemap/south_migrations/__init__.py
+${PYSITELIB}/djangocms_googlemap/south_migrations/__init__.pyc
+${PYSITELIB}/djangocms_googlemap/south_migrations/__init__.pyo
 ${PYSITELIB}/djangocms_googlemap/templates/cms/plugins/googlemap.html
