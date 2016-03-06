@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2015/12/10 12:34:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2016/03/06 14:39:23 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -162,6 +162,12 @@ ${PYSITELIB}/djangocms_text_ckeditor/locale/zh_TW/LC_MESSAGES/django.po
 ${PYSITELIB}/djangocms_text_ckeditor/migrations/0001_initial.py
 ${PYSITELIB}/djangocms_text_ckeditor/migrations/0001_initial.pyc
 ${PYSITELIB}/djangocms_text_ckeditor/migrations/0001_initial.pyo
+${PYSITELIB}/djangocms_text_ckeditor/migrations/0002_remove_related_name_for_cmsplugin_ptr.py
+${PYSITELIB}/djangocms_text_ckeditor/migrations/0002_remove_related_name_for_cmsplugin_ptr.pyc
+${PYSITELIB}/djangocms_text_ckeditor/migrations/0002_remove_related_name_for_cmsplugin_ptr.pyo
+${PYSITELIB}/djangocms_text_ckeditor/migrations/0003_set_related_name_for_cmsplugin_ptr.py
+${PYSITELIB}/djangocms_text_ckeditor/migrations/0003_set_related_name_for_cmsplugin_ptr.pyc
+${PYSITELIB}/djangocms_text_ckeditor/migrations/0003_set_related_name_for_cmsplugin_ptr.pyo
 ${PYSITELIB}/djangocms_text_ckeditor/migrations/__init__.py
 ${PYSITELIB}/djangocms_text_ckeditor/migrations/__init__.pyc
 ${PYSITELIB}/djangocms_text_ckeditor/migrations/__init__.pyo
@@ -186,9 +192,6 @@ ${PYSITELIB}/djangocms_text_ckeditor/south_migrations/0002_rename_plugin.pyo
 ${PYSITELIB}/djangocms_text_ckeditor/south_migrations/__init__.py
 ${PYSITELIB}/djangocms_text_ckeditor/south_migrations/__init__.pyc
 ${PYSITELIB}/djangocms_text_ckeditor/south_migrations/__init__.pyo
-${PYSITELIB}/djangocms_text_ckeditor/static/.DS_Store
-${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/.DS_Store
-${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/.DS_Store
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/CHANGES.md
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/LICENSE.md
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/README.md
@@ -549,7 +552,6 @@ ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/sam
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/samples/toolbarconfigurator/lib/codemirror/neo.css
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/samples/toolbarconfigurator/lib/codemirror/show-hint.css
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/samples/toolbarconfigurator/lib/codemirror/show-hint.js
-${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/skins/.DS_Store
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/skins/moono/dialog.css
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/skins/moono/dialog_ie.css
 ${PYSITELIB}/djangocms_text_ckeditor/static/djangocms_text_ckeditor/ckeditor/skins/moono/dialog_ie7.css
