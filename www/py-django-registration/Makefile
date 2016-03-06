@@ -1,24 +1,19 @@
-# $NetBSD: Makefile,v 1.6 2015/12/05 21:26:05 adam Exp $
+# $NetBSD: Makefile,v 1.7 2016/03/06 14:53:14 adam Exp $
 
-DISTNAME=	django-registration-0.8-alpha-1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S:-alpha-:a:}
-PKGREVISION=	1
+DISTNAME=	django-registration-2.0.4
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
-MASTER_SITES=	http://bitbucket.org/ubernostrum/django-registration/downloads/
+MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-registration/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://bitbucket.org/ubernostrum/django-registration/wiki/Home
 COMMENT=	User-registration application for Django
 LICENSE=	modified-bsd
 
-DEPENDS+=      ${PYPKGPREFIX}-django>=1:../../www/py-django
+DEPENDS+=	${PYPKGPREFIX}-django>=1:../../www/py-django
 
-USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		# none
+USE_PKGLOCALEDIR=	yes
 
-EGG_NAME=	${DISTNAME:S/-/_/g:S/registration_/registration-/}
-
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 0.8a1
-
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
