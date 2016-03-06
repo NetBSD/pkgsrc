@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.8 2015/11/04 00:34:53 agc Exp $
+$NetBSD: distinfo,v 1.9 2016/03/06 13:29:34 nros Exp $
 
-SHA1 (bftpd-3.7.tar.gz) = 6766232810927db885720792e8d4314942628b8a
-RMD160 (bftpd-3.7.tar.gz) = 9b56d31c3a087c4fb035657e6479e1ecbfb243b0
-SHA512 (bftpd-3.7.tar.gz) = 04365b87c79fccf0463f9b62341cf97decb1f6739488ecd852685aaf75405bd95972bb51ac4ae77309c46d91a3e82db7f47bc68e62fa0d559f8cbf6552097d32
-Size (bftpd-3.7.tar.gz) = 155428 bytes
+SHA1 (bftpd-4.4.tar.gz) = 7852775d98782739b785ebcd1d56b11b65f738c3
+RMD160 (bftpd-4.4.tar.gz) = 5fab388cae684c1d34b854999bb4c090c02ad3c8
+SHA512 (bftpd-4.4.tar.gz) = 290efff4db849f7a3004a268a78a499b866bd7f9061f7880813a3bf1db2cd63ff508e64bada1b6bcd48ab40732e3fb0da9b29fd49712149f9945cd53920a7d62
+Size (bftpd-4.4.tar.gz) = 164940 bytes
 SHA1 (patch-aa) = 3b4444d79533fd8b2ec7bc99eb53c34ca2113350
