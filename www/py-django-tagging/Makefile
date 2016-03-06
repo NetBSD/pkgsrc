@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.7 2015/12/06 01:55:20 riz Exp $
+# $NetBSD: Makefile,v 1.8 2016/03/06 14:46:42 adam Exp $
 
-DISTNAME=	django-tagging-0.4
+DISTNAME=	django-tagging-0.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	www python
-MASTER_SITES=	https://pypi.python.org/packages/source/d/django-tagging/
+MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-tagging/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://pypi.python.org/pypi/django-tagging/
+HOMEPAGE=	https://github.com/Fantomas42/django-tagging/
 COMMENT=	Generic tagging application for Django
 LICENSE=	mit
 
