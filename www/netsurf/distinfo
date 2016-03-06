@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 02:46:59 agc Exp $
+$NetBSD: distinfo,v 1.4.2.1 2016/03/06 12:26:31 spz Exp $
 
-SHA1 (netsurf-all-3.3.tar.gz) = ec52ff9c8f43140d403cc2a434de6c919d9d6079
-RMD160 (netsurf-all-3.3.tar.gz) = 74da2b99bcce4857f5975d4bc2caa4b9a0a6f5eb
-SHA512 (netsurf-all-3.3.tar.gz) = 1e748be448149f0bc94a98a99118971ad887595a77441e252d7aa0c56264e39712384f25cbd8ea4c3ce6a2111494a55e6925e7a635ff13829a66a1745ff9beee
-Size (netsurf-all-3.3.tar.gz) = 6088708 bytes
+SHA1 (netsurf-all-3.4.tar.gz) = 91e3dd04c57da2246e1fd6d47951d7f0e41dbbda
+RMD160 (netsurf-all-3.4.tar.gz) = b07360d67b87a5c82ab9cd012d7ca463a86c31ff
+SHA512 (netsurf-all-3.4.tar.gz) = 89af66021ad10a437be085c0ee40e7ac3df44f68660bb582017569d5982974ba68777cfb924cb2de585b972ea8112bc033b8905906f9be18c6b8a154a9ae0a46
+Size (netsurf-all-3.4.tar.gz) = 7227428 bytes
 SHA1 (patch-netsurf_utils_config.h) = de48304e3484a883509ea3ad92658788f7869041
+SHA1 (patch-nsgenbind_src_Makefile) = 1798b84c28fbb9bbdaafe3f182fbd301f5438df1

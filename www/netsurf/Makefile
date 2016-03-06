@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.48 2015/11/22 20:21:11 leot Exp $
+# $NetBSD: Makefile,v 1.48.2.1 2016/03/06 12:26:31 spz Exp $
 
-DISTNAME=	netsurf-all-3.3
+DISTNAME=	netsurf-all-3.4
 PKGNAME=	${DISTNAME:S/-all//}
-PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://download.netsurf-browser.org/netsurf/releases/source-full/
 
@@ -25,6 +24,7 @@ MAKE_ENV+=	HOST="${MACHINE_GNU_ARCH}--${LOWER_OPSYS}"
 INSTALLATION_DIRS+=	share/netsurf bin
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
+CFLAGS.NetBSD+=		-D_NETBSD_SOURCE	# needed for strcasestr(3) and strndup(3)
 
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../devel/gperf/buildlink3.mk"
