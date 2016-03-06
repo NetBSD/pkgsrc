@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 02:47:26 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/03/06 14:30:24 adam Exp $
 
-SHA1 (djangocms-flash-0.1.tar.gz) = 795e9640289405e8e21fca4b973334d427a8428c
-RMD160 (djangocms-flash-0.1.tar.gz) = 13dca590a1c4893b006d8feaa8f8f8176009a0b0
-SHA512 (djangocms-flash-0.1.tar.gz) = f15bf86c0aa60fa562a8359a3254f274532c243cd8edcbc747c368a49b384620d4d6dedc3da17b17378cb0de05eee9896adda9b31c44d1ddf963d8b34c651627
-Size (djangocms-flash-0.1.tar.gz) = 22111 bytes
+SHA1 (djangocms-flash-0.3.0.tar.gz) = 9fdd2aa951c3ea76c8978a1047524da2837aeca4
+RMD160 (djangocms-flash-0.3.0.tar.gz) = f948cf3f72207337f7b0886d7b230cede6474080
+SHA512 (djangocms-flash-0.3.0.tar.gz) = a24e6ea9be55cf6f9d9bda6e1e3b3934769c97295d053f792f8374e42023ce72c246a4ee2c06dab8c365c6fc6e6b56d38fdbf520d03e17000f080cf3a68f5c1c
+Size (djangocms-flash-0.3.0.tar.gz) = 21797 bytes
