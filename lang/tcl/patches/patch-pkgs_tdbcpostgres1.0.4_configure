@@ -1,10 +1,10 @@
-$NetBSD: patch-pkgs_sqlite3.8.8.3_configure,v 1.2 2015/06/29 09:49:51 joerg Exp $
+$NetBSD: patch-pkgs_tdbcpostgres1.0.4_configure,v 1.1 2016/03/06 11:47:49 adam Exp $
 
 Add support for DragonFly.
 
---- pkgs/sqlite3.8.8.3/configure.orig	2015-03-06 18:27:28.000000000 +0000
-+++ pkgs/sqlite3.8.8.3/configure
-@@ -7274,8 +7274,7 @@ fi
+--- pkgs/tdbcpostgres1.0.4/configure.orig	2016-01-28 18:07:18.000000000 +0000
++++ pkgs/tdbcpostgres1.0.4/configure
+@@ -7864,8 +7864,7 @@ fi
  		    CC_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
  fi
  		LD_SEARCH_FLAGS=${CC_SEARCH_FLAGS}
@@ -14,7 +14,7 @@ Add support for DragonFly.
  		;;
  	    esac
  	    case "$arch" in
-@@ -7295,8 +7294,6 @@ fi
+@@ -7885,8 +7884,6 @@ fi
  
  fi
  	    # OpenBSD doesn't do version numbers with dots.
@@ -23,7 +23,7 @@ Add support for DragonFly.
  	    ;;
  	NetBSD-*)
  	    # NetBSD has ELF and can use 'cc -shared' to build shared libs
-@@ -7318,7 +7315,7 @@ fi
+@@ -7908,7 +7905,7 @@ fi
  
  fi
  	    ;;
@@ -32,7 +32,7 @@ Add support for DragonFly.
  	    # This configuration from FreeBSD Ports.
  	    SHLIB_CFLAGS="-fPIC"
  	    SHLIB_LD="${CC} -shared"
-@@ -7340,10 +7337,6 @@ fi
+@@ -7930,10 +7927,6 @@ fi
  	    case $system in
  	    FreeBSD-3.*)
  		# Version numbers are dot-stripped by system policy.
@@ -43,7 +43,7 @@ Add support for DragonFly.
  		;;
  	    esac
  	    ;;
-@@ -7954,7 +7947,7 @@ fi
+@@ -8544,7 +8537,7 @@ fi
  	    BSD/OS*) ;;
  	    CYGWIN_*|MINGW32_*) ;;
  	    IRIX*) ;;
