@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2014/03/13 11:08:51 jperkin Exp $
+# $NetBSD: Makefile,v 1.32 2016/03/06 14:13:36 adam Exp $
 
 .include "Makefile.common"
 
@@ -16,6 +16,15 @@ CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--without-x
 
 INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR:Q}
+
+.include "../../mk/bsd.prefs.mk"
+
+# XXX: libexpect should have .dylib suffix
+.if ${OPSYS} == "Darwin"
+post-build:
+	install_name_tool -id ${PREFIX}/lib/libexpect${EXPECT_SONUM}.so \
+		${WRKSRC}/libexpect${EXPECT_SONUM}.so
+.endif
 
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
