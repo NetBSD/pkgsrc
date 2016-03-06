@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 00:35:31 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/03/06 15:07:07 adam Exp $
 
-SHA1 (netaddr-0.7.12.tar.gz) = a0211025513cfddb1b256cc2595bf2f210fa8050
-RMD160 (netaddr-0.7.12.tar.gz) = 8a90e7d7be11b5c27d701f4353d9b643cc45337f
-SHA512 (netaddr-0.7.12.tar.gz) = d7783ecc697045d381d2d028d02c1773effd1331f15f2fb6423a06ed7915700e42862130d2ceb16c73ed0443a5055d101ce7ea3d10474f9af40cde83d2251e55
-Size (netaddr-0.7.12.tar.gz) = 1504096 bytes
-SHA1 (patch-setup.py) = bd31fc79b644a3b7c42ba947d1c66e98cb950fc0
+SHA1 (netaddr-0.7.18.tar.gz) = f8fab84064dfe2e7a404c602a48fde9129191e58
+RMD160 (netaddr-0.7.18.tar.gz) = 5c73d1f7c2e1e4ca9c2f6848b12179f198be514a
+SHA512 (netaddr-0.7.18.tar.gz) = f2a05d177e8e45cc42c494340a4dc65afdbc75bce16acc7d2e9cda06f4c2404df086780d10c764b6845cef32cf18cf00069f8b11c2dd0cb7fbcdde7d75b81253
+Size (netaddr-0.7.18.tar.gz) = 1715389 bytes
+SHA1 (patch-setup.py) = 34e95111cf28697758e7c68769cd87324cb41278

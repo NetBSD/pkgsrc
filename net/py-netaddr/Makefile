@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2014/09/02 13:48:13 he Exp $
+# $NetBSD: Makefile,v 1.2 2016/03/06 15:07:07 adam Exp $
 
-DISTNAME=	netaddr-0.7.12
+DISTNAME=	netaddr-0.7.18
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
-MASTER_SITES=	https://pypi.python.org/packages/source/n/netaddr/
+MASTER_SITES=	${MASTER_SITE_PYPI:=n/netaddr/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pypi.python.org/pypi/netaddr/
@@ -12,9 +12,9 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 
-REPLACE_PYTHON+= netaddr/eui/ieee.py
-REPLACE_PYTHON+= netaddr/ip/iana.py
-REPLACE_PYTHON+= netaddr/tests/__init__.py
+REPLACE_PYTHON+=	netaddr/eui/ieee.py
+REPLACE_PYTHON+=	netaddr/ip/iana.py
+REPLACE_PYTHON+=	netaddr/tools/netaddr
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
