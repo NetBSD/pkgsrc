@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2016/01/23 05:45:59 ryoon Exp $
+# $NetBSD: Makefile,v 1.105 2016/03/06 12:12:00 adam Exp $
 
 DISTNAME=	sqlite-autoconf-${SQLITE3_DISTVERSION}
 PKGNAME=	sqlite3-${SQLITE3_VERSION}
@@ -12,14 +12,10 @@ LICENSE=	public-domain
 .include "../../databases/sqlite3/Makefile.version"
 .include "options.mk"
 
-# On at least NetBSD 7.0_BETA amd64
-# sqlite3.o: file not recognized: File truncated
-# Makefile:404: recipe for target 'sqlite3' failed
-MAKE_JOBS_SAFE=		no
-
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--disable-static-shell
 
 PKGCONFIG_OVERRIDE+=	sqlite3.pc.in
 
