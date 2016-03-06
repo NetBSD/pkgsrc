@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1018 2016/03/06 11:49:30 adam Exp $
+$NetBSD: CHANGES-2016,v 1.1019 2016/03/06 13:31:44 nros Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1378,3 +1378,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/sqlite3-tcl to 3.11.1 [adam 2016-03-06]
 	Updated lang/tcl to 8.6.5 [adam 2016-03-06]
 	Updated x11/tk to 8.6.5 [adam 2016-03-06]
+	Updated net/bftpd to 4.4 [nros 2016-03-06]
