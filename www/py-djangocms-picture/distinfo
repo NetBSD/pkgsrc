@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 02:47:26 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/03/06 14:34:45 adam Exp $
 
-SHA1 (djangocms-picture-0.1.tar.gz) = d091a60fcfdd3f1d8f080ad07875343e01df0cec
-RMD160 (djangocms-picture-0.1.tar.gz) = 2b12bda4b4275185447f90297032f595df44ee72
-SHA512 (djangocms-picture-0.1.tar.gz) = ea925d873d32e2a1fdb789bf51758c3d7dacd295bbe217be4fb490b3cd26e452c17895c52713f6405edba83e6dead68596ed5c19d5bca22dff5f762e175e490c
-Size (djangocms-picture-0.1.tar.gz) = 33969 bytes
+SHA1 (djangocms-picture-0.2.0.tar.gz) = 4bbc7b11f4ae41300282ee32de05c329d68c5a2b
+RMD160 (djangocms-picture-0.2.0.tar.gz) = 50370aeb628262275079269475ee4885764c0829
+SHA512 (djangocms-picture-0.2.0.tar.gz) = cd0ff2992e82e4b69c1bf99c97b6ce7a6d970b23bab8fbf87f06e4e588d40529a36cc52f6076aa1c34236a3acfe595aa93529a54130571c5104df9e1f8802484
+Size (djangocms-picture-0.2.0.tar.gz) = 34910 bytes
