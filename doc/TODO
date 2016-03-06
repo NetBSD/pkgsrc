@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15536 2016/03/06 14:54:54 adam Exp $
+$NetBSD: TODO,v 1.15537 2016/03/06 15:49:39 bsiegert Exp $
 
 Suggested new packages
 ======================
@@ -1210,7 +1210,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Math-Random-MT-Perl-1.13
 	o p5-Memoize-Memcached-0.11
 	o p5-Moose-Policy-0.05
-	o p5-Net-Amazon-S3-0.80
 	o p5-Net-DBus-1.1.0
 	o p5-Net-DHCP-0.696
 	o p5-Net-GitHub-0.77
