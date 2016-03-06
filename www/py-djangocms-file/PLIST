@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/11/30 10:18:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/03/06 14:28:53 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -161,19 +161,31 @@ ${PYSITELIB}/djangocms_file/locale/zh_TW/LC_MESSAGES/django.po
 ${PYSITELIB}/djangocms_file/migrations/0001_initial.py
 ${PYSITELIB}/djangocms_file/migrations/0001_initial.pyc
 ${PYSITELIB}/djangocms_file/migrations/0001_initial.pyo
-${PYSITELIB}/djangocms_file/migrations/0002_auto__add_field_file_target.py
-${PYSITELIB}/djangocms_file/migrations/0002_auto__add_field_file_target.pyc
-${PYSITELIB}/djangocms_file/migrations/0002_auto__add_field_file_target.pyo
+${PYSITELIB}/djangocms_file/migrations/0002_auto_20151202_1551.py
+${PYSITELIB}/djangocms_file/migrations/0002_auto_20151202_1551.pyc
+${PYSITELIB}/djangocms_file/migrations/0002_auto_20151202_1551.pyo
+${PYSITELIB}/djangocms_file/migrations/0003_remove_related_name_for_cmsplugin_ptr.py
+${PYSITELIB}/djangocms_file/migrations/0003_remove_related_name_for_cmsplugin_ptr.pyc
+${PYSITELIB}/djangocms_file/migrations/0003_remove_related_name_for_cmsplugin_ptr.pyo
+${PYSITELIB}/djangocms_file/migrations/0004_set_related_name_for_cmsplugin_ptr.py
+${PYSITELIB}/djangocms_file/migrations/0004_set_related_name_for_cmsplugin_ptr.pyc
+${PYSITELIB}/djangocms_file/migrations/0004_set_related_name_for_cmsplugin_ptr.pyo
 ${PYSITELIB}/djangocms_file/migrations/__init__.py
 ${PYSITELIB}/djangocms_file/migrations/__init__.pyc
 ${PYSITELIB}/djangocms_file/migrations/__init__.pyo
-${PYSITELIB}/djangocms_file/migrations_django/0001_initial.py
-${PYSITELIB}/djangocms_file/migrations_django/0001_initial.pyc
-${PYSITELIB}/djangocms_file/migrations_django/0001_initial.pyo
-${PYSITELIB}/djangocms_file/migrations_django/__init__.py
-${PYSITELIB}/djangocms_file/migrations_django/__init__.pyc
-${PYSITELIB}/djangocms_file/migrations_django/__init__.pyo
 ${PYSITELIB}/djangocms_file/models.py
 ${PYSITELIB}/djangocms_file/models.pyc
 ${PYSITELIB}/djangocms_file/models.pyo
+${PYSITELIB}/djangocms_file/south_migrations/0001_initial.py
+${PYSITELIB}/djangocms_file/south_migrations/0001_initial.pyc
+${PYSITELIB}/djangocms_file/south_migrations/0001_initial.pyo
+${PYSITELIB}/djangocms_file/south_migrations/0002_auto__add_field_file_target.py
+${PYSITELIB}/djangocms_file/south_migrations/0002_auto__add_field_file_target.pyc
+${PYSITELIB}/djangocms_file/south_migrations/0002_auto__add_field_file_target.pyo
+${PYSITELIB}/djangocms_file/south_migrations/0003_auto__add_field_file_tooltip.py
+${PYSITELIB}/djangocms_file/south_migrations/0003_auto__add_field_file_tooltip.pyc
+${PYSITELIB}/djangocms_file/south_migrations/0003_auto__add_field_file_tooltip.pyo
+${PYSITELIB}/djangocms_file/south_migrations/__init__.py
+${PYSITELIB}/djangocms_file/south_migrations/__init__.pyc
+${PYSITELIB}/djangocms_file/south_migrations/__init__.pyo
 ${PYSITELIB}/djangocms_file/templates/cms/plugins/file.html
