@@ -1,5 +1,7 @@
-$NetBSD: patch-configure,v 1.9 2015/12/22 23:52:00 ryoon Exp $
+$NetBSD: patch-configure,v 1.10 2016/03/06 09:55:58 dbj Exp $
+
 Don't use gld on SunOS
+add check for shm_open
 
 --- configure.orig	2015-12-16 22:04:48.000000000 +0000
 +++ configure
@@ -11,7 +13,7 @@ Don't use gld on SunOS
    smbd="${SMBD-/usr/sfw/sbin/smbd}"
    needs_libsunmath="no"
    solarisrev=`uname -r | cut -f2 -d.`
-@@ -3672,6 +3671,23 @@ if compile_prog "" "" ; then
+@@ -3672,6 +3671,28 @@ if compile_prog "" "" ; then
    fallocate_zero_range=yes
  fi
  
@@ -21,6 +23,7 @@ Don't use gld on SunOS
 +#include <sys/types.h>
 +#include <sys/mman.h>
 +#include <fcntl.h>
++#include <stddef.h> // for NULL
 +
 +int main(void)
 +{
@@ -28,14 +31,18 @@ Don't use gld on SunOS
 +    return 0;
 +}
 +EOF
++if compile_prog "" "" ; then
++    shm_open=yes
++fi
 +if compile_prog "" "-lrt" ; then
++    LIBS="$LIBS -lrt"
 +    shm_open=yes
 +fi
 +
  # check for posix_fallocate
  posix_fallocate=no
  cat > $TMPC << EOF
-@@ -3935,8 +3951,13 @@ fi
+@@ -3935,8 +3956,13 @@ fi
  cat > $TMPC <<EOF
  #include <signal.h>
  #include <time.h>
@@ -49,7 +56,7 @@ Don't use gld on SunOS
    return clock_gettime(CLOCK_REALTIME, NULL);
  }
  EOF
-@@ -4568,7 +4589,9 @@ if test "$want_tools" = "yes" ; then
+@@ -4568,7 +4594,9 @@ if test "$want_tools" = "yes" ; then
    tools="qemu-img\$(EXESUF) qemu-io\$(EXESUF) $tools"
    if [ "$linux" = "yes" -o "$bsd" = "yes" -o "$solaris" = "yes" ] ; then
      tools="qemu-nbd\$(EXESUF) $tools"
@@ -60,7 +67,7 @@ Don't use gld on SunOS
    fi
  fi
  if test "$softmmu" = yes ; then
-@@ -5049,6 +5072,9 @@ fi
+@@ -5049,6 +5077,9 @@ fi
  if test "$fallocate_zero_range" = "yes" ; then
    echo "CONFIG_FALLOCATE_ZERO_RANGE=y" >> $config_host_mak
  fi
