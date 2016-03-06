@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.78 2016/02/20 10:25:02 jperkin Exp $
+# $NetBSD: Makefile,v 1.79 2016/03/06 09:57:51 adam Exp $
 
 DISTNAME=	sqlite-autoconf-${SQLITE3_DISTVERSION}
 PKGNAME=	sqlite3-tcl-${SQLITE3_VERSION}
-PKGREVISION=	1
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
