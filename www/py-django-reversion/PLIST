@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2015/11/13 19:56:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2016/03/06 14:19:55 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -11,6 +11,9 @@ ${PYSITELIB}/reversion/__init__.pyo
 ${PYSITELIB}/reversion/admin.py
 ${PYSITELIB}/reversion/admin.pyc
 ${PYSITELIB}/reversion/admin.pyo
+${PYSITELIB}/reversion/errors.py
+${PYSITELIB}/reversion/errors.pyc
+${PYSITELIB}/reversion/errors.pyo
 ${PYSITELIB}/reversion/helpers.py
 ${PYSITELIB}/reversion/helpers.pyc
 ${PYSITELIB}/reversion/helpers.pyo
@@ -24,6 +27,8 @@ ${PYSITELIB}/reversion/locale/de/LC_MESSAGES/django.mo
 ${PYSITELIB}/reversion/locale/de/LC_MESSAGES/django.po
 ${PYSITELIB}/reversion/locale/es/LC_MESSAGES/django.mo
 ${PYSITELIB}/reversion/locale/es/LC_MESSAGES/django.po
+${PYSITELIB}/reversion/locale/es_AR/LC_MESSAGES/django.mo
+${PYSITELIB}/reversion/locale/es_AR/LC_MESSAGES/django.po
 ${PYSITELIB}/reversion/locale/fr/LC_MESSAGES/django.mo
 ${PYSITELIB}/reversion/locale/fr/LC_MESSAGES/django.po
 ${PYSITELIB}/reversion/locale/he/LC_MESSAGES/django.mo
@@ -76,6 +81,9 @@ ${PYSITELIB}/reversion/models.pyo
 ${PYSITELIB}/reversion/revisions.py
 ${PYSITELIB}/reversion/revisions.pyc
 ${PYSITELIB}/reversion/revisions.pyo
+${PYSITELIB}/reversion/signals.py
+${PYSITELIB}/reversion/signals.pyc
+${PYSITELIB}/reversion/signals.pyo
 ${PYSITELIB}/reversion/south_migrations/0001_initial.py
 ${PYSITELIB}/reversion/south_migrations/0001_initial.pyc
 ${PYSITELIB}/reversion/south_migrations/0001_initial.pyo
@@ -108,6 +116,3 @@ ${PYSITELIB}/reversion/templates/reversion/object_history.html
 ${PYSITELIB}/reversion/templates/reversion/recover_form.html
 ${PYSITELIB}/reversion/templates/reversion/recover_list.html
 ${PYSITELIB}/reversion/templates/reversion/revision_form.html
-${PYSITELIB}/reversion/version.py
-${PYSITELIB}/reversion/version.pyc
-${PYSITELIB}/reversion/version.pyo
