@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.52 2016/02/21 15:36:33 wiedi Exp $
+# $NetBSD: Makefile,v 1.53 2016/03/07 18:34:15 wiedi Exp $
 
-DISTNAME=	nano-2.5.2
+DISTNAME=	nano-2.5.3
 CATEGORIES=	editors
 MASTER_SITES=	http://www.nano-editor.org/dist/v2.5/
 
