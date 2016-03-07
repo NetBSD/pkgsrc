@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2015/12/31 22:16:33 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.21 2016/03/07 13:14:23 fhajny Exp $
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/INSTALL
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/LICENSE
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/LICENSE-APACHE2-ExplorerCanvas
@@ -61,6 +61,7 @@ lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_epmd_monitor.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_error_logger.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_error_logger_file_h.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_exchange.beam
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_exchange_parameters.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_exchange_type_direct.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_exchange_type_fanout.beam
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/ebin/rabbit_exchange_type_headers.beam
@@ -168,7 +169,7 @@ lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_web_stomp-${PKGVER
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/rabbitmq_web_stomp_examples-${PKGVERSION}.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/ranch-1.2.1.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/sockjs-0.3.4.ez
-lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/webmachine-git.ez
+lib/erlang/lib/rabbitmq_server-${PKGVERSION}/plugins/webmachine-1.10.3.ez
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/sbin/rabbitmq-defaults
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/sbin/rabbitmq-env
 lib/erlang/lib/rabbitmq_server-${PKGVERSION}/sbin/rabbitmq-plugins
