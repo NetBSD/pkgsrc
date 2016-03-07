@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15544 2016/03/07 18:34:54 wiedi Exp $
+$NetBSD: TODO,v 1.15545 2016/03/07 18:36:45 nros Exp $
 
 Suggested new packages
 ======================
@@ -1081,7 +1081,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libowfat-0.29
 	o libpagemaker-0.0.3
 	o libpgm-5.2.122
-	o libplist-1.12
 	o libprelude-1.2.5
 	o libquantum-1.1.0 [pkg/43728, development release]
 	o libressl-2.3.2

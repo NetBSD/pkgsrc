@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1030 2016/03/07 18:34:54 wiedi Exp $
+$NetBSD: CHANGES-2016,v 1.1031 2016/03/07 18:36:45 nros Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1409,3 +1409,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated ham/gnuradio-core to 3.7.9.1 [mef 2016-03-07]
 	Updated databases/pgbouncer to 1.7.2 [fhajny 2016-03-07]
 	Updated editors/nano to 2.5.3 [wiedi 2016-03-07]
+	Updated textproc/libplist to 1.12 [nros 2016-03-07]
