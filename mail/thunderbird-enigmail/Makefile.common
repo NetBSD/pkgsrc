@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.5 2015/12/30 04:37:27 kamil Exp $
+# $NetBSD: Makefile.common,v 1.6 2016/03/07 11:49:43 ryoon Exp $
 # used by mail/thunderbird-enigmail/Makefile
 # used by mail/seamonkey-enigmail/Makefile
 
-DISTNAME=	enigmail-1.8.2
+DISTNAME=	enigmail-1.9.1
 CATEGORIES=	mail security
-MASTER_SITES=	http://www.mozilla-enigmail.org/download/source/
+MASTER_SITES=	http://www.enigmail.net/download/source/
 
 HOMEPAGE=	https://www.enigmail.net/
 LICENSE=	(mpl-1.1 OR gnu-gpl-v2 OR gnu-lgpl-v2.1) AND mpl-2.0
@@ -15,8 +15,8 @@ USE_TOOLS+=	gmake perl sed unzip zip
 # https://aur.archlinux.org/packages/th/thunderbird-enigmail/PKGBUILD
 MAKE_JOBS_SAFE=	no
 
-# Minimal requirements are here: https://www.enigmail.net/download/source.php
-DEPENDS+=		gnupg2-[0-9]*:../../security/gnupg2
+.include "../../mail/thunderbird-enigmail/options.mk"
+
 DEPENDS+=		pinentry-gtk2-[0-9]*:../../security/pinentry-gtk2
 
 DISTINFO_FILE=	${.CURDIR}/../../mail/thunderbird-enigmail/distinfo
@@ -37,8 +37,7 @@ REPLACE_PYTHON+=	util/xpt.py
 WRKSRC=		${WRKDIR}/enigmail
 GNU_CONFIGURE=	yes
 
-XPIVER=		${PKGVERSION_NOREV:C/.[0-9]+$//}
-ENIGMAILXPI=	enigmail-${XPIVER}-${LOWER_OPSYS}-${MACHINE_GNU_ARCH}-gcc3.xpi
+ENIGMAILXPI=	enigmail-${PKGVERSION_NOREV}.xpi
 XPIFILE=	${WRKSRC}/build/${ENIGMAILXPI}
 
 # Build instructions: https://www.enigmail.net/download/build_instructions.php
