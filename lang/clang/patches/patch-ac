@@ -1,11 +1,21 @@
-$NetBSD: patch-ac,v 1.10 2015/12/29 23:34:45 dholland Exp $
+$NetBSD: patch-ac,v 1.11 2016/03/07 16:27:47 jperkin Exp $
 
 Fix handling of installation directories.
 Install static libs with the right permissions.
+Don't use non-portable -z discard-unused on SunOS.
 
---- Makefile.rules.orig	2013-11-14 23:51:29.000000000 +0000
+--- Makefile.rules.orig	2015-03-03 20:54:29.000000000 +0000
 +++ Makefile.rules
-@@ -808,9 +808,6 @@ endif
+@@ -641,7 +641,7 @@ ifndef NO_DEAD_STRIP
+   ifeq ($(HOST_OS),Darwin)
+     LD.Flags += -Wl,-dead_strip
+   else
+-    ifeq ($(HOST_OS),SunOS)
++    ifeq ($(HOST_OS),notSunOS)
+       LD.Flags += -Wl,-z -Wl,discard-unused=sections
+     else
+       ifneq ($(HOST_OS), $(filter $(HOST_OS), Cygwin MingW))
+@@ -847,9 +847,6 @@ endif
  # in the file so they get built before dependencies
  #---------------------------------------------------------
  
@@ -15,7 +25,7 @@ Install static libs with the right permissions.
  # To create other directories, as needed, and timestamp their creation
  %/.dir:
  	$(Verb) $(MKDIR) $* > /dev/null
-@@ -954,7 +951,9 @@ install-local::
+@@ -993,7 +990,9 @@ install-local::
  uninstall-local::
  	$(Echo) UnInstall circumvented with NO_INSTALL
  else
@@ -26,7 +36,7 @@ Install static libs with the right permissions.
  	$(Echo) Installing Configuration Files To $(DESTDIR)$(PROJ_etcdir)
  	$(Verb)for file in $(CONFIG_FILES); do \
            if test -f $(PROJ_OBJ_DIR)/$${file} ; then \
-@@ -1248,7 +1247,7 @@ install-local:: $(DestArchiveLib)
+@@ -1305,7 +1304,7 @@ install-local:: $(DestArchiveLib)
  $(DestArchiveLib): $(LibName.A) $(DESTDIR)$(PROJ_libdir)
  	$(Echo) Installing $(BuildMode) Archive Library $(DestArchiveLib)
  	$(Verb) $(MKDIR) $(DESTDIR)$(PROJ_libdir)
