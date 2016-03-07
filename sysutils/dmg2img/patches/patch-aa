@@ -1,17 +1,16 @@
-$NetBSD: patch-aa,v 1.2 2011/11/16 03:53:11 sbd Exp $
+$NetBSD: patch-aa,v 1.3 2016/03/07 20:17:33 nros Exp $
 
 Respect any CFLAGS from the environment, use LDFLAGS and install to
 ${PREFIX}/bin using ${BSD_INSTALL_PROGRAM}
 
---- Makefile.orig	2009-08-12 07:57:55.000000000 +0000
+--- Makefile.orig	2010-03-24 19:38:08.000000000 +0000
 +++ Makefile
-@@ -1,12 +1,13 @@
+@@ -1,11 +1,12 @@
  #CC = gcc
- ##CFLAGS = -O3
 -CFLAGS = -O2 -Wall
 -BIN_DIR = ${DESTDIR}/usr/bin
-+CFLAGS ?= -O2
-+CFLAGS += -Wall
++CFLAGS?= -O2
++CFLAGS+= -Wall
 +BIN_DIR = ${DESTDIR}${PREFIX}/bin
  
  all: dmg2img vfdecrypt 
@@ -22,7 +21,7 @@ ${PREFIX}/bin using ${BSD_INSTALL_PROGRAM}
  
  dmg2img.o: dmg2img.c dmg2img.h
  	$(CC) $(CFLAGS) -c dmg2img.c
-@@ -18,11 +19,12 @@ adc.o: adc.c adc.h
+@@ -17,11 +18,12 @@ adc.o: adc.c adc.h
  	$(CC) $(CFLAGS) -c adc.c
  
  vfdecrypt: vfdecrypt.c
