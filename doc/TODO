@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15541 2016/03/07 13:21:38 wiz Exp $
+$NetBSD: TODO,v 1.15542 2016/03/07 13:48:32 wiz Exp $
 
 Suggested new packages
 ======================
@@ -831,27 +831,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnucap-20130423
 	o gnuchess-6.2.2
 	o gnuchess-book-1.02
-	o gnuradio-3.7.7.1
-	o gnuradio-atsc-3.7.9.1
-	o gnuradio-companion-3.7.9.1
-	o gnuradio-core-3.7.9.1
-	o gnuradio-ctrlport-3.7.9.1
-	o gnuradio-digital-3.7.9.1
-	o gnuradio-doxygen-3.7.9.1
-	o gnuradio-dtv-3.7.9.1
-	o gnuradio-fcd-3.7.9.1
-	o gnuradio-fec-3.7.9.1
-	o gnuradio-noaa-3.7.9.1
-	o gnuradio-pager-3.7.9.1
-	o gnuradio-qtgui-3.7.9.1
-	o gnuradio-trellis-3.7.9.1
-	o gnuradio-uhd-3.7.9.1
-	o gnuradio-utils-3.7.9.1
-	o gnuradio-video-sdl-3.7.9.1
-	o gnuradio-vocoder-3.7.9.1
-	o gnuradio-wavelet-3.7.9.1
-	o gnuradio-wxgui-3.7.9.1
-	o gnuradio-zeromq-3.7.9.1
 	o gnustep-back-0.24.1
 	o gnustep-base-1.24.8
 	o gnustep-examples-1.4.0
@@ -1208,6 +1187,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mp3splt-gtk-0.9.0
 	o mpdas-0.4.1
 	o mpeg4ip-1.6.1
+	o mpfr-3.1.4
 	o mpop-1.2.4
 	o mr-1.20150503
 	o mserv-devel-0.41
