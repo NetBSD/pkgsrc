@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2015/12/08 01:46:58 wiedi Exp $
+@comment $NetBSD: PLIST,v 1.7 2016/03/07 13:14:31 mef Exp $
 bin/gr_constellation_plot
 bin/gr_psd_plot_b
 bin/gr_psd_plot_c
@@ -127,7 +127,9 @@ share/gnuradio/examples/qt-gui/pyqt_time_raster_b.py
 share/gnuradio/examples/qt-gui/pyqt_time_raster_f.py
 share/gnuradio/examples/qt-gui/pyqt_waterfall_c.py
 share/gnuradio/examples/qt-gui/pyqt_waterfall_f.py
+share/gnuradio/examples/qt-gui/qtgui_message_inputs.grc
 share/gnuradio/examples/qt-gui/qtgui_tags_viewing.grc
+share/gnuradio/examples/qt-gui/qtgui_vector_sink_example.grc
 share/gnuradio/grc/blocks/qtgui_ber_sink_b.xml
 share/gnuradio/grc/blocks/qtgui_block_tree.xml
 share/gnuradio/grc/blocks/qtgui_check_box.xml
@@ -148,3 +150,5 @@ share/gnuradio/grc/blocks/qtgui_vector_sink_f.xml
 share/gnuradio/grc/blocks/qtgui_waterfall_sink_x.xml
 share/gnuradio/themes/alt.qss
 share/gnuradio/themes/dark.qss
+share/gnuradio/themes/plain.qss
+share/gnuradio/themes/projector.qss

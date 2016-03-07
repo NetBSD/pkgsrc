@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/09/01 04:14:54 mef Exp $
+@comment $NetBSD: PLIST,v 1.5 2016/03/07 13:14:31 mef Exp $
 include/gnuradio/dtv/api.h
 include/gnuradio/dtv/atsc_consts.h
 include/gnuradio/dtv/atsc_deinterleaver.h
@@ -35,15 +35,23 @@ include/gnuradio/dtv/dvbt2_modulator_bc.h
 include/gnuradio/dtv/dvbt2_p1insertion_cc.h
 include/gnuradio/dtv/dvbt2_paprtr_cc.h
 include/gnuradio/dtv/dvbt2_pilotgenerator_cc.h
+include/gnuradio/dtv/dvbt_bit_inner_deinterleaver.h
 include/gnuradio/dtv/dvbt_bit_inner_interleaver.h
 include/gnuradio/dtv/dvbt_config.h
+include/gnuradio/dtv/dvbt_convolutional_deinterleaver.h
 include/gnuradio/dtv/dvbt_convolutional_interleaver.h
+include/gnuradio/dtv/dvbt_demap.h
+include/gnuradio/dtv/dvbt_demod_reference_signals.h
+include/gnuradio/dtv/dvbt_energy_descramble.h
 include/gnuradio/dtv/dvbt_energy_dispersal.h
 include/gnuradio/dtv/dvbt_inner_coder.h
 include/gnuradio/dtv/dvbt_map.h
+include/gnuradio/dtv/dvbt_ofdm_sym_acquisition.h
+include/gnuradio/dtv/dvbt_reed_solomon_dec.h
 include/gnuradio/dtv/dvbt_reed_solomon_enc.h
 include/gnuradio/dtv/dvbt_reference_signals.h
 include/gnuradio/dtv/dvbt_symbol_inner_interleaver.h
+include/gnuradio/dtv/dvbt_viterbi_decoder.h
 include/gnuradio/swig/dtv_swig.i
 include/gnuradio/swig/dtv_swig_doc.i
 lib/libgnuradio-dtv.so
@@ -97,11 +105,19 @@ share/gnuradio/grc/blocks/dtv_dvbt2_modulator_bc.xml
 share/gnuradio/grc/blocks/dtv_dvbt2_p1insertion_cc.xml
 share/gnuradio/grc/blocks/dtv_dvbt2_paprtr_cc.xml
 share/gnuradio/grc/blocks/dtv_dvbt2_pilotgenerator_cc.xml
+share/gnuradio/grc/blocks/dtv_dvbt_bit_inner_deinterleaver.xml
 share/gnuradio/grc/blocks/dtv_dvbt_bit_inner_interleaver.xml
+share/gnuradio/grc/blocks/dtv_dvbt_convolutional_deinterleaver.xml
 share/gnuradio/grc/blocks/dtv_dvbt_convolutional_interleaver.xml
+share/gnuradio/grc/blocks/dtv_dvbt_demap.xml
+share/gnuradio/grc/blocks/dtv_dvbt_demod_reference_signals.xml
+share/gnuradio/grc/blocks/dtv_dvbt_energy_descramble.xml
 share/gnuradio/grc/blocks/dtv_dvbt_energy_dispersal.xml
 share/gnuradio/grc/blocks/dtv_dvbt_inner_coder.xml
 share/gnuradio/grc/blocks/dtv_dvbt_map.xml
+share/gnuradio/grc/blocks/dtv_dvbt_ofdm_sym_acquisition.xml
+share/gnuradio/grc/blocks/dtv_dvbt_reed_solomon_dec.xml
 share/gnuradio/grc/blocks/dtv_dvbt_reed_solomon_enc.xml
 share/gnuradio/grc/blocks/dtv_dvbt_reference_signals.xml
 share/gnuradio/grc/blocks/dtv_dvbt_symbol_inner_interleaver.xml
+share/gnuradio/grc/blocks/dtv_dvbt_viterbi_decoder.xml
