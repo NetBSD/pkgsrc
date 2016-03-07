@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1023 2016/03/06 16:59:38 adam Exp $
+$NetBSD: CHANGES-2016,v 1.1024 2016/03/07 05:53:51 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1401,3 +1401,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/p5-Net-Amazon-S3 to 0.80 [bsiegert 2016-03-06]
 	Updated net/py-dns to 1.12.0 [adam 2016-03-06]
 	Updated net/py-dns3 to 1.12.0 [adam 2016-03-06]
+	Updated emulators/sys161 to 2.0.8 [dholland 2016-03-07]
