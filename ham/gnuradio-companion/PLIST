@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2015/12/08 01:45:05 wiedi Exp $
+@comment $NetBSD: PLIST,v 1.6 2016/03/07 13:14:31 mef Exp $
 bin/gnuradio-companion
 ${PYSITELIB}/gnuradio/grc/__init__.py
 ${PYSITELIB}/gnuradio/grc/__init__.pyc
@@ -114,6 +114,9 @@ ${PYSITELIB}/gnuradio/grc/gui/Utils.pyo
 ${PYSITELIB}/gnuradio/grc/gui/__init__.py
 ${PYSITELIB}/gnuradio/grc/gui/__init__.pyc
 ${PYSITELIB}/gnuradio/grc/gui/__init__.pyo
+${PYSITELIB}/gnuradio/grc/gui/external_editor.py
+${PYSITELIB}/gnuradio/grc/gui/external_editor.pyc
+${PYSITELIB}/gnuradio/grc/gui/external_editor.pyo
 ${PYSITELIB}/gnuradio/grc/python/Block.py
 ${PYSITELIB}/gnuradio/grc/python/Block.pyc
 ${PYSITELIB}/gnuradio/grc/python/Block.pyo
@@ -143,6 +146,9 @@ ${PYSITELIB}/gnuradio/grc/python/__init__.pyc
 ${PYSITELIB}/gnuradio/grc/python/__init__.pyo
 ${PYSITELIB}/gnuradio/grc/python/block.dtd
 ${PYSITELIB}/gnuradio/grc/python/default_flow_graph.grc
+${PYSITELIB}/gnuradio/grc/python/epy_block_io.py
+${PYSITELIB}/gnuradio/grc/python/epy_block_io.pyc
+${PYSITELIB}/gnuradio/grc/python/epy_block_io.pyo
 ${PYSITELIB}/gnuradio/grc/python/expr_utils.py
 ${PYSITELIB}/gnuradio/grc/python/expr_utils.pyc
 ${PYSITELIB}/gnuradio/grc/python/expr_utils.pyo
@@ -188,6 +194,8 @@ share/gnuradio/grc/blocks/bus_source.xml
 share/gnuradio/grc/blocks/bus_structure_sink.xml
 share/gnuradio/grc/blocks/bus_structure_source.xml
 share/gnuradio/grc/blocks/dummy.xml
+share/gnuradio/grc/blocks/epy_block.xml
+share/gnuradio/grc/blocks/epy_module.xml
 share/gnuradio/grc/blocks/gr_message_domain.xml
 share/gnuradio/grc/blocks/gr_stream_domain.xml
 share/gnuradio/grc/blocks/import.xml
@@ -199,6 +207,7 @@ share/gnuradio/grc/blocks/parameter.xml
 share/gnuradio/grc/blocks/variable.xml
 share/gnuradio/grc/blocks/variable_config.xml
 share/gnuradio/grc/blocks/variable_function_probe.xml
+share/gnuradio/grc/blocks/variable_struct.xml
 share/gnuradio/grc/blocks/virtual_sink.xml
 share/gnuradio/grc/blocks/virtual_source.xml
 share/gnuradio/grc/blocks/xmlrpc_client.xml
@@ -212,4 +221,3 @@ share/gnuradio/grc/freedesktop/grc-icon-256.png
 share/gnuradio/grc/freedesktop/grc-icon-32.png
 share/gnuradio/grc/freedesktop/grc-icon-48.png
 share/gnuradio/grc/freedesktop/grc-icon-64.png
-share/gnuradio/grc/blocks/variable_struct.xml
