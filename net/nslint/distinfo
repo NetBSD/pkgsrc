@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.5 2015/11/04 00:35:16 agc Exp $
+$NetBSD: distinfo,v 1.6 2016/03/07 23:08:45 nros Exp $
 
-SHA1 (nslint-2.1a9.tar.gz) = 4dd0df54f847dedc4b1641d57e3effb2d526ed71
-RMD160 (nslint-2.1a9.tar.gz) = 50d953c45b4f3dbf56f30d91fb35bf739cd2682a
-SHA512 (nslint-2.1a9.tar.gz) = 493ef228d654fb3451f129503f364eaaa1b7a4d1964ed9f282f14869622ececac6d852323e2486948ee3792018ec3b3783af41441cea95b6e31dd8dd5867fa3f
-Size (nslint-2.1a9.tar.gz) = 67368 bytes
+SHA1 (nslint-3.1.tar.gz) = 3d8442f8cacbadb0a03bf52d5a414731f6bbec0c
+RMD160 (nslint-3.1.tar.gz) = dec29dec9cb0a2bbe2221c2bec1ef6122d26c166
+SHA512 (nslint-3.1.tar.gz) = c8552a398bac5a4b1cffcb26c7355b15968bfd1c5f07de565cef9830fea2a330f67ae437fabb285df7d2f4cb52481ef647c3b8df3cb147659d0bf1763ae49693
+Size (nslint-3.1.tar.gz) = 99657 bytes
 SHA1 (patch-aa) = 10ba558b6b6057b4698a8650d0abd5d9b872ddf6
 SHA1 (patch-ab) = 41c009707a439a7abdaa669d1f476e909363a2e4
-SHA1 (patch-ac) = e9202aae9b861d644d6ec41c302950f600a6c26a
+SHA1 (patch-ac) = 081c2b6dff1a56bcde625657d4e5529546920965
