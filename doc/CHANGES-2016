@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1031 2016/03/07 18:36:45 nros Exp $
+$NetBSD: CHANGES-2016,v 1.1032 2016/03/07 19:37:25 nros Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1410,3 +1410,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/pgbouncer to 1.7.2 [fhajny 2016-03-07]
 	Updated editors/nano to 2.5.3 [wiedi 2016-03-07]
 	Updated textproc/libplist to 1.12 [nros 2016-03-07]
+	Updated audio/opusfile to 0.7 [nros 2016-03-07]
