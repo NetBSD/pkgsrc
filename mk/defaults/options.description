@@ -240,6 +240,8 @@ gnome			Enable GNOME support.
 gnome-keyring		Enable GNOME keyring support.
 gnomecanvas		Enable GNOME canvas support
 gnomevfs		Enable GNOME Virtual File System support.
+gnupg2			Use GNU Privacy Guard (GnuPG) Version 2.0
+gnupg21			Use GNU Privacy Guard (GnuPG) Version 2.1
 gnupg2-gpgsm		Install gpgsm binary.
 gnuplot-pdf-doc		Install PDF document.
 gnutls			Enable GNU TLS support.
