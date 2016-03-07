@@ -1,13 +1,11 @@
-$NetBSD: patch-src_http.c,v 1.4 2014/07/16 21:50:24 jperkin Exp $
+$NetBSD: patch-src_http.c,v 1.5 2016/03/07 19:36:57 nros Exp $
 
 * Avoid using the obsolete ftime() function.
 https://trac.xiph.org/ticket/2014
 
-* Not only Win32 lacks AI_NUMERICSERV. Some version of Darwin (at least Darwin 9) lacks it too.
-
 * Need sys/filio.h on SunOS for FIONREAD.
 
---- src/http.c.orig	2013-12-05 16:49:13.000000000 +0000
+--- src/http.c.orig	2015-12-31 18:29:53.000000000 +0000
 +++ src/http.c
 @@ -14,6 +14,9 @@
  #endif
@@ -28,15 +26,6 @@ https://trac.xiph.org/ticket/2014
  # include <openssl/x509v3.h>
  
  /*The maximum number of simultaneous connections.
-@@ -721,7 +724,7 @@ static struct addrinfo *op_resolve(const
-   char             service[6];
-   memset(&hints,0,sizeof(hints));
-   hints.ai_socktype=SOCK_STREAM;
--#if !defined(_WIN32)
-+#if defined(AI_NUMERICSERV)
-   hints.ai_flags=AI_NUMERICSERV;
- #endif
-   OP_ASSERT(_port<=65535U);
 @@ -788,7 +791,7 @@ struct OpusHTTPConn{
    /*The next connection in either the LRU or free list.*/
    OpusHTTPConn *next;
@@ -90,7 +79,7 @@ https://trac.xiph.org/ticket/2014
    read_delta_ms=op_time_diff_ms(&read_time,&_conn->read_time);
    read_rate=_conn->read_rate;
    read_delta_ms=OP_MAX(read_delta_ms,1);
-@@ -1902,7 +1905,7 @@ static int op_sock_connect_next(op_sock
+@@ -1902,7 +1905,7 @@ static int op_sock_connect_next(op_sock 
  # define OP_NPROTOS (2)
  
  static int op_http_connect_impl(OpusHTTPStream *_stream,OpusHTTPConn *_conn,

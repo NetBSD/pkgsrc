@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2016/03/05 11:27:40 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2016/03/07 19:36:57 nros Exp $
 
-DISTNAME=	opusfile-0.6
-PKGREVISION=	2
+DISTNAME=	opusfile-0.7
 CATEGORIES=	audio
 MASTER_SITES=	http://downloads.xiph.org/releases/opus/
 
@@ -17,7 +16,7 @@ USE_TOOLS+=	gmake pkg-config
 PKGCONFIG_OVERRIDE+=	opusfile.pc.in
 PKGCONFIG_OVERRIDE+=	opusurl.pc.in
 
-.include "../../security/openssl/buildlink3.mk"
 .include "../../audio/libopus/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
