@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15542 2016/03/07 13:48:32 wiz Exp $
+$NetBSD: TODO,v 1.15543 2016/03/07 15:04:50 fhajny Exp $
 
 Suggested new packages
 ======================
@@ -1597,7 +1597,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o perlsh-1.8.1
 	o pessulus-2.30.3 [GNOME 2.28]
 	o pflogsumm-1.1.5
-	o pgbouncer-1.7.2
 	o pgbuildfarm-4.17
 	o pgocaml-2.3
 	o phoronix-test-suite-6.2.1
