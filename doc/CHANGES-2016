@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1033 2016/03/07 19:59:58 nros Exp $
+$NetBSD: CHANGES-2016,v 1.1034 2016/03/07 20:18:16 nros Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1412,3 +1412,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/libplist to 1.12 [nros 2016-03-07]
 	Updated audio/opusfile to 0.7 [nros 2016-03-07]
 	Updated misc/ascii to 3.15 [nros 2016-03-07]
+	Updated sysutils/dmg2img to 1.6.5 [nros 2016-03-07]
