@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15545 2016/03/07 18:36:45 nros Exp $
+$NetBSD: TODO,v 1.15546 2016/03/07 18:54:19 nros Exp $
 
 Suggested new packages
 ======================
@@ -1048,7 +1048,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libcaca-0.99.19
 	o libcanberra-0.28 [drops support for GNOME2; don't update for now -- wiz]
 	o libcares-1.11.0
-	o libchamplain08-0.12.10
 	o libconfuse-3.0
 	o libdatrie-0.2.10
 	o libev-4.22
@@ -1247,7 +1246,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ocrad-0.25
 	o octave-4.0.0
 	o odbc-postgresql-09.03.0400
-	o odt2txt-0.5
 	o olvwm-4.5
 	o oniguruma-5.9.6
 	o oo2c-2.1.7
@@ -1255,7 +1253,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o opal-3.8.0 [pkg/42942]
 	o open-vm-tools-2010.09.19.301124
 	o opencsg-1.4.0
-	o opendnssec-1.4.9
 	o openh323-1.19.1
 	o openmortal-0.7.1
 	o openmpi-1.10.2
@@ -1266,7 +1263,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o opensmtpd-5.7.3
 	o openssh-7.2p1
 	o opera-26
-	o opus-1.1.1
 	o opusfile-0.7
 	o orcus-0.11.0
 	o oroborus-2.0.18
