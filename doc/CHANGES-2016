@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1035 2016/03/07 20:57:36 nros Exp $
+$NetBSD: CHANGES-2016,v 1.1036 2016/03/07 23:09:16 nros Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1414,3 +1414,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated misc/ascii to 3.15 [nros 2016-03-07]
 	Updated sysutils/dmg2img to 1.6.5 [nros 2016-03-07]
 	Updated audio/easytag to 2.4.2 [nros 2016-03-07]
+	Updated net/nslint to 3.1 [nros 2016-03-07]
