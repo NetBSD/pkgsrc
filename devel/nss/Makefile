@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.108 2016/02/25 12:12:49 jperkin Exp $
+# $NetBSD: Makefile,v 1.109 2016/03/07 12:31:17 ryoon Exp $
 
 DISTNAME=		nss-${NSS_RELEASE:S/.0$//}
-NSS_RELEASE=		3.22.1
+NSS_RELEASE=		3.22.2
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_MOZILLA_ALL:=security/nss/releases/NSS_${NSS_RELEASE:S/.0$//:S/./_/g}_RTM/src/}
 
@@ -25,6 +25,9 @@ SUBST_STAGE.exec_path=		pre-configure
 SUBST_MESSAGE.exec_path=	Fixing @executable_path
 SUBST_FILES.exec_path=		nss/coreconf/Darwin.mk
 SUBST_SED.exec_path=		-e 's,@executable_path,${PREFIX}/lib/nss,g'
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
+BUILDLINK_TRANSFORM+=	rm:-ansi
 
 MAKE_ENV.Linux+=	FREEBL_NO_DEPEND=0
 
