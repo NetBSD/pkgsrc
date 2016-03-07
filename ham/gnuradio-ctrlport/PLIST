@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2015/09/08 21:01:31 mef Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/03/07 13:14:31 mef Exp $
 bin/gr-ctrlport-monitor
 bin/gr-ctrlport-monitorc
 bin/gr-ctrlport-monitoro
@@ -28,3 +28,9 @@ ${PYSITELIB}/gnuradio/ctrlport/icon.png
 ${PYSITELIB}/gnuradio/ctrlport/monitor.py
 ${PYSITELIB}/gnuradio/ctrlport/monitor.pyc
 ${PYSITELIB}/gnuradio/ctrlport/monitor.pyo
+share/gnuradio/examples/ctrlport/comparing_resamplers.grc
+share/gnuradio/examples/ctrlport/pfb_sync_test.grc
+share/gnuradio/examples/ctrlport/simple_copy.grc
+share/gnuradio/examples/ctrlport/simple_copy_controller.py
+share/gnuradio/examples/ctrlport/usrp_source_control.grc
+share/gnuradio/examples/ctrlport/usrp_source_controller.py

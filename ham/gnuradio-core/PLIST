@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2015/11/26 20:53:52 wiedi Exp $
+@comment $NetBSD: PLIST,v 1.22 2016/03/07 13:14:31 mef Exp $
 bin/gnuradio-config-info
 bin/gr_filter_design
 bin/volk-config-info
@@ -39,6 +39,9 @@ include/gnuradio/analog/pwr_squelch_cc.h
 include/gnuradio/analog/pwr_squelch_ff.h
 include/gnuradio/analog/quadrature_demod_cf.h
 include/gnuradio/analog/rail_ff.h
+include/gnuradio/analog/random_uniform_source_b.h
+include/gnuradio/analog/random_uniform_source_i.h
+include/gnuradio/analog/random_uniform_source_s.h
 include/gnuradio/analog/sig_source_c.h
 include/gnuradio/analog/sig_source_f.h
 include/gnuradio/analog/sig_source_i.h
@@ -98,6 +101,7 @@ include/gnuradio/blocks/complex_to_imag.h
 include/gnuradio/blocks/complex_to_interleaved_short.h
 include/gnuradio/blocks/complex_to_mag.h
 include/gnuradio/blocks/complex_to_mag_squared.h
+include/gnuradio/blocks/complex_to_magphase.h
 include/gnuradio/blocks/complex_to_real.h
 include/gnuradio/blocks/conjugate_cc.h
 include/gnuradio/blocks/control_loop.h
@@ -137,6 +141,7 @@ include/gnuradio/blocks/lfsr_15_1_0.h
 include/gnuradio/blocks/lfsr_32k.h
 include/gnuradio/blocks/lfsr_32k_source_s.h
 include/gnuradio/blocks/log2_const.h
+include/gnuradio/blocks/magphase_to_complex.h
 include/gnuradio/blocks/max_ff.h
 include/gnuradio/blocks/max_ii.h
 include/gnuradio/blocks/max_ss.h
@@ -497,6 +502,8 @@ include/volk/volk_16ic_s32f_deinterleave_real_32f.h
 include/volk/volk_16ic_s32f_magnitude_32f.h
 include/volk/volk_16u_byteswap.h
 include/volk/volk_16u_byteswappuppet_16u.h
+include/volk/volk_32f_8u_polarbutterfly_32f.h
+include/volk/volk_32f_8u_polarbutterflypuppet_32f.h
 include/volk/volk_32f_accumulator_s32f.h
 include/volk/volk_32f_acos_32f.h
 include/volk/volk_32f_asin_32f.h
@@ -587,13 +594,19 @@ include/volk/volk_8ic_s32f_deinterleave_real_32f.h
 include/volk/volk_8ic_x2_multiply_conjugate_16ic.h
 include/volk/volk_8ic_x2_s32f_multiply_conjugate_32fc.h
 include/volk/volk_8u_conv_k7_r2puppet_8u.h
+include/volk/volk_8u_x2_encodeframepolar_8u.h
+include/volk/volk_8u_x3_encodepolar_8u_x2.h
+include/volk/volk_8u_x3_encodepolarpuppet_8u.h
 include/volk/volk_8u_x4_conv_k7_r2_8u.h
+include/volk/volk_avx_intrinsics.h
 include/volk/volk_common.h
 include/volk/volk_complex.h
 include/volk/volk_config_fixed.h
 include/volk/volk_cpu.h
 include/volk/volk_malloc.h
+include/volk/volk_neon_intrinsics.h
 include/volk/volk_prefs.h
+include/volk/volk_sse3_intrinsics.h
 include/volk/volk_typedefs.h
 lib/cmake/gnuradio/CMakeMacroLibtoolFile.cmake
 lib/cmake/gnuradio/CMakeParseArgumentsCopy.cmake
@@ -645,7 +658,7 @@ lib/libgnuradio-pmt.so.${PKGVERSION}
 lib/libgnuradio-runtime.so
 lib/libgnuradio-runtime.so.${PKGVERSION}
 lib/libvolk.so
-lib/libvolk.so.1.0.2
+lib/libvolk.so.1.2.1
 lib/pkgconfig/gnuradio-analog.pc
 lib/pkgconfig/gnuradio-audio.pc
 lib/pkgconfig/gnuradio-blocks.pc
@@ -942,6 +955,7 @@ share/gnuradio/examples/filter/synth_filter.py
 share/gnuradio/examples/filter/synth_to_chan.py
 share/gnuradio/examples/gnuradio-runtime.conf
 share/gnuradio/examples/gr-audio-jack.conf
+share/gnuradio/examples/gr-audio-oss.conf
 share/gnuradio/examples/gr-audio-portaudio.conf
 share/gnuradio/examples/gr-audio.conf
 share/gnuradio/examples/metadata/file_metadata_sink.grc
@@ -994,6 +1008,7 @@ share/gnuradio/grc/blocks/analog_pwr_squelch_xx.xml
 share/gnuradio/grc/blocks/analog_quadrature_demod_cf.xml
 share/gnuradio/grc/blocks/analog_rail_ff.xml
 share/gnuradio/grc/blocks/analog_random_source_x.xml
+share/gnuradio/grc/blocks/analog_random_uniform_source_x.xml
 share/gnuradio/grc/blocks/analog_sig_source_x.xml
 share/gnuradio/grc/blocks/analog_simple_squelch_cc.xml
 share/gnuradio/grc/blocks/analog_standard_squelch.xml
@@ -1015,9 +1030,11 @@ share/gnuradio/grc/blocks/blocks_char_to_short.xml
 share/gnuradio/grc/blocks/blocks_complex_to_arg.xml
 share/gnuradio/grc/blocks/blocks_complex_to_float.xml
 share/gnuradio/grc/blocks/blocks_complex_to_imag.xml
+share/gnuradio/grc/blocks/blocks_complex_to_interleaved_char.xml
 share/gnuradio/grc/blocks/blocks_complex_to_interleaved_short.xml
 share/gnuradio/grc/blocks/blocks_complex_to_mag.xml
 share/gnuradio/grc/blocks/blocks_complex_to_mag_squared.xml
+share/gnuradio/grc/blocks/blocks_complex_to_magphase.xml
 share/gnuradio/grc/blocks/blocks_complex_to_real.xml
 share/gnuradio/grc/blocks/blocks_conjugate_cc.xml
 share/gnuradio/grc/blocks/blocks_copy.xml
@@ -1049,6 +1066,7 @@ share/gnuradio/grc/blocks/blocks_interleaved_char_to_complex.xml
 share/gnuradio/grc/blocks/blocks_interleaved_short_to_complex.xml
 share/gnuradio/grc/blocks/blocks_keep_m_in_n.xml
 share/gnuradio/grc/blocks/blocks_keep_one_in_n.xml
+share/gnuradio/grc/blocks/blocks_magphase_to_complex.xml
 share/gnuradio/grc/blocks/blocks_max_xx.xml
 share/gnuradio/grc/blocks/blocks_message_burst_source.xml
 share/gnuradio/grc/blocks/blocks_message_debug.xml
