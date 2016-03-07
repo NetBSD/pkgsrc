@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15548 2016/03/07 19:59:58 nros Exp $
+$NetBSD: TODO,v 1.15549 2016/03/07 20:18:16 nros Exp $
 
 Suggested new packages
 ======================
@@ -614,7 +614,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o digikam-4.14.0
 	o dinotrace-9.4d
 	o discount-2.2.0
-	o dmg2img-1.6.5
 	o dmidecode-3.0
 	o dnssec-tools-2.2
 	o doclifter-2.16
