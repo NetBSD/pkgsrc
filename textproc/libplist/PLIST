@@ -1,27 +1,21 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/11/21 18:51:37 shattered Exp $
-bin/plutil
-bin/plutil-${PKGVERSION}
+@comment $NetBSD: PLIST,v 1.2 2016/03/07 18:36:05 nros Exp $
+bin/plistutil
 include/plist/Array.h
 include/plist/Boolean.h
 include/plist/Data.h
 include/plist/Date.h
 include/plist/Dictionary.h
 include/plist/Integer.h
+include/plist/Key.h
 include/plist/Node.h
 include/plist/Real.h
 include/plist/String.h
 include/plist/Structure.h
+include/plist/Uid.h
 include/plist/plist++.h
 include/plist/plist.h
-include/plist/swig/plist.i
-lib/libplist++.so
-lib/libplist++.so.1
-lib/libplist++.so.1.${PKGVERSION}
-lib/libplist.so
-lib/libplist.so.1
-lib/libplist.so.1.${PKGVERSION}
+lib/libplist++.la
+lib/libplist.la
 lib/pkgconfig/libplist++.pc
 lib/pkgconfig/libplist.pc
-${PYSITELIB}/plist/__init__.py
-${PYSITELIB}/plist/_plist.so
-${PYSITELIB}/plist/plist.py
+${PYSITELIB}/plist.la
