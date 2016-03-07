@@ -1,11 +1,11 @@
-$NetBSD: patch-ca,v 1.24 2015/06/24 11:43:42 he Exp $
+$NetBSD: patch-ca,v 1.25 2016/03/07 21:27:58 kamil Exp $
 
 * Use "uname -r" to get OS version for *BSD.
 * Move $loclibpth to the end of $dlist, instead of the beginning.
 * Detect systems which have <fenv.h> but where using it fails.
 * Several other changes.
 
---- Configure.orig	2015-05-13 20:19:28.000000000 +0000
+--- Configure.orig	2015-10-17 12:38:37.000000000 +0000
 +++ Configure
 @@ -3439,13 +3439,14 @@ EOM
  			osvers="$3"
@@ -114,6 +114,15 @@ $NetBSD: patch-ca,v 1.24 2015/06/24 11:43:42 he Exp $
  
  : Determine list of previous versions to include in @INC
  $cat > getverlist <<EOPL
+@@ -7631,7 +7646,7 @@ echo " "
+ case "$ptrsize" in
+ '')
+ 	echo "Checking to see how big your pointers are..." >&4
+-	$cat >>try.c <<EOCP
++	$cat >try.c <<EOCP
+ #include <stdio.h>
+ #$i_stdlib I_STDLIB
+ #ifdef I_STDLIB
 @@ -7902,7 +7917,9 @@ case "$vendorprefix" in
  	vendorlibexp="$ansexp"
  	;;
@@ -207,3 +216,8 @@ $NetBSD: patch-ca,v 1.24 2015/06/24 11:43:42 he Exp $
  : see if this is a fp.h system
  set fp.h i_fp
  eval $inhdr
+@@ -24966,4 +25021,3 @@ $rm -f kit*isdone ark*isdone
+ $rm -rf UU
+ 
+ : End of Configure
+-
