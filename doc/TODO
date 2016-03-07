@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15547 2016/03/07 19:37:26 nros Exp $
+$NetBSD: TODO,v 1.15548 2016/03/07 19:59:58 nros Exp $
 
 Suggested new packages
 ======================
@@ -450,7 +450,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o arnold-20040104
 	o asapm-3.1
 	o asc-2.6.0
-	o ascii-3.15
 	o asn1c-0.9.27
 	o aspell-nb-2.0.10
 	o asunder-2.8
