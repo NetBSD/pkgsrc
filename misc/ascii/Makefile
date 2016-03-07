@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2014/12/20 23:51:52 mef Exp $
+# $NetBSD: Makefile,v 1.16 2016/03/07 19:59:32 nros Exp $
 #
 
-DISTNAME=	ascii-3.14
+DISTNAME=	ascii-3.15
 CATEGORIES=	misc
 MASTER_SITES=	${HOMEPAGE}
 
