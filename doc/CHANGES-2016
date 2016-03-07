@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1029 2016/03/07 15:04:50 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.1030 2016/03/07 18:34:54 wiedi Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1408,3 +1408,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/rabbitmq to 3.6.1 [fhajny 2016-03-07]
 	Updated ham/gnuradio-core to 3.7.9.1 [mef 2016-03-07]
 	Updated databases/pgbouncer to 1.7.2 [fhajny 2016-03-07]
+	Updated editors/nano to 2.5.3 [wiedi 2016-03-07]
