@@ -1,17 +1,16 @@
-$NetBSD: patch-ac,v 1.1 2004/04/16 21:06:41 minskim Exp $
+$NetBSD: patch-ac,v 1.2 2016/03/07 23:08:46 nros Exp $
 
---- Makefile.in.orig	2000-03-07 19:51:41.000000000 -0600
+--- Makefile.in.orig	2010-03-06 04:14:09.000000000 +0000
 +++ Makefile.in
-@@ -87,10 +87,10 @@ version.c: $(srcdir)/VERSION
+@@ -96,9 +96,9 @@ version.c: $(srcdir)/VERSION
  	sed -e 's/.*/char version[] = "&";/' $(srcdir)/VERSION > $@
  
  install: force
 -	$(INSTALL) -m 555 -o bin -g bin $(PROG) $(DESTDIR)$(BINDEST)/$(PROG)
 +	${BSD_INSTALL_PROGRAM} $(PROG) $(DESTDIR)$(BINDEST)/$(PROG)
- 
- install-man: force
--	$(INSTALL) -m 444 -o bin -g bin $(srcdir)/$(PROG).8 \
-+	${BSD_INSTALL_MAN} $(srcdir)/$(PROG).8 \
- 	    $(DESTDIR)$(MANDEST)/man8/$(PROG).8
+ 	@diff $(srcdir)/$(PROG).8 $(DESTDIR)$(MANDEST)/man8 >/dev/null 2>&1 || \
+-		$(INSTALL) -m 444 -o bin -g bin $(srcdir)/$(PROG).8 $(DESTDIR)$(MANDEST)/man8/
++		${BSD_INSTALL_MAN} $(srcdir)/$(PROG).8 $(DESTDIR)$(MANDEST)/man8/
  
  clean: force
+ 	rm -f $(CLEANFILES)
