@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15546 2016/03/07 18:54:19 nros Exp $
+$NetBSD: TODO,v 1.15547 2016/03/07 19:37:26 nros Exp $
 
 Suggested new packages
 ======================
@@ -1263,7 +1263,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o opensmtpd-5.7.3
 	o openssh-7.2p1
 	o opera-26
-	o opusfile-0.7
 	o orcus-0.11.0
 	o oroborus-2.0.18
 	o ortp-0.25.0
