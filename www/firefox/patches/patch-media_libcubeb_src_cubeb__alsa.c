@@ -1,6 +1,6 @@
-$NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.12 2015/12/31 08:45:42 ryoon Exp $
+$NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.13 2016/03/08 21:32:52 ryoon Exp $
 
---- media/libcubeb/src/cubeb_alsa.c.orig	2015-12-23 22:11:01.000000000 +0000
+--- media/libcubeb/src/cubeb_alsa.c.orig	2016-02-25 23:01:58.000000000 +0000
 +++ media/libcubeb/src/cubeb_alsa.c
 @@ -7,12 +7,18 @@
  #undef NDEBUG
@@ -586,8 +586,8 @@ $NetBSD: patch-media_libcubeb_src_cubeb__alsa.c,v 1.12 2015/12/31 08:45:42 ryoon
  
    /* get a pcm, disabling resampling, so we get a rate the
     * hardware/dmix/pulse/etc. supports. */
--  r = snd_pcm_open(&pcm, "default", SND_PCM_STREAM_PLAYBACK | SND_PCM_NO_AUTO_RESAMPLE, 0);
-+  r = WRAP(snd_pcm_open)(&pcm, "default", SND_PCM_STREAM_PLAYBACK | SND_PCM_NO_AUTO_RESAMPLE, 0);
+-  r = snd_pcm_open(&pcm, CUBEB_ALSA_PCM_NAME, SND_PCM_STREAM_PLAYBACK | SND_PCM_NO_AUTO_RESAMPLE, 0);
++  r = WRAP(snd_pcm_open)(&pcm, CUBEB_ALSA_PCM_NAME, SND_PCM_STREAM_PLAYBACK | SND_PCM_NO_AUTO_RESAMPLE, 0);
    if (r < 0) {
      return CUBEB_ERROR;
    }
