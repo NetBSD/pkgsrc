@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/05/29 13:31:38 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/03/08 11:21:27 nros Exp $
 include/musicbrainz5/Alias.h
 include/musicbrainz5/AliasList.h
 include/musicbrainz5/Annotation.h
@@ -68,6 +68,6 @@ include/musicbrainz5/defines.h
 include/musicbrainz5/mb5_c.h
 include/musicbrainz5/xmlParser.h
 lib/libmusicbrainz5.so
-lib/libmusicbrainz5.so.0
-lib/libmusicbrainz5.so.0.0.1
+lib/libmusicbrainz5.so.1
+lib/libmusicbrainz5.so.1.0.0
 lib/pkgconfig/libmusicbrainz5.pc
