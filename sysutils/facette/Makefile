@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2016/03/08 16:52:44 imil Exp $
+# $NetBSD: Makefile,v 1.2 2016/03/08 19:09:56 imil Exp $
 
 DISTNAME=	facette-0.4.0dev
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=facette/}
 GITHUB_PROJECT=	facette
@@ -23,12 +24,15 @@ SUBST_STAGE.paths=	pre-build
 SUBST_FILES.paths=	Makefile
 SUBST_SED.paths=	-e 's,/usr/local,${PREFIX}/,g'
 
-MAKE_ENV+=		CGO_LDFLAGS="-L${PREFIX}/lib -Wl,-rpath,${PREFIX}/lib"
-
 DOCDIR=			${PREFIX}/share/doc/facette
 EGDIR=			${PREFIX}/share/examples/facette
 DATADIR=		${PREFIX}/share/facette
 INSTALLATION_DIRS+=	bin ${EGDIR} ${DOCDIR} ${DATADIR}/static
+
+CGO_LDFLAGS=		-L${PREFIX}/lib ${COMPILER_RPATH_FLAG},${PREFIX}/lib
+
+do-build:
+	cd ${WRKSRC} && CGO_LDFLAGS="${CGO_LDFLAGS}" ${GMAKE} build
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/build/*/bin/facette	\
