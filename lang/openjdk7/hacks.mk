@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.3 2015/03/05 13:02:38 tnn Exp $
+# $NetBSD: hacks.mk,v 1.4 2016/03/08 20:03:52 tnn Exp $
 
 .if !defined(OPENJDK7_HACKS_MK)
 OPENJDK7_HACKS_MK=	# empty
@@ -18,9 +18,8 @@ post-wrapper:
 # JDK can correctly build itself. Compiling or running programs other than
 # openjdk itself on such hardware may still cause unexpected behaviour.
 #
-COMPARE_SUBNORMAL_CMD=	${AWK} 'BEGIN {print (1E-307*1E-1==0?"yes":"no");exit;}'
-BROKEN_IEEE_FLOATS:=	${COMPARE_SUBNORMAL_CMD:sh}
-.if !empty(BROKEN_IEEE_FLOATS:Myes)
+
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-*arm*)
 PKG_HACKS+=		broken-ieee-floats
 SUBST_CLASSES+=		fpu
 SUBST_STAGE.fpu=	pre-build
