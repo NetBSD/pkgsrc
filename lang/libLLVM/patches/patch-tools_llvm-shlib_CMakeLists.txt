@@ -1,0 +1,21 @@
+$NetBSD: patch-tools_llvm-shlib_CMakeLists.txt,v 1.1 2016/03/08 21:06:50 tnn Exp $
+
+Use the Linux style linking everywhere except Darwin.
+
+--- ./tools/llvm-shlib/CMakeLists.txt.orig	2015-11-04 23:11:12.000000000 +0000
++++ ./tools/llvm-shlib/CMakeLists.txt
+@@ -41,11 +41,10 @@ endif()
+ add_llvm_library(LLVM SHARED DISABLE_LLVM_LINK_LLVM_DYLIB SONAME ${SOURCES})
+ 
+ list(REMOVE_DUPLICATES LIB_NAMES)
+-if("${CMAKE_SYSTEM_NAME}" STREQUAL "Linux") # FIXME: It should be "GNU ld for elf"
+-  # GNU ld doesn't resolve symbols in the version script.
+-  set(LIB_NAMES -Wl,--whole-archive ${LIB_NAMES} -Wl,--no-whole-archive)
+-elseif("${CMAKE_SYSTEM_NAME}" STREQUAL "Darwin")
++if("${CMAKE_SYSTEM_NAME}" STREQUAL "Darwin")
+   set(LIB_NAMES -Wl,-all_load ${LIB_NAMES})
++else()
++  set(LIB_NAMES -Wl,--whole-archive ${LIB_NAMES} -Wl,--no-whole-archive)
+ endif()
+ 
+ target_link_libraries(LLVM PRIVATE ${LIB_NAMES})
