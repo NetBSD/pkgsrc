@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2015/11/29 09:57:15 taca Exp $
+# $NetBSD: Makefile,v 1.12 2016/03/08 13:55:26 taca Exp $
 #
 
-DISTNAME=	mysql2-0.4.2
+DISTNAME=	mysql2-0.4.3
 CATEGORIES=	databases ruby
 
 MAINTAINER=	taca@NetBSD.org
-HOMEPAGE=	http://github.com/brianmario/mysql2/
+HOMEPAGE=	https://github.com/brianmario/mysql2/
 COMMENT=	Simple, fast Mysql library for Ruby, binding to libmysql
 LICENSE=	mit
 
