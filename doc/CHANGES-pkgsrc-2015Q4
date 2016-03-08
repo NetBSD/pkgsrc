@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q4,v 1.1.2.22 2016/03/06 12:27:21 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q4,v 1.1.2.23 2016/03/08 19:00:23 bsiegert Exp $
 
 Changes to the packages collection and infrastructure on the 2015Q4 branch:
 
@@ -159,3 +159,13 @@ graphics/graphite2: security fix
 
 Pullup ticket #4943 - requested by bsiegert
 www/netsurf: security update
+
+Pullup ticket #4944 - requested by taca
+lang/php55: security fix
+
+Pullup ticket #4945 - requested by taca
+lang/php56: security fix
+
+Pullup ticket #4947 - requested by taca
+www/ruby-actionpack32: security fix
+
