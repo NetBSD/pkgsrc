@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2016/02/16 14:31:58 taca Exp $
+@comment $NetBSD: PLIST,v 1.40 2016/03/08 13:57:23 taca Exp $
 bin/sequel${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -120,6 +120,7 @@ ${GEM_LIBDIR}/doc/release_notes/4.29.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.3.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.30.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.31.0.txt
+${GEM_LIBDIR}/doc/release_notes/4.32.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.4.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.5.0.txt
 ${GEM_LIBDIR}/doc/release_notes/4.6.0.txt
@@ -256,6 +257,7 @@ ${GEM_LIBDIR}/lib/sequel/extensions/meta_def.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/migration.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/mssql_emulate_lateral_with_apply.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/named_timezones.rb
+${GEM_LIBDIR}/lib/sequel/extensions/no_auto_literal_strings.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/null_dataset.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pagination.rb
 ${GEM_LIBDIR}/lib/sequel/extensions/pg_array.rb
@@ -465,6 +467,7 @@ ${GEM_LIBDIR}/spec/extensions/modification_detection_spec.rb
 ${GEM_LIBDIR}/spec/extensions/mssql_optimistic_locking_spec.rb
 ${GEM_LIBDIR}/spec/extensions/named_timezones_spec.rb
 ${GEM_LIBDIR}/spec/extensions/nested_attributes_spec.rb
+${GEM_LIBDIR}/spec/extensions/no_auto_literal_strings_spec.rb
 ${GEM_LIBDIR}/spec/extensions/null_dataset_spec.rb
 ${GEM_LIBDIR}/spec/extensions/optimistic_locking_spec.rb
 ${GEM_LIBDIR}/spec/extensions/pagination_spec.rb
