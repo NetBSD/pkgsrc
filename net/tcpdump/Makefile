@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2016/03/05 11:29:12 jperkin Exp $
+# $NetBSD: Makefile,v 1.41 2016/03/08 12:53:34 adam Exp $
 
 DISTNAME=	tcpdump-4.7.4
 PKGREVISION=	1
@@ -11,6 +11,7 @@ COMMENT=	Network monitoring tool
 LICENSE=	modified-bsd
 
 GNU_CONFIGURE=		yes
+CONFIGURE_ARGS.Darwin+=	--disable-universal
 
 .include "options.mk"
 
