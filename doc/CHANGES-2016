@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1043 2016/03/08 14:00:52 taca Exp $
+$NetBSD: CHANGES-2016,v 1.1044 2016/03/08 14:08:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1422,3 +1422,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/ruby-mysql2 to 0.4.3 [taca 2016-03-08]
 	Updated databases/ruby-sequel to 4.32.0 [taca 2016-03-08]
 	Updated devel/ruby-gettext_i18n_rails to 1.5.0 [taca 2016-03-08]
+	Updated devel/ruby-octokit to 4.3.0 [taca 2016-03-08]
