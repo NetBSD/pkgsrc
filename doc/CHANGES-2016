@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1047 2016/03/08 14:42:05 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1048 2016/03/08 14:43:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1426,3 +1426,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ruby-parser to 3.8.1 [taca 2016-03-08]
 	Updated devel/ruby-rspec-core to 3.4.3 [taca 2016-03-08]
 	Updated devel/afl to 2.06b [wiz 2016-03-08]
+	Updated textproc/iso-codes to 3.66 [wiz 2016-03-08]
