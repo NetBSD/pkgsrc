@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2015/08/15 22:46:39 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2016/03/08 14:45:36 wiz Exp $
 
-DISTNAME=	libpagemaker-0.0.2
-PKGREVISION=	2
+DISTNAME=	libpagemaker-0.0.3
 CATEGORIES=	converters
 MASTER_SITES=	http://dev-www.libreoffice.org/src/libpagemaker/
 
