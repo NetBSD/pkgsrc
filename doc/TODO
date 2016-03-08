@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15563 2016/03/08 15:11:38 wiz Exp $
+$NetBSD: TODO,v 1.15564 2016/03/08 15:14:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1371,7 +1371,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-IP-Country-3.03
 	o p5-IPC-Cmd-0.94
 	o p5-IPC-SysV-2.06
-	o p5-Image-ExifTool-10.12
 	o p5-JSON-Any-1.39
 	o p5-LWP-Protocol-PSGI-0.09
 	o p5-Lingua-PT-Stemmer-0.02
@@ -1448,7 +1447,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Padre-Plugin-XS-0.12
 	o p5-Parallel-ForkManager-1.17
 	o p5-Parallel-Prefork-0.18
-	o p5-Params-Validate-1.23
 	o p5-Parse-ErrorString-Perl-0.22
 	o p5-Path-Tiny-0.084
 	o p5-Perl-APIReference-0.22
@@ -1665,7 +1663,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-collectd-5.5.1
 	o py-colorama-0.3.6
 	o py-creole-1.1.1
-	o py-cryptography-1.2.3
 	o py-cups-1.9.73
 	o py-d2to1-0.2.12
 	o py-daemon-2.1.1
@@ -1689,7 +1686,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-keybinder-0.3.1
 	o py-lasso-2.5.1
 	o py-lupa-1.2
-	o py-lxml-3.5.0b1
 	o py-markdown-2.6.5
 	o py-matplotlib-1.4.3
 	o py-mccabe-0.4.0
