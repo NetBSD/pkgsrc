@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2015/08/01 09:35:52 adam Exp $
+# $NetBSD: Makefile,v 1.6 2016/03/08 15:40:02 wiz Exp $
 
-DISTNAME=	mysql-connector-c++-1.1.6
+DISTNAME=	mysql-connector-c++-1.1.7
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_MYSQL:=Connector-C++/}
 
