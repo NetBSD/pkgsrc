@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.48 2016/01/30 05:39:13 richard Exp $
+$NetBSD: distinfo,v 1.49 2016/03/08 19:25:35 ryoon Exp $
 
-SHA1 (stunnel-5.30.tar.gz) = e09ce4627dee34613c3fc075ccff780998e26e0b
-RMD160 (stunnel-5.30.tar.gz) = 4f331c11c4819eb9d8aa33b59084dae48da6a8a0
-SHA512 (stunnel-5.30.tar.gz) = 66bb610241e70881f8b14bfaec712a48361ec43a631db8b38ea0c94547fa184896e2d1fbbce52eb13c65411aa1ca10b3e9e42bde1651b38a5d551504b3b38f3c
-Size (stunnel-5.30.tar.gz) = 638771 bytes
+SHA1 (stunnel-5.31.tar.gz) = e9c3717ece9931d099013dbbbf613cec47452a62
+RMD160 (stunnel-5.31.tar.gz) = 8164e8fc76c1a59f9cdb12c4ddd4bf3d5ba8c365
+SHA512 (stunnel-5.31.tar.gz) = 250d55e684311ed79d43f25f7980e67627d8d58cfe8c13d4f90a8e0b00f13819adc1732bbc94ebba7dccc183384ea75c8ff3171f697d147f204b62fa60f63b67
+Size (stunnel-5.31.tar.gz) = 639381 bytes
 SHA1 (patch-aa) = c79d26b07a7e9d11f54bf2f61d17206b0c2951b0
 SHA1 (patch-ac) = 91b09d39fb968ad76952acdff250150d3e372c36
