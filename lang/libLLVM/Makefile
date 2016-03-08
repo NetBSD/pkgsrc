@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2016/03/08 21:06:50 tnn Exp $
+# $NetBSD: Makefile,v 1.9 2016/03/08 21:50:29 tnn Exp $
 
 DISTNAME=	llvm-3.8.0.src
 PKGNAME=	${DISTNAME:S/llvm/libLLVM/:S/.src//}
 CATEGORIES=	lang devel
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
-#MASTER_SITES=	http://llvm.org/pre-releases/3.8.0/rc2/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -94,10 +93,6 @@ TEST_ENV+=		LD_LIBRARY_PATH=${WRKDIR}/build/lib
 LLVM_MAJOR=	${PKGVERSION_NOREV:C/^([0-9]+\.[0-9]+)\..*$/\1/}
 PLIST_SUBST+=	LLVM_MAJOR=${LLVM_MAJOR}
 
-# This is not required in pkgsrc proper, use PKGVERSION_NOREV
-PKGVERSION_NORC=${PKGVERSION_NOREV:C/rc[0-9]+//}
-PLIST_SUBST+=	PKGVERSION_NORC=${PKGVERSION_NORC}
-
 PLIST_VARS+=	notdylib
 .if ${_OPSYS_SHLIB_TYPE} == "dylib"
 SOEXT=		dylib
@@ -132,7 +127,7 @@ post-install:
 	${LN} -s ${LLVM_LIBNAME}	\
 		${DESTDIR}${PREFIX}/lib/libLLVM/libLLVM.${SOEXT}
 	${LN} -s ${LLVM_LIBNAME}	\
-		${DESTDIR}${PREFIX}/lib/libLLVM/libLLVM-${PKGVERSION_NORC}.${SOEXT}
+		${DESTDIR}${PREFIX}/lib/libLLVM/libLLVM-${PKGVERSION_NOREV}.${SOEXT}
 .endif
 
 .include "../../devel/zlib/buildlink3.mk"
