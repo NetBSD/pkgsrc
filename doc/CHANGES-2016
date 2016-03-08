@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1074 2016/03/08 20:22:46 imil Exp $
+$NetBSD: CHANGES-2016,v 1.1075 2016/03/08 21:33:51 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1454,3 +1454,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/stunnel to 5.31 [ryoon 2016-03-08]
 	Added textproc/py-docx version 0.8.5 [bsiegert 2016-03-08]
 	Updated sysutils/facette to 0.4.0devnb2 [imil 2016-03-08]
+	Updated www/firefox to 45.0 [ryoon 2016-03-08]
