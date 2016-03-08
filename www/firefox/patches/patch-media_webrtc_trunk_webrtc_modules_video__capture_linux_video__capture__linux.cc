@@ -1,6 +1,6 @@
-$NetBSD: patch-media_webrtc_trunk_webrtc_modules_video__capture_linux_video__capture__linux.cc,v 1.8 2014/06/11 00:40:59 ryoon Exp $
+$NetBSD: patch-media_webrtc_trunk_webrtc_modules_video__capture_linux_video__capture__linux.cc,v 1.9 2016/03/08 21:32:52 ryoon Exp $
 
---- media/webrtc/trunk/webrtc/modules/video_capture/linux/video_capture_linux.cc.orig	2014-05-29 23:31:23.000000000 +0000
+--- media/webrtc/trunk/webrtc/modules/video_capture/linux/video_capture_linux.cc.orig	2016-02-25 23:02:06.000000000 +0000
 +++ media/webrtc/trunk/webrtc/modules/video_capture/linux/video_capture_linux.cc
 @@ -25,6 +25,9 @@
  #else
@@ -12,8 +12,8 @@ $NetBSD: patch-media_webrtc_trunk_webrtc_modules_video__capture_linux_video__cap
  
  #include <new>
  
-@@ -34,6 +37,15 @@
- #include "webrtc/system_wrappers/interface/thread_wrapper.h"
+@@ -33,6 +36,15 @@
+ #include "webrtc/system_wrappers/interface/ref_count.h"
  #include "webrtc/system_wrappers/interface/trace.h"
  
 +#ifdef HAVE_LIBV4L2

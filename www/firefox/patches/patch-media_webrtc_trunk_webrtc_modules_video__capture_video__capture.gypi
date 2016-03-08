@@ -1,6 +1,6 @@
-$NetBSD: patch-media_webrtc_trunk_webrtc_modules_video__capture_video__capture.gypi,v 1.7 2015/05/12 22:48:54 ryoon Exp $
+$NetBSD: patch-media_webrtc_trunk_webrtc_modules_video__capture_video__capture.gypi,v 1.8 2016/03/08 21:32:52 ryoon Exp $
 
---- media/webrtc/trunk/webrtc/modules/video_capture/video_capture.gypi.orig	2015-05-04 00:43:29.000000000 +0000
+--- media/webrtc/trunk/webrtc/modules/video_capture/video_capture.gypi.orig	2016-02-25 23:02:07.000000000 +0000
 +++ media/webrtc/trunk/webrtc/modules/video_capture/video_capture.gypi
 @@ -7,6 +7,9 @@
  # be found in the AUTHORS file in the root of the source tree.
@@ -12,10 +12,12 @@ $NetBSD: patch-media_webrtc_trunk_webrtc_modules_video__capture_video__capture.g
    'targets': [
      {
        # Note this library is missing an implementation for the video capture.
-@@ -69,6 +72,19 @@
-             'linux/video_capture_linux.cc',
-             'linux/video_capture_linux.h',
+@@ -64,8 +67,32 @@
+             'video_capture_module',
+             '<(webrtc_root)/common.gyp:webrtc_common',
            ],
+-	  'cflags_mozilla': [
+-	    '$(NSPR_CFLAGS)',
 +          'conditions': [
 +            ['use_libv4l2==1', {
 +              'defines': [
@@ -29,6 +31,19 @@ $NetBSD: patch-media_webrtc_trunk_webrtc_modules_video__capture_video__capture.g
 +              ],
 +            }],
 +          ],
-         }],  # linux
-         ['OS=="mac"', {
-           'sources': [
++        }],  # linux
++        ['OS=="mac"', {
++          'sources': [
++            'mac/qtkit/video_capture_qtkit.h',
++            'mac/qtkit/video_capture_qtkit.mm',
++            'mac/qtkit/video_capture_qtkit_info.h',
++            'mac/qtkit/video_capture_qtkit_info.mm',
++            'mac/qtkit/video_capture_qtkit_info_objc.h',
++            'mac/qtkit/video_capture_qtkit_info_objc.mm',
++            'mac/qtkit/video_capture_qtkit_objc.h',
++            'mac/qtkit/video_capture_qtkit_objc.mm',
++            'mac/qtkit/video_capture_qtkit_utility.h',
++            'mac/video_capture_mac.mm',
+           ],
+           'conditions': [
+            ['include_v4l2_video_capture==1', {
