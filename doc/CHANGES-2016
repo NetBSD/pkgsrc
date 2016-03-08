@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1056 2016/03/08 15:10:53 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1057 2016/03/08 15:11:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1435,3 +1435,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-CGI to 4.27 [wiz 2016-03-08]
 	Updated security/p5-Crypt-ECB to 2.00 [wiz 2016-03-08]
 	Updated devel/p5-Date-Manip to 6.53 [wiz 2016-03-08]
+	Updated devel/p5-File-Which to 1.21 [wiz 2016-03-08]
