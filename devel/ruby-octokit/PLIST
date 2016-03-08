@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/12/13 16:32:39 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/03/08 14:07:50 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.document
 ${GEM_LIBDIR}/CONTRIBUTING.md
@@ -41,6 +41,7 @@ ${GEM_LIBDIR}/lib/octokit/client/repositories.rb
 ${GEM_LIBDIR}/lib/octokit/client/say.rb
 ${GEM_LIBDIR}/lib/octokit/client/search.rb
 ${GEM_LIBDIR}/lib/octokit/client/service_status.rb
+${GEM_LIBDIR}/lib/octokit/client/source_import.rb
 ${GEM_LIBDIR}/lib/octokit/client/stats.rb
 ${GEM_LIBDIR}/lib/octokit/client/statuses.rb
 ${GEM_LIBDIR}/lib/octokit/client/users.rb
