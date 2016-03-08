@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15557 2016/03/08 14:43:35 wiz Exp $
+$NetBSD: TODO,v 1.15558 2016/03/08 14:45:45 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1071,7 +1071,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libmtag-0.3.6
 	o liboobs-2.32.0 [GNOME 2.32]
 	o libowfat-0.29
-	o libpagemaker-0.0.3
 	o libpgm-5.2.122
 	o libprelude-1.2.5
 	o libquantum-1.1.0 [pkg/43728, development release]
