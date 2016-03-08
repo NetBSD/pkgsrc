@@ -1,8 +1,9 @@
-$NetBSD: patch-aa,v 1.3 2009/11/25 23:31:58 joerg Exp $
-
---- Makefile.in.orig	2008-12-06 05:20:38.000000000 +0100
+$NetBSD: patch-aa,v 1.4 2016/03/08 13:50:46 nros Exp $
+* use BSD_INSTALL*
+* use libtool for everything
+--- Makefile.in.orig	2014-10-19 17:21:48.000000000 +0000
 +++ Makefile.in
-@@ -30,7 +30,7 @@ DSO		=	@DSO@
+@@ -28,7 +28,7 @@ DSO		=	@DSO@
  DSOFLAGS	=	@DSOFLAGS@
  LDFLAGS		=	$(OPTIM) $(ARCHFLAGS) @LDFLAGS@
  INSTALL		=	@INSTALL@
@@ -11,7 +12,7 @@ $NetBSD: patch-aa,v 1.3 2009/11/25 23:31:58 joerg Exp $
  LIBS		=	@LIBS@ @PTHREAD_LIBS@
  LN		=	@LN@ -s
  MKDIR		=	@MKDIR@
-@@ -59,10 +59,10 @@ BUILDROOT	=	$(DSTROOT)
+@@ -57,10 +57,10 @@ BUILDROOT	=	$(DSTROOT)
  # Install commands...
  #
  
@@ -24,39 +25,42 @@ $NetBSD: patch-aa,v 1.3 2009/11/25 23:31:58 joerg Exp $
  INSTALL_MAN	=	$(INSTALL) -m 644
  INSTALL_SCRIPT	=	$(INSTALL) -m 755
  
-@@ -133,7 +133,7 @@ clang:
+@@ -139,7 +139,7 @@ clang-changes:
  # Install everything...
  #
  
 -install:	$(TARGETS) install-$(LIBMXML) install-libmxml.a
-+install:	$(TARGETS) install-$(LIBMXML)
++install:	$(TARGETS) install-$(LIBMXML) 
+ 	echo Installing mxmldoc in $(BUILDROOT)$(bindir)...
  	$(INSTALL_DIR) $(BUILDROOT)$(bindir)
- 	$(INSTALL_BIN) mxmldoc $(BUILDROOT)$(bindir) 
- 	$(INSTALL_DIR) $(BUILDROOT)$(docdir)
-@@ -149,10 +149,9 @@ install:	$(TARGETS) install-$(LIBMXML) i
+ 	$(INSTALL_BIN) mxmldoc $(BUILDROOT)$(bindir)
+@@ -160,11 +160,10 @@ install:	$(TARGETS) install-$(LIBMXML) i
  	$(INSTALL_DIR) $(BUILDROOT)$(mandir)/man3
  	$(INSTALL_MAN) doc/mxml.man $(BUILDROOT)$(mandir)/man3/mxml.3
  
 -install-libmxml.a:
+-	echo Installing libmxml.a to $(BUILDROOT)$(libdir)...
 +install-libmxml.la:
++	echo Installing libmxml.la to $(BUILDROOT)$(libdir)...
  	$(INSTALL_DIR) $(BUILDROOT)$(libdir)
 -	$(INSTALL_LIB) libmxml.a $(BUILDROOT)$(libdir)
 -	$(RANLIB) $(BUILDROOT)$(libdir)/libmxml.a
 +	$(INSTALL_LIB) libmxml.la $(BUILDROOT)$(libdir)
  
- install-libmxml.so.1.4:
- 	$(INSTALL_DIR) $(BUILDROOT)$(libdir)
-@@ -242,10 +241,13 @@ config.h:	configure config.h.in
+ install-libmxml.so.1.5:
+ 	echo Installing libmxml.so to $(BUILDROOT)$(libdir)...
+@@ -281,11 +280,14 @@ sloc:
  # libmxml.a
  #
  
 -libmxml.a:	$(LIBOBJS)
++libmxml.la:	$(LIBOBJS:.o=.lo)
+ 	echo Creating $@...
 -	$(RM) $@
 -	$(AR) $(ARFLAGS) $@ $(LIBOBJS)
 -	$(RANLIB) $@
-+libmxml.la:	$(LIBOBJS:.o=.lo)
 +	${LIBTOOL} --mode=link ${CC} ${LDFLAGS} ${LIBOBJS:.o=.lo} \
-+	  -o libmxml.la -rpath ${PREFIX}/lib -version-info 1:4
++		-o libmxml.la -rpath ${PREFIX}/lib -version-info 1:5
 +
 +.SUFFIXES: .lo
 +.c.lo:
@@ -64,44 +68,47 @@ $NetBSD: patch-aa,v 1.3 2009/11/25 23:31:58 joerg Exp $
  
  $(LIBOBJS):	mxml.h
  mxml-entity.o mxml-file.o mxml-private.o: mxml-private.h
-@@ -291,7 +293,7 @@ libmxml.1.dylib:	$(LIBOBJS)
- #
+@@ -335,7 +337,7 @@ libmxml.1.dylib:	$(LIBOBJS)
  
  mxmldoc:	$(LIBMXML) mxmldoc.o
+ 	echo Linking $@...
 -	$(CC) -L. $(LDFLAGS) -o $@ mxmldoc.o -lmxml $(LIBS)
 +	${LIBTOOL} --mode=link $(CC) -L. $(LDFLAGS) -o $@ mxmldoc.o libmxml.la $(LIBS)
  
  mxmldoc-static:	libmxml.a mxmldoc.o
- 	$(CC) $(LDFLAGS) -o $@ mxmldoc.o libmxml.a $(LIBS)
-@@ -303,8 +305,8 @@ mxmldoc.o:	mxml.h
+ 	echo Linking $@...
+@@ -348,9 +350,9 @@ mxmldoc.o:	mxml.h
  # testmxml
  #
  
 -testmxml:	libmxml.a testmxml.o
--	$(CC) $(LDFLAGS) -o $@ testmxml.o libmxml.a $(LIBS)
 +testmxml:	libmxml.la testmxml.o
+ 	echo Linking $@...
+-	$(CC) $(LDFLAGS) -o $@ testmxml.o libmxml.a $(LIBS)
 +	${LIBTOOL} --mode=link $(CC) $(LDFLAGS) -o $@ testmxml.o libmxml.la $(LIBS)
  	@echo Testing library...
- 	./testmxml test.xml >temp1.xml 2>temp1s.xml
- 	./testmxml temp1.xml >temp2.xml 2>temp2s.xml
-@@ -334,9 +336,9 @@ testmxml.o:	mxml.h
+ 	./testmxml test.xml temp1s.xml >temp1.xml
+ 	./testmxml temp1.xml temp2s.xml >temp2.xml
+@@ -384,10 +386,10 @@ testmxml.o:	mxml.h
  # mxml.xml
  #
  
 -mxml.xml:	mxmldoc-static mxml.h $(PUBLIBOBJS:.o=.c)
 +mxml.xml:	mxmldoc mxml.h $(PUBLIBOBJS:.o=.c)
+ 	echo Generating API documentation...
  	$(RM) mxml.xml
 -	./mxmldoc-static --header doc/reference.heading mxml.xml mxml.h $(PUBLIBOBJS:.o=.c) >doc/reference.html
 +	./mxmldoc --header doc/reference.heading mxml.xml mxml.h $(PUBLIBOBJS:.o=.c) >doc/reference.html
  	if test "x`uname`" = xDarwin; then \
  		./mxmldoc-static --docset org.minixml.docset \
  			--docversion @VERSION@ --feedname minixml.org \
-@@ -361,9 +363,9 @@ valgrind:	mxmldoc-static
+@@ -414,10 +416,10 @@ valgrind:	mxmldoc-static
  # doc/mxml.man
  #
  
 -doc/mxml.man: mxmldoc-static mxml.xml
 +doc/mxml.man: mxmldoc mxml.xml
+ 	echo "Generating mxml(3) man page..."
  	$(RM) doc/mxml.man
 -	./mxmldoc-static --man mxml --title "Mini-XML API" \
 +	./mxmldoc --man mxml --title "Mini-XML API" \

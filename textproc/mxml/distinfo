@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 01:59:41 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/03/08 13:50:46 nros Exp $
 
-SHA1 (mxml-2.6.tar.gz) = df180bd2e3890c97fa8a05dd131f9285468cffe1
-RMD160 (mxml-2.6.tar.gz) = 6b1d1503880841431014b54d86430ed78201b6f2
-SHA512 (mxml-2.6.tar.gz) = ca66a18a44ad8b6a204ed2130107c73c746fafd7925fd229fed9ba56f4c1654c5d289c08954eb102941d1b2a0c164c1174e169d472b7867c0cb3d0822616219b
-Size (mxml-2.6.tar.gz) = 254455 bytes
-SHA1 (patch-aa) = 9997c738df144c0825942c113d40988078cdea47
-SHA1 (patch-ab) = 5518b4ac561a2ca26da5666caead9745729475b3
+SHA1 (mxml-2.9.tar.gz) = a3d9c1f8cf8c7f85d76bb6954af1888d55f926f0
+RMD160 (mxml-2.9.tar.gz) = 41cda23eb32e7883109be3cdeaa968ab787e32f1
+SHA512 (mxml-2.9.tar.gz) = 819c506ea43198de07a90d7473f29c9edc7f638638b5a1b215d88ac635b4f4f37441d8a760ce356f7d4bfb14a4f504c304d0e33345f69ecd145db50350e50ad7
+Size (mxml-2.9.tar.gz) = 264379 bytes
+SHA1 (patch-aa) = c728536a8813e455579a8aa816adcdb575063079
+SHA1 (patch-configure) = 250eb883c8c6c44e223e31f55e669e74d3269888
