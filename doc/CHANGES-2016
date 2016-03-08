@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1037 2016/03/08 11:28:34 nros Exp $
+$NetBSD: CHANGES-2016,v 1.1038 2016/03/08 12:42:01 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1416,3 +1416,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated audio/easytag to 2.4.2 [nros 2016-03-07]
 	Updated net/nslint to 3.1 [nros 2016-03-07]
 	Updated audio/libmusicbrainz5 to 5.1.0 [nros 2016-03-08]
+	Updated www/bluefish to 2.2.8 [mef 2016-03-08]
