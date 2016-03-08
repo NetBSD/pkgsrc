@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2015/10/12 05:55:27 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2016/03/08 15:35:59 taca Exp $
 ${GEM_HOME}/build_info/${GEM_NAME}.info
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
@@ -24,6 +24,7 @@ ${GEM_LIBDIR}/ext/rugged/rugged_index.c
 ${GEM_LIBDIR}/ext/rugged/rugged_note.c
 ${GEM_LIBDIR}/ext/rugged/rugged_object.c
 ${GEM_LIBDIR}/ext/rugged/rugged_patch.c
+${GEM_LIBDIR}/ext/rugged/rugged_rebase.c
 ${GEM_LIBDIR}/ext/rugged/rugged_reference.c
 ${GEM_LIBDIR}/ext/rugged/rugged_reference_collection.c
 ${GEM_LIBDIR}/ext/rugged/rugged_remote.c
@@ -267,6 +268,7 @@ ${GEM_LIBDIR}/vendor/libgit2/src/hash/hash_win32.c
 ${GEM_LIBDIR}/vendor/libgit2/src/hash/hash_win32.h
 ${GEM_LIBDIR}/vendor/libgit2/src/hashsig.c
 ${GEM_LIBDIR}/vendor/libgit2/src/ident.c
+${GEM_LIBDIR}/vendor/libgit2/src/idxmap.h
 ${GEM_LIBDIR}/vendor/libgit2/src/ignore.c
 ${GEM_LIBDIR}/vendor/libgit2/src/ignore.h
 ${GEM_LIBDIR}/vendor/libgit2/src/index.c
@@ -372,6 +374,7 @@ ${GEM_LIBDIR}/vendor/libgit2/src/tls_stream.h
 ${GEM_LIBDIR}/vendor/libgit2/src/trace.c
 ${GEM_LIBDIR}/vendor/libgit2/src/trace.h
 ${GEM_LIBDIR}/vendor/libgit2/src/transaction.c
+${GEM_LIBDIR}/vendor/libgit2/src/transaction.h
 ${GEM_LIBDIR}/vendor/libgit2/src/transport.c
 ${GEM_LIBDIR}/vendor/libgit2/src/transports/auth.c
 ${GEM_LIBDIR}/vendor/libgit2/src/transports/auth.h
@@ -388,6 +391,7 @@ ${GEM_LIBDIR}/vendor/libgit2/src/transports/smart.h
 ${GEM_LIBDIR}/vendor/libgit2/src/transports/smart_pkt.c
 ${GEM_LIBDIR}/vendor/libgit2/src/transports/smart_protocol.c
 ${GEM_LIBDIR}/vendor/libgit2/src/transports/ssh.c
+${GEM_LIBDIR}/vendor/libgit2/src/transports/ssh.h
 ${GEM_LIBDIR}/vendor/libgit2/src/transports/winhttp.c
 ${GEM_LIBDIR}/vendor/libgit2/src/tree-cache.c
 ${GEM_LIBDIR}/vendor/libgit2/src/tree-cache.h
@@ -426,8 +430,13 @@ ${GEM_LIBDIR}/vendor/libgit2/src/win32/utf-conv.h
 ${GEM_LIBDIR}/vendor/libgit2/src/win32/version.h
 ${GEM_LIBDIR}/vendor/libgit2/src/win32/w32_buffer.c
 ${GEM_LIBDIR}/vendor/libgit2/src/win32/w32_buffer.h
+${GEM_LIBDIR}/vendor/libgit2/src/win32/w32_crtdbg_stacktrace.c
+${GEM_LIBDIR}/vendor/libgit2/src/win32/w32_crtdbg_stacktrace.h
+${GEM_LIBDIR}/vendor/libgit2/src/win32/w32_stack.c
+${GEM_LIBDIR}/vendor/libgit2/src/win32/w32_stack.h
 ${GEM_LIBDIR}/vendor/libgit2/src/win32/w32_util.c
 ${GEM_LIBDIR}/vendor/libgit2/src/win32/w32_util.h
+${GEM_LIBDIR}/vendor/libgit2/src/win32/win32-compat.h
 ${GEM_LIBDIR}/vendor/libgit2/src/xdiff/xdiff.h
 ${GEM_LIBDIR}/vendor/libgit2/src/xdiff/xdiffi.c
 ${GEM_LIBDIR}/vendor/libgit2/src/xdiff/xdiffi.h
