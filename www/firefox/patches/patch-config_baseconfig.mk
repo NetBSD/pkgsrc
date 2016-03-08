@@ -1,6 +1,6 @@
-$NetBSD: patch-config_baseconfig.mk,v 1.6 2014/04/30 15:07:18 ryoon Exp $
+$NetBSD: patch-config_baseconfig.mk,v 1.7 2016/03/08 21:32:52 ryoon Exp $
 
---- config/baseconfig.mk.orig	2014-04-18 02:02:39.000000000 +0000
+--- config/baseconfig.mk.orig	2016-02-25 23:01:53.000000000 +0000
 +++ config/baseconfig.mk
 @@ -2,10 +2,10 @@
  # directly in python/mozbuild/mozbuild/base.py for gmake validation.
@@ -14,6 +14,6 @@ $NetBSD: patch-config_baseconfig.mk,v 1.6 2014/04/30 15:07:18 ryoon Exp $
 +idldir = $(datadir)/idl/${MOZILLA_PKG_NAME}
 +installdir = $(libdir)/${MOZILLA_PKG_NAME}
 +sdkdir = $(libdir)/${MOZILLA_PKG_NAME}
- ifndef TOP_DIST
- TOP_DIST = dist
- endif
+ ifeq (.,$(DEPTH))
+ DIST = dist
+ else

@@ -1,11 +1,11 @@
-$NetBSD: patch-ipc_chromium_src_base_platform__thread__posix.cc,v 1.6 2014/05/30 03:03:36 pho Exp $
+$NetBSD: patch-ipc_chromium_src_base_platform__thread__posix.cc,v 1.7 2016/03/08 21:32:52 ryoon Exp $
 
 * Just because OS_ARCH is Darwin does not mean MacOS X specific
   kludges are needed.
 
---- ipc/chromium/src/base/platform_thread_posix.cc.orig	2014-05-06 22:55:41.000000000 +0000
+--- ipc/chromium/src/base/platform_thread_posix.cc.orig	2016-02-25 23:01:54.000000000 +0000
 +++ ipc/chromium/src/base/platform_thread_posix.cc
-@@ -9,8 +9,12 @@
+@@ -9,22 +9,24 @@
  
  #if defined(OS_MACOSX)
  #include <mach/mach.h>
@@ -18,8 +18,6 @@ $NetBSD: patch-ipc_chromium_src_base_platform__thread__posix.cc,v 1.6 2014/05/30
  #elif defined(OS_LINUX)
  #include <sys/syscall.h>
  #include <sys/prctl.h>
-@@ -19,15 +23,13 @@
- #include <sys/thr.h>
  #endif
  
 -#if !defined(OS_MACOSX)
@@ -35,7 +33,7 @@ $NetBSD: patch-ipc_chromium_src_base_platform__thread__posix.cc,v 1.6 2014/05/30
  namespace base {
  void InitThreading();
  }  // namespace
-@@ -91,7 +93,7 @@ void PlatformThread::Sleep(int duration_
+@@ -82,7 +84,7 @@ void PlatformThread::Sleep(int duration_
      sleep_time = remaining;
  }
  
@@ -44,7 +42,7 @@ $NetBSD: patch-ipc_chromium_src_base_platform__thread__posix.cc,v 1.6 2014/05/30
  // Mac is implemented in platform_thread_mac.mm.
  
  // static
-@@ -114,19 +116,41 @@ void PlatformThread::SetName(const char*
+@@ -105,19 +107,41 @@ void PlatformThread::SetName(const char*
    pthread_setname_np(pthread_self(), "%s", (void *)name);
  #elif defined(OS_BSD) && !defined(__GLIBC__)
    pthread_set_name_np(pthread_self(), name);
