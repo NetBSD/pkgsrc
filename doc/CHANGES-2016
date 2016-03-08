@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1058 2016/03/08 15:14:48 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1059 2016/03/08 15:17:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1437,3 +1437,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Date-Manip to 6.53 [wiz 2016-03-08]
 	Updated devel/p5-File-Which to 1.21 [wiz 2016-03-08]
 	Updated security/py-cryptography to 1.2.3 [wiz 2016-03-08]
+	Updated devel/py-tortoisehg to 3.7.2 [wiz 2016-03-08]
