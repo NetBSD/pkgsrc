@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15551 2016/03/07 23:09:16 nros Exp $
+$NetBSD: TODO,v 1.15552 2016/03/08 11:28:34 nros Exp $
 
 Suggested new packages
 ======================
@@ -1072,7 +1072,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libmediawiki-4.14.0
 	o libmilter-8.16.0.16
 	o libmtag-0.3.6
-	o libmusicbrainz5-5.1.0
 	o liboobs-2.32.0 [GNOME 2.32]
 	o libowfat-0.29
 	o libpagemaker-0.0.3
