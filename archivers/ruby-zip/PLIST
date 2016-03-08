@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2015/02/03 13:37:45 taca Exp $
+@comment $NetBSD: PLIST,v 1.12 2016/03/08 13:50:17 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/Rakefile
@@ -43,11 +43,12 @@ ${GEM_LIBDIR}/lib/zip/version.rb
 ${GEM_LIBDIR}/samples/example.rb
 ${GEM_LIBDIR}/samples/example_filesystem.rb
 ${GEM_LIBDIR}/samples/example_recursive.rb
-${GEM_LIBDIR}/samples/gtkRubyzip.rb
+${GEM_LIBDIR}/samples/gtk_ruby_zip.rb
 ${GEM_LIBDIR}/samples/qtzip.rb
 ${GEM_LIBDIR}/samples/write_simple.rb
 ${GEM_LIBDIR}/samples/zipfind.rb
 ${GEM_LIBDIR}/test/basic_zip_file_test.rb
+${GEM_LIBDIR}/test/case_sensitivity_test.rb
 ${GEM_LIBDIR}/test/central_directory_entry_test.rb
 ${GEM_LIBDIR}/test/central_directory_test.rb
 ${GEM_LIBDIR}/test/crypto/null_encryption_test.rb
@@ -63,13 +64,14 @@ ${GEM_LIBDIR}/test/data/globTest/food.txt
 ${GEM_LIBDIR}/test/data/mimetype
 ${GEM_LIBDIR}/test/data/notzippedruby.rb
 ${GEM_LIBDIR}/test/data/ntfs.zip
+${GEM_LIBDIR}/test/data/oddExtraField.zip
 ${GEM_LIBDIR}/test/data/rubycode.zip
 ${GEM_LIBDIR}/test/data/rubycode2.zip
+${GEM_LIBDIR}/test/data/test.xls
 ${GEM_LIBDIR}/test/data/testDirectory.bin
 ${GEM_LIBDIR}/test/data/zip64-sample.zip
 ${GEM_LIBDIR}/test/data/zipWithDirs.zip
 ${GEM_LIBDIR}/test/data/zipWithEncryption.zip
-${GEM_LIBDIR}/test/deflater_test.rb
 ${GEM_LIBDIR}/test/deflater_test.rb
 ${GEM_LIBDIR}/test/encryption_test.rb
 ${GEM_LIBDIR}/test/entry_set_test.rb
@@ -78,6 +80,7 @@ ${GEM_LIBDIR}/test/errors_test.rb
 ${GEM_LIBDIR}/test/extra_field_test.rb
 ${GEM_LIBDIR}/test/file_extract_directory_test.rb
 ${GEM_LIBDIR}/test/file_extract_test.rb
+${GEM_LIBDIR}/test/file_permissions_test.rb
 ${GEM_LIBDIR}/test/file_split_test.rb
 ${GEM_LIBDIR}/test/file_test.rb
 ${GEM_LIBDIR}/test/filesystem/dir_iterator_test.rb
@@ -95,6 +98,7 @@ ${GEM_LIBDIR}/test/local_entry_test.rb
 ${GEM_LIBDIR}/test/output_stream_test.rb
 ${GEM_LIBDIR}/test/pass_thru_compressor_test.rb
 ${GEM_LIBDIR}/test/pass_thru_decompressor_test.rb
+${GEM_LIBDIR}/test/samples/example_recursive_test.rb
 ${GEM_LIBDIR}/test/settings_test.rb
 ${GEM_LIBDIR}/test/test_helper.rb
 ${GEM_LIBDIR}/test/unicode_file_names_and_comments_test.rb
