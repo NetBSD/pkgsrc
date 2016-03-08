@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15561 2016/03/08 15:07:38 wiz Exp $
+$NetBSD: TODO,v 1.15562 2016/03/08 15:10:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1304,7 +1304,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-DBD-ODBC-1.52
 	o p5-DBD-Oracle-1.74
 	o p5-DBD-SQLite2-0.37
-	o p5-DBI-11.95
 	o p5-DBIx-Class-Fixtures-1.001034
 	o p5-DBIx-Connector-0.55
 	o p5-DBIx-DBSchema-0.45
@@ -1314,7 +1313,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Data-Peek-0.45
 	o p5-Data-SimplePassword-0.11
 	o p5-Date-Extract-0.05
-	o p5-Date-Manip-6.53
 	o p5-Devel-CheckLib-1.06
 	o p5-Devel-PatchPerl-1.40
 	o p5-Devel-Pragma-0.62
