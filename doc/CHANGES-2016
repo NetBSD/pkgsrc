@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1065 2016/03/08 16:58:24 imil Exp $
+$NetBSD: CHANGES-2016,v 1.1066 2016/03/08 18:50:46 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1444,3 +1444,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/mysql-connector-c++ to 1.1.7 [wiz 2016-03-08]
 	Updated multimedia/x264-devel to 20160307 [wiz 2016-03-08]
 	Added sysutils/facette version 0.4.0dev [imil 2016-03-08]
+	Updated devel/mdds to 1.1.0 [ryoon 2016-03-08]
