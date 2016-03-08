@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2016/03/08 21:06:50 tnn Exp $
+@comment $NetBSD: PLIST,v 1.6 2016/03/08 21:50:29 tnn Exp $
 include/libLLVM/llvm-c/Analysis.h
 include/libLLVM/llvm-c/BitReader.h
 include/libLLVM/llvm-c/BitWriter.h
@@ -803,7 +803,7 @@ include/libLLVM/llvm/Transforms/Utils/UnrollLoop.h
 include/libLLVM/llvm/Transforms/Utils/ValueMapper.h
 include/libLLVM/llvm/Transforms/Vectorize.h
 ${PLIST.notdylib}lib/libLLVM/libLLVM-${LLVM_MAJOR}.${SOEXT}
-${PLIST.notdylib}lib/libLLVM/libLLVM-${PKGVERSION_NORC}.${SOEXT}
+${PLIST.notdylib}lib/libLLVM/libLLVM-${PKGVERSION}.${SOEXT}
 lib/libLLVM/libLLVM.${SOEXT}
 libexec/libLLVM/llvm-config
 share/libLLVM/cmake/AddLLVM.cmake
