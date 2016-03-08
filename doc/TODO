@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15562 2016/03/08 15:10:53 wiz Exp $
+$NetBSD: TODO,v 1.15563 2016/03/08 15:11:38 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1337,7 +1337,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-File-Modified-0.10
 	o p5-File-Path-Tiny-0.8
 	o p5-File-Touch-0.11
-	o p5-File-Which-1.21
 	o p5-Font-FreeType-0.07
 	o p5-Font-TTF-1.05
 	o p5-FormValidator-Simple-1.00
