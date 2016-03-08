@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1071 2016/03/08 19:12:06 imil Exp $
+$NetBSD: CHANGES-2016,v 1.1072 2016/03/08 19:26:33 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1450,3 +1450,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated converters/libwpg to 0.3.1 [ryoon 2016-03-08]
 	Updated converters/libwps to 0.4.3 [ryoon 2016-03-08]
 	Updated sysutils/facette to 0.4.0devnb1 [imil 2016-03-08]
+	Updated security/stunnel to 5.31 [ryoon 2016-03-08]
