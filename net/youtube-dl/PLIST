@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2016/03/05 20:41:10 leot Exp $
+@comment $NetBSD: PLIST,v 1.17 2016/03/08 15:23:57 adam Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -758,6 +758,9 @@ ${PYSITELIB}/youtube_dl/extractor/krasview.pyo
 ${PYSITELIB}/youtube_dl/extractor/ku6.py
 ${PYSITELIB}/youtube_dl/extractor/ku6.pyc
 ${PYSITELIB}/youtube_dl/extractor/ku6.pyo
+${PYSITELIB}/youtube_dl/extractor/kusi.py
+${PYSITELIB}/youtube_dl/extractor/kusi.pyc
+${PYSITELIB}/youtube_dl/extractor/kusi.pyo
 ${PYSITELIB}/youtube_dl/extractor/kuwo.py
 ${PYSITELIB}/youtube_dl/extractor/kuwo.pyc
 ${PYSITELIB}/youtube_dl/extractor/kuwo.pyo
@@ -770,12 +773,12 @@ ${PYSITELIB}/youtube_dl/extractor/laola1tv.pyo
 ${PYSITELIB}/youtube_dl/extractor/lecture2go.py
 ${PYSITELIB}/youtube_dl/extractor/lecture2go.pyc
 ${PYSITELIB}/youtube_dl/extractor/lecture2go.pyo
+${PYSITELIB}/youtube_dl/extractor/leeco.py
+${PYSITELIB}/youtube_dl/extractor/leeco.pyc
+${PYSITELIB}/youtube_dl/extractor/leeco.pyo
 ${PYSITELIB}/youtube_dl/extractor/lemonde.py
 ${PYSITELIB}/youtube_dl/extractor/lemonde.pyc
 ${PYSITELIB}/youtube_dl/extractor/lemonde.pyo
-${PYSITELIB}/youtube_dl/extractor/letv.py
-${PYSITELIB}/youtube_dl/extractor/letv.pyc
-${PYSITELIB}/youtube_dl/extractor/letv.pyo
 ${PYSITELIB}/youtube_dl/extractor/libsyn.py
 ${PYSITELIB}/youtube_dl/extractor/libsyn.pyc
 ${PYSITELIB}/youtube_dl/extractor/libsyn.pyo
