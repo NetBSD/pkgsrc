@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2015/06/30 10:25:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.30 2016/03/08 15:03:42 wiz Exp $
 
-DISTNAME=		mpfr-3.1.3
+DISTNAME=		mpfr-3.1.4
 CATEGORIES=		math
-MASTER_SITES=		http://www.mpfr.org/mpfr-3.1.3/
+MASTER_SITES=		http://www.mpfr.org/${DISTNAME}/
 EXTRACT_SUFX=		.tar.bz2
-
-DIST_SUBDIR=		${DISTNAME}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.mpfr.org/
