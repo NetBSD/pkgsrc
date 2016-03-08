@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.35 2016/02/03 12:35:08 mef Exp $
+$NetBSD: distinfo,v 1.36 2016/03/08 14:43:24 wiz Exp $
 
-SHA1 (iso-codes-3.65.tar.xz) = b781e3ae23b1c5eba635e95a4889ddcb29f9e87c
-RMD160 (iso-codes-3.65.tar.xz) = fee63ca7013475379f6489502a601cd2cdaedf30
-SHA512 (iso-codes-3.65.tar.xz) = cf88397150b3014a4f5e4d709cbc1e00537c9289ea68d68ec9b24df6c7467fda3fe99fbeacd444837d614ae1df213816a3996a9e86aac400f9d92a0a3090f8ab
-Size (iso-codes-3.65.tar.xz) = 3732432 bytes
+SHA1 (iso-codes-3.66.tar.xz) = 8e392d22b1f7ea00edcdc4504d611c251ac26206
+RMD160 (iso-codes-3.66.tar.xz) = f5c2937a04f2090e9c836eccda48742e43baee09
+SHA512 (iso-codes-3.66.tar.xz) = edfde414eea641701c3a95180e7ab97f7d5f021bde3336b9c0274dbc11493c01966c2dd4e845dfe92c10c72a326cd5f66b5fc61bde2702ba75d5b30f1795d7dc
+Size (iso-codes-3.66.tar.xz) = 3844168 bytes
