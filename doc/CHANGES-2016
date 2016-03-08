@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1052 2016/03/08 15:01:41 taca Exp $
+$NetBSD: CHANGES-2016,v 1.1053 2016/03/08 15:03:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1431,3 +1431,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ruby-sexp-processor to 4.7.0 [taca 2016-03-08]
 	Updated devel/ruby-stomp to 1.3.5 [taca 2016-03-08]
 	Updated devel/ruby2ruby to 2.3.0 [taca 2016-03-08]
+	Updated math/mpfr to 3.1.4 [wiz 2016-03-08]
