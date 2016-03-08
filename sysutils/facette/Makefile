@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2016/03/08 19:09:56 imil Exp $
+# $NetBSD: Makefile,v 1.3 2016/03/08 20:21:50 imil Exp $
 
 DISTNAME=	facette-0.4.0dev
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=facette/}
 GITHUB_PROJECT=	facette
@@ -27,7 +27,8 @@ SUBST_SED.paths=	-e 's,/usr/local,${PREFIX}/,g'
 DOCDIR=			${PREFIX}/share/doc/facette
 EGDIR=			${PREFIX}/share/examples/facette
 DATADIR=		${PREFIX}/share/facette
-INSTALLATION_DIRS+=	bin ${EGDIR} ${DOCDIR} ${DATADIR}/static
+INSTALLATION_DIRS+=	bin ${EGDIR} ${DOCDIR}
+INSTALLATION_DIRS+=	${DATADIR}/template ${DATADIR}/static
 
 CGO_LDFLAGS=		-L${PREFIX}/lib ${COMPILER_RPATH_FLAG},${PREFIX}/lib
 
@@ -41,8 +42,10 @@ do-install:
 		${DESTDIR}${PREFIX}/bin/
 	cd ${WRKSRC}/docs/man && ${PAX} -rw * ${DESTDIR}${DOCDIR}
 	cd ${WRKSRC}/docs/examples && ${PAX} -rw * ${DESTDIR}${EGDIR}
-	cd ${WRKSRC}/build/*/template && ${PAX} -rw * ${DESTDIR}${DATADIR}
-	cd ${WRKSRC}/build/*/static && ${PAX} -rw * ${DESTDIR}${DATADIR}/static
+	cd ${WRKSRC}/build/*/template &&	\
+		${PAX} -rw * ${DESTDIR}${DATADIR}/template
+	cd ${WRKSRC}/build/*/static &&		\
+		${PAX} -rw * ${DESTDIR}${DATADIR}/static
 
 
 .include "../../databases/rrdtool/buildlink3.mk"
