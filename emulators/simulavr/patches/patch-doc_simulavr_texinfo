@@ -1,4 +1,4 @@
-$NetBSD: patch-doc_simulavr_texinfo,v 1.3 2014/08/29 04:40:06 mef Exp $
+$NetBSD: patch-doc_simulavr_texinfo,v 1.4 2016/03/08 07:42:49 dsainty Exp $
 
 Add directory entry information. Without this, ${PREFIX}/info/dir
 won't be updated by install-info. Typical error message will be:
@@ -7,9 +7,11 @@ won't be updated by install-info. Typical error message will be:
 install-info: warning: no info dir entry in `./work/simulavr-1.0.0/doc/simulavr.info'
   ----
 
+Remove @hfill - not supported by gtexinfo 5+
+
 --- doc/simulavr.texinfo.orig	2012-02-13 00:26:38.000000000 +0900
 +++ doc/simulavr.texinfo	2013-08-14 14:04:34.000000000 +0900
-@@ -36,6 +36,11 @@ by the Free Software Foundation.
+@@ -36,6 +36,11 @@
  
  @end copying
  
@@ -21,3 +23,14 @@ install-info: warning: no info dir entry in `./work/simulavr-1.0.0/doc/simulavr.
  @titlepage
  @title SimulAVR - an AVR simulation framework
  @subtitle A simulator for the Atmel AVR family of microcontrollers.
+@@ -44,8 +49,8 @@
+ 
+ @c The following two commands start the copyright page.
+ @page
+-@hfill Send bugs and comments on SimulAVR to@*
+-@hfill @w{@email{simulavr-devel@@nongnu.org}}
++Send bugs and comments on SimulAVR to@*
++@w{@email{simulavr-devel@@nongnu.org}}
+ @vskip 0pt plus 1filll
+ @insertcopying
+ @end titlepage
