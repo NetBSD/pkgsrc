@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 03:27:41 agc Exp $
+$NetBSD: distinfo,v 1.6 2016/03/08 15:33:14 taca Exp $
 
-SHA1 (libgit2-0.23.3.tar.gz) = 1e85799534f1431dfb7858d7b67deca4ff86cc2a
-RMD160 (libgit2-0.23.3.tar.gz) = 9a0818ba91082a89a1a702872bc706d9900655fd
-SHA512 (libgit2-0.23.3.tar.gz) = 5c4a33e9d0a34bd3c4ab61c9c3fd45fe84204c6941506cd989acda552932205e2edadd9b731cb19c650b1ea69e5ac1ac313c55ea7881ccb8a17f3a3c8db03ef8
-Size (libgit2-0.23.3.tar.gz) = 3718675 bytes
-SHA1 (patch-CMakeLists.txt) = a4b8742e51bf2733aa25044d3f3fa73ca944693c
-SHA1 (patch-src_unix_posix.h) = 01ee06606bf7c01f3c17ab4ee56d37b9af6183aa
+SHA1 (libgit2-0.24.0.tar.gz) = 1ca559573b5900a544a355a6ac0336517eb843f5
+RMD160 (libgit2-0.24.0.tar.gz) = 3e6f987abc1859b4da2129b2d83dcd8f616c06ed
+SHA512 (libgit2-0.24.0.tar.gz) = f41e8f9d4b03b392fb7f3a8a7e2ee806760d4c43fdc4270ef59d42c9d57f1f93681216ff4cfdfc6512b212bf7a37a4fe0fe9c44a04742fb3e2aef54c016136ba
+Size (libgit2-0.24.0.tar.gz) = 4169652 bytes
