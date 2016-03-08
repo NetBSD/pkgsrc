@@ -1,4 +1,20 @@
-@comment $NetBSD: PLIST,v 1.23 2015/01/28 11:40:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.24 2016/03/08 14:43:24 wiz Exp $
+share/iso-codes/json/iso_15924.json
+share/iso-codes/json/iso_3166-1.json
+share/iso-codes/json/iso_3166-2.json
+share/iso-codes/json/iso_3166-3.json
+share/iso-codes/json/iso_4217.json
+share/iso-codes/json/iso_639-2.json
+share/iso-codes/json/iso_639-3.json
+share/iso-codes/json/iso_639-5.json
+share/iso-codes/json/schema-15924.json
+share/iso-codes/json/schema-3166-1.json
+share/iso-codes/json/schema-3166-2.json
+share/iso-codes/json/schema-3166-3.json
+share/iso-codes/json/schema-4217.json
+share/iso-codes/json/schema-639-2.json
+share/iso-codes/json/schema-639-3.json
+share/iso-codes/json/schema-639-5.json
 share/locale/af/LC_MESSAGES/iso_3166.mo
 share/locale/af/LC_MESSAGES/iso_639.mo
 share/locale/af/LC_MESSAGES/iso_639_3.mo
