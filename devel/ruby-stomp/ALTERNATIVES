@@ -1,0 +1,2 @@
+bin/catstomp @PREFIX@/bin/catstomp@RUBY_SUFFIX@
+bin/stompcat @PREFIX@/bin/stompcat@RUBY_SUFFIX@
