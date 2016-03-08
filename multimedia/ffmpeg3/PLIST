@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/03/05 08:52:23 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/03/08 14:33:57 adam Exp $
 bin/ffmpeg3
 bin/ffprobe3
 bin/ffserver3
@@ -72,6 +72,7 @@ include/ffmpeg3/libavutil/md5.h
 include/ffmpeg3/libavutil/mem.h
 include/ffmpeg3/libavutil/motion_vector.h
 include/ffmpeg3/libavutil/murmur3.h
+${PLIST.opencl}include/ffmpeg2/libavutil/opencl.h
 include/ffmpeg3/libavutil/opt.h
 include/ffmpeg3/libavutil/parseutils.h
 include/ffmpeg3/libavutil/pixdesc.h
