@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2016/02/13 08:40:22 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2016/03/08 18:50:21 ryoon Exp $
 include/mdds-1.0/mdds/default_deleter.hpp
 include/mdds-1.0/mdds/flat_segment_tree.hpp
 include/mdds-1.0/mdds/flat_segment_tree_def.inl
@@ -24,6 +24,8 @@ include/mdds-1.0/mdds/segment_tree.hpp
 include/mdds-1.0/mdds/segment_tree_def.inl
 include/mdds-1.0/mdds/sorted_string_map.hpp
 include/mdds-1.0/mdds/sorted_string_map_def.inl
+include/mdds-1.0/mdds/trie_map.hpp
+include/mdds-1.0/mdds/trie_map_def.inl
 share/doc/mdds-1.0/AUTHORS
 share/doc/mdds-1.0/COPYING
 share/doc/mdds-1.0/NEWS
