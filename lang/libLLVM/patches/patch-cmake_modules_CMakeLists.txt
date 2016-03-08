@@ -1,0 +1,12 @@
+$NetBSD: patch-cmake_modules_CMakeLists.txt,v 1.1 2016/03/08 21:06:50 tnn Exp $
+
+Make sure cmake rules go in own directory to avoid conflicts.
+
+--- cmake/modules/CMakeLists.txt.orig	2014-12-29 11:16:19.000000000 +0000
++++ cmake/modules/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-set(LLVM_INSTALL_PACKAGE_DIR share/llvm/cmake)
++set(LLVM_INSTALL_PACKAGE_DIR share/libLLVM/cmake)
+ set(llvm_cmake_builddir "${LLVM_BINARY_DIR}/${LLVM_INSTALL_PACKAGE_DIR}")
+ 
+ get_property(LLVM_EXPORTS GLOBAL PROPERTY LLVM_EXPORTS)
