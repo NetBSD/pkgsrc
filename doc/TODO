@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15559 2016/03/08 15:03:52 wiz Exp $
+$NetBSD: TODO,v 1.15560 2016/03/08 15:05:14 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1277,7 +1277,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Bytes-Random-Secure-0.29
 	o p5-CDB_File-0.98
 	o p5-CDDB-2.00
-	o p5-CGI-4.27
 	o p5-CHI-1.27
 	o p5-CPAN-Perl-Releases-2.58
 	o p5-CPAN-Reporter-1.2017
