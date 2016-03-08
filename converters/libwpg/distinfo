@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2015/11/03 01:43:50 agc Exp $
+$NetBSD: distinfo,v 1.9 2016/03/08 19:00:14 ryoon Exp $
 
-SHA1 (libwpg-0.3.0.tar.bz2) = c8422f9a01e98ff3cb5d64d518e61f6a0bb77551
-RMD160 (libwpg-0.3.0.tar.bz2) = fc88602ffea6da4a5b931c359092bdcc8b34b04e
-SHA512 (libwpg-0.3.0.tar.bz2) = 254b5d2ff3cfeb23a3a94d81e9fc44c4c78550bb25a822e2b0ae7bc7cfdcdc4db5742992d20087353d66c81df956b9837c329c950afd41e297bddd0e9d1f3aa8
-Size (libwpg-0.3.0.tar.bz2) = 381878 bytes
+SHA1 (libwpg-0.3.1.tar.bz2) = 9d9a38bfa97f1f75f5f79a68496dfdd9e5585fd2
+RMD160 (libwpg-0.3.1.tar.bz2) = b91053259259c74715c4297c020b4c2e441f92ba
+SHA512 (libwpg-0.3.1.tar.bz2) = e5533e7c43fc08dfdc2a8c5e81e1ab3ef8b515fe50256de2f0917eaf39f83ff5416821e151cf212697f89936f256f3896fb72d101ce64c4e09f4666bcc5909ec
+Size (libwpg-0.3.1.tar.bz2) = 397128 bytes
