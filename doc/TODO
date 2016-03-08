@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15556 2016/03/08 14:42:05 wiz Exp $
+$NetBSD: TODO,v 1.15557 2016/03/08 14:43:35 wiz Exp $
 
 Suggested new packages
 ======================
@@ -968,7 +968,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ircservices-5.1.21
 	o iroffer-1.4b01
 	o isl-0.16.1
-	o iso-codes-3.66
 	o ispell-ga-4.6
 	o ispell-ru-0.99g5
 	o ispell-ru-io-0.99g5
