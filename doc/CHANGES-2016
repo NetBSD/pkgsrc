@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1041 2016/03/08 13:56:00 taca Exp $
+$NetBSD: CHANGES-2016,v 1.1042 2016/03/08 13:58:02 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1420,3 +1420,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated archivers/ruby-zip to 1.2.0 [taca 2016-03-08]
 	Updated textproc/mxml to 2.9 [nros 2016-03-08]
 	Updated databases/ruby-mysql2 to 0.4.3 [taca 2016-03-08]
+	Updated databases/ruby-sequel to 4.32.0 [taca 2016-03-08]
