@@ -1,0 +1,13 @@
+$NetBSD: patch-configure,v 1.1 2016/03/08 13:52:36 nros Exp $
+* do not add -g if debug symbols are not wanted. 
+--- configure.orig	2016-03-08 13:07:55.000000000 +0000
++++ configure
+@@ -4369,7 +4369,7 @@ if test -n "$GCC"; then
+ 	CFLAGS="-Wall $CFLAGS"
+ 
+ 	if test "x$OPTIM" = x; then
+-		OPTIM="-Os -g"
++		OPTIM="-Os"
+ 	fi
+ 
+ 	if test "x$use_ansi" = xyes; then
