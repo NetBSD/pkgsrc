@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1061 2016/03/08 15:33:46 taca Exp $
+$NetBSD: CHANGES-2016,v 1.1062 2016/03/08 15:36:33 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1440,3 +1440,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-tortoisehg to 3.7.2 [wiz 2016-03-08]
 	Updated devel/py-virtualenv to 15.0.0 [wiz 2016-03-08]
 	Updated devel/libgit2 to 0.24.0 [taca 2016-03-08]
+	Updated devel/ruby-rugged to 0.24.0 [taca 2016-03-08]
