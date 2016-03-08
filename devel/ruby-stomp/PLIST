@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2015/02/02 15:09:02 taca Exp $
-bin/catstomp
-bin/stompcat
+@comment $NetBSD: PLIST,v 1.5 2016/03/08 14:51:43 taca Exp $
+bin/catstomp${RUBY_SUFFIX}
+bin/stompcat${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/CHANGELOG.rdoc
 ${GEM_LIBDIR}/LICENSE
@@ -8,6 +8,7 @@ ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/bin/catstomp
 ${GEM_LIBDIR}/bin/stompcat
+${GEM_LIBDIR}/examples/amqdurasub.rb
 ${GEM_LIBDIR}/examples/client11_ex1.rb
 ${GEM_LIBDIR}/examples/client11_putget1.rb
 ${GEM_LIBDIR}/examples/conn11_ex1.rb
