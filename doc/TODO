@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15555 2016/03/08 13:53:03 nros Exp $
+$NetBSD: TODO,v 1.15556 2016/03/08 14:42:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -407,7 +407,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o adocman-0.13
 	o adodb-5.20
 	o aewm++-1.0.27
-	o afl-2.06b
 	o afterstep-2.2.12
 	o aget-0.4.1
 	o alacarte-0.13.2
@@ -1713,7 +1712,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-newt-0.52.18
 	o py-notify-0.3.1
 	o py-numpydoc-0.6.0
-	o py-oauth2-1.9.0.post1
 	o py-omniORBpy-3.7
 	o py-pdf-parser-0.6.4
 	o py-pendrell-0.3.7

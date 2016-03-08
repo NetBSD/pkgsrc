@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1046 2016/03/08 14:32:57 taca Exp $
+$NetBSD: CHANGES-2016,v 1.1047 2016/03/08 14:42:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1425,3 +1425,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ruby-octokit to 4.3.0 [taca 2016-03-08]
 	Updated devel/ruby-parser to 3.8.1 [taca 2016-03-08]
 	Updated devel/ruby-rspec-core to 3.4.3 [taca 2016-03-08]
+	Updated devel/afl to 2.06b [wiz 2016-03-08]
