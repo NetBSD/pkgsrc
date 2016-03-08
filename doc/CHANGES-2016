@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1054 2016/03/08 15:05:14 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1055 2016/03/08 15:07:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1433,3 +1433,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ruby2ruby to 2.3.0 [taca 2016-03-08]
 	Updated math/mpfr to 3.1.4 [wiz 2016-03-08]
 	Updated www/p5-CGI to 4.27 [wiz 2016-03-08]
+	Updated security/p5-Crypt-ECB to 2.00 [wiz 2016-03-08]
