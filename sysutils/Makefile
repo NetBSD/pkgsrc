@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.660 2016/03/04 11:11:59 youri Exp $
+# $NetBSD: Makefile,v 1.661 2016/03/08 16:55:19 imil Exp $
 #
 
 COMMENT=	System utilities
@@ -137,6 +137,7 @@ SUBDIR+=	euca2ools
 SUBDIR+=	eventlog
 SUBDIR+=	extipl
 SUBDIR+=	fabric
+SUBDIR+=	facette
 SUBDIR+=	fakeroot
 SUBDIR+=	fam
 SUBDIR+=	fastfs
