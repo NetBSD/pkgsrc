@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1049 2016/03/08 14:45:45 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1050 2016/03/08 14:50:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1428,3 +1428,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/afl to 2.06b [wiz 2016-03-08]
 	Updated textproc/iso-codes to 3.66 [wiz 2016-03-08]
 	Updated converters/libpagemaker to 0.0.3 [wiz 2016-03-08]
+	Updated devel/ruby-sexp-processor to 4.7.0 [taca 2016-03-08]
