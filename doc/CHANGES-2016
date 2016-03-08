@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1072 2016/03/08 19:26:33 ryoon Exp $
+$NetBSD: CHANGES-2016,v 1.1073 2016/03/08 20:01:43 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1401,6 +1401,7 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/p5-Net-Amazon-S3 to 0.80 [bsiegert 2016-03-06]
 	Updated net/py-dns to 1.12.0 [adam 2016-03-06]
 	Updated net/py-dns3 to 1.12.0 [adam 2016-03-06]
+	Updated devel/p5-Mac-SystemDirectory to 0.06 [bsiegert 2016-03-06]
 	Updated emulators/sys161 to 2.0.8 [dholland 2016-03-07]
 	Updated mail/thunderbird-enigmail to 1.9.1 [ryoon 2016-03-07]
 	Updated mail/seamonkey-enigmail to 1.9.1 [ryoon 2016-03-07]
@@ -1451,3 +1452,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated converters/libwps to 0.4.3 [ryoon 2016-03-08]
 	Updated sysutils/facette to 0.4.0devnb1 [imil 2016-03-08]
 	Updated security/stunnel to 5.31 [ryoon 2016-03-08]
+	Added textproc/py-docx version 0.8.5 [bsiegert 2016-03-08]
