@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1040 2016/03/08 13:53:03 nros Exp $
+$NetBSD: CHANGES-2016,v 1.1041 2016/03/08 13:56:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1419,3 +1419,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/bluefish to 2.2.8 [mef 2016-03-08]
 	Updated archivers/ruby-zip to 1.2.0 [taca 2016-03-08]
 	Updated textproc/mxml to 2.9 [nros 2016-03-08]
+	Updated databases/ruby-mysql2 to 0.4.3 [taca 2016-03-08]
