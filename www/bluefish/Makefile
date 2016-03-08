@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.122 2015/12/05 21:26:04 adam Exp $
+# $NetBSD: Makefile,v 1.123 2016/03/08 12:41:51 mef Exp $
 
-DISTNAME=	bluefish-2.2.7
-PKGREVISION=	2
+DISTNAME=	bluefish-2.2.8
 CATEGORIES=	www
 MASTER_SITES=	http://bluefish.mrball.net/stable/source/               \
 		http://www.bennewitz.com/bluefish/stable/source/
@@ -26,6 +25,7 @@ CONFIGURE_ENV+=		EXTERNAL_FIND=${TOOLS_FIND:Q}
 CHECK_WRKREF_SKIP+=	lib/bluefish/about.so
 REPLACE_PYTHON+=	data/lorem-ipsum-generator data/jsbeautify
 REPLACE_PYTHON+=	data/cssmin.py data/jsmin.py
+REPLACE_PYTHON+=	data/css_decompressor
 CHECK_INTERPRETER_SKIP+= share/bluefish/plugins/*/*.py
 CHECK_INTERPRETER_SKIP+= share/bluefish/plugins/*/*/*.py
 
