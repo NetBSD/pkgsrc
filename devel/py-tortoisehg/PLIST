@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2016/02/06 11:07:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2016/03/08 15:17:14 wiz Exp $
 bin/thg
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/tortoisehg/__init__.py
@@ -486,6 +486,7 @@ share/doc/tortoisehg/html/sync.html
 share/doc/tortoisehg/html/whatsnew.html
 share/doc/tortoisehg/html/workbench.html
 share/locale/ar/LC_MESSAGES/tortoisehg.mo
+share/locale/bg/LC_MESSAGES/tortoisehg.mo
 share/locale/ca/LC_MESSAGES/tortoisehg.mo
 share/locale/cs/LC_MESSAGES/tortoisehg.mo
 share/locale/da/LC_MESSAGES/tortoisehg.mo
@@ -520,7 +521,6 @@ share/locale/tr/LC_MESSAGES/tortoisehg.mo
 share/locale/uk/LC_MESSAGES/tortoisehg.mo
 share/locale/zh_CN/LC_MESSAGES/tortoisehg.mo
 share/locale/zh_TW/LC_MESSAGES/tortoisehg.mo
-share/pixmaps/tortoisehg/icons/.DS_Store
 share/pixmaps/tortoisehg/icons/16x16/actions/hg-add.png
 share/pixmaps/tortoisehg/icons/16x16/actions/thg-repoconfig.png
 share/pixmaps/tortoisehg/icons/16x16/actions/thg-userconfig.png
@@ -564,7 +564,6 @@ share/pixmaps/tortoisehg/icons/menushowchanged.ico
 share/pixmaps/tortoisehg/icons/menusynch.ico
 share/pixmaps/tortoisehg/icons/proxy.ico
 share/pixmaps/tortoisehg/icons/refresh_overlays.ico
-share/pixmaps/tortoisehg/icons/scalable/.DS_Store
 share/pixmaps/tortoisehg/icons/scalable/actions/application-exit.svg
 share/pixmaps/tortoisehg/icons/scalable/actions/compare-files.svg
 share/pixmaps/tortoisehg/icons/scalable/actions/copy-hash.svg
