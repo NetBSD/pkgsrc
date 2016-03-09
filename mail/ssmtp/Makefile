@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2016/03/09 03:20:05 tnn Exp $
+# $NetBSD: Makefile,v 1.32 2016/03/09 03:24:19 tnn Exp $
 #
 # TLS functionality needs testing. Please let me know the result,
 # and preferably info about your system.
@@ -52,5 +52,4 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/revaliases ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf ${DESTDIR}${EGDIR}
 
-.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
