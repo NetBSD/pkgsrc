@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2016/03/05 11:27:50 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2016/03/09 21:32:41 nros Exp $
 
 DISTNAME=	qore-0.8.11
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	lang
 MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=qore/}
 EXTRACT_SUFX=   .tar.bz2
@@ -13,17 +13,17 @@ LICENSE=	gnu-gpl-v2 OR gnu-lgpl-v2.1 OR mit
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	bison flex gmake pax
+USE_TOOLS+=	autoconf bison flex gmake pax
 USE_LANGUAGES=	c c++
 PTHREAD_OPTS+=	native
 FLEX_REQD=	2.5.31
 
-# make AC_CHECK_FUNC find gethost* etc on smartos
-# http://sourceforge.net/p/qore/code/6980
-LIBS.SunOS+=	-lnsl
-
 PKGCONFIG_OVERRIDE+=	qore.pc.in
 REPLACE_QORE=		doxygen/qdx
+
+pre-configure:
+	set -e; cd ${WRKSRC}; \
+	autoheader; autoconf
 
 #This is needed in order to comply the with MIT license and binary distribution
 #Install docs
