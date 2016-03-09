@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2015/07/20 18:27:09 asau Exp $
+# $NetBSD: Makefile,v 1.3 2016/03/09 17:41:06 asau Exp $
 
-DISTNAME=	squirrelsql-3.6-standard
-PKGNAME=	squirrelsql-3.6
-PKGREVISION=	1
+DISTNAME=	squirrelsql-3.7-standard
+PKGNAME=	squirrelsql-3.7
 CATEGORIES=	databases
 MASTER_SITES=	$(MASTER_SITE_SOURCEFORGE:=squirrel-sql/)
 EXTRACT_SUFX=	.zip
