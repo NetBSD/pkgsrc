@@ -1,7 +1,8 @@
-$NetBSD: patch-aa,v 1.43 2016/01/27 00:08:26 ryoon Exp $
+$NetBSD: patch-aa,v 1.44 2016/03/09 07:12:25 tnn Exp $
 
 * The profiler does not support Darwin/PPC so don't try to enable it
-  on that platform.
+  on that platform. Also it makes extra files appear in the PLIST on Linux
+  so disable it everywhere.
 
 * Cocoa gamepad backend can only be used if the toolkit is cocoa too.
 
@@ -13,9 +14,18 @@ $NetBSD: patch-aa,v 1.43 2016/01/27 00:08:26 ryoon Exp $
   heavy patching. Ideally they should be fixed individually but that
   will be an extremely hard work, so don't define XP_MACOSX for now.
 
---- configure.in.orig	2016-01-15 01:01:40.000000000 +0000
+--- configure.in.orig	2016-03-03 21:47:52.000000000 +0000
 +++ configure.in
-@@ -1974,7 +1974,6 @@ case "$target" in
+@@ -1746,7 +1746,7 @@ fi
+ dnl ========================================================
+ dnl SPS Profiler
+ dnl ========================================================
+-MOZ_ENABLE_PROFILER_SPS=1
++MOZ_ENABLE_PROFILER_SPS=
+ 
+ case "${OS_TARGET}" in
+ Android)
+@@ -1996,7 +1996,6 @@ case "$target" in
          _PLATFORM_DEFAULT_TOOLKIT='cairo-uikit'
          direct_nspr_config=1
      else
@@ -23,7 +33,7 @@ $NetBSD: patch-aa,v 1.43 2016/01/27 00:08:26 ryoon Exp $
          AC_DEFINE(XP_DARWIN)
          _PLATFORM_DEFAULT_TOOLKIT='cairo-cocoa'
          # The ExceptionHandling framework is needed for Objective-C exception
-@@ -2554,8 +2553,7 @@ MOZ_CXX11
+@@ -2580,8 +2579,7 @@ MOZ_CXX11
  
  AC_LANG_C
  
@@ -33,7 +43,7 @@ $NetBSD: patch-aa,v 1.43 2016/01/27 00:08:26 ryoon Exp $
  dnl ===============================================================
  if test "$GNU_CC" -a "$OS_TARGET" != WINNT; then
    AC_DEFINE(HAVE_VISIBILITY_HIDDEN_ATTRIBUTE)
-@@ -3464,6 +3462,14 @@ if test -n "$YASM"; then
+@@ -3476,6 +3474,14 @@ if test -n "$YASM"; then
    _YASM_BUILD=`        echo ${YASM_VERSION} | $AWK -F\. '{ print $4 }'`
  fi
  
@@ -48,7 +58,7 @@ $NetBSD: patch-aa,v 1.43 2016/01/27 00:08:26 ryoon Exp $
  if test -z "$SKIP_LIBRARY_CHECKS"; then
  dnl system JPEG support
  dnl ========================================================
-@@ -3491,11 +3497,7 @@ if test "$MOZ_NATIVE_JPEG" = 1; then
+@@ -3503,11 +3509,7 @@ if test "$MOZ_NATIVE_JPEG" = 1; then
                       #include <jpeglib.h> ],
                     [ #if JPEG_LIB_VERSION < $MOZJPEG
                       #error "Insufficient JPEG library version ($MOZJPEG required)."
@@ -61,7 +71,7 @@ $NetBSD: patch-aa,v 1.43 2016/01/27 00:08:26 ryoon Exp $
                     MOZ_NATIVE_JPEG=1,
                     AC_MSG_ERROR([Insufficient JPEG library version for --with-system-jpeg]))
  fi
-@@ -4235,6 +4237,10 @@ cairo-gonk)
+@@ -4260,6 +4262,10 @@ cairo-gonk)
  
  esac
  
@@ -72,7 +82,7 @@ $NetBSD: patch-aa,v 1.43 2016/01/27 00:08:26 ryoon Exp $
  AC_SUBST(MOZ_PDF_PRINTING)
  if test "$MOZ_PDF_PRINTING"; then
     PDF_SURFACE_FEATURE="#define CAIRO_HAS_PDF_SURFACE 1"
-@@ -5006,6 +5012,9 @@ if test -n "$MOZ_WEBRTC"; then
+@@ -5018,6 +5024,9 @@ if test -n "$MOZ_WEBRTC"; then
      MOZ_VPX=1
      MOZ_VPX_ERROR_CONCEALMENT=1
  
@@ -82,7 +92,7 @@ $NetBSD: patch-aa,v 1.43 2016/01/27 00:08:26 ryoon Exp $
  dnl enable once Signaling lands
      MOZ_WEBRTC_SIGNALING=1
      AC_DEFINE(MOZ_WEBRTC_SIGNALING)
-@@ -5149,6 +5158,142 @@ if test "${ac_cv_c_attribute_aligned}" !
+@@ -5161,6 +5170,142 @@ if test "${ac_cv_c_attribute_aligned}" !
  fi
  
  dnl ========================================================
@@ -225,7 +235,7 @@ $NetBSD: patch-aa,v 1.43 2016/01/27 00:08:26 ryoon Exp $
  dnl = Disable VP8 decoder support
  dnl ========================================================
  MOZ_ARG_DISABLE_BOOL(webm,
-@@ -5551,6 +5696,67 @@ fi
+@@ -5563,6 +5708,67 @@ fi
  AC_SUBST(MOZ_WEBM_ENCODER)
  
  dnl ==================================
@@ -293,7 +303,7 @@ $NetBSD: patch-aa,v 1.43 2016/01/27 00:08:26 ryoon Exp $
  dnl = Check alsa availability on Linux
  dnl ==================================
  
-@@ -5564,12 +5770,23 @@ MOZ_ARG_ENABLE_BOOL(alsa,
+@@ -5576,12 +5782,23 @@ MOZ_ARG_ENABLE_BOOL(alsa,
     MOZ_ALSA=1,
     MOZ_ALSA=)
  
@@ -317,7 +327,7 @@ $NetBSD: patch-aa,v 1.43 2016/01/27 00:08:26 ryoon Exp $
  AC_SUBST(MOZ_ALSA)
  
  dnl ========================================================
-@@ -8148,6 +8365,49 @@ if test "$USE_FC_FREETYPE"; then
+@@ -8139,6 +8356,49 @@ if test "$USE_FC_FREETYPE"; then
  fi
  
  dnl ========================================================
