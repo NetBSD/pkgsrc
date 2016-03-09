@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2016/03/08 11:21:27 nros Exp $
+# $NetBSD: Makefile,v 1.10 2016/03/09 11:29:46 tnn Exp $
 
 DISTNAME=	libmusicbrainz-5.1.0
 PKGNAME=	${DISTNAME:S/brainz/brainz5/}
@@ -15,6 +15,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
+USE_TOOLS+=		pkg-config
 PKGCONFIG_OVERRIDE=	libmusicbrainz5.pc.cmake
 
 LDFLAGS.SunOS+=	-lintl
