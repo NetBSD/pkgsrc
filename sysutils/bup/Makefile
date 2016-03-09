@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2015/12/05 21:25:58 adam Exp $
+# $NetBSD: Makefile,v 1.23 2016/03/09 23:53:17 wiz Exp $
 
 DISTNAME=	bup-0.27
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	# https://github.com/bup/bup/releases/
 # doc: switch to "man" branch before downloading
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${DISTNAME:S/bup/bup-man/}.zip
 
-MAINTAINER=	wiz@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://github.com/bup/bup
 COMMENT=	Highly efficient file backup system based on the git packfile format
 LICENSE=	gnu-gpl-v2
