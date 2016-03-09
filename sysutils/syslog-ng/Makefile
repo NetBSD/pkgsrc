@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2016/03/05 11:29:32 jperkin Exp $
+# $NetBSD: Makefile,v 1.26 2016/03/09 10:49:00 tnn Exp $
 
 PKGREVISION= 1
 .include "../../sysutils/syslog-ng/Makefile.common"
@@ -28,6 +28,12 @@ RCD_SCRIPTS=		syslogng
 INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR}
 INSTALL_TARGET=		install
 INSTALLATION_DIRS=	bin ${DOCDIR} ${EGDIR}
+
+PLIST_VARS+=		systemd
+
+.if exists(/bin/systemd)
+PLIST.systemd=		yes
+.endif
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DESTDIR}${DOCDIR}
