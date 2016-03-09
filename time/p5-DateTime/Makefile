@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.51 2016/03/03 12:45:30 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2016/03/09 11:26:43 wiz Exp $
 
-DISTNAME=	DateTime-1.24
+DISTNAME=	DateTime-1.25
 PKGNAME=	p5-${DISTNAME}00
 CATEGORIES=	time perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DateTime/}
