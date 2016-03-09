@@ -1,0 +1,57 @@
+$NetBSD: patch-lib_ql__crypto.qpp,v 1.1 2016/03/09 21:32:41 nros Exp $
+* Fix build with open/libressl releases without evp_SHA
+  https://github.com/qorelanguage/qore/commit/fc181070ad1afbf49af2e8fc968b97328d690a86
+--- lib/ql_crypto.qpp.orig	2016-03-09 20:39:25.000000000 +0000
++++ lib/ql_crypto.qpp
+@@ -1130,11 +1130,16 @@ my string $str = SHA("hello"); returns "
+     @see SHA_bin()
+  */
+ string SHA(data[doc] data) [flags=RET_VALUE_ONLY] {
++#ifdef HAVE_OPENSSL_SHA
+    DigestHelper dh(args);
+    if (dh.doDigest(SHA_ERR, EVP_sha(), xsink))
+       return 0;
+ 
+    return dh.getString();
++#else
++   missing_openssl_feature("SHA", xsink);
++   return 0;
++#endif
+ }
+ 
+ //! Returns the <a href="http://en.wikipedia.org/wiki/SHA-1">SHA1</a> message digest of the supplied argument as a hex string
+@@ -1492,11 +1497,16 @@ my binary $bin = SHA_bin("hello");
+     @see SHA()
+  */
+ binary SHA_bin(data[doc] data) [flags=RET_VALUE_ONLY] {
++#ifdef HAVE_OPENSSL_SHA
+    DigestHelper dh(args);
+    if (dh.doDigest(SHA_ERR, EVP_sha(), xsink))
+       return 0;
+    
+    return dh.getBinary();
++#else
++   missing_openssl_feature("SHA", xsink);
++   return 0;
++#endif
+ }
+ 
+ //! Returns the <a href="http://en.wikipedia.org/wiki/SHA-1">SHA1</a> message digest of the supplied argument as a binary object
+@@ -1874,11 +1884,17 @@ my string $str = SHA_hmac("Hello There T
+     @throw SHA-HMAC-ERROR error calculating digest (should not normally happen)
+  */
+ string SHA_hmac(data[doc] data, string key) {
++#ifdef HAVE_OPENSSL_SHA
+    HMACHelper dh(args);
+    if (dh.doHMAC("SHA-HMAC-ERROR", EVP_sha(), key, xsink))
+       return 0;
+ 
+    return dh.getString();
++#else
++   (void)key;
++   missing_openssl_feature("SHA", xsink);
++   return 0;
++#endif
+ }
+ 
+ //! Returns the <a href="http://en.wikipedia.org/wiki/Secure_Hash_Algorithm">SHA1</a> based HMAC of the supplied argument as a hex string
