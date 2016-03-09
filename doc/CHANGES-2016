@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1088 2016/03/09 15:08:12 taca Exp $
+$NetBSD: CHANGES-2016,v 1.1089 2016/03/09 15:09:50 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1468,3 +1468,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/facette to 0.4.0devnb5 [imil 2016-03-09]
 	Updated devel/ruby-rspec-core to 3.4.4 [taca 2016-03-09]
 	Updated math/ruby-narray to 0.6.1.2 [taca 2016-03-09]
+	Updated math/ruby-roo to 2.3.2 [taca 2016-03-09]
