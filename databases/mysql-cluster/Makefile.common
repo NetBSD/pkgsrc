@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.9 2016/02/25 11:46:21 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.10 2016/03/09 21:51:45 fhajny Exp $
 #
 # used by databases/mysql-cluster/Makefile
 
-DISTNAME=	mysql-cluster-gpl-7.4.7
+DISTNAME=	mysql-cluster-gpl-7.4.10
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_MYSQL:=MySQL-Cluster-7.4/}
 
