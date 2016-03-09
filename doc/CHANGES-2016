@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1079 2016/03/09 10:47:54 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1080 2016/03/09 11:26:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1459,3 +1459,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/unbound to 1.5.8 [pettai 2016-03-09]
 	Updated sysutils/dbus to 1.10.8 [prlw1 2016-03-09]
 	Updated security/p5-Crypt-ECB to 2.05 [wiz 2016-03-09]
+	Updated time/p5-DateTime to 1.2500 [wiz 2016-03-09]
