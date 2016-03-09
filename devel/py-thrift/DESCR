@@ -1,0 +1,10 @@
+Thrift is a software library and set of code-generation tools developed
+at Facebook to expedite development and implementation of efficient and
+scalable backend services. Its primary goal is to enable efficient and
+reliable communication across programming languages by abstracting the
+portions of each language that tend to require the most customization
+into a common library that is implemented in each language.
+
+Specifically, Thrift allows developers to define datatypes and service
+interfaces in a single language-neutral file and generate all the
+necessary code to build RPC clients and servers.
