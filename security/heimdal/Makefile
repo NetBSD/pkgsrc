@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.118 2016/03/05 11:27:54 jperkin Exp $
+# $NetBSD: Makefile,v 1.119 2016/03/09 06:01:09 tnn Exp $
 
 DISTNAME=	heimdal-1.5.3
 PKGREVISION=	11
@@ -73,6 +73,8 @@ PLIST.glob=	yes
 .if ${OPSYS} == "Linux"
 PLIST.vis=	yes
 PLIST.glob=	yes
+# Without this I get undefined references to pthread_getspecific
+PTHREAD_AUTO_VARS=	yes
 .endif
 
 PLIST_VARS+=		afskauth hcrypto
