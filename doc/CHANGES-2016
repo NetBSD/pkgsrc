@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1077 2016/03/09 05:24:56 pettai Exp $
+$NetBSD: CHANGES-2016,v 1.1078 2016/03/09 10:35:20 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1457,3 +1457,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/firefox to 45.0 [ryoon 2016-03-08]
 	Updated lang/libLLVM to 3.8.0 [tnn 2016-03-08]
 	Updated net/unbound to 1.5.8 [pettai 2016-03-09]
+	Updated sysutils/dbus to 1.10.8 [prlw1 2016-03-09]
