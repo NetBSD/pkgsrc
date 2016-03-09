@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2016/03/05 11:28:43 jperkin Exp $
+# $NetBSD: Makefile,v 1.10 2016/03/09 20:18:38 fhajny Exp $
 
-DISTNAME=	node-v4.3.2
+DISTNAME=	node-v4.4.0
 
-PKGREVISION= 1
 .include "../../lang/nodejs/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
