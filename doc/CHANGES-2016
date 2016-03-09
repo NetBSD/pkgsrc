@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1084 2016/03/09 12:22:54 wen Exp $
+$NetBSD: CHANGES-2016,v 1.1085 2016/03/09 12:28:49 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1464,3 +1464,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/p5-MIME-Types to 2.13 [wiz 2016-03-09]
 	Updated www/p5-Mojolicious to 6.55 [wen 2016-03-09]
 	Updated filesystems/p5-Path-Tiny to 0.084 [wen 2016-03-09]
+	Updated textproc/p5-XML-XPath to 1.34 [wen 2016-03-09]
