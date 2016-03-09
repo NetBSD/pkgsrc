@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/12/10 23:22:05 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2016/03/09 21:34:21 tnn Exp $
 
 DISTNAME=	elftoolchain-0.5.1
 PKGREVISION=	1
@@ -16,6 +16,7 @@ CONFLICTS=	libelf-[0-9]*
 MAKE_JOBS_SAFE=	no
 
 USE_BSD_MAKEFILE=	yes
+USE_TOOLS+=		m4
 MAKE_ENV+=		${BSD_MAKE_ENV}
 MAKE_FLAGS+=		MKPROFILE=yes
 
