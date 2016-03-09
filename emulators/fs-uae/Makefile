@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/11/07 13:30:21 adam Exp $
+# $NetBSD: Makefile,v 1.3 2016/03/09 22:08:46 tnn Exp $
 
 DISTNAME=	fs-uae-2.6.2
 CATEGORIES=	emulators
@@ -10,7 +10,7 @@ COMMENT=	FS-UAE Amiga Emulator
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		pkg-config zip
+USE_TOOLS+=		msgfmt pkg-config zip
 GNU_CONFIGURE=		yes
 
 .include "../../mk/bsd.prefs.mk"
