@@ -1,9 +1,13 @@
-# $NetBSD: tools.Linux.mk,v 1.59 2015/02/16 11:01:40 jperkin Exp $
+# $NetBSD: tools.Linux.mk,v 1.60 2016/03/09 22:27:29 tnn Exp $
 #
 # System-supplied tools for the Linux operating system.
 
 TOOLS_PLATFORM.[?=		[			# shell builtin
+.if exists(/etc/debian_version)
+TOOLS_PLATFORM.awk?=		/usr/bin/awk
+.else
 TOOLS_PLATFORM.awk?=		${TOOLS_PLATFORM.gawk}
+.endif
 .if exists(/usr/bin/autopoint)
 TOOLS_PLATFORM.autopoint?=	/usr/bin/autopoint
 .endif
@@ -90,10 +94,16 @@ TOOLS_PLATFORM.fgrep?=		/usr/bin/fgrep
 .endif
 TOOLS_PLATFORM.file?=		/usr/bin/file
 TOOLS_PLATFORM.find?=		/usr/bin/find
-.if exists(/bin/awk)
-TOOLS_PLATFORM.gawk?=		/bin/awk
+.if exists(/etc/debian_version)
+.  if exists(/usr/bin/gawk)
+TOOLS_PLATFORM.gawk?=		/usr/bin/gawk
+.  endif
 .else
+.  if exists(/bin/awk)
+TOOLS_PLATFORM.gawk?=		/bin/awk
+.  else
 TOOLS_PLATFORM.gawk?=		/usr/bin/awk
+.  endif
 .endif
 .if exists(/usr/bin/gettext)
 TOOLS_PLATFORM.gettext?=	/usr/bin/gettext
