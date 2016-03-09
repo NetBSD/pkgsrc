@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2015/03/12 14:54:14 tnn Exp $
+# $NetBSD: Makefile,v 1.5 2016/03/09 11:09:02 tnn Exp $
 #
 
 DISTNAME=	libinotify-0.0
@@ -15,7 +15,7 @@ USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	autoconf automake autoreconf
 
-NOT_FOR_PLATFORM+=	SunOS-*-*
+NOT_FOR_PLATFORM+=	SunOS-*-* Linux-*-*
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -fvi
