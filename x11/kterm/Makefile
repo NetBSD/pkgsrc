@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2015/10/30 15:53:00 tsutsui Exp $
+# $NetBSD: Makefile,v 1.62 2016/03/09 21:50:34 tnn Exp $
 
 DISTNAME=	kterm-6.2.0
 PKGREVISION=	24
@@ -18,6 +18,7 @@ HOMEPAGE=	# none
 COMMENT=	Multi-lingual terminal emulator for X
 
 USE_IMAKE=	YES
+USE_TOOLS+=	m4
 
 SPECIAL_PERMS=	${PREFIX:Q}/bin/kterm ${SETUID_ROOT_PERMS}
 
