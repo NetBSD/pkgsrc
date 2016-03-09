@@ -1,8 +1,8 @@
-$NetBSD: patch-lib_QoreTimeZoneManager.cpp,v 1.1 2015/05/02 10:36:29 nros Exp $
+$NetBSD: patch-lib_QoreTimeZoneManager.cpp,v 1.2 2016/03/09 21:32:41 nros Exp $
 * Fix build on OpenBSD.
   Committed upstream:
   http://sourceforge.net/p/qore/code/7208/
---- lib/QoreTimeZoneManager.cpp.orig	2015-05-02 12:21:24.000000000 +0000
+--- lib/QoreTimeZoneManager.cpp.orig	2014-06-07 08:17:39.000000000 +0000
 +++ lib/QoreTimeZoneManager.cpp
 @@ -27,7 +27,6 @@
  
