@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1078 2016/03/09 10:35:20 prlw1 Exp $
+$NetBSD: CHANGES-2016,v 1.1079 2016/03/09 10:47:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1458,3 +1458,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/libLLVM to 3.8.0 [tnn 2016-03-08]
 	Updated net/unbound to 1.5.8 [pettai 2016-03-09]
 	Updated sysutils/dbus to 1.10.8 [prlw1 2016-03-09]
+	Updated security/p5-Crypt-ECB to 2.05 [wiz 2016-03-09]
