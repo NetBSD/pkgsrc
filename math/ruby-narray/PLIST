@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2015/03/08 15:17:20 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2016/03/09 15:07:35 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/narray.${RUBY_DLEXT}
+${GEM_EXTSDIR}/narray/narray_ext.rb
+${GEM_EXTSDIR}/narray/nmatrix.rb
 ${GEM_LIBDIR}/ChangeLog
 ${GEM_LIBDIR}/MANIFEST
 ${GEM_LIBDIR}/README.ja.md
@@ -10,13 +12,13 @@ ${GEM_LIBDIR}/SPEC.en.txt
 ${GEM_LIBDIR}/SPEC.ja.txt
 ${GEM_LIBDIR}/narray.h
 ${GEM_LIBDIR}/narray.${RUBY_DLEXT}
+${GEM_LIBDIR}/narray/narray_ext.rb
+${GEM_LIBDIR}/narray/nmatrix.rb
 ${GEM_LIBDIR}/narray_config.h
-${GEM_LIBDIR}/narray_ext.rb
-${GEM_LIBDIR}/nmatrix.rb
 ${GEM_LIBDIR}/src/depend
 ${GEM_LIBDIR}/src/extconf.rb
-${GEM_LIBDIR}/src/lib/narray_ext.rb
-${GEM_LIBDIR}/src/lib/nmatrix.rb
+${GEM_LIBDIR}/src/lib/narray/narray_ext.rb
+${GEM_LIBDIR}/src/lib/narray/nmatrix.rb
 ${GEM_LIBDIR}/src/mkmath.rb
 ${GEM_LIBDIR}/src/mknafunc.rb
 ${GEM_LIBDIR}/src/mkop.rb
