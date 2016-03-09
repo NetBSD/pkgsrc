@@ -1,0 +1,28 @@
+$NetBSD: patch-lib_qc__option.qpp,v 1.1 2016/03/09 21:32:41 nros Exp $
+* Fix build with open/libressl releases without evp_SHA
+  https://github.com/qorelanguage/qore/commit/fc181070ad1afbf49af2e8fc968b97328d690a86
+--- lib/qc_option.qpp.orig	2016-03-09 20:34:02.000000000 +0000
++++ lib/qc_option.qpp
+@@ -139,6 +139,12 @@
+ #define QORE_CONST_HAVE_STRUCT_FLOCK 0
+ #endif
+ 
++#ifdef HAVE_OPENSSL_SHA
++#define QORE_CONST_HAVE_SHA 1
++#else
++#define QORE_CONST_HAVE_SHA 0
++#endif
++
+ #if !defined(OPENSSL_NO_SHA256) && defined(HAVE_OPENSSL_SHA512)
+ #define QORE_CONST_HAVE_SHA256 1
+ #else
+@@ -282,6 +288,9 @@ const HAVE_UNIX_FILEMGT = bool(QORE_CONS
+  */
+ const HAVE_FILE_LOCKING = bool(QORE_CONST_HAVE_STRUCT_FLOCK);
+ 
++//! Indicates if the openssl library used to build the qore library supported the SHA0 algorithm and therefore if the SHA() and SHA_bin() functions are available
++const HAVE_SHA = bool(QORE_CONST_HAVE_SHA);
++
+ //! Indicates if the openssl library used to build the qore library supported the SHA224 algorithm and therefore if the SHA224() and SHA224_bin() functions are available
+ const HAVE_SHA224 = bool(QORE_CONST_HAVE_SHA256);
+ 

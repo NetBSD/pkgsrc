@@ -1,0 +1,51 @@
+$NetBSD: patch-configure.ac,v 1.1 2016/03/09 21:32:41 nros Exp $
+* pkgsrc doesn't use lib64 or targetdir so don't set it.
+  fixes build on linux.
+  http://sf.net/p/qore/code/6817/
+* Fix build with open/libressl releases without evp_SHA
+  https://github.com/qorelanguage/qore/commit/fc181070ad1afbf49af2e8fc968b97328d690a86
+* make AC_CHECK_FUNC find gethost* etc on smartos
+  http://sourceforge.net/p/qore/code/6980
+--- configure.ac.orig	2016-03-09 20:19:21.000000000 +0000
++++ configure.ac
+@@ -295,14 +295,6 @@ if test "$enable_64bit" = "yes"; then
+       *linux*)	if test "$GXX" = "yes"; then
+ 		   CXXFLAGS="$CXXFLAGS -m64"
+ 		fi
+-		# only set LIBSUFFIX=64 if /usr/lib64 exists
+-		if test -d /usr/lib64; then
+-		   LIBSUFFIX=64
+-                fi
+-		target="${host_cpu}-${host_os}"
+-		if test -d /usr/lib/$target; then
+-		   LIBSUFFIX=/$target
+-                fi
+ 		AC_SUBST(LIBSUFFIX)
+ 		;;
+       *hpux*)	if test "$host_cpu" = "ia64"; then
+@@ -1071,6 +1063,15 @@ else
+     CPPFLAGS="$CPPFLAGS $QORE_LIB_CPPFLAGS $OPENSSL_CPPFLAGS"
+     LIBS="$LIBS $QORE_LIB_LDFLAGS $OPENSSL_LDFLAGS"
+ 
++    # check for SHA-0 algorithm
++    AC_MSG_CHECKING([for SHA0 in openssl])
++    AC_LINK_IFELSE([AC_LANG_PROGRAM(
++    [[#include <openssl/evp.h>]],
++    [[const EVP_MD *evp = EVP_sha();]])],
++       [AC_MSG_RESULT([found])
++        AC_DEFINE([HAVE_OPENSSL_SHA], 1, [define if the sha0 algorithm is available in openssl])],
++       [AC_MSG_RESULT([not found])])
++
+     # check for SHA512 algorithm
+     AC_MSG_CHECKING([for SHA224, SHA256, SHA384, SHA512 in openssl])
+     AC_LINK_IFELSE([AC_LANG_PROGRAM(
+@@ -1377,6 +1378,9 @@ fi
+ # see if the socket library is required
+ AC_SEARCH_LIBS(setsockopt, socket)
+ 
++# see if the nsl library is required
++AC_SEARCH_LIBS(gethostbyname, nsl)
++
+ # look for librt (needed by clock_gettime() on some platforms)
+ AC_SEARCH_LIBS(clock_gettime, rt)
+ 
