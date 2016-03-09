@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.1 2015/12/06 15:17:31 taca Exp $
+$NetBSD: patch-configure,v 1.1.2.1 2016/03/09 20:03:23 bsiegert Exp $
 
 --- configure.orig	2015-12-01 13:36:27.000000000 +0000
 +++ configure
@@ -30,15 +30,6 @@ $NetBSD: patch-configure,v 1.1 2015/12/06 15:17:31 taca Exp $
    { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
  $as_echo "yes" >&6; }
  
-@@ -9468,7 +9447,7 @@ $as_echo "$ext_output" >&6; }
- 
- 
- 
--if test "$BUILD_PHPDBG" == "" && test "$PHP_PHPDBG" != "no"; then
-+if test "$BUILD_PHPDBG" = "" && test "$PHP_PHPDBG" != "no"; then
-   { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether termios.h defines TIOCGWINSZ" >&5
- $as_echo_n "checking whether termios.h defines TIOCGWINSZ... " >&6; }
- if ${ac_cv_sys_tiocgwinsz_in_termios_h+:} false; then :
 @@ -18211,7 +18190,7 @@ fi
      if test "$found_openssl" = "no"; then
  
@@ -75,22 +66,6 @@ $NetBSD: patch-configure,v 1.1 2015/12/06 15:17:31 taca Exp $
      fi
  
      for i in $PHP_OPENSSL_DIR; do
-@@ -57215,13 +57194,13 @@ $as_echo "$ext_output" >&6; }
- 
- if test "$PHP_OPCACHE" != "no"; then
- 
--  if test "$PHP_OPCACHE_FILE" == "yes"; then
-+  if test "$PHP_OPCACHE_FILE" = "yes"; then
- 
- $as_echo "#define HAVE_OPCACHE_FILE_CACHE 1" >>confdefs.h
- 
-   fi
- 
--  if test "$PHP_HUGE_CODE_PAGES" == "yes"; then
-+  if test "$PHP_HUGE_CODE_PAGES" = "yes"; then
- 
- $as_echo "#define HAVE_HUGE_CODE_PAGES 1" >>confdefs.h
- 
 @@ -57721,7 +57700,7 @@ rm -f core *.core core.conftest.* gmon.o
  fi
  
