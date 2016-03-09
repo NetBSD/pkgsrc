@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2013/07/15 02:02:20 ryoon Exp $
+# $NetBSD: Makefile,v 1.24 2016/03/09 21:40:05 tnn Exp $
 #
 
 VERS=		0.51b3
@@ -15,6 +15,7 @@ COMMENT=	ELF format exploration shell
 
 MAKE_JOBS_SAFE=		no
 
+LDFLAGS+=	${BUILDLINK_LDADD.dl:Q}
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 SUBST_CLASSES+=		elfsh
@@ -47,5 +48,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/libelfsh-ref.txt \
 		${DESTDIR}${PREFIX}/share/doc/elfsh/libelfsh-ref.txt
 
+.include "../../mk/dlopen.buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
