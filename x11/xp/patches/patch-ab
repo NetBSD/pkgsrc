@@ -1,23 +1,22 @@
-$NetBSD: patch-ab,v 1.1.1.1 1999/08/13 19:35:45 tron Exp $
+$NetBSD: patch-ab,v 1.2 2016/03/09 06:52:02 tnn Exp $
 
---- utils.c.orig	Thu Feb 11 13:44:15 1999
-+++ utils.c	Fri Aug 13 21:30:56 1999
-@@ -1,13 +1,18 @@
+It's 2016. Everyone has strerror.
+
+--- utils.c.orig	1999-02-11 12:44:15.000000000 +0000
++++ utils.c
+@@ -1,13 +1,8 @@
  #include <errno.h>
+-#define NULL 0
 +#include <string.h>
- #define NULL 0
  
  
  char *
  uerror() {
-+#ifdef HAS_STRERROR
+-	extern int sys_nerr;
+-	extern char *sys_errlist[];
+-	if (errno > sys_nerr)
+-	    return NULL;
+-	else
+-	    return sys_errlist[errno];
 +	return strerror(errno);
-+#else
- 	extern int sys_nerr;
- 	extern char *sys_errlist[];
- 	if (errno > sys_nerr)
- 	    return NULL;
- 	else
- 	    return sys_errlist[errno];
-+#endif
  }
