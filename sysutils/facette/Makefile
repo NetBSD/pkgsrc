@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2016/03/08 20:21:50 imil Exp $
+# $NetBSD: Makefile,v 1.4 2016/03/09 12:09:29 imil Exp $
 
 DISTNAME=	facette-0.4.0dev
-PKGREVISION=	2
+PKGREVISION=	4
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=facette/}
 GITHUB_PROJECT=	facette
@@ -18,17 +18,69 @@ USE_TOOLS+=	bsdtar gmake gsed pax pkg-config
 BUILD_DEPENDS+=	go-[0-9]*:../../lang/go
 BUILD_DEPENDS+=	nodejs-[0-9]*:../../lang/nodejs
 
-SUBST_CLASSES+=		paths
-SUBST_MESSAGE.paths=	Fixing hardcoded paths.
-SUBST_STAGE.paths=	pre-build
-SUBST_FILES.paths=	Makefile
-SUBST_SED.paths=	-e 's,/usr/local,${PREFIX}/,g'
+SUBST_CLASSES+=		prefix
+SUBST_MESSAGE.prefix=	Fixing prefix.
+SUBST_STAGE.prefix=	pre-build
+SUBST_FILES.prefix=	Makefile docs/examples/facette.json
+SUBST_SED.prefix=	-e 's,/usr/local,${PREFIX},g'
 
-DOCDIR=			${PREFIX}/share/doc/facette
+SUBST_CLASSES+=		conf
+SUBST_MESSAGE.conf=	Fixing configuration path.
+SUBST_STAGE.conf=	pre-build
+SUBST_FILES.conf=	cmd/facette/facette.go	\
+			cmd/facettectl/facettectl.go	\
+			docs/examples/facette.json	\
+			docs/man/facette.1.md		\
+			docs/man/facettectl.8.md	\
+			pkg/config/config.go
+SUBST_SED.conf=		-e 's,/etc,${PKG_SYSCONFDIR},g'
+
+SUBST_CLASSES+=		rrd
+SUBST_MESSAGE.rrd=	Fixing collectd rrd path.
+SUBST_STAGE.rrd=	pre-build
+SUBST_FILES.rrd=	docs/examples/providers/collectd.json
+SUBST_SED.rrd=		-e 's,/var/lib,${VARBASE}/db,g'
+
+FACETTE_USER?=		facette
+FACETTE_GROUP?=		facette
+
+RCD_SCRIPTS+=		facette
+RCD_SCRIPT_SRC.facette=	${FILESDIR}/facette.sh
+
+FACETTE_DOCDIR=		${PREFIX}/share/doc/facette
+FACETTE_HTDOCS=		${PREFIX}/share/facette
+FACETTE_DATADIR=	${VARBASE}/lib/facette
+FACETTE_LOGDIR=		${VARBASE}/log/facette
 EGDIR=			${PREFIX}/share/examples/facette
-DATADIR=		${PREFIX}/share/facette
-INSTALLATION_DIRS+=	bin ${EGDIR} ${DOCDIR}
-INSTALLATION_DIRS+=	${DATADIR}/template ${DATADIR}/static
+
+INSTALLATION_DIRS+=	bin ${EGDIR} ${FACETTE_DOCDIR}
+INSTALLATION_DIRS+=	${FACETTE_HTDOCS}/template ${FACETTE_HTDOCS}/static
+
+OWN_DIRS+=		${PKG_SYSCONFDIR}/facette
+OWN_DIRS+=		${PKG_SYSCONFDIR}/facette/providers
+OWN_DIRS+=		${VARBASE}/run/facette
+OWN_DIRS+=		${FACETTE_DATADIR} ${FACETTE_LOGDIR}
+
+OWN_DIRS_PERMS+=	${VARBASE}/run/facette			\
+				${FACETTE_USER} ${FACETTE_GROUP} 0755
+OWN_DIRS_PERMS+=	${FACETTE_DATADIR}			\
+				${FACETTE_USER} ${FACETTE_GROUP} 0755
+OWN_DIRS_PERMS+=	${FACETTE_LOGDIR}			\
+				${FACETTE_USER} ${FACETTE_GROUP} 0755
+
+PKG_GROUPS+=			${FACETTE_GROUP}
+PKG_USERS+=			${FACETTE_USER}:${FACETTE_GROUP}
+PKG_GECOS.${FACETTE_USER}=	Facette daemon user
+PKG_HOME.${FACETTE_USER}=	${FACETTE_DATADIR}
+
+FILES_SUBST+=		FACETTE_USER=${FACETTE_USER}
+FILES_SUBST+=		FACETTE_GROUP=${FACETTE_GROUP}
+FILES_SUBST+=		FACETTE_LOGDIR=${FACETTE_LOGDIR}
+
+CONF_FILES+=		${EGDIR}/facette.json			\
+			${PKG_SYSCONFDIR}/facette/facette.json
+CONF_FILES+=		${EGDIR}/providers/collectd.json	\
+			${PKG_SYSCONFDIR}/facette/providers/collectd.json
 
 CGO_LDFLAGS=		-L${PREFIX}/lib ${COMPILER_RPATH_FLAG},${PREFIX}/lib
 
@@ -40,12 +92,12 @@ do-install:
 		${DESTDIR}${PREFIX}/bin/
 	${INSTALL_PROGRAM} ${WRKSRC}/build/*/bin/facettectl	\
 		${DESTDIR}${PREFIX}/bin/
-	cd ${WRKSRC}/docs/man && ${PAX} -rw * ${DESTDIR}${DOCDIR}
+	cd ${WRKSRC}/docs/man && ${PAX} -rw * ${DESTDIR}${FACETTE_DOCDIR}
 	cd ${WRKSRC}/docs/examples && ${PAX} -rw * ${DESTDIR}${EGDIR}
 	cd ${WRKSRC}/build/*/template &&	\
-		${PAX} -rw * ${DESTDIR}${DATADIR}/template
+		${PAX} -rw * ${DESTDIR}${FACETTE_HTDOCS}/template
 	cd ${WRKSRC}/build/*/static &&		\
-		${PAX} -rw * ${DESTDIR}${DATADIR}/static
+		${PAX} -rw * ${DESTDIR}${FACETTE_HTDOCS}/static
 
 
 .include "../../databases/rrdtool/buildlink3.mk"
