@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2015/06/12 10:50:16 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2016/03/09 20:19:31 tnn Exp $
 
 DISTNAME=	mos201src
 PKGNAME=	moscow_ml-2.01
@@ -30,6 +30,9 @@ INSTALLATION_DIRS+=	share/examples/moscow_ml/small
 INSTALLATION_DIRS+=	share/examples/moscow_ml/units
 INSTALLATION_DIRS+=	share/examples/moscow_ml/weak
 INSTALLATION_DIRS+=	share/examples/moscow_ml/webserver
+
+.include "../../mk/dlopen.buildlink3.mk"
+BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 
 post-extract:
 	${CHMOD} -x ${WRKDIR}/mosml/examples/modules/matrix.sml
