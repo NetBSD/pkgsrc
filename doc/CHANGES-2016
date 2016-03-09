@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1099 2016/03/09 21:33:43 nros Exp $
+$NetBSD: CHANGES-2016,v 1.1100 2016/03/09 21:55:00 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1479,3 +1479,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added devel/py-thrift version 0.9.3 [bsiegert 2016-03-09]
 	Updated sysutils/rsyslog to 8.17.0 [fhajny 2016-03-09]
 	Updated lang/qore to 0.8.11nb4 [nros 2016-03-09]
+	Updated databases/mysql-cluster to 7.4.10 [fhajny 2016-03-09]
