@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.7 2015/12/29 23:34:52 dholland Exp $
+$NetBSD: patch-aa,v 1.8 2016/03/09 20:19:31 tnn Exp $
 
 Configure for pkgsrc.
 XXX: should not be using LOCALBASE.
 
---- Makefile.inc.orig	Thu Jun 29 02:28:14 2000
-+++ Makefile.inc	Wed Aug 23 23:39:29 2000
-@@ -2,20 +2,20 @@
+--- Makefile.inc.orig	2004-01-19 15:03:37.000000000 +0000
++++ Makefile.inc
+@@ -2,13 +2,13 @@
  
  # Where to install stuff
  
@@ -21,15 +21,7 @@ XXX: should not be using LOCALBASE.
  
  # To compile the runtime system camlrunm with support for
  # dynamically loadable libraries (DDLs), uncomment these:
- 
- ADDPRIMS=dynlib.c
- ADDOBJS=dynlib.o
--ADDRUNLIBS=-ldl
-+# ADDRUNLIBS=-ldl
- ADDRUNCFLAGS=
- ADDDYNLIBCFLAGS=
- 
-@@ -45,13 +45,13 @@
+@@ -45,13 +45,13 @@ DYNLD=ld -shared
  
  # For NetBSD, use:
  # ------------------------
@@ -50,7 +42,7 @@ XXX: should not be using LOCALBASE.
  
  # For Solaris 2 (not SunOS 4), use:
  # ---------------------------------
-@@ -114,12 +114,12 @@
+@@ -114,12 +114,12 @@ SHELL=/bin/sh
  # DOCDIR contains documentation
  
  BINDIR=${MOSMLHOME}/bin
