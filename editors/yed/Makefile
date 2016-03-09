@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2015/07/03 09:56:55 abs Exp $
+# $NetBSD: Makefile,v 1.2 2016/03/09 20:43:38 tnn Exp $
 
-DISTNAME=	yEd-3.14.2
+DISTNAME=	yEd-3.15
 PKGNAME=	${DISTNAME:C:E:e:}
 CATEGORIES=	editors
 MASTER_SITES=	http://www.yworks.com/products/yed/demo/
