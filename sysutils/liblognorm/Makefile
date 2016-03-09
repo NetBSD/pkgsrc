@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2015/10/12 10:06:26 fhajny Exp $
+# $NetBSD: Makefile,v 1.5 2016/03/09 20:45:44 fhajny Exp $
 
-DISTNAME=	liblognorm-1.1.2
+DISTNAME=	liblognorm-1.1.3
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.liblognorm.com/files/download/
 
@@ -17,6 +17,6 @@ PKGCONFIG_OVERRIDE+=	lognorm.pc.in
 
 CONFIGURE_ARGS+=	--disable-docs
 
-.include "../../textproc/json-c/buildlink3.mk"
+.include "../../textproc/libfastjson/buildlink3.mk"
 .include "../../devel/libestr/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
