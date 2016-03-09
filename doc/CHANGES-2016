@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1085 2016/03/09 12:28:49 wen Exp $
+$NetBSD: CHANGES-2016,v 1.1086 2016/03/09 12:51:33 imil Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1465,3 +1465,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-Mojolicious to 6.55 [wen 2016-03-09]
 	Updated filesystems/p5-Path-Tiny to 0.084 [wen 2016-03-09]
 	Updated textproc/p5-XML-XPath to 1.34 [wen 2016-03-09]
+	Updated sysutils/facette to 0.4.0devnb5 [imil 2016-03-09]
