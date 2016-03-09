@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2016/03/09 08:06:45 tnn Exp $
+# $NetBSD: Makefile,v 1.19 2016/03/09 08:25:13 tnn Exp $
 #
 
 DISTNAME=		libmatheval-1.1.8
@@ -13,6 +13,7 @@ COMMENT=		Library for evaluating mathematical expressions
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
+USE_TOOLS+=		flex
 PTHREAD_OPTS+=		require
 INFO_FILES=		yes
 PKGCONFIG_OVERRIDE=	libmatheval.pc.in
