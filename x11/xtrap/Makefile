@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/07/02 12:38:33 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2016/03/09 06:54:58 tnn Exp $
 #
 
 DISTNAME=	xtrap-1.0.2
@@ -13,6 +13,8 @@ COMMENT=	XTrap sample clients
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
+
+CONFIGURE_ENV+=	APP_MAN_SUFFIX=1
 
 .include "../../x11/trapproto/buildlink3.mk"
 .include "../../x11/libXTrap/buildlink3.mk"
