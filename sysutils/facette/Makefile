@@ -1,22 +1,25 @@
-# $NetBSD: Makefile,v 1.4 2016/03/09 12:09:29 imil Exp $
+# $NetBSD: Makefile,v 1.5 2016/03/09 12:50:29 imil Exp $
 
 DISTNAME=	facette-0.4.0dev
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=facette/}
-GITHUB_PROJECT=	facette
-GITHUB_TAG=	d77e77680d52d232305d0f12af6e3e1c857903cb
 
 MAINTAINER=	imil@NetBSD.org
 HOMEPAGE=	https://facette.io/
 COMMENT=	Time series data visualization and graphing
 LICENSE=	modified-bsd
 
+GITHUB_PROJECT=	facette
+GITHUB_TAG=	d77e77680d52d232305d0f12af6e3e1c857903cb
+
 EXTRACT_USING=	bsdtar
 
 USE_TOOLS+=	bsdtar gmake gsed pax pkg-config
 BUILD_DEPENDS+=	go-[0-9]*:../../lang/go
 BUILD_DEPENDS+=	nodejs-[0-9]*:../../lang/nodejs
+
+BUILD_DEFS+=		VARBASE
 
 SUBST_CLASSES+=		prefix
 SUBST_MESSAGE.prefix=	Fixing prefix.
@@ -40,6 +43,8 @@ SUBST_MESSAGE.rrd=	Fixing collectd rrd path.
 SUBST_STAGE.rrd=	pre-build
 SUBST_FILES.rrd=	docs/examples/providers/collectd.json
 SUBST_SED.rrd=		-e 's,/var/lib,${VARBASE}/db,g'
+
+.include "../../mk/bsd.prefs.mk"
 
 FACETTE_USER?=		facette
 FACETTE_GROUP?=		facette
@@ -85,7 +90,7 @@ CONF_FILES+=		${EGDIR}/providers/collectd.json	\
 CGO_LDFLAGS=		-L${PREFIX}/lib ${COMPILER_RPATH_FLAG},${PREFIX}/lib
 
 do-build:
-	cd ${WRKSRC} && CGO_LDFLAGS="${CGO_LDFLAGS}" ${GMAKE} build
+	cd ${WRKSRC} && CGO_LDFLAGS=${CGO_LDFLAGS:Q} ${GMAKE} build
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/build/*/bin/facette	\
