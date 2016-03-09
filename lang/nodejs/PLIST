@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2016/02/23 11:23:32 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.32 2016/03/09 20:13:23 fhajny Exp $
 bin/node
 bin/npm
 include/node/android-ifaddrs.h
@@ -463,13 +463,6 @@ lib/node_modules/npm/node_modules/cmd-shim/.travis.yml
 lib/node_modules/npm/node_modules/cmd-shim/LICENSE
 lib/node_modules/npm/node_modules/cmd-shim/README.md
 lib/node_modules/npm/node_modules/cmd-shim/index.js
-lib/node_modules/npm/node_modules/cmd-shim/node_modules/graceful-fs/.npmignore
-lib/node_modules/npm/node_modules/cmd-shim/node_modules/graceful-fs/LICENSE
-lib/node_modules/npm/node_modules/cmd-shim/node_modules/graceful-fs/README.md
-lib/node_modules/npm/node_modules/cmd-shim/node_modules/graceful-fs/fs.js
-lib/node_modules/npm/node_modules/cmd-shim/node_modules/graceful-fs/graceful-fs.js
-lib/node_modules/npm/node_modules/cmd-shim/node_modules/graceful-fs/package.json
-lib/node_modules/npm/node_modules/cmd-shim/node_modules/graceful-fs/polyfills.js
 lib/node_modules/npm/node_modules/cmd-shim/package.json
 lib/node_modules/npm/node_modules/columnify/LICENSE
 lib/node_modules/npm/node_modules/columnify/Makefile
@@ -750,6 +743,10 @@ lib/node_modules/npm/node_modules/lodash.clonedeep/node_modules/lodash._basefor/
 lib/node_modules/npm/node_modules/lodash.clonedeep/node_modules/lodash._basefor/README.md
 lib/node_modules/npm/node_modules/lodash.clonedeep/node_modules/lodash._basefor/index.js
 lib/node_modules/npm/node_modules/lodash.clonedeep/node_modules/lodash._basefor/package.json
+lib/node_modules/npm/node_modules/lodash.clonedeep/node_modules/lodash._root/LICENSE
+lib/node_modules/npm/node_modules/lodash.clonedeep/node_modules/lodash._root/README.md
+lib/node_modules/npm/node_modules/lodash.clonedeep/node_modules/lodash._root/index.js
+lib/node_modules/npm/node_modules/lodash.clonedeep/node_modules/lodash._root/package.json
 lib/node_modules/npm/node_modules/lodash.clonedeep/node_modules/lodash._stack/LICENSE
 lib/node_modules/npm/node_modules/lodash.clonedeep/node_modules/lodash._stack/README.md
 lib/node_modules/npm/node_modules/lodash.clonedeep/node_modules/lodash._stack/index.js
@@ -794,6 +791,10 @@ lib/node_modules/npm/node_modules/lodash.union/node_modules/lodash._cachehas/LIC
 lib/node_modules/npm/node_modules/lodash.union/node_modules/lodash._cachehas/README.md
 lib/node_modules/npm/node_modules/lodash.union/node_modules/lodash._cachehas/index.js
 lib/node_modules/npm/node_modules/lodash.union/node_modules/lodash._cachehas/package.json
+lib/node_modules/npm/node_modules/lodash.union/node_modules/lodash._root/LICENSE
+lib/node_modules/npm/node_modules/lodash.union/node_modules/lodash._root/README.md
+lib/node_modules/npm/node_modules/lodash.union/node_modules/lodash._root/index.js
+lib/node_modules/npm/node_modules/lodash.union/node_modules/lodash._root/package.json
 lib/node_modules/npm/node_modules/lodash.union/node_modules/lodash._setcache/LICENSE
 lib/node_modules/npm/node_modules/lodash.union/node_modules/lodash._setcache/README.md
 lib/node_modules/npm/node_modules/lodash.union/node_modules/lodash._setcache/index.js
@@ -822,6 +823,10 @@ lib/node_modules/npm/node_modules/lodash.uniq/node_modules/lodash._cachehas/LICE
 lib/node_modules/npm/node_modules/lodash.uniq/node_modules/lodash._cachehas/README.md
 lib/node_modules/npm/node_modules/lodash.uniq/node_modules/lodash._cachehas/index.js
 lib/node_modules/npm/node_modules/lodash.uniq/node_modules/lodash._cachehas/package.json
+lib/node_modules/npm/node_modules/lodash.uniq/node_modules/lodash._root/LICENSE
+lib/node_modules/npm/node_modules/lodash.uniq/node_modules/lodash._root/README.md
+lib/node_modules/npm/node_modules/lodash.uniq/node_modules/lodash._root/index.js
+lib/node_modules/npm/node_modules/lodash.uniq/node_modules/lodash._root/package.json
 lib/node_modules/npm/node_modules/lodash.uniq/node_modules/lodash._setcache/LICENSE
 lib/node_modules/npm/node_modules/lodash.uniq/node_modules/lodash._setcache/README.md
 lib/node_modules/npm/node_modules/lodash.uniq/node_modules/lodash._setcache/index.js
@@ -1648,6 +1653,16 @@ lib/node_modules/npm/node_modules/npm-registry-client/node_modules/concat-stream
 lib/node_modules/npm/node_modules/npm-registry-client/node_modules/concat-stream/node_modules/typedarray/readme.markdown
 lib/node_modules/npm/node_modules/npm-registry-client/node_modules/concat-stream/package.json
 lib/node_modules/npm/node_modules/npm-registry-client/node_modules/concat-stream/readme.md
+lib/node_modules/npm/node_modules/npm-registry-client/node_modules/retry/.npmignore
+lib/node_modules/npm/node_modules/npm-registry-client/node_modules/retry/License
+lib/node_modules/npm/node_modules/npm-registry-client/node_modules/retry/Makefile
+lib/node_modules/npm/node_modules/npm-registry-client/node_modules/retry/README.md
+lib/node_modules/npm/node_modules/npm-registry-client/node_modules/retry/equation.gif
+lib/node_modules/npm/node_modules/npm-registry-client/node_modules/retry/example/dns.js
+lib/node_modules/npm/node_modules/npm-registry-client/node_modules/retry/index.js
+lib/node_modules/npm/node_modules/npm-registry-client/node_modules/retry/lib/retry.js
+lib/node_modules/npm/node_modules/npm-registry-client/node_modules/retry/lib/retry_operation.js
+lib/node_modules/npm/node_modules/npm-registry-client/node_modules/retry/package.json
 lib/node_modules/npm/node_modules/npm-registry-client/package.json
 lib/node_modules/npm/node_modules/npm-user-validate/.npmignore
 lib/node_modules/npm/node_modules/npm-user-validate/.travis.yml
@@ -1678,6 +1693,7 @@ lib/node_modules/npm/node_modules/npmlog/node_modules/are-we-there-yet/README.md
 lib/node_modules/npm/node_modules/npmlog/node_modules/are-we-there-yet/index.js
 lib/node_modules/npm/node_modules/npmlog/node_modules/are-we-there-yet/node_modules/delegates/.npmignore
 lib/node_modules/npm/node_modules/npmlog/node_modules/are-we-there-yet/node_modules/delegates/History.md
+lib/node_modules/npm/node_modules/npmlog/node_modules/are-we-there-yet/node_modules/delegates/License
 lib/node_modules/npm/node_modules/npmlog/node_modules/are-we-there-yet/node_modules/delegates/Makefile
 lib/node_modules/npm/node_modules/npmlog/node_modules/are-we-there-yet/node_modules/delegates/Readme.md
 lib/node_modules/npm/node_modules/npmlog/node_modules/are-we-there-yet/node_modules/delegates/index.js
@@ -1886,6 +1902,20 @@ lib/node_modules/npm/node_modules/request/node_modules/aws-sign2/LICENSE
 lib/node_modules/npm/node_modules/request/node_modules/aws-sign2/README.md
 lib/node_modules/npm/node_modules/request/node_modules/aws-sign2/index.js
 lib/node_modules/npm/node_modules/request/node_modules/aws-sign2/package.json
+lib/node_modules/npm/node_modules/request/node_modules/aws4/.npmignore
+lib/node_modules/npm/node_modules/request/node_modules/aws4/.travis.yml
+lib/node_modules/npm/node_modules/request/node_modules/aws4/LICENSE
+lib/node_modules/npm/node_modules/request/node_modules/aws4/README.md
+lib/node_modules/npm/node_modules/request/node_modules/aws4/aws4.js
+lib/node_modules/npm/node_modules/request/node_modules/aws4/example.js
+lib/node_modules/npm/node_modules/request/node_modules/aws4/node_modules/lru-cache/.npmignore
+lib/node_modules/npm/node_modules/request/node_modules/aws4/node_modules/lru-cache/.travis.yml
+lib/node_modules/npm/node_modules/request/node_modules/aws4/node_modules/lru-cache/CONTRIBUTORS
+lib/node_modules/npm/node_modules/request/node_modules/aws4/node_modules/lru-cache/LICENSE
+lib/node_modules/npm/node_modules/request/node_modules/aws4/node_modules/lru-cache/README.md
+lib/node_modules/npm/node_modules/request/node_modules/aws4/node_modules/lru-cache/lib/lru-cache.js
+lib/node_modules/npm/node_modules/request/node_modules/aws4/node_modules/lru-cache/package.json
+lib/node_modules/npm/node_modules/request/node_modules/aws4/package.json
 lib/node_modules/npm/node_modules/request/node_modules/bl/.jshintrc
 lib/node_modules/npm/node_modules/request/node_modules/bl/.npmignore
 lib/node_modules/npm/node_modules/request/node_modules/bl/.travis.yml
@@ -2098,6 +2128,8 @@ lib/node_modules/npm/node_modules/request/node_modules/http-signature/lib/parser
 lib/node_modules/npm/node_modules/request/node_modules/http-signature/lib/signer.js
 lib/node_modules/npm/node_modules/request/node_modules/http-signature/lib/utils.js
 lib/node_modules/npm/node_modules/request/node_modules/http-signature/lib/verify.js
+lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modules/assert-plus/AUTHORS
+lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modules/assert-plus/CHANGES.md
 lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modules/assert-plus/README.md
 lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modules/assert-plus/assert.js
 lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modules/assert-plus/package.json
@@ -2204,11 +2236,6 @@ lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modul
 lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/asn1/package.json
 lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/asn1/tst/ber/reader.test.js
 lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/asn1/tst/ber/writer.test.js
-lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/assert-plus/AUTHORS
-lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/assert-plus/CHANGES.md
-lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/assert-plus/README.md
-lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/assert-plus/assert.js
-lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/assert-plus/package.json
 lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/dashdash/README.md
 lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/dashdash/etc/dashdash.bash_completion.in
 lib/node_modules/npm/node_modules/request/node_modules/http-signature/node_modules/sshpk/node_modules/dashdash/lib/dashdash.js
@@ -2481,6 +2508,7 @@ lib/node_modules/npm/node_modules/validate-npm-package-name/node_modules/builtin
 lib/node_modules/npm/node_modules/validate-npm-package-name/node_modules/builtins/builtins.json
 lib/node_modules/npm/node_modules/validate-npm-package-name/node_modules/builtins/package.json
 lib/node_modules/npm/node_modules/validate-npm-package-name/package.json
+lib/node_modules/npm/node_modules/which/.npmignore
 lib/node_modules/npm/node_modules/which/.travis.yml
 lib/node_modules/npm/node_modules/which/LICENSE
 lib/node_modules/npm/node_modules/which/README.md
@@ -2493,6 +2521,13 @@ lib/node_modules/npm/node_modules/which/node_modules/is-absolute/node_modules/is
 lib/node_modules/npm/node_modules/which/node_modules/is-absolute/node_modules/is-relative/index.js
 lib/node_modules/npm/node_modules/which/node_modules/is-absolute/node_modules/is-relative/package.json
 lib/node_modules/npm/node_modules/which/node_modules/is-absolute/package.json
+lib/node_modules/npm/node_modules/which/node_modules/isexe/.npmignore
+lib/node_modules/npm/node_modules/which/node_modules/isexe/README.md
+lib/node_modules/npm/node_modules/which/node_modules/isexe/access.js
+lib/node_modules/npm/node_modules/which/node_modules/isexe/index.js
+lib/node_modules/npm/node_modules/which/node_modules/isexe/mode.js
+lib/node_modules/npm/node_modules/which/node_modules/isexe/package.json
+lib/node_modules/npm/node_modules/which/node_modules/isexe/windows.js
 lib/node_modules/npm/node_modules/which/package.json
 lib/node_modules/npm/node_modules/which/which.js
 lib/node_modules/npm/node_modules/wrappy/LICENSE
