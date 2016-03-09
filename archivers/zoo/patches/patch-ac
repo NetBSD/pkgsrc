@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.6 2009/04/25 23:46:47 gdt Exp $
+$NetBSD: patch-ac,v 1.7 2016/03/09 21:20:51 tnn Exp $
 
---- makefile.orig	1991-07-16 17:52:08.000000000 +0200
+--- makefile.orig	1991-07-16 15:52:08.000000000 +0000
 +++ makefile
 @@ -18,13 +18,12 @@
  
@@ -19,7 +19,7 @@ $NetBSD: patch-ac,v 1.6 2009/04/25 23:46:47 gdt Exp $
  
  #List of all object files created for Zoo
  ZOOOBJS = addbfcrc.o addfname.o basename.o comment.o crcdefs.o \
-@@ -67,7 +67,7 @@ help :
+@@ -67,7 +66,7 @@ help :
  	@echo "lint_turboc:  Run lint under **IX for checking Turbo C/MSDOS code"
  
  # install alpha zoo as "tzoo"
@@ -28,7 +28,7 @@ $NetBSD: patch-ac,v 1.6 2009/04/25 23:46:47 gdt Exp $
  	mv zoo $(DESTDIR)/tzoo
  
  # install beta zoo as "bzoo"
-@@ -75,8 +75,9 @@ inst_beta:
+@@ -75,8 +74,9 @@ inst_beta:
  	mv zoo $(DESTDIR)/bzoo
  
  # install production zoo as "zoo"
@@ -40,12 +40,3 @@ $NetBSD: patch-ac,v 1.6 2009/04/25 23:46:47 gdt Exp $
  
  # executable targets
  TARGETS = zoo fiz
-@@ -235,7 +236,7 @@ parse.o: /usr/include/stdio.h assert.h o
- parse.o: zoofns.h zooio.h
- portable.o: /usr/include/stdio.h assert.h debug.h machine.h options.h
- portable.o: portable.h various.h zoo.h zoofns.h zooio.h
--prterror.o: /usr/include/stdio.h /usr/include/varargs.h options.h various.h
-+prterror.o: /usr/include/stdio.h options.h various.h
- prterror.o: zoofns.h zooio.h
- sysv.o: /usr/include/sys/stat.h /usr/include/sys/types.h /usr/include/time.h
- sysv.o: nixmode.i nixtime.i
