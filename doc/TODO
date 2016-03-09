@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15570 2016/03/08 20:01:43 bsiegert Exp $
+$NetBSD: TODO,v 1.15571 2016/03/09 05:24:56 pettai Exp $
 
 Suggested new packages
 ======================
@@ -1972,7 +1972,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o udunits-2.1.17 [pkg/43529, breaks ncview-1.x, also need to update it to 2.x]
 	o ufoai-2.3.1
 	o uhttpmock-0.5.0
-	o unbound-1.5.8
 	o unicap-0.9.8
 	o unicode-screensaver-0.5
 	o units-2.12
