@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 01:56:36 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/03/09 17:41:06 asau Exp $
 
-SHA1 (squirrelsql-3.6-standard.zip) = e31399dd5c06feeb9961f9e59ed9644f69690404
-RMD160 (squirrelsql-3.6-standard.zip) = 1ef3de33c508ef512325f4a9c26086e776f4351d
-SHA512 (squirrelsql-3.6-standard.zip) = d16bb2ec69dd206f690af8f4e4fc7310b045d619702214e84eec402573241da68c75e7e49a28c0f3e09f20b6d5509a63da5749a64ecd5e2eefa390230f11e840
-Size (squirrelsql-3.6-standard.zip) = 47534886 bytes
+SHA1 (squirrelsql-3.7-standard.zip) = f5029b4f5e38f79ee486a3dbee29a3a0a39367ba
+RMD160 (squirrelsql-3.7-standard.zip) = 68314d4f5a69101b5f0fb7ea2cb63c231c7a8804
+SHA512 (squirrelsql-3.7-standard.zip) = d035ce27a497cab0658660e61a41257d5a62d71640865bdfbbdfe1d497ffb1b7d38a09028ac8f32614e0c2f08fb4fca81863dd4bea3670070a575bc9b0637c45
+Size (squirrelsql-3.7-standard.zip) = 45556424 bytes
 SHA1 (patch-squirrel-sql.sh) = 6770fd0d24ab552e9c49e3808b7f065c1407604c
