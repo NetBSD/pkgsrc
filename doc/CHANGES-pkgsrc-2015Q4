@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q4,v 1.1.2.23 2016/03/08 19:00:23 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q4,v 1.1.2.24 2016/03/09 20:33:26 bsiegert Exp $
 
 Changes to the packages collection and infrastructure on the 2015Q4 branch:
 
@@ -121,6 +121,9 @@ pkgtools/pkglint: bugfix
 Pullup ticket #4922 - requested by he
 www/curl: security update
 
+Pullup ticket #4924 - requested by taca
+www/squid3: security fix
+
 Pullup ticket #4926 - requested by bsiegert
 sysutils/salt: security fix
 
@@ -168,4 +171,7 @@ lang/php56: security fix
 
 Pullup ticket #4947 - requested by taca
 www/ruby-actionpack32: security fix
+
+Pullup ticket #4946 - requested by taca
+lang/php70: security fix
 
