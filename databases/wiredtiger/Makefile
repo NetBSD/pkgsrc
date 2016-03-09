@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/02/26 15:52:08 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2016/03/09 10:22:06 fhajny Exp $
 
 DISTNAME=	wiredtiger-2.7.0
 CATEGORIES=	databases
@@ -15,6 +15,9 @@ USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
 .include "options.mk"
+
+# WiredTiger only supports x86_64 platforms
+ONLY_FOR_PLATFORM=	*-*-x86_64
 
 PKGCONFIG_OVERRIDE+=	build_posix/wiredtiger.pc.in
 
