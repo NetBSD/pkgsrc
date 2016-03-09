@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.98 2016/02/26 10:24:12 jperkin Exp $
+# $NetBSD: Makefile,v 1.99 2016/03/09 10:34:53 prlw1 Exp $
 
-DISTNAME=	dbus-1.10.6
+DISTNAME=	dbus-1.10.8
 CATEGORIES=	sysutils
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus/
 
@@ -20,7 +20,7 @@ USE_LIBTOOL=		YES
 
 PKGCONFIG_OVERRIDE=	dbus-1.pc.in
 
-BUILD_DEFS+=		VARBASE
+BUILD_DEFS+=		VARBASE PKG_SYSCONFBASE
 
 OWN_DIRS_PERMS+=	${VARBASE}/db/dbus ${DBUS_USER} ${DBUS_GROUP} 0755
 SPECIAL_PERMS+=		libexec/dbus-daemon-launch-helper ${REAL_ROOT_USER} ${DBUS_GROUP} 4511
@@ -33,8 +33,6 @@ MESSAGE_SRC+=	MESSAGE
 .include "../../mk/bsd.prefs.mk"
 
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
-
-CONFIGURE_ARGS_GROUPS=	enable disable with without
 
 # Prevent the configure script from picking up a per-user tmp
 # directory. See the commit message on revision 1.35
@@ -69,7 +67,7 @@ CONFIGURE_ARGS+=	--disable-selinux
 
 PLIST_VARS+=    	linux launchd
 
-DBUS_CONF_DIR+=		${PKG_SYSCONFBASE}/dbus-1
+DBUS_CONF_DIR=		${PKG_SYSCONFBASE}/dbus-1
 OWN_DIRS+=		${DBUS_CONF_DIR}/services
 OWN_DIRS+=		${DBUS_CONF_DIR}/system-services
 OWN_DIRS+=		${DBUS_CONF_DIR}/session.d
