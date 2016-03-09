@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1092 2016/03/09 18:10:28 asau Exp $
+$NetBSD: CHANGES-2016,v 1.1093 2016/03/09 20:13:36 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1472,3 +1472,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated print/qpdfview to 0.4.16 [nros 2016-03-09]
 	Updated chat/libotr to 4.1.1 [gdt 2016-03-09]
 	Updated databases/squirrelsql to 3.7 [asau 2016-03-09]
+	Updated lang/nodejs to 5.8.0 [fhajny 2016-03-09]
