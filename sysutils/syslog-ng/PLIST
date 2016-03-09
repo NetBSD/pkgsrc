@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2015/11/06 16:05:00 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.8 2016/03/09 10:49:00 tnn Exp $
 bin/loggen
 bin/pdbtool
 bin/syslog2ng
@@ -176,6 +176,7 @@ lib/syslog-ng/libgraphite.la
 lib/syslog-ng/libkvformat.la
 lib/syslog-ng/liblinux-kmsg-format.la
 lib/syslog-ng/libpseudofile.la
+${PLIST.systemd}lib/syslog-ng/libsdjournal.la
 lib/syslog-ng/libsyslogformat.la
 lib/syslog-ng/libsystem-source.la
 lib/syslog-ng/libtest/libsyslog-ng-test.a
