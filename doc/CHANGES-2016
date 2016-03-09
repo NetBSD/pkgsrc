@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1090 2016/03/09 17:48:50 nros Exp $
+$NetBSD: CHANGES-2016,v 1.1091 2016/03/09 18:04:38 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1470,3 +1470,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated math/ruby-narray to 0.6.1.2 [taca 2016-03-09]
 	Updated math/ruby-roo to 2.3.2 [taca 2016-03-09]
 	Updated print/qpdfview to 0.4.16 [nros 2016-03-09]
+	Updated chat/libotr to 4.1.1 [gdt 2016-03-09]
