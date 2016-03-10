@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1103 2016/03/10 00:51:08 taca Exp $
+$NetBSD: CHANGES-2016,v 1.1104 2016/03/10 10:30:04 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1483,3 +1483,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/qconf to 2.0 [nros 2016-03-09]
 	Updated net/bind910 to 9.10.3pl4 [taca 2016-03-10]
 	Updated net/bind99 to 9.9.8pl4 [taca 2016-03-10]
+	Updated databases/percona-toolkit to 2.2.17 [fhajny 2016-03-10]
