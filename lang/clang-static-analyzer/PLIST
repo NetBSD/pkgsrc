@@ -1,15 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1 2015/11/06 13:50:05 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/03/10 15:01:52 tnn Exp $
+bin/clang-check
 bin/scan-build
 bin/scan-view
 libexec/c++-analyzer
 libexec/ccc-analyzer
 man/man1/scan-build.1
-share/llvm/static-analyzer/Reporter.py
-share/llvm/static-analyzer/Resources/FileRadar.scpt
-share/llvm/static-analyzer/Resources/GetRadarVersion.scpt
-share/llvm/static-analyzer/Resources/bugcatcher.ico
-share/llvm/static-analyzer/ScanView.py
-share/llvm/static-analyzer/scan-view
-share/llvm/static-analyzer/scanview.css
-share/llvm/static-analyzer/sorttable.js
-share/llvm/static-analyzer/startfile.py
+share/scan-build/scanview.css
+share/scan-build/sorttable.js
+share/scan-view/FileRadar.scpt
+share/scan-view/GetRadarVersion.scpt
+share/scan-view/Reporter.py
+share/scan-view/ScanView.py
+share/scan-view/bugcatcher.ico
+share/scan-view/startfile.py
