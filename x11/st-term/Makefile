@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/02/02 16:31:43 leot Exp $
+# $NetBSD: Makefile,v 1.2 2016/03/10 12:58:25 leot Exp $
 
 DISTNAME=	st-0.6
 PKGNAME=	${DISTNAME:S/-/-term-/}
@@ -11,6 +11,8 @@ COMMENT=	Simple terminal implementation for X
 LICENSE=	mit
 
 MAKE_JOBS_SAFE=	no
+
+USE_TOOLS+=	pkg-config
 
 SUBST_CLASSES+=			configdefh configmk makefile
 SUBST_STAGE.configdefh=		pre-configure
