@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1109 2016/03/10 18:22:07 jperkin Exp $
+$NetBSD: CHANGES-2016,v 1.1110 2016/03/10 18:42:34 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1491,3 +1491,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/clang-static-analyzer to 3.8.0 [tnn 2016-03-10]
 	Updated devel/nspr to 4.12nb1 [jperkin 2016-03-10]
 	Updated security/mit-krb5 to 1.10.7nb9 [jperkin 2016-03-10]
+	Updated archivers/lzmalib to 0.0.1nb1 [jperkin 2016-03-10]
