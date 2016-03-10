@@ -1,4 +1,4 @@
-# $NetBSD: check-shlibs-elf.awk,v 1.12 2015/11/16 17:53:29 jperkin Exp $
+# $NetBSD: check-shlibs-elf.awk,v 1.13 2016/03/10 15:56:24 jperkin Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -135,6 +135,7 @@ function checkshlib(DSO, needed, rpath, found, dso_rpath, got_rpath, nrpath) {
 		}
 	}
 	for (lib in needed) {
+		found = 0
 		for (p = 1; p <= nrpath; p++) {
 			libfile = cross_destdir rpath[p] "/" lib
 			if (!(libfile in libcache)) {
