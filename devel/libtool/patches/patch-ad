@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.45 2014/05/10 15:32:08 joerg Exp $
+$NetBSD: patch-ad,v 1.46 2016/03/10 12:43:48 tnn Exp $
 
---- libltdl/configure.orig	2014-03-06 15:38:09.000000000 +0000
+--- libltdl/configure.orig	2016-03-10 10:28:17.599514319 +0000
 +++ libltdl/configure
 @@ -4548,7 +4548,7 @@ else
      lt_cv_sys_max_cmd_len=8192;
@@ -54,6 +54,15 @@ $NetBSD: patch-ad,v 1.45 2014/05/10 15:32:08 joerg Exp $
    *)
      lock_old_archive_extraction=no ;;
  esac
+@@ -5775,7 +5782,7 @@ osf*)
+   symcode='[BCDEGQRST]'
+   ;;
+ solaris*)
+-  symcode='[BDRT]'
++  symcode='[BCDRT]'
+   ;;
+ sco3.2v5*)
+   symcode='[DT]'
 @@ -7843,7 +7850,10 @@ for cc_temp in $compiler""; do
      *) break;;
    esac
