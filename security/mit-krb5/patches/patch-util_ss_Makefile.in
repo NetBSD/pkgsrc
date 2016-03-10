@@ -1,11 +1,14 @@
-$NetBSD: patch-util_ss_Makefile.in,v 1.1 2015/03/22 20:09:09 joerg Exp $
+$NetBSD: patch-util_ss_Makefile.in,v 1.2 2016/03/10 18:21:58 jperkin Exp $
 
---- util/ss/Makefile.in.orig	2015-03-22 17:50:02.000000000 +0000
+Only build a static library as this library is not installed.
+
+--- util/ss/Makefile.in.orig	2013-11-06 20:52:23.000000000 +0000
 +++ util/ss/Makefile.in
-@@ -14,6 +14,7 @@ LIBBASE=ss
+@@ -14,6 +14,8 @@ LIBBASE=ss
  LIBMAJOR=1
  LIBMINOR=0
  RELDIR=../util/ss
++LIBTOOL_TAIL=-static
 +SHLIB_RDIRS=${KRB5_LIBDIR}
  
  STOBJLISTS=OBJS.ST

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.54 2015/11/04 01:17:51 agc Exp $
+$NetBSD: distinfo,v 1.55 2016/03/10 18:21:58 jperkin Exp $
 
 SHA1 (2014-001-patch.txt) = 919402bf3b7c289e847e9adc03a7c30f26966769
 RMD160 (2014-001-patch.txt) = a39c8e12e79ab273d562b04c1e7811c414dd70e8
@@ -35,4 +35,4 @@ SHA1 (patch-kadmin_dbutil_dump.c) = 4b49c116dbed9e6be4a0bf0a731c3ae82808d82e
 SHA1 (patch-lib_apputils_net-server.c) = 4f54924cca60e75b1b835d35c5eeb96d9f95a90e
 SHA1 (patch-lib_krb5_asn.1_asn1buf.h) = a1e46ca9256aea4facc1d41841b1707b044a69e7
 SHA1 (patch-util_k5ev_verto-k5ev.c) = 79a2be64fa4f9b0dc3a333271e8a3ff7944e5c18
-SHA1 (patch-util_ss_Makefile.in) = 4ec8cd8640e0631b3c6738693b5318aadc9ef278
+SHA1 (patch-util_ss_Makefile.in) = bcdb657748c45f6bbb58086b7abbc5ad71e42e27
