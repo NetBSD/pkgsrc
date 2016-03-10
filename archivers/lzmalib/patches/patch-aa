@@ -1,9 +1,18 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/09/04 12:07:15 obache Exp $
+$NetBSD: patch-aa,v 1.2 2016/03/10 18:42:25 jperkin Exp $
 
 Link with c++ instead of cc -lstdc++ to depended package easy to link.
 
 --- Makefile.in.orig	2008-07-23 08:40:09.000000000 +0000
 +++ Makefile.in
+@@ -38,7 +38,7 @@ CXX = @CXX@
+ CPPFLAGS = @MYCPPFLAGS@
+ CFLAGS = @MYCFLAGS@
+ CXXFLAGS = @MYCXXFLAGS@
+-LDFLAGS = @MYLDFLAGS@
++LDFLAGS += @MYLDFLAGS@
+ LIBS = @LIBS@
+ LDENV = LD_RUN_PATH=$(LIBDIR):.
+ VPATH = @MYVPATH@
 @@ -125,7 +125,7 @@ liblzma.a : $(LIBOBJFILES)
  
  
