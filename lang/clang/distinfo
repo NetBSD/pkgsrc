@@ -1,25 +1,7 @@
-$NetBSD: distinfo,v 1.40 2016/03/07 16:27:47 jperkin Exp $
+$NetBSD: distinfo,v 1.41 2016/03/10 15:01:52 tnn Exp $
 
-SHA1 (cfe-3.7.1.src.tar.xz) = 15475a2c1e750a13755812785a4796cf4d9fa4c2
-RMD160 (cfe-3.7.1.src.tar.xz) = 185b0f75970bc50682766a21794440578db87b5d
-SHA512 (cfe-3.7.1.src.tar.xz) = 8e3285a32ad0fd4721fa77c4fb9709f31bb4e4f7cb5245357aaf57b0767b6ef18a30d902b59d1437a6febffb6c2128214f9ce5aa913bb298743221a28c4f9de5
-Size (cfe-3.7.1.src.tar.xz) = 9110616 bytes
-SHA1 (compiler-rt-3.7.1.src.tar.xz) = 8ad98fcc0bc801ba448c9bc43942fd3f545a6923
-RMD160 (compiler-rt-3.7.1.src.tar.xz) = d80d61d0352e4a88265999e081a745779ccc4897
-SHA512 (compiler-rt-3.7.1.src.tar.xz) = bf434519ea0838264c30de1e1e8681320aa868df0ecc825a45c659077b963a4120c18216946558cbf8aea24a8ac8ec39af2066dab906bc7cabc0894d51d61325
-Size (compiler-rt-3.7.1.src.tar.xz) = 1181772 bytes
-SHA1 (libcxx-3.7.1.src.tar.xz) = fcdb0e3e150f10d9a28a8e8eade818df379ce930
-RMD160 (libcxx-3.7.1.src.tar.xz) = b63d75f0547eb17e3f3f4df0875dfe1d0c32525d
-SHA512 (libcxx-3.7.1.src.tar.xz) = 08d2399a8b36aa15290733256c896c9fa43f1a1223bc5c73bbcd014fddf8880e514d2a6dcc456bcf18b537c01fb6911b092e6d9958bccd8e64e9f375ed7a1ab9
-Size (libcxx-3.7.1.src.tar.xz) = 995724 bytes
-SHA1 (llvm-3.7.1.src.tar.xz) = 5dbdcafac105273dcbff94c68837a66c6dd78cef
-RMD160 (llvm-3.7.1.src.tar.xz) = 677e652107e53ec1edeccaf479eff186a9f4c7d6
-SHA512 (llvm-3.7.1.src.tar.xz) = ac521debc02f6deba96ef975d6a546b0c5c77299c1dbf5e1b87a7974ff5e7fd715bd7e384b92d9adf572ce47130bdbf6d3c648eb0d7f72f16f976292e4909e90
-Size (llvm-3.7.1.src.tar.xz) = 14592544 bytes
-SHA1 (patch-ab) = c5e3acb30f824e35fbe60efa72bcaa8303d84450
-SHA1 (patch-ac) = 4f947ac8d81b739ad10e541cef6451ffb039c26f
-SHA1 (patch-ad) = 143c01e05aad86ebee7ba55ce69bf46a491bd7cf
-SHA1 (patch-configure) = 5c9974c9077084fdf1dcbe0973280df824f5d0e1
-SHA1 (patch-include_llvm_Support_Host.h) = 545f9542cd2aaa6cea58d3653902b4e1a9e7189a
-SHA1 (patch-tools_clang_tools_scan-build_scan-build) = a671f1e513fb43ddc0e73751a78235ab39aeaf9d
-SHA1 (patch-tools_llvm-shlib_Makefile) = dbd159e13d1096a2543bc5832f775808e19c4a18
+SHA1 (cfe-3.8.0.src.tar.xz) = 2230ef962f2df3c13ec93f5b04b0e3cdff94b2ce
+RMD160 (cfe-3.8.0.src.tar.xz) = 7c6763d277aaca7b0e35f0887c1eb5ad4cdb05af
+SHA512 (cfe-3.8.0.src.tar.xz) = fef431d63f95a394d53e3857fb6a6bde7a7b27f40ef5111b4353bcb63ac26febec8a9eb84780187c49699ab099834f13f996f085d02c365676b3fa5bbcc03dcd
+Size (cfe-3.8.0.src.tar.xz) = 9627228 bytes
+SHA1 (patch-tools_clang-format_CMakeLists.txt) = a1052c71728467625a40234719580cb34688a568
