@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1107 2016/03/10 15:06:07 tnn Exp $
+$NetBSD: CHANGES-2016,v 1.1108 2016/03/10 18:16:00 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1489,3 +1489,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added lang/llvm version 3.8.0 [tnn 2016-03-10]
 	Updated lang/clang to 3.8.0 [tnn 2016-03-10]
 	Updated lang/clang-static-analyzer to 3.8.0 [tnn 2016-03-10]
+	Updated devel/nspr to 4.12nb1 [jperkin 2016-03-10]
