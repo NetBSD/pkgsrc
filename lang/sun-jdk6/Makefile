@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2015/05/05 16:20:08 abs Exp $
+# $NetBSD: Makefile,v 1.37 2016/03/10 19:20:15 jperkin Exp $
 
 DISTNAME=	jdk-6u45-${DIST_OS}-${DIST_ARCH}
 PKGNAME=	sun-jdk6-6.0.45
@@ -16,10 +16,6 @@ JAVA_WRAPPERS=	appletviewer apt extcheck idlj jar jarsigner \
 MAKE_JOBS_SAFE=	no
 
 .include "../../lang/sun-jre6/Makefile.common"
-
-.if !empty(MACHINE_PLATFORM:MLinux-*-x86_64)
-CHECK_SHLIBS_SUPPORTED=	no
-.endif
 
 # The 64-bit Solaris downloads for some inexplicable reason only contain
 # the additional 64-bit files, and you need the main 32-bit file too.

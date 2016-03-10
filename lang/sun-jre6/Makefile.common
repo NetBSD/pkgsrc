@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2013/03/01 09:54:12 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.21 2016/03/10 19:20:15 jperkin Exp $
 # used by lang/sun-jre6/Makefile
 # used by lang/sun-jdk6/Makefile
 
@@ -81,6 +81,8 @@ FETCH_MESSAGE+=	""
 FETCH_MESSAGE+=	" Click Download for '${DOWNLOAD_NAME}', read and accept the"
 FETCH_MESSAGE+=	" license, then choose 'Linux self-extracting file'."
 .endif
+
+CHECK_SHLIBS_SUPPORTED=	no
 
 post-fetch:
 	@if ${TEST} ! -x ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}; then	\
