@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.11 2015/11/04 01:17:52 agc Exp $
+$NetBSD: distinfo,v 1.12 2016/03/10 12:57:09 tnn Exp $
 
 SHA1 (openpam-20140912.tar.gz) = 45b335d2cb3a4edcc66046ae56d689113e59a67a
 RMD160 (openpam-20140912.tar.gz) = 547cb3cf81d5b4526ddf2a702b83d5303430f764
 SHA512 (openpam-20140912.tar.gz) = c6cfbd669fe1b67af43a33c33bf2587e1512c27f1b96b9b38df37b81ecc4999d85e04b361b19a7265dbf271ebd3de3bd55342ee4fdbee9c68836b69714706423
 Size (openpam-20140912.tar.gz) = 457600 bytes
+SHA1 (patch-lib_libpam_openpam__configure.c) = 5f4271121d03eb6b9ea7e3e1b85f9b27c9f4eaae
 SHA1 (patch-lib_libpam_openpam__constants.c) = 7dd63e288408939a73057b3e4d90382983c1d559
+SHA1 (patch-lib_libpam_openpam__dynamic.c) = 0bed21f16b74dbdb312ce4f09c17055a0891bdd5
 SHA1 (patch-lib_libpam_openpam__readword.c) = 75875dc75f76c6caa267ce7c6c905e0ac2790ad1
