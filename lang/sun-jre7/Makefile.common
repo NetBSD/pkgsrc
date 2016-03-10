@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2014/11/15 21:01:26 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.10 2016/03/10 16:04:13 jperkin Exp $
 # used by lang/sun-jre7/Makefile
 # used by lang/sun-jdk7/Makefile
 
@@ -78,6 +78,8 @@ FETCH_MESSAGE+=	"	or ${ARCHIVE}"
 FETCH_MESSAGE+=	""
 FETCH_MESSAGE+=	" Click Download for '${DOWNLOAD_NAME}', read and accept the"
 FETCH_MESSAGE+=	" license, then choose '${EMUL_OPSYS} tar.gz file'."
+
+CHECK_SHLIBS_SUPPORTED=	no
 
 do-install:
 	${INSTALL_PROGRAM_DIR} ${DESTDIR}${JAVA_HOME}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2015/05/05 16:20:08 abs Exp $
+# $NetBSD: Makefile,v 1.17 2016/03/10 16:04:13 jperkin Exp $
 
 # Note: This must be kept in sync with the sun-jre7 package
 # Note: make sure you include sums for both the x86_64 and the x86_32
@@ -22,10 +22,6 @@ JAVA_WRAPPERS=	appletviewer apt extcheck idlj jar jarsigner \
 MAKE_JOBS_SAFE=	no
 
 .include "../../lang/sun-jre7/Makefile.common"
-
-.if !empty(MACHINE_PLATFORM:MLinux-*-x86_64)
-CHECK_SHLIBS_SUPPORTED=	no
-.endif
 
 # The 64-bit Solaris downloads for some inexplicable reason only contain
 # the additional 64-bit files, and you need the main 32-bit file too.
