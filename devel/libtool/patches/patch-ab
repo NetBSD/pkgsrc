@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.84 2014/09/10 10:44:58 richard Exp $
+$NetBSD: patch-ab,v 1.85 2016/03/10 12:43:48 tnn Exp $
 
---- configure.orig	2011-10-17 10:18:58.000000000 +0000
+--- configure.orig	2016-03-10 10:28:17.598171804 +0000
 +++ configure
 @@ -5335,7 +5335,7 @@ else
      lt_cv_sys_max_cmd_len=8192;
@@ -54,6 +54,15 @@ $NetBSD: patch-ab,v 1.84 2014/09/10 10:44:58 richard Exp $
    *)
      lock_old_archive_extraction=no ;;
  esac
+@@ -6562,7 +6569,7 @@ osf*)
+   symcode='[BCDEGQRST]'
+   ;;
+ solaris*)
+-  symcode='[BDRT]'
++  symcode='[BCDRT]'
+   ;;
+ sco3.2v5*)
+   symcode='[DT]'
 @@ -8493,7 +8500,10 @@ for cc_temp in $compiler""; do
      *) break;;
    esac
