@@ -1,4 +1,4 @@
-# $NetBSD: SCO_SV.mk,v 1.1 2014/03/14 22:05:18 ryoon Exp $
+# $NetBSD: SCO_SV.mk,v 1.2 2016/03/10 16:58:19 jperkin Exp $
 #
 # Variable definitions for the OpenServer 5.0.7/3.2 and 6.0.0/5.
 
@@ -43,13 +43,6 @@ _PATCH_BACKUP_ARG?= 	-b -V simple -z	# switch to patch(1) for backup suffix
 # will correctly convert it into the proper LD_RUN_PATH variable.
 #
 _USE_RPATH=		yes		# add rpath to LDFLAGS
-
-# flags passed to the linker to extract all symbols from static archives.
-# this is the standard OpenServer 5.0.7/3.2 linker, /usr/ccs/bin/ld.
-# The use of GNU ld is not currently supported.
-# XXX is this needed for OpenServer?
-_OPSYS_WHOLE_ARCHIVE_FLAG=
-_OPSYS_NO_WHOLE_ARCHIVE_FLAG=
 
 _STRIPFLAG_CC?=		${_INSTALL_UNSTRIPPED:D:U}	# cc(1) option to strip
 _STRIPFLAG_INSTALL?=	${_INSTALL_UNSTRIPPED:D:U}	# install(1) option to strip
