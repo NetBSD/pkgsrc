@@ -1,4 +1,4 @@
-$NetBSD: manual-libtool.m4,v 1.44 2014/09/10 10:44:58 richard Exp $
+$NetBSD: manual-libtool.m4,v 1.45 2016/03/10 12:43:48 tnn Exp $
 
 --- libltdl/m4/libtool.m4.orig	2011-10-17 10:17:05.000000000 +0000
 +++ libltdl/m4/libtool.m4
@@ -198,6 +198,15 @@ $NetBSD: manual-libtool.m4,v 1.44 2014/09/10 10:44:58 richard Exp $
    ;;
  
  openbsd*)
+@@ -3651,7 +3684,7 @@ osf*)
+   symcode='[[BCDEGQRST]]'
+   ;;
+ solaris*)
+-  symcode='[[BDRT]]'
++  symcode='[[BCDRT]]'
+   ;;
+ sco3.2v5*)
+   symcode='[[DT]]'
 @@ -3913,9 +3946,15 @@ m4_if([$1], [CXX], [
  	[_LT_TAGVAR(lt_prog_compiler_pic, $1)='-DDLL_EXPORT'])
        ;;
@@ -376,7 +385,7 @@ $NetBSD: manual-libtool.m4,v 1.44 2014/09/10 10:44:58 richard Exp $
    AC_PROG_CXXCPP
  else
    _lt_caught_CXX_error=yes
-@@ -6538,6 +6635,22 @@ if test "$_lt_caught_CXX_error" != yes;
+@@ -6538,6 +6635,22 @@ if test "$_lt_caught_CXX_error" != yes; 
          _LT_TAGVAR(ld_shlibs, $1)=no
  	;;
  
@@ -399,7 +408,7 @@ $NetBSD: manual-libtool.m4,v 1.44 2014/09/10 10:44:58 richard Exp $
        mvs*)
          case $cc_basename in
            cxx*)
-@@ -6552,15 +6665,13 @@ if test "$_lt_caught_CXX_error" != yes;
+@@ -6552,15 +6665,13 @@ if test "$_lt_caught_CXX_error" != yes; 
  	;;
  
        netbsd*)
@@ -422,7 +431,7 @@ $NetBSD: manual-libtool.m4,v 1.44 2014/09/10 10:44:58 richard Exp $
  	;;
  
        *nto* | *qnx*)
-@@ -6739,27 +6850,14 @@ if test "$_lt_caught_CXX_error" != yes;
+@@ -6739,27 +6850,14 @@ if test "$_lt_caught_CXX_error" != yes; 
  	    # GNU C++ compiler with Solaris linker
  	    if test "$GXX" = yes && test "$with_gnu_ld" = no; then
  	      _LT_TAGVAR(no_undefined_flag, $1)=' ${wl}-z ${wl}defs'
