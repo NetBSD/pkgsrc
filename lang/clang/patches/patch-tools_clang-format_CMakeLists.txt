@@ -1,0 +1,15 @@
+$NetBSD: patch-tools_clang-format_CMakeLists.txt,v 1.1 2016/03/10 15:01:52 tnn Exp $
+
+git-clang-format is a git integration for clang-format,
+written in python. It could be moved to a separate package
+to avoid a python runtime dependency here, but for now I just opted
+to move it to share/clang and skip the interpreter check.
+
+--- tools/clang-format/CMakeLists.txt.orig	2016-02-21 01:22:56.000000000 +0000
++++ tools/clang-format/CMakeLists.txt
+@@ -25,4 +25,4 @@ install(PROGRAMS clang-format-diff.py DE
+ install(PROGRAMS clang-format-sublime.py DESTINATION share/clang)
+ install(PROGRAMS clang-format.el DESTINATION share/clang)
+ install(PROGRAMS clang-format.py DESTINATION share/clang)
+-install(PROGRAMS git-clang-format DESTINATION bin)
++install(PROGRAMS git-clang-format DESTINATION share/clang)
