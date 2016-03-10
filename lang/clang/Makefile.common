@@ -1,112 +1,124 @@
-# $NetBSD: Makefile.common,v 1.12 2016/03/08 21:11:44 tnn Exp $
-#
+# $NetBSD: Makefile.common,v 1.13 2016/03/10 15:01:52 tnn Exp $
 # used by lang/clang/Makefile
 # used by lang/clang-static-analyzer/Makefile
 
-DISTNAME=	clang-3.7.1
-CATEGORIES=	lang
+DISTNAME=	cfe-3.8.0.src
+CATEGORIES=	lang devel
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
-DISTFILES=	llvm-${PKGVERSION_NOREV}.src.tar.xz \
-		libcxx-${PKGVERSION_NOREV}.src.tar.xz \
-		cfe-${PKGVERSION_NOREV}.src.tar.xz \
-		compiler-rt-${PKGVERSION_NOREV}.src.tar.xz
+EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	adam.hoka@gmail.com
-HOMEPAGE=	http://llvm.org/
-COMMENT=	Low Level Virtual Machine compiler infrastructure
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://clang.llvm.org/
+COMMENT=	C language family frontend for LLVM
 LICENSE=	modified-bsd
-
-WRKSRC=			${WRKDIR}/llvm-${PKGVERSION_NOREV}.src
-
-USE_LANGUAGES=		c c++
-USE_TOOLS+=		chown gmake groff gzip pod2html pod2man
-GCC_REQD+=		4.7 4.8
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--disable-assertions
-CONFIGURE_ARGS+=	--disable-bindings	# disable OCaml
-CONFIGURE_ARGS+=	--disable-timestamps
-CONFIGURE_ARGS+=	--enable-optimized
-
-# In-tree builds are not allowed
-OBJDIR=			../build
-CONFIGURE_DIRS=		${OBJDIR}
-CONFIGURE_SCRIPT=	../llvm-${PKGVERSION_NOREV}.src/configure
-
-CHECK_PORTABILITY_SKIP=	utils/buildit/build_llvm
-
-TEST_TARGET=		check unittests
 
 DISTINFO_FILE=		${.CURDIR}/../../lang/clang/distinfo
 PATCHDIR=		${.CURDIR}/../../lang/clang/patches
+CONFIGURE_DIRS=		${WRKDIR}/build
+CMAKE_ARG_PATH=		${WRKSRC}
 
-.include "../../mk/bsd.prefs.mk"
+USE_LANGUAGES=		c c++
+USE_CMAKE=		yes
+GCC_REQD+=		4.8
 
-.if ${_OPSYS_SHLIB_TYPE} == "dylib"
-PLIST_SUBST+=		SOEXT="dylib"
-.else
-PLIST_SUBST+=		SOEXT="so"
-.endif
+CMAKE_ARGS+=	-DLLVM_CONFIG=${LLVM_CONFIG_PATH}
+CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
+CMAKE_ARGS+=	-DCMAKE_C_COMPILER=gcc
+CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=g++
+# XXX can't disable static-analyzer without also disabling ARCMT
+CMAKE_ARGS+=	-DCLANG_ENABLE_ARCMT=OFF
+
+REPLACE_PERL+=		test/make_test_dirs.pl
+REPLACE_PERL+=		tools/scan-build/bin/scan-build
+REPLACE_PERL+=		tools/scan-build/libexec/c++-analyzer
+REPLACE_PERL+=		tools/scan-build/libexec/ccc-analyzer
+REPLACE_PERL+=		utils/TestUtils/pch-test.pl
+REPLACE_PERL+=		utils/analyzer/reducer.pl
+REPLACE_PERL+=		utils/analyzer/update_plist_test.pl
+REPLACE_PERL+=		www/demo/index.cgi
+
+REPLACE_PYTHON+=	bindings/python/examples/cindex/cindex-dump.py
+REPLACE_PYTHON+=	bindings/python/examples/cindex/cindex-includes.py
+REPLACE_PYTHON+=	docs/tools/dump_ast_matchers.py
+REPLACE_PYTHON+=	docs/tools/dump_format_style.py
+REPLACE_PYTHON+=	tools/clang-format/clang-format-diff.py
+REPLACE_PYTHON+=	tools/clang-format/git-clang-format
+REPLACE_PYTHON+=	tools/scan-build/bin/set-xcode-analyzer
+REPLACE_PYTHON+=	tools/scan-view/bin/scan-view
+REPLACE_PYTHON+=	utils/ABITest/ABITestGen.py
+REPLACE_PYTHON+=	utils/CIndex/completion_logger_server.py
+REPLACE_PYTHON+=	utils/CaptureCmd
+REPLACE_PYTHON+=	utils/CmpDriver
+REPLACE_PYTHON+=	utils/FindSpecRefs
+REPLACE_PYTHON+=	utils/FuzzTest
+REPLACE_PYTHON+=	utils/TestUtils/deep-stack.py
+REPLACE_PYTHON+=	utils/analyzer/CmpRuns.py
+REPLACE_PYTHON+=	utils/analyzer/SATestAdd.py
+REPLACE_PYTHON+=	utils/analyzer/SATestBuild.py
+REPLACE_PYTHON+=	utils/analyzer/SumTimerInfo.py
+REPLACE_PYTHON+=	utils/analyzer/ubiviz
+REPLACE_PYTHON+=	utils/check_cfc/check_cfc.py
+REPLACE_PYTHON+=	utils/check_cfc/obj_diff.py
+REPLACE_PYTHON+=	utils/check_cfc/test_check_cfc.py
+REPLACE_PYTHON+=	utils/token-delta.py
+REPLACE_PYTHON+=	www/builtins.py
 
 .include "../../mk/compiler.mk"
 
-.if ${OPSYS} == "SunOS" && !empty(PKGSRC_COMPILER:Mgcc)
-# This should probably be in hacks, but since clang hardcodes gcc paths
-# put this here so it can be removed when clang matures.
-# cxa_finalize.o is no longer necessary with libc.so >= ILLUMOS_0.5
-TEST_ILLUMOS_3849!=\
-	if /usr/bin/elfdump -v /lib/libc.so | \
-		${GREP} -q 'ILLUMOS_0.5' ; then ${ECHO} 1; \
-	else ${ECHO} 0; \
-	fi
-
-#doesn't seem to be needed anymore, but may be dependent on
-#a recent version of solaris (illumos) ld.
-#
-#CFLAGS.SunOS+=		-mimpure-text
-
-SUBST_CLASSES+=			fix-paths
-SUBST_STAGE.fix-paths=		pre-configure
-SUBST_MESSAGE.fix-paths=	Fixing absolute gcc paths for SunOS.
-SUBST_FILES.fix-paths=		tools/clang/lib/Driver/Tools.cpp
-.  if defined(_GCC_ARCHDIR)
-SUBST_SED.fix-paths=		-e 's,/usr/gcc/4.5/lib/gcc/,${_GCC_ARCHDIR}/,g'
-.  else
-LIBGCCDIR!=	${CC} -print-libgcc-file-name
-ARCHDIR:=	${LIBGCCDIR:H}
-SUBST_SED.fix-paths=		-e 's,/usr/gcc/4.5/lib/gcc/,${ARCHDIR}/,g'
-.  endif
-SUBST_SED.fix-paths+=		-e '/^.*i386.*getVendorName.*$$/{d;}'
-SUBST_SED.fix-paths+=		-e '/^.*GCCLibPath +=$$/d'
-SUBST_SED.fix-paths+=		-e 's,/4.5.2/amd64/,amd64/,g'
-SUBST_SED.fix-paths+=		-e 's,"as","gas",g'
-.  if exists(/usr/bin/ld)
-SUBST_SED.fix-paths+=		-e 's,getToolChain().GetProgramPath("ld"),"/usr/bin/ld",g'
-.  else
-SUBST_SED.fix-paths+=		-e 's,getToolChain().GetProgramPath("ld"),"/usr/ccs/bin/ld",g'
-.  endif
-.  if ${TEST_ILLUMOS_3849}
-SUBST_SED.fix-paths+=		-e 's,^.*cxa_finalize.*$$,		; //cxa_finalize.o,g'
-.  endif
+.if ${OPSYS} == "NetBSD" && !empty(PKGSRC_COMPILER:Mclang)
+# command to check if clang is using libc++ or libstdc++
+LIBCPP_CHECK_SH=	printf "\#include <ciso646>\n\#ifdef _LIBCPP_VERSION\nYES\n\#endif" | ${CLANGBASE}/bin/clang++ -x c++ -E - 2>&1 | grep YES || true
+.else
+LIBCPP_CHECK_SH=	echo NO
 .endif
 
 # patch NetBSD::GetCXXStdlibType
-.if ${OPSYS} == "NetBSD" && !empty(PKGSRC_COMPILER:Mgcc)
+.if ${OPSYS} == "NetBSD" && empty(LIBCPP_CHECK_SH:sh:MYES)
 SUBST_CLASSES+=			libcxx
 SUBST_STAGE.libcxx=		pre-configure
-SUBST_MESSAGE.libcxx=		Patching toolchain to use libstdc++ as we're using GCC
-SUBST_FILES.libcxx=		tools/clang/lib/Driver/ToolChains.cpp
-SUBST_SED.libcxx=		-e 's,Major >= 7 || (Major == 6 && Minor == 99 && Micro >= 49) || Major == 0,false,'
+SUBST_MESSAGE.libcxx=		Patching toolchain to use libstdc++ (matching the host compiler)
+SUBST_FILES.libcxx=		lib/Driver/ToolChains.cpp
+SUBST_FILES.libcxx+=		lib/Driver/Tools.cpp
+SUBST_SED.libcxx=		-e 's,(Major >= 7 || (Major == 6 && Minor == 99 && Micro >= 49) || Major == 0),(false),'
+
+CMAKE_ARGS+=			-DCLANG_DEFAULT_CXX_STDLIB:STRING="libstdc++"
+.endif
+
+# 3.8.0 -> 3.8
+LLVM_MAJOR=	${PKGVERSION_NOREV:C/^([0-9]+\.[0-9]+)\..*$/\1/}
+PLIST_SUBST+=	LLVM_MAJOR=${LLVM_MAJOR}
+
+PLIST_VARS+=	notdylib
+.if ${_OPSYS_SHLIB_TYPE} == "dylib"
+SOEXT=		dylib
+.else
+SOEXT=		so
+PLIST.notdylib=	yes
+.endif
+PLIST_SUBST+=	SOEXT=${SOEXT}
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.clang
+PKG_SUPPORTED_OPTIONS=	tests
+
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mtests)
+CMAKE_ARGS+=		-DLLVM_INCLUDE_TESTS=ON
+CMAKE_ARGS+=		-DCLANG_INCLUDE_TESTS=ON
+TEST_TARGET=		clang-test
+TEST_ENV+=		LD_LIBRARY_PATH=${WRKDIR}/build/lib
+.include "../../devel/googletest/buildlink3.mk"
+.else
+CMAKE_ARGS+=		-DLLVM_INCLUDE_TESTS=OFF
+CMAKE_ARGS+=		-DCLANG_INCLUDE_TESTS=OFF
 .endif
 
 post-extract:
-	mv ${WRKDIR}/libcxx-${PKGVERSION_NOREV}.src ${WRKSRC}/projects/libcxx
-	mv ${WRKDIR}/compiler-rt-${PKGVERSION_NOREV}.src ${WRKSRC}/projects/compiler-rt
-	mv ${WRKDIR}/cfe-${PKGVERSION_NOREV}.src ${WRKSRC}/tools/clang
-.if ${OPSYS} == "SunOS"
-	${ECHO} "int sun_ld_needs_a_symbol=0;" >> ${WRKSRC}/lib/Target/NVPTX/InstPrinter/NVPTXInstPrinter.cpp
-.endif
-	mkdir ${WRKSRC}/${OBJDIR}
+	${RUN} mkdir -p ${WRKDIR}/build
 
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/tool.mk"
+DEPENDS+=	llvm-${PKGVERSION_NOREV}{,nb*}:../../lang/llvm
+.include "../../lang/llvm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

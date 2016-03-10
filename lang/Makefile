@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.426 2016/01/18 07:54:50 agc Exp $
+# $NetBSD: Makefile,v 1.427 2016/03/10 15:01:52 tnn Exp $
 #
 
 COMMENT=	Programming languages
@@ -113,6 +113,7 @@ SUBDIR+=	libLLVM34
 SUBDIR+=	librep
 SUBDIR+=	libtcl-nothread
 SUBDIR+=	likepython
+SUBDIR+=	llvm
 #SUBDIR+=	lua		# only contains Makefile fragments
 SUBDIR+=	lua51
 SUBDIR+=	lua52
