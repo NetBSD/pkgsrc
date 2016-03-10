@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.79 2016/02/29 10:05:47 jperkin Exp $
+# $NetBSD: Darwin.mk,v 1.80 2016/03/10 16:58:19 jperkin Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -151,16 +151,6 @@ BUILDLINK_TRANSFORM+=	rm:-Wl,--no-as-needed
 BUILDLINK_TRANSFORM+=	rm:-Wl,--export-dynamic
 BUILDLINK_TRANSFORM+=	rm:-Wl,--gc-sections
 BUILDLINK_TRANSFORM+=	rm:-Wl,--no-undefined
-
-# flags passed to the linker to extract all symbols from static archives.
-# this is GNU ld.
-.if empty(MACHINE_PLATFORM:MDarwin-[0-8].*-*)
-_OPSYS_WHOLE_ARCHIVE_FLAG=	-Wl,-force-load
-_OPSYS_NO_WHOLE_ARCHIVE_FLAG=	
-.else
-_OPSYS_WHOLE_ARCHIVE_FLAG=	-Wl,--whole-archive
-_OPSYS_NO_WHOLE_ARCHIVE_FLAG=	-Wl,--no-whole-archive
-.endif
 
 _OPSYS_CAN_CHECK_SHLIBS=	yes # check shared libraries using otool(1)
 
