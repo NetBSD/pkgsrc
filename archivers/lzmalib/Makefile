@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2015/03/15 17:30:24 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.6 2016/03/10 18:42:25 jperkin Exp $
 #
 
 DISTNAME=	lzmalib-0.0.1
+PKGREVISION=	1
 CATEGORIES=	archivers
 MASTER_SITES=	http://tokyocabinet.sourceforge.net/misc/
 
