@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1111 2016/03/10 21:12:13 nros Exp $
+$NetBSD: CHANGES-2016,v 1.1112 2016/03/10 22:54:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1493,3 +1493,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/mit-krb5 to 1.10.7nb9 [jperkin 2016-03-10]
 	Updated archivers/lzmalib to 0.0.1nb1 [jperkin 2016-03-10]
 	Updated textproc/libxml++ to 2.40.1 [nros 2016-03-10]
+	Updated sysutils/tarsnap to 1.0.37 [wiz 2016-03-10]
