@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2016/03/01 13:59:11 leot Exp $
+# $NetBSD: Makefile,v 1.4 2016/03/10 12:49:32 leot Exp $
 
-DISTNAME=	heirloom-doctools-160217
+DISTNAME=	heirloom-doctools-160308
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=n-t-roff/}
 
