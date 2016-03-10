@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.32 2015/11/03 19:04:57 joerg Exp $
+# $NetBSD: Makefile,v 1.33 2016/03/10 21:05:12 nros Exp $
 #
 
 DISTNAME=		subtitleeditor-0.30.0
-PKGREVISION=		22
+PKGREVISION=		23
 CATEGORIES=		multimedia
 MASTER_SITES=		http://download.gna.org/subtitleeditor/0.30/
 
 MAINTAINER=		ccatrian@eml.cc
 HOMEPAGE=		http://home.gna.org/subtitleeditor/
 COMMENT=		GTK+2 tool to edit movie subtitles
+LICENSE=		gnu-gpl-v2
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
