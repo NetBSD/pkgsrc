@@ -1,4 +1,4 @@
-# $NetBSD: UnixWare.mk,v 1.33 2013/04/28 12:53:56 obache Exp $
+# $NetBSD: UnixWare.mk,v 1.34 2016/03/10 16:58:19 jperkin Exp $
 #
 # Variable definitions for the UnixWare 7 operating system.
 
@@ -50,13 +50,6 @@ _PATCH_BACKUP_ARG?= 	-b -V simple -z	# switch to patch(1) for backup suffix
 # will correctly convert it into the proper LD_RUN_PATH variable.
 #
 _USE_RPATH=		yes		# add rpath to LDFLAGS
-
-# flags passed to the linker to extract all symbols from static archives.
-# this is the standard Solaris linker, /usr/ccs/bin/ld. The use of GNU
-# ld is not currently supported.
-# XXX is this needed for UnixWare?
-_OPSYS_WHOLE_ARCHIVE_FLAG=
-_OPSYS_NO_WHOLE_ARCHIVE_FLAG=
 
 # UnixWare has /usr/include/iconv.h, but it's not GNU iconv, so mark it
 # incompatible.

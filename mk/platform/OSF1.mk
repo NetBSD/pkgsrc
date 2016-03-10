@@ -1,4 +1,4 @@
-# $NetBSD: OSF1.mk,v 1.35 2015/04/18 22:56:19 tnn Exp $
+# $NetBSD: OSF1.mk,v 1.36 2016/03/10 16:58:19 jperkin Exp $
 #
 # Variable definitions for the OSF1 operating system.
 
@@ -49,10 +49,6 @@ _OPSYS_SHLIB_TYPE=	ECOFF	# type of shared lib
 _PATCH_CAN_BACKUP=	yes	# native patch(1) can make backups
 _PATCH_BACKUP_ARG?=	-b -V simple -z	# switch to patch(1) for backup suffix
 _USE_RPATH=		yes	# add rpath to LDFLAGS
-
-# flags passed to the linker to extract all symbols from static archives.
-_OPSYS_WHOLE_ARCHIVE_FLAG=	-Wl,-all
-_OPSYS_NO_WHOLE_ARCHIVE_FLAG=	-Wl,-none
 
 DEFAULT_SERIAL_DEVICE?=	/dev/tty00
 SERIAL_DEVICES?=	/dev/tty00 \
