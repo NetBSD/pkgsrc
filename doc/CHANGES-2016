@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1105 2016/03/10 12:49:44 leot Exp $
+$NetBSD: CHANGES-2016,v 1.1106 2016/03/10 13:15:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1485,3 +1485,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/bind99 to 9.9.8pl4 [taca 2016-03-10]
 	Updated databases/percona-toolkit to 2.2.17 [fhajny 2016-03-10]
 	Updated textproc/heirloom-doctools to 160308 [leot 2016-03-10]
+	Updated textproc/mdoclint to 1.38 [wiz 2016-03-10]
