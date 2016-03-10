@@ -1,4 +1,4 @@
-# $NetBSD: dri.mk,v 1.15 2015/09/27 21:58:03 tnn Exp $
+# $NetBSD: dri.mk,v 1.16 2016/03/10 05:29:56 tnn Exp $
 #
 # Currently, this is for convenience only.
 #
@@ -15,10 +15,9 @@ CHECK_BUILTIN.MesaLib:=	no
 BUILDLINK_API_DEPENDS.dri2proto+=	dri2proto>=2.1
 BUILDLINK_API_DEPENDS.glproto+=		glproto>=1.4.11
 .    if ${OPSYS} != "Darwin"
-BUILDLINK_API_DEPENDS.libdrm+=		libdrm>=2.4.38
+BUILDLINK_API_DEPENDS.libdrm+=		libdrm>=2.4.60
 .    endif
 .    if ${OPSYS} == "Linux"
-BUILDLINK_API_DEPENDS.libdrm+=	libdrm>=2.4.56
 BUILDLINK_API_DEPENDS.libxcb+=	libxcb>=1.9.3
 .    endif
 .  endif
