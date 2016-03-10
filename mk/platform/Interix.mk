@@ -1,4 +1,4 @@
-# $NetBSD: Interix.mk,v 1.76 2015/02/16 10:42:00 jperkin Exp $
+# $NetBSD: Interix.mk,v 1.77 2016/03/10 16:58:19 jperkin Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -115,11 +115,6 @@ _OPSYS_SHLIB_TYPE=	ELF	# shared lib type - not exactly true, but near enough
 _PATCH_CAN_BACKUP=	yes	# native patch(1) can make backups
 _PATCH_BACKUP_ARG?=	-b -V simple -z	# switch to patch(1) for backup suffix
 _USE_RPATH=		yes	# add rpath to LDFLAGS
-
-# flags passed to the linker to extract all symbols from static archives.
-# this is GNU ld.
-_OPSYS_WHOLE_ARCHIVE_FLAG=	-Wl,--whole-archive
-_OPSYS_NO_WHOLE_ARCHIVE_FLAG=	-Wl,--no-whole-archive
 
 _STRIPFLAG_CC?=		${_INSTALL_UNSTRIPPED:D:U-s}	# cc(1) option to strip
 _STRIPFLAG_INSTALL?=	${_INSTALL_UNSTRIPPED:D:U-s}	# install(1) option to strip
