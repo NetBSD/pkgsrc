@@ -1,4 +1,4 @@
-# $NetBSD: MirBSD.mk,v 1.11 2015/04/21 17:01:56 joerg Exp $
+# $NetBSD: MirBSD.mk,v 1.12 2016/03/10 16:58:19 jperkin Exp $
 #
 # Variable definitions for the MirOS BSD operating system.
 
@@ -48,12 +48,6 @@ _USE_RPATH=		yes	# add rpath to LDFLAGS
 
 BUILDLINK_TRANSFORM+=	rm:-ldl # libdl.a is an empty static library
 BUILDLINK_TRANSFORM+=	rm:-fvisibility=hidden # at least until there is a newer gcc
-
-
-# flags passed to the linker to extract all symbols from static archives.
-# this is GNU ld.
-_OPSYS_WHOLE_ARCHIVE_FLAG=	-Wl,--whole-archive
-_OPSYS_NO_WHOLE_ARCHIVE_FLAG=	-Wl,--no-whole-archive
 
 _STRIPFLAG_CC?=		${_INSTALL_UNSTRIPPED:D:U-s}	# cc(1) option to strip
 _STRIPFLAG_INSTALL?=	${_INSTALL_UNSTRIPPED:D:U-s}	# install(1) option to strip

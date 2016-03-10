@@ -1,4 +1,4 @@
-# $NetBSD: HPUX.mk,v 1.25 2015/04/19 12:02:15 tnn Exp $
+# $NetBSD: HPUX.mk,v 1.26 2016/03/10 16:58:19 jperkin Exp $
 #
 # Variable definitions for the HP-UX operating system.
 
@@ -49,10 +49,6 @@ _OPSYS_SHLIB_TYPE=	${OBJECT_FMT}	# type of shared lib
 _PATCH_CAN_BACKUP=	yes	# native patch(1) can make backups
 _PATCH_BACKUP_ARG?=	-b -V simple -z	# switch to patch(1) for backup suffix
 _USE_RPATH=		yes	# add rpath to LDFLAGS
-
-# flags passed to the linker to extract all symbols from static archives.
-_OPSYS_WHOLE_ARCHIVE_FLAG=	-Wl,-tools2-HPUX-fixme
-_OPSYS_NO_WHOLE_ARCHIVE_FLAG=	-Wl,-tools3-HPUX-fixme
 
 DEFAULT_SERIAL_DEVICE?=	/dev/tty1p0
 SERIAL_DEVICES?=	/dev/tty0p0 \

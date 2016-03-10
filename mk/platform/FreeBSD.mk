@@ -1,4 +1,4 @@
-# $NetBSD: FreeBSD.mk,v 1.31 2015/04/21 17:01:56 joerg Exp $
+# $NetBSD: FreeBSD.mk,v 1.32 2016/03/10 16:58:19 jperkin Exp $
 #
 # Variable definitions for the FreeBSD operating system.
 
@@ -51,11 +51,6 @@ _OPSYS_SHLIB_TYPE=	ELF/a.out	# shared lib type
 _PATCH_CAN_BACKUP=	yes	# native patch(1) can make backups
 _PATCH_BACKUP_ARG?=	-V simple -b 	# switch to patch(1) for backup suffix
 _USE_RPATH=		yes	# add rpath to LDFLAGS
-
-# flags passed to the linker to extract all symbols from static archives.
-# this is GNU ld.
-_OPSYS_WHOLE_ARCHIVE_FLAG=	-Wl,--whole-archive
-_OPSYS_NO_WHOLE_ARCHIVE_FLAG=	-Wl,--no-whole-archive
 
 _STRIPFLAG_CC?=		${_INSTALL_UNSTRIPPED:D:U-s}	# cc(1) option to strip
 _STRIPFLAG_INSTALL?=	${_INSTALL_UNSTRIPPED:D:U-s}	# install(1) option to strip
