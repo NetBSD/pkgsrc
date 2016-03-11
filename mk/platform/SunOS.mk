@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.68 2016/03/10 16:58:19 jperkin Exp $
+# $NetBSD: SunOS.mk,v 1.69 2016/03/11 22:04:34 fhajny Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -77,6 +77,8 @@ _USE_RPATH=		yes		# add rpath to LDFLAGS
 
 # Remove flags specific to GNU ld.
 BUILDLINK_TRANSFORM+=	rm:-Wl,--as-needed
+BUILDLINK_TRANSFORM+=	rm:-Wl,--disable-new-dtags
+BUILDLINK_TRANSFORM+=	rm:-Wl,--enable-new-dtags
 BUILDLINK_TRANSFORM+=	rm:-Wl,--export-dynamic
 BUILDLINK_TRANSFORM+=	rm:-Wl,--gc-sections
 BUILDLINK_TRANSFORM+=	rm:-Wl,--no-as-needed
