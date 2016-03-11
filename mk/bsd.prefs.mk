@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.378 2016/03/11 04:58:51 tnn Exp $
+# $NetBSD: bsd.prefs.mk,v 1.379 2016/03/11 05:42:35 tnn Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -249,7 +249,7 @@ LOWER_VARIANT_VERSION=	${_UNAME_V:C/joyent_//}
 OS_VARIANT=		OmniOS
 LOWER_VARIANT_VERSION!=	/usr/bin/awk '{ print $$3; exit 0; }' /etc/release
 .  else
-OS_VARIANT=		Oracle
+OS_VARIANT=		Solaris
 LOWER_VARIANT_VERSION=	${_UNAME_V}
 .  endif
 
