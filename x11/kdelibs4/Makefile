@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2016/03/11 11:40:52 jperkin Exp $
+# $NetBSD: Makefile,v 1.85 2016/03/11 16:51:33 jperkin Exp $
 
 DISTNAME=	kdelibs-4.14.15
 PKGNAME=	${DISTNAME:S/-4/4-4/}
@@ -54,18 +54,17 @@ CHECK_PORTABILITY_SKIP+=kate/tests/hl/highlight.sh
 SUBST_CLASSES+=			kdelibsfix
 SUBST_STAGE.kdelibsfix=		pre-configure
 SUBST_MESSAGE.kdelibsfix=	Fixing hardcoded paths.
-SUBST_FILES.kdelibsfix= \
-	kde3support/kdeui/k3sconfig.cpp \
-	kio/kssl/kopenssl.cpp
+SUBST_FILES.kdelibsfix=		kde3support/kdeui/k3sconfig.cpp
+SUBST_FILES.kdelibsfix+=	kio/kssl/kopenssl.cpp
 SUBST_SED.kdelibsfix=		-e 's:@LOCALBASE@:${LOCALBASE}:g'
 
-# XXX this is an ugly hack to avoid the WRKDIR path in the installed cmake file
+# Avoid the WRKDIR path in the installed cmake file
 SUBST_CLASSES+=			phononrelpath
 SUBST_STAGE.phononrelpath=	post-configure
 SUBST_MESSAGE.phononrelpath=	Fixing phonon RELWITHDEBINFO path
-SUBST_FILES.phononrelpath=	_KDE_build/CMakeFiles/Export/${LOCALBASE:S^/^_^}/share/kde/apps/cmake/modules/KDELibs4LibraryTargets-${TARGET_NAME}.cmake \
-				_KDE_build/experimental/libkdeclarative/CMakeFiles/Export/${LOCALBASE:S^/^_^}/lib/cmake/KDeclarative/KDeclarativeLibraryTargets-${TARGET_NAME}.cmake
-SUBST_SED.phononrelpath=	-E -e 's:[^"]*/\.buildlink/lib/libphonon\.(dylib|so)::'
+SUBST_FILES.phononrelpath=	_KDE_build/CMakeFiles/Export/${LOCALBASE:S^/^_^}/share/kde/apps/cmake/modules/KDELibs4LibraryTargets-${TARGET_NAME}.cmake
+SUBST_FILES.phononrelpath+=	_KDE_build/experimental/libkdeclarative/CMakeFiles/Export/${LOCALBASE:S^/^_^}/lib/cmake/KDeclarative/KDeclarativeLibraryTargets-${TARGET_NAME}.cmake
+SUBST_SED.phononrelpath=	-e 's:${BUILDLINK_DIR}:${PREFIX}:'
 
 USE_TOOLS+=	flex gmake
 PLIST_VARS+=	kgrantpty mac notmac
