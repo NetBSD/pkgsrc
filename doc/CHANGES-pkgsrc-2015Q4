@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q4,v 1.1.2.24 2016/03/09 20:33:26 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q4,v 1.1.2.25 2016/03/11 09:53:07 bsiegert Exp $
 
 Changes to the packages collection and infrastructure on the 2015Q4 branch:
 
@@ -174,4 +174,10 @@ www/ruby-actionpack32: security fix
 
 Pullup ticket #4946 - requested by taca
 lang/php70: security fix
+
+Pullup ticket #4949 - requested by taca
+net/bind910: security fix
+
+Pullup ticket #4950 - requested by taca
+net/bind99: security fix
 
