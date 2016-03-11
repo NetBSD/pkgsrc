@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1118 2016/03/11 20:34:49 asau Exp $
+$NetBSD: CHANGES-2016,v 1.1119 2016/03/11 21:31:13 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1500,3 +1500,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated emulators/xnp2 to 0.86 [tsutsui 2016-03-11]
 	Updated print/qpdf to 6.0.0 [ryoon 2016-03-11]
 	Updated lang/ecl to 16.1.2 [asau 2016-03-11]
+	Added databases/pgpool2 version 3.5.0 [fhajny 2016-03-11]
