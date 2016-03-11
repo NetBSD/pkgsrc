@@ -1,4 +1,4 @@
-# $NetBSD: check-interpreter.mk,v 1.30 2015/11/27 12:45:04 jperkin Exp $
+# $NetBSD: check-interpreter.mk,v 1.31 2016/03/11 21:11:47 dholland Exp $
 #
 # This file checks that after installation, all files of the package
 # that start with a "#!" line will find their interpreter. Files that
@@ -54,6 +54,9 @@ _check-interpreter: error-check .PHONY
 		*) ;;							\
 		esac;							\
 		if [ ! -x "$$file" ]; then				\
+			continue;					\
+		fi;							\
+		if [ -d "$$file" ]; then				\
 			continue;					\
 		fi;							\
 		if [ ! -r "$$file" ]; then				\
