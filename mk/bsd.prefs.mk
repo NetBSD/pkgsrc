@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.380 2016/03/11 23:03:31 khorben Exp $
+# $NetBSD: bsd.prefs.mk,v 1.381 2016/03/11 23:54:08 khorben Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -702,40 +702,35 @@ PREPEND_PATH+=		${LOCALBASE}/bin
 INIT_SYSTEM?=		rc.d
 _BUILD_DEFS+=		INIT_SYSTEM
 
-# Enable cwrappers if requested unless we're building the wrappers themselves.
-.if ${USE_CWRAPPERS:tl} != "no" && empty(PKGPATH:Mpkgtools/cwrappers)
-_USE_CWRAPPERS=		yes
-.else
-_USE_CWRAPPERS=		no
-.endif
-
 _PKGSRC_MKPIE=	no
 .if (${PKGSRC_MKPIE:tl} == "yes") && \
     (${_OPSYS_SUPPORTS_MKPIE:Uno} == "yes")
 _PKGSRC_MKPIE=	yes
-_GCC_CFLAGS+=		${_MKPIE_CFLAGS.gcc}
-_GCC_LDFLAGS+=		${_MKPIE_LDFLAGS.gcc}
 .endif
 
 _PKGSRC_USE_FORTIFY=	no
 .if (${PKGSRC_USE_FORTIFY:tl} == "yes") && \
     (${_OPSYS_SUPPORTS_FORTIFY:Uno} == "yes")
 _PKGSRC_USE_FORTIFY=	yes
-_GCC_CFLAGS+=		${_FORTIFY_CFLAGS.gcc}
 .endif
 
 _PKGSRC_USE_RELRO=	no
 .if (${PKGSRC_USE_RELRO:tl} == "yes") && \
     (${_OPSYS_SUPPORTS_RELRO:Uno} == "yes")
 _PKGSRC_USE_RELRO=	yes
-_GCC_LDFLAGS+=		${_RELRO_LDFLAGS.gcc}
 .endif
 
 _PKGSRC_USE_SSP=	no
 .if (${PKGSRC_USE_SSP:tl} == "yes") && \
     (${_OPSYS_SUPPORTS_SSP:Uno} == "yes")
 _PKGSRC_USE_SSP=	yes
-_GCC_CFLAGS+=		${_SSP_CFLAGS.gcc}
+.endif
+
+# Enable cwrappers if requested unless we're building the wrappers themselves.
+.if ${USE_CWRAPPERS:tl} != "no" && empty(PKGPATH:Mpkgtools/cwrappers)
+_USE_CWRAPPERS=		yes
+.else
+_USE_CWRAPPERS=		no
 .endif
 
 # Wrapper framework definitions
