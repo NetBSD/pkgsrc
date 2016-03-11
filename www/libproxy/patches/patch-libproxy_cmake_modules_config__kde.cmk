@@ -1,0 +1,18 @@
+$NetBSD: patch-libproxy_cmake_modules_config__kde.cmk,v 1.1 2016/03/11 10:56:20 abs Exp $
+
+--- libproxy/cmake/modules/config_kde.cmk.orig	2016-01-12 16:41:07.000000000 +0000
++++ libproxy/cmake/modules/config_kde.cmk
+@@ -1,6 +1,9 @@
+-find_program(KDE4_CONF kreadconfig)
+-find_program(KF5_CONF kreadconfig5)
++option(WITH_KDE "Target KDE4 or 5" ON)
++if (WITH_KDE)
++  find_program(KDE4_CONF kreadconfig)
++  find_program(KF5_CONF kreadconfig5)
+ 
+-if (KDE4_CONF OR KF5_CONF)
+-  set(KDE_FOUND 1)
++  if (KDE4_CONF OR KF5_CONF)
++    set(KDE_FOUND 1)
++  endif()
+ endif()
