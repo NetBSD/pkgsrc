@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1113 2016/03/11 10:27:17 ryoon Exp $
+$NetBSD: CHANGES-2016,v 1.1114 2016/03/11 11:41:02 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1495,3 +1495,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/libxml++ to 2.40.1 [nros 2016-03-10]
 	Updated sysutils/tarsnap to 1.0.37 [wiz 2016-03-10]
 	Updated misc/libreoffice to 5.1.1.3 [ryoon 2016-03-11]
+	Updated x11/kdelibs4 to 4.14.15nb2 [jperkin 2016-03-11]
