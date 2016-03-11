@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.165 2016/03/11 23:03:31 khorben Exp $
+# $NetBSD: gcc.mk,v 1.166 2016/03/11 23:54:09 khorben Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -338,21 +338,42 @@ _WRAP_EXTRA_ARGS.CC+=	-std=gnu99
 CWRAPPERS_APPEND.cc+=	-std=gnu99
 .endif
 
+.if ${OPSYS} == "NetBSD"
+_FORTIFY_CFLAGS.gcc=	-D_FORTIFY_SOURCE=2
+_MKPIE_CFLAGS.gcc=	-fPIC
+# XXX for executables it should be:
+#_MKPIE_CFLAGS.gcc=	-fPIE
+# XXX for libraries a sink wrapper around gcc is required and used instead
+#_MKPIE_LDFLAGS.gcc=	-pie
+_RELRO_LDFLAGS.gcc=	-Wl,-z,relro -Wl,-z,now
+_SSP_CFLAGS.gcc=	-fstack-protector-all
+.endif
+
+.if ${OPSYS} == "SunOS"
+_FORTIFY_CFLAGS.gcc=	-D_FORTIFY_SOURCE=2
+_SSP_CFLAGS.gcc=	-fstack-protector
+.endif
+
 .if ${_PKGSRC_MKPIE} == "yes"
+_GCC_CFLAGS+=		${_MKPIE_CFLAGS.gcc}
+_GCC_LDFLAGS+=		${_MKPIE_LDFLAGS.gcc}
 CWRAPPERS_APPEND.cc+=	${_MKPIE_CFLAGS.gcc}
 # XXX this differs for libraries and executables
 # CWRAPPERS_APPEND.ld+=	${_MKPIE_LDFLAGS.gcc}
 .endif
 
 .if ${_PKGSRC_USE_FORTIFY} == "yes"
+_GCC_CFLAGS+=		${_FORTIFY_CFLAGS.gcc}
 CWRAPPERS_APPEND.cc+=	${_FORTIFY_CFLAGS.gcc}
 .endif
 
 .if ${_PKGSRC_USE_RELRO} == "yes"
+_GCC_LDFLAGS+=		${_RELRO_LDFLAGS.gcc}
 CWRAPPERS_APPEND.ld+=	${_RELRO_LDFLAGS.gcc}
 .endif
  
 .if ${_PKGSRC_USE_SSP} == "yes"
+_GCC_CFLAGS+=		${_SSP_CFLAGS.gcc}
 CWRAPPERS_APPEND.cc+=	${_SSP_CFLAGS.gcc}
 .endif
 
