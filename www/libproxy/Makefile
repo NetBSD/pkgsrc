@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2016/02/25 08:27:04 jperkin Exp $
+# $NetBSD: Makefile,v 1.27 2016/03/11 10:56:20 abs Exp $
 
 DISTNAME=	libproxy-0.4.12
 CATEGORIES=	www gnome
@@ -14,7 +14,7 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake
 USE_LANGUAGES=	c99 c++
 CMAKE_ARGS+=	-DWITH_PYTHON:BOOL=OFF
-CMAKE_ARGS+=	-DWITH_KDE4=OFF
+CMAKE_ARGS+=	-DWITH_KDE:BOOL=OFF
 
 # Need socket libraries on SunOS for both the shared library and test programs.
 CMAKE_ARGS.SunOS+=	-DCMAKE_EXE_LINKER_FLAGS:STRING="-lnsl -lsocket -L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib"
