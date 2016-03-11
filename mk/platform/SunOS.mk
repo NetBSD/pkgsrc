@@ -1,4 +1,4 @@
-# $NetBSD: SunOS.mk,v 1.70 2016/03/11 23:03:31 khorben Exp $
+# $NetBSD: SunOS.mk,v 1.71 2016/03/11 23:54:09 khorben Exp $
 #
 # Variable definitions for the SunOS/Solaris operating system.
 
@@ -113,11 +113,9 @@ _OPSYS_INCLUDE_DIRS?=	/usr/include
 
 # support FORTIFY (with GCC)
 _OPSYS_SUPPORTS_FORTIFY=yes
-_FORTIFY_CFLAGS.gcc=	-D_FORTIFY_SOURCE=2
 
 # support stack protection (with GCC)
 _OPSYS_SUPPORTS_SSP=	yes
-_SSP_CFLAGS.gcc=	-fstack-protector
 
 _OPSYS_CAN_CHECK_SHLIBS=	yes # requires readelf
 
