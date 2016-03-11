@@ -1,4 +1,4 @@
-# $NetBSD: arg-source,v 1.16 2015/11/20 05:49:24 richard Exp $
+# $NetBSD: arg-source,v 1.17 2016/03/11 23:03:31 khorben Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -161,6 +161,12 @@ while $test $# -gt 0; do
 	##############################################################
 	-c|-S|-E)
 		dont_link=yes
+		dont_link_binary=yes
+		append_queue argbuf "$arg"
+		$debug_log $wrapperlog "    (arg-source) push: $arg"
+		;;
+	-shared)
+		dont_link_binary=yes
 		append_queue argbuf "$arg"
 		$debug_log $wrapperlog "    (arg-source) push: $arg"
 		;;

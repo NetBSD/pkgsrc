@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.164 2016/03/02 18:45:21 jperkin Exp $
+# $NetBSD: gcc.mk,v 1.165 2016/03/11 23:03:31 khorben Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -336,6 +336,24 @@ _LANGUAGES.gcc+=	${LANGUAGES.gcc:M${_lang_}}
 .if !empty(USE_LANGUAGES:Mc99)
 _WRAP_EXTRA_ARGS.CC+=	-std=gnu99
 CWRAPPERS_APPEND.cc+=	-std=gnu99
+.endif
+
+.if ${_PKGSRC_MKPIE} == "yes"
+CWRAPPERS_APPEND.cc+=	${_MKPIE_CFLAGS.gcc}
+# XXX this differs for libraries and executables
+# CWRAPPERS_APPEND.ld+=	${_MKPIE_LDFLAGS.gcc}
+.endif
+
+.if ${_PKGSRC_USE_FORTIFY} == "yes"
+CWRAPPERS_APPEND.cc+=	${_FORTIFY_CFLAGS.gcc}
+.endif
+
+.if ${_PKGSRC_USE_RELRO} == "yes"
+CWRAPPERS_APPEND.ld+=	${_RELRO_LDFLAGS.gcc}
+.endif
+ 
+.if ${_PKGSRC_USE_SSP} == "yes"
+CWRAPPERS_APPEND.cc+=	${_SSP_CFLAGS.gcc}
 .endif
 
 # GCC has this annoying behaviour where it advocates in a multi-line
@@ -713,8 +731,9 @@ _GCC_LDFLAGS=	# empty
 .  for _dir_ in ${_GCC_LIBDIRS:N*not_found*}
 _GCC_LDFLAGS+=	-L${_dir_} ${COMPILER_RPATH_FLAG}${_dir_}
 .  endfor
-LDFLAGS+=	${_GCC_LDFLAGS}
 .endif
+
+LDFLAGS+=	${_GCC_LDFLAGS}
 
 # Point the variables that specify the compiler to the installed
 # GCC executables.
