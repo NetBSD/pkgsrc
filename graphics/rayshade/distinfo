@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.10 2015/11/03 21:34:18 agc Exp $
+$NetBSD: distinfo,v 1.11 2016/03/11 08:18:12 tnn Exp $
 
 SHA1 (rayshade.4.0.6.tar.Z) = 5fd1ce05e7ba3bc8e8b337c212eccb6b53b5b4ca
 RMD160 (rayshade.4.0.6.tar.Z) = a19bf35aa3f66de9ce406a1a98cf7edbde60f356
 SHA512 (rayshade.4.0.6.tar.Z) = a8bd6f1bf27a0d1f7e894a130576f4c7daa07f082885f4ec6e850f75eb31dc3b8f8a92e14d3c9bf166f2f7fae70a1eefe7beca6cd41d28a3e592e57818e58b35
 Size (rayshade.4.0.6.tar.Z) = 369527 bytes
-SHA1 (patch-aa) = b510e1b3a98ef25ffe0d23f9b499fb5c16c333f4
+SHA1 (patch-aa) = 6a736aef4d1d38e05d45d9208b18ce945edbcc1e
 SHA1 (patch-ab) = 8a5fb56e6e12440550469a4a7635921fa76ec615
 SHA1 (patch-ac) = 496d4d89edaa7a8786cbd22c2fc31679fda96df5
 SHA1 (patch-ad) = 8e599cc859406341ec39c52b7711e7b64f015b57
