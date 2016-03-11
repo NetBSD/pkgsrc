@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.511 2016/02/26 15:54:09 fhajny Exp $
+# $NetBSD: Makefile,v 1.512 2016/03/11 21:31:36 fhajny Exp $
 
 COMMENT=	Databases
 
@@ -240,6 +240,7 @@ SUBDIR+=	pgbouncer
 SUBDIR+=	pgbuildfarm
 SUBDIR+=	pgocaml
 SUBDIR+=	pgpool
+SUBDIR+=	pgpool2
 SUBDIR+=	pgtcl
 SUBDIR+=	pgtclng
 SUBDIR+=	php-dba
