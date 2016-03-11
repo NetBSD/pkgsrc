@@ -1,0 +1,31 @@
+$NetBSD: patch-doc_Makefile,v 1.1 2016/03/11 15:42:59 fhajny Exp $
+
+Make man pages and html docs versioned.
+
+--- doc/Makefile.orig	2016-02-15 02:29:37.000000000 +0000
++++ doc/Makefile
+@@ -14,8 +14,8 @@ COMPONENTS-$(CONFIG_AVFORMAT)   += ffmpe
+ COMPONENTS-$(CONFIG_AVDEVICE)   += ffmpeg-devices
+ COMPONENTS-$(CONFIG_AVFILTER)   += ffmpeg-filters
+ 
+-MANPAGES1   = $(AVPROGS-yes:%=doc/%.1)    $(AVPROGS-yes:%=doc/%-all.1)    $(COMPONENTS-yes:%=doc/%.1)
+-MANPAGES3   = $(LIBRARIES-yes:%=doc/%.3)
++MANPAGES1   = $(AVPROGS-yes:%=doc/%3.1)    $(AVPROGS-yes:%=doc/%-all3.1)    $(COMPONENTS-yes:%=doc/%3.1)
++MANPAGES3   = $(LIBRARIES-yes:%=doc/%3.3)
+ MANPAGES    = $(MANPAGES1) $(MANPAGES3)
+ PODPAGES    = $(AVPROGS-yes:%=doc/%.pod)  $(AVPROGS-yes:%=doc/%-all.pod)  $(COMPONENTS-yes:%=doc/%.pod)  $(LIBRARIES-yes:%=doc/%.pod)
+ HTMLPAGES   = $(AVPROGS-yes:%=doc/%.html) $(AVPROGS-yes:%=doc/%-all.html) $(COMPONENTS-yes:%=doc/%.html) $(LIBRARIES-yes:%=doc/%.html) \
+@@ -114,10 +114,10 @@ doc/%-all.pod: doc/%.texi $(SRC_PATH)/do
+ 	$(Q)$(TEXIDEP)
+ 	$(M)perl $(SRC_PATH)/doc/texi2pod.pl -Dconfig-all=yes -Idoc $< $@
+ 
+-doc/%.1 doc/%.3: TAG = MAN
+-doc/%.1: doc/%.pod $(GENTEXI)
++doc/%3.1 doc/%3.3: TAG = MAN
++doc/%3.1: doc/%.pod $(GENTEXI)
+ 	$(M)pod2man --section=1 --center=" " --release=" " --date=" " $< > $@
+-doc/%.3: doc/%.pod $(GENTEXI)
++doc/%3.3: doc/%.pod $(GENTEXI)
+ 	$(M)pod2man --section=3 --center=" " --release=" " --date=" " $< > $@
+ 
+ $(DOCS) doc/doxy/html: | doc/
