@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1 2016/03/11 21:30:55 fhajny Exp $
+
+SHA1 (pgpool-II-3.5.0.tar.gz) = f5041afe078bc8c414e4db8ab0119c4e76aaaaab
+RMD160 (pgpool-II-3.5.0.tar.gz) = 0ed82d605da0fc0ed7ff3f9c45e7731307f53299
+SHA512 (pgpool-II-3.5.0.tar.gz) = da11dd552fdad3d13676681b562972050a71f0cd0240456b76e99b860f94dc733b05f1c12bb3de3bf1d1f3f3762ef8f5533416c8c311639b97ed716e0818a172
+Size (pgpool-II-3.5.0.tar.gz) = 2205490 bytes
+SHA1 (patch-configure) = a220d49eecd5408f576f22226089daa298b27d4c
+SHA1 (patch-src_include_pool.h) = 74409384d735695d44466468833088959753d9d2
+SHA1 (patch-src_sample_pgpool.conf.sample) = db3f6e280d3b02dd6c5abab9aba087ce30acbaa5
+SHA1 (patch-src_watchdog_wd__escalation.c) = 63ac5ea3f8853eb953707e79f351ae1eea3a8b25
