@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.80 2016/03/10 16:58:19 jperkin Exp $
+# $NetBSD: Darwin.mk,v 1.81 2016/03/11 22:04:34 fhajny Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -148,6 +148,8 @@ BUILDLINK_TRANSFORM+=	rm:-Wl,-export-dynamic
 BUILDLINK_TRANSFORM+=	rm:-Wl,-warn-common
 BUILDLINK_TRANSFORM+=	rm:-Wl,--as-needed
 BUILDLINK_TRANSFORM+=	rm:-Wl,--no-as-needed
+BUILDLINK_TRANSFORM+=	rm:-Wl,--disable-new-dtags
+BUILDLINK_TRANSFORM+=	rm:-Wl,--enable-new-dtags
 BUILDLINK_TRANSFORM+=	rm:-Wl,--export-dynamic
 BUILDLINK_TRANSFORM+=	rm:-Wl,--gc-sections
 BUILDLINK_TRANSFORM+=	rm:-Wl,--no-undefined
