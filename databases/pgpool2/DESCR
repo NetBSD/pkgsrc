@@ -1,0 +1,4 @@
+pgpool-II is a middleware that works between PostgreSQL
+servers and a PostgreSQL database client. It talks
+PostgreSQL's backend and frontend protocol, and relays
+a connection between them.

@@ -1,0 +1,28 @@
+$NetBSD: patch-src_sample_pgpool.conf.sample,v 1.1 2016/03/11 21:30:55 fhajny Exp $
+
+Default pid file location.
+
+--- src/sample/pgpool.conf.sample.orig	2015-04-08 07:58:44.000000000 +0000
++++ src/sample/pgpool.conf.sample
+@@ -211,10 +211,10 @@ debug_level = 0
+ # FILE LOCATIONS
+ #------------------------------------------------------------------------------
+ 
+-pid_file_name = '/var/run/pgpool/pgpool.pid'
++pid_file_name = '@PGPOOL_PIDDIR@/pgpool.pid'
+                                    # PID file name
+                                    # (change requires restart)
+-logdir = '/var/log/pgpool'
++logdir = '@PGPOOL_LOGDIR@'
+                                    # Directory of pgPool status file
+                                    # (change requires restart)
+ 
+@@ -682,7 +682,7 @@ memqcache_cache_block_size = 1048576
+ 								   # Cache block size in bytes. Mandatory if memqcache_method = 'shmem'.
+ 								   # Defaults to 1MB.
+                                    # (change requires restart)
+-memqcache_oiddir = '/var/log/pgpool/oiddir'
++memqcache_oiddir = '@PGPOOL_LOGDIR@/oiddir'
+ 				   				   # Temporary work directory to record table oids
+                                    # (change requires restart)
+ white_memqcache_table_list = ''
