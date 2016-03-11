@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2016/02/14 05:12:42 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.9 2016/03/11 10:23:42 ryoon Exp $
 bin/libreoffice
 bin/lobase
 bin/localc
@@ -316,6 +316,7 @@ ${PKGNAME}/lib/libreoffice/program/opengl/fadeBlackFragmentShader.glsl
 ${PKGNAME}/lib/libreoffice/program/opengl/fadeFragmentShader.glsl
 ${PKGNAME}/lib/libreoffice/program/opengl/glitterFragmentShader.glsl
 ${PKGNAME}/lib/libreoffice/program/opengl/glitterVertexShader.glsl
+${PKGNAME}/lib/libreoffice/program/opengl/greyscaleFragmentShader.glsl
 ${PKGNAME}/lib/libreoffice/program/opengl/honeycombFragmentShader.glsl
 ${PKGNAME}/lib/libreoffice/program/opengl/honeycombGeometryShader.glsl
 ${PKGNAME}/lib/libreoffice/program/opengl/honeycombVertexShader.glsl
@@ -360,6 +361,8 @@ ${PKGNAME}/lib/libreoffice/program/opengl/textVertexShaderBatch.glsl
 ${PKGNAME}/lib/libreoffice/program/opengl/textureFragmentShader.glsl
 ${PKGNAME}/lib/libreoffice/program/opengl/textureVertexShader.glsl
 ${PKGNAME}/lib/libreoffice/program/opengl/transformedTextureVertexShader.glsl
+${PKGNAME}/lib/libreoffice/program/opengl/vortexFragmentShader.glsl
+${PKGNAME}/lib/libreoffice/program/opengl/vortexGeometryShader.glsl
 ${PKGNAME}/lib/libreoffice/program/opengl/vortexVertexShader.glsl
 ${PKGNAME}/lib/libreoffice/program/pagein-calc
 ${PKGNAME}/lib/libreoffice/program/pagein-common
