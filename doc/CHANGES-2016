@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1116 2016/03/11 13:34:14 tsutsui Exp $
+$NetBSD: CHANGES-2016,v 1.1117 2016/03/11 15:37:28 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1498,3 +1498,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated x11/kdelibs4 to 4.14.15nb2 [jperkin 2016-03-11]
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.577 [tsutsui 2016-03-11]
 	Updated emulators/xnp2 to 0.86 [tsutsui 2016-03-11]
+	Updated print/qpdf to 6.0.0 [ryoon 2016-03-11]
