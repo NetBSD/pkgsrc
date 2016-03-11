@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.50 2015/12/12 23:57:09 pettai Exp $
+$NetBSD: distinfo,v 1.51 2016/03/11 21:53:07 pettai Exp $
 
-SHA1 (nsd-4.1.7.tar.gz) = f1c5801c11605d478a57ff149d55c0534b01cb96
-RMD160 (nsd-4.1.7.tar.gz) = d3fe225c87de36780558c8e1c3acb36c1c249647
-SHA512 (nsd-4.1.7.tar.gz) = c2bdb03a09ac06d70feef2183e2d777777ba7830777bac67ab974016f52791ad7ed9227a37a31325f5e4ab4baeacc4cb562d5af4cd85e5b6ddc83422ae5d0df8
-Size (nsd-4.1.7.tar.gz) = 1072576 bytes
+SHA1 (nsd-4.1.8.tar.gz) = b9d192d985c3edfdf6bbce0b6de1ebd90de5f4f0
+RMD160 (nsd-4.1.8.tar.gz) = bb5e43695371794f4f78fa3bca7a5d92b588a97b
+SHA512 (nsd-4.1.8.tar.gz) = 34f3ee7218fb8606674d9b58538ec7d2b713c2575969e0c6bc7de9c0c4da7e06d2ec1f2b84a5222b3ad8fe104d6358dd4131de9dfb07a56a01186fab52286063
+Size (nsd-4.1.8.tar.gz) = 1073103 bytes
 SHA1 (patch-aa) = d9a423d5faa8da9a213b21fd2712225ac9645091
 SHA1 (patch-util.c) = acaf676e675fc07ef51b4c1cc056214731bc193f
