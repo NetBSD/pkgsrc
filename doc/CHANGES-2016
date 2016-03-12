@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1135 2016/03/12 11:51:06 ryoon Exp $
+$NetBSD: CHANGES-2016,v 1.1136 2016/03/12 12:05:37 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1521,3 +1521,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/git to 2.7.3 [adam 2016-03-12]
 	Added textproc/ansifilter version 1.15 [tnn 2016-03-12]
 	Updated sysutils/upower to 0.99.4 [ryoon 2016-03-12]
+	Added editors/hexcurse version 1.60.0 [tnn 2016-03-12]
