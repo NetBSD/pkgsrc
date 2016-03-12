@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/11/25 15:58:09 fhajny Exp $
+$NetBSD: distinfo,v 1.7 2016/03/12 09:53:53 fhajny Exp $
 
-SHA1 (python-driver-3.0.0.tar.gz) = cbd395a52bfa874cfe6cd6e2431ccb3a78d50b46
-RMD160 (python-driver-3.0.0.tar.gz) = 435e3791b9393833ebc65bb589f00271e3448e82
-SHA512 (python-driver-3.0.0.tar.gz) = ee1348f412326d9a453bdc37c2d41438bd5625a2bea1459d76f0017e0a3486b9bff15f967bb7a84f53141e98519dfaad75c9feaf4e036556f91a14ebeaf4a973
-Size (python-driver-3.0.0.tar.gz) = 431880 bytes
+SHA1 (python-driver-3.1.0.tar.gz) = 85c6c1c2ec7d22fda066960494168cb4e36876c7
+RMD160 (python-driver-3.1.0.tar.gz) = 85d7e3f07015e903e336240f3c39f1f5979a6100
+SHA512 (python-driver-3.1.0.tar.gz) = 84a14edf11d4af1ce1988795dcca4417794590c69eb74f0ee105e83186d3dca9ec67c4181f5fe1b923bc11f4ee299cef1139abd10023a87a5cb4ba17b04a4687
+Size (python-driver-3.1.0.tar.gz) = 453774 bytes
