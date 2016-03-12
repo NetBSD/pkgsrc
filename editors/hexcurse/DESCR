@@ -1,0 +1,6 @@
+Hexcurse is an ncurses-based hex editing utility that can open, edit and save
+files, editing both the hexadecimal and decimal values.
+
+It currently supports searching, hex and decimal address output, jumping to
+specified locations in the file, "undo" capabilities, "bolded" modifications,
+EBCDIC mode, and quick keyboard shortcuts to commands.
