@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/03/12 11:49:19 tnn Exp $
+
+SHA1 (ansifilter-1.15.tar.bz2) = af42df7b6029bd8e0c0fe056518d1e1beee7e0e1
+RMD160 (ansifilter-1.15.tar.bz2) = fe8dfbbb39f0c0949ada2c30ba8c4655ca2b5a3c
+SHA512 (ansifilter-1.15.tar.bz2) = 7b624b11579c4a88271325054a6023d139ea7ff67fc5552b8ab8387eb16ea54c40c586f242a5ab7f8dd6bf226041bc61a03b5c6acb50e8f915341bd7cd9cdff8
+Size (ansifilter-1.15.tar.bz2) = 79966 bytes
