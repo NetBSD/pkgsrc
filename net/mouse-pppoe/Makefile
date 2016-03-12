@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2013/04/06 03:45:21 rodent Exp $
+# $NetBSD: Makefile,v 1.19 2016/03/12 23:09:13 tnn Exp $
 
 DISTNAME=		pppoe.20000912
 PKGNAME=		mouse-${DISTNAME:S/./-/}
@@ -9,7 +9,7 @@ MASTER_SITES=		ftp://sparkle.rodents.montreal.qc.ca/pub/mouse/ftp.netbsd.org/ppp
 MAINTAINER=		mouse@NetBSD.org
 COMMENT=		PPP over Ethernet program by der Mouse
 
-NOT_FOR_PLATFORM=	Interix-*-* # no userland protocol stack support
+ONLY_FOR_PLATFORM=	NetBSD-*-*
 
 WRKSRC=			${WRKDIR}
 INSTALLATION_DIRS=	sbin share/doc/mouse_pppoe
