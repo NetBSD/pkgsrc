@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.104 2015/11/25 13:05:47 jperkin Exp $
+# $NetBSD: java-vm.mk,v 1.105 2016/03/12 06:27:17 tnn Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -100,17 +100,18 @@ _PKG_JVM_DEFAULT?=	openjdk8
 .  elif !empty(MACHINE_PLATFORM:MNetBSD-[789].*-sparc64) || \
 	!empty(MACHINE_PLATFORM:MNetBSD-[789].*-earmv[67]hf)
 _PKG_JVM_DEFAULT?=	openjdk8
-.  elif !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || \
-        !empty(MACHINE_PLATFORM:MLinux-*-i[3456]86) || \
-        !empty(MACHINE_PLATFORM:MLinux-*-x86_64)
+.  elif !empty(MACHINE_PLATFORM:MNetBSD-[1234].*-i386)
 _PKG_JVM_DEFAULT?=	sun-jdk6
+.  elif !empty(MACHINE_PLATFORM:MLinux-*-i[3456]86) || \
+        !empty(MACHINE_PLATFORM:MLinux-*-x86_64)
+_PKG_JVM_DEFAULT?=	oracle-jdk8
 .  elif !empty(MACHINE_PLATFORM:MDarwin-*-*)
 _PKG_JVM_DEFAULT?=	sun-jdk6
 .  elif !empty(MACHINE_PLATFORM:MSunOS-5.11-i386) || \
         !empty(MACHINE_PLATFORM:MSunOS-5.11-x86_64)
-_PKG_JVM_DEFAULT?=	openjdk7
+_PKG_JVM_DEFAULT?=	openjdk8
 .  elif !empty(MACHINE_PLATFORM:MDragonFly-*-*)
-_PKG_JVM_DEFAULT?=	openjdk7
+_PKG_JVM_DEFAULT?=	openjdk8
 .  else
 _PKG_JVM_DEFAULT?=	kaffe
 .  endif
