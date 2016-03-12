@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2016/01/31 02:44:23 mef Exp $
+# $NetBSD: Makefile,v 1.12 2016/03/12 23:02:11 tnn Exp $
 
 DISTNAME=	ffmpeg2theora-0.30
 CATEGORIES=	multimedia
@@ -15,6 +15,8 @@ BUILD_DEPENDS+=		scons>=1.3.1:../../devel/scons
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 
+# for rintf(3)
+LDFLAGS.Linux+=	-lm
 LDFLAGS.SunOS+=	-lm
 
 SCONS=		${PREFIX}/bin/scons
