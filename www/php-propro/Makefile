@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2015/12/19 14:27:15 taca Exp $
+# $NetBSD: Makefile,v 1.3 2016/03/12 08:34:33 fhajny Exp $
 
 MODNAME=	propro
-PECL_VERSION=	1.0.0
+PECL_VERSION=	1.0.2
 CATEGORIES=	www
 
 MAINTAINER=	rodent@NetBSD.org
@@ -21,6 +21,8 @@ PLIST_SRC+=		PLIST
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/php_propro.h \
+		${DESTDIR}${PREFIX}/include/php/ext/propro
+	${INSTALL_DATA} ${WRKSRC}/src/php_propro_api.h \
 		${DESTDIR}${PREFIX}/include/php/ext/propro
 
 .include "../../lang/php/ext.mk"
