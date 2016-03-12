@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/08/09 08:04:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2016/03/12 11:12:40 ryoon Exp $
 include/libxklavier/xkl-enum-types.h
 include/libxklavier/xkl_config_item.h
 include/libxklavier/xkl_config_rec.h
@@ -6,20 +6,21 @@ include/libxklavier/xkl_config_registry.h
 include/libxklavier/xkl_engine.h
 include/libxklavier/xkl_engine_marshal.h
 include/libxklavier/xklavier.h
+lib/girepository-1.0/Xkl-1.0.typelib
 lib/libxklavier.la
 lib/pkgconfig/libxklavier.pc
+share/gir-1.0/Xkl-1.0.gir
 share/gtk-doc/html/libxklavier/XklConfigItem.html
 share/gtk-doc/html/libxklavier/XklConfigRec.html
 share/gtk-doc/html/libxklavier/XklConfigRegistry.html
-share/gtk-doc/html/libxklavier/XklEngine.html
 share/gtk-doc/html/libxklavier/ch01.html
 share/gtk-doc/html/libxklavier/ch02.html
 share/gtk-doc/html/libxklavier/home.png
 share/gtk-doc/html/libxklavier/index.html
 share/gtk-doc/html/libxklavier/index.sgml
 share/gtk-doc/html/libxklavier/left.png
+share/gtk-doc/html/libxklavier/libxklavier-xkl-engine.html
 share/gtk-doc/html/libxklavier/libxklavier-xklavier.html
-share/gtk-doc/html/libxklavier/libxklavier.devhelp
 share/gtk-doc/html/libxklavier/libxklavier.devhelp2
 share/gtk-doc/html/libxklavier/right.png
 share/gtk-doc/html/libxklavier/style.css
