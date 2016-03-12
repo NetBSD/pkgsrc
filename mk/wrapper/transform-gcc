@@ -1,4 +1,4 @@
-# $NetBSD: transform-gcc,v 1.30 2016/03/11 23:03:31 khorben Exp $
+# $NetBSD: transform-gcc,v 1.31 2016/03/12 21:22:04 khorben Exp $
 #
 # This file handles the transformations needed for gcc that can be done
 # looking at only one argument at a time.
@@ -72,6 +72,7 @@ case $arg in
 -O[23s]			|\
 -pedantic		|\
 -pedantic-errors	|\
+-pie			|\
 -pipe			|\
 -pthread		|\
 -print-prog-name=*	|\
