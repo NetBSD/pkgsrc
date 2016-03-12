@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2016/03/05 11:27:58 jperkin Exp $
+# $NetBSD: Makefile,v 1.10 2016/03/12 21:53:39 tnn Exp $
 
 DISTNAME=	elementary-1.7.7
 PKGREVISION=	5
@@ -21,7 +21,7 @@ USE_TOOLS+=	gmake
 # override for hardcoded aclocal-1.13 in configure script
 CONFIGURE_ENV+=	ACLOCAL='aclocal'
 # override for hardcoded automake-1.13 in Makefiles
-MAKEFLAGS+=	AUTOMAKE="automake -af"
+MAKE_FLAGS+=	AUTOMAKE="automake -af"
 
 PKGCONFIG_OVERRIDE=	elementary
 
