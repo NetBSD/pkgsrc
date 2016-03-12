@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1131 2016/03/12 09:54:05 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.1132 2016/03/12 11:13:22 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1517,3 +1517,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added www/php-http3 version 3.0.1 [fhajny 2016-03-12]
 	Updated security/php-oauth to 2.0.1 [fhajny 2016-03-12]
 	Updated databases/py-cassandra-driver to 3.1.0 [fhajny 2016-03-12]
+	Updated x11/libxklavier to 5.4 [ryoon 2016-03-12]
