@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2016/02/26 10:57:46 jperkin Exp $
+# $NetBSD: Makefile,v 1.32 2016/03/12 21:53:39 tnn Exp $
 #
 
 DISTNAME=	mMosaic-3.7.2
@@ -16,12 +16,11 @@ WRKSRC=		${WRKDIR}/mMosaic-src-3.7.2
 
 INSTALLATION_DIRS=	bin
 
-OPSYSVARS+=		MAKEFLAGS
-MAKEFLAGS.DragonFly+=	sysconfigflags='-DFreeBSD -DMOTIF1_2'
-MAKEFLAGS.FreeBSD+=	sysconfigflags='-DFreeBSD -DMOTIF1_2'
-MAKEFLAGS.IRIX+=	sysconfigflags='-DSVR4 -DIRIX -DMOTIF1_2'
-MAKEFLAGS.Linux+=	sysconfigflags='-DLINUX -Dlinux -DMOTIF1_2'
-MAKEFLAGS.NetBSD+=	sysconfigflags='-DNETBSD -DMOTIF1_2'
+MAKE_FLAGS.DragonFly+=	sysconfigflags='-DFreeBSD -DMOTIF1_2'
+MAKE_FLAGS.FreeBSD+=	sysconfigflags='-DFreeBSD -DMOTIF1_2'
+MAKE_FLAGS.IRIX+=	sysconfigflags='-DSVR4 -DIRIX -DMOTIF1_2'
+MAKE_FLAGS.Linux+=	sysconfigflags='-DLINUX -Dlinux -DMOTIF1_2'
+MAKE_FLAGS.NetBSD+=	sysconfigflags='-DNETBSD -DMOTIF1_2'
 
 BUILDLINK_TRANSFORM.Darwin+=	opt:-shared:-c
 

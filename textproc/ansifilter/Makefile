@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/03/12 11:49:19 tnn Exp $
+# $NetBSD: Makefile,v 1.2 2016/03/12 21:53:39 tnn Exp $
 
 DISTNAME=	ansifilter-1.15
 CATEGORIES=	textproc
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v3
 USE_LANGUAGES=	c++
 
 MAKE_FILE=	makefile
-MAKEFLAGS+=	PREFIX=${PREFIX:Q}
-MAKEFLAGS+=	man_dir=${PREFIX:Q}/${PKGMANDIR}/man1
+MAKE_FLAGS+=	PREFIX=${PREFIX:Q}
+MAKE_FLAGS+=	man_dir=${PREFIX:Q}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"
