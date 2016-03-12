@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2015/11/25 20:46:28 leot Exp $
+# $NetBSD: Makefile,v 1.24 2016/03/12 09:05:22 wiz Exp $
 
-PKGNAME=	lintpkgsrc-4.91
+PKGNAME=	lintpkgsrc-4.92
 CATEGORIES=	pkgtools
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
