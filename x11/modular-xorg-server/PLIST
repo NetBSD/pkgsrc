@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2016/01/05 13:04:23 tnn Exp $
+@comment $NetBSD: PLIST,v 1.25 2016/03/12 08:50:50 wiz Exp $
 bin/X
 bin/Xnest
 bin/Xorg
@@ -24,6 +24,7 @@ include/xorg/damage.h
 include/xorg/damagestr.h
 include/xorg/dbestruct.h
 include/xorg/dgaproc.h
+include/xorg/displaymode.h
 include/xorg/dix.h
 include/xorg/dixaccess.h
 include/xorg/dixevents.h
