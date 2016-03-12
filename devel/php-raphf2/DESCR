@@ -1,0 +1,1 @@
+A reusable split-off of pecl_http's persistent handle and resource factory API.
