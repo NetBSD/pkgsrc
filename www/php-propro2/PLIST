@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2016/03/12 09:12:52 fhajny Exp $
+include/php/ext/propro/php_propro.h
+include/php/ext/propro/php_propro_api.h
