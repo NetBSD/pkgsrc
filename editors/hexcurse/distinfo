@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/03/12 12:03:54 tnn Exp $
+
+SHA1 (hexcurse-1.60.0.tar.gz) = 6cc1159c1e8b2ff13a1788eae6440f3be1d95cca
+RMD160 (hexcurse-1.60.0.tar.gz) = a23b8f45b665ad28bfbe5b524fbb63b088ac80f9
+SHA512 (hexcurse-1.60.0.tar.gz) = 2301f10e9190922fc61cbbe3a834826ebf87bc5ece9191d368181e2336af240e68cbe46e3a60dee3e0e42281b2f05ae4a7060ee1083b37f4906eacc66e58a094
+Size (hexcurse-1.60.0.tar.gz) = 171904 bytes
