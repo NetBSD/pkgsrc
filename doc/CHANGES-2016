@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1126 2016/03/12 08:51:04 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1127 2016/03/12 08:51:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1510,3 +1510,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/php-propro to 1.0.2 [fhajny 2016-03-12]
 	Updated www/php-http to 2.5.6nb1 [fhajny 2016-03-12]
 	Updated x11/modular-xorg-server to 1.18.2 [wiz 2016-03-12]
+	Updated x11/modular-xorg-xephyr to 1.18.2 [wiz 2016-03-12]
