@@ -1,6 +1,6 @@
 #! @PERL@
 
-# $NetBSD: lintpkgsrc.pl,v 1.10 2016/03/12 09:05:22 wiz Exp $
+# $NetBSD: lintpkgsrc.pl,v 1.11 2016/03/12 09:06:29 wiz Exp $
 
 # Written by David Brownlee <abs@netbsd.org>.
 #
@@ -252,9 +252,8 @@ sub main() {
     # List obsolete or NO_BIN_ON_FTP/RESTRICTED prebuilt packages
     #
     if ( $opt{p} || $opt{O} || $opt{R} ) {
-        if ( $opt{p} || $opt{O} || $opt{R} ) {
-            scan_pkgsrc_makefiles($pkgsrcdir);
-        }
+	scan_pkgsrc_makefiles($pkgsrcdir);
+
         @prebuilt_pkgdirs      = ( $default_vars->{PACKAGES} );
         %prebuilt_pkgdir_cache = ();
 
