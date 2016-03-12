@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1157 2016/03/05 05:35:00 taca Exp $
+# $NetBSD: Makefile,v 1.1158 2016/03/12 09:26:51 fhajny Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -539,11 +539,13 @@ SUBDIR+=	php-concrete5
 SUBDIR+=	php-curl
 SUBDIR+=	php-fpm
 SUBDIR+=	php-http
+SUBDIR+=	php-http3
 SUBDIR+=	php-ja-wordpress
 SUBDIR+=	php-owncloud
 SUBDIR+=	php-phrasea2
 SUBDIR+=	php-piwigo
 SUBDIR+=	php-propro
+SUBDIR+=	php-propro2
 SUBDIR+=	php-soycms
 SUBDIR+=	php-tidy
 SUBDIR+=	php-tiki6
