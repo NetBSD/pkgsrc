@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2016/02/26 10:24:11 jperkin Exp $
+# $NetBSD: Makefile,v 1.29 2016/03/12 23:07:33 ryoon Exp $
 
 CONSOLEKIT_VER=		0.4.6
 DISTNAME=		ConsoleKit-${CONSOLEKIT_VER}
 PKGNAME=		consolekit-${CONSOLEKIT_VER}
+PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.freedesktop.org/software/ConsoleKit/dist/
 EXTRACT_SUFX=		.tar.xz
@@ -15,10 +16,10 @@ LICENSE=	gnu-gpl-v2
 PKG_SYSCONFSUBDIR=	ConsoleKit
 
 EGDIR=		${PREFIX}/share/examples/consolekit
-CONF_FILES+=	${EGDIR}/00-primary.seat ${PKG_SYSCONFDIR}/seats.d/00-primary.seat
+CONF_FILES+=	${EGDIR}/00-primary.seat ${PKG_SYSCONFDIR}/run-seat.d/00-primary.seat
 CONF_FILES+=	${EGDIR}/ConsoleKit.conf ${PKG_SYSCONFBASE}/dbus-1/system.d/ConsoleKit.conf
 
-MAKE_DIRS=	${PKG_SYSCONFDIR}/seats.d
+MAKE_DIRS=	${PKG_SYSCONFDIR}/run-seat.d
 
 BUILD_DEFS+=		VARBASE
 BUILD_DEFS+=		PKG_SYSCONFBASE
