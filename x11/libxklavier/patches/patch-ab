@@ -1,11 +1,11 @@
-$NetBSD: patch-ab,v 1.10 2009/08/09 08:04:24 wiz Exp $
+$NetBSD: patch-ab,v 1.11 2016/03/12 11:12:40 ryoon Exp $
 
---- Makefile.in.orig	2009-06-28 13:09:35.000000000 +0000
+--- Makefile.in.orig	2013-04-23 23:03:22.000000000 +0000
 +++ Makefile.in
-@@ -216,7 +216,7 @@ top_build_prefix = @top_build_prefix@
+@@ -353,7 +353,7 @@ top_build_prefix = @top_build_prefix@
  top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
- ACLOCAL_AMFLAGS = -I m4
+ ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
 -SUBDIRS = libxklavier doc tests
 +SUBDIRS = libxklavier doc
  EXTRA_DIST = libxklavier.spec libxklavier.spec.in \
