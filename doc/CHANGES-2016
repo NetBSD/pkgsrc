@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1121 2016/03/12 02:23:10 khorben Exp $
+$NetBSD: CHANGES-2016,v 1.1122 2016/03/12 03:47:57 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1503,3 +1503,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added databases/pgpool2 version 3.5.0 [fhajny 2016-03-11]
 	Updated net/nsd to 4.1.8 [pettai 2016-03-11]
 	Updated x11/deforaos-keyboard to 0.3.0 [khorben 2016-03-12]
+	Updated www/firefox38 to 38.7.0 [ryoon 2016-03-12]
