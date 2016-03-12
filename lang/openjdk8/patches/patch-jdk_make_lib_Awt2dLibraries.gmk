@@ -1,8 +1,8 @@
-$NetBSD: patch-jdk_make_lib_Awt2dLibraries.gmk,v 1.1 2015/07/03 20:40:59 fhajny Exp $
+$NetBSD: patch-jdk_make_lib_Awt2dLibraries.gmk,v 1.2 2016/03/12 07:31:02 tnn Exp $
 
 GCC support.
 
---- jdk/make/lib/Awt2dLibraries.gmk.orig	2015-06-10 10:36:24.000000000 +0000
+--- jdk/make/lib/Awt2dLibraries.gmk.orig	2016-02-19 14:48:27.000000000 +0000
 +++ jdk/make/lib/Awt2dLibraries.gmk
 @@ -695,7 +695,6 @@ $(eval $(call SetupNativeCompilation,BUI
          $(SHARED_LIBRARY_FLAGS) \
@@ -12,3 +12,12 @@ GCC support.
      CFLAGS_windows := -DCMS_IS_WINDOWS_, \
      MAPFILE := $(JDK_TOPDIR)/make/mapfiles/liblcms/mapfile-vers, \
      LDFLAGS := $(LDFLAGS_JDKLIB) \
+@@ -1070,7 +1069,7 @@ else # OPENJDK_TARGET_OS not windows
+       JAWT_LIBS += -lawt
+     endif
+     ifndef BUILD_HEADLESS_ONLY
+-      JAWT_LIBS += -lawt_xawt
++      JAWT_LIBS += $(X_LIBS) -lawt_xawt
+     else
+       JAWT_LIBS += -lawt_headless
+       HEADLESS_CFLAG += -DHEADLESS
