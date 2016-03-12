@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15580 2016/03/11 20:34:49 asau Exp $
+$NetBSD: TODO,v 1.15581 2016/03/12 09:29:30 fhajny Exp $
 
 Suggested new packages
 ======================
@@ -1571,14 +1571,12 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o php-apcu-4.0.10
 	o php-excel-1.8.1
 	o php-geoip-1.1.0
-	o php-http-3.0.0
 	o php-ja-wordpress-4.4.2
 	o php-jpgraph-3.5.0b1
 	o php-libawl-0.54
 	o php-memcache-3.0.8
-	o php-mrbs-1.5.0
-	o php-memcache-3.0.8
 	o php-ming-0.4.7
+	o php-mrbs-1.5.0
 	o php-mongo-1.6.12
 	o php-mongodb-1.1.2
 	o php-oauth-2.0.0
@@ -1587,9 +1585,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o php-owncloud-9.0
 	o php-pdflib-3.0.4 (require pdflib 7 or later)
 	o php-phrasea2-3.8.6 (php-phrasea-3.8.6?)
-	o php-propro-2.0.0
 	o php-pthread-3.1.6
-	o php-raphf-2.0.0
 	o php-rrd-2.0.0
 	o php-soycms-1.8.11
 	o php-sqlrelay-0.64
