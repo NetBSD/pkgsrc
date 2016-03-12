@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2016/03/12 11:49:19 tnn Exp $
+bin/ansifilter
+man/man1/ansifilter.1
+share/doc/ansifilter/COPYING
+share/doc/ansifilter/ChangeLog
+share/doc/ansifilter/INSTALL
+share/doc/ansifilter/README
