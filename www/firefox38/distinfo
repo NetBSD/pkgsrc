@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.14 2016/02/19 14:42:33 ryoon Exp $
+$NetBSD: distinfo,v 1.15 2016/03/12 03:47:20 ryoon Exp $
 
-SHA1 (firefox-38.6.1esr.source.tar.bz2) = b3b5712ba27e70536cd589ec212b42518819871b
-RMD160 (firefox-38.6.1esr.source.tar.bz2) = f28f8245f5bfc197f9fd931520eab42a0ec6b441
-SHA512 (firefox-38.6.1esr.source.tar.bz2) = e80161a8cf95ab46cf49018c1105c986a412405e3bdb7535fc7ad5e68195f8ebe799624ed482576538a785ff2a4fdad5d1cf594566180035c2bfc9a4eb9b790c
-Size (firefox-38.6.1esr.source.tar.bz2) = 181332690 bytes
+SHA1 (firefox-38.7.0esr.source.tar.bz2) = 42dbd9ef7e3b5b4aabd2dee602e982146b457d18
+RMD160 (firefox-38.7.0esr.source.tar.bz2) = b638c2020d6130f013f51ea6fcb272a9b7e37e95
+SHA512 (firefox-38.7.0esr.source.tar.bz2) = edb8cdb06d82a58c3dca216402a4df0afb21bcaf97cbf3ebc3857249b281283f099267284f025fb724f47eff9c3b7569f6ae000003332c47264ca254f73e65ca
+Size (firefox-38.7.0esr.source.tar.bz2) = 181313049 bytes
 SHA1 (patch-aa) = e9e8400fa86ae8d6910b49e3a98127122e714f1a
 SHA1 (patch-accessible_atk_Platform.cpp) = c2deb81b300de44c4500328589185bbd4b6b02fb
 SHA1 (patch-al) = cca5df21d018bb9f428ad26d00718f33afe88ec5
