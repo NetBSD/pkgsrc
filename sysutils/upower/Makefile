@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2016/02/26 10:24:14 jperkin Exp $
+# $NetBSD: Makefile,v 1.7 2016/03/12 11:50:08 ryoon Exp $
 
-DISTNAME=	upower-0.99.3
+DISTNAME=	upower-0.99.4
 CATEGORIES=	sysutils
 MASTER_SITES=	http://upower.freedesktop.org/releases/
 EXTRACT_SUFX=	.tar.xz
