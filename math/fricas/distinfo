@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.16 2015/11/03 23:33:33 agc Exp $
+$NetBSD: distinfo,v 1.17 2016/03/12 20:54:23 asau Exp $
 
-SHA1 (fricas-1.2.6-full.tar.bz2) = adafb5e9c1785d0a6db7f1062e2fbbcdb45faf44
-RMD160 (fricas-1.2.6-full.tar.bz2) = 4c8122e70421aedfdcd511f5ad653f3eab8ef909
-SHA512 (fricas-1.2.6-full.tar.bz2) = 6c98844b6815bd6bfbe50881179b746aa38af48e3992179e3746bd175ef2a0940d9855e79b66b1b5e34d9fc9fe1b8f3578483847b18d7cc2781f7f72b65fb2ac
-Size (fricas-1.2.6-full.tar.bz2) = 10196018 bytes
+SHA1 (fricas-1.2.7-full.tar.bz2) = f476a535ba189658cbc6055a951867c0c23787e4
+RMD160 (fricas-1.2.7-full.tar.bz2) = 4e7d7dbe33cdea115ddd00300d37203b293d61dc
+SHA512 (fricas-1.2.7-full.tar.bz2) = 1e6e34dc0e4b535bf937ebdefb5099629b2893e6db0dba8b84f259e2a3b7244692ab704dd04aa24f257089661f6747d8f367d0f58bb8cebd652469cb58c72897
+Size (fricas-1.2.7-full.tar.bz2) = 10289500 bytes
