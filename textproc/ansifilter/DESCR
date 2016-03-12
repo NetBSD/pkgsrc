@@ -1,0 +1,4 @@
+Ansifilter converts text containing ANSI terminal escape codes into
+markup (HTML, LaTeX, TeX, RTF) or plaintext (stripping the escape codes).
+Such text is produced for instance by the script(1) utility.
+Colors, boldface, underline, italic and blink are supported.
