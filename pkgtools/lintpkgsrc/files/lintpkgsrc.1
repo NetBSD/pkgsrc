@@ -1,16 +1,16 @@
-.\"	$NetBSD: lintpkgsrc.1,v 1.4 2014/11/24 09:50:34 wiz Exp $
+.\"	$NetBSD: lintpkgsrc.1,v 1.5 2016/03/12 09:05:22 wiz Exp $
 .\"
 .\" Copyright (c) 1999 by David Brownlee (abs@netbsd.org)
 .\" Absolutely no warranty.
 .\"
-.Dd November 24, 2014
+.Dd March 12, 2016
 .Dt LINTPKGSRC 1
 .Sh NAME
 .Nm lintpkgsrc
 .Nd verifier for the pkgsrc tree
 .Sh SYNOPSIS
 .Nm
-.Op Fl BDdLlmOopRrSuVyz
+.Op Fl BDdLlmOopRrSuyz
 .Op Fl E Ar file
 .Op Fl g Ar pkgsrcmap
 .Op Fl I Ar file
@@ -62,7 +62,6 @@ with any combination of
 .Fl O ,
 .Fl R ,
 .Fl S ,
-.Fl V ,
 .Fl d ,
 .Fl g ,
 .Fl i ,
@@ -81,10 +80,9 @@ or defaulted to
 Note: lintpkgsrc treats
 .Em PACKAGES
 slightly differently to the pkgsrc build system.
-.Fl p ,
-.Fl R ,
+.Fl p
 and
-.Fl V
+.Fl R
 check for
 binary packages in any depth of PACKAGES subdirs - this allows packages for all
 architectures/OS versions to be checked simultaneously with an
@@ -157,11 +155,6 @@ to ensure all the distfiles needed for
 the latest version are present.
 .Pp
 Warning: The behaviour of this command may change in a later version.
-.It Fl V
-List any prebuilt packages in any subdirs of
-.Em PACKAGES
-with known vulnerabilities, based on the data in
-.Pa ${PKGSRCDIR}/distfiles/pkg-vulnerabilities .
 .It Fl y
 Remove orphaned distfiles, i.e., those that do not belong to any
 currently installed package.
@@ -172,8 +165,7 @@ Remove distfiles for currently installed packages.
 .An David Brownlee Aq Mt abs@netbsd.org
 .Sh BUGS
 The
-.Fl R ,
-.Fl V ,
+.Fl R
 and
 .Fl p
 options default to using
