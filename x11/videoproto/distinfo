@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/04 03:28:55 agc Exp $
+$NetBSD: distinfo,v 1.6 2016/03/12 08:14:05 wiz Exp $
 
-SHA1 (videoproto-2.3.2.tar.bz2) = aa60e3b93c6a78ad03f1c502b910e7c45faaedbc
-RMD160 (videoproto-2.3.2.tar.bz2) = 757708123766bd377fd18c7311d00562d3f5025a
-SHA512 (videoproto-2.3.2.tar.bz2) = 57ca8981b217724e4e0599624e6d8077aca0f2568855c54b74dbf5e03d25864eb114540b02a49c11487beb03d55d52efc09d8a7fb86a3078a4d52f4a3042ef36
-Size (videoproto-2.3.2.tar.bz2) = 118862 bytes
+SHA1 (videoproto-2.3.3.tar.bz2) = 4556b5c2243a2ca290ea2140dc1a427c4bac8ba2
+RMD160 (videoproto-2.3.3.tar.bz2) = 1c0b0e4b8bd6f205da9d8df3b4a2d477b9fde8be
+SHA512 (videoproto-2.3.3.tar.bz2) = 84136f7ba15e86ef7e178af4ca70c4c0f0a83fb37e9e39c2564c31762439453c5e7b85934366b711261d454615a57314cf75ac35a17544cb186bad301e920cf5
+Size (videoproto-2.3.3.tar.bz2) = 121016 bytes
