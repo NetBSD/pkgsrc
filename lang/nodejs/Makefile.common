@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2016/02/25 14:42:56 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.5 2016/03/12 12:34:44 tnn Exp $
 # used by lang/nodejs/Makefile
 # used by lang/nodejs4/Makefile
 
@@ -25,6 +25,7 @@ GCC_REQD+=		4.8
 CONFIG_SHELL=		${PYTHONBIN}
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--shared-zlib
+PTHREAD_AUTO_VARS=	yes
 
 CONFIGURE_ENV.NetBSD+=	GYP_DEFINES="OS=netbsd"
 MAKE_ENV.NetBSD+=	GYP_DEFINES="OS=netbsd"
@@ -51,3 +52,4 @@ pre-install:
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
+.include "../../mk/pthread.buildlink3.mk"
