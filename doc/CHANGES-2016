@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1134 2016/03/12 11:50:05 tnn Exp $
+$NetBSD: CHANGES-2016,v 1.1135 2016/03/12 11:51:06 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1520,3 +1520,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated x11/libxklavier to 5.4 [ryoon 2016-03-12]
 	Updated devel/git to 2.7.3 [adam 2016-03-12]
 	Added textproc/ansifilter version 1.15 [tnn 2016-03-12]
+	Updated sysutils/upower to 0.99.4 [ryoon 2016-03-12]
