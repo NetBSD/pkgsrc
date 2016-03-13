@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2015/11/08 21:55:11 dholland Exp $
+# $NetBSD: Makefile,v 1.18 2016/03/13 07:56:12 dholland Exp $
 
 DISTNAME=		repackaged-${PKGNAME_NOREV}
 PKGNAME=		nasd-1.3
@@ -25,7 +25,7 @@ pre-patch:
 	${MKDIR} ${WRKSRC}/common/netbsd
 
 do-configure:
-	cd ${WRKSRC} && ${SETENV} NASD_DESTDIR=${PREFIX}/nasd ./itomf -m ${TOOLS_PATH.makedepend} -x ${X11BASE}/lib/X11/config
+	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} NASD_DESTDIR=${PREFIX}/nasd ./itomf -m ${TOOLS_PATH.makedepend} -x ${X11BASE}/lib/X11/config
 
 .include "../../mk/pthread.buildlink3.mk"
 
