@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.43 2016/03/13 08:38:54 dholland Exp $
+# $NetBSD: Makefile,v 1.44 2016/03/13 09:08:40 dholland Exp $
 #
 
 DISTNAME=		nocol-4.3.1
 PKGREVISION=		12
 CATEGORIES=		net
-MASTER_SITES=	http://www.netplex-tech.com/software/nocol/downloads/
+MASTER_SITES=		http://www.netplex-tech.com/software/nocol/downloads/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.netplex-tech.com/software/nocol/
@@ -52,17 +52,18 @@ SUBST_FILES.answers=	answers
 SUBST_VARS.answers=	PREFIX PKGMANDIR FQDN
 
 pre-configure:
-	@${CP} ${PKGSRCDIR}/mk/gnu-config/config.guess ${WRKSRC}/cmu-snmp/snmp
-	@${CP} ${PKGSRCDIR}/mk/gnu-config/config.guess ${WRKSRC}/cmu-snmp/snmpapps
-	@${CP} ${PKGSRCDIR}/mk/gnu-config/config.sub ${WRKSRC}/cmu-snmp/snmp
-	@${CP} ${PKGSRCDIR}/mk/gnu-config/config.sub ${WRKSRC}/cmu-snmp/snmpapps
+	${CP} ${PKGSRCDIR}/mk/gnu-config/config.guess ${WRKSRC}/cmu-snmp/snmp
+	${CP} ${PKGSRCDIR}/mk/gnu-config/config.guess ${WRKSRC}/cmu-snmp/snmpapps
+	${CP} ${PKGSRCDIR}/mk/gnu-config/config.sub ${WRKSRC}/cmu-snmp/snmp
+	${CP} ${PKGSRCDIR}/mk/gnu-config/config.sub ${WRKSRC}/cmu-snmp/snmpapps
 
 post-install:
-	for f in critical.wav error.wav warning.wav ; do		\
-	    ${INSTALL_DATA} ${WRKSRC}/webnocol/$$f ${DESTDIR}${PREFIX}/share/nocol; \
+	set -e; for f in critical.wav error.wav warning.wav ; do	\
+	    ${INSTALL_DATA} ${WRKSRC}/webnocol/$$f			\
+			    ${DESTDIR}${PREFIX}/share/nocol;		\
 	done
 
-	for f in bluesq.gif critical.jpg empty.gif error.jpg		\
+	set -e; for f in bluesq.gif critical.jpg empty.gif error.jpg	\
 		greensq.gif help.jpg info.jpg redsq.gif warning.jpg	\
 		yellowsq.gif ; do					\
 	    ${INSTALL_DATA} ${WRKSRC}/webnocol/gifs/$$f			\
