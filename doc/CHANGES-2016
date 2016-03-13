@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1143 2016/03/13 12:00:43 morr Exp $
+$NetBSD: CHANGES-2016,v 1.1144 2016/03/13 12:58:27 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1529,3 +1529,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-App-cpanminus to 1.7040 [mef 2016-03-13]
 	Updated games/lgogdownloader to 2.27 [wiz 2016-03-13]
 	Updated x11/rxvt-unicode to 9.22 [morr 2016-03-13]
+	Added devel/p5-Git-Version-Compare version 1.001 [wen 2016-03-13]
