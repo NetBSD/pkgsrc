@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2015/06/12 10:50:43 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2016/03/13 08:38:54 dholland Exp $
 #
 
 DISTNAME=		nocol-4.3.1
-PKGREVISION=		11
+PKGREVISION=		12
 CATEGORIES=		net
 MASTER_SITES=	http://www.netplex-tech.com/software/nocol/downloads/
 
@@ -37,22 +37,19 @@ INSTALL_MAKE_FLAGS+=	ROOTDIR=${DESTDIR}${PREFIX} \
 			DATADIR=${DESTDIR}/var/run/data \
 			MSGSDIR=${DESTDIR}/var/run/msgs
 
-post-patch:
-	@(hostname=`/bin/hostname`;					\
-	dir="";								\
-	for d in /usr/bin /usr/sbin `${ECHO} $$PATH | ${TR} ':' ' '`; do \
-		if [ -x $$d/host ]; then				\
-			dir=$$d;					\
-			break;						\
-		fi							\
-	done;								\
-	if [ "X$$dir" = "X" ]; then					\
-		${ECHO} "host program not found";			\
-		exit 1;							\
-	fi;								\
-	fqdn=`$$dir/host $$hostname | ${AWK} '{ print $$1; exit }'`;	\
-	${SED} -e 's|@prefix@|${PREFIX}|g' -e "s|@FQDN@|$$fqdn|g" 	\
-			${FILESDIR}/answers > ${WRKSRC}/answers)
+post-extract:
+	${CP} ${FILESDIR}/answers ${WRKSRC}/answers
+
+# XXX This is compiled in as the logging host. Compiling in "localhost"
+# lacks a certain something; however, for years it was compiling in the
+# name of the build host, or, not infrequently, something entirely
+# invalid.
+FQDN=			localhost
+
+SUBST_CLASSES+=		answers
+SUBST_STAGE.answers=	pre-configure
+SUBST_FILES.answers=	answers
+SUBST_VARS.answers=	PREFIX PKGMANDIR FQDN
 
 pre-configure:
 	@${CP} ${PKGSRCDIR}/mk/gnu-config/config.guess ${WRKSRC}/cmu-snmp/snmp

@@ -1,5 +1,5 @@
-@prefix@    
-@prefix@/man/mann
+@PREFIX@    
+@PREFIX@/@PKGMANDIR@/mann
 n
 @FQDN@
 /usr/bin/mail
@@ -8,4 +8,4 @@ root@@FQDN@
 cc
 -O
 yacc
-@prefix@/bin/perl
+@PREFIX@/bin/perl
