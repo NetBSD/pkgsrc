@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2015/11/04 01:32:41 agc Exp $
+$NetBSD: distinfo,v 1.12 2016/03/13 03:45:53 tnn Exp $
 
 SHA1 (Thunar-1.6.10.tar.bz2) = 53e6a3208b643a0108dee2d985b45e9ee2b94a35
 RMD160 (Thunar-1.6.10.tar.bz2) = d7a5207e3f9ef260804cb931ee737eb11f136ddf
@@ -9,3 +9,4 @@ SHA1 (patch-ac) = c6e773b16f82ce4be2537642fd8401ab04c6a26e
 SHA1 (patch-org.xfce.FileManager.service.in) = 42adca65fe2e9dd5ea9615cac0431767b0c0fdab
 SHA1 (patch-org.xfce.Thunar.service.in) = 8687725857e57009782ad5f3abe0c6d8c097cbba
 SHA1 (patch-thunar_Makefile.in) = 68533f585813efd97531971a7643041a25bd0a80
+SHA1 (patch-thunar_thunar-gdk-extensions.c) = 8086ad1ebadbde65bd6a310619760d6f9b70d2c8
