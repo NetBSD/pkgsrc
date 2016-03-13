@@ -1,10 +1,15 @@
-$NetBSD: patch-ar,v 1.2 2012/09/09 19:49:45 dholland Exp $
+$NetBSD: patch-ar,v 1.3 2016/03/13 09:06:01 dholland Exp $
 
-Don't declare own errno.
+- Use standard headers.
+- Don't declare own errno.
 
---- trapmon/trapmon.c.orig	2005-12-18 20:36:47.000000000 +0000
+--- trapmon/trapmon.c.orig	2000-01-27 05:16:53.000000000 +0000
 +++ trapmon/trapmon.c
-@@ -93,4 +93,2 @@ static char rcsid[] = 
+@@ -44,2 +44,3 @@
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <ctype.h>
+@@ -93,4 +94,2 @@ static char rcsid[] = 
  
 -extern int  errno;
 -
