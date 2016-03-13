@@ -118,7 +118,7 @@ func ChecklinesBuildlink3Mk(mklines *MkLines) {
 
 			if varname == "BUILDLINK_ABI_DEPENDS."+pkgbase {
 				abiLine = line
-				parser := NewParser(value)
+				parser := NewParser(line, value)
 				if dp := parser.Dependency(); dp != nil && parser.EOF() {
 					abi = dp
 				}
@@ -126,7 +126,7 @@ func ChecklinesBuildlink3Mk(mklines *MkLines) {
 			}
 			if varname == "BUILDLINK_API_DEPENDS."+pkgbase {
 				apiLine = line
-				parser := NewParser(value)
+				parser := NewParser(line, value)
 				if dp := parser.Dependency(); dp != nil && parser.EOF() {
 					api = dp
 				}
