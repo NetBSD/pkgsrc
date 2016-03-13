@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2014/12/25 05:10:38 obache Exp $
+# $NetBSD: Makefile,v 1.32 2016/03/13 07:45:12 dholland Exp $
 
 DISTNAME=	ivtools-1.2.8
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ivtools/}
 EXTRACT_SUFX=	.tgz
@@ -35,6 +35,7 @@ pre-install:
 	${RM} -f ${WRKSRC}/config/arch.def.orig
 
 .include "../../graphics/tiff/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
