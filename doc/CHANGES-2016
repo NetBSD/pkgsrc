@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1151 2016/03/13 18:17:05 adam Exp $
+$NetBSD: CHANGES-2016,v 1.1152 2016/03/13 18:32:49 schnoebe Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1540,3 +1540,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/p5-Crypt-ECB to 2.10 [wiz 2016-03-13]
 	Updated net/php-baikal to 0.3.5 [wiz 2016-03-13]
 	Updated www/sassc to 3.3.3 [adam 2016-03-13]
+	Updated comms/conserver8 to 8.2.1 [schnoebe 2016-03-13]
