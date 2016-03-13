@@ -6,7 +6,7 @@ import (
 
 func (s *Suite) TestParser_PkgbasePattern(c *check.C) {
 	test := func(pattern, expected, rest string) {
-		parser := NewParser(pattern)
+		parser := NewParser(dummyLine, pattern)
 		actual := parser.PkgbasePattern()
 		c.Check(actual, equals, expected)
 		c.Check(parser.Rest(), equals, rest)
@@ -22,7 +22,7 @@ func (s *Suite) TestParser_PkgbasePattern(c *check.C) {
 func (s *Suite) TestParser_Dependency(c *check.C) {
 
 	testDependencyRest := func(pattern string, expected DependencyPattern, rest string) {
-		parser := NewParser(pattern)
+		parser := NewParser(dummyLine, pattern)
 		dp := parser.Dependency()
 		if c.Check(dp, check.NotNil) {
 			c.Check(*dp, equals, expected)
@@ -53,7 +53,7 @@ func (s *Suite) TestParser_Dependency(c *check.C) {
 
 func (s *Suite) TestParser_MkTokens(c *check.C) {
 	parse := func(input string, expectedTokens []*MkToken, expectedRest string) {
-		p := NewParser(input)
+		p := NewParser(dummyLine, input)
 		actualTokens := p.MkTokens()
 		c.Check(actualTokens, deepEquals, expectedTokens)
 		for i, expectedToken := range expectedTokens {
@@ -109,7 +109,6 @@ func (s *Suite) TestParser_MkTokens(c *check.C) {
 	token("${_PERL5_VARS_OUT:M${_var_:tl}=*:S/^${_var_:tl}=${_PERL5_PREFIX:=/}//}", varuse("_PERL5_VARS_OUT", "M${_var_:tl}=*", "S/^${_var_:tl}=${_PERL5_PREFIX:=/}//"))
 	token("${RUBY${RUBY_VER}_PATCHLEVEL}", varuse("RUBY${RUBY_VER}_PATCHLEVEL"))
 	token("${DISTFILES:M*.gem}", varuse("DISTFILES", "M*.gem"))
-	token("$(GNUSTEP_USER_ROOT)", varuse("GNUSTEP_USER_ROOT"))
 	token("${LOCALBASE:S^/^_^}", varuse("LOCALBASE", "S^/^_^"))
 	token("${SOURCES:%.c=%.o}", varuse("SOURCES", "%.c=%.o"))
 	token("${GIT_TEMPLATES:@.t.@ ${EGDIR}/${GIT_TEMPLATEDIR}/${.t.} ${PREFIX}/${GIT_CORE_TEMPLATEDIR}/${.t.} @:M*}",
@@ -135,13 +134,21 @@ func (s *Suite) TestParser_MkTokens(c *check.C) {
 	token("${VAR:ts\\000012}", varuse("VAR", "ts\\000012"))     // The separator character can be a long octal number.
 	token("${VAR:ts\\124}", varuse("VAR", "ts\\124"))           // Or even decimal.
 
+	token("$(GNUSTEP_USER_ROOT)", varuse("GNUSTEP_USER_ROOT"))
+	c.Check(s.Output(), equals, "WARN: Please use curly braces {} instead of round parentheses () for GNUSTEP_USER_ROOT.\n")
+
 	parse("${VAR)", nil, "${VAR)") // Opening brace, closing parenthesis
 	parse("$(VAR}", nil, "$(VAR}") // Opening parenthesis, closing brace
+	c.Check(s.Output(), equals, "WARN: Please use curly braces {} instead of round parentheses () for VAR.\n")
+
+	token("${PLIST_SUBST_VARS:@var@${var}=${${var}:Q}@}", varuse("PLIST_SUBST_VARS", "@var@${var}=${${var}:Q}@"))
+	token("${PLIST_SUBST_VARS:@var@${var}=${${var}:Q}}", varuse("PLIST_SUBST_VARS", "@var@${var}=${${var}:Q}")) // Missing @ at the end
+	c.Check(s.Output(), equals, "WARN: Modifier ${PLIST_SUBST_VARS:@var@...@} is missing the final \"@\".\n")
 }
 
 func (s *Suite) TestParser_MkCond_Basics(c *check.C) {
 	condrest := func(input string, expectedTree *Tree, expectedRest string) {
-		p := NewParser(input)
+		p := NewParser(dummyLine, input)
 		actualTree := p.MkCond()
 		c.Check(actualTree, deepEquals, expectedTree)
 		c.Check(p.Rest(), equals, expectedRest)
@@ -209,6 +216,8 @@ func (s *Suite) TestParser_MkCond_Basics(c *check.C) {
 		NewTree("compareVarNum", varuse("OS_VERSION"), ">=", "6.5"))
 	cond("${OS_VERSION} == 5.3",
 		NewTree("compareVarNum", varuse("OS_VERSION"), "==", "5.3"))
+	cond("!empty(${OS_VARIANT:MIllumos})", // Probably not intended
+		NewTree("not", NewTree("empty", varuse("${OS_VARIANT:MIllumos}"))))
 
 	// Errors
 	condrest("!empty(PKG_OPTIONS:Msndfile) || defined(PKG_OPTIONS:Msamplerate)",
