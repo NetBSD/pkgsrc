@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 03:29:22 agc Exp $
-
-SHA1 (debugger-linecache-1.2.0.gem) = c2f6599dadd3f4868b232b66a3c8a474500d9668
-RMD160 (debugger-linecache-1.2.0.gem) = 69900bfa924749c963a0114dcacd7cbd14bb4cfa
-SHA512 (debugger-linecache-1.2.0.gem) = deccae8f190da60a4e3b75017bf8bf691bcd3dad904bd153ed73d6b1b147ba710df0eff8b70449470f561f9227d43520faca69a45d765823c68650b2bb3ae65b
-Size (debugger-linecache-1.2.0.gem) = 15872 bytes
