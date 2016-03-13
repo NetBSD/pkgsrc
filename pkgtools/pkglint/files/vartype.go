@@ -179,7 +179,7 @@ var (
 	CheckvarPkgPath                = &VarChecker{"PkgPath", (*VartypeCheck).PkgPath}
 	CheckvarPkgOptionsVar          = &VarChecker{"PkgOptionsVar", (*VartypeCheck).PkgOptionsVar}
 	CheckvarPkgRevision            = &VarChecker{"PkgRevision", (*VartypeCheck).PkgRevision}
-	CheckvarPlatformTriple         = &VarChecker{"PlatformTriple", (*VartypeCheck).PlatformTriple}
+	CheckvarPlatformPattern        = &VarChecker{"PlatformPattern", (*VartypeCheck).PlatformPattern}
 	CheckvarPrefixPathname         = &VarChecker{"PrefixPathname", (*VartypeCheck).PrefixPathname}
 	CheckvarPythonDependency       = &VarChecker{"PythonDependency", (*VartypeCheck).PythonDependency}
 	CheckvarRelativePkgDir         = &VarChecker{"RelativePkgDir", (*VartypeCheck).RelativePkgDir}
