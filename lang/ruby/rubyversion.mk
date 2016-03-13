@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.159 2016/03/13 09:35:59 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.160 2016/03/13 15:52:51 taca Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -10,7 +10,7 @@
 # RUBY_VERSION_DEFAULT
 #	The preferered Ruby version to use.
 #
-#		Possible values: 18 200 21 22 23
+#		Possible values: 18 21 22 23
 #		Default: 22
 #
 # RUBY_BUILD_RDOC
@@ -41,8 +41,8 @@
 # RUBY_VERSION_SUPPORTED
 #	The Ruby versions that are acceptable for the package.
 #
-#		Possible values: 18 200 21 22 23
-#		Default: 200 21 22 23
+#		Possible values: 18 21 22 23
+#		Default: 21 22 23
 #
 # RUBY_NOVERSION
 #	If "Yes", the package dosen't depend on any version of Ruby, such
@@ -69,7 +69,7 @@
 # RUBY_VER
 #	Really selected version of ruby.
 #
-#		Possible values: 18 200 21 22 23
+#		Possible values: 18 21 22 23
 #
 #	Use this variable in pkgsrc's Makefile
 #
@@ -77,10 +77,8 @@
 #	Prefix part for ruby based packages.  It is recommended that to
 #	use RUBY_PKGPREFIX with ruby related packages since you can supply
 #	different binary packages as each version of Ruby.
-#	The value of RUBY_PKGPREFIX is "ruby-" and concatination of Ruby's
-#	major and minor version unless RUBY_VER is "200".
 #
-#		Example values: ruby18 ruby200 ruby21 ruby22 ruby23
+#		Example values: ruby18 ruby21 ruby22 ruby23
 #
 # RUBY_ABI_VERSION
 #	Ruby's ABI version.
@@ -108,10 +106,8 @@
 #
 # RUBY_SUFFIX
 #	Extra string for each ruby commands; ruby, irb and so on.
-#	The value of RUBY_SUFFIX is concatination of Ruby's major and minor
-#	unless RUBY_VER is "200".
 #
-#		Possible values: 18 200 21 22 23
+#		Possible values: 18 21 22 23
 #
 # RUBY_VERSION
 #	Version of real Ruby's version excluding patchlevel.
@@ -227,21 +223,18 @@ RUBY_VERSION_REQD?= ${PKGNAME_REQD:C/ruby([0-9][0-9]+)-.*/\1/}
 
 # current supported Ruby's version
 RUBY18_VERSION=		1.8.7
-RUBY200_VERSION=	2.0.0
 RUBY21_VERSION=		2.1.8
 RUBY22_VERSION=		2.2.4
 RUBY23_VERSION=		2.3.0
 
 # patch level
 RUBY18_PATCHLEVEL=	pl374
-RUBY200_PATCHLEVEL=	p648
 #RUBY21_PATCHLEVEL=	p440
 #RUBY22_PATCHLEVEL=	p230
 #RUBY23_PATCHLEVEL=	p0
 
 # current API compatible version; used for version of shared library
 RUBY18_API_VERSION=	1.8.7
-RUBY200_API_VERSION=	2.0.0
 RUBY21_API_VERSION=	2.1.0
 RUBY22_API_VERSION=	2.2.0
 RUBY23_API_VERSION=	2.3.0
@@ -255,7 +248,7 @@ RUBY_RDOC_PKGSRC_VERS=	4.2.2
 #
 RUBY_VERSION_DEFAULT?=	22
 
-RUBY_VERSION_SUPPORTED?= 22 23 21 200
+RUBY_VERSION_SUPPORTED?= 22 23 21
 
 .if defined(RUBY_VERSION_REQD)
 . for rv in ${RUBY_VERSION_SUPPORTED}
@@ -291,22 +284,6 @@ RUBY_ABI_VERSION=	${RUBY18_API_VERSION}
 RUBY_RDOC_VERSION=	1.0.1
 
 RUBY_SUFFIX=		${RUBY_VER}
-
-.elif ${RUBY_VER} == "200"
-RUBY_VERSION=		${RUBY200_VERSION}
-RUBY_VERSION_FULL=	${RUBY_VERSION}${RUBY_PATCHLEVEL}
-RUBY_ABI_VERSION=	${RUBY_VERSION}
-
-RUBY_GEMS_VERSION=	2.0.3
-RUBY_RDOC_VERSION=	4.1.0
-RUBY_RAKE_VERSION=	0.9.6
-RUBY_JSON_VERSION=	1.7.7
-
-RUBY_BIGDECIMAL_VERSION=	1.2.0
-RUBY_IO_CONSOLE_VERSION=	0.4.2
-RUBY_PSYCH_VERSION=		2.0.0
-RUBY_MINITEST_VERSION=		4.3.2
-RUBY_TEST_UNIT_VERSION=		2.0.0.0
 
 .elif ${RUBY_VER} == "21"
 RUBY_VERSION=		${RUBY21_VERSION}
@@ -382,7 +359,7 @@ MULTI+=	RUBY_VER=${RUBY_VERS:U${RUBY_VERSION_DEFAULT}}
 #	any specific version of ruby command.  In this case, package's
 #	name begin with "ruby-".
 #	If RUBY_NOVERSION is "No" (default), the package's name is begin
-#	with ${RUBY_NAME}; "ruby18", "ruby200",  and so on.
+#	with ${RUBY_NAME}; "ruby18", "ruby21",  and so on.
 #
 #	It also affects to RUBY_DOC, RUBY_EG...
 #
@@ -412,11 +389,7 @@ RUBY_PKGPREFIX?=	${RUBY_NAME}
 .if ${RUBY_VER} == "18"
 RUBY_VER_DIR=		${_RUBY_VER_MAJOR}.${_RUBY_VER_MINOR}
 .else 
-. if ${RUBY_VER} == "200"
-RUBY_VER_DIR=		${RUBY_VERSION}
-. else
 RUBY_VER_DIR=		${RUBY_API_VERSION}
-. endif
 .endif
 
 .if empty(RUBY_NOVERSION:M[nN][oO])
