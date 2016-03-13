@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1145 2016/03/13 13:04:39 wen Exp $
+$NetBSD: CHANGES-2016,v 1.1146 2016/03/13 13:42:51 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1531,3 +1531,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated x11/rxvt-unicode to 9.22 [morr 2016-03-13]
 	Added devel/p5-Git-Version-Compare version 1.001 [wen 2016-03-13]
 	Updated devel/p5-Git-Repository to 1.318 [wen 2016-03-13]
+	Updated pkgtools/pkglint to 5.3.6 [rillig 2016-03-13]
