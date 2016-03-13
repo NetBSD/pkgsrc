@@ -1,0 +1,13 @@
+$NetBSD: patch-Makefile.in,v 1.1 2016/03/13 03:10:36 ryoon Exp $
+
+--- Makefile.in.orig	2015-12-07 13:51:02.000000000 +0000
++++ Makefile.in
+@@ -1355,7 +1355,7 @@ libp11_kit_testable_la_LIBADD = $(libp11
+ 
+ pkgconfigdir = $(libdir)/pkgconfig
+ pkgconfig_DATA = p11-kit/p11-kit-1.pc
+-exampledir = $(p11_system_config)
++exampledir = $(prefix)/share/examples/p11-kit
+ example_DATA = p11-kit/pkcs11.conf.example
+ p11_kit_p11_kit_SOURCES = \
+ 	p11-kit/lists.c \
