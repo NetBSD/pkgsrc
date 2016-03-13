@@ -144,7 +144,7 @@ func (mkline *MkLine) Targets() string     { return mkline.xs1 }
 func (mkline *MkLine) Sources() string     { return mkline.xs2 }
 
 func (mkline *MkLine) Tokenize(s string) {
-	p := NewParser(s)
+	p := NewParser(mkline.Line, s)
 	p.MkTokens()
 	if p.Rest() != "" {
 		mkline.Error1("Invalid Makefile syntax at %q.", p.Rest())
@@ -330,24 +330,24 @@ func (mkline *MkLine) WarnVaruseLocalbase() {
 		"(1) To locate a file or directory from another package.",
 		"(2) To refer to own files after installation.",
 		"",
-		"In the first case, the example is:",
+		"Example for (1):",
 		"",
 		"	STRLIST=        ${LOCALBASE}/bin/strlist",
 		"	do-build:",
 		"		cd ${WRKSRC} && ${STRLIST} *.str",
 		"",
-		"This should really be:",
+		"This should better be:",
 		"",
 		"	EVAL_PREFIX=    STRLIST_PREFIX=strlist",
 		"	STRLIST=        ${STRLIST_PREFIX}/bin/strlist",
 		"	do-build:",
 		"		cd ${WRKSRC} && ${STRLIST} *.str",
 		"",
-		"In the second case, the example is:",
+		"Example for (2):",
 		"",
 		"	CONFIGURE_ENV+= --with-datafiles=${LOCALBASE}/share/pkgbase",
 		"",
-		"This should really be:",
+		"This should better be:",
 		"",
 		"	CONFIGURE_ENV+= --with-datafiles=${PREFIX}/share/pkgbase")
 }
@@ -816,7 +816,7 @@ func (mkline *MkLine) CheckCond() {
 		defer tracecall0()()
 	}
 
-	p := NewParser(mkline.Args())
+	p := NewParser(mkline.Line, mkline.Args())
 	cond := p.MkCond()
 	if !p.EOF() {
 		mkline.Warn1("Invalid conditional %q.", mkline.Args())
@@ -826,6 +826,21 @@ func (mkline *MkLine) CheckCond() {
 	cond.Visit("empty", func(node *Tree) {
 		varuse := node.args[0].(MkVarUse)
 		varname := varuse.varname
+		if matches(varname, `^\$.*:[MN]`) {
+			mkline.Warn0("The empty() function takes a variable name as parameter, not a variable expression.")
+			Explain(
+				"Instead of empty(${VARNAME:Mpattern}), you should write either",
+				"of the following:",
+				"",
+				"\tempty(VARNAME:Mpattern)",
+				"\t${VARNAME:Mpattern} == \"\"",
+				"",
+				"Instead of !empty(${VARNAME:Mpattern}), you should write either",
+				"of the following:",
+				"",
+				"\t!empty(VARNAME:Mpattern)",
+				"\t${VARNAME:Mpattern}")
+		}
 		for _, modifier := range varuse.modifiers {
 			if modifier[0] == 'M' || modifier[0] == 'N' {
 				mkline.CheckVartype(varname, opUseMatch, modifier[1:], "")
@@ -838,7 +853,9 @@ func (mkline *MkLine) CheckCond() {
 		varname := varuse.varname
 		varmods := varuse.modifiers
 		value := node.args[2].(string)
-		if len(varmods) == 0 || len(varmods) == 1 && matches(varmods[0], `^[MN]`) && value != "" {
+		if len(varmods) == 0 {
+			mkline.CheckVartype(varname, opUse, value, "")
+		} else if len(varmods) == 1 && matches(varmods[0], `^[MN]`) && value != "" {
 			mkline.CheckVartype(varname, opUseMatch, value, "")
 		}
 	})
@@ -976,21 +993,31 @@ func (mkline *MkLine) variableNeedsQuoting(varname string, vuc *VarUseContext) (
 
 	isPlainWord := vartype.checker.IsEnum()
 	switch vartype.checker {
-	case CheckvarDistSuffix,
+	case CheckvarBuildlinkDepmethod,
+		CheckvarCategory,
+		CheckvarDistSuffix,
+		CheckvarEmulPlatform,
 		CheckvarFileMode,
 		CheckvarFilename,
 		CheckvarIdentifier,
+		CheckvarInteger,
 		CheckvarOption,
 		CheckvarPathname,
+		CheckvarPerl5Packlist,
 		CheckvarPkgName,
 		CheckvarPkgOptionsVar,
+		CheckvarPkgPath,
 		CheckvarPkgRevision,
+		CheckvarPrefixPathname,
+		CheckvarPythonDependency,
 		CheckvarRelativePkgDir,
 		CheckvarRelativePkgPath,
+		CheckvarStage,
 		CheckvarUserGroupName,
-		CheckvarVarname,
 		CheckvarVersion,
-		CheckvarWrkdirSubdirectory:
+		CheckvarWrkdirSubdirectory,
+		CheckvarYesNo,
+		CheckvarYesNoIndirectly:
 		isPlainWord = true
 	}
 	if isPlainWord {

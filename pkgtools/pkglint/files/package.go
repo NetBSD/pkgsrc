@@ -164,6 +164,9 @@ func checkdirPackage(pkgpath string) {
 	}
 
 	for _, fname := range files {
+		if containsVarRef(fname) {
+			continue
+		}
 		if fname == G.CurrentDir+"/Makefile" {
 			if G.opts.CheckMakefile {
 				pkg.checkfilePackageMakefile(fname, lines)
@@ -294,7 +297,8 @@ func readMakefile(fname string, mainLines *MkLines, allLines *MkLines, including
 				G.Pkg.seenMakefileCommon = true
 			}
 
-			if !contains(incDir, "/mk/") || strings.HasSuffix(includeFile, "/mk/haskell.mk") || contains(incDir, "/wip/mk/") {
+			skip := contains(fname, "/mk/") || hasSuffix(includeFile, "/bsd.pkg.mk") || hasSuffix(includeFile, "/bsd.prefs.mk")
+			if !skip {
 				dirname, _ := path.Split(fname)
 				dirname = cleanpath(dirname)
 
@@ -389,9 +393,10 @@ func (pkg *Package) checkfilePackageMakefile(fname string, mklines *MkLines) {
 		Warnf(fname, noLines, "No COMMENT given.")
 	}
 
-	if vardef["USE_IMAKE"] != nil && vardef["USE_X11"] != nil {
-		vardef["USE_IMAKE"].Note0("USE_IMAKE makes ...")
-		vardef["USE_X11"].Note0("... USE_X11 superfluous.")
+	if imake, x11 := vardef["USE_IMAKE"], vardef["USE_X11"]; imake != nil && x11 != nil {
+		if !hasSuffix(x11.Line.Fname, "/mk/x11.buildlink3.mk") {
+			imake.Line.Note1("USE_IMAKE makes USE_X11 in %s superfluous.", x11.Line.ReferenceFrom(imake.Line))
+		}
 	}
 
 	pkg.checkUpdate()

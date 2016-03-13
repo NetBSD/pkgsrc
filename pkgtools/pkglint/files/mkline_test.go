@@ -330,6 +330,18 @@ func (s *Suite) TestChecklineMkCondition(c *check.C) {
 	NewMkLine(NewLine("fname", 1, ".if !empty(IS_BUILTIN.Xfixes:M[yY][eE][sS])", nil)).CheckCond()
 
 	c.Check(s.Output(), equals, "")
+
+	NewMkLine(NewLine("fname", 1, ".if !empty(${IS_BUILTIN.Xfixes:M[yY][eE][sS]})", nil)).CheckCond()
+
+	c.Check(s.Output(), equals, "WARN: fname:1: The empty() function takes a variable name as parameter, not a variable expression.\n")
+
+	NewMkLine(NewLine("fname", 1, ".if ${EMUL_PLATFORM} == \"linux-x386\"", nil)).CheckCond()
+
+	c.Check(s.Output(), equals, "WARN: fname:1: \"x386\" is not valid for the hardware architecture part of EMUL_PLATFORM. Use one of { alpha amd64 arc arm arm32 cobalt convex dreamcast hpcmips hpcsh hppa i386 ia64 m68k m88k mips mips64 mips64eb mips64el mipseb mipsel mipsn32 ns32k pc532 pmax powerpc rs6000 s390 sh3eb sh3el sparc sparc64 vax x86_64 } instead.\n")
+
+	NewMkLine(NewLine("fname", 1, ".if ${EMUL_PLATFORM:Mlinux-x386}", nil)).CheckCond()
+
+	c.Check(s.Output(), equals, "WARN: fname:1: The pattern \"x386\" cannot match any of { alpha amd64 arc arm arm32 cobalt convex dreamcast hpcmips hpcsh hppa i386 ia64 m68k m88k mips mips64 mips64eb mips64el mipseb mipsel mipsn32 ns32k pc532 pmax powerpc rs6000 s390 sh3eb sh3el sparc sparc64 vax x86_64 } for the hardware architecture part of EMUL_PLATFORM.\n")
 }
 
 func (s *Suite) TestMkLine_variableNeedsQuoting(c *check.C) {
@@ -435,7 +447,6 @@ func (s *Suite) TestMkLine_CheckVarusePermissions(c *check.C) {
 		"WARN: options.mk:2: The user-defined variable GAMES_USER is used but not added to BUILD_DEFS.\n"+
 		"WARN: options.mk:3: PKGBASE should not be evaluated at load time.\n"+
 		"WARN: options.mk:4: The variable PYPKGPREFIX may not be set in this file; it would be ok in pyversion.mk.\n"+
-		"WARN: options.mk:4: \"${PKGBASE}\" is not valid for PYPKGPREFIX. Use one of { py27 py33 py34 py35 } instead.\n"+
 		"WARN: options.mk:4: PKGBASE should not be evaluated indirectly at load time.\n"+
 		"NOTE: options.mk:4: This variable value should be aligned to column 17.\n")
 }
