@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2015/04/07 14:21:43 yyamano Exp $
+@comment $NetBSD: PLIST,v 1.7 2016/03/13 03:16:41 ryoon Exp $
 bin/fsc
 bin/scala
 bin/scalac
@@ -29,17 +29,17 @@ share/${PKGNAME}/doc/tools/scala.html
 share/${PKGNAME}/doc/tools/scalac.html
 share/${PKGNAME}/doc/tools/scaladoc.html
 share/${PKGNAME}/doc/tools/scalap.html
-share/${PKGNAME}/lib/akka-actor_2.11-2.3.4.jar
+share/${PKGNAME}/lib/akka-actor_2.11-2.3.10.jar
 share/${PKGNAME}/lib/config-1.2.1.jar
 share/${PKGNAME}/lib/jline-2.12.1.jar
 share/${PKGNAME}/lib/scala-actors-2.11.0.jar
 share/${PKGNAME}/lib/scala-actors-migration_2.11-1.1.0.jar
 share/${PKGNAME}/lib/scala-compiler.jar
 share/${PKGNAME}/lib/scala-continuations-library_2.11-1.0.2.jar
-share/${PKGNAME}/lib/scala-continuations-plugin_2.11.5-1.0.2.jar
+share/${PKGNAME}/lib/scala-continuations-plugin_${PKGVERSION}-1.0.2.jar
 share/${PKGNAME}/lib/scala-library.jar
-share/${PKGNAME}/lib/scala-parser-combinators_2.11-1.0.3.jar
+share/${PKGNAME}/lib/scala-parser-combinators_2.11-1.0.4.jar
 share/${PKGNAME}/lib/scala-reflect.jar
-share/${PKGNAME}/lib/scala-swing_2.11-1.0.1.jar
-share/${PKGNAME}/lib/scala-xml_2.11-1.0.3.jar
+share/${PKGNAME}/lib/scala-swing_2.11-1.0.2.jar
+share/${PKGNAME}/lib/scala-xml_2.11-1.0.4.jar
 share/${PKGNAME}/lib/scalap-${PKGVERSION}.jar
