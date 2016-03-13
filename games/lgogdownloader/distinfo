@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.16 2015/11/04 17:41:18 agc Exp $
+$NetBSD: distinfo,v 1.17 2016/03/13 08:49:31 wiz Exp $
 
-SHA1 (lgogdownloader-2.26.tar.gz) = da95d3bf78880c71776f91cc91a9584785004f23
-RMD160 (lgogdownloader-2.26.tar.gz) = 4c1095e1571fdb3fc53bd9b096b879ada1417c68
-SHA512 (lgogdownloader-2.26.tar.gz) = 6820f577e02adb510c97212b658178d0778d60c97a7c6e08471ff7840909e80eef9e505ddf99f57766a45ea397a1fbaec6c8a1d33146c14f94f6d924b413a9bd
-Size (lgogdownloader-2.26.tar.gz) = 47424 bytes
+SHA1 (lgogdownloader-2.27.tar.gz) = 8e6841637d9a6ea8b0ed3c346ae96fa48655db41
+RMD160 (lgogdownloader-2.27.tar.gz) = 89cc6e373528326712abbd54fa1f7d468875c3f5
+SHA512 (lgogdownloader-2.27.tar.gz) = 3dd2845b801c883d42bb12bfeb4c28ab6852524a0397ea313b7e4b0195e575a255177b85281bfd923765ac49cfc313dc5bd62a1188e1c465172f79ec281ea0a7
+Size (lgogdownloader-2.27.tar.gz) = 50433 bytes
+SHA1 (patch-cmake_FindJsoncpp.cmake) = 0ab831e8d26625a748cf9c4ab270cd7a39a4472e
