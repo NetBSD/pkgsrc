@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1148 2016/03/13 15:47:44 taca Exp $
+$NetBSD: CHANGES-2016,v 1.1149 2016/03/13 16:53:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1537,3 +1537,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Removed devel/ruby-debugger-ruby_core_source [taca 2016-03-13]
 	Removed lang/ruby200 [taca 2016-03-13]
 	Removed lang/ruby200-base [taca 2016-03-13]
+	Updated security/p5-Crypt-ECB to 2.10 [wiz 2016-03-13]
