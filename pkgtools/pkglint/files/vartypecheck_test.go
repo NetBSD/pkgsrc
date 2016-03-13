@@ -166,8 +166,8 @@ func (s *Suite) TestVartypeCheck_EmulPlatform(c *check.C) {
 		"${LINUX}")
 
 	c.Check(s.Output(), equals, ""+
-		"WARN: fname:2: Unknown operating system: nextbsd\n"+
-		"WARN: fname:2: Unknown hardware architecture: 8087\n"+
+		"WARN: fname:2: \"nextbsd\" is not valid for the operating system part of EMUL_PLATFORM. Use one of { bitrig bsdos cygwin darwin dragonfly freebsd haiku hpux interix irix linux mirbsd netbsd openbsd osf1 solaris } instead.\n"+
+		"WARN: fname:2: \"8087\" is not valid for the hardware architecture part of EMUL_PLATFORM. Use one of { alpha amd64 arc arm arm32 cobalt convex dreamcast hpcmips hpcsh hppa i386 ia64 m68k m88k mips mips64 mips64eb mips64el mipseb mipsel mipsn32 ns32k pc532 pmax powerpc rs6000 s390 sh3eb sh3el sparc sparc64 vax x86_64 } instead.\n"+
 		"WARN: fname:3: \"${LINUX}\" is not a valid emulation platform.\n")
 }
 
@@ -287,16 +287,20 @@ func (s *Suite) TestVartypeCheck_PkgRevision(c *check.C) {
 	c.Check(s.Output(), equals, "")
 }
 
-func (s *Suite) TestVartypeCheck_PlatformTriple(c *check.C) {
-	runVartypeChecks("ONLY_FOR_PLATFORM", opAssign, (*VartypeCheck).PlatformTriple,
+func (s *Suite) TestVartypeCheck_PlatformPattern(c *check.C) {
+	runVartypeMatchChecks("ONLY_FOR_PLATFORM", (*VartypeCheck).PlatformPattern,
 		"linux-i386",
 		"nextbsd-5.0-8087",
+		"netbsd-7.0-l*",
+		"NetBSD-1.6.2-i386",
 		"${LINUX}")
 
 	c.Check(s.Output(), equals, ""+
-		"WARN: fname:1: \"linux-i386\" is not a valid platform triple.\n"+
-		"WARN: fname:2: Unknown operating system: nextbsd\n"+
-		"WARN: fname:2: Unknown hardware architecture: 8087\n")
+		"WARN: fname:1: \"linux-i386\" is not a valid platform pattern.\n"+
+		"WARN: fname:2: The pattern \"nextbsd\" cannot match any of { Bitrig BSDOS Cygwin Darwin DragonFly FreeBSD Haiku HPUX Interix IRIX Linux MirBSD NetBSD OpenBSD OSF1 QNX SunOS } for the operating system part of ONLY_FOR_PLATFORM.\n"+
+		"WARN: fname:2: The pattern \"8087\" cannot match any of { alpha amd64 arc arm arm32 cobalt convex dreamcast hpcmips hpcsh hppa i386 ia64 m68k m88k mips mips64 mips64eb mips64el mipseb mipsel mipsn32 ns32k pc532 pmax powerpc rs6000 s390 sh3eb sh3el sparc sparc64 vax x86_64 } for the hardware architecture part of ONLY_FOR_PLATFORM.\n"+
+		"WARN: fname:3: The pattern \"netbsd\" cannot match any of { Bitrig BSDOS Cygwin Darwin DragonFly FreeBSD Haiku HPUX Interix IRIX Linux MirBSD NetBSD OpenBSD OSF1 QNX SunOS } for the operating system part of ONLY_FOR_PLATFORM.\n"+
+		"WARN: fname:3: The pattern \"l*\" cannot match any of { alpha amd64 arc arm arm32 cobalt convex dreamcast hpcmips hpcsh hppa i386 ia64 m68k m88k mips mips64 mips64eb mips64el mipseb mipsel mipsn32 ns32k pc532 pmax powerpc rs6000 s390 sh3eb sh3el sparc sparc64 vax x86_64 } for the hardware architecture part of ONLY_FOR_PLATFORM.\n")
 }
 
 func (s *Suite) TestVartypeCheck_PythonDependency(c *check.C) {

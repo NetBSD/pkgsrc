@@ -118,8 +118,8 @@ func (gd *GlobalData) InitVartypes() {
 	pkg("BOOTSTRAP_PKG", lkNone, CheckvarYesNo)
 	acl("BROKEN", lkNone, CheckvarMessage, "")
 	pkg("BROKEN_GETTEXT_DETECTION", lkNone, CheckvarYesNo)
-	pkglist("BROKEN_EXCEPT_ON_PLATFORM", lkShell, CheckvarPlatformTriple)
-	pkglist("BROKEN_ON_PLATFORM", lkSpace, CheckvarPlatformTriple)
+	pkglist("BROKEN_EXCEPT_ON_PLATFORM", lkShell, CheckvarPlatformPattern)
+	pkglist("BROKEN_ON_PLATFORM", lkSpace, CheckvarPlatformPattern)
 	sys("BSD_MAKE_ENV", lkShell, CheckvarShellWord)
 	acl("BUILDLINK_ABI_DEPENDS.*", lkSpace, CheckvarDependency, "*: append")
 	acl("BUILDLINK_API_DEPENDS.*", lkSpace, CheckvarDependency, "*: append")
@@ -334,8 +334,8 @@ func (gd *GlobalData) InitVartypes() {
 	pkglist("HEADER_TEMPLATES", lkShell, CheckvarPathname)
 	pkg("HOMEPAGE", lkNone, CheckvarURL)
 	acl("IGNORE_PKG.*", lkNone, CheckvarYes, "*: set, use-loadtime")
-	acl("INCOMPAT_CURSES", lkSpace, CheckvarPlatformTriple, "Makefile: set, append")
-	acl("INCOMPAT_ICONV", lkSpace, CheckvarPlatformTriple, "")
+	acl("INCOMPAT_CURSES", lkSpace, CheckvarPlatformPattern, "Makefile: set, append")
+	acl("INCOMPAT_ICONV", lkSpace, CheckvarPlatformPattern, "")
 	acl("INFO_DIR", lkNone, CheckvarPathname, "") // relative to PREFIX
 	pkg("INFO_FILES", lkNone, CheckvarYes)
 	sys("INSTALL", lkNone, CheckvarShellCommand)
@@ -392,7 +392,7 @@ func (gd *GlobalData) InitVartypes() {
 	sys("LOWER_OPSYS", lkNone, CheckvarIdentifier)
 	acl("LTCONFIG_OVERRIDE", lkShell, CheckvarPathmask, "Makefile: set, append; Makefile.common: append")
 	sys("MACHINE_ARCH", lkNone, CheckvarIdentifier)
-	sys("MACHINE_GNU_PLATFORM", lkNone, CheckvarPlatformTriple)
+	sys("MACHINE_GNU_PLATFORM", lkNone, CheckvarPlatformPattern) // This one is actually not a pattern
 	acl("MAINTAINER", lkNone, CheckvarMailAddress, "Makefile: set; Makefile.common: default")
 	sys("MAKE", lkNone, CheckvarShellCommand)
 	pkglist("MAKEFLAGS", lkShell, CheckvarShellWord)
@@ -451,7 +451,7 @@ func (gd *GlobalData) InitVartypes() {
 	sys("NM", lkNone, CheckvarShellCommand)
 	sys("NONBINMODE", lkNone, CheckvarFileMode)
 	pkg("NOT_FOR_COMPILER", lkShell, enum("ccache ccc clang distcc f2c gcc hp icc ido mipspro mipspro-ucode pcc sunpro xlc"))
-	pkglist("NOT_FOR_PLATFORM", lkSpace, CheckvarPlatformTriple)
+	pkglist("NOT_FOR_PLATFORM", lkSpace, CheckvarPlatformPattern)
 	pkg("NOT_FOR_UNPRIVILEGED", lkNone, CheckvarYesNo)
 	acl("NO_BIN_ON_CDROM", lkNone, CheckvarRestricted, "Makefile, Makefile.common: set")
 	acl("NO_BIN_ON_FTP", lkNone, CheckvarRestricted, "Makefile, Makefile.common: set")
@@ -465,7 +465,7 @@ func (gd *GlobalData) InitVartypes() {
 	acl("NO_SRC_ON_CDROM", lkNone, CheckvarRestricted, "Makefile, Makefile.common: set")
 	acl("NO_SRC_ON_FTP", lkNone, CheckvarRestricted, "Makefile, Makefile.common: set")
 	pkglist("ONLY_FOR_COMPILER", lkShell, enum("ccc clang gcc hp icc ido mipspro mipspro-ucode pcc sunpro xlc"))
-	pkglist("ONLY_FOR_PLATFORM", lkSpace, CheckvarPlatformTriple)
+	pkglist("ONLY_FOR_PLATFORM", lkSpace, CheckvarPlatformPattern)
 	pkg("ONLY_FOR_UNPRIVILEGED", lkNone, CheckvarYesNo)
 	sys("OPSYS", lkNone, CheckvarIdentifier)
 	acl("OPSYSVARS", lkShell, CheckvarVarname, "Makefile, Makefile.common: append")
@@ -537,7 +537,7 @@ func (gd *GlobalData) InitVartypes() {
 	acl("PKG_HACKS", lkShell, CheckvarIdentifier, "hacks.mk: append")
 	sys("PKG_INFO", lkNone, CheckvarShellCommand)
 	sys("PKG_JAVA_HOME", lkNone, CheckvarPathname)
-	jvms := enum("blackdown-jdk13 jdk jdk14 kaffe run-jdk13 sun-jdk14 sun-jdk15 sun-jdk6 openjdk7 openjdk7-bin sun-jdk7 openjdk8 oracle-jdk8")
+	jvms := enum("openjdk8 oracle-jdk8 openjdk7 sun-jdk7 sun-jdk6 jdk16 jdk15 kaffe") // See mk/java-vm.mk:/_PKG_JVMS/
 	sys("PKG_JVM", lkNone, jvms)
 	acl("PKG_JVMS_ACCEPTED", lkShell, jvms, "Makefile: set; Makefile.common: default, set")
 	usr("PKG_JVM_DEFAULT", lkNone, jvms)
@@ -724,7 +724,7 @@ func enum(values string) *VarChecker {
 			return
 		}
 
-		if !vmap[cv.value] {
+		if cv.value == cv.valueNovar && !vmap[cv.value] {
 			cv.line.Warnf("%q is not valid for %s. Use one of { %s } instead.", cv.value, cv.varname, values)
 		}
 	}}

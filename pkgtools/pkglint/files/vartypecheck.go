@@ -50,6 +50,26 @@ func (op MkOperator) String() string {
 	return [...]string{"=", "!=", ":=", "+=", "?=", "use", "use-loadtime", "use-match"}[op]
 }
 
+const (
+	reEmulPlatform = "" +
+		"bitrig|bsdos|cygwin|darwin|dragonfly|freebsd|" +
+		"haiku|hpux|interix|irix|linux|mirbsd|netbsd|openbsd|osf1|solaris"
+	rePlatformOs = "" +
+		"Bitrig|BSDOS|Cygwin|Darwin|DragonFly|FreeBSD|" +
+		"Haiku|HPUX|Interix|IRIX|Linux|MirBSD|NetBSD|OpenBSD|OSF1|QNX|SunOS"
+	rePlatformArch = "" +
+		"alpha|amd64|arc|arm|arm32|cobalt|convex|dreamcast|" +
+		"hpcmips|hpcsh|hppa|i386|ia64|" +
+		"m68k|m88k|mips|mips64|mips64eb|mips64el|mipseb|mipsel|mipsn32|" +
+		"ns32k|pc532|pmax|powerpc|rs6000|s390|sh3eb|sh3el|sparc|sparc64|vax|x86_64"
+)
+
+var (
+	emulPlatformEnum = enum(strings.Replace(reEmulPlatform, "|", " ", -1))
+	platformOsEnum   = enum(strings.Replace(rePlatformOs, "|", " ", -1))
+	platformArchEnum = enum(strings.Replace(rePlatformArch, "|", " ", -1))
+)
+
 func (cv *VartypeCheck) AwkCommand() {
 	if G.opts.DebugUnchecked {
 		cv.line.Debug1("Unchecked AWK command: %q", cv.value)
@@ -137,7 +157,7 @@ func (cv *VartypeCheck) Comment() {
 func (cv *VartypeCheck) Dependency() {
 	line, value := cv.line, cv.value
 
-	parser := NewParser(value)
+	parser := NewParser(line, value)
 	deppat := parser.Dependency()
 	if deppat != nil && deppat.wildcard == "" && (parser.Rest() == "{,nb*}" || parser.Rest() == "{,nb[0-9]*}") {
 		line.Warn0("Dependency patterns of the form pkgbase>=1.0 don't need the \"{,nb*}\" extension.")
@@ -243,16 +263,34 @@ func (cv *VartypeCheck) DistSuffix() {
 }
 
 func (cv *VartypeCheck) EmulPlatform() {
+	const rePart = `(?:\[[^\]]+\]|[^-\[])+`
+	const rePair = `^(` + rePart + `)-(` + rePart + `)$`
+	if m, opsysPattern, archPattern := match2(cv.value, rePair); m {
+		opsysCv := &VartypeCheck{
+			cv.mkline,
+			cv.line,
+			"the operating system part of " + cv.varname,
+			cv.op,
+			opsysPattern,
+			opsysPattern,
+			cv.comment,
+			cv.listContext,
+			cv.guessed}
+		emulPlatformEnum.checker(opsysCv)
 
-	if m, opsys, arch := match2(cv.value, `^(\w+)-(\w+)$`); m {
-		if !matches(opsys, `^(?:bitrig|bsdos|cygwin|darwin|dragonfly|freebsd|haiku|hpux|interix|irix|linux|mirbsd|netbsd|openbsd|osf1|sunos|solaris)$`) {
-			cv.line.Warn1("Unknown operating system: %s", opsys)
-		}
 		// no check for os_version
-		if !matches(arch, `^(?:i386|alpha|amd64|arc|arm|arm32|cobalt|convex|dreamcast|hpcmips|hpcsh|hppa|ia64|m68k|m88k|mips|mips64|mipsel|mipseb|mipsn32|ns32k|pc532|pmax|powerpc|rs6000|s390|sparc|sparc64|vax|x86_64)$`) {
-			cv.line.Warn1("Unknown hardware architecture: %s", arch)
-		}
 
+		archCv := &VartypeCheck{
+			cv.mkline,
+			cv.line,
+			"the hardware architecture part of " + cv.varname,
+			cv.op,
+			archPattern,
+			archPattern,
+			cv.comment,
+			cv.listContext,
+			cv.guessed}
+		platformArchEnum.checker(archCv)
 	} else {
 		cv.line.Warn1("%q is not a valid emulation platform.", cv.value)
 		Explain(
@@ -260,7 +298,9 @@ func (cv *VartypeCheck) EmulPlatform() {
 			"OPSYS is the lower-case name of the operating system, and",
 			"MACHINE_ARCH is the hardware architecture.",
 			"",
-			"Examples: linux-i386, irix-mipsel.")
+			"Examples:",
+			"* linux-i386",
+			"* irix-mipsel")
 	}
 }
 
@@ -535,31 +575,54 @@ func (cv *VartypeCheck) PkgRevision() {
 	}
 }
 
-func (cv *VartypeCheck) PlatformTriple() {
+func (cv *VartypeCheck) PlatformPattern() {
 	if cv.value != cv.valueNovar {
 		return
 	}
 
-	rePart := `(?:\[[^\]]+\]|[^-\[])+`
-	reTriple := `^(` + rePart + `)-(` + rePart + `)-(` + rePart + `)$`
-	if m, opsys, _, arch := match3(cv.value, reTriple); m {
-		if !matches(opsys, `^(?:\*|Bitrig|BSDOS|Cygwin|Darwin|DragonFly|FreeBSD|Haiku|HPUX|Interix|IRIX|Linux|MirBSD|NetBSD|OpenBSD|OSF1|QNX|SunOS)$`) {
-			cv.line.Warn1("Unknown operating system: %s", opsys)
-		}
+	const rePart = `(?:\[[^\]]+\]|[^-\[])+`
+	const reTriple = `^(` + rePart + `)-(` + rePart + `)-(` + rePart + `)$`
+	if m, opsysPattern, _, archPattern := match3(cv.value, reTriple); m {
+		opsysCv := &VartypeCheck{
+			cv.mkline,
+			cv.line,
+			"the operating system part of " + cv.varname,
+			opUseMatch, // Always allow patterns, since this is a PlatformPattern.
+			opsysPattern,
+			opsysPattern,
+			cv.comment,
+			cv.listContext,
+			cv.guessed}
+		platformOsEnum.checker(opsysCv)
+
 		// no check for os_version
-		if !matches(arch, `^(?:\*|i386|alpha|amd64|arc|arm|arm32|cobalt|convex|dreamcast|hpcmips|hpcsh|hppa|ia64|m68k|m88k|mips|mips64|mipsel|mipseb|mipsn32|ns32k|pc532|pmax|powerpc|rs6000|s390|sparc|sparc64|vax|x86_64)$`) {
-			cv.line.Warn1("Unknown hardware architecture: %s", arch)
-		}
+
+		archCv := &VartypeCheck{
+			cv.mkline,
+			cv.line,
+			"the hardware architecture part of " + cv.varname,
+			opUseMatch, // Always allow patterns, since this is a PlatformPattern.
+			archPattern,
+			archPattern,
+			cv.comment,
+			cv.listContext,
+			cv.guessed}
+		platformArchEnum.checker(archCv)
 
 	} else {
-		cv.line.Warn1("%q is not a valid platform triple.", cv.value)
-		Explain3(
-			"A platform triple has the form <OPSYS>-<OS_VERSION>-<MACHINE_ARCH>.",
+		cv.line.Warn1("%q is not a valid platform pattern.", cv.value)
+		Explain(
+			"A platform pattern has the form <OPSYS>-<OS_VERSION>-<MACHINE_ARCH>.",
 			"Each of these components may be a shell globbing expression.",
-			"Examples: NetBSD-*-i386, *-*-*, Linux-*-*.")
+			"",
+			"Examples:",
+			"* NetBSD-[456].*-i386",
+			"* *-*-*",
+			"* Linux-*-*")
 	}
 }
 
+// A pathname relative to ${PREFIX}.
 func (cv *VartypeCheck) PrefixPathname() {
 	if m, mansubdir := match1(cv.value, `^man/(.+)`); m {
 		cv.line.Warn2("Please use \"${PKGMANDIR}/%s\" instead of %q.", mansubdir, cv.value)
@@ -579,12 +642,12 @@ func (cv *VartypeCheck) PythonDependency() {
 	}
 }
 
-// Refers to a package directory.
+// Refers to a package directory, e.g. ../../category/pkgbase.
 func (cv *VartypeCheck) RelativePkgDir() {
 	cv.mkline.CheckRelativePkgdir(cv.value)
 }
 
-// Refers to a file or directory.
+// Refers to a file or directory, e.g. ../../category/pkgbase, ../../category/pkgbase/Makefile.
 func (cv *VartypeCheck) RelativePkgPath() {
 	cv.mkline.CheckRelativePath(cv.value, true)
 }
