@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1155 2016/03/13 21:05:43 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.1156 2016/03/13 23:26:37 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1545,3 +1545,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated comms/conserver8 to 8.2.1 [schnoebe 2016-03-13]
 	Updated databases/mongodb to 3.2.4 [fhajny 2016-03-13]
 	Updated databases/mongo-tools to 3.2.4 [fhajny 2016-03-13]
+	Removed databases/postgresql-postgis2 successor databases/postgresql-postgis2 [gdt 2016-03-14]
