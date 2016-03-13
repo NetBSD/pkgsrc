@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1152 2016/03/13 18:32:49 schnoebe Exp $
+$NetBSD: CHANGES-2016,v 1.1153 2016/03/13 20:14:02 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1527,6 +1527,8 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/p11-kit to 0.22.1 [ryoon 2016-03-13]
 	Updated lang/scala to 2.11.8 [ryoon 2016-03-13]
 	Updated devel/p5-App-cpanminus to 1.7040 [mef 2016-03-13]
+	Updated graphics/ivtools to 1.2.8nb4 [dholland 2016-03-13]
+	Updated net/nocol to 4.3.1nb12 [dholland 2016-03-13]
 	Updated games/lgogdownloader to 2.27 [wiz 2016-03-13]
 	Updated x11/rxvt-unicode to 9.22 [morr 2016-03-13]
 	Added devel/p5-Git-Version-Compare version 1.001 [wen 2016-03-13]
