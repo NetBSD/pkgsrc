@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15587 2016/03/13 12:00:43 morr Exp $
+$NetBSD: TODO,v 1.15588 2016/03/13 13:04:39 wen Exp $
 
 Suggested new packages
 ======================
@@ -1341,7 +1341,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-GStreamer-0.20
 	o p5-Geo-IPfree-1.151940
 	o p5-Git-CPAN-Patch-2.2.1
-	o p5-Git-Repository-1.317
 	o p5-Git-Repository-Plugin-AUTOLOAD-1.002
 	o p5-Git-Wrapper-0.045
 	o p5-Glib-Object-Introspection-0.029
