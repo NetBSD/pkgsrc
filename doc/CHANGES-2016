@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1149 2016/03/13 16:53:39 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1150 2016/03/13 17:26:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1538,3 +1538,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Removed lang/ruby200 [taca 2016-03-13]
 	Removed lang/ruby200-base [taca 2016-03-13]
 	Updated security/p5-Crypt-ECB to 2.10 [wiz 2016-03-13]
+	Updated net/php-baikal to 0.3.5 [wiz 2016-03-13]
