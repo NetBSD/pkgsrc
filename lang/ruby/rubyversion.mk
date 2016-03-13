@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.158 2016/02/16 14:16:43 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.159 2016/03/13 09:35:59 taca Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -11,7 +11,7 @@
 #	The preferered Ruby version to use.
 #
 #		Possible values: 18 200 21 22 23
-#		Default: 200
+#		Default: 22
 #
 # RUBY_BUILD_RDOC
 #	Build rdoc of this package and so that install formated
@@ -253,9 +253,9 @@ RUBY_GEMS_PKGSRC_VERS=	2.4.8
 RUBY_RDOC_PKGSRC_VERS=	4.2.2
 
 #
-RUBY_VERSION_DEFAULT?=	200
+RUBY_VERSION_DEFAULT?=	22
 
-RUBY_VERSION_SUPPORTED?= 200 21 22 23
+RUBY_VERSION_SUPPORTED?= 22 23 21 200
 
 .if defined(RUBY_VERSION_REQD)
 . for rv in ${RUBY_VERSION_SUPPORTED}
