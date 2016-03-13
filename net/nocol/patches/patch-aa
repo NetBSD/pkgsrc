@@ -1,11 +1,15 @@
-$NetBSD: patch-aa,v 1.6 2012/09/09 19:49:45 dholland Exp $
+$NetBSD: patch-aa,v 1.7 2016/03/13 09:06:01 dholland Exp $
 
-Don't use curses internals.
+- Use standard headers.
+- Don't use curses internals.
 
---- netconsole/build_display.c.orig	Thu Jul 13 11:13:37 2000
-+++ netconsole/build_display.c	Thu Jul 13 11:15:26 2000
-@@ -59,7 +59,7 @@
+--- netconsole/build_display.c.orig	1994-11-29 20:41:06.000000000 +0000
++++ netconsole/build_display.c
+@@ -57,9 +57,10 @@
+  */
+ 
  #include 	"netconsole.h"
++#include <string.h>
  
  
 -#define WFULL(w)  	(w->_cury == (w->_maxy - 1)) ? 1:0
@@ -13,7 +17,7 @@ Don't use curses internals.
  
  build_display ()
  {
-@@ -229,8 +229,8 @@
+@@ -229,8 +230,8 @@ display_screenful ()
  		"\n(DEBUG): frozen = %s, quiet = %s\n", 
  		frozen ? "YES" : "NO", quiet ? "YES" : "NO" );
  	wprintw(aw.wmsg,		
@@ -24,7 +28,7 @@ Don't use curses internals.
  	wclrtoeol(aw.wmsg);
      }
      
-@@ -238,8 +238,8 @@
+@@ -238,8 +239,8 @@ display_screenful ()
       * Am calling touchwin() since its foolproof (see discussion above)
       */
      touchwin (aw.wmain);
