@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15588 2016/03/13 13:04:39 wen Exp $
+$NetBSD: TODO,v 1.15589 2016/03/13 16:54:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -407,6 +407,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o adocman-0.13
 	o adodb-5.20
 	o aewm++-1.0.27
+	o afl-2.08b
 	o afterstep-2.2.12
 	o aget-0.4.1
 	o alacarte-0.13.2
@@ -550,6 +551,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o clusterssh-4.05
 	o clutter-1.24
 	o clutter-gst-3.0.2
+	o cmake-3.5.0
 	o cmake-fedora-2.6.0
 	o cmocka-1.0.1
 	o cmus-2.7.1
@@ -599,13 +601,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dasher-4.11
 	o dateutils-0.3.5
 	o davical-1.1.4
+	o dbus-python-common-1.2.4
 	o dd_rescue-1.46
 	o dd_rhelp-0.3.0
 	o ddrescue-1.20
 	o dega-1.12
 	o dejagnu-1.5.3
 	o delegate-9.9.13
-	o denemo-2.0.2
+	o denemo-2.0.4
 	o desklaunch-1.1.7
 	o deskmenu-1.4.5
 	o dhcpcd-dbus-0.6.1
@@ -619,7 +622,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dolphin-4.0.2
 	o dpkg-1.18.4
 	o drivel-3.0.5
-	o dropbear-2015.71
+	o dropbear-2016.72
 	o drupal-8.0.3
 	o duplicity-0.7.06
 	o dvdisaster-0.79.5
@@ -695,6 +698,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o faces-1.7.7
 	o facter-2.4.5
 	o fakeroot-1.6.5
+	o farstream-0.2.8
 	o fcitx-3.6.2
 	o fdupes-1.51
 	o felt-3.07 [wip]
@@ -782,7 +786,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gliv-1.9.7
 	o glom-1.14.2 [GNOME 2.26]
 	o gloox-1.0.14
-	o glpk-4.58
+	o glpk-4.59
 	o glx-utils-8.3.0
 	o gmock-1.7.0
 	o gnet1-1.1.9
@@ -851,6 +855,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gramps-4.1.0
 	o grantlee-5.0.0
 	o greed-4.1
+	o grep-2.24
 	o grilo-0.2.12
 	o grilo-plugins-0.2.14
 	o gromacs-5.1.2
@@ -1130,6 +1135,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mbedtls-2.0.0
 	o mbuf-20141227
 	o mbuffer-20160228
+	o mc-4.8.16
 	o mcabber-1.0.2
 	o mcollective-2.3.2
 	o mcsim-5.6.5
@@ -1224,6 +1230,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o oath-toolkit-2.6.1
 	o objc-3.3.1
 	o ocaml-cmdliner-0.9.8
+	o ocaml-findlib-1.6.2
 	o ocaml-graphics-4.02.3
 	o ocaml-mysql-1.2.0
 	o ocaml-oasis-0.4.5
@@ -1249,7 +1256,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o opensmtpd-5.7.3
 	o openssh-7.2p2
 	o opera-26
-	o orcus-0.11.0
+	o orcus-0.11.1
 	o oroborus-2.0.18
 	o ortp-0.25.0
 	o oto-0.5
@@ -1655,6 +1662,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-d2to1-0.2.12
 	o py-daemon-2.1.1
 	o py-datapkg-0.9
+	o py-dbus-1.2.4
 	o py-django-photologue-2.7
 	o py-django-tagging-0.4.1
 	o py-djangorestframework-2.3.12
@@ -1853,6 +1861,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o sparse-0.5.0
 	o spcaview-20060501
 	o spectrwm-2.7.2
+	o spice-protocol-0.12.11
 	o spidermonkey-1.8.5
 	o spin-645
 	o spl-1.0pre6
@@ -1903,6 +1912,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tacacs-4.0.4.29a
 	o tacacs-shrubbery-5.0.0a1
 	o tads-3.0.16
+	o talloc-2.1.6
 	o taskjuggler-3.3.0
 	o tc-hasida-table-0.8 [wip]
 	o tcpdpriv-0.9
@@ -1940,9 +1950,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tomboy-1.10.2
 	o top-3.8beta1
 	o topgit-0.8
+	o tor-browser-5.5.3
 	o totem-3.14.1
 	o totem-pl-parser-3.10.3
-	o transmission-2.91
+	o transmission-2.92
 	o tripwire-2.3.1 [see also pkg/22362]
 	o trojita-0.6
 	o ts-0.7.5
@@ -1988,6 +1999,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o vte-0.36.0
 	o vtk-5.10.1
 	o wMosaic-3.8.22
+	o waf-1.8.20
 	o wap-utils-1.4.1
 	o warmux-11.04.1
 	o warzone2100-2.3.8
@@ -2014,6 +2026,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wwwoffle-2.9i
 	o wxGTK-3.1.0
 	o wxRemind-101
+	o x264-devel-20160312
 	o x2vnc-1.31
 	o xa65-2.3.7
 	o xaric-0.13.7
@@ -2065,6 +2078,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xsc-1.6
 	o xscorch-0.2.1
 	o xsd-3.3.0
+	o xterm-324
 	o xtraceroute-0.9.1
 	o xtux-20030306
 	o xvidcap-1.1.7
