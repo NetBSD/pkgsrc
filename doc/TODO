@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15585 2016/03/13 03:17:09 ryoon Exp $
+$NetBSD: TODO,v 1.15586 2016/03/13 03:55:03 mef Exp $
 
 Suggested new packages
 ======================
@@ -1261,7 +1261,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Apache-Gallery-1.0.2
 	o p5-Apache-LogFormat-Compiler-0.33
 	o p5-App-FatPacker-0.010005
-	o p5-App-cpanminus-1.7040
 	o p5-App-perlbrew-0.74
 	o p5-AppConfig-Std-1.10
 	o p5-AtExit-2.03
