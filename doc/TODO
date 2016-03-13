@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15584 2016/03/12 11:51:06 ryoon Exp $
+$NetBSD: TODO,v 1.15585 2016/03/13 03:17:09 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -1797,7 +1797,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o samba-4.3.6
 	o samba4-4.3.5
 	o sarg-2.2.5
-	o scala-2.11.8
 	o scew-1.1.7
 	o scilab-5.5.2
 	o scm-5f2
