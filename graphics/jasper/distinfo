@@ -1,10 +1,13 @@
-$NetBSD: distinfo,v 1.18 2015/11/03 21:34:04 agc Exp $
+$NetBSD: distinfo,v 1.19 2016/03/13 04:11:18 tnn Exp $
 
 SHA1 (jasper-1.900.1.zip) = 9c5735f773922e580bf98c7c7dfda9bbed4c5191
 RMD160 (jasper-1.900.1.zip) = fb2c188abf5b8c297078ac1f913101734f72db5c
 SHA512 (jasper-1.900.1.zip) = e3a3c803de848b50482f5bd693b1945197c6999285226c45b671855734d7bb2611fbe6f28cd8ba9c56a4ea59417795eba42d72516c9fec93b8fbaa21b8210cb6
 Size (jasper-1.900.1.zip) = 1415752 bytes
 SHA1 (patch-configure) = c8aa09f8432f0e3f5667ecb3ccd738c3c03f3f05
+SHA1 (patch-src_libjasper_base_jas__icc.c) = ec2faf717f8d561cda3cdc63516d843e195b102c
+SHA1 (patch-src_libjasper_base_jas__image.c) = a901a5847c4732a22c0e771c1d5763432fb5a1db
+SHA1 (patch-src_libjasper_base_jas__seq.c) = 609171c4aa905ba3e3dd74779c18c7b5ab52200c
 SHA1 (patch-src_libjasper_jp2_jp2__cod.c) = 7902e9900130f466fa60a5389409cc9495b6260c
 SHA1 (patch-src_libjasper_jp2_jp2__dec.c) = 5a795502f9241829afa1acf0a2a341155b954108
 SHA1 (patch-src_libjasper_jpc_jpc__cs.c) = 794de4dcf8f809275a5bee5cb60d95cf9608e0a7
