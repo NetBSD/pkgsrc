@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 03:29:21 agc Exp $
-
-SHA1 (debugger-1.6.8.gem) = af2fc1f586e1a34b0925a71b9e2ea0f56ad9c459
-RMD160 (debugger-1.6.8.gem) = b79a4885c9abb29c32f575ceafcabafd2d1bcc60
-SHA512 (debugger-1.6.8.gem) = d93b56d26f6c807a460c4c8642221ad62f9e0ca6c8abc68bf88a8b56b586f45055a378e75088d8190d40bc969caaebe1c02655a952c1a49c1dd2020c05e75cee
-Size (debugger-1.6.8.gem) = 318976 bytes
