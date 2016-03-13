@@ -1,6 +1,0 @@
-This a meta package including Ruby 2.0.0 full release.
-
-It includes ruby200-base, ruby200-gdbm, ruby200-curses, ruby200-fiddle,
-ruby200-readline and ruby200-tk package.
-
-No package should depend on this package directly.
