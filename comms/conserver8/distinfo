@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.9 2015/11/03 01:34:53 agc Exp $
+$NetBSD: distinfo,v 1.10 2016/03/13 18:31:11 schnoebe Exp $
 
-SHA1 (conserver-8.2.0.tar.gz) = acbb7f282cea94eb044860c35ddd9f31a0299888
-RMD160 (conserver-8.2.0.tar.gz) = fde2c8626f097d2e7f6eb10850a858dfc7d77a19
-SHA512 (conserver-8.2.0.tar.gz) = adda3f473a50d931ce4cce6daa710385857324884157a78b90a5bae4dd8d5dd491b6e404e0fd7fb7eb657a48912ca24f0a1574f435e824ae608454e9c3dc2a09
-Size (conserver-8.2.0.tar.gz) = 334326 bytes
+SHA1 (conserver-8.2.1.tar.gz) = 357eea46c0189280b0ab66776b01ce3ba02f1847
+RMD160 (conserver-8.2.1.tar.gz) = 39f08facffc9b462c8257fa21c24785eb1e2bb5a
+SHA512 (conserver-8.2.1.tar.gz) = caf519b8295fc142cf1cb5b141854aede07b3613653f417e9c3ebee75b30a12fa785c248806758f60afbc155cc048418635d514a9848e0fa06992f1e4f930fb6
+Size (conserver-8.2.1.tar.gz) = 335241 bytes
 SHA1 (patch-aa) = d0eebea0d126c611f6f60035730a0c2f97280b01
 SHA1 (patch-ab) = 7a507e428277cc6ccf14b961c44d4e6fd3abcde3
+SHA1 (patch-conserver_readcfg.c) = c39e1d50829658cb77e4c943e631da4b3cdd31ee
