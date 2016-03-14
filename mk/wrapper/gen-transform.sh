@@ -1,6 +1,6 @@
 #! @WRAPPER_SHELL@
 #
-# $NetBSD: gen-transform.sh,v 1.10 2014/12/30 15:13:20 wiz Exp $
+# $NetBSD: gen-transform.sh,v 1.11 2016/03/14 20:11:56 markd Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -81,12 +81,16 @@ gen()
 		transform)
 			$debug_log $wrapperlog "   (gen-transform) $_cmd: $@"
 			gen $_action "opt:-I$1:-I$2"
+			gen $_action "opt:-isystem,$1:-isystem,$2"
 			gen $_action "opt-sub:-I$1:-I$2"
+			gen $_action "opt-sub:-isystem,$1:-isystem,$2"
 			;;
 		untransform)
 			$debug_log $wrapperlog "   (gen-transform) $_cmd: $@"
 			gen $_action "opt:-I$2:-I$1"
+			gen $_action "opt:-isystem,$2:-isystem,$1"
 			gen $_action "opt-sub:-I$2:-I$1"
+			gen $_action "opt-sub:-isystem,$2:-isystem,$1"
 			;;
 		esac
 		;;
@@ -161,6 +165,7 @@ gen()
 		$debug_log $wrapperlog "   (gen-transform) $_cmd: $@"
 		#gen $_action "opt:$1:$2"
 		gen $_action "opt:-I$1:-I$2"
+		gen $_action "opt:-isystem,$1:-isystem,$2"
 		gen $_action "opt:-L$1:-L$2"
 		gen $_action "rpath-exact:$1:$2"
 		gen $_action "sub-mangle:$1:$2"
@@ -172,6 +177,7 @@ gen()
 	no-abspath)
 		$debug_log $wrapperlog "   (gen-transform) $_cmd"
 		gen $_action "rm-optarg:-I/"
+		gen $_action "rm-optarg:-isystem,/"
 		gen $_action "rm-optarg:-L/"
 		for _R in $rpath_options; do
 			gen $_action "rm-optarg:$_R/"
@@ -303,7 +309,9 @@ gen()
 	rmdir)
 		$debug_log $wrapperlog "   (gen-transform) $_cmd: $@"
 		gen $_action "opt:-I$1:"
+		gen $_action "opt:-isystem,$1:"
 		gen $_action "rm-optarg:-I$1/"
+		gen $_action "rm-optarg:-isystem,$1/"
 		gen $_action "opt:-L$1:"
 		gen $_action "rm-optarg:-L$1/"
 		for _R in $rpath_options; do
@@ -340,6 +348,7 @@ gen()
 		$debug_log $wrapperlog "   (gen-transform) $_cmd: $@"
 		gen $_action "opt-sub-trailer:$1:/\.:$1:"
 		gen $_action "opt-sub-trailer:-I$1:/\.:-I$1:"
+		gen $_action "opt-sub-trailer:-isystem,$1:/\.:-isystem,$1:"
 		gen $_action "opt-sub-trailer:-L$1:/\.:-L$1:"
 		for _R in $rpath_options; do
 			gen $_action "opt-sub-trailer:$_R$1:/\.:$_R$1:"
@@ -355,6 +364,7 @@ gen()
 		#gen $_action "opt-sub:$1:$2"
 		gen $_action "libpath:$1:$2"
 		gen $_action "opt-sub:-I$1:-I$2"
+		gen $_action "opt-sub:-isystem,$1:-isystem,$2"
 		gen $_action "opt-sub:-L$1:-L$2"
 		gen $_action "sub-rpath:$1:$2"
 		;;
