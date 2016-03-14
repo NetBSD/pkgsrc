@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2015/01/23 00:16:03 mef Exp $
+# $NetBSD: Makefile,v 1.10 2016/03/14 11:48:10 tnn Exp $
 #
 
 DISTNAME=	bml-0.8.0
@@ -25,9 +25,7 @@ CFLAGS+=	-DHAVE_VSSCANF=1	# missing configure logic
 LDFLAGS+=	-li386			# for i386_set_ldt
 .endif
 
+BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
+
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
-
-.if empty(BUILDLINK_LDADD.dl)
-BUILDLINK_TRANSFORM+=	rm:-ldl
-.endif
