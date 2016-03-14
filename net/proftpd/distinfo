@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.44 2015/11/04 00:35:28 agc Exp $
+$NetBSD: distinfo,v 1.45 2016/03/14 22:47:10 wiedi Exp $
 
-SHA1 (proftpd-1.3.5a.tar.gz) = 7c4027c207bdfe7c88b859810c7fa9b978b0524d
-RMD160 (proftpd-1.3.5a.tar.gz) = ff9050ee8c0fb741eb84ef815ad0974bf237193a
-SHA512 (proftpd-1.3.5a.tar.gz) = d64de12c100814c5c8a3916b3c9344f5a68c2b85902ffc8e5bb088d8975b5f13a7b9a29f82085b70dc93f4599c0e0f2645977d20998dda11981e66f534ea692c
-Size (proftpd-1.3.5a.tar.gz) = 29988477 bytes
+SHA1 (proftpd-1.3.5b.tar.gz) = fd11ba8f2d157f4e59162a24b22f82cd7d32d3cd
+RMD160 (proftpd-1.3.5b.tar.gz) = 1a682879fbeb7f0ef61d944399650fc7f7da4982
+SHA512 (proftpd-1.3.5b.tar.gz) = 5bdb9718c85c26b92256d7b3791a6a5456bec3826801b7b68f4d493d202ac77179c8378ad06efc1a805efce639db266561d3beb4bc7af61ca1352fb4bdfd4e6a
+Size (proftpd-1.3.5b.tar.gz) = 29992107 bytes
 SHA1 (patch-Makefile.in) = 332dcd9d773770c10d876dc9da1dc7f6b1c15421
 SHA1 (patch-contrib_mod__sftp_Makefile.in) = 8a805d777597b4fb06a45b484373880e535a0cee
 SHA1 (patch-contrib_mod_tls.c) = e36dfa9427804b41eb2ad49378b62890325d50ed
