@@ -1,0 +1,15 @@
+$NetBSD: patch-po_Makefile.in,v 1.1 2016/03/14 15:37:47 tnn Exp $
+
+--check trips up gettext 0.14.
+
+--- po/Makefile.in.orig	2015-08-25 09:53:09.000000000 +0000
++++ po/Makefile.in
+@@ -1396,7 +1396,7 @@ uninstall-am: uninstall-local
+ 
+ 
+ .po.mo:
+-	$(MSGFMT) --check --output-file=$@ $<
++	$(MSGFMT) --output-file=$@ $<
+ 
+ all-local: $(MO_FILES)
+ 
