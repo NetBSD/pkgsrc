@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2015/12/30 16:23:52 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2016/03/14 14:36:39 tnn Exp $
 
 DISTNAME=	include-what-you-use-0.5.src
+PKGREVISION=	1
 PKGNAME=	${DISTNAME:.src=}
 CATEGORIES=	devel
 MASTER_SITES=	http://include-what-you-use.org/downloads/
