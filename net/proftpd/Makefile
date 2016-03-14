@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.82 2016/03/05 11:29:10 jperkin Exp $
+# $NetBSD: Makefile,v 1.83 2016/03/14 22:47:10 wiedi Exp $
 
 .include "../../net/proftpd/Makefile.common"
 
-PKGREVISION=	3
 COMMENT=	Highly configurable FTP server software
 
 MODULES+=	\
