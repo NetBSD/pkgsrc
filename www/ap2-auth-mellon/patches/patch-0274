@@ -1,0 +1,53 @@
+From fe0eb56e29f89513b2dcf3c222fa3a2e8a09383f Mon Sep 17 00:00:00 2001
+From: Olav Morken <olav.morken@uninett.no>
+Date: Mon, 14 Mar 2016 09:47:48 +0100
+Subject: [PATCH 274/274] Return 500 Internal Server Error if probe discovery
+ fails.
+
+If we don't, we can end up sending an authentication request to an IdP
+that is not in the MellonProbeDiscoveryIdP list, which is probably not
+what the user wants.
+
+Patch by Emmanuel Dreyfus.
+---
+ README                |  3 +++
+ auth_mellon_handler.c | 10 +++++++++-
+ 2 files changed, 12 insertions(+), 1 deletion(-)
+
+diff --git a/README b/README
+index 638329c..4e4f229 100644
+--- README
++++ README
+@@ -471,6 +471,9 @@ MellonPostCount 100
+ 
+         # MellonProbeDiscoveryIdP can be used to restrict the 
+         # list of IdP queried by the IdP probe discovery service.
++        # If probe discovery fails and this is provided, an
++        # HTTP error 500 is returned, instead of proceeding
++        # with first available IdP.
+         #
+         # Default unset, which means that all configured IdP are 
+         # queried.
+diff --git a/auth_mellon_handler.c b/auth_mellon_handler.c
+index 7f4b73a..a72e1ca 100644
+--- auth_mellon_handler.c
++++ auth_mellon_handler.c
+@@ -3316,9 +3316,17 @@ static int am_handle_probe_discovery(request_rec *r) {
+     }
+ 
+     /* 
+-     * On failure, try default
++     * On failure, fail if a MellonProbeDiscoveryIdP
++     * list was provided, otherwise try first IdP.
+      */
+     if (disco_idp == NULL) {
++        if (!apr_is_empty_table(cfg->probe_discovery_idp)) {
++            ap_log_rerror(APLOG_MARK, APLOG_ERR, 0, r,
++                          "probeDiscovery failed and non empty "
++                          "MellonProbeDiscoveryIdP was provided.");
++            return HTTP_INTERNAL_SERVER_ERROR;
++        }
++
+         disco_idp = am_first_idp(r);
+         if (disco_idp == NULL) {
+             ap_log_rerror(APLOG_MARK, APLOG_ERR, 0, r, 
