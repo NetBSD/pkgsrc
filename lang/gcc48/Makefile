@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2016/02/25 14:42:56 jperkin Exp $
+# $NetBSD: Makefile,v 1.24 2016/03/14 05:49:51 dbj Exp $
 
 GCC_PKGNAME=	gcc48
 .include	"version.mk"
+PKGREVISION=	1
 
 DISTNAME=	gcc-${GCC48_DIST_VERSION}
 PKGNAME=	${GCC_PKGNAME}-${GCC48_DIST_VERSION}
@@ -160,6 +161,7 @@ GENERATE_PLIST+= \
 	cd ${DESTDIR}${PREFIX} && 					\
 	${FIND} ${GCC_SUBPREFIX} \( -type f -o -type l \) -print | ${SORT} ;
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
