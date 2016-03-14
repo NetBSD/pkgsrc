@@ -1,12 +1,20 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 00:08:43 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/03/14 11:01:06 bouyer Exp $
 
-SHA1 (OpenCPN-4.0.0-Source.tar.gz) = a8fe31476a3472cff18e55179094cbc4434699ce
-RMD160 (OpenCPN-4.0.0-Source.tar.gz) = 614889e41c8cd5453f3210781201cb29912d8cc1
-SHA512 (OpenCPN-4.0.0-Source.tar.gz) = d815a0e299debb726c982341e43338ea4ebacc0346ddb31a033e5380f27b56615ecd730f2462696cab4096185207b3c463b8c3a071f81493adc8641e4def6317
-Size (OpenCPN-4.0.0-Source.tar.gz) = 193305992 bytes
-SHA1 (patch-CMakeLists.txt) = 57abad7a02bf5fa64a522aceeddc4c67a3d5a3e2
+SHA1 (OpenCPN-4.2.0-a555b4988b50f555be052394c184ef26c5ad0e8a.zip) = 39baa5f89ded9a5c62824e6e1445dbfc4f168578
+RMD160 (OpenCPN-4.2.0-a555b4988b50f555be052394c184ef26c5ad0e8a.zip) = d344b9caffe40dabcad1d9ac148ce54d75f1573c
+SHA512 (OpenCPN-4.2.0-a555b4988b50f555be052394c184ef26c5ad0e8a.zip) = 3ea2136ab777f711aeaa66f34722b3b091af91104ff60303b61c587f95354826afae6dbc8f6a9228357399ae36e96a34098596c0a278d2184ce59283c88f4051
+Size (OpenCPN-4.2.0-a555b4988b50f555be052394c184ef26c5ad0e8a.zip) = 42779485 bytes
+SHA1 (patch-CMakeLists.txt) = 472b73f0e337d49d94b1cfb892962247d4e1959f
 SHA1 (patch-FindPortaudio.cmake) = e1bebe2203c6f3dc76f92ee5bdcb01eca66b6b9a
+SHA1 (patch-plugins_chartdldr_pi_cmake_PluginConfigure.cmake) = 9d6ade1c32f7d52b53848a2e382a4838d0240530
+SHA1 (patch-plugins_dashboard_pi_CMakeLists.txt) = f96234755ccdb0cf4d890b44c3983a71700e6de7
+SHA1 (patch-plugins_grib_pi_CMakeLists.txt) = fbac6b6da5c8efceb6931a6b41bec4a8ea7cbccb
+SHA1 (patch-plugins_wmm_pi_cmake_PluginConfigure.cmake) = 086de4106760df22b30330a40e3ec52d88d8b996
 SHA1 (patch-src_chart1.cpp) = ae7c1d8a59c9a275914a613205de71e2dca89dc6
+SHA1 (patch-src_chartimg.cpp) = f0e3841ab1920dcab74462a5007b74e905d794c0
+SHA1 (patch-src_chcanv.cpp) = af76f36b6fd6d613720945195d5a24902012a020
 SHA1 (patch-src_crashprint.cpp) = a96e8aa980eb3b19c3dce3343582511d608e6625
+SHA1 (patch-src_glu_libtess_sweep.c) = 68e3e69239d8bdce353bcad0f5606be5b447b5a7
+SHA1 (patch-src_mipmap_mipmap.c) = 3bdb2c37e7a6d89fc6a531af6e0396a1ff385aeb
 SHA1 (patch-src_tcmgr.cpp) = 3fb4edf3368f3f3907f231ebcabd8e5061699040
 SHA1 (patch-src_texcmp_squish_squish.cpp) = 3a70d4da7a3d6b54cac122a3e80a35b46a91af19
