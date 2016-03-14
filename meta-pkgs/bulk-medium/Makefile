@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2015/12/05 21:25:49 adam Exp $
+# $NetBSD: Makefile,v 1.34 2016/03/14 00:54:43 tnn Exp $
 
-DISTNAME=	bulk-medium-20151004
+DISTNAME=	bulk-medium-20160314
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -85,7 +85,6 @@ BUILD_DEPENDS+=	gawk-[0-9]*:../../lang/gawk
 BUILD_DEPENDS+=	php>=5.5<5.6:../../lang/php55
 BUILD_DEPENDS+=	php>=5.6<5.7:../../lang/php56
 BUILD_DEPENDS+=	ruby18-base-[0-9]*:../../lang/ruby18-base
-BUILD_DEPENDS+=	ruby200-base-[0-9]*:../../lang/ruby200-base
 BUILD_DEPENDS+=	ruby21-base-[0-9]*:../../lang/ruby21-base
 BUILD_DEPENDS+=	ruby22-base-[0-9]*:../../lang/ruby22-base
 BUILD_DEPENDS+=	sun-jdk6-[0-9]*:../../lang/sun-jdk6
