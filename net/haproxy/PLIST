@@ -1,5 +1,11 @@
-@comment $NetBSD: PLIST,v 1.6 2015/11/12 16:32:29 morr Exp $
+@comment $NetBSD: PLIST,v 1.7 2016/03/14 09:23:31 fhajny Exp $
 man/man1/haproxy.1
 sbin/haproxy
 share/doc/haproxy/architecture.txt
 share/doc/haproxy/configuration.txt
+share/examples/haproxy/acl-content-sw.cfg
+share/examples/haproxy/auth.cfg
+share/examples/haproxy/content-sw-sample.cfg
+share/examples/haproxy/option-http_proxy.cfg
+share/examples/haproxy/ssl.cfg
+share/examples/haproxy/transparent_proxy.cfg
