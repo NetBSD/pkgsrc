@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2016/03/14 14:30:47 ryoon Exp $
 
-SHA1 (tor-browser-38.6.1esr-5.5-1.tar.xz) = 6243bda76750790c6fb814f2b51f19edca6f61c6
-RMD160 (tor-browser-38.6.1esr-5.5-1.tar.xz) = d388fa267c8b715c934842c792a328e8b72d5e92
-SHA512 (tor-browser-38.6.1esr-5.5-1.tar.xz) = e83ef8fe33abc4d2b7312a837dbe4feaac59f21fa0b222371612da855443c60d59884b13a451ccf560d954876088f3919d356e45ec43317a5767abe163438fa5
-Size (tor-browser-38.6.1esr-5.5-1.tar.xz) = 150057228 bytes
+SHA1 (tor-browser-38.7.0esr-5.5-1.tar.xz) = b6a35f91470572d175b461b6ba6e31be56c47e34
+RMD160 (tor-browser-38.7.0esr-5.5-1.tar.xz) = 751bb7429cecbb151df550aab7f53486c705ff8b
+SHA512 (tor-browser-38.7.0esr-5.5-1.tar.xz) = 3d2ab2f82af7dfa1b1f777916ba450f8107da8c9c6a272fb0fe66281f4d89450c8cb9a02ae229b0c3bb8d063f825a359b1ca66af5fecad8ea4ba861ec11b2070
+Size (tor-browser-38.7.0esr-5.5-1.tar.xz) = 150084572 bytes
 SHA1 (patch-aa) = e9e8400fa86ae8d6910b49e3a98127122e714f1a
 SHA1 (patch-accessible_atk_Platform.cpp) = c2deb81b300de44c4500328589185bbd4b6b02fb
 SHA1 (patch-al) = cca5df21d018bb9f428ad26d00718f33afe88ec5
