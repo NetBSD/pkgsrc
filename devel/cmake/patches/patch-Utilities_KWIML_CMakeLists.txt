@@ -1,12 +1,14 @@
-$NetBSD: patch-Utilities_KWIML_CMakeLists.txt,v 1.1 2012/01/08 17:44:23 adam Exp $
+$NetBSD: patch-Utilities_KWIML_CMakeLists.txt,v 1.2 2016/03/14 10:49:55 adam Exp $
 
 Disable tests. Solves some preprocessor problems.
 
---- Utilities/KWIML/CMakeLists.txt.orig	2012-01-08 16:31:36.000000000 +0000
+--- Utilities/KWIML/CMakeLists.txt.orig	2016-03-08 14:36:25.000000000 +0000
 +++ Utilities/KWIML/CMakeLists.txt
-@@ -75,5 +75,4 @@ endforeach()
+@@ -42,7 +42,6 @@ if(KWIML_INSTALL_INCLUDE_DIR)
+ endif()
  
- #-----------------------------------------------------------------------------
- if(BUILD_TESTING)
+ if(KWIML_TEST_ENABLE)
 -  add_subdirectory(test)
  endif()
+ 
+ if(NOT kwiml_standalone)

@@ -1,10 +1,10 @@
-$NetBSD: patch-Source_cmELF.cxx,v 1.2 2015/01/17 13:29:55 adam Exp $
+$NetBSD: patch-Source_cmELF.cxx,v 1.3 2016/03/14 10:49:55 adam Exp $
 
 * SCO OpenServer 5.0.7/3.2 has not 64bit ELF support.
 
---- Source/cmELF.cxx.orig	2014-12-15 20:07:43.000000000 +0000
+--- Source/cmELF.cxx.orig	2016-03-08 14:36:22.000000000 +0000
 +++ Source/cmELF.cxx
-@@ -49,6 +49,9 @@
+@@ -45,6 +45,9 @@
  #if defined(__sun)
  # include <sys/link.h> // For dynamic section information
  #endif
@@ -14,7 +14,7 @@ $NetBSD: patch-Source_cmELF.cxx,v 1.2 2015/01/17 13:29:55 adam Exp $
  
  //----------------------------------------------------------------------------
  // Low-level byte swapping implementation.
-@@ -203,6 +206,8 @@ struct cmELFTypes32
+@@ -199,6 +202,8 @@ struct cmELFTypes32
  };
  
  // Configure the implementation template for 64-bit ELF files.
@@ -23,15 +23,15 @@ $NetBSD: patch-Source_cmELF.cxx,v 1.2 2015/01/17 13:29:55 adam Exp $
  struct cmELFTypes64
  {
    typedef Elf64_Ehdr ELF_Ehdr;
-@@ -212,6 +217,7 @@ struct cmELFTypes64
-   typedef cmIML_INT_uint64_t tagtype;
+@@ -208,6 +213,7 @@ struct cmELFTypes64
+   typedef KWIML_INT_uint64_t tagtype;
    static const char* GetName() { return "64-bit"; }
  };
 +#endif
  
  //----------------------------------------------------------------------------
  // Parser implementation template.
-@@ -788,11 +794,14 @@ cmELF::cmELF(const char* fname): Interna
+@@ -790,11 +796,14 @@ cmELF::cmELF(const char* fname): Interna
      // 32-bit ELF
      this->Internal = new cmELFInternalImpl<cmELFTypes32>(this, fin, order);
      }
