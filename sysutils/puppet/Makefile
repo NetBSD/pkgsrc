@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2016/01/03 06:53:49 taca Exp $
+# $NetBSD: Makefile,v 1.24 2016/03/14 00:59:06 tnn Exp $
 
 DISTNAME=		puppet-3.8.4
 PKGREVISION=		1
@@ -16,7 +16,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-minitest>=2.5.1:../../devel/ruby-minitest
 DEPENDS+=	${RUBY_PKGPREFIX}-shadow>=2.0.0:../../security/ruby-shadow
 # io-console gem is bundled in ruby base package.
 
-RUBY_VERSION_SUPPORTED=	200 21
+RUBY_VERSION_SUPPORTED=	21
 RUBY_JSON_REQD=		1.7.0
 RUBY_JSON_TYPE=		pure
 RUBYGEM_OPTIONS+=	--format-executable
