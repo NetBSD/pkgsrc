@@ -1,4 +1,4 @@
-/* $NetBSD: generic-transform-cc.c,v 1.3 2015/04/19 14:30:07 jperkin Exp $ */
+/* $NetBSD: generic-transform-cc.c,v 1.4 2016/03/14 20:16:08 markd Exp $ */
 
 /*-
  * Copyright (c) 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -359,6 +359,19 @@ generic_transform_cc(struct arglist *args)
 			path = arg->val + 2;
 			ruleset = &include_rules;
 			opt_arg = NULL;
+		}
+		else if (strcmp(arg->val, "-isystem") == 0) {
+			opt_arg = arg;
+			arg = arg2;
+			if (arg == NULL || arg->val[0] == '-') {
+				errx(255, "Missing argument for %s",
+				    opt_arg->val);
+			}
+			ruleset = &include_rules;
+			arg2 = TAILQ_NEXT(arg, link);
+			len = strlen(arg->val);
+			prefix = "";
+			path = arg->val;
 		}
 #endif
 		else if (strncmp(arg->val, "-L", 2) == 0) {
