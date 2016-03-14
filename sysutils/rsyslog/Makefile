@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/10/12 10:28:56 fhajny Exp $
+# $NetBSD: Makefile,v 1.7 2016/03/14 11:12:22 tnn Exp $
 #
 
 BUILDLINK_DEPMETHOD.libestr=	full
@@ -29,6 +29,11 @@ RSYSLOG_SYSMOD=		imsolaris
 CONFIGURE_ARGS+=	--disable-imsolaris --enable-klog
 PLIST.klog=		yes
 RSYSLOG_SYSMOD=		imklog
+.endif
+
+# needs to be able to do compare-and-swap on time_t (cmpxchg8b)
+.if ${MACHINE_ARCH} == "i386"
+CFLAGS+=		-march=i586
 .endif
 
 BUILD_DEFS+=		VARBASE RSYSLOG_PIDDIR RSYSLOG_WRKDIR
