@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.236 2015/05/04 19:23:19 joerg Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.237 2016/03/14 20:11:56 markd Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -968,6 +968,7 @@ _CWRAPPERS_TRANSFORM+=	L:/usr/lib/../libx32:/usr/libx32
 #
 .for _dir_ in ${COMPILER_INCLUDE_DIRS}
 _BLNK_TRANSFORM+=	opt-sub:-I${_dir_}:-I${_BLNK_MANGLE_DIR.${_dir_}}
+_BLNK_TRANSFORM+=	opt-sub:-isystem,${_dir_}:-isystem,${_BLNK_MANGLE_DIR.${_dir_}}
 _CWRAPPERS_TRANSFORM+=	I:${_dir_}:${_dir_}
 .endfor
 .for _dir_ in ${COMPILER_LIB_DIRS}
