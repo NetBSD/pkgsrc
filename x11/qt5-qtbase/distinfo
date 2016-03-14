@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.29 2016/03/02 23:04:00 ryoon Exp $
+$NetBSD: distinfo,v 1.30 2016/03/14 06:12:17 dbj Exp $
 
 SHA1 (qtbase-opensource-src-5.5.1.tar.xz) = 0b651543fa013ae151b7a11f0d0dee092050aa3f
 RMD160 (qtbase-opensource-src-5.5.1.tar.xz) = ce4bccd0703aaf8d904fbecd1f334ef13d698a44
 SHA512 (qtbase-opensource-src-5.5.1.tar.xz) = 4d31de136870025dfb7544f255798884af1ad4f3060b0c00a0467c98af1f7de368eb298d4c52ba6d1ad27e36060b30c0314ce7ba0744b15642420ec89587a575
 Size (qtbase-opensource-src-5.5.1.tar.xz) = 46389212 bytes
 SHA1 (patch-config.tests_unix_iconv_iconv.cpp) = 05131870b21ff778b1e6f3d1e7287060b6b88764
-SHA1 (patch-configure) = ad30163463ccc9310e34633f13ca27bfccca59f4
+SHA1 (patch-configure) = 482815b5f3ec25fabe0995cfc70acf164928d192
 SHA1 (patch-mkspecs_features_create__cmake.prf) = 3f6b3a592e29f5529e5c87dbac036c165470eac4
 SHA1 (patch-mkspecs_features_mac_objective__c.prf) = 20838861017d969fbcf171960dfc07db1bd5a177
 SHA1 (patch-mkspecs_features_qt__module__pris.prf) = edaab0b9e407cc52f4682ce1cf8441832c57fe39
