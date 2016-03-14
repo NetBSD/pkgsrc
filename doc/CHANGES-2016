@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1166 2016/03/14 14:08:50 ryoon Exp $
+$NetBSD: CHANGES-2016,v 1.1167 2016/03/14 14:31:13 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1556,3 +1556,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/facette to 0.4.0devnb6 [imil 2016-03-14]
 	Updated textproc/grep to 2.24 [ryoon 2016-03-14]
 	Updated security/putty to 0.67 [ryoon 2016-03-14]
+	Updated security/tor-browser to 5.5.3 [ryoon 2016-03-14]
