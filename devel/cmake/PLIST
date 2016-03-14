@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2015/11/17 12:12:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.41 2016/03/14 10:49:55 adam Exp $
 bin/ccmake
 bin/cmake
 bin/cpack
@@ -22,6 +22,7 @@ share/cmake-${CMAKE_API}/Help/command/build_command.rst
 share/cmake-${CMAKE_API}/Help/command/build_name.rst
 share/cmake-${CMAKE_API}/Help/command/cmake_host_system_information.rst
 share/cmake-${CMAKE_API}/Help/command/cmake_minimum_required.rst
+share/cmake-${CMAKE_API}/Help/command/cmake_parse_arguments.rst
 share/cmake-${CMAKE_API}/Help/command/cmake_policy.rst
 share/cmake-${CMAKE_API}/Help/command/configure_file.rst
 share/cmake-${CMAKE_API}/Help/command/continue.rst
@@ -354,6 +355,7 @@ share/cmake-${CMAKE_API}/Help/module/FindWish.rst
 share/cmake-${CMAKE_API}/Help/module/FindX11.rst
 share/cmake-${CMAKE_API}/Help/module/FindXCTest.rst
 share/cmake-${CMAKE_API}/Help/module/FindXMLRPC.rst
+share/cmake-${CMAKE_API}/Help/module/FindXalanC.rst
 share/cmake-${CMAKE_API}/Help/module/FindXercesC.rst
 share/cmake-${CMAKE_API}/Help/module/FindZLIB.rst
 share/cmake-${CMAKE_API}/Help/module/Findosg.rst
@@ -690,6 +692,7 @@ share/cmake-${CMAKE_API}/Help/prop_tgt/INTERFACE_SOURCES.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/INTERFACE_SYSTEM_INCLUDE_DIRECTORIES.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/INTERPROCEDURAL_OPTIMIZATION.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/INTERPROCEDURAL_OPTIMIZATION_CONFIG.rst
+share/cmake-${CMAKE_API}/Help/prop_tgt/IOS_INSTALL_COMBINED.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/JOB_POOL_COMPILE.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/JOB_POOL_LINK.rst
 share/cmake-${CMAKE_API}/Help/prop_tgt/LABELS.rst
@@ -786,6 +789,7 @@ share/cmake-${CMAKE_API}/Help/release/3.1.rst
 share/cmake-${CMAKE_API}/Help/release/3.2.rst
 share/cmake-${CMAKE_API}/Help/release/3.3.rst
 share/cmake-${CMAKE_API}/Help/release/3.4.rst
+share/cmake-${CMAKE_API}/Help/release/3.5.rst
 share/cmake-${CMAKE_API}/Help/release/dev.txt
 share/cmake-${CMAKE_API}/Help/release/index.rst
 share/cmake-${CMAKE_API}/Help/variable/APPLE.rst
@@ -868,6 +872,7 @@ share/cmake-${CMAKE_API}/Help/variable/CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATI
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_EXECUTABLE_SUFFIX.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_EXE_LINKER_FLAGS.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_EXE_LINKER_FLAGS_CONFIG.rst
+share/cmake-${CMAKE_API}/Help/variable/CMAKE_EXPORT_COMPILE_COMMANDS.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_EXPORT_NO_PACKAGE_REGISTRY.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_EXTRA_GENERATOR.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_EXTRA_SHARED_LIBRARY_SUFFIXES.rst
@@ -919,6 +924,7 @@ share/cmake-${CMAKE_API}/Help/variable/CMAKE_INSTALL_PREFIX.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_INSTALL_RPATH.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_INSTALL_RPATH_USE_LINK_PATH.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_INTERNAL_PLATFORM_ABI.rst
+share/cmake-${CMAKE_API}/Help/variable/CMAKE_IOS_INSTALL_COMBINED.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_JOB_POOL_COMPILE.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_JOB_POOL_LINK.rst
 share/cmake-${CMAKE_API}/Help/variable/CMAKE_LANG_ARCHIVE_APPEND.rst
@@ -1254,10 +1260,12 @@ share/cmake-${CMAKE_API}/Modules/CMakeFortranCompilerId.F.in
 share/cmake-${CMAKE_API}/Modules/CMakeFortranInformation.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeGenericSystem.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeGraphVizOptions.cmake
+share/cmake-${CMAKE_API}/Modules/CMakeIOSInstallCombined.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeImportBuildSettings.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeJOMFindMake.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeJavaCompiler.cmake.in
 share/cmake-${CMAKE_API}/Modules/CMakeJavaInformation.cmake
+share/cmake-${CMAKE_API}/Modules/CMakeLanguageInformation.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeMSYSFindMake.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeMinGWFindMake.cmake
 share/cmake-${CMAKE_API}/Modules/CMakeNMakeFindMake.cmake
@@ -1354,6 +1362,11 @@ share/cmake-${CMAKE_API}/Modules/CheckTypeSizeMap.cmake.in
 share/cmake-${CMAKE_API}/Modules/CheckVariableExists.c
 share/cmake-${CMAKE_API}/Modules/CheckVariableExists.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/ADSP-DetermineCompiler.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/ARMCC-ASM.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/ARMCC-C.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/ARMCC-CXX.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/ARMCC-DetermineCompiler.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/ARMCC.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/Absoft-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/AppleClang-ASM.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/AppleClang-C-FeatureTests.cmake
@@ -1379,6 +1392,22 @@ share/cmake-${CMAKE_API}/Modules/Compiler/Cray-C.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/Cray-CXX.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/Cray-DetermineCompiler.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/Cray-Fortran.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/CrayPrgEnv-C.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/CrayPrgEnv-CXX.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/CrayPrgEnv-Cray-C.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/CrayPrgEnv-Cray-CXX.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/CrayPrgEnv-Cray-Fortran.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/CrayPrgEnv-Fortran.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/CrayPrgEnv-GNU-C.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/CrayPrgEnv-GNU-CXX.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/CrayPrgEnv-GNU-Fortran.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/CrayPrgEnv-Intel-C.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/CrayPrgEnv-Intel-CXX.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/CrayPrgEnv-Intel-Fortran.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/CrayPrgEnv-PGI-C.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/CrayPrgEnv-PGI-CXX.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/CrayPrgEnv-PGI-Fortran.cmake
+share/cmake-${CMAKE_API}/Modules/Compiler/CrayPrgEnv.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/Embarcadero-DetermineCompiler.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/Fujitsu-DetermineCompiler.cmake
 share/cmake-${CMAKE_API}/Modules/Compiler/G95-Fortran.cmake
@@ -1607,6 +1636,7 @@ share/cmake-${CMAKE_API}/Modules/FindWish.cmake
 share/cmake-${CMAKE_API}/Modules/FindX11.cmake
 share/cmake-${CMAKE_API}/Modules/FindXCTest.cmake
 share/cmake-${CMAKE_API}/Modules/FindXMLRPC.cmake
+share/cmake-${CMAKE_API}/Modules/FindXalanC.cmake
 share/cmake-${CMAKE_API}/Modules/FindXercesC.cmake
 share/cmake-${CMAKE_API}/Modules/FindZLIB.cmake
 share/cmake-${CMAKE_API}/Modules/Findosg.cmake
@@ -1726,6 +1756,7 @@ share/cmake-${CMAKE_API}/Modules/Platform/CYGWIN-GNU.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/CYGWIN-windres.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/CYGWIN.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Catamount.cmake
+share/cmake-${CMAKE_API}/Modules/Platform/CrayLinuxEnvironment.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Darwin-Absoft-Fortran.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Darwin-AppleClang-C.cmake
 share/cmake-${CMAKE_API}/Modules/Platform/Darwin-AppleClang-CXX.cmake
