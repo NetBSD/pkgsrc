@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2016/03/12 08:50:50 wiz Exp $
+# $NetBSD: Makefile.common,v 1.9 2016/03/14 02:13:33 tnn Exp $
 # used by x11/modular-xorg-server/Makefile
 # used by x11/modular-xorg-xephyr/Makefile
 
@@ -108,7 +108,7 @@ BUILDLINK_API_DEPENDS.damageproto+=	damageproto>=1.1
 BUILDLINK_API_DEPENDS.xcmiscproto+=	xcmiscproto>=1.2.0
 BUILDLINK_API_DEPENDS.xtrans+=		xtrans>=1.2.2
 BUILDLINK_API_DEPENDS.bigreqsproto+=	bigreqsproto>=1.1.0
-BUILDLINK_API_DEPENDS.xproto+=		xproto>=7.0.22
+BUILDLINK_API_DEPENDS.xproto+=		xproto>=7.0.28
 BUILDLINK_API_DEPENDS.xextproto+=	xextproto>=7.1.99
 BUILDLINK_API_DEPENDS.recordproto+=	recordproto>=1.13.99.1
 BUILDLINK_API_DEPENDS.scrnsaverproto+=	scrnsaverproto>=1.1
@@ -161,7 +161,6 @@ BUILDLINK_API_DEPENDS.libXext+=	libXext>=1.1.1
 .include "../../x11/libxkbfile/buildlink3.mk"
 .include "../../x11/libxkbui/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
-.include "../../x11/presentproto/buildlink3.mk"
 .include "../../x11/randrproto/buildlink3.mk"
 .include "../../x11/recordproto/buildlink3.mk"
 .include "../../x11/renderproto/buildlink3.mk"
