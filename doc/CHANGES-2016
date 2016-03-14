@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1169 2016/03/14 16:04:44 tsutsui Exp $
+$NetBSD: CHANGES-2016,v 1.1170 2016/03/14 22:48:20 wiedi Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1559,3 +1559,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/tor-browser to 5.5.3 [ryoon 2016-03-14]
 	Removed www/drupal6 [taca 2016-03-14]
 	Updated x11/mlterm to 3.7.0 [tsutsui 2016-03-14]
+	Updated net/proftpd to 1.3.5b [wiedi 2016-03-14]
