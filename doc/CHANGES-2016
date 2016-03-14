@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1163 2016/03/14 11:09:15 bouyer Exp $
+$NetBSD: CHANGES-2016,v 1.1164 2016/03/14 12:55:54 imil Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1553,3 +1553,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/cmake to 3.5.0 [adam 2016-03-14]
 	Updated geography/opencpn to 4.2.0 [bouyer 2016-03-14]
 	Updated geography/opencpn-plugin-weather_routing to 20160208 [bouyer 2016-03-14]
+	Updated sysutils/facette to 0.4.0devnb6 [imil 2016-03-14]
