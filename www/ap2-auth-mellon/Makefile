@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.32 2016/03/05 11:29:34 jperkin Exp $
+# $NetBSD: Makefile,v 1.33 2016/03/14 09:58:57 manu Exp $
 #
 
-DISTNAME=	mod_auth_mellon-0.10.0
+DISTNAME=	mod_auth_mellon-0.12.0	
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//:S/_/-/g}
 PKGREVISION=	1
-#PKGREVISION=	1
 CATEGORIES=	www security
 MASTER_SITES=	https://github.com/UNINETT/mod_auth_mellon/releases/download/v${DISTNAME:C/.*-//}/
 
@@ -16,7 +15,6 @@ LICENSE=	gnu-gpl-v2 # or later
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
 USE_TOOLS+=	pkg-config
-CFLAGS+=	-DLASSO_SERVER_LOAD_METADATA_FLAG_DEFAULT=0
 
 APACHE_MODULE=	YES
 PKG_APACHE_ACCEPTED=	apache22 apache24
@@ -35,6 +33,8 @@ do-install:
 	    libexecdir=`${APXS} -q LIBEXECDIR` &&			\
 	    ${APXS} -i -S LIBEXECDIR=${DESTDIR}"$${libexecdir}" 	\
 	      -n auth_mellon  mod_auth_mellon.la
+
+BUILDLINK_ABI_DEPENDS.lasso+=   lasso>=2.1.0
 
 .include "../../security/lasso/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
