@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1159 2016/03/14 09:23:43 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.1160 2016/03/14 09:45:08 manu Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1548,3 +1548,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/mongo-tools to 3.2.4 [fhajny 2016-03-13]
 	Removed databases/postgresql-postgis successor databases/postgresql-postgis2 [gdt 2016-03-14]
 	Updated net/haproxy to 1.6.4 [fhajny 2016-03-14]
+	Updated security/lasso to 2.5.1 [manu 2016-03-14]
