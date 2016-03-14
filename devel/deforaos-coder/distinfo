@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2016/02/20 03:20:23 khorben Exp $
+$NetBSD: distinfo,v 1.8 2016/03/14 23:42:47 tnn Exp $
 
 SHA1 (Coder-0.2.0.tar.gz) = a72127e0270fe8e1111a0e557cf6ddd8e59bc71a
 RMD160 (Coder-0.2.0.tar.gz) = 585f330d34550dff955577029fd3f59cc2cdd081
 SHA512 (Coder-0.2.0.tar.gz) = 0bf80496c3a5c1376852a69d5a242a84193576d804be76223974368c81b460f1a80406fd8dacf28ca6ad0d374663643ad2c6245d5051e75050f2f89728ad6104
 Size (Coder-0.2.0.tar.gz) = 130157 bytes
+SHA1 (patch-tools_debug_ptrace.c) = 4e96b4b64373d4d95187d6497241070b065f86b0
