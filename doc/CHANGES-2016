@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1157 2016/03/13 23:28:13 gdt Exp $
+$NetBSD: CHANGES-2016,v 1.1158 2016/03/14 09:11:44 dbj Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -918,6 +918,7 @@ Changes to the packages collection and infrastructure in 2016:
 	Added www/ap-authnz-crowd version 2.2.2 [jperkin 2016-02-15]
 	Updated x11/libdrm to 2.4.67 [wiz 2016-02-15]
 	Updated net/php-baikal to 0.3.1 [wiz 2016-02-15]
+        Updated math/octave to 4.0.0 [dbj 2016-02-16]
 	Updated www/squid3 to 3.5.14 [taca 2016-02-16]
 	Updated audio/moc to 2.5.0 [leot 2016-02-16]
 	Removed audio/moc-devel successor audio/moc [leot 2016-02-16]
