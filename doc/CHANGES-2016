@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1168 2016/03/14 15:10:09 taca Exp $
+$NetBSD: CHANGES-2016,v 1.1169 2016/03/14 16:04:44 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1558,3 +1558,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/putty to 0.67 [ryoon 2016-03-14]
 	Updated security/tor-browser to 5.5.3 [ryoon 2016-03-14]
 	Removed www/drupal6 [taca 2016-03-14]
+	Updated x11/mlterm to 3.7.0 [tsutsui 2016-03-14]
