@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.3 2016/03/02 23:04:00 ryoon Exp $
+$NetBSD: patch-configure,v 1.4 2016/03/14 06:12:17 dbj Exp $
 
 * Don't use SDKs on OS X
 * Add NetBSD/sparc{,64} support
@@ -21,6 +21,15 @@ $NetBSD: patch-configure,v 1.3 2016/03/02 23:04:00 ryoon Exp $
      fi
      getSingleQMakeVariable "$1" "$xspecvals"
  }
+@@ -527,7 +525,7 @@ if [ "$BUILD_ON_MAC" = "yes" ]; then
+         exit 2
+     fi
+ 
+-    if ! /usr/bin/xcrun -find xcrun >/dev/null 2>&1; then
++    if ! /usr/bin/xcrun -find cc >/dev/null 2>&1; then
+         echo >&2
+         echo "   Xcode not set up properly. You may need to confirm the license" >&2
+         echo "   agreement by running /usr/bin/xcodebuild without arguments." >&2
 @@ -2897,6 +2895,19 @@ if [ -z "$PLATFORM" ]; then
       UNIX_SV:*)
          PLATFORM=unixware-g++
