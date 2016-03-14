@@ -1,0 +1,14 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2016/03/14 14:36:39 tnn Exp $
+
+fix build w/ llvm-3.8
+
+--- CMakeLists.txt.orig	2015-12-11 05:46:10.000000000 +0000
++++ CMakeLists.txt
+@@ -133,7 +133,6 @@ target_link_libraries(include-what-you-u
+   LLVMScalarOpts
+   LLVMInstCombine
+   LLVMTransformUtils
+-  LLVMipa
+   LLVMTarget # Analysis, MC, Core, Support
+   LLVMAnalysis # Core, Support
+   LLVMOption # Support
