@@ -1,7 +1,10 @@
-$NetBSD: distinfo,v 1.1 2015/12/30 16:16:13 bsiegert Exp $
+$NetBSD: distinfo,v 1.2 2016/03/14 14:36:39 tnn Exp $
 
 SHA1 (include-what-you-use-0.5.src.tar.gz) = 6d4e3040ecb2906f93d72ba14e61381f0a8c2509
 RMD160 (include-what-you-use-0.5.src.tar.gz) = 73f92c5d018e9a49c34307a4ff5c5848b78a0e99
 SHA512 (include-what-you-use-0.5.src.tar.gz) = 805395873b59e4f4236853ba9ac6818d60968190ad485d580ea80d69c518eb8c44822a4281a4219b4ccc02e2dc8f3db5c470170e27e67ea0d8e04ef78da9078c
 Size (include-what-you-use-0.5.src.tar.gz) = 404081 bytes
+SHA1 (patch-CMakeLists.txt) = 08d51a0890df1382944bd35904d8171fb031dad5
+SHA1 (patch-iwyu__ast__util.cc) = 7fa08654fb9dfeb439d17f8ea095d816398724cd
+SHA1 (patch-iwyu__ast__util.h) = da1326a0f2423a3967025bf5274a80e7a1a44c0e
 SHA1 (patch-iwyu__output.cc) = 072236f94c44ebd7e0ca20ad828dd938c9683b4a
