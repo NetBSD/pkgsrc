@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.102 2016/02/25 13:37:47 jperkin Exp $
+# $NetBSD: Makefile,v 1.103 2016/03/14 06:08:10 dbj Exp $
 
 DISTNAME=	freetype-2.6.2
 PKGNAME=	${DISTNAME:S/-/2-/}
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=freetype/} \
 		http://download.savannah.gnu.org/releases/freetype/
@@ -52,5 +53,8 @@ post-configure:
 .endif
 
 .include "../../archivers/bzip2/buildlink3.mk"
+# Avoid creating a fake zlib.pc, because if it does
+# we will add a Requires for it to our .pc file
+CHECK_BUILTIN.zlib:=yes
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
