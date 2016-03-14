@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2015/12/30 15:11:40 taca Exp $
+# $NetBSD: Makefile.common,v 1.9 2016/03/14 00:59:06 tnn Exp $
 #
 # used by textproc/migemo/Makefile
 # used by textproc/migemo-elisp/Makefile
@@ -12,4 +12,4 @@ MASTER_SITES=		http://0xcc.net/migemo/
 MAINTAINER=		yamajun@ofug.net
 HOMEPAGE=		http://0xcc.net/migemo/
 
-RUBY_VERSION_SUPPORTED= 200 21 22 23
+RUBY_VERSION_SUPPORTED= 21 22 23
