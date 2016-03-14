@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15591 2016/03/14 09:11:44 dbj Exp $
+$NetBSD: TODO,v 1.15592 2016/03/14 10:50:59 adam Exp $
 
 Suggested new packages
 ======================
@@ -551,7 +551,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o clusterssh-4.05
 	o clutter-1.24
 	o clutter-gst-3.0.2
-	o cmake-3.5.0
 	o cmake-fedora-2.6.0
 	o cmocka-1.0.1
 	o cmus-2.7.1
