@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2016/03/13 10:14:46 tnn Exp $
+# $NetBSD: Makefile,v 1.22 2016/03/14 01:47:44 tnn Exp $
 
 DISTNAME=	xrandr-1.5.0
 CATEGORIES=	x11
@@ -21,7 +21,9 @@ SUBST_FILES.nickle=	xkeystone
 SUBST_STAGE.nickle=	post-build
 SUBST_MESSAGE.nickle=	Fixing path to nickle.
 
-BUILDLINK_API_DEPENDS.libXrandr+=	libXrandr>=1.5
+BUILDLINK_API_DEPENDS.libXrandr+=	libXrandr>=1.5.0
+BUILDLINK_API_DEPENDS.randrproto+=	randrproto>=1.5.0
+.include "../../x11/randrproto/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
