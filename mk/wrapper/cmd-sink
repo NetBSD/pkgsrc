@@ -1,4 +1,4 @@
-# $NetBSD: cmd-sink,v 1.1 2004/09/21 15:01:41 jlam Exp $
+# $NetBSD: cmd-sink,v 1.2 2016/03/14 20:11:56 markd Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -38,5 +38,13 @@
 while ! queue_is_empty cmdbuf; do
 	pop_queue cmdbuf arg
 	$debug_log $wrapperlog "    (cmd-sink) pop: $arg"
+	case $arg in
+	-isystem,*)
+		dir="${arg#-isystem,}"
+		arg="-isystem"
+		. $buildcmd
+		arg="$dir"
+		;;
+	esac
 	. $buildcmd
 done
