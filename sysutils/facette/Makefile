@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2016/03/09 12:50:29 imil Exp $
+# $NetBSD: Makefile,v 1.6 2016/03/14 12:55:40 imil Exp $
 
 DISTNAME=	facette-0.4.0dev
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=facette/}
 
@@ -43,6 +43,8 @@ SUBST_MESSAGE.rrd=	Fixing collectd rrd path.
 SUBST_STAGE.rrd=	pre-build
 SUBST_FILES.rrd=	docs/examples/providers/collectd.json
 SUBST_SED.rrd=		-e 's,/var/lib,${VARBASE}/db,g'
+
+CHECK_PORTABILITY_SKIP=	vendor/src/github.com/influxdb/influxdb/configure
 
 .include "../../mk/bsd.prefs.mk"
 
