@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2015/09/09 11:07:07 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/03/14 11:07:59 bouyer Exp $
 lib/opencpn/libweather_routing_pi.so
 share/locale/ca/LC_MESSAGES/opencpn-weather_routing_pi.mo
 share/locale/cs/LC_MESSAGES/opencpn-weather_routing_pi.mo
