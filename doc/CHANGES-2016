@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1160 2016/03/14 09:45:08 manu Exp $
+$NetBSD: CHANGES-2016,v 1.1161 2016/03/14 10:00:22 manu Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1549,3 +1549,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Removed databases/postgresql-postgis successor databases/postgresql-postgis2 [gdt 2016-03-14]
 	Updated net/haproxy to 1.6.4 [fhajny 2016-03-14]
 	Updated security/lasso to 2.5.1 [manu 2016-03-14]
+	Updated www/ap-auth-mellon to 0.12.0 [manu 2016-03-14]
