@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2016/03/06 14:26:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2016/03/14 19:04:52 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -79,19 +79,11 @@ ${PYSITELIB}/tests/.coveragerc
 ${PYSITELIB}/tests/.gitignore
 ${PYSITELIB}/tests/__init__.py
 ${PYSITELIB}/tests/__init__.pyc
-${PYSITELIB}/tests/__init__.pyc
-${PYSITELIB}/tests/__init__.pyc
-${PYSITELIB}/tests/__init__.pyc
 ${PYSITELIB}/tests/__init__.pyo
 ${PYSITELIB}/tests/myapp/__init__.py
 ${PYSITELIB}/tests/myapp/__init__.pyc
-${PYSITELIB}/tests/myapp/__init__.pyc
-${PYSITELIB}/tests/myapp/__init__.pyc
-${PYSITELIB}/tests/myapp/__init__.pyc
 ${PYSITELIB}/tests/myapp/__init__.pyo
 ${PYSITELIB}/tests/myapp/admin.py
-${PYSITELIB}/tests/myapp/admin.pyc
-${PYSITELIB}/tests/myapp/admin.pyc
 ${PYSITELIB}/tests/myapp/admin.pyc
 ${PYSITELIB}/tests/myapp/admin.pyo
 ${PYSITELIB}/tests/myapp/doctests.txt
@@ -101,27 +93,16 @@ ${PYSITELIB}/tests/myapp/fixtures/items.json
 ${PYSITELIB}/tests/myapp/fixtures/persons.json
 ${PYSITELIB}/tests/myapp/models.py
 ${PYSITELIB}/tests/myapp/models.pyc
-${PYSITELIB}/tests/myapp/models.pyc
-${PYSITELIB}/tests/myapp/models.pyc
-${PYSITELIB}/tests/myapp/models.pyc
 ${PYSITELIB}/tests/myapp/models.pyo
 ${PYSITELIB}/tests/myapp/tests.py
 ${PYSITELIB}/tests/myapp/tests.pyc
-${PYSITELIB}/tests/myapp/tests.pyc
-${PYSITELIB}/tests/myapp/tests.pyc
-${PYSITELIB}/tests/myapp/tests.pyc
 ${PYSITELIB}/tests/myapp/tests.pyo
 ${PYSITELIB}/tests/myapp/urls.py
-${PYSITELIB}/tests/myapp/urls.pyc
-${PYSITELIB}/tests/myapp/urls.pyc
 ${PYSITELIB}/tests/myapp/urls.pyc
 ${PYSITELIB}/tests/myapp/urls.pyo
 ${PYSITELIB}/tests/mydatabase
 ${PYSITELIB}/tests/requirements.txt
 ${PYSITELIB}/tests/runtests.sh
 ${PYSITELIB}/tests/settings.py
-${PYSITELIB}/tests/settings.pyc
-${PYSITELIB}/tests/settings.pyc
-${PYSITELIB}/tests/settings.pyc
 ${PYSITELIB}/tests/settings.pyc
 ${PYSITELIB}/tests/settings.pyo
