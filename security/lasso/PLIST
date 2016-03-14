@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2015/04/01 14:05:02 manu Exp $
+@comment $NetBSD: PLIST,v 1.10 2016/03/14 09:43:42 manu Exp $
 include/lasso/backward_comp.h
 include/lasso/ctypes.h
 include/lasso/debug.h
@@ -36,6 +36,9 @@ include/lasso/xml/dsig/ds_rsa_key_value.h
 include/lasso/xml/dsig/ds_x509_data.h
 include/lasso/xml/dsig/strings.h
 include/lasso/xml/dsig/xml_dsig.h
+include/lasso/xml/ecp/ecp_relaystate.h
+include/lasso/xml/ecp/ecp_request.h
+include/lasso/xml/ecp/ecp_response.h
 include/lasso/xml/lib_assertion.h
 include/lasso/xml/lib_authentication_statement.h
 include/lasso/xml/lib_authn_context.h
@@ -58,6 +61,8 @@ include/lasso/xml/lib_scoping.h
 include/lasso/xml/lib_status_response.h
 include/lasso/xml/lib_subject.h
 include/lasso/xml/misc_text_node.h
+include/lasso/xml/paos_request.h
+include/lasso/xml/paos_response.h
 include/lasso/xml/saml-2.0/saml2_action.h
 include/lasso/xml/saml-2.0/saml2_advice.h
 include/lasso/xml/saml-2.0/saml2_assertion.h
