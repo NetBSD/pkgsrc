@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1220 2016/03/15 16:50:32 taca Exp $
+$NetBSD: CHANGES-2016,v 1.1221 2016/03/15 16:55:14 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1617,3 +1617,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/ruby-puma to 2.16.0 [taca 2016-03-15]
 	Updated www/ruby-mustermann19 to 0.4.2 [taca 2016-03-15]
 	Updated www/ruby-raindrops to 0.16.0 [taca 2016-03-15]
+	Updated devel/ruby-logging to 2.1.0 [taca 2016-03-15]
