@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 18:09:42 joerg Exp $
-${GEM_HOME}/cache/netaddr-${PKGVERSION}.gem
+@comment $NetBSD: PLIST,v 1.3 2016/03/15 14:48:09 taca Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Errors
 ${GEM_LIBDIR}/README
 ${GEM_LIBDIR}/changelog
@@ -11,8 +11,9 @@ ${GEM_LIBDIR}/lib/methods.rb
 ${GEM_LIBDIR}/lib/netaddr.rb
 ${GEM_LIBDIR}/lib/tree.rb
 ${GEM_LIBDIR}/lib/validation_shortcuts.rb
-${GEM_LIBDIR}/tests/cidr_test.rb
-${GEM_LIBDIR}/tests/eui_test.rb
-${GEM_LIBDIR}/tests/methods_test.rb
-${GEM_LIBDIR}/tests/tree_test.rb
-${GEM_HOME}/specifications/netaddr-${PKGVERSION}.gemspec
+${GEM_LIBDIR}/license
+${GEM_LIBDIR}/test/cidr_test.rb
+${GEM_LIBDIR}/test/eui_test.rb
+${GEM_LIBDIR}/test/methods_test.rb
+${GEM_LIBDIR}/test/tree_test.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
