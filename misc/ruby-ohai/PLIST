@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2015/12/13 16:36:11 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2016/03/15 14:33:26 taca Exp $
 bin/ohai${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/Gemfile
@@ -36,6 +36,7 @@ ${GEM_LIBDIR}/lib/ohai/plugins/aix/filesystem.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/aix/kernel.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/aix/memory.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/aix/network.rb
+${GEM_LIBDIR}/lib/ohai/plugins/aix/os.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/aix/platform.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/aix/uptime.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/aix/virtualization.rb
@@ -92,6 +93,7 @@ ${GEM_LIBDIR}/lib/ohai/plugins/linux/mdadm.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/linux/memory.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/linux/network.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/linux/platform.rb
+${GEM_LIBDIR}/lib/ohai/plugins/linux/sessions.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/linux/virtualization.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/lua.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/mono.rb
@@ -110,6 +112,7 @@ ${GEM_LIBDIR}/lib/ohai/plugins/openbsd/network.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/openbsd/platform.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/openstack.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/os.rb
+${GEM_LIBDIR}/lib/ohai/plugins/packages.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/passwd.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/perl.rb
 ${GEM_LIBDIR}/lib/ohai/plugins/php.rb
@@ -162,17 +165,22 @@ ${GEM_LIBDIR}/spec/data/plugins/___lib___libc.so.6.output
 ${GEM_LIBDIR}/spec/data/plugins/cc.output
 ${GEM_LIBDIR}/spec/data/plugins/cl.output
 ${GEM_LIBDIR}/spec/data/plugins/devenv.com.output
+${GEM_LIBDIR}/spec/data/plugins/dpkg-query.output
 ${GEM_LIBDIR}/spec/data/plugins/env.output
 ${GEM_LIBDIR}/spec/data/plugins/erl.output
 ${GEM_LIBDIR}/spec/data/plugins/gcc.output
 ${GEM_LIBDIR}/spec/data/plugins/groovy.output
 ${GEM_LIBDIR}/spec/data/plugins/java.output
+${GEM_LIBDIR}/spec/data/plugins/lslpp.output
 ${GEM_LIBDIR}/spec/data/plugins/lua.output
 ${GEM_LIBDIR}/spec/data/plugins/messages.rb
 ${GEM_LIBDIR}/spec/data/plugins/node.output
 ${GEM_LIBDIR}/spec/data/plugins/perl.output
 ${GEM_LIBDIR}/spec/data/plugins/php.output
+${GEM_LIBDIR}/spec/data/plugins/pkginfo.output
+${GEM_LIBDIR}/spec/data/plugins/pkglist.output
 ${GEM_LIBDIR}/spec/data/plugins/python.output
+${GEM_LIBDIR}/spec/data/plugins/rpmquery.output
 ${GEM_LIBDIR}/spec/data/plugins/uname.output
 ${GEM_LIBDIR}/spec/data/plugins/v6message.rb
 ${GEM_LIBDIR}/spec/data/plugins/v7message.rb
@@ -204,6 +212,7 @@ ${GEM_LIBDIR}/spec/unit/plugins/aix/hostname_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/aix/kernel_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/aix/memory_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/aix/network_spec.rb
+${GEM_LIBDIR}/spec/unit/plugins/aix/os_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/aix/platform_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/aix/uptime_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/aix/virtualization_spec.rb
@@ -247,6 +256,7 @@ ${GEM_LIBDIR}/spec/unit/plugins/java_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/joyent_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/kernel_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/linode_spec.rb
+${GEM_LIBDIR}/spec/unit/plugins/linux/block_device_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/linux/cpu_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/linux/filesystem2_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/linux/filesystem_spec.rb
@@ -257,6 +267,7 @@ ${GEM_LIBDIR}/spec/unit/plugins/linux/mdadm_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/linux/memory_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/linux/network_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/linux/platform_spec.rb
+${GEM_LIBDIR}/spec/unit/plugins/linux/sessions_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/linux/uptime_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/linux/virtualization_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/lua_spec.rb
@@ -273,6 +284,7 @@ ${GEM_LIBDIR}/spec/unit/plugins/openbsd/kernel_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/openbsd/platform_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/openstack_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/os_spec.rb
+${GEM_LIBDIR}/spec/unit/plugins/packages_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/passwd_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/perl_spec.rb
 ${GEM_LIBDIR}/spec/unit/plugins/php_spec.rb
