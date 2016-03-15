@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1207 2016/03/15 15:56:16 taca Exp $
+$NetBSD: CHANGES-2016,v 1.1208 2016/03/15 15:58:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1597,3 +1597,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/ruby-kramdown to 1.10.0 [taca 2016-03-15]
 	Updated textproc/ruby-nokogiri to 1.6.7.2 [taca 2016-03-15]
 	Updated textproc/ruby-plist to 3.2.0 [taca 2016-03-15]
+	Updated textproc/ruby-redcarpet to 3.3.4 [taca 2016-03-15]
