@@ -1,12 +1,9 @@
-$NetBSD: distinfo,v 1.99 2016/02/26 21:06:38 tez Exp $
+$NetBSD: distinfo,v 1.100 2016/03/15 20:54:07 bsiegert Exp $
 
-SHA1 (openssh-7.1p1-hpn-20150822.diff.bz2) = 444a2fbd80d57ff93b53ade84ec162e2a2f3aa67
-RMD160 (openssh-7.1p1-hpn-20150822.diff.bz2) = 87fb6887d9ccb4b305ff3c25fd5f67847d9996d1
-Size (openssh-7.1p1-hpn-20150822.diff.bz2) = 12173 bytes
-SHA1 (openssh-7.1p1.tar.gz) = ed22af19f962262c493fcc6ed8c8826b2761d9b6
-RMD160 (openssh-7.1p1.tar.gz) = 2c97ea10099fa8658156c0351d60d715655b9b07
-SHA512 (openssh-7.1p1.tar.gz) = f1491ca5a0a733eb27ede966590642a412cb7be7178dcb7b9e5844bbdc8383032f4b00435192b95fc0365b6fe74d6c5ac8d6facbe9d51e1532d049e2f784e8f7
-Size (openssh-7.1p1.tar.gz) = 1493170 bytes
+SHA1 (openssh-7.2p2.tar.gz) = 70e35d7d6386fe08abbd823b3a12a3ca44ac6d38
+RMD160 (openssh-7.2p2.tar.gz) = d18d73719ceeefa5116b5b741124f3604d7ddb99
+SHA512 (openssh-7.2p2.tar.gz) = 44f62b3a7bc50a0735d496a5aedeefb71550d8c10ad8f22b94e29fcc8084842db96e8c4ca41fced17af69e1aab09ed1182a12ad8650d9a46fd8743a0344df95b
+Size (openssh-7.2p2.tar.gz) = 1499808 bytes
 SHA1 (patch-Makefile.in) = 98960119bda68a663214c8880484552f1207bcfc
 SHA1 (patch-auth-passwd.c) = 92c487cc3c092efb56f8b4ac4ca08ccd67803a83
 SHA1 (patch-auth-rhosts.c) = a5e6131e63b83a7e8a06cd80f22def449d6bc2c4
@@ -14,7 +11,7 @@ SHA1 (patch-auth.c) = cd13f8b31b45d668c5e09eca098b17ec8a7c1039
 SHA1 (patch-auth1.c) = cdac14ffa4008e62926526e66316b0a553435374
 SHA1 (patch-auth2.c) = efc1eb6d28cb6ec2bd87723943f3e36c612d93aa
 SHA1 (patch-channels.c) = edcce67664bbbc30a8d10ed2fe58dcece944726c
-SHA1 (patch-clientloop.c) = a99fa9ff36e0068c059ee9daa392d06c01d1761c
+SHA1 (patch-clientloop.c) = 9b2db181d964b7720e1dc12724a9b9033f28d0e7
 SHA1 (patch-config.h.in) = 7406f10b568d2b8237ee575922ce712658d90d59
 SHA1 (patch-configure.ac) = d7ba54f34e03fd204eb1a9804fcae7fd16e285e2
 SHA1 (patch-defines.h) = bd8687a9a2857f3b8d15ae94095f27f9344003c4
@@ -23,15 +20,13 @@ SHA1 (patch-loginrec.c) = 28082deb14258fe63cbecad8ac96afc016de439c
 SHA1 (patch-openbsd-compat_bsd-openpty.c) = eaac72830e36e307c19a7b679e6018ece9aebaac
 SHA1 (patch-openbsd-compat_openbsd-compat.h) = bedbede16ab2fe918419c994ba15a20167b411b4
 SHA1 (patch-openbsd-compat_port-tun.c) = 690dfb1f945d186dd3de5bea70ed8fab86e590ee
-SHA1 (patch-packet.c) = d302a0802861287e9a5230bbe2a1018c5dc17d28
 SHA1 (patch-platform.c) = f8f211dbc5e596c0f82eb86324d18a84c6151ec5
-SHA1 (patch-readconf.c) = e1663d4d9a7ca8de8f87ba42d7b764923cdcc5db
 SHA1 (patch-sandbox-darwin.c) = c9a1fe2e4dbf98e929d983b4206a244e0e354b75
 SHA1 (patch-scp.c) = 9c2317b0f796641903a826db355ba06595a26ea1
 SHA1 (patch-session.c) = 2aa1d95a35b52519c4921494855f861dc1380f3b
 SHA1 (patch-sftp-common.c) = 6819aa040c8f1caa30a704cf6f0588e498df8778
-SHA1 (patch-ssh.c) = 00897c09b7d3037713c579cbc41301623d4c2ebf
+SHA1 (patch-ssh.c) = 6877d8205d999906c14240d4d112b084609927ca
 SHA1 (patch-sshd.8) = 5bf48cd27cef8e8810b9dc7115f5180102a345d1
-SHA1 (patch-sshd.c) = 85a9f50c8b1bdcc44156e2b457a583ccdbc5821b
+SHA1 (patch-sshd.c) = cd23ce269bfb48b0caa901e62fc01d35ef0618ac
 SHA1 (patch-sshpty.c) = cb691d4fbde808927f2fbcc12b87ad983cf21938
 SHA1 (patch-uidswap.c) = 68c4f5ffab7f4c5c9c00b7443a74b2da52809b7e

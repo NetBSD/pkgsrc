@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.17 2015/08/14 08:57:00 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.18 2016/03/15 20:54:07 bsiegert Exp $
 bin/scp
 bin/sftp
-bin/slogin
 bin/ssh
 bin/ssh-add
 bin/ssh-agent
@@ -13,7 +12,6 @@ libexec/ssh-pkcs11-helper
 ${PLIST.prng}libexec/ssh-rand-helper
 man/man1/scp.1
 man/man1/sftp.1
-man/man1/slogin.1
 man/man1/ssh-add.1
 man/man1/ssh-agent.1
 man/man1/ssh-keygen.1
