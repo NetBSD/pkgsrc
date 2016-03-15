@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2015/10/04 13:32:49 taca Exp $
+@comment $NetBSD: PLIST,v 1.12 2016/03/15 15:43:28 taca Exp $
 bin/kramdown${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/AUTHORS
@@ -202,6 +202,9 @@ ${GEM_LIBDIR}/test/testcases/block/06_codeblock/with_ial.text
 ${GEM_LIBDIR}/test/testcases/block/06_codeblock/with_lang_in_fenced_block.html
 ${GEM_LIBDIR}/test/testcases/block/06_codeblock/with_lang_in_fenced_block.options
 ${GEM_LIBDIR}/test/testcases/block/06_codeblock/with_lang_in_fenced_block.text
+${GEM_LIBDIR}/test/testcases/block/06_codeblock/with_lang_in_fenced_block_any_char.html
+${GEM_LIBDIR}/test/testcases/block/06_codeblock/with_lang_in_fenced_block_any_char.options
+${GEM_LIBDIR}/test/testcases/block/06_codeblock/with_lang_in_fenced_block_any_char.text
 ${GEM_LIBDIR}/test/testcases/block/06_codeblock/with_lang_in_fenced_block_name_with_dash.html
 ${GEM_LIBDIR}/test/testcases/block/06_codeblock/with_lang_in_fenced_block_name_with_dash.options
 ${GEM_LIBDIR}/test/testcases/block/06_codeblock/with_lang_in_fenced_block_name_with_dash.text
@@ -484,6 +487,8 @@ ${GEM_LIBDIR}/test/testcases/span/05_html/invalid.html
 ${GEM_LIBDIR}/test/testcases/span/05_html/invalid.text
 ${GEM_LIBDIR}/test/testcases/span/05_html/link_with_mailto.html
 ${GEM_LIBDIR}/test/testcases/span/05_html/link_with_mailto.text
+${GEM_LIBDIR}/test/testcases/span/05_html/mark_element.html
+${GEM_LIBDIR}/test/testcases/span/05_html/mark_element.text
 ${GEM_LIBDIR}/test/testcases/span/05_html/markdown_attr.html
 ${GEM_LIBDIR}/test/testcases/span/05_html/markdown_attr.text
 ${GEM_LIBDIR}/test/testcases/span/05_html/normal.html
@@ -557,6 +562,9 @@ ${GEM_LIBDIR}/test/testcases_gfm/hard_line_breaks.text
 ${GEM_LIBDIR}/test/testcases_gfm/hard_line_breaks_off.html
 ${GEM_LIBDIR}/test/testcases_gfm/hard_line_breaks_off.options
 ${GEM_LIBDIR}/test/testcases_gfm/hard_line_breaks_off.text
+${GEM_LIBDIR}/test/testcases_gfm/strikethrough.html
+${GEM_LIBDIR}/test/testcases_gfm/strikethrough.html.19
+${GEM_LIBDIR}/test/testcases_gfm/strikethrough.text
 ${GEM_LIBDIR}/test/testcases_gfm/two_para_hard_line_breaks.html
 ${GEM_LIBDIR}/test/testcases_gfm/two_para_hard_line_breaks.text
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
