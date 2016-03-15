@@ -10,7 +10,7 @@
     <dependency name="filesystem" grouping="require_all" restart_on="error" type="service">
       <service_fmri value="svc:/system/filesystem/local" />
     </dependency>
-    <method_context project="php"></method_context>
+    <method_context></method_context>
     <exec_method type="method" name="start" exec="@PREFIX@/sbin/php-fpm -y %{config_file}" timeout_seconds="60" />
     <exec_method type="method" name="stop" exec=":kill" timeout_seconds="60" />
     <property_group name="startd" type="framework">
