@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1222 2016/03/15 17:01:35 taca Exp $
+$NetBSD: CHANGES-2016,v 1.1223 2016/03/15 17:07:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1619,3 +1619,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/ruby-raindrops to 0.16.0 [taca 2016-03-15]
 	Updated devel/ruby-logging to 2.1.0 [taca 2016-03-15]
 	Updated www/ruby-patron to 0.5.1 [taca 2016-03-15]
+	Updated devel/ruby-eventmachine to 1.2.0 [taca 2016-03-15]
