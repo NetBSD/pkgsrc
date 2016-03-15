@@ -1,27 +1,24 @@
-$NetBSD: patch-ah,v 1.3 2012/07/16 19:12:33 adam Exp $
+$NetBSD: patch-include_osconf.hin,v 1.1 2016/03/15 15:16:39 tez Exp $
 
-prefer @SYSCONFDIR as location for krb5.conf and krb5.keytab
+prefer @SYSCONFDIR as location for krb5.conf
+(was patch-ah)
 
---- include/osconf.hin.orig	2012-05-31 23:49:44.000000000 +0000
+--- include/osconf.hin.orig	2016-02-29 19:50:13.000000000 +0000
 +++ include/osconf.hin
-@@ -45,16 +45,16 @@
- #define DEFAULT_KEYTAB_NAME     "FILE:%s\\krb5kt"
+@@ -44,13 +44,13 @@
+ #define DEFAULT_PROFILE_FILENAME "krb5.ini"
  #else /* !_WINDOWS */
  #if TARGET_OS_MAC
--#define DEFAULT_SECURE_PROFILE_PATH "/Library/Preferences/edu.mit.Kerberos:/etc/krb5.conf:@SYSCONFDIR/krb5.conf"
+-#define DEFAULT_SECURE_PROFILE_PATH "/Library/Preferences/edu.mit.Kerberos:/etc/krb5.conf@SYSCONFCONF"
 -#define DEFAULT_PROFILE_PATH        ("~/Library/Preferences/edu.mit.Kerberos" ":" DEFAULT_SECURE_PROFILE_PATH)
-+#define DEFAULT_SECURE_PROFILE_PATH "@SYSCONFDIR/krb5.conf:/Library/Preferences/edu.mit.Kerberos:/etc/krb5.conf:@SYSCONFDIR/krb5.conf"
++#define DEFAULT_SECURE_PROFILE_PATH "@SYSCONFDIR/krb5.conf:/Library/Preferences/edu.mit.Kerberos:/etc/krb5.conf"
 +#define DEFAULT_PROFILE_PATH        ("@SYSCONFDIR/krb5.conf:~/Library/Preferences/edu.mit.Kerberos" ":" DEFAULT_SECURE_PROFILE_PATH)
  #define KRB5_PLUGIN_BUNDLE_DIR       "/System/Library/KerberosPlugins/KerberosFrameworkPlugins"
  #define KDB5_PLUGIN_BUNDLE_DIR       "/System/Library/KerberosPlugins/KerberosDatabasePlugins"
  #define KRB5_AUTHDATA_PLUGIN_BUNDLE_DIR  "/System/Library/KerberosPlugins/KerberosAuthDataPlugins"
  #else
--#define DEFAULT_SECURE_PROFILE_PATH     "/etc/krb5.conf:@SYSCONFDIR/krb5.conf"
+-#define DEFAULT_SECURE_PROFILE_PATH     "/etc/krb5.conf@SYSCONFCONF"
 +#define DEFAULT_SECURE_PROFILE_PATH     "@SYSCONFDIR/krb5.conf:/etc/krb5.conf"
  #define DEFAULT_PROFILE_PATH        DEFAULT_SECURE_PROFILE_PATH
  #endif
--#define DEFAULT_KEYTAB_NAME     "FILE:/etc/krb5.keytab"
-+#define DEFAULT_KEYTAB_NAME     "FILE:@SYSCONFDIR/krb5.keytab"
  #endif /* _WINDOWS  */
- 
- #define DEFAULT_PLUGIN_BASE_DIR "@LIBDIR/krb5/plugins"

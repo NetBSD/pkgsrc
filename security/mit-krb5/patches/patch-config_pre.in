@@ -1,11 +1,11 @@
-$NetBSD: patch-af,v 1.5 2012/07/16 19:12:33 adam Exp $
+$NetBSD: patch-config_pre.in,v 1.1 2016/03/15 15:16:39 tez Exp $
 
 Add --enable-pkgsrc-libtool option
 Use $(ROOT_USER) in place of root
 
---- config/pre.in.orig	2012-05-31 23:49:44.000000000 +0000
+--- config/pre.in.orig	2016-02-29 19:50:13.000000000 +0000
 +++ config/pre.in
-@@ -172,6 +172,7 @@ PTHREAD_LIBS = @PTHREAD_LIBS@
+@@ -168,6 +168,7 @@ PTHREAD_LIBS = @PTHREAD_LIBS@
  THREAD_LINKOPTS = $(PTHREAD_CFLAGS) $(PTHREAD_LIBS)
  CPPFLAGS = @CPPFLAGS@
  DEFS = @DEFS@
@@ -13,7 +13,7 @@ Use $(ROOT_USER) in place of root
  CC = @CC@
  CXX = @CXX@
  LD = $(PURE) @LD@
-@@ -185,11 +186,12 @@ LIBS = @LIBS@
+@@ -177,11 +178,12 @@ LIBS = @LIBS@
  
  INSTALL=@INSTALL@
  INSTALL_STRIP=
@@ -29,7 +29,7 @@ Use $(ROOT_USER) in place of root
  ## This is needed because autoconf will sometimes define @exec_prefix@ to be
  ## ${prefix}.
  prefix=@prefix@
-@@ -320,6 +322,10 @@ PROG_RPATH_FLAGS=@PROG_RPATH_FLAGS@
+@@ -312,6 +314,10 @@ PROG_RPATH_FLAGS=@PROG_RPATH_FLAGS@
  # depending on whether we're building with shared libraries.
  DEPLIBEXT=@DEPLIBEXT@
  
@@ -40,7 +40,7 @@ Use $(ROOT_USER) in place of root
  KDB5_PLUGIN_DEPLIBS = @KDB5_PLUGIN_DEPLIBS@
  KDB5_PLUGIN_LIBS = @KDB5_PLUGIN_LIBS@
  
-@@ -337,12 +343,12 @@ COM_ERR_DEPLIB-k5 = $(TOPLIBD)/libcom_er
+@@ -329,12 +335,12 @@ COM_ERR_DEPLIB-k5 = $(TOPLIBD)/libcom_er
  SUPPORT_LIBNAME=krb5support
  SUPPORT_DEPLIB	= $(TOPLIBD)/lib$(SUPPORT_LIBNAME)$(DEPLIBEXT)
  
@@ -56,7 +56,7 @@ Use $(ROOT_USER) in place of root
  
  KRB5_BASE_DEPLIBS	= $(KRB5_DEPLIB) $(CRYPTO_DEPLIB) $(COM_ERR_DEPLIB) $(SUPPORT_DEPLIB)
  KDB5_DEPLIBS		= $(KDB5_DEPLIB) $(KDB5_PLUGIN_DEPLIBS)
-@@ -384,7 +390,7 @@ RL_LIBS		= @RL_LIBS@
+@@ -373,7 +379,7 @@ RL_LIBS		= @RL_LIBS@
  
  SS_LIB		= $(SS_LIB-@SS_VERSION@)
  SS_LIB-sys	= @SS_LIB@
@@ -83,19 +83,15 @@ Use $(ROOT_USER) in place of root
  
  ## Parameters to be set by configure for use in libobj.in:
  
-@@ -584,10 +594,15 @@ OBJLISTS=@OBJLISTS@
+@@ -584,6 +594,11 @@ OBJLISTS=@OBJLISTS@
  # the suffix substitution will break on some platforms!
  SHLIBOBJS=$(STLIBOBJS:.o=@SHOBJEXT@)
  PFLIBOBJS=$(STLIBOBJS:.o=@PFOBJEXT@)
 +LALIBOBJS=$(STLIBOBJS:.o=@LAOBJEXT@)
- 
- # "$(CC) -G", "$(LD) -Bshareable", etc.
- LDCOMBINE=@LDCOMBINE@
- 
++
 +# Args to tack on the tail of LIBTOOL to generate versioned, installable
 +# libtool archives.
 +LIBTOOL_TAIL=@LIBTOOL_TAIL@
-+
+ 
  #
  # rules to make various types of object files
- #

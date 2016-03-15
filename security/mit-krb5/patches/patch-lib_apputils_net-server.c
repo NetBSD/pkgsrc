@@ -1,4 +1,4 @@
-$NetBSD: patch-lib_apputils_net-server.c,v 1.1 2013/08/30 12:59:22 joerg Exp $
+$NetBSD: patch-lib_apputils_net-server.c,v 1.2 2016/03/15 15:16:39 tez Exp $
 
 --- lib/apputils/net-server.c.orig	2013-08-30 12:14:00.000000000 +0000
 +++ lib/apputils/net-server.c
