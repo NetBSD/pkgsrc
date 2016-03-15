@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.2 2015/10/17 08:12:43 ryoon Exp $
+$NetBSD: distinfo,v 1.3 2016/03/15 00:24:29 tnn Exp $
 
 SHA1 (LucenePlusPlus-rel_3.0.7.tar.gz) = b2c38e7ca5056934a5bdb1a69ea251110e3c0377
 RMD160 (LucenePlusPlus-rel_3.0.7.tar.gz) = 352f0e204655d9614cff2a843d5132f85bda78a4
 SHA512 (LucenePlusPlus-rel_3.0.7.tar.gz) = 92f3bba320980673cc64c983616aa38d25b44ea811237ed226741b892757fb8151e4f833aa58a18dbe7a0c9a899d94e828aa15e6d7b48a69ab730d1d772db220
 Size (LucenePlusPlus-rel_3.0.7.tar.gz) = 2013570 bytes
 SHA1 (patch-CMakeLists.txt) = db25e72a4c4d5dc38b9c805b75bf7c4469f7029d
+SHA1 (patch-cmake_cotire.cmake) = 16371f38024a1e629c3efc30dcf8955bc9606be1
 SHA1 (patch-include_VariantUtils.h) = 4c71eaee81b18fe7019ca3006804713f3117cac9
 SHA1 (patch-liblucene++-contrib.pc.cmake) = 6317251e9d8f569f08b8505edc58d2b628117c5f
 SHA1 (patch-liblucene++.pc.cmake) = 2d8efacfda33adbe4564402458744dd259f24ac7
