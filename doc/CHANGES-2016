@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1203 2016/03/15 15:36:20 taca Exp $
+$NetBSD: CHANGES-2016,v 1.1204 2016/03/15 15:39:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1593,3 +1593,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/ruby-facter to 2.4.6 [taca 2016-03-15]
 	Updated sysutils/ruby-rb-inotify to 0.9.7 [taca 2016-03-15]
 	Updated sysutils/ruby-listen to 3.0.6 [taca 2016-03-15]
+	Updated textproc/ruby-coderay to 1.1.1 [taca 2016-03-15]
