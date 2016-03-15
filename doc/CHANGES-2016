@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1193 2016/03/15 15:00:29 taca Exp $
+$NetBSD: CHANGES-2016,v 1.1194 2016/03/15 15:01:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1583,3 +1583,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/ruby-netaddr to 1.5.1 [taca 2016-03-15]
 	Updated net/ruby-twitter-text to 1.13.4 [taca 2016-03-15]
 	Updated print/ruby-pdf-core to 0.6.1 [taca 2016-03-15]
+	Updated print/ruby-pdf-reader to 1.4.0 [taca 2016-03-15]
