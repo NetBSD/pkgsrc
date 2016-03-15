@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1191 2016/03/15 14:48:33 taca Exp $
+$NetBSD: CHANGES-2016,v 1.1192 2016/03/15 14:56:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1581,3 +1581,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/ruby-ipaddress to 0.8.3 [taca 2016-03-15]
 	Updated net/ruby-net-ldap to 0.14.0 [taca 2016-03-15]
 	Updated net/ruby-netaddr to 1.5.1 [taca 2016-03-15]
+	Updated net/ruby-twitter-text to 1.13.4 [taca 2016-03-15]
