@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1185 2016/03/15 14:39:04 taca Exp $
+$NetBSD: CHANGES-2016,v 1.1186 2016/03/15 14:40:07 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1575,3 +1575,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated misc/ruby-ohai to 8.12.0 [taca 2016-03-15]
 	Updated misc/ruby-parallel to 1.6.2 [taca 2016-03-15]
 	Updated misc/ruby-rainbow to 2.1.0 [taca 2016-03-15]
+	Updated net/ruby-dnsruby to 1.59.2 [taca 2016-03-15]
