@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1205 2016/03/15 15:44:02 taca Exp $
+$NetBSD: CHANGES-2016,v 1.1206 2016/03/15 15:46:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1595,3 +1595,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/ruby-listen to 3.0.6 [taca 2016-03-15]
 	Updated textproc/ruby-coderay to 1.1.1 [taca 2016-03-15]
 	Updated textproc/ruby-kramdown to 1.10.0 [taca 2016-03-15]
+	Updated textproc/ruby-nokogiri to 1.6.7.2 [taca 2016-03-15]
