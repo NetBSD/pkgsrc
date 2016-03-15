@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.87 2016/03/10 18:21:58 jperkin Exp $
+# $NetBSD: Makefile,v 1.88 2016/03/15 15:16:39 tez Exp $
 
-DISTNAME=	krb5-1.10.7
+DISTNAME=	krb5-1.14.1
 PKGNAME=	mit-${DISTNAME}
-PKGREVISION=	9
 CATEGORIES=	security
 MASTER_SITES=	http://web.mit.edu/kerberos/dist/krb5/${PKGVERSION_NOREV:R}/
-EXTRACT_SUFX=	.tar
-DISTFILES=	${DISTNAME}-signed${EXTRACT_SUFX}
+EXTRACT_SUFX=	.tar.gz
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
-PATCH_SITES=	http://web.mit.edu/kerberos/advisories/
-PATCHFILES=	2014-001-patch.txt
+#PATCH_SITES=	http://web.mit.edu/kerberos/advisories/
+#PATCHFILES=	2014-001-patch.txt
 
 MAINTAINER=	tez@NetBSD.org
 HOMEPAGE=	http://web.mit.edu/kerberos/
@@ -47,6 +46,7 @@ CONFIGURE_ARGS+=	--without-tcl
 CONFIGURE_ARGS+=	--enable-pkgsrc-libtool
 CONFIGURE_ARGS+=	--without-system-verto
 CONFIGURE_ENV+=		BUILDLINK_PREFIX_OPENSSL=${BUILDLINK_PREFIX.openssl:Q}
+CONFIGURE_ENV+=		DEFKTNAME=FILE:${PKG_SYSCONFDIR}/krb5.keytab
 MAKE_ENV+=		ROOT_USER=${ROOT_USER}
 LIBS.SunOS=		-lrt
 
@@ -63,14 +63,8 @@ INSTALLATION_DIRS=	bin include/gssapi include/gssrpc ${PKGINFODIR}	\
 			${PKGMANDIR}/man8 sbin share/examples/krb5	\
 			share/et share/examples/rc.d share/gnats	\
 			lib/krb5/plugins/kdb lib/krb5/plugins/preauth	\
-			include/krb5 include/kadm5
-
-# The MIT krb5 distribution is actually a tar file that contains the
-# real .tar.gz distfile and a PGP signature.
-post-extract:
-	@${ECHO} "=> Extracting internal tarball";			\
-	extract_file="${WRKDIR}/${DISTNAME}.tar.gz";			\
-	cd ${WRKDIR} && ${EXTRACT_CMD}
+			lib/krb5/plugins/tls include/krb5 include/kadm5 \
+			lib/pkgconfig
 
 pre-configure:
 	@${ECHO} "=> Generating configure";				\
@@ -84,6 +78,6 @@ post-install:
 		${INSTALL_MAN} "$$f" ${DESTDIR}${PREFIX}/${PKGINFODIR};	\
 	done
 
-BUILDLINK_API_DEPENDS.openssl+= openssl>=0.9.8
+BUILDLINK_API_DEPENDS.openssl+= openssl>=1.0.1
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
