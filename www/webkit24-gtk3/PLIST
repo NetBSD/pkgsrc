@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/08/23 00:41:27 leot Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/03/15 18:47:28 leot Exp $
 bin/jsc-3
 include/webkitgtk-3.0/JavaScriptCore/JSBase.h
 include/webkitgtk-3.0/JavaScriptCore/JSContextRef.h
@@ -279,6 +279,7 @@ share/locale/hi/LC_MESSAGES/WebKitGTK-3.0.mo
 share/locale/hu/LC_MESSAGES/WebKitGTK-3.0.mo
 share/locale/id/LC_MESSAGES/WebKitGTK-3.0.mo
 share/locale/it/LC_MESSAGES/WebKitGTK-3.0.mo
+share/locale/ja/LC_MESSAGES/WebKitGTK-3.0.mo
 share/locale/kn/LC_MESSAGES/WebKitGTK-3.0.mo
 share/locale/ko/LC_MESSAGES/WebKitGTK-3.0.mo
 share/locale/lt/LC_MESSAGES/WebKitGTK-3.0.mo
@@ -303,6 +304,7 @@ share/locale/te/LC_MESSAGES/WebKitGTK-3.0.mo
 share/locale/uk/LC_MESSAGES/WebKitGTK-3.0.mo
 share/locale/vi/LC_MESSAGES/WebKitGTK-3.0.mo
 share/locale/zh_CN/LC_MESSAGES/WebKitGTK-3.0.mo
+share/locale/zh_TW/LC_MESSAGES/WebKitGTK-3.0.mo
 share/webkitgtk-3.0/images/deleteButton.png
 share/webkitgtk-3.0/images/inputSpeech.png
 share/webkitgtk-3.0/images/missingImage.png
