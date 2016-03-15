@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1178 2016/03/15 13:21:43 ryoon Exp $
+$NetBSD: CHANGES-2016,v 1.1179 2016/03/15 13:45:29 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1568,3 +1568,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/puppet to 3.8.6 [fhajny 2016-03-15]
 	Updated print/pdf2djvu to 0.9.4 [ryoon 2016-03-15]
 	Updated fonts/umefont-ttf to 0.600 [ryoon 2016-03-15]
+	Updated textproc/hs-tagsoup to 0.13.9 [szptvlfn 2016-03-15]
