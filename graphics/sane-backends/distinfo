@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.42 2015/11/11 12:40:03 wiz Exp $
+$NetBSD: distinfo,v 1.43 2016/03/15 09:14:03 martin Exp $
 
 SHA1 (sane-backends-1.0.25.tar.gz) = 05824922d91571e1fc2f5cdd270745783d593754
 RMD160 (sane-backends-1.0.25.tar.gz) = 1cfd81eeddf3ef3c2cea98f6ca7640522b249fab
@@ -15,3 +15,4 @@ SHA1 (patch-ak) = f00d3773c14f9955565debc0d16231906a2bba76
 SHA1 (patch-backend_kodakaio.c) = f96af8b2fb0369f51d2320285253c5e67218e629
 SHA1 (patch-backend_pieusb__buffer.c) = 7e7c6dbb0798876532a04a0831be2ab2bd2931ca
 SHA1 (patch-sanei_sanei__ir.c) = 66e913d7db9d03a42850778aca39da8f0dde02fa
+SHA1 (patch-sanei_sanei_usb.c) = b053c94d240580d919c418081fca5c75cf4fb1a7
