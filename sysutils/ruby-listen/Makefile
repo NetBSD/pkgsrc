@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2015/12/13 15:12:04 taca Exp $
+# $NetBSD: Makefile,v 1.9 2016/03/15 15:35:52 taca Exp $
 
-DISTNAME=	listen-3.0.5
+DISTNAME=	listen-3.0.6
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils
 
@@ -9,11 +9,17 @@ HOMEPAGE=	https://github.com/guard/listen
 COMMENT=	Listen to file modifications
 LICENSE=	mit
 
-#DEPENDS+=	${RUBY_PKGPREFIX}-rb-fsevent>=0.9.3:../../sysutils/ruby-rb-fsevent
-DEPENDS+=	${RUBY_PKGPREFIX}-rb-inotify>=0.9:../../sysutils/ruby-rb-inotify
-
 RUBYGEM_OPTIONS+=	--format-executable
+
+.include "../../lang/ruby/rubyversion.mk"
+
+.if ${OPSYS} == "Darwin"
+DEPENDS+=	${RUBY_PKGPREFIX}-rb-fsevent>=0.9.7:../../devel/ruby-rb-fsevent
+OVERRIDE_GEMSPEC+=	rb-inotify:
+.else
+DEPENDS+=	${RUBY_PKGPREFIX}-rb-inotify>=0.9:../../sysutils/ruby-rb-inotify
 OVERRIDE_GEMSPEC+=	rb-fsevent:
+.endif
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
