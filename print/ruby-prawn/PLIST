@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2015/03/13 15:27:09 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2016/03/15 15:05:36 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/COPYING
@@ -27,6 +27,8 @@ ${GEM_LIBDIR}/data/images/16bit.color
 ${GEM_LIBDIR}/data/images/16bit.png
 ${GEM_LIBDIR}/data/images/arrow.png
 ${GEM_LIBDIR}/data/images/arrow2.png
+${GEM_LIBDIR}/data/images/blend_modes_bottom_layer.jpg
+${GEM_LIBDIR}/data/images/blend_modes_top_layer.jpg
 ${GEM_LIBDIR}/data/images/dice.alpha
 ${GEM_LIBDIR}/data/images/dice.color
 ${GEM_LIBDIR}/data/images/dice.png
@@ -34,12 +36,14 @@ ${GEM_LIBDIR}/data/images/dice_interlaced.png
 ${GEM_LIBDIR}/data/images/fractal.jpg
 ${GEM_LIBDIR}/data/images/indexed_color.dat
 ${GEM_LIBDIR}/data/images/indexed_color.png
+${GEM_LIBDIR}/data/images/indexed_transparency.png
+${GEM_LIBDIR}/data/images/indexed_transparency_alpha.dat
+${GEM_LIBDIR}/data/images/indexed_transparency_color.dat
 ${GEM_LIBDIR}/data/images/letterhead.jpg
 ${GEM_LIBDIR}/data/images/license.md
 ${GEM_LIBDIR}/data/images/page_white_text.alpha
 ${GEM_LIBDIR}/data/images/page_white_text.color
 ${GEM_LIBDIR}/data/images/page_white_text.png
-${GEM_LIBDIR}/data/images/pal_bk.png
 ${GEM_LIBDIR}/data/images/pigs.jpg
 ${GEM_LIBDIR}/data/images/prawn.png
 ${GEM_LIBDIR}/data/images/ruport.png
@@ -77,6 +81,7 @@ ${GEM_LIBDIR}/lib/prawn/font/dfont.rb
 ${GEM_LIBDIR}/lib/prawn/font/ttf.rb
 ${GEM_LIBDIR}/lib/prawn/font_metric_cache.rb
 ${GEM_LIBDIR}/lib/prawn/graphics.rb
+${GEM_LIBDIR}/lib/prawn/graphics/blend_mode.rb
 ${GEM_LIBDIR}/lib/prawn/graphics/cap_style.rb
 ${GEM_LIBDIR}/lib/prawn/graphics/color.rb
 ${GEM_LIBDIR}/lib/prawn/graphics/dash.rb
@@ -107,6 +112,7 @@ ${GEM_LIBDIR}/lib/prawn/text/formatted/fragment.rb
 ${GEM_LIBDIR}/lib/prawn/text/formatted/line_wrap.rb
 ${GEM_LIBDIR}/lib/prawn/text/formatted/parser.rb
 ${GEM_LIBDIR}/lib/prawn/text/formatted/wrap.rb
+${GEM_LIBDIR}/lib/prawn/transformation_stack.rb
 ${GEM_LIBDIR}/lib/prawn/utilities.rb
 ${GEM_LIBDIR}/lib/prawn/version.rb
 ${GEM_LIBDIR}/lib/prawn/view.rb
@@ -136,6 +142,7 @@ ${GEM_LIBDIR}/manual/document_and_page_options/page_margins.rb
 ${GEM_LIBDIR}/manual/document_and_page_options/page_size.rb
 ${GEM_LIBDIR}/manual/document_and_page_options/print_scaling.rb
 ${GEM_LIBDIR}/manual/example_helper.rb
+${GEM_LIBDIR}/manual/graphics/blend_mode.rb
 ${GEM_LIBDIR}/manual/graphics/circle_and_ellipse.rb
 ${GEM_LIBDIR}/manual/graphics/color.rb
 ${GEM_LIBDIR}/manual/graphics/common_lines.rb
@@ -210,15 +217,15 @@ ${GEM_LIBDIR}/manual/text/text_box_overflow.rb
 ${GEM_LIBDIR}/manual/text/utf8.rb
 ${GEM_LIBDIR}/manual/text/win_ansi_charset.rb
 ${GEM_LIBDIR}/prawn.gemspec
-${GEM_LIBDIR}/spec/acceptance/png.rb
+${GEM_LIBDIR}/spec/acceptance/png_spec.rb
 ${GEM_LIBDIR}/spec/annotations_spec.rb
+${GEM_LIBDIR}/spec/blend_mode_spec.rb
 ${GEM_LIBDIR}/spec/bounding_box_spec.rb
 ${GEM_LIBDIR}/spec/column_box_spec.rb
 ${GEM_LIBDIR}/spec/data/curves.pdf
 ${GEM_LIBDIR}/spec/destinations_spec.rb
 ${GEM_LIBDIR}/spec/document_spec.rb
 ${GEM_LIBDIR}/spec/extensions/encoding_helpers.rb
-${GEM_LIBDIR}/spec/extensions/mocha.rb
 ${GEM_LIBDIR}/spec/font_metric_cache_spec.rb
 ${GEM_LIBDIR}/spec/font_spec.rb
 ${GEM_LIBDIR}/spec/formatted_text_arranger_spec.rb
@@ -248,6 +255,7 @@ ${GEM_LIBDIR}/spec/text_rendering_mode_spec.rb
 ${GEM_LIBDIR}/spec/text_spacing_spec.rb
 ${GEM_LIBDIR}/spec/text_spec.rb
 ${GEM_LIBDIR}/spec/text_with_inline_formatting_spec.rb
+${GEM_LIBDIR}/spec/transformation_stack_spec.rb
 ${GEM_LIBDIR}/spec/transparency_spec.rb
 ${GEM_LIBDIR}/spec/view_spec.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec

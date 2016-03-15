@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2015/12/30 04:23:00 taca Exp $
+# $NetBSD: Makefile,v 1.13 2016/03/15 15:05:36 taca Exp $
 
-DISTNAME=	prawn-2.0.2
+DISTNAME=	prawn-2.1.0
 CATEGORIES=	print
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
