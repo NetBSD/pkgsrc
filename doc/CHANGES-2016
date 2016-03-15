@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1187 2016/03/15 14:40:46 mef Exp $
+$NetBSD: CHANGES-2016,v 1.1188 2016/03/15 14:43:10 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1577,3 +1577,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated misc/ruby-rainbow to 2.1.0 [taca 2016-03-15]
 	Updated net/ruby-dnsruby to 1.59.2 [taca 2016-03-15]
 	Updated ham/fldigi to 3.23.08 [mef 2016-03-15]
+	Updated net/ruby-domain_name to 0.5.20160309 [taca 2016-03-15]
