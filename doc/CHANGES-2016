@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1202 2016/03/15 15:33:35 taca Exp $
+$NetBSD: CHANGES-2016,v 1.1203 2016/03/15 15:36:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1592,3 +1592,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/mit-krb5 to 1.14.1 [tez 2016-03-15]
 	Updated sysutils/ruby-facter to 2.4.6 [taca 2016-03-15]
 	Updated sysutils/ruby-rb-inotify to 0.9.7 [taca 2016-03-15]
+	Updated sysutils/ruby-listen to 3.0.6 [taca 2016-03-15]
