@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1182 2016/03/15 14:26:53 taca Exp $
+$NetBSD: CHANGES-2016,v 1.1183 2016/03/15 14:34:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1572,3 +1572,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/nsd to 4.1.9 [pettai 2016-03-15]
 	Updated devel/ruby-tins to 1.9.0 [taca 2016-03-15]
 	Updated misc/ruby-commander to 4.4.0 [taca 2016-03-15]
+	Updated misc/ruby-ohai to 8.12.0 [taca 2016-03-15]
