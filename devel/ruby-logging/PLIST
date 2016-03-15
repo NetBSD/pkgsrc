@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2015/06/03 14:45:17 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2016/03/15 16:54:33 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.travis.yml
@@ -17,6 +17,7 @@ ${GEM_LIBDIR}/examples/lazy.rb
 ${GEM_LIBDIR}/examples/loggers.rb
 ${GEM_LIBDIR}/examples/mdc.rb
 ${GEM_LIBDIR}/examples/names.rb
+${GEM_LIBDIR}/examples/rails4.rb
 ${GEM_LIBDIR}/examples/rspec_integration.rb
 ${GEM_LIBDIR}/examples/simple.rb
 ${GEM_LIBDIR}/lib/logging.rb
@@ -51,11 +52,12 @@ ${GEM_LIBDIR}/lib/rspec/logging_helper.rb
 ${GEM_LIBDIR}/lib/spec/logging_helper.rb
 ${GEM_LIBDIR}/logging.gemspec
 ${GEM_LIBDIR}/script/bootstrap
+${GEM_LIBDIR}/script/console
+${GEM_LIBDIR}/test/appenders/test_async_flushing.rb
 ${GEM_LIBDIR}/test/appenders/test_buffered_io.rb
 ${GEM_LIBDIR}/test/appenders/test_console.rb
 ${GEM_LIBDIR}/test/appenders/test_file.rb
 ${GEM_LIBDIR}/test/appenders/test_io.rb
-${GEM_LIBDIR}/test/appenders/test_periodic_flushing.rb
 ${GEM_LIBDIR}/test/appenders/test_rolling_file.rb
 ${GEM_LIBDIR}/test/appenders/test_string_io.rb
 ${GEM_LIBDIR}/test/appenders/test_syslog.rb
@@ -65,6 +67,7 @@ ${GEM_LIBDIR}/test/layouts/test_color_pattern.rb
 ${GEM_LIBDIR}/test/layouts/test_json.rb
 ${GEM_LIBDIR}/test/layouts/test_pattern.rb
 ${GEM_LIBDIR}/test/layouts/test_yaml.rb
+${GEM_LIBDIR}/test/performance.rb
 ${GEM_LIBDIR}/test/setup.rb
 ${GEM_LIBDIR}/test/test_appender.rb
 ${GEM_LIBDIR}/test/test_color_scheme.rb
