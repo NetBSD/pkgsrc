@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2016/03/14 00:59:06 tnn Exp $
+# $NetBSD: Makefile,v 1.25 2016/03/15 12:45:07 fhajny Exp $
 
-DISTNAME=		puppet-3.8.4
-PKGREVISION=		1
+DISTNAME=		puppet-3.8.6
 CATEGORIES=		sysutils
 #MASTER_SITES=		http://puppetlabs.com/downloads/puppet/
 
