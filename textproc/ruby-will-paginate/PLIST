@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2015/02/05 15:21:40 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2016/03/15 16:00:58 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
@@ -11,6 +11,7 @@ ${GEM_LIBDIR}/lib/will_paginate/data_mapper.rb
 ${GEM_LIBDIR}/lib/will_paginate/deprecation.rb
 ${GEM_LIBDIR}/lib/will_paginate/i18n.rb
 ${GEM_LIBDIR}/lib/will_paginate/locale/en.yml
+${GEM_LIBDIR}/lib/will_paginate/mongoid.rb
 ${GEM_LIBDIR}/lib/will_paginate/page_number.rb
 ${GEM_LIBDIR}/lib/will_paginate/per_page.rb
 ${GEM_LIBDIR}/lib/will_paginate/railtie.rb
@@ -31,6 +32,7 @@ ${GEM_LIBDIR}/spec/finders/active_record_spec.rb
 ${GEM_LIBDIR}/spec/finders/activerecord_test_connector.rb
 ${GEM_LIBDIR}/spec/finders/data_mapper_spec.rb
 ${GEM_LIBDIR}/spec/finders/data_mapper_test_connector.rb
+${GEM_LIBDIR}/spec/finders/mongoid_spec.rb
 ${GEM_LIBDIR}/spec/finders/sequel_spec.rb
 ${GEM_LIBDIR}/spec/finders/sequel_test_connector.rb
 ${GEM_LIBDIR}/spec/fixtures/admin.rb
