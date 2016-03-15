@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2013/09/15 16:14:17 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2016/03/15 15:39:04 taca Exp $
 bin/coderay
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/README_INDEX.rdoc
@@ -6,13 +6,14 @@ ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/bin/coderay
 ${GEM_LIBDIR}/lib/coderay.rb
 ${GEM_LIBDIR}/lib/coderay/duo.rb
-${GEM_LIBDIR}/lib/coderay/encoder.rb
+${GEM_LIBDIR}/lib/coderay/encoders.rb
 ${GEM_LIBDIR}/lib/coderay/encoders/_map.rb
 ${GEM_LIBDIR}/lib/coderay/encoders/comment_filter.rb
 ${GEM_LIBDIR}/lib/coderay/encoders/count.rb
 ${GEM_LIBDIR}/lib/coderay/encoders/debug.rb
 ${GEM_LIBDIR}/lib/coderay/encoders/debug_lint.rb
 ${GEM_LIBDIR}/lib/coderay/encoders/div.rb
+${GEM_LIBDIR}/lib/coderay/encoders/encoder.rb
 ${GEM_LIBDIR}/lib/coderay/encoders/filter.rb
 ${GEM_LIBDIR}/lib/coderay/encoders/html.rb
 ${GEM_LIBDIR}/lib/coderay/encoders/html/css.rb
@@ -33,8 +34,9 @@ ${GEM_LIBDIR}/lib/coderay/encoders/yaml.rb
 ${GEM_LIBDIR}/lib/coderay/for_redcloth.rb
 ${GEM_LIBDIR}/lib/coderay/helpers/file_type.rb
 ${GEM_LIBDIR}/lib/coderay/helpers/plugin.rb
+${GEM_LIBDIR}/lib/coderay/helpers/plugin_host.rb
 ${GEM_LIBDIR}/lib/coderay/helpers/word_list.rb
-${GEM_LIBDIR}/lib/coderay/scanner.rb
+${GEM_LIBDIR}/lib/coderay/scanners.rb
 ${GEM_LIBDIR}/lib/coderay/scanners/_map.rb
 ${GEM_LIBDIR}/lib/coderay/scanners/c.rb
 ${GEM_LIBDIR}/lib/coderay/scanners/clojure.rb
@@ -60,14 +62,16 @@ ${GEM_LIBDIR}/lib/coderay/scanners/ruby.rb
 ${GEM_LIBDIR}/lib/coderay/scanners/ruby/patterns.rb
 ${GEM_LIBDIR}/lib/coderay/scanners/ruby/string_state.rb
 ${GEM_LIBDIR}/lib/coderay/scanners/sass.rb
+${GEM_LIBDIR}/lib/coderay/scanners/scanner.rb
 ${GEM_LIBDIR}/lib/coderay/scanners/sql.rb
 ${GEM_LIBDIR}/lib/coderay/scanners/taskpaper.rb
 ${GEM_LIBDIR}/lib/coderay/scanners/text.rb
 ${GEM_LIBDIR}/lib/coderay/scanners/xml.rb
 ${GEM_LIBDIR}/lib/coderay/scanners/yaml.rb
-${GEM_LIBDIR}/lib/coderay/style.rb
+${GEM_LIBDIR}/lib/coderay/styles.rb
 ${GEM_LIBDIR}/lib/coderay/styles/_map.rb
 ${GEM_LIBDIR}/lib/coderay/styles/alpha.rb
+${GEM_LIBDIR}/lib/coderay/styles/style.rb
 ${GEM_LIBDIR}/lib/coderay/token_kinds.rb
 ${GEM_LIBDIR}/lib/coderay/tokens.rb
 ${GEM_LIBDIR}/lib/coderay/tokens_proxy.rb
