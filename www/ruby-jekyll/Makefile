@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2016/03/03 14:43:44 jmmv Exp $
+# $NetBSD: Makefile,v 1.17 2016/03/15 16:15:38 taca Exp $
 
-DISTNAME=	jekyll-3.0.1
-PKGREVISION=	1
+DISTNAME=	jekyll-3.1.2
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -19,12 +18,6 @@ DEPENDS+=	${RUBY_PKGPREFIX}-jekyll-sass-converter>=1.0<2:../../www/ruby-jekyll-s
 DEPENDS+=	${RUBY_PKGPREFIX}-jekyll-watch>=1.1<2:../../www/ruby-jekyll-watch
 
 RUBYGEM_OPTIONS+=	--format-executable
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Darwin"
-DEPENDS+=	${RUBY_PKGPREFIX}-rb-fsevent>=0.9.7:../../devel/ruby-rb-fsevent
-.endif
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"

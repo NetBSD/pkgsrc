@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.7 2015/12/13 16:49:28 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2016/03/15 16:15:38 taca Exp $
 bin/jekyll${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.rubocop.yml
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.markdown
 ${GEM_LIBDIR}/bin/jekyll
@@ -14,6 +15,7 @@ ${GEM_LIBDIR}/lib/jekyll/commands/doctor.rb
 ${GEM_LIBDIR}/lib/jekyll/commands/help.rb
 ${GEM_LIBDIR}/lib/jekyll/commands/new.rb
 ${GEM_LIBDIR}/lib/jekyll/commands/serve.rb
+${GEM_LIBDIR}/lib/jekyll/commands/serve/servlet.rb
 ${GEM_LIBDIR}/lib/jekyll/configuration.rb
 ${GEM_LIBDIR}/lib/jekyll/converter.rb
 ${GEM_LIBDIR}/lib/jekyll/converters/identity.rb
@@ -21,9 +23,17 @@ ${GEM_LIBDIR}/lib/jekyll/converters/markdown.rb
 ${GEM_LIBDIR}/lib/jekyll/converters/markdown/kramdown_parser.rb
 ${GEM_LIBDIR}/lib/jekyll/converters/markdown/rdiscount_parser.rb
 ${GEM_LIBDIR}/lib/jekyll/converters/markdown/redcarpet_parser.rb
+${GEM_LIBDIR}/lib/jekyll/converters/smartypants.rb
 ${GEM_LIBDIR}/lib/jekyll/convertible.rb
 ${GEM_LIBDIR}/lib/jekyll/deprecator.rb
 ${GEM_LIBDIR}/lib/jekyll/document.rb
+${GEM_LIBDIR}/lib/jekyll/drops/collection_drop.rb
+${GEM_LIBDIR}/lib/jekyll/drops/document_drop.rb
+${GEM_LIBDIR}/lib/jekyll/drops/drop.rb
+${GEM_LIBDIR}/lib/jekyll/drops/jekyll_drop.rb
+${GEM_LIBDIR}/lib/jekyll/drops/site_drop.rb
+${GEM_LIBDIR}/lib/jekyll/drops/unified_payload_drop.rb
+${GEM_LIBDIR}/lib/jekyll/drops/url_drop.rb
 ${GEM_LIBDIR}/lib/jekyll/entry_filter.rb
 ${GEM_LIBDIR}/lib/jekyll/errors.rb
 ${GEM_LIBDIR}/lib/jekyll/excerpt.rb
@@ -61,6 +71,7 @@ ${GEM_LIBDIR}/lib/jekyll/tags/include.rb
 ${GEM_LIBDIR}/lib/jekyll/tags/post_url.rb
 ${GEM_LIBDIR}/lib/jekyll/url.rb
 ${GEM_LIBDIR}/lib/jekyll/utils.rb
+${GEM_LIBDIR}/lib/jekyll/utils/ansi.rb
 ${GEM_LIBDIR}/lib/jekyll/utils/platforms.rb
 ${GEM_LIBDIR}/lib/jekyll/version.rb
 ${GEM_LIBDIR}/lib/site_template/.gitignore
