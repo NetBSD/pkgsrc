@@ -1,8 +1,6 @@
-$NetBSD: patch-src_configure,v 1.4 2015/12/29 23:34:54 dholland Exp $
+$NetBSD: patch-src_configure,v 1.5 2016/03/15 19:49:43 asau Exp $
 
-Remove bashisms.
-
---- src/configure.orig	2015-10-20 15:10:35.000000000 +0000
+--- src/configure.orig	2016-01-11 17:07:43.000000000 +0000
 +++ src/configure
 @@ -3098,7 +3098,7 @@ if test "${enable_sysroot}" != "" ; then
  fi
@@ -31,8 +29,8 @@ Remove bashisms.
        LIBS="${LIBS} -Wl,-Bstatic -lwinpthread"
      fi
      case "$build_os" in
-@@ -4793,7 +4793,7 @@ fi
-     try_kqueue_syscall=yes
+@@ -4798,7 +4798,7 @@ fi
+     try_poll_syscall=yes
  
      # ".a" is typically not useful, since we always build a ".dylib":
 -    if test "${enable_libs}" == "" ; then

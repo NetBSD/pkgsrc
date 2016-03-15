@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2015/12/12 21:49:05 asau Exp $
+# $NetBSD: Makefile,v 1.47 2016/03/15 19:49:42 asau Exp $
 
-PKGNAME=	racket-6.3
+PKGNAME=	racket-6.4
 DISTNAME=	$(PKGNAME_NOREV)-src
 CATEGORIES=	lang
 MASTER_SITES_PLT=	http://download.racket-lang.org/installers/$(PKGVERSION_NOREV)/ \
