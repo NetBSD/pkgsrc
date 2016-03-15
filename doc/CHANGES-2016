@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1189 2016/03/15 14:46:10 taca Exp $
+$NetBSD: CHANGES-2016,v 1.1190 2016/03/15 14:47:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1579,3 +1579,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated ham/fldigi to 3.23.08 [mef 2016-03-15]
 	Updated net/ruby-domain_name to 0.5.20160309 [taca 2016-03-15]
 	Updated net/ruby-ipaddress to 0.8.3 [taca 2016-03-15]
+	Updated net/ruby-net-ldap to 0.14.0 [taca 2016-03-15]
