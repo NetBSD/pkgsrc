@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.9 2015/06/11 17:03:17 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2016/03/15 16:23:48 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/AUTHORS.md
-${GEM_LIBDIR}/CHANGES
+${GEM_LIBDIR}/CHANGELOG.md
+${GEM_LIBDIR}/CONTRIBUTING.md
 ${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.de.md
@@ -22,6 +23,7 @@ ${GEM_LIBDIR}/examples/simple.rb
 ${GEM_LIBDIR}/examples/stream.ru
 ${GEM_LIBDIR}/lib/sinatra.rb
 ${GEM_LIBDIR}/lib/sinatra/base.rb
+${GEM_LIBDIR}/lib/sinatra/ext.rb
 ${GEM_LIBDIR}/lib/sinatra/images/404.png
 ${GEM_LIBDIR}/lib/sinatra/images/500.png
 ${GEM_LIBDIR}/lib/sinatra/main.rb
@@ -55,6 +57,7 @@ ${GEM_LIBDIR}/test/mediawiki_test.rb
 ${GEM_LIBDIR}/test/middleware_test.rb
 ${GEM_LIBDIR}/test/nokogiri_test.rb
 ${GEM_LIBDIR}/test/public/favicon.ico
+${GEM_LIBDIR}/test/public/hello+world.txt
 ${GEM_LIBDIR}/test/rabl_test.rb
 ${GEM_LIBDIR}/test/rack_test.rb
 ${GEM_LIBDIR}/test/radius_test.rb
