@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1216 2016/03/15 16:24:20 taca Exp $
+$NetBSD: CHANGES-2016,v 1.1217 2016/03/15 16:44:46 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1606,3 +1606,11 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/ruby-rack-cache to 1.6.1 [taca 2016-03-15]
 	Updated www/ruby-sass to 3.4.21 [taca 2016-03-15]
 	Updated www/ruby-sinatra to 1.4.7 [taca 2016-03-15]
+	Updated www/ruby-padrino-support to 0.13.1 [taca 2016-03-15]
+	Updated www/ruby-padrino-helpers to 0.13.1 [taca 2016-03-15]
+	Updated www/ruby-padrino-core to 0.13.1 [taca 2016-03-15]
+	Updated www/ruby-padrino-cache to 0.13.1 [taca 2016-03-15]
+	Updated www/ruby-padrino-gen to 0.13.1 [taca 2016-03-15]
+	Updated www/ruby-padrino-admin to 0.13.1 [taca 2016-03-15]
+	Updated www/ruby-padrino-mailer to 0.13.1 [taca 2016-03-15]
+	Updated www/ruby-padrino to 0.13.1 [taca 2016-03-15]
