@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.661 2016/03/08 16:55:19 imil Exp $
+# $NetBSD: Makefile,v 1.662 2016/03/15 09:51:39 wiz Exp $
 #
 
 COMMENT=	System utilities
@@ -515,6 +515,7 @@ SUBDIR+=	system-tools-backends
 SUBDIR+=	systester
 SUBDIR+=	sysupgrade
 SUBDIR+=	tarsnap
+SUBDIR+=	tarsnap-gui
 SUBDIR+=	tcx
 SUBDIR+=	tdir
 SUBDIR+=	tegra-firmware
