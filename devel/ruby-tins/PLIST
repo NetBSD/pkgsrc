@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2015/12/12 14:38:26 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2016/03/15 14:24:46 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.travis.yml
@@ -52,6 +52,7 @@ ${GEM_LIBDIR}/lib/tins/date_time_dummy.rb
 ${GEM_LIBDIR}/lib/tins/deep_const_get.rb
 ${GEM_LIBDIR}/lib/tins/deep_dup.rb
 ${GEM_LIBDIR}/lib/tins/dslkit.rb
+${GEM_LIBDIR}/lib/tins/duration.rb
 ${GEM_LIBDIR}/lib/tins/extract_last_argument_options.rb
 ${GEM_LIBDIR}/lib/tins/file_binary.rb
 ${GEM_LIBDIR}/lib/tins/find.rb
@@ -152,6 +153,7 @@ ${GEM_LIBDIR}/tests/deep_const_get_test.rb
 ${GEM_LIBDIR}/tests/deep_dup_test.rb
 ${GEM_LIBDIR}/tests/delegate_test.rb
 ${GEM_LIBDIR}/tests/dslkit_test.rb
+${GEM_LIBDIR}/tests/duaration_test.rb
 ${GEM_LIBDIR}/tests/dynamic_scope_test.rb
 ${GEM_LIBDIR}/tests/extract_last_argument_options_test.rb
 ${GEM_LIBDIR}/tests/file_binary_test.rb
