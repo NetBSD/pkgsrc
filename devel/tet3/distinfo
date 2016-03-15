@@ -1,17 +1,15 @@
-$NetBSD: distinfo,v 1.9 2015/11/03 03:29:35 agc Exp $
+$NetBSD: distinfo,v 1.10 2016/03/15 12:15:26 wiz Exp $
 
 SHA1 (tet3.7-unsup.src.tgz) = 43a3720d0472b6d3261b1b1cd7fa5192a2911b73
 RMD160 (tet3.7-unsup.src.tgz) = 7e266fc77e2a01ece7cd1b041d3ee28426d1bd3d
 SHA512 (tet3.7-unsup.src.tgz) = c3f192a907e521d628f47c5d676f8cb3681f1fae2bed2d458b2d65d05525a6302e024bc90e99bc8ae1b5abade71ca07fb24a3b0dd914d2af8487c54041ca822f
 Size (tet3.7-unsup.src.tgz) = 953406 bytes
-SHA1 (patch-aa) = 6b67991e3deed46ef7a3451e3ff94dee286d1d65
-SHA1 (patch-ab) = a18d1928e58ea8e5eef7fd797641f802e99cc02d
+SHA1 (patch-aa) = 37c1da834d026be3b6b79afe40b257fd4104d108
+SHA1 (patch-ab) = 8a4046b5fa63ef25995506f22d7e948c33695b73
 SHA1 (patch-ac) = 6de35a54caa6df438bb7a9abf59769626a16e9bb
-SHA1 (patch-ad) = ba0bb07f74a70691cf62d72502a3d608e522e2c0
-SHA1 (patch-ae) = adb90e2ce7ad8429a701718ec4a79ddb2f93d509
-SHA1 (patch-ah) = aaee593e861966595ef71ab59b535372facc1115
-SHA1 (patch-ai) = 256d4903ec91f4a4ffe147accb5d7e80740e6c46
+SHA1 (patch-ad) = 3541d02db440e29d4c9ea36bd988499be3e2c082
+SHA1 (patch-ai) = 3039a9a1bdaa7f3e00d359cd0d05fd2bbb701f3d
 SHA1 (patch-aj) = 98738ce53f8746e478475f6ad483db2af16ee6b8
 SHA1 (patch-ak) = a907e0492849aec9a23eef2167aecb92e4ca589a
 SHA1 (patch-al) = 840feab081b56a1f44f3c5094f5962b9700350e5
-SHA1 (patch-src_scripts_tet_start.sh) = 3b3ae5806c88b3f795a51ed1b057df4134f1961c
+SHA1 (patch-src_scripts_tet_start.sh) = 7c1c464d69a6ba346ad0c81f452426c44b008e56
