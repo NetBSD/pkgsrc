@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2015/11/04 02:00:11 agc Exp $
+$NetBSD: distinfo,v 1.11 2016/03/15 16:00:58 taca Exp $
 
-SHA1 (will_paginate-3.0.7.gem) = 48adba17eb9cc4e9bc7fd11abe20eeb0d6626396
-RMD160 (will_paginate-3.0.7.gem) = af99bf0818a31922e05b23e6f5ecc9626dd7d7bd
-SHA512 (will_paginate-3.0.7.gem) = 2f675905bcc5c890781677188576584ea7b2a003d3e5e9c9c32a5c5a1093ae436dec72b93cc39a1a7c897d81b181fbd8ab88ed7d098ba204426f7462806f677b
-Size (will_paginate-3.0.7.gem) = 35840 bytes
+SHA1 (will_paginate-3.1.0.gem) = 7067f6ec6665797e5c5506f26843262b601632ba
+RMD160 (will_paginate-3.1.0.gem) = 0e8f15b12fbd481372aa5d4637c49329446a3d0c
+SHA512 (will_paginate-3.1.0.gem) = e53583eceec6381ddd4b5936a84fa84fb7d956a267aac15df5c4758b22f54d48c00d66880ad1b2b1c0c18c09a645d1b99d3cefe758f6a51fdf169ca10e875afa
+Size (will_paginate-3.1.0.gem) = 36352 bytes
