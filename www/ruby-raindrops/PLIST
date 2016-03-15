@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2015/09/13 15:40:36 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2016/03/15 16:50:07 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/raindrops_ext.${RUBY_DLEXT}
 ${GEM_LIBDIR}/.document
+${GEM_LIBDIR}/.gitattributes
 ${GEM_LIBDIR}/.gitignore
 ${GEM_LIBDIR}/.manifest
 ${GEM_LIBDIR}/.olddoc.yml
