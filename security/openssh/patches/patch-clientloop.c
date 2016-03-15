@@ -1,12 +1,12 @@
-$NetBSD: patch-clientloop.c,v 1.3 2016/01/18 12:53:26 jperkin Exp $
+$NetBSD: patch-clientloop.c,v 1.4 2016/03/15 20:54:07 bsiegert Exp $
 
 Fix X11 forwarding under Mac OS X Yosemite. Patch taken from MacPorts.
 
 https://trac.macports.org/browser/trunk/dports/net/openssh/files/launchd.patch?rev=121205
 
---- clientloop.c.orig	2015-08-21 04:49:03.000000000 +0000
+--- clientloop.c.orig	2016-03-09 18:04:48.000000000 +0000
 +++ clientloop.c
-@@ -315,6 +315,10 @@ client_x11_get_proto(const char *display
+@@ -313,6 +313,10 @@ client_x11_get_proto(const char *display
  	struct stat st;
  	u_int now, x11_timeout_real;
  
@@ -14,13 +14,13 @@ https://trac.macports.org/browser/trunk/dports/net/openssh/files/launchd.patch?r
 +	int is_path_to_socket = 0;
 +#endif /* __APPLE__ */
 +
- 	xauthdir = xauthfile = NULL;
  	*_proto = proto;
  	*_data = data;
-@@ -330,6 +334,33 @@ client_x11_get_proto(const char *display
- 			debug("x11_get_proto: DISPLAY not set");
- 			return;
- 		}
+ 	proto[0] = data[0] = xauthfile[0] = xauthdir[0] = '\0';
+@@ -329,6 +333,33 @@ client_x11_get_proto(const char *display
+ 	}
+ 
+ 	if (xauth_path != NULL) {
 +#if __APPLE__
 +		{
 +			/*
@@ -51,7 +51,7 @@ https://trac.macports.org/browser/trunk/dports/net/openssh/files/launchd.patch?r
  		/*
  		 * Handle FamilyLocal case where $DISPLAY does
  		 * not match an authorization entry.  For this we
-@@ -421,6 +452,9 @@ client_x11_get_proto(const char *display
+@@ -438,6 +469,9 @@ client_x11_get_proto(const char *display
  	if (!got_data) {
  		u_int32_t rnd = 0;
  
