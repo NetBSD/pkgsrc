@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.56 2016/03/15 15:16:39 tez Exp $
+$NetBSD: distinfo,v 1.57 2016/03/15 15:22:38 tez Exp $
 
 SHA1 (krb5-1.14.1.tar.gz) = f12dc3b8630fd1fefb7058cd782754489377308b
 RMD160 (krb5-1.14.1.tar.gz) = 3e32a0cd365474deeeb563831b7e408f9158b36a
@@ -26,4 +26,4 @@ SHA1 (patch-plugins_kdb_db2_libdb2_Makefile.in) = b4b7e8e4192b5e5318f1e42c493157
 SHA1 (patch-plugins_preauth_otp_Makefile.in) = 8c779e3b37cab4138f300f4a09325387092c79f8
 SHA1 (patch-plugins_preauth_pkinit_Makefile.in) = ff56050dc6a31468977c16b192b4f5d2d79764c2
 SHA1 (patch-util_k5ev_verto-k5ev.c) = 4f148a369d1634234a90c348e6b8dc366cd6773d
-SHA1 (patch-util_ss_Makefile.in) = 61b7efd68b10cbd7bedbdde523e96ae2a0ef3dfc
+SHA1 (patch-util_ss_Makefile.in) = f561b3689021b2b2db895228c717b4cdf7fbc32a
