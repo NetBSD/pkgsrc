@@ -1,0 +1,5 @@
+The Tarsnap graphical user interface desktop application is an open
+source cross-platform frontend to the popular Tarsnap backup service.
+
+The application uses the tarsnap command line client utilities to
+communicate with the Tarsnap service.
