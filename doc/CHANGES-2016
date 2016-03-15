@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1217 2016/03/15 16:44:46 taca Exp $
+$NetBSD: CHANGES-2016,v 1.1218 2016/03/15 16:47:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1614,3 +1614,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/ruby-padrino-admin to 0.13.1 [taca 2016-03-15]
 	Updated www/ruby-padrino-mailer to 0.13.1 [taca 2016-03-15]
 	Updated www/ruby-padrino to 0.13.1 [taca 2016-03-15]
+	Updated www/ruby-puma to 2.16.0 [taca 2016-03-15]
