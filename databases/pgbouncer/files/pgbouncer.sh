@@ -1,6 +1,6 @@
 #! @RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: pgbouncer.sh,v 1.2 2014/05/13 14:18:49 fhajny Exp $
+# $NetBSD: pgbouncer.sh,v 1.3 2016/03/15 11:29:35 fhajny Exp $
 #
 # PROVIDE: pgbouncer
 # REQUIRE: DAEMON
@@ -18,7 +18,7 @@ pgbouncer_conf="@PKG_SYSCONFDIR@/${name}.ini"
 required_files="${pgbouncer_conf}"
 command_args="-d ${pgbouncer_conf}"
 extra_commands="reload"
-pgsql_user="@PGUSER@"
+pgsql_user="@PGB_USER@"
 start_cmd="pgbouncer_start"
 
 pidfile="@VARBASE@/run/${name}/${name}.pid"
