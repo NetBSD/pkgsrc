@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1214 2016/03/15 16:18:39 taca Exp $
+$NetBSD: CHANGES-2016,v 1.1215 2016/03/15 16:23:22 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1604,3 +1604,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/ruby-jekyll-watch to 1.3.1 [taca 2016-03-15]
 	Updated www/ruby-jekyll to 3.1.2 [taca 2016-03-15]
 	Updated www/ruby-rack-cache to 1.6.1 [taca 2016-03-15]
+	Updated www/ruby-sass to 3.4.21 [taca 2016-03-15]
