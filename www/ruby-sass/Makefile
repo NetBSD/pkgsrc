@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2015/12/13 16:14:53 taca Exp $
+# $NetBSD: Makefile,v 1.20 2016/03/15 16:22:46 taca Exp $
 
-DISTNAME=	sass-3.4.20
+DISTNAME=	sass-3.4.21
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
