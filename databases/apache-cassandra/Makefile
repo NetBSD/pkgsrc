@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2015/10/21 12:53:27 fhajny Exp $
+# $NetBSD: Makefile,v 1.20 2016/03/15 10:55:25 fhajny Exp $
 #
 
 CASSANDRA_VER=	1.2.19
+PKGREVISION=	1
 
 MASTER_SITES=	http://archive.apache.org/dist/cassandra/${PKGVERSION_NOREV}/
 
