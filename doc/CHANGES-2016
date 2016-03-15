@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1181 2016/03/15 14:25:39 taca Exp $
+$NetBSD: CHANGES-2016,v 1.1182 2016/03/15 14:26:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1571,3 +1571,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/hs-tagsoup to 0.13.9 [szptvlfn 2016-03-15]
 	Updated net/nsd to 4.1.9 [pettai 2016-03-15]
 	Updated devel/ruby-tins to 1.9.0 [taca 2016-03-15]
+	Updated misc/ruby-commander to 4.4.0 [taca 2016-03-15]
