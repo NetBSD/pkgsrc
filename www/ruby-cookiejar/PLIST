@@ -1,14 +1,21 @@
-@comment $NetBSD: PLIST,v 1.2 2014/03/26 13:37:22 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/03/15 16:09:04 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/.rspec
+${GEM_LIBDIR}/.travis.yml
+${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.markdown
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/contributors.json
+${GEM_LIBDIR}/cookiejar.gemspec
 ${GEM_LIBDIR}/lib/cookiejar.rb
 ${GEM_LIBDIR}/lib/cookiejar/cookie.rb
 ${GEM_LIBDIR}/lib/cookiejar/cookie_validation.rb
 ${GEM_LIBDIR}/lib/cookiejar/jar.rb
+${GEM_LIBDIR}/lib/cookiejar/version.rb
 ${GEM_LIBDIR}/spec/cookie_spec.rb
 ${GEM_LIBDIR}/spec/cookie_validation_spec.rb
 ${GEM_LIBDIR}/spec/jar_spec.rb
+${GEM_LIBDIR}/spec/spec_helper.rb
 ${GEM_HOME}/specifications/${GEM_NAME}.gemspec
