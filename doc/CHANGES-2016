@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1198 2016/03/15 15:19:03 mef Exp $
+$NetBSD: CHANGES-2016,v 1.1199 2016/03/15 15:20:13 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1588,3 +1588,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/ruby-bcrypt to 3.1.11 [taca 2016-03-15]
 	Updated security/ruby-oauth to 0.5.1 [taca 2016-03-15]
 	Added cad/klayout version 0.24.5 [mef 2016-03-15]
+	Updated sysutils/ruby-childprocess to 0.5.9 [taca 2016-03-15]
