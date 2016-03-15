@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2016/03/05 11:28:13 jperkin Exp $
+# $NetBSD: Makefile,v 1.11 2016/03/15 11:29:35 fhajny Exp $
 #
 
-DISTNAME=	pgbouncer-1.6.1
-PKGREVISION=	1
+DISTNAME=	pgbouncer-1.7.2
 CATEGORIES=	databases
 MASTER_SITES=	http://pgbouncer.github.io/downloads/files/${PKGVERSION_NOREV}/
 
@@ -17,22 +16,21 @@ GNU_CONFIGURE=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
-PGUSER?=		pgsql
-PGGROUP?=		pgsql
-PKG_GROUPS=		${PGGROUP}
-PKG_USERS=		${PGUSER}:${PGGROUP}
-PKG_GECOS.${PGUSER}=	PostgreSQL database administrator
-PKG_HOME.${PGUSER}=	${PGHOME}
-
-BUILD_DEFS+=		PGUSER PGGROUP PGHOME VARBASE
-FILES_SUBST+=		PGUSER=${PGUSER}
-FILES_SUBST+=		PGGROUP=${PGGROUP}
-FILES_SUBST+=		PGHOME=${PGHOME}
-
+PGB_USER?=		pgbounce
+PGB_GROUP?=		pgbounce
 PGB_LOG_DIR?=		${VARBASE}/log/pgbouncer
 PGB_RUN_DIR?=		${VARBASE}/run
 
-OWN_DIRS_PERMS+=	${PGB_LOG_DIR} ${PGUSER} ${PGGROUP} 0755
+PKG_GROUPS=		${PGB_GROUP}
+PKG_USERS=		${PGB_USER}:${PGB_GROUP}
+PKG_GECOS.${PGB_USER}=	PgBouncer daemon user
+PKG_HOME.${PGB_USER}=	${PGB_LOG_DIR}
+
+BUILD_DEFS+=		PGB_USER PGB_GROUP VARBASE
+FILES_SUBST+=		PGB_USER=${PGB_USER}
+FILES_SUBST+=		PGB_GROUP=${PGB_GROUP}
+
+OWN_DIRS_PERMS+=	${PGB_LOG_DIR} ${PGB_USER} ${PGB_GROUP} 0755
 
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 CONF_FILES=		${EGDIR}/pgbouncer.ini ${PKG_SYSCONFDIR}/pgbouncer.ini \
@@ -65,4 +63,5 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 ${EGDIR}
 BUILDLINK_API_DEPENDS.libevent+= libevent>=2.0
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../net/libcares/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

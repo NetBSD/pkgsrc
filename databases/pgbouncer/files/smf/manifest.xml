@@ -10,8 +10,8 @@
     <dependency name="filesystem" grouping="require_all" restart_on="error" type="service">
       <service_fmri value="svc:/system/filesystem/local" />
     </dependency>
-    <method_context working_directory="@PGHOME@">
-      <method_credential user="@PGUSER@" group="@PGGROUP@" />
+    <method_context>
+      <method_credential user="@PGB_USER@" group="@PGB_GROUP@" />
     </method_context>
     <exec_method type="method" name="start" exec="@PREFIX@/bin/pgbouncer -d %{config_file}" timeout_seconds="60" />
     <exec_method type="method" name="stop" exec=":kill" timeout_seconds="60" />
