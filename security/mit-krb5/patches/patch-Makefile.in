@@ -1,19 +1,32 @@
-$NetBSD: patch-ak,v 1.3 2012/07/16 19:12:33 adam Exp $
+$NetBSD: patch-Makefile.in,v 1.1 2016/03/15 15:16:39 tez Exp $
 
-Don't build kadm5_hook and avoid libtool problem.
+Don't build plugin examples & tests and avoid libtool problem.
 No idea why... copied from previous instance of this package.
 
---- Makefile.in.orig	2012-05-31 23:49:44.000000000 +0000
+--- Makefile.in.orig	2016-02-29 19:50:13.000000000 +0000
 +++ Makefile.in
-@@ -9,7 +9,6 @@ mydir=.
- #	plugins/authdata/greet
+@@ -9,20 +9,11 @@ mydir=.
  SUBDIRS=util include lib \
  	@sam2_plugin@ \
+ 	plugins/audit \
+-	plugins/audit/test \
+ 	@audit_plugin@ \
 -	plugins/kadm5_hook/test \
+-	plugins/hostrealm/test \
+-	plugins/localauth/test \
+-	plugins/pwqual/test \
+-	plugins/authdata/greet_server \
+-	plugins/authdata/greet_client \
  	plugins/kdb/db2 \
  	@ldap_plugin_dir@ \
+-	plugins/kdb/test \
+ 	plugins/preauth/otp \
  	plugins/preauth/pkinit \
-@@ -64,7 +63,7 @@ INSTALLMKDIRS = $(KRB5ROOT) $(KRB5MANROO
+-	plugins/preauth/test \
+ 	plugins/tls/k5tls \
+ 	kdc kadmin slave clients appl tests \
+ 	config-files build-tools man doc @po@
+@@ -75,7 +66,7 @@ INSTALLMKDIRS = $(KRB5ROOT) $(KRB5MANROO
  install-strip:
  	$(MAKE) install INSTALL_STRIP=-s
  
@@ -22,7 +35,7 @@ No idea why... copied from previous instance of this package.
  
  install-mkdirs:
  	@for i in $(INSTALLMKDIRS); do \
-@@ -75,7 +74,7 @@ install-headers-mkdirs:
+@@ -86,7 +77,7 @@ install-headers-mkdirs:
  	$(srcdir)/config/mkinstalldirs $(DESTDIR)$(KRB5_INCDIR)
  	$(srcdir)/config/mkinstalldirs $(DESTDIR)$(KRB5_INCDIR)/gssapi
  	$(srcdir)/config/mkinstalldirs $(DESTDIR)$(KRB5_INCDIR)/gssrpc

@@ -1,0 +1,22 @@
+$NetBSD: patch-plugins_kdb_db2_libdb2_Makefile.in,v 1.1 2016/03/15 15:16:39 tez Exp $
+
+Add --enable-pkgsrc-libtool option
+
+--- plugins/kdb/db2/libdb2/Makefile.in.orig	2016-02-29 19:50:13.000000000 +0000
++++ plugins/kdb/db2/libdb2/Makefile.in
+@@ -1,12 +1,12 @@
+ mydir=plugins$(S)kdb$(S)db2$(S)libdb2
+ BUILDTOP=$(REL)..$(S)..$(S)..$(S)..
+-SUBDIRS=hash btree db mpool recno test
++SUBDIRS=hash btree db mpool recno
+ 
+ LIBBASE=db
+ LIBMAJOR=1
+ LIBMINOR=1
+-STOBJLISTS=hash/OBJS.ST btree/OBJS.ST db/OBJS.ST mpool/OBJS.ST \
+-	recno/OBJS.ST
++STOBJLISTS=hash/OBJS.LA btree/OBJS.LA db/OBJS.LA mpool/OBJS.LA \
++	recno/OBJS.LA
+ SUBDIROBJLISTS=$(STOBJLISTS)
+ RELDIR=../plugins/kdb/db2/libdb2
+ 
