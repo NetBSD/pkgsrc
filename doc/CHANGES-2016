@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1174 2016/03/15 11:29:47 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.1175 2016/03/15 12:33:08 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1564,3 +1564,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/sane-backends to 1.0.25nb3 [martin 2016-03-15]
 	Added sysutils/tarsnap-gui version 0.8 [wiz 2016-03-15]
 	Updated databases/pgbouncer to 1.7.2 [fhajny 2016-03-15]
+	Updated print/pdf2djvu to 0.9.3nb2 [ryoon 2016-03-15]
