@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2015/11/04 17:41:15 agc Exp $
+$NetBSD: distinfo,v 1.7 2016/03/15 11:29:35 fhajny Exp $
 
-SHA1 (pgbouncer-1.6.1.tar.gz) = 4abeee4965a26197e2c193d6bfb01eef46aa72a8
-RMD160 (pgbouncer-1.6.1.tar.gz) = 3eb6d6aae0f634c71bf28eae5f5aa471c4016a9d
-SHA512 (pgbouncer-1.6.1.tar.gz) = cf1cd28b04531bce879f3f9f50b54754253e0d9882c7f122c99d1c0c39fb01264c1ba20f5fd7b42ce7f5356f413b05caf48bbb633693d866271e129426923529
-Size (pgbouncer-1.6.1.tar.gz) = 431076 bytes
-SHA1 (patch-Makefile) = 9c33efeb8c3c70487cdca056002928fc955a8307
+SHA1 (pgbouncer-1.7.2.tar.gz) = d9bb29da15d90713e2399af3ebf5019da5cbe2d6
+RMD160 (pgbouncer-1.7.2.tar.gz) = 1bed03336e62f64b1afc652e4b2ddc6478de51ab
+SHA512 (pgbouncer-1.7.2.tar.gz) = 11c89606599f424b34f39a4b072ec6293fea0b14ee52ae4fbc44775e6d83771a22d194f4e8eabe410e0d6a70657508cf1a3b1012543d91873c36f644afb5675d
+Size (pgbouncer-1.7.2.tar.gz) = 462374 bytes
+SHA1 (patch-Makefile) = 1c76e84975111d9ce077e73fe888dfe466874e33
