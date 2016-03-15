@@ -1,10 +1,11 @@
-$NetBSD: patch-ch,v 1.2 2012/07/16 19:12:33 adam Exp $
+$NetBSD: patch-plugins_kdb_db2_Makefile.in,v 1.1 2016/03/15 15:16:39 tez Exp $
 
 Add --enable-pkgsrc-libtool option
+(was patch-ch)
 
---- plugins/kdb/db2/Makefile.in.orig	2009-11-22 12:13:29.000000000 -0600
-+++ plugins/kdb/db2/Makefile.in	2011-01-04 17:08:39.419207800 -0600
-@@ -35,8 +35,8 @@
+--- plugins/kdb/db2/Makefile.in.orig	2016-02-29 19:50:13.000000000 +0000
++++ plugins/kdb/db2/Makefile.in
+@@ -29,8 +29,8 @@ RELDIR=../plugins/kdb/db2
  # Also on gssrpc, for xdr stuff.
  SHLIB_EXPDEPS = \
  	$(GSSRPC_DEPLIBS) \
@@ -14,8 +15,8 @@ Add --enable-pkgsrc-libtool option
 +	$(TOPLIBD)/libkrb5$(DEPLIBEXT)
  SHLIB_EXPLIBS= $(GSSRPC_LIBS) -lkrb5 -lcom_err -lk5crypto $(KDB5_DB_LIB) $(KADMSRV_LIBS) $(SUPPORT_LIB) $(LIBS) @DB_EXTRA_LIBS@
  
- SHLIB_DIRS=-L$(TOPLIBD)
-@@ -47,7 +47,7 @@
+ DBDIR = libdb2
+@@ -38,7 +38,7 @@ DBOBJLISTS = $(DBOBJLISTS-@DB_VERSION@)
  DBOBJLISTS-sys =
  DBOBJLISTS-k5 = $(DBDIR)/hash/OBJS.ST $(DBDIR)/btree/OBJS.ST \
  	$(DBDIR)/db/OBJS.ST $(DBDIR)/mpool/OBJS.ST $(DBDIR)/recno/OBJS.ST
@@ -24,7 +25,7 @@ Add --enable-pkgsrc-libtool option
  
  SRCS= \
  	$(srcdir)/kdb_xdr.c \
-@@ -58,7 +58,7 @@
+@@ -49,7 +49,7 @@ SRCS= \
  	$(srcdir)/db2_exp.c \
  	$(srcdir)/lockout.c
  

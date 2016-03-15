@@ -1,11 +1,12 @@
-$NetBSD: patch-ad,v 1.6 2012/07/16 19:12:33 adam Exp $
+$NetBSD: patch-config_lib.in,v 1.1 2016/03/15 15:16:39 tez Exp $
 
 Add --enable-pkgsrc-libtool option
+(was patch-ad)
 
---- config/lib.in.orig	2012-05-31 23:49:44.000000000 +0000
+--- config/lib.in.orig	2016-02-29 19:50:13.000000000 +0000
 +++ config/lib.in
-@@ -29,8 +29,9 @@ LIBPREFIX=lib
- # STOBJLISTS=dir1/OBJS.ST dir2/OBJS.ST etc...
+@@ -21,8 +21,9 @@ LIBPREFIX=lib
+ 
  SHOBJLISTS=$(STOBJLISTS:.ST=.SH)
  PFOBJLISTS=$(STOBJLISTS:.ST=.PF)
 +LAOBJLISTS=$(STOBJLISTS:.ST=.LA)
@@ -15,7 +16,7 @@ Add --enable-pkgsrc-libtool option
  
  # Gets invoked as $(PARSE_OBJLISTS) list-of-OBJS.*-files
  PARSE_OBJLISTS= set -x && $(PERL) -p -e 'BEGIN { $$SIG{__WARN__} = sub {die @_} }; $$e=$$ARGV; $$e =~ s/OBJS\...$$//; s/^/ /; s/ $$//; s/ / $$e/g;'
-@@ -101,6 +102,21 @@ lib$(LIBBASE)$(PFLIBEXT): $(PFOBJLISTS)
+@@ -93,6 +94,21 @@ lib$(LIBBASE)$(PFLIBEXT): $(PFOBJLISTS)
  	set -x; objlist=`$(PARSE_OBJLISTS) $(PFOBJLISTS)` && $(AR) cq $@ $$objlist
  	$(RANLIB) $@
  
@@ -37,15 +38,15 @@ Add --enable-pkgsrc-libtool option
  $(TOPLIBD)/lib$(LIBBASE)$(STLIBEXT): lib$(LIBBASE)$(STLIBEXT)
  	$(RM) $@
  	(cd $(TOPLIBD) && $(LN_S) $(RELDIR)/lib$(LIBBASE)$(STLIBEXT) .)
-@@ -128,6 +144,7 @@ clean-libs:
+@@ -120,6 +136,7 @@ clean-libs:
  	$(RM) lib$(LIBBASE)$(SHLIBSEXT)
  	$(RM) lib$(LIBBASE)$(SHLIBEXT)
  	$(RM) lib$(LIBBASE)$(PFLIBEXT)
 +	$(LIBTOOL) --mode=uninstall $(RM) ${TOPLIBD}/lib$(LIBBASE)$(LALIBEXT)
- 	$(RM) binutils.versions osf1.exports darwin.exports hpux10.exports
+ 	$(RM) binutils.versions osf1.exports darwin.exports hpux.exports
  
  clean-liblinks:
-@@ -136,6 +153,7 @@ clean-liblinks:
+@@ -128,6 +145,7 @@ clean-liblinks:
  	$(RM) $(TOPLIBD)/lib$(LIBBASE)$(SHLIBSEXT)
  	$(RM) $(TOPLIBD)/lib$(LIBBASE)$(SHLIBEXT)
  	$(RM) $(TOPLIBD)/lib$(LIBBASE)$(PFLIBEXT)
@@ -53,7 +54,7 @@ Add --enable-pkgsrc-libtool option
  
  install-libs: $(LIBINSTLIST)
  install-static:
-@@ -156,6 +174,9 @@ install-profiled:
+@@ -148,6 +166,9 @@ install-profiled:
  	$(RM) $(DESTDIR)$(KRB5_LIBDIR)/lib$(LIBBASE)$(PFLIBEXT)
  	$(INSTALL_DATA) lib$(LIBBASE)$(PFLIBEXT) $(DESTDIR)$(KRB5_LIBDIR)
  	$(RANLIB) $(DESTDIR)$(KRB5_LIBDIR)/lib$(LIBBASE)$(PFLIBEXT)

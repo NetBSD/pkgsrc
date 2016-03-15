@@ -1,12 +1,13 @@
-$NetBSD: patch-ck,v 1.4 2015/03/22 20:09:09 joerg Exp $
+$NetBSD: patch-lib_apputils_Makefile.in,v 1.1 2016/03/15 15:16:39 tez Exp $
 
 libapputils is an internal library, so make it a convenience libtool archive.
+(was patch-ck)
 
---- lib/apputils/Makefile.in.orig	2013-11-06 20:52:23.000000000 +0000
+--- lib/apputils/Makefile.in.orig	2016-02-29 19:50:13.000000000 +0000
 +++ lib/apputils/Makefile.in
-@@ -16,6 +16,9 @@ DEFS=
+@@ -14,6 +14,9 @@ SED = sed
+ 
  STLIBOBJS=net-server.o @LIBOBJS@
- STOBJLISTS=OBJS.ST
  LIBBASE=apputils
 +LIBTOOL_TAIL=
 +PROG_RPATH=	${KRB5_LIBDIR}
