@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1200 2016/03/15 15:24:07 tez Exp $
+$NetBSD: CHANGES-2016,v 1.1201 2016/03/15 15:28:44 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1590,3 +1590,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added cad/klayout version 0.24.5 [mef 2016-03-15]
 	Updated sysutils/ruby-childprocess to 0.5.9 [taca 2016-03-15]
 	Updated security/mit-krb5 to 1.14.1 [tez 2016-03-15]
+	Updated sysutils/ruby-facter to 2.4.6 [taca 2016-03-15]
