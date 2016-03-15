@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2015/06/10 14:45:09 taca Exp $
+@comment $NetBSD: PLIST,v 1.25 2016/03/15 15:28:05 taca Exp $
 bin/facter${RUBY_SUFFIX}
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/COMMITTERS.md
@@ -362,6 +362,7 @@ ${GEM_LIBDIR}/spec/fixtures/unit/zpool_version/solaris_11
 ${GEM_LIBDIR}/spec/fixtures/unit/zpool_version/zfsonlinux_0.6.1
 ${GEM_LIBDIR}/spec/fixtures/virtual/proc_1_cgroup/in_a_container
 ${GEM_LIBDIR}/spec/fixtures/virtual/proc_1_cgroup/in_a_docker_container
+${GEM_LIBDIR}/spec/fixtures/virtual/proc_1_cgroup/in_a_docker_container_with_systemd_slices
 ${GEM_LIBDIR}/spec/fixtures/virtual/proc_1_cgroup/not_in_a_container
 ${GEM_LIBDIR}/spec/fixtures/virtual/proc_self_status/vserver_2_1/guest
 ${GEM_LIBDIR}/spec/fixtures/virtual/proc_self_status/vserver_2_1/host
