@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2006/06/08 16:57:59 rillig Exp $
+$NetBSD: patch-aa,v 1.3 2016/03/15 12:15:26 wiz Exp $
+
+Add build framework for NetBSD.
 
 --- /dev/null	2003-06-16 16:02:04.000000000 +0100
 +++ contrib/configtool/defines/netbsd.mk	2003-06-16 16:01:30.000000000 +0100
