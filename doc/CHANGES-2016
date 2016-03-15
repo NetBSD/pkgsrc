@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1226 2016/03/15 20:40:47 bouyer Exp $
+$NetBSD: CHANGES-2016,v 1.1227 2016/03/15 20:54:51 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1624,3 +1624,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/webkit24-gtk to 2.4.10 [leot 2016-03-15]
 	Updated www/webkit24-gtk3 to 2.4.10 [leot 2016-03-15]
 	Updated devel/gputils to 1.4.2.1 [bouyer 2016-03-15]
+	Updated security/openssh to 7.2.2 [bsiegert 2016-03-15]
