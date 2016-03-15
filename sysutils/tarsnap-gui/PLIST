@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2016/03/15 09:51:26 wiz Exp $
+bin/tarsnap-gui
