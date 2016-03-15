@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.52 2016/01/31 08:01:28 ryoon Exp $
+$NetBSD: distinfo,v 1.53 2016/03/15 13:21:20 ryoon Exp $
 
-SHA1 (umefont_590.tar.xz) = 686406718c17d8971eff1590a90da4a0c1affa83
-RMD160 (umefont_590.tar.xz) = d409aab56d792325bb581382495d0313bd0fd6ad
-SHA512 (umefont_590.tar.xz) = 80abea6bad180da5232e2b0f5d8730bd60655967bd29df09b041583c12ece2547aa4b4fee05565db1c096da9bef83ba5f145df436386805d1c08e03c6ab666c2
-Size (umefont_590.tar.xz) = 6533636 bytes
+SHA1 (umefont_600.tar.xz) = f7f3a73fe95ede6af3a0ffda9cce5e4c7f658730
+RMD160 (umefont_600.tar.xz) = 89f305c0891795f4a07a88996210327fa04d4733
+SHA512 (umefont_600.tar.xz) = bab3b3c7fdbf73854642051134840c551b8605d766491edf5365434cc207a86a3ebf4e7da4a20e072e61a22516bd45da0384ded3573a5318c2759a4de7e60bd4
+Size (umefont_600.tar.xz) = 6235808 bytes
