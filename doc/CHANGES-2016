@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1196 2016/03/15 15:07:40 taca Exp $
+$NetBSD: CHANGES-2016,v 1.1197 2016/03/15 15:16:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1586,3 +1586,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated print/ruby-pdf-reader to 1.4.0 [taca 2016-03-15]
 	Updated print/ruby-prawn to 2.1.0 [taca 2016-03-15]
 	Updated security/ruby-bcrypt to 3.1.11 [taca 2016-03-15]
+	Updated security/ruby-oauth to 0.5.1 [taca 2016-03-15]
