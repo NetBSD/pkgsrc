@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1224 2016/03/15 17:12:53 taca Exp $
+$NetBSD: CHANGES-2016,v 1.1225 2016/03/15 18:49:12 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1621,3 +1621,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/ruby-patron to 0.5.1 [taca 2016-03-15]
 	Updated devel/ruby-eventmachine to 1.2.0 [taca 2016-03-15]
 	Updated misc/ruby-ohai to 8.12.1 [taca 2016-03-15]
+	Updated www/webkit24-gtk to 2.4.10 [leot 2016-03-15]
+	Updated www/webkit24-gtk3 to 2.4.10 [leot 2016-03-15]
