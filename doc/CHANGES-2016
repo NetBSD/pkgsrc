@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1179 2016/03/15 13:45:29 szptvlfn Exp $
+$NetBSD: CHANGES-2016,v 1.1180 2016/03/15 13:49:10 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1569,3 +1569,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated print/pdf2djvu to 0.9.4 [ryoon 2016-03-15]
 	Updated fonts/umefont-ttf to 0.600 [ryoon 2016-03-15]
 	Updated textproc/hs-tagsoup to 0.13.9 [szptvlfn 2016-03-15]
+	Updated net/nsd to 4.1.9 [pettai 2016-03-15]
