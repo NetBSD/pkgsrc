@@ -1,17 +1,12 @@
-@comment $NetBSD: PLIST,v 1.11 2015/03/08 15:17:19 taca Exp $
+@comment $NetBSD: PLIST,v 1.12 2016/03/15 17:07:03 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_EXTSDIR}/fastfilereaderext.${RUBY_DLEXT}
 ${GEM_EXTSDIR}/gem.build_complete
 ${GEM_EXTSDIR}/rubyeventmachine.${RUBY_DLEXT}
-${GEM_LIBDIR}/.gitignore
-${GEM_LIBDIR}/.travis.yml
-${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/CHANGELOG.md
 ${GEM_LIBDIR}/GNU
-${GEM_LIBDIR}/Gemfile
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
-${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/docs/DocumentationGuidesIndex.md
 ${GEM_LIBDIR}/docs/GettingStarted.md
 ${GEM_LIBDIR}/docs/old/ChangeLog
@@ -26,7 +21,6 @@ ${GEM_LIBDIR}/docs/old/RELEASE_NOTES
 ${GEM_LIBDIR}/docs/old/SMTP
 ${GEM_LIBDIR}/docs/old/SPAWNED_PROCESSES
 ${GEM_LIBDIR}/docs/old/TODO
-${GEM_LIBDIR}/eventmachine.gemspec
 ${GEM_LIBDIR}/examples/guides/getting_started/01_eventmachine_echo_server.rb
 ${GEM_LIBDIR}/examples/guides/getting_started/02_eventmachine_echo_server_that_recognizes_exit_command.rb
 ${GEM_LIBDIR}/examples/guides/getting_started/03_simple_chat_server.rb
@@ -111,11 +105,11 @@ ${GEM_LIBDIR}/lib/eventmachine.rb
 ${GEM_LIBDIR}/lib/fastfilereaderext.${RUBY_DLEXT}
 ${GEM_LIBDIR}/lib/jeventmachine.rb
 ${GEM_LIBDIR}/lib/rubyeventmachine.${RUBY_DLEXT}
-${GEM_LIBDIR}/rakelib/cpp.rake_example
 ${GEM_LIBDIR}/rakelib/package.rake
 ${GEM_LIBDIR}/rakelib/test.rake
 ${GEM_LIBDIR}/tests/client.crt
 ${GEM_LIBDIR}/tests/client.key
+${GEM_LIBDIR}/tests/dhparam.pem
 ${GEM_LIBDIR}/tests/em_test_helper.rb
 ${GEM_LIBDIR}/tests/test_attach.rb
 ${GEM_LIBDIR}/tests/test_basic.rb
@@ -129,6 +123,7 @@ ${GEM_LIBDIR}/tests/test_epoll.rb
 ${GEM_LIBDIR}/tests/test_error_handler.rb
 ${GEM_LIBDIR}/tests/test_exc.rb
 ${GEM_LIBDIR}/tests/test_file_watch.rb
+${GEM_LIBDIR}/tests/test_fork.rb
 ${GEM_LIBDIR}/tests/test_futures.rb
 ${GEM_LIBDIR}/tests/test_get_sock_opt.rb
 ${GEM_LIBDIR}/tests/test_handler_check.rb
@@ -137,6 +132,8 @@ ${GEM_LIBDIR}/tests/test_httpclient.rb
 ${GEM_LIBDIR}/tests/test_httpclient2.rb
 ${GEM_LIBDIR}/tests/test_idle_connection.rb
 ${GEM_LIBDIR}/tests/test_inactivity_timeout.rb
+${GEM_LIBDIR}/tests/test_ipv4.rb
+${GEM_LIBDIR}/tests/test_ipv6.rb
 ${GEM_LIBDIR}/tests/test_iterator.rb
 ${GEM_LIBDIR}/tests/test_kb.rb
 ${GEM_LIBDIR}/tests/test_line_protocol.rb
@@ -164,7 +161,11 @@ ${GEM_LIBDIR}/tests/test_smtpclient.rb
 ${GEM_LIBDIR}/tests/test_smtpserver.rb
 ${GEM_LIBDIR}/tests/test_spawn.rb
 ${GEM_LIBDIR}/tests/test_ssl_args.rb
+${GEM_LIBDIR}/tests/test_ssl_dhparam.rb
+${GEM_LIBDIR}/tests/test_ssl_ecdh_curve.rb
+${GEM_LIBDIR}/tests/test_ssl_extensions.rb
 ${GEM_LIBDIR}/tests/test_ssl_methods.rb
+${GEM_LIBDIR}/tests/test_ssl_protocols.rb
 ${GEM_LIBDIR}/tests/test_ssl_verify.rb
 ${GEM_LIBDIR}/tests/test_stomp.rb
 ${GEM_LIBDIR}/tests/test_system.rb
