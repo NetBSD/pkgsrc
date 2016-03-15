@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2014/03/11 14:05:13 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.18 2016/03/15 15:16:39 tez Exp $
 bin/compile_et
 bin/gss-client
 bin/k5srvutil
@@ -42,9 +42,15 @@ include/kadm5/admin.h
 include/kadm5/chpass_util_strings.h
 include/kadm5/kadm_err.h
 include/kdb.h
+include/krad.h
 include/krb5.h
+include/krb5/ccselect_plugin.h
+include/krb5/clpreauth_plugin.h
+include/krb5/hostrealm_plugin.h
 include/krb5/kadm5_hook_plugin.h
+include/krb5/kdcpreauth_plugin.h
 include/krb5/krb5.h
+include/krb5/localauth_plugin.h
 include/krb5/locate_plugin.h
 include/krb5/plugin.h
 include/krb5/preauth_plugin.h
@@ -52,11 +58,10 @@ include/krb5/pwqual_plugin.h
 include/profile.h
 include/verto-module.h
 include/verto.h
-info/krb5-admin.info
-info/krb5-install.info
-info/krb5-user.info
 lib/krb5/plugins/kdb/libdb2.la
 lib/krb5/plugins/preauth/libpkinit.la
+lib/krb5/plugins/preauth/libotp.la
+lib/krb5/plugins/tls/libk5tls.la
 lib/libcom_err.la
 lib/libgssapi_krb5.la
 lib/libgssrpc.la
@@ -66,20 +71,27 @@ lib/libkadm5clnt_mit.la
 lib/libkadm5srv.la
 lib/libkadm5srv_mit.la
 lib/libkdb5.la
+lib/libkrad.la
 lib/libkrb5.la
 lib/libkrb5support.la
-lib/libverto-k5ev.la
+@comment lib/libverto-k5ev.la
 lib/libverto.la
+lib/pkgconfig/gssrpc.pc
+lib/pkgconfig/kadm-client.pc
+lib/pkgconfig/kadm-server.pc
+lib/pkgconfig/kdb.pc
+lib/pkgconfig/krb5-gssapi.pc
+lib/pkgconfig/krb5.pc
+lib/pkgconfig/mit-krb5-gssapi.pc
+lib/pkgconfig/mit-krb5.pc
 man/man1/compile_et.1
 man/man1/k5srvutil.1
 man/man1/kadmin.1
 man/man1/kdestroy.1
-man/man1/kerberos.1
 man/man1/kinit.1
 man/man1/klist.1
 man/man1/kpasswd.1
 man/man1/krb5-config.1
-man/man1/krb5-send-pr.1
 man/man1/ksu.1
 man/man1/kswitch.1
 man/man1/ktutil.1
@@ -89,10 +101,12 @@ man/man5/.k5identity.5
 man/man5/.k5login.5
 man/man5/k5identity.5
 man/man5/k5login.5
+man/man5/kadm5.acl.5
 man/man5/kdc.conf.5
 man/man5/krb5.conf.5
 man/man8/kadmin.local.8
 man/man8/kadmind.8
+man/man8/kdb5_ldap_util.8
 man/man8/kdb5_util.8
 man/man8/kprop.8
 man/man8/kpropd.8
@@ -116,5 +130,4 @@ share/et/et_h.awk
 share/examples/krb5/kdc.conf
 share/examples/krb5/krb5.conf
 share/examples/krb5/services.append
-share/gnats/mit
 share/locale/en_US/LC_MESSAGES/mit-krb5.mo
