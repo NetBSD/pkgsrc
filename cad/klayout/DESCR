@@ -1,0 +1,8 @@
+ Although a comparatively simple piece of software, a layout viewer is not
+only just a tool for the chip design engineer. Today design's complexity
+require not only a simple "viewer". Rather, a viewer is the microscope
+through which the engineer looks at the design.
+
+There are numerous viewers available, but sadly there are not many which
+satisfy a few basic requirements. Most of them are commercial and
+expensive. If there is need for a simple, yet powerful viewer - here it is.
