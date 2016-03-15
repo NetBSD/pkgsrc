@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2016/01/09 18:55:29 tsutsui Exp $
+# $NetBSD: Makefile,v 1.2 2016/03/15 14:55:21 taca Exp $
 
-DISTNAME=	twitter-text-1.13.0
+DISTNAME=	twitter-text-1.13.4
 CATEGORIES=	net
 
 MAINTAINER=	tsutsui@NetBSD.org
