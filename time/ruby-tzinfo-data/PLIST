@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2016/01/03 10:02:48 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/03/16 13:00:57 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
+${GEM_LIBDIR}/CONTRIBUTING.md
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README.md
 ${GEM_LIBDIR}/lib/tzinfo/data.rb
@@ -248,6 +249,7 @@ ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Asia/Baghdad.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Asia/Bahrain.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Asia/Baku.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Asia/Bangkok.rb
+${GEM_LIBDIR}/lib/tzinfo/data/definitions/Asia/Barnaul.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Asia/Beirut.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Asia/Bishkek.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Asia/Brunei.rb
@@ -424,6 +426,7 @@ ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Etc/Universal.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Etc/Zulu.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Europe/Amsterdam.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Europe/Andorra.rb
+${GEM_LIBDIR}/lib/tzinfo/data/definitions/Europe/Astrakhan.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Europe/Athens.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Europe/Belfast.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Europe/Belgrade.rb
@@ -471,6 +474,7 @@ ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Europe/Stockholm.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Europe/Tallinn.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Europe/Tirane.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Europe/Tiraspol.rb
+${GEM_LIBDIR}/lib/tzinfo/data/definitions/Europe/Ulyanovsk.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Europe/Uzhgorod.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Europe/Vaduz.rb
 ${GEM_LIBDIR}/lib/tzinfo/data/definitions/Europe/Vatican.rb
