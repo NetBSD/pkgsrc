@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1227 2016/03/15 20:54:51 bsiegert Exp $
+$NetBSD: CHANGES-2016,v 1.1228 2016/03/16 00:25:20 asau Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1625,3 +1625,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/webkit24-gtk3 to 2.4.10 [leot 2016-03-15]
 	Updated devel/gputils to 1.4.2.1 [bouyer 2016-03-15]
 	Updated security/openssh to 7.2.2 [bsiegert 2016-03-15]
+	Updated lang/racket-textual to 6.4 [asau 2016-03-16]
+	Updated lang/racket to 6.4 [asau 2016-03-16]
