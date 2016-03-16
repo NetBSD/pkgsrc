@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2015/11/07 10:10:09 adam Exp $
+# $NetBSD: Makefile.common,v 1.8 2016/03/16 23:16:26 tnn Exp $
 #
 # used by archivers/libunrar/Makefile
 # used by archivers/unrar/Makefile
@@ -24,7 +24,7 @@ USE_LANGUAGES=	c++
 USE_TOOLS+=	gmake
 
 MAKE_FILE=	makefile
-MAKEFLAGS+=	CXX=${CXX:Q} CXXFLAGS=${CXXFLAGS:Q} LDFLAGS=${LDFLAGS:Q}
+MAKE_FLAGS+=	CXX=${CXX:Q} CXXFLAGS=${CXXFLAGS:Q} LDFLAGS=${LDFLAGS:Q}
 # usually set in Makefile, but overridden by line above
 LDFLAGS+=	-pthread
 CXXFLAGS+=	-fPIC
