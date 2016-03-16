@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2012/10/23 17:19:13 asau Exp $
+# $NetBSD: Makefile,v 1.34 2016/03/16 17:21:45 khorben Exp $
 
 DISTNAME=		tightvnc-1.3.10
 PKGNAME=		${DISTNAME:S/tightvnc/tightvncviewer/}
@@ -16,6 +16,9 @@ CONFLICTS=		vncviewer-[0-9]*
 WRKSRC=			${WRKDIR}/vnc_unixsrc
 CRYPTO=			yes
 USE_IMAKE=		yes
+
+MAKE_FLAGS+=		CCOPTIONS=${CFLAGS:Q}
+MAKE_FLAGS+=		LOCAL_LDFLAGS=${LDFLAGS:Q}
 
 CONFIGURE_DIRS=		libvncauth
 CONFIGURE_DIRS+=	vncviewer
