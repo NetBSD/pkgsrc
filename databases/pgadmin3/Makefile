@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.52 2016/03/05 11:28:12 jperkin Exp $
+# $NetBSD: Makefile,v 1.53 2016/03/16 04:46:24 richard Exp $
 
-DISTNAME=	pgadmin3-1.20.0
-PKGREVISION=	1
+DISTNAME=	pgadmin3-1.22.0
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_PGSQL:=pgadmin3/release/v${PKGVERSION_NOREV}/src/}
 
-MAINTAINER=	joerg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.pgadmin.org/
 COMMENT=	Graphical PostgreSQL client and administration tool
 LICENSE=	postgresql-license
