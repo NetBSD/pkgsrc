@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.14 2016/02/16 03:45:18 dbj Exp $
+$NetBSD: distinfo,v 1.15 2016/03/16 04:46:24 richard Exp $
 
-SHA1 (pgadmin3-1.20.0.tar.gz) = 70ade343c286ef4413961317d41477b47aac675a
-RMD160 (pgadmin3-1.20.0.tar.gz) = 3f2902b68a915d88bc93c10b897f4c163459b03e
-SHA512 (pgadmin3-1.20.0.tar.gz) = 83521a16d60bf8c9cffb03e4fb401a31e28f764c31608c0b223f7c88a14a09f665c976f3472debd4ad8b6cd54f0fbd2b8de352c296180e6ea6f8088cb45447bc
-Size (pgadmin3-1.20.0.tar.gz) = 14394997 bytes
+SHA1 (pgadmin3-1.22.0.tar.gz) = 3091b0bdc5156e54197f157a86240e47af9becc2
+RMD160 (pgadmin3-1.22.0.tar.gz) = 6c5c8c28c0aaa7cd9720a6089fafe770210f002c
+SHA512 (pgadmin3-1.22.0.tar.gz) = db16ac1b92e95a6da51be973b6833e53aed4c1d8740c8bccbfd778b0c3d3a4158fb13107761e0a39227aea87360be3b297ebc8809ac8ca5102d673935a33727c
+Size (pgadmin3-1.22.0.tar.gz) = 14668096 bytes
 SHA1 (patch-configure) = 52be492c191e3a249bcbf88075f0f2a2f1a0f76a
-SHA1 (patch-pgadmin_ctl_ctlMenuToolbar.cpp) = c3c2ed84d9cd2d06bb1f63af86008c24b2c39d3f
