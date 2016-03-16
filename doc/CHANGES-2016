@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1234 2016/03/16 15:35:15 tsutsui Exp $
+$NetBSD: CHANGES-2016,v 1.1235 2016/03/16 19:56:34 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1633,3 +1633,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ruby-curses-gem to 1.0.2 [taca 2016-03-16]
 	Updated ham/trustedQSL to 2.2.1 [mef 2016-03-16]
 	Removed misc/ruby-hashie1 [tsutsui 2016-03-16]
+	Updated textproc/expat to 2.1.1 [ryoon 2016-03-16]
