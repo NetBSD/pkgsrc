@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1228 2016/03/16 00:25:20 asau Exp $
+$NetBSD: CHANGES-2016,v 1.1229 2016/03/16 04:47:20 richard Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1627,3 +1627,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/openssh to 7.2.2 [bsiegert 2016-03-15]
 	Updated lang/racket-textual to 6.4 [asau 2016-03-16]
 	Updated lang/racket to 6.4 [asau 2016-03-16]
+	Updated databases/pgadmin3 to 1.22.0 [richard 2016-03-16]
