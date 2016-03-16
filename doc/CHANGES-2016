@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1229 2016/03/16 04:47:20 richard Exp $
+$NetBSD: CHANGES-2016,v 1.1230 2016/03/16 13:01:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1628,3 +1628,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/racket-textual to 6.4 [asau 2016-03-16]
 	Updated lang/racket to 6.4 [asau 2016-03-16]
 	Updated databases/pgadmin3 to 1.22.0 [richard 2016-03-16]
+	Updated time/ruby-tzinfo-data to 1.2016.2 [taca 2016-03-16]
