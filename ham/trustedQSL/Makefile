@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2016/03/05 11:28:42 jperkin Exp $
+# $NetBSD: Makefile,v 1.21 2016/03/16 14:22:01 mef Exp $
 
-DISTNAME=		tqsl-2.1.3
-PKGREVISION=		1
+DISTNAME=		tqsl-2.2.1
 CATEGORIES=		ham
 MASTER_SITES=		http://sourceforge.net/projects/trustedqsl/files/TrustedQSL/v${PKGVERSION_NOREV}/
 
@@ -40,7 +39,7 @@ post-install:
 	${INSTALL_DATA} LICENSE.txt ${DESTDIR}${PREFIX}/share/TrustedQSL/ \
 	)
 	# Conflicting PLIST with wxGTK28-2.8.12nb8:
-	${RM} ${DESTDIR}${PREFIX}/share/locale/*/LC_MESSAGES/wxstd.mo
+	${RM} -f ${DESTDIR}${PREFIX}/share/locale/*/LC_MESSAGES/wxstd.mo
 
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../databases/db5/buildlink3.mk"
