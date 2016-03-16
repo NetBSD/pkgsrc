@@ -1,4 +1,4 @@
-$NetBSD: patch-apps_tqsl_cpp,v 1.4 2015/11/22 09:52:55 mef Exp $
+$NetBSD: patch-apps_tqsl_cpp,v 1.5 2016/03/16 14:22:01 mef Exp $
 
 (1)
 Avoid following error (interim, only valid with db5)
@@ -12,8 +12,11 @@ tqsl-2.0.1/apps/tqsl.cpp:2967:10: error: #pragma GCC diagnostic not allowed insi
 
 (3) Trial code for wxGTK30
 
---- apps/tqsl.cpp.orig	2015-09-20 09:15:24.000000000 +0900
-+++ apps/tqsl.cpp	2015-11-17 23:08:20.000000000 +0900
+(4) Avoid error with wxGTK30
+ error: cannot pass objects of non-trivially-copyable type 'class wxCStrData' through '...'
+
+--- apps/tqsl.cpp.orig	2016-03-12 14:49:01.000000000 +0900
++++ apps/tqsl.cpp	2016-03-16 22:49:15.000000000 +0900
 @@ -64,7 +64,7 @@
  #endif
  #include <zlib.h>
@@ -23,30 +26,49 @@ tqsl-2.0.1/apps/tqsl.cpp:2967:10: error: #pragma GCC diagnostic not allowed insi
  
  #include <iostream>
  #include <fstream>
-@@ -3428,7 +3428,7 @@ MyFrame::OnUpdateCheckDone(wxCommandEven
+@@ -3145,7 +3145,7 @@ void MyFrame::UpdateConfigFile() {
+ 		FILE *configFile = fopen(filename.ToUTF8(), "wb");
+ #endif
+ 		if (!configFile) {
+-			tqslTrace("UpdateConfigFile", "Can't open new file %s: %hs", filename.c_str(), strerror(errno));
++		  tqslTrace("UpdateConfigFile", "Can't open new file %s: %hs", ((const wxChar*) filename), strerror(errno));
+ 			wxMessageBox(wxString::Format(_("Can't open new configuration file %s: %hs"), filename.c_str(), strerror(errno)), _("Error"), wxOK | wxICON_ERROR, this);
+ 			return;
+ 		}
+@@ -3153,15 +3153,15 @@ void MyFrame::UpdateConfigFile() {
+ 		while (left > 0) {
+ 			size_t written = fwrite(newconfig, 1, left, configFile);
+ 			if (written == 0) {
+-				tqslTrace("UpdateConfigFile", "Can't write new file %s: %hs", filename.c_str(), strerror(errno));
+-				wxMessageBox(wxString::Format(_("Can't write new configuration file %s: %hs"), filename.c_str(), strerror(errno)), _("Error"), wxOK | wxICON_ERROR, this);
++				tqslTrace("UpdateConfigFile", "Can't write new file %s: %hs", ((const wxChar*) filename), strerror(errno));
++				wxMessageBox(wxString::Format(_("Can't write new configuration file %s: %hs"), ((const wxChar*) filename), strerror(errno)), _("Error"), wxOK | wxICON_ERROR, this);
+ 				if (configFile) fclose(configFile);
+ 				return;
+ 			}
+ 			left -= written;
+ 		}
+ 		if (fclose(configFile)) {
+-			tqslTrace("UpdateConfigFile", "Error writing new file %s: %hs", filename.c_str(), strerror(errno));
++			tqslTrace("UpdateConfigFile", "Error writing new file %s: %hs", ((const wxChar*) filename), strerror(errno));
+ 			wxMessageBox(wxString::Format(_("Error writing new configuration file %s: %hs"), filename.c_str(), strerror(errno)), _("Error"), wxOK | wxICON_ERROR, this);
+ 			return;
+ 		}
+@@ -3489,7 +3489,7 @@ MyFrame::OnUpdateCheckDone(wxCommandEven
  // The macro for declaring a hash map defines a couple of typedefs
  // that it never uses. Current GCC warns about those. The pragma
  // below suppresses those warnings for those.
--#if !defined(__APPLE__) && !defined(_WIN32)
-+#if !defined(__APPLE__) && !defined(_WIN32) && !defined(__NetBSD__) && !defined(__DragonFly__) && !defined(__FreeBSD__)
+-#if !defined(__APPLE__) && !defined(_WIN32) && !defined(__clang__)
++#if !defined(__APPLE__) && !defined(_WIN32) && !defined(__clang__) && !defined(__NetBSD__) && !defined(__DragonFly__) && !defined(__FreeBSD__)
  	#pragma GCC diagnostic ignored "-Wunused-local-typedefs"
  #endif
  void
-@@ -3632,7 +3632,7 @@ MyFrame::DoCheckForUpdates(bool silent, 
- 		DoCheckExpiringCerts(noGUI);
- 	return;
- }
--#if !defined(__APPLE__) && !defined(_WIN32)
-+#if !defined(__APPLE__) && !defined(_WIN32) && !defined(__NetBSD__) && !defined(__DragonFly__) && !defined(__FreeBSD__)
- 	#pragma GCC diagnostic warning "-Wunused-local-typedefs"
- #endif
- 
-@@ -4676,7 +4676,11 @@ QSLApp::OnInit() {
- 	for (int i = 1; i < argc; i++) {
- 		origCommandLine += wxT(" ");
- 		origCommandLine += argv[i];
+@@ -4770,7 +4770,11 @@ QSLApp::OnInit() {
+ 		// Well, if it's a pointer and it might be null but it's also not a pointer
+ 		// and can't be null, then it's not possible to compile this without warning.
+ 		// Warnings ahoy!
 +#if defined (wxABI_VERSION) && (wxABI_VERSION < 30000 )
- 		if (argv[i] && (argv[i][0] == wxT('-') || argv[i][0] == wxT('/')))
+ 		if (argv[i][0] == wxT('-') || argv[i][0] == wxT('/'))
 +#else
 +		if (!argv[i].empty() && (argv[i][0] == wxT('-') || argv[i][0] == wxT('/')))
 +#endif

@@ -1,11 +1,10 @@
-$NetBSD: patch-apps_CMakeLists.txt,v 1.4 2015/10/11 02:59:07 mef Exp $
+$NetBSD: patch-apps_CMakeLists.txt,v 1.5 2016/03/16 14:22:01 mef Exp $
 
 (1) Avoid ${WRKSRC} included in RPATH.
-(2) WARN: PLIST:105: Man pages should be installed into man/, not share/man/.
 
---- apps/CMakeLists.txt.orig	2015-09-20 09:15:24.000000000 +0900
-+++ apps/CMakeLists.txt	2015-10-11 00:57:52.000000000 +0900
-@@ -120,8 +120,8 @@ if(APPLE)
+--- apps/CMakeLists.txt.orig	2016-03-12 14:49:01.000000000 +0900
++++ apps/CMakeLists.txt	2016-03-16 21:42:51.000000000 +0900
+@@ -120,8 +120,8 @@
  endif()
  
  if(NOT WIN32) #rpath setup
@@ -16,12 +15,3 @@ $NetBSD: patch-apps_CMakeLists.txt,v 1.4 2015/10/11 02:59:07 mef Exp $
  	SET(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
  	SET(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/lib")
  endif()
-@@ -148,7 +148,7 @@ if(NOT APPLE AND NOT WIN32)
- 	add_definitions("-DCONFDIR=\"${CMAKE_INSTALL_PREFIX}/share/TrustedQSL/\"")
- 	install(TARGETS tqsl DESTINATION bin)
- 	install(DIRECTORY help DESTINATION share/TrustedQSL)
--	install(FILES tqsl.5 DESTINATION share/man/man5)
-+	install(FILES tqsl.5 DESTINATION man/man5)
- 	install(FILES icons/key48.png DESTINATION share/pixmaps RENAME TrustedQSL.png)
- 	install(FILES lang/de/tqslapp.mo DESTINATION share/locale/de/LC_MESSAGES)
- 	install(FILES lang/de/wxstd.mo DESTINATION share/locale/de/LC_MESSAGES)
