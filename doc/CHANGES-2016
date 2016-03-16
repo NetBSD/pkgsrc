@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1231 2016/03/16 13:04:49 taca Exp $
+$NetBSD: CHANGES-2016,v 1.1232 2016/03/16 13:08:00 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1630,3 +1630,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/pgadmin3 to 1.22.0 [richard 2016-03-16]
 	Updated time/ruby-tzinfo-data to 1.2016.2 [taca 2016-03-16]
 	Updated devel/ruby-eventmachine to 1.2.0.1 [taca 2016-03-16]
+	Updated devel/ruby-curses-gem to 1.0.2 [taca 2016-03-16]
