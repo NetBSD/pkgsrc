@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2016/02/21 15:19:59 wiedi Exp $
+# $NetBSD: Makefile,v 1.9 2016/03/17 00:26:16 wiedi Exp $
 
-DISTNAME=	znapzend-0.15.2
+DISTNAME=	znapzend-0.15.3
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GITHUB:=oetiker/}
 
@@ -14,8 +14,6 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	# none
 USE_TOOLS+=	perl gmake
-
-CONFIGURE_ARGS+=	--enable-pkgonly
 
 TEST_TARGET=	test
 
