@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1237 2016/03/17 00:40:00 wiedi Exp $
+$NetBSD: CHANGES-2016,v 1.1238 2016/03/17 07:53:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1636,3 +1636,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/expat to 2.1.1 [ryoon 2016-03-16]
 	Updated sysutils/znapzend to 0.15.3 [wiedi 2016-03-17]
 	Updated www/goaccess to 0.9.8 [wiedi 2016-03-17]
+	Updated lang/ruby22-base to 2.2.4nb3 [wiz 2016-03-17]
