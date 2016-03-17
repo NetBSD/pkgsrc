@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.10 2016/02/21 15:45:01 wiedi Exp $
+$NetBSD: distinfo,v 1.11 2016/03/17 00:39:25 wiedi Exp $
 
-SHA1 (goaccess-0.9.7.tar.gz) = 5a46bb1f849be150160397b902a6783e8525557f
-RMD160 (goaccess-0.9.7.tar.gz) = be6dd4062f52523611a3dfb4c719891bb1ec6f06
-SHA512 (goaccess-0.9.7.tar.gz) = 27c54401fb5ce086f191c8a1ba0a86b6c155469a3f412be64924f3fa3a80f3e04541c805fb98539b47872d06cf4e2c89150c20351d08c68139c63b17de17adb8
-Size (goaccess-0.9.7.tar.gz) = 270009 bytes
+SHA1 (goaccess-0.9.8.tar.gz) = 35d3cd6004c566e017d3e2702d5fc0f566655766
+RMD160 (goaccess-0.9.8.tar.gz) = fcf5ff2b905f9ee1047d00ef3b674e5570a8db47
+SHA512 (goaccess-0.9.8.tar.gz) = 40ce161c14f058d5482b90c1fe9c88a7ca8abf063bc041597b23390c5715466bde9bda58beb6e5b61d578a0f7b7d7860a9b3d2056812cc96564d3208e17703e1
+Size (goaccess-0.9.8.tar.gz) = 277618 bytes
 SHA1 (patch-Makefile.am) = 8bb0bbd6595be0ac32ecbc7990716a24092504f0
