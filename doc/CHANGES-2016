@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1241 2016/03/17 12:51:26 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.1242 2016/03/17 13:56:33 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1640,3 +1640,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/ruby23-base to 2.3.0nb2 [wiz 2016-03-17]
 	Updated graphics/leptonica to 1.73 [fhajny 2016-03-17]
 	Updated graphics/tesseract to 3.04.01 [fhajny 2016-03-17]
+	Updated devel/p5-Devel-CheckLib to 1.06 [mef 2016-03-17]
