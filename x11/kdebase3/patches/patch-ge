@@ -1,8 +1,10 @@
-$NetBSD: patch-ge,v 1.4 2009/09/01 09:51:02 wiz Exp $
+$NetBSD: patch-ge,v 1.5 2016/03/17 14:15:39 jperkin Exp $
 
---- kcontrol/crypto/crypto.cpp.orig	2006-10-02 06:31:49.000000000 +1300
+Disable SSLv2.
+
+--- kcontrol/crypto/crypto.cpp.orig	2006-10-01 17:31:49.000000000 +0000
 +++ kcontrol/crypto/crypto.cpp
-@@ -2321,7 +2321,11 @@ bool KCryptoConfig::loadCiphers() {
+@@ -2321,11 +2321,17 @@ bool KCryptoConfig::loadCiphers() {
  unsigned int i;
  SSL_CTX *ctx;
  SSL *ssl;
@@ -11,11 +13,20 @@ $NetBSD: patch-ge,v 1.4 2009/09/01 09:51:02 wiz Exp $
 +#else
 +const SSL_METHOD *meth;
 +#endif
++  CipherItem *item;
  
    SSLv2Box->clear();
    SSLv3Box->clear();
-@@ -2337,8 +2341,10 @@ SSL_METHOD *meth;
-   CipherItem *item;
+ 
++#if 0
+   meth = SSLv2_client_method();
+   SSLeay_add_ssl_algorithms();
+   ctx = SSL_CTX_new(meth);
+@@ -2334,11 +2340,12 @@ SSL_METHOD *meth;
+   ssl = SSL_new(ctx);
+   if (!ssl) return false;
+ 
+-  CipherItem *item;
    for (i=0; ; i++) {
      int j, k;
 -    SSL_CIPHER *sc;
@@ -27,7 +38,15 @@ $NetBSD: patch-ge,v 1.4 2009/09/01 09:51:02 wiz Exp $
      if (!sc)
        break;
      // Leak of sc*?
-@@ -2365,8 +2371,10 @@ SSL_METHOD *meth;
+@@ -2353,6 +2360,7 @@ SSL_METHOD *meth;
+ 
+   if (ctx) SSL_CTX_free(ctx);
+   if (ssl) SSL_free(ssl);
++#endif
+ 
+   // We repeat for SSLv3
+   meth = SSLv3_client_method();
+@@ -2365,8 +2373,10 @@ SSL_METHOD *meth;
  
    for (i=0; ; i++) {
      int j, k;
