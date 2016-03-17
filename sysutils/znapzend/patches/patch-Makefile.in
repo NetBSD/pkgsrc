@@ -1,0 +1,14 @@
+$NetBSD: patch-Makefile.in,v 1.4 2016/03/17 00:26:16 wiedi Exp $
+thirdparty deps are provided by pkgsrc
+
+--- Makefile.in.orig	2016-02-25 14:00:38.000000000 +0000
++++ Makefile.in
+@@ -314,7 +314,7 @@ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ AUTOMAKE_OPTIONS = foreign
+ SUFFIXES = .1 .man .pm
+-SUBDIRS = thirdparty lib
++SUBDIRS = lib
+ BIN = bin/@PACKAGE@ bin/znapzendzetup bin/znapzendztatz
+ PM := $(shell find lib/ -name "*.pm")
+ MAN = man/znapzend.1 man/znapzendzetup.1 man/znapzendztatz.1
