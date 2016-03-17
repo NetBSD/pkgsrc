@@ -1,0 +1,14 @@
+$NetBSD: patch-libxklavier_libxklavier.public,v 1.1 2016/03/17 12:32:39 jperkin Exp $
+
+Remove symbol that no longer exists.
+
+--- libxklavier/libxklavier.public.orig	2013-04-23 00:51:31.000000000 +0000
++++ libxklavier/libxklavier.public
+@@ -83,7 +83,6 @@ xkl_engine_start_listen
+ xkl_engine_state_change_get_type
+ xkl_engine_stop_listen
+ xkl_engine_ungrab_key
+-xkl_engine_VOID__FLAGS_INT_BOOLEAN
+ xkl_engine_VOID__ENUM_INT_BOOLEAN
+ xkl_get_country_name
+ xkl_get_language_name
