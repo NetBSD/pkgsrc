@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.381 2016/03/11 23:54:08 khorben Exp $
+# $NetBSD: bsd.prefs.mk,v 1.382 2016/03/17 16:02:23 jperkin Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -221,6 +221,10 @@ LOWER_VENDOR?=		ssd
 LOWER_VENDOR?=          pc
 .  endif
 LOWER_VENDOR?=          unknown
+.  if !defined(HOST_MACHINE_ARCH)
+HOST_MACHINE_ARCH!=	${UNAME} -m
+MAKEFLAGS+=		HOST_MACHINE_ARCH=${HOST_MACHINE_ARCH:Q}
+.  endif
 
 .elif ${OPSYS} == "OpenBSD"
 LOWER_OPSYS?= 		openbsd
