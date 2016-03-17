@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.120 2016/02/24 10:14:10 jperkin Exp $
+$NetBSD: distinfo,v 1.121 2016/03/17 14:15:39 jperkin Exp $
 
 SHA1 (Daemon.README) = eb1e6af52adc02ded77af17e8953134b7e60d23b
 RMD160 (Daemon.README) = 39edd92ed4314397080f32a8caff0ac3f716ecf4
@@ -61,7 +61,7 @@ SHA1 (patch-ga) = 40ab73f3e32e8d8e8c58662df7c5dc54bd4acd29
 SHA1 (patch-gb) = b36e23cf6c64e42269b396f389c5a0e24a40e67e
 SHA1 (patch-gc) = e02ddb93ae7aa249b3b3e68690f587b2c98255b8
 SHA1 (patch-gd) = 39469384668e4ee7fc489406e2813100fc90aa9b
-SHA1 (patch-ge) = 8470cf03d768d784714e926281757e9d68749360
+SHA1 (patch-ge) = ed4c7bbac47562e50a73120a0f990e62a321c778
 SHA1 (patch-gf) = 78de196a700fa9cd5e221ff57c295fdb3562f931
 SHA1 (patch-kcheckpass_checkpass_pam.c) = b5dd2e50c5f1047d3c195836c8b2d06e11edea3b
 SHA1 (patch-kcontrol_access_kcmaccess.cpp) = f7eaec78fa13f2cfb5b97ca84c10f3e403b64919
