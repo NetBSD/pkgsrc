@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/10/02 07:23:56 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/03/17 12:44:58 fhajny Exp $
 bin/convertfilestopdf
 bin/convertfilestops
 bin/convertformat
@@ -19,6 +19,7 @@ include/leptonica/arrayaccess.h
 include/leptonica/bbuffer.h
 include/leptonica/bilateral.h
 include/leptonica/bmf.h
+include/leptonica/bmfdata.h
 include/leptonica/bmp.h
 include/leptonica/ccbord.h
 include/leptonica/dewarp.h
@@ -34,10 +35,12 @@ include/leptonica/morph.h
 include/leptonica/pix.h
 include/leptonica/ptra.h
 include/leptonica/queue.h
+include/leptonica/rbtree.h
 include/leptonica/readbarcode.h
 include/leptonica/recog.h
 include/leptonica/regutils.h
 include/leptonica/stack.h
+include/leptonica/stringcode.h
 include/leptonica/sudoku.h
 include/leptonica/watershed.h
 lib/liblept.la
