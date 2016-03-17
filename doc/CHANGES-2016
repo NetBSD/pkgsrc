@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1235 2016/03/16 19:56:34 ryoon Exp $
+$NetBSD: CHANGES-2016,v 1.1236 2016/03/17 00:26:51 wiedi Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1634,3 +1634,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated ham/trustedQSL to 2.2.1 [mef 2016-03-16]
 	Removed misc/ruby-hashie1 [tsutsui 2016-03-16]
 	Updated textproc/expat to 2.1.1 [ryoon 2016-03-16]
+	Updated sysutils/znapzend to 0.15.3 [wiedi 2016-03-17]
