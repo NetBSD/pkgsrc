@@ -1,4 +1,4 @@
-# $NetBSD: Linux.mk,v 1.65 2016/03/10 16:58:19 jperkin Exp $
+# $NetBSD: Linux.mk,v 1.66 2016/03/17 16:02:23 jperkin Exp $
 #
 # Variable definitions for the Linux operating system.
 
@@ -120,7 +120,7 @@ LIBABISUFFIX?=	64
 # When building 32-bit packages on x86_64 GNU ld isn't smart enough to
 # figure out the target architecture based on the objects so we need to
 # explicitly set it.
-.if ${NATIVE_MACHINE_ARCH} == "x86_64" && ${MACHINE_ARCH} == "i386"
+.if ${HOST_MACHINE_ARCH} == "x86_64" && ${MACHINE_ARCH} == "i386"
 _WRAP_EXTRA_ARGS.LD+=	-m elf_i386
 CWRAPPERS_APPEND.ld+=	-m elf_i386
 .endif
