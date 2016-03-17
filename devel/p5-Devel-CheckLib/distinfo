@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2016/01/10 13:37:10 wen Exp $
+$NetBSD: distinfo,v 1.7 2016/03/17 13:55:44 mef Exp $
 
-SHA1 (Devel-CheckLib-1.05.tar.gz) = 2a9e0a677f989e6f9041003ba5e32f73feeb8b35
-RMD160 (Devel-CheckLib-1.05.tar.gz) = 18b6399a8ca942845ee4b663bed01b54c747c4f1
-SHA512 (Devel-CheckLib-1.05.tar.gz) = 09c5e0b921beb69573848c220bb8233826d40db034fe3cb5495dc61312169a30432391a3dc0eb913789993624781cb3f4f5b2912089c6470e70b3356a6c01a47
-Size (Devel-CheckLib-1.05.tar.gz) = 14126 bytes
+SHA1 (Devel-CheckLib-1.06.tar.gz) = 3efe554c5634dcb87bbc0978a90da3f4c075d338
+RMD160 (Devel-CheckLib-1.06.tar.gz) = f92ca76a642df17acdaf1cd5213894281149d9b2
+SHA512 (Devel-CheckLib-1.06.tar.gz) = a87d7ecb6ab3936b1dfe69f7a6b61c21ab097cc89a45d98715e1615895f9412e64206f950535a77009249f35d028875fe679f90adb9b48030c2d5a28f6a8f68e
+Size (Devel-CheckLib-1.06.tar.gz) = 14315 bytes
