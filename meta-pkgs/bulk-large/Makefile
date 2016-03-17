@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2015/12/05 21:25:49 adam Exp $
+# $NetBSD: Makefile,v 1.27 2016/03/17 02:47:14 tnn Exp $
 
-DISTNAME=	bulk-large-20150218
-PKGREVISION=	1
+DISTNAME=	bulk-large-20160317
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -85,7 +84,7 @@ BUILD_DEPENDS+=	gimp-[0-9]*:../../graphics/gimp
 BUILD_DEPENDS+=	graphviz-[0-9]*:../../graphics/graphviz
 BUILD_DEPENDS+=	claws-mail-[0-9]*:../../mail/claws-mail
 BUILD_DEPENDS+=	evolution-[0-9]*:../../mail/evolution
-BUILD_DEPENDS+=	roundcube-[0-9]*:../../mail/roundcube
+BUILD_DEPENDS+=	${PHP_PKG_PREFIX}-roundcube-[0-9]*:../../mail/roundcube
 BUILD_DEPENDS+=	squirrelmail-[0-9]*:../../mail/squirrelmail
 BUILD_DEPENDS+=	thunderbird-[0-9]*:../../mail/thunderbird
 BUILD_DEPENDS+=	thunderbird-l10n-[0-9]*:../../mail/thunderbird-l10n
@@ -169,6 +168,7 @@ BUILD_DEPENDS+=	bulk-medium-[0-9]*:../../meta-pkgs/bulk-medium
 BUILD_DEPENDS+=	bulk-small-[0-9]*:../../meta-pkgs/bulk-small
 
 PYTHON_FOR_BUILD_ONLY=	yes
+.include "../../lang/php/phpversion.mk" # for PHP_PKG_PREFIX
 .include "../../lang/python/pyversion.mk" # for PYPKGPREFIX
 .include "../../lang/ruby/rubyversion.mk" # for RUBY_PKGPREFIX
 .include "../../mk/bsd.pkg.mk"
