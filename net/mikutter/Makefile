@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.116 2016/03/16 23:13:07 tnn Exp $
+# $NetBSD: Makefile,v 1.117 2016/03/17 00:01:09 tnn Exp $
 #
 
 DISTNAME=	mikutter.3.3.8
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/./-/}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://mikutter.hachune.net/bin/
 
@@ -16,8 +17,7 @@ LICENSE=	mit AND cc-by-sa-v3.0
 DEPENDS+=	${RUBY_PKGPREFIX}-pluggaloid-[0-9]*:../../net/ruby-pluggaloid
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gtk>=3.0.7:../../x11/ruby-gnome2-gtk
 DEPENDS+=	${RUBY_PKGPREFIX}-gettext>=3.0.1:../../devel/ruby-gettext
-BROKEN=		ruby-oauth less than 0.5 dependency no longer satisfiable
-#DEPENDS+=	${RUBY_PKGPREFIX}-oauth>=0.4<0.5:../../security/ruby-oauth
+DEPENDS+=	${RUBY_PKGPREFIX}-oauth>=0.5.1:../../security/ruby-oauth
 DEPENDS+=	${RUBY_PKGPREFIX}-addressable>=2.3:../../net/ruby-addressable
 DEPENDS+=	${RUBY_PKGPREFIX}-memoist-[0-9]*:../../devel/ruby-memoist
 DEPENDS+=	${RUBY_PKGPREFIX}-hmac>=0.4:../../security/ruby-hmac
