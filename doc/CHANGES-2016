@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1239 2016/03/17 07:55:52 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1240 2016/03/17 12:45:09 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1638,3 +1638,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/goaccess to 0.9.8 [wiedi 2016-03-17]
 	Updated lang/ruby22-base to 2.2.4nb3 [wiz 2016-03-17]
 	Updated lang/ruby23-base to 2.3.0nb2 [wiz 2016-03-17]
+	Updated graphics/leptonica to 1.73 [fhajny 2016-03-17]
