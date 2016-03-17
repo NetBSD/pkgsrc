@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2016/03/08 21:50:29 tnn Exp $
+# $NetBSD: Makefile,v 1.10 2016/03/17 02:53:59 tnn Exp $
 
 DISTNAME=	llvm-3.8.0.src
+PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/llvm/libLLVM/:S/.src//}
 CATEGORIES=	lang devel
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
@@ -22,7 +23,7 @@ CMAKE_ARG_PATH=		${WRKSRC}
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=	-DCMAKE_C_COMPILER=gcc
 CMAKE_ARGS+=	-DCMAKE_CXX_COMPILER=g++
-CMAKE_ARGS+=	-DLLVM_BUILD_LLVM_DYLIB=On
+CMAKE_ARGS+=	-DLLVM_BUILD_LLVM_DYLIB=ON
 
 .for tool in 	bugpoint bugpoint_passes dsymutil llc lli llvm_ar	\
 	llvm_as llvm_bcanalyzer llvm_c_test llvm_cov llvm_cxxdump	\
@@ -38,9 +39,7 @@ SUBST_CLASSES+=		fix-cnf
 SUBST_STAGE.fix-cnf=	pre-configure
 SUBST_MESSAGE.fix-cnf=	Fixing llvm-config paths
 SUBST_FILES.fix-cnf=	tools/llvm-config/llvm-config.cpp
-SUBST_SED.fix-cnf=	-e 's|ActivePrefix + "/include"|"${PREFIX}/include/libLLVM"|g'
-SUBST_SED.fix-cnf+=	-e 's|ActivePrefix + "/lib" + LLVM_LIBDIR_SUFFIX|"${PREFIX}/lib/libLLVM"|g'
-SUBST_SED.fix-cnf+=	-e 's|"-L" << ActiveLibDir|"${COMPILER_RPATH_FLAG}" << ActiveLibDir << " " << &|g'
+SUBST_VARS.fix-cnf=	PREFIX LLVM_MAJOR_MINOR COMPILER_RPATH_FLAG
 
 CHECK_PORTABILITY_SKIP=	utils/buildit/build_llvm
 
@@ -90,8 +89,8 @@ TEST_ENV+=		LD_LIBRARY_PATH=${WRKDIR}/build/lib
 .include "../../mk/bsd.prefs.mk"
 
 # 3.8.0 -> 3.8
-LLVM_MAJOR=	${PKGVERSION_NOREV:C/^([0-9]+\.[0-9]+)\..*$/\1/}
-PLIST_SUBST+=	LLVM_MAJOR=${LLVM_MAJOR}
+LLVM_MAJOR_MINOR=	${PKGVERSION_NOREV:C/^([0-9]+\.[0-9]+)\..*$/\1/}
+PLIST_SUBST+=		LLVM_MAJOR_MINOR=${LLVM_MAJOR_MINOR}
 
 PLIST_VARS+=	notdylib
 .if ${_OPSYS_SHLIB_TYPE} == "dylib"
@@ -99,7 +98,7 @@ SOEXT=		dylib
 LLVM_LIBNAME=	libLLVM.${SOEXT}
 .else
 SOEXT=		so
-LLVM_LIBNAME=	libLLVM-${LLVM_MAJOR}.${SOEXT}
+LLVM_LIBNAME=	libLLVM-${LLVM_MAJOR_MINOR}.${SOEXT}
 PLIST.notdylib=	yes
 .endif
 PLIST_SUBST+=	SOEXT=${SOEXT}
