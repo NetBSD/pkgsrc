@@ -1,0 +1,13 @@
+$NetBSD: patch-tp_Texinfo_Convert_XSParagraph_configure,v 1.1 2016/03/17 05:35:47 richard Exp $
+force use of pkgsrc libtool instead of bundled to get over rm issue.
+--- tp/Texinfo/Convert/XSParagraph/configure.orig	2016-01-30 18:04:16.000000000 +0000
++++ tp/Texinfo/Convert/XSParagraph/configure
+@@ -14592,7 +14592,7 @@ esac
+ LIBTOOL_DEPS=$ltmain
+ 
+ # Always use our own libtool.
+-LIBTOOL='$(SHELL) $(top_builddir)/libtool'
++#LIBTOOL='$(SHELL) $(top_builddir)/libtool'
+ 
+ 
+ 
