@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1243 2016/03/17 14:39:41 mef Exp $
+$NetBSD: CHANGES-2016,v 1.1244 2016/03/17 14:41:12 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1642,3 +1642,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/tesseract to 3.04.01 [fhajny 2016-03-17]
 	Updated devel/p5-Devel-CheckLib to 1.06 [mef 2016-03-17]
 	Updated fonts/p5-Font-TTF to 1.05 [mef 2016-03-17]
+	Updated time/ruby-tzinfo03 to 0.3.47 [taca 2016-03-17]
