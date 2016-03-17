@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.91 2016/02/13 07:02:07 ryoon Exp $
+# $NetBSD: Makefile,v 1.92 2016/03/17 05:35:47 richard Exp $
 
 DISTNAME=		texinfo-6.1
 PKGNAME=		g${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		devel sysutils
 MASTER_SITES=		${MASTER_SITE_GNU:=texinfo/}
 
@@ -20,6 +21,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-external-libintl-perl
 CONFIGURE_ARGS+=	--with-external-Text-Unidecode
 CONFIGURE_ARGS+=	--with-external-Unicode-EastAsianWidth
+USE_LIBTOOL=		yes
 
 INFO_FILES=		yes
 TEST_TARGET=		check
@@ -34,6 +36,7 @@ REPLACE_SH+=		util/texi2dvi
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
+.include "../../lang/perl5/buildlink3.mk"	 # for EXTERN.h in XSParagraph
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
 
