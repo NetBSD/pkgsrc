@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/01/03 05:08:06 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/03/17 14:40:35 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/CHANGES
@@ -123,7 +123,6 @@ ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Edmonton.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Eirunepe.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/El_Salvador.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Ensenada.rb
-${GEM_LIBDIR}/lib/tzinfo/definitions/America/Fort_Nelson.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Fort_Nelson.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Fort_Wayne.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Fortaleza.rb
@@ -257,6 +256,7 @@ ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Baghdad.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Bahrain.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Baku.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Bangkok.rb
+${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Barnaul.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Beirut.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Bishkek.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Brunei.rb
@@ -433,6 +433,7 @@ ${GEM_LIBDIR}/lib/tzinfo/definitions/Etc/Universal.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Etc/Zulu.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Europe/Amsterdam.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Europe/Andorra.rb
+${GEM_LIBDIR}/lib/tzinfo/definitions/Europe/Astrakhan.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Europe/Athens.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Europe/Belfast.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Europe/Belgrade.rb
@@ -480,6 +481,7 @@ ${GEM_LIBDIR}/lib/tzinfo/definitions/Europe/Stockholm.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Europe/Tallinn.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Europe/Tirane.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Europe/Tiraspol.rb
+${GEM_LIBDIR}/lib/tzinfo/definitions/Europe/Ulyanovsk.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Europe/Uzhgorod.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Europe/Vaduz.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Europe/Vatican.rb
