@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2016/03/15 15:16:39 tez Exp $
+# $NetBSD: Makefile,v 1.89 2016/03/18 19:08:39 tez Exp $
 
 DISTNAME=	krb5-1.14.1
 PKGNAME=	mit-${DISTNAME}
@@ -45,6 +45,7 @@ CONFIGURE_ARGS+=	--disable-thread-support
 CONFIGURE_ARGS+=	--without-tcl
 CONFIGURE_ARGS+=	--enable-pkgsrc-libtool
 CONFIGURE_ARGS+=	--without-system-verto
+CONFIGURE_ARGS+=	--disable-aesni
 CONFIGURE_ENV+=		BUILDLINK_PREFIX_OPENSSL=${BUILDLINK_PREFIX.openssl:Q}
 CONFIGURE_ENV+=		DEFKTNAME=FILE:${PKG_SYSCONFDIR}/krb5.keytab
 MAKE_ENV+=		ROOT_USER=${ROOT_USER}
