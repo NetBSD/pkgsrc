@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2016/02/25 15:26:55 jperkin Exp $
+# $NetBSD: Makefile,v 1.19 2016/03/18 12:54:57 wiedi Exp $
 
 DISTNAME=	scipy-0.15.1
 PKGNAME=	${PYPKGPREFIX}-scipy-0.15.1
@@ -87,6 +87,19 @@ REPLACE_PYTHON+=	scipy/special/setup.py
 REPLACE_PYTHON+=	scipy/special/spfun_stats.py
 REPLACE_PYTHON+=	scipy/stats/setup.py
 REPLACE_PYTHON+=	scipy/weave/setup.py
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+.PHONY: fix-darwin-install-name
+post-install: fix-darwin-install-name
+fix-darwin-install-name:
+	${FIND} ${DESTDIR}${PREFIX} -name "*.so" | while read lib; do   \
+		libname=`basename $${lib}`;                             \
+		libdir=`dirname $${lib} | sed -e 's,${DESTDIR},,'`;     \
+		install_name_tool -id $${libdir}/$${libname} $${lib};   \
+	done
+.endif
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
