@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1247 2016/03/18 15:49:03 pettai Exp $
+$NetBSD: CHANGES-2016,v 1.1248 2016/03/18 17:12:17 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1646,3 +1646,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-Mojolicious to 6.56 [wen 2016-03-18]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2016Q1 branch [agc 2016-03-17]
 	Updated mail/opendkim to 2.10.3 [pettai 2016-03-18]
+	Updated filesystems/openafs to 1.6.17 [jakllsch 2016-03-18]
