@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1249 2016/03/18 21:26:55 tez Exp $
+$NetBSD: CHANGES-2016,v 1.1250 2016/03/18 23:27:31 sevan Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1647,3 +1647,4 @@ Changes to the packages collection and infrastructure in 2016:
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2016Q1 branch [agc 2016-03-17]
 	Updated mail/opendkim to 2.10.3 [pettai 2016-03-18]
 	Updated devel/pcre to 8.38nb1 [tez 2016-03-18]
+	Updated devel/stgit to 0.17.1 [sevan 2016-03-18]
