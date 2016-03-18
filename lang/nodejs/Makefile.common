@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2016/03/12 12:34:44 tnn Exp $
+# $NetBSD: Makefile.common,v 1.6 2016/03/18 11:39:18 jperkin Exp $
 # used by lang/nodejs/Makefile
 # used by lang/nodejs4/Makefile
 
@@ -29,6 +29,10 @@ PTHREAD_AUTO_VARS=	yes
 
 CONFIGURE_ENV.NetBSD+=	GYP_DEFINES="OS=netbsd"
 MAKE_ENV.NetBSD+=	GYP_DEFINES="OS=netbsd"
+
+.if ${OPSYS} == "Linux" && !exists(/usr/bin/gold)
+CONFIGURE_ENV+=		GYP_DEFINES="linux_use_gold_flags=0"
+.endif
 
 REPLACE_PYTHON+=	configure
 REPLACE_PYTHON+=	tools/genv8constants.py
