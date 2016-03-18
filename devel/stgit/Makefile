@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2015/12/05 21:25:40 adam Exp $
+# $NetBSD: Makefile,v 1.29 2016/03/18 23:13:26 sevan Exp $
 
-DISTNAME=	stgit-0.14.3
-PKGREVISION=	9
+DISTNAME=	stgit-0.17.1
+PKGREVISION=	10
 CATEGORIES=	devel
-MASTER_SITES=	http://homepage.ntlworld.com/cmarinas/stgit/
+MASTER_SITES=	http://download.gna.org/stgit/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.procode.org/stgit/
@@ -60,7 +60,6 @@ post-install:
 	${INSTALL_SCRIPT} stg-* ${DESTDIR}${PREFIX}/bin
 	cd ${WRKSRC}/Documentation && \
 	${INSTALL_MAN} *.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1 && \
-	${INSTALL_DATA} *.html \
-	    ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}/html
+	${INSTALL_DATA} *.html ${DESTDIR}/${PREFIX}/share/doc/${PKGBASE}/html
 
 .include "../../mk/bsd.pkg.mk"
