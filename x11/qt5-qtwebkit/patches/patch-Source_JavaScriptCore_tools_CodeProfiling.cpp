@@ -1,4 +1,4 @@
-$NetBSD: patch-Source_JavaScriptCore_tools_CodeProfiling.cpp,v 1.2 2016/03/15 00:19:00 tnn Exp $
+$NetBSD: patch-Source_JavaScriptCore_tools_CodeProfiling.cpp,v 1.3 2016/03/18 07:37:38 dbj Exp $
 
 * Add NetBSD support
 
@@ -26,7 +26,7 @@ $NetBSD: patch-Source_JavaScriptCore_tools_CodeProfiling.cpp,v 1.2 2016/03/15 00
      CodeProfiling::sample(reinterpret_cast<void*>(context.gregs[REG_EIP]),
                            reinterpret_cast<void**>(context.gregs[REG_EBP]));
  }
-+#elif OS(NETBSD)) && CPU(X86)
++#elif OS(NETBSD) && CPU(X86)
 +static void profilingTimer(int, siginfo_t*, void* uap)
 +{
 +    mcontext_t context = static_cast<ucontext_t*>(uap)->uc_mcontext;
