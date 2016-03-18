@@ -1,8 +1,9 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: lighttpd.sh,v 1.1.1.1 2005/09/04 06:37:05 jlam Exp $
+# $NetBSD: lighttpd.sh,v 1.2 2016/03/18 11:37:22 bsiegert Exp $
 #
 # PROVIDE: lighttpd
+# KEYWORD: chrootdir
 # REQUIRE: DAEMON
 
 . /etc/rc.subr
