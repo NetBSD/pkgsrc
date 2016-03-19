@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.8 2016/02/02 18:15:44 nros Exp $
+$NetBSD: patch-aa,v 1.9 2016/03/19 17:21:48 nros Exp $
 * add prefix to install dirs and set correct man, info and doc dirs.
 * don't run checkdir since the test dir is missing
 * define the correct configuration dir
@@ -42,7 +42,7 @@ $NetBSD: patch-aa,v 1.8 2016/02/02 18:15:44 nros Exp $
  
  check test: latex2rtf
  	cd test && $(MAKE) clean
-@@ -213,14 +213,15 @@ install: latex2rtf doc/latex2rtf.1 $(CFG
+@@ -213,14 +213,14 @@ install: latex2rtf doc/latex2rtf.1 $(CFG
  	$(MKDIR) $(DESTDIR)$(BINDIR)
  	$(MKDIR) $(DESTDIR)$(MANDIR)
  	$(MKDIR) $(DESTDIR)$(CFGDIR)
@@ -60,9 +60,17 @@ $NetBSD: patch-aa,v 1.8 2016/02/02 18:15:44 nros Exp $
 +	$(BSD_INSTALL_MAN) doc/latex2png.1 $(DESTDIR)$(MANDIR)
 +	$(BSD_INSTALL_DATA) $(CFGS)  $(DESTDIR)$(CFGDIR)
 +	$(BSD_INSTALL_DATA) doc/latex2rtf.html $(DESTDIR)$(SUPPORTDIR)
-+	$(BSD_INSTALL_DATA) doc/latex2rtf.pdf  $(DESTDIR)$(SUPPORTDIR)
 +	$(BSD_INSTALL_DATA) doc/latex2rtf.txt  $(DESTDIR)$(SUPPORTDIR)
 +	$(BSD_INSTALL_PROGRAM) $(BINARY_NAME)     $(DESTDIR)$(BINDIR)
  	@echo "******************************************************************"
  	@echo "*** latex2rtf successfully installed as \"$(BINARY_NAME)\""
  	@echo "*** in directory \"$(DESTDIR)$(BINDIR)\""
+@@ -228,7 +228,7 @@ install: latex2rtf doc/latex2rtf.1 $(CFG
+ 	@echo "*** \"make install-info\" will install TeXInfo files "
+ 	@echo "***"
+ 	@echo "*** latex2rtf was compiled to search for its configuration files in"
+-	@echo "***           \"$(DESTDIR)$(CFGDIR)\" "
++	@echo "***           \"$(CFGDIR)\" "
+ 	@echo "***"
+ 	@echo "*** If the configuration files are moved then either"
+ 	@echo "***   1) set the environment variable RTFPATH to this new location, or"

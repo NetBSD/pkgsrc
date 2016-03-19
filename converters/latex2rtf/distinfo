@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.11 2016/02/02 18:15:44 nros Exp $
+$NetBSD: distinfo,v 1.12 2016/03/19 17:21:48 nros Exp $
 
 SHA1 (latex2rtf-2.3.10.tar.gz) = aa6adc7d6c25658aed1bc0bb70cf0274f7a770aa
 RMD160 (latex2rtf-2.3.10.tar.gz) = 678f8cb35083bffcfa8ee9994a6edf9248518242
 SHA512 (latex2rtf-2.3.10.tar.gz) = fc1f117aafad95abd85ecfbfb8cbae563f3e6c1f26485bd008bfa01ef48144aa6654e7f1dd09cf5093befa2febfbd5de698fbfe1613c96a7964e58e6e0cf8bf2
 Size (latex2rtf-2.3.10.tar.gz) = 321712 bytes
-SHA1 (patch-aa) = 90d4a16e20f6d130683bf3a4cfa7603dc34c6b4d
+SHA1 (patch-aa) = e9dabf461bb72a4b41ad6ec9c87be607c273ec19
+SHA1 (patch-doc_Makefile) = b7de18c540bab246e9170555d5d0989d6d82784a
