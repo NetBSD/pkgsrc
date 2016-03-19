@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2016/03/07 13:14:31 mef Exp $
+@comment $NetBSD: PLIST,v 1.23 2016/03/19 23:44:13 dbj Exp $
 bin/gnuradio-config-info
 bin/gr_filter_design
 bin/volk-config-info
@@ -955,7 +955,6 @@ share/gnuradio/examples/filter/synth_filter.py
 share/gnuradio/examples/filter/synth_to_chan.py
 share/gnuradio/examples/gnuradio-runtime.conf
 share/gnuradio/examples/gr-audio-jack.conf
-share/gnuradio/examples/gr-audio-oss.conf
 share/gnuradio/examples/gr-audio-portaudio.conf
 share/gnuradio/examples/gr-audio.conf
 share/gnuradio/examples/metadata/file_metadata_sink.grc
