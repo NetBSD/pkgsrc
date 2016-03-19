@@ -1,0 +1,10 @@
+$NetBSD: patch-doc_Makefile,v 1.1 2016/03/19 17:21:48 nros Exp $
+* Don't generate the pdf since it requires dependencies.
+--- doc/Makefile.orig	2015-11-19 15:02:57.000000000 +0000
++++ doc/Makefile
+@@ -1,4 +1,4 @@
+-all:	latex2rtf.info latex2rtf.pdf latex2rtf.txt \
++all:	latex2rtf.info latex2rtf.txt \
+ 		latex2pn.txt latex2rt.txt latex2rtf.html 
+ 
+ latex2rtf.html:	latex2rtf.texi
