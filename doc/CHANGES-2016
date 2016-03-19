@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1250 2016/03/18 23:27:31 sevan Exp $
+$NetBSD: CHANGES-2016,v 1.1251 2016/03/19 06:46:10 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1648,3 +1648,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/opendkim to 2.10.3 [pettai 2016-03-18]
 	Updated devel/pcre to 8.38nb1 [tez 2016-03-18]
 	Updated devel/stgit to 0.17.1 [sevan 2016-03-18]
+	Updated net/rancid to 3.4.1 [pettai 2016-03-19]
