@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/03/19 18:11:36 sevan Exp $
+
+SHA1 (xhyve-0.2.0.tar.gz) = 6c3e809c67f885dda260fbfc57dc5a117ba93deb
+RMD160 (xhyve-0.2.0.tar.gz) = 2095268ac0ee9cfb835454857472dcc918a0edee
+SHA512 (xhyve-0.2.0.tar.gz) = 99056a037efa63d1ff6c076bbff655e328f6e839b83d95f4b6eefc5dde122f471862e3ca0114413921df34f26b0e42874f47efd3478c0e015fc2bfeab35b890f
+Size (xhyve-0.2.0.tar.gz) = 11632573 bytes
