@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.9 2016/02/02 18:15:44 nros Exp $
+@comment $NetBSD: PLIST,v 1.10 2016/03/19 17:21:48 nros Exp $
 bin/latex2png
 bin/latex2rtf
 info/latex2rtf.info
 man/man1/latex2png.1
 man/man1/latex2rtf.1
 share/doc/latex2rtf/latex2rtf.html
-share/doc/latex2rtf/latex2rtf.pdf
 share/doc/latex2rtf/latex2rtf.txt
 share/latex2rtf/cfg/afrikaans.cfg
 share/latex2rtf/cfg/bahasa.cfg
