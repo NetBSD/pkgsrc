@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.29 2016/03/18 23:13:26 sevan Exp $
+# $NetBSD: Makefile,v 1.30 2016/03/19 19:18:34 sevan Exp $
 
 DISTNAME=	stgit-0.17.1
 PKGREVISION=	10
 CATEGORIES=	devel
 MASTER_SITES=	http://download.gna.org/stgit/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	terin@terinstock.com
 HOMEPAGE=	http://www.procode.org/stgit/
 COMMENT=	Stacked GIT
 LICENSE=	gnu-gpl-v2
