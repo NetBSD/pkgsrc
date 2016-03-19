@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2016/03/19 18:11:36 sevan Exp $
+bin/xhyve
