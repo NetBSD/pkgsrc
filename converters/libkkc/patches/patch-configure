@@ -1,0 +1,13 @@
+$NetBSD: patch-configure,v 1.1 2016/03/19 23:12:41 ryoon Exp $
+
+--- configure.orig	2014-12-19 05:07:20.000000000 +0000
++++ configure
+@@ -18480,7 +18480,7 @@ $as_echo "yes" >&6; }
+ fi
+ 
+ # libstdc++ needs to be linked with libmarisa-glib.a
+-MARISA_GLIB_STATIC_DEPENDENCIES="$postdeps_CXX"
++MARISA_GLIB_STATIC_DEPENDENCIES=`echo $postdeps_CXX | $SED -e "s:-lgcc_s -lgcc -lc -lgcc_s -lgcc::"`
+ 
+ 
+ LIBKKC_CFLAGS="$GIO_CFLAGS $GEE_CFLAGS $JSON_GLIB_CFLAGS"
