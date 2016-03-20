@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1256 2016/03/19 23:05:36 ryoon Exp $
+$NetBSD: CHANGES-2016,v 1.1257 2016/03/20 06:54:38 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1654,3 +1654,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/firefox38 to 38.7.1 [ryoon 2016-03-19]
 	Updated www/firefox38-l10n to 38.7.1 [ryoon 2016-03-19]
 	Updated devel/xulrunner38 to 38.7.1 [ryoon 2016-03-19]
+	Updated security/tor-browser to 5.5.4 [ryoon 2016-03-20]
