@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1261 2016/03/20 22:03:10 darcy Exp $
+$NetBSD: CHANGES-2016,v 1.1262 2016/03/20 22:10:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1659,3 +1659,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/opensaml to 2.5.5 [pettai 2016-03-20]
 	Updated devel/gtexinfo to 6.1nb2 [wiz 2016-03-20]
 	Updated databases/py-postgresql to 5.0 [darcy 2016-03-20]
+	Updated databases/py-pgnotify to 0.1nb3 [wiz 2016-03-20]
