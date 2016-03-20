@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1258 2016/03/20 09:57:35 pettai Exp $
+$NetBSD: CHANGES-2016,v 1.1259 2016/03/20 10:04:32 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1656,3 +1656,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/xulrunner38 to 38.7.1 [ryoon 2016-03-19]
 	Updated security/tor-browser to 5.5.4 [ryoon 2016-03-20]
 	Updated textproc/xmltooling to 1.5.6 [pettai 2016-03-20]
+	Updated security/opensaml to 2.5.5 [pettai 2016-03-20]
