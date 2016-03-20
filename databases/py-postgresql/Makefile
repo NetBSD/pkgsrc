@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.76 2016/02/18 18:38:38 darcy Exp $
+# $NetBSD: Makefile,v 1.77 2016/03/20 22:01:22 darcy Exp $
 
-DISTNAME=		PyGreSQL-4.2.1
-PKGNAME=		${PYPKGPREFIX}-postgresql-4.2.1
+DISTNAME=		PyGreSQL-5.0
+PKGNAME=		${PYPKGPREFIX}-postgresql-5.0
 CATEGORIES=		databases python
 MASTER_SITES=		http://pygresql.org/files/
 
@@ -20,7 +20,6 @@ MAKE_ENV+=		INSTALLED_LIBPQ=1
 PY_PATCHPLIST=		yes
 PLIST_SUBST+=		PYPKGPREFIX=${PYPKGPREFIX:Q}
 REPLACE_PYTHON=		pg.py pgdb.py
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 4.1.1
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
