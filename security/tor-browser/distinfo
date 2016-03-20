@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.2 2016/03/14 14:30:47 ryoon Exp $
+$NetBSD: distinfo,v 1.3 2016/03/20 06:53:37 ryoon Exp $
 
-SHA1 (tor-browser-38.7.0esr-5.5-1.tar.xz) = b6a35f91470572d175b461b6ba6e31be56c47e34
-RMD160 (tor-browser-38.7.0esr-5.5-1.tar.xz) = 751bb7429cecbb151df550aab7f53486c705ff8b
-SHA512 (tor-browser-38.7.0esr-5.5-1.tar.xz) = 3d2ab2f82af7dfa1b1f777916ba450f8107da8c9c6a272fb0fe66281f4d89450c8cb9a02ae229b0c3bb8d063f825a359b1ca66af5fecad8ea4ba861ec11b2070
-Size (tor-browser-38.7.0esr-5.5-1.tar.xz) = 150084572 bytes
+SHA1 (tor-browser-38.7.1esr-5.5-1.tar.xz) = 332d04fc222f9d0778341284736c6da0f61e4607
+RMD160 (tor-browser-38.7.1esr-5.5-1.tar.xz) = c57cbdbb0a4a5f0ca8f9963daa4075bbcd754f2e
+SHA512 (tor-browser-38.7.1esr-5.5-1.tar.xz) = d2d68de30c58a0d90063ec42ee6c76ea044c5c570471e0a0765dd92057f571f52262e47629381a5b24adad610ee360ab291e3a7dd21bf41fef063c6948f413c8
+Size (tor-browser-38.7.1esr-5.5-1.tar.xz) = 150066780 bytes
 SHA1 (patch-aa) = e9e8400fa86ae8d6910b49e3a98127122e714f1a
 SHA1 (patch-accessible_atk_Platform.cpp) = c2deb81b300de44c4500328589185bbd4b6b02fb
 SHA1 (patch-al) = cca5df21d018bb9f428ad26d00718f33afe88ec5
@@ -142,7 +142,7 @@ SHA1 (patch-toolkit_components_osfile_modules_osfile__unix__front.jsm) = f5adba2
 SHA1 (patch-toolkit_library_moz.build) = 625d78e64959f78a5d0b8148749bb43a0abcbcf7
 SHA1 (patch-toolkit_xre_nsAppRunner.cpp) = f335d64cb0e1d248fd2c41a167ee1874218e7db6
 SHA1 (patch-toolkit_xre_nsEmbedFunctions.cpp) = 6ee6fba04a3ecc6596f8aed67f752a1075901fa8
-SHA1 (patch-toolkit_xre_nsXREDirProvider.cpp) = 373b66e02f2afd731d3ef47cf654e5f6486c78b1
+SHA1 (patch-toolkit_xre_nsXREDirProvider.cpp) = b0e2eb1359fb30e5e5134ae76e56c98fd3d43e8f
 SHA1 (patch-webapprt_moz.build) = 177468d5e12c49db1ad5376f0f3df34fa9df070c
 SHA1 (patch-widget_gtk_gtk2drawing.c) = dd63fd368a86aef1b9568ae625904ffd9542a874
 SHA1 (patch-widget_gtk_gtk3drawing.c) = 7224a3ef02ef98b6013ffeafcf6819c726bacbe6
