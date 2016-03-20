@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2015/12/05 21:25:32 adam Exp $
+# $NetBSD: Makefile,v 1.19 2016/03/20 22:10:13 wiz Exp $
 
 DISTNAME=	pgnotify-0.1
 PKGNAME=	${PYPKGPREFIX}-pgnotify-0.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	databases python
 MASTER_SITES=	http://sandbox.rulemaker.net/ngps/Dist/
 EXTRACT_SUFX=	.zip
@@ -17,9 +17,5 @@ MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR}
 MAKE_ENV+=		BINDIR=${PREFIX}/bin
 USE_TOOLS+=		gmake
 
-PYDISTUTILSPKG=	yes
-PLIST_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX}
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-postgresql
-
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
