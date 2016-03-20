@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.9 2015/11/04 02:00:16 agc Exp $
+$NetBSD: distinfo,v 1.10 2016/03/20 09:57:12 pettai Exp $
 
-SHA1 (xmltooling-1.5.3.tar.gz) = b8498a8dafe18bf612a6651ab7af662add5c2a68
-RMD160 (xmltooling-1.5.3.tar.gz) = 2b8530f41576511b222f515a86e39981f34c2102
-SHA512 (xmltooling-1.5.3.tar.gz) = 25cc3b619aabb420d061e809388695ca31ae8ccb47e8f3c8a96d0f34e662f22f74fa02b7ba0a22ed552f66e60f066919ad8336ba161cc654b6e02a93c6316706
-Size (xmltooling-1.5.3.tar.gz) = 675350 bytes
+SHA1 (xmltooling-1.5.6.tar.gz) = 45da82345758a9871cbf1200f6b2cdd0898722f2
+RMD160 (xmltooling-1.5.6.tar.gz) = 4bffdd47c8062c352c0aa5d26fc5bc588779514b
+SHA512 (xmltooling-1.5.6.tar.gz) = 4fa247fd8e8c4354cf4c6d515847b891c6de4f631198dc220063c30d48cbccf9c3a9a66e660b04a2d37950929e76e649b3857391c0691c962e5a6a25fde13652
+Size (xmltooling-1.5.6.tar.gz) = 713425 bytes
 SHA1 (patch-xmltooling_Makefile.in) = 9c6764c89d0c81c46486283063e02791c22c37e2
 SHA1 (patch-xmltooling_util_XMLHelper.cpp) = 2dc0915af93e4b2aeb0a946ea14f2de89050867f
 SHA1 (patch-xmltooling_util_XMLHelper.h) = 98c6c0552c81a8599c5337642bcdcaa9cdb76d80
