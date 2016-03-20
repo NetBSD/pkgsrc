@@ -1,7 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.8 2014/06/25 13:08:37 drochner Exp $
+$NetBSD: MESSAGE,v 1.9 2016/03/20 07:24:53 ryoon Exp $
 
 Please note that the only way the Tor Project recommends browsing the
-web through Tor is the Tor Browser, which is currently not packaged in
-pkgsrc.  See <https://www.torproject.org/projects/torbrowser.html.en>.
+web through Tor is the Tor Browser, which is packaged as
+security/tor-browser. See security/tor-browser/MESSAGE too.
 ===========================================================================
