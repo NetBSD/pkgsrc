@@ -1,10 +1,10 @@
-$NetBSD: patch-toolkit_xre_nsXREDirProvider.cpp,v 1.1 2016/02/14 07:30:54 ryoon Exp $
+$NetBSD: patch-toolkit_xre_nsXREDirProvider.cpp,v 1.2 2016/03/20 06:53:37 ryoon Exp $
 
 https://github.com/torbsd/openbsd-ports/blob/beeb760037237c6e1864942356b8135e9c430d78/www/tbb/tor-browser/patches/patch-toolkit_xre_nsXREDirProvider_cpp
 
---- toolkit/xre/nsXREDirProvider.cpp.orig	2016-02-13 07:06:53.000000000 +0000
+--- toolkit/xre/nsXREDirProvider.cpp.orig	2016-03-19 23:19:47.000000000 +0000
 +++ toolkit/xre/nsXREDirProvider.cpp
-@@ -1222,12 +1222,19 @@ nsXREDirProvider::GetUserDataDirectoryHo
+@@ -1222,15 +1222,22 @@ nsXREDirProvider::GetUserDataDirectoryHo
    NS_ENSURE_ARG_POINTER(aFile);
    nsCOMPtr<nsIFile> localDir;
  
@@ -23,7 +23,11 @@ https://github.com/torbsd/openbsd-ports/blob/beeb760037237c6e1864942356b8135e9c4
 +#endif
  
    if (aLocal) {
-     rv = localDir->AppendNative(NS_LITERAL_CSTRING("Caches"));
+-    rv = localDir->AppendNative(NS_LITERAL_CSTRING("Caches"));
++    rv = localDir->AppendNative(NS_LITERAL_CSTRING(".tor-browser-caches"));
+     NS_ENSURE_SUCCESS(rv, rv);
+   }
+ 
 @@ -1338,6 +1345,7 @@ nsXREDirProvider::GetAppRootDir(nsIFile*
    nsresult rv = GetAppDir()->Clone(getter_AddRefs(appRootDir));
    NS_ENSURE_SUCCESS(rv, rv);
