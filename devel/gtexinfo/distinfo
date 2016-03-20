@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.47 2016/03/17 05:35:47 richard Exp $
+$NetBSD: distinfo,v 1.48 2016/03/20 19:09:53 wiz Exp $
 
 SHA1 (texinfo-6.1.tar.gz) = b6ed8b4af3fe9a4aa7c72081dc61f095f73d895c
 RMD160 (texinfo-6.1.tar.gz) = 6ab09576dab209cf8784c8052039126e0b21d941
@@ -10,4 +10,5 @@ SHA1 (patch-gnulib_lib_mbiter.h) = 34c291e6994c6eb51aba803f3ebf5f09d46e9bdd
 SHA1 (patch-gnulib_lib_mbuiter.h) = be293674c37cb91746527be07aa40acbd285d2f4
 SHA1 (patch-texindex_texindex.awk) = 1f022f1495c951337997036ef1cd758ef9c116a7
 SHA1 (patch-tp_Texinfo_Convert_XSParagraph_configure) = d4557bae4417cd42297bceaa76478b00b3875df3
+SHA1 (patch-tp_Texinfo_Convert_XSParagraph_xspara.c) = 198d64b5bc38a3b934ade641c282e8be3e41c4df
 SHA1 (patch-util_texi2dvi) = d17608312d4b5546a2295e1be2b193124ad97256
