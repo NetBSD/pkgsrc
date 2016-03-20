@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/12/05 21:26:06 adam Exp $
+# $NetBSD: Makefile,v 1.6 2016/03/20 22:11:16 wiz Exp $
 
 DISTNAME=	Mezzanine-1.2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
@@ -26,7 +26,7 @@ DEPENDS+=	${PYPKGPREFIX}-django-mezzanine-grappelli-[0-9]*:../../www/py-django-m
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-postgresql, py-django-mezzanine-filebrowser, py-django-mezzanine-grappelli, py-imaging
+PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-django-mezzanine-filebrowser, py-django-mezzanine-grappelli, py-imaging
 
 MESSAGE_SUBST+=	PYTHONBIN=${PYTHONBIN}
 
