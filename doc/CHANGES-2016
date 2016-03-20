@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1259 2016/03/20 10:04:32 pettai Exp $
+$NetBSD: CHANGES-2016,v 1.1260 2016/03/20 19:10:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1657,3 +1657,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/tor-browser to 5.5.4 [ryoon 2016-03-20]
 	Updated textproc/xmltooling to 1.5.6 [pettai 2016-03-20]
 	Updated security/opensaml to 2.5.5 [pettai 2016-03-20]
+	Updated devel/gtexinfo to 6.1nb2 [wiz 2016-03-20]
