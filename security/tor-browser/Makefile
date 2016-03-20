@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2016/03/14 14:30:47 ryoon Exp $
+# $NetBSD: Makefile,v 1.5 2016/03/20 06:53:37 ryoon Exp $
 
-TORBVER=	5.5.3
+TORBVER=	5.5.4
 
-DISTNAME=	tor-browser-38.7.0esr-5.5-1
+DISTNAME=	tor-browser-38.7.1esr-5.5-1
 PKGNAME=	tor-browser-${TORBVER}
 CATEGORIES=	www
 MASTER_SITES+=	${MASTER_SITE_LOCAL}
@@ -30,6 +30,7 @@ CONFIGURE_ARGS+=	--disable-gio
 CONFIGURE_ARGS+=	--disable-dbus
 CONFIGURE_ARGS+=	--disable-gnomeui
 CONFIGURE_ARGS+=        --disable-libnotify
+CONFIGURE_ARGS+=        --enable-pie
 
 # Avoid build failure from security/manager/ssl/src/nsNSSCallbacks.cpp:601
 CFLAGS+=	-fpermissive
