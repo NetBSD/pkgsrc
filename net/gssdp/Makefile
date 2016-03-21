@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2016/03/21 19:09:09 khorben Exp $
+# $NetBSD: Makefile,v 1.54 2016/03/21 19:22:14 khorben Exp $
 
 DISTNAME=	gssdp-0.14.11
 PKGREVISION=	4
@@ -20,7 +20,6 @@ PKGCONFIG_OVERRIDE+=	gssdp-1.0.pc.in
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk"
 .include "../../lang/vala/buildlink3.mk"
 .include "../../net/libsoup/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
