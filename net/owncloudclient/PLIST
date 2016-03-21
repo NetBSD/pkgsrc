@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/12/26 00:38:29 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.5 2016/03/21 11:36:13 ryoon Exp $
 bin/owncloud
 bin/owncloudcmd
 include/owncloudsync/creds/abstractcredentials.h
@@ -83,6 +83,7 @@ share/icons/hicolor/72x72/apps/ownCloud_sync_shared.png
 share/icons/hicolor/72x72/apps/ownCloud_warn.png
 share/icons/hicolor/72x72/apps/ownCloud_warn_shared.png
 share/nautilus-python/extensions/syncstate.py
+share/nemo-python/extensions/syncstate.py
 share/owncloud/i18n/client_TW.qm
 share/owncloud/i18n/client_ca.qm
 share/owncloud/i18n/client_cs.qm
