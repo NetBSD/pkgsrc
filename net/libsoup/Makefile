@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2016/01/04 14:46:37 leot Exp $
+# $NetBSD: Makefile,v 1.22 2016/03/21 19:09:09 khorben Exp $
 
 DISTNAME=	libsoup-2.52.2
 CATEGORIES=	net gnome
@@ -44,6 +44,7 @@ PYTHON_FOR_BUILD_ONLY= yes
 .include "../../lang/python/application.mk"
 
 .include "../../databases/sqlite3/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.38.0
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=0.9.5
