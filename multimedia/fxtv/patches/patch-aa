@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.9 2011/07/05 03:27:22 dholland Exp $
+$NetBSD: patch-aa,v 1.10 2016/03/21 17:48:30 khorben Exp $
 
 Config for pkgsrc.
 
---- Makefile.orig	2001-02-12 23:08:59.000000000 +0100
+--- Makefile.orig	2001-02-12 22:08:59.000000000 +0000
 +++ Makefile
 @@ -4,13 +4,10 @@
  
@@ -36,7 +36,7 @@ Config for pkgsrc.
  # OpenBSD stuff
  #
  ifeq ($(OS),OpenBSD)
-@@ -50,10 +38,13 @@ endif
+@@ -50,19 +38,22 @@ endif
  ifeq ($(OS),NetBSD)
    override RPATH_FLAG      = -R
  endif
@@ -52,12 +52,14 @@ Config for pkgsrc.
  endif
  
  #
-@@ -62,7 +53,7 @@ endif
+ # CFLAGS
+ #
  ifneq ($(DEBUG),NO)
-   override CFLAGS          = -DDEBUG -g
+-  override CFLAGS          = -DDEBUG -g
++  override CFLAGS          += -DDEBUG -g
  else
 -  override CFLAGS          = -DNDEBUG -O2
-+  override CFLAGS          = -DNDEBUG
++  override CFLAGS          += -DNDEBUG
  endif
  C_WARN_FLAG                = -Wall
  override CFLAGS           += $(C_WARN_FLAG) $(INC) $(CF_VERS)
