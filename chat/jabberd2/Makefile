@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2016/03/05 11:28:07 jperkin Exp $
+# $NetBSD: Makefile,v 1.105 2016/03/21 19:09:09 khorben Exp $
 
 DISTNAME=	jabberd-2.3.6
 PKGREVISION=	1
@@ -127,6 +127,7 @@ post-install:
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../net/udns/buildlink3.mk"
 .include "../../security/gsasl/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
