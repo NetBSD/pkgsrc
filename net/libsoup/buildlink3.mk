@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2015/06/08 14:52:33 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2016/03/21 19:22:14 khorben Exp $
 
 BUILDLINK_TREE+=	libsoup
 
@@ -10,6 +10,7 @@ BUILDLINK_PKGSRCDIR.libsoup?=	../../net/libsoup
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .endif	# LIBSOUP_BUILDLINK3_MK
 
