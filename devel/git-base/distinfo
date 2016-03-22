@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.41 2015/12/10 13:35:46 adam Exp $
+$NetBSD: distinfo,v 1.41.2.1 2016/03/22 18:55:23 bsiegert Exp $
 
-SHA1 (git-2.6.4.tar.xz) = aa38f1a026add0d840049abd0040ad2938c113e8
-RMD160 (git-2.6.4.tar.xz) = 0064d711eb4cac1b7c15b62f9f83bf3bed88ef16
-SHA512 (git-2.6.4.tar.xz) = 935233c6dc504448af5dce3115174f9d36489288f7f16790f21dd0faa2699ed71609b8053182e0e2b100b9229cde80ca4d944ecc7723e697bec7af5b28b8f12e
-Size (git-2.6.4.tar.xz) = 3820804 bytes
+SHA1 (git-2.7.3.tar.xz) = d7be9af73cc56c606e0744beb0091b612b416909
+RMD160 (git-2.7.3.tar.xz) = 5111811158362bbc6d4e0a97ec8df8e56c1bd674
+SHA512 (git-2.7.3.tar.xz) = f7acbf52d12f39d323bd90a82c7135aa2aacf2661f7087c71b41dbfbec688342e0a2fc061fc0f216848a538a0dbc4fce68e24ea2a26e747f5eb92f763fa5bc72
+Size (git-2.7.3.tar.xz) = 3909636 bytes
 SHA1 (patch-aa) = 892e2dc9336a794399046ac2b4c59f3650d458f8
 SHA1 (patch-ac) = 376cdd1c58b143c820ff6395987a8a77cf9b52ba
 SHA1 (patch-ae) = 9bc2e6c7f0a8fbc385b6ffda638d3245a62dc5ca
@@ -11,5 +11,15 @@ SHA1 (patch-af) = 06460f220b4703a1ff98809006ec1aed5017bb23
 SHA1 (patch-ag) = 4f0b9a5745203ea7ef369c8272b3ea7c644762f0
 SHA1 (patch-ah) = f22a2160631fb624e9e20616c68ad1a4aa2bebc7
 SHA1 (patch-ai) = 56b63d4790a11f5eb128186ad5efdd1bcf102f2e
+SHA1 (patch-builtin_pack-objects.c) = 8038e9fca76f465c87d6e4265cb657965fca5fee
+SHA1 (patch-builtin_rev-list.c) = 52605a6e05e62e45a161e09dba5cf0ae448d642c
 SHA1 (patch-config.mak.uname) = 5316873147acf5b6ef29e426946280bb6441c886
+SHA1 (patch-http-push.c) = ff931b9043ca8ddedc336d27efe8102e5372b66a
+SHA1 (patch-list-objects.c) = 0250fb74b635d27694dc8e7c99f48a0ba1f23ab7
+SHA1 (patch-list-objects.h) = e341343431e6b64bb6bf4463d632f50107110f37
+SHA1 (patch-pack-bitmap-write.c) = 31492718f3812a9229d33ebe4b8bfcebce0e5805
+SHA1 (patch-pack-bitmap.c) = 76c23b6b328a6b113b58ef026231623d73d1f088
+SHA1 (patch-reachable.c) = b58b59073662b74bbae02f83a5e05c29dee76185
+SHA1 (patch-revision.c) = d9b372b3930578817f5517cc76639fce832a0c58
+SHA1 (patch-revision.h) = 3258d405f6d2d3e5103d1e34cbcefec3da767298
 SHA1 (patch-wrapper.c) = 1fb629ec301d0431cb5bebd716b1c3a7ae45577f

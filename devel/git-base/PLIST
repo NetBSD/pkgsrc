@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2015/07/31 12:57:23 adam Exp $
+@comment $NetBSD: PLIST,v 1.10.4.1 2016/03/22 18:55:23 bsiegert Exp $
 bin/git
 bin/git-cvsserver
 bin/git-receive-pack
@@ -149,6 +149,7 @@ libexec/git-core/git-stash
 libexec/git-core/git-status
 libexec/git-core/git-stripspace
 libexec/git-core/git-submodule
+libexec/git-core/git-submodule--helper
 libexec/git-core/git-svn
 libexec/git-core/git-symbolic-ref
 libexec/git-core/git-tag
@@ -210,6 +211,7 @@ share/locale/de/LC_MESSAGES/git.mo
 share/locale/fr/LC_MESSAGES/git.mo
 share/locale/is/LC_MESSAGES/git.mo
 share/locale/it/LC_MESSAGES/git.mo
+share/locale/ko/LC_MESSAGES/git.mo
 share/locale/pt_PT/LC_MESSAGES/git.mo
 share/locale/ru/LC_MESSAGES/git.mo
 share/locale/sv/LC_MESSAGES/git.mo
