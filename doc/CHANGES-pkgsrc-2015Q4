@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2015Q4,v 1.1.2.25 2016/03/11 09:53:07 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2015Q4,v 1.1.2.26 2016/03/22 19:17:05 bsiegert Exp $
 
 Changes to the packages collection and infrastructure on the 2015Q4 branch:
 
@@ -180,4 +180,10 @@ net/bind910: security fix
 
 Pullup ticket #4950 - requested by taca
 net/bind99: security fix
+
+Pullup ticket #4953 - requested by sevan
+devel/git-base: security fix
+
+Pullup ticket #4954 - requested by gdt
+chat/libotr: security fix
 
