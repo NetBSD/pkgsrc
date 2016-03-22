@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2016/03/05 11:27:53 jperkin Exp $
+# $NetBSD: Makefile,v 1.12 2016/03/22 22:51:13 khorben Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -192,6 +192,7 @@ post-install:
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../print/libpaper/buildlink3.mk"
