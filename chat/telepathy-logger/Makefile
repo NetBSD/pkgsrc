@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2015/12/05 21:25:30 adam Exp $
+# $NetBSD: Makefile,v 1.31 2016/03/22 22:09:32 khorben Exp $
 
 DISTNAME=	telepathy-logger-0.2.7
 PKGREVISION=	16
@@ -29,6 +29,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 0.2.7
 .include "../../devel/glib2/schemas.mk"
 .include "../../devel/GConf/buildlink3.mk"
 .include "../../lang/python/application.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../chat/telepathy-glib/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
