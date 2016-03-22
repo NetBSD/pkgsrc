@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.33 2014/07/03 15:00:41 wiz Exp $
+# $NetBSD: Makefile.common,v 1.34 2016/03/22 19:31:15 richard Exp $
 #
 # used by shells/ast-ksh/Makefile
 # used by shells/static-ast-ksh/Makefile
@@ -41,6 +41,14 @@ PDKSH=		/bin/ksh
 KSH93_MAKEFLAGS+=	CCFLAGS=-lm
 .endif
 
+.if ${OPSYS} == "SunOS"
+# need c99 and _XPG6 in order to avoid patching libast/features/standards
+# __EXTENSIONS__ is needed in case of __STDC__ == 1 (i.e. -std=c99 not gnu99)
+# for things like mamake, ratz and some others for now.
+USE_LANGUAGES+=	c99
+KSH93_MAKEFLAGS+=	LDFLAGS=-lm CCFLAGS="-D_XPG6 -D__EXTENSIONS__"
+.endif
+
 PKG_SHELL=	bin/ksh93
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
@@ -65,8 +73,11 @@ do-install:
 
 # Part of regression test
 do-test:
-	@cd ${WRKSRC:Q}/src/cmd/ksh93/tests && \
-		${SETENV} SHELL=${PREFIX:Q}/bin/ksh93 ${PREFIX:Q}/bin/ksh93 shtests
+	@set -e;							\
+	arch=`${WRKSRC}/bin/package host`;				\
+	cd ${WRKSRC:Q}/src/cmd/ksh93/tests && 				\
+		${SETENV} SHELL=${WRKSRC}/arch/"$${arch}"/bin/ksh	\
+			${WRKSRC}/arch/"$${arch}"/bin/ksh shtests
 # XXX Their 'test' target needs nmake (Korn's another tool)
 #	@cd ${WRKSRC}; \
 #		${SETENV} SHELL=${PDKSH} ${PDKSH} ./bin/package test
