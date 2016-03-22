@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/11/27 14:03:33 adam Exp $
+# $NetBSD: Makefile,v 1.2 2016/03/22 19:01:46 joerg Exp $
 
 DISTNAME=	libspatialite-4.3.0a
 CATEGORIES=	geography
@@ -15,6 +15,11 @@ USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-examples
 PKGCONFIG_OVERRIDE=	spatialite.pc.in
+
+# src/shapefiles wants to create both a module and library
+# from the same sources. This confuses some temporary file handling
+# in libtool 2.4.2.
+MAKE_JOBS_SAFE=no
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
