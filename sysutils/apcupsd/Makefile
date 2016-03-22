@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2016/02/26 10:24:10 jperkin Exp $
+# $NetBSD: Makefile,v 1.82 2016/03/22 18:56:36 joerg Exp $
 
 DISTNAME=		apcupsd-3.14.13r2365
 CATEGORIES=		sysutils
@@ -50,6 +50,8 @@ CONFIGURE_ARGS+=	--sbindir=${PREFIX}/sbin
 
 CONFIGURE_ENV+=		SCRIPTSHELL=${TOOLS_SH:Q}
 CONFIGURE_ENV+=		ac_cv_path_MAKE=${MAKE:Q} LD=${CXX}
+
+CONFIGURE_ARGS.NetBSD+=	ac_cv_path_SHUTDOWN=/sbin/shutdown
 
 EGDIR=		${PREFIX}/share/examples/apcupsd
 
