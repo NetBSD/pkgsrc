@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1272 2016/03/22 21:51:38 tez Exp $
+$NetBSD: CHANGES-2016,v 1.1273 2016/03/22 23:24:39 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1670,3 +1670,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/contao35 to 3.5.9 [taca 2016-03-22]
 	Updated devel/pcre to 8.38nb2 [tez 2016-03-22]
 	Updated graphics/tiff to 4.0.6nb1 [tez 2016-03-22]
+	Updated comms/minicom to 2.7nb1 [ryoon 2016-03-22]
