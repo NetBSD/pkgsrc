@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1268 2016/03/21 13:40:43 gdt Exp $
+$NetBSD: CHANGES-2016,v 1.1269 2016/03/22 08:14:54 manu Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1666,3 +1666,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/owncloudclient to 2.1.1 [ryoon 2016-03-21]
 	Updated editors/Sigil to 0.9.4 [ryoon 2016-03-21]
 	Updated net/quagga to 1.0.20160315 [gdt 2016-03-21]
+	Updated filesystems/glusterfs to 3.7.9 [manu 2016-03-22]
