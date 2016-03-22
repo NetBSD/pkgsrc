@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.48 2016/02/09 11:04:51 manu Exp $
+$NetBSD: distinfo,v 1.49 2016/03/22 08:14:00 manu Exp $
 
-SHA1 (glusterfs-3.7.8.tar.gz) = 7e35c369e9dbca8125bd977f4d537f7bd6ae3d63
-RMD160 (glusterfs-3.7.8.tar.gz) = b040564a67cd17fb299455532b8c3bb0fb387ea1
-Size (glusterfs-3.7.8.tar.gz) = 7866091 bytes
+SHA1 (glusterfs-3.7.9.tar.gz) = 37aafabb849c7bcc5fa1c3017c0f2f0df36ef431
+RMD160 (glusterfs-3.7.9.tar.gz) = 992557a72f0506b0ef97bcb98abad149de7f55e8
+Size (glusterfs-3.7.9.tar.gz) = 7971840 bytes

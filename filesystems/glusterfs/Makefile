@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.62 2016/03/05 11:28:29 jperkin Exp $
+# $NetBSD: Makefile,v 1.63 2016/03/22 08:14:00 manu Exp $
 
-DISTNAME=	glusterfs-3.7.8
+DISTNAME=	glusterfs-3.7.9
 #PKGREVISION=	1
-PKGREVISION=	1
 CATEGORIES=	filesystems
 MASTER_SITES=	http://bits.gluster.org/pub/gluster/glusterfs/src/
 
@@ -25,6 +24,7 @@ MAKE_FLAGS+=		LEXLIB=""
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # only 2.x supported as of 3.6.0
 
 REPLACE_PYTHON+=	contrib/ipaddr-py/ipaddr.py
+REPLACE_PYTHON+=	extras/geo-rep/schedule_georep.py
 REPLACE_PYTHON+=	extras/snap_scheduler/gcron.py
 REPLACE_PYTHON+=	extras/snap_scheduler/snap_scheduler.py
 REPLACE_PYTHON+=	geo-replication/src/peer_mountbroker.in
@@ -78,7 +78,7 @@ SUBST_SED.etc=		-e "s,/etc/gluster,${PREFIX}/etc/gluster,g"
 SUBST_CLASSES+=		vol
 SUBST_STAGE.vol=	post-build
 SUBST_FILES.vol=	extras/Makefile
-SUBST_SED.vol=		-e "/^vol_DATA/s/glusterd.vol/glusterd.vol.sample/g"
+SUBST_SED.vol=		-e "/vol_DATA/s/glusterd.vol/glusterd.vol.sample/g"
 
 EGDIR=			${PREFIX}/etc/glusterfs
 CONF_FILES+=		${EGDIR}/glusterd.vol.sample ${EGDIR}/glusterd.vol
