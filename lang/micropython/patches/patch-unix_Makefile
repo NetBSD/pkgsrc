@@ -1,10 +1,10 @@
-$NetBSD: patch-Makefile,v 1.1 2016/01/18 07:54:51 agc Exp $
+$NetBSD: patch-unix_Makefile,v 1.1 2016/03/22 19:01:17 joerg Exp $
 
 Invoke gmake properly
 
---- Makefile	2016/01/09 21:43:06	1.1
-+++ Makefile	2016/01/09 21:51:39
-@@ -149,14 +149,13 @@
+--- unix/Makefile.orig	2015-12-31 14:43:19.000000000 +0000
++++ unix/Makefile
+@@ -149,14 +149,13 @@ test: $(PROG) ../tests/run-tests
  
  # install micropython in /usr/local/bin
  TARGET = micropython
@@ -22,7 +22,7 @@ Invoke gmake properly
  
  # uninstall micropython
  uninstall:
-@@ -196,12 +195,12 @@
+@@ -196,12 +195,12 @@ $(BUILD)/_frozen_upip.c: $(BUILD)/frozen
  	../tools/make-frozen.py $(dir $^) > $@
  
  # Select latest upip version available
@@ -37,7 +37,7 @@ Invoke gmake properly
  	$(Q)rm -rf $(dir $@)
  	$(Q)mkdir -p $(dir $@)
  	$(Q)cp $(BUILD)/micropython-upip-*/upip*.py $(dir $@)
-@@ -224,10 +223,10 @@
+@@ -224,10 +223,10 @@ libffi:
  	cd ../lib/libffi; ./autogen.sh
  	mkdir -p ../lib/libffi/build_dir; cd ../lib/libffi/build_dir; \
  	../configure $(CROSS_COMPILE_HOST) --prefix=$$PWD/out CC="$(CC)" CXX="$(CXX)" LD="$(LD)"; \
