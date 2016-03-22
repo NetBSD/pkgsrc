@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.134 2016/03/05 11:28:52 jperkin Exp $
+# $NetBSD: Makefile,v 1.135 2016/03/22 18:58:27 joerg Exp $
 
 DISTNAME=	octave-4.0.0
 PKGREVISION=	1
@@ -81,6 +81,12 @@ SUBST_SED.qt5-pkg-config=	-e 's,QtCore,Qt5Core,g'
 SUBST_SED.qt5-pkg-config+=	-e 's,QtGui,Qt5Widgets,g'
 SUBST_SED.qt5-pkg-config+=	-e 's,QtNetwork,Qt5Network,g'
 SUBST_SED.qt5-pkg-config+=	-e 's,QtOpenGL,Qt5OpenGL,g'
+
+# Matches reduce-relocations logic in x11/qt5-qtbase
+.if ${OPSYS} != "Darwin" && ${OPSYS} != "SunOS" && \
+      (!empty(MACHINE_ARCH:Mi386) || !empty(MACHINE_ARCH:Mx86_64))
+CFLAGS+=	-fPIC
+.endif
 
 PREPEND_PATH+=			${QTDIR}/bin
 
