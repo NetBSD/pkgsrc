@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2016/02/20 02:28:14 khorben Exp $
+# $NetBSD: Makefile,v 1.25 2016/03/22 11:29:11 khorben Exp $
 
 DISTNAME=	Phone-0.5.0
 PKGNAME=	deforaos-phone-0.5.0
@@ -40,6 +40,7 @@ post-install:
 .endif
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../x11/deforaos-libdesktop/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
