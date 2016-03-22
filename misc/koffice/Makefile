@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.176 2016/03/05 11:28:56 jperkin Exp $
+# $NetBSD: Makefile,v 1.177 2016/03/22 18:57:04 joerg Exp $
 
 DISTNAME=	koffice-1.6.3
 PKGREVISION=	67
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.koffice.org/
 COMMENT=	KDE Office Suite
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 
+# moc use is not serialised with all consumers
 MAKE_JOBS_SAFE=		no
 
 PATCH_SITES=	ftp://ftp.kde.org/pub/kde/security_patches/
