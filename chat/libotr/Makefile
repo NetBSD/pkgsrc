@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2014/10/21 11:46:31 gdt Exp $
+# $NetBSD: Makefile,v 1.17.10.1 2016/03/22 19:04:34 bsiegert Exp $
 
-VERSION=	4.1.0
+VERSION=	4.1.1
 DISTNAME=	libotr-${VERSION}
 PKGNAME=	libotr-${VERSION}
 CATEGORIES=	chat security
