@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1269 2016/03/22 08:14:54 manu Exp $
+$NetBSD: CHANGES-2016,v 1.1270 2016/03/22 16:58:30 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1667,3 +1667,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated editors/Sigil to 0.9.4 [ryoon 2016-03-21]
 	Updated net/quagga to 1.0.20160315 [gdt 2016-03-21]
 	Updated filesystems/glusterfs to 3.7.9 [manu 2016-03-22]
+	Updated www/contao35 to 3.5.9 [taca 2016-03-22]
