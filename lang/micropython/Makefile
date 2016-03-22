@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/01/18 07:54:51 agc Exp $
+# $NetBSD: Makefile,v 1.2 2016/03/22 19:01:17 joerg Exp $
 
 DISTNAME=	micropython-1.5.2
 CATEGORIES=	lang
@@ -10,13 +10,19 @@ HOMEPAGE=	https://micropython.org/
 COMMENT=	Embedded version of python
 LICENSE=	mit
 
-WRKSRC=		${WRKDIR}/${DISTNAME}/unix
 DIST_SUBDIR=	${PKGNAME_NOREV}
+BUILD_DIRS=	unix
 
 USE_TOOLS+=	gmake pkg-config
 
 AUTO_MKDIRS=	yes
 
-.include "../../devel/libffi/buildlink3.mk"
+MAKE_FLAGS+=	PYTHON=${PYTHONBIN}
 
+REPLACE_PYTHON+=	tools/make-frozen.py
+
+PYTHON_FOR_BUILD_ONLY=	yes
+
+.include "../../devel/libffi/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
