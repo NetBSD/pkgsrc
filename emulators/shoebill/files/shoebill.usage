@@ -1,0 +1,37 @@
+Shoebill v0.0.4 - http://github.com/pruten/shoebill - Peter Rutenbar (c) 2014
+
+Arguments have the form name=value.
+
+rom=<path to Mac II ROM>
+Specifies the path to a Macintosh II ROM.
+E.g. rom=/home/foo/macii.rom
+
+disk0..disk6=<path to disk image>
+
+Specifies the path to a disk image for the given SCSI ID. Shoebill
+will always boot from disk0, so make sure disk0 points to a bootable
+A/UX image. E.g. disk0=/home/foo/aux3.img disk1=/blah.img
+
+ram=<megabytes of memory>
+E.g. ram=16
+
+height=<num pixels>
+Specifies the height of the screen in pixels.
+
+width=<num pixels>
+Specifies the width of the screen in pixels.
+
+pram-path=<path to PRAM file>
+Defaults to ~/.shoebill_pram
+
+verbose=<1 or 0>
+Whether to boot A/UX in verbose mode. Best to leave it at default (1).
+
+unix-path=<path to kernel on disk0>
+Path to the kernel file on the root disk image. Best to leave it at
+default (/unix).
+
+
+Example:
+
+./shoebill disk0=/aux3.img rom=/macii.rom width=1024 height=768 ram=64
