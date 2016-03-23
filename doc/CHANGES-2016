@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1273 2016/03/22 23:24:39 ryoon Exp $
+$NetBSD: CHANGES-2016,v 1.1274 2016/03/23 12:40:23 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1671,3 +1671,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/pcre to 8.38nb2 [tez 2016-03-22]
 	Updated graphics/tiff to 4.0.6nb1 [tez 2016-03-22]
 	Updated comms/minicom to 2.7nb1 [ryoon 2016-03-22]
+	Updated textproc/pdfgrep to 1.4.1 [ryoon 2016-03-23]
