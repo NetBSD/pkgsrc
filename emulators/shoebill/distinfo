@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1 2016/03/23 14:21:03 hauke Exp $
+$NetBSD: distinfo,v 1.2 2016/03/23 15:10:46 hauke Exp $
 
 SHA1 (shoebill/0.0.5.tar.gz) = 40b9ae839bbb9d065ca7d36363b1b4660d780010
 RMD160 (shoebill/0.0.5.tar.gz) = 20143081d2418d6961f86626e3d994b2feda8a4b
 SHA512 (shoebill/0.0.5.tar.gz) = cf8d7945943d6d7a505c233b5c99371f5d37d5d60dd5beeeadbe442ef43b9980e96d51f193d69a03eb58a0a2b13103b4dba311a53c939b633b20753a8c19a772
 Size (shoebill/0.0.5.tar.gz) = 253877 bytes
-SHA1 (patch-sdl-gui_lin_build.sh) = 024efbe3dbec708148bc205c01cddff4fd6d74e1
+SHA1 (patch-sdl-gui_lin_build.sh) = 5e5a87ef66e5df2d8f816b440b315f107603d0bd
 SHA1 (patch-sdl-gui_sdl.c) = ee433b37104dcccc700d1d08b97807689ed8da67
