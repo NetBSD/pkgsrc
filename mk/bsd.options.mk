@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.71 2013/06/07 00:41:39 obache Exp $
+# $NetBSD: bsd.options.mk,v 1.72 2016/03/23 11:50:01 jperkin Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -177,6 +177,16 @@ PKG_FAIL_REASON+=	"[bsd.options.mk] PKG_OPTIONS_VAR is not defined."
 PKG_SUPPORTED_OPTIONS?=	# none
 PKG_FAIL_REASON+=	"[bsd.options.mk] The package has no options, but includes this file."
 .endif
+
+# Handle OPSYSVARS here for package options as we need to test PKG_OPTIONS
+# in options.mk and cannot wait for lazy evaluation from bsd.pkg.mk.
+.for _var_ in PKG_SUPPORTED_OPTIONS PKG_SUGGESTED_OPTIONS
+.  if defined(${_var_}.${OPSYS})
+${_var_}+=	${${_var_}.${OPSYS}}
+.  elif defined(${_var_}.*)
+${_var_}+=	${${_var_}.*}
+.  endif
+.endfor
 
 #
 # create map of option to group and add group options to PKG_SUPPORTED_OPTIONS
