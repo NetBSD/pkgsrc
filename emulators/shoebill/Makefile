@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/03/23 14:21:03 hauke Exp $
+# $NetBSD: Makefile,v 1.2 2016/03/23 14:44:37 hauke Exp $
 
 GITHUB_PROJECT=	shoebill
 DISTNAME=	0.0.5
@@ -15,7 +15,10 @@ LICENSE=	2-clause-bsd
 # Missing long double math functions
 NOT_FOR_PLATFORM=	NetBSD-[0-6]*-*
 
-USE_TOOLS+=	perl
+USE_TOOLS+=	perl gtar
+EXTRACT_USING=	gtar
+
+REPLACE_PERL+=	core/macro.pl
 
 WRKSRC=		${WRKDIR}/${PKGNAME}
 
