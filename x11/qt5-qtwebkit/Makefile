@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2016/03/05 11:28:01 jperkin Exp $
+# $NetBSD: Makefile,v 1.33 2016/03/23 17:26:05 khorben Exp $
 
 DISTNAME=	qtwebkit-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtwebkit-${QTVERSION}
@@ -37,6 +37,7 @@ post-install:
 .include "../../devel/libexecinfo/buildlink3.mk"
 .endif
 .include "../../graphics/libwebp/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .if ${OPSYS} != "Darwin"
