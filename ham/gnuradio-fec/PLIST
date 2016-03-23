@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2016/03/07 13:14:31 mef Exp $
+@comment $NetBSD: PLIST,v 1.6 2016/03/23 13:37:20 mef Exp $
 bin/polar_channel_construction
 include/gnuradio/fec/api.h
 include/gnuradio/fec/async_decoder.h
@@ -16,10 +16,16 @@ include/gnuradio/fec/dummy_decoder.h
 include/gnuradio/fec/dummy_encoder.h
 include/gnuradio/fec/encode_ccsds_27_bb.h
 include/gnuradio/fec/encoder.h
+include/gnuradio/fec/fec_mtrx.h
 include/gnuradio/fec/generic_decoder.h
 include/gnuradio/fec/generic_encoder.h
+include/gnuradio/fec/ldpc_G_matrix.h
+include/gnuradio/fec/ldpc_H_matrix.h
+include/gnuradio/fec/ldpc_bit_flip_decoder.h
 include/gnuradio/fec/ldpc_decoder.h
 include/gnuradio/fec/ldpc_encoder.h
+include/gnuradio/fec/ldpc_gen_mtrx_encoder.h
+include/gnuradio/fec/ldpc_par_mtrx_encoder.h
 include/gnuradio/fec/polar_common.h
 include/gnuradio/fec/polar_decoder_common.h
 include/gnuradio/fec/polar_decoder_sc.h
