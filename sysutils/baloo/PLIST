@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/11/13 11:05:43 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/03/23 15:40:36 jperkin Exp $
 bin/akonadi_baloo_indexer
 bin/baloo_file
 bin/baloo_file_cleaner
@@ -62,7 +62,7 @@ lib/libbalooqueryparser.so.${PKGVERSION}
 lib/libbalooxapian.so
 lib/libbalooxapian.so.4
 lib/libbalooxapian.so.${PKGVERSION}
-share/PolicyKit/policy/org.kde.baloo.filewatch.policy
+${PLIST.polkit}share/PolicyKit/policy/org.kde.baloo.filewatch.policy
 share/akonadi/agents/akonadibalooindexingagent.desktop
 share/dbus-1/interfaces/org.kde.baloo.file.indexer.xml
 share/dbus-1/system-services/org.kde.baloo.filewatch.service
