@@ -1,0 +1,15 @@
+$NetBSD: patch-src_CMakeLists.txt,v 1.1 2016/03/23 10:04:49 markd Exp $
+
+Build with recent cmake
+
+--- src/CMakeLists.txt.orig	2012-06-10 12:35:46.000000000 +0000
++++ src/CMakeLists.txt
+@@ -13,7 +13,7 @@ IF (KMPLAYER_WITH_CAIRO)
+     MESSAGE("have cairo cflags:${optionalCFlags} ldflags:${optionalLinkFlags}")
+ endif (KMPLAYER_WITH_CAIRO)
+ 
+-add_definitions(-DQT3_SUPPORT -DKDE3_SUPPORT -DKMPLAYER_VERSION_STRING=\\"${KMPLAYER_VERSION_STRING}\\")
++add_definitions(-DQT3_SUPPORT -DKDE3_SUPPORT -DKMPLAYER_VERSION_STRING="\\\"${KMPLAYER_VERSION_STRING}\\\"")
+ 
+ ADD_DEFINITIONS(${CAIROCFlags})
+ 
