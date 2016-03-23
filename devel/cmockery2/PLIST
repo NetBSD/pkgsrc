@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1 2014/08/07 11:18:04 manu Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/03/23 14:56:07 mef Exp $
 include/cmockery/cmockery.h
 include/cmockery/cmockery_override.h
 include/cmockery/pbc.h
 lib/libcmockery.la
 lib/pkgconfig/cmockery2.pc
-share/doc/cmockery2-1.3.8/AUTHORS
-share/doc/cmockery2-1.3.8/COPYING
-share/doc/cmockery2-1.3.8/ChangeLog
-share/doc/cmockery2-1.3.8/coverage.md
-share/doc/cmockery2-1.3.8/index.html
-share/doc/cmockery2-1.3.8/usage.md
+share/doc/cmockery2-${PKGVERSION}/AUTHORS
+share/doc/cmockery2-${PKGVERSION}/COPYING
+share/doc/cmockery2-${PKGVERSION}/ChangeLog
+share/doc/cmockery2-${PKGVERSION}/coverage.md
+share/doc/cmockery2-${PKGVERSION}/index.html
+share/doc/cmockery2-${PKGVERSION}/usage.md
