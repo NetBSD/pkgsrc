@@ -1,0 +1,21 @@
+Shoebill is an all-new, BSD-licensed Macintosh II emulator designed
+from the ground up with the singular goal of running A/UX, first
+presented on
+<http://www.emaculation.com/forum/viewtopic.php?f=7&t=8288>.
+
+Shoebill requires a Macintosh II, IIx or IIcx ROM, e.g. from
+<https://github.com/macmade/Macintosh-ROMs>, and a disk image with
+A/UX installed.
+
+Shoebill is different from other Macintosh emulators in how it
+boots. Instead of booting directly into the Macintosh ROM, Shoebill
+implements a bootloader and boots directly into A/UX
+itself. Traditionally, A/UX is booted by first booting Mac OS, and
+then running SASH/launch to mount the A/UX root partition, run fsck if
+necessary, load the unix kernel, and then boot it. SASH provides the
+ability to manipulate the A/UX filesystem while actually running in
+regular Mac OS.
+
+Shoebill cannot boot into regular Mac OS, although that's a future
+goal. Instead, it replicates the functionality of Apple's bootloader,
+and boots directly into A/UX.
