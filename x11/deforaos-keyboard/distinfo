@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2016/03/12 02:22:08 khorben Exp $
+$NetBSD: distinfo,v 1.5 2016/03/23 12:12:01 khorben Exp $
 
 SHA1 (Keyboard-0.3.0.tar.gz) = 5f8a3d9d32594046e5a6856e0b696edf67ed6c92
 RMD160 (Keyboard-0.3.0.tar.gz) = f9578c491a1ee3c1abb8f7c5318491fadca5db1f
 SHA512 (Keyboard-0.3.0.tar.gz) = d0289193f130324473482ee8e20e253ec3633bb612f8ed9e447b6aaf03910bbad50c14d504c194fc56cc0ff57f4167bda6ee2ed550aa3c277ae4da5c8b8aafbc
 Size (Keyboard-0.3.0.tar.gz) = 31145 bytes
+SHA1 (patch-src_widget_Makefile) = 63fe9744d541d280858debd0b7251326fffc41a4
