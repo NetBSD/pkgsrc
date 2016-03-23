@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2015/02/04 17:52:26 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/03/23 10:02:22 jperkin Exp $
 bin/cmis-client
 include/libcmis-0.5/libcmis/allowable-actions.hxx
 include/libcmis-0.5/libcmis/document.hxx
@@ -36,4 +36,4 @@ lib/libcmis-0.5.la
 lib/libcmis-c-0.5.la
 lib/pkgconfig/libcmis-0.5.pc
 lib/pkgconfig/libcmis-c-0.5.pc
-man/manx/cmis-client.xml
+${PKGMANDIR}/manx/cmis-client.xml
