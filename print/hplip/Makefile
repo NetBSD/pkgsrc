@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2016/03/05 11:29:16 jperkin Exp $
+# $NetBSD: Makefile,v 1.50 2016/03/23 11:51:39 khorben Exp $
 
 DISTNAME=	hplip-3.16.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hplip/}
 
@@ -11,6 +11,8 @@ COMMENT=	HP Linux Imaging and Printing
 LICENSE=	gnu-gpl-v2 AND mit AND modified-bsd
 
 CONFLICTS+=		hpijs-[0-9]*
+
+DEPENDS+=		wget-[0-9]*:../../net/wget
 
 FILES_SUBST+=           CUPS_USER=${CUPS_USER}
 FILES_SUBST+=           CUPS_GROUP=${CUPS_GROUP}
