@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 02:00:00 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/03/23 12:40:00 ryoon Exp $
 
-SHA1 (pdfgrep-1.3.1.tar.gz) = 8d15760af0803ccea32760d5f68abe4224169639
-RMD160 (pdfgrep-1.3.1.tar.gz) = abc9215049534d27eeaea35d7c854a47e74db01f
-SHA512 (pdfgrep-1.3.1.tar.gz) = 7a13016a8cf4f8a7387940d7e3862a1fb83f3aa6240084f835e92e958836dff0788db2ae39f35db25d679a2857ddf0b9bcbd7b1aacb10c2a16c3165d56f4efcf
-Size (pdfgrep-1.3.1.tar.gz) = 111653 bytes
+SHA1 (pdfgrep-1.4.1.tar.gz) = 47fa7b4b399f451c5131f4106812b6e03f959123
+RMD160 (pdfgrep-1.4.1.tar.gz) = 4bea454f503b7035e99efc3e36cbfd79e28b2a57
+SHA512 (pdfgrep-1.4.1.tar.gz) = 27ce23c25a5f284b3eba92a0f8dbf02600248548967c1e71dfb41e43528824d9add587ea0ac23899ff07d2ffc6c74c2e6e4c2e7240e69494b8d31b7a4afc3735
+Size (pdfgrep-1.4.1.tar.gz) = 151926 bytes

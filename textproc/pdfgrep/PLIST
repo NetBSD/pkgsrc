@@ -1,3 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/28 22:00:13 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/03/23 12:40:00 ryoon Exp $
 bin/pdfgrep
 man/man1/pdfgrep.1
+share/bash-completion/completions/pdfgrep
+share/zsh/site-functions/_pdfgrep
