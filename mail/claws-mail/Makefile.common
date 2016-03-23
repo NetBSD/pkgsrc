@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2015/12/13 11:12:56 markd Exp $
+# $NetBSD: Makefile.common,v 1.17 2016/03/23 21:22:18 nros Exp $
 
 # used by mail/claws-mail/plugins.mk
 
@@ -27,6 +27,7 @@ CONFIGURE_ENV+=		ac_cv_path_GNOME_CONFIG="no"
 CONFIGURE_ARGS+=        --enable-enchant
 CONFIGURE_ARGS+=	--enable-nls
 CONFIGURE_ARGS+=	--enable-compface
+CONFIGURE_ARGS+=	--disable-manual
 CONFIGURE_ARGS+=	--disable-pgpcore-plugin
 CONFIGURE_ARGS+=	--disable-pgpmime-plugin
 CONFIGURE_ARGS+=	--disable-pgpinline-plugin
