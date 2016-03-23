@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2016/02/26 10:24:13 jperkin Exp $
+# $NetBSD: Makefile,v 1.28 2016/03/23 19:35:48 jperkin Exp $
 
 DISTNAME=	pciutils-3.4.1
 PKGREVISION=	1
@@ -12,7 +12,7 @@ COMMENT=	PCI bus manipulation utility similar to NetBSD pcictl(8)
 LICENSE=	gnu-gpl-v2
 
 MAKE_JOBS_SAFE=		no
-ONLY_FOR_PLATFORM=	AIX-*-* FreeBSD-*-* Linux-*-* NetBSD-*-*
+ONLY_FOR_PLATFORM=	AIX-*-* Darwin-*-* FreeBSD-*-* Linux-*-* NetBSD-*-*
 ONLY_FOR_PLATFORM+=	DragonFly-*-* OpenBSD-*-* SunOS-5.11-* Haiku-*-*
 
 INSTALL_TARGET=		install install-lib
