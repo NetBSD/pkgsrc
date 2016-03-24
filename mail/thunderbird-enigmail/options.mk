@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.1 2016/03/07 11:49:43 ryoon Exp $
+# $NetBSD: options.mk,v 1.2 2016/03/24 03:32:37 ryoon Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.enigmail
 PKG_OPTIONS_REQUIRED_GROUPS=	gnupg
 PKG_OPTIONS_GROUP.gnupg=	gnupg2 gnupg21
-PKG_SUGGESTED_OPTIONS=		gnupg21
+PKG_SUGGESTED_OPTIONS=		gnupg2
 
 .include "../../mk/bsd.options.mk"
 
