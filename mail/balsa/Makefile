@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.119 2016/03/05 11:28:45 jperkin Exp $
+# $NetBSD: Makefile,v 1.120 2016/03/24 16:46:04 khorben Exp $
 
 DISTNAME=	balsa-2.4.14
 PKGREVISION=	16
@@ -40,6 +40,7 @@ CONF_FILES=	${EGDIR}/balsa.soundlist ${PKG_SYSCONFDIR}/sound/events/balsa.soundl
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mail/gmime24/buildlink3.mk"
 .include "../../mail/libesmtp/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
 .include "../../security/gpgme/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
