@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15609 2016/03/23 12:40:23 ryoon Exp $
+$NetBSD: TODO,v 1.15610 2016/03/24 07:46:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -461,7 +461,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o audacious-plugins-3.7.1
 	o audacity-2.1.1
 	o augeas-1.4.0
-	o autoconf-archive-2015.09.25
+	o autoconf-archive-2016.03.20
 	o autoconvert-0.3.16
 	o autogen-5.18.7
 	o avant-window-navigator-0.4.2
@@ -602,7 +602,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dbus-python-common-1.2.4
 	o dd_rescue-1.46
 	o dd_rhelp-0.3.0
-	o ddrescue-1.20
+	o ddrescue-1.21
 	o dega-1.12
 	o dejagnu-1.5.3
 	o delegate-9.9.13
@@ -1319,6 +1319,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Data-Peek-0.45
 	o p5-Data-SimplePassword-0.11
 	o p5-Date-Extract-0.05
+	o p5-DateTime-1.2600
 	o p5-DateTime-TimeZone-1.96
 	o p5-Devel-PatchPerl-1.40
 	o p5-Devel-Pragma-0.62
@@ -1436,6 +1437,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-POE-Component-Client-DNS-1.054
 	o p5-POE-Component-Server-SimpleHTTP-2.22
 	o p5-PPIx-EditorTools-0.19
+	o p5-Package-DeprecationManager-0.16
 	o p5-PadWalker-2.2
 	o p5-Padre-1.00
 	o p5-Padre-Plugin-Autoformat-1.22
@@ -1481,7 +1483,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Sereal-Decoder-3.014
 	o p5-Sereal-Encoder-3.014
 	o p5-Smart-Comments-1.06
-	o p5-Socket6-0.26
+	o p5-Socket6-0.27
 	o p5-Software-License-0.103011
 	o p5-Sort-Versions-1.62
 	o p5-Spreadsheet-Read-0.63
