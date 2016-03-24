@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1278 2016/03/24 13:46:07 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1279 2016/03/24 20:31:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1677,3 +1677,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/seamonkey-enigmail to 1.9.1nb1 [ryoon 2016-03-24]
 	Updated math/sc to 7.16 [youri 2016-03-24]
 	Updated security/py-rsa to 3.4 [wiz 2016-03-24]
+	Updated graphics/graphite2 to 1.3.7 [wiz 2016-03-24]
