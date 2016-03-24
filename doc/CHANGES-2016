@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1276 2016/03/24 03:33:36 ryoon Exp $
+$NetBSD: CHANGES-2016,v 1.1277 2016/03/24 10:54:44 youri Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1675,3 +1675,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added emulators/shoebill version 0.0.5 [hauke 2016-03-23]
 	Updated mail/thunderbird-enigmail to 1.9.1nb1 [ryoon 2016-03-24]
 	Updated mail/seamonkey-enigmail to 1.9.1nb1 [ryoon 2016-03-24]
+	Updated math/sc to 7.16 [youri 2016-03-24]
