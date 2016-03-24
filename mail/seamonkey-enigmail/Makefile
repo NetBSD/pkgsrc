@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2016/03/07 11:49:43 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2016/03/24 03:32:37 ryoon Exp $
 
 .include "../../mail/thunderbird-enigmail/Makefile.common"
 
 PKGNAME=	seamonkey-${DISTNAME}
+PKGREVISION=	1
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	GnuPG support for www/seamonkey
 
