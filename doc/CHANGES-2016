@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1275 2016/03/23 14:23:55 hauke Exp $
+$NetBSD: CHANGES-2016,v 1.1276 2016/03/24 03:33:36 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1673,3 +1673,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated comms/minicom to 2.7nb1 [ryoon 2016-03-22]
 	Updated textproc/pdfgrep to 1.4.1 [ryoon 2016-03-23]
 	Added emulators/shoebill version 0.0.5 [hauke 2016-03-23]
+	Updated mail/thunderbird-enigmail to 1.9.1nb1 [ryoon 2016-03-24]
+	Updated mail/seamonkey-enigmail to 1.9.1nb1 [ryoon 2016-03-24]
