@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.32 2016/02/25 12:12:48 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.33 2016/03/24 13:28:49 ryoon Exp $
 #
 # used by devel/ncurses/Makefile
 # used by devel/ncursesw/Makefile
@@ -60,6 +60,12 @@ CONFIGURE_ARGS+=	--without-manpage-tbl
 .endif
 
 .include "../../mk/compiler.mk"
+
+# Fix build under FreeBSD 10.2
+.if !empty(PKGSRC_COMPILER:Mclang)
+CONFIGURE_ENV+=		ac_cv_c_compiler_gnu=no
+CONFIGURE_ENV+=		ac_cv_cxx_compiler_gnu=no
+.endif
 
 .if ${OPSYS} == "SunOS"
 CONFIGURE_ARGS+=	--disable-const
