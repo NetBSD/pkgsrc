@@ -1,11 +1,7 @@
-$NetBSD: distinfo,v 1.9 2015/11/03 23:33:44 agc Exp $
+$NetBSD: distinfo,v 1.10 2016/03/24 10:53:16 youri Exp $
 
-SHA1 (sc-6.21.tar.Z) = 80d8972bcd1b5adcbc00345b6866954603dadf31
-RMD160 (sc-6.21.tar.Z) = 24abfaea2e5ef644394efd5e13ad1850280abbd6
-SHA512 (sc-6.21.tar.Z) = 5c82e2cbc6e87101e12c2307e619f8154f5a11b07eacb4b5794ca4e649b5f9497b72114684190cfc249acd1bfcc4c0b1515a81ad4227d044d8adce41bbe2d4d2
-Size (sc-6.21.tar.Z) = 180360 bytes
-SHA1 (patch-aa) = 24cb53e798d3b923ff370b29d8de5bbb9e4127b2
-SHA1 (patch-ab) = 2055f81bbabaa2752ed6dc18ce66ca857b9654f4
-SHA1 (patch-ac) = 1b3628ae0bf881c8c3e9886210d23d63207f912f
-SHA1 (patch-ad) = e579f8e29ebba4d653e83741a829262c2b7d8d2b
-SHA1 (patch-sc.h) = c432ea8d2f7a99c30f32d8bb0468e29aaa3f27c8
+SHA1 (sc-7.16_1.0.1.tar.gz) = 969f57067e1fe4f1548919d2bb0523c129e4af1b
+RMD160 (sc-7.16_1.0.1.tar.gz) = 5a6322fe30df7b9da20deb8373170403d07e740e
+SHA512 (sc-7.16_1.0.1.tar.gz) = e780543b3a46abc91c2dcd8e30a07f3dc46937bf71fc28f5aef87a2072d8b601f5931363874ccba70a8aa0a81afd748434a1822868e38917217ee56e79b74c0c
+Size (sc-7.16_1.0.1.tar.gz) = 214534 bytes
+SHA1 (patch-Makefile) = fd3dc25eeb413ff6cc4b5a1edbbbaf332e571814
