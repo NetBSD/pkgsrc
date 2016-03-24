@@ -1,7 +1,8 @@
-$NetBSD: patch-configure,v 1.11 2016/03/06 19:41:24 dbj Exp $
+$NetBSD: patch-configure,v 1.12 2016/03/24 15:21:10 khorben Exp $
 
 Don't use gld on SunOS
 add check for shm_open
+avoid bad substitution
 
 --- configure.orig	2015-12-16 22:04:48.000000000 +0000
 +++ configure
@@ -66,6 +67,15 @@ add check for shm_open
    fi
  fi
  if test "$softmmu" = yes ; then
+@@ -4758,7 +4785,7 @@ echo "GTK GL support    $gtk_gl"
+ echo "GNUTLS support    $gnutls"
+ echo "GNUTLS hash       $gnutls_hash"
+ echo "libgcrypt         $gcrypt"
+-echo "nettle            $nettle ${nettle+($nettle_version)}"
++echo "nettle            $nettle ($nettle_version)"
+ echo "libtasn1          $tasn1"
+ echo "VTE support       $vte"
+ echo "curses support    $curses"
 @@ -5049,6 +5076,9 @@ fi
  if test "$fallocate_zero_range" = "yes" ; then
    echo "CONFIG_FALLOCATE_ZERO_RANGE=y" >> $config_host_mak
