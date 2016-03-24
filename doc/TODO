@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15610 2016/03/24 07:46:52 wiz Exp $
+$NetBSD: TODO,v 1.15611 2016/03/24 20:34:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -836,6 +836,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnustep-gui-0.24.1
 	o gnustep-make-2.6.7
 	o gnustep-objc-1.8
+	o gnutls-3.4.10 [wip]
 	o goaccess-0.12
 	o gob-2.0.19
 	o gobby-0.5.0
