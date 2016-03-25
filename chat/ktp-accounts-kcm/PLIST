@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/01/17 15:07:04 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/03/25 21:15:33 joerg Exp $
 lib/kde4/kcm_ktp_accounts.so
 lib/kde4/ktpaccountskcm_plugin_butterfly.so
 lib/kde4/ktpaccountskcm_plugin_gabble.so
@@ -11,7 +11,7 @@ lib/kde4/ktpaccountskcm_plugin_sipe.so
 lib/kde4/ktpaccountskcm_plugin_sunshine.so
 lib/libktpaccountskcminternal.so
 lib/libktpaccountskcminternal.so.4
-lib/libktpaccountskcminternal.so.4.14.3
+lib/libktpaccountskcminternal.so.4.14.15
 share/kde4/services/kcm_ktp_accounts.desktop
 share/kde4/services/ktpaccountskcm_plugin_butterfly.desktop
 share/kde4/services/ktpaccountskcm_plugin_gabble.desktop
