@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.25 2015/12/29 04:54:39 dholland Exp $
+# $NetBSD: Makefile,v 1.26 2016/03/25 21:02:26 joerg Exp $
 #
 
 DISTNAME=	Tix${TIX_VERSION}-src
 TIX_VERSION=	8.4.3
 PKGNAME=	tk-Tix-${TIX_VERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	x11 tcl tk
 MASTER_SITES=	http://downloads.sourceforge.net/project/tix/tix/8.4.3/
 
@@ -32,9 +32,12 @@ INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR}
 TEST_TARGET=		test
 INSTALLATION_DIRS+=	${PKGMANDIR}/mann
 INSTALLATION_DIRS+=	lib/Tix${TIX_VERSION}/docs
-USE_TOOLS+=		tar
+USE_TOOLS+=		tar autoconf
 
 CPPFLAGS+=	-DUSE_INTERP_RESULT
+
+pre-configure:
+	cd ${WRKSRC} && aclocal && autoconf
 
 post-install:
 	for f in ${WRKSRC}/man/*.n; do \

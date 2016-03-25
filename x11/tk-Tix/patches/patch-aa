@@ -1,12 +1,29 @@
-$NetBSD: patch-aa,v 1.5 2012/09/03 11:13:29 marino Exp $
+$NetBSD: patch-aa,v 1.6 2016/03/25 21:02:26 joerg Exp $
 
 IF AC_PATH_X fails, also look for /usr/X11R7.
+Don't use ld directly, use the compiler.
 Additionally, also specify run-path to the X libraries.
 Add DragonFly support.
 
 --- tclconfig/tcl.m4.orig	2007-02-21 22:09:05.000000000 +0000
 +++ tclconfig/tcl.m4
-@@ -1592,7 +1592,7 @@ dnl AC_CHECK_TOOL(AR, ar)
+@@ -1536,13 +1536,13 @@ dnl AC_CHECK_TOOL(AR, ar)
+ 	NetBSD-*|FreeBSD-[[1-2]].*)
+ 	    # NetBSD/SPARC needs -fPIC, -fpic will not do.
+ 	    SHLIB_CFLAGS="-fPIC"
+-	    SHLIB_LD="ld -Bshareable -x"
++	    SHLIB_LD="${CC} -shared"
+ 	    SHLIB_LD_LIBS='${LIBS}'
+ 	    SHLIB_SUFFIX=".so"
+ 	    DL_OBJS="tclLoadDl.o"
+ 	    DL_LIBS=""
+ 	    CC_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
+-	    LD_SEARCH_FLAGS='-rpath ${LIB_RUNTIME_DIR}'
++	    LD_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
+ 	    AC_CACHE_CHECK([for ELF], tcl_cv_ld_elf, [
+ 		AC_EGREP_CPP(yes, [
+ #ifdef __ELF__
+@@ -1592,17 +1592,17 @@ dnl AC_CHECK_TOOL(AR, ar)
  	    UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.a'
  	    TCL_LIB_VERSIONS_OK=nodots
  	    ;;
@@ -14,7 +31,19 @@ Add DragonFly support.
 +	FreeBSD-*|DragonFly-*)
  	    # FreeBSD 3.* and greater have ELF.
  	    SHLIB_CFLAGS="-fPIC"
- 	    SHLIB_LD="ld -Bshareable -x"
+-	    SHLIB_LD="ld -Bshareable -x"
++	    SHLIB_LD="${CC} -shared"
+ 	    SHLIB_LD_LIBS='${LIBS}'
+ 	    SHLIB_SUFFIX=".so"
+ 	    DL_OBJS="tclLoadDl.o"
+ 	    DL_LIBS=""
+ 	    LDFLAGS="$LDFLAGS -export-dynamic"
+ 	    CC_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'
+-	    LD_SEARCH_FLAGS='-rpath ${LIB_RUNTIME_DIR}'
++	    LD_SEARCH_FLAGS='-Wl,rpath,${LIB_RUNTIME_DIR}'
+ 	    if test "${TCL_THREADS}" = "1" ; then
+ 		# The -pthread needs to go in the CFLAGS, not LIBS
+ 		LIBS=`echo $LIBS | sed s/-pthread//`
 @@ -1610,7 +1610,7 @@ dnl AC_CHECK_TOOL(AR, ar)
  	    	LDFLAGS="$LDFLAGS -pthread"
  	    fi
@@ -24,6 +53,15 @@ Add DragonFly support.
  	    	# FreeBSD-3 doesn't handle version numbers with dots.
  	    	UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.a'
  	    	SHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}.so'
+@@ -1781,7 +1781,7 @@ dnl AC_CHECK_TOOL(AR, ar)
+ 	    # QNX RTP
+ 	    # This may work for all QNX, but it was only reported for v6.
+ 	    SHLIB_CFLAGS="-fPIC"
+-	    SHLIB_LD="ld -Bshareable -x"
++	    SHLIB_LD="${CC} -shared"
+ 	    SHLIB_LD_LIBS=""
+ 	    SHLIB_SUFFIX=".so"
+ 	    DL_OBJS="tclLoadDl.o"
 @@ -2313,7 +2313,7 @@ AC_DEFUN([TEA_PATH_UNIX_X], [
  	found_xincludes="no"
  	AC_TRY_CPP([#include <X11/Intrinsic.h>], found_xincludes="yes", found_xincludes="no")
