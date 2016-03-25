@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2016/03/05 06:18:11 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/03/25 16:03:46 taca Exp $
 ${CT_WEBDIR}/CHANGELOG.md
 ${CT_WEBDIR}/README.md
 ${CT_WEBDIR}/app/AppCache.php
@@ -2521,6 +2521,14 @@ ${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/fr/tl_news
 ${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/fr/tl_news_feed.xlf
 ${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/fr/tl_user.xlf
 ${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/fr/tl_user_group.xlf
+${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/ja/default.xlf
+${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/ja/modules.xlf
+${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/ja/tl_module.xlf
+${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/ja/tl_news.xlf
+${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/ja/tl_news_archive.xlf
+${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/ja/tl_news_feed.xlf
+${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/ja/tl_user.xlf
+${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/ja/tl_user_group.xlf
 ${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/nl/default.xlf
 ${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/nl/modules.xlf
 ${CT_WEBDIR}/vendor/contao/news-bundle/src/Resources/contao/languages/nl/tl_module.xlf
@@ -2610,6 +2618,15 @@ ${CT_WEBDIR}/vendor/contao/newsletter-bundle/src/Resources/contao/languages/fr/t
 ${CT_WEBDIR}/vendor/contao/newsletter-bundle/src/Resources/contao/languages/fr/tl_newsletter_recipients.xlf
 ${CT_WEBDIR}/vendor/contao/newsletter-bundle/src/Resources/contao/languages/fr/tl_user.xlf
 ${CT_WEBDIR}/vendor/contao/newsletter-bundle/src/Resources/contao/languages/fr/tl_user_group.xlf
+${CT_WEBDIR}/vendor/contao/newsletter-bundle/src/Resources/contao/languages/ja/default.xlf
+${CT_WEBDIR}/vendor/contao/newsletter-bundle/src/Resources/contao/languages/ja/modules.xlf
+${CT_WEBDIR}/vendor/contao/newsletter-bundle/src/Resources/contao/languages/ja/tl_member.xlf
+${CT_WEBDIR}/vendor/contao/newsletter-bundle/src/Resources/contao/languages/ja/tl_module.xlf
+${CT_WEBDIR}/vendor/contao/newsletter-bundle/src/Resources/contao/languages/ja/tl_newsletter.xlf
+${CT_WEBDIR}/vendor/contao/newsletter-bundle/src/Resources/contao/languages/ja/tl_newsletter_channel.xlf
+${CT_WEBDIR}/vendor/contao/newsletter-bundle/src/Resources/contao/languages/ja/tl_newsletter_recipients.xlf
+${CT_WEBDIR}/vendor/contao/newsletter-bundle/src/Resources/contao/languages/ja/tl_user.xlf
+${CT_WEBDIR}/vendor/contao/newsletter-bundle/src/Resources/contao/languages/ja/tl_user_group.xlf
 ${CT_WEBDIR}/vendor/contao/newsletter-bundle/src/Resources/contao/languages/nl/default.xlf
 ${CT_WEBDIR}/vendor/contao/newsletter-bundle/src/Resources/contao/languages/nl/modules.xlf
 ${CT_WEBDIR}/vendor/contao/newsletter-bundle/src/Resources/contao/languages/nl/tl_member.xlf
@@ -4071,7 +4088,6 @@ ${CT_WEBDIR}/vendor/symfony/monolog-bundle/composer.json
 ${CT_WEBDIR}/vendor/symfony/monolog-bundle/phpunit.xml.dist
 ${CT_WEBDIR}/vendor/symfony/polyfill-apcu/LICENSE
 ${CT_WEBDIR}/vendor/symfony/polyfill-apcu/README.md
-${CT_WEBDIR}/vendor/symfony/polyfill-apcu/Resources/stubs/APCUIterator.php
 ${CT_WEBDIR}/vendor/symfony/polyfill-apcu/bootstrap.php
 ${CT_WEBDIR}/vendor/symfony/polyfill-apcu/composer.json
 ${CT_WEBDIR}/vendor/symfony/polyfill-intl-icu/LICENSE
