@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.57 2015/11/25 12:51:17 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.58 2016/03/25 21:10:36 joerg Exp $
 
 BUILDLINK_TREE+=	perl
 
@@ -39,6 +39,7 @@ INSTALL_TEMPLATES+=	${.CURDIR}/../../lang/perl5/files/install_threads.tmpl
 #
 .include "../../lang/perl5/vars.mk"
 BUILDLINK_FILES.perl=	${PERL5_SUB_INSTALLARCHLIB}/CORE/*
+BUILDLINK_RPATHDIRS.perl+=	${PERL5_SUB_INSTALLARCHLIB}/CORE
 .endif # PERL_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-perl
