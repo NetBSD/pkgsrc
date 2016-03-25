@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2015/03/02 19:59:06 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2016/03/25 21:11:47 joerg Exp $
 #
 
 DISTNAME=	gambc-${GAMBC_DIST_VERSION}
@@ -70,8 +70,6 @@ PACKAGE_VERSION=	${PKGVERSION}
 PACKAGE_STRING=		${${PKGBASE} ${PKGVERSION}:L}
 
 .include "version.mk"
-
-MAKE_ENV+=	CLANG_NO_OPT=${CLANG_NO_VALUE_PROPAGATION_PASS:Q}
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/termcap.buildlink3.mk"
