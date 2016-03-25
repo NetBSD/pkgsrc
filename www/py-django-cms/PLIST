@@ -1,10 +1,14 @@
-@comment $NetBSD: PLIST,v 1.24 2016/03/06 14:27:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.25 2016/03/25 21:04:04 joerg Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt.py
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt.py
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt.py
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt.py
 ${PYSITELIB}/cms/__init__.py
 ${PYSITELIB}/cms/__init__.pyc
 ${PYSITELIB}/cms/__init__.pyo
@@ -1979,10 +1983,6 @@ ${PYSITELIB}/cms/wizards/wizard_base.pyo
 ${PYSITELIB}/cms/wizards/wizard_pool.py
 ${PYSITELIB}/cms/wizards/wizard_pool.pyc
 ${PYSITELIB}/cms/wizards/wizard_pool.pyo
-${PYSITELIB}/django_cms-3.2.2-py3.5.egg-info/SOURCES.txt.py
-${PYSITELIB}/django_cms-3.2.2-py3.5.egg-info/dependency_links.txt.py
-${PYSITELIB}/django_cms-3.2.2-py3.5.egg-info/requires.txt.py
-${PYSITELIB}/django_cms-3.2.2-py3.5.egg-info/top_level.txt.py
 ${PYSITELIB}/menus/__init__.py
 ${PYSITELIB}/menus/__init__.pyc
 ${PYSITELIB}/menus/__init__.pyo
