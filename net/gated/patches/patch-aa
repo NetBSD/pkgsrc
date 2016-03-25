@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2013/12/08 03:55:43 dholland Exp $
+$NetBSD: patch-aa,v 1.6 2016/03/25 21:06:50 joerg Exp $
 
 --- src/configs/netbsd.orig	2004-07-10 22:21:01.000000000 +0200
 +++ src/configs/netbsd
@@ -9,7 +9,7 @@ $NetBSD: patch-aa,v 1.5 2013/12/08 03:55:43 dholland Exp $
 -cwflags -W -Wreturn-type -Wcast-qual -Wpointer-arith -Wwrite-strings -Wswitch -Wshadow
 -cflags	-O -g
 +#cwflags -W -Wreturn-type -Wcast-qual -Wpointer-arith -Wwrite-strings -Wswitch -Wshadow
-+cflags	-O -g -DUSE_MMAP
++cflags	-O -g -DUSE_MMAP -D_KERNTYPES
  
  ldflags -lkvm
  
