@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/03/05 11:28:08 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2016/03/25 21:15:51 joerg Exp $
 
 PKGREVISION= 1
 .include "../../meta-pkgs/kde-telepathy/Makefile.common"
@@ -13,7 +13,7 @@ COMMENT=	KDE Telepathy KWallet integration module
 LICENSE=	gnu-lgpl-v2.1
 
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	msgfmt
+USE_TOOLS+=	msgfmt pkg-config
 
 DEPENDS+=	qca2-ossl-[0-9]*:../../security/qca2-ossl
 BUILD_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
