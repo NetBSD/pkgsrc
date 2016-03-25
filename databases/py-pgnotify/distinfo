@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2015/11/03 01:56:28 agc Exp $
+$NetBSD: distinfo,v 1.4 2016/03/25 21:15:07 joerg Exp $
 
 SHA1 (pgnotify-0.1.zip) = 6545a994077427b481c7fc9c511dc74f6106ae39
 RMD160 (pgnotify-0.1.zip) = a48a7536a6edf330bdb1eb6b83be119ce4327e56
 SHA512 (pgnotify-0.1.zip) = d1b27c89290476111a1751019b3c99af72a8904e4c56d363f0bff7ac334c8773b397ca3dd264eb26402489c8a3189181b8ad7966a312a7b4a918c87588f196e5
 Size (pgnotify-0.1.zip) = 6148 bytes
+SHA1 (patch-pgnotify.py) = 9b05f0685186833bad513bfd2cf0376133c9ae52
