@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/03/01 20:45:31 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2016/03/25 21:14:19 joerg Exp $
 
 DISTNAME=	bazel-0.2.0
 CATEGORIES=	devel
@@ -8,6 +8,8 @@ MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://bazel.io/
 COMMENT=	Google's own build tool
 LICENSE=	apache-2.0
+
+EXTRACT_USING=	bsdtar
 
 DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
 DEPENDS+=		zip-[0-9]*:../../archivers/zip
