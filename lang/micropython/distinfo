@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.2 2016/03/22 19:01:17 joerg Exp $
+$NetBSD: distinfo,v 1.3 2016/03/25 21:11:16 joerg Exp $
 
 SHA1 (micropython-1.5.2/micropython-1.5.2.tar.gz) = 493cf36aa722b50b6034efb8de6433dcea546b0f
 RMD160 (micropython-1.5.2/micropython-1.5.2.tar.gz) = 0f5c316ecd716734fe8e1dbdf9a360ef6f126b85
 SHA512 (micropython-1.5.2/micropython-1.5.2.tar.gz) = 309dcb20a3369ac5bec92a6a5cd8af37d671fc2a8e3b6a36c4c49d1f4730eaaa46dffb2351eb5783de12f045069554c22ee70c0100cf98ab09138ef42594a65a
 Size (micropython-1.5.2/micropython-1.5.2.tar.gz) = 6673101 bytes
-SHA1 (patch-py_obj.h) = b945ad9b6c2e8dd4631c88b7c3c3d1008fe40fae
-SHA1 (patch-unix_Makefile) = 302b1963bbf36dd7513380bfa34fa9cbf358aeaf
-SHA1 (patch-unix_mpconfigport.h) = beb3b1b94cbb0cb81b24ef956f6f24cd86ca0194
+SHA1 (patch-py_obj.h) = f148e1e88ef6347c93fca5d367b36be805267f74
+SHA1 (patch-unix_Makefile) = e40d7413ec1140e6a408b82708f1749b3cb879bb
+SHA1 (patch-unix_mpconfigport.h) = a93806f5db48cc61096a899ea3558afc46468ff1
