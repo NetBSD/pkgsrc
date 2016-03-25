@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2014/10/15 22:06:23 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2016/03/25 21:08:09 joerg Exp $
 
 DISTNAME=	arpack96
 PKGNAME=	arpack-96
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	http://www.caam.rice.edu/software/ARPACK/SRC/
 DISTFILES=	arpack96.tar.gz patch.tar.gz
@@ -11,12 +12,11 @@ HOMEPAGE=	http://www.caam.rice.edu/software/ARPACK/SRC/
 COMMENT=	Library of subroutines to solve eigenvalue problems
 LICENSE=	original-bsd
 
-# unsafe library creation
-MAKE_JOBS_SAFE=	no
-
 WRKSRC=		${WRKDIR}/ARPACK
 USE_LANGUAGES=	fortran77
-MAKE_ENV+=	WRKSRC=${WRKSRC}
+MAKE_FILE=	${FILESDIR}/Makefile
+
+USE_LIBTOOL=	yes
 
 INSTALLATION_DIRS=	lib
 
@@ -25,6 +25,6 @@ post-extract:
 	cd ${WRKDIR} && ${TAR} -zxf ${DISTDIR}/patch.tar.gz
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/libarpack.a ${DESTDIR}${PREFIX}/lib
+	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/libarpack.la ${DESTDIR}${PREFIX}/lib
 
 .include "../../mk/bsd.pkg.mk"
