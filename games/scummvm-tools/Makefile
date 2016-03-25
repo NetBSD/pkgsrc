@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2015/04/25 14:23:03 tnn Exp $
+# $NetBSD: Makefile,v 1.33 2016/03/25 21:13:31 joerg Exp $
 #
 
 DISTNAME=		scummvm-tools-1.4.0
@@ -18,8 +18,6 @@ HAS_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 
 INSTALLATION_DIRS=	bin
-
-MAKE_ENV+=	CLANG_NO_OPT=${CLANG_NO_VALUE_PROPAGATION_PASS:Q}
 
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
