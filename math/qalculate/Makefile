@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2015/03/02 19:59:07 joerg Exp $
+# $NetBSD: Makefile,v 1.47 2016/03/25 21:08:58 joerg Exp $
 
 DISTNAME=	libqalculate-0.9.7
 PKGNAME=	qalculate-0.9.7
@@ -18,8 +18,6 @@ GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE=	${WRKSRC}/libqalculate.pc.in
 
 UNLIMIT_RESOURCES=	datasize
-
-MAKE_ENV+=	CLANG_NO_OPT=${CLANG_NO_VALUE_PROPAGATION_PASS:Q}
 
 SUBST_CLASSES+=		pthread
 SUBST_FILES.pthread=	libqalculate.pc.in
