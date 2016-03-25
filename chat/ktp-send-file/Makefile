@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/03/05 11:28:08 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2016/03/25 21:16:07 joerg Exp $
 
 PKGREVISION= 1
 .include "../../meta-pkgs/kde-telepathy/Makefile.common"
@@ -15,6 +15,7 @@ LICENSE=	gnu-lgpl-v2.1
 USE_LANGUAGES=	c c++
 
 DEPENDS+=	ktp-filetransfer-handler-${KTP_VERSION}{,nb[0-9]*}:../../chat/ktp-filetransfer-handler
+BUILD_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
 
 .include "../../chat/ktp-common-internals/buildlink3.mk"
 .include "../../chat/ktp-contact-list/buildlink3.mk"
