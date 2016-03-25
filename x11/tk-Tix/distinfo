@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.8 2015/11/04 03:28:55 agc Exp $
+$NetBSD: distinfo,v 1.9 2016/03/25 21:02:26 joerg Exp $
 
 SHA1 (Tix8.4.3-src.tar.gz) = 285d2f19f907ebad002ee0266f56be620d44f174
 RMD160 (Tix8.4.3-src.tar.gz) = 99249c4d7a19fcb8c27f11ab1b3ef6102911409d
 SHA512 (Tix8.4.3-src.tar.gz) = f13217dad0f52c0b706d2fb8ee0886942db64be0325e5d0d51801dbf9a92a7919c743c1445b76dbfa98815817685205e238e2d63f9366a8745ace1e1e9a01852
 Size (Tix8.4.3-src.tar.gz) = 1831503 bytes
-SHA1 (patch-aa) = e644a415e2b090f964d63a5c4b7a31b4f728c8d0
-SHA1 (patch-ac) = 975a5580145548130fa90b070407f25b3b1e046c
+SHA1 (patch-aa) = 13a02a88a7fae048d0227b9029a56665f06025e7
 SHA1 (patch-ad) = 9da45fba9abf8c2030dee1f8692aab3b26ce54b8
 SHA1 (patch-ae) = fb92066c335536ff7acdfc2e9836c7cad9f6cd7b
