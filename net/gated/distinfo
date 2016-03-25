@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.11 2013/12/08 03:55:43 dholland Exp $
+$NetBSD: distinfo,v 1.12 2016/03/25 21:06:50 joerg Exp $
 
 SHA1 (gated-3-5-11.tar.gz) = a6abdc59beb881dee06c9433b690fa6eab99fe07
 RMD160 (gated-3-5-11.tar.gz) = 16624c1e2229fb783dd3bbc5759945e5e368c1f3
 Size (gated-3-5-11.tar.gz) = 1565263 bytes
-SHA1 (patch-aa) = 551f3b1d13e88ea5b502e8cd342eeb94b3ea1886
+SHA1 (patch-aa) = 67933e863e715b92beda5a0cb05d38600b42311e
 SHA1 (patch-ab) = cd5c46845530d6c746e5255fb7685ce5da6c1de3
 SHA1 (patch-ad) = 0338ffe0160d72daf45c1fb641cae7baee82e13e
 SHA1 (patch-ae) = c02081fa9281cbe5adfab53f24c3c662fcdf9beb
