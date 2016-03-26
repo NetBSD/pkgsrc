@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2016/02/25 13:37:46 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2016/03/26 23:45:21 joerg Exp $
 
 DISTNAME?=	${MESA_DISTNAME}
 PKGNAME=	MesaLib7-${MESA_PKGVERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MESA_SITES}
 EXTRACT_SUFX=	.tar.bz2
@@ -28,6 +28,8 @@ DIST_SUBDIR=		Mesa-${MESA_PKGVERSION}
 CONFLICTS+=	xf86driproto<2.0.4
 
 PLIST_VARS=		dri nodri
+
+BUILDLINK_PASSTHRU_RPATHDIRS+=	${PREFIX}/MesaLib7/lib
 
 PKGCONFIG_OVERRIDE+=	src/mesa/drivers/dri/dri.pc.in
 PKGCONFIG_OVERRIDE+=	src/mesa/gl.pc.in
