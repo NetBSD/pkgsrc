@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.1 2012/12/26 17:12:57 ryoon Exp $
+$NetBSD: patch-configure,v 1.2 2016/03/26 23:05:10 joerg Exp $
 
 * Catch LIBS from pkgsrc Makefile
 
@@ -10,10 +10,3 @@ $NetBSD: patch-configure,v 1.1 2012/12/26 17:12:57 ryoon Exp $
  rm -f Makefile config.h
  if [ -f /usr/include/netinet/ip6.h ]; then
    echo "#define USE_IPV6" >> config.h
-@@ -10,4 +9,4 @@ if [ -f /usr/include/openssl/ssl.h ]; th
-   echo "openssl includes found."
-   LIBS="$LIBS -lssl -lcrypto"
- fi
--sed "s/#LIBS#/$LIBS/g" < Makefile.in > Makefile
-\ No newline at end of file
-+sed "s/#LIBS#/$LIBS/g" < Makefile.in > Makefile

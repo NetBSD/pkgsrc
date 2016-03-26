@@ -1,6 +1,8 @@
-$NetBSD: patch-ac,v 1.2 2012/12/26 17:12:57 ryoon Exp $
+$NetBSD: patch-ac,v 1.3 2016/03/26 23:05:10 joerg Exp $
 
 * Include sys/filio.h for FIONBIO etc.
+* Drop SSLv2 support
+* Add TLSv1 support
 
 --- lhs.c.orig	2001-02-27 17:37:10.000000000 +0000
 +++ lhs.c
@@ -14,7 +16,40 @@ $NetBSD: patch-ac,v 1.2 2012/12/26 17:12:57 ryoon Exp $
  
  #define debug(x...) { if (verbose) printf(x); }
  
-@@ -592,7 +595,7 @@ void usage(char *a0)
+@@ -467,12 +470,10 @@ int init_ssl()
+ 	SSL_load_error_strings();
+ 	SSLeay_add_ssl_algorithms();
+ 	
+-	if (ssl_protocol == SSL2_VERSION)
+-		ctx = SSL_CTX_new(SSLv2_method());
+-	else {
+-		ctx = SSL_CTX_new(SSLv23_method());
+-		SSL_CTX_set_options(ctx, SSL_OP_NO_SSLv2);
+-	}
++	ctx = SSL_CTX_new(SSLv23_method());
++	SSL_CTX_set_options(ctx, SSL_OP_NO_SSLv2);
++	if (ssl_protocol == TLS1_VERSION)
++		SSL_CTX_set_options(ctx, SSL_OP_NO_SSLv3);
+ 	if (!ctx) {
+ 		fprintf(stderr, "SSL_CTX_new failed.\n");
+ 		return 0;
+@@ -512,12 +513,12 @@ SSL *init_ssl_socket(int sock)
+ 	}
+ //	SSL_set_session_id_context(ssl,AppContext,sizeof(AppContext));
+ 	switch(ssl->session->ssl_version) {
+-		case SSL2_VERSION:
+-			debug("ssl2\n");
+-			break;	
+ 		case SSL3_VERSION:
+ 			debug("ssl3\n");
+ 			break;
++		case TLS1_VERSION:
++			debug("tls3\n");
++			break;
+ 		default:
+ 			debug("nieznany standard szyfrowania\n");
+ 	}
+@@ -592,7 +593,7 @@ void usage(char *a0)
  "  -s version   set SSL protocol version (default: SSLv2)\n"
  "  -c filename  load certificate file (default: lhs.pem)\n"
  #endif
@@ -23,3 +58,14 @@ $NetBSD: patch-ac,v 1.2 2012/12/26 17:12:57 ryoon Exp $
  "  -u user      switch to other user after startup\n"
  "  -g group     change gid to other than user's\n"
  "  -m socks     set number of sockets (default: 50, min: 3)\n"
+@@ -633,8 +634,8 @@ int main(int argc, char **argv)
+ 				cert_file = optarg;
+ 				break;
+ 			case 's':
+-				if (!strcasecmp(optarg, "ssl2") || !strcasecmp(optarg, "sslv2"))
+-					ssl_protocol = SSL2_VERSION;
++				if (!strcasecmp(optarg, "tls1") || !strcasecmp(optarg, "tls1"))
++					ssl_protocol = TLS1_VERSION;
+ 				else if (!strcasecmp(optarg, "ssl3") || !strcasecmp(optarg, "sslv3"))
+ 					ssl_protocol = SSL3_VERSION;
+ 				else {
