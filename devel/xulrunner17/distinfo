@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.20 2016/01/20 22:14:13 ryoon Exp $
+$NetBSD: distinfo,v 1.21 2016/03/26 23:26:14 joerg Exp $
 
 SHA1 (firefox-17.0.11esr.source.tar.bz2) = 593153bc2658be0bdf6d1361a079d4ce8fd516bd
 RMD160 (firefox-17.0.11esr.source.tar.bz2) = 9797f1553bf20008e62df2713a22c5844e7e3bdc
@@ -83,6 +83,7 @@ SHA1 (patch-mb) = d1348344ad269df7008d857417551c594c9b9195
 SHA1 (patch-md) = 1369069901aacaa47d76753772236fe159d42362
 SHA1 (patch-me) = 93d5ef914cb00389cd5c2d92d228f47ec2436cb3
 SHA1 (patch-media_libcubeb_src_Makefile.in) = a5026b121bca81043340104d331b6343953d5dc8
+SHA1 (patch-media_libnestegg_src_align.h) = 9d5b11be15a24435f45a44a3df59dfa6d55782a6
 SHA1 (patch-media_libsydneyaudio_src_Makefile.in) = 7e55e41cdbcd193f57beb417e4b5c3511e8ddae0
 SHA1 (patch-media_libsydneyaudio_src_sydney_audio_pulseaudio.c) = 75b828c074ccc71ff430795e2b044bebd8ff69eb
 SHA1 (patch-mf) = 6d314e67e9ad99c43faf0aea53dd67a77802ba8a
