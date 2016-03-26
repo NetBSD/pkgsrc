@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 02:46:56 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/03/26 23:05:10 joerg Exp $
 
 SHA1 (lhs-0.1.tar.gz) = 74fbb0a982cd00c668c9f07b7c3c583759f14fd6
 RMD160 (lhs-0.1.tar.gz) = 176d8149d11383fc4d82e4a13991f156f3ab42ca
 SHA512 (lhs-0.1.tar.gz) = 38eaa65eea5e2ac1ec914e2a88d10402abab6d3f03349d24d4f0c7236f829ba7c775b0745fd8c87891e45819e47896b01f4e425b257e45c2a49f9e7845c0654a
 Size (lhs-0.1.tar.gz) = 10665 bytes
 SHA1 (patch-aa) = 682df4329c32b01438221ba78055761468ede8fa
-SHA1 (patch-ab) = 83591e01fc71e4d487b5a4b5d598a60f83d22fa9
-SHA1 (patch-ac) = 66e697aa31f17519c700bd7ba857c1faefe7dda6
-SHA1 (patch-configure) = 87b38dd13938dc9756530d34497502924ccff121
+SHA1 (patch-ab) = a066f92aa5f47e85863b23e92247c2fad8f3c5bf
+SHA1 (patch-ac) = 5359e9a017dc3e9ca4199b52691eb8727bdfa1f5
+SHA1 (patch-configure) = 21e675f56bd36f6bb880cb0179db952fa18a25a3
