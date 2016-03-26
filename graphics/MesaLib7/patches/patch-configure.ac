@@ -1,4 +1,4 @@
-$NetBSD: patch-configure.ac,v 1.1 2015/04/05 17:01:37 tnn Exp $
+$NetBSD: patch-configure.ac,v 1.2 2016/03/26 23:45:21 joerg Exp $
 
 --- configure.ac.orig	2011-10-15 00:43:58.000000000 +0000
 +++ configure.ac
@@ -11,3 +11,30 @@ $NetBSD: patch-configure.ac,v 1.1 2015/04/05 17:01:37 tnn Exp $
          ;;
      cygwin*)
          DEFINES="$DEFINES -DUSE_EXTERNAL_DXTN_LIB=1 -DIN_DRI_DRIVER"
+@@ -1430,7 +1432,7 @@ if test "x$enable_glu" = xyes; then
+         GLU_PC_LIB_PRIV="-lm"
+         if test "$enable_static" = no; then
+             GLU_LIB_DEPS="-lm"
+-            GLU_MESA_DEPS='-l$(GL_LIB)'
++            GLU_MESA_DEPS='$(COMPILER_RPATH_FLAG)$(prefix)/lib -l$(GL_LIB)'
+         else
+             GLU_LIB_DEPS=""
+             GLU_MESA_DEPS=""
+@@ -1509,7 +1511,7 @@ if test "x$enable_glw" = xyes; then
+     # If static, empty GLW_LIB_DEPS and add libs for programs to link
+     GLW_PC_LIB_PRIV="$GLW_PC_LIB_PRIV"
+     if test "$enable_static" = no; then
+-        GLW_MESA_DEPS='-l$(GL_LIB)'
++        GLW_MESA_DEPS='$(COMPILER_RPATH_FLAG)$(prefix)/lib -l$(GL_LIB)'
+         GLW_LIB_DEPS="$GLW_LIB_DEPS"
+     else
+         APP_LIB_DEPS="$APP_LIB_DEPS $GLW_LIB_DEPS"
+@@ -1574,7 +1576,7 @@ if test "x$enable_glut" = xyes; then
+ 
+     # If static, empty GLUT_LIB_DEPS and add libs for programs to link
+     if test "$enable_static" = no; then
+-        GLUT_MESA_DEPS='-l$(GLU_LIB) -l$(GL_LIB)'
++        GLUT_MESA_DEPS='$(COMPILER_RPATH_FLAG)$(prefix)/lib -l$(GLU_LIB) -l$(GL_LIB)'
+     else
+         APP_LIB_DEPS="$APP_LIB_DEPS $GLUT_LIB_DEPS"
+         GLUT_LIB_DEPS=""
