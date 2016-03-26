@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2014/11/24 12:53:19 mef Exp $
+# $NetBSD: Makefile,v 1.5 2016/03/26 07:53:32 richard Exp $
 
 DISTNAME=	libusb-compat-0.1.5
 CATEGORIES=	devel
@@ -14,6 +14,10 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	libusb.pc.in
+
+CPPFLAGS.SunOS+=	-Du_int8_t=uint8_t
+CPPFLAGS.SunOS+=	-Du_int16_t=uint16_t
+CPPFLAGS.SunOS+=	-Du_int32_t=uint32_t
 
 CONFLICTS=		libusb-[0-9]*
 
