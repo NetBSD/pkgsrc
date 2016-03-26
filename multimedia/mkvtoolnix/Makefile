@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2016/03/13 09:36:58 taca Exp $
+# $NetBSD: Makefile,v 1.78 2016/03/26 23:07:13 joerg Exp $
 
 DISTNAME=	mkvtoolnix-5.0.1
 PKGREVISION=	27
@@ -27,7 +27,9 @@ LDFLAGS.SunOS+=		-lintl
 
 INSTALL_ENV+=	SHELL=${SH:Q}
 
-.include "../../mk/bsd.prefs.mk"
+.include "../../lang/ruby/rubyversion.mk"
+
+BUILD_DEPENDS+=	${RUBY_PKGPREFIX}-rake>=0.8.7:../../devel/ruby-rake
 
 .if !empty(MAKE_JOBS)
 DRAKE_ARGS=	-j${MAKE_JOBS}
@@ -36,17 +38,12 @@ DRAKE_ARGS=	# empty
 .endif
 
 do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ruby drake ${DRAKE_ARGS}
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${LOCALBASE}/bin/${RAKE_NAME} ${DRAKE_ARGS}
 
 do-install:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${INSTALL_ENV} ruby drake install
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${INSTALL_ENV} ${LOCALBASE}/bin/${RAKE_NAME} install
 
 .include "options.mk"
-
-.if ${OPSYS} != "Darwin"
-.include "../../lang/ruby/buildlink3.mk"
-BUILDLINK_DEPMETHOD.${RUBY_BASE}=	build
-.endif
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/lzo/buildlink3.mk"
