@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2009/02/19 16:36:26 joerg Exp $
+$NetBSD: patch-aa,v 1.4 2016/03/27 22:43:40 jperkin Exp $
 
 --- Makefile.orig	Wed Jun 21 17:00:57 2000
 +++ Makefile	Tue Sep 23 10:15:48 2003
@@ -28,7 +28,7 @@ $NetBSD: patch-aa,v 1.3 2009/02/19 16:36:26 joerg Exp $
  install:	dog
 -	$(INSTALL) -m 644 dog.1 ${mandir}/man1
 -	$(INSTALL) -m 755 dog ${bindir}
-+	$(BSD_INSTALL_MAN) dog.1 ${DESTDIR}${mandir}/man1/dog.1
++	$(BSD_INSTALL_MAN) dog.1 ${DESTDIR}${prefix}/${PKGMANDIR}/man1/dog.1
 +	$(BSD_INSTALL_PROGRAM) dog ${DESTDIR}${bindir}/dog
  
  clean:
