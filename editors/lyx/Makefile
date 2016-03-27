@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2016/03/05 11:28:27 jperkin Exp $
+# $NetBSD: Makefile,v 1.51 2016/03/27 19:52:32 joerg Exp $
 
 DISTNAME=		lyx-2.1.2.2
 PKGREVISION=		4
@@ -186,8 +186,5 @@ SUBST_SED.python+=	-e 's,command("python -tt,command("${PYTHONBIN} -tt,'
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-
-CXXFLAGS+= ${CLANG_NO_VALUE_PROPAGATION_PASS}
-
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
