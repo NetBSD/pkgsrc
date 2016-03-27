@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2016/02/03 19:34:33 bouyer Exp $
+# $NetBSD: Makefile,v 1.9 2016/03/27 19:49:44 joerg Exp $
 #
 
 V=		4.0.1
@@ -46,6 +46,11 @@ SUBST_MESSAGE.netbsd5=	Substituting fabs() for fabsl() for NetBSD-5
 SUBST_FILES.netbsd5=	pcbnew/legacy_plugin.cpp        \
 			tools/test-nm-biu-to-ascii-mm-round-tripping.cpp
 SUBST_SED.netbsd5=	-e 's/fabsl/fabs/g'
+.endif
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+CXXFLAGS+=	-Wno-error=non-pod-varargs
 .endif
 
 .include "../../devel/swig/buildlink3.mk"
