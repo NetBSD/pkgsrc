@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.Darwin,v 1.1 2016/03/27 22:34:00 jperkin Exp $
+${PYSITELIB}/matplotlib/backends/_macosx.so
