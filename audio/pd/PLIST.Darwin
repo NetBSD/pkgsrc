@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.Darwin,v 1.1 2016/03/27 22:50:47 jperkin Exp $
+bin/pd-watchdog
