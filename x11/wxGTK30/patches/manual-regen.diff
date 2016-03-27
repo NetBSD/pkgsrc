@@ -1,6 +1,6 @@
-diff -ru wxWidgets-3.0.2.dist/build/bakefiles/common.bkl wxWidgets-3.0.2/build/bakefiles/common.bkl
---- wxWidgets-3.0.2.dist/build/bakefiles/common.bkl	2014-10-06 14:33:44.000000000 -0700
-+++ wxWidgets-3.0.2/build/bakefiles/common.bkl	2016-02-13 18:31:34.000000000 -0800
+diff -ru wxWidgets-3.0.2.old/build/bakefiles/common.bkl wxWidgets-3.0.2/build/bakefiles/common.bkl
+--- wxWidgets-3.0.2.old/build/bakefiles/common.bkl	2016-03-24 13:27:07.034451400 +0000
++++ wxWidgets-3.0.2/build/bakefiles/common.bkl	2016-03-24 13:27:18.295690311 +0000
 @@ -708,7 +708,6 @@
          <if cond="FORMAT=='autoconf'">
              <res-include>$(RCDEFDIR)</res-include>
@@ -9,10 +9,9 @@ diff -ru wxWidgets-3.0.2.dist/build/bakefiles/common.bkl wxWidgets-3.0.2/build/b
          </if>
          <win32-res>$(WXTOPDIR)src/msw/version.rc</win32-res>
  
-Only in wxWidgets-3.0.2/build/bakefiles: common.bkl.orig
-diff -ru wxWidgets-3.0.2.dist/build/bakefiles/config.bkl wxWidgets-3.0.2/build/bakefiles/config.bkl
---- wxWidgets-3.0.2.dist/build/bakefiles/config.bkl	2014-10-06 14:33:44.000000000 -0700
-+++ wxWidgets-3.0.2/build/bakefiles/config.bkl	2016-02-13 18:31:34.000000000 -0800
+diff -ru wxWidgets-3.0.2.old/build/bakefiles/config.bkl wxWidgets-3.0.2/build/bakefiles/config.bkl
+--- wxWidgets-3.0.2.old/build/bakefiles/config.bkl	2016-03-24 13:27:07.034623707 +0000
++++ wxWidgets-3.0.2/build/bakefiles/config.bkl	2016-03-24 13:27:18.296182090 +0000
 @@ -425,8 +425,6 @@
          <option name="EXTRALIBS_SDL"/>
          <option name="CXXWARNINGS"/>
@@ -22,9 +21,9 @@ diff -ru wxWidgets-3.0.2.dist/build/bakefiles/config.bkl wxWidgets-3.0.2/build/b
          <option name="SAMPLES_RPATH_FLAG"/>
  
          <!-- see configure.in; it's required by some samples on Mac OS X -->
-diff -ru wxWidgets-3.0.2.dist/build/bakefiles/regex.bkl wxWidgets-3.0.2/build/bakefiles/regex.bkl
---- wxWidgets-3.0.2.dist/build/bakefiles/regex.bkl	2014-10-06 14:33:44.000000000 -0700
-+++ wxWidgets-3.0.2/build/bakefiles/regex.bkl	2016-02-13 18:31:34.000000000 -0800
+diff -ru wxWidgets-3.0.2.old/build/bakefiles/regex.bkl wxWidgets-3.0.2/build/bakefiles/regex.bkl
+--- wxWidgets-3.0.2.old/build/bakefiles/regex.bkl	2016-03-24 13:27:07.035148244 +0000
++++ wxWidgets-3.0.2/build/bakefiles/regex.bkl	2016-03-24 13:27:18.296378774 +0000
 @@ -26,16 +26,13 @@
          <if cond="wxUSE_REGEX=='builtin'">$(TOP_SRCDIR)src/regex</if>
      </set>
@@ -56,9 +55,40 @@ diff -ru wxWidgets-3.0.2.dist/build/bakefiles/regex.bkl wxWidgets-3.0.2/build/ba
 +    </dll>
  
  </makefile>
-diff -ru wxWidgets-3.0.2.dist/build/bakefiles/wx.bkl wxWidgets-3.0.2/build/bakefiles/wx.bkl
---- wxWidgets-3.0.2.dist/build/bakefiles/wx.bkl	2014-10-06 14:33:44.000000000 -0700
-+++ wxWidgets-3.0.2/build/bakefiles/wx.bkl	2016-02-13 18:31:34.000000000 -0800
+diff -ru wxWidgets-3.0.2.old/build/bakefiles/scintilla.bkl wxWidgets-3.0.2/build/bakefiles/scintilla.bkl
+--- wxWidgets-3.0.2.old/build/bakefiles/scintilla.bkl	2016-03-24 13:27:07.035704210 +0000
++++ wxWidgets-3.0.2/build/bakefiles/scintilla.bkl	2016-03-24 13:29:43.464485658 +0000
+@@ -43,12 +43,17 @@
+         <if cond="SHARED=='1' and MONOLITHIC=='0'">WXUSINGDLL</if>
+     </set>
+ 
+-    <lib id="wxscintilla" template="3rdparty_lib,wxscintilla_cppflags,msvc_setup_h"
++    <dll id="wxscintilla" template="3rdparty_lib,wxscintilla_cppflags,msvc_setup_h"
+          cond="USE_STC=='1' and BUILDING_LIB=='1'">
+         <if cond="FORMAT!='autoconf'">
+             <include>$(SETUPHDIR)</include>
+             <include>$(TOP_SRCDIR)include</include>
+         </if>
++        <dllname>
++            $(id)$(WXUNICODEFLAG)$(WXDEBUGFLAG)$(WX_LIB_FLAVOUR)-$(WX_RELEASE)
++	</dllname>
++        <version>$(WX_VERSION)</version>
++        <so_version>$(WXSOVERSION)</so_version>
+         <define>$(wxscintilla_usingdll)</define>
+         <define>__WX$(TOOLKIT)__</define>
+         <define>$(WXUNIV_DEFINE)</define>
+@@ -176,7 +181,7 @@
+             src/stc/scintilla/src/ViewStyle.cxx
+             src/stc/scintilla/src/XPM.cxx
+         </sources>
+-    </lib>
++    </dll>
+ 
+     <!-- used to conditionally link against wxscintilla only if it's enabled -->
+     <set var="wxscintilla_library_link">
+diff -ru wxWidgets-3.0.2.old/build/bakefiles/wx.bkl wxWidgets-3.0.2/build/bakefiles/wx.bkl
+--- wxWidgets-3.0.2.old/build/bakefiles/wx.bkl	2016-03-24 13:27:07.034706125 +0000
++++ wxWidgets-3.0.2/build/bakefiles/wx.bkl	2016-03-24 13:27:18.296670656 +0000
 @@ -95,17 +95,11 @@
              <command>
                  $(INSTALL_DIR) $(DESTDIR)$(BINDIR)
@@ -78,9 +108,9 @@ diff -ru wxWidgets-3.0.2.dist/build/bakefiles/wx.bkl wxWidgets-3.0.2/build/bakef
          <set var="RCDEFS_H">
              <if cond="TOOLKIT=='MSW'">msw/rcdefs.h</if>
          </set>
-diff -ru wxWidgets-3.0.2.dist/utils/wxrc/wxrc.bkl wxWidgets-3.0.2/utils/wxrc/wxrc.bkl
---- wxWidgets-3.0.2.dist/utils/wxrc/wxrc.bkl	2014-10-06 14:33:44.000000000 -0700
-+++ wxWidgets-3.0.2/utils/wxrc/wxrc.bkl	2016-02-13 18:31:34.000000000 -0800
+diff -ru wxWidgets-3.0.2.old/utils/wxrc/wxrc.bkl wxWidgets-3.0.2/utils/wxrc/wxrc.bkl
+--- wxWidgets-3.0.2.old/utils/wxrc/wxrc.bkl	2016-03-24 13:27:06.388358531 +0000
++++ wxWidgets-3.0.2/utils/wxrc/wxrc.bkl	2016-03-24 13:27:18.296926708 +0000
 @@ -21,7 +21,7 @@
          <modify-target target="install_wxrc">
              <command>
