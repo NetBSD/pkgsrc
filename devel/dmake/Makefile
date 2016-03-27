@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2014/01/08 21:47:55 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2016/03/27 23:08:14 jperkin Exp $
 
 DISTNAME=	dmake-4.12.2
 CATEGORIES=	devel
@@ -20,6 +20,8 @@ INSTALLATION_DIRS=	bin share/dmake ${PKGMANDIR}/man1
 
 .if ${OPSYS} == "SunOS"
 PLIST_SUBST+=	STARTUPOS=solaris
+.elif ${OPSYS} == "Darwin"
+PLIST_SUBST+=	STARTUPOS=macosx
 .else
 PLIST_SUBST+=	STARTUPOS=linux
 .endif
