@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2007/08/31 21:48:37 agc Exp $
+$NetBSD: patch-aa,v 1.7 2016/03/27 22:38:33 jperkin Exp $
 
 --- makefile.orig	2007-08-31 12:15:01.000000000 +0100
 +++ makefile	2007-08-31 12:16:47.000000000 +0100
@@ -23,4 +23,4 @@ $NetBSD: patch-aa,v 1.6 2007/08/31 21:48:37 agc Exp $
 +install: crashme pddet
 +	${BSD_INSTALL_PROGRAM} crashme ${DESTDIR}${PREFIX}/sbin/crashme
 +	${BSD_INSTALL_PROGRAM} pddet ${DESTDIR}${PREFIX}/sbin/pddet
-+	${BSD_INSTALL_MAN} crashme.1 ${DESTDIR}${PREFIX}/man/man1
++	${BSD_INSTALL_MAN} crashme.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
