@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2016/03/05 11:28:07 jperkin Exp $
+# $NetBSD: Makefile,v 1.77 2016/03/27 22:53:39 jperkin Exp $
 
 DISTNAME=		ircii-${VERS}
 PKGNAME=		ircII-${VERS}
@@ -25,7 +25,7 @@ PLIST_SUBST+=	VERS=${VERS:Q}
 # this in pkgsrc, we have to set CONFIGURE_HAS_MANDIR=no so that
 # we don't pass --mandir=${PREFIX}/man as well, last.
 CONFIGURE_HAS_MANDIR=	no
-CONFIGURE_ARGS+=	--mandir=${DESTDIR}${PREFIX}/man
+CONFIGURE_ARGS+=	--mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
 
 WRKSRC=			${WRKDIR}/ircii-${VERS}
 GNU_CONFIGURE=		yes
