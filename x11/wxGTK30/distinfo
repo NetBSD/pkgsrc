@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.6 2016/02/17 10:16:05 dbj Exp $
+$NetBSD: distinfo,v 1.7 2016/03/27 17:11:37 joerg Exp $
 
-SHA1 (wxWidgets-3.0.2-libtool.2.diff.bz2) = 789f0ff586f36ee88ebd3016d959600e2e8e76dc
-RMD160 (wxWidgets-3.0.2-libtool.2.diff.bz2) = a18e8007c4a51796a5178d96550c3596393ea2b1
-SHA512 (wxWidgets-3.0.2-libtool.2.diff.bz2) = af02e74b68625a2315531ddde99fd1ca58f77b7bc73d24c4d6baa1e42efb368314f827976a6702efa39fa4b77b9746ea0009ee17b5911928e6d477c251fee8df
-Size (wxWidgets-3.0.2-libtool.2.diff.bz2) = 201508 bytes
+SHA1 (wxWidgets-3.0.2-libtool.3.diff.bz2) = ffc3fbec9b1a8a9c19ac5f3750c78559b6bb2c81
+RMD160 (wxWidgets-3.0.2-libtool.3.diff.bz2) = 54f4aa932208172496e620def1d854602d87b12e
+SHA512 (wxWidgets-3.0.2-libtool.3.diff.bz2) = 31ea745d9d989e20fcb16e152c5312080d4eca5da9c2b27bf1a9ce7c8d40479711959bce3e33e6d3f10116c85a00e8f0b0b5699633966ebaf5afb418e69e6488
+Size (wxWidgets-3.0.2-libtool.3.diff.bz2) = 209972 bytes
 SHA1 (wxWidgets-3.0.2.tar.bz2) = 6461eab4428c0a8b9e41781b8787510484dea800
 RMD160 (wxWidgets-3.0.2.tar.bz2) = a7f404c8a64ca68fa31e408bded4387c2722196b
 SHA512 (wxWidgets-3.0.2.tar.bz2) = 098f79863103f3be0b7e21e4f0f1b34ab5277ef0033c1ef1387a9c673b0e0b76a2d732b183fa11b22cfcbbfdb7a4884f243d12f65cd49baa1772852307b393c4
