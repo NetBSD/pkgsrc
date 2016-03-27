@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2016/03/05 11:29:03 jperkin Exp $
+# $NetBSD: Makefile,v 1.68 2016/03/27 16:56:49 riastradh Exp $
 #
 
 DISTNAME=		ekiga-3.2.6
@@ -27,6 +27,7 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
 CXXFLAGS+=		-std=c++11
+GCC_REQD+=		4.7
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
