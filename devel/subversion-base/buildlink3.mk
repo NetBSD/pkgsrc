@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.42 2016/03/05 11:27:46 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.43 2016/03/28 15:44:49 khorben Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 .include "../../devel/subversion/Makefile.version"
@@ -30,6 +30,7 @@ BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.7.15.1
 .include "../../devel/apr/buildlink3.mk"
 .include "../../devel/apr-util/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .endif # SUBVERSION_BASE_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-subversion-base
