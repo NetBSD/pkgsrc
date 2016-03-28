@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/03/28 13:13:54 kamil Exp $
+# $NetBSD: Makefile,v 1.2 2016/03/28 15:15:55 kamil Exp $
 
 DISTNAME=	lldb-3.8.0.src
 PKGNAME=	${DISTNAME:S/.src//}
@@ -21,7 +21,6 @@ USE_LANGUAGES=		c c++
 USE_CMAKE=		yes
 GCC_REQD+=		4.8
 PY_PATCHPLIST=		yes
-PLIST_SUBST+=		PYSITELIB=${PYSITELIB}
 
 CMAKE_ARGS+=	-DLLVM_CONFIG=${LLVM_CONFIG_PATH}
 CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Release
@@ -135,5 +134,6 @@ DEPENDS+=	clang-${PKGVERSION_NOREV}{,nb*}:../../lang/clang
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/tool.mk"
+.include "../../lang/python/extension.mk"
 .include "../../devel/swig/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
