@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2016/03/26 23:07:13 joerg Exp $
+# $NetBSD: Makefile,v 1.79 2016/03/28 03:47:46 taca Exp $
 
 DISTNAME=	mkvtoolnix-5.0.1
 PKGREVISION=	27
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.bunkus.org/videotools/mkvtoolnix/
 COMMENT=	Set of tools to create, alter and inspect Matroska files
 LICENSE=	gnu-gpl-v2
+
+BUILD_DEPENDS+=	${RUBY_BASE}>=${RUBY_VERSION}:${RUBY_SRCDIR}
 
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
@@ -27,10 +29,6 @@ LDFLAGS.SunOS+=		-lintl
 
 INSTALL_ENV+=	SHELL=${SH:Q}
 
-.include "../../lang/ruby/rubyversion.mk"
-
-BUILD_DEPENDS+=	${RUBY_PKGPREFIX}-rake>=0.8.7:../../devel/ruby-rake
-
 .if !empty(MAKE_JOBS)
 DRAKE_ARGS=	-j${MAKE_JOBS}
 .else
@@ -45,6 +43,7 @@ do-install:
 
 .include "options.mk"
 
+.include "../../lang/ruby/rubyversion.mk"
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/lzo/buildlink3.mk"
 .include "../../audio/flac/buildlink3.mk"
