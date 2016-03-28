@@ -1,0 +1,14 @@
+$NetBSD: patch-source_Utility_CMakeLists.txt,v 1.1 2016/03/28 13:13:55 kamil Exp $
+
+--- source/Utility/CMakeLists.txt.orig	2015-12-06 02:57:30.000000000 +0000
++++ source/Utility/CMakeLists.txt
+@@ -17,4 +17,9 @@ add_lldb_library(lldbUtility
+   TaskPool.cpp
+   TimeSpecTimeout.cpp
+   UriParser.cpp
++  regcomp.c
++  regerror.c
++  regexec.c
++  regfree.c
++  regstrlcpy.c
+   )
