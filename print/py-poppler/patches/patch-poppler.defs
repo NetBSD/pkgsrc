@@ -1,13 +1,35 @@
-$NetBSD: patch-poppler.defs,v 1.2 2013/10/09 09:48:22 wiz Exp $
+$NetBSD: patch-poppler.defs,v 1.3 2016/03/29 21:19:56 khorben Exp $
 
 Removed functions in poppler-0.16.
 
 API change in poppler-0.15, see
 http://cgit.freedesktop.org/poppler/poppler/commit/?id=b257428150e2c13dcc24fd8f75e4ee2c679ab414
 
+Add fixes for poppler-0.39.0, see
+https://gitweb.gentoo.org/repo/gentoo.git/commit/?id=6fbcb03b918df48f33d24326640209de3d031074
+
 --- poppler.defs.orig	2009-09-27 09:07:59.000000000 +0000
 +++ poppler.defs
-@@ -1646,58 +1646,6 @@
+@@ -578,18 +578,6 @@
+   )
+ )
+ 
+-(define-enum Orientation
+-  (in-module "Poppler")
+-  (c-name "PopplerOrientation")
+-  (gtype-id "POPPLER_TYPE_ORIENTATION")
+-  (values
+-    '("portrait" "POPPLER_ORIENTATION_PORTRAIT")
+-    '("landscape" "POPPLER_ORIENTATION_LANDSCAPE")
+-    '("upsidedown" "POPPLER_ORIENTATION_UPSIDEDOWN")
+-    '("seascape" "POPPLER_ORIENTATION_SEASCAPE")
+-  )
+-)
+-
+ (define-enum PageTransitionType
+   (in-module "Poppler")
+   (c-name "PopplerPageTransitionType")
+@@ -1646,58 +1634,6 @@
    (return-type "GType")
  )
  
@@ -66,7 +88,7 @@ http://cgit.freedesktop.org/poppler/poppler/commit/?id=b257428150e2c13dcc24fd8f7
  (define-method render
    (of-object "PopplerPage")
    (c-name "poppler_page_render")
-@@ -1796,6 +1744,12 @@
+@@ -1796,6 +1732,12 @@
    (of-object "PopplerPage")
    (c-name "poppler_page_get_text")
    (return-type "char*")
