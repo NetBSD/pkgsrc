@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2016/03/05 11:29:10 jperkin Exp $
+# $NetBSD: Makefile,v 1.20 2016/03/29 22:01:13 joerg Exp $
 
 DISTNAME=	pen-0.17.2
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	net
 MASTER_SITES=	http://siag.nu/pub/pen/
 
