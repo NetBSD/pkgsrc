@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/03/23 15:10:46 hauke Exp $
+# $NetBSD: Makefile,v 1.4 2016/03/29 22:03:08 joerg Exp $
 
 GITHUB_PROJECT=	shoebill
 DISTNAME=	0.0.5
@@ -30,7 +30,7 @@ INSTALL_UNSTRIPPED= yes
 
 do-build:
 	( cd ${WRKSRC}/sdl-gui && \
-		${ENV} CC=${CC:Q} CFLAGS=${CFLAGS:Q} LDFLAGS=${LDFLAGS:Q} \
+		${PKGSRC_SETENV} CC=${CC:Q} CFLAGS=${CFLAGS:Q} LDFLAGS=${LDFLAGS:Q} \
 		${SH} ./lin_build.sh )
 
 do-install:
