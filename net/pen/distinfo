@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.11 2016/03/29 21:46:48 khorben Exp $
+$NetBSD: distinfo,v 1.12 2016/03/29 22:01:13 joerg Exp $
 
 SHA1 (pen-0.17.2.tar.gz) = 7277259c552b659ece6fef1d4bc55ca9fd927488
 RMD160 (pen-0.17.2.tar.gz) = 3e7152cad72f3893c171db8e1c85cae37418aeb6
 SHA512 (pen-0.17.2.tar.gz) = c84057ab6226f84cc3f024cf25bfb941be297fff42b2d027ad738ea8e7aaa88fec18668152c8dc283b19c93cd8ef8766430ef865d75a701dc1117148751e200a
 Size (pen-0.17.2.tar.gz) = 129285 bytes
-SHA1 (patch-pen.c) = 1ece0ea00a12c5c1b3d31942e2d2fce6e3e2bf6f
+SHA1 (patch-pen.c) = 6c5315d429d26577ebdb9689ff71d9b4512f63ea
