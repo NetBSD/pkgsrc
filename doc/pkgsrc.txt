@@ -5774,6 +5774,11 @@ INSTALL_MAN
 
 Some other variables are:
 
+INSTALL_UNSTRIPPED
+
+    If set to yes, do not run strip(1) when installing binaries. Any debugging
+    sections and symbols present in binaries will be preserved.
+
 INSTALLATION_DIRS
 
     A list of directories relative to PREFIX that are created by pkgsrc at the
