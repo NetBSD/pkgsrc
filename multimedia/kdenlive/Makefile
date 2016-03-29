@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2016/03/05 11:29:00 jperkin Exp $
+# $NetBSD: Makefile,v 1.37 2016/03/29 10:26:41 markd Exp $
 
 DISTNAME=	kdenlive-0.9.6
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	multimedia
 MASTER_SITES=	http://download.kde.org/stable/kdenlive/0.9.6/src/
 EXTRACT_SUFX=	.tar.bz2
@@ -21,6 +21,11 @@ DEPENDS+=	dvdauthor>=0.6.18:../../multimedia/dvdauthor
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	msgfmt perl pkg-config
+
+CMAKE_ARGS+=	-DWITH_V4L=OFF
+
+post-install:
+	${RM} ${DESTDIR}${PREFIX}/share/icons/oxygen/*/mimetypes/application-x-kdenlivetitle.png
 
 .include "../../meta-pkgs/kde4/kde4.mk"
 .include "../../devel/qjson/buildlink3.mk"
