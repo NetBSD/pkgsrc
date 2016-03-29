@@ -1,4 +1,4 @@
-$NetBSD: patch-modules_clx_new-clx_link.sh.in,v 1.1 2014/12/10 23:27:01 joerg Exp $
+$NetBSD: patch-modules_clx_new-clx_link.sh.in,v 1.2 2016/03/29 21:58:40 joerg Exp $
 
 --- modules/clx/new-clx/link.sh.in.orig	2014-12-10 22:18:19.000000000 +0000
 +++ modules/clx/new-clx/link.sh.in
@@ -7,7 +7,7 @@ $NetBSD: patch-modules_clx_new-clx_link.sh.in,v 1.1 2014/12/10 23:27:01 joerg Ex
    CLISP_LINKKIT="$absolute_linkkitdir" CLISP="${CLISP}"
  NEW_FILES="clx.o"
 -NEW_LIBS="${NEW_FILES} @X_LIBS@ @X_PRE_LIBS@ -lX11"
-+NEW_LIBS="${NEW_FILES} -L${X11BASE}/lib @X_LIBS@ @X_PRE_LIBS@ -lX11"
++NEW_LIBS="${NEW_FILES} ${COMPILER_RPATH_FLAG}${X11BASE}/lib -L${X11BASE}/lib @X_LIBS@ @X_PRE_LIBS@ -lX11"
  NEW_MODULES="clx"
  TO_PRELOAD='clx-preload.lisp'
  TO_LOAD='clx image resource'
