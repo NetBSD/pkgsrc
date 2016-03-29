@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/02/25 08:27:03 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2016/03/29 10:08:08 markd Exp $
 
 DISTNAME=	opencv_contrib-3.1.0
 PKGNAME=	${DISTNAME:S/_contrib/-contrib-face/}
@@ -36,6 +36,7 @@ CXXFLAGS+=		-std=c++11
 
 CMAKE_ARGS+=		-DZLIB_ROOT=${BUILDLINK_PREFIX.zlib}
 CMAKE_ARGS.SunOS+=	-DENABLE_PRECOMPILED_HEADERS=NO
+CMAKE_ARGS+=		-DWITH_EIGEN=NO
 
 CMAKE_ARGS+=		-DOPENCV_EXTRA_MODULES_PATH=${WRKDIR}/${DISTNAME}/modules
 CMAKE_ARGS+=		-DBUILD_opencv_adas=OFF
@@ -45,6 +46,7 @@ CMAKE_ARGS+=		-DBUILD_opencv_ccalib=OFF
 CMAKE_ARGS+=		-DBUILD_opencv_contrib_world=OFF
 CMAKE_ARGS+=		-DBUILD_opencv_cvv=OFF
 CMAKE_ARGS+=		-DBUILD_opencv_datasets=OFF
+CMAKE_ARGS+=		-DBUILD_opencv_hdf=OFF
 CMAKE_ARGS+=		-DBUILD_opencv_latentsvm=OFF
 CMAKE_ARGS+=		-DBUILD_opencv_line_descriptor=OFF
 CMAKE_ARGS+=		-DBUILD_opencv_matlab=OFF
