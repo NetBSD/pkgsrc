@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/02/06 15:05:14 jaapb Exp $
+# $NetBSD: Makefile,v 1.2 2016/03/29 22:04:26 joerg Exp $
 
 DISTNAME=	pgocaml-2.2
 CATEGORIES=	databases
@@ -19,6 +19,7 @@ OCAML_USE_OASIS= yes
 
 .include "../../devel/ocaml-batteries/buildlink3.mk"
 .include "../../devel/pcre-ocaml/buildlink3.mk"
+.include "../../lang/camlp4/buildlink3.mk"
 .include "../../textproc/ocaml-csv/buildlink3.mk"
 .include "../../time/ocaml-calendar/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
