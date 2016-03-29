@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.122 2016/03/05 11:28:37 jperkin Exp $
+# $NetBSD: Makefile,v 1.123 2016/03/29 22:01:39 joerg Exp $
 
 DISTNAME=	digikam-4.13.0
 PKGREVISION=	1
@@ -21,6 +21,8 @@ REPLACE_PERL=	core/data/scripts/digitaglinktree/digitaglinktree
 CMAKE_ARGS+=    -DMYSQLD_PATH:PATH=${BUILDLINK_PREFIX.mysql-server}/libexec
 CMAKE_ARGS+=	-DENABLE_OPENCV3:BOOL=ON
 USE_TOOLS+=	gawk msgfmt perl:run pkg-config
+
+CXXFLAGS.NetBSD+=	-D_KERNTYPES
 
 .include "options.mk"
 
