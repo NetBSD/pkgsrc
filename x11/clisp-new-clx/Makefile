@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2012/07/30 01:46:24 dholland Exp $
+# $NetBSD: Makefile,v 1.5 2016/03/29 21:58:40 joerg Exp $
 #
 
 CLISP_MODULE=	clx/new-clx
 
 PKGNAME=	clisp-new-clx-${CLISP_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=clisp/}
 
