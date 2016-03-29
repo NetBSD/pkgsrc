@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.28 2015/01/29 10:34:14 obache Exp $
+@comment $NetBSD: PLIST,v 1.29 2016/03/29 21:59:21 joerg Exp $
 bin/groonga
 bin/groonga-benchmark
 bin/groonga-suggest-create-dataset
 ${PLIST.learner}bin/groonga-suggest-httpd
 ${PLIST.learner}bin/groonga-suggest-learner
+bin/onig-config
 include/groonga/groonga.h
 include/groonga/groonga/command.h
 include/groonga/groonga/expr.h
@@ -17,13 +18,18 @@ include/groonga/groonga/token.h
 include/groonga/groonga/token_filter.h
 include/groonga/groonga/tokenizer.h
 include/groonga/groonga/util.h
+include/oniggnu.h
+include/onigposix.h
+include/oniguruma.h
 lib/groonga/plugins/query_expanders/tsv.la
 lib/groonga/plugins/suggest/suggest.la
 lib/groonga/plugins/table/table.la
 lib/groonga/plugins/token_filters/stop_word.la
 ${PLIST.mecab}lib/groonga/plugins/tokenizers/mecab.la
 lib/libgroonga.la
+lib/libonig.la
 lib/pkgconfig/groonga.pc
+lib/pkgconfig/oniguruma.pc
 man/ja/man1/groonga.1
 man/man1/groonga.1
 ${PLIST.httpd}sbin/groonga-httpd
