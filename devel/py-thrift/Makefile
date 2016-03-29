@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2016/03/09 20:49:59 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2 2016/03/29 23:33:20 khorben Exp $
 
 DISTNAME=	thrift-0.9.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=t/thrift/}
 
