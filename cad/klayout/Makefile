@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/03/16 12:43:22 mef Exp $
+# $NetBSD: Makefile,v 1.3 2016/03/29 22:05:00 joerg Exp $
 
 DISTNAME=	klayout-0.24.5
 CATEGORIES=	cad
@@ -38,8 +38,10 @@ OTHER_BIN= \
 	strmcmp \
 	strmxor
 
+CXXFLAGS+=	${CLANG_NO_VALUE_PROPAGATION_PASS}
+
 do-build:
-	(cd ${WRKSRC}; sh build.sh -python python${PYVERSSUFFIX} -qt ${PREFIX}/qt4)
+	cd ${WRKSRC} && ${PKGSRC_SETENV} ${MAKE_ENV} sh build.sh -python python${PYVERSSUFFIX} -qt ${PREFIX}/qt4
 
 do-install:
 	(cd ${WRKSRC}; \
