@@ -1,6 +1,7 @@
-$NetBSD: patch-libkface_recognition-opencv-lbph_facerec_borrowed.h,v 1.1 2015/11/03 20:28:57 markd Exp $
+$NetBSD: patch-libkface_recognition-opencv-lbph_facerec_borrowed.h,v 1.2 2016/03/29 10:14:05 markd Exp $
 
 opencv3 support. https://bugs.kde.org/show_bug.cgi?id=349601
+opencv3.1 - https://git.reviewboard.kde.org/r/126833/ with test reversed
 
 --- libkface/recognition-opencv-lbph/facerec_borrowed.h.orig	2015-09-03 21:22:44.000000000 +0000
 +++ libkface/recognition-opencv-lbph/facerec_borrowed.h
@@ -30,7 +31,30 @@ opencv3 support. https://bugs.kde.org/show_bug.cgi?id=349601
  
      static cv::Ptr<LBPHFaceRecognizer> create(int radius=1, int neighbors=8, int grid_x=8, int grid_y=8, double threshold = DBL_MAX, PredictionStatistics statistics = NearestNeighbor);
  
-@@ -139,6 +148,34 @@ public:
+@@ -116,6 +125,8 @@ public:
+      */
+     void update(cv::InputArrayOfArrays src, cv::InputArray labels);
+ 
++
++#if OPENCV_VERSION < OPENCV_MAKE_VERSION(3,1,0)
+     /**
+      * Predicts the label of a query image in src.
+      */
+@@ -125,6 +136,13 @@ public:
+      * Predicts the label and confidence for a given sample.
+      */
+     void predict(cv::InputArray _src, int &label, double &dist) const;
++#else
++    using cv::face::FaceRecognizer::predict;
++    /*
++     * Predict
++     */
++    void predict(cv::InputArray src, cv::Ptr<cv::face::PredictCollector> collector, const int state = 0) const override;
++#endif
+ 
+     /**
+      * See FaceRecognizer::load().
+@@ -139,6 +157,34 @@ public:
      /**
       * Getter functions.
       */
@@ -65,7 +89,7 @@ opencv3 support. https://bugs.kde.org/show_bug.cgi?id=349601
      int neighbors() const { return m_neighbors; }
      int radius()    const { return m_radius;    }
      int grid_x()    const { return m_grid_x;    }
-@@ -147,6 +184,8 @@ public:
+@@ -147,6 +193,8 @@ public:
      // NOTE: Implementation done through CV_INIT_ALGORITHM macro from OpenCV.
      cv::AlgorithmInfo* info() const;
  
