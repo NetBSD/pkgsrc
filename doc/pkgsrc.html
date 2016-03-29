@@ -584,7 +584,7 @@ minutes!</p>
       grown a lot, and now supports the following platforms:</p>
 <div class="table">
 <a name="supported-platforms"></a><p class="title"><b>Table 1.1. Platforms supported by pkgsrc</b></p>
-<div class="table-contents"><table summary="Platforms supported by pkgsrc" border="1">
+<div class="table-contents"><table class="table" summary="Platforms supported by pkgsrc" border="1">
 <colgroup>
 <col>
 <col>
@@ -4283,7 +4283,7 @@ PATCHDIR= ${.CURDIR}/../xemacs/patches
 <p>Some typical examples:</p>
 <div class="table">
 <a name="patch-examples"></a><p class="title"><b>Table 11.1. Patching examples</b></p>
-<div class="table-contents"><table summary="Patching examples" border="1">
+<div class="table-contents"><table class="table" summary="Patching examples" border="1">
 <colgroup>
 <col>
 <col>
@@ -6872,6 +6872,11 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
 </dl></div>
 <p>Some other variables are:</p>
 <div class="variablelist"><dl class="variablelist">
+<dt><span class="term"><code class="varname">INSTALL_UNSTRIPPED</code></span></dt>
+<dd><p>If set to <code class="literal">yes</code>, do not run <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?strip+1+NetBSD-5.0.1+i386"><span class="citerefentry"><span class="refentrytitle">strip</span>(1)</span></a>
+      when installing binaries. Any debugging sections and symbols present in
+      binaries will be preserved.
+      </p></dd>
 <dt><span class="term"><code class="varname">INSTALLATION_DIRS</code></span></dt>
 <dd><p>A list of directories relative to
       <code class="varname">PREFIX</code> that are created by pkgsrc at the
@@ -7359,7 +7364,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="tools.questions"></a>18.4. Questions regarding the tools</h2></div></div></div>
 <div class="qandaset">
-<a name="idm76281232"></a><dl>
+<a name="idm76828792"></a><dl>
 <dt>18.4.1. <a href="#tools.new">How do I add a new tool?</a>
 </dt>
 <dt>18.4.2. <a href="#tools.listall">How do I get a list of all available
@@ -7378,7 +7383,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.new"></a><a name="idm76280848"></a><p><b>18.4.1.</b></p>
+<a name="tools.new"></a><a name="idm76828408"></a><p><b>18.4.1.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I add a new tool?</p></td>
 </tr>
@@ -7388,7 +7393,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.listall"></a><a name="idm76279824"></a><p><b>18.4.2.</b></p>
+<a name="tools.listall"></a><a name="idm76827384"></a><p><b>18.4.2.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I get a list of all available
 	tools?</p></td>
@@ -7399,7 +7404,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.used"></a><a name="idm76278800"></a><p><b>18.4.3.</b></p>
+<a name="tools.used"></a><a name="idm76826360"></a><p><b>18.4.3.</b></p>
 </td>
 <td align="left" valign="top"><p>How can I get a list of all the tools that a
 	package is using while being built? I want to know whether it
@@ -8597,7 +8602,7 @@ SunPro C++  __SUNPRO_CC (0x580 for Sun C++ 5.8)
 	link to a shared library it needs. The following functions are
 	known to cause this error message over and over.</p>
 <div class="informaltable">
-<a name="undefined-reference-functions"></a><table border="1">
+<a name="undefined-reference-functions"></a><table class="informaltable" border="1">
 <colgroup>
 <col>
 <col>
@@ -9560,7 +9565,7 @@ place.</p></li>
 	and if you still don't have the answer, ask on the
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset">
-<a name="idm77810320"></a><dl>
+<a name="idm78353784"></a><dl>
 <dt>22.1. <a href="#devfaq.makeflags">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
@@ -9605,7 +9610,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="idm77809936"></a><p><b>22.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="idm78353400"></a><p><b>22.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9621,7 +9626,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="idm77805968"></a><p><b>22.2.</b></p>
+<a name="devfaq.make"></a><a name="idm78349432"></a><p><b>22.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9639,7 +9644,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="idm77801488"></a><p><b>22.3.</b></p>
+<a name="devfaq.cc"></a><a name="idm78344952"></a><p><b>22.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9657,7 +9662,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="idm77797392"></a><p><b>22.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="idm78340856"></a><p><b>22.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9670,7 +9675,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="idm77795088"></a><p><b>22.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="idm78338552"></a><p><b>22.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9686,7 +9691,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="idm77792016"></a><p><b>22.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="idm78335480"></a><p><b>22.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9710,7 +9715,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="idm77783952"></a><p><b>22.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="idm78327416"></a><p><b>22.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9735,7 +9740,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="idm77780112"></a><p><b>22.8.</b></p>
+<a name="devfaq.documentation"></a><a name="idm78323704"></a><p><b>22.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9783,7 +9788,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="idm77773712"></a><p><b>22.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="idm78317176"></a><p><b>22.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
@@ -9954,7 +9959,7 @@ solution is given.  After applying the solution be sure to
 <span class="command"><strong>make print-PLIST</strong></span> and ensure it is correct.</p>
 <div class="table">
 <a name="plist-handling"></a><p class="title"><b>Table 23.1. PLIST handling for GNOME packages</b></p>
-<div class="table-contents"><table summary="PLIST handling for GNOME packages" border="1">
+<div class="table-contents"><table class="table" summary="PLIST handling for GNOME packages" border="1">
 <colgroup>
 <col>
 <col>
