@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_media_libcubeb_src_moz.build,v 1.4 2015/10/02 22:49:36 ryoon Exp $
+$NetBSD: patch-mozilla_media_libcubeb_src_moz.build,v 1.5 2016/03/30 12:56:53 ryoon Exp $
 
---- mozilla/media/libcubeb/src/moz.build.orig	2015-09-25 07:35:08.000000000 +0000
+--- mozilla/media/libcubeb/src/moz.build.orig	2016-01-19 02:49:31.000000000 +0000
 +++ mozilla/media/libcubeb/src/moz.build
 @@ -17,6 +17,12 @@ if CONFIG['MOZ_ALSA']:
      ]
@@ -24,7 +24,7 @@ $NetBSD: patch-mozilla_media_libcubeb_src_moz.build,v 1.4 2015/10/02 22:49:36 ry
      SOURCES += [
          'cubeb_audiounit.c',
      ]
-@@ -66,6 +72,9 @@ if CONFIG['GKMEDIAS_SHARED_LIBRARY']:
+@@ -65,6 +71,9 @@ if CONFIG['GKMEDIAS_SHARED_LIBRARY']:
  
  FINAL_LIBRARY = 'gkmedias'
  
@@ -34,13 +34,3 @@ $NetBSD: patch-mozilla_media_libcubeb_src_moz.build,v 1.4 2015/10/02 22:49:36 ry
  if CONFIG['MOZ_WIDGET_TOOLKIT'] == 'gonk':
      CFLAGS += [
          '-I%s/%s' % (CONFIG['ANDROID_SOURCE'], d) for d in [
-@@ -74,7 +83,9 @@ if CONFIG['MOZ_WIDGET_TOOLKIT'] == 'gonk
-         ]
-     ]
- 
-+CFLAGS += CONFIG['MOZ_OSS_CFLAGS']
- FAIL_ON_WARNINGS = True
- 
-+CFLAGS += CONFIG['MOZ_OSS_CFLAGS']
- CFLAGS += CONFIG['MOZ_ALSA_CFLAGS']
- CFLAGS += CONFIG['MOZ_PULSEAUDIO_CFLAGS']
