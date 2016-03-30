@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2015/07/12 18:56:27 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2016/03/30 05:33:00 markd Exp $
 
 VER=		1.9
 DISTNAME=	biblatex-biber
 PKGNAME=	p5-biblatex-biber-${VER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	print
 MASTER_SITES=	http://sourceforge.net/projects/biblatex-biber/files/biblatex-biber/${VER}/
 
