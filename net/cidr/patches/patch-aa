@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2004/11/03 10:57:54 grant Exp $
+$NetBSD: patch-aa,v 1.3 2016/03/30 09:58:23 jperkin Exp $
+
+Use pkgsrc layout/flags.
 
 --- Makefile.orig	2001-07-03 17:23:23.000000000 +1000
 +++ Makefile
@@ -10,7 +12,7 @@ $NetBSD: patch-aa,v 1.2 2004/11/03 10:57:54 grant Exp $
 +INSTALL_MAN     = $(BSD_INSTALL_MAN)
 +
 +BINDIR = $(PREFIX)/bin
-+MANDIR = $(PREFIX)/man/man1
++MANDIR = $(PREFIX)/${PKGMANDIR}/man1
 +
  OBJS = cidr.o
  
