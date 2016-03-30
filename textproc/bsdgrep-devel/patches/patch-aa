@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2015/07/09 10:56:54 jperkin Exp $
+$NetBSD: patch-aa,v 1.7 2016/03/30 09:57:50 jperkin Exp $
 
 Call it bgrep.  Pass pkgsrc variables.
 
@@ -39,7 +39,7 @@ Call it bgrep.  Pass pkgsrc variables.
 @@ -21,2 +21,7 @@ WARNS=	4
  
 +PREFIX?=	/usr/local
-+MANDIR=		${PREFIX}/man
++MANDIR=		${PREFIX}/${PKGMANDIR}
 +BINDIR=		${PREFIX}/bin
 +MKCATPAGES?=	no
 +
