@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.44 2016/02/03 21:00:00 adam Exp $
+# $NetBSD: Makefile.common,v 1.45 2016/03/30 12:46:38 jperkin Exp $
 # used by multimedia/ffmpeg2/Makefile
 # used by multimedia/ffplay2/Makefile
 
@@ -87,6 +87,7 @@ pre-configure:
 	mkdir ${WRKSRC}/tmp
 
 .include "../../archivers/bzip2/buildlink3.mk"
+.include "../../archivers/xz/buildlink3.mk"
 .include "../../devel/libgetopt/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
