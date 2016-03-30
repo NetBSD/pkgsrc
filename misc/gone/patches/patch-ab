@@ -1,7 +1,18 @@
-$NetBSD: patch-ab,v 1.1 2009/02/16 18:29:53 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2016/03/30 09:25:53 jperkin Exp $
 
---- Makefile.in.orig	2009-02-16 19:26:13.000000000 +0100
+Use PKGMANDIR.
+
+--- Makefile.in.orig	2003-10-13 06:20:56.000000000 +0000
 +++ Makefile.in
+@@ -20,7 +20,7 @@ exec_prefix = ${prefix}
+ bindir = ${exec_prefix}/bin
+ binpath = ${bindir}/gone
+ 
+-mandir = ${prefix}/man/man1
++mandir = ${prefix}/${PKGMANDIR}/man1
+ manext = 1
+ 
+ CFLAGS=@CFLAGS@
 @@ -44,9 +44,8 @@ gone.1:
  	    -e s+_BINPATH_+${binpath}+g gone.man > gone.${manext}
  
