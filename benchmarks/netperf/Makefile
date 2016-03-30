@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/08/16 01:05:09 mef Exp $
+# $NetBSD: Makefile,v 1.12 2016/03/30 13:24:12 jperkin Exp $
 
 DISTNAME=	netperf-2.7.0
 CATEGORIES=	benchmarks
@@ -14,6 +14,7 @@ GNU_CONFIGURE=		yes
 INFO_FILES=		yes
 
 CFLAGS.IRIX+=		-DIRIX
+CFLAGS.SunOS+=		-D_XOPEN_SOURCE=500 -D__EXTENSIONS__
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
