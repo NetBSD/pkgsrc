@@ -1,18 +1,10 @@
-$NetBSD: patch-common_dlpi.c,v 1.2 2014/02/09 04:34:31 taca Exp $
+$NetBSD: patch-common_dlpi.c,v 1.3 2016/03/30 15:55:44 taca Exp $
 
 Add support for Crossbow style NICs (SunOS).
 
---- common/dlpi.c.orig	2014-01-31 19:19:59.000000000 +0000
+--- common/dlpi.c.orig	2016-03-22 13:16:51.000000000 +0000
 +++ common/dlpi.c
-@@ -131,6 +131,7 @@ static int strioctl (int fd, int cmd, in
- #define DLPI_MAXDLBUF		8192	/* Buffer size */
- #define DLPI_MAXDLADDR		1024	/* Max address size */
- #define DLPI_DEVDIR		"/dev/"	/* Device directory */
-+#define DLPI_DEVDIR_NEW		"/dev/net/"	/* Crossbow Device directory */
- 
- static int dlpiopen(const char *ifname);
- static int dlpiunit (char *ifname);
-@@ -773,14 +774,26 @@ static int dlpiunit (ifname)
+@@ -778,14 +778,26 @@ static int dlpiunit (ifname)
   */
  static int
  dlpiopen(const char *ifname) {
@@ -30,7 +22,7 @@ Add support for Crossbow style NICs (SunOS).
 +	if (ifname[0] == '/') {
 +		fd = open (ifname, O_RDWR, 0);
 +	} else {
-+		snprintf(devname, MAXPATHLEN, "%s%s", DLPI_DEVDIR_NEW, ifname);
++		snprintf(devname, MAXPATHLEN, "%s%s", DLPI_DEVDIR, ifname);
 +		fd = open (devname, O_RDWR, 0);
 +	}
 +	if (fd != -1 || errno != ENOENT) {
