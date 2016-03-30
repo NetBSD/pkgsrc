@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.7 2008/06/20 01:09:25 joerg Exp $
+$NetBSD: patch-aa,v 1.8 2016/03/30 08:45:12 jperkin Exp $
+
+Use pkgsrc layout/flags.
 
 --- Makefile.orig	Wed Jul 14 11:59:17 1993
 +++ Makefile	Sun Sep 12 12:35:57 1999
@@ -13,7 +15,7 @@ $NetBSD: patch-aa,v 1.7 2008/06/20 01:09:25 joerg Exp $
 -INSTBIN=/usr/local/bin
 -INSTMAN=/usr/man/manl
 +INSTBIN=${PREFIX}/bin
-+INSTMAN=${PREFIX}/man/man1
++INSTMAN=${PREFIX}/${PKGMANDIR}/man1
  # The manual page section (normally l or 1)
 -S=l
 +S=1
