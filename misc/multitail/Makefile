@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2016/02/25 15:35:31 jperkin Exp $
+# $NetBSD: Makefile,v 1.26 2016/03/30 09:23:40 jperkin Exp $
 #
 
 DISTNAME=	multitail-4.0.6
@@ -23,7 +23,8 @@ LDFLAGS.SunOS+=			-lsocket -lnsl
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC:Q}/multitail ${DESTDIR}${PREFIX:Q}/bin/
-	${INSTALL_MAN} ${WRKSRC:Q}/multitail.1 ${DESTDIR}${PREFIX:Q}/man/man1/
+	${INSTALL_MAN} ${WRKSRC:Q}/multitail.1 \
+		${DESTDIR}${PREFIX:Q}/${PKGMANDIR}/man1/
 	${INSTALL_DATA} ${WRKSRC:Q}/multitail.conf \
 		${DESTDIR}${PREFIX:Q}/share/examples/multitail/
 	cd ${WRKSRC:Q} && ${INSTALL_DATA} *.txt manual*.html \
