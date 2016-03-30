@@ -1,8 +1,10 @@
-$NetBSD: patch-aa,v 1.4 2009/05/19 07:00:50 abs Exp $
+$NetBSD: patch-aa,v 1.5 2016/03/30 08:33:18 jperkin Exp $
 
---- Makefile.orig	2000-11-19 10:07:40.000000000 -0500
+Use pkgsrc layout.
+
+--- Makefile.orig	2000-11-19 15:07:40.000000000 +0000
 +++ Makefile
-@@ -5,7 +5,7 @@
+@@ -5,11 +5,11 @@
  VERSION=1.4.0
  
  # Basic area to install things in:
@@ -11,6 +13,11 @@ $NetBSD: patch-aa,v 1.4 2009/05/19 07:00:50 abs Exp $
  
  BIN=$(DEST)/bin
  MANEXT=1
+-MAN=$(DEST)/man/man$(MANEXT)
++MAN=$(DEST)/${PKGMANDIR}/man$(MANEXT)
+ 
+ # How to run BSD-style install prog:
+ INSTALL=install			# Linux, BSD, SunOS 4.x
 @@ -20,9 +20,9 @@ all:
  	@echo 'nothing to make; see INSTALL for instructions.'
  
