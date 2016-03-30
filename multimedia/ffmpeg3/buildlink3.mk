@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2016/03/05 08:52:23 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2016/03/30 12:47:47 jperkin Exp $
 
 BUILDLINK_TREE+=	ffmpeg3
 
@@ -47,6 +47,7 @@ BUILDLINK_LIBDIRS.ffmpeg3+=		lib/ffmpeg3
 BUILDLINK_FNAME_TRANSFORM.ffmpeg3+=	-e 's|lib/ffmpeg3/pkgconfig/|lib/pkgconfig/|'
 
 .include "../../archivers/bzip2/buildlink3.mk"
+.include "../../archivers/xz/buildlink3.mk"
 .include "../../devel/libgetopt/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .endif # FFMPEG3_BUILDLINK3_MK
