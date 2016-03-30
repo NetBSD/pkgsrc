@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2009/02/10 17:22:20 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2016/03/30 09:09:48 jperkin Exp $
+
+Use pkgsrc layout.
 
 --- Makefile.orig	2009-02-10 18:20:22.000000000 +0100
 +++ Makefile
@@ -9,4 +11,4 @@ $NetBSD: patch-ab,v 1.1 2009/02/10 17:22:20 joerg Exp $
 -	install -s -m 555 ${PROG} ${PREFIX}/bin
 -	install -c -m 444 ${PROG}.1 ${PREFIX}/man/man1
 +	${BSD_INSTALL_PROGRAM} ${PROG} ${DESTDIR}${PREFIX}/bin
-+	${BSD_INSTALL_MAN} ${PROG}.1 ${DESTDIR}${PREFIX}/man/man1
++	${BSD_INSTALL_MAN} ${PROG}.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
