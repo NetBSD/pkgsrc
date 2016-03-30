@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2009/07/07 20:27:10 joerg Exp $
+$NetBSD: patch-aa,v 1.5 2016/03/30 09:46:37 jperkin Exp $
+
+Use pkgsrc flags/layout.
 
 --- Makefile.orig	2005-01-24 22:41:08.000000000 -0500
 +++ Makefile
@@ -29,7 +31,7 @@ $NetBSD: patch-aa,v 1.4 2009/07/07 20:27:10 joerg Exp $
 +
 +install: dclock
 +	${BSD_INSTALL_PROGRAM} dclock ${DESTDIR}$(PREFIX)/bin
-+	${BSD_INSTALL_MAN} dclock.man ${DESTDIR}$(PREFIX)/man/man1/dclock.1
++	${BSD_INSTALL_MAN} dclock.man ${DESTDIR}$(PREFIX)/${PKGMANDIR}/man1/dclock.1
  
  clean: ; rm -f ${OBJS} core dclock
  
