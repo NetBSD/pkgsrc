@@ -1,0 +1,15 @@
+$NetBSD: patch-vis_Makefile,v 1.1 2016/03/30 08:48:32 jperkin Exp $
+
+Use PKGMANDIR.
+
+--- vis/Makefile.orig	2005-07-05 19:24:17.000000000 +0000
++++ vis/Makefile
+@@ -2,7 +2,7 @@
+ #	@(#)Makefile	8.1 (Berkeley) 6/6/93
+ 
+ BINDIR=${PREFIX}/bin
+-MANDIR=${PREFIX}/man
++MANDIR=${PREFIX}/${PKGMANDIR}
+ CPPFLAGS+= -I${.CURDIR}/..
+ PROG=	vis
+ SRCS=	vis.c foldit.c libvis.c
