@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.2 2009/12/10 20:59:22 abs Exp $
+$NetBSD: patch-ab,v 1.3 2016/03/30 08:40:53 jperkin Exp $
+
+Don't try to use CE, just call clrtoeol() instead.
 
 --- main.c.orig	1999-06-26 13:48:39.000000000 +0000
 +++ main.c

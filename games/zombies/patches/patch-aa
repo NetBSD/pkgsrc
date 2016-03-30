@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.8 2011/08/31 12:13:30 obache Exp $
+$NetBSD: patch-aa,v 1.9 2016/03/30 08:40:53 jperkin Exp $
+
+Use pkgsrc flags/layout.
 
 --- Makefile.orig	1999-06-26 14:37:17.000000000 +0000
 +++ Makefile
@@ -9,7 +11,7 @@ $NetBSD: patch-aa,v 1.8 2011/08/31 12:13:30 obache Exp $
 -PREFIX		= /usr/local
 +#PREFIX		= /usr/local
  BINDIR		= ${PREFIX}/bin
- MANDIR		= ${PREFIX}/man/man6
+-MANDIR		= ${PREFIX}/man/man6
 -SCOREFILE	= /var/games/zombies_score
 -BINOWN		= games
 -BINGRP		= games
@@ -17,6 +19,7 @@ $NetBSD: patch-aa,v 1.8 2011/08/31 12:13:30 obache Exp $
 -MANOWN		= root
 -MANGRP		= wheel
 -MANMODE		= 444
++MANDIR		= ${PREFIX}/${PKGMANDIR}/man6
 +SCOREFILE	?= ${VARBASE}/games/zombies_score
 +#BINOWN		= games
 +#BINGRP		= games
