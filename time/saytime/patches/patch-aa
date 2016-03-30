@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2009/07/07 20:04:53 joerg Exp $
+$NetBSD: patch-aa,v 1.3 2016/03/30 08:45:32 jperkin Exp $
+
+Use pkgsrc layout/flags.
 
 --- Makefile.orig	1995-11-11 20:39:27.000000000 +0100
 +++ Makefile
@@ -15,7 +17,7 @@ $NetBSD: patch-aa,v 1.2 2009/07/07 20:04:53 joerg Exp $
 +BINDIR =	@LOCALBASE@/bin
  
 -MANDIR =	/usr/local/man/man1
-+MANDIR =	@LOCALBASE@/man/man1
++MANDIR =	@LOCALBASE@/${PKGMANDIR}/man1
  
 -#DEFINES =	-DSOUND_DIR=$(SOUND_DIR)
 -DEFINES =	-DSOUND_DIR=$(SOUND_DIR) -DCGI
