@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2015/12/03 13:12:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.38 2016/03/30 12:57:40 ryoon Exp $
 #
 
-SM_VER=		2.39
+SM_VER=		2.40
 PKGNAME=	seamonkey-l10n-${SM_VER:S/b/beta/}
 DISTNAME=	# empty
 CATEGORIES=	www
@@ -17,9 +17,9 @@ DISTFILES=	${XPI_FILES}
 
 NO_BUILD=	yes
 
-SM_LOCALES=		ca cs de en-GB en-US es-AR es-ES fi fr hu it	\
-			ja-JP-mac ja lt nb-NO nl pl pt-PT ru sk		\
-			sv-SE tr
+SM_LOCALES=		be ca cs de en-GB en-US es-AR es-ES fi fr gl hu	\
+			it ja lt nb-NO nl pl pt-PT ru sk		\
+			sv-SE tr uk zh-CN zh-TW
 
 EXTENSIONS_DIR=		${PREFIX}/lib/seamonkey/extensions
 XPI_FILES=		${SM_LOCALES:C/.*/seamonkey-${SM_VER}.&.langpack.xpi/}
