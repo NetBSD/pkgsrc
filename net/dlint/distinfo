@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2009/05/19 07:00:50 abs Exp $
+$NetBSD: distinfo,v 1.7 2016/03/30 08:33:18 jperkin Exp $
 
 SHA1 (dlint1.4.0.tar.gz) = 5ed29d4259816c24a47117651416bcac0179f035
 RMD160 (dlint1.4.0.tar.gz) = 49ebd133651b15a8daa35601c7f04cc3d1f407e6
 Size (dlint1.4.0.tar.gz) = 23007 bytes
-SHA1 (patch-aa) = 3a40e45528c2f3645e971a2aa57f15fbf985891e
+SHA1 (patch-aa) = 6c25d9b31925bffcaf34953f259ab248dec5503f
