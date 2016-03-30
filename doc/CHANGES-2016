@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1288 2016/03/30 12:46:48 jperkin Exp $
+$NetBSD: CHANGES-2016,v 1.1289 2016/03/30 12:47:55 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1687,3 +1687,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added devel/lldb version 3.8.0 [kamil 2016-03-28]
 	Updated sysutils/deforaos-terminal to 0.1.0 [khorben 2016-03-28]
 	Updated multimedia/ffmpeg2 to 2.8.6nb2 [jperkin 2016-03-30]
+	Updated multimedia/ffmpeg3 to 3.0nb3 [jperkin 2016-03-30]
