@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2011/01/29 17:16:33 spz Exp $
+$NetBSD: patch-aa,v 1.7 2016/03/30 09:54:24 jperkin Exp $
 
 warp the Makefile template to fit into pkgsrc
 
@@ -22,7 +22,7 @@ warp the Makefile template to fit into pkgsrc
   
  # Where do you want man pages to be installed?
 -MAN = $(W_HOME)/man
-+MAN = @PREFIX@/man
++MAN = @PREFIX@/${PKGMANDIR}
   
  # You need to have or create a user and group which majordomo will run as.
  # Enter the numeric UID and GID (not their names!) here:
