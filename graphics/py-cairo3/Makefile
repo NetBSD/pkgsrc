@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2015/04/25 14:23:18 tnn Exp $
+# $NetBSD: Makefile,v 1.11 2016/03/30 10:43:49 jperkin Exp $
 
 DISTNAME=		pycairo-1.10.0
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -38,8 +38,14 @@ do-build:
 	cd ${WRKSRC} && \
 		${SETENV} ${MAKE_ENV} ${PYTHONBIN} ./waf build
 
+.include "../../mk/bsd.prefs.mk"
+
 do-install:
 	cd ${WRKSRC} && ${SETENV} ${INSTALL_ENV} ${PYTHONBIN} ./waf install
+.if ${OPSYS} == "Darwin"
+	install_name_tool -id ${PREFIX}/${PYSITELIB}/cairo/_cairo.so \
+		${DESTDIR}${PREFIX}/${PYSITELIB}/cairo/_cairo.so
+.endif
 
 .include "../../lang/python/extension.mk"
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.10
