@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.3 2010/01/27 21:54:17 joerg Exp $
+$NetBSD: patch-aa,v 1.4 2016/03/30 09:48:42 jperkin Exp $
+
+Use pkgsrc flags/layout.
 
 --- ./Makefile.orig	Wed Jan  7 18:20:36 1998
 +++ ./Makefile	Fri Mar 31 04:21:15 2000
@@ -24,7 +26,7 @@ $NetBSD: patch-aa,v 1.3 2010/01/27 21:54:17 joerg Exp $
 +LIBDIR=$(PREFIX)/lib
 +BINDIR=$(PREFIX)/bin
 +INCDIR=$(PREFIX)/include
-+MANDIR=$(PREFIX)/man
++MANDIR=$(PREFIX)/${PKGMANDIR}
  MAN1=1
  MAN3=3
  SHELL=/bin/sh
@@ -69,8 +71,8 @@ $NetBSD: patch-aa,v 1.3 2010/01/27 21:54:17 joerg Exp $
 -	fi
 +	$(BSD_INSTALL_PROGRAM) des           ${DESTDIR}$(PREFIX)/bin/libdes
 +	$(BSD_INSTALL_DATA)    libdes.a      ${DESTDIR}$(PREFIX)/lib/libdes.a
-+	$(BSD_INSTALL_DATA)    des_crypt.man ${DESTDIR}$(PREFIX)/man/man3/libdes_crypt.3
-+	$(BSD_INSTALL_DATA)    des.man       ${DESTDIR}$(PREFIX)/man/man1/libdes.1
++	$(BSD_INSTALL_DATA)    des_crypt.man ${DESTDIR}$(PREFIX)/${PKGMANDIR}/man3/libdes_crypt.3
++	$(BSD_INSTALL_DATA)    des.man       ${DESTDIR}$(PREFIX)/${PKGMANDIR}/man1/libdes.1
 +	$(BSD_INSTALL_DATA)    des.h         ${DESTDIR}$(PREFIX)/include/libdes.h
 +
  # DO NOT DELETE THIS LINE -- make depend depends on it.
