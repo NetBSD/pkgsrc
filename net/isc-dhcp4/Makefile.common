@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.30 2016/03/05 11:29:05 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.31 2016/03/30 15:55:44 taca Exp $
 #
 # used by net/isc-dhcp4/Makefile
 # used by net/isc-dhcpd4/Makefile
@@ -7,7 +7,6 @@
 
 DISTNAME=		dhcp-${VERSION}
 DHVER=			${DISTNAME:S/dhcp-//:S/-P/p/}
-PKGREVISION=		2
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.isc.org/isc/dhcp/${VERSION}/ \
 			http://ftp.isc.org/isc/dhcp/${VERSION}/
@@ -18,7 +17,7 @@ LICENSE=		isc
 
 CONFLICTS+=		isc-dhcp-base-3.*{,nb*}
 
-VERSION=		4.3.3-P1
+VERSION=		4.3.4
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -83,7 +82,7 @@ BIND_CONFIGURE_ARGS+=	--with-export-includedir=${WRKSRC}/bind/include
 BIND_CONFIGURE_ARGS+=	--with-export-libdir=${WRKSRC}/bind/lib
 BIND_CONFIGURE_ARGS+=	--with-gssapi=no
 
-BIND_WRKSRC=		${WRKSRC}/bind/bind-9.9.7-P3
+BIND_WRKSRC=		${WRKSRC}/bind/bind-9.9.8-P4
 
 post-configure:
 	${RUN}${_ULIMIT_CMD}					\
