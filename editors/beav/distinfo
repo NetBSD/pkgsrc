@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2015/11/03 03:32:14 agc Exp $
+$NetBSD: distinfo,v 1.12 2016/03/30 10:03:46 jperkin Exp $
 
 SHA1 (beav_1.40-18.diff.gz) = 9cd82a3b8de391e1f001d241be1c2c3fadb3efb9
 RMD160 (beav_1.40-18.diff.gz) = 0e7b19fdc7ea16e1e24e8302d81dfb247e947603
@@ -8,11 +8,11 @@ SHA1 (beav_1.40.orig.tar.gz) = c610a0c3581c681c26726c8e1e19bf7e38ca8a6a
 RMD160 (beav_1.40.orig.tar.gz) = 621df359860a8ec9205413520961d4366b1ad8ea
 SHA512 (beav_1.40.orig.tar.gz) = 560a35b9b3a6adeef5ccd41a6bca7055feeb2110eb7f931b5e6fc30a83ca7e49532420f96fa929025e096e598d03230fa8eb8247c71bf8963f4549c8b41e4e01
 Size (beav_1.40.orig.tar.gz) = 128103 bytes
-SHA1 (patch-aa) = 59a2043fa5da8c326dc0732701b3377ed7422a44
+SHA1 (patch-aa) = 14bb0e27736ea7f49311a7fd32dc030201c90c3e
 SHA1 (patch-ab) = 3d18ee1e757e96392acc554c131e9174276252b2
 SHA1 (patch-ac) = d232aa9fdd53c42e4e12408605fd82f28ca90843
-SHA1 (patch-ad) = 4cb29fa7dab5d5fc7ccff1dff090b189146e32c8
-SHA1 (patch-ae) = 9377308aac390dd0130df3fd970f56e2e4826398
-SHA1 (patch-af) = 9ff674374a96878a6fbb1babf50620a92aa6a34b
-SHA1 (patch-ag) = 6376ad9d23b48bf3249700c9ab8e8361aa497253
-SHA1 (patch-ai) = 83071e6e15bd3875c278660db9038b249ec2f64d
+SHA1 (patch-ad) = a39834bab7717be78aa04a6ebd013294e75e5e00
+SHA1 (patch-ae) = 3a7bc7db106b98900a4ef5e72f197ac165b17712
+SHA1 (patch-af) = 21f776110105711fee0c6c9f898fa02efa0d2ffa
+SHA1 (patch-ag) = cb142eb1b59e5914dba7a08c6fe925131db5063c
+SHA1 (patch-ai) = ccdc5d2d7ef230a4a0e30d64f8516935cc221588
