@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile,v 1.1 2016/03/30 09:20:26 jperkin Exp $
+
+Use PKGMANDIR.
+
+--- Makefile.orig	2003-10-19 18:20:37.000000000 +0000
++++ Makefile
+@@ -25,7 +25,7 @@ ${PROG}:	${OBJS}
+ 
+ install:	${PROG}
+ 		${INSTALL} -c -s ${PROG} ${PREFIX}/bin
+-		${INSTALL} -c -m 644 ${MANPAGE} ${PREFIX}/man/man${MANSEC}
++		${INSTALL} -c -m 644 ${MANPAGE} ${PREFIX}/${PKGMANDIR}/man${MANSEC}
+ 
+ clean:
+ 		${RM} ${OBJS}
