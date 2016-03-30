@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2004/07/24 22:35:43 grant Exp $
+$NetBSD: patch-aa,v 1.3 2016/03/30 08:35:56 jperkin Exp $
+
+Use pkgsrc flags/paths.
 
 --- Makefile.orig	2004-07-25 08:33:58.000000000 +1000
 +++ Makefile
@@ -24,4 +26,4 @@ $NetBSD: patch-aa,v 1.2 2004/07/24 22:35:43 grant Exp $
 -	install -c -s -m 755 psify $(prefix)/bin/psify
 -	install -c -m 644 psify.man $(prefix)/man/man1/psify.1
 +	${BSD_INSTALL} -c -s -m 755 psify $(prefix)/bin/psify
-+	${BSD_INSTALL} -c -m 644 psify.man $(prefix)/man/man1/psify.1
++	${BSD_INSTALL} -c -m 644 psify.man $(prefix)/${PKGMANDIR}/man1/psify.1
