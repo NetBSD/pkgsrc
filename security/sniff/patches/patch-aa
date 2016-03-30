@@ -1,6 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2009/02/16 18:49:58 joerg Exp $
+$NetBSD: patch-aa,v 1.5 2016/03/30 09:52:58 jperkin Exp $
 
---- Makefile.orig	Thu Feb 15 04:47:36 2001
+Use pkgsrc layout.
+
+--- Makefile.orig	2001-02-15 12:47:36.000000000 +0000
 +++ Makefile
 @@ -1,24 +1,21 @@
  # Makefile for NetBSD
@@ -10,7 +12,8 @@ $NetBSD: patch-aa,v 1.4 2009/02/16 18:49:58 joerg Exp $
  CP=cp
 -PREFIX=/usr/pkg
  INSTALL_DIR=${PREFIX}/sbin
- INSTALL_MAN=${PREFIX}/man
+-INSTALL_MAN=${PREFIX}/man
++INSTALL_MAN=${PREFIX}/${PKGMANDIR}
  
 -CFLAGS   = -O2
  OBJS  =  sniff2.o clear.o ifOpen.o lookupDNShost.o printData.o printHeader.o readTCP.o sniffData.o
