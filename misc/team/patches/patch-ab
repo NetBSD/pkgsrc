@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.7 2013/10/04 18:36:16 joerg Exp $
+$NetBSD: patch-ab,v 1.8 2016/03/30 09:52:28 jperkin Exp $
+
+Portability fixes.
 
 --- team.c.orig	1995-07-01 15:33:24.000000000 +0000
 +++ team.c
