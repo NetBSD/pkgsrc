@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2009/07/08 17:03:51 joerg Exp $
+$NetBSD: patch-aa,v 1.5 2016/03/30 08:32:55 jperkin Exp $
+
+Various pkgsrc flag/path fixes.
 
 --- Makefile.orig	2002-08-30 18:03:07.000000000 +0000
 +++ Makefile
@@ -29,7 +31,7 @@ $NetBSD: patch-aa,v 1.4 2009/07/08 17:03:51 joerg Exp $
  
  # To enable use of the FreeType-2 library
  # (if the include and lib directory do not match your installation,
-@@ -111,20 +111,20 @@ CFLAGS_PREF=
+@@ -111,23 +111,23 @@ CFLAGS_PREF=
  #CFLAGS_PREF= -DPREFER_FREETYPE
  
  # Uncomment the second line to not compile t1asm into ttf2pt1
@@ -54,7 +56,11 @@ $NetBSD: patch-aa,v 1.4 2009/07/08 17:03:51 joerg Exp $
 +LIBXDIR = $(INSTDIR)/bin
  # for scripts, maps/encodings etc.
  SHAREDIR = $(INSTDIR)/share/ttf2pt1
- MANDIR = $(INSTDIR)/man
+-MANDIR = $(INSTDIR)/man
++MANDIR = $(INSTDIR)/${PKGMANDIR}
+ 
+ # owner and group of installed files
+ OWNER = root
 @@ -145,12 +145,12 @@ DOCS=CHANGES README FONTS FONTS.hpux enc
  	app/X11/README app/netscape/README app/TeX/README
  
