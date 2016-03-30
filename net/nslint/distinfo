@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2016/03/07 23:08:45 nros Exp $
+$NetBSD: distinfo,v 1.7 2016/03/30 09:04:22 jperkin Exp $
 
 SHA1 (nslint-3.1.tar.gz) = 3d8442f8cacbadb0a03bf52d5a414731f6bbec0c
 RMD160 (nslint-3.1.tar.gz) = dec29dec9cb0a2bbe2221c2bec1ef6122d26c166
@@ -6,4 +6,4 @@ SHA512 (nslint-3.1.tar.gz) = c8552a398bac5a4b1cffcb26c7355b15968bfd1c5f07de565ce
 Size (nslint-3.1.tar.gz) = 99657 bytes
 SHA1 (patch-aa) = 10ba558b6b6057b4698a8650d0abd5d9b872ddf6
 SHA1 (patch-ab) = 41c009707a439a7abdaa669d1f476e909363a2e4
-SHA1 (patch-ac) = 081c2b6dff1a56bcde625657d4e5529546920965
+SHA1 (patch-ac) = b664867b724ec9090c884c6bc05bc57df2795ed3
