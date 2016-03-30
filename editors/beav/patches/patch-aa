@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.3 2008/06/20 01:09:17 joerg Exp $
+$NetBSD: patch-aa,v 1.4 2016/03/30 10:03:46 jperkin Exp $
+
+Use pkgsrc flags/layout.
 
 --- Makefile.orig	2007-11-25 12:10:44.000000000 +0000
 +++ Makefile
@@ -21,7 +23,7 @@ $NetBSD: patch-aa,v 1.3 2008/06/20 01:09:17 joerg Exp $
 +	$(BSD_INSTALL_PROGRAM) beav ${DESTDIR}$(PREFIX)/bin
 +	mkdir -p ${DESTDIR}$(PREFIX)/share/doc/beav
 +	$(BSD_INSTALL_DATA) beav140.txt ${DESTDIR}$(PREFIX)/share/doc/beav/beav.txt
-+	$(BSD_INSTALL_MAN) beav.1 ${DESTDIR}$(PREFIX)/man/man1
++	$(BSD_INSTALL_MAN) beav.1 ${DESTDIR}$(PREFIX)/${PKGMANDIR}/man1
  
  clean:
  	rm -f *.o beav
