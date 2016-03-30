@@ -1,7 +1,18 @@
-$NetBSD: patch-ac,v 1.2 2016/03/07 23:08:46 nros Exp $
+$NetBSD: patch-ac,v 1.3 2016/03/30 09:04:22 jperkin Exp $
+
+Use PKGMANDIR.
 
 --- Makefile.in.orig	2010-03-06 04:14:09.000000000 +0000
 +++ Makefile.in
+@@ -29,7 +29,7 @@ exec_prefix = @exec_prefix@
+ # Pathname of directory to install the binary
+ BINDEST = @bindir@
+ # Pathname of directory to install the man page
+-MANDEST = @prefix@/man
++MANDEST = @prefix@/${PKGMANDIR}
+ # The root of the directory tree for read-only
+ datarootdir = @datarootdir@
+ 
 @@ -96,9 +96,9 @@ version.c: $(srcdir)/VERSION
  	sed -e 's/.*/char version[] = "&";/' $(srcdir)/VERSION > $@
  
