@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2009/07/07 21:33:08 joerg Exp $
+$NetBSD: patch-aa,v 1.3 2016/03/30 10:01:24 jperkin Exp $
+
+Use pkgsrc layout/flags.
 
 --- Makefile.orig	Fri Oct 15 14:19:54 1993
 +++ Makefile	Thu May 18 00:48:33 2000
@@ -7,7 +9,7 @@ $NetBSD: patch-aa,v 1.2 2009/07/07 21:33:08 joerg Exp $
 -DESTDIR = /usr/local/bin
 -MANUAL = /usr/local/man/man1/kbanner.1
 -CFLAGS = -O -KEOPT -KBREG -KINF
-+MANUAL = $(PREFIX)/man/man1/kbanner.1
++MANUAL = $(PREFIX)/${PKGMANDIR}/man1/kbanner.1
 +#CFLAGS = -O -KEOPT -KBREG -KINF
  OBJ = kbanner.o font1.o font2.o font3.o
  
