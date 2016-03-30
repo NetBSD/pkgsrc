@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.3 2008/06/20 01:09:17 joerg Exp $
+$NetBSD: patch-aa,v 1.4 2016/03/30 09:22:48 jperkin Exp $
+
+Use pkgsrc layout.
 
 --- Makefile.orig	Wed Sep 24 16:22:05 2003
 +++ Makefile	Wed Sep 24 16:26:08 2003
@@ -13,7 +15,7 @@ $NetBSD: patch-aa,v 1.3 2008/06/20 01:09:17 joerg Exp $
  # should be somewhere that the default man command will search.
  
 -MANDIR=	/usr/local/man
-+MANDIR=	${PREFIX}/man
++MANDIR=	${PREFIX}/${PKGMANDIR}
  
  # SEC is the section of the manual that vilearn's man page will be
  # installed in.
