@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/10/14 12:28:03 adam Exp $
+$NetBSD: patch-aa,v 1.2 2016/03/30 10:00:08 jperkin Exp $
+
+Use pkgsrc layout/flags.
 
 --- Makefile.orig	1996-01-20 21:02:46.000000000 +0000
 +++ Makefile
@@ -41,5 +43,5 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/10/14 12:28:03 adam Exp $
 -	install -m 644 xbomb.6 $(INSTDIR)/man/man6
 -	install -m 644 xbomb.ad $(INSTDIR)/lib/app-defaults/XBomb
 +	${BSD_INSTALL_PROGRAM} xbomb $(INSTDIR)/bin
-+	${BSD_INSTALL_DATA} xbomb.6 $(INSTDIR)/man/man6
++	${BSD_INSTALL_DATA} xbomb.6 $(INSTDIR)/${PKGMANDIR}/man6
 +	${BSD_INSTALL_DATA} xbomb.ad $(INSTDIR)/lib/X11/app-defaults/XBomb

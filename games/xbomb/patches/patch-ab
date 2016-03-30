@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.2 2008/11/21 16:48:33 adam Exp $
+$NetBSD: patch-ab,v 1.3 2016/03/30 10:00:08 jperkin Exp $
+
+Use pkgsrc paths.
 
 --- hiscore.c.orig	2008-01-05 20:23:07.000000000 +0100
 +++ hiscore.c
