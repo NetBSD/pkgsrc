@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2016/03/17 12:51:14 fhajny Exp $
+# $NetBSD: Makefile,v 1.19 2016/03/30 11:38:59 fhajny Exp $
 
 DISTNAME=	tesseract-3.04.01
 CATEGORIES=	graphics
@@ -18,6 +18,8 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pax
 GNU_CONFIGURE=		yes
+
+CONFIGURE_ENV+=		LIBLEPT_HEADERSDIR=${BUILDLINK_PREFIX.leptonica}/include
 
 INSTALL_TARGET=		install training-install
 
