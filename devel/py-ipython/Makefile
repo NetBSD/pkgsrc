@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2015/12/15 10:23:03 markd Exp $
+# $NetBSD: Makefile,v 1.14 2016/03/30 08:23:33 jperkin Exp $
 
 DISTNAME=	ipython-3.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -31,7 +31,7 @@ post-install:
 	for f in ipcluster ipcontroller ipengine ipython ; \
 	do \
 		mv ${DESTDIR}${PREFIX}/bin/$$f ${DESTDIR}${PREFIX}/bin/$${f}${PYVERSSUFFIX}; \
-		mv ${DESTDIR}${PREFIX}/man/man1/$${f}.1 ${DESTDIR}${PREFIX}/man/man1/$${f}${PYVERSSUFFIX}.1; \
+		mv ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/$${f}.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/$${f}${PYVERSSUFFIX}.1; \
 	done
 
 .include "../../lang/python/distutils.mk"
