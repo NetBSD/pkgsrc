@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1292 2016/03/30 15:57:14 taca Exp $
+$NetBSD: CHANGES-2016,v 1.1293 2016/03/31 09:14:14 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1694,3 +1694,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/isc-dhclient4 to 4.3.4 [taca 2016-03-30]
 	Updated net/isc-dhcpd4 to 4.3.4 [taca 2016-03-30]
 	Updated net/isc-dhcrelay4 to 4.3.4 [taca 2016-03-30]
+	Updated devel/heirloom-libcommon to 070715nb1 [jperkin 2016-03-31]
