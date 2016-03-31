@@ -1,20 +1,14 @@
-$NetBSD: patch-ab,v 1.5 2013/07/25 08:25:26 wiz Exp $
+$NetBSD: patch-ab,v 1.6 2016/03/31 17:06:18 agc Exp $
 
---- digest.1.orig	2013-07-25 08:24:59.000000000 +0000
-+++ digest.1
-@@ -2,5 +2,5 @@
+Patch digest man page for rdigest functionality
+
+--- digest.1.orig	2016-03-31 09:37:14.729218330 -0700
++++ digest.1	2016-03-31 09:40:35.110066257 -0700
+@@ -24,20 +24,21 @@
+ .\" THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  .\"
- .\"
--.\" Copyright (c) 2001 Alistair G. Crooks.  All rights reserved.
-+.\" Copyright (c) 2001-2005 Alistair G. Crooks.  All rights reserved.
- .\"
- .\" Redistribution and use in source and binary forms, with or without
-@@ -32,12 +32,13 @@
- .\"
- .\"
--.Dd March 23, 2005
+ .Dd February 16, 2016
 -.Dt DIGEST 1
-+.Dd March 31, 2005
 +.Dt RDIGEST 1
  .Os
  .Sh NAME
@@ -24,25 +18,33 @@ $NetBSD: patch-ab,v 1.5 2013/07/25 08:25:26 wiz Exp $
 +.Nd calculate message digests of files and directories
  .Sh SYNOPSIS
  .Nm
+ .Op Fl "Vt"
 +.Op Fl x Ar directory
  .Ar algorithm
- .Op file ...
-@@ -45,6 +46,13 @@
+ .Op Ar
+ .Sh DESCRIPTION
  The
  .Nm
 -utility calculates message digests of files or,
 +utility calculates message digests of files, directories, or,
  if no file is specified, standard input.
+ .Pp
+ It can also run self tests via the
+@@ -46,6 +47,12 @@
+ for the
+ .Dv SHA3
+ set of digests.
 +The
 +.Fl x
 +option can be used as many times as required to indicate directories
 +not to be included in a directory's hash.
 +This allows you to skip, eg, CVS subdirectories in a given tree, which
 +can have relatively volatile contents not pertinent to the hash.
-+.Pp
- The list of possible algorithms is:
- .Bl -tag -width Ds
-@@ -89,4 +97,23 @@ algorithm implementations, which are loc
+ .Pp
+ The
+ .Fl V
+@@ -111,12 +118,32 @@
+ algorithm implementations, which are located in the standard
  C library, and was designed to be scalable as new message digest
  algorithms are developed.
 +The checksum for a directory is implemented as the hash over a list of
@@ -66,13 +68,16 @@ $NetBSD: patch-ab,v 1.5 2013/07/25 08:25:26 wiz Exp $
 +.El
  .Pp
  The
-@@ -95,4 +122,5 @@ utility exits 0 on success, and \*[Gt]0 
+ .Nm
+ utility exits 0 on success, and \*[Gt]0 if an error occurs.
  .Sh SEE ALSO
  .Xr cksum 1 ,
 +.Xr digest 1 ,
  .Xr md5 3 ,
  .Xr rmd160 3 ,
-@@ -102,8 +130,12 @@ The
+ .Xr sha1 3
+@@ -124,9 +151,13 @@
+ The
  .Nm
  utility first appeared in
 -.Nx 1.6 .
