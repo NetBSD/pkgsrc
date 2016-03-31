@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/02/07 21:43:03 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/03/31 10:27:26 markd Exp $
 lib/ocaml/site-lib/zarith/big_int_Z.cmi
 lib/ocaml/site-lib/zarith/big_int_Z.mli
 lib/ocaml/site-lib/zarith/dllzarith.so
@@ -13,3 +13,5 @@ lib/ocaml/site-lib/zarith/zarith.cmxs
 lib/ocaml/site-lib/zarith/zarith.h
 lib/ocaml/site-lib/zarith/z.cmi
 lib/ocaml/site-lib/zarith/z.mli
+@unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/zarith
+@exec %D/libexec/ocaml-findlib-register add %D/lib/ocaml/site-lib/zarith
