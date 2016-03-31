@@ -1,14 +1,17 @@
-$NetBSD: patch-ac,v 1.5 2010/02/24 22:00:03 joerg Exp $
+$NetBSD: patch-ac,v 1.6 2016/03/31 17:06:18 agc Exp $
 
---- digest.c.orig	2008-09-18 12:13:50.000000000 +0200
-+++ digest.c
-@@ -41,8 +41,17 @@
+patch digest program to recurse through directories
+
+--- digest.c.orig	2016-03-31 09:37:14.729643239 -0700
++++ digest.c	2016-03-31 10:02:46.312679447 -0700
+@@ -28,9 +28,19 @@
+ #include "config.h"
  #endif
  
 +#include <nbcompat.h>
 +#include <nbcompat/queue.h>
 +#include <nbcompat/stat.h>
- 
++ 
  #ifdef HAVE_ERRNO_H
  #include <errno.h>
  #endif
@@ -20,7 +23,9 @@ $NetBSD: patch-ac,v 1.5 2010/02/24 22:00:03 joerg Exp $
 +#endif
  #ifdef HAVE_LOCALE_H
  #include <locale.h>
-@@ -158,4 +167,155 @@ digest_file(char *fn, alg_t *alg)
+ #endif
+@@ -161,19 +171,173 @@
+ 	return (rc);
  }
  
 +struct excl {
@@ -176,33 +181,42 @@ $NetBSD: patch-ac,v 1.5 2010/02/24 22:00:03 joerg Exp $
 +
  int
  main(int argc, char **argv)
-@@ -164,13 +324,19 @@ main(int argc, char **argv)
- 	int	rval;
- 	int	i;
+ {
 +	struct stat st;
-+
-+	LIST_INIT(&excl);
+ 	alg_t  *alg;
+ 	int	test;
+ 	int	ok;
+ 	int	i;
  
++	LIST_INIT(&excl);
++
  #ifdef HAVE_SETLOCALE
  	(void) setlocale(LC_ALL, "");
  #endif
--	while ((i = getopt(argc, argv, "V")) != -1) {
-+	while ((i = getopt(argc, argv, "Vx:")) != -1) {
+ 	test = 0;
+-	while ((i = getopt(argc, argv, "Vt")) != -1) {
++	while ((i = getopt(argc, argv, "Vtx:")) != -1) {
  		switch(i) {
  		case 'V':
  			printf("%s\n", VERSION);
- 			return EXIT_SUCCESS;
+@@ -181,6 +345,9 @@
+ 		case 't':
+ 			test = 1;
+ 			break;
 +		case 'x':
 +			exclude(optarg);
 +			break;
  		}
  	}
-@@ -197,5 +363,7 @@ main(int argc, char **argv)
+ 	if (test) {
+@@ -212,7 +379,9 @@
+ 		}
  	} else {
- 		for (i = 0 ; i < argc ; i++) {
+ 		for (i = optind + 1 ; i < argc ; i++) {
 -			if (!digest_file(argv[i], alg)) {
 +			if (stat(argv[i], &st) == -1 ||
 +			    (S_ISREG(st.st_mode) && !digest_file(argv[i], alg)) ||
 +			    (S_ISDIR(st.st_mode) && !digest_directory(argv[i], alg))) {
- 				(void) fprintf(stderr, "%s\n", argv[i]);
- 				rval = EXIT_FAILURE;
+ 				fprintf(stderr, "%s\n", argv[i]);
+ 				ok = 0;
+ 			}
