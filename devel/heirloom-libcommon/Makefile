@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2011/11/24 21:02:42 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2016/03/31 09:14:06 jperkin Exp $
 
 PKGNAME=	heirloom-libcommon-${HEIRLOOM_VER}
+PKGREVISION=	1
 CATEGORIES=	devel
 
 DEPENDS+=	heirloom-doc-${HEIRLOOM_VER}:../../sysutils/heirloom-doc
@@ -27,6 +28,13 @@ DESCR_SRC+=	${.CURDIR}/DESCR
 PLIST_SUBST+=	"NO_ALLOCA_H=@comment "
 PLIST_SUBST+=	"NOMALLOC_H=@comment "
 .endif
+
+# Need to use 'ranlib -c' which is already pre-commented out for OSX to avoid
+# undefined 'extern char *' references.
+SUBST_CLASSES.Darwin+=	ranlib
+SUBST_STAGE.ranlib=	pre-configure
+SUBST_FILES.ranlib=	build/mk.config
+SUBST_SED.ranlib=	-e 's,^\#RANLIB,RANLIB,g'
 
 do-install:
 .for i in ${HEADERS}
