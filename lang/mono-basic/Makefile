@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2015/10/10 01:58:11 ryoon Exp $
+# $NetBSD: Makefile,v 1.28 2016/04/01 11:42:16 jperkin Exp $
 
 DISTNAME=	mono-basic-4.0.1
 PKGREVISION=	1
@@ -28,7 +28,7 @@ SUBST_CLASSES+=			fix-mandir
 SUBST_STAGE.fix-mandir=		post-configure
 SUBST_MESSAGE.fix-mandir=	Fixing man path
 SUBST_FILES.fix-mandir=		build/config.make
-SUBST_SED.fix-mandir=		-e 's,share/man,man,'
+SUBST_SED.fix-mandir=		-e 's,share/man,${PKGMANDIR},'
 
 .include "../../lang/mono/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
