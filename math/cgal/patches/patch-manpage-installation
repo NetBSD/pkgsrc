@@ -1,4 +1,4 @@
-$NetBSD: patch-manpage-installation,v 1.1.1.1 2012/02/27 12:46:27 reinoud Exp $
+$NetBSD: patch-manpage-installation,v 1.2 2016/04/01 12:17:33 jperkin Exp $
 
 Align manpage installation path with pkgsrc conventions.
 
@@ -9,7 +9,7 @@ Align manpage installation path with pkgsrc conventions.
    )
  
 -set ( CGAL_INSTALL_MAN_DIR "share/man/man1"  
-+set ( CGAL_INSTALL_MAN_DIR "man/man1"  
++set ( CGAL_INSTALL_MAN_DIR "${CMAKE_INSTALL_MANDIR}/man1"
    CACHE STRING "The folder where manual pages for CGAL scripts will be installed, relative to CMAKE_INSTALL_PREFIX" 
    )
  
