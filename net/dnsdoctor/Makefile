@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/03/08 16:52:06 taca Exp $
+# $NetBSD: Makefile,v 1.12 2016/04/01 15:29:26 jperkin Exp $
 #
 
 DISTNAME=	dnsdoctor-1.0.1
@@ -43,6 +43,7 @@ CONF_FILES+=	${DDOCEGDIR}/rootservers ${DDOCCONFDIR}/rootservers
 CONF_FILES+=	${DDOCEGDIR}/dnsdoctor.conf ${DDOCCONFDIR}/dnsdoctor.conf
 
 MAKE_ENV+=		DESTDIR=${DESTDIR}
+MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR}
 
 do-configure:
 	cd ${WRKSRC} && \
