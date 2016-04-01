@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.33 2016/02/20 04:40:12 szptvlfn Exp $
+$NetBSD: distinfo,v 1.34 2016/04/01 15:34:59 jperkin Exp $
 
 SHA1 (feh-2.14.2.tar.bz2) = f548cdc0f5ac767eef2f69eb9fff27f70f92162b
 RMD160 (feh-2.14.2.tar.bz2) = 9ed97ef0631f6c5b2618b631d6802b53b56ecf37
 SHA512 (feh-2.14.2.tar.bz2) = e88a5e5fa89043ba262d53c1494136cc3904ef33b31763148d131363b2c88c89971862db6c0d3fdc4f902385fcf21e3e22db6bd32ff2dcca5fff0f0a4f296b94
 Size (feh-2.14.2.tar.bz2) = 2119370 bytes
-SHA1 (patch-config.mk) = 7f99ff19820a62c8a7a9d3b0fb9c7f1a8151f6c5
+SHA1 (patch-config.mk) = af7990e42c4c0a351c0d40eeb8221cd619ef72fb
 SHA1 (patch-src_imlib_c) = 925d2536b69f99acc949cb6bd67422d001335492
