@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/31 11:19:25 asau Exp $
+# $NetBSD: Makefile,v 1.12 2016/04/01 11:48:27 jperkin Exp $
 
 DISTNAME=	pmccabe-2.5-CVS20081026
 PKGNAME=	pmccabe-2.5
@@ -15,5 +15,7 @@ CFLAGS+=	-D__unix=1
 MAKE_ENV+=	INSTALL=${TOOLS_PATH.install:Q}
 
 TEST_TARGET=	test
+
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"
