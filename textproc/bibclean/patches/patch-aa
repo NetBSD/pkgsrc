@@ -1,8 +1,10 @@
-$NetBSD: patch-aa,v 1.2 2008/06/20 01:09:37 joerg Exp $
+$NetBSD: patch-aa,v 1.3 2016/04/01 11:38:30 jperkin Exp $
 
---- Makefile.in.orig	Thu Jul 13 23:32:58 2000
+Support pkgsrc layout.
+
+--- Makefile.in.orig	2000-07-13 21:32:43.000000000 +0000
 +++ Makefile.in
-@@ -74,7 +74,12 @@
+@@ -73,7 +73,12 @@
  #=======================================================================
  #### Start of system configuration section. ####
  
@@ -16,7 +18,16 @@ $NetBSD: patch-aa,v 1.2 2008/06/20 01:09:37 joerg Exp $
  exec_prefix     = $(prefix)
  
  bindir          = $(exec_prefix)/bin
-@@ -267,6 +272,14 @@
+@@ -108,7 +113,7 @@ OPT		=
+ VPATH           = @srcdir@
+ 
+ # Where to install the manual pages.
+-mandir          = $(prefix)/man/man1
++mandir          = $(prefix)/${PKGMANDIR}/man1
+ # Extension (not including `.') for the installed manual page filenames.
+ manext          = 1
+ 
+@@ -267,6 +272,14 @@ NROFF		= nroff
  
  RM		= /bin/rm -f
  
@@ -31,7 +42,7 @@ $NetBSD: patch-aa,v 1.2 2008/06/20 01:09:37 joerg Exp $
  SCRIBE-TESTS-1	= testscr1.org testscr2.org
  
  # Do NOT use SCRIBE-TESTS-1 in this list, because MIPS 6280 RISCos 5.0
-@@ -606,28 +619,13 @@
+@@ -606,28 +619,13 @@ install.time:	install-exe install-man
  	touch install.time
  
  install-exe:	bibclean
