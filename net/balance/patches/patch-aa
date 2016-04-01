@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2015/09/05 16:16:03 wiedi Exp $
+$NetBSD: patch-aa,v 1.6 2016/04/01 11:28:29 jperkin Exp $
 
 * Adjust for pkgsrc installation.
 
@@ -11,13 +11,15 @@ $NetBSD: patch-aa,v 1.5 2015/09/05 16:16:03 wiedi Exp $
 +#CFLAGS=-O2 -Wall -Wstrict-prototypes -Wuninitialized
  
  # uncomment for any OS other than Cygwin
-@@ -8,5 +8,5 @@ BALANCE=balance
+@@ -8,6 +8,6 @@ BALANCE=balance
  ROOT=root
  INSTALL=install
 -BINDIR=/usr/sbin
+-MANDIR=${BINDIR}/../man/man1
 +BINDIR=${PREFIX}/sbin
- MANDIR=${BINDIR}/../man/man1
++MANDIR=${PREFIX}/${PKGMANDIR}/man1
  
+ # uncomment for Solaris:
 @@ -21,5 +21,5 @@ MANDIR=${BINDIR}/../man/man1
  # ROOT=Administrators
  
@@ -25,7 +27,7 @@ $NetBSD: patch-aa,v 1.5 2015/09/05 16:16:03 wiedi Exp $
 +#CC=gcc
  RELEASE=3.57
  
-@@ -27,8 +27,8 @@ all: balance
+@@ -27,8 +27,8 @@ all: balance 
  
  balance: balance.o butils.o
 -	$(CC) $(CFLAGS) -I. -o balance balance.o butils.o $(LIBRARIES)
