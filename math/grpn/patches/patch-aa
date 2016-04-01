@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.5 2011/06/09 17:01:39 drochner Exp $
+$NetBSD: patch-aa,v 1.6 2016/04/01 13:33:31 jperkin Exp $
+
+Use pkgsrc layout/flags.
 
 --- Makefile.orig	2011-05-10 16:58:46.000000000 +0000
 +++ Makefile
@@ -40,8 +42,8 @@ $NetBSD: patch-aa,v 1.5 2011/06/09 17:01:39 drochner Exp $
 -	chmod 644 $(PREFIX)/man/man1/grpn.1
 +	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(PREFIX)/bin
 +	$(BSD_INSTALL_PROGRAM) grpn $(DESTDIR)$(PREFIX)/bin
-+	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(PREFIX)/man/man1
-+	$(BSD_INSTALL_DATA) grpn.1 $(DESTDIR)$(PREFIX)/man/man1
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(PREFIX)/${PKGMANDIR}/man1
++	$(BSD_INSTALL_DATA) grpn.1 $(DESTDIR)$(PREFIX)/${PKGMANDIR}/man1
  
  .c.o:
  	$(CC) -c -o $@ $(CFLAGS) $*.c
