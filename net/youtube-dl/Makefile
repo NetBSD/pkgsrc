@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2016/03/08 15:23:57 adam Exp $
+# $NetBSD: Makefile,v 1.85 2016/04/01 10:50:27 jperkin Exp $
 
 VERSION_DATE=	2016.03.06
 DISTNAME=	youtube-dl-${VERSION_DATE}
@@ -20,6 +20,11 @@ LICENSE=	public-domain
 USE_LANGUAGES=	# none
 EGG_NAME=	youtube_dl-${VERSION_DATE:S/.0/./g}
 WRKSRC=		${WRKDIR}/youtube-dl
+
+SUBST_CLASSES+=		pkgmandir
+SUBST_STAGE.pkgmandir=	pre-configure
+SUBST_FILES.pkgmandir=	setup.py
+SUBST_VARS.pkgmandir=	PKGMANDIR
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

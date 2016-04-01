@@ -1,4 +1,4 @@
-$NetBSD: patch-setup.py,v 1.1 2015/12/10 11:11:16 adam Exp $
+$NetBSD: patch-setup.py,v 1.2 2016/04/01 10:50:27 jperkin Exp $
 
 Fix paths.
 
@@ -14,7 +14,7 @@ Fix paths.
 +        ('share/fish/completions', ['youtube-dl.fish']),
          ('share/doc/youtube_dl', ['README.txt']),
 -        ('share/man/man1', ['youtube-dl.1'])
-+        ('man/man1', ['youtube-dl.1'])
++        ('@PKGMANDIR@/man1', ['youtube-dl.1'])
      ]
      root = os.path.dirname(os.path.abspath(__file__))
      data_files = []
