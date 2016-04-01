@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2014/03/31 07:15:19 adam Exp $
+# $NetBSD: Makefile,v 1.32 2016/04/01 22:32:45 jperkin Exp $
 
 DISTNAME=	optipng-0.7.5
 CATEGORIES=	graphics
@@ -11,6 +11,7 @@ LICENSE=	zlib
 
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	-prefix=${PREFIX}
+CONFIGURE_ARGS+=	-mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	-with-system-zlib
 CONFIGURE_ARGS+=	-with-system-libpng
 
