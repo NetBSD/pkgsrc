@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/06/24 18:07:45 bouyer Exp $
+# $NetBSD: Makefile,v 1.7 2016/04/01 12:07:30 jperkin Exp $
 #
 
 DISTNAME=	FusionInventory-Agent-2.2.7
@@ -39,7 +39,7 @@ PERL5_PACKLIST= auto/FusionInventory/Agent/.packlist
 PERL5_MODULE_TYPE=	Module::Install::Bundled
 
 MAKE_PARAMS+=	PREFIX=${PREFIX} LOCALSTATEDIR=${VARBASE}/fusioninventory
-MAKE_PARAMS+=	SYSCONFDIR=${PKG_SYSCONFDIR}
+MAKE_PARAMS+=	SYSCONFDIR=${PKG_SYSCONFDIR} PKGMANDIR=${PKGMANDIR}
 
 REPLACE_PERL+=	memconf
 
