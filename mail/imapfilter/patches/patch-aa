@@ -1,13 +1,19 @@
-$NetBSD: patch-aa,v 1.14 2015/07/27 16:40:06 wiz Exp $
+$NetBSD: patch-aa,v 1.15 2016/04/01 16:22:35 jperkin Exp $
+
+Use pkgsrc layout/flags.
 
 --- src/Makefile.orig	2015-06-29 22:38:56.000000000 +0000
 +++ src/Makefile
-@@ -1,5 +1,3 @@
+@@ -1,8 +1,6 @@
 -DESTDIR =
 -PREFIX = /usr/local
  BINDIR = $(PREFIX)/bin
  SHAREDIR = $(PREFIX)/share/imapfilter
- MANDIR = $(PREFIX)/man
+-MANDIR = $(PREFIX)/man
++MANDIR = $(PREFIX)/${PKGMANDIR}
+ 
+ MYCFLAGS =
+ MYLDFLAGS =
 @@ -16,9 +14,9 @@ LIBPCRE = -lpcre
  LIBSSL = -lssl
  LIBCRYPTO = -lcrypto
