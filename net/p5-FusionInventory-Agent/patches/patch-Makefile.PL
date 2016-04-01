@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile.PL,v 1.1.1.1 2013/01/14 14:46:51 bouyer Exp $
+$NetBSD: patch-Makefile.PL,v 1.2 2016/04/01 12:07:30 jperkin Exp $
 install sample config file in examples/ dir
 Fix man pages path
 
@@ -34,12 +34,12 @@ Fix man pages path
 -        INSTALLMAN3DIR       => '$(PREFIX)/share/man/man3',
 -        INSTALLSITEMAN3DIR   => '$(PREFIX)/share/man/man3',
 -        INSTALLVENDORMAN3DIR => '$(PREFIX)/share/man/man3',
-+        INSTALLMAN1DIR       => '$(PREFIX)/man/man1',
-+        INSTALLSITEMAN1DIR   => '$(PREFIX)/man/man1',
-+        INSTALLVENDORMAN1DIR => '$(PREFIX)/man/man1',
-+        INSTALLMAN3DIR       => '$(PREFIX)/man/man3',
-+        INSTALLSITEMAN3DIR   => '$(PREFIX)/man/man3',
-+        INSTALLVENDORMAN3DIR => '$(PREFIX)/man/man3',
++        INSTALLMAN1DIR       => '$(PREFIX)/$(PKGMANDIR)/man1',
++        INSTALLSITEMAN1DIR   => '$(PREFIX)/$(PKGMANDIR)/man1',
++        INSTALLVENDORMAN1DIR => '$(PREFIX)/$(PKGMANDIR)/man1',
++        INSTALLMAN3DIR       => '$(PREFIX)/$(PKGMANDIR)/man3',
++        INSTALLSITEMAN3DIR   => '$(PREFIX)/$(PKGMANDIR)/man3',
++        INSTALLVENDORMAN3DIR => '$(PREFIX)/$(PKGMANDIR)/man3',
          SYSCONFDIR           => '$(PREFIX)/etc/fusioninventory',
          DATADIR              => '$(PREFIX)/share/fusioninventory',
          LOCALSTATEDIR        => '$(PREFIX)/var/fusioninventory',
