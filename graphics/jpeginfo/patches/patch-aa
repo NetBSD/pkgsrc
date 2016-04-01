@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2009/02/23 23:13:12 cube Exp $
+$NetBSD: patch-aa,v 1.3 2016/04/01 13:05:37 jperkin Exp $
+
+Use PKGMANDIR.
 
 --- Makefile.in.orig	2002-12-07 22:13:21.000000000 +0000
 +++ Makefile.in
@@ -7,7 +9,7 @@ $NetBSD: patch-aa,v 1.2 2009/02/23 23:13:12 cube Exp $
  
  # Where to put the manual pages.
 -mandir = $(prefix)/share/man
-+mandir = $(prefix)/man
++mandir = $(prefix)/${PKGMANDIR}
  
 +INSTALL_ROOT=	$(DESTDIR)
  
