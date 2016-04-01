@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2008/01/24 03:00:29 smb Exp $
+$NetBSD: patch-aa,v 1.2 2016/04/01 22:25:32 jperkin Exp $
+
+Support PKGMANDIR.
 
 --- Makefile.orig	2008-01-21 10:55:39.000000000 -0500
 +++ Makefile	2008-01-21 10:58:00.000000000 -0500
@@ -7,7 +9,7 @@ $NetBSD: patch-aa,v 1.1 2008/01/24 03:00:29 smb Exp $
  DATADIR = ${PREFIX}/share
  LIBDIR = ${PREFIX}/lib/${NAME}
 -MANDIR = ${DATADIR}/man
-+MANDIR = ${PREFIX}/man
++MANDIR = ${PREFIX}/${PKGMANDIR}
  MAN1DIR = ${MANDIR}/man1
  
  all: build
