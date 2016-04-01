@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile,v 1.4 2015/02/27 07:51:58 alnsn Exp $
+$NetBSD: patch-Makefile,v 1.5 2016/04/01 11:22:36 jperkin Exp $
 
 Fix installation.
 
@@ -17,7 +17,7 @@ Fix installation.
  INSTALL_CMODD= $(INSTALL_LIB)/lua
  INSTALL_CMOD= $(INSTALL_CMODD)/$(ABIVER)
 -INSTALL_MAN= $(INSTALL_SHARE)/man/man1
-+INSTALL_MAN= $(DPREFIX)/man/man1
++INSTALL_MAN= $(DPREFIX)/${PKGMANDIR}/man1
  INSTALL_PKGCONFIG= $(INSTALL_LIB)/pkgconfig
  
  INSTALL_TNAME= luajit-$(VERSION)
