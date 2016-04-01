@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/03/28 21:02:15 martin Exp $
+$NetBSD: patch-aa,v 1.2 2016/04/01 13:50:21 jperkin Exp $
 
---- configure.in.orig	2003-09-07 17:23:12.000000000 +0200
-+++ configure.in	2004-03-14 11:23:23.000000000 +0100
-@@ -178,7 +178,7 @@
+--- configure.in.orig	2003-09-07 15:23:12.000000000 +0000
++++ configure.in
+@@ -178,7 +178,7 @@ if test "$with_tcp_wrappers" = "yes"; th
          old_LDFLAGS=$LDFLAGS
  	LIBS="$LIBS $TCP_WRAPPERS_LIBS"
          LDFLAGS="$LDFLAGS $TCP_WRAPPERS_LDFLAGS"
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/03/28 21:02:15 martin Exp $
          	[
  	        	AC_DEFINE(WITH_TCP_WRAPPERS)
  		        AC_CHECK_LIB(nsl, yp_get_default_domain,
-@@ -187,10 +187,17 @@
+@@ -187,10 +187,17 @@ if test "$with_tcp_wrappers" = "yes"; th
                          	]
                          )
                          chk_tcp_wrappers=yes
@@ -29,7 +29,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/03/28 21:02:15 martin Exp $
  			AC_MSG_RESULT([tcp wrappers library not found, support disabled])
                  ]
          )
-@@ -253,7 +260,7 @@
+@@ -253,7 +260,7 @@ AC_ARG_WITH(
            *)
            	if test -d $with_ssl; then
                  	SSL_LDFLAGS="-L$with_ssl"
@@ -38,7 +38,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/03/28 21:02:15 martin Exp $
                  else
                  	SSL_LIBS="$with_ssl"
                  fi
-@@ -267,7 +274,7 @@
+@@ -267,7 +274,7 @@ AC_ARG_WITH(
  )
  if test "$with_ssl" = "yes"; then
  	if test -z "$SSL_LIBS"; then
@@ -47,7 +47,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/03/28 21:02:15 martin Exp $
  	fi
          old_LIBS=$LIBS
          old_LDFLAGS=$LDFLAGS
-@@ -332,6 +339,11 @@
+@@ -332,6 +339,11 @@ if test "$chk_ssl_krb" = "yes"; then
                  ]
          )
  fi
@@ -59,11 +59,17 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/03/28 21:02:15 martin Exp $
  dnl ********************************************************
  dnl ********************************************************
  dnl Output a list of included optional components
-@@ -375,7 +387,7 @@
+@@ -371,11 +383,11 @@ if test "${prefix}" = "NONE"; then
+ 	prefix="/usr/local"
+ fi
+ if test "${prefix}" = "/usr" -o "${prefix}" = "/usr/local"; then
+-	mandir=${prefix}/share/man
++	mandir=${prefix}/${PKGMANDIR}
  	docdir=${prefix}/share/doc/pulsar-${VERSION}
  else
- 	mandir=${prefix}/man
+-	mandir=${prefix}/man
 -	docdir=${prefix}/doc/pulsar-${VERSION}
++	mandir=${prefix}/${PKGMANDIR}
 +	docdir=${prefix}/share/doc/pulsar-${VERSION}
  fi
  sbindir=${prefix}/sbin
