@@ -1,9 +1,18 @@
-$NetBSD: patch-Makefile.in,v 1.1 2014/11/29 15:53:11 prlw1 Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2016/04/01 12:36:41 jperkin Exp $
 
 Move message to MESSAGE.
 
---- Makefile.in.orig	2013-03-12 12:22:19.000000000 +0000
+--- Makefile.in.orig	2014-02-08 14:24:01.000000000 +0000
 +++ Makefile.in
+@@ -14,7 +14,7 @@ INSTALL_DATA = @INSTALL_DATA@
+ 
+ BINDIR=$(DESTDIR)@prefix@/bin
+ DATADIR=$(DESTDIR)@prefix@/share/pmw
+-MANDIR=$(DESTDIR)@prefix@/man
++MANDIR=$(DESTDIR)@prefix@/${PKGMANDIR}
+ 
+ # BINDIR is the directory in which the pmw command is installed.
+ # DATADIR is the directory in which the fontmetrics, the PostScript fonts,
 @@ -65,7 +65,6 @@ install:        build
  		$(INSTALL_DATA) psfonts/PMW-Alpha $(DATADIR)/psfonts
  		$(INSTALL_DATA) fontmetrics/* $(DATADIR)/fontmetrics
