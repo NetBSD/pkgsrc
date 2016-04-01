@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2016/03/09 20:13:23 fhajny Exp $
+# $NetBSD: options.mk,v 1.8 2016/04/01 08:21:05 fhajny Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.node
 PKG_SUPPORTED_OPTIONS=	openssl dtrace icu
@@ -19,6 +19,9 @@ PLIST.dtrace=		yes
 .else
 CONFIGURE_ARGS+=	--without-dtrace
 .endif
+
+# print-PLIST helper
+PRINT_PLIST_AWK+=	{if ($$0 ~ /lib\/dtrace/) {$$0 = "$${PLIST.dtrace}" $$0;}}
 
 .if !empty(PKG_OPTIONS:Micu)
 CONFIGURE_ARGS+=	--with-intl=system-icu
