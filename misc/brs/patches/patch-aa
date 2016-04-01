@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2012/07/03 17:39:53 joerg Exp $
+$NetBSD: patch-aa,v 1.5 2016/04/01 10:27:54 jperkin Exp $
 
 --- Makefile.orig	1994-12-15 01:53:00.000000000 +0000
 +++ Makefile
@@ -11,8 +11,9 @@ $NetBSD: patch-aa,v 1.4 2012/07/03 17:39:53 joerg Exp $
  #DEST	      = $(HOME)/local
  DESTBIN	      = $(DEST)/bin
 -DESTLIB       = $(DEST)/lib
+-DESTMAN	      = $(DEST)/man
 +DESTLIB       = $(DEST)/libdata/brs
- DESTMAN	      = $(DEST)/man
++DESTMAN	      = $(DEST)/${PKGMANDIR}
  DESTMAN1      = $(DESTMAN)/man1
  
  # I use environment variables for these...
