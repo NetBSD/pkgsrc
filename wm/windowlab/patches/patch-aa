@@ -1,8 +1,10 @@
-$NetBSD: patch-aa,v 1.2 2005/09/04 06:05:20 xtraeme Exp $
+$NetBSD: patch-aa,v 1.3 2016/04/01 16:11:23 jperkin Exp $
 
---- Makefile.orig	2005-09-04 07:44:29.000000000 +0200
-+++ Makefile	2005-09-04 07:47:12.000000000 +0200
-@@ -6,7 +6,7 @@
+Use pkgsrc layout.
+
+--- Makefile.orig	2005-07-18 21:50:42.000000000 +0000
++++ Makefile
+@@ -6,7 +6,7 @@ EXTRA_LIBS += -lXext
  
  # Information about the location of the menurc file
  ifndef MENURC
@@ -11,7 +13,7 @@ $NetBSD: patch-aa,v 1.2 2005/09/04 06:05:20 xtraeme Exp $
  endif
  DEFINES += -DDEF_MENURC="\"$(MENURC)\""
  
-@@ -15,28 +15,28 @@
+@@ -15,28 +15,28 @@ DEFINES += -DDEF_MENURC="\"$(MENURC)\""
  
  # Uncomment to add freetype support (requires XFree86 4.0.2 or later)
  # This needs -lXext above, even if you have disabled shape support
@@ -38,8 +40,9 @@ $NetBSD: patch-aa,v 1.2 2005/09/04 06:05:20 xtraeme Exp $
  endif
  
  BINDIR = $(DESTDIR)$(XROOT)/bin
- MANDIR = $(DESTDIR)$(XROOT)/man/man1
+-MANDIR = $(DESTDIR)$(XROOT)/man/man1
 -CFGDIR = $(DESTDIR)/etc/X11/windowlab
++MANDIR = $(DESTDIR)$(XROOT)/${PKGMANDIR}/man1
 +#CFGDIR = $(DESTDIR)/etc/X11/windowlab
  INCLUDES = -I$(XROOT)/include $(EXTRA_INC)
 -LDPATH = -L$(XROOT)/lib
@@ -47,7 +50,7 @@ $NetBSD: patch-aa,v 1.2 2005/09/04 06:05:20 xtraeme Exp $
  LIBS = -lX11 $(EXTRA_LIBS)
  
  PROG = windowlab
-@@ -53,9 +53,10 @@
+@@ -53,9 +53,10 @@ $(OBJS): %.o: %.c $(HEADERS)
  	$(CC) $(CFLAGS) $(DEFINES) $(INCLUDES) -c $< -o $@
  
  install: all
