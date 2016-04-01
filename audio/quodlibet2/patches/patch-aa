@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2013/11/23 13:58:13 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2016/04/01 22:11:11 jperkin Exp $
 
 Fixes MANPATH.
 
@@ -9,7 +9,7 @@ Fixes MANPATH.
  
      def run(self):
 -        basepath = os.path.join(self.prefix, 'share', 'man')
-+        basepath = os.path.join(self.prefix,'man')
++        basepath = os.path.join(self.prefix, os.environ['PKGMANDIR'])
          if self.root != None:
            basepath = change_root(self.root, basepath)
          self.mkpath(basepath)
