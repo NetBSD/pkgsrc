@@ -1,4 +1,6 @@
-$NetBSD: patch-ag,v 1.2 2012/12/12 12:47:50 wiz Exp $
+$NetBSD: patch-ag,v 1.3 2016/04/01 13:14:32 jperkin Exp $
+
+Use pkgsrc layout/flags.
 
 --- Makefile.in.orig	2011-09-05 18:59:14.000000000 +0000
 +++ Makefile.in
@@ -11,7 +13,8 @@ $NetBSD: patch-ag,v 1.2 2012/12/12 12:47:50 wiz Exp $
  bindir=		$(prefix)/bin
  libdir=		$(prefix)/lib
  includedir=	$(prefix)/include
- mandir=		$(prefix)/man
+-mandir=		$(prefix)/man
++mandir=		$(prefix)/${PKGMANDIR}
 +docdir=		$(prefix)/share/doc
  
  
