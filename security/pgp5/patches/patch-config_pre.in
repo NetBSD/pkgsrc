@@ -1,0 +1,15 @@
+$NetBSD: patch-config_pre.in,v 1.1 2016/04/01 10:43:29 jperkin Exp $
+
+Support --mandir.
+
+--- config/pre.in.orig	1998-02-07 19:54:56.000000000 +0000
++++ config/pre.in
+@@ -16,7 +16,7 @@ prefix=@prefix@
+ exec_prefix=@exec_prefix@
+ 
+ includedir=$(prefix)/include
+-mandir=$(prefix)/man
++mandir=@mandir@
+ bindir=$(exec_prefix)/bin
+ libdir=$(exec_prefix)/lib
+ 
