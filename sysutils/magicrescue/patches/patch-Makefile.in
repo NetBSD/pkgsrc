@@ -1,0 +1,21 @@
+$NetBSD: patch-Makefile.in,v 1.1 2016/04/01 12:31:20 jperkin Exp $
+
+Use PKGMANDIR.
+
+--- Makefile.in.orig	2004-08-14 22:36:37.000000000 +0000
++++ Makefile.in
+@@ -61,12 +61,12 @@ install: all
+ 	
+ 	mkdir -p $(PREFIX)/share/magicrescue/tools \
+ 	    $(PREFIX)/share/magicrescue/recipes \
+-	    $(PREFIX)/man/man1 \
++	    $(PREFIX)/${PKGMANDIR}/man1 \
+ 	    $(PREFIX)/bin
+ 	
+ 	cp magicrescue$(EXE) dupemap$(EXE) magicsort $(PREFIX)/bin/
+ 	cp recipes/* $(PREFIX)/share/magicrescue/recipes/
+-	cp $(DOCS) $(PREFIX)/man/man1
++	cp $(DOCS) $(PREFIX)/${PKGMANDIR}/man1
+ 	
+ 	for f in tools/*; do \
+ 	  if [ -x "$$f" ]; then \
