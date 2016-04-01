@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2005/06/16 22:06:51 kristerw Exp $
+$NetBSD: patch-ab,v 1.2 2016/04/01 11:09:47 jperkin Exp $
+
+Portability fixes.
 
 --- src/cplat.h.orig	Thu Jun 16 23:44:42 2005
 +++ src/cplat.h	Thu Jun 16 23:48:06 2005
