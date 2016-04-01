@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2016/04/01 11:22:36 jperkin Exp $
+$NetBSD: distinfo,v 1.8 2016/04/01 13:26:03 adam Exp $
 
 SHA1 (LuaJIT-2.0.4.tar.gz) = 6e533675180300e85d12c4bbeea2d0e41ad21172
 RMD160 (LuaJIT-2.0.4.tar.gz) = ef9ec596ebf81e3871f060c40303bcd2002474c4
 SHA512 (LuaJIT-2.0.4.tar.gz) = a72957bd85d8f457269e78bf08c19b28c5707df5d19920d61918f8a6913f55913ce13037fb9a6463c04cefde0c6644739f390e09d656e4bbc2c236927aa3f8f9
 Size (LuaJIT-2.0.4.tar.gz) = 847615 bytes
 SHA1 (patch-Makefile) = 4dc6b2fd4f155700aa92e81bf2e10ce2e7990f16
+SHA1 (patch-src_Makefile) = 29426c80f12d34d69eff2dfae1da786827069163
