@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.9 2010/06/28 10:13:01 joerg Exp $
+$NetBSD: patch-aa,v 1.10 2016/04/01 17:11:36 jperkin Exp $
 
---- Makefile.orig	2005-09-05 22:59:53.000000000 -0700
+--- Makefile.orig	2005-09-06 05:59:53.000000000 +0000
 +++ Makefile
 @@ -20,7 +20,9 @@ CC_win32 = gcc -mno-cygwin
  CC_linux = gcc -pthread
@@ -47,7 +47,7 @@ $NetBSD: patch-aa,v 1.9 2010/06/28 10:13:01 joerg Exp $
  
  #
  # Tools needed for Perl "POD"-format documentation conversion.
-@@ -74,9 +76,9 @@ POD2MAN = $(PERL) -S pod2man$(BAT_$(OS))
+@@ -74,10 +76,10 @@ POD2MAN = $(PERL) -S pod2man$(BAT_$(OS))
  
  # Installation directories for the Linux/Solaris/*NIX World
  
@@ -55,10 +55,12 @@ $NetBSD: patch-aa,v 1.9 2010/06/28 10:13:01 joerg Exp $
 +ROOTDIR =$(DESTDIR)$(PREFIX)
  BINDIR = $(ROOTDIR)/bin
 -ZBDDIR = $(ROOTDIR)/lib/zebedee
+-MANDIR = $(ROOTDIR)/man/man1
 +ZBDDIR = $(ROOTDIR)/share/doc/zebedee
- MANDIR = $(ROOTDIR)/man/man1
++MANDIR = $(ROOTDIR)/${PKGMANDIR}/man1
  
  # This is a BSD-style install
+ 
 @@ -87,6 +89,7 @@ INSTALL_linux = install -c
  INSTALL_linux64 = $(INSTALL_linux)
  INSTALL_solaris = /usr/ucb/install -c
