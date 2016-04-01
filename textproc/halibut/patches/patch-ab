@@ -1,7 +1,15 @@
-$NetBSD: patch-ab,v 1.1.1.1 2009/09/06 18:42:41 ahoka Exp $
+$NetBSD: patch-ab,v 1.2 2016/04/01 11:41:42 jperkin Exp $
 
---- doc/Makefile.orig	2006-12-11 20:43:10.000000000 +0100
+Use pkgsrc layout.
+
+--- doc/Makefile.orig	2014-12-19 10:03:18.000000000 +0000
 +++ doc/Makefile
+@@ -1,4 +1,4 @@
+-mandir=$(prefix)/man
++mandir=$(prefix)/${PKGMANDIR}
+ man1dir=$(mandir)/man1
+ 
+ CHAPTERS := $(SITE) blurb intro running input output licence manpage index
 @@ -17,7 +17,8 @@ halibut.1: manpage.but
  	$(HALIBUT) --man=halibut.1 manpage.but
  
