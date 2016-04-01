@@ -1,10 +1,13 @@
-$NetBSD: patch-ab,v 1.3 2009/07/07 18:53:17 joerg Exp $
+$NetBSD: patch-ab,v 1.4 2016/04/01 17:55:14 jperkin Exp $
 
---- Makefile.in.orig	2000-04-20 17:21:24.000000000 +0200
+--- Makefile.in.orig	2000-04-20 15:21:24.000000000 +0000
 +++ Makefile.in
-@@ -58,13 +58,13 @@ datadir = $(prefix)/lib
+@@ -56,15 +56,15 @@ bindir_arch_indep = $(prefix)/bin
+ libdir 	= $(exec_prefix)/lib
+ datadir = $(prefix)/lib
  
- mandir 	= $(prefix)/man
+-mandir 	= $(prefix)/man
++mandir 	= @mandir@
  man1dir = $(mandir)/man1
 -man3dir = $(mandir)/man3
 +man3dir = $(mandir)/mann
