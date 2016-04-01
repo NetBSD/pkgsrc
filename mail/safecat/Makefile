@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2014/01/04 10:10:15 seb Exp $
+# $NetBSD: Makefile,v 1.18 2016/04/01 11:20:58 jperkin Exp $
 #
 
 DISTNAME=		safecat-1.13
@@ -17,6 +17,13 @@ BUILD_TARGETS=		install instcheck
 DJB_CONFIG_HOME=	conf-root
 
 MAKE_FLAGS+=		DESTDIR=${DESTDIR:Q}
+
+SUBST_CLASSES+=		pkgmandir
+SUBST_STAGE.pkgmandir=	pre-configure
+SUBST_FILES.pkgmandir=	hier.c
+SUBST_VARS.pkgmandir=	PKGMANDIR
+
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 
 .include "../../mk/djbware.mk"
 .include "../../mk/bsd.pkg.mk"
