@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2007/08/17 23:46:18 agc Exp $
+$NetBSD: patch-aa,v 1.4 2016/04/01 21:44:02 jperkin Exp $
 
 --- Makefile.in.orig	1997-05-03 07:37:17.000000000 +0100
 +++ Makefile.in	2007-08-18 00:31:59.000000000 +0100
@@ -6,8 +6,8 @@ $NetBSD: patch-aa,v 1.3 2007/08/17 23:46:18 agc Exp $
  
  install:	all
  	cd wily; $(MAKE) $(MFLAGS) install
-+	@INSTALL@ -d 0755 ${DESTDIR}${PREFIX}/man/man1
-+	@INSTALL@ -m 0444 Doc/old/wily.1 ${DESTDIR}${PREFIX}/man/man1
++	@INSTALL@ -d 0755 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
++	@INSTALL@ -m 0444 Doc/old/wily.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
  clean:
  	for i in $(SUBDIRS); do \
  		(cd $$i; $(MAKE) $(MFLAGS) $@); \
