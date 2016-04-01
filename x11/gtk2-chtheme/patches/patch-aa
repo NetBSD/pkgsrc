@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/12/28 03:26:19 minskim Exp $
+$NetBSD: patch-aa,v 1.2 2016/04/01 16:40:46 jperkin Exp $
+
+Use pkgsrc layout.
 
 --- Metadata.orig	2004-02-09 16:47:23.000000000 +0000
 +++ Metadata
@@ -10,4 +12,4 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/12/28 03:26:19 minskim Exp $
 +#PREFIX = /usr
  BINDIR = $(PREFIX)/bin
 -MANDIR = $(PREFIX)/share/man
-+MANDIR = $(PREFIX)/man
++MANDIR = $(PREFIX)/${PKGMANDIR}
