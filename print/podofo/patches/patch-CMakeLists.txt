@@ -1,4 +1,4 @@
-$NetBSD: patch-CMakeLists.txt,v 1.1 2015/11/05 19:46:53 adam Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.2 2016/04/01 11:04:43 jperkin Exp $
 
 Make LUA optional (PR/43054). Make sure man pages are installed
 at the right place.
@@ -44,7 +44,7 @@ Dont look for CppUnit as we dont want to build tests.
  # Setup directories we will need
  #
 -SET(MANDIR "share/man/")
-+SET(MANDIR "man/")
++SET(MANDIR "${CMAKE_INSTALL_MANDIR}/")
  
  # Create the config file. It'll be appended to as the subdirs run though
  # then dependency information will be written to it at the end of the
