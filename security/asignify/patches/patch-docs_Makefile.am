@@ -1,0 +1,12 @@
+$NetBSD: patch-docs_Makefile.am,v 1.1 2016/04/01 13:54:41 jperkin Exp $
+
+Honour --mandir.
+
+--- docs/Makefile.am.orig	2015-02-20 12:58:50.000000000 +0000
++++ docs/Makefile.am
+@@ -1,4 +1,2 @@
+ dist_man_MANS= asignify.1
+ EXTRA_DIST=	asignify.pod
+-
+-mandir=	$(prefix)/man
+\ No newline at end of file
