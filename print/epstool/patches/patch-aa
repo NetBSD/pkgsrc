@@ -1,8 +1,10 @@
-$NetBSD: patch-aa,v 1.3 2013/05/18 20:50:36 shattered Exp $
+$NetBSD: patch-aa,v 1.4 2016/04/01 11:09:47 jperkin Exp $
+
+Use pkgsrc layout.
 
 --- makefile.orig	2005-06-10 09:41:00.000000000 +0000
 +++ makefile
-@@ -45,9 +45,9 @@ TARGET=epstool
+@@ -45,10 +45,10 @@ TARGET=epstool
  
  include $(SRCDIR)/common.mak
  
@@ -10,7 +12,9 @@ $NetBSD: patch-aa,v 1.3 2013/05/18 20:50:36 shattered Exp $
 +EPSTOOL_ROOT=${DESTDIR}${PREFIX}
  EPSTOOL_BASE=$(prefix)$(EPSTOOL_ROOT)
 -EPSTOOL_DOCDIR=$(EPSTOOL_BASE)/share/doc/epstool-$(EPSTOOL_VERSION)
+-EPSTOOL_MANDIR=$(EPSTOOL_BASE)/man
 +EPSTOOL_DOCDIR=$(EPSTOOL_BASE)/share/doc/epstool
- EPSTOOL_MANDIR=$(EPSTOOL_BASE)/man
++EPSTOOL_MANDIR=$(EPSTOOL_BASE)/${PKGMANDIR}
  EPSTOOL_BINDIR=$(EPSTOOL_BASE)/bin
  
+ epstool: $(BD)epstool$(EXE)
