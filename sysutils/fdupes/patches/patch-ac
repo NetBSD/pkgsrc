@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.2 2015/12/12 04:00:30 kamil Exp $
+$NetBSD: patch-ac,v 1.3 2016/04/01 11:12:27 jperkin Exp $
 
 Fix various target paths.
 Add a rule in order not to depend on gmake.
@@ -26,7 +26,7 @@ Add a rule in order not to depend on gmake.
  # installed. Suggested value is "$(PREFIX)/man/man1"
  #
 -MAN_BASE_DIR = $(PREFIX)/man
-+MAN_BASE_DIR = $(DESTDIR)$(PREFIX)/man
++MAN_BASE_DIR = $(DESTDIR)$(PREFIX)/${PKGMANDIR}
  MAN_DIR = $(MAN_BASE_DIR)/man1
  MAN_EXT = 1
  
