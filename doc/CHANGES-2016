@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1295 2016/04/01 08:21:26 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.1296 2016/04/01 08:24:45 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1697,3 +1697,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/heirloom-libcommon to 070715nb1 [jperkin 2016-03-31]
 	Updated fonts/umefont-ttf to 0.610 [ryoon 2016-03-31]
 	Updated lang/nodejs to 5.10.0 [fhajny 2016-04-01]
+	Updated lang/nodejs4 to 4.4.2 [fhajny 2016-04-01]
