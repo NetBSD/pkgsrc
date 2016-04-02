@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1297 2016/04/02 03:34:42 manu Exp $
+$NetBSD: CHANGES-2016,v 1.1298 2016/04/02 09:03:18 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1699,3 +1699,6 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/nodejs to 5.10.0 [fhajny 2016-04-01]
 	Updated lang/nodejs4 to 4.4.2 [fhajny 2016-04-01]
 	Updated filesystems/glusterfs to 3.7.10 [manu 2016-04-02]
+	Updated lang/php55 to 5.5.34 [taca 2016-04-02]
+	Updated lang/php56 to 5.6.20 [taca 2016-04-02]
+	Updated lang/php70 to 7.0.5 [taca 2016-04-02]
