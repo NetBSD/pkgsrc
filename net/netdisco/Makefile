@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2015/09/12 23:00:08 joerg Exp $
+# $NetBSD: Makefile,v 1.38 2016/04/02 08:43:25 jperkin Exp $
 
 DISTNAME=		netdisco-${PKGVERSION}_with_mibs
 PKGNAME=		netdisco-${PKGVERSION}
@@ -30,6 +30,8 @@ DEPENDS+=		p5-libapreq2-[0-9]*:../../www/p5-libapreq2
 DEPENDS+=		p5-Parallel-ForkManager-[0-9]*:../../devel/p5-Parallel-ForkManager
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
+
+INSTALLATION_DIRS=	${EGDIR} ${PKGBASE}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -146,8 +148,6 @@ do-build:
 do-install:
 	${RM} -f ${WRKSRC:Q}/bin/netdisco_daemon
 	cd ${WRKSRC:Q} && pax -rw -pp . ${DESTDIR}${PREFIX:Q}/netdisco
-	${MKDIR} ${DESTDIR}${EGDIR}
-
 	set -e; \
 	for i in netdisco.conf netdisco-topology.txt netdisco.crontab \
 	    netdisco_apache.conf netdisco_apache_dir.conf; do \
