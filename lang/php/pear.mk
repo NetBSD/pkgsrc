@@ -1,4 +1,4 @@
-# $NetBSD: pear.mk,v 1.28 2016/02/29 19:26:53 jperkin Exp $
+# $NetBSD: pear.mk,v 1.29 2016/04/02 08:22:03 jperkin Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install pear packages.
@@ -86,6 +86,7 @@ do-install:
 PLIST_SUBST+=	PEAR_LIB=${PEAR_LIB:Q}
 
 do-install:
+	${MKDIR} ${DESTDIR}${PREFIX}/${PEAR_LIB}
 	cd ${WRKSRC}/lib && ${PAX} -wr * ${DESTDIR}${PREFIX}/${PEAR_LIB}/
 
 .endif
