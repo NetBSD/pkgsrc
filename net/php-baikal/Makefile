@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/03/13 17:27:12 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2016/04/02 08:23:30 jperkin Exp $
 
 DISTNAME=	baikal-0.3.5
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
@@ -27,7 +27,7 @@ USE_TOOLS+=	pax
 BUILD_DEFS+=	APACHE_GROUP APACHE_USER
 
 BAIKALDIR=		share/baikal
-INSTALLATION_DIRS=	${BAIKDALDIR}
+INSTALLATION_DIRS=	${BAIKALDIR}
 
 # TODO:
 # The directory "Specific" should probably be handled as configuration
