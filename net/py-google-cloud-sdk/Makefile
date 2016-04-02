@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/02/13 02:35:16 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2016/04/02 08:26:49 jperkin Exp $
 
 GCLOUDVER=	96.0.0
 DISTNAME=	google-cloud-sdk-${GCLOUDVER}-linux-x86
@@ -22,6 +22,8 @@ REPLACE_PYTHON+=	bin/bootstrapping/*
 
 PLIST_SUBST+=		PYPKGPREFIX=${PYPKGPREFIX}
 MESSAGE_SUBST+=		PYPKGPREFIX=${PYPKGPREFIX}
+
+INSTALLATION_DIRS=	${PKGBASE}
 
 do-install:
 	cd ${WRKDIR} && \
