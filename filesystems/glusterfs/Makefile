@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.63 2016/03/22 08:14:00 manu Exp $
+# $NetBSD: Makefile,v 1.64 2016/04/02 03:33:51 manu Exp $
 
-DISTNAME=	glusterfs-3.7.9
+DISTNAME=	glusterfs-3.7.10
 #PKGREVISION=	1
 CATEGORIES=	filesystems
 MASTER_SITES=	http://bits.gluster.org/pub/gluster/glusterfs/src/
@@ -24,6 +24,7 @@ MAKE_FLAGS+=		LEXLIB=""
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # only 2.x supported as of 3.6.0
 
 REPLACE_PYTHON+=	contrib/ipaddr-py/ipaddr.py
+REPLACE_PYTHON+=	extras/ganesha/scripts/generate-epoch.py
 REPLACE_PYTHON+=	extras/geo-rep/schedule_georep.py
 REPLACE_PYTHON+=	extras/snap_scheduler/gcron.py
 REPLACE_PYTHON+=	extras/snap_scheduler/snap_scheduler.py
