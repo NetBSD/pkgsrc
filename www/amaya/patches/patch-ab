@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.15 2011/07/02 22:19:30 dholland Exp $
+$NetBSD: patch-ab,v 1.16 2016/04/03 12:43:39 joerg Exp $
 
 - need to check for wchar.h
 - configure the included wxWidgets to use pksrc png/jpeg/tiff/xpm instead
@@ -6,6 +6,7 @@ $NetBSD: patch-ab,v 1.15 2011/07/02 22:19:30 dholland Exp $
   used, but this change will be wanted again if it ever comes back)
 - don't overwrite pkgsrc CFLAGS/CXXFLAGS
 - fix install paths for pkgsrc
+- don't add __cplusplus, any proper C++ compiler will define it already
 
 --- Amaya/configure.orig	2009-12-09 13:42:57.000000000 +0000
 +++ Amaya/configure
@@ -43,7 +44,17 @@ $NetBSD: patch-ab,v 1.15 2011/07/02 22:19:30 dholland Exp $
  fi
  
  if test "${CC}" = "gcc" ; then
-@@ -14785,7 +14785,7 @@ if test "${VPATHOPT}" = "" ; then
+@@ -13833,8 +13833,7 @@ CFLAGS="${CFLAGS} -x c"
+ 
+ # C++ options (-x c++)
+ #CXXFLAGS="${CXXFLAGS} -Wall"
+-CXX_OPTIONS="-D__cplusplus"
+-CXXFLAGS="${CXXFLAGS} -Wall -x c++ ${CXX_OPTIONS}"
++CXXFLAGS="${CXXFLAGS} -Wall -x c++"
+ 
+ # setup LDFLAGS
+ # on macosx, specific flags must be set to avoid conflicts with allready installed libwww
+@@ -14785,7 +14784,7 @@ if test "${VPATHOPT}" = "" ; then
  	VPATHOPT="VPATH"
  fi
  
