@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2016/03/30 11:38:59 fhajny Exp $
+# $NetBSD: Makefile,v 1.20 2016/04/03 12:46:18 joerg Exp $
 
 DISTNAME=	tesseract-3.04.01
 CATEGORIES=	graphics
@@ -16,7 +16,7 @@ SITES.tessdata-${LANGVER}.tar.gz=	-${MASTER_SITES:Q}tessdata/archive/${LANGVER}.
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake pax
+USE_TOOLS+=		gmake pax pkg-config
 GNU_CONFIGURE=		yes
 
 CONFIGURE_ENV+=		LIBLEPT_HEADERSDIR=${BUILDLINK_PREFIX.leptonica}/include
