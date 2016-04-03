@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/02/07 21:43:03 markd Exp $
+# $NetBSD: Makefile,v 1.2 2016/04/03 12:45:57 joerg Exp $
 #
 
 DISTNAME=	ocaml-zarith-1.4.1
@@ -11,6 +11,9 @@ COMMENT=	OCaml arithmetic library for arbitrary precision integers
 LICENSE=	gnu-lgpl-v2
 
 DEPENDS+=	ocaml-findlib-[0-9]*:../../devel/ocaml-findlib
+
+# zarith library creation is racy
+MAKE_JOBS_SAFE=	no
 
 HAS_CONFIGURE=	yes
 CONFIGURE_ENV+=	DESTDIR=${DESTDIR}
