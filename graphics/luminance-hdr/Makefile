@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/03/05 11:28:40 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2016/04/03 12:47:45 joerg Exp $
 
 DISTNAME=	luminance-hdr-2.4.0
 PKGREVISION=	1
@@ -25,5 +25,6 @@ USE_CMAKE=	yes
 .include "../../math/fftwf/buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../x11/qt5-qttools/buildlink3.mk"
 .include "../../x11/qt5-qtwebkit/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
