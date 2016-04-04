@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.24 2016/04/04 15:03:14 bad Exp $
+$NetBSD: distinfo,v 1.25 2016/04/04 15:13:15 bad Exp $
 
 SHA1 (ipxe-git-v1.0.0.tar.gz) = da052c8de5f3485fe0253c19cf52ed6d72528485
 RMD160 (ipxe-git-v1.0.0.tar.gz) = dcd9b6eaafa1ce05c1ebf2a15f2f73ad7a8c5547
@@ -48,7 +48,8 @@ SHA1 (patch-firmware_etherboot_patches_boot__prompt__option.patch) = 95d6e140643
 SHA1 (patch-firmware_etherboot_patches_series) = 2ced4e380f436a0287744e0a817ff24b91a43e7c
 SHA1 (patch-firmware_hvmloader_Makefile) = d4d9f34335a178f50e7fda52747cf6551ceeccc6
 SHA1 (patch-firmware_hvmloader_util.h) = 8ec0efdf56b9f2ea66cac7e90cba4abf727d4605
-SHA1 (patch-hotplug_NetBSD_Makefile) = 7b14179d0d00dc1b6f9a85fff706d82ce9b0cd66
+SHA1 (patch-hotplug_NetBSD_Makefile) = efc7c4d5b2f4aa5d3de2c7f77427db77fd95898a
+SHA1 (patch-hotplug_NetBSD_block) = 61a1d5188abd280aa0960fffb6f43fd17bd6fb07
 SHA1 (patch-hotplug_NetBSD_vif-bridge) = 7d01f15273c983c2cfe125e75800f9719961427c
 SHA1 (patch-hotplug_NetBSD_vif-ip) = d3b0555f5ba0bfcbf0f7027eb5f74a84d0cf7c80
 SHA1 (patch-hotplug_common_Makefile) = 3ee2fec5c4cb171c35c7e73379da4235b5ddca99
