@@ -1,59 +1,33 @@
-$NetBSD: patch-hotplug_NetBSD_block,v 1.1 2016/04/04 14:45:12 bad Exp $
+$NetBSD: patch-hotplug_NetBSD_block,v 1.2 2016/04/04 14:47:19 bad Exp $
 
 Lock the block script to avoid races during vnd configuration.
 
---- hotplug/NetBSD/block.orig	2015-11-03 10:11:18.000000000 +0100
-+++ hotplug/NetBSD/block	2016-03-25 14:37:34.000000000 +0100
-@@ -6,6 +6,7 @@
+--- hotplug/NetBSD/block.orig	2015-11-03 09:11:18.000000000 +0000
++++ hotplug/NetBSD/block
+@@ -6,8 +6,9 @@
  
  DIR=$(dirname "$0")
  . "${DIR}/hotplugpath.sh"
 +. "${DIR}/locking.sh"
  
- PATH=${BINDIR}:${SBINDIR}:${LIBEXEC_BIN}:/bin:/usr/bin:/sbin:/usr/sbin
+-PATH=${BINDIR}:${SBINDIR}:${LIBEXEC_BIN}:/bin:/usr/bin:/sbin:/usr/sbin
++PATH=${BINDIR}:${SBINDIR}:${LIBEXEC}:${PRIVATE_BINDIR}:/bin:/usr/bin:/sbin:/usr/sbin
  export PATH
-@@ -14,6 +15,7 @@
- 	echo "$@" >&2
- 	xenstore-write $xpath/hotplug-status error \
- 	               $xpath/hotplug-error "$@"
-+	release_lock block
- 	exit 1
- }
- 	
-@@ -37,10 +39,12 @@
- 	# device removed
- 	case $xtype in
- 	file)
+ 
+ error() {
+@@ -62,6 +63,7 @@ case $xstatus in
+ 			available_disks="$available_disks $disk"
+ 			eval $disk=free
+ 		done
 +		claim_lock block
- 		vnd=$(xenstore-read "$xpath/vnd" || echo none)
- 		if [ $vnd != none ]; then
- 			vnconfig -u $vnd
- 		fi
-+		release_lock block
- 		;;
- 	phy)
- 		;;
-@@ -52,6 +56,7 @@
- 	exit 0
- 	;;
- 2)
-+	claim_lock block
- 	case $xtype in
- 	file)
- 		# Store the list of available vnd(4) devices in
-@@ -78,6 +83,7 @@
+ 		# Mark the used vnd(4) devices as ``used''.
+ 		for disk in `sysctl hw.disknames`; do
+ 			case $disk in
+@@ -77,6 +79,7 @@ case $xstatus in
+ 				break	
  			fi
  		done
++		release_lock block
  		if [ x$device = x ] ; then
-+			release_lock block
  			error "no available vnd device"
  		fi
- 		xenstore-write $xpath/vnd $device
-@@ -89,6 +95,7 @@
- 	physical_device=$(stat -f '%r' "$device")
- 	xenstore-write $xpath/physical-device $physical_device
- 	xenstore-write $xpath/hotplug-status connected
-+	release_lock block
- 	exit 0
- 	;;
- *)
