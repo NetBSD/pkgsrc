@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2008/11/01 09:51:59 adam Exp $
+# $NetBSD: options.mk,v 1.2 2016/04/04 17:33:10 joerg Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.fontforge
 PKG_SUPPORTED_OPTIONS=	x11
@@ -12,6 +12,7 @@ PLIST_VARS+=	x11
 PLIST.x11=	yes
 # checks for X11/Intrinsic.h
 BUILDLINK_DEPMETHOD.libXt+=	build
+.include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXi/buildlink3.mk"
