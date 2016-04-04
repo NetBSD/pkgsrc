@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2015/07/31 13:01:43 ryoon Exp $
+# $NetBSD: Makefile,v 1.10 2016/04/04 17:29:25 joerg Exp $
 #
 
 DISTNAME=	cmake-fedora-2.1.3-modules-only
 PKGNAME=	${DISTNAME:S/-modules-only//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	https://fedorahosted.org/releases/c/m/cmake-fedora/
 
@@ -20,9 +20,9 @@ NO_BUILD=	yes
 
 WRKSRC=		${WRKDIR}
 
-INSTALLATION_DIRS+=	share/cmake-3.3/Modules
+INSTALLATION_DIRS+=	share/cmake-3.5/Modules
 
 do-install:
-	cd ${WRKSRC} && pax -rwpp -s '/.*\.orig//' Modules ${DESTDIR}${PREFIX}/share/cmake-3.3
+	cd ${WRKSRC} && pax -rwpp -s '/.*\.orig//' Modules ${DESTDIR}${PREFIX}/share/cmake-3.5
 
 .include "../../mk/bsd.pkg.mk"
