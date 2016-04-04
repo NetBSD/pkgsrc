@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.2 2016/04/04 14:40:57 bad Exp $
+$NetBSD: patch-configure,v 1.3 2016/04/04 14:47:56 wiz Exp $
 
 --- configure.orig	2015-11-03 10:11:18.000000000 +0100
 +++ configure	2016-03-25 23:18:53.000000000 +0100
@@ -38,19 +38,6 @@ $NetBSD: patch-configure,v 1.2 2016/04/04 14:40:57 bad Exp $
  *) XEN_LOCK_DIR=$localstatedir/lock ;;
  esac
  
-@@ -9483,6 +9483,12 @@
-   case $ac_option in
-   # Handling of the options.
-   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
-+	: Avoid regenerating within pkgsrc
-+	exit 0
-+	: Avoid regenerating within pkgsrc
-+	exit 0
-+	: Avoid regenerating within pkgsrc
-+	exit 0
-     ac_cs_recheck=: ;;
-   --version | --versio | --versi | --vers | --ver | --ve | --v | -V )
-     $as_echo "$ac_cs_version"; exit ;;
 @@ -9566,6 +9572,7 @@
  do
    case $ac_config_target in
