@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.20 2016/04/04 14:47:19 bad Exp $
+$NetBSD: distinfo,v 1.21 2016/04/04 14:47:56 wiz Exp $
 
 SHA1 (ipxe-git-9a93db3f0947484e30e753bbd61a10b17336e20e.tar.gz) = fecadf952821e830ce1a1d19655288eef8488f88
 RMD160 (ipxe-git-9a93db3f0947484e30e753bbd61a10b17336e20e.tar.gz) = 539bfa12db7054228250d6dd380bbf96c1a040f8
@@ -24,7 +24,7 @@ SHA1 (patch-CVE-2015-8554) = 908783cf619fc130d5a107ba2c4997fca0f0da88
 SHA1 (patch-Makefile) = eb5d3211b26c5f10a24fcca658c83d5f60990d9f
 SHA1 (patch-Rules.mk) = e0dc4234c35dc2d78afad4a90b0af829a6a10b50
 SHA1 (patch-blktap_drivers_Makefile) = 7cc53b2a0dea1694a969046ab8542271ca63f9e7
-SHA1 (patch-configure) = 97f9715fbc586a76ee8203723b2d9183450f7bec
+SHA1 (patch-configure) = 97fa4274e425984d593cd93aea36edc681462b88
 SHA1 (patch-console_daemon_utils.c) = 915078ce6155a367e3e597fa7ab551f6afac083f
 SHA1 (patch-examples_Makefile) = 5fe7bb876d254cf0c4f774ed0f08dcaea5b355ff
 SHA1 (patch-firmware_etherboot_Makefile) = f55e14948b7191e533a82b8fc3575f1052f23c45
