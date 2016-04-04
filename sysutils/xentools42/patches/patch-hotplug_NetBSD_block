@@ -1,0 +1,57 @@
+$NetBSD: patch-hotplug_NetBSD_block,v 1.1 2016/04/04 15:13:15 bad Exp $
+
+--- hotplug/NetBSD/block.orig	2014-09-02 06:22:57.000000000 +0000
++++ hotplug/NetBSD/block
+@@ -6,6 +6,7 @@
+ 
+ DIR=$(dirname "$0")
+ . "${DIR}/hotplugpath.sh"
++. "${DIR}/locking.sh"
+ 
+ PATH=${BINDIR}:${SBINDIR}:${LIBEXEC}:${PRIVATE_BINDIR}:/bin:/usr/bin:/sbin:/usr/sbin
+ export PATH
+@@ -14,6 +15,7 @@ error() {
+ 	echo "$@" >&2
+ 	xenstore-write $xpath/hotplug-status error \
+ 	               $xpath/hotplug-error "$@"
++	release_lock block
+ 	exit 1
+ }
+ 	
+@@ -37,10 +39,12 @@ case $xstatus in
+ 	# device removed
+ 	case $xtype in
+ 	file)
++		claim_lock block
+ 		vnd=$(xenstore-read "$xpath/vnd" || echo none)
+ 		if [ $vnd != none ]; then
+ 			vnconfig -u $vnd
+ 		fi
++		release_lock block
+ 		;;
+ 	phy)
+ 		;;
+@@ -52,6 +56,7 @@ case $xstatus in
+ 	exit 0
+ 	;;
+ 2)
++	claim_lock block
+ 	case $xtype in
+ 	file)
+ 		# Store the list of available vnd(4) devices in
+@@ -78,6 +83,7 @@ case $xstatus in
+ 			fi
+ 		done
+ 		if [ x$device = x ] ; then
++			release_lock block
+ 			error "no available vnd device"
+ 		fi
+ 		xenstore-write $xpath/vnd $device
+@@ -89,6 +95,7 @@ case $xstatus in
+ 	physical_device=$(stat -f '%r' "$device")
+ 	xenstore-write $xpath/physical-device $physical_device
+ 	xenstore-write $xpath/hotplug-status connected
++	release_lock block
+ 	exit 0
+ 	;;
+ *)
