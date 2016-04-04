@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2016/03/13 03:10:36 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2016/04/04 17:34:56 joerg Exp $
 #
 
 DISTNAME=	p11-kit-0.22.1
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://p11-glue.freedesktop.org/releases/
 
@@ -9,6 +10,10 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://p11-glue.freedesktop.org/p11-kit.html
 COMMENT=	PKCS#11 module manager
 LICENSE=	modified-bsd
+
+DEPENDS=	mozilla-rootcerts>=1.0.20150804nb1:../../security/mozilla-rootcerts
+
+CONFIGURE_ARGS+=	--with-trust-paths=${PREFIX}/share/mozilla-rootcerts/cacert.pem
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
