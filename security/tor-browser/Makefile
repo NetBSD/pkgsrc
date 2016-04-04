@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/03/20 06:53:37 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2016/04/04 17:36:34 joerg Exp $
 
 TORBVER=	5.5.4
 
@@ -35,7 +35,7 @@ CONFIGURE_ARGS+=        --enable-pie
 # Avoid build failure from security/manager/ssl/src/nsNSSCallbacks.cpp:601
 CFLAGS+=	-fpermissive
 
-# workround for link of libxul.so etc.
+# workaround for link of libxul.so etc.
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/tor-browser ${COMPILER_RPATH_FLAG}${PREFIX}/lib
 LDFLAGS.SunOS+=		-lm
 
