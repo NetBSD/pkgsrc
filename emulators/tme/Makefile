@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2015/09/13 15:08:09 joerg Exp $
+# $NetBSD: Makefile,v 1.60 2016/04/04 18:00:16 mrg Exp $
 #
 
 DISTNAME=		tme-0.8
@@ -19,29 +19,16 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake perl:run pkg-config yacc
 
 CONFIGURE_ARGS+=	--disable-debug
+# XXX Turn off -Werror for now; there are a very very large number of
+# warnings generated, increasing with every compiler version.
+CONFIGURE_ARGS+=	--disable-warnings
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
 .include "../../mk/compiler.mk"
-.if !empty(PKGSRC_COMPILER:Mclang)
-_WRAP_EXTRA_ARGS.CC+=	-Wno-error=tautological-compare \
-			-Wno-error=sometimes-uninitialized \
-			-Wno-error=unused-function \
-			-Wno-error=absolute-value \
-			-Wno-error=pointer-bool-conversion
-CWRAPPERS_APPEND.cc+=	-Wno-error=tautological-compare \
-			-Wno-error=sometimes-uninitialized \
-			-Wno-error=unused-function \
-			-Wno-error=absolute-value \
-			-Wno-error=pointer-bool-conversion
-.elif !empty(CC_VERSION:Mgcc-4.8.*)
-_WRAP_EXTRA_ARGS.CC+=	-Wno-error=unused-but-set-variable	\
-	-Wno-error=array-bounds					\
-	-fno-strict-aliasing
-CWRAPPERS_APPEND.cc+=	-Wno-error=unused-but-set-variable	\
-	-Wno-error=array-bounds					\
-	-fno-strict-aliasing
-
+.if !empty(CC_VERSION:Mgcc-4.[89].*) || !empty(CC_VERSION:Mgcc-[56789].*)
+_WRAP_EXTRA_ARGS.CC+= -fno-strict-aliasing
+CWRAPPERS_APPEND.cc+= -fno-strict-aliasing
 .endif
 
 PLIST_VARS+=	bsd
