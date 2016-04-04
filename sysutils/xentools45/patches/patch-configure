@@ -1,7 +1,7 @@
-$NetBSD: patch-configure,v 1.1 2015/01/20 16:42:13 bouyer Exp $
+$NetBSD: patch-configure,v 1.2 2016/04/04 14:40:57 bad Exp $
 
---- configure.orig	2015-01-12 17:53:24.000000000 +0100
-+++ configure	2015-01-19 20:34:47.000000000 +0100
+--- configure.orig	2015-11-03 10:11:18.000000000 +0100
++++ configure	2016-03-25 23:18:53.000000000 +0100
 @@ -2276,7 +2276,7 @@
  
  
@@ -20,16 +20,38 @@ $NetBSD: patch-configure,v 1.1 2015/01/20 16:42:13 bouyer Exp $
           sysconfdir=$prefix/etc
           ;;
           *solaris*)
-@@ -9483,6 +9483,8 @@
+@@ -3776,7 +3776,7 @@
+ XEN_LOG_DIR=$localstatedir/log/xen
+ 
+ 
+-XEN_LIB_STORED=$localstatedir/lib/xenstored
++XEN_LIB_STORED=$localstatedir/run/xenstored
+ 
+ 
+ SHAREDIR=$prefix/share
+@@ -3796,7 +3796,7 @@
+ 
+ case "$host_os" in
+ *freebsd*) XEN_LOCK_DIR=$localstatedir/lib ;;
+-*netbsd*) XEN_LOCK_DIR=$localstatedir/lib ;;
++*netbsd*) XEN_LOCK_DIR=$localstatedir/run ;;
+ *) XEN_LOCK_DIR=$localstatedir/lock ;;
+ esac
+ 
+@@ -9483,6 +9483,12 @@
    case $ac_option in
    # Handling of the options.
    -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
 +	: Avoid regenerating within pkgsrc
 +	exit 0
++	: Avoid regenerating within pkgsrc
++	exit 0
++	: Avoid regenerating within pkgsrc
++	exit 0
      ac_cs_recheck=: ;;
    --version | --versio | --versi | --vers | --ver | --ve | --v | -V )
      $as_echo "$ac_cs_version"; exit ;;
-@@ -9566,6 +9568,7 @@
+@@ -9566,6 +9572,7 @@
  do
    case $ac_config_target in
      "../config/Tools.mk") CONFIG_FILES="$CONFIG_FILES ../config/Tools.mk" ;;
