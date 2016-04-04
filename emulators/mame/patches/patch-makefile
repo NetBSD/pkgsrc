@@ -1,0 +1,16 @@
+$NetBSD: patch-makefile,v 1.14 2016/04/04 17:32:17 joerg Exp $
+
+--- makefile.orig	2016-04-04 07:38:18.519192767 +0000
++++ makefile
+@@ -806,11 +806,6 @@ ifeq ($(CLANG_VERSION),)
+ $(info GCC $(GCC_VERSION) detected)
+ else
+ $(info Clang $(CLANG_VERSION) detected)
+-ifeq ($(ARCHITECTURE),_x64)
+-ARCHITECTURE := _x64_clang
+-else
+-ARCHITECTURE := _x86_clang
+-endif
+ endif
+ ifneq ($(PYTHON_AVAILABLE),python)
+ $(error Python is not available in path)

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.48 2016/03/04 12:47:13 wiz Exp $
+$NetBSD: distinfo,v 1.49 2016/04/04 17:32:17 joerg Exp $
 
 SHA1 (mame-0.171.tar.gz) = 53a6c72b2b8c11e72e622c14cb4d2ec710c1dbd5
 RMD160 (mame-0.171.tar.gz) = 7f0468d0240f3dd7f927eb135925d7ad78a66464
@@ -9,4 +9,6 @@ SHA1 (patch-3rdparty_bx_include_bx_thread.h) = 779c8b750a3ae5d50d12c6430678ada64
 SHA1 (patch-3rdparty_libuv_src_unix_netbsd.c) = 63d2378c19cbbcb71d7540e088c3bdf5940f4dc6
 SHA1 (patch-3rdparty_luv_deps_uv.cmake) = 619cebcb8013139d765c2dfe2bcf7b5b86f50681
 SHA1 (patch-3rdparty_luv_src_dns.c) = 44d480e34971362ee696191c267dbac08005ec0f
+SHA1 (patch-makefile) = 620a9ca0884479f9624dfd8720e9cdbd9afcd1a7
+SHA1 (patch-scripts_genie.lua) = abcdc05a019761b815ce22991062ca546ae2f711
 SHA1 (patch-scripts_src_3rdparty.lua) = 306917af65da601667ffc9ffaf7b8092a2d03ef7
