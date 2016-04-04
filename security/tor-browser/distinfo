@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2016/03/20 06:53:37 ryoon Exp $
+$NetBSD: distinfo,v 1.4 2016/04/04 17:36:34 joerg Exp $
 
 SHA1 (tor-browser-38.7.1esr-5.5-1.tar.xz) = 332d04fc222f9d0778341284736c6da0f61e4607
 RMD160 (tor-browser-38.7.1esr-5.5-1.tar.xz) = c57cbdbb0a4a5f0ca8f9963daa4075bbcd754f2e
@@ -136,6 +136,9 @@ SHA1 (patch-netwerk_protocol_http_Http2Session.cpp) = 40f4a64657ea2dd0ddc6434caf
 SHA1 (patch-pb) = 97c9b2e4cefd524dc6ba825f71c3da2a761aa1f4
 SHA1 (patch-pc) = 8b2baa88f0983a2fef4f801cf6b1ae425f6c813a
 SHA1 (patch-rc) = affa634564e798184bbe50ba7c491d691a4a8994
+SHA1 (patch-security_certverifier_OCSPRequestor.cpp) = 3db71730f36ce5396c7a927981654de0d01482e2
+SHA1 (patch-security_manager_ssl_src_nsNSSCallbacks.cpp) = a3f18dc7851c91768504600f1f73746d4da5ad60
+SHA1 (patch-security_manager_ssl_src_nsNSSCallbacks.h) = 82c74f042502a286d0128aa67afb3b1583a03b11
 SHA1 (patch-security_manager_ssl_src_nsNSSComponent.cpp) = 28d216fb8dcb5968c1ff657578b4caf814c146ac
 SHA1 (patch-toolkit_components_osfile_modules_osfile__unix__back.jsm) = 6b926ccd793391ad7bd7101635f4b3eefe3db130
 SHA1 (patch-toolkit_components_osfile_modules_osfile__unix__front.jsm) = f5adba2137f2d7fd4d4a6a1e8ef8625866513890
