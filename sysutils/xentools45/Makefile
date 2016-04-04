@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2016/04/04 14:35:12 bad Exp $
+# $NetBSD: Makefile,v 1.28 2016/04/04 14:45:12 bad Exp $
 
 VERSION=	4.5.2
 PKGREVISION=	1
@@ -112,7 +112,7 @@ SUBST_FILES.conf+=	libxl/xl_cmdtable.c
 SUBST_FILES.conf+=	../docs/misc/xl-disk-configuration.txt
 SUBST_SED.conf=		-e "s,@XENDCONFDIR@,${PKG_SYSCONFDIR},g"
 
-XEND_SCRIPTS=		block vif-bridge vif-ip qemu-ifup hotplugpath.sh
+XEND_SCRIPTS=		block vif-bridge vif-ip qemu-ifup hotplugpath.sh locking.sh
 
 SUBST_CLASSES.NetBSD+=	proc
 SUBST_STAGE.proc=	pre-configure
@@ -162,6 +162,7 @@ pre-build:
 .for s in ${BLKTAP_FILES}
 	${CP} -f ${FILESDIR}/${s} ${WRKSRC}/blktap/drivers/
 .endfor
+	${CP} -f ${FILESDIR}/locking.sh  ${WRKSRC}/hotplug/NetBSD/
 	${SED} -e "s,@XENDCONFDIR@,${PKG_SYSCONFDIR},g" \
 		${XENTOP}/docs/man/xenstore-chmod.pod.1 |\
 	    pod2man >${WRKDIR}/xenstore-chmod.1
