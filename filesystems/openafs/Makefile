@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2016/03/18 17:11:37 jakllsch Exp $
+# $NetBSD: Makefile,v 1.12 2016/04/04 12:48:29 jakllsch Exp $
 
 DISTNAME=	openafs-1.6.17-src
 PKGNAME=	${DISTNAME:C/-src//}
+PKGREVISION=	1
 CATEGORIES=	filesystems net sysutils
 MASTER_SITES=	http://www.openafs.org/dl/openafs/1.6.17/
 EXTRACT_SUFX=	.tar.bz2
@@ -45,11 +46,16 @@ FILES_SUBST+=		HOSTNAME_CMD=${HOSTNAME_CMD:Q}
 BUILD_DEFS+= VARBASE
 
 # attempt to future-proof configuration
-pre-build:
+pre-patch:
 	cd ${WRKSRC}/src/config && for i in 70 80 90; do \
 		${SED} -e 's|nbsd60|nbsd'$$i'|g' param.i386_nbsd60.h > param.i386_nbsd$$i.h; \
 		${SED} -e 's|nbsd60|nbsd'$$i'|g' param.amd64_nbsd60.h > param.amd64_nbsd$$i.h; \
 		${CP} param.nbsd60.h param.nbsd$$i.h; \
+	done
+
+post-patch:
+	cd ${WRKSRC}/src/config && for i in 80 90; do \
+		${CP} param.nbsd70.h param.nbsd$$i.h; \
 	done
 
 MAKE_ENV+=	LD_RUN_PATH=${PREFIX}/lib
