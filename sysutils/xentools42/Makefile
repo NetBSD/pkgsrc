@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2016/04/04 15:03:14 bad Exp $
+# $NetBSD: Makefile,v 1.44 2016/04/04 15:13:15 bad Exp $
 
 VERSION=	4.2.5
 VERSION_IPXE=	1.0.0
@@ -145,7 +145,7 @@ SUBST_FILES.conf+=	libxl/xl_cmdtable.c
 SUBST_FILES.conf+=	../docs/misc/xl-disk-configuration.txt
 SUBST_SED.conf=		-e "s,@XENDCONFDIR@,${PKG_SYSCONFDIR},g"
 
-XEND_SCRIPTS=		block vif-bridge vif-ip qemu-ifup hotplugpath.sh
+XEND_SCRIPTS=		block vif-bridge vif-ip qemu-ifup hotplugpath.sh locking.sh
 
 SUBST_CLASSES.NetBSD+=	proc
 SUBST_STAGE.proc=	pre-configure
@@ -200,6 +200,7 @@ pre-build:
 .for s in ${BLKTAP_FILES}
 	${CP} -f ${FILESDIR}/${s} ${WRKSRC}/blktap/drivers/
 .endfor
+	${CP} -f ${FILESDIR}/locking.sh  ${WRKSRC}/hotplug/NetBSD/
 	${SED} -e "s,@XENDCONFDIR@,${PKG_SYSCONFDIR},g" \
 		${XENTOP}/docs/man/xl.pod.1 |\
 	    pod2man >${WRKDIR}/xl.1
