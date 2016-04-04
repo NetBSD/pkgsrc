@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2016/03/05 11:28:50 jperkin Exp $
+# $NetBSD: Makefile,v 1.20 2016/04/04 17:34:12 joerg Exp $
 #
 
 DISTNAME=	pulsar-0.1.1
@@ -15,8 +15,6 @@ MAKE_JOBS_SAFE=		no
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	autoconf gmake
-
-MANCOMPRESSED=	yes
 
 CFLAGS.SunOS+=	-Du_int32_t=uint32_t
 LDFLAGS.SunOS+=	-lsocket -lnsl
