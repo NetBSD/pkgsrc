@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1301 2016/04/05 05:46:25 khorben Exp $
+$NetBSD: CHANGES-2016,v 1.1302 2016/04/05 10:31:49 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1705,3 +1705,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/squid3 to 3.5.16 [taca 2016-04-02]
 	Updated filesystems/openafs to 1.6.17nb1 [jakllsch 2016-04-04]
 	Updated sysutils/salt-docs to 2015.8.5 [khorben 2016-04-05]
+	Updated time/py-parsedatetime to 2.1 [fhajny 2016-04-05]
