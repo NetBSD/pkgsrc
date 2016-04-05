@@ -1,14 +1,16 @@
-# $NetBSD: Makefile,v 1.7 2015/12/05 21:25:59 adam Exp $
+# $NetBSD: Makefile,v 1.8 2016/04/05 05:42:26 khorben Exp $
 
-DISTNAME=	salt-0.10.5
+DISTNAME=	salt-2015.8.5
 PKGNAME=	${DISTNAME:S/-/-docs-/}
 CATEGORIES=	sysutils
-MASTER_SITES=	https://cloud.github.com/downloads/saltstack/salt/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/salt/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://saltstack.org/
 COMMENT=	Documentation for salt
 LICENSE=	apache-2.0
+
+USE_TOOLS+=	gmake
 
 NO_CONFIGURE=	yes
 BUILD_DIRS=	doc
