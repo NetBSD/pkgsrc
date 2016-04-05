@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.22 2016/03/05 11:28:47 jperkin Exp $
+# $NetBSD: Makefile,v 1.23 2016/04/05 20:52:34 khorben Exp $
 
-DISTNAME=	Mailer-0.1.7
-PKGNAME=	deforaos-mailer-0.1.7
-PKGREVISION=	1
+DISTNAME=	Mailer-0.1.8
+PKGNAME=	deforaos-mailer-0.1.8
 CATEGORIES=	mail
-MASTER_SITES=	http://www.defora.org/os/download/download/4426/
+MASTER_SITES=	http://www.defora.org/os/download/download/4439/
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	http://www.defora.org/
 COMMENT=	DeforaOS desktop e-mail client
-LICENSE=	gnu-gpl-v3
+LICENSE=	modified-bsd
 
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
