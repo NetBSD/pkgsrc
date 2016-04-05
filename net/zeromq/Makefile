@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2016/02/07 11:05:38 adam Exp $
+# $NetBSD: Makefile,v 1.23 2016/04/05 14:09:26 wiz Exp $
 
 DISTNAME=	zeromq-4.1.4
+PKGREVISION=	1
 CATEGORIES=	net devel
 MASTER_SITES=	http://download.zeromq.org/
 
