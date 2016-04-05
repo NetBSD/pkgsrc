@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2016/04/05 10:31:38 fhajny Exp $
+# $NetBSD: Makefile,v 1.7 2016/04/05 14:07:45 wiz Exp $
 
 DISTNAME=	parsedatetime-2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,5 +13,5 @@ LICENSE=	apache-2.0
 GITHUB_PROJECT=	parsedatetime
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
