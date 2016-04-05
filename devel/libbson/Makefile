@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2016/02/16 15:25:53 fhajny Exp $
+# $NetBSD: Makefile,v 1.18 2016/04/05 12:43:23 fhajny Exp $
 
-DISTNAME=	libbson-1.3.3
+DISTNAME=	libbson-1.3.5
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mongodb/}
 
