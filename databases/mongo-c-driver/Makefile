@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2016/03/05 11:27:42 jperkin Exp $
+# $NetBSD: Makefile,v 1.17 2016/04/05 12:44:47 fhajny Exp $
 
-DISTNAME=	mongo-c-driver-1.3.3
-PKGREVISION=	1
+DISTNAME=	mongo-c-driver-1.3.5
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mongodb/}
 
@@ -33,6 +32,6 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/doc/man/mongoc*.3 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man3
 
-BUILDLINK_API_DEPENDS.libbson+=	libbson>=1.3.3
+BUILDLINK_API_DEPENDS.libbson+=	libbson>=1.3.5
 .include "../../devel/libbson/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
