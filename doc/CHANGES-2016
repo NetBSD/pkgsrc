@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1303 2016/04/05 12:43:33 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.1304 2016/04/05 12:44:57 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1707,3 +1707,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/salt-docs to 2015.8.5 [khorben 2016-04-05]
 	Updated time/py-parsedatetime to 2.1 [fhajny 2016-04-05]
 	Updated devel/libbson to 1.3.5 [fhajny 2016-04-05]
+	Updated databases/mongo-c-driver to 1.3.5 [fhajny 2016-04-05]
