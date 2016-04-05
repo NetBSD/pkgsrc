@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2014/01/19 19:52:44 wiz Exp $
+$NetBSD: distinfo,v 1.3 2016/04/05 10:31:38 fhajny Exp $
 
-SHA1 (py-parsedatetime/v1.1.2.tar.gz) = a931e3afc0f720e1c9c7eacd34a0a29a0a2dedab
-RMD160 (py-parsedatetime/v1.1.2.tar.gz) = 96cee10056358423b9a6fc21ac3a347cf5b66fe6
-Size (py-parsedatetime/v1.1.2.tar.gz) = 48868 bytes
+SHA1 (parsedatetime-2.1.tar.gz) = b6af40bd8dbef67b0cf6ccc4122e7647f20980b0
+RMD160 (parsedatetime-2.1.tar.gz) = 78bacb7b75c24f072d11e4a464547b0155620736
+SHA512 (parsedatetime-2.1.tar.gz) = c3447c899aa56319e09b21c117ad4036e23727346d15d8d5fc60f89d439984f032950a9c6534f763c8dd09c74f078ddfaee1c77880dab4a4845393f5145db9a1
+Size (parsedatetime-2.1.tar.gz) = 61170 bytes
