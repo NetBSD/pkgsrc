@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST.common,v 1.9 2016/01/19 12:18:24 ryoon Exp $
+@comment $NetBSD: PLIST.common,v 1.10 2016/04/06 09:34:20 fhajny Exp $
 bin/gdb
 include/gdb/jit-reader.h
-include/plugin-api.h
 info/annotate.info
 info/bfd.info
 info/gdb.info
@@ -47,33 +46,3 @@ share/gdb/syscalls/sparc-linux.xml
 share/gdb/syscalls/sparc64-linux.xml
 share/gdb/system-gdbinit/elinos.py
 share/gdb/system-gdbinit/wrs-linux.py
-share/locale/da/LC_MESSAGES/bfd.mo
-share/locale/da/LC_MESSAGES/opcodes.mo
-share/locale/de/LC_MESSAGES/opcodes.mo
-share/locale/es/LC_MESSAGES/bfd.mo
-share/locale/es/LC_MESSAGES/opcodes.mo
-share/locale/fi/LC_MESSAGES/bfd.mo
-share/locale/fi/LC_MESSAGES/opcodes.mo
-share/locale/fr/LC_MESSAGES/bfd.mo
-share/locale/fr/LC_MESSAGES/opcodes.mo
-share/locale/ga/LC_MESSAGES/opcodes.mo
-share/locale/id/LC_MESSAGES/bfd.mo
-share/locale/id/LC_MESSAGES/opcodes.mo
-share/locale/it/LC_MESSAGES/opcodes.mo
-share/locale/ja/LC_MESSAGES/bfd.mo
-share/locale/nl/LC_MESSAGES/opcodes.mo
-share/locale/pt_BR/LC_MESSAGES/opcodes.mo
-share/locale/ro/LC_MESSAGES/bfd.mo
-share/locale/ro/LC_MESSAGES/opcodes.mo
-share/locale/ru/LC_MESSAGES/bfd.mo
-share/locale/rw/LC_MESSAGES/bfd.mo
-share/locale/sv/LC_MESSAGES/bfd.mo
-share/locale/sv/LC_MESSAGES/opcodes.mo
-share/locale/tr/LC_MESSAGES/bfd.mo
-share/locale/tr/LC_MESSAGES/opcodes.mo
-share/locale/uk/LC_MESSAGES/bfd.mo
-share/locale/uk/LC_MESSAGES/opcodes.mo
-share/locale/vi/LC_MESSAGES/bfd.mo
-share/locale/vi/LC_MESSAGES/opcodes.mo
-share/locale/zh_CN/LC_MESSAGES/bfd.mo
-share/locale/zh_CN/LC_MESSAGES/opcodes.mo
