@@ -1,0 +1,24 @@
+$NetBSD: patch-Makefile.in,v 1.1 2016/04/06 09:34:20 fhajny Exp $
+
+Do not install bfd and opcodes. Conflicts with devel/binutils.
+
+--- Makefile.in.orig	2016-02-24 09:57:08.000000000 +0000
++++ Makefile.in
+@@ -2482,8 +2482,6 @@ install:
+ 
+ .PHONY: install-host-nogcc
+ install-host-nogcc:  \
+-    maybe-install-bfd \
+-    maybe-install-opcodes \
+     maybe-install-binutils \
+     maybe-install-bison \
+     maybe-install-cgen \
+@@ -2530,8 +2528,6 @@ install-host-nogcc:  \
+ 
+ .PHONY: install-host
+ install-host:  \
+-    maybe-install-bfd \
+-    maybe-install-opcodes \
+     maybe-install-binutils \
+     maybe-install-bison \
+     maybe-install-cgen \
