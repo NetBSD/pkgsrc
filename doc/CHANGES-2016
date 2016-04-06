@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1309 2016/04/06 17:56:49 agc Exp $
+$NetBSD: CHANGES-2016,v 1.1310 2016/04/06 18:01:29 reed Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1549,7 +1549,7 @@ Changes to the packages collection and infrastructure in 2016:
 	Removed databases/postgresql-postgis successor databases/postgresql-postgis2 [gdt 2016-03-14]
 	Updated net/haproxy to 1.6.4 [fhajny 2016-03-14]
 	Updated security/lasso to 2.5.1 [manu 2016-03-14]
-	Updated www/ap-auth-mellon to 0.12.0 [manu 2016-03-14]
+	Updated www/ap2-auth-mellon to 0.12.0 [manu 2016-03-14]
 	Updated devel/cmake to 3.5.0 [adam 2016-03-14]
 	Updated geography/opencpn to 4.2.0 [bouyer 2016-03-14]
 	Updated geography/opencpn-plugin-weather_routing to 20160208 [bouyer 2016-03-14]
@@ -1710,6 +1710,6 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/mongo-c-driver to 1.3.5 [fhajny 2016-04-05]
 	Updated net/zeromq to 4.1.4nb1 [wiz 2016-04-05]
 	Updated mail/deforaos-mailer to 0.1.8 [khorben 2016-04-05]
-	Added ap24-authnz-external version 3.3.1 [manu 2016-04-06]
+	Added www/ap24-authnz-external version 3.3.1 [manu 2016-04-06]
 	Updated security/clusterssh to 4.03.06nb1 [imil 2016-04-06]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2016Q1 branch [agc 2016-04-06]
