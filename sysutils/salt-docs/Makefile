@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2016/04/05 05:42:26 khorben Exp $
+# $NetBSD: Makefile,v 1.9 2016/04/06 12:38:42 joerg Exp $
 
 DISTNAME=	salt-2015.8.5
 PKGNAME=	${DISTNAME:S/-/-docs-/}
@@ -11,6 +11,8 @@ COMMENT=	Documentation for salt
 LICENSE=	apache-2.0
 
 USE_TOOLS+=	gmake
+
+BUILD_DEPENDS+=	gnupg-[0-9]*:../../security/gnupg
 
 NO_CONFIGURE=	yes
 BUILD_DIRS=	doc
