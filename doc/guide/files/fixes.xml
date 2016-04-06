@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.133 2015/08/31 11:54:29 leot Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.134 2016/04/06 14:59:18 reed Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -788,7 +788,7 @@ EXTRACT_SUFX=   .zip
       </para>
       <programlisting>
 DISTNAME=       example-1.0
-MASTER_SITES=   ${MASTER_SITE_GITHUB:example/}
+MASTER_SITES=   ${MASTER_SITE_GITHUB:=example/}
 #GITHUB_PROJECT=        # can be omitted if same as DISTNAME
 GITHUB_TAG=     988881adc9fc3655077dc2d4d757d480b5ea0e11
       </programlisting>
