@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2016/03/15 19:49:43 asau Exp $
+# $NetBSD: Makefile,v 1.27 2016/04/06 12:39:37 joerg Exp $
 
 PKGNAME=	racket-minimal-6.4
 DISTNAME=	$(PKGNAME_NOREV)-src
@@ -19,7 +19,7 @@ LICENSE=	gnu-lgpl-v2
 
 CONFLICTS+=	drscheme-[0-9]* mzscheme-[0-9]* racket-[0-9]*
 
-PATCHDIR=	../../lang/racket/patches
+PATCHDIR=	${.CURDIR}/../../lang/racket/patches
 
 WRKSRC=		$(WRKDIR)/racket-$(PKGVERSION_NOREV)
 
