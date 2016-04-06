@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1308 2016/04/06 11:33:29 imil Exp $
+$NetBSD: CHANGES-2016,v 1.1308.2.1 2016/04/06 17:48:17 agc Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1712,3 +1712,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/deforaos-mailer to 0.1.8 [khorben 2016-04-05]
 	Added ap24-authnz-external version 3.3.1 [manu 2016-04-06]
 	Updated security/clusterssh to 4.03.06nb1 [imil 2016-04-06]
+	mk/bsd.pkg.mk: freeze ended for pkgsrc-2016Q1 branch [agc 2016-04-06]
