@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15618 2016/04/04 12:18:47 wiz Exp $
+$NetBSD: TODO,v 1.15619 2016/04/06 08:31:04 wiz Exp $
 
 Suggested new packages
 ======================
@@ -791,7 +791,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o global-6.5.4
 	o glom-1.14.2 [GNOME 2.26]
 	o gloox-1.0.14
-	o glpk-4.59
+	o glpk-4.60
 	o glx-utils-8.3.0
 	o gmock-1.7.0
 	o gnet1-1.1.9
@@ -836,6 +836,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnucash-2.6.12
 	o gnuchess-6.2.2
 	o gnuchess-book-1.02
+	o gnupg2-2.0.30
 	o gnustep-back-0.24.1
 	o gnustep-base-1.24.8
 	o gnustep-examples-1.4.0
@@ -1015,6 +1016,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o jools-1.0
 	o jove-4.16.0.73
 	o jpilot-syncmal-0.81
+	o jsoncpp-1.7.2
 	o kadu-0.11.1
 	o kaffe-1.1.9
 	o kapooka-0.3
@@ -1147,6 +1149,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o makeself-2.2.0
 	o maketool-0.8.4
 	o makeztxt-1.60
+	o mame-0.172
 	o man-pages-4.04
 	o manedit-1.2.1
 	o mantis-1.2.19
@@ -1184,6 +1187,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mit-scheme-bin-9.2
 	o mksh-52b
 	o mkvtoolnix-5.9.0
+	o modular-xorg-server-1.18.3
 	o modular-xorg-xquartz-1.18.0
 	o molden-4.8 [after which PR 40252 can be closed]
 	o molden-5.5
@@ -1399,6 +1403,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-IO-Pager-0.36
 	o p5-IO-Prompt-0.997003
 	o p5-IO-Prompter-0.004014
+	o p5-IO-Socket-SSL-2.025
 	o p5-IO-TieCombine-1.005
 	o p5-IP-Country-3.03
 	o p5-IPC-Cmd-0.94
@@ -1670,7 +1675,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o privoxy-3.0.24
 	o profit-2.5.3
 	o psmisc-22.20
-	o pspp-0.10.0
+	o pspp-0.10.1
 	o pure-ftpd-1.0.40
 	o pvs-5.0
 	o pwlib-1.11.1
