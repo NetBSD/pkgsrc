@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1160 2016/03/14 20:38:25 adam Exp $
+# $NetBSD: Makefile,v 1.1161 2016/04/06 09:02:44 manu Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -46,6 +46,7 @@ SUBDIR+=	ap22-authz-ldap
 SUBDIR+=	ap22-dnssd
 SUBDIR+=	ap22-limitipconn
 SUBDIR+=	ap22-vhost-ldap
+SUBDIR+=	ap24-authnz-external
 SUBDIR+=	apache-roller
 SUBDIR+=	apache-tomcat55
 SUBDIR+=	apache-tomcat6
