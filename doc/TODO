@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15621 2016/04/06 13:18:53 mef Exp $
+$NetBSD: TODO,v 1.15622 2016/04/07 05:29:35 adam Exp $
 
 Suggested new packages
 ======================
@@ -553,7 +553,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o clusterssh-4.05
 	o clutter-1.24
 	o clutter-gst-3.0.2
-	o cmake-3.5.1
 	o cmake-fedora-2.6.0
 	o cmocka-1.0.1
 	o cmus-2.7.1
@@ -708,8 +707,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o fet-5.28.6
 	o fetchmail-6.3.26
 	o fetchyahoo-2.14.0
-	o ffmpeg-3.0
-	o ffmpeg3-3.0.1
 	o filerunner-14.06.18.10
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
