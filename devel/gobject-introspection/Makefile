@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2016/04/07 20:28:19 prlw1 Exp $
+# $NetBSD: Makefile,v 1.46 2016/04/07 21:35:33 prlw1 Exp $
 
 DISTNAME=	gobject-introspection-1.48.0
 CATEGORIES=	devel gnome
@@ -22,7 +22,7 @@ GMAKE_REQD=	3.81
 PKGCONFIG_OVERRIDE+=	gobject-introspection-1.0.pc.in
 PKGCONFIG_OVERRIDE+=	gobject-introspection-no-export-1.0.pc.in
 
-SUBST_CLASSES+=	timet
+SUBST_CLASSES+=		timet
 SUBST_STAGE.timet=	pre-configure
 SUBST_FILES.timet=	giscanner/ast.py
 SUBST_FILES.timet+=	tests/scanner/Regress-1.0-expected.gir
@@ -34,6 +34,12 @@ SUBST_SED.timet+=	-e 's,@TIMET_CTYPE@,gint64,g'
 SUBST_SED.timet=	-e 's,@TIMET_TYPENAME@,TYPE_LONG,g'
 SUBST_SED.timet+=	-e 's,@TIMET_CTYPE@,glong,g'
 .endif
+
+#REPLACE_PYTHON+=	tools/g-ir-tool-template.in
+SUBST_CLASSES+=		pyenv
+SUBST_STAGE.pyenv+=	pre-configure
+SUBST_FILES.pyenv+=	tools/g-ir-tool-template.in
+SUBST_SED.pyenv+=	-e 's,/usr/bin/env ,,'
 
 # not executable
 CHECK_INTERPRETER_SKIP+= lib/gobject-introspection/giscanner/*.py
