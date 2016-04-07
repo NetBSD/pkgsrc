@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1321 2016/04/07 12:57:57 wen Exp $
+$NetBSD: CHANGES-2016,v 1.1322 2016/04/07 13:11:48 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1728,3 +1728,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/p5-Crypt-ECB to 2.15 [wen 2016-04-07]
 	Updated math/p5-Math-Base-Convert to 0.11 [wen 2016-04-07]
 	Updated mail/p5-Email-Valid to 1.200 [wen 2016-04-07]
+	Updated mail/p5-Email-Simple to 2.210 [wen 2016-04-07]
