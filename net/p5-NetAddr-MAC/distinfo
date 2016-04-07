@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/04/07 16:01:05 bouyer Exp $
+
+SHA1 (NetAddr-MAC-0.94.tar.gz) = 865412d14d09b2cfd4206c49e69de6a314f7ccd5
+RMD160 (NetAddr-MAC-0.94.tar.gz) = a0e4c58aad7a02bc22ea19a47f1c3d1e35316d13
+SHA512 (NetAddr-MAC-0.94.tar.gz) = aa6700244edeff704c8c774f741430c5c57cb1f68143e617591937e710ec5d3a6b229e8d687c16f9de80f5d60bc9e98e5f7e61c00924ee57292120c39ba227af
+Size (NetAddr-MAC-0.94.tar.gz) = 22630 bytes
