@@ -1,12 +1,12 @@
-$NetBSD: patch-cd,v 1.8 2013/12/08 13:08:59 prlw1 Exp $
+$NetBSD: patch-cd,v 1.9 2016/04/07 18:33:05 prlw1 Exp $
 
 sysutils/gio-fam builds the gio/fam backend as a separate module.  Force it
 to link against the installed version of glib2, as it is not rebuilt by the
 package.
 
---- gio/fam/Makefile.in.orig	2013-10-15 19:14:51.000000000 +0000
+--- gio/fam/Makefile.in.orig	2016-02-16 11:35:28.000000000 +0000
 +++ gio/fam/Makefile.in
-@@ -175,10 +175,7 @@ am__installdirs = "$(DESTDIR)$(giomodule
+@@ -183,10 +183,7 @@ am__installdirs = "$(DESTDIR)$(giomodule
  LTLIBRARIES = $(giomodule_LTLIBRARIES) $(installed_test_LTLIBRARIES) \
  	$(noinst_LTLIBRARIES)
  am__DEPENDENCIES_1 =
@@ -15,10 +15,10 @@ package.
 -	$(top_builddir)/glib/libglib-2.0.la $(am__DEPENDENCIES_1) \
 -	$(am__DEPENDENCIES_1)
 +libgiofam_la_DEPENDENCIES = $(am__DEPENDENCIES_1)
- am__objects_1 =
- am_libgiofam_la_OBJECTS = libgiofam_la-fam-helper.lo \
- 	libgiofam_la-fam-module.lo \
-@@ -792,9 +789,7 @@ libgiofam_la_CFLAGS = \
+ am_libgiofam_la_OBJECTS = libgiofam_la-gfamfilemonitor.lo
+ libgiofam_la_OBJECTS = $(am_libgiofam_la_OBJECTS)
+ AM_V_lt = $(am__v_lt_@AM_V@)
+@@ -789,9 +786,7 @@ libgiofam_la_CFLAGS = \
  
  libgiofam_la_LDFLAGS = $(module_flags)
  libgiofam_la_LIBADD = \
@@ -29,7 +29,7 @@ package.
  		$(GLIB_LIBS) \
  		$(FAM_LIBS) \
  		$(NULL)
-@@ -1639,9 +1634,6 @@ check-local: test-nonrecursive
+@@ -1559,9 +1554,6 @@ check-local: test-nonrecursive
  @ENABLE_INSTALLED_TESTS_TRUE@	mv $@.tmp $@)
  
  install-data-hook:
