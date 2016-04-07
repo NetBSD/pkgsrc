@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2015/06/10 23:27:56 prlw1 Exp $
+$NetBSD: patch-aa,v 1.4 2016/04/07 20:28:19 prlw1 Exp $
 
---- giscanner/ast.py.orig	2015-03-04 18:30:22.000000000 +0000
+--- giscanner/ast.py.orig	2015-11-19 11:20:18.000000000 +0000
 +++ giscanner/ast.py
-@@ -277,13 +277,21 @@ type_names['void'] = TYPE_NONE
+@@ -300,13 +300,21 @@ type_names['void'] = TYPE_NONE
  type_names['signed long long'] = TYPE_LONG_LONG
  # C99 stdint exact width types
  type_names['int8_t'] = TYPE_INT8
@@ -24,10 +24,10 @@ $NetBSD: patch-aa,v 1.3 2015/06/10 23:27:56 prlw1 Exp $
  # C99 stdbool
  type_names['bool'] = TYPE_BOOLEAN
  
-@@ -321,7 +329,7 @@ type_names['FILE*'] = TYPE_ANY
- # the relevant methods, but on the other hand, since these types are just
+@@ -345,7 +353,7 @@ type_names['FILE*'] = TYPE_ANY
  # integers it's easy enough to expand them.
  type_names['size_t'] = type_names['gsize']
+ type_names['ssize_t'] = type_names['gssize']
 -type_names['time_t'] = TYPE_LONG
 +type_names['time_t'] = @TIMET_TYPENAME@
  type_names['off_t'] = type_names['gsize']
