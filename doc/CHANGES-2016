@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1317 2016/04/07 12:17:29 adam Exp $
+$NetBSD: CHANGES-2016,v 1.1318 2016/04/07 12:34:06 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1724,3 +1724,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated fonts/fontforge to 20160404 [adam 2016-04-07]
 	Updated www/curl to 7.48.0 [adam 2016-04-07]
 	Updated audio/wavpack to 4.80.0 [adam 2016-04-07]
+	Updated textproc/p5-Pod-Spell to 1.19 [wen 2016-04-07]
