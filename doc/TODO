@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15622 2016/04/07 05:29:35 adam Exp $
+$NetBSD: TODO,v 1.15623 2016/04/07 12:34:06 wen Exp $
 
 Suggested new packages
 ======================
@@ -1489,7 +1489,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Perl6-Export-0.009
 	o p5-PerlMagick-6.9.1.10
 	o p5-Pod-Markdown-3.005
-	o p5-Pod-Spell-1.19
 	o p5-PostScript-2.32
 	o p5-PostScript-Simple-1.02
 	o p5-Proc-Wait3-0.05
