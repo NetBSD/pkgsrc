@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2015/12/12 20:20:04 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/04/07 14:24:51 ryoon Exp $
 bin/dynamips
 bin/nvram_export
 man/man1/dynamips.1
@@ -7,7 +7,7 @@ man/man7/hypervisor_mode.7
 share/doc/dynamips/ChangeLog
 share/doc/dynamips/COPYING
 share/doc/dynamips/MAINTAINERS
-share/doc/dynamips/README
+share/doc/dynamips/README.md
 share/doc/dynamips/README.hypervisor
 share/doc/dynamips/RELEASE-NOTES
 share/doc/dynamips/TODO
