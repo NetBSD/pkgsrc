@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2016/02/26 10:24:13 jperkin Exp $
+# $NetBSD: Makefile,v 1.51 2016/04/07 11:54:57 youri Exp $
 
 DISTNAME=		libgtop-2.28.4
 PKGREVISION=		8
@@ -54,7 +54,7 @@ PLIST_VARS+=	server suid.h
 PLIST.server=	yes
 PLIST.suid.h=	yes
 SPECIAL_PERMS=	bin/libgtop_server2 ${REAL_ROOT_USER} system 2755
-.elif ${OPSYS} == "Darwin" || ${OPSYS} == "DragonFly" || \
+.elif ${OPSYS} == "DragonFly" || \
       ${OPSYS} == "FreeBSD" || ${OPSYS} == "NetBSD" || \
       ${OPSYS} == "OpenBSD"
 PLIST.server=	yes
@@ -66,6 +66,8 @@ SPECIAL_PERMS=	bin/libgtop_server2 ${REAL_ROOT_USER} kmem 2755
 .elif ${OPSYS} == "SunOS"
 PLIST.server=	yes
 SPECIAL_PERMS=	bin/libgtop_server2 ${REAL_ROOT_USER} sys 2755
+.elif ${OPSYS} == "Darwin"
+PLIST.server=	yes
 .else
 PLIST.server=	yes
 PLIST.suid.h=	yes
