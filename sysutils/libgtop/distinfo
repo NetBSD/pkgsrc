@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.30 2015/11/04 01:32:19 agc Exp $
+$NetBSD: distinfo,v 1.31 2016/04/07 11:54:57 youri Exp $
 
 SHA1 (libgtop-2.28.4.tar.bz2) = b6f002cc80a61dc0908dd96e0b543113a46bc4b7
 RMD160 (libgtop-2.28.4.tar.bz2) = 96ac76aa409bbd202bedacd94df14cd549e10d6b
@@ -6,7 +6,7 @@ SHA512 (libgtop-2.28.4.tar.bz2) = 3bfb844eb09e4afed1f15f2d948fe09bf2080be52f3914
 Size (libgtop-2.28.4.tar.bz2) = 819576 bytes
 SHA1 (patch-aa) = b056c00edebf3578364de50bcd1345bff67b45bc
 SHA1 (patch-ab) = cd11ad54870ab54fb940f922c1cc55d1c7ec2161
-SHA1 (patch-ac) = 3dd59355e36657df4c8575c35ef11c28d4192d77
+SHA1 (patch-ac) = dc45ad98e21de821b4b23008cd0020c47064c9eb
 SHA1 (patch-ad) = 304b91c38fa9b39ffcfd2d39d9c382ecdc23469e
 SHA1 (patch-ae) = 6e8386473dde21f316f867b5212d8c3324abb747
 SHA1 (patch-ag) = 8ed7b66b4250dbc6f6321cef24941f58106fcbaf
@@ -39,6 +39,8 @@ SHA1 (patch-dm) = ef08973aecacb1fb69f258632dd36edfdafd8c50
 SHA1 (patch-dn) = 66f66731a3abd1290f67d62f9ef654f68756bccb
 SHA1 (patch-sysdeps_bsd_sem_limits.c) = 0cdc5e85a4d8d1297f2f658c1f345bf54abfb02c
 SHA1 (patch-sysdeps_bsd_shm_limits.c) = 2750d6b5c440f6071111c62ef1069d07867edcf2
+SHA1 (patch-sysdeps_darwin_glibtop__suid.h) = 1887511f74e27c7ed628ae37d5eec173db71ee81
+SHA1 (patch-sysdeps_darwin_proclist.c) = ee8e4df9376f4516787ae2e25453de6d871357d2
 SHA1 (patch-sysdeps_freebsd_procwd.c) = 89961a4115785809b1a1dc5dd07f263cf35cf1b8
 SHA1 (patch-sysdeps_solaris_glibtop__server.h) = ed3a657ecc024d0d5edc3d436e593b86ed39d726
 SHA1 (patch-sysdeps_solaris_procopenfiles.c) = 8aef9e53cdd9d2e13a964e0cde43e71b507fcfa5
