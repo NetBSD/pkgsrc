@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1333 2016/04/07 18:39:45 prlw1 Exp $
+$NetBSD: CHANGES-2016,v 1.1334 2016/04/07 19:24:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1740,3 +1740,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated fonts/harfbuzz to 1.2.5 [prlw1 2016-04-07]
 	Updated devel/glib2 to 2.48.0 [prlw1 2016-04-07]
 	Updated devel/pango to 1.40.0 [prlw1 2016-04-07]
+	Updated graphics/hugin to 2016.0.0 [adam 2016-04-07]
