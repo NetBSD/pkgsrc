@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1326 2016/04/07 14:25:20 ryoon Exp $
+$NetBSD: CHANGES-2016,v 1.1327 2016/04/07 14:29:23 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1733,3 +1733,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/p5-Net to 3.08 [wen 2016-04-07]
 	Updated mail/p5-Email-Sender to 1.300027 [wen 2016-04-07]
 	Updated emulators/dynamips to 0.2.16 [ryoon 2016-04-07]
+	Updated editors/Sigil to 0.9.5 [ryoon 2016-04-07]
