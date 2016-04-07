@@ -1,10 +1,11 @@
-$NetBSD: patch-configure,v 1.1 2016/02/07 14:09:08 adam Exp $
+$NetBSD: patch-configure,v 1.2 2016/04/07 10:09:02 adam Exp $
 
 Fix building on OS X.
+Portability fix.
 
---- configure.orig	2016-02-07 11:36:39.000000000 +0000
+--- configure.orig	2016-04-05 01:57:34.000000000 +0000
 +++ configure
-@@ -15139,7 +15139,6 @@ $as_echo "#define __Mac 1" >>confdefs.h
+@@ -15228,7 +15228,6 @@ $as_echo "#define __Mac 1" >>confdefs.h
         MACAPP=""
        fi
  
@@ -12,7 +13,16 @@ Fix building on OS X.
  
  
  
-@@ -32762,7 +32761,7 @@ fi
+@@ -19653,7 +19652,7 @@ fi
+ 
+ fi
+ 
+-   if test x"${have_zlib}" == xyes; then
++   if test x"${have_zlib}" = xyes; then
+       ac_fn_c_check_header_mongrel "$LINENO" "zlib.h" "ac_cv_header_zlib_h" "$ac_includes_default"
+ if test "x$ac_cv_header_zlib_h" = xyes; then :
+ 
+@@ -35279,7 +35278,7 @@ fi
  #--------------------------------------------------------------------------
  
  # Check whether --enable-breakpad was given.
