@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2015/03/15 19:51:08 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.5 2016/04/07 14:35:27 ryoon Exp $
 
-DISTNAME=	libkkc-0.3.4
-PKGREVISION=	1
+DISTNAME=	libkkc-0.3.5
 CATEGORIES=	converters textproc japanese inputmethod
-MASTER_SITES=	https://bitbucket.org/libkkc/libkkc/downloads/
+MASTER_SITES=	https://github.com/ueno/libkkc/releases/download/v${PKGVERSION_NOREV}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://bitbucket.org/libkkc/libkkc/
+HOMEPAGE=	https://github.com/ueno/libkkc/
 COMMENT=	Japanese Kana Kanji conversion library
 LICENSE=	gnu-gpl-v3
 
