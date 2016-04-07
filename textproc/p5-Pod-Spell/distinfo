@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2016/02/04 12:07:18 mef Exp $
+$NetBSD: distinfo,v 1.7 2016/04/07 12:31:43 wen Exp $
 
-SHA1 (Pod-Spell-1.18.tar.gz) = 19a10a16805c1701e24249661ba2b8b5d277dc64
-RMD160 (Pod-Spell-1.18.tar.gz) = f32ab89bed11cd504854944fceacab3b26275b59
-SHA512 (Pod-Spell-1.18.tar.gz) = afc302c50dcb567e4ff7702cc7d9ec1cdaeedd7d53464e88e7e5c93c8aed4e7964003e129701024757009693831087d1173eaf829fd0b629dce4e3d3e2aaf3e3
-Size (Pod-Spell-1.18.tar.gz) = 29153 bytes
+SHA1 (Pod-Spell-1.19.tar.gz) = 7c726f3bd1a06f9d8bd75d98f1bedb83cbfd17e1
+RMD160 (Pod-Spell-1.19.tar.gz) = 35675a6c6dc0d4420e413d994cbd0252dccf4a29
+SHA512 (Pod-Spell-1.19.tar.gz) = d9be19a67558d1d6e5c42f50df963ff3b2168f5cf78d25d7415c4fef92d5c6dfa0d0db0621d58358ea438efb50542652febaf8d18a7e3c16e79412bf8ae09999
+Size (Pod-Spell-1.19.tar.gz) = 29244 bytes
