@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2016/01/03 20:45:23 markd Exp $
+# $NetBSD: Makefile,v 1.37 2016/04/07 09:38:43 adam Exp $
 
-DISTNAME=	enblend-enfuse-4.1.4
+DISTNAME=	enblend-enfuse-4.2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=enblend/}
 
@@ -13,22 +13,16 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake perl:build pkg-config
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-boost-filesystem
 CONFIGURE_ENV+=		GNUPLOT=false
 
 BUILD_DEPENDS+=		help2man-[0-9]*:../../converters/help2man
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "Darwin"
-CONFIGURE_ARGS+=	--enable-openmp
-CONFIGURE_ARGS+=	--with-apple-opengl-framework
-.else
+.if ${OPSYS} != "Darwin"
 CONFIGURE_ARGS+=	--with-x
 .include "../../graphics/glut/buildlink3.mk"
 .endif
-
-LIBS+=			-lboost_system
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
