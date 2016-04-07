@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15627 2016/04/07 13:28:23 adam Exp $
+$NetBSD: TODO,v 1.15628 2016/04/07 13:31:24 wen Exp $
 
 Suggested new packages
 ======================
@@ -1437,7 +1437,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-MooseX-MethodAttributes-0.31
 	o p5-MooseX-Role-WithOverloading-0.17
 	o p5-MooseX-Types-Structured-0.35
-	o p5-Net-3.08
 	o p5-Net-Amazon-S3-0.80
 	o p5-Net-DBus-1.1.0
 	o p5-Net-DHCP-0.696
