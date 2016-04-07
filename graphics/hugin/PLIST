@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2015/12/24 12:59:29 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2016/04/07 19:23:26 adam Exp $
 bin/PTBatcherGUI
 bin/align_image_stack
 bin/autooptimiser
@@ -74,9 +74,15 @@ share/applications/PTBatcherGUI.desktop
 share/applications/calibrate_lens_gui.desktop
 share/applications/hugin.desktop
 share/applications/pto_gen.desktop
+share/hugin/data/blended_stacks.executor
 share/hugin/data/celeste.model
 share/hugin/data/default.setting
+share/hugin/data/fused_layers.executor
+share/hugin/data/hdr_pano.executor
 share/hugin/data/hugin_exiftool_copy.arg
+share/hugin/data/normal_enblend.executor
+share/hugin/data/normal_smartblend.executor
+share/hugin/data/zeronoise.executor
 share/hugin/xrc/about.xrc
 share/hugin/xrc/batch_frame.xrc
 share/hugin/xrc/batch_menu.xrc
@@ -607,6 +613,10 @@ share/hugin/xrc/data/preview_white_balance.png
 share/hugin/xrc/data/preview_white_balance_small.png
 share/hugin/xrc/data/ptbatcher.ico
 share/hugin/xrc/data/ptbatcher.png
+share/hugin/xrc/data/ptbatcher_pause.ico
+share/hugin/xrc/data/ptbatcher_pause.png
+share/hugin/xrc/data/ptbatcher_running.ico
+share/hugin/xrc/data/ptbatcher_running.png
 share/hugin/xrc/data/pto_icon.ico
 share/hugin/xrc/data/pto_icon.png
 share/hugin/xrc/data/redo.png
