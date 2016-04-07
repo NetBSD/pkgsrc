@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1103 2016/03/03 13:33:49 wiz Exp $
+# $NetBSD: Makefile,v 1.1104 2016/04/07 16:02:34 bouyer Exp $
 #
 
 COMMENT=	Networking tools
@@ -491,6 +491,7 @@ SUBDIR+=	p5-Net-XWhois
 SUBDIR+=	p5-Net-Z3950-ZOOM
 SUBDIR+=	p5-Net-eBay
 SUBDIR+=	p5-NetAddr-IP
+SUBDIR+=	p5-NetAddr-MAC
 SUBDIR+=	p5-NetPacket
 SUBDIR+=	p5-Nmap-Parser
 SUBDIR+=	p5-POE-Component-Client-DNS
