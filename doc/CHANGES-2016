@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1323 2016/04/07 13:28:23 adam Exp $
+$NetBSD: CHANGES-2016,v 1.1324 2016/04/07 13:31:24 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1730,3 +1730,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/p5-Email-Valid to 1.200 [wen 2016-04-07]
 	Updated mail/p5-Email-Simple to 2.210 [wen 2016-04-07]
 	Updated devel/git to 2.8.1 [adam 2016-04-07]
+	Updated net/p5-Net to 3.08 [wen 2016-04-07]
