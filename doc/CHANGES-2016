@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1310 2016/04/06 18:01:29 reed Exp $
+$NetBSD: CHANGES-2016,v 1.1311 2016/04/07 05:29:35 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1713,3 +1713,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Added www/ap24-authnz-external version 3.3.1 [manu 2016-04-06]
 	Updated security/clusterssh to 4.03.06nb1 [imil 2016-04-06]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2016Q1 branch [agc 2016-04-06]
+	Updated devel/cmake to 3.5.1 [adam 2016-04-07]
+	Updated multimedia/ffmpeg3 to 3.0.1 [adam 2016-04-07]
