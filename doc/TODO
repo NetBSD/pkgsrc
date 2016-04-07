@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15625 2016/04/07 12:46:17 wen Exp $
+$NetBSD: TODO,v 1.15626 2016/04/07 12:57:57 wen Exp $
 
 Suggested new packages
 ======================
@@ -1355,7 +1355,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Digest-Hashcash-1.1
 	o p5-Dist-Zilla-5.043
 	o p5-EV-4.22
-	o p5-Email-Valid-1.200
 	o p5-Encode-2.82
 	o p5-Excel-Template-0.34
 	o p5-Excel-Template-Plus-0.06
