@@ -1,17 +1,32 @@
-$NetBSD: patch-ad,v 1.4 2014/11/07 19:39:34 adam Exp $
+$NetBSD: patch-configure,v 1.1 2016/04/07 09:38:43 adam Exp $
 
---- configure.orig	2014-03-19 07:27:50.000000000 +0000
+Do not fail for missing LaTeX - it is not needed anyway.
+Do not force optimisation flags.
+Fix OpenMP detection.
+
+--- configure.orig	2016-03-28 14:51:58.000000000 +0000
 +++ configure
-@@ -10218,7 +10218,7 @@ if test "$enable_debug" = yes; then
+@@ -8716,10 +8716,6 @@ done
+ test -n "$latex" || latex="no"
+ 
+ export latex;
+-if test $latex = "no" ;
+-then
+-        as_fn_error $? "Unable to find a LaTeX application" "$LINENO" 5;
+-fi
+ 
+ 
+ 
+@@ -11710,7 +11706,7 @@ if test "$enable_debug" = yes; then
  $as_echo "yes" >&6; }
      enable_debug=yes
  else
--    CXXFLAGS="$CXXFLAGS -O2 -DNDEBUG -Wall"
-+    CXXFLAGS="$CXXFLAGS -DNDEBUG -Wall"
+-    CXXFLAGS="$CXXFLAGS -O2 -DNDEBUG"
++    CXXFLAGS="$CXXFLAGS -DNDEBUG"
      { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
  $as_echo "no" >&6; }
      enable_debug=no
-@@ -10271,7 +10271,7 @@ else
+@@ -11763,7 +11759,7 @@ else
  ax_cv_cxx_openmp=unknown
  # Flags to try:  -fopenmp (gcc), -openmp (icc), -mp (SGI & PGI),
  #                -xopenmp (Sun), -omp (Tru64), -qsmp=omp (AIX), none
@@ -20,7 +35,7 @@ $NetBSD: patch-ad,v 1.4 2014/11/07 19:39:34 adam Exp $
  if test "x$OPENMP_CXXFLAGS" != x; then
    ax_openmp_flags="$OPENMP_CXXFLAGS $ax_openmp_flags"
  fi
-@@ -10289,11 +10289,11 @@ for ax_openmp_flag in $ax_openmp_flags; 
+@@ -11781,11 +11777,11 @@ for ax_openmp_flag in $ax_openmp_flags; 
  #ifdef __cplusplus
  extern "C"
  #endif
