@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/07/17 11:34:42 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/04/07 07:39:17 leot Exp $
 share/doc/python2.7/.buildinfo
 share/doc/python2.7/_images/logging_flow.png
 share/doc/python2.7/_images/python-video-icon.png
@@ -64,6 +64,7 @@ share/doc/python2.7/_sources/c-api/veryhigh.txt
 share/doc/python2.7/_sources/c-api/weakref.txt
 share/doc/python2.7/_sources/contents.txt
 share/doc/python2.7/_sources/copyright.txt
+share/doc/python2.7/_sources/distributing/index.txt
 share/doc/python2.7/_sources/distutils/apiref.txt
 share/doc/python2.7/_sources/distutils/builtdist.txt
 share/doc/python2.7/_sources/distutils/commandref.txt
@@ -109,6 +110,7 @@ share/doc/python2.7/_sources/howto/unicode.txt
 share/doc/python2.7/_sources/howto/urllib2.txt
 share/doc/python2.7/_sources/howto/webservers.txt
 share/doc/python2.7/_sources/install/index.txt
+share/doc/python2.7/_sources/installing/index.txt
 share/doc/python2.7/_sources/library/2to3.txt
 share/doc/python2.7/_sources/library/__builtin__.txt
 share/doc/python2.7/_sources/library/__future__.txt
@@ -183,6 +185,7 @@ share/doc/python2.7/_sources/library/development.txt
 share/doc/python2.7/_sources/library/difflib.txt
 share/doc/python2.7/_sources/library/dircache.txt
 share/doc/python2.7/_sources/library/dis.txt
+share/doc/python2.7/_sources/library/distribution.txt
 share/doc/python2.7/_sources/library/distutils.txt
 share/doc/python2.7/_sources/library/dl.txt
 share/doc/python2.7/_sources/library/doctest.txt
@@ -203,6 +206,7 @@ share/doc/python2.7/_sources/library/email.mime.txt
 share/doc/python2.7/_sources/library/email.parser.txt
 share/doc/python2.7/_sources/library/email.txt
 share/doc/python2.7/_sources/library/email.util.txt
+share/doc/python2.7/_sources/library/ensurepip.txt
 share/doc/python2.7/_sources/library/errno.txt
 share/doc/python2.7/_sources/library/exceptions.txt
 share/doc/python2.7/_sources/library/fcntl.txt
@@ -447,6 +451,7 @@ share/doc/python2.7/_sources/reference/introduction.txt
 share/doc/python2.7/_sources/reference/lexical_analysis.txt
 share/doc/python2.7/_sources/reference/simple_stmts.txt
 share/doc/python2.7/_sources/reference/toplevel_components.txt
+share/doc/python2.7/_sources/tutorial/appendix.txt
 share/doc/python2.7/_sources/tutorial/appetite.txt
 share/doc/python2.7/_sources/tutorial/classes.txt
 share/doc/python2.7/_sources/tutorial/controlflow.txt
@@ -476,11 +481,19 @@ share/doc/python2.7/_sources/whatsnew/2.5.txt
 share/doc/python2.7/_sources/whatsnew/2.6.txt
 share/doc/python2.7/_sources/whatsnew/2.7.txt
 share/doc/python2.7/_sources/whatsnew/index.txt
+share/doc/python2.7/_static/ajax-loader.gif
 share/doc/python2.7/_static/basic.css
+share/doc/python2.7/_static/classic.css
+share/doc/python2.7/_static/comment-bright.png
+share/doc/python2.7/_static/comment-close.png
+share/doc/python2.7/_static/comment.png
 share/doc/python2.7/_static/copybutton.js
 share/doc/python2.7/_static/default.css
 share/doc/python2.7/_static/doctools.js
+share/doc/python2.7/_static/down-pressed.png
+share/doc/python2.7/_static/down.png
 share/doc/python2.7/_static/file.png
+share/doc/python2.7/_static/jquery-1.11.1.js
 share/doc/python2.7/_static/jquery.js
 share/doc/python2.7/_static/minus.png
 share/doc/python2.7/_static/opensearch.xml
@@ -489,8 +502,12 @@ share/doc/python2.7/_static/py.png
 share/doc/python2.7/_static/pygments.css
 share/doc/python2.7/_static/searchtools.js
 share/doc/python2.7/_static/sidebar.js
+share/doc/python2.7/_static/underscore-1.3.1.js
 share/doc/python2.7/_static/underscore.js
+share/doc/python2.7/_static/up-pressed.png
+share/doc/python2.7/_static/up.png
 share/doc/python2.7/_static/version_switch.js
+share/doc/python2.7/_static/websupport.js
 share/doc/python2.7/about.html
 share/doc/python2.7/bugs.html
 share/doc/python2.7/c-api/abstract.html
@@ -553,6 +570,7 @@ share/doc/python2.7/c-api/veryhigh.html
 share/doc/python2.7/c-api/weakref.html
 share/doc/python2.7/contents.html
 share/doc/python2.7/copyright.html
+share/doc/python2.7/distributing/index.html
 share/doc/python2.7/distutils/apiref.html
 share/doc/python2.7/distutils/builtdist.html
 share/doc/python2.7/distutils/commandref.html
@@ -630,6 +648,7 @@ share/doc/python2.7/howto/urllib2.html
 share/doc/python2.7/howto/webservers.html
 share/doc/python2.7/index.html
 share/doc/python2.7/install/index.html
+share/doc/python2.7/installing/index.html
 share/doc/python2.7/library/2to3.html
 share/doc/python2.7/library/__builtin__.html
 share/doc/python2.7/library/__future__.html
@@ -704,6 +723,7 @@ share/doc/python2.7/library/development.html
 share/doc/python2.7/library/difflib.html
 share/doc/python2.7/library/dircache.html
 share/doc/python2.7/library/dis.html
+share/doc/python2.7/library/distribution.html
 share/doc/python2.7/library/distutils.html
 share/doc/python2.7/library/dl.html
 share/doc/python2.7/library/doctest.html
@@ -724,6 +744,7 @@ share/doc/python2.7/library/email.message.html
 share/doc/python2.7/library/email.mime.html
 share/doc/python2.7/library/email.parser.html
 share/doc/python2.7/library/email.util.html
+share/doc/python2.7/library/ensurepip.html
 share/doc/python2.7/library/errno.html
 share/doc/python2.7/library/exceptions.html
 share/doc/python2.7/library/fcntl.html
@@ -972,6 +993,7 @@ share/doc/python2.7/reference/simple_stmts.html
 share/doc/python2.7/reference/toplevel_components.html
 share/doc/python2.7/search.html
 share/doc/python2.7/searchindex.js
+share/doc/python2.7/tutorial/appendix.html
 share/doc/python2.7/tutorial/appetite.html
 share/doc/python2.7/tutorial/classes.html
 share/doc/python2.7/tutorial/controlflow.html
