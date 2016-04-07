@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1316 2016/04/07 11:04:55 adam Exp $
+$NetBSD: CHANGES-2016,v 1.1317 2016/04/07 12:17:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1723,3 +1723,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/freetype2 to 2.6.3 [adam 2016-04-07]
 	Updated fonts/fontforge to 20160404 [adam 2016-04-07]
 	Updated www/curl to 7.48.0 [adam 2016-04-07]
+	Updated audio/wavpack to 4.80.0 [adam 2016-04-07]
