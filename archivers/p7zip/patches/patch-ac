@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.9 2015/12/29 19:39:21 adam Exp $
+$NetBSD: patch-ac,v 1.10 2016/04/07 14:41:34 ryoon Exp $
 
---- makefile.glb.orig	2015-10-03 20:25:19.000000000 +0000
+--- makefile.glb.orig	2016-03-10 20:20:14.000000000 +0000
 +++ makefile.glb
 @@ -1,14 +1,14 @@
  
@@ -9,13 +9,13 @@ $NetBSD: patch-ac,v 1.9 2015/12/29 19:39:21 adam Exp $
 -CFLAGS=-c -I. \
 +CFLAGS+=-c -I. \
  -I../../../../C \
- -I../../../myWindows \
- -I../../../include_windows \
- -I../../.. \
+ -I../../../../CPP/myWindows \
+ -I../../../../CPP/include_windows \
+ -I../../../../CPP \
  $(ALLFLAGS) $(ALLFLAGS_C)
  
 -CXXFLAGS=-c -I. \
 +CXXFLAGS+=-c -I. \
  -I../../../../C \
- -I../../../myWindows \
- -I../../../ \
+ -I../../../../CPP/myWindows \
+ -I../../../../CPP/include_windows \
