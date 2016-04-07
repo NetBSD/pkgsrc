@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1330 2016/04/07 16:11:28 bouyer Exp $
+$NetBSD: CHANGES-2016,v 1.1331 2016/04/07 18:08:39 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1737,3 +1737,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated converters/libkkc to 0.3.5 [ryoon 2016-04-07]
 	Updated archivers/p7zip to 15.14 [ryoon 2016-04-07]
 	Added net/p5-NetAddr-MAC version 0.94 [bouyer 2016-04-06]
+	Updated fonts/harfbuzz to 1.2.5 [prlw1 2016-04-07]
