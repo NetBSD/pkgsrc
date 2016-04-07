@@ -1,28 +1,38 @@
-$NetBSD: patch-an,v 1.12 2014/09/05 20:49:55 prlw1 Exp $
+$NetBSD: patch-an,v 1.13 2016/04/07 18:33:05 prlw1 Exp $
 
 - Leave gdbus-2.0/codegen sudirectory to devel/gdbus-codegen package.
 - Don't compile tests as they include gdbus-codegen tests.
 - Don't install completion data.
 
---- gio/Makefile.in.orig	2014-03-24 18:54:27.000000000 +0000
+--- gio/Makefile.in.orig	2016-02-16 11:35:28.000000000 +0000
 +++ gio/Makefile.in
-@@ -1198,8 +1198,8 @@ all_test_ltlibs = $(test_ltlibraries) $(
+@@ -879,8 +879,7 @@ am__set_b = \
+     *) \
+       b='$*';; \
+   esac
+-DIST_SUBDIRS = gdbus-2.0/codegen xdgmime inotify kqueue win32 . tests \
+-	fam
++DIST_SUBDIRS = gdbus-2.0/codegen xdgmime inotify kqueue win32 . fam
+ am__DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/gio.rc.in \
+ 	$(srcdir)/gnetworking.h.in \
+ 	$(top_srcdir)/build/Makefile.msvcproj $(top_srcdir)/depcomp \
+@@ -1257,8 +1256,8 @@ all_test_ltlibs = $(test_ltlibraries) $(
  @ENABLE_INSTALLED_TESTS_TRUE@                      $(dist_test_scripts) $(dist_installed_test_scripts)
  
  @ENABLE_INSTALLED_TESTS_TRUE@installed_test_meta_DATA = $(installed_testcases:=.test)
 -SUBDIRS = gdbus-2.0/codegen $(am__append_15) $(am__append_19) \
--	$(am__append_22) $(am__append_26) $(am__append_29) . tests \
+-	$(am__append_22) $(am__append_25) . tests $(am__append_28)
 +SUBDIRS = $(am__append_15) $(am__append_19) \
-+	$(am__append_22) $(am__append_26) $(am__append_29) . \
- 	$(am__append_32)
++	$(am__append_22) $(am__append_25) . $(am__append_28)
  @MS_LIB_AVAILABLE_TRUE@@OS_WIN32_AND_DLL_COMPILATION_TRUE@install_ms_lib_cmd = $(INSTALL) gio-2.0.lib $(DESTDIR)$(libdir)
  @MS_LIB_AVAILABLE_TRUE@@OS_WIN32_AND_DLL_COMPILATION_TRUE@uninstall_ms_lib_cmd = -rm $(DESTDIR)$(libdir)/gio-2.0.lib
-@@ -4311,7 +4311,7 @@ info: info-recursive
+ AM_CPPFLAGS = \
+@@ -4547,7 +4546,7 @@ info: info-recursive
  
  info-am:
  
 -install-data-am: install-completionDATA install-data-local \
 +install-data-am: install-data-local \
- 	install-dist_schemaDATA install-gioincludeHEADERS \
- 	install-giounixincludeHEADERS install-giowin32includeHEADERS \
- 	install-installed_testLTLIBRARIES \
+ 	install-dist_itsDATA install-dist_schemaDATA \
+ 	install-gioincludeHEADERS install-giounixincludeHEADERS \
+ 	install-giowin32includeHEADERS \

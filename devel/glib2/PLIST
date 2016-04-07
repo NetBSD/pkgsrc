@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.84 2015/06/10 23:00:05 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.85 2016/04/07 18:33:05 prlw1 Exp $
 bin/gapplication
 bin/gdbus
 bin/gio-querymodules
@@ -41,6 +41,7 @@ include/glib/glib-2.0/gio/gconverter.h
 include/glib/glib-2.0/gio/gconverterinputstream.h
 include/glib/glib-2.0/gio/gconverteroutputstream.h
 include/glib/glib-2.0/gio/gcredentials.h
+include/glib/glib-2.0/gio/gdatagrambased.h
 include/glib/glib-2.0/gio/gdatainputstream.h
 include/glib/glib-2.0/gio/gdataoutputstream.h
 include/glib/glib-2.0/gio/gdbusactiongroup.h
@@ -66,6 +67,9 @@ include/glib/glib-2.0/gio/gdbusproxy.h
 include/glib/glib-2.0/gio/gdbusserver.h
 include/glib/glib-2.0/gio/gdbusutils.h
 include/glib/glib-2.0/gio/gdrive.h
+include/glib/glib-2.0/gio/gdtlsclientconnection.h
+include/glib/glib-2.0/gio/gdtlsconnection.h
+include/glib/glib-2.0/gio/gdtlsserverconnection.h
 include/glib/glib-2.0/gio/gemblem.h
 include/glib/glib-2.0/gio/gemblemedicon.h
 include/glib/glib-2.0/gio/gfile.h
@@ -286,16 +290,14 @@ lib/pkgconfig/gthread-2.0.pc
 share/aclocal/glib-2.0.m4
 share/aclocal/glib-gettext.m4
 share/aclocal/gsettings.m4
-share/gdb/auto-load/libglib-2.0.so.0.4400.1-gdb.py
-share/gdb/auto-load/libgobject-2.0.so.0.4400.1-gdb.py
+share/gdb/auto-load/usr/pkg/lib/libglib-2.0.so.0.4800.0-gdb.py
+share/gdb/auto-load/usr/pkg/lib/libgobject-2.0.so.0.4800.0-gdb.py
+share/gettext/its/gschema.its
+share/gettext/its/gschema.loc
 share/glib-2.0/gdb/glib.py
 share/glib-2.0/gdb/gobject.py
 share/glib-2.0/gettext/po/Makefile.in.in
 share/glib-2.0/schemas/gschema.dtd
-share/gtk-doc/html/gio/ExampleAnimal.html
-share/gtk-doc/html/gio/ExampleCat.html
-share/gtk-doc/html/gio/ExampleObject.html
-share/gtk-doc/html/gio/ExampleObjectManagerClient.html
 share/gtk-doc/html/gio/GAction.html
 share/gtk-doc/html/gio/GActionGroup.html
 share/gtk-doc/html/gio/GActionMap.html
@@ -330,7 +332,11 @@ share/gtk-doc/html/gio/GDBusProxy.html
 share/gtk-doc/html/gio/GDBusServer.html
 share/gtk-doc/html/gio/GDataInputStream.html
 share/gtk-doc/html/gio/GDataOutputStream.html
+share/gtk-doc/html/gio/GDatagramBased.html
 share/gtk-doc/html/gio/GDrive.html
+share/gtk-doc/html/gio/GDtlsClientConnection.html
+share/gtk-doc/html/gio/GDtlsConnection.html
+share/gtk-doc/html/gio/GDtlsServerConnection.html
 share/gtk-doc/html/gio/GEmblem.html
 share/gtk-doc/html/gio/GEmblemedIcon.html
 share/gtk-doc/html/gio/GFile.html
@@ -439,6 +445,8 @@ share/gtk-doc/html/gio/api-index-2-38.html
 share/gtk-doc/html/gio/api-index-2-40.html
 share/gtk-doc/html/gio/api-index-2-42.html
 share/gtk-doc/html/gio/api-index-2-44.html
+share/gtk-doc/html/gio/api-index-2-46.html
+share/gtk-doc/html/gio/api-index-2-48.html
 share/gtk-doc/html/gio/api-index-deprecated.html
 share/gtk-doc/html/gio/api-index-full.html
 share/gtk-doc/html/gio/application.html
@@ -446,22 +454,21 @@ share/gtk-doc/html/gio/async.html
 share/gtk-doc/html/gio/ch01.html
 share/gtk-doc/html/gio/ch02.html
 share/gtk-doc/html/gio/ch03.html
-share/gtk-doc/html/gio/ch31.html
 share/gtk-doc/html/gio/ch32.html
-share/gtk-doc/html/gio/ch32s02.html
-share/gtk-doc/html/gio/ch32s03.html
 share/gtk-doc/html/gio/ch33.html
 share/gtk-doc/html/gio/ch33s02.html
 share/gtk-doc/html/gio/ch33s03.html
-share/gtk-doc/html/gio/ch33s04.html
-share/gtk-doc/html/gio/ch33s05.html
-share/gtk-doc/html/gio/ch33s06.html
-share/gtk-doc/html/gio/ch33s07.html
 share/gtk-doc/html/gio/ch34.html
 share/gtk-doc/html/gio/ch34s02.html
 share/gtk-doc/html/gio/ch34s03.html
 share/gtk-doc/html/gio/ch34s04.html
 share/gtk-doc/html/gio/ch34s05.html
+share/gtk-doc/html/gio/ch34s06.html
+share/gtk-doc/html/gio/ch34s07.html
+share/gtk-doc/html/gio/ch35.html
+share/gtk-doc/html/gio/ch35s02.html
+share/gtk-doc/html/gio/ch35s03.html
+share/gtk-doc/html/gio/ch35s04.html
 share/gtk-doc/html/gio/conversion.html
 share/gtk-doc/html/gio/data-models.html
 share/gtk-doc/html/gio/extending-gio.html
@@ -472,9 +479,8 @@ share/gtk-doc/html/gio/file_ops.html
 share/gtk-doc/html/gio/gapplication-tool.html
 share/gtk-doc/html/gio/gdbus-codegen.html
 share/gtk-doc/html/gio/gdbus-convenience.html
+share/gtk-doc/html/gio/gdbus-example-gdbus-codegen.html
 share/gtk-doc/html/gio/gdbus-lowlevel.html
-share/gtk-doc/html/gio/gdbus-org.gtk.GDBus.Example.ObjectManager.Animal.html
-share/gtk-doc/html/gio/gdbus-org.gtk.GDBus.Example.ObjectManager.Cat.html
 share/gtk-doc/html/gio/gdbus.html
 share/gtk-doc/html/gio/gio-D-Bus-Addresses.html
 share/gtk-doc/html/gio/gio-D-Bus-Introspection-Data.html
@@ -493,6 +499,7 @@ share/gtk-doc/html/gio/gio-GMenuModel-exporter.html
 share/gtk-doc/html/gio/gio-GSettingsSchema-GSettingsSchemaSource.html
 share/gtk-doc/html/gio/gio-GWin32InputStream.html
 share/gtk-doc/html/gio/gio-GWin32OutputStream.html
+share/gtk-doc/html/gio/gio-GWin32RegistryKey.html
 share/gtk-doc/html/gio/gio-Owning-Bus-Names.html
 share/gtk-doc/html/gio/gio-TLS-Overview.html
 share/gtk-doc/html/gio/gio-Unix-Mounts.html
@@ -521,6 +528,7 @@ share/gtk-doc/html/gio/networking.html
 share/gtk-doc/html/gio/permissions.html
 share/gtk-doc/html/gio/pt01.html
 share/gtk-doc/html/gio/pt02.html
+share/gtk-doc/html/gio/registry.html
 share/gtk-doc/html/gio/resolver.html
 share/gtk-doc/html/gio/resources.html
 share/gtk-doc/html/gio/right-insensitive.png
@@ -563,6 +571,8 @@ share/gtk-doc/html/glib/api-index-2-4.html
 share/gtk-doc/html/glib/api-index-2-40.html
 share/gtk-doc/html/glib/api-index-2-42.html
 share/gtk-doc/html/glib/api-index-2-44.html
+share/gtk-doc/html/glib/api-index-2-46.html
+share/gtk-doc/html/glib/api-index-2-48.html
 share/gtk-doc/html/glib/api-index-2-6.html
 share/gtk-doc/html/glib/api-index-2-8.html
 share/gtk-doc/html/glib/api-index-deprecated.html
@@ -577,6 +587,7 @@ share/gtk-doc/html/glib/glib-Balanced-Binary-Trees.html
 share/gtk-doc/html/glib/glib-Base64-Encoding.html
 share/gtk-doc/html/glib/glib-Basic-Types.html
 share/gtk-doc/html/glib/glib-Bookmark-file-parser.html
+share/gtk-doc/html/glib/glib-Bounds-checked-integer-arithmetic.html
 share/gtk-doc/html/glib/glib-Byte-Arrays.html
 share/gtk-doc/html/glib/glib-Byte-Order-Macros.html
 share/gtk-doc/html/glib/glib-Caches.html
@@ -692,6 +703,7 @@ share/gtk-doc/html/gobject/api-index-2-4.html
 share/gtk-doc/html/gobject/api-index-2-40.html
 share/gtk-doc/html/gobject/api-index-2-42.html
 share/gtk-doc/html/gobject/api-index-2-44.html
+share/gtk-doc/html/gobject/api-index-2-46.html
 share/gtk-doc/html/gobject/api-index-2-6.html
 share/gtk-doc/html/gobject/api-index-2-8.html
 share/gtk-doc/html/gobject/api-index-deprecated.html
@@ -789,6 +801,7 @@ share/locale/fa/LC_MESSAGES/glib20.mo
 share/locale/fi/LC_MESSAGES/glib20.mo
 share/locale/fr/LC_MESSAGES/glib20.mo
 share/locale/ga/LC_MESSAGES/glib20.mo
+share/locale/gd/LC_MESSAGES/glib20.mo
 share/locale/gl/LC_MESSAGES/glib20.mo
 share/locale/gu/LC_MESSAGES/glib20.mo
 share/locale/he/LC_MESSAGES/glib20.mo
