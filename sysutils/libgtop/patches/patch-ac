@@ -1,17 +1,22 @@
-$NetBSD: patch-ac,v 1.6 2007/11/05 19:06:03 drochner Exp $
+$NetBSD: patch-ac,v 1.7 2016/04/07 11:54:57 youri Exp $
 
---- sysdeps/common/mountlist.c.orig	2007-04-27 00:27:34.000000000 +0200
+--- sysdeps/common/mountlist.c.orig	2011-06-01 15:40:47.000000000 +0000
 +++ sysdeps/common/mountlist.c
-@@ -106,7 +106,7 @@ static struct mount_entry *read_filesyst
+@@ -105,8 +105,12 @@ static struct mount_entry *read_filesyst
+ #define MOUNTED_GETMNTTBL
  #endif
  
++#ifdef __APPLE__
++#define statvfs statfs
++#endif
++
  
 -#if defined (MOUNTED_GETMNTINFO) && !defined (__NetBSD__) && !defined (__OpenBSD__) && !defined(__FreeBSD__)
 +#if defined (MOUNTED_GETMNTINFO) && !defined (__NetBSD__) && !defined (__OpenBSD__) && !defined(__FreeBSD__) && !defined(__DragonFly__)
  static const char *
  fstype_to_string (short t)
  {
-@@ -298,7 +298,11 @@ read_filesystem_list (void)
+@@ -298,7 +302,11 @@ read_filesystem_list (void)
  
  #ifdef MOUNTED_GETMNTINFO	/* 4.4BSD.  */
    {
@@ -23,7 +28,7 @@ $NetBSD: patch-ac,v 1.6 2007/11/05 19:06:03 drochner Exp $
      int entries;
  
      entries = getmntinfo (&fsp, MNT_NOWAIT);
-@@ -309,7 +313,7 @@ read_filesystem_list (void)
+@@ -309,7 +317,7 @@ read_filesystem_list (void)
  	me = (struct mount_entry *) g_malloc (sizeof (struct mount_entry));
  	me->me_devname = g_strdup (fsp->f_mntfromname);
  	me->me_mountdir = g_strdup (fsp->f_mntonname);
@@ -32,7 +37,7 @@ $NetBSD: patch-ac,v 1.6 2007/11/05 19:06:03 drochner Exp $
  	me->me_type = g_strdup (fsp->f_fstypename);
  #else
  	me->me_type = g_strdup (fstype_to_string (fsp->f_type));
-@@ -544,6 +548,7 @@ static gboolean ignore_mount_entry(const
+@@ -544,6 +552,7 @@ static gboolean ignore_mount_entry(const
  		"devfs",
  		"devpts",
  		"fusectl",
