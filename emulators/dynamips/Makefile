@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2015/12/12 20:20:04 markd Exp $
+# $NetBSD: Makefile,v 1.11 2016/04/07 14:24:51 ryoon Exp $
 
-PKGNAME=	dynamips-0.2.15
-DISTNAME=	${PKGNAME:S/dynamips-/v/}
+DISTNAME=	dynamips-0.2.16
 CATEGORIES=	emulators
-MASTER_SITES=	${MASTER_SITE_GITHUB:=GNS3/dynamips/archive/}
-DIST_SUBDIR=	dynamips
+MASTER_SITES=	${MASTER_SITE_GITHUB:=GNS3/}
+GITHUB_PROJECT=	dynamips
+GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	kefren@NetBSD.org
 HOMEPAGE=	https://github.com/GNS3/dynamips
@@ -13,8 +13,6 @@ LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	gmake
 USE_CMAKE=	yes
-
-WRKSRC=		${WRKDIR}/${PKGNAME}
 
 SUBST_CLASSES+=		libelf
 SUBST_STAGE.libelf=	post-patch
