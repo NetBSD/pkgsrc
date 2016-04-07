@@ -1,0 +1,15 @@
+$NetBSD: patch-man_Makefile.in,v 1.1 2016/04/07 13:21:38 tnn Exp $
+
+Use tradcpp(1) for preprocessing sed script which is not actually C code.
+
+--- man/Makefile.in.orig	2015-01-20 05:01:38.000000000 +0000
++++ man/Makefile.in
+@@ -490,7 +490,7 @@ uninstall-am: uninstall-appmanDATA
+ .PRECIOUS: Makefile
+ 
+ filenames.sed: filenames.sed.c
+-	$(AM_V_GEN)$(CPP) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
++	$(AM_V_GEN)$(RAWCPP) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
+ 	    $(AM_CPPFLAGS) $(CPPFLAGS) $(srcdir)/filenames.sed.c | \
+ 	    $(SED) -n -e '/s|__/ p' -e '/^\/__/ p' > $@
+ 
