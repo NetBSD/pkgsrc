@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.56 2015/10/18 15:56:56 adam Exp $
+# $NetBSD: Makefile,v 1.57 2016/04/07 19:23:26 adam Exp $
 
-DISTNAME=	hugin-2015.0.0
+DISTNAME=	hugin-2016.0.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hugin/}
 EXTRACT_SUFX=	.tar.bz2
@@ -38,6 +38,7 @@ SUBST_SED.apple=	-e 's,(APPLE),(ELPPA),g'
 .include "../../graphics/glut/buildlink3.mk"
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../graphics/lensfun/buildlink3.mk"
+.include "../../graphics/lcms2/buildlink3.mk"
 .include "../../graphics/libpano13/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
 .include "../../graphics/vigra/buildlink3.mk"
