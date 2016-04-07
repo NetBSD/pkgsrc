@@ -1,11 +1,10 @@
-$NetBSD: distinfo,v 1.62 2016/03/14 15:37:47 tnn Exp $
+$NetBSD: distinfo,v 1.63 2016/04/07 10:09:02 adam Exp $
 
-SHA1 (fontforge-20150824.tar.gz) = 2dd442baee9cd16efb5928bf51cc3d6b9c73d9af
-RMD160 (fontforge-20150824.tar.gz) = e26fca6affc11d1ea6c927751a63dae0bfeab47b
-SHA512 (fontforge-20150824.tar.gz) = 82a33b41667b5637706aa11ca56695cf0d7a485c66cb37b8c3346087ca3b738967b77141f9aaaaddd90c8a4c2cec7e4924609de0ff18133a91e5862b1ad1ae2d
-Size (fontforge-20150824.tar.gz) = 20796482 bytes
+SHA1 (fontforge-dist-20160404.tar.gz) = e7c235f3d0ef59196df30707e18ad1198ff7baae
+RMD160 (fontforge-dist-20160404.tar.gz) = e72662db3a00a9da6a2639d36f8f0b9890cda936
+SHA512 (fontforge-dist-20160404.tar.gz) = be94f04881b12ed3b1a34d0d7cc9149321db17d51458f135b2683ea600401e4fa55647ced4b4e014555ba1c900a684b9d5d6f2e2812ce03c432d23ca72f5c363
+Size (fontforge-dist-20160404.tar.gz) = 20906256 bytes
 SHA1 (patch-Makefile.in) = 5a7cad2f9516540048008a13a257d6c9720a22c9
-SHA1 (patch-configure) = 47cd1d1ff60d40114aa08308d4e73b7c2da4716e
-SHA1 (patch-fontforge_python.c) = 1c1cb83feada6e8588754a728863ee92d7f9368f
+SHA1 (patch-configure) = d85d82bed7ee84c5b8282afd1310872eca39a3dd
 SHA1 (patch-fontforge_splinefont.h) = b518e61e3ba88c7fb86ebe53fb62109447791121
 SHA1 (patch-po_Makefile.in) = 75990b7371e5ce525deba693c651dbd5222e558b
