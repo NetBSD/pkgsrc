@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2015/10/15 11:47:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.25 2016/04/08 14:40:55 wiz Exp $
 bin/meld
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/meld/__init__.py
@@ -147,6 +147,9 @@ ${PYSITELIB}/meld/vc/_vc.pyo
 ${PYSITELIB}/meld/vc/bzr.py
 ${PYSITELIB}/meld/vc/bzr.pyc
 ${PYSITELIB}/meld/vc/bzr.pyo
+${PYSITELIB}/meld/vc/darcs.py
+${PYSITELIB}/meld/vc/darcs.pyc
+${PYSITELIB}/meld/vc/darcs.pyo
 ${PYSITELIB}/meld/vc/git.py
 ${PYSITELIB}/meld/vc/git.pyc
 ${PYSITELIB}/meld/vc/git.pyo
@@ -347,6 +350,7 @@ share/meld/ui/meldapp-ui.xml
 share/meld/ui/meldapp.ui
 share/meld/ui/patch-dialog.ui
 share/meld/ui/preferences.ui
+share/meld/ui/shortcuts.ui
 share/meld/ui/tab-placeholder.ui
 share/meld/ui/vcview-ui.xml
 share/meld/ui/vcview.ui
