@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2016/02/21 10:42:26 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2016/04/08 15:18:59 wiz Exp $
 
-DISTNAME=	atomicwrites-0.1.9
+DISTNAME=	atomicwrites-1.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_PYPI:=a/atomicwrites/}
