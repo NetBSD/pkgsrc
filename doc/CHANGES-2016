@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1374 2016/04/08 17:01:26 adam Exp $
+$NetBSD: CHANGES-2016,v 1.1375 2016/04/08 20:29:59 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1786,3 +1786,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/nghttp2 to 1.9.2 [adam 2016-04-08]
 	Added net/ndpi version 1.7.1 [adam 2016-04-08]
 	Added net/ntopng version 2.2 [adam 2016-04-08]
+	Added devel/MoarVM version 2016.03 [bsiegert 2016-04-08]
