@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1373 2016/04/08 16:47:09 adam Exp $
+$NetBSD: CHANGES-2016,v 1.1374 2016/04/08 17:01:26 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1784,3 +1784,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/py-cassandra-driver to 3.1.1 [fhajny 2016-04-08]
 	Updated www/py-django to 1.9.5 [adam 2016-04-08]
 	Updated www/nghttp2 to 1.9.2 [adam 2016-04-08]
+	Added net/ndpi version 1.7.1 [adam 2016-04-08]
+	Added net/ntopng version 2.2 [adam 2016-04-08]
