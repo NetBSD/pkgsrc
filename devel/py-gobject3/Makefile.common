@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.6 2015/06/11 08:41:02 prlw1 Exp $
+# $NetBSD: Makefile.common,v 1.7 2016/04/08 07:41:26 prlw1 Exp $
 # used by devel/py-gobject3/Makefile
 # used by devel/py-gobject3-common/Makefile
 
-VER=			3.16.1
+VER=			3.20.0
 DISTNAME=		pygobject-${VER}
 CATEGORIES=		devel gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/pygobject/${PKGVERSION_NOREV:R}/}
@@ -40,6 +40,6 @@ PLIST_SUBST+=	PLATFORM=${PLATFORM:Q}
 
 BUILDLINK_API_DEPENDS.glib2=	glib2>=2.38.0
 .include "../../devel/glib2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gobject-introspection=	gobject-introspection>=1.39.0
+BUILDLINK_API_DEPENDS.gobject-introspection=	gobject-introspection>=1.46.0
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
