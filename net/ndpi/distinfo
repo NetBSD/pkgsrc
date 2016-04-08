@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2016/04/08 16:51:23 adam Exp $
+
+SHA1 (ntopng-2.2.tar.gz) = 873170e54611acb77741be67aec8b782fb8efb9b
+RMD160 (ntopng-2.2.tar.gz) = ff89921551d6c23c286df6d4965c67818f2c5df5
+SHA512 (ntopng-2.2.tar.gz) = d0dacdd821bb546a1034bd616201ae05f17037fd446ec2b7566fe6b2c1fa90b256056c3dd5f0b10aded4c903286adfa7ac5f3901c4392de92f6c27dcc523cb23
+Size (ntopng-2.2.tar.gz) = 91319029 bytes
+SHA1 (patch-src_lib_Makefile.am) = f5e640d9504e7bea73e77a759c2243f4dbad8bf7
