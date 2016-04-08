@@ -1,0 +1,65 @@
+$NetBSD: patch-configure.seed,v 1.1 2016/04/08 16:59:07 adam Exp $
+
+Do not use included nDPI.
+Do not use -O0 for clang.
+On Darwin, install into man/.
+
+--- configure.seed.orig	2015-11-30 18:15:18.000000000 +0000
++++ configure.seed
+@@ -44,35 +44,6 @@ GIT_BRANCH="@GIT_BRANCH@"
+ PRO_GIT_RELEASE="@PRO_GIT_RELEASE@"
+ PRO_GIT_DATE="@PRO_GIT_DATE@"
+ 
+-AC_MSG_CHECKING(for nDPI)
+-NDPI_HOME=./nDPI
+-if test -d "$NDPI_HOME" ; then :
+-   AC_MSG_RESULT(found in $NDPI_HOME)
+-else
+-   NDPI_HOME=../nDPI
+-   if test -d "$NDPI_HOME"; then :
+-      AC_MSG_RESULT(found in $NDPI_HOME)
+-   else
+-      NDPI_HOME=$HOME/nDPI
+-      if test -d "$NDPI_HOME"; then :
+-        AC_MSG_RESULT(found in $NDPI_HOME)
+-      else
+-        AC_MSG_RESULT(not found)
+-        echo "Please do cd ..; git clone https://github.com/ntop/nDPI.git; cd nDPI; ./autogen.sh; make; cd ../ntopng"
+-        echo " and try again"
+-        exit
+-      fi
+-   fi
+-fi
+-
+-NDPI_LIB=$NDPI_HOME/src/lib/.libs/libndpi.a
+-AC_MSG_CHECKING(for $NDPI_LIB)
+-if test -f "$NDPI_LIB" ; then :
+-  AC_MSG_RESULT(found $NDPI_LIB)
+-else
+-  AC_MSG_RESULT(not found $NDPI_LIB: compiling)
+-  cd $NDPI_HOME; ./autogen.sh; make; cd -
+-fi
+ 
+ AC_MSG_CHECKING(for ntopng professional edition)
+ if test -d "pro"; then :
+@@ -351,7 +322,7 @@ if test x$GPP = x
+ then
+ 	GPP="g++"
+ else
+-	GPP="$GPP -O0"
++	GPP="$GPP"
+ fi
+ 
+ GIT=`which git`
+@@ -374,11 +345,7 @@ then
+  INSTALL_DIR=${ac_default_prefix}
+ fi
+ 
+-if test $SYSTEM = "Darwin"; then
+-  MAN_DIR=$INSTALL_DIR/share/man
+-else
+   MAN_DIR=$INSTALL_DIR/man
+-fi
+ 
+ if test $SYSTEM = "OpenBSD"; then
+ INSTALL_DIR=${prefix}

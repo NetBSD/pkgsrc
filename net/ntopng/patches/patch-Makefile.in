@@ -1,0 +1,23 @@
+$NetBSD: patch-Makefile.in,v 1.1 2016/04/08 16:59:07 adam Exp $
+
+Install into DESTDIR.
+Use external nDPI.
+
+--- Makefile.in.orig	2015-11-30 18:15:18.000000000 +0000
++++ Makefile.in
+@@ -5,13 +5,13 @@ SHELL=/bin/sh
+ OS := $(shell uname -s)
+ PWD=@PWD@
+ GPP=@GPP@
+-INSTALL_DIR=$(prefix)
++INSTALL_DIR=$(DESTDIR)$(prefix)
+ MAN_DIR=$(DESTDIR)@MAN_DIR@
+ 
+ ######
+ HAS_NDPI=$(shell pkg-config --exists libndpi; echo $$?)
+ ifeq ($(HAS_NDPI), 0)
+-    NDPI_INC = $(shell pkg-config --cflags libndpi | sed -e 's/\(-I[^ \t]*\)/\1\/libndpi/g')
++    NDPI_INC = $(shell pkg-config --cflags libndpi)/libndpi
+     NDPI_LIB = $(shell pkg-config --libs libndpi)
+     NDPI_LIB_DEP =
+ else
