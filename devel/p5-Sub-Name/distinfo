@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2015/11/03 03:28:46 agc Exp $
+$NetBSD: distinfo,v 1.9 2016/04/08 14:55:59 wiz Exp $
 
-SHA1 (Sub-Name-0.14.tar.gz) = efed5ab4d03f562ab469c3636c4dab28c5f64d30
-RMD160 (Sub-Name-0.14.tar.gz) = 43d607b5f151cc499ab6816b3d5285ada3af2f5a
-SHA512 (Sub-Name-0.14.tar.gz) = 526fce85a60677ef93e56ea7276daff32a6be730170afa39d414d50a6253cca4556a290bf41172209e57fe79690bce1a70c4c7b672288aec4071c62d397d197b
-Size (Sub-Name-0.14.tar.gz) = 75444 bytes
+SHA1 (Sub-Name-0.15.tar.gz) = a9e4ea335e40437f9e95cf55794e7713d4bec9ac
+RMD160 (Sub-Name-0.15.tar.gz) = c8aa08627f870b9ff38591dfc86c4f072b7478ca
+SHA512 (Sub-Name-0.15.tar.gz) = 6b8f0ce56e4706148cd71d5e937986714d69162c9ce16b177866832ef1c0245f5d11f5bd555e325098ab54fdb1d46a32e37d0213d2dadef03cc53f2d4da59cc6
+Size (Sub-Name-0.15.tar.gz) = 76856 bytes
