@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2015/12/27 23:49:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.24 2016/04/08 15:01:08 wiz Exp $
 bin/global
 bin/globash
 bin/gozilla
@@ -9,6 +9,7 @@ bin/htags-server
 info/global.info
 lib/gtags/exuberant-ctags.la
 lib/gtags/pygments-parser.la
+lib/gtags/universal-ctags.la
 lib/gtags/user-custom.la
 man/man1/global.1
 man/man1/globash.1
@@ -36,11 +37,11 @@ share/gtags/README
 share/gtags/README.PATCHES
 share/gtags/SERVERSIDE_HOWTO
 share/gtags/THANKS
-share/gtags/completion.cgi.tmpl
+share/gtags/completion.cgi
 share/gtags/elvis-2.2_0.patch
 share/gtags/elvis.rc
 share/gtags/geco.rc
-share/gtags/global.cgi.tmpl
+share/gtags/global.cgi
 share/gtags/globash.rc
 share/gtags/gtags-cscope.vim
 share/gtags/gtags.conf
@@ -86,13 +87,13 @@ share/gtags/jquery/jquery.suggest.css
 share/gtags/jquery/jquery.suggest.js
 share/gtags/jquery/jquery.treeview.css
 share/gtags/jquery/jquery.treeview.js
-share/gtags/jscode_suggest.tmpl
-share/gtags/jscode_treeview.tmpl
+share/gtags/jscode_suggest
+share/gtags/jscode_treeview
 share/gtags/script/elvis-global
 share/gtags/script/global-client
 share/gtags/script/gtags-client
 share/gtags/script/htags-client
 share/gtags/script/less-global
 share/gtags/script/pygments_parser.py
-share/gtags/style.css.tmpl
+share/gtags/style.css
 share/gtags/vim74-gtags-cscope.patch
