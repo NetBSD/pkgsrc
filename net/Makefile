@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1104 2016/04/07 16:02:34 bouyer Exp $
+# $NetBSD: Makefile,v 1.1105 2016/04/08 17:00:21 adam Exp $
 #
 
 COMMENT=	Networking tools
@@ -359,6 +359,7 @@ SUBDIR+=	napshare
 SUBDIR+=	nasd
 SUBDIR+=	nbtscan
 SUBDIR+=	ncftp3
+SUBDIR+=	ndpi
 SUBDIR+=	nemesis
 SUBDIR+=	net-snmp
 SUBDIR+=	net6
@@ -388,6 +389,7 @@ SUBDIR+=	nsd
 SUBDIR+=	nslint
 SUBDIR+=	nstx
 SUBDIR+=	ntop
+SUBDIR+=	ntopng
 SUBDIR+=	ntp4
 SUBDIR+=	ocaml-ipaddr
 SUBDIR+=	ocamlnet
