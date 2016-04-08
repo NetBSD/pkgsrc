@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1337 2016/04/08 07:56:51 adam Exp $
+$NetBSD: CHANGES-2016,v 1.1338 2016/04/08 13:38:48 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1747,3 +1747,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/sqlite3-docs to 3.12.0 [adam 2016-04-08]
 	Updated databases/sqlite3-tcl to 3.12.0 [adam 2016-04-08]
 	Updated mail/dovecot2 to 2.2.23 [adam 2016-04-08]
+	Updated devel/p5-autobox-Core to 1.32 [wen 2016-04-08]
