@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15642 2016/04/08 14:49:17 wiz Exp $
+$NetBSD: TODO,v 1.15643 2016/04/08 14:50:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -970,7 +970,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o inn-2.6.0
 	o innoextract-1.6
 	o input-pad-1.4.2
-	o inputproto-2.3.2
 	o inspircd-1.2.1
 	o instiki-0.13
 	o intercal-0.30
