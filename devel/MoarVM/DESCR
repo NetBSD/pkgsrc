@@ -1,0 +1,13 @@
+Short for "Metamodel On A Runtime", MoarVM is a virtual machine built
+especially for Rakudo Perl 6 and the NQP Compiler Toolchain. The primary
+backend target for the Christmas 2015 release of Perl 6, MoarVM stands
+out amongst the various Rakudo and NQP compilation targets by:
+
+- Running the Perl 6 specification test suite in the least time
+- Passing more of the Perl 6 specification tests than Rakudo Perl 6 on
+  other backends
+- Having the lowest memory usage
+- Having the best startup time
+- Being fastest to build both NQP and Rakudo - and thus your Perl 6 and
+  NQP programs too!
+- Being the only backend to support strings at grapheme level
