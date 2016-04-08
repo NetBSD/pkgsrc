@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2016/01/01 01:37:49 wen Exp $
+# $NetBSD: Makefile,v 1.13 2016/04/08 13:36:23 wen Exp $
 
-DISTNAME=	autobox-Core-1.30
+DISTNAME=	autobox-Core-1.32
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=autobox/}
@@ -13,7 +13,8 @@ LICENSE=	${PERL5_LICENSE}
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/autobox/Core/.packlist
 
-DEPENDS+=	p5-autobox>=0.11:../../devel/p5-autobox
+DEPENDS+=	p5-autobox>=2.71:../../devel/p5-autobox
+DEPENDS+=	p5-Want>=0.26:../../devel/p5-Want
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
