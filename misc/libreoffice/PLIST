@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2016/03/11 10:23:42 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.10 2016/04/08 14:35:26 ryoon Exp $
 bin/libreoffice
 bin/lobase
 bin/localc
@@ -321,6 +321,8 @@ ${PKGNAME}/lib/libreoffice/program/opengl/honeycombFragmentShader.glsl
 ${PKGNAME}/lib/libreoffice/program/opengl/honeycombGeometryShader.glsl
 ${PKGNAME}/lib/libreoffice/program/opengl/honeycombVertexShader.glsl
 ${PKGNAME}/lib/libreoffice/program/opengl/invert50FragmentShader.glsl
+${PKGNAME}/lib/libreoffice/program/opengl/lineFragmentShader.glsl
+${PKGNAME}/lib/libreoffice/program/opengl/lineVertexShader.glsl
 ${PKGNAME}/lib/libreoffice/program/opengl/linearGradientFragmentShader.glsl
 ${PKGNAME}/lib/libreoffice/program/opengl/linearMultiColorGradientFragmentShader.glsl
 ${PKGNAME}/lib/libreoffice/program/opengl/linearTwoColorGradientFragmentShader.glsl
