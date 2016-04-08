@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1341 2016/04/08 14:34:27 wen Exp $
+$NetBSD: CHANGES-2016,v 1.1342 2016/04/08 14:36:38 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1751,3 +1751,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Capture-Tiny to 0.36 [wen 2016-04-08]
 	Updated devel/p5-CPAN-Perl-Releases to 2.60 [wen 2016-04-08]
 	Updated devel/p5-CPAN-Reporter to 1.2017 [wen 2016-04-08]
+	Updated misc/libreoffice to 5.1.2.2 [ryoon 2016-04-08]
