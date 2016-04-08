@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2234 2016/03/28 13:14:54 kamil Exp $
+# $NetBSD: Makefile,v 1.2235 2016/04/08 20:27:40 bsiegert Exp $
 #
 
 COMMENT=	Development utilities
@@ -8,6 +8,7 @@ SUBDIR+=	ExmanIDE
 SUBDIR+=	GConf
 SUBDIR+=	GConf-ui
 SUBDIR+=	Gorm
+SUBDIR+=	MoarVM
 SUBDIR+=	ObjectiveLib
 SUBDIR+=	ProjectCenter
 SUBDIR+=	R-Rcpp
