@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1377 2016/04/08 21:21:14 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1378 2016/04/08 22:00:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1789,3 +1789,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added devel/MoarVM version 2016.03 [bsiegert 2016-04-08]
 	Updated devel/py-mercurial to 3.7.3 [wiz 2016-04-08]
 	Updated misc/py-anki2 to 2.0.35 [wiz 2016-04-08]
+	Updated finance/gnucash to 2.6.12 [wiz 2016-04-08]
