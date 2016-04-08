@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2016/04/08 07:48:27 prlw1 Exp $
+# $NetBSD: Makefile,v 1.48 2016/04/08 19:49:26 adam Exp $
 
 DISTNAME=	gobject-introspection-1.48.0
 CATEGORIES=	devel gnome
@@ -11,11 +11,14 @@ COMMENT=	GObject Introspection
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
+DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
-GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config flex bison gmake
 GMAKE_REQD=	3.81
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS+=	--disable-doctool
+CONFIGURE_ARGS+=	--disable-tests
 
 PKGCONFIG_OVERRIDE+=	gobject-introspection-1.0.pc.in
 PKGCONFIG_OVERRIDE+=	gobject-introspection-no-export-1.0.pc.in
@@ -42,9 +45,6 @@ SUBST_SED.pyenv+=	-e 's,/usr/bin/env ,,'
 # not executable
 CHECK_INTERPRETER_SKIP+= lib/gobject-introspection/giscanner/*.py
 
-PKGCONFIG_OVERRIDE+=	gobject-introspection-1.0.pc.in
-
-CONFIGURE_ARGS+=	--disable-doctool --disable-tests
 # needed for tests only
 #.include "../../graphics/cairo/buildlink3.mk"
 #.include "../../graphics/cairo-gobject/buildlink3.mk"
