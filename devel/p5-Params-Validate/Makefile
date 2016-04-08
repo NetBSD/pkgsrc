@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.59 2016/02/14 08:48:22 wiz Exp $
+# $NetBSD: Makefile,v 1.60 2016/04/08 15:10:41 wiz Exp $
 
-DISTNAME=	Params-Validate-1.22
+DISTNAME=	Params-Validate-1.23
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Params/}
