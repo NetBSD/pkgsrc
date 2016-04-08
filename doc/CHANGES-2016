@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1348 2016/04/08 14:47:40 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1349 2016/04/08 14:49:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1758,3 +1758,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Canary-Stability to 2011 [wiz 2016-04-08]
 	Updated security/p5-Crypt-PWSafe3 to 1.22 [wiz 2016-04-08]
 	Updated devel/p5-Data-OptList to 0.110 [wiz 2016-04-08]
+	Updated devel/afl to 2.10b [wiz 2016-04-08]
