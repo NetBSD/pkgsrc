@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1371 2016/04/08 16:39:10 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.1372 2016/04/08 16:44:06 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1781,3 +1781,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/py-idna to 2.1 [wiz 2016-04-08]
 	Updated textproc/py-lxml to 3.6.0 [wiz 2016-04-08]
 	Updated lang/nodejs to 5.10.1 [fhajny 2016-04-08]
+	Updated databases/py-cassandra-driver to 3.1.1 [fhajny 2016-04-08]
