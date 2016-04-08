@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15653 2016/04/08 15:07:59 wiz Exp $
+$NetBSD: TODO,v 1.15654 2016/04/08 15:09:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1377,7 +1377,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-IO-Pager-0.36
 	o p5-IO-Prompt-0.997003
 	o p5-IO-Prompter-0.004014
-	o p5-IO-Socket-SSL-2.025
 	o p5-IO-TieCombine-1.005
 	o p5-IP-Country-3.03
 	o p5-IPC-Cmd-0.94
