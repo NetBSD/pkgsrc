@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2015/11/12 16:37:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2016/04/08 15:22:03 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -57,12 +57,18 @@ ${PYSITELIB}/cryptography/hazmat/backends/openssl/ciphers.pyo
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/cmac.py
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/cmac.pyc
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/cmac.pyo
+${PYSITELIB}/cryptography/hazmat/backends/openssl/decode_asn1.py
+${PYSITELIB}/cryptography/hazmat/backends/openssl/decode_asn1.pyc
+${PYSITELIB}/cryptography/hazmat/backends/openssl/decode_asn1.pyo
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/dsa.py
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/dsa.pyc
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/dsa.pyo
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/ec.py
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/ec.pyc
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/ec.pyo
+${PYSITELIB}/cryptography/hazmat/backends/openssl/encode_asn1.py
+${PYSITELIB}/cryptography/hazmat/backends/openssl/encode_asn1.pyc
+${PYSITELIB}/cryptography/hazmat/backends/openssl/encode_asn1.pyo
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/hashes.py
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/hashes.pyc
 ${PYSITELIB}/cryptography/hazmat/backends/openssl/hashes.pyo
