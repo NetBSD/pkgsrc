@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1353 2016/04/08 14:55:15 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1354 2016/04/08 14:56:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1763,3 +1763,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated math/p5-Statistics-Descriptive to 3.0612 [wen 2016-04-08]
 	Updated textproc/iso-codes to 3.67 [wiz 2016-04-08]
 	Updated audio/musicpd to 0.19.14 [wiz 2016-04-08]
+	Updated devel/p5-Sub-Name to 0.15 [wiz 2016-04-08]
