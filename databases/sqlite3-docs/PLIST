@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.52 2016/03/06 09:57:51 adam Exp $
+@comment $NetBSD: PLIST,v 1.53 2016/04/08 07:54:27 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -163,6 +163,7 @@ share/doc/sqlite3/c3ref/stmt_status.html
 share/doc/sqlite3/c3ref/strglob.html
 share/doc/sqlite3/c3ref/stricmp.html
 share/doc/sqlite3/c3ref/strlike.html
+share/doc/sqlite3/c3ref/system_errno.html
 share/doc/sqlite3/c3ref/table_column_metadata.html
 share/doc/sqlite3/c3ref/temp_directory.html
 share/doc/sqlite3/c3ref/test_control.html
@@ -520,6 +521,7 @@ share/doc/sqlite3/onefile.html
 share/doc/sqlite3/opcode.html
 share/doc/sqlite3/optoverview.html
 share/doc/sqlite3/partialindex.html
+share/doc/sqlite3/pgszchng2016.html
 share/doc/sqlite3/pragma.html
 share/doc/sqlite3/pressrelease-20071212.html
 share/doc/sqlite3/privatebranch.html
@@ -542,6 +544,7 @@ share/doc/sqlite3/releaselog/3_10_1.html
 share/doc/sqlite3/releaselog/3_10_2.html
 share/doc/sqlite3/releaselog/3_11_0.html
 share/doc/sqlite3/releaselog/3_11_1.html
+share/doc/sqlite3/releaselog/3_12_0.html
 share/doc/sqlite3/releaselog/3_1_0.html
 share/doc/sqlite3/releaselog/3_1_1.html
 share/doc/sqlite3/releaselog/3_1_2.html
