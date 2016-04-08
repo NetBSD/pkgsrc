@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1343 2016/04/08 14:41:07 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1344 2016/04/08 14:43:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1753,3 +1753,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-CPAN-Reporter to 1.2017 [wen 2016-04-08]
 	Updated misc/libreoffice to 5.1.2.2 [ryoon 2016-04-08]
 	Updated devel/meld to 3.15.2 [wiz 2016-04-08]
+	Updated x11/xterm to 324 [wiz 2016-04-08]
