@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1351 2016/04/08 14:51:20 wen Exp $
+$NetBSD: CHANGES-2016,v 1.1352 2016/04/08 14:52:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1761,3 +1761,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/afl to 2.10b [wiz 2016-04-08]
 	Updated x11/inputproto to 2.3.2 [wiz 2016-04-08]
 	Updated math/p5-Statistics-Descriptive to 3.0612 [wen 2016-04-08]
+	Updated textproc/iso-codes to 3.67 [wiz 2016-04-08]
