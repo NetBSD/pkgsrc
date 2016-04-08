@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2016/04/07 21:35:33 prlw1 Exp $
+# $NetBSD: Makefile,v 1.47 2016/04/08 07:48:27 prlw1 Exp $
 
 DISTNAME=	gobject-introspection-1.48.0
 CATEGORIES=	devel gnome
@@ -11,8 +11,6 @@ COMMENT=	GObject Introspection
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
-
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # ported but not tested (Bug #728079)
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
