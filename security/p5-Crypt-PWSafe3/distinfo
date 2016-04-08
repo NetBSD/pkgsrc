@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/12/11 13:15:19 wiz Exp $
+$NetBSD: distinfo,v 1.2 2016/04/08 14:46:13 wiz Exp $
 
-SHA1 (Crypt-PWSafe3-1.21.tar.gz) = d3a5328f7f7df28dba648b6efc1d9f6b87f8f1e2
-RMD160 (Crypt-PWSafe3-1.21.tar.gz) = bd2ac7e86e0204910a0fcbbe9388fe320d483bff
-SHA512 (Crypt-PWSafe3-1.21.tar.gz) = e96889155256dbc5c5f2c1f072df3b080f22580401453ca27ae4dd35987ae8d2206738636dad4d32d28afea0ef1626115214cec2666261aaaf6b681b732d8705
-Size (Crypt-PWSafe3-1.21.tar.gz) = 24886 bytes
+SHA1 (Crypt-PWSafe3-1.22.tar.gz) = 9a06716b36ebef5b26ea2384f4372582a5103fee
+RMD160 (Crypt-PWSafe3-1.22.tar.gz) = facaf1dad1690ea4021c4f0225a0bc99afeced77
+SHA512 (Crypt-PWSafe3-1.22.tar.gz) = a02d9d427f30a1925d5fceefe7f677b28c755a7eb6364e336d24961d901a846948c18efa077c26a0f261a4d6ddeeeb615e4d35fbe759dda2c89bb33ff99bed26
+Size (Crypt-PWSafe3-1.22.tar.gz) = 26426 bytes
