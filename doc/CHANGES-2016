@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1376 2016/04/08 20:57:47 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1377 2016/04/08 21:21:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1788,3 +1788,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added net/ntopng version 2.2 [adam 2016-04-08]
 	Added devel/MoarVM version 2016.03 [bsiegert 2016-04-08]
 	Updated devel/py-mercurial to 3.7.3 [wiz 2016-04-08]
+	Updated misc/py-anki2 to 2.0.35 [wiz 2016-04-08]
