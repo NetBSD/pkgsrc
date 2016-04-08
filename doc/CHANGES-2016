@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1349 2016/04/08 14:49:17 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1350 2016/04/08 14:50:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1759,3 +1759,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/p5-Crypt-PWSafe3 to 1.22 [wiz 2016-04-08]
 	Updated devel/p5-Data-OptList to 0.110 [wiz 2016-04-08]
 	Updated devel/afl to 2.10b [wiz 2016-04-08]
+	Updated x11/inputproto to 2.3.2 [wiz 2016-04-08]
