@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15638 2016/04/08 14:44:33 wiz Exp $
+$NetBSD: TODO,v 1.15639 2016/04/08 14:45:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1301,7 +1301,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-CDDB-2.00
 	o p5-CHI-1.27
 	o p5-CPANPLUS-2.102
-	o p5-Canary-Stability-2011
 	o p5-Captcha-reCAPTCHA-0.97
 	o p5-Carp-Assert-1.14
 	o p5-Catalyst-Engine-PSGI-0.14
