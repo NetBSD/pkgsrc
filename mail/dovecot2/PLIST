@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2015/12/27 12:36:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.43 2016/04/08 07:55:15 adam Exp $
 bin/doveadm
 bin/doveconf
 bin/dsync
@@ -29,10 +29,12 @@ include/dovecot/auth-master.h
 include/dovecot/auth-penalty.h
 include/dovecot/auth-postfix-connection.h
 include/dovecot/auth-request-handler.h
+include/dovecot/auth-request-stats.h
 include/dovecot/auth-request-var-expand.h
 include/dovecot/auth-request.h
 include/dovecot/auth-server-connection.h
 include/dovecot/auth-settings.h
+include/dovecot/auth-stats.h
 include/dovecot/auth-token.h
 include/dovecot/auth-worker-client.h
 include/dovecot/auth-worker-server.h
@@ -123,6 +125,7 @@ include/dovecot/fts-language.h
 include/dovecot/fts-library.h
 include/dovecot/fts-parser.h
 include/dovecot/fts-storage.h
+include/dovecot/fts-tokenizer-common.h
 include/dovecot/fts-tokenizer-generic-private.h
 include/dovecot/fts-tokenizer-private.h
 include/dovecot/fts-tokenizer.h
@@ -169,6 +172,9 @@ include/dovecot/imap-fetch.h
 include/dovecot/imap-id.h
 include/dovecot/imap-keepalive.h
 include/dovecot/imap-list.h
+include/dovecot/imap-login-client.h
+include/dovecot/imap-login-commands.h
+include/dovecot/imap-login-settings.h
 include/dovecot/imap-master-client.h
 include/dovecot/imap-match.h
 include/dovecot/imap-metadata.h
@@ -376,6 +382,7 @@ include/dovecot/message-date.h
 include/dovecot/message-decoder.h
 include/dovecot/message-header-decode.h
 include/dovecot/message-header-encode.h
+include/dovecot/message-header-hash.h
 include/dovecot/message-header-parser.h
 include/dovecot/message-id.h
 include/dovecot/message-parser.h
@@ -398,6 +405,7 @@ include/dovecot/notify-plugin.h
 include/dovecot/numpack.h
 include/dovecot/ostream-cmp.h
 include/dovecot/ostream-dot.h
+include/dovecot/ostream-escaped.h
 include/dovecot/ostream-failure-at.h
 include/dovecot/ostream-hash.h
 include/dovecot/ostream-metawrap.h
@@ -479,6 +487,7 @@ include/dovecot/sql-api-private.h
 include/dovecot/sql-api.h
 include/dovecot/sql-db-cache.h
 include/dovecot/ssl-proxy.h
+include/dovecot/stats-connection.h
 include/dovecot/stats-parser.h
 include/dovecot/stats.h
 include/dovecot/str-find.h
@@ -541,6 +550,10 @@ lib/dovecot/lib90_stats_plugin.la
 lib/dovecot/lib95_imap_stats_plugin.la
 lib/dovecot/libdovecot-compression.la
 lib/dovecot/libdovecot-dsync.la
+lib/dovecot/libdovecot-fts.0.dylib
+lib/dovecot/libdovecot-fts.a
+lib/dovecot/libdovecot-fts.dylib
+lib/dovecot/libdovecot-fts.la
 lib/dovecot/libdovecot-lda.la
 lib/dovecot/libdovecot-login.la
 lib/dovecot/libdovecot-sql.la
@@ -548,6 +561,7 @@ lib/dovecot/libdovecot-storage.la
 lib/dovecot/libdovecot.la
 lib/dovecot/libfs_compress.la
 ${PLIST.ssl}lib/dovecot/libssl_iostream_openssl.la
+lib/dovecot/stats/libstats_auth.la
 lib/dovecot/stats/libstats_mail.la
 libexec/dovecot/aggregator
 libexec/dovecot/anvil
@@ -619,6 +633,7 @@ man/man1/doveadm-quota.1
 man/man1/doveadm-reload.1
 man/man1/doveadm-replicator.1
 man/man1/doveadm-search.1
+man/man1/doveadm-stats.1
 man/man1/doveadm-stop.1
 man/man1/doveadm-sync.1
 man/man1/doveadm-user.1
@@ -667,6 +682,7 @@ share/doc/dovecot/wiki/Chrooting.txt
 share/doc/dovecot/wiki/Clients.NegativeUIDs.txt
 share/doc/dovecot/wiki/Clients.txt
 share/doc/dovecot/wiki/CompilingSource.txt
+share/doc/dovecot/wiki/ConfigFile.txt
 share/doc/dovecot/wiki/Debugging.Authentication.txt
 share/doc/dovecot/wiki/Debugging.ProcessTracing.txt
 share/doc/dovecot/wiki/Debugging.Rawlog.txt
@@ -676,6 +692,7 @@ share/doc/dovecot/wiki/Design.AuthProcess.txt
 share/doc/dovecot/wiki/Design.AuthProtocol.txt
 share/doc/dovecot/wiki/Design.Buffers.txt
 share/doc/dovecot/wiki/Design.Code.txt
+share/doc/dovecot/wiki/Design.DoveadmProtocol.HTTP.txt
 share/doc/dovecot/wiki/Design.DoveadmProtocol.txt
 share/doc/dovecot/wiki/Design.Dsync.txt
 share/doc/dovecot/wiki/Design.Indexes.Cache.txt
@@ -718,6 +735,7 @@ share/doc/dovecot/wiki/HowTo.PopRelay.txt
 share/doc/dovecot/wiki/HowTo.PostfixAndDovecotSASL.txt
 share/doc/dovecot/wiki/HowTo.Rootless.txt
 share/doc/dovecot/wiki/HowTo.SimpleVirtualInstall.txt
+share/doc/dovecot/wiki/HowTo.WriteConfiguration.txt
 share/doc/dovecot/wiki/HowTo.txt
 share/doc/dovecot/wiki/IMAPServer.txt
 share/doc/dovecot/wiki/ImapMetadata.txt
@@ -744,6 +762,7 @@ share/doc/dovecot/wiki/MailboxFormat.Cydir.txt
 share/doc/dovecot/wiki/MailboxFormat.MH.txt
 share/doc/dovecot/wiki/MailboxFormat.Maildir.txt
 share/doc/dovecot/wiki/MailboxFormat.dbox.txt
+share/doc/dovecot/wiki/MailboxFormat.imapc.txt
 share/doc/dovecot/wiki/MailboxFormat.mailstore.txt
 share/doc/dovecot/wiki/MailboxFormat.mbox.txt
 share/doc/dovecot/wiki/MailboxFormat.mbx.txt
