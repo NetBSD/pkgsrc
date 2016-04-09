@@ -2,4 +2,3 @@ CoinMP is a mathematical library for solving Linear Programming problems.
 It is implemented as a C-API library that supports most of the functionality
 of the CLP (Coin Linear Programming), CBC (Coin Branch-and-Cut),
 and CGL (Cut Generation Library) projects.
-
