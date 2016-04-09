@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1380 2016/04/09 04:26:14 wen Exp $
+$NetBSD: CHANGES-2016,v 1.1381 2016/04/09 04:37:41 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1792,3 +1792,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated finance/gnucash to 2.6.12 [wiz 2016-04-08]
 	Updated cad/klayout to 0.24.6 [mef 2016-04-08]
 	Updated textproc/p5-Unicode-LineBreak to 2016.003 [wen 2016-04-09]
+	Updated ham/fldigi to 3.23.09 [mef 2016-04-09]
