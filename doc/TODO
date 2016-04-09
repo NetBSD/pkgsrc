@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15680 2016/04/09 11:42:11 mef Exp $
+$NetBSD: TODO,v 1.15681 2016/04/09 13:04:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1422,6 +1422,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-POE-Component-Client-DNS-1.054
 	o p5-POE-Component-Server-SimpleHTTP-2.22
 	o p5-PPIx-EditorTools-0.19
+	o p5-Package-DeprecationManager-0.16
 	o p5-PadWalker-2.2
 	o p5-Padre-1.00
 	o p5-Padre-Plugin-Autoformat-1.22
