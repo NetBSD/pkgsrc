@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1405 2016/04/09 12:48:52 tsutsui Exp $
+$NetBSD: CHANGES-2016,v 1.1406 2016/04/09 12:54:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1814,8 +1814,8 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/sqlite3-tcl to 3.12.1 [adam 2016-04-09]
 	Updated mail/mutt-kz to 1.6.0.1 [tron 2016-04-09]
 	Updated devel/libmtp to 1.1.11 [richard 2016-04-09]
-	Updated mail/exim to 4.87 [wiedi 2016-04-09]
-	Updated mail/exim-html to 4.87 [wiedi 2016-04-09]
+	Updated mail/exim to 4.87 [adam 2016-04-09]
+	Updated mail/exim-html to 4.87 [adam 2016-04-09]
 	Updated devel/R-Rcpp to 0.12.4 [wen 2016-04-09]
 	Updated graphics/R-latticeExtra to 0.6.28 [wen 2016-04-09]
 	Updated math/R-quantreg to 5.21 [wen 2016-04-09]
@@ -1824,3 +1824,9 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Compress-Raw-Bzip2 to 2.069 [mef 2016-04-09]
 	Updated devel/p5-Compress-Raw-Zlib to 2.069 [mef 2016-04-09]
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.616 [tsutsui 2016-04-09]
+	Updated www/py-django-cms to 3.2.3 [adam 2016-04-09]
+	Updated databases/postgresql91 to 9.1.21 [adam 2016-04-09]
+	Updated databases/postgresql92 to 9.2.16 [adam 2016-04-09]
+	Updated databases/postgresql93 to 9.3.12 [adam 2016-04-09]
+	Updated databases/postgresql94 to 9.4.7 [adam 2016-04-09]
+	Updated databases/postgresql95 to 9.5.2 [adam 2016-04-09]
