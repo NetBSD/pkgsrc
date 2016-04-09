@@ -1,8 +1,8 @@
-$NetBSD: patch-configure.ac,v 1.3 2015/08/22 21:23:46 leot Exp $
+$NetBSD: patch-configure.ac,v 1.4 2016/04/09 08:18:58 richard Exp $
 
-Recognize Dragonfly.
+prepare DragonFlyBSD and SunOS backend support
 
---- configure.ac.orig	2014-04-22 12:19:42.000000000 +0000
+--- configure.ac.orig	2015-09-05 17:20:40.000000000 +0000
 +++ configure.ac
 @@ -72,6 +72,10 @@ case $host in
  	backend="openbsd"
@@ -15,3 +15,41 @@ Recognize Dragonfly.
  *-netbsd*)
  	AC_MSG_RESULT([NetBSD])
  	backend="netbsd"
+@@ -95,6 +99,12 @@ case $host in
+ 	backend="haiku"
+ 	threads="posix"
+ 	;;
++*-solaris*)
++	AC_MSG_RESULT([SunOS])
++	backend="sunos"
++	threads="posix"
++	;;
++
+ *)
+ 	AC_MSG_ERROR([unsupported operating system])
+ esac
+@@ -157,6 +167,16 @@ openbsd)
+ 	AC_CHECK_HEADERS([poll.h])
+ 	AC_DEFINE([POLL_NFDS_TYPE],[nfds_t],[type of second poll() argument])
+ 	;;
++
++sunos)
++	AC_DEFINE(OS_SUNOS, 1, [SunOS backend])
++	AC_SUBST(OS_SUNOS)
++	THREAD_CFLAGS="-pthread"
++	LIBS="-pthread -ldevinfo"
++	AC_CHECK_HEADERS([poll.h])
++	AC_DEFINE([POLL_NFDS_TYPE],[nfds_t],[type of second poll() argument])
++	;;
++
+ netbsd)
+ 	AC_DEFINE(OS_NETBSD, 1, [NetBSD backend])
+ 	AC_SUBST(OS_NETBSD)
+@@ -187,6 +207,7 @@ AC_SUBST(LIBS)
+ AM_CONDITIONAL(OS_LINUX, test "x$backend" = xlinux)
+ AM_CONDITIONAL(OS_DARWIN, test "x$backend" = xdarwin)
+ AM_CONDITIONAL(OS_OPENBSD, test "x$backend" = xopenbsd)
++AM_CONDITIONAL(OS_SUNOS, test "x$backend" = xsunos)
+ AM_CONDITIONAL(OS_NETBSD, test "x$backend" = xnetbsd)
+ AM_CONDITIONAL(OS_WINDOWS, test "x$backend" = xwindows)
+ AM_CONDITIONAL(OS_HAIKU, test "x$backend" = xhaiku)
