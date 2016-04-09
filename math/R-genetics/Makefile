@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2015/06/12 10:50:27 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2016/04/09 13:34:16 wen Exp $
 #
 
-PKGREVISION=	3
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 
@@ -13,7 +12,7 @@ LICENSE=	gnu-gpl-v3
 USE_TOOLS+=	perl
 
 R_PKGNAME=	genetics
-R_PKGVER=	1.3.8
+R_PKGVER=	1.3.8.1
 
 DEPENDS+=	R-combinat>=0.0.8:../../math/R-combinat
 DEPENDS+=	R-gdata>=2.8.2:../../math/R-gdata
