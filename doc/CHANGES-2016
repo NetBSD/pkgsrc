@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1404 2016/04/09 11:42:11 mef Exp $
+$NetBSD: CHANGES-2016,v 1.1405 2016/04/09 12:48:52 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1823,3 +1823,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated math/R-ISwR to 2.0.7 [wen 2016-04-09]
 	Updated devel/p5-Compress-Raw-Bzip2 to 2.069 [mef 2016-04-09]
 	Updated devel/p5-Compress-Raw-Zlib to 2.069 [mef 2016-04-09]
+	Updated multimedia/adobe-flash-plugin11 to 11.2.202.616 [tsutsui 2016-04-09]
