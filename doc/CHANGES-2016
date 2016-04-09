@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1383 2016/04/09 05:07:07 richard Exp $
+$NetBSD: CHANGES-2016,v 1.1384 2016/04/09 05:13:05 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1794,4 +1794,9 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/p5-Unicode-LineBreak to 2016.003 [wen 2016-04-09]
 	Updated ham/fldigi to 3.23.09 [mef 2016-04-09]
 	Updated textproc/p5-Swim to 0.1.43 [wen 2016-04-09]
+	Updated devel/p5-App-FatPacker to 0.010005 [mef 2016-04-09]
+	Updated devel/p5-App-perlbrew to 0.75 [mef 2016-04-09]
+	Updated devel/p5-AppConfig-Std to 1.10 [mef 2016-04-09]
 	Updated devel/RBTools to 0.7.5 [richard 2016-04-09]
+	Updated devel/p5-AtExit to 2.03 [mef 2016-04-09]
+	Updated devel/p5-B-Keywords to 1.15 [mef 2016-04-09]
