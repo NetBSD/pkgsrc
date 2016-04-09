@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/08/30 12:58:11 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2016/04/09 11:14:28 wen Exp $
 
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -9,7 +9,7 @@ COMMENT=	Models and tests for departure from Hardy-Weinberg equilibrium
 LICENSE=	gnu-gpl-v2
 
 R_PKGNAME=	hwde
-R_PKGVER=	0.63
+R_PKGVER=	0.67
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
