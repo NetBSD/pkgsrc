@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2015/12/05 21:25:40 adam Exp $
+# $NetBSD: Makefile,v 1.9 2016/04/09 05:06:10 richard Exp $
 
-DISTNAME=	RBTools-0.7.4
-PKGREVISION=	1
+DISTNAME=	RBTools-0.7.5
 CATEGORIES=	devel
 MASTER_SITES=	http://downloads.reviewboard.org/releases/RBTools/0.7/
 
