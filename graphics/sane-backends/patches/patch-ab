@@ -1,30 +1,64 @@
-$NetBSD: patch-ab,v 1.15 2015/10/27 11:29:35 wiz Exp $
+$NetBSD: patch-ab,v 1.16 2016/04/09 14:19:25 richard Exp $
+
+add SunOS byteorder needs
 
 --- configure.orig	2015-10-04 13:18:39.000000000 +0000
 +++ configure
-@@ -7377,13 +7377,13 @@ if test "x$ac_cv_header_pthread_h" = xye
- #define HAVE_PTHREAD_H 1
- _ACEOF
+@@ -5979,6 +5979,36 @@ else
+ $as_echo "no" >&6; }
  
--       { $as_echo "$as_me:${as_lineno-$LINENO}: checking for pthread_create in -lpthread" >&5
--$as_echo_n "checking for pthread_create in -lpthread... " >&6; }
-+       { $as_echo "$as_me:${as_lineno-$LINENO}: checking for pthread_create in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}" >&5
-+$as_echo_n "checking for pthread_create in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}... " >&6; }
- if ${ac_cv_lib_pthread_pthread_create+:} false; then :
-   $as_echo_n "(cached) " >&6
- else
-   ac_check_lib_save_LIBS=$LIBS
--LIBS="-lpthread  $LIBS"
-+LIBS="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}  $LIBS"
+ 
++{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for BSWAP_32 in sys/byteorder.h" >&5
++$as_echo_n "checking for BSWAP_32 in sys/byteorder.h... " >&6; }
++cat confdefs.h - <<_ACEOF >conftest.$ac_ext
++/* end confdefs.h.  */
++
++#include <sys/byteorder.h>
++#ifdef BSWAP_32
++ 	symbol is present
++#endif
++
++_ACEOF
++if (eval "$ac_cpp conftest.$ac_ext") 2>&5 |
++  $EGREP "symbol is present|\<BSWAP_32\>" >/dev/null 2>&1; then :
++  { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
++$as_echo "yes" >&6; }
++  	 cat >> "include/byteorder.h" << EOF
++/* Define generic byte swapping functions */
++EOF
++cat >> "include/byteorder.h" << EOF
++#define swap16(x) BSWAP_16(x)
++#define swap32(x) BSWAP_32(x)
++#define swap64(x) BSWAP_64(x)
++
++EOF
++
++else
++  { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
++$as_echo "no" >&6; }
++
++
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for bswap32 in machine/endian.h" >&5
+ $as_echo_n "checking for bswap32 in machine/endian.h... " >&6; }
  cat confdefs.h - <<_ACEOF >conftest.$ac_ext
- /* end confdefs.h.  */
+@@ -6139,6 +6169,11 @@ rm -f conftest*
  
-@@ -7414,7 +7414,7 @@ fi
- { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_pthread_pthread_create" >&5
- $as_echo "$ac_cv_lib_pthread_pthread_create" >&6; }
- if test "x$ac_cv_lib_pthread_pthread_create" = xyes; then :
--  PTHREAD_LIBS="-lpthread"
-+  PTHREAD_LIBS="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}"
- fi
  
-        have_pthread=yes
+ 
++fi
++rm -f conftest*
++
++
++
+ 
+ if test "$HAVE_LE32TOH" != "1"; then
+  cat >> "$ac_byteorder" << EOF
+@@ -9148,6 +9183,8 @@ else
+ # ifdef _MSC_VER
+ #  include <malloc.h>
+ #  define alloca _alloca
++# elif defined(__NetBSD__) || defined(__FreeBSD__) || defined(__DragonFly__) || defined(__OpenBSD__)
++#   include <stdlib.h>
+ # else
+ #  ifdef HAVE_ALLOCA_H
+ #   include <alloca.h>
