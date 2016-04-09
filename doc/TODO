@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15673 2016/04/09 10:56:37 wen Exp $
+$NetBSD: TODO,v 1.15674 2016/04/09 11:03:26 wen Exp $
 
 Suggested new packages
 ======================
@@ -382,7 +382,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o R-hwde-0.67
 	o R-intervals-0.15.1
 	o R-knitr-1.12.3
-	o R-latticeExtra-28
 	o R-mapproj-3
 	o R-maps-3.1.0
 	o R-markdown-0.7.7
