@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1381 2016/04/09 04:37:41 mef Exp $
+$NetBSD: CHANGES-2016,v 1.1382 2016/04/09 04:43:16 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1793,3 +1793,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated cad/klayout to 0.24.6 [mef 2016-04-08]
 	Updated textproc/p5-Unicode-LineBreak to 2016.003 [wen 2016-04-09]
 	Updated ham/fldigi to 3.23.09 [mef 2016-04-09]
+	Updated textproc/p5-Swim to 0.1.43 [wen 2016-04-09]
