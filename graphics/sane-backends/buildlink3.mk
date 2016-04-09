@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2015/08/16 22:00:37 leot Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2016/04/09 14:19:25 richard Exp $
 
 BUILDLINK_TREE+=	sane-backends
 
@@ -11,9 +11,7 @@ BUILDLINK_PKGSRCDIR.sane-backends?=	../../graphics/sane-backends
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-.if (${OPSYS} != "SunOS")
 . include "../../devel/libusb1/buildlink3.mk"
-.endif
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .endif # SANE_BACKENDS_BUILDLINK3_MK
