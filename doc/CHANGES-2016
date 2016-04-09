@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1412 2016/04/09 14:19:05 mef Exp $
+$NetBSD: CHANGES-2016,v 1.1413 2016/04/09 14:43:46 abs Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1836,3 +1836,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Config-Any to 0.27 [mef 2016-04-09]
 	Updated devel/p5-Config-General to 2.60 [mef 2016-04-09]
 	Updated devel/p5-Contextual-Return to 0.004.008 [mef 2016-04-09]
+	Updated net/syncthing to 0.12.21 [abs 2016-04-09]
+	Updated multimedia/kdenlive to 0.9.10 [abs 2016-04-09]
