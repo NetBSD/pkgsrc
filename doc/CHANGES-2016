@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1384 2016/04/09 05:13:05 mef Exp $
+$NetBSD: CHANGES-2016,v 1.1385 2016/04/09 05:20:35 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1800,3 +1800,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/RBTools to 0.7.5 [richard 2016-04-09]
 	Updated devel/p5-AtExit to 2.03 [mef 2016-04-09]
 	Updated devel/p5-B-Keywords to 1.15 [mef 2016-04-09]
+	Updated devel/p5-BSD-Resource to 1.29.09 [mef 2016-04-09]
