@@ -1,10 +1,10 @@
-$NetBSD: patch-af,v 1.1 2014/01/12 17:43:37 wiz Exp $
+$NetBSD: patch-af,v 1.2 2016/04/09 09:46:26 tron Exp $
 
 On some systems, curses.h defines TRUE and FALSE, so conditionalise
 them here to avoid compiler complaints about duplicate definitions.
 
---- lib.h.orig	2009-06-01 18:29:32.000000000 +0200
-+++ lib.h
+--- lib.h.orig	2016-04-02 19:12:22.000000000 +0100
++++ lib.h	2016-04-09 09:34:25.000000000 +0100
 @@ -54,8 +54,12 @@
  #  define N_(a) a
  # endif
@@ -18,5 +18,5 @@ them here to avoid compiler complaints about duplicate definitions.
 +#  define FALSE 0
 +# endif
  
- # define HUGE_STRING	5120
+ # define HUGE_STRING     8192
  # define LONG_STRING     1024

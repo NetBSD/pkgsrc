@@ -1,13 +1,13 @@
-$NetBSD: patch-ad,v 1.1 2014/01/12 17:43:37 wiz Exp $
+$NetBSD: patch-ad,v 1.2 2016/04/09 09:46:26 tron Exp $
 
---- contrib/Makefile.in.orig	2006-08-14 16:09:28.000000000 +0200
-+++ contrib/Makefile.in
-@@ -365,21 +365,20 @@ uninstall-am: uninstall-info-am uninstal
+--- contrib/Makefile.in.orig	2016-04-05 11:16:26.000000000 +0100
++++ contrib/Makefile.in	2016-04-09 10:09:31.000000000 +0100
+@@ -472,20 +472,20 @@
  
  
  install-data-local:
--	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(docdir)/samples $(DESTDIR)$(docdir)/samples/iconv
-+	$(top_srcdir)/mkinstalldirs $(DESTDIR)$(sysconfdir) $(DESTDIR)$(sysconfdir)/iconv
+-	$(MKDIR_P) $(DESTDIR)$(docdir)/samples $(DESTDIR)$(docdir)/samples/iconv
++	$(MKDIR_P) $(DESTDIR)$(sysconfdir) $(DESTDIR)$(sysconfdir)/iconv
  	for f in $(SAMPLES) ; do \
 -		$(INSTALL) -m 644 $(srcdir)/$$f $(DESTDIR)$(docdir)/samples ;	\
 +		$(INSTALL) -m 644 $(srcdir)/$$f $(DESTDIR)$(sysconfdir) ;	\
@@ -24,9 +24,8 @@ $NetBSD: patch-ad,v 1.1 2014/01/12 17:43:37 wiz Exp $
  	done
 -	-rm -rf $(DESTDIR)$(docdir)/samples/iconv
 -	-rmdir $(DESTDIR)$(docdir)/samples
--	-rmdir $(DESTDIR)$(docdir)
 +	-rm -rf $(DESTDIR)$(sysconfdir)/iconv
 +	-rmdir $(DESTDIR)$(sysconfdir)
+ 	-rmdir $(DESTDIR)$(docdir)
  dist-hook: Makefile $(DISTFILES)
  	mkdir -p $(distdir)/iconv
- 	for file in $(srcdir)/iconv/*.rc ; do					\

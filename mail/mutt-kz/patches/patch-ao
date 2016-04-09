@@ -1,10 +1,10 @@
-$NetBSD: patch-ao,v 1.1 2014/01/12 17:43:37 wiz Exp $
+$NetBSD: patch-ao,v 1.2 2016/04/09 09:46:26 tron Exp $
 
 Add change_folder_next option.
 
---- curs_main.c.orig	2013-12-06 11:36:47.000000000 +0000
-+++ curs_main.c
-@@ -1336,6 +1336,11 @@ int mutt_index_menu (void)
+--- curs_main.c.orig	2016-04-05 11:06:14.000000000 +0100
++++ curs_main.c	2016-04-09 10:14:56.000000000 +0100
+@@ -1557,6 +1557,11 @@
  #endif
  	else
  	{
@@ -14,5 +14,5 @@ Add change_folder_next option.
 +	    mutt_pretty_mailbox (buf, sizeof (buf));
 +	  }
  	  mutt_buffy (buf, sizeof (buf));
-           if ( op == OP_SIDEBAR_OPEN )
- 	  {
+ 
+ #ifdef USE_SIDEBAR
