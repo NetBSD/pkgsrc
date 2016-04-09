@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1400 2016/04/09 11:09:52 wen Exp $
+$NetBSD: CHANGES-2016,v 1.1401 2016/04/09 11:15:28 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1819,3 +1819,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/R-Rcpp to 0.12.4 [wen 2016-04-09]
 	Updated graphics/R-latticeExtra to 0.6.28 [wen 2016-04-09]
 	Updated math/R-quantreg to 5.21 [wen 2016-04-09]
+	Updated math/R-hwde to 0.67 [wen 2016-04-09]
