@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.44 2015/04/25 14:20:38 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.45 2016/04/09 06:14:51 wiz Exp $
 
 BUILDLINK_TREE+=	pango
 
@@ -13,6 +13,10 @@ BUILDLINK_PKGSRCDIR.pango?=	../../devel/pango
 
 pkgbase := pango
 .include "../../mk/pkg-build-options.mk"
+
+.if !empty(PKG_BUILD_OPTIONS.pango:Mlibthai)
+.include "../../devel/libthai/buildlink3.mk"
+.endif
 
 .if !empty(PKG_BUILD_OPTIONS.pango:Mx11)
 .include "../../x11/libXft/buildlink3.mk"
