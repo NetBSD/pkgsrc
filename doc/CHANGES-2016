@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1397 2016/04/09 10:50:47 adam Exp $
+$NetBSD: CHANGES-2016,v 1.1398 2016/04/09 10:56:37 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1816,3 +1816,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/libmtp to 1.1.11 [richard 2016-04-09]
 	Updated mail/exim to 4.87 [wiedi 2016-04-09]
 	Updated mail/exim-html to 4.87 [wiedi 2016-04-09]
+	Updated devel/R-Rcpp to 0.12.4 [wen 2016-04-09]
