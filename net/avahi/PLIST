@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2014/03/11 14:05:06 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.9 2016/04/09 05:55:34 richard Exp $
 bin/avahi-browse
 bin/avahi-browse-domains
 ${PLIST.ui}bin/avahi-discover-standalone
@@ -78,6 +78,7 @@ ${PLIST.mono}lib/pkgconfig/avahi-ui-sharp.pc
 ${PLIST.gtk2}lib/pkgconfig/avahi-ui.pc
 man/man1/avahi-browse-domains.1
 man/man1/avahi-browse.1
+man/man1/avahi-discover.1
 man/man1/avahi-publish-address.1
 man/man1/avahi-publish-service.1
 man/man1/avahi-publish.1
@@ -122,6 +123,8 @@ share/examples/avahi/services/sftp-ssh.service
 share/examples/avahi/services/ssh.service
 ${PLIST.introspection}share/gir-1.0/Avahi-0.6.gir
 ${PLIST.introspection}share/gir-1.0/AvahiCore-0.6.gir
+share/locale/ach/LC_MESSAGES/avahi.mo
+share/locale/ar/LC_MESSAGES/avahi.mo
 share/locale/bg/LC_MESSAGES/avahi.mo
 share/locale/ca/LC_MESSAGES/avahi.mo
 share/locale/cs/LC_MESSAGES/avahi.mo
@@ -132,7 +135,10 @@ share/locale/en_AU/LC_MESSAGES/avahi.mo
 share/locale/en_CA/LC_MESSAGES/avahi.mo
 share/locale/en_GB/LC_MESSAGES/avahi.mo
 share/locale/en_NZ/LC_MESSAGES/avahi.mo
+share/locale/eo/LC_MESSAGES/avahi.mo
 share/locale/es/LC_MESSAGES/avahi.mo
+share/locale/et/LC_MESSAGES/avahi.mo
+share/locale/fa/LC_MESSAGES/avahi.mo
 share/locale/fi/LC_MESSAGES/avahi.mo
 share/locale/fo/LC_MESSAGES/avahi.mo
 share/locale/fr/LC_MESSAGES/avahi.mo
@@ -142,16 +148,20 @@ share/locale/hu/LC_MESSAGES/avahi.mo
 share/locale/id/LC_MESSAGES/avahi.mo
 share/locale/it/LC_MESSAGES/avahi.mo
 share/locale/ja/LC_MESSAGES/avahi.mo
+share/locale/ko/LC_MESSAGES/avahi.mo
+share/locale/lv/LC_MESSAGES/avahi.mo
 share/locale/ms/LC_MESSAGES/avahi.mo
 share/locale/nl/LC_MESSAGES/avahi.mo
 share/locale/pl/LC_MESSAGES/avahi.mo
 share/locale/pt_BR/LC_MESSAGES/avahi.mo
 share/locale/ro/LC_MESSAGES/avahi.mo
 share/locale/ru/LC_MESSAGES/avahi.mo
+share/locale/sk/LC_MESSAGES/avahi.mo
 share/locale/sl/LC_MESSAGES/avahi.mo
-share/locale/sr/LC_MESSAGES/avahi.mo
 share/locale/sr@latin/LC_MESSAGES/avahi.mo
+share/locale/sr/LC_MESSAGES/avahi.mo
 share/locale/sv/LC_MESSAGES/avahi.mo
+share/locale/tr/LC_MESSAGES/avahi.mo
 share/locale/uk/LC_MESSAGES/avahi.mo
 share/locale/zh_CN/LC_MESSAGES/avahi.mo
 share/locale/zh_TW/LC_MESSAGES/avahi.mo
