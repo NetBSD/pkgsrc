@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/01/01 11:47:40 wen Exp $
+# $NetBSD: Makefile,v 1.2 2016/04/09 11:08:45 wen Exp $
 #
 
 CATEGORIES=	math
@@ -10,7 +10,7 @@ COMMENT=	Quantile Regression
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
 R_PKGNAME=	quantreg
-R_PKGVER=	5.19
+R_PKGVER=	5.21
 
 USE_LANGUAGES=	c fortran
 
