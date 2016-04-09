@@ -1,8 +1,11 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 03:27:43 agc Exp $
+$NetBSD: distinfo,v 1.7 2016/04/09 10:09:14 richard Exp $
 
-SHA1 (libmtp-1.1.9.tar.gz) = 31bebf3e49612f712f4ab1a03284dedf7044000f
-RMD160 (libmtp-1.1.9.tar.gz) = e486942e0d7e0e6c9bf3525c6175c7199d3fe3f8
-SHA512 (libmtp-1.1.9.tar.gz) = 6be9f14602b05830ec01defaeb0f237ac4d021f76f4003d7178eda00d8bf86d7fbbeba0053dc111d2ab9eb32f1603c2dc4f2bc128f4cbe4819228486b9b85513
-Size (libmtp-1.1.9.tar.gz) = 760593 bytes
-SHA1 (patch-aa) = 8d962323f099efec2bf2f3ac0ef3109151d5d57d
-SHA1 (patch-configure) = 23d434cb1ff5b8326cbe1d34ded9e6c6b4f01729
+SHA1 (libmtp-1.1.11.tar.gz) = 4f7e79e15e6a0d0a3d76adbd1ca6d6c27d4b8424
+RMD160 (libmtp-1.1.11.tar.gz) = 619154b8b98c25132de26c96024387b8fcacc77e
+SHA512 (libmtp-1.1.11.tar.gz) = 966d5d831695dc02411fbe0a153873d9e5604a00e75bf0d4cc1a957887a2e7656c82209f5bf86150f7b9af037d66a96b3e3523e16d5b52ae013b835febf622c9
+Size (libmtp-1.1.11.tar.gz) = 788911 bytes
+SHA1 (patch-aa) = fe8a7722c460ff66e8106a1e4dcfb1e5188ae5b1
+SHA1 (patch-configure) = 861bd3c416529a68babe1ec9692e45b2ebb7ffcf
+SHA1 (patch-configure.ac) = 8c6d80693dc9ddbf75f75d9cfa86a1f37ef6da1b
+SHA1 (patch-m4_byteorder.m4) = e6c1170d9099f13c637b3a73d67618d318c7a73d
+SHA1 (patch-src_util.c) = f7be6760014323dc2b159e1e44f94e40d96f26d0
