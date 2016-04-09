@@ -1,8 +1,15 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 03:27:46 agc Exp $
+$NetBSD: distinfo,v 1.7 2016/04/09 08:18:58 richard Exp $
 
-SHA1 (libusb-1.0.19.tar.bz2) = c5d14ced155233ceeb5107c7eb3b94b16649ae05
-RMD160 (libusb-1.0.19.tar.bz2) = 0b6818be6bb2c36628ad22e332c39dcab6c762b9
-SHA512 (libusb-1.0.19.tar.bz2) = f42f0187bfec16ebabad64efef7a7651ee85dcf2af1b7cbe543b7de615f9c6432f7eea5fcc6b23335591dcad287c905eb9bd56199cc5d3b47435027ad678f2c1
-Size (libusb-1.0.19.tar.bz2) = 521496 bytes
-SHA1 (patch-configure) = bef1f2108e35aa5cbddd25857dff25cdb9065388
-SHA1 (patch-configure.ac) = 1cc779623ce05635d8ce8fde03fde3fbeef1ce84
+SHA1 (libusb-1.0.20.tar.bz2) = 9537243f165927bde74ad742e6b3effb0bd50cd2
+RMD160 (libusb-1.0.20.tar.bz2) = 9019942b2c0528ef5488b4ce747720616893dbb2
+SHA512 (libusb-1.0.20.tar.bz2) = 4230047dbc18db402f399a6b228f70da37ce4f9da9d57203e5c31cf0edec5ddd664865b4f16038a2ae72c26097e713b709b9e882a11b65a274e84993d617c765
+Size (libusb-1.0.20.tar.bz2) = 795247 bytes
+SHA1 (patch-config.h.in) = 8617eb16720a7a3c0c443b54e243d6459322dbae
+SHA1 (patch-configure) = 03a4a61dae70a1373ba840e27b1c572c49d0d622
+SHA1 (patch-configure.ac) = 5ae1bb4788401da7d95365771e91e9298e384381
+SHA1 (patch-libusb_Makefile.am) = 814828a2e36f8636f0708cb12859146212f2676c
+SHA1 (patch-libusb_Makefile.in) = 225cc2bb53b29c2af3f032347c4759ee11cd9ba2
+SHA1 (patch-libusb_core.c) = 669d92da7ed40a496a40140e0a91ef5070f336eb
+SHA1 (patch-libusb_libusbi.h) = 3a916dcb0f5c4bf8f31850d7fb529df8dbad46f7
+SHA1 (patch-libusb_os_sunos__usb.c) = afa51c153cf589a1c979b96b4b34bd7a12a690cc
+SHA1 (patch-libusb_os_sunos__usb.h) = d1aefc5e050c50df711a73e9ecdd22ff2ec6770c
