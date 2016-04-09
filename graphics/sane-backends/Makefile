@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.66 2016/03/15 09:14:03 martin Exp $
+# $NetBSD: Makefile,v 1.67 2016/04/09 14:19:25 richard Exp $
 
-PKGREVISION=	3
+PKGREVISION=	4
 .include "Makefile.common"
 COMMENT=	API for access to scanners, digital cameras, frame grabbers, etc
 
@@ -63,10 +63,8 @@ CONF_FILES+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/sane.d/${f}
 .endif
 
 .include "options.mk"
-.if (${OPSYS} != "SunOS")
 .include "../../devel/libusb1/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-libusb_1_0
-.endif
 .if (${OPSYS} == "Linux")
 .include "../../graphics/libv4l/buildlink3.mk"
 .endif

@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.43 2016/03/15 09:14:03 martin Exp $
+$NetBSD: distinfo,v 1.44 2016/04/09 14:19:25 richard Exp $
 
 SHA1 (sane-backends-1.0.25.tar.gz) = 05824922d91571e1fc2f5cdd270745783d593754
 RMD160 (sane-backends-1.0.25.tar.gz) = 1cfd81eeddf3ef3c2cea98f6ca7640522b249fab
 SHA512 (sane-backends-1.0.25.tar.gz) = b9548646fff13558a4da4a4e9e8bad730f05121bcc65b72d24ded3bfddc6fe574e08c39c8651544b8fbfeab036fffd76cc14d76ef5d5d47e7513a2ce3afcc9df
 Size (sane-backends-1.0.25.tar.gz) = 5955016 bytes
 SHA1 (patch-aa) = 91f5838b7c455dc160ba22d15659c1b19a222668
-SHA1 (patch-ab) = 8fb594d82c2ecab3c7c73c28448831208fef8af9
+SHA1 (patch-ab) = f6ec74b90f5499d07117559c7079ba2efccccf17
 SHA1 (patch-ac) = 49e0cc0b6e0dfb96e5ee3cfc3f554b7e40492757
 SHA1 (patch-ae) = d374c33cad835d56fb9f2fbb2594a85e0a0d7158
 SHA1 (patch-ah) = 6e747c3b541c9ebb57db6477ac6b6e48b1df0248
@@ -14,5 +14,6 @@ SHA1 (patch-aj) = c2e0733796872f1b074d0491dea4cffa1891bccc
 SHA1 (patch-ak) = f00d3773c14f9955565debc0d16231906a2bba76
 SHA1 (patch-backend_kodakaio.c) = f96af8b2fb0369f51d2320285253c5e67218e629
 SHA1 (patch-backend_pieusb__buffer.c) = 7e7c6dbb0798876532a04a0831be2ab2bd2931ca
+SHA1 (patch-m4_byteorder.m4) = 23f4b0256fc9980d3472e77ab558b0e24a9495b4
 SHA1 (patch-sanei_sanei__ir.c) = 66e913d7db9d03a42850778aca39da8f0dde02fa
 SHA1 (patch-sanei_sanei_usb.c) = b053c94d240580d919c418081fca5c75cf4fb1a7
