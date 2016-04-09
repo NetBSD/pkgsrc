@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1411 2016/04/09 14:12:57 mef Exp $
+$NetBSD: CHANGES-2016,v 1.1412 2016/04/09 14:19:05 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1835,3 +1835,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/p5-XML-XPath to 1.35 [wen 2016-04-09]
 	Updated devel/p5-Config-Any to 0.27 [mef 2016-04-09]
 	Updated devel/p5-Config-General to 2.60 [mef 2016-04-09]
+	Updated devel/p5-Contextual-Return to 0.004.008 [mef 2016-04-09]
