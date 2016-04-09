@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2015/07/03 21:41:28 mef Exp $
+# $NetBSD: Makefile,v 1.17 2016/04/09 04:56:30 mef Exp $
 
-DISTNAME=	App-FatPacker-0.010004
+DISTNAME=	App-FatPacker-0.010005
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=App/}
