@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1386 2016/04/09 05:41:52 richard Exp $
+$NetBSD: CHANGES-2016,v 1.1387 2016/04/09 05:55:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1802,3 +1802,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-B-Keywords to 1.15 [mef 2016-04-09]
 	Updated devel/p5-BSD-Resource to 1.29.09 [mef 2016-04-09]
 	Updated archivers/file-roller to 2.32.2nb24 [richard 2016-04-09]
+	Updated finance/gnucash-docs to 2.6.12 [wiz 2016-04-09]
