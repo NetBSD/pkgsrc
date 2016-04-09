@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1393 2016/04/09 08:54:02 tron Exp $
+$NetBSD: CHANGES-2016,v 1.1394 2016/04/09 09:26:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1809,3 +1809,6 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated math/R-plyr to 1.8.3 [wen 2016-04-09]
 	Updated math/R-statmod to 1.4.24 [wen 2016-04-09]
 	Updated mail/mutt to 1.6.0 [tron 2016-04-09]
+	Updated databases/sqlite3 to 3.12.1 [adam 2016-04-09]
+	Updated databases/sqlite3-docs to 3.12.1 [adam 2016-04-09]
+	Updated databases/sqlite3-tcl to 3.12.1 [adam 2016-04-09]
