@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15670 2016/04/09 08:32:28 wen Exp $
+$NetBSD: TODO,v 1.15671 2016/04/09 08:37:43 wen Exp $
 
 Suggested new packages
 ======================
@@ -391,7 +391,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o R-mvtnorm-3
 	o R-ncdf-1.6.8
 	o R-quantreg-5.21
-	o R-statmod-1.4.24
 	o ROMInfo-28
 	o SDL2_image-2.0.1
 	o SDL2_net-2.0.1
