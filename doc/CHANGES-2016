@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1396 2016/04/09 10:09:58 richard Exp $
+$NetBSD: CHANGES-2016,v 1.1397 2016/04/09 10:50:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1814,3 +1814,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/sqlite3-tcl to 3.12.1 [adam 2016-04-09]
 	Updated mail/mutt-kz to 1.6.0.1 [tron 2016-04-09]
 	Updated devel/libmtp to 1.1.11 [richard 2016-04-09]
+	Updated mail/exim to 4.87 [wiedi 2016-04-09]
+	Updated mail/exim-html to 4.87 [wiedi 2016-04-09]
