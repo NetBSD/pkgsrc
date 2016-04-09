@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2016/01/11 08:35:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2016/04/09 10:49:39 adam Exp $
 share/doc/exim/html/spec_html/ch-access_control_lists.html
 share/doc/exim/html/spec_html/ch-adding_a_local_scan_function_to_exim.html
 share/doc/exim/html/spec_html/ch-adding_new_drivers_or_lookup_types.html
@@ -12,6 +12,7 @@ share/doc/exim/html/spec_html/ch-domain_host_address_and_local_part_lists.html
 share/doc/exim/html/spec_html/ch-embedded_perl.html
 share/doc/exim/html/spec_html/ch-encrypted_smtp_connections_using_tlsssl.html
 share/doc/exim/html/spec_html/ch-environment_for_running_local_transports.html
+share/doc/exim/html/spec_html/ch-events.html
 share/doc/exim/html/spec_html/ch-exim_utilities.html
 share/doc/exim/html/spec_html/ch-file_and_database_lookups.html
 share/doc/exim/html/spec_html/ch-format_of_spool_files.html
@@ -19,11 +20,13 @@ share/doc/exim/html/spec_html/ch-generic_options_for_routers.html
 share/doc/exim/html/spec_html/ch-generic_options_for_transports.html
 share/doc/exim/html/spec_html/ch-how_exim_receives_and_delivers_mail.html
 share/doc/exim/html/spec_html/ch-incorporated_code.html
+share/doc/exim/html/spec_html/ch-internationalisation.html
 share/doc/exim/html/spec_html/ch-introduction.html
 share/doc/exim/html/spec_html/ch-log_files.html
 share/doc/exim/html/spec_html/ch-main_configuration.html
 share/doc/exim/html/spec_html/ch-message_processing.html
 share/doc/exim/html/spec_html/ch-option_index.html
+share/doc/exim/html/spec_html/ch-proxies.html
 share/doc/exim/html/spec_html/ch-regular_expressions.html
 share/doc/exim/html/spec_html/ch-retry_configuration.html
 share/doc/exim/html/spec_html/ch-security_considerations.html
@@ -121,6 +124,9 @@ share/doc/exim/html/spec_html/ch58.html
 share/doc/exim/html/spec_html/ch59.html
 share/doc/exim/html/spec_html/ch60.html
 share/doc/exim/html/spec_html/ch61.html
+share/doc/exim/html/spec_html/ch62.html
+share/doc/exim/html/spec_html/ch63.html
+share/doc/exim/html/spec_html/ch64.html
 share/doc/exim/html/spec_html/filter.html
 share/doc/exim/html/spec_html/filter_ch-exim_filter_files.html
 share/doc/exim/html/spec_html/filter_ch-forwarding_and_filtering_in_exim.html
@@ -133,6 +139,7 @@ share/doc/exim/html/spec_html/index.html
 share/doc/exim/html/spec_html/index_toc.xml
 share/doc/exim/html/static/css/common.css
 share/doc/exim/html/static/css/index.css
+share/doc/exim/html/static/doc/CVE-2016-1531.txt
 share/doc/exim/html/static/doc/chapter.css
 share/doc/exim/html/static/doc/chapter.js
 share/doc/exim/html/static/doc/contents.png
