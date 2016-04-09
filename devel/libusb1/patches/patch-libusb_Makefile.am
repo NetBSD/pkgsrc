@@ -1,0 +1,33 @@
+$NetBSD: patch-libusb_Makefile.am,v 1.1 2016/04/09 08:18:58 richard Exp $
+
+prepare SunOS backend support
+
+--- libusb/Makefile.am.orig	2015-09-05 17:20:40.000000000 +0000
++++ libusb/Makefile.am
+@@ -9,13 +9,14 @@ LINUX_USBFS_SRC = os/linux_usbfs.c
+ DARWIN_USB_SRC = os/darwin_usb.c
+ OPENBSD_USB_SRC = os/openbsd_usb.c
+ NETBSD_USB_SRC = os/netbsd_usb.c
++SUNOS_USB_SRC = os/sunos_usb.c os/sunos_usb.h
+ WINDOWS_USB_SRC = os/poll_windows.c os/windows_usb.c libusb-1.0.rc libusb-1.0.def
+ WINCE_USB_SRC = os/wince_usb.c os/wince_usb.h
+ 
+ DIST_SUBDIRS = 
+ 
+ EXTRA_DIST = $(LINUX_USBFS_SRC) $(DARWIN_USB_SRC) $(OPENBSD_USB_SRC) \
+-	$(NETBSD_USB_SRC) $(WINDOWS_USB_SRC) $(WINCE_USB_SRC) \
++	$(NETBSD_USB_SRC) $(SUNOS_USB_SRC) $(WINDOWS_USB_SRC) $(WINCE_USB_SRC) \
+ 	$(POSIX_POLL_SRC) \
+ 	os/threads_posix.c os/threads_windows.c \
+ 	os/linux_udev.c os/linux_netlink.c
+@@ -49,6 +50,10 @@ if OS_NETBSD
+ OS_SRC = $(NETBSD_USB_SRC) $(POSIX_POLL_SRC)
+ endif
+ 
++if OS_SUNOS
++OS_SRC = $(SUNOS_USB_SRC) $(POSIX_POLL_SRC)
++endif
++
+ if OS_HAIKU
+ OS_SRC = $(POSIX_POLL_SRC)
+ SUBDIRS = os/haiku
