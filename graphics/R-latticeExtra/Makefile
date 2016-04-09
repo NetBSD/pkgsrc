@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/09/19 16:50:27 brook Exp $
+# $NetBSD: Makefile,v 1.2 2016/04/09 11:02:10 wen Exp $
 
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -9,7 +9,7 @@ COMMENT=	Extra graphical utilities based on lattice
 LICENSE=	gnu-gpl-v2
 
 R_PKGNAME=	latticeExtra
-R_PKGVER=	0.6-26
+R_PKGVER=	0.6-28
 
 DEPENDS+=	R-RColorBrewer>=1.0.5:../../math/R-RColorBrewer
 
