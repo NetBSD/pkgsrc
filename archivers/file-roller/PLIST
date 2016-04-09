@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.36 2010/11/28 13:06:16 drochner Exp $
+@comment $NetBSD: PLIST,v 1.37 2016/04/09 05:40:46 richard Exp $
 bin/file-roller
 libexec/file-roller/isoinfo.sh
 libexec/file-roller/rpm2cpio
+${PLIST.nautilus}lib/nautilus/extensions-2.0/libnautilus-fileroller.la
 share/applications/file-roller.desktop
 share/file-roller/icons/hicolor/16x16/actions/add-files-to-archive.png
 share/file-roller/icons/hicolor/16x16/actions/add-folder-to-archive.png
