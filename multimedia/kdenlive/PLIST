@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2016/03/29 10:26:41 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2016/04/09 14:43:15 abs Exp $
 bin/kdenlive
 bin/kdenlive_render
 lib/kde4/libkdenlive_sampleplugin.so
@@ -9,6 +9,9 @@ share/applications/kde4/kdenlive.desktop
 share/doc/kde/HTML/ca/kdenlive/common
 share/doc/kde/HTML/ca/kdenlive/index.cache.bz2
 share/doc/kde/HTML/ca/kdenlive/index.docbook
+share/doc/kde/HTML/de/kdenlive/common
+share/doc/kde/HTML/de/kdenlive/index.cache.bz2
+share/doc/kde/HTML/de/kdenlive/index.docbook
 share/doc/kde/HTML/en/kdenlive/Kdenlive-Quickstart-Add-Last-Clip.png
 share/doc/kde/HTML/en/kdenlive/Kdenlive-Quickstart-Add-Transition.png
 share/doc/kde/HTML/en/kdenlive/Kdenlive-Quickstart-EffectStack.png
@@ -33,6 +36,9 @@ share/doc/kde/HTML/en/kdenlive/index.docbook
 share/doc/kde/HTML/es/kdenlive/common
 share/doc/kde/HTML/es/kdenlive/index.cache.bz2
 share/doc/kde/HTML/es/kdenlive/index.docbook
+share/doc/kde/HTML/fr/kdenlive/common
+share/doc/kde/HTML/fr/kdenlive/index.cache.bz2
+share/doc/kde/HTML/fr/kdenlive/index.docbook
 share/doc/kde/HTML/it/kdenlive/common
 share/doc/kde/HTML/it/kdenlive/index.cache.bz2
 share/doc/kde/HTML/it/kdenlive/index.docbook
@@ -48,22 +54,6 @@ share/doc/kde/HTML/pt_BR/kdenlive/index.docbook
 share/doc/kde/HTML/sv/kdenlive/common
 share/doc/kde/HTML/sv/kdenlive/index.cache.bz2
 share/doc/kde/HTML/sv/kdenlive/index.docbook
-share/doc/kde/HTML/uk/kdenlive/Kdenlive-Quickstart-Add-Last-Clip.png
-share/doc/kde/HTML/uk/kdenlive/Kdenlive-Quickstart-Add-Transition.png
-share/doc/kde/HTML/uk/kdenlive/Kdenlive_Quickstart-Add-Clips.png
-share/doc/kde/HTML/uk/kdenlive/Kdenlive_Quickstart-Add-Effect.png
-share/doc/kde/HTML/uk/kdenlive/Kdenlive_Quickstart-Effect-Flag.png
-share/doc/kde/HTML/uk/kdenlive/Kdenlive_Quickstart-Fadeout.png
-share/doc/kde/HTML/uk/kdenlive/Kdenlive_Quickstart-Folder-Structure.png
-share/doc/kde/HTML/uk/kdenlive/Kdenlive_Quickstart-Mainwindow.png
-share/doc/kde/HTML/uk/kdenlive/Kdenlive_Quickstart-New-Project.png
-share/doc/kde/HTML/uk/kdenlive/Kdenlive_Quickstart-Overlap-Clips.png
-share/doc/kde/HTML/uk/kdenlive/Kdenlive_Quickstart-Renderer.png
-share/doc/kde/HTML/uk/kdenlive/Kdenlive_Quickstart-Rendering.png
-share/doc/kde/HTML/uk/kdenlive/Kdenlive_Quickstart-Resize-Marker.png
-share/doc/kde/HTML/uk/kdenlive/Kdenlive_Quickstart-Save-Project.png
-share/doc/kde/HTML/uk/kdenlive/Kdenlive_Quickstart-Timeline-Clips.png
-share/doc/kde/HTML/uk/kdenlive/Kdenlive_Quickstart-TimelineCursor.png
 share/doc/kde/HTML/uk/kdenlive/common
 share/doc/kde/HTML/uk/kdenlive/index.cache.bz2
 share/doc/kde/HTML/uk/kdenlive/index.docbook
@@ -399,6 +389,7 @@ share/locale/cs/LC_MESSAGES/kdenlive.mo
 share/locale/da/LC_MESSAGES/kdenlive.mo
 share/locale/de/LC_MESSAGES/kdenlive.mo
 share/locale/el/LC_MESSAGES/kdenlive.mo
+share/locale/en_GB/LC_MESSAGES/kdenlive.mo
 share/locale/es/LC_MESSAGES/kdenlive.mo
 share/locale/et/LC_MESSAGES/kdenlive.mo
 share/locale/fi/LC_MESSAGES/kdenlive.mo
@@ -424,6 +415,7 @@ share/locale/sk/LC_MESSAGES/kdenlive.mo
 share/locale/sl/LC_MESSAGES/kdenlive.mo
 share/locale/sv/LC_MESSAGES/kdenlive.mo
 share/locale/tr/LC_MESSAGES/kdenlive.mo
+share/locale/ug/LC_MESSAGES/kdenlive.mo
 share/locale/uk/LC_MESSAGES/kdenlive.mo
 share/locale/zh_CN/LC_MESSAGES/kdenlive.mo
 share/locale/zh_TW/LC_MESSAGES/kdenlive.mo
