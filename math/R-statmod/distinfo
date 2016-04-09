@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2015/11/03 23:33:30 agc Exp $
+$NetBSD: distinfo,v 1.11 2016/04/09 08:36:34 wen Exp $
 
-SHA1 (R/statmod_1.4.21.tar.gz) = 0c1155621a5ae9e9e138200baf49f918fc937129
-RMD160 (R/statmod_1.4.21.tar.gz) = 2c4883ca782365eeae2415bc775ad92881fdccbc
-SHA512 (R/statmod_1.4.21.tar.gz) = 81ae7a2bdad56f02693c860129f8237993fe870d5710f199ba44cc62a3ce65016cb59cfbb111575a23d079768f56a033e5157c35adc279723fc0f2896769f305
-Size (R/statmod_1.4.21.tar.gz) = 56227 bytes
+SHA1 (R/statmod_1.4.24.tar.gz) = daf9656362f24b301127f47554b840be33547b18
+RMD160 (R/statmod_1.4.24.tar.gz) = 2f3e7f6a39e6ef42afe5d3c8e2156169a443213e
+SHA512 (R/statmod_1.4.24.tar.gz) = 1683f29b321e0c409b7de392f71ebb984ccd518bc2172b0c1a7e72c1b5aa95e30f99c0f4c940a266cd5bfbc004a191f032b93747072e3ce8b7de061b4f8005e9
+Size (R/statmod_1.4.24.tar.gz) = 57837 bytes
