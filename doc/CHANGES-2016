@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1391 2016/04/09 08:32:28 wen Exp $
+$NetBSD: CHANGES-2016,v 1.1392 2016/04/09 08:37:43 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1807,3 +1807,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/nmap to 7.12 [adam 2016-04-09]
 	Updated devel/libusb1 to 1.0.20 [richard 2016-04-09]
 	Updated math/R-plyr to 1.8.3 [wen 2016-04-09]
+	Updated math/R-statmod to 1.4.24 [wen 2016-04-09]
