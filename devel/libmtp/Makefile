@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.10 2015/05/02 10:43:29 ryoon Exp $
+# $NetBSD: Makefile,v 1.11 2016/04/09 10:09:14 richard Exp $
 #
 
-DISTNAME=		libmtp-1.1.9
+DISTNAME=		libmtp-1.1.11
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=libmtp/}
 
 MAINTAINER=		ku3@sl.aanet.ru
 HOMEPAGE=		http://libmtp.sourceforge.net/
 COMMENT=		Implementation of Media Transfer Protocol (MTP)
+LICENSE=		gnu-lgpl-v2
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
@@ -23,12 +24,9 @@ REPLACE_SH+=		libmtp.sh.in
 LDFLAGS.FreeBSD+=	-liconv
 LDFLAGS.SunOS=		-liconv
 
-.include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
 .include "../../converters/libiconv/buildlink3.mk"
-.if ${OPSYS} == "SunOS"
-.include "../../devel/libusb/buildlink3.mk"
-.else
 .include "../../devel/libusb1/buildlink3.mk"
-.endif
+.include "../../security/libgcrypt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

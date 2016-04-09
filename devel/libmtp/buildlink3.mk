@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2014/08/21 14:03:45 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2016/04/09 10:09:14 richard Exp $
 
 BUILDLINK_TREE+=	libmtp
 
@@ -10,11 +10,7 @@ BUILDLINK_PKGSRCDIR.libmtp?=	../../devel/libmtp
 
 .include "../../mk/bsd.fast.prefs.mk"
 
-.if ${OPSYS} == "SunOS"
-.include "../../devel/libusb/buildlink3.mk"
-.else
 .include "../../devel/libusb1/buildlink3.mk"
-.endif
 
 .endif # LIBMTP_BUILDLINK3_MK
 
