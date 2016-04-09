@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/11/18 14:19:47 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2016/04/09 20:07:23 alnsn Exp $
 
 PKGNAME=	${DISTNAME:S/ffmpeg/ffmpeg1/}
 PKGREVISION=	2
@@ -9,6 +9,8 @@ COMMENT=	Decoding, encoding and streaming software (v1.x)
 CONFIGURE_ARGS+=	--enable-avfilter
 #CONFIGURE_ARGS+=	--enable-avfilter-lavf
 CONFIGURE_ARGS+=	--enable-postproc
+CONFIGURE_ARGS+=	--host-cflags=${CFLAGS:Q}
+CONFIGURE_ARGS+=	--host-ldflags=${LDFLAGS:Q}
 
 INSTALLATION_DIRS=	lib share/examples/ffmpeg1 share/doc/ffmpeg1
 
