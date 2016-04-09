@@ -500,6 +500,7 @@ mplayer-ssse3		Enable SSSE3 support.
 mplayer-win32		Enable usage of Win32 DLLs (codecs).
 mrtg-snmpv3		Enable SNMPv3 support.
 mstats			Enable memory statistics.
+mtpz			Enable MTPZ support using libgcrypt.
 musepack		Enable the portable Musepack decoder library.
 musicbrainz		Enable musicbrainz support.
 musicpd-lastfm		Enable Last.FM support in musicpd.
