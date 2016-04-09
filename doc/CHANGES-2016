@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1402 2016/04/09 11:24:54 wen Exp $
+$NetBSD: CHANGES-2016,v 1.1403 2016/04/09 11:30:02 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1821,3 +1821,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated math/R-quantreg to 5.21 [wen 2016-04-09]
 	Updated math/R-hwde to 0.67 [wen 2016-04-09]
 	Updated math/R-ISwR to 2.0.7 [wen 2016-04-09]
+	Updated devel/p5-Compress-Raw-Bzip2 to 2.069 [mef 2016-04-09]
