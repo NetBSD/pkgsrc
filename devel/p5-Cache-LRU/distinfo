@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/04/10 15:14:13 wen Exp $
+
+SHA1 (Cache-LRU-0.04.tar.gz) = 628628f96b420928607d20c53c3650ba055e88e4
+RMD160 (Cache-LRU-0.04.tar.gz) = d02823af1e42884bc505f9b45d7a7b5429041155
+SHA512 (Cache-LRU-0.04.tar.gz) = 9fd4f56da78e4b8e291c4291ccb2e34bc50f7294fc8ff1d942d21fb116a5613c96f8e55ef9bb95a7ae3e810e791d3edf2f9f15063fd0fb85414a8e8964e88118
+Size (Cache-LRU-0.04.tar.gz) = 20133 bytes
