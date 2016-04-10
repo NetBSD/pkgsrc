@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1429 2016/04/10 19:08:28 prlw1 Exp $
+$NetBSD: CHANGES-2016,v 1.1430 2016/04/10 19:17:50 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1883,3 +1883,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/at-spi2-core to 2.20.0 [prlw1 2016-04-10]
 	Updated devel/at-spi2-atk to 2.20.0 [prlw1 2016-04-10]
 	Updated devel/py-at-spi2 to 2.20.0 [prlw1 2016-04-10]
+	Updated graphics/adwaita-icon-theme to 3.20 [prlw1 2016-04-10]
