@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.17 2015/09/07 19:23:47 gdt Exp $
+# $NetBSD: replace.mk,v 1.18 2016/04/10 15:58:02 joerg Exp $
 #
 # Public targets:
 #
@@ -13,11 +13,8 @@
 #
 # Private targets that must be defined by the package system format:
 #
-# _pkgformat-replace:
-#	Updates a package in-place on the system (USE_DESTDIR=no).
-#
 # _pkgformat-destdir-replace:
-#	Updates a package in-place on the system (USE_DESTDIR=yes).
+#	Updates a package in-place on the system.
 #
 # _pkgformat-undo-replace:
 #	Undoes a previous "make _pkgformat-replace".
@@ -25,9 +22,7 @@
 # _pkgformat-destdir-undo-replace:
 #	Undoes a previous "make _pkgformat-destdir-replace".
 
-.if ${_USE_DESTDIR} == "no"
-_REPLACE_TARGETS+=	${_PKGSRC_BUILD_TARGETS}
-.elif ${_KEEP_BIN_PKGS} == "no"
+.if ${_KEEP_BIN_PKGS} == "no"
 _REPLACE_TARGETS+=	stage-package-create
 .else
 _REPLACE_TARGETS+=	package
@@ -49,11 +44,7 @@ replace: barrier
 replace-message: .PHONY
 	@${PHASE_MSG} "Replacing for ${PKGNAME}"
 
-.if ${_USE_DESTDIR} == "no"
-su-replace: .PHONY _pkgformat-replace
-.else
 su-replace: .PHONY _pkgformat-destdir-replace
-.endif
 MAKEFLAGS.su-replace=	_UPDATE_RUNNING=yes
 MAKEFLAGS.su-replace+=	PKGNAME_REQD=${PKGNAME_REQD:Q}
 
@@ -67,9 +58,5 @@ undo-replace-message: .PHONY
 	@${PHASE_MSG} "Undoing replacement for ${PKGNAME}"
 	@${WARNING_MSG} "experimental target - DATA LOSS MAY OCCUR."
 
-.if ${_USE_DESTDIR} == "no"
-su-undo-replace: .PHONY _pkgformat-undo-replace
-.else
 su-undo-replace: .PHONY _pkgformat-destdir-undo-replace
-.endif
 MAKEFLAGS.su-undo-replace=	_UPDATE_RUNNING=yes
