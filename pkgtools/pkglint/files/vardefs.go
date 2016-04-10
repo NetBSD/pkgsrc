@@ -670,7 +670,6 @@ func (gd *GlobalData) InitVartypes() {
 	acl("USE_BUILTIN.*", lkNone, CheckvarYesNoIndirectly, "builtin.mk: set")
 	pkg("USE_CMAKE", lkNone, CheckvarYes)
 	acl("USE_CROSSBASE", lkNone, CheckvarYes, "Makefile: set")
-	usr("USE_DESTDIR", lkNone, CheckvarYes)
 	pkg("USE_FEATURES", lkShell, CheckvarIdentifier)
 	pkg("USE_GCC_RUNTIME", lkNone, CheckvarYesNo)
 	pkg("USE_GNU_CONFIGURE_HOST", lkNone, CheckvarYesNo)
