@@ -1,4 +1,4 @@
-# $NetBSD: metadata.mk,v 1.12 2015/07/04 16:18:38 joerg Exp $
+# $NetBSD: metadata.mk,v 1.13 2016/04/10 15:58:03 joerg Exp $
 
 ######################################################################
 ### The targets below are all PRIVATE.
@@ -247,27 +247,6 @@ ${_MESSAGE_FILE}: ${MESSAGE_SRC}
 	${RUN}${MKDIR} ${.TARGET:H}
 	${RUN}${CAT} ${.ALLSRC} |			\
 		${SED} ${_MESSAGE_SUBST_SED} > ${.TARGET}
-
-# Display MESSAGE file and optionally mail the contents to
-# PKGSRC_MESSAGE_RECIPIENTS.
-#
-.PHONY: install-display-message
-_pkgformat-register: install-display-message
-install-display-message: ${_MESSAGE_FILE}
-	@${STEP_MSG} "Please note the following:"
-	@${ECHO_MSG} ""
-	@${CAT} ${_MESSAGE_FILE}
-	@${ECHO_MSG} ""
-.  if !empty(PKGSRC_MESSAGE_RECIPIENTS)
-	${RUN}								\
-	(${ECHO} "The ${PKGNAME} package was installed on `${HOSTNAME_CMD}` at `date`"; \
-	${ECHO} "";							\
-	${ECHO} "Please note the following:";				\
-	${ECHO} "";							\
-	${CAT} ${_MESSAGE_FILE};					\
-	${ECHO} "") |							\
-	${MAIL_CMD} -s"Package ${PKGNAME} installed on `${HOSTNAME_CMD}`" ${PKGSRC_MESSAGE_RECIPIENTS}
-.  endif
 .endif	# MESSAGE_SRC
 
 ######################################################################
@@ -364,11 +343,7 @@ _PKG_CREATE_ARGS+=	${INSTALL_FILE:D	${_INSTALL_ARG_cmd:sh}}
 _PKG_CREATE_ARGS+=	${DEINSTALL_FILE:D	${_DEINSTALL_ARG_cmd:sh}}
 
 _PKG_ARGS_INSTALL+=	${_PKG_CREATE_ARGS}
-.if ${_USE_DESTDIR} == "no"
-_PKG_ARGS_INSTALL+=	-p ${PREFIX}
-.else
 _PKG_ARGS_INSTALL+=	-I ${PREFIX} -p ${DESTDIR}${PREFIX}
-.endif
 
 _DEINSTALL_ARG_cmd=	if ${TEST} -f ${DEINSTALL_FILE}; then		\
 				${ECHO} "-k "${DEINSTALL_FILE:Q};	\

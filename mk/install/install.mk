@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.67 2015/10/12 09:08:22 jperkin Exp $
+# $NetBSD: install.mk,v 1.68 2016/04/10 15:58:02 joerg Exp $
 #
 # This file provides the code for the "install" phase.
 #
@@ -154,27 +154,12 @@ install-check-version: ${_COOKIE.extract}
 	esac
 
 ######################################################################
-### The targets below are run with elevated privileges.
-######################################################################
-
-.PHONY: acquire-install-localbase-lock release-install-localbase-lock
-acquire-install-localbase-lock: acquire-localbase-lock
-release-install-localbase-lock: release-localbase-lock
-
-######################################################################
 ### install-all, su-install-all (PRIVATE)
 ######################################################################
 ### install-all is a helper target to run the install target of
 ### the built software, register the software installation, and run
 ### some sanity checks.
 ###
-.if ${_USE_DESTDIR} != "user-destdir"
-_INSTALL_ALL_TARGETS+=		acquire-install-localbase-lock
-.endif
-.if ${_USE_DESTDIR} == "no"
-_INSTALL_ALL_TARGETS+=		_pkgformat-check-conflicts
-_INSTALL_ALL_TARGETS+=		_pkgformat-check-installed
-.endif
 _INSTALL_ALL_TARGETS+=		install-check-umask
 .if empty(CHECK_FILES:M[nN][oO]) && !empty(CHECK_FILES_SUPPORTED:M[Yy][Ee][Ss])
 _INSTALL_ALL_TARGETS+=		check-files-pre
@@ -185,9 +170,6 @@ _INSTALL_ALL_TARGETS+=		install-makedirs
 _INSTALL_ALL_TARGETS+=		install-dirs-from-PLIST
 .elif defined(AUTO_MKDIRS) && !empty(AUTO_MKDIRS:M[Yy][Ee][Ss])
 _INSTALL_ALL_TARGETS+=		install-dirs-from-PLIST
-.endif
-.if ${_USE_DESTDIR} == "no"
-_INSTALL_ALL_TARGETS+=		pre-install-script
 .endif
 _INSTALL_ALL_TARGETS+=		pre-install
 _INSTALL_ALL_TARGETS+=		do-install
@@ -201,18 +183,8 @@ _INSTALL_ALL_TARGETS+=		install-script-data
 .if empty(CHECK_FILES:M[nN][oO]) && !empty(CHECK_FILES_SUPPORTED:M[Yy][Ee][Ss])
 _INSTALL_ALL_TARGETS+=		check-files-post
 .endif
-.if ${_USE_DESTDIR} == "no"
-_INSTALL_ALL_TARGETS+=		post-install-script
-.endif
-.if ${_USE_DESTDIR} == "no"
-_INSTALL_ALL_TARGETS+=		_pkgformat-register
-.else
 _INSTALL_ALL_TARGETS+=		_pkgformat-generate-metadata
-.endif
 _INSTALL_ALL_TARGETS+=		privileged-install-hook
-.if ${_USE_DESTDIR} != "user-destdir"
-_INSTALL_ALL_TARGETS+=		release-install-localbase-lock
-.endif
 _INSTALL_ALL_TARGETS+=		error-check
 
 .PHONY: install-all su-install-all
@@ -315,7 +287,7 @@ INSTALL_DIRS?=		${BUILD_DIRS}
 INSTALL_MAKE_FLAGS?=	# none
 INSTALL_TARGET?=	install ${USE_IMAKE:D${NO_INSTALL_MANPAGES:D:Uinstall.man}}
 DESTDIR_VARNAME?=	DESTDIR
-.if ${_USE_DESTDIR} != "no" && !empty(DESTDIR_VARNAME)
+.if !empty(DESTDIR_VARNAME)
 INSTALL_ENV+=		${DESTDIR_VARNAME}=${DESTDIR:Q}
 INSTALL_MAKE_FLAGS+=	${DESTDIR_VARNAME}=${DESTDIR:Q}
 .endif

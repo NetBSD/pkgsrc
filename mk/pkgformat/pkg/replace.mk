@@ -1,19 +1,14 @@
-# $NetBSD: replace.mk,v 1.2 2013/05/23 13:18:56 obache Exp $
+# $NetBSD: replace.mk,v 1.3 2016/04/10 15:58:03 joerg Exp $
 #
 
-# _pkgformat-replace:
-#	Updates a package in-place on the system (USE_DESTDIR=no).
-#
 # _pkgformat-destdir-replace:
-#	Updates a package in-place on the system (USE_DESTDIR=yes).
+#	Updates a package in-place on the system.
 #
 # See also:
 #	replace
 #
 # XXX: The whole replacement, from deinstalling the old package up
-# to installing the new package, should be one transaction. It
-# currently isn't, and the check-files target for other packages
-# can be confused when a +REQUIRED_BY files suddenly disappears.
+# to installing the new package, should be one transaction.
 #
 _pkgformat-replace: \
 	replace-names \

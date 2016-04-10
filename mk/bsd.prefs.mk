@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.384 2016/04/10 15:10:12 joerg Exp $
+# $NetBSD: bsd.prefs.mk,v 1.385 2016/04/10 15:58:02 joerg Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -405,8 +405,6 @@ do-install:
 	@${DO_NADA}
 .endif
 
-# After 2011Q1, the default is to use DESTDIR.
-USE_DESTDIR?=		yes
 # PKG_DESTDIR_SUPPORT can only be one of "destdir", or "user-destdir".
 PKG_DESTDIR_SUPPORT?=	user-destdir
 
@@ -421,21 +419,16 @@ PKG_FAIL_REASON+=	"PKG_DESTDIR_SUPPORT must be \`\`destdir'' or \`\`user-destdir
 # When using staged installation, everything gets installed into
 # ${DESTDIR}${PREFIX} instead of ${PREFIX} directly.
 #
-.if ${_USE_DESTDIR} != "no"
 DESTDIR=		${WRKDIR}/.destdir
-.  if ${_USE_DESTDIR} == "destdir"
+.if ${_USE_DESTDIR} == "destdir"
 _MAKE_PACKAGE_AS_ROOT=	yes
 _MAKE_CLEAN_AS_ROOT=	yes
 _MAKE_INSTALL_AS_ROOT=	yes
-.  elif ${_USE_DESTDIR} == "user-destdir"
+.else
 _MAKE_PACKAGE_AS_ROOT=	no
 _MAKE_CLEAN_AS_ROOT=	no
 _MAKE_INSTALL_AS_ROOT=	no
 .  endif
-.else
-PKG_FAIL_REASON+=	"USE_DESTDIR=no is no longer supported."
-DESTDIR=
-.endif
 
 # controls whether binary packages are preserved in pkgsrc/packages/All
 # default is no (to preserve settings since 2013/05/23, prior to that it
