@@ -1,0 +1,8 @@
+This module provides functions to treat half-width and full-width
+characters and display correct size of text in one line on terminals and
+mobile phones. You can know the visual width of any text and truncate text
+by the visual width. Now this module support flagged UTF-8 and tested only
+with Japanese.
+
+This module is pure perl version of Text::VisualWidth. This is bit slow,
+but it's not require compiler.
