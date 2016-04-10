@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2015/08/18 07:31:01 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2016/04/10 16:39:27 joerg Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -150,16 +150,9 @@ PRINT_PLIST_AWK+=	/lib\/${PKGNAME_NOREV}\/package\.conf\.d/ { next; }
 # If we were lucky we could just use "PLIST_TYPE = dynamic", but the
 # feature has seemingly bitrotted.
 .include "../../mk/bsd.prefs.mk"
-.if empty(USE_DESTDIR:M[Yy][Ee][Ss])
 GENERATE_PLIST+= \
 	cd ${PREFIX:Q} && \
 		${FIND} lib/${PKGNAME_NOREV}/package.conf.d -xdev -newer ${_COOKIE.extract} \! -type d -print | ${SORT} -d;
-.else
-GENERATE_PLIST+= \
-	cd ${DESTDIR:Q}${PREFIX:Q} && \
-		${FIND} lib/${PKGNAME_NOREV}/package.conf.d -xdev \! -type d -print | ${SORT} -d;
-.endif
-
 
 # -----------------------------------------------------------------------------
 # Sanity checks

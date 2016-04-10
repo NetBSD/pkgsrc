@@ -1,4 +1,4 @@
-# $NetBSD: modules.mk,v 1.36 2015/11/25 12:51:17 jperkin Exp $
+# $NetBSD: modules.mk,v 1.37 2016/04/10 16:39:28 joerg Exp $
 
 .if !defined(_RUBY_MODULE_MK)
 _RUBY_MODULE_MK=	# defined
@@ -149,9 +149,7 @@ ruby-setup-build:
 do-install:	ruby-setup-install
 
 _RUBY_SETUP_INSTALLARGS=   ${INSTALL_TARGET}
-.if ${_USE_DESTDIR} != "no"
 _RUBY_SETUP_INSTALLARGS+=   --prefix=${DESTDIR:Q}
-.endif
 
 ruby-setup-install:
 	@${ECHO_MSG} "===>  Running ${RUBY_SETUP} to ${INSTALL_TARGET}"

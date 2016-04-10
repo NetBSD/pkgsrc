@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2015/09/26 14:30:24 bouyer Exp $
+# $NetBSD: Makefile,v 1.40 2016/04/10 16:39:28 joerg Exp $
 
 DISTNAME=	MHonArc-2.6.19
 PKGNAME=	mhonarc-2.6.19
@@ -25,9 +25,7 @@ MY_INSTALL_FLAGS+=	-binpath ${PREFIX}/bin
 MY_INSTALL_FLAGS+=	-libpath ${PREFIX}/lib/mhonarc
 MY_INSTALL_FLAGS+=	-docpath ${PREFIX}/share/doc/mhonarc
 MY_INSTALL_FLAGS+=	-manpath ${PREFIX}/${PKGMANDIR}
-.if defined(_USE_DESTDIR) && ${_USE_DESTDIR} != "no"
 MY_INSTALL_FLAGS+=	-root ${DESTDIR}
-.endif
 MY_INSTALL_FLAGS+=	-batch
 
 do-install:
