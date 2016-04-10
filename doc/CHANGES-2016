@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1421 2016/04/10 14:51:25 wen Exp $
+$NetBSD: CHANGES-2016,v 1.1422 2016/04/10 15:18:40 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1875,3 +1875,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added textproc/p5-Text-VisualWidth-PP version 0.04 [mef 2016-04-10]
 	Updated math/maxima to 5.38.0 [wen 2016-04-10]
 	Updated time/p5-Date-Extract to 0.05 [wen 2016-04-10]
+	Added devel/p5-Cache-LRU version 0.04 [wen 2016-04-10]
