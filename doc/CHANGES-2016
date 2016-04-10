@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1419 2016/04/10 12:24:31 mef Exp $
+$NetBSD: CHANGES-2016,v 1.1420 2016/04/10 14:37:05 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1873,3 +1873,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Dist-Zilla to 5.044 [mef 2016-04-10]
 	Updated print/cups-filters to 1.8.3 [leot 2016-04-10]
 	Added textproc/p5-Text-VisualWidth-PP version 0.04 [mef 2016-04-10]
+	Updated math/maxima to 5.38.0 [wen 2016-04-10]
