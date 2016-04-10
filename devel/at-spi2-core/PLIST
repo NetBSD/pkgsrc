@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2015/06/10 23:12:07 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.11 2016/04/10 22:38:02 prlw1 Exp $
 include/at-spi-2.0/atspi/atspi-accessible.h
 include/at-spi-2.0/atspi/atspi-action.h
 include/at-spi-2.0/atspi/atspi-application.h
@@ -34,10 +34,11 @@ include/at-spi-2.0/atspi/atspi.h
 lib/girepository-1.0/Atspi-2.0.typelib
 lib/libatspi.la
 lib/pkgconfig/atspi-2.pc
+lib/systemd/user/at-spi-dbus-bus.service
 libexec/at-spi-bus-launcher
 libexec/at-spi2-registryd
-share/dbus-1/services/org.a11y.Bus.service
 share/dbus-1/accessibility-services/org.a11y.atspi.Registry.service
+share/dbus-1/services/org.a11y.Bus.service
 share/examples/at-spi2-core/at-spi2/accessibility.conf
 share/examples/at-spi2-core/xdg/autostart/at-spi-dbus-bus.desktop
 share/gir-1.0/Atspi-2.0.gir
@@ -54,7 +55,6 @@ share/gtk-doc/html/libatspi/api-index-full.html
 share/gtk-doc/html/libatspi/ch01.html
 share/gtk-doc/html/libatspi/home.png
 share/gtk-doc/html/libatspi/index.html
-share/gtk-doc/html/libatspi/index.sgml
 share/gtk-doc/html/libatspi/left-insensitive.png
 share/gtk-doc/html/libatspi/left.png
 share/gtk-doc/html/libatspi/libatspi-AtspiApplication.html
@@ -126,6 +126,7 @@ share/locale/mr/LC_MESSAGES/at-spi2-core.mo
 share/locale/ms/LC_MESSAGES/at-spi2-core.mo
 share/locale/nb/LC_MESSAGES/at-spi2-core.mo
 share/locale/nl/LC_MESSAGES/at-spi2-core.mo
+share/locale/oc/LC_MESSAGES/at-spi2-core.mo
 share/locale/or/LC_MESSAGES/at-spi2-core.mo
 share/locale/pa/LC_MESSAGES/at-spi2-core.mo
 share/locale/pl/LC_MESSAGES/at-spi2-core.mo
