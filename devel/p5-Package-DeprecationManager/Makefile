@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2016/04/09 13:02:07 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2016/04/10 02:54:26 mef Exp $
 
 DISTNAME=	Package-DeprecationManager-0.15
 PKGNAME=	p5-${DISTNAME}
@@ -18,6 +18,11 @@ BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 BUILD_DEPENDS+=	p5-Test-Warn-[0-9]*:../../devel/p5-Test-Warn
 BUILD_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
 BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
+# for make test
+BUILD_DEPENDS+=	p5-Test-Warnings-[0-9]*:../../devel/p5-Test-Warnings
+# following introduce cyclic dependency
+#UILD_DEPENDS+=	p5-Package-Stash-[0-9]*:../../devel/p5-Package-Stash
+
 DEPENDS+=	p5-Params-Util-[0-9]*:../../devel/p5-Params-Util
 DEPENDS+=	p5-Sub-Install-[0-9]*:../../devel/p5-Sub-Install
 
