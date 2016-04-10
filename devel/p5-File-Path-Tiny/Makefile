@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2015/06/12 10:49:14 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2016/04/10 05:49:15 mef Exp $
 
-DISTNAME=	File-Path-Tiny-0.7
+DISTNAME=	File-Path-Tiny-0.8
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=File/}
 
