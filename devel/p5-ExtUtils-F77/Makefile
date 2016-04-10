@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.30 2015/08/22 23:31:52 mef Exp $
+# $NetBSD: Makefile,v 1.31 2016/04/10 05:27:44 mef Exp $
 
-DISTNAME=	ExtUtils-F77-1.18
+DISTNAME=	ExtUtils-F77-1.19
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=ExtUtils/}

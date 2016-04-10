@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2015/11/03 03:28:13 agc Exp $
+$NetBSD: distinfo,v 1.9 2016/04/10 05:27:44 mef Exp $
 
-SHA1 (ExtUtils-F77-1.18.tar.gz) = b7a96e036bdd5d42dd49f66d14283fb842a83ea4
-RMD160 (ExtUtils-F77-1.18.tar.gz) = 80d77972d4bde7039b05d9b978cc8b6bbda106e2
-SHA512 (ExtUtils-F77-1.18.tar.gz) = dba56108f2b59582780c03d1cf965d276d73cee1452f9f563b6b513ac4fab24007003b45b86d2c11c05b5d55ac9d1837a76ed14bdbd4738db5ec3a6632f7edcc
-Size (ExtUtils-F77-1.18.tar.gz) = 11614 bytes
+SHA1 (ExtUtils-F77-1.19.tar.gz) = a44fc06a91f7c723691add9731e35f169199d84c
+RMD160 (ExtUtils-F77-1.19.tar.gz) = 6725de5a539123be4685f25b5fbbae10caf3da70
+SHA512 (ExtUtils-F77-1.19.tar.gz) = f103c94d8074fc3ca6f6afecc394608a61f08949f3d19e40ea66db2ddc7af4e17f429783e8ac9c8a76ebe98863b7295df8a7f9ba3f8eb967e4f19a168d5a7d81
+Size (ExtUtils-F77-1.19.tar.gz) = 12057 bytes
