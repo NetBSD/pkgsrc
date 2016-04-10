@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1422 2016/04/10 15:18:40 wen Exp $
+$NetBSD: CHANGES-2016,v 1.1423 2016/04/10 15:23:14 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1876,3 +1876,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated math/maxima to 5.38.0 [wen 2016-04-10]
 	Updated time/p5-Date-Extract to 0.05 [wen 2016-04-10]
 	Added devel/p5-Cache-LRU version 0.04 [wen 2016-04-10]
+	Updated net/p5-Net-GitHub to 0.83 [wen 2016-04-10]
