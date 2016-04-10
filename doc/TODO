@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15687 2016/04/10 08:11:06 mef Exp $
+$NetBSD: TODO,v 1.15688 2016/04/10 08:34:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -392,6 +392,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o TeXmacs-devel-1.0.7.21
 	o TiffIO-140a
 	o YoSucker-81
+	o abcde-2.7.2
 	o abcl-1.3.2
 	o abcm2ps-8.11.1
 	o abcmidi-20160303
@@ -429,6 +430,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ap22-limitipconn-0.24
 	o ap22-vhost-ldap-2.4.0
 	o apache-ivy-2.4.0
+	o apache24-2.4.20
 	o apollo-1.7
 	o apr0-2.4.1
 	o arandr-0.1.9
@@ -880,6 +882,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hamster-applet-2.32.1 [GNOME 2.32]
 	o handbrake-0.10.2
 	o hanzim-3.5
+	o harfbuzz-1.2.6
 	o harminv-1.4
 	o haskell-mode-1.45
 	o hdevtools-0.1.3.0
@@ -942,6 +945,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o htmldoc-1.8.28
 	o htop-2.0.1
 	o http_load-20140814
+	o hunspell-de-20160407
 	o i3-4.12
 	o icbirc-2.0
 	o icc11-13.0
@@ -985,6 +989,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o jabberd-1.6.1.1
 	o java-db3-3.87
 	o java-rxtx-2.1.17
+	o jbig2dec-0.13
 	o jcabc2ps-20150524
 	o jchkmail-2.6.0
 	o jdbc-mysql5-5.1.36
@@ -1094,7 +1099,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libvdpau-1.1.1
 	o libvirt-1.3.2
 	o libxdg-basedir-1.2.0
-	o libxkbcommon-0.6.0
+	o libxkbcommon-0.6.1
 	o libykneomgr-0.1.8
 	o libyubikey-1.13
 	o licq-1.3.8
@@ -1167,6 +1172,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mksh-52b
 	o mkvtoolnix-5.9.0
 	o modular-xorg-server-1.18.3
+	o modular-xorg-xephyr-1.18.3
 	o modular-xorg-xquartz-1.18.0
 	o molden-4.8 [after which PR 40252 can be closed]
 	o molden-5.5
@@ -1602,6 +1608,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-Scientific-doc-2.5.5
 	o py-Unidecode-0.04.19
 	o py-acora-1.9
+	o py-anki2-2.0.36
 	o py-apache-libcloud-0.20.1
 	o py-bleach-1.4.2
 	o py-borgbackup-1.0
@@ -1609,10 +1616,12 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-buildbot-0.9.0b5
 	o py-buildbot-slave-0.9.0b5
 	o py-cassa-1.11.0
+	o py-click-6.6
 	o py-collectd-5.5.1
 	o py-colorama-0.3.6
 	o py-creole-1.1.1
 	o py-cups-1.9.73
+	o py-cython-0.24
 	o py-d2to1-0.2.12
 	o py-daemon-2.1.1
 	o py-datapkg-0.9
@@ -1643,6 +1652,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-mccabe-0.4.0
 	o py-metar-0.20
 	o py-mezzanine-4.1.0
+	o py-mock-2.0.0
 	o py-munkres-1.0.7
 	o py-musicbrainz-0.7.4
 	o py-ncclient-0.4.7
@@ -1678,7 +1688,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-test-runner-2.7.1
 	o py-tlslite-0.4.6
 	o py-tortoisehg-3.7.3
-	o py-twisted-16.0.0
+	o py-twisted-16.1.0
 	o py-uliweb-0.5b0
 	o py-uwsgi-2.0.12
 	o py-vdirsyncer-0.9.3
@@ -1749,6 +1759,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ruby-chef-12.5.1
 	o ruby-chef-zero-4.3.2
 	o ruby-jquery-rails-4.1.0
+	o ruby-mercenary-0.3.6
 	o ruby-ncurses-1.3.1 [where is this package available from?]
 	o ruby-railties-4.2.5
 	o ruby-redmine-3.2.0
@@ -1987,7 +1998,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wwwoffle-2.9i
 	o wxGTK-3.1.0
 	o wxRemind-101
-	o x264-devel-20160402
+	o x264-devel-20160409
 	o x2vnc-1.31
 	o xa65-2.3.7
 	o xaric-0.13.7
