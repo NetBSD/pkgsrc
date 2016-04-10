@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15686 2016/04/10 07:47:31 mef Exp $
+$NetBSD: TODO,v 1.15687 2016/04/10 08:11:06 mef Exp $
 
 Suggested new packages
 ======================
@@ -1304,7 +1304,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Date-Extract-0.05
 	o p5-Device-XBee-API-0.8
 	o p5-Digest-Hashcash-1.1
-	o p5-Dist-Zilla-5.043
 	o p5-Encode-2.82
 	o p5-Excel-Template-0.34
 	o p5-Excel-Template-Plus-0.06
@@ -1317,19 +1316,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-GDGraph-1.52
 	o p5-GStreamer-0.20
 	o p5-Geo-IPfree-1.151940
-	o p5-Git-CPAN-Patch-2.2.1
-	o p5-Git-Repository-Plugin-AUTOLOAD-1.002
 	o p5-Git-Wrapper-0.045
 	o p5-Glib-Object-Introspection-0.029
-	o p5-Graph-0.9704
-	o p5-Graph-ReadWrite-2.08
 	o p5-GraphViz-2.20
 	o p5-GraphViz2-2.37
 	o p5-GraphicsMagick-1.4.020160216
 	o p5-Gtk2-1.223
 	o p5-HTML-Format-2.12
 	o p5-HTTP-Server-EV-0.69
-	o p5-Hash-Util-FieldHash-Compat-0.10
 	o p5-Heap-1.04
 	o p5-IO-AIO-4.33
 	o p5-IO-Async-0.70
