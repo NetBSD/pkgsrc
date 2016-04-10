@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.383 2016/04/10 15:08:39 joerg Exp $
+# $NetBSD: bsd.prefs.mk,v 1.384 2016/04/10 15:10:12 joerg Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -416,12 +416,6 @@ _USE_DESTDIR=		user-destdir
 _USE_DESTDIR=		destdir
 .else
 PKG_FAIL_REASON+=	"PKG_DESTDIR_SUPPORT must be \`\`destdir'' or \`\`user-destdir''."
-.endif
-
-# This stanza serves to warn the user; deciding to not build
-# non-DESTDIR-capable packages when not in DESTDIR mode is above.
-.if ${PKG_DESTDIR_SUPPORT} == "none"
-WARNINGS+=	"[bsd.prefs.mk] The package ${PKGNAME} is missing DESTDIR support."
 .endif
 
 # When using staged installation, everything gets installed into
