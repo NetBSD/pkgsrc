@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2016/03/05 11:29:28 jperkin Exp $
+# $NetBSD: Makefile,v 1.65 2016/04/10 16:39:28 joerg Exp $
 
 PKGREVISION=		9
 
@@ -38,9 +38,7 @@ REPLACE_PERL+=		src/cats/make_catalog_backup.pl.in
 
 .include "Makefile.common"
 
-.if !empty(USE_DESTDIR:M[Yy][Ee][Ss])
 INSTALL_MAKE_FLAGS+=	dir_user= dir_group= sd_group=
-.endif
 
 post-install:
 	${INSTALL_SCRIPT} ${FILESDIR}/chio-changer \
