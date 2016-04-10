@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: pkg-build,v 1.28 2015/10/15 11:47:47 joerg Exp $
+# $NetBSD: pkg-build,v 1.29 2016/04/10 17:00:33 joerg Exp $
 #
 # Copyright (c) 2007, 2008 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -79,7 +79,6 @@ run_make() {
 }
 
 run_usergroup() {
-	[ "${use_destdir}" != no ] || return 0
 	case "${usergroup_phase}" in
 	*configure)
 		[ "$1" != "configure" ] || ${make} create-usergroup clean
@@ -126,20 +125,13 @@ if [ "$use_unprivileged_checksum" != "no" ]; then
 else
 	run_checksum=run_direct
 fi
-case "$use_destdir" in
-user-destdir)
+if [ "$use_destdir" = user-destdir ]; then
 	run_build=run_su
 	run_install=run_su
-	;;
-destdir)
+else
 	run_build=run_su
 	run_install=run_direct
-	;;
-*)
-	run_build=run_direct
-	run_install=run_direct
-	;;
-esac
+fi
 
 if [ `@ID@ -u` -ne 0 ]; then
 	run_checksum=run_direct
@@ -157,10 +149,8 @@ set -e
 mkdir -p ${bulklog}/${pkgname}
 rm -f ${bulklog}/${pkgname}/*
 
-if [ "$use_destdir" = "destdir" -o "$use_destdir" = "user-destdir" ]; then
-	touch ${bulklog}/${pkgname}/work.log
-	@CHOWN@ ${unprivileged_user} ${bulklog}/${pkgname}/work.log
-fi
+touch ${bulklog}/${pkgname}/work.log
+@CHOWN@ ${unprivileged_user} ${bulklog}/${pkgname}/work.log
 
 pkg_add_normal() {
 	PKG_PATH=${packages}/All ${pkg_add} -K ${cur_pkgdb} "$@"
@@ -207,11 +197,9 @@ run_make run_direct stage-package-create > ${bulklog}/${pkgname}/package.log 2>&
 
 pkgfile=$(run_make run_direct show-var VARNAME=STAGE_PKGFILE)
 
-# When using DESTDIR build, add the package once to test install rules.
-# This is not done for potential bootstrap packages as they might already
-# be installed.
-if [ "${use_destdir}" != "no" ] && \
-   [ -z "${is_bootstrap}" ]; then
+# Add the package once to test install rules.  This is not done for
+# potential bootstrap packages as they might already be installed.
+if [ -z "${is_bootstrap}" ]; then
 	if ! ${pkg_add_cmd} ${pkgfile} \
 	    >> ${bulklog}/${pkgname}/package.log 2>&1; then
 		cleanup
