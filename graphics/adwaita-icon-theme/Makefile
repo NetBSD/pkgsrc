@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2015/11/25 12:50:43 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2016/04/10 19:17:25 prlw1 Exp $
 
-DISTNAME=		adwaita-icon-theme-3.16.2.1
+DISTNAME=		adwaita-icon-theme-3.20
 CATEGORIES=		graphics gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=/sources/adwaita-icon-theme/${PKGVERSION_NOREV:R:R}/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=/sources/adwaita-icon-theme/${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		prlw1@cam.ac.uk
@@ -15,7 +15,7 @@ TOOL_DEPENDS+=		librsvg>=2.22.3:../../graphics/librsvg
 TOOL_DEPENDS+=		gtk3+>=3:../../x11/gtk3
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake intltool msgfmt pkg-config
+USE_TOOLS+=		gmake pkg-config
 # otherwise it creates lots of superfluous lib/locale dirs
 USE_PKGLOCALEDIR=	yes
 TOOLS_NOOP+=		gtk-update-icon-cache
