@@ -1,0 +1,4 @@
+Library to access the DWARF debugging file format which supports source level
+debugging of a number of procedural languages, such as C, C++, and Fortran.
+
+This package contains utility dwarfdump.
