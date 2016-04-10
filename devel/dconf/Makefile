@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.31 2016/03/02 22:45:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.32 2016/04/10 19:38:52 prlw1 Exp $
 
-PKGREVISION=	4
+PKGREVISION=	5
 .include "Makefile.common"
 
 CONFIGURE_ARGS+=	--disable-editor
