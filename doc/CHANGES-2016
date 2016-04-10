@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1433 2016/04/10 20:06:09 prlw1 Exp $
+$NetBSD: CHANGES-2016,v 1.1434 2016/04/10 20:08:45 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1886,4 +1886,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/adwaita-icon-theme to 3.20 [prlw1 2016-04-10]
 	Updated graphics/gdk-pixbuf2 to 2.32.3 [prlw1 2016-04-10]
 	mk/bsd.pkg.mk: remove non-DESTDIR support [joerg 2016-04-10]
-	Updated x11/gtk3 to 3.20.2nb1 [prlw1 2016-04-10]
+	Updated x11/gtk3 to 3.20.2 [prlw1 2016-04-10]
