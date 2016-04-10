@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2014/08/06 10:38:21 wiz Exp $
+@comment $NetBSD: PLIST,v 1.41 2016/04/10 18:55:23 prlw1 Exp $
 include/atk-1.0/atk/atk-enum-types.h
 include/atk-1.0/atk/atk.h
 include/atk-1.0/atk/atkaction.h
@@ -90,7 +90,6 @@ share/gtk-doc/html/atk/data.html
 share/gtk-doc/html/atk/deprecated.html
 share/gtk-doc/html/atk/home.png
 share/gtk-doc/html/atk/index.html
-share/gtk-doc/html/atk/index.sgml
 share/gtk-doc/html/atk/interfaces.html
 share/gtk-doc/html/atk/left-insensitive.png
 share/gtk-doc/html/atk/left.png
