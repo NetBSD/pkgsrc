@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2235 2016/04/08 20:27:40 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2236 2016/04/10 15:17:01 wen Exp $
 #
 
 COMMENT=	Development utilities
@@ -744,6 +744,7 @@ SUBDIR+=	p5-CPANPLUS
 SUBDIR+=	p5-Cache
 SUBDIR+=	p5-Cache-Cache
 SUBDIR+=	p5-Cache-FastMmap
+SUBDIR+=	p5-Cache-LRU
 SUBDIR+=	p5-Cache-Memcached
 SUBDIR+=	p5-Cache-Simple-TimedExpiry
 SUBDIR+=	p5-Canary-Stability
