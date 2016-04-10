@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.20 2014/12/30 15:13:20 wiz Exp $	*/
+/*	$NetBSD: main.c,v 1.21 2016/04/10 19:01:19 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,7 +7,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: main.c,v 1.20 2014/12/30 15:13:20 wiz Exp $");
+__RCSID("$NetBSD: main.c,v 1.21 2016/04/10 19:01:19 joerg Exp $");
 
 /*
  * FreeBSD install - a package for the installation and maintainance
@@ -26,6 +26,7 @@ __RCSID("$NetBSD: main.c,v 1.20 2014/12/30 15:13:20 wiz Exp $");
 #include "lib.h"
 #include "create.h"
 
+/* -U is silently ignored, it used to inhibit pkgdb changes. */
 static const char Options[] = "B:C:D:F:I:K:L:OP:S:T:UVb:c:d:f:g:i:k:ln:p:r:s:u:v";
 
 char   *Prefix = NULL;
@@ -47,7 +48,6 @@ char   *DefaultOwner = NULL;
 char   *DefaultGroup = NULL;
 char   *realprefix = NULL;
 const char *CompressionType = NULL;
-int	update_pkgdb = 1;
 int     PlistOnly = 0;
 int     RelativeLinks = 0;
 Boolean File2Pkg = FALSE;
@@ -93,7 +93,6 @@ main(int argc, char **argv)
 			break;
 
 		case 'U':
-			update_pkgdb = 0;
 			break;
 
 		case 'p':
@@ -204,7 +203,7 @@ main(int argc, char **argv)
 		return 0;
 	if (Verbose) {
 		if (PlistOnly)
-			warnx("package registration failed");
+			warnx("PLIST adjustment failed");
 		else
 			warnx("package creation failed");
 	}
