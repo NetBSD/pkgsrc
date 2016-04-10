@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2236 2016/04/10 15:17:01 wen Exp $
+# $NetBSD: Makefile,v 1.2237 2016/04/10 16:55:18 kamil Exp $
 #
 
 COMMENT=	Development utilities
@@ -451,6 +451,7 @@ SUBDIR+=	libdevq
 SUBDIR+=	libdnsres
 SUBDIR+=	libdockapp
 SUBDIR+=	libdshconfig
+SUBDIR+=	libdwarf
 SUBDIR+=	libebml
 SUBDIR+=	libelf
 SUBDIR+=	libestr
