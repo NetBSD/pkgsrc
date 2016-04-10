@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.382 2016/03/17 16:02:23 jperkin Exp $
+# $NetBSD: bsd.prefs.mk,v 1.383 2016/04/10 15:08:39 joerg Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -407,20 +407,15 @@ do-install:
 
 # After 2011Q1, the default is to use DESTDIR.
 USE_DESTDIR?=		yes
-# PKG_DESTDIR_SUPPORT can only be one of "none", "destdir", or "user-destdir".
+# PKG_DESTDIR_SUPPORT can only be one of "destdir", or "user-destdir".
 PKG_DESTDIR_SUPPORT?=	user-destdir
 
-.if ${PKG_DESTDIR_SUPPORT} == "none" || empty(USE_DESTDIR:M[Yy][Ee][Ss])
-.  if empty(USE_DESTDIR:M[Yy][Ee][Ss]) && empty(USE_DESTDIR:M[Nn][Oo])
-PKG_FAIL_REASON+=	"USE_DESTDIR must be either \`\`yes'' or \`\`no''"
-.  endif
-_USE_DESTDIR=		no
-.elif ${PKG_DESTDIR_SUPPORT} == "user-destdir"
+.if ${PKG_DESTDIR_SUPPORT} == "user-destdir"
 _USE_DESTDIR=		user-destdir
 .elif ${PKG_DESTDIR_SUPPORT} == "destdir"
 _USE_DESTDIR=		destdir
 .else
-PKG_FAIL_REASON+=	"PKG_DESTDIR_SUPPORT must be \`\`none'', \`\`destdir'', or \`\`user-destdir''."
+PKG_FAIL_REASON+=	"PKG_DESTDIR_SUPPORT must be \`\`destdir'' or \`\`user-destdir''."
 .endif
 
 # This stanza serves to warn the user; deciding to not build
