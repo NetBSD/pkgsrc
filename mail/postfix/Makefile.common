@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2015/09/07 09:47:01 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.2 2016/04/10 16:39:28 joerg Exp $
 # used by mail/postfix/Makefile
 # used by mail/postfix/Makefile.module
 
@@ -115,9 +115,7 @@ CCARGS+=		-DNO_NISPLUS
 
 CFLAGS.SunOS+=		-D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64
 
-.if !empty(USE_DESTDIR:M[Yy][Ee][Ss])
 DESTDIR_INSTALLOPTIONS=-package install_root="${DESTDIR}"
-.endif
 
 do-configure:
 	cd ${WRKSRC} &&							\
