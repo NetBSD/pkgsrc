@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2016/01/24 11:18:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2016/04/10 09:41:58 leot Exp $
 bin/foomatic-rip
 bin/ttfread
 include/cupsfilters/colord.h
@@ -87,6 +87,7 @@ share/cups/drv/indexv3.drv
 share/cups/drv/indexv4.drv
 share/cups/mime/braille.convs
 share/cups/mime/braille.types
+share/cups/mime/cupsfilters-ghostscript.convs
 share/cups/mime/cupsfilters.convs
 share/cups/mime/cupsfilters.types
 share/cups/ppdc/braille.defs
