@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2016/01/27 10:31:31 wiz Exp $
+# $NetBSD: Makefile,v 1.44 2016/04/10 07:34:39 dbj Exp $
 
 DISTNAME=	texlive-20150521-source
 PKGNAME=	luatex-0.80.0
@@ -22,6 +22,7 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake lex perl pkg-config yacc
 CONFIGURE_ARGS+=	--disable-aleph --disable-etex --disable-pdftex \
 			--enable-luatex --disable-mf --disable-mf-nowin \
+			--with-x=no \
 			--disable-luajittex \
 			--disable-mp --disable-pmp --disable-upmp \
 			--disable-ptex --disable-eptex --disable-uptex --disable-euptex \
@@ -69,8 +70,6 @@ BUILDLINK_API_DEPENDS.kpathsea+= kpathsea>=6.2.1
 .include "../../print/kpathsea/buildlink3.mk"
 .include "../../print/poppler/buildlink3.mk"
 .include "../../print/poppler-includes/buildlink3.mk"
-BUILDLINK_DEPMETHOD.libX11?=    build
-.include "../../x11/libX11/buildlink3.mk"    
 .include "../../x11/pixman/buildlink3.mk"
 
 do-install:
