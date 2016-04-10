@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 03:28:12 agc Exp $
+$NetBSD: distinfo,v 1.7 2016/04/10 03:16:37 mef Exp $
 
-SHA1 (Event-RPC-1.05.tar.gz) = 211dcc05e9f950046f7088cf5265d5113640e1e7
-RMD160 (Event-RPC-1.05.tar.gz) = 1a706fab045abd1b8c07c6e1d66c7d2d664abf68
-SHA512 (Event-RPC-1.05.tar.gz) = 817f3c6efccc9701d091d4ddb3dc6860efbb276150f1534a40315eb668074a77dac099b0f944a7507cda98aef1a59d4a5c460a9d3cef1bd0ffe40f88d1d5b214
-Size (Event-RPC-1.05.tar.gz) = 48716 bytes
+SHA1 (Event-RPC-1.08.tar.gz) = e89776ddccfa4ec66fa61f40f36b4b167a9b3415
+RMD160 (Event-RPC-1.08.tar.gz) = f3c55e47b6f0687dd8ecf59b68a2e25cf18f78b7
+SHA512 (Event-RPC-1.08.tar.gz) = 39de9feb1e958c8834e6492cf7d6d237892e8b4ea54e534af6d0a92dddae9126766872e46b9222f00deb24309981a4459b84cb37bc8ea74e7d62e4112b1fe317
+Size (Event-RPC-1.08.tar.gz) = 57504 bytes
