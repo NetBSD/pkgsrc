@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.159 2016/02/26 09:41:05 jperkin Exp $
+# $NetBSD: Makefile,v 1.160 2016/04/10 07:45:22 dbj Exp $
 
 DISTNAME=	gnutls-3.3.18
+PKGREVISION=	1
 CATEGORIES=	security devel
 MASTER_SITES=	ftp://ftp.gnutls.org/gcrypt/gnutls/v3.3/
 EXTRACT_SUFX=	.tar.xz
@@ -49,6 +50,9 @@ post-install:
 .include "../../mk/readline.buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libcfg+/buildlink3.mk"
+# Avoid creating a fake zlib.pc, because if it does
+# gnutls will add a Requires.private for it in its .pc file
+CHECK_BUILTIN.zlib:=yes
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libtasn1+=	libtasn1>=0.3.4
