@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1425 2016/04/10 18:55:13 prlw1 Exp $
+$NetBSD: CHANGES-2016,v 1.1426 2016/04/10 18:55:43 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1879,3 +1879,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/p5-Net-GitHub to 0.83 [wen 2016-04-10]
 	Added devel/libdwarf version 20160115 [kamil 2016-04-10]
 	Updated lang/vala to 0.32.0 [prlw1 2016-04-10]
+	Updated devel/atk to 2.20.0 [prlw1 2016-04-10]
