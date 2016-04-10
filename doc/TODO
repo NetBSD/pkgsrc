@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15691 2016/04/10 15:23:15 wen Exp $
+$NetBSD: TODO,v 1.15692 2016/04/10 20:08:45 prlw1 Exp $
 
 Suggested new packages
 ======================
@@ -862,7 +862,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gthumb-3.4.0
 	o gtk-gnutella-0.98.4
 	o gtk-systrace-20030623
-	o gtk3-3.20
 	o gtkglarea-2.1.0
 	o gtkmagnetic-23
 	o gtkmm-documentation-2.16.0 [GNOME 2.26]
