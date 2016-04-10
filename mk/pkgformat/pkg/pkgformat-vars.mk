@@ -1,4 +1,4 @@
-# $NetBSD: pkgformat-vars.mk,v 1.5 2014/12/30 15:13:20 wiz Exp $
+# $NetBSD: pkgformat-vars.mk,v 1.6 2016/04/10 15:20:26 joerg Exp $
 #
 # This Makefile fragment is included indirectly by bsd.prefs.mk and
 # defines some variables which must be defined earlier than where
@@ -32,11 +32,7 @@ PKG_INFO_CMD?=		${PKG_TOOLS_BIN}/pkg_info
 LINKFARM_CMD?=		${PKG_TOOLS_BIN}/linkfarm
 
 # Latest versions of tools required for correct pkgsrc operation.
-.if make(replace) && ${_USE_DESTDIR} != "no"
 PKGTOOLS_REQD=		20100914
-.else
-PKGTOOLS_REQD=		20090528
-.endif
 
 # Latest version of pkg_install required to extract packages
 PKGTOOLS_VERSION_REQD=	20091115
