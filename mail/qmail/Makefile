@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2016/03/05 11:28:50 jperkin Exp $
+# $NetBSD: Makefile,v 1.76 2016/04/10 16:39:28 joerg Exp $
 #
 
 DISTNAME=		${PKGNAME_NOREV}
@@ -146,19 +146,17 @@ post-extract: post-extract-viruscan
 .endif
 
 pre-install:
-.	if ${USE_DESTDIR} != "no"
-	  ${MKDIR} ${DESTDIR}${QMAILDIR}
-	  ${MKDIR} ${DESTDIR}${QMAIL_QUEUE_DIR}
-	  # keep in sync with INSTALL:PRE-INSTALL
-	  ${LN} -s ${DESTDIR}${EGDIR}/alias	${DESTDIR}${QMAILDIR}/alias
-	  ${LN} -s ${DESTDIR}${PREFIX}/bin	${DESTDIR}${QMAILDIR}/bin
-	  ${LN} -s ${DESTDIR}${EGDIR}/boot	${DESTDIR}${QMAILDIR}/boot
-	  ${LN} -s ${DESTDIR}${EGDIR}/control	${DESTDIR}${QMAILDIR}/control
-	  ${LN} -s ${DESTDIR}${DOCDIR}		${DESTDIR}${QMAILDIR}/doc
-	  ${LN} -s ${DESTDIR}${PREFIX}/${PKGMANDIR} ${DESTDIR}${QMAILDIR}/man
-	  ${LN} -s ${DESTDIR}${QMAIL_QUEUE_DIR}	${DESTDIR}${QMAILDIR}/queue
-	  ${LN} -s ${DESTDIR}${EGDIR}/users	${DESTDIR}${QMAILDIR}/users
-.	endif
+	${MKDIR} ${DESTDIR}${QMAILDIR}
+	${MKDIR} ${DESTDIR}${QMAIL_QUEUE_DIR}
+	# keep in sync with INSTALL:PRE-INSTALL
+	${LN} -s ${DESTDIR}${EGDIR}/alias	${DESTDIR}${QMAILDIR}/alias
+	${LN} -s ${DESTDIR}${PREFIX}/bin	${DESTDIR}${QMAILDIR}/bin
+	${LN} -s ${DESTDIR}${EGDIR}/boot	${DESTDIR}${QMAILDIR}/boot
+	${LN} -s ${DESTDIR}${EGDIR}/control	${DESTDIR}${QMAILDIR}/control
+	${LN} -s ${DESTDIR}${DOCDIR}		${DESTDIR}${QMAILDIR}/doc
+	${LN} -s ${DESTDIR}${PREFIX}/${PKGMANDIR} ${DESTDIR}${QMAILDIR}/man
+	${LN} -s ${DESTDIR}${QMAIL_QUEUE_DIR}	${DESTDIR}${QMAILDIR}/queue
+	${LN} -s ${DESTDIR}${EGDIR}/users	${DESTDIR}${QMAILDIR}/users
 
 post-install: post-install-viruscan
 	# allow packaging as non-root, fix at install time with SPECIAL_PERMS

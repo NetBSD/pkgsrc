@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.5 2013/04/06 14:58:19 rodent Exp $
+# $NetBSD: package.mk,v 1.6 2016/04/10 16:39:27 joerg Exp $
 #
 
 PKGNAME=	hugs98-${DISTNAME}
@@ -28,7 +28,6 @@ do-build:
 		build \
 		--verbose
 
-.if ${_USE_DESTDIR} != "no"
 do-install:
 	cd ${WRKSRC} && ${HUGS_RUN} -98 Setup.hs \
 		copy --verbose --destdir=${DESTDIR}
@@ -39,8 +38,3 @@ do-install:
 	    ${DESTDIR}${PREFIX}/lib/hugs/packages/$$pkg/packages/$$pkg && \
 	${INSTALL_DATA} .installed-pkg-config \
 	    ${DESTDIR}${PREFIX}/lib/hugs/packages/$$pkg/packages/$$pkg/package.conf
-.else
-do-install:
-	cd ${WRKSRC} && ${HUGS_RUN} -98 Setup.hs \
-		install --verbose
-.endif

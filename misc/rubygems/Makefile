@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2015/01/25 16:13:13 taca Exp $
+# $NetBSD: Makefile,v 1.59 2016/04/10 16:39:28 joerg Exp $
 
 DISTNAME=	rubygems-${RUBY_GEMS_PKGSRC_VERS}
 CATEGORIES=	misc ruby
@@ -59,9 +59,7 @@ INSTALL_ENV+=		GEM_PATH=${DESTDIR}${PREFIX}/${GEM_HOME}
 
 INSTALL_TARGET=		install
 INSTALL_TARGET+=	--vendor --no-rdoc --no-ri
-.if ${_USE_DESTDIR} != "no"
 INSTALL_TARGET+=	--destdir=${DESTDIR:Q}
-.endif
 
 # rubygem's setup.rb is not the typical setup.rb -- manually run the
 # command to install.
