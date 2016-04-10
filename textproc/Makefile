@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.873 2016/03/12 11:50:05 tnn Exp $
+# $NetBSD: Makefile,v 1.874 2016/04/10 12:24:31 mef Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -555,6 +555,7 @@ SUBDIR+=	p5-Text-Trac
 SUBDIR+=	p5-Text-Typography
 SUBDIR+=	p5-Text-Unaccent
 SUBDIR+=	p5-Text-Unidecode
+SUBDIR+=	p5-Text-VisualWidth-PP
 SUBDIR+=	p5-Text-WagnerFischer
 SUBDIR+=	p5-Text-WikiCreole
 SUBDIR+=	p5-Text-WikiFormat
