@@ -1,4 +1,4 @@
-# $NetBSD: bsd.install.mk,v 1.15 2014/12/06 23:28:18 agc Exp $
+# $NetBSD: bsd.install.mk,v 1.16 2016/04/10 15:58:02 joerg Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to installing packages.
@@ -17,14 +17,12 @@ _COOKIE.install=	${WRKDIR}/.install_done
 ######################################################################
 ### install (PUBLIC)
 ######################################################################
-### install is a public target to install the package either by
-### depending on stage-install (_USE_DESTDIR=no) or package-install
-### (_USE_DESTDIR!=no).
+### install is a public target to install the package by depending
+### on stage-package-install or package-install. The difference is
+### a package is created in the public PACKAGES directory.
 ###
 .PHONY: install
-.if ${_USE_DESTDIR} == "no"
-install: stage-install
-.elif ${_KEEP_BIN_PKGS} == "no"
+.if ${_KEEP_BIN_PKGS} == "no"
 install: stage-package-install
 .else
 install: package-install
@@ -34,8 +32,7 @@ install: package-install
 ### stage-install (PUBLIC)
 ######################################################################
 ### stage-install is a public target to install the package to
-### ${PREFIX} (_USE_DESTDIR=no) or to ${DESTDIR}${PREFIX}
-### (_USE_DESTDIR!=no)
+### to ${DESTDIR}${PREFIX}.
 ###
 .PHONY: stage-install
 .if !defined(NO_INSTALL)
