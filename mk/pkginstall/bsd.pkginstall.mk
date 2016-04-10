@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.64 2015/11/08 03:21:46 leot Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.65 2016/04/10 15:33:42 joerg Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -179,11 +179,11 @@ FILES_SUBST+=		PKGBASE=${PKGBASE:Q}
 #
 # USERGROUP_PHASE is set to the phase just before which users and
 #	groups need to be created.  Valid values are "configure" and
-#	"build".  If not defined, then by default users and groups
-#	are created prior to installation by the pre-install-script
-#	target.  If this is defined, then the numeric UIDs and GIDs
-#	of users and groups required by this package are hardcoded
-#	into the +INSTALL script.
+#	"build" and "pre-install".
+#	If not defined, then by default users and groups are created
+#	as pare of the +INSTALL script.  If this is defined, then
+#	the numeric UIDs and GIDs of users and groups required by this
+#	package are hardcoded into the +INSTALL script.
 #
 PKG_GROUPS?=		# empty
 PKG_USERS?=		# empty
@@ -326,7 +326,7 @@ ${_INSTALL_USERGROUP_UNPACKER}:						\
 pre-configure: create-usergroup
 .  elif !empty(USERGROUP_PHASE:M*build)
 pre-build: create-usergroup
-.  elif !empty(USERGROUP_PHASE:Mpre-install) && ${_USE_DESTDIR} != "no"
+.  elif !empty(USERGROUP_PHASE:Mpre-install)
 pre-install: create-usergroup
 .  endif
 .endif
