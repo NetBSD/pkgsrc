@@ -1,29 +1,14 @@
-# $NetBSD: destdir.help,v 1.7 2016/04/10 15:09:26 joerg Exp $
+# $NetBSD: destdir.help,v 1.8 2016/04/10 15:15:45 joerg Exp $
 #
 # ===
 # Warning: This file is still under construction. Don't rely on it.
 # ===
 #
 # This file documents the variables around the DESTDIR support.
-#
-# Normally, packages are installed directly into LOCALBASE and may
-# overwrite files of other packages there. It also makes it easy to
-# create packages which behave differently depending on whether they
-# are installed from source or from a binary package. This is not good.
-#
-# The DESTDIR support tries to prevent some of these problems. When it
-# is enabled, packages are not installed directly into LOCALBASE.
-# Instead, they are installed in a temporary directory, and a binary
-# package is created from the files that have been installed there.
-#
-# === User-settable variables ===
-#
-# USE_DESTDIR
-#	* "yes" to enable DESTDIR support for those packages that
-#	  explicitly support it.  If the package supports it,
-#	  the build will run completely under the privileges of the
-#	  calling users, only package installation via pkg_add is done
-#	  as root.
+# During the build, package files are not installed directly into
+# LOCALBASE, but a temporary directory under WRKDIR. Any direct change
+# of LOCALBASE is a bug. A binary package is created from the content
+# of that temporary directory and then installed normally with pkg_add.
 #
 # === Package-settable variables ===
 #
