@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1435 2016/04/10 20:17:07 prlw1 Exp $
+$NetBSD: CHANGES-2016,v 1.1436 2016/04/11 04:25:39 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1855,7 +1855,7 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/moodle to 3.0.3 [wen 2016-04-10]
 	Updated devel/p5-EV to 4.22 [mef 2016-04-10]
 	Updated devel/p5-Event-RPC to 1.08 [mef 2016-04-10]
-	Updated devel/p5-ExtUtils-CBuilder to 28.02.24 [mef 2016-04-10]
+	Updated devel/p5-ExtUtils-CBuilder to 0.28.02.24 [mef 2016-04-10]
 	Updated devel/p5-ExtUtils-Depends to 0.405 [mef 2016-04-10]
 	Updated devel/p5-ExtUtils-F77 to 1.19 [mef 2016-04-10]
 	Updated devel/p5-ExtUtils-MakeMaker-CPANfile to 0.07 [mef 2016-04-10]
