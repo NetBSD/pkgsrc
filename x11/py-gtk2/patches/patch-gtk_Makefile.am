@@ -1,0 +1,18 @@
+$NetBSD: patch-gtk_Makefile.am,v 1.1 2016/04/11 07:50:32 dbj Exp $
+
+https://bugzilla.gnome.org/show_bug.cgi?id=646743
+
+--- gtk/Makefile.am.orig	2011-04-01 10:37:25.000000000 +0000
++++ gtk/Makefile.am
+@@ -9,6 +9,11 @@ INCLUDES = \
+ 	$(PYGOBJECT_CFLAGS) \
+ 	-I$(srcdir)/gtk
+ 
++if USE_QUARTZ
++# same as in gtk+/gdk/quartz/Makefile.am
++INCLUDES += "-xobjective-c"
++endif
++
+ # defs files
+ defsdir = $(pkgdatadir)/$(PLATFORM_VERSION)/defs
+ defs_DATA =

@@ -1,0 +1,54 @@
+$NetBSD: patch-configure,v 1.1 2016/04/11 07:50:32 dbj Exp $
+
+--- configure.orig	2011-04-01 10:41:02.000000000 +0000
++++ configure
+@@ -748,6 +748,8 @@ ac_subst_vars='am__EXEEXT_FALSE
+ am__EXEEXT_TRUE
+ LTLIBOBJS
+ LIBOBJS
++USE_QUARTZ_FALSE
++USE_QUARTZ_TRUE
+ BUILD_GTKUNIXPRINT_FALSE
+ BUILD_GTKUNIXPRINT_TRUE
+ GTKUNIXPRINT_LIBS
+@@ -14688,6 +14690,25 @@ case $gdk_target in
+         ;;
+ esac
+ 
++if test "x$gdk_target" = "xquartz"; then
++   if true; then
++  USE_QUARTZ_TRUE=
++  USE_QUARTZ_FALSE='#'
++else
++  USE_QUARTZ_TRUE='#'
++  USE_QUARTZ_FALSE=
++fi
++
++else
++   if false; then
++  USE_QUARTZ_TRUE=
++  USE_QUARTZ_FALSE='#'
++else
++  USE_QUARTZ_TRUE='#'
++  USE_QUARTZ_FALSE=
++fi
++
++fi
+ 
+ # Check whether --enable-numpy was given.
+ if test "${enable_numpy+set}" = set; then :
+@@ -15074,6 +15095,14 @@ if test -z "${BUILD_GTKUNIXPRINT_TRUE}" 
+   as_fn_error $? "conditional \"BUILD_GTKUNIXPRINT\" was never defined.
+ Usually this means the macro was only invoked conditionally." "$LINENO" 5
+ fi
++if test -z "${USE_QUARTZ_TRUE}" && test -z "${USE_QUARTZ_FALSE}"; then
++  as_fn_error $? "conditional \"USE_QUARTZ\" was never defined.
++Usually this means the macro was only invoked conditionally." "$LINENO" 5
++fi
++if test -z "${USE_QUARTZ_TRUE}" && test -z "${USE_QUARTZ_FALSE}"; then
++  as_fn_error $? "conditional \"USE_QUARTZ\" was never defined.
++Usually this means the macro was only invoked conditionally." "$LINENO" 5
++fi
+ 
+ : ${CONFIG_STATUS=./config.status}
+ ac_write_fail=0

@@ -1,0 +1,23 @@
+$NetBSD: patch-gtk_Makefile.in,v 1.1 2016/04/11 07:50:32 dbj Exp $
+
+Manually constructed to avoid having to rerun autoconf
+
+--- gtk/Makefile.in.orig	2011-04-01 10:41:04.000000000 +0000
++++ gtk/Makefile.in
+@@ -71,6 +71,7 @@ host_triplet = @host@
+ @BUILD_GTKUNIXPRINT_TRUE@am__append_32 = $(GTKUNIXPRINT_DEFS) $(GTKUNIXPRINT_TYPES_DEFS)
+ @PLATFORM_WIN32_TRUE@am__append_33 = -DPLATFORM_WIN32
+ @HAVE_GIO_TYPES_DEFS_TRUE@am__append_34 = --register $(PYGOBJECT_DEFSDIR)/gio-types.defs
++@USE_QUARTZ_TRUE@am__append_35 = "-xobjective-c"
+ subdir = gtk
+ DIST_COMMON = $(pkginclude_HEADERS) $(pygtk_PYTHON) \
+ 	$(srcdir)/Makefile.am $(srcdir)/Makefile.in
+@@ -366,7 +367,7 @@ EXTRA_DIST = gtk-extrafuncs.defs $(GDK_D
+ INCLUDES = \
+ 	$(PYTHON_INCLUDES) \
+ 	$(PYGOBJECT_CFLAGS) \
+-	-I$(srcdir)/gtk
++	-I$(srcdir)/gtk $(am__append_35)
+ 
+ 
+ # defs files
