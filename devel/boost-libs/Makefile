@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.41 2016/02/28 23:54:11 minskim Exp $
+# $NetBSD: Makefile,v 1.42 2016/04/11 19:01:47 ryoon Exp $
 
-PKGREVISION=		2
+PKGREVISION=		3
 BOOST_PACKAGE=		libs
 BOOST_COMMENT=		(binary libraries)
 BOOST_CONFIG=		installed

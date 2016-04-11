@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2015/10/10 01:57:56 ryoon Exp $
+# $NetBSD: Makefile,v 1.6 2016/04/11 19:01:39 ryoon Exp $
 
 .include "../../www/webkit1-gtk/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/webkitgtk/webkit-gtk3/}
-PKGREVISION=	16
+PKGREVISION=	17
 
 COMMENT=	GTK3 port of the WebKit browser engine (v1)
 
