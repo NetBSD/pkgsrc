@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2016/01/22 21:56:36 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.82 2016/04/11 04:22:33 dbj Exp $
 #
 
 DISTNAME=	pcb-20140316
@@ -53,7 +53,7 @@ CONFIGURE_ARGS+=	--with-gui=gtk
 .elif !empty(PKG_OPTIONS:Mbatch)
 CONFIGURE_ARGS+=	--with-gui=none
 .else
-PKG_FAIL_REASON=	Invalid options
+PKG_FAIL_REASON+=	Invalid options
 .endif
 
 # dbus is only needed if we are building a gui (lesstif/gtk)

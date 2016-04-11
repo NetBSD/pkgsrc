@@ -1,4 +1,4 @@
-# $NetBSD: terminfo.buildlink3.mk,v 1.6 2014/03/11 09:16:57 obache Exp $
+# $NetBSD: terminfo.buildlink3.mk,v 1.7 2016/04/11 04:22:34 dbj Exp $
 #
 # This Makefile fragment is meant to be included by packages that require
 # any terminfo implementation instead of one particular one.  The available
@@ -83,7 +83,7 @@ BUILDLINK_TRANSFORM+=		l:${_tcap_}:${BUILDLINK_LIBNAME.terminfo}
 .endif	# TERMINFO_BUILDLINK3_MK
 
 .if ${TERMINFO_TYPE} == "none"
-PKG_FAIL_REASON=	\
+PKG_FAIL_REASON+=	\
 	"${_TERMINFO_TYPE} is not an acceptable terminfo type for ${PKGNAME}."
 .elif ${TERMINFO_TYPE} == "terminfo"
 BUILDLINK_TREE+=		terminfo -terminfo
