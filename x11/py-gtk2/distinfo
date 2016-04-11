@@ -1,7 +1,11 @@
-$NetBSD: distinfo,v 1.29 2015/11/04 03:28:51 agc Exp $
+$NetBSD: distinfo,v 1.30 2016/04/11 07:50:32 dbj Exp $
 
 SHA1 (pygtk-2.24.0.tar.bz2) = 344e6a32a5e8c7e0aaeb807e0636a163095231c2
 RMD160 (pygtk-2.24.0.tar.bz2) = 33f597def646261483cbbf5491aeb27bf0d22ea6
 SHA512 (pygtk-2.24.0.tar.bz2) = 64f4344fcf7636e0b2016ffd5310250b5c02a1bf87e44aef39b5d4cf4a5fc50d27cb4f030d4c6802cff61fffb88dee7752821e3d8a4cd1c34dc3745d9ff2f0da
 Size (pygtk-2.24.0.tar.bz2) = 2361097 bytes
 SHA1 (patch-aa) = 5ea14628612cb204323ef6e169acb57a0887e737
+SHA1 (patch-configure) = 30ef4f05e737f7f29a841ebcff3595afb5a1dc2b
+SHA1 (patch-configure.ac) = f09ff6d8e2f8989a175b60ae288408a56d41f233
+SHA1 (patch-gtk_Makefile.am) = 50556ac7074c9156db574e4a60863ff00e638981
+SHA1 (patch-gtk_Makefile.in) = 4fed9e802bd0e306e5070cf2ac7e44c86715a3e7
