@@ -1,4 +1,4 @@
-# $NetBSD: readline.buildlink3.mk,v 1.4 2013/08/16 11:31:50 jperkin Exp $
+# $NetBSD: readline.buildlink3.mk,v 1.5 2016/04/11 04:22:34 dbj Exp $
 #
 # This Makefile fragment is meant to be included by packages that require
 # any readline implementation instead of one particular one.  The available
@@ -72,7 +72,7 @@ _PKG_USE_READLINE=	yes
 .endif	# EDITLINEREADLINE_BUILDLINK3_MK
 
 .if ${READLINE_TYPE} == "none"
-PKG_FAIL_REASON=	\
+PKG_FAIL_REASON+=	\
 	"${_READLINE_TYPE} is not an acceptable readline type for ${PKGNAME}."
 .elif ${READLINE_TYPE} == "editline"
 .  include "../../devel/editline/buildlink3.mk"

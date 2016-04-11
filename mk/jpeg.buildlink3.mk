@@ -1,4 +1,4 @@
-# $NetBSD: jpeg.buildlink3.mk,v 1.2 2015/11/23 00:49:26 mef Exp $
+# $NetBSD: jpeg.buildlink3.mk,v 1.3 2016/04/11 04:22:34 dbj Exp $
 #
 # This Makefile fragment is meant to be included by packages that
 # require a libjpeg implementation.  jpeg.buildlink3.mk will:
@@ -45,7 +45,7 @@ BUILD_DEFS+=		JPEG_DEFAULT
 BUILD_DEFS_EFFECTS+=	JPEGBASE JPEG_TYPE
 
 .if ${JPEG_TYPE} == "none"
-PKG_FAIL_REASON=	\
+PKG_FAIL_REASON+=	\
 	"${_JPEG_TYPE} is not an acceptable libjpeg type for ${PKGNAME}."
 .elif ${JPEG_TYPE} == "jpeg"
 .  include "../../graphics/jpeg/buildlink3.mk"
