@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.54 2016/03/05 11:29:31 jperkin Exp $
+# $NetBSD: Makefile,v 1.55 2016/04/11 19:02:04 ryoon Exp $
 
 DISTNAME=	open-vm-tools-2008.08.08-109361
 PKGNAME=	open-vm-tools-2008.08.08.109361
-PKGREVISION=	43
+PKGREVISION=	44
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=open-vm-tools/}
 

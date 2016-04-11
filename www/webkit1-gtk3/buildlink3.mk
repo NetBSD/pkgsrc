@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2015/06/07 14:14:05 youri Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2016/04/11 19:01:39 ryoon Exp $
 
 BUILDLINK_TREE+=	webkit-gtk3
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	webkit-gtk3
 WEBKIT_GTK3_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.webkit-gtk3+=	webkit-gtk3>=1.4.2
-BUILDLINK_ABI_DEPENDS.webkit-gtk3+=	webkit-gtk3>=1.10.2nb15
+BUILDLINK_ABI_DEPENDS.webkit-gtk3+=	webkit-gtk3>=1.10.2nb17
 BUILDLINK_PKGSRCDIR.webkit-gtk3?=	../../www/webkit1-gtk3
 
 .include "../../databases/sqlite3/buildlink3.mk"

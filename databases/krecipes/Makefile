@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.58 2016/03/05 11:28:11 jperkin Exp $
+# $NetBSD: Makefile,v 1.59 2016/04/11 19:01:45 ryoon Exp $
 #
 
 DISTNAME=		krecipes-1.0-beta1
 PKGNAME=		krecipes-1.0beta1
-PKGREVISION=		42
+PKGREVISION=		43
 CATEGORIES=		databases kde
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=krecipes/}
 

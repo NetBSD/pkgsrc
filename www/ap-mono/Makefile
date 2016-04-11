@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2015/10/10 01:58:20 ryoon Exp $
+# $NetBSD: Makefile,v 1.33 2016/04/11 19:02:05 ryoon Exp $
 
 DISTNAME=	mod_mono-3.12
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://download.mono-project.com/sources/mod_mono/
 
