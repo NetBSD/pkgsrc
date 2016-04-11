@@ -1,4 +1,4 @@
-# $NetBSD: gem.mk,v 1.35 2015/03/08 14:41:12 taca Exp $
+# $NetBSD: gem.mk,v 1.36 2016/04/11 04:22:34 dbj Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -220,11 +220,11 @@ GEM_CLEANBUILD?=		ext/*
 GEM_CLEANBUILD_EXTENSIONS+=	*.out *.log
 
 .if !empty(GEM_CLEANBUILD:M/*) || !empty(GEM_CLEANBUILD:M*../*)
-PKG_FAIL_REASON=	"GEM_CLEANBUILD must be relative to "${PREFIX}/${GEM_LIBDIR:Q}"."
+PKG_FAIL_REASON+=	"GEM_CLEANBUILD must be relative to "${PREFIX}/${GEM_LIBDIR:Q}"."
 .endif
 
 .if !empty(GEM_CLEANBUILD_EXTENSIONS:M/*) || !empty(GEM_CLEANBUILD_EXTENSIONS:M*../*)
-PKG_FAIL_REASON=	"GEM_CLEANBUILD_EXTENSIONS must be relative to "${PREFIX}/${GEM_LIBDIR:Q}"."
+PKG_FAIL_REASON+=	"GEM_CLEANBUILD_EXTENSIONS must be relative to "${PREFIX}/${GEM_LIBDIR:Q}"."
 .endif
 
 .PHONY: gem-build
