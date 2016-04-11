@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1437 2016/04/11 06:45:24 leot Exp $
+$NetBSD: CHANGES-2016,v 1.1438 2016/04/11 06:45:41 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1889,3 +1889,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated x11/gtk3 to 3.20.2 [prlw1 2016-04-10]
 	Updated fonts/harfbuzz to 1.2.6 [prlw1 2016-04-10]
 	Updated www/webkit24-gtk to 2.4.11 [leot 2016-04-11]
+	Updated www/webkit24-gtk3 to 2.4.11 [leot 2016-04-11]
