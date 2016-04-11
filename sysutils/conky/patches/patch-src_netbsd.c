@@ -1,10 +1,10 @@
-$NetBSD: patch-src_netbsd.c,v 1.2 2012/11/23 12:30:38 joerg Exp $
+$NetBSD: patch-src_netbsd.c,v 1.3 2016/04/11 01:49:28 riastradh Exp $
 
 Many fixes and addons for conky to work on NetBSD.
 
 --- src/netbsd.c.orig	2012-05-03 21:08:27.000000000 +0000
 +++ src/netbsd.c
-@@ -30,337 +30,795 @@
+@@ -30,337 +30,805 @@
  
  #include "netbsd.h"
  #include "net_stat.h"
@@ -123,10 +123,9 @@ Many fixes and addons for conky to work on NetBSD.
  
 -	sep = (struct swapent *) malloc(n * (sizeof(*sep)));
 +	info.memmax = uvmexp.npages * uvmexp.pagesize / 1024;
-+	info.memfree = uvmexp.inactive * uvmexp.pagesize / 1024;
- 
--	if (sep == NULL) {
--		warn("memory allocation failed");
++	info.memfree = uvmexp.free * uvmexp.pagesize / 1024;
++	info.memeasyfree = uvmexp.inactive * uvmexp.pagesize / 1024;
++
 +	info.swapmax = uvmexp.swpages * uvmexp.pagesize / 1024;
 +	info.swapfree = (uvmexp.swpages - uvmexp.swpginuse) * \
 +		uvmexp.pagesize / 1024;
@@ -135,10 +134,21 @@ Many fixes and addons for conky to work on NetBSD.
 +	info.cached = uvmexp.execpages * uvmexp.pagesize / 1024;
 +
 +	info.mem = info.memmax - info.memfree;
-+	info.memeasyfree = info.memfree;
 +	info.bufmem = info.cached + info.buffers;
 +	info.swap = info.swapmax - info.swapfree;
 +
++	/*
++	 * Counter-adjust for the adjustment in update_stuff in common.c so
++	 * that memeasyfree is the inactive memory.  Since inactive memory
++	 * partially overlaps with buffer memory, but the size of the
++	 * overlap is not measured, attempting to split it into non-bufmem
++	 * and bufmem parts, as common.c does, can't work.  So instead we
++	 * report inactive memory as memeasyfree.
++	 */
++	info.memeasyfree -= info.bufmem;
+ 
+-	if (sep == NULL) {
+-		warn("memory allocation failed");
 +	return 0;
 +}
 +
@@ -480,11 +490,17 @@ Many fixes and addons for conky to work on NetBSD.
 +	double v[3];
 +
 +	getloadavg(v, 3);
-+
+ 
+-		ns->recv += (ifnet.if_ibytes - ns->last_read_recv);
+-		ns->last_read_recv = ifnet.if_ibytes;
+-		ns->trans += (ifnet.if_obytes - ns->last_read_trans);
+-		ns->last_read_trans = ifnet.if_obytes;
 +	info.loadavg[0] = (float) v[0];
 +	info.loadavg[1] = (float) v[1];
 +	info.loadavg[2] = (float) v[2];
-+
+ 
+-		ns->recv_speed = (ns->recv - last_recv) / delta;
+-		ns->trans_speed = (ns->trans - last_trans) / delta;
 +	return 0;
 +}
 +
@@ -503,20 +519,14 @@ Many fixes and addons for conky to work on NetBSD.
 +{
 +	return 1;
 +}
- 
--		ns->recv += (ifnet.if_ibytes - ns->last_read_recv);
--		ns->last_read_recv = ifnet.if_ibytes;
--		ns->trans += (ifnet.if_obytes - ns->last_read_trans);
--		ns->last_read_trans = ifnet.if_obytes;
++
 +/* void */
 +char
 +get_freq(char *p_client_buffer, size_t client_buffer_size,
 +	const char *p_format, int divisor, unsigned int cpu)
 +{
 +	int freq = cpu;
- 
--		ns->recv_speed = (ns->recv - last_recv) / delta;
--		ns->trans_speed = (ns->trans - last_trans) / delta;
++
 +	if (!p_client_buffer || client_buffer_size <= 0 || !p_format
 +		|| divisor <= 0) {
 +		return 0;
