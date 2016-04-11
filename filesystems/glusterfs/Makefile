@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.64 2016/04/02 03:33:51 manu Exp $
+# $NetBSD: Makefile,v 1.65 2016/04/11 19:01:51 ryoon Exp $
 
 DISTNAME=	glusterfs-3.7.10
 #PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	filesystems
 MASTER_SITES=	http://bits.gluster.org/pub/gluster/glusterfs/src/
 
