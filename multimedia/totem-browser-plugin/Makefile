@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2015/10/10 01:58:14 ryoon Exp $
+# $NetBSD: Makefile,v 1.45 2016/04/11 19:01:58 ryoon Exp $
 #
 
 .include "../../multimedia/totem/Makefile.common"
@@ -6,7 +6,7 @@
 DEPENDS+=	gst-plugins0.10-soup-[0-9]*:../../net/gst-plugins0.10-soup
 
 PKGNAME=	${DISTNAME:S/totem/totem-browser-plugin/}
-PKGREVISION=	37
+PKGREVISION=	38
 
 # override Makefile.common
 PLIST_SRC=      ${.CURDIR}/PLIST

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.41 2016/03/05 11:28:42 jperkin Exp $
+# $NetBSD: Makefile,v 1.42 2016/04/11 19:01:53 ryoon Exp $
 #
 
 DISTNAME=	ibus-qt-1.3.3-Source
 PKGNAME=	${DISTNAME:S/-Source//}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	inputmethod
 MASTER_SITES=	https://github.com/ibus/ibus-qt/releases/download/${PKGVERSION_NOREV}/
 
