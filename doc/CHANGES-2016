@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1440 2016/04/11 11:32:38 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.1441 2016/04/11 12:22:27 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1892,3 +1892,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/webkit24-gtk3 to 2.4.11 [leot 2016-04-11]
 	Updated databases/py-sqlalchemy to 1.0.12 [adam 2016-04-11]
 	Updated net/libtelnet to 0.21 [fhajny 2016-04-11]
+	Updated databases/postgresql-postgis2 to 2.2.2 [gdt 2016-04-11]
