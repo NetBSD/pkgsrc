@@ -1,4 +1,4 @@
-# $NetBSD: wxGTK.mk,v 1.1 2015/11/17 13:42:35 mef Exp $
+# $NetBSD: wxGTK.mk,v 1.2 2016/04/11 04:22:34 dbj Exp $
 #
 # This Makefile fragment is meant to be included by packages that
 # require a wxGTK library.  wxGTK.mk will:
@@ -49,7 +49,7 @@ BUILD_DEFS+=		WXGTK_DEFAULT
 BUILD_DEFS_EFFECTS+=	WXGTKBASE WXGTK_TYPE
 
 .if ${WXGTK_TYPE} == "none"
-PKG_FAIL_REASON=	\
+PKG_FAIL_REASON+=	\
 	"${_WXGTK_TYPE} is not an acceptable version of wxGTK for ${PKGNAME}."
 .elif ${WXGTK_TYPE} == "WXGTK28"
 .  include "../../x11/wxGTK28/buildlink3.mk"

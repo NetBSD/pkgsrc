@@ -1,4 +1,4 @@
-# $NetBSD: tex.buildlink3.mk,v 1.17 2006/10/01 14:53:30 rillig Exp $
+# $NetBSD: tex.buildlink3.mk,v 1.18 2016/04/11 04:22:34 dbj Exp $
 #
 # This file is included by packages that need a TeX package to work.
 #
@@ -88,7 +88,7 @@ _TEX_PKGSRCDIR=	${BUILDLINK_PKGSRCDIR.teTeX3}
 .endif	# TEX_BUILDLINK3_MK
 
 .if ${TEX_TYPE} == "none"
-PKG_FAIL_REASON=	\
+PKG_FAIL_REASON+=	\
 	"${_TEX_TYPE} is not an acceptable (${TEX_ACCEPTED})\
 	    TeX version for ${PKGNAME}."
 .else

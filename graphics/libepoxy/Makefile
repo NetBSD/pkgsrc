@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2015/11/30 14:36:35 tnn Exp $
+# $NetBSD: Makefile,v 1.16 2016/04/11 04:22:34 dbj Exp $
 
 DISTNAME=	libepoxy-1.3.1
 PKGREVISION=	3
@@ -49,7 +49,7 @@ PLIST.egl=	yes
 BUILD_GLX=	no
 BUILD_EGL=	no
 .  if !(${OPSYS} == "Darwin" && ${X11_TYPE} == "native")
-PKG_FAIL_REASON=	"The x11 option must be enabled on this platform/configuration."
+PKG_FAIL_REASON+=	"The x11 option must be enabled on this platform/configuration."
 .  endif
 .endif
 
