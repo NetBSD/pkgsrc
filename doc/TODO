@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15694 2016/04/11 14:48:23 mef Exp $
+$NetBSD: TODO,v 1.15695 2016/04/11 23:47:58 mef Exp $
 
 Suggested new packages
 ======================
@@ -611,7 +611,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dnssec-tools-2.2
 	o doclifter-2.16
 	o dolphin-4.0.2
-	o doxgen-1.8.11
+	o doxygen-1.8.11
 	o dpkg-1.18.4
 	o drivel-3.0.5
 	o dropbear-2016.72
