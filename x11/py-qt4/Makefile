@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.80 2016/03/05 11:29:47 jperkin Exp $
+# $NetBSD: Makefile,v 1.81 2016/04/11 04:05:05 dbj Exp $
 
 PKGNAME=	${PYPKGPREFIX}-qt4-${PYQT_VERSION}
 PYQT_VERSION=	4.11.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11 python
 #MASTER_SITES=	http://www.riverbankcomputing.com/static/Downloads/PyQt4/
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyqt/}
@@ -77,6 +77,17 @@ CONFIGURE_ARGS+=	--verbose
 do-configure:
 	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
 		${PYTHONBIN} configure.py ${CONFIGURE_ARGS})
+
+.if !empty(PYVERSSUFFIX:M2*)
+UIC_PORT_REMOVE=port_v3
+.endif
+.if !empty(PYVERSSUFFIX:M3*)
+UIC_PORT_REMOVE=port_v2
+.endif
+
+post-install:
+	rm -rf ${DESTDIR}${PREFIX}/${PYSITELIB}/PyQt4/uic/${UIC_PORT_REMOVE}
+	${PY_COMPILE_ALL} ${DESTDIR}${PREFIX}/${PYSITELIB}/PyQt4
 
 .include "../../x11/py-sip/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
