@@ -1,4 +1,4 @@
-# $NetBSD: plist-man.awk,v 1.10 2015/10/07 09:56:14 jperkin Exp $
+# $NetBSD: plist-man.awk,v 1.11 2016/04/11 12:29:53 jperkin Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -129,11 +129,12 @@ BEGIN {
 }
 
 ###
-### Append ".gz" to the end of man page entries if compressed pages are
-### requested.
+### Fixup catman entries to use section suffixes if required.
 ###
-(MANZ ~ /[yY][eE][sS]/) && /^[^@]/ && $0 ~ "^([^/]*/)+" CATORMAN_REGEX "$" {
-	$0 = $0 ".gz"
+(CATMAN_SECTION_SUFFIX ~ /[yY][eE][sS]/)&& /^[^@]/ && $0 ~ "^man/([^/]*/)?" CATPAGE_REGEX {
+	n = split($0, components, "/")
+	sub("^cat", "", components[n-1])
+	sub("0$", components[n-1], $0)
 }
 
 ###
@@ -144,10 +145,9 @@ BEGIN {
 }
 
 ###
-### Fixup catman entries to use section suffixes if required.
+### Append ".gz" to the end of man page entries if compressed pages are
+### requested.
 ###
-(CATMAN_SECTION_SUFFIX ~ /[yY][eE][sS]/)&& /^[^@]/ && $0 ~ "^man/([^/]*/)?" CATPAGE_REGEX {
-	n = split($0, components, "/")
-	sub("^cat", "", components[n-1])
-	sub("0$", components[n-1], $0)
+(MANZ ~ /[yY][eE][sS]/) && /^[^@]/ && $0 ~ "^([^/]*/)+" CATORMAN_REGEX "$" {
+	$0 = $0 ".gz"
 }
