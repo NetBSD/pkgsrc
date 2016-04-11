@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1442 2016/04/11 12:37:57 jperkin Exp $
+$NetBSD: CHANGES-2016,v 1.1443 2016/04/11 12:48:48 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1894,3 +1894,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/libtelnet to 0.21 [fhajny 2016-04-11]
 	Updated databases/postgresql-postgis2 to 2.2.2 [gdt 2016-04-11]
 	Updated pkgtools/bootstrap-mk-files to 20160411 [jperkin 2016-04-11]
+	Updated sysutils/cfengine3 to 3.7.3 [fhajny 2016-04-11]
