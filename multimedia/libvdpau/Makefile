@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/01/04 09:38:29 dholland Exp $
+# $NetBSD: Makefile,v 1.9 2016/04/11 04:22:34 dbj Exp $
 #
 
 DISTNAME=	libvdpau-0.5
@@ -34,7 +34,7 @@ post-install:
 
 .include "available.mk"
 .if ${VDPAU_AVAILABLE} == no
-PKG_SKIP_REASON=	"VDPAU is not available on this platform"
+PKG_SKIP_REASON+=	"VDPAU is not available on this platform"
 .endif
 
 .include "../../x11/libX11/buildlink3.mk"

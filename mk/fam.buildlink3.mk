@@ -1,4 +1,4 @@
-# $NetBSD: fam.buildlink3.mk,v 1.7 2009/03/17 14:45:19 jmcneill Exp $
+# $NetBSD: fam.buildlink3.mk,v 1.8 2016/04/11 04:22:34 dbj Exp $
 #
 # This Makefile fragment is meant to be included by packages that
 # require a FAM implementation.  fam.buildlink3.mk will:
@@ -50,7 +50,7 @@ BUILD_DEFS_EFFECTS+=	FAMBASE FAM_TYPE
 FAM_SERVER?=	yes
 
 .if ${FAM_TYPE} == "none"
-PKG_FAIL_REASON=	\
+PKG_FAIL_REASON+=	\
 	"${_FAM_TYPE} is not an acceptable FAM type for ${PKGNAME}."
 .elif ${FAM_TYPE} == "fam"
 .  include "../../sysutils/fam/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: gcc.mk,v 1.166 2016/03/11 23:54:09 khorben Exp $
+# $NetBSD: gcc.mk,v 1.167 2016/04/11 04:22:34 dbj Exp $
 #
 # This is the compiler definition for the GNU Compiler Collection.
 #
@@ -686,7 +686,7 @@ _NEED_NEWER_GCC!=	\
 .endif
 .if !empty(_USE_PKGSRC_GCC:M[yY][eE][sS]) && \
     !empty(_NEED_NEWER_GCC:M[yY][eE][sS])
-PKG_FAIL_REASON=	"Unable to satisfy dependency: ${_GCC_DEPENDS}"
+PKG_FAIL_REASON+=	"Unable to satisfy dependency: ${_GCC_DEPENDS}"
 .endif
 
 # GNU ld option used to set the rpath
@@ -922,7 +922,7 @@ PREPEND_PATH+=	${_GCC_DIR}/bin
 .    elif !empty(CC_VERSION:Mgcc-5.*)
 .      include "../../lang/gcc5-libs/buildlink3.mk"
 .    else
-PKG_FAIL_REASON=	"No USE_PKGSRC_GCC_RUNTIME support for ${CC_VERSION}"
+PKG_FAIL_REASON+=	"No USE_PKGSRC_GCC_RUNTIME support for ${CC_VERSION}"
 .    endif
 .  endif
 .endif

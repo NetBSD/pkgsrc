@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2014/08/01 19:18:39 schmonz Exp $
+# $NetBSD: options.mk,v 1.4 2016/04/11 04:22:33 dbj Exp $
 #
 PKG_OPTIONS_VAR=	PKG_OPTIONS.git
 PKG_SUPPORTED_OPTIONS=	python apple-common-crypto
@@ -26,7 +26,7 @@ CONFIGURE_ARGS+=	--without-python
 
 .if !empty(PKG_OPTIONS:Mapple-common-crypto)
 .  if !empty(MACHINE_PLATFORM:MDarwin-[0-8].*-*)
-PKG_FAIL_REASON=	"apple-common-crypto not available on this system"
+PKG_FAIL_REASON+=	"apple-common-crypto not available on this system"
 .  endif
 CONFIGURE_ARGS+=	--without-openssl
 .else
