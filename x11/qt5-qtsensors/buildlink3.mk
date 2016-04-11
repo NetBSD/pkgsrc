@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2016/03/05 11:28:01 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2016/04/11 19:01:41 ryoon Exp $
 
 BUILDLINK_TREE+=	qt5-qtsensors
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	qt5-qtsensors
 QT5_QTSENSORS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.qt5-qtsensors+=	qt5-qtsensors>=5.5.1
-BUILDLINK_ABI_DEPENDS.qt5-qtsensors+=	qt5-qtsensors>=5.5.1nb2
+BUILDLINK_ABI_DEPENDS.qt5-qtsensors+=	qt5-qtsensors>=5.5.1nb3
 BUILDLINK_PKGSRCDIR.qt5-qtsensors?=	../../x11/qt5-qtsensors
 
 BUILDLINK_INCDIRS.qt5-qtsensors+=	qt5/include
