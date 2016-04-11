@@ -1,0 +1,4 @@
+libtelnet provides safe and correct handling of the core TELNET
+protocol. In addition to the base TELNET protocol, libtelnet also
+implements the Q method of TELNET option negotiation. libtelnet
+can be used for writing servers, clients, or proxies.
