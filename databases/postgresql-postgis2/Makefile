@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2016/03/13 21:40:22 fhajny Exp $
+# $NetBSD: Makefile,v 1.18 2016/04/11 12:22:02 gdt Exp $
 
-DISTNAME=	postgis-2.2.1
+DISTNAME=	postgis-2.2.2
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	databases geography
 MASTER_SITES=	http://download.osgeo.org/postgis/source/
 
@@ -60,6 +59,7 @@ SUBST_STAGE.paths=	pre-configure
 INSTALLATION_DIRS=	${DOCDIR} ${DOCDIR}/images ${PKGMANDIR}/man1
 
 REPLACE_PERL+=		utils/postgis_restore.pl.in
+REPLACE_PERL+=		utils/create_spatial_ref_sys_config_dump.pl
 #MAKE_ENV+=		PERL5=${PERL5:Q}
 
 INSTALL_ENV+=		mkinstalldirs=${INSTALL_DATA_DIR:Q}
