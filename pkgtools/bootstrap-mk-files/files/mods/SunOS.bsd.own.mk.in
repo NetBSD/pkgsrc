@@ -1,4 +1,4 @@
-#	$NetBSD: SunOS.bsd.own.mk.in,v 1.2 2015/08/31 09:03:19 jperkin Exp $
+#	$NetBSD: SunOS.bsd.own.mk.in,v 1.3 2016/04/11 12:37:48 jperkin Exp $
 
 .if !defined(_BSD_OWN_MK_)
 _BSD_OWN_MK_=1
@@ -220,7 +220,11 @@ PRINTOBJDIR=	printf "xxx: .MAKE\n\t@echo \$${.OBJDIR}\n" | ${MAKE} -B -s -f-
 # The NOxxx variables should only be used by Makefiles.
 #
 
+.if exists(/usr/bin/mandoc)
+MKCATPAGES?=no
+.else
 MKCATPAGES?=yes
+.endif
 
 .if defined(NODOC)
 MKDOC=no
