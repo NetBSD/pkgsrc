@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1441 2016/04/11 12:22:27 gdt Exp $
+$NetBSD: CHANGES-2016,v 1.1442 2016/04/11 12:37:57 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1893,3 +1893,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/py-sqlalchemy to 1.0.12 [adam 2016-04-11]
 	Updated net/libtelnet to 0.21 [fhajny 2016-04-11]
 	Updated databases/postgresql-postgis2 to 2.2.2 [gdt 2016-04-11]
+	Updated pkgtools/bootstrap-mk-files to 20160411 [jperkin 2016-04-11]
