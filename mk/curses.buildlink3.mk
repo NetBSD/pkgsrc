@@ -1,4 +1,4 @@
-# $NetBSD: curses.buildlink3.mk,v 1.22 2015/02/04 16:35:32 pho Exp $
+# $NetBSD: curses.buildlink3.mk,v 1.23 2016/04/11 04:22:34 dbj Exp $
 #
 # This Makefile fragment is meant to be included by packages that require
 # any curses implementation instead of one particular one.  The available
@@ -95,7 +95,7 @@ buildlink-curses-ncurses-h:
 .endif	# CURSES_BUILDLINK3_MK
 
 .if ${CURSES_TYPE} == "none"
-PKG_FAIL_REASON=	\
+PKG_FAIL_REASON+=	\
 	"${_CURSES_TYPE} is not an acceptable curses type for ${PKGNAME}."
 .elif ${CURSES_TYPE} == "curses"
 .  include "curses.builtin.mk"

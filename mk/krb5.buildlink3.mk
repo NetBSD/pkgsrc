@@ -1,4 +1,4 @@
-# $NetBSD: krb5.buildlink3.mk,v 1.12 2013/08/16 12:11:17 jperkin Exp $
+# $NetBSD: krb5.buildlink3.mk,v 1.13 2016/04/11 04:22:34 dbj Exp $
 #
 # This Makefile fragment is meant to be included by packages that
 # require a Kerberos 5 implementation.  krb5.buildlink3.mk will:
@@ -59,7 +59,7 @@ CRYPTO+=	uses Kerberos encryption code
 .endif	# KRB5_BUILDLINK3_MK
 
 .if ${KRB5_TYPE} == "none"
-PKG_FAIL_REASON=	\
+PKG_FAIL_REASON+=	\
 	"${_KRB5_TYPE} is not an acceptable Kerberos 5 type for ${PKGNAME}."
 .elif ${KRB5_TYPE} == "heimdal"
 .  include "../../security/heimdal/buildlink3.mk"

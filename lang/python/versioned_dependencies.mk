@@ -1,4 +1,4 @@
-# $NetBSD: versioned_dependencies.mk,v 1.21 2015/07/12 21:42:23 rodent Exp $
+# $NetBSD: versioned_dependencies.mk,v 1.22 2016/04/11 04:22:34 dbj Exp $
 #
 # This file determines which separate distribution of a Python
 # package is used as dependency, depending on the Python version
@@ -51,6 +51,6 @@ DEPENDS:=	${DEPENDS} ${PYPKGPREFIX}-${pkg}-[0-9]*:../../${dir}
 .endif
 .endfor
 .if ${_PKG_MATCHED} == "no"
-PKG_FAIL_REASON=	"${pkg} unsupported in PYTHON_VERSIONED_DEPENDENCIES"
+PKG_FAIL_REASON+=	"${pkg} unsupported in PYTHON_VERSIONED_DEPENDENCIES"
 .endif
 .endfor
