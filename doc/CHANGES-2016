@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1443 2016/04/11 12:48:48 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.1444 2016/04/11 14:20:42 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1895,3 +1895,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/postgresql-postgis2 to 2.2.2 [gdt 2016-04-11]
 	Updated pkgtools/bootstrap-mk-files to 20160411 [jperkin 2016-04-11]
 	Updated sysutils/cfengine3 to 3.7.3 [fhajny 2016-04-11]
+	Updated archivers/p7zip to 15.14.1 [ryoon 2016-04-11]
