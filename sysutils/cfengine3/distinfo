@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.9 2015/12/08 17:15:21 fhajny Exp $
+$NetBSD: distinfo,v 1.10 2016/04/11 12:48:37 fhajny Exp $
 
-SHA1 (cfengine-3.7.2.tar.gz) = 9f454db3ce9c86c6c230bfd5bba534970ada7893
-RMD160 (cfengine-3.7.2.tar.gz) = 83d48c484e3a8132fa0bf331402aa8305dab125c
-SHA512 (cfengine-3.7.2.tar.gz) = 8b4d0dac81cb3734489e3e1d60a034c3074d710f35a6c2ab35cffe9c066a63c3214b062ef4116ff3ef46461c8ce53ebb02c6513cb49f9edf2c9a81f4679066e6
-Size (cfengine-3.7.2.tar.gz) = 2114764 bytes
-SHA1 (cfengine-masterfiles-3.7.2.tar.gz) = 8b00f9e81815890220d7e8ad5209cdf1fc04b07d
-RMD160 (cfengine-masterfiles-3.7.2.tar.gz) = 2f67dd56f8b82575c799a1d9a83b44bd67d3bc38
-SHA512 (cfengine-masterfiles-3.7.2.tar.gz) = e2a6ceba4db90e6b2cd4f30fc2c276012660aca8a76fbd5bbc3debd8e6226cd5f8f270f5936b38e1ccd36cee706fd697bfde5c96739bde38d8c11f4ef3f0f86b
-Size (cfengine-masterfiles-3.7.2.tar.gz) = 449943 bytes
+SHA1 (cfengine-3.7.3.tar.gz) = a732d0ef60213b352602cb7d690fc06376b7ae02
+RMD160 (cfengine-3.7.3.tar.gz) = 6d482b17916e4ddaaa32dee914865cedec3b3231
+SHA512 (cfengine-3.7.3.tar.gz) = 28d02db5b81d05e257d5653b7bc306f31b9b9c5460cf381b16142e4f640ad8ff88aea58902db79a0460084c57ef257917ac324b1ac1b3777e3c4a4d4dac5f5c1
+Size (cfengine-3.7.3.tar.gz) = 2124667 bytes
+SHA1 (cfengine-masterfiles-3.7.3.tar.gz) = d2426074720f496ac87e2f86bbd8f4f8aa15c5ae
+RMD160 (cfengine-masterfiles-3.7.3.tar.gz) = 2c61521fd622182a654f5cb4d0ed51243bc950fb
+SHA512 (cfengine-masterfiles-3.7.3.tar.gz) = 27bd25b2eac3e2d1f74952685055f307da61f5371531481f1c56cb124addc8373f2c1f529d566824b327b92c056d2529fda35190110e18ccc0d368bbbee4cb2f
+Size (cfengine-masterfiles-3.7.3.tar.gz) = 451097 bytes
 SHA1 (patch-ext_Makefile.in) = b0f8c773b3351c949fe33028a3122c5673d8778d
