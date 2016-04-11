@@ -1,4 +1,4 @@
-# $NetBSD: tools.Darwin.mk,v 1.55 2015/02/01 08:48:56 obache Exp $
+# $NetBSD: tools.Darwin.mk,v 1.56 2016/04/11 04:49:41 dbj Exp $
 #
 # System-supplied tools for the Darwin (Mac OS X) operating system.
 
@@ -101,6 +101,7 @@ TOOLS_PLATFORM.shlock?=		/usr/bin/shlock
 TOOLS_PLATFORM.sleep?=		/bin/sleep
 .if exists(/usr/bin/soelim)
 TOOLS_PLATFORM.soelim?=		/usr/bin/soelim
+TOOLS_PLATFORM.gsoelim?=	/usr/bin/soelim
 .endif
 TOOLS_PLATFORM.sort?=		/usr/bin/sort
 TOOLS_PLATFORM.strip?=		/usr/bin/strip
