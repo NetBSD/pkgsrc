@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2015/12/12 09:21:27 prlw1 Exp $
+$NetBSD: distinfo,v 1.11 2016/04/12 16:12:55 prlw1 Exp $
 
-SHA1 (gedit-3.16.4.tar.xz) = afc2953a3ba313ca3d2094ffa52f58fe99db2496
-RMD160 (gedit-3.16.4.tar.xz) = 56ddf0c073a95cdcd62c047c89f75352aa2700a6
-SHA512 (gedit-3.16.4.tar.xz) = 6320e11f6387b317789f6af4bdbb54350af89bd00c1443b26e68afdacf87c672ca74caf50c9ead80f4395a826d07a8da640e5d5ae89f71bccf75da683f420a81
-Size (gedit-3.16.4.tar.xz) = 2925984 bytes
+SHA1 (gedit-3.20.1.tar.xz) = 702ca2d3a47a75147ab7cb263afbb5dea2e4e96a
+RMD160 (gedit-3.20.1.tar.xz) = 69f9d81d26ff4a1a41d6f0ec2c043f22951af9f8
+SHA512 (gedit-3.20.1.tar.xz) = c721aaa4e54a248ca4b8da68bb9e011bb440a337a0f1b875b7dad3836fc3340c5fd3c33e6933e6b0d06affa2787358eb2e43f3444732aef57d4c56de3addaf0c
+Size (gedit-3.20.1.tar.xz) = 3158924 bytes
