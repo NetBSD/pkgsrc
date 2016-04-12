@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1454 2016/04/12 16:33:05 adam Exp $
+$NetBSD: CHANGES-2016,v 1.1455 2016/04/12 16:33:21 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1906,3 +1906,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added textproc/gspell version 1.0.1 [prlw1 2016-04-12]
 	Updated editors/gedit3 to 3.20.1 [prlw1 2016-04-12]
 	Updated graphics/py-Pillow to 3.1.2 [adam 2016-04-12]
+	Updated www/liferea to 1.10.19 [leot 2016-04-12]
