@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2015/06/17 19:30:48 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.7 2016/04/12 16:12:55 prlw1 Exp $
 bin/gedit
 bin/gnome-text-editor
 include/gedit-3.14/gedit/gedit-app-activatable.h
@@ -149,7 +149,6 @@ share/appdata/org.gnome.gedit.appdata.xml
 share/applications/org.gnome.gedit.desktop
 share/dbus-1/services/org.gnome.gedit.service
 share/gedit/gir-1.0/Gedit-3.0.gir
-share/gedit/logo/gedit-logo.png
 share/gedit/plugins/externaltools/tools/build
 share/gedit/plugins/externaltools/tools/open-terminal-here
 share/gedit/plugins/externaltools/tools/remove-trailing-spaces
@@ -178,6 +177,7 @@ share/gedit/plugins/snippets/markdown.xml
 share/gedit/plugins/snippets/perl.xml
 share/gedit/plugins/snippets/php.xml
 share/gedit/plugins/snippets/python.xml
+share/gedit/plugins/snippets/rpmspec.xml
 share/gedit/plugins/snippets/ruby.xml
 share/gedit/plugins/snippets/sh.xml
 share/gedit/plugins/snippets/snippets.xml
@@ -193,9 +193,13 @@ share/glib-2.0/schemas/org.gnome.gedit.plugins.filebrowser.gschema.xml
 share/glib-2.0/schemas/org.gnome.gedit.plugins.pythonconsole.gschema.xml
 share/glib-2.0/schemas/org.gnome.gedit.plugins.time.enums.xml
 share/glib-2.0/schemas/org.gnome.gedit.plugins.time.gschema.xml
+share/gtk-doc/html/gedit/GeditApp.html
 share/gtk-doc/html/gedit/GeditAppActivatable.html
+share/gtk-doc/html/gedit/GeditDocument.html
+share/gtk-doc/html/gedit/GeditEncodingsComboBox.html
 share/gtk-doc/html/gedit/GeditMessage.html
 share/gtk-doc/html/gedit/GeditMessageBus.html
+share/gtk-doc/html/gedit/GeditStatusbar.html
 share/gtk-doc/html/gedit/GeditViewActivatable.html
 share/gtk-doc/html/gedit/GeditWindowActivatable.html
 share/gtk-doc/html/gedit/annotation-glossary.html
@@ -204,13 +208,9 @@ share/gtk-doc/html/gedit/api-index-deprecated.html
 share/gtk-doc/html/gedit/api-index-full.html
 share/gtk-doc/html/gedit/ch01.html
 share/gtk-doc/html/gedit/gedit-GeditCommands.html
-share/gtk-doc/html/gedit/gedit-gedit-app.html
 share/gtk-doc/html/gedit/gedit-gedit-debug.html
-share/gtk-doc/html/gedit/gedit-gedit-document.html
-share/gtk-doc/html/gedit/gedit-gedit-encodings-combo-box.html
 share/gtk-doc/html/gedit/gedit-gedit-menu-extension.html
 share/gtk-doc/html/gedit/gedit-gedit-progress-info-bar.html
-share/gtk-doc/html/gedit/gedit-gedit-statusbar.html
 share/gtk-doc/html/gedit/gedit-gedit-tab.html
 share/gtk-doc/html/gedit/gedit-gedit-utils.html
 share/gtk-doc/html/gedit/gedit-gedit-view.html
@@ -218,7 +218,6 @@ share/gtk-doc/html/gedit/gedit-gedit-window.html
 share/gtk-doc/html/gedit/gedit.devhelp2
 share/gtk-doc/html/gedit/home.png
 share/gtk-doc/html/gedit/index.html
-share/gtk-doc/html/gedit/index.sgml
 share/gtk-doc/html/gedit/left-insensitive.png
 share/gtk-doc/html/gedit/left.png
 share/gtk-doc/html/gedit/object-tree.html
@@ -272,7 +271,6 @@ share/help/C/gedit/gedit-tab-groups.page
 share/help/C/gedit/gedit-tabs-moving.page
 share/help/C/gedit/gedit-tabs.page
 share/help/C/gedit/gedit-undo-recent-action.page
-share/help/C/gedit/gedit-view-open-files-in-sidepane.page
 share/help/C/gedit/index.page
 share/help/C/gedit/legal.xml
 share/help/ar/gedit/figures/gedit-html-snippet.png
@@ -320,7 +318,6 @@ share/help/ar/gedit/gedit-tab-groups.page
 share/help/ar/gedit/gedit-tabs-moving.page
 share/help/ar/gedit/gedit-tabs.page
 share/help/ar/gedit/gedit-undo-recent-action.page
-share/help/ar/gedit/gedit-view-open-files-in-sidepane.page
 share/help/ar/gedit/index.page
 share/help/ar/gedit/legal.xml
 share/help/bg/gedit/figures/gedit-html-snippet.png
@@ -368,7 +365,6 @@ share/help/bg/gedit/gedit-tab-groups.page
 share/help/bg/gedit/gedit-tabs-moving.page
 share/help/bg/gedit/gedit-tabs.page
 share/help/bg/gedit/gedit-undo-recent-action.page
-share/help/bg/gedit/gedit-view-open-files-in-sidepane.page
 share/help/bg/gedit/index.page
 share/help/bg/gedit/legal.xml
 share/help/ca/gedit/figures/gedit-html-snippet.png
@@ -416,7 +412,6 @@ share/help/ca/gedit/gedit-tab-groups.page
 share/help/ca/gedit/gedit-tabs-moving.page
 share/help/ca/gedit/gedit-tabs.page
 share/help/ca/gedit/gedit-undo-recent-action.page
-share/help/ca/gedit/gedit-view-open-files-in-sidepane.page
 share/help/ca/gedit/index.page
 share/help/ca/gedit/legal.xml
 share/help/cs/gedit/figures/gedit-html-snippet.png
@@ -464,7 +459,6 @@ share/help/cs/gedit/gedit-tab-groups.page
 share/help/cs/gedit/gedit-tabs-moving.page
 share/help/cs/gedit/gedit-tabs.page
 share/help/cs/gedit/gedit-undo-recent-action.page
-share/help/cs/gedit/gedit-view-open-files-in-sidepane.page
 share/help/cs/gedit/index.page
 share/help/cs/gedit/legal.xml
 share/help/da/gedit/figures/gedit-html-snippet.png
@@ -512,7 +506,6 @@ share/help/da/gedit/gedit-tab-groups.page
 share/help/da/gedit/gedit-tabs-moving.page
 share/help/da/gedit/gedit-tabs.page
 share/help/da/gedit/gedit-undo-recent-action.page
-share/help/da/gedit/gedit-view-open-files-in-sidepane.page
 share/help/da/gedit/index.page
 share/help/da/gedit/legal.xml
 share/help/de/gedit/figures/gedit-html-snippet.png
@@ -560,7 +553,6 @@ share/help/de/gedit/gedit-tab-groups.page
 share/help/de/gedit/gedit-tabs-moving.page
 share/help/de/gedit/gedit-tabs.page
 share/help/de/gedit/gedit-undo-recent-action.page
-share/help/de/gedit/gedit-view-open-files-in-sidepane.page
 share/help/de/gedit/index.page
 share/help/de/gedit/legal.xml
 share/help/el/gedit/figures/gedit-html-snippet.png
@@ -608,7 +600,6 @@ share/help/el/gedit/gedit-tab-groups.page
 share/help/el/gedit/gedit-tabs-moving.page
 share/help/el/gedit/gedit-tabs.page
 share/help/el/gedit/gedit-undo-recent-action.page
-share/help/el/gedit/gedit-view-open-files-in-sidepane.page
 share/help/el/gedit/index.page
 share/help/el/gedit/legal.xml
 share/help/es/gedit/figures/gedit-html-snippet.png
@@ -656,7 +647,6 @@ share/help/es/gedit/gedit-tab-groups.page
 share/help/es/gedit/gedit-tabs-moving.page
 share/help/es/gedit/gedit-tabs.page
 share/help/es/gedit/gedit-undo-recent-action.page
-share/help/es/gedit/gedit-view-open-files-in-sidepane.page
 share/help/es/gedit/index.page
 share/help/es/gedit/legal.xml
 share/help/eu/gedit/figures/gedit-html-snippet.png
@@ -704,7 +694,6 @@ share/help/eu/gedit/gedit-tab-groups.page
 share/help/eu/gedit/gedit-tabs-moving.page
 share/help/eu/gedit/gedit-tabs.page
 share/help/eu/gedit/gedit-undo-recent-action.page
-share/help/eu/gedit/gedit-view-open-files-in-sidepane.page
 share/help/eu/gedit/index.page
 share/help/eu/gedit/legal.xml
 share/help/fi/gedit/figures/gedit-html-snippet.png
@@ -752,7 +741,6 @@ share/help/fi/gedit/gedit-tab-groups.page
 share/help/fi/gedit/gedit-tabs-moving.page
 share/help/fi/gedit/gedit-tabs.page
 share/help/fi/gedit/gedit-undo-recent-action.page
-share/help/fi/gedit/gedit-view-open-files-in-sidepane.page
 share/help/fi/gedit/index.page
 share/help/fi/gedit/legal.xml
 share/help/fr/gedit/figures/gedit-html-snippet.png
@@ -800,7 +788,6 @@ share/help/fr/gedit/gedit-tab-groups.page
 share/help/fr/gedit/gedit-tabs-moving.page
 share/help/fr/gedit/gedit-tabs.page
 share/help/fr/gedit/gedit-undo-recent-action.page
-share/help/fr/gedit/gedit-view-open-files-in-sidepane.page
 share/help/fr/gedit/index.page
 share/help/fr/gedit/legal.xml
 share/help/gl/gedit/figures/gedit-html-snippet.png
@@ -848,7 +835,6 @@ share/help/gl/gedit/gedit-tab-groups.page
 share/help/gl/gedit/gedit-tabs-moving.page
 share/help/gl/gedit/gedit-tabs.page
 share/help/gl/gedit/gedit-undo-recent-action.page
-share/help/gl/gedit/gedit-view-open-files-in-sidepane.page
 share/help/gl/gedit/index.page
 share/help/gl/gedit/legal.xml
 share/help/hu/gedit/figures/gedit-html-snippet.png
@@ -896,7 +882,6 @@ share/help/hu/gedit/gedit-tab-groups.page
 share/help/hu/gedit/gedit-tabs-moving.page
 share/help/hu/gedit/gedit-tabs.page
 share/help/hu/gedit/gedit-undo-recent-action.page
-share/help/hu/gedit/gedit-view-open-files-in-sidepane.page
 share/help/hu/gedit/index.page
 share/help/hu/gedit/legal.xml
 share/help/id/gedit/figures/gedit-html-snippet.png
@@ -944,7 +929,6 @@ share/help/id/gedit/gedit-tab-groups.page
 share/help/id/gedit/gedit-tabs-moving.page
 share/help/id/gedit/gedit-tabs.page
 share/help/id/gedit/gedit-undo-recent-action.page
-share/help/id/gedit/gedit-view-open-files-in-sidepane.page
 share/help/id/gedit/index.page
 share/help/id/gedit/legal.xml
 share/help/it/gedit/figures/gedit-html-snippet.png
@@ -992,7 +976,6 @@ share/help/it/gedit/gedit-tab-groups.page
 share/help/it/gedit/gedit-tabs-moving.page
 share/help/it/gedit/gedit-tabs.page
 share/help/it/gedit/gedit-undo-recent-action.page
-share/help/it/gedit/gedit-view-open-files-in-sidepane.page
 share/help/it/gedit/index.page
 share/help/it/gedit/legal.xml
 share/help/ja/gedit/figures/gedit-html-snippet.png
@@ -1040,7 +1023,6 @@ share/help/ja/gedit/gedit-tab-groups.page
 share/help/ja/gedit/gedit-tabs-moving.page
 share/help/ja/gedit/gedit-tabs.page
 share/help/ja/gedit/gedit-undo-recent-action.page
-share/help/ja/gedit/gedit-view-open-files-in-sidepane.page
 share/help/ja/gedit/index.page
 share/help/ja/gedit/legal.xml
 share/help/ko/gedit/figures/gedit-html-snippet.png
@@ -1088,7 +1070,6 @@ share/help/ko/gedit/gedit-tab-groups.page
 share/help/ko/gedit/gedit-tabs-moving.page
 share/help/ko/gedit/gedit-tabs.page
 share/help/ko/gedit/gedit-undo-recent-action.page
-share/help/ko/gedit/gedit-view-open-files-in-sidepane.page
 share/help/ko/gedit/index.page
 share/help/ko/gedit/legal.xml
 share/help/lv/gedit/figures/gedit-html-snippet.png
@@ -1136,7 +1117,6 @@ share/help/lv/gedit/gedit-tab-groups.page
 share/help/lv/gedit/gedit-tabs-moving.page
 share/help/lv/gedit/gedit-tabs.page
 share/help/lv/gedit/gedit-undo-recent-action.page
-share/help/lv/gedit/gedit-view-open-files-in-sidepane.page
 share/help/lv/gedit/index.page
 share/help/lv/gedit/legal.xml
 share/help/oc/gedit/figures/gedit-html-snippet.png
@@ -1184,7 +1164,6 @@ share/help/oc/gedit/gedit-tab-groups.page
 share/help/oc/gedit/gedit-tabs-moving.page
 share/help/oc/gedit/gedit-tabs.page
 share/help/oc/gedit/gedit-undo-recent-action.page
-share/help/oc/gedit/gedit-view-open-files-in-sidepane.page
 share/help/oc/gedit/index.page
 share/help/oc/gedit/legal.xml
 share/help/pt_BR/gedit/figures/gedit-html-snippet.png
@@ -1232,9 +1211,55 @@ share/help/pt_BR/gedit/gedit-tab-groups.page
 share/help/pt_BR/gedit/gedit-tabs-moving.page
 share/help/pt_BR/gedit/gedit-tabs.page
 share/help/pt_BR/gedit/gedit-undo-recent-action.page
-share/help/pt_BR/gedit/gedit-view-open-files-in-sidepane.page
 share/help/pt_BR/gedit/index.page
 share/help/pt_BR/gedit/legal.xml
+share/help/ro/gedit/figures/gedit-html-snippet.png
+share/help/ro/gedit/figures/gedit-icon.png
+share/help/ro/gedit/figures/gedit-new-external-tool.png
+share/help/ro/gedit/figures/gedit-open-location.png
+share/help/ro/gedit/figures/gedit-side-pane1.png
+share/help/ro/gedit/figures/gedit-side-pane2.png
+share/help/ro/gedit/figures/gedit-side-pane3.png
+share/help/ro/gedit/figures/gedit3-screenshot.png
+share/help/ro/gedit/gedit-change-color-scheme.page
+share/help/ro/gedit/gedit-change-default-font.page
+share/help/ro/gedit/gedit-close-file.page
+share/help/ro/gedit/gedit-create-new-file.page
+share/help/ro/gedit/gedit-edit-as-root.page
+share/help/ro/gedit/gedit-files-basic.page
+share/help/ro/gedit/gedit-full-screen.page
+share/help/ro/gedit/gedit-open-files-from-sidepane.page
+share/help/ro/gedit/gedit-open-files.page
+share/help/ro/gedit/gedit-open-on-server.page
+share/help/ro/gedit/gedit-open-recent.page
+share/help/ro/gedit/gedit-plugin-guide.page
+share/help/ro/gedit/gedit-plugins-change-case.page
+share/help/ro/gedit/gedit-plugins-doc-stats.page
+share/help/ro/gedit/gedit-plugins-external-tools.page
+share/help/ro/gedit/gedit-plugins-file-browser.page
+share/help/ro/gedit/gedit-plugins-insert-date-time.page
+share/help/ro/gedit/gedit-plugins-install.page
+share/help/ro/gedit/gedit-plugins-modelines.page
+share/help/ro/gedit/gedit-plugins-pyconsole.page
+share/help/ro/gedit/gedit-plugins-quick-open.page
+share/help/ro/gedit/gedit-plugins-snippets.page
+share/help/ro/gedit/gedit-plugins-sort.page
+share/help/ro/gedit/gedit-printing-order.page
+share/help/ro/gedit/gedit-printing-select.page
+share/help/ro/gedit/gedit-printing.page
+share/help/ro/gedit/gedit-quickstart.page
+share/help/ro/gedit/gedit-replace.page
+share/help/ro/gedit/gedit-save-file.page
+share/help/ro/gedit/gedit-search.page
+share/help/ro/gedit/gedit-shortcut-keys.page
+share/help/ro/gedit/gedit-spellcheck.page
+share/help/ro/gedit/gedit-syntax-highlighting.page
+share/help/ro/gedit/gedit-tab-groups.page
+share/help/ro/gedit/gedit-tabs-moving.page
+share/help/ro/gedit/gedit-tabs.page
+share/help/ro/gedit/gedit-undo-recent-action.page
+share/help/ro/gedit/index.page
+share/help/ro/gedit/legal.xml
 share/help/ru/gedit/figures/gedit-html-snippet.png
 share/help/ru/gedit/figures/gedit-icon.png
 share/help/ru/gedit/figures/gedit-new-external-tool.png
@@ -1280,7 +1305,6 @@ share/help/ru/gedit/gedit-tab-groups.page
 share/help/ru/gedit/gedit-tabs-moving.page
 share/help/ru/gedit/gedit-tabs.page
 share/help/ru/gedit/gedit-undo-recent-action.page
-share/help/ru/gedit/gedit-view-open-files-in-sidepane.page
 share/help/ru/gedit/index.page
 share/help/ru/gedit/legal.xml
 share/help/sl/gedit/figures/gedit-html-snippet.png
@@ -1328,7 +1352,6 @@ share/help/sl/gedit/gedit-tab-groups.page
 share/help/sl/gedit/gedit-tabs-moving.page
 share/help/sl/gedit/gedit-tabs.page
 share/help/sl/gedit/gedit-undo-recent-action.page
-share/help/sl/gedit/gedit-view-open-files-in-sidepane.page
 share/help/sl/gedit/index.page
 share/help/sl/gedit/legal.xml
 share/help/sv/gedit/figures/gedit-html-snippet.png
@@ -1376,7 +1399,6 @@ share/help/sv/gedit/gedit-tab-groups.page
 share/help/sv/gedit/gedit-tabs-moving.page
 share/help/sv/gedit/gedit-tabs.page
 share/help/sv/gedit/gedit-undo-recent-action.page
-share/help/sv/gedit/gedit-view-open-files-in-sidepane.page
 share/help/sv/gedit/index.page
 share/help/sv/gedit/legal.xml
 share/help/te/gedit/figures/gedit-html-snippet.png
@@ -1424,7 +1446,6 @@ share/help/te/gedit/gedit-tab-groups.page
 share/help/te/gedit/gedit-tabs-moving.page
 share/help/te/gedit/gedit-tabs.page
 share/help/te/gedit/gedit-undo-recent-action.page
-share/help/te/gedit/gedit-view-open-files-in-sidepane.page
 share/help/te/gedit/index.page
 share/help/te/gedit/legal.xml
 share/help/th/gedit/figures/gedit-html-snippet.png
@@ -1472,7 +1493,6 @@ share/help/th/gedit/gedit-tab-groups.page
 share/help/th/gedit/gedit-tabs-moving.page
 share/help/th/gedit/gedit-tabs.page
 share/help/th/gedit/gedit-undo-recent-action.page
-share/help/th/gedit/gedit-view-open-files-in-sidepane.page
 share/help/th/gedit/index.page
 share/help/th/gedit/legal.xml
 share/help/uk/gedit/figures/gedit-html-snippet.png
@@ -1520,7 +1540,6 @@ share/help/uk/gedit/gedit-tab-groups.page
 share/help/uk/gedit/gedit-tabs-moving.page
 share/help/uk/gedit/gedit-tabs.page
 share/help/uk/gedit/gedit-undo-recent-action.page
-share/help/uk/gedit/gedit-view-open-files-in-sidepane.page
 share/help/uk/gedit/index.page
 share/help/uk/gedit/legal.xml
 share/help/zh_CN/gedit/figures/gedit-html-snippet.png
@@ -1568,7 +1587,6 @@ share/help/zh_CN/gedit/gedit-tab-groups.page
 share/help/zh_CN/gedit/gedit-tabs-moving.page
 share/help/zh_CN/gedit/gedit-tabs.page
 share/help/zh_CN/gedit/gedit-undo-recent-action.page
-share/help/zh_CN/gedit/gedit-view-open-files-in-sidepane.page
 share/help/zh_CN/gedit/index.page
 share/help/zh_CN/gedit/legal.xml
 share/help/zh_HK/gedit/figures/gedit-html-snippet.png
@@ -1616,7 +1634,6 @@ share/help/zh_HK/gedit/gedit-tab-groups.page
 share/help/zh_HK/gedit/gedit-tabs-moving.page
 share/help/zh_HK/gedit/gedit-tabs.page
 share/help/zh_HK/gedit/gedit-undo-recent-action.page
-share/help/zh_HK/gedit/gedit-view-open-files-in-sidepane.page
 share/help/zh_HK/gedit/index.page
 share/help/zh_HK/gedit/legal.xml
 share/help/zh_TW/gedit/figures/gedit-html-snippet.png
@@ -1664,9 +1681,15 @@ share/help/zh_TW/gedit/gedit-tab-groups.page
 share/help/zh_TW/gedit/gedit-tabs-moving.page
 share/help/zh_TW/gedit/gedit-tabs.page
 share/help/zh_TW/gedit/gedit-undo-recent-action.page
-share/help/zh_TW/gedit/gedit-view-open-files-in-sidepane.page
 share/help/zh_TW/gedit/index.page
 share/help/zh_TW/gedit/legal.xml
+share/icons/hicolor/16x16/apps/gedit.png
+share/icons/hicolor/22x22/apps/gedit.png
+share/icons/hicolor/24x24/apps/gedit.png
+share/icons/hicolor/256x256/apps/gedit.png
+share/icons/hicolor/32x32/apps/gedit.png
+share/icons/hicolor/48x48/apps/gedit.png
+share/icons/hicolor/symbolic/apps/gedit-symbolic.svg
 share/locale/af/LC_MESSAGES/gedit.mo
 share/locale/am/LC_MESSAGES/gedit.mo
 share/locale/an/LC_MESSAGES/gedit.mo
