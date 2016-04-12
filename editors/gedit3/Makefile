@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.27 2015/12/12 09:21:27 prlw1 Exp $
+# $NetBSD: Makefile,v 1.28 2016/04/12 16:12:55 prlw1 Exp $
 
-DISTNAME=	gedit-3.16.4
+DISTNAME=	gedit-3.20.1
 CATEGORIES=	editors gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gedit/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	prlw1@cam.ac.uk
-HOMEPAGE=	http://www.gedit.org/
+HOMEPAGE=	http://wiki.gnome.org/Apps/Gedit
 COMMENT=	Lightweight GNOME UTF-8 text editor
 LICENSE=	gnu-gpl-v2
 
@@ -17,7 +17,7 @@ USE_PKGLOCALEDIR=	yes
 
 PKGCONFIG_OVERRIDE+=	data/gedit.pc.in
 PY_PATCHPLIST=		yes
-PY_PEP3147=		no
+#PY_PEP3147=		no
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 REPLACE_PYTHON+=	plugins/externaltools/data/send-to-fpaste.tool.in
 
@@ -32,17 +32,18 @@ BUILD_DEPENDS+=	itstool-[0-9]*:../../textproc/itstool
 DEPENDS+=	adwaita-icon-theme-[0-9]*:../../graphics/adwaita-icon-theme
 
 .include "../../devel/gobject-introspection/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libpeas+=	libpeas>=1.7.0
+BUILDLINK_API_DEPENDS.libpeas+=	libpeas>=1.14.1
 .include "../../devel/libpeas/buildlink3.mk"
 .include "../../devel/py-gobject3/buildlink3.mk"
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.40.0
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.44.0
 .include "../../devel/glib2/schemas.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.16
+BUILDLINK_API_DEPENDS.gtk3+=	gtk3+>=3.19.0
 .include "../../x11/gtk3/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gtksourceview3+=	gtksourceview3>=3.16
+BUILDLINK_API_DEPENDS.gtksourceview3+=	gtksourceview3>=3.19.4
 .include "../../x11/gtksourceview3/buildlink3.mk"
 .include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
