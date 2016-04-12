@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.874 2016/04/10 12:24:31 mef Exp $
+# $NetBSD: Makefile,v 1.875 2016/04/12 16:08:05 prlw1 Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -194,6 +194,7 @@ SUBDIR+=	grepcidr
 SUBDIR+=	groff
 SUBDIR+=	groonga
 SUBDIR+=	gsed
+SUBDIR+=	gspell
 SUBDIR+=	gtk-doc
 SUBDIR+=	gtkspell
 SUBDIR+=	gutcheck
