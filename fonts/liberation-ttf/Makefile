@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2014/06/01 16:35:36 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2016/04/12 08:06:24 wiz Exp $
 
 DISTNAME=	liberation-fonts-ttf-2.00.1
 PKGNAME=	${DISTNAME:S/-fonts//}
 PKGREVISION=	1
 CATEGORIES=	fonts
-MASTER_SITES=	https://fedorahosted.org/releases/l/i/liberation-fonts/ \
-		${MASTER_SITE_LOCAL}
+MASTER_SITES=	https://fedorahosted.org/releases/l/i/liberation-fonts/
 
 MAINTAINER=	bartosz.kuzma@gmail.com
 HOMEPAGE=	http://www.redhat.com/promo/fonts/
