@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1447 2016/04/12 08:50:54 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.1448 2016/04/12 11:42:13 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1899,3 +1899,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/icu to 57.1 [ryoon 2016-04-11]
 	Updated www/webkit-gtk to 2.10.9 [leot 2016-04-12]
 	Updated net/rabbitmq-c to 0.8.0 [fhajny 2016-04-12]
+	Updated devel/libpeas to 1.18.0 [prlw1 2016-04-12]
