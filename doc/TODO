@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15698 2016/04/12 13:45:16 mef Exp $
+$NetBSD: TODO,v 1.15699 2016/04/12 21:41:48 adam Exp $
 
 Suggested new packages
 ======================
@@ -775,7 +775,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gliv-1.9.7
 	o glom-1.14.2 [GNOME 2.26]
 	o gloox-1.0.14
-	o glpk-4.60
 	o glx-utils-8.3.0
 	o gmock-1.7.0
 	o gnet1-1.1.9
