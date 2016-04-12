@@ -1,4 +1,4 @@
-# $NetBSD: install,v 1.3 2014/12/30 15:13:20 wiz Exp $
+# $NetBSD: install,v 1.4 2016/04/12 15:52:29 jaapb Exp $
 
 case ${STAGE} in
 PRE-INSTALL)
@@ -70,6 +70,12 @@ POST-INSTALL)
 	#
 	${TEST} ! -x ./+INFO_FILES ||
 		./+INFO_FILES ADD ${PKG_METADATA_DIR}
+
+  #
+  # Register package into ocaml-findlib.
+  #
+  ${TEST} ! -x ./+OCAML_FINDLIB_REGISTER ||
+    ./+OCAML_FINDLIB_REGISTER ADD ${PKG_METADATA_DIR}
 	;;
 esac
 
