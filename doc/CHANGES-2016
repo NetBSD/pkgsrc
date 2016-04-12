@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1446 2016/04/12 07:59:47 leot Exp $
+$NetBSD: CHANGES-2016,v 1.1447 2016/04/12 08:50:54 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1898,3 +1898,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated archivers/p7zip to 15.14.1 [ryoon 2016-04-11]
 	Updated textproc/icu to 57.1 [ryoon 2016-04-11]
 	Updated www/webkit-gtk to 2.10.9 [leot 2016-04-12]
+	Updated net/rabbitmq-c to 0.8.0 [fhajny 2016-04-12]
