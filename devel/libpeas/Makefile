@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.25 2015/04/25 14:20:36 tnn Exp $
+# $NetBSD: Makefile,v 1.26 2016/04/12 11:41:41 prlw1 Exp $
 
-DISTNAME=	libpeas-1.12.1
-PKGREVISION=	1
+DISTNAME=	libpeas-1.18.0
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libpeas/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://live.gnome.org/Libpeas
+HOMEPAGE=	http://wiki.gnome.org/Projects/Libpeas
 COMMENT=	GObject-based plugins engine
-LICENSE=	gnu-lgpl-v2
+LICENSE=	gnu-lgpl-v2.1
 
 USE_PKGLOCALEDIR=	yes
 
@@ -22,10 +21,14 @@ PYTHON_VERSIONS_INCOMPATIBLE=	27
 .include "../../lang/python/pyversion.mk"
 CONFIGURE_ARGS+=	--disable-python2
 CONFIGURE_ENV+=		PYTHON3_CONFIG=${PYTHONCONFIG}
+CONFIGURE_ARGS+=	--disable-lua5.1 # looks for lua5.1.pc
+CONFIGURE_ARGS+=	--disable-luajit
+
 
 PKGCONFIG_OVERRIDE+=	data/libpeas-gtk-1.0.pc.in
 PKGCONFIG_OVERRIDE+=	data/libpeas-1.0.pc.in
 
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.38.0
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=1.39.0
 .include "../../devel/gobject-introspection/buildlink3.mk"
