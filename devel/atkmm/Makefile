@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2015/10/15 14:19:54 tnn Exp $
+# $NetBSD: Makefile,v 1.16 2016/04/12 21:31:08 adam Exp $
 
-DISTNAME=	atkmm-2.22.7
-PKGREVISION=	3
+DISTNAME=	atkmm-2.24.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/atkmm/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -14,13 +13,12 @@ LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2
 CONFLICTS+=	gtkmm<2.22.0
 
 USE_LANGUAGES=		c c++
-CXXFLAGS+=		-std=c++11
 USE_LIBTOOL=		yes
 USE_TOOLS+=		autoconf gmake perl pkg-config
 GNU_CONFIGURE=		yes
+PKGCONFIG_OVERRIDE+=	atk/atkmm.pc.in
 
-PKGCONFIG_OVERRIDE+=	atkmm-2.22.1/atk/PaxHeaders.17805/atkmm.pc.in
-PKGCONFIG_OVERRIDE+=	atkmm-2.22.1/atk/atkmm.pc.in
+CXXFLAGS+=		-std=c++11
 
 pre-configure:
 	cd ${WRKSRC} && autoconf
