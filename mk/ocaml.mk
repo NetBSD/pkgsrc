@@ -1,4 +1,4 @@
-# $NetBSD: ocaml.mk,v 1.6 2016/03/04 15:19:42 jaapb Exp $
+# $NetBSD: ocaml.mk,v 1.7 2016/04/12 15:52:29 jaapb Exp $
 #
 # This Makefile fragment handles the common variables used by OCaml packages.
 #
@@ -14,6 +14,10 @@
 # Package-settable variables:
 # OCAML_USE_FINDLIB
 # package uses findlib infrastructure
+# OCAML_FINDLIB_DIRS
+# directories under OCAML_SITELIBDIR that this package installs into
+# OCAML_FINDLIB_REGISTER
+# register findlib directories into OCaml ld.conf
 # OCAML_USE_OASIS [implies OCAML_USE_FINDLIB]
 # package uses oasis infrastructure
 # OCAML_USE_OASIS_DYNRUN [implies OCAML_USE_OASIS]
@@ -104,6 +108,8 @@ PRINT_PLIST_AWK+=	{ gsub(/${OCAML_SITELIBDIR:S|/|\\/|g}/, \
 .if ${OCAML_USE_FINDLIB} == "yes"
 .include "../../devel/ocaml-findlib/buildlink3.mk"
 INSTALLATION_DIRS+=	${OCAML_SITELIBDIR}
+OCAML_FINDLIB_DIRS?=	${OCAML_SITELIBDIR}/${PKGBASE}
+OCAML_FINDLIB_REGISTER?=	yes
 .endif
 
 #
