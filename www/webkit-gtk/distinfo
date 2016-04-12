@@ -1,18 +1,17 @@
-$NetBSD: distinfo,v 1.88 2016/02/03 17:19:18 leot Exp $
+$NetBSD: distinfo,v 1.89 2016/04/12 07:58:04 leot Exp $
 
-SHA1 (webkitgtk-2.10.7.tar.xz) = 32887ea4fd887d3996b973c6cee681530bb82d81
-RMD160 (webkitgtk-2.10.7.tar.xz) = 793335275dc1e764ea33a1fe559542097cd31637
-SHA512 (webkitgtk-2.10.7.tar.xz) = f0d7b303236910d18568ab1e0a522915a70e9d3658537b32ea2c6a42b8b3ece034a292490f7882760338f2afc56468fd7a8ad8659b7afaf87906220a5c815b5b
-Size (webkitgtk-2.10.7.tar.xz) = 10988396 bytes
+SHA1 (webkitgtk-2.10.9.tar.xz) = 98bb63404da498417fbc8abdb9c2cb875332f61c
+RMD160 (webkitgtk-2.10.9.tar.xz) = 58067eca9cd2b1b0c2cd6b10d88f2f119fe62a8a
+SHA512 (webkitgtk-2.10.9.tar.xz) = a8eda5381f227098e208a81c093f0b83f4996378e8f54ddfbe5c164254d7e1ff4a260c827e2521c748ca02bc5a691e8bbd0f59da0718cfe18812c3b257ec5228
+Size (webkitgtk-2.10.9.tar.xz) = 10992980 bytes
 SHA1 (patch-CMakeLists.txt) = c48c0e5d33f378b7ecf31fffef609fb2501e5cd3
 SHA1 (patch-Source_JavaScriptCore_assembler_ARMAssembler.h) = 99e46f9d9b26a8d9ba6b29c66d7ce5326c4ffeb6
 SHA1 (patch-Source_JavaScriptCore_assembler_MacroAssemblerARM.cpp) = f78e6150ed8901b3fe046b2ef182f50f1c7500a4
 SHA1 (patch-Source_JavaScriptCore_dfg_DFGNode.h) = 0d82552c6cc1f4885a2bcc539963c966216c977c
-SHA1 (patch-Source_JavaScriptCore_runtime_Options.cpp) = 3f3e5b0e3c944656fc614bad9578e625be0296d2
 SHA1 (patch-Source_ThirdParty_gtest_include_gtest_internal_gtest-port.h) = f1eee7f9d3012edee1915234c837cff820f97092
 SHA1 (patch-Source_WTF_wtf_MathExtras.h) = 01195978abe07154fbc28de9efc47b3f3105fd89
 SHA1 (patch-Source_WebCore_bindings_js_JSInspectorFrontendHostCustom.cpp) = 67bac371dff2afd7a1c7fad8763e05b722a11424
 SHA1 (patch-Source_cmake_OptionsCommon.cmake) = 09a837ee65cdc79cc22220ce713e346fe8752c50
-SHA1 (patch-Source_cmake_OptionsGTK.cmake) = e42e91715a54af1cfb70eeca91710fb52c0ead37
+SHA1 (patch-Source_cmake_OptionsGTK.cmake) = 3c1c9695b13e3fbb1a8740de79f7eb873af4cdf0
 SHA1 (patch-ai) = b8a45f2f5c1aa5aed178527ecd6cbd93baf76f8e
 SHA1 (patch-aj) = 8247194bd8d62fcc356650c946756898fbe22982
