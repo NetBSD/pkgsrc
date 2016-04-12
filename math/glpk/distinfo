@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.36 2015/11/27 21:00:28 adam Exp $
+$NetBSD: distinfo,v 1.37 2016/04/12 21:40:47 adam Exp $
 
-SHA1 (glpk-4.57.tar.gz) = d2df2de59798c35024df8d140a53453e29a095be
-RMD160 (glpk-4.57.tar.gz) = 10cbe9f5c681d5893739cde1fd9d8c16cf468c73
-SHA512 (glpk-4.57.tar.gz) = 1979e59b96ce359168a81b720207045916f66c5755023b02c2e197e5a713d456165d94f1e40830547dc072de865f94e3b3a4d8e66d5d15aeb93f304f1893fe48
-Size (glpk-4.57.tar.gz) = 3782998 bytes
-SHA1 (patch-src_Makefile.in) = 277e8df4b63147b8bd9c637589df1491d2fa5189
+SHA1 (glpk-4.60.tar.gz) = 4e55a3d2aa38b19c5bdd8a195738dbaf44e91e90
+RMD160 (glpk-4.60.tar.gz) = a1fb4b2730c5f2faad47b9014e2e70c384f63db9
+SHA512 (glpk-4.60.tar.gz) = 521bc48c588318fe6075eb66b1c43465200039f64b105b4a24f9f6eb9bb4742c7ebc96750ce999f64c60d6531486476386467dd41e949f1a00cba0cf00fbe20a
+Size (glpk-4.60.tar.gz) = 4160915 bytes
+SHA1 (patch-src_Makefile.in) = 8acd8cdf567d4e391a4c775b8d9a6ca3f2dba13b
