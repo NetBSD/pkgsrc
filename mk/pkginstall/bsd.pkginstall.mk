@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.67 2016/04/12 15:52:29 jaapb Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.68 2016/04/12 16:01:06 jaapb Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -804,6 +804,7 @@ ${_INSTALL_OFR_FILE}: ../../mk/pkginstall/ocaml-findlib-register
 install-script-data: install-script-data-ocaml-findlib-register
 install-script-data-ocaml-findlib-register:
 .if defined(OCAML_FINDLIB_REGISTER)
+		${RUN} \
 		cd ${PKG_DB_TMPDIR} && ${PKGSRC_SETENV} ${INSTALL_SCRIPTS_ENV} \
 		${_PKG_DEBUG_SCRIPT} ${INSTALL_FILE} ${PKGNAME} \
 			UNPACK +OCAML_FINDLIB_REGISTER
