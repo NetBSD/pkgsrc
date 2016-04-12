@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2015/06/17 19:35:58 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.6 2016/04/12 23:58:48 prlw1 Exp $
 bin/eog
 include/eog-3.0/eog/eog-application-activatable.h
 include/eog-3.0/eog/eog-application.h
@@ -36,19 +36,15 @@ share/GConf/gsettings/eog.convert
 share/appdata/eog.appdata.xml
 share/applications/eog.desktop
 share/eog/gir-1.0/Eog-3.0.gir
-share/eog/icons/hicolor/16x16/actions/eog-image-gallery.png
 share/eog/icons/hicolor/16x16/actions/eog-plugin.png
 share/eog/icons/hicolor/16x16/actions/slideshow-play.png
-share/eog/icons/hicolor/22x22/actions/eog-image-gallery.png
 share/eog/icons/hicolor/22x22/actions/eog-plugin.png
 share/eog/icons/hicolor/22x22/actions/slideshow-play.png
-share/eog/icons/hicolor/24x24/actions/eog-image-gallery.png
 share/eog/icons/hicolor/24x24/actions/slideshow-play.png
-share/eog/icons/hicolor/32x32/actions/eog-image-gallery.png
 share/eog/icons/hicolor/32x32/actions/eog-plugin.png
 share/eog/icons/hicolor/32x32/actions/slideshow-play.png
 share/eog/icons/hicolor/48x48/actions/slideshow-play.png
-share/eog/icons/hicolor/scalable/actions/eog-image-gallery.svg
+share/eog/icons/hicolor/scalable/actions/eog-image-gallery-symbolic.svg
 share/eog/icons/hicolor/scalable/actions/eog-plugin.svg
 share/eog/icons/hicolor/scalable/actions/slideshow-play.svg
 share/glib-2.0/schemas/org.gnome.eog.enums.xml
