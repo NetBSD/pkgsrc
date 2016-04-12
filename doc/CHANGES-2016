@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1452 2016/04/12 16:09:07 prlw1 Exp $
+$NetBSD: CHANGES-2016,v 1.1453 2016/04/12 16:13:33 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1904,3 +1904,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/dejagnu to 1.5.3 [mef 2016-04-12]
 	Updated devel/ocaml-type_conv to 113.00.02nb1 [jaapb 2016-04-12]
 	Added textproc/gspell version 1.0.1 [prlw1 2016-04-12]
+	Updated editors/gedit3 to 3.20.1 [prlw1 2016-04-12]
