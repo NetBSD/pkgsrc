@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2015/09/26 10:16:37 leot Exp $
+# $NetBSD: options.mk,v 1.11 2016/04/12 07:58:04 leot Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.webkit-gtk
@@ -15,7 +15,7 @@ PKG_SUGGESTED_OPTIONS=	enchant opengl
  && empty(MACHINE_PLATFORM:MNetBSD-*-sparc64) \
  && empty(MACHINE_PLATFORM:MNetBSD-*-sparc) \
  && empty(MACHINE_PLATFORM:MSunOS-*)
-PKG_SUGGESTED_OPTIONS+= webkit-jit
+PKG_SUGGESTED_OPTIONS+=	webkit-jit
 .endif
 
 .include "../../mk/bsd.options.mk"
