@@ -1,0 +1,67 @@
+# $NetBSD: ocaml-findlib-register,v 1.1 2016/04/12 15:52:29 jaapb Exp $
+#
+# Generate an +OCAML_FINDLIB_REGISTER script that handles registration for
+# findlib after a binary installation
+#
+case "${STAGE},$1" in
+UNPACK,|UNPACK,+OCAML_FINDLIB_REGISTER)
+	${CAT} > ./+OCAML_FINDLIB_REGISTER << 'EOF'
+#!@SH@
+#
+# +OCAML_FINDLIB_REGISTER - ocaml-findlib registration script
+#
+# Usage: ./+OCAML_FINDLIB_REGISTER ADD|REMOVE [findlib_pkg_dir]
+#
+# This script supports two actions, ADD and REMOVE, that will
+# add or remove directories from the ocaml ld.conf file (standard location
+# is in LOCALBASE/lib/ocaml/ld.conf)
+#
+ECHO="@ECHO@"
+GREP="@GREP@"
+MV="@MV@"
+OCAML_FINDLIB_DIRS="@OCAML_FINDLIB_DIRS@"
+PWD_CMD="@PWD_CMD@"
+RM="@RM@"
+TOUCH="@TOUCH@"
+
+SELF=$0
+ACTION=$1
+
+LDCONF="@PREFIX@/lib/ocaml/ld.conf"
+
+CURDIR=`${PWD_CMD}`
+PKG_METADATA_DIR="${2-${CURDIR}}"
+: ${PKGNAME=${PKG_METADATA_DIR##*/}}
+: ${PKG_PREFIX=@PREFIX@}
+
+case "${OCAML_FINDLIB_REGISTER_VERBOSE:-@OCAML_FINDLIB_REGISTER_VERBOSE@}" in
+[Yy][Ee][Ss]|[Tt][Rr][Uu][Ee]|[Oo][Nn]|1)
+	echo="${ECHO}"
+	;;
+[Nn][Oo]|[Ff][Aa][Ll][Ss][Ee]|[Oo][Ff][Ff]|0)
+	echo=":"
+	;;
+esac
+
+${TOUCH} ${LDCONF}.tmp
+for i in ${OCAML_FINDLIB_DIRS}
+do
+  ${GREP} -F -v -- "$i" < "${LDCONF}" >> "${LDCONF}.tmp"
+  case $ACTION in
+  ADD)
+    $echo "${PKGNAME}: adding $i to ${LDCONF}"
+    ${ECHO} "@PREFIX@/$i" >> "${LDCONF}.tmp"
+	;;
+
+  REMOVE)
+    $echo "${PKGNAME}: removing $i from ${LDCONF}"
+	;;
+  esac
+done
+${MV} -f "${LDCONF}.tmp" "${LDCONF}"
+
+EOF
+	${CHMOD} +x ./+OCAML_FINDLIB_REGISTER
+	;;
+esac
+
