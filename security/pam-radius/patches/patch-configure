@@ -1,10 +1,27 @@
-$NetBSD: patch-configure,v 1.1 2015/12/24 23:40:27 dholland Exp $
+$NetBSD: patch-configure,v 1.2 2016/04/12 13:15:15 fhajny Exp $
 
 Fix shell conditional.
+Backport SunOS fix from upstream:
+  https://github.com/FreeRADIUS/pam_radius/commit/f6e2fb9a2dd04e23e7ca16350e6c3a8ccbd52d33
 
---- configure~	2014-12-17 22:00:59.000000000 +0000
+--- configure.orig	2014-12-17 22:00:59.000000000 +0000
 +++ configure
-@@ -5261,7 +5261,7 @@ fi
+@@ -4540,7 +4540,13 @@ done
+ for ac_header in security/pam_modules.h pam/pam_modules.h
+ do :
+   as_ac_Header=`$as_echo "ac_cv_header_$ac_header" | $as_tr_sh`
+-ac_fn_c_check_header_mongrel "$LINENO" "$ac_header" "$as_ac_Header" "$ac_includes_default"
++ac_fn_c_check_header_compile "$LINENO" "$ac_header" "$as_ac_Header" "
++    #ifdef HAVE_SECURITY_PAM_APPL_H
++    #  include <security/pam_appl.h>
++    #endif
++
++
++"
+ if eval test \"x\$"$as_ac_Header"\" = x"yes"; then :
+   cat >>confdefs.h <<_ACEOF
+ #define `$as_echo "HAVE_$ac_header" | $as_tr_cpp` 1
+@@ -5261,7 +5267,7 @@ fi
  HOSTINFO=$host
  
  

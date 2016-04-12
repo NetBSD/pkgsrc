@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.6 2015/09/26 20:58:06 bsiegert Exp $
+# $NetBSD: Makefile,v 1.7 2016/04/12 13:15:14 fhajny Exp $
 
-PKGNAME=	${DISTNAME:S/_/-/}
 DISTNAME=	pam_radius-1.4.0
+PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.freeradius.org/pub/freeradius/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.freeradius.org/pam_radius_auth/
 COMMENT=	PAM module for authentication against a RADIUS server
+LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	gmake
 GNU_CONFIGURE=	yes
