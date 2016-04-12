@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2015/11/03 03:27:44 agc Exp $
+$NetBSD: distinfo,v 1.8 2016/04/12 11:41:41 prlw1 Exp $
 
-SHA1 (libpeas-1.12.1.tar.xz) = 220f858c2cac396fcf7b56ef6b24fa25ae3f28fb
-RMD160 (libpeas-1.12.1.tar.xz) = 17784fd54f503327f436860243a4bbf39874d795
-SHA512 (libpeas-1.12.1.tar.xz) = 3b3f973066d8237da666b60fd8b34c93159c98742b255dd0205d2cfeb474635e823b60412f833564ce6116101c2c2b263fed7a59f1fc624d0a727c9e2897b58c
-Size (libpeas-1.12.1.tar.xz) = 522616 bytes
+SHA1 (libpeas-1.18.0.tar.xz) = e0f2324682cff45f8718c8b23304b335e2ed19e6
+RMD160 (libpeas-1.18.0.tar.xz) = c450655ecce08a6815cdda58d9f46e7fd6eac0c3
+SHA512 (libpeas-1.18.0.tar.xz) = 537402788519f3659a9ea9ea66de1bbbf365bb264335cefdfe808cd74e753c4d518b651d46ad170c7716ef38cbbc409dc8a87015bcd067f3fe025dea9c4b3ed6
+Size (libpeas-1.18.0.tar.xz) = 557028 bytes
