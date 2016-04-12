@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.6 2014/10/11 09:54:30 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.7 2016/04/12 11:41:41 prlw1 Exp $
 bin/peas-demo
+include/libpeas-1.0/libpeas-gtk/peas-gtk-autocleanups.h
 include/libpeas-1.0/libpeas-gtk/peas-gtk-configurable.h
 include/libpeas-1.0/libpeas-gtk/peas-gtk-plugin-manager-view.h
 include/libpeas-1.0/libpeas-gtk/peas-gtk-plugin-manager.h
 include/libpeas-1.0/libpeas-gtk/peas-gtk.h
 include/libpeas-1.0/libpeas/peas-activatable.h
+include/libpeas-1.0/libpeas/peas-autocleanups.h
 include/libpeas-1.0/libpeas/peas-engine.h
 include/libpeas-1.0/libpeas/peas-extension-base.h
 include/libpeas-1.0/libpeas/peas-extension-set.h
@@ -39,13 +41,18 @@ share/gtk-doc/html/libpeas/PeasGtkPluginManagerView.html
 share/gtk-doc/html/libpeas/PeasObjectModule.html
 share/gtk-doc/html/libpeas/PeasPluginInfo.html
 share/gtk-doc/html/libpeas/annotation-glossary.html
+share/gtk-doc/html/libpeas/api-index-1-14.html
+share/gtk-doc/html/libpeas/api-index-1-18.html
+share/gtk-doc/html/libpeas/api-index-1-2.html
+share/gtk-doc/html/libpeas/api-index-1-4.html
+share/gtk-doc/html/libpeas/api-index-1-6.html
+share/gtk-doc/html/libpeas/api-index-deprecated.html
 share/gtk-doc/html/libpeas/api-index-full.html
 share/gtk-doc/html/libpeas/ch01.html
 share/gtk-doc/html/libpeas/ch02.html
 share/gtk-doc/html/libpeas/ch03.html
 share/gtk-doc/html/libpeas/home.png
 share/gtk-doc/html/libpeas/index.html
-share/gtk-doc/html/libpeas/index.sgml
 share/gtk-doc/html/libpeas/left-insensitive.png
 share/gtk-doc/html/libpeas/left.png
 share/gtk-doc/html/libpeas/libpeas-PeasExtension.html
@@ -68,6 +75,7 @@ share/locale/ast/LC_MESSAGES/libpeas.mo
 share/locale/be/LC_MESSAGES/libpeas.mo
 share/locale/bg/LC_MESSAGES/libpeas.mo
 share/locale/bn_IN/LC_MESSAGES/libpeas.mo
+share/locale/bs/LC_MESSAGES/libpeas.mo
 share/locale/ca/LC_MESSAGES/libpeas.mo
 share/locale/ca@valencia/LC_MESSAGES/libpeas.mo
 share/locale/cs/LC_MESSAGES/libpeas.mo
@@ -89,8 +97,10 @@ share/locale/he/LC_MESSAGES/libpeas.mo
 share/locale/hi/LC_MESSAGES/libpeas.mo
 share/locale/hu/LC_MESSAGES/libpeas.mo
 share/locale/id/LC_MESSAGES/libpeas.mo
+share/locale/is/LC_MESSAGES/libpeas.mo
 share/locale/it/LC_MESSAGES/libpeas.mo
 share/locale/ja/LC_MESSAGES/libpeas.mo
+share/locale/kk/LC_MESSAGES/libpeas.mo
 share/locale/kn/LC_MESSAGES/libpeas.mo
 share/locale/ko/LC_MESSAGES/libpeas.mo
 share/locale/lt/LC_MESSAGES/libpeas.mo
@@ -99,7 +109,9 @@ share/locale/ml/LC_MESSAGES/libpeas.mo
 share/locale/mr/LC_MESSAGES/libpeas.mo
 share/locale/nb/LC_MESSAGES/libpeas.mo
 share/locale/nds/LC_MESSAGES/libpeas.mo
+share/locale/ne/LC_MESSAGES/libpeas.mo
 share/locale/nl/LC_MESSAGES/libpeas.mo
+share/locale/oc/LC_MESSAGES/libpeas.mo
 share/locale/or/LC_MESSAGES/libpeas.mo
 share/locale/pa/LC_MESSAGES/libpeas.mo
 share/locale/pl/LC_MESSAGES/libpeas.mo
