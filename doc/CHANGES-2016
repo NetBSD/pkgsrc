@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1450 2016/04/12 13:45:16 mef Exp $
+$NetBSD: CHANGES-2016,v 1.1451 2016/04/12 16:05:42 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1902,3 +1902,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/libpeas to 1.18.0 [prlw1 2016-04-12]
 	Updated x11/gtksourceview3 to 3.20.1 [prlw1 2016-04-12]
 	Updated devel/dejagnu to 1.5.3 [mef 2016-04-12]
+	Updated devel/ocaml-type_conv to 113.00.02nb1 [jaapb 2016-04-12]
