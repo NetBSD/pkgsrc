@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.51 2016/03/05 11:29:21 jperkin Exp $
-#
+# $NetBSD: Makefile,v 1.52 2016/04/12 08:08:46 wiz Exp $
 
 DISTNAME=		isakmpd-20030903
 PKGREVISION=		10
 CATEGORIES=		security net
-MASTER_SITES=		ftp://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/LOCAL_PORTS/
+MASTER_SITES=		${MASTER_SITE_LOCAL}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		OpenBSD IKE daemon
