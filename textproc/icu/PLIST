@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2016/04/11 16:15:22 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.37 2016/04/12 19:51:54 tron Exp $
 bin/derb
 bin/genbrk
 bin/gencfu
@@ -258,6 +258,6 @@ sbin/gennorm2
 sbin/gensprep
 sbin/icupkg
 share/icu/${PKGVERSION}/LICENSE
-share/icu/${PKGVERSION}/config/mh-bsd-gcc
+share/icu/${PKGVERSION}/config/${MH_NAME}
 share/icu/${PKGVERSION}/install-sh
 share/icu/${PKGVERSION}/mkinstalldirs
