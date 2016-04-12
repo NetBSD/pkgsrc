@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.56 2015/11/03 21:34:04 agc Exp $
+$NetBSD: distinfo,v 1.57 2016/04/12 21:33:49 adam Exp $
 
 SHA1 (inkscape-0.91.tar.bz2) = 9941ee467af570ac71a70f965cd9c48d4993b8f3
 RMD160 (inkscape-0.91.tar.bz2) = 77421bcb96c6ad4fe17e775e86b77d576b90cf32
@@ -13,4 +13,5 @@ SHA1 (patch-src_extension_internal_pdfinput_pdf-parser.cpp) = 7a1aab18cc36756fad
 SHA1 (patch-src_extension_internal_pdfinput_pdf-parser.h) = ba408f45544853f9323f8bd879bd55604072bb7a
 SHA1 (patch-src_io_inkjar.cpp) = 060d59225cfe7b66db5e9f41e76860df9ce12d01
 SHA1 (patch-src_trace_siox.cpp) = daeff4626dace6997f64ab9c96b0bfb304e724c8
+SHA1 (patch-src_ui_clipboard.cpp) = 06fd0f4b15b0c282027db36690d163e90aac06ed
 SHA1 (patch-src_ui_tool_node.h) = 2900ab737d6b9245aabefee5e79564bdbaec57bc
