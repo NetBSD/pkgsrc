@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2015/05/09 23:12:20 mef Exp $
+# $NetBSD: Makefile,v 1.20 2016/04/12 13:45:00 mef Exp $
 #
 
-DISTNAME=	dejagnu-1.5.2
+DISTNAME=	dejagnu-1.5.3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=dejagnu/}
 
@@ -24,7 +24,5 @@ INSTALL_TARGET=	install install-info
 USE_LANGUAGES+=	c c++
 TEST_TARGET=	check
 TEST_ENV=	PATH=/usr/bin:/bin:${PREFIX}/bin
-
-TEST_TARGET=	# empty, make test won't pass for the moment
 
 .include "../../mk/bsd.pkg.mk"
