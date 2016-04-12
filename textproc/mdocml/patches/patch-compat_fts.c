@@ -1,4 +1,4 @@
-$NetBSD: patch-compat_fts.c,v 1.6 2015/12/10 02:50:19 joerg Exp $
+$NetBSD: patch-compat_fts.c,v 1.7 2016/04/12 08:14:50 wiz Exp $
 
 Fix build under Solaris 10 and HP-UX.
 
@@ -8,7 +8,7 @@ Fix build under Solaris 10 and HP-UX.
  
  #define	FCHDIR(sp, fd)	(!ISSET(FTS_NOCHDIR) && fchdir(fd))
  
-+#if defined(__sun__) || defined(__hpux)
++#if defined(__sun) || defined(__hpux)
 +#define dirfd(fd) ((fd)->dd_fd)
 +#endif
 +
