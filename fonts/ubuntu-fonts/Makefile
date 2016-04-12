@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2015/08/30 14:39:30 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2016/04/12 08:07:48 wiz Exp $
 
 VERSION=	0.83
 PKGNAME=	ubuntu-fonts-${VERSION}
 CATEGORIES=	fonts
 DISTNAME=	ubuntu-font-family-${VERSION}
 EXTRACT_SUFX=	.zip
-MASTER_SITES=	http://font.ubuntu.com/download/ \
-		${MASTER_SITE_LOCAL}
+MASTER_SITES=	http://font.ubuntu.com/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://font.ubuntu.com/
