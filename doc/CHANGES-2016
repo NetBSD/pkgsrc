@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1457 2016/04/12 21:41:47 adam Exp $
+$NetBSD: CHANGES-2016,v 1.1458 2016/04/12 23:59:20 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1913,3 +1913,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/atkmm to 2.24.2 [adam 2016-04-12]
 	Updated graphics/inkscape to 0.91nb13 [adam 2016-04-12]
 	Updated math/glpk to 4.60 [adam 2016-04-12]
+	Updated graphics/eog3 to 3.20.1 [prlw1 2016-04-12]
