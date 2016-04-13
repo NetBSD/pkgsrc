@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2016/03/24 13:45:57 wiz Exp $
+$NetBSD: distinfo,v 1.5 2016/04/13 17:54:10 wiz Exp $
 
-SHA1 (rsa-3.4.tar.gz) = dd16725179354d21307ebc251b23382b77b711c1
-RMD160 (rsa-3.4.tar.gz) = 9466ecc5fcccc1e6e464a1cef40ef58e1862a6b9
-SHA512 (rsa-3.4.tar.gz) = 7f24736704981b9a1c380f8650640fb102de6db98910bb452f72d14feefef4dbcb2811c100abb8db70f5eea0f9770a17aeda609f955db3118ffcfd38d62c7753
-Size (rsa-3.4.tar.gz) = 36186 bytes
+SHA1 (rsa-3.4.1.tar.gz) = 599df059e23067985cb3d4d5466508ffd8e0379e
+RMD160 (rsa-3.4.1.tar.gz) = a5f1cb15f859544444f3e980a4cd48b4f085effa
+SHA512 (rsa-3.4.1.tar.gz) = 769d6f4ef944d0b499cd1adfde4806310daca472201f56aa68d47256d8522d863b6f73d6dc3edc8edb4ed2a47dd5a353b5ee74861db9eb4557f16f4b5420df79
+Size (rsa-3.4.1.tar.gz) = 40938 bytes
