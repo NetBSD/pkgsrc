@@ -1,0 +1,24 @@
+$NetBSD: patch-man_lispref_intro.texi,v 1.1 2016/04/13 13:52:27 hauke Exp $
+
+Fix makeinfo 4 build errors.
+
+--- man/lispref/intro.texi.orig	2015-03-25 11:25:33.000000000 +0000
++++ man/lispref/intro.texi
+@@ -4,7 +4,7 @@
+ @c See the file lispref.texi for copying conditions.
+ @setfilename ../../info/intro.info
+ 
+-@node Copying, Introduction
++@node Copying, Introduction, Top, Top
+ @unnumbered GNU GENERAL PUBLIC LICENSE
+ @center Version 2, June 1991
+ 
+@@ -400,7 +400,7 @@ consider it more useful to permit linkin
+ library.  If this is what you want to do, use the GNU Library General
+ Public License instead of this License.
+ 
+-@node Introduction,  , Copying
++@node Introduction, Packaging , Copying, Top
+ @chapter Introduction
+ 
+   Most of the XEmacs text editor is written in the programming
