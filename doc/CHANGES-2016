@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1496 2016/04/13 18:34:36 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1497 2016/04/13 18:39:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1951,3 +1951,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-PadWalker to 2.2 [wiz 2016-04-13]
 	Updated security/p5-Net-SSLeay to 1.74 [wiz 2016-04-13]
 	Updated sysutils/mc to 4.8.16 [wiz 2016-04-13]
+	Updated devel/py-test to 2.9.1 [wiz 2016-04-13]
