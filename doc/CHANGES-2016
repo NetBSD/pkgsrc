@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1474 2016/04/13 17:48:48 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1475 2016/04/13 17:50:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1929,3 +1929,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated math/R-mvtnorm to 1.0.5 [wen 2016-04-13]
 	Updated multimedia/mpv to 0.17.0 [leot 2016-04-13]
 	Updated audio/abcde to 2.7.2 [wiz 2016-04-13]
+	Updated devel/waf to 1.8.20 [wiz 2016-04-13]
