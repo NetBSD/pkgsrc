@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2015/08/14 17:47:54 wiz Exp $
+@comment $NetBSD: PLIST,v 1.18 2016/04/13 18:13:49 wiz Exp $
 bin/cygdb${PYVERSSUFFIX}
 bin/cython${PYVERSSUFFIX}
 bin/cythonize${PYVERSSUFFIX}
@@ -150,6 +150,12 @@ ${PYSITELIB}/Cython/Compiler/Tests/TestBuffer.pyo
 ${PYSITELIB}/Cython/Compiler/Tests/TestCmdLine.py
 ${PYSITELIB}/Cython/Compiler/Tests/TestCmdLine.pyc
 ${PYSITELIB}/Cython/Compiler/Tests/TestCmdLine.pyo
+${PYSITELIB}/Cython/Compiler/Tests/TestFlowControl.py
+${PYSITELIB}/Cython/Compiler/Tests/TestFlowControl.pyc
+${PYSITELIB}/Cython/Compiler/Tests/TestFlowControl.pyo
+${PYSITELIB}/Cython/Compiler/Tests/TestGrammar.py
+${PYSITELIB}/Cython/Compiler/Tests/TestGrammar.pyc
+${PYSITELIB}/Cython/Compiler/Tests/TestGrammar.pyo
 ${PYSITELIB}/Cython/Compiler/Tests/TestMemView.py
 ${PYSITELIB}/Cython/Compiler/Tests/TestMemView.pyc
 ${PYSITELIB}/Cython/Compiler/Tests/TestMemView.pyo
@@ -341,6 +347,8 @@ ${PYSITELIB}/Cython/Includes/libcpp/algorithm.pxd
 ${PYSITELIB}/Cython/Includes/libcpp/cast.pxd
 ${PYSITELIB}/Cython/Includes/libcpp/complex.pxd
 ${PYSITELIB}/Cython/Includes/libcpp/deque.pxd
+${PYSITELIB}/Cython/Includes/libcpp/iterator.pxd
+${PYSITELIB}/Cython/Includes/libcpp/limits.pxd
 ${PYSITELIB}/Cython/Includes/libcpp/list.pxd
 ${PYSITELIB}/Cython/Includes/libcpp/map.pxd
 ${PYSITELIB}/Cython/Includes/libcpp/memory.pxd
@@ -357,12 +365,15 @@ ${PYSITELIB}/Cython/Includes/numpy/__init__.pxd
 ${PYSITELIB}/Cython/Includes/numpy/math.pxd
 ${PYSITELIB}/Cython/Includes/openmp.pxd
 ${PYSITELIB}/Cython/Includes/posix/__init__.pxd
+${PYSITELIB}/Cython/Includes/posix/dlfcn.pxd
 ${PYSITELIB}/Cython/Includes/posix/fcntl.pxd
 ${PYSITELIB}/Cython/Includes/posix/ioctl.pxd
 ${PYSITELIB}/Cython/Includes/posix/mman.pxd
 ${PYSITELIB}/Cython/Includes/posix/resource.pxd
+${PYSITELIB}/Cython/Includes/posix/select.pxd
 ${PYSITELIB}/Cython/Includes/posix/signal.pxd
 ${PYSITELIB}/Cython/Includes/posix/stat.pxd
+${PYSITELIB}/Cython/Includes/posix/stdio.pxd
 ${PYSITELIB}/Cython/Includes/posix/stdlib.pxd
 ${PYSITELIB}/Cython/Includes/posix/strings.pxd
 ${PYSITELIB}/Cython/Includes/posix/time.pxd
@@ -455,6 +466,7 @@ ${PYSITELIB}/Cython/Utility/CMath.c
 ${PYSITELIB}/Cython/Utility/Capsule.c
 ${PYSITELIB}/Cython/Utility/CommonTypes.c
 ${PYSITELIB}/Cython/Utility/Coroutine.c
+${PYSITELIB}/Cython/Utility/CpdefEnums.pyx
 ${PYSITELIB}/Cython/Utility/CppConvert.pyx
 ${PYSITELIB}/Cython/Utility/CppSupport.cpp
 ${PYSITELIB}/Cython/Utility/CythonFunction.c
