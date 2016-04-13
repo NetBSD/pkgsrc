@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile.in,v 1.1 2016/04/08 16:59:07 adam Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2016/04/13 17:25:57 adam Exp $
 
 Install into DESTDIR.
 Use external nDPI.
@@ -17,7 +17,7 @@ Use external nDPI.
  HAS_NDPI=$(shell pkg-config --exists libndpi; echo $$?)
  ifeq ($(HAS_NDPI), 0)
 -    NDPI_INC = $(shell pkg-config --cflags libndpi | sed -e 's/\(-I[^ \t]*\)/\1\/libndpi/g')
-+    NDPI_INC = $(shell pkg-config --cflags libndpi)/libndpi
++    NDPI_INC = $(shell pkg-config --cflags libndpi | sed -e 's/\(-I[^ ]*\)/\1\/libndpi/g')
      NDPI_LIB = $(shell pkg-config --libs libndpi)
      NDPI_LIB_DEP =
  else
