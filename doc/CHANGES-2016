@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1487 2016/04/13 18:13:59 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1488 2016/04/13 18:17:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1942,3 +1942,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/spice-protocol to 0.12.11 [wiz 2016-04-13]
 	Updated time/py-vdirsyncer to 0.9.3 [wiz 2016-04-13]
 	Updated devel/py-cython to 0.24 [wiz 2016-04-13]
+	Updated time/p5-Time-HiRes to 1.9728 [wiz 2016-04-13]

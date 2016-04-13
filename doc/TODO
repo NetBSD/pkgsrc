@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15720 2016/04/13 18:13:59 wiz Exp $
+$NetBSD: TODO,v 1.15721 2016/04/13 18:17:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1466,7 +1466,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Tie-Cycle-1.221
 	o p5-Tie-DBI-1.06
 	o p5-Time-Duration-Parse-0.13
-	o p5-Time-HiRes-1.9728
 	o p5-Time-Progress-2.11
 	o p5-Tree-DAG_Node-1.29
 	o p5-Tree-Simple-1.26
