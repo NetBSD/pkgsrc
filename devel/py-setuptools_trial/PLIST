@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2010/07/25 13:45:05 gdt Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/04/13 18:25:05 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/setuptools_trial/__init__.py
@@ -16,4 +15,4 @@ ${PYSITELIB}/setuptools_trial/setuptools_trial.py
 ${PYSITELIB}/setuptools_trial/setuptools_trial.pyc
 ${PYSITELIB}/setuptools_trial/setuptools_trial.pyo
 share/doc/python-setuptools_trial/COPYING.SPL.txt
-share/doc/python-setuptools_trial/README.txt
+share/doc/python-setuptools_trial/README.rst

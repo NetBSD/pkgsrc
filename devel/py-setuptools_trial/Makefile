@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2015/12/05 21:25:39 adam Exp $
+# $NetBSD: Makefile,v 1.9 2016/04/13 18:25:05 wiz Exp $
 
-DISTNAME=	setuptools_trial-0.5.12
+DISTNAME=	setuptools_trial-0.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	http://pypi.python.org/packages/source/s/setuptools_trial/
