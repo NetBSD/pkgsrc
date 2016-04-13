@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.115 2016/03/05 11:28:28 jperkin Exp $
+# $NetBSD: Makefile,v 1.116 2016/04/13 13:52:27 hauke Exp $
 
 PKGNAME?=	${DISTNAME}
 COMMENT?=	XEmacs text editor version 21
 
-DISTNAME=	xemacs-21.4.23
-PKGREVISION=	3
+DISTNAME=	xemacs-21.4.24
+#PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_XEMACS:=${DISTNAME:C/[.][^.]*$//}/}
 
@@ -15,8 +15,6 @@ LICENSE=	gnu-gpl-v2
 CONFLICTS+=	gnuserv-[0-9]*
 CONFLICTS+=	xemacs-[0-9]*
 CONFLICTS+=	xemacs-nox11-[0-9]*
-
-BROKEN_ON_PLATFORM=	*-*-mips*	# fails purespace dumping
 
 USE_TOOLS+=	makeinfo
 
@@ -37,8 +35,9 @@ PLIST_SUBST+=		ELSUFX=''
 .include "options.mk"
 
 CONFIGURE_ARGS+=	${MACHINE_GNU_PLATFORM}
-CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
-CONFIGURE_ARGS+=	--mandir=${PREFIX:Q}/${PKGMANDIR:Q}/man1
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}/man1
+CONFIGURE_ARGS+=	--infopath=${PREFIX}/${PKGINFODIR}
 CONFIGURE_ARGS+=	--with-clash-detection
 CONFIGURE_ARGS+=	--with-mule=yes
 CONFIGURE_ARGS+=	--with-msw=no
@@ -51,13 +50,6 @@ CFLAGS+=		-Dunix
 .if (${OPSYS} == "NetBSD") && exists(/usr/include/term.h)
 CPPFLAGS+=	-DTERMINFO
 .endif
-
-.if ${X11_TYPE} != "modular"
-INFOPATH=		${PREFIX}/${PKGINFODIR}:${X11BASE}/${PKGINFODIR}:${LOCALBASE}/${PKGINFODIR}
-.else
-INFOPATH=		${PREFIX}/${PKGINFODIR}:${LOCALBASE}/${PKGINFODIR}
-.endif
-CONFIGURE_ARGS+=	--infopath=${INFOPATH:Q}
 
 .if ${OPSYS} == "SunOS"
 .  if !exists(/usr/demo/SOUND/libaudio.a) && \

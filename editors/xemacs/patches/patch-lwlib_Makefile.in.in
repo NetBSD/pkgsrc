@@ -1,4 +1,6 @@
-$NetBSD: patch-lwlib_Makefile.in.in,v 1.1 2015/02/04 09:19:20 hauke Exp $
+$NetBSD: patch-lwlib_Makefile.in.in,v 1.2 2016/04/13 13:52:27 hauke Exp $
+
+SunOS 5 bmake / gmake fixes
 
 --- lwlib/Makefile.in.in.orig	2015-01-29 15:04:29.000000000 +0000
 +++ lwlib/Makefile.in.in

@@ -1,4 +1,6 @@
-$NetBSD: patch-lib-src_Makefile.in.in,v 1.1 2015/02/04 09:19:20 hauke Exp $
+$NetBSD: patch-lib-src_Makefile.in.in,v 1.2 2016/04/13 13:52:27 hauke Exp $
+
+Install selected files, using bsd.pkg.mk functionality
 
 --- lib-src/Makefile.in.in.orig	2015-01-29 15:04:29.000000000 +0000
 +++ lib-src/Makefile.in.in

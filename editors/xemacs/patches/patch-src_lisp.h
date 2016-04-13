@@ -1,8 +1,6 @@
-$NetBSD: patch-src_lisp.h,v 1.4 2016/03/29 19:32:53 hauke Exp $
+$NetBSD: patch-src_lisp.h,v 1.5 2016/04/13 13:52:27 hauke Exp $
 
 Don't try to define max_align_t in C11 or C++11 mode.
-
-Fix CVE-2009-2688, via <https://bugzilla.redhat.com/show_bug.cgi?id=511994>
 
 --- src/lisp.h.orig	2015-01-29 15:04:29.000000000 +0000
 +++ src/lisp.h
@@ -22,12 +20,3 @@ Fix CVE-2009-2688, via <https://bugzilla.redhat.com/show_bug.cgi?id=511994>
  
  #ifndef ALIGNOF
  # if defined (__GNUC__) && (__GNUC__ >= 2)
-@@ -265,6 +267,8 @@ void assert_failed (const char *, int, c
- /*#define REGISTER register*/
- /*#endif*/
- 
-+/* Mitigating CVE-2009-2688, see glyphs-eimage.c */
-+#define UINT_64_BIT uint64_t
- 
- /* EMACS_INT is the underlying integral type into which a Lisp_Object must fit.
-    In particular, it must be large enough to contain a pointer.
