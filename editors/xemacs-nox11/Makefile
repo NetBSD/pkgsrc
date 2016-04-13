@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/10/03 11:43:47 asau Exp $
+# $NetBSD: Makefile,v 1.22 2016/04/13 13:54:30 hauke Exp $
 
 PKGNAME=	${DISTNAME:S/-/-nox11-/}
 
@@ -8,7 +8,6 @@ PKGDIR=		${.CURDIR}/../../editors/xemacs
 
 .include "../../mk/bsd.prefs.mk"
 
-PKG_OPTIONS.xemacs+=	-x11 -lucid
-#PKG_OPTIONS.xemacs+=	-gtk -motif -xaw
+PKG_OPTIONS.xemacs+=	-x11
 
 .include "../../editors/xemacs/Makefile"
