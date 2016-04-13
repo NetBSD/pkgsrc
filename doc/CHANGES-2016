@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1467 2016/04/13 13:29:29 wen Exp $
+$NetBSD: CHANGES-2016,v 1.1468 2016/04/13 13:53:06 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1922,3 +1922,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-Mojolicious to 6.58 [wen 2016-04-13]
 	Updated security/p5-Digest-MD5 to 2.55 [wen 2016-04-13]
 	Updated math/p5-Math-Derivative to 0.04 [wen 2016-04-13]
+	Updated editors/xemacs to 21.4.24 [hauke 2016-04-13]
