@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2015/11/06 11:06:56 wiz Exp $
+@comment $NetBSD: PLIST,v 1.9 2016/04/13 18:08:05 wiz Exp $
 bin/vdirsyncer
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -27,9 +27,6 @@ ${PYSITELIB}/vdirsyncer/cli/utils.pyo
 ${PYSITELIB}/vdirsyncer/exceptions.py
 ${PYSITELIB}/vdirsyncer/exceptions.pyc
 ${PYSITELIB}/vdirsyncer/exceptions.pyo
-${PYSITELIB}/vdirsyncer/log.py
-${PYSITELIB}/vdirsyncer/log.pyc
-${PYSITELIB}/vdirsyncer/log.pyo
 ${PYSITELIB}/vdirsyncer/metasync.py
 ${PYSITELIB}/vdirsyncer/metasync.pyc
 ${PYSITELIB}/vdirsyncer/metasync.pyo
