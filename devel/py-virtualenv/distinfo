@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.25 2016/03/08 15:19:16 wiz Exp $
+$NetBSD: distinfo,v 1.26 2016/04/13 18:51:05 wiz Exp $
 
-SHA1 (virtualenv-15.0.0.tar.gz) = a51d035c4a5bdf0dda28a66d823b619d29c0d5e4
-RMD160 (virtualenv-15.0.0.tar.gz) = 364c17cecc15fb6336e8a971b30e52a955f02f3b
-SHA512 (virtualenv-15.0.0.tar.gz) = d47bc903689f6e8824144dfb410f3cd01f4f03dbe2249a8a8ab10372b6c0129435403bdd11ad97032d3b2c3b8cefff95f9e9a0dc3c50676c30635103669de5ae
-Size (virtualenv-15.0.0.tar.gz) = 1842672 bytes
+SHA1 (virtualenv-15.0.1.tar.gz) = 9fcdaaf7e822dd55c8acf06a464f21c1a90cd310
+RMD160 (virtualenv-15.0.1.tar.gz) = 5d45bc4b34c2483427c9556fd10833fcce9e661d
+SHA512 (virtualenv-15.0.1.tar.gz) = 419f496235f4317528e3a6c2effbd9561c5f8cc7052df5d82f5124a7ee18949f05170fdead6e5269e3cc28812f3e638dab059518e00abf931d10b8aa8b02e7ec
+Size (virtualenv-15.0.1.tar.gz) = 1842776 bytes
