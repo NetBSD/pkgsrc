@@ -1,0 +1,15 @@
+$NetBSD: patch-man_xemacs_custom.texi,v 1.1 2016/04/13 13:52:27 hauke Exp $
+
+Fix makeinfo 4 build errors.
+
+--- man/xemacs/custom.texi.orig	2015-03-25 11:25:33.000000000 +0000
++++ man/xemacs/custom.texi
+@@ -35,7 +35,7 @@ file to do the customization in each ses
+                      behavior of XEmacs.
+ @end menu
+ 
+-@node Minor Modes, , Customization, Customization
++@node Minor Modes, Variables, Customization, Customization
+ @section Minor Modes
+ @cindex minor modes
+ 

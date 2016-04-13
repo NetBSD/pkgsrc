@@ -1,4 +1,8 @@
-$NetBSD: patch-Makefile.in.in,v 1.1 2015/02/04 09:19:20 hauke Exp $
+$NetBSD: patch-Makefile.in.in,v 1.2 2016/04/13 13:52:27 hauke Exp $
+
+Avoid picking up local config when checking features
+
+Install {c,e}tags man pages with xemada prefix
 
 --- Makefile.in.in.orig	2015-01-29 15:04:29.000000000 +0000
 +++ Makefile.in.in

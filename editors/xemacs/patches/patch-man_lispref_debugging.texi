@@ -1,0 +1,15 @@
+$NetBSD: patch-man_lispref_debugging.texi,v 1.1 2016/04/13 13:52:27 hauke Exp $
+
+Fix makeinfo 4 build errors.
+
+--- man/lispref/debugging.texi.orig	2015-03-25 11:25:33.000000000 +0000
++++ man/lispref/debugging.texi
+@@ -725,7 +725,7 @@ the old indentation actually fit the int
+ and you have put back those parentheses, @kbd{C-M-q} should not change
+ anything.
+ 
+-@node Compilation Errors,  , Syntax Errors, Debugging
++@node Compilation Errors, Edebug , Syntax Errors, Debugging
+ @section Debugging Problems in Compilation
+ 
+   When an error happens during byte compilation, it is normally due to
