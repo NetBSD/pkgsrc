@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.104 2016/03/08 21:32:52 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.105 2016/04/13 20:37:33 ryoon Exp $
 bin/firefox
 lib/firefox/application.ini
 lib/firefox/browser/blocklist.xml
@@ -1985,6 +1985,7 @@ lib/firefox/browser/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}/icon.png
 lib/firefox/browser/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}/install.rdf
 lib/firefox/browser/features/loop@mozilla.org/bootstrap.js
 lib/firefox/browser/features/loop@mozilla.org/chrome.manifest
+lib/firefox/browser/features/loop@mozilla.org/chrome/content/locale-fallback/en-US/loop.properties
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/modules/LoopRooms.jsm
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/modules/LoopRoomsCache.jsm
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/modules/MozLoopAPI.jsm
@@ -1993,6 +1994,7 @@ lib/firefox/browser/features/loop@mozilla.org/chrome/content/modules/MozLoopServ
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/modules/MozLoopWorker.js
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/panels/conversation.html
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/panels/css/panel.css
+lib/firefox/browser/features/loop@mozilla.org/chrome/content/panels/css/slideshow.css
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/panels/js/conversation.js
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/panels/js/conversationAppStore.js
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/panels/js/feedbackViews.js
@@ -2000,8 +2002,12 @@ lib/firefox/browser/features/loop@mozilla.org/chrome/content/panels/js/otconfig.
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/panels/js/panel.js
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/panels/js/roomStore.js
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/panels/js/roomViews.js
+lib/firefox/browser/features/loop@mozilla.org/chrome/content/panels/js/slideshow.js
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/panels/panel.html
+lib/firefox/browser/features/loop@mozilla.org/chrome/content/panels/slideshow.html
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/panels/vendor/l10n.js
+lib/firefox/browser/features/loop@mozilla.org/chrome/content/panels/vendor/simpleSlideshow.css
+lib/firefox/browser/features/loop@mozilla.org/chrome/content/panels/vendor/simpleSlideshow.js
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/preferences/prefs.js
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/css/common.css
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/css/conversation.css
@@ -2009,12 +2015,14 @@ lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/css/reset.cs
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/02.png
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/02@2x.png
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/animated-spinner.svg
+lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/arrow-01.svg
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/audio-call-avatar.svg
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/audio-default-16x16@1.5x.png
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/audio-default-16x16@2x.png
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/audio-hover.svg
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/audio-mute-hover.svg
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/audio-mute.svg
+lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/audio-muted-darkgrey.svg
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/audio.svg
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/avatars.svg
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/beta-ribbon.svg
@@ -2024,16 +2032,24 @@ lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/cam_audi
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/chatbubble-arrow-left.svg
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/chatbubble-arrow-right.svg
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/check.svg
+lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/close-02.svg
+lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/cursor.svg
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/ellipsis-v.svg
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/empty_search.svg
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/exit.svg
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/facemute-14x14.png
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/facemute-14x14@2x.png
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/firefox-avatar.svg
+lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/firefox-hello_logo.svg
+lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/firefox-hello_tour-slide-01.svg
+lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/firefox-hello_tour-slide-02.svg
+lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/firefox-hello_tour-slide-03.svg
+lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/firefox-hello_tour-slide-04.svg
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/firefox-logo.png
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/glyph-email-16x16.svg
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/glyph-facebook-16x16.svg
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/glyph-help-16x16.svg
+lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/glyph-help-no-circle-16x16.svg
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/glyph-link-16x16.svg
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/glyph-user-16x16.svg
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/hangup-inverse-14x14.png
@@ -2047,6 +2063,7 @@ lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/icon_64.
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/icons-10x10.svg
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/icons-14x14.svg
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/icons-16x16.svg
+lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/leave.svg
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/media-group-left-hover.svg
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/media-group-right-hover.svg
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/media-group.svg
@@ -2055,6 +2072,7 @@ lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/movistar
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/mute-inverse-14x14.png
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/mute-inverse-14x14@2x.png
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/pause-12x12.svg
+lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/paused-hello.svg
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/play-12x12.svg
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/sad.png
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/sad_hello_icon_64x64.svg
@@ -2072,6 +2090,7 @@ lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/telefoni
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/video-hover.svg
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/video-mute-hover.svg
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/video-mute.svg
+lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/video-muted-darkgrey.svg
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/video.svg
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/vivo.png
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/img/vivo@2x.png
@@ -2084,6 +2103,7 @@ lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/js/loopapi-c
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/js/mixins.js
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/js/models.js
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/js/otSdkDriver.js
+lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/js/remoteCursorStore.js
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/js/store.js
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/js/textChatStore.js
 lib/firefox/browser/features/loop@mozilla.org/chrome/content/shared/js/textChatView.js
@@ -2150,10 +2170,11 @@ lib/firefox/browser/features/loop@mozilla.org/chrome/skin/windows/toolbar-invert
 lib/firefox/browser/features/loop@mozilla.org/chrome/skin/windows/toolbar-inverted@2x.png
 lib/firefox/browser/features/loop@mozilla.org/chrome/skin/windows/toolbar-lunaSilver.png
 lib/firefox/browser/features/loop@mozilla.org/chrome/skin/windows/toolbar-lunaSilver@2x.png
-lib/firefox/browser/features/loop@mozilla.org/chrome/skin/windows/toolbar-win10.png
-lib/firefox/browser/features/loop@mozilla.org/chrome/skin/windows/toolbar-win10@2x.png
+lib/firefox/browser/features/loop@mozilla.org/chrome/skin/windows/toolbar-win8.png
+lib/firefox/browser/features/loop@mozilla.org/chrome/skin/windows/toolbar-win8@2x.png
 lib/firefox/browser/features/loop@mozilla.org/chrome/skin/windows/toolbar.png
 lib/firefox/browser/features/loop@mozilla.org/chrome/skin/windows/toolbar@2x.png
+lib/firefox/browser/features/loop@mozilla.org/en-US/locale/en-US/loop.properties
 lib/firefox/browser/features/loop@mozilla.org/install.rdf
 lib/firefox/browser/icons/mozicon128.png
 lib/firefox/browser/modules/AboutHome.jsm
