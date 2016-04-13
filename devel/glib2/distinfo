@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.215 2016/04/07 18:33:05 prlw1 Exp $
+$NetBSD: distinfo,v 1.216 2016/04/13 10:13:43 jperkin Exp $
 
 SHA1 (glib-2.48.0.tar.xz) = afe88c1d64a0f9bdc140e87a84ef9423ce476ca5
 RMD160 (glib-2.48.0.tar.xz) = 647bb92c1c6e94042533dda8a3cebc0b3d2693c8
@@ -23,6 +23,7 @@ SHA1 (patch-cl) = 871e1ca59f697eddd6692702fc7d63a2df826afc
 SHA1 (patch-cm) = 534af37ae8f2bd667f630142058d4de5ea91be93
 SHA1 (patch-gio_gdbusauthmechanismsha1.c) = dfbd4a85ea842f11e4bb76d39c5509fb8b0d5baa
 SHA1 (patch-gio_gresource-tool.c) = 4eb7c9df25e9ac3e977edf3be8fb977a6fb39182
+SHA1 (patch-gio_inotify_inotify-kernel.c) = 18fc55be06dfa4ebf7128b8d1888aaff3b2b95c0
 SHA1 (patch-glib_gmain.c) = d09ff66e475ee52d37ac0dcb463110f690ce6511
 SHA1 (patch-glib_gthread-posix.c) = ca93c8dc358453eb79b518c884464c90d7628888
 SHA1 (patch-glib_gtimezone.c) = d9686da52f171a073d80cfd9f80aa490088a00a3
