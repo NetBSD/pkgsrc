@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1504 2016/04/13 19:44:59 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1505 2016/04/13 19:45:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1959,3 +1959,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-test-runner to 2.7.1 [wiz 2016-04-13]
 	Updated devel/py-virtualenv to 15.0.1 [wiz 2016-04-13]
 	Updated net/py-twisted to 16.1.1 [wiz 2016-04-13]
+	Updated net/py-twisted-docs to 16.1.1 [wiz 2016-04-13]
