@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2016/02/23 20:12:25 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.23 2016/04/13 07:12:00 bsiegert Exp $
 bin/go
 bin/gofmt
 go/AUTHORS
@@ -815,6 +815,7 @@ go/pkg/${GO_PLATFORM}/index/suffixarray.a
 go/pkg/${GO_PLATFORM}/internal/golang.org/x/net/http2/hpack.a
 go/pkg/${GO_PLATFORM}/internal/race.a
 go/pkg/${GO_PLATFORM}/internal/singleflight.a
+go/pkg/${GO_PLATFORM}/internal/syscall/windows/sysdll.a
 go/pkg/${GO_PLATFORM}/internal/testenv.a
 go/pkg/${GO_PLATFORM}/internal/trace.a
 go/pkg/${GO_PLATFORM}/io.a
@@ -2515,6 +2516,7 @@ go/src/internal/syscall/windows/registry/syscall.go
 go/src/internal/syscall/windows/registry/value.go
 go/src/internal/syscall/windows/registry/zsyscall_windows.go
 go/src/internal/syscall/windows/syscall_windows.go
+go/src/internal/syscall/windows/sysdll/sysdll.go
 go/src/internal/syscall/windows/zsyscall_windows.go
 go/src/internal/testenv/testenv.go
 go/src/internal/trace/goroutines.go
