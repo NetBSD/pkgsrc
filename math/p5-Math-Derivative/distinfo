@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 23:33:38 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/04/13 13:31:23 wen Exp $
 
-SHA1 (Math-Derivative-0.01.tar.gz) = c116497d1930b4e94a3a393a6cffac2d655ffd61
-RMD160 (Math-Derivative-0.01.tar.gz) = 43ed646d13bb14aed6d2c0e20b2cad39a63c08c1
-SHA512 (Math-Derivative-0.01.tar.gz) = 53d322a16919b97a4914aceda7d63e2d8053664337f555745f7d356379b928343381e8edf21a7bc0e353ecab5015d134612d3026032e459953da7471e71e70c5
-Size (Math-Derivative-0.01.tar.gz) = 1935 bytes
+SHA1 (Math-Derivative-0.04.tar.gz) = 5b79361bc9fd0122de378f1b4fb6f6fb20c44c28
+RMD160 (Math-Derivative-0.04.tar.gz) = 456c5080552679ef4e122e350b29d8708c4db19e
+SHA512 (Math-Derivative-0.04.tar.gz) = 36cc39024300063a34d8df5c896670625a30561bfcd29f13eab57a2ca3f6b9b3c6b8a14675aefcf41c1f17ec4e2e58d77664c28d621fb36f61006681dcd58f96
+Size (Math-Derivative-0.04.tar.gz) = 11893 bytes
