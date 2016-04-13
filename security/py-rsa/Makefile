@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2016/03/24 13:45:57 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2016/04/13 17:54:10 wiz Exp $
 
-DISTNAME=	rsa-3.4
+DISTNAME=	rsa-3.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rsa/}
