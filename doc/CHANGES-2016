@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1483 2016/04/13 18:04:14 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1484 2016/04/13 18:05:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1938,3 +1938,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/gnupg2 to 2.0.30 [wiz 2016-04-13]
 	Updated textproc/p5-YAML-LibYAML to 0.62 [wiz 2016-04-13]
 	Updated devel/p5-Sort-Versions to 1.62 [wiz 2016-04-13]
+	Updated devel/p5-Log-Dispatch to 2.54 [wiz 2016-04-13]
