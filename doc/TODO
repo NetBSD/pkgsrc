@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15730 2016/04/13 18:43:27 wiz Exp $
+$NetBSD: TODO,v 1.15731 2016/04/13 18:44:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1161,7 +1161,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mit-scheme-bin-9.2
 	o mksh-52b
 	o mkvtoolnix-5.9.0
-	o modular-xorg-xephyr-1.18.3
 	o modular-xorg-xquartz-1.18.0
 	o molden-4.8 [after which PR 40252 can be closed]
 	o molden-5.5
