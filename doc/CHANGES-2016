@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1479 2016/04/13 17:58:44 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1480 2016/04/13 17:59:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1934,3 +1934,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/py-rsa to 3.4.1 [wiz 2016-04-13]
 	Updated devel/py-mock to 2.0.0 [wiz 2016-04-13]
 	Updated devel/py-click to 6.6 [wiz 2016-04-13]
+	Updated graphics/jbig2dec to 0.13 [wiz 2016-04-13]
