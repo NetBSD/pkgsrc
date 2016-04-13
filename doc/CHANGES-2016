@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1492 2016/04/13 18:25:14 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1493 2016/04/13 18:26:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1947,3 +1947,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/py-foolscap to 0.11.0 [wiz 2016-04-13]
 	Updated devel/py-setuptools to 20.6.7 [wiz 2016-04-13]
 	Updated devel/py-setuptools_trial to 0.6.0 [wiz 2016-04-13]
+	Updated devel/p5-Log-Any to 1.04.0 [wiz 2016-04-13]
