@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1489 2016/04/13 18:18:21 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1490 2016/04/13 18:19:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1944,3 +1944,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-cython to 0.24 [wiz 2016-04-13]
 	Updated time/p5-Time-HiRes to 1.9728 [wiz 2016-04-13]
 	Updated misc/py-anki2 to 2.0.36 [wiz 2016-04-13]
+	Updated net/py-foolscap to 0.11.0 [wiz 2016-04-13]
