@@ -1,4 +1,13 @@
-$NetBSD: patch-src_Makefile.in.in,v 1.1 2015/02/04 09:19:20 hauke Exp $
+$NetBSD: patch-src_Makefile.in.in,v 1.2 2016/04/13 13:52:27 hauke Exp $
+
+Directly substitute the local value of etcdir (``../etc/'')
+into src/Makefile.in.in.  This allows for overriding etcdir via
+INSTALL_MAKE_FLAGS at install-time so that destdir-style installation
+will work.
+
+liboss support
+
+SunOS 5 bmake / gmake fixes
 
 --- src/Makefile.in.in.orig	2015-01-29 15:04:29.000000000 +0000
 +++ src/Makefile.in.in
