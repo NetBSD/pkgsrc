@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1475 2016/04/13 17:50:22 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1476 2016/04/13 17:52:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1930,3 +1930,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated multimedia/mpv to 0.17.0 [leot 2016-04-13]
 	Updated audio/abcde to 2.7.2 [wiz 2016-04-13]
 	Updated devel/waf to 1.8.20 [wiz 2016-04-13]
+	Updated devel/talloc to 2.1.6 [wiz 2016-04-13]
