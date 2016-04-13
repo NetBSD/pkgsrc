@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2016/04/13 17:56:24 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2016/04/13 17:57:07 wiz Exp $
 
 DISTNAME=	mock-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,11 +13,13 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	${PYPKGPREFIX}-pbr>=0.11:../../devel/py-pbr
 DEPENDS+=	${PYPKGPREFIX}-six>=1.7:../../lang/py-six
 BUILD_DEPENDS+=	${PYPKGPREFIX}-unittest2-[0-9]*:../../devel/py-unittest2
+
+.include "../../lang/python/egg.mk"
+
 .if ${_PYTHON_VERSION} < 33
 DEPENDS+=	${PYPKGPREFIX}-funcsigs-[0-9]*:../../devel/py-funcsigs
 .endif
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
