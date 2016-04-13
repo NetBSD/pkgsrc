@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1472 2016/04/13 14:24:37 wen Exp $
+$NetBSD: CHANGES-2016,v 1.1473 2016/04/13 16:14:25 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1927,3 +1927,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/R-mime to 0.4 [wen 2016-04-13]
 	Updated textproc/R-markdown to 0.7.7 [wen 2016-04-13]
 	Updated math/R-mvtnorm to 1.0.5 [wen 2016-04-13]
+	Updated multimedia/mpv to 0.17.0 [leot 2016-04-13]
