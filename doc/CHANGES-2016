@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1499 2016/04/13 18:44:55 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1500 2016/04/13 18:46:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1954,3 +1954,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-test to 2.9.1 [wiz 2016-04-13]
 	Updated x11/modular-xorg-server to 1.18.3 [wiz 2016-04-13]
 	Updated x11/modular-xorg-xephyr to 1.18.3 [wiz 2016-04-13]
+	Updated x11/xf86-video-ati to 7.7.0 [wiz 2016-04-13]
