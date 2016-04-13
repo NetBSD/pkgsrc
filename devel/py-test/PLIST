@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2015/10/19 09:44:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2016/04/13 18:39:21 wiz Exp $
 bin/py.test-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -13,18 +13,24 @@ ${PYSITELIB}/_pytest/__init__.pyo
 ${PYSITELIB}/_pytest/_argcomplete.py
 ${PYSITELIB}/_pytest/_argcomplete.pyc
 ${PYSITELIB}/_pytest/_argcomplete.pyo
+${PYSITELIB}/_pytest/_code/__init__.py
+${PYSITELIB}/_pytest/_code/__init__.pyc
+${PYSITELIB}/_pytest/_code/__init__.pyo
+${PYSITELIB}/_pytest/_code/_py2traceback.py
+${PYSITELIB}/_pytest/_code/_py2traceback.pyc
+${PYSITELIB}/_pytest/_code/_py2traceback.pyo
+${PYSITELIB}/_pytest/_code/code.py
+${PYSITELIB}/_pytest/_code/code.pyc
+${PYSITELIB}/_pytest/_code/code.pyo
+${PYSITELIB}/_pytest/_code/source.py
+${PYSITELIB}/_pytest/_code/source.pyc
+${PYSITELIB}/_pytest/_code/source.pyo
 ${PYSITELIB}/_pytest/_pluggy.py
 ${PYSITELIB}/_pytest/_pluggy.pyc
 ${PYSITELIB}/_pytest/_pluggy.pyo
 ${PYSITELIB}/_pytest/assertion/__init__.py
 ${PYSITELIB}/_pytest/assertion/__init__.pyc
 ${PYSITELIB}/_pytest/assertion/__init__.pyo
-${PYSITELIB}/_pytest/assertion/newinterpret.py
-${PYSITELIB}/_pytest/assertion/newinterpret.pyc
-${PYSITELIB}/_pytest/assertion/newinterpret.pyo
-${PYSITELIB}/_pytest/assertion/oldinterpret.py
-${PYSITELIB}/_pytest/assertion/oldinterpret.pyc
-${PYSITELIB}/_pytest/assertion/oldinterpret.pyo
 ${PYSITELIB}/_pytest/assertion/reinterpret.py
 ${PYSITELIB}/_pytest/assertion/reinterpret.pyc
 ${PYSITELIB}/_pytest/assertion/reinterpret.pyo

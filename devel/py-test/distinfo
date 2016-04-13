@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.16 2016/02/01 13:03:45 wiz Exp $
+$NetBSD: distinfo,v 1.17 2016/04/13 18:39:21 wiz Exp $
 
-SHA1 (pytest-2.8.7.tar.gz) = 58474cc27e8737ddde907b8d7b9917fc88493b1f
-RMD160 (pytest-2.8.7.tar.gz) = 10eb0ec9284f84862106ea230bdd320c7b4a05ad
-SHA512 (pytest-2.8.7.tar.gz) = c7f626ceb599811caeab4646389a2c489dd22d766c772d6ca686098cef9a11dca47ef41a4a4b811110f358bca1f1a678b549b2adfea48317ae70cf166289b371
-Size (pytest-2.8.7.tar.gz) = 564943 bytes
+SHA1 (pytest-2.9.1.tar.gz) = f1c1c9ca02907285a15613cdbea36b7bd9da5e23
+RMD160 (pytest-2.9.1.tar.gz) = f8aec6c6a68ab78b6cb32cb78a709c748f9f34a9
+SHA512 (pytest-2.9.1.tar.gz) = 88b579e88cc641ffe33e7a97c174890bb3e8d2ad6c7c9a0888e29ff7d1a670d377804ad0cc1885c82b077ca4956995122ae44cabb91703a07af6b8192ee82019
+Size (pytest-2.9.1.tar.gz) = 700602 bytes
 SHA1 (patch-aa) = 8f328ce39459c5a6fb7cca404f4986c1030d7981
