@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.18 2015/05/13 12:48:05 ryoon Exp $
+$NetBSD: patch-ad,v 1.19 2016/04/13 21:04:04 markd Exp $
 Adjust EXTRA_LIBS and @WANT_R_SHLIB_TRUE@R_bin_LDADD
 
---- src/main/Makefile.in.orig	2015-03-18 23:03:54.000000000 +0000
+--- src/main/Makefile.in.orig	2015-12-10 23:15:17.000000000 +0000
 +++ src/main/Makefile.in
 @@ -103,13 +103,13 @@ EXTRA_STATIC_LIBS = \
    $(R_ZLIBS) $(R_BZLIBS) $(R_PCRE) $(R_TRE) $(R_XDR) $(R_XZ) $(R_LIBINTL) $(R_TZONE)
@@ -18,4 +18,4 @@ Adjust EXTRA_LIBS and @WANT_R_SHLIB_TRUE@R_bin_LDADD
 +@WANT_R_SHLIB_TRUE@R_bin_LDADD = -L../../lib@R_ARCH@ ${COMPILER_RPATH_FLAG}$(Rexeclibdir) -lR @BLAS_SHLIB_TRUE@-lRblas
  @BUILD_LTO_FALSE@R_bin_DEPENDENCIES =@WANT_R_SHLIB_FALSE@ libR.a @USE_EXPORTFILES_TRUE@ $(top_builddir)/etc/R.exp
  
- libR_la = libR$(DYLIB_EXT)
+ libR_la = libR$(R_DYLIB_EXT)

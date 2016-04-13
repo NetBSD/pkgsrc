@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2015/08/14 12:40:19 wen Exp $
+@comment $NetBSD: PLIST,v 1.24 2016/04/13 21:04:04 markd Exp $
 bin/R
 bin/Rscript
 info/R-FAQ.info.gz
@@ -203,6 +203,7 @@ lib/R/library/Matrix/Copyrights
 lib/R/library/Matrix/DESCRIPTION
 lib/R/library/Matrix/Doxyfile
 lib/R/library/Matrix/INDEX
+lib/R/library/Matrix/LICENCE
 lib/R/library/Matrix/Meta/Rd.rds
 lib/R/library/Matrix/Meta/data.rds
 lib/R/library/Matrix/Meta/hsearch.rds
