@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1508 2016/04/13 21:23:29 markd Exp $
+$NetBSD: CHANGES-2016,v 1.1509 2016/04/13 21:40:54 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1964,3 +1964,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/firefox-l10n to 45.0.2 [ryoon 2016-04-13]
 	Updated converters/p5-Unicode-Normalize to 1.25 [markd 2016-04-13]
 	Updated math/R to 3.2.4 [markd 2016-04-13]
+	Updated devel/libwnck3 to 3.14.1 [prlw1 2016-04-13]
