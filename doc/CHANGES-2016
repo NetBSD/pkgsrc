@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1480 2016/04/13 17:59:45 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1481 2016/04/13 18:02:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1935,3 +1935,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-mock to 2.0.0 [wiz 2016-04-13]
 	Updated devel/py-click to 6.6 [wiz 2016-04-13]
 	Updated graphics/jbig2dec to 0.13 [wiz 2016-04-13]
+	Updated security/gnupg2 to 2.0.30 [wiz 2016-04-13]
