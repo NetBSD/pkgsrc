@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1510 2016/04/14 03:26:31 mef Exp $
+$NetBSD: CHANGES-2016,v 1.1511 2016/04/14 08:41:19 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1966,3 +1966,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated math/R to 3.2.4 [markd 2016-04-13]
 	Updated devel/libwnck3 to 3.14.1 [prlw1 2016-04-13]
 	Updated cad/gtkwave to 3.3.72 [mef 2016-04-14]
+	Updated print/evince3 to 3.20.0 [prlw1 2016-04-14]
