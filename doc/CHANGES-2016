@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1514 2016/04/14 11:28:58 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1515 2016/04/14 11:30:56 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1971,3 +1971,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/sassc to 3.3.4 [adam 2016-04-14]
 	Added devel/py-attrs version 15.2.0 [leot 2016-04-14]
 	Updated devel/automake to 1.15nb3 [wiz 2016-04-14]
+	Updated devel/autoconf-archive to 2016.03.20 [wiz 2016-04-14]
