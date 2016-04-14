@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/11/17 11:55:39 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2016/04/14 13:37:19 wiz Exp $
 include/liblangtag/langtag.h
 include/liblangtag/lt-config.h
 include/liblangtag/lt-database.h
@@ -20,6 +20,7 @@ include/liblangtag/lt-redundant-db.h
 include/liblangtag/lt-redundant.h
 include/liblangtag/lt-region-db.h
 include/liblangtag/lt-region.h
+include/liblangtag/lt-relation-db.h
 include/liblangtag/lt-script-db.h
 include/liblangtag/lt-script.h
 include/liblangtag/lt-string.h
@@ -58,6 +59,7 @@ share/gtk-doc/html/liblangtag/liblangtag-Database---Grandfathered.html
 share/gtk-doc/html/liblangtag/liblangtag-Database---Language.html
 share/gtk-doc/html/liblangtag/liblangtag-Database---Redundant.html
 share/gtk-doc/html/liblangtag/liblangtag-Database---Region.html
+share/gtk-doc/html/liblangtag/liblangtag-Database---Relation.html
 share/gtk-doc/html/liblangtag/liblangtag-Database---Script.html
 share/gtk-doc/html/liblangtag/liblangtag-Database---Variant.html
 share/gtk-doc/html/liblangtag/liblangtag-Database.html
@@ -87,4 +89,6 @@ share/liblangtag/common/bcp47/transform_mt.xml
 share/liblangtag/common/bcp47/transform_private_use.xml
 share/liblangtag/common/bcp47/variant.xml
 share/liblangtag/common/supplemental/likelySubtags.xml
+share/liblangtag/common/supplemental/supplementalData.xml
+share/liblangtag/common/supplemental/supplementalMetadata.xml
 share/liblangtag/language-subtag-registry.xml
