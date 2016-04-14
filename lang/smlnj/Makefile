@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/10/02 20:11:53 asau Exp $
+# $NetBSD: Makefile,v 1.25 2016/04/14 21:58:22 dholland Exp $
 #
 
 DISTNAME=	boot.${BOX}-unix
@@ -31,6 +31,7 @@ HOMEPAGE=	http://www.smlnj.org/index.html
 COMMENT=	Popular functional language from Bell Labs
 
 SML_VERSION=	110.73
+PKGREVISION=	1
 
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	smlnj-${SML_VERSION}
