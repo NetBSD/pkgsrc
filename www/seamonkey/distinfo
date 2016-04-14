@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.135 2016/03/30 12:56:53 ryoon Exp $
+$NetBSD: distinfo,v 1.136 2016/04/14 21:09:07 dholland Exp $
 
 SHA1 (seamonkey-2.40.source.tar.xz) = ecf99bc7478319835a0e19f35ed5b7b1aa2c0046
 RMD160 (seamonkey-2.40.source.tar.xz) = 4030688f145fdf35a6d2728d097cf7cda8e50231
@@ -136,6 +136,7 @@ SHA1 (patch-mozilla_toolkit_xre_nsEmbedFunctions.cpp) = 70030e59b2ed09b9bc9827d3
 SHA1 (patch-mozilla_webapprt_moz.build) = 8323bfea8fe835571bf60d95cfa59859b745083f
 SHA1 (patch-mozilla_xpcom_base_nscore.h) = a69c532d2891ac2a2227445e85e581749685153e
 SHA1 (patch-mozilla_xpcom_build_PoisonIOInterposer.h) = aa3e168c7c23ad6e63f521044336a03354ec9030
+SHA1 (patch-mozilla_xpcom_components_Module.h) = 47844707fe3c277ac86066d25fe313998f9e30a4
 SHA1 (patch-mozilla_xpcom_reflect_xptcall_md_unix_Makefile.in) = fa77d69500f1436e05c677723e485ccea213f4f4
 SHA1 (patch-mozilla_xpcom_reflect_xptcall_md_unix_moz.build) = 30bdef539886bda87e35306b5bf7e3a6ebefee53
 SHA1 (patch-mozilla_xpcom_reflect_xptcall_md_unix_xptcinvoke__arm__netbsd.cpp) = cb2a4769f04351e92580e3daaca88fc7f1dfedbd
