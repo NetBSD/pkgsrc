@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1509 2016/04/13 21:40:54 prlw1 Exp $
+$NetBSD: CHANGES-2016,v 1.1510 2016/04/14 03:26:31 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1965,3 +1965,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated converters/p5-Unicode-Normalize to 1.25 [markd 2016-04-13]
 	Updated math/R to 3.2.4 [markd 2016-04-13]
 	Updated devel/libwnck3 to 3.14.1 [prlw1 2016-04-13]
+	Updated cad/gtkwave to 3.3.72 [mef 2016-04-14]
