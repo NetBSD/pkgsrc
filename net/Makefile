@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1105 2016/04/08 17:00:21 adam Exp $
+# $NetBSD: Makefile,v 1.1106 2016/04/14 05:40:45 jnemeth Exp $
 #
 
 COMMENT=	Networking tools
@@ -288,6 +288,7 @@ SUBDIR+=	libradius
 SUBDIR+=	librsync
 SUBDIR+=	libsoup
 SUBDIR+=	libsscript
+SUBDIR+=	libtelnet
 SUBDIR+=	libtorrent
 SUBDIR+=	libtrace
 SUBDIR+=	libupnp
