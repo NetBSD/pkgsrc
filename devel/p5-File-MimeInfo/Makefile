@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2015/06/12 10:49:14 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2016/04/14 13:06:03 mef Exp $
 
 DISTNAME=	File-MimeInfo-0.27
 PKGNAME=	p5-${DISTNAME}
@@ -14,6 +14,8 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-File-BaseDir-[0-9]*:../../devel/p5-File-BaseDir
 DEPENDS+=	p5-File-DesktopEntry-[0-9]*:../../devel/p5-File-DesktopEntry
 DEPENDS+=	shared-mime-info-[0-9]*:../../databases/shared-mime-info
+# for make test (when t/05_more.t 'require (File::DesktopEntry);'
+BUILD_DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 
 PERL5_PACKLIST=		auto/File/MimeInfo/.packlist
 
