@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2015/02/01 14:45:18 taca Exp $
+# $NetBSD: Makefile,v 1.3 2016/04/14 21:52:55 wiz Exp $
 
-DISTNAME=	mercenary-0.3.5
+DISTNAME=	mercenary-0.3.6
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 
