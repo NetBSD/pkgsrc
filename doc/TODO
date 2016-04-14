@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15746 2016/04/14 12:51:45 wiz Exp $
+$NetBSD: TODO,v 1.15747 2016/04/14 12:52:07 mef Exp $
 
 Suggested new packages
 ======================
@@ -1288,7 +1288,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-DBIx-DBSchema-0.45
 	o p5-Data-AMF-0.02004
 	o p5-Data-SimplePassword-0.11
-	o p5-Devel-Symdump-2.1600
 	o p5-Device-XBee-API-0.8
 	o p5-Digest-Hashcash-1.1
 	o p5-Encode-2.82
