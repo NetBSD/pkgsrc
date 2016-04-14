@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2016/04/10 16:39:27 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2016/04/14 19:56:44 joerg Exp $
 # -----------------------------------------------------------------------------
 # Package metadata
 #
@@ -151,7 +151,7 @@ PRINT_PLIST_AWK+=	/lib\/${PKGNAME_NOREV}\/package\.conf\.d/ { next; }
 # feature has seemingly bitrotted.
 .include "../../mk/bsd.prefs.mk"
 GENERATE_PLIST+= \
-	cd ${PREFIX:Q} && \
+	cd ${DESTDIR}${PREFIX} && \
 		${FIND} lib/${PKGNAME_NOREV}/package.conf.d -xdev -newer ${_COOKIE.extract} \! -type d -print | ${SORT} -d;
 
 # -----------------------------------------------------------------------------
