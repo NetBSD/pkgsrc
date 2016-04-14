@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1516 2016/04/14 11:34:43 leot Exp $
+$NetBSD: CHANGES-2016,v 1.1517 2016/04/14 12:19:39 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1973,3 +1973,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/automake to 1.15nb3 [wiz 2016-04-14]
 	Updated devel/autoconf-archive to 2016.03.20 [wiz 2016-04-14]
 	Updated security/py-service_identity to 16.0.0nb1 [leot 2016-04-14]
+	Updated www/apache24 to 2.4.20 [adam 2016-04-14]
