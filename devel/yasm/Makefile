@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2016/02/25 12:12:50 jperkin Exp $
+# $NetBSD: Makefile,v 1.36 2016/04/14 23:18:04 khorben Exp $
 
 DISTNAME=	yasm-1.3.0
 CATEGORIES=	devel
@@ -13,6 +13,8 @@ USE_TOOLS+=		msgfmt
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 TEST_TARGET=		check
+
+MAKE_FLAGS+=		CFLAGS_FOR_BUILD=${CFLAGS:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
