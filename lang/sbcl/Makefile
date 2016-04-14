@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.66 2016/03/01 19:22:41 asau Exp $
+# $NetBSD: Makefile,v 1.67 2016/04/14 09:16:54 asau Exp $
 
 DISTNAME=		${PKGNAME_NOREV}-source
-PKGNAME=		sbcl-1.3.3
+PKGNAME=		sbcl-1.3.4
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sbcl/}
 EXTRACT_SUFX=		.tar.bz2
