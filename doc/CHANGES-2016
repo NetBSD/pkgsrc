@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1536 2016/04/14 21:58:49 abs Exp $
+$NetBSD: CHANGES-2016,v 1.1537 2016/04/14 23:43:55 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1993,3 +1993,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated emulators/mame to 0.172 [wiz 2016-04-14]
 	Updated devel/ruby-mercenary to 0.3.6 [wiz 2016-04-14]
 	Added net/tvnjviewer version 2.7.2 [abs 2016-04-14]
+	Updated sysutils/deforaos-browser to 0.5.1 [khorben 2016-04-15]
