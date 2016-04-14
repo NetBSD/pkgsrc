@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2016/04/14 11:06:27 leot Exp $
+${PYSITELIB}/attr/__init__.py
+${PYSITELIB}/attr/__init__.pyc
+${PYSITELIB}/attr/__init__.pyo
+${PYSITELIB}/attr/_compat.py
+${PYSITELIB}/attr/_compat.pyc
+${PYSITELIB}/attr/_compat.pyo
+${PYSITELIB}/attr/_config.py
+${PYSITELIB}/attr/_config.pyc
+${PYSITELIB}/attr/_config.pyo
+${PYSITELIB}/attr/_funcs.py
+${PYSITELIB}/attr/_funcs.pyc
+${PYSITELIB}/attr/_funcs.pyo
+${PYSITELIB}/attr/_make.py
+${PYSITELIB}/attr/_make.pyc
+${PYSITELIB}/attr/_make.pyo
+${PYSITELIB}/attr/filters.py
+${PYSITELIB}/attr/filters.pyc
+${PYSITELIB}/attr/filters.pyo
+${PYSITELIB}/attr/validators.py
+${PYSITELIB}/attr/validators.pyc
+${PYSITELIB}/attr/validators.pyo
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
