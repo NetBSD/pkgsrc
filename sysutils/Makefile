@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.662 2016/03/15 09:51:39 wiz Exp $
+# $NetBSD: Makefile,v 1.663 2016/04/14 05:47:52 jnemeth Exp $
 #
 
 COMMENT=	System utilities
@@ -648,6 +648,7 @@ SUBDIR+=	xfe
 SUBDIR+=	xfm
 SUBDIR+=	xfsprogs
 SUBDIR+=	xhfs
+SUBDIR+=	xhyve
 SUBDIR+=	xmbmon
 SUBDIR+=	xmeter
 SUBDIR+=	xnc
