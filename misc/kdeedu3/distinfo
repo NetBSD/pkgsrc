@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.45 2015/11/03 23:49:39 agc Exp $
+$NetBSD: distinfo,v 1.46 2016/04/14 11:11:09 jperkin Exp $
 
 SHA1 (kdeedu-3.5.10.tar.bz2) = c43f7bcd9cb7af7c77a78bc0bd7f51c0e572f589
 RMD160 (kdeedu-3.5.10.tar.bz2) = 312d0384fbf243d580b0d3d90e3e21b46a117d0d
@@ -16,6 +16,7 @@ SHA1 (patch-kbruch_src_fractionbasewidget.cpp) = caf54b0d8bd03b6494e55bee3d4c9c4
 SHA1 (patch-kbruch_src_mainqtwidget.cpp) = d312d5ffb9a32ab35cdb01d60f80889e647b265d
 SHA1 (patch-kbruch_src_ratiowidget.cpp) = a2c4fca8e12cd4c5e5a08267e2966091e0f4b814
 SHA1 (patch-kbruch_src_resultwidget.cpp) = b005f0bb7a8ffd58cabf2ea153ec28dd4cbf9643
+SHA1 (patch-kbruch_src_task.cpp) = 3a369cb5d2ee9187629a6f1eecd4d0c4bf8dabbf
 SHA1 (patch-kbruch_src_taskview.cpp) = 3bd61c8ba28ce35e1b4c174459efbe545b2531ae
 SHA1 (patch-kbruch_src_taskwidget.cpp) = e31c5cfd937c4df4b7a519ee5edff28fb318587f
 SHA1 (patch-kiten_dict.h) = 7b6b27dd9935ef3262eb1defc9d84c0884ae6b94
