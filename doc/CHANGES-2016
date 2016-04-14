@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1520 2016/04/14 12:39:19 mef Exp $
+$NetBSD: CHANGES-2016,v 1.1521 2016/04/14 12:43:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1977,3 +1977,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-ExtUtils-CppGuess to 0.11 [mef 2016-04-14]
 	Updated devel/p5-CPAN-Checksums to 2.11 [mef 2016-04-14]
 	Updated devel/p5-CPAN-Perl-Releases to 2.62 [mef 2016-04-14]
+	Updated textproc/hunspell-de to 20160407 [wiz 2016-04-14]
