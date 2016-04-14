@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2016/04/14 21:58:22 dholland Exp $
+# $NetBSD: Makefile,v 1.26 2016/04/14 22:10:06 dholland Exp $
 #
 
 DISTNAME=	boot.${BOX}-unix
@@ -66,12 +66,14 @@ post-extract:
 
 # resolve definition of SML_BASE, CFLAGS in patched files
 do-configure:
+	set -e;							\
 	if [ ${MACHINE_ARCH} = "powerpc" ]; then		\
-		${AWK} '(! /^request nlffi$$/) { print }' \
+		${AWK} '(! /^request nlffi$$/) { print }'	\
 		< ${WRKDIR}/config/targets			\
 		> ${WRKDIR}/temp;				\
 		${MV} ${WRKDIR}/temp ${WRKDIR}/config/targets;	\
 	fi
+	set -e;						\
 	cd ${WRKDIR}/config;				\
 	for f in ${SML_SCRIPTS}; do			\
 		${CP} "$${f}" "$${f}.tmp";		\
@@ -81,14 +83,14 @@ do-configure:
 	cd ${WRKDIR}/src/runtime/objs;			\
 	for f in *; do					\
 		${CP} "$${f}" "$${f}.tmp";		\
-		${SED} -e 's|@CFLAGS@|${CFLAGS}|g'	\
+		${SED} -e 's|@CFLAGS@|'${CFLAGS:Q}'|g'	\
 			< "$${f}.tmp" > "$${f}";	\
 	done
 
 # The build target needs to run $WRKDIR/config/install.sh
 do-build:
 	cd ${WRKDIR} && unset PWD && \
-	FILESDIR="${FILESDIR}" PATCH="${PATCH}" PATCH_ARGS="${PATCH_ARGS}" \
+	FILESDIR=${FILESDIR} PATCH=${PATCH:Q} PATCH_ARGS=${PATCH_ARGS:Q} \
 		SMLNJ_HOME="${WRKDIR}" ./config/install.sh
 
 # install target
