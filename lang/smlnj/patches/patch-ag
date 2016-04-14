@@ -1,4 +1,6 @@
-$NetBSD: patch-ag,v 1.2 2003/03/21 22:54:39 wiz Exp $
+$NetBSD: patch-ag,v 1.3 2016/04/14 22:04:47 dholland Exp $
+
+Add config for NetBSD on sparc.
 
 --- src/runtime/objs/mk.sparc-netbsd.orig	Thu Sep 19 03:54:01 2002
 +++ src/runtime/objs/mk.sparc-netbsd
