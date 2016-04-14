@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2015/07/05 18:33:01 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2016/04/14 11:35:47 jperkin Exp $
 
 DISTNAME=	gpa-0.9.7
 CATEGORIES=	x11 security
@@ -15,6 +15,7 @@ GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
 
 LIBS+=			${BUILDLINK_LDADD.getopt}
+LIBS.SunOS+=		-lnsl
 
 CONFIGURE_ENV+=		ac_cv_path_GPG=${GPGME_GPG:Q}
 
