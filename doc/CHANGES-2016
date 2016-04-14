@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1518 2016/04/14 12:27:57 mef Exp $
+$NetBSD: CHANGES-2016,v 1.1519 2016/04/14 12:36:13 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1975,3 +1975,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/py-service_identity to 16.0.0nb1 [leot 2016-04-14]
 	Updated www/apache24 to 2.4.20 [adam 2016-04-14]
 	Updated devel/p5-ExtUtils-CppGuess to 0.11 [mef 2016-04-14]
+	Updated devel/p5-CPAN-Checksums to 2.11 [mef 2016-04-14]
