@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1522 2016/04/14 12:44:41 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1523 2016/04/14 12:46:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1979,3 +1979,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-CPAN-Perl-Releases to 2.62 [mef 2016-04-14]
 	Updated textproc/hunspell-de to 20160407 [wiz 2016-04-14]
 	Updated x11/libxkbcommon to 0.6.1 [wiz 2016-04-14]
+	Updated devel/p5-Test-Harness to 3.36 [wiz 2016-04-14]

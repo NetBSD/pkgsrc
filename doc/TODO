@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15740 2016/04/14 12:44:41 wiz Exp $
+$NetBSD: TODO,v 1.15741 2016/04/14 12:46:50 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1440,7 +1440,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Test-Deep-1.120
 	o p5-Test-Exception-0.43
 	o p5-Test-File-Contents-0.22
-	o p5-Test-Harness-3.36
 	o p5-Test-Memory-Cycle-1.06
 	o p5-Test-MinimumVersion-0.101082
 	o p5-Test-MockModule-0.11
