@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1526 2016/04/14 12:49:33 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1527 2016/04/14 12:50:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1983,3 +1983,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Test-Exception to 0.43 [wiz 2016-04-14]
 	Updated devel/p5-Variable-Magic to 0.59 [wiz 2016-04-14]
 	Updated devel/p5-Test-MockModule to 0.11 [wiz 2016-04-14]
+	Updated devel/p5-Search-Elasticsearch to 2.00 [wiz 2016-04-14]
