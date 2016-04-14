@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2016/04/14 21:58:09 abs Exp $
+bin/tvnjviewer
+lib/java/tvnjviewer/tightvnc-jviewer.jar
+share/doc/tvnjviewer/README.txt
+share/doc/tvnjviewer/viewer-applet-example.html
