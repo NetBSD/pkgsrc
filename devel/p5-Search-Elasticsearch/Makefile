@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2015/09/06 06:41:44 mef Exp $
+# $NetBSD: Makefile,v 1.6 2016/04/14 12:50:34 wiz Exp $
 
-DISTNAME=	Search-Elasticsearch-1.99
+DISTNAME=	Search-Elasticsearch-2.00
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/D/DR/DRTECH/
