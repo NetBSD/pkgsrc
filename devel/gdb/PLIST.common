@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST.common,v 1.10 2016/04/06 09:34:20 fhajny Exp $
+@comment $NetBSD: PLIST.common,v 1.11 2016/04/14 08:40:44 fhajny Exp $
 bin/gdb
 include/gdb/jit-reader.h
 info/annotate.info
-info/bfd.info
 info/gdb.info
 info/stabs.info
 man/man1/gdb.1
