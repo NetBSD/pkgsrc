@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1533 2016/04/14 14:30:52 mef Exp $
+$NetBSD: CHANGES-2016,v 1.1534 2016/04/14 21:47:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1990,3 +1990,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-tortoisehg to 3.7.3 [wiz 2016-04-14]
 	Updated devel/liblangtag to 0.6.0 [wiz 2016-04-14]
 	Updated devel/p5-ExtUtils-LibBuilder to 0.08 [mef 2016-04-14]
+	Updated emulators/mame to 0.172 [wiz 2016-04-14]
