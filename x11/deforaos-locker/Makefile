@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2016/02/20 13:15:41 khorben Exp $
+# $NetBSD: Makefile,v 1.19 2016/04/14 11:29:06 jperkin Exp $
 
 DISTNAME=	Locker-0.4.0
 PKGNAME=	deforaos-locker-0.4.0
@@ -22,6 +22,8 @@ MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
 MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
 AUTO_MKDIRS=	yes
+
+LDFLAGS.SunOS+=	-lXext
 
 .include "../../mk/bsd.prefs.mk"
 
