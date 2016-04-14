@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1535 2016/04/14 21:53:06 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1536 2016/04/14 21:58:49 abs Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1992,3 +1992,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-ExtUtils-LibBuilder to 0.08 [mef 2016-04-14]
 	Updated emulators/mame to 0.172 [wiz 2016-04-14]
 	Updated devel/ruby-mercenary to 0.3.6 [wiz 2016-04-14]
+	Added net/tvnjviewer version 2.7.2 [abs 2016-04-14]
