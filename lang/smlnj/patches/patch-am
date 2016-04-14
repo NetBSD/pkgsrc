@@ -1,4 +1,6 @@
-$NetBSD: patch-am,v 1.1 2003/03/21 22:54:42 wiz Exp $
+$NetBSD: patch-am,v 1.2 2016/04/14 22:04:47 dholland Exp $
+
+Honor pkgsrc CFLAGS.
 
 --- src/runtime/objs/mk.sparc-solaris.orig	Fri Jun 15 15:05:19 2001
 +++ src/runtime/objs/mk.sparc-solaris

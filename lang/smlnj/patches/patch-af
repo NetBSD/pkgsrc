@@ -1,4 +1,6 @@
-$NetBSD: patch-af,v 1.5 2009/09/22 14:48:47 asau Exp $
+$NetBSD: patch-af,v 1.6 2016/04/14 22:04:47 dholland Exp $
+
+Support for NetBSD, and for NetBSD on PPC.
 
 --- src/runtime/mach-dep/signal-sysdep.h.orig	2006-02-27 17:47:32.000000000 +0000
 +++ src/runtime/mach-dep/signal-sysdep.h	2006-03-09 19:15:48.000000000 +0000
