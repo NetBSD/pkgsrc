@@ -1,4 +1,6 @@
-$NetBSD: patch-aq,v 1.2 2003/07/01 23:19:14 jtb Exp $
+$NetBSD: patch-aq,v 1.3 2016/04/14 22:04:47 dholland Exp $
+
+NetBSD support.
 
 --- src/runtime/mach-dep/PPC.prim.asm.orig
 +++ src/runtime/mach-dep/PPC.prim.asm
