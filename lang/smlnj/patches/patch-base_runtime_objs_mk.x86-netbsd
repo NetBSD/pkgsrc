@@ -1,4 +1,6 @@
-$NetBSD: patch-base_runtime_objs_mk.x86-netbsd,v 1.1 2015/04/22 07:41:38 dholland Exp $
+$NetBSD: patch-base_runtime_objs_mk.x86-netbsd,v 1.2 2016/04/14 22:10:31 dholland Exp $
+
+Configure for pkgsrc. Build as 32-bit.
 
 --- base/runtime/objs/mk.x86-netbsd.orig	2015-04-22 07:11:37.000000000 +0000
 +++ base/runtime/objs/mk.x86-netbsd
@@ -14,10 +16,9 @@ $NetBSD: patch-base_runtime_objs_mk.x86-netbsd,v 1.1 2015/04/22 07:41:38 dhollan
  CPP =		gcc -x assembler-with-cpp -E -P
  #CPP =		/usr/bin/cpp -P
  
-@@ -23,4 +24,5 @@ VERSION =	v-x86-netbsd
+@@ -23,4 +24,4 @@ VERSION =	v-x86-netbsd
  RUNTIME =	run.x86-netbsd
  
  all:
 -	($(MAKE) RUNTIME="$(RUNTIME)" VERSION="$(VERSION)" MAKE="$(MAKE)" CC="$(CC)" CFLAGS="$(CFLAGS)" CPP="$(CPP)" TARGET=$(TARGET) DEFS="$(DEFS)" XOBJS="$(XOBJS)" XLIBS="$(XLIBS)" LD_LIBS="$(LD_LIBS)" $(RUNTIME))
-+	echo '************************** schnozzbort ************************'
 +	($(MAKE) RUNTIME="$(RUNTIME)" VERSION="$(VERSION)" MAKE="$(MAKE)" AS="$(AS)" CC="$(CC)" CFLAGS="$(CFLAGS)" CPP="$(CPP)" TARGET=$(TARGET) DEFS="$(DEFS)" XOBJS="$(XOBJS)" XLIBS="$(XLIBS)" LD_LIBS="$(LD_LIBS)" $(RUNTIME))
