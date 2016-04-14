@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2015/04/22 07:41:38 dholland Exp $
+# $NetBSD: Makefile.common,v 1.14 2016/04/14 21:59:08 dholland Exp $
 #
 # used by lang/smlnj/Makefile
 
@@ -35,7 +35,7 @@ OS=		${LOWER_OPSYS}
 
 PLIST_VARS+=	nlffi		# not available on all platforms
 
-.if ${MACHINE_ARCH} == "i386"
+.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 BOX=		x86
 PLIST.nlffi=	yes
 .elif ${MACHINE_ARCH} == "powerpc"
