@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1532 2016/04/14 13:37:29 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1533 2016/04/14 14:30:52 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1989,3 +1989,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated time/p5-Time-Duration-Parse to 0.13 [wiz 2016-04-14]
 	Updated devel/py-tortoisehg to 3.7.3 [wiz 2016-04-14]
 	Updated devel/liblangtag to 0.6.0 [wiz 2016-04-14]
+	Updated devel/p5-ExtUtils-LibBuilder to 0.08 [mef 2016-04-14]
