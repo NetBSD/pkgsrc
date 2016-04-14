@@ -1,16 +1,16 @@
-$NetBSD: patch-makefile,v 1.14 2016/04/04 17:32:17 joerg Exp $
+$NetBSD: patch-makefile,v 1.15 2016/04/14 21:47:07 wiz Exp $
 
---- makefile.orig	2016-04-04 07:38:18.519192767 +0000
+--- makefile.orig	2016-03-30 09:03:03.000000000 +0000
 +++ makefile
-@@ -806,11 +806,6 @@ ifeq ($(CLANG_VERSION),)
- $(info GCC $(GCC_VERSION) detected)
+@@ -833,11 +833,6 @@ $(info GCC $(GCC_VERSION) detected)
  else
  $(info Clang $(CLANG_VERSION) detected)
+ ifneq ($(TARGETOS),asmjs)
 -ifeq ($(ARCHITECTURE),_x64)
 -ARCHITECTURE := _x64_clang
 -else
 -ARCHITECTURE := _x86_clang
 -endif
  endif
- ifneq ($(PYTHON_AVAILABLE),python)
- $(error Python is not available in path)
+ endif
+ 
