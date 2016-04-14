@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1512 2016/04/14 10:59:58 adam Exp $
+$NetBSD: CHANGES-2016,v 1.1513 2016/04/14 11:07:41 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1969,3 +1969,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated print/evince3 to 3.20.0 [prlw1 2016-04-14]
 	Updated www/libsass to 3.3.4 [adam 2016-04-14]
 	Updated www/sassc to 3.3.4 [adam 2016-04-14]
+	Added devel/py-attrs version 15.2.0 [leot 2016-04-14]
