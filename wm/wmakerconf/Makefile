@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2015/07/04 16:18:41 joerg Exp $
+# $NetBSD: Makefile,v 1.78 2016/04/14 10:47:12 jperkin Exp $
 
 DISTNAME=	wmakerconf-2.11
 PKGREVISION=	40
@@ -26,6 +26,8 @@ CONFIGURE_ENV+=		tar=${TOOLS_TAR:Q}
 
 REPLACE_PERL+=		scripts/*.pl.in
 USE_TOOLS+=		perl:run
+
+LDFLAGS.SunOS+=		-lX11
 
 post-extract:
 	${MV} ${WRKSRC}/data/WMWmakerconf ${WRKSRC}/data/WMWmakerconf.in
