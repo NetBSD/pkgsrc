@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.18 2016/04/14 22:04:47 dholland Exp $
+$NetBSD: distinfo,v 1.19 2016/04/14 22:10:31 dholland Exp $
 
 SHA1 (smlnj-110.73/MLRISC.tgz) = 59a38a4a1c63cecf97764a99577b3f929b5ccbc9
 RMD160 (smlnj-110.73/MLRISC.tgz) = dd951776482f37421a17701d67c051741691c6cb
@@ -100,10 +100,10 @@ SHA1 (patch-base_runtime_gc_gc-stats.h) = 35e54cb66c47c636c5a9f450cff99dced4218d
 SHA1 (patch-base_runtime_gc_init-gc.c) = f40e961089beab151290ffc8371a48bc9f846511
 SHA1 (patch-base_runtime_kernel_unix-timers.c) = 42f1d2964d5de37fdc232139f74fb9a95f21da07
 SHA1 (patch-base_runtime_mach-dep_unix-prof.c) = 1f28a05cfb271c569cfb9778e67076bbfb14d646
-SHA1 (patch-base_runtime_objs_mk.x86-netbsd) = 1e5ca88c65066a07b818af76abc2f9f1bafdc339
+SHA1 (patch-base_runtime_objs_mk.x86-netbsd) = 7d716c17c0f6a29acca7b630a1526df4d58e18cf
 SHA1 (patch-config___arch-n-opsys) = b0c952b0b9ed6312a115761fdbd4c30aaa208b4c
 SHA1 (patch-src_runtime_gc_gc-stats.h) = af61db9d1f04e566d4c5c2bc5dcf4c6958f0ea78
 SHA1 (patch-src_runtime_gc_init-gc.c) = 5d1d5a13a51d732590dd4f375824bbc389a0525d
 SHA1 (patch-src_runtime_kernel_unix-timers.c) = 1c1db5bce0ec1e72adafb9380027884cf746c75c
 SHA1 (patch-src_runtime_mach-dep_unix-prof.c) = 90a4b81e2a8532e4e06f29bfe42c55423a0f4154
-SHA1 (patch-src_runtime_objs_mk.x86-netbsd) = bd29b208b68771ecd1f3c64d896653084c6eb30e
+SHA1 (patch-src_runtime_objs_mk.x86-netbsd) = d2ede7ce4fca3c400f82ae09ee352ee6872bb1b1
