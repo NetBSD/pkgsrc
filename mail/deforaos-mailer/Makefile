@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2016/04/05 20:52:34 khorben Exp $
+# $NetBSD: Makefile,v 1.24 2016/04/14 11:16:28 jperkin Exp $
 
 DISTNAME=	Mailer-0.1.8
 PKGNAME=	deforaos-mailer-0.1.8
@@ -25,6 +25,8 @@ MAKE_FLAGS+=	LDFLAGS=${LDFLAGS:Q}
 AUTO_MKDIRS=	yes
 
 CONFLICTS=	john-[0-9]*
+
+LDFLAGS.SunOS+=	-lnsl -lsocket
 
 .include "../../mk/bsd.prefs.mk"
 
