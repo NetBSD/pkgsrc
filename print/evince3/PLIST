@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2016/02/26 02:24:34 leot Exp $
+@comment $NetBSD: PLIST,v 1.12 2016/04/14 08:40:57 prlw1 Exp $
 bin/evince
 bin/evince-previewer
 bin/evince-thumbnailer
@@ -69,6 +69,7 @@ lib/libevdocument3.la
 lib/libevview3.la
 lib/pkgconfig/evince-document-3.0.pc
 lib/pkgconfig/evince-view-3.0.pc
+lib/systemd/user/evince.service
 ${PLIST.dbus}libexec/evinced
 man/man1/evince.1
 share/GConf/gsettings/evince.convert
@@ -121,7 +122,6 @@ share/evince/icons/hicolor/48x48/actions/view-page-continuous.png
 share/evince/icons/hicolor/48x48/actions/view-page-facing.png
 share/evince/icons/hicolor/scalable/actions/object-rotate-left.svg
 share/evince/icons/hicolor/scalable/actions/object-rotate-right.svg
-share/evince/icons/hicolor/scalable/apps/evince-symbolic.svg
 share/evince/icons/hicolor/scalable/mimetypes/x-office-presentation.svg
 share/glib-2.0/schemas/org.gnome.Evince.gschema.xml
 share/gtk-doc/html/evince/EvFileMonitor.html
@@ -2961,6 +2961,7 @@ share/icons/hicolor/22x22/apps/evince.png
 share/icons/hicolor/24x24/apps/evince.png
 share/icons/hicolor/256x256/apps/evince.png
 share/icons/hicolor/48x48/apps/evince.png
+share/icons/hicolor/symbolic/apps/evince-symbolic.svg
 share/locale/af/LC_MESSAGES/evince.mo
 share/locale/an/LC_MESSAGES/evince.mo
 share/locale/ar/LC_MESSAGES/evince.mo
