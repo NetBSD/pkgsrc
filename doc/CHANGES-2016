@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1540 2016/04/15 08:48:00 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1541 2016/04/15 08:50:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1997,3 +1997,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/liblangtag to 0.6.0nb1 [wiz 2016-04-15]
 	Updated misc/calibre to 2.54.0 [wiz 2016-04-15]
 	Updated audio/alsa-lib to 1.1.1 [wiz 2016-04-15]
+	Updated audio/alsa-utils to 1.1.1 [wiz 2016-04-15]
