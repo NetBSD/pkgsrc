@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/04/15 11:43:26 wiz Exp $
+
+SHA1 (Parse-MIME-1.003.tar.gz) = 2b32288af08382baa15e2c4cb4a8824a7a88c70d
+RMD160 (Parse-MIME-1.003.tar.gz) = f81f7cddb749034d9d1d3cbb6bd612c3ce6c4224
+SHA512 (Parse-MIME-1.003.tar.gz) = 6ffec28a1450134a3e6f9564a25b3e5e3910ff3b65b3edaf710bb24f178a6655cc1726e3513eec3e1bd59d7e2ab766d0e0657e10e718e23eabdbb23181594cab
+Size (Parse-MIME-1.003.tar.gz) = 13282 bytes
