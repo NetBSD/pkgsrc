@@ -1,0 +1,4 @@
+Plack::Test::Agent is an OO interface to test PSGI applications.
+It can perform GET and POST requests against PSGI applications
+either in process or over HTTP through a Plack::Handler compatible
+backend.
