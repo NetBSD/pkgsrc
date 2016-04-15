@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2015/11/18 12:04:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2016/04/15 14:20:00 wiz Exp $
 bin/gst-device-monitor-1.0
 bin/gst-discoverer-1.0
 bin/gst-play-1.0
@@ -8,10 +8,13 @@ include/gstreamer-1.0/gst/allocators/gstfdmemory.h
 include/gstreamer-1.0/gst/app/app.h
 include/gstreamer-1.0/gst/app/gstappsink.h
 include/gstreamer-1.0/gst/app/gstappsrc.h
+include/gstreamer-1.0/gst/audio/audio-channel-mixer.h
 include/gstreamer-1.0/gst/audio/audio-channels.h
+include/gstreamer-1.0/gst/audio/audio-converter.h
 include/gstreamer-1.0/gst/audio/audio-enumtypes.h
 include/gstreamer-1.0/gst/audio/audio-format.h
 include/gstreamer-1.0/gst/audio/audio-info.h
+include/gstreamer-1.0/gst/audio/audio-quantize.h
 include/gstreamer-1.0/gst/audio/audio.h
 include/gstreamer-1.0/gst/audio/gstaudiobasesink.h
 include/gstreamer-1.0/gst/audio/gstaudiobasesrc.h
@@ -36,6 +39,7 @@ include/gstreamer-1.0/gst/pbutils/codec-utils.h
 include/gstreamer-1.0/gst/pbutils/descriptions.h
 include/gstreamer-1.0/gst/pbutils/encoding-profile.h
 include/gstreamer-1.0/gst/pbutils/encoding-target.h
+include/gstreamer-1.0/gst/pbutils/gstaudiovisualizer.h
 include/gstreamer-1.0/gst/pbutils/gstdiscoverer.h
 include/gstreamer-1.0/gst/pbutils/gstpluginsbaseversion.h
 include/gstreamer-1.0/gst/pbutils/install-plugins.h
@@ -76,6 +80,7 @@ include/gstreamer-1.0/gst/tag/tag.h
 include/gstreamer-1.0/gst/tag/xmpwriter.h
 include/gstreamer-1.0/gst/video/colorbalance.h
 include/gstreamer-1.0/gst/video/colorbalancechannel.h
+include/gstreamer-1.0/gst/video/gstvideoaffinetransformationmeta.h
 include/gstreamer-1.0/gst/video/gstvideodecoder.h
 include/gstreamer-1.0/gst/video/gstvideoencoder.h
 include/gstreamer-1.0/gst/video/gstvideofilter.h
@@ -159,6 +164,8 @@ share/doc/gst-plugins-0.10/gst-plugins-base-libs-1.0/api-index-deprecated.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-1.0/api-index-full.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-1.0/compiling.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-1.0/gst-plugins-base-libs-1.0.devhelp2
+share/doc/gst-plugins-0.10/gst-plugins-base-libs-1.0/gst-plugins-base-libs-GstAudioConverter.html
+share/doc/gst-plugins-0.10/gst-plugins-base-libs-1.0/gst-plugins-base-libs-GstAudioQuantize.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-1.0/gst-plugins-base-libs-GstVideoChroma.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-1.0/gst-plugins-base-libs-GstVideoDecoder.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-1.0/gst-plugins-base-libs-GstVideoDither.html
@@ -229,6 +236,7 @@ share/doc/gst-plugins-0.10/gst-plugins-base-libs-1.0/gst-plugins-base-libs-gstta
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-1.0/gst-plugins-base-libs-gsttagxmp.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-1.0/gst-plugins-base-libs-gsttagxmpwriter.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-1.0/gst-plugins-base-libs-gstvideo.html
+share/doc/gst-plugins-0.10/gst-plugins-base-libs-1.0/gst-plugins-base-libs-gstvideoaffinetransformationmeta.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-1.0/gst-plugins-base-libs-gstvideofilter.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-1.0/gst-plugins-base-libs-gstvideometa.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-1.0/gst-plugins-base-libs-gstvideoorientation.html
@@ -252,7 +260,6 @@ share/doc/gst-plugins-0.10/gst-plugins-base-libs-1.0/gstreamer-tag.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-1.0/gstreamer-video.html
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-1.0/home.png
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-1.0/index.html
-share/doc/gst-plugins-0.10/gst-plugins-base-libs-1.0/index.sgml
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-1.0/left-insensitive.png
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-1.0/left.png
 share/doc/gst-plugins-0.10/gst-plugins-base-libs-1.0/right-insensitive.png
@@ -264,6 +271,7 @@ share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/ch01.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/ch02.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/gst-plugins-base-plugins-1.0.devhelp2
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/gst-plugins-base-plugins-adder.html
+share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/gst-plugins-base-plugins-alsamidisrc.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/gst-plugins-base-plugins-alsasink.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/gst-plugins-base-plugins-alsasrc.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/gst-plugins-base-plugins-appsink.html
@@ -289,6 +297,8 @@ share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/gst-plugins-base-plugins
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/gst-plugins-base-plugins-ogmaudioparse.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/gst-plugins-base-plugins-ogmtextparse.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/gst-plugins-base-plugins-ogmvideoparse.html
+share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/gst-plugins-base-plugins-opusdec.html
+share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/gst-plugins-base-plugins-opusenc.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/gst-plugins-base-plugins-playbin.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/gst-plugins-base-plugins-playsink.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/gst-plugins-base-plugins-plugin-adder.html
@@ -304,6 +314,7 @@ share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/gst-plugins-base-plugins
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/gst-plugins-base-plugins-plugin-ivorbisdec.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/gst-plugins-base-plugins-plugin-libvisual.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/gst-plugins-base-plugins-plugin-ogg.html
+share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/gst-plugins-base-plugins-plugin-opus.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/gst-plugins-base-plugins-plugin-pango.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/gst-plugins-base-plugins-plugin-playback.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/gst-plugins-base-plugins-plugin-subparse.html
@@ -347,7 +358,6 @@ share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/gst-plugins-base-plugins
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/gst-plugins-base-plugins-xvimagesink.html
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/home.png
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/index.html
-share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/index.sgml
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/left-insensitive.png
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/left.png
 share/doc/gst-plugins-0.10/gst-plugins-base-plugins-1.0/right-insensitive.png
