@@ -1,0 +1,4 @@
+It can be hard (or at least tedious) to debug mechanize scripts.
+LWP::Debug is deprecated. It suggests you write your own debugging
+handlers, set up a proxy or install Wireshark. Those are all workable
+solutions, but this module exists to save you some of that work.
