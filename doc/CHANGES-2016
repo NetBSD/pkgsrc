@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1551 2016/04/15 10:37:00 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1552 2016/04/15 11:13:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2010,3 +2010,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-HTML-Format to 2.12 [wiz 2016-04-15]
 	Updated devel/p5-Test-Deep to 1.120 [wiz 2016-04-15]
 	Updated devel/p5-Test-Warnings to 0.026 [wiz 2016-04-15]
+	Added www/p5-HTML-Restrict version 2.2.2 [wiz 2016-04-15]
