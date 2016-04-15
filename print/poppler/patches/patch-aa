@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.15 2015/10/01 05:36:36 wiz Exp $
+$NetBSD: patch-aa,v 1.16 2016/04/15 14:36:21 wiz Exp $
 
 Use installed copy of poppler library so we can have a separate
 poppler-glib package.
 
---- glib/Makefile.in.orig	2015-09-09 22:06:58.000000000 +0000
+--- glib/Makefile.in.orig	2016-03-16 22:22:12.000000000 +0000
 +++ glib/Makefile.in
-@@ -134,7 +134,7 @@ am__installdirs = "$(DESTDIR)$(libdir)" 
+@@ -143,7 +143,7 @@ am__installdirs = "$(DESTDIR)$(libdir)" 
  LTLIBRARIES = $(lib_LTLIBRARIES)
  am__DEPENDENCIES_1 =
  libpoppler_glib_la_DEPENDENCIES =  \
@@ -14,7 +14,7 @@ poppler-glib package.
  	$(top_builddir)/poppler/libpoppler-cairo.la \
  	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
  	$(am__DEPENDENCIES_1)
-@@ -554,7 +554,7 @@ libpoppler_glib_la_CPPFLAGS = \
+@@ -569,7 +569,7 @@ libpoppler_glib_la_CPPFLAGS = \
  	$(POPPLER_GLIB_DISABLE_SINGLE_INCLUDES)
  
  libpoppler_glib_la_LIBADD = \
