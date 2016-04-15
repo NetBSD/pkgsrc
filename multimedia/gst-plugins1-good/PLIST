@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/11/18 12:04:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2016/04/15 14:20:00 wiz Exp $
 lib/gstreamer-1.0/libgstalaw.la
 lib/gstreamer-1.0/libgstalpha.la
 lib/gstreamer-1.0/libgstalphacolor.la
@@ -251,6 +251,8 @@ share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins
 share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins-rtpklvdepay.html
 share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins-rtpklvpay.html
 share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins-rtpmux.html
+share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins-rtpopusdepay.html
+share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins-rtpopuspay.html
 share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins-rtpptdemux.html
 share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins-rtprtxreceive.html
 share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins-rtprtxsend.html
@@ -301,7 +303,6 @@ share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins
 share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/gst-plugins-good-plugins-y4menc.html
 share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/home.png
 share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/index.html
-share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/index.sgml
 share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/left-insensitive.png
 share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/left.png
 share/doc/gst-plugins-0.10/gst-plugins-good-plugins-1.0/right-insensitive.png

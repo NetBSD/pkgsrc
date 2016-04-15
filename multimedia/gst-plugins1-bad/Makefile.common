@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2016/01/24 14:44:39 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.18 2016/04/15 14:20:00 wiz Exp $
 #
 # used by audio/gst-plugins1-dts/Makefile
 # used by audio/gst-plugins1-faac/Makefile
@@ -13,7 +13,7 @@
 #
 
 GST_PLUGINS1_TYPE=	bad
-GST_PLUGINS1_VER=	1.6.3
+GST_PLUGINS1_VER=	1.8.0
 
 # Disable all drivers and features by default.
 .for driver in	\
@@ -38,8 +38,19 @@ GST_PLUGINS1_VER=	1.6.3
 CONFIGURE_ARGS+=	--disable-${driver}
 .endfor
 
-BUILDLINK_API_DEPENDS.gstreamer1+=	gstreamer1>=1.6.0
-BUILDLINK_API_DEPENDS.gst-plugins1-base+=	gst-plugins1-base>=1.6.0
+BUILDLINK_API_DEPENDS.gstreamer1+=	gstreamer1>=1.8.0
+BUILDLINK_API_DEPENDS.gst-plugins1-base+=	gst-plugins1-base>=1.8.0
+
+PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer-insertbin.pc.in
+PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer-bad-audio.pc.in
+PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer-player.pc.in
+PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer-gl.pc.in
+PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer-plugins-bad.pc.in
+PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer-mpegts.pc.in
+PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer-bad-base.pc.in
+PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer-bad-video.pc.in
+PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer-codecparsers.pc.in
+PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer-wayland.pc.in
 
 .include "../../devel/orc/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/plugins.mk"
