@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.13 2016/02/15 11:36:07 kleink Exp $
+# $NetBSD: Makefile.common,v 1.14 2016/04/15 12:45:18 kleink Exp $
 
 # used by www/py-werkzeug/Makefile
 # used by www/py-werkzeug-docs/Makefile
 
-DISTNAME=	Werkzeug-0.11.4
+DISTNAME=	Werkzeug-0.11.7
 CATEGORIES=	www python
-MASTER_SITES=  ${MASTER_SITE_GITHUB:=mitsuhiko/}
+MASTER_SITES=  ${MASTER_SITE_GITHUB:=pallets/}
 GITHUB_PROJECT=${DISTNAME:tl:C/-[^-]*$//}
 WRKSRC=		${WRKDIR}/${DISTNAME:tl}
 
