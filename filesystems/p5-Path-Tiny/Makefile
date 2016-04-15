@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.17 2016/04/15 13:52:08 mef Exp $
+# $NetBSD: Makefile,v 1.18 2016/04/15 23:15:26 mef Exp $
 
-DISTNAME=	Path-Tiny-0.086
+DISTNAME=	Path-Tiny-0.088
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/D/DA/DAGOLDEN/}
