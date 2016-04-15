@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.15 2015/12/05 21:25:42 adam Exp $
+# $NetBSD: Makefile,v 1.16 2016/04/15 14:28:08 mef Exp $
 
-DISTNAME=	wikipediafs-0.3
+DISTNAME=	wikipediafs-0.4
 PKGNAME=	fuse-${DISTNAME}
-PKGREVISION=	5
 CATEGORIES=	filesystems
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wikipediafs/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://wikipediafs.sourceforge.net/
 COMMENT=	FUSE filesystem for accessing the wikipedia
+LICENSE=	gnu-gpl-v2
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-fuse-bindings
-EGG_NAME=	wikipediafs-0.1
+EGG_NAME=	wikipediafs-0.0.0
 
 SUBST_CLASSES+=		config
 SUBST_STAGE.config=	post-patch
