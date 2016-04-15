@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1573 2016/04/15 14:36:39 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1574 2016/04/15 17:04:10 abs Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2038,3 +2038,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated multimedia/gst-plugins1-libav to 1.8.0 [wiz 2016-04-15]
 	Updated filesystems/fuse-wikipediafs to 0.4 [mef 2016-04-15]
 	Updated print/poppler to 0.42.0 [wiz 2016-04-15]
+	Updated net/syncthing to 0.12.22 [abs 2016-04-15]
