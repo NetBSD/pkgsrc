@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2015/12/27 21:06:06 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/04/15 13:31:29 wiz Exp $
 bin/borg-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/pbr.json
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/borg/__init__.py
@@ -31,6 +30,9 @@ ${PYSITELIB}/borg/crypto.so
 ${PYSITELIB}/borg/fuse.py
 ${PYSITELIB}/borg/fuse.pyc
 ${PYSITELIB}/borg/fuse.pyo
+${PYSITELIB}/borg/hash_sizes.py
+${PYSITELIB}/borg/hash_sizes.pyc
+${PYSITELIB}/borg/hash_sizes.pyo
 ${PYSITELIB}/borg/hashindex.so
 ${PYSITELIB}/borg/helpers.py
 ${PYSITELIB}/borg/helpers.pyc
@@ -56,12 +58,9 @@ ${PYSITELIB}/borg/remote.pyo
 ${PYSITELIB}/borg/repository.py
 ${PYSITELIB}/borg/repository.pyc
 ${PYSITELIB}/borg/repository.pyo
-${PYSITELIB}/borg/support/__init__.py
-${PYSITELIB}/borg/support/__init__.pyc
-${PYSITELIB}/borg/support/__init__.pyo
-${PYSITELIB}/borg/support/argparse.py
-${PYSITELIB}/borg/support/argparse.pyc
-${PYSITELIB}/borg/support/argparse.pyo
+${PYSITELIB}/borg/shellpattern.py
+${PYSITELIB}/borg/shellpattern.pyc
+${PYSITELIB}/borg/shellpattern.pyo
 ${PYSITELIB}/borg/testsuite/__init__.py
 ${PYSITELIB}/borg/testsuite/__init__.pyc
 ${PYSITELIB}/borg/testsuite/__init__.pyo
@@ -107,6 +106,9 @@ ${PYSITELIB}/borg/testsuite/platform.pyo
 ${PYSITELIB}/borg/testsuite/repository.py
 ${PYSITELIB}/borg/testsuite/repository.pyc
 ${PYSITELIB}/borg/testsuite/repository.pyo
+${PYSITELIB}/borg/testsuite/shellpattern.py
+${PYSITELIB}/borg/testsuite/shellpattern.pyc
+${PYSITELIB}/borg/testsuite/shellpattern.pyo
 ${PYSITELIB}/borg/testsuite/upgrader.py
 ${PYSITELIB}/borg/testsuite/upgrader.pyc
 ${PYSITELIB}/borg/testsuite/upgrader.pyo
