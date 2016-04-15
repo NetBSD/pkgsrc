@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1575 2016/04/15 20:59:16 mrg Exp $
+$NetBSD: CHANGES-2016,v 1.1576 2016/04/15 23:15:42 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2040,3 +2040,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated print/poppler to 0.42.0 [wiz 2016-04-15]
 	Updated net/syncthing to 0.12.22 [abs 2016-04-15]
 	Updated www/bozohttpd to 20160415 [mrg 2016-04-15]
+	Updated filesystems/p5-Path-Tiny to 0.088 [mef 2016-04-15]
