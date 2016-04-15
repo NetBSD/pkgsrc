@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1544 2016/04/15 09:07:49 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1545 2016/04/15 09:29:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2001,3 +2001,6 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated audio/alsa-plugins-oss to 1.1.1 [wiz 2016-04-15]
 	Updated audio/alsa-plugins-pulse to 1.1.1 [wiz 2016-04-15]
 	Updated chat/farstream to 0.2.8 [wiz 2016-04-15]
+	Updated net/transmission to 2.92 [wiz 2016-04-15]
+	Updated net/transmission-gtk to 2.92 [wiz 2016-04-15]
+	Updated net/transmission-qt to 2.92 [wiz 2016-04-15]
