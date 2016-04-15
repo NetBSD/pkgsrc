@@ -1,17 +1,17 @@
-$NetBSD: patch-aa,v 1.2 2016/03/03 12:16:24 wiz Exp $
+$NetBSD: patch-aa,v 1.3 2016/04/15 10:15:15 wiz Exp $
 
---- Makefile.in.orig	2016-02-22 16:35:24.000000000 +0000
+--- Makefile.in.orig	2016-03-06 17:50:28.000000000 +0000
 +++ Makefile.in
-@@ -2067,15 +2067,8 @@ info: info-am
+@@ -2089,15 +2089,8 @@ info: info-am
  
  info-am:
  
 -install-data-am: install-dbusincludeHEADERS install-dist_docDATA \
--	install-installed_testLTLIBRARIES \
 -	install-installed_test_metaDATA \
 -	install-installed_test_testDATA \
 -	install-nobase_dist_installed_testPYTHON \
 -	install-nobase_dist_installed_testSCRIPTS \
+-	install-nobase_installed_testLTLIBRARIES \
 -	install-nobase_installed_testPROGRAMS \
 -	install-nobase_pythonPYTHON install-nodist_docDATA \
 -	install-pkgconfigDATA
