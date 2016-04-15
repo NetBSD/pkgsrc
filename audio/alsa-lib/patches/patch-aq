@@ -1,18 +1,7 @@
-$NetBSD: patch-aq,v 1.3 2014/06/09 12:21:07 ryoon Exp $
+$NetBSD: patch-aq,v 1.4 2016/04/15 08:47:50 wiz Exp $
 
 --- src/pcm/pcm_hw.c.orig	2013-07-08 12:31:36.000000000 +0000
 +++ src/pcm/pcm_hw.c
-@@ -41,6 +41,10 @@
- #include "../control/control_local.h"
- #include "../timer/timer_local.h"
- 
-+#ifndef EBADFD
-+#define EBADFD EBADF
-+#endif
-+
- //#define DEBUG_RW		/* use to debug readi/writei/readn/writen */
- //#define DEBUG_MMAP		/* debug mmap_commit */
- 
 @@ -220,10 +224,11 @@ static int snd_pcm_hw_nonblock(snd_pcm_t
  
  static int snd_pcm_hw_async(snd_pcm_t *pcm, int sig, pid_t pid)

@@ -1,7 +1,6 @@
-$NetBSD: patch-src_conf.c,v 1.4 2016/02/18 15:15:57 wiz Exp $
+$NetBSD: patch-src_conf.c,v 1.5 2016/04/15 08:47:50 wiz Exp $
 
-* NetBSD has no PTHREAD_RECURSIVE_MUTEX_INITIALIZER_NP
-* SunOS has no versionsort or dirent d_type
+* SunOS has no dirent d_type
 
 --- src/conf.c.orig	2015-11-09 07:39:18.000000000 +0000
 +++ src/conf.c
@@ -25,12 +24,3 @@ $NetBSD: patch-src_conf.c,v 1.4 2016/02/18 15:15:57 wiz Exp $
  		return 0;
  
  	flen = strlen(dirent->d_name);
-@@ -3549,7 +3557,7 @@ int snd_config_hook_load(snd_config_t *r
- 			int n;
- 
- #ifndef DOC_HIDDEN
--#ifdef _GNU_SOURCE
-+#if defined(_GNU_SOURCE) && !defined(__NetBSD__) && !defined(__FreeBSD__) && !defined(__sun)
- #define SORTFUNC	versionsort
- #else
- #define SORTFUNC	alphasort

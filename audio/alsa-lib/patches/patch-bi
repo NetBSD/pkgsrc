@@ -1,4 +1,6 @@
-$NetBSD: patch-bi,v 1.1 2008/12/19 05:14:00 jmcneill Exp $
+$NetBSD: patch-bi,v 1.2 2016/04/15 08:47:50 wiz Exp $
+
+For dlopen(), dlclose()...
 
 --- src/pcm/pcm_ladspa.c.orig	2008-12-19 00:06:18.000000000 -0500
 +++ src/pcm/pcm_ladspa.c	2008-12-19 00:06:31.000000000 -0500
