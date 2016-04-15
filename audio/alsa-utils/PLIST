@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2016/02/18 15:16:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2016/04/15 08:50:21 wiz Exp $
 bin/aconnect
+bin/alsabat
 bin/alsaloop
 bin/alsamixer
 bin/alsatplg
@@ -12,11 +13,12 @@ bin/arecord
 bin/arecordmidi
 bin/aseqdump
 bin/aseqnet
-bin/bat
 bin/iecset
 bin/speaker-test
 man/fr/man8/alsaconf.8
 man/man1/aconnect.1
+man/man1/alsa-info.sh.1
+man/man1/alsabat.1
 man/man1/alsactl.1
 man/man1/alsaloop.1
 man/man1/alsamixer.1
@@ -28,12 +30,12 @@ man/man1/arecord.1
 man/man1/arecordmidi.1
 man/man1/aseqdump.1
 man/man1/aseqnet.1
-man/man1/bat.1
 man/man1/iecset.1
 man/man1/speaker-test.1
 man/man7/alsactl_init.7
 man/man8/alsaconf.8
 sbin/alsa-info.sh
+sbin/alsabat-test.sh
 sbin/alsaconf
 sbin/alsactl
 share/alsa/init/00main
