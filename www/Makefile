@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1163 2016/04/15 11:23:28 wiz Exp $
+# $NetBSD: Makefile,v 1.1164 2016/04/15 11:52:21 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -507,6 +507,7 @@ SUBDIR+=	p5-URI-Fetch
 SUBDIR+=	p5-URI-Find
 SUBDIR+=	p5-URI-FromHash
 SUBDIR+=	p5-URI-Nested
+SUBDIR+=	p5-URI-Query
 SUBDIR+=	p5-URI-db
 SUBDIR+=	p5-VRML
 SUBDIR+=	p5-WWW-Amazon-Wishlist
