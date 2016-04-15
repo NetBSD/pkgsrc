@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1553 2016/04/15 11:35:47 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1554 2016/04/15 11:37:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2012,3 +2012,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Test-Warnings to 0.026 [wiz 2016-04-15]
 	Added www/p5-HTML-Restrict version 2.2.2 [wiz 2016-04-15]
 	Added www/p5-HTTP-CookieMonster version 0.09 [wiz 2016-04-15]
+	Added textproc/p5-Pod-Coverage-TrustPod version 0.100003 [wiz 2016-04-15]
