@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1570 2016/04/15 13:52:21 mef Exp $
+$NetBSD: CHANGES-2016,v 1.1571 2016/04/15 14:22:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2030,3 +2030,9 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-click-log to 0.1.3 [wiz 2016-04-15]
 	Updated time/py-vdirsyncer to 0.9.3nb1 [wiz 2016-04-15]
 	Updated filesystems/p5-Path-Tiny to 0.086 [mef 2016-04-15]
+	Updated multimedia/gstreamer1 to 1.8.0 [wiz 2016-04-15]
+	Updated multimedia/gst-plugins1-base to 1.8.0 [wiz 2016-04-15]
+	Updated multimedia/gst-plugins1-bad to 1.8.0 [wiz 2016-04-15]
+	Updated multimedia/gst-plugins1-ugly to 1.8.0 [wiz 2016-04-15]
+	Updated multimedia/gst-plugins1-good to 1.8.0 [wiz 2016-04-15]
+	Updated multimedia/gst-plugins1-libav to 1.8.0 [wiz 2016-04-15]
