@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1568 2016/04/15 13:33:10 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1569 2016/04/15 13:35:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2028,3 +2028,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Package-DeprecationManager to 0.16 [wiz 2016-04-15]
 	Updated sysutils/py-borgbackup to 1.0.1 [wiz 2016-04-15]
 	Updated devel/py-click-log to 0.1.3 [wiz 2016-04-15]
+	Updated time/py-vdirsyncer to 0.9.3nb1 [wiz 2016-04-15]
