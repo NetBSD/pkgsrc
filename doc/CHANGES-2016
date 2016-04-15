@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1562 2016/04/15 12:27:29 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1563 2016/04/15 12:34:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2021,3 +2021,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added www/p5-Plack-Test-Agent version 1.4 [wiz 2016-04-15]
 	Added www/p5-LWP-ConsoleLogger version 0.000022 [wiz 2016-04-15]
 	Updated www/p5-WWW-Mechanize-Cached to 1.50 [wiz 2016-04-15]
+	Updated devel/p5-Package-Stash to 0.37nb2 [wiz 2016-04-15]
