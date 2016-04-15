@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.105 2016/01/27 10:26:42 wiz Exp $
+$NetBSD: distinfo,v 1.106 2016/04/15 14:36:21 wiz Exp $
 
-SHA1 (poppler-0.40.0.tar.xz) = 8c3be50ff6cd5174a7c37f4f038a7ef8386e9a5f
-RMD160 (poppler-0.40.0.tar.xz) = ab3d8da12a4e57654664c4dd0d52d6a3d3cd4fcf
-SHA512 (poppler-0.40.0.tar.xz) = 0f26f342a4f70ebc65848c61e5eb1a182d539a8e4cdc5fa499c52765d15867e13ee7c595773d2e8d6f2eb3e83e1c19f35cc6bb47f8aeb87a8ad92e45ecff50cd
-Size (poppler-0.40.0.tar.xz) = 1642708 bytes
-SHA1 (patch-aa) = 15839af8b9ca17662d721428a96ff74f1bb7ba72
-SHA1 (patch-ab) = 55bcf94d51f5c9c5bf999f7b4fa63afebe77c83c
+SHA1 (poppler-0.42.0.tar.xz) = 4a445d2da6bcf9fd80517b4c881873977b6f49ba
+RMD160 (poppler-0.42.0.tar.xz) = 503cfddcb1a2817b3e180ce70b1c8e480785be4d
+SHA512 (poppler-0.42.0.tar.xz) = ab8c86c28a2ac848bf118de7f20f57576ed4faa4ad06ae7d58590b951fb2b0ee8a728919ce2417592b467af7322c57ed0bff0288eced042fcf94a50d89c73c19
+Size (poppler-0.42.0.tar.xz) = 1674024 bytes
+SHA1 (patch-aa) = 03798571a0b546e2cabb3579e537459674022ed4
+SHA1 (patch-ab) = 79842143a6fb4b5a01571a1e5b661c7380e4a552
 SHA1 (patch-ag) = d4df4fdf141186e1cc653bb467b31b3335d733ff
 SHA1 (patch-aq) = da845661ef7f7aca3072dbeebde0444b4d8f01aa
 SHA1 (patch-ar) = b064ff2dc9080ff5f1a1361e7798480ace11f3a3
 SHA1 (patch-as) = 1238357e57fa310ba9c9f00768c46074b8325739
-SHA1 (patch-qt5_src_Makefile.in) = 8288b41e87a4f14d6a1fd361564e1356f9673dd9
+SHA1 (patch-qt5_src_Makefile.in) = bd35aaa1ca82b12c26475066c13c9126ecbb5a88
