@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2016/04/11 19:01:43 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2016/04/15 09:07:40 wiz Exp $
 
-DISTNAME=	farstream-0.2.7
-PKGREVISION=	1
+DISTNAME=	farstream-0.2.8
 CATEGORIES=	chat multimedia
 MASTER_SITES=	http://freedesktop.org/software/farstream/releases/farstream/
 
