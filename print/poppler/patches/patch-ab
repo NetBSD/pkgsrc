@@ -1,36 +1,36 @@
-$NetBSD: patch-ab,v 1.18 2014/11/20 16:03:46 wiz Exp $
+$NetBSD: patch-ab,v 1.19 2016/04/15 14:36:21 wiz Exp $
 
 Use installed poppler library so we can have a separate poppler-utils
 package.
 
 Always build pdftoppm.
 
---- utils/Makefile.in.orig	2014-11-04 18:46:22.000000000 +0000
+--- utils/Makefile.in.orig	2016-03-16 22:22:14.000000000 +0000
 +++ utils/Makefile.in
-@@ -85,9 +85,9 @@ host_triplet = @host@
- @BUILD_UTILS_TRUE@	pdftohtml$(EXEEXT) pdfseparate$(EXEEXT) \
+@@ -96,9 +96,9 @@ host_triplet = @host@
  @BUILD_UTILS_TRUE@	pdfunite$(EXEEXT) $(am__EXEEXT_1) \
- @BUILD_UTILS_TRUE@	$(am__EXEEXT_2)
--@BUILD_SPLASH_OUTPUT_TRUE@@BUILD_UTILS_TRUE@am__append_1 = pdftoppm
-+am__append_1 = pdftoppm
- @BUILD_CAIRO_OUTPUT_TRUE@@BUILD_UTILS_TRUE@am__append_2 = pdftocairo
--@BUILD_SPLASH_OUTPUT_TRUE@@BUILD_UTILS_TRUE@am__append_3 = pdftoppm.1
-+am__append_3 = pdftoppm.1
- @BUILD_CAIRO_OUTPUT_TRUE@@BUILD_UTILS_TRUE@am__append_4 = pdftocairo.1
- @BUILD_CAIRO_OUTPUT_TRUE@@USE_CMS_TRUE@am__append_5 = $(LCMS_CFLAGS)
- @BUILD_CAIRO_OUTPUT_TRUE@@USE_CMS_TRUE@am__append_6 = $(LCMS_LIBS)
-@@ -117,8 +117,8 @@ AM_V_lt = $(am__v_lt_@AM_V@)
- am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
+ @BUILD_UTILS_TRUE@	$(am__EXEEXT_2) $(am__EXEEXT_3)
+ @BUILD_NSS_TRUE@@BUILD_UTILS_TRUE@am__append_1 = pdfsig
+-@BUILD_SPLASH_OUTPUT_TRUE@@BUILD_UTILS_TRUE@am__append_2 = pdftoppm
++am__append_2 = pdftoppm
+ @BUILD_CAIRO_OUTPUT_TRUE@@BUILD_UTILS_TRUE@am__append_3 = pdftocairo
+-@BUILD_SPLASH_OUTPUT_TRUE@@BUILD_UTILS_TRUE@am__append_4 = pdftoppm.1
++am__append_4 = pdftoppm.1
+ @BUILD_CAIRO_OUTPUT_TRUE@@BUILD_UTILS_TRUE@am__append_5 = pdftocairo.1
+ @BUILD_CAIRO_OUTPUT_TRUE@@USE_CMS_TRUE@am__append_6 = $(LCMS_CFLAGS)
+ @BUILD_CAIRO_OUTPUT_TRUE@@USE_CMS_TRUE@am__append_7 = $(LCMS_LIBS)
+@@ -128,8 +128,8 @@ am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
  am__v_lt_0 = --silent
  am__v_lt_1 = 
--@BUILD_SPLASH_OUTPUT_TRUE@@BUILD_UTILS_TRUE@am__EXEEXT_1 =  \
+ @BUILD_NSS_TRUE@@BUILD_UTILS_TRUE@am__EXEEXT_1 = pdfsig$(EXEEXT)
+-@BUILD_SPLASH_OUTPUT_TRUE@@BUILD_UTILS_TRUE@am__EXEEXT_2 =  \
 -@BUILD_SPLASH_OUTPUT_TRUE@@BUILD_UTILS_TRUE@	pdftoppm$(EXEEXT)
-+am__EXEEXT_1 =  \
++am__EXEEXT_2 =  \
 +	pdftoppm$(EXEEXT)
- @BUILD_CAIRO_OUTPUT_TRUE@@BUILD_UTILS_TRUE@am__EXEEXT_2 = pdftocairo$(EXEEXT)
+ @BUILD_CAIRO_OUTPUT_TRUE@@BUILD_UTILS_TRUE@am__EXEEXT_3 = pdftocairo$(EXEEXT)
  am__installdirs = "$(DESTDIR)$(bindir)" "$(DESTDIR)$(man1dir)"
  PROGRAMS = $(bin_PROGRAMS)
-@@ -126,39 +126,39 @@ am_pdfdetach_OBJECTS = pdfdetach.$(OBJEX
+@@ -137,44 +137,44 @@ am_pdfdetach_OBJECTS = pdfdetach.$(OBJEX
  pdfdetach_OBJECTS = $(am_pdfdetach_OBJECTS)
  pdfdetach_LDADD = $(LDADD)
  pdfdetach_DEPENDENCIES = libparseargs.la \
@@ -62,6 +62,12 @@ Always build pdftoppm.
  pdfseparate_DEPENDENCIES = libparseargs.la \
 -	$(top_builddir)/poppler/libpoppler.la
 +	$(prefix)/lib/libpoppler.la
+ am_pdfsig_OBJECTS = pdfsig.$(OBJEXT)
+ pdfsig_OBJECTS = $(am_pdfsig_OBJECTS)
+ pdfsig_LDADD = $(LDADD)
+ pdfsig_DEPENDENCIES = libparseargs.la \
+-	$(top_builddir)/poppler/libpoppler.la
++	$(prefix)/lib/libpoppler.la
  am_pdftocairo_OBJECTS = pdftocairo-pdftocairo.$(OBJEXT) \
  	pdftocairo-pdftocairo-win32.$(OBJEXT)
  pdftocairo_OBJECTS = $(am_pdftocairo_OBJECTS)
@@ -77,7 +83,7 @@ Always build pdftoppm.
  	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_4) \
  	$(am__DEPENDENCIES_2)
  am_pdftohtml_OBJECTS = pdftohtml-pdftohtml.$(OBJEXT) \
-@@ -167,7 +167,7 @@ am_pdftohtml_OBJECTS = pdftohtml-pdftoht
+@@ -183,7 +183,7 @@ am_pdftohtml_OBJECTS = pdftohtml-pdftoht
  pdftohtml_OBJECTS = $(am_pdftohtml_OBJECTS)
  pdftohtml_LDADD = $(LDADD)
  pdftohtml_DEPENDENCIES = libparseargs.la \
@@ -86,7 +92,7 @@ Always build pdftoppm.
  pdftohtml_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
  	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(pdftohtml_CXXFLAGS) \
  	$(CXXFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
-@@ -175,22 +175,22 @@ am_pdftoppm_OBJECTS = pdftoppm.$(OBJEXT)
+@@ -191,22 +191,22 @@ am_pdftoppm_OBJECTS = pdftoppm.$(OBJEXT)
  pdftoppm_OBJECTS = $(am_pdftoppm_OBJECTS)
  pdftoppm_LDADD = $(LDADD)
  pdftoppm_DEPENDENCIES = libparseargs.la \
@@ -113,7 +119,7 @@ Always build pdftoppm.
  AM_V_P = $(am__v_P_@AM_V@)
  am__v_P_ = $(am__v_P_@AM_DEFAULT_V@)
  am__v_P_0 = false
-@@ -527,8 +527,9 @@ AM_CPPFLAGS = \
+@@ -549,8 +549,9 @@ AM_CPPFLAGS = \
  
  LDADD = \
  	libparseargs.la				\
@@ -125,7 +131,7 @@ Always build pdftoppm.
  
  @BUILD_UTILS_TRUE@dist_man1_MANS = pdfdetach.1 pdffonts.1 pdfimages.1 \
  @BUILD_UTILS_TRUE@	pdfinfo.1 pdftops.1 pdftotext.1 pdftohtml.1 \
-@@ -590,7 +591,7 @@ pdftocairo_SOURCES = \
+@@ -615,7 +616,7 @@ pdftocairo_SOURCES = \
  	pdftocairo-win32.h
  
  pdftocairo_LDADD = \
