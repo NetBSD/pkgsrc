@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q1,v 1.1.2.2 2016/04/15 07:27:22 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q1,v 1.1.2.3 2016/04/15 07:42:41 bsiegert Exp $
 
 Changes to the packages collection and infrastructure on the pkgsrc-2016Q1 branch:
 
@@ -6,4 +6,7 @@ Created pkgsrc-2016Q1 branch [agc Wed Apr  6 17:21:53 UTC 2016]
 
 Pullup ticket #4958 - requested by manu
 net/samba4: security fix
+
+Pullup ticket #4959 - requested by hauke
+sysutils/radmind: bugfix
 
