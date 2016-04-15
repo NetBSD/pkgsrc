@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1574 2016/04/15 17:04:10 abs Exp $
+$NetBSD: CHANGES-2016,v 1.1575 2016/04/15 20:59:16 mrg Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2039,3 +2039,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated filesystems/fuse-wikipediafs to 0.4 [mef 2016-04-15]
 	Updated print/poppler to 0.42.0 [wiz 2016-04-15]
 	Updated net/syncthing to 0.12.22 [abs 2016-04-15]
+	Updated www/bozohttpd to 20160415 [mrg 2016-04-15]
