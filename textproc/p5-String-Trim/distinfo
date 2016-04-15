@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/04/15 12:04:43 wiz Exp $
+
+SHA1 (String-Trim-0.005.tar.gz) = 011fdaeb0f10c1a0ff7b7681d04407b5b787ee4b
+RMD160 (String-Trim-0.005.tar.gz) = c921de304564968c0513645e867bd29419686b22
+SHA512 (String-Trim-0.005.tar.gz) = 74530f7a69cd71d38b86742e5cd5bf4c8fe2675dcafe58ebde032ab7ac2b82fea098a831f51d4d80b8eea6cfd58a3362f27037145ed1b0b4744fe1ab5b8913f9
+Size (String-Trim-0.005.tar.gz) = 13956 bytes
