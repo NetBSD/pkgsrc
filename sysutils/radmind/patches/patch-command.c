@@ -1,4 +1,6 @@
-$NetBSD: patch-command.c,v 1.1 2014/01/08 11:54:04 hauke Exp $
+$NetBSD: patch-command.c,v 1.1.20.1 2016/04/15 07:33:22 bsiegert Exp $
+
+Fix for Radmind bug #221, accomodating for 64 bit time_t
 
 --- command.c.orig	2010-12-13 03:42:49.000000000 +0000
 +++ command.c
@@ -43,12 +45,16 @@ $NetBSD: patch-command.c,v 1.1 2014/01/08 11:54:04 hauke Exp $
  			"f", enc_file, 
  			DEFAULT_MODE, DEFAULT_UID, DEFAULT_GID, 
  			st.st_mtime, st.st_size, cksum_b64 );
-@@ -690,7 +690,7 @@ f_stat( SNET *sn, int ac, char *av[] )
+@@ -690,7 +690,11 @@ f_stat( SNET *sn, int ac, char *av[] )
  		return( 0 );
  	    }
  	}
 -	snet_writef( sn, "%s %s %s %s %s %d %" PRIofft "d %s\r\n",
-+	snet_writef( sn, RADMIND_STAT_FMT,
++	/*
++	 * Cannot use RADMIND_STAT_FMT shorthand here, since custom
++	 * permission, user and group information are strings.
++	 */
++	snet_writef( sn, "%s %s %s %s %s %" PRItimet "d %" PRIofft "d %s\r\n",
  		av[ 0 ], enc_file,
  		av[ 2 ], av[ 3 ], av[ 4 ],
  		st.st_mtime, st.st_size, cksum_b64 );
