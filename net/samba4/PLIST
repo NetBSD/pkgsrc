@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2016/01/31 20:28:23 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.5.2.1 2016/04/15 07:25:11 bsiegert Exp $
 bin/cifsdd
 bin/dbwrap_tool
 bin/eventlogadm
@@ -399,6 +399,7 @@ ${PYSITELIB}/samba/tests/dcerpc/bare.py
 ${PYSITELIB}/samba/tests/dcerpc/dnsserver.py
 ${PYSITELIB}/samba/tests/dcerpc/integer.py
 ${PYSITELIB}/samba/tests/dcerpc/misc.py
+${PYSITELIB}/samba/tests/dcerpc/raw_protocol.py
 ${PYSITELIB}/samba/tests/dcerpc/registry.py
 ${PYSITELIB}/samba/tests/dcerpc/rpc_talloc.py
 ${PYSITELIB}/samba/tests/dcerpc/rpcecho.py
@@ -410,7 +411,7 @@ ${PYSITELIB}/samba/tests/dns.py
 ${PYSITELIB}/samba/tests/docs.py
 ${PYSITELIB}/samba/tests/dsdb.py
 ${PYSITELIB}/samba/tests/gensec.py
-${PYSITELIB}/samba/tests/getopt.py
+${PYSITELIB}/samba/tests/get_opt.py
 ${PYSITELIB}/samba/tests/hostconfig.py
 ${PYSITELIB}/samba/tests/kcc/__init__.py
 ${PYSITELIB}/samba/tests/kcc/graph.py
