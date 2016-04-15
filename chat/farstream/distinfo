@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/12/01 12:59:52 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2016/04/15 09:07:40 wiz Exp $
 
-SHA1 (farstream-0.2.7.tar.gz) = 3b1c40afdb34e96d6d5c5feecbcfda36630d5c0c
-RMD160 (farstream-0.2.7.tar.gz) = 6cd25f72f26cacda0690c0f9c12d96da5b066e7b
-Size (farstream-0.2.7.tar.gz) = 1309470 bytes
+SHA1 (farstream-0.2.8.tar.gz) = e6d9388aaf44e06b7cb4e0297a8e4c53fe16be63
+RMD160 (farstream-0.2.8.tar.gz) = 47392a6461a948d324bf896b0dab33289ed1cfbf
+SHA512 (farstream-0.2.8.tar.gz) = 7ec5c57f8778f4107cb628dbf411e38b726152cf78920127dff4423239ff7e4980b6b4f938abba2aa21ab984b1e3053e7e648611322a0ce94df0af576df99a7e
+Size (farstream-0.2.8.tar.gz) = 1315548 bytes
