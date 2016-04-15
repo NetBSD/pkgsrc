@@ -1,0 +1,5 @@
+This module was created because messing around with HTTP::Cookies
+is non-trivial. HTTP::Cookies a very useful module, but using it
+is not always as easy and clean as it could be. For instance, if
+you want to find a particular cookie, you can't just ask for it by
+name.
