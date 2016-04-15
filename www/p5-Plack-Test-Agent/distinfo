@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/04/15 12:15:14 wiz Exp $
+
+SHA1 (Plack-Test-Agent-1.4.tar.gz) = a155924ce4ada9b33f16483eb88943a37e767054
+RMD160 (Plack-Test-Agent-1.4.tar.gz) = 35aa875b461d26b861b08822e5a447676a7ae40c
+SHA512 (Plack-Test-Agent-1.4.tar.gz) = 20593f0e7f789198ea28eb1df250b4950c42a0c5e74ecbd620452261fd2a2cd895300deefaabf82a595efbe00ffb13145ba8875b908594ce7a489b737f7b0613
+Size (Plack-Test-Agent-1.4.tar.gz) = 23628 bytes
