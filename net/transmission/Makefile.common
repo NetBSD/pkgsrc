@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.7 2015/01/10 20:48:58 wiz Exp $
+# $NetBSD: Makefile.common,v 1.8 2016/04/15 09:28:39 wiz Exp $
 #
 # used by net/transmission/Makefile
 # used by net/transmission-gtk/Makefile
 # used by net/transmission-qt/Makefile
 
-VERSION=	2.84
+VERSION=	2.92
 DISTNAME=	transmission-${VERSION}
 CATEGORIES=	net
 MASTER_SITES=	http://download.m0k.org/transmission/files/

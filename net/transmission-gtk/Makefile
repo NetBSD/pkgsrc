@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2016/03/05 11:29:12 jperkin Exp $
+# $NetBSD: Makefile,v 1.16 2016/04/15 09:28:40 wiz Exp $
 
 PKGNAME=	transmission-gtk-${VERSION}
-PKGREVISION=	2
 
 USE_LANGUAGES=		c c++
 INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}${PREFIX}
