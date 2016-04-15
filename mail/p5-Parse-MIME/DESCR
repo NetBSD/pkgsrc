@@ -1,0 +1,2 @@
+This module provides basic functions for handling mime-types. It
+can handle matching mime-types against a list of media-ranges.
