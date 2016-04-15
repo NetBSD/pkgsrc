@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1549 2016/04/15 10:29:59 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1550 2016/04/15 10:35:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2008,3 +2008,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/py-dbus to 1.2.4 [wiz 2016-04-15]
 	Updated archivers/innoextract to 1.6 [wiz 2016-04-15]
 	Updated www/p5-HTML-Format to 2.12 [wiz 2016-04-15]
+	Updated devel/p5-Test-Deep to 1.120 [wiz 2016-04-15]
