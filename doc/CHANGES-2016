@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1557 2016/04/15 11:48:12 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1558 2016/04/15 11:52:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2016,3 +2016,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added devel/p5-MooX-StrictConstructor version 0.008 [wiz 2016-04-15]
 	Added mail/p5-Parse-MIME version 1.003 [wiz 2016-04-15]
 	Added textproc/p5-Text-SimpleTable-AutoWidth version 0.09 [wiz 2016-04-15]
+	Added www/p5-URI-Query version 0.15 [wiz 2016-04-15]
