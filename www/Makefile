@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1164 2016/04/15 11:52:21 wiz Exp $
+# $NetBSD: Makefile,v 1.1165 2016/04/15 12:15:34 wiz Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -464,6 +464,7 @@ SUBDIR+=	p5-Plack-Middleware-RemoveRedundantBody
 SUBDIR+=	p5-Plack-Middleware-ReverseProxy
 SUBDIR+=	p5-Plack-Middleware-Session
 SUBDIR+=	p5-Plack-Middleware-Test-StashWarnings
+SUBDIR+=	p5-Plack-Test-Agent
 SUBDIR+=	p5-Plack-Test-ExternalServer
 SUBDIR+=	p5-Pod-POM-Web
 SUBDIR+=	p5-Reaction
