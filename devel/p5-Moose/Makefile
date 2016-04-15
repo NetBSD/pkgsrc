@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.90 2016/02/17 14:24:04 wen Exp $
+# $NetBSD: Makefile,v 1.91 2016/04/15 12:49:25 wiz Exp $
 
 DISTNAME=	Moose-2.1605
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}
 
@@ -22,7 +23,6 @@ DEPENDS+=	p5-List-MoreUtils>=0.28:../../devel/p5-List-MoreUtils
 DEPENDS+=	p5-Module-Runtime>=0.014:../../devel/p5-Module-Runtime
 DEPENDS+=	p5-Module-Runtime-Conflicts>=0.002:../../devel/p5-Module-Runtime-Conflicts
 DEPENDS+=	p5-MRO-Compat>=0.05:../../devel/p5-MRO-Compat
-DEPENDS+=	p5-Package-DeprecationManager>=0.11:../../devel/p5-Package-DeprecationManager
 DEPENDS+=	p5-Package-Stash>=0.32:../../devel/p5-Package-Stash
 DEPENDS+=	p5-Package-Stash-XS>=0.24:../../devel/p5-Package-Stash-XS
 DEPENDS+=	p5-Params-Util>=1.00:../../devel/p5-Params-Util
@@ -31,6 +31,7 @@ DEPENDS+=	p5-Sub-Identify>=0:../../devel/p5-Sub-Identify
 DEPENDS+=	p5-Sub-Name>=0.05:../../devel/p5-Sub-Name
 DEPENDS+=	p5-Task-Weaken-[0-9]*:../../devel/p5-Task-Weaken
 DEPENDS+=	p5-Try-Tiny>=0.02:../../devel/p5-Try-Tiny
+DEPENDS+=	p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
 #DEPENDS+=	{perl>=5.19.5,p5-Scalar-List-Utils>=1.35}:../../devel/p5-Scalar-List-Utils
 # Note: Moose can take advantage of PartialDump, but as PartialDump depends
 # on Moose, we cannot add it to DEPENDS
