@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1546 2016/04/15 10:15:29 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1547 2016/04/15 10:15:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2005,3 +2005,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/transmission-gtk to 2.92 [wiz 2016-04-15]
 	Updated net/transmission-qt to 2.92 [wiz 2016-04-15]
 	Updated sysutils/dbus-python-common to 1.2.4 [wiz 2016-04-15]
+	Updated sysutils/py-dbus to 1.2.4 [wiz 2016-04-15]
