@@ -1,8 +1,6 @@
-$NetBSD: patch-src_ucm_parser.c,v 1.3 2014/06/26 20:23:14 asau Exp $
+$NetBSD: patch-src_ucm_parser.c,v 1.4 2016/04/15 08:47:50 wiz Exp $
 
-* NetBSD has no versionsort
-* FreeBSD doesn't have it either
-* SunOS has no versionsort or dirent d_type
+* SunOS has no dirent d_type
 
 --- src/ucm/parser.c.orig	2013-07-08 12:31:36.000000000 +0000
 +++ src/ucm/parser.c
@@ -24,12 +22,3 @@ $NetBSD: patch-src_ucm_parser.c,v 1.3 2014/06/26 20:23:14 asau Exp $
  		if (dirent->d_name[0] == '.') {
  			if (dirent->d_name[1] == '\0')
  				return 0;
-@@ -1254,7 +1262,7 @@ int uc_mgr_scan_master_configs(const cha
- 		"%s", env ? env : ALSA_USE_CASE_DIR);
- 	filename[MAX_FILE-1] = '\0';
- 
--#ifdef _GNU_SOURCE
-+#if defined(_GNU_SOURCE) && !defined(__NetBSD__) && !defined(__FreeBSD__) && !defined(__sun)
- #define SORTFUNC	versionsort
- #else
- #define SORTFUNC	alphasort
