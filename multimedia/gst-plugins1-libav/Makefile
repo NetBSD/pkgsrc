@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.21 2016/01/24 14:46:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.22 2016/04/15 14:20:00 wiz Exp $
 
-DISTNAME=	gst-libav-1.6.3
+DISTNAME=	gst-libav-1.8.0
 PKGNAME=	${DISTNAME:S/gst/gst-plugins1/}
 CATEGORIES=	multimedia
 MASTER_SITES=	http://gstreamer.freedesktop.org/src/gst-libav/
@@ -18,7 +18,7 @@ PKGSRC_MAKE_ENV+=	PERL=${PERL5}
 
 #BUILD_DEPENDS+=		yasm>=0.7.2:../../devel/yasm
 
-BUILDLINK_API_DEPENDS.gstreamer1+=	gstreamer1>=1.6.3
+BUILDLINK_API_DEPENDS.gstreamer1+=	gstreamer1>=1.8.0
 .include "../../multimedia/gstreamer1/buildlink3.mk"
 .include "../../multimedia/gst-plugins1-base/buildlink3.mk"
 # the upstream developers only want to support building against

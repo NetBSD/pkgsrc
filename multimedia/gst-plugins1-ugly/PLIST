@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2014/08/08 21:29:39 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2016/04/15 14:20:00 wiz Exp $
 lib/gstreamer-1.0/libgstasf.la
 lib/gstreamer-1.0/libgstdvdlpcmdec.la
 lib/gstreamer-1.0/libgstdvdsub.la
@@ -14,6 +14,7 @@ share/doc/gst-plugins-0.10/gst-plugins-ugly-plugins-1.0/gst-plugins-ugly-plugins
 share/doc/gst-plugins-0.10/gst-plugins-ugly-plugins-1.0/gst-plugins-ugly-plugins-cdiocddasrc.html
 share/doc/gst-plugins-0.10/gst-plugins-ugly-plugins-1.0/gst-plugins-ugly-plugins-lamemp3enc.html
 share/doc/gst-plugins-0.10/gst-plugins-ugly-plugins-1.0/gst-plugins-ugly-plugins-mad.html
+share/doc/gst-plugins-0.10/gst-plugins-ugly-plugins-1.0/gst-plugins-ugly-plugins-mpg123audiodec.html
 share/doc/gst-plugins-0.10/gst-plugins-ugly-plugins-1.0/gst-plugins-ugly-plugins-plugin-a52dec.html
 share/doc/gst-plugins-0.10/gst-plugins-ugly-plugins-1.0/gst-plugins-ugly-plugins-plugin-amrnb.html
 share/doc/gst-plugins-0.10/gst-plugins-ugly-plugins-1.0/gst-plugins-ugly-plugins-plugin-amrwbdec.html
@@ -25,6 +26,7 @@ share/doc/gst-plugins-0.10/gst-plugins-ugly-plugins-1.0/gst-plugins-ugly-plugins
 share/doc/gst-plugins-0.10/gst-plugins-ugly-plugins-1.0/gst-plugins-ugly-plugins-plugin-lame.html
 share/doc/gst-plugins-0.10/gst-plugins-ugly-plugins-1.0/gst-plugins-ugly-plugins-plugin-mad.html
 share/doc/gst-plugins-0.10/gst-plugins-ugly-plugins-1.0/gst-plugins-ugly-plugins-plugin-mpeg2dec.html
+share/doc/gst-plugins-0.10/gst-plugins-ugly-plugins-1.0/gst-plugins-ugly-plugins-plugin-mpg123.html
 share/doc/gst-plugins-0.10/gst-plugins-ugly-plugins-1.0/gst-plugins-ugly-plugins-plugin-realmedia.html
 share/doc/gst-plugins-0.10/gst-plugins-ugly-plugins-1.0/gst-plugins-ugly-plugins-plugin-siddec.html
 share/doc/gst-plugins-0.10/gst-plugins-ugly-plugins-1.0/gst-plugins-ugly-plugins-plugin-twolame.html
@@ -40,7 +42,6 @@ share/doc/gst-plugins-0.10/gst-plugins-ugly-plugins-1.0/gst-plugins-ugly-plugins
 share/doc/gst-plugins-0.10/gst-plugins-ugly-plugins-1.0/gst-plugins-ugly-plugins-xingmux.html
 share/doc/gst-plugins-0.10/gst-plugins-ugly-plugins-1.0/home.png
 share/doc/gst-plugins-0.10/gst-plugins-ugly-plugins-1.0/index.html
-share/doc/gst-plugins-0.10/gst-plugins-ugly-plugins-1.0/index.sgml
 share/doc/gst-plugins-0.10/gst-plugins-ugly-plugins-1.0/left-insensitive.png
 share/doc/gst-plugins-0.10/gst-plugins-ugly-plugins-1.0/left.png
 share/doc/gst-plugins-0.10/gst-plugins-ugly-plugins-1.0/right-insensitive.png
