@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15762 2016/04/15 10:35:53 wiz Exp $
+$NetBSD: TODO,v 1.15763 2016/04/15 10:37:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1430,7 +1430,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Test-SharedFork-0.35
 	o p5-Test-Stream-1.302027
 	o p5-Test-TempDir-Tiny-0.012
-	o p5-Test-Warnings-0.026
 	o p5-Text-FindIndent-0.11
 	o p5-Text-Hunspell-2.14
 	o p5-Tie-Cycle-1.221
