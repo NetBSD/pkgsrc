@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2012/08/01 18:04:26 drochner Exp $
+@comment $NetBSD: PLIST,v 1.9 2016/04/15 10:15:15 wiz Exp $
 ${PYSITELIB}/_dbus_bindings.la
 ${PYSITELIB}/_dbus_glib_bindings.la
 ${PYSITELIB}/dbus/__init__.py
@@ -13,9 +13,6 @@ ${PYSITELIB}/dbus/_dbus.pyo
 ${PYSITELIB}/dbus/_expat_introspect_parser.py
 ${PYSITELIB}/dbus/_expat_introspect_parser.pyc
 ${PYSITELIB}/dbus/_expat_introspect_parser.pyo
-${PYSITELIB}/dbus/_version.py
-${PYSITELIB}/dbus/_version.pyc
-${PYSITELIB}/dbus/_version.pyo
 ${PYSITELIB}/dbus/bus.py
 ${PYSITELIB}/dbus/bus.pyc
 ${PYSITELIB}/dbus/bus.pyo
