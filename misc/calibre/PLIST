@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.55 2016/03/03 12:28:22 wiz Exp $
+@comment $NetBSD: PLIST,v 1.56 2016/04/15 08:43:20 wiz Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -216,6 +216,7 @@ lib/calibre/calibre/ebooks/conversion/plumber.py
 lib/calibre/calibre/ebooks/conversion/preprocess.py
 lib/calibre/calibre/ebooks/conversion/utils.py
 lib/calibre/calibre/ebooks/covers.py
+lib/calibre/calibre/ebooks/css_transform_rules.py
 lib/calibre/calibre/ebooks/djvu/__init__.py
 lib/calibre/calibre/ebooks/djvu/djvu.py
 lib/calibre/calibre/ebooks/djvu/djvubzzdec.py
@@ -748,6 +749,7 @@ lib/calibre/calibre/gui2/convert/xpath_wizard.py
 lib/calibre/calibre/gui2/convert/xpath_wizard_ui.py
 lib/calibre/calibre/gui2/cover_flow.py
 lib/calibre/calibre/gui2/covers.py
+lib/calibre/calibre/gui2/css_transform_rules.py
 lib/calibre/calibre/gui2/custom_column_widgets.py
 lib/calibre/calibre/gui2/dbus_export/__init__.py
 lib/calibre/calibre/gui2/dbus_export/demo.py
@@ -1198,12 +1200,14 @@ lib/calibre/calibre/srv/ajax.py
 lib/calibre/calibre/srv/auth.py
 lib/calibre/calibre/srv/auto_reload.py
 lib/calibre/calibre/srv/bonjour.py
+lib/calibre/calibre/srv/books.py
 lib/calibre/calibre/srv/code.py
 lib/calibre/calibre/srv/content.py
 lib/calibre/calibre/srv/errors.py
 lib/calibre/calibre/srv/handler.py
 lib/calibre/calibre/srv/http_request.py
 lib/calibre/calibre/srv/http_response.py
+lib/calibre/calibre/srv/jobs.py
 lib/calibre/calibre/srv/legacy.py
 lib/calibre/calibre/srv/loop.py
 lib/calibre/calibre/srv/metadata.py
@@ -1211,6 +1215,7 @@ lib/calibre/calibre/srv/opds.py
 lib/calibre/calibre/srv/opts.py
 lib/calibre/calibre/srv/pool.py
 lib/calibre/calibre/srv/pre_activated.py
+lib/calibre/calibre/srv/render_book.py
 lib/calibre/calibre/srv/routes.py
 lib/calibre/calibre/srv/sendfile.py
 lib/calibre/calibre/srv/standalone.py
@@ -1476,8 +1481,9 @@ share/calibre/content-server/font-awesome/fontawesome-webfont.svg
 share/calibre/content-server/font-awesome/fontawesome-webfont.ttf
 share/calibre/content-server/font-awesome/fontawesome-webfont.woff
 share/calibre/content-server/font-awesome/fontawesome-webfont.woff2
+share/calibre/content-server/index-generated.html
 share/calibre/content-server/index.html
-share/calibre/content-server/main.js
+share/calibre/content-server/locales.zip
 share/calibre/content-server/mobile.css
 share/calibre/content-server/reset.css
 share/calibre/content_server/av.jpg
@@ -1796,7 +1802,9 @@ share/calibre/quick_start/eng.epub
 share/calibre/quick_start/fra.epub
 share/calibre/quick_start/ita.epub
 share/calibre/rapydscript/compiler.js.xz
+share/calibre/rapydscript/lib/aes.pyj
 share/calibre/rapydscript/lib/elementmaker.pyj
+share/calibre/rapydscript/lib/encodings.pyj
 share/calibre/rapydscript/lib/gettext.pyj
 share/calibre/rapydscript/lib/math.pyj
 share/calibre/rapydscript/lib/operator.pyj
@@ -2674,6 +2682,7 @@ share/calibre/recipes/mac_world_uk.recipe
 share/calibre/recipes/macity.recipe
 share/calibre/recipes/macleans.recipe
 share/calibre/recipes/maekyung.recipe
+share/calibre/recipes/magyar_nemzet.recipe
 share/calibre/recipes/maharashtra_times.recipe
 share/calibre/recipes/mail_and_guardian.recipe
 share/calibre/recipes/mainichi.recipe
@@ -2739,6 +2748,7 @@ share/calibre/recipes/motherjones.recipe
 share/calibre/recipes/msdnmag_en.recipe
 share/calibre/recipes/msnbc.recipe
 share/calibre/recipes/msnsankei.recipe
+share/calibre/recipes/mult_kor.recipe
 share/calibre/recipes/mumbai_mirror.recipe
 share/calibre/recipes/munchner_merkur_nord.recipe
 share/calibre/recipes/munchner_merkur_stadt.recipe
