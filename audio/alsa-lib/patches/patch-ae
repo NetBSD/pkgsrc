@@ -1,23 +1,10 @@
-$NetBSD: patch-ae,v 1.7 2016/02/18 15:15:57 wiz Exp $
+$NetBSD: patch-ae,v 1.8 2016/04/15 08:47:50 wiz Exp $
 
- - Handle endian detection for assorted operating systems.
- - Fix up linuxism.
  - Don't assert GNU ld on Solaris, where it might not be true.
 
---- include/local.h.orig	2015-11-09 07:39:18.000000000 +0000
+--- include/local.h.orig	2016-02-29 14:44:47.000000000 +0000
 +++ include/local.h
-@@ -50,8 +50,10 @@
- #include <sys/poll.h>
- #include <sys/types.h>
- #include <errno.h>
-+#if defined(__linux__)
- #include <linux/types.h>
- #include <linux/ioctl.h>
-+#endif
- 
- #ifdef SUPPORT_RESMGR
- #include <resmgr.h>
-@@ -249,7 +251,9 @@ extern snd_lib_error_handler_t snd_err_m
+@@ -253,7 +253,9 @@ extern snd_lib_error_handler_t snd_err_m
  
  /*
   */
