@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1576 2016/04/15 23:15:42 mef Exp $
+$NetBSD: CHANGES-2016,v 1.1577 2016/04/16 09:14:40 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2041,3 +2041,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/syncthing to 0.12.22 [abs 2016-04-15]
 	Updated www/bozohttpd to 20160415 [mrg 2016-04-15]
 	Updated filesystems/p5-Path-Tiny to 0.088 [mef 2016-04-15]
+	Updated databases/p5-DBD-XBase to 1.06 [wen 2016-04-16]
