@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/09/20 03:28:30 brook Exp $
+# $NetBSD: Makefile,v 1.2 2016/04/16 14:57:03 wen Exp $
 
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -9,7 +9,7 @@ COMMENT=	Create cryptographic hash digests of R objects
 LICENSE=	gnu-gpl-v2
 
 R_PKGNAME=	digest
-R_PKGVER=	0.6.4
+R_PKGVER=	0.6.9
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
