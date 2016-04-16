@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1582 2016/04/16 13:50:07 wen Exp $
+$NetBSD: CHANGES-2016,v 1.1583 2016/04/16 14:00:05 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2047,3 +2047,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added devel/p5-Test-Requires-Git version 1.005 [mef 2016-04-16]
 	Updated databases/p5-perl-ldap to 0.65 [wen 2016-04-16]
 	Updated databases/p5-SQL-Statement to 1.410 [wen 2016-04-16]
+	Updated devel/p5-Log-Agent to 1.001 [wen 2016-04-16]
