@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1584 2016/04/16 14:16:21 wen Exp $
+$NetBSD: CHANGES-2016,v 1.1585 2016/04/16 14:49:18 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2049,3 +2049,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/p5-SQL-Statement to 1.410 [wen 2016-04-16]
 	Updated devel/p5-Log-Agent to 1.001 [wen 2016-04-16]
 	Updated devel/R-evaluate to 0.8.3 [wen 2016-04-16]
+	Added textproc/R-yaml version 2.1.13 [wen 2016-04-16]
