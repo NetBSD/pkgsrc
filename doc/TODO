@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15773 2016/04/16 15:06:38 wen Exp $
+$NetBSD: TODO,v 1.15774 2016/04/16 15:08:32 wen Exp $
 
 Suggested new packages
 ======================
@@ -370,9 +370,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o R-RandomFields-3.1.8
 	o R-akima-11
 	o R-car-25
-	o R-digest-0.6.9
-	o R-evaluate-0.8.3
-	o R-formatR-1.3
 	o R-gdata-2.17.0
 	o R-gtools-3.5.0
 	o R-httpRequest-0.0.10
