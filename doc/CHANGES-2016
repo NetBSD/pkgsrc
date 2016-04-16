@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1587 2016/04/16 14:57:55 wen Exp $
+$NetBSD: CHANGES-2016,v 1.1588 2016/04/16 15:05:53 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2052,3 +2052,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added textproc/R-yaml version 2.1.13 [wen 2016-04-16]
 	Updated textproc/R-formatR to 1.3 [wen 2016-04-16]
 	Updated security/R-digest to 0.6.9 [wen 2016-04-16]
+	Updated print/R-knitr to 1.12.3 [wen 2016-04-16]
