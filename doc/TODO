@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15768 2016/04/15 14:36:39 wiz Exp $
+$NetBSD: TODO,v 1.15769 2016/04/16 09:54:37 wen Exp $
 
 Suggested new packages
 ======================
@@ -1272,7 +1272,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-DBD-SQLite2-0.37
 	o p5-DBIx-Class-Fixtures-1.001034
 	o p5-DBIx-Connector-0.55
-	o p5-DBIx-DBSchema-0.45
 	o p5-Data-AMF-0.02004
 	o p5-Data-SimplePassword-0.11
 	o p5-Device-XBee-API-0.8
