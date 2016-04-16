@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/04/16 13:18:17 mef Exp $
+
+SHA1 (Test-Requires-Git-1.005.tar.gz) = 2a9d9fa05670ae93974e3e61a299b2cd892618a6
+RMD160 (Test-Requires-Git-1.005.tar.gz) = 79c479bd791ad8926fa0d42fd78d433d323eef6c
+SHA512 (Test-Requires-Git-1.005.tar.gz) = ed9488a2cce4a5279f7d24827ad182915a4628fcc4f688e0522ff9233954a04ae0502015ad9c948c2b8020a427cbf90094a0f778f3b99939f830243423923cdd
+Size (Test-Requires-Git-1.005.tar.gz) = 16767 bytes
