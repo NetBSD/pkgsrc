@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/04/16 13:18:17 mef Exp $
+# $NetBSD: Makefile,v 1.2 2016/04/16 13:42:24 mef Exp $
 
 DISTNAME=	Test-Requires-Git-1.005
 PKGNAME=	p5-${DISTNAME}
@@ -9,6 +9,10 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/B/BO/BOOK/
 COMMENT=	Check your test requirements against the available version of Git
 LICENSE=	${PERL5_LICENSE}
+
+# for make test
+BUILD_DEPENDS+=	p5-Git-Version-Compare-[0-9]*:../../devel/p5-Git-Version-Compare
+BUILD_DEPENDS+=	p5-namespace-clean-[0-9]*:../../devel/p5-namespace-clean
 
 PERL5_PACKLIST=         auto/Test/Requires/Git/.packlist
 USE_LANGUAGES=          # none
