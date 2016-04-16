@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.53 2016/03/03 19:42:29 shattered Exp $
+# $NetBSD: Makefile,v 1.54 2016/04/16 13:41:00 wen Exp $
 
-DISTNAME=	perl-ldap-0.63
-PKGREVISION=	2
+DISTNAME=	perl-ldap-0.65
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	databases net devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=LWP/}
