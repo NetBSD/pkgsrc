@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:17:40 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/04/16 14:57:03 wen Exp $
 
-SHA1 (R/digest_0.6.4.tar.gz) = 1a4a9efd9ae339d1778076b77b428203b6aadf78
-RMD160 (R/digest_0.6.4.tar.gz) = 164cce0561584733b7f17ef1a63032f82d560c5e
-SHA512 (R/digest_0.6.4.tar.gz) = 577b845c319e715dec0344c9d7441675c00cbcbfaf664543b1e8983740008a390ad5a2c04e87583c0bd041dcb3301165faf66dda6bc1a0dbdb46307f9f27abad
-Size (R/digest_0.6.4.tar.gz) = 79309 bytes
+SHA1 (R/digest_0.6.9.tar.gz) = 77bfa32ebde733b0faad10f489ef15bcd83f92a9
+RMD160 (R/digest_0.6.9.tar.gz) = f7e72aa63ebab5690cc5b1cdecf19078635463f3
+SHA512 (R/digest_0.6.9.tar.gz) = e964a55fb8c253616c077cf7863430d7c546926bd3f4151172603748ce3f5edfc0a7c869d7f7850814a4c3dbdb5dcd7fd634746c9778866acc98b19ff856a7bc
+Size (R/digest_0.6.9.tar.gz) = 116746 bytes
