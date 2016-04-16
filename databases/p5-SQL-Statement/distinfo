@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.23 2015/11/03 01:56:23 agc Exp $
+$NetBSD: distinfo,v 1.24 2016/04/16 13:48:54 wen Exp $
 
-SHA1 (SQL-Statement-1.407.tar.gz) = 79eb098c643f936cca5a12a7b8343ca4508fdc99
-RMD160 (SQL-Statement-1.407.tar.gz) = 51c75d65e79059bd43f12988ea873bf8253146aa
-SHA512 (SQL-Statement-1.407.tar.gz) = 65957c9085cf61e8ec4b80b5e1a9fc89fe22c05213b5673d311de06e6bd2645ed94a7d97eac7ca5e56a69b6d36ba0b235ebfd904903295e9a1e6c48a100750f4
-Size (SQL-Statement-1.407.tar.gz) = 137336 bytes
+SHA1 (SQL-Statement-1.410.tar.gz) = a9b2eeaa28e3c9aac5ae9da1ebbf13c03d6c39b5
+RMD160 (SQL-Statement-1.410.tar.gz) = c75a1da826558682d89224105b00a0ce02881820
+SHA512 (SQL-Statement-1.410.tar.gz) = 1e97a3abf97de5064fd136e42b05c9dbf934affdfca93753fde82d04ddb2ee667bbcdf68cf7a69c069eb9b07c2e49df66abe71d62e51d9e485558611565d0772
+Size (SQL-Statement-1.410.tar.gz) = 153271 bytes
