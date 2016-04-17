@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/06/14 17:56:53 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2016/04/17 16:39:22 youri Exp $
 include/plib/fnt.h
 include/plib/js.h
 include/plib/net.h
@@ -18,11 +18,11 @@ include/plib/puGLUT.h
 include/plib/puNative.h
 include/plib/puPW.h
 include/plib/puSDL.h
-include/plib/pw.h
+${PLIST.pw}include/plib/pw.h
 include/plib/sg.h
-include/plib/sl.h
-include/plib/slPortability.h
-include/plib/sm.h
+${PLIST.sl}include/plib/sl.h
+${PLIST.sl}include/plib/slPortability.h
+${PLIST.sl}include/plib/sm.h
 include/plib/ssg.h
 include/plib/ssgAux.h
 include/plib/ssgKeyFlier.h
@@ -45,10 +45,10 @@ lib/libplibnet.a
 lib/libplibpsl.a
 lib/libplibpu.a
 lib/libplibpuaux.a
-lib/libplibpw.a
+${PLIST.pw}lib/libplibpw.a
 lib/libplibsg.a
-lib/libplibsl.a
-lib/libplibsm.a
+${PLIST.sl}lib/libplibsl.a
+${PLIST.sl}lib/libplibsm.a
 lib/libplibssg.a
 lib/libplibssgaux.a
 lib/libplibul.a
