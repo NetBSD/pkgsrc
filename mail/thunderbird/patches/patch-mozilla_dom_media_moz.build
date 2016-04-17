@@ -1,8 +1,8 @@
-$NetBSD: patch-mozilla_dom_media_moz.build,v 1.1 2015/07/09 15:17:34 ryoon Exp $
+$NetBSD: patch-mozilla_dom_media_moz.build,v 1.2 2016/04/17 18:33:50 ryoon Exp $
 
---- mozilla/dom/media/moz.build.orig	2015-06-08 17:49:28.000000000 +0000
+--- mozilla/dom/media/moz.build.orig	2016-04-07 21:33:27.000000000 +0000
 +++ mozilla/dom/media/moz.build
-@@ -280,6 +280,27 @@ if CONFIG['ANDROID_VERSION'] > '15':
+@@ -319,6 +319,27 @@ if CONFIG['MOZ_GONK_MEDIACODEC']:
  CFLAGS += CONFIG['GSTREAMER_CFLAGS']
  CXXFLAGS += CONFIG['GSTREAMER_CFLAGS']
  

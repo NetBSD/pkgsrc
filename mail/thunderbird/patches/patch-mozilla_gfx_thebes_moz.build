@@ -1,8 +1,8 @@
-$NetBSD: patch-mozilla_gfx_thebes_moz.build,v 1.2 2016/01/31 23:43:48 joerg Exp $
+$NetBSD: patch-mozilla_gfx_thebes_moz.build,v 1.3 2016/04/17 18:33:50 ryoon Exp $
 
---- mozilla/gfx/thebes/moz.build.orig	2015-12-21 22:32:53.000000000 +0000
+--- mozilla/gfx/thebes/moz.build.orig	2016-04-07 21:33:15.000000000 +0000
 +++ mozilla/gfx/thebes/moz.build
-@@ -287,6 +287,12 @@ CXXFLAGS += CONFIG['TK_CFLAGS']
+@@ -293,6 +293,12 @@ CXXFLAGS += CONFIG['TK_CFLAGS']
  CFLAGS += CONFIG['MOZ_CAIRO_CFLAGS']
  CFLAGS += CONFIG['TK_CFLAGS']
  
@@ -15,11 +15,11 @@ $NetBSD: patch-mozilla_gfx_thebes_moz.build,v 1.2 2016/01/31 23:43:48 joerg Exp 
  if CONFIG['MOZ_WIDGET_TOOLKIT'] in ('android', 'gonk', 'qt'):
      CXXFLAGS += CONFIG['CAIRO_FT_CFLAGS']
  
-@@ -298,7 +304,5 @@ if CONFIG['MOZ_WIDGET_TOOLKIT'] == 'andr
- if CONFIG['MOZ_WIDGET_TOOLKIT'] in ('gtk2', 'gtk3', 'qt'):
-     CXXFLAGS += CONFIG['MOZ_PANGO_CFLAGS']
+@@ -306,7 +312,5 @@ if CONFIG['MOZ_WIDGET_TOOLKIT'] in ('gtk
+ 
+ LOCAL_INCLUDES += CONFIG['SKIA_INCLUDES']
  
 -DEFINES['GRAPHITE2_STATIC'] = True
 -
- if CONFIG['GKMEDIAS_SHARED_LIBRARY']:
-     DEFINES['OTS_DLL'] = True
+ if CONFIG['OS_ARCH'] == 'WINNT':
+     del DEFINES['UNICODE']

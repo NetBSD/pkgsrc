@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_ipc_chromium_src_base_scoped__nsautorelease__pool.h,v 1.1 2014/07/27 20:04:59 ryoon Exp $
+$NetBSD: patch-mozilla_ipc_chromium_src_base_scoped__nsautorelease__pool.h,v 1.2 2016/04/17 18:33:50 ryoon Exp $
 
---- mozilla/ipc/chromium/src/base/scoped_nsautorelease_pool.h.orig	2014-07-18 00:05:24.000000000 +0000
+--- mozilla/ipc/chromium/src/base/scoped_nsautorelease_pool.h.orig	2016-04-07 21:33:19.000000000 +0000
 +++ mozilla/ipc/chromium/src/base/scoped_nsautorelease_pool.h
 @@ -7,13 +7,13 @@
  

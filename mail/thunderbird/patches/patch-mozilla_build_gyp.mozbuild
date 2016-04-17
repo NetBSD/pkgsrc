@@ -1,8 +1,8 @@
-$NetBSD: patch-mozilla_build_gyp.mozbuild,v 1.2 2015/07/09 15:17:34 ryoon Exp $
+$NetBSD: patch-mozilla_build_gyp.mozbuild,v 1.3 2016/04/17 18:33:50 ryoon Exp $
 
---- mozilla/build/gyp.mozbuild.orig	2015-06-08 17:49:22.000000000 +0000
+--- mozilla/build/gyp.mozbuild.orig	2016-04-07 21:33:17.000000000 +0000
 +++ mozilla/build/gyp.mozbuild
-@@ -12,6 +12,7 @@ gyp_vars = {
+@@ -14,6 +14,7 @@ gyp_vars = {
      'have_ethtool_cmd_speed_hi': 1 if CONFIG['MOZ_WEBRTC_HAVE_ETHTOOL_SPEED_HI'] else 0,
      'include_alsa_audio': 1 if CONFIG['MOZ_ALSA'] else 0,
      'include_pulse_audio': 1 if CONFIG['MOZ_PULSEAUDIO'] else 0,
@@ -10,7 +10,7 @@ $NetBSD: patch-mozilla_build_gyp.mozbuild,v 1.2 2015/07/09 15:17:34 ryoon Exp $
      # basic stuff for everything
      'include_internal_video_render': 0,
      'clang_use_chrome_plugins': 0,
-@@ -87,7 +88,7 @@ flavors = {
+@@ -96,7 +97,7 @@ flavors = {
      'WINNT': 'win',
      'Android': 'linux' if CONFIG['MOZ_WIDGET_TOOLKIT'] == 'gonk' else 'android',
      'Linux': 'linux',
@@ -19,7 +19,7 @@ $NetBSD: patch-mozilla_build_gyp.mozbuild,v 1.2 2015/07/09 15:17:34 ryoon Exp $
      'SunOS': 'solaris',
      'GNU/kFreeBSD': 'freebsd',
      'DragonFly': 'dragonfly',
-@@ -122,5 +123,11 @@ if CONFIG['INTEL_ARCHITECTURE']:
+@@ -131,5 +132,11 @@ if CONFIG['INTEL_ARCHITECTURE']:
      if not CONFIG['HAVE_TOOLCHAIN_SUPPORT_MSSSE3'] or not CONFIG['HAVE_TOOLCHAIN_SUPPORT_MSSE4_1']:
          gyp_vars['yuv_disable_asm'] = 1
  

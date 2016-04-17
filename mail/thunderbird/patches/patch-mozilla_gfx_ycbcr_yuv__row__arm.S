@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_gfx_ycbcr_yuv__row__arm.S,v 1.1 2015/07/09 15:17:34 ryoon Exp $
+$NetBSD: patch-mozilla_gfx_ycbcr_yuv__row__arm.S,v 1.2 2016/04/17 18:33:50 ryoon Exp $
 
---- mozilla/gfx/ycbcr/yuv_row_arm.S.orig	2015-07-06 19:52:50.000000000 +0000
+--- mozilla/gfx/ycbcr/yuv_row_arm.S.orig	2016-04-17 13:47:46.265685842 +0000
 +++ mozilla/gfx/ycbcr/yuv_row_arm.S
 @@ -0,0 +1,312 @@
 +/* This Source Code Form is subject to the terms of the Mozilla Public

@@ -1,8 +1,8 @@
-$NetBSD: patch-mozilla_ipc_chromium_src_base_message__loop.cc,v 1.5 2014/07/27 20:04:59 ryoon Exp $
+$NetBSD: patch-mozilla_ipc_chromium_src_base_message__loop.cc,v 1.6 2016/04/17 18:33:50 ryoon Exp $
 
---- mozilla/ipc/chromium/src/base/message_loop.cc.orig	2014-07-18 00:05:24.000000000 +0000
+--- mozilla/ipc/chromium/src/base/message_loop.cc.orig	2016-04-07 21:33:19.000000000 +0000
 +++ mozilla/ipc/chromium/src/base/message_loop.cc
-@@ -14,20 +14,18 @@
+@@ -13,20 +13,18 @@
  #include "base/string_util.h"
  #include "base/thread_local.h"
  
@@ -24,7 +24,7 @@ $NetBSD: patch-mozilla_ipc_chromium_src_base_message__loop.cc,v 1.5 2014/07/27 2
  #ifdef ANDROID
  #include "base/message_pump_android.h"
  #endif
-@@ -138,9 +136,9 @@ MessageLoop::MessageLoop(Type type)
+@@ -143,9 +141,9 @@ MessageLoop::MessageLoop(Type type)
    }
  #elif defined(OS_POSIX)
    if (type_ == TYPE_UI) {

@@ -1,8 +1,8 @@
-$NetBSD: patch-mozilla_xpcom_components_Module.h,v 1.1 2016/02/09 21:20:16 ryoon Exp $
+$NetBSD: patch-mozilla_xpcom_components_Module.h,v 1.2 2016/04/17 18:33:50 ryoon Exp $
 
---- mozilla/xpcom/components/Module.h.orig	2015-12-21 22:33:10.000000000 +0000
+--- mozilla/xpcom/components/Module.h.orig	2016-04-07 21:33:35.000000000 +0000
 +++ mozilla/xpcom/components/Module.h
-@@ -124,7 +124,7 @@ struct Module
+@@ -125,7 +125,7 @@ struct Module
  #    define NSMODULE_SECTION __declspec(allocate(".kPStaticModules$M"), dllexport)
  #  elif defined(__GNUC__)
  #    if defined(__ELF__)
