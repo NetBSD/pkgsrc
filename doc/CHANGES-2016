@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1604 2016/04/17 10:10:15 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1605 2016/04/17 12:28:00 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2090,3 +2090,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/py-html2text to 2016.4.2 [wiz 2016-04-17]
 	Updated devel/pkg-config to 0.29.1 [wiz 2016-04-17]
 	Updated devel/cmake to 3.5.2 [wiz 2016-04-17]
+	Updated www/p5-CSS-Tiny to 1.20 [wen 2016-04-17]
