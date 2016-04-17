@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q1,v 1.1.2.3 2016/04/15 07:42:41 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q1,v 1.1.2.4 2016/04/17 08:25:52 spz Exp $
 
 Changes to the packages collection and infrastructure on the pkgsrc-2016Q1 branch:
 
@@ -10,3 +10,5 @@ net/samba4: security fix
 Pullup ticket #4959 - requested by hauke
 sysutils/radmind: bugfix
 
+Pullup ticket #4961 - requested by mrg
+www/bozohttpd: security-update
