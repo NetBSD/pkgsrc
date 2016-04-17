@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2240 2016/04/16 13:21:46 mef Exp $
+# $NetBSD: Makefile,v 1.2241 2016/04/17 13:29:18 wen Exp $
 #
 
 COMMENT=	Development utilities
@@ -877,6 +877,7 @@ SUBDIR+=	p5-Devel-CheckBin
 SUBDIR+=	p5-Devel-CheckCompiler
 SUBDIR+=	p5-Devel-CheckLib
 SUBDIR+=	p5-Devel-CheckOS
+SUBDIR+=	p5-Devel-Confess
 SUBDIR+=	p5-Devel-Cover
 SUBDIR+=	p5-Devel-Cycle
 SUBDIR+=	p5-Devel-Declare
