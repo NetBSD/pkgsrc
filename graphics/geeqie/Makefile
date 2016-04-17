@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.54 2016/04/11 19:01:53 ryoon Exp $
-#
+# $NetBSD: Makefile,v 1.55 2016/04/17 09:45:59 wiz Exp $
 
-DISTNAME=	geeqie-1.2.2
-PKGREVISION=	4
+DISTNAME=	geeqie-1.2.3
 EXTRACT_SUFX=	.tar.xz
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.geeqie.org/
@@ -18,11 +16,14 @@ LDFLAGS.SunOS+=		-lm -lsocket -lnsl
 
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
-USE_TOOLS=		bash:run gmake intltool msgfmt pkg-config
+USE_TOOLS=		bash:run gmake intltool msgfmt pkg-config automake autoconf autoreconf
 
 REPLACE_BASH=		plugins/rotate/geeqie-rotate
 REPLACE_BASH+=		plugins/ufraw/geeqie-ufraw
 REPLACE_BASH+=		plugins/import/geeqie-import
+
+pre-configure:
+	cd ${WRKSRC} && ${SH} ./autogen.sh
 
 post-build:
 	cd ${WRKSRC}/doc && ${MAKE_PROGRAM} html
