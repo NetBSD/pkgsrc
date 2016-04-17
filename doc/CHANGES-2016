@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1593 2016/04/17 09:33:42 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1594 2016/04/17 09:34:55 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2079,3 +2079,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added math/R-nloptr version 1.0.4 [wen 2016-04-17]
 	Updated net/p5-NetAddr-IP to 4.079 [wiz 2016-04-17]
 	Updated security/p5-Crypt-OpenPGP to 1.12 [wiz 2016-04-17]
+	Updated devel/p5-Module-ScanDeps to 1.20 [wiz 2016-04-17]
