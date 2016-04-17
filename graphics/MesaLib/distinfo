@@ -1,11 +1,12 @@
-$NetBSD: distinfo,v 1.114 2016/02/23 11:16:55 jperkin Exp $
+$NetBSD: distinfo,v 1.115 2016/04/17 00:03:00 wiz Exp $
 
-SHA1 (mesa-11.1.2.tar.xz) = f6c306828427ad694885ebd488d3b7681eaafa87
-RMD160 (mesa-11.1.2.tar.xz) = 6d47d523dc79260dfbc57fa24724cef804c794b3
-SHA512 (mesa-11.1.2.tar.xz) = 4037728cbe7c5c492cf1e6d20c61250c0ff4fe82cf89ba1cd6ff029776220160359dce197582d2c3f3f7ba5d76fe6b055515210fc46b59f821fc66f453cb77ae
-Size (mesa-11.1.2.tar.xz) = 7561920 bytes
+SHA1 (mesa-11.2.0.tar.xz) = df92533f313869a390cc899f0aef4ef23d07b7a4
+RMD160 (mesa-11.2.0.tar.xz) = 0bc7a8a47f26c1f45951a6f2fb7e529ae4256b62
+SHA512 (mesa-11.2.0.tar.xz) = ce56d9669cb31f465b67fa056428f59c89b60480da1e0b3e293dc740a12ed2ead0574c356017c13dfb4666616843808b9a1b7501eac14fb774981739c7d363b7
+Size (mesa-11.2.0.tar.xz) = 7856132 bytes
 SHA1 (patch-configure) = 87f0f2e60f342c91b3aecab02d3a4d8940eadf0a
 SHA1 (patch-include_GL_glxext.h) = 830902f2d38a8395cda682c059fc5223e1b0e89e
+SHA1 (patch-src_compiler_glsl_glsl__parser__extras.cpp) = c5046ce848d0b1ea428e29611b6822d4f4ab970d
 SHA1 (patch-src_egl_drivers_dri2_platform__drm.c) = 99b6dd6739c29551ae2c885eabd7babd159fc3e5
 SHA1 (patch-src_egl_drivers_dri2_platform__x11.c) = 8102c982cefc3fff667b6e30b7b3133f5e0f2143
 SHA1 (patch-src_egl_main_eglglobals.c) = 2d81ae27f09162d23bc684456cc5fef48c042652
@@ -21,7 +22,6 @@ SHA1 (patch-src_gallium_winsys_radeon_drm_radeon__drm__winsys.c) = 2358b7d5ea89e
 SHA1 (patch-src_gallium_winsys_svga_drm_vmw__screen.c) = 4b2ae565377b1a0396c8bf6b2663c261592b8e5e
 SHA1 (patch-src_gallium_winsys_svga_drm_vmw__screen__ioctl.c) = e4b891e8b4ebe5b8e8c7b8c2c1dbed11b9c417df
 SHA1 (patch-src_gbm_main_gbm.c) = 70225ab7352f123c9efc68b6d4ff0d9675b6f9dc
-SHA1 (patch-src_glsl_glsl__parser__extras.cpp) = eb05a70782edb0ccb82c04ef17de60352c840268
 SHA1 (patch-src_glsl_ralloc.c) = 63c8e40b9f74404033c20c5c9a00c5f6d8df6433
 SHA1 (patch-src_glx_apple_apple__glapi.c) = df70afc24759978f954ac3a774a14e6518dde97a
 SHA1 (patch-src_glx_glxclient.h) = e15256851559dafb7a86e1eb7e9d6afc86de581b
