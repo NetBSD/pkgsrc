@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1611 2016/04/17 13:36:58 wen Exp $
+$NetBSD: CHANGES-2016,v 1.1612 2016/04/17 13:41:18 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2097,3 +2097,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/p5-DBIx-Connector to 0.56 [wen 2016-04-17]
 	Added devel/p5-Devel-Confess version 0.008000 [wen 2016-04-17]
 	Updated databases/p5-DBIx-Class-Fixtures to 1.001036 [wen 2016-04-17]
+	Updated databases/p5-DBIx-Class-Helpers to 2.032001 [wen 2016-04-17]
