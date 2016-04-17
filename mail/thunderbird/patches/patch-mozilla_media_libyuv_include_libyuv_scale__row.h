@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_media_libyuv_include_libyuv_scale__row.h,v 1.1 2015/07/09 15:17:34 ryoon Exp $
+$NetBSD: patch-mozilla_media_libyuv_include_libyuv_scale__row.h,v 1.2 2016/04/17 18:33:50 ryoon Exp $
 
---- mozilla/media/libyuv/include/libyuv/scale_row.h.orig	2015-06-08 17:49:23.000000000 +0000
+--- mozilla/media/libyuv/include/libyuv/scale_row.h.orig	2016-04-07 21:33:22.000000000 +0000
 +++ mozilla/media/libyuv/include/libyuv/scale_row.h
 @@ -219,10 +219,10 @@ void ScaleARGBFilterCols_SSSE3(uint8* ds
  void ScaleARGBColsUp2_SSE2(uint8* dst_argb, const uint8* src_argb,

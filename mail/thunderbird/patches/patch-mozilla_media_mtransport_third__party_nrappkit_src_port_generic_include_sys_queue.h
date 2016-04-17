@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_media_mtransport_third__party_nrappkit_src_port_generic_include_sys_queue.h,v 1.2 2014/07/27 20:04:59 ryoon Exp $
+$NetBSD: patch-mozilla_media_mtransport_third__party_nrappkit_src_port_generic_include_sys_queue.h,v 1.3 2016/04/17 18:33:50 ryoon Exp $
 
---- mozilla/media/mtransport/third_party/nrappkit/src/port/generic/include/sys/queue.h.orig	2014-07-18 00:05:39.000000000 +0000
+--- mozilla/media/mtransport/third_party/nrappkit/src/port/generic/include/sys/queue.h.orig	2016-04-07 21:33:22.000000000 +0000
 +++ mozilla/media/mtransport/third_party/nrappkit/src/port/generic/include/sys/queue.h
 @@ -30,7 +30,13 @@
   * $FreeBSD: src/sys/sys/queue.h,v 1.58 2004/04/07 04:19:49 imp Exp $

@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_ipc_chromium_src_base_process__util.h,v 1.6 2015/07/09 15:17:34 ryoon Exp $
+$NetBSD: patch-mozilla_ipc_chromium_src_base_process__util.h,v 1.7 2016/04/17 18:33:50 ryoon Exp $
 
---- mozilla/ipc/chromium/src/base/process_util.h.orig	2015-06-08 17:49:21.000000000 +0000
+--- mozilla/ipc/chromium/src/base/process_util.h.orig	2016-04-07 21:33:19.000000000 +0000
 +++ mozilla/ipc/chromium/src/base/process_util.h
 @@ -41,6 +41,9 @@
  typedef PROCESSENTRY32 ProcessEntry;
