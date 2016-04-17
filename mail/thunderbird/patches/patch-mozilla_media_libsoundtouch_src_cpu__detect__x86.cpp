@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_media_libsoundtouch_src_cpu__detect__x86.cpp,v 1.2 2014/07/27 20:04:59 ryoon Exp $
+$NetBSD: patch-mozilla_media_libsoundtouch_src_cpu__detect__x86.cpp,v 1.3 2016/04/17 18:33:50 ryoon Exp $
 
---- mozilla/media/libsoundtouch/src/cpu_detect_x86.cpp.orig	2014-07-18 00:05:38.000000000 +0000
+--- mozilla/media/libsoundtouch/src/cpu_detect_x86.cpp.orig	2016-04-07 21:33:21.000000000 +0000
 +++ mozilla/media/libsoundtouch/src/cpu_detect_x86.cpp
 @@ -125,7 +125,9 @@ uint detectCPUextensions(void)
  #endif
