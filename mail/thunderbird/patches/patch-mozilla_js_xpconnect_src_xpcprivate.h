@@ -1,8 +1,8 @@
-$NetBSD: patch-mozilla_js_xpconnect_src_xpcprivate.h,v 1.1 2015/07/09 15:17:34 ryoon Exp $
+$NetBSD: patch-mozilla_js_xpconnect_src_xpcprivate.h,v 1.2 2016/04/17 18:33:50 ryoon Exp $
 
---- mozilla/js/xpconnect/src/xpcprivate.h.orig	2015-06-08 17:49:55.000000000 +0000
+--- mozilla/js/xpconnect/src/xpcprivate.h.orig	2016-04-07 21:33:28.000000000 +0000
 +++ mozilla/js/xpconnect/src/xpcprivate.h
-@@ -1017,6 +1017,8 @@ static inline bool IS_PROTO_CLASS(const 
+@@ -999,6 +999,8 @@ typedef nsTArray<InterpositionWhitelistP
  /***************************************************************************/
  // XPCWrappedNativeScope is one-to-one with a JS global object.
  

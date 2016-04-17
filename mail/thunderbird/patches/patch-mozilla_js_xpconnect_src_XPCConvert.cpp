@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_js_xpconnect_src_XPCConvert.cpp,v 1.1 2015/07/09 15:17:34 ryoon Exp $
+$NetBSD: patch-mozilla_js_xpconnect_src_XPCConvert.cpp,v 1.2 2016/04/17 18:33:50 ryoon Exp $
 
---- mozilla/js/xpconnect/src/XPCConvert.cpp.orig	2015-06-08 17:49:29.000000000 +0000
+--- mozilla/js/xpconnect/src/XPCConvert.cpp.orig	2016-04-07 21:33:28.000000000 +0000
 +++ mozilla/js/xpconnect/src/XPCConvert.cpp
 @@ -134,7 +134,7 @@ XPCConvert::NativeData2JS(MutableHandleV
          d.setNumber(*static_cast<const float*>(s));

@@ -1,8 +1,8 @@
-$NetBSD: patch-mozilla_toolkit_library_moz.build,v 1.1 2015/07/09 15:17:34 ryoon Exp $
+$NetBSD: patch-mozilla_toolkit_library_moz.build,v 1.2 2016/04/17 18:33:50 ryoon Exp $
 
---- mozilla/toolkit/library/moz.build.orig	2015-06-08 17:49:31.000000000 +0000
+--- mozilla/toolkit/library/moz.build.orig	2016-04-07 21:33:33.000000000 +0000
 +++ mozilla/toolkit/library/moz.build
-@@ -214,6 +214,7 @@ if CONFIG['OS_ARCH'] == 'Linux' and CONF
+@@ -211,6 +211,7 @@ if CONFIG['OS_ARCH'] == 'Linux' and CONF
      ]
  
  OS_LIBS += CONFIG['MOZ_CAIRO_OSLIBS']
@@ -10,7 +10,7 @@ $NetBSD: patch-mozilla_toolkit_library_moz.build,v 1.1 2015/07/09 15:17:34 ryoon
  OS_LIBS += CONFIG['MOZ_WEBRTC_X11_LIBS']
  
  if CONFIG['MOZ_NATIVE_JPEG']:
-@@ -225,6 +226,30 @@ if CONFIG['MOZ_NATIVE_PNG']:
+@@ -222,6 +223,30 @@ if CONFIG['MOZ_NATIVE_PNG']:
  if CONFIG['MOZ_NATIVE_HUNSPELL']:
      OS_LIBS += CONFIG['MOZ_HUNSPELL_LIBS']
  
@@ -41,7 +41,7 @@ $NetBSD: patch-mozilla_toolkit_library_moz.build,v 1.1 2015/07/09 15:17:34 ryoon
  if CONFIG['MOZ_NATIVE_LIBEVENT']:
      OS_LIBS += CONFIG['MOZ_LIBEVENT_LIBS']
  
-@@ -234,8 +259,14 @@ if CONFIG['MOZ_NATIVE_LIBVPX']:
+@@ -231,8 +256,14 @@ if CONFIG['MOZ_NATIVE_LIBVPX']:
  if not CONFIG['MOZ_TREE_PIXMAN']:
      OS_LIBS += CONFIG['MOZ_PIXMAN_LIBS']
  
@@ -58,7 +58,7 @@ $NetBSD: patch-mozilla_toolkit_library_moz.build,v 1.1 2015/07/09 15:17:34 ryoon
  
  if CONFIG['HAVE_CLOCK_MONOTONIC']:
      OS_LIBS += CONFIG['REALTIME_LIBS']
-@@ -365,7 +396,7 @@ if CONFIG['OS_ARCH'] == 'WINNT':
+@@ -368,7 +399,7 @@ if CONFIG['OS_ARCH'] == 'WINNT':
  if CONFIG['MOZ_ENABLE_QT']:
      OS_LIBS += CONFIG['XEXT_LIBS']
  

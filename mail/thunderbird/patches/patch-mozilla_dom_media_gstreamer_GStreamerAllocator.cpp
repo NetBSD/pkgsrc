@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_dom_media_gstreamer_GStreamerAllocator.cpp,v 1.1 2015/07/09 15:17:34 ryoon Exp $
+$NetBSD: patch-mozilla_dom_media_gstreamer_GStreamerAllocator.cpp,v 1.2 2016/04/17 18:33:50 ryoon Exp $
 
---- mozilla/dom/media/gstreamer/GStreamerAllocator.cpp.orig	2015-06-08 17:49:28.000000000 +0000
+--- mozilla/dom/media/gstreamer/GStreamerAllocator.cpp.orig	2016-04-07 21:33:27.000000000 +0000
 +++ mozilla/dom/media/gstreamer/GStreamerAllocator.cpp
 @@ -51,7 +51,6 @@ typedef struct
  #pragma GCC diagnostic ignored "-Wunused-function"

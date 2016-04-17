@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_xpcom_reflect_xptcall_md_unix_xptcinvoke__netbsd__m68k.cpp,v 1.1 2015/07/09 15:17:35 ryoon Exp $
+$NetBSD: patch-mozilla_xpcom_reflect_xptcall_md_unix_xptcinvoke__netbsd__m68k.cpp,v 1.2 2016/04/17 18:33:50 ryoon Exp $
 
---- mozilla/xpcom/reflect/xptcall/md/unix/xptcinvoke_netbsd_m68k.cpp.orig	2015-06-08 17:49:34.000000000 +0000
+--- mozilla/xpcom/reflect/xptcall/md/unix/xptcinvoke_netbsd_m68k.cpp.orig	2016-04-07 21:33:35.000000000 +0000
 +++ mozilla/xpcom/reflect/xptcall/md/unix/xptcinvoke_netbsd_m68k.cpp
 @@ -100,6 +100,15 @@ extern "C" {
      }
