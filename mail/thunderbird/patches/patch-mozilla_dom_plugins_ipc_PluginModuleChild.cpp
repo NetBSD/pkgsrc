@@ -1,8 +1,8 @@
-$NetBSD: patch-mozilla_dom_plugins_ipc_PluginModuleChild.cpp,v 1.6 2015/07/09 15:17:34 ryoon Exp $
+$NetBSD: patch-mozilla_dom_plugins_ipc_PluginModuleChild.cpp,v 1.7 2016/04/17 18:33:50 ryoon Exp $
 
---- mozilla/dom/plugins/ipc/PluginModuleChild.cpp.orig	2015-06-08 17:49:29.000000000 +0000
+--- mozilla/dom/plugins/ipc/PluginModuleChild.cpp.orig	2016-04-07 21:33:30.000000000 +0000
 +++ mozilla/dom/plugins/ipc/PluginModuleChild.cpp
-@@ -325,7 +325,7 @@ PluginModuleChild::InitForChrome(const s
+@@ -308,7 +308,7 @@ PluginModuleChild::InitForChrome(const s
  
      // TODO: use PluginPRLibrary here
  
@@ -11,7 +11,7 @@ $NetBSD: patch-mozilla_dom_plugins_ipc_PluginModuleChild.cpp,v 1.6 2015/07/09 15
      mShutdownFunc =
          (NP_PLUGINSHUTDOWN) PR_FindFunctionSymbol(mLibrary, "NP_Shutdown");
  
-@@ -1887,7 +1887,7 @@ PluginModuleChild::AnswerNP_GetEntryPoin
+@@ -1916,7 +1916,7 @@ PluginModuleChild::AnswerNP_GetEntryPoin
      AssertPluginThread();
      MOZ_ASSERT(mIsChrome);
  
@@ -20,7 +20,7 @@ $NetBSD: patch-mozilla_dom_plugins_ipc_PluginModuleChild.cpp,v 1.6 2015/07/09 15
      return true;
  #elif defined(OS_WIN) || defined(OS_MACOSX)
      *_retval = mGetEntryPointsFunc(&mFunctions);
-@@ -1932,7 +1932,7 @@ PluginModuleChild::DoNP_Initialize(const
+@@ -1961,7 +1961,7 @@ PluginModuleChild::DoNP_Initialize(const
  #endif
  
      NPError result;

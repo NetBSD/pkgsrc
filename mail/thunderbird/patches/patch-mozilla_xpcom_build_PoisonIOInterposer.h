@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_xpcom_build_PoisonIOInterposer.h,v 1.2 2015/07/09 15:17:35 ryoon Exp $
+$NetBSD: patch-mozilla_xpcom_build_PoisonIOInterposer.h,v 1.3 2016/04/17 18:33:50 ryoon Exp $
 
---- mozilla/xpcom/build/PoisonIOInterposer.h.orig	2015-06-08 17:49:33.000000000 +0000
+--- mozilla/xpcom/build/PoisonIOInterposer.h.orig	2016-04-07 21:33:35.000000000 +0000
 +++ mozilla/xpcom/build/PoisonIOInterposer.h
 @@ -36,7 +36,7 @@ void MozillaUnRegisterDebugFILE(FILE* aF
  

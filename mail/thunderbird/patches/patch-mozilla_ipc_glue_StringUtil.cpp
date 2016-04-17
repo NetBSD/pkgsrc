@@ -1,8 +1,8 @@
-$NetBSD: patch-mozilla_ipc_glue_StringUtil.cpp,v 1.1 2014/07/27 20:04:59 ryoon Exp $
+$NetBSD: patch-mozilla_ipc_glue_StringUtil.cpp,v 1.2 2016/04/17 18:33:50 ryoon Exp $
 
---- mozilla/ipc/glue/StringUtil.cpp.orig	2014-07-18 00:05:24.000000000 +0000
+--- mozilla/ipc/glue/StringUtil.cpp.orig	2016-04-07 21:33:19.000000000 +0000
 +++ mozilla/ipc/glue/StringUtil.cpp
-@@ -64,14 +64,14 @@ namespace base {
+@@ -65,14 +65,14 @@ namespace base {
  // converters, and implementing the one that doesn't exist for OS X
  // and Windows.
  

@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_ipc_chromium_src_base_time__posix.cc,v 1.2 2013/11/12 20:50:51 ryoon Exp $
+$NetBSD: patch-mozilla_ipc_chromium_src_base_time__posix.cc,v 1.3 2016/04/17 18:33:50 ryoon Exp $
 
---- mozilla/ipc/chromium/src/base/time_posix.cc.orig	2013-10-23 22:09:00.000000000 +0000
+--- mozilla/ipc/chromium/src/base/time_posix.cc.orig	2016-04-07 21:33:19.000000000 +0000
 +++ mozilla/ipc/chromium/src/base/time_posix.cc
 @@ -65,8 +65,10 @@ Time Time::FromExploded(bool is_local, c
    timestruct.tm_wday   = exploded.day_of_week;  // mktime/timegm ignore this

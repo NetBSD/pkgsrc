@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_js_src_vm_SPSProfiler.cpp,v 1.2 2014/07/27 20:04:59 ryoon Exp $
+$NetBSD: patch-mozilla_js_src_vm_SPSProfiler.cpp,v 1.3 2016/04/17 18:33:50 ryoon Exp $
 
---- mozilla/js/src/vm/SPSProfiler.cpp.orig	2014-07-18 00:05:30.000000000 +0000
+--- mozilla/js/src/vm/SPSProfiler.cpp.orig	2016-04-07 21:33:28.000000000 +0000
 +++ mozilla/js/src/vm/SPSProfiler.cpp
 @@ -4,6 +4,8 @@
   * License, v. 2.0. If a copy of the MPL was not distributed with this

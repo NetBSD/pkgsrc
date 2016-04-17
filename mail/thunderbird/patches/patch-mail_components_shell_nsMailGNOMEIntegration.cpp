@@ -1,8 +1,6 @@
-$NetBSD: patch-mail_components_shell_nsMailGNOMEIntegration.cpp,v 1.2 2015/07/09 15:17:34 ryoon Exp $
+$NetBSD: patch-mail_components_shell_nsMailGNOMEIntegration.cpp,v 1.3 2016/04/17 18:33:50 ryoon Exp $
 
-Avoid warning storing a size_t in an unsigned int on LP64
-
---- mail/components/shell/nsMailGNOMEIntegration.cpp.orig	2015-06-08 17:40:38.000000000 +0000
+--- mail/components/shell/nsMailGNOMEIntegration.cpp.orig	2016-04-07 21:14:23.000000000 +0000
 +++ mail/components/shell/nsMailGNOMEIntegration.cpp
 @@ -50,16 +50,16 @@ struct AppTypeAssociation {
  

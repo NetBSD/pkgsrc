@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_media_libcubeb_src_cubeb__oss.c,v 1.1 2015/07/09 15:17:34 ryoon Exp $
+$NetBSD: patch-mozilla_media_libcubeb_src_cubeb__oss.c,v 1.2 2016/04/17 18:33:50 ryoon Exp $
 
---- mozilla/media/libcubeb/src/cubeb_oss.c.orig	2015-07-06 19:52:50.000000000 +0000
+--- mozilla/media/libcubeb/src/cubeb_oss.c.orig	2016-04-17 13:47:46.296872813 +0000
 +++ mozilla/media/libcubeb/src/cubeb_oss.c
 @@ -0,0 +1,402 @@
 +/*

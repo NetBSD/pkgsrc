@@ -1,8 +1,8 @@
-$NetBSD: patch-mozilla_media_webrtc_trunk_webrtc_build_common.gypi,v 1.2 2014/07/27 20:04:59 ryoon Exp $
+$NetBSD: patch-mozilla_media_webrtc_trunk_webrtc_build_common.gypi,v 1.3 2016/04/17 18:33:50 ryoon Exp $
 
---- mozilla/media/webrtc/trunk/webrtc/build/common.gypi.orig	2014-07-18 00:05:42.000000000 +0000
+--- mozilla/media/webrtc/trunk/webrtc/build/common.gypi.orig	2016-04-07 21:33:23.000000000 +0000
 +++ mozilla/media/webrtc/trunk/webrtc/build/common.gypi
-@@ -256,7 +256,7 @@
+@@ -335,7 +335,7 @@
        }],
        ['OS=="dragonfly" or OS=="netbsd"', {
          'defines': [

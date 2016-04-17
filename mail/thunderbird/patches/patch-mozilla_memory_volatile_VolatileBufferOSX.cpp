@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_memory_volatile_VolatileBufferOSX.cpp,v 1.1 2015/07/09 15:17:34 ryoon Exp $
+$NetBSD: patch-mozilla_memory_volatile_VolatileBufferOSX.cpp,v 1.2 2016/04/17 18:33:50 ryoon Exp $
 
---- mozilla/memory/volatile/VolatileBufferOSX.cpp.orig	2015-06-08 17:49:26.000000000 +0000
+--- mozilla/memory/volatile/VolatileBufferOSX.cpp.orig	2016-04-07 21:33:25.000000000 +0000
 +++ mozilla/memory/volatile/VolatileBufferOSX.cpp
 @@ -47,7 +47,14 @@ VolatileBuffer::Init(size_t aSize, size_
    }

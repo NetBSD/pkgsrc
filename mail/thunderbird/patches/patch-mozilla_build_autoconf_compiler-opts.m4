@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_build_autoconf_compiler-opts.m4,v 1.1 2014/07/27 20:04:59 ryoon Exp $
+$NetBSD: patch-mozilla_build_autoconf_compiler-opts.m4,v 1.2 2016/04/17 18:33:50 ryoon Exp $
 
---- mozilla/build/autoconf/compiler-opts.m4.orig	2014-07-18 00:05:10.000000000 +0000
+--- mozilla/build/autoconf/compiler-opts.m4.orig	2016-04-07 21:33:17.000000000 +0000
 +++ mozilla/build/autoconf/compiler-opts.m4
 @@ -53,14 +53,6 @@ case "$target" in
      if test -z "$CXX"; then

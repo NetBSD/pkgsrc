@@ -1,19 +1,18 @@
-# $NetBSD: Makefile,v 1.167 2016/04/11 19:01:56 ryoon Exp $
+# $NetBSD: Makefile,v 1.168 2016/04/17 18:33:50 ryoon Exp $
 
-DISTNAME=	# empty
+DISTNAME=	thunderbird-${TB_VER}.source
 PKGNAME=	thunderbird-${TB_VER}
-PKGREVISION=	1
-TB_VER=		38.7.1
+TB_VER=		45.0
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=thunderbird/releases/${TB_VER}/source/}
-DISTFILES=	thunderbird-${TB_VER}.source.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mozillamessaging.com/en-US/thunderbird/
 COMMENT=	Organize, secure and customize your mail
 
 USE_TOOLS+=	unzip pax
-WRKSRC=		${WRKDIR}/comm-esr38
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 MOZILLA_DIR=	mozilla/
 PLIST_SRC+=	${PLIST_SRC_DFLT}
 
@@ -47,17 +46,11 @@ CHECK_INTERPRETER_SKIP+=lib/thunderbird-sdk/sdk/bin/typelib.py
 CHECK_INTERPRETER_SKIP+=lib/thunderbird-sdk/sdk/bin/xpidl.py
 CHECK_INTERPRETER_SKIP+=lib/thunderbird-sdk/sdk/bin/xpt.py
 
-#post-extract:
-#	cd ${WRKSRC} && ${RM} -r calendar
-#	${CP} -r ${EXTRACT_DIR.lightning-${LIGHTNINGVER}.source.tar.bz2}/comm-beta/calendar ${WRKSRC}
-#	${RM} -r ${EXTRACT_DIR.lightning-${LIGHTNINGVER}.source.tar.bz2}
-
 pre-configure:
 	cd ${WRKSRC} && mkdir ${OBJDIR}
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} autoconf
 	cd ${WRKSRC}/mozilla && ${SETENV} ${CONFIGURE_ENV} autoconf
 	cd ${WRKSRC}/mozilla/js/src && ${SETENV} ${CONFIGURE_ENV} autoconf
-	cd ${WRKSRC}/ldap/sdks/c-sdk && ${SETENV} ${CONFIGURE_ENV} autoconf
 	touch ${WRKSRC}/.mozconfig
 
 do-build:
@@ -65,7 +58,7 @@ do-build:
 	cd ${WRKSRC}/${OBJDIR} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} -j${MAKE_JOBS:U1}
 
 MOZILLA=thunderbird
-MOZILLA_NAME=Thunderbird
+MOZILLA_NAME=thunderbird
 post-build:
 	${SED} -e 's|@MOZILLA@|${MOZILLA}|g'				\
 	  -e 's|@MOZILLA_NAME@|${MOZILLA_NAME}|g'			\
@@ -93,7 +86,7 @@ post-install:
 	   ${DESTDIR}${PREFIX}/lib/${MOZILLA}/extensions/.
 	rm -rf ${WRKDIR}/extensions
 
-.include "../../www/firefox38/mozilla-common.mk"
+.include "../../www/firefox/mozilla-common.mk"
 .include "options.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"

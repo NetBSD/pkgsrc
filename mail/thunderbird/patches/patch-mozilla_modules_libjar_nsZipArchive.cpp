@@ -1,8 +1,8 @@
-$NetBSD: patch-mozilla_modules_libjar_nsZipArchive.cpp,v 1.1 2013/11/12 20:50:51 ryoon Exp $
+$NetBSD: patch-mozilla_modules_libjar_nsZipArchive.cpp,v 1.2 2016/04/17 18:33:50 ryoon Exp $
 
---- mozilla/modules/libjar/nsZipArchive.cpp.orig	2013-10-23 22:09:14.000000000 +0000
+--- mozilla/modules/libjar/nsZipArchive.cpp.orig	2016-04-07 21:33:29.000000000 +0000
 +++ mozilla/modules/libjar/nsZipArchive.cpp
-@@ -590,7 +590,9 @@ MOZ_WIN_MEM_TRY_BEGIN
+@@ -626,7 +626,9 @@ MOZ_WIN_MEM_TRY_BEGIN
      // Success means optimized jar layout from bug 559961 is in effect
      uint32_t readaheadLength = xtolong(startp);
      if (readaheadLength) {

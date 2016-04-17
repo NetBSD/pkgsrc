@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_media_libtheora_lib_arm_armcpu.c,v 1.1 2015/07/09 15:17:34 ryoon Exp $
+$NetBSD: patch-mozilla_media_libtheora_lib_arm_armcpu.c,v 1.2 2016/04/17 18:33:50 ryoon Exp $
 
---- mozilla/media/libtheora/lib/arm/armcpu.c.orig	2015-06-08 17:49:23.000000000 +0000
+--- mozilla/media/libtheora/lib/arm/armcpu.c.orig	2016-04-07 21:33:21.000000000 +0000
 +++ mozilla/media/libtheora/lib/arm/armcpu.c
 @@ -107,6 +107,18 @@ ogg_uint32_t oc_cpu_flags_get(void){
    return flags;

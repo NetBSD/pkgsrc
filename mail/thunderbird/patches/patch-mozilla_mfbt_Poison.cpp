@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_mfbt_Poison.cpp,v 1.2 2015/07/09 15:17:34 ryoon Exp $
+$NetBSD: patch-mozilla_mfbt_Poison.cpp,v 1.3 2016/04/17 18:33:50 ryoon Exp $
 
---- mozilla/mfbt/Poison.cpp.orig	2015-06-08 17:49:26.000000000 +0000
+--- mozilla/mfbt/Poison.cpp.orig	2016-04-07 21:33:25.000000000 +0000
 +++ mozilla/mfbt/Poison.cpp
 @@ -129,7 +129,11 @@ ReleaseRegion(void* aRegion, uintptr_t a
  static bool

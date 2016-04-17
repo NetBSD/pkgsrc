@@ -1,8 +1,8 @@
-$NetBSD: patch-mozilla_xpcom_base_nscore.h,v 1.1 2014/07/27 20:05:00 ryoon Exp $
+$NetBSD: patch-mozilla_xpcom_base_nscore.h,v 1.2 2016/04/17 18:33:50 ryoon Exp $
 
---- mozilla/xpcom/base/nscore.h.orig	2014-07-18 00:05:57.000000000 +0000
+--- mozilla/xpcom/base/nscore.h.orig	2016-04-07 21:33:35.000000000 +0000
 +++ mozilla/xpcom/base/nscore.h
-@@ -114,7 +114,7 @@
+@@ -76,7 +76,7 @@
   *           NS_HIDDEN_(int) NS_FASTCALL func2(char *foo);
   */
  
