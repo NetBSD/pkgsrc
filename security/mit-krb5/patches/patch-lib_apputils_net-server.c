@@ -1,8 +1,18 @@
-$NetBSD: patch-lib_apputils_net-server.c,v 1.2 2016/03/15 15:16:39 tez Exp $
+$NetBSD: patch-lib_apputils_net-server.c,v 1.3 2016/04/17 15:33:13 kamil Exp $
 
---- lib/apputils/net-server.c.orig	2013-08-30 12:14:00.000000000 +0000
+--- lib/apputils/net-server.c.orig	2016-02-29 19:50:13.000000000 +0000
 +++ lib/apputils/net-server.c
-@@ -1477,7 +1477,7 @@ send_to_from(int s, void *buf, size_t le
+@@ -960,7 +960,9 @@ routing_update_needed(struct rt_msghdr *
+             break;
+ #endif
+         return 1;
++#ifdef RTM_RESOLVE
+     case RTM_RESOLVE:
++#endif
+ #ifdef RTM_NEWMADDR
+     case RTM_NEWMADDR:
+     case RTM_DELMADDR:
+@@ -1276,7 +1278,7 @@ send_to_from(int s, void *buf, size_t le
      msg.msg_controllen = 0;
  
      switch (from->sa_family) {
