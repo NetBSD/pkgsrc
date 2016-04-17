@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2016/04/17 04:09:44 wen Exp $
+Fix usage of conditionals in configure
+--- configure.orig	2015-11-28 07:01:04.000000000 +0000
++++ configure
+@@ -2953,8 +2953,8 @@ fi
+ 
+ ## also use pkg-config to check for NLopt
+ ##
+-if test x"${nlopt_libs}" == x""; then
+-    if test x"${PKGCONFIG}" == x"yes"; then
++if test x"${nlopt_libs}" = x""; then
++    if test x"${PKGCONFIG}" = x"yes"; then
+         ## check via pkg-config for hiredis
+         if pkg-config --exists nlopt; then
+             ## obtain cflags and obtain libs
