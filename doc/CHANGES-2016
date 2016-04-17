@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1590 2016/04/17 00:03:11 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1591 2016/04/17 04:13:00 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2076,3 +2076,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated x11/ruby-gnome2-gtksourceview3 to 3.0.8 [tsutsui 2016-04-16]
 	Updated x11/ruby-gnome2-vte to 3.0.8 [tsutsui 2016-04-16]
 	Updated graphics/MesaLib to 11.2.0 [wiz 2016-04-17]
+	Added math/R-nloptr version 1.0.4 [wen 2016-04-17]
