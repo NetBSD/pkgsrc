@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.6 2015/09/10 19:06:57 gdt Exp $
+$NetBSD: patch-doc_Makefile.am,v 1.1 2016/04/17 09:45:59 wiz Exp $
 
 Generate html docs in build phase (instead of install phase).
 gnome-doc-tool seems to ignore "-o html" so manually generate
@@ -8,14 +8,14 @@ Solves PLIST problem due to missing html files.
 
 This is not know to be reported upstream.
 
---- doc/Makefile.in.orig	2015-09-10 14:28:35.000000000 +0000
-+++ doc/Makefile.in
-@@ -496,7 +496,7 @@ uninstall-am:
+--- doc/Makefile.am.orig	2016-03-07 10:21:06.000000000 +0000
++++ doc/Makefile.am
+@@ -7,7 +7,7 @@ EXTRA_DIST = docbook2html.sh docbook
  html/GuideIndex.html: docbook/GuideIndex.xml
  	rm -rf html; mkdir html
  	if [ -x "$(GNOME_DOC_TOOL)" ]; then \
 -		"$(GNOME_DOC_TOOL)" html -o html $(srcdir)/docbook/GuideIndex.xml ; \
-+		cd html && "$(GNOME_DOC_TOOL)" html ../$(srcdir)/docbook/GuideIndex.xml ; \
++		cd html && "$(GNOME_DOC_TOOL)" html $(srcdir)/../docbook/GuideIndex.xml ; \
  	else \
  		echo "gnome-doc-tool not found, html is not built" ; \
  	fi
