@@ -1,9 +1,9 @@
-$NetBSD: patch-mf,v 1.4 2013/07/20 09:28:12 ryoon Exp $
+$NetBSD: patch-mf,v 1.5 2016/04/17 19:27:10 ryoon Exp $
 
 Add DragonFly support.
 Make sure nss libraries have a run path defined.
 
---- nss/coreconf/config.mk.orig	2013-06-27 17:58:08.000000000 +0000
+--- nss/coreconf/config.mk.orig	2016-02-26 20:51:11.000000000 +0000
 +++ nss/coreconf/config.mk
 @@ -31,7 +31,7 @@ endif
  #######################################################################
@@ -14,10 +14,11 @@ Make sure nss libraries have a run path defined.
  
  ifeq (,$(filter-out $(TARGET_OSES),$(OS_TARGET)))
  include $(CORE_DEPTH)/coreconf/$(OS_TARGET).mk
-@@ -179,5 +179,6 @@ endif
+@@ -187,6 +187,7 @@ endif
  DEFINES += -DUSE_UTIL_DIRECTLY
  USE_UTIL_DIRECTLY = 1
  
 +EXTRA_SHARED_LIBS +=    -Wl,-R${PREFIX}/lib/${MOZILLA_PKG_NAME}
  # Build with NO_NSPR_10_SUPPORT to avoid using obsolete NSPR features
  DEFINES += -DNO_NSPR_10_SUPPORT
+ 
