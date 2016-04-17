@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15790 2016/04/17 13:02:30 wen Exp $
+$NetBSD: TODO,v 1.15791 2016/04/17 14:00:46 wen Exp $
 
 Suggested new packages
 ======================
@@ -1254,17 +1254,14 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-CatalystX-CRUD-0.57
 	o p5-CatalystX-CRUD-ModelAdapter-DBIC-0.15
 	o p5-Chart-3.2
-	o p5-Compress-Bzip2-2.24
 	o p5-Config-Augeas-1.300
 	o p5-Config-Grammar-1.11
 	o p5-Convert-NLS_DATE_FORMAT-0.06
-	o p5-Convert-UUlib-1.50
 	o p5-Crypt-GeneratePassword-0.05
 	o p5-DBD-DB2-1.85
 	o p5-DBD-ODBC-1.52
 	o p5-DBD-Oracle-1.74
 	o p5-DBD-SQLite2-0.37
-	o p5-DBIx-Class-Fixtures-1.001034
 	o p5-Data-AMF-0.02004
 	o p5-Data-SimplePassword-0.11
 	o p5-Device-XBee-API-0.8
