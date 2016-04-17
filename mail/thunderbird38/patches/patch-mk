@@ -1,0 +1,14 @@
+$NetBSD: patch-mk,v 1.1 2016/04/17 18:22:21 ryoon Exp $
+
+Treat DragonFly like FreeBSD.
+
+--- mozilla/config/rules.mk.orig	2015-06-08 17:49:23.000000000 +0000
++++ mozilla/config/rules.mk
+@@ -761,6 +761,7 @@ endif
+ ifdef DTRACE_PROBE_OBJ
+ EXTRA_DEPS += $(DTRACE_PROBE_OBJ)
+ OBJS += $(DTRACE_PROBE_OBJ)
++EXCLUDED_OBJS += $(DTRACE_PROBE_OBJ)
+ endif
+ 
+ $(filter %.$(LIB_SUFFIX),$(LIBRARY)): $(OBJS) $(STATIC_LIBS_DEPS) $(filter %.$(LIB_SUFFIX),$(EXTRA_LIBS)) $(EXTRA_DEPS) $(GLOBAL_DEPS)
