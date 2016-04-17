@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_js_src_jskwgen.cpp,v 1.1 2015/07/09 15:17:34 ryoon Exp $
+$NetBSD: patch-mozilla_js_src_jskwgen.cpp,v 1.2 2016/04/17 18:33:50 ryoon Exp $
 
---- mozilla/js/src/jskwgen.cpp.orig	2015-06-08 17:49:25.000000000 +0000
+--- mozilla/js/src/jskwgen.cpp.orig	2016-04-07 21:33:24.000000000 +0000
 +++ mozilla/js/src/jskwgen.cpp
 @@ -181,7 +181,7 @@ qchar(char c, char* quoted_buffer)
          *s++ = '\\';

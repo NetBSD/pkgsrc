@@ -1,8 +1,8 @@
-$NetBSD: patch-mozilla_media_libvorbis_lib_vorbis__info.c,v 1.1 2015/07/09 15:17:34 ryoon Exp $
+$NetBSD: patch-mozilla_media_libvorbis_lib_vorbis__info.c,v 1.2 2016/04/17 18:33:50 ryoon Exp $
 
---- mozilla/media/libvorbis/lib/vorbis_info.c.orig	2015-06-08 17:49:23.000000000 +0000
+--- mozilla/media/libvorbis/lib/vorbis_info.c.orig	2016-04-07 21:33:21.000000000 +0000
 +++ mozilla/media/libvorbis/lib/vorbis_info.c
-@@ -87,7 +87,7 @@ void vorbis_comment_add_tag(vorbis_comme
+@@ -77,7 +77,7 @@ void vorbis_comment_add_tag(vorbis_comme
  static int tagcompare(const char *s1, const char *s2, int n){
    int c=0;
    while(c < n){

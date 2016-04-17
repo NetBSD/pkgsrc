@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_media_libstagefright_system_core_liblog_logprint.c,v 1.1 2015/07/09 15:17:34 ryoon Exp $
+$NetBSD: patch-mozilla_media_libstagefright_system_core_liblog_logprint.c,v 1.2 2016/04/17 18:33:50 ryoon Exp $
 
---- mozilla/media/libstagefright/system/core/liblog/logprint.c.orig	2015-06-08 17:49:23.000000000 +0000
+--- mozilla/media/libstagefright/system/core/liblog/logprint.c.orig	2016-04-07 21:33:21.000000000 +0000
 +++ mozilla/media/libstagefright/system/core/liblog/logprint.c
 @@ -103,7 +103,7 @@ static android_LogPriority filterCharToP
  {

@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_xpcom_reflect_xptcall_md_unix_xptcstubs__asm__sparc64__netbsd.s,v 1.1 2015/07/09 15:17:35 ryoon Exp $
+$NetBSD: patch-mozilla_xpcom_reflect_xptcall_md_unix_xptcstubs__asm__sparc64__netbsd.s,v 1.2 2016/04/17 18:33:50 ryoon Exp $
 
---- mozilla/xpcom/reflect/xptcall/md/unix/xptcstubs_asm_sparc64_netbsd.s.orig	2015-07-06 19:52:50.000000000 +0000
+--- mozilla/xpcom/reflect/xptcall/md/unix/xptcstubs_asm_sparc64_netbsd.s.orig	2016-04-17 13:47:46.350069203 +0000
 +++ mozilla/xpcom/reflect/xptcall/md/unix/xptcstubs_asm_sparc64_netbsd.s
 @@ -0,0 +1,66 @@
 +/* -*- Mode: C; tab-width: 8; indent-tabs-mode: nil; c-basic-offset: 4 -*-
