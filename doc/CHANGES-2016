@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1601 2016/04/17 09:59:48 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1602 2016/04/17 10:01:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2087,3 +2087,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/apache-ant to 1.9.7 [wiz 2016-04-17]
 	Updated devel/libuuid to 2.28 [wiz 2016-04-17]
 	Updated www/py-betamax to 0.6.0 [wiz 2016-04-17]
+	Updated textproc/py-html2text to 2016.4.2 [wiz 2016-04-17]
