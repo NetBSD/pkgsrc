@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2016/04/07 08:06:26 leot Exp $
+@comment $NetBSD: PLIST,v 1.19 2016/04/17 20:48:50 adam Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -281,6 +281,9 @@ ${PYSITELIB}/youtube_dl/extractor/clipfish.pyo
 ${PYSITELIB}/youtube_dl/extractor/cliphunter.py
 ${PYSITELIB}/youtube_dl/extractor/cliphunter.pyc
 ${PYSITELIB}/youtube_dl/extractor/cliphunter.pyo
+${PYSITELIB}/youtube_dl/extractor/cliprs.py
+${PYSITELIB}/youtube_dl/extractor/cliprs.pyo
+${PYSITELIB}/youtube_dl/extractor/cliprs.pyc
 ${PYSITELIB}/youtube_dl/extractor/clipsyndicate.py
 ${PYSITELIB}/youtube_dl/extractor/clipsyndicate.pyc
 ${PYSITELIB}/youtube_dl/extractor/clipsyndicate.pyo
@@ -488,6 +491,9 @@ ${PYSITELIB}/youtube_dl/extractor/exfm.pyo
 ${PYSITELIB}/youtube_dl/extractor/expotv.py
 ${PYSITELIB}/youtube_dl/extractor/expotv.pyc
 ${PYSITELIB}/youtube_dl/extractor/expotv.pyo
+${PYSITELIB}/youtube_dl/extractor/extractors.py
+${PYSITELIB}/youtube_dl/extractor/extractors.pyo
+${PYSITELIB}/youtube_dl/extractor/extractors.pyc
 ${PYSITELIB}/youtube_dl/extractor/extremetube.py
 ${PYSITELIB}/youtube_dl/extractor/extremetube.pyc
 ${PYSITELIB}/youtube_dl/extractor/extremetube.pyo
@@ -731,9 +737,6 @@ ${PYSITELIB}/youtube_dl/extractor/ivideon.pyo
 ${PYSITELIB}/youtube_dl/extractor/izlesene.py
 ${PYSITELIB}/youtube_dl/extractor/izlesene.pyc
 ${PYSITELIB}/youtube_dl/extractor/izlesene.pyo
-${PYSITELIB}/youtube_dl/extractor/jadorecettepub.py
-${PYSITELIB}/youtube_dl/extractor/jadorecettepub.pyc
-${PYSITELIB}/youtube_dl/extractor/jadorecettepub.pyo
 ${PYSITELIB}/youtube_dl/extractor/jeuxvideo.py
 ${PYSITELIB}/youtube_dl/extractor/jeuxvideo.pyc
 ${PYSITELIB}/youtube_dl/extractor/jeuxvideo.pyo
@@ -1163,6 +1166,9 @@ ${PYSITELIB}/youtube_dl/extractor/pornovoisines.pyo
 ${PYSITELIB}/youtube_dl/extractor/pornoxo.py
 ${PYSITELIB}/youtube_dl/extractor/pornoxo.pyc
 ${PYSITELIB}/youtube_dl/extractor/pornoxo.pyo
+${PYSITELIB}/youtube_dl/extractor/presstv.py
+${PYSITELIB}/youtube_dl/extractor/presstv.pyo
+${PYSITELIB}/youtube_dl/extractor/presstv.pyc
 ${PYSITELIB}/youtube_dl/extractor/primesharetv.py
 ${PYSITELIB}/youtube_dl/extractor/primesharetv.pyc
 ${PYSITELIB}/youtube_dl/extractor/primesharetv.pyo
