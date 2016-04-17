@@ -1,11 +1,11 @@
-$NetBSD: patch-configure,v 1.4 2015/11/27 14:57:35 jperkin Exp $
+$NetBSD: patch-configure,v 1.5 2016/04/17 09:56:31 wiz Exp $
 
 Shell portability.
 Disable flock.
 
---- configure.orig	2015-11-02 10:39:48.000000000 +0000
+--- configure.orig	2016-04-12 10:34:01.936801023 +0000
 +++ configure
-@@ -20352,7 +20352,7 @@ else
+@@ -20780,7 +20780,7 @@ else
  fi
  
  
@@ -14,16 +14,16 @@ Disable flock.
  
  
  $as_echo "#define USE_LIBMOUNT_FORCE_MOUNTINFO 1" >>confdefs.h
-@@ -24071,7 +24071,7 @@ fi
-   fi
- else
+@@ -24616,7 +24616,7 @@ fi
  
+   if test "x$ul_default_estate" != x; then
+   enable_flock=$ul_default_estate
 -  build_flock=yes
 +  build_flock=no
-   enable_flock=yes
- fi
- 
-@@ -27616,7 +27616,7 @@ else
+   if test "x$ul_default_estate" = xno; then
+     build_flock=no
+   fi
+@@ -28664,7 +28664,7 @@ else
  fi
  
  
