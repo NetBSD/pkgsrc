@@ -1,0 +1,13 @@
+$NetBSD: patch-calendar_lightning_Makefile.in,v 1.1 2016/04/17 18:22:21 ryoon Exp $
+
+--- calendar/lightning/Makefile.in.orig	2015-06-08 17:40:38.000000000 +0000
++++ calendar/lightning/Makefile.in
+@@ -6,7 +6,7 @@
+ # Lightning.
+ 
+ USE_EXTENSION_MANIFEST = 1
+-XPI_PKGNAME = lightning-$(LIGHTNING_VERSION).$(AB_CD).$(MOZ_PKG_PLATFORM)
++XPI_PKGNAME = lightning
+ XPI_VERSION = $(LIGHTNING_VERSION)
+ 
+ XPI_EM_ID = {e2fda1a4-762b-4020-b5ad-a41df1933103}
