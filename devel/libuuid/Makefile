@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2015/11/13 11:52:50 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2016/04/17 09:56:31 wiz Exp $
 
-DISTNAME=	util-linux-2.27.1
+DISTNAME=	util-linux-2.28
 PKGNAME=	${DISTNAME:S/util-linux/libuuid/}
 CATEGORIES=	devel
-MASTER_SITES=	http://www.kernel.org/pub/linux/utils/util-linux/v2.27/
+MASTER_SITES=	http://www.kernel.org/pub/linux/utils/util-linux/v2.28/
 EXTRACT_SUFX=	.tar.xz
 EXTRACT_USING=	gtar
 
