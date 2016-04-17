@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1597 2016/04/17 09:49:12 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1598 2016/04/17 09:51:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2083,3 +2083,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/geeqie to 1.2.3 [wiz 2016-04-17]
 	Updated devel/py-enum34 to 1.1.3 [wiz 2016-04-17]
 	Updated devel/py-pbr to 1.9.1 [wiz 2016-04-17]
+	Updated devel/py-setuptools to 20.9.0 [wiz 2016-04-17]
