@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1615 2016/04/17 14:16:20 wen Exp $
+$NetBSD: CHANGES-2016,v 1.1616 2016/04/17 15:34:51 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2101,3 +2101,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated converters/p5-Convert-UUlib to 1.5 [wen 2016-04-17]
 	Updated archivers/p5-Compress-Bzip2 to 2.24 [wen 2016-04-17]
 	Updated devel/p5-IPC-Cmd to 0.94 [wen 2016-04-17]
+	Updated security/mit-krb5 to 1.14.1nb1 [kamil 2016-04-17]
