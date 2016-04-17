@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1609 2016/04/17 13:02:30 wen Exp $
+$NetBSD: CHANGES-2016,v 1.1610 2016/04/17 13:30:34 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2095,3 +2095,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/p5-IMAP-Admin to 1.6.8 [wen 2016-04-17]
 	Updated devel/p5-version to 0.9916 [wen 2016-04-17]
 	Updated databases/p5-DBIx-Connector to 0.56 [wen 2016-04-17]
+	Added devel/p5-Devel-Confess version 0.008000 [wen 2016-04-17]
