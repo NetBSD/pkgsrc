@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/12/04 21:46:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/04/17 09:59:39 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -17,18 +17,9 @@ ${PYSITELIB}/betamax/cassette/__init__.pyo
 ${PYSITELIB}/betamax/cassette/cassette.py
 ${PYSITELIB}/betamax/cassette/cassette.pyc
 ${PYSITELIB}/betamax/cassette/cassette.pyo
-${PYSITELIB}/betamax/cassette/headers.py
-${PYSITELIB}/betamax/cassette/headers.pyc
-${PYSITELIB}/betamax/cassette/headers.pyo
 ${PYSITELIB}/betamax/cassette/interaction.py
 ${PYSITELIB}/betamax/cassette/interaction.pyc
 ${PYSITELIB}/betamax/cassette/interaction.pyo
-${PYSITELIB}/betamax/cassette/mock_response.py
-${PYSITELIB}/betamax/cassette/mock_response.pyc
-${PYSITELIB}/betamax/cassette/mock_response.pyo
-${PYSITELIB}/betamax/cassette/util.py
-${PYSITELIB}/betamax/cassette/util.pyc
-${PYSITELIB}/betamax/cassette/util.pyo
 ${PYSITELIB}/betamax/configure.py
 ${PYSITELIB}/betamax/configure.pyc
 ${PYSITELIB}/betamax/configure.pyo
@@ -47,6 +38,9 @@ ${PYSITELIB}/betamax/fixtures/pytest.pyo
 ${PYSITELIB}/betamax/fixtures/unittest.py
 ${PYSITELIB}/betamax/fixtures/unittest.pyc
 ${PYSITELIB}/betamax/fixtures/unittest.pyo
+${PYSITELIB}/betamax/headers.py
+${PYSITELIB}/betamax/headers.pyc
+${PYSITELIB}/betamax/headers.pyo
 ${PYSITELIB}/betamax/matchers/__init__.py
 ${PYSITELIB}/betamax/matchers/__init__.pyc
 ${PYSITELIB}/betamax/matchers/__init__.pyo
@@ -77,6 +71,9 @@ ${PYSITELIB}/betamax/matchers/query.pyo
 ${PYSITELIB}/betamax/matchers/uri.py
 ${PYSITELIB}/betamax/matchers/uri.pyc
 ${PYSITELIB}/betamax/matchers/uri.pyo
+${PYSITELIB}/betamax/mock_response.py
+${PYSITELIB}/betamax/mock_response.pyc
+${PYSITELIB}/betamax/mock_response.pyo
 ${PYSITELIB}/betamax/options.py
 ${PYSITELIB}/betamax/options.pyc
 ${PYSITELIB}/betamax/options.pyo
@@ -95,3 +92,6 @@ ${PYSITELIB}/betamax/serializers/json_serializer.pyo
 ${PYSITELIB}/betamax/serializers/proxy.py
 ${PYSITELIB}/betamax/serializers/proxy.pyc
 ${PYSITELIB}/betamax/serializers/proxy.pyo
+${PYSITELIB}/betamax/util.py
+${PYSITELIB}/betamax/util.pyc
+${PYSITELIB}/betamax/util.pyo
