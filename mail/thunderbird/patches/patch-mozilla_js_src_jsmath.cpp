@@ -1,8 +1,8 @@
-$NetBSD: patch-mozilla_js_src_jsmath.cpp,v 1.1 2013/11/12 20:50:51 ryoon Exp $
+$NetBSD: patch-mozilla_js_src_jsmath.cpp,v 1.2 2016/04/17 18:33:50 ryoon Exp $
 
---- mozilla/js/src/jsmath.cpp.orig	2013-10-23 22:09:02.000000000 +0000
+--- mozilla/js/src/jsmath.cpp.orig	2016-04-07 21:33:24.000000000 +0000
 +++ mozilla/js/src/jsmath.cpp
-@@ -244,7 +244,7 @@ js::ecmaAtan2(double y, double x)
+@@ -272,7 +272,7 @@ js::ecmaAtan2(double y, double x)
      }
  #endif
  

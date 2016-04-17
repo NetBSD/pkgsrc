@@ -1,6 +1,6 @@
-$NetBSD: patch-mozilla_xpcom_reflect_xptcall_md_unix_xptcinvoke__ppc__netbsd.cpp,v 1.1 2015/07/09 15:17:35 ryoon Exp $
+$NetBSD: patch-mozilla_xpcom_reflect_xptcall_md_unix_xptcinvoke__ppc__netbsd.cpp,v 1.2 2016/04/17 18:33:50 ryoon Exp $
 
---- mozilla/xpcom/reflect/xptcall/md/unix/xptcinvoke_ppc_netbsd.cpp.orig	2015-06-08 17:49:34.000000000 +0000
+--- mozilla/xpcom/reflect/xptcall/md/unix/xptcinvoke_ppc_netbsd.cpp.orig	2016-04-07 21:33:35.000000000 +0000
 +++ mozilla/xpcom/reflect/xptcall/md/unix/xptcinvoke_ppc_netbsd.cpp
 @@ -5,9 +5,9 @@
  

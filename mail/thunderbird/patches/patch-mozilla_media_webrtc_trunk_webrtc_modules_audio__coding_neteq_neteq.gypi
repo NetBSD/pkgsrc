@@ -1,8 +1,8 @@
-$NetBSD: patch-mozilla_media_webrtc_trunk_webrtc_modules_audio__coding_neteq_neteq.gypi,v 1.1 2015/07/09 15:17:34 ryoon Exp $
+$NetBSD: patch-mozilla_media_webrtc_trunk_webrtc_modules_audio__coding_neteq_neteq.gypi,v 1.2 2016/04/17 18:33:50 ryoon Exp $
 
---- mozilla/media/webrtc/trunk/webrtc/modules/audio_coding/neteq/neteq.gypi.orig	2015-06-08 17:49:24.000000000 +0000
+--- mozilla/media/webrtc/trunk/webrtc/modules/audio_coding/neteq/neteq.gypi.orig	2016-04-07 21:33:23.000000000 +0000
 +++ mozilla/media/webrtc/trunk/webrtc/modules/audio_coding/neteq/neteq.gypi
-@@ -84,19 +84,11 @@
+@@ -85,19 +85,11 @@
            ],
  	}],
          ['build_with_mozilla==1', {
