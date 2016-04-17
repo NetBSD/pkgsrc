@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.176 2016/04/17 18:33:50 ryoon Exp $
+$NetBSD: distinfo,v 1.177 2016/04/17 18:42:27 ryoon Exp $
 
 SHA1 (thunderbird-45.0.source.tar.xz) = 22bcca34fb442bf12b85ac2513d06b09124254e2
 RMD160 (thunderbird-45.0.source.tar.xz) = ed062ddc898339889109218d7309aa95b44951dd
@@ -48,7 +48,6 @@ SHA1 (patch-mozilla_gfx_skia_skia_src_opts_memset.arm.S) = a4b4aab1c6fcf8681a1ef
 SHA1 (patch-mozilla_gfx_thebes_moz.build) = 9ca30b203e492f59563f698d7bfe39befdef0bb1
 SHA1 (patch-mozilla_gfx_ycbcr_moz.build) = 84eab4220cbce9ad44a62b7ba64e838927382b13
 SHA1 (patch-mozilla_gfx_ycbcr_yuv__row__arm.S) = 2b2e6db1bdb0719ee7642447971fe2a9c80518dd
-SHA1 (patch-mozilla_gfx_ycbcr_yuv__row__arm.s) = b086ba47705f78629acee64fa096bc7ce94b35fa
 SHA1 (patch-mozilla_image_decoders_nsJPEGDecoder.cpp) = 4388fb0c57011e19e8ee4768d3cc82b078b7a6e2
 SHA1 (patch-mozilla_intl_hyphenation_glue_hnjalloc.h) = 9159bfaa44bf70c04602a1ac10f698ef4f4a5187
 SHA1 (patch-mozilla_ipc_chromium_src_base_atomicops.h) = b70f38db87e80de06f061e7ee7664d47b1000f12
