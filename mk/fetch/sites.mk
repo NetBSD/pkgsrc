@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.138 2016/02/14 06:55:08 taca Exp $
+# $NetBSD: sites.mk,v 1.139 2016/04/17 09:10:02 ryoon Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -30,6 +30,13 @@ MASTER_SITE_GNUSTEP+=   \
 MASTER_SITE_OSDN+=	\
 	http://jaist.dl.osdn.jp/ \
 	http://iij.dl.osdn.jp/ \
+	http://tcpdiag.dl.osdn.jp/ \
+	http://c3sl.dl.osdn.jp/ \
+	http://cznic.dl.osdn.jp/ \
+	http://onet.dl.osdn.jp/ \
+	http://nchc.dl.osdn.jp/ \
+	http://rwthaachen.dl.osdn.jp/ \
+	http://giganet.dl.osdn.jp/ \
 	http://osdn.dl.osdn.jp/
 
 MASTER_SITE_PERL_CPAN+= \
