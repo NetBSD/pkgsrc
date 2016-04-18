@@ -1,8 +1,12 @@
-$NetBSD: patch-aa,v 1.1 2000/12/18 08:49:39 itojun Exp $
+$NetBSD: patch-aa,v 1.2 2016/04/18 08:34:35 leot Exp $
 
---- pcaputil.c-	Mon Dec 18 17:40:54 2000
-+++ pcaputil.c	Mon Dec 18 17:41:03 2000
-@@ -16,2 +16,3 @@
+--- pcaputil.c.orig	2000-11-14 15:51:08.000000000 +0000
++++ pcaputil.c
+@@ -14,6 +14,7 @@
+ #include <string.h>
+ #include <err.h>
  #include <pcap.h>
 +#undef BSD
  #ifdef BSD
+ #include <pcap-int.h>
+ #endif
