@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.8 2015/11/03 03:32:20 agc Exp $
+$NetBSD: distinfo,v 1.9 2016/04/18 13:39:29 ryoon Exp $
 
-SHA1 (poedit-1.4.6.1.tar.gz) = 8c4d61aef7695aa48607e9367df4c5899ad3bf83
-RMD160 (poedit-1.4.6.1.tar.gz) = 7b4fbb3f4632b53a46382f9f4b875d375c5c54b8
-SHA512 (poedit-1.4.6.1.tar.gz) = c8084c80a75cc8499615d736ee6d1a1fcf5753ab610f2931c151167c5c5b2fccff5892e971a90bc53eae815074d209c9e3b5854cc05bed8d72e8f0c2f00b96ed
-Size (poedit-1.4.6.1.tar.gz) = 1585949 bytes
-SHA1 (patch-aa) = d0acac229545a35e43c774329c03714fc7affcab
+SHA1 (poedit-1.8.7.1.tar.gz) = 1b1be55992985094b10877e749816415b297f52a
+RMD160 (poedit-1.8.7.1.tar.gz) = 296d29a22c8352f5ae1afbbcbc0c4d0a447007eb
+SHA512 (poedit-1.8.7.1.tar.gz) = 72a91f015248220eff379485ad462cefb17a5ad78854c07f212371a56601319e4f3b28d7c90128e3b8e78113deee3a3d2bb2201fdf8dcc9023b08e885ef9f804
+Size (poedit-1.8.7.1.tar.gz) = 2484117 bytes
+SHA1 (patch-aa) = 65c82daafb227196ac64928a029b3507b9016a4f
