@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1624 2016/04/18 08:35:00 leot Exp $
+$NetBSD: CHANGES-2016,v 1.1625 2016/04/18 08:35:10 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2110,3 +2110,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/youtube-dl to 20160413 [adam 2016-04-17]
 	Updated security/libgcrypt to 1.7.0 [wiz 2016-04-18]
 	Updated security/dsniff to 2.3nb15 [leot 2016-04-18]
+	Updated security/dsniff-nox11 to 2.3nb9 [leot 2016-04-18]
