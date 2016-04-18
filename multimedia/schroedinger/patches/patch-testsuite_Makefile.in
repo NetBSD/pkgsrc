@@ -1,0 +1,16 @@
+$NetBSD: patch-testsuite_Makefile.in,v 1.1 2016/04/18 16:24:59 jperkin Exp $
+
+Fix unresolved symbols in wavelet_max_gain.
+
+--- testsuite/Makefile.in.orig	2012-01-23 02:06:41.000000000 +0000
++++ testsuite/Makefile.in
+@@ -283,7 +283,8 @@ wavelet_gain_curve_DEPENDENCIES = libsch
+ 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
+ 	$(am__DEPENDENCIES_1)
+ am_wavelet_max_gain_OBJECTS = wavelet_max_gain.$(OBJEXT)
+-wavelet_max_gain_OBJECTS = $(am_wavelet_max_gain_OBJECTS)
++nodist_wavelet_max_gain_OBJECTS = tmp-orc.$(OBJEXT)
++wavelet_max_gain_OBJECTS = $(am_wavelet_max_gain_OBJECTS) $(nodist_wavelet_max_gain_OBJECTS)
+ wavelet_max_gain_LDADD = $(LDADD)
+ wavelet_max_gain_DEPENDENCIES = libschrotest.la $(am__DEPENDENCIES_1) \
+ 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
