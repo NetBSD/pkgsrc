@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15791 2016/04/17 14:00:46 wen Exp $
+$NetBSD: TODO,v 1.15792 2016/04/18 06:13:49 wiz Exp $
 
 Suggested new packages
 ======================
@@ -583,8 +583,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dd_rhelp-0.3.0
 	o ddrescue-1.21
 	o dega-1.12
+	o dejagnu-1.6
 	o delegate-9.9.13
-	o denemo-2.0.4
+	o denemo-2.0.6
 	o desklaunch-1.1.7
 	o deskmenu-1.4.5
 	o dhcpcd-dbus-0.6.1
@@ -1029,6 +1030,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libextractor-1.2 [requires shm_open()]
 	o libflash-0.4.13
 	o libfolks-0.10.1
+	o libgcrypt-1.7.0
 	o libgdiplus-4.2
 	o libgfshare-2.0.0
 	o libgiigic-1.1.2
