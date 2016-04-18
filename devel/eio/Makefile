@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/03/05 11:27:44 jperkin Exp $
+# $NetBSD: Makefile,v 1.5 2016/04/18 15:13:30 jperkin Exp $
 #
 
 DISTNAME=	eio-1.7.7
@@ -17,6 +17,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
+
+CONFIGURE_ARGS.SunOS+=	--disable-inotify
 
 INSTALLATION_DIRS=	share/doc/eio
 
