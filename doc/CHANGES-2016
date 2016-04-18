@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1622 2016/04/17 20:50:31 adam Exp $
+$NetBSD: CHANGES-2016,v 1.1623 2016/04/18 06:20:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2108,3 +2108,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/thunderbird-l10n to 45.0 [ryoon 2016-04-17]
 	Updated devel/nss to 3.23 [ryoon 2016-04-17]
 	Updated net/youtube-dl to 20160413 [adam 2016-04-17]
+	Updated security/libgcrypt to 1.7.0 [wiz 2016-04-18]
