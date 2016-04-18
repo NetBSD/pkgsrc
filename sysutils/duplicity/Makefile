@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2015/12/05 21:25:58 adam Exp $
+# $NetBSD: Makefile,v 1.33 2016/04/18 17:49:20 bsiegert Exp $
 
-DISTNAME=	duplicity-0.6.26
+DISTNAME=	duplicity-0.7.07
 CATEGORIES=	sysutils net
-MASTER_SITES=	http://code.launchpad.net/duplicity/0.6-series/${PKGVERSION_NOREV}/+download/
+MASTER_SITES=	http://code.launchpad.net/duplicity/0.7-series/${PKGVERSION_NOREV}/+download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.nongnu.org/duplicity/
@@ -11,19 +11,12 @@ LICENSE=	gnu-gpl-v2
 
 USE_PKGLOCALEDIR=	yes
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.duplicity
-PKG_SUPPORTED_OPTIONS=	gnupg2
-DEPENDS+=	${PYPKGPREFIX}-lockfile>=0.9.1:../../devel/py-lockfile
-.include "../../mk/bsd.options.mk"
-.if !empty(PKG_OPTIONS:Mgnupg2)
-DEPENDS+=	gnupg2-[0-9]*:../../security/gnupg2
-GPGPATH=	${LOCALBASE}/bin/gpg2
-.else
-DEPENDS+=	gnupg>=1.0.0:../../security/gnupg
-GPGPATH=	${LOCALBASE}/bin/gpg
-.endif
+.include "options.mk"
 
-REPLACE_PYTHON+=	bin/*
+DEPENDS+=	${PYPKGPREFIX}-lockfile>=0.9.1:../../devel/py-lockfile
+
+REPLACE_PYTHON+=	bin/duplicity \
+			bin/rdiffdir
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 0.6.22
 
 SUBST_CLASSES+=			fix-paths
@@ -41,6 +34,9 @@ SUBST_VARS.gpgpath=		GPGPATH
 # XXX in 0.6.21, doc files are mode 0600
 #post-extract:
 #	cd ${WRKSRC} && ${CHMOD} go+r *
+# XXX in 0.7.07, executable bit set on duplicity.1
+post-extract:
+	${CHMOD} -x ${WRKSRC}/bin/duplicity.1
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
