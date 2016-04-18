@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.124 2016/04/17 23:04:56 wiz Exp $
+# $NetBSD: Makefile,v 1.125 2016/04/18 06:15:49 wiz Exp $
 
 DISTNAME=	mesa-11.2.0
 PKGNAME=	${DISTNAME:S/mesa/MesaLib/}
@@ -12,7 +12,7 @@ COMMENT=	The Mesa 3D Graphics Library
 LICENSE=	mit
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	bison pkg-config gmake lex
+USE_TOOLS+=	bison pkg-config gmake flex
 USE_LANGUAGES=	c99 c++
 USE_LIBTOOL=	yes
 
