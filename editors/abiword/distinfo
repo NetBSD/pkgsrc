@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.69 2016/02/12 23:42:15 jperkin Exp $
+$NetBSD: distinfo,v 1.70 2016/04/18 15:29:50 jperkin Exp $
 
 SHA1 (abiword-3.0.1.tar.gz) = 7badf9663564a144e16764a456cadda18df70991
 RMD160 (abiword-3.0.1.tar.gz) = 05d92a7304e4e419776970d7b35065ceb59f7681
@@ -25,5 +25,6 @@ SHA1 (patch-src_af_util_xp_ut__iconv.cpp) = 613f162d4db0ba9520e0481a98564e59ccd8
 SHA1 (patch-src_af_util_xp_ut__iconv.h) = bbcfa2098ea77d393feb50d69de9ae29fcce302f
 SHA1 (patch-src_af_util_xp_ut__mbtowc.cpp) = 01f6793651533e7e39f665e5c15e6c12e1c7b96d
 SHA1 (patch-src_af_util_xp_ut__misc.cpp) = f552ecbb87490355d8e74218dd59fd3961f1af5d
+SHA1 (patch-src_text_fmt_xp_fv__FrameEdit.h) = 684310bf9aece4ce72d004dfae9a4b4b6ca69570
 SHA1 (patch-src_text_ptbl_xp_pd__DocumentRDF.cpp) = d07eaf64446efc83c24e02e5969e0921451269a8
 SHA1 (patch-src_text_ptbl_xp_pd__DocumentRDF.h) = 59837727c060bc8f8f14478c3a0245b877c2d29a
