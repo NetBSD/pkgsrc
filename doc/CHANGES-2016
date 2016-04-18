@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1625 2016/04/18 08:35:10 leot Exp $
+$NetBSD: CHANGES-2016,v 1.1626 2016/04/18 10:34:17 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2111,3 +2111,7 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/libgcrypt to 1.7.0 [wiz 2016-04-18]
 	Updated security/dsniff to 2.3nb15 [leot 2016-04-18]
 	Updated security/dsniff-nox11 to 2.3nb9 [leot 2016-04-18]
+	Updated databases/mysql55-client to 5.5.49 [adam 2016-04-18]
+	Updated databases/mysql55-server to 5.5.49 [adam 2016-04-18]
+	Updated databases/mysql56-client to 5.6.30 [adam 2016-04-18]
+	Updated databases/mysql56-server to 5.6.30 [adam 2016-04-18]
