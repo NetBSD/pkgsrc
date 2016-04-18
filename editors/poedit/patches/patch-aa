@@ -1,30 +1,40 @@
-$NetBSD: patch-aa,v 1.3 2010/06/02 12:32:18 adam Exp $
+$NetBSD: patch-aa,v 1.4 2016/04/18 13:39:29 ryoon Exp $
 
---- configure.orig	2010-06-01 09:19:56.000000000 +0000
+--- configure.orig	2016-02-23 11:59:22.000000000 +0000
 +++ configure
-@@ -6057,15 +6057,9 @@ $as_echo_n "checking for Berkeley DB... 
- $as_echo_n "checking for Berkeley DB >= $minversion... " >&6; }
-   fi
+@@ -6196,16 +6196,8 @@ ac_compile='$CXX -c $CXXFLAGS $CPPFLAGS 
+ ac_link='$CXX -o conftest$ac_exeext $CXXFLAGS $CPPFLAGS $LDFLAGS conftest.$ac_ext $LIBS >&5'
+ ac_compiler_gnu=$ac_cv_cxx_compiler_gnu
  
--  for version in "" 5.0 4.9 4.8 4.7 4.6 4.5 4.4 4.3 4.2 4.1 4.0 3.6 3.5 3.4 3.3 3.2 3.1 ; do
- 
+-
+-  for version in "" 5.9 5.8 5.7 5.6 5.5 5.4 5.3 5.2 5.1 5.0 4.8 4.7 4.6 4.5 4.4 4.3 4.2 4.1 ; do
+-
 -    if test -z $version ; then
--        db_lib="-ldb"
--        try_headers="db.h"
+-        db_lib="-ldb_cxx"
+-        try_headers="db_cxx.h"
 -    else
--        db_lib="-ldb-$version"
--        try_headers="db$version/db.h db`echo $version | sed -e 's,\..*,,g'`/db.h"
+-        db_lib="-ldb_cxx-$version"
+-        try_headers="db$version/db_cxx.h db`echo $version | sed -e 's,\..*,,g'`/db_cxx.h"
 -    fi
-+    db_lib="-l${BDB_TYPE}"
-+    try_headers="${BDB_TYPE}/db.h"
++    db_lib="-l${BDB_TYPE}_cxx"
++    try_headers="${BDB_TYPE}/db_cxx.h"
  
      LIBS="$old_LIBS $db_lib"
  
-@@ -6140,7 +6134,6 @@ rm -f core conftest.err conftest.$ac_obj
-       conftest$ac_exeext conftest.$ac_ext
+@@ -6248,7 +6240,6 @@ rm -f core conftest.err conftest.$ac_obj
+     conftest$ac_exeext conftest.$ac_ext
          fi
      done
 -  done
  
-   LIBS="$old_LIBS"
+   ac_ext=cpp
+ ac_cpp='$CXXCPP $CPPFLAGS'
+@@ -6451,7 +6442,7 @@ fi
  
+ 
+ 
+-if test "x$GXX" == "xyes"; then
++if test "x$GXX" = "xyes"; then
+     { $as_echo "$as_me:${as_lineno-$LINENO}: checking for a sed that does not truncate output" >&5
+ $as_echo_n "checking for a sed that does not truncate output... " >&6; }
+ if ${ac_cv_path_SED+:} false; then :
