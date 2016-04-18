@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1629 2016/04/18 17:51:11 bsiegert Exp $
+$NetBSD: CHANGES-2016,v 1.1630 2016/04/18 20:58:46 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2118,3 +2118,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/MesaLib to 11.2.1 [wiz 2016-04-18]
 	Updated editors/poedit to 1.8.7.1 [ryoon 2016-04-18]
 	Updated sysutils/duplicity to 0.7.07 [bsiegert 2016-04-18]
+	Updated www/netsurf to 3.5 [leot 2016-04-18]
