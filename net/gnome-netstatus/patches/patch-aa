@@ -1,7 +1,18 @@
-$NetBSD: patch-aa,v 1.4 2015/12/29 04:04:29 dholland Exp $
+$NetBSD: patch-aa,v 1.5 2016/04/18 11:41:50 jperkin Exp $
 
---- src/netstatus-iface.c.orig	2007-02-13 10:39:19.000000000 +0100
+Don't use SIOCGIFHWADDR on SunOS.
+
+--- src/netstatus-iface.c.orig	2009-03-08 05:25:52.000000000 +0000
 +++ src/netstatus-iface.c
+@@ -1024,7 +1024,7 @@ netstatus_iface_get_hw_details (Netstatu
+ 				char           **hw_addr)
+ 				
+ {
+-#ifdef SIOCGIFHWADDR
++#if defined(SIOCGIFHWADDR) && !defined(__sun)
+   static struct HwType *hw_type = NULL;
+   struct ifreq          if_req;
+   int                   fd;
 @@ -1121,12 +1121,6 @@ netstatus_iface_get_device_details (Nets
    return TRUE;
  }
