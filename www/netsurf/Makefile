@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.51 2016/04/07 07:16:55 leot Exp $
+# $NetBSD: Makefile,v 1.52 2016/04/18 20:58:24 leot Exp $
 
-DISTNAME=	netsurf-all-3.4
+DISTNAME=	netsurf-all-3.5
 PKGNAME=	${DISTNAME:S/-all//}
-PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://download.netsurf-browser.org/netsurf/releases/source-full/
 
@@ -26,7 +25,7 @@ SUBST_FILES.ssl-certs+=		netsurf/test/data/Choices
 SUBST_FILES.ssl-certs+=		netsurf/test/nsoption.c
 SUBST_SED.ssl-certs=		-e 's,/etc/ssl/certs,${SSLCERTS},'
 
-# Avoid possible problems with shells that defines HOST
+# Avoid possible problems with already often defined HOST
 MAKE_ENV+=	BUILD="${MACHINE_GNU_ARCH}--${LOWER_OPSYS}"
 MAKE_ENV+=	HOST="${MACHINE_GNU_ARCH}--${LOWER_OPSYS}"
 
