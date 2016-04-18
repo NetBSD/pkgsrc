@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.54 2015/04/25 14:20:43 tnn Exp $
+# $NetBSD: Makefile,v 1.55 2016/04/18 13:39:29 ryoon Exp $
 
-DISTNAME=	poedit-1.4.6.1
-PKGREVISION=	23
+DISTNAME=	poedit-1.8.7.1
 CATEGORIES=	editors
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=poedit/}
+MASTER_SITES=	https://github.com/vslavik/poedit/releases/download/v${PKGVERSION_NOREV}-oss/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.poedit.net/
@@ -18,8 +17,13 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		BDB_TYPE="${BDB_TYPE}"
 CONFIGURE_ENV+=		WX_CONFIG_NAME=${BUILDLINK_PREFIX.wxGTK28}/bin/wx-config
 
+CONFIGURE_ARGS+=	--enable-debug
+
+.include "../../devel/boost-libs/buildlink3.mk"
 .include "../../textproc/gtkspell/buildlink3.mk"
-.include "../../x11/wxGTK28/buildlink3.mk"
+.include "../../textproc/icu/buildlink3.mk"
+.include "../../textproc/lucene++/buildlink3.mk"
+.include "../../x11/wxGTK30/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bdb.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
