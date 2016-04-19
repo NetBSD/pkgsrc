@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2016/02/25 14:42:56 jperkin Exp $
+# $NetBSD: options.mk,v 1.10 2016/04/19 12:44:40 jperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${GCC_PKGNAME}
 PKG_SUPPORTED_OPTIONS=	nls gcc-inplace-math gcc-c++ gcc-fortran gcc-java \
@@ -157,6 +157,9 @@ MAKE_ENV+=		PKGSRC_MAKE=${TOOLS_PATH.gmake}
 CONFIGURE_ENV+=		JAR=no
 MAKE_ENV+=		JAR=no
 MAKE_ENV+=		ac_cv_prog_JAR=no
+
+# Various libg[ci]j and libgcj-tools rpath failures.
+CHECK_SHLIBS_SUPPORTED=	no
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../lang/python/application.mk"
