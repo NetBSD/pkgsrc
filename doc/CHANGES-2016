@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1632 2016/04/19 10:41:25 jperkin Exp $
+$NetBSD: CHANGES-2016,v 1.1633 2016/04/19 11:16:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2121,3 +2121,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/netsurf to 3.5 [leot 2016-04-18]
 	Updated filesystems/glusterfs to 3.7.11 [manu 2016-04-19]
 	Updated multimedia/xine-lib to 1.2.6nb4 [jperkin 2016-04-19]
+	Updated textproc/jsoncpp to 1.7.2 [wiz 2016-04-19]
