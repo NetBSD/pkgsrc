@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1635 2016/04/19 12:32:52 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.1636 2016/04/19 12:41:59 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2124,3 +2124,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/jsoncpp to 1.7.2 [wiz 2016-04-19]
 	Updated textproc/py-xlsxwriter to 0.8.5 [fhajny 2016-04-19]
 	Added devel/py-futures version 3.0.5 [fhajny 2016-04-19]
+	Updated databases/py-cassandra-driver to 3.2.1 [fhajny 2016-04-19]
