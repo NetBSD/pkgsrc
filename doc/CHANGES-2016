@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1637 2016/04/19 13:27:07 mef Exp $
+$NetBSD: CHANGES-2016,v 1.1638 2016/04/19 13:55:41 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2126,3 +2126,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added devel/py-futures version 3.0.5 [fhajny 2016-04-19]
 	Updated databases/py-cassandra-driver to 3.2.1 [fhajny 2016-04-19]
 	Updated devel/p5-Config-General to 2.61 [mef 2016-04-19]
+	Updated devel/p5-Git-Repository-Plugin-AUTOLOAD to 1.003 [mef 2016-04-19]
