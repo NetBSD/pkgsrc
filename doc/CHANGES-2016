@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1633 2016/04/19 11:16:47 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1634 2016/04/19 12:12:58 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2122,3 +2122,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated filesystems/glusterfs to 3.7.11 [manu 2016-04-19]
 	Updated multimedia/xine-lib to 1.2.6nb4 [jperkin 2016-04-19]
 	Updated textproc/jsoncpp to 1.7.2 [wiz 2016-04-19]
+	Updated textproc/py-xlsxwriter to 0.8.5 [fhajny 2016-04-19]
