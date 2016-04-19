@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1630 2016/04/18 20:58:46 leot Exp $
+$NetBSD: CHANGES-2016,v 1.1631 2016/04/19 03:13:35 manu Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2119,3 +2119,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated editors/poedit to 1.8.7.1 [ryoon 2016-04-18]
 	Updated sysutils/duplicity to 0.7.07 [bsiegert 2016-04-18]
 	Updated www/netsurf to 3.5 [leot 2016-04-18]
+	Updated filesystems/glusterfs to 3.7.11 [manu 2016-04-19]
