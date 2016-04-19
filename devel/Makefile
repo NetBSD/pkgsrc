@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2241 2016/04/17 13:29:18 wen Exp $
+# $NetBSD: Makefile,v 1.2242 2016/04/19 12:36:36 fhajny Exp $
 #
 
 COMMENT=	Development utilities
@@ -1702,6 +1702,7 @@ SUBDIR+=	py-flakes
 SUBDIR+=	py-flexmock
 SUBDIR+=	py-funcparserlib
 SUBDIR+=	py-funcsigs
+SUBDIR+=	py-futures
 SUBDIR+=	py-game
 SUBDIR+=	py-generate
 SUBDIR+=	py-gflags
