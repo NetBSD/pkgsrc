@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2016/04/13 12:07:05 fhajny Exp $
+# $NetBSD: Makefile,v 1.10 2016/04/19 12:41:48 fhajny Exp $
 
-DISTNAME=	python-driver-3.2.0
+DISTNAME=	python-driver-3.2.1
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}-cassandra/}
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=datastax/}
@@ -13,7 +13,13 @@ LICENSE=	apache-2.0
 
 EGG_NAME=	cassandra_driver-${PKGVERSION_NOREV}
 
-DEPENDS+=	${PYPKGPREFIX}-cython-[0-9]*:../../devel/py-cython
+.include "../../lang/python/pyversion.mk"
+
+DEPENDS+=	${PYPKGPREFIX}-cython>=0.20:../../devel/py-cython
+DEPENDS+=	${PYPKGPREFIX}-six>=1.6:../../lang/py-six
+.if ${_PYTHON_VERSION} == 27
+DEPENDS+=	${PYPKGPREFIX}-futures-[0-9]*:../../devel/py-futures
+.endif
 
 .include "../../devel/libev/buildlink3.mk"
 .include "../../lang/python/egg.mk"
