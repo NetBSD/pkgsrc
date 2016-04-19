@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:59:38 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/04/19 11:16:37 wiz Exp $
 
-SHA1 (jsoncpp-src-0.6.0rc2svn276.tar.gz) = 47a36b612343bb93ba89532b822eb9f851380ddf
-RMD160 (jsoncpp-src-0.6.0rc2svn276.tar.gz) = 1d9ff19fafd2ffb080774cd17215315cfca248f5
-SHA512 (jsoncpp-src-0.6.0rc2svn276.tar.gz) = 7572c8b3d54b2f5d8947c429f267e46036b76cda4ba6bb42b53c61219d610436a1471b95f1e25ebb3b224a952e5783aecd02aeb92a14305f1ee1f6e2d6d055c3
-Size (jsoncpp-src-0.6.0rc2svn276.tar.gz) = 342225 bytes
+SHA1 (jsoncpp-1.7.2.tar.gz) = 956b13c42a8100c7fd9a8365c571a6783d197b8a
+RMD160 (jsoncpp-1.7.2.tar.gz) = 8a7dc32d1aebb63cdab7414a81775d53c4559b7c
+SHA512 (jsoncpp-1.7.2.tar.gz) = 32702147229ea7a3679654325572c38f4188f258ab6ac21f9e04059d53ef2a7cd0542ec4ec3b0e7b9089acd2b7bce389f16b9ff24b2e63e0ba2a5bcd46bab766
+Size (jsoncpp-1.7.2.tar.gz) = 205391 bytes

@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2014/04/18 22:26:08 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/04/19 11:16:37 wiz Exp $
+include/json/allocator.h
 include/json/assertions.h
 include/json/autolink.h
 include/json/config.h
@@ -10,3 +11,4 @@ include/json/value.h
 include/json/version.h
 include/json/writer.h
 lib/libjsoncpp.a
+lib/pkgconfig/jsoncpp.pc
