@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.65 2016/04/11 19:01:51 ryoon Exp $
+# $NetBSD: Makefile,v 1.66 2016/04/19 03:12:42 manu Exp $
 
-DISTNAME=	glusterfs-3.7.10
+DISTNAME=	glusterfs-3.7.11
 #PKGREVISION=	1
-PKGREVISION=	1
 CATEGORIES=	filesystems
 MASTER_SITES=	http://bits.gluster.org/pub/gluster/glusterfs/src/
 
@@ -93,6 +92,7 @@ PLIST_SRC=		${PLIST_SRC_DFLT}
 PLIST_SUBST+=		VARBASE=${VARBASE}
 PLIST_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 PLIST_SUBST+=		PYSITELIB=${PYSITELIB:Q}
+PLIST_SUBST+=		GLUSTERFS_VERSION=${DISTNAME:S/glusterfs-//}
 MESSAGE_SRC=		${PKGDIR}/MESSAGE.${OPSYS}
 
 pre-build:
