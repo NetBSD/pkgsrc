@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2016/02/27 07:14:23 wen Exp $
+# $NetBSD: Makefile,v 1.38 2016/04/20 13:40:52 mef Exp $
 
 DISTNAME=	DBIx-Class-0.082821
 PKGNAME=	p5-${DISTNAME}
@@ -40,6 +40,8 @@ BUILD_DEPENDS+=	p5-Test-Exception-[0-9]*:../../devel/p5-Test-Exception
 BUILD_DEPENDS+=	p5-Test-Warn>=0.21:../../devel/p5-Test-Warn
 BUILD_DEPENDS+=	p5-Class-DBI>=0:../../databases/p5-Class-DBI
 BUILD_DEPENDS+=	p5-SQL-Translator>=0.11018:../../databases/p5-SQL-Translator
+# for make test
+BUILD_DEPENDS+=	p5-Test-Deep-[0-9]*:../../devel/p5-Test-Deep
 
 REPLACE_PERL=	script/dbicadmin
 
