@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/10/23 10:24:02 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2016/04/20 12:10:33 nros Exp $
 
 DISTNAME=	wmmp3-0.12
 PKGREVISION=	3
@@ -8,6 +8,7 @@ MASTER_SITES=	http://www.dotfiles.com/software/wmmp3/
 MAINTAINER=	rxg@NetBSD.org
 # HOMEPAGE=	http://www.dotfiles.com/software/wmmp3/
 COMMENT=	Front-end for mpg123 in a Window Maker dockapp
+LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	mpg123>=0.59.18:../../audio/mpg123
 

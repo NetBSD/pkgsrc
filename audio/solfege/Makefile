@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2015/12/05 21:25:29 adam Exp $
+# $NetBSD: Makefile,v 1.54 2016/04/20 12:10:31 nros Exp $
 
 DISTNAME=		solfege-3.14.1
 PKGREVISION=		24
@@ -8,6 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=solfege/}
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://www.solfege.org/
 COMMENT=		Practice several musical ear training exercises
+LICENSE=		gnu-gpl-v3
 
 BUILD_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 BUILD_DEPENDS+=		txt2man-[0-9]*:../../converters/txt2man

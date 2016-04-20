@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/02 23:48:00 asau Exp $
+# $NetBSD: Makefile,v 1.4 2016/04/20 12:10:29 nros Exp $
 #
 
 DISTNAME=	mppenc-1.16
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.musepack.net/
 COMMENT=	Musepack encoder
+LICENSE=	gnu-lgpl-v2.1
 
 USE_CMAKE=	yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2015/02/19 00:20:47 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2016/04/20 12:10:32 nros Exp $
 
 DISTNAME=	streamripper-1.64.6
 CATEGORIES=	audio
@@ -7,6 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=streamripper/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://streamripper.sourceforge.net/
 COMMENT=	Splits SHOUTcast stream into tracks
+LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-included-libmad
