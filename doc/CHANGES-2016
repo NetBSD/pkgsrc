@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1641 2016/04/20 06:59:35 leot Exp $
+$NetBSD: CHANGES-2016,v 1.1642 2016/04/20 09:03:01 roy Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2132,3 +2132,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/sqlite3-tcl to 3.12.2 [adam 2016-04-20]
 	Updated graphics/girara to 0.2.6 [leot 2016-04-20]
 	Updated print/zathura to 0.3.6 [leot 2016-04-20]
+	Updated net/dhcpcd to 6.10.3 [roy 2016-04-20]
