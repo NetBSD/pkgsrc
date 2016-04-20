@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2014/01/01 15:05:37 schmonz Exp $
+# $NetBSD: Makefile,v 1.6 2016/04/20 12:10:30 nros Exp $
 #
 
 DISTNAME=	qtplay1.3.1
@@ -9,6 +9,7 @@ MASTER_SITES=	http://rainbowflight.googlepages.com/#qtplay
 MAINTAINER=	schmonz@NetBSD.org
 HOMEPAGE=	http://rainbowflight.googlepages.com/
 COMMENT=	QuickTime command-line player
+LICENSE=	modified-bsd
 
 ONLY_FOR_PLATFORM=	Darwin-*-*
 
