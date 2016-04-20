@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1648 2016/04/20 15:01:23 mef Exp $
+$NetBSD: CHANGES-2016,v 1.1649 2016/04/20 16:06:12 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2139,3 +2139,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-CPAN-Perl-Releases to 2.64 [mef 2016-04-20]
 	Updated devel/p5-Config-Grammar to 1.11 [mef 2016-04-20]
 	Updated devel/p5-ExtUtils-MakeMaker to 7.12 [mef 2016-04-20]
+	Updated security/py-OpenSSL to 16.0.0 [leot 2016-04-20]
