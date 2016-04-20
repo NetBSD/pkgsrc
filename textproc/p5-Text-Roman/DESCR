@@ -1,0 +1,8 @@
+This package supports both conventional Roman algarisms (which range
+from 1 to 3999) and Milhar Romans, a variation which uses a bar across
+the algarism to indicate multiplication by 1_000. For the purposes of
+this module, acceptable syntax consists of an underscore suffixed to
+the algarism e.g. IV_V = 4_005. The term Milhar apparently derives
+from the Portuguese word for "thousands" and the range of this
+notation extends the range of Roman numbers to 3999 * 1000 + 3999 =
+4_002_999.
