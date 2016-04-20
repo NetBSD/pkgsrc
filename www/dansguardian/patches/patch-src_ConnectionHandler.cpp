@@ -1,9 +1,27 @@
-$NetBSD: patch-src_ConnectionHandler.cpp,v 1.1 2015/09/03 11:55:40 sborrill Exp $
-maxuploadsize is a filtergroup setting
+$NetBSD: patch-src_ConnectionHandler.cpp,v 1.2 2016/04/20 13:52:24 prlw1 Exp $
 
---- src/ConnectionHandler.cpp.orig	2015-09-03 12:05:59.000000000 +0100
-+++ src/ConnectionHandler.cpp	2015-09-03 12:06:56.000000000 +0100
-@@ -1598,14 +1598,14 @@
+maxuploadsize is a filtergroup setting
+informative error messages
+
+--- src/ConnectionHandler.cpp.orig	2012-09-29 20:06:45.000000000 +0000
++++ src/ConnectionHandler.cpp
+@@ -555,12 +555,14 @@ void ConnectionHandler::handleConnection
+ #ifdef DGDEBUG
+ 						std::cerr << dbgPeerPort << " -Error connecting to proxy" << std::endl;
+ #endif
+-						syslog(LOG_ERR, "Error connecting to proxy");
++						syslog(LOG_ERR, "Error %d (%m) connecting to proxy %s:%d by client %s", errno, o.proxy_ip.c_str(), o.proxy_port, clientip.c_str());
++
+ 						return;
+ 					}
+ 				}
+ 				catch(std::exception & e) {
+ #ifdef DGDEBUG
++					syslog(LOG_ERR, "Exception while creating proxysock to proxy %s:%d by client %s", o.proxy_ip.c_str(), o.proxy_port, clientip.c_str());
+ 					std::cerr << dbgPeerPort << " -exception while creating proxysock: " << e.what() << std::endl;
+ #endif
+ 				}
+@@ -1598,14 +1600,14 @@ void ConnectionHandler::handleConnection
  				// Check for POST upload size blocking, unless request is an exception
  				// MIME type test is just an approximation, but probably good enough
  				if (!isbypass && !isexception
