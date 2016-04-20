@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/06/12 10:49:29 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2016/04/20 13:10:11 mef Exp $
 #
 
 DISTNAME=	MooseX-App-1.33
@@ -14,10 +14,15 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-Test-Most-[0-9]*:../../devel/p5-Test-Most
 # for make test
+BUILD_DEPENDS+= p5-Config-Any-[0-9]*:../../devel/p5-Config-Any
 BUILD_DEPENDS+= p5-FindBin-libs-[0-9]*:../../devel/p5-FindBin-libs
 BUILD_DEPENDS+= p5-IO-Interactive-[0-9]*:../../devel/p5-IO-Interactive
+BUILD_DEPENDS+=	p5-Module-Pluggable-[0-9]*:../../devel/p5-Module-Pluggable
+BUILD_DEPENDS+=	p5-MooseX-Types-Path-Class-[0-9]*:../../devel/p5-MooseX-Types-Path-Class
+BUILD_DEPENDS+=	p5-Path-Class-[0-9]*:../../devel/p5-Path-Class
 BUILD_DEPENDS+= p5-Pod-Elemental-[0-9]*:../../textproc/p5-Pod-Elemental
 BUILD_DEPENDS+= p5-Test-NoWarnings-[0-9]*:../../devel/p5-Test-NoWarnings
+BUILD_DEPENDS+= p5-Text-Diff-[0-9]*:../../textproc/p5-Text-Diff
 BUILD_DEPENDS+= p5-Text-WagnerFischer-[0-9]*:../../textproc/p5-Text-WagnerFischer
 
 PERL5_PACKLIST=	auto/MooseX/App/.packlist
