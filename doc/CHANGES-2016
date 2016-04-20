@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1644 2016/04/20 12:32:24 mef Exp $
+$NetBSD: CHANGES-2016,v 1.1645 2016/04/20 13:13:28 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2135,3 +2135,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/dhcpcd to 6.10.3 [roy 2016-04-20]
 	Updated devel/p5-glib2 to 1.321 [mef 2016-04-20]
 	Updated devel/p5-Glib-Object-Introspection to 0.040 [mef 2016-04-20]
+	Updated devel/p5-Class-C3 to 0.31 [mef 2016-04-20]
