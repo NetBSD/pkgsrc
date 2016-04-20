@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1650 2016/04/20 16:10:24 leot Exp $
+$NetBSD: CHANGES-2016,v 1.1651 2016/04/20 17:34:44 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2141,3 +2141,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-ExtUtils-MakeMaker to 7.12 [mef 2016-04-20]
 	Updated security/py-OpenSSL to 16.0.0 [leot 2016-04-20]
 	Updated www/py-h2 to 2.2.3 [leot 2016-04-20]
+	Updated www/py-django-reversion to 1.10.2 [adam 2016-04-20]
