@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2015/09/08 11:57:48 jperkin Exp $
+# $NetBSD: Makefile,v 1.17 2016/04/20 12:10:27 nros Exp $
 #
 
 DISTNAME=	juke-0.7
@@ -9,6 +9,7 @@ MASTER_SITES=	http://www.moll.no/oyvind/distfiles/
 MAINTAINER=	mob@bicekru.org
 #HOMEPAGE=	http://johan.nocrew.org/nav10/unix/juke/
 COMMENT=	Simple ncurses based jukebox
+LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	YES
 

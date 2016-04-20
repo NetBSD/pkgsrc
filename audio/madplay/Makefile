@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2012/10/02 23:47:56 asau Exp $
+# $NetBSD: Makefile,v 1.38 2016/04/20 12:10:28 nros Exp $
 #
 
 DISTNAME=	madplay-0.15.2b
@@ -9,6 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mad/}
 MAINTAINER=	simonb@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/mad/
 COMMENT=	High-quality MPEG audio decoder
+LICENSE=	gnu-gpl-v2
 
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES

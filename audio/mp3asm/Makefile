@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/02 23:47:58 asau Exp $
+# $NetBSD: Makefile,v 1.12 2016/04/20 12:10:29 nros Exp $
 #
 
 DISTNAME=	mp3asm-0.1.3-1
@@ -10,6 +10,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	rxg@NetBSD.org
 HOMEPAGE=	http://mp3asm.sourceforge.net/
 COMMENT=	MPEG 1/2/2.5 audio layer 1,2,3 frame level editor
+LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/mp3asm-0.1
 GNU_CONFIGURE=	yes

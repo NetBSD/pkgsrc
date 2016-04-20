@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.32 2013/12/23 11:57:02 wiz Exp $
+# $NetBSD: Makefile.common,v 1.33 2016/04/20 12:10:34 nros Exp $
 #
 # used by audio/xmms/Makefile
 # used by audio/xmms-esound/Makefile
@@ -11,6 +11,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://legacy.xmms2.org/
 COMMENT=	X Multimedia System - an audio player with a Winamp GUI
+LICENSE=	gnu-gpl-v2
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes

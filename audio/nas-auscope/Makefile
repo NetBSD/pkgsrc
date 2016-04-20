@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2015/12/29 04:54:35 dholland Exp $
+# $NetBSD: Makefile,v 1.13 2016/04/20 12:10:30 nros Exp $
 
 DISTNAME=	nas-1.9.1.src
 PKGNAME=	nas-auscope-1.9.1
 PKGREVISION=	4
 CATEGORIES=	audio
 MASTER_SITES=	http://nas.codebrilliance.com/nas/
+LICENSE=	frink-license
 
 MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://radscan.com/nas.html

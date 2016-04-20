@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2016/03/05 11:28:04 jperkin Exp $
+# $NetBSD: Makefile,v 1.50 2016/04/20 12:10:26 nros Exp $
 
 DISTNAME=	0.9.6.1
 PKGNAME=	hydrogen-0.9.6.1
@@ -13,6 +13,7 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 MAINTAINER=	mrg@eterna.com.au
 HOMEPAGE=	http://www.hydrogen-music.org/
 COMMENT=	Real time drum machine/sequencer
+LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes

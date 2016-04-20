@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2015/12/05 21:25:29 adam Exp $
+# $NetBSD: Makefile,v 1.16 2016/04/20 12:10:30 nros Exp $
 
 DISTNAME=		pyvorbis-1.3
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -9,6 +9,7 @@ MASTER_SITES=		http://vorbis.com/files/1.0.1/unix/py/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://vorbis.com/
 COMMENT=		Python bindings for Vorbis library
+LICENSE=		gnu-lgpl-v2
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes

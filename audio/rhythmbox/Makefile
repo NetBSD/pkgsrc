@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.131 2016/04/11 19:01:42 ryoon Exp $
+# $NetBSD: Makefile,v 1.132 2016/04/20 12:10:31 nros Exp $
 
 DISTNAME=	rhythmbox-0.12.8
 PKGREVISION=	46
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/projects/rhythmbox/
 COMMENT=	Music management application for GNOME
+LICENSE=	gnu-gpl-v2
 
 .include "options.mk"
 

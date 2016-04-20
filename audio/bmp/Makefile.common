@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.28 2013/04/06 19:42:41 rodent Exp $
+# $NetBSD: Makefile.common,v 1.29 2016/04/20 12:10:25 nros Exp $
 #
 # used by audio/bmp/Makefile
 # used by audio/bmp-esound/Makefile
@@ -10,6 +10,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=beepmp/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://beepmp.sourceforge.net/
 COMMENT=	Beep Media Player (fork of XMMS to work with GTK+ 2.x)
+LICENSE=	gnu-gpl-v2
 
 DISTINFO_FILE=		${.CURDIR}/../../audio/bmp/distinfo
 FILESDIR=		${.CURDIR}/../../audio/xmms/files

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2015/04/25 14:20:24 tnn Exp $
+# $NetBSD: Makefile,v 1.43 2016/04/20 12:10:32 nros Exp $
 #
 
 DISTNAME=	terminatorX-3.82
@@ -11,6 +11,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://terminatorx.org/
 COMMENT=	Realtime audio synthesizer
+LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	mpg123-[0-9]*:../../audio/mpg123
 DEPENDS+=	sox-[0-9]*:../../audio/sox

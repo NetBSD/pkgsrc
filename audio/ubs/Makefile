@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2013/07/12 10:44:52 jperkin Exp $
+# $NetBSD: Makefile,v 1.19 2016/04/20 12:10:33 nros Exp $
 #
 
 DISTNAME=		ubs-0.17
@@ -10,6 +10,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 # author's new home may be at http://www.teragon.org
 # HOMEPAGE=		http://aboleo.net/software/ubs/
 COMMENT=		Uninterrupted Broadcasting System
+LICENSE=		gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
 

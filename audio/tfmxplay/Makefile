@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2014/10/09 14:05:58 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2016/04/20 12:10:32 nros Exp $
 #
 
 DISTNAME=	tfmxplay-0.6
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://darkstar.tabu.uni-bonn.de/~neo/audio.html
 COMMENT=	Console TFMX (amiga games sound file format) player
+LICENSE=	gnu-gpl-v2
 
 NOT_FOR_PLATFORM=	Interix-*-*
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2015/04/25 14:20:24 tnn Exp $
+# $NetBSD: Makefile,v 1.40 2016/04/20 12:10:32 nros Exp $
 #
 
 DISTNAME=		SpiralLoops-2.0.0
@@ -10,6 +10,7 @@ MASTER_SITES=		http://www.pawfal.org/Software/SpiralLoops/dload/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.pawfal.org/Software/SpiralLoops/
 COMMENT=		Loop based sampler
+LICENSE=		gnu-gpl-v2
 
 # only runs correctly on little-endian machines
 BROKEN_EXCEPT_ON_PLATFORM=	${LITTLEENDIANPLATFORMS}

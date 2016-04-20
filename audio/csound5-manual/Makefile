@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2014/02/13 10:21:50 mrg Exp $
+# $NetBSD: Makefile,v 1.10 2016/04/20 12:10:25 nros Exp $
 #
 
 DISTNAME=		Csound${CSOUND_VERSION}_manual_html
@@ -11,6 +11,7 @@ EXTRACT_SUFX=		.zip
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.csounds.com/
 COMMENT=		Csound5 Reference Manual
+LICENSE=		gnu-fdl-v1.2
 
 CSOUND_VERSION=		5.19
 NO_BUILD=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2016/03/05 11:28:05 jperkin Exp $
+# $NetBSD: Makefile,v 1.33 2016/04/20 12:10:30 nros Exp $
 #
 
 DISTNAME=	qjackctl-0.3.3
@@ -9,6 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qjackctl/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://qjackctl.sourceforge.net/
 COMMENT=	JACK Audio Connection Kit Qt4 GUI
+LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++

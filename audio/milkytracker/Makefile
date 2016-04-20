@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/04/25 14:20:22 tnn Exp $
+# $NetBSD: Makefile,v 1.9 2016/04/20 12:10:29 nros Exp $
 #
 
 DISTNAME=	milkytracker-0.90.86
@@ -10,6 +10,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	jkuittinen@users.sourceforge.net
 HOMEPAGE=	http://milkytracker.org/
 COMMENT=	Music tracker inspired by Fast Tracker 2
+LICENSE=	gnu-gpl-v3
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++

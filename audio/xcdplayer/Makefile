@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2015/01/01 09:09:15 dholland Exp $
+# $NetBSD: Makefile,v 1.29 2016/04/20 12:10:34 nros Exp $
 
 DISTNAME=	xcdplayer-2.2
 PKGREVISION=	6
@@ -8,6 +8,7 @@ EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	CD player for X
+LICENSE=	mit
 
 # cdrom interface code only exists for Solaris, SGI, and BSD.
 # (and note that the BSD code doesn't come with but is in files/)
