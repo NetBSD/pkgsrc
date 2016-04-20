@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2015/12/29 04:54:35 dholland Exp $
+# $NetBSD: Makefile,v 1.29 2016/04/20 12:10:28 nros Exp $
 #
 
 DISTNAME=		libvisual-plugins-0.2.0
@@ -10,6 +10,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=libvisual/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://localhost.nl/~synap/libvisual-wiki/
 COMMENT=		Plugins for libvisual
+LICENSE=		gnu-gpl-v2
 
 CONFLICTS=		libvisual-nebulus-[0-9]* libvisual-gforce-[0-9]*
 CONFLICTS+=		libvisual-plugins<0.4.0

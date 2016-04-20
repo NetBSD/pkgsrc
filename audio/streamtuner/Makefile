@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2016/03/05 11:27:41 jperkin Exp $
+# $NetBSD: Makefile,v 1.76 2016/04/20 12:10:32 nros Exp $
 #
 
 DISTNAME=	streamtuner-0.99.99
@@ -9,6 +9,7 @@ MASTER_SITES=	http://savannah.nongnu.org/download/streamtuner/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.nongnu.org/streamtuner/
 COMMENT=	Stream directory browser
+LICENSE=	modified-bsd
 
 BUILD_DEPENDS+=	hicolor-icon-theme-[0-9]*:../../graphics/hicolor-icon-theme
 

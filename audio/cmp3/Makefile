@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2015/09/08 11:57:48 jperkin Exp $
+# $NetBSD: Makefile,v 1.31 2016/04/20 12:10:25 nros Exp $
 #
 
 DISTNAME=	cmp3-2.0pre6
@@ -10,6 +10,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cmp3/}
 MAINTAINER=	rxg@NetBSD.org
 HOMEPAGE=	http://cmp3.sourceforge.net/
 COMMENT=	Curses based frontend to mpg123
+LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	mpg123-[0-9]*:../../audio/mpg123
 DEPENDS+=	vorbis-tools-[0-9]*:../../audio/vorbis-tools
