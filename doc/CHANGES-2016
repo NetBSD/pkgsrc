@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1642 2016/04/20 09:03:01 roy Exp $
+$NetBSD: CHANGES-2016,v 1.1643 2016/04/20 12:09:30 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2133,3 +2133,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/girara to 0.2.6 [leot 2016-04-20]
 	Updated print/zathura to 0.3.6 [leot 2016-04-20]
 	Updated net/dhcpcd to 6.10.3 [roy 2016-04-20]
+	Updated devel/p5-glib2 to 1.321 [mef 2016-04-20]
