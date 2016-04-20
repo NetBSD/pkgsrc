@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 03:28:04 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/04/20 14:42:27 mef Exp $
 
-SHA1 (Config-Grammar-1.10.tar.gz) = ad4db9c19dec9c5b6ac4557f68da027e13a33eca
-RMD160 (Config-Grammar-1.10.tar.gz) = 46f53869135c991183d4ce12a3a6f7b08ab40b7c
-SHA512 (Config-Grammar-1.10.tar.gz) = 0891984da560a9dd758fff0678cd577898f4b1796d275dfbed27d411941aca7830f7b6f8a4a4a913572bf0ea7b62414b3d852c0a37b5e629db6ae437c1db0690
-Size (Config-Grammar-1.10.tar.gz) = 17877 bytes
+SHA1 (Config-Grammar-1.11.tar.gz) = 9b63ffd6671aeb9d9922960b2e00be1f335f49c8
+RMD160 (Config-Grammar-1.11.tar.gz) = 0fe26b4164dec83b0c556c4431d3de1c2fb95e00
+SHA512 (Config-Grammar-1.11.tar.gz) = d80f63fdad8f30cef914842299a491a4abcd1ed0e122e9cb61375a22ea0261fc4e8b3b7b928086a4bacccb511b96cd52ea7f31e14bdd8ee78beff69ed2e9ccc4
+Size (Config-Grammar-1.11.tar.gz) = 18955 bytes
