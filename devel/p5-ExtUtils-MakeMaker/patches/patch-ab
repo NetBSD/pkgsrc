@@ -1,22 +1,22 @@
-$NetBSD: patch-ab,v 1.12 2016/01/31 06:45:17 mef Exp $
+$NetBSD: patch-ab,v 1.13 2016/04/20 15:00:04 mef Exp $
 
 Changes:
  o More general adaptation for BSDs
  o Install scripts in DESTINSTALLSITESCRIPT instead of DESTINSTALLSCRIPT
  o Ignore installed packlist when creating new packlist.
 
---- lib/ExtUtils/MM_Unix.pm.orig	2015-09-11 03:38:38.000000000 +0900
-+++ lib/ExtUtils/MM_Unix.pm	2016-01-31 15:35:49.000000000 +0900
-@@ -955,7 +955,7 @@ $(INST_DYNAMIC): $(OBJECT) $(MYEXTLIB) $
+--- lib/ExtUtils/MM_Unix.pm.orig	2016-04-19 20:24:21.000000000 +0900
++++ lib/ExtUtils/MM_Unix.pm	2016-04-20 21:57:39.000000000 +0900
+@@ -1022,7 +1022,7 @@ sub xs_make_dynamic_lib {
+     push(@m,"	\$(RM_F) \$\@\n");
  
      my $libs = '$(LDLOADLIBS)';
- 
 -    if (($Is{NetBSD} || $Is{Interix} || $Is{Android}) && $Config{'useshrplib'} eq 'true') {
 +    if ((   $Is{BSD} || $Is{Interix} || $Is{Android}) && $Config{'useshrplib'} eq 'true') {
- 	# Use nothing on static perl platforms, and to the flags needed
- 	# to link against the shared libperl library on shared perl
- 	# platforms.  We peek at lddlflags to see if we need -Wl,-R
-@@ -2130,7 +2130,7 @@ q{		read "}.$self->catfile('$(PERL_ARCHL
+         # Use nothing on static perl platforms, and to the flags needed
+         # to link against the shared libperl library on shared perl
+         # platforms.  We peek at lddlflags to see if we need -Wl,-R
+@@ -2235,7 +2235,7 @@ q{		read "}.$self->catfile('$(PERL_ARCHL
  q{		"$(INST_LIB)" "$(DESTINSTALLPRIVLIB)" \
  		"$(INST_ARCHLIB)" "$(DESTINSTALLARCHLIB)" \
  		"$(INST_BIN)" "$(DESTINSTALLBIN)" \
@@ -25,7 +25,7 @@ Changes:
  		"$(INST_MAN1DIR)" "$(DESTINSTALLMAN1DIR)" \
  		"$(INST_MAN3DIR)" "$(DESTINSTALLMAN3DIR)"
  	$(NOECHO) $(WARN_IF_OLD_PACKLIST) \
-@@ -2141,7 +2141,7 @@ pure_site_install :: all
+@@ -2246,7 +2246,7 @@ pure_site_install :: all
  	$(NOECHO) $(MOD_INSTALL) \
  };
      push @m,
