@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1653 2016/04/20 20:02:40 adam Exp $
+$NetBSD: CHANGES-2016,v 1.1654 2016/04/20 20:10:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2144,3 +2144,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/py-django-reversion to 1.10.2 [adam 2016-04-20]
 	Updated www/py-django-easy-thumbnails to 2.3 [adam 2016-04-20]
 	Added www/py-django-polymorphic version 0.9.1 [adam 2016-04-20]
+	Added www/py-django-filer version 1.1.1 [adam 2016-04-20]
