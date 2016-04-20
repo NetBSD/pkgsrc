@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2015/12/29 04:54:36 dholland Exp $
+# $NetBSD: Makefile,v 1.15 2016/04/20 12:10:35 nros Exp $
 #
 
 DISTNAME=	xmms-wma-1.0.5
@@ -10,6 +10,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mcmcc.bat.ru/xmms-wma/
 COMMENT=	WMA input plugin for XMMS
+LICENSE=	gnu-gpl-v2
 
 ONLY_FOR_PLATFORM=	*-*-i386 # Doesn't seem to be very portable...
 
