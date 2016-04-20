@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2016/02/16 13:49:56 leot Exp $
+# $NetBSD: Makefile,v 1.2 2016/04/20 16:10:14 leot Exp $
 
-DISTNAME=	h2-2.1.1
+DISTNAME=	h2-2.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PYPI}
@@ -12,8 +12,8 @@ LICENSE=	mit
 
 USE_LANGUAGES=	# none
 
-DEPENDS+=	${PYPKGPREFIX}-hyperframe>=3.2.0:../../www/py-hyperframe
-DEPENDS+=	${PYPKGPREFIX}-hpack>=2.1.0:../../net/py-hpack
+DEPENDS+=	${PYPKGPREFIX}-hyperframe>=3.1:../../www/py-hyperframe
+DEPENDS+=	${PYPKGPREFIX}-hpack>=2.0:../../net/py-hpack
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
