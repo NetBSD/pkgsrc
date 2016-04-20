@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2015/08/23 10:10:26 leot Exp $
+@comment $NetBSD: PLIST,v 1.12 2016/04/20 16:05:57 leot Exp $
 ${PYSITELIB}/OpenSSL/SSL.py
 ${PYSITELIB}/OpenSSL/SSL.pyc
 ${PYSITELIB}/OpenSSL/SSL.pyo
@@ -14,27 +14,6 @@ ${PYSITELIB}/OpenSSL/crypto.pyo
 ${PYSITELIB}/OpenSSL/rand.py
 ${PYSITELIB}/OpenSSL/rand.pyc
 ${PYSITELIB}/OpenSSL/rand.pyo
-${PYSITELIB}/OpenSSL/test/__init__.py
-${PYSITELIB}/OpenSSL/test/__init__.pyc
-${PYSITELIB}/OpenSSL/test/__init__.pyo
-${PYSITELIB}/OpenSSL/test/test_crypto.py
-${PYSITELIB}/OpenSSL/test/test_crypto.pyc
-${PYSITELIB}/OpenSSL/test/test_crypto.pyo
-${PYSITELIB}/OpenSSL/test/test_rand.py
-${PYSITELIB}/OpenSSL/test/test_rand.pyc
-${PYSITELIB}/OpenSSL/test/test_rand.pyo
-${PYSITELIB}/OpenSSL/test/test_ssl.py
-${PYSITELIB}/OpenSSL/test/test_ssl.pyc
-${PYSITELIB}/OpenSSL/test/test_ssl.pyo
-${PYSITELIB}/OpenSSL/test/test_tsafe.py
-${PYSITELIB}/OpenSSL/test/test_tsafe.pyc
-${PYSITELIB}/OpenSSL/test/test_tsafe.pyo
-${PYSITELIB}/OpenSSL/test/test_util.py
-${PYSITELIB}/OpenSSL/test/test_util.pyc
-${PYSITELIB}/OpenSSL/test/test_util.pyo
-${PYSITELIB}/OpenSSL/test/util.py
-${PYSITELIB}/OpenSSL/test/util.pyc
-${PYSITELIB}/OpenSSL/test/util.pyo
 ${PYSITELIB}/OpenSSL/tsafe.py
 ${PYSITELIB}/OpenSSL/tsafe.pyc
 ${PYSITELIB}/OpenSSL/tsafe.pyo
