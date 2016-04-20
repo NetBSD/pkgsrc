@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/10/02 23:48:07 asau Exp $
+# $NetBSD: Makefile,v 1.25 2016/04/20 12:10:31 nros Exp $
 #
 
 DISTNAME=	rio007
@@ -10,6 +10,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.world.co.uk/sba/rio.html
 COMMENT=	Utility to display and manage files on the Diamond Rio PMP300
+LICENSE=	gnu-gpl-v2
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-x86_64
 

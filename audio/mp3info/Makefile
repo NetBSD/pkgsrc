@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2014/10/09 14:05:57 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2016/04/20 12:10:29 nros Exp $
 #
 
 DISTNAME=	mp3info-0.2.16
@@ -7,6 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SUNSITE:=apps/sound/editors/}
 
 MAINTAINER=	simonb@NetBSD.org
 COMMENT=	MP3 header and tag information tool
+LICENSE=	gnu-gpl-v2
 
 CONFLICTS=	gmp3info-[0-9]*
 

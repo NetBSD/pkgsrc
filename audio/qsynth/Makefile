@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2015/04/25 14:20:23 tnn Exp $
+# $NetBSD: Makefile,v 1.30 2016/04/20 12:10:30 nros Exp $
 
 DISTNAME=	qsynth-0.2.4
 PKGREVISION=	21
@@ -8,6 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qsynth/}
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://qsynth.sourceforge.net/
 COMMENT=	Qt GUI Interface to FluidSynth
+LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes

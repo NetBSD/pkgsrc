@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/12/10 14:21:43 jperkin Exp $
+# $NetBSD: Makefile,v 1.8 2016/04/20 12:10:28 nros Exp $
 #
 
 DISTNAME=	libvisual-0.2.0
@@ -10,6 +10,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libvisual/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://localhost.nl/~synap/libvisual-wiki/
 COMMENT=	Abstraction library for applications and audio visualisation plugins
+LICENSE=	gnu-lgpl-v2.1
 
 CONFLICTS+=		libvisual<0.4.0
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2016/04/15 08:50:21 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2016/04/20 12:10:24 nros Exp $
 
 DISTNAME=	alsa-utils-1.1.1
 CATEGORIES=	audio
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.alsa-project.org/
 COMMENT=	Advanced Linux Sound Architecture (ALSA) CLI utilities
+LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config gmake gsed bash:run

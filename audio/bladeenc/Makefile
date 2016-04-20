@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2012/09/11 23:59:26 asau Exp $
+# $NetBSD: Makefile,v 1.29 2016/04/20 12:10:25 nros Exp $
 #
 
 DISTNAME=		bladeenc-0.94.2-src-stable
@@ -10,6 +10,7 @@ MASTER_SITES=		http://distfiles.aydogan.net/audio/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://bladeenc.mp3.no/
 COMMENT=		Free MPEG Audio Layer 3 encoder (not decoder)
+LICENSE=		gnu-lgpl-v2.1
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=		yes

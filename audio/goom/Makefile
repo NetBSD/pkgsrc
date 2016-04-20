@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/09/12 00:24:35 asau Exp $
+# $NetBSD: Makefile,v 1.10 2016/04/20 12:10:26 nros Exp $
 #
 
 DISTNAME=		goom-2k4-0-src
@@ -9,6 +9,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=goom/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.ios-software.com/index.php3?page=projet&quoi=1&lg=AN
 COMMENT=		Visual effects generator for mp3 players
+LICENSE=		gnu-lgpl-v2.1
 
 WRKSRC=			${WRKDIR}/goom2k4-0
 USE_PKGLOCALEDIR=	yes

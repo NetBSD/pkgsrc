@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2015/04/25 14:20:26 tnn Exp $
+# $NetBSD: Makefile,v 1.57 2016/04/20 12:10:35 nros Exp $
 #
 
 DISTNAME=	xsidplay-1.6.5.1a
@@ -10,6 +10,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.geocities.com/SiliconValley/Lakes/5147/sidplay/
 COMMENT=	Commodore 64 music player and SID chip emulator for X11
+LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++

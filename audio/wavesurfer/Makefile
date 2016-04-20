@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/10/02 23:48:12 asau Exp $
+# $NetBSD: Makefile,v 1.19 2016/04/20 12:10:33 nros Exp $
 
 DISTNAME=	wavesurfer-1.8.5
 CATEGORIES=	audio
@@ -7,6 +7,7 @@ MASTER_SITES=	http://www.speech.kth.se/wavesurfer/
 MAINTAINER=	gson@NetBSD.org
 HOMEPAGE=	http://www.speech.kth.se/wavesurfer/
 COMMENT=	Tool for sound visualization and manipulation
+LICENSE=	esdl-license
 
 DEPENDS+=	tcl-snack-[0-9]*:../../audio/tcl-snack
 DEPENDS+=	tk-[0-9]*:../../x11/tk
