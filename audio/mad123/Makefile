@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2016/03/05 11:28:04 jperkin Exp $
+# $NetBSD: Makefile,v 1.42 2016/04/20 12:10:28 nros Exp $
 #
 
 DISTNAME=	mad123-0.8.5
@@ -9,6 +9,7 @@ MASTER_SITES=	http://www.mctavish.co.uk/mad123/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mctavish.co.uk/mad123/
 COMMENT=	Command-line MPEG audio player
+LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	nroff
 

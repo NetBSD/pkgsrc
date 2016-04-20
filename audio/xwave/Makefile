@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/10/02 23:48:16 asau Exp $
+# $NetBSD: Makefile,v 1.28 2016/04/20 12:10:35 nros Exp $
 #
 
 DISTNAME=		xwave2
@@ -9,6 +9,7 @@ MASTER_SITES=		# empty
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Audio player/recorder/editor for the X Window System
+LICENSE=		gnu-gpl-v2
 
 USE_IMAKE=		YES
 INSTALLATION_DIRS=	bin lib/X11/app-defaults

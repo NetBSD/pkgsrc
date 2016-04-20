@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/12/05 21:25:28 adam Exp $
+# $NetBSD: Makefile,v 1.6 2016/04/20 12:10:25 nros Exp $
 
 DISTNAME=		manual_src
 PKGNAME=		csound6-manual-${CSOUND_VERSION}
@@ -8,6 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=csound/csound6/Csound6.02/}
 MAINTAINER=		mrg@eterna.com.au
 HOMEPAGE=		http://www.csounds.com/
 COMMENT=		Csound6 Reference Manual
+LICENSE=		gnu-fdl-v1.2
 
 BUILD_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
 BUILD_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
