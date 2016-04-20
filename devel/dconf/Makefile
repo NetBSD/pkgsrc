@@ -1,21 +1,37 @@
-# $NetBSD: Makefile,v 1.32 2016/04/10 19:38:52 prlw1 Exp $
+# $NetBSD: Makefile,v 1.33 2016/04/20 22:00:55 prlw1 Exp $
 
-PKGREVISION=	5
-.include "Makefile.common"
+DISTNAME=	dconf-0.26.0
+CATEGORIES=	devel gnome
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/dconf/${PKGVERSION_NOREV:R}/}
+EXTRACT_SUFX=	.tar.xz
 
-CONFIGURE_ARGS+=	--disable-editor
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://wiki.gnome.org/Projects/dconf
+COMMENT=	Backend for gsettings
+LICENSE=	gnu-lgpl-v2.1
 
-PKGCONFIG_OVERRIDE+=	client/dconf.pc.in dbus-1/dconf-dbus-1.pc.in
+GNU_CONFIGURE=	yes
+USE_LANGUAGES=	c99
+USE_LIBTOOL=	yes
+USE_TOOLS+=	pkg-config gmake
+
+SUBST_CLASSES+=		sysdir
+SUBST_MESSAGE.sysdir=	Fixes hard-coded dconf database directory name
+SUBST_STAGE.sysdir=	post-configure
+SUBST_FILES.sysdir+=	engine/dconf-engine-source-system.c
+SUBST_FILES.sysdir+=	engine/dconf-engine-profile.c
+SUBST_FILES.sysdir+=	tests/engine.c
+SUBST_FILES.sysdir+=	bin/dconf-update.c
+SUBST_FILES.sysdir+=	bin/dconf-update.vala
+SUBST_SED.sysdir=	-e s,/etc,${PKG_SYSCONFDIR},g
+
+PKGCONFIG_OVERRIDE+=	client/dconf.pc.in
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD"
-BUILDLINK_TRANSFORM+=	rm:-ldl
-.endif
-
 SUBST_CLASSES.Darwin+=	libname
 SUBST_STAGE.libname=	pre-configure
-SUBST_FILES.libname=	client/Makefile.in dbus-1/Makefile.in
+SUBST_FILES.libname=	client/Makefile.in
 SUBST_FILES.libname+=	gsettings/Makefile.in
 SUBST_SED.libname=	-e "s|-Wl,-soname=|-install_name ${PREFIX}/lib/|g"
 SUBST_SED.libname+=	-e "/^libdconfsettings_so_LDFLAGS/s,$$, -install_name ${PREFIX}/lib/gio/modules/libdconfsettings.so,g"
@@ -27,7 +43,6 @@ BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 BUILDLINK_DEPMETHOD.vala=	build
 BUILDLINK_API_DEPENDS.vala+=	vala>=0.18.0
 .include "../../lang/vala/buildlink3.mk"
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.39.1
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.44.0
 .include "../../devel/glib2/modules.mk"
-.include "../../sysutils/dbus/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
