@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2015/08/18 07:31:01 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2016/04/20 12:10:25 nros Exp $
 #
 
 DISTNAME=	cam-1.02
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	hubertf@NetBSD.org
 COMMENT=	Cpu's Audio Mixer [curses based]
+LICENSE=	gnu-gpl-v2
 
 CONFLICTS+=	feh<1.2.6nb3
 

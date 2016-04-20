@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2015/04/25 14:20:25 tnn Exp $
+# $NetBSD: Makefile,v 1.10 2016/04/20 12:10:34 nros Exp $
 #
 
 DISTNAME=		xmms-cdread-0.14a
@@ -9,6 +9,7 @@ MASTER_SITES=		ftp://mud.stack.nl/pub/OuterSpace/willem/
 MAINTAINER=		cheusov@NetBSD.org
 HOMEPAGE=		ftp://mud.stack.nl/pub/OuterSpace/willem/
 COMMENT=		XMMS input plugin that reads audio data from CDs
+LICENSE=		gnu-gpl-v2
 
 # no cdrom access code
 NOT_FOR_PLATFORM=	Interix-*-*

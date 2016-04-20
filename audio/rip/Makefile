@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2015/06/12 10:48:25 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2016/04/20 12:10:31 nros Exp $
 #
 
 DISTNAME=	rip-1.07
@@ -9,6 +9,7 @@ MASTER_SITES=	http://rip.sourceforge.net/download/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://rip.sourceforge.net/
 COMMENT=	Command-line based audio CD ripper and encoder
+LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	p5-CDDB_get>=2.23:../../audio/p5-CDDB_get
 DEPENDS+=	p5-MP3-Info>=1.00:../../audio/p5-MP3-Info

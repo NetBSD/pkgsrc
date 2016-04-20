@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/10/02 23:48:14 asau Exp $
+# $NetBSD: Makefile,v 1.28 2016/04/20 12:10:34 nros Exp $
 
 DISTNAME=		xmix-2.1
 PKGREVISION=		3
@@ -10,6 +10,7 @@ PATCHFILES=		xmix-2.1.mixers.patch
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Mixer for X Window System
+LICENSE=		gnu-gpl-v1
 
 NOT_FOR_PLATFORM=	Interix-*-*
 

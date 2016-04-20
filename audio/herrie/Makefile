@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2016/03/05 11:28:04 jperkin Exp $
+# $NetBSD: Makefile,v 1.26 2016/04/20 12:10:26 nros Exp $
 #
 
 DISTNAME=	herrie-2.2
@@ -10,6 +10,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://herrie.info/
 COMMENT=	Minimalistic, ncurses-based audio player
+LICENSE=	2-clause-bsd AND gnu-gpl-v2
 
 HAS_CONFIGURE=		yes
 USE_LIBTOOL=		yes

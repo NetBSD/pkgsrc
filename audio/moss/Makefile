@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2015/12/05 21:25:28 adam Exp $
+# $NetBSD: Makefile,v 1.26 2016/04/20 12:10:29 nros Exp $
 
 DISTNAME=	moss-0.1.13
 PKGREVISION=	6
@@ -8,6 +8,7 @@ MASTER_SITES=	http://kldp.net/frs/download.php/1580/
 MAINTAINER=	myunggoni@users.kldp.net
 HOMEPAGE=	http://moss.kldp.net/
 COMMENT=	MP3/OGG Streaming Server
+LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-ogg>=1.3:../../audio/py-ogg
 DEPENDS+=	${PYPKGPREFIX}-vorbis>=1.3:../../audio/py-vorbis

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/02/07 14:16:34 wiedi Exp $
+# $NetBSD: Makefile,v 1.8 2016/04/20 12:10:28 nros Exp $
 #
 
 DISTNAME=	sidplay-libs-2.1.1
@@ -10,6 +10,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sidplay2/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sidplay2.sourceforge.net/
 COMMENT=	Sidplay2 Library
+LICENSE=	gnu-gpl-v2
 
 OVERRIDE_DIRDEPTH=	3
 GNU_CONFIGURE=		yes

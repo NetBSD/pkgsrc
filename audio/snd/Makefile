@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2015/04/25 14:20:24 tnn Exp $
+# $NetBSD: Makefile,v 1.81 2016/04/20 12:10:31 nros Exp $
 #
 
 DISTNAME=		snd-9.9
@@ -9,6 +9,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=snd/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://ccrma.stanford.edu/software/snd/
 COMMENT=		X based sound editor
+LICENSE=		esdl-license
 
 DEPENDS+=		flac-[0-9]*:../../audio/flac
 DEPENDS+=		speex-[0-9]*:../../audio/speex
