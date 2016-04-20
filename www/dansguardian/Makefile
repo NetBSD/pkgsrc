@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2015/09/03 11:55:40 sborrill Exp $
+# $NetBSD: Makefile,v 1.24 2016/04/20 13:52:24 prlw1 Exp $
 
 DISTNAME=	dansguardian-2.12.0.3
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dansguardian/}
 EXTRACT_SUFX=	.tar.bz2
@@ -45,6 +45,7 @@ CONFIGURE_ARGS+=	--with-proxyuser=${DANSGUARDIAN_USER}
 CONFIGURE_ARGS+=	--with-proxygroup=${DANSGUARDIAN_GROUP}
 CONFIGURE_ARGS+=	--with-piddir=${VARBASE}/run
 CONFIGURE_ARGS+=	--with-logdir=${VARBASE}/log/dansguardian
+CONFIGURE_ARGS+=	CPPFLAGS=-DFD_SETSIZE=512
 
 .include "options.mk"
 
