@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2016/03/05 11:28:51 jperkin Exp $
+# $NetBSD: Makefile,v 1.8 2016/04/21 13:58:50 jperkin Exp $
 #
 
 DISTNAME=	sid-milter-1.0.0
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sid-milter/}
 
@@ -41,11 +41,11 @@ do-install:
 		${DESTDIR}${PREFIX}/include
 	${INSTALL_LIB} ${WRKSRC}/${SIDWORK}/libar/libar.a \
 		${DESTDIR}${PREFIX}/lib
-	${INSTALL_MAN} ${WRKSRC}/${SIDWORK}/libar/ar.0 \
+	${INSTALL_MAN} ${WRKSRC}/libar/ar.3 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man3/
 	${INSTALL_PROGRAM} ${WRKSRC}/${SIDWORK}/sid-filter/sid-filter \
 		${DESTDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/${SIDWORK}/sid-filter/sid-filter.0 \
+	${INSTALL_MAN} ${WRKSRC}/sid-filter/sid-filter.8 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/
 	${INSTALL_DATA} ${WRKSRC}/FEATURES ${DESTDIR}${SIDDOC}
 	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DESTDIR}${SIDDOC}
