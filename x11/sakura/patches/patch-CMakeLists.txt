@@ -1,4 +1,6 @@
-$NetBSD: patch-CMakeLists.txt,v 1.4 2014/01/03 05:26:24 ryoon Exp $
+$NetBSD: patch-CMakeLists.txt,v 1.5 2016/04/21 11:12:20 jperkin Exp $
+
+Use CMAKE_INSTALL_MANDIR.
 
 --- CMakeLists.txt.orig	2013-12-13 19:31:31.000000000 +0000
 +++ CMakeLists.txt
@@ -7,7 +9,7 @@ $NetBSD: patch-CMakeLists.txt,v 1.4 2014/01/03 05:26:24 ryoon Exp $
  INSTALL (FILES terminal-tango.svg DESTINATION share/pixmaps)
  IF (POD2MAN)	
 -	INSTALL (FILES ${sakura_BINARY_DIR}/sakura.1 DESTINATION share/man/man1)	
-+	INSTALL (FILES ${sakura_BINARY_DIR}/sakura.1 DESTINATION man/man1)	
++	INSTALL (FILES ${sakura_BINARY_DIR}/sakura.1 DESTINATION ${CMAKE_INSTALL_MANDIR}/man1)
  ENDIF (POD2MAN)
  INSTALL (FILES INSTALL DESTINATION share/doc/sakura)	
  
