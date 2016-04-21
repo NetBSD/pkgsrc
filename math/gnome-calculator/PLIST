@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2014/11/25 12:04:19 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/04/21 22:11:32 prlw1 Exp $
 bin/gcalccmd
 bin/gnome-calculator
+lib/gnome-calculator/libcalculator.la
 libexec/gnome-calculator-search-provider
 man/man1/gcalccmd.1
 man/man1/gnome-calculator.1
