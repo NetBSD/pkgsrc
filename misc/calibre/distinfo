@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.62 2016/04/15 08:43:20 wiz Exp $
+$NetBSD: distinfo,v 1.63 2016/04/21 11:10:14 wiz Exp $
 
-SHA1 (calibre-2.54.0.tar.xz) = 72cf8ab2d3c326acbb8f2d3cef268be976d3a0c4
-RMD160 (calibre-2.54.0.tar.xz) = 7ce780aaa1434e94107d6022255173ce047eee10
-SHA512 (calibre-2.54.0.tar.xz) = 63e6ceaebcac865124bbb2c5e260c530f60007169e3992cbf1fa7ace536de581df6d281fc389cdd11ecb24e0394832c0d52584a2ba465a194ffcc37b0a94304c
-Size (calibre-2.54.0.tar.xz) = 40211808 bytes
+SHA1 (calibre-2.55.0.tar.xz) = 70108800829bd87d2f52486f634690afa61d1ea0
+RMD160 (calibre-2.55.0.tar.xz) = 914fccaa74ecc78fff998654035e6b4cc9d54fac
+SHA512 (calibre-2.55.0.tar.xz) = f067c93f7b32dbb8f94e30831df1bf755c25edaeb9dd4793ec79941738e2431e5fe51219d169056b3bb1f71b4223e933cc29fdae6572f212109b44b696bd6af4
+Size (calibre-2.55.0.tar.xz) = 39854472 bytes
 SHA1 (patch-setup_build__environment.py) = b620c36fee9a4c403af0fecced8ea8189dc8e25c
 SHA1 (patch-setup_extensions.py) = 698abb3609a3f576ae1d194422d10ffaa698e3db
 SHA1 (patch-src_calibre_linux.py) = 16c3122a612ec9996f774c5c2c9d40a475723662
