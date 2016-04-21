@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/04/27 10:43:32 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2016/04/21 14:21:08 jperkin Exp $
 #
 
 DISTNAME=	br.ispell-2.4
@@ -13,14 +13,8 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	# none
 
-SUBST_CLASSES+=		paths
-SUBST_FILES.paths=	Makefile
-SUBST_MESSAGE.paths=	Fixing paths.
-SUBST_SED.paths=	-e "s|prefix=/usr/local|prefix=${PREFIX}|1"
-SUBST_SED.paths+=	-e "s|/usr/lib/ispell|${PREFIX}/lib|1"
-SUBST_STAGE.paths=	post-patch
-
 BUILD_MAKE_FLAGS+=	AWK=${AWK}
 
 DEPENDS+=	ispell-[0-9]*:../../textproc/ispell
+
 .include "../../mk/bsd.pkg.mk"
