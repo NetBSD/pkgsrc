@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2016/04/13 10:10:25 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2016/04/21 09:12:27 wiz Exp $
 include/atkmm-1.6/atkmm.h
 include/atkmm-1.6/atkmm/action.h
 include/atkmm-1.6/atkmm/component.h
@@ -119,6 +119,7 @@ share/doc/atkmm-1.6/reference/html/classAtk_1_1Value.html
 share/doc/atkmm-1.6/reference/html/classAtk_1_1Value__inherit__graph.png
 share/doc/atkmm-1.6/reference/html/classes.html
 share/doc/atkmm-1.6/reference/html/classhash__load__check__resize__trigger__size__base.html
+share/doc/atkmm-1.6/reference/html/classhash__load__check__resize__trigger__size__base__inherit__graph.png
 share/doc/atkmm-1.6/reference/html/classlu__counter__policy__base.html
 share/doc/atkmm-1.6/reference/html/classlu__counter__policy__base__inherit__graph.png
 share/doc/atkmm-1.6/reference/html/closed.png
