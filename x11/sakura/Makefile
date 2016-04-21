@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2015/04/25 14:25:20 tnn Exp $
+# $NetBSD: Makefile,v 1.23 2016/04/21 11:12:19 jperkin Exp $
 #
 
 DISTNAME=	sakura-${SAKURA_VER}
@@ -16,12 +16,6 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config pod2man xgettext
 USE_CMAKE=	yes
-
-SUBST_CLASSES+=			fix-man-path
-SUBST_STAGE.fix-man-path=	post-patch
-SUBST_MESSAGE.fix-man-path=	Fix path for man1.
-SUBST_FILES.fix-man-path=	CMakeLists.txt
-SUBST_SED.fix-man-path=		-e 's,share/man/man1,${PKGMANDIR}/man1,g'
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.20.0
 .include "../../devel/glib2/buildlink3.mk"
