@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2015/12/31 19:47:40 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.21 2016/04/21 11:24:23 fhajny Exp $
 lib/erlang/doc/applications.html
 lib/erlang/doc/design_principles/applications.html
 lib/erlang/doc/design_principles/appup_cookbook.html
@@ -220,6 +220,7 @@ lib/erlang/lib/common_test-${VERSION.common_test}/doc/html/getting_started_chapt
 lib/erlang/lib/common_test-${VERSION.common_test}/doc/html/html_logs.gif
 lib/erlang/lib/common_test-${VERSION.common_test}/doc/html/index.html
 lib/erlang/lib/common_test-${VERSION.common_test}/doc/html/install_chapter.html
+lib/erlang/lib/common_test-${VERSION.common_test}/doc/html/introduction.html
 lib/erlang/lib/common_test-${VERSION.common_test}/doc/html/notes.html
 lib/erlang/lib/common_test-${VERSION.common_test}/doc/html/release_notes.html
 lib/erlang/lib/common_test-${VERSION.common_test}/doc/html/run_test_chapter.html
@@ -442,6 +443,7 @@ lib/erlang/lib/debugger-${VERSION.debugger}/doc/html/images/monitor.jpg
 lib/erlang/lib/debugger-${VERSION.debugger}/doc/html/images/view.jpg
 lib/erlang/lib/debugger-${VERSION.debugger}/doc/html/index.html
 lib/erlang/lib/debugger-${VERSION.debugger}/doc/html/int.html
+lib/erlang/lib/debugger-${VERSION.debugger}/doc/html/introduction.html
 lib/erlang/lib/debugger-${VERSION.debugger}/doc/html/notes.html
 lib/erlang/lib/debugger-${VERSION.debugger}/doc/html/release_notes.html
 lib/erlang/lib/debugger-${VERSION.debugger}/doc/html/users_guide.html
@@ -906,6 +908,7 @@ lib/erlang/lib/mnesia-${VERSION.mnesia}/doc/html/users_guide.html
 lib/erlang/lib/mnesia-${VERSION.mnesia}/doc/html/warning.gif
 lib/erlang/lib/mnesia-${VERSION.mnesia}/doc/pdf/mnesia-${VERSION.mnesia}.pdf
 lib/erlang/lib/mnesia-${VERSION.mnesia}/info
+lib/erlang/lib/observer-${VERSION.observer}/doc/html/Observer_app.html
 lib/erlang/lib/observer-${VERSION.observer}/doc/html/cdv.html
 lib/erlang/lib/observer-${VERSION.observer}/doc/html/crashdump_ug.html
 lib/erlang/lib/observer-${VERSION.observer}/doc/html/crashdump_viewer.html
@@ -914,11 +917,11 @@ lib/erlang/lib/observer-${VERSION.observer}/doc/html/et_processes.gif
 lib/erlang/lib/observer-${VERSION.observer}/doc/html/etop.html
 lib/erlang/lib/observer-${VERSION.observer}/doc/html/etop_ug.html
 lib/erlang/lib/observer-${VERSION.observer}/doc/html/index.html
+lib/erlang/lib/observer-${VERSION.observer}/doc/html/introduction_ug.html
 lib/erlang/lib/observer-${VERSION.observer}/doc/html/note.gif
 lib/erlang/lib/observer-${VERSION.observer}/doc/html/notes.html
 lib/erlang/lib/observer-${VERSION.observer}/doc/html/observer.eix
 lib/erlang/lib/observer-${VERSION.observer}/doc/html/observer.html
-lib/erlang/lib/observer-${VERSION.observer}/doc/html/observer_app.html
 lib/erlang/lib/observer-${VERSION.observer}/doc/html/observer_ug.html
 lib/erlang/lib/observer-${VERSION.observer}/doc/html/release_notes.html
 lib/erlang/lib/observer-${VERSION.observer}/doc/html/ttb.html
