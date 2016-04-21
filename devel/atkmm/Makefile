@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.17 2016/04/13 10:10:25 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2016/04/21 09:12:27 wiz Exp $
 
 DISTNAME=	atkmm-2.24.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/atkmm/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
+EXTRACT_USING=	bsdtar
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
@@ -15,7 +16,7 @@ CONFLICTS+=	gtkmm<2.22.0
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		autoconf gmake perl pkg-config
+USE_TOOLS+=		autoconf bsdtar gmake perl pkg-config
 GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	atk/atkmm.pc.in
 
