@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2015/12/31 19:47:40 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.21 2016/04/21 11:24:23 fhajny Exp $
 bin/ct_run
 bin/dialyzer
 bin/epmd
@@ -2133,7 +2133,6 @@ lib/erlang/lib/inets-${VERSION.inets}/ebin/inets.appup
 lib/erlang/lib/inets-${VERSION.inets}/ebin/inets.beam
 lib/erlang/lib/inets-${VERSION.inets}/ebin/inets_app.beam
 lib/erlang/lib/inets-${VERSION.inets}/ebin/inets_lib.beam
-lib/erlang/lib/inets-${VERSION.inets}/ebin/inets_regexp.beam
 lib/erlang/lib/inets-${VERSION.inets}/ebin/inets_service.beam
 lib/erlang/lib/inets-${VERSION.inets}/ebin/inets_sup.beam
 lib/erlang/lib/inets-${VERSION.inets}/ebin/inets_time_compat.beam
@@ -2374,7 +2373,6 @@ lib/erlang/lib/inets-${VERSION.inets}/src/inets_app/inets.erl
 lib/erlang/lib/inets-${VERSION.inets}/src/inets_app/inets_app.erl
 lib/erlang/lib/inets-${VERSION.inets}/src/inets_app/inets_internal.hrl
 lib/erlang/lib/inets-${VERSION.inets}/src/inets_app/inets_lib.erl
-lib/erlang/lib/inets-${VERSION.inets}/src/inets_app/inets_regexp.erl
 lib/erlang/lib/inets-${VERSION.inets}/src/inets_app/inets_service.erl
 lib/erlang/lib/inets-${VERSION.inets}/src/inets_app/inets_sup.erl
 lib/erlang/lib/inets-${VERSION.inets}/src/inets_app/inets_time_compat.erl
@@ -3796,6 +3794,7 @@ lib/erlang/lib/ssl-${VERSION.ssl}/ebin/dtls_connection_sup.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/dtls_handshake.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/dtls_record.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/dtls_v1.beam
+lib/erlang/lib/ssl-${VERSION.ssl}/ebin/inet6_tls_dist.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/inet_tls_dist.beam
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/ssl.app
 lib/erlang/lib/ssl-${VERSION.ssl}/ebin/ssl.appup
@@ -3850,6 +3849,7 @@ lib/erlang/lib/ssl-${VERSION.ssl}/src/dtls_handshake.hrl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/dtls_record.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/dtls_record.hrl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/dtls_v1.erl
+lib/erlang/lib/ssl-${VERSION.ssl}/src/inet6_tls_dist.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/inet_tls_dist.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/ssl.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/ssl_alert.erl
