@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2016/02/16 01:52:34 khorben Exp $
+# $NetBSD: Makefile,v 1.39 2016/04/21 11:36:03 jperkin Exp $
 
 DISTNAME=	salt-2015.8.5
 PKGREVISION=	3
@@ -63,7 +63,7 @@ SUBST_SED.fix-paths=	-e 's,/etc/salt,${PKG_SYSCONFDIR},g'
 SUBST_SED.fix-paths+=	-e 's,/srv/salt,${PKG_SYSCONFDIR}/states,g'
 SUBST_SED.fix-paths+=	-e 's,/srv/pillar,${PKG_SYSCONFDIR}/pillar,g'
 SUBST_SED.fix-paths+=	-e 's,/etc/munin,${PKG_SYSCONFBASEDIR}/munin,g'
-SUBST_SED.fix-paths+=	-e 's,share/man,man,g'
+SUBST_SED.fix-paths+=	-e 's,share/man,${PKGMANDIR},g'
 SUBST_SED.fix-paths+=	-e 's,/opt/local/lib,${PREFIX}/lib,g'
 SUBST_SED.fix-paths+=	-e 's,/opt/local/etc,${PKG_SYSCONFBASEDIR},g'
 
