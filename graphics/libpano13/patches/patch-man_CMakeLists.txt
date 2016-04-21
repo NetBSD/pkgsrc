@@ -1,4 +1,4 @@
-$NetBSD: patch-man_CMakeLists.txt,v 1.1 2014/07/10 13:41:48 adam Exp $
+$NetBSD: patch-man_CMakeLists.txt,v 1.2 2016/04/21 15:54:31 jperkin Exp $
 
 Fix man path.
 
@@ -9,4 +9,4 @@ Fix man path.
  add_custom_target(man ALL DEPENDS ${_manuals})
  
 -install(FILES ${_manuals} DESTINATION "share/man/man1" COMPONENT doc)
-+install(FILES ${_manuals} DESTINATION "man/man1" COMPONENT doc)
++install(FILES ${_manuals} DESTINATION "${CMAKE_INSTALL_MANDIR}/man1" COMPONENT doc)
