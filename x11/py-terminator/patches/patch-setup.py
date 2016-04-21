@@ -1,4 +1,4 @@
-$NetBSD: patch-setup.py,v 1.2 2015/10/03 02:52:33 kamil Exp $
+$NetBSD: patch-setup.py,v 1.3 2016/04/21 11:17:26 jperkin Exp $
 
 Use the right path for man-pages in pkgsrc.
 
@@ -14,7 +14,7 @@ Install the man pages in the right directory.
 -  man_dir = 'man'
 -else:
 -  man_dir = 'share/man'
-+man_dir = 'man'
++man_dir = '@PKGMANDIR@'
  
  setup(name=APP_NAME.capitalize(),
        version=APP_VERSION,
