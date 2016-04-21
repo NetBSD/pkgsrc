@@ -1,9 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2015/10/18 15:47:10 adam Exp $
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/${EGG_INFODIR}/zip-safe
+@comment $NetBSD: PLIST,v 1.9 2016/04/21 08:13:50 leot Exp $
 ${PYSITELIB}/PIL/BdfFontFile.py
 ${PYSITELIB}/PIL/BdfFontFile.pyc
 ${PYSITELIB}/PIL/BdfFontFile.pyo
@@ -22,6 +17,9 @@ ${PYSITELIB}/PIL/CurImagePlugin.pyo
 ${PYSITELIB}/PIL/DcxImagePlugin.py
 ${PYSITELIB}/PIL/DcxImagePlugin.pyc
 ${PYSITELIB}/PIL/DcxImagePlugin.pyo
+${PYSITELIB}/PIL/DdsImagePlugin.py
+${PYSITELIB}/PIL/DdsImagePlugin.pyc
+${PYSITELIB}/PIL/DdsImagePlugin.pyo
 ${PYSITELIB}/PIL/EpsImagePlugin.py
 ${PYSITELIB}/PIL/EpsImagePlugin.pyc
 ${PYSITELIB}/PIL/EpsImagePlugin.pyo
@@ -40,6 +38,9 @@ ${PYSITELIB}/PIL/FontFile.pyo
 ${PYSITELIB}/PIL/FpxImagePlugin.py
 ${PYSITELIB}/PIL/FpxImagePlugin.pyc
 ${PYSITELIB}/PIL/FpxImagePlugin.pyo
+${PYSITELIB}/PIL/FtexImagePlugin.py
+${PYSITELIB}/PIL/FtexImagePlugin.pyc
+${PYSITELIB}/PIL/FtexImagePlugin.pyo
 ${PYSITELIB}/PIL/GbrImagePlugin.py
 ${PYSITELIB}/PIL/GbrImagePlugin.pyc
 ${PYSITELIB}/PIL/GbrImagePlugin.pyo
@@ -269,3 +270,8 @@ ${PYSITELIB}/PIL/_webp.so
 ${PYSITELIB}/PIL/features.py
 ${PYSITELIB}/PIL/features.pyc
 ${PYSITELIB}/PIL/features.pyo
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/zip-safe
