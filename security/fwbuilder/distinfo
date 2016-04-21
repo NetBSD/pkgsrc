@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2015/11/04 01:17:44 agc Exp $
+$NetBSD: distinfo,v 1.11 2016/04/21 10:44:40 jperkin Exp $
 
 SHA1 (fwbuilder-5.1.0.3599.tar.gz) = 4a693eb7d5cd51b5eb16e874540cb27c5b726dc5
 RMD160 (fwbuilder-5.1.0.3599.tar.gz) = 38cb91aaa137bb5f0bc14b8d7e70da5a83467349
@@ -9,6 +9,6 @@ SHA1 (patch-ab) = e1d7c25ffdcd5e6b89b5b9339fb8a3ac26515b54
 SHA1 (patch-ac) = bf432946fa9e69e2ea7ef1ddce1af95baa678c43
 SHA1 (patch-ad) = 33189f54678ac147be99bf4d126afde38665b13e
 SHA1 (patch-ae) = d0a20d6592c54065d26c1008e6b40e1e4d7fcdc7
-SHA1 (patch-configure.in) = 80794f50c96886d01604087e18cee875a2aa5c77
+SHA1 (patch-configure.in) = b8c65d446b5761f835ea3275476c395f8426d6d7
 SHA1 (patch-src_gui_main.cpp) = 36b869852d9ed25aa1124f79ff926fe060558c08
 SHA1 (patch-src_libfwbuilder_qmake.inc.in) = 43043c98224da7c3050b1a1d9b7a01a7950a5c30
