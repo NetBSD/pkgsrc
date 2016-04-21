@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1108 2016/04/21 07:02:58 jnemeth Exp $
+# $NetBSD: Makefile,v 1.1109 2016/04/21 08:24:42 leot Exp $
 #
 
 COMMENT=	Networking tools
@@ -614,7 +614,6 @@ SUBDIR+=	py-metar
 SUBDIR+=	py-ncclient
 SUBDIR+=	py-netaddr
 SUBDIR+=	py-netifaces
-SUBDIR+=	py-netlib
 SUBDIR+=	py-netsnmp
 SUBDIR+=	py-omniORBpy
 SUBDIR+=	py-pcap
