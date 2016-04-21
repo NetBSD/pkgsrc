@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2015/12/25 13:29:16 ryoon Exp $
+# $NetBSD: Makefile,v 1.40 2016/04/21 13:40:04 jperkin Exp $
 
 DISTNAME=	anita-1.39
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,6 +16,11 @@ DEPENDS+=	${PYPKGPREFIX}-pexpect>=2.1:../../devel/py-pexpect
 USE_LANGUAGES=	#none
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 1.34
+
+SUBST_CLASSES+=		manpath
+SUBST_STAGE.manpath=	pre-configure
+SUBST_FILES.manpath=	setup.py
+SUBST_SED.manpath=	-e 's,man/,${PKGMANDIR}/,g'
 
 .include "options.mk"
 .include "../../lang/python/distutils.mk"
