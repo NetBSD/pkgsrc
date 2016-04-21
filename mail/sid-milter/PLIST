@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2014/03/11 14:05:05 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.4 2016/04/21 13:58:50 jperkin Exp $
 bin/sid-filter
 include/sm-marid.h
 lib/libar.a
-man/man3/ar.0
-man/man8/sid-filter.0
+man/man3/ar.3
+man/man8/sid-filter.8
 share/doc/sid-milter/FEATURES
 share/doc/sid-milter/INSTALL
 share/doc/sid-milter/KNOWNBUGS
