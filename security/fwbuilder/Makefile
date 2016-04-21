@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2016/03/05 11:29:20 jperkin Exp $
+# $NetBSD: Makefile,v 1.45 2016/04/21 10:44:40 jperkin Exp $
 
 DISTNAME=	fwbuilder-5.1.0.3599
 PKGREVISION=	2
@@ -16,7 +16,7 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		aclocal autoconf automake gmake
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--mandir=${P} --without-distcc
+CONFIGURE_ARGS+=	--without-distcc
 #UNLIMIT_RESOURCES+=	datasize
 
 INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR}
