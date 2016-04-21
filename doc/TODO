@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15798 2016/04/20 14:42:40 mef Exp $
+$NetBSD: TODO,v 1.15799 2016/04/21 10:57:42 leot Exp $
 
 Suggested new packages
 ======================
@@ -1161,6 +1161,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o munin-doc-1.4.6
 	o munin-node-1.4.6
 	o munin-server-1.4.6
+	o mupdf-1.9 [breaks zathura-pdf-mupdf-0.3.0, so it is better to wait; leot]
 	o muse-0.9.2
 	o mutagen-tools-1.31
 	o myodbc-5.3.4
