@@ -1,0 +1,16 @@
+$NetBSD: patch-configure,v 1.1 2016/04/21 21:32:03 prlw1 Exp $
+
+test(1) uses '=' for string equality
+https://bugzilla.gnome.org/show_bug.cgi?id=764974
+
+--- configure.orig	2016-03-23 12:17:02.000000000 +0000
++++ configure
+@@ -15200,7 +15200,7 @@ $as_echo "#define LIBSOUP_HAVE_GSSAPI 1"
+ 
+ 	fi
+     else
+-	if test "$with_gssapi" == "yes"; then
++	if test "$with_gssapi" = "yes"; then
+ 	    as_fn_error $? "GSSAPI support requested but failed to found krb5-config. Try to set KRB5_CONFIG." "$LINENO" 5
+ 	fi
+     fi
