@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2015/01/17 14:48:56 bsiegert Exp $
+# $NetBSD: Makefile,v 1.33 2016/04/21 13:15:15 jperkin Exp $
 #
 
 DISTNAME=	tkgate-1.8.7
@@ -25,9 +25,7 @@ SUBST_CLASSES+=		tkgate
 SUBST_MESSAGE.tkgate=	Fixing paths in configuration files.
 SUBST_STAGE.tkgate=	pre-configure
 SUBST_FILES.tkgate=	config.h
-SUBST_SED.tkgate=	-e 's|@LOCALBASE@|${LOCALBASE}|g'
-SUBST_SED.tkgate+=	-e 's|@PREFIX@|${PREFIX}|g'
-SUBST_SED.tkgate+=	-e 's|@X11BASE@|${X11BASE}|g'
+SUBST_VARS.tkgate=	LOCALBASE PKGMANDIR PREFIX X11BASE
 
 do-configure:
 	${ECHO} "${TKGATE_SITENAME}" > ${WRKSRC}/sitename.txt
