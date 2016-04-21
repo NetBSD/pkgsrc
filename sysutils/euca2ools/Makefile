@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/12/05 21:25:58 adam Exp $
+# $NetBSD: Makefile,v 1.6 2016/04/21 11:24:05 jperkin Exp $
 
 DISTNAME=	euca2ools-2.1.2
 CATEGORIES=	sysutils
@@ -22,7 +22,8 @@ post-build:
 	cd ${WRKSRC}; ${SH} generate-manpages.sh
 
 post-install:
-	cd ${WRKSRC}; env PREFIX=${PREFIX} MANDIR=${DESTDIR}/${PREFIX}/man ${SH} install-manpages.sh
+	cd ${WRKSRC}; env MANDIR=${DESTDIR}/${PREFIX}/${PKGMANDIR} \
+		PREFIX=${PREFIX} ${SH} install-manpages.sh
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
