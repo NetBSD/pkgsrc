@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2015/06/17 19:10:01 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/04/21 22:17:16 prlw1 Exp $
 bin/gnome-sudoku
 man/man6/gnome-sudoku.6
 share/appdata/gnome-sudoku.appdata.xml
@@ -635,11 +635,6 @@ share/help/zh_CN/gnome-sudoku/strategy.page
 share/help/zh_CN/gnome-sudoku/toolbar.page
 share/help/zh_CN/gnome-sudoku/trackers.page
 share/help/zh_CN/gnome-sudoku/translate.page
-share/icons/HighContrast/16x16/apps/gnome-sudoku.png
-share/icons/HighContrast/22x22/apps/gnome-sudoku.png
-share/icons/HighContrast/24x24/apps/gnome-sudoku.png
-share/icons/HighContrast/256x256/apps/gnome-sudoku.png
-share/icons/HighContrast/48x48/apps/gnome-sudoku.png
 share/icons/hicolor/16x16/apps/gnome-sudoku.png
 share/icons/hicolor/22x22/apps/gnome-sudoku.png
 share/icons/hicolor/24x24/apps/gnome-sudoku.png
@@ -677,6 +672,7 @@ share/locale/eu/LC_MESSAGES/gnome-sudoku.mo
 share/locale/fa/LC_MESSAGES/gnome-sudoku.mo
 share/locale/fi/LC_MESSAGES/gnome-sudoku.mo
 share/locale/fr/LC_MESSAGES/gnome-sudoku.mo
+share/locale/fur/LC_MESSAGES/gnome-sudoku.mo
 share/locale/ga/LC_MESSAGES/gnome-sudoku.mo
 share/locale/gl/LC_MESSAGES/gnome-sudoku.mo
 share/locale/gu/LC_MESSAGES/gnome-sudoku.mo
