@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 03:28:49 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/04/21 13:32:17 jperkin Exp $
 
 SHA1 (mxterm_129.tar.gz) = 863732aa1096aac58f42f8f6c94c95bfa189aaf7
 RMD160 (mxterm_129.tar.gz) = 67e40886f25c60752d94cdb3bda831baf1863eb9
@@ -6,4 +6,4 @@ SHA512 (mxterm_129.tar.gz) = c4f8f4b0e84d9ab367becb4b734f9ad2845575de4ccada9c8cd
 Size (mxterm_129.tar.gz) = 743816 bytes
 SHA1 (patch-Tekproc.c) = 28a411a3fcd4a098a60d7406958c9fd629035636
 SHA1 (patch-aa) = 468366b780812910781265a163c5cfca66b20536
-SHA1 (patch-ac) = 1e6f07eee31667c4ed17fdc40ffa92990be60f57
+SHA1 (patch-ac) = 7c76bcbd737aeedbc90be22ce4391373ed1b91b1
