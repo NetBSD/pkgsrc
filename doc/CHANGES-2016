@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1661 2016/04/21 08:26:50 leot Exp $
+$NetBSD: CHANGES-2016,v 1.1662 2016/04/21 09:12:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2152,3 +2152,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/py-Pillow to 3.2.0 [leot 2016-04-21]
 	Updated net/mitmproxy to 0.17 [leot 2016-04-21]
 	Removed net/py-netlib [leot 2016-04-21]
+	Updated devel/atkmm to 2.24.2nb2 [wiz 2016-04-21]
