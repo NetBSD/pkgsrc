@@ -1,10 +1,21 @@
-$NetBSD: patch-Makefile.inc,v 1.2 2013/02/26 16:16:09 jperkin Exp $
+$NetBSD: patch-Makefile.inc,v 1.3 2016/04/21 14:04:32 jperkin Exp $
 
 Match OPSYS with what pkgsrc uses.
 Add an explicit -lm and -lgmodule-2.0 for Solaris.
 
---- Makefile.inc.orig	2013-02-26 15:55:55.253179839 +0000
+--- Makefile.inc.orig	2016-04-21 14:00:24.328321129 +0000
 +++ Makefile.inc
+@@ -8,8 +8,8 @@ INSTALLDIR?=	$(INSTALLROOT)/bin
+ INCLUDEDIR?=	$(INSTALLROOT)/include
+ LOCALEDIR?=	$(INSTALLROOT)/share/locale
+ PKGCONFIGDIR?=	$(INSTALLROOT)/lib/pkgconfig
+-MANDIR?=	$(INSTALLROOT)/man/man1
+-SMANDIR?=	$(INSTALLROOT)/man/man1
++MANDIR?=	$(INSTALLROOT)/$(PKGMANDIR)/man1
++SMANDIR?=	$(INSTALLROOT)/$(PKGMANDIR)/man1
+ SINSTALLDIR?=	$(INSTALLROOT)/bin
+ 
+ # Ownership and mode options
 @@ -66,7 +66,7 @@ endif
  
  ifeq ($(GTOP),)
