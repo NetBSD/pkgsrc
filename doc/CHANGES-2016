@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1673 2016/04/21 22:17:37 prlw1 Exp $
+$NetBSD: CHANGES-2016,v 1.1674 2016/04/21 22:20:40 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2166,3 +2166,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated x11/gtk3 to 3.20.3 [prlw1 2016-04-21]
 	Updated math/gnome-calculator to 3.20.0 [prlw1 2016-04-21]
 	Updated games/gnome-sudoku to 3.20.0 [prlw1 2016-04-21]
+	Updated games/hitori to 3.20.0 [prlw1 2016-04-21]
