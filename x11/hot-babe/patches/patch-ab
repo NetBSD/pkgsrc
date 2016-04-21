@@ -1,11 +1,10 @@
-$NetBSD: patch-ab,v 1.2 2006/05/31 11:42:45 rillig Exp $
+$NetBSD: patch-ab,v 1.3 2016/04/21 12:36:04 jperkin Exp $
 
---- Makefile.orig	2004-12-05 00:49:30.000000000 +0100
-+++ Makefile	2006-05-31 12:49:08.000000000 +0200
-@@ -1,13 +1,16 @@
+--- Makefile.orig	2004-12-04 23:49:30.000000000 +0000
++++ Makefile
+@@ -1,13 +1,15 @@
  # where to install this program
 -PREFIX := /usr/local
-+mandir=		man
 +sharedir=	share/hot-babe
 +docdir=		share/doc/hot-babe
 +pixmapdir=	share/pixmaps
@@ -22,7 +21,7 @@ $NetBSD: patch-ab,v 1.2 2006/05/31 11:42:45 rillig Exp $
  
  DOC = ChangeLog NEWS TODO LICENSE CONTRIBUTORS copyright config.example
  
-@@ -22,18 +25,18 @@ clean:
+@@ -22,18 +24,18 @@ clean:
  install:
  	install -d $(DESTDIR)$(PREFIX)/bin
  	install -m 0755 hot-babe $(DESTDIR)$(PREFIX)/bin
@@ -38,8 +37,8 @@ $NetBSD: patch-ab,v 1.2 2006/05/31 11:42:45 rillig Exp $
 +	install -m 0644 hb01/* $(DESTDIR)$(PREFIX)/${sharedir}/hb01
 +	install -d $(DESTDIR)$(PREFIX)/${docdir}
 +	install -m 0644 $(DOC) $(DESTDIR)$(PREFIX)/${docdir}
-+	install -d $(DESTDIR)$(PREFIX)/${mandir}/man1
-+	install -m 0644 hot-babe.1 $(DESTDIR)$(PREFIX)/${mandir}/man1
++	install -d $(DESTDIR)$(PREFIX)/${PKGMANDIR}/man1
++	install -m 0644 hot-babe.1 $(DESTDIR)$(PREFIX)/${PKGMANDIR}/man1
 +	install -d $(DESTDIR)$(PREFIX)/${pixmapdir}
 +	install -m 0644 hot-babe.xpm $(DESTDIR)$(PREFIX)/${pixmapdir}
  
@@ -51,5 +50,5 @@ $NetBSD: patch-ab,v 1.2 2006/05/31 11:42:45 rillig Exp $
 -	rm -f $(DESTDIR)$(PREFIX)/share/pixmaps/hot-babe.xpm
 +	rm -rf $(DESTDIR)$(PREFIX)/${sharedir}
 +	rm -rf $(DESTDIR)$(PREFIX)/${docdir}
-+	rm -f $(DESTDIR)$(PREFIX)/${mandir}/man1/hot-babe.1
++	rm -f $(DESTDIR)$(PREFIX)/${PKGMANDIR}/man1/hot-babe.1
 +	rm -f $(DESTDIR)$(PREFIX)/${pixmapdir}/hot-babe.xpm
