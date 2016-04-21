@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2016/03/16 14:22:01 mef Exp $
+# $NetBSD: Makefile,v 1.22 2016/04/21 12:26:19 jperkin Exp $
 
 DISTNAME=		tqsl-2.2.1
 CATEGORIES=		ham
@@ -24,7 +24,7 @@ USE_CMAKE=		yes
 # usage in Makefile.am, without matching -R.
 
 do-configure:
-	(cd $(WRKSRC) ; \
+	(cd ${WRKSRC} ; \
 	cmake \
 	-DBDB_PREFIX=${PREFIX} \
 	-DBDB_INCLUDE_DIR=${PREFIX}/include \
@@ -32,6 +32,7 @@ do-configure:
 	-DCMAKE_INSTALL_PREFIX=${PREFIX} \
 	-DCMAKE_INSTALL_RPATH=${PREFIX}/lib \
 	-DCMAKE_INSTALL_RPATH_USE_LINK_PATH=FALSE \
+	-DCMAKE_INSTALL_MANDIR:PATH=${PKGMANDIR} \
 	.)
 
 post-install:
