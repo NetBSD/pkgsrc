@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.24 2016/04/11 19:01:37 ryoon Exp $
+# $NetBSD: Makefile,v 1.25 2016/04/21 21:32:03 prlw1 Exp $
 
-DISTNAME=	libsoup-2.52.2
-PKGREVISION=	1
+DISTNAME=	libsoup-2.54.0.1
 CATEGORIES=	net gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libsoup/2.52/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libsoup/${PKGVERSION_NOREV:R:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnome.org/
+HOMEPAGE=	http://wiki.gnome.org/Projects/libsoup
 COMMENT=	HTTP library implementation in C
 LICENSE=	gnu-lgpl-v2
 
@@ -40,12 +39,13 @@ _WRAP_EXTRA_ARGS.CC+=	-Wno-error=format-nonliteral
 CWRAPPERS_APPEND.cc+=	-Wno-error=format-nonliteral
 .endif
 
+.include "options.mk"
+
 REPLACE_PYTHON= libsoup/tld-parser.py
 PYTHON_FOR_BUILD_ONLY= yes
 .include "../../lang/python/application.mk"
 
 .include "../../databases/sqlite3/buildlink3.mk"
-.include "../../mk/curses.buildlink3.mk"
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.38.0
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gobject-introspection+=	gobject-introspection>=0.9.5
