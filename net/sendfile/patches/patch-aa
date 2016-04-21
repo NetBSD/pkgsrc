@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.8 2011/07/07 01:44:11 mspo Exp $
+$NetBSD: patch-aa,v 1.9 2016/04/21 16:28:44 jperkin Exp $
 
 --- makeconfig.orig	2011-07-07 01:05:11.000000000 +0000
 +++ makeconfig
@@ -21,8 +21,8 @@ $NetBSD: patch-aa,v 1.8 2011/07/07 01:44:11 mspo Exp $
 -CONFIG=$PREFIX/etc
 -SERVERDIR=$PREFIX/sbin
 +BINDIR=${LOCALBASE}/bin
-+MANDIR=${LOCALBASE}/man
-+CONFIG=${LOCALBASE}/etc
++MANDIR=${LOCALBASE}/${PKGMANDIR}
++CONFIG=${PKG_SYSCONFDIR}
 +EGDIR=${LOCALBASE}/share/examples/sendfile
 +SERVERDIR=${LOCALBASE}/sbin
  INETDCONF=/etc/inetd.conf # xinetd will be automaticly recognized
