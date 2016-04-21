@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1671 2016/04/21 21:50:00 prlw1 Exp $
+$NetBSD: CHANGES-2016,v 1.1672 2016/04/21 22:11:51 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2164,3 +2164,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/glib-networking to 2.48.0 [prlw1 2016-04-21]
 	Updated net/libsoup to 2.54.0.1 [prlw1 2016-04-21]
 	Updated x11/gtk3 to 3.20.3 [prlw1 2016-04-21]
+	Updated math/gnome-calculator to 3.20.0 [prlw1 2016-04-21]
