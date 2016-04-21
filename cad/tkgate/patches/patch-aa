@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2015/01/17 14:48:56 bsiegert Exp $
+$NetBSD: patch-aa,v 1.6 2016/04/21 13:15:15 jperkin Exp $
 
 --- config.h.orig	2007-01-30 04:45:09.000000000 +0100
 +++ config.h	2014-12-13 18:30:51.000000000 +0100
@@ -46,7 +46,7 @@ $NetBSD: patch-aa,v 1.5 2015/01/17 14:48:56 bsiegert Exp $
    need to run the configure script again.
   */
 -#define TKGATE_MANDIR		/usr/X11R6/man/man1
-+#define TKGATE_MANDIR		@PREFIX@/man/man1
++#define TKGATE_MANDIR		@PREFIX@/@PKGMANDIR@/man1
  
  /*
    Digital circuit editor and simulator.
