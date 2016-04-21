@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.24 2016/04/12 16:31:36 adam Exp $
+# $NetBSD: Makefile,v 1.25 2016/04/21 08:13:50 leot Exp $
 
-DISTNAME=	Pillow-3.1.2
+DISTNAME=	Pillow-3.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
-MASTER_SITES=	${MASTER_SITE_PYPI:=P/Pillow/}
+MASTER_SITES=	${MASTER_SITE_PYPI}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://python-pillow.github.io/
 COMMENT=	Python Imaging Library (Fork)
+LICENSE=	hpnd
 
 CONFLICTS+=	${PYPKGPREFIX}-imaging-[0-9]*
 
@@ -23,8 +24,12 @@ SUBST_SED.fix-path+=	-e 's,TIFF_ROOT = None,TIFF_ROOT = _lib_include("${BUILDLIN
 SUBST_SED.fix-path+=	-e 's,FREETYPE_ROOT = None,FREETYPE_ROOT = _lib_include("${BUILDLINK_PREFIX.freetype2}"),'
 SUBST_SED.fix-path+=	-e 's,LCMS_ROOT = None,LCMS_ROOT = _lib_include("${BUILDLINK_PREFIX.lcms2}"),'
 
-do-test:
-	${RUN}cd ${WRKSRC};${PKGSRC_SETENV} ${TEST_ENV} ${PYTHONBIN} selftest.py
+# XXX: (automatically) testing Pillow fails because it is builded on a
+# separate directory (build/lib.*/PIL/). Manually cp(1) all the files to PIL/
+# fixes that (but implementing a similar distutils.cmd logic here can easily
+# leads to a buggy one). Disable the test for now.
+#do-test:
+#	${RUN}cd ${WRKSRC};${PKGSRC_SETENV} ${TEST_ENV} ${PYTHONBIN} selftest.py
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
