@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1665 2016/04/21 11:10:26 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1666 2016/04/21 11:25:47 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2156,3 +2156,6 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/rsyslog to 8.18.0 [fhajny 2016-04-21]
 	Updated databases/py-cassandra-driver to 3.2.2 [fhajny 2016-04-21]
 	Updated misc/calibre to 2.55.0 [wiz 2016-04-21]
+	Updated lang/erlang to 18.3 [fhajny 2016-04-21]
+	Updated lang/erlang-doc to 18.3 [fhajny 2016-04-21]
+	Updated lang/erlang-man to 18.3 [fhajny 2016-04-21]
