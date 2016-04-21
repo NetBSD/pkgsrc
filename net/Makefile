@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1107 2016/04/14 21:58:27 abs Exp $
+# $NetBSD: Makefile,v 1.1108 2016/04/21 07:02:58 jnemeth Exp $
 #
 
 COMMENT=	Networking tools
@@ -753,7 +753,6 @@ SUBDIR+=	tkined
 SUBDIR+=	tn5250
 SUBDIR+=	tnftp
 SUBDIR+=	tnftpd
-SUBDIR+=	tvnjviewer
 SUBDIR+=	tor
 SUBDIR+=	torrentutils
 SUBDIR+=	totd
@@ -768,6 +767,7 @@ SUBDIR+=	tsclient
 SUBDIR+=	tsocks
 SUBDIR+=	tspc
 SUBDIR+=	ttt
+SUBDIR+=	tvnjviewer
 SUBDIR+=	twittering-mode
 SUBDIR+=	twitux
 SUBDIR+=	u6rd
