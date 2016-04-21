@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.24 2015/08/23 14:30:39 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2016/04/21 21:24:56 prlw1 Exp $
 #
 
-DISTNAME=	glib-networking-2.36.2
-PKGREVISION=	2
-CATEGORIES=	net
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/glib-networking/2.36/}
+DISTNAME=	glib-networking-2.48.0
+CATEGORIES=	net gnome
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/glib-networking/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Network-related giomodules for glib
-LICENSE=	gnu-gpl-v2
+LICENSE=	gnu-lgpl-v2
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+= --with-ca-certificates=/etc/ssl/certs/ca-certificates.crt
@@ -28,11 +27,11 @@ _WRAP_EXTRA_ARGS.CC+=	-Wno-error=format-nonliteral
 CWRAPPERS_APPEND.cc+=	-Wno-error=format-nonliteral
 .endif
 
-BUILDLINK_API_DEPENDS.glib2+= glib2>=2.32.1
-.include "../../devel/glib2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.glib2+=		glib2>=2.46.0
 .include "../../devel/glib2/modules.mk"
-BUILDLINK_API_DEPENDS.libproxy+= libproxy>=0.3.1
+BUILDLINK_API_DEPENDS.libproxy+=	libproxy>=0.3.1
 .include "../../www/libproxy/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gnutls+=		gnutls>=3.0
 .include "../../security/gnutls/buildlink3.mk"
 # XXX libcgrypt is not necessary if gnutls was built against nettle,
 # but the assumption is hardwired at multiple places
