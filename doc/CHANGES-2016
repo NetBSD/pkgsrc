@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1658 2016/04/20 22:09:14 prlw1 Exp $
+$NetBSD: CHANGES-2016,v 1.1659 2016/04/21 08:14:02 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2149,3 +2149,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added textproc/p5-Text-Roman version 3.5 [markd 2016-04-20]
 	Updated devel/dconf to 0.26.0 [prlw1 2016-04-20]
 	Updated devel/dconf-editor to 3.20.1 [prlw1 2016-04-20]
+	Updated graphics/py-Pillow to 3.2.0 [leot 2016-04-21]
