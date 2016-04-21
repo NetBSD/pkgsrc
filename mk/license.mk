@@ -1,4 +1,4 @@
-# $NetBSD: license.mk,v 1.75 2016/02/10 10:50:18 wiz Exp $
+# $NetBSD: license.mk,v 1.76 2016/04/21 07:51:51 leot Exp $
 #
 # This file handles everything about the LICENSE variable. It is
 # included automatically by bsd.pkg.mk.
@@ -118,6 +118,7 @@ DEFAULT_ACCEPTABLE_LICENSES= \
 	gnu-gpl-v1 \
 	gnu-gpl-v2 gnu-lgpl-v2 gnu-lgpl-v2.1 \
 	gnu-gpl-v3 gnu-lgpl-v3 \
+	hpnd \
 	ibm-public-license-1.0 \
 	ipafont \
 	isc \
