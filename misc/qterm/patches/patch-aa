@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2007/08/31 21:50:50 agc Exp $
+$NetBSD: patch-aa,v 1.3 2016/04/21 16:11:16 jperkin Exp $
 
---- Makefile.in.orig	1997-04-11 14:13:32.000000000 +0100
-+++ Makefile.in	2007-08-31 12:44:39.000000000 +0100
-@@ -22,7 +22,8 @@
+--- Makefile.in.orig	1997-04-11 13:13:32.000000000 +0000
++++ Makefile.in
+@@ -22,9 +22,10 @@ prefix=@prefix@
  exec_prefix=@exec_prefix@
  BINDIR=$(exec_prefix)/bin
  LIBDIR=$(exec_prefix)/lib
@@ -10,9 +10,12 @@ $NetBSD: patch-aa,v 1.2 2007/08/31 21:50:50 agc Exp $
 +ETCDIR=@sysconfdir@
 +EGDIR=@datadir@/examples/qterm
  INCDIR=$(prefix)/include
- MANDIR=$(prefix)/man
+-MANDIR=$(prefix)/man
++MANDIR=$(prefix)/${PKGMANDIR}
  
-@@ -53,10 +54,10 @@
+ INSTALL= @INSTALL@
+ INSTALL_DATA= @INSTALL_DATA@
+@@ -53,10 +54,10 @@ qterm.1: qterm.1.in
  	$(SED) 's;qterm_etcdir;$(ETCDIR);g' < qterm.1.in > qterm.1
  
  install: qterm qtermtab qterm.1
