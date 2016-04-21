@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2015/12/05 21:25:55 adam Exp $
+# $NetBSD: Makefile,v 1.19 2016/04/21 12:08:29 jperkin Exp $
 
 DISTNAME=	scapy-2.2.0
 CATEGORIES=	net
@@ -26,8 +26,9 @@ CONF_FILES=	${PREFIX}/share/examples/scapy/ethertypes \
 
 SUBST_CLASSES+=		config
 SUBST_STAGE.config=	post-patch
-SUBST_FILES.config=	scapy/data.py
+SUBST_FILES.config=	scapy/data.py setup.py
 SUBST_SED.config=	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
+SUBST_SED.config+=	-e "s|share/man|${PKGMANDIR}|g"
 SUBST_MESSAGE.config=	Fixing paths.
 
 post-extract:
