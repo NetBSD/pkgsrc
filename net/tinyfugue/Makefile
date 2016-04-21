@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2012/10/23 17:19:13 asau Exp $
+# $NetBSD: Makefile,v 1.32 2016/04/21 16:02:45 jperkin Exp $
 
 DISTNAME=	tf-40s1
 PKGNAME=	tf-4.0s1
@@ -28,6 +28,7 @@ SUBST_STAGE.fix-paths=		pre-configure
 SUBST_FILES.fix-paths=		unix/Config
 SUBST_SED.fix-paths=		-e 's,@DESTDIR@,'${DESTDIR}',g'
 
+LDFLAGS.SunOS+=	-lz
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
