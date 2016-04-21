@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2014/10/09 14:06:31 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2016/04/21 13:29:07 jperkin Exp $
 #
 
 DISTNAME=	tkcvs-8.2.3
@@ -14,6 +14,11 @@ DEPENDS+=	tk>=8.4:../../x11/tk
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 USE_LANGUAGES=	# empty
+
+SUBST_CLASSES+=		manpath
+SUBST_STAGE.manpath=	pre-install
+SUBST_FILES.manpath=	doinstall.tcl
+SUBST_SED.manpath=	-e 's, man , ${PKGMANDIR} ,g'
 
 do-install:
 	(cd ${WRKSRC} && ./doinstall.tcl ${DESTDIR}${PREFIX})
