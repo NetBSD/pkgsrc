@@ -1,0 +1,15 @@
+$NetBSD: patch-Makefile.in,v 1.1 2016/04/22 12:30:13 jperkin Exp $
+
+Linker script depends on non-portable constructs.
+
+--- Makefile.in.orig	2016-04-12 10:34:03.276790608 +0000
++++ Makefile.in
+@@ -173,7 +173,7 @@ check_PROGRAMS = test_blkdev$(EXEEXT) te
+ 
+ @BUILD_LIBUUID_TRUE@am__append_9 = test_uuid_parser
+ @BUILD_LIBUUID_TRUE@am__append_10 = libuuid.la
+-@BUILD_LIBUUID_TRUE@@HAVE_VSCRIPT_TRUE@am__append_11 = libuuid_la_LDFLAGS += $(VSCRIPT_LDFLAGS),$(top_srcdir)/libuuid/src/libuuid.sym
++@BUILD_LIBUUID_TRUE@@HAVE_VSCRIPT_COMPLEX_TRUE@am__append_11 = libuuid_la_LDFLAGS += $(VSCRIPT_LDFLAGS),$(top_srcdir)/libuuid/src/libuuid.sym
+ @BUILD_LIBUUID_TRUE@am__append_12 = libuuid/src/libuuid.sym \
+ @BUILD_LIBUUID_TRUE@	libuuid/COPYING
+ @BUILD_LIBUUID_TRUE@am__append_13 = install-exec-hook-libuuid
