@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2016/04/11 17:06:03 jperkin Exp $
+# $NetBSD: Makefile,v 1.64 2016/04/22 08:04:23 jperkin Exp $
 
 DISTNAME=	kde-runtime-15.12.0
 PKGNAME=	${DISTNAME:S/-1/4-1/}
@@ -11,8 +11,13 @@ MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.12.0/src/}
 
 # BUILD_MAKE_FLAGS+= VERBOSE=1
 CMAKE_ARGS+=	-DWITH_LibSSH:BOOL=OFF
+.include "../../mk/bsd.prefs.mk"
 CMAKE_ARGS+=	-DLIBLZMA_INCLUDE_DIR:PATH=${BUILDLINK_PREFIX.xz}/include
+.if ${OPSYS} == "Darwin"
+CMAKE_ARGS+=	-DLIBLZMA_LIBRARY:FILEPATH=${BUILDLINK_PREFIX.xz}/lib/liblzma.dylib
+.else
 CMAKE_ARGS+=	-DLIBLZMA_LIBRARY:FILEPATH=${BUILDLINK_PREFIX.xz}/lib/liblzma.so
+.endif
 
 DEPENDS+=	htdig>=3.2.0:../../www/htdig
 DEPENDS+=	oxygen-icons-[0-9]*:../../graphics/oxygen-icons
@@ -22,7 +27,6 @@ USE_TOOLS+=		gmake
 CFLAGS.SunOS+=	-DPORTMAP
 LDFLAGS.SunOS+=	-lsocket -lnsl
 
-.include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
 # Some files are conditional on 'md5sum' or 'md5' being present.
@@ -32,6 +36,12 @@ PLIST_VARS+=	md5
 PLIST.md5=	yes
 .  endif
 .endfor
+
+PLIST_VARS+=	polkit x11
+.if ${OPSYS} != "Darwin"
+PLIST.polkit=	yes
+PLIST.x11=	yes
+.endif
 
 SUBST_CLASSES+=		htdig
 SUBST_STAGE.htdig=	post-patch
