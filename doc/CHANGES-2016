@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1678 2016/04/22 09:34:24 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1679 2016/04/22 09:35:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2171,3 +2171,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated time/p5-DateTime-TimeZone to 1.98 [wiz 2016-04-22]
 	Updated devel/p5-Devel-Symdump to 2.1700 [wiz 2016-04-22]
 	Updated mail/p5-MailTools to 2.16 [wiz 2016-04-22]
+	Updated devel/p5-Role-Tiny to 2.000002 [wiz 2016-04-22]
