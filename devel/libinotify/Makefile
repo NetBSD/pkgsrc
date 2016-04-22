@@ -1,9 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2016/03/09 11:09:02 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2016/04/22 15:27:11 jperkin Exp $
 #
 
 DISTNAME=	libinotify-0.0
+PKGREVISION=	1
 CATEGORIES=	devel
-MASTER_SITES=	http://dmitrymatveev.co.uk/files/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=dmatveev/}
+GITHUB_PROJECT=	libinotify-kqueue
+GITHUB_TAG=	b2873cf8a94b0574819075a003e33c0405f1b690
 
 MAINTAINER=	me@dmitrymatveev.co.uk
 HOMEPAGE=	http://dmitrymatveev.co.uk/gsoc11
@@ -14,6 +17,8 @@ GNU_CONFIGURE=  YES
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	autoconf automake autoreconf
+
+TEST_TARGET=	test
 
 NOT_FOR_PLATFORM+=	SunOS-*-* Linux-*-*
 
