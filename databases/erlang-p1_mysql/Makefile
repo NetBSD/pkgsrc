@@ -1,17 +1,15 @@
-# $NetBSD: Makefile,v 1.3 2016/01/16 18:51:35 fhajny Exp $
+# $NetBSD: Makefile,v 1.4 2016/04/22 13:39:41 fhajny Exp $
 
-DISTNAME=	p1_mysql-1.0.0
-PKGREVISION=	1
+DISTNAME=	p1_mysql-1.0.1
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_GITHUB:=processone/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://github.com/processone/mysql/
+HOMEPAGE=	http://github.com/processone/p1_mysql/
 COMMENT=	Erlang MySQL driver
 LICENSE=	modified-bsd
 
-GITHUB_PROJECT=	mysql
-WRKSRC=		${WRKDIR}/${GITHUB_PROJECT}-${GITHUB_TAG}
+GITHUB_PROJECT=	p1_mysql
 
 .include "../../lang/erlang/module.mk"
 .include "../../mk/bsd.pkg.mk"
