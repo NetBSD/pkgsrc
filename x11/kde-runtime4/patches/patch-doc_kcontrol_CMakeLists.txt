@@ -1,0 +1,21 @@
+$NetBSD: patch-doc_kcontrol_CMakeLists.txt,v 1.1 2016/04/22 08:04:23 jperkin Exp $
+
+Add various bits which build fine on Darwin.
+
+--- doc/kcontrol/CMakeLists.txt.orig	2015-11-05 04:25:02.000000000 +0000
++++ doc/kcontrol/CMakeLists.txt
+@@ -16,7 +16,7 @@ add_subdirectory(smb)
+ endif ( NOT Q_WS_WIN )
+ add_subdirectory(emoticons)
+ 
+-if ( Q_WS_X11 )
++if ( Q_WS_X11 OR Q_WS_MAC )
+ add_subdirectory(cache)
+ add_subdirectory(filemanager)
+ add_subdirectory(filetypes)
+@@ -35,4 +35,4 @@ add_subdirectory(trash)
+ add_subdirectory(history)
+ add_subdirectory(solid-device-automounter)
+ add_subdirectory(phonon)
+-endif ( Q_WS_X11 )
++endif ( Q_WS_X11 OR Q_WS_MAC )

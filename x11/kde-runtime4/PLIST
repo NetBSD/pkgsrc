@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2016/01/10 19:05:27 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2016/04/22 08:04:23 jperkin Exp $
 bin/kcmshell4
 bin/kde-cp
 bin/kde-mv
@@ -18,7 +18,7 @@ bin/kmimetypefinder
 bin/knotify4
 bin/kquitapp
 bin/kreadconfig
-bin/kstart
+${PLIST.x11}bin/kstart
 bin/ksvgtopng
 bin/ktraderclient
 bin/ktrash
@@ -35,7 +35,7 @@ lib/attica_kde.so
 lib/kconf_update_bin/phonon_devicepreference_update
 lib/kconf_update_bin/phonon_deviceuids_update
 lib/kde4/comicbookthumbnail.so
-lib/kde4/cursorthumbnail.so
+${PLIST.x11}lib/kde4/cursorthumbnail.so
 lib/kde4/djvuthumbnail.so
 lib/kde4/exrthumbnail.so
 lib/kde4/fixhosturifilter.so
@@ -171,7 +171,7 @@ lib/kde4/libexec/drkonqi
 lib/kde4/libexec/kcmremotewidgetshelper
 lib/kde4/libexec/kdeeject
 lib/kde4/libexec/kdesu
-lib/kde4/libexec/kdesud
+${PLIST.x11}lib/kde4/libexec/kdesud
 lib/kde4/libexec/kdontchangethehostname
 lib/kde4/libexec/khc_docbookdig.pl
 lib/kde4/libexec/khc_htdig.pl
@@ -263,7 +263,7 @@ lib/libmolletnetwork.so.4
 lib/libmolletnetwork.so.${KDELIBSVER}
 man/man1/kdesu.1
 man/man1/plasmapkg.1
-share/PolicyKit/policy/org.kde.kcontrol.kcmremotewidgets.policy
+${PLIST.polkit}share/PolicyKit/policy/org.kde.kcontrol.kcmremotewidgets.policy
 share/applications/kde4/Help.desktop
 share/applications/kde4/knetattach.desktop
 share/dbus-1/interfaces/org.kde.KTimeZoned.xml
@@ -849,7 +849,7 @@ share/kde4/services/bzip2.protocol
 share/kde4/services/cgi.protocol
 share/kde4/services/comicbookthumbnail.desktop
 share/kde4/services/componentchooser.desktop
-share/kde4/services/cursorthumbnail.desktop
+${PLIST.x11}share/kde4/services/cursorthumbnail.desktop
 share/kde4/services/desktop.protocol
 share/kde4/services/desktopthumbnail.desktop
 share/kde4/services/device_automounter_kcm.desktop
