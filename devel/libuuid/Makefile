@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2016/04/17 09:56:31 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2016/04/22 12:30:13 jperkin Exp $
 
 DISTNAME=	util-linux-2.28
 PKGNAME=	${DISTNAME:S/util-linux/libuuid/}
@@ -23,12 +23,6 @@ BUILD_TARGET=		libuuid.la libuuid/uuid.pc
 INSTALLATION_DIRS+=	include/uuid lib/pkgconfig ${PKGMANDIR}/man3
 CONFIG_SHELL=		bash
 USE_TOOLS+=		bash:build
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Darwin" || ${OPSYS} == "SunOS"
-BUILDLINK_TRANSFORM+=	rm:-Wl,--version-script=./libuuid/src/libuuid.sym
-.endif
 
 do-install:
 	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/libuuid.la \
