@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15799 2016/04/21 10:57:42 leot Exp $
+$NetBSD: TODO,v 1.15800 2016/04/22 09:10:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1156,7 +1156,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mpop-1.2.4
 	o mr-1.20150503
 	o mserv-devel-0.41
-	o msgpack-1.0.0
+	o msgpack-1.4.1 [pkg/51083]
 	o multitail-6.2
 	o munin-doc-1.4.6
 	o munin-node-1.4.6
@@ -1263,6 +1263,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-DBD-SQLite2-0.37
 	o p5-Data-AMF-0.02004
 	o p5-Data-SimplePassword-0.11
+	o p5-DateTime-TimeZone-1.98
+	o p5-Devel-Symdump-2.1700
 	o p5-Device-XBee-API-0.8
 	o p5-Digest-Hashcash-1.1
 	o p5-Encode-2.82
@@ -1303,6 +1305,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Log-Report-Optional-1.02
 	o p5-MIME-EncWords-1.014.3
 	o p5-Mail-IMAPClient-3.38
+	o p5-MailTools-2.16
 	o p5-Math-BigInt-GMP-1.49
 	o p5-Math-BigInt-Pari-1.25
 	o p5-Math-Random-0.72
@@ -1373,6 +1376,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Readonly-3
 	o p5-Regexp-Common-net-CIDR-0.03
 	o p5-Return-Value-1.666005
+	o p5-Role-Tiny-2.000002
 	o p5-Rose-DBx-Garden-0.193
 	o p5-SDL-2.544 [wip, make sure games/frozen-bubble runs, may require p5-SDL_perl]
 	o p5-SNMP-Info-3.31
@@ -1427,6 +1431,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-pango-1.227
 	o p5-pcsc-1.4.14
 	o p5-sqlrelay-0.64
+	o p5-strictures-2.000003
 	o p5-sybperl-2.18
 	o p5-xmltv-0.5.66
 	o packagekit-0.5.3
@@ -1495,7 +1500,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ploticus-examples-230
 	o ply-3.8
 	o pngcrush-1.8.0
-	o podcastdl-0.3.2
+	o podcastdl-0.3.3
 	o pokerth-1.0.1
 	o policyd-weight-0.1.15.2
 	o polsms-2.1.0
@@ -1684,7 +1689,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o scripts-1.0.1
 	o scrollz-2.3
 	o scsh-1.3.0
-	o scummvm-1.8.0
 	o seahorse-3.14
 	o seahorse-nautilus-3.10.1
 	o seccure-0.5a
