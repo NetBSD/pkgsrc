@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15804 2016/04/22 09:35:17 wiz Exp $
+$NetBSD: TODO,v 1.15805 2016/04/22 09:35:58 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1427,7 +1427,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-pango-1.227
 	o p5-pcsc-1.4.14
 	o p5-sqlrelay-0.64
-	o p5-strictures-2.000003
 	o p5-sybperl-2.18
 	o p5-xmltv-0.5.66
 	o packagekit-0.5.3
