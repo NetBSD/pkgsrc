@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/04/22 14:54:58 fhajny Exp $
+
+SHA1 (luerl-0.2.tar.gz) = c102540c69d7f20387b092e12aff5e7109039cda
+RMD160 (luerl-0.2.tar.gz) = 5e4c960b49c14d1786256dab9f21a9ad80a68508
+SHA512 (luerl-0.2.tar.gz) = 80fb76609ad42df880d67919c352785781adb1d815b4c625bb93c35caf17ecf5455e82aab61f95c6c2f522d554b2858748d295db7c487c26e90c6afa957faaec
+Size (luerl-0.2.tar.gz) = 94603 bytes
