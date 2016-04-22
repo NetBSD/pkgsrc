@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2016/04/15 14:42:53 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2016/04/22 09:35:00 nros Exp $
 
 VER=		0.4.16
 DISTNAME=	qpdfview-${VER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	https://launchpad.net/qpdfview/trunk/${VER}/+download/
 
@@ -14,18 +14,14 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	poppler-data-[0-9]*:../../print/poppler-data
 DEPENDS+=	qt4-sqlite3-[0-9]*:../../x11/qt4-sqlite3
 
-SUBST_CLASSES+=		prefix
-SUBST_STAGE.prefix=	pre-configure
-SUBST_MESSAGE.prefix=	Fix install path
-SUBST_FILES.prefix+=	qpdfview.pri
-SUBST_VARS.prefix+=	DESTDIR PREFIX PKGMANDIR
-
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 USE_LIBTOOL=	yes
 
+INSTALL_MAKE_FLAGS+=    INSTALL_ROOT=${DESTDIR}
+
 do-configure:
-	cd ${WRKSRC} && QTDIR=${QTDIR} \
+	cd ${WRKSRC} && env ${CONFIGURE_ENV} PKGMANDIR=${PKGMANDIR} \
 		${QTDIR}/bin/qmake qpdfview.pro
 
 .include "../../graphics/djvulibre-lib/buildlink3.mk"
