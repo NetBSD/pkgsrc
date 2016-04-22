@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2016/04/18 06:19:57 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2016/04/22 08:28:46 jperkin Exp $
 
 DISTNAME=	libgcrypt-1.7.0
 CATEGORIES=	security
@@ -28,6 +28,11 @@ INFO_FILES=		yes # PLIST
 CONFIGURE_ARGS+=	--disable-asm
 .endif
 CONFIGURE_ARGS+=	--disable-aesni-support
+
+.if !empty(MACHINE_PLATFORM:MLinux-*-i386) || \
+    !empty(MACHINE_PLATFORM:MSunOS-*-i386)
+CONFIGURE_ARGS+=	--disable-pclmul-support
+.endif
 
 # SCO OpenServer 5.0.7/3.2 has no socklen_t, but it is defined in pthread.h
 # from builtin GNU pth.
