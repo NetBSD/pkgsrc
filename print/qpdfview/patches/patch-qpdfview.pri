@@ -1,4 +1,4 @@
-$NetBSD: patch-qpdfview.pri,v 1.3 2016/03/09 17:45:52 nros Exp $
+$NetBSD: patch-qpdfview.pri,v 1.4 2016/04/22 09:35:00 nros Exp $
 
 * Set install places
 
@@ -14,13 +14,13 @@ $NetBSD: patch-qpdfview.pri,v 1.3 2016/03/09 17:45:52 nros Exp $
 -isEmpty(ICON_INSTALL_PATH):ICON_INSTALL_PATH = /usr/share/icons/hicolor/scalable/apps
 -isEmpty(LAUNCHER_INSTALL_PATH):LAUNCHER_INSTALL_PATH = /usr/share/applications
 -isEmpty(APPDATA_INSTALL_PATH):APPDATA_INSTALL_PATH = /usr/share/appdata
-+isEmpty(TARGET_INSTALL_PATH):TARGET_INSTALL_PATH = @DESTDIR@@PREFIX@/bin
-+isEmpty(PLUGIN_INSTALL_PATH):PLUGIN_INSTALL_PATH = @DESTDIR@@PREFIX@/lib/qpdfview
-+isEmpty(DATA_INSTALL_PATH):DATA_INSTALL_PATH = @DESTDIR@@PREFIX@/share/qpdfview
-+isEmpty(MANUAL_INSTALL_PATH):MANUAL_INSTALL_PATH = @DESTDIR@@PREFIX@/@PKGMANDIR@/man1
-+isEmpty(ICON_INSTALL_PATH):ICON_INSTALL_PATH = @DESTDIR@@PREFIX@/share/icons/hicolor
-+isEmpty(LAUNCHER_INSTALL_PATH):LAUNCHER_INSTALL_PATH = @DESTDIR@@PREFIX@/share/applications
-+isEmpty(APPDATA_INSTALL_PATH):APPDATA_INSTALL_PATH = @DESTDIR@@PREFIX@/share/appdata
++isEmpty(TARGET_INSTALL_PATH):TARGET_INSTALL_PATH = $$(PREFIX)/bin
++isEmpty(PLUGIN_INSTALL_PATH):PLUGIN_INSTALL_PATH = $$(PREFIX)/lib/qpdfview
++isEmpty(DATA_INSTALL_PATH):DATA_INSTALL_PATH = $$(PREFIX)/share/qpdfview
++isEmpty(MANUAL_INSTALL_PATH):MANUAL_INSTALL_PATH = $$(PREFIX)/$$(PKGMANDIR)/man1
++isEmpty(ICON_INSTALL_PATH):ICON_INSTALL_PATH = $$(PREFIX)/share/icons/hicolor
++isEmpty(LAUNCHER_INSTALL_PATH):LAUNCHER_INSTALL_PATH = $$(PREFIX)/share/applications
++isEmpty(APPDATA_INSTALL_PATH):APPDATA_INSTALL_PATH = $$(PREFIX)/share/appdata
  
  win32:include(qpdfview_win32.pri)
  os2:include(qpdfview_os2.pri)
