@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2016/04/22 14:54:58 fhajny Exp $
+lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl.app
+lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl.beam
+lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_app.beam
+lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_comp.beam
+lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_comp_cg.beam
+lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_comp_env.beam
+lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_comp_locf.beam
+lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_comp_peep.beam
+lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_comp_vars.beam
+lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_emul.beam
+lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_lib.beam
+lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_lib_basic.beam
+lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_lib_bit32.beam
+lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_lib_io.beam
+lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_lib_math.beam
+lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_lib_os.beam
+lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_lib_package.beam
+lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_lib_string.beam
+lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_lib_string_format.beam
+lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_lib_table.beam
+lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_parse.beam
+lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_scan.beam
+lib/erlang/lib/luerl-${PKGVERSION}/ebin/luerl_sup.beam
+lib/erlang/lib/luerl-${PKGVERSION}/ebin/ttdict.beam
