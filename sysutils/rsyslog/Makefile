@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2016/03/14 11:12:22 tnn Exp $
+# $NetBSD: Makefile,v 1.8 2016/04/22 16:52:14 jperkin Exp $
 #
 
 BUILDLINK_DEPMETHOD.libestr=	full
@@ -36,6 +36,8 @@ RSYSLOG_SYSMOD=		imklog
 CFLAGS+=		-march=i586
 .endif
 
+BUILDLINK_TRANSFORM.Darwin+=	rm:-luuid
+
 BUILD_DEFS+=		VARBASE RSYSLOG_PIDDIR RSYSLOG_WRKDIR
 RSYSLOG_PIDDIR?=	${VARBASE}/run
 RSYSLOG_WRKDIR?=	${VARBASE}/lib/rsyslog
@@ -48,6 +50,11 @@ SUBST_FILES.paths+=	tools/rsyslogd.8 tools/rsyslogd.c tools/syslogd.c
 SUBST_VARS.paths=	RSYSLOG_PIDDIR RSYSLOG_SYSMOD
 SUBST_SED.paths=	-e "s|/etc|${PKG_SYSCONFDIR}|g"
 SUBST_MESSAGE.paths=	Setting default paths and options.
+
+SUBST_CLASSES.Darwin+=	ldargs
+SUBST_STAGE.ldargs=	pre-configure
+SUBST_FILES.ldargs=	tools/Makefile.in
+SUBST_SED.ldargs=	-e '/whole-archive.*librsyslog/d'
 
 RCD_SCRIPTS=		rsyslogd
 
