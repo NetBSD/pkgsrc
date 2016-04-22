@@ -1,0 +1,49 @@
+$NetBSD: patch-configure.in,v 1.1 2016/04/22 15:04:24 manu Exp $
+
+Fix excessive library dependencies
+
+Make sure we only link with kerberos llibraries if kerberos features
+are enabled. Otherwise we produce a binaruy that requires unused
+libraries, which is a liability when we try to use it on a system
+where they are not installed.
+
+Submitted upstream as https://github.com/PADL/nss_ldap/pull/4
+
+--- configure.in.orig	2016-04-20 18:26:12.000000000 +0000
++++ configure.in	2016-04-21 04:11:19.000000000 +0000
+@@ -288,20 +288,24 @@
+ 
+ AC_CHECK_LIB(dl, dlopen,[LIBS="-ldl $LIBS"],,$LIBS)
+ dnl AC_CHECK_LIB(db, main,[LIBS="-ldb $LIBS"],,$LIBS)
+ 
+-AC_CHECK_LIB(gssapi, gss_krb5_ccache_name,[LIBS="-lgssapi $LIBS" found_gssapi_lib=yes],,$LIBS)
+-if test -z "$found_gssapi_lib"; then
+-  AC_CHECK_LIB(gssapi_krb5, gss_krb5_ccache_name,[LIBS="-lgssapi_krb5 $LIBS"],,$LIBS)
++if test "x$enable_configurable_krb5_ccname_env" = "xyes" -o \
++        "x$enable_configurable_krb5_ccname_gssapi" = "xyes" -o \
++        "x$enable_configurable_krb5_keytab" = "xyes" ; then
++  AC_CHECK_LIB(gssapi, gss_krb5_ccache_name,[LIBS="-lgssapi $LIBS" found_gssapi_lib=yes],,$LIBS)
++  if test -z "$found_gssapi_lib"; then
++    AC_CHECK_LIB(gssapi_krb5, gss_krb5_ccache_name,[LIBS="-lgssapi_krb5 $LIBS"],,$LIBS)
++  fi
++  
++  dnl Following checks probably not strictly necessary.
++  dnl AC_CHECK_LIB(crypto, main,[LIBS="-lcrypto $LIBS"],,$LIBS)
++  dnl AC_CHECK_LIB(ssl, main,[LIBS="-lssl $LIBS"],,$LIBS) 
++  AC_CHECK_LIB(com_err, main,[LIBS="-lcom_err $LIBS"],,$LIBS)
++  dnl AC_CHECK_LIB(k5crypto, main,[LIBS="-lk5crypto $LIBS"],,$LIBS)
++  AC_CHECK_LIB(krb5, main,[LIBS="-lkrb5 $LIBS"],,$LIBS)
++  dnl AC_CHECK_LIB(krb4, main,[LIBS="-lkrb4 $LIBS"],,$LIBS)
+ fi
+-
+-dnl Following checks probably not strictly necessary.
+-dnl AC_CHECK_LIB(crypto, main,[LIBS="-lcrypto $LIBS"],,$LIBS)
+-dnl AC_CHECK_LIB(ssl, main,[LIBS="-lssl $LIBS"],,$LIBS)
+-AC_CHECK_LIB(com_err, main,[LIBS="-lcom_err $LIBS"],,$LIBS)
+-dnl AC_CHECK_LIB(k5crypto, main,[LIBS="-lk5crypto $LIBS"],,$LIBS)
+-AC_CHECK_LIB(krb5, main,[LIBS="-lkrb5 $LIBS"],,$LIBS)
+-dnl AC_CHECK_LIB(krb4, main,[LIBS="-lkrb4 $LIBS"],,$LIBS)
+ AC_CHECK_LIB(sasl2, sasl_client_init)
+ 
+ if test -z "$found_ldap_lib" -a \( $with_ldap_lib = auto -o $with_ldap_lib = umich -o $with_ldap_lib = openldap \); then
+   AC_CHECK_LIB(lber, main)
