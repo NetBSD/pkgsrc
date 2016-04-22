@@ -1,4 +1,4 @@
-# $NetBSD: phpversion.mk,v 1.131 2016/04/02 09:02:11 taca Exp $
+# $NetBSD: phpversion.mk,v 1.132 2016/04/22 09:46:50 wiz Exp $
 #
 # This file selects a PHP version, based on the user's preferences and
 # the installed packages. It does not add a dependency on the PHP
@@ -107,7 +107,10 @@ _PHP_VERSION_${pv}_OK=	yes
 .endfor
 
 # check what is installed
-.if exists(${LOCALBASE}/lib/php/20140828)
+.if exists(${LOCALBASE}/lib/php/20151203)
+_PHP_VERSION_70_INSTALLED=	yes
+_PHP_INSTALLED=			yes
+.elif exists(${LOCALBASE}/lib/php/20140828)
 _PHP_VERSION_56_INSTALLED=	yes
 _PHP_INSTALLED=			yes
 .elif exists(${LOCALBASE}/lib/php/20130620)
