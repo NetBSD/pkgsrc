@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1680 2016/04/22 09:35:58 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1681 2016/04/22 15:15:06 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2173,3 +2173,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/p5-MailTools to 2.16 [wiz 2016-04-22]
 	Updated devel/p5-Role-Tiny to 2.000002 [wiz 2016-04-22]
 	Updated devel/p5-strictures to 2.000003 [wiz 2016-04-22]
+	Updated www/squid3 to 3.5.17 [adam 2016-04-22]
