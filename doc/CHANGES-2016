@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1684 2016/04/23 06:24:47 adam Exp $
+$NetBSD: CHANGES-2016,v 1.1685 2016/04/23 07:38:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2178,3 +2178,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/gsettings-desktop-schemas to 3.20.0 [prlw1 2016-04-22]
 	Updated databases/rrdtool to 1.6.0 [adam 2016-04-23]
 	Updated databases/ruby-rrdtool to 1.6.0 [adam 2016-04-23]
+	Updated x11/py-qt5 to 5.5.1nb4 [wiz 2016-04-23]
