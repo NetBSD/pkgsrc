@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.4 2016/03/30 05:33:00 markd Exp $
+$NetBSD: distinfo,v 1.5 2016/04/23 21:37:47 markd Exp $
 
-SHA1 (biblatex-biber-1.9/biblatex-biber.tar.gz) = cbdcf96c40ec38817576f5ea6e3457e7d9e9b703
-RMD160 (biblatex-biber-1.9/biblatex-biber.tar.gz) = 1c8c597703f2f76f8d94ef6534cc450fae652d29
-SHA512 (biblatex-biber-1.9/biblatex-biber.tar.gz) = 6d88ccf2bae4c498f1ee154e57c9098751a6ef9e7e6ea75f511777c004c66dd2295f94f37fb1e9137d9cd5ebae040926005bf68e568718fdd5c04508b619bfd9
-Size (biblatex-biber-1.9/biblatex-biber.tar.gz) = 2049168 bytes
-SHA1 (patch-lib_Biber_LaTeX_Recode.pm) = cd8026d7b2f071241663dd91c9ffb2ad9eee5fe6
+SHA1 (biblatex-biber-2.4/biblatex-biber.tar.gz) = ff482d4d717739b01bc658262e13b23b8fc44d36
+RMD160 (biblatex-biber-2.4/biblatex-biber.tar.gz) = 4d4330e41bdf081727866d7565f13aca347f67aa
+SHA512 (biblatex-biber-2.4/biblatex-biber.tar.gz) = 6f3b8c2f3b4171a276ad7d5bc16ad78fbecf5bab6b5232c13970af9a0540ab35fbce192f965030f86a06b7ccf3d93958cc1583495948e4b1f65c3b759e3186e2
+Size (biblatex-biber-2.4/biblatex-biber.tar.gz) = 1062340 bytes
