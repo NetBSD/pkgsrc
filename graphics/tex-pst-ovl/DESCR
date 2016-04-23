@@ -1,0 +1,4 @@
+The package is useful when building an image from assorted
+material, as in the slides of a projected presentation. The
+package requires pstricks, and shares that package's
+restrictions on usage when generating PDF output.

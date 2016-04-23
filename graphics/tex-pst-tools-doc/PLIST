@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2016/04/23 22:32:02 markd Exp $
+share/texmf-dist/doc/generic/pst-tools/Changes
+share/texmf-dist/doc/generic/pst-tools/README
+share/texmf-dist/doc/generic/pst-tools/pst-tools-doc.bib
+share/texmf-dist/doc/generic/pst-tools/pst-tools-doc.pdf
+share/texmf-dist/doc/generic/pst-tools/pst-tools-doc.tex

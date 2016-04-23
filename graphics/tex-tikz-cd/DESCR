@@ -1,0 +1,8 @@
+The general-purpose drawing package TiKZ can be used to typeset
+commutative diagrams and other kinds of mathematical pictures,
+generating high-quality results.  The present package facilitates
+the creation of such diagrams by providing a convenient set of
+macros and reasonable default settings.  It also includes an arrow
+tip library closely matching the Computer Modern arrow tips, as
+well as a general mechanism to use the arrow tips from any math
+font in TikZ graphics.
