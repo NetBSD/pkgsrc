@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1692 2016/04/23 13:02:56 wen Exp $
+$NetBSD: CHANGES-2016,v 1.1693 2016/04/23 13:03:56 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2128,7 +2128,7 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Config-General to 2.61 [mef 2016-04-19]
 	Updated devel/p5-Git-Repository-Plugin-AUTOLOAD to 1.003 [mef 2016-04-19]
 	Updated databases/sqlite3 to 3.12.2 [adam 2016-04-20]
-	Updated databases/sqlite3-docs to 3.12.2 [adam 2016-04-2020]
+	Updated databases/sqlite3-docs to 3.12.2 [adam 2016-04-20]
 	Updated databases/sqlite3-tcl to 3.12.2 [adam 2016-04-20]
 	Updated graphics/girara to 0.2.6 [leot 2016-04-20]
 	Updated print/zathura to 0.3.6 [leot 2016-04-20]
