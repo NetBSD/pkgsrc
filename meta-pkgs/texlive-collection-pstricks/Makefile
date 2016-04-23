@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2015/07/02 21:08:08 markd Exp $
+# $NetBSD: Makefile,v 1.3 2016/04/23 22:38:26 markd Exp $
 
 DISTNAME=	collection-pstricks
-PKGNAME=	texlive-${DISTNAME}-2015pre1
+PKGNAME=	texlive-${DISTNAME}-2015pre2
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 TEXLIVE_REV=	34995
@@ -71,7 +71,7 @@ DEPENDS+=	tex-pst-node-[0-9]*:../../graphics/tex-pst-node
 # depend pst-optexp
 # depend pst-optic
 DEPENDS+=	tex-pst-osci-[0-9]*:../../graphics/tex-pst-osci
-# depend pst-ovl
+DEPENDS+=	tex-pst-ovl-[0-9]*:../../graphics/tex-pst-ovl
 # depend pst-pad
 # depend pst-pdgr
 # depend pst-perspective
@@ -92,7 +92,7 @@ DEPENDS+=	tex-pst-slpe-[0-9]*:../../graphics/tex-pst-slpe
 # depend pst-support
 DEPENDS+=	tex-pst-text-[0-9]*:../../graphics/tex-pst-text
 # depend pst-thick
-# depend pst-tools
+DEPENDS+=	tex-pst-tools-[0-9]*:../../graphics/tex-pst-tools
 DEPENDS+=	tex-pst-tree-[0-9]*:../../graphics/tex-pst-tree
 # depend pst-tvz
 DEPENDS+=	tex-pst-uml-[0-9]*:../../devel/tex-pst-uml
