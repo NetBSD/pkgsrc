@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.733 2016/02/14 13:59:46 leot Exp $
+# $NetBSD: Makefile,v 1.734 2016/04/23 17:54:39 adam Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -416,6 +416,7 @@ SUBDIR+=	py-gnuplot
 SUBDIR+=	py-goocanvas
 SUBDIR+=	py-graphviz
 SUBDIR+=	py-gtkglext
+SUBDIR+=	py-imagesize
 SUBDIR+=	py-imaging
 SUBDIR+=	py-imagingtk
 SUBDIR+=	py-matplotlib
