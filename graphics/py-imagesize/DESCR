@@ -1,0 +1,1 @@
+This module analyzes jpeg/jpeg2000/png/gif image header and return image size.
