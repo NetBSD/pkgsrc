@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/04/23 17:46:30 adam Exp $
+
+SHA1 (imagesize-0.7.1.tar.gz) = cfef5d52e8822cca4adecf6a894ca41ddf162de4
+RMD160 (imagesize-0.7.1.tar.gz) = c2165ac9d0e6dc5eb1c8666e2fa05abce3f586d7
+SHA512 (imagesize-0.7.1.tar.gz) = 61ff92167cc90bb1dcc78bb358419a526f09dc567709548bbe399694aa15dab63744f56c67bf33a940f5f443fd3a5ddc08ef9e17799b6fede1b11c0ad6a17f75
+Size (imagesize-0.7.1.tar.gz) = 2871 bytes
