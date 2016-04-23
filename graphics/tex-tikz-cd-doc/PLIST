@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2016/04/23 22:32:03 markd Exp $
+share/texmf-dist/doc/latex/tikz-cd/README
+share/texmf-dist/doc/latex/tikz-cd/tikz-cd-doc.pdf
+share/texmf-dist/doc/latex/tikz-cd/tikz-cd-doc.tex
