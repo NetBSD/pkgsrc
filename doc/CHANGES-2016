@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1694 2016/04/23 13:13:45 wen Exp $
+$NetBSD: CHANGES-2016,v 1.1695 2016/04/23 16:19:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2187,3 +2187,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/libuv to 1.9.0 [adam 2016-04-23]
 	Updated devel/p5-MooseX-App-Cmd to 0.32 [wen 2016-04-23]
 	Updated time/p5-Time-HiRes to 1.9732 [wen 2016-04-23]
+	Updated www/contao41 to 4.1.3 [taca 2016-04-23]
