@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q1,v 1.1.2.5 2016/04/20 19:27:28 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q1,v 1.1.2.6 2016/04/23 17:52:22 bsiegert Exp $
 
 Changes to the packages collection and infrastructure on the pkgsrc-2016Q1 branch:
 
@@ -15,4 +15,7 @@ www/bozohttpd: security-update
 
 Pullup ticket #4962 - requested by sevan
 lang/perl5: security fix
+
+Pullup ticket #4963 - requested by he
+x11/pixman: build fix
 
