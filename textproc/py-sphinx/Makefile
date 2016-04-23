@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2016/04/05 05:38:43 khorben Exp $
+# $NetBSD: Makefile,v 1.30 2016/04/23 17:48:55 adam Exp $
 
-DISTNAME=	Sphinx-1.3.4
+DISTNAME=	Sphinx-1.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
-PKGREVISION=	2
 CATEGORIES=	textproc python
 MASTER_SITES=	http://pypi.python.org/packages/source/S/Sphinx/
 
@@ -11,14 +10,15 @@ HOMEPAGE=	http://sphinx.pocoo.org/
 COMMENT=	Python documentation generator
 LICENSE=	modified-bsd
 
+DEPENDS+=	${PYPKGPREFIX}-alabaster>=0.7:../../textproc/py-alabaster
+DEPENDS+=	${PYPKGPREFIX}-babel-[0-9]*:../../devel/py-babel
 DEPENDS+=	${PYPKGPREFIX}-docutils>=0.8.1:../../textproc/py-docutils
+DEPENDS+=	${PYPKGPREFIX}-imagesize-[0-9]*:../../graphics/py-imagesize
 DEPENDS+=	${PYPKGPREFIX}-jinja2>=2.2:../../textproc/py-jinja2
 DEPENDS+=	${PYPKGPREFIX}-pygments>=0.8:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-pytz-[0-9]*:../../time/py-pytz
 DEPENDS+=	${PYPKGPREFIX}-snowballstemmer-[0-9]*:../../textproc/py-snowballstemmer
 DEPENDS+=	${PYPKGPREFIX}-sphinx-rtd-theme-[0-9]*:../../textproc/py-sphinx-rtd-theme
-DEPENDS+=	${PYPKGPREFIX}-alabaster>=0.7:../../textproc/py-alabaster
-DEPENDS+=	${PYPKGPREFIX}-babel-[0-9]*:../../devel/py-babel
 DEPENDS+=	${PYPKGPREFIX}-six-[0-9]*:../../lang/py-six
 # test dependency
 BUILD_DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
