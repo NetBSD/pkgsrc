@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2015/04/21 22:45:53 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2016/04/23 21:50:21 markd Exp $
 share/texmf-dist/doc/latex/biblatex/README
 share/texmf-dist/doc/latex/biblatex/RELEASE
 share/texmf-dist/doc/latex/biblatex/biblatex.pdf
@@ -138,4 +138,7 @@ share/texmf-dist/doc/latex/biblatex/examples/91-sorting-schemes.pdf
 share/texmf-dist/doc/latex/biblatex/examples/91-sorting-schemes.tex
 share/texmf-dist/doc/latex/biblatex/examples/92-bibliographylists.pdf
 share/texmf-dist/doc/latex/biblatex/examples/92-bibliographylists.tex
+share/texmf-dist/doc/latex/biblatex/examples/93-nameparts.dbx
+share/texmf-dist/doc/latex/biblatex/examples/93-nameparts.tex
 share/texmf-dist/doc/latex/biblatex/examples/biblatex-examples.bib
+share/texmf-dist/doc/latex/biblatex/examples/biblatex-examples.bltxml
