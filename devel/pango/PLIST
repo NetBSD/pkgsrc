@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.64 2016/04/07 18:37:46 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.65 2016/04/23 07:49:36 prlw1 Exp $
 bin/pango-view
 include/pango-1.0/pango/pango-attributes.h
 include/pango-1.0/pango/pango-bidi-type.h
@@ -83,7 +83,6 @@ share/gtk-doc/html/pango/api-index-deprecated.html
 share/gtk-doc/html/pango/api-index-full.html
 share/gtk-doc/html/pango/home.png
 share/gtk-doc/html/pango/index.html
-share/gtk-doc/html/pango/index.sgml
 share/gtk-doc/html/pango/layout.gif
 share/gtk-doc/html/pango/left-insensitive.png
 share/gtk-doc/html/pango/left.png
