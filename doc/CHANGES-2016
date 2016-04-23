@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1696 2016/04/23 18:42:42 adam Exp $
+$NetBSD: CHANGES-2016,v 1.1697 2016/04/23 22:54:41 markd Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2192,3 +2192,15 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/py-sphinx to 1.4.1 [adam 2016-04-23]
 	Added www/wslay version 1.0.0 [adam 2016-04-23]
 	Updated www/h2o to 1.7.1 [adam 2016-04-23]
+	Updated print/p5-biblatex-biber to 2.4 [markd 2016-04-23]
+	Updated print/tex-biblatex to 3.3 [markd 2016-04-23]
+	Updated print/tex-biblatex-doc to 3.3 [markd 2016-04-23]
+	Added graphics/tex-pgfgantt version 4.0 [markd 2016-04-23]
+	Added graphics/tex-pgfgantt-doc version 4.0 [markd 2016-04-23]
+	Added graphics/tex-pst-ovl version 0.06 [markd 2016-04-23]
+	Added graphics/tex-pst-ovl-doc version 0.06 [markd 2016-04-23]
+	Added graphics/tex-pst-tools version 0.05 [markd 2016-04-23]
+	Added graphics/tex-pst-tools-doc version 0.05 [markd 2016-04-23]
+	Added graphics/tex-tikz-cd version 0.9e [markd 2016-04-23]
+	Added graphics/tex-tikz-cd-doc version 0.9e [markd 2016-04-23]
+	Updated math/py-scipy to 0.17.0 [markd 2016-04-23]
