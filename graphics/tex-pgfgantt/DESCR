@@ -1,0 +1,4 @@
+The package provides an environment for drawing Gantt charts
+that contain various elements (titles, bars, milestones, groups
+and links). Several keys customize the appearance of the chart
+elements.
