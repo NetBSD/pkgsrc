@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1691 2016/04/23 12:53:02 adam Exp $
+$NetBSD: CHANGES-2016,v 1.1692 2016/04/23 13:02:56 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2185,3 +2185,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated audio/qsynth to 0.4.1 [nros 2016-04-23]
 	Updated www/contao35 to 3.5.12 [taca 2016-04-23]
 	Updated devel/libuv to 1.9.0 [adam 2016-04-23]
+	Updated devel/p5-MooseX-App-Cmd to 0.32 [wen 2016-04-23]
