@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2016/02/01 09:41:59 adam Exp $
+@comment $NetBSD: PLIST,v 1.17 2016/04/23 06:23:49 adam Exp $
 bin/rrdcached
 bin/rrdcgi
 bin/rrdcreate
@@ -10,7 +10,6 @@ include/rrd_client.h
 include/rrd_config.h
 include/rrd_format.h
 lib/librrd.la
-lib/librrd_th.la
 lib/pkgconfig/librrd.pc
 man/man1/bin_dec_hex.1
 man/man1/cdeftutorial.1
