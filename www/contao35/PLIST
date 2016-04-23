@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2016/03/05 06:16:44 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2016/04/23 12:40:42 taca Exp $
 ${CT_WEBDIR}/.htaccess.default
 ${CT_WEBDIR}/README.md
 ${CT_WEBDIR}/assets/ace/1.1.8/ace.js
@@ -3509,6 +3509,9 @@ ${CT_WEBDIR}/vendor/leafo/scssphp/src/Block.php
 ${CT_WEBDIR}/vendor/leafo/scssphp/src/Colors.php
 ${CT_WEBDIR}/vendor/leafo/scssphp/src/Compiler.php
 ${CT_WEBDIR}/vendor/leafo/scssphp/src/Compiler/Environment.php
+${CT_WEBDIR}/vendor/leafo/scssphp/src/Exception/CompilerException.php
+${CT_WEBDIR}/vendor/leafo/scssphp/src/Exception/ParserException.php
+${CT_WEBDIR}/vendor/leafo/scssphp/src/Exception/ServerException.php
 ${CT_WEBDIR}/vendor/leafo/scssphp/src/Formatter.php
 ${CT_WEBDIR}/vendor/leafo/scssphp/src/Formatter/Compact.php
 ${CT_WEBDIR}/vendor/leafo/scssphp/src/Formatter/Compressed.php
@@ -3524,11 +3527,8 @@ ${CT_WEBDIR}/vendor/leafo/scssphp/src/Server.php
 ${CT_WEBDIR}/vendor/leafo/scssphp/src/Type.php
 ${CT_WEBDIR}/vendor/leafo/scssphp/src/Util.php
 ${CT_WEBDIR}/vendor/leafo/scssphp/src/Version.php
-${CT_WEBDIR}/vendor/matthiasmullie/minify/.coveralls.yml
-${CT_WEBDIR}/vendor/matthiasmullie/minify/.gitignore
-${CT_WEBDIR}/vendor/matthiasmullie/minify/.travis.yml
+${CT_WEBDIR}/vendor/matthiasmullie/minify/CONTRIBUTING.md
 ${CT_WEBDIR}/vendor/matthiasmullie/minify/LICENSE
-${CT_WEBDIR}/vendor/matthiasmullie/minify/README.md
 ${CT_WEBDIR}/vendor/matthiasmullie/minify/bin/minifycss
 ${CT_WEBDIR}/vendor/matthiasmullie/minify/bin/minifyjs
 ${CT_WEBDIR}/vendor/matthiasmullie/minify/composer.json
@@ -3537,23 +3537,16 @@ ${CT_WEBDIR}/vendor/matthiasmullie/minify/data/js/keywords_before.txt
 ${CT_WEBDIR}/vendor/matthiasmullie/minify/data/js/keywords_reserved.txt
 ${CT_WEBDIR}/vendor/matthiasmullie/minify/data/js/operators_after.txt
 ${CT_WEBDIR}/vendor/matthiasmullie/minify/data/js/operators_before.txt
-${CT_WEBDIR}/vendor/matthiasmullie/minify/makefile
-${CT_WEBDIR}/vendor/matthiasmullie/minify/phpunit.xml.dist
 ${CT_WEBDIR}/vendor/matthiasmullie/minify/src/CSS.php
 ${CT_WEBDIR}/vendor/matthiasmullie/minify/src/Exception.php
+${CT_WEBDIR}/vendor/matthiasmullie/minify/src/Exceptions/BasicException.php
+${CT_WEBDIR}/vendor/matthiasmullie/minify/src/Exceptions/FileImportException.php
+${CT_WEBDIR}/vendor/matthiasmullie/minify/src/Exceptions/IOException.php
 ${CT_WEBDIR}/vendor/matthiasmullie/minify/src/JS.php
 ${CT_WEBDIR}/vendor/matthiasmullie/minify/src/Minify.php
-${CT_WEBDIR}/vendor/matthiasmullie/minify/tests/css/sample/convert_relative_path/target/.gitignore
-${CT_WEBDIR}/vendor/matthiasmullie/minify/tests/css/sample/convert_relative_path/target/target/.gitignore
-${CT_WEBDIR}/vendor/matthiasmullie/minify/tests/js/sample/target/.gitignore
 ${CT_WEBDIR}/vendor/matthiasmullie/path-converter/.coveralls.yml
-${CT_WEBDIR}/vendor/matthiasmullie/path-converter/.gitignore
-${CT_WEBDIR}/vendor/matthiasmullie/path-converter/.travis.yml
 ${CT_WEBDIR}/vendor/matthiasmullie/path-converter/LICENSE
-${CT_WEBDIR}/vendor/matthiasmullie/path-converter/README.md
 ${CT_WEBDIR}/vendor/matthiasmullie/path-converter/composer.json
-${CT_WEBDIR}/vendor/matthiasmullie/path-converter/makefile
-${CT_WEBDIR}/vendor/matthiasmullie/path-converter/phpunit.xml.dist
 ${CT_WEBDIR}/vendor/matthiasmullie/path-converter/src/Converter.php
 ${CT_WEBDIR}/vendor/michelf/php-markdown/License.md
 ${CT_WEBDIR}/vendor/michelf/php-markdown/Michelf/Markdown.inc.php
