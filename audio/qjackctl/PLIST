@@ -1,4 +1,14 @@
-@comment $NetBSD: PLIST,v 1.2 2009/06/14 17:32:21 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/04/23 10:05:18 nros Exp $
 bin/qjackctl
+man/man1/qjackctl.1
+share/appdata/qjackctl.appdata.xml
 share/applications/qjackctl.desktop
-share/pixmaps/qjackctl.png
+share/icons/hicolor/32x32/apps/qjackctl.png
+share/qjackctl/translations/qjackctl_cs.qm
+share/qjackctl/translations/qjackctl_de.qm
+share/qjackctl/translations/qjackctl_es.qm
+share/qjackctl/translations/qjackctl_fr.qm
+share/qjackctl/translations/qjackctl_it.qm
+share/qjackctl/translations/qjackctl_ja.qm
+share/qjackctl/translations/qjackctl_nl.qm
+share/qjackctl/translations/qjackctl_ru.qm
