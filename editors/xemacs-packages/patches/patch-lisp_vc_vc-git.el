@@ -1,4 +1,4 @@
-$NetBSD: patch-lisp_vc_vc-git.el,v 1.1 2015/09/30 10:11:45 hauke Exp $
+$NetBSD: patch-lisp_vc_vc-git.el,v 1.2 2016/04/23 09:24:07 hauke Exp $
 
 Instead of blindly assuming a utf-8 capable XEmacs, look at the
 current buffer for the encoding to use.
@@ -12,7 +12,7 @@ current buffer for the encoding to use.
 -(defvar git-commits-coding-system 'utf-8
 +(defun vc-git-determine-coding-system ()
 +
-+  "Return utf-8 om 21.5, or the current buffer's coding on 21,4"
++  "Return utf-8 on 21.5, or the current buffer's encoding on 21.4"
 +
 +  (if (and (featurep 'xemacs)
 +	   (<= emacs-major-version 21)
