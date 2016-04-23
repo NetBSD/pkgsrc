@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.734 2016/04/23 17:54:39 adam Exp $
+# $NetBSD: Makefile,v 1.735 2016/04/23 22:35:38 markd Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -563,6 +563,8 @@ SUBDIR+=	tex-mptopdf
 SUBDIR+=	tex-mptopdf-doc
 SUBDIR+=	tex-pdfcrop
 SUBDIR+=	tex-pdfcrop-doc
+SUBDIR+=	tex-pgfgantt
+SUBDIR+=	tex-pgfgantt-doc
 SUBDIR+=	tex-pictex
 SUBDIR+=	tex-pictex-doc
 SUBDIR+=	tex-piechartmp
@@ -601,6 +603,8 @@ SUBDIR+=	tex-pst-node
 SUBDIR+=	tex-pst-node-doc
 SUBDIR+=	tex-pst-osci
 SUBDIR+=	tex-pst-osci-doc
+SUBDIR+=	tex-pst-ovl
+SUBDIR+=	tex-pst-ovl-doc
 SUBDIR+=	tex-pst-pdf
 SUBDIR+=	tex-pst-pdf-doc
 SUBDIR+=	tex-pst-plot
@@ -611,6 +615,8 @@ SUBDIR+=	tex-pst-slpe
 SUBDIR+=	tex-pst-slpe-doc
 SUBDIR+=	tex-pst-text
 SUBDIR+=	tex-pst-text-doc
+SUBDIR+=	tex-pst-tools
+SUBDIR+=	tex-pst-tools-doc
 SUBDIR+=	tex-pst-tree
 SUBDIR+=	tex-pst-tree-doc
 SUBDIR+=	tex-pst-vue3d
@@ -642,6 +648,8 @@ SUBDIR+=	tex-threeddice
 SUBDIR+=	tex-threeddice-doc
 SUBDIR+=	tex-tikz-3dplot
 SUBDIR+=	tex-tikz-3dplot-doc
+SUBDIR+=	tex-tikz-cd
+SUBDIR+=	tex-tikz-cd-doc
 SUBDIR+=	tex-tikzinclude
 SUBDIR+=	tex-tikzinclude-doc
 SUBDIR+=	tex-tikzmark
