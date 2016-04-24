@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1701 2016/04/24 06:53:45 prlw1 Exp $
+$NetBSD: CHANGES-2016,v 1.1702 2016/04/24 06:54:26 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2208,3 +2208,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Role-Tiny to 2.000003 [wiz 2016-04-24]
 	Updated graphics/p5-Image-ExifTool to 10.15 [wiz 2016-04-24]
 	Updated games/freeciv-share to 2.5.3 [prlw1 2016-04-24]
+	Updated games/freeciv-server to 2.5.3 [prlw1 2016-04-24]
