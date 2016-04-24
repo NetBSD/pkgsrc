@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15809 2016/04/24 09:37:48 wiz Exp $
+$NetBSD: TODO,v 1.15810 2016/04/24 09:48:53 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1604,7 +1604,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-tlslite-0.4.6
 	o py-uliweb-0.5b0
 	o py-uwsgi-2.0.12
-	o py-vdirsyncer-0.10.0
 	o py-wxWidgets-3.0.0
 	o py-yubiauth-0.3.10
 	o py-zconfig-3.0.3
