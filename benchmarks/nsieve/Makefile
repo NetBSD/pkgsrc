@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2014/10/09 14:06:00 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2016/04/24 10:34:43 wiz Exp $
 
 DISTNAME=		nsieve.c
 PKGNAME=		nsieve-1.2b
 CATEGORIES=		benchmarks
-MASTER_SITES=	http://ftp.sunet.se/pub/benchmark/aburto/nsieve/
-EXTRACT_SUFX=	#empty
+MASTER_SITES=		#http://ftp.sunet.se/pub/benchmark/aburto/nsieve/
+EXTRACT_SUFX=		#empty
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Sieve of Eratosthenes benchmark

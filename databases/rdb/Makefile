@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.16 2015/06/12 10:48:46 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2016/04/24 10:34:44 wiz Exp $
 
 DISTNAME=	RDB-2.6d
 PKGNAME=	rdb-2.6.4
 PKGREVISION=	5
 CATEGORIES=	databases
-MASTER_SITES=	ftp://ftp.sunet.se/pub/unix/databases/flat-file/RDB/
+MASTER_SITES=	# ftp://ftp.sunet.se/pub/unix/databases/flat-file/RDB/
 
 MAINTAINER=	njohnston@globaltetrahedron.com
-HOMEPAGE=	ftp://ftp.sunet.se/pub/unix/databases/flat-file/RDB/
+#HOMEPAGE=	ftp://ftp.sunet.se/pub/unix/databases/flat-file/RDB/
 COMMENT=	Relational database system that uses standard filters via pipes
 
 WRKSRC=		${WRKDIR}/rdb
