@@ -1,17 +1,6 @@
-$NetBSD: distinfo,v 1.30 2015/11/03 20:56:50 agc Exp $
+$NetBSD: distinfo,v 1.31 2016/04/24 06:52:44 prlw1 Exp $
 
-SHA1 (freeciv-2.5.0.tar.bz2) = 477b60e02606e47b31a019b065353c1a6da6c305
-RMD160 (freeciv-2.5.0.tar.bz2) = 51d16d9c746bd42123c333c2103882b771c6b796
-SHA512 (freeciv-2.5.0.tar.bz2) = f03bafdca47da0677ad81ed945afe79bbd01ae871b95e6bdaf6249acb8420e78e3210dd60f520d960ec127e1d443f45c11fcc484b49b6bb59cab5904e51fc651
-Size (freeciv-2.5.0.tar.bz2) = 40323793 bytes
-SHA1 (patch-aa) = bac3e05393c154defd288cc621606a3dbd7f00eb
-SHA1 (patch-common_dataio.c) = 6fd08d7185f953fbfdc2c554ad67c4e5c8f2be87
-SHA1 (patch-common_dataio.h) = 4a513230ee814269466959fcb977b1360a78ee53
-SHA1 (patch-common_generate__packets.py) = 0fb74f024d1ada9ad85f62b12099c385d1e972c7
-SHA1 (patch-common_packets.c) = 7ea66b3d0068a1255d818a9808bf7e581c95fb71
-SHA1 (patch-configure.ac) = 3c9ce11318a497df6c06f2e272183b1dd1eaf483
-SHA1 (patch-dependencies_lua-5.1_src_Makefile.am) = 2d240eb7488bfd0071867b68e5a78a6927c85089
-SHA1 (patch-dependencies_tolua-5.1_src_bin_Makefile.am) = 933dd8a213a3b2fecc290d59d3d12437e9c5ce2c
-SHA1 (patch-dependencies_tolua-5.1_src_lib_Makefile.am) = 8810cd3865433a52783f8ae274ebb0d8b50deee8
-SHA1 (patch-m4_x.m4) = 53e685c02ab97fcef9c39be1fee5dc5e73775588
-SHA1 (patch-server_Makefile.am) = 6f4cac8fccd8a289d944db6593bbbabb3650d4b9
+SHA1 (freeciv-2.5.3.tar.bz2) = 070900a13c5861a9ce23e7dad03552277e3b9395
+RMD160 (freeciv-2.5.3.tar.bz2) = c20bc780f744e1ff79656c86b3776c97b66faee5
+SHA512 (freeciv-2.5.3.tar.bz2) = a3e1ee5f585be062ec5fc7783dfe24f4cd313bea016af47b868e01561fc3958a86ed310edd41130fc5ede6ca2547ca38198c8dbb18974db7d14defd103277b4b
+Size (freeciv-2.5.3.tar.bz2) = 41010519 bytes
