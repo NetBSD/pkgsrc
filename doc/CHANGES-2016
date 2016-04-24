@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1703 2016/04/24 06:54:55 prlw1 Exp $
+$NetBSD: CHANGES-2016,v 1.1704 2016/04/24 09:27:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2210,3 +2210,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated games/freeciv-share to 2.5.3 [prlw1 2016-04-24]
 	Updated games/freeciv-server to 2.5.3 [prlw1 2016-04-24]
 	Updated games/freeciv-client to 2.5.3 [prlw1 2016-04-24]
+	Updated devel/meld to 3.15.3 [wiz 2016-04-24]
