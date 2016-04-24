@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1706 2016/04/24 09:45:02 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1707 2016/04/24 09:48:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2213,3 +2213,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/meld to 3.15.3 [wiz 2016-04-24]
 	Updated devel/py-cffi to 1.6.0 [wiz 2016-04-24]
 	Added devel/py-hypothesis version 3.1.0 [wiz 2016-04-24]
+	Updated time/py-vdirsyncer to 0.10.0 [wiz 2016-04-24]
