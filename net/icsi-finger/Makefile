@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2016/02/25 16:20:51 jperkin Exp $
-#
+# $NetBSD: Makefile,v 1.30 2016/04/24 10:34:44 wiz Exp $
 
 DISTNAME=	icsi-finger-1.0.29
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.icsi.berkeley.edu/pub/ai/stolcke/software/
-MASTER_SITES+=	http://ftp.sunet.se/pub/nir/finger/icsi-finger/
 EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	is@NetBSD.org

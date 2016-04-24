@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15811 2016/04/24 10:02:25 wiz Exp $
+$NetBSD: TODO,v 1.15812 2016/04/24 10:34:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -53,11 +53,6 @@ Suggested new packages
 	doxywizard
 	QT-based wizard for doxygen documentation generator.
 	See devel/doxygen
-
-	tkfontsel
-	http://ftp.sunet.se/pub/lang/tcl/sorted/graphics/tkfontsel/
-	http://ftp.se.kde.org/pub/lang/tcl/sorted/packages-7.6/graphics/tkfontsel/
-	Simple Tk font browser.
 
 	xftlsfonts
 	FreeType font list displayer.

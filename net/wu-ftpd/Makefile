@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2015/02/07 22:58:18 tnn Exp $
+# $NetBSD: Makefile,v 1.41 2016/04/24 10:34:44 wiz Exp $
 
 DISTNAME=	wu-ftpd-2.6.2
 PKGREVISION=	3
@@ -9,7 +9,7 @@ MASTER_SITES=	ftp://ftp.freenet.de/pub/ftp.wu-ftpd.org/pub/wu-ftpd/ \
 		http://gd.tuwien.ac.at/infosys/servers/ftp/wu-ftpd/wu-ftpd/
 
 PATCHFILES=	realpath.patch connect-dos.patch
-PATCH_SITES=	ftp://ftp.sunet.se/pub/nir/ftp/servers/wuarchive-ftpd/wu-ftpd/patches/apply_to_2.6.2/
+#PATCH_SITES=	ftp://ftp.sunet.se/pub/nir/ftp/servers/wuarchive-ftpd/wu-ftpd/patches/apply_to_2.6.2/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.wu-ftpd.org/
