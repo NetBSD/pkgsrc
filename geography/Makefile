@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2015/11/27 17:52:35 adam Exp $
+# $NetBSD: Makefile,v 1.60 2016/04/24 10:24:40 bouyer Exp $
 #
 
 COMMENT=	Software for geographical-related uses
@@ -34,7 +34,9 @@ SUBDIR+=	libspatialite
 SUBDIR+=	mapserver
 SUBDIR+=	merkaartor
 SUBDIR+=	opencpn
+SUBDIR+=	opencpn-plugin-draw
 SUBDIR+=	opencpn-plugin-gshhs
+SUBDIR+=	opencpn-plugin-watchdog
 SUBDIR+=	opencpn-plugin-weather_routing
 SUBDIR+=	osm-gps-map
 SUBDIR+=	osm2pgsql
