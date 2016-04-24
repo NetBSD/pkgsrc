@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.17 2016/02/14 10:50:12 wiz Exp $
+$NetBSD: distinfo,v 1.18 2016/04/24 09:37:29 wiz Exp $
 
-SHA1 (cffi-1.5.2.tar.gz) = 5239b3aa4f67eed3559c09778096ecd4faeca876
-RMD160 (cffi-1.5.2.tar.gz) = 012cc3b9a4d630a256d5771ec98b179b3bc7b1eb
-SHA512 (cffi-1.5.2.tar.gz) = 3c707db85032bc13287beec0211d85a7b9f9dfcb87844adba3a86b23211acd495e88072ec23f22e7c7626d25cadd5b9843c34255d4080eefb171020ad0a2d552
-Size (cffi-1.5.2.tar.gz) = 388793 bytes
+SHA1 (cffi-1.6.0.tar.gz) = 3161ff5d1e791e86f95de258c93371dff9941c4d
+RMD160 (cffi-1.6.0.tar.gz) = becdee1ee5ede69d556c44dfd3b4c3e0284d00a6
+SHA512 (cffi-1.6.0.tar.gz) = 95dc7fbca624b5474ff0182ff6e1d1c6b8b34ad19c4c22cabf847f7be6c47dc32a96b23165da1c28438a46a1e9f681341fe8b7304ba5618744c595c4ae364466
+Size (cffi-1.6.0.tar.gz) = 397024 bytes
