@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1709 2016/04/24 10:26:38 bouyer Exp $
+$NetBSD: CHANGES-2016,v 1.1710 2016/04/24 19:44:25 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -1992,6 +1992,7 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-ExtUtils-LibBuilder to 0.08 [mef 2016-04-14]
 	Updated emulators/mame to 0.172 [wiz 2016-04-14]
 	Updated devel/ruby-mercenary to 0.3.6 [wiz 2016-04-14]
+	Updated lang/smlnj to 110.73nb1 [dholland 2016-04-14]
 	Added net/tvnjviewer version 2.7.2 [abs 2016-04-14]
 	Updated sysutils/deforaos-browser to 0.5.1 [khorben 2016-04-15]
 	Updated devel/liblangtag to 0.6.0nb1 [wiz 2016-04-15]
