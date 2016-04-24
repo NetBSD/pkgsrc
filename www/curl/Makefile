@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.163 2016/04/10 16:39:28 joerg Exp $
+# $NetBSD: Makefile,v 1.164 2016/04/24 10:34:44 wiz Exp $
 
 DISTNAME=	curl-7.48.0
 CATEGORIES=	www
-MASTER_SITES=	https://curl.haxx.se/download/ \
-		ftp://ftp.sunet.se/pub/www/utilities/curl/
+MASTER_SITES=	https://curl.haxx.se/download/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

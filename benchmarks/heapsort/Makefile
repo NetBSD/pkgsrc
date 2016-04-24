@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2014/10/09 14:05:59 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2016/04/24 10:34:43 wiz Exp $
 
 DISTNAME=		heapsort.c
 PKGNAME=		heapsort-1.0
 CATEGORIES=		benchmarks
-MASTER_SITES=	http://ftp.sunet.se/pub/benchmark/aburto/heapsort/
-EXTRACT_SUFX=	#empty
+MASTER_SITES=		# http://ftp.sunet.se/pub/benchmark/aburto/heapsort/
+EXTRACT_SUFX=		#empty
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Benchmark program for variable sized arrays
