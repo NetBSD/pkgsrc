@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.91 2016/02/25 12:12:47 jperkin Exp $
+# $NetBSD: Makefile,v 1.92 2016/04/24 10:48:06 wiz Exp $
 
 DISTNAME=		glib-1.2.10
 PKGREVISION=		11
 CATEGORIES=		devel
-MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v1.2/ \
-			${MASTER_SITE_GNOME:=sources/glib/1.2/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/glib/1.2/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://developer.gnome.org/glib/
