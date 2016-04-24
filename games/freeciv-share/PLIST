@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2015/04/26 19:19:42 spz Exp $
+@comment $NetBSD: PLIST,v 1.14 2016/04/24 06:52:44 prlw1 Exp $
 etc/freeciv/database.lua
 lib/libfreeciv.la
 man/man6/freeciv-client.6
@@ -32,10 +32,10 @@ share/doc/freeciv/README.AI_modules
 share/doc/freeciv/README.SDLClient
 share/doc/freeciv/README.agents
 share/doc/freeciv/README.attributes
-share/doc/freeciv/README.cma
 share/doc/freeciv/README.delta
 share/doc/freeciv/README.effects
 share/doc/freeciv/README.fcdb
+share/doc/freeciv/README.governor
 share/doc/freeciv/README.graphics
 share/doc/freeciv/README.nations
 share/doc/freeciv/README.packaging
@@ -2465,6 +2465,8 @@ share/freeciv/hex2t/select.png
 share/freeciv/hex2t/select.spec
 share/freeciv/hex2t/tiles.png
 share/freeciv/hex2t/tiles.spec
+share/freeciv/hex2t/unitcost.png
+share/freeciv/hex2t/unitcost.spec
 share/freeciv/isophex.tilespec
 share/freeciv/isophex/darkness.png
 share/freeciv/isophex/darkness.spec
@@ -2495,6 +2497,8 @@ share/freeciv/isotrident/terrain2.png
 share/freeciv/isotrident/terrain2.spec
 share/freeciv/isotrident/tiles.png
 share/freeciv/isotrident/tiles.spec
+share/freeciv/isotrident/unitcost.png
+share/freeciv/isotrident/unitcost.spec
 share/freeciv/isotrident/unitextras.png
 share/freeciv/isotrident/unitextras.spec
 share/freeciv/misc/buildings-large.spec
