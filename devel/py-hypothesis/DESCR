@@ -1,0 +1,10 @@
+Hypothesis is a library for testing your Python code against a much
+larger range of examples than you would ever want to write by hand.
+It's based on the Haskell library, Quickcheck, and is designed to
+integrate seamlessly into your existing Python unit testing work
+flow.
+
+Hypothesis is both extremely practical and also advances the state
+of the art of unit testing by some way. It's easy to use, stable,
+and extremely powerful. If you're not using Hypothesis to test your
+project then you're missing out.
