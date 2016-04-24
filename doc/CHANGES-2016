@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1710 2016/04/24 19:44:25 dholland Exp $
+$NetBSD: CHANGES-2016,v 1.1711 2016/04/24 23:18:28 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2218,3 +2218,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/wireshark to 2.0.3 [wiz 2016-04-24]
 	Added geography/opencpn-plugin-draw version 20160415 [bouyer 2016-04-24]
 	Added geography/opencpn-plugin-watchdog version 20160415 [bouyer 2016-04-24]
+	Updated graphics/feh to 2.15.2 [szptvlfn 2016-04-24]
