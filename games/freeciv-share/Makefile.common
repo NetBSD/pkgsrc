@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.46 2015/12/05 21:25:43 adam Exp $
+# $NetBSD: Makefile.common,v 1.47 2016/04/24 06:52:44 prlw1 Exp $
 
 # used by games/freeciv-share/Makefile
 # used by games/freeciv-client/Makefile
 # used by games/freeciv-server/Makefile
 
 DISTNAME=	freeciv-${FC_VERS}
-FC_VERS=	2.5.0
+FC_VERS=	2.5.3
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=freeciv/}
 EXTRACT_SUFX=	.tar.bz2
