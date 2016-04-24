@@ -1,0 +1,17 @@
+OpenCPN is a free software (GPLv2) project to create a concise chart plotter
+and navigation software, for use underway or as a planning tool. OpenCPN is
+developed by a team of active sailors using real world conditions for
+program testing and refinement.
+
+This plugin is designed to allow users to place objects/items on the OpenCPN
+interface and have these georeferenced. This allows the objects/items to move
+with the chart and have a definined Latitude and Longitude. There are two
+basic types of object/item that can be used: points and paths.
+
+Points are very similar to Waypoints and mark locations on the chart.
+Paths joint two or more points together and draw a line between them.
+Currently these Points exist: Boundary Point, Text Point,
+Electronic Brearing Line (EBL) Point, Dead Reckoning (DR) Point.
+
+These Points are used to construct special types of Paths: Boundary,
+Electronic Bearing Line (EBL) and Dead Reckoning (DR).
