@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15810 2016/04/24 09:48:53 wiz Exp $
+$NetBSD: TODO,v 1.15811 2016/04/24 10:02:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1892,7 +1892,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o windowlab-1.40
 	o wine-1.8.2
 	o wine-devel-1.9.8
-	o wireshark-2.0.3
 	o wmi-11
 	o wmii+ixp-3.9.2 [pkg/43459; wip (wmii-devel); see also libixp entry]
 	o wmx-8
