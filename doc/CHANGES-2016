@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1708 2016/04/24 10:02:25 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1709 2016/04/24 10:26:38 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2215,3 +2215,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Added devel/py-hypothesis version 3.1.0 [wiz 2016-04-24]
 	Updated time/py-vdirsyncer to 0.10.0 [wiz 2016-04-24]
 	Updated net/wireshark to 2.0.3 [wiz 2016-04-24]
+	Added geography/opencpn-plugin-draw version 20160415 [bouyer 2016-04-24]
+	Added geography/opencpn-plugin-watchdog version 20160415 [bouyer 2016-04-24]
