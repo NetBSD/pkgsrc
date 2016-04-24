@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2016/03/03 13:33:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.30 2016/04/24 10:02:13 wiz Exp $
 bin/androiddump
 bin/capinfos
 bin/captype
@@ -30,6 +30,7 @@ lib/wireshark/plugins/${PKGVERSION}/unistim.la
 lib/wireshark/plugins/${PKGVERSION}/wimax.la
 lib/wireshark/plugins/${PKGVERSION}/wimaxasncp.la
 lib/wireshark/plugins/${PKGVERSION}/wimaxmacphy.la
+man/man1/androiddump.1
 man/man1/capinfos.1
 man/man1/dftest.1
 man/man1/dumpcap.1
