@@ -1,0 +1,11 @@
+OpenCPN is a free software (GPLv2) project to create a concise chart plotter
+and navigation software, for use underway or as a planning tool. OpenCPN is
+developed by a team of active sailors using real world conditions for
+program testing and refinement.
+
+This plugin is developed by Sean D'Epagnier and implements various configurable
+alarms alerting the user about the changing conditions round the boat.
+Watchdog also implements a Deadman-alarm and an improved anchor alarm.
+Watchdog communicates with another very useful plug-in, called OpenCPN ODraw
+Plugin (opencpn-plugin-draw in pkgsrc). That plugin is a tool to draw
+geo-referenced points, lines and shapes within OpenCPN.
