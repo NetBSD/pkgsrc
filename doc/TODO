@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15806 2016/04/23 13:02:56 wen Exp $
+$NetBSD: TODO,v 1.15807 2016/04/24 08:41:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -357,6 +357,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o GMT-5.1.1
 	o GNUMail-1.2.2
 	o Gorm-1.2.22
+	o ImageMagick-6.9.3.8
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
 	o MesaDemos-8.3.0
@@ -829,13 +830,20 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gramps-4.1.0
 	o grantlee-5.0.0
 	o greed-4.1
+	o grep-2.25
 	o grilo-0.2.12
 	o grilo-plugins-0.2.14
 	o gromacs-5.1.2
 	o groonga-6.0.0
 	o gsharutils-4.15.2
 	o gss-1.0.3
+	o gst-plugins1-bad-1.8.1
+	o gst-plugins1-base-1.8.1
+	o gst-plugins1-good-1.8.1
+	o gst-plugins1-libav-1.8.1
+	o gst-plugins1-ugly-1.8.1
 	o gst-rtsp-server-1.6.2
+	o gstreamer1-1.8.1
 	o gthumb-3.4.0
 	o gtk-gnutella-0.98.4
 	o gtk-systrace-20030623
@@ -1116,6 +1124,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mecab-ipadic-2.7.0.20070801
 	o mednafen-0.9.38.2
 	o megatools-1.9.97
+	o meld-3.15.3
 	o menhir-20160303
 	o mergeant-0.67
 	o merkaator-0.18.2
@@ -1162,6 +1171,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o munin-node-1.4.6
 	o munin-server-1.4.6
 	o mupdf-1.9 [breaks zathura-pdf-mupdf-0.3.0, so it is better to wait; leot]
+	o mupdf-1.9a
 	o muse-0.9.2
 	o mutagen-tools-1.31
 	o myodbc-5.3.4
@@ -1207,7 +1217,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ocaml-graphics-4.02.3
 	o ocaml-mysql-1.2.0
 	o ocaml-oasis-0.4.5
-	o ocamlgraph-1.8.6
+	o ocamlgraph-1.8.7
 	o ocamlnet-4.1.1
 	o ocrad-0.25
 	o octave-4.0.1
@@ -1533,6 +1543,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-buildbot-0.9.0b5
 	o py-buildbot-slave-0.9.0b5
 	o py-cassa-1.11.0
+	o py-cffi-1.6.0
 	o py-collectd-5.5.1
 	o py-colorama-0.3.6
 	o py-creole-1.1.1
@@ -1595,6 +1606,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-tlslite-0.4.6
 	o py-uliweb-0.5b0
 	o py-uwsgi-2.0.12
+	o py-vdirsyncer-0.10.0
 	o py-wxWidgets-3.0.0
 	o py-yubiauth-0.3.10
 	o py-zconfig-3.0.3
@@ -1611,7 +1623,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o qt5-qtbase-5.6.0
 	o quodlibet2-3.5.3
 	o rabbitmq-3.6.1
-	o radare2-0.10.0
+	o radare2-0.10.2
 	o radare2-valabind-0.10.0
 	o radiance-4R1
 	o ragel-7.0.0.6
@@ -1883,6 +1895,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o windowlab-1.40
 	o wine-1.8.2
 	o wine-devel-1.9.8
+	o wireshark-2.0.3
 	o wmi-11
 	o wmii+ixp-3.9.2 [pkg/43459; wip (wmii-devel); see also libixp entry]
 	o wmx-8
@@ -1893,7 +1906,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wwwoffle-2.9i
 	o wxGTK-3.1.0
 	o wxRemind-101
-	o x264-devel-20160416
+	o x264-devel-20160423
 	o x2vnc-1.31
 	o xa65-2.3.7
 	o xaric-0.13.7
