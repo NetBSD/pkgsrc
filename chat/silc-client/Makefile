@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.65 2015/06/12 10:48:29 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.66 2016/04/24 10:34:43 wiz Exp $
 
 DISTNAME=		${SILC_CLIENT_DISTNAME}
 PKGREVISION=		7
 CATEGORIES=		chat security
 MASTER_SITES=		http://www.silcnet.org/download/client/sources/ \
-			ftp://ftp.silcnet.org/silc/client/sources/ \
-			ftp://ftp.sunet.se/pub/network/silc/client/sources/
+			ftp://ftp.silcnet.org/silc/client/sources/
 EXTRACT_SUFX=		${SILC_CLIENT_EXTRACT_SUFX}
 
 MAINTAINER=		salo@NetBSD.org
