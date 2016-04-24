@@ -1,4 +1,4 @@
-# $NetBSD: suppress_installation.mk,v 1.3 2015/04/26 19:19:42 spz Exp $
+# $NetBSD: suppress_installation.mk,v 1.4 2016/04/24 06:52:44 prlw1 Exp $
 
 # Makefile snippet to be included by freeciv-client and freeciv-server to
 # prevent files installed by freeciv-share from being installed again.
@@ -40,4 +40,3 @@ SUBST_STAGE.installfix2=	post-configure
 SUBST_FILES.installfix2=	common/Makefile
 SUBST_SED.installfix2+=		-e 's|^install-exec-am: install-libLTLIBRARIES|install-exec-am: \# install-libLTLIBRARIES|'
 SUBST_MESSAGE.installfix2=	Suppressing installation of libs already in freeciv-share.
-
