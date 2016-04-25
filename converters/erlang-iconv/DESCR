@@ -1,0 +1,2 @@
+Fast encoding conversion library for Erlang / Elixir. This library
+is a native binding to libiconv library.
