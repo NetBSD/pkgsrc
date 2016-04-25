@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.573 2016/03/12 09:44:14 fhajny Exp $
+# $NetBSD: Makefile,v 1.574 2016/04/25 20:39:15 fhajny Exp $
 #
 
 COMMENT=	Security tools
@@ -72,9 +72,9 @@ SUBDIR+=	dsniff-nox11
 SUBDIR+=	egd
 SUBDIR+=	engine-pkcs11
 SUBDIR+=	ent
-SUBDIR+=	erlang-oauth2
+SUBDIR+=	erlang-fast_tls
+SUBDIR+=	erlang-p1_oauth2
 SUBDIR+=	erlang-p1_pam
-SUBDIR+=	erlang-p1_tls
 #SUBDIR+=	f-prot-antivirus6		# only contains shared files
 SUBDIR+=	f-prot-antivirus6-fs-bin
 SUBDIR+=	f-prot-antivirus6-ms-bin
