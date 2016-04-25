@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2016/01/13 15:03:47 fhajny Exp $
-
-SHA1 (p1_iconv-0.9.0.tar.gz) = 8963b27db457e7190dd4819c081bf425b109268b
-RMD160 (p1_iconv-0.9.0.tar.gz) = 6d172b1458cd3d0266440d0947441e8ba617b4a6
-SHA512 (p1_iconv-0.9.0.tar.gz) = db543ad181c45387b17fcc7611e13925876a4adfda46c110b3454e0749143ccfd1931b6b67bbe22aac77edf066658dba4979331ac499535c18e5efaf72e4d50c
-Size (p1_iconv-0.9.0.tar.gz) = 95239 bytes

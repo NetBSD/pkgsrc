@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2016/01/13 15:29:04 fhajny Exp $
-
-SHA1 (p1_yaml-1.0.0.tar.gz) = d5a77b3306b799aa6cb48520277fa21af57a81df
-RMD160 (p1_yaml-1.0.0.tar.gz) = a67dcefd96f8d848d6db8df5f7ff5e16b85085ce
-SHA512 (p1_yaml-1.0.0.tar.gz) = 3331edef795ae2fd92ff1f352de22f39eca9f97df67ccc713ee01b3124d9d46258b792cce375b6cb4cf6c8551995bb6e69e92ee8eaae376bdf25512307e6ac76
-Size (p1_yaml-1.0.0.tar.gz) = 193716 bytes
-SHA1 (patch-rebar.config.script) = 7ef3f0590f17ff127e52ca403bd43715d7f74cef
