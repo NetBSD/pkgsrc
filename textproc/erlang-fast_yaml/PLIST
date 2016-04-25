@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2016/04/25 14:37:08 fhajny Exp $
+lib/erlang/lib/fast_yaml-${PKGVERSION}/ebin/fast_yaml.app
+lib/erlang/lib/fast_yaml-${PKGVERSION}/ebin/fast_yaml.beam
+lib/erlang/lib/fast_yaml-${PKGVERSION}/ebin/fast_yaml_app.beam
+lib/erlang/lib/fast_yaml-${PKGVERSION}/ebin/fast_yaml_sup.beam
+lib/erlang/lib/fast_yaml-${PKGVERSION}/priv/lib/fast_yaml.so
