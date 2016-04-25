@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2016/04/25 14:20:46 fhajny Exp $
+lib/erlang/lib/ezlib-${PKGVERSION}/ebin/ezlib.app
+lib/erlang/lib/ezlib-${PKGVERSION}/ebin/ezlib.beam
+lib/erlang/lib/ezlib-${PKGVERSION}/ebin/ezlib_app.beam
+lib/erlang/lib/ezlib-${PKGVERSION}/ebin/ezlib_sup.beam
+lib/erlang/lib/ezlib-${PKGVERSION}/priv/lib/ezlib_drv.so
