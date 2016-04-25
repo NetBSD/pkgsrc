@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.429 2016/03/28 12:57:27 kamil Exp $
+# $NetBSD: Makefile,v 1.430 2016/04/25 20:39:15 fhajny Exp $
 #
 
 COMMENT=	Programming languages
@@ -42,6 +42,7 @@ SUBDIR+=	elk
 SUBDIR+=	embryo
 SUBDIR+=	erlang
 SUBDIR+=	erlang-doc
+SUBDIR+=	erlang-luerl
 SUBDIR+=	erlang-man
 SUBDIR+=	f2c
 SUBDIR+=	ficl
