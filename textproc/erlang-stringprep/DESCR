@@ -1,0 +1,3 @@
+Stringprep is a framework for preparing Unicode test strings in
+order to increase the likelihood that string input and string
+comparison work.
