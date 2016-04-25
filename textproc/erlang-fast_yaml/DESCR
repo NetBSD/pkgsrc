@@ -1,0 +1,2 @@
+Fast YAML is an Erlang wrapper for libyaml "C" library. It is
+designed to be fast and efficient.
