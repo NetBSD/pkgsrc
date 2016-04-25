@@ -1,10 +1,21 @@
-$NetBSD: patch-ae,v 1.13 2016/01/16 19:28:02 fhajny Exp $
+$NetBSD: patch-ae,v 1.14 2016/04/25 20:24:14 fhajny Exp $
 
 - Default locations.
 - Make it work with NetBSD's flock(1).
+- Use 'su -' instead of just 'su'. Fixes priv delegation on SunOS
+  and AIX where Erlang relies on $HOME set correctly.
 
---- ejabberdctl.template.orig	2016-01-12 11:07:58.000000000 +0000
+--- ejabberdctl.template.orig	2016-03-30 14:08:04.000000000 +0000
 +++ ejabberdctl.template
+@@ -27,7 +27,7 @@ if [ "$INSTALLUSER" != "" ] ; then
+                 mkdir -p "$INSTALLUSER_HOME"
+                 chown "$INSTALLUSER" "$INSTALLUSER_HOME"
+             fi
+-            EXEC_CMD="su $INSTALLUSER -c"
++            EXEC_CMD="su - $INSTALLUSER -c"
+         fi
+     done
+     if [ `id -g` -eq `id -g $INSTALLUSER` ] ; then
 @@ -73,10 +73,10 @@ if [ "$EJABBERD_CONFIG_PATH" = "" ] ; th
      EJABBERD_CONFIG_PATH=$ETC_DIR/ejabberd.yml
  fi
@@ -27,7 +38,7 @@ $NetBSD: patch-ae,v 1.13 2016/01/16 19:28:02 fhajny Exp $
      fi
      if [ "$EJABBERD_PRIV_PATH" = "" ] ; then
          EJABBERD_PRIV_PATH=$EJABBERDDIR/priv
-@@ -351,7 +351,7 @@ ctl()
+@@ -371,7 +371,7 @@ ctl()
      # using flock if available. Expects a linux-style
      # flock that can lock a file descriptor.
      MAXCONNID=100
@@ -36,7 +47,7 @@ $NetBSD: patch-ae,v 1.13 2016/01/16 19:28:02 fhajny Exp $
      FLOCK=/usr/bin/flock
      if [ ! -x "$FLOCK" ] || [ ! -d "$CONNLOCKDIR" ] ; then
          JOT=/usr/bin/jot
-@@ -378,7 +378,7 @@ ctl()
+@@ -398,7 +398,7 @@ ctl()
              CTL_LOCKFILE="$CONNLOCKDIR/$CTL_CONN"
              (
                  exec 8>"$CTL_LOCKFILE"
