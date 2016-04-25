@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.38 2016/01/16 19:28:01 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.39 2016/04/25 20:24:14 fhajny Exp $
 lib/erlang/lib/${PKGNAME}/ebin/ELDAPv3.beam
 lib/erlang/lib/${PKGNAME}/ebin/XmppAddr.beam
 lib/erlang/lib/${PKGNAME}/ebin/acl.beam
@@ -59,6 +59,7 @@ lib/erlang/lib/${PKGNAME}/ebin/ejabberd_sm_mnesia.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_sm_odbc.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_sm_redis.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_socket.beam
+lib/erlang/lib/${PKGNAME}/ebin/ejabberd_sql_pt.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_stun.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_sup.beam
 lib/erlang/lib/${PKGNAME}/ebin/ejabberd_system_monitor.beam
@@ -74,6 +75,7 @@ lib/erlang/lib/${PKGNAME}/ebin/eldap_filter.beam
 lib/erlang/lib/${PKGNAME}/ebin/eldap_filter_yecc.beam
 lib/erlang/lib/${PKGNAME}/ebin/eldap_pool.beam
 lib/erlang/lib/${PKGNAME}/ebin/eldap_utils.beam
+lib/erlang/lib/${PKGNAME}/ebin/elixir_logger_backend.beam
 lib/erlang/lib/${PKGNAME}/ebin/ext_mod.beam
 lib/erlang/lib/${PKGNAME}/ebin/extauth.beam
 lib/erlang/lib/${PKGNAME}/ebin/gen_iq_handler.beam
@@ -106,6 +108,7 @@ lib/erlang/lib/${PKGNAME}/ebin/mod_irc_connection.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_last.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_mam.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_metrics.beam
+lib/erlang/lib/${PKGNAME}/ebin/mod_mix.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_muc.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_muc_admin.beam
 lib/erlang/lib/${PKGNAME}/ebin/mod_muc_log.beam
@@ -147,6 +150,8 @@ lib/erlang/lib/${PKGNAME}/ebin/node_flat_odbc.beam
 lib/erlang/lib/${PKGNAME}/ebin/node_hometree.beam
 lib/erlang/lib/${PKGNAME}/ebin/node_hometree_odbc.beam
 lib/erlang/lib/${PKGNAME}/ebin/node_mb.beam
+lib/erlang/lib/${PKGNAME}/ebin/node_mix.beam
+lib/erlang/lib/${PKGNAME}/ebin/node_mix_odbc.beam
 lib/erlang/lib/${PKGNAME}/ebin/node_online.beam
 lib/erlang/lib/${PKGNAME}/ebin/node_pep.beam
 lib/erlang/lib/${PKGNAME}/ebin/node_pep_odbc.beam
@@ -157,6 +162,7 @@ lib/erlang/lib/${PKGNAME}/ebin/nodetree_tree.beam
 lib/erlang/lib/${PKGNAME}/ebin/nodetree_tree_odbc.beam
 lib/erlang/lib/${PKGNAME}/ebin/nodetree_virtual.beam
 lib/erlang/lib/${PKGNAME}/ebin/odbc_queries.beam
+lib/erlang/lib/${PKGNAME}/ebin/prosody2ejabberd.beam
 lib/erlang/lib/${PKGNAME}/ebin/pubsub_db_odbc.beam
 lib/erlang/lib/${PKGNAME}/ebin/pubsub_index.beam
 lib/erlang/lib/${PKGNAME}/ebin/pubsub_migrate.beam
@@ -177,11 +183,13 @@ lib/erlang/lib/${PKGNAME}/include/ejabberd_config.hrl
 lib/erlang/lib/${PKGNAME}/include/ejabberd_ctl.hrl
 lib/erlang/lib/${PKGNAME}/include/ejabberd_http.hrl
 lib/erlang/lib/${PKGNAME}/include/ejabberd_sm.hrl
+lib/erlang/lib/${PKGNAME}/include/ejabberd_sql_pt.hrl
 lib/erlang/lib/${PKGNAME}/include/ejabberd_web_admin.hrl
 lib/erlang/lib/${PKGNAME}/include/eldap.hrl
 lib/erlang/lib/${PKGNAME}/include/http_bind.hrl
 lib/erlang/lib/${PKGNAME}/include/jlib.hrl
 lib/erlang/lib/${PKGNAME}/include/logger.hrl
+lib/erlang/lib/${PKGNAME}/include/mod_muc.hrl
 lib/erlang/lib/${PKGNAME}/include/mod_muc_room.hrl
 lib/erlang/lib/${PKGNAME}/include/mod_offline.hrl
 lib/erlang/lib/${PKGNAME}/include/mod_privacy.hrl
