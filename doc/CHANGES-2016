@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1713 2016/04/25 12:52:35 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.1714 2016/04/25 14:37:46 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2226,3 +2226,10 @@ Changes to the packages collection and infrastructure in 2016:
 	Added geography/opencpn-plugin-watchdog version 20160415 [bouyer 2016-04-24]
 	Updated graphics/feh to 2.15.2 [szptvlfn 2016-04-24]
 	Updated devel/ccache to 3.2.5 [adam 2016-04-25]
+	Updated databases/p5-Data-Table to 1.75 [mef 2016-04-25]
+	Updated databases/p5-DBI to 1.635 [mef 2016-04-25]
+	Updated www/p5-Mojolicious to 6.59 [mef 2016-04-25]
+	Updated devel/p5-CPAN-Perl-Releases to 2.66 [mef 2016-04-25]
+	Updated devel/p5-ExtUtils-MakeMaker to 7.14 [mef 2016-04-25]
+	Updated devel/p5-Devel-PatchPerl to 1.42 [mef 2016-04-25]
+	Updated devel/p5-Devel-Cover to 1.23 [mef 2016-04-25]
