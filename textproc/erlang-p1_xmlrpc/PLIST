@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2016/04/25 14:39:43 fhajny Exp $
+lib/erlang/lib/p1_xmlrpc-${PKGVERSION}/ebin/beam_util.beam
+lib/erlang/lib/p1_xmlrpc-${PKGVERSION}/ebin/p1_xmlrpc.app
+lib/erlang/lib/p1_xmlrpc-${PKGVERSION}/ebin/tcp_serv.beam
+lib/erlang/lib/p1_xmlrpc-${PKGVERSION}/ebin/url_util.beam
+lib/erlang/lib/p1_xmlrpc-${PKGVERSION}/ebin/xmlrpc.beam
+lib/erlang/lib/p1_xmlrpc-${PKGVERSION}/ebin/xmlrpc_decode.beam
+lib/erlang/lib/p1_xmlrpc-${PKGVERSION}/ebin/xmlrpc_encode.beam
+lib/erlang/lib/p1_xmlrpc-${PKGVERSION}/ebin/xmlrpc_http.beam
+lib/erlang/lib/p1_xmlrpc-${PKGVERSION}/ebin/xmlrpc_tests.beam
+lib/erlang/lib/p1_xmlrpc-${PKGVERSION}/ebin/xmlrpc_util.beam
+lib/erlang/lib/p1_xmlrpc-${PKGVERSION}/include/xmlrpc.hrl

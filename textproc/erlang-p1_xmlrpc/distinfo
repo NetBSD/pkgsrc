@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/04/25 14:39:43 fhajny Exp $
+
+SHA1 (p1_xmlrpc-1.15.1.tar.gz) = aa4ff40e91e6744172b1dc3d8078ea7a5c1fd27a
+RMD160 (p1_xmlrpc-1.15.1.tar.gz) = 9f4e208c04e81752613134c63dd095a459d284d3
+SHA512 (p1_xmlrpc-1.15.1.tar.gz) = 42d4ad71899f1c460a97a8c24b96673fcd597c6cd3881acb69f703a832729d78217e1bd401f659eccc2a2b2d235e68d0b0ce2543923c8cc675a3793df0291c90
+Size (p1_xmlrpc-1.15.1.tar.gz) = 21132 bytes
