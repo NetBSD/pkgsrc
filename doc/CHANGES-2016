@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1712 2016/04/25 10:32:31 adam Exp $
+$NetBSD: CHANGES-2016,v 1.1713 2016/04/25 12:52:35 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2174,6 +2174,12 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/p5-MailTools to 2.16 [wiz 2016-04-22]
 	Updated devel/p5-Role-Tiny to 2.000002 [wiz 2016-04-22]
 	Updated devel/p5-strictures to 2.000003 [wiz 2016-04-22]
+	Updated databases/erlang-p1_mysql to 1.0.1 [fhajny 2016-04-22]
+	Updated databases/erlang-p1_pgsql to 1.1.0 [fhajny 2016-04-22]
+	Updated databases/erlang-sqlite3 to 1.1.5 [fhajny 2016-04-22]
+	Updated misc/erlang-p1_utils to 1.0.3 [fhajny 2016-04-22]
+	Updated textproc/erlang-jiffy to 0.14.8 [fhajny 2016-04-22]
+	Added lang/erlang-luerl version 0.2 [fhajny 2016-04-22]
 	Updated www/squid3 to 3.5.17 [adam 2016-04-22]
 	Updated devel/libinotify to 0.0nb1 [jperkin 2016-04-22]
 	Updated sysutils/gsettings-desktop-schemas to 3.20.0 [prlw1 2016-04-22]
