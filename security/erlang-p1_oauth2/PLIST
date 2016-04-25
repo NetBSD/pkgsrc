@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2016/04/25 14:30:45 fhajny Exp $
+lib/erlang/lib/p1_oauth2-${PKGVERSION}/ebin/oauth2.beam
+lib/erlang/lib/p1_oauth2-${PKGVERSION}/ebin/oauth2_backend.beam
+lib/erlang/lib/p1_oauth2-${PKGVERSION}/ebin/oauth2_config.beam
+lib/erlang/lib/p1_oauth2-${PKGVERSION}/ebin/oauth2_priv_set.beam
+lib/erlang/lib/p1_oauth2-${PKGVERSION}/ebin/oauth2_response.beam
+lib/erlang/lib/p1_oauth2-${PKGVERSION}/ebin/oauth2_token.beam
+lib/erlang/lib/p1_oauth2-${PKGVERSION}/ebin/oauth2_token_generation.beam
+lib/erlang/lib/p1_oauth2-${PKGVERSION}/ebin/p1_oauth2.app
