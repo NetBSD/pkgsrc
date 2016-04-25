@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.2 2016/04/12 13:25:21 ryoon Exp $
+# $NetBSD: hacks.mk,v 1.3 2016/04/25 12:12:40 wiz Exp $
 
 .if !defined(EMACS_HACKS_MK)
 EMACS_HACKS_MK=	defined
@@ -17,6 +17,7 @@ BUILDLINK_TRANSFORM+=	opt:-O2:-O0
 
 ### PaX is enabled, bootstrap-emacs command dumps core with segfault.
 ### emacs-24.5/src/Makefile.in does not support NetBSD paxctl(8) syntax.
+### http://debbugs.gnu.org/cgi/bugreport.cgi?bug=23371
 ###
 .  if !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64)
 .    if exists(/usr/sbin/paxctl)
