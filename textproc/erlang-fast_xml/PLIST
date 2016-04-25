@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2016/04/25 14:33:38 fhajny Exp $
+lib/erlang/lib/fast_xml-${PKGVERSION}/ebin/fast_xml.app
+lib/erlang/lib/fast_xml-${PKGVERSION}/ebin/fast_xml.beam
+lib/erlang/lib/fast_xml-${PKGVERSION}/ebin/fxml.beam
+lib/erlang/lib/fast_xml-${PKGVERSION}/ebin/fxml_gen.beam
+lib/erlang/lib/fast_xml-${PKGVERSION}/ebin/fxml_stream.beam
+lib/erlang/lib/fast_xml-${PKGVERSION}/ebin/fxml_sup.beam
+lib/erlang/lib/fast_xml-${PKGVERSION}/ebin/fxmlrpc.beam
+lib/erlang/lib/fast_xml-${PKGVERSION}/ebin/fxmlrpc_codec.beam
+lib/erlang/lib/fast_xml-${PKGVERSION}/include/fxml.hrl
+lib/erlang/lib/fast_xml-${PKGVERSION}/include/fxml_gen.hrl
+lib/erlang/lib/fast_xml-${PKGVERSION}/priv/lib/fxml.so
+lib/erlang/lib/fast_xml-${PKGVERSION}/priv/lib/fxml_stream.so
