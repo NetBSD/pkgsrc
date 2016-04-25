@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2016/01/16 19:28:01 fhajny Exp $
+# $NetBSD: options.mk,v 1.4 2016/04/25 20:24:14 fhajny Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ejabberd
 PKG_SUPPORTED_OPTIONS=	redis sqlite
@@ -17,5 +17,5 @@ DEPENDS+=		erlang-eredis>=1.0.8.20150910:../../databases/erlang-eredis
 # Add SQLite 3 support
 #
 .if !empty(PKG_OPTIONS:Msqlite)
-DEPENDS+=		erlang-sqlite3>=1.1.5.20151221:../../databases/erlang-sqlite3
+DEPENDS+=		erlang-sqlite3>=1.1.5:../../databases/erlang-sqlite3
 .endif
