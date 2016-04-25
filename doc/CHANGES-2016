@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1714 2016/04/25 14:37:46 mef Exp $
+$NetBSD: CHANGES-2016,v 1.1715 2016/04/25 20:40:35 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2233,3 +2233,26 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-ExtUtils-MakeMaker to 7.14 [mef 2016-04-25]
 	Updated devel/p5-Devel-PatchPerl to 1.42 [mef 2016-04-25]
 	Updated devel/p5-Devel-Cover to 1.23 [mef 2016-04-25]
+	Moved devel/erlang-p1_cache_tab to devel/erlang-cache_tab [fhajny 2016-04-25]
+	Added devel/erlang-ezlib version 1.0.1 [fhajny 2016-04-25]
+	Added converters/erlang-iconv version 1.0.0 [fhajny 2016-04-25]
+	Added security/erlang-fast_tls version 1.0.1 [fhajny 2016-04-25]
+	Added security/erlang-p1_oauth2 version 0.6.1 [fhajny 2016-04-25]
+	Added textproc/erlang-fast_xml version 1.1.3 [fhajny 2016-04-25]
+	Added textproc/erlang-fast_yaml version 1.0.3 [fhajny 2016-04-25]
+	Added textproc/erlang-p1_xmlrpc version 1.15.1 [fhajny 2016-04-25]
+	Added textproc/erlang-stringprep version 1.0.2 [fhajny 2016-04-25]
+	Added net/erlang-stun version 1.0.1 [fhajny 2016-04-25]
+	Added net/erlang-esip version 1.0.2 [fhajny 2016-04-25]
+	Updated chat/ejabberd to 16.03 [fhajny 2016-04-25]
+	Removed converters/erlang-p1_iconv [fhajny 2016-04-25]
+	Removed devel/erlang-p1_cache_tab [fhajny 2016-04-25]
+	Removed devel/erlang-p1_zlib [fhajny 2016-04-25]
+	Removed net/erlang-p1_sip [fhajny 2016-04-25]
+	Removed net/erlang-p1_stun [fhajny 2016-04-25]
+	Removed security/erlang-oauth2 [fhajny 2016-04-25]
+	Removed security/erlang-p1_tls [fhajny 2016-04-25]
+	Removed textproc/erlang-p1_stringprep [fhajny 2016-04-25]
+	Removed textproc/erlang-p1_xml [fhajny 2016-04-25]
+	Removed textproc/erlang-p1_yaml [fhajny 2016-04-25]
+	Removed textproc/erlang-xmlrpc [fhajny 2016-04-25]
