@@ -1,0 +1,2 @@
+This library is designed to simplify the implementation of the server
+side of OAuth2. It provides no support for developing clients.
