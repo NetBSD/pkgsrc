@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2016/01/16 18:46:30 fhajny Exp $
-
-SHA1 (p1_sip-1.0.0.tar.gz) = 9ffc0b8b554bd4e73f97f5f52fa1e5f423db715f
-RMD160 (p1_sip-1.0.0.tar.gz) = 1f321c4ccb53f8e8b2b9287dd581ec1b232d61af
-SHA512 (p1_sip-1.0.0.tar.gz) = e467e5a0eb8f349d092283ab45a880f4901684097d2ffd6caed4ed09ead26784152186656d6bca82faef3c444947951ae19b78db11e4d363bab2209a1cf3af76
-Size (p1_sip-1.0.0.tar.gz) = 234620 bytes
-SHA1 (patch-rebar.config) = f4601575d2c3467ab1ed10109ef2b13af6049f14
