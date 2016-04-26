@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2013/11/09 22:45:05 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2016/04/26 08:08:50 markd Exp $
 include/KDE/Phonon/AbstractAudioOutput
 include/KDE/Phonon/AbstractMediaStream
 include/KDE/Phonon/AbstractVideoOutput
@@ -159,6 +159,10 @@ include/phonon/volumefaderinterface.h
 include/phonon/volumeslider.h
 lib/cmake/phonon/PhononConfig.cmake
 lib/cmake/phonon/PhononConfigVersion.cmake
+lib/cmake/phonon/PhononExperimentalConfig.cmake
+lib/cmake/phonon/PhononExperimentalConfigVersion.cmake
+lib/cmake/phonon/PhononExperimentalTargets-noconfig.cmake
+lib/cmake/phonon/PhononExperimentalTargets.cmake
 lib/cmake/phonon/PhononTargets-noconfig.cmake
 lib/cmake/phonon/PhononTargets.cmake
 lib/libphonon.so
@@ -172,7 +176,6 @@ qt4/mkspecs/modules/qt_phonon.pri
 qt4/plugins/designer/libphononwidgets.so
 share/dbus-1/interfaces/org.kde.Phonon.AudioOutput.xml
 share/phonon/buildsystem/COPYING-CMAKE-SCRIPTS
-share/phonon/buildsystem/FindAutomoc4.cmake
 share/phonon/buildsystem/FindPackageHandleStandardArgs.cmake
 share/phonon/buildsystem/FindPhononInternal.cmake
 share/phonon/buildsystem/MacroEnsureVersion.cmake
@@ -180,4 +183,6 @@ share/phonon/buildsystem/MacroLogFeature.cmake
 share/phonon/buildsystem/MacroOptionalFindPackage.cmake
 share/phonon/buildsystem/MacroPushRequiredVars.cmake
 share/phonon/buildsystem/PhononMacros.cmake
+share/phonon/buildsystem/PhononQt4.cmake
+share/phonon/buildsystem/PhononQt5.cmake
 share/phonon/buildsystem/cmake_uninstall.cmake.in
