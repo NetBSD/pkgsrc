@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.47 2016/04/07 18:33:05 prlw1 Exp $
+# $NetBSD: Makefile.common,v 1.48 2016/04/26 15:26:44 jperkin Exp $
 #
 # used by devel/glib2/Makefile
 # used by devel/gdbus-codegen/Makefile
@@ -62,6 +62,19 @@ SUBST_SED.thr+=		-e "s|@G_THREAD_LIBS_FOR_GTHREAD@|-Wc,-lc_r|g"
 .  endif
 SUBST_MESSAGE.thr=	Fixing libgthread.
 
+.endif
+
+# glib-2.48.0 dropped support for OSX < 10.9.0 just to add notification
+# support, so we just disable that feature for older releases.
+.if !empty(MACHINE_PLATFORM:MDarwin-[0-9].*) || \
+    !empty(MACHINE_PLATFORM:MDarwin-1[012].*)
+SUBST_CLASSES+=		gcocoa
+SUBST_STAGE.gcocoa=	pre-configure
+SUBST_FILES.gcocoa=	gio/Makefile.in
+SUBST_FILES.gcocoa+=	configure
+SUBST_SED.gcocoa=	-e 's,gcocoanotificationbackend.c,,g'
+SUBST_SED.gcocoa+=	-e '/gcocoanotificationbackend/d'
+SUBST_SED.gcocoa+=	-e 's,10.9.0,10.0.0,g'
 .endif
 
 .if !empty(MACHINE_PLATFORM:MDarwin-[56].*-*)
