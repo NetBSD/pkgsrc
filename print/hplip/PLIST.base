@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.base,v 1.19 2016/02/28 20:37:28 schnoebe Exp $
+@comment $NetBSD: PLIST.base,v 1.20 2016/04/26 22:51:30 schnoebe Exp $
 bin/hp-align
 bin/hp-check
 bin/hp-clean
@@ -713,6 +713,10 @@ share/hplip/ppd/HP/hp-deskjet_5700-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_5700.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_5800-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_5800.ppd.gz
+share/hplip/ppd/HP/hp-deskjet_5810_series-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-deskjet_5810_series.ppd.gz
+share/hplip/ppd/HP/hp-deskjet_5820_series-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-deskjet_5820_series.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_5850-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_5850.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_5900_series-hpijs.ppd.gz
@@ -1794,6 +1798,10 @@ share/hplip/ppd/HP/hp-officejet_v40xi-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_v40xi.ppd.gz
 share/hplip/ppd/HP/hp-officejet_v45-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_v45.ppd.gz
+share/hplip/ppd/HP/hp-pagewide_pro_452_printer-ps.ppd.gz
+share/hplip/ppd/HP/hp-pagewide_pro_477_mfp-ps.ppd.gz
+share/hplip/ppd/HP/hp-pagewide_pro_552_printer-ps.ppd.gz
+share/hplip/ppd/HP/hp-pagewide_pro_577_mfp-ps.ppd.gz
 share/hplip/ppd/HP/hp-photosmart_100-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-photosmart_100.ppd.gz
 share/hplip/ppd/HP/hp-photosmart_1115-hpijs.ppd.gz

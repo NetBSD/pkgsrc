@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2016/03/23 11:51:39 khorben Exp $
+# $NetBSD: Makefile,v 1.51 2016/04/26 22:51:30 schnoebe Exp $
 
-DISTNAME=	hplip-3.16.2
-PKGREVISION=	2
+DISTNAME=	hplip-3.16.3
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hplip/}
 
@@ -68,7 +67,7 @@ CONF_FILES+=
 REPLACE_PYTHON=		*.py */*.py */*/*.py
 REPLACE_PYTHON+=	fax/filters/pstotiff
 REPLACE_PYTHON+=	prnt/filters/hpps
-REPLACE_PERL=		prnt/filters/hpcac prnt/hpijs/foomatic-rip-hplip
+REPLACE_PERL=		prnt/hpijs/foomatic-rip-hplip
 
 PY_PATCHPLIST=		yes
 
