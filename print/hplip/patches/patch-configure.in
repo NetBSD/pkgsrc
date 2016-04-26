@@ -1,9 +1,9 @@
-$NetBSD: patch-configure.in,v 1.2 2016/02/28 20:37:28 schnoebe Exp $
+$NetBSD: patch-configure.in,v 1.3 2016/04/26 22:51:30 schnoebe Exp $
 
 convert configure to use more configure paths instead of hard coded
 paths.
 
---- configure.in.orig	2015-11-12 10:29:29.000000000 +0000
+--- configure.in.orig	2016-03-16 10:38:34.000000000 +0000
 +++ configure.in
 @@ -34,14 +34,15 @@ AC_DISABLE_STATIC
  # Checks for programs.
@@ -22,19 +22,28 @@ paths.
  
  # Checks for required header files.
  AC_CHECK_HEADERS(pthread.h,, [AC_MSG_ERROR([cannot find pthread-devel support], 7)])
-@@ -333,29 +334,29 @@ else
+@@ -267,7 +268,7 @@ AC_ARG_ENABLE(apparmor_build,
+   [  --enable-apparmor_build    enable apparmor build (default=no)],
+   apparmor_build=$enableval, apparmor_build=no)
+ if test "$apparmor_build" = "yes"; then
+-   if test -d /etc/apparmor.d/; then
++   if test -d $sysconfdir/apparmor.d/; then
+       AC_MSG_RESULT(yes)
+    else
+       AC_MSG_ERROR([cannot find apparmor support])
+@@ -333,37 +334,37 @@ else
  fi
  AM_CONDITIONAL(LIBUSB01_BUILD, test x$libusb01_build = xyes)
  
 -AC_ARG_WITH(cupsbackenddir, AC_HELP_STRING([--with-cupsbackenddir=DIR], [set cups backend install directory [default=/usr/lib/cups/backend]]),
 -   cupsbackenddir=$withval, cupsbackenddir="/usr/lib/cups/backend")
-+AC_ARG_WITH(cupsbackenddir, AC_HELP_STRING([--with-cupsbackenddir=DIR], [set cups backend install directory [default=libdir/cups/backend]]),
-+   cupsbackenddir=$withval, cupsbackenddir="$libdir/cups/backend")
++AC_ARG_WITH(cupsbackenddir, AC_HELP_STRING([--with-cupsbackenddir=DIR], [set cups backend install directory [default=libdir/lib/cups/backend]]),
++   cupsbackenddir=$withval, cupsbackenddir="$libdir/lib/cups/backend")
  
 -AC_ARG_WITH(cupsfilterdir, AC_HELP_STRING([--with-cupsfilterdir=DIR], [set cups filter install directory [default=/usr/lib/cups/filter]]),
 -   cupsfilterdir=$withval, cupsfilterdir="/usr/lib/cups/filter")
-+AC_ARG_WITH(cupsfilterdir, AC_HELP_STRING([--with-cupsfilterdir=DIR], [set cups filter install directory [default=libdir/cups/filter]]),
-+   cupsfilterdir=$withval, cupsfilterdir="$libdir/cups/filter")
++AC_ARG_WITH(cupsfilterdir, AC_HELP_STRING([--with-cupsfilterdir=DIR], [set cups filter install directory [default=libdir/lib/cups/filter]]),
++   cupsfilterdir=$withval, cupsfilterdir="$libdir/lib/cups/filter")
  
 -AC_ARG_WITH(icondir, AC_HELP_STRING([--with-icondir=DIR], [set hplip.desktop install directory [default=/usr/share/applications]]),
 -   icondir=$withval, icondir="/usr/share/applications")
@@ -55,9 +64,9 @@ paths.
 +AC_ARG_WITH(apparmordir, AC_HELP_STRING([--with-apparmordir=DIR], [set apparmor profile install directory [default=sysconfdir/apparmor.d]]),
 +   apparmordir=$withval, apparmordir="$sysconfdir/apparmor.d")
  
--if test -f "/usr/share/cups/mime/mime.types"; then 
+-if test -f "/usr/share/cups/mime/mime.types"; then
 -   abs_mimedir="/usr/share/cups/mime/"
-+if test -f "$datadir/cups/mime/mime.types"; then 
++if test -f "$datadir/cups/mime/mime.types"; then
 +   abs_mimedir="$datadir/cups/mime/"
  else
 -   abs_mimedir="/etc/cups/"
@@ -65,6 +74,16 @@ paths.
  fi
  AC_ARG_WITH(mimedir, AC_HELP_STRING([--with-mimedir=DIR], [set cups mime.types location [default=abs_mimedir]]),
     mimedir=$withval, mimedir="$abs_mimedir")
+ 
+-AC_ARG_WITH(docdir, AC_HELP_STRING([--with-docdir=DIR], [set hplip documentation directory [default=datadir/doc]]),
++AC_ARG_WITH(docdir, AC_HELP_STRING([--with-docdir=DIR], [set hplip documentation directory [default=datadir/doc/hplip-VERSION]]),
+    hpdocdir=$withval, hpdocdir="$datadir/doc/hplip-$VERSION")
+ 
+-AC_ARG_WITH(htmldir, AC_HELP_STRING([--with-htmldir=DIR], [set hplip html documentation directory [default=datadir/doc]]),
++AC_ARG_WITH(htmldir, AC_HELP_STRING([--with-htmldir=DIR], [set hplip html documentation directory [default=datadir/doc/hplip-VERSION]]),
+    hphtmldir=$withval, hphtmldir="$datadir/doc/hplip-$VERSION")
+ 
+ AC_MSG_CHECKING([for foomatic ppd install])
 @@ -488,12 +489,12 @@ AM_CONDITIONAL(POLICYKIT_INSTALL, test x
  
  # Determine where the PolicyKit policy file goes
