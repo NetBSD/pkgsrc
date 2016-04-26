@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1717 2016/04/26 07:18:40 prlw1 Exp $
+$NetBSD: CHANGES-2016,v 1.1718 2016/04/26 09:36:35 markd Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2258,3 +2258,12 @@ Changes to the packages collection and infrastructure in 2016:
 	Removed textproc/erlang-xmlrpc [fhajny 2016-04-25]
 	Updated graphics/gdk-pixbuf2 to 2.34.0 [prlw1 2016-04-26]
 	Updated x11/gnome-desktop3 to 3.20.1 [prlw1 2016-04-26]
+	Updated multimedia/phonon to 4.9.0 [markd 2016-04-26]
+	Updated multimedia/phonon-qt5 to 4.9.0 [markd 2016-04-26]
+	Updated multimedia/phonon-backend-vlc to 0.9.0 [markd 2016-04-26]
+	Updated multimedia/phonon-qt5-backend-vlc to 0.9.0 [markd 2016-04-26]
+	Updated multimedia/phonon-backend-gstreamer to 4.9.0 [markd 2016-04-26]
+	Updated multimedia/phonon-backend-gstreamer-shared to 4.9.0 [markd 2016-04-26]
+	Updated multimedia/phonon-qt5-backend-gstreamer to 4.9.0 [markd 2016-04-26]
+	Updated graphics/oxygen-icons to 5.21.0 [markd 2016-04-26]
+	Updated devel/extra-cmake-modules to 5.21.0 [markd 2016-04-26]
