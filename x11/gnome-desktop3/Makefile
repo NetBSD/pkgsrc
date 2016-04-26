@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2015/06/11 08:34:40 prlw1 Exp $
+# $NetBSD: Makefile,v 1.23 2016/04/26 07:18:10 prlw1 Exp $
 
-DISTNAME=	gnome-desktop-3.16.2
+DISTNAME=	gnome-desktop-3.20.1
 PKGNAME=	${DISTNAME:S/desktop/desktop3/}
-PKGREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-desktop/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -23,12 +22,15 @@ CONFIGURE_ARGS+=	--with-gnome-distributor="The NetBSD Foundation"
 CONFIGURE_ARGS+=	--disable-date-in-gnome-version
 CONFIGURE_ARGS+=	--disable-desktop-docs
 CONFIGURE_ARGS+=	--disable-gtk-doc
+CONFIGURE_ARGS+=	--disable-debug-tools
 
 BUILD_DEPENDS+=		itstool-[0-9]*:../../textproc/itstool
 
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.38.0
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.44.0
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gdk-pixbuf2+=	gdk-pixbuf2>=2.33.0
+.include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gsettings-desktop-schemas+=	gsettings-desktop-schemas>=3.5.91
 .include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
 .include "../../textproc/iso-codes/buildlink3.mk"
