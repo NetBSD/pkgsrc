@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2016/04/01 08:21:05 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.34 2016/04/26 14:37:54 fhajny Exp $
 bin/node
 bin/npm
 include/node/android-ifaddrs.h
@@ -232,7 +232,6 @@ lib/node_modules/npm/lib/dist-tag.js
 lib/node_modules/npm/lib/docs.js
 lib/node_modules/npm/lib/edit.js
 lib/node_modules/npm/lib/explore.js
-lib/node_modules/npm/lib/faq.js
 lib/node_modules/npm/lib/fetch-package-metadata.js
 lib/node_modules/npm/lib/fetch-package-metadata.md
 lib/node_modules/npm/lib/get.js
@@ -449,12 +448,6 @@ lib/node_modules/npm/node_modules/archy/examples/beep.js
 lib/node_modules/npm/node_modules/archy/examples/multi_line.js
 lib/node_modules/npm/node_modules/archy/index.js
 lib/node_modules/npm/node_modules/archy/package.json
-lib/node_modules/npm/node_modules/async-some/.eslintrc
-lib/node_modules/npm/node_modules/async-some/.npmignore
-lib/node_modules/npm/node_modules/async-some/LICENSE
-lib/node_modules/npm/node_modules/async-some/README.md
-lib/node_modules/npm/node_modules/async-some/package.json
-lib/node_modules/npm/node_modules/async-some/some.js
 lib/node_modules/npm/node_modules/chownr/LICENSE
 lib/node_modules/npm/node_modules/chownr/README.md
 lib/node_modules/npm/node_modules/chownr/chownr.js
@@ -1803,7 +1796,6 @@ lib/node_modules/npm/node_modules/realize-package-specifier/LICENSE
 lib/node_modules/npm/node_modules/realize-package-specifier/README.md
 lib/node_modules/npm/node_modules/realize-package-specifier/index.js
 lib/node_modules/npm/node_modules/realize-package-specifier/package.json
-lib/node_modules/npm/node_modules/request/.eslintrc
 lib/node_modules/npm/node_modules/request/.npmignore
 lib/node_modules/npm/node_modules/request/.travis.yml
 lib/node_modules/npm/node_modules/request/CHANGELOG.md
