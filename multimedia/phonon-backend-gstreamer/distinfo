@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.10 2016/03/01 09:21:01 markd Exp $
+$NetBSD: distinfo,v 1.11 2016/04/26 09:04:23 markd Exp $
 
-SHA1 (phonon-backend-gstreamer-4.8.2.tar.xz) = 9998ba3a002af09e1ba4072508d1813af1d1e5be
-RMD160 (phonon-backend-gstreamer-4.8.2.tar.xz) = 9c0ec7ef27e925c207e769edc225b1d7202c7e37
-SHA512 (phonon-backend-gstreamer-4.8.2.tar.xz) = a18534b89d424bb2cc9f8a7f63a794d9711d895ad1db6cd5f4bd8748ea38310ffeacd916d16443986f89d3097e108aaf5631eaba6dd37e76a7360d5f1d02ecea
-Size (phonon-backend-gstreamer-4.8.2.tar.xz) = 76044 bytes
-SHA1 (patch-cmake_FindGStreamer.cmake) = 61ea66ec1a89eec428b94c220e82ff4d0479fda8
+SHA1 (phonon-backend-gstreamer-4.9.0.tar.xz) = 81f16c98e35a6377fefd8ce8e66e1e2ec609c94d
+RMD160 (phonon-backend-gstreamer-4.9.0.tar.xz) = 43095bdb9fe8729fd795910188c46cdcb0eae12f
+SHA512 (phonon-backend-gstreamer-4.9.0.tar.xz) = 9c13d37c6c7070c2bd8fcc562f743ac2f55289bc7cc82147ef0ae990e5d380d541cc1d9ce61e6ad1549ed1935d41faafaeeb0cd5463e4c656ea8fee636ff4dfe
+Size (phonon-backend-gstreamer-4.9.0.tar.xz) = 75960 bytes
 SHA1 (patch-gstreamer_CMakeLists.txt) = b1caffcf6f676540de7b450693e2644f5d35fb8f
