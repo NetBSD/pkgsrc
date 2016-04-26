@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2016/02/14 04:13:32 markd Exp $
+# $NetBSD: Makefile,v 1.4 2016/04/26 09:20:41 markd Exp $
 
-DISTNAME=	extra-cmake-modules-5.19.0
+DISTNAME=	extra-cmake-modules-5.21.0
 CATEGORIES=	devel kde
-MASTER_SITES=	${MASTER_SITE_KDE:=frameworks/5.19/}
+MASTER_SITES=	${MASTER_SITE_KDE:=frameworks/5.21/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	markd@NetBSD.org
-HOMEPAGE=	http://projects.kde.org/projects/kdesupport/extra-cmake-modules
+HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Extra modules and scripts for CMake
 LICENSE=	modified-bsd
 
