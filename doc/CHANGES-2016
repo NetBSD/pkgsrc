@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1718 2016/04/26 09:36:35 markd Exp $
+$NetBSD: CHANGES-2016,v 1.1719 2016/04/26 14:38:05 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2267,3 +2267,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated multimedia/phonon-qt5-backend-gstreamer to 4.9.0 [markd 2016-04-26]
 	Updated graphics/oxygen-icons to 5.21.0 [markd 2016-04-26]
 	Updated devel/extra-cmake-modules to 5.21.0 [markd 2016-04-26]
+	Updated lang/nodejs to 5.11.0 [fhajny 2016-04-26]
