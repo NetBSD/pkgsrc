@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1720 2016/04/26 16:40:25 adam Exp $
+$NetBSD: CHANGES-2016,v 1.1721 2016/04/26 22:52:55 schnoebe Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2269,3 +2269,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/extra-cmake-modules to 5.21.0 [markd 2016-04-26]
 	Updated lang/nodejs to 5.11.0 [fhajny 2016-04-26]
 	Updated www/nghttp2 to 1.10.0 [adam 2016-04-26]
+	Updated print/hplip to 3.16.3 [schnoebe 2016-04-26]
