@@ -1,14 +1,12 @@
-# $NetBSD: Makefile,v 1.24 2016/03/05 11:29:01 jperkin Exp $
+# $NetBSD: Makefile,v 1.25 2016/04/26 09:04:23 markd Exp $
 
-DISTNAME=	phonon-backend-gstreamer-4.8.2
-PKGREVISION=	2
+DISTNAME=	phonon-backend-gstreamer-4.9.0
 
 COMMENT=	Multimedia API for KDE and QT - GStreamer backend
 
 .include "Makefile.common"
 
-BUILD_DEPENDS+=	automoc4>=0.9.83:../../devel/automoc4
-DEPENDS+=	phonon-backend-gstreamer-shared-4.8.2:../../multimedia/phonon-backend-gstreamer-shared
+DEPENDS+=	phonon-backend-gstreamer-shared-4.9.0:../../multimedia/phonon-backend-gstreamer-shared
 
 .include "../../multimedia/phonon/buildlink3.mk"
 
