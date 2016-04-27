@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.62 2016/04/26 14:37:54 fhajny Exp $
+$NetBSD: distinfo,v 1.63 2016/04/27 15:03:10 fhajny Exp $
 
 SHA1 (node-v5.11.0.tar.gz) = 4270fb33859bbc9ccb7ab8d308bde77357bcf158
 RMD160 (node-v5.11.0.tar.gz) = ad0742f1c144d23eaf053c73a7d508807f741f8a
@@ -9,7 +9,7 @@ SHA1 (patch-deps_cares_cares.gyp) = 2235eb44bc984fa2e745fdf1786f1ae6de6ef80f
 SHA1 (patch-deps_npm_node__modules_node-gyp_gyp_pylib_gyp_generator_make.py) = 78d6ddd37ae30e869e0da666a78baad86a638c50
 SHA1 (patch-deps_uv_common.gypi) = ba9caa1f6d9d6df1913d0d72a8d18ea6db0a32ff
 SHA1 (patch-deps_uv_src_unix_netbsd.c) = 0915dcd6ff65ec9bc098c05c32e3fedee9c8168b
-SHA1 (patch-deps_v8_src_arm_cpu-arm.cc) = 854a7b0c6392d4568066b961da0958073b7ac62e
+SHA1 (patch-deps_v8_src_arm_cpu-arm.cc) = d0d11ac474ab109a6f40b26fa457b12d742eb48d
 SHA1 (patch-deps_v8_src_base_atomicops.h) = 65b6508f5260ae672b9efc5672ba2c93223355ff
 SHA1 (patch-deps_v8_src_base_atomicops__internals__arm__gcc.h) = 39ba63d8c397c7f076c108173f1ee2b5839ad4d6
 SHA1 (patch-deps_v8_src_base_platform_platform-freebsd.cc) = 686c2054838a25cfeed7fb9870a959e48dc4de35
