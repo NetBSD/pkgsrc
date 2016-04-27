@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.35 2016/03/05 11:27:54 jperkin Exp $
+# $NetBSD: Makefile,v 1.36 2016/04/27 12:34:58 leot Exp $
 
-DISTNAME=	mupdf-1.8-source
+DISTNAME=	mupdf-1.9a-source
 PKGNAME=	${DISTNAME:S/-source//}
-PKGREVISION=	3
 CATEGORIES=	print
-MASTER_SITES=	http://mupdf.com/downloads/
+MASTER_SITES=	http://mupdf.com/downloads/archive/
 
 MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	http://mupdf.com/
@@ -36,6 +35,7 @@ post-extract:
 	    ${WRKSRC}/thirdparty/curl \
 	    ${WRKSRC}/thirdparty/freetype \
 	    ${WRKSRC}/thirdparty/glfw \
+	    ${WRKSRC}/thirdparty/harfbuzz \
 	    ${WRKSRC}/thirdparty/jbig2dec \
 	    ${WRKSRC}/thirdparty/jpeg \
 	    ${WRKSRC}/thirdparty/openjpeg \
@@ -48,6 +48,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/mupdf.pc ${DESTDIR}${PREFIX}/lib/pkgconfig
 
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../fonts/harfbuzz/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/jbig2dec/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
