@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.142 2016/04/11 19:02:06 ryoon Exp $
+# $NetBSD: Makefile,v 1.143 2016/04/27 16:41:22 ryoon Exp $
 
 DISTNAME=	seamonkey-${SM_VER}.source
 PKGNAME=	seamonkey-${SM_VER:S/b/beta/}
@@ -18,7 +18,7 @@ PLIST_SRC+=	${PLIST_SRC_DFLT}
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	unzip pax
 
-.include "../../www/firefox/mozilla-common.mk"
+.include "../../www/firefox45/mozilla-common.mk"
 .include "options.mk"
 
 # Workaround to fix pixman.h detection
