@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/02/25 21:37:37 tnn Exp $
+@comment $NetBSD: PLIST,v 1.1.2.1 2016/04/27 20:12:36 bsiegert Exp $
 bin/postgres
 bin/postmaster
 include/postgresql/server/plpgsql.h
@@ -313,6 +313,7 @@ share/postgresql/timezone/Asia/Baghdad
 share/postgresql/timezone/Asia/Bahrain
 share/postgresql/timezone/Asia/Baku
 share/postgresql/timezone/Asia/Bangkok
+share/postgresql/timezone/Asia/Barnaul
 share/postgresql/timezone/Asia/Beirut
 share/postgresql/timezone/Asia/Bishkek
 share/postgresql/timezone/Asia/Brunei
@@ -489,6 +490,7 @@ share/postgresql/timezone/Etc/Universal
 share/postgresql/timezone/Etc/Zulu
 share/postgresql/timezone/Europe/Amsterdam
 share/postgresql/timezone/Europe/Andorra
+share/postgresql/timezone/Europe/Astrakhan
 share/postgresql/timezone/Europe/Athens
 share/postgresql/timezone/Europe/Belfast
 share/postgresql/timezone/Europe/Belgrade
@@ -536,6 +538,7 @@ share/postgresql/timezone/Europe/Stockholm
 share/postgresql/timezone/Europe/Tallinn
 share/postgresql/timezone/Europe/Tirane
 share/postgresql/timezone/Europe/Tiraspol
+share/postgresql/timezone/Europe/Ulyanovsk
 share/postgresql/timezone/Europe/Uzhgorod
 share/postgresql/timezone/Europe/Vaduz
 share/postgresql/timezone/Europe/Vatican
