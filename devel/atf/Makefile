@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.24 2014/09/02 08:32:36 jperkin Exp $
+# $NetBSD: Makefile,v 1.25 2016/04/27 04:20:10 mef Exp $
 #
 
 DISTNAME=	atf-0.20
 CATEGORIES=	devel
-MASTER_SITES=	https://github.com/jmmv/atf/releases/download/${DISTNAME}/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=jmmv/}
+GITHUB_RELEASE=	${DISTNAME}
 
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	https://github.com/jmmv/atf/
