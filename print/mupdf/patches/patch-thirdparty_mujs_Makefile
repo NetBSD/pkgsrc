@@ -1,0 +1,47 @@
+$NetBSD: patch-thirdparty_mujs_Makefile,v 1.1 2016/04/27 12:34:58 leot Exp $
+
+o Add libtool support lo mujs.
+o Avoid to set (unused) VERSION variable.
+
+--- thirdparty/mujs/Makefile.orig	2016-03-01 20:52:00.000000000 +0000
++++ thirdparty/mujs/Makefile
+@@ -41,16 +41,16 @@ jsdump.c: astnames.h opnames.h
+ build:
+ 	mkdir -p build
+ 
+-build/%.o: %.c $(HDRS)
++build/%.lo: %.c $(HDRS)
+ 	$(CC) $(CFLAGS) -o $@ -c $<
+ 
+-build/libmujs.a: $(OBJS)
++build/libmujs.la: $(OBJS)
+ 	$(AR) cru $@ $^
+ 
+-build/mujs: build/main.o build/libmujs.a
++build/mujs: build/main.lo build/libmujs.la
+ 	$(CC) $(LDFLAGS) -o $@ $^ -lm
+ 
+-build/mujsone: build/main.o build/one.o
++build/mujsone: build/main.o build/one.lo
+ 	$(CC) $(LDFLAGS) -o $@ $^ -lm
+ 
+ install: release
+@@ -61,12 +61,12 @@ install: release
+ 	install build/libmujs.a $(DESTDIR)$(libdir)
+ 	install build/mujs $(DESTDIR)$(bindir)
+ 
+-VERSION = $(shell git describe --tags --always)
+-
+-tarball:
+-	git archive --format=zip --prefix=mujs-$(VERSION)/ HEAD > mujs-$(VERSION).zip
+-	git archive --format=tar --prefix=mujs-$(VERSION)/ HEAD | gzip > mujs-$(VERSION).tar.gz
+-	git archive --format=tar --prefix=mujs-$(VERSION)/ HEAD | xz > mujs-$(VERSION).tar.xz
++#VERSION = $(shell git describe --tags --always)
++#
++#tarball:
++#	git archive --format=zip --prefix=mujs-$(VERSION)/ HEAD > mujs-$(VERSION).zip
++#	git archive --format=tar --prefix=mujs-$(VERSION)/ HEAD | gzip > mujs-$(VERSION).tar.gz
++#	git archive --format=tar --prefix=mujs-$(VERSION)/ HEAD | xz > mujs-$(VERSION).tar.xz
+ 
+ tags: $(SRCS) main.c $(HDRS)
+ 	ctags $^

@@ -1,20 +1,19 @@
-$NetBSD: patch-Makethird,v 1.5 2016/02/04 11:50:24 leot Exp $
+$NetBSD: patch-Makethird,v 1.6 2016/04/27 12:34:58 leot Exp $
 
 o mujs building support with libtool
 
---- Makethird.orig	2015-11-10 16:19:51.000000000 +0000
+--- Makethird.orig	2016-04-06 12:06:53.000000000 +0000
 +++ Makethird
-@@ -51,14 +51,14 @@ endif
- 
- ifneq "$(wildcard $(MUJS_DIR)/README)" ""
- 
--MUJS_LIB := $(OUT)/libmujs.a
-+MUJS_LIB := $(OUT)/libmujs.la
+@@ -24,13 +24,13 @@ ifneq "$(wildcard $(MUJS_DIR)/README)" "
  MUJS_OUT := $(OUT)/mujs
  MUJS_SRC := one.c
  
--$(MUJS_LIB): $(addprefix $(MUJS_OUT)/, $(MUJS_SRC:%.c=%.o))
-+$(MUJS_LIB): $(addprefix $(MUJS_OUT)/, $(MUJS_SRC:%.c=%.lo))
+-MUJS_OBJ := $(addprefix $(MUJS_OUT)/, $(MUJS_SRC:%.c=%.o))
++MUJS_OBJ := $(addprefix $(MUJS_OUT)/, $(MUJS_SRC:%.c=%.lo))
+ 
+-$(MUJS_OUT)/one.o: $(wildcard $(MUJS_DIR)/js*.c $(MUJS_DIR)/utf*.c $(MUJS_DIR)/regex.c $(MUJS_DIR)/*.h)
++$(MUJS_OUT)/one.lo: $(wildcard $(MUJS_DIR)/js*.c $(MUJS_DIR)/utf*.c $(MUJS_DIR)/regex.c $(MUJS_DIR)/*.h)
+ 
  $(MUJS_OUT):
  	$(MKDIR_CMD)
 -$(MUJS_OUT)/%.o: $(MUJS_DIR)/%.c | $(MUJS_OUT)
