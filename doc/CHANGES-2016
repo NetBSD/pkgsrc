@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1725 2016/04/27 16:01:15 wen Exp $
+$NetBSD: CHANGES-2016,v 1.1726 2016/04/27 16:23:12 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2274,3 +2274,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated print/zathura-pdf-mupdf to 0.3.0nb2 [leot 2016-04-27]
 	Updated lang/nodejs to 6.0.0 [fhajny 2016-04-27]
 	Updated net/ntp4 to 4.2.8p7 [wen 2016-04-27]
+	Updated www/firefox to 46.0 [ryoon 2016-04-27]
