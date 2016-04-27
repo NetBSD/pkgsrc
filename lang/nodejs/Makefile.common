@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2016/03/18 11:39:18 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.7 2016/04/27 15:03:10 fhajny Exp $
 # used by lang/nodejs/Makefile
 # used by lang/nodejs4/Makefile
 
@@ -12,7 +12,7 @@ COMMENT=	V8 JavaScript for clients and servers
 LICENSE=	mit
 
 HAS_CONFIGURE=	yes
-USE_TOOLS+=	gmake pkg-config
+USE_TOOLS+=	bash gmake pkg-config
 USE_LANGUAGES=	c c++
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 0.10.24
@@ -49,6 +49,10 @@ TEST_TARGET=		check
 pre-install:
 	${FIND} ${WRKSRC}/deps/npm -name '*.orig' | ${XARGS} ${RM} -f
 	${CHMOD} -R g-w ${WRKSRC}
+
+post-install:
+	cd ${DESTDIR}${PREFIX} && ${SETENV} ${BASH} \
+		./lib/node_modules/npm/scripts/relocate.sh ${PREFIX}/bin/node
 
 .if ${OPSYS} != "Darwin"
 .include "../../devel/libexecinfo/buildlink3.mk"
