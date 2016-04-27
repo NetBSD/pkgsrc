@@ -1,11 +1,11 @@
-$NetBSD: patch-ab,v 1.11 2016/02/04 11:50:24 leot Exp $
+$NetBSD: patch-ab,v 1.12 2016/04/27 12:34:58 leot Exp $
 
 o Handle the various operating systems in the same way avoiding hardcoding
-o Build and link with openjpeg-2.1
+o Properly recognize glfw support
 
---- Makerules.orig	2015-11-10 16:19:51.000000000 +0000
+--- Makerules.orig	2016-04-06 12:06:53.000000000 +0000
 +++ Makerules
-@@ -29,46 +29,6 @@ ifeq "$(largefile)" "yes"
+@@ -43,46 +43,6 @@ ifeq "$(largefile)" "yes"
  CFLAGS += -DFZ_LARGEFILE
  endif
  
@@ -13,29 +13,29 @@ o Build and link with openjpeg-2.1
 -ifeq "$(OS)" "MINGW"
 -
 -HAVE_X11 ?= no
--HAVE_GLUT ?= yes
--
--SYS_GLUT_CFLAGS = -DFREEGLUT_STATIC -Ithirdparty/freeglut/include
--SYS_GLUT_LIBS = -Lthirdparty/freeglut/lib -lfreeglut_static -lopengl32 -lgdi32 -lwinmm
 -
 -# Mac OS X doesn't have pkg-config so we hard code paths.
 -else ifeq "$(OS)" "MACOS"
 -
 -HAVE_X11 ?= yes
--HAVE_GLUT ?= yes
+-HAVE_PTHREADS ?= yes
 -
+-# Mac OS X deprecated openssl, so the default is to not include it.
+-HAVE_OPENSSL ?= no
+-SYS_OPENSSL_CFLAGS =
+-SYS_OPENSSL_LIBS =
+-ifeq "$(HAVE_OPENSSL)" "yes"
 -SYS_OPENSSL_CFLAGS = -DHAVE_OPENSSL
 -SYS_OPENSSL_LIBS = -lcrypto
+-endif
 -
 -SYS_CURL_DEPS = -lpthread
 -
 -SYS_X11_CFLAGS = -I/usr/X11R6/include
 -SYS_X11_LIBS = -L/usr/X11R6/lib -lX11 -lXext
--SYS_GLUT_CFLAGS = -Wno-deprecated-declarations
--SYS_GLUT_LIBS = -framework GLUT -framework OpenGL
 -
--SYS_FREETYPE_CFLAGS = -I/usr/X11R6/include/freetype2
--SYS_FREETYPE_LIBS = -lfreetype
+-SYS_FREETYPE_CFLAGS = $(shell freetype-config --cflags)
+-SYS_FREETYPE_LIBS = $(shell freetype-config --libs)
 -SYS_OPENJPEG_LIBS = -lopenjpeg
 -SYS_JBIG2DEC_LIBS = -ljbig2dec
 -SYS_JPEG_LIBS = -ljpeg
@@ -50,14 +50,12 @@ o Build and link with openjpeg-2.1
 -else ifeq "$(OS)" "Linux"
 -
  HAVE_X11 ?= yes
- HAVE_GLUT ?= yes
+ HAVE_PTHREADS ?= yes
  
-@@ -87,8 +47,16 @@ SYS_CURL_DEPS = -lpthread -lrt
+@@ -101,6 +61,17 @@ SYS_CURL_DEPS = -lpthread -lrt
  SYS_X11_CFLAGS = $(shell pkg-config --cflags x11 xext)
  SYS_X11_LIBS = $(shell pkg-config --libs x11 xext)
  
--SYS_GLUT_CFLAGS =
--SYS_GLUT_LIBS = -lglut -lGL
 +ifeq "$(shell pkg-config --exists glut && echo yes)" "yes"
 +SYS_GLUT_CFLAGS = $(shell pkg-config --cflags glut)
 +SYS_GLUT_LIBS = $(shell pkg-config --libs glut)
@@ -68,10 +66,11 @@ o Build and link with openjpeg-2.1
 +SYS_GLFW_CFLAGS = $(shell pkg-config --cflags glfw3)
 +SYS_GLFW_LIBS = $(shell pkg-config --libs glfw3)
 +endif
- 
++
+ SYS_HARFBUZZ_CFLAGS = $(shell pkg-config --cflags harfbuzz)
+ SYS_HARFBUZZ_LIBS = $(shell pkg-config --libs harfbuzz)
  SYS_FREETYPE_CFLAGS = $(shell pkg-config --cflags freetype2)
- SYS_FREETYPE_LIBS = $(shell pkg-config --libs freetype2)
-@@ -98,8 +66,6 @@ SYS_JBIG2DEC_LIBS = -ljbig2dec
+@@ -111,8 +82,6 @@ SYS_JBIG2DEC_LIBS = -ljbig2dec
  SYS_JPEG_LIBS = -ljpeg
  SYS_ZLIB_LIBS = -lz
  
