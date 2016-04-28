@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2016/01/22 03:10:19 mef Exp $
+$NetBSD: distinfo,v 1.12 2016/04/28 11:14:42 mef Exp $
 
-SHA1 (uhd-3.9.2.tar.gz) = b8986871a957aa7858ac222fd468e46d914580b5
-RMD160 (uhd-3.9.2.tar.gz) = bbe317c9e2c17bc044b2bc23c6f308aa2427ab5c
-SHA512 (uhd-3.9.2.tar.gz) = 394e0e636ad5717ab16ef920ef23625a6ee537af50c84cf8e5ed67f179b41b9cd030b95878e777ae93fea496b124708c2e598d0e7e23c0a5205b340181c5dc09
-Size (uhd-3.9.2.tar.gz) = 2436702 bytes
+SHA1 (uhd-3.9.3.tar.gz) = 4d67d12d452c4ce5c7e6b6978a553f8a7a750829
+RMD160 (uhd-3.9.3.tar.gz) = ccc7098c53276b76b843afd1ca442627ca4e8149
+SHA512 (uhd-3.9.3.tar.gz) = 2f204939b237bde7b8efd5c0fca723afb490a9a588d4c14a8dbde729a25eb361c0c7fc84be604c1e9f6a4421c4df4c3b315e402eeebacae8359b9ccbc40bc2b0
+Size (uhd-3.9.3.tar.gz) = 2441968 bytes
