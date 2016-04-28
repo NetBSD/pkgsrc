@@ -1,4 +1,4 @@
-$NetBSD: patch-src__file__lib__baloo_xattr_p.h,v 1.1 2014/11/16 18:28:52 markd Exp $
+$NetBSD: patch-src__file__lib__baloo_xattr_p.h,v 1.1 2016/04/28 07:01:13 markd Exp $
 
 --- src/file/lib/baloo_xattr_p.h.orig	2014-11-06 12:03:28.000000000 +0000
 +++ src/file/lib/baloo_xattr_p.h
