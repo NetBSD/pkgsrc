@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.45 2016/03/30 12:46:38 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.46 2016/04/28 09:20:53 leot Exp $
 # used by multimedia/ffmpeg2/Makefile
 # used by multimedia/ffplay2/Makefile
 
@@ -14,7 +14,7 @@ PATCHDIR=	${.CURDIR}/../../multimedia/ffmpeg2/patches
 
 USE_LANGUAGES=		c99
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake texi2html pod2man
+USE_TOOLS+=		gmake texi2html perl pod2man
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--cc=${CC:Q}
 CONFIGURE_ARGS+=	--disable-debug
@@ -28,6 +28,7 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX}
 
 CONFIGURE_ARGS+=	--progs-suffix=2
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/ffmpeg2
+CONFIGURE_ARGS+=	--docdir=${PREFIX}/share/doc/ffmpeg2
 CONFIGURE_ARGS+=	--incdir=${PREFIX}/include/ffmpeg2
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/ffmpeg2
 CONFIGURE_ARGS+=	--shlibdir=${PREFIX}/lib/ffmpeg2
