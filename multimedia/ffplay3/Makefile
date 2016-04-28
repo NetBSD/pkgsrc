@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2016/03/05 08:54:30 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2016/04/28 10:10:52 leot Exp $
 
 PKGNAME=	${DISTNAME:S/ffmpeg/ffplay3/}
+PKGREVISION=	1
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://ffmpeg.org/
 COMMENT=	Simple SDL frontend for FFmpeg
@@ -29,6 +30,7 @@ INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ffplay3 ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/doc/ffplay3.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../multimedia/ffmpeg3/buildlink3.mk"
