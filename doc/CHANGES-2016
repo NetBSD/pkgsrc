@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1733 2016/04/28 07:05:13 markd Exp $
+$NetBSD: CHANGES-2016,v 1.1734 2016/04/28 09:21:05 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2282,3 +2282,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/firefox38 to 38.8.0 [ryoon 2016-04-27]
 	Updated www/firefox38-l10n to 38.8.0 [ryoon 2016-04-27]
 	Added sysutils/libbaloo4 version 4.14.3 [markd 2016-04-28]
+	Updated multimedia/ffmpeg2 to 2.8.6nb3 [leot 2016-04-28]
