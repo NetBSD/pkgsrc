@@ -1,12 +1,12 @@
-$NetBSD: patch-aa,v 1.5 2012/12/17 01:58:55 dholland Exp $
+$NetBSD: patch-aa,v 1.6 2016/04/28 13:49:04 gson Exp $
 
 - honor pkgsrc CC, AR, LD, RANLIB (CC matters for libtool, the others less so)
 - use libtool
 - other previously uncommented stuff (XXX)
 
---- Makefile.orig	2007-03-14 02:34:20.000000000 +0000
+--- Makefile.orig	2009-10-01 22:55:03.000000000 +0000
 +++ Makefile
-@@ -56,10 +56,10 @@ VERSION     = 1.8
+@@ -57,10 +57,10 @@ VERSION     = 1.9
  # possible compilation options.
  ##########################
  
@@ -21,7 +21,7 @@ $NetBSD: patch-aa,v 1.5 2012/12/17 01:58:55 dholland Exp $
  LN          = ln
  
  SHELL       = /bin/sh
-@@ -184,6 +184,13 @@ LDFLAGS     = -shared -soname=$(SONAME) 
+@@ -196,6 +196,13 @@ LDFLAGS     = -shared -soname=$(SONAME) 
  OTHER_FLAGS = -Wall
  endif
  
@@ -35,7 +35,7 @@ $NetBSD: patch-aa,v 1.5 2012/12/17 01:58:55 dholland Exp $
  ifeq ($(OS), OPENBSD)
  SFLAGS      = -fPIC
  LDFLAGS     = -shared -soname=$(SONAME) -lc
-@@ -273,15 +280,15 @@ endif
+@@ -285,15 +292,15 @@ endif
  
  CFLAGS      += $(DEFINES) $(OTHER_FLAGS) $(EXTRA_CFLAGS)
  
@@ -58,7 +58,7 @@ $NetBSD: patch-aa,v 1.5 2012/12/17 01:58:55 dholland Exp $
  DLIBRARY    = $(TARGETDIR)/libst.$(DSO_SUFFIX).$(VERSION)
  EXAMPLES    = examples
  
-@@ -332,8 +339,7 @@ $(TARGETDIR):
+@@ -344,8 +351,7 @@ $(TARGETDIR):
  	if [ ! -d $(TARGETDIR) ]; then mkdir $(TARGETDIR); fi
  
  $(SLIBRARY): $(OBJS)
@@ -68,7 +68,7 @@ $NetBSD: patch-aa,v 1.5 2012/12/17 01:58:55 dholland Exp $
  	rm -f obj; $(LN) $(LNFLAGS) $(TARGETDIR) obj
  
  $(DLIBRARY): $(OBJS:%.o=%-pic.o)
-@@ -349,11 +355,11 @@ $(HEADER): public.h
+@@ -361,11 +367,11 @@ $(HEADER): public.h
  	rm -f $@
  	cp public.h $@
  
@@ -83,4 +83,4 @@ $NetBSD: patch-aa,v 1.5 2012/12/17 01:58:55 dholland Exp $
 +	$(LIBTOOL) --mode=compile $(CC) $(CFLAGS) -c $< -o $@
  
  examples::
- 	@cd $@; $(MAKE) CC="$(CC)" CFLAGS="$(CFLAGS)" OS="$(OS)" TARGETDIR="$(TARGETDIR)"
+ 	@echo Making $@
