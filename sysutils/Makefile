@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.663 2016/04/14 05:47:52 jnemeth Exp $
+# $NetBSD: Makefile,v 1.664 2016/04/28 07:02:23 markd Exp $
 #
 
 COMMENT=	System utilities
@@ -289,6 +289,7 @@ SUBDIR+=	kuser
 SUBDIR+=	lambd
 SUBDIR+=	lastfss
 SUBDIR+=	lavaps
+SUBDIR+=	libbaloo4
 SUBDIR+=	libburn
 SUBDIR+=	libdevkit-gobject
 SUBDIR+=	libgamin
