@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1737 2016/04/28 11:15:06 mef Exp $
+$NetBSD: CHANGES-2016,v 1.1738 2016/04/28 13:50:14 gson Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2286,3 +2286,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated multimedia/ffplay2 to 2.8.6nb1 [leot 2016-04-28]
 	Updated multimedia/ffplay3 to 3.0.1nb1 [leot 2016-04-28]
 	Updated ham/uhd to 3.9.3 [mef 2016-04-28]
+	Updated devel/st to 1.9 [gson 2016-04-28]
