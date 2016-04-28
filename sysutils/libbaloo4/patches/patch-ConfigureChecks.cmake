@@ -1,4 +1,4 @@
-$NetBSD: patch-ConfigureChecks.cmake,v 1.1 2015/01/07 13:09:30 jperkin Exp $
+$NetBSD: patch-ConfigureChecks.cmake,v 1.1 2016/04/28 07:01:13 markd Exp $
 
 Ignore xattr header check on SunOS.
 

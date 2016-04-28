@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2016/03/23 15:40:36 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2016/04/28 07:01:13 markd Exp $
 
 DISTNAME=	baloo-${_KDE_VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	sysutils
 COMMENT=	KDE framework for searching and managing user metadata
 LICENSE=	gnu-gpl-v3
@@ -18,6 +18,13 @@ PLIST_VARS+=	polkit
 .if ${OPSYS} != "Darwin"
 PLIST.polkit=	yes
 .endif
+
+DEPENDS+=	libbaloo4-[0-9]*:../../sysutils/libbaloo4
+
+PATCHDIR=	${.CURDIR}/../../sysutils/libbaloo4/patches
+DISTINFO_FILE=	${.CURDIR}/../../sysutils/libbaloo4/distinfo
+
+INSTALL_DIRS=	_KDE_build/icons _KDE_build/src/tools _KDE_build/src/file _KDE_build/src/pim
 
 .include "../../devel/qjson/buildlink3.mk"
 .include "../../mail/akonadi/buildlink3.mk"
