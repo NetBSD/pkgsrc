@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.123 2016/03/29 22:01:39 joerg Exp $
+# $NetBSD: Makefile,v 1.124 2016/04/28 07:14:32 markd Exp $
 
 DISTNAME=	digikam-4.13.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_KDE:=digikam/}
 EXTRACT_SUFX=	.tar.bz2
@@ -45,7 +45,7 @@ post-patch:
 .include "../../math/eigen3/buildlink3.mk"
 .include "../../misc/libkgeomap/buildlink3.mk"
 .include "../../misc/libkvkontakte/buildlink3.mk"
-.include "../../sysutils/baloo/buildlink3.mk"
+.include "../../sysutils/libbaloo4/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../www/libmediawiki/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
