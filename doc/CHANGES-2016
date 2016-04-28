@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1735 2016/04/28 09:22:31 leot Exp $
+$NetBSD: CHANGES-2016,v 1.1736 2016/04/28 10:11:02 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2284,3 +2284,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added sysutils/libbaloo4 version 4.14.3 [markd 2016-04-28]
 	Updated multimedia/ffmpeg2 to 2.8.6nb3 [leot 2016-04-28]
 	Updated multimedia/ffplay2 to 2.8.6nb1 [leot 2016-04-28]
+	Updated multimedia/ffplay3 to 3.0.1nb1 [leot 2016-04-28]
