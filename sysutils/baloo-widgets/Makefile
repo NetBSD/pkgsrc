@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2016/03/05 11:29:28 jperkin Exp $
+# $NetBSD: Makefile,v 1.7 2016/04/28 07:08:13 markd Exp $
 
 DISTNAME=	baloo-widgets-${_KDE_VERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	sysutils
 COMMENT=	The BalooWidgets library
 LICENSE=	gnu-gpl-v3
@@ -15,7 +15,7 @@ LICENSE=	gnu-gpl-v3
 #.include "../../devel/qjson/buildlink3.mk"
 #.include "../../mail/akonadi/buildlink3.mk"
 #.include "../../misc/kdepimlibs4/buildlink3.mk"
-.include "../../sysutils/baloo/buildlink3.mk"
+.include "../../sysutils/libbaloo4/buildlink3.mk"
 .include "../../sysutils/kfilemetadata/buildlink3.mk"
 .include "../../textproc/xapian/buildlink3.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"

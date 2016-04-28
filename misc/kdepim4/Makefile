@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.76 2016/03/05 11:28:55 jperkin Exp $
+# $NetBSD: Makefile,v 1.77 2016/04/28 07:13:19 markd Exp $
 
 DISTNAME=	kdepim-4.14.10
 PKGNAME=	${DISTNAME:S/-4/4-4/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	misc
 COMMENT=	Personal Information Management tools for the KDE desktop
 MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.04.3/src/}
@@ -74,7 +74,7 @@ BUILDLINK_DEPMETHOD.qt4-tools=full
 .include "../../security/gpgme/buildlink3.mk"
 .include "../../security/libassuan2/buildlink3.mk"
 .include "../../security/qca2/buildlink3.mk"
-.include "../../sysutils/baloo/buildlink3.mk"
+.include "../../sysutils/libbaloo4/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
 .include "../../x11/kde-runtime4/buildlink3.mk"
