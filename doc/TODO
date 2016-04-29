@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15818 2016/04/29 12:03:41 wiz Exp $
+$NetBSD: TODO,v 1.15819 2016/04/29 12:08:39 mef Exp $
 
 Suggested new packages
 ======================
@@ -1106,7 +1106,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o makeself-2.2.0
 	o maketool-0.8.4
 	o makeztxt-1.60
-	o man-pages-4.04
 	o manedit-1.2.1
 	o mantis-1.2.19
 	o mapserver-7.0.1
