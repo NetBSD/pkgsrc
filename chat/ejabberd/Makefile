@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.64 2016/04/25 20:24:14 fhajny Exp $
+# $NetBSD: Makefile,v 1.65 2016/04/29 19:05:22 fhajny Exp $
 
-DISTNAME=	ejabberd-16.03
+DISTNAME=	ejabberd-16.04
 CATEGORIES=	chat
 MASTER_SITES=	http://www.process-one.net/downloads/ejabberd/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tgz
@@ -11,9 +11,9 @@ COMMENT=	Free and Open Source distributed fault-tolerant Jabber server
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	erlang-cache_tab>=1.0.2:../../devel/erlang-cache_tab
-DEPENDS+=	erlang-esip>=1.0.2:../../net/erlang-esip
+DEPENDS+=	erlang-esip>=1.0.4:../../net/erlang-esip
 DEPENDS+=	erlang-ezlib>=1.0.1:../../devel/erlang-ezlib
-DEPENDS+=	erlang-fast_tls>=1.0.1:../../security/erlang-fast_tls
+DEPENDS+=	erlang-fast_tls>=1.0.3:../../security/erlang-fast_tls
 DEPENDS+=	erlang-fast_xml>=1.1.3:../../textproc/erlang-fast_xml
 DEPENDS+=	erlang-fast_yaml>=1.0.3:../../textproc/erlang-fast_yaml
 DEPENDS+=	erlang-iconv>=1.0.0:../../converters/erlang-iconv
@@ -24,10 +24,10 @@ DEPENDS+=	erlang-p1_mysql>=1.0.1:../../databases/erlang-p1_mysql
 DEPENDS+=	erlang-p1_oauth2>=0.6.1:../../security/erlang-p1_oauth2
 DEPENDS+=	erlang-p1_pam>=1.0.0:../../security/erlang-p1_pam
 DEPENDS+=	erlang-p1_pgsql>=1.1.0:../../databases/erlang-p1_pgsql
-DEPENDS+=	erlang-p1_utils>=1.0.3:../../misc/erlang-p1_utils
+DEPENDS+=	erlang-p1_utils>=1.0.4:../../misc/erlang-p1_utils
 DEPENDS+=	erlang-p1_xmlrpc>=1.15.1:../../textproc/erlang-p1_xmlrpc
-DEPENDS+=	erlang-stringprep>=1.0.2:../../textproc/erlang-stringprep
-DEPENDS+=	erlang-stun>=1.0.1:../../net/erlang-stun
+DEPENDS+=	erlang-stringprep>=1.0.3:../../textproc/erlang-stringprep
+DEPENDS+=	erlang-stun>=1.0.3:../../net/erlang-stun
 CONFLICTS+=	jabberd-[0-9]*
 
 GNU_CONFIGURE=		yes
