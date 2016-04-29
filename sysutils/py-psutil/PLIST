@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2015/12/14 22:58:20 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.8 2016/04/29 15:33:57 prlw1 Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -32,3 +32,39 @@ ${PYSITELIB}/psutil/_psutil_posix.so
 ${PYSITELIB}/psutil/_pswindows.py
 ${PYSITELIB}/psutil/_pswindows.pyc
 ${PYSITELIB}/psutil/_pswindows.pyo
+${PYSITELIB}/psutil/tests/__init__.py
+${PYSITELIB}/psutil/tests/__init__.pyc
+${PYSITELIB}/psutil/tests/__init__.pyo
+${PYSITELIB}/psutil/tests/runner.py
+${PYSITELIB}/psutil/tests/runner.pyc
+${PYSITELIB}/psutil/tests/runner.pyo
+${PYSITELIB}/psutil/tests/test_bsd.py
+${PYSITELIB}/psutil/tests/test_bsd.pyc
+${PYSITELIB}/psutil/tests/test_bsd.pyo
+${PYSITELIB}/psutil/tests/test_linux.py
+${PYSITELIB}/psutil/tests/test_linux.pyc
+${PYSITELIB}/psutil/tests/test_linux.pyo
+${PYSITELIB}/psutil/tests/test_memory_leaks.py
+${PYSITELIB}/psutil/tests/test_memory_leaks.pyc
+${PYSITELIB}/psutil/tests/test_memory_leaks.pyo
+${PYSITELIB}/psutil/tests/test_misc.py
+${PYSITELIB}/psutil/tests/test_misc.pyc
+${PYSITELIB}/psutil/tests/test_misc.pyo
+${PYSITELIB}/psutil/tests/test_osx.py
+${PYSITELIB}/psutil/tests/test_osx.pyc
+${PYSITELIB}/psutil/tests/test_osx.pyo
+${PYSITELIB}/psutil/tests/test_posix.py
+${PYSITELIB}/psutil/tests/test_posix.pyc
+${PYSITELIB}/psutil/tests/test_posix.pyo
+${PYSITELIB}/psutil/tests/test_process.py
+${PYSITELIB}/psutil/tests/test_process.pyc
+${PYSITELIB}/psutil/tests/test_process.pyo
+${PYSITELIB}/psutil/tests/test_sunos.py
+${PYSITELIB}/psutil/tests/test_sunos.pyc
+${PYSITELIB}/psutil/tests/test_sunos.pyo
+${PYSITELIB}/psutil/tests/test_system.py
+${PYSITELIB}/psutil/tests/test_system.pyc
+${PYSITELIB}/psutil/tests/test_system.pyo
+${PYSITELIB}/psutil/tests/test_windows.py
+${PYSITELIB}/psutil/tests/test_windows.pyc
+${PYSITELIB}/psutil/tests/test_windows.pyo
