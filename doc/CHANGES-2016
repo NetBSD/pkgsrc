@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1762 2016/04/29 13:35:21 mef Exp $
+$NetBSD: CHANGES-2016,v 1.1763 2016/04/29 13:40:10 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2318,3 +2318,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated multimedia/gst-plugins1-libav to 1.8.1 [wiz 2016-04-29]
 	Updated devel/p5-Lexical-SealRequireHints to 0.010 [mef 2016-04-29]
 	Updated devel/p5-IPC-SysV to 2.06 [mef 2016-04-29]
+	Updated devel/p5-Log-Log4perl to 1.47 [mef 2016-04-29]
