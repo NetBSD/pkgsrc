@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.73 2016/04/27 16:22:40 ryoon Exp $
+# $NetBSD: mozilla-common.mk,v 1.74 2016/04/29 23:42:49 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -236,8 +236,7 @@ BUILDLINK_API_DEPENDS.libvpx+=	libvpx>=1.3.0
 .include "../../textproc/hunspell/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.18.3nb1
 .include "../../x11/gtk2/buildlink3.mk"
-#.include "../../multimedia/gstreamer1/buildlink3.mk"
-#.include "../../multimedia/gst-plugins1-base/buildlink3.mk"
+.include "../../multimedia/ffmpeg3/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 BUILDLINK_API_DEPENDS.pixman+= pixman>=0.25.2
 .include "../../x11/pixman/buildlink3.mk"
