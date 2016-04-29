@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2016/04/15 14:20:00 wiz Exp $
+# $NetBSD: Makefile.common,v 1.16 2016/04/29 13:10:15 wiz Exp $
 #
 # used by audio/gst-plugins1-alsa/Makefile
 # used by audio/gst-plugins1-cdparanoia/Makefile
@@ -12,7 +12,7 @@
 #
 
 GST_PLUGINS1_TYPE=	base
-GST_PLUGINS1_VER=	1.8.0
+GST_PLUGINS1_VER=	1.8.1
 BUILDLINK_API_DEPENDS.gstreamer1+= gstreamer1>=1.8.0
 LICENSE=		gnu-lgpl-v2
 
