@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1764 2016/04/29 13:58:54 wen Exp $
+$NetBSD: CHANGES-2016,v 1.1765 2016/04/29 14:08:58 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2319,4 +2319,7 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Lexical-SealRequireHints to 0.010 [mef 2016-04-29]
 	Updated devel/p5-IPC-SysV to 2.06 [mef 2016-04-29]
 	Updated devel/p5-Log-Log4perl to 1.47 [mef 2016-04-29]
+	Updated devel/p5-Make to 1.1.2 [mef 2016-04-29]
 	Updated www/p5-HTML-Strip to 2.10 [wen 2016-04-29]
+	Updated devel/p5-Log-Report to 1.15 [mef 2016-04-29]
+	Updated devel/p5-Log-Report-Optional to 1.02 [mef 2016-04-29]
