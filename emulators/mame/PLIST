@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2016/04/14 21:47:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2016/04/29 08:30:50 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -8,13 +8,13 @@ bin/ldresample
 bin/ldverify
 bin/mame
 bin/nltool
+bin/nlwav
 bin/pngcmp
 bin/regrep
 bin/romcmp
 bin/split
 bin/src2html
 bin/srcclean
-bin/testkeys
 bin/unidasm
 man/man1/castool.1
 man/man1/chdman.1
@@ -42,6 +42,10 @@ share/doc/mame/windows.txt
 share/mame/artwork/LICENSE
 share/mame/artwork/README.md
 share/mame/artwork/aperture-grille.png
+share/mame/artwork/bgfx/border_blur/default.lay
+share/mame/artwork/bgfx/chains/hq2x.png
+share/mame/artwork/bgfx/chains/hq3x.png
+share/mame/artwork/bgfx/chains/hq4x.png
 share/mame/artwork/monochrome-chessboard.png
 share/mame/artwork/monochrome-matrix.png
 share/mame/artwork/shadow-mask.png
@@ -321,6 +325,7 @@ share/mame/hash/pc8801_flop.xml
 share/mame/hash/pc88va.xml
 share/mame/hash/pc98.xml
 share/mame/hash/pce.xml
+share/mame/hash/pce_tourvision.xml
 share/mame/hash/pcecd.xml
 share/mame/hash/pcw.xml
 share/mame/hash/pcw16.xml
