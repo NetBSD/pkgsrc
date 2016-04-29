@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1769 2016/04/29 15:34:16 prlw1 Exp $
+$NetBSD: CHANGES-2016,v 1.1770 2016/04/29 19:06:07 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2327,3 +2327,9 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/p5-Text-BibTeX to 0.72 [wen 2016-04-29]
 	Updated math/R-intervals to 0.15.1 [wen 2016-04-29] 
 	Updated sysutils/py-psutil to 4.1.0 [prlw1 2016-04-29]
+	Updated misc/erlang-p1_utils to 1.0.4 [fhajny 2016-04-29]
+	Updated security/erlang-fast_tls to 1.0.3 [fhajny 2016-04-29]
+	Updated textproc/erlang-stringprep to 1.0.3 [fhajny 2016-04-29]
+	Updated net/erlang-stun to 1.0.3 [fhajny 2016-04-29]
+	Updated net/erlang-esip to 1.0.4 [fhajny 2016-04-29]
+	Updated chat/ejabberd to 16.04 [fhajny 2016-04-29]
