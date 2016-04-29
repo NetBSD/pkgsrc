@@ -1,0 +1,13 @@
+$NetBSD: patch-jdk_src_share_lib_security_java.security-bsd,v 1.1 2016/04/29 09:38:19 ryoon Exp $
+
+--- jdk/src/share/lib/security/java.security-bsd.orig	2016-03-27 19:49:14.000000000 +0000
++++ jdk/src/share/lib/security/java.security-bsd
+@@ -114,7 +114,7 @@ security.provider.9=sun.security.smartca
+ # specified, the "NativePRNG" implementation will be more preferred than
+ # SHA1PRNG in the Sun provider.
+ #
+-securerandom.source=file:/dev/random
++securerandom.source=file:/dev/urandom
+ 
+ #
+ # A list of known strong SecureRandom implementations.
