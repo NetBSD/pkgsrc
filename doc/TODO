@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15823 2016/04/29 12:54:24 mef Exp $
+$NetBSD: TODO,v 1.15824 2016/04/29 12:59:32 mef Exp $
 
 Suggested new packages
 ======================
@@ -1287,7 +1287,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Heap-1.04
 	o p5-IO-AIO-4.33
 	o p5-IO-Async-0.70
-	o p5-IO-Compress-2.069
 	o p5-IO-Interactive-1.021
 	o p5-IO-Interface-1.09
 	o p5-IO-Prompt-0.997003
