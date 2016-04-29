@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1771 2016/04/29 19:28:04 adam Exp $
+$NetBSD: CHANGES-2016,v 1.1772 2016/04/29 23:43:29 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2337,3 +2337,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated multimedia/ffplay2 to 2.8.7 [adam 2016-04-29]
 	Updated multimedia/ffmpeg3 to 3.0.2 [adam 2016-04-29]
 	Updated multimedia/ffplay3 to 3.0.2 [adam 2016-04-29]
+	Updated www/firefox to 46.0nb1 [ryoon 2016-04-29]
