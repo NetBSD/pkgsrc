@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1745 2016/04/29 10:16:11 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.1746 2016/04/29 11:17:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2296,3 +2296,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/py-xlsxwriter to 0.8.6 [fhajny 2016-04-29]
 	Updated lang/openjdk8 to 1.8.77nb1 [ryoon 2016-04-29]
 	Updated databases/elasticsearch to 2.3.2 [fhajny 2016-04-29]
+	Updated x11/libdrm to 2.4.68 [wiz 2016-04-29]
