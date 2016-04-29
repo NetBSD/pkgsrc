@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2012/10/31 11:17:27 asau Exp $
+# $NetBSD: Makefile,v 1.4 2016/04/29 12:07:55 mef Exp $
 #
 
-DISTNAME=	man-pages-3.41
+DISTNAME=	man-pages-4.05
 CATEGORIES=	devel
 MASTER_SITES=	http://www.kernel.org/pub/linux/docs/man-pages/
 EXTRACT_SUFX=	.tar.xz
