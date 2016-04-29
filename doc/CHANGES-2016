@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1758 2016/04/29 13:05:15 mef Exp $
+$NetBSD: CHANGES-2016,v 1.1759 2016/04/29 13:09:17 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2309,3 +2309,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-IO-Prompter to 0.004014 [mef 2016-04-29]
 	Updated devel/p5-IO-Compress to 2.069 [mef 2016-04-29]
 	Updated devel/p5-IO-Interactive to 1.021 [mef 2016-04-29]
+	Updated devel/p5-IO-TieCombine to 1.005 [mef 2016-04-29]
