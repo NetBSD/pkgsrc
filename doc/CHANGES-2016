@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1740 2016/04/29 07:41:34 mef Exp $
+$NetBSD: CHANGES-2016,v 1.1741 2016/04/29 08:31:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2291,3 +2291,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Tree-Simple to 1.28 [mef 2016-04-29]
 	Updated devel/p5-Tree-Simple-VisitorFactory to 0.14 [mef 2016-04-29]
 	Updated devel/p5-Tree-DAG_Node to 1.29 [mef 2016-04-29]
+	Updated emulators/mame to 0.173 [wiz 2016-04-29]
