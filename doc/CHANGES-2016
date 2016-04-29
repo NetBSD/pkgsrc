@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1760 2016/04/29 13:11:48 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1761 2016/04/29 13:23:22 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2316,3 +2316,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated multimedia/gst-plugins1-ugly to 1.8.1 [wiz 2016-04-29]
 	Updated multimedia/gst-plugins1-good to 1.8.1 [wiz 2016-04-29]
 	Updated multimedia/gst-plugins1-libav to 1.8.1 [wiz 2016-04-29]
+	Updated devel/p5-Lexical-SealRequireHints to 0.010 [mef 2016-04-29]
