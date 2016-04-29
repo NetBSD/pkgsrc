@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.37 2015/07/12 18:56:31 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2016/04/29 14:21:19 wen Exp $
 
-DISTNAME=	Text-BibTeX-0.71
+DISTNAME=	Text-BibTeX-0.72
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
