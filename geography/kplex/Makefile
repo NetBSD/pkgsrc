@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2015/10/06 19:49:32 plunky Exp $
+# $NetBSD: Makefile,v 1.3 2016/04/29 08:49:45 plunky Exp $
 
-DISTNAME=	kplex-1.3.1
+DISTNAME=	kplex-1.3.2
 CATEGORIES=	geography
 MASTER_SITES=	http://www.stripydog.com/download/
 EXTRACT_SUFX=	.tgz
