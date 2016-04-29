@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1756 2016/04/29 12:54:24 mef Exp $
+$NetBSD: CHANGES-2016,v 1.1757 2016/04/29 12:59:32 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2307,3 +2307,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/SDL_gfx to 2.0.25 [mef 2016-04-29]
 	Updated devel/p5-IO-Pager to 0.36 [mef 2016-04-29]
 	Updated devel/p5-IO-Prompter to 0.004014 [mef 2016-04-29]
+	Updated devel/p5-IO-Compress to 2.069 [mef 2016-04-29]
