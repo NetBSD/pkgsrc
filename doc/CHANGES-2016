@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1752 2016/04/29 12:17:01 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1753 2016/04/29 12:17:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2303,3 +2303,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/filezilla to 3.17.0 [wiz 2016-04-29]
 	Updated devel/man-pages to 4.05 [mef 2016-04-29]
 	Updated graphics/ImageMagick to 6.9.3.8 [wiz 2016-04-29]
+	Updated graphics/p5-PerlMagick to 6.9.3.8 [wiz 2016-04-29]
