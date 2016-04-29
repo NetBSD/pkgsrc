@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1770 2016/04/29 19:06:07 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.1771 2016/04/29 19:28:04 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2333,3 +2333,7 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/erlang-stun to 1.0.3 [fhajny 2016-04-29]
 	Updated net/erlang-esip to 1.0.4 [fhajny 2016-04-29]
 	Updated chat/ejabberd to 16.04 [fhajny 2016-04-29]
+	Updated multimedia/ffmpeg2 to 2.8.7 [adam 2016-04-29]
+	Updated multimedia/ffplay2 to 2.8.7 [adam 2016-04-29]
+	Updated multimedia/ffmpeg3 to 3.0.2 [adam 2016-04-29]
+	Updated multimedia/ffplay3 to 3.0.2 [adam 2016-04-29]
