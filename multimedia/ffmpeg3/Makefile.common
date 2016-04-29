@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.4 2016/04/07 05:28:20 adam Exp $
+# $NetBSD: Makefile.common,v 1.5 2016/04/29 19:26:25 adam Exp $
 # used by multimedia/ffmpeg3/Makefile
 # used by multimedia/ffplay3/Makefile
 
-DISTNAME=	ffmpeg-3.0.1
+DISTNAME=	ffmpeg-3.0.2
 CATEGORIES=	multimedia
 MASTER_SITES=	http://www.ffmpeg.org/releases/
 EXTRACT_SUFX=	.tar.xz
