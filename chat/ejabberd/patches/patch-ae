@@ -1,11 +1,10 @@
-$NetBSD: patch-ae,v 1.14 2016/04/25 20:24:14 fhajny Exp $
+$NetBSD: patch-ae,v 1.15 2016/04/29 19:05:22 fhajny Exp $
 
 - Default locations.
-- Make it work with NetBSD's flock(1).
 - Use 'su -' instead of just 'su'. Fixes priv delegation on SunOS
   and AIX where Erlang relies on $HOME set correctly.
 
---- ejabberdctl.template.orig	2016-03-30 14:08:04.000000000 +0000
+--- ejabberdctl.template.orig	2016-04-28 13:57:55.000000000 +0000
 +++ ejabberdctl.template
 @@ -27,7 +27,7 @@ if [ "$INSTALLUSER" != "" ] ; then
                  mkdir -p "$INSTALLUSER_HOME"
@@ -29,30 +28,12 @@ $NetBSD: patch-ae,v 1.14 2016/04/25 20:24:14 fhajny Exp $
  fi
  if [ "$EJABBERD_DOC_PATH" = "" ] ; then
      EJABBERD_DOC_PATH={{docdir}}
-@@ -87,7 +87,7 @@ if [ "$ERLANG_NODE_ARG" != "" ] ; then
+@@ -85,7 +85,7 @@ if [ "$ERLANG_NODE_ARG" != "" ] ; then
+     ERLANG_NODE=$ERLANG_NODE_ARG
  fi
- if [ "{{release}}" != "true" ] ; then
-     if [ "$EJABBERDDIR" = "" ] ; then
--        EJABBERDDIR={{libdir}}/ejabberd
-+        EJABBERDDIR={{libdir}}/erlang/lib/ejabberd
-     fi
-     if [ "$EJABBERD_PRIV_PATH" = "" ] ; then
-         EJABBERD_PRIV_PATH=$EJABBERDDIR/priv
-@@ -371,7 +371,7 @@ ctl()
-     # using flock if available. Expects a linux-style
-     # flock that can lock a file descriptor.
-     MAXCONNID=100
--    CONNLOCKDIR={{localstatedir}}/lock/ejabberdctl
-+    CONNLOCKDIR=@EJABBERD_PIDDIR@
-     FLOCK=/usr/bin/flock
-     if [ ! -x "$FLOCK" ] || [ ! -d "$CONNLOCKDIR" ] ; then
-         JOT=/usr/bin/jot
-@@ -398,7 +398,7 @@ ctl()
-             CTL_LOCKFILE="$CONNLOCKDIR/$CTL_CONN"
-             (
-                 exec 8>"$CTL_LOCKFILE"
--                if flock --nb 8; then
-+                if flock -x -n 8; then
-                     ctlexec $CTL_CONN "$@"
-                     ssresult=$?
-                     # segregate from possible flock exit(1)
+ if [ "{{release}}" != "true" -a "$EJABBERD_BIN_PATH" = "" ] ; then
+-    EJABBERD_BIN_PATH={{libdir}}/ejabberd/priv/bin
++    EJABBERD_BIN_PATH={{libdir}}/erlang/lib/ejabberd/priv/bin
+ fi
+ EJABBERD_LOG_PATH=$LOGS_DIR/ejabberd.log
+ DATETIME=`date "+%Y%m%d-%H%M%S"`
