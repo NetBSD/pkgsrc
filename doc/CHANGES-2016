@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1767 2016/04/29 14:22:21 wen Exp $
+$NetBSD: CHANGES-2016,v 1.1768 2016/04/29 14:30:11 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2325,3 +2325,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Log-Report-Optional to 1.02 [mef 2016-04-29]
 	Updated textproc/p5-Text-CSV_XS to 1.23 [wen 2016-04-29]
 	Updated textproc/p5-Text-BibTeX to 0.72 [wen 2016-04-29]
+	Updated math/R-intervals to 0.15.1 [wen 2016-04-29] 
