@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1739 2016/04/28 22:21:42 jperkin Exp $
+$NetBSD: CHANGES-2016,v 1.1740 2016/04/29 07:41:34 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2288,3 +2288,6 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated ham/uhd to 3.9.3 [mef 2016-04-28]
 	Updated devel/st to 1.9 [gson 2016-04-28]
 	Updated sysutils/libgtop to 2.28.4nb9 [jperkin 2016-04-28]
+	Updated devel/p5-Tree-Simple to 1.28 [mef 2016-04-29]
+	Updated devel/p5-Tree-Simple-VisitorFactory to 0.14 [mef 2016-04-29]
+	Updated devel/p5-Tree-DAG_Node to 1.29 [mef 2016-04-29]
