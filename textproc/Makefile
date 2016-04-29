@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.881 2016/04/25 20:39:15 fhajny Exp $
+# $NetBSD: Makefile,v 1.882 2016/04/29 11:55:06 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -670,6 +670,7 @@ SUBDIR+=	po4a
 SUBDIR+=	pod2mdoc
 SUBDIR+=	postgresql-autodoc
 SUBDIR+=	psgml-mode
+SUBDIR+=	pugixml
 SUBDIR+=	pxp
 SUBDIR+=	py-4Suite
 SUBDIR+=	py-Excelerator
