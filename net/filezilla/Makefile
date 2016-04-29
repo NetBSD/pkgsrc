@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.66 2016/04/11 19:01:59 ryoon Exp $
+# $NetBSD: Makefile,v 1.67 2016/04/29 12:03:31 wiz Exp $
 
-VERSION=	3.12.0
+VERSION=	3.17.0
 DISTNAME=	FileZilla_${VERSION}_src
 PKGNAME=	filezilla-${VERSION}
-PKGREVISION=	3
 CATEGORIES=	net x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=filezilla/}
 EXTRACT_SUFX=	.tar.bz2
@@ -22,17 +21,18 @@ CONFIGURE_ARGS+=	--disable-autoupdatecheck
 # avoid xdg-utils dependency
 CONFIGURE_ENV+=		ac_cv_path_xdgopen=firefox
 
-# GCC 4.7 is required to support C++11.
-GCC_REQD+=		4.7
+# GCC 4.9 is required to support C++14.
+GCC_REQD+=		4.9
 
 .include "options.mk"
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../net/libfilezilla/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 BUILDLINK_API_DEPENDS.tinyxml+=	tinyxml>=2.6.2nb1
-.include "../../textproc/tinyxml/buildlink3.mk"
+.include "../../textproc/pugixml/buildlink3.mk"
 .include "../../x11/wxGTK30/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
