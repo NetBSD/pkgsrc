@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1776 2016/04/30 10:28:45 wen Exp $
+$NetBSD: CHANGES-2016,v 1.1777 2016/04/30 11:22:55 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2342,3 +2342,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated geography/gama to 1.17 [gdt 2016-04-30]
 	Updated sysutils/py-borgbackup to 1.0.2 [wiz 2016-04-30]
 	Updated devel/p5-Module-CPANfile to 1.1002 [wen 2016-04-30]
+	Updated lang/go to 1.6.2 [bsiegert 2016-04-30]
