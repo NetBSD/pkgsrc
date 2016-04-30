@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15830 2016/04/30 01:17:59 gdt Exp $
+$NetBSD: TODO,v 1.15831 2016/04/30 06:38:17 wen Exp $
 
 Suggested new packages
 ======================
@@ -367,7 +367,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o R-gdata-2.17.0
 	o R-gtools-3.5.0
 	o R-httpRequest-0.0.10
-	o R-intervals-0.15.1
 	o R-mapproj-3
 	o R-maps-3.1.0
 	o R-ncdf-1.6.8
@@ -1357,7 +1356,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-RRDTool-OO-0.36
 	o p5-RT-Authen-ExternalAuth-0.25
 	o p5-RT-Client-REST-0.50
-	o p5-Readonly-3
 	o p5-Regexp-Common-net-CIDR-0.03
 	o p5-Return-Value-1.666005
 	o p5-Rose-DBx-Garden-0.193
