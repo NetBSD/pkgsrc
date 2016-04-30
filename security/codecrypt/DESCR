@@ -1,0 +1,24 @@
+This is a GnuPG-like unix program for encryption and signing that uses
+only quantum-computer-resistant algorithms:
+
++ McEliece cryptosystem (compact QC-MDPC variant) for encryption
++ Hash-based Merkle tree algorithm (FMTSeq variant) for digital
+signatures
+
+Stream ciphers used:  ChaCha20, XSynd stream cipher, RC4 (for initial
+simplicity of implementation)
+
+CRHFs used:
++ Cubehash variants were selected for implementation ease, really
+clean design, quite good speed and flexibility of parameter choices.
+KeyID's are CUBE256 hashes of serialized public key.
++ ripemd128 for small hashes
++ tiger192 is used as an alternative for Cubehash for 192bit hashes
++ There's always a variant with SHA-256, SHA-384 or SHA-512.
+
+Signature algorithms:
++ FMTSeq with many possibilities and combinations of aforementioned CRHFs
+
+Encryption:
+MDPC McEliece on quasi-cyclic matrices - decoding is (slightly)
+ vulnerable to timing attacks.
