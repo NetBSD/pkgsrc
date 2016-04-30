@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2016/04/13 07:12:00 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.24 2016/04/30 11:22:28 bsiegert Exp $
 bin/go
 bin/gofmt
 go/AUTHORS
@@ -3779,6 +3779,7 @@ go/src/runtime/testdata/testprog/misc.go
 go/src/runtime/testdata/testprog/signal.go
 go/src/runtime/testdata/testprog/stringconcat.go
 go/src/runtime/testdata/testprog/syscall_windows.go
+go/src/runtime/testdata/testprogcgo/aprof.go
 go/src/runtime/testdata/testprogcgo/callback.go
 go/src/runtime/testdata/testprogcgo/cgo.go
 go/src/runtime/testdata/testprogcgo/crash.go
