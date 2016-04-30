@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.128 2016/04/11 19:01:57 ryoon Exp $
+# $NetBSD: Makefile,v 1.129 2016/04/30 20:17:24 joerg Exp $
 
 DISTNAME=	kdepim-${_KDE_VERSION}
 PKGREVISION=	45
@@ -6,6 +6,9 @@ CATEGORIES=	misc
 COMMENT=	Personal Information Management tools for the KDE desktop
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"
+
+# propertiesdialog.cpp:25:10: fatal error: 'akregatorconfig.h' file not found
+MAKE_JOBS_SAFE=	no
 
 USE_TOOLS+=		bison flex gawk bash:run perl:run pkg-config
 
