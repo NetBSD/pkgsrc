@@ -1,0 +1,13 @@
+$NetBSD: patch-tests_gama-local_scripts_gama-local-parameters.in,v 1.1 2016/04/30 01:17:44 gdt Exp $
+
+--- tests/gama-local/scripts/gama-local-parameters.in.orig	2015-07-31 12:00:08.000000000 +0000
++++ tests/gama-local/scripts/gama-local-parameters.in
+@@ -32,7 +32,7 @@ if test -n "$(diff $RES/par.txt $RES/nop
+     exit 1
+ fi
+ 
+-if test "x$GNU_GAMA_LOCAL_TEST_XMLLINT" == "xyes"; then
++if test "x$GNU_GAMA_LOCAL_TEST_XMLLINT" = "xyes"; then
+     xmllint --schema @GAMA_XML@/gama-local.xsd --noout \
+         @GAMA_INPUT@/gama-local-par.gkf
+     xmllint --schema @GAMA_XML@/gama-local.xsd --noout \
