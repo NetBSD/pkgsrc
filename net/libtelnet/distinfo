@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.1 2016/04/11 11:32:22 fhajny Exp $
+$NetBSD: distinfo,v 1.2 2016/04/30 20:18:38 joerg Exp $
 
 SHA1 (libtelnet-0.21.tar.gz) = 2101bb5689b77ae8562b07b8364e208a62d4e6f3
 RMD160 (libtelnet-0.21.tar.gz) = 81fe34610211ab5c794aea4c5e9268d275b6633a
 SHA512 (libtelnet-0.21.tar.gz) = 69dc0ac4741c81d932136cd736b48a11a05cd2738da6255d6050844f50a2f16c575c747e5c758bbdbc6b1e3309ce02e4979f0002b40fed32a3711aa8f22e04f1
 Size (libtelnet-0.21.tar.gz) = 240486 bytes
 SHA1 (patch-configure.ac) = 9b29ea8995eefbfbe786c9217089577d9de9850d
-SHA1 (patch-util_telnet-client.c) = 0486e3b6f6d900153f449ccc24024e3915761e54
+SHA1 (patch-util_telnet-chatd.c) = bfbea72913ebf543fd2220ac6da06cfabaad59f1
+SHA1 (patch-util_telnet-client.c) = f8187bb07338d427fc12fbdec2b2c3c56196dc80
+SHA1 (patch-util_telnet-proxy.c) = 7e455cec62c522c7abb55afc2a49aa064635a76c
