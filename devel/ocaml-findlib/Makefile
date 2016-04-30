@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2016/02/06 12:06:07 jaapb Exp $
+# $NetBSD: Makefile,v 1.27 2016/04/30 20:16:11 joerg Exp $
 
 DISTNAME=		findlib-1.6.1
 PKGNAME=	ocaml-${DISTNAME}
@@ -12,6 +12,9 @@ LICENSE=		mit
 
 .include "../../mk/ocaml.mk"
 
+# Undeclared dependencies between different components
+MAKE_JOBS_SAFE=		no
+
 USE_TOOLS+=		gmake m4 bash
 USE_PKGLOCALEDIR=	yes
 HAS_CONFIGURE=		yes
@@ -20,7 +23,6 @@ CONFIGURE_ARGS+=	-mandir ${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	-config ${PKG_SYSCONFDIR}/ocamlfind.conf
 CONFIGURE_ARGS+=	-sitelib ${PREFIX}/${OCAML_SITELIBDIR}
 CONFIGURE_ARGS+=	-no-camlp4
-
 
 BUILD_TARGET=		all
 .if ${OCAML_USE_OPT_COMPILER} == "yes"

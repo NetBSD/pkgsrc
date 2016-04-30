@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2016/04/11 19:01:55 ryoon Exp $
+# $NetBSD: Makefile,v 1.86 2016/04/30 20:16:38 joerg Exp $
 #
 # when updating to a new release, update ABI depends in
 # the buildlink3.mk file as well, since the plugins' version
@@ -25,6 +25,10 @@ TEST_TARGET=	check
 
 # Explicitly disable inotify on illumos, it is provided for Linux compat only.
 CONFIGURE_ENV.SunOS+=	ac_cv_func_inotify_init=no
+
+# Sharing sources between binary and lib triggers libtool bugs
+# mv: rename .deps/auth-stats.Tpo to .deps/auth-stats.Po: No such file or directory
+MAKE_JOBS_SAFE=	no
 
 .include "../../mk/bsd.prefs.mk"
 
