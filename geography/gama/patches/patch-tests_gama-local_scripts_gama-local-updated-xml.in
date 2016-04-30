@@ -1,0 +1,13 @@
+$NetBSD: patch-tests_gama-local_scripts_gama-local-updated-xml.in,v 1.1 2016/04/30 01:17:44 gdt Exp $
+
+--- tests/gama-local/scripts/gama-local-updated-xml.in.orig	2015-07-31 12:00:08.000000000 +0000
++++ tests/gama-local/scripts/gama-local-updated-xml.in
+@@ -23,7 +23,7 @@ do
+         $RES/$t-1.xml \
+         $RES/$t-2.xml
+ 
+-if test "x$GNU_GAMA_LOCAL_TEST_XMLLINT" == "xyes"; then
++if test "x$GNU_GAMA_LOCAL_TEST_XMLLINT" = "xyes"; then
+     xmllint --schema $GAMA_LOCAL_XSD \
+        $RES/$t-1.gkf --noout
+ fi
