@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1775 2016/04/30 06:25:18 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1776 2016/04/30 10:28:45 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2325,7 +2325,7 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Log-Report-Optional to 1.02 [mef 2016-04-29]
 	Updated textproc/p5-Text-CSV_XS to 1.23 [wen 2016-04-29]
 	Updated textproc/p5-Text-BibTeX to 0.72 [wen 2016-04-29]
-	Updated math/R-intervals to 0.15.1 [wen 2016-04-29] 
+	Updated math/R-intervals to 0.15.1 [wen 2016-04-29]
 	Updated sysutils/py-psutil to 4.1.0 [prlw1 2016-04-29]
 	Updated misc/erlang-p1_utils to 1.0.4 [fhajny 2016-04-29]
 	Updated security/erlang-fast_tls to 1.0.3 [fhajny 2016-04-29]
@@ -2341,3 +2341,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/php-ja-wordpress to 4.5.1 [ryoon 2016-04-30]
 	Updated geography/gama to 1.17 [gdt 2016-04-30]
 	Updated sysutils/py-borgbackup to 1.0.2 [wiz 2016-04-30]
+	Updated devel/p5-Module-CPANfile to 1.1002 [wen 2016-04-30]
