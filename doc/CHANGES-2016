@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1780 2016/04/30 14:14:11 schmonz Exp $
+$NetBSD: CHANGES-2016,v 1.1781 2016/04/30 14:14:21 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2346,3 +2346,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated converters/p5-MIME-Base32 to 1.301 [schmonz 2016-04-30]
 	Updated devel/p5-Test-BDD-Cucumber to 0.50 [schmonz 2016-04-30]
 	Updated textproc/xapian to 1.2.23 [schmonz 2016-04-30]
+	Updated textproc/xapian-omega to 1.2.23 [schmonz 2016-04-30]
