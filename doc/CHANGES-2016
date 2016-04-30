@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1783 2016/04/30 19:29:01 agc Exp $
+$NetBSD: CHANGES-2016,v 1.1784 2016/04/30 21:47:20 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2349,3 +2349,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/xapian-omega to 1.2.23 [schmonz 2016-04-30]
 	Updated textproc/p5-Search-Xapian to 1.2.23.0 [schmonz 2016-04-30]
 	Added security/codecrypt version 1.7.5 [agc 2016-04-30]
+	Updated devel/p5-File-Util to 4.161200 [mef 2016-04-30]
