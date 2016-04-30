@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1774 2016/04/30 01:17:59 gdt Exp $
+$NetBSD: CHANGES-2016,v 1.1775 2016/04/30 06:25:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2340,3 +2340,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/firefox to 46.0nb1 [ryoon 2016-04-29]
 	Updated www/php-ja-wordpress to 4.5.1 [ryoon 2016-04-30]
 	Updated geography/gama to 1.17 [gdt 2016-04-30]
+	Updated sysutils/py-borgbackup to 1.0.2 [wiz 2016-04-30]
