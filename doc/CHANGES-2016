@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1787 2016/05/01 00:41:52 ryoon Exp $
+$NetBSD: CHANGES-2016,v 1.1788 2016/05/01 00:42:43 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2353,3 +2353,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated geography/gama to 1.17 [gdt 2016-04-30]
 	Updated lang/perl5 to 5.22.2 [ryoon 2016-05-01]
 	Updated www/apache-tomcat7 to 7.0.69 [ryoon 2016-05-01]
+	Updated www/apache-tomcat8 to 8.0.33 [ryoon 2016-05-01]
