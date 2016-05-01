@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.5 2005/12/06 13:14:06 joerg Exp $
+$NetBSD: patch-aa,v 1.6 2016/05/01 19:30:58 dholland Exp $
+
+Don't declare own errno.
 
 --- src/afterstep/module.c.orig	2005-12-06 12:58:56.000000000 +0000
 +++ src/afterstep/module.c
