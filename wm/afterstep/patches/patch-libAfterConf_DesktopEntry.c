@@ -1,4 +1,6 @@
-$NetBSD: patch-libAfterConf_DesktopEntry.c,v 1.1 2016/05/01 19:26:35 dholland Exp $
+$NetBSD: patch-libAfterConf_DesktopEntry.c,v 1.2 2016/05/01 19:30:58 dholland Exp $
+
+Use ctype.h correctly.
 
 --- libAfterConf/DesktopEntry.c~	2007-07-13 17:18:26.000000000 +0000
 +++ libAfterConf/DesktopEntry.c

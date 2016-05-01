@@ -1,4 +1,6 @@
-$NetBSD: patch-libAfterBase_parse.h,v 1.1 2013/06/26 21:17:45 joerg Exp $
+$NetBSD: patch-libAfterBase_parse.h,v 1.2 2016/05/01 19:30:58 dholland Exp $
+
+Patch up gcc inline mess.
 
 --- libAfterBase/parse.h.orig	2013-06-26 19:42:15.000000000 +0000
 +++ libAfterBase/parse.h
