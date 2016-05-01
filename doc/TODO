@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15837 2016/05/01 08:50:23 wiz Exp $
+$NetBSD: TODO,v 1.15838 2016/05/01 09:41:24 degroote Exp $
 
 Suggested new packages
 ======================
@@ -918,7 +918,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o htmldoc-1.8.28
 	o htop-2.0.1
 	o http_load-20140814
-	o i3-4.12
 	o icbirc-2.0
 	o icc11-13.0
 	o icdprog-0.5
