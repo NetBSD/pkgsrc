@@ -1,27 +1,28 @@
-$NetBSD: patch-src_main.c,v 1.1.1.1 2013/02/12 23:25:35 tonnerre Exp $
-
---- src/main.c.orig	2012-12-11 23:08:17.000000000 +0000
-+++ src/main.c
-@@ -218,12 +218,6 @@ static void i3_exit(void) {
- #if EV_VERSION_MAJOR >= 4
+--- src/main.c.orig	2016-05-01 10:53:25.236039259 +0000
++++ src/main.c	2016-05-01 10:54:26.269651048 +0000
+@@ -166,11 +166,13 @@
      ev_loop_destroy(main_loop);
  #endif
--
--    if (*shmlogname != '\0') {
--        fprintf(stderr, "Closing SHM log \"%s\"\n", shmlogname);
--        fflush(stderr);
--        shm_unlink(shmlogname);
--    }
+ 
++#if !defined(__NetBSD__)
+     if (*shmlogname != '\0') {
+         fprintf(stderr, "Closing SHM log \"%s\"\n", shmlogname);
+         fflush(stderr);
+         shm_unlink(shmlogname);
+     }
++#endif /* !defined(__NetBSD__) */
  }
  
  /*
-@@ -233,9 +227,6 @@ static void i3_exit(void) {
+@@ -180,9 +182,11 @@
   *
   */
  static void handle_signal(int sig, siginfo_t *info, void *data) {
--    if (*shmlogname != '\0') {
--        shm_unlink(shmlogname);
--    }
++#if !defined(__NetBSD__)
+     if (*shmlogname != '\0') {
+         shm_unlink(shmlogname);
+     }
++#endif /* !defined(__NetBSD__) */
      raise(sig);
  }
  

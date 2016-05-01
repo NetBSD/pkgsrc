@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2015/11/09 11:05:44 nros Exp $
+# $NetBSD: Makefile,v 1.14 2016/05/01 09:39:58 degroote Exp $
 #
 
-DISTNAME=	i3-4.11
+DISTNAME=	i3-4.12
 CATEGORIES=	wm
 MASTER_SITES=	http://i3wm.org/downloads/
 EXTRACT_SUFX=	.tar.bz2
@@ -27,7 +27,7 @@ MAKE_ENV+=	DEBUG=0
 MAKE_ENV+=	SHM_SUPPORT=0
 
 REPLACE_PERL+=	i3-dmenu-desktop
-REPLACE_PERL+=	i3-migrate-config-to-v4 
+REPLACE_PERL+=	i3-migrate-config-to-v4
 REPLACE_PERL+=	i3-save-tree
 
 SUBST_CLASSES+=		conf
