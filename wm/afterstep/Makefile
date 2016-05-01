@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2016/05/01 19:26:58 dholland Exp $
+# $NetBSD: Makefile,v 1.81 2016/05/01 19:31:45 dholland Exp $
 
 DISTNAME=	AfterStep-2.2.11
 PKGNAME=	${DISTNAME:S/AfterStep/afterstep/}
@@ -26,7 +26,7 @@ INSTALLATION_DIRS+=	share/gnome/wm-properties
 
 # for backtrace
 .if ${OPSYS} == "NetBSD" && exists(/usr/include/execinfo.h)
-LIBS+=	-lexecinfo
+LIBS+=		-lexecinfo
 MAKE_ENV+=	EXTRA_LIBRARIES=-lexecinfo
 .endif
 
