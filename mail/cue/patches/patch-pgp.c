@@ -1,4 +1,4 @@
-$NetBSD: patch-pgp.c,v 1.1 2011/12/18 11:33:42 obache Exp $
+$NetBSD: patch-pgp.c,v 1.2 2016/05/01 04:54:01 mef Exp $
 
 * for OpenSSL without MD2 support.
 
@@ -16,7 +16,7 @@ $NetBSD: patch-pgp.c,v 1.1 2011/12/18 11:33:42 obache Exp $
  	}
 @@ -1418,11 +1420,13 @@ pgp_comp_data(struct pgp_pkt *pkt)
  static const EVP_MD *
- pgp_asn1_md(u_char **pp, int len)
+ pgp_asn1_md(const u_char **pp, int len)
  {
 +#ifndef OPENSSL_NO_MD2
  	static const u_char asn1_md2[] = {
