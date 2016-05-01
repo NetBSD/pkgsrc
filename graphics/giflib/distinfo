@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.17 2016/01/18 14:34:36 leot Exp $
+$NetBSD: distinfo,v 1.18 2016/05/01 20:28:44 leot Exp $
 
-SHA1 (giflib-5.1.2.tar.bz2) = 3f7bc86280db30a7120b2113f9f261301c515ad2
-RMD160 (giflib-5.1.2.tar.bz2) = 93bb79ca74d8063da74f8597ddec4d6a79bdfd2f
-SHA512 (giflib-5.1.2.tar.bz2) = 062adabd25d8c879d2bd6fd007244efb5c41248f68b75d184d94836d2e5dcbfcb1427928a3bc78017ecb4e679a336178d28851ba1f3c1a40f70e694f3ff8449d
-Size (giflib-5.1.2.tar.bz2) = 638967 bytes
+SHA1 (giflib-5.1.4.tar.bz2) = 5f1157cfc377916280849e247b8e34fa0446513f
+RMD160 (giflib-5.1.4.tar.bz2) = 0a970b30afb113036183a35bf55b7edcfbcc46c8
+SHA512 (giflib-5.1.4.tar.bz2) = 32b5e342056c210e6478e9cb3b6ceec9594dcfaf34feea1eb4dad633a081ed4465bceee578c19165907cb47cb83912ac359ceea666a8e07dbbb5420f9928f96d
+Size (giflib-5.1.4.tar.bz2) = 639703 bytes
