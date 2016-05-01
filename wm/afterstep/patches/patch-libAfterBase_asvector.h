@@ -1,4 +1,6 @@
-$NetBSD: patch-libAfterBase_asvector.h,v 1.2 2013/04/07 10:36:54 cheusov Exp $
+$NetBSD: patch-libAfterBase_asvector.h,v 1.3 2016/05/01 19:30:58 dholland Exp $
+
+Patch up gcc inline mess.
 
 --- libAfterBase/asvector.h.orig	2008-09-15 22:43:12.000000000 +0000
 +++ libAfterBase/asvector.h
