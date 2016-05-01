@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/05/01 05:03:23 mef Exp $
+
+SHA1 (libasr-1.0.2.tar.gz) = be48f048b93c243fefadbafbf002db2e00e1e1fa
+RMD160 (libasr-1.0.2.tar.gz) = 515da534a66eab6d1bbd2629c0b0991456869492
+SHA512 (libasr-1.0.2.tar.gz) = a4825a30130f70a452044c484871ac37459e1c1e6659c4c38dead7d3abbdaecb3517b7accb46586537975fee033857566fd279ecf97ae87dc80bb6bcdd467d3e
+Size (libasr-1.0.2.tar.gz) = 406428 bytes
