@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1794 2016/05/01 09:41:24 degroote Exp $
+$NetBSD: CHANGES-2016,v 1.1795 2016/05/01 12:05:37 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2365,3 +2365,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Moose to 2.1800 [wen 2016-05-01]
 	Updated mail/opensmtpd to 5.7.3p2 [mef 2016-05-01]
 	Updated wm/i3 to 4.12 [degroote 2016-05-01]
+	Updated net/youtube-dl to 20160501 [leot 2016-05-01]
