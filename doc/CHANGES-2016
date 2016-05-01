@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1793 2016/05/01 05:56:50 mef Exp $
+$NetBSD: CHANGES-2016,v 1.1794 2016/05/01 09:41:24 degroote Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2364,3 +2364,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added net/libasr version 1.0.2 [mef 2016-05-01]
 	Updated devel/p5-Moose to 2.1800 [wen 2016-05-01]
 	Updated mail/opensmtpd to 5.7.3p2 [mef 2016-05-01]
+	Updated wm/i3 to 4.12 [degroote 2016-05-01]
