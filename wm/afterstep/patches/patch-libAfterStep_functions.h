@@ -1,4 +1,6 @@
-$NetBSD: patch-libAfterStep_functions.h,v 1.1 2012/05/04 16:36:10 joerg Exp $
+$NetBSD: patch-libAfterStep_functions.h,v 1.2 2016/05/01 19:30:58 dholland Exp $
+
+Patch up gcc inline mess.
 
 --- libAfterStep/functions.h.orig	2012-05-04 14:34:21.000000000 +0000
 +++ libAfterStep/functions.h

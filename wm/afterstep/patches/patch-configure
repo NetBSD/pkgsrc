@@ -1,5 +1,7 @@
-$NetBSD: patch-configure,v 1.1 2013/04/07 10:36:54 cheusov Exp $
+$NetBSD: patch-configure,v 1.2 2016/05/01 19:30:58 dholland Exp $
+
 * fix bash-ism
+
 --- configure.orig	2011-01-13 19:27:10.000000000 +0000
 +++ configure
 @@ -1810,7 +1810,7 @@ fi;

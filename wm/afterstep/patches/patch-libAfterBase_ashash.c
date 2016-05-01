@@ -1,4 +1,6 @@
-$NetBSD: patch-libAfterBase_ashash.c,v 1.2 2013/04/07 10:36:54 cheusov Exp $
+$NetBSD: patch-libAfterBase_ashash.c,v 1.3 2016/05/01 19:30:58 dholland Exp $
+
+Patch up gcc inline mess.
 
 --- libAfterBase/ashash.c.orig	2008-03-17 22:42:32.000000000 +0000
 +++ libAfterBase/ashash.c
