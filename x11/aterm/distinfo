@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.16 2016/05/01 19:56:40 dholland Exp $
+$NetBSD: distinfo,v 1.17 2016/05/01 19:59:27 dholland Exp $
 
 SHA1 (aterm-1.0.0.tar.bz2) = 806fd20aec2851c5eea26d9e6a707985da3579a3
 RMD160 (aterm-1.0.0.tar.bz2) = b74f54b6aa6f1d4a094671507c30f627f074eb48
 SHA512 (aterm-1.0.0.tar.bz2) = 715cbf0416ff8cf23705a5333f0666a1f3afec3e17c6988e196f1798b1b4cf75e43085572b9d2906aee6060771a792545a7aa0aa9d2f4c2f0e7db7ac6e4021d3
 Size (aterm-1.0.0.tar.bz2) = 248708 bytes
 SHA1 (patch-aa) = 63dd4599dcf49c6269502d7871b99ae01e42f581
-SHA1 (patch-ac) = 28c79343079680251a013ec3fe364b01f5a5ccac
-SHA1 (patch-ad) = 0c87ee69672e98189afa2cfdcdd9691a1571f354
+SHA1 (patch-ac) = 0e28da19c8f146ff14984add086e03a38db561ef
+SHA1 (patch-ad) = e9af3fb1b7ce2b25401d0e781f519f2b7cac0973
 SHA1 (patch-ae) = 4c08e766c18c46a9e606d80cc785d954cb2bf14c
 SHA1 (patch-src_misc.c) = af6b8c7ccde2dba8bbcdcd91f7e6e37c3d1c5301
 SHA1 (patch-src_pixmap.c) = 6288ba39bb7c7d80df7a48ff9df53cebee29a84c
