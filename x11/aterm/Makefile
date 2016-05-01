@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2016/05/01 19:56:40 dholland Exp $
+# $NetBSD: Makefile,v 1.48 2016/05/01 19:59:27 dholland Exp $
 #
 
 DISTNAME=	aterm-1.0.0
@@ -44,7 +44,7 @@ CONFIGURE_ARGS+=	--enable-ttygid
 SPECIAL_PERMS=		${PREFIX}/bin/aterm ${SETUID_ROOT_PERMS}
 .endif
 
-BUILDLINK_DEPMETHOD.libXt?=	build
+BUILDLINK_DEPMETHOD.libXt=	build
 
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
