@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1795 2016/05/01 12:05:37 leot Exp $
+$NetBSD: CHANGES-2016,v 1.1796 2016/05/01 19:32:52 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2366,3 +2366,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/opensmtpd to 5.7.3p2 [mef 2016-05-01]
 	Updated wm/i3 to 4.12 [degroote 2016-05-01]
 	Updated net/youtube-dl to 20160501 [leot 2016-05-01]
+	Updated wm/afterstep to 2.2.11nb13 [dholland 2016-05-01]
