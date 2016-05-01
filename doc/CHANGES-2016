@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1797 2016/05/01 20:31:18 leot Exp $
+$NetBSD: CHANGES-2016,v 1.1798 2016/05/01 21:05:01 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2369,3 +2369,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated wm/afterstep to 2.2.11nb13 [dholland 2016-05-01]
 	Updated graphics/giflib to 5.1.4 [leot 2016-05-01]
 	Updated graphics/giflib-util to 5.1.4 [leot 2016-05-01]
+	Updated graphics/imlib2 to 1.4.9 [leot 2016-05-01]
