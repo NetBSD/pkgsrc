@@ -1,7 +1,20 @@
-$NetBSD: patch-aa,v 1.5 2008/05/27 21:46:53 tonnerre Exp $
+$NetBSD: patch-aa,v 1.6 2016/05/01 19:56:40 dholland Exp $
 
---- src/main.c.orig	2005-06-20 18:10:19.000000000 +0200
+- Use ctype.h functions properly.
+- Silence debug prints.
+- Don't assume :0 if DISPLAY isn't set.
+
+--- src/main.c.orig	2005-06-20 16:10:19.000000000 +0000
 +++ src/main.c
+@@ -196,7 +196,7 @@ xerror_handler (Display * dpy, XErrorEve
+ void
+ color_aliases(int idx)
+ {
+-    if (rs_color[idx] && isdigit(*rs_color[idx])) {
++    if (rs_color[idx] && isdigit((unsigned char)*rs_color[idx])) {
+ 	int             i = atoi(rs_color[idx]);
+ 
+ 	if (i >= 8 && i <= 15) {	/* bright colors */
 @@ -1037,12 +1037,10 @@ resize_window(XEvent* ev)
  	XConfigureEvent *xconf = &(ev->xconfigure);
  	
@@ -15,6 +28,24 @@ $NetBSD: patch-aa,v 1.5 2008/05/27 21:46:53 tonnerre Exp $
  	TermWin.root_x = root_x ; 
  	TermWin.root_y = root_y ; 
  	TermWin.root_width = xconf->width ; 
+@@ -1215,7 +1213,7 @@ set_window_color(int idx, const char *co
+ 	return;
+ 
+ /* handle color aliases */
+-    if (isdigit(*color)) {
++    if (isdigit((unsigned char)*color)) {
+ 	i = atoi(color);
+ 	if (i >= 8 && i <= 15) {	/* bright colors */
+ 	    i -= 8;
+@@ -1432,7 +1430,7 @@ change_font(int init, const char *fontna
+ 		break;
+ 
+ 	    default:
+-		if (fontname[1] != '\0' && !isdigit(fontname[1]))
++		if (fontname[1] != '\0' && !isdigit((unsigned char)fontname[1]))
+ 		    return;
+ 		if (idx < 0 || idx >= (NFONTS))
+ 		    return;
 @@ -2047,9 +2045,14 @@ main(int argc, char *argv[])
   */
      get_options(argc, argv);
