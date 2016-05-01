@@ -1,9 +1,10 @@
-$NetBSD: patch-ae,v 1.7 2012/09/29 17:59:34 asau Exp $
+$NetBSD: patch-ae,v 1.8 2016/05/01 19:56:40 dholland Exp $
 
-Tags: from-upstream
+- Use pseudo-terminal multiplexor on NetBSD.
+- Correctly set the terminal size on FreeBSD and NetBSD.
+(these parts apparently from upstream)
 
-Use pseudo-terminal multiplexor on NetBSD.
-Correctly set the terminal size on FreeBSD and NetBSD.
+- Use ctype.h functions correctly.
 
 --- src/command.c.orig	2005-06-21 20:08:16.000000000 +0000
 +++ src/command.c
@@ -25,3 +26,48 @@ Correctly set the terminal size on FreeBSD and NetBSD.
      /* reset signals and spin off the command interpreter */
  	signal(SIGINT, SIG_DFL);
  	signal(SIGQUIT, SIG_DFL);
+@@ -1225,9 +1227,9 @@ init_command(char *argv[])
+     meta_char = (Options & Opt_meta8 ? 0x80 : 033);
+     if (rs_modifier
+ 	&& strlen(rs_modifier) == 4
+-	&& toupper(*rs_modifier) == 'M'
+-	&& toupper(rs_modifier[1]) == 'O'
+-	&& toupper(rs_modifier[2]) == 'D')
++	&& toupper((unsigned char)*rs_modifier) == 'M'
++	&& toupper((unsigned char)rs_modifier[1]) == 'O'
++	&& toupper((unsigned char)rs_modifier[2]) == 'D')
+ 	switch (rs_modifier[3]) {
+ 	case '2':
+ 	    ModXMask = Mod2Mask;
+@@ -1302,13 +1304,13 @@ init_xlocale(void)
+ 	for (s = tmp; *s; s++) {
+ 	    char           *end, *next_s;
+ 
+-	    for (; *s && isspace(*s); s++)
++	    for (; *s && isspace((unsigned char)*s); s++)
+ 		/* */ ;
+ 	    if (!*s)
+ 		break;
+ 	    for (end = s; (*end && (*end != ',')); end++)
+ 		/* */ ;
+-	    for (next_s = end--; ((end >= s) && isspace(*end)); end--)
++	    for (next_s = end--; ((end >= s) && isspace((unsigned char)*end)); end--)
+ 		/* */ ;
+ 	    *++end = '\0';
+ 	    if (*s) {
+@@ -1340,13 +1342,13 @@ init_xlocale(void)
+ 	unsigned short  i;
+ 	char           *end, *next_s;
+ 
+-	for (; *s && isspace(*s); s++)
++	for (; *s && isspace((unsigned char)*s); s++)
+ 	    /* */ ;
+ 	if (!*s)
+ 	    break;
+ 	for (end = s; (*end && (*end != ',')); end++)
+ 	    /* */ ;
+-	for (next_s = end--; ((end >= s) && isspace(*end));)
++	for (next_s = end--; ((end >= s) && isspace((unsigned char)*end));)
+ 	    *end-- = 0;
+ 
+ 	if (!strcmp(s, "OverTheSpot"))
