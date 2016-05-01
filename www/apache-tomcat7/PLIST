@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2015/08/30 11:32:35 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.16 2016/05/01 00:41:29 ryoon Exp $
 share/doc/tomcat/LICENSE
 share/doc/tomcat/NOTICE
 share/doc/tomcat/RELEASE-NOTES
@@ -341,7 +341,8 @@ share/tomcat/webapps/examples/WEB-INF/classes/websocket/drawboard/wsmessages/Str
 share/tomcat/webapps/examples/WEB-INF/classes/websocket/echo/EchoAnnotation.class
 share/tomcat/webapps/examples/WEB-INF/classes/websocket/echo/EchoAnnotation.java
 share/tomcat/webapps/examples/WEB-INF/classes/websocket/echo/EchoEndpoint$1.class
-share/tomcat/webapps/examples/WEB-INF/classes/websocket/echo/EchoEndpoint$EchoMessageHandler.class
+share/tomcat/webapps/examples/WEB-INF/classes/websocket/echo/EchoEndpoint$EchoMessageHandlerBinary.class
+share/tomcat/webapps/examples/WEB-INF/classes/websocket/echo/EchoEndpoint$EchoMessageHandlerText.class
 share/tomcat/webapps/examples/WEB-INF/classes/websocket/echo/EchoEndpoint.class
 share/tomcat/webapps/examples/WEB-INF/classes/websocket/echo/EchoEndpoint.java
 share/tomcat/webapps/examples/WEB-INF/classes/websocket/snake/Direction.class
