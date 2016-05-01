@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2016/02/25 08:27:03 jperkin Exp $
+# $NetBSD: Makefile,v 1.8 2016/05/01 14:34:29 joerg Exp $
 #
 
 DISTNAME=	libmowgli-0.7.1
 CATEGORIES=	devel
-MASTER_SITES=	http://distfiles.atheme.org/ \
-		http://mirror.billymays.us/libmowgli/
+#MASTER_SITES=	http://distfiles.atheme.org/
+MASTER_SITES=	http://mirror.billymays.us/libmowgli/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	jfranz@bsdprojects.net
