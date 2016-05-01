@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1788 2016/05/01 00:42:43 ryoon Exp $
+$NetBSD: CHANGES-2016,v 1.1789 2016/05/01 00:49:46 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2354,3 +2354,9 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/perl5 to 5.22.2 [ryoon 2016-05-01]
 	Updated www/apache-tomcat7 to 7.0.69 [ryoon 2016-05-01]
 	Updated www/apache-tomcat8 to 8.0.33 [ryoon 2016-05-01]
+	Updated devel/subversion-base to 1.9.4 [ryoon 2016-05-01]
+	Updated devel/ruby-subversion to 1.9.4 [ryoon 2016-05-01]
+	Updated devel/p5-subversion to 1.9.4 [ryoon 2016-05-01]
+	Updated devel/py-subversion to 1.9.4 [ryoon 2016-05-01]
+	Updated devel/java-subversion to 1.9.4 [ryoon 2016-05-01]
+	Updated www/ap2-subversion to 1.9.4 [ryoon 2016-05-01]
