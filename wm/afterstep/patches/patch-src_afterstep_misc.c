@@ -1,4 +1,6 @@
-$NetBSD: patch-src_afterstep_misc.c,v 1.1 2012/05/04 16:36:11 joerg Exp $
+$NetBSD: patch-src_afterstep_misc.c,v 1.2 2016/05/01 19:30:58 dholland Exp $
+
+Patch up gcc inline mess.
 
 --- src/afterstep/misc.c.orig	2012-05-04 14:35:08.000000000 +0000
 +++ src/afterstep/misc.c
