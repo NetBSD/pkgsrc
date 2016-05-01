@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2012/10/31 11:17:17 asau Exp $
+# $NetBSD: Makefile,v 1.6 2016/05/01 12:28:43 joerg Exp $
 #
 
 DISTNAME=	libmcs-0.7.1
 CATEGORIES=	devel
-MASTER_SITES=	http://distfiles.atheme.org/
+#MASTER_SITES=	http://distfiles.atheme.org/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	jfranz@bsdprojects.net
