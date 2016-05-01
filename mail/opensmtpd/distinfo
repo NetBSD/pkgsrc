@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.3 2015/11/03 23:27:11 agc Exp $
+$NetBSD: distinfo,v 1.4 2016/05/01 05:56:40 mef Exp $
 
-SHA1 (opensmtpd-5.3.3p1.tar.gz) = a7fc3a15b5dc622410fcedf51bbe62e6b6d64df3
-RMD160 (opensmtpd-5.3.3p1.tar.gz) = 97f63e37fa6ce1f5f58d816088c5b356f99167c3
-SHA512 (opensmtpd-5.3.3p1.tar.gz) = 8ea72773dca4f907d2b8285fc7abcd5c4c19ceb50b547cc4a217ec296a222f8134bfc4bc7707439b0c5d58b5354f92ebed65966179d7598c4793cad4370b087b
-Size (opensmtpd-5.3.3p1.tar.gz) = 343733 bytes
-SHA1 (patch-configure.ac) = ed819952951700c057c11200095a72972aafc1f9
-SHA1 (patch-smtpd_Makefile.am) = 4267002ecadceaf68868b9d782d5e6f8571ebc36
-SHA1 (patch-smtpd_queue_fsqueue.c) = 80dae37705378c022c1a76d31ea54a3f907b6c1a
+SHA1 (opensmtpd-5.7.3p2.tar.gz) = 4d1edc5811a80ec26de040227a298a742c494e72
+RMD160 (opensmtpd-5.7.3p2.tar.gz) = 5d6faebea3a303e5effeafbef5def597bfac434e
+SHA512 (opensmtpd-5.7.3p2.tar.gz) = bac0b8d6a6969a5e49a1d45b2c74cb2f3da44d06b12c7162500adf3ca312751020762bc8301075a9d7634d94cf51f978d04fac327f843680646e9e687737c42f
+Size (opensmtpd-5.7.3p2.tar.gz) = 709074 bytes
+SHA1 (patch-configure.ac) = bcf442cf536b44019d25a1e4e9ac2812fc76d928
+SHA1 (patch-mk_smtpd_Makefile.am) = ebc62819300d3ddd824178c08a5630ca85dc6fdc
+SHA1 (patch-smtpd_queue__fs.c) = f13d1bf1d26544b3c81e5e2c813d2fe5e917b96b
+SHA1 (patch-smtpd_smtp__session.c) = f9c034827519a02b97cadb3c034ad1e84abc805a
