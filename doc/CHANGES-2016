@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1800 2016/05/02 04:03:21 dholland Exp $
+$NetBSD: CHANGES-2016,v 1.1801 2016/05/02 09:03:52 tron Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2373,3 +2373,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/imlib2 to 1.4.9 [leot 2016-05-01]
 	Added devel/bats version 0.4.0 [seb 2016-05-02]
 	Updated net/tkined to 1.4.11nb9 [dholland 2016-05-02]
+	Updated mail/mutt to 1.6.1 [tron 2016-05-02]
