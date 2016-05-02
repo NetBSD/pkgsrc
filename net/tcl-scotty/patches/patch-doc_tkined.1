@@ -1,0 +1,14 @@
+$NetBSD: patch-doc_tkined.1,v 1.1 2016/05/02 15:16:43 hauke Exp $
+
+Avoid including an obsolete library, so that the man page renders
+
+--- doc/tkined.1.orig	1996-07-16 17:30:49.000000000 +0000
++++ doc/tkined.1
+@@ -4,7 +4,6 @@
+ '\" See the file "license.terms" for information on usage and redistribution
+ '\" of this file, and for a DISCLAIMER OF ALL WARRANTIES.
+ '\" 
+-.so man.macros
+ .TH tkined 1 "" Tnm "Tnm Tcl Extension"
+ .BS
+ '\" Note:  do not modify the .SH NAME line immediately below!
