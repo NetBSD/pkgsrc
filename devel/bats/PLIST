@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2016/05/02 02:29:14 seb Exp $
+bin/bats
+libexec/bats
+libexec/bats-exec-suite
+libexec/bats-exec-test
+libexec/bats-format-tap-stream
+libexec/bats-preprocess
+man/man1/bats.1
+man/man7/bats.7
