@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1803 2016/05/02 13:22:41 taca Exp $
+$NetBSD: CHANGES-2016,v 1.1804 2016/05/02 13:28:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2378,3 +2378,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/php56 to 5.6.21 [taca 2016-05-02]
 	Updated lang/php70 to 7.0.6 [taca 2016-05-02]
 	Updated net/bind99 to 9.9.9 [taca 2016-05-02]
+	Updated net/bind910 to 9.10.4 [taca 2016-05-02]
