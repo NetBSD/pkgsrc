@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1799 2016/05/02 02:36:25 seb Exp $
+$NetBSD: CHANGES-2016,v 1.1800 2016/05/02 04:03:21 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2367,7 +2367,9 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated wm/i3 to 4.12 [degroote 2016-05-01]
 	Updated net/youtube-dl to 20160501 [leot 2016-05-01]
 	Updated wm/afterstep to 2.2.11nb13 [dholland 2016-05-01]
+	Updated x11/aterm to 1.0.0nb12 [dholland 2016-05-01]
 	Updated graphics/giflib to 5.1.4 [leot 2016-05-01]
 	Updated graphics/giflib-util to 5.1.4 [leot 2016-05-01]
 	Updated graphics/imlib2 to 1.4.9 [leot 2016-05-01]
 	Added devel/bats version 0.4.0 [seb 2016-05-02]
+	Updated net/tkined to 1.4.11nb9 [dholland 2016-05-02]
