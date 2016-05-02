@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2016/01/13 23:54:42 joerg Exp $
+# $NetBSD: Makefile,v 1.38 2016/05/02 03:57:35 dholland Exp $
 #
 
 DISTNAME=	scotty-${DIST_VERS}
@@ -49,7 +49,7 @@ pre-install:
 
 post-install:
 	cd ${DESTDIR}/${PREFIX}/bin && ${LN} -f -s scotty${DIST_VERS} scotty
-	cd ${DESTDIR}/${PREFIX}/lib/tcl/tnm${DIST_VERS}; \
+	cd ${DESTDIR}/${PREFIX}/lib/tcl/tnm${DIST_VERS}; umask 022; \
 		sed -e 's:${DESTDIR}/::' <pkgIndex.tcl >pkgIndex.tcl.new; \
 		rm -f pkgIndex.tcl; mv pkgIndex.tcl.new pkgIndex.tcl
 
