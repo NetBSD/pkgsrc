@@ -1,11 +1,13 @@
-# $NetBSD: options.mk,v 1.2 2015/02/13 13:50:32 fhajny Exp $
+# $NetBSD: options.mk,v 1.3 2016/05/02 13:27:57 taca Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bind910
 PKG_SUPPORTED_OPTIONS=	bind-dig-sigchase bind-xml-statistics-server
 PKG_SUPPORTED_OPTIONS+=	bind-json-statistics-server
 PKG_SUPPORTED_OPTIONS+=	inet6 threads readline mysql pgsql ldap dlz-filesystem
-PKG_SUPPORTED_OPTIONS+=	rrl
+PKG_SUPPORTED_OPTIONS+=	fetchlimit geoip pkcs11 sit tuning
 PKG_SUGGESTED_OPTIONS+=	readline
+
+PLIST_VARS+=	inet6 pkcs11
 
 PTHREAD_OPTS+=		native
 .include "../../mk/pthread.buildlink3.mk"
@@ -22,6 +24,8 @@ PKG_SUGGESTED_OPTIONS+=	threads
 
 .if empty(MISSING_FEATURES:Minet6)
 PKG_SUGGESTED_OPTIONS+=	inet6
+.else
+PLIST.inet6=	yes
 .endif
 
 .include "../../mk/bsd.options.mk"
@@ -55,8 +59,26 @@ CONFIGURE_ARGS+=	--with-dlz-ldap=${BUILDLINK_PREFIX.openldap-client}
 CONFIGURE_ARGS+=	--with-dlz-filesystem
 .endif
 
-.if !empty(PKG_OPTIONS:Mrrl)
-CONFIGURE_ARGS+=	--enable-rrl
+.if !empty(PKG_OPTIONS:Mfetchlimit)
+CONFIGURE_ARGS+=	--enable-fetchlimit
+.endif
+
+.if !empty(PKG_OPTIONS:Mgeoip)
+CONFIGURE_ARGS+=	--with-geoip=${PREFIX}
+.include "../../net/GeoIP/buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Mpkcs11)
+CONFIGURE_ARGS+=	--with-pkcs11=yes
+PLIST.pkcs11=		yes
+.endif
+
+.if !empty(PKG_OPTIONS:Msit)
+CONFIGURE_ARGS+=	--enable-sit
+.endif
+
+.if !empty(PKG_OPTIONS:Mtuning)
+CONFIGURE_ARGS+=	--with-tuning=large
 .endif
 
 ###

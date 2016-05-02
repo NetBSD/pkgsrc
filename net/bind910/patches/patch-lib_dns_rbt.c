@@ -1,10 +1,10 @@
-$NetBSD: patch-lib_dns_rbt.c,v 1.2 2014/10/14 16:23:19 taca Exp $
+$NetBSD: patch-lib_dns_rbt.c,v 1.3 2016/05/02 13:27:57 taca Exp $
 
 * Disable inline on powerpc.
 
---- lib/dns/rbt.c.orig	2014-09-16 19:27:15.000000000 +0000
+--- lib/dns/rbt.c.orig	2016-04-20 20:11:20.000000000 +0000
 +++ lib/dns/rbt.c
-@@ -345,6 +345,10 @@ hexdump(const char *desc, unsigned char 
+@@ -348,6 +348,10 @@ hexdump(const char *desc, unsigned char 
  }
  #endif /* DEBUG */
  
@@ -12,6 +12,6 @@ $NetBSD: patch-lib_dns_rbt.c,v 1.2 2014/10/14 16:23:19 taca Exp $
 +#define        inline  /**/
 +#endif
 +
- /* The passed node must not be NULL. */
- static inline dns_rbtnode_t *
- get_subtree_root(dns_rbtnode_t *node) {
+ #ifdef DNS_RBT_USEHASH
+ 
+ /*
