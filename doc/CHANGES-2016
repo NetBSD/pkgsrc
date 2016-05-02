@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1804 2016/05/02 13:28:27 taca Exp $
+$NetBSD: CHANGES-2016,v 1.1805 2016/05/02 15:48:43 nonaka Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2379,3 +2379,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/php70 to 7.0.6 [taca 2016-05-02]
 	Updated net/bind99 to 9.9.9 [taca 2016-05-02]
 	Updated net/bind910 to 9.10.4 [taca 2016-05-02]
+	Added fonts/ohruri-ttf version 20150606 [nonaka 2016-05-02]
