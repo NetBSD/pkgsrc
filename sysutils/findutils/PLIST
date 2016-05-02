@@ -1,16 +1,14 @@
-@comment $NetBSD: PLIST,v 1.13 2016/01/03 17:00:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2016/05/02 05:18:47 richard Exp $
 bin/gfind
 bin/glocate
 bin/gupdatedb
 bin/gxargs
 gnu/bin/find
 gnu/bin/locate
-gnu/bin/oldfind
 gnu/bin/updatedb
 gnu/bin/xargs
 gnu/man/man1/find.1
 gnu/man/man1/locate.1
-gnu/man/man1/oldfind.1
 gnu/man/man1/updatedb.1
 gnu/man/man1/xargs.1
 gnu/man/man5/locatedb.5
