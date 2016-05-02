@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2015/09/14 11:17:25 hauke Exp $
+# $NetBSD: Makefile,v 1.30 2016/05/02 03:55:43 dholland Exp $
 #
 
 DISTNAME=	scotty-2.1.11
@@ -37,5 +37,6 @@ CFLAGS+=	-DUSE_INTERP_RESULT
 post-install:
 	${LN} -f -s tkined1.4.11 ${DESTDIR}${PREFIX}/bin/tkined
 	${INSTALL_DATA} ${WRKSRC}/doc/tkined.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	chmod 644 ${DESTDIR}${PREFIX}/lib/tcl/tkined*/pkgIndex.tcl
 
 .include "../../mk/bsd.pkg.mk"
