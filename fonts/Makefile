@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.292 2016/02/07 17:49:37 wiz Exp $
+# $NetBSD: Makefile,v 1.293 2016/05/02 15:49:39 nonaka Exp $
 #
 
 COMMENT=	Fonts
@@ -172,6 +172,7 @@ SUBDIR+=	mplayer-fonts
 SUBDIR+=	ms-ttf
 SUBDIR+=	nanum-ttf
 SUBDIR+=	noto-ttf
+SUBDIR+=	ohruri-ttf
 SUBDIR+=	otf2bdf
 SUBDIR+=	oto
 SUBDIR+=	p5-Font-AFM
