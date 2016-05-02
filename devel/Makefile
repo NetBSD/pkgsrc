@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2244 2016/04/25 20:39:15 fhajny Exp $
+# $NetBSD: Makefile,v 1.2245 2016/05/02 02:33:28 seb Exp $
 #
 
 COMMENT=	Development utilities
@@ -74,6 +74,7 @@ SUBDIR+=	automoc4
 SUBDIR+=	avl
 SUBDIR+=	avltree
 SUBDIR+=	bam
+SUBDIR+=	bats
 SUBDIR+=	bazel
 SUBDIR+=	bcc
 SUBDIR+=	bglibs
