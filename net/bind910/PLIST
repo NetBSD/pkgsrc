@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/02/26 10:15:02 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2016/05/02 13:27:57 taca Exp $
 bin/bind9-config
 bin/delv
 bin/dig
@@ -372,6 +372,10 @@ man/man8/named-compilezone.8
 man/man8/named-journalprint.8
 man/man8/named.8
 man/man8/nsec3hash.8
+${PLIST.pkcs11}man/man8/pkcs11-destroy.8
+${PLIST.pkcs11}man/man8/pkcs11-keygen.8
+${PLIST.pkcs11}man/man8/pkcs11-list.8
+${PLIST.pkcs11}man/man8/pkcs11-tokens.8
 man/man8/rndc-confgen.8
 man/man8/rndc.8
 man/man8/tsig-keygen.8
@@ -395,6 +399,10 @@ sbin/named-compilezone
 sbin/named-journalprint
 sbin/named-rrchecker
 sbin/nsec3hash
+${PLIST.pkcs11}sbin/pkcs11-destroy
+${PLIST.pkcs11}sbin/pkcs11-keygen
+${PLIST.pkcs11}sbin/pkcs11-list
+${PLIST.pkcs11}sbin/pkcs11-tokens
 sbin/rndc
 sbin/rndc-confgen
 sbin/tsig-keygen
@@ -432,10 +440,12 @@ share/doc/bind9/arm/man.dnssec-verify.html
 share/doc/bind9/arm/man.genrandom.html
 share/doc/bind9/arm/man.host.html
 share/doc/bind9/arm/man.isc-hmac-fixup.html
+share/doc/bind9/arm/man.lwresd.html
 share/doc/bind9/arm/man.named-checkconf.html
 share/doc/bind9/arm/man.named-checkzone.html
 share/doc/bind9/arm/man.named-journalprint.html
 share/doc/bind9/arm/man.named-rrchecker.html
+share/doc/bind9/arm/man.named.conf.html
 share/doc/bind9/arm/man.named.html
 share/doc/bind9/arm/man.nsec3hash.html
 share/doc/bind9/arm/man.nsupdate.html

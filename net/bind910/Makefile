@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2016/03/10 00:48:41 taca Exp $
+# $NetBSD: Makefile,v 1.19 2016/05/02 13:27:57 taca Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P/pl/}
@@ -14,7 +14,7 @@ CONFLICTS+=	host-[0-9]*
 
 MAKE_JOBS_SAFE=	no
 
-BIND_VERSION=	9.10.3-P4
+BIND_VERSION=	9.10.4
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -57,12 +57,6 @@ FILES_SUBST+=		BIND_GROUP=${BIND_GROUP} \
 			SSLBASE=${SSLBASE}
 MESSAGE_SUBST+=		BIND_DIR=${BIND_DIR} BIND_USER=${BIND_USER}
 DOCDIR=			${DESTDIR}${PREFIX}/share/doc/bind9
-
-# include/isc/ipv6.h is installed on non-ipv6 platforms
-PLIST_VARS+=	inet6
-.if !empty(MISSING_FEATURES:Minet6)
-PLIST.inet6=	yes
-.endif
 
 RCD_SCRIPTS=		lwresd named9
 SMF_METHODS=		named
