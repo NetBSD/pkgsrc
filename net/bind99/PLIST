@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2015/02/26 10:14:10 taca Exp $
+@comment $NetBSD: PLIST,v 1.11 2016/05/02 13:22:06 taca Exp $
 bin/bind9-config
 bin/dig
 bin/host
@@ -396,6 +396,7 @@ share/doc/bind9/arm/man.dig.html
 share/doc/bind9/arm/man.dnssec-checkds.html
 share/doc/bind9/arm/man.dnssec-coverage.html
 share/doc/bind9/arm/man.dnssec-dsfromkey.html
+share/doc/bind9/arm/man.dnssec-importkey.html
 share/doc/bind9/arm/man.dnssec-keyfromlabel.html
 share/doc/bind9/arm/man.dnssec-keygen.html
 share/doc/bind9/arm/man.dnssec-revoke.html
@@ -405,9 +406,11 @@ share/doc/bind9/arm/man.dnssec-verify.html
 share/doc/bind9/arm/man.genrandom.html
 share/doc/bind9/arm/man.host.html
 share/doc/bind9/arm/man.isc-hmac-fixup.html
+share/doc/bind9/arm/man.lwresd.html
 share/doc/bind9/arm/man.named-checkconf.html
 share/doc/bind9/arm/man.named-checkzone.html
 share/doc/bind9/arm/man.named-journalprint.html
+share/doc/bind9/arm/man.named.conf.html
 share/doc/bind9/arm/man.named.html
 share/doc/bind9/arm/man.nsec3hash.html
 share/doc/bind9/arm/man.nsupdate.html
