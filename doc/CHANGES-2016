@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1817 2016/05/03 12:24:25 mef Exp $
+$NetBSD: CHANGES-2016,v 1.1818 2016/05/03 12:29:44 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2393,3 +2393,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Dist-Zilla to 5.047 [mef 2016-05-03]
 	Updated devel/p5-Git-Version-Compare to 1.002 [mef 2016-05-03]
 	Updated devel/p5-Module-Build to 0.42180 [mef 2016-05-03]
+	Updated devel/p5-Module-CoreList to 5.20160429 [mef 2016-05-03]
