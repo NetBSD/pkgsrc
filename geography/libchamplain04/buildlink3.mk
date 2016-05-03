@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.36 2016/04/11 19:01:35 ryoon Exp $
+# $NetBSD: buildlink3.mk,v 1.37 2016/05/03 11:40:02 prlw1 Exp $
 
 BUILDLINK_TREE+=	libchamplain
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libchamplain
 LIBCHAMPLAIN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libchamplain+=	libchamplain04>=0.4.6
-BUILDLINK_ABI_DEPENDS.libchamplain+=	libchamplain04>=0.4.7nb29
+BUILDLINK_ABI_DEPENDS.libchamplain+=	libchamplain04>=0.4.7nb30
 BUILDLINK_PKGSRCDIR.libchamplain?=	../../geography/libchamplain04
 
 .include "../../devel/glib2/buildlink3.mk"
