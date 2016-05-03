@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1809 2016/05/03 03:05:04 mef Exp $
+$NetBSD: CHANGES-2016,v 1.1810 2016/05/03 05:06:23 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2385,3 +2385,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated games/gnuchess to 6.2.2 [mef 2016-05-03]
 	Updated games/xboard to 4.8.0 [mef 2016-05-03]
 	Updated devel/p5-List-MoreUtils to 0.415 [mef 2016-05-03]
+	Updated devel/p5-IO-Async to 0.70 [mef 2016-05-03]
