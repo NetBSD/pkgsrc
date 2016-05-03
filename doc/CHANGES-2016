@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1806 2016/05/03 01:50:38 taca Exp $
+$NetBSD: CHANGES-2016,v 1.1807 2016/05/03 01:52:10 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2381,3 +2381,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/bind910 to 9.10.4 [taca 2016-05-02]
 	Added fonts/ohruri-ttf version 20150606 [nonaka 2016-05-02]
 	Updated mail/dovecot2 to 2.2.24 [taca 2016-05-03]
+	Updated mail/dovecot2-pigeonhole to 0.4.14 [taca 2016-05-03]
