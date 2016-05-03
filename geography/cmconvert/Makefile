@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2012/10/04 09:19:16 asau Exp $
-#
+# $NetBSD: Makefile,v 1.4 2016/05/03 10:54:55 wiz Exp $
 
 DISTNAME=	cmconvert-1.9.5
 PKGREVISION=	1
 CATEGORIES=	geography
 MASTER_SITES=	http://www.smittyware.com/download/
 
-MAINTAINER=	rhaen@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.smittyware.com/download/
 COMMENT=	CacheMate import file converter for GPS GPX files
 
