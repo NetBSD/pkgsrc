@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1819 2016/05/03 12:39:53 mef Exp $
+$NetBSD: CHANGES-2016,v 1.1820 2016/05/03 12:56:41 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2395,3 +2395,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Module-Build to 0.42180 [mef 2016-05-03]
 	Updated devel/p5-Module-CoreList to 5.20160429 [mef 2016-05-03]
 	Updated devel/p5-Module-ExtractUse to 0.341 [mef 2016-05-03]
+	Updated devel/acr to 0.10.1 [mef 2016-05-03]
