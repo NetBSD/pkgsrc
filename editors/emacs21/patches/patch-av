@@ -1,7 +1,16 @@
-$NetBSD: patch-av,v 1.1 2007/06/11 13:38:42 markd Exp $
+$NetBSD: patch-av,v 1.2 2016/05/03 09:41:20 wiz Exp $
 
---- src/dispnew.c.orig	2005-12-29 13:38:38.000000000 +0000
+--- src/dispnew.c.orig	2002-03-31 17:08:22.000000000 +0000
 +++ src/dispnew.c
+@@ -1256,7 +1256,7 @@ swap_glyph_pointers (a, b)
+ /* Copy glyph row structure FROM to glyph row structure TO, except
+    that glyph pointers in the structures are left unchanged.  */
+ 
+-INLINE void
++static INLINE void
+ copy_row_except_pointers (to, from)
+      struct glyph_row *to, *from;
+ {
 @@ -5820,9 +5820,6 @@ window_change_signal (signalnum) /* If w
       int signalnum;		/* some compilers complain in signal calls.  */
  {
