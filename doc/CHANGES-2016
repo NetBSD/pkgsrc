@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1821 2016/05/03 14:51:27 jperkin Exp $
+$NetBSD: CHANGES-2016,v 1.1822 2016/05/03 14:54:31 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2397,3 +2397,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Module-ExtractUse to 0.341 [mef 2016-05-03]
 	Updated devel/acr to 0.10.1 [mef 2016-05-03]
 	Updated security/openssl to 1.0.2h [jperkin 2016-05-03]
+	Added devel/py-hash version 0.6.2 [fhajny 2016-05-03]
