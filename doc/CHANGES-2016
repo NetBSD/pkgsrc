@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1812 2016/05/03 08:15:27 manu Exp $
+$NetBSD: CHANGES-2016,v 1.1813 2016/05/03 08:47:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2388,3 +2388,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-IO-Async to 0.70 [mef 2016-05-03]
 	Updated devel/p5-Method-Signatures to 20160315 [mef 2016-05-03]
 	Updated sysutils/lastfss to 0.2 [manu 2016-05-03]
+	Updated sysutils/p5-Unix-Statgrab to 0.111 [wiz 2016-05-03]
