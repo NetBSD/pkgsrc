@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2007/06/11 13:38:33 markd Exp $
+$NetBSD: patch-aa,v 1.4 2016/05/03 09:41:20 wiz Exp $
 
---- man/Makefile.in.orig	Wed Apr 24 16:54:15 2002
-+++ man/Makefile.in	Wed Apr 24 16:55:45 2002
-@@ -34,7 +34,7 @@
+--- man/Makefile.in.orig	2001-12-21 08:15:45.000000000 +0000
++++ man/Makefile.in
+@@ -34,7 +34,7 @@ VPATH=@srcdir@
  MAKEINFO = makeinfo
  INFO_TARGETS = ../info/emacs ../info/ccmode ../info/cl \
  	        ../info/dired-x ../info/ediff ../info/forms ../info/gnus \
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.3 2007/06/11 13:38:33 markd Exp $
  		../info/sc ../info/vip ../info/viper ../info/widget \
  		../info/efaq ../info/ada-mode ../info/autotype \
  		../info/idlwave ../info/eudc ../info/ebrowse ../info/pcl-cvs \
-@@ -100,6 +100,7 @@
+@@ -100,6 +100,7 @@ EMACSSOURCES= \
  	${srcdir}/glossary.texi \
  	${srcdir}/ack.texi
  
@@ -19,16 +19,16 @@ $NetBSD: patch-aa,v 1.3 2007/06/11 13:38:33 markd Exp $
  info: $(INFO_TARGETS)
  
  dvi: $(DVI_TARGETS)
-@@ -112,12 +113,6 @@
- # The following target uses an explicit -o switch to work around
+@@ -113,12 +114,6 @@ dvi: $(DVI_TARGETS)
  # the @setfilename directive in info.texi, which is required for
  # the Texinfo distribution.
--
+ 
 -../info/info: ${INFOSOURCES}
 -	cd $(srcdir); $(MAKEINFO) --no-split info.texi -o $@
 -
 -info.dvi: ${INFOSOURCES}
 -	$(ENVADD) $(TEXI2DVI) ${srcdir}/info.texi
- 
+-
  ../info/emacs: ${EMACSSOURCES}
  	cd $(srcdir); $(MAKEINFO) emacs.texi
+ 
