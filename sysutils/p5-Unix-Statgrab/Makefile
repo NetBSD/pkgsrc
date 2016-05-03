@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2015/09/08 19:33:12 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2016/05/03 08:47:16 wiz Exp $
 
-DISTNAME=	Unix-Statgrab-0.109
+DISTNAME=	Unix-Statgrab-0.111
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/R/RE/REHSACK/}
@@ -12,6 +12,7 @@ LICENSE=	${PERL5_LICENSE}
 
 BUILD_DEPENDS+=	p5-Config-AutoConf>=0.19:../../devel/p5-Config-AutoConf
 BUILD_DEPENDS+=	p5-Module-Build>=0.4000:../../devel/p5-Module-Build
+BUILD_DEPENDS+=	p5-Test-LeakTrace-[0-9]*:../../devel/p5-Test-LeakTrace
 
 USE_LANGUAGES=	c
 USE_TOOLS+=	pkg-config
