@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.53 2016/04/11 19:01:58 ryoon Exp $
+# $NetBSD: Makefile,v 1.54 2016/05/03 11:40:04 prlw1 Exp $
 
 DISTNAME=	farsight2-0.0.31
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	chat multimedia
 MASTER_SITES=	http://farsight.freedesktop.org/releases/farsight2/
 
