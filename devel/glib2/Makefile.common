@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.48 2016/04/26 15:26:44 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.49 2016/05/03 08:49:04 jperkin Exp $
 #
 # used by devel/glib2/Makefile
 # used by devel/gdbus-codegen/Makefile
@@ -70,11 +70,12 @@ SUBST_MESSAGE.thr=	Fixing libgthread.
     !empty(MACHINE_PLATFORM:MDarwin-1[012].*)
 SUBST_CLASSES+=		gcocoa
 SUBST_STAGE.gcocoa=	pre-configure
-SUBST_FILES.gcocoa=	gio/Makefile.in
-SUBST_FILES.gcocoa+=	configure
-SUBST_SED.gcocoa=	-e 's,gcocoanotificationbackend.c,,g'
+SUBST_FILES.gcocoa=	configure
+SUBST_FILES.gcocoa+=	gio/Makefile.in gio/giomodule.c
+SUBST_SED.gcocoa=	-e 's,10.9.0,10.0.0,g'
+SUBST_SED.gcocoa+=	-e 's,gcocoanotificationbackend.c,,g'
 SUBST_SED.gcocoa+=	-e '/gcocoanotificationbackend/d'
-SUBST_SED.gcocoa+=	-e 's,10.9.0,10.0.0,g'
+SUBST_SED.gcocoa+=	-e '/g_type_ensure.*g_cocoa_notification/d'
 .endif
 
 .if !empty(MACHINE_PLATFORM:MDarwin-[56].*-*)
