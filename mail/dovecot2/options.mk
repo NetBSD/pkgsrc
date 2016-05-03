@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2015/02/19 09:48:27 taca Exp $
+# $NetBSD: options.mk,v 1.9 2016/05/03 12:34:27 taca Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dovecot
 PKG_SUPPORTED_OPTIONS=	gssapi kqueue ldap mysql pam pgsql sqlite tcpwrappers
@@ -9,7 +9,7 @@ PKG_SUGGESTED_OPTIONS=	pam sqlite ssl tcpwrappers
 .if defined(PKG_HAVE_KQUEUE)
 PKG_SUGGESTED_OPTIONS+=	kqueue
 .endif
-PLIST_VARS+=		ssl tcpwrappers
+PLIST_VARS+=		ldap ssl tcpwrappers
 
 .include "../../mk/bsd.options.mk"
 
@@ -53,6 +53,7 @@ CPPFLAGS+=		-I${BUILDLINK_DIR}/include/pgsql
 .if !empty(PKG_OPTIONS:Mldap)
 CONFIGURE_ARGS+=	--with-ldap
 .  include "../../databases/openldap-client/buildlink3.mk"
+PLIST.ldap=	yes
 .endif
 
 ###
