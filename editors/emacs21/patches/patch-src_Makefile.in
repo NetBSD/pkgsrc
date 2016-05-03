@@ -1,4 +1,4 @@
-$NetBSD: patch-src_Makefile.in,v 1.1 2013/07/05 13:44:07 ryoon Exp $
+$NetBSD: patch-src_Makefile.in,v 1.2 2016/05/03 09:41:20 wiz Exp $
 
 * Use giflib 5.0.
 
@@ -13,3 +13,29 @@ $NetBSD: patch-src_Makefile.in,v 1.1 2013/07/05 13:44:07 ryoon Exp $
  #endif /* not defined LIBGIF */
  #else /* not HAVE_GIF */
  #define LIBGIF
+@@ -847,6 +847,7 @@ emacs: temacs ${etc}DOC ${lisp}
+ #else /* ! defined (HAVE_SHM) */
+ 	LC_ALL=C ./temacs -batch -l loadup dump
+ #endif /* ! defined (HAVE_SHM) */
++	-/usr/sbin/paxctl +a emacs
+ #endif /* ! defined (CANNOT_DUMP) */
+ 	-./emacs -q -batch -f list-load-path-shadows
+ 
+@@ -875,6 +876,9 @@ temacs: MAKE_PARALLEL $(LOCALCPP) $(STAR
+ 	$(LD) YMF_PASS_LDFLAGS (${STARTFLAGS} ${ALL_LDFLAGS}) \
+     -o temacs ${STARTFILES} ${obj} ${otherobj}  \
+     OBJECTS_MACHINE ${LIBES}
++#ifndef CANNOT_DUMP
++	-/usr/sbin/paxctl +a temacs
++#endif
+ 
+ /* We don't use ALL_LDFLAGS because LD_SWITCH_SYSTEM and LD_SWITCH_MACHINE
+    often contain options that have to do with using Emacs's crt0,
+@@ -1241,6 +1245,7 @@ bootstrap-emacs: bootstrap-temacs bootst
+ 	./temacs -nl -batch -l loadup bootstrap
+ #else /* ! defined (HAVE_SHM) */
+ 	./temacs --batch --load loadup bootstrap
++	-/usr/sbin/paxctl +a emacs
+ #endif /* ! defined (HAVE_SHM) */
+ #endif /* ! defined (CANNOT_DUMP) */
+ 	mv -f emacs bootstrap-emacs
