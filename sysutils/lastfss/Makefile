@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2016/03/09 21:47:12 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2016/05/03 08:07:27 manu Exp $
 
-DISTNAME=	lastfss-0.1
+DISTNAME=	lastfss-0.2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://ftp.espci.fr/pub/lastfss/
 EXTRACT_SUFX=	.tgz
