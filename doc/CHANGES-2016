@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1820 2016/05/03 12:56:41 mef Exp $
+$NetBSD: CHANGES-2016,v 1.1821 2016/05/03 14:51:27 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2396,3 +2396,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Module-CoreList to 5.20160429 [mef 2016-05-03]
 	Updated devel/p5-Module-ExtractUse to 0.341 [mef 2016-05-03]
 	Updated devel/acr to 0.10.1 [mef 2016-05-03]
+	Updated security/openssl to 1.0.2h [jperkin 2016-05-03]
