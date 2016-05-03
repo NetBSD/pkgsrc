@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1807 2016/05/03 01:52:10 taca Exp $
+$NetBSD: CHANGES-2016,v 1.1808 2016/05/03 02:42:03 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2382,3 +2382,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Added fonts/ohruri-ttf version 20150606 [nonaka 2016-05-02]
 	Updated mail/dovecot2 to 2.2.24 [taca 2016-05-03]
 	Updated mail/dovecot2-pigeonhole to 0.4.14 [taca 2016-05-03]
+	Updated games/gnuchess to 6.2.2 [mef 2016-05-03]
+	Updated games/xboard to 4.8.0 [mef 2016-05-03]
