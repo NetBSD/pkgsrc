@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1814 2016/05/03 11:38:12 prlw1 Exp $
+$NetBSD: CHANGES-2016,v 1.1815 2016/05/03 11:58:24 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2390,3 +2390,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/lastfss to 0.2 [manu 2016-05-03]
 	Updated sysutils/p5-Unix-Statgrab to 0.111 [wiz 2016-05-03]
 	Updated net/libsoup to 2.54.1 [prlw1 2016-05-03]
+	Updated devel/p5-Dist-Zilla to 5.047 [mef 2016-05-03]
