@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/05/03 14:53:05 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2016/05/03 19:27:12 jperkin Exp $
 
 DISTNAME=	pyfasthash-0.6.2
 PKGNAME=	${DISTNAME:S/pyfast/${PYPKGPREFIX}-/}
@@ -15,6 +15,8 @@ GITHUB_PROJECT=	pyfasthash
 USE_LANGUAGES=	c c++
 
 EGG_NAME=	${DISTNAME:S/fast//}
+
+PYTHON_VERSIONS_INCOMPATIBLE=	33	# devel/py-boost
 
 .include "../../devel/py-boost/buildlink3.mk"
 .include "../../lang/python/egg.mk"
