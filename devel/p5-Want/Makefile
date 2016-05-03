@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.26 2016/03/04 13:26:07 wen Exp $
+# $NetBSD: Makefile,v 1.27 2016/05/03 10:54:55 wiz Exp $
 
 DISTNAME=	Want-0.29
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Algorithm/ROBIN/} # this is a hack
 
-MAINTAINER=	rhaen@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Want/
 COMMENT=	Perl module providing a generalisation of wantarray
 LICENSE=	${PERL5_LICENSE}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2014/09/05 12:14:24 gsutre Exp $
+# $NetBSD: Makefile,v 1.8 2016/05/03 10:54:56 wiz Exp $
 
 DISTNAME=		grub-2.00
 PKGNAME=		${DISTNAME:S/grub/grub2/}
@@ -7,7 +7,7 @@ CATEGORIES=		sysutils
 MASTER_SITES=		ftp://ftp.gnu.org/gnu/grub/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
 
-MAINTAINER=		gsutre@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/grub/
 COMMENT=		GRand Unified Bootloader, version 2
 LICENSE=		gnu-gpl-v3
