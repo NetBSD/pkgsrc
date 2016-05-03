@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1810 2016/05/03 05:06:23 mef Exp $
+$NetBSD: CHANGES-2016,v 1.1811 2016/05/03 05:10:50 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2386,3 +2386,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated games/xboard to 4.8.0 [mef 2016-05-03]
 	Updated devel/p5-List-MoreUtils to 0.415 [mef 2016-05-03]
 	Updated devel/p5-IO-Async to 0.70 [mef 2016-05-03]
+	Updated devel/p5-Method-Signatures to 20160315 [mef 2016-05-03]
