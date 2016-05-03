@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2015/07/12 18:56:17 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2016/05/03 11:54:45 mef Exp $
 
 DISTNAME=	Role-HasMessage-0.006
 PKGNAME=	p5-${DISTNAME}
@@ -19,6 +19,8 @@ DEPENDS+=	p5-namespace-clean-[0-9]*:../../devel/p5-namespace-clean
 
 BUILD_DEPENDS+=	p5-Moose-[0-9]*:../../devel/p5-Moose
 #BUILD_DEPENDS+=	{perl>=5.14.1,p5-Test-Simple>=0.96}:../../devel/p5-Test-Simple
+# for make test
+BUILD_DEPENDS+=	p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
 
 PERL5_PACKLIST=		auto/Role/HasMessage/.packlist
 
