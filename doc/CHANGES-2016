@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1824 2016/05/03 15:05:39 mef Exp $
+$NetBSD: CHANGES-2016,v 1.1825 2016/05/03 15:37:58 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2400,3 +2400,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added devel/py-hash version 0.6.2 [fhajny 2016-05-03]
 	Updated devel/p5-Module-Install-ReadmeFromPod to 0.26 [mef 2016-05-03]
 	Updated devel/p5-Module-ScanDeps to 1.21 [mef 2016-05-03]
+	Updated devel/p5-MooseX-Attribute-Chained to 1.0.2 [mef 2016-05-03]
