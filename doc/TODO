@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15839 2016/05/02 09:03:52 tron Exp $
+$NetBSD: TODO,v 1.15840 2016/05/03 02:42:03 mef Exp $
 
 Suggested new packages
 ======================
@@ -799,7 +799,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnu-crypto-2.1.0
 	o gnu-pw-mgr-1.6
 	o gnucap-20130423
-	o gnuchess-6.2.2
 	o gnuchess-book-1.02
 	o gnustep-back-0.24.1
 	o gnustep-base-1.24.8
@@ -1899,7 +1898,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xaric-0.13.7
 	o xbindkeys-1.8.6
 	o xbindkeys-tk-1.8.0
-	o xboard-4.8.0
 	o xcircuit-3.9.44
 	o xcoral-3.14
 	o xdaliclock-2.43
