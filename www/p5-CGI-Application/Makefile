@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2015/07/12 18:56:33 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2016/05/03 10:54:57 wiz Exp $
 
 DISTNAME=		CGI-Application-4.50
 PKGNAME=		p5-${DISTNAME}
@@ -6,7 +6,7 @@ PKGREVISION=		5
 CATEGORIES=		www perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=CGI/}
 
-MAINTAINER=		rhaen@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/CGI-Application/
 COMMENT=		Perl5 module to create sophisticated, reusable web-based applications
 LICENSE=		${PERL5_LICENSE}

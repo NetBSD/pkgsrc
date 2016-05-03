@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2015/06/12 10:51:41 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2016/05/03 10:54:57 wiz Exp $
 
 DISTNAME=	Calendar-Simple-1.21
 PKGNAME=	p5-${DISTNAME}
@@ -6,7 +6,7 @@ PKGREVISION=	6
 CATEGORIES=	time perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Calendar/}
 
-MAINTAINER=	rhaen@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Calendar-Simple/
 COMMENT=	Perl extension to create simple calendars
 LICENSE=	${PERL5_LICENSE}
