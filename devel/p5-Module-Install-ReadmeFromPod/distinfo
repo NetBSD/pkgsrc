@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 03:28:28 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/05/03 14:56:32 mef Exp $
 
-SHA1 (Module-Install-ReadmeFromPod-0.22.tar.gz) = f4beee67b4d80e88d5b67d90b62ab31421375d4b
-RMD160 (Module-Install-ReadmeFromPod-0.22.tar.gz) = 0a4bf7d12bc41bec61c0c999c3c4a73dc1c56a94
-SHA512 (Module-Install-ReadmeFromPod-0.22.tar.gz) = 98bde6ce131d7ac03ac89a25ee3ea16e8078e16f08ccc00e0a55fc7a6b73101b0f4f64553abd4be85fc33635084a3571e66a4adf92f538aa6af3b49edef1cea7
-Size (Module-Install-ReadmeFromPod-0.22.tar.gz) = 34246 bytes
+SHA1 (Module-Install-ReadmeFromPod-0.26.tar.gz) = b0290b920e2bb8ec64e2c104760d85777a966229
+RMD160 (Module-Install-ReadmeFromPod-0.26.tar.gz) = 44577c8985e109caca1896e3c992113b97cba0c9
+SHA512 (Module-Install-ReadmeFromPod-0.26.tar.gz) = 834b089153fa4ec95ea43cb20c7092df51316062830a6f6df6b0fd183192669a7b12c650345127a9714d68c03f10439d1837e3d4ea44354122e123bf4cb42be0
+Size (Module-Install-ReadmeFromPod-0.26.tar.gz) = 35869 bytes
