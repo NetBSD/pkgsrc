@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.243 2016/04/27 16:22:40 ryoon Exp $
+$NetBSD: distinfo,v 1.244 2016/05/04 16:22:35 martin Exp $
 
 SHA1 (firefox-46.0.source.tar.xz) = 95c5673b4449e8d694c50aea23d8160509d6a85b
 RMD160 (firefox-46.0.source.tar.xz) = 333ab663beceeed102a90e0c5c3f17610b9895d8
@@ -63,8 +63,11 @@ SHA1 (patch-js__src__vm__SPSProfiler.cpp) = 989ba25e4c5308d21d07baa802decce13609
 SHA1 (patch-js_src_ctypes_CTypes.h) = 768a084239f92a424c1c7dc9eaaf9be9456ca9f0
 SHA1 (patch-js_src_frontend_ParseMaps.cpp) = c00117d79b78904bc50a1d664a8fc0e4e339bfbc
 SHA1 (patch-js_src_jit-LIR.cpp) = 6e678d6886724dd346b8ca58ef903bd00dc8f5da
+SHA1 (patch-js_src_jit_AtomicOperations.h) = e13cf94a6692495717211eea589ab9c021d7e737
 SHA1 (patch-js_src_jit_MIR.cpp) = 32586fb4437b48c62ef3dd8267f4b1796196230b
 SHA1 (patch-js_src_jit_arm_Architecture-arm.cpp) = d734bea22d803f5f1019fd817cd3993da29a422b
+SHA1 (patch-js_src_jit_none_AtomicOperations-sparc.h) = 88d59ed8d16341686c34579008cbd49b3dde3c8d
+SHA1 (patch-js_src_jit_none_MacroAssembler-none.h) = 87bfc7a2bb40cd3badd533db02f78542a946534e
 SHA1 (patch-js_src_jsdate.cpp) = 4e15badd1d9a08462a851aa2a8c47fd1e137626b
 SHA1 (patch-js_src_jskwgen.cpp) = 34d3b92e13366d4b43ff755ad54f392c116d5c59
 SHA1 (patch-js_src_jsmath.cpp) = 7d4993ae91e9b5e6820358165603819aefb586f9
