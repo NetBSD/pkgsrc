@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1826 2016/05/03 21:31:16 mef Exp $
+$NetBSD: CHANGES-2016,v 1.1827 2016/05/04 09:57:12 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2402,3 +2402,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Module-ScanDeps to 1.21 [mef 2016-05-03]
 	Updated devel/p5-MooseX-Attribute-Chained to 1.0.2 [mef 2016-05-03]
 	Updated devel/p5-MooseX-Getopt to 0.69 [mef 2016-05-03]
+	Updated devel/xulrunner38 to 38.8.0 [ryoon 2016-05-04]
