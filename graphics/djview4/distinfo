@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.7 2016/01/31 07:27:04 ryoon Exp $
+$NetBSD: distinfo,v 1.8 2016/05/04 10:29:17 ryoon Exp $
 
-SHA1 (djview-4.10.5.tar.gz) = b3ca4d638a630913cd2596e2399f8049b4559a4f
-RMD160 (djview-4.10.5.tar.gz) = 6fbdc99db79ed96d0944a6c9c32f72a57dd54936
-SHA512 (djview-4.10.5.tar.gz) = d7fa4e643e006cb1d71fe6d808fd1b200b965928bf2cdd872c9c1c1833bed71ac3c70a2967a06f31bbd83f347cb5e330f4869e42e7d9c6cd13a0db54e4354614
-Size (djview-4.10.5.tar.gz) = 1111729 bytes
+SHA1 (djview-4.10.6.tar.gz) = 9d2790f208fea45f5cd31cfd5ab6b24a3ba91415
+RMD160 (djview-4.10.6.tar.gz) = 9c8a5d878a594e4f87d3c1a392674148076061ee
+SHA512 (djview-4.10.6.tar.gz) = c06b9c4c7addd9dededdc9d441094bca685c4d23744e3d1208eab33d9d341a85f120176bf9f1b879ac6620f591eefe05ac774870b1ba3215c43baf1eaf9d14f8
+Size (djview-4.10.6.tar.gz) = 1113072 bytes
 SHA1 (patch-configure) = 184199fb193c3eba562fc1fca336bcefe70eacde
 SHA1 (patch-src_Makefile.in) = 041fb914c6c7cc6b574fe06f4af97d1e4c9f2664
