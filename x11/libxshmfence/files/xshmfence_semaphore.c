@@ -164,7 +164,7 @@ xshmfence_init(int fd)
 		err(EXIT_FAILURE, "xshmfence_init: sem_open");
 	}
 
-	cond = mksemtemp(f.condname, "/xshmfl-%i");
+	cond = mksemtemp(f.condname, "/xshmfc-%i");
 	if (cond == SEM_FAILED) {
 		err(EXIT_FAILURE, "xshmfence_init: sem_open");
 	}
