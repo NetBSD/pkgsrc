@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2016/04/13 17:57:07 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2016/05/04 14:04:09 wiz Exp $
 
 DISTNAME=	mock-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://pypi.python.org/packages/source/m/mock/
 
@@ -17,7 +18,7 @@ BUILD_DEPENDS+=	${PYPKGPREFIX}-unittest2-[0-9]*:../../devel/py-unittest2
 .include "../../lang/python/egg.mk"
 
 .if ${_PYTHON_VERSION} < 33
-DEPENDS+=	${PYPKGPREFIX}-funcsigs-[0-9]*:../../devel/py-funcsigs
+DEPENDS+=	${PYPKGPREFIX}-funcsigs>=1:../../devel/py-funcsigs
 .endif
 
 USE_LANGUAGES=	# none
