@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1832 2016/05/04 16:26:32 martin Exp $
+$NetBSD: CHANGES-2016,v 1.1833 2016/05/04 20:19:42 morr Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2408,3 +2408,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-funcsigs to 1.0.2 [wiz 2016-05-04]
 	Updated devel/py-mock to 2.0.0nb1 [wiz 2016-05-04]
 	Updated www/firefox to 46.0nb2 [martin 2016-05-04]
+	Updated www/wordpress to 4.5.1 [morr 2016-05-04]
