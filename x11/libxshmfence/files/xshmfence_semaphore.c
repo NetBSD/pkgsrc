@@ -51,15 +51,16 @@ static sem_t *mksemtemp(char *, const char *);
  **/
 int
 xshmfence_trigger(struct xshmfence *f) {
+	int v, waiting;
 	LOCK();
-	int v = __sync_bool_compare_and_swap(&f->triggered, 0, 1);
+	v = __sync_bool_compare_and_swap(&f->triggered, 0, 1);
 	if (v == 0) {
 		/* already triggered */
 		UNLOCK();
 		return 0;
 	}
 	
-	int waiting = __sync_fetch_and_add(&f->waiting, 0);
+	waiting = __sync_fetch_and_add(&f->waiting, 0);
 
 	while (waiting > 0) {
 		COND_SIGNAL();
