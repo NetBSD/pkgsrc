@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2016/04/27 16:36:50 ryoon Exp $
+$NetBSD: distinfo,v 1.2 2016/05/04 09:41:55 ryoon Exp $
 
 SHA1 (firefox-45.1.0esr.source.tar.xz) = 177b27772d1009bfc277577ad4e97d538073f508
 RMD160 (firefox-45.1.0esr.source.tar.xz) = 8bb7166260dbe8faca9e799bc93cdd0fc3bdd144
@@ -40,7 +40,6 @@ SHA1 (patch-gfx_skia_skia_src_core_SkUtilsArm.cpp) = 80283dd702be199ec7d038f4b2b
 SHA1 (patch-gfx_skia_skia_src_opts_SkBitmapProcState__opts__arm.cpp) = 99fad319f00a72754f3596791f353b8ab1359d2b
 SHA1 (patch-gfx_skia_skia_src_opts_memset.arm.S) = a7ecacb40b482b2713ec71af197528bbe4bea00d
 SHA1 (patch-gfx_thebes_moz.build) = bbc67642604042c8d63e6de1a02d2c62fcf16d83
-SHA1 (patch-gfx_ycbcr__row__arm.s) = cddf801b7ffc113a3e26bcc1f8d4a0aa3ced60c7
 SHA1 (patch-gfx_ycbcr_moz.build) = 121386ef62ff7425e6f93bc624555199f2ac3485
 SHA1 (patch-gfx_ycbcr_yuv__row__arm.S) = f9909ded72762b2c3547dd002707db43745f2b9d
 SHA1 (patch-image_decoders_nsJPEGDecoder.cpp) = 522c46732d44be15411d39e16c89bc848d5c6f7a
