@@ -1,7 +1,7 @@
 Cross-compilation in pkgsrc (user's guide)              -*- outline -*-
 Taylor R. Campbell <riastradh@NetBSD.org>
 
-$NetBSD: HOWTO-use-crosscompile,v 1.3 2016/05/04 02:03:13 riastradh Exp $
+$NetBSD: HOWTO-use-crosscompile,v 1.4 2016/05/04 02:05:22 riastradh Exp $
 
 The following steps enable you to build binary packages for a machine
 architecture other than the one you are building on.  For example, you
@@ -27,7 +27,7 @@ mk.conf.
    $ ./build.sh -m evbppc distribution
 
 By default, the destdir will be /usr/obj/destdir.evbppc, and the
-tooldir will be (say) /usr/obj/tooldir.NetBSD-6.1.amd64 if you're
+tooldir will be (say) /usr/obj/tooldir.NetBSD-6.1-amd64 if you're
 running NetBSD 6.1 on amd64.
 
 * Set up mk.conf
@@ -125,7 +125,7 @@ messing with the package installations I use for development.
 
    NetBSD srcdir:       ~/netbsd/current/src
    NetBSD objdir:       ~/netbsd/current/obj.evbppc
-   NetBSD tooldir:      ~/netbsd/current/obj.evbppc/tooldir.NetBSD-6.1.amd64
+   NetBSD tooldir:      ~/netbsd/current/obj.evbppc/tooldir.NetBSD-6.1-amd64
    NetBSD destdir:      ~/netbsd/current/obj.evbppc/destdir.evbppc
    pkgsrc:              ~/pkgsrc/current/pkgsrc
    pkgsrc LOCALBASE:    ~/pkgsrc/current/pkg
