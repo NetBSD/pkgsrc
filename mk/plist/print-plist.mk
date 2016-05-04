@@ -1,4 +1,4 @@
-# $NetBSD: print-plist.mk,v 1.28 2016/04/10 15:58:03 joerg Exp $
+# $NetBSD: print-plist.mk,v 1.29 2016/05/04 11:17:41 jperkin Exp $
 
 ###
 ### Automatic PLIST generation
@@ -126,6 +126,7 @@ print-PLIST:
 			if ('$$genlinks') print $$0;			\
 			next;						\
 		}							\
+		/^man\// { sub("\\.gz$$", ""); }			\
 		{ print $$0; }'
 	${RUN}\
 	for i in `${_PRINT_PLIST_DIRS_CMD}				\
