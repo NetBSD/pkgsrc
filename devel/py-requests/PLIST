@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2015/11/06 21:42:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2016/05/05 11:47:45 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -177,6 +177,9 @@ ${PYSITELIB}/requests/packages/urllib3/contrib/ntlmpool.pyo
 ${PYSITELIB}/requests/packages/urllib3/contrib/pyopenssl.py
 ${PYSITELIB}/requests/packages/urllib3/contrib/pyopenssl.pyc
 ${PYSITELIB}/requests/packages/urllib3/contrib/pyopenssl.pyo
+${PYSITELIB}/requests/packages/urllib3/contrib/socks.py
+${PYSITELIB}/requests/packages/urllib3/contrib/socks.pyc
+${PYSITELIB}/requests/packages/urllib3/contrib/socks.pyo
 ${PYSITELIB}/requests/packages/urllib3/exceptions.py
 ${PYSITELIB}/requests/packages/urllib3/exceptions.pyc
 ${PYSITELIB}/requests/packages/urllib3/exceptions.pyo
