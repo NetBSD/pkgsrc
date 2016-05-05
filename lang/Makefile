@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.430 2016/04/25 20:39:15 fhajny Exp $
+# $NetBSD: Makefile,v 1.431 2016/05/05 04:00:09 agc Exp $
 #
 
 COMMENT=	Programming languages
@@ -34,6 +34,7 @@ SUBDIR+=	clojure
 SUBDIR+=	coq
 SUBDIR+=	cparser
 SUBDIR+=	cu-prolog
+SUBDIR+=	duktape
 SUBDIR+=	eag
 SUBDIR+=	ecl
 SUBDIR+=	eieio
@@ -111,6 +112,7 @@ SUBDIR+=	konoha
 SUBDIR+=	ksi
 SUBDIR+=	libLLVM
 SUBDIR+=	libLLVM34
+SUBDIR+=	libduktape
 SUBDIR+=	librep
 SUBDIR+=	libtcl-nothread
 SUBDIR+=	libunwind
