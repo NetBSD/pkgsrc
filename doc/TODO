@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15861 2016/05/05 11:53:16 wiz Exp $
+$NetBSD: TODO,v 1.15862 2016/05/05 12:02:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1759,7 +1759,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tacacs-4.0.4.29a
 	o tacacs-shrubbery-5.0.0a1
 	o tads-3.0.16
-	o taglib-1.11
 	o taskjuggler-3.3.0
 	o tc-hasida-table-0.8 [wip]
 	o tcpdpriv-0.9
