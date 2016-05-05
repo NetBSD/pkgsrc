@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2016/01/27 06:31:20 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2016/05/05 12:09:31 wiz Exp $
 bin/dirmngr
 bin/dirmngr-client
 bin/g13
@@ -36,6 +36,7 @@ man/man8/applygnupgdefaults.8
 man/man8/dirmngr.8
 sbin/addgnupghome
 sbin/applygnupgdefaults
+sbin/g13-syshelp
 share/doc/gnupg/DCO
 share/doc/gnupg/DETAILS
 share/doc/gnupg/FAQ
