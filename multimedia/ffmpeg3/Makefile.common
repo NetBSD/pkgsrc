@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2016/04/29 19:26:25 adam Exp $
+# $NetBSD: Makefile.common,v 1.6 2016/05/05 07:03:47 leot Exp $
 # used by multimedia/ffmpeg3/Makefile
 # used by multimedia/ffplay3/Makefile
 
@@ -13,7 +13,7 @@ PATCHDIR=	${.CURDIR}/../../multimedia/ffmpeg3/patches
 
 USE_LANGUAGES=		c99
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake texi2html pod2man perl
+USE_TOOLS+=		gmake pod2man perl
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--cc=${CC:Q}
 CONFIGURE_ARGS+=	--disable-debug
