@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15846 2016/05/05 09:42:36 jaapb Exp $
+$NetBSD: TODO,v 1.15847 2016/05/05 11:12:24 wiz Exp $
 
 Suggested new packages
 ======================
@@ -371,7 +371,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o R-maps-3.1.0
 	o R-ncdf-1.6.8
 	o ROMInfo-28
-	o SDL2_image-2.0.1
 	o SDL2_net-2.0.1
 	o SOPE-3.0.2
 	o TeXmacs-1.99.4
