@@ -1,13 +1,13 @@
-$NetBSD: patch-configure,v 1.1 2014/03/31 10:10:14 adam Exp $
+$NetBSD: patch-configure,v 1.2 2016/05/05 11:12:14 wiz Exp $
 
 Add frameworks required to link under OS X.
 
---- configure.orig	2014-03-19 15:55:16.000000000 +0000
+--- configure.orig	2016-01-03 05:52:28.000000000 +0000
 +++ configure
 @@ -12024,6 +12024,7 @@ fi
  
          if test x$enable_imageio = xyes; then
-             IMG_LIBS="-Wl,-framework,ApplicationServices $IMG_LIBS"
+             IMG_LIBS="-Wl,-framework,ApplicationServices -lobjc $IMG_LIBS"
 +            IMG_LIBS="-Wl,-framework,Cocoa -Wl,-framework,Carbon -Wl,-framework,IOKit -Wl,-framework,ForceFeedback $IMG_LIBS"
          else
              CFLAGS="$CFLAGS -DSDL_IMAGE_USE_COMMON_BACKEND"
