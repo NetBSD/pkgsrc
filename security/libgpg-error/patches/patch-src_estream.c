@@ -1,4 +1,4 @@
-$NetBSD: patch-src_estream.c,v 1.2 2014/10/30 14:30:35 wiz Exp $
+$NetBSD: patch-src_estream.c,v 1.3 2016/05/05 11:34:49 wiz Exp $
 
 Don't use atexit(), since this library mey be dlopen()ed
 and dlclose()d before exit() is called.
@@ -7,17 +7,17 @@ Instead mark the do_deinit() function as a destructor.
 
 https://bugs.g10code.com/gnupg/issue1749
 
---- src/estream.c.orig	2014-09-11 09:38:21.000000000 +0000
+--- src/estream.c.orig	2016-04-05 13:44:10.000000000 +0000
 +++ src/estream.c
-@@ -471,6 +471,7 @@ do_list_remove (estream_t stream, int wi
- 
- 
- 
+@@ -529,6 +529,7 @@ do_list_remove (estream_t stream, int wi
+ /*
+  * The atexit handler for this estream module.
+  */
 +__attribute__((destructor,used))
  static void
  do_deinit (void)
  {
-@@ -503,7 +504,16 @@ _gpgrt_es_init (void)
+@@ -560,7 +561,16 @@ _gpgrt_es_init (void)
    if (!initialized)
      {
        initialized = 1;
