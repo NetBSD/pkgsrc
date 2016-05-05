@@ -1,18 +1,18 @@
-$NetBSD: patch-tools_ocamlmklib,v 1.5 2015/12/29 23:34:53 dholland Exp $
+$NetBSD: patch-tools_ocamlmklib,v 1.6 2016/05/05 08:12:01 jaapb Exp $
 
 Add ELF mode support to ocamlmklib
 
---- tools/ocamlmklib.ml.orig	2014-12-27 08:44:24.000000000 +0000
+--- tools/ocamlmklib.ml.orig	2016-04-01 12:53:41.000000000 +0000
 +++ tools/ocamlmklib.ml
-@@ -25,6 +25,7 @@ and c_objs = ref []         (* .o, .a, .
+@@ -28,6 +28,7 @@ and c_objs = ref []         (* .o, .a, .
  and caml_libs = ref []      (* -cclib to pass to ocamlc, ocamlopt *)
  and caml_opts = ref []      (* -ccopt to pass to ocamlc, ocamlopt *)
  and dynlink = ref supports_shared_libraries
 +and elfmode = ref false     (* do not add C link lib path to run-time path *)
  and failsafe = ref false    (* whether to fall back on static build only *)
  and c_libs = ref []         (* libs to pass to mksharedlib and ocamlc -cclib *)
- and c_Lopts = ref []        (* options to pass to mksharedlib and ocamlc -cclib *)
-@@ -99,8 +100,9 @@ let parse_arguments argv =
+ and c_Lopts = ref []      (* options to pass to mksharedlib and ocamlc -cclib *)
+@@ -104,8 +105,9 @@ let parse_arguments argv =
        c_libs := s :: !c_libs
      else if starts_with s "-L" then
       (c_Lopts := s :: !c_Lopts;
@@ -24,7 +24,7 @@ Add ELF mode support to ocamlmklib
      else if s = "-ocamlcflags" then
        ocamlc_opts := next_arg () :: !ocamlc_opts
      else if s = "-ocamlc" then
-@@ -115,6 +117,8 @@ let parse_arguments argv =
+@@ -120,6 +122,8 @@ let parse_arguments argv =
        output_c := next_arg()
      else if s = "-dllpath" || s = "-R" || s = "-rpath" then
        rpath := next_arg() :: !rpath
@@ -33,7 +33,7 @@ Add ELF mode support to ocamlmklib
      else if starts_with s "-R" then
        rpath := chop_prefix s "-R" :: !rpath
      else if s = "-Wl,-rpath" then
-@@ -160,6 +164,7 @@ Usage: ocamlmklib [options] <.cmo|.cma|.
+@@ -165,6 +169,7 @@ Usage: ocamlmklib [options] <.cmo|.cma|.
  \n  -custom        Disable dynamic loading\
  \n  -g             Build with debug information\
  \n  -dllpath <dir> Add <dir> to the run-time search path for DLLs\
