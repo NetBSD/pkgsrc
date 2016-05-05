@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2016/02/06 12:10:33 jaapb Exp $
+# $NetBSD: Makefile,v 1.16 2016/05/05 11:45:37 jaapb Exp $
 #
 
 DISTNAME=	menhir-20140422
-PKGREVISION= 2
+PKGREVISION= 3
 CATEGORIES=	devel
 MASTER_SITES=	http://cristal.inria.fr/~fpottier/menhir/
 
