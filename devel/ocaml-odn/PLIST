@@ -1,17 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1 2014/08/17 13:34:06 jaapb Exp $
-@unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/odn
-lib/ocaml/site-lib/odn/META
-lib/ocaml/site-lib/odn/ODN.cmi
-${PLIST.ocaml-opt}lib/ocaml/site-lib/odn/ODN.cmx
-lib/ocaml/site-lib/odn/ODN.ml
-${PLIST.ocaml-opt}lib/ocaml/site-lib/odn/odn.a
-lib/ocaml/site-lib/odn/odn.cma
-${PLIST.ocaml-opt}lib/ocaml/site-lib/odn/odn.cmxa
-${PLIST.ocaml-opt}lib/ocaml/site-lib/odn/odn.cmxs
-lib/ocaml/site-lib/odn/pa_noodn.cma
-lib/ocaml/site-lib/odn/pa_noodn.cmi
-lib/ocaml/site-lib/odn/pa_noodn.ml
-lib/ocaml/site-lib/odn/pa_odn.cma
-lib/ocaml/site-lib/odn/pa_odn.cmi
-lib/ocaml/site-lib/odn/pa_odn.ml
-@exec %D/libexec/ocaml-findlib-register add %D/lib/ocaml/site-lib/odn
+@comment $NetBSD: PLIST,v 1.2 2016/05/05 09:36:39 jaapb Exp $
+${OCAML_SITELIB}/odn/META
+${OCAML_SITELIB}/odn/ODN.cmi
+${PLIST.ocaml-opt}${OCAML_SITELIB}/odn/ODN.cmx
+${OCAML_SITELIB}/odn/ODN.ml
+${PLIST.ocaml-opt}${OCAML_SITELIB}/odn/odn.a
+${OCAML_SITELIB}/odn/odn.cma
+${PLIST.ocaml-opt}${OCAML_SITELIB}/odn/odn.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/odn/odn.cmxs
+${OCAML_SITELIB}/odn/pa_noodn.cma
+${OCAML_SITELIB}/odn/pa_noodn.cmi
+${OCAML_SITELIB}/odn/pa_noodn.ml
+${OCAML_SITELIB}/odn/pa_odn.cma
+${OCAML_SITELIB}/odn/pa_odn.cmi
+${OCAML_SITELIB}/odn/pa_odn.ml
