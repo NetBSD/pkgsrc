@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.19 2015/11/17 10:43:42 wiz Exp $
+$NetBSD: distinfo,v 1.20 2016/05/05 12:01:51 wiz Exp $
 
-SHA1 (taglib-1.10.tar.gz) = 9da145f9845978b4a281ad61987475486d24152a
-RMD160 (taglib-1.10.tar.gz) = a02682defc8f6a611e28e5e8db6dd72310a18230
-SHA512 (taglib-1.10.tar.gz) = 2257918743507fffae01b961c714aa8523d3a8c0c921af699b0160c2414b1c930778f19976965e3197571672120a6040dbb13a83304b70290970660abcf27820
-Size (taglib-1.10.tar.gz) = 1233893 bytes
+SHA1 (taglib-1.11.tar.gz) = 426e49f5e2f941b805ce148415a3ad58462263f4
+RMD160 (taglib-1.11.tar.gz) = 1f900807c5f0998fbc7f7c4005d00fc42e0bce83
+SHA512 (taglib-1.11.tar.gz) = f353bd0dadcc75f8a8f08919efc3aec2502166a3e23dd605f1b1c14ffe68ea1d2c59731bc4e0e4ee879ccf33436e4084e7c4d983034a1ce85fe0fa31a78dede7
+Size (taglib-1.11.tar.gz) = 1263736 bytes

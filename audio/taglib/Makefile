@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2015/11/17 10:43:42 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2016/05/05 12:01:51 wiz Exp $
 
-DISTNAME=	taglib-1.10
+DISTNAME=	taglib-1.11
 CATEGORIES=	audio
 MASTER_SITES=	http://taglib.github.io/releases/
 
@@ -13,6 +13,7 @@ USE_LANGUAGES=		c c++
 
 USE_CMAKE=		YES
 CMAKE_ARGS=		-DWITH_MP4=ON -DWITH_ASF=ON
+CMAKE_ARGS+=		-DBUILD_SHARED_LIBS=ON
 USE_LIBTOOL=		YES
 
 PKGCONFIG_OVERRIDE=	bindings/c/taglib_c.pc.cmake taglib.pc.cmake
