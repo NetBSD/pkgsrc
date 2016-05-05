@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2016/04/28 07:01:13 markd Exp $
+# $NetBSD: Makefile,v 1.7 2016/05/05 21:23:04 markd Exp $
 
 DISTNAME=	baloo-${_KDE_VERSION}
 PKGREVISION=	4
@@ -17,14 +17,26 @@ USE_TOOLS+=	gmake
 PLIST_VARS+=	polkit
 .if ${OPSYS} != "Darwin"
 PLIST.polkit=	yes
+INSTALLATION_DIRS+=	share/PolicyKit/policy
 .endif
+INSTALLATION_DIRS+=	share/dbus-1/interfaces share/dbus-1/system-services
 
 DEPENDS+=	libbaloo4-[0-9]*:../../sysutils/libbaloo4
 
 PATCHDIR=	${.CURDIR}/../../sysutils/libbaloo4/patches
 DISTINFO_FILE=	${.CURDIR}/../../sysutils/libbaloo4/distinfo
 
-INSTALL_DIRS=	_KDE_build/icons _KDE_build/src/tools _KDE_build/src/file _KDE_build/src/pim
+INSTALL_DIRS=	_KDE_build/icons _KDE_build/src/tools _KDE_build/src/pim/agent
+
+post-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/_KDE_build/src/file/baloo_file ${DESTDIR}${PREFIX}/bin/baloo_file
+	${INSTALL_PROGRAM} ${WRKSRC}/_KDE_build/src/file/cleaner/baloo_file_cleaner ${DESTDIR}${PREFIX}/bin/baloo_file_cleaner
+	${INSTALL_PROGRAM} ${WRKSRC}/_KDE_build/src/file/extractor/baloo_file_extractor ${DESTDIR}${PREFIX}/bin/baloo_file_extractor
+	${INSTALL_DATA} ${WRKSRC}/src/file/org.kde.baloo.file.indexer.xml ${DESTDIR}${PREFIX}/share/dbus-1/interfaces/org.kde.baloo.file.indexer.xml
+	${INSTALL_DATA} ${WRKSRC}/_KDE_build/src/file/inotify/org.kde.baloo.filewatch.service ${DESTDIR}${PREFIX}/share/dbus-1/system-services/org.kde.baloo.filewatch.service
+.if ${OPSYS} != "Darwin"
+	${INSTALL_DATA} ${WRKSRC}/_KDE_build/src/file/inotify/org.kde.baloo.filewatch.policy ${DESTDIR}${PREFIX}/share/PolicyKit/policy/org.kde.baloo.filewatch.policy
+.endif
 
 .include "../../devel/qjson/buildlink3.mk"
 .include "../../mail/akonadi/buildlink3.mk"
