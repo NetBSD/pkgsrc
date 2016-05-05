@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2016/03/29 22:04:26 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2016/05/05 11:45:37 jaapb Exp $
 
 DISTNAME=	pgocaml-2.2
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	http://forge.ocamlcore.org/frs/download.php/1506/
 EXTRACT_SUFX=	.tgz
