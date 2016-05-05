@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.57 2016/04/21 11:10:14 wiz Exp $
+@comment $NetBSD: PLIST,v 1.58 2016/05/05 11:22:00 wiz Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -1369,20 +1369,13 @@ lib/calibre/calibre/utils/zipfile.py
 lib/calibre/calibre/web/__init__.py
 lib/calibre/calibre/web/feeds/__init__.py
 lib/calibre/calibre/web/feeds/feedparser.py
-lib/calibre/calibre/web/feeds/jsnews.py
 lib/calibre/calibre/web/feeds/news.py
 lib/calibre/calibre/web/feeds/recipes/__init__.py
 lib/calibre/calibre/web/feeds/recipes/collection.py
 lib/calibre/calibre/web/feeds/recipes/model.py
 lib/calibre/calibre/web/feeds/templates.py
 lib/calibre/calibre/web/fetch/__init__.py
-lib/calibre/calibre/web/fetch/javascript.py
 lib/calibre/calibre/web/fetch/simple.py
-lib/calibre/calibre/web/jsbrowser/__init__.py
-lib/calibre/calibre/web/jsbrowser/browser.py
-lib/calibre/calibre/web/jsbrowser/forms.py
-lib/calibre/calibre/web/jsbrowser/login.py
-lib/calibre/calibre/web/jsbrowser/test.py
 lib/calibre/css_selectors/__init__.py
 lib/calibre/css_selectors/errors.py
 lib/calibre/css_selectors/ordered_set.py
@@ -1810,6 +1803,7 @@ share/calibre/rapydscript/lib/re.pyj
 share/calibre/rapydscript/lib/traceback.pyj
 share/calibre/recipes/10minutos.recipe
 share/calibre/recipes/180.recipe
+share/calibre/recipes/1843.recipe
 share/calibre/recipes/20_minutos.recipe
 share/calibre/recipes/20minutes.recipe
 share/calibre/recipes/20minutos.recipe
@@ -1929,6 +1923,7 @@ share/calibre/recipes/bbc_sport.recipe
 share/calibre/recipes/bbcvietnamese.recipe
 share/calibre/recipes/benchmark_pl.recipe
 share/calibre/recipes/beppe_grillo.recipe
+share/calibre/recipes/berlin_policy_journal.recipe
 share/calibre/recipes/berliner_zeitung.recipe
 share/calibre/recipes/berlingske_dk.recipe
 share/calibre/recipes/berria.recipe
@@ -2325,7 +2320,6 @@ share/calibre/recipes/freisinger_tagblatt.recipe
 share/calibre/recipes/fria.recipe
 share/calibre/recipes/frontlineonnet.recipe
 share/calibre/recipes/fstream.recipe
-share/calibre/recipes/ftd.recipe
 share/calibre/recipes/fudzilla.recipe
 share/calibre/recipes/furstenfeldbrucker_tagblatt.recipe
 share/calibre/recipes/futurismic.recipe
