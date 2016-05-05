@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2015/12/27 21:32:14 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2016/05/05 11:15:57 wiz Exp $
 
-VERSION=	2.2
+VERSION=	2.3
 DISTNAME=	signing-party_${VERSION}.orig
 PKGNAME=	caff-${VERSION}
 CATEGORIES=	security
