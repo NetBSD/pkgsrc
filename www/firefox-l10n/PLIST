@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.45 2016/04/27 16:24:05 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.46 2016/05/05 11:47:54 ryoon Exp $
 lib/firefox/browser/extensions/langpack-ach@firefox.mozilla.org/browser/chrome.manifest
 lib/firefox/browser/extensions/langpack-ach@firefox.mozilla.org/browser/chrome/ach.manifest
 lib/firefox/browser/extensions/langpack-ach@firefox.mozilla.org/browser/chrome/ach/locale/ach/devtools/client/VariablesView.dtd
@@ -15777,7 +15777,7 @@ lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/browser/chrome/ja
 lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/browser/chrome/ja/locale/browser/searchplugins/amazon-jp.xml
 lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/browser/chrome/ja/locale/browser/searchplugins/bing.xml
 lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/browser/chrome/ja/locale/browser/searchplugins/ddg.xml
-lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/browser/chrome/ja/locale/browser/searchplugins/google-jp.xml
+lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/browser/chrome/ja/locale/browser/searchplugins/google.xml
 lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/browser/chrome/ja/locale/browser/searchplugins/list.txt
 lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/browser/chrome/ja/locale/browser/searchplugins/oshiete-goo.xml
 lib/firefox/browser/extensions/langpack-ja@firefox.mozilla.org/browser/chrome/ja/locale/browser/searchplugins/rakuten.xml
