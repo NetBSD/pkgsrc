@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15860 2016/05/05 11:52:19 wiz Exp $
+$NetBSD: TODO,v 1.15861 2016/05/05 11:53:16 wiz Exp $
 
 Suggested new packages
 ======================
@@ -795,6 +795,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnu-pw-mgr-1.6
 	o gnucap-20130423
 	o gnuchess-book-1.02
+	o gnupg21-2.1.12
 	o gnustep-back-0.24.1
 	o gnustep-base-1.24.8
 	o gnustep-examples-1.4.0
