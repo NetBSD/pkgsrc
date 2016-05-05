@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1845 2016/05/05 11:16:07 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1846 2016/05/05 11:18:02 richard Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2423,3 +2423,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/SDL2_image to 2.0.1 [wiz 2016-05-05]
 	Updated devel/afl to 2.11b [wiz 2016-05-05]
 	Updated security/caff to 2.3 [wiz 2016-05-05]
+	Updated devel/py-wrapt to 1.10.8 [richard 2016-05-05]
