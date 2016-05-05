@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2016/04/29 19:18:36 adam Exp $
+# $NetBSD: Makefile,v 1.29 2016/05/05 07:03:47 leot Exp $
 
 PKGNAME=	${DISTNAME:S/ffmpeg/ffmpeg2/}
+PKGREVISION=	1
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ffmpeg.mplayerhq.hu/
 COMMENT=	Decoding, encoding and streaming software (v2.x)
@@ -24,6 +25,9 @@ CONFIGURE_ARGS+=	--host-cc=${NATIVE_CC:Q}
 CONFIGURE_ARGS+=	--host-ld=${NATIVE_CC:Q}
 CONFIGURE_ARGS+=	--target-os=${LOWER_OPSYS}
 .endif
+
+PRINT_PLIST_AWK+=	/html/ { $$0 = "$${PLIST.doc}" $$0 }
+PRINT_PLIST_AWK+=	/opencl/ { $$0 = "$${PLIST.opencl}" $$0 }
 
 TEST_TARGET=	check
 
