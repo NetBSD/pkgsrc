@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1841 2016/05/05 10:28:38 jaapb Exp $
+$NetBSD: CHANGES-2016,v 1.1842 2016/05/05 11:03:43 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2419,3 +2419,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated archivers/unrar to 5.3.11 [adam 2016-05-05]
 	Updated devel/ocaml-findlib to 1.6.2 [jaapb 2016-05-05]
 	Added devel/ocamlbuild version 0.9.1 [jaapb 2016-05-05]
+	Updated lang/camlp4 to 4.03.1 [jaapb 2016-05-05]
