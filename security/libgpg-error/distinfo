@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.27 2015/12/13 21:24:54 wiz Exp $
+$NetBSD: distinfo,v 1.28 2016/05/05 11:34:49 wiz Exp $
 
-SHA1 (libgpg-error-1.21.tar.bz2) = ef1dfb2f8761f019091180596e9e638d8cc37513
-RMD160 (libgpg-error-1.21.tar.bz2) = 6c4d5eda0106ed0d932de4726a9ce7a49b7559ea
-SHA512 (libgpg-error-1.21.tar.bz2) = 1bc2e27b9904cb66b091c4d15855d2d2fe5d88ed11917df628cd7865989a8a208b607e5d6c499a5d64a16d22b2310b7df6868fa5462cc30cd8fda80a2f8c8315
-Size (libgpg-error-1.21.tar.bz2) = 763186 bytes
-SHA1 (patch-src_estream.c) = 792929cebef6ba7860da89c70742b3cd28c9c92d
+SHA1 (libgpg-error-1.22.tar.bz2) = c40015ed88bf5f50fa58d02252d75cf20b858951
+RMD160 (libgpg-error-1.22.tar.bz2) = d89a2352e73b1116575f4ae8735138d9ec7b3be2
+SHA512 (libgpg-error-1.22.tar.bz2) = 0e2bbbd1cf51e247921836642ebc0b52573565dde0f3c9df405d74ca148aafd9b6509ae782f8db93ef31425c88466c8a9d11c147aa65b4f21a1856af29f0b8db
+Size (libgpg-error-1.22.tar.bz2) = 777502 bytes
+SHA1 (patch-src_estream.c) = 6b7879019c23a7161a8f2d7e04377c523670327a
 SHA1 (patch-src_gpg-error-config.in) = e22e99208192971f8c123d7ee9b22c5f615669e1
