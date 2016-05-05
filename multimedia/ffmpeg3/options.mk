@@ -1,13 +1,15 @@
-# $NetBSD: options.mk,v 1.1 2016/03/05 08:52:23 ryoon Exp $
+# $NetBSD: options.mk,v 1.2 2016/05/05 07:03:47 leot Exp $
 
 # Global and legacy options
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ffmpeg3
-PKG_SUPPORTED_OPTIONS=	ass faac fdk-aac fontconfig freetype gnutls lame \
+PKG_SUPPORTED_OPTIONS=	ass doc faac fdk-aac fontconfig freetype gnutls lame \
 			libvpx opencore-amr openssl theora vorbis x264 x265 \
 			xcb xvid
 PKG_SUGGESTED_OPTIONS=	lame ass freetype fontconfig libvpx openssl \
 			theora vorbis x264 xvid
+
+PLIST_VARS+=		doc
 
 # Add VDPAU if it is available
 .include "../../multimedia/libvdpau/available.mk"
@@ -50,6 +52,15 @@ CONFIGURE_ARGS+=	--enable-libass
 .include "../../multimedia/libass/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-libass
+.endif
+
+# doc option
+.if !empty(PKG_OPTIONS:Mdoc)
+PLIST.doc=		yes
+USE_TOOLS+=		texi2html
+CONFIGURE_ARGS+=	--enable-htmlpages
+.else
+CONFIGURE_ARGS+=	--disable-htmlpages
 .endif
 
 # faac option
