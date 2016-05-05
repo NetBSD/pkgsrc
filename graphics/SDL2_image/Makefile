@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2016/01/06 10:46:52 adam Exp $
+# $NetBSD: Makefile,v 1.8 2016/05/05 11:12:14 wiz Exp $
 
-DISTNAME=	SDL2_image-2.0.0
-PKGREVISION=	4
+DISTNAME=	SDL2_image-2.0.1
 CATEGORIES=	graphics devel
 MASTER_SITES=	http://www.libsdl.org/projects/SDL_image/release/
 
@@ -16,7 +15,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	ac_cv_prog_ac_ct_OBJC=${CC:Q}
 
 INSTALLATION_DIRS=	bin
-PKGCONFIG_OVERRIDE=	SDL_image.pc.in
+PKGCONFIG_OVERRIDE=	SDL2_image.pc.in
 CHECK_PORTABILITY_SKIP=	external/tiff-4.0.3/configure
 
 post-install:
