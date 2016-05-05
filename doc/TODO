@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15854 2016/05/05 11:34:59 wiz Exp $
+$NetBSD: TODO,v 1.15855 2016/05/05 11:36:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1182,7 +1182,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o nginx-1.10
 	o nginx-devel-1.9.12
 	o nikto-2.1.5
-	o notmuch-0.22
 	o nqp-2016.02
 	o ns-3.14.1
 	o ns-plugger-common-5.1.3
