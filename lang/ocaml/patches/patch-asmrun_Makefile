@@ -1,33 +1,47 @@
-$NetBSD: patch-asmrun_Makefile,v 1.5 2015/12/29 23:34:52 dholland Exp $
+$NetBSD: patch-asmrun_Makefile,v 1.6 2016/05/05 08:12:01 jaapb Exp $
 
 Use BSD_INSTALL_* instead of mkdir and cp
-
---- asmrun/Makefile.orig	2015-05-19 09:48:34.000000000 +0000
+--- asmrun/Makefile.orig	2016-04-01 12:53:41.000000000 +0000
 +++ asmrun/Makefile
-@@ -79,7 +79,7 @@ INSTALL_LIBDIR=$(DESTDIR)$(LIBDIR)
- install: install-default install-$(RUNTIMED) install-$(PROFILING) install-$(SHARED)
+@@ -92,25 +92,25 @@ libasmrun_shared.so: $(PICOBJS)
+ INSTALL_LIBDIR=$(DESTDIR)$(LIBDIR)
  
- install-default:
+ install::
 -	cp libasmrun.a $(INSTALL_LIBDIR)/libasmrun.a
 +	$(BSD_INSTALL_DATA) libasmrun.a $(INSTALL_LIBDIR)/libasmrun.a
  	cd $(INSTALL_LIBDIR); $(RANLIB) libasmrun.a
  .PHONY: install-default
  
-@@ -87,7 +87,7 @@ install-noruntimed:
- .PHONY: install-noruntimed
- 
- install-runtimed:
+ ifeq "$(RUNTIMED)" "runtimed"
+ install::
 -	cp libasmrund.a $(INSTALL_LIBDIR)/libasmrund.a
 +	$(BSD_INSTALL_DATA) libasmrund.a $(INSTALL_LIBDIR)/libasmrund.a
  	cd $(INSTALL_LIBDIR); $(RANLIB) libasmrund.a
- .PHONY: install-runtimed
+ endif
  
-@@ -97,7 +97,7 @@ install-noprof:
- .PHONY: install-noprof
+ ifeq "$(RUNTIMEI)" "true"
+ install::
+-	cp libasmruni.a $(INSTALL_LIBDIR)/libasmruni.a
++	$(BSD_INSTALL_DATA) libasmruni.a $(INSTALL_LIBDIR)/libasmruni.a
+ 	cd $(INSTALL_LIBDIR); $(RANLIB) libasmruni.a
+ endif
  
- install-prof:
+ ifeq "$(PROFILING)" "prof"
+ install::
 -	cp libasmrunp.a $(INSTALL_LIBDIR)/libasmrunp.a
 +	$(BSD_INSTALL_DATA) libasmrunp.a $(INSTALL_LIBDIR)/libasmrunp.a
  	cd $(INSTALL_LIBDIR); $(RANLIB) libasmrunp.a
- .PHONY: install-prof
+ else
+ install::
+@@ -120,9 +120,9 @@ endif
  
+ ifeq "$(SHARED)" "shared"
+ install::
+-	cp libasmrun_pic.a $(INSTALL_LIBDIR)/libasmrun_pic.a
++	$(BSD_INSTALL_DATA) libasmrun_pic.a $(INSTALL_LIBDIR)/libasmrun_pic.a
+ 	cd $(INSTALL_LIBDIR); $(RANLIB) libasmrunp.a
+-	cp libasmrun_shared.so $(INSTALL_LIBDIR)/libasmrun_shared.so
++	$(BSD_INSTALL_LIB) libasmrun_shared.so $(INSTALL_LIBDIR)/libasmrun_shared.so
+ endif
+ 
+ main.c: ../byterun/main.c
