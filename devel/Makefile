@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2248 2016/05/05 10:29:24 jaapb Exp $
+# $NetBSD: Makefile,v 1.2249 2016/05/05 11:15:33 richard Exp $
 #
 
 COMMENT=	Development utilities
@@ -1860,6 +1860,7 @@ SUBDIR+=	py-urwid
 SUBDIR+=	py-usb
 SUBDIR+=	py-virtualenv
 SUBDIR+=	py-windbg
+SUBDIR+=	py-wrapt
 SUBDIR+=	py-xdg
 SUBDIR+=	py-zanata-python-client
 SUBDIR+=	py-zconfig
