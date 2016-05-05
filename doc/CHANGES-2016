@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1869 2016/05/05 12:45:15 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1870 2016/05/05 16:04:46 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2446,3 +2446,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/thunderbird-enigmail to 1.9.2 [wiz 2016-05-05]
 	Updated devel/py-mercurial to 3.8.1 [wiz 2016-05-05]
 	Updated devel/py-tortoisehg to 3.8.1 [wiz 2016-05-05]
+	Updated net/ocamlnet to 4.1.1 [jaapb 2016-05-05]
