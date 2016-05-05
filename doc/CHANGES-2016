@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1858 2016/05/05 11:49:46 ryoon Exp $
+$NetBSD: CHANGES-2016,v 1.1859 2016/05/05 11:51:53 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2436,3 +2436,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/firefox to 46.0.1 [ryoon 2016-05-05]
 	Updated devel/py-requests to 2.10.0 [wiz 2016-05-05]
 	Updated www/firefox-l10n to 46.0.1 [ryoon 2016-05-05]
+	Updated www/firefox45 to 45.1.1 [ryoon 2016-05-05]
