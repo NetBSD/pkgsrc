@@ -1,11 +1,15 @@
-@comment $NetBSD: PLIST,v 1.9 2016/02/03 17:40:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2016/05/05 12:42:46 wiz Exp $
 bin/hg
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/hgext/__init__.py
 ${PYSITELIB}/hgext/__init__.pyc
 ${PYSITELIB}/hgext/__init__.pyo
 ${PYSITELIB}/hgext/acl.py
 ${PYSITELIB}/hgext/acl.pyc
 ${PYSITELIB}/hgext/acl.pyo
+${PYSITELIB}/hgext/automv.py
+${PYSITELIB}/hgext/automv.pyc
+${PYSITELIB}/hgext/automv.pyo
 ${PYSITELIB}/hgext/blackbox.py
 ${PYSITELIB}/hgext/blackbox.pyc
 ${PYSITELIB}/hgext/blackbox.pyo
@@ -87,6 +91,25 @@ ${PYSITELIB}/hgext/factotum.pyo
 ${PYSITELIB}/hgext/fetch.py
 ${PYSITELIB}/hgext/fetch.pyc
 ${PYSITELIB}/hgext/fetch.pyo
+${PYSITELIB}/hgext/fsmonitor/__init__.py
+${PYSITELIB}/hgext/fsmonitor/__init__.pyc
+${PYSITELIB}/hgext/fsmonitor/__init__.pyo
+${PYSITELIB}/hgext/fsmonitor/pywatchman/__init__.py
+${PYSITELIB}/hgext/fsmonitor/pywatchman/__init__.pyc
+${PYSITELIB}/hgext/fsmonitor/pywatchman/__init__.pyo
+${PYSITELIB}/hgext/fsmonitor/pywatchman/bser.so
+${PYSITELIB}/hgext/fsmonitor/pywatchman/capabilities.py
+${PYSITELIB}/hgext/fsmonitor/pywatchman/capabilities.pyc
+${PYSITELIB}/hgext/fsmonitor/pywatchman/capabilities.pyo
+${PYSITELIB}/hgext/fsmonitor/pywatchman/pybser.py
+${PYSITELIB}/hgext/fsmonitor/pywatchman/pybser.pyc
+${PYSITELIB}/hgext/fsmonitor/pywatchman/pybser.pyo
+${PYSITELIB}/hgext/fsmonitor/state.py
+${PYSITELIB}/hgext/fsmonitor/state.pyc
+${PYSITELIB}/hgext/fsmonitor/state.pyo
+${PYSITELIB}/hgext/fsmonitor/watchmanclient.py
+${PYSITELIB}/hgext/fsmonitor/watchmanclient.pyc
+${PYSITELIB}/hgext/fsmonitor/watchmanclient.pyo
 ${PYSITELIB}/hgext/gpg.py
 ${PYSITELIB}/hgext/gpg.pyc
 ${PYSITELIB}/hgext/gpg.pyo
@@ -144,6 +167,9 @@ ${PYSITELIB}/hgext/largefiles/uisetup.pyo
 ${PYSITELIB}/hgext/largefiles/wirestore.py
 ${PYSITELIB}/hgext/largefiles/wirestore.pyc
 ${PYSITELIB}/hgext/largefiles/wirestore.pyo
+${PYSITELIB}/hgext/logtoprocess.py
+${PYSITELIB}/hgext/logtoprocess.pyc
+${PYSITELIB}/hgext/logtoprocess.pyo
 ${PYSITELIB}/hgext/mq.py
 ${PYSITELIB}/hgext/mq.pyc
 ${PYSITELIB}/hgext/mq.pyo
@@ -195,10 +221,15 @@ ${PYSITELIB}/hgext/zeroconf/Zeroconf.pyo
 ${PYSITELIB}/hgext/zeroconf/__init__.py
 ${PYSITELIB}/hgext/zeroconf/__init__.pyc
 ${PYSITELIB}/hgext/zeroconf/__init__.pyo
-${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/hgext3rd/__init__.py
+${PYSITELIB}/hgext3rd/__init__.pyc
+${PYSITELIB}/hgext3rd/__init__.pyo
 ${PYSITELIB}/mercurial/__init__.py
 ${PYSITELIB}/mercurial/__init__.pyc
 ${PYSITELIB}/mercurial/__init__.pyo
+${PYSITELIB}/mercurial/__modulepolicy__.py
+${PYSITELIB}/mercurial/__modulepolicy__.pyc
+${PYSITELIB}/mercurial/__modulepolicy__.pyo
 ${PYSITELIB}/mercurial/__version__.py
 ${PYSITELIB}/mercurial/__version__.pyc
 ${PYSITELIB}/mercurial/__version__.pyo
@@ -327,6 +358,7 @@ ${PYSITELIB}/mercurial/help/hgrc.5.txt
 ${PYSITELIB}/mercurial/help/hgweb.txt
 ${PYSITELIB}/mercurial/help/internals/bundles.txt
 ${PYSITELIB}/mercurial/help/internals/changegroups.txt
+${PYSITELIB}/mercurial/help/internals/requirements.txt
 ${PYSITELIB}/mercurial/help/internals/revlogs.txt
 ${PYSITELIB}/mercurial/help/merge-tools.txt
 ${PYSITELIB}/mercurial/help/multirevs.txt
@@ -500,6 +532,9 @@ ${PYSITELIB}/mercurial/pvec.pyo
 ${PYSITELIB}/mercurial/py3kcompat.py
 ${PYSITELIB}/mercurial/py3kcompat.pyc
 ${PYSITELIB}/mercurial/py3kcompat.pyo
+${PYSITELIB}/mercurial/pycompat.py
+${PYSITELIB}/mercurial/pycompat.pyc
+${PYSITELIB}/mercurial/pycompat.pyo
 ${PYSITELIB}/mercurial/registrar.py
 ${PYSITELIB}/mercurial/registrar.pyc
 ${PYSITELIB}/mercurial/registrar.pyo
