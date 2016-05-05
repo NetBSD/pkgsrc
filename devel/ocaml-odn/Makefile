@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2015/08/07 11:20:32 jaapb Exp $
+# $NetBSD: Makefile,v 1.6 2016/05/05 09:36:39 jaapb Exp $
 
 DISTNAME=	data-notation-${VERSION}
 PKGNAME=	ocaml-odn-${VERSION}
 VERSION=	0.0.11
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	https://forge.ocamlcore.org/frs/download.php/1310/
 
@@ -15,6 +15,7 @@ LICENSE=	gnu-lgpl-v2.1
 WRKSRC=	${WRKDIR}/ocaml-${DISTNAME}
 
 OCAML_USE_OASIS=	yes
+OCAML_FINDLIB_DIRS=	${OCAML_SITELIBDIR}/odn
 
 .include "../../devel/ocaml-type_conv/buildlink3.mk"
 .include "../../lang/camlp4/buildlink3.mk"
