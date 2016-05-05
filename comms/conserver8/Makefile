@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2016/03/13 18:31:11 schnoebe Exp $
+# $NetBSD: Makefile,v 1.19 2016/05/05 06:23:57 wiz Exp $
 #
 
 PKGVER=		8.2.1
@@ -48,7 +48,7 @@ post-install:
 	    ${INSTALL_DATA} ${WRKSRC}/$${File} ${DESTDIR}${DOCDIR}/$${File};\
 	done
 	set -e; for F in ${WRKSRC}/conserver.cf/samples/* ; do \
-	    ${INSTALL_DATA} $$F ${DESTDIR}$EGDIR}; \
+	    ${INSTALL_DATA} $$F ${DESTDIR}${EGDIR}; \
 	done
 
 .include "../../security/tcp_wrappers/buildlink3.mk"
