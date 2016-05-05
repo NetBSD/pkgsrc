@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1839 2016/05/05 09:04:12 adam Exp $
+$NetBSD: CHANGES-2016,v 1.1840 2016/05/05 09:42:36 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2417,3 +2417,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated multimedia/ffmpeg3 to 3.0.2nb1 [leot 2016-05-05]
 	Updated lang/ocaml to 4.03.0 [jaapb 2016-05-05]
 	Updated archivers/unrar to 5.3.11 [adam 2016-05-05]
+	Updated devel/ocaml-findlib to 1.6.2 [jaapb 2016-05-05]
