@@ -1,26 +1,9 @@
-@comment $NetBSD: PLIST,v 1.11 2016/02/03 13:19:26 jaapb Exp $
-@unexec %D/libexec/ocaml-findlib-register del %D/${OCAML_SITELIB}/equeue
-@unexec %D/libexec/ocaml-findlib-register del %D/${OCAML_SITELIB}/netcgi2-plex
-@unexec %D/libexec/ocaml-findlib-register del %D/${OCAML_SITELIB}/netplex
-@unexec %D/libexec/ocaml-findlib-register del %D/${OCAML_SITELIB}/netclient
-@unexec %D/libexec/ocaml-findlib-register del %D/${OCAML_SITELIB}/netshm
-@unexec %D/libexec/ocaml-findlib-register del %D/${OCAML_SITELIB}/rpc
-@unexec %D/libexec/ocaml-findlib-register del %D/${OCAML_SITELIB}/shell
-@unexec %D/libexec/ocaml-findlib-register del %D/${OCAML_SITELIB}/netcamlbox
-@unexec %D/libexec/ocaml-findlib-register del %D/${OCAML_SITELIB}/netstring
-@unexec %D/libexec/ocaml-findlib-register del %D/${OCAML_SITELIB}/rpc-auth-local
-@unexec %D/libexec/ocaml-findlib-register del %D/${OCAML_SITELIB}/netcgi2
-@unexec %D/libexec/ocaml-findlib-register del %D/${OCAML_SITELIB}/netmulticore
-@unexec %D/libexec/ocaml-findlib-register del %D/${OCAML_SITELIB}/netsys
-@unexec %D/libexec/ocaml-findlib-register del %D/${OCAML_SITELIB}/rpc-generator
-@unexec %D/libexec/ocaml-findlib-register del %D/${OCAML_SITELIB}/netunidata
-@unexec %D/libexec/ocaml-findlib-register del %D/${OCAML_SITELIB}/netzip
-${PLIST.xti}@unexec %D/libexec/ocaml-findlib-register del %D/${OCAML_SITELIB}/rpc-xti
+@comment $NetBSD: PLIST,v 1.12 2016/05/05 16:04:21 jaapb Exp $
 ${OCAML_SITELIB}/equeue/META
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/equeue/equeue.a
 ${OCAML_SITELIB}/equeue/equeue.cma
-${PLIST.ocaml-opt}${OCAML_SITELIB}/equeue/equeue.cmxa
 ${OCAML_SITELIB}/equeue/equeue.cmi
+${PLIST.ocaml-opt}${OCAML_SITELIB}/equeue/equeue.cmxa
 ${OCAML_SITELIB}/equeue/equeue.mli
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/equeue/equeue.p.a
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/equeue/equeue.p.cmxa
@@ -60,8 +43,8 @@ ${OCAML_SITELIB}/equeue/uq_transfer.mli
 ${OCAML_SITELIB}/netcamlbox/META
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/netcamlbox/netcamlbox.a
 ${OCAML_SITELIB}/netcamlbox/netcamlbox.cma
-${PLIST.ocaml-opt}${OCAML_SITELIB}/netcamlbox/netcamlbox.cmxa
 ${OCAML_SITELIB}/netcamlbox/netcamlbox.cmi
+${PLIST.ocaml-opt}${OCAML_SITELIB}/netcamlbox/netcamlbox.cmxa
 ${OCAML_SITELIB}/netcamlbox/netcamlbox.mli
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/netcamlbox/netcamlbox.p.a
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/netcamlbox/netcamlbox.p.cmxa
@@ -76,8 +59,8 @@ ${OCAML_SITELIB}/netcgi2-plex/netcgi_plex.mli
 ${OCAML_SITELIB}/netcgi2/META
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/netcgi2/netcgi.a
 ${OCAML_SITELIB}/netcgi2/netcgi.cma
-${PLIST.ocaml-opt}${OCAML_SITELIB}/netcgi2/netcgi.cmxa
 ${OCAML_SITELIB}/netcgi2/netcgi.cmi
+${PLIST.ocaml-opt}${OCAML_SITELIB}/netcgi2/netcgi.cmxa
 ${OCAML_SITELIB}/netcgi2/netcgi.mli
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/netcgi2/netcgi.p.a
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/netcgi2/netcgi.p.cmxa
@@ -115,8 +98,8 @@ ${OCAML_SITELIB}/netclient/nethttp_client_conncache.cmi
 ${OCAML_SITELIB}/netclient/nethttp_client_conncache.mli
 ${OCAML_SITELIB}/netclient/nethttp_fs.cmi
 ${OCAML_SITELIB}/netclient/nethttp_fs.mli
-${OCAML_SITELIB}/netclient/netnetpop.mli
-${OCAML_SITELIB}/netclient/netnetsmtp.mli
+${OCAML_SITELIB}/netclient/netldap.cmi
+${OCAML_SITELIB}/netclient/netldap.mli
 ${OCAML_SITELIB}/netclient/netpop.cmi
 ${OCAML_SITELIB}/netclient/netpop.mli
 ${OCAML_SITELIB}/netclient/netsmtp.cmi
@@ -183,6 +166,8 @@ ${OCAML_SITELIB}/netplex/netplex_ctrl_srv.cmi
 ${OCAML_SITELIB}/netplex/netplex_ctrl_srv.mli
 ${OCAML_SITELIB}/netplex/netplex_encap.cmi
 ${OCAML_SITELIB}/netplex/netplex_encap.mli
+${OCAML_SITELIB}/netplex/netplex_internal.cmi
+${OCAML_SITELIB}/netplex/netplex_internal.mli
 ${OCAML_SITELIB}/netplex/netplex_kit.cmi
 ${OCAML_SITELIB}/netplex/netplex_kit.mli
 ${OCAML_SITELIB}/netplex/netplex_log.cmi
@@ -252,6 +237,8 @@ ${OCAML_SITELIB}/netstring/netascii_armor.cmi
 ${OCAML_SITELIB}/netstring/netascii_armor.mli
 ${OCAML_SITELIB}/netstring/netasn1.cmi
 ${OCAML_SITELIB}/netstring/netasn1.mli
+${OCAML_SITELIB}/netstring/netasn1_encode.cmi
+${OCAML_SITELIB}/netstring/netasn1_encode.mli
 ${OCAML_SITELIB}/netstring/netauth.cmi
 ${OCAML_SITELIB}/netstring/netauth.mli
 ${OCAML_SITELIB}/netstring/netaux.cmi
@@ -310,6 +297,8 @@ ${OCAML_SITELIB}/netstring/netmech_scram.cmi
 ${OCAML_SITELIB}/netstring/netmech_scram.mli
 ${OCAML_SITELIB}/netstring/netmech_scram_gssapi.cmi
 ${OCAML_SITELIB}/netstring/netmech_scram_gssapi.mli
+${OCAML_SITELIB}/netstring/netmech_scram_http.cmi
+${OCAML_SITELIB}/netstring/netmech_scram_http.mli
 ${OCAML_SITELIB}/netstring/netmech_scram_sasl.cmi
 ${OCAML_SITELIB}/netstring/netmech_scram_sasl.mli
 ${OCAML_SITELIB}/netstring/netmech_spnego_http.cmi
@@ -347,6 +336,8 @@ ${OCAML_SITELIB}/netstring/netstring_str.mli
 ${OCAML_SITELIB}/netstring/netstring_top.cmi
 ${OCAML_SITELIB}/netstring/netstring_top.cmo
 ${OCAML_SITELIB}/netstring/netstring_top.mli
+${OCAML_SITELIB}/netstring/netstring_tstring.cmi
+${OCAML_SITELIB}/netstring/netstring_tstring.mli
 ${OCAML_SITELIB}/netstring/nettls_support.cmi
 ${OCAML_SITELIB}/netstring/nettls_support.mli
 ${OCAML_SITELIB}/netstring/netulex.cmi
@@ -355,8 +346,14 @@ ${OCAML_SITELIB}/netstring/netunichar.cmi
 ${OCAML_SITELIB}/netstring/netunichar.mli
 ${OCAML_SITELIB}/netstring/neturl.cmi
 ${OCAML_SITELIB}/netstring/neturl.mli
+${OCAML_SITELIB}/netstring/neturl_ldap.cmi
+${OCAML_SITELIB}/netstring/neturl_ldap.mli
 ${OCAML_SITELIB}/netstring/netx509.cmi
 ${OCAML_SITELIB}/netstring/netx509.mli
+${OCAML_SITELIB}/netstring/netx509_pubkey.cmi
+${OCAML_SITELIB}/netstring/netx509_pubkey.mli
+${OCAML_SITELIB}/netstring/netx509_pubkey_crypto.cmi
+${OCAML_SITELIB}/netstring/netx509_pubkey_crypto.mli
 ${OCAML_SITELIB}/netstring/netxdr.cmi
 ${OCAML_SITELIB}/netstring/netxdr.mli
 ${OCAML_SITELIB}/netstring/netxdr_mstring.cmi
@@ -390,6 +387,8 @@ ${OCAML_SITELIB}/netsys/netsys_crypto_types.cmi
 ${OCAML_SITELIB}/netsys/netsys_crypto_types.mli
 ${OCAML_SITELIB}/netsys/netsys_digests.cmi
 ${OCAML_SITELIB}/netsys/netsys_digests.mli
+${OCAML_SITELIB}/netsys/netsys_global.cmi
+${OCAML_SITELIB}/netsys/netsys_global.mli
 ${OCAML_SITELIB}/netsys/netsys_gprof_init.cmi
 ${OCAML_SITELIB}/netsys/netsys_gprof_init.mli
 ${OCAML_SITELIB}/netsys/netsys_gprof_init.p.cmx
@@ -409,8 +408,8 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/netsys/netsys_oothr.p.a
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/netsys/netsys_oothr.p.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/netsys/netsys_oothr_mt.a
 ${OCAML_SITELIB}/netsys/netsys_oothr_mt.cma
-${PLIST.ocaml-opt}${OCAML_SITELIB}/netsys/netsys_oothr_mt.cmxa
 ${OCAML_SITELIB}/netsys/netsys_oothr_mt.cmi
+${PLIST.ocaml-opt}${OCAML_SITELIB}/netsys/netsys_oothr_mt.cmxa
 ${OCAML_SITELIB}/netsys/netsys_oothr_mt.mli
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/netsys/netsys_oothr_mt.p.a
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/netsys/netsys_oothr_mt.p.cmxa
@@ -431,6 +430,10 @@ ${OCAML_SITELIB}/netsys/netsys_pollset_posix.cmi
 ${OCAML_SITELIB}/netsys/netsys_pollset_posix.mli
 ${OCAML_SITELIB}/netsys/netsys_pollset_win32.cmi
 ${OCAML_SITELIB}/netsys/netsys_pollset_win32.mli
+${OCAML_SITELIB}/netsys/netsys_polypipe.cmi
+${OCAML_SITELIB}/netsys/netsys_polypipe.mli
+${OCAML_SITELIB}/netsys/netsys_polysocket.cmi
+${OCAML_SITELIB}/netsys/netsys_polysocket.mli
 ${OCAML_SITELIB}/netsys/netsys_posix.cmi
 ${OCAML_SITELIB}/netsys/netsys_posix.mli
 ${OCAML_SITELIB}/netsys/netsys_rng.cmi

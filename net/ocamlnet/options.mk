@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.3 2016/02/03 13:19:26 jaapb Exp $
+# $NetBSD: options.mk,v 1.4 2016/05/05 16:04:21 jaapb Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ocamlnet
 PKG_SUPPORTED_OPTIONS=	gtk gtk2
-PKG_SUGGESTED_OPTIONS=	
+PKG_SUGGESTED_OPTIONS=
 
 .include "../../mk/bsd.prefs.mk"
 
