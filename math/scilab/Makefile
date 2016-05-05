@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.100 2015/11/25 12:51:42 jperkin Exp $
+# $NetBSD: Makefile,v 1.101 2016/05/05 11:45:40 jaapb Exp $
 #
 
 DISTNAME=	${SCIBASE}-src
-PKGREVISION=	17
+PKGREVISION=	18
 PKGNAME=	${SCIBASE}
 CATEGORIES=	math
 MASTER_SITES=	http://www.scilab.org/download/4.1/
