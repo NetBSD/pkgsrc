@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.45 2015/09/07 12:02:05 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.46 2016/05/05 08:12:01 jaapb Exp $
 
 # used by x11/labltk/Makefile
 # used by x11/ocaml-graphics/Makefile
-DISTNAME=	ocaml-4.02.3
+DISTNAME=	ocaml-4.03.0
 CATEGORIES=	lang
-MASTER_SITES=	http://caml.inria.fr/pub/distrib/ocaml-4.02/
+MASTER_SITES=	http://caml.inria.fr/pub/distrib/ocaml-4.03/
 #EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jaapb@NetBSD.org
@@ -47,11 +47,7 @@ BDB_LINK=	${BDB_LIBS}
 BDB_LINK+=	-L${BDBBASE}/lib ${COMPILER_RPATH_FLAG}${BDBBASE}/lib
 .endif
 
-post-extract: cp-power-bsd cp-gnu-config
-
-.PHONY: cp-power-bsd
-cp-power-bsd:
-	${CP} ${WRKSRC}/asmrun/power-elf.S ${WRKSRC}/asmrun/power-bsd.S
+post-extract: cp-gnu-config
 
 .PHONY: cp-gnu-config
 cp-gnu-config:

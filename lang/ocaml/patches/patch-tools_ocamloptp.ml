@@ -1,14 +1,14 @@
-$NetBSD: patch-tools_ocamloptp.ml,v 1.2 2015/12/29 23:34:53 dholland Exp $
+$NetBSD: patch-tools_ocamloptp.ml,v 1.3 2016/05/05 08:12:01 jaapb Exp $
 
 pkgsrc_runtime flag
 
---- tools/ocamloptp.ml.orig	2014-08-28 16:24:52.000000000 +0000
+--- tools/ocamloptp.ml.orig	2016-04-25 13:36:01.000000000 +0000
 +++ tools/ocamloptp.ml
-@@ -82,6 +82,7 @@ module Options = Main_args.Make_optcomp_
-   let _principal = option "-principal"
-   let _rectypes = option "-rectypes"
-   let _runtime_variant s = option_with_arg "-runtime-variant" s
+@@ -108,6 +108,7 @@ module Options = Main_args.Make_optcomp_
+   let _output_complete_obj = option "-output-complete-obj"
+   let _p = option "-p"
+   let _pack = option "-pack"
 +  let _pkgsrc_runtime = option "-pkgsrc-runtime"
-   let _S = option "-S"
-   let _safe_string = option "-safe-string"
-   let _short_paths = option "-short-paths"
+   let _pp _s = incompatible "-pp"
+   let _ppx _s = incompatible "-ppx"
+   let _principal = option "-principal"
