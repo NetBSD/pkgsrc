@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2016/02/06 12:45:35 jaapb Exp $
+# $NetBSD: Makefile,v 1.8 2016/05/05 11:45:42 jaapb Exp $
 
 DISTNAME=	uutf-0.9.4
 PKGNAME=	ocaml-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	http://erratique.ch/software/uutf/releases/
 EXTRACT_SUFX=	.tbz
