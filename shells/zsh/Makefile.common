@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.78 2015/09/07 12:02:06 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.79 2016/05/05 06:28:58 wiz Exp $
 # used by shells/zsh/Makefile
 
 DISTNAME=	zsh-${ZSH_VERSION}
@@ -123,8 +123,8 @@ PLIST.dynamic=	yes
 
 .if ${OPSYS} == "SunOS" || ${OPSYS} == "Interix"
 do-patch:
-	# $ sha1 files/patch-ac
-	# SHA1 (files/patch-ac) = 0ef6928bbb277dfbcd8aff4f6fde9bdf1c3de483
+# $ sha1 files/patch-ac
+# SHA1 (files/patch-ac) = 0ef6928bbb277dfbcd8aff4f6fde9bdf1c3de483
 	${PATCH} -d ${WRKSRC} -i ${FILESDIR}/patch-ac
 .endif
 
