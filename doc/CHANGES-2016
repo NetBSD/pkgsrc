@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1834 2016/05/05 02:03:32 jnemeth Exp $
+$NetBSD: CHANGES-2016,v 1.1835 2016/05/05 02:07:11 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2410,3 +2410,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/firefox to 46.0nb2 [martin 2016-05-04]
 	Updated www/wordpress to 4.5.1 [morr 2016-05-04]
 	Updated comms/asterisk to 11.22.0 [jnemeth 2016-05-05]
+	Updated devel/p5-Moose to 2.1801 [wen 2016-05-05]
