@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1837 2016/05/05 07:06:10 leot Exp $
+$NetBSD: CHANGES-2016,v 1.1838 2016/05/05 08:17:01 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2415,3 +2415,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added lang/duktape version 1.5.0 [agc 2016-05-05]
 	Updated multimedia/ffmpeg2 to 2.8.7nb1 [leot 2016-05-25]
 	Updated multimedia/ffmpeg3 to 3.0.2nb1 [leot 2016-05-05]
+	Updated lang/ocaml to 4.03.0 [jaapb 2016-05-05]
