@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2015/08/18 07:31:19 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2016/05/05 11:45:42 jaapb Exp $
 #
 
 DISTNAME=		wyrd-1.4.6
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=		time
 MASTER_SITES=		http://pessimization.com/software/wyrd/
 
