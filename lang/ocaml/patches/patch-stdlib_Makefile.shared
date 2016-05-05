@@ -1,26 +1,30 @@
-$NetBSD: patch-stdlib_Makefile.shared,v 1.5 2015/12/29 23:34:53 dholland Exp $
+$NetBSD: patch-stdlib_Makefile.shared,v 1.6 2016/05/05 08:12:01 jaapb Exp $
 
 Use BSD_INSTALL_* instead of mkdir and cp
 
---- stdlib/Makefile.shared.orig	2015-07-20 14:10:11.000000000 +0000
+--- stdlib/Makefile.shared.orig	2016-04-01 12:53:41.000000000 +0000
 +++ stdlib/Makefile.shared
-@@ -45,16 +45,16 @@ all: stdlib.cma std_exit.cmo camlheader 
+@@ -61,19 +61,19 @@ endif
  INSTALL_LIBDIR=$(DESTDIR)$(LIBDIR)
  
- install: install-$(RUNTIMED)
+ install::
 -	cp stdlib.cma std_exit.cmo *.cmi *.cmt *.cmti *.mli *.ml \
 +	$(BSD_INSTALL_DATA) stdlib.cma std_exit.cmo *.cmi *.cmt *.cmti *.mli *.ml \
  	  camlheader_ur \
- 	  $(INSTALL_LIBDIR)
--	cp target_camlheader $(INSTALL_LIBDIR)/camlheader
-+	$(BSD_INSTALL_DATA) target_camlheader $(INSTALL_LIBDIR)/camlheader
+ 	  "$(INSTALL_LIBDIR)"
+-	cp target_camlheader "$(INSTALL_LIBDIR)/camlheader"
++	$(BSD_INSTALL_DATA) target_camlheader "$(INSTALL_LIBDIR)/camlheader"
  
- install-noruntimed:
- .PHONY: install-noruntimed
+ ifeq "$(RUNTIMED)" "runtimed"
+ install::
+-	cp target_camlheaderd $(INSTALL_LIBDIR)
++	$(BSD_INSTALL_DATA) target_camlheaderd $(INSTALL_LIBDIR)
+ endif
  
- install-runtimed: target_camlheaderd
--	cp target_camlheaderd $(INSTALL_LIBDIR)/camlheaderd
-+	$(BSD_INSTALL_DATA) target_camlheaderd $(INSTALL_LIBDIR)/camlheaderd
- .PHONY: install-runtimed
+ ifeq "$(RUNTIMEI)" "true"
+ install::
+-	cp target_camlheaderi $(INSTALL_LIBDIR)
++	$(BSD_INSTALL_DATA) target_camlheaderi $(INSTALL_LIBDIR)
+ endif
  
  stdlib.cma: $(OBJS)
