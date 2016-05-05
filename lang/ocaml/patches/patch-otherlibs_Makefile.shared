@@ -1,29 +1,31 @@
-$NetBSD: patch-otherlibs_Makefile.shared,v 1.4 2015/12/29 23:34:53 dholland Exp $
+$NetBSD: patch-otherlibs_Makefile.shared,v 1.5 2016/05/05 08:12:01 jaapb Exp $
 
 Use BSD_INSTALL_* instead of mkdir and cp
 
---- otherlibs/Makefile.shared.orig	2014-04-29 11:56:17.000000000 +0000
+--- otherlibs/Makefile.shared.orig	2016-04-01 12:53:41.000000000 +0000
 +++ otherlibs/Makefile.shared
-@@ -61,16 +61,16 @@ INSTALL_STUBLIBDIR=$(DESTDIR)$(STUBLIBDI
+@@ -69,18 +69,18 @@ INSTALL_STUBLIBDIR=$(DESTDIR)$(STUBLIBDI
  
  install::
  	if test -f dll$(CLIBNAME)$(EXT_DLL); then \
--	  cp dll$(CLIBNAME)$(EXT_DLL) $(INSTALL_STUBLIBDIR)/; fi
--	cp lib$(CLIBNAME).$(A) $(INSTALL_LIBDIR)/
-+	  $(BSD_INSTALL_LIB) dll$(CLIBNAME)$(EXT_DLL) $(INSTALL_STUBLIBDIR)/; fi
-+	$(BSD_INSTALL_DATA) lib$(CLIBNAME).$(A) $(INSTALL_LIBDIR)/
- 	cd $(INSTALL_LIBDIR); $(RANLIB) lib$(CLIBNAME).$(A)
--	cp $(LIBNAME).cma $(CMIFILES) $(CMIFILES:.cmi=.mli) $(INSTALL_LIBDIR)/
--	if test -n "$(HEADERS)"; then cp $(HEADERS) $(INSTALL_LIBDIR)/caml/; fi
-+	$(BSD_INSTALL_DATA) $(LIBNAME).cma $(CMIFILES) $(CMIFILES:.cmi=.mli) $(INSTALL_LIBDIR)/
-+	if test -n "$(HEADERS)"; then $(BSD_INSTALL_DATA) $(HEADERS) $(INSTALL_LIBDIR)/caml/; fi
+-	  cp dll$(CLIBNAME)$(EXT_DLL) "$(INSTALL_STUBLIBDIR)/"; fi
+-	cp lib$(CLIBNAME).$(A) "$(INSTALL_LIBDIR)/"
++	  $(BSD_INSTALL_LIB) dll$(CLIBNAME)$(EXT_DLL) "$(INSTALL_STUBLIBDIR)/"; fi
++	$(BSD_INSTALL_DATA) lib$(CLIBNAME).$(A) "$(INSTALL_LIBDIR)/"
+ 	cd "$(INSTALL_LIBDIR)"; $(RANLIB) lib$(CLIBNAME).$(A)
+-	cp $(LIBNAME).cma $(CMIFILES) $(CMIFILES:.cmi=.mli) "$(INSTALL_LIBDIR)/"
++	$(BSD_INSTALL_DATA) $(LIBNAME).cma $(CMIFILES) $(CMIFILES:.cmi=.mli) "$(INSTALL_LIBDIR)/"
+ 	if test -n "$(HEADERS)"; then \
+-	  cp $(HEADERS) "$(INSTALL_LIBDIR)/caml/"; fi
++	  $(BSD_INSTALL_DATA) $(HEADERS) "$(INSTALL_LIBDIR)/caml/"; fi
  
  installopt:
--	cp $(CAMLOBJS_NAT) $(LIBNAME).cmxa $(LIBNAME).$(A) $(INSTALL_LIBDIR)/
-+	$(BSD_INSTALL_DATA) $(CAMLOBJS_NAT) $(LIBNAME).cmxa $(LIBNAME).$(A) $(INSTALL_LIBDIR)/
- 	cd $(INSTALL_LIBDIR); $(RANLIB) $(LIBNAME).a
--	if test -f $(LIBNAME).cmxs; then cp $(LIBNAME).cmxs $(INSTALL_LIBDIR)/; fi
-+	if test -f $(LIBNAME).cmxs; then $(BSD_INSTALL_DATA) $(LIBNAME).cmxs $(INSTALL_LIBDIR)/; fi
+-	cp $(CAMLOBJS_NAT) $(LIBNAME).cmxa $(LIBNAME).$(A) "$(INSTALL_LIBDIR)/"
++	$(BSD_INSTALL_DATA) $(CAMLOBJS_NAT) $(LIBNAME).cmxa $(LIBNAME).$(A) "$(INSTALL_LIBDIR)/"
+ 	cd "$(INSTALL_LIBDIR)"; $(RANLIB) $(LIBNAME).a
+ 	if test -f $(LIBNAME).cmxs; then \
+-	  cp $(LIBNAME).cmxs "$(INSTALL_LIBDIR)/"; fi
++	  $(BSD_INSTALL_DATA) $(LIBNAME).cmxs "$(INSTALL_LIBDIR)/"; fi
  
  partialclean:
  	rm -f *.cm*

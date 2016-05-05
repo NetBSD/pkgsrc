@@ -1,107 +1,29 @@
-$NetBSD: patch-configure,v 1.13 2016/02/29 13:53:58 jperkin Exp $
+$NetBSD: patch-configure,v 1.14 2016/05/05 08:12:01 jaapb Exp $
 
 Several configure changes to work on and detect NetBSD (and some other OSes)
 
 See also: <http://caml.inria.fr/mantis/view.php?id=6900>
-
---- configure.orig	2015-05-12 14:46:37.000000000 +0000
+--- configure.orig	2016-04-01 12:53:41.000000000 +0000
 +++ configure
-@@ -328,11 +328,11 @@ TOOLCHAIN="cc"
- case "$bytecc,$target" in
-   cc,*-*-nextstep*)
-     # GNU C extensions disabled, but __GNUC__ still defined!
--    bytecccompopts="-fno-defer-pop $gcc_warnings -U__GNUC__ -posix"
-+    bytecccompopts="$gcc_warnings -U__GNUC__ -posix"
-     bytecclinkopts="-posix";;
-   *,*-*-rhapsody*)
-     # Almost the same as NeXTStep
--    bytecccompopts="-fno-defer-pop $gcc_warnings -DSHRINKED_GNUC"
-+    bytecccompopts="$gcc_warnings -DSHRINKED_GNUC"
-     mathlib="";;
-   *,*-*-darwin*)
-     bytecccompopts="$gcc_warnings"
-@@ -344,15 +344,15 @@ case "$bytecc,$target" in
-     echo "#  define ARCH_CODE32" >> m.h
-     echo "#endif" >> m.h;;
-   *,*-*-haiku*)
--    bytecccompopts="-fno-defer-pop $gcc_warnings"
-+    bytecccompopts="$gcc_warnings"
-     # No -lm library
-     mathlib="";;
-   *,*-*-beos*)
--    bytecccompopts="-fno-defer-pop $gcc_warnings"
-+    bytecccompopts="$gcc_warnings"
-     # No -lm library
-     mathlib="";;
-   *gcc,alpha*-*-osf*)
--    bytecccompopts="-fno-defer-pop $gcc_warnings"
-+    bytecccompopts="$gcc_warnings"
-     if cc="$bytecc" sh ./hasgot -mieee; then
-       bytecccompopts="-mieee $bytecccompopts";
-     fi
-@@ -380,7 +380,7 @@ case "$bytecc,$target" in
-     bytecccompopts="-DUMK";;
-   *gcc*,powerpc-*-aix*)
-     # Avoid name-space pollution by requiring Unix98-conformant includes
--    bytecccompopts="-fno-defer-pop $gcc_warnings -D_XOPEN_SOURCE=500";;
-+    bytecccompopts="$gcc_warnings -D_XOPEN_SOURCE=500";;
-   *,powerpc-*-aix*)
-     bytecccompopts="-D_XOPEN_SOURCE=500";;
-   *gcc*,*-*-cygwin*)
-@@ -389,7 +389,7 @@ case "$bytecc,$target" in
-       x86_64-*) flavor=cygwin64;;
-       *) err "unknown cygwin variant";;
-     esac
--    bytecccompopts="-fno-defer-pop $gcc_warnings -U_WIN32"
-+    bytecccompopts="$gcc_warnings -U_WIN32"
-     dllccompopts="-U_WIN32 -DCAML_DLL"
-     if test $with_sharedlibs = yes; then
-       flexlink="flexlink -chain $flavor -merge-manifest -stack 16777216"
-@@ -410,7 +410,7 @@ case "$bytecc,$target" in
-     exe=".exe"
-     ostype="Cygwin";;
-   *gcc*,*-*-mingw*)
--    bytecccompopts="-fno-defer-pop $gcc_warnings"
-+    bytecccompopts="$gcc_warnings"
-     dllccompopt="-DCAML_DLL"
-     if test $with_sharedlibs = yes; then
-       case "$target" in
-@@ -434,14 +434,14 @@ case "$bytecc,$target" in
-     SO="dll"
-     ;;
-   *gcc*,x86_64-*-linux*)
--    bytecccompopts="-fno-defer-pop $gcc_warnings"
-+    bytecccompopts="$gcc_warnings"
-     # Tell gcc that we can use 32-bit code addresses for threaded code
-     # unless we are compiled for a shared library (-fPIC option)
-     echo "#ifndef __PIC__" >> m.h
-     echo "#  define ARCH_CODE32" >> m.h
-     echo "#endif" >> m.h;;
-   *gcc*)
--    bytecccompopts="-fno-defer-pop $gcc_warnings";;
-+    bytecccompopts="$gcc_warnings";;
- esac
- 
- # Configure compiler to use in further tests
-@@ -688,7 +688,7 @@ if test $with_sharedlibs = "yes"; then
-       mksharedlib="$flexlink"
+@@ -671,7 +671,7 @@ if test $with_sharedlibs = "yes"; then
        mkmaindll="$flexlink -maindll"
        shared_libraries_supported=true;;
--    *-*-linux-gnu|*-*-linux|*-*-freebsd[3-9]*|*-*-freebsd[1-9][0-9]*|*-*-openbsd*|*-*-netbsd*|*-*-gnu*|*-*-haiku*)
-+    *-*-linux-gnu|*-*-linux|*-*-freebsd[3-9]*|*-*-freebsd[1-9][0-9]*|*-*-openbsd*|*-*-netbsd*|*-*-dragonfly|*-*-gnu*|*-*-haiku*)
+     *-*-linux-gnu|*-*-linux|*-*-freebsd[3-9]*|*-*-freebsd[1-9][0-9]*\
+-    |*-*-openbsd*|*-*-netbsd*|*-*-gnu*|*-*-haiku*)
++    |*-*-openbsd*|*-*-netbsd*|*-*-dragonfly|*-*-gnu*|*-*-haiku*)
        sharedcccompopts="-fPIC"
        mksharedlib="$bytecc -shared"
        bytecclinkopts="$bytecclinkopts -Wl,-E"
-@@ -743,7 +743,7 @@ if test $with_sharedlibs = "yes"; then
+@@ -726,7 +726,7 @@ if test $with_sharedlibs = "yes"; then
        byteccrpath="-Wl,-rpath,"
        mksharedlibrpath="-rpath "
        shared_libraries_supported=true;;
 -    i[3456]86-*-darwin[89].*)
 +    i[3456]86-*-darwin*)
-       mksharedlib="$bytecc -bundle -flat_namespace -undefined suppress -read_only_relocs suppress"
+       mksharedlib="$bytecc -bundle -flat_namespace -undefined suppress \
+                    -read_only_relocs suppress"
        bytecccompopts="$dl_defs $bytecccompopts"
-       dl_needs_underscore=false
-@@ -783,11 +783,7 @@ if test $with_sharedlibs = "yes"; then
+@@ -768,11 +768,7 @@ if test $with_sharedlibs = "yes"; then
      i[3456]86-*-linux*)           natdynlink=true;;
      i[3456]86-*-gnu*)             natdynlink=true;;
      x86_64-*-linux*)              natdynlink=true;;
@@ -112,9 +34,9 @@ See also: <http://caml.inria.fr/mantis/view.php?id=6900>
 -      fi;;
 +    i[3456]86-*-darwin*)          natdynlink=true;;
      x86_64-*-darwin*)             natdynlink=true;;
+     s390x*-*-linux*)              natdynlink=true;;
      powerpc*-*-linux*)            natdynlink=true;;
-     sparc*-*-linux*)              natdynlink=true;;
-@@ -799,6 +795,9 @@ if test $with_sharedlibs = "yes"; then
+@@ -785,6 +781,9 @@ if test $with_sharedlibs = "yes"; then
      x86_64-*-openbsd*)            natdynlink=true;;
      i[3456]86-*-netbsd*)          natdynlink=true;;
      x86_64-*-netbsd*)             natdynlink=true;;
@@ -124,7 +46,7 @@ See also: <http://caml.inria.fr/mantis/view.php?id=6900>
      i386-*-gnu0.3)                natdynlink=true;;
      i[3456]86-*-haiku*)           natdynlink=true;;
      arm*-*-linux*)                natdynlink=true;;
-@@ -827,6 +826,7 @@ case "$target" in
+@@ -814,6 +813,7 @@ case "$target" in
    sparc*-*-gnu*)                arch=sparc; system=gnu;;
    i[3456]86-*-linux*)           arch=i386; system=linux_`sh ./runtest elf.c`;;
    i[3456]86-*-*bsd*)            arch=i386; system=bsd_`sh ./runtest elf.c`;;
@@ -132,7 +54,7 @@ See also: <http://caml.inria.fr/mantis/view.php?id=6900>
    i[3456]86-*-nextstep*)        arch=i386; system=nextstep;;
    i[3456]86-*-solaris*)         if $arch64; then
                                    arch=amd64; system=solaris
-@@ -836,6 +836,7 @@ case "$target" in
+@@ -823,6 +823,7 @@ case "$target" in
    i[3456]86-*-haiku*)           arch=i386; system=beos;;
    i[3456]86-*-beos*)            arch=i386; system=beos;;
    i[3456]86-*-cygwin*)          arch=i386; system=cygwin;;
@@ -140,15 +62,14 @@ See also: <http://caml.inria.fr/mantis/view.php?id=6900>
    i[3456]86-*-darwin*)          if $arch64; then
                                    arch=amd64; system=macosx
                                  else
-@@ -849,6 +850,7 @@ case "$target" in
-   powerpc-*-rhapsody*)          arch=power; model=ppc; system=rhapsody;;
-   powerpc-*-darwin*)            arch=power; system=rhapsody
-                                 if $arch64;then model=ppc64;else model=ppc;fi;;
-+	arm*-*-netbsd)								arch=arm; system=netbsd;;
-   armv6*-*-linux-gnueabihf)     arch=arm; model=armv6; system=linux_eabihf;;
-   arm*-*-linux-gnueabihf)       arch=arm; system=linux_eabihf;;
-   armv7*-*-linux-gnueabi)       arch=arm; model=armv7; system=linux_eabi;;
-@@ -864,6 +866,8 @@ case "$target" in
+@@ -848,12 +849,15 @@ case "$target" in
+   armv5te*-*-linux-gnueabi)     arch=arm; model=armv5te; system=linux_eabi;;
+   armv5*-*-linux-gnueabi)       arch=arm; model=armv5; system=linux_eabi;;
+   arm*-*-linux-gnueabi)         arch=arm; system=linux_eabi;;
++  arm*-*-netbsd*)               arch=arm; system=netbsd;;
+   arm*-*-openbsd*)              arch=arm; system=bsd;;
+   zaurus*-*-openbsd*)           arch=arm; system=bsd;;
+   x86_64-*-linux*)              arch=amd64; system=linux;;
    x86_64-*-gnu*)                arch=amd64; system=gnu;;
    x86_64-*-freebsd*)            arch=amd64; system=freebsd;;
    x86_64-*-netbsd*)             arch=amd64; system=netbsd;;
@@ -157,25 +78,16 @@ See also: <http://caml.inria.fr/mantis/view.php?id=6900>
    x86_64-*-openbsd*)            arch=amd64; system=openbsd;;
    x86_64-*-darwin*)             arch=amd64; system=macosx;;
    x86_64-*-mingw*)              arch=amd64; system=mingw;;
-@@ -903,7 +907,7 @@ case "$arch,$nativecc,$system,$target" i
-                        if $arch64; then partialld="ld -r -arch ppc64"; fi;;
-   *,gcc*,cygwin,*)     nativecccompopts="$gcc_warnings -U_WIN32";;
-   amd64,gcc*,macosx,*) partialld="ld -r -arch x86_64";;
--  amd64,gcc*,solaris,*) partialld="ld -r -m elf_x86_64";;
-+  amd64,gcc*,solaris,*) partialld="ld -r -64";;
-   *,gcc*,*,*)          nativecccompopts="$gcc_warnings";;
- esac
- 
-@@ -920,7 +924,7 @@ case "$arch,$system" in
+@@ -913,7 +917,7 @@ case "$arch,$system" in
    amd64,solaris)  as="${TOOLPREF}as --64"
                    aspp="${TOOLPREF}gcc -m64 -c";;
    i386,solaris)   as="${TOOLPREF}as"
 -                  aspp="/usr/ccs/bin/${TOOLPREF}as -P";;
 +                  aspp="gcc -traditional -c";;
-   power,elf)      as="${TOOLPREF}as -u -m ppc"
-                   aspp="${TOOLPREF}gcc -c";;
-   power,rhapsody) as="${TOOLPREF}as -arch $model"
-@@ -961,6 +965,7 @@ case "$arch,$system" in
+   power,elf)      if $arch64; then
+                     as="${TOOLPREF}as -a64 -mppc64"
+                     aspp="${TOOLPREF}gcc -m64 -c"
+@@ -960,6 +964,7 @@ case "$arch,$system" in
    arm,linux*) profiling='prof';;
    power,elf) profiling='prof';;
    power,bsd*) profiling='prof';;
@@ -183,7 +95,7 @@ See also: <http://caml.inria.fr/mantis/view.php?id=6900>
    *) profiling='noprof';;
  esac
  
-@@ -1475,6 +1480,8 @@ fi
+@@ -1505,6 +1510,8 @@ fi
  x11_include="not found"
  x11_link="not found"
  
@@ -192,7 +104,7 @@ See also: <http://caml.inria.fr/mantis/view.php?id=6900>
  if test -z "$x11_include_dir" -a -z "$x11_lib_dir"; then
    if pkg-config --exists x11 2>/dev/null; then
      x11_include=`pkg-config --cflags x11`
-@@ -1521,6 +1528,7 @@ if test "$x11_include" = "not found"; th
+@@ -1551,6 +1558,7 @@ if test "$x11_include" = "not found"; th
      /usr/XFree86/include/X11  \
                                \
      /usr/include              \
@@ -200,7 +112,7 @@ See also: <http://caml.inria.fr/mantis/view.php?id=6900>
      /usr/local/include        \
      /usr/unsupported/include  \
      /usr/athena/include       \
-@@ -1578,6 +1586,7 @@ if test "$x11_include" = "not found"; th
+@@ -1608,6 +1616,7 @@ if test "$x11_include" = "not found"; th
                            \
      /usr/lib64            \
      /usr/lib              \
@@ -208,7 +120,7 @@ See also: <http://caml.inria.fr/mantis/view.php?id=6900>
      /usr/local/lib        \
      /usr/unsupported/lib  \
      /usr/athena/lib       \
-@@ -1599,18 +1608,16 @@ if test "$x11_include" = "not found"; th
+@@ -1629,18 +1638,16 @@ if test "$x11_include" = "not found"; th
        if test $dir = /usr/lib; then
          x11_link="-lX11"
        else
