@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1852 2016/05/05 11:36:19 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1853 2016/05/05 11:37:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2430,3 +2430,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/meld to 3.16.0 [wiz 2016-05-05]
 	Updated security/libgpg-error to 1.22 [wiz 2016-05-05]
 	Updated mail/notmuch to 0.22 [wiz 2016-05-05]
+	Updated www/py-betamax to 0.7.0 [wiz 2016-05-05]
