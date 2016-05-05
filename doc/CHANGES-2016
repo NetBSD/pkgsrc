@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1865 2016/05/05 12:07:02 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1866 2016/05/05 12:09:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2443,3 +2443,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated audio/taglib to 1.11 [wiz 2016-05-05]
 	Updated mail/seamonkey-enigmail to 1.9.2 [wiz 2016-05-05]
 	Updated mail/thunderbird to 45.0 [wiz 2016-05-05]
+	Updated security/gnupg21 to 2.1.12 [wiz 2016-05-05]
