@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2015/10/27 08:49:01 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.12 2016/05/05 02:00:33 jnemeth Exp $
 include/asterisk.h
 include/asterisk/_private.h
 include/asterisk/abstract_jb.h
@@ -383,15 +383,15 @@ libdata/asterisk/phoneprov/000000000000.cfg
 libdata/asterisk/phoneprov/polycom.xml
 libdata/asterisk/phoneprov/polycom_line.xml
 libdata/asterisk/phoneprov/snom-mac.xml
-libdata/asterisk/sounds/en/.asterisk-core-sounds-en-gsm-1.4.27
+libdata/asterisk/sounds/en/.asterisk-core-sounds-en-gsm-1.5
 libdata/asterisk/sounds/en/1-for-am-2-for-pm.gsm
 libdata/asterisk/sounds/en/1-yes-2-no.gsm
-libdata/asterisk/sounds/en/CHANGES-asterisk-core-en-1.4.27
-libdata/asterisk/sounds/en/CHANGES-asterisk-extra-en-1.4.15
-libdata/asterisk/sounds/en/CREDITS-asterisk-core-en-1.4.27
-libdata/asterisk/sounds/en/CREDITS-asterisk-extra-en-1.4.15
-libdata/asterisk/sounds/en/LICENSE-asterisk-core-en-1.4.27
-libdata/asterisk/sounds/en/LICENSE-asterisk-extra-en-1.4.15
+libdata/asterisk/sounds/en/CHANGES-asterisk-core-en-1.5
+libdata/asterisk/sounds/en/CHANGES-asterisk-extra-en-1.5
+libdata/asterisk/sounds/en/CREDITS-asterisk-core-en-1.5
+libdata/asterisk/sounds/en/CREDITS-asterisk-extra-en-1.5
+libdata/asterisk/sounds/en/LICENSE-asterisk-core-en-1.5
+libdata/asterisk/sounds/en/LICENSE-asterisk-extra-en-1.5
 libdata/asterisk/sounds/en/OfficeSpace.gsm
 libdata/asterisk/sounds/en/Randulo-allison.gsm
 libdata/asterisk/sounds/en/SIP_Test_Failure.gsm
@@ -469,7 +469,6 @@ libdata/asterisk/sounds/en/astcc-account-number-invalid.gsm
 libdata/asterisk/sounds/en/astcc-balance-of-account-is.gsm
 libdata/asterisk/sounds/en/astcc-card-number-invalid.gsm
 libdata/asterisk/sounds/en/astcc-digit-account-number.gsm
-libdata/asterisk/sounds/en/astcc-followed-by-pound.gsm
 libdata/asterisk/sounds/en/astcc-followed-by-the-hash-key.gsm
 libdata/asterisk/sounds/en/astcc-followed-by-the-pound-key.gsm
 libdata/asterisk/sounds/en/astcc-login12pound.gsm
@@ -1605,6 +1604,7 @@ libdata/asterisk/sounds/en/please-hold-minion-connect.gsm
 libdata/asterisk/sounds/en/please-hold-while-minion.gsm
 libdata/asterisk/sounds/en/please-try-again-later.gsm
 libdata/asterisk/sounds/en/please-try-again.gsm
+libdata/asterisk/sounds/en/please-try-call-later.gsm
 libdata/asterisk/sounds/en/please-try.gsm
 libdata/asterisk/sounds/en/please-wait-connect-oncall-eng.gsm
 libdata/asterisk/sounds/en/pls-ent-num-transfer.gsm
@@ -1621,7 +1621,6 @@ libdata/asterisk/sounds/en/pls-rcrd-name-at-tone.gsm
 libdata/asterisk/sounds/en/pls-stay-on-line.gsm
 libdata/asterisk/sounds/en/pls-try-again.gsm
 libdata/asterisk/sounds/en/pls-try-area-code.gsm
-libdata/asterisk/sounds/en/pls-try-call-later.gsm
 libdata/asterisk/sounds/en/pls-try-manually.gsm
 libdata/asterisk/sounds/en/pls-wait-connect-call.gsm
 libdata/asterisk/sounds/en/plugh.gsm
