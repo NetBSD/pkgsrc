@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15856 2016/05/05 11:37:41 wiz Exp $
+$NetBSD: TODO,v 1.15857 2016/05/05 11:39:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1519,7 +1519,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-django-tagging-0.4.1
 	o py-djangorestframework-2.3.12
 	o py-doctor-15.1.0
-	o py-enum34-1.1.4
 	o py-ephem3-3.7.6.0
 	o py-flake8-2.5.4
 	o py-gmpy-1.17
