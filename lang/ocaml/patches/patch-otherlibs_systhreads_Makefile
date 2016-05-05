@@ -1,10 +1,10 @@
-$NetBSD: patch-otherlibs_systhreads_Makefile,v 1.4 2015/12/29 23:34:53 dholland Exp $
+$NetBSD: patch-otherlibs_systhreads_Makefile,v 1.5 2016/05/05 08:12:01 jaapb Exp $
 
 Use BSD_INSTALL_* instead of mkdir and cp
 
---- otherlibs/systhreads/Makefile.orig	2014-04-29 11:56:17.000000000 +0000
+--- otherlibs/systhreads/Makefile.orig	2016-04-01 12:53:41.000000000 +0000
 +++ otherlibs/systhreads/Makefile
-@@ -77,21 +77,21 @@ INSTALL_STUBLIBDIR=$(DESTDIR)$(STUBLIBDI
+@@ -86,21 +86,21 @@ INSTALL_STUBLIBDIR=$(DESTDIR)$(STUBLIBDI
  
  install:
  	if test -f dllthreads.so; then \
@@ -29,8 +29,8 @@ Use BSD_INSTALL_* instead of mkdir and cp
 -	cp libthreadsnat.a $(INSTALL_LIBDIR)/libthreadsnat.a
 +	$(BSD_INSTALL_DATA) libthreadsnat.a $(INSTALL_LIBDIR)/libthreadsnat.a
  	cd $(INSTALL_LIBDIR); $(RANLIB) libthreadsnat.a
--	cp $(THREAD_OBJS:.cmo=.cmx) threads.cmxa threads.a $(INSTALL_LIBDIR)/threads
-+	$(BSD_INSTALL_DATA) $(THREAD_OBJS:.cmo=.cmx) threads.cmxa threads.a $(INSTALL_LIBDIR)/threads
- 	cd $(INSTALL_LIBDIR)/threads; $(RANLIB) threads.a
+-	cp $(THREAD_OBJS:.cmo=.cmx) threads.cmxa threads.a \
++	$(BSD_INSTALL_DATA) $(THREAD_OBJS:.cmo=.cmx) threads.cmxa threads.a \
+ 	   $(INSTALL_LIBDIR)/threads
+ 	cd $(INSTALL_LIBDIR)/threads && $(RANLIB) threads.a
  
- .SUFFIXES: .ml .mli .cmo .cmi .cmx
