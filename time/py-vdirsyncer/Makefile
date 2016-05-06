@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2016/04/24 09:48:43 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2016/05/06 07:07:05 wiz Exp $
 
 DISTNAME=	vdirsyncer-0.10.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -28,6 +28,9 @@ DEPENDS+=	${PYPKGPREFIX}-requests-toolbelt>=0.4.0:../../devel/py-requests-toolbe
 USE_LANGUAGES=	# none
 INSTALLATION_DIRS=	share/examples/${PKGBASE}
 PLIST_SUBST+=	PKGBASE=${PKGBASE}
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # still supported but gives runtime warning
+# see https://github.com/pimutils/vdirsyncer/issues/219
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
