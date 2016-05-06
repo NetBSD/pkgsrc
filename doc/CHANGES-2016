@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1880 2016/05/06 09:45:19 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.1881 2016/05/06 10:51:34 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2456,3 +2456,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/nodejs4 to 4.4.4 [fhajny 2016-05-06]
 	Updated databases/py-cassandra-driver to 3.3.0 [fhajny 2016-05-06]
 	Updated databases/py-peewee to 2.8.1 [fhajny 2016-05-06]
+	Updated lang/camlp5 to 6.16 [jaapb 2016-05-06]
