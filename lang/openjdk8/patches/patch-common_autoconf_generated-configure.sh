@@ -1,30 +1,7 @@
-$NetBSD: patch-common_autoconf_generated-configure.sh,v 1.8 2016/02/08 14:45:39 ryoon Exp $
+$NetBSD: patch-common_autoconf_generated-configure.sh,v 1.9 2016/05/06 13:37:01 ryoon Exp $
 
-GCC support on SunOS.
-Fix max heap.
-Avoid requiring ALSA.
-Fix broken configure check for llvm-config.
-
---- common/autoconf/generated-configure.sh.orig	2016-02-08 13:44:13.000000000 +0000
+--- common/autoconf/generated-configure.sh.orig	2016-05-06 12:11:21.000000000 +0000
 +++ common/autoconf/generated-configure.sh
-@@ -6897,7 +6897,7 @@ test -n "$target_alias" &&
-       VAR_CPU_BITS=32
-       VAR_CPU_ENDIAN=big
-       ;;
--    sparcv9)
-+    sparcv9|sparc64)
-       VAR_CPU=sparcv9
-       VAR_CPU_ARCH=sparc
-       VAR_CPU_BITS=64
-@@ -7050,7 +7050,7 @@ $as_echo "$OPENJDK_BUILD_OS-$OPENJDK_BUI
-       VAR_CPU_BITS=32
-       VAR_CPU_ENDIAN=big
-       ;;
--    sparcv9)
-+    sparcv9|sparc64)
-       VAR_CPU=sparcv9
-       VAR_CPU_ARCH=sparc
-       VAR_CPU_BITS=64
 @@ -8454,9 +8454,9 @@ done
    # We need to find a recent version of GNU make. Especially on Solaris, this can be tricky.
    if test "x$MAKE" != x; then
@@ -161,8 +138,8 @@ Fix broken configure check for llvm-config.
    #
    case $COMPILER_NAME in
      gcc )
--      CCXXFLAGS_JDK="$CCXXFLAGS $CCXXFLAGS_JDK -W -Wall -Wno-unused -Wno-parentheses \
-+      CCXXFLAGS_JDK="$CCXXFLAGS $CCXXFLAGS_JDK -W -Wall -Wno-unused -Wno-unused-parameter -Wno-parentheses \
+-      CCXXFLAGS_JDK="$CCXXFLAGS $CCXXFLAGS_JDK -W -Wall -Wno-unused -Wno-parentheses -Wno-sign-compare \
++      CCXXFLAGS_JDK="$CCXXFLAGS $CCXXFLAGS_JDK -W -Wall -Wno-unused -Wno-parentheses -Wno-sign-compare -Wno-unused-parameter \
        -pipe \
        -D_GNU_SOURCE -D_REENTRANT -D_LARGEFILE64_SOURCE"
        case $OPENJDK_TARGET_CPU_ARCH in
