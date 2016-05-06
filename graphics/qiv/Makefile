@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2015/04/25 14:23:18 tnn Exp $
+# $NetBSD: Makefile,v 1.52 2016/05/06 09:53:00 snj Exp $
 
 DISTNAME=	qiv-2.3.1
 PKGREVISION=	1
@@ -22,6 +22,7 @@ INSTALLATION_DIRS+=	share/applications
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../sysutils/file/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
