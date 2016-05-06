@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/05/06 09:02:36 nonaka Exp $
+
+SHA1 (iwatch-1.0.3.tar.gz) = d6147d3a0743113ddca775a58343cc22259b65c6
+RMD160 (iwatch-1.0.3.tar.gz) = cff380aacd2e1813d76aaeddd2bb3afa0999d709
+SHA512 (iwatch-1.0.3.tar.gz) = 58f4816648803a7c090a9a07e8396241ca3f5f53e1d0b80fd25c25cf2186f49a0d53eaffa4e66277e2c3527b892bd52f438a18172b73751533de2413a380cbb9
+Size (iwatch-1.0.3.tar.gz) = 105536 bytes
