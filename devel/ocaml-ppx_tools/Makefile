@@ -1,20 +1,19 @@
-# $NetBSD: Makefile,v 1.2 2016/05/05 11:45:39 jaapb Exp $
+# $NetBSD: Makefile,v 1.3 2016/05/06 11:26:29 jaapb Exp $
 
-VERSION= 0.99.3
+VERSION= 5.0
 GITHUB_PROJECT=	ppx_tools
-DISTNAME=	${GITHUB_PROJECT}_${VERSION}
+GITHUB_TAG=	5.0+4.03.0
 PKGNAME= ocaml-${GITHUB_PROJECT}-${VERSION}
-PKGREVISION= 1
+DISTNAME=	${GITHUB_PROJECT}_${VERSION}
 CATEGORIES=	devel
-GITHUB_TAG= ${GITHUB_PROJECT}_${VERSION}
-MASTER_SITES=	${MASTER_SITE_GITHUB:=diml/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=alainfrisch/}
 
 MAINTAINER=	jaapb@NetBSD.org
 HOMEPAGE=	${MASTER_SITE_GITHUB:=alainfrisch/ppx_tools/}
 COMMENT=	Tools for authors of OCaml ppx rewriters
 LICENSE=	mit
 
-WRKSRC=		${WRKDIR}/ppx_tools-ppx_tools_0.99.3
+WRKSRC=		${WRKDIR}/ppx_tools-${VERSION}-4.03.0
 USE_LANGUAGES=	# none
 USE_TOOLS+=	gmake
 OCAML_USE_FINDLIB=	yes
