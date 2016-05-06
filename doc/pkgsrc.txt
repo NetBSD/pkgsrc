@@ -12,9 +12,9 @@ Hubert Feyrer
 
 The pkgsrc Developers
 
-Copyright   1994-2015 The NetBSD Foundation, Inc
+Copyright   1994-2016 The NetBSD Foundation, Inc
 
-$NetBSD: pkgsrc.xml,v 1.28 2015/01/01 05:19:02 jnemeth Exp $
+$NetBSD: pkgsrc.xml,v 1.29 2016/05/06 17:26:34 jnemeth Exp $
 
 Abstract
 
@@ -1948,19 +1948,15 @@ XXX
 
 5.3. Variables affecting the installation process
 
-Most packages support installation into a subdirectory of WRKDIR. This allows a
-package to be built, before the actual filesystem is touched. DESTDIR support
-exists in two variations:
+Packages have to support installation into a subdirectory of WRKDIR. This
+allows a package to be built, before the actual filesystem is touched. DESTDIR
+support exists in two variations:
 
   * Basic DESTDIR support means that the package installation and packaging is
     still run as root.
 
   * Full DESTDIR support can run the complete build, installation and packaging
     as normal user. Root privileges are only needed to add packages.
-
-DESTDIR support is now the default. To switch back to non-DESTDIR, you can set
-USE_DESTDIR=no; this setting will be deprecated though, so it's preferable to
-convert a package to DESTDIR instead.
 
 With basic DESTDIR support, make clean needs to be run as root.
 
@@ -6855,7 +6851,7 @@ If your distfile URL looks similar to http://github.com/example/example/archive
 specific commit not tied to a release.
 
 DISTNAME=       example-1.0
-MASTER_SITES=   ${MASTER_SITE_GITHUB:example/}
+MASTER_SITES=   ${MASTER_SITE_GITHUB:=example/}
 #GITHUB_PROJECT=        # can be omitted if same as DISTNAME
 GITHUB_TAG=     988881adc9fc3655077dc2d4d757d480b5ea0e11
 
