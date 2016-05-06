@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/05/05 11:45:40 jaapb Exp $
+# $NetBSD: Makefile,v 1.6 2016/05/06 22:31:36 wiz Exp $
 
 DISTNAME=	cudf-0.7
 PKGNAME=	ocaml-${DISTNAME}
@@ -25,5 +25,6 @@ BUILD_TARGET+=	opt
 .endif
 
 .include "../../devel/ocaml-extlib/buildlink3.mk"
+.include "../../devel/ocamlbuild/buildlink3.mk"
 .include "../../lang/camlp4/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
