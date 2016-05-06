@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.11 2016/05/05 11:45:36 jaapb Exp $
+# $NetBSD: Makefile,v 1.12 2016/05/06 14:14:28 jaapb Exp $
 #
 
-DISTNAME=	cryptokit-1.9
+DISTNAME=	cryptokit-1.10
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	4
 CATEGORIES=	security
-MASTER_SITES=	http://forge.ocamlcore.org/frs/download.php/1229/
+MASTER_SITES=	http://forge.ocamlcore.org/frs/download.php/1493/
 
-MAINTAINER=	jaapb@kerguelen.org
+MAINTAINER=	jaapb@NetBSD.org
 HOMEPAGE=	http://forge.ocamlcore.org/projects/cryptokit/
 COMMENT=	Cryptographic primitives library for Objective Caml
 LICENSE=	gnu-lgpl-v2 # with static compilation exception
