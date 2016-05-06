@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1875 2016/05/06 09:05:12 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1876 2016/05/06 09:05:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2450,9 +2450,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ocamlbuild to 0.9.2 [jaapb 2016-05-05]
 	Updated devel/ocaml-oasis to 0.4.6 [jaapb 2016-05-05]
 	Updated comms/asterisk13 to 13.8.2 [jnemeth 2016-05-06]
-<<<<<<< CHANGES-2016
-	Updated sysutils/htop to 2.0.1 [wiz 2016-05-06]
-=======
 	Added misc/iwatch version 1.0.3 [nonaka 2016-05-06]
->>>>>>> 1.1874
 	Updated sysutils/htop to 2.0.1 [wiz 2016-05-06]
