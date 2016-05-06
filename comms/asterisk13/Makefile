@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2016/04/11 19:01:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.7 2016/05/06 07:41:06 jnemeth Exp $
 #
 # NOTE: when updating this package, there are two places that sound
-#       tarballs need to be checked
+#       tarballs need to be checked; look in ${WRKSRC}/sounds/Makefile
+#       to find out the current sound file versions
 
-DISTNAME=	asterisk-13.7.2
-PKGREVISION=	2
+DISTNAME=	asterisk-13.8.2
 CATEGORIES=	comms net audio
 MASTER_SITES=	http://downloads.asterisk.org/pub/telephony/asterisk/ \
 		http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/ \
@@ -126,7 +126,7 @@ PLIST.mgcp=	yes
 .include "options.mk"
 
 # check sounds/Makefile for current version when upgrading package
-DISTFILES+=	asterisk-extra-sounds-en-gsm-1.4.15.tar.gz
+DISTFILES+=	asterisk-extra-sounds-en-gsm-1.5.tar.gz
 
 # Override default paths in config files
 SUBST_CLASSES+=		configs
@@ -205,8 +205,8 @@ CONF_FILES_PERMS+=	${ASTEXAMPLEDIR}/${f:Q} ${PKG_SYSCONFDIR}/${f:Q} ${ASTERISK_U
 	iaxprov.conf indications.conf logger.conf manager.conf		\
 	meetme.conf mgcp.conf minivm.conf misdn.conf modules.conf	\
 	motif.conf musiconhold.conf muted.conf ooh323.conf osp.conf	\
-	oss.conf phone.conf phoneprov.conf pjsip.conf pjsip_notify.conf	\
-	pjsip_wizard.conf queuerules.conf queues.conf			\
+	oss.conf phone.conf phoneprov.conf pjproject.conf pjsip.conf	\
+	pjsip_notify.conf pjsip_wizard.conf queuerules.conf queues.conf	\
 	res_config_mysql.conf res_config_sqlite.conf			\
 	res_config_sqlite3.conf res_corosync.conf res_curl.conf		\
 	res_fax.conf res_ldap.conf res_odbc.conf res_parking.conf	\
@@ -228,9 +228,9 @@ post-patch:
 
 post-install:
 # check sounds directory for current versions when upgrading package
-	${TAR} xzf ${WRKSRC}/sounds/asterisk-core-sounds-en-gsm-1.4.27.tar.gz -C ${DESTDIR}${ASTDATADIR}/sounds/en
+	${TAR} xzf ${WRKSRC}/sounds/asterisk-core-sounds-en-gsm-1.5.tar.gz -C ${DESTDIR}${ASTDATADIR}/sounds/en
 	${TAR} xzf ${WRKSRC}/sounds/asterisk-moh-opsound-wav-2.03.tar.gz -C ${DESTDIR}${ASTDATADIR}/moh
-	${TAR} xzf ${DISTDIR}/${DIST_SUBDIR}/asterisk-extra-sounds-en-gsm-1.4.15.tar.gz -C ${DESTDIR}${ASTDATADIR}/sounds/en
+	${TAR} xzf ${DISTDIR}/${DIST_SUBDIR}/asterisk-extra-sounds-en-gsm-1.5.tar.gz -C ${DESTDIR}${ASTDATADIR}/sounds/en
 	${INSTALL_DATA} ${WRKSRC}/BUGS ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/CHANGES ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/COPYING ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
