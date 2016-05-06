@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.10 2016/02/06 11:35:14 jaapb Exp $
+$NetBSD: distinfo,v 1.11 2016/05/06 15:39:36 jaapb Exp $
 
-SHA1 (lwt-2.5.1.tar.gz) = 789cf09378b4f70c868003996bd9d3361d7fc196
-RMD160 (lwt-2.5.1.tar.gz) = c075603ab875c3108957719ce3ff26796ceb1bc7
-SHA512 (lwt-2.5.1.tar.gz) = 648f08e13a5b13072ed44ec380cce226bbf2ac480ca6adcd170e5bfa789bf6a4e832af0748bb1bff0e45611fd8d1b14592ece4211fb78be5b03cbcd7c3cb3b7d
-Size (lwt-2.5.1.tar.gz) = 1272834 bytes
+SHA1 (lwt-2.5.2.tar.gz) = 99c0653e5422a5b80dc470f8abb83956b5628e5f
+RMD160 (lwt-2.5.2.tar.gz) = d394b854d69f39f5b1977e6b864ce317a9b29193
+SHA512 (lwt-2.5.2.tar.gz) = 83c7a9d9798fe12e0bdd618e7f69ac357065a9b26e2abb644240c420cb1d507a3b558549b2f82ecc9c3fbc9ca5952e8d7cb32b6832713bfb6fffcb58975d5449
+Size (lwt-2.5.2.tar.gz) = 268168 bytes
