@@ -1,4 +1,4 @@
-# $NetBSD: ocaml.mk,v 1.7 2016/04/12 15:52:29 jaapb Exp $
+# $NetBSD: ocaml.mk,v 1.8 2016/05/06 14:13:23 jaapb Exp $
 #
 # This Makefile fragment handles the common variables used by OCaml packages.
 #
@@ -129,6 +129,8 @@ PLIST.ocaml-opt=	yes
 # OASIS targets
 #
 .if ${OCAML_USE_OASIS} == "yes"
+# OASIS uses buildlink
+.include "../../devel/ocamlbuild/buildlink3.mk"
 .if ${OCAML_USE_OASIS_DYNRUN} == "yes"
 pre-configure:
 	${RUN} cd ${WRKSRC} && ocamlfind ocamlc -linkpkg -package oasis.dynrun -o setup setup.ml && ${RM} setup.cmo setup.cmi
