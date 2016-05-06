@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2015/12/27 14:52:53 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2016/05/06 20:33:01 fhajny Exp $
 
 DISTNAME=		khal-0.7.0
 CATEGORIES=		time net
@@ -24,6 +24,8 @@ DEPENDS+=		${PYPKGPREFIX}-xdg>=0.17:../../devel/py-xdg
 DEPENDS+=		${PYPKGPREFIX}-setproctitle-[0-9]*:../../sysutils/py-setproctitle
 # test dependency, not packaged yet
 # freezegun
+
+PYTHON_VERSIONS_INCOMPATIBLE=	27 # time/py-vdirsyncer
 
 PYTHON_VERSIONED_DEPENDENCIES=	dateutil
 
