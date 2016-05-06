@@ -1,20 +1,8 @@
-$NetBSD: patch-jdk_make_CompileLaunchers.gmk,v 1.2 2015/07/03 20:40:59 fhajny Exp $
+$NetBSD: patch-jdk_make_CompileLaunchers.gmk,v 1.3 2016/05/06 13:37:01 ryoon Exp $
 
-Change Sun Studio compiler flag to GCC equivalent.
-(it is probably safe to remove the flag since we use the Zero port.)
-
---- jdk/make/CompileLaunchers.gmk.orig	2015-06-10 10:36:15.000000000 +0000
+--- jdk/make/CompileLaunchers.gmk.orig	2016-05-06 12:11:21.000000000 +0000
 +++ jdk/make/CompileLaunchers.gmk
-@@ -458,7 +458,7 @@ else
- endif
- 
- ifeq ($(OPENJDK_TARGET_CPU_ARCH), sparc)
--  UNPACKEXE_CFLAGS += -xregs=no%appl
-+  UNPACKEXE_CFLAGS += -mno-app-regs
-   UNPACKEXE_LDFLAGS_solaris += -xmemalign=4s
- endif
- 
-@@ -553,9 +553,7 @@ BUILD_JEXEC_DST_DIR := $(JDK_OUTPUTDIR)/
+@@ -548,9 +548,7 @@ BUILD_JEXEC_DST_DIR := $(JDK_OUTPUTDIR)/
  # jdk/make/java/Makefile
  #
  ifeq ($(OPENJDK_TARGET_OS), solaris)
