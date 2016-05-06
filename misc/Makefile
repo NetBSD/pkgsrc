@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.466 2016/03/16 15:34:01 tsutsui Exp $
+# $NetBSD: Makefile,v 1.467 2016/05/06 09:05:46 nonaka Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -109,6 +109,7 @@ SUBDIR+=	howm
 SUBDIR+=	ibutton-pdkit
 SUBDIR+=	ipbt
 SUBDIR+=	iselect
+SUBDIR+=	iwatch
 SUBDIR+=	ja-less
 SUBDIR+=	ja-man
 SUBDIR+=	jhd
