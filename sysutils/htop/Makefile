@@ -1,22 +1,27 @@
-# $NetBSD: Makefile,v 1.10 2015/08/20 13:38:25 jperkin Exp $
-#
+# $NetBSD: Makefile,v 1.11 2016/05/06 09:04:17 wiz Exp $
 
-DISTNAME=	htop-1.0.1
-PKGREVISION=	1
+DISTNAME=	htop-2.0.1
 CATEGORIES=	sysutils
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=htop/}
+MASTER_SITES=	http://hisham.hm/htop/releases/2.0.1/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://htop.sourceforge.net/
+HOMEPAGE=	http://hisham.hm/htop/
 COMMENT=	Enhanced version of top utility
 LICENSE=	gnu-gpl-v2
 
+USE_TOOLS+=	automake aclocal autoheader autoconf
 GNU_CONFIGURE=	yes
 USE_NCURSES=	yes # uses ncurses mouse definitions
 
 USE_LIBTOOL=	yes
 
-ONLY_FOR_PLATFORM=     Linux-*-* FreeBSD-*-* NetBSD-*-*
+#ONLY_FOR_PLATFORM=     Linux-*-* FreeBSD-*-* NetBSD-*-*
+
+pre-configure:
+	set -e; cd ${WRKSRC}; \
+	aclocal; \
+	autoconf; \
+	automake
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -25,8 +30,10 @@ ONLY_FOR_PLATFORM+=	SunOS-*-*
 CONFIGURE_ARGS+=	--with-proc=/system/lxproc
 .endif
 
+REPLACE_PYTHON+=	scripts/MakeHeader.py
 CONFIGURE_ENV+=		ac_cv_file__proc_stat=yes ac_cv_file__proc_meminfo=yes
 
+.include "../../lang/python/application.mk"
 .include "../../devel/ncursesw/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
