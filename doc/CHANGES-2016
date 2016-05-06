@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1892 2016/05/06 15:39:50 jaapb Exp $
+$NetBSD: CHANGES-2016,v 1.1893 2016/05/06 18:09:01 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2468,3 +2468,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/redis to 3.2.0 [fhajny 2016-05-06]
 	Updated security/ocaml-cryptokit to 1.10 [jaapb 2016-05-06]
 	Updated devel/ocaml-lwt to 2.5.2 [jaapb 2016-05-06]
+	Added devel/cpputest version v3.7.1 [schmonz 2016-05-06]
