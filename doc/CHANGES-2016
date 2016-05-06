@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1891 2016/05/06 14:14:41 jaapb Exp $
+$NetBSD: CHANGES-2016,v 1.1892 2016/05/06 15:39:50 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2467,3 +2467,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added sysutils/consul version 0.6.4 [fhajny 2016-05-06]
 	Updated databases/redis to 3.2.0 [fhajny 2016-05-06]
 	Updated security/ocaml-cryptokit to 1.10 [jaapb 2016-05-06]
+	Updated devel/ocaml-lwt to 2.5.2 [jaapb 2016-05-06]
