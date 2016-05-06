@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.575 2016/04/30 19:27:43 agc Exp $
+# $NetBSD: Makefile,v 1.576 2016/05/06 13:41:40 fhajny Exp $
 #
 
 COMMENT=	Security tools
@@ -491,6 +491,7 @@ SUBDIR+=	tor-browser
 SUBDIR+=	tripwire
 SUBDIR+=	uvscan
 SUBDIR+=	validns
+SUBDIR+=	vault
 SUBDIR+=	volatility
 SUBDIR+=	xml-security-c
 SUBDIR+=	xmlsec1
