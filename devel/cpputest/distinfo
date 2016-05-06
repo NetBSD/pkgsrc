@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/05/06 18:08:45 schmonz Exp $
+
+SHA1 (cpputest/v3.7.1.zip) = be970ed8d4ebc9c66e52bb8f61e9293d8e39962e
+RMD160 (cpputest/v3.7.1.zip) = 6b95320ce051703266dd2095031b6ac00004c1ab
+SHA512 (cpputest/v3.7.1.zip) = 76fed0c2d17d4190b60f94f3f15193f5cf8062c9e677751f50084740d589eb4f35f1bfd59839e3badd3fe5e8a931f2c4abaa2bd7629384a1ab94fe2fd0b7b055
+Size (cpputest/v3.7.1.zip) = 2651468 bytes
