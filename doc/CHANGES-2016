@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1886 2016/05/06 12:52:04 mef Exp $
+$NetBSD: CHANGES-2016,v 1.1887 2016/05/06 13:36:03 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2462,3 +2462,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ocaml-ppx_deriving to 3.3 [jaapb 2016-05-06]
 	Updated fonts/koruri-ttf to 20160506 [nonaka 2016-05-06]
 	Updated devel/p5-AnyEvent to 7.12 [mef 2016-05-06]
+	Added security/vault version 0.5.2 [fhajny 2016-05-06]
