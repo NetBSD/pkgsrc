@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/05/05 11:45:39 jaapb Exp $
+# $NetBSD: Makefile,v 1.6 2016/05/06 22:32:41 wiz Exp $
 
 DISTNAME=	ocaml-re-1.2.2
 PKGREVISION=	3
@@ -28,5 +28,6 @@ do-build:
 do-install:
 	cd ${WRKSRC} && ./setup.bin -install
 
+.include "../../devel/ocamlbuild/buildlink3.mk"
 .include "../../mk/ocaml.mk"
 .include "../../mk/bsd.pkg.mk"
