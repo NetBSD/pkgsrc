@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1884 2016/05/06 12:09:10 jaapb Exp $
+$NetBSD: CHANGES-2016,v 1.1885 2016/05/06 12:11:13 nonaka Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2460,3 +2460,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ocaml-ppx_tools to 5.0 [jaapb 2016-05-06]
 	Updated devel/menhir to 20160303 [jaapb 2016-05-06]
 	Updated devel/ocaml-ppx_deriving to 3.3 [jaapb 2016-05-06]
+	Updated fonts/koruri-ttf to 20160506 [nonaka 2016-05-06]
