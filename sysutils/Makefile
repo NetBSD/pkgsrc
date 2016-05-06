@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.664 2016/04/28 07:02:23 markd Exp $
+# $NetBSD: Makefile,v 1.665 2016/05/06 13:41:04 fhajny Exp $
 #
 
 COMMENT=	System utilities
@@ -77,6 +77,7 @@ SUBDIR+=	collectd-rrdtool
 SUBDIR+=	collectd-snmp
 SUBDIR+=	conky
 SUBDIR+=	consolekit
+SUBDIR+=	consul
 SUBDIR+=	coreutils
 SUBDIR+=	cpmtools
 SUBDIR+=	cpogm
