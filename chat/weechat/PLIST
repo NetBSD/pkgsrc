@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2016/02/14 12:52:13 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.23 2016/05/07 14:16:20 tonio Exp $
 bin/weechat
 include/weechat/weechat-plugin.h
 lib/pkgconfig/weechat.pc
@@ -29,6 +29,7 @@ share/locale/hu/LC_MESSAGES/weechat.mo
 share/locale/it/LC_MESSAGES/weechat.mo
 share/locale/ja/LC_MESSAGES/weechat.mo
 share/locale/pl/LC_MESSAGES/weechat.mo
+share/locale/pt/LC_MESSAGES/weechat.mo
 share/locale/pt_BR/LC_MESSAGES/weechat.mo
 share/locale/ru/LC_MESSAGES/weechat.mo
 share/locale/tr/LC_MESSAGES/weechat.mo
