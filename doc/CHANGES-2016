@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1903 2016/05/07 08:43:28 prlw1 Exp $
+$NetBSD: CHANGES-2016,v 1.1904 2016/05/07 08:46:17 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2479,3 +2479,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/ikiwiki to 3.20160506 [schmonz 2016-05-07]
 	Updated www/py-django to 1.9.6 [adam 2016-05-07]
 	Updated textproc/yelp-xsl to 3.20.1 [prlw1 2016-05-07]
+	Updated misc/yelp3 to 3.20.1 [prlw1 2016-05-07]
