@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/05/05 11:45:40 jaapb Exp $
+# $NetBSD: Makefile,v 1.6 2016/05/07 07:55:11 wiz Exp $
 
 DISTNAME=	dose3-3.3-beta2
 PKGNAME= dose3-3.3beta2
@@ -28,6 +28,7 @@ pre-configure:
 
 .include "../../devel/ocaml-extlib/buildlink3.mk"
 .include "../../devel/ocaml-re/buildlink3.mk"
+.include "../../devel/ocamlbuild/buildlink3.mk"
 .include "../../lang/camlp4/buildlink3.mk"
 .include "../../misc/ocaml-cudf/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
