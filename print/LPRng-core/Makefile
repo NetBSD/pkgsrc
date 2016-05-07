@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2013/04/08 11:17:20 rodent Exp $
+# $NetBSD: Makefile,v 1.40 2016/05/07 10:08:48 joerg Exp $
 
 DISTNAME=	LPRng-3.8.28
 PKGNAME=	LPRng-core-3.8.28
@@ -57,9 +57,8 @@ SPECIAL_PERMS+=		bin/lpq ${SETUID_ROOT_PERMS} \
 
 .include "../../mk/compiler.mk"
 
-.if !empty(PKGSRC_COMPILER:Mclang)
+# Too much noise to be useful.
 BUILDLINK_TRANSFORM+=	rm:-Werror
-.endif
 
 pre-patch:
 	${MV} ${WRKSRC:Q}/man/lpd.conf.n ${WRKSRC:Q}/man/lpd.conf.n.in
