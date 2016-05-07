@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2015/04/25 14:20:21 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2016/05/07 09:48:57 joerg Exp $
 #
 
 DISTNAME=	ibniz-1.18
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	http://pelulamu.net/ibniz/
 
