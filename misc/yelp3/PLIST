@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.7 2016/01/20 09:32:28 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.8 2016/05/07 08:45:55 prlw1 Exp $
 bin/gnome-help
 bin/yelp
 include/libyelp/yelp-bookmarks.h
-include/libyelp/yelp-common-types.h
 include/libyelp/yelp-docbook-document.h
 include/libyelp/yelp-document.h
 include/libyelp/yelp-help-list.h
@@ -20,7 +19,6 @@ include/libyelp/yelp-uri-builder.h
 include/libyelp/yelp-uri.h
 include/libyelp/yelp-view.h
 lib/libyelp.la
-lib/yelp/libyelpcommon.la
 lib/yelp/web-extensions/libyelpwebextension.la
 share/applications/yelp.desktop
 share/glib-2.0/schemas/org.gnome.yelp.gschema.xml
@@ -47,6 +45,7 @@ share/gtk-doc/html/libyelp/up-insensitive.png
 share/gtk-doc/html/libyelp/up.png
 share/locale/af/LC_MESSAGES/yelp.mo
 share/locale/am/LC_MESSAGES/yelp.mo
+share/locale/an/LC_MESSAGES/yelp.mo
 share/locale/ar/LC_MESSAGES/yelp.mo
 share/locale/as/LC_MESSAGES/yelp.mo
 share/locale/ast/LC_MESSAGES/yelp.mo
@@ -220,7 +219,6 @@ share/yelp/mathjax/jax/element/mml/optable/GeometricShapes.js
 share/yelp/mathjax/jax/element/mml/optable/GreekAndCoptic.js
 share/yelp/mathjax/jax/element/mml/optable/Latin1Supplement.js
 share/yelp/mathjax/jax/element/mml/optable/LetterlikeSymbols.js
-share/yelp/mathjax/jax/element/mml/optable/Makefile.am
 share/yelp/mathjax/jax/element/mml/optable/MathOperators.js
 share/yelp/mathjax/jax/element/mml/optable/MiscMathSymbolsA.js
 share/yelp/mathjax/jax/element/mml/optable/MiscMathSymbolsB.js
@@ -261,7 +259,6 @@ share/yelp/mathjax/jax/input/MathML/entities/x.js
 share/yelp/mathjax/jax/input/MathML/entities/y.js
 share/yelp/mathjax/jax/input/MathML/entities/z.js
 share/yelp/mathjax/jax/input/MathML/jax.js
-share/yelp/mathjax/jax/output/HTML-CSS/autoload/Makefile.am
 share/yelp/mathjax/jax/output/HTML-CSS/autoload/annotation-xml.js
 share/yelp/mathjax/jax/output/HTML-CSS/autoload/maction.js
 share/yelp/mathjax/jax/output/HTML-CSS/autoload/menclose.js
