@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.71 2016/04/08 16:20:18 adam Exp $
+# $NetBSD: Makefile,v 1.72 2016/05/07 07:51:52 adam Exp $
 
-DISTNAME=	Django-1.9.5
+DISTNAME=	Django-1.9.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www python
 MASTER_SITES=	http://www.djangoproject.com/m/releases/${PKGVERSION_NOREV:R}/
