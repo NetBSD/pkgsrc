@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.61 2016/03/05 11:28:09 jperkin Exp $
+# $NetBSD: Makefile,v 1.62 2016/05/07 14:16:20 tonio Exp $
 
-DISTNAME=	weechat-1.4
-PKGREVISION=	1
+DISTNAME=	weechat-1.5
 CATEGORIES=	chat
 MASTER_SITES=	http://www.weechat.org/files/src/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tonio@NetBSD.org
 HOMEPAGE=	http://www.weechat.org/
 COMMENT=	Lightweight and user friendly curses based IRC client
 LICENSE=	gnu-gpl-v3
-EXTRACT_SUFX=	.tar.bz2
 
 BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 
