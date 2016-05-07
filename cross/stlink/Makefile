@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2015/12/10 23:04:25 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2016/05/07 09:05:22 ryoon Exp $
 
-DISTNAME=	stlink-1.1.0
+DISTNAME=	stlink-1.2.0
 CATEGORIES=	cross
 MASTER_SITES=	${MASTER_SITE_GITHUB:=texane/}
 GITHUB_PROJECT=	stlink
