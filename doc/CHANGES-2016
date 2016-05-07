@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1900 2016/05/07 05:21:59 wen Exp $
+$NetBSD: CHANGES-2016,v 1.1901 2016/05/07 05:58:59 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2476,3 +2476,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/nasm to 2.12.01 [wen 2016-05-07]
 	Updated security/p5-Crypt-OpenSSL-Bignum to 0.06 [wen 2016-05-07]
 	Updated time/p5-DateTime-Format-Strptime to 1.6700 [wen 2016-05-07]
+	Updated www/ikiwiki to 3.20160506 [schmonz 2016-05-07]
