@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1901 2016/05/07 05:58:59 schmonz Exp $
+$NetBSD: CHANGES-2016,v 1.1902 2016/05/07 07:52:41 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2477,3 +2477,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/p5-Crypt-OpenSSL-Bignum to 0.06 [wen 2016-05-07]
 	Updated time/p5-DateTime-Format-Strptime to 1.6700 [wen 2016-05-07]
 	Updated www/ikiwiki to 3.20160506 [schmonz 2016-05-07]
+	Updated www/py-django to 1.9.6 [adam 2016-05-07]
