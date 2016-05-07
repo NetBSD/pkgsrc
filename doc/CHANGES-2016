@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1904 2016/05/07 08:46:17 prlw1 Exp $
+$NetBSD: CHANGES-2016,v 1.1905 2016/05/07 09:06:02 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2480,3 +2480,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/py-django to 1.9.6 [adam 2016-05-07]
 	Updated textproc/yelp-xsl to 3.20.1 [prlw1 2016-05-07]
 	Updated misc/yelp3 to 3.20.1 [prlw1 2016-05-07]
+	Updated cross/stlink to 1.2.0 [ryoon 2016-05-07]
