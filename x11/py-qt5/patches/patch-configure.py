@@ -1,4 +1,4 @@
-$NetBSD: patch-configure.py,v 1.3 2015/10/26 21:40:40 adam Exp $
+$NetBSD: patch-configure.py,v 1.3.4.1 2016/05/07 19:02:18 bsiegert Exp $
 
 On Darwin, do not expect application bundle.
 Adapt for pkgsrc change to make qmake create libtool files.
@@ -17,7 +17,7 @@ Adapt for pkgsrc change to make qmake create libtool files.
  
      remove_file(platform_exe)
  
-@@ -2441,8 +2438,8 @@ win32 {
+@@ -2441,8 +2438,10 @@ win32 {
      target.files = %s%s.pyd
      LIBS += %s
  } else {
@@ -25,6 +25,8 @@ Adapt for pkgsrc change to make qmake create libtool files.
 -    target.files = %s.so
 +    PY_MODULE = %s.la
 +    target.files = %s.la
++    LIBS += -Wl,-rpath,@X11LIB@
++    LIBS += -Wl,-rpath,@PREFIX@/lib/pulseaudio
  }
  ''' % (target_name, debug_suffix, target_name, debug_suffix, link, target_name, target_name)
  

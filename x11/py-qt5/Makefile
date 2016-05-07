@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2016/03/05 11:29:47 jperkin Exp $
+# $NetBSD: Makefile,v 1.9.2.1 2016/05/07 19:02:17 bsiegert Exp $
 
 DISTNAME=	PyQt-gpl-${PYQT_VERSION}
 PKGNAME=	${PYPKGPREFIX}-qt5-${PYQT_VERSION}
-PKGREVISION=	2
+PKGREVISION=	4
 PYQT_VERSION=	5.5.1
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyqt/}
@@ -28,7 +28,7 @@ INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}
 PY_PATCHPLIST=		yes
 PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
-SUBST_CLASSES+=		install
+SUBST_CLASSES+=		install x11lib
 SUBST_STAGE.install=	post-configure
 SUBST_SED.install+=	-e 's,INSTALL_FILE  = ,INSTALL_FILE  = libtool --mode=install ,'
 SUBST_SED.install+=	-e 's,\(TARGET[A-Z ]*\)= lib,\1= ,'
@@ -56,6 +56,14 @@ SUBST_FILES.install+=	QtWebKitWidgets/Makefile
 SUBST_FILES.install+=	QtWidgets/Makefile
 SUBST_FILES.install+=	QtXmlPatterns/Makefile
 SUBST_FILES.install+=	_QOpenGLFunctions_2_0/Makefile
+
+SUBST_STAGE.x11lib=     post-patch
+SUBST_SED.x11lib+=      -e 's,@X11LIB@,${X11BASE}/lib,'
+SUBST_SED.x11lib+=      -e 's,@PREFIX@,${PREFIX},'
+SUBST_MESSAGE.x11lib=   Fixing rpath for X11 and pulseaudio libraries.
+SUBST_FILES.x11lib+=    configure.py
+SUBST_FILES.x11lib+=    designer/designer.pro-in
+SUBST_FILES.x11lib+=    qmlscene/qmlscene.pro-in
 
 do-configure:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
