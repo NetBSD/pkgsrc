@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1898 2016/05/07 05:04:31 wen Exp $
+$NetBSD: CHANGES-2016,v 1.1899 2016/05/07 05:11:55 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2474,3 +2474,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/samba4 to 4.3.9 [taca 2016-05-07]
 	Updated www/typo3_62 to 6.2.22 [taca 2016-05-07]
 	Updated devel/nasm to 2.12.01 [wen 2016-05-07]
+	Updated security/p5-Crypt-OpenSSL-Bignum to 0.06 [wen 2016-05-07]
