@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2016/05/08 11:36:50 markd Exp $
+lib/cmake/OxygenFont/OxygenFontConfig.cmake
+lib/cmake/OxygenFont/OxygenFontConfigVersion.cmake
+share/fonts/X11/TTF/Oxygen-Sans-Bold.ttf
+share/fonts/X11/TTF/Oxygen-Sans.ttf
+share/fonts/X11/TTF/OxygenMono-Regular.ttf
