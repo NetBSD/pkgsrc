@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1906 2016/05/07 14:17:37 tonio Exp $
+$NetBSD: CHANGES-2016,v 1.1907 2016/05/08 07:27:02 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2482,3 +2482,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated misc/yelp3 to 3.20.1 [prlw1 2016-05-07]
 	Updated cross/stlink to 1.2.0 [ryoon 2016-05-07]
 	Updated chat/weechat to 1.5 [tonio 2016-05-07]
+	Added devel/py-future version 0.15.2 [wen 2016-05-08]
