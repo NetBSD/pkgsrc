@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.64 2016/04/22 08:04:23 jperkin Exp $
+# $NetBSD: Makefile,v 1.65 2016/05/08 10:59:12 markd Exp $
 
 DISTNAME=	kde-runtime-15.12.0
 PKGNAME=	${DISTNAME:S/-1/4-1/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 COMMENT=	Runtime requirements for the KDE integrated X11 desktop
 MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.12.0/src/}
@@ -89,7 +89,7 @@ BUILDLINK_ABI_DEPENDS.attica?=	attica>=0.1.4
 .include "../../multimedia/xine-lib/buildlink3.mk"
 .include "../../net/openslp/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/kactivities/buildlink3.mk"
+.include "../../x11/libkactivities4/buildlink3.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
