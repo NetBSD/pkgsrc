@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1910 2016/05/08 11:47:03 markd Exp $
+$NetBSD: CHANGES-2016,v 1.1911 2016/05/08 14:17:33 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2488,3 +2488,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added x11/libkactivities4 version 4.13.3 [markd 2016-05-08]
 	Added devel/grantlee-qt5 version 5.1.0 [markd 2016-05-08]
 	Added fonts/oxygen-fonts version 5.4.3 [markd 2016-05-08]
+	Added devel/py-cycler version 0.10.0 [wen 2016-05-08]
