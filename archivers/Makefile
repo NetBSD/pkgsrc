@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.142 2015/12/02 15:15:02 wiz Exp $
+# $NetBSD: Makefile,v 1.143 2016/05/08 18:40:04 jakllsch Exp $
 #
 
 COMMENT=	Archivers
@@ -11,6 +11,7 @@ SUBDIR+=	archangel
 SUBDIR+=	arj
 SUBDIR+=	ark
 SUBDIR+=	bicom
+SUBDIR+=	bmap-tools
 SUBDIR+=	bsdtar
 SUBDIR+=	bunzip
 SUBDIR+=	bzip2
