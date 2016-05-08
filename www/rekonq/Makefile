@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2016/03/05 11:29:39 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2016/05/08 10:50:44 markd Exp $
 
 DISTNAME=		rekonq-2.4.2
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		www kde
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=rekonq/2.0/}
 EXTRACT_SUFX=		.tar.xz
@@ -23,6 +23,6 @@ CMAKE_ARGS+=		-DCMAKE_DISABLE_FIND_PACKAGE_NepomukCore=TRUE
 .include "../../security/qca2/buildlink3.mk"
 .include "../../security/qoauth/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/kactivities/buildlink3.mk"
+.include "../../x11/libkactivities4/buildlink3.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
