@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.293 2016/05/02 15:49:39 nonaka Exp $
+# $NetBSD: Makefile,v 1.294 2016/05/08 11:38:40 markd Exp $
 #
 
 COMMENT=	Fonts
@@ -175,6 +175,7 @@ SUBDIR+=	noto-ttf
 SUBDIR+=	ohruri-ttf
 SUBDIR+=	otf2bdf
 SUBDIR+=	oto
+SUBDIR+=	oxygen-fonts
 SUBDIR+=	p5-Font-AFM
 SUBDIR+=	p5-Font-FreeType
 SUBDIR+=	p5-Font-TTF
