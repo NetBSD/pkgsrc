@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15870 2016/05/08 09:18:13 wiz Exp $
+$NetBSD: TODO,v 1.15871 2016/05/08 09:23:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -383,6 +383,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o adocman-0.13
 	o adodb-5.20
 	o aewm++-1.0.27
+	o afl-2.12b
 	o afterstep-2.2.12
 	o aget-0.4.1
 	o alacarte-0.13.2
@@ -475,6 +476,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bottlerocket-0.05b3
 	o bpython-0.15
 	o brasero-3.4.0
+	o bsdtar-3.2.0
 	o bugzilla-5.0.2
 	o bwa-0.7.12 [needs shm_open(3), please contact MAINTAINER]
 	o byacc-20150711
@@ -849,6 +851,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o hamster-applet-2.32.1 [GNOME 2.32]
 	o handbrake-0.10.2
 	o hanzim-3.5
+	o harfbuzz-1.2.7
 	o harminv-1.4
 	o haskell-mode-13.20
 	o hdevtools-0.1.3.0
@@ -937,6 +940,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ircservices-5.1.21
 	o iroffer-1.4b01
 	o isl-0.16.1
+	o iso-codes-3.68
 	o ispell-ga-4.6
 	o ispell-ru-0.99g5
 	o ispell-ru-io-0.99g5
@@ -1006,6 +1010,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o leafpad-0.8.18.1
 	o lftp-4.6.5
 	o lgeneral-1.3.1
+	o libarchive-3.2.0
 	o libassuan-2.4.2
 	o libbpg-0.9.6
 	o libburn-1.4.0
@@ -1283,6 +1288,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Mail-IMAPClient-3.38
 	o p5-Math-BigInt-GMP-1.49
 	o p5-Math-BigInt-Pari-1.25
+	o p5-Math-Pari-2.01080900
 	o p5-Math-Random-0.72
 	o p5-Math-Random-MT-1.17
 	o p5-Math-Random-MT-Perl-1.15
@@ -1506,6 +1512,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-collectd-5.5.1
 	o py-colorama-0.3.6
 	o py-creole-1.1.1
+	o py-cryptography-1.3.2
 	o py-cups-1.9.73
 	o py-d2to1-0.2.12
 	o py-daemon-2.1.1
@@ -1753,6 +1760,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o tacacs-4.0.4.29a
 	o tacacs-shrubbery-5.0.0a1
 	o tads-3.0.16
+	o talloc-2.1.7
 	o taskjuggler-3.3.0
 	o tc-hasida-table-0.8 [wip]
 	o tcpdpriv-0.9
@@ -1866,7 +1874,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o wwwoffle-2.9i
 	o wxGTK-3.1.0
 	o wxRemind-101
-	o x264-devel-20160430
+	o x264-devel-20160507
 	o x2vnc-1.31
 	o xa65-2.3.7
 	o xaric-0.13.7
