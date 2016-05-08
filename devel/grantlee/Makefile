@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2016/03/05 11:27:44 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2016/05/08 11:13:09 markd Exp $
 #
 
 DISTNAME=	grantlee-0.5.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	http://downloads.grantlee.org/
 
@@ -13,6 +13,12 @@ LICENSE=	gnu-lgpl-v3
 
 USE_LANGUAGES=  c c++
 USE_CMAKE=      yes
+
+SUBST_CLASSES+=		fix-inc
+SUBST_STAGE.fix-inc=	post-patch
+SUBST_MESSAGE.fix-inc=	Fixing install dir for includes
+SUBST_FILES.fix-inc+=	CMakeLists.txt
+SUBST_SED.fix-inc+=	-e 's,INCLUDE_INSTALL_DIR include,INCLUDE_INSTALL_DIR include/grantlee-qt4,'
 
 pre-configure:
 	${LN} -sf ${QTDIR}/bin/qmake ${BUILDLINK_DIR}/bin/
