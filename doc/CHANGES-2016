@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1909 2016/05/08 11:24:27 nonaka Exp $
+$NetBSD: CHANGES-2016,v 1.1910 2016/05/08 11:47:03 markd Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2485,3 +2485,6 @@ Changes to the packages collection and infrastructure in 2016:
 	Added devel/py-future version 0.15.2 [wen 2016-05-08]
 	Updated games/lgogdownloader to 2.28 [wiz 2016-05-08]
 	Updated sysutils/smartmontools to 6.5 [nonaka 2016-05-08]
+	Added x11/libkactivities4 version 4.13.3 [markd 2016-05-08]
+	Added devel/grantlee-qt5 version 5.1.0 [markd 2016-05-08]
+	Added fonts/oxygen-fonts version 5.4.3 [markd 2016-05-08]
