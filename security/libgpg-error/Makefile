@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.50 2016/05/05 11:34:49 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2016/05/08 22:37:23 wiz Exp $
 
 DISTNAME=	libgpg-error-1.22
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/libgpg-error/ \
 		ftp://ftp.ring.gr.jp/pub/net/gnupg/libgpg-error/ \
 		ftp://mirror.switch.ch/mirror/gnupg/libgpg-error/ \
-		ftp://ftp.freenet.de/pub/ftp.gnupg.org/gcrypt/libgpg-error/ \
-		ftp://ftp.gnupg.ca/libgpg-error/
+		ftp://ftp.freenet.de/pub/ftp.gnupg.org/gcrypt/libgpg-error/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	minskim@NetBSD.org
