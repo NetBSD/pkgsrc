@@ -1,0 +1,5 @@
+Bmaptool is a generic tool for creating the block map (bmap) for
+a file and copying files using the block map. The idea is that
+large files, like raw system image files, can be copied or flashed
+a lot faster and more reliably with bmaptool than with traditional
+tools, like "dd" or "cp".
