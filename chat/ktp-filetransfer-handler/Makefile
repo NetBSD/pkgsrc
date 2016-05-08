@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/03/05 11:28:08 jperkin Exp $
+# $NetBSD: Makefile,v 1.3.2.1 2016/05/08 14:30:20 bsiegert Exp $
 
 PKGREVISION= 1
 .include "../../meta-pkgs/kde-telepathy/Makefile.common"
@@ -13,7 +13,7 @@ COMMENT=	KDE Telepathy file transfer handling
 LICENSE=	gnu-lgpl-v2.1
 
 USE_LANGUAGES=	c c++
-
+USE_TOOLS+=	msgfmt
 BUILD_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
 
 .include "../../chat/ktp-common-internals/buildlink3.mk"
