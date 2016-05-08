@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2016/04/28 07:09:57 markd Exp $
+# $NetBSD: Makefile,v 1.84 2016/05/08 10:54:39 markd Exp $
 
 DISTNAME=	gwenview-${_KDE_VERSION}
 PKGREVISION=	5
@@ -18,7 +18,7 @@ COMMENT=	KDE image viewer
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/libbaloo4/buildlink3.mk"
 .include "../../sysutils/kfilemetadata/buildlink3.mk"
-.include "../../x11/kactivities/buildlink3.mk"
+.include "../../x11/libkactivities4/buildlink3.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
 .include "../../x11/kde-baseapps4/buildlink3.mk"
 
