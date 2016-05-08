@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q1,v 1.1.2.8 2016/05/08 06:57:16 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q1,v 1.1.2.9 2016/05/08 08:10:58 bsiegert Exp $
 
 Changes to the packages collection and infrastructure on the pkgsrc-2016Q1 branch:
 
@@ -32,3 +32,10 @@ x11/py-qt5: build fix
 
 Pullup ticket #4969 - requested by joerg
 x11/qt4-libs: bugfix
+
+Pullup ticket #4971 - requested by taca
+www/squid3: security fix
+
+Pullup ticket #4972 - requested by taca
+lang/php55: security fix
+
