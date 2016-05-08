@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15869 2016/05/06 11:51:58 jaapb Exp $
+$NetBSD: TODO,v 1.15870 2016/05/08 09:18:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1822,7 +1822,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o verilog-10.1.1
 	o verilog-current-20130827 [wip]
 	o verilog-current-20150513
-	o veusz-1.23.2
+	o veusz-1.24
 	o vfu-4.09
 	o vicq-0.4.2
 	o vile-9.8q
@@ -1832,6 +1832,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o virtinst-0.600.4
 	o virtuoso-7.2.0p1
 	o visual-regexp-3.1
+	o vlc-2.2.2
 	o vm-8.0.7.522 [pkg/37707]
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
 	o vnstat-1.15
