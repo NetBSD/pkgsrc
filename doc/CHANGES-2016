@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1907 2016/05/08 07:27:02 wen Exp $
+$NetBSD: CHANGES-2016,v 1.1908 2016/05/08 09:13:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2483,3 +2483,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated cross/stlink to 1.2.0 [ryoon 2016-05-07]
 	Updated chat/weechat to 1.5 [tonio 2016-05-07]
 	Added devel/py-future version 0.15.2 [wen 2016-05-08]
+	Updated games/lgogdownloader to 2.28 [wiz 2016-05-08]
