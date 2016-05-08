@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2016/03/10 16:04:13 jperkin Exp $
+# $NetBSD: Makefile,v 1.18 2016/05/08 17:23:28 christos Exp $
 
 # Note: This must be kept in sync with the sun-jre7 package
 # Note: make sure you include sums for both the x86_64 and the x86_32
@@ -6,7 +6,7 @@
 
 DISTNAME=	jdk-7u${UPDATE_NUMBER}-${DIST_OS}-${DIST_ARCH}
 PKGNAME=	sun-jdk7-7.0.${UPDATE_NUMBER}
-PKGREVISION=	1
+#PKGREVISION=	1
 MASTER_SITES=	# empty
 
 LICENSE=	oracle-binary-code-license
