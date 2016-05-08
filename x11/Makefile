@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.781 2016/02/02 16:32:42 leot Exp $
+# $NetBSD: Makefile,v 1.782 2016/05/08 10:45:24 markd Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -313,6 +313,7 @@ SUBDIR+=	libdesktop-agnostic
 SUBDIR+=	libdrm
 SUBDIR+=	libfakekey
 SUBDIR+=	libgnomekbd
+SUBDIR+=	libkactivities4
 SUBDIR+=	liblbxutil
 SUBDIR+=	liboldXrandr
 SUBDIR+=	libunique
