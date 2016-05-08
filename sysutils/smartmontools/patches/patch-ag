@@ -1,13 +1,13 @@
-$NetBSD: patch-ag,v 1.5 2015/06/12 13:58:07 jperkin Exp $
+$NetBSD: patch-ag,v 1.6 2016/05/08 11:23:15 nonaka Exp $
 
 Match x86 SunOS platforms correctly.
 Remove os_solaris=yes to avoid special man page section handling (PR 38199).
 
---- configure.orig	2014-07-26 09:50:18.000000000 +0000
-+++ configure
-@@ -6569,13 +6569,11 @@ fi
-   sparc-*-solaris*)
-     os_deps='os_solaris.o os_solaris_ata.o'
+--- configure.orig	2016-05-07 11:18:29.000000000 +0000
++++ configure	2016-05-08 06:41:03.000000000 +0000
+@@ -6659,13 +6659,11 @@ fi
+     test "$with_solaris_sparc_ata" = "yes" \
+       && os_deps="$os_deps os_solaris_ata.o"
      os_mailer='mailx'
 -    os_solaris=yes
      os_man_filter=Solaris
