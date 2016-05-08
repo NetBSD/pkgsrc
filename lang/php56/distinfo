@@ -1,15 +1,14 @@
-$NetBSD: distinfo,v 1.25 2016/04/02 09:00:25 taca Exp $
+$NetBSD: distinfo,v 1.25.2.1 2016/05/08 14:08:45 bsiegert Exp $
 
-SHA1 (php-5.6.20.tar.bz2) = 41fcaf7a61936baf3ea9543697291865f9870a59
-RMD160 (php-5.6.20.tar.bz2) = 6cde7ace4a02711b46a2853cb43dc10edf72e167
-SHA512 (php-5.6.20.tar.bz2) = 9e26f2564ee7329ab50d4d8d27f029c4f88317ea761888138e60d13a3cf51e49676ded406a3ec18433be2ec5d2a49c904eaa9f32d473b99d11550025e026a61c
-Size (php-5.6.20.tar.bz2) = 14162188 bytes
+SHA1 (php-5.6.21.tar.bz2) = 057a3bffc052b907c5bb5a879b8606b5671eb69f
+RMD160 (php-5.6.21.tar.bz2) = a5bd55526af390bbdc514a736587a2c778a221e2
+SHA512 (php-5.6.21.tar.bz2) = 028d62434e7932b4a07fa7d404b8ad938f0ca7968ae2b23386038f77482984d2b6145523e11f37b9e72621c8bf40f08e38a6db1d209493770ac99e13e2fac0d0
+Size (php-5.6.21.tar.bz2) = 14165919 bytes
 SHA1 (patch-acinclude.m4) = b38fc34c3a3847dc317e8e286612b21ec8fd5ce8
-SHA1 (patch-configure) = a72aa43759c6f3d3ad350659397570582c3ca3ff
+SHA1 (patch-configure) = 5d76f71aa903efa3c3491b908ff76419aa4af27c
 SHA1 (patch-ext_gd_config.m4) = 4b44853250eb4a638af4c663e618307ff25d2cbd
 SHA1 (patch-ext_imap_config.m4) = 9c6ed6966366c4fe1b7cfd34b5910e2ff0e68577
 SHA1 (patch-ext_mssql_php__mssql.c) = c4fa9231dc539ffb027f1beb6f182f21ddb94a3c
-SHA1 (patch-ext_opcache_config.m4) = 031db201f68a120615561a5abd3e84aff58b523d
 SHA1 (patch-ext_pcre_pcrelib_config.h) = 26588e9932ee715e32c872a1c7e2f9c640bd9cf8
 SHA1 (patch-ext_pdo__mysql_config.m4) = 9d25c673fc151e1b8ae137f2a0fc540189ef5398
 SHA1 (patch-ext_pdo_config.m4) = f6deef3ac631769baa587dd7c27e55bd2e9ca6a5
@@ -17,7 +16,7 @@ SHA1 (patch-ext_phar_Makefile.frag) = 1564c188e57d48f83de7c2420fdde183598539e2
 SHA1 (patch-ext_phar_phar_phar.php) = 5a82d55c7965027115065412f9b68defb278db64
 SHA1 (patch-ext_sqlite3_libsqlite_sqlite3.c) = 85cd8f3e115705aa2eeab0e7229f24422e322a7f
 SHA1 (patch-ext_standard_basic__functions.c) = 669fe55c975bf2d971f6fdcb5b3004f7e20304d2
-SHA1 (patch-ext_standard_php__dns.h) = 4a1c0d9abff6ee1d278f9c680414530530efc6f7
+SHA1 (patch-ext_standard_php__dns.h) = 57c5d6d8ae60da58925abc2c51d66b56762fecda
 SHA1 (patch-makedist) = 8e8660b2e0a34f06f433e24dbb0a9c872963e419
 SHA1 (patch-php.ini-development) = 3c54a41310d28ecff4996c966934350368657c2f
 SHA1 (patch-php.ini-production) = 9b7ae64f3133139f0c3d42753ad5d8622873423d
