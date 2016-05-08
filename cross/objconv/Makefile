@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/10/11 01:10:22 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2016/05/08 07:28:14 ryoon Exp $
 
 DISTNAME=	objconv
 PKGNAME=	${DISTNAME}-2.39
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.zip
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://www.agner.org/optimize/
-COMMENT=	TODO: Short description of the package
+COMMENT=	Object file converter and disassembler
 LICENSE=	gnu-gpl-v3
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
