@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.59 2016/04/11 19:01:48 ryoon Exp $
+# $NetBSD: Makefile,v 1.60 2016/05/08 11:08:51 markd Exp $
 #
 
 DISTNAME=	kdevelop-4.7.0
 PKGNAME=	kdevelop4-4.7.0
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_KDE:=kdevelop/4.7.0/src/}
 EXTRACT_SUFX=	.tar.xz
@@ -21,6 +21,8 @@ USE_LANGUAGES=	c c++
 # because of some expansion to ${PKGDIRNAME}.kdev4 which is done wrong by bmake
 USE_TOOLS+=     gmake
 
+CMAKE_ARGS+=	-DWITH_KDE4Workspace:BOOL=OFF
+
 #   -std=c++11 is set
 GCC_REQD+=	4.7
 
@@ -28,7 +30,7 @@ BUILDLINK_DEPMETHOD.qt4-tools=	full
 .include "../../meta-pkgs/kde4/kde4.mk"
 
 .include "../../x11/kdelibs4/buildlink3.mk"
-.include "../../x11/kde-workspace4/buildlink3.mk"
+.include "../../x11/kde-runtime4/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../devel/okteta/buildlink3.mk"
 .include "../../devel/qjson/buildlink3.mk"
