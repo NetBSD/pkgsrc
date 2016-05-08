@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2016/05/08 18:39:35 jakllsch Exp $
+bin/bmaptool
+${PYSITELIB}/${EGG_FILE}/PKG-INFO
+${PYSITELIB}/${EGG_FILE}/SOURCES.txt
+${PYSITELIB}/${EGG_FILE}/dependency_links.txt
+${PYSITELIB}/${EGG_FILE}/top_level.txt
+${PYSITELIB}/bmaptools/BmapCopy.py
+${PYSITELIB}/bmaptools/BmapCopy.pyc
+${PYSITELIB}/bmaptools/BmapCopy.pyo
+${PYSITELIB}/bmaptools/BmapCreate.py
+${PYSITELIB}/bmaptools/BmapCreate.pyc
+${PYSITELIB}/bmaptools/BmapCreate.pyo
+${PYSITELIB}/bmaptools/BmapHelpers.py
+${PYSITELIB}/bmaptools/BmapHelpers.pyc
+${PYSITELIB}/bmaptools/BmapHelpers.pyo
+${PYSITELIB}/bmaptools/Filemap.py
+${PYSITELIB}/bmaptools/Filemap.pyc
+${PYSITELIB}/bmaptools/Filemap.pyo
+${PYSITELIB}/bmaptools/TransRead.py
+${PYSITELIB}/bmaptools/TransRead.pyc
+${PYSITELIB}/bmaptools/TransRead.pyo
+${PYSITELIB}/bmaptools/__init__.py
+${PYSITELIB}/bmaptools/__init__.pyc
+${PYSITELIB}/bmaptools/__init__.pyo

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/05/08 18:39:35 jakllsch Exp $
+
+SHA1 (bmap-tools-3.2.tgz) = b2eb397e90f5641701e94e725350a8166740f1ac
+RMD160 (bmap-tools-3.2.tgz) = 3d05b5459f4a763a66a572dc45951d894ef315ad
+SHA512 (bmap-tools-3.2.tgz) = 005adb981daf58ba5c3c26c0e4d27881875661b258667b28aabc209a87d78b7c595c596d9abe47f1c79ef4ba4c891d6b8b01e45256aef8105899f84fd03c1196
+Size (bmap-tools-3.2.tgz) = 87236 bytes
