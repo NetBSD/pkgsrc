@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q1,v 1.1.2.7 2016/04/27 20:13:46 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q1,v 1.1.2.8 2016/05/08 06:57:16 bsiegert Exp $
 
 Changes to the packages collection and infrastructure on the pkgsrc-2016Q1 branch:
 
@@ -22,3 +22,13 @@ x11/pixman: build fix
 Pullup ticket #4964 - requested by sevan
 databases/postgresql95: security fix
 
+Pullup ticket #4966 - requested by joerg
+chat/atheme: build fix
+devel/libmcs: build fix
+devel/libmowgli: build fix
+
+Pullup ticket #4968 - requested by joerg
+x11/py-qt5: build fix
+
+Pullup ticket #4969 - requested by joerg
+x11/qt4-libs: bugfix
