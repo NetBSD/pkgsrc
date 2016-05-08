@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2016/03/05 11:29:35 jperkin Exp $
+# $NetBSD: Makefile,v 1.15.2.1 2016/05/08 16:54:10 bsiegert Exp $
 #
 
 DISTNAME=	aws-${AWS_VERSION}
@@ -72,16 +72,17 @@ DEMO_DIRS+=	zdemo
 #DEMO_DIRS+=	hello_wsdl
 
 PLIST_VARS+=	ldap ssl
-BUILT_AWS !=	pkg_info -Q PKG_OPTIONS aws 2>/dev/null || echo
 
-.if !empty(BUILT_AWS:Mldap)
+.include "../../www/aws/buildlink3.mk"
+
+.if !empty(PKG_BUILD_OPTIONS.awk:Mldap)
 .include "../../databases/openldap-client/buildlink3.mk"
 CONFIGURE_ARGS+=	LDAP=true
 DEMO_DIRS+=		test_ldap
 PLIST.ldap=		yes
 .endif
 
-.if !empty(BUILT_AWS:Mssl)
+.if !empty(PKG_BUILD_OPTIONS.awk:Mssl)
 .include "../../security/openssl/buildlink3.mk"
 CONFIGURE_ARGS+=	SOCKET=openssl
 DEMO_DIRS+=		agent
@@ -89,7 +90,7 @@ DEMO_DIRS+=		runme
 PLIST.ssl=		yes
 .endif
 
-.if !empty(BUILT_AWS:Mgnutls)
+.if !empty(PKG_BUILD_OPTIONS.awk:Mgnutls)
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
@@ -115,7 +116,6 @@ do-install:
 	-exec ${INSTALL} {} ${DESTDIR}${PREFIX}/share/examples/aws/demos/ \;
 .endfor
 
-.include "../../www/aws/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/gprbuild-aux/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
