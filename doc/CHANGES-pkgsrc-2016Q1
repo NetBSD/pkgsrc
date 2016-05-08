@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q1,v 1.1.2.9 2016/05/08 08:10:58 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q1,v 1.1.2.10 2016/05/08 17:00:57 bsiegert Exp $
 
 Changes to the packages collection and infrastructure on the pkgsrc-2016Q1 branch:
 
@@ -38,4 +38,22 @@ www/squid3: security fix
 
 Pullup ticket #4972 - requested by taca
 lang/php55: security fix
+
+Pullup ticket #4973 - requested by taca
+lang/php56: security fix
+
+Pullup ticket #4974 - requested by taca
+lang/php70: security fix
+
+Pullup ticket #4976 - requested by joerg
+chat/ktp-contact-runner: build fix
+chat/ktp-filetransfer-handler: build fix
+chat/ktp-kded-integration-module: build fix
+chat/ktp-send-file: build fix
+
+Pullup ticket #4977 - requested by joerg
+www/aws-demos: build fix
+
+Pullup ticket #4978 - requested by joerg
+time/fet: build fix
 
