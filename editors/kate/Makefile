@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2016/03/05 11:28:27 jperkin Exp $
+# $NetBSD: Makefile,v 1.34 2016/05/08 10:55:45 markd Exp $
 
 DISTNAME=	kate-${_KDE_VERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	editors
 COMMENT=	KDE advanced text editor
 
@@ -18,7 +18,7 @@ CHECK_PORTABILITY_SKIP+= examples/syntax/highlight.sh
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/kactivities/buildlink3.mk"
+.include "../../x11/libkactivities4/buildlink3.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
 .include "../../x11/py-kde4/buildlink3.mk"
 .include "../../x11/py-sip/buildlink3.mk"
