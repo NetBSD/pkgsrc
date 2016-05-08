@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1915 2016/05/08 18:41:04 jakllsch Exp $
+$NetBSD: CHANGES-2016,v 1.1916 2016/05/08 20:54:57 christos Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2491,6 +2491,8 @@ Changes to the packages collection and infrastructure in 2016:
 	Added devel/py-cycler version 0.10.0 [wen 2016-05-08]
 	Updated converters/p5-Sereal-Encoder to 3.014 [wen 2016-05-08]
 	Updated converters/p5-Sereal-Decoder to 3.014 [wen 2016-05-08]
-	Updated lang/sun-jre7 to 7.0.80 [ryoon 2016-05-08]
-	Updated lang/sun-jdk7 to 7.0.80 [ryoon 2016-05-08]
+	Updated lang/sun-jre7 to 7.0.80 [christos 2016-05-08]
+	Updated lang/sun-jdk7 to 7.0.80 [christos 2016-05-08]
+	Updated lang/oracle-jre8 to 8.0.92 [christos 2016-05-08]
+	Updated lang/oracle-jdk8 to 8.0.92 [christos 2016-05-08]
 	Added archivers/bmap-tools version 3.2 [jakllsch 2016-05-08]
