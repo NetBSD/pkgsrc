@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1920 2016/05/09 11:08:42 adam Exp $
+$NetBSD: CHANGES-2016,v 1.1921 2016/05/09 12:39:21 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2501,3 +2501,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/git to 2.8.2 [adam 2016-05-09]
 	Updated net/dhcpcd to 6.11.0 [roy 2016-05-09]
 	Updated net/scapy to 2.3.2 [adam 2016-05-09]
+	Updated misc/tmux to 2.2 [fhajny 2016-05-09]
