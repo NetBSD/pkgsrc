@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1921 2016/05/09 12:39:21 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.1922 2016/05/09 17:56:45 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2502,3 +2502,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/dhcpcd to 6.11.0 [roy 2016-05-09]
 	Updated net/scapy to 2.3.2 [adam 2016-05-09]
 	Updated misc/tmux to 2.2 [fhajny 2016-05-09]
+	Updated www/awstats to 7.5 [adam 2016-05-09]
