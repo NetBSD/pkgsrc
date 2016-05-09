@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2014/07/19 12:30:49 adam Exp $
+@comment $NetBSD: PLIST,v 1.14 2016/05/09 08:58:43 adam Exp $
 bin/scons
 bin/${PKGNAME}
 bin/scons-time
@@ -132,6 +132,9 @@ lib/${PKGNAME}/SCons/Scanner/Prog.pyo
 lib/${PKGNAME}/SCons/Scanner/RC.py
 lib/${PKGNAME}/SCons/Scanner/RC.pyc
 lib/${PKGNAME}/SCons/Scanner/RC.pyo
+lib/${PKGNAME}/SCons/Scanner/SWIG.py
+lib/${PKGNAME}/SCons/Scanner/SWIG.pyc
+lib/${PKGNAME}/SCons/Scanner/SWIG.pyo
 lib/${PKGNAME}/SCons/Scanner/__init__.py
 lib/${PKGNAME}/SCons/Scanner/__init__.pyc
 lib/${PKGNAME}/SCons/Scanner/__init__.pyo
@@ -567,27 +570,9 @@ lib/${PKGNAME}/SCons/__init__.pyo
 lib/${PKGNAME}/SCons/compat/__init__.py
 lib/${PKGNAME}/SCons/compat/__init__.pyc
 lib/${PKGNAME}/SCons/compat/__init__.pyo
-lib/${PKGNAME}/SCons/compat/_scons_builtins.py
-lib/${PKGNAME}/SCons/compat/_scons_builtins.pyc
-lib/${PKGNAME}/SCons/compat/_scons_builtins.pyo
-lib/${PKGNAME}/SCons/compat/_scons_collections.py
-lib/${PKGNAME}/SCons/compat/_scons_collections.pyc
-lib/${PKGNAME}/SCons/compat/_scons_collections.pyo
 lib/${PKGNAME}/SCons/compat/_scons_dbm.py
 lib/${PKGNAME}/SCons/compat/_scons_dbm.pyc
 lib/${PKGNAME}/SCons/compat/_scons_dbm.pyo
-lib/${PKGNAME}/SCons/compat/_scons_hashlib.py
-lib/${PKGNAME}/SCons/compat/_scons_hashlib.pyc
-lib/${PKGNAME}/SCons/compat/_scons_hashlib.pyo
-lib/${PKGNAME}/SCons/compat/_scons_io.py
-lib/${PKGNAME}/SCons/compat/_scons_io.pyc
-lib/${PKGNAME}/SCons/compat/_scons_io.pyo
-lib/${PKGNAME}/SCons/compat/_scons_sets.py
-lib/${PKGNAME}/SCons/compat/_scons_sets.pyc
-lib/${PKGNAME}/SCons/compat/_scons_sets.pyo
-lib/${PKGNAME}/SCons/compat/_scons_subprocess.py
-lib/${PKGNAME}/SCons/compat/_scons_subprocess.pyc
-lib/${PKGNAME}/SCons/compat/_scons_subprocess.pyo
 lib/${PKGNAME}/SCons/cpp.py
 lib/${PKGNAME}/SCons/cpp.pyc
 lib/${PKGNAME}/SCons/cpp.pyo
