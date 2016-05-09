@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2015/10/17 10:46:45 adam Exp $
+@comment $NetBSD: PLIST,v 1.23 2016/05/09 17:55:35 adam Exp $
 awstats/bin/awstats_buildstaticpages.pl
 awstats/bin/awstats_configure.pl
 awstats/bin/awstats_exportlib.pl
@@ -166,6 +166,7 @@ awstats/icon/browser/dillo.png
 awstats/icon/browser/doris.png
 awstats/icon/browser/dreamcast.png
 awstats/icon/browser/ecatch.png
+awstats/icon/browser/edge.png
 awstats/icon/browser/encompass.png
 awstats/icon/browser/epiphany.png
 awstats/icon/browser/ericsson.png
@@ -564,6 +565,7 @@ awstats/icon/mime/mdb.png
 awstats/icon/mime/notavailable.png
 awstats/icon/mime/ooffice.png
 awstats/icon/mime/other.png
+awstats/icon/mime/package.png
 awstats/icon/mime/page.png
 awstats/icon/mime/pdf.png
 awstats/icon/mime/php.png
