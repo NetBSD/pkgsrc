@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1917 2016/05/08 23:30:01 taca Exp $
+$NetBSD: CHANGES-2016,v 1.1918 2016/05/09 09:10:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2497,3 +2497,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/oracle-jdk8 to 8.0.92 [christos 2016-05-08]
 	Added archivers/bmap-tools version 3.2 [jakllsch 2016-05-08]
 	Updated www/squid3 to 3.5.19 [taca 2016-05-08]
+	Updated devel/scons to 2.5.0 [adam 2016-05-09]
+	Updated devel/git to 2.8.2 [adam 2016-05-09]
