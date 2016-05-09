@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.76 2016/04/10 17:00:33 joerg Exp $
+# $NetBSD: Makefile,v 1.77 2016/05/09 00:08:21 joerg Exp $
 
-PKGNAME=	pbulk-0.60
+PKGNAME=	pbulk-0.61
 COMMENT=	Modular bulk build framework
 
 .include "../../pkgtools/pbulk/Makefile.common"
