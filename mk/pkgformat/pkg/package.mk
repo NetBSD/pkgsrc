@@ -1,4 +1,4 @@
-# $NetBSD: package.mk,v 1.14 2016/04/10 15:58:03 joerg Exp $
+# $NetBSD: package.mk,v 1.15 2016/05/09 00:07:23 joerg Exp $
 
 .if defined(PKG_SUFX)
 WARNINGS+=		"PKG_SUFX is deprecated, please use PKG_COMPRESSION"
@@ -23,7 +23,7 @@ PKGREPOSITORYSUBDIR?=	All
 ### package-create creates the binary package.
 ###
 .PHONY: package-create
-package-create: ${PKGFILE} package-links
+package-create: ${PKGFILE}
 
 ######################################################################
 ### stage-package-create (PRIVATE, pkgsrc/mk/package/package.mk)
@@ -89,31 +89,6 @@ stage-package-remove:
 	${RUN} ${RM} -f ${STAGE_PKGFILE}
 
 ######################################################################
-### package-links (PRIVATE)
-######################################################################
-### package-links creates symlinks to the binary package from the
-### non-primary categories to which the package belongs.
-###
-package-links: delete-package-links
-.for _dir_ in ${CATEGORIES:S/^/${PACKAGES}\//}
-	${RUN} ${MKDIR} ${_dir_:Q}
-	${RUN} [ -d ${_dir_:Q} ]					\
-	|| ${FAIL_MSG} "Can't create directory "${_dir_:Q}"."
-	${RUN} ${RM} -f ${_dir_:Q}/${PKGFILE:T}
-	${RUN} ${LN} -s ../${PKGREPOSITORYSUBDIR}/${PKGFILE:T} ${_dir_:Q}
-.endfor
-
-######################################################################
-### delete-package-links (PRIVATE)
-######################################################################
-### delete-package-links removes the symlinks to the binary package from
-### the non-primary categories to which the package belongs.
-###
-delete-package-links:
-	${RUN} ${FIND} ${PACKAGES}/*/${PKGFILE:T} -type l -print	\
-		2>/dev/null | ${XARGS} ${RM} -f
-
-######################################################################
 ### tarup (PUBLIC)
 ######################################################################
 ### tarup is a public target to generate a binary package from an
@@ -122,7 +97,7 @@ delete-package-links:
 _PKG_TARUP_CMD= ${LOCALBASE}/bin/pkg_tarup
 
 .PHONY: tarup
-tarup: package-remove tarup-pkg package-links
+tarup: package-remove tarup-pkg
 
 ######################################################################
 ### tarup-pkg (PRIVATE)
