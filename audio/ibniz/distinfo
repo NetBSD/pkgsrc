@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 01:12:34 agc Exp $
+$NetBSD: distinfo,v 1.2.4.1 2016/05/10 15:56:16 bsiegert Exp $
 
 SHA1 (ibniz-1.18.tar.gz) = 22d2ca6d46cd5b9769f210502913b87f8d5aef9f
 RMD160 (ibniz-1.18.tar.gz) = b7c28b1bca61f5354d2246a2e15f6e4b1c5c7d07
 SHA512 (ibniz-1.18.tar.gz) = 63448e3eb639a831b847cc3a737040a661ff4107e53ff70b9c33ba951c584ca903729547efd27afff9ac0b9e25a315a1d36670a4f4722c3d2287f375cb1bd760
 Size (ibniz-1.18.tar.gz) = 41049 bytes
+SHA1 (patch-Makefile) = 2028fa6dad92829b34caeaf1aab018b230dbbd6c
