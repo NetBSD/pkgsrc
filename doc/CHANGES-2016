@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1923 2016/05/10 06:12:36 schmonz Exp $
+$NetBSD: CHANGES-2016,v 1.1924 2016/05/10 11:06:59 abs Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2504,3 +2504,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated misc/tmux to 2.2 [fhajny 2016-05-09]
 	Updated www/awstats to 7.5 [adam 2016-05-09]
 	Updated www/ikiwiki to 3.20160509 [schmonz 2016-05-10]
+	Updated net/syncthing to 0.12.23 [abs 2016-05-10]
