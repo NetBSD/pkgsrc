@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.223 2016/04/29 12:16:46 wiz Exp $
+# $NetBSD: Makefile,v 1.224 2016/05/10 16:40:45 adam Exp $
 
 .include "Makefile.common"
 
@@ -70,6 +70,12 @@ SUBST_STAGE.fix-etc=	pre-configure
 SUBST_MESSAGE.fix-etc=	Handle configuration files.
 SUBST_FILES.fix-etc=	Makefile.in
 SUBST_SED.fix-etc=	-e 's,^configlibdir =.*,configlibdir = $$(DATA_DIR)/examples/ImageMagick,'
+
+SUBST_CLASSES+=		fix-tools
+SUBST_STAGE.fix-tools=	pre-install
+SUBST_MESSAGE.fix-tools=Unwrapping tools path in delegate paths.
+SUBST_FILES.fix-tools=	config/delegates.xml
+SUBST_SED.fix-tools=	-e 's,${TOOLS_DIR},,g'
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
