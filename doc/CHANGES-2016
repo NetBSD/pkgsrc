@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1922 2016/05/09 17:56:45 adam Exp $
+$NetBSD: CHANGES-2016,v 1.1923 2016/05/10 06:12:36 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2503,3 +2503,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/scapy to 2.3.2 [adam 2016-05-09]
 	Updated misc/tmux to 2.2 [fhajny 2016-05-09]
 	Updated www/awstats to 7.5 [adam 2016-05-09]
+	Updated www/ikiwiki to 3.20160509 [schmonz 2016-05-10]
