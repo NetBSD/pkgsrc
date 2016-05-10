@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2016/04/14 12:03:47 jperkin Exp $
+# $NetBSD: Makefile,v 1.53 2016/05/10 12:16:06 jperkin Exp $
 
 DISTNAME=		lyx-2.1.2.2
 PKGREVISION=		4
@@ -62,7 +62,7 @@ UNLIMIT_RESOURCES+=	datasize
 
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
-USE_TOOLS+=		gmake perl:run pkg-config
+USE_TOOLS+=		gmake perl:run pkg-config xgettext
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 1.6.10
