@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1928 2016/05/11 16:10:44 leot Exp $
+$NetBSD: CHANGES-2016,v 1.1929 2016/05/11 21:43:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2311,7 +2311,7 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-IO-Interactive to 1.021 [mef 2016-04-29]
 	Updated devel/p5-IO-TieCombine to 1.005 [mef 2016-04-29]
 	Updated multimedia/gstreamer1 to 1.8.1 [wiz 2016-04-29]
-	Updated multimedia/gst-plugins1-base to 1.8.1 [wiz 2016-14-29]
+	Updated multimedia/gst-plugins1-base to 1.8.1 [wiz 2016-04-29]
 	Updated multimedia/gst-plugins1-bad to 1.8.1 [wiz 2016-04-29]
 	Updated multimedia/gst-plugins1-ugly to 1.8.1 [wiz 2016-04-29]
 	Updated multimedia/gst-plugins1-good to 1.8.1 [wiz 2016-04-29]
