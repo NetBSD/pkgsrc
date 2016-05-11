@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1927 2016/05/11 14:10:55 szptvlfn Exp $
+$NetBSD: CHANGES-2016,v 1.1928 2016/05/11 16:10:44 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2412,7 +2412,7 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Moose to 2.1801 [wen 2016-05-05]
 	Added lang/libduktape version 1.5.0 [agc 2016-05-05]
 	Added lang/duktape version 1.5.0 [agc 2016-05-05]
-	Updated multimedia/ffmpeg2 to 2.8.7nb1 [leot 2016-05-25]
+	Updated multimedia/ffmpeg2 to 2.8.7nb1 [leot 2016-05-05]
 	Updated multimedia/ffmpeg3 to 3.0.2nb1 [leot 2016-05-05]
 	Updated lang/ocaml to 4.03.0 [jaapb 2016-05-05]
 	Updated archivers/unrar to 5.3.11 [adam 2016-05-05]
