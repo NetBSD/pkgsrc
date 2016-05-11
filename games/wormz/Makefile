@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2014/09/25 12:25:07 jperkin Exp $
+# $NetBSD: Makefile,v 1.25.14.1 2016/05/11 15:35:39 bsiegert Exp $
 #
 
 DISTNAME=		Wormz-1.0b5
@@ -11,6 +11,9 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://lide.punknet.cz/miri/Wormz.html
 COMMENT=		Networked game for X11
 LICENSE=		gnu-gpl-v2
+
+# NetBSD/UDPConnection.o: file not recognized: File truncated
+MAKE_JOBS_SAFE=		no
 
 WRKSRC=			${WRKDIR}/Wormz
 USE_LANGUAGES=		c c++
