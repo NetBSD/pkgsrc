@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1925 2016/05/10 16:41:59 adam Exp $
+$NetBSD: CHANGES-2016,v 1.1926 2016/05/11 11:27:30 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2378,7 +2378,6 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/php56 to 5.6.21 [taca 2016-05-02]
 	Updated lang/php70 to 7.0.6 [taca 2016-05-02]
 	Updated net/bind99 to 9.9.9 [taca 2016-05-02]
-	Updated net/bind910 to 9.10.4 [taca 2016-05-02]
 	Added fonts/ohruri-ttf version 20150606 [nonaka 2016-05-02]
 	Updated mail/dovecot2 to 2.2.24 [taca 2016-05-03]
 	Updated mail/dovecot2-pigeonhole to 0.4.14 [taca 2016-05-03]
