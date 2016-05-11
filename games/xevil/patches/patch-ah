@@ -1,10 +1,12 @@
-$NetBSD: patch-ah,v 1.2 2008/08/17 23:50:06 dholland Exp $
+$NetBSD: patch-ah,v 1.2.64.1 2016/05/11 15:56:46 bsiegert Exp $
 
---- cmn/actual.cpp.orig	2000-01-19 12:54:36.000000000 -0500
-+++ cmn/actual.cpp	2008-08-17 19:09:43.000000000 -0400
-@@ -32,7 +32,8 @@
+--- cmn/actual.cpp.orig	2000-01-19 12:54:36.000000000 +0000
++++ cmn/actual.cpp
+@@ -31,8 +31,10 @@
+ #endif
  
  // Include Files
++#include <inttypes.h>
  #if X11
 -#include <strstream.h>
 +#include <strstream>
@@ -12,7 +14,7 @@ $NetBSD: patch-ah,v 1.2 2008/08/17 23:50:06 dholland Exp $
  #endif
  #if WIN32
  #include <strstrea.h>
-@@ -1534,7 +1535,7 @@ Boolean Transmogifier::transmogify_targe
+@@ -1534,7 +1536,7 @@ Boolean Transmogifier::transmogify_targe
                                                   void *closure) {
    // notThis is used to prevent transmogifying into the same class an object
    // already is.
