@@ -1,0 +1,12 @@
+$NetBSD: patch-config_system-headers,v 1.1.2.2 2016/05/11 14:55:16 bsiegert Exp $
+
+--- config/system-headers.orig	2016-05-06 20:05:18.000000000 +0000
++++ config/system-headers
+@@ -276,6 +276,7 @@ fribidi/fribidi.h
+ FSp_fopen.h
+ fstream.h
+ ft2build.h
++tttables.h
+ fts.h
+ gconf/gconf-client.h
+ Gdiplus.h
