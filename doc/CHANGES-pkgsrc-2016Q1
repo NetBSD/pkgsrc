@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q1,v 1.1.2.10 2016/05/08 17:00:57 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q1,v 1.1.2.11 2016/05/11 15:08:06 bsiegert Exp $
 
 Changes to the packages collection and infrastructure on the pkgsrc-2016Q1 branch:
 
@@ -56,4 +56,16 @@ www/aws-demos: build fix
 
 Pullup ticket #4978 - requested by joerg
 time/fet: build fix
+
+Pullup ticket #4979 - requested by joerg
+audio/ibniz: build fix
+
+Pullup ticket #4980 - requested by joerg
+devel/elftoolchain: build fix
+
+Pullup ticket #4981 - requested by joerg
+devel/xulrunner192: build fix
+
+Pullup ticket #5013 - requested by taca
+security/openssl: security fix
 
