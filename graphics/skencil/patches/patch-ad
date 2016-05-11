@@ -1,7 +1,16 @@
-$NetBSD: patch-ad,v 1.1 2009/02/11 17:11:58 joerg Exp $
+$NetBSD: patch-ad,v 1.1.58.1 2016/05/11 16:19:33 bsiegert Exp $
 
---- Sketch/Modules/Makefile.pre.in.orig	2002-08-06 22:21:24.000000000 +0200
+--- Sketch/Modules/Makefile.pre.in.orig	2002-08-06 20:21:24.000000000 +0000
 +++ Sketch/Modules/Makefile.pre.in
+@@ -116,7 +116,7 @@ CC=		@CC@
+ LINKCC=		@LINKCC@
+ SGI_ABI=	@SGI_ABI@
+ OPT=		@OPT@
+-LDFLAGS=	@LDFLAGS@
++LDFLAGS=	@LDFLAGS@ ${COMPILER_RPATH_FLAG}${X11BASE}/lib
+ LIBS=		@LIBS@
+ LIBM=		@LIBM@
+ LIBC=		@LIBC@
 @@ -124,6 +124,7 @@ RANLIB=		@RANLIB@
  MACHDEP=	@MACHDEP@
  SO=		@SO@
