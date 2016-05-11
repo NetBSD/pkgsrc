@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2015/11/03 20:57:08 agc Exp $
+$NetBSD: distinfo,v 1.10.4.1 2016/05/11 15:56:46 bsiegert Exp $
 
 SHA1 (xevilsrc2.02r2.zip) = e9a262daffc7ee5c06196dc94cf35c199be86bbc
 RMD160 (xevilsrc2.02r2.zip) = dca82298ac2dfe66e4e92a02731bb6851563b67e
@@ -10,14 +10,14 @@ SHA1 (patch-ad) = df17b2c15b3eedaebd62e1de9e08fd01f98c37f0
 SHA1 (patch-ae) = bd4c1811aabf3791563a80c392afe96e0c4ed749
 SHA1 (patch-af) = 4d1e6e7cfa7c1b4423ac9edc8f3ece68dbab9b79
 SHA1 (patch-ag) = c826c7ee631b3661ca78fe243b6aeb1ff37d73e2
-SHA1 (patch-ah) = b78acf6e01bd555024eb1a6a5d80ab8c393de4c5
-SHA1 (patch-ai) = 8579f4f6594ff2d01c35c2becc7cf395a5195550
+SHA1 (patch-ah) = 15c730952ed18425dce6a398eb71bdc17bd822be
+SHA1 (patch-ai) = 22dd40db2b111860090a83314dace236110645e2
 SHA1 (patch-aj) = 78214c3bf9d643f9f8ade8c24944eea6b976ea6c
 SHA1 (patch-ak) = a83854de16104e124213e3990597555c21533411
 SHA1 (patch-al) = 2530864b88b66b5c45b0996cb65269899b115e3f
 SHA1 (patch-am) = 9250c6c734b22f1edf63040e2c70579917593f59
 SHA1 (patch-an) = 4325b3ff1f32a9b09b540bcc0b482acdf8e96237
-SHA1 (patch-ao) = 85f4b0f2238ea1cbfe3ed16a9cd58ed2c64a0da1
+SHA1 (patch-ao) = b6871101e4a5e7c8b83f6754474d74183309375f
 SHA1 (patch-ap) = 7fb4d991f629ee5f36718a047ce4667c563fd95b
 SHA1 (patch-aq) = 2a781bd3118bda38244f7b7a0bb1a202a90c3983
 SHA1 (patch-ar) = 8be1ce3f1ed2bd55dfc77042fa5f62fc6b036903
