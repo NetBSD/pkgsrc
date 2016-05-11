@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2016/03/09 21:34:21 tnn Exp $
+# $NetBSD: Makefile,v 1.10.2.1 2016/05/11 14:54:02 bsiegert Exp $
 
 DISTNAME=	elftoolchain-0.5.1
 PKGREVISION=	1
@@ -20,10 +20,18 @@ USE_TOOLS+=		m4
 MAKE_ENV+=		${BSD_MAKE_ENV}
 MAKE_FLAGS+=		MKPROFILE=yes
 
-CWARNFLAGS.clang=	-Wno-error=missing-noreturn \
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mgcc)
+CWARNFLAGS+=		-Wno-error=sign-conversion \
+			-Wno-error=conversion \
+			-Wno-error=unused-but-set-variable \
+			-Wno-error=old-style-definition
+.elif !empty(PKGSRC_COMPILER:Mclang)
+CWARNFLAGS+=		-Wno-error=missing-noreturn \
 			-Wno-error=constant-logical-operand \
 			-Wno-error=conversion -Wno-error=cast-qual
-MAKE_FLAGS+=		CWARNFLAGS.clang=${CWARNFLAGS.clang:Q}
+.endif
+MAKE_FLAGS+=		CWARNFLAGS=${CWARNFLAGS:Q}
 
 INSTALLATION_DIRS=	bin lib
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/cat1 ${PKGMANDIR}/html1
