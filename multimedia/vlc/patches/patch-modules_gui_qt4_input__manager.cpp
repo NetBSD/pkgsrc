@@ -1,9 +1,9 @@
-$NetBSD: patch-modules_gui_qt4_input__manager.cpp,v 1.1 2015/10/25 11:00:18 wiz Exp $
+$NetBSD: patch-modules_gui_qt4_input__manager.cpp,v 1.2 2016/05/12 15:56:15 wiz Exp $
 
 Qt's MOC doesn't handle int64_t, so introduce a meaningful type name
 so that slot/signal/connection macros work properly.
 
---- modules/gui/qt4/input_manager.cpp.orig	2015-04-12 21:29:20.000000000 +0000
+--- modules/gui/qt4/input_manager.cpp.orig	2016-04-18 11:10:31.000000000 +0000
 +++ modules/gui/qt4/input_manager.cpp
 @@ -138,7 +138,7 @@ void InputManager::setInput( input_threa
                      !var_GetFloat( p_input, "start-time" ) &&
@@ -12,9 +12,9 @@ so that slot/signal/connection macros work properly.
 -                emit resumePlayback( (int64_t)i_time * 1000 );
 +                emit resumePlayback( (putime_t)i_time * 1000 );
              }
-         }
- 
-@@ -446,7 +446,7 @@ void InputManager::UpdatePosition()
+             playlist_Lock( THEPL );
+             // Add root items only
+@@ -453,7 +453,7 @@ void InputManager::UpdatePosition()
  {
      /* Update position */
      int i_length;
@@ -23,7 +23,7 @@ so that slot/signal/connection macros work properly.
      float f_pos;
      i_length = var_GetTime(  p_input , "length" ) / CLOCK_FREQ;
      i_time = var_GetTime(  p_input , "time");
-@@ -981,21 +981,21 @@ void InputManager::setAtoB()
+@@ -995,21 +995,21 @@ void InputManager::setAtoB()
      {
          timeB = var_GetTime( THEMIM->getInput(), "time"  );
          var_SetTime( THEMIM->getInput(), "time" , timeA );
