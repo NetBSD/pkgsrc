@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1932 2016/05/12 14:03:36 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1933 2016/05/12 14:08:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2510,3 +2510,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated x11/xcb-util-cursor to 0.1.3 [wiz 2016-05-12]
 	Updated devel/afl to 2.12b [wiz 2016-05-12]
 	Updated fonts/harfbuzz to 1.2.7 [wiz 2016-05-12]
+	Updated security/py-cryptography to 1.3.2 [wiz 2016-05-12]
