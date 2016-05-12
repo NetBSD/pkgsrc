@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.56 2015/10/25 11:00:18 wiz Exp $
+@comment $NetBSD: PLIST,v 1.57 2016/05/12 15:56:15 wiz Exp $
 bin/cvlc
 ${PLIST.x11}bin/qvlc
 bin/rvlc
@@ -492,10 +492,12 @@ share/locale/kk/LC_MESSAGES/vlc.mo
 share/locale/km/LC_MESSAGES/vlc.mo
 share/locale/kn/LC_MESSAGES/vlc.mo
 share/locale/ko/LC_MESSAGES/vlc.mo
+share/locale/ks_IN/LC_MESSAGES/vlc.mo
 share/locale/ky/LC_MESSAGES/vlc.mo
 share/locale/lg/LC_MESSAGES/vlc.mo
 share/locale/lt/LC_MESSAGES/vlc.mo
 share/locale/lv/LC_MESSAGES/vlc.mo
+share/locale/mai/LC_MESSAGES/vlc.mo
 share/locale/mk/LC_MESSAGES/vlc.mo
 share/locale/ml/LC_MESSAGES/vlc.mo
 share/locale/mn/LC_MESSAGES/vlc.mo
