@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1936 2016/05/12 15:45:01 bouyer Exp $
+$NetBSD: CHANGES-2016,v 1.1937 2016/05/12 15:56:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2515,3 +2515,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/xentools45 to 4.5.3 [bouyer 2016-05-12]
 	Updated sysutils/xenkernel45 to 4.5.3 [bouyer 2016-05-12]
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.621 [tsutsui 2016-05-12]
+	Updated multimedia/vlc to 2.2.3 [wiz 2016-05-12]
