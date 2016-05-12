@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1935 2016/05/12 15:37:24 tsutsui Exp $
+$NetBSD: CHANGES-2016,v 1.1936 2016/05/12 15:45:01 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2512,4 +2512,6 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated fonts/harfbuzz to 1.2.7 [wiz 2016-05-12]
 	Updated security/py-cryptography to 1.3.2 [wiz 2016-05-12]
 	Updated devel/talloc to 2.1.7 [wiz 2016-05-12]
+	Updated sysutils/xentools45 to 4.5.3 [bouyer 2016-05-12]
+	Updated sysutils/xenkernel45 to 4.5.3 [bouyer 2016-05-12]
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.621 [tsutsui 2016-05-12]
