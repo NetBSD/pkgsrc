@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q1,v 1.1.2.11 2016/05/11 15:08:06 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q1,v 1.1.2.12 2016/05/12 19:06:50 bsiegert Exp $
 
 Changes to the packages collection and infrastructure on the pkgsrc-2016Q1 branch:
 
@@ -68,4 +68,28 @@ devel/xulrunner192: build fix
 
 Pullup ticket #5013 - requested by taca
 security/openssl: security fix
+
+Pullup ticket #4982 - requested by joerg
+devel/xulrunner10: build fix
+
+Pullup ticket #4983 - requested by joerg
+devel/anjuta: build fix
+
+Pullup ticket #4984 - requested by joerg
+games/flightgear: build fix
+
+Pullup ticket #4985 - requested by joerg
+games/wormz: build fix
+
+Pullup ticket #4986 - requested by joerg
+games/xevil: build fix
+
+Pullup ticket #4987 - requested by joerg
+games/darktable: build fix
+
+Pullup ticket #4988 - requested by joerg
+graphics/gdchart: build fix
+
+Pullup ticket #4989 - requested by joerg
+graphics/skencil: build fix
 
