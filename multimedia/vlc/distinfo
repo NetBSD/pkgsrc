@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.68 2015/11/03 23:54:33 agc Exp $
+$NetBSD: distinfo,v 1.69 2016/05/12 15:56:15 wiz Exp $
 
-SHA1 (vlc-2.2.1.tar.xz) = ee8535c5966217bc2069a74c1d4e8c32609656e9
-RMD160 (vlc-2.2.1.tar.xz) = 3b199e3555e8aa52a760a9ed7b89874c782e0dff
-SHA512 (vlc-2.2.1.tar.xz) = 91cd33ac61ebe376c24b3cc0d1dc52d7765fdccbd17e75abbbbf38f52b400e0269dc48f34ed558bff7ec1dd52c4f27098012709a3eb9fe7e8aad1069516de5de
-Size (vlc-2.2.1.tar.xz) = 20940288 bytes
+SHA1 (vlc-2.2.3.tar.xz) = 8d83c7b81e63956fdcb5cbee58cb2474d06baeae
+RMD160 (vlc-2.2.3.tar.xz) = 8c6d4194da37210fe409c965f430898fbe7f2416
+SHA512 (vlc-2.2.3.tar.xz) = 8469a8e0a6ff7ef4beac940d69d310dd4a4c9d44fb1dc8101dc8b697fc6357b5fda03f8f1096015aae7c425c6cca196415b9567fe7d96a991f020d452f976e5e
+Size (vlc-2.2.3.tar.xz) = 21835204 bytes
 SHA1 (patch-bin_override.c) = 0190b65ec29ccdb7ef89d7c6af74a6bfdfc17076
 SHA1 (patch-compat_Makefile.am) = 983e9e29380702326d114274db99af72b5bdb3dd
 SHA1 (patch-compat_Makefile.in) = 809b1b00f14a5d85a17cd81b0385529ae24f39ee
@@ -18,7 +18,7 @@ SHA1 (patch-modules_gui_qt4_components_extended__panels.cpp) = eaa7a4732fa5a462d
 SHA1 (patch-modules_gui_qt4_components_interface__widgets.cpp) = b630de531ec90afd1f2aecc769f34952780b6ddb
 SHA1 (patch-modules_gui_qt4_components_interface__widgets.hpp) = 9ac2782bcb1a306123662fd3e4f44b82149c111a
 SHA1 (patch-modules_gui_qt4_dialogs_messages.cpp) = 8f4abf85ecd435bb1d2964e5ac16fc09ecaa5ab0
-SHA1 (patch-modules_gui_qt4_input__manager.cpp) = 81c09ba0d042f0a0684092255f322b6aeaad08be
+SHA1 (patch-modules_gui_qt4_input__manager.cpp) = cf9db2c8a4bd4b6080cca0534dcc5065555c6d4a
 SHA1 (patch-modules_gui_qt4_input__manager.hpp) = ccc5f5fd53942f168e95d472731ee3f6a4d8ddb0
 SHA1 (patch-modules_gui_qt4_main__interface.cpp) = 11b9600a6e3c11268afc7c38859c5b62a1e8ee0d
 SHA1 (patch-modules_gui_qt4_main__interface.hpp) = 1c3028519662d99c023375c5ee74e9f490c16f3c
