@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.31 2016/03/05 11:27:57 jperkin Exp $
+# $NetBSD: buildlink3.mk,v 1.32 2016/05/12 07:56:09 wiz Exp $
 
 BUILDLINK_TREE+=	curl
 
@@ -25,6 +25,9 @@ pkgbase:= curl
 .endif
 .if !empty(PKG_BUILD_OPTIONS.curl:Mlibidn)
 .  include "../../devel/libidn/buildlink3.mk"
+.endif
+.if !empty(PKG_BUILD_OPTIONS.curl:Mhttp2)
+.  include "../../www/nghttp2/buildlink3.mk"
 .endif
 
 .include "../../devel/zlib/buildlink3.mk"
