@@ -1,14 +1,17 @@
-# $NetBSD: Makefile,v 1.7 2016/03/06 14:39:23 adam Exp $
+# $NetBSD: Makefile,v 1.8 2016/05/13 15:44:16 adam Exp $
 
-DISTNAME=	djangocms-text-ckeditor-2.9.0
+DISTNAME=	djangocms-text-ckeditor-2.9.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
-MASTER_SITES=	http://pypi.python.org/packages/source/d/djangocms-text-ckeditor/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=divio/}
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	https://github.com/divio/djangocms-text-ckeditor/
 COMMENT=	Text Plugin for django-cms with CK-Editor
 LICENSE=	modified-bsd
+
+GITHUB_PROJECT=	djangocms-text-ckeditor
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
 DEPENDS+=	${PYPKGPREFIX}-django-cms-[0-9]*:../../www/py-django-cms
 
