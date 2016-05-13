@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2015/10/23 03:43:31 taca Exp $
+@comment $NetBSD: PLIST,v 1.20.4.1 2016/05/13 12:33:51 bsiegert Exp $
 bin/sntp
 man/man1/sntp.1
 man/man5/ntp.conf.5
@@ -29,6 +29,7 @@ share/doc/ntp/README.bk
 share/doc/ntp/README.hackers
 share/doc/ntp/README.leapsmear
 share/doc/ntp/README.patches
+share/doc/ntp/README.pullrequests
 share/doc/ntp/README.refclocks
 share/doc/ntp/README.versions
 share/doc/ntp/TODO
