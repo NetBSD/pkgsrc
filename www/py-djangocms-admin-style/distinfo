@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2016/03/06 14:22:37 adam Exp $
+$NetBSD: distinfo,v 1.9 2016/05/13 15:47:06 adam Exp $
 
-SHA1 (djangocms-admin-style-1.1.0.tar.gz) = bc4413f9495bd919df607ea7283f827be9b74bcf
-RMD160 (djangocms-admin-style-1.1.0.tar.gz) = 3aea6a8db4eab43c6ddb1fe80d78b3bf9a465b5c
-SHA512 (djangocms-admin-style-1.1.0.tar.gz) = bca5b7175f765fdf49592914f72ea855ec87848c133224166610f7a4d37cd0c11cad22497c2db079b9eeea478d0b001d7d39f82a4867392d82744d79a9e2195b
-Size (djangocms-admin-style-1.1.0.tar.gz) = 1518444 bytes
+SHA1 (djangocms-admin-style-1.1.1.tar.gz) = 647da90da5cc20892ddeb5d3eee3f3073672cee2
+RMD160 (djangocms-admin-style-1.1.1.tar.gz) = 65930e78ed91b40091a88ac78852ff8b00685d75
+SHA512 (djangocms-admin-style-1.1.1.tar.gz) = 6c1a06e5f2a8f693f3e47c5b8b0aac8c5389a51d8686352fbc1485975319ced418b6868966de2878362163fb0f5fd99f7d09f92b1b9bb02675b741b6679b9ba5
+Size (djangocms-admin-style-1.1.1.tar.gz) = 1546990 bytes
