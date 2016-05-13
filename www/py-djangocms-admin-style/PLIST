@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2016/03/06 14:22:37 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2016/05/13 15:47:06 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -58,6 +58,7 @@ ${PYSITELIB}/djangocms_admin_style/sass/libs/html5-boilerplate/_reset.scss
 ${PYSITELIB}/djangocms_admin_style/sass/libs/html5-boilerplate/_styles.scss
 ${PYSITELIB}/djangocms_admin_style/sass/mixins/_all.scss
 ${PYSITELIB}/djangocms_admin_style/sass/mixins/_custom.scss
+${PYSITELIB}/djangocms_admin_style/sass/mixins/_zindex.scss
 ${PYSITELIB}/djangocms_admin_style/sass/settings/_all.scss
 ${PYSITELIB}/djangocms_admin_style/sass/settings/_cms.scss
 ${PYSITELIB}/djangocms_admin_style/sass/settings/_custom.scss
@@ -189,19 +190,10 @@ ${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/img/pluginlist-h
 ${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/img/select2.png
 ${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/img/sorting-icons.gif
 ${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/img/sorting-icons.png
-${PYSITELIB}/djangocms_admin_style/static/filer/icons/file_32x32.png
-${PYSITELIB}/djangocms_admin_style/static/filer/icons/file_48x48.png
-${PYSITELIB}/djangocms_admin_style/static/filer/icons/nofile_48x48.png
-${PYSITELIB}/djangocms_admin_style/static/filer/icons/plainfolder_128x128.png
-${PYSITELIB}/djangocms_admin_style/static/filer/icons/plainfolder_32x32.png
-${PYSITELIB}/djangocms_admin_style/static/filer/icons/plainfolder_48x48.png
-${PYSITELIB}/djangocms_admin_style/static/filer/icons/unfiled_folder_32x32.png
-${PYSITELIB}/djangocms_admin_style/static/filer/icons/unfiled_folder_48x48.png
-${PYSITELIB}/djangocms_admin_style/static/icons/plainfolder_128x128.png
-${PYSITELIB}/djangocms_admin_style/static/js/base-admin.js
-${PYSITELIB}/djangocms_admin_style/static/js/drag-touch-support.js
-${PYSITELIB}/djangocms_admin_style/static/js/jquery.ui.touch-punch.js
-${PYSITELIB}/djangocms_admin_style/static/js/jquery.ui.touch-punch.min.js
+${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/js/base-admin.js
+${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/js/drag-touch-support.js
+${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/js/jquery.ui.touch-punch.js
+${PYSITELIB}/djangocms_admin_style/static/djangocms_admin_style/js/jquery.ui.touch-punch.min.js
 ${PYSITELIB}/djangocms_admin_style/static/preview_images/admin-style-1.png
 ${PYSITELIB}/djangocms_admin_style/static/preview_images/admin-style-2.png
 ${PYSITELIB}/djangocms_admin_style/static/preview_images/admin-style-3.png
