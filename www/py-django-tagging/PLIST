@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2015/12/06 01:55:20 riz Exp $
+@comment $NetBSD: PLIST,v 1.4 2016/05/13 15:58:34 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -25,12 +25,15 @@ ${PYSITELIB}/tagging/generic.pyo
 ${PYSITELIB}/tagging/managers.py
 ${PYSITELIB}/tagging/managers.pyc
 ${PYSITELIB}/tagging/managers.pyo
-${PYSITELIB}/tagging/migrations/__init__.py
-${PYSITELIB}/tagging/migrations/__init__.pyc
-${PYSITELIB}/tagging/migrations/__init__.pyo
 ${PYSITELIB}/tagging/migrations/0001_initial.py
 ${PYSITELIB}/tagging/migrations/0001_initial.pyc
 ${PYSITELIB}/tagging/migrations/0001_initial.pyo
+${PYSITELIB}/tagging/migrations/0002_on_delete.py
+${PYSITELIB}/tagging/migrations/0002_on_delete.pyc
+${PYSITELIB}/tagging/migrations/0002_on_delete.pyo
+${PYSITELIB}/tagging/migrations/__init__.py
+${PYSITELIB}/tagging/migrations/__init__.pyc
+${PYSITELIB}/tagging/migrations/__init__.pyo
 ${PYSITELIB}/tagging/models.py
 ${PYSITELIB}/tagging/models.pyc
 ${PYSITELIB}/tagging/models.pyo
