@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1939 2016/05/13 14:57:16 mef Exp $
+$NetBSD: CHANGES-2016,v 1.1940 2016/05/13 15:09:46 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2516,5 +2516,6 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/xenkernel45 to 4.5.3 [bouyer 2016-05-12]
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.621 [tsutsui 2016-05-12]
 	Updated multimedia/vlc to 2.2.3 [wiz 2016-05-12]
+	Updated www/h2o to 1.7.2 [adam 2016-05-12]
 	Added multimedia/livestreamer version 1.12.2 [wiz 2016-05-12]
 	Updated ham/uhd to 3.9.4 [mef 2016-05-13]
