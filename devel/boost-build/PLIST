@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2015/08/14 07:54:04 adam Exp $
+@comment $NetBSD: PLIST,v 1.22 2016/05/13 20:47:32 adam Exp $
 share/boost-build/bootstrap.jam
 share/boost-build/build-system.jam
 share/boost-build/build/__init__.py
@@ -61,6 +61,7 @@ share/boost-build/tools/boostbook.jam
 share/boost-build/tools/borland.jam
 share/boost-build/tools/builtin.jam
 share/boost-build/tools/builtin.py
+share/boost-build/tools/bzip2.jam
 share/boost-build/tools/cast.jam
 share/boost-build/tools/cast.py
 share/boost-build/tools/clang-darwin.jam
@@ -77,6 +78,7 @@ share/boost-build/tools/convert.jam
 share/boost-build/tools/cray.jam
 share/boost-build/tools/cw-config.jam
 share/boost-build/tools/cw.jam
+share/boost-build/tools/cygwin.jam
 share/boost-build/tools/darwin.jam
 share/boost-build/tools/darwin.py
 share/boost-build/tools/dmc.jam
@@ -169,6 +171,7 @@ share/boost-build/tools/types/rsp.py
 share/boost-build/tools/unix.jam
 share/boost-build/tools/unix.py
 share/boost-build/tools/vacpp.jam
+share/boost-build/tools/vmsdecc.jam
 share/boost-build/tools/whale.jam
 share/boost-build/tools/xlcpp.jam
 share/boost-build/tools/xlf.jam
