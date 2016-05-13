@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2015/05/27 15:02:58 dholland Exp $
+@comment $NetBSD: PLIST,v 1.6 2016/05/13 16:35:03 adam Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -173,6 +173,9 @@ lib/python${PY_VER_SUFFIX}/asyncio/base_events.pyo
 lib/python${PY_VER_SUFFIX}/asyncio/base_subprocess.py
 lib/python${PY_VER_SUFFIX}/asyncio/base_subprocess.pyc
 lib/python${PY_VER_SUFFIX}/asyncio/base_subprocess.pyo
+lib/python${PY_VER_SUFFIX}/asyncio/compat.py
+lib/python${PY_VER_SUFFIX}/asyncio/compat.pyc
+lib/python${PY_VER_SUFFIX}/asyncio/compat.pyo
 lib/python${PY_VER_SUFFIX}/asyncio/constants.py
 lib/python${PY_VER_SUFFIX}/asyncio/constants.pyc
 lib/python${PY_VER_SUFFIX}/asyncio/constants.pyo
@@ -1315,8 +1318,8 @@ lib/python${PY_VER_SUFFIX}/ensurepip/__init__.pyo
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.py
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyc
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyo
-lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-6.0.8-py2.py3-none-any.whl
-lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/setuptools-12.0.5-py2.py3-none-any.whl
+lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-7.1.2-py2.py3-none-any.whl
+lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/setuptools-18.2-py2.py3-none-any.whl
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.py
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.pyc
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.pyo
@@ -1573,6 +1576,10 @@ lib/python${PY_VER_SUFFIX}/idlelib/dynOptionMenuWidget.py
 lib/python${PY_VER_SUFFIX}/idlelib/dynOptionMenuWidget.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/dynOptionMenuWidget.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/extend.txt
+lib/python${PY_VER_SUFFIX}/idlelib/help.pyc
+lib/python${PY_VER_SUFFIX}/idlelib/help.pyo
+lib/python${PY_VER_SUFFIX}/idlelib/help.html
+lib/python${PY_VER_SUFFIX}/idlelib/help.py
 lib/python${PY_VER_SUFFIX}/idlelib/help.txt
 lib/python${PY_VER_SUFFIX}/idlelib/idle.bat
 lib/python${PY_VER_SUFFIX}/idlelib/idle.py
@@ -1610,6 +1617,8 @@ lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_configdialog.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_delegator.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_delegator.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_delegator.pyo
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_editor.pyc
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_editor.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_formatparagraph.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_formatparagraph.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_formatparagraph.pyo
@@ -1622,6 +1631,10 @@ lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_hyperparser.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_idlehistory.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_idlehistory.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_idlehistory.pyo
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_io.pyc
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_io.pyo
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_editor.py
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_io.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_parenmatch.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_parenmatch.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_parenmatch.pyo
@@ -2632,7 +2645,6 @@ lib/python${PY_VER_SUFFIX}/test/decimaltestdata/testall.decTest
 lib/python${PY_VER_SUFFIX}/test/decimaltestdata/tointegral.decTest
 lib/python${PY_VER_SUFFIX}/test/decimaltestdata/tointegralx.decTest
 lib/python${PY_VER_SUFFIX}/test/decimaltestdata/xor.decTest
-lib/python${PY_VER_SUFFIX}/test/dh512.pem
 lib/python${PY_VER_SUFFIX}/test/dis_module.py
 lib/python${PY_VER_SUFFIX}/test/dis_module.pyc
 lib/python${PY_VER_SUFFIX}/test/dis_module.pyo
@@ -3870,6 +3882,10 @@ lib/python${PY_VER_SUFFIX}/test/test_operator.pyo
 lib/python${PY_VER_SUFFIX}/test/test_optparse.py
 lib/python${PY_VER_SUFFIX}/test/test_optparse.pyc
 lib/python${PY_VER_SUFFIX}/test/test_optparse.pyo
+lib/python${PY_VER_SUFFIX}/test/test_ordered_dict.pyc
+lib/python${PY_VER_SUFFIX}/test/test_ordered_dict.pyo
+lib/python${PY_VER_SUFFIX}/test/dh1024.pem
+lib/python${PY_VER_SUFFIX}/test/test_ordered_dict.py
 lib/python${PY_VER_SUFFIX}/test/test_os.py
 lib/python${PY_VER_SUFFIX}/test/test_os.pyc
 lib/python${PY_VER_SUFFIX}/test/test_os.pyo
