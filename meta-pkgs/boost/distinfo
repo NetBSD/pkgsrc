@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.86 2016/02/12 14:24:01 ryoon Exp $
+$NetBSD: distinfo,v 1.87 2016/05/13 20:47:32 adam Exp $
 
-SHA1 (boost_1_60_0.tar.bz2) = 7f56ab507d3258610391b47fef6b11635861175a
-RMD160 (boost_1_60_0.tar.bz2) = 191c97a0aed4543fbc8543219d2ab53aea7db784
-SHA512 (boost_1_60_0.tar.bz2) = 7c851b3fc2b322ff05d642d9cf03e7c30c5f04d5cf0579c99046b1ec708901c58a3d349031dfe24591f5b88c1e664b6a0d40abea6cce89abb52080c02eb725df
-Size (boost_1_60_0.tar.bz2) = 76553944 bytes
+SHA1 (boost_1_61_0.tar.bz2) = f84b1a1ce764108ec3c2b7bd7704cf8dfd3c9d01
+RMD160 (boost_1_61_0.tar.bz2) = 1ceb250fcece242b54a999dbadbe2f3f1922541b
+SHA512 (boost_1_61_0.tar.bz2) = a1c7338e2d2dbac8552ede7c554640d22cbb2fda7fbc325dc3cdcb51e769713626695426ffc158cbe0e1729dd9a7b5ad18af4800d74e24539e8d8564268c2b9d
+Size (boost_1_61_0.tar.bz2) = 85202254 bytes
 SHA1 (patch-aa) = 408a63a807aaa491130db018cd89bca6a427090d
 SHA1 (patch-ab) = 37c61bcfc27f1533df21f4392f80df2d2dbe51ef
 SHA1 (patch-ac) = 32d14b50682dae1950ed927ecb9318ad6b07687a
@@ -14,11 +14,10 @@ SHA1 (patch-aq) = 2e7f9854b69e98f48b4613c80191369012405b56
 SHA1 (patch-ar) = 2fec2c51272cc4ee376e6538d8f1fd8561a7f0a3
 SHA1 (patch-boost_atomic_detail_ops_gcc_sparc.hpp) = a7dd240ff6f61368ae6a8500e7009021fa6cba71
 SHA1 (patch-boost_config_posix__features.hpp) = c3e7187af35a2a25901b37388d3194e22d005323
-SHA1 (patch-boost_config_stdlib_libcpp.hpp) = 5f7c1dab7ee730a0517b52fb9ec7d6b5cbc4054a
+SHA1 (patch-boost_config_stdlib_libcpp.hpp) = af158d85db15ea15d9fac1dbd72a15632d2fcff3
 SHA1 (patch-boost_config_stdlib_libstdcpp3.hpp) = 52ebedd5e80b3a8c257eccb28cd2db76cb1ca01e
 SHA1 (patch-boost_core_noncopyable.hpp) = a693e5eda7fc303e1bd86ecfab40321d771af6fe
 SHA1 (patch-boost_math_tools_config.hpp) = db3965cd810185116efd669df29067f58cc847e5
 SHA1 (patch-boost_regex_config.hpp) = 6b752c7c23168c591cd391739c7a4539bef44c12
 SHA1 (patch-libs_config_configure) = e2f204d4fa4f1bd9b4131d28f9be0a1ac22bf711
 SHA1 (patch-libs_config_test_boost__no__range__based__for.ipp) = d9936c472fc2c696d86522b36eb12813ae91bee4
-SHA1 (patch-libs_context_build_Jamfile.v2) = befc2ae62e893ac665e88405d6aca79712f2549b
