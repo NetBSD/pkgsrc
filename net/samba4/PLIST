@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5.2.1 2016/04/15 07:25:11 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.5.2.2 2016/05/13 14:49:20 bsiegert Exp $
 bin/cifsdd
 bin/dbwrap_tool
 bin/eventlogadm
@@ -649,7 +649,7 @@ lib/samba/private/libtdb-wrap-samba4.so
 lib/samba/private/libtdb.so.1
 lib/samba/private/libtdb.so.1.3.7
 lib/samba/private/libtevent.so.0
-lib/samba/private/libtevent.so.0.9.25
+lib/samba/private/libtevent.so.0.9.28
 lib/samba/private/libtime-basic-samba4.so
 lib/samba/private/libtrusts-util-samba4.so
 lib/samba/private/libutil-cmdline-samba4.so
