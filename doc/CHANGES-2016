@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1940 2016/05/13 15:09:46 adam Exp $
+$NetBSD: CHANGES-2016,v 1.1941 2016/05/13 15:54:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2519,3 +2519,7 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/h2o to 1.7.2 [adam 2016-05-12]
 	Added multimedia/livestreamer version 1.12.2 [wiz 2016-05-12]
 	Updated ham/uhd to 3.9.4 [mef 2016-05-13]
+	Updated www/py-djangocms-admin-style to 1.1.1 [adam 2016-05-13]
+	Updated www/py-django-cms to 3.2.5 [adam 2016-05-13]
+	Updated www/py-djangocms-text-ckeditor to 2.9.3 [adam 2016-05-13]
+	Updated www/py-django-filer to 1.2.0 [adam 2016-05-13]
