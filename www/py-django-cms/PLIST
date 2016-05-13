@@ -1,14 +1,10 @@
-@comment $NetBSD: PLIST,v 1.25 2016/03/25 21:04:04 joerg Exp $
+@comment $NetBSD: PLIST,v 1.26 2016/05/13 15:41:26 adam Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt.py
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt.py
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
-${PYSITELIB}/${EGG_INFODIR}/requires.txt.py
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt.py
 ${PYSITELIB}/cms/__init__.py
 ${PYSITELIB}/cms/__init__.pyc
 ${PYSITELIB}/cms/__init__.pyo
@@ -164,6 +160,10 @@ ${PYSITELIB}/cms/locale/cs/LC_MESSAGES/django.mo
 ${PYSITELIB}/cms/locale/cs/LC_MESSAGES/django.po
 ${PYSITELIB}/cms/locale/cs/LC_MESSAGES/djangojs.mo
 ${PYSITELIB}/cms/locale/cs/LC_MESSAGES/djangojs.po
+${PYSITELIB}/cms/locale/cs_CZ/LC_MESSAGES/django.mo
+${PYSITELIB}/cms/locale/cs_CZ/LC_MESSAGES/django.po
+${PYSITELIB}/cms/locale/cs_CZ/LC_MESSAGES/djangojs.mo
+${PYSITELIB}/cms/locale/cs_CZ/LC_MESSAGES/djangojs.po
 ${PYSITELIB}/cms/locale/cy/LC_MESSAGES/django.mo
 ${PYSITELIB}/cms/locale/cy/LC_MESSAGES/django.po
 ${PYSITELIB}/cms/locale/cy/LC_MESSAGES/djangojs.mo
@@ -384,6 +384,10 @@ ${PYSITELIB}/cms/locale/sk/LC_MESSAGES/django.mo
 ${PYSITELIB}/cms/locale/sk/LC_MESSAGES/django.po
 ${PYSITELIB}/cms/locale/sk/LC_MESSAGES/djangojs.mo
 ${PYSITELIB}/cms/locale/sk/LC_MESSAGES/djangojs.po
+${PYSITELIB}/cms/locale/sk_SK/LC_MESSAGES/django.mo
+${PYSITELIB}/cms/locale/sk_SK/LC_MESSAGES/django.po
+${PYSITELIB}/cms/locale/sk_SK/LC_MESSAGES/djangojs.mo
+${PYSITELIB}/cms/locale/sk_SK/LC_MESSAGES/djangojs.po
 ${PYSITELIB}/cms/locale/sl/LC_MESSAGES/django.mo
 ${PYSITELIB}/cms/locale/sl/LC_MESSAGES/django.po
 ${PYSITELIB}/cms/locale/sl/LC_MESSAGES/djangojs.mo
@@ -581,6 +585,9 @@ ${PYSITELIB}/cms/migrations/0012_auto_20150607_2207.pyo
 ${PYSITELIB}/cms/migrations/0013_urlconfrevision.py
 ${PYSITELIB}/cms/migrations/0013_urlconfrevision.pyc
 ${PYSITELIB}/cms/migrations/0013_urlconfrevision.pyo
+${PYSITELIB}/cms/migrations/0014_auto_20160404_1908.py
+${PYSITELIB}/cms/migrations/0014_auto_20160404_1908.pyc
+${PYSITELIB}/cms/migrations/0014_auto_20160404_1908.pyo
 ${PYSITELIB}/cms/migrations/__init__.py
 ${PYSITELIB}/cms/migrations/__init__.pyc
 ${PYSITELIB}/cms/migrations/__init__.pyo
@@ -1005,7 +1012,6 @@ ${PYSITELIB}/cms/static/cms/img/pagetree/tree-li-drag.gif
 ${PYSITELIB}/cms/static/cms/img/toolbar/render_model_add.png
 ${PYSITELIB}/cms/static/cms/img/toolbar/render_model_icon.png
 ${PYSITELIB}/cms/static/cms/img/toolbar/render_model_placeholder.png
-${PYSITELIB}/cms/static/cms/js/.DS_Store
 ${PYSITELIB}/cms/static/cms/js/dist/bundle.admin.base.min.js
 ${PYSITELIB}/cms/static/cms/js/dist/bundle.admin.changeform.min.js
 ${PYSITELIB}/cms/static/cms/js/dist/bundle.admin.changelist.min.js
@@ -1590,9 +1596,21 @@ ${PYSITELIB}/cms/test_utils/project/pluginapp/plugins/revdesc/__init__.pyo
 ${PYSITELIB}/cms/test_utils/project/pluginapp/plugins/revdesc/cms_plugins.py
 ${PYSITELIB}/cms/test_utils/project/pluginapp/plugins/revdesc/cms_plugins.pyc
 ${PYSITELIB}/cms/test_utils/project/pluginapp/plugins/revdesc/cms_plugins.pyo
+${PYSITELIB}/cms/test_utils/project/pluginapp/plugins/revdesc/migrations/0001_initial.py
+${PYSITELIB}/cms/test_utils/project/pluginapp/plugins/revdesc/migrations/0001_initial.pyc
+${PYSITELIB}/cms/test_utils/project/pluginapp/plugins/revdesc/migrations/0001_initial.pyo
+${PYSITELIB}/cms/test_utils/project/pluginapp/plugins/revdesc/migrations/__init__.py
+${PYSITELIB}/cms/test_utils/project/pluginapp/plugins/revdesc/migrations/__init__.pyc
+${PYSITELIB}/cms/test_utils/project/pluginapp/plugins/revdesc/migrations/__init__.pyo
 ${PYSITELIB}/cms/test_utils/project/pluginapp/plugins/revdesc/models.py
 ${PYSITELIB}/cms/test_utils/project/pluginapp/plugins/revdesc/models.pyc
 ${PYSITELIB}/cms/test_utils/project/pluginapp/plugins/revdesc/models.pyo
+${PYSITELIB}/cms/test_utils/project/pluginapp/plugins/revdesc/south_migrations/0001_initial.py
+${PYSITELIB}/cms/test_utils/project/pluginapp/plugins/revdesc/south_migrations/0001_initial.pyc
+${PYSITELIB}/cms/test_utils/project/pluginapp/plugins/revdesc/south_migrations/0001_initial.pyo
+${PYSITELIB}/cms/test_utils/project/pluginapp/plugins/revdesc/south_migrations/__init__.py
+${PYSITELIB}/cms/test_utils/project/pluginapp/plugins/revdesc/south_migrations/__init__.pyc
+${PYSITELIB}/cms/test_utils/project/pluginapp/plugins/revdesc/south_migrations/__init__.pyo
 ${PYSITELIB}/cms/test_utils/project/pluginapp/plugins/validation/__init__.py
 ${PYSITELIB}/cms/test_utils/project/pluginapp/plugins/validation/__init__.pyc
 ${PYSITELIB}/cms/test_utils/project/pluginapp/plugins/validation/__init__.pyo

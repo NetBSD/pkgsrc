@@ -1,14 +1,17 @@
-# $NetBSD: Makefile,v 1.37 2016/04/09 11:54:03 adam Exp $
+# $NetBSD: Makefile,v 1.38 2016/05/13 15:41:26 adam Exp $
 
-DISTNAME=	django-cms-3.2.3
+DISTNAME=	django-cms-3.2.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
-MASTER_SITES=	http://pypi.python.org/packages/source/d/django-cms/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=divio/}
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.django-cms.org/
 COMMENT=	Django content management system
 LICENSE=	modified-bsd
+
+GITHUB_PROJECT=	django-cms
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
 DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
 DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
