@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1943 2016/05/13 16:35:46 adam Exp $
+$NetBSD: CHANGES-2016,v 1.1944 2016/05/13 20:50:29 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2525,3 +2525,11 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/py-django-filer to 1.2.0 [adam 2016-05-13]
 	Updated www/py-django-tagging to 0.4.3 [adam 2016-05-13]
 	Updated lang/python34 to 3.4.4 [adam 2016-05-13]
+	Added www/py-django-formtools version 1.0 [adam 2016-05-13]
+	Updated devel/boost-jam to 1.61.0 [adam 2016-05-13]
+	Updated devel/boost-headers to 1.61.0 [adam 2016-05-13]
+	Updated devel/boost-libs to 1.61.0 [adam 2016-05-13]
+	Updated devel/boost-docs to 1.61.0 [adam 2016-05-13]
+	Updated devel/boost-build to 1.61.0 [adam 2016-05-13]
+	Updated devel/py-boost to 1.61.0 [adam 2016-05-13]
+	Updated meta-pkgs/boost to 1.61.0 [adam 2016-05-13]
