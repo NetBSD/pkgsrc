@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q1,v 1.1.2.12 2016/05/12 19:06:50 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q1,v 1.1.2.13 2016/05/13 14:53:20 bsiegert Exp $
 
 Changes to the packages collection and infrastructure on the pkgsrc-2016Q1 branch:
 
@@ -92,4 +92,16 @@ graphics/gdchart: build fix
 
 Pullup ticket #4989 - requested by joerg
 graphics/skencil: build fix
+
+Pullup ticket #5009 - requested by taca
+www/squid3: security fix, build fix
+
+Pullup ticket #5010 - requested by taca
+net/ntp4: security fix
+
+Pullup ticket #5011 - requested by taca
+net/samba4: security fix
+
+Pullup ticket #5012 - requested by taca
+www/typo3_62: security fix
 
