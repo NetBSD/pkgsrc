@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2016/03/06 14:46:42 adam Exp $
+$NetBSD: distinfo,v 1.6 2016/05/13 15:58:34 adam Exp $
 
-SHA1 (django-tagging-0.4.1.tar.gz) = 8d8e2d219231b77d4b97263dc8cb50c48f974111
-RMD160 (django-tagging-0.4.1.tar.gz) = 1da05c31258315f4e94aade5f4d4ca586075ce2e
-SHA512 (django-tagging-0.4.1.tar.gz) = 6f6899084fd5067ec2e49649bba4aad225ed738f39f999b7ea5156d38fa28c272d4a1f688d4de712db15fe8f2c2ecfd4532eb6e9c0c1de6dd530c09d7d767a26
-Size (django-tagging-0.4.1.tar.gz) = 44260 bytes
+SHA1 (django-tagging-0.4.3.tar.gz) = 5311b22100e4ceb888b768d59cf92f8433848d68
+RMD160 (django-tagging-0.4.3.tar.gz) = 8342890c9daaa2a34b8b18ff8151e4c111586f8c
+SHA512 (django-tagging-0.4.3.tar.gz) = 2549e5524123899ff879f75fdf04b813480174aeeb6975199a557e1df6d745382c8e66be89e77142dcf59be799053218e7a3f96d6da4dd7ab9154ac5c2aaf157
+Size (django-tagging-0.4.3.tar.gz) = 42217 bytes
