@@ -1,14 +1,17 @@
-# $NetBSD: Makefile,v 1.1 2016/04/20 20:09:32 adam Exp $
+# $NetBSD: Makefile,v 1.2 2016/05/13 15:53:02 adam Exp $
 
-DISTNAME=	django-filer-1.1.1
+DISTNAME=	django-filer-1.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
-MASTER_SITES=	http://pypi.python.org/packages/source/d/django-filer/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=divio/}
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	https://github.com/divio/django-filer/
 COMMENT=	File management application for Django
 LICENSE=	modified-bsd
+
+GITHUB_PROJECT=	django-filer
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
 DEPENDS+=	${PYPKGPREFIX}-Pillow-[0-9]*:../../graphics/py-Pillow
 DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
