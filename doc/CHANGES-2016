@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1947 2016/05/14 07:53:37 tsutsui Exp $
+$NetBSD: CHANGES-2016,v 1.1948 2016/05/14 13:51:02 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2536,3 +2536,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated cad/klayout to 0.24.7 [mef 2016-05-14]
 	Updated net/mikutter to 3.3.9 [tsutsui 2016-05-14]
 	Updated net/ruby-pluggaloid to 1.1.1 [tsutsui 2016-05-14]
+	Updated devel/mm-common to 0.9.10 [prlw1 2016-05-14]
