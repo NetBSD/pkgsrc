@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.93 2016/05/13 15:50:13 bsiegert Exp $
+# $NetBSD: Makefile,v 1.94 2016/05/14 08:13:49 bsiegert Exp $
 #
 
 DISTNAME=	ntp-4.2.8p7
 PKGNAME=	${DISTNAME:S/-dev-/-/}
+PKGREVISION=	1
 CATEGORIES=	net time
 MASTER_SITES=	http://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/ntp-4.2/
 
@@ -49,7 +50,6 @@ PLIST.tickadj=		yes
 .elif ${OPSYS} == "IRIX"
 PLIST.timetrim=		yes
 .elif ${OPSYS} == "Darwin"
-PLIST.ntpsnmpd=		yes
 PLIST.tickadj=		yes
 .endif
 
