@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2016/03/05 11:28:45 jperkin Exp $
+# $NetBSD: Makefile,v 1.40 2016/05/14 16:13:10 bsiegert Exp $
 #
 
-DISTNAME=	alpine-2.11
-PKGREVISION=	5
+DISTNAME=	alpine-2.20
 CATEGORIES=	mail
 MASTER_SITES=	http://patches.freeiz.com/alpine/release/src/
 EXTRACT_SUFX=	.tar.xz
