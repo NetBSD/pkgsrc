@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2016/05/07 09:52:44 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2016/05/14 08:29:37 bsiegert Exp $
 
 DISTNAME=	elftoolchain-0.5.1
 PKGREVISION=	1
@@ -12,6 +12,8 @@ COMMENT=	Compilation tools (nm, ar, as, ld, etc.) for the ELF object format
 LICENSE=	modified-bsd
 
 CONFLICTS=	libelf-[0-9]*
+
+NOT_FOR_PLATFORM=	Darwin-*-*
 
 MAKE_JOBS_SAFE=	no
 
