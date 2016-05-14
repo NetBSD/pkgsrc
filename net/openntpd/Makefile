@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.42 2015/07/03 12:31:12 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2016/05/14 14:55:34 bsiegert Exp $
 
-DISTNAME=		openntpd-5.7p4
+DISTNAME=		openntpd-5.9p1
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_OPENBSD:=OpenNTPD/}
 
@@ -14,12 +14,16 @@ CONFLICTS+=		ntp-[0-9]*
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--disable-https-constraint
 
-SUBST_CLASSES+=		ntpd_m
-SUBST_STAGE.ntpd_m=	pre-build
-SUBST_FILES.ntpd_m=	src/ntpd.8 src/ntpctl.8
-SUBST_SED.ntpd_m+=	-e 's,/var/db/,${VARBASE}/db/openntpd/,g'
-SUBST_SED.ntpd_m+=	-e 's,/var/run/,${VARBASE}/run/,g'
+SUBST_CLASSES+=		ntpd_m1
+SUBST_CLASSES+=		ntpd_m2
+SUBST_STAGE.ntpd_m1=	pre-build
+SUBST_STAGE.ntpd_m2=	pre-build
+SUBST_FILES.ntpd_m1=	src/ntpd.8
+SUBST_FILES.ntpd_m2=	src/ntpd.8 src/ntpctl.8
+SUBST_SED.ntpd_m1+=	-e 's,/var/db/,${VARBASE}/db/openntpd/,g'
+SUBST_SED.ntpd_m2+=	-e 's,/var/run/,${VARBASE}/run/,g'
 
 SUBST_CLASSES+=		ntpd_h
 SUBST_STAGE.ntpd_h=	pre-build
