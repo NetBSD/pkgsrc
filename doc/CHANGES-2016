@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1951 2016/05/14 16:25:32 bsiegert Exp $
+$NetBSD: CHANGES-2016,v 1.1952 2016/05/14 21:06:42 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2540,3 +2540,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/openntpd to 5.9p1 [bsiegert 2016-05-14]
 	Updated mail/re-alpine to 2.03 [bsiegert 2016-05-14]
 	Updated mail/alpine to 2.20 [bsiegert 2016-05-14]
+	Updated archivers/sarab to 1.0.0 [mef 2016-05-14]
