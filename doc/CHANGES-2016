@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1950 2016/05/14 15:18:29 bsiegert Exp $
+$NetBSD: CHANGES-2016,v 1.1951 2016/05/14 16:25:32 bsiegert Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2539,3 +2539,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/mm-common to 0.9.10 [prlw1 2016-05-14]
 	Updated net/openntpd to 5.9p1 [bsiegert 2016-05-14]
 	Updated mail/re-alpine to 2.03 [bsiegert 2016-05-14]
+	Updated mail/alpine to 2.20 [bsiegert 2016-05-14]
