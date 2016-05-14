@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15885 2016/05/14 16:25:32 bsiegert Exp $
+$NetBSD: TODO,v 1.15886 2016/05/14 19:29:57 bsiegert Exp $
 
 Suggested new packages
 ======================
@@ -618,7 +618,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o elf-0.11
 	o elfsh-0.65 [pkg/33959]
 	o elfsh-0.78
-	o elftoolchain-0.6.1 [pkg/48227]
+	o elftoolchain-0.7.1 [pkg/48227]
 	o elm-me-2.5plalpha36
 	o elscreen-1.5.3
 	o emacs-muse-3.20
@@ -1202,8 +1202,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o olvwm-4.5
 	o oniguruma-5.9.6
 	o oo2c-2.1.7
-	o opal-3.10.10
-	o opal-3.8.0 [pkg/42942]
+	o opal-3.16.2
 	o open-vm-tools-2010.09.19.301124
 	o opencsg-1.4.0
 	o openh323-1.19.1
@@ -1487,6 +1486,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o profit-2.5.3
 	o psmisc-22.20
 	o pspp-0.10.1
+	o ptlib-2.16.2
 	o pure-ftpd-1.0.40
 	o pvs-5.0
 	o pwlib-1.11.1
@@ -1722,7 +1722,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o stegavorto-2011.05.26
 	o stella-4.7
 	o stellarium-0.13.3
-	o stgit-0.17.1 [pkg/50875]
 	o stlport-4.6.2
 	o stow-2.2.2
 	o strace-4.11
