@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2013/07/07 15:04:28 rodent Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/05/14 13:50:37 prlw1 Exp $
 bin/mm-common-prepare
 man/man1/mm-common-prepare.1
+share/aclocal/mm-ax_cxx_compile_stdcxx.m4
+share/aclocal/mm-ax_cxx_compile_stdcxx_11.m4
 share/aclocal/mm-common.m4
 share/aclocal/mm-dietlib.m4
 share/aclocal/mm-doc.m4
@@ -16,6 +18,7 @@ share/mm-common/build/generate-binding.am
 share/mm-common/doctags/libstdc++.tag
 share/mm-common/doctool/doc-install.pl
 share/mm-common/doctool/doc-postprocess.pl
+share/mm-common/doctool/doxygen-extra.css
 share/mm-common/doctool/doxygen.css
 share/mm-common/doctool/tagfile-to-devhelp2.xsl
 share/pkgconfig/mm-common-libstdc++.pc
