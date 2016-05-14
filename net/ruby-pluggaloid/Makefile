@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2016/01/09 19:01:20 tsutsui Exp $
+# $NetBSD: Makefile,v 1.2 2016/05/14 07:52:47 tsutsui Exp $
 
-DISTNAME=	pluggaloid-1.0.2
+DISTNAME=	pluggaloid-1.1.1
 CATEGORIES=	net
 
 MAINTAINER=	tsutsui@NetBSD.org
