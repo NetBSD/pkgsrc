@@ -1,70 +1,29 @@
-$NetBSD: patch-imap_src_mtest_mtest.c,v 1.1 2015/11/08 20:13:24 dholland Exp $
+$NetBSD: patch-imap_src_mtest_mtest.c,v 1.2 2016/05/14 16:13:10 bsiegert Exp $
 
 - patch up buffer handling (required to build on openbsd)
 
---- imap/src/mtest/mtest.c.orig	2013-08-15 04:36:01.000000000 +0000
+--- imap/src/mtest/mtest.c.orig	2015-01-12 05:12:25.000000000 +0000
 +++ imap/src/mtest/mtest.c
-@@ -81,9 +81,23 @@ void overview_header (MAILSTREAM *stream
- void header (MAILSTREAM *stream,long msgno);
- void display_body (BODY *body,char *pfx,long i);
- void status (MAILSTREAM *stream);
--void prompt (char *msg,char *txt);
-+void prompt (char *msg,char *txt,size_t len);
- void smtptest (long debug);
- 
-+static char *dogets(char *buf, size_t max) {
-+   char *ret;
-+   size_t len;
-+
-+   ret = fgets(buf, max, stdin);
-+   if (ret != NULL) {
-+      len = strlen(buf);
-+      if (len > 0 && buf[len-1] == '\n') {
-+	 buf[len-1] = '\0';
-+      }
-+   }
-+   return ret;
-+}
-+
- /* Main program - initialization */
- 
- int main ()
-@@ -118,13 +132,13 @@ int main ()
- #endif
-   curhst = cpystr (mylocalhost ());
-   puts ("MTest -- C client test program");
--  if (!*personalname) prompt ("Personal name: ",personalname);
-+  if (!*personalname) prompt ("Personal name: ",personalname, sizeof(personalname));
- 				/* user wants protocol telemetry? */
--  prompt ("Debug protocol (y/n)?",tmp);
-+  prompt ("Debug protocol (y/n)?",tmp, sizeof(tmp));
-   ucase (tmp);
-   debug = (tmp[0] == 'Y') ? T : NIL;
-   do {
--    prompt ("Mailbox ('?' for help): ",tmp);
-+    prompt ("Mailbox ('?' for help): ",tmp, sizeof(tmp));
-     if (!strcmp (tmp,"?")) {
-       puts ("Enter INBOX, mailbox name, or IMAP mailbox as {host}mailbox");
-       puts ("Known local mailboxes:");
-@@ -155,14 +169,16 @@ void mm (MAILSTREAM *stream,long debug)
+@@ -151,6 +151,7 @@ void mm (MAILSTREAM *stream,long debug)
    void *sdb = NIL;
-   char cmd[MAILTMPLEN];
-   char *s,*arg;
+   char cmd[MAILTMPLEN],tmp[MAILTMPLEN];
+   char *s, *arg;
 +  size_t argmax;
    unsigned long i;
    unsigned long last = 0;
    BODY *body;
-   status (stream);		/* first report message status */
+@@ -158,7 +159,9 @@ void mm (MAILSTREAM *stream,long debug)
    while (stream) {
--    prompt ("MTest>",cmd);	/* prompt user, get command */
-+    prompt ("MTest>",cmd, sizeof(cmd));	/* prompt user, get command */
+     prompt ("MTest> ",cmd, sizeof(cmd)); /* prompt user, get command */
  				/* get argument */
-     if (arg = strchr (cmd,' ')) *arg++ = '\0';
-+    if (arg) argmax = sizeof(cmd) - (arg - cmd);
+-    if (arg = strchr (cmd,' ')) *arg++ = '\0';
++    if (arg)
++      argmax = sizeof(cmd) - (arg - cmd);
++
      switch (*ucase (cmd)) {	/* dispatch based on command */
      case 'B':			/* Body command */
        if (arg) last = atoi (arg);
-@@ -189,7 +205,8 @@ void mm (MAILSTREAM *stream,long debug)
+@@ -185,7 +188,8 @@ void mm (MAILSTREAM *stream,long debug)
  	  break;
  	}
  	arg = cmd;
@@ -74,24 +33,24 @@ $NetBSD: patch-imap_src_mtest_mtest.c,v 1.1 2015/11/08 20:13:24 dholland Exp $
        }
        if (last && (last <= stream->nmsgs))
  	mail_setflag (stream,arg,"\\DELETED");
-@@ -202,6 +219,7 @@ void mm (MAILSTREAM *stream,long debug)
+@@ -198,6 +202,7 @@ void mm (MAILSTREAM *stream,long debug)
      case 'F':			/* Find command */
        if (!arg) {
  	arg = "%";
 +	argmax = 0;
- 	if (s = sm_read (&sdb)) {
+ 	if (s = sm_read (tmp,&sdb)) {
  	  puts ("Local network subscribed mailboxes:");
  	  do if (*s == '{') (mm_lsub (NIL,NIL,s,NIL));
-@@ -255,7 +273,7 @@ void mm (MAILSTREAM *stream,long debug)
+@@ -251,7 +256,7 @@ void mm (MAILSTREAM *stream,long debug)
        }
  				/* get the new mailbox */
        while (!(stream = mail_open (stream,arg,debug))) {
--	prompt ("Mailbox: ",arg);
+-	prompt ("Mailbox: ",arg, sizeof(arg));
 +	prompt ("Mailbox: ",arg, argmax);
  	if (!arg[0]) break;
        }
        last = 0;
-@@ -327,7 +345,8 @@ void mm (MAILSTREAM *stream,long debug)
+@@ -323,7 +328,8 @@ void mm (MAILSTREAM *stream,long debug)
  	  break;
  	}
  	arg = cmd;
@@ -101,7 +60,7 @@ $NetBSD: patch-imap_src_mtest_mtest.c,v 1.1 2015/11/08 20:13:24 dholland Exp $
        }
        if (last > 0 && last <= stream->nmsgs)
  	mail_clearflag (stream,arg,"\\DELETED");
-@@ -376,7 +395,7 @@ void overview_header (MAILSTREAM *stream
+@@ -384,7 +390,7 @@ void overview_header (MAILSTREAM *stream
      tmp[3] = elt->answered ? 'A' : ' ';
      tmp[4] = elt->deleted ? 'D' : ' ';
      mail_parse_date (&selt,ov->date);
@@ -110,7 +69,7 @@ $NetBSD: patch-imap_src_mtest_mtest.c,v 1.1 2015/11/08 20:13:24 dholland Exp $
      mail_date (tmp+11,&selt);
      tmp[17] = ' ';
      tmp[18] = '\0';
-@@ -386,19 +405,20 @@ void overview_header (MAILSTREAM *stream
+@@ -394,19 +400,20 @@ void overview_header (MAILSTREAM *stream
      for (adr = ov->from; adr && !adr->host; adr = adr->next);
      if (adr) {			/* if a personal name exists use it */
        if (!(t = adr->personal))
@@ -133,7 +92,7 @@ $NetBSD: patch-imap_src_mtest_mtest.c,v 1.1 2015/11/08 20:13:24 dholland Exp $
  	     ov->subject ? ov->subject : " ",ov->optional.octets);
      puts (tmp);
    }
-@@ -415,6 +435,7 @@ void header (MAILSTREAM *stream,long msg
+@@ -423,6 +430,7 @@ void header (MAILSTREAM *stream,long msg
    unsigned long i;
    char tmp[MAILTMPLEN];
    char *t;
@@ -141,7 +100,7 @@ $NetBSD: patch-imap_src_mtest_mtest.c,v 1.1 2015/11/08 20:13:24 dholland Exp $
    MESSAGECACHE *cache = mail_elt (stream,msgno);
    mail_fetchstructure (stream,msgno,NIL);
    tmp[0] = cache->recent ? (cache->seen ? 'R': 'N') : ' ';
-@@ -422,7 +443,7 @@ void header (MAILSTREAM *stream,long msg
+@@ -430,7 +438,7 @@ void header (MAILSTREAM *stream,long msg
    tmp[2] = cache->flagged ? 'F' : ' ';
    tmp[3] = cache->answered ? 'A' : ' ';
    tmp[4] = cache->deleted ? 'D' : ' ';
@@ -150,7 +109,7 @@ $NetBSD: patch-imap_src_mtest_mtest.c,v 1.1 2015/11/08 20:13:24 dholland Exp $
    mail_date (tmp+11,cache);
    tmp[17] = ' ';
    tmp[18] = '\0';
-@@ -437,7 +458,9 @@ void header (MAILSTREAM *stream,long msg
+@@ -445,7 +453,9 @@ void header (MAILSTREAM *stream,long msg
      strcat (tmp,"} ");
    }
    mail_fetchsubject (t = tmp + strlen (tmp),stream,msgno,(long) 25);
@@ -161,7 +120,7 @@ $NetBSD: patch-imap_src_mtest_mtest.c,v 1.1 2015/11/08 20:13:24 dholland Exp $
    puts (tmp);
  }
  
-@@ -451,31 +474,57 @@ void display_body (BODY *body,char *pfx,
+@@ -459,31 +469,57 @@ void display_body (BODY *body,char *pfx,
  {
    char tmp[MAILTMPLEN];
    char *s = tmp;
@@ -228,7 +187,7 @@ $NetBSD: patch-imap_src_mtest_mtest.c,v 1.1 2015/11/08 20:13:24 dholland Exp $
        break;
      }
      puts (tmp);			/* output this line */
-@@ -484,7 +533,7 @@ void display_body (BODY *body,char *pfx,
+@@ -492,7 +528,7 @@ void display_body (BODY *body,char *pfx,
  	(body = body->nested.msg->body)) {
        if (body->type == TYPEMULTIPART) display_body (body,pfx,i-1);
        else {			/* build encapsulation prefix */
@@ -237,20 +196,7 @@ $NetBSD: patch-imap_src_mtest_mtest.c,v 1.1 2015/11/08 20:13:24 dholland Exp $
  	display_body (body,tmp,(long) 0);
        }
      }
-@@ -592,10 +641,10 @@ void status (MAILSTREAM *stream)
-  *          pointer to input buffer
-  */
- 
--void prompt (char *msg,char *txt)
-+void prompt (char *msg,char *txt, size_t max)
- {
-   printf ("%s",msg);
--  gets (txt);
-+  dogets (txt, max);
- }
- 
- /* Interfaces to C-client */
-@@ -699,10 +748,13 @@ void mm_login (NETMBX *mb,char *user,cha
+@@ -711,10 +747,13 @@ void mm_login (NETMBX *mb,char *user,cha
    if (curhst) fs_give ((void **) &curhst);
    curhst = (char *) fs_get (1+strlen (mb->host));
    strcpy (curhst,mb->host);
@@ -268,36 +214,3 @@ $NetBSD: patch-imap_src_mtest_mtest.c,v 1.1 2015/11/08 20:13:24 dholland Exp $
    else {
      printf ("%s} username: ",tmp);
      fgets (user,NETMAXUSER-1,stdin);
-@@ -758,14 +810,14 @@ void smtptest (long debug)
-   msg->return_path = mail_newaddr ();
-   msg->return_path->mailbox = cpystr (curusr);
-   msg->return_path->host = cpystr (curhst);
--  prompt ("To: ",line);
-+  prompt ("To: ",line, sizeof(line));
-   rfc822_parse_adrlist (&msg->to,line,curhst);
-   if (msg->to) {
--    prompt ("cc: ",line);
-+    prompt ("cc: ",line, sizeof(line));
-     rfc822_parse_adrlist (&msg->cc,line,curhst);
-   }
-   else {
--    prompt ("Newsgroups: ",line);
-+    prompt ("Newsgroups: ",line, sizeof(line));
-     if (*line) msg->newsgroups = cpystr (line);
-     else {
-       mail_free_body (&body);
-@@ -774,12 +826,12 @@ void smtptest (long debug)
-       return;
-     }
-   }
--  prompt ("Subject: ",line);
-+  prompt ("Subject: ",line, sizeof(line));
-   msg->subject = cpystr (line);
-   puts (" Msg (end with a line with only a '.'):");
-   body->type = TYPETEXT;
-   *text = '\0';
--  while (gets (line)) {
-+  while (dogets (line, sizeof(line))) {
-     if (line[0] == '.') {
-       if (line[1] == '\0') break;
-       else strcat (text,".");
