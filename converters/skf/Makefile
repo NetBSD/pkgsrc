@@ -1,16 +1,17 @@
-# $NetBSD: Makefile,v 1.53 2015/06/29 11:06:46 ryoon Exp $
+# $NetBSD: Makefile,v 1.54 2016/05/15 01:04:45 mef Exp $
 
-DISTNAME=	skf_${VERSION}.10
-VERSION=	1.99
+DISTNAME=	skf_${VERSION}.4
+VERSION=	2.00
 PKGNAME=	${DISTNAME:S/_/-/}
-PKGREVISION=	1
 CATEGORIES=	japanese converters
-MASTER_SITES=	${MASTER_SITE_OSDN:=skf/62262/}
+MASTER_SITES=	${MASTER_SITE_OSDN:=skf/64426/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://osdn.jp/projects/skf/
 COMMENT=	Simple Kanji Filter - i18n kanji converter
-#LICENSE=	modified-bsd # some files are derived from...see ${WRKSRC}/copywrite
+#LICENSE=	modified-bsd # some files are derived from...see ${WRKSRC}/copyright
+# 		and ${PREFIX}/share/doc/skf/copyright
 
 WRKSRC=		${WRKDIR}/skf-${VERSION}
 INSTALL_TARGET=	install locale_install
