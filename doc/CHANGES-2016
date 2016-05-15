@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1971 2016/05/15 14:21:55 taca Exp $
+$NetBSD: CHANGES-2016,v 1.1972 2016/05/15 15:57:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2567,3 +2567,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/ruby23-base to 2.3.1 [taca 2016-05-15]
 	Updated lang/ruby23 to 2.3.1 [taca 2016-05-15]
 	Updated devel/ruby-mode to 2.3.1 [taca 2016-05-15]
+	Updated time/ruby-tzinfo03 to 0.3.49 [taca 2016-05-15]
+	Updated time/ruby-tzinfo-data to 1.2016.4 [taca 2016-05-15]
