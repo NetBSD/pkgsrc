@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1968 2016/05/15 12:57:09 wen Exp $
+$NetBSD: CHANGES-2016,v 1.1969 2016/05/15 14:11:51 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2557,3 +2557,8 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/p5-Email-Folder to 0.860 [wen 2016-05-15]
 	Updated mail/p5-Email-Sender to 1.300028 [wen 2016-05-15]
 	Updated mail/p5-Mail-DeliveryStatus-BounceParser to 0.542 [wen 2016-05-15]
+	Updated lang/ruby22-base to 2.2.5 [taca 2016-05-15]
+	Updated databases/ruby-gdbm to 2.3.0 [taca 2016-05-15]
+	Updated devel/ruby-fiddle to 2.3.0 [taca 2016-05-15]
+	Updated devel/ruby-readline to 2.3.0nb1 [taca 2016-05-15]
+	Updated lang/ruby to 2.3.0 [taca 2016-05-15]
