@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15886 2016/05/14 19:29:57 bsiegert Exp $
+$NetBSD: TODO,v 1.15887 2016/05/15 01:05:16 mef Exp $
 
 Suggested new packages
 ======================
@@ -1080,6 +1080,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o lv2-5.4
 	o lwm-1.2.4
 	o lyx-2.1.4
+	o lzma-9.18
 	o mDNSResponder-576.30.4
 	o mDNSResponder-nss-576.30.4
 	o maelstrom-x11-2.0.7
@@ -1672,7 +1673,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o simgear-3.4.0
 	o sitescooper-3.1.2
 	o sjeng-11.2
-	o skf-2.00
 	o skktools-1.3.3
 	o skype-4.3
 	o slib-3b5
