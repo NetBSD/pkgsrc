@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1962 2016/05/15 10:56:14 wen Exp $
+$NetBSD: CHANGES-2016,v 1.1963 2016/05/15 11:06:24 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2551,3 +2551,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-MooseX-Getopt to 0.70 [wen 2016-05-15]
 	Updated devel/p5-MooseX-Daemonize to 0.21 [wen 2016-05-15]
 	Updated devel/p5-MooseX-Method-Signatures to 0.49 [2016-05-15]
+	Updated devel/p5-MooseX-MethodAttributes to 0.31 [2016-05-16]
