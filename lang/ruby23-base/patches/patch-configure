@@ -1,11 +1,11 @@
-$NetBSD: patch-configure,v 1.1 2015/12/30 14:59:42 taca Exp $
+$NetBSD: patch-configure,v 1.2 2016/05/15 14:19:56 taca Exp $
 
 * Adding Interix support.
 * Ignore doxygen.
 
---- configure.orig	2015-12-24 16:44:18.000000000 +0000
+--- configure.orig	2016-04-25 18:08:47.000000000 +0000
 +++ configure
-@@ -5676,7 +5676,7 @@ esac
+@@ -5678,7 +5678,7 @@ esac
  else
      if test x"$target_alias" = x; then
  	case "$target_os" in #(
@@ -14,9 +14,9 @@ $NetBSD: patch-configure,v 1.1 2015/12/30 14:59:42 taca Exp $
  
  	    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for real target cpu" >&5
  $as_echo_n "checking for real target cpu... " >&6; }
-@@ -9172,6 +9172,10 @@ esac
- 		ac_cv_func_isinf=yes
- 		ac_cv_func_isnan=yes
+@@ -9179,6 +9179,10 @@ esac
+     	LIBS="-lm $LIBS"
+ 		ac_cv_func_round=no
  		 ;; #(
 +  interix*) :
 +	LIBS="-lm $LIBS"
@@ -25,7 +25,7 @@ $NetBSD: patch-configure,v 1.1 2015/12/30 14:59:42 taca Exp $
    nacl) :
  
    LIBS="-lm $LIBS"
-@@ -17900,6 +17904,8 @@ else
+@@ -17907,6 +17911,8 @@ else
  # ifdef _MSC_VER
  #  include <malloc.h>
  #  define alloca _alloca
@@ -34,7 +34,7 @@ $NetBSD: patch-configure,v 1.1 2015/12/30 14:59:42 taca Exp $
  # else
  #  ifdef HAVE_ALLOCA_H
  #   include <alloca.h>
-@@ -22340,7 +22346,9 @@ esac ;; #(
+@@ -22407,7 +22413,9 @@ esac ;; #(
    interix*) :
      	: ${LDSHARED='$(CC) -shared'}
  			XLDFLAGS="$XLDFLAGS -Wl,-E"
@@ -44,7 +44,7 @@ $NetBSD: patch-configure,v 1.1 2015/12/30 14:59:42 taca Exp $
  			rb_cv_dlopen=yes ;; #(
    freebsd*|dragonfly*) :
  
-@@ -23518,7 +23526,7 @@ esac
+@@ -23585,7 +23593,7 @@ esac
    freebsd*|dragonfly*) :
  
  	SOLIBS='$(LIBS)'
@@ -53,7 +53,7 @@ $NetBSD: patch-configure,v 1.1 2015/12/30 14:59:42 taca Exp $
  	if test "$rb_cv_binary_elf" != "yes" ; then
  	    LIBRUBY_SO="$LIBRUBY_SO.\$(TEENY)"
  	    LIBRUBY_ALIASES=''
-@@ -23587,7 +23595,12 @@ esac
+@@ -23654,7 +23662,12 @@ esac
  	 ;; #(
    interix*) :
  
@@ -67,7 +67,7 @@ $NetBSD: patch-configure,v 1.1 2015/12/30 14:59:42 taca Exp $
  	 ;; #(
    mingw*|cygwin*|mswin*) :
  
-@@ -23755,7 +23768,7 @@ if test "$enable_rpath" = yes; then
+@@ -23822,7 +23835,7 @@ if test "$enable_rpath" = yes; then
  esac
      rpathflag=`IFS="$PATH_SEPARATOR"
          echo x "$rpathflag" |
@@ -76,7 +76,7 @@ $NetBSD: patch-configure,v 1.1 2015/12/30 14:59:42 taca Exp $
      `
      LIBRUBY_RPATHFLAGS="$LIBRUBY_RPATHFLAGS${rpathflag}"
      LIBRUBYARG_SHARED="$LIBRUBY_RPATHFLAGS $LIBRUBYARG_SHARED"
-@@ -24146,11 +24159,7 @@ if test "$install_doc" != no; then
+@@ -24213,11 +24226,7 @@ if test "$install_doc" != no; then
      else
  	RDOCTARGET="nodoc"
      fi
@@ -89,7 +89,7 @@ $NetBSD: patch-configure,v 1.1 2015/12/30 14:59:42 taca Exp $
  else
      RDOCTARGET="nodoc"
      CAPITARGET="nodoc"
-@@ -26183,17 +26192,7 @@ which seems to be undefined.  Please mak
+@@ -26250,17 +26259,7 @@ which seems to be undefined.  Please mak
      "Makefile":F)
      tmpmk=confmk$$.tmp
      {
