@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1958 2016/05/15 08:33:19 wen Exp $
+$NetBSD: CHANGES-2016,v 1.1959 2016/05/15 08:41:11 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2547,3 +2547,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-Mojolicious to 6.62 [wen 2016-05-15]
 	Updated devel/p5-MooseX-App to 1.35 [wen 2016-05-15]
 	Updated devel/p5-Moose-Autobox to 0.16 [wen 2016-05-15]
+	Updated devel/p5-MooseX-AttributeHelpers to 0.25 [wen 2016-05-15]
