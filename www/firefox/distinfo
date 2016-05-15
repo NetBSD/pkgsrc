@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.245 2016/05/05 11:46:15 ryoon Exp $
+$NetBSD: distinfo,v 1.246 2016/05/15 07:25:50 ryoon Exp $
 
 SHA1 (firefox-46.0.1.source.tar.xz) = 6705d7d1561dfa156ddd3277dc4a901c4c982d82
 RMD160 (firefox-46.0.1.source.tar.xz) = 4550b03bad6e101bb129645222a8dd3adc8a9646
@@ -75,7 +75,7 @@ SHA1 (patch-js_xpconnect_src_XPCConvert.cpp) = 915777e9bb5366be41866cdb6ea0ad2b1
 SHA1 (patch-js_xpconnect_src_xpcprivate.h) = 8a15ff542c9d3fce448d9ec63706f7dfb411d926
 SHA1 (patch-media_libcubeb_src_cubeb.c) = e55e26dae70ddb51d5668a3f60be37b668299ed3
 SHA1 (patch-media_libcubeb_src_cubeb__alsa.c) = 361942835850eee0a6e77574c380704f8f8ad89b
-SHA1 (patch-media_libcubeb_src_cubeb__oss.c) = 54e2a210411c7083bc395033fbf519d581bc4a62
+SHA1 (patch-media_libcubeb_src_cubeb__oss.c) = 927a7be37289bb2765966d042de4be711be0d144
 SHA1 (patch-media_libcubeb_src_moz.build) = 9d99f250c78ff39dc0f3039fcf3622f7404f0f33
 SHA1 (patch-media_libpng_pngpriv.h) = c9cefd1b5dd85fbd0c875c3f9bc108975398fe3a
 SHA1 (patch-media_libsoundtouch_src_cpu__detect__x86.cpp) = db61737afa7773e8cbd82976de3a02c917174696
