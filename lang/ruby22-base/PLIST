@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/03/08 16:24:55 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/05/15 14:07:48 taca Exp $
 bin/erb${RUBY_SUFFIX}
 bin/gem${RUBY_SUFFIX}
 bin/irb${RUBY_SUFFIX}
@@ -881,7 +881,9 @@ ${RUBY_ARCHLIB}/enc/utf_16be.${RUBY_DLEXT}
 ${RUBY_ARCHLIB}/enc/utf_16le.${RUBY_DLEXT}
 ${RUBY_ARCHLIB}/enc/utf_32be.${RUBY_DLEXT}
 ${RUBY_ARCHLIB}/enc/utf_32le.${RUBY_DLEXT}
+${RUBY_ARCHLIB}/enc/windows_1250.${RUBY_DLEXT}
 ${RUBY_ARCHLIB}/enc/windows_1251.${RUBY_DLEXT}
+${RUBY_ARCHLIB}/enc/windows_1252.${RUBY_DLEXT}
 ${RUBY_ARCHLIB}/enc/windows_31j.${RUBY_DLEXT}
 ${RUBY_ARCHLIB}/etc.${RUBY_DLEXT}
 ${RUBY_ARCHLIB}/fcntl.${RUBY_DLEXT}
