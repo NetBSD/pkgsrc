@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2016/03/17 14:40:35 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/05/15 15:55:40 taca Exp $
 ${GEM_HOME}/cache/${GEM_NAME}.gem
 ${GEM_LIBDIR}/.yardopts
 ${GEM_LIBDIR}/CHANGES
@@ -328,6 +328,7 @@ ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Tel_Aviv.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Thimbu.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Thimphu.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Tokyo.rb
+${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Tomsk.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Ujung_Pandang.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Ulaanbaatar.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Asia/Ulan_Bator.rb
@@ -454,6 +455,7 @@ ${GEM_LIBDIR}/lib/tzinfo/definitions/Europe/Istanbul.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Europe/Jersey.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Europe/Kaliningrad.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Europe/Kiev.rb
+${GEM_LIBDIR}/lib/tzinfo/definitions/Europe/Kirov.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Europe/Lisbon.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Europe/Ljubljana.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/Europe/London.rb
