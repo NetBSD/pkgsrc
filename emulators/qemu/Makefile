@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.148 2015/12/21 12:10:22 ryoon Exp $
+# $NetBSD: Makefile,v 1.149 2016/05/15 01:25:15 ryoon Exp $
 
-DISTNAME=	qemu-2.5.0
+DISTNAME=	qemu-2.6.0
 CATEGORIES=	emulators
 MASTER_SITES=	http://wiki.qemu.org/download/
 EXTRACT_SUFX=	.tar.bz2
@@ -35,6 +35,7 @@ CONFIGURE_ARGS+=	--smbd=${PREFIX}/sbin/smbd
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--enable-curses
 #HF#CONFIGURE_ARGS+=	--disable-fdt			# HF: build on OS X
+CONFIGURE_ARGS+=	--disable-opengl
 CONFIGURE_ENV+=		mansuffix=/${PKGMANDIR}
 
 PKG_SYSCONFSUBDIR=	qemu
