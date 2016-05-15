@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1960 2016/05/15 08:58:40 wen Exp $
+$NetBSD: CHANGES-2016,v 1.1961 2016/05/15 09:06:41 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2549,3 +2549,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Moose-Autobox to 0.16 [wen 2016-05-15]
 	Updated devel/p5-MooseX-AttributeHelpers to 0.25 [wen 2016-05-15]
 	Updated devel/p5-MooseX-Getopt to 0.70 [wen 2016-05-15]
+	Updated devel/p5-MooseX-Daemonize to 0.21 [wen 2016-05-15]
