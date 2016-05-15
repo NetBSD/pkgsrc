@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2016/04/08 14:35:26 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.11 2016/05/15 01:18:57 ryoon Exp $
 bin/libreoffice
 bin/lobase
 bin/localc
@@ -13696,7 +13696,6 @@ ${PKGNAME}/lib/libreoffice/share/xdg/calc.desktop
 ${PKGNAME}/lib/libreoffice/share/xdg/draw.desktop
 ${PKGNAME}/lib/libreoffice/share/xdg/impress.desktop
 ${PKGNAME}/lib/libreoffice/share/xdg/math.desktop
-${PKGNAME}/lib/libreoffice/share/xdg/qstart.desktop
 ${PKGNAME}/lib/libreoffice/share/xdg/startcenter.desktop
 ${PKGNAME}/lib/libreoffice/share/xdg/writer.desktop
 ${PKGNAME}/lib/libreoffice/share/xdg/xsltfilter.desktop
