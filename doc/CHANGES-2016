@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1966 2016/05/15 11:45:28 wen Exp $
+$NetBSD: CHANGES-2016,v 1.1967 2016/05/15 11:54:52 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2555,3 +2555,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-MooseX-Role-WithOverloading to 0.17 [wen 2016-05-15]
 	Updated devel/p5-MooseX-Types-Structured to 0.35 [wen 2016-05-15]
 	Updated mail/p5-Email-Folder to 0.860 [wen 2016-05-15]
+	Updated mail/p5-Email-Sender to 1.300028 [wen 2016-05-15]
