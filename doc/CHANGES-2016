@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1969 2016/05/15 14:11:51 taca Exp $
+$NetBSD: CHANGES-2016,v 1.1970 2016/05/15 14:18:59 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2562,3 +2562,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ruby-fiddle to 2.3.0 [taca 2016-05-15]
 	Updated devel/ruby-readline to 2.3.0nb1 [taca 2016-05-15]
 	Updated lang/ruby to 2.3.0 [taca 2016-05-15]
+	Updated lang/ruby21-base to 2.1.10 [taca 2016-05-15]
+	Updated lang/ruby21 to 2.1.10 [taca 2016-05-15]
