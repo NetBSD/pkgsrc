@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1952 2016/05/14 21:06:42 mef Exp $
+$NetBSD: CHANGES-2016,v 1.1953 2016/05/15 01:05:16 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2541,3 +2541,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/re-alpine to 2.03 [bsiegert 2016-05-14]
 	Updated mail/alpine to 2.20 [bsiegert 2016-05-14]
 	Updated archivers/sarab to 1.0.0 [mef 2016-05-14]
+	Updated converters/skf to 2.00.4 [mef 2016-05-15]
