@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2015/11/03 03:28:31 agc Exp $
+$NetBSD: distinfo,v 1.8 2016/05/15 08:32:31 wen Exp $
 
-SHA1 (Moose-Autobox-0.15.tar.gz) = 857663b15cd00fa5383a1b79e8ac463cc63a58f5
-RMD160 (Moose-Autobox-0.15.tar.gz) = 32d266372990dbbd875d41fa8690bef1ea7be8f9
-SHA512 (Moose-Autobox-0.15.tar.gz) = 7c030a081692c5818f76f910869bc3431100b6e68d40712e33c3a5e0043633a2ac22cc5bbc69b224c35f05fb9f82f81b98b1c93adc854d4ae741dfeb5c9cf79d
-Size (Moose-Autobox-0.15.tar.gz) = 16193 bytes
+SHA1 (Moose-Autobox-0.16.tar.gz) = 26a44cb374485d41232f42b7c459056a44951d4e
+RMD160 (Moose-Autobox-0.16.tar.gz) = 16258023f8ba0cba4ac798c4f380674bbda4933d
+SHA512 (Moose-Autobox-0.16.tar.gz) = 7126de94e5c58c91e80eac5928b128e07314abfa3668c4b6655eaea61fcda53a0e761b2e0dd10052c24fc4e77c09eb4784afe59e9539a2866ad37aae2b37ae5e
+Size (Moose-Autobox-0.16.tar.gz) = 42604 bytes
