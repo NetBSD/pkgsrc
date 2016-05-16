@@ -1,11 +1,14 @@
-$NetBSD: patch-src_libjasper_jpc_jpc__qmfb.c,v 1.1 2015/02/08 23:04:22 snj Exp $
+$NetBSD: patch-src_libjasper_jpc_jpc__qmfb.c,v 1.2 2016/05/16 14:03:40 he Exp $
 
 Fix CVE-2014-8158.  Patch taken from
 https://bugzilla.redhat.com/show_bug.cgi?id=1179298
 
---- src/libjasper/jpc/jpc_qmfb.c.orig	2007-01-19 13:43:07.000000000 -0800
-+++ src/libjasper/jpc/jpc_qmfb.c	2015-02-08 14:49:33.000000000 -0800
-@@ -306,11 +306,7 @@ void jpc_qmfb_split_row(jpc_fix_t *a, in
+Fix CVE-2008-3520, patches from
+https://bugs.gentoo.org/show_bug.cgi?id=222819
+
+--- src/libjasper/jpc/jpc_qmfb.c.old	2016-03-31 14:47:00.000000000 +0200
++++ src/libjasper/jpc/jpc_qmfb.c	2016-03-31 14:48:03.000000000 +0200
+@@ -306,11 +306,7 @@
  {
  
  	int bufsize = JPC_CEILDIVPOW2(numcols, 1);
@@ -17,15 +20,16 @@ https://bugzilla.redhat.com/show_bug.cgi?id=1179298
  	jpc_fix_t *buf = splitbuf;
  	register jpc_fix_t *srcptr;
  	register jpc_fix_t *dstptr;
-@@ -318,7 +314,6 @@ void jpc_qmfb_split_row(jpc_fix_t *a, in
+@@ -318,15 +314,13 @@
  	register int m;
  	int hstartcol;
  
 -#if !defined(HAVE_VLA)
  	/* Get a buffer. */
  	if (bufsize > QMFB_SPLITBUFSIZE) {
- 		if (!(buf = jas_malloc(bufsize * sizeof(jpc_fix_t)))) {
-@@ -326,7 +321,6 @@ void jpc_qmfb_split_row(jpc_fix_t *a, in
+-		if (!(buf = jas_malloc(bufsize * sizeof(jpc_fix_t)))) {
++		if (!(buf = jas_alloc2(bufsize, sizeof(jpc_fix_t)))) {
+ 			/* We have no choice but to commit suicide in this case. */
  			abort();
  		}
  	}
@@ -33,7 +37,7 @@ https://bugzilla.redhat.com/show_bug.cgi?id=1179298
  
  	if (numcols >= 2) {
  		hstartcol = (numcols + 1 - parity) >> 1;
-@@ -360,12 +354,10 @@ void jpc_qmfb_split_row(jpc_fix_t *a, in
+@@ -360,12 +354,10 @@
  		}
  	}
  
@@ -46,7 +50,7 @@ https://bugzilla.redhat.com/show_bug.cgi?id=1179298
  
  }
  
-@@ -374,11 +366,7 @@ void jpc_qmfb_split_col(jpc_fix_t *a, in
+@@ -374,11 +366,7 @@
  {
  
  	int bufsize = JPC_CEILDIVPOW2(numrows, 1);
@@ -58,15 +62,16 @@ https://bugzilla.redhat.com/show_bug.cgi?id=1179298
  	jpc_fix_t *buf = splitbuf;
  	register jpc_fix_t *srcptr;
  	register jpc_fix_t *dstptr;
-@@ -386,7 +374,6 @@ void jpc_qmfb_split_col(jpc_fix_t *a, in
+@@ -386,15 +374,13 @@
  	register int m;
  	int hstartcol;
  
 -#if !defined(HAVE_VLA)
  	/* Get a buffer. */
  	if (bufsize > QMFB_SPLITBUFSIZE) {
- 		if (!(buf = jas_malloc(bufsize * sizeof(jpc_fix_t)))) {
-@@ -394,7 +381,6 @@ void jpc_qmfb_split_col(jpc_fix_t *a, in
+-		if (!(buf = jas_malloc(bufsize * sizeof(jpc_fix_t)))) {
++		if (!(buf = jas_alloc2(bufsize, sizeof(jpc_fix_t)))) {
+ 			/* We have no choice but to commit suicide in this case. */
  			abort();
  		}
  	}
@@ -74,7 +79,7 @@ https://bugzilla.redhat.com/show_bug.cgi?id=1179298
  
  	if (numrows >= 2) {
  		hstartcol = (numrows + 1 - parity) >> 1;
-@@ -428,12 +414,10 @@ void jpc_qmfb_split_col(jpc_fix_t *a, in
+@@ -428,12 +414,10 @@
  		}
  	}
  
@@ -87,7 +92,7 @@ https://bugzilla.redhat.com/show_bug.cgi?id=1179298
  
  }
  
-@@ -442,11 +426,7 @@ void jpc_qmfb_split_colgrp(jpc_fix_t *a,
+@@ -442,11 +426,7 @@
  {
  
  	int bufsize = JPC_CEILDIVPOW2(numrows, 1);
@@ -99,15 +104,16 @@ https://bugzilla.redhat.com/show_bug.cgi?id=1179298
  	jpc_fix_t *buf = splitbuf;
  	jpc_fix_t *srcptr;
  	jpc_fix_t *dstptr;
-@@ -457,7 +437,6 @@ void jpc_qmfb_split_colgrp(jpc_fix_t *a,
+@@ -457,15 +437,13 @@
  	int m;
  	int hstartcol;
  
 -#if !defined(HAVE_VLA)
  	/* Get a buffer. */
  	if (bufsize > QMFB_SPLITBUFSIZE) {
- 		if (!(buf = jas_malloc(bufsize * sizeof(jpc_fix_t)))) {
-@@ -465,7 +444,6 @@ void jpc_qmfb_split_colgrp(jpc_fix_t *a,
+-		if (!(buf = jas_malloc(bufsize * sizeof(jpc_fix_t)))) {
++		if (!(buf = jas_alloc2(bufsize, sizeof(jpc_fix_t)))) {
+ 			/* We have no choice but to commit suicide in this case. */
  			abort();
  		}
  	}
@@ -115,7 +121,7 @@ https://bugzilla.redhat.com/show_bug.cgi?id=1179298
  
  	if (numrows >= 2) {
  		hstartcol = (numrows + 1 - parity) >> 1;
-@@ -517,12 +495,10 @@ void jpc_qmfb_split_colgrp(jpc_fix_t *a,
+@@ -517,12 +495,10 @@
  		}
  	}
  
@@ -128,7 +134,7 @@ https://bugzilla.redhat.com/show_bug.cgi?id=1179298
  
  }
  
-@@ -531,11 +507,7 @@ void jpc_qmfb_split_colres(jpc_fix_t *a,
+@@ -531,11 +507,7 @@
  {
  
  	int bufsize = JPC_CEILDIVPOW2(numrows, 1);
@@ -140,15 +146,16 @@ https://bugzilla.redhat.com/show_bug.cgi?id=1179298
  	jpc_fix_t *buf = splitbuf;
  	jpc_fix_t *srcptr;
  	jpc_fix_t *dstptr;
-@@ -546,7 +518,6 @@ void jpc_qmfb_split_colres(jpc_fix_t *a,
+@@ -546,15 +518,13 @@
  	int m;
  	int hstartcol;
  
 -#if !defined(HAVE_VLA)
  	/* Get a buffer. */
  	if (bufsize > QMFB_SPLITBUFSIZE) {
- 		if (!(buf = jas_malloc(bufsize * sizeof(jpc_fix_t)))) {
-@@ -554,7 +525,6 @@ void jpc_qmfb_split_colres(jpc_fix_t *a,
+-		if (!(buf = jas_malloc(bufsize * sizeof(jpc_fix_t)))) {
++		if (!(buf = jas_alloc2(bufsize, sizeof(jpc_fix_t)))) {
+ 			/* We have no choice but to commit suicide in this case. */
  			abort();
  		}
  	}
@@ -156,7 +163,7 @@ https://bugzilla.redhat.com/show_bug.cgi?id=1179298
  
  	if (numrows >= 2) {
  		hstartcol = (numrows + 1 - parity) >> 1;
-@@ -606,12 +576,10 @@ void jpc_qmfb_split_colres(jpc_fix_t *a,
+@@ -606,12 +576,10 @@
  		}
  	}
  
@@ -169,7 +176,7 @@ https://bugzilla.redhat.com/show_bug.cgi?id=1179298
  
  }
  
-@@ -619,18 +587,13 @@ void jpc_qmfb_join_row(jpc_fix_t *a, int
+@@ -619,26 +587,20 @@
  {
  
  	int bufsize = JPC_CEILDIVPOW2(numcols, 1);
@@ -187,8 +194,9 @@ https://bugzilla.redhat.com/show_bug.cgi?id=1179298
 -#if !defined(HAVE_VLA)
  	/* Allocate memory for the join buffer from the heap. */
  	if (bufsize > QMFB_JOINBUFSIZE) {
- 		if (!(buf = jas_malloc(bufsize * sizeof(jpc_fix_t)))) {
-@@ -638,7 +601,6 @@ void jpc_qmfb_join_row(jpc_fix_t *a, int
+-		if (!(buf = jas_malloc(bufsize * sizeof(jpc_fix_t)))) {
++		if (!(buf = jas_alloc2(bufsize, sizeof(jpc_fix_t)))) {
+ 			/* We have no choice but to commit suicide. */
  			abort();
  		}
  	}
@@ -196,7 +204,7 @@ https://bugzilla.redhat.com/show_bug.cgi?id=1179298
  
  	hstartcol = (numcols + 1 - parity) >> 1;
  
-@@ -670,12 +632,10 @@ void jpc_qmfb_join_row(jpc_fix_t *a, int
+@@ -670,12 +632,10 @@
  		++srcptr;
  	}
  
@@ -209,7 +217,7 @@ https://bugzilla.redhat.com/show_bug.cgi?id=1179298
  
  }
  
-@@ -684,18 +644,13 @@ void jpc_qmfb_join_col(jpc_fix_t *a, int
+@@ -684,26 +644,20 @@
  {
  
  	int bufsize = JPC_CEILDIVPOW2(numrows, 1);
@@ -227,8 +235,9 @@ https://bugzilla.redhat.com/show_bug.cgi?id=1179298
 -#if !defined(HAVE_VLA)
  	/* Allocate memory for the join buffer from the heap. */
  	if (bufsize > QMFB_JOINBUFSIZE) {
- 		if (!(buf = jas_malloc(bufsize * sizeof(jpc_fix_t)))) {
-@@ -703,7 +658,6 @@ void jpc_qmfb_join_col(jpc_fix_t *a, int
+-		if (!(buf = jas_malloc(bufsize * sizeof(jpc_fix_t)))) {
++		if (!(buf = jas_alloc2(bufsize, sizeof(jpc_fix_t)))) {
+ 			/* We have no choice but to commit suicide. */
  			abort();
  		}
  	}
@@ -236,7 +245,7 @@ https://bugzilla.redhat.com/show_bug.cgi?id=1179298
  
  	hstartcol = (numrows + 1 - parity) >> 1;
  
-@@ -735,12 +689,10 @@ void jpc_qmfb_join_col(jpc_fix_t *a, int
+@@ -735,12 +689,10 @@
  		++srcptr;
  	}
  
@@ -249,7 +258,7 @@ https://bugzilla.redhat.com/show_bug.cgi?id=1179298
  
  }
  
-@@ -749,11 +701,7 @@ void jpc_qmfb_join_colgrp(jpc_fix_t *a, 
+@@ -749,11 +701,7 @@
  {
  
  	int bufsize = JPC_CEILDIVPOW2(numrows, 1);
@@ -261,15 +270,16 @@ https://bugzilla.redhat.com/show_bug.cgi?id=1179298
  	jpc_fix_t *buf = joinbuf;
  	jpc_fix_t *srcptr;
  	jpc_fix_t *dstptr;
-@@ -763,7 +711,6 @@ void jpc_qmfb_join_colgrp(jpc_fix_t *a, 
+@@ -763,15 +711,13 @@
  	register int i;
  	int hstartcol;
  
 -#if !defined(HAVE_VLA)
  	/* Allocate memory for the join buffer from the heap. */
  	if (bufsize > QMFB_JOINBUFSIZE) {
- 		if (!(buf = jas_malloc(bufsize * JPC_QMFB_COLGRPSIZE * sizeof(jpc_fix_t)))) {
-@@ -771,7 +718,6 @@ void jpc_qmfb_join_colgrp(jpc_fix_t *a, 
+-		if (!(buf = jas_malloc(bufsize * JPC_QMFB_COLGRPSIZE * sizeof(jpc_fix_t)))) {
++		if (!(buf = jas_alloc2(bufsize, JPC_QMFB_COLGRPSIZE * sizeof(jpc_fix_t)))) {
+ 			/* We have no choice but to commit suicide. */
  			abort();
  		}
  	}
@@ -277,7 +287,7 @@ https://bugzilla.redhat.com/show_bug.cgi?id=1179298
  
  	hstartcol = (numrows + 1 - parity) >> 1;
  
-@@ -821,12 +767,10 @@ void jpc_qmfb_join_colgrp(jpc_fix_t *a, 
+@@ -821,12 +767,10 @@
  		srcptr += JPC_QMFB_COLGRPSIZE;
  	}
  
@@ -290,7 +300,7 @@ https://bugzilla.redhat.com/show_bug.cgi?id=1179298
  
  }
  
-@@ -835,11 +779,7 @@ void jpc_qmfb_join_colres(jpc_fix_t *a, 
+@@ -835,11 +779,7 @@
  {
  
  	int bufsize = JPC_CEILDIVPOW2(numrows, 1);
@@ -302,15 +312,16 @@ https://bugzilla.redhat.com/show_bug.cgi?id=1179298
  	jpc_fix_t *buf = joinbuf;
  	jpc_fix_t *srcptr;
  	jpc_fix_t *dstptr;
-@@ -849,7 +789,6 @@ void jpc_qmfb_join_colres(jpc_fix_t *a, 
+@@ -849,15 +789,13 @@
  	register int i;
  	int hstartcol;
  
 -#if !defined(HAVE_VLA)
  	/* Allocate memory for the join buffer from the heap. */
  	if (bufsize > QMFB_JOINBUFSIZE) {
- 		if (!(buf = jas_malloc(bufsize * numcols * sizeof(jpc_fix_t)))) {
-@@ -857,7 +796,6 @@ void jpc_qmfb_join_colres(jpc_fix_t *a, 
+-		if (!(buf = jas_malloc(bufsize * numcols * sizeof(jpc_fix_t)))) {
++		if (!(buf = jas_alloc3(bufsize, numcols, sizeof(jpc_fix_t)))) {
+ 			/* We have no choice but to commit suicide. */
  			abort();
  		}
  	}
@@ -318,7 +329,7 @@ https://bugzilla.redhat.com/show_bug.cgi?id=1179298
  
  	hstartcol = (numrows + 1 - parity) >> 1;
  
-@@ -907,12 +845,10 @@ void jpc_qmfb_join_colres(jpc_fix_t *a, 
+@@ -907,12 +845,10 @@
  		srcptr += numcols;
  	}
  
