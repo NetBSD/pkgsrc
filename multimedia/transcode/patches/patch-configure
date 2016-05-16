@@ -1,11 +1,21 @@
-$NetBSD: patch-configure,v 1.1 2015/11/21 17:14:26 adam Exp $
+$NetBSD: patch-configure,v 1.2 2016/05/16 19:41:17 adam Exp $
 
+Fix for ImageMagic v7.
 Add DragonFly support.
 Make use of PTHREAD_LDFLAGS.
 Portability fix.
 
 --- configure.orig	2011-11-19 16:50:37.000000000 +0000
 +++ configure
+@@ -1868,7 +1868,7 @@ Optional Packages:
+   --with-imagemagick-prefix=PFX
+                           prefix where imagemagick is installed (/usr)
+   --with-imagemagick-includes=DIR
+-                          directory where imagemagick headers (magick/api.h)
++                          directory where imagemagick headers (MagickCore/MagickCore.h)
+                           are installed (/usr/include)
+   --with-imagemagick-libs=DIR
+                           directory where imagemagick libraries (libnone.so)
 @@ -5096,7 +5096,7 @@ case "${target_os}" in
  $as_echo "#define OS_LINUX 1" >>confdefs.h
  
@@ -24,6 +34,75 @@ Portability fix.
  fi
  if test -n "$PTHREAD_CFLAGS" ; then
    pthread_cflags="$PTHREAD_CFLAGS"
+@@ -27651,7 +27651,7 @@ if test x"$enable_imagemagick" = x"yes" 
+   { $as_echo "$as_me:${as_lineno-$LINENO}: checking for pkgconfig support for imagemagick" >&5
+ $as_echo_n "checking for pkgconfig support for imagemagick... " >&6; }
+   if test x"$PKG_CONFIG" != x"no" ; then
+-    if $PKG_CONFIG Wand --exists ; then
++    if $PKG_CONFIG MagickWand --exists ; then
+       pkg_config_imagemagick="yes"
+     fi
+   fi
+@@ -27720,7 +27720,7 @@ $as_echo_n "checking how to determine IM
+ $as_echo "user" >&6; }
+   else
+     if test x"$pkg_config_imagemagick" != x"no" ; then
+-      imagemagick_ii="`$PKG_CONFIG Wand --cflags`"
++      imagemagick_ii="`$PKG_CONFIG MagickWand --cflags`"
+       { $as_echo "$as_me:${as_lineno-$LINENO}: result: pkg-config" >&5
+ $as_echo "pkg-config" >&6; }
+     else
+@@ -27753,10 +27753,10 @@ $as_echo "default" >&6; }
+   IMAGEMAGICK_EXTRA_CFLAGS="$IMAGEMAGICK_EXTRA_CFLAGS $xi"
+   IMAGEMAGICK_EXTRA_CFLAGS="`echo $IMAGEMAGICK_EXTRA_CFLAGS | sed -e 's/  */ /g'`"
+ 
+-  if test x"magick/api.h" != x"none" ; then
++  if test x"MagickCore/MagickCore.h" != x"none" ; then
+     save_CPPFLAGS="$CPPFLAGS"
+     CPPFLAGS="$CPPFLAGS $imagemagick_ii"
+-    ac_fn_c_check_header_mongrel "$LINENO" "magick/api.h" "ac_cv_header_magick_api_h" "$ac_includes_default"
++    ac_fn_c_check_header_mongrel "$LINENO" "MagickCore/MagickCore.h" "ac_cv_header_magick_api_h" "$ac_includes_default"
+ if test "x$ac_cv_header_magick_api_h" = xyes; then :
+   IMAGEMAGICK_CFLAGS="$imagemagick_ii"
+ else
+@@ -27771,8 +27771,8 @@ if test x"no" != x"optional" ; then
+   else
+     prob="option '--enable-imagemagick' failed"
+   fi
+-  msg="ERROR: $prob: cannot compile magick/api.h
+-magick/api.h can be found in the following packages:
++  msg="ERROR: $prob: cannot compile MagickCore/MagickCore.h
++MagickCore/MagickCore.h can be found in the following packages:
+   Wand  http://www.imagemagick.org/
+ 
+ "
+@@ -27784,7 +27784,7 @@ fi
+ 
+     CPPFLAGS="$save_CPPFLAGS"
+   elif test x"$pkg_config_imagemagick" != x"no" ; then
+-     IMAGEMAGICK_CFLAGS="`$PKG_CONFIG Wand --cflags`"
++     IMAGEMAGICK_CFLAGS="`$PKG_CONFIG MagickWand --cflags`"
+   fi
+ 
+   # get and test the _LIBS
+@@ -27797,7 +27797,7 @@ $as_echo_n "checking how to determine IM
+ $as_echo "user" >&6; }
+   else
+     if test x"$pkg_config_imagemagick" != x"no" ; then
+-      imagemagick_ll="`$PKG_CONFIG Wand --libs`"
++      imagemagick_ll="`$PKG_CONFIG MagickWand --libs`"
+       { $as_echo "$as_me:${as_lineno-$LINENO}: result: pkg-config" >&5
+ $as_echo "pkg-config" >&6; }
+     else
+@@ -27900,7 +27900,7 @@ fi
+ 
+     LDFLAGS="$save_LDFLAGS"
+   elif test x"$pkg_config_imagemagick" != x"no" ; then
+-     IMAGEMAGICK_LIBS="`$PKG_CONFIG Wand --libs`"
++     IMAGEMAGICK_LIBS="`$PKG_CONFIG MagickWand --libs`"
+   fi
+ 
+   if test x"$this_pkg_err" = x"no" ; then
 @@ -29507,7 +29507,7 @@ if test "${enable_nuv+set}" = set; then 
      yes) if test yes != "$have_lzo"; then
             as_fn_error $? "liblzo2 is required for NuppelVideo support, try --enable-lzo" "$LINENO" 5

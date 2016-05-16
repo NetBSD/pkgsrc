@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2015/11/21 17:14:26 adam Exp $
+@comment $NetBSD: PLIST,v 1.19 2016/05/16 19:41:17 adam Exp $
 bin/avifix
 bin/aviindex
 bin/avimerge
@@ -25,6 +25,7 @@ lib/transcode/export_ffmpeg.la
 ${PLIST.imagemagick}lib/transcode/export_im.la
 lib/transcode/export_jpg.la
 lib/transcode/export_lame.la
+${PLIST.lzo}lib/transcode/export_lzo.la
 lib/transcode/export_mp2.la
 ${PLIST.mjpegtools}lib/transcode/export_mp2enc.la
 ${PLIST.mjpegtools}lib/transcode/export_mpeg2enc.la
@@ -40,7 +41,6 @@ lib/transcode/export_wav.la
 lib/transcode/export_xvid.so
 lib/transcode/export_xvid4.la
 ${PLIST.mjpegtools}lib/transcode/export_yuv4mpeg.la
-${PLIST.lzo}lib/transcode/export_lzo.la
 lib/transcode/filter_29to23.la
 lib/transcode/filter_32detect.la
 lib/transcode/filter_32drop.la
