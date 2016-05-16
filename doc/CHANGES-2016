@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1982 2016/05/16 14:07:47 nils Exp $
+$NetBSD: CHANGES-2016,v 1.1983 2016/05/16 14:22:49 nils Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2584,3 +2584,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added devel/py-ruamel-yaml version 0.10.23 [nils 2016-05-16]
 	Updated graphics/jasper to 1.900.1nb12 [he 2016-05-16]
 	Added devel/py-whichcraft version 0.1.1 [nils 2016-05-16]
+	Added devel/py-binaryornot version 0.4.0 [nils 2016-05-16]
