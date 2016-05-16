@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2016/05/03 11:40:04 prlw1 Exp $
+# $NetBSD: Makefile,v 1.114 2016/05/16 11:51:49 ryoon Exp $
 #
 
 .include "../../inputmethod/uim/Makefile.common"
@@ -18,6 +18,8 @@ GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--disable-emacs
 CONFIGURE_ARGS+=	--with-libgcroots=installed
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
+
+CFLAGS+=		-g
 
 LDFLAGS.SunOS+=	-mimpure-text
 CFLAGS.SunOS+=	-std=c99 -D__EXTENSIONS__

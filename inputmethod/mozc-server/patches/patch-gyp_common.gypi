@@ -1,6 +1,6 @@
-$NetBSD: patch-gyp_common.gypi,v 1.7 2015/07/31 13:07:05 ryoon Exp $
+$NetBSD: patch-gyp_common.gypi,v 1.8 2016/05/16 11:51:49 ryoon Exp $
 
---- gyp/common.gypi.orig	2015-06-07 07:16:23.000000000 +0000
+--- gyp/common.gypi.orig	2016-05-15 08:11:11.000000000 +0000
 +++ gyp/common.gypi
 @@ -158,7 +158,7 @@
          'compiler_host': 'clang',
@@ -20,16 +20,7 @@ $NetBSD: patch-gyp_common.gypi,v 1.7 2015/07/31 13:07:05 ryoon Exp $
  
      # Represents the directory where the source code of protobuf is
      # extracted. This value is ignored when 'use_libprotobuf' is 1.
-@@ -300,7 +300,7 @@
-           ['channel_dev==1', {
-             'defines': ['CHANNEL_DEV'],
-           }],
--          ['OS=="linux"', {
-+          ['OS=="linux" or OS=="netbsd"', {
-             'ldflags': [
-               '<@(linux_ldflags)',
-             ],
-@@ -523,7 +523,7 @@
+@@ -415,7 +415,7 @@
            },
          },
          'conditions': [
@@ -38,7 +29,7 @@ $NetBSD: patch-gyp_common.gypi,v 1.7 2015/07/31 13:07:05 ryoon Exp $
              'cflags': [
                '<@(debug_extra_cflags)',
              ],
-@@ -589,7 +589,7 @@
+@@ -481,7 +481,7 @@
            },
          },
          'conditions': [
@@ -47,7 +38,16 @@ $NetBSD: patch-gyp_common.gypi,v 1.7 2015/07/31 13:07:05 ryoon Exp $
              'cflags': [
                '<@(release_extra_cflags)',
              ],
-@@ -814,6 +814,22 @@
+@@ -578,7 +578,7 @@
+       ['channel_dev==1', {
+         'defines': ['CHANNEL_DEV'],
+       }],
+-      ['OS=="linux"', {
++      ['OS=="linux" or OS=="netbsd"', {
+         'ldflags': [
+           '<@(linux_ldflags)',
+         ],
+@@ -807,6 +807,22 @@
            }],
          ],
        }],

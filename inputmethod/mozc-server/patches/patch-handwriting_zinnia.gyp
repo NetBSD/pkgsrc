@@ -1,13 +1,13 @@
-$NetBSD: patch-handwriting_zinnia.gyp,v 1.1 2014/01/19 01:18:50 ryoon Exp $
+$NetBSD: patch-handwriting_zinnia.gyp,v 1.2 2016/05/16 11:51:49 ryoon Exp $
 
---- handwriting/zinnia.gyp.orig	2014-01-06 07:10:31.000000000 +0000
+--- handwriting/zinnia.gyp.orig	2016-05-15 08:11:11.000000000 +0000
 +++ handwriting/zinnia.gyp
-@@ -48,7 +48,7 @@
-         '-Wno-type-limits',
-       ],
-       'conditions': [
--        ['OS=="linux"', {
-+        ['OS=="linux" or OS=="netbsd"', {
-           'conditions': [
-             ['use_libzinnia==1', {
-               'link_settings': {
+@@ -80,7 +80,7 @@
+                 'VERSION="0.06"',
+               ],
+             }],
+-            ['target_platform=="Linux" or target_platform=="Mac"', {
++            ['target_platform=="Linux" or target_platform=="Mac" or target_platform=="NetBSD"', {
+               'defines': [
+                 'HAVE_CONFIG_H=1'
+               ],

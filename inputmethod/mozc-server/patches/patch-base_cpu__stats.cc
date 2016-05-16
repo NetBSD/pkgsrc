@@ -1,20 +1,20 @@
-$NetBSD: patch-base_cpu__stats.cc,v 1.1 2013/04/29 09:52:16 ryoon Exp $
+$NetBSD: patch-base_cpu__stats.cc,v 1.2 2016/05/16 11:51:49 ryoon Exp $
 
---- base/cpu_stats.cc.orig	2012-08-31 05:37:06.000000000 +0000
+--- base/cpu_stats.cc.orig	2016-05-15 08:11:10.000000000 +0000
 +++ base/cpu_stats.cc
 @@ -123,13 +123,13 @@ float CPUStats::GetSystemCPULoad() {
  
  #endif  // OS_MACOSX
  
--#ifdef OS_LINUX
-+#if defined(OS_LINUX) || defined(OS_NETBSD)
+-#if defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_NACL)
++#if defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_NACL) || defined(OS_NETBSD)
    // NOT IMPLEMENTED
    // TODO(taku): implement Linux version
    // can take the info from /proc/stats
    const uint64 total_times = 0;
    const uint64 cpu_times = 0;
--#endif  // OS_LINUX
-+#endif  // OS_LINUX || OS_NETBSD
+-#endif  // OS_LINUX || OS_ANDROID || OS_NACL
++#endif  // OS_LINUX || OS_ANDROID || OS_NACL || OS_NETBSD
  
    return UpdateCPULoad(total_times,
                         cpu_times,
@@ -22,13 +22,13 @@ $NetBSD: patch-base_cpu__stats.cc,v 1.1 2013/04/29 09:52:16 ryoon Exp $
        TimeValueTToInt64(task_times_info.system_time);
  #endif  // OS_MACOSX
  
--#ifdef OS_LINUX
-+#if defined(OS_LINUX) || defined(OS_NETBSD)
+-#if defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_NACL)
++#if defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_NACL) || defined(OS_NETBSD)
    // not implemented
    const uint64 total_times = 0;
    const uint64 cpu_times = 0;
--#endif  // OS_LINUX
-+#endif  // OS_LINUX || OS_NETBSD
+-#endif  // OS_LINUX || OS_ANDROID || OS_NACL
++#endif  // OS_LINUX || OS_ANDROID || OS_NACL || OS_NETBSD
  
    return UpdateCPULoad(total_times,
                         cpu_times,
@@ -36,11 +36,11 @@ $NetBSD: patch-base_cpu__stats.cc,v 1.1 2013/04/29 09:52:16 ryoon Exp $
    return static_cast<size_t>(basic_info.avail_cpus);
  #endif  // OS_MACOSX
  
--#ifdef OS_LINUX
-+#if defined(OS_LINUX) || defined(OS_NETBSD)
+-#if defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_NACL)
++#if defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_NACL) || defined(OS_NETBSD)
    // Not implemented
    return 1;
 -#endif  // OS_LINUX
-+#endif  // OS_LINUX || OS_NETBSD
++#endif  // OS_LINUX || OS_ANDROID || OS_NACL || OS_NETBSD
  }
  }  // namespace mozc
