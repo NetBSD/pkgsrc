@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1980 2016/05/16 13:55:48 nils Exp $
+$NetBSD: CHANGES-2016,v 1.1981 2016/05/16 14:04:43 he Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2582,3 +2582,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added devel/py-ruamel-base version 1.0.0 [nils 2016-05-16]
 	Updated textproc/py-xlsxwriter to 0.8.7 [fhajny 2016-05-16]
 	Added devel/py-ruamel-yaml version 0.10.23 [nils 2016-05-16]
+	Updated graphics/jasper to 1.900.1nb12 [he 2016-05-16]
