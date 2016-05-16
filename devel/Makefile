@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2257 2016/05/16 13:53:34 nils Exp $
+# $NetBSD: Makefile,v 1.2258 2016/05/16 14:06:52 nils Exp $
 #
 
 COMMENT=	Development utilities
@@ -1867,6 +1867,7 @@ SUBDIR+=	py-urwid
 SUBDIR+=	py-usb
 SUBDIR+=	py-virtualenv
 SUBDIR+=	py-wheel
+SUBDIR+=	py-whichcraft
 SUBDIR+=	py-windbg
 SUBDIR+=	py-wrapt
 SUBDIR+=	py-xdg
