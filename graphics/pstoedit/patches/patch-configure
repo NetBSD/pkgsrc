@@ -1,0 +1,60 @@
+$NetBSD: patch-configure,v 1.1 2016/05/16 20:17:10 adam Exp $
+
+Pedantry leads to compilation errors.
+Use GraphicsMagick, because ImageMagick's v7 API is incompatible.
+
+--- configure.orig	2014-12-28 20:39:58.000000000 +0000
++++ configure
+@@ -16701,12 +16701,12 @@ if test -n "$LIBMAGICK_CFLAGS"; then
+     pkg_cv_LIBMAGICK_CFLAGS="$LIBMAGICK_CFLAGS"
+  elif test -n "$PKG_CONFIG"; then
+     if test -n "$PKG_CONFIG" && \
+-    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"ImageMagick++\""; } >&5
+-  ($PKG_CONFIG --exists --print-errors "ImageMagick++") 2>&5
++    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"GraphicsMagick++\""; } >&5
++  ($PKG_CONFIG --exists --print-errors "GraphicsMagick++") 2>&5
+   ac_status=$?
+   $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+   test $ac_status = 0; }; then
+-  pkg_cv_LIBMAGICK_CFLAGS=`$PKG_CONFIG --cflags "ImageMagick++" 2>/dev/null`
++  pkg_cv_LIBMAGICK_CFLAGS=`$PKG_CONFIG --cflags "GraphicsMagick++" 2>/dev/null`
+ 		      test "x$?" != "x0" && pkg_failed=yes
+ else
+   pkg_failed=yes
+@@ -16718,12 +16718,12 @@ if test -n "$LIBMAGICK_LIBS"; then
+     pkg_cv_LIBMAGICK_LIBS="$LIBMAGICK_LIBS"
+  elif test -n "$PKG_CONFIG"; then
+     if test -n "$PKG_CONFIG" && \
+-    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"ImageMagick++\""; } >&5
+-  ($PKG_CONFIG --exists --print-errors "ImageMagick++") 2>&5
++    { { $as_echo "$as_me:${as_lineno-$LINENO}: \$PKG_CONFIG --exists --print-errors \"GraphicsMagick++\""; } >&5
++  ($PKG_CONFIG --exists --print-errors "GraphicsMagick++") 2>&5
+   ac_status=$?
+   $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+   test $ac_status = 0; }; then
+-  pkg_cv_LIBMAGICK_LIBS=`$PKG_CONFIG --libs "ImageMagick++" 2>/dev/null`
++  pkg_cv_LIBMAGICK_LIBS=`$PKG_CONFIG --libs "GraphicsMagick++" 2>/dev/null`
+ 		      test "x$?" != "x0" && pkg_failed=yes
+ else
+   pkg_failed=yes
+@@ -16744,9 +16744,9 @@ else
+         _pkg_short_errors_supported=no
+ fi
+         if test $_pkg_short_errors_supported = yes; then
+-	        LIBMAGICK_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "ImageMagick++" 2>&1`
++	        LIBMAGICK_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors --cflags --libs "GraphicsMagick++" 2>&1`
+         else
+-	        LIBMAGICK_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "ImageMagick++" 2>&1`
++	        LIBMAGICK_PKG_ERRORS=`$PKG_CONFIG --print-errors --cflags --libs "GraphicsMagick++" 2>&1`
+         fi
+ 	# Put the nasty error message in config.log where it belongs
+ 	echo "$LIBMAGICK_PKG_ERRORS" >&5
+@@ -17100,7 +17100,7 @@ $as_echo "GNU on RiscOS" >&6; }
+     { $as_echo "$as_me:${as_lineno-$LINENO}: result: GNU" >&5
+ $as_echo "GNU" >&6; }
+ #   need to disable long long warning here because of ImageMagick using it
+-    SPECIAL_CXXFLAGS="-DBUGGYGPP_NOLONGERNEEDE -pedantic -Wall -Wextra -Wuninitialized -Wswitch-default -Wunused -Wshadow -Wwrite-strings -Wcast-qual -Wpointer-arith -Wno-long-long"
++    SPECIAL_CXXFLAGS="-DBUGGYGPP_NOLONGERNEEDE -Wall -Wextra -Wuninitialized -Wswitch-default -Wunused -Wshadow -Wwrite-strings -Wcast-qual -Wpointer-arith -Wno-long-long"
+   fi
+ elif test `echo "$CXX" | egrep -c 'xlC$'` -eq 1; then
+   { $as_echo "$as_me:${as_lineno-$LINENO}: result: AIX xlC" >&5
