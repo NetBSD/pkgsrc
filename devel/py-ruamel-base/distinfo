@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/05/16 13:41:59 nils Exp $
+
+SHA1 (ruamel.base-1.0.0.tar.gz) = 21046ff50a23f7ad5ff6b38539b9ce808239c3cd
+RMD160 (ruamel.base-1.0.0.tar.gz) = 8085310cea013b4f93820f57b4b9d33434dc637d
+SHA512 (ruamel.base-1.0.0.tar.gz) = a847f0ae8d889bbc593f6d3507b3208c69d3027a73dddc39058e6da7316937234ef0208394e264a07fd3fa970c97713a14db7a62e374433a27625932bb76c44c
+Size (ruamel.base-1.0.0.tar.gz) = 5219 bytes
