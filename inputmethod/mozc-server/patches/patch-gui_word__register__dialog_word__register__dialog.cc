@@ -1,8 +1,8 @@
-$NetBSD: patch-gui_word__register__dialog_word__register__dialog.cc,v 1.2 2013/07/20 04:34:53 ryoon Exp $
+$NetBSD: patch-gui_word__register__dialog_word__register__dialog.cc,v 1.3 2016/05/16 11:51:49 ryoon Exp $
 
---- gui/word_register_dialog/word_register_dialog.cc.orig	2013-07-17 02:38:14.000000000 +0000
+--- gui/word_register_dialog/word_register_dialog.cc.orig	2016-05-15 08:11:11.000000000 +0000
 +++ gui/word_register_dialog/word_register_dialog.cc
-@@ -81,9 +81,9 @@ QString GetEnv(const char *envname) {
+@@ -90,9 +90,9 @@ QString GetEnv(const char *envname) {
    }
    return "";
  #endif  // OS_WIN
@@ -10,7 +10,7 @@ $NetBSD: patch-gui_word__register__dialog_word__register__dialog.cc,v 1.2 2013/0
 +#if defined(OS_MACOSX) || defined(OS_LINUX) || defined(OS_NETBSD)
    return ::getenv(envname);
 -#endif  // OS_MACOSX or OS_LINUX
-+#endif  // OS_MACOSX or OS_LINUX or OS_NETBSD
++#endif  // OS_MACOSX, OS_LINUX or OS_NETBSD
    // TODO(team): Support other platforms.
    return "";
  }
