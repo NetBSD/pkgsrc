@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1974 2016/05/16 07:57:13 nils Exp $
+$NetBSD: CHANGES-2016,v 1.1975 2016/05/16 10:38:37 nils Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2571,3 +2571,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated time/ruby-tzinfo-data to 1.2016.4 [taca 2016-05-15]
 	Updated net/syncthing to 0.12.24 [abs 2016-05-15]
 	Added devel/py-wheel version 0.26.0 [nils 2016-05-16]
+	Added devel/py-ruamel-ordereddict version 0.4.9 [nils 2016-05-16]
