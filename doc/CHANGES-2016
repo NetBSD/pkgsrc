@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1985 2016/05/16 20:18:18 adam Exp $
+$NetBSD: CHANGES-2016,v 1.1986 2016/05/16 21:45:33 morr Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2587,3 +2587,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added devel/py-binaryornot version 0.4.0 [nils 2016-05-16]
 	Added devel/py-cookiecutter version 1.3.0 [nils 2016-05-16]
 	Updated graphics/pstoedit to 3.70 [adam 2016-05-16]
+	Updated net/haproxy to 1.6.5 [morr 2016-05-16]
