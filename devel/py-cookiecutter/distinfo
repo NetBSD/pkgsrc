@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2016/05/16 15:05:48 nils Exp $
+
+SHA1 (cookiecutter-1.3.0.zip) = 621a7f8f3ad0bd543917ca9c57cb70d7a80ed18f
+RMD160 (cookiecutter-1.3.0.zip) = 0f402dee6e5dd85b689dcc8c473fc755cd7d029b
+SHA512 (cookiecutter-1.3.0.zip) = 540300e917b1f91c9936d799e2ac3afd61ff8eb95639dc31dc61fd9aece6f9f283dd688a3ac780c5cb6eae299a85fbb89e1cf78cdefdd14501a9debff83eddfe
+Size (cookiecutter-1.3.0.zip) = 274125 bytes
+SHA1 (patch-docs_Makefile) = c0451b26ea79a8ebd7ca0f733264806fea84857d
+SHA1 (patch-setup.py) = 1dd484db3ebb1202ead6a2bf48746751c5e1ab2b
