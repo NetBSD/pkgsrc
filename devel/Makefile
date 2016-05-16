@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2256 2016/05/16 13:42:50 nils Exp $
+# $NetBSD: Makefile,v 1.2257 2016/05/16 13:53:34 nils Exp $
 #
 
 COMMENT=	Development utilities
@@ -1834,6 +1834,7 @@ SUBDIR+=	py-rope
 SUBDIR+=	py-rply
 SUBDIR+=	py-ruamel-base
 SUBDIR+=	py-ruamel-ordereddict
+SUBDIR+=	py-ruamel-yaml
 SUBDIR+=	py-serpent
 SUBDIR+=	py-setuptools
 SUBDIR+=	py-setuptools_scm
