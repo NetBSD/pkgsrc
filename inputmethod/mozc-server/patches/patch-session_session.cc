@@ -1,13 +1,34 @@
-$NetBSD: patch-session_session.cc,v 1.3 2013/09/07 18:42:14 ryoon Exp $
+$NetBSD: patch-session_session.cc,v 1.4 2016/05/16 11:51:49 ryoon Exp $
 
---- session/session.cc.orig	2013-08-28 05:26:12.000000000 +0000
+--- session/session.cc.orig	2016-05-15 08:11:12.000000000 +0000
 +++ session/session.cc
-@@ -1139,7 +1139,7 @@ void Session::UpdateOperationPreferences
+@@ -232,9 +232,9 @@ void Session::InitContext(ImeContext *co
+ 
+   context->SetConfig(&context->GetConfig());
+ 
+-#if defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_NACL)
++#if defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_NACL) || defined(OS_NETBSD)
+   context->mutable_converter()->set_use_cascading_window(false);
+-#endif  // OS_LINUX || OS_ANDROID || OS_NACL
++#endif  // OS_LINUX || OS_ANDROID || OS_NACL || OS_NETBSD
+ }
+ 
+ 
+@@ -961,14 +961,14 @@ void Session::UpdatePreferences(commands
+         config.selection_shortcut());
    }
  
-   // Cascading Window.
--#ifndef OS_LINUX
-+#if !defined(OS_LINUX) && !defined(OS_NETBSD)
+-#if defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_NACL)
++#if defined(OS_LINUX) || defined(OS_ANDROID) || defined(OS_NACL) || defined(OS_NETBSD)
+   context_->mutable_converter()->set_use_cascading_window(false);
+-#else  // OS_LINUX || OS_ANDROID || OS_NACL
++#else  // OS_LINUX || OS_ANDROID || OS_NACL || OS_NETBSD
    if (config.has_use_cascading_window()) {
-     operation_preferences.use_cascading_window = config.use_cascading_window();
+     context_->mutable_converter()->set_use_cascading_window(
+         config.use_cascading_window());
    }
+-#endif  // OS_LINUX || OS_ANDROID || OS_NACL
++#endif  // OS_LINUX || OS_ANDROID || OS_NACL || OS_NETBSD
+ }
+ 
+ bool Session::IMEOn(commands::Command *command) {
