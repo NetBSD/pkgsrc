@@ -1,22 +1,22 @@
-$NetBSD: patch-client_client.cc,v 1.1 2013/04/29 09:52:17 ryoon Exp $
+$NetBSD: patch-client_client.cc,v 1.2 2016/05/16 11:51:49 ryoon Exp $
 
---- client/client.cc.orig	2013-03-29 04:33:44.000000000 +0000
+--- client/client.cc.orig	2016-05-15 08:11:10.000000000 +0000
 +++ client/client.cc
-@@ -950,7 +950,7 @@ bool Client::LaunchTool(const string &mo
-     return false;
+@@ -891,7 +891,7 @@ bool Client::LaunchTool(const string &mo
    }
  
--#if defined(OS_WIN) || defined(OS_LINUX)
-+#if defined(OS_WIN) || defined(OS_LINUX) || defined(OS_NETBSD)
+ #if defined(OS_WIN) || defined(OS_LINUX) || defined(OS_ANDROID)\
+-    || defined(OS_NACL)
++    || defined(OS_NACL) || defined(OS_NETBSD)
    string arg = "--mode=" + mode;
    if (!extra_arg.empty()) {
      arg += " ";
-@@ -960,7 +960,7 @@ bool Client::LaunchTool(const string &mo
+@@ -901,7 +901,7 @@ bool Client::LaunchTool(const string &mo
      LOG(ERROR) << "Cannot execute: " << kMozcTool << " " << arg;
      return false;
    }
--#endif  // OS_WIN || OS_LINUX
-+#endif  // OS_WIN || OS_LINUX || OS_NETBSD
+-#endif  // OS_WIN || OS_LINUX || OS_ANDROID || OS_NACL
++#endif  // OS_WIN || OS_LINUX || OS_ANDROID || OS_NACL || OS_NETBSD
  
    // TODO(taku): move MacProcess inside SpawnMozcProcess.
    // TODO(taku): support extra_arg.

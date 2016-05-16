@@ -1,15 +1,15 @@
-$NetBSD: patch-handwriting_zinnia__handwriting.cc,v 1.2 2013/07/20 04:34:53 ryoon Exp $
+$NetBSD: patch-handwriting_zinnia__handwriting.cc,v 1.3 2016/05/16 11:51:49 ryoon Exp $
 
 * Not confirmed yet.
 
---- handwriting/zinnia_handwriting.cc.orig	2013-07-17 02:38:04.000000000 +0000
+--- handwriting/zinnia_handwriting.cc.orig	2016-05-15 08:11:11.000000000 +0000
 +++ handwriting/zinnia_handwriting.cc
-@@ -57,7 +57,7 @@ string ZinniaHandwriting::GetModelFileNa
-   const char kModelFile[] = MOZC_ZINNIA_MODEL_FILE;
- #else
+@@ -59,7 +59,7 @@ string ZinniaHandwriting::GetModelFileNa
+   return FileUtil::JoinPath(MacUtil::GetResourcesDirectory(), kModelFile);
+ #elif defined(OS_LINUX)
    const char kModelFile[] =
 -      "/usr/share/tegaki/models/zinnia/handwriting-ja.model";
 +      "@PREFIX@/share/tegaki/models/zinnia/handwriting-ja.model";
- #endif  // MOZC_ZINNIA_MODEL_FILE
    return kModelFile;
  #else
+   const char kModelFile[] = "handwriting-ja.model";
