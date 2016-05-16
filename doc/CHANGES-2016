@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1981 2016/05/16 14:04:43 he Exp $
+$NetBSD: CHANGES-2016,v 1.1982 2016/05/16 14:07:47 nils Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2583,3 +2583,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/py-xlsxwriter to 0.8.7 [fhajny 2016-05-16]
 	Added devel/py-ruamel-yaml version 0.10.23 [nils 2016-05-16]
 	Updated graphics/jasper to 1.900.1nb12 [he 2016-05-16]
+	Added devel/py-whichcraft version 0.1.1 [nils 2016-05-16]
