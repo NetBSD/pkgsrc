@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.26 2016/03/14 09:23:31 fhajny Exp $
+# $NetBSD: Makefile,v 1.27 2016/05/16 21:44:44 morr Exp $
 
-DISTNAME=	haproxy-1.6.4
+DISTNAME=	haproxy-1.6.5
 CATEGORIES=	net www
 MASTER_SITES=	http://www.haproxy.org/download/1.6/src/
 
 MAINTAINER=	morr@NetBSD.org
-HOMEPAGE=	http://haproxy.1wt.eu/
+HOMEPAGE=	http://haproxy.org/
 COMMENT=	Reliable, high performance TCP/HTTP load balancer
 LICENSE=	gnu-gpl-v2
 
