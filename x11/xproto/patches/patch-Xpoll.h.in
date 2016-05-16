@@ -1,33 +1,39 @@
-$NetBSD: patch-Xpoll.h.in,v 1.1 2015/07/21 12:40:36 wiz Exp $
+$NetBSD: patch-Xpoll.h.in,v 1.2 2016/05/16 21:54:30 wiz Exp $
 
 Fix FD_SETSIZE definition.
 
 Move the define of FD_SETSIZE before the include of select.h, so that
 is actually does something useful.
 
---- Xpoll.h.in.orig	2015-07-01 15:16:11.000000000 +0000
+--- Xpoll.h.in.orig	2016-05-13 08:26:10.000000000 +0000
 +++ Xpoll.h.in
-@@ -54,6 +54,12 @@ from The Open Group.
+@@ -54,6 +54,15 @@ from The Open Group.
  
  #ifndef USE_POLL
  
-+#define XFD_SETSIZE	512
-+
-+#ifndef FD_SETSIZE
-+#define FD_SETSIZE	XFD_SETSIZE
++#if defined(FD_SETSIZE) && FD_SETSIZE < 512
++# define XFD_SETSIZE	FD_SETSIZE
++#else
++# define XFD_SETSIZE	512
++# ifndef FD_SETSIZE
++#  define FD_SETSIZE	XFD_SETSIZE
++# endif
 +#endif
 +
  #include <X11/Xos.h>
  
  #include <sys/select.h>  /* Get the FD_* macros. */
-@@ -67,12 +73,6 @@ typedef long fd_mask;
+@@ -67,15 +76,6 @@ typedef long fd_mask;
  # endif
  #endif
  
--#define XFD_SETSIZE	512
--
--#ifndef FD_SETSIZE
--#define FD_SETSIZE	XFD_SETSIZE
+-#if defined(FD_SETSIZE) && FD_SETSIZE < 512
+-# define XFD_SETSIZE	FD_SETSIZE
+-#else
+-# define XFD_SETSIZE	512
+-# ifndef FD_SETSIZE
+-#  define FD_SETSIZE	XFD_SETSIZE
+-# endif
 -#endif
 -
  #ifndef NBBY
