@@ -1,0 +1,1 @@
+bin/wheel @PREFIX@/bin/wheel-@PYVERSSUFFIX@
