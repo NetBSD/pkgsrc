@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.5 2015/08/29 06:32:02 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2016/05/16 11:56:11 ryoon Exp $
 
-DISTNAME=	ninja-1.6.0
+DISTNAME=	ninja-1.7.1
 PKGNAME=	${DISTNAME:S/ninja/ninja-build/}
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GITHUB:=martine/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=ninja-build/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 GITHUB_PROJECT=	ninja
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://martine.github.io/ninja/
+HOMEPAGE=	https://ninja-build.org/
 COMMENT=	Ninja is a small build system with a focus on speed
 LICENSE=	apache-2.0
 
