@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.207 2016/04/09 20:08:53 alnsn Exp $
+# $NetBSD: Makefile,v 1.208 2016/05/16 21:23:31 richard Exp $
 
 DISTNAME=	netpbm-10.68.02
 CATEGORIES=	graphics
 MASTER_SITES=	#
-PKGREVISION=	2
+PKGREVISION=	3
 # manually created from svn checkout of
 # svn checkout http://svn.code.sf.net/p/netpbm/code/advanced netpbm
 # tar --exclude netpbm/.svn/\* -cvzf /archive/distfiles/netpbm-$VERSION.tar.gz netpbm
@@ -19,7 +19,7 @@ HOMEPAGE=	http://netpbm.sourceforge.net/
 COMMENT=	Toolkit for conversion of images between different formats
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=	gmake lex pax perl
+USE_TOOLS+=	gmake flex pax perl
 USE_FEATURES=	snprintf
 
 INSTALL_TARGET=	install-dev install-run
