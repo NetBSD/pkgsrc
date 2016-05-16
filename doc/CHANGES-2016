@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1979 2016/05/16 13:54:01 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.1980 2016/05/16 13:55:48 nils Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2581,3 +2581,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ninja-build to 1.7.1 [ryoon 2016-05-16]
 	Added devel/py-ruamel-base version 1.0.0 [nils 2016-05-16]
 	Updated textproc/py-xlsxwriter to 0.8.7 [fhajny 2016-05-16]
+	Added devel/py-ruamel-yaml version 0.10.23 [nils 2016-05-16]
