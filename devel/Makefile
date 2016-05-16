@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2258 2016/05/16 14:06:52 nils Exp $
+# $NetBSD: Makefile,v 1.2259 2016/05/16 14:21:29 nils Exp $
 #
 
 COMMENT=	Development utilities
@@ -1662,6 +1662,7 @@ SUBDIR+=	py-attrs
 SUBDIR+=	py-babel
 SUBDIR+=	py-backports_abc
 SUBDIR+=	py-blinker
+SUBDIR+=	py-binaryornot
 SUBDIR+=	py-boost
 SUBDIR+=	py-buildbot
 SUBDIR+=	py-buildbot-slave
