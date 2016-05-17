@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2016/03/05 11:29:12 jperkin Exp $
+# $NetBSD: Makefile,v 1.10 2016/05/17 10:32:08 fhajny Exp $
 #
 
 DISTNAME=		snmptt_1.3
 EXTRACT_SUFX=		.tgz
 PKGNAME=		snmptt-1.3
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=snmptt/}
 
@@ -35,7 +35,7 @@ CONF_FILES=	${EGDIR}/snmptt.ini ${PKG_SYSCONFDIR}/snmptt.ini
 
 DOCDIR=		${PREFIX}/share/doc/html/snmptt
 
-MAKE_DIRS_PERMS+= ${VARBASE}/spool/snmptt ${ROOT_USER} ${ROOT_GROUP} 0755
+MAKE_DIRS_PERMS+= ${VARBASE}/spool/snmptt ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0755
 
 USE_TOOLS+=	perl:run
 REPLACE_PERL+=	snmptt

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.install,v 1.20 2013/05/26 16:55:53 spz Exp $
+# $NetBSD: Makefile.install,v 1.21 2016/05/17 10:32:07 fhajny Exp $
 
 .include "dirs.mk"
 
@@ -51,7 +51,7 @@ RT_CONFIG_FILES=	RT_Config.pm RT_SiteConfig.pm
 .for _file_ in ${RT_CONFIG_FILES}
 CONF_FILES_PERMS+=	${RT_EXAMPLE_DIR}/${_file_}	\
 			${PKG_SYSCONFDIR}/${_file_}	\
-			${ROOT_USER} ${RT_GROUP} 0550
+			${REAL_ROOT_USER} ${RT_GROUP} 0550
 .endfor
 
 RT_ETC_FILES=		acl.Oracle acl.Pg acl.mysql constraints.mysql	\

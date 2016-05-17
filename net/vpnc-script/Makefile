@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2015/03/02 15:24:12 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2016/05/17 10:32:08 fhajny Exp $
 
 DISTNAME=	vpnc-script-20140805
+PKGREVISION=	1
 CATEGORIES=	net security
 MASTER_SITES=	http://git.infradead.org/users/dwmw2/vpnc-scripts.git/blob_plain/HEAD:/
 DIST_SUBDIR=	${PKGNAME_NOREV}
@@ -19,7 +20,7 @@ EGDIR=			${PREFIX}/share/examples/vpnc-script
 INSTALLATION_DIRS=	${EGDIR}
 CONF_FILES_PERMS=	${EGDIR}/vpnc-script \
 				${PKG_SYSCONFDIR}/vpnc-script \
-				${ROOT_USER} ${ROOT_GROUP} 555
+				${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 555
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/vpnc-script ${DESTDIR}${EGDIR}

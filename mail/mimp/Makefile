@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2015/12/19 14:27:14 taca Exp $
+# $NetBSD: Makefile,v 1.4 2016/05/17 10:32:07 fhajny Exp $
 
 DISTNAME=	mimp-h3-${MIMPVER}
 PKGNAME=	mimp-${MIMPVER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail www
 MASTER_SITES=	http://ftp.horde.org/pub/mimp/ \
 		ftp://ftp.horde.org/pub/mimp/
@@ -39,16 +39,16 @@ PKG_SYSCONFSUBDIR?=	httpd
 CONF_FILES=		${EGDIR}/mimp.conf ${PKG_SYSCONFDIR}/mimp.conf
 CONF_FILES_PERMS+=	${MIMPDIR}/config/conf.xml.dist \
 			${MIMPDIR}/config/conf.xml \
-			${APACHE_USER} ${ROOT_GROUP} 0440
+			${APACHE_USER} ${REAL_ROOT_GROUP} 0440
 CONF_FILES_PERMS+=	${MIMPDIR}/config/menu.php.dist \
 			${MIMPDIR}/config/menu.php \
-			${APACHE_USER} ${ROOT_GROUP} 0440
+			${APACHE_USER} ${REAL_ROOT_GROUP} 0440
 CONF_FILES_PERMS+=	${MIMPDIR}/config/mime_drivers.php.dist \
 			${MIMPDIR}/config/mime_drivers.php \
-			${APACHE_USER} ${ROOT_GROUP} 0440
+			${APACHE_USER} ${REAL_ROOT_GROUP} 0440
 CONF_FILES_PERMS+=	${MIMPDIR}/config/prefs.php.dist \
 			${MIMPDIR}/config/prefs.php \
-			${APACHE_USER} ${ROOT_GROUP} 0440
+			${APACHE_USER} ${REAL_ROOT_GROUP} 0440
 
 SUBST_CLASSES+=		files
 SUBST_STAGE.files=	post-build

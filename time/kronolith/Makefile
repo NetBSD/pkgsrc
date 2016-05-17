@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2015/12/06 12:13:12 taca Exp $
+# $NetBSD: Makefile,v 1.24 2016/05/17 10:32:09 fhajny Exp $
 
 DISTNAME=	kronolith-h3-${KRONOLITHVER}
 PKGNAME=	kronolith-${KRONOLITHVER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www time
 MASTER_SITES=	http://ftp.horde.org/pub/kronolith/ \
 		ftp://ftp.horde.org/pub/kronolith/
@@ -58,16 +58,16 @@ PKG_USERS_VARS+=	APACHE_USER
 CONF_FILES=		${EGDIR}/kronolith.conf ${PKG_SYSCONFDIR}/kronolith.conf
 CONF_FILES_PERMS+=	${KRONOLITHDIR}/config/conf.xml.dist \
 			${KRONOLITHDIR}/config/conf.xml \
-			${APACHE_USER} ${ROOT_GROUP} 0440
+			${APACHE_USER} ${REAL_ROOT_GROUP} 0440
 CONF_FILES_PERMS+=	${KRONOLITHDIR}/config/keywords.php.dist \
 			${KRONOLITHDIR}/config/keywords.php \
-			${APACHE_USER} ${ROOT_GROUP} 0440
+			${APACHE_USER} ${REAL_ROOT_GROUP} 0440
 CONF_FILES_PERMS+=	${KRONOLITHDIR}/config/menu.php.dist \
 			${KRONOLITHDIR}/config/menu.php \
-			${APACHE_USER} ${ROOT_GROUP} 0440
+			${APACHE_USER} ${REAL_ROOT_GROUP} 0440
 CONF_FILES_PERMS+=	${KRONOLITHDIR}/config/prefs.php.dist \
 			${KRONOLITHDIR}/config/prefs.php \
-			${APACHE_USER} ${ROOT_GROUP} 0440
+			${APACHE_USER} ${REAL_ROOT_GROUP} 0440
 SPECIAL_PERMS+=		${KRONOLITHDIR}/config ${APACHE_USER} ${SHAREGRP} 0750
 
 do-build:

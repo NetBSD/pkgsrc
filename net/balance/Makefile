@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2016/02/25 16:20:50 jperkin Exp $
+# $NetBSD: Makefile,v 1.11 2016/05/17 10:32:08 fhajny Exp $
 #
 
 DISTNAME=	balance-3.57
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.inlab.de/
 
@@ -16,6 +17,6 @@ MAKE_ENV+=	VARBASE=${VARBASE}
 MAKE_ENV.SunOS+=	LIBRARIES="-lsocket -lnsl"
 
 OWN_DIRS_PERMS=	${VARBASE}/run/balance \
-		${ROOT_USER} ${ROOT_GROUP} 0750
+		${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0750
 
 .include "../../mk/bsd.pkg.mk"

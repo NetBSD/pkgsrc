@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2015/08/23 14:30:41 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2016/05/17 10:32:08 fhajny Exp $
 #
 
 DISTNAME=		prelude-lml-0.9.15
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		security
 MASTER_SITES=		http://www.prelude-ids.com/download/releases/prelude-lml/
 
@@ -61,9 +61,9 @@ SUBST_SED.make=		-e 's,@EGDIR@,${EGDIR},g'
 
 PKG_SYSCONFSUBDIR=	prelude-lml
 CONF_FILES_PERMS+=	${EGDIR}/plugins.rules ${PKG_SYSCONFDIR}/plugins.rules \
-			${ROOT_USER} ${ROOT_GROUP} 0644
+			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0644
 CONF_FILES_PERMS+=	${EGDIR}/prelude-lml.conf ${PKG_SYSCONFDIR}/prelude-lml.conf \
-			${ROOT_USER} ${ROOT_GROUP} 0644
+			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0644
 
 # From plugins/pcre/ruleset/Makefile.in
 ruleset_DATA = \
