@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2015/06/12 10:50:27 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2016/05/17 10:32:08 fhajny Exp $
 
 DISTNAME=	turba-h3-${TURBAVER}
 PKGNAME=	turba-${TURBAVER}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	mail www
 MASTER_SITES=	http://ftp.horde.org/pub/turba/ \
 		ftp://ftp.horde.org/pub/turba/
@@ -55,18 +55,18 @@ REPLACE_FILES.php=	scripts/import_vcards.php \
 CONF_FILES=		${EGDIR}/turba.conf ${PKG_SYSCONFDIR}/turba.conf
 CONF_FILES_PERMS+=	${TURBADIR}/config/sources.php.dist \
 			${TURBADIR}/config/sources.php \
-			${APACHE_USER} ${ROOT_GROUP} 0440
+			${APACHE_USER} ${REAL_ROOT_GROUP} 0440
 CONF_FILES+=		${TURBADIR}/config/attributes.php.dist \
 			${TURBADIR}/config/attributes.php
 CONF_FILES_PERMS+=	${TURBADIR}/config/conf.xml.dist \
 			${TURBADIR}/config/conf.xml \
-			${APACHE_USER} ${ROOT_GROUP} 0440
+			${APACHE_USER} ${REAL_ROOT_GROUP} 0440
 CONF_FILES_PERMS+=	${TURBADIR}/config/menu.php.dist \
 			${TURBADIR}/config/menu.php \
-			${APACHE_USER} ${ROOT_GROUP} 0440
+			${APACHE_USER} ${REAL_ROOT_GROUP} 0440
 CONF_FILES_PERMS+=	${TURBADIR}/config/prefs.php.dist \
 			${TURBADIR}/config/prefs.php \
-			${APACHE_USER} ${ROOT_GROUP} 0440
+			${APACHE_USER} ${REAL_ROOT_GROUP} 0440
 
 .include "options.mk"
 

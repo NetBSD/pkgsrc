@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.65 2016/04/29 19:05:22 fhajny Exp $
+# $NetBSD: Makefile,v 1.66 2016/05/17 10:32:06 fhajny Exp $
 
 DISTNAME=	ejabberd-16.04
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	http://www.process-one.net/downloads/ejabberd/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tgz
@@ -81,12 +82,12 @@ INSTALLATION_DIRS+=	share/doc/${PKGBASE} ${EGDIR} share/bash-completion.d
 INSTALLATION_DIRS+=	lib/erlang/lib/${DISTNAME}/priv/sql
 
 CONF_FILES_PERMS=	${EGDIR}/ejabberd.yml ${PKG_SYSCONFDIR}/ejabberd.yml \
-			${ROOT_USER} ${EJABBERD_GROUP} 0640
+			${REAL_ROOT_USER} ${EJABBERD_GROUP} 0640
 CONF_FILES_PERMS+=	${EGDIR}/ejabberdctl.cfg ${PKG_SYSCONFDIR}/ejabberdctl.cfg \
-			${ROOT_USER} ${EJABBERD_GROUP} 0640
+			${REAL_ROOT_USER} ${EJABBERD_GROUP} 0640
 CONF_FILES_PERMS+=	${EGDIR}/inetrc ${PKG_SYSCONFDIR}/inetrc \
-			${ROOT_USER} ${EJABBERD_GROUP} 0640
-SPECIAL_PERMS+=		sbin/ejabberdctl ${ROOT_USER} ${EJABBERD_GROUP} 0750
+			${REAL_ROOT_USER} ${EJABBERD_GROUP} 0640
+SPECIAL_PERMS+=		sbin/ejabberdctl ${REAL_ROOT_USER} ${EJABBERD_GROUP} 0750
 
 REPLACE_BASH=		ejabberdctl.template tools/captcha.sh
 
