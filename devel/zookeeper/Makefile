@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2016/03/04 13:40:34 fhajny Exp $
+# $NetBSD: Makefile,v 1.4 2016/05/17 10:32:07 fhajny Exp $
 #
 
 .include "Makefile.common"
 
+PKGREVISION=		1
 COMMENT=		Highly reliable distributed coordination server
 
 DISTFILES=			${DEFAULT_DISTFILES} ${DISTNAME}-deps.tar.gz
@@ -57,7 +58,7 @@ CONF_FILES+=		${EGDIR}/configuration.xsl ${PKG_SYSCONFDIR}/configuration.xsl
 CONF_FILES+=		${EGDIR}/log4j.properties ${PKG_SYSCONFDIR}/log4j.properties
 CONF_FILES+=		${EGDIR}/zoo.cfg ${PKG_SYSCONFDIR}/zoo.cfg
 CONF_FILES_PERMS+=	${EGDIR}/zookeeper-env.sh ${PKG_SYSCONFDIR}/zookeeper-env.sh \
-			${ROOT_USER} ${ROOT_GROUP} 0755
+			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0755
 
 FILES_SUBST+=		ZK_USER=${ZK_USER} ZK_GROUP=${ZK_GROUP}
 
