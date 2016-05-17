@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2016/04/21 16:28:44 jperkin Exp $
+# $NetBSD: Makefile,v 1.36 2016/05/17 10:32:08 fhajny Exp $
 #
 
 DISTNAME=	sendfile-2.1b
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net
 MASTER_SITES=	http://fex.rus.uni-stuttgart.de/download/
 
@@ -27,7 +27,7 @@ post-configure:
 	cd ${WRKSRC} &&${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} config
 
 OWN_DIRS+=	${VARBASE}/spool/sendfile
-OWN_DIRS_PERMS+=${VARBASE}/spool/sendfile/LOG ${ROOT_USER} ${ROOT_GROUP} 700
-OWN_DIRS_PERMS+=${VARBASE}/spool/sendfile/OUTGOING ${ROOT_USER} ${ROOT_GROUP} 1777
+OWN_DIRS_PERMS+=${VARBASE}/spool/sendfile/LOG ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 700
+OWN_DIRS_PERMS+=${VARBASE}/spool/sendfile/OUTGOING ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 1777
 
 .include "../../mk/bsd.pkg.mk"

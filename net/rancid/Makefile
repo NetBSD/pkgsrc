@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2016/03/19 06:45:28 pettai Exp $
+# $NetBSD: Makefile,v 1.17 2016/05/17 10:32:08 fhajny Exp $
 #
 
 DISTNAME=		rancid-3.4.1
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.shrubbery.net/pub/rancid/
 
@@ -41,11 +42,11 @@ REPLACE_PERL=		lib/dell.pm.in
 EGDIR=			${PREFIX}/share/examples/rancid
 PKG_SYSCONFSUBDIR?=	rancid
 CONF_FILES_PERMS=	${EGDIR}/lg.conf.sample ${PKG_SYSCONFDIR}/lg.conf \
-			${ROOT_USER} ${ROOT_GROUP} 0644
+			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0644
 CONF_FILES_PERMS+=	${EGDIR}/rancid.conf.sample ${PKG_SYSCONFDIR}/rancid.conf \
-			${ROOT_USER} ${ROOT_GROUP} 0644
+			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0644
 CONF_FILES_PERMS+=	${EGDIR}/rancid.types.base ${PKG_SYSCONFDIR}/rancid.types.base \
-			${ROOT_USER} ${ROOT_GROUP} 0644
+			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0644
 
 MESSAGE_SUBST+=		PREFIX=${PREFIX}
 MESSAGE_SUBST+=		RC_USER=${RC_USER}

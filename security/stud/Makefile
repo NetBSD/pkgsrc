@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2016/03/05 11:29:27 jperkin Exp $
+# $NetBSD: Makefile,v 1.8 2016/05/17 10:32:09 fhajny Exp $
 #
 
 PKGNAME=	stud-0.3p53
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	security
 MAINTAINER=	jym@NetBSD.org
 HOMEPAGE=	http://github.com/bumptech/stud
@@ -51,7 +51,7 @@ SUBST_VARS.makefile=	PREFIX
 SUBST_MESSAGE.makefile=	Set prefix path.
 
 PKG_SYSCONFSUBDIR=	stud
-PKG_SYSCONFDIR_PERMS=	${ROOT_USER} ${STUD_GROUP} 0750
+PKG_SYSCONFDIR_PERMS=	${REAL_ROOT_USER} ${STUD_GROUP} 0750
 CONF_FILES+=		${EGDIR}/stud.conf ${PKG_SYSCONFDIR}/stud.conf
 
 post-extract:

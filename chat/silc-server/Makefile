@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.66 2013/07/12 10:44:53 jperkin Exp $
+# $NetBSD: Makefile,v 1.67 2016/05/17 10:32:06 fhajny Exp $
 
 DISTNAME=	silc-server-1.1.18
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	chat security
 MASTER_SITES=	http://www.silcnet.org/download/server/sources/ \
 		ftp://ftp.silcnet.org/silc/server/sources/
@@ -48,7 +48,7 @@ CONF_FILES+=		${EGDIR}/silcd.conf.default \
 CONF_FILES+=		${EGDIR}/silcalgs.conf.default \
 			${PKG_SYSCONFDIR}/silcalgs.conf
 CONF_FILES_PERMS+=	${EGDIR}/motd.txt.default ${PKG_SYSCONFDIR}/motd.txt \
-			${REAL_ROOT_USER} ${ROOT_GROUP} 0644
+			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0644
 
 RCD_SCRIPTS=		silcd
 

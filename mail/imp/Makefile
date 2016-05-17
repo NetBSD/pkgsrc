@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.60 2015/12/19 14:27:14 taca Exp $
+# $NetBSD: Makefile,v 1.61 2016/05/17 10:32:07 fhajny Exp $
 
 DISTNAME=	imp-h3-${IMPVER}
 PKGNAME=	imp-${IMPVER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail www
 MASTER_SITES=	http://ftp.horde.org/pub/imp/ \
 		ftp://ftp.horde.org/pub/imp/
@@ -48,28 +48,28 @@ CONF_FILES+=		${IMPDIR}/config/servers.php.dist \
 			${IMPDIR}/config/servers.php
 CONF_FILES_PERMS+=	${IMPDIR}/config/conf.xml.dist \
 			${IMPDIR}/config/conf.xml \
-			${APACHE_USER} ${ROOT_GROUP} 0440
+			${APACHE_USER} ${REAL_ROOT_GROUP} 0440
 CONF_FILES_PERMS+=	${IMPDIR}/config/filter.txt.dist \
 			${IMPDIR}/config/filter.txt \
-			${APACHE_USER} ${ROOT_GROUP} 0440
+			${APACHE_USER} ${REAL_ROOT_GROUP} 0440
 CONF_FILES_PERMS+=	${IMPDIR}/config/header.php.dist \
 			${IMPDIR}/config/header.php \
-			${APACHE_USER} ${ROOT_GROUP} 0440
+			${APACHE_USER} ${REAL_ROOT_GROUP} 0440
 CONF_FILES_PERMS+=	${IMPDIR}/config/menu.php.dist \
 			${IMPDIR}/config/menu.php \
-			${APACHE_USER} ${ROOT_GROUP} 0440
+			${APACHE_USER} ${REAL_ROOT_GROUP} 0440
 CONF_FILES_PERMS+=	${IMPDIR}/config/mime_drivers.php.dist \
 			${IMPDIR}/config/mime_drivers.php \
-			${APACHE_USER} ${ROOT_GROUP} 0440
+			${APACHE_USER} ${REAL_ROOT_GROUP} 0440
 CONF_FILES_PERMS+=	${IMPDIR}/config/motd.php.dist \
 			${IMPDIR}/config/motd.php \
-			${APACHE_USER} ${ROOT_GROUP} 0440
+			${APACHE_USER} ${REAL_ROOT_GROUP} 0440
 CONF_FILES_PERMS+=	${IMPDIR}/config/prefs.php.dist \
 			${IMPDIR}/config/prefs.php \
-			${APACHE_USER} ${ROOT_GROUP} 0440
+			${APACHE_USER} ${REAL_ROOT_GROUP} 0440
 CONF_FILES_PERMS+=	${IMPDIR}/config/trailer.txt.dist \
 			${IMPDIR}/config/trailer.txt \
-			${APACHE_USER} ${ROOT_GROUP} 0440
+			${APACHE_USER} ${REAL_ROOT_GROUP} 0440
 
 SUBST_CLASSES+=		files
 SUBST_STAGE.files=	post-build

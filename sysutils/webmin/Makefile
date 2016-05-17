@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.41 2016/03/05 11:29:32 jperkin Exp $
+# $NetBSD: Makefile,v 1.42 2016/05/17 10:32:09 fhajny Exp $
 
 .include "version.mk"
 
 DISTNAME=	webmin-${WBM_VERSION}
-#KGREVISION=	5
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	sysutils www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=webadmin/}
 
@@ -36,28 +35,28 @@ BUILD_DEFS+=		VARBASE
 WEBMIN_MINIMAL_MODULES=	acl cron init inittab man proc servers webmin webminlog
 
 PKG_SYSCONFSUBDIR=	webmin
-OWN_DIRS_PERMS+=	${WEBMIN_VARDIR} ${ROOT_USER} ${ROOT_GROUP} 0700
+OWN_DIRS_PERMS+=	${WEBMIN_VARDIR} ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0700
 .for f in		config install-dir perl-path var-path version
 CONF_FILES+=		${WEBMIN_EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 .for m in		${WEBMIN_MINIMAL_MODULES}
 OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/${m}				\
-			${ROOT_USER} ${ROOT_GROUP} 0700
+			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0700
 CONF_FILES_PERMS+=	${WEBMIN_EGDIR}/${m}/config			\
 			${PKG_SYSCONFDIR}/${m}/config			\
-			${ROOT_USER} ${ROOT_GROUP} 0600
+			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0600
 .endfor
 .for f in		miniserv.pem
 CONF_FILES_PERMS+=	${WEBMIN_DIR}/${f} ${PKG_SYSCONFDIR}/${f}	\
-			${ROOT_USER} ${ROOT_GROUP} 0600
+			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0600
 .endfor
 .for f in		miniserv.conf miniserv.users webmin.acl
 CONF_FILES_PERMS+=	${WEBMIN_EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}	\
-			${ROOT_USER} ${ROOT_GROUP} 0600
+			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0600
 .endfor
 .for f in		reload restart start stop
 CONF_FILES_PERMS+=	${WEBMIN_EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}	\
-			${ROOT_USER} ${ROOT_GROUP} 0755
+			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0755
 .endfor
 RCD_SCRIPTS=		webmin
 
