@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2014/11/17 02:56:04 schmonz Exp $
+# $NetBSD: Makefile,v 1.23 2016/05/17 10:32:07 fhajny Exp $
 #
 
 DISTNAME=		qmail-qfilter-2.1
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}
 
@@ -15,7 +15,7 @@ DEPENDS+=		qmail>=1.03nb9:../../mail/qmail
 
 PKG_DESTDIR_SUPPORT=	destdir
 
-OWN_DIRS_PERMS+=	${QMAIL_QFILTER_TMPDIR} qmaild ${ROOT_GROUP} 700
+OWN_DIRS_PERMS+=	${QMAIL_QFILTER_TMPDIR} qmaild ${REAL_ROOT_GROUP} 700
 
 REPLACE_PERL=		samples/block-long-dates			\
 			samples/deny-filetypes				\
