@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2016/05/15 11:53:20 wen Exp $
+# $NetBSD: Makefile,v 1.25 2016/05/17 12:23:43 wen Exp $
 
 DISTNAME=	Email-Sender-1.300028
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Email/}
 
@@ -19,9 +20,12 @@ DEPENDS+=	p5-Moo>=2.000000:../../devel/p5-Moo
 DEPENDS+=	p5-Net>=3.07:../../net/p5-Net
 DEPENDS+=	p5-Throwable>=0.200003:../../devel/p5-Throwable
 DEPENDS+=	p5-Try-Tiny-[0-9]*:../../devel/p5-Try-Tiny
+DEPENDS+=	p5-MooX-Types-MooseLike>=0.15:../../devel/p5-MooX-Types-MooseLike
+DEPENDS+=	p5-Module-Runtime>=0:../../devel/p5-Module-Runtime
+DEPENDS+=	p5-Sub-Exporter>=0:../../devel/p5-Sub-Exporter
 
 # for make test
-BUILD_DEPENDS+=	p5-MooX-Types-MooseLike>=0.15:../../devel/p5-MooX-Types-MooseLike
+BUILD_DEPENDS+=	p5-Capture-Tiny>=0.08:../../devel/p5-Capture-Tiny
 
 PERL5_PACKLIST=	auto/Email/Sender/.packlist
 
