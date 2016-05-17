@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 01:12:32 agc Exp $
+$NetBSD: distinfo,v 1.7 2016/05/17 13:47:17 leot Exp $
 
-SHA1 (glyr/1.0.8.tar.gz) = e39ff25bea823f8a65df6b6e6b10347b0886b71b
-RMD160 (glyr/1.0.8.tar.gz) = 63aceb30e021a39fb7778a7b2a68a92d1b642d26
-SHA512 (glyr/1.0.8.tar.gz) = 71417aa116a10c6ee778ebf215b92cb03c06b9683de3c9b1d9a2b1d7f5d42c21eddc34b7cc2d16befcc80f41113e3fbab5a23926af007c7dbeb2e9327ed9b6d7
-Size (glyr/1.0.8.tar.gz) = 425073 bytes
-SHA1 (patch-lib_stringlib.c) = 98cdef23e473915a1710391a75dbc2573ed07d52
+SHA1 (glyr-1.0.9.tar.gz) = 28c6f5ffaaa568149762400cf0c8ebaf134cb3c0
+RMD160 (glyr-1.0.9.tar.gz) = b244631677a44d3fdb444bffac3c32d475413347
+SHA512 (glyr-1.0.9.tar.gz) = 77144202c99c6e429c8800a7d89d27de5376627194945116b7166d920375a59048d3e3102cf63646b1b57d795999f057977d7b13490e4ca3af44b8ddb3207652
+Size (glyr-1.0.9.tar.gz) = 425175 bytes
