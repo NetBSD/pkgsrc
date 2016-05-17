@@ -1,6 +1,14 @@
-$NetBSD: distinfo,v 1.24 2016/05/08 17:23:29 christos Exp $
+$NetBSD: distinfo,v 1.25 2016/05/17 11:57:19 jperkin Exp $
 
 SHA1 (jre-7u80-linux-x64.tar.gz) = 5f5eb4a4e76cfe1d9eb02ed71ae01a809bde8440
 RMD160 (jre-7u80-linux-x64.tar.gz) = 942f0da61dde6b760c24fd144fee2555d05497a3
 SHA512 (jre-7u80-linux-x64.tar.gz) = e61e78ab1be0313690e8ab8d6cbae7366dd78aa4716f47c8908178196b658b94ee318dd04043965a72c34d8ef5c1cb4902afaa2188e76eb944256f090339107d
 Size (jre-7u80-linux-x64.tar.gz) = 47110223 bytes
+SHA1 (jre-7u80-solaris-i586.tar.gz) = 375fb36024bbed6a1b7310be0011034fd7d7d59d
+RMD160 (jre-7u80-solaris-i586.tar.gz) = 98bbc8c74b76d54756fd036dbc42f15c937ff3aa
+SHA512 (jre-7u80-solaris-i586.tar.gz) = 213fb76ab20b5dd463edf4436a639f03e4c78339bab9d38b88c8eb5da9552f516c832d05aedcd9215c67a8609c6f00990a9120cc3703585e8074af84361bb05c
+Size (jre-7u80-solaris-i586.tar.gz) = 54867174 bytes
+SHA1 (jre-7u80-solaris-x64.tar.gz) = 58807037b6d70fcb714022367f54a7492c73414f
+RMD160 (jre-7u80-solaris-x64.tar.gz) = 09b7ea1ca590c5ce19a880711148f30e8cad536d
+SHA512 (jre-7u80-solaris-x64.tar.gz) = bff063446e06e8f5d5ce17c94bb162fcd1c5d064ab308156f4376491c24c4485254adf4d01cd09bd7ca88171b3bf617527dce0ec5067a6f36f0891f32aea0a0b
+Size (jre-7u80-solaris-x64.tar.gz) = 16941174 bytes
