@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2015/12/05 14:17:08 leot Exp $
+# $NetBSD: Makefile,v 1.11 2016/05/17 10:22:44 leot Exp $
 
-DISTNAME=	the_silver_searcher-0.31.0
+DISTNAME=	the_silver_searcher-0.32.0
 CATEGORIES=	textproc
 MASTER_SITES=	http://geoff.greer.fm/ag/releases/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	leot@NetBSD.org
 HOMEPAGE=	https://github.com/ggreer/the_silver_searcher
 COMMENT=	Attempt to improve on ack, which itself is better than grep
 LICENSE=	apache-2.0
