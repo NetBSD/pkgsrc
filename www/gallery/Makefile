@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2015/06/12 10:51:49 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2016/05/17 10:32:09 fhajny Exp $
 #
 
 DISTNAME=	gallery-1.5.10
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	www graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gallery/}
 
@@ -30,9 +30,9 @@ EGDIR=		${PREFIX}/share/examples/gallery
 G1DIR=		${PREFIX}/share/gallery
 
 CONF_FILES_PERMS=	${EGDIR}/config.php ${G1DIR}/config.php \
-			${ROOT_USER} ${ROOT_GROUP} 0666
+			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0666
 CONF_FILES_PERMS+=	${EGDIR}/.htaccess ${G1DIR}/.htaccess \
-			${ROOT_USER} ${ROOT_GROUP} 0666
+			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0666
 
 MESSAGE_SUBST+=	G1DIR=${G1DIR}
 FILES_SUBST+=	G1DIR=${G1DIR}
