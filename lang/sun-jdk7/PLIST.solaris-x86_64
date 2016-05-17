@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.solaris-x86_64,v 1.7 2016/05/08 17:23:28 christos Exp $
+@comment $NetBSD: PLIST.solaris-x86_64,v 1.8 2016/05/17 12:42:19 jperkin Exp $
 bin/sun7-appletviewer
 bin/sun7-apt
 bin/sun7-extcheck
@@ -469,8 +469,10 @@ java/sun-7/lib/visualvm/profiler/config/Modules/org-netbeans-modules-profiler-se
 java/sun-7/lib/visualvm/profiler/config/Modules/org-netbeans-modules-profiler-snaptracer.xml
 java/sun-7/lib/visualvm/profiler/config/Modules/org-netbeans-modules-profiler-utilities.xml
 java/sun-7/lib/visualvm/profiler/config/Modules/org-netbeans-modules-profiler.xml
-java/sun-7/lib/visualvm/profiler/lib/deployed/jdk15/linux-amd64/libprofilerinterface.so
-java/sun-7/lib/visualvm/profiler/lib/deployed/jdk16/linux-amd64/libprofilerinterface.so
+java/sun-7/lib/visualvm/profiler/lib/deployed/jdk15/solaris-amd64/libprofilerinterface.so
+java/sun-7/lib/visualvm/profiler/lib/deployed/jdk15/solaris-i386/libprofilerinterface.so
+java/sun-7/lib/visualvm/profiler/lib/deployed/jdk16/solaris-amd64/libprofilerinterface.so
+java/sun-7/lib/visualvm/profiler/lib/deployed/jdk16/solaris-i386/libprofilerinterface.so
 java/sun-7/lib/visualvm/profiler/lib/jfluid-server-15.jar
 java/sun-7/lib/visualvm/profiler/lib/jfluid-server.jar
 java/sun-7/lib/visualvm/profiler/lib/locale/jfluid-server_ja.jar
