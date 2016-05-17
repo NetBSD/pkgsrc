@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.61 2016/03/05 11:28:51 jperkin Exp $
+# $NetBSD: Makefile,v 1.62 2016/05/17 10:32:07 fhajny Exp $
 
 DISTNAME=	sympa-6.2.7
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	http://www.sympa.org/distribution/ \
 		http://www.sympa.org/distribution/old/
@@ -144,7 +144,7 @@ OWN_DIRS_PERMS+=	${SYMPA_SPOOL}/outgoing ${SYMPA_USER} ${SYMPA_GROUP} 770
 OWN_DIRS_PERMS+=	${SYMPA_SPOOL}/task ${SYMPA_USER} ${SYMPA_GROUP} 770
 OWN_DIRS_PERMS+=	${SYMPA_SPOOL}/tmp ${SYMPA_USER} ${SYMPA_GROUP} 770
 
-SPECIAL_PERMS+=  ${SYMPA_BIN}/sympa_newaliases-wrapper ${ROOT_USER} ${SYMPA_GROUP} 4550
+SPECIAL_PERMS+=  ${SYMPA_BIN}/sympa_newaliases-wrapper ${REAL_ROOT_USER} ${SYMPA_GROUP} 4550
 SPECIAL_PERMS+=	 ${SYMPA_BIN}/bouncequeue ${SYMPA_USER} ${SYMPA_GROUP} 4555
 SPECIAL_PERMS+=	 ${SYMPA_BIN}/familyqueue ${SYMPA_USER} ${SYMPA_GROUP} 4555
 SPECIAL_PERMS+=	 ${SYMPA_BIN}/queue ${SYMPA_USER} ${SYMPA_GROUP} 4555

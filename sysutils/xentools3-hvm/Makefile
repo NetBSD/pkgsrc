@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2016/02/26 10:24:14 jperkin Exp $
+# $NetBSD: Makefile,v 1.30 2016/05/17 10:32:09 fhajny Exp $
 
 VERSION=		3.1.4
 DISTNAME=		xen-${VERSION}
 PKGNAME=		xentools3-hvm-${VERSION}
-PKGREVISION=		13
+PKGREVISION=		14
 CATEGORIES=		sysutils
 MASTER_SITES=	http://bits.xensource.com/oss-xen/release/${VERSION}/
 
@@ -69,7 +69,7 @@ PROCPATH.NetBSD=	/kern
 PROCPATH.*=		/proc
 
 CONF_FILES_PERMS+=	${EGDIR}/qemu-ifup ${PKG_SYSCONFDIR}/scripts/qemu-ifup \
-			${ROOT_USER} ${ROOT_GROUP} 0755
+			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0755
 
 OWN_DIRS=		${PKG_SYSCONFDIR}/scripts
 

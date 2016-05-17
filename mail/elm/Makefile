@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.50 2016/02/25 15:00:50 jperkin Exp $
+# $NetBSD: Makefile,v 1.51 2016/05/17 10:32:07 fhajny Exp $
 
 DISTNAME=		elm2.5.8
 PKGNAME=		elm-2.5.8
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		mail
 MASTER_SITES=		http://www.instinct.org/elm/files/tarballs/
 
@@ -29,7 +29,7 @@ OPSYSVARS+=		LIBC
 LIBC.Darwin=		/usr/lib/libSystem.dylib
 LIBC.*=			/usr/lib/libc.so
 
-SPECIAL_PERMS+=		bin/elm ${ROOT_USER} mail 2755
+SPECIAL_PERMS+=		bin/elm ${REAL_ROOT_USER} mail 2755
 
 pre-configure:
 	${CP} ${FILESDIR}/config.sh ${WRKSRC}/config.sh.orig

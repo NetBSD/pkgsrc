@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2015/06/12 10:50:43 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2016/05/17 10:32:08 fhajny Exp $
 #
 VERS=			1.1.2.1
-PKGREVISION=		7
+PKGREVISION=		8
 DISTNAME=		Ocsinventory-Agent-${VERS}
 PKGNAME=		ocsinventory-agent-${VERS}
 CATEGORIES=		net
@@ -30,7 +30,7 @@ AUTO_MKDIRS=yes
 .include "../../mk/bsd.prefs.mk"
 
 EGDIR=			${PREFIX}/share/examples/ocsinventory-agent
-MAKE_DIRS_PERMS+=	${VARBASE}/db/ocsinventory ${ROOT_USER} ${ROOT_GROUP} 0700
+MAKE_DIRS_PERMS+=	${VARBASE}/db/ocsinventory ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0700
 CONF_FILES+=		${EGDIR}/ocsinventory-agent.cfg ${PKG_SYSCONFDIR}/ocsinventory-agent.cfg
 CONF_FILES+=		${EGDIR}/modules.conf ${PKG_SYSCONFDIR}/modules.conf
 

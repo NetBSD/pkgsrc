@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.76 2013/03/16 07:21:25 obache Exp $
+# $NetBSD: Makefile,v 1.77 2016/05/17 10:32:09 fhajny Exp $
 
 DISTNAME=	horde-3.3.13
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://ftp.horde.org/pub/horde/ \
 		ftp://ftp.horde.org/pub/horde/
@@ -59,31 +59,31 @@ REPLACE_FILES.php=	po/translation.php \
 
 CONF_FILES+=		${EGDIR}/horde.conf ${PKG_SYSCONFDIR}/horde.conf
 OWN_DIRS_PERMS+=	${HORDEDIR}/config \
-			${APACHE_USER} ${ROOT_GROUP} 0750
+			${APACHE_USER} ${REAL_ROOT_GROUP} 0750
 CONF_FILES_PERMS+=	${EGDIR}/config/conf.php \
 			${HORDEDIR}/config/conf.php \
-			${APACHE_USER} ${ROOT_GROUP} 0640
+			${APACHE_USER} ${REAL_ROOT_GROUP} 0640
 CONF_FILES_PERMS+=	${EGDIR}/config/conf.xml \
 			${HORDEDIR}/config/conf.xml \
-			${APACHE_USER} ${ROOT_GROUP} 0440
+			${APACHE_USER} ${REAL_ROOT_GROUP} 0440
 CONF_FILES_PERMS+=	${EGDIR}/config/mime_drivers.php \
 			${HORDEDIR}/config/mime_drivers.php \
-			${APACHE_USER} ${ROOT_GROUP} 0440
+			${APACHE_USER} ${REAL_ROOT_GROUP} 0440
 CONF_FILES_PERMS+=	${EGDIR}/config/motd.php \
 			${HORDEDIR}/config/motd.php \
-			${APACHE_USER} ${ROOT_GROUP} 0440
+			${APACHE_USER} ${REAL_ROOT_GROUP} 0440
 CONF_FILES_PERMS+=	${EGDIR}/config/nls.php \
 			${HORDEDIR}/config/nls.php \
-			${APACHE_USER} ${ROOT_GROUP} 0440
+			${APACHE_USER} ${REAL_ROOT_GROUP} 0440
 CONF_FILES_PERMS+=	${EGDIR}/config/prefs.php \
 			${HORDEDIR}/config/prefs.php \
-			${APACHE_USER} ${ROOT_GROUP} 0440
+			${APACHE_USER} ${REAL_ROOT_GROUP} 0440
 CONF_FILES_PERMS+=	${EGDIR}/config/registry.php \
 			${HORDEDIR}/config/registry.php \
-			${APACHE_USER} ${ROOT_GROUP} 0440
+			${APACHE_USER} ${REAL_ROOT_GROUP} 0440
 CONF_FILES_PERMS+=	${EGDIR}/config/hooks.php \
 			${HORDEDIR}/config/hooks.php \
-			${APACHE_USER} ${ROOT_GROUP} 0440
+			${APACHE_USER} ${REAL_ROOT_GROUP} 0440
 
 SUBST_CLASSES+=		files
 SUBST_STAGE.files=	post-build
