@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1988 2016/05/17 10:22:55 leot Exp $
+$NetBSD: CHANGES-2016,v 1.1989 2016/05/17 12:26:51 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2590,3 +2590,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/haproxy to 1.6.5 [morr 2016-05-16]
 	Updated x11/xproto to 7.0.29 [wiz 2016-05-16]
 	Updated textproc/the_silver_searcher to 0.32.0 [leot 2016-05-17]
+	Updated mail/p5-Email-Sender to 1.300028nb1 [wen 2016-05-17]
