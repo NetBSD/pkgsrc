@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/10/23 18:16:59 asau Exp $
+# $NetBSD: Makefile,v 1.14 2016/05/18 21:16:25 alnsn Exp $
 
 DISTNAME=	x11-ssh-askpass-1.0
 PKGNAME=	${DISTNAME:S/^x11-//}
@@ -12,6 +12,9 @@ COMMENT=	X11-based passphrase dialog for OpenSSH
 
 USE_IMAKE=	yes
 INSTALL_TARGET=	install
+
+MAKE_FLAGS+=	CCOPTIONS=${CFLAGS:Q}
+MAKE_FLAGS+=	LDOPTIONS=${LDFLAGS:Q}
 
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/ssh-askpass
