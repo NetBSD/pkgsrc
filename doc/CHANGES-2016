@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1991 2016/05/18 11:30:41 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1992 2016/05/18 11:34:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2593,3 +2593,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/p5-Email-Sender to 1.300028nb1 [wen 2016-05-17]
 	Updated audio/glyr to 1.0.9 [leot 2016-05-17]
 	Updated devel/afl to 2.13b [wiz 2016-05-18]
+	Updated x11/luit to 2.0.20160508 [wiz 2016-05-18]
