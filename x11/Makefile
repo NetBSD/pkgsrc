@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.782 2016/05/08 10:45:24 markd Exp $
+# $NetBSD: Makefile,v 1.783 2016/05/18 22:18:55 snj Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -443,6 +443,7 @@ SUBDIR+=	randrproto
 SUBDIR+=	ratmen
 SUBDIR+=	razor-qt
 SUBDIR+=	recordproto
+SUBDIR+=	redshift
 SUBDIR+=	rendercheck
 SUBDIR+=	renderproto
 SUBDIR+=	renderproto9
