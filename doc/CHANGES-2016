@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1990 2016/05/17 13:47:31 leot Exp $
+$NetBSD: CHANGES-2016,v 1.1991 2016/05/18 11:30:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2592,3 +2592,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/the_silver_searcher to 0.32.0 [leot 2016-05-17]
 	Updated mail/p5-Email-Sender to 1.300028nb1 [wen 2016-05-17]
 	Updated audio/glyr to 1.0.9 [leot 2016-05-17]
+	Updated devel/afl to 2.13b [wiz 2016-05-18]
