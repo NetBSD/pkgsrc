@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1996 2016/05/18 12:24:06 mef Exp $
+$NetBSD: CHANGES-2016,v 1.1997 2016/05/18 12:24:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2606,3 +2606,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Test-Simple to 1.302015 [mef 2016-05-18]
 	Updated devel/p5-Test-Stream to 1.302027 [mef 2016-05-18]
 	Updated devel/p5-Test-TempDir-Tiny to 0.016 [mef 2016-05-18]
+	Updated devel/p5-List-AllUtils to 0.10 [wiz 2016-05-18]
