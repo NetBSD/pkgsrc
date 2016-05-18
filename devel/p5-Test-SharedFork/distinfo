@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.11 2015/11/03 03:28:53 agc Exp $
+$NetBSD: distinfo,v 1.12 2016/05/18 12:01:21 mef Exp $
 
-SHA1 (Test-SharedFork-0.33.tar.gz) = 5246df8e3be7964c284e60054dffe3cad02a3822
-RMD160 (Test-SharedFork-0.33.tar.gz) = a56771c48e7e7fd7aa8bf5e5272fe12ea626c5f5
-SHA512 (Test-SharedFork-0.33.tar.gz) = 3218023d48b05c31bfba8d9629f8acb1379c91efa7713187741fd9851c8c645ec62143025d7c0038e5d52a3fbd21cac6030e15c816745de5461a40529ceb4bf3
-Size (Test-SharedFork-0.33.tar.gz) = 15404 bytes
+SHA1 (Test-SharedFork-0.35.tar.gz) = bfc45603b54d22c815a69152ca4b157ae40c6b05
+RMD160 (Test-SharedFork-0.35.tar.gz) = db18616ca877fd8e856d271774d6fea14fac7b7a
+SHA512 (Test-SharedFork-0.35.tar.gz) = e5948dfb34cfaf35a2fb2783c726f1cea2ae2f4bbdc4cbb912f83c877422ceabb3e0323c8c669b3c3a08e6d2a12106309528f0f674657001e6aeb3cb3c1dfd9f
+Size (Test-SharedFork-0.35.tar.gz) = 15502 bytes
