@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2001 2016/05/18 12:26:48 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2002 2016/05/18 12:28:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2611,3 +2611,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Params-Validate to 1.24 [wiz 2016-05-18]
 	Added devel/p5-List-SomeUtils-XS version 0.52 [wiz 2016-05-18]
 	Added devel/p5-List-SomeUtils version 0.52 [wiz 2016-05-18]
+	Updated devel/py-enum34 to 1.1.6 [wiz 2016-05-18]
