@@ -1,0 +1,82 @@
+mdds 1.2.0
+
+* packed_trie_map
+
+  * added begin() and end() methods that return read-only iterators.
+
+  * find() method now returns a const_iterator instance.
+
+  * prefix_search() method now returns a search_results instance that
+    can be iterated.
+
+  * null value no longer needs to be passed to the constructor.
+
+  * find() and prefix_search() now have a variant that can take a key
+    value that is of key_type directly.
+
+* trie_map
+
+  * added begin() and end() methods that return read-only iterators.
+
+  * find() method now returns a const_iterator instance.
+
+  * prefix_search() method now returns a search_results instance that
+    can be iterated.
+
+  * null value no longer needs to be passed to the constructor.
+
+  * find(), insert, and prefix_search() now have a variant that can
+    take a key value that is of key_type directly.
+
+* sorted_string_map
+
+  * fix build failure with _GLIBCXX_DEBUG defined.
+
+* multi_type_vector
+
+  * remove compiler warning about shadowed variable.
+
+  * added a supplemental class mdds::mtv::collection which allows
+    multiple multi_type_vector instances of the same length to be
+    grouped together in order to iterate through their elements
+    sideways.
+
+  * a variant of advance_position() static method that takes
+    const_position_type has been added.
+
+    * const_position_type advance_position(const const_position_type& pos, int steps)
+
+* multi_type_matrix
+
+  * matrix_position() is now a const method.
+
+  * the sub-matrix variant of walk() method now throws size_error
+    exception when invalid start and end positions are passed.
+
+  * slight performance improvement with the sub-matrix variant of
+    walk() method that involves multiple column traversal.
+
+  * added 2 new variants of walk() methods that allow parallel walking
+    with another matrix instance.
+
+    * template<typename _Func>
+      void walk(_Func& func, const multi_type_matrix& right) const
+
+    * template<typename _Func>
+      void walk(_Func& func, const multi_type_matrix& right, const size_pair_type& start, const size_pair_type& end) const
+
+  * improved performance of copy() and resize() methods.
+
+  * added a variant of copy() that takes an array of values.
+
+    * template<typename _T>
+      void copy(size_type rows, size_type cols, const _T& it_begin, const _T& it_end)
+
+  * integer type has been added to the list of types the matrix can
+    store.  In conjunction with this change, what was formerly known
+    as the string trait structure is now known as the matrix trait,
+    which specifies the actual integer type the matrix stores.
+
+* point_quad_tree
+
+  * search_result has been renamed to search_results.
