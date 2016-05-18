@@ -1,6 +1,7 @@
-# $NetBSD: options.mk,v 1.1 2016/05/18 22:18:43 snj Exp $
+# $NetBSD: options.mk,v 1.2 2016/05/18 22:47:42 snj Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.redshift
+PKG_SUPPORTED_OPTIONS=	geoclue
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -18,4 +19,9 @@ PKG_SUGGESTED_OPTIONS+=	libdrm
 CONFIGURE_ARGS+=	--enable-drm
 .else
 CONFIGURE_ARGS+=	--disable-drm
+.endif
+
+.if !empty(PKG_OPTIONS:Mgeoclue)
+.include "../../geography/geoclue/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-geoclue --disable-geoclue2
 .endif
