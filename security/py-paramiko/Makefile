@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2016/05/18 12:01:53 he Exp $
+# $NetBSD: Makefile,v 1.26 2016/05/18 12:43:00 he Exp $
 
 DISTNAME=		paramiko-1.15.3
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=		SSH2 protocol library
 LICENSE=		gnu-lgpl-v2.1
 
 DEPENDS+=		${PYPKGPREFIX}-crypto>=2.1:../../security/py-crypto
-DEPENDS+=		${PYPKGPREFIX}-cryptography-[0-9]*:../../security/py-cryptography
 DEPENDS+=		${PYPKGPREFIX}-ecdsa>=0.11:../../security/py-ecdsa
 
 PYDISTUTILSPKG=	yes
