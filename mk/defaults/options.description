@@ -406,6 +406,7 @@ ldap			Enable LDAP support.
 lensfun			Enable lensfun (camera lens distortion rectifyer) support.
 libao			Enable the platform-independent 'ao' audio library.
 libchamplain		Enable libchamplain support (map widget).
+libdrm			Enable libdrm support.
 libgcrypt		Use GNU cryptographic library.
 libgme			Enable Game_Music_Emu video game music file library support.
 libgpod			Enable libgpod support.
