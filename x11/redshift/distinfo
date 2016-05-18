@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2016/05/18 22:18:43 snj Exp $
+
+SHA1 (redshift-1.11.tar.xz) = 759f1619c7ff0ab1cadda267343ef3665229d935
+RMD160 (redshift-1.11.tar.xz) = 692e6e1a430895169971d8744a38e24eb4094971
+SHA512 (redshift-1.11.tar.xz) = 88d7a4aabfaf3073f88673bc77df19d7bd79cb19aa8e647670cc52c02443475a4602f109fc4a06bf1639d1829d16a2644854039f90a614fc1a51c9cb4c81de16
+Size (redshift-1.11.tar.xz) = 377372 bytes
+SHA1 (patch-src_gamma-drm.c) = c7785a4896ac7a0d80b7b64b56b04a71b1932a04
