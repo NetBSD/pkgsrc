@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2016/03/08 18:50:21 ryoon Exp $
+# $NetBSD: Makefile,v 1.31 2016/05/18 11:53:27 wiz Exp $
 
 DISTNAME=	mdds-1.1.0
 CATEGORIES=	devel
@@ -7,7 +7,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://gitlab.com/mdds/mdds
-COMMENT=	Collection of multi-dimensional data structure and indexing algorithms
+COMMENT=	Collection of multi-dimensional data structure and indexing algorithms (1.0 branch)
 LICENSE=	mit
 
 GNU_CONFIGURE=		yes
