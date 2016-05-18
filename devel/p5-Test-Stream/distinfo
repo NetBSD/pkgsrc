@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2015/12/01 12:25:38 mef Exp $
+$NetBSD: distinfo,v 1.2 2016/05/18 12:16:20 mef Exp $
 
-SHA1 (Test-Stream-1.302026.tar.gz) = 3da105b563a4a0b19870106e87d882608fd7470e
-RMD160 (Test-Stream-1.302026.tar.gz) = 780b340c63d1c507b494e1fa9a2c3e153602eb62
-SHA512 (Test-Stream-1.302026.tar.gz) = 8091ba7c278773452ea2284982925935d897175443cedbcc9d1f47867b3b266e0e60c2e7371d35c343b8d7a68b68f60dcb4501698c8ce7fd7810fa497bee409e
-Size (Test-Stream-1.302026.tar.gz) = 225234 bytes
+SHA1 (Test-Stream-1.302027.tar.gz) = ce66e81cec718a0d7afa530a15b8df90da8d137f
+RMD160 (Test-Stream-1.302027.tar.gz) = 97f9ed51c755139384596a1d709c58b3e6425142
+SHA512 (Test-Stream-1.302027.tar.gz) = a2560c8ccf79657246f3b152be3ddd3cbeae11b1e729b85f81ccc28f74a32088ddfed7e41919f6a219f99d1dd2b664cc5f9f2bb2872460ab3f370db4ba2bf829
+Size (Test-Stream-1.302027.tar.gz) = 228187 bytes
