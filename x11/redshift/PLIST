@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2016/05/18 22:18:43 snj Exp $
+bin/redshift
+man/man1/redshift.1
