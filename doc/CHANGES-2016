@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2007 2016/05/18 16:35:32 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2008 2016/05/18 20:39:33 snj Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2617,3 +2617,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/MesaLib to 11.2.2 [wiz 2016-05-18]
 	Updated lang/nodejs to 6.2.0 [fhajny 2016-05-18]
 	Updated textproc/mdoclint to 1.39 [wiz 2016-05-18]
+	Updated wm/openbox to 3.6.1 [snj 2016-05-18]
