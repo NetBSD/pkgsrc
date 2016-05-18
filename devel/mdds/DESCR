@@ -7,3 +7,5 @@ It implements the following data structure:
     * flat segment tree
     * segment tree
     * rectangle set
+
+This package contains the 1.0 branch of the software.
