@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 03:28:54 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/05/18 12:22:09 mef Exp $
 
-SHA1 (Test-TempDir-Tiny-0.004.tar.gz) = 70e56bf96e61100b2f7d4013afa9ea39affd1976
-RMD160 (Test-TempDir-Tiny-0.004.tar.gz) = 62842d75b99c2d8366687000dc41e1db18d7b65c
-SHA512 (Test-TempDir-Tiny-0.004.tar.gz) = 90d85c6962d320cb54747206d0bdeb733e4c08418cbc87e872e0c9074395d32dca43e6387d8da645471d57b8c45b518b30e0081cb396acc9bf371cb7ede39790
-Size (Test-TempDir-Tiny-0.004.tar.gz) = 17556 bytes
+SHA1 (Test-TempDir-Tiny-0.016.tar.gz) = 89ca613a25bde4252ad1ed9e7b30a2c12faf5cab
+RMD160 (Test-TempDir-Tiny-0.016.tar.gz) = ab80eff08278caa0122e5ba4d89736e0d9e27b35
+SHA512 (Test-TempDir-Tiny-0.016.tar.gz) = 33dcdef18e2f906d7dc5981c353c2fc1d65c60ad15e800fb0726d63be6d333cd56007764c0c8876cc7fac6d3b113ea78b9e62f76801382602ac62b3d96e89827
+Size (Test-TempDir-Tiny-0.016.tar.gz) = 20431 bytes
