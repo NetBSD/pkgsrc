@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2260 2016/05/16 15:06:36 nils Exp $
+# $NetBSD: Makefile,v 1.2261 2016/05/18 11:49:15 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -597,6 +597,7 @@ SUBDIR+=	matio
 SUBDIR+=	mcpp
 SUBDIR+=	mdds
 SUBDIR+=	mdds0.12
+SUBDIR+=	mdds1.2
 SUBDIR+=	meld
 SUBDIR+=	mell
 SUBDIR+=	memcached
@@ -1661,8 +1662,8 @@ SUBDIR+=	py-atomicwrites
 SUBDIR+=	py-attrs
 SUBDIR+=	py-babel
 SUBDIR+=	py-backports_abc
-SUBDIR+=	py-blinker
 SUBDIR+=	py-binaryornot
+SUBDIR+=	py-blinker
 SUBDIR+=	py-boost
 SUBDIR+=	py-buildbot
 SUBDIR+=	py-buildbot-slave
