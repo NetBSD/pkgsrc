@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2009 2016/05/18 21:05:47 ryoon Exp $
+$NetBSD: CHANGES-2016,v 1.2010 2016/05/18 22:19:36 snj Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2619,3 +2619,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/mdoclint to 1.39 [wiz 2016-05-18]
 	Updated wm/openbox to 3.6.1 [snj 2016-05-18]
 	Updated pkgtools/x11-links to 1.02 [ryoon 2016-05-18]
+	Added x11/redshift version 1.11 [snj 2016-05-18]
