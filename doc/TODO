@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15903 2016/05/18 12:24:13 wiz Exp $
+$NetBSD: TODO,v 1.15904 2016/05/18 12:25:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1281,7 +1281,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Locale-Currency-Format-1.35
 	o p5-MIME-EncWords-1.014.3
 	o p5-Mail-IMAPClient-3.38
-	o p5-MailTools-2.17
 	o p5-Math-BigInt-GMP-1.49
 	o p5-Math-BigInt-Pari-1.25
 	o p5-Math-Pari-2.01080900
