@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2002 2016/05/18 12:28:33 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2003 2016/05/18 12:32:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2612,3 +2612,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added devel/p5-List-SomeUtils-XS version 0.52 [wiz 2016-05-18]
 	Added devel/p5-List-SomeUtils version 0.52 [wiz 2016-05-18]
 	Updated devel/py-enum34 to 1.1.6 [wiz 2016-05-18]
+	Updated devel/py-requests-toolbelt to 0.6.2 [wiz 2016-05-18]
