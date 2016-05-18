@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2261 2016/05/18 11:49:15 wiz Exp $
+# $NetBSD: Makefile,v 1.2262 2016/05/18 12:22:27 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -1089,6 +1089,8 @@ SUBDIR+=	p5-Lexical-SealRequireHints
 SUBDIR+=	p5-List-AllUtils
 SUBDIR+=	p5-List-MoreUtils
 SUBDIR+=	p5-List-Pairwise
+SUBDIR+=	p5-List-SomeUtils
+SUBDIR+=	p5-List-SomeUtils-XS
 SUBDIR+=	p5-List-UtilsBy
 SUBDIR+=	p5-Locale-Msgfmt
 SUBDIR+=	p5-Locale-PO
