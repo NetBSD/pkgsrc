@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.1994 2016/05/18 11:49:33 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.1995 2016/05/18 12:10:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2596,3 +2596,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated x11/luit to 2.0.20160508 [wiz 2016-05-18]
 	Updated sysutils/mc to 4.8.17 [wiz 2016-05-18]
 	Added devel/mdds1.2 version 1.2.0 [wiz 2016-05-18]
+	Updated time/p5-DateTime to 1.2700 [wiz 2016-05-18]
