@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.34 2015/12/05 21:25:56 adam Exp $
+# $NetBSD: Makefile,v 1.35 2016/05/19 22:10:24 joerg Exp $
 
-DISTNAME=	Botan-1.8.14
+DISTNAME=	Botan-1.10.12
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	security
-MASTER_SITES=	http://files.randombit.net/botan/archive/v1.8/
+MASTER_SITES=	http://files.randombit.net/botan/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -25,7 +25,7 @@ MAKE_FLAGS+=	LIB_OPT=${CXXFLAGS:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
-PLIST_VARS+=	i386 x86 x86_64 ppc arm
+PLIST_VARS+=	x86 x86_64
 
 .if ${MACHINE_ARCH} == "x86_64"
 CONFIGURE_ARGS+=	--cpu=amd64
@@ -37,13 +37,10 @@ PLIST.i386=	yes
 PLIST.x86=	yes
 .elif ${MACHINE_ARCH} == "powerpc"
 CONFIGURE_ARGS+=	--cpu=ppc
-PLIST.ppc=	yes
 .elif ${MACHINE_ARCH} == "powerpc64"
 CONFIGURE_ARGS+=	--cpu=ppc64
-PLIST.ppc=	yes
 .elif ${MACHINE_ARCH} == "arm"
 CONFIGURE_ARGS+=	--cpu=arm
-PLIST.arm=	yes
 .endif
 
 .include "../../lang/python/application.mk"
