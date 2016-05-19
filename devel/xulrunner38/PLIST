@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/12/10 22:58:22 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.1.4.1 2016/05/19 12:55:30 bsiegert Exp $
 bin/xulrunner38
 include/xulrunner38/AVCCDecoderModule.h
 include/xulrunner38/AbstractMediaDecoder.h
@@ -631,6 +631,7 @@ include/xulrunner38/mozilla/NumericLimits.h
 include/xulrunner38/mozilla/OSFileConstants.h
 include/xulrunner38/mozilla/Observer.h
 include/xulrunner38/mozilla/Omnijar.h
+include/xulrunner38/mozilla/Opaque.h
 include/xulrunner38/mozilla/PaintTracker.h
 include/xulrunner38/mozilla/Pair.h
 include/xulrunner38/mozilla/PeerIdentity.h
