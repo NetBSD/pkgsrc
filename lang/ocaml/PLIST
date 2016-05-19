@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2016/05/05 08:12:01 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.34 2016/05/19 15:30:04 jperkin Exp $
 bin/ocaml
 bin/ocamlc
 bin/ocamlcp
@@ -34,6 +34,7 @@ lib/ocaml/${PKGMANDIR}/man3/Ast_helper.3
 lib/ocaml/${PKGMANDIR}/man3/Ast_helper.Cf.3
 lib/ocaml/${PKGMANDIR}/man3/Ast_helper.Ci.3
 lib/ocaml/${PKGMANDIR}/man3/Ast_helper.Cl.3
+lib/ocaml/${PKGMANDIR}/man3/Ast_helper.Const.3
 lib/ocaml/${PKGMANDIR}/man3/Ast_helper.Csig.3
 lib/ocaml/${PKGMANDIR}/man3/Ast_helper.Cstr.3
 lib/ocaml/${PKGMANDIR}/man3/Ast_helper.Ctf.3
@@ -54,14 +55,18 @@ lib/ocaml/${PKGMANDIR}/man3/Ast_helper.Typ.3
 lib/ocaml/${PKGMANDIR}/man3/Ast_helper.Type.3
 lib/ocaml/${PKGMANDIR}/man3/Ast_helper.Val.3
 lib/ocaml/${PKGMANDIR}/man3/Ast_helper.Vb.3
+lib/ocaml/${PKGMANDIR}/man3/Ast_invariants.3
+lib/ocaml/${PKGMANDIR}/man3/Ast_iterator.3
 lib/ocaml/${PKGMANDIR}/man3/Ast_mapper.3
 lib/ocaml/${PKGMANDIR}/man3/Asttypes.3
+lib/ocaml/${PKGMANDIR}/man3/Attr_helper.3
 lib/ocaml/${PKGMANDIR}/man3/Bigarray.3
 lib/ocaml/${PKGMANDIR}/man3/Bigarray.Array1.3
 lib/ocaml/${PKGMANDIR}/man3/Bigarray.Array2.3
 lib/ocaml/${PKGMANDIR}/man3/Bigarray.Array3.3
 lib/ocaml/${PKGMANDIR}/man3/Bigarray.Genarray.3
 lib/ocaml/${PKGMANDIR}/man3/Buffer.3
+lib/ocaml/${PKGMANDIR}/man3/Builtin_attributes.3
 lib/ocaml/${PKGMANDIR}/man3/Bytes.3
 lib/ocaml/${PKGMANDIR}/man3/BytesLabels.3
 lib/ocaml/${PKGMANDIR}/man3/Callback.3
@@ -74,6 +79,20 @@ lib/ocaml/${PKGMANDIR}/man3/Char.3
 lib/ocaml/${PKGMANDIR}/man3/Complex.3
 lib/ocaml/${PKGMANDIR}/man3/Digest.3
 lib/ocaml/${PKGMANDIR}/man3/Docstrings.3
+lib/ocaml/${PKGMANDIR}/man3/Ephemeron.3
+lib/ocaml/${PKGMANDIR}/man3/Ephemeron.GenHashTable.3
+lib/ocaml/${PKGMANDIR}/man3/Ephemeron.GenHashTable.MakeSeeded.3
+lib/ocaml/${PKGMANDIR}/man3/Ephemeron.K1.3
+lib/ocaml/${PKGMANDIR}/man3/Ephemeron.K1.Make.3
+lib/ocaml/${PKGMANDIR}/man3/Ephemeron.K1.MakeSeeded.3
+lib/ocaml/${PKGMANDIR}/man3/Ephemeron.K2.3
+lib/ocaml/${PKGMANDIR}/man3/Ephemeron.K2.Make.3
+lib/ocaml/${PKGMANDIR}/man3/Ephemeron.K2.MakeSeeded.3
+lib/ocaml/${PKGMANDIR}/man3/Ephemeron.Kn.3
+lib/ocaml/${PKGMANDIR}/man3/Ephemeron.Kn.Make.3
+lib/ocaml/${PKGMANDIR}/man3/Ephemeron.Kn.MakeSeeded.3
+lib/ocaml/${PKGMANDIR}/man3/Ephemeron.S.3
+lib/ocaml/${PKGMANDIR}/man3/Ephemeron.SeededS.3
 lib/ocaml/${PKGMANDIR}/man3/Filename.3
 lib/ocaml/${PKGMANDIR}/man3/Format.3
 lib/ocaml/${PKGMANDIR}/man3/Gc.3
@@ -118,6 +137,7 @@ lib/ocaml/${PKGMANDIR}/man3/MoreLabels.Set.S.3
 lib/ocaml/${PKGMANDIR}/man3/Nativeint.3
 lib/ocaml/${PKGMANDIR}/man3/Num.3
 lib/ocaml/${PKGMANDIR}/man3/Obj.3
+lib/ocaml/${PKGMANDIR}/man3/Obj.Ephemeron.3
 lib/ocaml/${PKGMANDIR}/man3/Oo.3
 lib/ocaml/${PKGMANDIR}/man3/Parse.3
 lib/ocaml/${PKGMANDIR}/man3/Parser.3
@@ -153,6 +173,7 @@ lib/ocaml/${PKGMANDIR}/man3/String.3
 lib/ocaml/${PKGMANDIR}/man3/StringLabels.3
 lib/ocaml/${PKGMANDIR}/man3/Syntaxerr.3
 lib/ocaml/${PKGMANDIR}/man3/Sys.3
+lib/ocaml/${PKGMANDIR}/man3/Uchar.3
 lib/ocaml/${PKGMANDIR}/man3/Unix.3
 lib/ocaml/${PKGMANDIR}/man3/Unix.LargeFile.3
 lib/ocaml/${PKGMANDIR}/man3/Weak.3
@@ -1217,24 +1238,3 @@ man/man1/ocamloptp.1
 man/man1/ocamlprof.1
 man/man1/ocamlrun.1
 man/man1/ocamlyacc.1
-lib/ocaml/man/man3/Ast_helper.Const.3
-lib/ocaml/man/man3/Ast_invariants.3
-lib/ocaml/man/man3/Ast_iterator.3
-lib/ocaml/man/man3/Attr_helper.3
-lib/ocaml/man/man3/Builtin_attributes.3
-lib/ocaml/man/man3/Ephemeron.3
-lib/ocaml/man/man3/Ephemeron.GenHashTable.3
-lib/ocaml/man/man3/Ephemeron.GenHashTable.MakeSeeded.3
-lib/ocaml/man/man3/Ephemeron.K1.3
-lib/ocaml/man/man3/Ephemeron.K1.Make.3
-lib/ocaml/man/man3/Ephemeron.K1.MakeSeeded.3
-lib/ocaml/man/man3/Ephemeron.K2.3
-lib/ocaml/man/man3/Ephemeron.K2.Make.3
-lib/ocaml/man/man3/Ephemeron.K2.MakeSeeded.3
-lib/ocaml/man/man3/Ephemeron.Kn.3
-lib/ocaml/man/man3/Ephemeron.Kn.Make.3
-lib/ocaml/man/man3/Ephemeron.Kn.MakeSeeded.3
-lib/ocaml/man/man3/Ephemeron.S.3
-lib/ocaml/man/man3/Ephemeron.SeededS.3
-lib/ocaml/man/man3/Obj.Ephemeron.3
-lib/ocaml/man/man3/Uchar.3
