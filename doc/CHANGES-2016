@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2011 2016/05/19 07:07:37 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2012 2016/05/19 07:08:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2621,3 +2621,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated pkgtools/x11-links to 1.02 [ryoon 2016-05-18]
 	Added x11/redshift version 1.11 [snj 2016-05-18]
 	Updated x11/xcb-proto to 1.12 [wiz 2016-05-19]
+	Updated x11/py-xcbgen to 1.12 [wiz 2016-05-19]
