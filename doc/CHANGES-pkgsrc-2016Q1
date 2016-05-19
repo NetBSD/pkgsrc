@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q1,v 1.1.2.13 2016/05/13 14:53:20 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q1,v 1.1.2.14 2016/05/19 19:17:14 bsiegert Exp $
 
 Changes to the packages collection and infrastructure on the pkgsrc-2016Q1 branch:
 
@@ -104,4 +104,14 @@ net/samba4: security fix
 
 Pullup ticket #5012 - requested by taca
 www/typo3_62: security fix
+
+Pullup ticket #5014 - requested by sevan
+devel/xulrunner38: security fix
+www/firefox38: security fix
+
+Pullup ticket #5015 - requested by sevan
+www/firefox: security fix
+
+Pullup ticket #5016 - requested by sevan
+emulators/qemu: security fix
 
