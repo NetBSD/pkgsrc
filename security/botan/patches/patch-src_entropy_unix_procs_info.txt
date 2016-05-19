@@ -1,12 +1,12 @@
-$NetBSD: patch-src_entropy_unix_procs_info.txt,v 1.1 2011/12/17 16:09:46 marino Exp $
+$NetBSD: patch-src_entropy_unix_procs_info.txt,v 1.2 2016/05/19 22:10:24 joerg Exp $
 
---- src/entropy/unix_procs/info.txt.orig	2011-07-08 19:47:40.000000000 +0000
+--- src/entropy/unix_procs/info.txt.orig	2016-02-03 07:57:06.000000000 +0000
 +++ src/entropy/unix_procs/info.txt
-@@ -18,6 +18,7 @@ aix
- beos
- cygwin
- darwin
+@@ -24,6 +24,7 @@ netbsd
+ qnx
+ solaris
+ tru64
 +dragonfly
- #freebsd
- hpux
- irix
+ </os>
+ 
+ <requires>
