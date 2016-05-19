@@ -1,7 +1,9 @@
-$NetBSD: distinfo,v 1.11 2015/11/04 03:28:52 agc Exp $
+$NetBSD: distinfo,v 1.12 2016/05/19 07:08:14 wiz Exp $
 
-SHA1 (xcb-proto-1.11.tar.bz2) = 608bd60663e223464d38acec0183ddb827776401
-RMD160 (xcb-proto-1.11.tar.bz2) = 956fbf550ee9a8b6f5c7db78d1806e44da3c3081
-SHA512 (xcb-proto-1.11.tar.bz2) = 13c228d974f99e2f17a7352629b85c76674e395567474997015941780df123f9c809a76935242aaf31b7836b0478bd557e3cc9161dd4880b4fb8eb576216dbc1
-Size (xcb-proto-1.11.tar.bz2) = 139213 bytes
-SHA1 (patch-ae) = 569fede9974f9e2bc51de9bb187c9721baf21ab9
+SHA1 (xcb-proto-1.12.tar.bz2) = e93da374ecef9359370edc0160bcb8b2a2f7d9f6
+RMD160 (xcb-proto-1.12.tar.bz2) = 95e933656e7f8a59347296d75255e42e6f4a932a
+SHA512 (xcb-proto-1.12.tar.bz2) = 1f427eaf223971b25b56c9f641350e03f5ebeb17a1fc212ce2a0c892de7aba7e53d5e3958b073a122bb344c387c0ff394cf96f542ff046f33de4e1cd27fb9e5c
+Size (xcb-proto-1.12.tar.bz2) = 153890 bytes
+SHA1 (patch-ae) = ae3eae2c5ebf88bfc33a04f688f5c243c1475605
+SHA1 (patch-xcbgen_align.py) = 5504ddb51c7ab35b26be35288b878934a3e0f7c4
+SHA1 (patch-xcbgen_xtypes.py) = 7f107721ee61e506e5485f72b064155aaa727ee9
