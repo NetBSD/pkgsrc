@@ -1,0 +1,31 @@
+$NetBSD: patch-src_build-data_makefile_unix.in,v 1.1 2016/05/19 22:10:24 joerg Exp $
+
+--- src/build-data/makefile/unix.in.orig	2016-02-03 07:57:06.000000000 +0000
++++ src/build-data/makefile/unix.in
+@@ -12,12 +12,12 @@ VERSION       = %{version}
+ SERIES        = %{version_major}.%{version_minor}
+ 
+ # Installation Settings
+-DESTDIR       = %{prefix}
++PREFIX       = ${DESTDIR}%{prefix}
+ 
+-BINDIR        = $(DESTDIR)/bin
+-LIBDIR        = $(DESTDIR)/%{libdir}
+-HEADERDIR     = $(DESTDIR)/%{includedir}/botan-$(SERIES)/botan
+-DOCDIR        = $(DESTDIR)/%{docdir}/botan-$(VERSION)
++BINDIR        = $(PREFIX)/bin
++LIBDIR        = $(PREFIX)/%{libdir}
++HEADERDIR     = $(PREFIX)/%{includedir}/botan-$(SERIES)/botan
++DOCDIR        = $(PREFIX)/%{docdir}/botan-$(VERSION)
+ PKGCONF_DIR   = $(LIBDIR)/pkgconfig
+ 
+ CONFIG_SCRIPT = %{botan_config}
+@@ -89,7 +89,7 @@ distclean: clean
+ 	$(RM) botan_all.cpp botan_all.h
+ 
+ install: $(LIBRARIES) docs
+-	$(ECHO) "Installing Botan into $(DESTDIR)... "
++	$(ECHO) "Installing Botan into $(PREFIX)... "
+ 	$(MKDIR_INSTALL) $(DOCDIR)
+ 	$(COPY_R) %{doc_output_dir}/* $(DOCDIR)
+ 
