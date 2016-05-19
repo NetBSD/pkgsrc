@@ -1,8 +1,8 @@
-$NetBSD: patch-config_external_moz.build,v 1.10 2015/09/23 06:44:42 ryoon Exp $
+$NetBSD: patch-config_external_moz.build,v 1.10.6.1 2016/05/19 12:56:30 bsiegert Exp $
 
---- config/external/moz.build.orig	2015-08-24 21:53:10.000000000 +0000
+--- config/external/moz.build.orig	2016-04-15 16:57:45.000000000 +0000
 +++ config/external/moz.build
-@@ -19,10 +19,19 @@ if CONFIG['MOZ_UPDATER']:
+@@ -20,10 +20,19 @@ if CONFIG['MOZ_UPDATER']:
  # There's no "native brotli" yet, but probably in the future...
  external_dirs += ['modules/brotli']
  
@@ -23,11 +23,11 @@ $NetBSD: patch-config_external_moz.build,v 1.10 2015/09/23 06:44:42 ryoon Exp $
 +if CONFIG['MOZ_TREMOR'] and not CONFIG['MOZ_NATIVE_TREMOR']:
      external_dirs += ['media/libtremor']
  
- if CONFIG['MOZ_WEBM']:
-@@ -49,9 +58,6 @@ if CONFIG['MOZ_WEBSPEECH_POCKETSPHINX']:
- external_dirs += [
+ if CONFIG['MOZ_WEBM_ENCODER']:
+@@ -51,9 +60,6 @@ external_dirs += [
      'media/kiss_fft',
      'media/libcubeb',
+     'media/libnestegg',
 -    'media/libogg',
 -    'media/libopus',
 -    'media/libtheora',
