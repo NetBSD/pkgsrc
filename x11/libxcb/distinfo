@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.16 2015/11/04 03:28:47 agc Exp $
+$NetBSD: distinfo,v 1.17 2016/05/19 07:09:03 wiz Exp $
 
-SHA1 (libxcb-1.11.1.tar.bz2) = 28e47aa699d2c2cffed31d1aa2473a9fefe77f17
-RMD160 (libxcb-1.11.1.tar.bz2) = a8ac86a0b68b08a1600ae63b0102704f4dfeb8b9
-SHA512 (libxcb-1.11.1.tar.bz2) = 30471b053097d68008142bada9ca3efd9121305f0180d28a5ca9b62821f711a3ad63a667bdfb31f8f97020ed7aa9509f8248effbd65c80e6cda7375135dc96eb
-Size (libxcb-1.11.1.tar.bz2) = 519517 bytes
+SHA1 (libxcb-1.12.tar.bz2) = 2f03490d1c75c8a3f902f74b717af6501773926a
+RMD160 (libxcb-1.12.tar.bz2) = 6deb619ae87e84f014987c24abdc46e44b21197c
+SHA512 (libxcb-1.12.tar.bz2) = 4ce3e3f62b7e1c3a9e61c149c720ef2a4a760539ea615d7d52ae39e7f5a08456dc87d7a1ac5d85ca15dcc468a9a02d56fb8f8f6361c959af9b8780f011995896
+Size (libxcb-1.12.tar.bz2) = 613822 bytes
 SHA1 (patch-aa) = 813338a15543787f489b23274c526185008bbce3
 SHA1 (patch-ai) = 637affb3aa2f7d40e0aada4dadab8c695ea74b6f
+SHA1 (patch-src_c__client.py) = 68023c346ad38b85e25c53f997f2b19dec7f0967
