@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.45 2015/12/21 12:10:22 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.45.4.1 2016/05/19 12:56:38 bsiegert Exp $
 ${PLIST.ivshmem}bin/ivshmem-client
 ${PLIST.ivshmem}bin/ivshmem-server
 ${PLIST.alpha}bin/qemu-alpha
@@ -128,11 +128,9 @@ share/qemu/pxe-ne2k_pci.rom
 share/qemu/pxe-pcnet.rom
 share/qemu/pxe-rtl8139.rom
 share/qemu/pxe-virtio.rom
-share/qemu/q35-acpi-dsdt.aml
 share/qemu/qemu-icon.bmp
 share/qemu/qemu_logo_no_text.svg
 share/qemu/s390-ccw.img
-share/qemu/s390-zipl.rom
 share/qemu/sgabios.bin
 share/qemu/slof.bin
 share/qemu/spapr-rtas.bin

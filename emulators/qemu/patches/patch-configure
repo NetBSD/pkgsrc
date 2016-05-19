@@ -1,12 +1,12 @@
-$NetBSD: patch-configure,v 1.12 2016/03/24 15:21:10 khorben Exp $
+$NetBSD: patch-configure,v 1.12.2.1 2016/05/19 12:56:38 bsiegert Exp $
 
 Don't use gld on SunOS
 add check for shm_open
 avoid bad substitution
 
---- configure.orig	2015-12-16 22:04:48.000000000 +0000
+--- configure.orig	2016-05-11 15:56:07.000000000 +0000
 +++ configure
-@@ -650,7 +650,6 @@ SunOS)
+@@ -624,7 +624,6 @@ SunOS)
    solaris="yes"
    make="${MAKE-gmake}"
    install="${INSTALL-ginstall}"
@@ -56,7 +56,7 @@ avoid bad substitution
    return clock_gettime(CLOCK_REALTIME, NULL);
  }
  EOF
-@@ -4568,7 +4593,9 @@ if test "$want_tools" = "yes" ; then
+@@ -4583,7 +4608,9 @@ if test "$want_tools" = "yes" ; then
    tools="qemu-img\$(EXESUF) qemu-io\$(EXESUF) $tools"
    if [ "$linux" = "yes" -o "$bsd" = "yes" -o "$solaris" = "yes" ] ; then
      tools="qemu-nbd\$(EXESUF) $tools"
@@ -67,16 +67,7 @@ avoid bad substitution
    fi
  fi
  if test "$softmmu" = yes ; then
-@@ -4758,7 +4785,7 @@ echo "GTK GL support    $gtk_gl"
- echo "GNUTLS support    $gnutls"
- echo "GNUTLS hash       $gnutls_hash"
- echo "libgcrypt         $gcrypt"
--echo "nettle            $nettle ${nettle+($nettle_version)}"
-+echo "nettle            $nettle ($nettle_version)"
- echo "libtasn1          $tasn1"
- echo "VTE support       $vte"
- echo "curses support    $curses"
-@@ -5049,6 +5076,9 @@ fi
+@@ -5074,6 +5101,9 @@ fi
  if test "$fallocate_zero_range" = "yes" ; then
    echo "CONFIG_FALLOCATE_ZERO_RANGE=y" >> $config_host_mak
  fi

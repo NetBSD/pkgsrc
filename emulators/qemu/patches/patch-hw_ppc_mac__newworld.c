@@ -1,10 +1,10 @@
-$NetBSD: patch-hw_ppc_mac__newworld.c,v 1.2 2014/01/15 18:26:20 wiz Exp $
+$NetBSD: patch-hw_ppc_mac__newworld.c,v 1.2.18.1 2016/05/19 12:56:38 bsiegert Exp $
 
 Avoid conflicts with round_page() macro in DragonFly's <cpu/param.h>
 
---- hw/ppc/mac_newworld.c.orig	2013-11-27 22:15:55.000000000 +0000
+--- hw/ppc/mac_newworld.c.orig	2016-05-11 15:56:09.000000000 +0000
 +++ hw/ppc/mac_newworld.c
-@@ -125,7 +125,7 @@ static uint64_t translate_kernel_address
+@@ -131,7 +131,7 @@ static uint64_t translate_kernel_address
      return (addr & 0x0fffffff) + KERNEL_LOAD_ADDR;
  }
  
@@ -13,7 +13,7 @@ Avoid conflicts with round_page() macro in DragonFly's <cpu/param.h>
  {
      return (addr + TARGET_PAGE_SIZE - 1) & TARGET_PAGE_MASK;
  }
-@@ -252,7 +252,7 @@ static void ppc_core99_init(QEMUMachineI
+@@ -262,7 +262,7 @@ static void ppc_core99_init(MachineState
          }
          /* load initrd */
          if (initrd_filename) {
@@ -22,8 +22,8 @@ Avoid conflicts with round_page() macro in DragonFly's <cpu/param.h>
              initrd_size = load_image_targphys(initrd_filename, initrd_base,
                                                ram_size - initrd_base);
              if (initrd_size < 0) {
-@@ -260,11 +260,11 @@ static void ppc_core99_init(QEMUMachineI
-                          initrd_filename);
+@@ -270,11 +270,11 @@ static void ppc_core99_init(MachineState
+                              initrd_filename);
                  exit(1);
              }
 -            cmdline_base = round_page(initrd_base + initrd_size);
