@@ -1,10 +1,10 @@
-$NetBSD: patch-gfx_skia_moz.build,v 1.10 2015/11/03 15:52:57 ryoon Exp $
+$NetBSD: patch-gfx_skia_moz.build,v 1.10.4.1 2016/05/19 12:56:31 bsiegert Exp $
 
---- gfx/skia/moz.build.orig	2015-10-22 22:30:23.000000000 +0000
+--- gfx/skia/moz.build.orig	2016-04-15 16:57:40.000000000 +0000
 +++ gfx/skia/moz.build
-@@ -675,6 +675,12 @@ if CONFIG['GNU_CXX']:
-     if CONFIG['CPU_ARCH'] == 'arm':
-         SOURCES['skia/src/opts/SkBlitRow_opts_arm.cpp'].flags += ['-fomit-frame-pointer']
+@@ -752,6 +752,12 @@ if CONFIG['CLANG_CXX'] or CONFIG['CLANG_
+         '-Wno-unused-private-field',
+     ]
  
 +if CONFIG['MOZ_NATIVE_HARFBUZZ']:
 +    CXXFLAGS += CONFIG['MOZ_HARFBUZZ_CFLAGS']
