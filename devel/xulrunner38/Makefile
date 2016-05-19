@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2016/03/19 23:05:02 ryoon Exp $
+# $NetBSD: Makefile,v 1.7.2.1 2016/05/19 12:55:30 bsiegert Exp $
 
-MOZ_BRANCH=		38.7
-MOZ_BRANCH_MINOR=	.1esr
+MOZ_BRANCH=		38.8
+MOZ_BRANCH_MINOR=	.0esr
 MOZ_VER=		${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
 DISTNAME=		firefox-${MOZ_VER}.source
 MASTER_SITES=		${MASTER_SITE_MOZILLA_ALL:=firefox/releases/${MOZ_VER}/source/}
