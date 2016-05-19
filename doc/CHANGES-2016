@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2013 2016/05/19 07:09:14 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2014 2016/05/19 22:13:51 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2623,3 +2623,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated x11/xcb-proto to 1.12 [wiz 2016-05-19]
 	Updated x11/py-xcbgen to 1.12 [wiz 2016-05-19]
 	Updated x11/libxcb to 1.12 [wiz 2016-05-19]
+	Updated security/botan to 1.10.12 [joerg 2016-05-19]
