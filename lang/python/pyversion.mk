@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.119 2016/02/25 14:42:56 jperkin Exp $
+# $NetBSD: pyversion.mk,v 1.120 2016/05/19 11:45:36 jperkin Exp $
 
 # This file determines which Python version is used as a dependency for
 # a package.
@@ -202,6 +202,7 @@ ALL_ENV+=	PYTHON=${PYTHONBIN}
 CMAKE_ARGS+=	-DPYVERSSUFFIX:STRING=${PYVERSSUFFIX}
 # set this explicitly, as by default it will prefer the built in framework
 CMAKE_ARGS.Darwin+=	-DPYTHON_INCLUDE_DIR:PATH=${BUILDLINK_DIR}/${PYINC}
+CMAKE_ARGS.Darwin+=	-DPYTHON_INCLUDE_PATH:PATH=${BUILDLINK_DIR}/${PYINC}
 CMAKE_ARGS.Darwin+=	-DPYTHON_EXECUTABLE:FILEPATH=${PYTHONBIN}
 .endif
 
