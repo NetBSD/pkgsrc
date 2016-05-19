@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2015/06/12 10:50:58 fhajny Exp $
+# $NetBSD: options.mk,v 1.4 2016/05/19 22:12:09 joerg Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.powerdns
 PKG_SUPPORTED_OPTIONS=	bind botan cryptopp pipe random remote sqlite tools
@@ -15,7 +15,7 @@ PLIST.bind=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mbotan)
-CONFIGURE_ARGS+=	--enable-botan1.8
+CONFIGURE_ARGS+=	--enable-botan1.10
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../security/botan/buildlink3.mk"
 .endif
