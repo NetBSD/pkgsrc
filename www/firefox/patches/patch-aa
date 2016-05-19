@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.44 2016/03/09 07:12:25 tnn Exp $
+$NetBSD: patch-aa,v 1.44.2.1 2016/05/19 12:56:30 bsiegert Exp $
 
 * The profiler does not support Darwin/PPC so don't try to enable it
   on that platform. Also it makes extra files appear in the PLIST on Linux
@@ -14,9 +14,9 @@ $NetBSD: patch-aa,v 1.44 2016/03/09 07:12:25 tnn Exp $
   heavy patching. Ideally they should be fixed individually but that
   will be an extremely hard work, so don't define XP_MACOSX for now.
 
---- configure.in.orig	2016-03-03 21:47:52.000000000 +0000
+--- configure.in.orig	2016-04-15 16:57:45.000000000 +0000
 +++ configure.in
-@@ -1746,7 +1746,7 @@ fi
+@@ -1722,7 +1722,7 @@ fi
  dnl ========================================================
  dnl SPS Profiler
  dnl ========================================================
@@ -25,7 +25,7 @@ $NetBSD: patch-aa,v 1.44 2016/03/09 07:12:25 tnn Exp $
  
  case "${OS_TARGET}" in
  Android)
-@@ -1996,7 +1996,6 @@ case "$target" in
+@@ -2004,7 +2004,6 @@ case "$target" in
          _PLATFORM_DEFAULT_TOOLKIT='cairo-uikit'
          direct_nspr_config=1
      else
@@ -33,7 +33,7 @@ $NetBSD: patch-aa,v 1.44 2016/03/09 07:12:25 tnn Exp $
          AC_DEFINE(XP_DARWIN)
          _PLATFORM_DEFAULT_TOOLKIT='cairo-cocoa'
          # The ExceptionHandling framework is needed for Objective-C exception
-@@ -2580,8 +2579,7 @@ MOZ_CXX11
+@@ -2646,8 +2645,7 @@ MOZ_CXX11
  
  AC_LANG_C
  
@@ -43,8 +43,8 @@ $NetBSD: patch-aa,v 1.44 2016/03/09 07:12:25 tnn Exp $
  dnl ===============================================================
  if test "$GNU_CC" -a "$OS_TARGET" != WINNT; then
    AC_DEFINE(HAVE_VISIBILITY_HIDDEN_ATTRIBUTE)
-@@ -3476,6 +3474,14 @@ if test -n "$YASM"; then
-   _YASM_BUILD=`        echo ${YASM_VERSION} | $AWK -F\. '{ print $4 }'`
+@@ -3544,6 +3542,14 @@ if test -n "$YASM"; then
+   AC_MSG_RESULT([$_YASM_MAJOR_VERSION.$_YASM_MINOR_VERSION.$_YASM_RELEASE ($YASM_VERSION)])
  fi
  
 +if test -n "${LIBXUL_SDK_DIR}"; then
@@ -58,7 +58,7 @@ $NetBSD: patch-aa,v 1.44 2016/03/09 07:12:25 tnn Exp $
  if test -z "$SKIP_LIBRARY_CHECKS"; then
  dnl system JPEG support
  dnl ========================================================
-@@ -3503,11 +3509,7 @@ if test "$MOZ_NATIVE_JPEG" = 1; then
+@@ -3571,11 +3577,7 @@ if test "$MOZ_NATIVE_JPEG" = 1; then
                       #include <jpeglib.h> ],
                     [ #if JPEG_LIB_VERSION < $MOZJPEG
                       #error "Insufficient JPEG library version ($MOZJPEG required)."
@@ -71,7 +71,7 @@ $NetBSD: patch-aa,v 1.44 2016/03/09 07:12:25 tnn Exp $
                     MOZ_NATIVE_JPEG=1,
                     AC_MSG_ERROR([Insufficient JPEG library version for --with-system-jpeg]))
  fi
-@@ -4260,6 +4262,10 @@ cairo-gonk)
+@@ -4321,6 +4323,10 @@ cairo-gonk)
  
  esac
  
@@ -82,8 +82,8 @@ $NetBSD: patch-aa,v 1.44 2016/03/09 07:12:25 tnn Exp $
  AC_SUBST(MOZ_PDF_PRINTING)
  if test "$MOZ_PDF_PRINTING"; then
     PDF_SURFACE_FEATURE="#define CAIRO_HAS_PDF_SURFACE 1"
-@@ -5018,6 +5024,9 @@ if test -n "$MOZ_WEBRTC"; then
-     MOZ_VPX=1
+@@ -5064,6 +5070,9 @@ if test -n "$MOZ_WEBRTC"; then
+     MOZ_RAW=1
      MOZ_VPX_ERROR_CONCEALMENT=1
  
 +    dnl with libv4l2 we can support more cameras
@@ -92,7 +92,7 @@ $NetBSD: patch-aa,v 1.44 2016/03/09 07:12:25 tnn Exp $
  dnl enable once Signaling lands
      MOZ_WEBRTC_SIGNALING=1
      AC_DEFINE(MOZ_WEBRTC_SIGNALING)
-@@ -5161,6 +5170,142 @@ if test "${ac_cv_c_attribute_aligned}" !
+@@ -5207,6 +5216,155 @@ if test "${ac_cv_c_attribute_aligned}" !
  fi
  
  dnl ========================================================
@@ -232,10 +232,23 @@ $NetBSD: patch-aa,v 1.44 2016/03/09 07:12:25 tnn Exp $
 +AC_SUBST(MOZ_NATIVE_SOUNDTOUCH)
 +
 +dnl ========================================================
- dnl = Disable VP8 decoder support
++dnl = Disable VP8 decoder support
++dnl ========================================================
++MOZ_ARG_DISABLE_BOOL(webm,
++[  --disable-webm          Disable support for WebM media (VP8 video and Vorbis audio)],
++    MOZ_WEBM=,
++    MOZ_WEBM=1)
++
++if test -n "$MOZ_WEBM"; then
++    AC_DEFINE(MOZ_WEBM)
++    MOZ_VPX=1
++fi;
++
++dnl ========================================================
+ dnl = Apple platform decoder support
  dnl ========================================================
- MOZ_ARG_DISABLE_BOOL(webm,
-@@ -5563,6 +5708,67 @@ fi
+ if test "$MOZ_WIDGET_TOOLKIT" = "cocoa" || test "$MOZ_WIDGET_TOOLKIT" = "uikit"; then
+@@ -5579,6 +5737,67 @@ fi
  AC_SUBST(MOZ_WEBM_ENCODER)
  
  dnl ==================================
@@ -303,7 +316,7 @@ $NetBSD: patch-aa,v 1.44 2016/03/09 07:12:25 tnn Exp $
  dnl = Check alsa availability on Linux
  dnl ==================================
  
-@@ -5576,12 +5782,23 @@ MOZ_ARG_ENABLE_BOOL(alsa,
+@@ -5592,12 +5811,23 @@ MOZ_ARG_ENABLE_BOOL(alsa,
     MOZ_ALSA=1,
     MOZ_ALSA=)
  
@@ -327,7 +340,7 @@ $NetBSD: patch-aa,v 1.44 2016/03/09 07:12:25 tnn Exp $
  AC_SUBST(MOZ_ALSA)
  
  dnl ========================================================
-@@ -8139,6 +8356,49 @@ if test "$USE_FC_FREETYPE"; then
+@@ -8101,6 +8331,49 @@ if test "$USE_FC_FREETYPE"; then
  fi
  
  dnl ========================================================

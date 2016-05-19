@@ -1,10 +1,10 @@
-$NetBSD: patch-dom_media_moz.build,v 1.2 2015/04/05 12:54:11 ryoon Exp $
+$NetBSD: patch-dom_media_moz.build,v 1.2.8.1 2016/05/19 12:56:31 bsiegert Exp $
 
---- dom/media/moz.build.orig	2015-03-27 02:20:26.000000000 +0000
+--- dom/media/moz.build.orig	2016-04-15 16:57:42.000000000 +0000
 +++ dom/media/moz.build
-@@ -276,6 +276,27 @@ if CONFIG['ANDROID_VERSION'] > '15':
- CFLAGS += CONFIG['GSTREAMER_CFLAGS']
- CXXFLAGS += CONFIG['GSTREAMER_CFLAGS']
+@@ -314,6 +314,27 @@ if CONFIG['ANDROID_VERSION'] > '15':
+ if CONFIG['MOZ_GONK_MEDIACODEC']:
+     DEFINES['MOZ_GONK_MEDIACODEC'] = True
  
 +if CONFIG['MOZ_NATIVE_OGG']:
 +    CXXFLAGS += CONFIG['MOZ_OGG_CFLAGS']
