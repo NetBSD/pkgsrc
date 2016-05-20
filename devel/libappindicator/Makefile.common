@@ -1,0 +1,25 @@
+# $NetBSD: Makefile.common,v 1.1 2016/05/20 21:39:03 youri Exp $
+#
+# used by wip/libappindicator3/Makefile
+
+DISTNAME=	libappindicator-12.10.0
+CATEGORIES=	devel
+MASTER_SITES=	https://launchpad.net/libappindicator/12.10/12.10.0/+download/
+
+HOMEPAGE=	https://launchpad.net/libappindicator/
+LICENSE=	gnu-lgpl-v3 AND gnu-lgpl-v2.1
+
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
+USE_TOOLS+=	gmake pkg-config
+
+EXTRACT_USING=	gtar
+
+PKGCONFIG_OVERRIDE+=	bindings/mono/appindicator-sharp-0.1.pc.in
+PKGCONFIG_OVERRIDE+=	src/appindicator3-0.1.pc.in
+PKGCONFIG_OVERRIDE+=	src/appindicator-0.1.pc.in
+
+CONFIGURE_ARGS+=	--with-gtk=${USE_GTK_VERSION}
+
+PY_PATCHPLIST=	yes
+.include "../../lang/python/extension.mk"
