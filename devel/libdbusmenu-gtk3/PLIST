@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2016/05/20 22:02:58 youri Exp $
+include/libdbusmenu-gtk3-0.4/libdbusmenu-gtk/client.h
+include/libdbusmenu-gtk3-0.4/libdbusmenu-gtk/dbusmenu-gtk.h
+include/libdbusmenu-gtk3-0.4/libdbusmenu-gtk/menu.h
+include/libdbusmenu-gtk3-0.4/libdbusmenu-gtk/menuitem.h
+include/libdbusmenu-gtk3-0.4/libdbusmenu-gtk/parser.h
+lib/girepository-1.0/DbusmenuGtk3-0.4.typelib
+lib/libdbusmenu-gtk3.la
+lib/pkgconfig/dbusmenu-gtk3-0.4.pc
+share/gir-1.0/DbusmenuGtk3-0.4.gir
+share/vala/vapi/DbusmenuGtk3-0.4.vapi
