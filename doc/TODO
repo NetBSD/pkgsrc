@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15912 2016/05/20 14:22:13 mef Exp $
+$NetBSD: TODO,v 1.15913 2016/05/20 22:54:43 mef Exp $
 
 Suggested new packages
 ======================
@@ -573,7 +573,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dd_rhelp-0.3.0
 	o ddrescue-1.21
 	o dega-1.12
-	o dejagnu-1.6
 	o delegate-9.9.13
 	o denemo-2.0.8
 	o desklaunch-1.1.7
