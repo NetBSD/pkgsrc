@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2019 2016/05/20 14:22:13 mef Exp $
+$NetBSD: CHANGES-2016,v 1.2020 2016/05/20 18:40:03 youri Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2629,3 +2629,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/nss to 3.23nb1 [wiz 2016-05-20]
 	Updated mail/libmilter to 8.15.2nb1 [jperkin 2016-05-20]
 	Updated x11/p5-Alien-wxWidgets to 0.67 [mef 2016-05-20]
+	Added security/polkit version 0.113nb1 [youri 2016-05-20]
