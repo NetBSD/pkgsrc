@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2035 2016/05/20 22:13:07 youri Exp $
+$NetBSD: CHANGES-2016,v 1.2036 2016/05/20 22:14:38 youri Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2640,3 +2640,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added devel/libdbusmenu-gtk3 version 12.10.2 [youri 2016-05-20]
 	Added devel/libdbusmenu-jsonloader version 12.10.2 [youri 2016-05-20]
 	Added devel/libdbusmenu-tools version 12.10.2 [youri 2016-05-20]
+	Added meta-pkgs/libdbusmenu version 12.10.2 [youri 2016-05-20]
