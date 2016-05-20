@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.63 2015/07/11 10:08:32 jnemeth Exp $
+# $NetBSD: Makefile.common,v 1.64 2016/05/20 12:11:39 jperkin Exp $
 #
 # used by mail/libmilter/Makefile
 # used by mail/sendmail/Makefile
@@ -60,6 +60,7 @@ make-sendmail-siteconfig:
 
 	${CAT} ${FILESDIR}/site.config.m4-milter >>${SITECONFIG}
 .if ${OPSYS} == "SunOS"
+	${CAT} ${FILESDIR}/site.config.m4-fpic >>${SITECONFIG}
 	${CAT} ${FILESDIR}/site.config.m4-libresolv >>${SITECONFIG}
 .  if exists(/usr/include/stdbool.h)
 	${CAT} ${FILESDIR}/site.config.m4-stdbool >>${SITECONFIG}
