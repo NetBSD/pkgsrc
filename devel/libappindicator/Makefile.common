@@ -1,6 +1,6 @@
-# $NetBSD: Makefile.common,v 1.1 2016/05/20 21:39:03 youri Exp $
+# $NetBSD: Makefile.common,v 1.2 2016/05/20 21:40:45 youri Exp $
 #
-# used by wip/libappindicator3/Makefile
+# used by devel/libappindicator3/Makefile
 
 DISTNAME=	libappindicator-12.10.0
 CATEGORIES=	devel
