@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2016/05/20 21:39:03 youri Exp $
+include/libappindicator-0.1/libappindicator/app-indicator-enum-types.h
+include/libappindicator-0.1/libappindicator/app-indicator.h
+lib/libappindicator.la
+lib/pkgconfig/appindicator-0.1.pc
+${PYSITELIB}/appindicator/__init__.py
+${PYSITELIB}/appindicator/__init__.pyc
+${PYSITELIB}/appindicator/__init__.pyo
+${PYSITELIB}/appindicator/_appindicator.la
+share/gtk-doc/html/libappindicator/annotation-glossary.html
+share/gtk-doc/html/libappindicator/api-index-0-5.html
+share/gtk-doc/html/libappindicator/api-index-deprecated.html
+share/gtk-doc/html/libappindicator/api-index-full.html
+share/gtk-doc/html/libappindicator/ch01.html
+share/gtk-doc/html/libappindicator/home.png
+share/gtk-doc/html/libappindicator/index.html
+share/gtk-doc/html/libappindicator/index.sgml
+share/gtk-doc/html/libappindicator/left.png
+share/gtk-doc/html/libappindicator/libappindicator-app-indicator.html
+share/gtk-doc/html/libappindicator/libappindicator.devhelp2
+share/gtk-doc/html/libappindicator/object-tree.html
+share/gtk-doc/html/libappindicator/right.png
+share/gtk-doc/html/libappindicator/style.css
+share/gtk-doc/html/libappindicator/up.png
+share/pygtk/2.0/defs/appindicator.defs
