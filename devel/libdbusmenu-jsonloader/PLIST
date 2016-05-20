@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2016/05/20 22:03:46 youri Exp $
+include/libdbusmenu-glib-0.4/libdbusmenu-jsonloader/json-loader.h
+lib/libdbusmenu-jsonloader.la
+lib/pkgconfig/dbusmenu-jsonloader-0.4.pc
+share/doc/libdbusmenu/examples/glib-server-nomenu.c
+share/libdbusmenu/json/test-gtk-label.json
