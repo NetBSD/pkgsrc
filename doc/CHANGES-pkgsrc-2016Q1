@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q1,v 1.1.2.14 2016/05/19 19:17:14 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q1,v 1.1.2.15 2016/05/20 05:35:49 spz Exp $
 
 Changes to the packages collection and infrastructure on the pkgsrc-2016Q1 branch:
 
@@ -115,3 +115,5 @@ www/firefox: security fix
 Pullup ticket #5016 - requested by sevan
 emulators/qemu: security fix
 
+Pullup ticket #4965 - requested by bsiegert
+www/h2o: security update
