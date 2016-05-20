@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/05/20 22:02:58 youri Exp $
+
+SHA1 (libdbusmenu-12.10.2.tar.gz) = 067b77564f90633aa58494e54b99d733a21f3142
+RMD160 (libdbusmenu-12.10.2.tar.gz) = bf424925750549d44d6fc2563caf37e73f21db3d
+SHA512 (libdbusmenu-12.10.2.tar.gz) = cf2e50dc3adbf35d0a4ccdd62a3efd9fae2d079b8d06e6522b70f077f89ac2cf72188e380f476e38d184b69549e90b801bf1e32174fa94bbe612dd52aec94496
+Size (libdbusmenu-12.10.2.tar.gz) = 735730 bytes
