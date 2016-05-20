@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2021 2016/05/20 18:45:39 youri Exp $
+$NetBSD: CHANGES-2016,v 1.2022 2016/05/20 18:51:57 youri Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2630,4 +2630,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/libmilter to 8.15.2nb1 [jperkin 2016-05-20]
 	Updated x11/p5-Alien-wxWidgets to 0.67 [mef 2016-05-20]
 	Added security/polkit version 0.113nb1 [youri 2016-05-20]
+	Added lang/spidermonkey17 version 17.0.0 [youri 2016-05-20]
 	Added lang/spidermonkey17 version 17.0.0 [youri 2016-05-20]
