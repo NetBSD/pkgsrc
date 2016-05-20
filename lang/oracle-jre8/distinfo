@@ -1,5 +1,13 @@
-$NetBSD: distinfo,v 1.6 2016/05/14 15:49:53 jperkin Exp $
+$NetBSD: distinfo,v 1.7 2016/05/20 22:24:09 dsainty Exp $
 
+SHA1 (jce_policy-8.zip) = 7d25dcee3e6ef2c984d748a14614b37c18ce3507
+RMD160 (jce_policy-8.zip) = bdcb54a9900c00b52c24d024282b6e40c148d49c
+SHA512 (jce_policy-8.zip) = abbaa81a35f904ec61b4cf3c2d1ca8c8d49e53bb248e698185eea906939d68f5063412800585ec74027aab1012ef189aebe1dc99fe8ef4230a0ecb0b527f88e5
+Size (jce_policy-8.zip) = 8409 bytes
+SHA1 (jre-8u92-linux-i586.tar.gz) = 937a92f6030cf78775270be724810c857060cb8f
+RMD160 (jre-8u92-linux-i586.tar.gz) = 783c224068aa6bd9a9cdd4783186bb29cf71805b
+SHA512 (jre-8u92-linux-i586.tar.gz) = 0eb1f03e7b84537501c13e185e2f1dc7f12c162209c98ce51042618cf02bd1691f3eb09c75a6d8db6dc6cfdd3369315cede49c194eae204b07d461a8eae47ff5
+Size (jre-8u92-linux-i586.tar.gz) = 73984536 bytes
 SHA1 (jre-8u92-linux-x64.tar.gz) = 9a143020cfc8fc1b5a2cfd27d00735fb2d536b70
 RMD160 (jre-8u92-linux-x64.tar.gz) = c5a0144c4110a9e0754f5e47513b11f718a74dfc
 SHA512 (jre-8u92-linux-x64.tar.gz) = 2d538c05110de21fc4dfb47e225012fc696e4a644c4d3191da48ccfcb239a6ac5618b75fc3c0eeb47f98e82254c548a0083bfab7ad831adffdcd6706433cf38f
