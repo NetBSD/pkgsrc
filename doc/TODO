@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15911 2016/05/19 22:13:51 joerg Exp $
+$NetBSD: TODO,v 1.15912 2016/05/20 14:22:13 mef Exp $
 
 Suggested new packages
 ======================
@@ -1225,7 +1225,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p11-kit-0.23.2
 	o p5-Algorithm-Cluster-1.52
 	o p5-Algorithm-LUHN-1.02
-	o p5-Alien-wxWidgets-0.67
 	o p5-Apache-Gallery-1.0.2
 	o p5-Apache-LogFormat-Compiler-0.33
 	o p5-AuthCAS-1.6
