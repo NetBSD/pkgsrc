@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2017 2016/05/20 11:53:33 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2018 2016/05/20 12:12:23 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2627,3 +2627,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/botan-devel to 1.11.29 [joerg 2016-05-19]
 	Updated sysutils/pciutils to 3.5.0 [msaitoh 2016-05-20]
 	Updated devel/nss to 3.23nb1 [wiz 2016-05-20]
+	Updated mail/libmilter to 8.15.2nb1 [jperkin 2016-05-20]
