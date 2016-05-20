@@ -1,0 +1,27 @@
+$NetBSD: patch-ml,v 1.1 2016/05/20 18:45:22 youri Exp $
+
+o Treat DragonFly like FreeBSD.
+o XXX: Kludge to add the shebang in the js-config script.
+
+--- js/src/Makefile.in.orig	2013-03-25 20:34:20.000000000 +0000
++++ js/src/Makefile.in
+@@ -682,6 +682,9 @@ endif # _MSC_VER
+ ifeq ($(OS_ARCH),FreeBSD)
+ EXTRA_LIBS	+= -pthread
+ endif
++ifeq ($(OS_ARCH),DragonFly)
++EXTRA_LIBS	+= -pthread
++endif
+ ifeq ($(OS_ARCH),Linux)
+ EXTRA_LIBS	+= -ldl
+ endif
+@@ -778,7 +781,8 @@ JS_CONFIG_SUBSTITUTIONS=\
+ 
+ $(JS_CONFIG_NAME): js-config.in Makefile $(DEPTH)/config/autoconf.mk $(topsrcdir)/config/config.mk $(topsrcdir)/config/rules.mk
+ 	$(RM) $@.tmp
+-	$(PYTHON) $(topsrcdir)/config/Preprocessor.py $(JS_CONFIG_SUBSTITUTIONS) $< > $@.tmp \
++	echo '#!/bin/sh' > $@.tmp \
++	&& $(PYTHON) $(topsrcdir)/config/Preprocessor.py $(JS_CONFIG_SUBSTITUTIONS) $< >> $@.tmp \
+ 	&& mv $@.tmp $@ && chmod +x $@
+ 
+ SCRIPTS = $(JS_CONFIG_NAME)
