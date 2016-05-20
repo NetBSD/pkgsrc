@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2016/05/20 22:07:41 youri Exp $
+libexec/dbusmenu-bench
+libexec/dbusmenu-dumper
+libexec/dbusmenu-testapp
+share/doc/libdbusmenu/README.dbusmenu-bench
