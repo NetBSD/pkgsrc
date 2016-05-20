@@ -1,0 +1,3 @@
+PolicyKit is a toolkit for defining and handling authorizations.  It
+is used for allowing unprivileged processes to speak to privileged
+processes.
