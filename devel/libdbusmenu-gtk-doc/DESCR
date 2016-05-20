@@ -3,4 +3,4 @@ indicator-applet. It passes a menu structure across DBus so that a program can
 create a menu simply without worrying about how it is displayed on the other
 side of the bus.
 
-This package provides GTK+ API ducumentation.
+This package provides GTK+ API documentation.
