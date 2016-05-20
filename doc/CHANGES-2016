@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2026 2016/05/20 21:39:22 youri Exp $
+$NetBSD: CHANGES-2016,v 1.2027 2016/05/20 21:41:34 youri Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2634,3 +2634,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added devel/libindicator version 12.10.1 [youri 2016-05-20]
 	Added devel/libindicator3 version 12.10.1 [youri 2016-05-20]
 	Added devel/libappindicator version 12.10.0 [youri 2016-05-20]
+	Added devel/libappindicator3 version 12.10.0 [youri 2016-05-20]
