@@ -1,0 +1,18 @@
+$NetBSD: distinfo,v 1.1 2016/05/20 18:45:22 youri Exp $
+
+SHA1 (mozjs17.0.0.tar.gz) = 7805174898c34e5d3c3b256117af9944ba825c89
+RMD160 (mozjs17.0.0.tar.gz) = 2fa3a891da2a7a09019f67c1555c03bcdc51e6c5
+SHA512 (mozjs17.0.0.tar.gz) = 39b68aeb9f712f146778d8b68ee795709a1372c8ab893a222af4eb34882427d6f5cf877e743d6cb2f1b4348c194d8f3774f00cb775b03515b34b49560b748be4
+Size (mozjs17.0.0.tar.gz) = 6778934 bytes
+SHA1 (patch-ak) = 7cebf3e58ad14598fbe98c3d730c8a548c0bda1e
+SHA1 (patch-as) = c8e3aa309ae5115a8f4c17d477674f93afead538
+SHA1 (patch-bd) = c8ed2110c8b699d6880723dccf62e6976edfa65e
+SHA1 (patch-bf) = 7d18ec3cad441174a71770e7fa22b1cd2029d55b
+SHA1 (patch-js_src_config_milestone.pl) = 84dbc588e82ba1a6bcc901abe9b77ba316acac15
+SHA1 (patch-js_src_config_system-headers) = a9c5bc2d2c822eb3bd5e8f4ba43407f89b57c009
+SHA1 (patch-js_src_jscpucfg.h) = afce65ca5964fb732d96cf22902f89cd02aedf0d
+SHA1 (patch-js_src_jsgc.cpp) = 0e617094a4b7d87cdf801d9bc4ac1f52d909a12a
+SHA1 (patch-js_src_jsinterp.cpp) = bee8bdde7dd951dbfbe5b049eb502f7412fbf8e6
+SHA1 (patch-js_src_jsmath.cpp) = 04b0081e5abc1de3df5bdfc78db3971fe77da3d4
+SHA1 (patch-js_src_methodjit_MethodJIT.cpp) = f2b12fa554ec319b5848b1cc13ec17ef967b08d7
+SHA1 (patch-ml) = fdb4452a613f7ca185cd6b936538bec9ef97c4c1
