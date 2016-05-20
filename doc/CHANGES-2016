@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2024 2016/05/20 21:32:41 youri Exp $
+$NetBSD: CHANGES-2016,v 1.2025 2016/05/20 21:33:37 youri Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2632,3 +2632,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added security/polkit version 0.113nb1 [youri 2016-05-20]
 	Added lang/spidermonkey17 version 17.0.0 [youri 2016-05-20]
 	Added devel/libindicator version 12.10.1 [youri 2016-05-20]
+	Added devel/libindicator3 version 12.10.1 [youri 2016-05-20]
