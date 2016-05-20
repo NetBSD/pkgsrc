@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2016/05/20 22:01:59 youri Exp $
+share/gtk-doc/html/libdbusmenu-gtk/annotation-glossary.html
+share/gtk-doc/html/libdbusmenu-gtk/api-index-deprecated.html
+share/gtk-doc/html/libdbusmenu-gtk/api-index-full.html
+share/gtk-doc/html/libdbusmenu-gtk/ch01.html
+share/gtk-doc/html/libdbusmenu-gtk/home.png
+share/gtk-doc/html/libdbusmenu-gtk/index.html
+share/gtk-doc/html/libdbusmenu-gtk/index.sgml
+share/gtk-doc/html/libdbusmenu-gtk/left.png
+share/gtk-doc/html/libdbusmenu-gtk/libdbusmenu-gtk-DbusmenuGtkClient.html
+share/gtk-doc/html/libdbusmenu-gtk/libdbusmenu-gtk-DbusmenuGtkMenu.html
+share/gtk-doc/html/libdbusmenu-gtk/libdbusmenu-gtk-menuitem.html
+share/gtk-doc/html/libdbusmenu-gtk/libdbusmenu-gtk-parser.html
+share/gtk-doc/html/libdbusmenu-gtk/libdbusmenu-gtk.devhelp2
+share/gtk-doc/html/libdbusmenu-gtk/object-tree.html
+share/gtk-doc/html/libdbusmenu-gtk/right.png
+share/gtk-doc/html/libdbusmenu-gtk/style.css
+share/gtk-doc/html/libdbusmenu-gtk/up.png
