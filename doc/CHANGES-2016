@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2029 2016/05/20 22:01:23 youri Exp $
+$NetBSD: CHANGES-2016,v 1.2030 2016/05/20 22:03:09 youri Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2637,3 +2637,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added devel/libappindicator3 version 12.10.0 [youri 2016-05-20]
 	Added devel/libdbusmenu-glib version 12.10.2 [youri 2016-05-20]
 	Added devel/libdbusmenu-gtk version 12.10.2 [youri 2016-05-20]
+	Added devel/libdbusmenu-gtk3 version 12.10.2 [youri 2016-05-20]
