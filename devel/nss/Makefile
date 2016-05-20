@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.113 2016/04/17 19:27:10 ryoon Exp $
+# $NetBSD: Makefile,v 1.114 2016/05/20 11:53:18 wiz Exp $
 
 DISTNAME=		nss-${NSS_RELEASE:S/.0$//}
+PKGREVISION=		1
 NSS_RELEASE=		3.23.0
 CATEGORIES=		security
-MASTER_SITES=		${MASTER_SITE_MOZILLA_ALL:=security/nss/releases/NSS_${NSS_RELEASE:S/.0$//:S/./_/g}_RTM/src/}
+MASTER_SITES=		${MASTER_SITE_MOZILLA_ALL:=security/nss/releases/NSS_${NSS_MAJOR_VERSION}_${NSS_MINOR_VERSION}_RTM/src/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.mozilla.org/projects/security/pki/nss/
@@ -18,6 +19,8 @@ CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}configure
 USE_GCC_RUNTIME=	yes
 USE_TOOLS+=		gmake perl pax pkg-config
 MAKE_JOBS_SAFE=		no
+
+BUILD_DIRS=		nss
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -70,13 +73,29 @@ MAKE_ENV+=	NSS_DISABLE_GTESTS=yes
 CFLAGS+=	-DNSS_NO_GCC48
 .endif
 
+NSS_MAJOR_VERSION=	${NSS_RELEASE:C/\.[0-9.]*//}
+NSS_MINOR_VERSION=	${NSS_RELEASE:S/3.//:C/\.[0-9]*//}
+NSS_PATCH_VERSION=	${NSS_RELEASE:C/[0-9.]*\.//}
+
+SUBST_CLASSES+=		config
+SUBST_SED.config+=	-e "s,@PREFIX@,${PREFIX},g"
+SUBST_SED.config+=	-e "s,@NSS_MAJOR_VERSION@,${NSS_MAJOR_VERSION},"
+SUBST_SED.config+=	-e "s,@NSS_MINOR_VERSION@,${NSS_MINOR_VERSION},"
+SUBST_SED.config+=	-e "s,@NSS_PATCH_VERSION@,${NSS_PATCH_VERSION},"
+SUBST_SED.config+=	-e "s!@COMPILER_RPATH_FLAG@!${COMPILER_RPATH_FLAG}!"
+SUBST_SED.config+=	-e "s,@PTHREAD@,${BUILDLINK_LIBS.pthread:Q},"
+SUBST_STAGE.config=	pre-build
+SUBST_MESSAGE.config=	Preparing *-config files.
+SUBST_FILES.config+=	nss.pc nss-config
+
+INSTALLATION_DIRS=	bin include/nss lib/nss lib/pkgconfig
+DIST=	${WRKSRC}/dist
+
 post-extract:
 	find ${WRKSRC} -type f | xargs ${CHMOD} 644
 	find ${WRKSRC} -type d | xargs ${CHMOD} 755
-
-BUILD_DIRS=		nss
-INSTALLATION_DIRS=	include/nss lib/nss lib/pkgconfig
-DIST=	${WRKSRC}/dist
+	${CP} ${FILESDIR}/nss.pc.in ${WRKSRC}/nss.pc
+	${CP} ${FILESDIR}/nss-config.in ${WRKSRC}/nss-config
 
 do-install:
 	(cd ${DIST}/public && pax -Lrw . ${DESTDIR}${PREFIX}/include/nss/ )
@@ -84,17 +103,8 @@ do-install:
 		pax -Lrw *.${SO_SUFFIX} ${DESTDIR}${PREFIX}/lib/nss/ )
 	${INSTALL_LIB} ${DIST}/*_OPT.OBJ/lib/libcrmf.a \
 		${DESTDIR}${PREFIX}/lib/nss/
-	set -e; \
-	{ ${ECHO} "Name: NSS"; \
-	  ${ECHO} "Description: Mozilla Network Security Services"; \
-	  ${ECHO} "Version: ${NSS_RELEASE}"; \
-	  ${ECHO} "Requires: nspr >= 4.11.0"; \
-	  ${ECHO} "Cflags: -I${PREFIX}/include/nss/nss -I${PREFIX}/include/nss"; \
-	  ${ECHO} "Libs: -L${PREFIX}/lib/nss" \
-	      "${COMPILER_RPATH_FLAG}${PREFIX}/lib/nss" \
-	      "-lnss3 -lsmime3 -lssl3 -lsoftokn3 -lnssutil3" \
-	      ${BUILDLINK_LIBS.pthread:Q}; \
-	} >${DESTDIR}${PREFIX}/lib/pkgconfig/nss.pc
+	${INSTALL_DATA} ${WRKSRC}/nss.pc ${DESTDIR}${PREFIX}/lib/pkgconfig/nss.pc
+	${INSTALL_SCRIPT} ${WRKSRC}/nss-config ${DESTDIR}${PREFIX}/bin/nss-config
 
 # For consistency of libxul.so link in www/firefox.
 BUILDLINK_API_DEPENDS.sqlite3+= sqlite3>=3.8.4.2
