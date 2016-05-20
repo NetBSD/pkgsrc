@@ -1,5 +1,9 @@
-$NetBSD: distinfo,v 1.6 2016/05/08 18:06:08 christos Exp $
+$NetBSD: distinfo,v 1.7 2016/05/20 22:26:21 dsainty Exp $
 
+SHA1 (jdk-8u92-linux-i586.tar.gz) = 190a7a6681d64597640db6712166202bc8ae1dfd
+RMD160 (jdk-8u92-linux-i586.tar.gz) = b61cb38641ec2b310e6277994aa382cad33380ba
+SHA512 (jdk-8u92-linux-i586.tar.gz) = fcb2db52e8cb392de91ca914dae13bc7786954334e7df346619686837bceab9ca49699153d308d869499d2948c5eb67ae39583e28db3c63a537afd33f6b1226d
+Size (jdk-8u92-linux-i586.tar.gz) = 183433226 bytes
 SHA1 (jdk-8u92-linux-x64.tar.gz) = efb9e9fed2f146ef2e97040415522bad22015e36
 RMD160 (jdk-8u92-linux-x64.tar.gz) = dc18efbe35d452eccd3013ac505ef5c932fabc00
 SHA512 (jdk-8u92-linux-x64.tar.gz) = 008c2f6ce4521b8554c888fbad8ec88c27ff62a03762b9d55784a9838baf2cd73c3dcd234ad76f11fdbf9817992d74311dbd296d839dbdeb00dcac8ce3cabc96
