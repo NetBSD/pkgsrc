@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2037 2016/05/20 22:23:56 youri Exp $
+$NetBSD: CHANGES-2016,v 1.2038 2016/05/20 22:54:43 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2642,3 +2642,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added devel/libdbusmenu-tools version 12.10.2 [youri 2016-05-20]
 	Added meta-pkgs/libdbusmenu version 12.10.2 [youri 2016-05-20]
 	Added devel/libindicator-tools version 12.10.1 [youri 2016-05-20]
+	Updated devel/dejagnu to 1.6 [mef 2016-05-20]
