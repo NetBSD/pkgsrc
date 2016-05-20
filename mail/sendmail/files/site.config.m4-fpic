@@ -1,0 +1,4 @@
+# $NetBSD: site.config.m4-fpic,v 1.1 2016/05/20 12:11:39 jperkin Exp $
+
+# Build with -fPIC on SunOS to ensure third parties can pull in libmilter.a
+APPENDDEF(`confCCOPTS', `-fPIC')
