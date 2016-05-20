@@ -1,0 +1,34 @@
+# $NetBSD: Makefile.common,v 1.1 2016/05/20 22:14:25 youri Exp $
+#
+# used by devel/libdbusmenu/Makefile
+# used by devel/libdbusmenu-glib/Makefile
+# used by devel/libdbusmenu-gtk/Makefile
+# used by devel/libdbusmenu-gtk-doc/Makefile
+# used by devel/libdbusmenu-gtk3/Makefile
+# used by devel/libdbusmenu-jsonloader/Makefile
+# used by devel/libdbusmenu-tools/Makefile
+
+DISTNAME=	libdbusmenu-12.10.2
+CATEGORIES=	devel
+MASTER_SITES=	https://launchpad.net/dbusmenu/12.10/12.10.2/+download/
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://launchpad.net/dbusmenu/
+COMMENT=	Small library created by pulling some code from indicator-applet
+LICENSE=	gnu-lgpl-v3 AND gnu-lgpl-v2.1 AND gnu-lgpl-v3
+
+.if empty(META_PACKAGES:U:M[Yy][Ee][Ss])
+TOOL_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt # xsltproc
+
+GNU_CONFIGURE=	yes
+USE_LANGUAGES=	c
+USE_LIBTOOL=	yes
+USE_TOOLS+=	gmake msgfmt msgmerge intltool pkg-config xgettext
+
+PKGCONFIG_OVERRIDE+=	libdbusmenu-glib/dbusmenu-glib-0.4.pc.in
+PKGCONFIG_OVERRIDE+=	libdbusmenu-gtk/dbusmenu-gtk3-0.4.pc.in
+PKGCONFIG_OVERRIDE+=	libdbusmenu-gtk/dbusmenu-gtk-0.4.pc.in
+PKGCONFIG_OVERRIDE+=	tests/dbusmenu-jsonloader-0.4.pc.in
+
+.include "../../textproc/gnome-doc-utils/buildlink3.mk"
+.endif
