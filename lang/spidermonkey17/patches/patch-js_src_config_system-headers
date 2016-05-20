@@ -1,0 +1,14 @@
+$NetBSD: patch-js_src_config_system-headers,v 1.1 2016/05/20 18:45:22 youri Exp $
+
+--- js/src/config/system-headers.orig	2013-03-28 18:07:55.000000000 +0000
++++ js/src/config/system-headers
+@@ -1065,5 +1065,9 @@ gst/gst.h
+ gst/app/gstappsink.h
+ gst/app/gstappsrc.h
+ gst/video/video.h
++sys/thr.h
++sys/user.h
++kvm.h
++spawn.h
+ sys/msg.h
+ sys/ipc.h
