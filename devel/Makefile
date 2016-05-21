@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2264 2016/05/20 22:15:25 youri Exp $
+# $NetBSD: Makefile,v 1.2265 2016/05/21 21:45:25 youri Exp $
 #
 
 COMMENT=	Development utilities
@@ -604,6 +604,7 @@ SUBDIR+=	makedepf90
 SUBDIR+=	maketool
 SUBDIR+=	man-pages
 SUBDIR+=	mantis
+SUBDIR+=	mate-common
 SUBDIR+=	matio
 SUBDIR+=	mcpp
 SUBDIR+=	mdds
