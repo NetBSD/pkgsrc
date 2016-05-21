@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2016/05/21 19:18:44 youri Exp $
+bin/caja-dropbox
+lib/caja/extensions-2.0/libcaja-dropbox.la
+man/man1/caja-dropbox.1
+share/applications/caja-dropbox.desktop
+share/caja-dropbox/emblems/emblem-dropbox-syncing.icon
+share/caja-dropbox/emblems/emblem-dropbox-syncing.png
+share/caja-dropbox/emblems/emblem-dropbox-unsyncable.icon
+share/caja-dropbox/emblems/emblem-dropbox-unsyncable.png
+share/caja-dropbox/emblems/emblem-dropbox-uptodate.icon
+share/caja-dropbox/emblems/emblem-dropbox-uptodate.png
+share/caja/extensions/libcaja-dropbox.caja-extension
+share/icons/hicolor/16x16/apps/caja-dropbox.png
+share/icons/hicolor/22x22/apps/caja-dropbox.png
+share/icons/hicolor/24x24/apps/caja-dropbox.png
+share/icons/hicolor/256x256/apps/caja-dropbox.png
+share/icons/hicolor/32x32/apps/caja-dropbox.png
+share/icons/hicolor/48x48/apps/caja-dropbox.png
+share/icons/hicolor/64x64/apps/caja-dropbox.png
