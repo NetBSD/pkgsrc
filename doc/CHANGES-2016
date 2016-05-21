@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2059 2016/05/21 18:54:33 youri Exp $
+$NetBSD: CHANGES-2016,v 1.2060 2016/05/21 18:55:43 youri Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2666,3 +2666,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added x11/mate-control-center version 1.14.0 [youri 2016-05-21]
 	Added x11/mate-desktop version 1.14.0 [youri 2016-05-21]
 	Added graphics/mate-icon-theme version 1.14.0 [youri 2016-05-21]
+	Added graphics/mate-icon-theme-faenza version 1.14.0 [youri 2016-05-21]
