@@ -1,0 +1,6 @@
+A simple window management tool which:
+  * Allows you to set basic rules for a window type, such as maximise|undecorate
+  * Allows exceptions to the rules, based on string matching for window name
+    and window class.
+  * Allows 'reversing' of rules when the user manually changes something:
+    * Re-decorates windows on un-maximise.
