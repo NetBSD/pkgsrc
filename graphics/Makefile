@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.735 2016/04/23 22:35:38 markd Exp $
+# $NetBSD: Makefile,v 1.736 2016/05/21 21:47:32 youri Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -86,6 +86,7 @@ SUBDIR+=	eog
 SUBDIR+=	eog-plugins
 SUBDIR+=	eog-plugins-map
 SUBDIR+=	eog3
+SUBDIR+=	eom
 SUBDIR+=	epeg
 SUBDIR+=	evas
 SUBDIR+=	evas-buffer
@@ -316,6 +317,10 @@ SUBDIR+=	lprof
 SUBDIR+=	luminance-hdr
 SUBDIR+=	magicpoint
 SUBDIR+=	mandelbulber
+SUBDIR+=	mate-backgrounds
+SUBDIR+=	mate-icon-theme
+SUBDIR+=	mate-icon-theme-faenza
+SUBDIR+=	mate-themes
 SUBDIR+=	metacam
 SUBDIR+=	mgl
 SUBDIR+=	mng
