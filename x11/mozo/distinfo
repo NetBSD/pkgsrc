@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/05/21 19:21:56 youri Exp $
+
+SHA1 (mozo-1.14.0.tar.xz) = 0aa2058136d3c36419d06be102f64b43dde38db4
+RMD160 (mozo-1.14.0.tar.xz) = 80fcb8a2bc4045e3799a3f00d40d80e5fb0777d0
+SHA512 (mozo-1.14.0.tar.xz) = 9c2152ff1325629a8e68cdd015c70550127b82bb9baaf797109f01d92367687227dd48fbcd6ae0a1777afe9d9b5b2baa2890b308b9b8618c13dc39481a0fb3e5
+Size (mozo-1.14.0.tar.xz) = 171544 bytes
