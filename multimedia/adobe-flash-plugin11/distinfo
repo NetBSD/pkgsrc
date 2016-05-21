@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.55 2016/03/11 13:05:44 tsutsui Exp $
+$NetBSD: distinfo,v 1.55.2.1 2016/05/21 15:56:23 bsiegert Exp $
 
-SHA1 (flash-plugin-11.2.202.577-release.i386.rpm) = e64504aa5b8e371ccd6168ed323502addaefe3ad
-RMD160 (flash-plugin-11.2.202.577-release.i386.rpm) = 9b9493d3c33b39df9b1e420c25bce0b3175f06a9
-SHA512 (flash-plugin-11.2.202.577-release.i386.rpm) = afc4b1e54ea95101c136b4b091e77dd640691df2ea8637135058e65001511eea94e98f82758b7e51aa2b0c380bcf494efe0569a62373d38201903b6037683891
-Size (flash-plugin-11.2.202.577-release.i386.rpm) = 6949984 bytes
-SHA1 (flash-plugin-11.2.202.577-release.x86_64.rpm) = b775fb7b75de20c2944a2855faf6676dbffe8173
-RMD160 (flash-plugin-11.2.202.577-release.x86_64.rpm) = f579b63d150dd8eda8527d893a79c418ec376a94
-SHA512 (flash-plugin-11.2.202.577-release.x86_64.rpm) = be80f5dde8fea1e32fe12064c2260c8ff636f416479cfe88989dd8de48ff352e7f4a3ea082e38134169ce57abe18a9af32f9cc6d25d1c16d520e29bc37ee108f
-Size (flash-plugin-11.2.202.577-release.x86_64.rpm) = 7258838 bytes
+SHA1 (flash-plugin-11.2.202.621-release.i386.rpm) = f06b79cc3a1d8a05a3e1165b20a26709b781dbb9
+RMD160 (flash-plugin-11.2.202.621-release.i386.rpm) = ceb48e60fec3b6b1c83ae7d10b724642602dd393
+SHA512 (flash-plugin-11.2.202.621-release.i386.rpm) = bdf09e701559cb78cdb8a074f09afdd28a0b90048cceeacdc290bd71e0aaf500fb1e05f8c9359dacf828ab355ad62e9a81971e24ba00842bf5d0550d49807d66
+Size (flash-plugin-11.2.202.621-release.i386.rpm) = 6956655 bytes
+SHA1 (flash-plugin-11.2.202.621-release.x86_64.rpm) = 2b3bc8be4783c908257ca8d9920e2f9392b8ce5a
+RMD160 (flash-plugin-11.2.202.621-release.x86_64.rpm) = 40897430af8b5c78033ae4022fe85500f540f88a
+SHA512 (flash-plugin-11.2.202.621-release.x86_64.rpm) = 66f1e84e94a0d62b9fe8479934be35006e7e0785c456825b219c15e020573d62627a425557ed1d05be93d2f92e3a2c9d1e4af15fdd9cf889b6ef7be147c81397
+Size (flash-plugin-11.2.202.621-release.x86_64.rpm) = 7270732 bytes
