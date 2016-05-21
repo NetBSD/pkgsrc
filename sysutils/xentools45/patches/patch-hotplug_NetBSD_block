@@ -1,9 +1,12 @@
-$NetBSD: patch-hotplug_NetBSD_block,v 1.2 2016/04/04 14:47:19 bad Exp $
+$NetBSD: patch-hotplug_NetBSD_block,v 1.3 2016/05/21 20:11:21 bad Exp $
 
 Lock the block script to avoid races during vnd configuration.
 
---- hotplug/NetBSD/block.orig	2015-11-03 09:11:18.000000000 +0000
-+++ hotplug/NetBSD/block
+Use "stat -L" to get device major/minor numbers through symlinks e.g. for
+lvm volumes.
+
+--- hotplug/NetBSD/block.orig	2016-03-23 14:57:27.000000000 +0100
++++ hotplug/NetBSD/block	2016-05-21 17:08:01.000000000 +0200
 @@ -6,8 +6,9 @@
  
  DIR=$(dirname "$0")
@@ -15,7 +18,7 @@ Lock the block script to avoid races during vnd configuration.
  export PATH
  
  error() {
-@@ -62,6 +63,7 @@ case $xstatus in
+@@ -62,6 +63,7 @@
  			available_disks="$available_disks $disk"
  			eval $disk=free
  		done
@@ -23,7 +26,7 @@ Lock the block script to avoid races during vnd configuration.
  		# Mark the used vnd(4) devices as ``used''.
  		for disk in `sysctl hw.disknames`; do
  			case $disk in
-@@ -77,6 +79,7 @@ case $xstatus in
+@@ -77,6 +79,7 @@
  				break	
  			fi
  		done
@@ -31,3 +34,12 @@ Lock the block script to avoid races during vnd configuration.
  		if [ x$device = x ] ; then
  			error "no available vnd device"
  		fi
+@@ -86,7 +89,7 @@
+ 		device=$xparams
+ 		;;
+ 	esac
+-	physical_device=$(stat -f '%r' "$device")
++	physical_device=$(stat -L -f '%r' "$device")
+ 	xenstore-write $xpath/physical-device $physical_device
+ 	xenstore-write $xpath/hotplug-status connected
+ 	exit 0
