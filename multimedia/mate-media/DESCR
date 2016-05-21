@@ -1,0 +1,10 @@
+These are the MATE media tools for MATE:
+
+mate-volume-control    - PulseAudio based volume control applets.
+grecord                 - MATE Sound Recorder.
+gstreamer-properties    - GStreamer Properties Capplet.
+profiles                - Audio Profile library.
+
+gst-mixer               - MATE GStreamer-based audio mixer. (deprecated)
+
+MATE-Media is a fork of GNOME-Media.
