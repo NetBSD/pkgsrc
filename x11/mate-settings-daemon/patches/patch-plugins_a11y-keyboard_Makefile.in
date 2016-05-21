@@ -1,0 +1,14 @@
+$NetBSD: patch-plugins_a11y-keyboard_Makefile.in,v 1.1 2016/05/21 19:15:33 youri Exp $
+
+Add libXi.
+
+--- plugins/a11y-keyboard/Makefile.in.orig	2016-04-07 12:30:50.000000000 +0000
++++ plugins/a11y-keyboard/Makefile.in
+@@ -481,6 +481,7 @@ liba11y_keyboard_la_LDFLAGS = \
+ liba11y_keyboard_la_LIBADD = \
+ 	$(SETTINGS_PLUGIN_LIBS)		\
+ 	$(XF86MISC_LIBS)		\
++	$(XINPUT_LIBS)			\
+ 	$(LIBNOTIFY_LIBS)		\
+ 	$(NULL)
+ 
