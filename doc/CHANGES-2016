@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2077 2016/05/21 19:18:54 youri Exp $
+$NetBSD: CHANGES-2016,v 1.2078 2016/05/21 19:19:26 youri Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2684,3 +2684,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added net/mate-user-share version 1.14.0 [youri 2016-05-21]
 	Added misc/mate-utils version 1.14.0 [youri 2016-05-21]
 	Added sysutils/caja-dropbox version 1.14.0 [youri 2016-05-21]
+	Added sysutils/caja-extensions version 1.14.0 [youri 2016-05-21]
