@@ -1,0 +1,17 @@
+# $NetBSD: mate-screensaver.pam,v 1.1 2016/05/21 19:14:20 youri Exp $
+#
+# PAM configuration for the "mate-screensaver" service
+#
+
+# auth
+auth		sufficient	@PREFIX@/lib/security/pam_pwauth_suid.so
+auth		include		system
+
+# account
+account		include		system
+
+# session
+session		include		system
+
+# password
+password	include		system
