@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2015/12/05 21:25:46 adam Exp $
+# $NetBSD: Makefile,v 1.10 2016/05/21 05:35:24 richard Exp $
 
 DISTNAME=	pycha-0.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,9 +17,6 @@ USE_LANGUAGES=	#none
 PYTHON_SELF_CONFLICT=	yes
 PYTHON_VERSIONED_DEPENDENCIES=	cairo
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-gtk2
-
-post-install:
-	${CHMOD} ${SHAREMODE} ${DESTDIR}${PREFIX}/${PYSITELIB}/${EGG_INFODIR}/*
 
 .include "../../lang/python/egg.mk"
 .include "../../lang/python/versioned_dependencies.mk"

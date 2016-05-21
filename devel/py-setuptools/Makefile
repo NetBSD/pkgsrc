@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2016/05/05 11:52:09 wiz Exp $
+# $NetBSD: Makefile,v 1.95 2016/05/21 05:33:31 richard Exp $
 
 DISTNAME=		setuptools-21.0.0
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -24,8 +24,6 @@ REPLACE_PYTHON+=	setuptools/tests/test_resources.py
 # so permissions are usually wrong
 post-install:
 	${RM} -f ${DESTDIR}${PREFIX}/${PYSITELIB}/${EGG_NAME}-py${PYVERSSUFFIX}.egg-info/*.orig
-	${CHMOD} ${SHAREMODE} ${DESTDIR}${PREFIX}/${PYSITELIB}/${EGG_NAME}-py${PYVERSSUFFIX}.egg-info/*
-	${CHMOD} ${SHAREMODE} ${DESTDIR}${PREFIX}/${PYSITELIB}/setuptools/*.tmpl
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
