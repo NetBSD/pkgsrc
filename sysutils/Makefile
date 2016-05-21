@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.665 2016/05/06 13:41:04 fhajny Exp $
+# $NetBSD: Makefile,v 1.666 2016/05/21 21:53:51 youri Exp $
 #
 
 COMMENT=	System utilities
@@ -49,6 +49,9 @@ SUBDIR+=	bubblemon
 SUBDIR+=	bup
 SUBDIR+=	burn
 SUBDIR+=	burp
+SUBDIR+=	caja
+SUBDIR+=	caja-dropbox
+SUBDIR+=	caja-extensions
 SUBDIR+=	capistrano
 SUBDIR+=	ccd2iso
 SUBDIR+=	ccze
@@ -316,6 +319,10 @@ SUBDIR+=	logrotate
 SUBDIR+=	lsof
 SUBDIR+=	magicrescue
 SUBDIR+=	manifold
+SUBDIR+=	mate-notification-daemon
+SUBDIR+=	mate-power-manager
+SUBDIR+=	mate-sensors-applet
+SUBDIR+=	mate-system-monitor
 SUBDIR+=	mbmon
 SUBDIR+=	mc
 SUBDIR+=	mc46
@@ -638,6 +645,7 @@ SUBDIR+=	xfce4-genmon-plugin
 SUBDIR+=	xfce4-gvfs-mount-plugin
 SUBDIR+=	xfce4-mount-plugin
 SUBDIR+=	xfce4-netload-plugin
+SUBDIR+=	xfce4-power-manager
 SUBDIR+=	xfce4-quicklauncher-plugin
 SUBDIR+=	xfce4-systemload-plugin
 SUBDIR+=	xfce4-taskmanager
