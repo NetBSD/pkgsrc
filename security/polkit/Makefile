@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/05/20 18:46:10 youri Exp $
+# $NetBSD: Makefile,v 1.3 2016/05/21 19:27:47 leot Exp $
 #
 
 DISTNAME=	polkit-0.113
@@ -62,7 +62,6 @@ SUBST_FILES.paths+=	src/examples/org.freedesktop.policykit.examples.pkexec.polic
 SUBST_SED.paths+=	-e 's,/usr/bin/,${PREFIX}/bin/,g'
 
 .include "../../lang/spidermonkey17/buildlink3.mk"
-#.include "../../lang/spidermonkey/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
