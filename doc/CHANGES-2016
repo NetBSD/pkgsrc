@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2081 2016/05/21 19:21:20 youri Exp $
+$NetBSD: CHANGES-2016,v 1.2082 2016/05/21 19:22:04 youri Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2688,3 +2688,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added archivers/engrampa version 1.14.0 [youri 2016-05-21]
 	Added graphics/eom version 1.14.0 [youri 2016-05-21]
 	Added editors/pluma version 1.14.0 [youri 2016-05-21]
+	Added x11/mozo version 1.14.0 [youri 2016-05-21]
