@@ -1,0 +1,14 @@
+$NetBSD: patch-sensors-applet_Makefile.in,v 1.1 2016/05/21 19:14:57 youri Exp $
+
+Avoid unnecessary libdl inclusion breaking the build.
+
+--- sensors-applet/Makefile.in.orig	2016-04-07 19:50:10.000000000 +0000
++++ sensors-applet/Makefile.in
+@@ -429,7 +429,6 @@ mate_sensors_applet_SOURCES = main.c \
+ 		sensors-applet-settings.h \
+ 		$(libnotify_SRC)
+ 
+-mate_sensors_applet_LDADD = -ldl
+ 
+ # install headers for plugins to use
+ INST_H_FILES = sensors-applet-plugin.h sensors-applet-sensor.h
