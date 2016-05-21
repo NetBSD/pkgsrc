@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.171 2016/03/12 12:05:37 tnn Exp $
+# $NetBSD: Makefile,v 1.172 2016/05/21 21:46:12 youri Exp $
 #
 
 COMMENT=	Editors
@@ -110,6 +110,7 @@ SUBDIR+=	p5-Padre-Plugin-Vi
 SUBDIR+=	p5-Padre-Plugin-XS
 SUBDIR+=	p5-Wx-Scintilla
 SUBDIR+=	pico
+SUBDIR+=	pluma
 SUBDIR+=	poedit
 SUBDIR+=	qgoogletranslator
 SUBDIR+=	rox-edit
