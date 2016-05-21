@@ -1,0 +1,7 @@
+This package contains applets for use with the MATE panel.  Therefore, it
+requires mate-core to be installed.  To build all applets additional
+libraries may be needed.
+
+This list is by no means definitive.
+
+MATE-Applets is a fork of GNOME-Applets.
