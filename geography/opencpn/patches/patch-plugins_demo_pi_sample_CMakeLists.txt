@@ -1,0 +1,13 @@
+$NetBSD: patch-plugins_demo_pi_sample_CMakeLists.txt,v 1.1 2016/05/21 10:50:41 bouyer Exp $
+
+--- plugins/demo_pi_sample/CMakeLists.txt.orig	2016-02-03 18:44:17.000000000 +0100
++++ plugins/demo_pi_sample/CMakeLists.txt	2016-05-21 11:07:56.299797236 +0200
+@@ -143,4 +143,7 @@
+ IF(WIN32)
+ INSTALL(TARGETS ${PACKAGE_NAME} RUNTIME DESTINATION "plugins")
+ ENDIF(WIN32)
+- 	  	 
++
++IF(CMAKE_SYSTEM_NAME MATCHES ".*Linux")
++   SET_TARGET_PROPERTIES(${PROJECT_NAME} PROPERTIES COMPILE_FLAGS "-fPIC")
++ENDIF(CMAKE_SYSTEM_NAME MATCHES ".*Linux")
