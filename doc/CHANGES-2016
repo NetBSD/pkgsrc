@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2084 2016/05/21 19:23:10 youri Exp $
+$NetBSD: CHANGES-2016,v 1.2085 2016/05/21 19:23:33 youri Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2691,3 +2691,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added x11/mozo version 1.14.0 [youri 2016-05-21]
 	Added print/atril version 1.14.0 [youri 2016-05-21]
 	Added wm/marco version 1.14.0 [youri 2016-05-21]
+	Added meta-pkgs/mate version 1.14.0 [youri 2016-05-21]
