@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2049 2016/05/21 13:13:58 wen Exp $
+$NetBSD: CHANGES-2016,v 1.2050 2016/05/21 13:44:39 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2656,3 +2656,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/sqlite3-tcl to 3.13.0 [adam 2016-05-21]
 	Updated www/mediawiki to 1.26.3 [wen 2016-05-21]
 	Updated time/p5-Time-Progress to 2.11 [wen 2016-05-21]
+	Updated graphics/librsvg to 2.40.15 [ryoon 2016-05-21]
