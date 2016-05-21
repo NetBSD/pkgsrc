@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.783 2016/05/18 22:18:55 snj Exp $
+# $NetBSD: Makefile,v 1.784 2016/05/21 21:56:47 youri Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -315,6 +315,7 @@ SUBDIR+=	libfakekey
 SUBDIR+=	libgnomekbd
 SUBDIR+=	libkactivities4
 SUBDIR+=	liblbxutil
+SUBDIR+=	libmatekbd
 SUBDIR+=	liboldXrandr
 SUBDIR+=	libunique
 SUBDIR+=	libunique3
@@ -338,6 +339,16 @@ SUBDIR+=	matchbox-nest
 SUBDIR+=	matchbox-panel
 SUBDIR+=	matchbox-panel-manager
 SUBDIR+=	matchbox-themes-extra
+SUBDIR+=	mate-applets
+SUBDIR+=	mate-control-center
+SUBDIR+=	mate-desktop
+SUBDIR+=	mate-indicator-applet
+SUBDIR+=	mate-menus
+SUBDIR+=	mate-panel
+SUBDIR+=	mate-screensaver
+SUBDIR+=	mate-session-manager
+SUBDIR+=	mate-settings-daemon
+SUBDIR+=	mate-terminal
 SUBDIR+=	mkcomposecache
 SUBDIR+=	mlterm
 SUBDIR+=	modeline
@@ -347,6 +358,7 @@ SUBDIR+=	modular-xorg-xephyr
 SUBDIR+=	modular-xorg-xquartz
 SUBDIR+=	motif
 SUBDIR+=	mowitz
+SUBDIR+=	mozo
 SUBDIR+=	mrxvt
 SUBDIR+=	multi-aterm
 SUBDIR+=	mxterm
