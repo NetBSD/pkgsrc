@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.58 2016/05/05 11:22:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.59 2016/05/21 06:37:00 wiz Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -771,7 +771,6 @@ lib/calibre/calibre/gui2/device_drivers/mtp_folder_browser.py
 lib/calibre/calibre/gui2/dialogs/__init__.py
 lib/calibre/calibre/gui2/dialogs/add_empty_book.py
 lib/calibre/calibre/gui2/dialogs/add_from_isbn.py
-lib/calibre/calibre/gui2/dialogs/add_from_isbn_ui.py
 lib/calibre/calibre/gui2/dialogs/authors_edit.py
 lib/calibre/calibre/gui2/dialogs/book_info.py
 lib/calibre/calibre/gui2/dialogs/catalog.py
@@ -1119,6 +1118,7 @@ lib/calibre/calibre/gui2/viewer/toc.py
 lib/calibre/calibre/gui2/viewer/ui.py
 lib/calibre/calibre/gui2/widgets.py
 lib/calibre/calibre/gui2/widgets2.py
+lib/calibre/calibre/gui2/win_file_dialogs.py
 lib/calibre/calibre/gui2/wizard/__init__.py
 lib/calibre/calibre/gui2/wizard/device_ui.py
 lib/calibre/calibre/gui2/wizard/finish_ui.py
@@ -1176,10 +1176,10 @@ lib/calibre/calibre/plugins/freetype.so
 lib/calibre/calibre/plugins/html.so
 lib/calibre/calibre/plugins/hunspell.so
 lib/calibre/calibre/plugins/icu.so
+lib/calibre/calibre/plugins/imageops.so
 lib/calibre/calibre/plugins/libheadless.so
 lib/calibre/calibre/plugins/lzma_binding.so
 lib/calibre/calibre/plugins/lzx.so
-lib/calibre/calibre/plugins/magick.so
 lib/calibre/calibre/plugins/matcher.so
 lib/calibre/calibre/plugins/monotonic.so
 lib/calibre/calibre/plugins/msdes.so
@@ -1311,7 +1311,7 @@ lib/calibre/calibre/utils/logging.py
 lib/calibre/calibre/utils/lru_cache.py
 lib/calibre/calibre/utils/magick/__init__.py
 lib/calibre/calibre/utils/magick/draw.py
-lib/calibre/calibre/utils/magick/generate.py
+lib/calibre/calibre/utils/magick/legacy.py
 lib/calibre/calibre/utils/matcher.py
 lib/calibre/calibre/utils/mdns.py
 lib/calibre/calibre/utils/mem.py
@@ -1350,6 +1350,7 @@ lib/calibre/calibre/utils/smtp.py
 lib/calibre/calibre/utils/smtplib.py
 lib/calibre/calibre/utils/socket_inheritance.py
 lib/calibre/calibre/utils/soupparser.py
+lib/calibre/calibre/utils/speedups.py
 lib/calibre/calibre/utils/spell/__init__.py
 lib/calibre/calibre/utils/terminal.py
 lib/calibre/calibre/utils/text2int.py
@@ -1376,6 +1377,7 @@ lib/calibre/calibre/web/feeds/recipes/model.py
 lib/calibre/calibre/web/feeds/templates.py
 lib/calibre/calibre/web/fetch/__init__.py
 lib/calibre/calibre/web/fetch/simple.py
+lib/calibre/calibre/web/fetch/utils.py
 lib/calibre/css_selectors/__init__.py
 lib/calibre/css_selectors/errors.py
 lib/calibre/css_selectors/ordered_set.py
@@ -1473,6 +1475,8 @@ share/calibre/content-server/empty.html
 share/calibre/content-server/index-generated.html
 share/calibre/content-server/index.html
 share/calibre/content-server/locales.zip
+share/calibre/content-server/mathjax.version
+share/calibre/content-server/mathjax.zip.xz
 share/calibre/content-server/mobile.css
 share/calibre/content-server/reset.css
 share/calibre/content_server/av.jpg
