@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2052 2016/05/21 18:48:31 youri Exp $
+$NetBSD: CHANGES-2016,v 1.2053 2016/05/21 18:49:04 youri Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2659,3 +2659,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/librsvg to 2.40.15 [ryoon 2016-05-21]
 	Added x11/libmatekbd version 1.14.0 [youri 2016-05-21]
 	Added audio/libmatemixer version 1.14.0 [youri 2016-05-21]
+	Added misc/libmateweather version 1.14.0 [youri 2016-05-21]
