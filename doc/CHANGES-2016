@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2070 2016/05/21 19:14:29 youri Exp $
+$NetBSD: CHANGES-2016,v 1.2071 2016/05/21 19:15:07 youri Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2677,3 +2677,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added security/mate-polkit version 1.14.0 [youri 2016-05-21]
 	Added sysutils/mate-power-manager version 1.14.0 [youri 2016-05-21]
 	Added x11/mate-screensaver version 1.14.0nb1 [youri 2016-05-21]
+	Added sysutils/mate-sensors-applet version 1.14.0 [youri 2016-05-21]
