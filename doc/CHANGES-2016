@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2045 2016/05/21 10:57:25 wen Exp $
+$NetBSD: CHANGES-2016,v 1.2046 2016/05/21 11:02:26 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2650,3 +2650,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/p5-Email-Sender to 1.300028nb2 [wen 2016-05-21]
 	Updated www/p5-Captcha-reCAPTCHA to 0.97 [wen 2016-05-21]
 	Added time/p5-POSIX-strftime-Compiler version 0.41 [wen 2016-05-21]
+	Updated www/p5-Apache-LogFormat-Compiler to 0.33 [wen 2016-05-21]
