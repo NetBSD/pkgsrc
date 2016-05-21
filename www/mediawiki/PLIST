@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2015/12/01 16:03:21 wen Exp $
+@comment $NetBSD: PLIST,v 1.28 2016/05/21 11:58:12 wen Exp $
 share/examples/mediawiki/mediawiki.conf
 share/mediawiki/COPYING
 share/mediawiki/CREDITS
@@ -8,7 +8,6 @@ share/mediawiki/Gruntfile.js
 share/mediawiki/HISTORY
 share/mediawiki/INSTALL
 share/mediawiki/README
-share/mediawiki/README.mediawiki
 share/mediawiki/RELEASE-NOTES-1.26
 share/mediawiki/Rakefile
 share/mediawiki/StartProfiler.sample
@@ -9163,7 +9162,6 @@ share/mediawiki/skins/Vector/variables.less
 share/mediawiki/skins/Vector/vector.js
 share/mediawiki/tests/.htaccess
 share/mediawiki/tests/TestsAutoLoader.php
-share/mediawiki/tests/browser/README.mediawiki
 share/mediawiki/tests/browser/environments.yml
 share/mediawiki/tests/browser/features/create_account.feature
 share/mediawiki/tests/browser/features/create_and_follow_wiki_link.feature
