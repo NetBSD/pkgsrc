@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2068 2016/05/21 19:12:37 youri Exp $
+$NetBSD: CHANGES-2016,v 1.2069 2016/05/21 19:13:28 youri Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2675,3 +2675,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added sysutils/mate-notification-daemon version 1.14.0 [youri 2016-05-21]
 	Added x11/mate-panel version 1.14.0 [youri 2016-05-21]
 	Added security/mate-polkit version 1.14.0 [youri 2016-05-21]
+	Added sysutils/mate-power-manager version 1.14.0 [youri 2016-05-21]
