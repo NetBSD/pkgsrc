@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2050 2016/05/21 13:44:39 ryoon Exp $
+$NetBSD: CHANGES-2016,v 1.2051 2016/05/21 18:47:35 youri Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2657,3 +2657,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/mediawiki to 1.26.3 [wen 2016-05-21]
 	Updated time/p5-Time-Progress to 2.11 [wen 2016-05-21]
 	Updated graphics/librsvg to 2.40.15 [ryoon 2016-05-21]
+	Added x11/libmatekbd version 1.14.0 [youri 2016-05-21]
