@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/12/07 09:18:30 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2016/05/21 05:28:59 richard Exp $
 
 DISTNAME=	libarchive-c-2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,10 +17,6 @@ SUBST_SED.libarchive+=		-e "s,find_library('archive'),'${PREFIX}/lib/libarchive.
 SUBST_FILES.libarchive+=	libarchive/ffi.py
 SUBST_MESSAGE.libarchive=	Fix path to libarchive.
 SUBST_STAGE.libarchive=		post-configure
-
-# permissions are usually wrong
-post-install:
-	${CHMOD} ${SHAREMODE} ${DESTDIR}${PREFIX}/${PYSITELIB}/${EGG_INFODIR}/*
 
 .include "../../archivers/libarchive/buildlink3.mk"
 .include "../../lang/python/egg.mk"
