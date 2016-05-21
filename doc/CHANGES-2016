@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2040 2016/05/21 06:37:11 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2041 2016/05/21 08:35:36 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2645,3 +2645,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/dejagnu to 1.6 [mef 2016-05-20]
 	Updated www/py-google-api-python-client to 1.5.1 [mef 2016-05-20]
 	Updated misc/calibre to 2.57.1 [wiz 2016-05-21]
+	Updated www/p5-HTTP-Server-Simple-Static to 0.12 [wen 2016-05-21]
