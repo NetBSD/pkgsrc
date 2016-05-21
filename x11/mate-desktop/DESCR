@@ -1,0 +1,10 @@
+mate-desktop contains the libmate-desktop library, the mate-about
+program as well as some desktop-wide documents.
+
+The libmate-desktop library provides API shared by several applications
+on the desktop, but that cannot live in the platform for various
+reasons. There is no API or ABI guarantee, although we are doing our
+best to provide stability. Documentation for the API is available with
+gtk-doc.
+
+The mate-about program helps find which version of MATE is installed.
