@@ -1,0 +1,7 @@
+MATE Utilities for the MATE Desktop contains the following:
+
+        mate-system-log          [logview]
+        mate-search-tool         [gseachtool]
+        mate-dictionary          [mate-dictionary]
+        mate-screenshot          [mate-screenshot]
+        mate-disk-usage-analyzer [baobab]
