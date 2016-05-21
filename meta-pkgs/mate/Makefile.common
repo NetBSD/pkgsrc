@@ -1,0 +1,50 @@
+# $NetBSD: Makefile.common,v 1.1 2016/05/21 19:23:25 youri Exp $
+# used by meta-pkgs/mate/Makefile
+# used by print/atril/Makefile
+# used by sysutils/caja/Makefile
+# used by sysutils/caja-dropbox/Makefile
+# used by sysutils/caja-extensions/Makefile
+# used by archivers/engrampa/Makefile
+# used by graphics/eom/Makefile
+# used by x11/libmatekbd/Makefile
+# used by audio/libmatemixer/Makefile
+# used by misc/libmateweather/Makefile
+# used by wm/marco/Makefile
+# used by x11/mate-applets/Makefile
+# used by graphics/mate-backgrounds/Makefile
+# used by devel/mate-common/Makefile
+# used by x11/mate-control-center/Makefile
+# used by x11/mate-desktop/Makefile
+# used by graphics/mate-icon-theme/Makefile
+# used by graphics/mate-icon-theme-faenza/Makefile
+# used by x11/mate-indicator-applet/Makefile
+# used by multimedia/mate-media/Makefile
+# used by x11/mate-menus/Makefile
+# used by wm/mate-netbook/Makefile
+# used by sysutils/mate-notification-daemon/Makefile
+# used by x11/mate-panel/Makefile
+# used by security/mate-polkit/Makefile
+# used by sysutils/mate-power-manager/Makefile
+# used by x11/mate-screensaver/Makefile
+# used by sysutils/mate-sensors-applet/Makefile
+# used by x11/mate-session-manager/Makefile
+# used by x11/mate-settings-daemon/Makefile
+# used by sysutils/mate-system-monitor/Makefile
+# used by x11/mate-terminal/Makefile
+# used by graphics/mate-themes/Makefile
+# used by net/mate-user-share/Makefile
+# used by misc/mate-utils/Makefile
+# used by x11/mozo/Makefile
+# used by editors/pluma/Makefile
+
+MATE_VERSION=	1.14.0
+MASTER_SITES=	http://pub.mate-desktop.org/releases/1.14/
+EXTRACT_SUFX=	.tar.xz
+
+MAINTAINER=	youri@NetBSD.org
+HOMEPAGE=	http://www.mate-desktop.org/
+LICENSE=	gnu-gpl-v3
+
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
+USE_TOOLS+=	gmake intltool msgfmt pkg-config
