@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2054 2016/05/21 18:49:43 youri Exp $
+$NetBSD: CHANGES-2016,v 1.2055 2016/05/21 18:50:11 youri Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2661,3 +2661,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added audio/libmatemixer version 1.14.0 [youri 2016-05-21]
 	Added misc/libmateweather version 1.14.0 [youri 2016-05-21]
 	Added x11/mate-applets version 1.14.0nb1 [youri 2016-05-21]
+	Added graphics/mate-backgrounds version 1.14.0 [youri 2016-05-21]
