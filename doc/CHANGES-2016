@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2064 2016/05/21 18:59:17 youri Exp $
+$NetBSD: CHANGES-2016,v 1.2065 2016/05/21 19:00:16 youri Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2671,3 +2671,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added x11/mate-indicator-applet version 1.14.0 [youri 2016-05-21]
 	Added multimedia/mate-media version 1.14.0 [youri 2016-05-21]
 	Added x11/mate-menus version 1.14.0 [youri 2016-05-21]
+	Added wm/mate-netbook version 1.14.0 [youri 2016-05-21]
