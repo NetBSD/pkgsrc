@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/05/21 18:48:54 youri Exp $
+
+SHA1 (libmateweather-1.14.0.tar.xz) = 8f94aee849e613f2e869f096bbc618180016d885
+RMD160 (libmateweather-1.14.0.tar.xz) = 2e64eae49d81c396d64bef425d68fb05a16b1a19
+SHA512 (libmateweather-1.14.0.tar.xz) = 061e91ad26ae2b31d91d75be6aaf0fa56628b4543c63f29374e13a9880614d5593de7ec8aeba39ecb11dc7773273a923c48c0ed7d993468347116d6658234fed
+Size (libmateweather-1.14.0.tar.xz) = 3493728 bytes
