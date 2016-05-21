@@ -1,0 +1,3 @@
+All the a11y themes in this module inherit from the 'mate' theme.
+The 'mate' theme is in the mate-icon-theme module, and has to be built and
+installed separately.
