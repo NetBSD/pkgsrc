@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.467 2016/05/06 09:05:46 nonaka Exp $
+# $NetBSD: Makefile,v 1.468 2016/05/21 21:48:36 youri Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -174,6 +174,7 @@ SUBDIR+=	libkdeedu
 SUBDIR+=	libkgeomap
 SUBDIR+=	libkkc-data
 SUBDIR+=	libkvkontakte
+SUBDIR+=	libmateweather
 SUBDIR+=	libquantum
 SUBDIR+=	libreoffice
 SUBDIR+=	libreoffice4
@@ -190,6 +191,7 @@ SUBDIR+=	lv
 SUBDIR+=	m17n-db
 SUBDIR+=	m17n-docs
 SUBDIR+=	marble
+SUBDIR+=	mate-utils
 SUBDIR+=	mbuffer
 SUBDIR+=	mirmon
 SUBDIR+=	mkcue
