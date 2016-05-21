@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.530 2016/02/16 08:54:42 leot Exp $
+# $NetBSD: Makefile,v 1.531 2016/05/21 21:44:42 youri Exp $
 #
 
 COMMENT=	Audio tools
@@ -245,6 +245,7 @@ SUBDIR+=	libid3tag
 SUBDIR+=	libifp
 SUBDIR+=	liblastfm
 SUBDIR+=	libmad
+SUBDIR+=	libmatemixer
 SUBDIR+=	libmikmod
 SUBDIR+=	libmodplug
 SUBDIR+=	libmp3splt
