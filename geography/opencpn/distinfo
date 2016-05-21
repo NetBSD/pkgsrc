@@ -1,15 +1,18 @@
-$NetBSD: distinfo,v 1.7 2016/04/01 19:56:02 joerg Exp $
+$NetBSD: distinfo,v 1.8 2016/05/21 10:50:41 bouyer Exp $
 
 SHA1 (OpenCPN-4.2.0-a555b4988b50f555be052394c184ef26c5ad0e8a.zip) = 39baa5f89ded9a5c62824e6e1445dbfc4f168578
 RMD160 (OpenCPN-4.2.0-a555b4988b50f555be052394c184ef26c5ad0e8a.zip) = d344b9caffe40dabcad1d9ac148ce54d75f1573c
 SHA512 (OpenCPN-4.2.0-a555b4988b50f555be052394c184ef26c5ad0e8a.zip) = 3ea2136ab777f711aeaa66f34722b3b091af91104ff60303b61c587f95354826afae6dbc8f6a9228357399ae36e96a34098596c0a278d2184ce59283c88f4051
 Size (OpenCPN-4.2.0-a555b4988b50f555be052394c184ef26c5ad0e8a.zip) = 42779485 bytes
-SHA1 (patch-CMakeLists.txt) = 124a5f3836cf57b61c1452a5ded65dc7b16a4c69
+SHA1 (patch-CMakeLists.txt) = c61ed69c19d98bc5407cd28857b21d5158c9c1f9
 SHA1 (patch-FindPortaudio.cmake) = e1bebe2203c6f3dc76f92ee5bdcb01eca66b6b9a
-SHA1 (patch-plugins_chartdldr_pi_cmake_PluginConfigure.cmake) = 9d6ade1c32f7d52b53848a2e382a4838d0240530
-SHA1 (patch-plugins_dashboard_pi_CMakeLists.txt) = f96234755ccdb0cf4d890b44c3983a71700e6de7
-SHA1 (patch-plugins_grib_pi_CMakeLists.txt) = fbac6b6da5c8efceb6931a6b41bec4a8ea7cbccb
-SHA1 (patch-plugins_wmm_pi_cmake_PluginConfigure.cmake) = 086de4106760df22b30330a40e3ec52d88d8b996
+SHA1 (patch-plugins_chartdldr_pi_CMakeLists.txt) = 52962f6feac45a766fc2dff08d2802e946ccfc85
+SHA1 (patch-plugins_chartdldr_pi_cmake_PluginConfigure.cmake) = 29fbfaee37e2a932b923df6ff7541dad37e14d65
+SHA1 (patch-plugins_dashboard_pi_CMakeLists.txt) = 76a6198e58f81c129f15fa6671da180c263c231e
+SHA1 (patch-plugins_demo_pi_sample_CMakeLists.txt) = 6fde2dae588e0d8250bd1e0d60a465fb20d9a599
+SHA1 (patch-plugins_grib_pi_CMakeLists.txt) = 49f997c27aa4710721d36945a681854579112a49
+SHA1 (patch-plugins_wmm_pi_CMakeLists.txt) = 88339a61dd4b78b823bbd34bd1b02863d150f046
+SHA1 (patch-plugins_wmm_pi_cmake_PluginConfigure.cmake) = f1c91cfa744ed76d938bfb5bdb4116df9f45604a
 SHA1 (patch-src_chart1.cpp) = ae7c1d8a59c9a275914a613205de71e2dca89dc6
 SHA1 (patch-src_chartimg.cpp) = f0e3841ab1920dcab74462a5007b74e905d794c0
 SHA1 (patch-src_chcanv.cpp) = af76f36b6fd6d613720945195d5a24902012a020
