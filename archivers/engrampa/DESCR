@@ -1,0 +1,9 @@
+Engrampa is a fork of File-Roller.
+
+Engrampa is an archive manager for the MATE environment.  This means
+that you can create and modify archives; view the content of an archive;
+view and modify a file contained in the archive; extract files from the
+archive.
+
+Engrampa is only a front-end (a graphical interface) to archiving programs
+like tar and zip.
