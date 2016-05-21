@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.55 2016/04/20 05:04:44 adam Exp $
+@comment $NetBSD: PLIST,v 1.56 2016/05/21 11:19:30 adam Exp $
 share/doc/sqlite3/34to35.html
 share/doc/sqlite3/35to36.html
 share/doc/sqlite3/about.html
@@ -134,6 +134,7 @@ share/doc/sqlite3/c3ref/pcache.html
 share/doc/sqlite3/c3ref/pcache_methods2.html
 share/doc/sqlite3/c3ref/pcache_page.html
 share/doc/sqlite3/c3ref/prepare.html
+share/doc/sqlite3/c3ref/preupdate_count.html
 share/doc/sqlite3/c3ref/profile.html
 share/doc/sqlite3/c3ref/progress_handler.html
 share/doc/sqlite3/c3ref/randomness.html
@@ -145,6 +146,7 @@ share/doc/sqlite3/c3ref/result_subtype.html
 share/doc/sqlite3/c3ref/set_authorizer.html
 share/doc/sqlite3/c3ref/sleep.html
 share/doc/sqlite3/c3ref/snapshot.html
+share/doc/sqlite3/c3ref/snapshot_cmp.html
 share/doc/sqlite3/c3ref/snapshot_free.html
 share/doc/sqlite3/c3ref/snapshot_get.html
 share/doc/sqlite3/c3ref/snapshot_open.html
@@ -547,6 +549,7 @@ share/doc/sqlite3/releaselog/3_11_1.html
 share/doc/sqlite3/releaselog/3_12_0.html
 share/doc/sqlite3/releaselog/3_12_1.html
 share/doc/sqlite3/releaselog/3_12_2.html
+share/doc/sqlite3/releaselog/3_13_0.html
 share/doc/sqlite3/releaselog/3_1_0.html
 share/doc/sqlite3/releaselog/3_1_1.html
 share/doc/sqlite3/releaselog/3_1_2.html
@@ -689,14 +692,44 @@ share/doc/sqlite3/releaselog/current.html
 share/doc/sqlite3/requirements.html
 share/doc/sqlite3/rescode.html
 share/doc/sqlite3/robots.txt
+share/doc/sqlite3/rowidtable.html
 share/doc/sqlite3/rtree.html
 share/doc/sqlite3/selfcontained.html
 share/doc/sqlite3/serverless.html
 share/doc/sqlite3/session.html
+share/doc/sqlite3/session/c_changeset_abort.html
+share/doc/sqlite3/session/c_changeset_conflict.html
+share/doc/sqlite3/session/changeset_iter.html
 share/doc/sqlite3/session/constlist.html
 share/doc/sqlite3/session/funclist.html
 share/doc/sqlite3/session/intro.html
 share/doc/sqlite3/session/objlist.html
+share/doc/sqlite3/session/session.html
+share/doc/sqlite3/session/sqlite3changegroup_add_strm.html
+share/doc/sqlite3/session/sqlite3changegroup_new.html
+share/doc/sqlite3/session/sqlite3changeset_apply.html
+share/doc/sqlite3/session/sqlite3changeset_concat.html
+share/doc/sqlite3/session/sqlite3changeset_conflict.html
+share/doc/sqlite3/session/sqlite3changeset_finalize.html
+share/doc/sqlite3/session/sqlite3changeset_fk_conflicts.html
+share/doc/sqlite3/session/sqlite3changeset_invert.html
+share/doc/sqlite3/session/sqlite3changeset_new.html
+share/doc/sqlite3/session/sqlite3changeset_next.html
+share/doc/sqlite3/session/sqlite3changeset_old.html
+share/doc/sqlite3/session/sqlite3changeset_op.html
+share/doc/sqlite3/session/sqlite3changeset_pk.html
+share/doc/sqlite3/session/sqlite3changeset_start.html
+share/doc/sqlite3/session/sqlite3session_attach.html
+share/doc/sqlite3/session/sqlite3session_changeset.html
+share/doc/sqlite3/session/sqlite3session_create.html
+share/doc/sqlite3/session/sqlite3session_delete.html
+share/doc/sqlite3/session/sqlite3session_diff.html
+share/doc/sqlite3/session/sqlite3session_enable.html
+share/doc/sqlite3/session/sqlite3session_indirect.html
+share/doc/sqlite3/session/sqlite3session_isempty.html
+share/doc/sqlite3/session/sqlite3session_patchset.html
+share/doc/sqlite3/session/sqlite3session_table_filter.html
+share/doc/sqlite3/sessionintro.html
 share/doc/sqlite3/sharedcache.html
 share/doc/sqlite3/shortnames.html
 share/doc/sqlite3/sitemap.html
