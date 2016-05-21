@@ -1,0 +1,21 @@
+MATE Sensors Applet is an applet for the MATE Panel to display
+readings from hardware sensors, including CPU temperature, fan speeds
+and voltage readings under Linux.
+
+Supported interfaces:
+
+    * ACPI thermal zones, via the Linux kernel ACPI modules
+    * Linux kernel i2c[1] modules (for kernel 2.6).
+    * lm_sensors[1] and i2c[1] packages (for kernel 2.4)
+    * libsensors[1] (provided by lm_sensors package)
+    * Linux kernel i8k[2] module (for Dell Inspiron Laptops).
+    * Linux kernel ibm-acpi[3] module
+    * Linux kernel PowerPC modules therm_adt746x and therm_windtunnel.
+    * Linux kernel iMac G5 Windfarm module.
+    * hddtemp[4] daemon for reading temperatures from S.M.A.R.T. equipped disks.
+    * Linux kernel Omnibook[5] module.
+    * NVIDIA graphics cards via libNVCtrl (supplied with nvidia-settings[6])
+    * Linux kernel sonypi[7] module (for Sony Vaio laptops)
+
+Includes a simple, yet highly customizable display and intuitive
+user-interface.
