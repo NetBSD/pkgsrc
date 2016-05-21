@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2047 2016/05/21 11:27:50 adam Exp $
+$NetBSD: CHANGES-2016,v 1.2048 2016/05/21 12:00:05 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2654,3 +2654,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/sqlite3 to 3.13.0 [adam 2016-05-21]
 	Updated databases/sqlite3-docs to 3.13.0 [adam 2016-05-21]
 	Updated databases/sqlite3-tcl to 3.13.0 [adam 2016-05-21]
+	Updated www/mediawiki to 1.26.3 [wen 2016-05-21]
