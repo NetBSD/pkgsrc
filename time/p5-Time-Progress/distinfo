@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/11/02 23:31:42 agc Exp $
+$NetBSD: distinfo,v 1.7 2016/05/21 13:11:36 wen Exp $
 
-SHA1 (Time-Progress-1.8.tar.gz) = d4adc6f98a3f28dc3a7b4e4f532852812c40b2b9
-RMD160 (Time-Progress-1.8.tar.gz) = b3762b6d8affc197b59de78cc31f103f04cd4039
-SHA512 (Time-Progress-1.8.tar.gz) = e098dfac83547c29854d9b849afbe7a8483c8a58725780d2d3b7facd07556b3881acc206e1199c11cb782a3dd9cbcdb16ae7a59e3cf43117e777df3bf317ecd2
-Size (Time-Progress-1.8.tar.gz) = 4931 bytes
+SHA1 (Time-Progress-2.11.tar.gz) = 44ce85032e7322d7c63c4fdee4eab6da52b1f370
+RMD160 (Time-Progress-2.11.tar.gz) = 1dcd76c49ba4191f20e06e3239c02abfb93bf922
+SHA512 (Time-Progress-2.11.tar.gz) = 517ddc40db6d6e8c6611957f30555b456292da31a22ce6fd29c75741f518e700df3c6d83b6b8a3c5ca4571fe5fa93fdd2f0b23202ec1c0bdb7ca54a72f1967e5
+Size (Time-Progress-2.11.tar.gz) = 7436 bytes
