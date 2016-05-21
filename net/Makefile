@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1112 2016/05/01 05:07:16 mef Exp $
+# $NetBSD: Makefile,v 1.1113 2016/05/21 21:50:21 youri Exp $
 #
 
 COMMENT=	Networking tools
@@ -306,6 +306,7 @@ SUBDIR+=	lua-socket
 SUBDIR+=	mDNSResponder
 SUBDIR+=	mDNSResponder-nss
 SUBDIR+=	maradns
+SUBDIR+=	mate-user-share
 SUBDIR+=	mbrowse
 SUBDIR+=	mcast-tools
 SUBDIR+=	md-whois
