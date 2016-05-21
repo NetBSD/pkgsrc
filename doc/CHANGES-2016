@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2072 2016/05/21 19:15:43 youri Exp $
+$NetBSD: CHANGES-2016,v 1.2073 2016/05/21 19:16:13 youri Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2679,3 +2679,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added x11/mate-screensaver version 1.14.0nb1 [youri 2016-05-21]
 	Added sysutils/mate-sensors-applet version 1.14.0 [youri 2016-05-21]
 	Added x11/mate-settings-daemon version 1.14.0 [youri 2016-05-21]
+	Added sysutils/mate-system-monitor version 1.14.0 [youri 2016-05-21]
