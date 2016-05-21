@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/05/21 19:13:18 youri Exp $
+
+SHA1 (mate-power-manager-1.14.0.tar.xz) = 286ac97658d18ea1fffa6e0a692a877727a44e41
+RMD160 (mate-power-manager-1.14.0.tar.xz) = 6db16df2a2d3a0285b36d966da32c6deccd07c8f
+SHA512 (mate-power-manager-1.14.0.tar.xz) = b1e6c5c0fe18b8e5d70ad66af450e86e7cf9fd5429973907618a742093fa9dec0c137e598f766824cb092d7c8c90a6d7116bc6b0417c81320dc21f8426d1eae2
+Size (mate-power-manager-1.14.0.tar.xz) = 3221144 bytes
