@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/04/21 11:17:26 jperkin Exp $
+# $NetBSD: Makefile,v 1.6 2016/05/21 05:55:12 richard Exp $
 
 DISTNAME=	terminator-0.98
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -26,14 +26,6 @@ SUBST_CLASSES+=		manpath
 SUBST_STAGE.manpath=	pre-configure
 SUBST_FILES.manpath=	setup.py
 SUBST_VARS.manpath=	PKGMANDIR
-
-post-install:
-	${RUN}${FIND} \
-		${DESTDIR}${PREFIX}/${PKGMANDIR} \
-		${DESTDIR}${PREFIX}/share/doc \
-		${DESTDIR}${PREFIX}/share/icons \
-		${DESTDIR}${PREFIX}/share/pixmaps \
-			-type f -print | ${XARGS} ${CHMOD} ${SHAREMODE}
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
