@@ -1,0 +1,6 @@
+MATE Power Manager is a MATE session daemon that acts as a policy agent on top
+of UPower, which requires fairly new versions of the kernel and udev.
+MATE Power Manager listens for system events and responds with user-
+configurable actions.
+
+MATE Power Manager is a fork of GNOME Power Manager.
