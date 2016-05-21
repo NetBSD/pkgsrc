@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2016/05/21 19:14:20 youri Exp $
+
+avoid conflict with gnome-screensaver
+
+--- configure.orig	2016-04-07 19:45:55.000000000 +0000
++++ configure
+@@ -18343,7 +18343,7 @@ fi
+ 
+ 
+ # Saver engine stuff
+-SLIDESHOW_COSMOS_DIR="${EXPANDED_DATADIR}/backgrounds/cosmos"
++SLIDESHOW_COSMOS_DIR="${EXPANDED_DATADIR}/backgrounds/mate-cosmos"
+ 
+ 
+ 
