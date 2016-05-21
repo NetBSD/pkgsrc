@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/05/21 10:54:49 wen Exp $
+
+SHA1 (POSIX-strftime-Compiler-0.41.tar.gz) = 7d8814f39e60e1c190c15dd64cbaba70dd2740f9
+RMD160 (POSIX-strftime-Compiler-0.41.tar.gz) = e3c9cea46c50271ff131e202378dd27b1a64a1ac
+SHA512 (POSIX-strftime-Compiler-0.41.tar.gz) = b613de3fb332313318cca8a6c8912b64e9dac702d5681d252dc8eb919c7b102354ad25f60b537cdfa66203e01826b34a5a349a2fac856a6affb40d5f160725fe
+Size (POSIX-strftime-Compiler-0.41.tar.gz) = 17187 bytes
