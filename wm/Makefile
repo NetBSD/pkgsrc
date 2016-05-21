@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.130 2015/10/01 11:08:16 tnn Exp $
+# $NetBSD: Makefile,v 1.131 2016/05/21 21:54:41 youri Exp $
 #
 
 COMMENT=	X11 window managers, configuration tools, and themes
@@ -53,7 +53,9 @@ SUBDIR+=	larswm
 SUBDIR+=	libAppleWM
 SUBDIR+=	libWindowsWM
 SUBDIR+=	lwm
+SUBDIR+=	marco
 SUBDIR+=	matchbox-wm
+SUBDIR+=	mate-netbook
 SUBDIR+=	metacity
 SUBDIR+=	mlvwm
 SUBDIR+=	musca
