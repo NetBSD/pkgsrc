@@ -1,0 +1,7 @@
+mate-menus contains the libmate-menu library, the layout configuration
+files for the MATE menu, as well as a simple menu editor.
+
+The libmate-menu library implements the "Desktop Menu Specification"
+from freedesktop.org.
+
+mate-menus is a fork of gnome-menus.
