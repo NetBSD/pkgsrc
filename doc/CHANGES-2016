@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2079 2016/05/21 19:20:02 youri Exp $
+$NetBSD: CHANGES-2016,v 1.2080 2016/05/21 19:20:42 youri Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2686,3 +2686,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added sysutils/caja-dropbox version 1.14.0 [youri 2016-05-21]
 	Added sysutils/caja-extensions version 1.14.0 [youri 2016-05-21]
 	Added archivers/engrampa version 1.14.0 [youri 2016-05-21]
+	Added graphics/eom version 1.14.0 [youri 2016-05-21]
