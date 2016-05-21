@@ -1,13 +1,24 @@
---- plugins/dashboard_pi/CMakeLists.txt.orig	2016-02-10 17:24:22.000000000 +0100
-+++ plugins/dashboard_pi/CMakeLists.txt	2016-02-10 17:24:27.000000000 +0100
-@@ -43,10 +43,9 @@
- #ADD_DEFINITIONS( "-Wall -ansi -pedantic -Wno-variadic-macros" )
- #TODO: Should we use  -fno-stack-protector
+$NetBSD: patch-plugins_dashboard_pi_CMakeLists.txt,v 1.2 2016/05/21 10:50:41 bouyer Exp $
+
+--- plugins/dashboard_pi/CMakeLists.txt.orig	2016-02-03 18:44:17.000000000 +0100
++++ plugins/dashboard_pi/CMakeLists.txt	2016-05-21 11:08:40.892255884 +0200
+@@ -45,7 +45,9 @@
  #  IF NOT DEBUGGING CFLAGS="-O2 -march=native"
  IF(NOT WIN32 AND NOT APPLE)
      ADD_DEFINITIONS( "-Wall -O2 -fexceptions -fvisibility=hidden" )
 -    SET(CMAKE_SHARED_LINKER_FLAGS "-Wl,-Bsymbolic")
++    IF(CMAKE_SYSTEM_NAME MATCHES ".*Linux")
++     SET(CMAKE_SHARED_LINKER_FLAGS "-Wl,-Bsymbolic")
++    ENDIF(CMAKE_SYSTEM_NAME MATCHES ".*Linux")
  ENDIF(NOT WIN32 AND NOT APPLE)
  
  IF( APPLE )
-    ADD_DEFINITIONS( "-O3 -fexceptions -fvisibility=hidden" )
+@@ -263,5 +265,8 @@
+     ENDIF(EXISTS ${PROJECT_SOURCE_DIR}/data)
+ ENDIF(WIN32)
+ 
++IF(CMAKE_SYSTEM_NAME MATCHES ".*Linux")
++   SET_TARGET_PROPERTIES(${PROJECT_NAME} PROPERTIES COMPILE_FLAGS "-fPIC")
++ENDIF(CMAKE_SYSTEM_NAME MATCHES ".*Linux")
+ INCLUDE("../PluginLocalization.cmake")
+ PLUGIN_LOCALIZATION()
