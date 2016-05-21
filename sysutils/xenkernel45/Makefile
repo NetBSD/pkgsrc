@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2016/01/08 13:24:29 bouyer Exp $
+# $NetBSD: Makefile,v 1.13.2.1 2016/05/21 15:48:57 bsiegert Exp $
 
-VERSION=	4.5.2
+VERSION=	4.5.3
 DISTNAME=	xen-${VERSION}
 PKGNAME=	xenkernel45-${VERSION}
 #PKGREVISION=	0
