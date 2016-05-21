@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2016/03/16 19:55:55 ryoon Exp $
+# $NetBSD: Makefile,v 1.31.2.1 2016/05/21 19:13:44 bsiegert Exp $
 #
 
 DISTNAME=	expat-2.1.1
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=expat/}
 EXTRACT_SUFX=	.tar.bz2
@@ -13,6 +14,10 @@ LICENSE=	mit
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
+
+# C++ is needed for tests only
+#USE_LANGUAGES=		c c++
+#TEST_TARGET=		check
 
 PKGCONFIG_OVERRIDE+=	expat.pc.in
 
