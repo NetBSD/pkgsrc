@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.247 2016/05/12 18:47:43 wiz Exp $
+# $NetBSD: Makefile,v 1.248 2016/05/21 21:49:17 youri Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -137,6 +137,7 @@ SUBDIR+=	libvdpau
 SUBDIR+=	libvpx
 SUBDIR+=	livestreamer
 SUBDIR+=	lsdvd
+SUBDIR+=	mate-media
 SUBDIR+=	mediainfo
 SUBDIR+=	mediatomb
 SUBDIR+=	mencoder
