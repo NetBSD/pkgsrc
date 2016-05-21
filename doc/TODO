@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15913 2016/05/20 22:54:43 mef Exp $
+$NetBSD: TODO,v 1.15914 2016/05/21 08:57:43 wen Exp $
 
 Suggested new packages
 ======================
@@ -1234,7 +1234,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-CDB_File-0.98
 	o p5-CDDB-2.00
 	o p5-CPANPLUS-2.102
-	o p5-Captcha-reCAPTCHA-0.97
 	o p5-Catalyst-Engine-PSGI-0.14
 	o p5-Catalyst-View-Email-0.36
 	o p5-CatalystX-CRUD-0.57
