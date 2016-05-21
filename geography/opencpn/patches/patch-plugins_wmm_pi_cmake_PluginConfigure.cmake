@@ -1,12 +1,16 @@
---- plugins/wmm_pi/cmake/PluginConfigure.cmake.orig	2016-02-10 17:29:03.000000000 +0100
-+++ plugins/wmm_pi/cmake/PluginConfigure.cmake	2016-02-10 17:30:10.000000000 +0100
-@@ -41,11 +41,9 @@
+$NetBSD: patch-plugins_wmm_pi_cmake_PluginConfigure.cmake,v 1.2 2016/05/21 10:50:41 bouyer Exp $
+
+--- plugins/wmm_pi/cmake/PluginConfigure.cmake.orig	2016-02-03 18:44:17.000000000 +0100
++++ plugins/wmm_pi/cmake/PluginConfigure.cmake	2016-05-21 11:07:42.654361498 +0200
+@@ -41,11 +41,12 @@
   ADD_DEFINITIONS( "-Wall -Wno-unused-result -g -O2 -fexceptions" )
   ENDIF(PROFILING)
  
 - IF(NOT APPLE)
--  SET(CMAKE_SHARED_LINKER_FLAGS "-Wl,-Bsymbolic")
++ IF(CMAKE_SYSTEM_NAME MATCHES ".*Linux")
+   SET(CMAKE_SHARED_LINKER_FLAGS "-Wl,-Bsymbolic")
 - ELSE(NOT APPLE)
++ ENDIF(CMAKE_SYSTEM_NAME MATCHES ".*Linux")
 + IF(APPLE)
    SET(CMAKE_SHARED_LINKER_FLAGS "-Wl -undefined dynamic_lookup")
 - ENDIF(NOT APPLE)
