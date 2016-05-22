@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2089 2016/05/22 04:33:36 tsutsui Exp $
+$NetBSD: CHANGES-2016,v 1.2090 2016/05/22 13:01:54 youri Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2696,3 +2696,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/thunderbird to 45.1.0 [ryoon 2016-05-21]
 	Updated mail/thunderbird-l10n to 45.1.0 [ryoon 2016-05-21]
 	Updated net/mikutter to 3.3.10 [tsutsui 2016-05-22]
+	Added sysutils/caja version 1.14.0 [youri 2016-05-22]
