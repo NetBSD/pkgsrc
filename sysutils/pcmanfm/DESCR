@@ -16,3 +16,4 @@ Features:
     * Provide icon view and detailed list view
     * Standard compliant (Follows FreeDesktop.org)
     * Clean and user-friendly interface (GTK+ 2)
+    * Handles icons and backgrounds on root window too
