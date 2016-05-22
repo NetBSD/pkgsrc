@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.4 2016/05/22 13:15:43 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2016/05/22 13:32:18 wiz Exp $
 
-DISTNAME=	libarchive-c-2.2
+DISTNAME=	libarchive-c-2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/libarchive-c/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/Changaco/python-libarchive-c
 COMMENT=	Python interface to libarchive
-LICENSE=	gnu-lgpl-v2
+LICENSE=	cc0-1.0-universal
 
 SUBST_CLASSES+=			libarchive
 # assume for now that only pkgsrc provides a new enough version
@@ -19,6 +18,7 @@ SUBST_MESSAGE.libarchive=	Fix path to libarchive.
 SUBST_STAGE.libarchive=		post-configure
 
 # permissions are usually wrong
+# https://github.com/Changaco/python-libarchive-c/issues/30
 post-install:
 	${CHMOD} ${SHAREMODE} ${DESTDIR}${PREFIX}/${PYSITELIB}/${EGG_INFODIR}/*
 
