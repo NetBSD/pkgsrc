@@ -1,0 +1,27 @@
+$NetBSD: patch-src_Makefile.in,v 1.1 2016/05/22 22:10:03 youri Exp $
+
+Disable extra.
+
+--- src/Makefile.in.orig	2016-02-20 22:14:15.000000000 +0000
++++ src/Makefile.in
+@@ -893,14 +893,14 @@ libfm_gtk_SOURCES = \
+ @EXTRALIB_ONLY_FALSE@	gtk/fm-thumbnail.h \
+ @EXTRALIB_ONLY_FALSE@	$(NULL)
+ 
+-LIBFM_EXTRA_INCLUDES = \
+-	fm-extra.h \
+-	fm-version.h \
+-	extra/fm-xml-file.h \
+-	$(NULL)
++#LIBFM_EXTRA_INCLUDES = \
++#	fm-extra.h \
++#	fm-version.h \
++#	extra/fm-xml-file.h \
++#	$(NULL)
+ 
+ EXTRA_LTLIBRARIES = libfm-gtk.la libfm-gtk3.la
+-@EXTRALIB_ONLY_FALSE@lib_LTLIBRARIES = libfm-extra.la libfm.la @LIBFM_GTK_LTLIBRARIES@
++@EXTRALIB_ONLY_FALSE@lib_LTLIBRARIES = libfm.la @LIBFM_GTK_LTLIBRARIES@
+ @EXTRALIB_ONLY_TRUE@lib_LTLIBRARIES = libfm-extra.la
+ libfm_la_SOURCES = \
+ 	$(libfm_SOURCES) \
