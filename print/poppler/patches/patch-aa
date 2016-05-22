@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.16 2016/04/15 14:36:21 wiz Exp $
+$NetBSD: patch-aa,v 1.17 2016/05/22 18:17:17 wiz Exp $
 
 Use installed copy of poppler library so we can have a separate
 poppler-glib package.
 
---- glib/Makefile.in.orig	2016-03-16 22:22:12.000000000 +0000
+--- glib/Makefile.in.orig	2016-05-21 16:59:38.000000000 +0000
 +++ glib/Makefile.in
 @@ -143,7 +143,7 @@ am__installdirs = "$(DESTDIR)$(libdir)" 
  LTLIBRARIES = $(lib_LTLIBRARIES)
