@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2015/12/06 11:11:28 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2016/05/22 17:32:04 wiz Exp $
 
-DISTNAME=	libopenmpt-0.2.5787-beta16-autotools
+DISTNAME=	libopenmpt-0.2.6401-beta17-autotools
 PKGNAME=	${DISTNAME:C/-beta.*//}
 CATEGORIES=	audio
 MASTER_SITES=	http://lib.openmpt.org/files/libopenmpt/src/
@@ -24,6 +24,8 @@ CONFIGURE_ARGS+=	--without-portaudiocpp
 
 .include "options.mk"
 
+.include "../../audio/mpg123/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
+.include "../../devel/libltdl/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
