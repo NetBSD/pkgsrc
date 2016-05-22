@@ -1,24 +1,31 @@
-# $NetBSD: Makefile,v 1.30 2015/04/25 14:24:54 tnn Exp $
+# $NetBSD: Makefile,v 1.31 2016/05/22 22:51:44 youri Exp $
 #
 
-DISTNAME=	pcmanfm-0.1.8.9
-PKGREVISION=	24
+DISTNAME=	pcmanfm-1.2.4
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pcmanfm/}
+EXTRACT_SUFX=	.tar.xz
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	youri@NetBSD.org
 HOMEPAGE=	http://pcmanfm.sourceforge.net/
 COMMENT=	Extremly fast and lightweight file manager
+LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake pkg-config msgfmt
+USE_TOOLS+=		intltool pkg-config
 
-DEPENDS+=	gamin>=0.1.10:../../sysutils/gamin
+CONF=			share/examples/pcmanfm
+CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/${CONF}
 
-.include "../../databases/shared-mime-info/buildlink3.mk"
-.include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../graphics/gnome-icon-theme/buildlink3.mk"
-.include "../../sysutils/libgamin/buildlink3.mk"
+PKG_SYSCONFSUBDIR=	xdg
+MAKE_DIRS=		${PKG_SYSCONFDIR}/pcmanfm/default
+CONF_FILES+=		${CONF}/xdg/pcmanfm/default/pcmanfm.conf \
+			${PKG_SYSCONFDIR}/pcmanfm/default/pcmanfm.conf
+
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../sysutils/menu-cache/buildlink3.mk"
+.include "../../sysutils/libfm/buildlink3.mk"
+.include "../../sysutils/libfm-extra/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
