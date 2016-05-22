@@ -1,12 +1,6 @@
-$NetBSD: distinfo,v 1.10 2015/11/03 01:56:11 agc Exp $
+$NetBSD: distinfo,v 1.11 2016/05/22 17:24:32 wiz Exp $
 
-SHA1 (gdbm-1.11.tar.gz) = ce433d0f192c21d41089458ca5c8294efe9806b4
-RMD160 (gdbm-1.11.tar.gz) = f3d38a31ed509fdbfe52674e55585c2e570938c5
-SHA512 (gdbm-1.11.tar.gz) = 272fb65ab9ca0a21e9f0dcfb2c638457e87cbb938c65ee850123474d11f2858496f84d3fa9edca27cd91c7220160cfdb59f90bd46ddc45395514addc9fd4151c
-Size (gdbm-1.11.tar.gz) = 811662 bytes
-SHA1 (patch-src_gdbmtool.c) = 3f96f09d42dc4942b55da698d4853a3f175e6a44
-SHA1 (patch-src_gdbmtool.h) = 0301c08bbf66a3c4249bf32666f04a355803247b
-SHA1 (patch-tests_create00.at) = 2ce3d6ebac588b25699a6f38b298d4fb63965714
-SHA1 (patch-tests_dbmcreate00.at) = 5d5030b9ff6b9f5a4141abec82a066afba5c557f
-SHA1 (patch-tests_dbmdel00.at) = 3a472a1b0b45e315823dc5a505ddd656f2d8c469
-SHA1 (patch-tests_delete00.at) = 6ba7832eaf118d9b7380b0459ddcf786d497f431
+SHA1 (gdbm-1.12.tar.gz) = 86513e8871bb376bc014e9e5a2d18a8e0a8ea2f5
+RMD160 (gdbm-1.12.tar.gz) = 5f47e6adfec14b31c3e26c1027684ba4845eef8a
+SHA512 (gdbm-1.12.tar.gz) = 25e03dceed6986f1977d304a5ad059ac6c603a88ad4aa18c831ec42df82d68006f2e04b8a3cc400d0a4970750c78ba24a3f84cdff70de9f278cfd854c059699e
+Size (gdbm-1.12.tar.gz) = 841213 bytes
