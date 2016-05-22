@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1 2016/05/22 13:01:45 youri Exp $
+
+SHA1 (caja-1.14.0.tar.xz) = 9fd95c5295cdda84cfd16891bf4d6c90d3a69c92
+RMD160 (caja-1.14.0.tar.xz) = 9d64c5c2423c63b7ac14640fb8d11a6d4dde02ae
+SHA512 (caja-1.14.0.tar.xz) = 130aec4bdf39c9e59b3d536ec6690b5022e81fe4625dfb0eeac972e55f8e3d81572972b5b9c747c8c04fa7259a54ed128b4ff6c010d556e9a149b96bee6914ba
+Size (caja-1.14.0.tar.xz) = 3608364 bytes
+SHA1 (patch-eel_eel-background.c) = 9d0ed0d9f3c9004f6d9024837538cc26cdb410da
+SHA1 (patch-libcaja-private_caja-global-preferences.c) = 122d62430cf57e274f1e561783ca0f69d0de7d56
+SHA1 (patch-libcaja-private_caja-global-preferences.h) = edac3dc74ad737ed9e5347e8eb5eb83866dcaadf
+SHA1 (patch-src_caja-file-management-properties.h) = 4529eb0c91c39c1d1b1983da23074adfeb28c1a8
