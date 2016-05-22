@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2091 2016/05/22 13:03:32 youri Exp $
+$NetBSD: CHANGES-2016,v 1.2092 2016/05/22 13:32:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2698,3 +2698,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/mikutter to 3.3.10 [tsutsui 2016-05-22]
 	Added sysutils/caja version 1.14.0 [youri 2016-05-22]
 	Added x11/mate-session-manager version 1.14.0 [youri 2016-05-22]
+	Updated archivers/py-libarchive-c to 2.3 [wiz 2016-05-22]
