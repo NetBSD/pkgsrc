@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2016/05/22 22:33:14 youri Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/05/22 22:48:37 youri Exp $
 bin/libfm-pref-apps
 bin/lxshortcut
 include/libfm-1.0/fm-actions.h
@@ -66,7 +66,6 @@ include/libfm-1.0/fm-thumbnail-loader.h
 include/libfm-1.0/fm-thumbnail.h
 include/libfm-1.0/fm-thumbnailer.h
 include/libfm-1.0/fm-utils.h
-include/libfm-1.0/fm-version.h
 include/libfm-1.0/fm.h
 include/libfm/fm-actions.h
 include/libfm/fm-app-chooser-combo-box.h
@@ -133,7 +132,6 @@ include/libfm/fm-thumbnail-loader.h
 include/libfm/fm-thumbnail.h
 include/libfm/fm-thumbnailer.h
 include/libfm/fm-utils.h
-include/libfm/fm-version.h
 include/libfm/fm.h
 lib/libfm-gtk.la
 lib/libfm.la
