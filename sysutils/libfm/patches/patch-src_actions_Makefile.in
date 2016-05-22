@@ -1,0 +1,15 @@
+$NetBSD: patch-src_actions_Makefile.in,v 1.1 2016/05/22 22:10:03 youri Exp $
+
+Disable extra.
+
+--- src/actions/Makefile.in.orig	2016-02-20 22:14:15.000000000 +0000
++++ src/actions/Makefile.in
+@@ -247,7 +247,7 @@ EXIF_CFLAGS = @EXIF_CFLAGS@
+ EXIF_LIBS = @EXIF_LIBS@
+ FGREP = @FGREP@
+ FMINCLUDEADD = @FMINCLUDEADD@
+-FMLIBVER = @FMLIBVER@
++FMLIBVER =
+ FM_VERSION_MAJOR = @FM_VERSION_MAJOR@
+ FM_VERSION_MICRO = @FM_VERSION_MICRO@
+ FM_VERSION_MINOR = @FM_VERSION_MINOR@
