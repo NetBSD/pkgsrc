@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2100 2016/05/22 17:35:39 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2101 2016/05/22 17:42:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2707,3 +2707,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated time/p5-DateTime to 1.2800 [wiz 2016-05-22]
 	Updated mail/p5-MailTools to 2.18 [wiz 2016-05-22]
 	Updated graphics/p5-Image-BMP to 1.18 [wiz 2016-05-22]
+	Updated x11/ocaml-lablgtk to 2.18.4 [wiz 2016-05-22]
