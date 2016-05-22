@@ -1,9 +1,9 @@
-$NetBSD: patch-qt5_src_Makefile.in,v 1.4 2016/04/15 14:36:21 wiz Exp $
+$NetBSD: patch-qt5_src_Makefile.in,v 1.5 2016/05/22 18:17:17 wiz Exp $
 
 Use installed copy of poppler library so we can have a separate
 poppler-qt5 package.
 
---- qt5/src/Makefile.in.orig	2016-03-16 22:22:13.000000000 +0000
+--- qt5/src/Makefile.in.orig	2016-05-21 16:59:39.000000000 +0000
 +++ qt5/src/Makefile.in
 @@ -139,7 +139,7 @@ am__installdirs = "$(DESTDIR)$(libdir)" 
  LTLIBRARIES = $(lib_LTLIBRARIES)
