@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 21:34:02 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/05/22 19:38:24 youri Exp $
 
-SHA1 (gpicview-0.2.4.tar.gz) = 423143c850390db9784ad9812b9f929c18dd51ea
-RMD160 (gpicview-0.2.4.tar.gz) = 36f7debf3b01d534dd6d16e1ad6f6c04b80ceda8
-SHA512 (gpicview-0.2.4.tar.gz) = 60aeae5100ceafc5131cf61d600be5e5fd21c7d0fa62b8124b6f5bc917666b80908ba9e540010867c6d3eab485d9735dfa72f16095be468a718c55eeb65cef34
-Size (gpicview-0.2.4.tar.gz) = 488510 bytes
-SHA1 (patch-src_main-win.c) = 2971f6a6db8ffdd5bd205f414c545814628e0360
+SHA1 (gpicview-0.2.5.tar.xz) = 6741b107c190574abd4ae31f281462b0536e495a
+RMD160 (gpicview-0.2.5.tar.xz) = 46c979b8647817a7e7a081bda3d3389edd0bc8ea
+SHA512 (gpicview-0.2.5.tar.xz) = afc7e67c7ae1252f9c1816ee46fe69e96ea7be9a60e03406a539f17b2e4f0e4b93a028c6f3f1c455f5433d6d7d78a58dcee2cb0ac91ea53093a21935bf454afd
+Size (gpicview-0.2.5.tar.xz) = 349536 bytes
+SHA1 (patch-src_main-win.c) = 246fbd69b3309bc7911a248190486e8abe81296d
