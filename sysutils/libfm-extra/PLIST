@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1 2016/05/22 22:08:40 youri Exp $
+include/libfm-1.0/fm-extra.h
+include/libfm-1.0/fm-version.h
+include/libfm-1.0/fm-xml-file.h
+include/libfm/fm-extra.h
+include/libfm/fm-version.h
+include/libfm/fm-xml-file.h
+lib/libfm-extra.la
+lib/pkgconfig/libfm-extra.pc
