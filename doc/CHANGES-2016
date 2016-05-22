@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2096 2016/05/22 17:24:43 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2097 2016/05/22 17:32:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2703,3 +2703,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-mercurial to 3.8.2 [wiz 2016-05-22]
 	Updated time/py-vdirsyncer to 0.11.0 [wiz 2016-05-22]
 	Updated databases/gdbm to 1.12 [wiz 2016-05-22]
+	Updated audio/libopenmpt to 0.2.6401 [wiz 2016-05-22]
