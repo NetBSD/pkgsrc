@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.129 2016/04/15 14:42:52 wiz Exp $
+# $NetBSD: Makefile,v 1.130 2016/05/22 18:20:47 wiz Exp $
 
 DISTNAME=	inkscape-0.91
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	graphics
 #MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=inkscape/}
 MASTER_SITES=	https://inkscape.global.ssl.fastly.net/media/resources/file/
