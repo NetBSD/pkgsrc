@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2013/01/31 03:25:53 reed Exp $
+# $NetBSD: Makefile,v 1.2 2016/05/22 22:11:43 youri Exp $
 #
 
-DISTNAME=	menu-cache-0.4.1
-PKGREVISION=	1
+DISTNAME=	menu-cache-1.0.1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lxde/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lxde.sourceforge.net/
@@ -25,4 +25,5 @@ post-install:
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.16.0
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../wip/libfm-extra/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
