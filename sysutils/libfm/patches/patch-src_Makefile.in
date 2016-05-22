@@ -1,15 +1,15 @@
-$NetBSD: patch-src_Makefile.in,v 1.2 2016/05/22 22:33:14 youri Exp $
+$NetBSD: patch-src_Makefile.in,v 1.3 2016/05/22 22:48:37 youri Exp $
 
 Disable extra.
 
 --- src/Makefile.in.orig	2016-02-20 22:14:15.000000000 +0000
 +++ src/Makefile.in
-@@ -894,13 +894,11 @@ libfm_gtk_SOURCES = \
+@@ -894,13 +894,10 @@ libfm_gtk_SOURCES = \
  @EXTRALIB_ONLY_FALSE@	$(NULL)
  
  LIBFM_EXTRA_INCLUDES = \
 -	fm-extra.h \
- 	fm-version.h \
+-	fm-version.h \
 -	extra/fm-xml-file.h \
  	$(NULL)
  
