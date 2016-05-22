@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.10 2016/05/05 12:42:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2016/05/22 17:17:33 wiz Exp $
 bin/hg
-${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/hgext/__init__.py
 ${PYSITELIB}/hgext/__init__.pyc
 ${PYSITELIB}/hgext/__init__.pyo
@@ -224,6 +223,7 @@ ${PYSITELIB}/hgext/zeroconf/__init__.pyo
 ${PYSITELIB}/hgext3rd/__init__.py
 ${PYSITELIB}/hgext3rd/__init__.pyc
 ${PYSITELIB}/hgext3rd/__init__.pyo
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/mercurial/__init__.py
 ${PYSITELIB}/mercurial/__init__.pyc
 ${PYSITELIB}/mercurial/__init__.pyo
@@ -351,6 +351,7 @@ ${PYSITELIB}/mercurial/help/environment.txt
 ${PYSITELIB}/mercurial/help/extensions.txt
 ${PYSITELIB}/mercurial/help/filesets.txt
 ${PYSITELIB}/mercurial/help/glossary.txt
+${PYSITELIB}/mercurial/help/hg-ssh.8.txt
 ${PYSITELIB}/mercurial/help/hg.1.txt
 ${PYSITELIB}/mercurial/help/hgignore.5.txt
 ${PYSITELIB}/mercurial/help/hgignore.txt
