@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 03:28:53 agc Exp $
-
-SHA1 (razorqt-0.5.1.tar.bz2) = 6e419782a0d1d54a2f6b40713fa32f3005311bea
-RMD160 (razorqt-0.5.1.tar.bz2) = 099be73b0d68a5e255bde8ab4585a9468593f8b2
-SHA512 (razorqt-0.5.1.tar.bz2) = 736e9f38a959cb70465e9d4331c912b26ca9c0ed1e354702a29e1f10b2aec95352b96c6af24022f447bc9526a4f6c77b10aa59cac620837c8355c99884323521
-Size (razorqt-0.5.1.tar.bz2) = 10379213 bytes
