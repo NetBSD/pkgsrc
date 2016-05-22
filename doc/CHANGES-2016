@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2102 2016/05/22 17:46:35 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2103 2016/05/22 17:51:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2709,3 +2709,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/p5-Image-BMP to 1.18 [wiz 2016-05-22]
 	Updated x11/ocaml-lablgtk to 2.18.4 [wiz 2016-05-22]
 	Updated textproc/iso-codes to 3.68 [wiz 2016-05-22]
+	Updated math/p5-Math-Pari to 2.010809.00 [wiz 2016-05-22]
