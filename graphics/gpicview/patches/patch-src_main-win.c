@@ -1,4 +1,6 @@
-$NetBSD: patch-src_main-win.c,v 1.1 2014/11/17 19:03:10 joerg Exp $
+$NetBSD: patch-src_main-win.c,v 1.2 2016/05/22 19:38:24 youri Exp $
+
+Fix build.
 
 --- src/main-win.c.orig	2014-11-16 15:22:49.000000000 +0000
 +++ src/main-win.c
