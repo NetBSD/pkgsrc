@@ -1,0 +1,38 @@
+$NetBSD: patch-data_Makefile.in,v 1.1 2016/05/22 22:10:03 youri Exp $
+
+Fix config file installation.
+
+--- data/Makefile.in.orig	2016-02-20 22:14:14.000000000 +0000
++++ data/Makefile.in
+@@ -381,6 +381,7 @@ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+ srcdir = @srcdir@
+ sysconfdir = @sysconfdir@
++sysconfexampledir = ${datadir}/examples
+ target_alias = @target_alias@
+ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+@@ -536,18 +537,18 @@ uninstall-desktopDATA:
+ 	dir='$(DESTDIR)$(desktopdir)'; $(am__uninstall_files_from_dir)
+ install-libfmconfDATA: $(libfmconf_DATA)
+ 	@$(NORMAL_INSTALL)
+-	@list='$(libfmconf_DATA)'; test -n "$(libfmconfdir)" || list=; \
++	@list='$(libfmconf_DATA)'; test -n "$(sysconfexampledir)/libfm" || list=; \
+ 	if test -n "$$list"; then \
+-	  echo " $(MKDIR_P) '$(DESTDIR)$(libfmconfdir)'"; \
+-	  $(MKDIR_P) "$(DESTDIR)$(libfmconfdir)" || exit 1; \
++	  echo " $(MKDIR_P) '$(DESTDIR)$(sysconfexampledir)/libfm'"; \
++	  $(MKDIR_P) "$(DESTDIR)$(sysconfexampledir)/libfm" || exit 1; \
+ 	fi; \
+ 	for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  echo "$$d$$p"; \
+ 	done | $(am__base_list) | \
+ 	while read files; do \
+-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(libfmconfdir)'"; \
+-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(libfmconfdir)" || exit $$?; \
++	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(sysconfexampledir)/libfm'"; \
++	  $(INSTALL_DATA) $$files "$(DESTDIR)$(sysconfexampledir)/libfm" || exit $$?; \
+ 	done
+ 
+ uninstall-libfmconfDATA:
