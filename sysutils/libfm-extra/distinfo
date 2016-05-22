@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/05/22 22:08:40 youri Exp $
+
+SHA1 (libfm-1.2.4.tar.xz) = 2f8183389c8e74edb15c6c8ab260df5dd39f3b2d
+RMD160 (libfm-1.2.4.tar.xz) = 7c8cb9da27b3f36607f00eb9069ef753bb77eab5
+SHA512 (libfm-1.2.4.tar.xz) = c609e822959f9fa83eaee6552906b6fd22d210f0802944816230b1932fc06632dc557b8998d2d065100212f79dffe13257587c744aba78592983681c8410dc24
+Size (libfm-1.2.4.tar.xz) = 912164 bytes
