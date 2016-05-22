@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2094 2016/05/22 17:17:42 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2095 2016/05/22 17:20:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2701,3 +2701,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated archivers/py-libarchive-c to 2.3 [wiz 2016-05-22]
 	Updated graphics/ImageMagick to 7.0.1.6 [wiz 2016-05-22]
 	Updated devel/py-mercurial to 3.8.2 [wiz 2016-05-22]
+	Updated time/py-vdirsyncer to 0.11.0 [wiz 2016-05-22]
