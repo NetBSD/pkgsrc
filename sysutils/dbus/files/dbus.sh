@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: dbus.sh,v 1.9 2008/10/11 19:58:24 markd Exp $
+# $NetBSD: dbus.sh,v 1.10 2016/05/22 23:02:24 youri Exp $
 #
 # PROVIDE: dbus
 # REQUIRE: DAEMON
@@ -11,7 +11,7 @@
 name="dbus"
 rcvar=$name
 command="@PREFIX@/bin/dbus-daemon"
-command_args="--system"
+command_args="--system --fork"
 pidfile="@VARBASE@/run/dbus/pid"
 start_precmd=dbus_prestart
 
