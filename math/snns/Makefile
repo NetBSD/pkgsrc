@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2015/10/14 20:17:27 wiz Exp $
+# $NetBSD: Makefile,v 1.25.4.1 2016/05/23 04:59:24 bsiegert Exp $
 
 DISTNAME=	SNNSv4.3
 PKGNAME=	snns-4.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	http://www-ra.informatik.uni-tuebingen.de/downloads/SNNS/
 
