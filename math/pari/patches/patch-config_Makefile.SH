@@ -1,4 +1,4 @@
-$NetBSD: patch-config_Makefile.SH,v 1.1 2016/03/03 13:28:22 wiz Exp $
+$NetBSD: patch-config_Makefile.SH,v 1.1.2.1 2016/05/23 04:58:36 bsiegert Exp $
 
 --- config/Makefile.SH.orig	2014-12-13 20:52:52.000000000 +0000
 +++ config/Makefile.SH
@@ -109,7 +109,7 @@ $NetBSD: patch-config_Makefile.SH,v 1.1 2016/03/03 13:28:22 wiz Exp $
 -	\$(AR) r \$@ \$(OBJS)
 -	-\$(RANLIB) \$@
 +\$(LIBPARI): \$(OBJS)
-+	\$(LD) -o \$@ \$(OBJS) -rpath \$(LIBDIR) \$(GMPLIBS) --version-info 0:0
++	\$(LD) -o \$@ \$(OBJS) -rpath \$(PREFIX)/lib \$(GMPLIBS) --version-info 0:0
  
  kerntest\$(_O): $src/test/kerntest.c
  	\$(CC) -c -I$src/language \$(CPPFLAGS) \$(CFLAGS) -o \$@ $src/test/kerntest.c
