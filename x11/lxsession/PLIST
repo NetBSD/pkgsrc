@@ -1,13 +1,34 @@
-@comment $NetBSD: PLIST,v 1.1 2013/02/01 01:31:37 reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/05/23 08:56:21 youri Exp $
+bin/lxclipboard
 bin/lxlock
+bin/lxpolkit
 bin/lxsession
+bin/lxsession-db
+bin/lxsession-default
+bin/lxsession-default-apps
+bin/lxsession-default-terminal
+bin/lxsession-edit
 bin/lxsession-logout
+bin/lxsession-xdg-autostart
+bin/lxsession-xsettings
+bin/lxsettings-daemon
+man/man1/lxclipboard.1
+man/man1/lxlock.1
+man/man1/lxsession-default-apps.1
+man/man1/lxsession-default-terminal.1
+man/man1/lxsession-default.1
 man/man1/lxsession-logout.1
 man/man1/lxsession.1
+share/applications/lxsession-default-apps.desktop
+share/applications/lxsession-edit.desktop
 share/doc/lxsession/README
+share/examples/lxsession/lxpolkit.desktop
 share/lxsession/images/gnome-session-hibernate.png
 share/lxsession/images/gnome-session-reboot.png
 share/lxsession/images/gnome-session-suspend.png
 share/lxsession/images/gnome-session-switch.png
 share/lxsession/images/system-log-out.png
 share/lxsession/images/system-shutdown.png
+share/lxsession/ui/lxpolkit.ui
+share/lxsession/ui/lxsession-default-apps.ui
+share/lxsession/ui/lxsession-edit.ui

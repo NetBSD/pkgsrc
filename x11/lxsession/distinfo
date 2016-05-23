@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 03:28:48 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/05/23 08:56:21 youri Exp $
 
-SHA1 (lxsession-0.4.6.1.tar.gz) = ef7f74617f7555f3e292b670099ef44389a9a849
-RMD160 (lxsession-0.4.6.1.tar.gz) = 97c0c88abdb81c22ec356371c4b7572cd715608f
-SHA512 (lxsession-0.4.6.1.tar.gz) = eea554ba70b3fd278b7ce0bb2d278241dff26eaccf74f2a4a0a9846515688fd5dd846c97f29c71139a0c3b95bc5e906efc4673f0cd79d8db427894dff5524f16
-Size (lxsession-0.4.6.1.tar.gz) = 407100 bytes
+SHA1 (lxsession-0.5.2.tar.xz) = 00d45cccbdd6fb05c46998671a7c12123a0a2179
+RMD160 (lxsession-0.5.2.tar.xz) = 81a379a4c32085447034e965e19c840eb82588dc
+SHA512 (lxsession-0.5.2.tar.xz) = 2e08e5263bb4ef9d8051e84997347a12d2f1ba75cf4e70f9e3ba783a509246f0d6efd672ac1cc1d0fffc8707710ddb148298449b5365deb6785623d596bc3da1
+Size (lxsession-0.5.2.tar.xz) = 354092 bytes
+SHA1 (patch-data_Makefile.in) = ec76ab351a3417b71e80f8201808174e63c8f2da

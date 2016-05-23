@@ -1,0 +1,38 @@
+$NetBSD: patch-data_Makefile.in,v 1.1 2016/05/23 08:56:21 youri Exp $
+
+Fix config file installation.
+
+--- data/Makefile.in.orig	2014-11-29 14:53:23.000000000 +0000
++++ data/Makefile.in
+@@ -337,6 +337,7 @@ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+ srcdir = @srcdir@
+ sysconfdir = @sysconfdir@
++sysconfexampledir = ${datadir}/examples
+ target_alias = @target_alias@
+ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+@@ -418,18 +419,18 @@ lxpolkit.desktop.in: $(top_builddir)/con
+ 	cd $(top_builddir) && $(SHELL) ./config.status $(subdir)/$@
+ install-autostartDATA: $(autostart_DATA)
+ 	@$(NORMAL_INSTALL)
+-	@list='$(autostart_DATA)'; test -n "$(autostartdir)" || list=; \
++	@list='$(autostart_DATA)'; test -n "$(sysconfexampledir)/lxsession" || list=; \
+ 	if test -n "$$list"; then \
+-	  echo " $(MKDIR_P) '$(DESTDIR)$(autostartdir)'"; \
+-	  $(MKDIR_P) "$(DESTDIR)$(autostartdir)" || exit 1; \
++	  echo " $(MKDIR_P) '$(DESTDIR)$(sysconfexampledir)/lxsession'"; \
++	  $(MKDIR_P) "$(DESTDIR)$(sysconfexampledir)/lxsession" || exit 1; \
+ 	fi; \
+ 	for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  echo "$$d$$p"; \
+ 	done | $(am__base_list) | \
+ 	while read files; do \
+-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(autostartdir)'"; \
+-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(autostartdir)" || exit $$?; \
++	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(sysconfexampledir)/lxsession'"; \
++	  $(INSTALL_DATA) $$files "$(DESTDIR)$(sysconfexampledir)/lxsession" || exit $$?; \
+ 	done
+ 
+ uninstall-autostartDATA:
