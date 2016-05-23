@@ -1,0 +1,158 @@
+$NetBSD: patch-Makefile.in,v 1.1 2016/05/23 10:06:30 youri Exp $
+
+Fix config install.
+
+--- Makefile.in.orig	2016-02-20 23:42:51.000000000 +0000
++++ Makefile.in
+@@ -355,9 +355,11 @@ SUBDIRS = man po
+ bin_SCRIPTS = startlxde lxde-logout openbox-lxde
+ 
+ # Currently these paths are hardcoded.
++exampledir = ${datadir}/examples/lxde
+ xsessiondir = $(xsesspath)
+ xsession_DATA = LXDE.desktop
+ defaultsdir = $(sysconfdir)/xdg/lxsession/LXDE
++defaultsexampledir = $(exampledir)/lxsession/LXDE
+ defaults_DATA = autostart desktop.conf
+ desktopdir = $(datadir)/applications
+ desktop_in_files = lxde-logout.desktop.in lxde-screenlock.desktop.in
+@@ -374,15 +376,19 @@ images_DATA = \
+ 	images/lxde-icon.png
+ 
+ lxpaneldir = $(sysconfdir)/xdg/lxpanel/LXDE
++lxpanelexampledir = $(exampledir)/lxpanel/LXDE
+ lxpanel_DATA = lxpanel/config
+ lxpanel_paneldir = $(sysconfdir)/xdg/lxpanel/LXDE/panels
++lxpanel_panelexampledir = $(exampledir)/lxpanel/LXDE/panels
+ lxpanel_panel_DATA = lxpanel/panel
+ openboxdir = $(sysconfdir)/xdg/openbox/LXDE
++openboxexampledir = $(exampledir)/openbox/LXDE
+ openbox_DATA = \
+ 	openbox/rc.xml \
+ 	openbox/menu.xml
+ 
+ pcmanfmdir = $(sysconfdir)/xdg/pcmanfm/LXDE
++pcmanfmexampledir = $(exampledir)/pcmanfm/LXDE
+ pcmanfm_DATA = \
+ 	pcmanfm/pcmanfm.conf
+ 
+@@ -490,18 +496,18 @@ uninstall-binSCRIPTS:
+ 	dir='$(DESTDIR)$(bindir)'; $(am__uninstall_files_from_dir)
+ install-defaultsDATA: $(defaults_DATA)
+ 	@$(NORMAL_INSTALL)
+-	@list='$(defaults_DATA)'; test -n "$(defaultsdir)" || list=; \
++	@list='$(defaults_DATA)'; test -n "$(defaultsexampledir)" || list=; \
+ 	if test -n "$$list"; then \
+-	  echo " $(MKDIR_P) '$(DESTDIR)$(defaultsdir)'"; \
+-	  $(MKDIR_P) "$(DESTDIR)$(defaultsdir)" || exit 1; \
++	  echo " $(MKDIR_P) '$(DESTDIR)$(defaultsexampledir)'"; \
++	  $(MKDIR_P) "$(DESTDIR)$(defaultsexampledir)" || exit 1; \
+ 	fi; \
+ 	for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  echo "$$d$$p"; \
+ 	done | $(am__base_list) | \
+ 	while read files; do \
+-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(defaultsdir)'"; \
+-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(defaultsdir)" || exit $$?; \
++	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(defaultsexampledir)'"; \
++	  $(INSTALL_DATA) $$files "$(DESTDIR)$(defaultsexampledir)" || exit $$?; \
+ 	done
+ 
+ uninstall-defaultsDATA:
+@@ -553,18 +559,18 @@ uninstall-imagesDATA:
+ 	dir='$(DESTDIR)$(imagesdir)'; $(am__uninstall_files_from_dir)
+ install-lxpanelDATA: $(lxpanel_DATA)
+ 	@$(NORMAL_INSTALL)
+-	@list='$(lxpanel_DATA)'; test -n "$(lxpaneldir)" || list=; \
++	@list='$(lxpanel_DATA)'; test -n "$(lxpanelexampledir)" || list=; \
+ 	if test -n "$$list"; then \
+-	  echo " $(MKDIR_P) '$(DESTDIR)$(lxpaneldir)'"; \
+-	  $(MKDIR_P) "$(DESTDIR)$(lxpaneldir)" || exit 1; \
++	  echo " $(MKDIR_P) '$(DESTDIR)$(lxpanelexampledir)'"; \
++	  $(MKDIR_P) "$(DESTDIR)$(lxpanelexampledir)" || exit 1; \
+ 	fi; \
+ 	for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  echo "$$d$$p"; \
+ 	done | $(am__base_list) | \
+ 	while read files; do \
+-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(lxpaneldir)'"; \
+-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(lxpaneldir)" || exit $$?; \
++	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(lxpanelexampledir)'"; \
++	  $(INSTALL_DATA) $$files "$(DESTDIR)$(lxpanelexampledir)" || exit $$?; \
+ 	done
+ 
+ uninstall-lxpanelDATA:
+@@ -574,18 +580,18 @@ uninstall-lxpanelDATA:
+ 	dir='$(DESTDIR)$(lxpaneldir)'; $(am__uninstall_files_from_dir)
+ install-lxpanel_panelDATA: $(lxpanel_panel_DATA)
+ 	@$(NORMAL_INSTALL)
+-	@list='$(lxpanel_panel_DATA)'; test -n "$(lxpanel_paneldir)" || list=; \
++	@list='$(lxpanel_panel_DATA)'; test -n "$(lxpanel_panelexampledir)" || list=; \
+ 	if test -n "$$list"; then \
+-	  echo " $(MKDIR_P) '$(DESTDIR)$(lxpanel_paneldir)'"; \
+-	  $(MKDIR_P) "$(DESTDIR)$(lxpanel_paneldir)" || exit 1; \
++	  echo " $(MKDIR_P) '$(DESTDIR)$(lxpanel_panelexampledir)'"; \
++	  $(MKDIR_P) "$(DESTDIR)$(lxpanel_panelexampledir)" || exit 1; \
+ 	fi; \
+ 	for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  echo "$$d$$p"; \
+ 	done | $(am__base_list) | \
+ 	while read files; do \
+-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(lxpanel_paneldir)'"; \
+-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(lxpanel_paneldir)" || exit $$?; \
++	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(lxpanel_panelexampledir)'"; \
++	  $(INSTALL_DATA) $$files "$(DESTDIR)$(lxpanel_panelexampledir)" || exit $$?; \
+ 	done
+ 
+ uninstall-lxpanel_panelDATA:
+@@ -595,18 +601,18 @@ uninstall-lxpanel_panelDATA:
+ 	dir='$(DESTDIR)$(lxpanel_paneldir)'; $(am__uninstall_files_from_dir)
+ install-openboxDATA: $(openbox_DATA)
+ 	@$(NORMAL_INSTALL)
+-	@list='$(openbox_DATA)'; test -n "$(openboxdir)" || list=; \
++	@list='$(openbox_DATA)'; test -n "$(openboxexampledir)" || list=; \
+ 	if test -n "$$list"; then \
+-	  echo " $(MKDIR_P) '$(DESTDIR)$(openboxdir)'"; \
+-	  $(MKDIR_P) "$(DESTDIR)$(openboxdir)" || exit 1; \
++	  echo " $(MKDIR_P) '$(DESTDIR)$(openboxexampledir)'"; \
++	  $(MKDIR_P) "$(DESTDIR)$(openboxexampledir)" || exit 1; \
+ 	fi; \
+ 	for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  echo "$$d$$p"; \
+ 	done | $(am__base_list) | \
+ 	while read files; do \
+-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(openboxdir)'"; \
+-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(openboxdir)" || exit $$?; \
++	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(openboxexampledir)'"; \
++	  $(INSTALL_DATA) $$files "$(DESTDIR)$(openboxexampledir)" || exit $$?; \
+ 	done
+ 
+ uninstall-openboxDATA:
+@@ -616,18 +622,18 @@ uninstall-openboxDATA:
+ 	dir='$(DESTDIR)$(openboxdir)'; $(am__uninstall_files_from_dir)
+ install-pcmanfmDATA: $(pcmanfm_DATA)
+ 	@$(NORMAL_INSTALL)
+-	@list='$(pcmanfm_DATA)'; test -n "$(pcmanfmdir)" || list=; \
++	@list='$(pcmanfm_DATA)'; test -n "$(pcmanfmexampledir)" || list=; \
+ 	if test -n "$$list"; then \
+-	  echo " $(MKDIR_P) '$(DESTDIR)$(pcmanfmdir)'"; \
+-	  $(MKDIR_P) "$(DESTDIR)$(pcmanfmdir)" || exit 1; \
++	  echo " $(MKDIR_P) '$(DESTDIR)$(pcmanfmexampledir)'"; \
++	  $(MKDIR_P) "$(DESTDIR)$(pcmanfmexampledir)" || exit 1; \
+ 	fi; \
+ 	for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  echo "$$d$$p"; \
+ 	done | $(am__base_list) | \
+ 	while read files; do \
+-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(pcmanfmdir)'"; \
+-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(pcmanfmdir)" || exit $$?; \
++	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(pcmanfmexampledir)'"; \
++	  $(INSTALL_DATA) $$files "$(DESTDIR)$(pcmanfmexampledir)" || exit $$?; \
+ 	done
+ 
+ uninstall-pcmanfmDATA:
