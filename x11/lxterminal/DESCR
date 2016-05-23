@@ -1,0 +1,2 @@
+LXterminal is a VTE-based terminal emulator with support for multiple
+tabs.  All instances of the terminal share a single process.
