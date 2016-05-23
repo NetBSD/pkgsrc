@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2015/11/03 22:50:36 agc Exp $
+$NetBSD: distinfo,v 1.13.4.1 2016/05/23 04:57:18 bsiegert Exp $
 
 SHA1 (ghc-7.6.3-boot-i386-unknown-freebsd.tar.xz) = aea6224f30aa52d9998f2c77f473902179f03b8c
 RMD160 (ghc-7.6.3-boot-i386-unknown-freebsd.tar.xz) = 39a588cac4a0411db45ef269fbe6a63c6cb428ee
@@ -16,6 +16,7 @@ SHA512 (ghc-7.6.3-src.tar.bz2) = ac86f18b4feeb0bdc9e867261600b210caf62740d73ae65
 Size (ghc-7.6.3-src.tar.bz2) = 110763823 bytes
 SHA1 (patch-Makefile) = a6692a4a90b8003a8719c51d82d15f5af0ba1907
 SHA1 (patch-ghc.mk) = c4210aaa3e2b4a319b0b70da375ac89fddde5cb7
+SHA1 (patch-libffi_ghc.mk) = 68f3c9c25b93fc3debac75ae8e37535f11a44731
 SHA1 (patch-libraries_base_configure.ac) = dd6132c5335d7e0421ec2181ebb5a34bb162e255
 SHA1 (patch-libraries_integer-gmp_configure.ac) = bc5ce3a6c39d681c413eb08b66e7287e39406fe0
 SHA1 (patch-libraries_integer-simple_GHC_Integer.hs) = f079285bc489c194959b9bee2aa5c977ec77ae1e
@@ -28,4 +29,4 @@ SHA1 (patch-libraries_unix_include_execvpe.h) = 4c48b72f74d360e925528ecce95baa8a
 SHA1 (patch-mk_config.mk.in) = 90a156f6c455d4b2c5d10fdf65b3a170dcfc4892
 SHA1 (patch-rts_Linker.c) = 39d1ca7a856a3ec25e493e97832ef255562c0719
 SHA1 (patch-rts_StgCRun.c) = 5d4010dc250af25db0b5b2717c510752f4813e73
-SHA1 (patch-rts_ghc.mk) = 3ef8635ad954df9149aa90046de3a73de186c280
+SHA1 (patch-rts_ghc.mk) = 6a43e6e2a58793ba4ff309012c3e24114ccde1e2
