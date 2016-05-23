@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2126 2016/05/23 13:10:52 bouyer Exp $
+$NetBSD: CHANGES-2016,v 1.2127 2016/05/23 14:15:00 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2731,3 +2731,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added x11/lxinput version 0.3.5 [youri 2016-05-23]
 	Added sysutils/lxtask version 0.1.7 [youri 2016-05-23]
 	Updated geography/opencpn-plugin-draw to 20160415nb2 [bouyer 2016-05-23]
+	Updated devel/p5-Algorithm-CheckDigits to 1.3.2 [mef 2016-05-23]
