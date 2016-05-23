@@ -1,6 +1,7 @@
-$NetBSD: patch-src_video__out_Makefile.am,v 1.2 2016/05/23 16:21:27 wiz Exp $
+$NetBSD: patch-src_video__out_Makefile.am,v 1.3 2016/05/23 16:30:31 wiz Exp $
 
-Libtool is unable to infer ObjC by itself.
+chunk 1: https://bugs.xine-project.org/show_bug.cgi?id=572
+chunk 2: Libtool is unable to infer ObjC by itself.
 
 --- src/video_out/Makefile.am.orig	2014-06-09 16:08:42.000000000 +0000
 +++ src/video_out/Makefile.am
