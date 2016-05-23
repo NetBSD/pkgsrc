@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/05/23 10:50:35 youri Exp $
+
+SHA1 (lxtask-0.1.7.tar.xz) = 05a44a6bdd52674d5a465e50eacf71f217d1e66b
+RMD160 (lxtask-0.1.7.tar.xz) = 020ed18849ca4fb719a2cfa538c5086d74d0c902
+SHA512 (lxtask-0.1.7.tar.xz) = eb5c6af2d0953d09d62b53efda1f88140cc6d5734ef98effd9a72b896e397d0c29ff4263b93c12fd23fcb0ec129b31eb769b0a8c769ae92ed9fc1d2f2689a4ef
+Size (lxtask-0.1.7.tar.xz) = 137152 bytes
