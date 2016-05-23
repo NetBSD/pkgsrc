@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.31 2015/11/04 01:32:40 agc Exp $
+$NetBSD: distinfo,v 1.31.4.1 2016/05/23 05:15:38 bsiegert Exp $
 
 SHA1 (xen-3.3.2.tar.gz) = 7f438e73ac81b25cf5e1570709e87001066bafe4
 RMD160 (xen-3.3.2.tar.gz) = 28faa56286f2a418e35dcba6079570ea871d6c7b
@@ -58,6 +58,7 @@ SHA1 (patch-fd) = 619b865b2f17814e6e62ebab21de9183474dd075
 SHA1 (patch-fe) = 85d42672766fe8ce2dc7f745938722710c6ee5a3
 SHA1 (patch-ff) = 6ff97fa4f34f29c276e4aaab4b4db9ccf7b09957
 SHA1 (patch-fg) = 913295d341c1dd5bf4d1ef78f27520920f138d4c
+SHA1 (patch-fs-back_Makefile) = ef6908d5f9fa33817f1b029a75badb6fe49ad653
 SHA1 (patch-io_ring_h) = 83b01462d5d2b48b4f97b3d9a7980aa3300ad0b3
 SHA1 (patch-ioemu_block-vvfat.c) = 4e6d998fe2c006bb68caaf8e1d11e641319ff5c2
 SHA1 (patch-libfsimage_ufs_ufs.h) = dc59f33cf3abd08a8cdee5977ca4168613327513
