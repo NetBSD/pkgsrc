@@ -1,0 +1,4 @@
+LXTask is a lightweight and desktop-independent task manager derived from
+xfce4-taskmanager with all dependencies on xfce removed, new features, and some
+improvement of the user interface. It displays CPU use percentage, memory usage,
+and information about running processes.
