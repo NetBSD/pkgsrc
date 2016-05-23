@@ -1,4 +1,4 @@
-$NetBSD: patch-rts_ghc.mk,v 1.5 2015/02/06 01:24:48 pho Exp $
+$NetBSD: patch-rts_ghc.mk,v 1.5.10.1 2016/05/23 04:57:18 bsiegert Exp $
 
 This is pkgsrc specific:
 
@@ -22,16 +22,30 @@ unpleasant patch in the future.
 
 --- rts/ghc.mk.orig	2013-04-18 21:22:47.000000000 +0000
 +++ rts/ghc.mk
-@@ -113,7 +113,8 @@ $(rts_ffi_objs_stamp): $(libffi_STATIC_L
+@@ -112,10 +112,11 @@ $(rts_ffi_objs_stamp): $(libffi_STATIC_L
+ 
  # This is a little hacky. We don't know the SO version, so we only
  # depend on libffi.so, but copy libffi.so*
- rts/dist/build/libffi$(soext): libffi/build/inst/lib/libffi$(soext)
+-rts/dist/build/libffi$(soext): libffi/build/inst/lib/libffi$(soext)
 -	cp libffi/build/inst/lib/libffi$(soext)* rts/dist/build
-+	cp libffi/build/inst/lib/libffi*$(soext)* rts/dist/build
-+	cp libffi/build/inst/lib/libffi.*a rts/dist/build
++rts/dist/build/libffi$(soext): libffi/build/inst${ghclibdir}/libffi$(soext)
++	cp libffi/build/inst${ghclibdir}/libffi*$(soext)* rts/dist/build
++	cp libffi/build/inst${ghclibdir}/libffi.*a rts/dist/build
  
- rts/dist/build/$(LIBFFI_DLL): libffi/build/inst/bin/$(LIBFFI_DLL)
+-rts/dist/build/$(LIBFFI_DLL): libffi/build/inst/bin/$(LIBFFI_DLL)
++rts/dist/build/$(LIBFFI_DLL): libffi/build/inst${prefix}/bin/$(LIBFFI_DLL)
  	cp $< $@
+ endif
+ 
+@@ -185,7 +186,7 @@ else
+ $$(rts_$1_LIB) : $$(rts_$1_OBJS) $$(rts_$1_DTRACE_OBJS) rts/libs.depend rts/dist/build/libffi$$(soext)
+ 	"$$(RM)" $$(RM_OPTS) $$@
+ 	"$$(rts_dist_HC)" -package-name rts -shared -dynamic -dynload deploy \
+-	  -no-auto-link-packages -Lrts/dist/build -lffi `cat rts/libs.depend` $$(rts_$1_OBJS) \
++	  -no-auto-link-packages -Lrts/dist/build -optl -Wl,-rpath,${ghclibdir} -lffi `cat rts/libs.depend` $$(rts_$1_OBJS) \
+ 	  $$(rts_$1_DTRACE_OBJS) -o $$@
+ ifeq "$$(darwin_HOST_OS)" "1"
+ 	# Ensure library's install name is correct before anyone links with it.
 @@ -509,7 +510,8 @@ endif
  # installing
  
