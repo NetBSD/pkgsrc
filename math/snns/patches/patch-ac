@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.2 2014/12/10 23:25:15 joerg Exp $
+$NetBSD: patch-ac,v 1.2.12.1 2016/05/23 04:59:24 bsiegert Exp $
 
 --- configuration/Makefile.din.orig	Thu Sep  3 15:44:26 1998
 +++ configuration/Makefile.din
@@ -7,7 +7,7 @@ $NetBSD: patch-ac,v 1.2 2014/12/10 23:25:15 joerg Exp $
  # libraries can not be found in standard places
  X_CFLAGS           = @X_CFLAGS@ # REPORT_IF_BUG
 -X_LIBS             = @X_LIBS@ # REPORT_IF_BUG
-+X_LIBS             = ${COMPILER_RPATH_FLAG}${X11BASE}/lib -L${X11BASE}/lib @X_LIBS@ # REPORT_IF_BUG
++X_LIBS             = ${COMPILER_RPATH_FLAG}${PREFIX}/lib -L${PREFIX}/lib @X_LIBS@
  
  # Any extra libraries needed to be linked after all X libraries
  X_EXTRA_LIBS       = @X_EXTRA_LIBS@ # REPORT_IF_BUG
