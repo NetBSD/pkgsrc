@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2111 2016/05/23 05:26:42 msaitoh Exp $
+$NetBSD: CHANGES-2016,v 1.2112 2016/05/23 07:53:09 youri Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2716,5 +2716,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Added sysutils/libfm-extra version 1.2.4 [youri 2016-05-22]
 	Added sysutils/libfm version 1.2.4 [youri 2016-05-22]
 	Updated sysutils/pcmanfm to 1.2.4 [youri 2016-05-22]
-	Deleted x11/razor-qt [youri 2016-05-23]
+	Removed x11/razor-qt [youri 2016-05-23]
 	Updated sysutils/pciutils to 3.5.1 [msaitoh 2016-05-23]
