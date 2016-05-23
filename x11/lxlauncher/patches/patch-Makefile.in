@@ -1,0 +1,103 @@
+$NetBSD: patch-Makefile.in,v 1.1 2016/05/23 10:38:14 youri Exp $
+
+Fix config file install.
+
+--- Makefile.in.orig	2016-02-20 23:50:42.000000000 +0000
++++ Makefile.in
+@@ -350,20 +350,24 @@ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+ srcdir = @srcdir@
+ sysconfdir = @sysconfdir@
++exampledir = ${datadir}/examples
+ target_alias = @target_alias@
+ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ SUBDIRS = src po
+ confdir = $(sysconfdir)/xdg/lxlauncher
++confexampledir = $(exampledir)/lxlauncher
+ conf_in_files = settings.conf.in
+ conf_DATA = $(conf_in_files:.conf.in=.conf)
+ themedir = $(confdir)
++themeexampledir = $(exampledir)/lxlauncher
+ theme_DATA = \
+ 	gtkrc \
+ 	gtk.css
+ 
+ menufiledir = $(sysconfdir)/xdg/menus
++menufileexampledir = $(exampledir)/menus
+ menufile_DATA = \
+ 	data/lxlauncher-applications.menu
+ 
+@@ -493,18 +497,18 @@ uninstall-man1:
+ 	dir='$(DESTDIR)$(man1dir)'; $(am__uninstall_files_from_dir)
+ install-confDATA: $(conf_DATA)
+ 	@$(NORMAL_INSTALL)
+-	@list='$(conf_DATA)'; test -n "$(confdir)" || list=; \
++	@list='$(conf_DATA)'; test -n "$(confexampledir)" || list=; \
+ 	if test -n "$$list"; then \
+-	  echo " $(MKDIR_P) '$(DESTDIR)$(confdir)'"; \
+-	  $(MKDIR_P) "$(DESTDIR)$(confdir)" || exit 1; \
++	  echo " $(MKDIR_P) '$(DESTDIR)$(confexampledir)'"; \
++	  $(MKDIR_P) "$(DESTDIR)$(confexampledir)" || exit 1; \
+ 	fi; \
+ 	for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  echo "$$d$$p"; \
+ 	done | $(am__base_list) | \
+ 	while read files; do \
+-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(confdir)'"; \
+-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(confdir)" || exit $$?; \
++	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(confexampledir)'"; \
++	  $(INSTALL_DATA) $$files "$(DESTDIR)$(confexampledir)" || exit $$?; \
+ 	done
+ 
+ uninstall-confDATA:
+@@ -535,18 +539,18 @@ uninstall-directoryDATA:
+ 	dir='$(DESTDIR)$(directorydir)'; $(am__uninstall_files_from_dir)
+ install-menufileDATA: $(menufile_DATA)
+ 	@$(NORMAL_INSTALL)
+-	@list='$(menufile_DATA)'; test -n "$(menufiledir)" || list=; \
++	@list='$(menufile_DATA)'; test -n "$(menufileexampledir)" || list=; \
+ 	if test -n "$$list"; then \
+-	  echo " $(MKDIR_P) '$(DESTDIR)$(menufiledir)'"; \
+-	  $(MKDIR_P) "$(DESTDIR)$(menufiledir)" || exit 1; \
++	  echo " $(MKDIR_P) '$(DESTDIR)$(menufileexampledir)'"; \
++	  $(MKDIR_P) "$(DESTDIR)$(menufileexampledir)" || exit 1; \
+ 	fi; \
+ 	for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  echo "$$d$$p"; \
+ 	done | $(am__base_list) | \
+ 	while read files; do \
+-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(menufiledir)'"; \
+-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(menufiledir)" || exit $$?; \
++	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(menufilexampledir)'"; \
++	  $(INSTALL_DATA) $$files "$(DESTDIR)$(menufileexampledir)" || exit $$?; \
+ 	done
+ 
+ uninstall-menufileDATA:
+@@ -556,18 +560,18 @@ uninstall-menufileDATA:
+ 	dir='$(DESTDIR)$(menufiledir)'; $(am__uninstall_files_from_dir)
+ install-themeDATA: $(theme_DATA)
+ 	@$(NORMAL_INSTALL)
+-	@list='$(theme_DATA)'; test -n "$(themedir)" || list=; \
++	@list='$(theme_DATA)'; test -n "$(themeexampledir)" || list=; \
+ 	if test -n "$$list"; then \
+-	  echo " $(MKDIR_P) '$(DESTDIR)$(themedir)'"; \
+-	  $(MKDIR_P) "$(DESTDIR)$(themedir)" || exit 1; \
++	  echo " $(MKDIR_P) '$(DESTDIR)$(themeexampledir)'"; \
++	  $(MKDIR_P) "$(DESTDIR)$(themeexampledir)" || exit 1; \
+ 	fi; \
+ 	for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  echo "$$d$$p"; \
+ 	done | $(am__base_list) | \
+ 	while read files; do \
+-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(themedir)'"; \
+-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(themedir)" || exit $$?; \
++	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(themeexampledir)'"; \
++	  $(INSTALL_DATA) $$files "$(DESTDIR)$(themeexampledir)" || exit $$?; \
+ 	done
+ 
+ uninstall-themeDATA:
