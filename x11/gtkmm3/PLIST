@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2015/07/26 23:53:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2016/05/23 18:02:36 prlw1 Exp $
 include/gdkmm-3.0/gdkmm.h
 include/gdkmm-3.0/gdkmm/applaunchcontext.h
 include/gdkmm-3.0/gdkmm/color.h
@@ -10,6 +10,7 @@ include/gdkmm-3.0/gdkmm/displaymanager.h
 include/gdkmm-3.0/gdkmm/dragcontext.h
 include/gdkmm-3.0/gdkmm/event.h
 include/gdkmm-3.0/gdkmm/general.h
+include/gdkmm-3.0/gdkmm/glcontext.h
 include/gdkmm-3.0/gdkmm/pixbuf.h
 include/gdkmm-3.0/gdkmm/pixbufanimation.h
 include/gdkmm-3.0/gdkmm/pixbufanimationiter.h
@@ -24,6 +25,7 @@ include/gdkmm-3.0/gdkmm/private/display_p.h
 include/gdkmm-3.0/gdkmm/private/displaymanager_p.h
 include/gdkmm-3.0/gdkmm/private/dragcontext_p.h
 include/gdkmm-3.0/gdkmm/private/event_p.h
+include/gdkmm-3.0/gdkmm/private/glcontext_p.h
 include/gdkmm-3.0/gdkmm/private/pixbuf_p.h
 include/gdkmm-3.0/gdkmm/private/pixbufanimation_p.h
 include/gdkmm-3.0/gdkmm/private/pixbufanimationiter_p.h
@@ -32,6 +34,7 @@ include/gdkmm-3.0/gdkmm/private/pixbufloader_p.h
 include/gdkmm-3.0/gdkmm/private/rectangle_p.h
 include/gdkmm-3.0/gdkmm/private/rgba_p.h
 include/gdkmm-3.0/gdkmm/private/screen_p.h
+include/gdkmm-3.0/gdkmm/private/seat_p.h
 include/gdkmm-3.0/gdkmm/private/timecoord_p.h
 include/gdkmm-3.0/gdkmm/private/types_p.h
 include/gdkmm-3.0/gdkmm/private/visual_p.h
@@ -39,6 +42,7 @@ include/gdkmm-3.0/gdkmm/private/window_p.h
 include/gdkmm-3.0/gdkmm/rectangle.h
 include/gdkmm-3.0/gdkmm/rgba.h
 include/gdkmm-3.0/gdkmm/screen.h
+include/gdkmm-3.0/gdkmm/seat.h
 include/gdkmm-3.0/gdkmm/timecoord.h
 include/gdkmm-3.0/gdkmm/types.h
 include/gdkmm-3.0/gdkmm/visual.h
@@ -138,6 +142,7 @@ include/gtkmm-3.0/gtkmm/gesturerotate.h
 include/gtkmm-3.0/gtkmm/gesturesingle.h
 include/gtkmm-3.0/gtkmm/gestureswipe.h
 include/gtkmm-3.0/gtkmm/gesturezoom.h
+include/gtkmm-3.0/gtkmm/glarea.h
 include/gtkmm-3.0/gtkmm/grid.h
 include/gtkmm-3.0/gtkmm/handlebox.h
 include/gtkmm-3.0/gtkmm/headerbar.h
@@ -175,6 +180,7 @@ include/gtkmm-3.0/gtkmm/menushell.h
 include/gtkmm-3.0/gtkmm/menutoolbutton.h
 include/gtkmm-3.0/gtkmm/messagedialog.h
 include/gtkmm-3.0/gtkmm/misc.h
+include/gtkmm-3.0/gtkmm/modelbutton.h
 include/gtkmm-3.0/gtkmm/notebook.h
 include/gtkmm-3.0/gtkmm/numerableicon.h
 include/gtkmm-3.0/gtkmm/object.h
@@ -188,6 +194,7 @@ include/gtkmm-3.0/gtkmm/papersize.h
 include/gtkmm-3.0/gtkmm/placessidebar.h
 ${PLIST.x11}include/gtkmm-3.0/gtkmm/plug.h
 include/gtkmm-3.0/gtkmm/popover.h
+include/gtkmm-3.0/gtkmm/popovermenu.h
 include/gtkmm-3.0/gtkmm/printcontext.h
 include/gtkmm-3.0/gtkmm/printer.h
 include/gtkmm-3.0/gtkmm/printjob.h
@@ -282,6 +289,7 @@ include/gtkmm-3.0/gtkmm/private/gesturerotate_p.h
 include/gtkmm-3.0/gtkmm/private/gesturesingle_p.h
 include/gtkmm-3.0/gtkmm/private/gestureswipe_p.h
 include/gtkmm-3.0/gtkmm/private/gesturezoom_p.h
+include/gtkmm-3.0/gtkmm/private/glarea_p.h
 include/gtkmm-3.0/gtkmm/private/grid_p.h
 include/gtkmm-3.0/gtkmm/private/handlebox_p.h
 include/gtkmm-3.0/gtkmm/private/headerbar_p.h
@@ -318,6 +326,7 @@ include/gtkmm-3.0/gtkmm/private/menushell_p.h
 include/gtkmm-3.0/gtkmm/private/menutoolbutton_p.h
 include/gtkmm-3.0/gtkmm/private/messagedialog_p.h
 include/gtkmm-3.0/gtkmm/private/misc_p.h
+include/gtkmm-3.0/gtkmm/private/modelbutton_p.h
 include/gtkmm-3.0/gtkmm/private/notebook_p.h
 include/gtkmm-3.0/gtkmm/private/numerableicon_p.h
 include/gtkmm-3.0/gtkmm/private/object_p.h
@@ -331,6 +340,7 @@ include/gtkmm-3.0/gtkmm/private/papersize_p.h
 include/gtkmm-3.0/gtkmm/private/placessidebar_p.h
 ${PLIST.x11}include/gtkmm-3.0/gtkmm/private/plug_p.h
 include/gtkmm-3.0/gtkmm/private/popover_p.h
+include/gtkmm-3.0/gtkmm/private/popovermenu_p.h
 include/gtkmm-3.0/gtkmm/private/printcontext_p.h
 include/gtkmm-3.0/gtkmm/private/printer_p.h
 include/gtkmm-3.0/gtkmm/private/printjob_p.h
@@ -366,6 +376,10 @@ include/gtkmm-3.0/gtkmm/private/separator_p.h
 include/gtkmm-3.0/gtkmm/private/separatormenuitem_p.h
 include/gtkmm-3.0/gtkmm/private/separatortoolitem_p.h
 include/gtkmm-3.0/gtkmm/private/settings_p.h
+include/gtkmm-3.0/gtkmm/private/shortcutsgroup_p.h
+include/gtkmm-3.0/gtkmm/private/shortcutssection_p.h
+include/gtkmm-3.0/gtkmm/private/shortcutsshortcut_p.h
+include/gtkmm-3.0/gtkmm/private/shortcutswindow_p.h
 include/gtkmm-3.0/gtkmm/private/sizegroup_p.h
 ${PLIST.x11}include/gtkmm-3.0/gtkmm/private/socket_p.h
 include/gtkmm-3.0/gtkmm/private/spinbutton_p.h
@@ -450,6 +464,10 @@ include/gtkmm-3.0/gtkmm/separator.h
 include/gtkmm-3.0/gtkmm/separatormenuitem.h
 include/gtkmm-3.0/gtkmm/separatortoolitem.h
 include/gtkmm-3.0/gtkmm/settings.h
+include/gtkmm-3.0/gtkmm/shortcutsgroup.h
+include/gtkmm-3.0/gtkmm/shortcutssection.h
+include/gtkmm-3.0/gtkmm/shortcutsshortcut.h
+include/gtkmm-3.0/gtkmm/shortcutswindow.h
 include/gtkmm-3.0/gtkmm/sizegroup.h
 ${PLIST.x11}include/gtkmm-3.0/gtkmm/socket.h
 include/gtkmm-3.0/gtkmm/spinbutton.h
@@ -564,6 +582,12 @@ share/doc/gtkmm-3.0/reference/html/classGdk_1_1DragContext.html
 share/doc/gtkmm-3.0/reference/html/classGdk_1_1DragContext__inherit__graph.png
 share/doc/gtkmm-3.0/reference/html/classGdk_1_1Event-members.html
 share/doc/gtkmm-3.0/reference/html/classGdk_1_1Event.html
+share/doc/gtkmm-3.0/reference/html/classGdk_1_1GLContext-members.html
+share/doc/gtkmm-3.0/reference/html/classGdk_1_1GLContext.html
+share/doc/gtkmm-3.0/reference/html/classGdk_1_1GLContext__inherit__graph.png
+share/doc/gtkmm-3.0/reference/html/classGdk_1_1GLError-members.html
+share/doc/gtkmm-3.0/reference/html/classGdk_1_1GLError.html
+share/doc/gtkmm-3.0/reference/html/classGdk_1_1GLError__inherit__graph.png
 share/doc/gtkmm-3.0/reference/html/classGdk_1_1Pixbuf-members.html
 share/doc/gtkmm-3.0/reference/html/classGdk_1_1Pixbuf.html
 share/doc/gtkmm-3.0/reference/html/classGdk_1_1PixbufAnimation-members.html
@@ -590,6 +614,9 @@ share/doc/gtkmm-3.0/reference/html/classGdk_1_1Rectangle.html
 share/doc/gtkmm-3.0/reference/html/classGdk_1_1Screen-members.html
 share/doc/gtkmm-3.0/reference/html/classGdk_1_1Screen.html
 share/doc/gtkmm-3.0/reference/html/classGdk_1_1Screen__inherit__graph.png
+share/doc/gtkmm-3.0/reference/html/classGdk_1_1Seat-members.html
+share/doc/gtkmm-3.0/reference/html/classGdk_1_1Seat.html
+share/doc/gtkmm-3.0/reference/html/classGdk_1_1Seat__inherit__graph.png
 share/doc/gtkmm-3.0/reference/html/classGdk_1_1TimeCoord-members.html
 share/doc/gtkmm-3.0/reference/html/classGdk_1_1TimeCoord.html
 share/doc/gtkmm-3.0/reference/html/classGdk_1_1Visual-members.html
@@ -864,6 +891,9 @@ share/doc/gtkmm-3.0/reference/html/classGtk_1_1FontSelection__inherit__graph.png
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1Frame-members.html
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1Frame.html
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1Frame__inherit__graph.png
+share/doc/gtkmm-3.0/reference/html/classGtk_1_1GLArea-members.html
+share/doc/gtkmm-3.0/reference/html/classGtk_1_1GLArea.html
+share/doc/gtkmm-3.0/reference/html/classGtk_1_1GLArea__inherit__graph.png
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1Gesture-members.html
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1Gesture.html
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1GestureDrag-members.html
@@ -1007,6 +1037,9 @@ share/doc/gtkmm-3.0/reference/html/classGtk_1_1MessageDialog__inherit__graph.png
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1Misc-members.html
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1Misc.html
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1Misc__inherit__graph.png
+share/doc/gtkmm-3.0/reference/html/classGtk_1_1ModelButton-members.html
+share/doc/gtkmm-3.0/reference/html/classGtk_1_1ModelButton.html
+share/doc/gtkmm-3.0/reference/html/classGtk_1_1ModelButton__inherit__graph.png
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1Notebook-members.html
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1Notebook.html
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1Notebook__inherit__graph.png
@@ -1044,6 +1077,9 @@ share/doc/gtkmm-3.0/reference/html/classGtk_1_1Plug.html
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1Plug__inherit__graph.png
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1Popover-members.html
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1Popover.html
+share/doc/gtkmm-3.0/reference/html/classGtk_1_1PopoverMenu-members.html
+share/doc/gtkmm-3.0/reference/html/classGtk_1_1PopoverMenu.html
+share/doc/gtkmm-3.0/reference/html/classGtk_1_1PopoverMenu__inherit__graph.png
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1Popover__inherit__graph.png
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1PrintContext-members.html
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1PrintContext.html
@@ -1164,6 +1200,18 @@ share/doc/gtkmm-3.0/reference/html/classGtk_1_1Separator__inherit__graph.png
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1Settings-members.html
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1Settings.html
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1Settings__inherit__graph.png
+share/doc/gtkmm-3.0/reference/html/classGtk_1_1ShortcutsGroup-members.html
+share/doc/gtkmm-3.0/reference/html/classGtk_1_1ShortcutsGroup.html
+share/doc/gtkmm-3.0/reference/html/classGtk_1_1ShortcutsGroup__inherit__graph.png
+share/doc/gtkmm-3.0/reference/html/classGtk_1_1ShortcutsSection-members.html
+share/doc/gtkmm-3.0/reference/html/classGtk_1_1ShortcutsSection.html
+share/doc/gtkmm-3.0/reference/html/classGtk_1_1ShortcutsSection__inherit__graph.png
+share/doc/gtkmm-3.0/reference/html/classGtk_1_1ShortcutsShortcut-members.html
+share/doc/gtkmm-3.0/reference/html/classGtk_1_1ShortcutsShortcut.html
+share/doc/gtkmm-3.0/reference/html/classGtk_1_1ShortcutsShortcut__inherit__graph.png
+share/doc/gtkmm-3.0/reference/html/classGtk_1_1ShortcutsWindow-members.html
+share/doc/gtkmm-3.0/reference/html/classGtk_1_1ShortcutsWindow.html
+share/doc/gtkmm-3.0/reference/html/classGtk_1_1ShortcutsWindow__inherit__graph.png
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1SignalProxyChildProperty-members.html
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1SignalProxyChildProperty.html
 share/doc/gtkmm-3.0/reference/html/classGtk_1_1SignalProxyChildProperty__inherit__graph.png
@@ -1727,7 +1775,10 @@ share/doc/gtkmm-3.0/reference/html/since_3_10.html
 share/doc/gtkmm-3.0/reference/html/since_3_12.html
 share/doc/gtkmm-3.0/reference/html/since_3_14.html
 share/doc/gtkmm-3.0/reference/html/since_3_16.html
+share/doc/gtkmm-3.0/reference/html/since_3_18.html
 share/doc/gtkmm-3.0/reference/html/since_3_2.html
+share/doc/gtkmm-3.0/reference/html/since_3_20.html
+share/doc/gtkmm-3.0/reference/html/since_3_22.html
 share/doc/gtkmm-3.0/reference/html/since_3_4.html
 share/doc/gtkmm-3.0/reference/html/since_3_6.html
 share/doc/gtkmm-3.0/reference/html/since_3_8.html

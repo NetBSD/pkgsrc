@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2015/10/20 09:40:21 tnn Exp $
+# $NetBSD: Makefile,v 1.16 2016/05/23 18:02:36 prlw1 Exp $
 
-DISTNAME=	gtkmm-3.16.0
+DISTNAME=	gtkmm-3.20.1
 PKGNAME=	${DISTNAME:S/gtkmm/gtkmm3/1}
-CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtkmm/3.16/}
+CATEGORIES=	x11 gnome
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtkmm/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -25,17 +25,19 @@ PLIST_VARS+=	x11
 PLIST.x11=	yes
 .endif
 
+BUILDLINK_ABI_DEPENDS.atkmm+=	atkmm>=2.24.2
 .include "../../devel/atkmm/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-BUILDLINK_ABI_DEPENDS.glibmm+=	glibmm>=2.44.0
+BUILDLINK_ABI_DEPENDS.glibmm+=	glibmm>=2.48.0
 .include "../../devel/glibmm/buildlink3.mk"
 .include "../../devel/libsigc++/buildlink3.mk"
-.include "../../devel/mm-common/buildlink3.mk"
+BUILDLINK_ABI_DEPENDS.pangomm+=	pangomm>=2.38.2
 .include "../../devel/pangomm/buildlink3.mk"
+BUILDLINK_ABI_DEPENDS.cairomm+=	cairomm>=1.12.0
 .include "../../graphics/cairomm/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
-BUILDLINK_ABI_DEPENDS.gtk3+=	gtk3+>=3.16.0
+BUILDLINK_ABI_DEPENDS.gtk3+=	gtk3+>=3.20.0
 .include "../../x11/gtk3/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
