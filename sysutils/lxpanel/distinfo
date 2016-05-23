@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2016/05/23 09:45:18 youri Exp $
+
+SHA1 (lxpanel-0.8.2.tar.xz) = a736b38bb74ed93e151ef5446003c9bcae240717
+RMD160 (lxpanel-0.8.2.tar.xz) = 34e81f35ab0a71177d99d4497f79239e180daddd
+SHA512 (lxpanel-0.8.2.tar.xz) = abab9175c4a4e591a33c39fbc41754e458eea60c79f5a40d56848338b910a867bafed09b4d1f2596a588beb79bfb5efe54c798ff5f7b0ee74f6245a1b0417918
+Size (lxpanel-0.8.2.tar.xz) = 1488548 bytes
+SHA1 (patch-data_Makefile.in) = 9551cbe8f1f5a71d537bbd7e07dfcc688399a85a
