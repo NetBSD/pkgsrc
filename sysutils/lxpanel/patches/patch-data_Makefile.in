@@ -1,0 +1,134 @@
+$NetBSD: patch-data_Makefile.in,v 1.1 2016/05/23 09:45:18 youri Exp $
+
+Fix config install.
+
+--- data/Makefile.in.orig	2016-02-20 22:29:21.000000000 +0000
++++ data/Makefile.in
+@@ -309,6 +309,7 @@ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+ srcdir = @srcdir@
+ sysconfdir = @sysconfdir@
++examplesdir = ${datadir}/examples/lxpanel
+ target_alias = @target_alias@
+ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+@@ -317,19 +318,23 @@ default_config_DATA = \
+ 	default/config
+ 
+ default_configdir = $(sysconfdir)/xdg/lxpanel/default
++default_configexampledir = $(examplesdir)/default
+ default_config_panel_DATA = \
+ 	default/panels/panel
+ 
+ default_config_paneldir = $(sysconfdir)/xdg/lxpanel/default/panels
++default_config_panelexampledir = $(examplesdir)/default/panels
+ two_panels_config_DATA = \
+ 	two_panels/config
+ 
+ two_panels_configdir = $(sysconfdir)/xdg/lxpanel/two_panels
++two_panels_configexampledir = $(examplesdir)/two_panels
+ two_panels_config_panel_DATA = \
+ 	two_panels/panels/bottom \
+ 	two_panels/panels/top
+ 
+ two_panels_config_paneldir = $(sysconfdir)/xdg/lxpanel/two_panels/panels
++two_panels_config_panelexampledir = $(examplesdir)/two_panels/panels
+ uidir = $(datadir)/lxpanel/ui
+ ui_in_files = \
+ 	ui/panel-pref.glade \
+@@ -431,18 +436,18 @@ clean-libtool:
+ 	-rm -rf .libs _libs
+ install-default_configDATA: $(default_config_DATA)
+ 	@$(NORMAL_INSTALL)
+-	@list='$(default_config_DATA)'; test -n "$(default_configdir)" || list=; \
++	@list='$(default_config_DATA)'; test -n "$(default_configexampledir)" || list=; \
+ 	if test -n "$$list"; then \
+-	  echo " $(MKDIR_P) '$(DESTDIR)$(default_configdir)'"; \
+-	  $(MKDIR_P) "$(DESTDIR)$(default_configdir)" || exit 1; \
++	  echo " $(MKDIR_P) '$(DESTDIR)$(default_configexampledir)'"; \
++	  $(MKDIR_P) "$(DESTDIR)$(default_configexampledir)" || exit 1; \
+ 	fi; \
+ 	for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  echo "$$d$$p"; \
+ 	done | $(am__base_list) | \
+ 	while read files; do \
+-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(default_configdir)'"; \
+-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(default_configdir)" || exit $$?; \
++	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(default_configexampledir)'"; \
++	  $(INSTALL_DATA) $$files "$(DESTDIR)$(default_configexampledir)" || exit $$?; \
+ 	done
+ 
+ uninstall-default_configDATA:
+@@ -452,18 +457,18 @@ uninstall-default_configDATA:
+ 	dir='$(DESTDIR)$(default_configdir)'; $(am__uninstall_files_from_dir)
+ install-default_config_panelDATA: $(default_config_panel_DATA)
+ 	@$(NORMAL_INSTALL)
+-	@list='$(default_config_panel_DATA)'; test -n "$(default_config_paneldir)" || list=; \
++	@list='$(default_config_panel_DATA)'; test -n "$(default_config_panelexampledir)" || list=; \
+ 	if test -n "$$list"; then \
+-	  echo " $(MKDIR_P) '$(DESTDIR)$(default_config_paneldir)'"; \
+-	  $(MKDIR_P) "$(DESTDIR)$(default_config_paneldir)" || exit 1; \
++	  echo " $(MKDIR_P) '$(DESTDIR)$(default_config_panelexampledir)'"; \
++	  $(MKDIR_P) "$(DESTDIR)$(default_config_panelexampledir)" || exit 1; \
+ 	fi; \
+ 	for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  echo "$$d$$p"; \
+ 	done | $(am__base_list) | \
+ 	while read files; do \
+-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(default_config_paneldir)'"; \
+-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(default_config_paneldir)" || exit $$?; \
++	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(default_config_panelexampledir)'"; \
++	  $(INSTALL_DATA) $$files "$(DESTDIR)$(default_config_panelexampledir)" || exit $$?; \
+ 	done
+ 
+ uninstall-default_config_panelDATA:
+@@ -494,18 +499,18 @@ uninstall-lxpanel_imagesDATA:
+ 	dir='$(DESTDIR)$(lxpanel_imagesdir)'; $(am__uninstall_files_from_dir)
+ install-two_panels_configDATA: $(two_panels_config_DATA)
+ 	@$(NORMAL_INSTALL)
+-	@list='$(two_panels_config_DATA)'; test -n "$(two_panels_configdir)" || list=; \
++	@list='$(two_panels_config_DATA)'; test -n "$(two_panels_configexampledir)" || list=; \
+ 	if test -n "$$list"; then \
+-	  echo " $(MKDIR_P) '$(DESTDIR)$(two_panels_configdir)'"; \
+-	  $(MKDIR_P) "$(DESTDIR)$(two_panels_configdir)" || exit 1; \
++	  echo " $(MKDIR_P) '$(DESTDIR)$(two_panels_configexampledir)'"; \
++	  $(MKDIR_P) "$(DESTDIR)$(two_panels_configexampledir)" || exit 1; \
+ 	fi; \
+ 	for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  echo "$$d$$p"; \
+ 	done | $(am__base_list) | \
+ 	while read files; do \
+-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(two_panels_configdir)'"; \
+-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(two_panels_configdir)" || exit $$?; \
++	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(two_panels_configexampledir)'"; \
++	  $(INSTALL_DATA) $$files "$(DESTDIR)$(two_panels_configexampledir)" || exit $$?; \
+ 	done
+ 
+ uninstall-two_panels_configDATA:
+@@ -515,18 +520,18 @@ uninstall-two_panels_configDATA:
+ 	dir='$(DESTDIR)$(two_panels_configdir)'; $(am__uninstall_files_from_dir)
+ install-two_panels_config_panelDATA: $(two_panels_config_panel_DATA)
+ 	@$(NORMAL_INSTALL)
+-	@list='$(two_panels_config_panel_DATA)'; test -n "$(two_panels_config_paneldir)" || list=; \
++	@list='$(two_panels_config_panel_DATA)'; test -n "$(two_panels_config_panelexampledir)" || list=; \
+ 	if test -n "$$list"; then \
+-	  echo " $(MKDIR_P) '$(DESTDIR)$(two_panels_config_paneldir)'"; \
+-	  $(MKDIR_P) "$(DESTDIR)$(two_panels_config_paneldir)" || exit 1; \
++	  echo " $(MKDIR_P) '$(DESTDIR)$(two_panels_config_panelexampledir)'"; \
++	  $(MKDIR_P) "$(DESTDIR)$(two_panels_config_panelexampledir)" || exit 1; \
+ 	fi; \
+ 	for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  echo "$$d$$p"; \
+ 	done | $(am__base_list) | \
+ 	while read files; do \
+-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(two_panels_config_paneldir)'"; \
+-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(two_panels_config_paneldir)" || exit $$?; \
++	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(two_panels_config_panelexampledir)'"; \
++	  $(INSTALL_DATA) $$files "$(DESTDIR)$(two_panels_config_panelexampledir)" || exit $$?; \
+ 	done
+ 
+ uninstall-two_panels_config_panelDATA:
