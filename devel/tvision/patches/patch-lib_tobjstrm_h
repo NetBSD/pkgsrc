@@ -1,10 +1,18 @@
-$NetBSD: patch-lib_tobjstrm_h,v 1.1 2012/06/28 03:16:07 dholland Exp $
+$NetBSD: patch-lib_tobjstrm_h,v 1.1.32.1 2016/05/23 05:14:35 bsiegert Exp $
 
 - Use intptr_t to deal with pointer-sized values.
 
---- lib/tobjstrm.h~	2012-06-28 02:28:23.000000000 +0000
+--- lib/tobjstrm.h.orig	2016-05-18 10:49:59.000000000 +0000
 +++ lib/tobjstrm.h
-@@ -139,7 +139,7 @@ const P_id_type P_id_notFound = UINT_MAX
+@@ -14,6 +14,7 @@
+ #include <iostream>
+ #include <fstream>
+ 
++#include <inttypes.h>
+ #include <limits.h>
+ 
+ /**
+@@ -139,7 +140,7 @@ const P_id_type P_id_notFound = UINT_MAX
   */
  typedef TStreamable *(*BUILDER)();
  
@@ -13,7 +21,7 @@ $NetBSD: patch-lib_tobjstrm_h,v 1.1 2012/06/28 03:16:07 dholland Exp $
  
  /**
   * TStreamableClass is used by @ref TStreamableTypes and @ref pstream in the
-@@ -179,11 +179,11 @@ public:
+@@ -179,11 +180,11 @@ public:
       * typedef TStreamable *(*BUILDER)();
       * </pre>
       */

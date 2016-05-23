@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2015/11/03 03:29:37 agc Exp $
+$NetBSD: distinfo,v 1.8.4.1 2016/05/23 05:14:35 bsiegert Exp $
 
 SHA1 (tvision-0.8.tar.gz) = c3a9948052289f77534de7a05a5d90d3ce770fff
 RMD160 (tvision-0.8.tar.gz) = d6bc5b690d95eb50dea167d30de66daeb267baf3
@@ -14,9 +14,9 @@ SHA1 (patch-ac) = 9dc8d56ae0784b1a2faac07844f80a457e040ddc
 SHA1 (patch-ad) = 70136b49b41c34e21c3e58464d200f294071b658
 SHA1 (patch-ae) = b8fd0d96db80a20e78adaeb3e01368810bafbfd8
 SHA1 (patch-lib_TChDirDialog_cc) = 1893e7239e87053febfe4cd4258e8f64e4d0ec47
-SHA1 (patch-lib_TWindow_cc) = 6bae6b81c22f9c4d434248a1a03d8ba2d5e4d71c
-SHA1 (patch-lib_colorsel_cc) = 8f6c6544cb53c0cfe6dce4d9e7a7d5a66e7bd232
+SHA1 (patch-lib_TWindow_cc) = f42f1611d1298b211721b7c4a90a0f64d016ecbe
+SHA1 (patch-lib_colorsel_cc) = 01bb47c10e30f57d4c09b901252918d9f3dcd24c
 SHA1 (patch-lib_tobjstrm_cc) = 382daeab1143331cfde394d5f72f0039b2edeb24
-SHA1 (patch-lib_tobjstrm_h) = 9deca03c757f7609516f28035269481cc5bd5677
+SHA1 (patch-lib_tobjstrm_h) = 1547d431cd4d2c1b01d5242ce85cc48db57e5d67
 SHA1 (patch-tutorial_load_cc) = 60d761454182142cbf299e9511119d0c03fa627d
 SHA1 (patch-tutorial_nomenus_cc) = 7a608c925a5ff45f9693c63ea3bf6ceef1978029
