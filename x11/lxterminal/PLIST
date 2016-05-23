@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2016/05/23 10:23:35 youri Exp $
+bin/lxterminal
+man/man1/lxterminal.1
+share/applications/lxterminal.desktop
+share/icons/hicolor/128x128/apps/lxterminal.png
+share/lxterminal/lxterminal-preferences.ui
+share/lxterminal/lxterminal.conf
+share/lxterminal/menu.ui
