@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2016/03/05 11:29:31 jperkin Exp $
+# $NetBSD: Makefile,v 1.54.2.1 2016/05/23 05:09:17 bsiegert Exp $
 
 DISTNAME=	open-vm-tools-2008.08.08-109361
 PKGNAME=	open-vm-tools-2008.08.08.109361
@@ -39,6 +39,9 @@ pre-configure:
 .if !empty(PKGSRC_COMPILER:Mclang)
 _WRAP_EXTRA_ARGS.CC+=	-Wno-error=unused-local-typedef
 CWRAPPERS_APPEND.cc+=	-Wno-error=unused-local-typedef
+.elif !empty(PKGSRC_COMPILER:Mgcc)
+_WRAP_EXTRA_ARGS.CC+=	-Wno-error=unused-local-typedefs -Wno-error=unused-but-set-variable
+CWRAPPERS_APPEND.cc+=	-Wno-error=unused-local-typedefs -Wno-error=unused-but-set-variable
 .endif
 
 .include "../../net/libdnet/buildlink3.mk"
