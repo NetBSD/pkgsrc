@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.788 2016/05/23 10:15:19 youri Exp $
+# $NetBSD: Makefile,v 1.789 2016/05/23 10:24:14 youri Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -336,6 +336,7 @@ SUBDIR+=	lxappearance
 SUBDIR+=	lxde-common
 SUBDIR+=	lxrandr
 SUBDIR+=	lxsession
+SUBDIR+=	lxterminal
 SUBDIR+=	matchbox-common
 SUBDIR+=	matchbox-desktop
 SUBDIR+=	matchbox-nest
