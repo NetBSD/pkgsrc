@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.88 2016/05/21 21:42:10 youri Exp $
+# $NetBSD: Makefile,v 1.89 2016/05/23 22:48:52 youri Exp $
 #
 
 COMMENT=	Collections of other packages
@@ -25,6 +25,7 @@ SUBDIR+=	kde-telepathy
 SUBDIR+=	kde3
 SUBDIR+=	kde4
 SUBDIR+=	libdbusmenu
+SUBDIR+=	lxde
 SUBDIR+=	matchbox
 SUBDIR+=	mate
 SUBDIR+=	modular-xorg
