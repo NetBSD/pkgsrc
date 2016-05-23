@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/02/25 00:51:23 cube Exp $
+$NetBSD: patch-aa,v 1.1.1.1.102.1 2016/05/23 05:01:05 bsiegert Exp $
 
 --- Makefile.orig	2002-09-26 15:56:06.000000000 +0200
 +++ Makefile
@@ -13,7 +13,8 @@ $NetBSD: patch-aa,v 1.1.1.1 2004/02/25 00:51:23 cube Exp $
 -LIBS = $(GTK_LIB) $(IMLIB_LIB)
 +LIBS = $(GTK_LIB)
  
- LFLAGS = -shared -W1 
+-LFLAGS = -shared -W1 
++LFLAGS = -shared
  
 -CC = gcc $(CFLAGS) $(FLAGS)
 +#CC = gcc $(CFLAGS) $(FLAGS)
