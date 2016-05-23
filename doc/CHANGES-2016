@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2119 2016/05/23 10:19:15 youri Exp $
+$NetBSD: CHANGES-2016,v 1.2120 2016/05/23 10:19:34 youri Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2724,3 +2724,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added x11/lxappearance version 0.6.2 [youri 2016-05-23]
 	Added x11/lxrandr version 0.3.1 [youri 2016-05-23]
 	Added sysutils/lxmenu-data version 0.1.5 [youri 2016-05-23]
+	Added sysutils/lxpanel version 0.8.2 [youri 2016-05-23]
