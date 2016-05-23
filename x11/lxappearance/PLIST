@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2016/05/23 08:08:09 youri Exp $
+bin/lxappearance
+include/lxappearance/lxappearance.h
+lib/pkgconfig/lxappearance.pc
+man/man1/lxappearance.1
+share/applications/lxappearance.desktop
+share/lxappearance/ui/about.ui
+share/lxappearance/ui/lxappearance.ui
