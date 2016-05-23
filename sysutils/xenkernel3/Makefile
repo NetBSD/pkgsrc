@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2015/12/05 21:26:00 adam Exp $
+# $NetBSD: Makefile,v 1.30.4.1 2016/05/23 05:16:43 bsiegert Exp $
 
 VERSION=	3.1.4
 DISTNAME=	xen-${VERSION}
@@ -65,6 +65,8 @@ EXTRA_CFLAGS+=	-Wno-error=ignored-attributes -Wno-error=format \
 		-Wno-error=sometimes-uninitialized -no-integrated-as \
 		-ffreestanding -Wno-error=unused-function
 BUILDLINK_TRANSFORM+=	rm:-fno-reorder-blocks
+.elif !empty(PKGSRC_COMPILER:Mgcc)
+EXTRA_CFLAGS+=	-Wno-error=unused-but-set-variable
 .endif
 
 do-build:
