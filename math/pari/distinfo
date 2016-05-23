@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.24 2016/03/03 13:28:22 wiz Exp $
+$NetBSD: distinfo,v 1.24.2.1 2016/05/23 04:58:36 bsiegert Exp $
 
 SHA1 (pari-2.7.5.tar.gz) = ca6f6bc57d2028df5a5bddd3810a82cb05d139f2
 RMD160 (pari-2.7.5.tar.gz) = b5cc28e5382cc31d7da7dcb9258a7099d31872ce
@@ -6,7 +6,7 @@ SHA512 (pari-2.7.5.tar.gz) = 1dcc60d3b9ab6b46fd8e5d0e28e5e37369da0eb872869788b6a
 Size (pari-2.7.5.tar.gz) = 3159103 bytes
 SHA1 (patch-Configure) = b8f86c8111709e09616383dedeb9dda8fd098157
 SHA1 (patch-config_DOC__Make.SH) = 088e1b0ff98a42ed50ef90fae87e3a7989239dea
-SHA1 (patch-config_Makefile.SH) = d1754104438aa0a4d6f86c809d81300ecb3aa3f2
+SHA1 (patch-config_Makefile.SH) = 1b653ec4b506637e5e63b63ec58035912749bef4
 SHA1 (patch-config_TOP__Make.SH) = 82e39e82660fbe94b304e4691f0598b8f28a856a
 SHA1 (patch-config_get__PATH) = 3b7bae3610a3c7a51afd27f2610aa71169a2bc44
 SHA1 (patch-config_get__X11) = 0bb8f77d5c5adfb29f89ad95ead1b5726c1a3918
