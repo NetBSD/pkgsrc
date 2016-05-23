@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/09/10 14:43:23 joerg Exp $
+# $NetBSD: Makefile,v 1.5.22.1 2016/05/23 05:08:28 bsiegert Exp $
 #
 
 DISTNAME=	fscd-1.1
@@ -21,6 +21,8 @@ INSTALLATION_DIRS=	bin sbin ${PKGMANDIR}/man5 ${PKGMANDIR}/man8
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
 BUILDLINK_TRANSFORM+=	rm:-Wno-traditional
+.elif !empty(PKGSRC_COMPILER:Mgcc)
+CFLAGS+=	-Wno-error=unused-but-set-variable
 .endif
 
 do-install:
