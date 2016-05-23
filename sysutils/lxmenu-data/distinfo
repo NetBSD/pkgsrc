@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2016/05/23 09:44:33 youri Exp $
+
+SHA1 (lxmenu-data-0.1.5.tar.xz) = 5c3cba7d2061a490ad62c1e9c3f6120343df7712
+RMD160 (lxmenu-data-0.1.5.tar.xz) = 3da3c8f815f7eaf694291ffb6d7c47b7f7fb4d6e
+SHA512 (lxmenu-data-0.1.5.tar.xz) = ea1a1ad511d9e56c7692a8d96feb52c53aa7bd7595f2312d4f41fc15a12a056551c70d6a2c55a30f849e2ac2fd1a06436751573472ae70e0158e069736578b40
+Size (lxmenu-data-0.1.5.tar.xz) = 199192 bytes
+SHA1 (patch-layout_Makefile.in) = e9a12569ca6bbee269d6ae7a7a4cf5072a0d4286
