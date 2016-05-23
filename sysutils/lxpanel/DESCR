@@ -1,0 +1,4 @@
+LXPanel is a lightweight X11 desktop panel.  It offers a taskbar,
+desktop pager, menus, launcher, notifications area, system tray,
+and more.  This package also provides lxpanelctl, the controller
+of lxpanel.
