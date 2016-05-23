@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2116 2016/05/23 10:17:27 youri Exp $
+$NetBSD: CHANGES-2016,v 1.2117 2016/05/23 10:18:15 youri Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2721,4 +2721,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated geography/opencpn-plugin-draw to 20160415nb1 [bouyer 2016-05-23]
 	Updated x11/lxsession to 0.5.2 [youri 2016-05-23]
 	Added x11/lxde-common version 0.99.1 [youri 2016-05-23]
-	Updated x11/lxsession to 0.5.2 [youri 2016-05-23]
+	Added x11/lxappearance version 0.6.2 [youri 2016-05-23]
