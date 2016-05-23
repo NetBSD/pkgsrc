@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15927 2016/05/22 22:51:59 youri Exp $
+$NetBSD: TODO,v 1.15928 2016/05/23 07:30:49 wiz Exp $
 
 Suggested new packages
 ======================
@@ -436,7 +436,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o audacity-2.1.1
 	o augeas-1.4.0
 	o autoconvert-0.3.16
-	o autogen-5.18.7
+	o autogen-5.18.9
 	o avant-window-navigator-0.4.2
 	o avidemux-2.6.12
 	o avl-2.0.3 [2.x is not source and binary compatible with 1.x]
@@ -751,6 +751,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o glom-1.14.2 [GNOME 2.26]
 	o gloox-1.0.14
 	o glx-utils-8.3.0
+	o gmake-4.2
 	o gmock-1.7.0
 	o gnet1-1.1.9
 	o gnetman-20050429
@@ -1183,6 +1184,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o nqp-2016.02
 	o ns-3.14.1
 	o ns-plugger-common-5.1.3
+	o nss-3.24
 	o ntop-5.0
 	o ntp4-4.2.8p6
 	o nts-82
