@@ -1,11 +1,13 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 00:47:45 agc Exp $
+$NetBSD: distinfo,v 1.6.4.1 2016/05/23 05:13:13 bsiegert Exp $
 
 SHA1 (uisp-20040311.tar.bz2) = 8e4c1e05d2f9a962b8969fc76d8b448c9e0751d4
 RMD160 (uisp-20040311.tar.bz2) = 4f45d375e942376a2508232cf787f94ab7f8995b
 SHA512 (uisp-20040311.tar.bz2) = 53af07f6555f0df62cb56571b0e87dba3bf88084d079ada9a4d37fed99cf460dd108bdc79e18940cc2752df7b0db0532630494a35cf12ebc8c8e7191e3452b65
 Size (uisp-20040311.tar.bz2) = 142973 bytes
 SHA1 (patch-aa) = 60d42fc897b8c77c8396823fd9b26b95adb68a77
+SHA1 (patch-src_AvrAtmel.C) = 39ce04beeb854fafc5180fd47ff1b1d379da381e
+SHA1 (patch-src_AvrDummy.C) = 340137064aa8482799b00cefaaa58dd2bdb70563
 SHA1 (patch-src_MotIntl.C) = 456a47463f81da901c78822dc26e9e7683ac5b61
-SHA1 (patch-src_Stk500.C) = a2881e5e0591dc2efb58fa9bd6b84b8327f54b0e
+SHA1 (patch-src_Stk500.C) = 1444daeb1970b8e346ecad549071de478e1e1d6d
 SHA1 (patch-src_avr_h) = f5ac07e1a8e3865e7c6bd3af86a1777bb068b5fd
 SHA1 (patch-src_dapa_c) = bc3fd2ecde373af2a2a3864f07efedd1177ecca0
