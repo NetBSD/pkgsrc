@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.17 2016/02/26 10:57:46 jperkin Exp $
+# $NetBSD: options.mk,v 1.18 2016/05/23 21:08:28 markd Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.squid
 PKG_SUPPORTED_OPTIONS=	inet6 snmp ssl squid-backend-aufs squid-backend-diskd \
@@ -69,6 +69,9 @@ SQUID_EXTERNAL_ACL_HELPERS?=	file_userip unix_group
 CONFIGURE_ARGS+=	--enable-linux-netfilter
 .elif !empty(PKG_OPTIONS:Msquid-pf)
 CONFIGURE_ARGS+=	--enable-pf-transparent
+.if ${OPSYS} == "NetBSD"
+CONFIGURE_ARGS+=	--with-nat-devpf
+.endif
 .elif !empty(PKG_OPTIONS:Msquid-ipf)
 CONFIGURE_ARGS+=	--enable-ipf-transparent
 .elif !empty(PKG_OPTIONS:Msquid-ipfw)
