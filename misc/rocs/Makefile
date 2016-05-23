@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2016/03/05 11:28:58 jperkin Exp $
+# $NetBSD: Makefile,v 1.39.2.1 2016/05/23 05:03:37 bsiegert Exp $
 
 DISTNAME=	rocs-${_KDE_VERSION}
 PKGREVISION=	5
@@ -8,6 +8,11 @@ COMMENT=	KDE graph theory IDE
 .include "../../meta-pkgs/kde4/Makefile.kde4"
 
 CMAKE_ARGS+=	-DKDE4_BUILD_TESTS:BOOL=OFF
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang) || !empty(PKGSRC_COMPILER:Mgcc)
+CXXFLAGS+=	-std=c++11
+.endif
 
 .include "../../meta-pkgs/kde4/kde4.mk"
 
