@@ -1,8 +1,8 @@
-$NetBSD: patch-src_common_OW__CommonFwd.hpp,v 1.1 2013/05/23 14:58:09 joerg Exp $
+$NetBSD: patch-src_common_OW__CommonFwd.hpp,v 1.1.24.1 2016/05/23 05:06:09 bsiegert Exp $
 
---- src/common/OW_CommonFwd.hpp.orig	2013-05-23 13:15:41.000000000 +0000
+--- src/common/OW_CommonFwd.hpp.orig	2005-11-04 22:34:12.000000000 +0000
 +++ src/common/OW_CommonFwd.hpp
-@@ -38,19 +38,7 @@
+@@ -38,19 +38,8 @@
  #include "OW_ArrayFwd.hpp"
  #include "OW_IntrusiveReference.hpp"
  
@@ -20,6 +20,7 @@ $NetBSD: patch-src_common_OW__CommonFwd.hpp,v 1.1 2013/05/23 14:58:09 joerg Exp 
 -}
 -#endif
 +#include <algorithm>
++#include <functional>
  
  namespace OW_NAMESPACE
  {

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2015/11/04 00:35:18 agc Exp $
+$NetBSD: distinfo,v 1.7.4.1 2016/05/23 05:06:09 bsiegert Exp $
 
 SHA1 (openwbem-3.2.2.tar.gz) = 3272e5cbcfb2a864cccf71e15e0da0f6623420bb
 RMD160 (openwbem-3.2.2.tar.gz) = 31ce8c80d47ff7539315e3978b8c1c493bd17f35
@@ -14,7 +14,7 @@ SHA1 (patch-src_cim_OW__CIMDateTime.cpp) = 186db29470cbe526c4e18aca13604ab578b3b
 SHA1 (patch-src_cimom_server_OW__Platform.cpp) = f7a2f848f565c0c33810bc90ff1455598c024769
 SHA1 (patch-src_cimom_server_OW__PlatformSignal.cpp) = f6d2427d1a2f0bce8cbbc558583bd7d429cfc515
 SHA1 (patch-src_common_OW__COWReference.hpp) = f67f64de56a8745d24a0d738b9c546f5edf249d8
-SHA1 (patch-src_common_OW__CommonFwd.hpp) = 1f1a721f7da14eb0d4ac08f56f1b8086e9d5795a
+SHA1 (patch-src_common_OW__CommonFwd.hpp) = 11caf3255cb37709026ad6076e4762e19c422737
 SHA1 (patch-src_common_OW__HashMap.hpp) = 37475181bf6e979bde55ef717f14ce62ab730aed
 SHA1 (patch-src_common_OW__HashMultiMap.hpp) = 3d94543356bf0837996a9faf4075ccc6965bd462
 SHA1 (patch-src_common_OW__List.hpp) = e106aca83db05b484ad573cb8da889453321836f
