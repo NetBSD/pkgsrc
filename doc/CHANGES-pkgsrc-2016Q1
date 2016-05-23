@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q1,v 1.1.2.16 2016/05/21 19:56:22 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q1,v 1.1.2.17 2016/05/23 05:17:46 bsiegert Exp $
 
 Changes to the packages collection and infrastructure on the pkgsrc-2016Q1 branch:
 
@@ -133,4 +133,76 @@ textproc/expat: security fix
 
 Pullup ticket #5027 - requested by wen
 www/mediawiki: security fix
+
+Pullup ticket #4990 - requested by joerg
+graphics/ruby-gd: build fix
+
+Pullup ticket #4991 - requested by joerg
+lang/ghc7: build fix
+
+Pullup ticket #4992 - requested by joerg
+mail/smtp-vilter: build fix
+
+Pullup ticket #4993 - requested by joerg
+math/pari: build fix
+
+Pullup ticket #4994 - requested by joerg
+math/snns: build fix
+
+Pullup ticket #4995 - requested by joerg
+math/superlu: build fix
+
+Pullup ticket #4996 - requested by joerg
+misc/gkrellm-launch: build fix
+
+Pullup ticket #4997 - requested by joerg
+misc/kchmviewer: build fix
+
+Pullup ticket #4998 - requested by joerg
+misc/rocs: build fix
+
+Pullup ticket #4999 - requested by joerg
+multimedia/gopchop: build fix
+
+Pullup ticket #5000 - requested by joerg
+net/gkrellm: build fix
+
+Pullup ticket #5001 - requested by joerg
+net/openwbem: build fix
+
+Pullup ticket #5002 - requested by joerg
+pkgtools/pkg_select: build fix
+
+Pullup ticket #5003 - requested by joerg
+print/LPRng-core: build fix
+
+Pullup ticket #5004 - requested by joerg
+security/php-oauth: build fix
+
+Pullup ticket #5005 - requested by joerg
+sysutils/fscd: build fix
+
+Pullup ticket #5006 - requested by joerg
+sysutils/open-vm-tools: build fix
+
+Pullup ticket #5007 - requested by joerg
+sysutils/tarsnap-gui: build fix
+
+Pullup ticket #5008 - requested by joerg
+wm/fluxconf: build fix
+
+Pullup ticket #5021 - requested by joerg
+cross/uisp: build fix
+
+Pullup ticket #5022 - requested by joerg
+devel/libbson: build fix
+
+Pullup ticket #5023 - requested by joerg
+devel/tvision: build fix
+
+Pullup ticket #5024 - requested by joerg
+sysutils/xentools33: build fix
+
+Pullup ticket #5025 - requested by joerg
+sysutils/xenkernel33: build fix
 
