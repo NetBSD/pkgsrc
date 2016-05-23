@@ -1,0 +1,14 @@
+$NetBSD: patch-Makefile.in,v 1.1.2.2 2016/05/23 05:13:51 bsiegert Exp $
+
+--- Makefile.in.orig	2016-05-18 12:42:33.000000000 +0000
++++ Makefile.in
+@@ -781,7 +781,8 @@ test_libbson_LDFLAGS = $(COVERAGE_LDFLAG
+ test_libbson_LDADD = \
+ 	$(PTHREAD_LIBS) \
+ 	libbson-1.0.la \
+-	libbson.la
++	libbson.la \
++	libyajl.la
+ 
+ TEST_ARGS = $(am__append_7)
+ EXAMPLE_CFLAGS = \
