@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.669 2016/05/23 09:46:10 youri Exp $
+# $NetBSD: Makefile,v 1.670 2016/05/23 10:52:04 youri Exp $
 #
 
 COMMENT=	System utilities
@@ -321,6 +321,7 @@ SUBDIR+=	logrotate
 SUBDIR+=	lsof
 SUBDIR+=	lxmenu-data
 SUBDIR+=	lxpanel
+SUBDIR+=	lxtask
 SUBDIR+=	magicrescue
 SUBDIR+=	manifold
 SUBDIR+=	mate-notification-daemon
