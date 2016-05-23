@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2016/05/23 10:38:14 youri Exp $
+
+SHA1 (lxlauncher-0.2.5.tar.xz) = a0a1e13e0d4f2d03502eddb7d71e77e66b444f92
+RMD160 (lxlauncher-0.2.5.tar.xz) = 71260905ec0293ab046072f85650ab5facf3df42
+SHA512 (lxlauncher-0.2.5.tar.xz) = 3f57755ad6feeeb1daa61c29f142b997f8175ff0863d1749b3e28b83744d03e06a7f0bb373fdcd48364e307840dd05cd23b92109c75523e32d3eae8e183ed6cf
+Size (lxlauncher-0.2.5.tar.xz) = 131428 bytes
+SHA1 (patch-Makefile.in) = 7d1cf9686c77258dcaac8a811c7e02fe2902602f
