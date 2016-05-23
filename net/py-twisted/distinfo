@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.25 2016/04/13 19:44:49 wiz Exp $
+$NetBSD: distinfo,v 1.26 2016/05/23 16:54:19 wiz Exp $
 
-SHA1 (Twisted-16.1.1.tar.bz2) = 202449e218600f7c21c6cf66a00b68b59bedb7d2
-RMD160 (Twisted-16.1.1.tar.bz2) = c749b42027a84605b3476f5538aecc2c90c29693
-SHA512 (Twisted-16.1.1.tar.bz2) = 2a7e9eddace9f8025c5a2150e09d8154c9751235e7c5fe8a6fbcdc6121e3c77d7c954a1f226d37265d90ad19a02cfcba87150a6ae8226861143e3556bbe03c9b
-Size (Twisted-16.1.1.tar.bz2) = 2938611 bytes
+SHA1 (Twisted-16.2.0.tar.bz2) = 2f32d725b44106c4124840beb5d25aa32dc45652
+RMD160 (Twisted-16.2.0.tar.bz2) = 63ccfddd4bf9946e07a0c25589c5f6591292d62c
+SHA512 (Twisted-16.2.0.tar.bz2) = a1942c15a84946e8bd4833801fffe7be01443560209972e10043262fd17a73c5d0c50592bd037130b6a1de08d7223cbdc1e2398c8c67f559d42e3e8ec81df840
+Size (Twisted-16.2.0.tar.bz2) = 2942537 bytes
 SHA1 (patch-ab) = 26495e5abd57025e915b923cc7089704bbd85629
