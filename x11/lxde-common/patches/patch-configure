@@ -1,0 +1,21 @@
+$NetBSD: patch-configure,v 1.1 2016/05/23 10:06:30 youri Exp $
+
+Remove error about sysconfdir.
+
+--- configure.orig	2016-02-20 23:42:52.000000000 +0000
++++ configure
+@@ -7119,14 +7119,3 @@ if test -n "$ac_unrecognized_opts" && te
+   { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: unrecognized options: $ac_unrecognized_opts" >&5
+ $as_echo "$as_me: WARNING: unrecognized options: $ac_unrecognized_opts" >&2;}
+ fi
+-
+-
+-if test x"$sysconfdir" != x'/etc'; then
+-    echo
+-    echo
+-    echo 'Error: sysconfdir is not /etc.'
+-    echo 'Please consider passing --sysconfdir=/etc to configure.';
+-    echo 'Otherwise default config files will be installed to wrong place.'
+-    echo
+-    echo
+-fi
