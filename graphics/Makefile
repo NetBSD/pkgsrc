@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.736 2016/05/21 21:47:32 youri Exp $
+# $NetBSD: Makefile,v 1.737 2016/05/23 10:43:19 youri Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -315,6 +315,7 @@ SUBDIR+=	libxmi
 SUBDIR+=	ljpeg
 SUBDIR+=	lprof
 SUBDIR+=	luminance-hdr
+SUBDIR+=	lxde-icon-theme
 SUBDIR+=	magicpoint
 SUBDIR+=	mandelbulber
 SUBDIR+=	mate-backgrounds
