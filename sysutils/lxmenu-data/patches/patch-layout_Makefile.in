@@ -1,0 +1,38 @@
+$NetBSD: patch-layout_Makefile.in,v 1.1 2016/05/23 09:44:33 youri Exp $
+
+Handle XDG menu location.
+
+--- layout/Makefile.in.orig	2016-02-20 23:57:47.000000000 +0000
++++ layout/Makefile.in
+@@ -253,6 +253,7 @@ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ NULL = 
+ menudir = $(sysconfdir)/xdg/menus
++menuexampledir = ${datadir}/examples/menus
+ menu_DATA = \
+ 	lxde-applications.menu		\
+ 	$(NULL)
+@@ -293,18 +294,18 @@ $(ACLOCAL_M4):  $(am__aclocal_m4_deps)
+ $(am__aclocal_m4_deps):
+ install-menuDATA: $(menu_DATA)
+ 	@$(NORMAL_INSTALL)
+-	@list='$(menu_DATA)'; test -n "$(menudir)" || list=; \
++	@list='$(menu_DATA)'; test -n "$(menuexampledir)" || list=; \
+ 	if test -n "$$list"; then \
+-	  echo " $(MKDIR_P) '$(DESTDIR)$(menudir)'"; \
+-	  $(MKDIR_P) "$(DESTDIR)$(menudir)" || exit 1; \
++	  echo " $(MKDIR_P) '$(DESTDIR)$(menuexampledir)'"; \
++	  $(MKDIR_P) "$(DESTDIR)$(menuexampledir)" || exit 1; \
+ 	fi; \
+ 	for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  echo "$$d$$p"; \
+ 	done | $(am__base_list) | \
+ 	while read files; do \
+-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(menudir)'"; \
+-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(menudir)" || exit $$?; \
++	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(menuexampledir)'"; \
++	  $(INSTALL_DATA) $$files "$(DESTDIR)$(menuexampledir)" || exit $$?; \
+ 	done
+ 
+ uninstall-menuDATA:
