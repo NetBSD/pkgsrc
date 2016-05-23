@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.785 2016/05/22 23:06:46 youri Exp $
+# $NetBSD: Makefile,v 1.786 2016/05/23 08:08:54 youri Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -332,6 +332,7 @@ SUBDIR+=	libxshmfence
 SUBDIR+=	listres
 SUBDIR+=	lua-keybinder
 SUBDIR+=	luit
+SUBDIR+=	lxappearance
 SUBDIR+=	lxsession
 SUBDIR+=	matchbox-common
 SUBDIR+=	matchbox-desktop
