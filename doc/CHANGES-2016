@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2125 2016/05/23 10:51:34 youri Exp $
+$NetBSD: CHANGES-2016,v 1.2126 2016/05/23 13:10:52 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2730,3 +2730,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added graphics/lxde-icon-theme version 0.5.1 [youri 2016-05-23]
 	Added x11/lxinput version 0.3.5 [youri 2016-05-23]
 	Added sysutils/lxtask version 0.1.7 [youri 2016-05-23]
+	Updated geography/opencpn-plugin-draw to 20160415nb2 [bouyer 2016-05-23]
