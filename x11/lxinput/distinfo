@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/05/23 10:46:22 youri Exp $
+
+SHA1 (lxinput-0.3.5.tar.xz) = 60db01f00c1ef6f060f7e58e2be0761659470c02
+RMD160 (lxinput-0.3.5.tar.xz) = 1eef6cc3db200d9dc25fe7e85c631e4d28d7938e
+SHA512 (lxinput-0.3.5.tar.xz) = d5233f03c4314ac16fb548db56ae2d17651b29d8a59bfef3e6e6805f6b9bc8100b0711bbc72e31a6bc458eccc6fe1b4a38cf097dbf6a1b04f600bba58ff03f35
+Size (lxinput-0.3.5.tar.xz) = 145356 bytes
