@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2016/02/26 10:24:14 jperkin Exp $
+# $NetBSD: Makefile,v 1.46.2.1 2016/05/23 05:16:43 bsiegert Exp $
 
 VERSION=	3.1.4
 DISTNAME=	xen-${VERSION}
@@ -143,6 +143,8 @@ EXTRA_CFLAGS+=	-Wno-error=ignored-attributes -no-integrated-as \
 		-Wno-error=tautological-compare -Wno-error=null-dereference \
 		-Wno-error=self-assign -Wno-error=sometimes-uninitialized \
 		-Wno-error=unused-function
+.elif !empty(PKGSRC_COMPILER:Mgcc)
+EXTRA_CFLAGS+=	-Wno-error=unused-but-set-variable
 .endif
 
 MAKE_ENV+=	EXTRA_HOSTCFLAGS=${EXTRA_HOSTCFLAGS:Q} EXTRA_CFLAGS=${EXTRA_CFLAGS:Q}
