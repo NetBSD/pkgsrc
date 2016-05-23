@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/02/23 18:25:09 joerg Exp $
+# $NetBSD: Makefile,v 1.8.10.1 2016/05/23 04:57:53 bsiegert Exp $
 
 DISTNAME=		smtp-vilter-1.3.8
 CATEGORIES=		mail
@@ -18,6 +18,12 @@ PKG_USERS=		vilter:vilter
 PKG_GECOS.vilter=	SMTP vilter
 
 INSTALLATION_DIRS=	etc sbin lib/smtp-vilter man/man5 man/man8
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mgcc)
+CWARNFLAGS+=		-Wno-error=unused-but-set-variable
+.endif
+MAKE_FLAGS+=		CWARNFLAGS=${CWARNFLAGS:Q}
 
 .include "../../mail/libmilter/buildlink3.mk"
 
