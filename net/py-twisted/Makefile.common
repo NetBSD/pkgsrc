@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.27 2016/04/13 19:44:49 wiz Exp $
+# $NetBSD: Makefile.common,v 1.28 2016/05/23 16:54:19 wiz Exp $
 #
 # used by net/py-twisted/Makefile
 # used by net/py-twisted-docs/Makefile
 
-DISTNAME=	Twisted-16.1.1
+DISTNAME=	Twisted-16.2.0
 CATEGORIES=	net python
 MASTER_SITES=	http://twistedmatrix.com/Releases/Twisted/${PKGVERSION_NOREV:R}/
 EXTRACT_SUFX=	.tar.bz2
