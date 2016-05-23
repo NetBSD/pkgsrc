@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2123 2016/05/23 10:43:04 youri Exp $
+$NetBSD: CHANGES-2016,v 1.2124 2016/05/23 10:46:45 youri Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2728,3 +2728,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated x11/lxterminal to 0.2.0 [youri 2016-05-23]
 	Added x11/lxlauncher version 0.2.5 [youri 2016-05-23]
 	Added graphics/lxde-icon-theme version 0.5.1 [youri 2016-05-23]
+	Added x11/lxinput version 0.3.5 [youri 2016-05-23]
