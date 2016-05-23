@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2015/08/18 07:31:16 wiz Exp $
+# $NetBSD: Makefile,v 1.22.6.1 2016/05/23 05:06:42 bsiegert Exp $
 #
 
 DISTNAME=	pkg_select-20090308
@@ -22,6 +22,8 @@ CONF_FILES=	${EXAMPLEDIR}/${PKGBASE}.conf.example	\
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)
 BUILDLINK_TRANSFORM+=	rm:-Wno-traditional
+.elif !empty(PKGSRC_COMPILER:Mgcc)
+CFLAGS+=		-Wno-error=unused-but-set-variable
 .endif
 
 SUBST_CLASSES+=		path
