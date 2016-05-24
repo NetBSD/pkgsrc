@@ -1,0 +1,20 @@
+$NetBSD: patch-ac,v 1.1 2016/05/24 09:20:07 leot Exp $
+
+Use curses(3) in NetBSD instead of ncursesw.
+
+--- stfl_internals.h.orig	2015-01-05 10:47:32.000000000 +0000
++++ stfl_internals.h
+@@ -28,7 +28,12 @@ extern "C" {
+ #endif
+ 
+ #include "stfl.h"
+-#include <ncursesw/ncurses.h>
++#ifdef __NetBSD__
++# include <curses.h>
++# include <stdarg.h>
++#else
++# include <ncursesw/ncurses.h>
++#endif
+ #include <pthread.h>
+ 
+ struct stfl_widget_type;
