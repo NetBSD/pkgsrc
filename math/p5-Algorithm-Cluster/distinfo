@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2015/11/03 23:33:37 agc Exp $
+$NetBSD: distinfo,v 1.4 2016/05/24 12:25:06 mef Exp $
 
-SHA1 (Algorithm-Cluster-1.50.tar.gz) = 036de7abda2af0f2a09f915b55662d88a0656b21
-RMD160 (Algorithm-Cluster-1.50.tar.gz) = 128be5e282c24108cdf8dbfed5e95f032608fa4b
-SHA512 (Algorithm-Cluster-1.50.tar.gz) = 02a18c915fcc4ea559e9090d370c4ead3265a9c36281612973e09f7c0cd47e591d51f4db01857ad2c932057da52ff95cb585942cc52e63f1cf16de46a34f519a
-Size (Algorithm-Cluster-1.50.tar.gz) = 275620 bytes
-SHA1 (patch-src_Makefile.PL) = 57c3552d658a9dc79dbde8df6eb035334a1c948d
+SHA1 (Algorithm-Cluster-1.52.tar.gz) = fd3ddcac7fd18ac83c6463d6325d4e8138a319aa
+RMD160 (Algorithm-Cluster-1.52.tar.gz) = fa0438bd57bce3ed211cab176064608a88bd7ab3
+SHA512 (Algorithm-Cluster-1.52.tar.gz) = eee2c3f333fb49a0fc6b6c0deb0993cb22e3455272afb21236aef15f076c22fc4b6138f274b6319ed5eeb1beaef254e939ef63a2a4ea0d84dcc2b68ed1362cf1
+Size (Algorithm-Cluster-1.52.tar.gz) = 275663 bytes
+SHA1 (patch-src_Makefile.PL) = 004dd2a40bf8e77b6efd425dcc64afbab2d8416a
