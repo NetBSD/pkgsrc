@@ -1,0 +1,17 @@
+$NetBSD: patch-Makefile,v 1.1 2016/05/24 09:27:09 leot Exp $
+
+Install man page with proper permissions (executable bit not needed for them!).
+
+--- Makefile.orig	2015-02-19 10:56:59.000000000 +0000
++++ Makefile
+@@ -145,8 +145,8 @@ install: install-mo
+ 	$(INSTALL) $(NEWSBEUTER) $(DESTDIR)$(prefix)/bin
+ 	$(INSTALL) $(PODBEUTER) $(DESTDIR)$(prefix)/bin
+ 	$(MKDIR) $(DESTDIR)$(mandir)/man1
+-	$(INSTALL) doc/$(NEWSBEUTER).1 $(DESTDIR)$(mandir)/man1 || true
+-	$(INSTALL) doc/$(PODBEUTER).1 $(DESTDIR)$(mandir)/man1 || true
++	$(INSTALL) -m 644 doc/$(NEWSBEUTER).1 $(DESTDIR)$(mandir)/man1 || true
++	$(INSTALL) -m 644 doc/$(PODBEUTER).1 $(DESTDIR)$(mandir)/man1 || true
+ 	$(MKDIR) $(DESTDIR)$(docdir)
+ 	$(INSTALL) -m 644 doc/xhtml/* $(DESTDIR)$(docdir) || true
+ 	$(MKDIR) $(DESTDIR)$(docdir)/examples
