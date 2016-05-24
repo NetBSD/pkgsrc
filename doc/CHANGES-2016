@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2136 2016/05/24 12:25:22 mef Exp $
+$NetBSD: CHANGES-2016,v 1.2137 2016/05/24 12:32:34 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2741,3 +2741,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added news/newsbeuter version 2.9 [leot 2016-05-24]
 	Updated math/p5-Spreadsheet-XLSX to 0.15 [mef 2016-05-24]
 	Updated math/p5-Algorithm-Cluster to 1.52 [mef 2016-05-24]
+	Updated math/p5-Spreadsheet-WriteExcel to 2.40 [mef 2016-05-24]
