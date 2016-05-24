@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15930 2016/05/23 16:54:29 wiz Exp $
+$NetBSD: TODO,v 1.15931 2016/05/24 12:15:59 mef Exp $
 
 Suggested new packages
 ======================
@@ -1348,7 +1348,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Software-License-0.103011
 	o p5-Spreadsheet-Read-0.63
 	o p5-Spreadsheet-WriteExcel-2.40
-	o p5-Spreadsheet-XLSX-0.15
 	o p5-Starlet-0.29
 	o p5-Struct-Dumb-0.08
 	o p5-Sub-Exporter-GlobExporter-0.005
