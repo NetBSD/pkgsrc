@@ -1,7 +1,8 @@
-$NetBSD: patch-encoding.c,v 1.1 2016/05/24 12:00:08 he Exp $
+$NetBSD: patch-encoding.c,v 1.2 2016/05/24 21:08:21 wiz Exp $
 
 Avoid potential undefined behaviour by casting arg to toupper()
 to an appropriate value range.
+https://bugzilla.gnome.org/show_bug.cgi?id=766838
 
 Also, on NetBSD, add CP1141 encoding alias.
 

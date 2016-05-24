@@ -1,6 +1,7 @@
 $NetBSD$
 
 Cast argument (gcc says "unsigned int") to match %lu format.
+https://bugzilla.gnome.org/show_bug.cgi?id=766839
 
 --- timsort.h.orig	2016-02-09 10:17:34.000000000 +0000
 +++ timsort.h
