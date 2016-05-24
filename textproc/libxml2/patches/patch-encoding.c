@@ -2,6 +2,7 @@ $NetBSD$
 
 Avoid potential undefined behaviour by casting arg to toupper()
 to an appropriate value range.
+https://bugzilla.gnome.org/show_bug.cgi?id=766838
 
 Also, on NetBSD, add CP1141 encoding alias.
 
