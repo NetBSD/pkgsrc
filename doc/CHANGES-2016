@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2133 2016/05/24 09:21:10 leot Exp $
+$NetBSD: CHANGES-2016,v 1.2134 2016/05/24 09:28:14 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2738,3 +2738,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added meta-pkgs/lxde version 1.0 [youri 2016-05-23]
 	Updated databases/elasticsearch to 2.3.3 [fhajny 2016-05-24]
 	Added devel/stfl version 0.24 [leot 2016-05-24]
+	Added news/newsbeuter version 2.9 [leot 2016-05-24]
