@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1 2016/05/24 09:20:07 leot Exp $
+
+Create a symbolic link also for the versioned SONAME.
+
+--- Makefile.orig	2012-01-19 21:12:56.000000000 +0000
++++ Makefile	2012-01-19 21:13:57.000000000 +0000
+@@ -65,6 +65,7 @@
+ 	install -m 644 stfl.pc $(DESTDIR)$(prefix)/$(libdir)/pkgconfig/
+ 	install -m 644 libstfl.so.$(VERSION) $(DESTDIR)$(prefix)/$(libdir)
+ 	ln -fs libstfl.so.$(VERSION) $(DESTDIR)$(prefix)/$(libdir)/libstfl.so
++	ln -fs libstfl.so.$(VERSION) $(DESTDIR)$(prefix)/$(libdir)/$(SONAME)
+ 
+ stfl.pc: stfl.pc.in
+ 	sed 's,@VERSION@,$(VERSION),g' < $< | sed 's,@PREFIX@,$(prefix),g' > $@
