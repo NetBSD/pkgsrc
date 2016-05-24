@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2016/04/29 10:16:01 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.10 2016/05/24 01:44:40 fhajny Exp $
 lib/elasticsearch/HdrHistogram-2.1.6.jar
 lib/elasticsearch/apache-log4j-extras-1.2.17.jar
 lib/elasticsearch/commons-cli-1.3.1.jar
@@ -7,10 +7,10 @@ lib/elasticsearch/compress-lzf-1.0.2.jar
 lib/elasticsearch/${PKGNAME}.jar
 lib/elasticsearch/guava-18.0.jar
 lib/elasticsearch/hppc-0.7.1.jar
-lib/elasticsearch/jackson-core-2.6.2.jar
-lib/elasticsearch/jackson-dataformat-cbor-2.6.2.jar
-lib/elasticsearch/jackson-dataformat-smile-2.6.2.jar
-lib/elasticsearch/jackson-dataformat-yaml-2.6.2.jar
+lib/elasticsearch/jackson-core-2.6.6.jar
+lib/elasticsearch/jackson-dataformat-cbor-2.6.6.jar
+lib/elasticsearch/jackson-dataformat-smile-2.6.6.jar
+lib/elasticsearch/jackson-dataformat-yaml-2.6.6.jar
 lib/elasticsearch/jna-4.1.0.jar
 lib/elasticsearch/joda-convert-1.2.jar
 lib/elasticsearch/joda-time-2.8.2.jar
