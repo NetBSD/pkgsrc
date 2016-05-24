@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2137 2016/05/24 12:32:34 mef Exp $
+$NetBSD: CHANGES-2016,v 1.2138 2016/05/24 12:38:27 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2742,3 +2742,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated math/p5-Spreadsheet-XLSX to 0.15 [mef 2016-05-24]
 	Updated math/p5-Algorithm-Cluster to 1.52 [mef 2016-05-24]
 	Updated math/p5-Spreadsheet-WriteExcel to 2.40 [mef 2016-05-24]
+	Updated math/p5-Excel-Template to 0.34 [mef 2016-05-24]
