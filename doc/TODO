@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15936 2016/05/24 13:39:09 mef Exp $
+$NetBSD: TODO,v 1.15937 2016/05/24 19:11:04 bsiegert Exp $
 
 Suggested new packages
 ======================
@@ -591,7 +591,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o drivel-3.0.5
 	o dropbear-2016.72
 	o drupal-8.0.3
-	o duplicity-0.7.07.1
 	o dvdisaster-0.79.5
 	o dvdstyler-2.9.6
 	o e2fsprogs-1.42.12 [wip]
