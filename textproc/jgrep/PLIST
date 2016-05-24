@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2016/05/24 22:27:49 cheusov Exp $
+bin/jgrep
+lib/jgrep/jgrep-0.1-jar-with-dependencies.jar
+lib/libjgrep_jni.a
+lib/libjgrep_jni.so
+lib/libjgrep_jni.so.0
+lib/libjgrep_jni.so.0.0
+man/man1/jgrep.1
