@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2016/05/07 02:48:28 wen Exp $
+# $NetBSD: Makefile,v 1.19 2016/05/24 15:51:23 wen Exp $
 
 DISTNAME=	LaTeX-Driver-0.300.2
 PKGNAME=	p5-${DISTNAME}
@@ -25,6 +25,7 @@ DEPENDS+=	p5-Test-Pod-Coverage-[0-9]*:../../devel/p5-Test-Pod-Coverage
 DEPENDS+=	p5-Test-Spelling-[0-9]*:../../devel/p5-Test-Spelling
 DEPENDS+=	p5-Exception-Class-[0-9]*:../../devel/p5-Exception-Class
 DEPENDS+=	p5-File-Slurp-[0-9]*:../../devel/p5-File-Slurp
+DEPENDS+=	p5-IO-All>=0:../../devel/p5-IO-All
 DEPENDS+=	tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 DEPENDS+=	tex-lastpage-[0-9]*:../../print/tex-lastpage
 DEPENDS+=	tex-tools-[0-9]*:../../print/tex-tools
