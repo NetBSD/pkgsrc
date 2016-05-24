@@ -1,4 +1,7 @@
-$NetBSD: patch-src_Makefile.PL,v 1.1 2015/02/28 23:44:27 joerg Exp $
+$NetBSD: patch-src_Makefile.PL,v 1.2 2016/05/24 12:25:06 mef Exp $
+
+date: 2015-03-01 08:44:27 +0900;  author: joerg;  state: Exp;  commitid: c0GqNxgBuTNIHPby;
+Always build PIC. Bump revision.
 
 --- src/Makefile.PL.orig	2015-02-28 22:52:46.000000000 +0000
 +++ src/Makefile.PL
