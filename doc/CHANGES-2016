@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2140 2016/05/24 12:56:00 taca Exp $
+$NetBSD: CHANGES-2016,v 1.2141 2016/05/24 15:41:58 he Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2745,3 +2745,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated math/p5-Excel-Template to 0.34 [mef 2016-05-24]
 	Updated math/p5-Excel-Template-Plus to 0.06 [mef 2016-05-24]
 	Updated www/typo3_62 to 6.2.25 [taca 2016-05-24]
+	Updated textproc/libxml2 to 2.9.4 [he 2016-05-24]
