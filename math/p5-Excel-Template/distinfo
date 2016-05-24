@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 23:33:38 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/05/24 12:38:12 mef Exp $
 
-SHA1 (Excel-Template-0.33.tar.gz) = c93f3d21e3a8923efa94dd8ed9f5653ab877ddf2
-RMD160 (Excel-Template-0.33.tar.gz) = c41f66f5e095a4bfb15ea120cc88ec3ac8b47ba9
-SHA512 (Excel-Template-0.33.tar.gz) = 4d605fdb9fb29309a3d01618f45c411d7cf3d4caef36396f3c917aa9c670d9ccd93980e38ad465af5fa0e0c60059a7957e977a8219652ff818b5df44a767737e
-Size (Excel-Template-0.33.tar.gz) = 62662 bytes
+SHA1 (Excel-Template-0.34.tar.gz) = 40a4ed5705d3eb51b36785ed04caf030415d3365
+RMD160 (Excel-Template-0.34.tar.gz) = dd52f73f16e7d3690661f6ab43e0006ec57d224a
+SHA512 (Excel-Template-0.34.tar.gz) = 65108682b5d2ec97f2921ed073b65805f87d182366bdb74ebfc42be84be2ce5197e612f2d077ae37898743316843eecdbe0c7fa2e735bd30c9d3cd8f414bc13c
+Size (Excel-Template-0.34.tar.gz) = 63131 bytes
