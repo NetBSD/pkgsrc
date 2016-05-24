@@ -1,0 +1,44 @@
+$NetBSD: patch-ad,v 1.1 2016/05/24 09:20:07 leot Exp $
+
+Disable building modules/binding for other programming languages and avoid to
+check if they are present.
+
+--- Makefile.cfg.orig	2009-05-31 18:20:39.000000000 +0000
++++ Makefile.cfg
+@@ -22,33 +22,11 @@ export libdir ?= lib
+ export prefix ?= /usr/local
+ export DESTDIR ?= /
+ 
+-ifneq ($(shell spl-config --cflags 2>/dev/null),)
+-FOUND_SPL = 1
+-else
+-FOUND_SPL = 0
+-endif
++# Modules for other programming languages should get their own packages, no
++# matter what's installed on the system
+ 
+-ifneq ($(shell swig -help 2>/dev/null),)
+-FOUND_SWIG = 1
+-else
++FOUND_SPL = 0
+ FOUND_SWIG = 0
+-endif
+-
+-ifneq ($(shell perl -le 'print 1' 2>/dev/null),)
+-FOUND_PERL5 = 1
+-else
+ FOUND_PERL5 = 0
+-endif
+-
+-ifneq ($(shell python -c 'print 1' 2>/dev/null),)
+-FOUND_PYTHON = 1
+-else
+ FOUND_PYTHON = 0
+-endif
+-
+-ifneq ($(shell ruby -e 'puts 1' 2>/dev/null),)
+-FOUND_RUBY = 1
+-else
+ FOUND_RUBY = 0
+-endif
+-
