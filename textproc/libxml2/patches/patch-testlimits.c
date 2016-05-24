@@ -2,6 +2,7 @@ $NetBSD$
 
 Since this is built with C90, and %zu isn't supported then, cast
 the size_t argument to unsigned long to match the format.
+https://bugzilla.gnome.org/show_bug.cgi?id=766839
 
 --- testlimits.c.orig	2016-02-09 10:17:34.000000000 +0000
 +++ testlimits.c
