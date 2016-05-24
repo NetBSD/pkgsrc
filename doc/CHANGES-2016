@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2143 2016/05/24 19:43:41 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.2144 2016/05/24 22:28:43 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2748,3 +2748,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/libxml2 to 2.9.4 [he 2016-05-24]
 	Updated sysutils/duplicity to 0.7.07.1 [bsiegert 2016-05-24]
 	Updated lang/nodejs4 to 4.4.5 [fhajny 2016-05-24]
+	Added textproc/jgrep version 0.4.0 [cheusov 2016-05-24]
