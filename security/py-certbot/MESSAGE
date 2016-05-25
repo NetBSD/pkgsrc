@@ -1,0 +1,17 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2016/05/25 18:18:16 fhajny Exp $
+
+This package installs the standalone certbot (letsencrypt) client.
+The following modes of obtaining certificates will work:
+
+  certbot --standalone -d <domain_name> certonly
+
+    Spawns a temporary daemon on port 80 or 443, the web server (if
+    any) will need to be shut down for the operation to succeed.
+
+  certbot --webroot -d <domain_name> -w <web_root> certonly
+
+    Doesn't spawn daemons, authenticates using temporary files
+    put in the document root directory.
+
+===========================================================================
