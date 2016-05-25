@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q1,v 1.1.2.17 2016/05/23 05:17:46 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q1,v 1.1.2.18 2016/05/25 19:08:22 spz Exp $
 
 Changes to the packages collection and infrastructure on the pkgsrc-2016Q1 branch:
 
@@ -206,3 +206,5 @@ sysutils/xentools33: build fix
 Pullup ticket #5025 - requested by joerg
 sysutils/xenkernel33: build fix
 
+Pullup ticket #5028 - requested by he
+textproc/libxml2: security update
