@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2016/05/25 20:15:35 fhajny Exp $
+
+SHA1 (hitch-1.2.0.tar.gz) = 9a5b2f3eee59892c36f45b4f50e201f2937f04a3
+RMD160 (hitch-1.2.0.tar.gz) = 029b22cf45b5d76819e197df7609afcbd2c35b02
+SHA512 (hitch-1.2.0.tar.gz) = e214d305e49dbd3bb4b741a094d50978f867e97bcd24e2775ce8a1ac450f6607fd638b801c9b41db0d7a22bda56b212a7e9eef053c2ce194f690f27301bd1f98
+Size (hitch-1.2.0.tar.gz) = 238079 bytes
+SHA1 (patch-hitch.conf.ex) = 6a97612d3817928a6e1d54bc98d2680dadce0b41
+SHA1 (patch-src_hitch.c) = f16c5010a704291fd1c986b73bb987fd92148616
