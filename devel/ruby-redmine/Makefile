@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2016/04/11 19:01:49 ryoon Exp $
+# $NetBSD: Makefile,v 1.14 2016/05/25 12:50:32 ryoon Exp $
 
 DISTNAME=	redmine-3.1.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -221,7 +221,7 @@ post-install: unicorn-post-install
 
 .include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
-.include "../../graphics/ImageMagick/buildlink3.mk"
+.include "../../graphics/ImageMagick6/buildlink3.mk"
 .include "../../lang/ruby/replace.mk"
 .include "../../lang/ruby/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2016/03/05 11:28:40 jperkin Exp $
+# $NetBSD: Makefile,v 1.102 2016/05/25 12:50:00 ryoon Exp $
 
 DISTNAME=	rmagick-2.15.4
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/rmagick/RMagick/}
@@ -16,7 +16,7 @@ USE_GCC_RUNTIME=	yes
 
 .include "../../lang/ruby/gem.mk"
 
-BUILDLINK_API_DEPENDS.ImageMagick+=	ImageMagick>=6.3.5.10
+BUILDLINK_API_DEPENDS.ImageMagick6+=	ImageMagick6>=6.3.5.10
 
-.include "../../graphics/ImageMagick/buildlink3.mk"
+.include "../../graphics/ImageMagick6/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
