@@ -1,4 +1,6 @@
-$NetBSD: patch-ae,v 1.14 2015/04/24 11:32:29 spz Exp $
+$NetBSD: patch-ae,v 1.14.8.1 2016/05/25 19:07:28 spz Exp $
+
+Don't install html files.
 
 --- doc/examples/Makefile.in.orig	2014-10-16 07:35:13.000000000 +0000
 +++ doc/examples/Makefile.in
