@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15938 2016/05/25 13:17:41 ryoon Exp $
+$NetBSD: TODO,v 1.15939 2016/05/25 15:34:10 wiz Exp $
 
 Suggested new packages
 ======================
@@ -737,7 +737,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gfract-0.33
 	o ghc7-7.10.1
 	o gifsicle-1.88
-	o git-base-2.8.3
 	o gkrellm-2.3.5
 	o gkrellm-multiping-2.0.13
 	o gkrellm-server-2.3.5
@@ -1590,6 +1589,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o root-tail-1.2
 	o rosegarden-14.12
 	o rosegarden4-1.7.0 [replacing audio/rosegarden|pkgsrc-wip]
+	o roundcube-1.2.0
 	o rox-session-0.29
 	o roxirc-2.0
 	o rp-l2tp-0.4
