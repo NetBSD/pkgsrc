@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.28 2015/04/24 11:32:29 spz Exp $
+$NetBSD: patch-aa,v 1.28.8.1 2016/05/25 19:07:28 spz Exp $
+
+Move EXAMPLES_DIR to fit pkgsrc.
 
 --- Makefile.in.orig	2014-10-16 07:35:13.000000000 +0000
 +++ Makefile.in
