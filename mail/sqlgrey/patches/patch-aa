@@ -1,6 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2010/02/04 02:43:52 joerg Exp $
+$NetBSD: patch-aa,v 1.3 2016/05/25 21:39:44 fhajny Exp $
 
---- Makefile.orig	2005-06-07 02:28:38.000000000 +0200
+Default dirs.
+
+--- Makefile.orig	2012-02-13 16:54:08.000000000 +0000
 +++ Makefile
 @@ -1,10 +1,8 @@
  INSTALL = install
@@ -16,8 +18,8 @@ $NetBSD: patch-aa,v 1.2 2010/02/04 02:43:52 joerg Exp $
 +MANDIR = ${DESTDIR}$(PREFIX)/$(PKGMANDIR)/man1
  
  VERSION := $(shell cat VERSION)
- TBZ2 = sqlgrey-$(VERSION).tar.bz2
-@@ -30,9 +28,7 @@ clean:
+ 
+@@ -43,9 +41,7 @@ clean:
  
  install: all
  	$(INSTALL) -d -m 755 $(SBINDIR)
