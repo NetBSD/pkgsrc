@@ -1,4 +1,6 @@
-$NetBSD: patch-ac,v 1.1.1.1 2007/11/13 16:43:04 ghen Exp $
+$NetBSD: patch-ac,v 1.2 2016/05/25 21:39:44 fhajny Exp $
+
+Default dirs.
 
 --- update_sqlgrey_config.orig	2005-03-02 01:49:41.000000000 +0100
 +++ update_sqlgrey_config
@@ -7,7 +9,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2007/11/13 16:43:04 ghen Exp $
  LC_ALL=C
  
 -MYDIR=/etc/sqlgrey
-+MYDIR=%%PKG_SYSCONFDIR%%
++MYDIR=@PKG_SYSCONFDIR@
  CONF=$MYDIR/sqlgrey.conf
  
  # Get whitelists host and pidfile from conf
@@ -16,7 +18,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2007/11/13 16:43:04 ghen Exp $
  if [ -z "$pidfile" ]
  then
 -    pidfile="/var/run/sqlgrey.pid"
-+    pidfile="/%%VARBASE%%/run/sqlgrey.pid"
++    pidfile="@SQLGREY_PIDDIR@/sqlgrey.pid"
  fi
  
  # Go into a temp directory
