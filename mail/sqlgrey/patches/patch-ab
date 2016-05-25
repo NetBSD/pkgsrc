@@ -1,44 +1,54 @@
-$NetBSD: patch-ab,v 1.1.1.1 2007/11/13 16:43:04 ghen Exp $
+$NetBSD: patch-ab,v 1.2 2016/05/25 21:39:44 fhajny Exp $
 
---- sqlgrey.orig	2007-08-05 22:41:19.000000000 +0200
+Default dirs. Use native connection to syslog.
+
+--- sqlgrey.orig	2012-02-13 16:54:08.000000000 +0000
 +++ sqlgrey
-@@ -52,11 +52,11 @@ my $config        = 'config';
+@@ -57,10 +57,10 @@ my $config        = 'config';
  # defaults
  my %dflt;
  $dflt{loglevel}           = 2; # used for $dflt{log} entries in read_conffile()
 -$dflt{user}               = 'sqlgrey';
 -$dflt{group}              = 'sqlgrey';
-+$dflt{user}               = '%%SQLGREY_USER%%';
-+$dflt{group}              = '%%SQLGREY_GROUP%%';
- $dflt{inet}               = '2501';
 -$dflt{pidfile}            = '/var/run/sqlgrey.pid';
 -$dflt{conf_dir}           = '/etc/sqlgrey';
-+$dflt{pidfile}            = '%%VARBASE%%/run/sqlgrey.pid';
-+$dflt{conf_dir}           = '%%PKG_SYSCONFDIR%%';
++$dflt{user}               = '@SQLGREY_USER@';
++$dflt{group}              = '@SQLGREY_GROUP@';
++$dflt{pidfile}            = '@SQLGREY_PIDDIR@/sqlgrey.pid';
++$dflt{conf_dir}           = '@PKG_SYSCONFDIR@';
  $dflt{reconnect_delay}    = 5;            # 5 minutes
  $dflt{max_connect_age}    = 24;           # 24 hours
  $dflt{awl_age}            = 60;           # 60 days
-@@ -91,7 +91,7 @@ $dflt{log} = { # note values here are no
+@@ -104,7 +104,7 @@ $dflt{log} = { # note values here are no
  	     };
  
  # Default configuration file
 -my $config_file              = '/etc/sqlgrey/sqlgrey.conf';
-+my $config_file              = '%%PKG_SYSCONFDIR%%/sqlgrey.conf';
++my $config_file              = '@PKG_SYSCONFDIR@/sqlgrey.conf';
  
  # whitelist files
  my $stat_ip_whitelist_file   = $dflt{conf_dir} . '/clients_ip_whitelist';
-@@ -2390,12 +2390,12 @@ B<sqlgrey> [I<options>...]
+@@ -2639,7 +2639,7 @@ sub main()
+             log_level       => $dflt{loglevel} > 2 ? $dflt{loglevel} : 2,
+             log_file        => $opt{daemonize} ? 'Sys::Syslog' : undef,
+             syslog_facility => 'mail',
+-            syslog_logsock  => 'unix',
++            syslog_logsock  => 'native',
+             syslog_ident    => defined $dflt{log_ident} ? $dflt{log_ident} :
+ 		                                          # process name
+ 		                                          $0 =~ m{.*/(.*)},
+@@ -2825,12 +2825,12 @@ B<sqlgrey> [I<options>...]
   -k, --kill                 kill a running sqlgrey
                              (identified by 'pidfile' content)
   -f, --configfile=FILE      read config from FILE
 -                            (default /etc/sqlgrey/sqlgrey.conf)
-+                            (default %%PKG_SYSCONFDIR%%/sqlgrey.conf)
++                            (default @PKG_SYSCONFDIR@/sqlgrey.conf)
                              expecting config_param=value lines,
                              - spaces are ignored,
                              - '#' is used for comments
  
 -See the default config file at /etc/sqlgrey/sqlgrey.conf for runtime parameters.
-+See the default config file at %%PKG_SYSCONFDIR%%/sqlgrey.conf for runtime parameters.
++See the default config file at @PKG_SYSCONFDIR@/sqlgrey.conf for runtime parameters.
  If you got sqlgrey from sources, read the HOWTO file in the compressed archive.
  If it came prepackaged, look into the documentation tree for this file:
  /usr/share/doc/sqlgrey-<version>/ on most Linux distributions for example.
