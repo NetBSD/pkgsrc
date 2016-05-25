@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2146 2016/05/25 08:26:45 wen Exp $
+$NetBSD: CHANGES-2016,v 1.2147 2016/05/25 08:35:06 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2751,3 +2751,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added textproc/jgrep version 0.4.0 [cheusov 2016-05-24]
 	Updated graphics/p5-Image-BMP to 1.19 [wiz 2016-05-25]
 	Updated www/moodle to 3.1 [wen 2016-05-25]
+	Updated devel/p5-Moose to 2.1802 [wen 2016-05-25]
