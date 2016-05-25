@@ -1,11 +1,18 @@
-@comment $NetBSD: PLIST,v 1.3 2014/03/11 14:05:05 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.4 2016/05/25 21:39:44 fhajny Exp $
 bin/sqlgrey-logstats.pl
 man/man1/sqlgrey.1
 sbin/sqlgrey
 sbin/update_sqlgrey_config
-share/examples/sqlgrey/README
+share/doc/sqlgrey/FAQ
+share/doc/sqlgrey/HOWTO
+share/doc/sqlgrey/README
+share/doc/sqlgrey/README.DBCLUSTER
+share/doc/sqlgrey/README.DISCRIMINATION
+share/doc/sqlgrey/README.OPTINOUT
+share/doc/sqlgrey/README.PERF
 share/examples/sqlgrey/clients_fqdn_whitelist
 share/examples/sqlgrey/clients_ip_whitelist
+share/examples/sqlgrey/discrimination.regexp
 share/examples/sqlgrey/dyn_fqdn.regexp
 share/examples/sqlgrey/smtp_server.regexp
 share/examples/sqlgrey/sqlgrey.conf

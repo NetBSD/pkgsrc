@@ -1,0 +1,13 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2016/05/25 21:39:44 fhajny Exp $
+
+You'll need to install one of the three tested DBD driver packages
+in order to use sqlgrey:
+
+ - p5-DBD-mysql (DBD::MySQL)
+ - p5-DBD-postgresql (DBD::Pg)
+ - p5-DBD-SQLite (DBD::SQLite)
+
+and update sqlgrey.conf appropriately.
+
+===========================================================================
