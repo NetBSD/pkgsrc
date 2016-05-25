@@ -1,0 +1,16 @@
+$NetBSD: patch-src_glu_CMakeLists.txt,v 1.1 2016/05/25 14:38:48 bouyer Exp $
+Make sure to use our glu.h before the base libraries ones.
+
+--- src/glu/CMakeLists.txt.orig	2016-05-25 16:23:41.000000000 +0200
++++ src/glu/CMakeLists.txt	2016-05-25 16:24:01.000000000 +0200
+@@ -17,8 +17,8 @@
+   ADD_DEFINITIONS( " -g -fno-strict-aliasing -O2")
+ ENDIF(NOT WIN32 AND NOT APPLE)
+ 
+-INCLUDE_DIRECTORIES(${CMAKE_SOURCE_DIR}/include)
+-INCLUDE_DIRECTORIES(include)
++INCLUDE_DIRECTORIES(BEFORE ${CMAKE_SOURCE_DIR}/include)
++INCLUDE_DIRECTORIES(BEFORE include)
+ 
+ IF(WIN32)
+     IF(MSVC)
