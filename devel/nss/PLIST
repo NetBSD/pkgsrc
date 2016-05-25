@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2016/05/20 11:53:18 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2016/05/25 13:17:13 ryoon Exp $
 bin/nss-config
 include/nss/dbm/mcom_db.h
 include/nss/dbm/ncompat.h
@@ -27,6 +27,8 @@ include/nss/nss/key.h
 include/nss/nss/keyhi.h
 include/nss/nss/keyt.h
 include/nss/nss/keythi.h
+include/nss/nss/lowkeyi.h
+include/nss/nss/lowkeyti.h
 include/nss/nss/nss.h
 include/nss/nss/nssb64.h
 include/nss/nss/nssb64t.h
