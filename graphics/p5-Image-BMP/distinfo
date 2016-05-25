@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2016/05/22 17:35:30 wiz Exp $
+$NetBSD: distinfo,v 1.5 2016/05/25 06:49:43 wiz Exp $
 
-SHA1 (Image-BMP-1.18.tar.gz) = 51681f3959c737b085bd709a0723672fac9f8302
-RMD160 (Image-BMP-1.18.tar.gz) = 7519eb152217c81653c63c3f67c517adf8c2bfc5
-SHA512 (Image-BMP-1.18.tar.gz) = e197f945270625b876ae369bc2a87b03795767084d9abe2dd01b4ed5861dcf6786756955b43f80a5f3f9db0323d6b70fa9ed81b3d623165d988c4b76ea0b12db
-Size (Image-BMP-1.18.tar.gz) = 11085 bytes
+SHA1 (Image-BMP-1.19.tar.gz) = 2c3999e9e780d5d8186e42abba1ebf2d89fcd4ef
+RMD160 (Image-BMP-1.19.tar.gz) = f8c8629a2253ed5c156510c985929ac7fe2c0b21
+SHA512 (Image-BMP-1.19.tar.gz) = 45d0cc814cab63a2347208c95b3801a6f5a841804cbbf463d05ea8467b4e300e3de9d5475be0f11cc6bc653d57c6d29008e0280201860cefc4528439685fcbe5
+Size (Image-BMP-1.19.tar.gz) = 11137 bytes
