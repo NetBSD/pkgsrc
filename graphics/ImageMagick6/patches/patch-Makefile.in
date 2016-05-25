@@ -1,0 +1,34 @@
+$NetBSD: patch-Makefile.in,v 1.1 2016/05/25 12:41:17 ryoon Exp $
+
+* Do not install non-versioned pkgconfig pc files
+  to coexist with graphics/ImageMagick
+
+--- Makefile.in.orig	2016-05-21 12:14:51.000000000 +0000
++++ Makefile.in
+@@ -4185,8 +4185,6 @@ MAGICK_BIN_SCRPTS = \
+   magick/MagickCore-config
+ 
+ MAGICK_PKGCONFIG = \
+-  magick/ImageMagick.pc \
+-  magick/MagickCore.pc \
+   magick/ImageMagick-@MAGICK_MAJOR_VERSION@.@MAGICK_ABI_SUFFIX@.pc \
+   magick/MagickCore-@MAGICK_MAJOR_VERSION@.@MAGICK_ABI_SUFFIX@.pc
+ 
+@@ -4722,8 +4720,6 @@ WAND_BIN_SCRPTS = \
+ 	wand/MagickWand-config
+ 
+ WAND_PKGCONFIG = \
+-	wand/MagickWand.pc \
+-	wand/Wand.pc \
+ 	wand/MagickWand-@MAGICK_MAJOR_VERSION@.@MAGICK_ABI_SUFFIX@.pc \
+ 	wand/Wand-@MAGICK_MAJOR_VERSION@.@MAGICK_ABI_SUFFIX@.pc
+ 
+@@ -4778,8 +4774,6 @@ MAGICKPP_MANS_OPT = \
+ 	Magick++/bin/Magick++-config.1
+ 
+ MAGICKPP_PKGCONFIG_OPT = \
+-	Magick++/lib/Magick++.pc \
+-	Magick++/lib/ImageMagick++.pc \
+ 	Magick++/lib/Magick++-@MAGICK_MAJOR_VERSION@.@MAGICK_ABI_SUFFIX@.pc \
+ 	Magick++/lib/ImageMagick++-@MAGICK_MAJOR_VERSION@.@MAGICK_ABI_SUFFIX@.pc
+ 
