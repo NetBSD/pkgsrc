@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.111 2016/05/24 21:08:21 wiz Exp $
+$NetBSD: distinfo,v 1.112 2016/05/25 07:16:36 he Exp $
 
 SHA1 (libxml2-2.9.4.tar.gz) = 958ae70baf186263a4bd801a81dd5d682aedd1db
 RMD160 (libxml2-2.9.4.tar.gz) = bb59656e0683d64a38a2f1a45ca9d918837e1e56
 SHA512 (libxml2-2.9.4.tar.gz) = f5174ab1a3a0ec0037a47f47aa47def36674e02bfb42b57f609563f84c6247c585dbbb133c056953a5adb968d328f18cbc102eb0d00d48eb7c95478389e5daf9
 Size (libxml2-2.9.4.tar.gz) = 5374830 bytes
 SHA1 (patch-aa) = e687eaa9805b855b0c8a944ec5c597bd34954472
-SHA1 (patch-ab) = 5bb6b5002518538ef8daf42b5220072958efa6a8
+SHA1 (patch-ab) = d6d6e9a91307da0c7f334b5b9ad432878babd1ac
 SHA1 (patch-ac) = 34afe787f6012b460a85be993048e133907a1621
 SHA1 (patch-ad) = d65b7e3be9694147e96ce4bb70a1739e2279ba81
 SHA1 (patch-ae) = 4eede9719724f94402e850ee6d6043a74aaf62b2
