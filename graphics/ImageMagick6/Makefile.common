@@ -1,0 +1,39 @@
+# $NetBSD: Makefile.common,v 1.1 2016/05/25 12:41:17 ryoon Exp $
+#
+# used by graphics/p5-PerlMagick/Makefile
+
+IM_MAJOR_VER=		6.9.4
+IM_MINOR_VER=		4
+IM_MAJOR_LIB_VER=	6
+
+.if (${IM_MINOR_VER} != NONE)
+DISTSUFFIX=	${IM_MAJOR_VER}-${IM_MINOR_VER}
+.else
+DISTSUFFIX=	${IM_MAJOR_VER}
+.endif
+
+DISTNAME=	ImageMagick-${DISTSUFFIX}
+DISTVERSION=	${DISTSUFFIX:S/-/./}
+
+CATEGORIES=	graphics
+MASTER_SITES=	ftp://ftp.imagemagick.org/pub/ImageMagick/ \
+		ftp://ftp.nluug.nl/pub/ImageMagick/ \
+		ftp://ftp.kddlabs.co.jp/graphics/ImageMagick/ \
+		http://www.imagemagick.org/download/
+EXTRACT_SUFX=	.tar.xz
+
+HOMEPAGE=	http://www.imagemagick.org/
+LICENSE=	gnu-gpl-v3
+
+WRKSRC=		${WRKDIR}/ImageMagick-${DISTSUFFIX}
+
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
+# For things for which we do not specify an explicit dependency above, disable
+# so that we don't cause implicit "hidden" dependencies.
+CONFIGURE_ARGS+=	--without-dps
+CONFIGURE_ARGS+=	--without-fpx
+CONFIGURE_ARGS+=	--without-gvc
+CONFIGURE_ARGS+=	--without-jbig
+CONFIGURE_ARGS+=	--without-lqr
+CONFIGURE_ARGS+=	--without-modules
