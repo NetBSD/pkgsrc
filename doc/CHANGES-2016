@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2144 2016/05/24 22:28:43 cheusov Exp $
+$NetBSD: CHANGES-2016,v 1.2145 2016/05/25 06:49:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2749,3 +2749,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/duplicity to 0.7.07.1 [bsiegert 2016-05-24]
 	Updated lang/nodejs4 to 4.4.5 [fhajny 2016-05-24]
 	Added textproc/jgrep version 0.4.0 [cheusov 2016-05-24]
+	Updated graphics/p5-Image-BMP to 1.19 [wiz 2016-05-25]
