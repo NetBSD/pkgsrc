@@ -1,4 +1,11 @@
-$NetBSD: patch-ab,v 1.28 2015/04/24 11:32:29 spz Exp $
+$NetBSD: patch-ab,v 1.28.8.1 2016/05/25 19:07:28 spz Exp $
+
+Various configure fixes:
+ * Add run-path to XML_LIBDIR
+ * Fix handling of pthreads
+ * Add portability to OpenBSD, MirBSD, FreeBSD, NetBSD and DragonFly
+ * Fix test for SAX
+   Submitted as https://bugzilla.gnome.org/show_bug.cgi?id=766859
 
 --- configure.orig	2014-10-16 07:35:12.000000000 +0000
 +++ configure
