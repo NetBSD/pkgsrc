@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2150 2016/05/25 14:43:49 bouyer Exp $
+$NetBSD: CHANGES-2016,v 1.2151 2016/05/25 16:27:00 schnoebe Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2755,3 +2755,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added graphics/ImageMagick6 version 6.9.4.4 [ryoon 2016-05-25]
 	Updated devel/nss to 3.24 [ryoon 2016-05-25]
 	Updated geography/opencpn to 4.2.0nb1 [bouyer 2016-05-25]
+	Updated chat/jabberd2 to 2.4.0 [schnoebe 2016-05-24]
