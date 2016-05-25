@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.579 2016/05/25 18:19:30 fhajny Exp $
+# $NetBSD: Makefile,v 1.580 2016/05/25 20:19:45 fhajny Exp $
 #
 
 COMMENT=	Security tools
@@ -111,6 +111,7 @@ SUBDIR+=	hackbot
 SUBDIR+=	hashcash
 SUBDIR+=	heimdal
 SUBDIR+=	heirloom-su
+SUBDIR+=	hitch
 SUBDIR+=	honeyd
 SUBDIR+=	honeyd-arpd
 SUBDIR+=	hs-digest
