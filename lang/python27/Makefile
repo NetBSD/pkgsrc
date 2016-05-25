@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2016/04/10 16:39:27 joerg Exp $
+# $NetBSD: Makefile,v 1.59 2016/05/25 16:56:41 leot Exp $
 
 .include "dist.mk"
 
@@ -84,6 +84,7 @@ PLIST_SUBST+=	PY_PLATNAME=${PY_PLATNAME:Q}
 
 .if (${MACHINE_ARCH} == "alpha") || (${MACHINE_ARCH} == "sparc64") || \
     (${MACHINE_ARCH} == "x86_64") || (${MACHINE_ARCH} == "powerpc64") || \
+    (${MACHINE_ARCH} == "ia64") || \
     (defined(ABI) && ${ABI} == "64")
 IS_64BIT_PLATFORM?=	yes
 .else
