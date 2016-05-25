@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2016/05/07 10:10:09 joerg Exp $
+# $NetBSD: Makefile,v 1.57 2016/05/25 15:35:32 joerg Exp $
 
 DISTNAME=	open-vm-tools-2008.08.08-109361
 PKGNAME=	open-vm-tools-2008.08.08.109361
@@ -39,7 +39,7 @@ pre-configure:
 .if !empty(PKGSRC_COMPILER:Mclang)
 _WRAP_EXTRA_ARGS.CC+=	-Wno-error=unused-local-typedef
 CWRAPPERS_APPEND.cc+=	-Wno-error=unused-local-typedef
-.elif !empty(PKGSRC_COMPILER:Mgcc)
+.elif !empty(PKGSRC_COMPILER:Mgcc) && empty(CC_VERSION:U:Mgcc-[1-3].*) && empty(CC_VERSION:U:Mgcc-4.[0-7]*)
 _WRAP_EXTRA_ARGS.CC+=	-Wno-error=unused-local-typedefs -Wno-error=unused-but-set-variable
 CWRAPPERS_APPEND.cc+=	-Wno-error=unused-local-typedefs -Wno-error=unused-but-set-variable
 .endif
