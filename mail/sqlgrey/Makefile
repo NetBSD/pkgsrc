@@ -1,45 +1,56 @@
-# $NetBSD: Makefile,v 1.10 2015/06/12 10:50:26 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2016/05/25 21:39:44 fhajny Exp $
 
-DISTNAME=		sqlgrey-1.6.8
-PKGREVISION=		7
+DISTNAME=		sqlgrey-1.8.0
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sqlgrey/}
-EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://sqlgrey.sourceforge.net/
 COMMENT=		Postfix greylisting policy daemon
+LICENSE=		gnu-gpl-v2
 
 USE_TOOLS+=		perl:run
 
 DEPENDS+=		p5-Net-Server>=0.87:../../net/p5-Net-Server
 DEPENDS+=		p5-IO-Multiplex>=1:../../devel/p5-IO-Multiplex
 
-PKG_SYSCONFSUBDIR=	${PKGBASE}
-EGDIR=			${PREFIX}/share/examples/${PKGBASE}
-
 .include "../../mk/bsd.prefs.mk"
+
+BUILD_DEFS+=		VARBASE SQLGREY_DIR SQLGREY_PIDDIR
+BUILD_DEFS+=		SQLGREY_USER SQLGREY_GROUP
 
 SQLGREY_USER?=		sqlgrey
 SQLGREY_GROUP?=		sqlgrey
+SQLGREY_DIR?=		${VARBASE}/db/sqlgrey
+SQLGREY_PIDDIR?=	${VARBASE}/run
 
-PKG_USERS=		${SQLGREY_USER}:${SQLGREY_GROUP}
-PKG_GROUPS=		${SQLGREY_GROUP}
+PKG_USERS+=			${SQLGREY_USER}:${SQLGREY_GROUP}
+PKG_GROUPS+=			${SQLGREY_GROUP}
+PKG_HOME.${SQLGREY_USER}=	${SQLGREY_DIR}
 
+PKG_USERS_VARS=		SQLGREY_USER
+PKG_GROUPS_VARS=	SQLGREY_GROUP
+
+OWN_DIRS_PERMS+=	${SQLGREY_DIR} ${SQLGREY_USER} ${SQLGREY_GROUP} 0755
+
+EGDIR=			${PREFIX}/share/examples/${PKGBASE}
+INSTALLATION_DIRS+=	share/doc/sqlgrey
+
+PKG_SYSCONFSUBDIR=	${PKGBASE}
 RCD_SCRIPTS=		sqlgrey
 
-MAKE_ENV+=		EGDIR=${EGDIR}
+CONFIG_FILES=		sqlgrey.conf					\
+			clients_fqdn_whitelist clients_ip_whitelist	\
+			discrimination.regexp dyn_fqdn.regexp		\
+			smtp_server.regexp
 
-CONF_FILES=		${EGDIR}/clients_fqdn_whitelist	\
-			${PKG_SYSCONFDIR}/clients_fqdn_whitelist
-CONF_FILES+=		${EGDIR}/clients_ip_whitelist	\
-			${PKG_SYSCONFDIR}/clients_ip_whitelist
-CONF_FILES+=		${EGDIR}/dyn_fqdn.regexp	\
-			${PKG_SYSCONFDIR}/dyn_fqdn.regexp
-CONF_FILES+=		${EGDIR}/smtp_server.regexp	\
-			${PKG_SYSCONFDIR}/smtp_server.regexp
-CONF_FILES+=		${EGDIR}/sqlgrey.conf		\
-			${PKG_SYSCONFDIR}/sqlgrey.conf
+DOC_FILES=		FAQ HOWTO README README.DBCLUSTER		\
+			README.DISCRIMINATION README.OPTINOUT		\
+			README.PERF
+
+.for file in ${CONFIG_FILES}
+CONF_FILES+=		${EGDIR}/${file} ${PKG_SYSCONFDIR}/${file}
+.endfor
 
 REPLACE_PERL=		sqlgrey-logstats.pl
 REPLACE_PERL+=		sqlgrey
@@ -48,16 +59,19 @@ REPLACE_SH=		update_sqlgrey_config
 SUBST_CLASSES+=		sysconfdir
 SUBST_STAGE.sysconfdir=	pre-configure
 SUBST_FILES.sysconfdir=	sqlgrey update_sqlgrey_config etc/sqlgrey.conf
-SUBST_SED.sysconfdir=	-e 's,%%PKG_SYSCONFDIR%%,${PKG_SYSCONFDIR},g'
-SUBST_SED.sysconfdir+=	-e 's,%%VARBASE%%,${VARBASE},g'
-SUBST_SED.sysconfdir+=	-e 's,%%SQLGREY_USER%%,${SQLGREY_USER},g'
-SUBST_SED.sysconfdir+=	-e 's,%%SQLGREY_GROUP%%,${SQLGREY_GROUP},g'
+SUBST_VARS.sysconfdir=	PKG_SYSCONFDIR SQLGREY_PIDDIR
+SUBST_VARS.sysconfdir+=	SQLGREY_USER SQLGREY_GROUP
 
-BUILD_DEFS+=		VARBASE
-BUILD_DEFS+=		SQLGREY_USER SQLGREY_GROUP
+FILES_SUBST+=		SQLGREY_USER=${SQLGREY_USER}
+FILES_SUBST+=		SQLGREY_GROUP=${SQLGREY_GROUP}
 
-PKG_USERS_VARS=		SQLGREY_USER
-PKG_GROUPS_VARS=	SQLGREY_GROUP
+MAKE_ENV+=		EGDIR=${EGDIR}
+
+post-install:
+	${RM} -f ${DESTDIR}${PREFIX}/share/examples/sqlgrey/README
+.for file in ${DOC_FILES}
+	${INSTALL_DATA} ${WRKSRC}/${file} ${DESTDIR}${PREFIX}/share/doc/sqlgrey
+.endfor
 
 .include "../../databases/p5-DBI/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.3 2015/11/03 23:27:21 agc Exp $
+$NetBSD: distinfo,v 1.4 2016/05/25 21:39:44 fhajny Exp $
 
-SHA1 (sqlgrey-1.6.8.tar.bz2) = 1c687d1839fd2911bf9ef535eef8e84bc97d56a6
-RMD160 (sqlgrey-1.6.8.tar.bz2) = f5f13004fa1a9228eb1c5a141ec1658738447899
-SHA512 (sqlgrey-1.6.8.tar.bz2) = 15afdd030464dde177dc135ca54ebf4d5967736e520c2fe0171594f70dc9e3e2d7a63190bfbc19f92e104144ce7d45948915f194d27d5915c9f5272f7293716f
-Size (sqlgrey-1.6.8.tar.bz2) = 43551 bytes
-SHA1 (patch-aa) = 1bf8853fece173be36f9c3ac1112b89dbfe2796d
-SHA1 (patch-ab) = 637dc9870d6b01caa9cfe10109aeafd3192fbb66
-SHA1 (patch-ac) = 29100eb0d591abec3c2f628cc1c3eeaf46e739ac
-SHA1 (patch-ad) = 661dc0b5b08ca96bdc0f7b571e62a706b174fa13
+SHA1 (sqlgrey-1.8.0.tar.gz) = 059ffabe639363bbed696ab40b0a07cce5730f35
+RMD160 (sqlgrey-1.8.0.tar.gz) = 503ff9487154506e2f550d931654822f014e6d20
+SHA512 (sqlgrey-1.8.0.tar.gz) = 97ab057bf7111159166a6963d5948c10468731730136ddca6449d2d629f39235c09d00497a52408bb87057905c1bf43bc064571ee6302d7f1f8c6408af82d044
+Size (sqlgrey-1.8.0.tar.gz) = 69476 bytes
+SHA1 (patch-aa) = e6eb7bb4aa3169febfb6d0e7084ced34334112b3
+SHA1 (patch-ab) = f9bd117f36f1a4e9061845c226d23e24e7c6690b
+SHA1 (patch-ac) = fb7be803cc1f2c84282eacb3cc1d9fadae3aa4ba
+SHA1 (patch-ad) = 7abcb3e28a2a6c0605880cd6cca30391da9044fa
