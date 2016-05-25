@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2016/05/25 20:15:35 fhajny Exp $
+
+Make sure the following PEM file contains the private key, certificate
+and any intermediate CA certificates, or reconfigure the location
+in hitch.conf:
+
+  ${HITCH_CERTS}
+
+===========================================================================
