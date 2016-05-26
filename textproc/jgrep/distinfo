@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2016/05/24 22:27:49 cheusov Exp $
+$NetBSD: distinfo,v 1.2 2016/05/26 18:48:31 cheusov Exp $
 
-SHA1 (jgrep-0.4.0.tar.gz) = e2e6aac5c2b79915901b1b86e54382b8d6bb1633
-RMD160 (jgrep-0.4.0.tar.gz) = 45052a31c07abd691847704947dbbc16377c7da7
-SHA512 (jgrep-0.4.0.tar.gz) = 04c5d963c8aa01728ed3bd500c96379e777920df4a92fb58b9f0af3b1553da011ea7fc55082e0b85cf55d67cb84a60f212302a628942067a35997c5ca3189eb9
-Size (jgrep-0.4.0.tar.gz) = 20075 bytes
+SHA1 (jgrep-0.5.0.tar.gz) = 4e2215ef964d4c5450cacf754cadb8421611c4a4
+RMD160 (jgrep-0.5.0.tar.gz) = 05ada66c194c797ec716b8d6ee28999f6f4d9346
+SHA512 (jgrep-0.5.0.tar.gz) = cfd5256b93fdd369eabc989411cf9b2b81c46b184ff7903ef71939cd77d247e6146e12b55e6e6408e6ccb8143b4d8148d70f7ae460d0ccdfdf3a2158edae24c3
+Size (jgrep-0.5.0.tar.gz) = 20750 bytes
