@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2164 2016/05/26 14:42:55 khorben Exp $
+$NetBSD: CHANGES-2016,v 1.2165 2016/05/26 14:45:14 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2831,3 +2831,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/git-base to 2.8.3nb1 [khorben 2016-05-26]
 	Updated x11/gtk3 to 3.20.3nb1 [khorben 2016-05-26]
 	Updated security/yara to 3.4.0 [khorben 2016-05-26]
+	Updated security/py-yara to 3.4.0 [khorben 2016-05-26]
