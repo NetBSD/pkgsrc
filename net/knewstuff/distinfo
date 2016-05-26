@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/05/26 09:01:44 markd Exp $
+
+SHA1 (knewstuff-5.21.0.tar.xz) = 9990fe64e0489674a601307ac8e9c2d89fbe0072
+RMD160 (knewstuff-5.21.0.tar.xz) = 7c53f505fa872b0ecacb0fdd2636b64bb1cef410
+SHA512 (knewstuff-5.21.0.tar.xz) = de82bb71c2f34d0fdd410cecd9b93968a7643904e3a17aa5540ab6a61e8baddccfa7311fa331a27c0be6b104d2b378158a774968cfcc69ee90ec6d95f9cce6d7
+Size (knewstuff-5.21.0.tar.xz) = 859732 bytes
