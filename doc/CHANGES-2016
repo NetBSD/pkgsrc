@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2161 2016/05/26 13:32:11 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2162 2016/05/26 14:14:20 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2828,3 +2828,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added meta-pkgs/kf5 version 5.21.0 [markd 2016-05-26]
 	Updated security/libfprint to 0.0.6nb31 [wiz 2016-05-26]
 	Updated graphics/png to 1.6.22 [wiz 2016-05-26]
+	Updated devel/git-base to 2.8.3nb1 [khorben 2016-05-26]
