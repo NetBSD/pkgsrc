@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2016/04/07 13:26:37 adam Exp $
+# $NetBSD: Makefile,v 1.25 2016/05/26 14:04:04 khorben Exp $
 
 .include "../../devel/git/Makefile.common"
 
@@ -9,6 +9,8 @@ CONFLICTS+=		scmgit-base-[0-9]*
 SUPERSEDES+=		scmgit-base-[0-9]*
 
 DEPENDS+=		p5-Error>=0.17015:../../devel/p5-Error
+# for git-cvsimport
+DEPENDS+=		cvsps:../../devel/cvsps
 # for git-send-email
 #DEPENDS+=		{perl>=5.13.8,p5-MIME-Base64>=3.13}:../../converters/p5-MIME-Base64
 DEPENDS+=		p5-Email-Valid>=0.190:../../mail/p5-Email-Valid
