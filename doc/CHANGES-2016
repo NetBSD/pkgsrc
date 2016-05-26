@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2162 2016/05/26 14:14:20 khorben Exp $
+$NetBSD: CHANGES-2016,v 1.2163 2016/05/26 14:27:07 khorben Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2829,3 +2829,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/libfprint to 0.0.6nb31 [wiz 2016-05-26]
 	Updated graphics/png to 1.6.22 [wiz 2016-05-26]
 	Updated devel/git-base to 2.8.3nb1 [khorben 2016-05-26]
+	Updated x11/gtk3 to 3.20.3nb1 [khorben 2016-05-26]
