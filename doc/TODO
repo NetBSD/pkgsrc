@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15939 2016/05/25 15:34:10 wiz Exp $
+$NetBSD: TODO,v 1.15940 2016/05/26 11:35:25 kamil Exp $
 
 Suggested new packages
 ======================
@@ -2005,9 +2005,6 @@ Suggested cleanups in pkgsrc
 
 	o Install documentation consistently into share/doc/${PKGBASE} or
 	  share/doc/${PKGNAME}, not share/doc/html.
-
-	o Remove USE_X11BASE if there is no good reason to install a
-	  package into X11BASE.
 
 	o Convert packages to use VARBASE instead of hardcoding /var.
 
