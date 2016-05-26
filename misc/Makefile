@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.468 2016/05/21 21:48:36 youri Exp $
+# $NetBSD: Makefile,v 1.469 2016/05/26 08:55:07 markd Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -12,6 +12,7 @@ SUBDIR+=	ascii
 SUBDIR+=	asr-manpages
 SUBDIR+=	astrolog
 SUBDIR+=	attica
+SUBDIR+=	attica-qt5
 SUBDIR+=	autocue
 SUBDIR+=	basket
 SUBDIR+=	bbappconf
@@ -137,6 +138,7 @@ SUBDIR+=	kdepimlibs4
 SUBDIR+=	kdeplasma-addons4
 SUBDIR+=	kdeutils3
 SUBDIR+=	kdrill
+SUBDIR+=	kemoticons
 SUBDIR+=	kgeography
 SUBDIR+=	khard
 SUBDIR+=	kig
@@ -161,6 +163,7 @@ SUBDIR+=	kteatime
 SUBDIR+=	ktouch
 SUBDIR+=	kturtle
 SUBDIR+=	ktux
+SUBDIR+=	kunitconversion
 SUBDIR+=	kwordquiz
 SUBDIR+=	kz_h8write
 SUBDIR+=	labelnation
