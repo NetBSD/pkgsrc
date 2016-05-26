@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2266 2016/05/24 09:20:46 leot Exp $
+# $NetBSD: Makefile,v 1.2267 2016/05/26 08:39:32 markd Exp $
 #
 
 COMMENT=	Development utilities
@@ -405,10 +405,16 @@ SUBDIR+=	jq
 SUBDIR+=	js2-mode
 SUBDIR+=	js_of_ocaml
 SUBDIR+=	kapptemplate
+SUBDIR+=	kbookmarks
 SUBDIR+=	kcachegrind
+SUBDIR+=	kcmutils
+SUBDIR+=	kconfig
+SUBDIR+=	kcoreaddons
+SUBDIR+=	kcrash
 SUBDIR+=	kdbg
 SUBDIR+=	kde-dev-scripts
 SUBDIR+=	kde-dev-utils
+SUBDIR+=	kdeclarative
 SUBDIR+=	kdesdk-kioslaves
 SUBDIR+=	kdesdk-strigi-analyzers
 SUBDIR+=	kdesdk-thumbnailers
@@ -419,9 +425,22 @@ SUBDIR+=	kdevelop4
 SUBDIR+=	kdevplatform
 SUBDIR+=	kdiff3
 SUBDIR+=	kdiff3-kde3
+SUBDIR+=	kdoctools
+SUBDIR+=	ki18n
+SUBDIR+=	kidletime
+SUBDIR+=	kio
+SUBDIR+=	kitemmodels
+SUBDIR+=	knotifications
+SUBDIR+=	knotifyconfig
 SUBDIR+=	ko-po-check
 SUBDIR+=	kompare
+SUBDIR+=	kpackage
+SUBDIR+=	kparts
+SUBDIR+=	kpeople
+SUBDIR+=	kpty
 SUBDIR+=	kscope
+SUBDIR+=	kservice
+SUBDIR+=	ktexteditor
 SUBDIR+=	kyua
 SUBDIR+=	lcc
 SUBDIR+=	lcov
@@ -2152,6 +2171,7 @@ SUBDIR+=	tex-pst-uml-doc
 SUBDIR+=	tex-xifthen
 SUBDIR+=	tex-xifthen-doc
 SUBDIR+=	tig
+SUBDIR+=	threadweaver
 SUBDIR+=	tkcvs
 SUBDIR+=	tkdiff
 SUBDIR+=	tla
