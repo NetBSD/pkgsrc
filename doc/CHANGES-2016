@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2170 2016/05/26 18:48:44 cheusov Exp $
+$NetBSD: CHANGES-2016,v 1.2171 2016/05/26 23:23:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2838,3 +2838,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/ruby-opengl to 0.60.1nb3 [taca 2016-05-26]
 	Updated devel/RBTools to 0.7.6 [richard 2016-05-26]
 	Updated textproc/jgrep to 0.5.0 [cheusov 2016-05-26]
+	Updated mail/roundcube to 1.1.5nb1 [taca 2016-05-26]
