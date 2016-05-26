@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/05/26 09:17:14 markd Exp $
+# $NetBSD: Makefile,v 1.2 2016/05/26 23:03:13 youri Exp $
 
 DISTNAME=	solid-${KF5VER}
 CATEGORIES=	sysutils
@@ -7,7 +7,7 @@ HOMEPAGE=	https://community.kde.org/Frameworks
 COMMENT=	Hardware integration and detection
 LICENSE=	gnu-lgpl-v2.1
 
-.include "../../wip/meta-pkgs/Makefile.common"
+.include "../../meta-pkgs/kf5/Makefile.common"
 
 USE_TOOLS+=	flex bison
 
