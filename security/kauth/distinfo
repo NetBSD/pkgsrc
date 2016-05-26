@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2016/05/26 09:09:24 markd Exp $
+
+SHA1 (kauth-5.21.0.tar.xz) = 5b42fa11273319431f27de67a5d3b28075760a5e
+RMD160 (kauth-5.21.0.tar.xz) = e4ab43615211bfe89a1406172656879c459d472a
+SHA512 (kauth-5.21.0.tar.xz) = f9c30de5a3170054147c5e5fb6abb16924b0f9a4a5931d6a49ec34b4a292aa365817d28b00cf4f7ddc4f2c05a17f3763b98fce2b7084f2f8b039feaaba441e16
+Size (kauth-5.21.0.tar.xz) = 82644 bytes
+SHA1 (patch-src_ConfigureChecks.cmake) = c38cca661b579dcab28b16c982e7a336f58d6984
