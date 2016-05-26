@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.670 2016/05/23 10:52:04 youri Exp $
+# $NetBSD: Makefile,v 1.671 2016/05/26 09:22:53 markd Exp $
 #
 
 COMMENT=	System utilities
@@ -32,6 +32,7 @@ SUBDIR+=	bacula-qt-console
 SUBDIR+=	bacula-tray-monitor
 SUBDIR+=	bacula-wx-console
 SUBDIR+=	baloo
+SUBDIR+=	baloo5
 SUBDIR+=	baloo-widgets
 SUBDIR+=	bbsload
 SUBDIR+=	bchunk
@@ -283,9 +284,11 @@ SUBDIR+=	k3b
 SUBDIR+=	k3b-kde3
 SUBDIR+=	k4dirstat
 SUBDIR+=	kcron
+SUBDIR+=	kdbusaddons
 SUBDIR+=	kdf
 SUBDIR+=	kdirstat
 SUBDIR+=	kfilemetadata
+SUBDIR+=	kfilemetadata5
 SUBDIR+=	kfloppy
 SUBDIR+=	krusader
 SUBDIR+=	ksystemlog
@@ -503,6 +506,7 @@ SUBDIR+=	slocate
 SUBDIR+=	smartmontools
 SUBDIR+=	smbldap-tools
 SUBDIR+=	socket
+SUBDIR+=	solid
 SUBDIR+=	spice-protocol
 SUBDIR+=	sredird
 SUBDIR+=	sshsh
