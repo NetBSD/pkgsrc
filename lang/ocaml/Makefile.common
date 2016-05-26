@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.46 2016/05/05 08:12:01 jaapb Exp $
+# $NetBSD: Makefile.common,v 1.47 2016/05/26 14:31:12 khorben Exp $
 
 # used by x11/labltk/Makefile
 # used by x11/ocaml-graphics/Makefile
@@ -33,11 +33,11 @@ INSTALL_UNSTRIPPED=	yes
 .endif
 
 .if ${OPSYS} == "Darwin"
-CONFIGURE_ARGS+=	-cc "${CC} -arch ${MACHINE_ARCH}"
+CONFIGURE_ARGS+=	-cc "${CC} -arch ${MACHINE_ARCH} ${CFLAGS}"
 CONFIGURE_ARGS+=	-aspp "${CC} -arch ${MACHINE_ARCH} -c"
 CONFIGURE_ARGS+=	-as "as -arch ${MACHINE_ARCH}"
 .else
-CONFIGURE_ARGS+=    -cc ${CC}
+CONFIGURE_ARGS+=    -cc "${CC} ${CFLAGS}"
 .endif
 
 .include "../../mk/bdb.buildlink3.mk"
