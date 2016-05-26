@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/05/26 09:17:14 markd Exp $
+
+SHA1 (solid-5.21.0.tar.xz) = 44b8ee1836854e0a87453f98a9236936fe8ffc20
+RMD160 (solid-5.21.0.tar.xz) = ab13d8c17b1e894977db60dc19f4bdc94291bc41
+SHA512 (solid-5.21.0.tar.xz) = 005cb4a1dd60a835237ef020ecc6308fafe66f0ff27e0e687ea48b52a1f352010550cd975f236c4d9d467c9e362ebb27597dfa29b0914dc04b415e376e99039c
+Size (solid-5.21.0.tar.xz) = 268104 bytes
