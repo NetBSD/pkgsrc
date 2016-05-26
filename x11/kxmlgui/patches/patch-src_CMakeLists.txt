@@ -1,0 +1,15 @@
+$NetBSD: patch-src_CMakeLists.txt,v 1.1 2016/05/26 09:49:49 markd Exp $
+
+Install via examples dir
+
+--- src/CMakeLists.txt.orig	2016-02-06 14:00:37.000000000 +0000
++++ src/CMakeLists.txt
+@@ -135,7 +135,7 @@ install(FILES
+ )
+ 
+ # install this file to be compatible, it is bundled in the resource file, too
+-install( FILES ui_standards.rc  DESTINATION  ${KDE_INSTALL_CONFDIR}/ui )
++install( FILES ui_standards.rc  DESTINATION  ${KDE_INSTALL_DATAROOTDIR}/examples/kxmlgui )
+ 
+ include(ECMGeneratePriFile)
+ ecm_generate_pri_file(BASE_NAME KXmlGui LIB_NAME KF5XmlGui DEPS "dbus xml widgets KConfigCore KConfigWidgets" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF5}/KXmlGui)
