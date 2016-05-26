@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.580 2016/05/25 20:19:45 fhajny Exp $
+# $NetBSD: Makefile,v 1.581 2016/05/26 06:23:36 markd Exp $
 #
 
 COMMENT=	Security tools
@@ -352,6 +352,7 @@ SUBDIR+=	policykit
 SUBDIR+=	policykit-gnome
 SUBDIR+=	polkit
 SUBDIR+=	polkit-qt
+SUBDIR+=	polkit-qt5
 SUBDIR+=	portsentry
 SUBDIR+=	prelude-correlator
 SUBDIR+=	prelude-lml
