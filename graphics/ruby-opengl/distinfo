@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2015/11/03 21:34:19 agc Exp $
+$NetBSD: distinfo,v 1.14 2016/05/26 17:08:57 taca Exp $
 
 SHA1 (ruby-opengl-0.60.1.gem) = ae8a2ceec7102fce6450273885372fa16d820c87
 RMD160 (ruby-opengl-0.60.1.gem) = fc046485ad0da0a269c5b282cef9f027dad16077
@@ -6,3 +6,6 @@ SHA512 (ruby-opengl-0.60.1.gem) = 2ddb8acf3e74f48b173a6f5421f6ba57c82f6871d1f332
 Size (ruby-opengl-0.60.1.gem) = 245248 bytes
 SHA1 (patch-Rakefile) = 3fc0debd15a230e43dde593af79aa3e857fa4c2d
 SHA1 (patch-ext_common_conv.h) = 12bc77ddbdfd2df39aa7c9688847bae433a8c620
+SHA1 (patch-ext_gl_mkrf__conf.rb) = 1043fd1b2c5d0edc2bd70bd2fe86e210ce4ca537
+SHA1 (patch-ext_glu_mkrf__conf.rb) = e1a8c53b8538c015b17237fd228f63447cb1d653
+SHA1 (patch-ext_glut_mkrf__conf.rb) = 94e4f50e3a5dbad5dc0beb8a887c608747b5c43f
