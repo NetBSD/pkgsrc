@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/05/26 06:22:54 markd Exp $
+
+SHA1 (polkit-qt-1-0.112.0.tar.bz2) = 042b8a42e88bd578c27600e9b70c4e142a39da91
+RMD160 (polkit-qt-1-0.112.0.tar.bz2) = 6104a17a0b5ae4bd8c21426d30dbb3e49a225fbb
+SHA512 (polkit-qt-1-0.112.0.tar.bz2) = 4cb17389b54a09c53052f6d72aa5cbfe09ccb19f7fd4edf8b43ccd4751f5e88609c5f89777f4af92167d32eb2ce1e78537cea7bcfb60a90072d1fe02d6a59b50
+Size (polkit-qt-1-0.112.0.tar.bz2) = 67725 bytes
