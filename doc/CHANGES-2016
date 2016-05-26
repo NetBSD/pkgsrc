@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2157 2016/05/26 09:05:06 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2158 2016/05/26 09:22:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2763,3 +2763,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/roundcube to 1.1.5 [taca 2016-05-26]
 	Updated emulators/mame to 0.174 [wiz 2016-05-26]
 	Updated x11/libXfixes to 5.0.2 [wiz 2016-05-26]
+	Updated net/php-baikal to 0.4.4 [wiz 2016-05-26]
