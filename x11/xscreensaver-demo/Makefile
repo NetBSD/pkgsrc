@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2015/07/02 18:47:57 khorben Exp $
+# $NetBSD: Makefile,v 1.62 2016/05/26 14:35:04 khorben Exp $
 
 PKGNAME=	${DISTNAME:S/-/-demo-/}
 COMMENT=	Demo viewer and configuration tool for xscreensaver
@@ -10,7 +10,6 @@ CONFLICTS+=	xscreensaver<4.14 xscreensaver-gnome-[0-9]*
 USE_TOOLS+=		pkg-config
 
 CONFIGURE_ARGS+=	--with-gtk=${BUILDLINK_PREFIX.gtk2}
-CONFIGURE_ARGS+=	--with-xml=${BUILDLINK_PREFIX.libxml2}
 CONFIGURE_ARGS+=	--with-configdir=${PREFIX}/libexec/xscreensaver/config
 
 BUILD_DIRS=		utils driver
