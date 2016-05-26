@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2159 2016/05/26 10:31:06 markd Exp $
+$NetBSD: CHANGES-2016,v 1.2160 2016/05/26 11:44:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2826,3 +2826,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added x11/kxmlgui version 5.21.0 [markd 2016-05-26]
 	Added x11/plasma-framework version 5.21.0 [markd 2016-05-26]
 	Added meta-pkgs/kf5 version 5.21.0 [markd 2016-05-26]
+	Updated security/libfprint to 0.0.6nb31 [wiz 2016-05-26]
