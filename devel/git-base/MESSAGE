@@ -1,8 +1,10 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2014/01/16 09:34:27 wiz Exp $
+$NetBSD: MESSAGE,v 1.3 2016/05/26 15:41:06 khorben Exp $
 
 NOTE:	Pristine templates are located in:
 	${GIT_TEMPLATE_INSTDIR}.
+
+To use the git-cvsimport repository conversion from CVS, install git-cvs.
 
 To use the git-svn interface to Subversion, install git-svn.
 
