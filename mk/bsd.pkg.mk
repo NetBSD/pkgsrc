@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.2018 2016/03/23 11:50:01 jperkin Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.2019 2016/05/26 16:03:04 khorben Exp $
 #
 # This file is in the public domain.
 #
@@ -677,6 +677,10 @@ _BIN_INSTALL_FLAGS+=	${PKG_ARGS_ADD}
 _SHORT_UNAME_R=	${:!${UNAME} -r!:C@\.([0-9]*)[_.-].*@.\1@} # n.n[_.]anything => n.n
 
 .include "install/bin-install.mk"
+
+# Handle PaX flags
+#
+.include "pax.mk"
 
 .PHONY: show-pkgtools-version
 .if !target(show-pkgtools-version)
