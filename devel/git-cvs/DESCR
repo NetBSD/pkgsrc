@@ -1,0 +1,2 @@
+Imports a CVS repository into Git. It will either create a new
+repository, or incrementally import into an existing one.
