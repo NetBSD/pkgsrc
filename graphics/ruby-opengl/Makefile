@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2015/04/25 14:23:19 tnn Exp $
+# $NetBSD: Makefile,v 1.33 2016/05/26 17:08:57 taca Exp $
 
 DISTNAME=	ruby-opengl-0.60.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/ruby-//}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 
 MAINTAINER=	taca@NetBSD.org
@@ -13,6 +13,7 @@ LICENSE=	mit
 DEPENDS+=	${RUBY_PKGPREFIX}-mkrf>=0.2.0:../../devel/ruby-mkrf
 
 USE_RAKE=	YES
+MAKE_ENV+=	LDSHARED=${COMPILER_RPATH_FLAG:Q}${X11BASE:Q}/lib
 
 pre-configure:
 	${FIND} ${WRKSRC} -type f -exec ${CHMOD} -x {} \;
