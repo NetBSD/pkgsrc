@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2016/04/09 05:06:10 richard Exp $
+$NetBSD: distinfo,v 1.5 2016/05/26 17:42:47 richard Exp $
 
-SHA1 (RBTools-0.7.5.tar.gz) = 6051ff5e4b8ad1fda25215c7eae249eb6733b373
-RMD160 (RBTools-0.7.5.tar.gz) = 88c0474b58a905682b7f07af0e3322b572dce089
-SHA512 (RBTools-0.7.5.tar.gz) = f5c795929d8fb09b3f39c18e747096d56205c6fbf73e4a04a5898b5adc058d092e41f835ba6cea8b4b94bc5747cbbdf988131ad66e637cc77e0d59a4509786ef
-Size (RBTools-0.7.5.tar.gz) = 160657 bytes
+SHA1 (RBTools-0.7.6.tar.gz) = 87d7ef5b07e73691396582c255a391850a3a4c0b
+RMD160 (RBTools-0.7.6.tar.gz) = b7065bc2b8b19daab2e15d5444e1c07aba07c08f
+SHA512 (RBTools-0.7.6.tar.gz) = 46a141370f79f4a9bcf417a2fca0fae6f1cc3d0ce2de9fd5f06df7162ecf051b418d12795adce9b12ed8244800da17f87df8b3f04c79c269b3b292a2033bc958
+Size (RBTools-0.7.6.tar.gz) = 162080 bytes
