@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2267 2016/05/26 08:39:32 markd Exp $
+# $NetBSD: Makefile,v 1.2268 2016/05/26 15:37:37 khorben Exp $
 #
 
 COMMENT=	Development utilities
@@ -270,6 +270,7 @@ SUBDIR+=	gindent
 SUBDIR+=	git
 SUBDIR+=	git-base
 SUBDIR+=	git-contrib
+SUBDIR+=	git-cvs
 SUBDIR+=	git-docs
 SUBDIR+=	git-gitk
 SUBDIR+=	git-remote-hg
