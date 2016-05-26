@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2016/03/13 17:26:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2016/05/26 09:22:35 wiz Exp $
 share/baikal/CHANGELOG.md
 share/baikal/Core/Distrib.php
 share/baikal/Core/Frameworks/Baikal/Core/PDOBasicAuth.php
@@ -17,7 +17,6 @@ share/baikal/Core/Frameworks/Baikal/Model/Config/System.php
 share/baikal/Core/Frameworks/Baikal/Model/Principal.php
 share/baikal/Core/Frameworks/Baikal/Model/User.php
 share/baikal/Core/Frameworks/Baikal/WWWRoot/index.php
-share/baikal/Core/Frameworks/BaikalAdmin/.Framework.php.swp
 share/baikal/Core/Frameworks/BaikalAdmin/Controller/Dashboard.php
 share/baikal/Core/Frameworks/BaikalAdmin/Controller/Install/Database.php
 share/baikal/Core/Frameworks/BaikalAdmin/Controller/Install/Initialize.php
@@ -184,11 +183,9 @@ share/baikal/Core/Resources/Web/TwitterBootstrap/js/bootstrap.min.js
 share/baikal/Core/Resources/Web/TwitterBootstrap/js/jquery-1.7.1.min.js
 share/baikal/LICENSE
 share/baikal/README.md
-share/baikal/Specific/ENABLE_INSTALL
 share/baikal/Specific/db/.empty
 share/baikal/html/.htaccess
 share/baikal/html/admin/index.php
-share/baikal/html/admin/install/.index.php.swp
 share/baikal/html/admin/install/index.php
 share/baikal/html/cal.php
 share/baikal/html/card.php
@@ -821,6 +818,7 @@ share/baikal/vendor/sabre/uri/lib/Version.php
 share/baikal/vendor/sabre/uri/lib/functions.php
 share/baikal/vendor/sabre/uri/tests/BuildTest.php
 share/baikal/vendor/sabre/uri/tests/NormalizeTest.php
+share/baikal/vendor/sabre/uri/tests/ParseTest.php
 share/baikal/vendor/sabre/uri/tests/ResolveTest.php
 share/baikal/vendor/sabre/uri/tests/SplitTest.php
 share/baikal/vendor/sabre/uri/tests/phpcs/ruleset.xml
