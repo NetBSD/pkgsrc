@@ -1,9 +1,9 @@
-# $NetBSD: pax.mk,v 1.1 2016/05/26 16:03:04 khorben Exp $
+# $NetBSD: pax.mk,v 1.2 2016/05/26 16:37:02 khorben Exp $
 #
 # Infrastructure support for binaries known to fail with PaX enabled.
 #
 # User-settable variables:
-# PAXCTL
+# TOOLS_PLATFORM.paxctl
 #	The path to the paxctl(8) binary
 #
 # Package-settable variables:
