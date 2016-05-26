@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2016/05/25 21:39:44 fhajny Exp $
+# $NetBSD: Makefile,v 1.12 2016/05/26 00:51:05 fhajny Exp $
 
 DISTNAME=		sqlgrey-1.8.0
+PKGREVISION=		1
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sqlgrey/}
 
@@ -13,6 +14,10 @@ USE_TOOLS+=		perl:run
 
 DEPENDS+=		p5-Net-Server>=0.87:../../net/p5-Net-Server
 DEPENDS+=		p5-IO-Multiplex>=1:../../devel/p5-IO-Multiplex
+
+# update_sqlgrey_config relies on diff, md5sum and wget
+USE_TOOLS+=		diff:run wget:run
+DEPENDS+=		coreutils-[0-9]*:../../sysutils/coreutils
 
 .include "../../mk/bsd.prefs.mk"
 
