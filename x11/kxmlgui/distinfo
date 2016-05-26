@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2016/05/26 09:49:49 markd Exp $
+
+SHA1 (kxmlgui-5.21.0.tar.xz) = de1a813dfd9532b7da924fef082a6bc535560a13
+RMD160 (kxmlgui-5.21.0.tar.xz) = 06f3a19f13db669b1a3978a98af31b5a2f1c273f
+SHA512 (kxmlgui-5.21.0.tar.xz) = fb94c84bc650911e046825bac4be7271d374b0a273594513f8a7a321ff9eb23aae8cfa084b7a663d54060414b7b14e3065b0edc9012b327ed54b49c2cbbf0267
+Size (kxmlgui-5.21.0.tar.xz) = 868340 bytes
+SHA1 (patch-src_CMakeLists.txt) = 6641d488b9cd8b7d000d7488eb27a5fb1fe9ca79
