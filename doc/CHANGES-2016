@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2155 2016/05/26 03:21:23 taca Exp $
+$NetBSD: CHANGES-2016,v 1.2156 2016/05/26 09:02:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2761,3 +2761,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added security/hitch version 1.2.0 [fhajny 2016-05-25]
 	Updated mail/sqlgrey to 1.8.0 [fhajny 2016-05-25]
 	Updated mail/roundcube to 1.1.5 [taca 2016-05-26]
+	Updated emulators/mame to 0.174 [wiz 2016-05-26]
