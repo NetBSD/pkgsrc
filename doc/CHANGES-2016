@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2167 2016/05/26 15:42:20 khorben Exp $
+$NetBSD: CHANGES-2016,v 1.2168 2016/05/26 17:09:37 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2835,3 +2835,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated x11/xterm to 324nb1 [khorben 2016-05-26]
 	Added devel/git-cvs version 2.8.3 [khorben 2016-05-26]
 	Updated devel/git-base to 2.8.3nb2 [khorben 2016-05-26]
+	Updated graphics/ruby-opengl to 0.60.1nb3 [taca 2016-05-26]
