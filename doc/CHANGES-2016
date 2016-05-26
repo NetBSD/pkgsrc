@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2169 2016/05/26 17:43:34 richard Exp $
+$NetBSD: CHANGES-2016,v 1.2170 2016/05/26 18:48:44 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2837,3 +2837,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/git-base to 2.8.3nb2 [khorben 2016-05-26]
 	Updated graphics/ruby-opengl to 0.60.1nb3 [taca 2016-05-26]
 	Updated devel/RBTools to 0.7.6 [richard 2016-05-26]
+	Updated textproc/jgrep to 0.5.0 [cheusov 2016-05-26]
