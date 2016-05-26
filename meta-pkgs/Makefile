@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2016/05/23 22:48:52 youri Exp $
+# $NetBSD: Makefile,v 1.90 2016/05/26 05:42:30 jnemeth Exp $
 #
 
 COMMENT=	Collections of other packages
@@ -24,6 +24,7 @@ SUBDIR+=	gstreamer0.10-plugins
 SUBDIR+=	kde-telepathy
 SUBDIR+=	kde3
 SUBDIR+=	kde4
+#SUBDIR+=	kf5
 SUBDIR+=	libdbusmenu
 SUBDIR+=	lxde
 SUBDIR+=	matchbox
