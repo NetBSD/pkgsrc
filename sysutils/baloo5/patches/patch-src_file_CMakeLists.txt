@@ -1,0 +1,22 @@
+$NetBSD: patch-src_file_CMakeLists.txt,v 1.1 2016/05/26 09:17:14 markd Exp $
+
+Install in example dir
+
+--- src/file/CMakeLists.txt.orig	2016-04-03 20:42:08.000000000 +0000
++++ src/file/CMakeLists.txt
+@@ -51,6 +51,7 @@ target_link_libraries(baloofilecommon
+     KF5::Crash
+     KF5::ConfigCore
+     KF5::BalooEngine
++    ${LIBINOTIFY_LIBRARIES}
+ )
+ 
+ set(file_SRCS
+@@ -65,6 +66,6 @@ target_link_libraries(baloo_file
+ )
+ 
+ install(TARGETS baloo_file ${INSTALL_TARGETS_DEFAULT_ARGS})
+-install(FILES baloo_file.desktop DESTINATION ${AUTOSTART_INSTALL_DIR})
++install(FILES baloo_file.desktop DESTINATION ${KDE_INSTALL_DATAROOTDIR}/examples/baloo5)
+ 
+ add_subdirectory(extractor)
