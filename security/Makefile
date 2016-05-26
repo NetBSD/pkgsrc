@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.581 2016/05/26 06:23:36 markd Exp $
+# $NetBSD: Makefile,v 1.582 2016/05/26 06:39:50 markd Exp $
 #
 
 COMMENT=	Security tools
@@ -103,6 +103,7 @@ SUBDIR+=	gpa
 SUBDIR+=	gpass
 SUBDIR+=	gpg2dot
 SUBDIR+=	gpgme
+SUBDIR+=	gpgmepp
 SUBDIR+=	gpshell
 SUBDIR+=	gsasl
 SUBDIR+=	gss
