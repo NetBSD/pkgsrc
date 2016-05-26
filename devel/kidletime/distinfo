@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/05/26 08:29:05 markd Exp $
+
+SHA1 (kidletime-5.21.0.tar.xz) = ed50b4022c048be7a4a29390e7ba27c5f96bfc67
+RMD160 (kidletime-5.21.0.tar.xz) = 97c115d58642d4161b1d909e3c58cd52ba6428d1
+SHA512 (kidletime-5.21.0.tar.xz) = b3f145ff6ac8518d8dbc54a73245ba2d93ef7702a1dff8e7e96dd321026cf83881185721aa90fd8fe0cf27749381c2c29d402a04fad734be81269bf0582e2916
+Size (kidletime-5.21.0.tar.xz) = 26352 bytes

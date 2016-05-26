@@ -1,0 +1,13 @@
+$NetBSD: patch-src_urifilters_shorturi_CMakeLists.txt,v 1.1 2016/05/26 08:29:05 markd Exp $
+
+Install via examples dir
+
+--- src/urifilters/shorturi/CMakeLists.txt.orig	2016-02-06 13:48:57.000000000 +0000
++++ src/urifilters/shorturi/CMakeLists.txt
+@@ -8,5 +8,5 @@ install(TARGETS kshorturifilter  DESTINA
+ ########### install files ###############
+ 
+ install( FILES kshorturifilter.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR} )
+-install( FILES kshorturifilterrc  DESTINATION  ${KDE_INSTALL_CONFDIR} )
++install( FILES kshorturifilterrc  DESTINATION  ${KDE_INSTALL_DATAROOTDIR}/examples/kio )
+ 
