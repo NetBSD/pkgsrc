@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2016/04/29 08:30:50 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2016/05/26 09:02:16 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -25,7 +25,6 @@ man/man1/ldplayer.1
 man/man1/ldresample.1
 man/man1/ldverify.1
 man/man1/romcmp.1
-man/man1/testkeys.1
 man/man6/mame.6
 man/man6/mess.6
 share/doc/mame/SDL.txt
@@ -267,6 +266,11 @@ share/mame/hash/mikrosha_cass.xml
 share/mame/hash/misterx.xml
 share/mame/hash/mm1_flop.xml
 share/mame/hash/mo5_cart.xml
+share/mame/hash/mo5_cass.xml
+share/mame/hash/mo5_flop.xml
+share/mame/hash/mo5_qd.xml
+share/mame/hash/mo6_cass.xml
+share/mame/hash/mo6_flop.xml
 share/mame/hash/mpu1000.xml
 share/mame/hash/mpz80.xml
 share/mame/hash/msx.hsi
@@ -344,10 +348,12 @@ share/mame/hash/plus4_cart.xml
 share/mame/hash/plus4_cass.xml
 share/mame/hash/plus4_flop.xml
 share/mame/hash/pmd85_cass.xml
-share/mame/hash/pockchalv1.xml
 share/mame/hash/pockchalv2.xml
+share/mame/hash/pockchalw.xml
 share/mame/hash/pokemini.xml
 share/mame/hash/pro128_cart.xml
+share/mame/hash/pro128_cass.xml
+share/mame/hash/pro128_flop.xml
 share/mame/hash/pro128s_flop.xml
 share/mame/hash/prof180.xml
 share/mame/hash/prof80.xml
@@ -373,6 +379,7 @@ share/mame/hash/sage2.xml
 share/mame/hash/samcoupe_cass.xml
 share/mame/hash/samcoupe_flop.xml
 share/mame/hash/sat_cart.xml
+share/mame/hash/sat_vccart.xml
 share/mame/hash/saturn.xml
 share/mame/hash/sawatte.xml
 share/mame/hash/sc3000_cart.xml
@@ -399,6 +406,7 @@ share/mame/hash/sorcerer_cart.xml
 share/mame/hash/sorcerer_cass.xml
 share/mame/hash/sorcerer_flop.xml
 share/mame/hash/spc1000_cass.xml
+share/mame/hash/spc1500_cass.xml
 share/mame/hash/special_cass.xml
 share/mame/hash/special_flop.xml
 share/mame/hash/specpls3_flop.xml
@@ -409,6 +417,7 @@ share/mame/hash/st_flop.xml
 share/mame/hash/studio2.xml
 share/mame/hash/stv.xml
 share/mame/hash/super6.xml
+share/mame/hash/super80_cass.xml
 share/mame/hash/superpet_flop.xml
 share/mame/hash/supracan.xml
 share/mame/hash/sv8000.xml
@@ -429,7 +438,13 @@ share/mame/hash/tiki100.xml
 share/mame/hash/timex_dock.xml
 share/mame/hash/tntell.xml
 share/mame/hash/to770_cart.xml
+share/mame/hash/to770a_cart.xml
 share/mame/hash/to7_cart.xml
+share/mame/hash/to7_cass.xml
+share/mame/hash/to7_qd.xml
+share/mame/hash/to8_cass.xml
+share/mame/hash/to8_qd.xml
+share/mame/hash/to_flop.xml
 share/mame/hash/trs80m2.xml
 share/mame/hash/trsm100.xml
 share/mame/hash/tutor.xml
