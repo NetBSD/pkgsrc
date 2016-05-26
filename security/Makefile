@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.582 2016/05/26 06:39:50 markd Exp $
+# $NetBSD: Makefile,v 1.583 2016/05/26 09:13:16 markd Exp $
 #
 
 COMMENT=	Security tools
@@ -124,6 +124,8 @@ SUBDIR+=	ipv6-toolkit
 SUBDIR+=	isakmpd
 SUBDIR+=	jessie
 SUBDIR+=	john
+SUBDIR+=	kauth
+SUBDIR+=	kdesu
 SUBDIR+=	keepassx
 SUBDIR+=	keepassx0
 SUBDIR+=	keychain
@@ -132,6 +134,7 @@ SUBDIR+=	knc
 SUBDIR+=	kpcli
 SUBDIR+=	kssh
 SUBDIR+=	kstart
+SUBDIR+=	kwallet
 SUBDIR+=	kwalletmanager
 SUBDIR+=	lasso
 SUBDIR+=	libassuan
