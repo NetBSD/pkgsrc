@@ -1,0 +1,20 @@
+This framework provides additional image format plugins for QtGui.  As
+such it is not required for the compilation of any other software, but
+may be a runtime requirement for Qt-based software to support certain
+image formats.
+
+The following image formats have read-only support:
+
+- Gimp (xcf)
+- OpenEXR (exr)
+- Photoshop documents (psd)
+- Sun Raster (ras)
+
+The following image formats have read and write support:
+
+- Encapsulated PostScript (eps)
+- Personal Computer Exchange (pcx)
+- SGI images (rgb, rgba, sgi, bw)
+- Softimage PIC (pic)
+- Targa (tga): supports more formats than Qt's version
+- XView (xv)

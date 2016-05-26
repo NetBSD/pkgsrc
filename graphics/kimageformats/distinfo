@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/05/26 08:43:53 markd Exp $
+
+SHA1 (kimageformats-5.21.0.tar.xz) = 5f1476511f7bb801b0bd4bb76f28a58ae4f3407e
+RMD160 (kimageformats-5.21.0.tar.xz) = 6dad414203d064acd5fcc9b40ed47fd8f5f9170f
+SHA512 (kimageformats-5.21.0.tar.xz) = 5d6d78fb25da9a99e90da43fc32ea35476f8e14fada0b144d0bf40b5a5150739fc0252b9c744c60384947af4543f9b17e86c7b01a4a29a7622b20536c1477062
+Size (kimageformats-5.21.0.tar.xz) = 204096 bytes
