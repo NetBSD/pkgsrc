@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2016/05/26 09:31:43 markd Exp $
+include/KF5/KDEWebKit/KGraphicsWebView
+include/KF5/KDEWebKit/KWebPage
+include/KF5/KDEWebKit/KWebPluginFactory
+include/KF5/KDEWebKit/KWebView
+include/KF5/KDEWebKit/KWebWallet
+include/KF5/KDEWebKit/kdewebkit_export.h
+include/KF5/KDEWebKit/kgraphicswebview.h
+include/KF5/KDEWebKit/kwebpage.h
+include/KF5/KDEWebKit/kwebpluginfactory.h
+include/KF5/KDEWebKit/kwebview.h
+include/KF5/KDEWebKit/kwebwallet.h
+include/KF5/kdewebkit_version.h
+lib/cmake/KF5WebKit/KF5WebKitConfig.cmake
+lib/cmake/KF5WebKit/KF5WebKitConfigVersion.cmake
+lib/cmake/KF5WebKit/KF5WebKitTargets-noconfig.cmake
+lib/cmake/KF5WebKit/KF5WebKitTargets.cmake
+lib/libKF5WebKit.so
+lib/libKF5WebKit.so.5
+lib/libKF5WebKit.so.${PKGVERSION}
+qt5/mkspecs/modules/qt_KDEWebKit.pri
