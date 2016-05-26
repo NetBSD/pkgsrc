@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2016/05/26 09:49:48 markd Exp $
+include/KF5/KActivities/KActivities/ActivitiesModel
+include/KF5/KActivities/KActivities/Consumer
+include/KF5/KActivities/KActivities/Controller
+include/KF5/KActivities/KActivities/Info
+include/KF5/KActivities/KActivities/ResourceInstance
+include/KF5/KActivities/KActivities/Version
+include/KF5/KActivities/kactivities/activitiesmodel.h
+include/KF5/KActivities/kactivities/consumer.h
+include/KF5/KActivities/kactivities/controller.h
+include/KF5/KActivities/kactivities/info.h
+include/KF5/KActivities/kactivities/kactivities_export.h
+include/KF5/KActivities/kactivities/resourceinstance.h
+include/KF5/KActivities/kactivities/version.h
+include/KF5/kactivities_version.h
+lib/cmake/KF5Activities/KF5ActivitiesConfig.cmake
+lib/cmake/KF5Activities/KF5ActivitiesConfigVersion.cmake
+lib/cmake/KF5Activities/KF5ActivitiesLibraryTargets-noconfig.cmake
+lib/cmake/KF5Activities/KF5ActivitiesLibraryTargets.cmake
+lib/libKF5Activities.so
+lib/libKF5Activities.so.5
+lib/libKF5Activities.so.${PKGVERSION}
+lib/pkgconfig/libKActivities.pc
+qt5/mkspecs/modules/qt_KActivities.pri
+qt5/qml/org/kde/activities/libkactivitiesextensionplugin.so
+qt5/qml/org/kde/activities/qmldir
