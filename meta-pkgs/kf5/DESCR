@@ -1,0 +1,10 @@
+ Frameworks 5 is the next generation of KDE libraries, modularized and
+ optimized for easy integration in Qt applications. The Frameworks
+ offer a wide variety of commonly needed functionality in mature, peer
+ reviewed and well tested libraries with friendly licensing
+ terms. There are over 70 different Frameworks as part of this release
+ providing solutions including hardware integration, file format
+ support, additional widgets, plotting functions, spell checking and
+ more. Many of the Frameworks are cross platform and have minimal or
+ no extra dependencies making them easy to build and add to any Qt
+ application.
