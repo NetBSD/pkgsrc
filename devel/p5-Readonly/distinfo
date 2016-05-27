@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2016/02/25 00:33:16 wen Exp $
+$NetBSD: distinfo,v 1.6 2016/05/27 13:53:44 wen Exp $
 
-SHA1 (Readonly-2.01.tar.gz) = e04765c5d38f017582bc038e06518baf2eb3c20d
-RMD160 (Readonly-2.01.tar.gz) = aeafdce18ee89186fbc59f17c9076061066c5e8d
-SHA512 (Readonly-2.01.tar.gz) = 03287cf32d7464a5a1487e62ad5ac5210d1be6258559e88baddc27408a6b00c6983ff1e305643ffec3ee0068ae823239433e53594684d8538197d6b09971fda2
-Size (Readonly-2.01.tar.gz) = 23227 bytes
+SHA1 (Readonly-2.04.tar.gz) = 8ecc39a820ddb371b387b02f1178795dc8eb7bf7
+RMD160 (Readonly-2.04.tar.gz) = e741c7a70173fe33c32cbd4d76d3e76447cd3b78
+SHA512 (Readonly-2.04.tar.gz) = b1789ed06f4b05f2ef7ea2f0e4394a90d8d38284ca9c8590d294ac314b368e573cc31b8413fe7550f475ecac906c83e954d5f0c1e26ec7b18bfff1a81b98132b
+Size (Readonly-2.04.tar.gz) = 24639 bytes
