@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2171 2016/05/26 23:23:17 taca Exp $
+$NetBSD: CHANGES-2016,v 1.2172 2016/05/27 08:02:05 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2839,3 +2839,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/RBTools to 0.7.6 [richard 2016-05-26]
 	Updated textproc/jgrep to 0.5.0 [cheusov 2016-05-26]
 	Updated mail/roundcube to 1.1.5nb1 [taca 2016-05-26]
+	Updated devel/at-spi2-core to 2.20.2 [prlw1 2016-05-27]
