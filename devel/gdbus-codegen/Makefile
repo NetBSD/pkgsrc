@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.14 2015/06/12 10:48:49 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2016/05/27 08:19:27 prlw1 Exp $
 
-PKGREVISION= 1
 .include "../../devel/glib2/Makefile.common"
 
 PKGNAME:=	${PKGNAME:S/glib2/gdbus-codegen/}
