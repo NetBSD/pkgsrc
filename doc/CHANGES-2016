@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2175 2016/05/27 08:24:53 prlw1 Exp $
+$NetBSD: CHANGES-2016,v 1.2176 2016/05/27 08:27:18 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2843,3 +2843,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/at-spi2-atk to 2.20.1 [prlw1 2016-05-27]
 	Updated devel/glib2 to 2.48.1 [prlw1 2016-05-27]
 	Updated x11/gtk3 to 3.20.6nb2 [prlw1 2016-05-27]
+	Updated x11/gtksourceview3 to 3.20.3 [prlw1 2016-05-27]
