@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2182 2016/05/27 13:26:57 taca Exp $
+$NetBSD: CHANGES-2016,v 1.2183 2016/05/27 13:28:43 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2849,3 +2849,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Log-Report to 1.16 [wen 2016-05-27]
 	Updated devel/p5-Pod-Usage to 1.69 [wen 2016-05-27]
 	Updated lang/php55 to 5.5.36 [taca 2016-05-27]
+	Updated lang/php56 to 5.6.22 [taca 2016-05-27]
