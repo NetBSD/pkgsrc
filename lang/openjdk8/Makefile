@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.33 2016/05/06 13:37:01 ryoon Exp $
+# $NetBSD: Makefile,v 1.34 2016/05/27 04:57:16 wiz Exp $
 
 DISTNAME=	openjdk-1.8.92-20160506
 PKGNAME=	openjdk8-1.8.92
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_LOCAL:=openjdk7/}
 EXTRACT_SUFX=	.tar.xz
@@ -61,6 +62,12 @@ CONFIGURE_ARGS+=	--with-user-release-suffix=pkgsrc_${PKGVERSION}
 CONFIGURE_ARGS+=	--with-update-version=${PKGVERSION_NOREV:S/1.8.//}
 
 CHECK_PORTABILITY_SKIP+=	hotspot/test/runtime/*/*.sh
+
+NOT_PAX_MPROTECT_SAFE+= java/openjdk8/bin/[a-ik-z]*
+NOT_PAX_MPROTECT_SAFE+= java/openjdk8/bin/j[b-z]*
+NOT_PAX_MPROTECT_SAFE+= java/openjdk8/bin/jar*
+NOT_PAX_MPROTECT_SAFE+= java/openjdk8/bin/java
+NOT_PAX_MPROTECT_SAFE+= java/openjdk8/bin/java[a-z]*
 
 # Avoid build errors when JAVA_HOME and CLASSPATH are defined by user.
 MAKE_ENV+=	JAVA_HOME=
@@ -154,6 +161,13 @@ post-extract:
 .if exists(/usr/lib/libstdc++.so.7)
 	${RM} -f ${ALT_BOOTDIR}/jre/lib/${LIBDIR_ARCH}/libstdc++.so*
 .endif
+.if defined(TOOLS_PLATFORM.paxctl)
+	${PAXCTL} +m ${WRKDIR}/bootstrap/bin/[a-ik-z]*
+	${PAXCTL} +m ${WRKDIR}/bootstrap/bin/j[b-z]*
+	${PAXCTL} +m ${WRKDIR}/bootstrap/bin/jar*
+	${PAXCTL} +m ${WRKDIR}/bootstrap/bin/java
+	${PAXCTL} +m ${WRKDIR}/bootstrap/bin/java[a-z]*
+.endif
 
 do-build: ${WRKDIR}/stage3-done
 
@@ -171,6 +185,13 @@ ${WRKDIR}/stage1-done:
 ${WRKDIR}/stage1_5-done: ${WRKDIR}/stage1-done
 .if defined(BATCH)
 	@${RECURSIVE_MAKE} ${MAKEFLAGS} apply-va-hack
+.endif
+.if defined(TOOLS_PLATFORM.paxctl)
+	${PAXCTL} +m ${WRKDIR}/bootstrap/bin/[a-ik-z]*
+	${PAXCTL} +m ${WRKDIR}/bootstrap/bin/j[b-z]*
+	${PAXCTL} +m ${WRKDIR}/bootstrap/bin/jar*
+	${PAXCTL} +m ${WRKDIR}/bootstrap/bin/java
+	${PAXCTL} +m ${WRKDIR}/bootstrap/bin/java[a-z]*
 .endif
 	@${STEP_MSG} "Reconfiguring with newly built JDK"
 	@${RECURSIVE_MAKE} ${MAKEFLAGS} do-configure
