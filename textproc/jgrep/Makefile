@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2016/05/26 18:48:31 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2016/05/27 17:41:00 cheusov Exp $
 #
 
-DISTNAME=	jgrep-0.5.0
+DISTNAME=	jgrep-0.5.1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=cheusov/}
 GITHUB_PROJECT= jgrep
