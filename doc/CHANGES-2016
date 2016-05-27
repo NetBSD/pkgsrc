@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2186 2016/05/27 13:54:35 wen Exp $
+$NetBSD: CHANGES-2016,v 1.2187 2016/05/27 17:42:46 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2853,3 +2853,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/php70 to 7.0.7 [taca 2016-05-27]
 	Updated devel/p5-PPIx-Regexp to 0.050 [wen 2016-05-27]
 	Updated devel/p5-Readonly to 2.04 [wen 2016-05-27]
+	Updated textproc/jgrep to 0.5.1 [cheusov 2016-05-27]
