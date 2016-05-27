@@ -1,13 +1,13 @@
-$NetBSD: patch-aha,v 1.1 2012/04/30 13:53:48 drochner Exp $
+$NetBSD: patch-aha,v 1.2 2016/05/27 08:19:27 prlw1 Exp $
 
---- glib/gcharset.c.orig	2012-03-31 18:03:03.000000000 +0000
+--- glib/gcharset.c.orig	2016-05-10 08:54:30.000000000 +0000
 +++ glib/gcharset.c
-@@ -295,7 +295,7 @@ unalias_lang (char *lang)
-   int i;
+@@ -293,7 +293,7 @@ unalias_lang (char *lang)
+   if (g_once_init_enter (&alias_table))
+     {
+       GHashTable *table = g_hash_table_new (g_str_hash, g_str_equal);
+-      read_aliases ("/usr/share/locale/locale.alias", table);
++      read_aliases (PREFIX "/" PKGLOCALEDIR "/locale/locale.alias", table);
+       g_once_init_leave (&alias_table, table);
+     }
  
-   if (!alias_table)
--    read_aliases ("/usr/share/locale/locale.alias");
-+    read_aliases (PREFIX "/" PKGLOCALEDIR "/locale/locale.alias");
- 
-   i = 0;
-   while ((p = g_hash_table_lookup (alias_table, lang)) && (strcmp (p, lang) != 0))
