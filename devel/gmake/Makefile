@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2016/05/26 16:41:59 khorben Exp $
+# $NetBSD: Makefile,v 1.96 2016/05/27 08:13:22 khorben Exp $
 
 DISTNAME=	make-4.2
 PKGNAME=	g${DISTNAME}
@@ -28,9 +28,6 @@ CONFIGURE_ARGS+=	--program-prefix=g
 CONFIGURE_ARGS.MirBSD+=	ac_cv_func_strndup=no
 
 AUTO_MKDIRS=		yes
-
-NOT_PAX_ASLR_SAFE+=	bin/gmake
-NOT_PAX_MPROTECT_SAFE+=	bin/gmake
 
 PLIST_SRC=		${PKGDIR}/PLIST
 
