@@ -1,4 +1,4 @@
-# $NetBSD: pax.mk,v 1.2 2016/05/26 16:37:02 khorben Exp $
+# $NetBSD: pax.mk,v 1.3 2016/05/27 08:33:00 leot Exp $
 #
 # Infrastructure support for binaries known to fail with PaX enabled.
 #
@@ -13,6 +13,9 @@
 #
 # NOT_PAX_MPROTECT_SAFE
 #	The list of binaries which do not support PaX MPROTECT.
+#
+# Keywords: aslr mprotect pax paxctl
+#
 
 .if !defined(PAX_MK)
 
