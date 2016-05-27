@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2016/04/12 16:12:55 prlw1 Exp $
+@comment $NetBSD: PLIST,v 1.8 2016/05/27 08:29:46 prlw1 Exp $
 bin/gedit
 bin/gnome-text-editor
 include/gedit-3.14/gedit/gedit-app-activatable.h
@@ -199,6 +199,7 @@ share/gtk-doc/html/gedit/GeditDocument.html
 share/gtk-doc/html/gedit/GeditEncodingsComboBox.html
 share/gtk-doc/html/gedit/GeditMessage.html
 share/gtk-doc/html/gedit/GeditMessageBus.html
+share/gtk-doc/html/gedit/GeditProgressInfoBar.html
 share/gtk-doc/html/gedit/GeditStatusbar.html
 share/gtk-doc/html/gedit/GeditViewActivatable.html
 share/gtk-doc/html/gedit/GeditWindowActivatable.html
@@ -210,7 +211,6 @@ share/gtk-doc/html/gedit/ch01.html
 share/gtk-doc/html/gedit/gedit-GeditCommands.html
 share/gtk-doc/html/gedit/gedit-gedit-debug.html
 share/gtk-doc/html/gedit/gedit-gedit-menu-extension.html
-share/gtk-doc/html/gedit/gedit-gedit-progress-info-bar.html
 share/gtk-doc/html/gedit/gedit-gedit-tab.html
 share/gtk-doc/html/gedit/gedit-gedit-utils.html
 share/gtk-doc/html/gedit/gedit-gedit-view.html
@@ -1723,6 +1723,7 @@ share/locale/eu/LC_MESSAGES/gedit.mo
 share/locale/fa/LC_MESSAGES/gedit.mo
 share/locale/fi/LC_MESSAGES/gedit.mo
 share/locale/fr/LC_MESSAGES/gedit.mo
+share/locale/fur/LC_MESSAGES/gedit.mo
 share/locale/ga/LC_MESSAGES/gedit.mo
 share/locale/gd/LC_MESSAGES/gedit.mo
 share/locale/gl/LC_MESSAGES/gedit.mo
