@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.78 2016/05/26 14:25:22 khorben Exp $
+# $NetBSD: Makefile,v 1.79 2016/05/27 05:54:58 wiz Exp $
 
 DISTNAME=	gtk+-3.20.3
 PKGNAME=	${DISTNAME:S/gtk/gtk3/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk+/${PKGVERSION_NOREV:R}/}
 EXTRACT_SUFX=	.tar.xz
@@ -19,7 +19,6 @@ USE_LIBTOOL=		yes
 PTHREAD_AUTO_VARS=	yes
 BUILD_DEPENDS+=		gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 TOOL_DEPENDS+=		gettext-tools>=0.19.4nb1:../../devel/gettext-tools
-DEPENDS+=		adwaita-icon-theme-[0-9]*:../../graphics/adwaita-icon-theme
 # There is no logic in gettext.mk to detect the native version of xgettext,
 # and we do need it to be compiled with Glade support.
 _TOOLS_USE_PKGSRC.xgettext=yes
