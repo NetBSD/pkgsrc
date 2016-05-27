@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2178 2016/05/27 08:30:05 prlw1 Exp $
+$NetBSD: CHANGES-2016,v 1.2179 2016/05/27 10:41:15 pgoyette Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2845,3 +2845,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated x11/gtk3 to 3.20.6 [prlw1 2016-05-27]
 	Updated x11/gtksourceview3 to 3.20.3 [prlw1 2016-05-27]
 	Updated editors/gedit3 to 3.20.2 [prlw1 2016-05-27]
+	Updated textproc/py-libxml2 to 2.9.4 [pgoyette 2016-05-24]
