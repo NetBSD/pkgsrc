@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2016/01/18 13:54:13 wen Exp $
+$NetBSD: distinfo,v 1.6 2016/05/27 13:24:43 wen Exp $
 
-SHA1 (Pod-Usage-1.68.tar.gz) = 025da6d7693714237f7b9dbcd0eb501752b20bf0
-RMD160 (Pod-Usage-1.68.tar.gz) = 420a7aca5c6f2748760e89a8895b75f52459f41d
-SHA512 (Pod-Usage-1.68.tar.gz) = e41aba9f486f2f2548db3a05aeec0d4254db09075ff8f826e52d7db4ee400f03fb2ee1cef14dd7252a416c6439ae5d91d782ddb7cabba611f7e6b86a7ec28a3b
-Size (Pod-Usage-1.68.tar.gz) = 25742 bytes
+SHA1 (Pod-Usage-1.69.tar.gz) = 4d102738f27d65478d885cf20380badfcaa837a3
+RMD160 (Pod-Usage-1.69.tar.gz) = f24523869cebffb2555c705af23f535d4850d9b3
+SHA512 (Pod-Usage-1.69.tar.gz) = 56e2f6492c03892c95c74de2841a52b02be372842eaff32f84fdf8901fb73ebed6465a0215ccb8c9f2eaf23c7cafb5d044c77b69805cb364bcf71c4f24835025
+Size (Pod-Usage-1.69.tar.gz) = 61342 bytes
