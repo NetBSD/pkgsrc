@@ -1,13 +1,9 @@
-# $NetBSD: Makefile,v 1.52 2016/05/27 10:37:18 pgoyette Exp $
+# $NetBSD: Makefile,v 1.53 2016/05/27 23:52:05 pgoyette Exp $
 
-DISTNAME=	libxml2-2.9.4
+.include "../../textproc/libxml2/Makefile.common"
+
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	textproc python
-MASTER_SITES=	ftp://xmlsoft.org/libxml2/
-#MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libxml2/2.9/}
 
-MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://xmlsoft.org/
 COMMENT=	Python wrapper for libxml2
 LICENSE=	modified-bsd
 
