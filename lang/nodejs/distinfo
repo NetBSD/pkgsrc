@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.66 2016/05/18 13:26:44 fhajny Exp $
+$NetBSD: distinfo,v 1.67 2016/05/27 23:30:51 fhajny Exp $
 
 SHA1 (node-v6.2.0.tar.gz) = 228a0c2ff23294778f226e5d7fc85fc2e80a3cd1
 RMD160 (node-v6.2.0.tar.gz) = c6154b44a1c0786d8d5a3cf961c87d15e159c969
@@ -20,6 +20,7 @@ SHA1 (patch-deps_v8_src_log-utils.h) = 32bbf2de2af7a8ab6900a4d5e968dcc1357f6de2
 SHA1 (patch-deps_v8_src_types.h) = a15d1f13a577135a006e8ef0617c9476eb971fa3
 SHA1 (patch-deps_v8_tools_run-llprof.sh) = 39aa3faf77492ef8dd35b411b7b0e4605b469af3
 SHA1 (patch-src_cares__wrap.cc) = d9510afd0cd4b0156a604d9197d9f97d6e3b291f
+SHA1 (patch-src_node.cc) = 7004baf140e252861494b4fb003beeaa8581be78
 SHA1 (patch-tools_gyp_pylib_gyp_common.py) = 132008f362ea696e43a4d19bf9d8a0ac754ef55c
 SHA1 (patch-tools_gyp_pylib_gyp_generator_make.py) = be3cc1aaa85c3d59b6f2758df813cb5ad8d8f74e
 SHA1 (patch-tools_install.py) = 5755e67dce5261b84e43acee281c7e8810708bb4
