@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.base,v 1.20 2016/04/26 22:51:30 schnoebe Exp $
+@comment $NetBSD: PLIST.base,v 1.21 2016/05/28 21:03:56 schnoebe Exp $
 bin/hp-align
 bin/hp-check
 bin/hp-clean
@@ -1420,6 +1420,8 @@ share/hplip/ppd/HP/hp-laserjet_p4515xm.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_pro_m201_m202-ps.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_pro_m402_m403-ps.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_pro_m402_m403d-ps.ppd.gz
+share/hplip/ppd/HP/hp-laserjet_pro_m501dn-ps.ppd.gz
+share/hplip/ppd/HP/hp-laserjet_pro_m501n-ps.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_pro_m701-ps.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_pro_m706-ps.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_pro_mfp_m125a-hpijs.ppd.gz
@@ -1534,6 +1536,7 @@ share/hplip/ppd/HP/hp-officejet_100_mobile_l411-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_100_mobile_l411.ppd.gz
 share/hplip/ppd/HP/hp-officejet_150_mobile_l511-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_150_mobile_l511.ppd.gz
+share/hplip/ppd/HP/hp-officejet_200_mobile_series.ppd.gz
 share/hplip/ppd/HP/hp-officejet_2620_series-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_2620_series.ppd.gz
 share/hplip/ppd/HP/hp-officejet_3830_series-hpijs.ppd.gz
@@ -1722,6 +1725,9 @@ share/hplip/ppd/HP/hp-officejet_pro_8640-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_pro_8640.ppd.gz
 share/hplip/ppd/HP/hp-officejet_pro_8660-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_pro_8660.ppd.gz
+share/hplip/ppd/HP/hp-officejet_pro_8710.ppd.gz
+share/hplip/ppd/HP/hp-officejet_pro_8720.ppd.gz
+share/hplip/ppd/HP/hp-officejet_pro_8730-ps.ppd.gz
 share/hplip/ppd/HP/hp-officejet_pro_k5300-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_pro_k5300.ppd.gz
 share/hplip/ppd/HP/hp-officejet_pro_k5400-hpijs.ppd.gz
