@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/05/27 17:41:00 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2016/05/28 11:00:50 cheusov Exp $
 #
 
 DISTNAME=	jgrep-0.5.1
@@ -13,7 +13,7 @@ COMMENT=	Command-line grep-like utility written in Java
 
 TOOL_DEPENDS+=	apache-maven-[0-9]*:../../devel/apache-maven
 
-LICENSE=	mit
+LICENSE=	apache-2.0
 
 USE_LANGUAGES=	c
 USE_JAVA=	yes
