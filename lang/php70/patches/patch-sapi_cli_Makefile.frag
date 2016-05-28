@@ -1,8 +1,9 @@
-$NetBSD: patch-sapi_cli_Makefile.frag,v 1.1 2016/05/28 08:02:26 wiz Exp $
+$NetBSD: patch-sapi_cli_Makefile.frag,v 1.2 2016/05/28 08:13:15 wiz Exp $
 
 Needed on NetBSD with PaX MPROTEXT, otherwise core dump with:
 #1  0x00000000004d0d87 in _pcre_jit_exec ()
 #2  0x00000000004a53f1 in php_pcre_exec ()
+https://bugs.php.net/bug.php?id=72281
 
 --- sapi/cli/Makefile.frag.orig	2016-04-28 18:12:27.000000000 +0000
 +++ sapi/cli/Makefile.frag
