@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.3 2015/11/03 20:31:06 agc Exp $
+$NetBSD: distinfo,v 1.4 2016/05/28 13:04:28 rjs Exp $
 
-SHA1 (suse131/libfreetype6-2.5.0.1-2.4.1.i586.rpm) = af9b50b648a9a56fd8027f6e642031c1053a1fc0
-RMD160 (suse131/libfreetype6-2.5.0.1-2.4.1.i586.rpm) = 2c3cc091a91036b8a55ae30f0d58749f0c0e081e
-SHA512 (suse131/libfreetype6-2.5.0.1-2.4.1.i586.rpm) = ed2b2d1f3cc77f4ee5a4c867f7d9cc938f7239353b8225dd85a1a10861883d240ef5d26b576ed5e7e2406119772dc9014e38221a92d2bafa0e1abeddee01ea3e
-Size (suse131/libfreetype6-2.5.0.1-2.4.1.i586.rpm) = 372026 bytes
-SHA1 (suse131/libfreetype6-2.5.0.1-2.4.1.x86_64.rpm) = 9bf8f04f3a195a66c7d52f77c1f134e02fcbb385
-RMD160 (suse131/libfreetype6-2.5.0.1-2.4.1.x86_64.rpm) = 3400b0b9d8b2a222d183c1de95eb1fdec841e465
-SHA512 (suse131/libfreetype6-2.5.0.1-2.4.1.x86_64.rpm) = 5b9eb0562ab25e7262e5f3c28d9a5a210b808b1222f629edc3b56cfcfe60cc62194110de1fc5ec075920ab46aa710ee6d7de22ef300f8bf8153f61d295f7825e
-Size (suse131/libfreetype6-2.5.0.1-2.4.1.x86_64.rpm) = 376115 bytes
+SHA1 (suse131/libfreetype6-2.5.0.1-2.10.1.i586.rpm) = 3927033f8d865fd63da97eb82ee8513a93036c94
+RMD160 (suse131/libfreetype6-2.5.0.1-2.10.1.i586.rpm) = a07694baa4c53062b98afcab9196705a8fc3adcd
+SHA512 (suse131/libfreetype6-2.5.0.1-2.10.1.i586.rpm) = 571e1d7e10f1d42627ce33302fa34e9c08d2acc180d3f5c2d5d413d09eb46992e51d7bf36c56a8ad8abd93f58cf6bb86df686f488c4498c20d909da4077aec24
+Size (suse131/libfreetype6-2.5.0.1-2.10.1.i586.rpm) = 372219 bytes
+SHA1 (suse131/libfreetype6-2.5.0.1-2.10.1.x86_64.rpm) = 19ee63356e0528790d7e04aa5d2d312975f6d301
+RMD160 (suse131/libfreetype6-2.5.0.1-2.10.1.x86_64.rpm) = e298f4964cca66ea602a333cfa46e69f2374bcea
+SHA512 (suse131/libfreetype6-2.5.0.1-2.10.1.x86_64.rpm) = 77c89a692966007e1fea79e061e847bd88eaf2bfad0132ea3c6c802b0829cdc4504145c8a046d953ad413563107f2e324d615d9ef84c2d846e0b14f27247da82
+Size (suse131/libfreetype6-2.5.0.1-2.10.1.x86_64.rpm) = 376511 bytes

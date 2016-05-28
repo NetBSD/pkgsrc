@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.11 2015/07/28 08:49:15 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2016/05/28 13:04:28 rjs Exp $
 
 PKGNAME=	suse_x11-${SUSE_VERSION}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	emulators
 RPMPKGS+=	libFS6-1.0.5-2.1.2.${SUSE_ARCH}
 RPMPKGS+=	libICE6-1.0.8-7.1.2.${SUSE_ARCH}
 RPMPKGS+=	libSM6-1.2.2-2.1.2.${SUSE_ARCH}
 RPMPKGS+=	libWindowsWM7-1.0.1-9.1.2.${SUSE_ARCH}
-RPMPKGS+=	libX11-6-1.6.2-2.1.2.${SUSE_ARCH}
+RPMUPDPKGS+=	libX11-6-1.6.2-2.3.1.${SUSE_ARCH}
 RPMPKGS+=	libX11-data-1.6.2-2.1.2.noarch
-RPMPKGS+=	libX11-xcb1-1.6.2-2.1.2.${SUSE_ARCH}
+RPMUPDPKGS+=	libX11-xcb1-1.6.2-2.3.1.${SUSE_ARCH}
 RPMPKGS+=	libXau6-1.0.8-2.2.1.${SUSE_ARCH}
 RPMPKGS+=	libXaw6-1.0.12-2.1.2.${SUSE_ARCH}
 RPMPKGS+=	libXaw7-1.0.12-2.1.2.${SUSE_ARCH}
@@ -22,7 +22,7 @@ RPMPKGS+=	libXdmcp6-1.1.1-7.1.2.${SUSE_ARCH}
 RPMPKGS+=	libXext6-1.3.2-2.1.2.${SUSE_ARCH}
 RPMPKGS+=	libXevie1-1.0.3-9.1.2.${SUSE_ARCH}
 RPMPKGS+=	libXfixes3-5.0.1-2.1.2.${SUSE_ARCH}
-RPMUPDPKGS+=	libXfont1-1.4.6-2.12.1.${SUSE_ARCH}
+RPMUPDPKGS+=	libXfont1-1.4.6-2.15.1.${SUSE_ARCH}
 RPMPKGS+=	libXfontcache1-1.0.5-9.1.2.${SUSE_ARCH}
 RPMPKGS+=	libXft2-2.3.1-7.1.2.${SUSE_ARCH}
 RPMPKGS+=	libXi6-1.7.2-2.1.2.${SUSE_ARCH}
@@ -49,12 +49,12 @@ RPMPKGS+=	libfontenc1-1.1.2-2.1.2.${SUSE_ARCH}
 RPMPKGS+=	liblbxutil1-1.1.0-9.1.2.${SUSE_ARCH}
 RPMPKGS+=	liboldX6-1.0.1-8.1.2.${SUSE_ARCH}
 RPMUPDPKGS+=	libpixman-1-0-0.30.2-2.5.1.${SUSE_ARCH}
-RPMPKGS+=	libxcb1-1.9.1-3.1.2.${SUSE_ARCH}
-RPMPKGS+=	libxcb-dri2-0-1.9.1-3.1.2.${SUSE_ARCH}
-RPMPKGS+=	libxcb-glx0-1.9.1-3.1.2.${SUSE_ARCH}
-RPMPKGS+=	libxcb-render0-1.9.1-3.1.2.${SUSE_ARCH}
-RPMPKGS+=	libxcb-shm0-1.9.1-3.1.2.${SUSE_ARCH}
-RPMPKGS+=	libxcb-xfixes0-1.9.1-3.1.2.${SUSE_ARCH}
+RPMUPDPKGS+=	libxcb1-1.9.1-3.3.1.${SUSE_ARCH}
+RPMUPDPKGS+=	libxcb-dri2-0-1.9.1-3.3.1.${SUSE_ARCH}
+RPMUPDPKGS+=	libxcb-glx0-1.9.1-3.3.1.${SUSE_ARCH}
+RPMUPDPKGS+=	libxcb-render0-1.9.1-3.3.1.${SUSE_ARCH}
+RPMUPDPKGS+=	libxcb-shm0-1.9.1-3.3.1.${SUSE_ARCH}
+RPMUPDPKGS+=	libxcb-xfixes0-1.9.1-3.3.1.${SUSE_ARCH}
 RPMPKGS+=	libxkbfile1-1.0.8-7.1.2.${SUSE_ARCH}
 RPMPKGS+=	libxkbui1-1.0.2-9.1.2.${SUSE_ARCH}
 
