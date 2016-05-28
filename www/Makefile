@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1174 2016/05/26 09:35:05 markd Exp $
+# $NetBSD: Makefile,v 1.1175 2016/05/28 23:09:30 schnoebe Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -142,6 +142,7 @@ SUBDIR+=	htmldoc
 SUBDIR+=	htmldoc-x11
 SUBDIR+=	htmlfix
 SUBDIR+=	htmllint
+SUBDIR+=	http-parser
 SUBDIR+=	http_load
 SUBDIR+=	icedtea-web
 SUBDIR+=	ies4linux
