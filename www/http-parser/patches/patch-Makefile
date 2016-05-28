@@ -1,0 +1,46 @@
+$NetBSD: patch-Makefile,v 1.1 2016/05/28 23:09:30 schnoebe Exp $
+
+Correctly(?) include DESTDIR;
+
+Correct the usage of $(INSTALL) to create the directories as needed
+and create a short, relative symbolic link for the shared library.
+
+$(INSTALL) is assumed to be NetBSD's pkgsrc install.
+
+Remove redundant install-strip target.
+
+--- Makefile.orig	2016-04-19 14:41:48.000000000 +0000
++++ Makefile
+@@ -56,8 +56,8 @@ LDFLAGS_LIB = $(LDFLAGS) -shared
+ 
+ INSTALL ?= install
+ PREFIX ?= $(DESTDIR)/usr/local
+-LIBDIR = $(PREFIX)/lib
+-INCLUDEDIR = $(PREFIX)/include
++LIBDIR = $(DESTDIR)/$(PREFIX)/lib
++INCLUDEDIR = $(DESTDIR)/$(PREFIX)/include
+ 
+ ifneq (darwin,$(PLATFORM))
+ # TODO(bnoordhuis) The native SunOS linker expects -h rather than -soname...
+@@ -122,15 +122,12 @@ parsertrace_g: http_parser_g.o contrib/p
+ tags: http_parser.c http_parser.h test.c
+ 	ctags $^
+ 
+-install: library
+-	$(INSTALL) -D  http_parser.h $(INCLUDEDIR)/http_parser.h
+-	$(INSTALL) -D $(SONAME) $(LIBDIR)/$(SONAME)
+-	ln -s $(LIBDIR)/$(SONAME) $(LIBDIR)/libhttp_parser.$(SOEXT)
+-
+-install-strip: library
+-	$(INSTALL) -D  http_parser.h $(INCLUDEDIR)/http_parser.h
+-	$(INSTALL) -D -s $(SONAME) $(LIBDIR)/$(SONAME)
+-	ln -s $(LIBDIR)/$(SONAME) $(LIBDIR)/libhttp_parser.$(SOEXT)
++install install-strip: library
++	$(INSTALL) -d $(INCLUDEDIR)
++	$(INSTALL) http_parser.h $(INCLUDEDIR)/http_parser.h
++	$(INSTALL) -d $(LIBDIR)
++	$(INSTALL) $(SONAME) $(LIBDIR)/$(SONAME)
++	cd $(LIBDIR) && $(INSTALL) -l s $(SONAME) libhttp_parser.$(SOEXT)
+ 
+ uninstall:
+ 	rm $(INCLUDEDIR)/http_parser.h
