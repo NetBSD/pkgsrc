@@ -1,4 +1,4 @@
-# $NetBSD: egg.mk,v 1.21 2016/04/10 16:39:28 joerg Exp $
+# $NetBSD: egg.mk,v 1.22 2016/05/28 11:23:46 richard Exp $
 #
 # Common logic to handle Python Eggs
 #
@@ -38,5 +38,12 @@ _PYSETUPTOOLSINSTALLARGS=	--single-version-externally-managed
 DEPENDS+=	${PYPKGPREFIX}-setuptools>=0.8:../../devel/py-setuptools
 
 INSTALLATION_DIRS+=	${PYSITELIB}
+
+privileged-install-hook:	fixup-egg-info
+.PHONY:				fixup-egg-info
+fixup-egg-info:	# ensure egg-info directory contents are always 644
+	${TEST} -d "${DESTDIR}${PREFIX}/${PYSITELIB}/${EGG_INFODIR}" && \
+	    ${FIND} ${DESTDIR}${PREFIX}/${PYSITELIB}/${EGG_INFODIR} -type f \
+		-exec ${CHMOD} ${SHAREMODE} '{}' +
 
 .include "../../lang/python/extension.mk"
