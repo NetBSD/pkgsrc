@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2016/05/28 23:09:30 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.1 2016/05/28 23:09:30 schnoebe Exp $
+include/http_parser.h
+lib/libhttp_parser.so
+lib/libhttp_parser.so.2.${OS_VERSION}
