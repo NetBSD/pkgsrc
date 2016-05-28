@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2190 2016/05/28 21:05:12 schnoebe Exp $
+$NetBSD: CHANGES-2016,v 1.2191 2016/05/28 23:10:39 schnoebe Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2857,3 +2857,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated archivers/libzip to 1.1.3 [wiz 2016-05-28]
 	Updated textproc/jgrep to 0.5.2 [cheusov 2016-05-28]
 	Updated print/hplip to 3.16.5 [schnoebe 2016-05-28]
+	Added www/http-parser version 2.7.0 [schnoebe 2016-05-28]
