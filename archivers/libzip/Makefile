@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.24 2016/02/19 14:30:04 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2016/05/28 09:59:43 wiz Exp $
 
-DISTNAME=		libzip-1.1.2
+DISTNAME=		libzip-1.1.3
 CATEGORIES=		archivers devel
 MASTER_SITES=		http://www.nih.at/libzip/
 EXTRACT_SUFX=		.tar.xz
