@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/05/28 11:00:50 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2016/05/28 11:06:03 cheusov Exp $
 #
 
 DISTNAME=	jgrep-0.5.1
@@ -21,7 +21,6 @@ USE_JAVA=	yes
 TEST_TARGET=	test
 
 MAKE_ENV+=	MANDIR=${PREFIX}/${PKGMANDIR}
-MAKE_ENV+=	AWK_PROG=${AWK:Q}
 
 MAVEN_FLAGS+=	-Duser.home=${FAKEHOMEDIR}
 MAVEN_FLAGS+=	-Dmaven.repo.local=${WRKDIR}/deps
