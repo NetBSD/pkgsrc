@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2212 2016/05/29 21:32:03 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2213 2016/05/29 22:32:42 abs Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2879,3 +2879,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-test-runner to 2.8 [wiz 2016-05-29]
 	Updated devel/py-virtualenv to 15.0.2 [wiz 2016-05-29]
 	Updated devel/waf to 1.8.21 [wiz 2016-05-29]
+	Added devel/libite version 1.6.0 [abs 2016-05-29]
+	Updated net/inadyn to 1.99.15 [abs 2016-05-29]
