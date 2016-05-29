@@ -1,0 +1,16 @@
+$NetBSD: patch-src_Makefile.am,v 1.1 2016/05/29 22:32:12 abs Exp $
+
+Not all systems always want -ldl
+Set SYSCONFDIR from config
+
+--- src/Makefile.am.orig	2015-07-04 15:23:32.000000000 +0000
++++ src/Makefile.am
+@@ -20,6 +20,6 @@ inadyn_SOURCES += ../plugins/common.c		.
+ 		  ../plugins/dhis.c		../plugins/duckdns.c	\
+ 		  ../plugins/dtdns.c		../plugins/giradns.c	\
+ 		  ../plugins/duiadns.c
+-inadyn_CPPFLAGS = -I../
++inadyn_CPPFLAGS = -I../ -DSYSCONFDIR=\"/etc\"
+ inadyn_LDFLAGS  = -L../libite
+-inadyn_LDADD	= -ldl -lite
++inadyn_LDADD	= -lite

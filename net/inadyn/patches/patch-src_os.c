@@ -1,9 +1,9 @@
-$NetBSD: patch-src_os.c,v 1.1 2015/04/04 07:59:34 snj Exp $
+$NetBSD: patch-src_os.c,v 1.2 2016/05/29 22:32:12 abs Exp $
 
-Avoid bogus usleep usage.
+Avoid possible usleep overflow
 
---- src/os.c.orig	2015-04-03 21:12:49.000000000 -0700
-+++ src/os.c	2015-04-03 21:19:49.000000000 -0700
+--- src/os.c.orig	2015-09-09 19:27:51.000000000 +0000
++++ src/os.c
 @@ -180,7 +180,11 @@ static void *param = NULL;
  
  void os_sleep_ms(int ms)
