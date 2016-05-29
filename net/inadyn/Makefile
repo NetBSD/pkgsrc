@@ -1,23 +1,23 @@
-# $NetBSD: Makefile,v 1.12 2016/05/15 22:23:56 abs Exp $
+# $NetBSD: Makefile,v 1.13 2016/05/29 22:32:11 abs Exp $
 
-DISTNAME=	inadyn-1.99.13
-PKGREVISION=	2
+DISTNAME=	inadyn-1.99.15
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=troglobit/}
-EXTRACT_SUFX=	.zip
-
-DIST_SUBDIR=    ${PKGNAME_NOREV}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://troglobit.com/inadyn.html
 COMMENT=	Dynamic DNS client
 LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=	autoconf gmake
+GITHUB_RELEASE=	1.99.15
+GITHUB_TYPE=	release
+
+USE_TOOLS+=	autoconf automake gmake
 RCD_SCRIPTS=	inadyn
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=	--enable-openssl
+CONFIGURE_ARGS+=--enable-openssl --disable-gitcheck
 
 LIBS.SunOS=	-lsocket -lnsl
 
@@ -41,8 +41,9 @@ SUBST_MESSAGE.var=	Adjusting path to VARBASE
 SUBST_STAGE.var=	pre-configure
 
 pre-configure:
-	cd ${WRKSRC} && autoconf
+	cd ${WRKSRC} && autoreconf -i
 
 .include "../../security/openssl/buildlink3.mk"
+.include "../../devel/libite/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
