@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/08/27 22:19:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2016/05/29 20:40:16 wiz Exp $
 bin/geeqie
 lib/geeqie/geeqie-import
 lib/geeqie/geeqie-rotate
@@ -62,8 +62,10 @@ share/doc/${PKGNAME}/html/GuidePrinting.html
 share/doc/${PKGNAME}/html/GuideReference.html
 share/doc/${PKGNAME}/html/GuideReferenceCommandLine.html
 share/doc/${PKGNAME}/html/GuideReferenceKeyboardShortcuts.html
+share/doc/${PKGNAME}/html/GuideReferenceLua.html
 share/doc/${PKGNAME}/html/GuideReferenceManagement.html
 share/doc/${PKGNAME}/html/GuideReferenceThumbnails.html
+share/doc/${PKGNAME}/html/GuideReferenceToolbar.html
 share/doc/${PKGNAME}/html/GuideSidebars.html
 share/doc/${PKGNAME}/html/GuideSidebarsInfo.html
 share/doc/${PKGNAME}/html/GuideSidebarsSortManager.html
@@ -95,6 +97,7 @@ share/locale/ca/LC_MESSAGES/geeqie.mo
 share/locale/cs/LC_MESSAGES/geeqie.mo
 share/locale/da/LC_MESSAGES/geeqie.mo
 share/locale/de/LC_MESSAGES/geeqie.mo
+share/locale/el/LC_MESSAGES/geeqie.mo
 share/locale/eo/LC_MESSAGES/geeqie.mo
 share/locale/es/LC_MESSAGES/geeqie.mo
 share/locale/et/LC_MESSAGES/geeqie.mo
@@ -118,6 +121,7 @@ share/locale/sr/LC_MESSAGES/geeqie.mo
 share/locale/sr@latin/LC_MESSAGES/geeqie.mo
 share/locale/sv/LC_MESSAGES/geeqie.mo
 share/locale/th/LC_MESSAGES/geeqie.mo
+share/locale/tlh/LC_MESSAGES/geeqie.mo
 share/locale/tr/LC_MESSAGES/geeqie.mo
 share/locale/uk/LC_MESSAGES/geeqie.mo
 share/locale/vi/LC_MESSAGES/geeqie.mo
