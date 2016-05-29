@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2015/07/21 19:23:12 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2016/05/29 21:21:40 wiz Exp $
 
-DISTNAME=	pkginfo-1.2.1
+DISTNAME=	pkginfo-1.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	http://pypi.python.org/packages/source/p/pkginfo/
+MASTER_SITES=	https://pypi.python.org/packages/bc/3e/046ec2439e233161f99d2f6cceb1ac49176612b6f6250cd6cb9919cda97a/
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://pypi.python.org/pypi/pkginfo/
