@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2268 2016/05/26 15:37:37 khorben Exp $
+# $NetBSD: Makefile,v 1.2269 2016/05/29 22:26:24 abs Exp $
 #
 
 COMMENT=	Development utilities
@@ -520,6 +520,7 @@ SUBDIR+=	libindicator
 SUBDIR+=	libindicator-tools
 SUBDIR+=	libindicator3
 SUBDIR+=	libinotify
+SUBDIR+=	libite
 SUBDIR+=	libixp
 SUBDIR+=	libjit
 SUBDIR+=	libjudy
