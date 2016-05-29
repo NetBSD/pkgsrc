@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2193 2016/05/29 07:07:18 cheusov Exp $
+$NetBSD: CHANGES-2016,v 1.2194 2016/05/29 07:22:07 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2860,3 +2860,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added www/http-parser version 2.7.0 [schnoebe 2016-05-28]
 	Added www/ruby-jekyll-archives version 2.1.0 [jmmv 2016-05-29]
 	Added textproc/jrep version 0.6.0 [cheusov 2016-05-29]
+	Removed textproc/jgrep [cheusov 2016-05-29]
