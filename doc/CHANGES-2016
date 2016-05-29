@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2198 2016/05/29 15:47:38 taca Exp $
+$NetBSD: CHANGES-2016,v 1.2199 2016/05/29 18:35:16 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2865,3 +2865,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated converters/dos2unix to 7.3.4 [ryoon 2016-05-29]
 	Updated net/lftp to 4.7.2 [ryoon 2016-05-29]
 	Updated mail/roundcube to 1.1.5nb2 [taca 2016-05-29]
+	Updated net/corebird to 1.2.2 [ryoon 2016-05-29]
