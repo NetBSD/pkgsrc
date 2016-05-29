@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2203 2016/05/29 20:41:54 leot Exp $
+$NetBSD: CHANGES-2016,v 1.2204 2016/05/29 21:06:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2870,3 +2870,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/curl to 7.49.0 [wiz 2016-05-29]
 	Updated graphics/geeqie to 1.3 [wiz 2016-05-29]
 	Updated net/youtube-dl to 20160530 [leot 2016-05-29]
+	Updated textproc/libxslt to 1.1.29 [wiz 2016-05-29]
