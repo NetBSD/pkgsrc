@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2016/04/13 17:50:08 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2016/05/29 21:31:54 wiz Exp $
 
-DISTNAME=	waf-1.8.20
+DISTNAME=	waf-1.8.21
 CATEGORIES=	devel
 MASTER_SITES=	https://waf.io/
 EXTRACT_SUFX=	.tar.bz2
