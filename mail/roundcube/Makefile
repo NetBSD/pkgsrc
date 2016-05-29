@@ -1,10 +1,14 @@
-# $NetBSD: Makefile,v 1.82 2016/05/26 23:22:17 taca Exp $
+# $NetBSD: Makefile,v 1.83 2016/05/29 15:46:59 taca Exp $
 
 DISTNAME=	roundcubemail-1.1.5
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/mail-/-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=roundcubemail/}
+MASTER_SITES=   ${MASTER_SITE_GITHUB:=roundcube/}
+GITHUB_PROJECT= roundcubemail
+GITHUB_RELEASE= 1.1.5
+GITHUB_TYPE=    release
+DIST_SUBDIR=	roundcubemail-1.1.5
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://roundcube.net/
