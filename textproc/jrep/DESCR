@@ -1,0 +1,12 @@
+jrep is a command-line grep-like utility written in Java.
+Features:
+  -- Java regular expressions
+     (https://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html)
+  -- Support for RE2J
+     (https://github.com/google/re2)
+  -- POSIX options (excluding -E and -G)
+     (http://pubs.opengroup.org/onlinepubs/009604499/utilities/grep.html)
+  -- most GNU grep(1) options
+     (https://www.gnu.org/software/grep/)
+  -- Extensions over GNU grep(1):
+     options -O, -2 and -8
