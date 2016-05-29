@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2194 2016/05/29 07:22:07 cheusov Exp $
+$NetBSD: CHANGES-2016,v 1.2195 2016/05/29 07:46:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2861,3 +2861,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added www/ruby-jekyll-archives version 2.1.0 [jmmv 2016-05-29]
 	Added textproc/jrep version 0.6.0 [cheusov 2016-05-29]
 	Removed textproc/jgrep [cheusov 2016-05-29]
+	Updated net/p5-Net-DNS to 1.06 [wiz 2016-05-29]
