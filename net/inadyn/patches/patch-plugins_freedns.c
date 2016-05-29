@@ -1,8 +1,8 @@
-$NetBSD: patch-plugins_freedns.c,v 1.1 2015/08/14 20:24:28 abs Exp $
+$NetBSD: patch-plugins_freedns.c,v 1.2 2016/05/29 22:32:12 abs Exp $
 
 If the update call fails, log the response from the remote service
 
---- plugins/freedns.c.orig	2015-07-14 15:29:28.000000000 +0000
+--- plugins/freedns.c.orig	2015-09-09 19:27:51.000000000 +0000
 +++ plugins/freedns.c
 @@ -55,7 +55,7 @@ static int request(ddns_t *ctx, ddns_inf
  	int           i, rc = 0;

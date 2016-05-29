@@ -1,0 +1,14 @@
+$NetBSD: patch-Makefile.am,v 1.1 2016/05/29 22:32:12 abs Exp $
+
+Depend on external libite
+
+--- Makefile.am.orig	2015-09-09 19:27:51.000000000 +0000
++++ Makefile.am
+@@ -1,6 +1,6 @@
+ ## Inadyn - A small and simple DDNS client                -*-Makefile-*-
+ 
+-SUBDIRS         = libite src include man
++SUBDIRS         = src include man
+ doc_DATA	= README AUTHORS COPYING NEWS ChangeLog
+ EXTRA_DIST	= autogen.sh
+ DISTCLEANFILES	= *~ DEADJOE semantic.cache *.gdb *.elf core core.* *.d
