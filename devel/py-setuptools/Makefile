@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.95 2016/05/21 05:33:31 richard Exp $
+# $NetBSD: Makefile,v 1.96 2016/05/29 21:27:05 wiz Exp $
 
-DISTNAME=		setuptools-21.0.0
+DISTNAME=		setuptools-21.2.2
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		devel python
-MASTER_SITES=		https://pypi.python.org/packages/ff/d4/209f4939c49e31f5524fa0027bf1c8ec3107abaf7c61fdaad704a648c281/
+MASTER_SITES=		https://pypi.python.org/packages/5b/6e/a4bf49ddc41f144fd511f24c096dfa7600bffaf348563e08ef381dd6323e/
 
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		https://pypi.python.org/pypi/setuptools
