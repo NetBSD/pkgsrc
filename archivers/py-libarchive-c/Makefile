@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2016/05/22 13:32:18 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2016/05/29 18:49:54 wiz Exp $
 
-DISTNAME=	libarchive-c-2.3
+DISTNAME=	libarchive-c-2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_PYPI:=l/libarchive-c/}
+MASTER_SITES=	https://pypi.python.org/packages/78/99/c962cfa81a0acff3cb569564349f0a3c249c2435e543bc75a79a8b7fcf03/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/Changaco/python-libarchive-c
@@ -16,11 +16,6 @@ SUBST_SED.libarchive+=		-e "s,find_library('archive'),'${PREFIX}/lib/libarchive.
 SUBST_FILES.libarchive+=	libarchive/ffi.py
 SUBST_MESSAGE.libarchive=	Fix path to libarchive.
 SUBST_STAGE.libarchive=		post-configure
-
-# permissions are usually wrong
-# https://github.com/Changaco/python-libarchive-c/issues/30
-post-install:
-	${CHMOD} ${SHAREMODE} ${DESTDIR}${PREFIX}/${PYSITELIB}/${EGG_INFODIR}/*
 
 .include "../../archivers/libarchive/buildlink3.mk"
 .include "../../lang/python/egg.mk"
