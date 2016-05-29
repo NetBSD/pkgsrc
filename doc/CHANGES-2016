@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2206 2016/05/29 21:12:23 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2207 2016/05/29 21:20:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2873,3 +2873,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/libxslt to 1.1.29 [wiz 2016-05-29]
 	Updated textproc/py-libxslt to 1.1.29 [wiz 2016-05-29]
 	Updated audio/playitslowly to 1.5.1 [wiz 2016-05-29]
+	Updated devel/py-pbr to 1.10.0 [wiz 2016-05-29]
