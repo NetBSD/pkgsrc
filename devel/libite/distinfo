@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2016/05/29 22:24:33 abs Exp $
+
+SHA1 (libite-1.6.0.tar.xz) = 2b8cc14acd79783cb3e08d64dcfb3eb7dd354e8b
+RMD160 (libite-1.6.0.tar.xz) = 22458633a9b0e04ea4b3565eac208f1f87b6eb7d
+SHA512 (libite-1.6.0.tar.xz) = f155bab49af6457f875561fbe4da95a133b086d4a4234cc81c9cef42f7e6dd8f7ec748d655e5cad6b8e07b30a3eab089e79dfebd156a5e62f605c899e4b02453
+Size (libite-1.6.0.tar.xz) = 248648 bytes
+SHA1 (patch-makepath.c) = 5769d96a8451ef2d92e8805d16ba260e9383fab4
+SHA1 (patch-tempfile.c) = 62c8151268d44950e3b55ed123a4a763772d9a53
