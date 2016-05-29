@@ -1,9 +1,13 @@
-# $NetBSD: Makefile,v 1.26 2014/12/07 17:09:09 rodent Exp $
+# $NetBSD: Makefile,v 1.27 2016/05/29 14:03:02 mef Exp $
 
-DISTNAME=		matplotlib-1.3.1
-PKGNAME=		${PYPKGPREFIX}-matplotlib-tk-1.3.1
+VERSION=		1.3.1
+DISTNAME=		matplotlib-${VERSION}
+PKGNAME=		${PYPKGPREFIX}-matplotlib-tk-${VERSION}
 CATEGORIES=		graphics python
-MASTER_SITES=		https://github.com/downloads/matplotlib/matplotlib/
+MASTER_SITES=		${MASTER_SITE_GITHUB:=matplotlib/}
+GITHUB_PROJECT=		matplotlib
+# with Githubify, size changes little bit, so the following line, please delete for another update.
+DIST_SUBDIR=		matplotlib-1.3.1
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://matplotlib.sourceforge.net/
