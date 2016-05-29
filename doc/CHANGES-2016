@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2195 2016/05/29 07:46:19 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2196 2016/05/29 09:25:51 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2862,3 +2862,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added textproc/jrep version 0.6.0 [cheusov 2016-05-29]
 	Removed textproc/jgrep [cheusov 2016-05-29]
 	Updated net/p5-Net-DNS to 1.06 [wiz 2016-05-29]
+	Updated converters/dos2unix to 7.3.4 [ryoon 2016-05-29]
