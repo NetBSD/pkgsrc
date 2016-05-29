@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2016/05/29 22:24:33 abs Exp $
+include/lite/conio.h
+include/lite/lite.h
+include/lite/queue.h
+include/lite/tree.h
+lib/libite.la
+lib/pkgconfig/libite.pc
+share/doc/libite/LICENSE
+share/doc/libite/README.md
