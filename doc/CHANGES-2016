@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2199 2016/05/29 18:35:16 ryoon Exp $
+$NetBSD: CHANGES-2016,v 1.2200 2016/05/29 18:50:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2866,3 +2866,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/lftp to 4.7.2 [ryoon 2016-05-29]
 	Updated mail/roundcube to 1.1.5nb2 [taca 2016-05-29]
 	Updated net/corebird to 1.2.2 [ryoon 2016-05-29]
+	Updated archivers/py-libarchive-c to 2.4 [wiz 2016-05-29]
