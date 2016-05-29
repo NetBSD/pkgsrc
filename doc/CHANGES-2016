@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2211 2016/05/29 21:31:02 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2212 2016/05/29 21:32:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2878,3 +2878,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-setuptools to 21.2.2 [wiz 2016-05-29]
 	Updated devel/py-test-runner to 2.8 [wiz 2016-05-29]
 	Updated devel/py-virtualenv to 15.0.2 [wiz 2016-05-29]
+	Updated devel/waf to 1.8.21 [wiz 2016-05-29]
