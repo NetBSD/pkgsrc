@@ -1,15 +1,6 @@
-# $NetBSD: Makefile,v 1.102 2016/02/26 10:32:47 jperkin Exp $
+# $NetBSD: Makefile,v 1.103 2016/05/29 21:06:46 wiz Exp $
 
-DISTNAME=	libxslt-1.1.28
-PKGREVISION=	5
-CATEGORIES=	textproc
-MASTER_SITES=	ftp://xmlsoft.org/libxslt/ \
-		http://xmlsoft.org/sources/
-
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://xmlsoft.org/XSLT/
-COMMENT=	XSLT parser library from the GNOME project
-LICENSE=	mit # with advertisement clause
+.include "Makefile.common"
 
 BUILD_DEPENDS+=	docbook-xml-[0-9]*:../../textproc/docbook-xml
 BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
@@ -31,9 +22,6 @@ BUILDLINK_TRANSFORM.SunOS+=	opt:-Wl,./libxslt.syms:-Wl,./libxslt_solaris.syms
 .if !empty(MACHINE_PLATFORM:MIRIX-5*)
 CPPFLAGS+=	-Dsocklen_t=int
 .endif
-
-post-extract:
-	cp ${WRKSRC}/libxslt/libxslt.syms ${WRKSRC}/libxslt/libxslt_solaris.syms
 
 BUILDLINK_API_DEPENDS.libxml2+=	libxml2>=2.6.27
 
