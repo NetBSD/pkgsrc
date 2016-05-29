@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/05/29 02:33:13 jmmv Exp $
+
+SHA1 (jekyll-archives-2.1.0.gem) = 3d53209c0dbe00977d1051421b21c43a81ff55ff
+RMD160 (jekyll-archives-2.1.0.gem) = 72a8384f17ed96169af0877192c2a477f6df756f
+SHA512 (jekyll-archives-2.1.0.gem) = 719225d3ee0d63883772d4df29402890bba81390d3ca72ffa01ffc47ad9d0ef0e3072d2046a2eae6848456f1a9d4dd6ad7522a155e6909280bb9288a887f90f5
+Size (jekyll-archives-2.1.0.gem) = 7168 bytes
