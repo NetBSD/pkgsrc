@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.23 2015/11/03 21:34:17 agc Exp $
+$NetBSD: distinfo,v 1.24 2016/05/29 12:35:00 mef Exp $
 
-SHA1 (matplotlib-1.3.1.tar.gz) = 8578afc86424392591c0ee03f7613ffa9b6f68ee
-RMD160 (matplotlib-1.3.1.tar.gz) = 7c2647ae1d6aafdc1c32e47183239c7da0d91956
-SHA512 (matplotlib-1.3.1.tar.gz) = 04877aa15b6d52a6f813e8377098d13c432f66ae2522c544575440180944c9b73a2164ae63edd3a0eff807883bf7b39cd55f28454ccee8c76146567ff4a6fd40
-Size (matplotlib-1.3.1.tar.gz) = 42163182 bytes
-SHA1 (patch-ab) = 416ceee9a060b98b615ef9a98ac8cab25fa9f408
+SHA1 (matplotlib-1.3.1/matplotlib-1.3.1.tar.gz) = 7238fbc916b2bb7679d47dffa716956686f2cf79
+RMD160 (matplotlib-1.3.1/matplotlib-1.3.1.tar.gz) = 034e78cfd81cbdb6a9a95c31c257074b908c8cb7
+SHA512 (matplotlib-1.3.1/matplotlib-1.3.1.tar.gz) = f178e61f2133078daec2cd7bc05411a26da36121607a72115a991052dd002c72daaf8a7a60513b861ac50aabf0524db155cd748925abae23e2311a98b704ee2b
+Size (matplotlib-1.3.1/matplotlib-1.3.1.tar.gz) = 42020802 bytes
+SHA1 (patch-ab) = 077f7bb0bf65ff14ab3de093a9f78c0be1c47a49
 SHA1 (patch-lib_matplotlib_tri___tri.cpp) = ca21c3045eef3dae741ad2b4403f78b505e0b579
 SHA1 (patch-lib_matplotlib_tri___tri.h) = f51cf95eed8e2a490d366ce39730587c944c60f4

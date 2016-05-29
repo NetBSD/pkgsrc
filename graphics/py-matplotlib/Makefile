@@ -1,14 +1,18 @@
-# $NetBSD: Makefile,v 1.42 2014/02/06 01:53:16 obache Exp $
+# $NetBSD: Makefile,v 1.43 2016/05/29 12:35:00 mef Exp $
 
 DISTNAME=		matplotlib-1.3.1
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=		1
 CATEGORIES=		graphics python
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=matplotlib/}
+MASTER_SITES=		${MASTER_SITE_GITHUB:=matplotlib/}
+GITHUB_PROJECT=		matplotlib
+# with Githubify, size changes little bit, so the following line, please 1delete for another update.
+DIST_SUBDIR=		matplotlib-1.3.1
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://matplotlib.org/
 COMMENT=		Matlab-style plotting package for Python
+# LICENSE=		see ${WRKSRC}/LICENSE/LICENSE
 
 DEPENDS+=		${PYPKGPREFIX}-pytz>=2008b:../../time/py-pytz
 DEPENDS+=		${PYPKGPREFIX}-pyparsing>=1.5.6:../../devel/py-pyparsing
