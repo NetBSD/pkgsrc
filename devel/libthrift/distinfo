@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2016/05/30 09:22:58 taca Exp $
+$NetBSD: distinfo,v 1.13 2016/05/30 16:03:13 taca Exp $
 
 SHA1 (thrift-0.7.0.tar.gz) = b8f6877bc75878984355da4efe171ad99ff05b6a
 RMD160 (thrift-0.7.0.tar.gz) = d9db8ff077347134101cd017e086511c4317b052
@@ -24,3 +24,4 @@ SHA1 (patch-lib_cpp_src_transport_TServerSocket.cpp) = dc54a0991f5918de04da73f18
 SHA1 (patch-lib_cpp_test_Benchmark.cpp) = 65a3a873b33f7290551c535b4ef8c9a109aae3e1
 SHA1 (patch-lib_erl_Makefile.in) = 74bfbc9f191f685cb175801a495ae4af0eaa6e69
 SHA1 (patch-lib_php_src_ext_thrift__protocol_php__thrift__protocol.cpp) = 6c1f1add0bfc652662efa59fc47d15e91a4d6a2b
+SHA1 (patch-lib_rb_Makefile.in) = dced084489c744f60135c7608187a313415ae82b
