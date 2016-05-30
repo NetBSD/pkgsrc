@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2215 2016/05/30 13:27:54 mef Exp $
+$NetBSD: CHANGES-2016,v 1.2216 2016/05/30 19:11:49 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2883,3 +2883,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/inadyn to 1.99.15 [abs 2016-05-29]
 	Updated graphics/feh to 2.15.4 [leot 2016-05-30]
 	Updated archivers/advancecomp to 1.19 [mef 2016-05-30]
+	Updated www/webkit-gtk to 2.12.3 [leot 2016-05-30]
