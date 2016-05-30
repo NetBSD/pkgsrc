@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2016/04/01 08:21:05 fhajny Exp $
+# $NetBSD: options.mk,v 1.9 2016/05/30 19:52:49 tnn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.node
 PKG_SUPPORTED_OPTIONS=	openssl dtrace icu
@@ -32,6 +32,8 @@ CONFIGURE_ARGS+=	--with-intl=system-icu
 BUILDLINK_API_DEPENDS.openssl+=	openssl>=1.0.2
 .include "../../security/openssl/buildlink3.mk"
 CONFIGURE_ARGS+=	--shared-openssl
+_WRAP_EXTRA_ARGS.CXX+=	${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
+CWRAPPERS_APPEND.cxx+=	${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.openssl}/lib
 .else
 CONFIGURE_ARGS+=	--without-ssl
 .endif
