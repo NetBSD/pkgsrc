@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2016/04/12 07:58:04 leot Exp $
+@comment $NetBSD: PLIST,v 1.34 2016/05/30 19:11:31 leot Exp $
 bin/MiniBrowser
 bin/jsc
 include/webkitgtk-4.0/JavaScriptCore/JSBase.h
@@ -9,9 +9,11 @@ include/webkitgtk-4.0/JavaScriptCore/JSValueRef.h
 include/webkitgtk-4.0/JavaScriptCore/JavaScript.h
 include/webkitgtk-4.0/JavaScriptCore/WebKitAvailability.h
 include/webkitgtk-4.0/webkit2/WebKitAuthenticationRequest.h
+include/webkitgtk-4.0/webkit2/WebKitAutocleanups.h
 include/webkitgtk-4.0/webkit2/WebKitBackForwardList.h
 include/webkitgtk-4.0/webkit2/WebKitBackForwardListItem.h
 include/webkitgtk-4.0/webkit2/WebKitColorChooserRequest.h
+include/webkitgtk-4.0/webkit2/WebKitConsoleMessage.h
 include/webkitgtk-4.0/webkit2/WebKitContextMenu.h
 include/webkitgtk-4.0/webkit2/WebKitContextMenuActions.h
 include/webkitgtk-4.0/webkit2/WebKitContextMenuItem.h
@@ -57,12 +59,14 @@ include/webkitgtk-4.0/webkit2/WebKitVersion.h
 include/webkitgtk-4.0/webkit2/WebKitWebContext.h
 include/webkitgtk-4.0/webkit2/WebKitWebEditor.h
 include/webkitgtk-4.0/webkit2/WebKitWebExtension.h
+include/webkitgtk-4.0/webkit2/WebKitWebExtensionAutocleanups.h
 include/webkitgtk-4.0/webkit2/WebKitWebHitTestResult.h
 include/webkitgtk-4.0/webkit2/WebKitWebInspector.h
 include/webkitgtk-4.0/webkit2/WebKitWebPage.h
 include/webkitgtk-4.0/webkit2/WebKitWebResource.h
 include/webkitgtk-4.0/webkit2/WebKitWebView.h
 include/webkitgtk-4.0/webkit2/WebKitWebViewBase.h
+include/webkitgtk-4.0/webkit2/WebKitWebViewSessionState.h
 include/webkitgtk-4.0/webkit2/WebKitWebsiteDataManager.h
 include/webkitgtk-4.0/webkit2/WebKitWindowProperties.h
 include/webkitgtk-4.0/webkit2/webkit-web-extension.h
@@ -94,9 +98,7 @@ include/webkitgtk-4.0/webkitdom/WebKitDOMDOMMimeTypeArray.h
 include/webkitgtk-4.0/webkitdom/WebKitDOMDOMNamedFlowCollection.h
 include/webkitgtk-4.0/webkitdom/WebKitDOMDOMPlugin.h
 include/webkitgtk-4.0/webkitdom/WebKitDOMDOMPluginArray.h
-include/webkitgtk-4.0/webkitdom/WebKitDOMDOMSecurityPolicy.h
 include/webkitgtk-4.0/webkitdom/WebKitDOMDOMSelection.h
-include/webkitgtk-4.0/webkitdom/WebKitDOMDOMSettableTokenList.h
 include/webkitgtk-4.0/webkitdom/WebKitDOMDOMStringList.h
 include/webkitgtk-4.0/webkitdom/WebKitDOMDOMStringMap.h
 include/webkitgtk-4.0/webkitdom/WebKitDOMDOMTokenList.h
@@ -115,7 +117,6 @@ include/webkitgtk-4.0/webkitdom/WebKitDOMDocumentTypeUnstable.h
 include/webkitgtk-4.0/webkitdom/WebKitDOMDocumentUnstable.h
 include/webkitgtk-4.0/webkitdom/WebKitDOMElement.h
 include/webkitgtk-4.0/webkitdom/WebKitDOMElementUnstable.h
-include/webkitgtk-4.0/webkitdom/WebKitDOMEntityReference.h
 include/webkitgtk-4.0/webkitdom/WebKitDOMEvent.h
 include/webkitgtk-4.0/webkitdom/WebKitDOMEventTarget.h
 include/webkitgtk-4.0/webkitdom/WebKitDOMEventUnstable.h
@@ -132,7 +133,6 @@ include/webkitgtk-4.0/webkitdom/WebKitDOMHTMLAreaElementUnstable.h
 include/webkitgtk-4.0/webkitdom/WebKitDOMHTMLAudioElement.h
 include/webkitgtk-4.0/webkitdom/WebKitDOMHTMLBRElement.h
 include/webkitgtk-4.0/webkitdom/WebKitDOMHTMLBaseElement.h
-include/webkitgtk-4.0/webkitdom/WebKitDOMHTMLBaseFontElement.h
 include/webkitgtk-4.0/webkitdom/WebKitDOMHTMLBodyElement.h
 include/webkitgtk-4.0/webkitdom/WebKitDOMHTMLButtonElement.h
 include/webkitgtk-4.0/webkitdom/WebKitDOMHTMLButtonElementUnstable.h
@@ -215,6 +215,7 @@ include/webkitgtk-4.0/webkitdom/WebKitDOMMediaDevices.h
 include/webkitgtk-4.0/webkitdom/WebKitDOMMediaError.h
 include/webkitgtk-4.0/webkitdom/WebKitDOMMediaList.h
 include/webkitgtk-4.0/webkitdom/WebKitDOMMediaQueryList.h
+include/webkitgtk-4.0/webkitdom/WebKitDOMMediaTrackSupportedConstraints.h
 include/webkitgtk-4.0/webkitdom/WebKitDOMMessagePort.h
 include/webkitgtk-4.0/webkitdom/WebKitDOMMouseEvent.h
 include/webkitgtk-4.0/webkitdom/WebKitDOMMouseEventUnstable.h
@@ -273,6 +274,8 @@ include/webkitgtk-4.0/webkitdom/WebKitDOMXPathExpression.h
 include/webkitgtk-4.0/webkitdom/WebKitDOMXPathNSResolver.h
 include/webkitgtk-4.0/webkitdom/WebKitDOMXPathResult.h
 include/webkitgtk-4.0/webkitdom/webkitdom.h
+include/webkitgtk-4.0/webkitdom/webkitdomautocleanups-unstable.h
+include/webkitgtk-4.0/webkitdom/webkitdomautocleanups.h
 include/webkitgtk-4.0/webkitdom/webkitdomdefines-unstable.h
 include/webkitgtk-4.0/webkitdom/webkitdomdefines.h
 lib/girepository-1.0/JavaScriptCore-4.0.typelib
@@ -280,10 +283,10 @@ lib/girepository-1.0/WebKit2-4.0.typelib
 lib/girepository-1.0/WebKit2WebExtension-4.0.typelib
 lib/libjavascriptcoregtk-4.0.so
 lib/libjavascriptcoregtk-4.0.so.18
-lib/libjavascriptcoregtk-4.0.so.18.2.17
+lib/libjavascriptcoregtk-4.0.so.18.3.11
 lib/libwebkit2gtk-4.0.so
 lib/libwebkit2gtk-4.0.so.37
-lib/libwebkit2gtk-4.0.so.37.11.12
+lib/libwebkit2gtk-4.0.so.37.13.9
 lib/pkgconfig/javascriptcoregtk-4.0.pc
 lib/pkgconfig/webkit2gtk-4.0.pc
 lib/pkgconfig/webkit2gtk-web-extension-4.0.pc
@@ -308,6 +311,7 @@ share/locale/eo/LC_MESSAGES/WebKit2GTK-4.0.mo
 share/locale/es/LC_MESSAGES/WebKit2GTK-4.0.mo
 share/locale/et/LC_MESSAGES/WebKit2GTK-4.0.mo
 share/locale/eu/LC_MESSAGES/WebKit2GTK-4.0.mo
+share/locale/fi/LC_MESSAGES/WebKit2GTK-4.0.mo
 share/locale/fr/LC_MESSAGES/WebKit2GTK-4.0.mo
 share/locale/gl/LC_MESSAGES/WebKit2GTK-4.0.mo
 share/locale/gu/LC_MESSAGES/WebKit2GTK-4.0.mo
