@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2016/03/05 11:29:18 jperkin Exp $
+# $NetBSD: Makefile,v 1.29 2016/05/30 12:25:36 pgoyette Exp $
 
-PKGREVISION= 1
+PKGREVISION= 2
 .include "Makefile.common"
 
 COMMENT=	Anti-virus toolkit
@@ -34,6 +34,8 @@ CONFIGURE_ARGS+=	--disable-readdir-r
 .else
 CONFIGURE_ARGS+=	--enable-readdir_r
 .endif
+
+NOT_PAX_MPROTECT_SAFE+=	sbin/clamd
 
 CFLAGS.SunOS+=		-D__EXTENSIONS__
 
