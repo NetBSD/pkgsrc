@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2016/05/29 21:27:05 wiz Exp $
+# $NetBSD: Makefile,v 1.97 2016/05/30 10:54:57 wiz Exp $
 
 DISTNAME=		setuptools-21.2.2
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -18,7 +18,6 @@ PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
 PLIST_SUBST+=		EGG_INFODIR=${EGG_NAME}-py${PYVERSSUFFIX}.egg-info
 
 REPLACE_PYTHON+=	setuptools/command/easy_install.py
-REPLACE_PYTHON+=	setuptools/tests/test_resources.py
 
 # upstream often forgets deleting files, and packages on Windows,
 # so permissions are usually wrong
