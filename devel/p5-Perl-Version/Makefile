@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2015/06/12 10:49:38 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2016/05/30 14:09:05 mef Exp $
 #
 
 DISTNAME=	Perl-Version-1.013
@@ -14,6 +14,9 @@ LICENSE=	${PERL5_LICENSE}
 
 USE_LANGUAGES=		# empty
 MAKE_ENV+=		PERL_MM_USE_DEFAULT=1
+
+# for make test
+BUILD_DEPENDS+=	p5-File-Slurp-Tiny-[0-9]*:../../devel/p5-File-Slurp-Tiny
 
 PERL5_PACKLIST=		auto/Perl/Version/.packlist
 
