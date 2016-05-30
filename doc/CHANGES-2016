@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2216 2016/05/30 19:11:49 leot Exp $
+$NetBSD: CHANGES-2016,v 1.2217 2016/05/30 21:33:34 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2884,3 +2884,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/feh to 2.15.4 [leot 2016-05-30]
 	Updated archivers/advancecomp to 1.19 [mef 2016-05-30]
 	Updated www/webkit-gtk to 2.12.3 [leot 2016-05-30]
+	Updated devel/p5-Dist-Zilla to 6.005 [mef 2016-05-30]
