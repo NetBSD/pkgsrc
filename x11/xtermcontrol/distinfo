@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/05/30 22:58:05 khorben Exp $
+
+SHA1 (xtermcontrol-3.3.tar.gz) = c451b90a0b792c6133e7611e2b7522ff7a0e8b09
+RMD160 (xtermcontrol-3.3.tar.gz) = cd930467f3b927d3538a27b786176670a796166e
+SHA512 (xtermcontrol-3.3.tar.gz) = 625b1ad93110032244eb277621676d89113a4c45642538b029dd36ab31e2fe9d2603c41236d2a1ffb22b2fd7feb61335f35397814569a634eb0a7d4b71961d1b
+Size (xtermcontrol-3.3.tar.gz) = 141972 bytes
