@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.72 2016/05/11 14:10:41 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.73 2016/05/30 08:10:44 leot Exp $
 
-DISTNAME=	feh-2.15.3
+DISTNAME=	feh-2.15.4
 CATEGORIES=	graphics
 MASTER_SITES=	http://feh.finalrewind.org/
 EXTRACT_SUFX=	.tar.bz2
