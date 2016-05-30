@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2214 2016/05/30 08:10:56 leot Exp $
+$NetBSD: CHANGES-2016,v 1.2215 2016/05/30 13:27:54 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2882,3 +2882,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added devel/libite version 1.6.0 [abs 2016-05-29]
 	Updated net/inadyn to 1.99.15 [abs 2016-05-29]
 	Updated graphics/feh to 2.15.4 [leot 2016-05-30]
+	Updated archivers/advancecomp to 1.19 [mef 2016-05-30]
