@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2016/02/25 15:35:31 jperkin Exp $
+# $NetBSD: Makefile,v 1.15 2016/05/31 08:13:45 leot Exp $
 
 DISTNAME=	ttyrec-1.0.8
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://0xcc.net/ttyrec/
 
@@ -10,6 +11,13 @@ COMMENT=	Tty recorder
 LICENSE=	original-bsd
 
 CFLAGS.SunOS+=	-DSVR4
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(OPSYS:M*BSD) || ${OPSYS} == "DragonFly" || ${OPSYS} == "Darwin"
+CFLAGS+=	-DHAVE_openpty
+LDFLAGS+=	-lutil
+.endif
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
