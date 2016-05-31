@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2226 2016/05/31 13:52:24 mef Exp $
+$NetBSD: CHANGES-2016,v 1.2227 2016/05/31 14:06:04 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2894,3 +2894,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated editors/emacs23 to 23.4nb37 [jperkin 2016-05-31]
 	Updated devel/gmake to 4.2nb1 [wiz 2016-05-31]
 	Updated ham/fldigi to 3.23.10 [mef 2016-05-31]
+	Updated archivers/gcpio to 2.12 [mef 2016-05-31]
