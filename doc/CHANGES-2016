@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2223 2016/05/31 09:54:55 jperkin Exp $
+$NetBSD: CHANGES-2016,v 1.2224 2016/05/31 09:58:59 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2891,3 +2891,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated misc/ttyrec to 1.0.8nb1 [leot 2016-05-31]
 	Updated devel/p5-version to 0.9917 [wen 2016-05-31]
 	Updated editors/emacs24 to 24.5nb11 [jperkin 2016-05-31]
+	Updated editors/emacs23 to 23.4nb37 [jperkin 2016-05-31]
