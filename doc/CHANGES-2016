@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2218 2016/05/30 22:59:07 khorben Exp $
+$NetBSD: CHANGES-2016,v 1.2219 2016/05/31 06:56:41 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2886,3 +2886,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/webkit-gtk to 2.12.3 [leot 2016-05-30]
 	Updated devel/p5-Dist-Zilla to 6.005 [mef 2016-05-30]
 	Added x11/xtermcontrol version 3.3 [khorben 2016-05-30]
+	Downgraded devel/gmake to 4.1nb2 [tnn 2016-05-31]
