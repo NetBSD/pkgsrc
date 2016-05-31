@@ -1,7 +1,11 @@
-$NetBSD: distinfo,v 1.8 2016/05/19 21:58:43 joerg Exp $
+$NetBSD: distinfo,v 1.9 2016/05/31 21:37:12 joerg Exp $
 
 SHA1 (Botan-1.11.29.tgz) = cf1673ff6bb50d4417cafd01c9aa196c77cc81db
 RMD160 (Botan-1.11.29.tgz) = e4f982659f9b2470fdfcec6823c07d8114740abc
 SHA512 (Botan-1.11.29.tgz) = c6ad6cf3d68c3524b9532e9f52e74d89cc2abfd093f1a46a44efa94a87b0fa50278f11dc5953225160d090cf8ae1c372f54c23b5dffd1f3dae79e210195cfd72
 Size (Botan-1.11.29.tgz) = 3137027 bytes
+SHA1 (patch-src_build-data_os_dragonfly.txt) = 2aef3f0c514f6d1e84aae43052d82b3536a1b1c5
+SHA1 (patch-src_build-data_os_freebsd.txt) = 43d02f914de0c14a848deac2f1165b2ce324fc5c
+SHA1 (patch-src_build-data_os_netbsd.txt) = e3acd79c182f338542c4c65b20f2443e42a1a488
+SHA1 (patch-src_build-data_os_openbsd.txt) = 2388e859c855409f6ec23e2b149b3eb56c5a0aea
 SHA1 (patch-src_lib_utils_os__utils.cpp) = f7bfadeb1eb614bc10ee8caad4fdddbaf4b43f1e
