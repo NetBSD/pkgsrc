@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.108 2016/05/25 07:46:47 nros Exp $
+$NetBSD: distinfo,v 1.109 2016/05/31 21:35:11 joerg Exp $
 
 SHA1 (qt-everywhere-opensource-src-4.8.7.tar.gz) = 76aef40335c0701e5be7bb3a9101df5d22fe3666
 RMD160 (qt-everywhere-opensource-src-4.8.7.tar.gz) = afb5e5a99388e6429faca59cb5000054feffd166
@@ -70,7 +70,7 @@ SHA1 (patch-src_3rdparty_webkit_Source_WebCore_platform_qt_PlatformKeyboardEvent
 SHA1 (patch-src_3rdparty_webkit_Source_WebKit2_DerivedSources.pro) = 7ae5feb79efd0836b74000e183b96f5775fd3043
 SHA1 (patch-src_corelib_io_io.pri) = cde98927b524c92fae1e053c2359e77bde2c240a
 SHA1 (patch-src_corelib_io_qfilesystemwatcher.cpp) = bb16b95d20286b1aa069dc25843d7e0067cc0268
-SHA1 (patch-src_corelib_thread_qthread__unix.cpp) = 5fdc6d22ea52ac89d6ae68a1dcf9de775265429b
+SHA1 (patch-src_corelib_thread_qthread__unix.cpp) = 67fbdc29d6da0aa7309a7aeb653a5abf10bd4d78
 SHA1 (patch-src_gui_painting_qpaintengine__mac.cpp) = dc44116d5d138020e5d525ec5b7fd0f1b44ebeca
 SHA1 (patch-src_network_ssl_qsslsocket__openssl__symbols.cpp) = 3ad682b86d2e9bd2b282caa298508dc3e9dd8566
 SHA1 (patch-src_network_ssl_qsslsocket__openssl__symbols__p.h) = 417846ba9edab8638cafa41a54ef60029467ef80
