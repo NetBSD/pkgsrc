@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2221 2016/05/31 08:14:03 leot Exp $
+$NetBSD: CHANGES-2016,v 1.2222 2016/05/31 08:30:19 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2889,3 +2889,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Downgraded devel/gmake to 4.1nb2 [tnn 2016-05-31]
 	Updated devel/p5-MooseX-ClassAttribute to 0.29 [wen 2016-05-31]
 	Updated misc/ttyrec to 1.0.8nb1 [leot 2016-05-31]
+	Updated devel/p5-version to 0.9917 [wen 2016-05-31]
