@@ -1,0 +1,14 @@
+$NetBSD: patch-src_build-data_os_freebsd.txt,v 1.1 2016/05/31 21:37:12 joerg Exp $
+
+--- src/build-data/os/freebsd.txt.orig	2016-05-25 21:22:53.135096812 +0000
++++ src/build-data/os/freebsd.txt
+@@ -1,5 +1,9 @@
+ os_type unix
+ 
++soname_pattern_base  "libbotan-{version_major}.{version_minor}.so"
++soname_pattern_abi   "libbotan-{version_major}.{version_minor}.so.{abi_rev}"
++soname_pattern_patch "libbotan-{version_major}.{version_minor}.so.{abi_rev}.{version_patch}"
++
+ <target_features>
+ clock_gettime
+ gettimeofday
