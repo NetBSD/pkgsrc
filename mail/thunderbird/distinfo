@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.178 2016/05/21 23:22:16 ryoon Exp $
+$NetBSD: distinfo,v 1.179 2016/05/31 21:33:50 joerg Exp $
 
 SHA1 (thunderbird-45.1.0.source.tar.xz) = a6b14094eb02181de0bc85a3d3ea95f4d84e9efb
 RMD160 (thunderbird-45.1.0.source.tar.xz) = a84d25fe5fc74a8b30103af904df3c824ce73168
@@ -25,7 +25,6 @@ SHA1 (patch-mozilla_config_rules.mk) = 5bc569ee42ea8fa2f2726af1f2993167b029d308
 SHA1 (patch-mozilla_config_stl__wrappers_ios) = f84d793f65bc7c7d1ffc7b542f846b394cf6de50
 SHA1 (patch-mozilla_config_stl__wrappers_ostream) = b36e7e199e355a0950e0db51c45fb34ce5ea2cc4
 SHA1 (patch-mozilla_config_system-headers) = 4c1cd436ee7d173d76ff9c34fa74a571299879dc
-SHA1 (patch-mozilla_config_system__wrappers_unwind.h) = a8e5dfafc875b055984420f9d6e64742ed9fb031
 SHA1 (patch-mozilla_configure.in) = fe475edf594e2ca98e3f6da629d06734de091cee
 SHA1 (patch-mozilla_dom_base_DOMRequest.cpp) = 0140dc4e081a6675fdcf366057511df354d27d95
 SHA1 (patch-mozilla_dom_base_moz.build) = cb7b5eb422f733f36797eac39e63e7f6daa5574f
