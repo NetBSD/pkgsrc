@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2014/01/11 14:42:01 adam Exp $
+# $NetBSD: Makefile,v 1.7 2016/05/31 19:35:54 joerg Exp $
 #
 
 DISTNAME=	Tktable2.10
@@ -11,6 +11,9 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tktable.sourceforge.net/
 COMMENT=	Full-featured 2D table widget for Tk
 LICENSE=	2-clause-bsd
+
+# Racy generation of tkTable.tcl.h
+MAKE_JOBS_SAFE=	no
 
 GNU_CONFIGURE=	yes
 
