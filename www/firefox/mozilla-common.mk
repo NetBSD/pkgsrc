@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.75 2016/05/20 12:25:20 wiz Exp $
+# $NetBSD: mozilla-common.mk,v 1.76 2016/05/31 06:30:30 tnn Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -13,6 +13,8 @@ BUILD_DEPENDS+=		yasm>=1.1:../../devel/yasm
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config perl gmake autoconf213 unzip zip
+# XXX https://bugzilla.mozilla.org/show_bug.cgi?id=1275547
+TOOL_DEPENDS+=		gmake<4.2:../../devel/gmake
 USE_LANGUAGES+=		c99 c++
 UNLIMIT_RESOURCES+=	datasize
 
