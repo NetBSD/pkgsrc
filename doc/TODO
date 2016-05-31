@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15955 2016/05/31 14:06:04 mef Exp $
+$NetBSD: TODO,v 1.15956 2016/05/31 15:07:59 mef Exp $
 
 Suggested new packages
 ======================
@@ -823,7 +823,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gsharutils-4.15.2
 	o gss-1.0.3
 	o gst-rtsp-server-1.6.2
-	o gtar-1.29
 	o gthumb-3.4.0
 	o gtk-gnutella-0.98.4
 	o gtk-systrace-20030623
