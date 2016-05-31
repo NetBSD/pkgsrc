@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2230 2016/05/31 19:55:23 joerg Exp $
+$NetBSD: CHANGES-2016,v 1.2231 2016/05/31 23:37:50 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2898,3 +2898,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated archivers/gtar to 1.29 [mef 2016-05-31]
 	Updated www/nginx-devel to 1.9.10nb1 [joerg 2016-05-31]
 	Updated www/nginx to 1.8.1nb1 [joerg 2016-05-31]
+	Updated devel/p5-Moose to 2.1803 [wen 2016-05-31]
