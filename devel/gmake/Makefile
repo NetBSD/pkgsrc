@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.96 2016/05/27 08:13:22 khorben Exp $
+# $NetBSD: Makefile,v 1.97 2016/05/31 06:53:13 tnn Exp $
 
-DISTNAME=	make-4.2
+DISTNAME=	make-4.1
 PKGNAME=	g${DISTNAME}
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=make/}
 EXTRACT_SUFX=	.tar.bz2
