@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2222 2016/05/31 08:30:19 wen Exp $
+$NetBSD: CHANGES-2016,v 1.2223 2016/05/31 09:54:55 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2890,3 +2890,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-MooseX-ClassAttribute to 0.29 [wen 2016-05-31]
 	Updated misc/ttyrec to 1.0.8nb1 [leot 2016-05-31]
 	Updated devel/p5-version to 0.9917 [wen 2016-05-31]
+	Updated editors/emacs24 to 24.5nb11 [jperkin 2016-05-31]
