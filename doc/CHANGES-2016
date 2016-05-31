@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2228 2016/05/31 15:07:58 mef Exp $
+$NetBSD: CHANGES-2016,v 1.2229 2016/05/31 19:55:01 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2896,3 +2896,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated ham/fldigi to 3.23.10 [mef 2016-05-31]
 	Updated archivers/gcpio to 2.12 [mef 2016-05-31]
 	Updated archivers/gtar to 1.29 [mef 2016-05-31]
+	Updated www/nginx-devel to 1.9.10nb1 [joerg 2016-05-31]
