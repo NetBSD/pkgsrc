@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2016/05/29 20:40:16 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2016/05/31 00:01:50 gdt Exp $
 
 DISTNAME=	geeqie-1.3
 EXTRACT_SUFX=	.tar.xz
@@ -23,7 +23,7 @@ REPLACE_BASH+=		plugins/ufraw/geeqie-ufraw
 REPLACE_BASH+=		plugins/import/geeqie-import
 
 pre-configure:
-	cd ${WRKSRC} && ${SH} ./autogen.sh
+	cd ${WRKSRC} && NOCONFIGURE=yes ${SH} ./autogen.sh
 
 post-build:
 	cd ${WRKSRC}/doc && ${MAKE_PROGRAM} html
