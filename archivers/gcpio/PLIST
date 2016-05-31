@@ -1,12 +1,13 @@
-@comment $NetBSD: PLIST,v 1.14 2013/07/21 10:31:26 shattered Exp $
+@comment $NetBSD: PLIST,v 1.15 2016/05/31 14:05:46 mef Exp $
 bin/gcpio
 gnu/bin/cpio
 gnu/man/man1/cpio.1
 gnu/man/man1/mt.1
 info/cpio.info
+lib/charset.alias
 libexec/grmt
 man/man1/gcpio.1
-man/man1/gmt.1
+man/man8/grmt.8
 share/locale/da/LC_MESSAGES/cpio.mo
 share/locale/de/LC_MESSAGES/cpio.mo
 share/locale/es/LC_MESSAGES/cpio.mo
@@ -14,14 +15,18 @@ share/locale/fi/LC_MESSAGES/cpio.mo
 share/locale/fr/LC_MESSAGES/cpio.mo
 share/locale/ga/LC_MESSAGES/cpio.mo
 share/locale/gl/LC_MESSAGES/cpio.mo
+share/locale/hr/LC_MESSAGES/cpio.mo
 share/locale/hu/LC_MESSAGES/cpio.mo
 share/locale/id/LC_MESSAGES/cpio.mo
+share/locale/it/LC_MESSAGES/cpio.mo
+share/locale/ja/LC_MESSAGES/cpio.mo
 share/locale/ko/LC_MESSAGES/cpio.mo
 share/locale/nl/LC_MESSAGES/cpio.mo
 share/locale/pl/LC_MESSAGES/cpio.mo
 share/locale/pt_BR/LC_MESSAGES/cpio.mo
 share/locale/ro/LC_MESSAGES/cpio.mo
 share/locale/ru/LC_MESSAGES/cpio.mo
+share/locale/sr/LC_MESSAGES/cpio.mo
 share/locale/sv/LC_MESSAGES/cpio.mo
 share/locale/tr/LC_MESSAGES/cpio.mo
 share/locale/uk/LC_MESSAGES/cpio.mo
