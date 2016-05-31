@@ -1,0 +1,14 @@
+$NetBSD: patch-mk_makemap_Makefile.am,v 1.1 2016/05/31 21:33:15 joerg Exp $
+
+--- mk/makemap/Makefile.am.orig	2016-05-07 12:20:44.083460074 +0000
++++ mk/makemap/Makefile.am
+@@ -29,8 +29,7 @@ makemap_CFLAGS=		-DNO_IO
+ 
+ 
+ AM_CPPFLAGS=		-I$(smtpd_srcdir)	\
+-			-I$(compat_srcdir)	\
+-			-I$(asr_srcdir)
++			-I$(compat_srcdir)
+ 
+ LIBCOMPAT=		$(top_builddir)/openbsd-compat/libopenbsd-compat.a
+ 
