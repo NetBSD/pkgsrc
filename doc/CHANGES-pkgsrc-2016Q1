@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q1,v 1.1.2.18 2016/05/25 19:08:22 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q1,v 1.1.2.19 2016/05/31 07:03:52 spz Exp $
 
 Changes to the packages collection and infrastructure on the pkgsrc-2016Q1 branch:
 
@@ -208,3 +208,10 @@ sysutils/xenkernel33: build fix
 
 Pullup ticket #5028 - requested by he
 textproc/libxml2: security update
+
+Pullup ticket #5029 - requested by bsiegert
+www/moodle: security update
+
+Pullup ticket #5030 - requested by bsiegert
+graphics/librsvg: security update
+
