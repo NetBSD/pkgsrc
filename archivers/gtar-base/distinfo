@@ -1,12 +1,10 @@
-$NetBSD: distinfo,v 1.39 2015/11/03 00:56:21 agc Exp $
+$NetBSD: distinfo,v 1.40 2016/05/31 15:04:51 mef Exp $
 
-SHA1 (tar-1.28.tar.bz2) = 668ea52014ef7e70afc4ff7324410ee32f2970ef
-RMD160 (tar-1.28.tar.bz2) = a2edf2a854fa9a7bc7383638038a7465ae8bba51
-SHA512 (tar-1.28.tar.bz2) = 4f66a236a2d9185114e2b358a09f3d38c3c38e984e5fca4bedc4d7eb461bdaace6a7a9fc62aafb70428b1f3dc617fb0d0553558fb29cad33f0cb53ba081521c4
-Size (tar-1.28.tar.bz2) = 2693989 bytes
+SHA1 (tar-1.29.tar.bz2) = 057977c86293fddcbb04075ca70f41079e044949
+RMD160 (tar-1.29.tar.bz2) = 27a18fd2a557fb6dc37218c96b3c3223527604a4
+SHA512 (tar-1.29.tar.bz2) = d2cea9892892dfa0c8efd390303b75dccc085c4895e07ced684074592d69729916d6ea12475aa6aff873d076a729bb7dc2499c233edcfb9c7e8e8995481eef3b
+Size (tar-1.29.tar.bz2) = 2715993 bytes
 SHA1 (patch-Makefile.in) = 78cc142b9370317c52215c106ea1e7217e71f9b5
-SHA1 (patch-configure) = 9d3b26ab03c8a0a30c3dbfbdeadae4d14b7fd8dc
-SHA1 (patch-gnu_readlinkat.c) = b1ddbf5159db92df9186354f27db5c9cb93b9afa
+SHA1 (patch-gnu_readlinkat.c) = ce9869bfcd75005bb4ddac4e3223df01a26a2b29
 SHA1 (patch-lib_xattr-at.c) = c69631c118558c0c056feb5b55188b2b4c92cc19
-SHA1 (patch-src_Makefile.in) = 2e6c93b00f4c291a68884663968625e784103c3b
 SHA1 (patch-src_system.c) = cd9f7358fa93ed0ba4a1b3fffdae5d7f84ef4791
