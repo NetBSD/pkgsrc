@@ -1,12 +1,10 @@
-# $NetBSD: Makefile.common,v 1.4 2016/05/24 11:30:30 wiz Exp $
+# $NetBSD: Makefile.common,v 1.5 2016/05/31 13:38:14 leot Exp $
 #
 # used by devel/git-base/Makefile
 # used by devel/git-contrib/Makefile
 # used by devel/git-docs/Makefile
 # used by devel/git-gitk/Makefile
 # used by www/gitweb/Makefile
-
-MAKE_JOBS_SAFE=	no # 2.8.3 with gmake-4.2
 
 .include "../../devel/git/Makefile.version"
 
