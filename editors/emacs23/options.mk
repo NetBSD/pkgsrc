@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2014/05/31 15:56:26 wiz Exp $
+# $NetBSD: options.mk,v 1.3 2016/05/31 09:58:24 jperkin Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.emacs
@@ -7,7 +7,9 @@ PKG_OPTIONS_OPTIONAL_GROUPS+= window-system
 PKG_OPTIONS_GROUP.window-system= x11 nextstep
 PKG_OPTIONS_OPTIONAL_GROUPS+= toolkit
 PKG_OPTIONS_GROUP.toolkit= gtk motif xaw
-PKG_SUGGESTED_OPTIONS=	dbus svg x11 xft2
+PKG_SUGGESTED_OPTIONS.Darwin=	nextstep
+PKG_SUGGESTED_OPTIONS.*=	x11
+PKG_SUGGESTED_OPTIONS+=		dbus svg xft2
 
 .include "../../mk/bsd.options.mk"
 
