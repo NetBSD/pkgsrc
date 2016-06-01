@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2236 2016/06/01 21:13:39 kleink Exp $
+$NetBSD: CHANGES-2016,v 1.2237 2016/06/01 21:46:42 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2907,3 +2907,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/py-werkzeug-docs to 0.11.10 [kleink 2016-06-01]
 	Updated www/py-flask to 0.11 [kleink 2016-06-01]
 	Updated www/py-flask-uploads to 0.2.0nb1 [kleink 2016-06-01]
+	Updated www/vimb to 2.11nb3 [leot 2016-06-01]
