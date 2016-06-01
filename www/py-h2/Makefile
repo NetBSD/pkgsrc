@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2016/04/20 16:10:14 leot Exp $
+# $NetBSD: Makefile,v 1.3 2016/06/01 12:35:13 wiz Exp $
 
 DISTNAME=	h2-2.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www
-MASTER_SITES=	${MASTER_SITE_PYPI}
+MASTER_SITES=	${MASTER_SITE_PYPI:=h/h2/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://hyper.rtfd.org/
