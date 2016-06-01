@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2014/10/09 14:06:02 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2016/06/01 13:30:40 joerg Exp $
 #
 
 DISTNAME=	verilog-0.9.7
@@ -44,6 +44,9 @@ SUBST_SED.vpi-dest=	'-e s, $$(vpidir)/, $$(DESTDIR)$$(vpidir)/,g'
 # Leading TAB
 SUBST_SED.vpi-dest+=	'-e s,	$$(vpidir)/,	$$(DESTDIR)$$(vpidir)/,g'
 SUBST_SED.vpi-dest+=	'-e s,^$$(vpidir)/,$$(DESTDIR)$$(vpidir)/,g'
+
+pre-build:
+	cd ${WRKSRC} && ${BUILD_MAKE_CMD} dep
 
 # Some missing files not installed are handled by SUBST (above)
 # and rest of them are by following target.
