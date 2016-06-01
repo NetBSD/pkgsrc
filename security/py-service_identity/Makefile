@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2016/04/14 11:34:23 leot Exp $
+# $NetBSD: Makefile,v 1.4 2016/06/01 12:36:40 wiz Exp $
 
 DISTNAME=	service_identity-16.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	security python
-MASTER_SITES=	${MASTER_SITE_PYPI}
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/service_identity/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pypi.python.org/pypi/service_identity
