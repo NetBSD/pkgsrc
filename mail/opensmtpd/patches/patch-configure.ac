@@ -1,4 +1,4 @@
-$NetBSD: patch-configure.ac,v 1.2 2016/05/01 05:56:40 mef Exp $
+$NetBSD: patch-configure.ac,v 1.3 2016/06/01 11:47:06 wiz Exp $
 
 Add sys/statvfs for NetBSD.
 
@@ -12,3 +12,11 @@ Add sys/statvfs for NetBSD.
  	sys/time.h \
  	sys/un.h \
  	time.h \
+@@ -701,6 +702,7 @@ AC_CHECK_FUNCS([ \
+ 	setreuid \
+ 	setsid \
+ 	sigaction \
++	snprintf \
+ 	socketpair \
+ 	strdup \
+ 	strerror \
