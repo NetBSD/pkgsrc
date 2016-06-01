@@ -1,11 +1,11 @@
-# $NetBSD: pypi.mk,v 1.2 2015/07/06 05:03:33 rodent Exp $
+# $NetBSD: pypi.mk,v 1.3 2016/06/01 12:39:40 wiz Exp $
 #
 # pypi.python.org master site handling
 #
 # To use, set in the pkgsrc Makefile:
 #
 # DISTNAME=	pyfoo-1.0.0
-# MASTER_SITES=	${MASTER_SITE_PYPI}
+# MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyfoo/}
 #
 # Then, PKGNAME and HOMEPAGE will be set automatically (can be overridden).
 #
