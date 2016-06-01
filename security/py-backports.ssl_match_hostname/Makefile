@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2015/12/30 15:02:06 leot Exp $
+# $NetBSD: Makefile,v 1.5 2016/06/01 12:36:39 wiz Exp $
 
 DISTNAME=	backports.ssl_match_hostname-3.5.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	python security www
-MASTER_SITES=	${MASTER_SITE_PYPI}
+MASTER_SITES=	${MASTER_SITE_PYPI:=b/backports.ssl_match_hostname/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pypi.python.org/pypi/backports.ssl_match_hostname

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2016/02/16 13:47:31 leot Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/01 12:35:14 wiz Exp $
 
 DISTNAME=	hyperframe-3.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www
-MASTER_SITES=	${MASTER_SITE_PYPI}
+MASTER_SITES=	${MASTER_SITE_PYPI:=h/hyperframe/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://hyper.rtfd.org/
