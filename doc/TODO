@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15957 2016/06/01 08:57:32 wiz Exp $
+$NetBSD: TODO,v 1.15958 2016/06/01 09:05:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1228,6 +1228,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-CDB_File-0.98
 	o p5-CDDB-2.00
 	o p5-CPANPLUS-2.102
+	o p5-Carp-Clan-6.06
 	o p5-Catalyst-Engine-PSGI-0.14
 	o p5-Catalyst-View-Email-0.36
 	o p5-CatalystX-CRUD-0.57
@@ -1242,6 +1243,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-DBD-SQLite2-0.37
 	o p5-Data-AMF-0.02004
 	o p5-Data-SimplePassword-0.11
+	o p5-Date-Manip-6.54
 	o p5-Device-XBee-API-0.8
 	o p5-Digest-Hashcash-1.1
 	o p5-Encode-2.82
@@ -1360,6 +1362,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Wx-0.9928
 	o p5-X11-Protocol-29
 	o p5-XML-Clean-1.010101
+	o p5-XML-LibXML-2.0125
 	o p5-XML-RSS-1.59
 	o p5-autobox-20090629
 	o p5-collectd-5.5.1
