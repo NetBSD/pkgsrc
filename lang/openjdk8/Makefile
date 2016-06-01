@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2016/05/27 04:57:16 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2016/06/01 00:40:40 pgoyette Exp $
 
 DISTNAME=	openjdk-1.8.92-20160506
 PKGNAME=	openjdk8-1.8.92
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_LOCAL:=openjdk7/}
 EXTRACT_SUFX=	.tar.xz
@@ -68,6 +68,7 @@ NOT_PAX_MPROTECT_SAFE+= java/openjdk8/bin/j[b-z]*
 NOT_PAX_MPROTECT_SAFE+= java/openjdk8/bin/jar*
 NOT_PAX_MPROTECT_SAFE+= java/openjdk8/bin/java
 NOT_PAX_MPROTECT_SAFE+= java/openjdk8/bin/java[a-z]*
+NOT_PAX_MPROTECT_SAFE+= java/openjdk8/jre/bin/*
 
 # Avoid build errors when JAVA_HOME and CLASSPATH are defined by user.
 MAKE_ENV+=	JAVA_HOME=
