@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.9 2015/12/29 23:34:55 dholland Exp $
+$NetBSD: distinfo,v 1.10 2016/06/01 13:32:13 joerg Exp $
 
 SHA1 (scm5e3.zip) = 3d7a0160357840c6a96ef9ded6fb31d92507561d
 RMD160 (scm5e3.zip) = 91f97bf4efd6bf734fe3e789762a90f20ad7b9b2
 SHA512 (scm5e3.zip) = f67a074b5e1a341bf790ded847ce77eb02a6855b108aa6cd94780cb6937b041d9185a64a5a9defcd122591b8e1661be6a7a8ed80e1d55d9ece714b3325217d49
 Size (scm5e3.zip) = 901866 bytes
-SHA1 (patch-aa) = f3b690d3da47b12284a5a7098d3052d78a419475
+SHA1 (patch-aa) = ead6bc6d59f448e59e0e954580449b751665ebfd
 SHA1 (patch-ab) = 9b3b078bdebad4bc12bd52d6a2db202d5cf88f89
 SHA1 (patch-ac) = babadb9192865c33a65aca08d07e241b58efee36
 SHA1 (patch-ad) = 3510daaa41a19539b196ae345f832b129bcaa0e5
