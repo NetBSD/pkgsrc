@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2016/06/01 18:46:00 gdt Exp $
+# $NetBSD: Makefile,v 1.20 2016/06/01 18:51:59 gdt Exp $
 
 # Upstream regularly breaks protocol compatibility.  While users of
 # pkgsrc syncthing on multiple systems can update synchronously, an
@@ -23,6 +23,9 @@ COMMENT=	Keeps directories in sync across hosts
 HOMEPAGE=	http://syncthing.net/
 MAINTAINER=	gdt@NetBSD.org
 LICENSE=	mpl-2.0
+
+# System pax fails on NetBSD 6.  Just use gtar until this is understood.
+EXTRACT_USING=		gtar
 
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
