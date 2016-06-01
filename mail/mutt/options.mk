@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.20 2016/02/25 15:00:51 jperkin Exp $
+# $NetBSD: options.mk,v 1.21 2016/06/01 21:56:12 tonio Exp $
 
 # Global and legacy options
 
@@ -10,9 +10,9 @@ PKG_SUPPORTED_OPTIONS+=	mutt-hcache tokyocabinet mutt-smtp
 PKG_SUPPORTED_OPTIONS+=	mutt-compressed-mbox
 PKG_SUPPORTED_OPTIONS+=	mutt-sidebar
 PKG_SUGGESTED_OPTIONS=	curses gpgme mutt-hcache mutt-smtp smime ssl
+PKG_SUGGESTED_OPTIONS+=	mutt-compressed-mbox
 # un-comment out the following lines whenever updating distinfo
 # and patches are up-to-date
-#PKG_SUGGESTED_OPTIONS+=	mutt-compressed-mbox
 #PKG_SUGGESTED_OPTIONS+=	mutt-sidebar
 
 .include "../../mk/bsd.options.mk"
@@ -122,8 +122,11 @@ CONFIGURE_ARGS+=	--disable-hcache
 PLIST_VARS+=		compressed_mbox
 .if !empty(PKG_OPTIONS:Mmutt-compressed-mbox)
 PLIST.compressed_mbox=	yes
-PATCH_SITES+=		http://mutt.org.ua/download/${PKGNAME_NOREV}/
-PATCHFILES+=		patch-${PKGVERSION_NOREV}.rr.compressed.gz
+#PATCH_SITES+=		http://mutt.org.ua/download/${PKGNAME_NOREV}/
+#PATCHFILES+=		patch-${PKGVERSION_NOREV}.rr.compressed.gz
+# use the 1.6.0 patch, as suggested by Andreas Kusalananda Kahari
+PATCH_SITES+=		http://mutt.org.ua/download/mutt-1.6.0/
+PATCHFILES+=		patch-1.6.0.rr.compressed.gz
 PATCH_DIST_STRIP=	-p1
 CONFIGURE_ARGS+=	--enable-compressed
 SUBST_CLASSES+=		compress
@@ -135,6 +138,7 @@ SUBST_SED.compress+=	-e 's,^EXTRA_DIST = ,EXTRA_DIST = compress.h ,'
 SUBST_SED.compress+=	-e 's,^mutt_OBJECTS = ,mutt_OBJECTS = compress.o ,'
 # add xsltproc to be able to regenerate the documentation
 BUILD_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
+BUILD_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 .endif
 
 ###
