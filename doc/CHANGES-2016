@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2232 2016/06/01 00:25:16 wen Exp $
+$NetBSD: CHANGES-2016,v 1.2233 2016/06/01 01:14:00 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2900,3 +2900,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/nginx to 1.8.1nb1 [joerg 2016-05-31]
 	Updated devel/p5-Moose to 2.1803 [wen 2016-05-31]
 	Updated devel/p5-Capture-Tiny to 0.42 [wen 2016-06-01]
+	Updated www/p5-Dancer2 to 0.200000 [wen 2016-06-01]
