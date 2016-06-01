@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2016/05/23 12:57:14 gdt Exp $
+# $NetBSD: Makefile,v 1.19 2016/06/01 18:46:00 gdt Exp $
 
 # Upstream regularly breaks protocol compatibility.  While users of
 # pkgsrc syncthing on multiple systems can update synchronously, an
@@ -13,7 +13,7 @@
 # Note that the android versioning is disconnected from syncthing versioning;
 # see https://github.com/syncthing/syncthing-android/issues/652 for
 # a fuller explanation.
-DISTNAME=	syncthing-0.12.24
+DISTNAME=	syncthing-0.13.4
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GITHUB:=syncthing/}
 
@@ -43,9 +43,15 @@ SUBST_FILES.version=	build.go
 SUBST_SED.version=	-e 's|runError("git", "describe", "--always", "--dirty")|runError("echo","v${PKGVERSION_NOREV}")|'
 SUBST_SED.version+=	-e 's|runError("git", "show", "-s", "--format=%ct")|runError("false")|'
 
+# The following is more complicated than the build documenation says,
+# but appears necessary to link in both syncthing sources and the
+# included sources.
 post-extract:
 	${MKDIR} ${WRKDIR}/gopath/src/github.com/syncthing
+	${MKDIR} ${WRKDIR}/gopath/src/golang.org
 	${LN} -s ${WRKSRC} ${WRKDIR}/gopath/src/github.com/syncthing/syncthing
+	${LN} -s ${WRKSRC}/vendor/github.com/* ${WRKDIR}/gopath/src/github.com
+	${LN} -s ${WRKSRC}/vendor/golang.org/* ${WRKDIR}/gopath/src/golang.org
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/go run build.go
