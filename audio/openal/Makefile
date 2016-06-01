@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2015/10/05 03:56:17 richard Exp $
+# $NetBSD: Makefile,v 1.33 2016/06/01 15:00:25 richard Exp $
 
 DISTNAME=	openal-0.0.8
 PKGREVISION=	6
@@ -36,7 +36,7 @@ CONFIGURE_ENV+=		NASM_FORMAT="-f macho"
 .endif
 
 .if ${OPSYS} == "SunOS"
-.  if ${ABI} == "64"
+.  if ${ABI:U} == "64"
 CONFIGURE_ENV+=	NASM_FORMAT="-f elf64"
 .  else
 CONFIGURE_ENV+=	NASM_FORMAT="-f elf32"
