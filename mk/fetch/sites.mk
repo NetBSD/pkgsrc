@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.141 2016/05/29 12:17:53 wiz Exp $
+# $NetBSD: sites.mk,v 1.142 2016/06/01 12:40:06 wiz Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -288,7 +288,7 @@ MASTER_SITE_RUBYGEMS+= \
 	https://rubygems.org/gems/
 
 MASTER_SITE_PYPI+= \
-	https://pypi.python.org/packages/source/
+	https://files.pythonhosted.org/packages/source/
 
 MASTER_SITE_HASKELL_HACKAGE+=	\
 	http://hackage.haskell.org/package/
