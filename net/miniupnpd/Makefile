@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2016/03/01 13:14:52 adam Exp $
+# $NetBSD: Makefile,v 1.21 2016/06/01 11:36:45 wiz Exp $
 
 DISTNAME=	miniupnpd-1.9.20160222
 CATEGORIES=	net
@@ -11,6 +11,8 @@ LICENSE=	modified-bsd
 
 EGDIR=		${PREFIX}/share/examples/miniupnpd
 CONF_FILES=	${EGDIR}/miniupnpd.conf ${PKG_SYSCONFDIR}/miniupnpd.conf
+
+MAKE_JOBS_SAFE=	no # genconfig.sh run in parallel with users of config.h
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
