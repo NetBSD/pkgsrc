@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2016/01/08 17:14:13 kleink Exp $
+# $NetBSD: Makefile,v 1.4 2016/06/01 21:10:39 kleink Exp $
 
 DISTNAME=	Flask-Uploads-0.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	http://pypi.python.org/packages/source/F/Flask-Uploads/
 
