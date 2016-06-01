@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2233 2016/06/01 01:14:00 wen Exp $
+$NetBSD: CHANGES-2016,v 1.2234 2016/06/01 12:46:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2901,3 +2901,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Moose to 2.1803 [wen 2016-05-31]
 	Updated devel/p5-Capture-Tiny to 0.42 [wen 2016-06-01]
 	Updated www/p5-Dancer2 to 0.200000 [wen 2016-06-01]
+	Updated pkgtools/url2pkg to 2.25 [wiz 2016-06-01]
