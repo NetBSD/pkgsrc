@@ -1,7 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2015/12/29 23:34:55 dholland Exp $
+$NetBSD: patch-aa,v 1.6 2016/06/01 13:32:13 joerg Exp $
 
 Configure for pkgsrc.
 Fix installation rules.
+Missing dependency of scmfig.h scmflags.h.
 
 --- Makefile.orig	2006-10-25 01:47:17.000000000 +0000
 +++ Makefile
@@ -34,6 +35,39 @@ Fix installation rules.
  turfiles = turtlegr.c turtle grtest.scm
  xafiles = xatoms.scm x11.scm xevent.scm keysymdef.scm
  xfiles = x.c x.h xgen.scm xevent.h inc2scm $(xafiles)
+@@ -138,19 +140,19 @@ scmflags:
+ 		 else mv newflags.h scmflags.h; fi
+ .c.o:
+ 	$(CC) -c $(CFLAGS) $< -o $@
+-scm.o:	scm.c scm.h scmfig.h scmflags.h patchlvl.h
+-scmmain.o:	scmmain.c scm.h scmfig.h scmflags.h patchlvl.h
+-scl.o:	scl.c scm.h scmfig.h scmflags.h
+-eval.o:	eval.c scm.h scmfig.h scmflags.h setjump.h
+-debug.o: debug.c scm.h scmfig.h scmflags.h setjump.h
+-unif.o:	unif.c scm.h scmfig.h scmflags.h
+-#ramap.o:	ramap.c scm.h scmfig.h scmflags.h
+-repl.o:	repl.c scm.h scmfig.h scmflags.h setjump.h
+-sys.o:	sys.c scm.h scmfig.h scmflags.h setjump.h
+-time.o:	time.c scm.h scmfig.h scmflags.h
+-subr.o:	subr.c scm.h scmfig.h scmflags.h
+-rope.o:	rope.c scm.h scmfig.h scmflags.h
+-continue.o: continue.c continue.h setjump.h scm.h scmfig.h scmflags.h
++scm.o:	scm.c scm.h scmfig.h scmflags.h scmflags.h patchlvl.h
++scmmain.o:	scmmain.c scm.h scmfig.h scmflags.h scmflags.h patchlvl.h
++scl.o:	scl.c scm.h scmfig.h scmflags.h scmflags.h
++eval.o:	eval.c scm.h scmfig.h scmflags.h scmflags.h setjump.h
++debug.o: debug.c scm.h scmfig.h scmflags.h scmflags.h setjump.h
++unif.o:	unif.c scm.h scmfig.h scmflags.h scmflags.h
++#ramap.o:	ramap.c scm.h scmfig.h scmflags.h scmflags.h
++repl.o:	repl.c scm.h scmfig.h scmflags.h scmflags.h setjump.h
++sys.o:	sys.c scm.h scmfig.h scmflags.h scmflags.h setjump.h
++time.o:	time.c scm.h scmfig.h scmflags.h scmflags.h
++subr.o:	subr.c scm.h scmfig.h scmflags.h scmflags.h
++rope.o:	rope.c scm.h scmfig.h scmflags.h scmflags.h
++continue.o: continue.c continue.h setjump.h scm.h scmfig.h scmflags.h scmflags.h
+ continue-ia64.o: continue-ia64.S get-contoffset-ia64.c
+ 	gcc -o get-contoffset-ia64 get-contoffset-ia64.c
+ 	./get-contoffset-ia64 contoffset-ia64.S
 @@ -249,7 +251,7 @@ libscm.opt:
  	echo "-F engineering-notation" >> libscm.opt
  	echo "-F dynamic-linking" >> libscm.opt
