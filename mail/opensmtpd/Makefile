@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2016/05/01 05:56:40 mef Exp $
+# $NetBSD: Makefile,v 1.9 2016/06/01 11:47:39 wiz Exp $
 
 VERSION=	5.7.3p2
 DISTNAME=	opensmtpd-${VERSION}
@@ -60,11 +60,11 @@ post-extract:
 	cp ${FILESDIR}/mailer.conf ${WRKDIR}/mailer.conf
 
 pre-configure:
-	cd $(WRKSRC) && ${PREFIX}/bin/libtoolize --copy --force
-	cd $(WRKSRC) && ${TOOLS_CMD.aclocal}
-	cd $(WRKSRC) && ${TOOLS_CMD.autoconf}
-	cd $(WRKSRC) && ${TOOLS_CMD.autoheader}
-	cd $(WRKSRC) && ${TOOLS_CMD.automake} --foreign --add-missing --copy
+	cd ${WRKSRC} && ${PREFIX}/bin/libtoolize --copy --force
+	cd ${WRKSRC} && ${TOOLS_CMD.aclocal}
+	cd ${WRKSRC} && ${TOOLS_CMD.autoconf}
+	cd ${WRKSRC} && ${TOOLS_CMD.autoheader}
+	cd ${WRKSRC} && ${TOOLS_CMD.automake} --foreign --add-missing --copy
 
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/mailer.conf \
