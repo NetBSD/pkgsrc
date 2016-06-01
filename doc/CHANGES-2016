@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2235 2016/06/01 18:46:25 gdt Exp $
+$NetBSD: CHANGES-2016,v 1.2236 2016/06/01 21:13:39 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2903,3 +2903,7 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-Dancer2 to 0.200000 [wen 2016-06-01]
 	Updated pkgtools/url2pkg to 2.25 [wiz 2016-06-01]
 	Updated net/syncthing to 0.13.4 [gdt 2016-06-01]
+	Updated www/py-werkzeug to 0.11.10 [kleink 2016-06-01]
+	Updated www/py-werkzeug-docs to 0.11.10 [kleink 2016-06-01]
+	Updated www/py-flask to 0.11 [kleink 2016-06-01]
+	Updated www/py-flask-uploads to 0.2.0nb1 [kleink 2016-06-01]
