@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.120 2016/04/11 19:01:38 ryoon Exp $
+# $NetBSD: Makefile,v 1.121 2016/06/02 16:01:12 jperkin Exp $
 
 DISTNAME=	heimdal-1.5.3
 PKGREVISION=	12
@@ -50,6 +50,10 @@ CONFIGURE_ENV+=		ac_cv_funclib_dbopen=no
 .endif
 
 CFLAGS.Darwin+=		-DBIND_8_COMPAT
+
+# Newer illumos has extended functions in glob(3C) but it's easier to
+# say it doesn't for simpler PLIST.glob handling.
+CONFIGURE_ENV.SunOS+=	ac_cv_func_glob_working=no
 
 # Though Solaris has a <vis.h> header, it does something very unrelated
 # to the BSD <vis.h> header.
