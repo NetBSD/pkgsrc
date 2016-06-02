@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2241 2016/06/02 09:39:02 hauke Exp $
+$NetBSD: CHANGES-2016,v 1.2242 2016/06/02 09:44:25 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2912,3 +2912,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/openssl to 1.0.2hnb1 [jperkin 2016-06-02]
 	Updated audio/mpg321 to 0.3.2 [jperkin 2016-06-02]
 	Updated net/cacti to 0.8.8h [hauke 2016-06-02]
+	Updated net/cacti-spine to 0.8.8h [hauke 2016-06-02]
