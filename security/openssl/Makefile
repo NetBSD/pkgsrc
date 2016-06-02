@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.223 2016/05/03 14:51:16 jperkin Exp $
+# $NetBSD: Makefile,v 1.224 2016/06/02 07:47:46 jperkin Exp $
 
 DISTNAME=	openssl-1.0.2h
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	https://www.openssl.org/source/
 
@@ -17,10 +18,7 @@ BUILD_DEPENDS+=	p5-Perl4-CoreLibs-[0-9]*:../../devel/p5-Perl4-CoreLibs
 
 USE_GCC_RUNTIME=	yes
 
-.include "../../mk/bsd.prefs.mk"
-.include "../../mk/compiler.mk"
-
-USE_TOOLS+=		fgrep gmake perl
+USE_TOOLS+=		fgrep gmake perl:run
 BUILD_TARGET=		depend all
 TEST_TARGET=		tests
 MAKE_JOBS_SAFE=		no
@@ -31,6 +29,8 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--install_prefix=${DESTDIR}
 CONFIGURE_ARGS+=	--openssldir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	shared no-fips
+
+.include "../../mk/compiler.mk"
 
 # Avoid dependency on 'makedepend' on platforms where the default CC is set
 # to 'cc' not 'gcc' in boostrap-mk-files.  OpenSSL only supports the latter.
