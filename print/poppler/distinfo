@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.108 2016/05/22 18:17:17 wiz Exp $
+$NetBSD: distinfo,v 1.109 2016/06/02 05:14:21 richard Exp $
 
 SHA1 (poppler-0.44.0.tar.xz) = e299affb9180e920c977fd60a217a6c21bde23c2
 RMD160 (poppler-0.44.0.tar.xz) = 9037dd395f7e789bae96dfb3b1a5acf8cb9c0814
@@ -10,4 +10,5 @@ SHA1 (patch-ag) = d4df4fdf141186e1cc653bb467b31b3335d733ff
 SHA1 (patch-aq) = da845661ef7f7aca3072dbeebde0444b4d8f01aa
 SHA1 (patch-ar) = b064ff2dc9080ff5f1a1361e7798480ace11f3a3
 SHA1 (patch-as) = 1238357e57fa310ba9c9f00768c46074b8325739
+SHA1 (patch-configure) = 07eea448deca5a1c586376ba38070a3efe943415
 SHA1 (patch-qt5_src_Makefile.in) = c3a47fde201d61a7b7674020f5c998173a61b216
