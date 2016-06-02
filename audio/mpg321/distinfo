@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.7 2015/11/03 01:12:43 agc Exp $
+$NetBSD: distinfo,v 1.8 2016/06/02 09:18:19 jperkin Exp $
 
-SHA1 (mpg321-0.2.13-4.tar.gz) = 08ca707bbf1ff88d401ff2a3625fb242d445bfd2
-RMD160 (mpg321-0.2.13-4.tar.gz) = 5c1d50de0bae66381702ed3f238bfdc0f7b8f2d2
-SHA512 (mpg321-0.2.13-4.tar.gz) = 3b7c507abefcf1b2a98748d22e510adc070be7ce4016c31f4815f75cde17032eb57fb2f4b209e117cfb8e80edfb1150f8d725d6969f77d0ee6b514a91f79b2c8
-Size (mpg321-0.2.13-4.tar.gz) = 144542 bytes
-SHA1 (patch-ab) = 3ec9382e50e03e25522a961aa52c29660a8564f9
+SHA1 (mpg321_0.3.2.orig.tar.gz) = bf1c22542c86af69267828e45f217fdeb49e5d43
+RMD160 (mpg321_0.3.2.orig.tar.gz) = 04ea36c893bbe6fb0054a7fcd71294927cf70ac9
+SHA512 (mpg321_0.3.2.orig.tar.gz) = f1bead2c11e4cde0f1a87e1b2e3d216ef80c9a5dd8b219841961688d44a5fc63a54b7af07359766fde0b2712ddc5d0a90b20149c3228cb2d70e830e15c8ab234
+Size (mpg321_0.3.2.orig.tar.gz) = 151139 bytes
+SHA1 (patch-ao.c) = cb404acdfb032c5a823c717965d14319db0d4466
+SHA1 (patch-mpg321.c) = 0f82c72976ce1f1e7d16cd972eb1e38a0e305f86
