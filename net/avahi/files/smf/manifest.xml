@@ -1,0 +1,34 @@
+<?xml version='1.0'?>
+<!DOCTYPE service_bundle SYSTEM '/usr/share/lib/xml/dtd/service_bundle.dtd.1'>
+<service_bundle type='manifest' name='export'>
+  <service name='@SMF_PREFIX@/@SMF_NAME@' type='service' version='0'>
+    <create_default_instance enabled='false'/>
+    <single_instance/>
+    <dependency name='network' grouping='require_all' restart_on='error' type='service'>
+      <service_fmri value='svc:/milestone/network:default'/>
+    </dependency>
+    <dependency name='filesystem' grouping='require_all' restart_on='none' type='service'>
+      <service_fmri value='svc:/system/filesystem/local:default'/>
+    </dependency>
+    <dependency name='dbus' grouping='require_all' restart_on='none' type='service'>
+      <service_fmri value='svc:/@SMF_PREFIX@/dbus:default'/>
+    </dependency>
+    <method_context>
+      <method_environment>
+        <envvar name='PATH' value='@PREFIX@/sbin:@PREFIX@/bin:/sbin:/usr/sbin:/usr/bin'/>
+      </method_environment>
+    </method_context>
+    <exec_method name='start' type='method' exec='@PREFIX@/sbin/avahi-daemon -D' timeout_seconds='60'/>
+    <exec_method name='stop' type='method' exec='@PREFIX@/sbin/avahi-daemon -k' timeout_seconds='60'/>
+    <exec_method name='refresh' type='method' exec='@PREFIX@/sbin/avahi-daemon -r' timeout_seconds='60'/>
+    <stability value='Evolving'/>
+    <template>
+      <common_name>
+        <loctext xml:lang='C'>Avahi mDNS Daemon</loctext>
+      </common_name>
+      <documentation>
+        <manpage title='avahi-daemon' section='8' manpath='@PREFIX@/@PKGMANDIR@'/>
+      </documentation>
+    </template>
+  </service>
+</service_bundle>
