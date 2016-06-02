@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2016/06/02 09:52:13 hauke Exp $
+$NetBSD: MESSAGE,v 1.5 2016/06/02 14:18:23 hauke Exp $
 
 cacti is now installed.
 
@@ -34,6 +34,8 @@ To get cacti up and running asap, you have to complete these steps:
 
 # Invoke poller.php to collect SNMP statistics.
 */5 * * * *	${PREFIX}/bin/cacti-poller
+
+  and make sure ${PREFIX}/bin is in PATH.
 
 Please read the included README (${CACTIDIR}/docs/README) file,
 for more information about configuring and starting cacti.
