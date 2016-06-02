@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2016/06/02 11:13:55 prlw1 Exp $
+lib/gstreamer-1.0/libgstopus.la

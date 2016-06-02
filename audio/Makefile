@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.531 2016/05/21 21:44:42 youri Exp $
+# $NetBSD: Makefile,v 1.532 2016/06/02 11:13:55 prlw1 Exp $
 #
 
 COMMENT=	Audio tools
@@ -188,6 +188,7 @@ SUBDIR+=	gst-plugins1-jack
 SUBDIR+=	gst-plugins1-lame
 SUBDIR+=	gst-plugins1-libvisual
 SUBDIR+=	gst-plugins1-mad
+SUBDIR+=	gst-plugins1-opus
 SUBDIR+=	gst-plugins1-oss
 SUBDIR+=	gst-plugins1-pulse
 SUBDIR+=	gst-plugins1-sid
