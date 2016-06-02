@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2239 2016/06/02 07:47:57 jperkin Exp $
+$NetBSD: CHANGES-2016,v 1.2240 2016/06/02 09:28:26 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2910,3 +2910,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/vimb to 2.11nb3 [leot 2016-06-01]
 	Updated mail/mutt to 1.6.1nb1 [tonio 2016-06-01]
 	Updated security/openssl to 1.0.2hnb1 [jperkin 2016-06-02]
+	Updated audio/mpg321 to 0.3.2 [jperkin 2016-06-02]
