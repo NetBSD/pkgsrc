@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2015/03/11 22:25:25 tnn Exp $
+# $NetBSD: Makefile,v 1.19 2016/06/02 09:18:19 jperkin Exp $
 
-DISTNAME=	mpg321-0.2.13-4
-PKGNAME=	mpg321-0.2.13.4
+DISTNAME=	mpg321_0.3.2.orig
+PKGNAME=	${DISTNAME:S/_/-/:S/.orig//}
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mpg321/}
 
@@ -12,6 +12,10 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-mpg123-symlink
+
+WRKSRC=		${WRKDIR}/${DISTNAME:S/_/-/:S/.orig/-orig/}
+
+.include "options.mk"
 
 .include "../../audio/libao/buildlink3.mk"
 .include "../../audio/libid3tag/buildlink3.mk"
