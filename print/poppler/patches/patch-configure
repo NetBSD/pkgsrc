@@ -1,0 +1,16 @@
+$NetBSD: patch-configure,v 1.3 2016/06/02 05:14:21 richard Exp $
+
+avoid gnu-grep presumptions in favour of portable usage
+reported upstream: https://bugs.freedesktop.org/show_bug.cgi?id=72744
+
+--- configure.orig	2016-05-21 16:59:37.000000000 +0000
++++ configure
+@@ -24084,7 +24084,7 @@ fi
+   { $as_echo "$as_me:${as_lineno-$LINENO}: checking for Qt5 moc" >&5
+ $as_echo_n "checking for Qt5 moc... " >&6; }
+   mocversion=`$MOCQT5 -v 2>&1`
+-  mocversiongrep=`echo $mocversion | grep "Qt 5\|moc 5"`
++  mocversiongrep=`echo $mocversion | grep -E "Qt 5|moc 5"`
+   if test x"$mocversiongrep" != x"$mocversion"; then
+     { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+ $as_echo "no" >&6; }
