@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2015/03/11 13:56:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2016/06/02 09:36:33 hauke Exp $
 bin/cacti-poller
 share/cacti/LICENSE
 share/cacti/README
@@ -20,6 +20,7 @@ share/cacti/cli/copy_user.php
 share/cacti/cli/data_template_associate_rra.php
 share/cacti/cli/host_update_template.php
 share/cacti/cli/import_template.php
+share/cacti/cli/index.php
 share/cacti/cli/poller_data_sources_reapply_names.php
 share/cacti/cli/poller_graphs_reapply_names.php
 share/cacti/cli/poller_output_empty.php
@@ -138,7 +139,6 @@ share/cacti/docs/html/upgrade_using_hostmib_data_queries.html
 share/cacti/docs/html/user_management.html
 share/cacti/docs/html/using_spine.html
 share/cacti/docs/html/variables.html
-share/cacti/docs/pdf/README
 share/cacti/docs/txt/manual.txt
 share/cacti/gprint_presets.php
 share/cacti/graph.php
@@ -236,7 +236,6 @@ share/cacti/include/global_arrays.php
 share/cacti/include/global_constants.php
 share/cacti/include/global_form.php
 share/cacti/include/global_settings.php
-share/cacti/include/js/colorpicker.js
 share/cacti/include/js/images/ui-bg_diagonals-thick_18_b81900_40x40.png
 share/cacti/include/js/images/ui-bg_diagonals-thick_20_666666_40x40.png
 share/cacti/include/js/images/ui-bg_flat_10_000000_40x100.png
@@ -254,12 +253,8 @@ share/cacti/include/js/images/ui-icons_ffffff_256x240.png
 share/cacti/include/js/jquery-ui.css
 share/cacti/include/js/jquery-ui.js
 share/cacti/include/js/jquery.cookie.js
-share/cacti/include/js/jquery.dd.js
 share/cacti/include/js/jquery.dropdown.js
-share/cacti/include/js/jquery.easytabs.js
 share/cacti/include/js/jquery.js
-share/cacti/include/js/jquery.tablednd.js
-share/cacti/include/js/jquery.timepicker.js
 share/cacti/include/js/jquery.zoom.css
 share/cacti/include/js/jquery.zoom.js
 share/cacti/include/js/jstree.js
@@ -273,23 +268,6 @@ share/cacti/include/js/themes/default/40px.png
 share/cacti/include/js/themes/default/style.css
 share/cacti/include/js/themes/default/style.min.css
 share/cacti/include/js/themes/default/throbber.gif
-share/cacti/include/js/themes/proton/30px.png
-share/cacti/include/js/themes/proton/32px.png
-share/cacti/include/js/themes/proton/fonts/titillium/titilliumweb-bold-webfont.eot
-share/cacti/include/js/themes/proton/fonts/titillium/titilliumweb-bold-webfont.svg
-share/cacti/include/js/themes/proton/fonts/titillium/titilliumweb-bold-webfont.ttf
-share/cacti/include/js/themes/proton/fonts/titillium/titilliumweb-bold-webfont.woff
-share/cacti/include/js/themes/proton/fonts/titillium/titilliumweb-extralight-webfont.eot
-share/cacti/include/js/themes/proton/fonts/titillium/titilliumweb-extralight-webfont.svg
-share/cacti/include/js/themes/proton/fonts/titillium/titilliumweb-extralight-webfont.ttf
-share/cacti/include/js/themes/proton/fonts/titillium/titilliumweb-extralight-webfont.woff
-share/cacti/include/js/themes/proton/fonts/titillium/titilliumweb-regular-webfont.eot
-share/cacti/include/js/themes/proton/fonts/titillium/titilliumweb-regular-webfont.svg
-share/cacti/include/js/themes/proton/fonts/titillium/titilliumweb-regular-webfont.ttf
-share/cacti/include/js/themes/proton/fonts/titillium/titilliumweb-regular-webfont.woff
-share/cacti/include/js/themes/proton/style.css
-share/cacti/include/js/themes/proton/style.min.css
-share/cacti/include/js/themes/proton/throbber.gif
 share/cacti/include/jscalendar/calendar-setup.js
 share/cacti/include/jscalendar/calendar.js
 share/cacti/include/jscalendar/lang/calendar-af.js
@@ -367,6 +345,11 @@ share/cacti/install/0_8_7i_to_0_8_8.php
 share/cacti/install/0_8_8_to_0_8_8a.php
 share/cacti/install/0_8_8a_to_0_8_8b.php
 share/cacti/install/0_8_8b_to_0_8_8c.php
+share/cacti/install/0_8_8c_to_0_8_8d.php
+share/cacti/install/0_8_8d_to_0_8_8e.php
+share/cacti/install/0_8_8e_to_0_8_8f.php
+share/cacti/install/0_8_8f_to_0_8_8g.php
+share/cacti/install/0_8_8g_to_0_8_8h.php
 share/cacti/install/0_8_to_0_8_1.php
 share/cacti/install/index.php
 share/cacti/install/install_finish.gif
