@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15961 2016/06/02 12:36:05 wiz Exp $
+$NetBSD: TODO,v 1.15962 2016/06/02 12:41:02 wiz Exp $
 
 Suggested new packages
 ======================
@@ -469,7 +469,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o boolean-7.1
 	o bos-2.5
 	o boson-0.13
-	o botan-devel-1.11.18
 	o bottlerocket-0.05b3
 	o bpython-0.15
 	o brasero-3.4.0
@@ -564,7 +563,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o dap-3.10
 	o dar-2.4.14
 	o darcs-2.12.0
-	o darkstat-3.0.719 [pkg/50113]
 	o darktable-2.0.4
 	o dasher-4.11
 	o dateutils-0.4.0
@@ -728,12 +726,10 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gdm-2.32.2 [GNOME 2.32]
 	o gdm-3.0.3
 	o gedit-plugins-2.32.0 [GNOME 2.32]
-	o geeklog-2.1.1
 	o genius-1.0.21
 	o gentoo-0.20.4
 	o geoclue-2.1.10
 	o gerbv-2.6.1
-	o gettext-0.19.7
 	o gfract-0.33
 	o ghc-8.0.1
 	o ghc7-7.10.1
@@ -996,7 +992,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ktorrent3-3.3.4
 	o labelnation-1.218
 	o lapack-3.6.0
-	o lasso-2.5.1
 	o latex2html-2015
 	o latexmk-444
 	o lbdb-0.40
@@ -1143,7 +1138,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mpdas-0.4.1
 	o mpeg4ip-1.6.1
 	o mpop-1.2.4
-	o mr-1.20150503
 	o mserv-devel-0.41
 	o msgpack-1.4.1 [pkg/51083]
 	o multitail-6.2
@@ -1183,7 +1177,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ns-3.14.1
 	o ns-plugger-common-5.1.3
 	o ntop-5.0
-	o ntp4-4.2.8p6
 	o nts-82
 	o nuitka-0.5.19
 	o nullmailer-2.0
@@ -1221,7 +1214,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p11-kit-0.23.2
 	o p5-Algorithm-LUHN-1.02
 	o p5-Apache-Gallery-1.0.2
-	o p5-Apache-LogFormat-Compiler-0.33
 	o p5-AuthCAS-1.6
 	o p5-Authen-CAS-Client-0.07
 	o p5-Authen-TacacsPlus-0.26
@@ -1266,14 +1258,12 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-IO-Interface-1.09
 	o p5-IO-Prompt-0.997003
 	o p5-IP-Country-3.03
-	o p5-IPC-Cmd-0.94
 	o p5-JSON-Any-1.39
 	o p5-LWP-Protocol-PSGI-0.09
 	o p5-Lingua-PT-Stemmer-0.02
 	o p5-Lingua-Stem-Ru-0.04
 	o p5-Locale-Codes-3.38
 	o p5-Locale-Currency-Format-1.35
-	o p5-MIME-EncWords-1.014.3
 	o p5-Mail-IMAPClient-3.38
 	o p5-Math-BigInt-GMP-1.49
 	o p5-Math-BigInt-Pari-1.25
@@ -1283,7 +1273,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Memoize-Memcached-0.11
 	o p5-MooX-Log-Any-0.004004
 	o p5-Moose-Policy-0.05
-	o p5-Net-Amazon-S3-0.80
 	o p5-Net-DBus-1.1.0
 	o p5-Net-DHCP-0.696
 	o p5-Net-DNS-SEC-1.02
@@ -1357,7 +1346,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Text-Hunspell-2.14
 	o p5-Tie-Cycle-1.221
 	o p5-Tie-DBI-1.06
-	o p5-Time-Progress-2.11
 	o p5-URI-FromHash-0.05
 	o p5-User-Identity-0.94
 	o p5-WebService-Google-Reader-0.23
@@ -1387,7 +1375,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o patchelf-0.9
 	o patchutils-0.3.4
 	o pcal-4.8
-	o pcb-20140316 [pkg/49383]
 	o pcc-1.1.0
 	o pcc-current-20160305
 	o pcc-libs-1.1.0
@@ -1406,7 +1393,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o php-apcu-4.0.10
 	o php-excel-1.8.1
 	o php-geoip-1.1.0
-	o php-ja-wordpress-4.4.2
 	o php-jpgraph-3.5.0b1
 	o php-libawl-0.54
 	o php-memcache-3.0.8
@@ -1497,7 +1483,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-doctor-15.1.0
 	o py-ephem3-3.7.6.0
 	o py-flake8-2.5.4
-	o py-flask-0.11
 	o py-gmpy-1.17
 	o py-gnome-menus-3.8.0
 	o py-hsm-1.1.1
@@ -1507,7 +1492,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-isodate-0.5.4
 	o py-jaraco_util-11.0
 	o py-jdcal-1.2
-	o py-junos-eznc-1.2.2
 	o py-keybinder-0.3.1
 	o py-lasso-2.5.1
 	o py-lupa-1.2
@@ -1519,7 +1503,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-munkres-1.0.7
 	o py-musicbrainz-0.7.4
 	o py-ncclient-0.4.7
-	o py-netaddr-0.7.18
 	o py-newt-0.52.18
 	o py-notify-0.3.1
 	o py-numpydoc-0.6.0
@@ -1561,7 +1544,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o qt5-5.6.0
 	o qt5-qtbase-5.6.0
 	o quodlibet2-3.5.3
-	o rabbitmq-3.6.1
 	o radare2-0.10.3
 	o radare2-valabind-0.10.0
 	o radiance-4R1
@@ -1619,7 +1601,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o ruby-review-1.4.0 [wip]
 	o ruby-selenium-webdriver-2.46.2
 	o ruby-stomp-1.3.5
-	o ruby-twitter-text-1.13.4
 	o rump-20131213
 	o sabayon-2.30.1 [GNOME 2.30]
 	o sablecc-3.7
@@ -1724,7 +1705,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o swi-prolog-packages-7.1.37
 	o swt-4.5
 	o sympa-6.2.14
-	o sys161-2.0.8
 	o sysinfo-4.2.2
 	o sysmon-0.93
 	o system-tools-backends-2.10.1 [needs polkit|GNOME 2.30]
