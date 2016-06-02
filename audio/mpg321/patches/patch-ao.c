@@ -1,12 +1,14 @@
-$NetBSD: patch-ab,v 1.2 2011/10/18 11:13:56 ryoon Exp $
+$NetBSD: patch-ao.c,v 1.1 2016/06/02 09:18:19 jperkin Exp $
 
---- ao.c.orig	2011-10-01 09:50:12.000000000 +0000
+Ensure structs are zero'd before use.
+
+--- ao.c.orig	2012-03-25 12:27:49.000000000 +0000
 +++ ao.c
-@@ -234,6 +234,7 @@ void open_ao_playdevice(struct mad_heade
+@@ -299,6 +299,7 @@ void open_ao_playdevice(struct mad_heade
             and restore it afterwards */
          signal(SIGINT, SIG_DFL);
          
-+	memset(&format, 0, sizeof(format));
++        memset(&format, 0, sizeof(format));
          format.bits = 16;
          format.rate = header->samplerate;
          format.channels = (options.opt & MPG321_FORCE_STEREO) ? 2 : MAD_NCHANNELS(header);
