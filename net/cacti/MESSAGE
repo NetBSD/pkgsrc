@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2014/01/16 21:10:00 tron Exp $
+$NetBSD: MESSAGE,v 1.3 2016/06/02 09:36:33 hauke Exp $
 
 cacti is now installed.
 
@@ -37,5 +37,9 @@ To get cacti up and running asap, you have to complete these steps:
 
 Please read the included README (${CACTIDIR}/docs/README) file,
 for more information about configuring and starting cacti.
+
+If you have updated from a version older than 0.8.8h, note that the
+rrd and log directories are now under ${VARBASE}. Old logs and
+database files will have to be moved manually.
 
 ===========================================================================
