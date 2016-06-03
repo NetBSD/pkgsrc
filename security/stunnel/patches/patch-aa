@@ -1,19 +1,19 @@
-$NetBSD: patch-aa,v 1.28 2015/12/27 18:36:06 ryoon Exp $
+$NetBSD: patch-aa,v 1.29 2016/06/03 23:12:06 jym Exp $
 
 Install configuration files into examples directory.
 
---- tools/Makefile.in.orig	2015-12-08 15:59:03.000000000 +0000
+--- tools/Makefile.in.orig	2016-05-03 18:35:48.000000000 +0000
 +++ tools/Makefile.in
-@@ -275,7 +275,7 @@ EXTRA_DIST = ca.html ca.pl importCA.html
- 	stunnel.spec openssl.cnf stunnel.nsi stunnel.license stunnel.conf \
- 	stunnel.conf-sample.in stunnel.init.in stunnel.service.in
- 
+@@ -276,7 +276,7 @@ EXTRA_DIST = ca.html ca.pl importCA.html
+ 	stunnel.conf stunnel.conf-sample.in stunnel.init.in \
+ 	stunnel.service.in stunnel.logrotate stunnel.rh.init \
+ 	stunnel.spec
 -confdir = $(sysconfdir)/stunnel
 +confdir = $(datadir)/examples/stunnel
  conf_DATA = stunnel.conf-sample
  examplesdir = $(docdir)/examples
- examples_DATA = stunnel.spec stunnel.init stunnel.service ca.html \
-@@ -464,7 +464,7 @@ info: info-am
+ examples_DATA = stunnel.init stunnel.service stunnel.logrotate \
+@@ -466,7 +466,7 @@ info: info-am
  
  info-am:
  
