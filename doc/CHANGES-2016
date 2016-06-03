@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2246 2016/06/03 09:45:40 taca Exp $
+$NetBSD: CHANGES-2016,v 1.2247 2016/06/03 11:30:27 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2918,3 +2918,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/netpgpverify to 20160313 [agc 2016-06-02]
 	Updated security/libnetpgpverify to 20160313 [agc 2016-06-02]
 	Updated net/ntp4 to 4.2.8p8 [taca 2016-06-03]
+	Updated security/py-certbot to 0.8.0 [fhajny 2016-06-03]
