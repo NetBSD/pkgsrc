@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/05/25 18:18:16 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/06/03 11:30:14 fhajny Exp $
 bin/certbot
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -66,9 +66,6 @@ ${PYSITELIB}/certbot/hooks.pyo
 ${PYSITELIB}/certbot/interfaces.py
 ${PYSITELIB}/certbot/interfaces.pyc
 ${PYSITELIB}/certbot/interfaces.pyo
-${PYSITELIB}/certbot/le_util.py
-${PYSITELIB}/certbot/le_util.pyc
-${PYSITELIB}/certbot/le_util.pyo
 ${PYSITELIB}/certbot/log.py
 ${PYSITELIB}/certbot/log.pyc
 ${PYSITELIB}/certbot/log.pyo
@@ -192,9 +189,6 @@ ${PYSITELIB}/certbot/tests/errors_test.pyo
 ${PYSITELIB}/certbot/tests/hook_test.py
 ${PYSITELIB}/certbot/tests/hook_test.pyc
 ${PYSITELIB}/certbot/tests/hook_test.pyo
-${PYSITELIB}/certbot/tests/le_util_test.py
-${PYSITELIB}/certbot/tests/le_util_test.pyc
-${PYSITELIB}/certbot/tests/le_util_test.pyo
 ${PYSITELIB}/certbot/tests/log_test.py
 ${PYSITELIB}/certbot/tests/log_test.pyc
 ${PYSITELIB}/certbot/tests/log_test.pyo
@@ -226,6 +220,7 @@ ${PYSITELIB}/certbot/tests/testdata/cert.der
 ${PYSITELIB}/certbot/tests/testdata/cert.pem
 ${PYSITELIB}/certbot/tests/testdata/cli.ini
 ${PYSITELIB}/certbot/tests/testdata/csr-6sans.pem
+${PYSITELIB}/certbot/tests/testdata/csr-nonames.pem
 ${PYSITELIB}/certbot/tests/testdata/csr-nosans.pem
 ${PYSITELIB}/certbot/tests/testdata/csr-san.der
 ${PYSITELIB}/certbot/tests/testdata/csr-san.pem
@@ -238,10 +233,17 @@ ${PYSITELIB}/certbot/tests/testdata/live/sample-renewal/chain.pem
 ${PYSITELIB}/certbot/tests/testdata/live/sample-renewal/fullchain.pem
 ${PYSITELIB}/certbot/tests/testdata/live/sample-renewal/privkey.pem
 ${PYSITELIB}/certbot/tests/testdata/matching_cert.pem
+${PYSITELIB}/certbot/tests/testdata/os-release
 ${PYSITELIB}/certbot/tests/testdata/rsa256_key.pem
 ${PYSITELIB}/certbot/tests/testdata/rsa512_key.pem
 ${PYSITELIB}/certbot/tests/testdata/rsa512_key_2.pem
 ${PYSITELIB}/certbot/tests/testdata/sample-renewal-ancient.conf
 ${PYSITELIB}/certbot/tests/testdata/sample-renewal.conf
 ${PYSITELIB}/certbot/tests/testdata/webrootconftest.ini
+${PYSITELIB}/certbot/tests/util_test.py
+${PYSITELIB}/certbot/tests/util_test.pyc
+${PYSITELIB}/certbot/tests/util_test.pyo
+${PYSITELIB}/certbot/util.py
+${PYSITELIB}/certbot/util.pyc
+${PYSITELIB}/certbot/util.pyo
 share/examples/certbot/cli.ini
