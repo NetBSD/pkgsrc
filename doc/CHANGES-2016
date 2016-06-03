@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2249 2016/06/03 20:20:55 bsiegert Exp $
+$NetBSD: CHANGES-2016,v 1.2250 2016/06/03 23:14:56 jym Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2924,3 +2924,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/powerdns-mysql to 3.4.9 [fhajny 2016-06-03]
 	Updated net/powerdns-pgsql to 3.4.9 [fhajny 2016-06-03]
 	Updated security/pgpdump to 0.31 [bsiegert 2016-06-03]
+	Updated security/stunnel to 5.32 [jym 2016-06-04]
