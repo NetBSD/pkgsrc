@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2015/06/05 20:41:03 youri Exp $
+@comment $NetBSD: PLIST,v 1.15 2016/06/03 23:12:06 jym Exp $
 bin/stunnel
 bin/stunnel3
 lib/stunnel/libstunnel.la
@@ -23,6 +23,8 @@ share/doc/stunnel/examples/importCA.html
 share/doc/stunnel/examples/importCA.sh
 share/doc/stunnel/examples/script.sh
 share/doc/stunnel/examples/stunnel.init
+share/doc/stunnel/examples/stunnel.logrotate
+share/doc/stunnel/examples/stunnel.rh.init
 share/doc/stunnel/examples/stunnel.service
 share/doc/stunnel/examples/stunnel.spec
 share/doc/stunnel/stunnel.html
