@@ -1,4 +1,4 @@
-# $NetBSD: print-plist.mk,v 1.30 2016/05/10 16:54:05 jperkin Exp $
+# $NetBSD: print-plist.mk,v 1.31 2016/06/03 14:32:30 joerg Exp $
 
 ###
 ### Automatic PLIST generation
@@ -93,7 +93,7 @@ _PRINT_PLIST_LIBTOOLIZE_FILTER?=	${CAT}
 .if !target(print-PLIST)
 print-PLIST:
 	${RUN} ${ECHO} '@comment $$'NetBSD'$$'
-	${RUN}\
+	${RUN} ${ALL_ENV};					\
 	shlib_type=${SHLIB_TYPE:Q};					\
 	case $$shlib_type in 						\
 	"a.out")	genlinks=1 ;;					\
