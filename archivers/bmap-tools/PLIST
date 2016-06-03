@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2016/05/08 18:39:35 jakllsch Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/06/03 14:38:03 wiz Exp $
 bin/bmaptool
-${PYSITELIB}/${EGG_FILE}/PKG-INFO
-${PYSITELIB}/${EGG_FILE}/SOURCES.txt
-${PYSITELIB}/${EGG_FILE}/dependency_links.txt
-${PYSITELIB}/${EGG_FILE}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/bmaptools/BmapCopy.py
 ${PYSITELIB}/bmaptools/BmapCopy.pyc
 ${PYSITELIB}/bmaptools/BmapCopy.pyo

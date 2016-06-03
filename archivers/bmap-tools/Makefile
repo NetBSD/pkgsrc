@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/06/03 14:02:23 jakllsch Exp $
+# $NetBSD: Makefile,v 1.3 2016/06/03 14:38:03 wiz Exp $
 
 DISTNAME=	bmap-tools-3.2
 CATEGORIES=	archivers sysutils
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	# none
 
-BUILD_DEPENDS+=       ${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
+PYTHON_VERSIONS_ACCEPTED=	27 # not ready as of 3.2
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
