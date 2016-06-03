@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.7 2015/03/27 23:37:52 rodent Exp $
+@comment $NetBSD: PLIST,v 1.8 2016/06/03 11:45:34 fhajny Exp $
 ${PLIST.tools}bin/dnsbulktest
-${PLIST.tools}bin/dnsdist
 ${PLIST.tools}bin/dnsreplay
 ${PLIST.tools}bin/dnsscan
 ${PLIST.tools}bin/dnsscope
@@ -20,7 +19,6 @@ ${PLIST.pipe}lib/pdns/pdns/libpipebackend.la
 ${PLIST.random}lib/pdns/pdns/librandombackend.la
 ${PLIST.remote}lib/pdns/pdns/libremotebackend.la
 ${PLIST.sqlite}lib/pdns/pdns/libgsqlite3backend.la
-${PLIST.tools}man/man1/dnsdist.1
 ${PLIST.tools}man/man1/dnstcpbench.1
 ${PLIST.tools}man/man1/dnsreplay.1
 ${PLIST.tools}man/man1/dnsscope.1
