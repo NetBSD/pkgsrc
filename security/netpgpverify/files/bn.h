@@ -87,6 +87,7 @@ __BEGIN_DECLS
 #define BN_mod_exp	PGPV_BN_mod_exp
 #define BN_mod_inverse	PGPV_BN_mod_inverse
 #define BN_mod_mul	PGPV_BN_mod_mul
+#define BN_mod_sub	PGPV_BN_mod_sub
 #define BN_raise	PGPV_BN_raise
 #define BN_factorial	PGPV_BN_factorial
 #define BN_CTX_new	PGPV_BN_CTX_new
