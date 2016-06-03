@@ -1,0 +1,16 @@
+$NetBSD: patch-src_build-data_os_solaris.txt,v 1.1 2016/06/03 11:52:42 fhajny Exp $
+
+Modern SunOS platforms might not have /usr/ucb. Fixes install on
+SmartOS and other.
+
+--- src/build-data/os/solaris.txt.orig	2016-02-03 07:57:06.000000000 +0000
++++ src/build-data/os/solaris.txt
+@@ -1,8 +1,5 @@
+ os_type unix
+ 
+-install_cmd_data '/usr/ucb/install -m 644'
+-install_cmd_exec '/usr/ucb/install -m 755'
+-
+ <target_features>
+ posix_mlock
+ gettimeofday
