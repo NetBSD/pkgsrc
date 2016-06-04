@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q1,v 1.1.2.19 2016/05/31 07:03:52 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q1,v 1.1.2.20 2016/06/04 19:57:15 bsiegert Exp $
 
 Changes to the packages collection and infrastructure on the pkgsrc-2016Q1 branch:
 
@@ -214,4 +214,19 @@ www/moodle: security update
 
 Pullup ticket #5030 - requested by bsiegert
 graphics/librsvg: security update
+
+Pullup ticket #5032 - requested by taca
+www/typo3_62: security fix
+
+Pullup ticket #5033 - requested by taca
+mail/roundcube: security fix
+
+Pullup ticket #5034 - requested by taca
+lang/php55: security fix
+
+Pullup ticket #5035 - requested by taca
+lang/php56: security fix
+
+Pullup ticket #5036 - requested by taca
+lang/php70: security fix
 
