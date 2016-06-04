@@ -1,15 +1,15 @@
-$NetBSD: patch-aa,v 1.4 2014/04/07 20:14:48 fhajny Exp $
+$NetBSD: patch-Makefile,v 1.1 2016/06/04 21:48:12 alnsn Exp $
 
-Pass installation dirs properly, fix search paths, add Solaris support
+Pass installation dirs properly, fix search paths, add Solaris support.
 
---- Makefile.orig	2014-01-29 20:43:33.000000000 +0000
+--- Makefile.orig	2016-03-03 19:11:46.000000000 +0000
 +++ Makefile
-@@ -6,7 +6,7 @@ LUACPATH	?= /usr/lib/lua/5.1
+@@ -6,7 +6,7 @@ LUACPATH ?= /usr/lib/lua/5.1
  # Comment this lines if you will link with non-internal LuaSocket's help files
  #  and edit INCDIR and LIBDIR properly.
- EXTRA		 = luasocket
--DEFS		 = -DWITH_LUASOCKET
-+DEFS		 = -DWITH_LUASOCKET -DLUA_COMPAT_MODULE
+ EXTRA = luasocket
+-DEFS  = -DWITH_LUASOCKET
++DEFS  = -DWITH_LUASOCKET -DLUA_COMPAT_MODULE
  
  # Edit the lines below to inform new path, if necessary.
  # Path below points to internal LuaSocket's help files.
