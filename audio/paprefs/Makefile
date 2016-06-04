@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.43 2016/04/20 12:10:30 nros Exp $
+# $NetBSD: Makefile,v 1.44 2016/06/04 12:34:39 mef Exp $
 #
 
 DISTNAME=	paprefs-0.9.10
 PKGREVISION=	15
 CATEGORIES=	audio
-MASTER_SITES=	http://0pointer.de/lennart/projects/paprefs/
+MASTER_SITES=	http://freedesktop.org/software/pulseaudio/paprefs/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://0pointer.de/lennart/projects/paprefs/
+HOMEPAGE=	https://freedesktop.org/software/pulseaudio/paprefs/
 COMMENT=	Configuration dialog for the PulseAudio sound server
 LICENSE=	gnu-gpl-v2
 
