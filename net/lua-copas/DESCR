@@ -1,0 +1,4 @@
+Copas is a dispatcher based on coroutines that can be used for
+asynchronous networking. For example TCP or UDP based servers.
+But it also features timers and client support for http(s), ftp
+and smtp requests.
