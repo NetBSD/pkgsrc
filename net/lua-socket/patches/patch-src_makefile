@@ -1,9 +1,16 @@
-$NetBSD: patch-src_makefile,v 1.1 2013/09/13 14:24:28 fhajny Exp $
+$NetBSD: patch-src_makefile,v 1.2 2016/06/04 23:08:13 alnsn Exp $
 
-Pass our LDFLAGS.
+Fix luaL_checkint problem in 5.3. Pass our LDFLAGS.
 --- src/makefile.orig	2013-06-14 11:27:32.000000000 +0000
 +++ src/makefile
-@@ -151,7 +151,7 @@ DEF_linux=-DLUASOCKET_$(DEBUG) -DLUA_$(C
+@@ -145,13 +145,13 @@ SOCKET_macosx=usocket.o
+ SO_linux=so
+ O_linux=o
+ CC_linux=gcc
+-DEF_linux=-DLUASOCKET_$(DEBUG) -DLUA_$(COMPAT)_MODULE \
++DEF_linux=-DLUASOCKET_$(DEBUG) -DLUA_$(COMPAT)_MODULE -DLUA_COMPAT_APIINTCASTS \
+ 	-DLUASOCKET_API='__attribute__((visibility("default")))' \
+ 	-DUNIX_API='__attribute__((visibility("default")))' \
  	-DMIME_API='__attribute__((visibility("default")))'
  CFLAGS_linux= -I$(LUAINC) $(DEF) -pedantic -Wall -Wshadow -Wextra \
  	-Wimplicit -O2 -ggdb3 -fpic -fvisibility=hidden
