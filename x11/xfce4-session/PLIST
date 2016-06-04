@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2015/06/29 16:50:01 youri Exp $
+@comment $NetBSD: PLIST,v 1.18 2016/06/04 15:13:27 youri Exp $
 bin/startxfce4
 bin/xfce4-session
 bin/xfce4-session-logout
@@ -97,5 +97,6 @@ share/locale/vi/LC_MESSAGES/xfce4-session.mo
 share/locale/zh_CN/LC_MESSAGES/xfce4-session.mo
 share/locale/zh_HK/LC_MESSAGES/xfce4-session.mo
 share/locale/zh_TW/LC_MESSAGES/xfce4-session.mo
+share/polkit-1/actions/org.xfce.session.policy
 share/themes/Default/balou/logo.png
 share/themes/Default/balou/themerc
