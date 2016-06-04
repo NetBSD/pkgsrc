@@ -1,7 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2014/04/16 14:07:50 fhajny Exp $
+$NetBSD: patch-src_Makefile,v 1.1 2016/06/04 21:48:12 alnsn Exp $
 
 Pass proper libs for SunOS.
---- src/Makefile.orig	2014-01-29 20:43:33.000000000 +0000
+
+--- src/Makefile.orig	2016-03-03 19:11:46.000000000 +0000
 +++ src/Makefile
 @@ -6,7 +6,7 @@ OBJS= \
   context.o \
@@ -19,17 +20,17 @@ Pass proper libs for SunOS.
 +SOL_CFLAGS=-O2 -fpic $(WARN) $(INCDIR) $(DEFS)
 +SOL_LDFLAGS=-O -shared -fpic $(LIBDIR)
 +
- INSTALL	?= install
- CC	?= cc
- LD	?= $(MYENV) cc
-@@ -32,10 +35,11 @@ DESTDIR	?= /
+ INSTALL  = install
+ CC       = cc
+ LD       = $(MYENV) cc
+@@ -31,10 +34,11 @@ LDFLAGS += $(MYLDFLAGS)
  all:
  
  install: $(CMOD) $(LMOD)
--	$(INSTALL) -d $(DESTDIR)$(LUAPATH)/ssl $(DESTDIR)$(LUACPATH)
--	$(INSTALL) -D $(CMOD) $(DESTDIR)$(LUACPATH)
--	$(INSTALL) -m644 -D $(LMOD) $(DESTDIR)$(LUAPATH)
--	$(INSTALL) -m644 -D https.lua $(DESTDIR)$(LUAPATH)/ssl
+-	$(INSTALL) -d $(LUAPATH)/ssl $(LUACPATH)
+-	$(INSTALL) $(CMOD) $(LUACPATH)
+-	$(INSTALL) -m644 $(LMOD) $(LUAPATH)
+-	$(INSTALL) -m644 https.lua $(LUAPATH)/ssl
 +	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(LUAPATH)/ssl
 +	$(BSD_INSTALL_LIB_DIR)  $(DESTDIR)$(LUACPATH)
 +	$(BSD_INSTALL_LIB) $(CMOD) $(DESTDIR)$(LUACPATH)
@@ -38,7 +39,7 @@ Pass proper libs for SunOS.
  
  linux:
  	@$(MAKE) $(CMOD) MYCFLAGS="$(LNX_CFLAGS)" MYLDFLAGS="$(LNX_LDFLAGS)" EXTRA="$(EXTRA)"
-@@ -46,6 +50,9 @@ bsd:
+@@ -45,6 +49,9 @@ bsd:
  macosx:
  	@$(MAKE) $(CMOD) MYCFLAGS="$(MAC_CFLAGS)" MYLDFLAGS="$(MAC_LDFLAGS)" MYENV="$(MAC_ENV)" EXTRA="$(EXTRA)"
  
