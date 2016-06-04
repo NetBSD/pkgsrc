@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10.2.1 2016/05/13 14:50:48 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.10.2.2 2016/06/04 19:39:09 bsiegert Exp $
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/INSTALL.md
 ${TYPO3DIR}/${TYPO3NAME}/LICENSE.txt
@@ -3286,6 +3286,7 @@ ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Mvc/View/ViewInterface.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Mvc/Web/AbstractRequestHandler.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Mvc/Web/BackendRequestHandler.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Mvc/Web/FrontendRequestHandler.php
+${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Mvc/Web/ReferringRequest.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Mvc/Web/Request.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Mvc/Web/RequestBuilder.php
 ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/extbase/Classes/Mvc/Web/Response.php
