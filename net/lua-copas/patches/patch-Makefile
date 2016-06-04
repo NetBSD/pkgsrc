@@ -1,0 +1,17 @@
+$NetBSD: patch-Makefile,v 1.1.1.1 2016/06/04 23:15:22 alnsn Exp $
+
+--- Makefile.orig	2016-02-16 21:08:28.000000000 +0000
++++ Makefile
+@@ -2,8 +2,10 @@
+ 
+ # Default prefix
+-PREFIX = /usr/local
++#PREFIX = /usr/local
+ 
+ # System's lua directory (where Lua libraries are installed)
+-LUA_DIR= $(PREFIX)/share/lua/5.1
++LUA_DIR= $(DESTDIR)$(PREFIX)/$(LUA_LDIR)
++
++all:
+ 
+ install:
