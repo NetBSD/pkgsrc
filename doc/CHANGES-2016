@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2252 2016/06/04 07:59:56 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2253 2016/06/04 23:19:38 alnsn Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2927,3 +2927,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/stunnel to 5.32 [jym 2016-06-04]
 	Updated net/mikutter to 3.4.0-alpha3 [tsutsui 2016-06-04]
 	Updated devel/py-mercurial to 3.8.3 [wiz 2016-06-04]
+	Updated security/lua-sec to 0.6 [alnsn 2016-06-05]
+	Added net/lua-copas version 2.0.1 [alnsn 2016-06-05]
