@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.7 2015/11/04 01:17:50 agc Exp $
+$NetBSD: distinfo,v 1.8 2016/06/04 21:48:11 alnsn Exp $
 
-SHA1 (luasec-0.5.tar.gz) = bcfe8fda66b6058d07031df3c4a20f6192cf3e73
-RMD160 (luasec-0.5.tar.gz) = a9ef4591a770e178718e24778386136cdc87cadf
-SHA512 (luasec-0.5.tar.gz) = fcf88f2566952c4d12be95531991180a1f3bd60f7dda41997f93c80ccc8d9dfd44b00e3330a07e451489dc9cd0640f7841101c10867e270608187df78549fe2f
-Size (luasec-0.5.tar.gz) = 46738 bytes
-SHA1 (patch-aa) = 364c0e6ee5c4c04ca7c9cb8a70129013289e9df9
-SHA1 (patch-ab) = 3cd9916a098d3f0f77bbb58eab9841021049e2f3
+SHA1 (luasec-0.6.tar.gz) = 3204c0ac99f7be1952ad8f1157e83cc513491cb4
+RMD160 (luasec-0.6.tar.gz) = fc34ead1ec17b42991f8599f888007ab677dc6af
+SHA512 (luasec-0.6.tar.gz) = f7004a329153d0126a3ea27b4986e9d83fb8f2de9c5c2f0c96427c50cc42e1252c69fd8cc69e2e8d423745d2dbfdb5a781b609938f7f502c7aedeb99fd0778cd
+Size (luasec-0.6.tar.gz) = 51071 bytes
+SHA1 (patch-Makefile) = 17ae13eecf9ce9269e8ef9a826507bd6230c3364
+SHA1 (patch-src_Makefile) = c29625c3fd30cca14138867141586250487b2205
