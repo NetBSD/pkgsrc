@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.107 2016/03/05 11:28:05 jperkin Exp $
+# $NetBSD: Makefile,v 1.108 2016/06/04 16:25:04 youri Exp $
 
 DISTNAME=	pulseaudio-8.0
 PKGREVISION=	1
@@ -119,7 +119,6 @@ pre-configure:
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../security/policykit/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../textproc/json-c/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
