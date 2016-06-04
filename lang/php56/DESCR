@@ -4,4 +4,4 @@ C, Java and Perl with a couple of unique PHP-specific features
 thrown in.  The language is designed to allow web developers to
 write dynamically generated pages quickly.
 
-This package provides PHP version 5.5.x.
+This package provides PHP version 5.6.x.
