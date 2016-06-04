@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1114 2016/05/26 09:05:02 markd Exp $
+# $NetBSD: Makefile,v 1.1115 2016/06/04 23:16:14 alnsn Exp $
 #
 
 COMMENT=	Networking tools
@@ -305,6 +305,7 @@ SUBDIR+=	llnlxdir
 SUBDIR+=	llnlxftp
 SUBDIR+=	logjam
 SUBDIR+=	lopster
+SUBDIR+=	lua-copas
 SUBDIR+=	lua-socket
 SUBDIR+=	mDNSResponder
 SUBDIR+=	mDNSResponder-nss
