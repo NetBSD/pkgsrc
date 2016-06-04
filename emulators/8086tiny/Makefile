@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/10/11 00:52:23 ryoon Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/04 17:41:02 sevan Exp $
 
 DISTNAME=	8086tiny_125
 PKGNAME=	${DISTNAME:S/tiny_1/tiny-1./}
@@ -16,7 +16,11 @@ WRKSRC=		${WRKDIR}
 USE_TOOLS+=	sed
 
 BUILD_TARGET=	8086tiny
-LDFLAGS.NetBSD=	-lcompat
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD"
+LDFLAGS=	-lcompat
+.endif
 
 INSTALLATION_DIRS=	bin share/8086tiny
 
