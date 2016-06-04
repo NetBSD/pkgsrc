@@ -1,9 +1,12 @@
-# $NetBSD: Makefile,v 1.184 2016/03/05 11:27:59 jperkin Exp $
+# $NetBSD: Makefile,v 1.185 2016/06/04 19:39:22 joerg Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
 PKGREVISION=	39
 CATEGORIES=	x11
 COMMENT=	Support libraries for the KDE integrated X11 desktop
+
+# addressbook.h:29:23: fatal error: addressee.h: No such file or directory
+MAKE_JOBS_SAFE=	no
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 
