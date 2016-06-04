@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.119 2016/05/22 04:32:41 tsutsui Exp $
+# $NetBSD: Makefile,v 1.120 2016/06/04 02:28:25 tsutsui Exp $
 #
 
-DISTNAME=	mikutter.3.3.10
-PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/./-/}
+DISTNAME=	mikutter.3.4.0-alpha3
+PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/-//:S/./-/}
 CATEGORIES=	net
 MASTER_SITES=	http://mikutter.hachune.net/bin/
 
@@ -13,8 +13,8 @@ LICENSE=	mit AND cc-by-sa-v3.0
 
 .include "../../lang/ruby/rubyversion.mk"
 
-DEPENDS+=	${RUBY_PKGPREFIX}-pluggaloid-[0-9]*:../../net/ruby-pluggaloid
-DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gtk>=3.0.7:../../x11/ruby-gnome2-gtk
+DEPENDS+=	${RUBY_PKGPREFIX}-pluggaloid>=1.1.1:../../net/ruby-pluggaloid
+DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gtk>=3.0.8:../../x11/ruby-gnome2-gtk
 DEPENDS+=	${RUBY_PKGPREFIX}-gettext>=3.0.1:../../devel/ruby-gettext
 DEPENDS+=	${RUBY_PKGPREFIX}-oauth>=0.5.1:../../security/ruby-oauth
 DEPENDS+=	${RUBY_PKGPREFIX}-addressable>=2.3:../../net/ruby-addressable
