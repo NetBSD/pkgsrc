@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2016/06/05 00:46:25 ryoon Exp $
+include/suil-0/suil/suil.h
+lib/libsuil-0.so
+lib/libsuil-0.so.0
+lib/libsuil-0.so.${PKGVERSION}
+lib/pkgconfig/suil-0.pc
+lib/suil-0/libsuil_x11_in_gtk2.so
