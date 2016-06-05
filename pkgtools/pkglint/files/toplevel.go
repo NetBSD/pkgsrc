@@ -6,7 +6,7 @@ type Toplevel struct {
 }
 
 func CheckdirToplevel() {
-	if G.opts.DebugTrace {
+	if G.opts.Debug {
 		defer tracecall1(G.CurrentDir)()
 	}
 

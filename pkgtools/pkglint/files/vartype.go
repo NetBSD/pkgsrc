@@ -134,6 +134,63 @@ func (vt *Vartype) String() string {
 	}
 }
 
+func (vt *Vartype) IsShell() bool {
+	switch vt.checker {
+	case CheckvarCFlag, // Subtype of ShellWord
+		CheckvarLdFlag, // Subtype of ShellWord
+		CheckvarSedCommands,
+		CheckvarShellCommand,
+		CheckvarShellCommands,
+		CheckvarShellWord:
+		return true
+	}
+	return false
+}
+
+// The basic vartype consists only of characters that don’t
+// need escaping in most contexts, like A-Za-z0-9-_.
+func (vt *Vartype) IsBasicSafe() bool {
+	switch vt.checker {
+	case CheckvarBuildlinkDepmethod,
+		CheckvarCategory,
+		CheckvarDistSuffix,
+		CheckvarEmulPlatform,
+		CheckvarFileMode,
+		CheckvarFilename,
+		CheckvarIdentifier,
+		CheckvarInteger,
+		CheckvarMachineGnuPlatform,
+		CheckvarMachinePlatform,
+		CheckvarOption,
+		CheckvarPathname,
+		CheckvarPerl5Packlist,
+		CheckvarPkgName,
+		CheckvarPkgOptionsVar,
+		CheckvarPkgPath,
+		CheckvarPkgRevision,
+		CheckvarPrefixPathname,
+		CheckvarPythonDependency,
+		CheckvarRelativePkgDir,
+		CheckvarRelativePkgPath,
+		CheckvarStage,
+		CheckvarUserGroupName,
+		CheckvarVersion,
+		CheckvarWrkdirSubdirectory,
+		CheckvarYesNo,
+		CheckvarYesNoIndirectly:
+		return true
+	}
+	return false
+}
+
+func (vt *Vartype) IsPlainString() bool {
+	switch vt.checker {
+	case CheckvarComment, CheckvarMessage, CheckvarString:
+		return true
+	}
+	return false
+}
+
 type VarChecker struct {
 	name    string
 	checker func(*VartypeCheck)
@@ -164,10 +221,14 @@ var (
 	CheckvarFilename               = &VarChecker{"Filename", (*VartypeCheck).Filename}
 	CheckvarFilemask               = &VarChecker{"Filemask", (*VartypeCheck).Filemask}
 	CheckvarFileMode               = &VarChecker{"FileMode", (*VartypeCheck).FileMode}
+	CheckvarHomepage               = &VarChecker{"Homepage", (*VartypeCheck).Homepage}
 	CheckvarIdentifier             = &VarChecker{"Identifier", (*VartypeCheck).Identifier}
 	CheckvarInteger                = &VarChecker{"Integer", (*VartypeCheck).Integer}
 	CheckvarLdFlag                 = &VarChecker{"LdFlag", (*VartypeCheck).LdFlag}
 	CheckvarLicense                = &VarChecker{"License", (*VartypeCheck).License}
+	CheckvarMachineGnuPlatform     = &VarChecker{"MachineGnuPlatform", (*VartypeCheck).MachineGnuPlatform}
+	CheckvarMachinePlatform        = &VarChecker{"MachinePlatform", (*VartypeCheck).MachinePlatform}
+	CheckvarMachinePlatformPattern = &VarChecker{"MachinePlatformPattern", (*VartypeCheck).MachinePlatformPattern}
 	CheckvarMailAddress            = &VarChecker{"MailAddress", (*VartypeCheck).MailAddress}
 	CheckvarMessage                = &VarChecker{"Message", (*VartypeCheck).Message}
 	CheckvarOption                 = &VarChecker{"Option", (*VartypeCheck).Option}
@@ -179,7 +240,6 @@ var (
 	CheckvarPkgPath                = &VarChecker{"PkgPath", (*VartypeCheck).PkgPath}
 	CheckvarPkgOptionsVar          = &VarChecker{"PkgOptionsVar", (*VartypeCheck).PkgOptionsVar}
 	CheckvarPkgRevision            = &VarChecker{"PkgRevision", (*VartypeCheck).PkgRevision}
-	CheckvarPlatformPattern        = &VarChecker{"PlatformPattern", (*VartypeCheck).PlatformPattern}
 	CheckvarPrefixPathname         = &VarChecker{"PrefixPathname", (*VartypeCheck).PrefixPathname}
 	CheckvarPythonDependency       = &VarChecker{"PythonDependency", (*VartypeCheck).PythonDependency}
 	CheckvarRelativePkgDir         = &VarChecker{"RelativePkgDir", (*VartypeCheck).RelativePkgDir}

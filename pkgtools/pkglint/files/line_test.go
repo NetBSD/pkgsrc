@@ -10,25 +10,25 @@ func (s *Suite) TestLineModify(c *check.C) {
 	line := NewLine("fname", 1, "dummy", s.NewRawLines(1, "original\n"))
 
 	c.Check(line.changed, equals, false)
-	c.Check(line.rawLines(), check.DeepEquals, s.NewRawLines(1, "original\n"))
+	c.Check(line.raw, check.DeepEquals, s.NewRawLines(1, "original\n"))
 
 	line.AutofixReplaceRegexp(`(.)(.*)(.)`, "$3$2$1")
 
 	c.Check(line.changed, equals, true)
-	c.Check(line.rawLines(), check.DeepEquals, s.NewRawLines(1, "original\n", "lriginao\n"))
+	c.Check(line.raw, check.DeepEquals, s.NewRawLines(1, "original\n", "lriginao\n"))
 
 	line.changed = false
 	line.AutofixReplace("i", "u")
 
 	c.Check(line.changed, equals, true)
-	c.Check(line.rawLines(), check.DeepEquals, s.NewRawLines(1, "original\n", "lruginao\n"))
+	c.Check(line.raw, check.DeepEquals, s.NewRawLines(1, "original\n", "lruginao\n"))
 	c.Check(line.raw[0].textnl, equals, "lruginao\n")
 
 	line.changed = false
 	line.AutofixReplace("lruginao", "middle")
 
 	c.Check(line.changed, equals, true)
-	c.Check(line.rawLines(), check.DeepEquals, s.NewRawLines(1, "original\n", "middle\n"))
+	c.Check(line.raw, check.DeepEquals, s.NewRawLines(1, "original\n", "middle\n"))
 	c.Check(line.raw[0].textnl, equals, "middle\n")
 
 	line.AutofixInsertBefore("before")
@@ -36,21 +36,21 @@ func (s *Suite) TestLineModify(c *check.C) {
 	line.AutofixInsertAfter("between middle and after")
 	line.AutofixInsertAfter("after")
 
-	c.Check(line.rawLines(), check.DeepEquals, s.NewRawLines(
-		0, "", "before\n",
-		0, "", "between before and middle\n",
-		1, "original\n", "middle\n",
-		0, "", "between middle and after\n",
-		0, "", "after\n"))
+	c.Check(line.modifiedLines(), check.DeepEquals, []string{
+		"before\n",
+		"between before and middle\n",
+		"middle\n",
+		"between middle and after\n",
+		"after\n"})
 
 	line.AutofixDelete()
 
-	c.Check(line.rawLines(), check.DeepEquals, s.NewRawLines(
-		0, "", "before\n",
-		0, "", "between before and middle\n",
-		1, "original\n", "",
-		0, "", "between middle and after\n",
-		0, "", "after\n"))
+	c.Check(line.modifiedLines(), check.DeepEquals, []string{
+		"before\n",
+		"between before and middle\n",
+		"",
+		"between middle and after\n",
+		"after\n"})
 }
 
 func (s *Suite) TestLine_CheckAbsolutePathname(c *check.C) {
