@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.25 2016/03/05 15:44:36 bsiegert Exp $
+$NetBSD: distinfo,v 1.26 2016/06/05 13:57:37 mef Exp $
 
-SHA1 (file-5.25.tar.gz) = fea78106dd0b7a09a61714cdbe545135563e84bd
-RMD160 (file-5.25.tar.gz) = 94c14b8a76e65ad52349b9b3f3da835f97b642a3
-SHA512 (file-5.25.tar.gz) = 4a5176a7e80df2bb7e45916490433d22eb98a442d49d04146afcbdcf92ff619ea3e73e95c8991e6b6a0628efb9d127bfa4aafc1cae523f8261ca693bc5e13402
-Size (file-5.25.tar.gz) = 739485 bytes
+SHA1 (file-5.27.tar.gz) = 5476e4b98b37f2bd1009c2f38d65063fd1170d4f
+RMD160 (file-5.27.tar.gz) = 5851b5014e4731ce85cf70a29066e50e0cab6a17
+SHA512 (file-5.27.tar.gz) = fcf607d367d85b8a971a62793efc79f7e548e029dd7bb41f95bf992c271c514d70cd4bb5c2ca577e470e0ff1df9dca31beaaf19a5fd4e3f617b36061eff46195
+Size (file-5.27.tar.gz) = 774063 bytes
 SHA1 (patch-aa) = d3aa3667e3d28ac1268b83de2de372ba083705fc
-SHA1 (patch-src_compress.c) = 63407a3103bb1e77a5c8f1a5e859eb884ad55b3a
+SHA1 (patch-src_compress.c) = 1745daee386b069ebc3b9e63e0973d4f2ab348f4
 SHA1 (patch-src_fsmagic.c) = ee770cf37dfdfbc5a7c123d2691312610b76e76e
