@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2271 2016/06/05 11:51:52 mef Exp $
+$NetBSD: CHANGES-2016,v 1.2272 2016/06/05 12:22:57 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2956,3 +2956,7 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Data-Peek to 0.46 [mef 2016-06-05]
 	Updated devel/p5-Date-Manip to 6.54 [mef 2016-06-05]
 	Updated devel/p5-Devel-PPPort to 3.33 [mef 2016-06-05]
+	Updated devel/p5-ExtUtils-MakeMaker to 7.18 [mef 2016-06-05]
+	Updated devel/p5-ExtUtils-F77 to 1.20 [mef 2016-06-05]
+	Updated devel/p5-Eval-Closure to 0.14 [mef 2016-06-05]
+	Updated devel/p5-File-ChangeNotify to 0.26 [mef 2016-06-05]
