@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2267 2016/06/05 09:53:52 mef Exp $
+$NetBSD: CHANGES-2016,v 1.2268 2016/06/05 09:58:36 alnsn Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2950,3 +2950,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-CPANPLUS to 0.9160 [mef 2016-06-05]
 	Updated devel/p5-Cache-FastMmap to 1.44 [mef 2016-06-05]
 	Updated devel/p5-Carp-Clan to 6.06 [mef 2016-06-05]
+	Added devel/lua-coxpcall version 1.16.0 [alnsn 2016-06-05]
