@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2015/10/17 12:39:25 wen Exp $
+# $NetBSD: Makefile,v 1.8 2016/06/05 07:29:14 wen Exp $
 #
 
-DISTNAME=	Pod-Markdown-3.003
+DISTNAME=	Pod-Markdown-3.005
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Pod/}
