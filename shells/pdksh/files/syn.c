@@ -1,4 +1,4 @@
-/*	$NetBSD: syn.c,v 1.3 2008/06/15 14:20:09 tnn Exp $	*/
+/*	$NetBSD: syn.c,v 1.4 2016/06/05 04:44:56 richard Exp $	*/
 
 /*
  * shell parser (C version)
@@ -609,13 +609,8 @@ wordlist()
 		XPput(args, yylval.cp);
 	if (c != '\n' && c != ';')
 		syntaxerr((char *) 0);
-	if (XPsize(args) == 0) {
-		XPfree(args);
-		return NULL;
-	} else {
-		XPput(args, NULL);
-		return (char **) XPclose(args);
-	}
+	XPput(args, NULL);
+	return (char **) XPclose(args);
 }
 
 /*
