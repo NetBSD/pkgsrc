@@ -1,0 +1,4 @@
+Z-Push is an open-source implementation of the Microsoft ActiveSync protocol.
+It can be used to synchronize emails (including push notifications), personal
+contacts and calendar items between a central HTTP server and a mobile device.
+It supports a wide range of IMAP, CalDAV and CardDAV servers.
