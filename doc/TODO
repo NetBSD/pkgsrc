@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15966 2016/06/05 07:13:40 wen Exp $
+$NetBSD: TODO,v 1.15967 2016/06/05 07:30:21 wen Exp $
 
 Suggested new packages
 ======================
@@ -1308,7 +1308,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Parse-ErrorString-Perl-0.22
 	o p5-Perl-APIReference-0.22
 	o p5-Perl6-Export-0.009
-	o p5-Pod-Markdown-3.005
 	o p5-PostScript-2.32
 	o p5-PostScript-Simple-1.02
 	o p5-Proc-Wait3-0.05
