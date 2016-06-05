@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2016/02/03 13:14:43 mef Exp $
+# $NetBSD: Makefile,v 1.38 2016/06/05 12:54:08 wen Exp $
 #
 
-DISTNAME=	PDF-Create-1.28
+DISTNAME=	PDF-Create-1.32
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=PDF/}
@@ -13,13 +13,11 @@ LICENSE=	${PERL5_LICENSE}
 
 PERL5_PACKLIST=		auto/PDF/Create/.packlist
 
+DEPENDS+=	p5-File-Share>=0.25:../../devel/p5-File-Share
+DEPENDS+=	p5-JSON>=0:../../converters/p5-JSON
+
 BUILD_DEPENDS=	p5-Test-LeakTrace>=0.14:../../devel/p5-Test-LeakTrace
-#UILD_DEPENDS+=	p5-Test-CPAN-Changes-[0-9]*:../../devel/p5-Test-CPAN-Changes
 BUILD_DEPENDS+=	p5-Test-CheckManifest>=0.9:../../devel/p5-Test-CheckManifest
-#UILD_DEPENDS+=	p5-Test-CPAN-Meta-JSON-[0-9]*:../../devel/p5-Test-CPAN-Meta-JSON
-
-
-REPLACE_PERL=	sample.pl sample-cgi.pl
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
