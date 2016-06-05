@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2256 2016/06/05 00:46:54 ryoon Exp $
+$NetBSD: CHANGES-2016,v 1.2257 2016/06/05 01:03:13 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2932,3 +2932,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added www/z-push version 2.2.10 [jym 2016-06-05]
 	Added audio/libsoxr version 0.1.2 [ryoon 2016-06-05]
 	Added audio/suil version 0.8.2 [ryoon 2016-06-05]
+	Updated audio/audacity to 2.1.2 [ryoon 2016-06-05]
