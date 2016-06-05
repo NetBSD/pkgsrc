@@ -7,15 +7,11 @@ import (
 )
 
 func (s *Suite) TestVartypeCheck_AwkCommand(c *check.C) {
-	s.UseCommandLine(c, "-Dunchecked")
 	runVartypeChecks("PLIST_AWK", opAssignAppend, (*VartypeCheck).AwkCommand,
 		"{print $0}",
 		"{print $$0}")
 
-	c.Check(s.Output(), equals, ""+
-		"ERROR: fname:1: Invalid Makefile syntax at \"$0}\".\n"+
-		"DEBUG: fname:1: Unchecked AWK command: \"{print $0}\"\n"+
-		"DEBUG: fname:2: Unchecked AWK command: \"{print $$0}\"\n")
+	c.Check(s.Output(), equals, "WARN: fname:1: $0 is ambiguous. Use ${0} if you mean a Makefile variable or $$0 if you mean a shell variable.\n")
 }
 
 func (s *Suite) TestVartypeCheck_BasicRegularExpression(c *check.C) {
@@ -23,7 +19,7 @@ func (s *Suite) TestVartypeCheck_BasicRegularExpression(c *check.C) {
 		".*\\.pl$",
 		".*\\.pl$$")
 
-	c.Check(s.Output(), equals, "ERROR: fname:1: Invalid Makefile syntax at \"$\".\n")
+	c.Check(s.Output(), equals, "WARN: fname:1: Pkglint parse error in MkLine.Tokenize at \"$\".\n")
 }
 
 func (s *Suite) TestVartypeCheck_BuildlinkDepmethod(c *check.C) {
@@ -36,15 +32,19 @@ func (s *Suite) TestVartypeCheck_BuildlinkDepmethod(c *check.C) {
 
 func (s *Suite) TestVartypeCheck_Category(c *check.C) {
 	s.CreateTmpFile(c, "filesyscategory/Makefile", "# empty\n")
+	s.CreateTmpFile(c, "wip/Makefile", "# empty\n")
 	G.CurrentDir = s.tmpdir
 	G.CurPkgsrcdir = "."
 
 	runVartypeChecks("CATEGORIES", opAssign, (*VartypeCheck).Category,
 		"chinese",
 		"arabic",
-		"filesyscategory")
+		"filesyscategory",
+		"wip")
 
-	c.Check(s.Output(), equals, "ERROR: fname:2: Invalid category \"arabic\".\n")
+	c.Check(s.Output(), equals, ""+
+		"ERROR: fname:2: Invalid category \"arabic\".\n"+
+		"ERROR: fname:4: Invalid category \"wip\".\n")
 }
 
 func (s *Suite) TestVartypeCheck_CFlag(c *check.C) {
@@ -166,8 +166,8 @@ func (s *Suite) TestVartypeCheck_EmulPlatform(c *check.C) {
 		"${LINUX}")
 
 	c.Check(s.Output(), equals, ""+
-		"WARN: fname:2: \"nextbsd\" is not valid for the operating system part of EMUL_PLATFORM. Use one of { bitrig bsdos cygwin darwin dragonfly freebsd haiku hpux interix irix linux mirbsd netbsd openbsd osf1 solaris } instead.\n"+
-		"WARN: fname:2: \"8087\" is not valid for the hardware architecture part of EMUL_PLATFORM. Use one of { alpha amd64 arc arm arm32 cobalt convex dreamcast hpcmips hpcsh hppa i386 ia64 m68k m88k mips mips64 mips64eb mips64el mipseb mipsel mipsn32 ns32k pc532 pmax powerpc rs6000 s390 sh3eb sh3el sparc sparc64 vax x86_64 } instead.\n"+
+		"WARN: fname:2: \"nextbsd\" is not valid for the operating system part of EMUL_PLATFORM. Use one of { bitrig bsdos cygwin darwin dragonfly freebsd haiku hpux interix irix linux mirbsd netbsd openbsd osf1 solaris sunos } instead.\n"+
+		"WARN: fname:2: \"8087\" is not valid for the hardware architecture part of EMUL_PLATFORM. Use one of { aarch64 aarch64eb alpha amd64 arc arm arm26 arm32 cobalt coldfire convex dreamcast earm earmeb earmhf earmhfeb earmv4 earmv4eb earmv5 earmv5eb earmv6 earmv6eb earmv6hf earmv6hfeb earmv7 earmv7eb earmv7hf earmv7hfeb evbarm hpcmips hpcsh hppa hppa64 i386 i586 i686 ia64 m68000 m68k m88k mips mips64 mips64eb mips64el mipseb mipsel mipsn32 mlrisc ns32k pc532 pmax powerpc powerpc64 rs6000 s390 sh3eb sh3el sparc sparc64 vax x86_64 } instead.\n"+
 		"WARN: fname:3: \"${LINUX}\" is not a valid emulation platform.\n")
 }
 
@@ -182,14 +182,8 @@ func (s *Suite) TestVartypeCheck_Enum(c *check.C) {
 }
 
 func (s *Suite) TestVartypeCheck_FetchURL(c *check.C) {
-	G.globalData.MasterSiteUrls = map[string]string{
-		"https://github.com/":         "MASTER_SITE_GITHUB",
-		"http://ftp.gnu.org/pub/gnu/": "MASTER_SITE_GNU",
-	}
-	G.globalData.MasterSiteVars = map[string]bool{
-		"MASTER_SITE_GITHUB": true,
-		"MASTER_SITE_GNU":    true,
-	}
+	s.RegisterMasterSite("MASTER_SITE_GNU", "http://ftp.gnu.org/pub/gnu/")
+	s.RegisterMasterSite("MASTER_SITE_GITHUB", "https://github.com/")
 
 	runVartypeChecks("MASTER_SITES", opAssign, (*VartypeCheck).FetchURL,
 		"https://github.com/example/project/",
@@ -201,13 +195,20 @@ func (s *Suite) TestVartypeCheck_FetchURL(c *check.C) {
 		"WARN: fname:1: Please use ${MASTER_SITE_GITHUB:=example/} instead of \"https://github.com/example/project/\" and run \""+confMake+" help topic=github\" for further tips.\n"+
 		"WARN: fname:2: Please use ${MASTER_SITE_GNU:=bison} instead of \"http://ftp.gnu.org/pub/gnu/bison\".\n"+
 		"ERROR: fname:3: The subdirectory in MASTER_SITE_GNU must end with a slash.\n"+
-		"ERROR: fname:4: MASTER_SITE_INVALID does not exist.\n")
+		"ERROR: fname:4: The site MASTER_SITE_INVALID does not exist.\n")
 
 	// PR 46570, keyword gimp-fix-ca
 	runVartypeChecks("MASTER_SITES", opAssign, (*VartypeCheck).FetchURL,
 		"https://example.org/download.cgi?fname=fname&sha1=12341234")
 
 	c.Check(s.Output(), equals, "")
+
+	runVartypeChecks("MASTER_SITES", opAssign, (*VartypeCheck).FetchURL,
+		"http://example.org/distfiles/",
+		"http://example.org/download?fname=distfile;version=1.0",
+		"http://example.org/download?fname=<distfile>;version=<version>")
+
+	c.Check(s.Output(), equals, "WARN: fname:3: \"http://example.org/download?fname=<distfile>;version=<version>\" is not a valid URL.\n")
 }
 
 func (s *Suite) TestVartypeCheck_Filename(c *check.C) {
@@ -228,6 +229,16 @@ func (s *Suite) TestVartypeCheck_LdFlag(c *check.C) {
 		"-unknown")
 
 	c.Check(s.Output(), equals, "WARN: fname:4: Unknown linker flag \"-unknown\".\n")
+}
+
+func (s *Suite) TestVartypeCheck_MachineGnuPlatform(c *check.C) {
+	runVartypeMatchChecks("MACHINE_GNU_PLATFORM", (*VartypeCheck).MachineGnuPlatform,
+		"x86_64-pc-cygwin",
+		"Cygwin-*-amd64")
+
+	c.Check(s.Output(), equals, ""+
+		"WARN: fname:2: The pattern \"Cygwin\" cannot match any of { aarch64 aarch64_be alpha amd64 arc arm armeb armv4 armv4eb armv6 armv6eb armv7 armv7eb cobalt convex dreamcast hpcmips hpcsh hppa hppa64 i386 i486 ia64 m5407 m68010 m68k m88k mips mips64 mips64el mipseb mipsel mipsn32 mlrisc ns32k pc532 pmax powerpc powerpc64 rs6000 s390 sh shle sparc sparc64 vax x86_64 } for the hardware architecture part of MACHINE_GNU_PLATFORM.\n"+
+		"WARN: fname:2: The pattern \"amd64\" cannot match any of { bitrig bsdos cygwin darwin dragonfly freebsd haiku hpux interix irix linux mirbsd netbsd openbsd osf1 solaris sunos } for the operating system part of MACHINE_GNU_PLATFORM.\n")
 }
 
 func (s *Suite) TestVartypeCheck_MailAddress(c *check.C) {
@@ -287,20 +298,23 @@ func (s *Suite) TestVartypeCheck_PkgRevision(c *check.C) {
 	c.Check(s.Output(), equals, "")
 }
 
-func (s *Suite) TestVartypeCheck_PlatformPattern(c *check.C) {
-	runVartypeMatchChecks("ONLY_FOR_PLATFORM", (*VartypeCheck).PlatformPattern,
+func (s *Suite) TestVartypeCheck_MachinePlatformPattern(c *check.C) {
+	runVartypeMatchChecks("ONLY_FOR_PLATFORM", (*VartypeCheck).MachinePlatformPattern,
 		"linux-i386",
 		"nextbsd-5.0-8087",
 		"netbsd-7.0-l*",
 		"NetBSD-1.6.2-i386",
+		"FreeBSD*",
+		"FreeBSD-*",
 		"${LINUX}")
 
 	c.Check(s.Output(), equals, ""+
 		"WARN: fname:1: \"linux-i386\" is not a valid platform pattern.\n"+
-		"WARN: fname:2: The pattern \"nextbsd\" cannot match any of { Bitrig BSDOS Cygwin Darwin DragonFly FreeBSD Haiku HPUX Interix IRIX Linux MirBSD NetBSD OpenBSD OSF1 QNX SunOS } for the operating system part of ONLY_FOR_PLATFORM.\n"+
-		"WARN: fname:2: The pattern \"8087\" cannot match any of { alpha amd64 arc arm arm32 cobalt convex dreamcast hpcmips hpcsh hppa i386 ia64 m68k m88k mips mips64 mips64eb mips64el mipseb mipsel mipsn32 ns32k pc532 pmax powerpc rs6000 s390 sh3eb sh3el sparc sparc64 vax x86_64 } for the hardware architecture part of ONLY_FOR_PLATFORM.\n"+
-		"WARN: fname:3: The pattern \"netbsd\" cannot match any of { Bitrig BSDOS Cygwin Darwin DragonFly FreeBSD Haiku HPUX Interix IRIX Linux MirBSD NetBSD OpenBSD OSF1 QNX SunOS } for the operating system part of ONLY_FOR_PLATFORM.\n"+
-		"WARN: fname:3: The pattern \"l*\" cannot match any of { alpha amd64 arc arm arm32 cobalt convex dreamcast hpcmips hpcsh hppa i386 ia64 m68k m88k mips mips64 mips64eb mips64el mipseb mipsel mipsn32 ns32k pc532 pmax powerpc rs6000 s390 sh3eb sh3el sparc sparc64 vax x86_64 } for the hardware architecture part of ONLY_FOR_PLATFORM.\n")
+		"WARN: fname:2: The pattern \"nextbsd\" cannot match any of { AIX BSDOS Bitrig Cygwin Darwin DragonFly FreeBSD FreeMiNT GNUkFreeBSD HPUX Haiku IRIX Interix Linux Minix MirBSD NetBSD OSF1 OpenBSD QNX SCO_SV SunOS UnixWare } for the operating system part of ONLY_FOR_PLATFORM.\n"+
+		"WARN: fname:2: The pattern \"8087\" cannot match any of { aarch64 aarch64eb alpha amd64 arc arm arm26 arm32 cobalt coldfire convex dreamcast earm earmeb earmhf earmhfeb earmv4 earmv4eb earmv5 earmv5eb earmv6 earmv6eb earmv6hf earmv6hfeb earmv7 earmv7eb earmv7hf earmv7hfeb evbarm hpcmips hpcsh hppa hppa64 i386 i586 i686 ia64 m68000 m68k m88k mips mips64 mips64eb mips64el mipseb mipsel mipsn32 mlrisc ns32k pc532 pmax powerpc powerpc64 rs6000 s390 sh3eb sh3el sparc sparc64 vax x86_64 } for the hardware architecture part of ONLY_FOR_PLATFORM.\n"+
+		"WARN: fname:3: The pattern \"netbsd\" cannot match any of { AIX BSDOS Bitrig Cygwin Darwin DragonFly FreeBSD FreeMiNT GNUkFreeBSD HPUX Haiku IRIX Interix Linux Minix MirBSD NetBSD OSF1 OpenBSD QNX SCO_SV SunOS UnixWare } for the operating system part of ONLY_FOR_PLATFORM.\n"+
+		"WARN: fname:3: The pattern \"l*\" cannot match any of { aarch64 aarch64eb alpha amd64 arc arm arm26 arm32 cobalt coldfire convex dreamcast earm earmeb earmhf earmhfeb earmv4 earmv4eb earmv5 earmv5eb earmv6 earmv6eb earmv6hf earmv6hfeb earmv7 earmv7eb earmv7hf earmv7hfeb evbarm hpcmips hpcsh hppa hppa64 i386 i586 i686 ia64 m68000 m68k m88k mips mips64 mips64eb mips64el mipseb mipsel mipsn32 mlrisc ns32k pc532 pmax powerpc powerpc64 rs6000 s390 sh3eb sh3el sparc sparc64 vax x86_64 } for the hardware architecture part of ONLY_FOR_PLATFORM.\n"+
+		"WARN: fname:5: \"FreeBSD*\" is not a valid platform pattern.\n")
 }
 
 func (s *Suite) TestVartypeCheck_PythonDependency(c *check.C) {
@@ -330,8 +344,7 @@ func (s *Suite) TestVartypeCheck_SedCommands(c *check.C) {
 
 	c.Check(s.Output(), equals, ""+
 		"NOTE: fname:1: Please always use \"-e\" in sed commands, even if there is only one substitution.\n"+
-		"NOTE: fname:2: Each sed command should appear in an assignment of its own.\n"+
-		"ERROR: fname:3: Invalid shell words \"\\\"s,\" in sed commands.\n")
+		"NOTE: fname:2: Each sed command should appear in an assignment of its own.\n")
 }
 
 func (s *Suite) TestVartypeCheck_ShellCommands(c *check.C) {
@@ -349,15 +362,6 @@ func (s *Suite) TestVartypeCheck_Stage(c *check.C) {
 		"pre-test")
 
 	c.Check(s.Output(), equals, "WARN: fname:2: Invalid stage name \"post-modern\". Use one of {pre,do,post}-{extract,patch,configure,build,test,install}.\n")
-}
-
-func (s *Suite) TestVartypeCheck_URL(c *check.C) {
-	runVartypeChecks("MASTER_SITES", opAssign, (*VartypeCheck).URL,
-		"http://example.org/distfiles/",
-		"http://example.org/download?fname=distfile;version=1.0",
-		"http://example.org/download?fname=<distfile>;version=<version>")
-
-	c.Check(s.Output(), equals, "WARN: fname:3: \"http://example.org/download?fname=<distfile>;version=<version>\" is not a valid URL.\n")
 }
 
 func (s *Suite) TestVartypeCheck_Varname(c *check.C) {

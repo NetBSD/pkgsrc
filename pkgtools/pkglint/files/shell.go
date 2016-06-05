@@ -8,30 +8,25 @@ import (
 )
 
 const (
-	reMkShellvaruse = `(?:^|[^\$])\$\$\{?(\w+)\}?`
-	reVarnameDirect = `(?:[-*+.0-9A-Z_a-z{}\[]+)`
-	reShellToken    = `^\s*(` +
+	reShellToken = `^\s*(` +
 		`#.*` + // shell comment
 		`|(?:` +
 		`'[^']*'` + // single quoted string
 		"|\"`[^`]+`\"" + // backticks command execution in double quotes
 		`|"(?:\\.|[^"])*"` + // double quoted string
-		"|`[^`]*`" + // backticks command execution, somewhat naive
+		"|`[^`]*`" + // backticks command execution (very simple case)
 		`|\\\$\$` + // a shell-escaped dollar sign
 		`|\\[^\$]` + // other escaped characters
 		`|\$[\w_]` + // one-character make(1) variable
-		`|\$\{[^{}]+\}` + // make(1) variable, ${...}
-		`|\$\([^()]+\)` + // make(1) variable, $(...)
-		`|\$[/@<^]` + // special make(1) variables
 		`|\$\$[0-9A-Z_a-z]+` + // shell variable
 		`|\$\$[!#?@]` + // special shell variables
 		`|\$\$[./]` + // unescaped dollar in shell, followed by punctuation
 		`|\$\$\$\$` + // the special pid shell variable
 		`|\$\$\{[0-9A-Z_a-z]+[#%:]?[^}]*\}` + // shell variable in braces
-		`|\$\$\(` + // POSIX-style backticks replacement
 		`|[^\(\)'\"\\\s;&\|<>` + "`" + `\$]` + // non-special character
 		`|\$\{[^\s\"'` + "`" + `]+` + // HACK: nested make(1) variables
 		`)+` + // any of the above may be repeated
+		`|\$\$\(` + // POSIX-style backticks replacement
 		`|;;?` +
 		`|&&?` +
 		`|\|\|?` +
@@ -41,7 +36,11 @@ const (
 		`|<<?` +
 		`|>>?` +
 		`|#.*)`
-	reShVarassign = `^([A-Z_a-z]\w*)=`
+	reShVarassign    = `^([A-Z_a-z]\w*)=`
+	reShVarname      = `(?:[!#*\-\d?@]|\$\$|[A-Za-z_]\w*)`
+	reShVarexpansion = `(?:(?:#|##|%|%%|:-|:=|:\?|:\+|\+)[^$\\{}]*)`
+	reShVaruse       = `\$\$` + `(?:` + reShVarname + `|` + `\{` + reShVarname + `(?:` + reShVarexpansion + `)?` + `\})`
+	reShDollar       = `\\\$\$|` + reShVaruse + `|\$\$[,\-/|]`
 )
 
 // ShellCommandState
@@ -110,22 +109,11 @@ func NewShellLine(mkline *MkLine) *ShellLine {
 	return &ShellLine{mkline.Line, mkline}
 }
 
-type ShellwordState uint8
+var shellcommandsContextType = &Vartype{lkNone, CheckvarShellCommands, []AclEntry{{"*", aclpAllRuntime}}, false}
+var shellwordVuc = &VarUseContext{shellcommandsContextType, vucTimeUnknown, vucQuotPlain, vucExtentWord}
 
-const (
-	swstPlain ShellwordState = iota
-	swstSquot
-	swstDquot
-	swstDquotBackt
-	swstBackt
-)
-
-func (st ShellwordState) String() string {
-	return [...]string{"plain", "squot", "dquot", "dquot+backt", "backt"}[st]
-}
-
-func (shline *ShellLine) CheckToken(token string, checkQuoting bool) {
-	if G.opts.DebugTrace {
+func (shline *ShellLine) CheckWord(token string, checkQuoting bool) {
+	if G.opts.Debug {
 		defer tracecall(token, checkQuoting)()
 	}
 
@@ -134,11 +122,10 @@ func (shline *ShellLine) CheckToken(token string, checkQuoting bool) {
 	}
 
 	line := shline.line
-	shellcommandsContextType := &Vartype{lkNone, CheckvarShellCommands, []AclEntry{{"*", aclpAllRuntime}}, false}
-	shellwordVuc := &VarUseContext{shellcommandsContextType, vucTimeUnknown, vucQuotPlain, vucExtentWord}
 
-	if m, varname, mod := match2(token, `^\$\{(`+reVarnameDirect+`)(:[^{}]+)?\}$`); m {
-		shline.mkline.CheckVaruse(varname, mod, shellwordVuc)
+	p := NewMkParser(line, token, false)
+	if varuse := p.VarUse(); varuse != nil && p.EOF() {
+		shline.mkline.CheckVaruse(varuse, shellwordVuc)
 		return
 	}
 
@@ -149,12 +136,13 @@ func (shline *ShellLine) CheckToken(token string, checkQuoting bool) {
 		line.Warn0("Please use the RCD_SCRIPTS mechanism to install rc.d scripts automatically to ${RCD_SCRIPTS_EXAMPLEDIR}.")
 	}
 
-	repl := NewPrefixReplacer(token)
-	state := swstPlain
+	parser := NewMkParser(line, token, false)
+	repl := parser.repl
+	quoting := shqPlain
 outer:
-	for repl.rest != "" {
-		if G.opts.DebugShell {
-			line.Debugf("shell state %s: %q", state, repl.rest)
+	for !parser.EOF() {
+		if G.opts.Debug {
+			traceStep("shell state %s: %q", quoting, parser.Rest())
 		}
 
 		switch {
@@ -162,86 +150,26 @@ outer:
 		// reasonable to check the whole shell command
 		// recursively, instead of splitting off the first
 		// make(1) variable.
-		case state == swstBackt || state == swstDquotBackt:
+		case quoting == shqBackt || quoting == shqDquotBackt:
 			var backtCommand string
-			backtCommand, state = shline.unescapeBackticks(token, repl, state)
+			backtCommand, quoting = shline.unescapeBackticks(token, repl, quoting)
 			setE := true
 			shline.CheckShellCommand(backtCommand, &setE)
 
-		// Make(1) variables have the same syntax, no matter in which state we are currently.
-		case repl.AdvanceRegexp(`^\$\{(` + reVarnameDirect + `|@)(:[^\{]+)?\}`),
-			repl.AdvanceRegexp(`^\$\((` + reVarnameDirect + `|@])(:[^\)]+)?\)`),
-			repl.AdvanceRegexp(`^\$([\w@<])()`):
-			varname, mod := repl.m[1], repl.m[2]
+			// Make(1) variables have the same syntax, no matter in which state we are currently.
+		case shline.checkVaruseToken(parser, quoting):
+			break
 
-			if varname == "@" {
-				line := shline.line
-				line.Warn0("Please use \"${.TARGET}\" instead of \"$@\".")
-				Explain2(
-					"The variable $@ can easily be confused with the shell variable of",
-					"the same name, which has a completely different meaning.")
-				varname = ".TARGET"
-			}
-
-			switch {
-			case state == swstPlain && hasSuffix(mod, ":Q"):
-				// Fine.
-			case state == swstBackt:
-				// Don't check anything here, to avoid false positives for tool names.
-			case (state == swstSquot || state == swstDquot) && matches(varname, `^(?:.*DIR|.*FILE|.*PATH|.*_VAR|PREFIX|.*BASE|PKGNAME)$`):
-				// This is ok if we don't allow these variables to have embedded [\$\\\"\'\`].
-			case state == swstDquot && hasSuffix(mod, ":Q"):
-				line.Warn0("Please don't use the :Q operator in double quotes.")
-				Explain2(
-					"Either remove the :Q or the double quotes.  In most cases, it is",
-					"more appropriate to remove the double quotes.")
-			}
-
-			if varname != "@" {
-				vucstate := vucQuotUnknown
-				switch state {
-				case swstPlain:
-					vucstate = vucQuotPlain
-				case swstDquot:
-					vucstate = vucQuotDquot
-				case swstSquot:
-					vucstate = vucQuotSquot
-				case swstBackt:
-					vucstate = vucQuotBackt
-				}
-				vuc := &VarUseContext{shellcommandsContextType, vucTimeUnknown, vucstate, vucExtentWordpart}
-				shline.mkline.CheckVaruse(varname, mod, vuc)
-			}
-
-		// The syntax of the variable modifiers can get quite
-		// hairy. In lack of motivation, we just skip anything
-		// complicated, hoping that at least the braces are balanced.
-		case repl.AdvanceStr("${"):
-			braces := 1
-		skip:
-			for repl.rest != "" && braces > 0 {
-				switch {
-				case repl.AdvanceStr("}"):
-					braces--
-				case repl.AdvanceStr("{"):
-					braces++
-				case repl.AdvanceRegexp(`^[^{}]+`):
-				// skip
-				default:
-					break skip
-				}
-			}
-
-		case state == swstPlain:
+		case quoting == shqPlain:
 			switch {
 			case repl.AdvanceRegexp(`^[!#\%&\(\)*+,\-.\/0-9:;<=>?@A-Z\[\]^_a-z{|}~]+`),
 				repl.AdvanceRegexp(`^\\(?:[ !"#'\(\)*./;?\\^{|}]|\$\$)`):
 			case repl.AdvanceStr("'"):
-				state = swstSquot
+				quoting = shqSquot
 			case repl.AdvanceStr("\""):
-				state = swstDquot
+				quoting = shqDquot
 			case repl.AdvanceStr("`"):
-				state = swstBackt
+				quoting = shqBackt
 			case repl.AdvanceRegexp(`^\$\$([0-9A-Z_a-z]+|#)`),
 				repl.AdvanceRegexp(`^\$\$\{([0-9A-Z_a-z]+|#)\}`),
 				repl.AdvanceRegexp(`^\$\$(\$)\$`):
@@ -288,10 +216,10 @@ outer:
 				break outer
 			}
 
-		case state == swstSquot:
+		case quoting == shqSquot:
 			switch {
 			case repl.AdvanceRegexp(`^'`):
-				state = swstPlain
+				quoting = shqPlain
 			case repl.AdvanceRegexp(`^[^\$\']+`):
 				// just skip
 			case repl.AdvanceRegexp(`^\$\$`):
@@ -300,12 +228,12 @@ outer:
 				break outer
 			}
 
-		case state == swstDquot:
+		case quoting == shqDquot:
 			switch {
 			case repl.AdvanceStr("\""):
-				state = swstPlain
+				quoting = shqPlain
 			case repl.AdvanceStr("`"):
-				state = swstDquotBackt
+				quoting = shqDquotBackt
 			case repl.AdvanceRegexp("^[^$\"\\\\`]+"):
 				break
 			case repl.AdvanceStr("\\$$"):
@@ -323,9 +251,51 @@ outer:
 		}
 	}
 
-	if strings.TrimSpace(repl.rest) != "" {
-		line.Errorf("Internal pkglint error: ShellLine.CheckToken state=%s, rest=%q, token=%q", state, repl.rest, token)
+	if strings.TrimSpace(parser.Rest()) != "" {
+		line.Warnf("Pkglint parse error in ShellLine.CheckWord at %q (quoting=%s, rest=%q)", token, quoting, parser.Rest())
 	}
+}
+
+func (shline *ShellLine) checkVaruseToken(parser *MkParser, quoting ShQuoting) bool {
+	if G.opts.Debug {
+		defer tracecall(parser.Rest(), quoting)()
+	}
+
+	varuse := parser.VarUse()
+	if varuse == nil {
+		return false
+	}
+	varname := varuse.varname
+
+	if varname == "@" {
+		shline.line.Warn0("Please use \"${.TARGET}\" instead of \"$@\".")
+		Explain2(
+			"The variable $@ can easily be confused with the shell variable of",
+			"the same name, which has a completely different meaning.")
+		varname = ".TARGET"
+		varuse = &MkVarUse{varname, varuse.modifiers}
+	}
+
+	switch {
+	case quoting == shqPlain && varuse.IsQ():
+		// Fine.
+	case quoting == shqBackt:
+		// Don't check anything here, to avoid false positives for tool names.
+	case (quoting == shqSquot || quoting == shqDquot) && matches(varname, `^(?:.*DIR|.*FILE|.*PATH|.*_VAR|PREFIX|.*BASE|PKGNAME)$`):
+		// This is ok if we don't allow these variables to have embedded [\$\\\"\'\`].
+	case quoting == shqDquot && varuse.IsQ():
+		shline.line.Warn0("Please don't use the :Q operator in double quotes.")
+		Explain2(
+			"Either remove the :Q or the double quotes.  In most cases, it is",
+			"more appropriate to remove the double quotes.")
+	}
+
+	if varname != "@" {
+		vucstate := quoting.ToVarUseContext()
+		vuc := &VarUseContext{shellcommandsContextType, vucTimeUnknown, vucstate, vucExtentWordpart}
+		shline.mkline.CheckVaruse(varuse, vuc)
+	}
+	return true
 }
 
 // Scan for the end of the backticks, checking for single backslashes
@@ -333,26 +303,30 @@ outer:
 // before a dollar, a backslash or a backtick.
 //
 // See http://www.opengroup.org/onlinepubs/009695399/utilities/xcu_chap02.html#tag_02_06_03
-func (shline *ShellLine) unescapeBackticks(shellword string, repl *PrefixReplacer, state ShellwordState) (unescaped string, newState ShellwordState) {
+func (shline *ShellLine) unescapeBackticks(shellword string, repl *PrefixReplacer, quoting ShQuoting) (unescaped string, newQuoting ShQuoting) {
+	if G.opts.Debug {
+		defer tracecall(shellword, quoting, "=>", ref(&unescaped))()
+	}
+
 	line := shline.line
 	for repl.rest != "" {
 		switch {
 		case repl.AdvanceStr("`"):
-			if state == swstBackt {
-				state = swstPlain
+			if quoting == shqBackt {
+				quoting = shqPlain
 			} else {
-				state = swstDquot
+				quoting = shqDquot
 			}
-			return unescaped, state
+			return unescaped, quoting
 
-		case repl.AdvanceRegexp("^\\\\([\\\\`$])"):
+		case repl.AdvanceRegexp("^\\\\([\"\\\\`$])"):
 			unescaped += repl.m[1]
 
 		case repl.AdvanceStr("\\"):
 			line.Warn0("Backslashes should be doubled inside backticks.")
 			unescaped += "\\"
 
-		case state == swstDquotBackt && repl.AdvanceStr("\""):
+		case quoting == shqDquotBackt && repl.AdvanceStr("\""):
 			line.Warn0("Double quotes inside backticks inside double quotes are error prone.")
 			Explain4(
 				"According to the SUSv3, they produce undefined results.",
@@ -364,11 +338,11 @@ func (shline *ShellLine) unescapeBackticks(shellword string, repl *PrefixReplace
 			unescaped += repl.m[1]
 
 		default:
-			line.Errorf("Internal pkglint error: checklineMkShellword shellword=%q rest=%q", shellword, repl.rest)
+			line.Errorf("Internal pkglint error in ShellLine.unescapeBackticks at %q (rest=%q)", shellword, repl.rest)
 		}
 	}
 	line.Error1("Unfinished backquotes: rest=%q", repl.rest)
-	return unescaped, state
+	return unescaped, quoting
 }
 
 func (shline *ShellLine) variableNeedsQuoting(shvarname string) bool {
@@ -388,7 +362,7 @@ type ShelltextContext struct {
 }
 
 func (shline *ShellLine) CheckShellCommandLine(shelltext string) {
-	if G.opts.DebugTrace {
+	if G.opts.Debug {
 		defer tracecall1(shelltext)()
 	}
 
@@ -437,20 +411,39 @@ func (shline *ShellLine) CheckShellCommandLine(shelltext string) {
 }
 
 func (shline *ShellLine) CheckShellCommand(shellcmd string, pSetE *bool) {
+	if false {
+		p := NewMkShParser(shline.line, shellcmd, false)
+		cmds := p.Program()
+		rest := p.tok.parser.Rest()
+		if rest != "" {
+			traceStep("shellcmd=%q", shellcmd)
+			if cmds != nil {
+				for _, andor := range cmds.AndOrs {
+					traceStep("AndOr %v", andor)
+				}
+			}
+			shline.line.Warnf("Pkglint parse error in ShellLine.CheckShellCommand at %q", p.peekText()+rest)
+		}
+	}
+
 	state := scstStart
 	tokens, rest := splitIntoShellTokens(shline.line, shellcmd)
+	if rest != "" {
+		shline.line.Warnf("Pkglint parse error in ShellLine.CheckShellCommand at %q (state=%s)", rest, state)
+	}
+
 	prevToken := ""
 	for _, token := range tokens {
-		if G.opts.DebugShell {
-			shline.line.Debugf("checkShellCommand state=%v token=%q", state, token)
+		if G.opts.Debug {
+			traceStep("checkShellCommand state=%v token=%q", state, token)
 		}
 
 		{
-			quotingNecessary := state != scstCase &&
-				state != scstForCont &&
-				state != scstSetCont &&
-				!(state == scstStart && matches(token, reShVarassign))
-			shline.CheckToken(token, quotingNecessary)
+			noQuotingNeeded := state == scstCase ||
+				state == scstForCont ||
+				state == scstSetCont ||
+				(state == scstStart && matches(token, reShVarassign))
+			shline.CheckWord(token, !noQuotingNeeded)
 		}
 
 		st := &ShelltextContext{shline, state, token}
@@ -474,10 +467,6 @@ func (shline *ShellLine) CheckShellCommand(shellcmd string, pSetE *bool) {
 		state = shline.nextState(state, token)
 		prevToken = token
 	}
-
-	if rest != "" {
-		shline.line.Errorf("Internal pkglint error: ShellLine.CheckShellCommand state=%s rest=%q shellcmd=%q", state, rest, shellcmd)
-	}
 }
 
 func (shline *ShellLine) CheckShellCommands(shellcmds string) {
@@ -489,7 +478,7 @@ func (shline *ShellLine) CheckShellCommands(shellcmds string) {
 }
 
 func (shline *ShellLine) checkHiddenAndSuppress(hiddenAndSuppress, rest string) {
-	if G.opts.DebugTrace {
+	if G.opts.Debug {
 		defer tracecall(hiddenAndSuppress, rest)()
 	}
 
@@ -537,7 +526,7 @@ func (shline *ShellLine) checkHiddenAndSuppress(hiddenAndSuppress, rest string) 
 }
 
 func (ctx *ShelltextContext) checkCommandStart() {
-	if G.opts.DebugTrace {
+	if G.opts.Debug {
 		defer tracecall2(ctx.state.String(), ctx.shellword)()
 	}
 
@@ -551,14 +540,14 @@ func (ctx *ShelltextContext) checkCommandStart() {
 	case ctx.handleForbiddenCommand():
 	case ctx.handleTool():
 	case ctx.handleCommandVariable():
-	case matches(shellword, `^(?:\(|\)|:|;|;;|&&|\|\||\{|\}|break|case|cd|continue|do|done|elif|else|esac|eval|exec|exit|export|fi|for|if|read|set|shift|then|umask|unset|while)$`):
-	case matches(shellword, `^[\w_]+=.*$`): // Variable assignment
+	case matches(shellword, `^(?:\$\$\(|\(|\)|:|;|;;|&&|\|\||\{|\}|break|case|cd|continue|do|done|elif|else|esac|eval|exec|exit|export|fi|for|if|read|set|shift|then|umask|unset|while)$`):
+	case matches(shellword, `^\w+=`): // Variable assignment
 	case hasPrefix(shellword, "./"): // All commands from the current directory are fine.
+	case hasPrefix(shellword, "${PKGSRCDIR"): // With or without the :Q modifier
 	case ctx.handleComment():
 	default:
 		if G.opts.WarnExtra {
-			line := ctx.shline.line
-			line.Warn1("Unknown shell command %q.", shellword)
+			ctx.shline.line.Warn1("Unknown shell command %q.", shellword)
 			Explain3(
 				"If you want your package to be portable to all platforms that pkgsrc",
 				"supports, you should only use shell commands that are covered by the",
@@ -568,12 +557,13 @@ func (ctx *ShelltextContext) checkCommandStart() {
 }
 
 func (ctx *ShelltextContext) handleTool() bool {
-	if G.opts.DebugTrace {
+	if G.opts.Debug {
 		defer tracecall1(ctx.shellword)()
 	}
 
 	shellword := ctx.shellword
-	if !G.globalData.Tools[shellword] {
+	tool := G.globalData.Tools.byName[shellword]
+	if tool == nil {
 		return false
 	}
 
@@ -581,8 +571,8 @@ func (ctx *ShelltextContext) handleTool() bool {
 		ctx.shline.line.Warn1("The %q tool is used but not added to USE_TOOLS.", shellword)
 	}
 
-	if G.globalData.toolsVarRequired[shellword] {
-		ctx.shline.line.Warn2("Please use \"${%s}\" instead of %q.", G.globalData.Vartools[shellword], shellword)
+	if tool.MustUseVarForm {
+		ctx.shline.line.Warn2("Please use \"${%s}\" instead of %q.", tool.Varname, shellword)
 	}
 
 	ctx.shline.checkCommandUse(shellword)
@@ -592,29 +582,27 @@ func (ctx *ShelltextContext) handleTool() bool {
 func (ctx *ShelltextContext) handleForbiddenCommand() bool {
 	switch path.Base(ctx.shellword) {
 	case "ktrace", "mktexlsr", "strace", "texconfig", "truss":
-	default:
-		return false
+		ctx.shline.line.Error1("%q must not be used in Makefiles.", ctx.shellword)
+		Explain3(
+			"This command must appear in INSTALL scripts, not in the package",
+			"Makefile, so that the package also works if it is installed as a binary",
+			"package via pkg_add.")
+		return true
 	}
-
-	ctx.shline.line.Error1("%q must not be used in Makefiles.", ctx.shellword)
-	Explain3(
-		"This command must appear in INSTALL scripts, not in the package",
-		"Makefile, so that the package also works if it is installed as a binary",
-		"package via pkg_add.")
-	return true
+	return false
 }
 
 func (ctx *ShelltextContext) handleCommandVariable() bool {
-	if G.opts.DebugTrace {
+	if G.opts.Debug {
 		defer tracecall1(ctx.shellword)()
 	}
 
 	shellword := ctx.shellword
 	if m, varname := match1(shellword, `^\$\{([\w_]+)\}$`); m {
 
-		if toolname := G.globalData.VarnameToToolname[varname]; toolname != "" {
-			if !G.Mk.tools[toolname] {
-				ctx.shline.line.Warn1("The %q tool is used but not added to USE_TOOLS.", toolname)
+		if tool := G.globalData.Tools.byVarname[varname]; tool != nil {
+			if !G.Mk.tools[tool.Name] {
+				ctx.shline.line.Warn1("The %q tool is used but not added to USE_TOOLS.", tool.Name)
 			}
 			ctx.shline.checkCommandUse(shellword)
 			return true
@@ -635,11 +623,10 @@ func (ctx *ShelltextContext) handleCommandVariable() bool {
 }
 
 func (ctx *ShelltextContext) handleComment() bool {
-	if G.opts.DebugTrace {
+	if G.opts.Debug {
 		defer tracecall1(ctx.shellword)()
 	}
 
-	line := ctx.shline.line
 	shellword := ctx.shellword
 	if !hasPrefix(shellword, "#") {
 		return false
@@ -649,10 +636,10 @@ func (ctx *ShelltextContext) handleComment() bool {
 	multiline := ctx.shline.line.IsMultiline()
 
 	if semicolon {
-		line.Warn0("A shell comment should not contain semicolons.")
+		ctx.shline.line.Warn0("A shell comment should not contain semicolons.")
 	}
 	if multiline {
-		line.Warn0("A shell comment does not stop at the end of line.")
+		ctx.shline.line.Warn0("A shell comment does not stop at the end of line.")
 	}
 
 	if semicolon || multiline {
@@ -697,7 +684,7 @@ func (ctx *ShelltextContext) checkAutoMkdirs() {
 			"relative to ${PREFIX}.")
 	}
 
-	if (state == scstInstallDir || state == scstInstallDir2) && !matches(shellword, reMkShellvaruse) {
+	if (state == scstInstallDir || state == scstInstallDir2) && !contains(shellword, "$$") {
 		if m, dirname := match1(shellword, `^(?:\$\{DESTDIR\})?\$\{PREFIX(?:|:Q)\}/(.*)`); m {
 			line.Note1("You can use AUTO_MKDIRS=yes or \"INSTALLATION_DIRS+= %s\" instead of this command.", dirname)
 			Explain(
@@ -928,37 +915,146 @@ func (shline *ShellLine) nextState(state scState, shellword string) scState {
 	case state == scstEcho:
 		return scstCont
 	default:
-		if G.opts.DebugShell {
-			shline.line.Errorf("Internal pkglint error: shellword.nextState state=%s shellword=%q", state, shellword)
+		if G.opts.Debug {
+			traceStep("Internal pkglint error: shellword.nextState state=%s shellword=%q", state, shellword)
 		}
 		return scstStart
 	}
 }
 
-func splitIntoShellTokens(line *Line, text string) (words []string, rest string) {
-	repl := NewPrefixReplacer(text)
-	for repl.AdvanceRegexp(reShellToken) {
-		words = append(words, repl.m[1])
+// Example: "word1 word2;;;" => "word1", "word2", ";;", ";"
+func splitIntoShellTokens(line *Line, text string) (tokens []string, rest string) {
+	if G.opts.Debug {
+		defer tracecall(line, text)()
 	}
-	repl.AdvanceRegexp(`^\s+`)
-	return words, repl.rest
+
+	word := ""
+	emit := func() {
+		if word != "" {
+			tokens = append(tokens, word)
+			word = ""
+		}
+	}
+	p := NewShTokenizer(line, text, false)
+	atoms := p.ShAtoms()
+	q := shqPlain
+	for _, atom := range atoms {
+		q = atom.Quoting
+		if atom.Type == shtSpace && q == shqPlain {
+			emit()
+		} else if atom.Type == shtWord || atom.Type == shtVaruse || atom.Quoting != shqPlain {
+			word += atom.Text
+		} else {
+			emit()
+			tokens = append(tokens, atom.Text)
+		}
+	}
+	emit()
+	return tokens, word + p.mkp.Rest()
 }
 
+// Example: "word1 word2;;;" => "word1", "word2;;;"
 // Compare devel/bmake/files/str.c, function brk_string.
-func splitIntoShellWords(line *Line, text string) (words []string, rest string) {
-	reShellWord := `^\s*(` +
-		`#.*` + // shell comment
-		`|(?:` +
-		`'[^']*'` + // single quoted string
-		`|"(?:\\.|[^"\\])*"` + // double quoted string
-		"|`[^`]*`" + // backticks command execution
-		"|[^\\s\"'`\\\\]+" + // normal characters
-		`|\\.` + // escaped character
-		`)+)` // any of the above may be repeated
-	repl := NewPrefixReplacer(text)
-	for repl.AdvanceRegexp(reShellWord) {
-		words = append(words, repl.m[1])
+func splitIntoMkWords(line *Line, text string) (words []string, rest string) {
+	if G.opts.Debug {
+		defer tracecall(line, text)()
 	}
-	repl.AdvanceRegexp(`^\s+`)
-	return words, repl.rest
+
+	p := NewShTokenizer(line, text, false)
+	atoms := p.ShAtoms()
+	word := ""
+	for _, atom := range atoms {
+		if atom.Type == shtSpace && atom.Quoting == shqPlain {
+			words = append(words, word)
+			word = ""
+		} else {
+			word += atom.Text
+		}
+	}
+	if word != "" && atoms[len(atoms)-1].Quoting == shqPlain {
+		words = append(words, word)
+		word = ""
+	}
+	return words, word + p.mkp.Rest()
+}
+
+type ShQuote struct {
+	repl *PrefixReplacer
+	q    ShQuoting
+}
+
+func NewShQuote(s string) *ShQuote {
+	return &ShQuote{NewPrefixReplacer(s), shqPlain}
+}
+
+func (sq *ShQuote) Feed(str string) {
+	const (
+		reSkip = "^[^\"'`\\\\]+" // Characters that don’t influence the quoting mode.
+	)
+
+	repl := sq.repl
+	repl.rest += str
+	for repl.rest != "" {
+		if repl.AdvanceRegexp(reSkip) {
+			continue
+		}
+
+		mark := repl.Mark()
+		switch sq.q {
+		case shqPlain:
+			switch {
+			case repl.AdvanceStr("\""):
+				sq.q = shqDquot
+			case repl.AdvanceStr("'"):
+				sq.q = shqSquot
+			case repl.AdvanceStr("`"):
+				sq.q = shqBackt
+			case repl.AdvanceRegexp(`^\\.`):
+			}
+
+		case shqDquot:
+			switch {
+			case repl.AdvanceStr("\""):
+				sq.q = shqPlain
+			case repl.AdvanceStr("`"):
+				sq.q = shqDquotBackt
+			case repl.AdvanceStr("'"):
+			case repl.AdvanceRegexp(`^\\.`):
+			}
+		case shqSquot:
+			switch {
+			case repl.AdvanceStr("'"):
+				sq.q = shqPlain
+			case repl.AdvanceRegexp(`^[^']+`):
+			}
+		case shqBackt:
+			switch {
+			case repl.AdvanceStr("`"):
+				sq.q = shqPlain
+			case repl.AdvanceStr("'"):
+				sq.q = shqBacktSquot
+			case repl.AdvanceRegexp(`^\\.`):
+			}
+
+		case shqDquotBackt:
+			switch {
+			case repl.AdvanceStr("`"):
+				sq.q = shqDquot
+			case repl.AdvanceStr("'"):
+				sq.q = shqDquotBacktSquot
+			case repl.AdvanceRegexp(`^\\.`):
+			}
+		case shqDquotBacktSquot:
+			switch {
+			case repl.AdvanceStr("'"):
+				sq.q = shqDquotBackt
+			}
+		}
+
+		if repl.Since(mark) == "" {
+			traceStep2("ShQuote.stuck stack=%s rest=%s", sq.q.String(), sq.repl.rest)
+			repl.AdvanceRest()
+			sq.q = shqUnknown
+		}
+	}
 }
