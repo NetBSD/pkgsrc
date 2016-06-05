@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2277 2016/06/05 13:39:20 wen Exp $
+$NetBSD: CHANGES-2016,v 1.2278 2016/06/05 13:50:32 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2967,3 +2967,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/p5-PDF-API2 to 2.027 [wen 2016-06-05]
 	Updated devel/p5-Git-Repository to 1.319 [mef 2016-06-05]
 	Updated net/p5-RPC-XML to 0.80 [wen 2016-06-05]
+	Updated sysutils/entr to 3.5 [mef 2016-06-05]
