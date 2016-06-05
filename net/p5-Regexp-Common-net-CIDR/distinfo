@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 00:35:25 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/06/05 14:02:29 wen Exp $
 
-SHA1 (Regexp-Common-net-CIDR-0.02.tar.gz) = 167dfe3663c48dabfd181ac1269a484ce657b33d
-RMD160 (Regexp-Common-net-CIDR-0.02.tar.gz) = 4f42b05808d44ec8d1a1307f90197a009fc366b8
-SHA512 (Regexp-Common-net-CIDR-0.02.tar.gz) = 636034b3f366e94824b3ccaff756c4717a8062d24caa13d59f6e60c04cdf0e8db0666e47a9f7d332f4546e454840d2f2e894dee4226c646adcacc88bb88c1ddd
-Size (Regexp-Common-net-CIDR-0.02.tar.gz) = 17235 bytes
+SHA1 (Regexp-Common-net-CIDR-0.03.tar.gz) = 30ee9242ccb0221579f630e0e29200229d005861
+RMD160 (Regexp-Common-net-CIDR-0.03.tar.gz) = 8d2d7e61c6796916ac6126a3208b2106b506b0fa
+SHA512 (Regexp-Common-net-CIDR-0.03.tar.gz) = 0ca3d188ea4197af2981c2910e5f5a2d412d760251ee7ad9d688aa6e60f4dfdbf5583d599b1af8698ed7c740c252f0e8bda38de254f03a699122de1c1f598f20
+Size (Regexp-Common-net-CIDR-0.03.tar.gz) = 26311 bytes
