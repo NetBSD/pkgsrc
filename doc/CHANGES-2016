@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2258 2016/06/05 03:42:12 wen Exp $
+$NetBSD: CHANGES-2016,v 1.2259 2016/06/05 05:00:36 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2934,3 +2934,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added audio/suil version 0.8.2 [ryoon 2016-06-05]
 	Updated audio/audacity to 2.1.2 [ryoon 2016-06-05]
 	Updated devel/p5-Moose to 2.1804 [wen 2016-06-05]
+	Updated devel/p5-Object-Declare to 0.23 [wen 2016-06-05]
