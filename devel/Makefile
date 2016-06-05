@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2271 2016/06/05 09:57:12 alnsn Exp $
+# $NetBSD: Makefile,v 1.2272 2016/06/05 12:48:13 wen Exp $
 #
 
 COMMENT=	Development utilities
@@ -1017,6 +1017,7 @@ SUBDIR+=	p5-File-Path-Tiny
 SUBDIR+=	p5-File-PathConvert
 SUBDIR+=	p5-File-Policy
 SUBDIR+=	p5-File-Save-Home
+SUBDIR+=	p5-File-Share
 SUBDIR+=	p5-File-ShareDir
 SUBDIR+=	p5-File-ShareDir-Install
 SUBDIR+=	p5-File-ShareDir-ProjectDistDir
