@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 03:28:36 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/06/05 04:57:39 wen Exp $
 
-SHA1 (Object-Declare-0.22.tar.gz) = 56b9ef9a69baaa136a50224fcc765dee1ef62411
-RMD160 (Object-Declare-0.22.tar.gz) = c4534c00427b7cf98fae27b59426db02090d3a09
-SHA512 (Object-Declare-0.22.tar.gz) = 1fd38323907e309f80b2745b39676bfda67b6d84320f8b0a3d43de2c78160eb1666686a308a5600a4d9f4446ec9c6f577862b621bd54ce3461cf44df302c4a32
-Size (Object-Declare-0.22.tar.gz) = 28999 bytes
+SHA1 (Object-Declare-0.23.tar.gz) = 331543a4a297eeb2eaea6861fbf86018e445abc7
+RMD160 (Object-Declare-0.23.tar.gz) = 78fa8b5e230b5c87700907678b28002e3daf2721
+SHA512 (Object-Declare-0.23.tar.gz) = 39071a5f0913edadd10e2604ebfa3656a9dcfa4d88ab7b63a2426c40a16508f9f772b30019144d5be4e493b3bd962777f7ea24393e146daa9c4617a4bf9a20dc
+Size (Object-Declare-0.23.tar.gz) = 11610 bytes
