@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2016/06/05 00:02:21 jym Exp $
+
+SHA1 (z-push-2.2.10.tar.gz) = 7114fa8500e2b7e88206274ce9399939999047e1
+RMD160 (z-push-2.2.10.tar.gz) = c489151ae24268192d522cd448c01f3e43463f33
+SHA512 (z-push-2.2.10.tar.gz) = c7bd33844d3c9014074a54bb5287dbb394a8dca2d12c16ee3a579c2e8380e2d458fc78e848abcddbf703cda19b0d461b0102aafe154c1e1c1a277f45e1757515
+Size (z-push-2.2.10.tar.gz) = 468698 bytes
+SHA1 (patch-config.php) = d580422b5341e4eb86771ce40f28db80e9878501
