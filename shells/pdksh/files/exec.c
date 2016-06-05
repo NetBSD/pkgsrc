@@ -1,4 +1,4 @@
-/*	$NetBSD: exec.c,v 1.3 2008/06/15 14:20:09 tnn Exp $	*/
+/*	$NetBSD: exec.c,v 1.4 2016/06/05 04:44:56 richard Exp $	*/
 
 /*
  * execute command tree
@@ -334,7 +334,7 @@ execute(t, flags)
 		}
 #ifdef KSH
 		else { /* TSELECT */
-			for (;;) {
+			while (*ap != NULL) {
 				if (!(cp = do_selectargs(ap, is_first))) {
 					rv = 1;
 					break;
