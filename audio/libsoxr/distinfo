@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/06/05 00:43:33 ryoon Exp $
+
+SHA1 (soxr-0.1.2-Source.tar.xz) = 3b990f91dc8dc08e70626cd5fb90deda0239c211
+RMD160 (soxr-0.1.2-Source.tar.xz) = b4932145ea2b7ac8747ab43416ecf94b43773a92
+SHA512 (soxr-0.1.2-Source.tar.xz) = ee902c1bc713e05b748f917d78222b68b5fe01d43f405e0954c21ce4d1ee494d01000caa79f696cb8d202c662a4c4d958b332dae034d6f929e0480abf27cd07c
+Size (soxr-0.1.2-Source.tar.xz) = 83760 bytes
