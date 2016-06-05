@@ -23,7 +23,7 @@ func checktoplevelUnusedLicenses() {
 		licensepath := licensedir + "/" + licensename
 		if fileExists(licensepath) {
 			if !G.UsedLicenses[licensename] {
-				Warnf(licensepath, noLines, "This license seems to be unused.")
+				NewLineWhole(licensepath).Warn0("This license seems to be unused.")
 			}
 		}
 	}
