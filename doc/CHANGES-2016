@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2270 2016/06/05 11:24:44 rillig Exp $
+$NetBSD: CHANGES-2016,v 1.2271 2016/06/05 11:51:52 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2953,3 +2953,6 @@ Changes to the packages collection and infrastructure in 2016:
 	Added devel/lua-coxpcall version 1.16.0 [alnsn 2016-06-05]
 	Updated devel/p5-Config-IniFiles to 2.91 [mef 2016-06-05]
 	Updated pkgtools/pkglint to 5.4.0 [rillig 2016-06-05]
+	Updated devel/p5-Data-Peek to 0.46 [mef 2016-06-05]
+	Updated devel/p5-Date-Manip to 6.54 [mef 2016-06-05]
+	Updated devel/p5-Devel-PPPort to 3.33 [mef 2016-06-05]
