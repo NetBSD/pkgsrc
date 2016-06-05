@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2260 2016/06/05 05:12:42 wen Exp $
+$NetBSD: CHANGES-2016,v 1.2261 2016/06/05 07:13:40 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2936,3 +2936,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Moose to 2.1804 [wen 2016-06-05]
 	Updated devel/p5-Object-Declare to 0.23 [wen 2016-06-05]
 	Updated www/p5-Starlet to 0.29 [wen 2016-06-05]
+	Updated textproc/p5-XML-RSS to 1.59 [wen 2016-06-05]
