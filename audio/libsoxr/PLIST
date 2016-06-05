@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2016/06/05 00:43:33 ryoon Exp $
+include/soxr-lsr.h
+include/soxr.h
+lib/libsoxr-lsr.so
+lib/libsoxr-lsr.so.0
+lib/libsoxr-lsr.so.0.1.9
+lib/libsoxr.so
+lib/libsoxr.so.0
+lib/libsoxr.so.0.1.1
+lib/pkgconfig/soxr-lsr.pc
+lib/pkgconfig/soxr.pc
+share/doc/libsoxr/LICENCE
+share/doc/libsoxr/NEWS
+share/doc/libsoxr/README
