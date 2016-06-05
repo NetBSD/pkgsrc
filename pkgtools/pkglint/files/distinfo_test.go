@@ -83,3 +83,17 @@ func (s *Suite) TestChecklinesDistinfo_UnrecordedPatches(c *check.C) {
 		"ERROR: ~/distinfo: patch \"patches/patch-aa\" is not recorded. Run \""+confMake+" makepatchsum\".\n"+
 		"ERROR: ~/distinfo: patch \"patches/patch-src-Makefile\" is not recorded. Run \""+confMake+" makepatchsum\".\n")
 }
+
+func (s *Suite) TestChecklinesDistinfo_ManualPatches(c *check.C) {
+	s.CreateTmpFile(c, "patches/manual-libtool.m4",
+		"")
+	G.CurrentDir = s.tmpdir
+
+	ChecklinesDistinfo(s.NewLines(s.tmpdir+"/distinfo",
+		"$"+"NetBSD$",
+		"",
+		"SHA1 (patch-aa) = ..."))
+
+	c.Check(s.Output(), equals, ""+
+		"WARN: ~/distinfo:3: Patch file \"patch-aa\" does not exist in directory \"patches\".\n")
+}

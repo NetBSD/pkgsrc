@@ -231,18 +231,21 @@ func (s *Suite) TestChecklinesPatch_Makefile(c *check.C) {
 		"",
 		"--- Makefile.orig",
 		"+++ Makefile",
-		"@@ -1,3 +1,5 @@",
+		"@@ -1,3 +1,7 @@",
 		" \t/bin/cp context before",
 		"-\t/bin/cp deleted",
 		"+\t/bin/cp added",
 		"+#\t/bin/cp added comment",
 		"+# added comment",
+		"+\t${DESTDIR}/bin/cp added",
+		"+\t${prefix}/bin/cp added",
 		" \t/bin/cp context after")
 
 	ChecklinesPatch(lines)
 
 	c.Check(s.Output(), equals, ""+
-		"WARN: patch-unified:10: Found absolute pathname: /bin/cp\n")
+		"WARN: patch-unified:10: Found absolute pathname: /bin/cp\n"+
+		"WARN: patch-unified:13: Found absolute pathname: /bin/cp\n")
 
 	G.opts.WarnExtra = true
 
@@ -251,7 +254,8 @@ func (s *Suite) TestChecklinesPatch_Makefile(c *check.C) {
 	c.Check(s.Output(), equals, ""+
 		"WARN: patch-unified:8: Found absolute pathname: /bin/cp\n"+
 		"WARN: patch-unified:10: Found absolute pathname: /bin/cp\n"+
-		"WARN: patch-unified:13: Found absolute pathname: /bin/cp\n")
+		"WARN: patch-unified:13: Found absolute pathname: /bin/cp\n"+
+		"WARN: patch-unified:15: Found absolute pathname: /bin/cp\n")
 }
 
 func (s *Suite) TestChecklinesPatch_NoNewline_withFollowingText(c *check.C) {
