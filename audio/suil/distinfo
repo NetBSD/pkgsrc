@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1 2016/06/05 00:46:25 ryoon Exp $
+
+SHA1 (audacity-minsrc-2.1.2.tar.xz) = d0b8924b846f833182e674d621b28eb666cc97d6
+RMD160 (audacity-minsrc-2.1.2.tar.xz) = 47fccf8b96b6db95a677045bf122084d233bd80c
+SHA512 (audacity-minsrc-2.1.2.tar.xz) = 46bc68825d29e88b14a674749532345ab63673ea1b85ad0d2a1b72b0974c74d2175e0ef307dad735592d18e56c1e0c65f994f4ee05d9e0f1aec194cd02c930da
+Size (audacity-minsrc-2.1.2.tar.xz) = 7233500 bytes
+SHA1 (suil-0.8.2.tar.bz2) = 191924a6ad7319802d4ed6a795b4cef724505867
+RMD160 (suil-0.8.2.tar.bz2) = a7c25cd9fde7269398da359451f86786011761b4
+SHA512 (suil-0.8.2.tar.bz2) = 63141aa61a6501b735f38f597763b7190158db7b5bc06afd8989bddd70372d78de937820fa6751192aefaf415c417387426c1c1bdb666cf231f74a2c4c9f7e91
+Size (suil-0.8.2.tar.bz2) = 141929 bytes
