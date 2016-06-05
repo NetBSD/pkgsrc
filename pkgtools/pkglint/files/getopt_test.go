@@ -43,6 +43,10 @@ func (s *Suite) TestGetopt_UnknownFlagInGroup(c *check.C) {
 	_, err = opts.Parse([]string{"progname", "--warnings=all", "--warnings=no-error"})
 
 	c.Check(err.Error(), equals, "progname: unknown option: --warnings=no-error")
+
+	_, err = opts.Parse([]string{"progname", "-W"})
+
+	c.Check(err.Error(), equals, "progname: option requires an argument: -W")
 }
 
 func (s *Suite) TestGetopt_AbbreviatedLong(c *check.C) {

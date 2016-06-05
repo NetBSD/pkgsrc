@@ -22,7 +22,7 @@ func findPkgsrcTopdir(fname string) string {
 }
 
 func resolveVariableRefs(text string) string {
-	if G.opts.DebugTrace {
+	if G.opts.Debug {
 		defer tracecall1(text)()
 	}
 
@@ -65,14 +65,14 @@ func expandVariableWithDefault(varname, defaultValue string) string {
 	if containsVarRef(value) {
 		value = resolveVariableRefs(value)
 	}
-	if G.opts.DebugMisc {
-		mkline.Debug2("Expanded %q to %q", varname, value)
+	if G.opts.Debug {
+		traceStep2("Expanded %q to %q", varname, value)
 	}
 	return value
 }
 
 func CheckfileExtra(fname string) {
-	if G.opts.DebugTrace {
+	if G.opts.Debug {
 		defer tracecall1(fname)()
 	}
 
@@ -82,7 +82,7 @@ func CheckfileExtra(fname string) {
 }
 
 func ChecklinesDescr(lines []*Line) {
-	if G.opts.DebugTrace {
+	if G.opts.Debug {
 		defer tracecall1(lines[0].Fname)()
 	}
 
@@ -110,7 +110,7 @@ func ChecklinesDescr(lines []*Line) {
 }
 
 func ChecklinesMessage(lines []*Line) {
-	if G.opts.DebugTrace {
+	if G.opts.Debug {
 		defer tracecall1(lines[0].Fname)()
 	}
 
@@ -148,7 +148,7 @@ func ChecklinesMessage(lines []*Line) {
 }
 
 func CheckfileMk(fname string) {
-	if G.opts.DebugTrace {
+	if G.opts.Debug {
 		defer tracecall1(fname)()
 	}
 
@@ -162,21 +162,21 @@ func CheckfileMk(fname string) {
 }
 
 func Checkfile(fname string) {
-	if G.opts.DebugTrace {
+	if G.opts.Debug {
 		defer tracecall1(fname)()
 	}
 
 	basename := path.Base(fname)
 	if hasPrefix(basename, "work") || hasSuffix(basename, "~") || hasSuffix(basename, ".orig") || hasSuffix(basename, ".rej") {
 		if G.opts.Import {
-			Errorf(fname, noLines, "Must be cleaned up before committing the package.")
+			NewLineWhole(fname).Error0("Must be cleaned up before committing the package.")
 		}
 		return
 	}
 
 	st, err := os.Lstat(fname)
 	if err != nil {
-		Errorf(fname, noLines, "%s", err)
+		NewLineWhole(fname).Errorf("%s", err)
 		return
 	}
 
@@ -198,16 +198,16 @@ func Checkfile(fname string) {
 		case matches(fname, `(?:^|/)files/[^/]*$`):
 			// Ok
 		case !isEmptyDir(fname):
-			Warnf(fname, noLines, "Unknown directory name.")
+			NewLineWhole(fname).Warn0("Unknown directory name.")
 		}
 
 	case st.Mode()&os.ModeSymlink != 0:
 		if !matches(basename, `^work`) {
-			Warnf(fname, noLines, "Unknown symlink name.")
+			NewLineWhole(fname).Warn0("Unknown symlink name.")
 		}
 
 	case !st.Mode().IsRegular():
-		Errorf(fname, noLines, "Only files and directories are allowed in pkgsrc.")
+		NewLineWhole(fname).Error0("Only files and directories are allowed in pkgsrc.")
 
 	case basename == "ALTERNATIVES":
 		if G.opts.CheckAlternatives {
@@ -255,12 +255,12 @@ func Checkfile(fname string) {
 		}
 
 	case matches(fname, `(?:^|/)patches/manual[^/]*$`):
-		if G.opts.DebugUnchecked {
-			Debugf(fname, noLines, "Unchecked file %q.", fname)
+		if G.opts.Debug {
+			traceStep1("Unchecked file %q.", fname)
 		}
 
 	case matches(fname, `(?:^|/)patches/[^/]*$`):
-		Warnf(fname, noLines, "Patch files should be named \"patch-\", followed by letters, '-', '_', '.', and digits only.")
+		NewLineWhole(fname).Warn0("Patch files should be named \"patch-\", followed by letters, '-', '_', '.', and digits only.")
 
 	case matches(basename, `^(?:.*\.mk|Makefile.*)$`) && !matches(fname, `files/`) && !matches(fname, `patches/`):
 		if G.opts.CheckMk {
@@ -285,7 +285,7 @@ func Checkfile(fname string) {
 		// Skip
 
 	default:
-		Warnf(fname, noLines, "Unexpected file found.")
+		NewLineWhole(fname).Warn0("Unexpected file found.")
 		if G.opts.CheckExtra {
 			CheckfileExtra(fname)
 		}
@@ -402,6 +402,7 @@ func resolveVarsInRelativePath(relpath string, adjustDepth bool) string {
 	tmp = strings.Replace(tmp, "${PHPPKGSRCDIR}", "../../lang/php55", -1)
 	tmp = strings.Replace(tmp, "${SUSE_DIR_PREFIX}", "suse100", -1)
 	tmp = strings.Replace(tmp, "${PYPKGSRCDIR}", "../../lang/python27", -1)
+	tmp = strings.Replace(tmp, "${PYPACKAGE}", "python27", -1)
 	if G.Pkg != nil {
 		tmp = strings.Replace(tmp, "${FILESDIR}", G.Pkg.Filesdir, -1)
 		tmp = strings.Replace(tmp, "${PKGDIR}", G.Pkg.Pkgdir, -1)
@@ -413,8 +414,8 @@ func resolveVarsInRelativePath(relpath string, adjustDepth bool) string {
 		}
 	}
 
-	if G.opts.DebugMisc {
-		dummyLine.Debug2("resolveVarsInRelativePath: %q => %q", relpath, tmp)
+	if G.opts.Debug {
+		traceStep2("resolveVarsInRelativePath: %q => %q", relpath, tmp)
 	}
 	return tmp
 }

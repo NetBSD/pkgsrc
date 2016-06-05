@@ -37,7 +37,7 @@ func (s *Suite) TestConvertToLogicalLines_contInLastLine(c *check.C) {
 
 	c.Check(lines, check.HasLen, 1)
 	c.Check(lines[0].String(), equals, "fname_contlast:1: last line\\")
-	c.Check(s.Stdout(), equals, "ERROR: fname_contlast:1: File must end with a newline.\n")
+	c.Check(s.Stdout(), equals, "ERROR: fname_contlast:EOF: File must end with a newline.\n")
 }
 
 func (s *Suite) TestSplitRawLine(c *check.C) {

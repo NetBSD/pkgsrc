@@ -128,8 +128,10 @@ optchar:
 					argarg := optchars[ai+utf8.RuneLen(optchar):]
 					if argarg != "" {
 						return 0, data.parse(string([]rune{'-', optchar}), argarg)
-					} else {
+					} else if i+1 < len(args) {
 						return 1, data.parse(string([]rune{'-', optchar}), args[i+1])
+					} else {
+						return 0, optErr("option requires an argument: -" + string([]rune{optchar}))
 					}
 				}
 			}

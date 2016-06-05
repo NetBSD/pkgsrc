@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkglint.1,v 1.50 2016/01/12 01:02:49 rillig Exp $
+.\"	$NetBSD: pkglint.1,v 1.51 2016/06/05 11:24:32 rillig Exp $
 .\"	From FreeBSD: portlint.1,v 1.8 1997/11/25 14:53:14 itojun Exp
 .\"
 .\" Copyright (c) 1997 by Jun-ichiro Itoh <itojun@itojun.org>.
@@ -8,7 +8,7 @@
 .\" Thomas Klausner <wiz@NetBSD.org>, 2012.
 .\" Roland Illig <rillig@NetBSD.org>, 2015, 2016.
 .\"
-.Dd January 12, 2016
+.Dd June 5, 2016
 .Dt PKGLINT 1
 .Os
 .Sh NAME
@@ -29,9 +29,6 @@ to be bugs, or that are simply deprecated.
 .It Fl C{[no-]check,...}
 Enable or disable specific checks.
 For a list of checks, see below.
-.It Fl D{[no-]debug,...}
-Enable or disable debugging categories.
-For a list of categories, see below.
 .It Fl F Ns | Ns Fl -autofix
 Repair trivial things automatically.
 .It Fl I
@@ -49,6 +46,8 @@ version number and exit.
 .It Fl W{[no-]warn,...}
 Enable or disable specific warnings.
 For a list of warnings, see below.
+.It Fl d Ns | Ns Fl -debug
+Enable or disable verbose log for debugging pkglint.
 .It Fl e Ns | Ns Fl -explain
 Print verbose explanations for diagnostics.
 .It Fl g Ns | Ns Fl -gcc-output-format
@@ -102,39 +101,6 @@ Check remaining files in the package directory.
 Check Makefile fragments besides buildlink3.
 .It Cm [no-]patches
 Check the pkgsrc specific patch files.
-.El
-.\" =======================================================================
-.Ss Debugging Options
-.Bl -tag -width 18n
-.It Cm all
-Enable all debugging options.
-.It Cm none
-Disable all debugging options.
-.It Cm [no-]include
-Show the pathnames of the included Makefiles.
-.It Cm [no-]misc
-Some debugging stuff that hasn't made it into its own category.
-.It Cm [no-]patches
-Print the states of the patch file parser.
-.It Cm [no-]quoting
-Additional information about why variables should be quoted or not.
-.It Cm [no-]shell
-Parser information from the shell word and the shell command parsers.
-.It Cm [no-]tools
-Additional information about the tools from the tools framework.
-.It Cm [no-]trace
-Print the names of subroutines and their arguments as they are entered.
-.It Cm [no-]unchecked
-Show the things that pkglint cannot currently check.
-These are mostly due to unresolved make variables.
-.It Cm [no-]unused
-Show which variables are detected as used, and so will not generate an
-.Dq unused variable
-warning.
-.It Cm [no-]vartypes
-Additional information about the variable types.
-.It Cm [no-]varuse
-Information about the contexts in which variables are used.
 .El
 .\" =======================================================================
 .Ss Warnings

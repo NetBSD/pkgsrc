@@ -2,6 +2,7 @@ package main
 
 import (
 	"path"
+	"sort"
 	"strings"
 )
 
@@ -26,7 +27,6 @@ const (
 	opAssignAppend                    // +=
 	opAssignDefault                   // ?=
 	opUse                             //
-	opUseLoadtime                     //
 	opUseMatch                        // Used in the :M operator
 )
 
@@ -51,34 +51,71 @@ func (op MkOperator) String() string {
 }
 
 const (
-	reEmulPlatform = "" +
+	reMachineOpsys = "" + // See mk/platform
+		"AIX|BSDOS|Bitrig|Cygwin|Darwin|DragonFly|FreeBSD|FreeMiNT|GNUkFreeBSD|" +
+		"HPUX|Haiku|IRIX|Interix|Linux|Minix|MirBSD|NetBSD|OSF1|OpenBSD|QNX|SCO_SV|SunOS|UnixWare"
+
+	// See mk/emulator/emulator-vars.mk.
+	reEmulOpsys = "" +
 		"bitrig|bsdos|cygwin|darwin|dragonfly|freebsd|" +
-		"haiku|hpux|interix|irix|linux|mirbsd|netbsd|openbsd|osf1|solaris"
-	rePlatformOs = "" +
-		"Bitrig|BSDOS|Cygwin|Darwin|DragonFly|FreeBSD|" +
-		"Haiku|HPUX|Interix|IRIX|Linux|MirBSD|NetBSD|OpenBSD|OSF1|QNX|SunOS"
-	rePlatformArch = "" +
-		"alpha|amd64|arc|arm|arm32|cobalt|convex|dreamcast|" +
-		"hpcmips|hpcsh|hppa|i386|ia64|" +
-		"m68k|m88k|mips|mips64|mips64eb|mips64el|mipseb|mipsel|mipsn32|" +
-		"ns32k|pc532|pmax|powerpc|rs6000|s390|sh3eb|sh3el|sparc|sparc64|vax|x86_64"
+		"haiku|hpux|interix|irix|linux|mirbsd|netbsd|openbsd|osf1|solaris|sunos"
+
+	// Hardware architectures having the same name in bsd.own.mk and the GNU world.
+	// These are best-effort guesses, since they depend on the operating system.
+	reArch = "" +
+		"aarch64|alpha|amd64|arc|arm|cobalt|convex|dreamcast|i386|" +
+		"hpcmips|hpcsh|hppa|hppa64|ia64|" +
+		"m68k|m88k|mips|mips64|mips64el|mipseb|mipsel|mipsn32|mlrisc|" +
+		"ns32k|pc532|pmax|powerpc|powerpc64|rs6000|s390|sparc|sparc64|vax|x86_64"
+
+	// See mk/bsd.prefs.mk:/^GNU_ARCH\./
+	reMachineArch = "" +
+		reArch + "|" +
+		"aarch64eb|amd64|arm26|arm32|coldfire|earm|earmeb|earmhf|earmhfeb|earmv4|earmv4eb|earmv5|" +
+		"earmv5eb|earmv6|earmv6eb|earmv6hf|earmv6hfeb|earmv7|earmv7eb|earmv7hf|earmv7hfeb|evbarm|" +
+		"i386|i586|i686|m68000|mips|mips64eb|sh3eb|sh3el"
+
+	// See mk/bsd.prefs.mk:/^GNU_ARCH\./
+	reMachineGnuArch = "" +
+		reArch + "|" +
+		"aarch64_be|arm|armeb|armv4|armv4eb|armv6|armv6eb|armv7|armv7eb|" +
+		"i486|m5407|m68010|mips64|mipsel|sh|shle|x86_64"
+
+	reEmulArch = reMachineArch // Just a wild guess.
 )
 
+func enumFromRe(re string) *VarChecker {
+	values := strings.Split(re, "|")
+	sort.Strings(values)
+	seen := make(map[string]bool)
+	var unique []string
+	for _, value := range values {
+		if !seen[value] {
+			seen[value] = true
+			unique = append(unique, value)
+		}
+	}
+	return enum(strings.Join(unique, " "))
+}
+
 var (
-	emulPlatformEnum = enum(strings.Replace(reEmulPlatform, "|", " ", -1))
-	platformOsEnum   = enum(strings.Replace(rePlatformOs, "|", " ", -1))
-	platformArchEnum = enum(strings.Replace(rePlatformArch, "|", " ", -1))
+	enumMachineOpsys            = enumFromRe(reMachineOpsys)
+	enumMachineArch             = enumFromRe(reMachineArch)
+	enumMachineGnuArch          = enumFromRe(reMachineGnuArch)
+	enumEmulOpsys               = enumFromRe(reEmulOpsys)
+	enumEmulArch                = enumFromRe(reEmulArch)
+	enumMachineGnuPlatformOpsys = enumEmulOpsys
 )
 
 func (cv *VartypeCheck) AwkCommand() {
-	if G.opts.DebugUnchecked {
-		cv.line.Debug1("Unchecked AWK command: %q", cv.value)
+	if G.opts.Debug {
+		traceStep1("Unchecked AWK command: %q", cv.value)
 	}
 }
 
 func (cv *VartypeCheck) BasicRegularExpression() {
-	if G.opts.DebugUnchecked {
-		cv.line.Debug1("Unchecked basic regular expression: %q", cv.value)
+	if G.opts.Debug {
+		traceStep1("Unchecked basic regular expression: %q", cv.value)
 	}
 }
 
@@ -89,7 +126,7 @@ func (cv *VartypeCheck) BuildlinkDepmethod() {
 }
 
 func (cv *VartypeCheck) Category() {
-	if fileExists(G.CurrentDir + "/" + G.CurPkgsrcdir + "/" + cv.value + "/Makefile") {
+	if cv.value != "wip" && fileExists(G.CurrentDir+"/"+G.CurPkgsrcdir+"/"+cv.value+"/Makefile") {
 		return
 	}
 	switch cv.value {
@@ -157,7 +194,7 @@ func (cv *VartypeCheck) Comment() {
 func (cv *VartypeCheck) Dependency() {
 	line, value := cv.line, cv.value
 
-	parser := NewParser(line, value)
+	parser := NewParser(line, value, false)
 	deppat := parser.Dependency()
 	if deppat != nil && deppat.wildcard == "" && (parser.Rest() == "{,nb*}" || parser.Rest() == "{,nb[0-9]*}") {
 		line.Warn0("Dependency patterns of the form pkgbase>=1.0 don't need the \"{,nb*}\" extension.")
@@ -276,7 +313,7 @@ func (cv *VartypeCheck) EmulPlatform() {
 			cv.comment,
 			cv.listContext,
 			cv.guessed}
-		emulPlatformEnum.checker(opsysCv)
+		enumEmulOpsys.checker(opsysCv)
 
 		// no check for os_version
 
@@ -290,7 +327,7 @@ func (cv *VartypeCheck) EmulPlatform() {
 			cv.comment,
 			cv.listContext,
 			cv.guessed}
-		platformArchEnum.checker(archCv)
+		enumEmulArch.checker(archCv)
 	} else {
 		cv.line.Warn1("%q is not a valid emulation platform.", cv.value)
 		Explain(
@@ -307,7 +344,7 @@ func (cv *VartypeCheck) EmulPlatform() {
 func (cv *VartypeCheck) FetchURL() {
 	cv.mkline.CheckVartypePrimitive(cv.varname, CheckvarURL, cv.op, cv.value, cv.comment, cv.listContext, cv.guessed)
 
-	for siteURL, siteName := range G.globalData.MasterSiteUrls {
+	for siteURL, siteName := range G.globalData.MasterSiteURLToVar {
 		if hasPrefix(cv.value, siteURL) {
 			subdir := cv.value[len(siteURL):]
 			if hasPrefix(cv.value, "https://github.com/") {
@@ -322,8 +359,8 @@ func (cv *VartypeCheck) FetchURL() {
 	}
 
 	if m, name, subdir := match2(cv.value, `\$\{(MASTER_SITE_[^:]*).*:=(.*)\}$`); m {
-		if !G.globalData.MasterSiteVars[name] {
-			cv.line.Error1("%s does not exist.", name)
+		if G.globalData.MasterSiteVarToURL[name] == "" {
+			cv.line.Error1("The site %s does not exist.", name)
 		}
 		if !hasSuffix(subdir, "/") {
 			cv.line.Error1("The subdirectory in %s must end with a slash.", name)
@@ -361,6 +398,40 @@ func (cv *VartypeCheck) FileMode() {
 		// Fine.
 	default:
 		cv.line.Warn1("Invalid file mode %q.", cv.value)
+	}
+}
+
+func (cv *VartypeCheck) Homepage() {
+	cv.mkline.CheckVartypePrimitive(cv.varname, CheckvarURL, cv.op, cv.value, cv.comment, cv.listContext, cv.guessed)
+
+	if m, wrong, sitename, subdir := match3(cv.value, `^(\$\{(MASTER_SITE\w+)(?::=([\w\-/]+))?\})`); m {
+		baseURL := G.globalData.MasterSiteVarToURL[sitename]
+		if sitename == "MASTER_SITES" && G.Pkg != nil {
+			masterSites, _ := G.Pkg.varValue("MASTER_SITES")
+			if !containsVarRef(masterSites) {
+				baseURL = masterSites
+			}
+		}
+		fixedURL := baseURL + subdir
+		explain := false
+		if baseURL != "" {
+			if !cv.line.AutofixReplace(wrong, fixedURL) {
+				cv.line.Warn1("HOMEPAGE should not be defined in terms of MASTER_SITEs. Use %s directly.", fixedURL)
+				explain = true
+			}
+		} else {
+			cv.line.Warn0("HOMEPAGE should not be defined in terms of MASTER_SITEs.")
+			explain = true
+		}
+		if explain {
+			Explain(
+				"The HOMEPAGE is a single URL, while MASTER_SITES is a list of URLs.",
+				"As long as this list has exactly one element, this works, but as",
+				"soon as another site is added, the HOMEPAGE would not be a valid",
+				"URL anymore.",
+				"",
+				"Defining MASTER_SITES=${HOMEPAGE} is ok, though.")
+		}
 	}
 }
 
@@ -421,6 +492,60 @@ func (cv *VartypeCheck) License() {
 	checklineLicense(cv.mkline, cv.value)
 }
 
+func (cv *VartypeCheck) MachineGnuPlatform() {
+	if cv.value != cv.valueNovar {
+		return
+	}
+
+	const rePart = `(?:\[[^\]]+\]|[^-\[])+`
+	const rePair = `^(` + rePart + `)-(` + rePart + `)$`
+	const reTriple = `^(` + rePart + `)-(` + rePart + `)-(` + rePart + `)$`
+
+	pattern := cv.value
+	if matches(pattern, rePair) && hasSuffix(pattern, "*") {
+		pattern += "-*"
+	}
+
+	if m, archPattern, vendorPattern, opsysPattern := match3(pattern, reTriple); m {
+		archCv := &VartypeCheck{
+			cv.mkline,
+			cv.line,
+			"the hardware architecture part of " + cv.varname,
+			opUseMatch, // Always allow patterns, since this is a PlatformPattern.
+			archPattern,
+			archPattern,
+			cv.comment,
+			cv.listContext,
+			cv.guessed}
+		enumMachineGnuArch.checker(archCv)
+
+		_ = vendorPattern
+
+		opsysCv := &VartypeCheck{
+			cv.mkline,
+			cv.line,
+			"the operating system part of " + cv.varname,
+			opUseMatch, // Always allow patterns, since this is a PlatformPattern.
+			opsysPattern,
+			opsysPattern,
+			cv.comment,
+			cv.listContext,
+			cv.guessed}
+		enumMachineGnuPlatformOpsys.checker(opsysCv)
+
+	} else {
+		cv.line.Warn1("%q is not a valid platform pattern.", cv.value)
+		Explain(
+			"A platform pattern has the form <OPSYS>-<OS_VERSION>-<MACHINE_ARCH>.",
+			"Each of these components may be a shell globbing expression.",
+			"",
+			"Examples:",
+			"* NetBSD-[456].*-i386",
+			"* *-*-*",
+			"* Linux-*-*")
+	}
+}
+
 func (cv *VartypeCheck) MailAddress() {
 	line, value := cv.line, cv.value
 
@@ -459,8 +584,8 @@ func (cv *VartypeCheck) Option() {
 	line, value, valueNovar := cv.line, cv.value, cv.valueNovar
 
 	if value != valueNovar {
-		if G.opts.DebugUnchecked {
-			line.Debug1("Unchecked option name: %q", value)
+		if G.opts.Debug {
+			traceStep1("Unchecked option name: %q", value)
 		}
 		return
 	}
@@ -575,14 +700,25 @@ func (cv *VartypeCheck) PkgRevision() {
 	}
 }
 
-func (cv *VartypeCheck) PlatformPattern() {
+func (cv *VartypeCheck) MachinePlatform() {
+	cv.MachinePlatformPattern()
+}
+
+func (cv *VartypeCheck) MachinePlatformPattern() {
 	if cv.value != cv.valueNovar {
 		return
 	}
 
 	const rePart = `(?:\[[^\]]+\]|[^-\[])+`
+	const rePair = `^(` + rePart + `)-(` + rePart + `)$`
 	const reTriple = `^(` + rePart + `)-(` + rePart + `)-(` + rePart + `)$`
-	if m, opsysPattern, _, archPattern := match3(cv.value, reTriple); m {
+
+	pattern := cv.value
+	if matches(pattern, rePair) && hasSuffix(pattern, "*") {
+		pattern += "-*"
+	}
+
+	if m, opsysPattern, _, archPattern := match3(pattern, reTriple); m {
 		opsysCv := &VartypeCheck{
 			cv.mkline,
 			cv.line,
@@ -593,7 +729,7 @@ func (cv *VartypeCheck) PlatformPattern() {
 			cv.comment,
 			cv.listContext,
 			cv.guessed}
-		platformOsEnum.checker(opsysCv)
+		enumMachineOpsys.checker(opsysCv)
 
 		// no check for os_version
 
@@ -607,7 +743,7 @@ func (cv *VartypeCheck) PlatformPattern() {
 			cv.comment,
 			cv.listContext,
 			cv.guessed}
-		platformArchEnum.checker(archCv)
+		enumMachineArch.checker(archCv)
 
 	} else {
 		cv.line.Warn1("%q is not a valid platform pattern.", cv.value)
@@ -668,7 +804,6 @@ func (cv *VartypeCheck) SedCommand() {
 func (cv *VartypeCheck) SedCommands() {
 	line := cv.line
 	mkline := cv.mkline
-	shline := NewShellLine(mkline)
 
 	tokens, rest := splitIntoShellTokens(line, cv.value)
 	if rest != "" {
@@ -688,7 +823,6 @@ func (cv *VartypeCheck) SedCommands() {
 
 	for i := 0; i < ntokens; i++ {
 		token := tokens[i]
-		shline.CheckToken(token, true)
 
 		switch {
 		case token == "-e":
@@ -707,8 +841,6 @@ func (cv *VartypeCheck) SedCommands() {
 						"",
 						"This way, short sed commands cannot be hidden at the end of a line.")
 				}
-				shline.CheckToken(tokens[i-1], true)
-				shline.CheckToken(tokens[i], true)
 				mkline.CheckVartypePrimitive(cv.varname, CheckvarSedCommand, cv.op, tokens[i], cv.comment, cv.listContext, cv.guessed)
 			} else {
 				line.Error0("The -e option to sed requires an argument.")
@@ -729,7 +861,7 @@ func (cv *VartypeCheck) SedCommands() {
 }
 
 func (cv *VartypeCheck) ShellCommand() {
-	if cv.op == opUseMatch {
+	if cv.op == opUseMatch || cv.op == opUse {
 		return
 	}
 	setE := true
@@ -743,7 +875,7 @@ func (cv *VartypeCheck) ShellCommands() {
 
 func (cv *VartypeCheck) ShellWord() {
 	if !cv.listContext {
-		NewShellLine(cv.mkline).CheckToken(cv.value, true)
+		NewShellLine(cv.mkline).CheckWord(cv.value, true)
 	}
 }
 
@@ -762,7 +894,7 @@ func (cv *VartypeCheck) Tool() {
 		// no warning for package-defined tool definitions
 
 	} else if m, toolname, tooldep := match2(cv.value, `^([-\w]+|\[)(?::(\w+))?$`); m {
-		if !G.globalData.Tools[toolname] {
+		if G.globalData.Tools.byName[toolname] == nil {
 			cv.line.Error1("Unknown tool %q.", toolname)
 		}
 		switch tooldep {
@@ -905,15 +1037,24 @@ func (cv *VartypeCheck) Yes() {
 }
 
 func (cv *VartypeCheck) YesNo() {
+	const (
+		yes1 = "[yY][eE][sS]"
+		yes2 = "[Yy][Ee][Ss]"
+		no1  = "[nN][oO]"
+		no2  = "[Nn][Oo]"
+	)
 	if cv.op == opUseMatch {
 		switch cv.value {
-		case "[yY][eE][sS]":
-		case "[Yy][Ee][Ss]":
-		case "[nN][oO]":
-		case "[Nn][Oo]":
+		case yes1, yes2, no1, no2:
 		default:
-			cv.line.Warnf("%s should be matched against %q or %q, not %q.", cv.varname, "[yY][eE][sS]", "[nN][oO]", cv.value)
+			cv.line.Warnf("%s should be matched against %q or %q, not %q.", cv.varname, yes1, no1, cv.value)
 		}
+	} else if cv.op == opUse {
+		cv.line.Warnf("%s should be matched against %q or %q, not compared with %q.", cv.varname, yes1, no1, cv.value)
+		Explain(
+			"The yes/no value can be written in either upper or lower case, and",
+			"both forms are actually used.  As long as this is the case, when",
+			"checking the variable value, both must be accepted.")
 	} else if !matches(cv.value, `^(?:YES|yes|NO|no)(?:\s+#.*)?$`) {
 		cv.line.Warn1("%s should be set to YES, yes, NO, or no.", cv.varname)
 	}

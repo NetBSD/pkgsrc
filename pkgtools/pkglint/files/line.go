@@ -38,8 +38,8 @@ type Line struct {
 	Text           string
 	raw            []*RawLine
 	changed        bool
-	before         []*RawLine
-	after          []*RawLine
+	before         []string
+	after          []string
 	autofixMessage *string
 }
 
@@ -57,10 +57,19 @@ func NewLineEOF(fname string) *Line {
 	return NewLineMulti(fname, -1, 0, "", nil)
 }
 
-func (line *Line) rawLines() []*RawLine {
-	switch { // prevent inlining
+// NewLineWhole creates a dummy line for logging messages that affect a file as a whole.
+func NewLineWhole(fname string) *Line {
+	return NewLine(fname, 0, "", nil)
+}
+
+func (line *Line) modifiedLines() []string {
+	var result []string
+	result = append(result, line.before...)
+	for _, raw := range line.raw {
+		result = append(result, raw.textnl)
 	}
-	return append(append(append([]*RawLine(nil), line.before...), line.raw...), line.after...)
+	result = append(result, line.after...)
+	return result
 }
 
 func (line *Line) linenos() string {
@@ -90,7 +99,10 @@ func (line *Line) IsMultiline() bool {
 func (line *Line) printSource(out io.Writer) {
 	if G.opts.PrintSource {
 		io.WriteString(out, "\n")
-		for _, rawLine := range line.rawLines() {
+		for _, before := range line.before {
+			io.WriteString(out, "+ "+before)
+		}
+		for _, rawLine := range line.raw {
 			if rawLine.textnl != rawLine.orignl {
 				if rawLine.orignl != "" {
 					io.WriteString(out, "- "+rawLine.orignl)
@@ -102,17 +114,20 @@ func (line *Line) printSource(out io.Writer) {
 				io.WriteString(out, "> "+rawLine.orignl)
 			}
 		}
+		for _, after := range line.after {
+			io.WriteString(out, "+ "+after)
+		}
 	}
 }
 
 func (line *Line) Fatalf(format string, args ...interface{}) {
 	line.printSource(G.logErr)
-	Fatalf(line.Fname, line.linenos(), format, args...)
+	logs(llFatal, line.Fname, line.linenos(), format, fmt.Sprintf(format, args...))
 }
 
 func (line *Line) Errorf(format string, args ...interface{}) {
 	line.printSource(G.logOut)
-	Errorf(line.Fname, line.linenos(), format, args...)
+	logs(llError, line.Fname, line.linenos(), format, fmt.Sprintf(format, args...))
 	line.logAutofix()
 }
 func (line *Line) Error0(format string)             { line.Errorf(format) }
@@ -121,7 +136,7 @@ func (line *Line) Error2(format, arg1, arg2 string) { line.Errorf(format, arg1, 
 
 func (line *Line) Warnf(format string, args ...interface{}) {
 	line.printSource(G.logOut)
-	Warnf(line.Fname, line.linenos(), format, args...)
+	logs(llWarn, line.Fname, line.linenos(), format, fmt.Sprintf(format, args...))
 	line.logAutofix()
 }
 func (line *Line) Warn0(format string)             { line.Warnf(format) }
@@ -130,20 +145,12 @@ func (line *Line) Warn2(format, arg1, arg2 string) { line.Warnf(format, arg1, ar
 
 func (line *Line) Notef(format string, args ...interface{}) {
 	line.printSource(G.logOut)
-	Notef(line.Fname, line.linenos(), format, args...)
+	logs(llNote, line.Fname, line.linenos(), format, fmt.Sprintf(format, args...))
 	line.logAutofix()
 }
 func (line *Line) Note0(format string)             { line.Notef(format) }
 func (line *Line) Note1(format, arg1 string)       { line.Notef(format, arg1) }
 func (line *Line) Note2(format, arg1, arg2 string) { line.Notef(format, arg1, arg2) }
-
-func (line *Line) Debugf(format string, args ...interface{}) {
-	line.printSource(G.logOut)
-	Debugf(line.Fname, line.linenos(), format, args...)
-	line.logAutofix()
-}
-func (line *Line) Debug1(format, arg1 string)       { line.Debugf(format, arg1) }
-func (line *Line) Debug2(format, arg1, arg2 string) { line.Debugf(format, arg1, arg2) }
 
 func (line *Line) String() string {
 	return line.Fname + ":" + line.linenos() + ": " + line.Text
@@ -151,21 +158,21 @@ func (line *Line) String() string {
 
 func (line *Line) logAutofix() {
 	if line.autofixMessage != nil {
-		autofixf(line.Fname, line.linenos(), "%s", *line.autofixMessage)
+		logs(llAutofix, line.Fname, line.linenos(), "%s", *line.autofixMessage)
 		line.autofixMessage = nil
 	}
 }
 
 func (line *Line) AutofixInsertBefore(text string) bool {
 	if G.opts.PrintAutofix || G.opts.Autofix {
-		line.before = append(line.before, &RawLine{0, "", text + "\n"})
+		line.before = append(line.before, text+"\n")
 	}
 	return line.RememberAutofix("Inserting a line %q before this line.", text)
 }
 
 func (line *Line) AutofixInsertAfter(text string) bool {
 	if G.opts.PrintAutofix || G.opts.Autofix {
-		line.after = append(line.after, &RawLine{0, "", text + "\n"})
+		line.after = append(line.after, text+"\n")
 	}
 	return line.RememberAutofix("Inserting a line %q after this line.", text)
 }
@@ -213,7 +220,7 @@ func (line *Line) RememberAutofix(format string, args ...interface{}) (hasBeenFi
 	}
 	line.changed = true
 	if G.opts.Autofix {
-		autofixf(line.Fname, line.linenos(), format, args...)
+		logs(llAutofix, line.Fname, line.linenos(), format, fmt.Sprintf(format, args...))
 		return true
 	}
 	if G.opts.PrintAutofix {
@@ -224,7 +231,7 @@ func (line *Line) RememberAutofix(format string, args ...interface{}) (hasBeenFi
 }
 
 func (line *Line) CheckAbsolutePathname(text string) {
-	if G.opts.DebugTrace {
+	if G.opts.Debug {
 		defer tracecall1(text)()
 	}
 
@@ -275,7 +282,7 @@ func (line *Line) CheckTrailingWhitespace() {
 }
 
 func (line *Line) CheckRcsid(prefixRe, suggestedPrefix string) bool {
-	if G.opts.DebugTrace {
+	if G.opts.Debug {
 		defer tracecall2(prefixRe, suggestedPrefix)()
 	}
 
