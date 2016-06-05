@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2266 2016/06/05 08:17:09 wen Exp $
+$NetBSD: CHANGES-2016,v 1.2267 2016/06/05 09:53:52 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2941,4 +2941,12 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/p5-Pod-Spell to 1.20 [wen 2016-06-05]
 	Updated textproc/p5-Pod-Weaver to 4.013 [wen 2016-06-05]
 	Updated textproc/p5-Pod-Elemental-PerlMunger to 0.200006 [wen 2016-06-05]
+	Updated devel/p5-App-cpanminus to 1.7042 [mef 2016-06-05]
 	Updated textproc/p5-PDF-Table to 0.9.12 [wen 2016-06-05]
+	Updated cad/eagle to 7.6.0 [mef 2016-06-05]
+	Updated devel/p5-B-Hooks-EndOfScope to 0.21 [mef 2016-06-05]
+	Updated devel/p5-BSD-Resource to 1.29.10 [mef 2016-06-05]
+	Updated devel/p5-CPAN-Perl-Releases to 2.78 [mef 2016-06-05]
+	Updated devel/p5-CPANPLUS to 0.9160 [mef 2016-06-05]
+	Updated devel/p5-Cache-FastMmap to 1.44 [mef 2016-06-05]
+	Updated devel/p5-Carp-Clan to 6.06 [mef 2016-06-05]
