@@ -1,21 +1,21 @@
-$NetBSD: distinfo,v 1.31 2015/11/03 01:12:25 agc Exp $
+$NetBSD: distinfo,v 1.32 2016/06/05 01:02:38 ryoon Exp $
 
-SHA1 (audacity-minsrc-2.1.0.tar.xz) = a53bce0276240bb56f2e3fd1bf235a4ef688caa3
-RMD160 (audacity-minsrc-2.1.0.tar.xz) = 16b0e91222b91b47eeb533d4725b68e5548c057f
-SHA512 (audacity-minsrc-2.1.0.tar.xz) = 5ed441b567bc72a794d9d5a1248db137d1a6d019b5fcdcb8b536a509ecacbf5d85b50c2a0cad484f84053dff4ffa662027cca157fde4b18f9d53b2bd106c34b4
-Size (audacity-minsrc-2.1.0.tar.xz) = 5104924 bytes
+SHA1 (audacity-minsrc-2.1.2.tar.xz) = d0b8924b846f833182e674d621b28eb666cc97d6
+RMD160 (audacity-minsrc-2.1.2.tar.xz) = 47fccf8b96b6db95a677045bf122084d233bd80c
+SHA512 (audacity-minsrc-2.1.2.tar.xz) = 46bc68825d29e88b14a674749532345ab63673ea1b85ad0d2a1b72b0974c74d2175e0ef307dad735592d18e56c1e0c65f994f4ee05d9e0f1aec194cd02c930da
+Size (audacity-minsrc-2.1.2.tar.xz) = 7233500 bytes
 SHA1 (patch-Makefile.in) = 8a770c2ab0494359c22d7f8e1b548fb83c2c00ff
 SHA1 (patch-aa) = 67c0ec5ff99004d9035de13f0263add46ed8c994
-SHA1 (patch-am) = 23ffc055ee81fad7b3aab8f7dd447e641644be96
-SHA1 (patch-lib-src_FileDialog_Makefile.am) = 234c29402f157000dc3afb0b39e23f107c50eaf3
-SHA1 (patch-lib-src_lib-widget-extra_Makefile.am) = afa60d928f9d3de287815b4f7aadd4bbcc700a21
-SHA1 (patch-lib-src_libnyquist_nyquist_ffts_src_fftlib.c) = 3724b3e7cdd1f45cd38c76f2da3a3af6048dddb3
-SHA1 (patch-lib-src_libnyquist_nyquist_nyqsrc_sndread.c) = c7a6c6a7f0dbb3828a4d5780ec94908b40d974d2
+SHA1 (patch-am) = 732764ddf9546524bea13f45cb8d3ffa00c76eb1
+SHA1 (patch-lib-src_FileDialog_Makefile.am) = a1bf7353f970f24dde1f069427d16b0473e2fa71
+SHA1 (patch-lib-src_FileDialog_Makefile.in) = fe4569e6f7d4fbd54e0aa2dd84e7474adb2ff764
+SHA1 (patch-lib-src_lib-widget-extra_Makefile.am) = 03d080c141259fbf02a9c5a70ce06625fcebf75e
+SHA1 (patch-lib-src_libnyquist_nyquist_nyqsrc_sndread.c) = dbc0b5b88043c7b2895742e78e6a5990f65012ef
 SHA1 (patch-lib-src_libnyquist_nyquist_sys_unix_switches.h) = d313f137f11d3e0fafa383ddeccbc89021e9ddee
-SHA1 (patch-lib-src_libnyquist_nyquist_xlisp_xlfio.c) = a55127d6173d3ffb729fde7358bedd7c1320bf09
 SHA1 (patch-lib-src_libnyquist_nyquist_xlisp_xlisp.h) = a0d194f7f7f278cfba1f54269e0323990abb73f3
 SHA1 (patch-lib-src_portaudio-v19_Makefile.in) = 9e86fbd93d322322b8416ef6b43ba5c98141c986
 SHA1 (patch-lib-src_portmixer_src-extra_Makefile.am) = 9a0d5be37753683a2cade42673edb3d08e01ab4d
 SHA1 (patch-lib-src_sbsms_src-extra_Makefile.am) = 2beca18a286de1b26f4f96976fb58e1665d0531c
+SHA1 (patch-src_FFmpeg.h) = 664efb8a668a9dd5f76704e5a46c495a8c2c3a4d
 SHA1 (patch-src_effects_NoiseRemoval.cpp) = 6d72545cde66ac90d4eb3821a3a3f384ccbf46f2
 SHA1 (patch-src_effects_VST_VSTEffect.cpp) = 76a55afd7977505801dd129e139c9782bfd8dfcb
