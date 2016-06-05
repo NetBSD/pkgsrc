@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15962 2016/06/02 12:41:02 wiz Exp $
+$NetBSD: TODO,v 1.15963 2016/06/05 01:03:13 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -434,7 +434,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o auctex-11.89
 	o audacious-3.7.1
 	o audacious-plugins-3.7.1
-	o audacity-2.1.1
 	o augeas-1.4.0
 	o autoconvert-0.3.16
 	o autogen-5.18.10
