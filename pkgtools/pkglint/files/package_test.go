@@ -142,3 +142,79 @@ func (s *Suite) TestPackage_CheckPossibleDowngrade(c *check.C) {
 
 	c.Check(s.Output(), equals, "")
 }
+
+func (s *Suite) TestCheckdirPackage(c *check.C) {
+	s.CreateTmpFile(c, "Makefile", ""+
+		"# $"+"NetBSD$\n")
+	G.CurrentDir = s.tmpdir
+
+	checkdirPackage(s.tmpdir)
+
+	c.Check(s.Output(), equals, ""+
+		"WARN: ~/Makefile: Neither PLIST nor PLIST.common exist, and PLIST_SRC is unset. Are you sure PLIST handling is ok?\n"+
+		"WARN: ~/distinfo: File not found. Please run \"@BMAKE@ makesum\".\n"+
+		"ERROR: ~/Makefile: Each package must define its LICENSE.\n"+
+		"WARN: ~/Makefile: No COMMENT given.\n")
+}
+
+func (s *Suite) Test_Package_Varuse_LoadTime(c *check.C) {
+	s.CreateTmpFileLines(c, "doc/CHANGES-2016",
+		"# dummy")
+	s.CreateTmpFileLines(c, "doc/TODO",
+		"# dummy")
+	s.CreateTmpFileLines(c, "licenses/bsd-2",
+		"# dummy")
+	s.CreateTmpFileLines(c, "mk/fetch/sites.mk",
+		"# dummy")
+	s.CreateTmpFileLines(c, "mk/bsd.pkg.mk",
+		"# dummy")
+	s.CreateTmpFileLines(c, "mk/defaults/options.description",
+		"option Description")
+	s.CreateTmpFileLines(c, "mk/defaults/mk.conf",
+		"# dummy")
+	s.CreateTmpFileLines(c, "mk/tools/bsd.tools.mk",
+		".include \"defaults.mk\"")
+	s.CreateTmpFileLines(c, "mk/tools/defaults.mk",
+		"TOOLS_CREATE+=false",
+		"TOOLS_CREATE+=nice",
+		"TOOLS_CREATE+=true",
+		"_TOOLS_VARNAME.nice=NICE")
+	s.CreateTmpFileLines(c, "mk/bsd.prefs.mk",
+		"# dummy")
+
+	s.CreateTmpFileLines(c, "category/pkgbase/Makefile",
+		"# $"+"NetBSD$",
+		"",
+		"COMMENT= Unit test",
+		"LICENSE= bsd-2",
+		"PLIST_SRC=#none",
+		"",
+		"USE_TOOLS+= echo false",
+		"FALSE_BEFORE!= echo false=${FALSE}",
+		"NICE_BEFORE!= echo nice=${NICE}",
+		"TRUE_BEFORE!= echo true=${TRUE}",
+		"",
+		".include \"../../mk/bsd.prefs.mk\"",
+		"",
+		"USE_TOOLS+= nice",
+		"FALSE_AFTER!= echo false=${FALSE}",
+		"NICE_AFTER!= echo nice=${NICE}",
+		"TRUE_AFTER!= echo true=${TRUE}",
+		"",
+		"do-build:",
+		"\t${ECHO} before: ${FALSE_BEFORE} ${NICE_BEFORE} ${TRUE_BEFORE}",
+		"\t${ECHO} after: ${FALSE_AFTER} ${NICE_AFTER} ${TRUE_AFTER}",
+		"\t${ECHO}; ${FALSE}; ${NICE}; ${TRUE}",
+		"",
+		".include \"../../mk/bsd.pkg.mk\"")
+	s.CreateTmpFileLines(c, "category/pkgbase/distinfo",
+		"$"+"NetBSD$")
+
+	(&Pkglint{}).Main("pkglint", "-q", "-Wperm", s.tmpdir+"/category/pkgbase")
+
+	c.Check(s.Output(), equals, ""+
+		"WARN: ~/category/pkgbase/Makefile:8: To use the tool \"FALSE\" at load time, bsd.prefs.mk has to be included before.\n"+
+		"WARN: ~/category/pkgbase/Makefile:9: To use the tool \"NICE\" at load time, bsd.prefs.mk has to be included before.\n"+
+		"WARN: ~/category/pkgbase/Makefile:10: To use the tool \"TRUE\" at load time, bsd.prefs.mk has to be included before.\n"+
+		"WARN: ~/category/pkgbase/Makefile:16: To use the tool \"NICE\" at load time, it has to be added to USE_TOOLS before including bsd.prefs.mk.\n")
+}
