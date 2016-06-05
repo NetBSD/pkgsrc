@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2015/11/21 13:49:16 mef Exp $
+@comment $NetBSD: PLIST,v 1.11 2016/06/05 09:16:33 mef Exp $
 bin/eagle
 eagle/bin/designlink.png
 eagle/bin/eagle
@@ -310,6 +310,21 @@ eagle/dru/Eurocircuits/eC_Defaults/eC_2Layer_PClass6_BaseCopperO18_eCDefault.dru
 eagle/dru/Eurocircuits/eC_Defaults/eC_4Layer_PClass6_BaseCopperO18-I35_eCDefault.dru
 eagle/dru/Eurocircuits/eC_Defaults/eC_6Layer_PClass6_BaseCopperO18-I35_eCDefault.dru
 eagle/dru/Eurocircuits/eC_Defaults/eC_8Layer_PClass6_BaseCopperO18-I35_eCDefault.dru
+eagle/dru/Multi-CB/Multi-CB_HDI/Multi-CB_2L_100um-Tracks_OL35um.dru
+eagle/dru/Multi-CB/Multi-CB_HDI/Multi-CB_4L_075um-Tracks_OL30um-IL12um.dru
+eagle/dru/Multi-CB/Multi-CB_HDI/Multi-CB_4L_100um-Tracks_OL35um-IL18um.dru
+eagle/dru/Multi-CB/Multi-CB_HDI/Multi-CB_6L_075um-Tracks_OL30um-IL12um.dru
+eagle/dru/Multi-CB/Multi-CB_Standard/Multi-CB_1L_125um-Tracks_OL35um.dru
+eagle/dru/Multi-CB/Multi-CB_Standard/Multi-CB_2L_125um-Tracks_OL35um.dru
+eagle/dru/Multi-CB/Multi-CB_Standard/Multi-CB_4L_125um-Tracks_OL35um-IL35um.dru
+eagle/dru/Multi-CB/Multi-CB_Standard/Multi-CB_6L_100um-Tracks_OL35um-IL35um.dru
+eagle/dru/Multi-CB/Multi-CB_Standard/Multi-CB_8L_100um-Tracks_OL35um-IL35um.dru
+eagle/dru/Multi-CB/Multi-CB_Thick-Cu/Multi-CB_1L_200um-Tracks_OL70um.dru
+eagle/dru/Multi-CB/Multi-CB_Thick-Cu/Multi-CB_1L_250um-Tracks_OL105um.dru
+eagle/dru/Multi-CB/Multi-CB_Thick-Cu/Multi-CB_2L_200um-Tracks_OL70um.dru
+eagle/dru/Multi-CB/Multi-CB_Thick-Cu/Multi-CB_2L_250um-Tracks_OL105um.dru
+eagle/dru/Multi-CB/Multi-CB_Thick-Cu/Multi-CB_4L_200um-Tracks_OL70um-IL70um.dru
+eagle/dru/Multi-CB/Multi-CB_Thick-Cu/Multi-CB_4L_250um-Tracks_OL105um-IL35um.dru
 eagle/dru/WEdirekt/Eagle_WEdirekt_150_check.dru
 eagle/dru/default.dru
 eagle/lbr/19inch.lbr
@@ -657,6 +672,7 @@ eagle/lbr/switch.lbr
 eagle/lbr/telcom.lbr
 eagle/lbr/telecontrolli.lbr
 eagle/lbr/telefunken.lbr
+eagle/lbr/test-mate.lbr
 eagle/lbr/testpad.lbr
 eagle/lbr/texas-sn55-sn75.lbr
 eagle/lbr/texas.lbr
@@ -864,6 +880,7 @@ eagle/ulp/cmd-snap-board.ulp
 eagle/ulp/cmd-snappads.ulp
 eagle/ulp/component-array.ulp
 eagle/ulp/connect-device-split-symbol.ulp
+eagle/ulp/copy-attrib-sch-to-brd.ulp
 eagle/ulp/copy-attribute-at-deviceset.ulp
 eagle/ulp/copy-silk-screen.ulp
 eagle/ulp/copy-text-as-wire.ulp
@@ -908,6 +925,7 @@ eagle/ulp/ex-run-script.ulp
 eagle/ulp/exp-descr-html.ulp
 eagle/ulp/exp-descr-script.ulp
 eagle/ulp/exp-lbrs.ulp
+eagle/ulp/exp-palette.ulp
 eagle/ulp/exp2image.ulp
 eagle/ulp/export-class.ulp
 eagle/ulp/export-error.ulp
@@ -1017,6 +1035,7 @@ eagle/ulp/mirror-board.ulp
 eagle/ulp/mkdir.ulp
 eagle/ulp/mount-marks-smd.ulp
 eagle/ulp/mount-marks.ulp
+eagle/ulp/mount-smd-tht.ulp
 eagle/ulp/mount-trace.ulp
 eagle/ulp/mount.ulp
 eagle/ulp/mountsmd.ulp
@@ -1046,7 +1065,7 @@ eagle/ulp/run-loop-all-lbr-ulp.ulp
 eagle/ulp/run-loop-all-packages-script.ulp
 eagle/ulp/run-loop-all-schematic-script.ulp
 eagle/ulp/run-loop-all-symbols-script.ulp
-eagle/ulp/save-variants4cam.ulp
+eagle/ulp/save-brd-variants.ulp
 eagle/ulp/select-sch-group-to-brd-group.ulp
 eagle/ulp/set-all-devices-attribute.ulp
 eagle/ulp/set_name_value.ulp
