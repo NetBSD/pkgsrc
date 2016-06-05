@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2016/02/13 00:46:06 leot Exp $
+# $NetBSD: Makefile,v 1.4 2016/06/05 13:50:21 mef Exp $
 #
 
-DISTNAME=	entr-3.4
+DISTNAME=	entr-3.5
 CATEGORIES=	sysutils
 MASTER_SITES=	http://entrproject.org/code/
 
@@ -10,7 +10,7 @@ HOMEPAGE=	http://entrproject.org/
 COMMENT=	Run arbitrary commands when files change
 LICENSE=	isc AND 2-clause-bsd
 
-WRKSRC=		${WRKDIR}/eradman-entr-5321b01c9dab
+WRKSRC=		${WRKDIR}/eradman-entr-697748046070
 
 .include "../../mk/bsd.prefs.mk"
 
