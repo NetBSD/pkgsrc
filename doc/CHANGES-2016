@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2279 2016/06/05 13:57:49 mef Exp $
+$NetBSD: CHANGES-2016,v 1.2280 2016/06/05 14:05:34 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2969,3 +2969,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/p5-RPC-XML to 0.80 [wen 2016-06-05]
 	Updated sysutils/entr to 3.5 [mef 2016-06-05]
 	Updated sysutils/file to 5.27 [mef 2016-06-05]
+	Updated net/p5-Regexp-Common-net-CIDR to 0.03 [wen 2016-06-05]
