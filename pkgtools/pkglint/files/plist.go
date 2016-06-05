@@ -7,7 +7,7 @@ import (
 )
 
 func ChecklinesPlist(lines []*Line) {
-	if G.opts.DebugTrace {
+	if G.opts.Debug {
 		defer tracecall1(lines[0].Fname)()
 	}
 

@@ -5,7 +5,7 @@ import (
 )
 
 func ChecklinesBuildlink3Mk(mklines *MkLines) {
-	if G.opts.DebugTrace {
+	if G.opts.Debug {
 		defer tracecall1(mklines.lines[0].Fname)()
 	}
 
@@ -118,7 +118,7 @@ func ChecklinesBuildlink3Mk(mklines *MkLines) {
 
 			if varname == "BUILDLINK_ABI_DEPENDS."+pkgbase {
 				abiLine = line
-				parser := NewParser(line, value)
+				parser := NewParser(line, value, false)
 				if dp := parser.Dependency(); dp != nil && parser.EOF() {
 					abi = dp
 				}
@@ -126,7 +126,7 @@ func ChecklinesBuildlink3Mk(mklines *MkLines) {
 			}
 			if varname == "BUILDLINK_API_DEPENDS."+pkgbase {
 				apiLine = line
-				parser := NewParser(line, value)
+				parser := NewParser(line, value, false)
 				if dp := parser.Dependency(); dp != nil && parser.EOF() {
 					api = dp
 				}
@@ -174,8 +174,8 @@ func ChecklinesBuildlink3Mk(mklines *MkLines) {
 			}
 
 		} else {
-			if G.opts.DebugUnchecked {
-				exp.CurrentLine().Debugf("Unchecked line in third paragraph.")
+			if G.opts.Debug {
+				traceStep1("Unchecked line %s in third paragraph.", exp.CurrentLine().linenos())
 			}
 			exp.Advance()
 		}

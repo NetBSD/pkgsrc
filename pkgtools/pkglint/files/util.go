@@ -56,7 +56,7 @@ func isEmptyDir(fname string) bool {
 func getSubdirs(fname string) []string {
 	dirents, err := ioutil.ReadDir(fname)
 	if err != nil {
-		Fatalf(fname, noLines, "Cannot be read: %s", err)
+		NewLineWhole(fname).Fatalf("Cannot be read: %s", err)
 	}
 
 	var subdirs []string
@@ -251,7 +251,7 @@ func match5(s, re string) (matched bool, m1, m2, m3, m4, m5 string) {
 }
 
 func replaceFirst(s, re, replacement string) ([]string, string) {
-	if G.opts.DebugTrace {
+	if G.opts.Debug {
 		defer tracecall(s, re, replacement)()
 	}
 
@@ -266,6 +266,8 @@ func replaceFirst(s, re, replacement string) ([]string, string) {
 	return nil, s
 }
 
+type PrefixReplacerMark string
+
 type PrefixReplacer struct {
 	rest string
 	s    string   // The last match from a prefix
@@ -276,43 +278,12 @@ func NewPrefixReplacer(s string) *PrefixReplacer {
 	return &PrefixReplacer{s, "", nil}
 }
 
-func (pr *PrefixReplacer) AdvanceBytes(bits0x00, bits0x20, bits0x40, bits0x60 uint32, re string) bool {
-	if G.TestingData != nil {
-		pr.verifyBits(bits0x00, bits0x20, bits0x40, bits0x60, re)
-	}
-
-	rest := pr.rest
-	n := len(pr.rest)
-	i := 0
-loop:
-	for ; i < n; i++ {
-		b := rest[i]
-		var mask uint32
-		switch b & 0xE0 {
-		case 0x00:
-			mask = bits0x00
-		case 0x20:
-			mask = bits0x20
-		case 0x40:
-			mask = bits0x40
-		case 0x60:
-			mask = bits0x60
-		}
-		if (mask>>(b&0x1F))&1 == 0 {
-			break loop
-		}
-	}
-	pr.s = rest[:i]
-	pr.rest = rest[i:]
-	return i != 0
-}
-
 func (pr *PrefixReplacer) AdvanceStr(prefix string) bool {
 	pr.m = nil
 	pr.s = ""
 	if hasPrefix(pr.rest, prefix) {
-		if G.opts.DebugTrace {
-			trace("", "PrefixReplacer.AdvanceStr", pr.rest, prefix)
+		if G.opts.Debug {
+			traceStep("PrefixReplacer.AdvanceStr(%q, %q)", pr.rest, prefix)
 		}
 		pr.s = prefix
 		pr.rest = pr.rest[len(prefix):]
@@ -320,21 +291,50 @@ func (pr *PrefixReplacer) AdvanceStr(prefix string) bool {
 	}
 	return false
 }
+
+func (pr *PrefixReplacer) AdvanceBytesFunc(fn func(c byte) bool) bool {
+	i := 0
+	for i < len(pr.rest) && fn(pr.rest[i]) {
+		i++
+	}
+	if i != 0 {
+		pr.s = pr.rest[:i]
+		pr.rest = pr.rest[i:]
+		return true
+	}
+	return false
+}
+
+func (pr *PrefixReplacer) AdvanceHspace() bool {
+	i := 0
+	rest := pr.rest
+	for i < len(rest) && (rest[i] == ' ' || rest[i] == '\t') {
+		i++
+	}
+	if i != 0 {
+		pr.s = pr.rest[:i]
+		pr.rest = pr.rest[i:]
+		return true
+	}
+	return false
+}
+
 func (pr *PrefixReplacer) AdvanceRegexp(re string) bool {
 	pr.m = nil
 	pr.s = ""
 	if !hasPrefix(re, "^") {
 		panic(fmt.Sprintf("PrefixReplacer.AdvanceRegexp: regular expression %q must have prefix %q.", re, "^"))
 	}
-	if matches("", re) {
+	if G.Testing && matches("", re) {
 		panic(fmt.Sprintf("PrefixReplacer.AdvanceRegexp: the empty string must not match the regular expression %q.", re))
 	}
 	if m := match(pr.rest, re); m != nil {
-		if G.opts.DebugTrace {
-			trace("", "PrefixReplacer.AdvanceRegexp", pr.rest, re, m[0])
+		if G.opts.Debug {
+			traceStep("PrefixReplacer.AdvanceRegexp(%q, %q, %q)", pr.rest, re, m[0])
 		}
 		pr.rest = pr.rest[len(m[0]):]
 		pr.m = m
+		pr.s = m[0]
 		return true
 	}
 	return false
@@ -348,11 +348,11 @@ func (pr *PrefixReplacer) PeekByte() int {
 	return int(rest[0])
 }
 
-func (pr *PrefixReplacer) Mark() string {
-	return pr.rest
+func (pr *PrefixReplacer) Mark() PrefixReplacerMark {
+	return PrefixReplacerMark(pr.rest)
 }
-func (pr *PrefixReplacer) Reset(mark string) {
-	pr.rest = mark
+func (pr *PrefixReplacer) Reset(mark PrefixReplacerMark) {
+	pr.rest = string(mark)
 }
 func (pr *PrefixReplacer) Skip(n int) {
 	pr.rest = pr.rest[n:]
@@ -360,53 +360,13 @@ func (pr *PrefixReplacer) Skip(n int) {
 func (pr *PrefixReplacer) SkipSpace() {
 	pr.rest = strings.TrimLeft(pr.rest, " \t")
 }
-func (pr *PrefixReplacer) Since(mark string) string {
-	return mark[:len(mark)-len(pr.rest)]
+func (pr *PrefixReplacer) Since(mark PrefixReplacerMark) string {
+	return string(mark[:len(mark)-len(pr.rest)])
 }
 func (pr *PrefixReplacer) AdvanceRest() string {
 	rest := pr.rest
 	pr.rest = ""
 	return rest
-}
-
-func (pr *PrefixReplacer) verifyBits(bits0x00, bits0x20, bits0x40, bits0x60 uint32, re string) {
-	if G.TestingData.VerifiedBits[re] {
-		return
-	}
-	G.TestingData.VerifiedBits[re] = true
-	rec := regcomp(re)
-
-	var actual0x00, actual0x20, actual0x40, actual0x60 uint32
-	mask := uint32(0)
-	for i := byte(0); i < 0x80; i++ {
-		if rec.Match([]byte{i}) {
-			mask |= uint32(1) << (i & 31)
-		}
-		switch i {
-		case 0x1F:
-			actual0x00 = mask
-		case 0x3F:
-			actual0x20 = mask
-		case 0x5F:
-			actual0x40 = mask
-		case 0x7F:
-			actual0x60 = mask
-		}
-		if i&0x1F == 0x1F {
-			mask = 0
-		}
-	}
-	if actual0x00 == bits0x00 && actual0x20 == bits0x20 && actual0x40 == bits0x40 && actual0x60 == bits0x60 {
-		return
-	}
-
-	print(fmt.Sprintf(""+
-		"Expected bits(%#08x, %#08x, %#08x, %#08x), "+
-		"not bits(%#08x, %#08x, %#08x, %#08x) "+
-		"for pattern %q.\n",
-		actual0x00, actual0x20, actual0x40, actual0x60,
-		bits0x00, bits0x20, bits0x40, bits0x60,
-		re))
 }
 
 // Useful in combination with regex.Find*Index
@@ -457,29 +417,49 @@ func argsStr(args ...interface{}) string {
 	return argsStr
 }
 
-func trace(action, funcname string, args ...interface{}) {
-	if G.opts.DebugTrace {
-		io.WriteString(G.debugOut, fmt.Sprintf("TRACE: %s%s%s(%s)\n", strings.Repeat("| ", G.traceDepth), action, funcname, argsStr(args...)))
+func traceIndent() string {
+	indent := ""
+	for i := 0; i < G.traceDepth; i++ {
+		indent += fmt.Sprintf("%d ", i+1)
 	}
+	return indent
+}
+
+func traceStep(format string, args ...interface{}) {
+	if G.opts.Debug {
+		msg := fmt.Sprintf(format, args...)
+		io.WriteString(G.debugOut, fmt.Sprintf("TRACE: %s  %s\n", traceIndent(), msg))
+	}
+}
+func traceStep1(format string, arg0 string) {
+	switch { // Prevent inlining
+	}
+	traceStep(format, arg0)
+}
+func traceStep2(format string, arg0, arg1 string) {
+	switch { //Prevent inlining
+	}
+	traceStep(format, arg0, arg1)
 }
 
 func tracecallInternal(args ...interface{}) func() {
-	if !G.opts.DebugTrace {
+	if !G.opts.Debug {
 		panic("Internal pkglint error: calls to tracecall must only occur in tracing mode")
 	}
 
 	funcname := "?"
 	if pc, _, _, ok := runtime.Caller(2); ok {
 		if fn := runtime.FuncForPC(pc); fn != nil {
-			funcname = strings.TrimSuffix(fn.Name(), "main.")
+			funcname = strings.TrimPrefix(fn.Name(), "netbsd.org/pkglint.")
 		}
 	}
-	trace("+ ", funcname, args...)
+	indent := traceIndent()
+	io.WriteString(G.debugOut, fmt.Sprintf("TRACE: %s+ %s(%s)\n", indent, funcname, argsStr(args...)))
 	G.traceDepth++
 
 	return func() {
 		G.traceDepth--
-		trace("- ", funcname, args...)
+		io.WriteString(G.debugOut, fmt.Sprintf("TRACE: %s- %s(%s)\n", indent, funcname, argsStr(args...)))
 	}
 }
 func tracecall0() func() {
@@ -503,6 +483,20 @@ func tracecall(args ...interface{}) func() {
 	return tracecallInternal(args...)
 }
 
+type Ref struct {
+	intf interface{}
+}
+
+func ref(rv interface{}) Ref {
+	return Ref{rv}
+}
+
+func (r Ref) String() string {
+	ptr := reflect.ValueOf(r.intf)
+	ref := reflect.Indirect(ptr)
+	return fmt.Sprintf("%v", ref)
+}
+
 // Emulates make(1)’s :S substitution operator.
 func mkopSubst(s string, left bool, from string, right bool, to string, all bool) string {
 	re := ifelseStr(left, "^", "") + regexp.QuoteMeta(from) + ifelseStr(right, "$", "")
@@ -524,34 +518,16 @@ func relpath(from, to string) string {
 		panic("relpath" + argsStr(from, to, err1, err2, err3))
 	}
 	result := filepath.ToSlash(rel)
-	if G.opts.DebugTrace {
-		trace("", "relpath", from, to, "=>", result)
+	if G.opts.Debug {
+		traceStep("relpath from %q to %q = %q", from, to, result)
 	}
 	return result
-}
-
-func stringBoolMapKeys(m map[string]bool) []string {
-	var keys []string
-	for k := range m {
-		keys = append(keys, k)
-	}
-	sort.Strings(keys)
-	return keys
-}
-
-func stringStringMapKeys(m map[string]string) []string {
-	var keys []string
-	for k := range m {
-		keys = append(keys, k)
-	}
-	sort.Strings(keys)
-	return keys
 }
 
 func abspath(fname string) string {
 	abs, err := filepath.Abs(fname)
 	if err != nil {
-		Fatalf(fname, noLines, "Cannot determine absolute path.")
+		NewLineWhole(fname).Fatalf("Cannot determine absolute path.")
 	}
 	return filepath.ToSlash(abs)
 }
