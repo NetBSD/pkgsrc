@@ -1,15 +1,15 @@
-$NetBSD: patch-lib-src_lib-widget-extra_Makefile.am,v 1.1 2015/09/18 21:19:07 mrg Exp $
+$NetBSD: patch-lib-src_lib-widget-extra_Makefile.am,v 1.2 2016/06/05 01:02:39 ryoon Exp $
 
 don't build a shared library of this.
 
---- lib-src/lib-widget-extra/Makefile.am.orig	2015-03-01 17:07:17.000000000 -0800
-+++ lib-src/lib-widget-extra/Makefile.am	2015-09-18 11:29:29.000000000 -0700
-@@ -5,7 +5,7 @@
+--- lib-src/lib-widget-extra/Makefile.am.orig	2016-01-13 14:31:17.000000000 +0000
++++ lib-src/lib-widget-extra/Makefile.am
+@@ -5,7 +5,7 @@ EXTRA_DIST = libwidgetextra.pc.in
  pkgconfigdir = $(libdir)/pkgconfig
  pkgconfig_DATA = libwidgetextra.pc
  
 -lib_LTLIBRARIES = libwidgetextra.la
 +noinst_LTLIBRARIES = libwidgetextra.la
  
- libwidgetextra_la_CPPFLAGS = $(WX_CXXFLAGS)
+ libwidgetextra_la_CPPFLAGS = $(WX_CXXFLAGS) -Wno-deprecated-declarations
  libwidgetextra_la_LIBADD = $(WX_LIBS)
