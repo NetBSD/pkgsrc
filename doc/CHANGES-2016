@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2272 2016/06/05 12:22:57 mef Exp $
+$NetBSD: CHANGES-2016,v 1.2273 2016/06/05 12:50:37 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2960,3 +2960,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-ExtUtils-F77 to 1.20 [mef 2016-06-05]
 	Updated devel/p5-Eval-Closure to 0.14 [mef 2016-06-05]
 	Updated devel/p5-File-ChangeNotify to 0.26 [mef 2016-06-05]
+	Added devel/p5-File-Share version 0.25 [wen 2016-06-05]
