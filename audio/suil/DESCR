@@ -1,4 +1,4 @@
-iSuil is a lightweight C library for loading and wrapping LV2 plugin
+Suil is a lightweight C library for loading and wrapping LV2 plugin
 UIs.
 
 Suil makes it possible to load a UI of any toolkit in a host using
