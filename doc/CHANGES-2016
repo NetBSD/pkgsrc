@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2278 2016/06/05 13:50:32 mef Exp $
+$NetBSD: CHANGES-2016,v 1.2279 2016/06/05 13:57:49 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2968,3 +2968,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Git-Repository to 1.319 [mef 2016-06-05]
 	Updated net/p5-RPC-XML to 0.80 [wen 2016-06-05]
 	Updated sysutils/entr to 3.5 [mef 2016-06-05]
+	Updated sysutils/file to 5.27 [mef 2016-06-05]
