@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2275 2016/06/05 13:20:25 wen Exp $
+$NetBSD: CHANGES-2016,v 1.2276 2016/06/05 13:32:49 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2962,4 +2962,7 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-File-ChangeNotify to 0.26 [mef 2016-06-05]
 	Added devel/p5-File-Share version 0.25 [wen 2016-06-05]
 	Updated textproc/p5-PDF-Create to 1.32 [wen 2016-06-05]
+	Updated net/p5-WebService-Google-Reader to 0.23 [mef 2016-06-05]
+	Updated net/p5-Test-TCP to 2.16 [mef 2016-06-05]
 	Updated textproc/p5-PDF-API2 to 2.027 [wen 2016-06-05]
+	Updated devel/p5-Git-Repository to 1.319 [mef 2016-06-05]
