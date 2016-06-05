@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2015/11/15 08:10:21 wen Exp $
+# $NetBSD: Makefile,v 1.15 2016/06/05 05:11:18 wen Exp $
 
-DISTNAME=	Starlet-0.28
+DISTNAME=	Starlet-0.29
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Plack/}
