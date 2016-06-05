@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2016/03/13 13:03:14 wen Exp $
+# $NetBSD: Makefile,v 1.17 2016/06/05 13:30:47 mef Exp $
 
-DISTNAME=	Git-Repository-1.318
+DISTNAME=	Git-Repository-1.319
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Git/}
@@ -13,6 +13,10 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 DEPENDS+=	p5-System-Command>=1.103:../../devel/p5-System-Command
 DEPENDS+=	p5-Git-Version-Compare>=1.001:../../devel/p5-Git-Version-Compare
+
+# for make test
+BUILD_DEPENDS+=	p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
+BUILD_DEPENDS+=	p5-Test-Requires-Git-[0-9]*:../../devel/p5-Test-Requires-Git
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Git/Repository/.packlist
