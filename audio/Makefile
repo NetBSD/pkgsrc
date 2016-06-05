@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.533 2016/06/05 00:44:54 ryoon Exp $
+# $NetBSD: Makefile,v 1.534 2016/06/05 00:47:40 ryoon Exp $
 #
 
 COMMENT=	Audio tools
@@ -445,6 +445,7 @@ SUBDIR+=	sptk
 SUBDIR+=	squeezeboxserver
 SUBDIR+=	streamripper
 SUBDIR+=	streamtuner
+SUBDIR+=	suil
 SUBDIR+=	sweep
 SUBDIR+=	taglib
 SUBDIR+=	taglib-extras
