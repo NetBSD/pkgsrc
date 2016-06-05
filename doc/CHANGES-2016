@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2262 2016/06/05 07:30:21 wen Exp $
+$NetBSD: CHANGES-2016,v 1.2263 2016/06/05 07:38:30 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2938,3 +2938,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-Starlet to 0.29 [wen 2016-06-05]
 	Updated textproc/p5-XML-RSS to 1.59 [wen 2016-06-05]
 	Updated textproc/p5-Pod-Markdown to 3.005 [wen 2016-06-05]
+	Updated textproc/p5-Pod-Spell to 1.20 [wen 2016-06-05]
