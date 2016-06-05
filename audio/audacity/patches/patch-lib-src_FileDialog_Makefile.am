@@ -1,15 +1,14 @@
-$NetBSD: patch-lib-src_FileDialog_Makefile.am,v 1.1 2015/09/18 21:19:07 mrg Exp $
+$NetBSD: patch-lib-src_FileDialog_Makefile.am,v 1.2 2016/06/05 01:02:38 ryoon Exp $
 
 don't build a shared library of this.
 
---- lib-src/FileDialog/Makefile.am.orig	2015-03-01 17:07:12.000000000 -0800
-+++ lib-src/FileDialog/Makefile.am	2015-09-18 11:28:47.000000000 -0700
-@@ -2,7 +2,7 @@
- 
- EXTRA_DIST = FileDialog.vcproj FileDialogPrivate.h.in
+--- lib-src/FileDialog/Makefile.am.orig	2016-01-13 14:31:17.000000000 +0000
++++ lib-src/FileDialog/Makefile.am
+@@ -1,6 +1,6 @@
+ ACLOCAL_AMFLAGS = -I m4
  
 -lib_LTLIBRARIES = libFileDialog.la
 +noinst_LTLIBRARIES = libFileDialog.la
  
- libFileDialog_la_CPPFLAGS = $(WX_CXXFLAGS)
+ libFileDialog_la_CPPFLAGS = $(WX_CXXFLAGS) -Wno-deprecated-declarations
  libFileDialog_la_LIBADD = $(WX_LIBS)

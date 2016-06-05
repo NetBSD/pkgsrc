@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.100 2015/11/18 14:19:47 ryoon Exp $
+# $NetBSD: Makefile,v 1.101 2016/06/05 01:02:38 ryoon Exp $
 
-DISTNAME=		audacity-minsrc-2.1.0
+DISTNAME=		audacity-minsrc-2.1.2
 PKGNAME=		${DISTNAME:S/-minsrc//1}
-PKGREVISION=		8
 CATEGORIES=		audio
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=audacity/}
+# sadly fosshub.com does not provice hot link
+MASTER_SITES=		${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -13,10 +13,12 @@ COMMENT=		Audio editor
 LICENSE=		gnu-gpl-v2 # AND cc-by-v3.0-license
 
 USE_LIBTOOL=		yes
-USE_TOOLS+=		automake autoreconf
+USE_TOOLS+=		automake autoreconf bash
 USE_TOOLS+=		gmake intltool msgfmt msgmerge pkg-config
 USE_TOOLS+=		xgettext zip:run
 USE_LANGUAGES=		c c++
+WRAPPER_SHELL=		${BASH}
+CONFIG_SHELL=		${BASH}
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-nyquist=yes
 CONFIGURE_ARGS+=	--with-expat=system
@@ -33,6 +35,7 @@ CONFIGURE_ARGS+=	--with-sbsms=system
 CONFIGURE_ARGS+=	--with-soundtouch=system
 CONFIGURE_ARGS+=	--with-twolame=system
 CONFIGURE_ARGS+=	--with-vorbis=system
+CONFIGURE_ARGS+=	--with-libsoxr=system
 CONFIGURE_ARGS+=	--without-xaudio
 
 CONFIG_GUESS_OVERRIDE=		\
@@ -45,7 +48,6 @@ BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:M*}
 
 # regen Makefile.in to avoid being built as shared libraries
 pre-configure:
-	cd ${WRKSRC}/lib-src/FileDialog && ${PKGSRC_SETENV} autoreconf -fiv
 	cd ${WRKSRC}/lib-src/portaudio-v19 && ${PKGSRC_SETENV} autoreconf -fiv
 	cd ${WRKSRC}/lib-src/portmixer && ${PKGSRC_SETENV} autoreconf -fiv
 	cd ${WRKSRC}/lib-src/lib-widget-extra && autoreconf -fiv
@@ -65,13 +67,15 @@ BUILDLINK_API_DEPENDS.twolame+=	twolame>=0.3.9
 .include "../../audio/libmad/buildlink3.mk"
 .include "../../audio/libsbsms/buildlink3.mk"
 .include "../../audio/libsamplerate/buildlink3.mk"
+.include "../../audio/libsoxr/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 #.include "../../audio/portaudio-devel/buildlink3.mk" # Needs Pa_GetStreamHostApiType
+.include "../../audio/suil/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.flac+=	flac>=1.3.0
 .include "../../audio/flac/buildlink3.mk"
-.include "../../multimedia/ffmpeg1/buildlink3.mk"
+.include "../../multimedia/ffmpeg3/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../x11/wxGTK30/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
