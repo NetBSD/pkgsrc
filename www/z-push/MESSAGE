@@ -1,0 +1,49 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2016/06/05 00:02:21 jym Exp $
+
+For pkgsrc installations, Z-push is installed with non-default locations:
+
+	Z-push directory:	${ZPUSHDIR}
+	Documentation:		${DOCDIR}
+
+To complete the installation of Z-push, follow these steps:
+
+1. Configure Z-push to use the different servers you want it to support.
+   The configuration file is extensively documented:
+
+	Configuration file:	${PKG_SYSCONFDIR}/config.php
+
+2. You will need to make Z-push accessible through your HTTP server.
+   If you are running Apache and ap-php, you can use the following file:
+
+        ${PKG_SYSCONFDIR}/z-push.conf
+
+   and add an Include directive directly within Apache configuration:
+
+        Include ${PKG_SYSCONFDIR}/z-push.conf
+
+   If you are not using Apache:
+
+    - make Z-push `index.php' accessible directly through the
+      URL `/Microsoft-Server-ActiveSync'
+
+    - set the following PHP flags for the Z-push directory:
+
+	php_flag magic_quotes_gpc off
+	php_flag register_globals off
+	php_flag magic_quotes_runtime off
+	php_flag short_open_tag on
+
+    - adjust the owner and group of the following directories to match
+      the ones corresponding to your webserver:
+
+	${ZPUSHSTATEDIR}  mode=0750
+	${ZPUSHLOGDIR}    mode=0750
+	${PKG_SYSCONFDIR}/config.php mode=0640
+
+   See Z-push online documentation for further information or refer
+   to the INSTALL file:
+
+	${HOMEPAGE}
+	${DOCDIR}/INSTALL
+===========================================================================
