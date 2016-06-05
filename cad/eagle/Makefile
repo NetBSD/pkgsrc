@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.28 2015/11/21 13:49:16 mef Exp $
+# $NetBSD: Makefile,v 1.29 2016/06/05 09:16:33 mef Exp $
 
-DISTNAME=		eagle-lin32-7.5.0
+DISTNAME=		eagle-lin32-7.6.0
 PKGNAME=		${DISTNAME:S/-lin32//}
 CATEGORIES=		cad
 # Strip microversion from directory name
