@@ -77,7 +77,8 @@ func (s *Suite) NewMkLines(fname string, lines ...string) *MkLines {
 
 func (s *Suite) DebugToStdout() {
 	G.debugOut = os.Stdout
-	G.opts.DebugTrace = true
+	G.logOut = os.Stdout
+	G.opts.Debug = true
 }
 
 func (s *Suite) UseCommandLine(c *check.C, args ...string) {
@@ -85,21 +86,35 @@ func (s *Suite) UseCommandLine(c *check.C, args ...string) {
 	if exitcode != nil && *exitcode != 0 {
 		c.Fatalf("Cannot parse command line: %#v", args)
 	}
+	G.opts.LogVerbose = true // See SetUpTest
 }
 
-func (s *Suite) RegisterTool(toolname, varname string, varRequired bool) {
-	if G.globalData.Tools == nil {
-		G.globalData.Tools = make(map[string]bool)
-		G.globalData.Vartools = make(map[string]string)
-		G.globalData.toolsVarRequired = make(map[string]bool)
-		G.globalData.PredefinedTools = make(map[string]bool)
+func (s *Suite) RegisterMasterSite(varname string, urls ...string) {
+	name2url := &G.globalData.MasterSiteVarToURL
+	url2name := &G.globalData.MasterSiteURLToVar
+	if *name2url == nil {
+		*name2url = make(map[string]string)
+		*url2name = make(map[string]string)
 	}
-	G.globalData.Tools[toolname] = true
-	G.globalData.Vartools[toolname] = varname
-	if varRequired {
-		G.globalData.toolsVarRequired[toolname] = true
+	(*name2url)[varname] = urls[0]
+	for _, url := range urls {
+		(*url2name)[url] = varname
 	}
-	G.globalData.PredefinedTools[toolname] = true
+}
+
+func (s *Suite) RegisterTool(tool *Tool) {
+	reg := G.globalData.Tools
+
+	if len(reg.byName) == 0 && len(reg.byVarname) == 0 {
+		reg = NewToolRegistry()
+		G.globalData.Tools = reg
+	}
+	if tool.Name != "" {
+		reg.byName[tool.Name] = tool
+	}
+	if tool.Varname != "" {
+		reg.byVarname[tool.Varname] = tool
+	}
 }
 
 func (s *Suite) CreateTmpFile(c *check.C, relFname, content string) (absFname string) {
@@ -140,9 +155,10 @@ func (s *Suite) ExpectFatalError(action func()) {
 }
 
 func (s *Suite) SetUpTest(c *check.C) {
-	G = GlobalVars{TestingData: &TestingData{VerifiedBits: make(map[string]bool)}}
+	G = GlobalVars{Testing: true}
 	G.logOut, G.logErr, G.debugOut = &s.stdout, &s.stderr, &s.stdout
 	s.UseCommandLine(c /* no arguments */)
+	G.opts.LogVerbose = true // To detect duplicate work being done
 }
 
 func (s *Suite) TearDownTest(c *check.C) {
