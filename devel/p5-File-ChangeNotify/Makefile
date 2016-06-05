@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2015/07/12 18:56:12 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2016/06/05 12:21:14 mef Exp $
 
-DISTNAME=	File-ChangeNotify-0.24
+DISTNAME=	File-ChangeNotify-0.26
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=File/}
 
@@ -17,7 +16,6 @@ DEPENDS+=	p5-MooseX-Params-Validate>=0.08:../../devel/p5-MooseX-Params-Validate
 DEPENDS+=	p5-MooseX-SemiAffordanceAccessor-[0-9]*:../../devel/p5-MooseX-SemiAffordanceAccessor
 DEPENDS+=	p5-namespace-autoclean-[0-9]*:../../devel/p5-namespace-autoclean
 
-PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/File/ChangeNotify/.packlist
 
 .include "../../mk/bsd.prefs.mk"
