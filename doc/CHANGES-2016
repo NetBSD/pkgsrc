@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2269 2016/06/05 10:12:13 mef Exp $
+$NetBSD: CHANGES-2016,v 1.2270 2016/06/05 11:24:44 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2952,3 +2952,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Carp-Clan to 6.06 [mef 2016-06-05]
 	Added devel/lua-coxpcall version 1.16.0 [alnsn 2016-06-05]
 	Updated devel/p5-Config-IniFiles to 2.91 [mef 2016-06-05]
+	Updated pkgtools/pkglint to 5.4.0 [rillig 2016-06-05]
