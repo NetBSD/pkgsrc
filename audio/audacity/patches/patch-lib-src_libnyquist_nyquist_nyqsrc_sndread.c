@@ -1,10 +1,10 @@
-$NetBSD: patch-lib-src_libnyquist_nyquist_nyqsrc_sndread.c,v 1.1 2015/04/21 01:33:39 rodent Exp $
+$NetBSD: patch-lib-src_libnyquist_nyquist_nyqsrc_sndread.c,v 1.2 2016/06/05 01:02:39 ryoon Exp $
 
 Fixes "error: invalid operands to binary" build failure.
 
---- lib-src/libnyquist/nyquist/nyqsrc/sndread.c.orig	2015-03-02 01:07:21.000000000 +0000
+--- lib-src/libnyquist/nyquist/nyqsrc/sndread.c.orig	2016-01-13 14:31:18.000000000 +0000
 +++ lib-src/libnyquist/nyquist/nyqsrc/sndread.c
-@@ -166,7 +166,7 @@ LVAL snd_make_read(
+@@ -167,7 +167,7 @@ LVAL snd_make_read(
  #ifdef XL_BIG_ENDIAN
          long format = SF_ENDIAN_LITTLE;
  #endif
@@ -12,4 +12,4 @@ Fixes "error: invalid operands to binary" build failure.
 +        susp->sf_info.format |= (int) format;
      }
  
-     susp->sndfile = sf_open((const char *) filename, SFM_READ, 
+     susp->sndfile = NULL;

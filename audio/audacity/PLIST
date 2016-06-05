@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2015/09/18 21:19:07 mrg Exp $
+@comment $NetBSD: PLIST,v 1.13 2016/06/05 01:02:38 ryoon Exp $
 bin/audacity
 man/man1/audacity.1
 share/appdata/audacity.appdata.xml
@@ -12,7 +12,6 @@ share/audacity/include/audacity/ImporterInterface.h
 share/audacity/include/audacity/ModuleInterface.h
 share/audacity/include/audacity/PluginInterface.h
 share/audacity/include/audacity/Types.h
-share/audacity/nyquist/bug.lsp
 share/audacity/nyquist/dspprims.lsp
 share/audacity/nyquist/envelopes.lsp
 share/audacity/nyquist/equalizer.lsp
@@ -50,25 +49,34 @@ share/audacity/nyquist/seqmidi.lsp
 share/audacity/nyquist/sndfnint.lsp
 share/audacity/nyquist/stk.lsp
 share/audacity/nyquist/system.lsp
+share/audacity/nyquist/test.lsp
+share/audacity/nyquist/upic.sal
+share/audacity/nyquist/velocity.lsp
 share/audacity/nyquist/xlinit.lsp
 share/audacity/nyquist/xm.lsp
 share/audacity/plug-ins/SilenceMarker.ny
 share/audacity/plug-ins/SoundFinder.ny
+share/audacity/plug-ins/SpectralEditMulti.ny
+share/audacity/plug-ins/SpectralEditParametricEQ.ny
+share/audacity/plug-ins/SpectralEditShelves.ny
 share/audacity/plug-ins/StudioFadeOut.ny
 share/audacity/plug-ins/adjustable-fade.ny
 share/audacity/plug-ins/beat.ny
 share/audacity/plug-ins/clicktrack.ny
 share/audacity/plug-ins/clipfix.ny
+share/audacity/plug-ins/crossfadeclips.ny
 share/audacity/plug-ins/crossfadetracks.ny
 share/audacity/plug-ins/delay.ny
 share/audacity/plug-ins/equalabel.ny
 share/audacity/plug-ins/highpass.ny
+share/audacity/plug-ins/limiter.ny
 share/audacity/plug-ins/lowpass.ny
 share/audacity/plug-ins/notch.ny
 share/audacity/plug-ins/pluck.ny
 share/audacity/plug-ins/rissetdrum.ny
 share/audacity/plug-ins/sample-data-export.ny
 share/audacity/plug-ins/tremolo.ny
+share/audacity/plug-ins/vocalrediso.ny
 share/audacity/plug-ins/vocalremover.ny
 share/audacity/plug-ins/vocoder.ny
 share/doc/audacity/LICENSE.txt
@@ -86,7 +94,7 @@ ${PLIST.nls}share/locale/bg/LC_MESSAGES/audacity.mo
 ${PLIST.nls}share/locale/bn/LC_MESSAGES/audacity.mo
 ${PLIST.nls}share/locale/bs/LC_MESSAGES/audacity.mo
 ${PLIST.nls}share/locale/ca/LC_MESSAGES/audacity.mo
-${PLIST.nls}share/locale/ca@valencia/LC_MESSAGES/audacity.mo
+${PLIST.nls}share/locale/ca_ES@valencia/LC_MESSAGES/audacity.mo
 ${PLIST.nls}share/locale/cs/LC_MESSAGES/audacity.mo
 ${PLIST.nls}share/locale/cy/LC_MESSAGES/audacity.mo
 ${PLIST.nls}share/locale/da/LC_MESSAGES/audacity.mo
@@ -117,8 +125,8 @@ ${PLIST.nls}share/locale/nb/LC_MESSAGES/audacity.mo
 ${PLIST.nls}share/locale/nl/LC_MESSAGES/audacity.mo
 ${PLIST.nls}share/locale/oc/LC_MESSAGES/audacity.mo
 ${PLIST.nls}share/locale/pl/LC_MESSAGES/audacity.mo
-${PLIST.nls}share/locale/pt/LC_MESSAGES/audacity.mo
 ${PLIST.nls}share/locale/pt_BR/LC_MESSAGES/audacity.mo
+${PLIST.nls}share/locale/pt_PT/LC_MESSAGES/audacity.mo
 ${PLIST.nls}share/locale/ro/LC_MESSAGES/audacity.mo
 ${PLIST.nls}share/locale/ru/LC_MESSAGES/audacity.mo
 ${PLIST.nls}share/locale/sk/LC_MESSAGES/audacity.mo
@@ -131,7 +139,7 @@ ${PLIST.nls}share/locale/tg/LC_MESSAGES/audacity.mo
 ${PLIST.nls}share/locale/tr/LC_MESSAGES/audacity.mo
 ${PLIST.nls}share/locale/uk/LC_MESSAGES/audacity.mo
 ${PLIST.nls}share/locale/vi/LC_MESSAGES/audacity.mo
-${PLIST.nls}share/locale/zh/LC_MESSAGES/audacity.mo
+${PLIST.nls}share/locale/zh_CN/LC_MESSAGES/audacity.mo
 ${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/audacity.mo
 share/mime/packages/audacity.xml
 share/pixmaps/audacity.xpm
