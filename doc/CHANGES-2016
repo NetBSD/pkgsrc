@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2263 2016/06/05 07:38:30 wen Exp $
+$NetBSD: CHANGES-2016,v 1.2264 2016/06/05 08:03:29 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2939,3 +2939,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/p5-XML-RSS to 1.59 [wen 2016-06-05]
 	Updated textproc/p5-Pod-Markdown to 3.005 [wen 2016-06-05]
 	Updated textproc/p5-Pod-Spell to 1.20 [wen 2016-06-05]
+	Updated textproc/p5-Pod-Weaver to 4.013 [wen 2016-06-05]
