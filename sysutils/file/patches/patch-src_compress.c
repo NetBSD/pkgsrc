@@ -1,15 +1,16 @@
-$NetBSD: patch-src_compress.c,v 1.1 2015/03/27 18:57:43 bsiegert Exp $
+$NetBSD: patch-src_compress.c,v 1.2 2016/06/05 13:57:37 mef Exp $
 sig_t is not defined by default on SunOS
 
---- src/compress.c.orig	2014-12-16 16:07:12.000000000 +0000
-+++ src/compress.c
-@@ -59,6 +59,9 @@ FILE_RCSID("@(#)$File: compress.c,v 1.77
- #define BUILTIN_DECOMPRESS
+--- src/compress.c.orig	2016-04-20 09:00:26.000000000 +0900
++++ src/compress.c	2016-06-05 22:54:06.000000000 +0900
+@@ -67,6 +67,10 @@ typedef void (*sig_t)(int);
  #include <zlib.h>
+ #define ZLIBSUPPORT
  #endif
++/* sig_t is not defined by default on SunOS */
 +#ifdef __sun
 +typedef void (*sig_t)(int);
 +#endif
- 
- private const struct {
- 	const char magic[8];
+ #ifdef DEBUG
+ int tty = -1;
+ #define DPRINTF(...)	do { \
