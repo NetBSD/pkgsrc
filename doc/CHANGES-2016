@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2295 2016/06/06 12:24:40 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2296 2016/06/06 12:28:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2985,3 +2985,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-tortoisehg to 3.8.3 [wiz 2016-06-06]
 	Updated mail/thunderbird-enigmail to 1.9.3 [wiz 2016-06-06]
 	Updated graphics/ImageMagick to 7.0.1.9 [wiz 2016-06-06]
+	Updated misc/khard to 0.9.0 [wiz 2016-06-06]
