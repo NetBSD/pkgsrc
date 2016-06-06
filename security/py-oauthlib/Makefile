@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2016/05/05 11:43:06 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2016/06/06 12:03:26 wiz Exp $
 
-DISTNAME=	oauthlib-1.1.1
+DISTNAME=	oauthlib-1.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security
-MASTER_SITES=	https://pypi.python.org/packages/79/56/cb4c1ff3244f68605a1042a7f257f96815246b0625e28991d268554adb16/
+MASTER_SITES=	${MASTER_SITE_PYPI:=o/oauthlib/}
 
 MAINTAINER=	imil@NetBSD.org
 HOMEPAGE=	https://pypi.python.org/pypi/oauthlib
