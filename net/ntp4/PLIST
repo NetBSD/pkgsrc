@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20.4.1 2016/05/13 12:33:51 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.20.4.2 2016/06/06 18:34:31 spz Exp $
 bin/sntp
 man/man1/sntp.1
 man/man5/ntp.conf.5
@@ -9,6 +9,7 @@ man/man8/ntp-wait.8
 man/man8/ntpd.8
 man/man8/ntpdc.8
 man/man8/ntpq.8
+${PLIST.ntpsnmpd}man/man8/ntpsnmpd.8
 man/man8/ntptrace.8
 ${PLIST.tickadj}sbin/calc_tickadj
 sbin/ntp-keygen
@@ -17,6 +18,7 @@ sbin/ntpd
 sbin/ntpdate
 sbin/ntpdc
 sbin/ntpq
+${PLIST.ntpsnmpd}sbin/ntpsnmpd
 ${PLIST.ntptime}sbin/ntptime
 sbin/ntptrace
 ${PLIST.tickadj}sbin/tickadj
