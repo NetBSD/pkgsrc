@@ -1,0 +1,17 @@
+$NetBSD: patch-config_delegates.mgk.in,v 1.1 2016/06/06 11:46:34 wiz Exp $
+
+Avoid tools directory in installed file.
+
+--- config/delegates.mgk.in.orig	2016-05-30 17:19:54.000000000 +0000
++++ config/delegates.mgk.in
+@@ -98,8 +98,8 @@
+   <!-- Read CMYK Postscript, EPS, and PDF  -->
+   <delegate decode="gs-cmyk" stealth="True" command='"@PSDelegate@" -q -dBATCH -dSAFER -dMaxBitmap=50000000 -dNOPAUSE -sDEVICE=@GSCMYKDevice@ -dTextAlphaBits=%u -dGraphicsAlphaBits=%u -r%s %s "-sOutputFile=%s" -- "%s" -c quit' />
+ 
+-  <delegate decode="hpg" command='"@HPGLDecodeDelegate@" -q -m eps -f `basename "%o"` "%i" && @MVDelegate@ -f `basename "%o"` "%o"' />
+-  <delegate decode="hpgl" command='"@HPGLDecodeDelegate@" -q -m eps -f `basename "%o"` "%i" && @MVDelegate@ -f `basename "%o"` "%o"' />
++  <delegate decode="hpg" command='"@HPGLDecodeDelegate@" -q -m eps -f `basename "%o"` "%i" && mv -f `basename "%o"` "%o"' />
++  <delegate decode="hpgl" command='"@HPGLDecodeDelegate@" -q -m eps -f `basename "%o"` "%i" && mv -f `basename "%o"` "%o"' />
+   <!-- Read HTML file  -->
+   <delegate decode="htm" command='"@HTMLDecodeDelegate@" -U -o "%o" "%i"' />
+   <!-- Read HTML file  -->
