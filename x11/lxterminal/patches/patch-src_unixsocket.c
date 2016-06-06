@@ -1,6 +1,6 @@
-$NetBSD: patch-src_unixsocket.c,v 1.1 2016/05/23 10:23:35 youri Exp $
+$NetBSD: patch-src_unixsocket.c,v 1.2 2016/06/06 13:35:35 youri Exp $
 
-string.h for memset
+string.h for memset, submitted upstream.
 
 --- src/unixsocket.c.orig	2015-05-21 08:43:09.000000000 -0700
 +++ src/unixsocket.c	2015-05-21 08:43:20.000000000 -0700
