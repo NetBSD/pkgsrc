@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.40 2015/03/28 15:23:14 gdt Exp $
+@comment $NetBSD: PLIST,v 1.41 2016/06/06 13:41:11 wiz Exp $
 bin/doxygen
-man/man1/doxygen.1
 ${PLIST.latex}share/doc/doxygen/doxygen_manual.pdf
 ${PLIST.latex}share/doc/doxygen/examples/afterdoc.cfg
 ${PLIST.latex}share/doc/doxygen/examples/afterdoc.h

@@ -1,8 +1,9 @@
-# $NetBSD: options.mk,v 1.10 2014/05/12 03:10:57 minskim Exp $
+# $NetBSD: options.mk,v 1.11 2016/06/06 13:41:11 wiz Exp $
 #
 PKG_OPTIONS_VAR=	PKG_OPTIONS.doxygen
-PKG_SUPPORTED_OPTIONS=	latex
-PKG_SUGGESTED_OPTIONS=	latex
+# XXX does not build as of 1.8.11, re-enable when it does
+PKG_SUPPORTED_OPTIONS=	# latex
+PKG_SUGGESTED_OPTIONS=	# latex
 
 .include "../../mk/bsd.options.mk"
 
@@ -11,7 +12,8 @@ PLIST_VARS+=		latex
 .if !empty(PKG_OPTIONS:Mlatex)
 PLIST.latex=		yes
 
-INSTALL_TARGET+=	install_docs
+CMAKE_ARGS+=		-Dbuild_doc:BOOL=YES
+BUILD_TARGET=		all docs
 
 # XXX Clearly separate what is build time vs runtime, and move
 # build-time dependencies into USE_TOOLS framework.
