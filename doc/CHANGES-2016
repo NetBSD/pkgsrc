@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2281 2016/06/06 08:56:13 taca Exp $
+$NetBSD: CHANGES-2016,v 1.2282 2016/06/06 09:35:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2971,3 +2971,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/file to 5.27 [mef 2016-06-05]
 	Updated net/p5-Regexp-Common-net-CIDR to 0.03 [wen 2016-06-05]
 	Updated security/openssh to 7.2.2nb1 [taca 2016-06-06]
+	Updated www/py-django to 1.9.7 [adam 2016-06-06]
