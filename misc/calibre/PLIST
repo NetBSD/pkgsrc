@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.59 2016/05/21 06:37:00 wiz Exp $
+@comment $NetBSD: PLIST,v 1.60 2016/06/06 11:53:49 wiz Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -131,6 +131,8 @@ lib/calibre/calibre/devices/nook/__init__.py
 lib/calibre/calibre/devices/nook/driver.py
 lib/calibre/calibre/devices/nuut2/__init__.py
 lib/calibre/calibre/devices/nuut2/driver.py
+lib/calibre/calibre/devices/paladin/__init__.py
+lib/calibre/calibre/devices/paladin/driver.py
 lib/calibre/calibre/devices/prs505/__init__.py
 lib/calibre/calibre/devices/prs505/driver.py
 lib/calibre/calibre/devices/prs505/sony_cache.py
@@ -1092,6 +1094,7 @@ lib/calibre/calibre/gui2/tweak_book/save.py
 lib/calibre/calibre/gui2/tweak_book/search.py
 lib/calibre/calibre/gui2/tweak_book/spell.py
 lib/calibre/calibre/gui2/tweak_book/templates.py
+lib/calibre/calibre/gui2/tweak_book/text_search.py
 lib/calibre/calibre/gui2/tweak_book/toc.py
 lib/calibre/calibre/gui2/tweak_book/ui.py
 lib/calibre/calibre/gui2/tweak_book/undo.py
