@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2016/04/08 15:22:03 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2016/06/06 11:58:09 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -165,6 +165,9 @@ ${PYSITELIB}/cryptography/hazmat/primitives/kdf/concatkdf.pyo
 ${PYSITELIB}/cryptography/hazmat/primitives/kdf/hkdf.py
 ${PYSITELIB}/cryptography/hazmat/primitives/kdf/hkdf.pyc
 ${PYSITELIB}/cryptography/hazmat/primitives/kdf/hkdf.pyo
+${PYSITELIB}/cryptography/hazmat/primitives/kdf/kbkdf.py
+${PYSITELIB}/cryptography/hazmat/primitives/kdf/kbkdf.pyc
+${PYSITELIB}/cryptography/hazmat/primitives/kdf/kbkdf.pyo
 ${PYSITELIB}/cryptography/hazmat/primitives/kdf/pbkdf2.py
 ${PYSITELIB}/cryptography/hazmat/primitives/kdf/pbkdf2.pyc
 ${PYSITELIB}/cryptography/hazmat/primitives/kdf/pbkdf2.pyo
