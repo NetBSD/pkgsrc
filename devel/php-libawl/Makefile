@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.10 2012/10/31 11:19:23 asau Exp $
+# $NetBSD: Makefile,v 1.11 2016/06/06 13:45:59 hauke Exp $
 #
 
-DISTNAME=	awl-${LIBAWL_VERSION}
-PKGNAME=	${PHP_PKG_PREFIX}-libawl-${LIBAWL_VERSION}
-LIBAWL_VERSION=	0.53
+DISTNAME=	${PHP_PKG_PREFIX}-libawl-${LIBAWL_VERSION}
+LIBAWL_VERSION=	0.56
 CATEGORIES=	devel
-MASTER_SITES=	http://debian.mcmillan.net.nz/packages/awl/
+MASTER_SITES=	-https://gitlab.com/davical-project/awl/repository/archive.tar.gz?ref=r${LIBAWL_VERSION}
 
-MAINTAINER=	jym@NetBSD.org
-HOMEPAGE=	http://andrew.mcmillan.net.nz/projects/awl/
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://gitlab.com/davical-project/awl
 COMMENT=	PHP Andrew's Web Libraries
 LICENSE=	gnu-gpl-v2
 
@@ -18,6 +17,8 @@ DEPENDS+=	${PHP_PKG_PREFIX}-iconv-[0-9]*:../../converters/php-iconv
 DEPENDS+=	${PHP_PKG_PREFIX}-gettext-[0-9]*:../../devel/php-gettext
 
 INSTALLATION_DIRS=	${LIBAWLDIR} ${LIBAWLDIR}/inc ${LIBAWLDIR}/dba
+
+WRKSRC=		${WRKDIR}/awl-r0.56-9abf998ba0179b9995747c7cc1a848b39cff0b3b
 
 do-install:
 	cd ${WRKSRC}/dba;					\
