@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.91.2.2 2016/06/06 18:29:05 spz Exp $
+# $NetBSD: Makefile,v 1.91.2.3 2016/06/06 18:34:31 spz Exp $
 #
 
 DISTNAME=	ntp-4.2.8p8
 PKGNAME=	${DISTNAME:S/-dev-/-/}
+#PKGREVISION=	0
 CATEGORIES=	net time
 MASTER_SITES=	http://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/ntp-4.2/
 
@@ -41,13 +42,15 @@ post-install:
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
-PLIST_VARS+=	ntptime tickadj timetrim
+PLIST_VARS+=	ntpsnmpd ntptime tickadj timetrim
 
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "Linux" || ${OPSYS} == "SunOS"
 PLIST.ntptime=		yes
 PLIST.tickadj=		yes
 .elif ${OPSYS} == "IRIX"
 PLIST.timetrim=		yes
+.elif ${OPSYS} == "Darwin"
+PLIST.tickadj=		yes
 .endif
 
 # chroot jail support
