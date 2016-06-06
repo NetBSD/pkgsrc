@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2015/07/21 19:17:51 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/06/06 12:28:37 wiz Exp $
 bin/davcontroller
 bin/khard
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
-${PYSITELIB}/${EGG_INFODIR}/pbr.json
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/davcontroller/__init__.py
@@ -17,6 +16,9 @@ ${PYSITELIB}/davcontroller/davcontroller.pyo
 ${PYSITELIB}/khard/__init__.py
 ${PYSITELIB}/khard/__init__.pyc
 ${PYSITELIB}/khard/__init__.pyo
+${PYSITELIB}/khard/address_book.py
+${PYSITELIB}/khard/address_book.pyc
+${PYSITELIB}/khard/address_book.pyo
 ${PYSITELIB}/khard/carddav_object.py
 ${PYSITELIB}/khard/carddav_object.pyc
 ${PYSITELIB}/khard/carddav_object.pyo
