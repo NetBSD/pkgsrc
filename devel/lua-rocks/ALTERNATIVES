@@ -1,0 +1,2 @@
+bin/luarocks @PREFIX@/bin/luarocks-@LUADOTVER@
+bin/luarocks-admin @PREFIX@/bin/luarocks-admin-@LUADOTVER@
