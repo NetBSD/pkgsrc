@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2015/07/02 18:47:57 khorben Exp $
+@comment $NetBSD: PLIST,v 1.43 2016/06/06 12:41:42 wiz Exp $
 bin/xscreensaver
 bin/xscreensaver-command
 bin/xscreensaver-getimage
@@ -95,7 +95,9 @@ libexec/xscreensaver/config/demon.xml
 libexec/xscreensaver/config/discrete.xml
 libexec/xscreensaver/config/distort.xml
 libexec/xscreensaver/config/drift.xml
+libexec/xscreensaver/config/dymaxionmap.xml
 libexec/xscreensaver/config/endgame.xml
+libexec/xscreensaver/config/energystream.xml
 libexec/xscreensaver/config/engine.xml
 libexec/xscreensaver/config/epicycle.xml
 libexec/xscreensaver/config/eruption.xml
@@ -139,6 +141,7 @@ libexec/xscreensaver/config/helix.xml
 libexec/xscreensaver/config/hexadrop.xml
 libexec/xscreensaver/config/hilbert.xml
 libexec/xscreensaver/config/hopalong.xml
+libexec/xscreensaver/config/hydrostat.xml
 libexec/xscreensaver/config/hypertorus.xml
 libexec/xscreensaver/config/hypnowheel.xml
 libexec/xscreensaver/config/ifs.xml
@@ -198,6 +201,7 @@ libexec/xscreensaver/config/pyro.xml
 libexec/xscreensaver/config/qix.xml
 libexec/xscreensaver/config/quasicrystal.xml
 libexec/xscreensaver/config/queens.xml
+libexec/xscreensaver/config/raverhoop.xml
 libexec/xscreensaver/config/rd-bomb.xml
 libexec/xscreensaver/config/ripples.xml
 libexec/xscreensaver/config/rocks.xml
@@ -238,6 +242,7 @@ libexec/xscreensaver/config/triangle.xml
 libexec/xscreensaver/config/tronbit.xml
 libexec/xscreensaver/config/truchet.xml
 libexec/xscreensaver/config/twang.xml
+libexec/xscreensaver/config/unicrud.xml
 libexec/xscreensaver/config/unknownpleasures.xml
 libexec/xscreensaver/config/vermiculate.xml
 libexec/xscreensaver/config/vidwhacker.xml
@@ -271,7 +276,9 @@ libexec/xscreensaver/demon
 libexec/xscreensaver/discrete
 libexec/xscreensaver/distort
 libexec/xscreensaver/drift
+libexec/xscreensaver/dymaxionmap
 libexec/xscreensaver/endgame
+libexec/xscreensaver/energystream
 libexec/xscreensaver/engine
 libexec/xscreensaver/epicycle
 libexec/xscreensaver/eruption
@@ -315,6 +322,7 @@ libexec/xscreensaver/helix
 libexec/xscreensaver/hexadrop
 libexec/xscreensaver/hilbert
 libexec/xscreensaver/hopalong
+libexec/xscreensaver/hydrostat
 libexec/xscreensaver/hypertorus
 libexec/xscreensaver/hypnowheel
 libexec/xscreensaver/ifs
@@ -375,6 +383,7 @@ libexec/xscreensaver/pyro
 libexec/xscreensaver/qix
 libexec/xscreensaver/quasicrystal
 libexec/xscreensaver/queens
+libexec/xscreensaver/raverhoop
 libexec/xscreensaver/rd-bomb
 libexec/xscreensaver/ripples
 libexec/xscreensaver/rocks
@@ -415,6 +424,7 @@ libexec/xscreensaver/triangle
 libexec/xscreensaver/tronbit
 libexec/xscreensaver/truchet
 libexec/xscreensaver/twang
+libexec/xscreensaver/unicrud
 libexec/xscreensaver/unknownpleasures
 libexec/xscreensaver/vermiculate
 libexec/xscreensaver/vidwhacker
@@ -489,7 +499,9 @@ man/man6/demon.6
 man/man6/discrete.6
 man/man6/distort.6
 man/man6/drift.6
+man/man6/dymaxionmap.6
 man/man6/endgame.6
+man/man6/energystream.6
 man/man6/engine.6
 man/man6/epicycle.6
 man/man6/eruption.6
@@ -533,6 +545,7 @@ man/man6/helix.6
 man/man6/hexadrop.6
 man/man6/hilbert.6
 man/man6/hopalong.6
+man/man6/hydrostat.6
 man/man6/hypertorus.6
 man/man6/hypnowheel.6
 man/man6/ifs.6
@@ -591,6 +604,7 @@ man/man6/pyro.6
 man/man6/qix.6
 man/man6/quasicrystal.6
 man/man6/queens.6
+man/man6/raverhoop.6
 man/man6/rd-bomb.6
 man/man6/ripples.6
 man/man6/rocks.6
@@ -631,6 +645,7 @@ man/man6/triangle.6
 man/man6/tronbit.6
 man/man6/truchet.6
 man/man6/twang.6
+man/man6/unicrud.6
 man/man6/unknownpleasures.6
 man/man6/vermiculate.6
 man/man6/vidwhacker.6
