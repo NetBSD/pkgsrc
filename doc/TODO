@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15981 2016/06/06 12:01:10 wiz Exp $
+$NetBSD: TODO,v 1.15982 2016/06/06 12:03:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1497,7 +1497,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-newt-0.52.18
 	o py-notify-0.3.1
 	o py-numpydoc-0.6.0
-	o py-oauthlib-1.1.2
 	o py-omniORBpy-3.7
 	o py-pdf-parser-0.6.4
 	o py-pendrell-0.3.7
