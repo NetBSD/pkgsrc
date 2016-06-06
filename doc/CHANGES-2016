@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2298 2016/06/06 12:42:41 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2299 2016/06/06 13:41:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2988,3 +2988,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated misc/khard to 0.9.0 [wiz 2016-06-06]
 	Updated x11/xscreensaver to 5.35 [wiz 2016-06-06]
 	Updated x11/xscreensaver-demo to 5.35 [wiz 2016-06-06]
+	Updated devel/doxygen to 1.8.11 [wiz 2016-06-06]
