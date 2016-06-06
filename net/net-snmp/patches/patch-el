@@ -1,29 +1,20 @@
-$NetBSD: patch-el,v 1.4 2013/03/17 00:15:29 gdt Exp $
+$NetBSD: patch-el,v 1.5 2016/06/06 14:11:35 he Exp $
 
---- perl/OID/OID.xs.orig	2012-10-09 22:28:58.000000000 +0000
+Adopt FreeBSD's patch to make this build with perl 5.24, ref.
+https://svnweb.freebsd.org/ports/head/net-mgmt/net-snmp/files/patch-perl5.23?view=co
+https://rt.perl.org/Public/Bug/Display.html?id=125907#txn-1363270
+https://bugs.gentoo.org/show_bug.cgi?id=582368
+
+--- perl/OID/OID.xs.orig	2016-06-06 13:52:38.000000000 +0000
 +++ perl/OID/OID.xs
-@@ -157,17 +157,22 @@ MODULE = NetSNMP::OID		PACKAGE = NetSNMP
- netsnmp_oid *
- nso_newptr(initstring)
-     char *initstring
-+    PREINIT:
-+	STRLEN	len;
-     CODE:
-         if (get_tree_head() == NULL)
-             netsnmp_init_mib();
-         RETVAL = malloc(sizeof(netsnmp_oid));
-         RETVAL->name = RETVAL->namebuf;
--        RETVAL->len = sizeof(RETVAL->namebuf)/sizeof(RETVAL->namebuf[0]);
--        if (!snmp_parse_oid(initstring, (oid *) RETVAL->name, &RETVAL->len)) {
-+        len = sizeof(RETVAL->namebuf)/sizeof(RETVAL->namebuf[0]);
-+        if (!snmp_parse_oid(initstring, (oid *) RETVAL->name, &len)) {
-             snmp_log(LOG_ERR, "Can't parse: %s\n", initstring);
-             RETVAL->len = 0;
-             free(RETVAL);
-             RETVAL = NULL;
-+	}
-+	else {
-+	    RETVAL->len = len;
-         }
-     OUTPUT:
-         RETVAL
+@@ -7,6 +7,10 @@
+ #include "perl.h"
+ #include "XSUB.h"
+ 
++#ifdef U64TYPE
++#define U64 U64pairU32
++#endif
++
+ #include <net-snmp/net-snmp-config.h>
+ #include <net-snmp/net-snmp-includes.h>
+ 

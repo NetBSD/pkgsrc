@@ -1,16 +1,14 @@
-$NetBSD: patch-perl_agent_Makefile.PL,v 1.1 2013/11/05 17:40:30 joerg Exp $
+$NetBSD: patch-perl_agent_Makefile.PL,v 1.2 2016/06/06 14:11:35 he Exp $
 
---- perl/agent/Makefile.PL.orig	2012-10-09 22:28:58.000000000 +0000
+Adopt FreeBSD's patch to make this build with perl 5.24, ref.
+https://svnweb.freebsd.org/ports/head/net-mgmt/net-snmp/files/patch-perl5.23?view=co
+https://rt.perl.org/Public/Bug/Display.html?id=125907#txn-1363270
+https://bugs.gentoo.org/show_bug.cgi?id=582368
+
+--- perl/agent/Makefile.PL.orig	2016-06-06 13:52:38.000000000 +0000
 +++ perl/agent/Makefile.PL
-@@ -79,7 +79,10 @@ sub InitMakeParams {
-     else {
- 	$opts = NetSNMPGetOpts();
- 	$Params{'LDDLFLAGS'} = "$Config{lddlflags} " . `$opts->{'nsconfig'} --ldflags`;
--	$Params{'LIBS'}   = `$opts->{'nsconfig'} --base-agent-libs`;
-+	chomp($Params{'LDDLFLAGS'});
-+	$Params{'LDDLFLAGS'} = $Params{'LDDLFLAGS'} . " " . $Config{'ccdlflags'};
-+	chomp($Params{'LDDLFLAGS'});
-+	$Params{'LIBS'} = `$opts->{'nsconfig'} --base-agent-libs`;
- 	chomp($Params{'LIBS'});
- 	$Params{'CCFLAGS'} = `$opts->{'nsconfig'} --cflags`;
- 	chomp($Params{'CCFLAGS'});
+@@ -1,3 +1,4 @@
++package agent;
+ use ExtUtils::MakeMaker;
+ require 5;
+ use Config;
