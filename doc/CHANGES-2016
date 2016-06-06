@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2292 2016/06/06 12:13:04 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2293 2016/06/06 12:16:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2982,3 +2982,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/py-oauthlib to 1.1.2 [wiz 2016-06-06]
 	Updated devel/py-setuptools to 22.0.5 [wiz 2016-06-06]
 	Updated devel/py-test to 2.9.2 [wiz 2016-06-06]
+	Updated devel/py-tortoisehg to 3.8.3 [wiz 2016-06-06]
