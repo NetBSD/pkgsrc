@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2016/06/06 13:35:35 youri Exp $
+$NetBSD: distinfo,v 1.3 2016/06/06 13:44:25 youri Exp $
 
 SHA1 (lxterminal-0.2.0.tar.gz) = 0c2269c43aa463e5dbf869d935745226b3c9943a
 RMD160 (lxterminal-0.2.0.tar.gz) = 3398b90578a1e319c9474c1bd3862698177b657d
 SHA512 (lxterminal-0.2.0.tar.gz) = 5bec0e16fa4d929203e4c206fb59fb0c88e02f29adbf527c31fa2a0007d3dddbdf12f2219e204360b5dd95a68a89410fcf937325f3a7eb1229b568c9c10c0e78
 Size (lxterminal-0.2.0.tar.gz) = 248698 bytes
 SHA1 (patch-src_setting.c) = d7bda3827ea714ccfd508e45737f49847249e16a
-SHA1 (patch-src_unixsocket.c) = 48444fd1c4f3eac137c91d2b947a7a2faaebaad3
+SHA1 (patch-src_unixsocket.c) = eda2fef63cb83b0f1c64c44ad65b6245a98a0241
