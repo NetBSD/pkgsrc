@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2016/04/11 19:01:43 ryoon Exp $
+# $NetBSD: Makefile,v 1.12 2016/06/06 11:17:11 wiz Exp $
 
 DISTNAME=	swift-3.0
 PKGREVISION=	2
@@ -15,6 +15,8 @@ DEPENDS+=	scons>=1.3:../../devel/scons
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
 
+CXXFLAGS+=	-std=c++11
+
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
 SUBST_CLASSES+=		path
@@ -30,6 +32,7 @@ do-configure:
 	${ECHO} "qt=\"${QTDIR}\"" > config.py ;\
 	${ECHO} "qt5=1" >> config.py ;\
 	${ECHO} "linkflags=\"-L${PREFIX}/lib -Wl,-R${QTDIR}/lib -Wl,-R${X11BASE}/lib -Wl,-R${BUILDLINK_DIR}/lib\"" >> config.py ; \
+	${ECHO} "ccflags=\"${CXXFLAGS}\"" >> config.py ; \
 	${ECHO} "allow_warnings=\"true\"" >> config.py ;
 
 do-build:
