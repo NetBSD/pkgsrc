@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q1,v 1.1.2.20 2016/06/04 19:57:15 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q1,v 1.1.2.21 2016/06/06 18:38:24 spz Exp $
 
 Changes to the packages collection and infrastructure on the pkgsrc-2016Q1 branch:
 
@@ -229,4 +229,10 @@ lang/php56: security fix
 
 Pullup ticket #5036 - requested by taca
 lang/php70: security fix
+
+Pullup ticket #5037 - requested by bsiegert
+net/ntp4: security update
+
+Pullup ticket #5040 - requested by taca
+net/ntp4: package build fixes
 
