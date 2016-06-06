@@ -1,32 +1,32 @@
-@comment $NetBSD: PLIST,v 1.7 2015/11/11 11:53:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2016/06/06 12:01:00 wiz Exp $
 bin/dul-receive-pack
 bin/dul-upload-pack
 bin/dulwich
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/pbr.json
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/docs/tutorial/conclusion.txt
 ${PYSITELIB}/docs/tutorial/file-format.txt
 ${PYSITELIB}/docs/tutorial/index.txt
 ${PYSITELIB}/docs/tutorial/introduction.txt
 ${PYSITELIB}/docs/tutorial/object-store.txt
+${PYSITELIB}/docs/tutorial/porcelain.txt
 ${PYSITELIB}/docs/tutorial/remote.txt
 ${PYSITELIB}/docs/tutorial/repo.txt
 ${PYSITELIB}/docs/tutorial/tag.txt
 ${PYSITELIB}/dulwich/__init__.py
 ${PYSITELIB}/dulwich/__init__.pyc
 ${PYSITELIB}/dulwich/__init__.pyo
-${PYSITELIB}/dulwich/_compat.py
-${PYSITELIB}/dulwich/_compat.pyc
-${PYSITELIB}/dulwich/_compat.pyo
 ${PYSITELIB}/dulwich/_diff_tree.c
 ${PYSITELIB}/dulwich/_diff_tree.so
 ${PYSITELIB}/dulwich/_objects.c
 ${PYSITELIB}/dulwich/_objects.so
 ${PYSITELIB}/dulwich/_pack.c
 ${PYSITELIB}/dulwich/_pack.so
+${PYSITELIB}/dulwich/archive.py
+${PYSITELIB}/dulwich/archive.pyc
+${PYSITELIB}/dulwich/archive.pyo
 ${PYSITELIB}/dulwich/client.py
 ${PYSITELIB}/dulwich/client.pyc
 ${PYSITELIB}/dulwich/client.pyo
@@ -96,6 +96,9 @@ ${PYSITELIB}/dulwich/porcelain.pyo
 ${PYSITELIB}/dulwich/protocol.py
 ${PYSITELIB}/dulwich/protocol.pyc
 ${PYSITELIB}/dulwich/protocol.pyo
+${PYSITELIB}/dulwich/reflog.py
+${PYSITELIB}/dulwich/reflog.pyc
+${PYSITELIB}/dulwich/reflog.pyo
 ${PYSITELIB}/dulwich/refs.py
 ${PYSITELIB}/dulwich/refs.pyc
 ${PYSITELIB}/dulwich/refs.pyo
@@ -215,6 +218,9 @@ ${PYSITELIB}/dulwich/tests/data/repos/simple_merge.git/refs/heads/master
 ${PYSITELIB}/dulwich/tests/data/repos/submodule/dotgit
 ${PYSITELIB}/dulwich/tests/data/tags/71/033db03a03c6a36721efcf1968dd8f8e0cf023
 ${PYSITELIB}/dulwich/tests/data/trees/70/c190eb48fa8bbb50ddc692a17b44cb781af7f6
+${PYSITELIB}/dulwich/tests/test_archive.py
+${PYSITELIB}/dulwich/tests/test_archive.pyc
+${PYSITELIB}/dulwich/tests/test_archive.pyo
 ${PYSITELIB}/dulwich/tests/test_blackbox.py
 ${PYSITELIB}/dulwich/tests/test_blackbox.pyc
 ${PYSITELIB}/dulwich/tests/test_blackbox.pyo
@@ -272,6 +278,9 @@ ${PYSITELIB}/dulwich/tests/test_porcelain.pyo
 ${PYSITELIB}/dulwich/tests/test_protocol.py
 ${PYSITELIB}/dulwich/tests/test_protocol.pyc
 ${PYSITELIB}/dulwich/tests/test_protocol.pyo
+${PYSITELIB}/dulwich/tests/test_reflog.py
+${PYSITELIB}/dulwich/tests/test_reflog.pyc
+${PYSITELIB}/dulwich/tests/test_reflog.pyo
 ${PYSITELIB}/dulwich/tests/test_refs.py
 ${PYSITELIB}/dulwich/tests/test_refs.pyc
 ${PYSITELIB}/dulwich/tests/test_refs.pyo
