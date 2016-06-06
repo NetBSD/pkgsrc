@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2016/03/12 11:12:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.40 2016/06/06 19:41:13 youri Exp $
 #
 
 DISTNAME=	libxklavier-5.4
@@ -19,6 +19,7 @@ PKGCONFIG_OVERRIDE=	libxklavier.pc.in
 
 CONFIGURE_ARGS+=	--enable-xkb-support
 CONFIGURE_ARGS+=	--with-xmodmap-base=${PREFIX}/share/xmodmap
+CONFIGURE_ARGS+=	--disable-introspection
 
 .include "../../mk/bsd.prefs.mk"
 .if exists(${X11BASE}/share/X11/xkb/rules/xorg.xml)
