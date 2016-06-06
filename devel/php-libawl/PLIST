@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/08/15 20:21:23 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2016/06/06 13:45:59 hauke Exp $
 lib/php/awl/dba/awl-tables.sql
 lib/php/awl/dba/grant-minimum-permissions.sh
 lib/php/awl/dba/grant-on-all-tables.sh
@@ -29,3 +29,5 @@ lib/php/awl/inc/classEditor.php
 lib/php/awl/inc/iCalendar.php
 lib/php/awl/inc/vCalendar.php
 lib/php/awl/inc/vComponent.php
+lib/php/awl/inc/vObject.php
+lib/php/awl/inc/vProperty.php
