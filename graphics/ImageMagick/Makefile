@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.224 2016/05/10 16:40:45 adam Exp $
+# $NetBSD: Makefile,v 1.225 2016/06/06 12:24:27 wiz Exp $
 
 .include "Makefile.common"
 
@@ -22,12 +22,10 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
 # This one used to be optional, but it depends on ghostscript even if it's
 # disabled so having a way to disable it seems pointless.
 CONFIGURE_ARGS+=	--with-gslib
-PKGCONFIG_OVERRIDE=	Magick++/lib/ImageMagick++.pc.in
+PKGCONFIG_OVERRIDE+=	MagickWand/MagickWand.pc.in
+PKGCONFIG_OVERRIDE+=	MagickCore/MagickCore.pc.in
+PKGCONFIG_OVERRIDE+=	MagickCore/ImageMagick.pc.in
 PKGCONFIG_OVERRIDE+=	Magick++/lib/Magick++.pc.in
-PKGCONFIG_OVERRIDE+=	magick/ImageMagick.pc.in
-PKGCONFIG_OVERRIDE+=	magick/MagickCore.pc.in
-PKGCONFIG_OVERRIDE+=	wand/MagickWand.pc.in
-PKGCONFIG_OVERRIDE+=	wand/Wand.pc.in
 
 GCC_REQD+=		2.95.3
 
