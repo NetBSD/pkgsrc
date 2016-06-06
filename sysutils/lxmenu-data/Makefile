@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/05/23 09:44:33 youri Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/06 02:02:33 youri Exp $
 
 DISTNAME=	lxmenu-data-0.1.5
 CATEGORIES=	x11
@@ -11,7 +11,7 @@ COMMENT=	LXDE menu data
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	gmake intltool
+USE_TOOLS+=	gettext gmake intltool msgfmt
 
 MENU_CONF=		share/examples/menus
 PKG_SYSCONFSUBDIR=	xdg
