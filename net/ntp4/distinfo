@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.25.2.1 2016/05/13 12:33:51 bsiegert Exp $
+$NetBSD: distinfo,v 1.25.2.2 2016/06/06 18:29:05 spz Exp $
 
-SHA1 (ntp-4.2.8p7.tar.gz) = a1f6300132cf1fc6884990353aca7340daf0be0d
-RMD160 (ntp-4.2.8p7.tar.gz) = d138a8a36cb0e20ae5a9cda2e0e9771fae4e1380
-SHA512 (ntp-4.2.8p7.tar.gz) = 7b80192f0e3c4a05cc05f167ab85593acca685d514dcd46fb8f42b4cd2a5525e76ba5e15fd7ff13220e4155de6aab5661554e0ded60bfb1d27a969c589958f55
-Size (ntp-4.2.8p7.tar.gz) = 7175313 bytes
+SHA1 (ntp-4.2.8p8.tar.gz) = 208ae3e2ce1237ad684c3bc818b6314d28636e46
+RMD160 (ntp-4.2.8p8.tar.gz) = 45d393abb749c46bbd3a5fd93a53c892613587c8
+SHA512 (ntp-4.2.8p8.tar.gz) = 253675667f78ad8855e961d02f6a120b68b75233c18ddb92cb6c9510fb3847f1672d0d6f93ad1eb11b14e3bdf78fdbc1458e516d906b763e8599490da6a4f225
+Size (ntp-4.2.8p8.tar.gz) = 7205710 bytes
 SHA1 (patch-include-ntp__syscall.h) = b247569339d09a88f2e143e355033ce7635ffe92
 SHA1 (patch-sntp_loc_pkgsrc) = 6e46ffc0cc2afcfdc1d01297cbe04cb80d103575
