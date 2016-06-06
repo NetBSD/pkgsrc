@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2016/01/30 11:09:18 alnsn Exp $
-bin/ldoc
+@comment $NetBSD: PLIST,v 1.2 2016/06/06 23:19:07 alnsn Exp $
+bin/ldoc${LUADOTVER}
 ${LUA_LDIR}/ldoc/SciTE.properties
 ${LUA_LDIR}/ldoc/builtin/coroutine.lua
 ${LUA_LDIR}/ldoc/builtin/debug.lua
