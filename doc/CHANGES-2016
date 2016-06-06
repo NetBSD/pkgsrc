@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2280 2016/06/05 14:05:34 wen Exp $
+$NetBSD: CHANGES-2016,v 1.2281 2016/06/06 08:56:13 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2970,3 +2970,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/entr to 3.5 [mef 2016-06-05]
 	Updated sysutils/file to 5.27 [mef 2016-06-05]
 	Updated net/p5-Regexp-Common-net-CIDR to 0.03 [wen 2016-06-05]
+	Updated security/openssh to 7.2.2nb1 [taca 2016-06-06]
