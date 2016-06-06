@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2297 2016/06/06 12:41:52 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2298 2016/06/06 12:42:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2987,3 +2987,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/ImageMagick to 7.0.1.9 [wiz 2016-06-06]
 	Updated misc/khard to 0.9.0 [wiz 2016-06-06]
 	Updated x11/xscreensaver to 5.35 [wiz 2016-06-06]
+	Updated x11/xscreensaver-demo to 5.35 [wiz 2016-06-06]
