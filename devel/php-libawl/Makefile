@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2016/06/06 13:45:59 hauke Exp $
+# $NetBSD: Makefile,v 1.12 2016/06/06 15:14:45 hauke Exp $
 #
 
 DISTNAME=	${PHP_PKG_PREFIX}-libawl-${LIBAWL_VERSION}
@@ -6,7 +6,7 @@ LIBAWL_VERSION=	0.56
 CATEGORIES=	devel
 MASTER_SITES=	-https://gitlab.com/davical-project/awl/repository/archive.tar.gz?ref=r${LIBAWL_VERSION}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	jym@NetBSD.org
 HOMEPAGE=	https://gitlab.com/davical-project/awl
 COMMENT=	PHP Andrew's Web Libraries
 LICENSE=	gnu-gpl-v2
