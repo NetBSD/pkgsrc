@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2016/03/04 16:55:45 fhajny Exp $
+# $NetBSD: Makefile,v 1.8 2016/06/06 14:56:16 fhajny Exp $
 
-DISTNAME=	barman-1.6.0
+DISTNAME=	barman-1.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pgbarman/}
