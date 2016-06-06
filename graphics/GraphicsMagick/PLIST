@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2015/12/13 07:13:36 richard Exp $
+@comment $NetBSD: PLIST,v 1.23 2016/06/06 11:46:04 wiz Exp $
 bin/GraphicsMagick++-config
 bin/GraphicsMagick-config
 bin/GraphicsMagickWand-config
@@ -151,7 +151,6 @@ lib/${PKGNAME}/modules-Q8/coders/preview.la
 lib/${PKGNAME}/modules-Q8/coders/ps.la
 lib/${PKGNAME}/modules-Q8/coders/ps2.la
 lib/${PKGNAME}/modules-Q8/coders/ps3.la
-lib/${PKGNAME}/modules-Q8/coders/psd.la
 lib/${PKGNAME}/modules-Q8/coders/pwp.la
 lib/${PKGNAME}/modules-Q8/coders/rgb.la
 lib/${PKGNAME}/modules-Q8/coders/rla.la
@@ -216,6 +215,8 @@ share/doc/GraphicsMagick/ChangeLog.2010
 share/doc/GraphicsMagick/ChangeLog.2011
 share/doc/GraphicsMagick/ChangeLog.2012
 share/doc/GraphicsMagick/ChangeLog.2013
+share/doc/GraphicsMagick/ChangeLog.2014
+share/doc/GraphicsMagick/ChangeLog.2015
 share/doc/GraphicsMagick/Copyright.txt
 share/doc/GraphicsMagick/NEWS.txt
 share/doc/GraphicsMagick/www/ChangeLog-2001.html
@@ -232,6 +233,7 @@ share/doc/GraphicsMagick/www/ChangeLog-2011.html
 share/doc/GraphicsMagick/www/ChangeLog-2012.html
 share/doc/GraphicsMagick/www/ChangeLog-2013.html
 share/doc/GraphicsMagick/www/ChangeLog-2014.html
+share/doc/GraphicsMagick/www/ChangeLog-2015.html
 share/doc/GraphicsMagick/www/Changelog.html
 share/doc/GraphicsMagick/www/Changes.html
 share/doc/GraphicsMagick/www/Copyright.html

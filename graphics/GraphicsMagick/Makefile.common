@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.13 2015/11/17 20:05:48 adam Exp $
+# $NetBSD: Makefile.common,v 1.14 2016/06/06 11:46:04 wiz Exp $
 # used by graphics/GraphicsMagick/Makefile
 # used by graphics/p5-GraphicsMagick/Makefile
 
 GM_MAJOR_VER=	1.3
-GM_MINOR_VER=	23
+GM_MINOR_VER=	24
 DISTVERSION=	${GM_MAJOR_VER}.${GM_MINOR_VER}
 DISTNAME=	GraphicsMagick-${DISTVERSION}
 CATEGORIES=	graphics
