@@ -1,6 +1,6 @@
-$NetBSD: patch-src_setting.c,v 1.1 2016/05/23 10:23:35 youri Exp $
+$NetBSD: patch-src_setting.c,v 1.2 2016/06/06 13:35:35 youri Exp $
 
-Fix glib function
+Fix glib function, patch accepted upstream.
 
 --- src/setting.c.orig	2014-10-21 15:29:18.000000000 +0000
 +++ src/setting.c
