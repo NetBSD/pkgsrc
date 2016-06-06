@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2300 2016/06/06 13:52:44 hauke Exp $
+$NetBSD: CHANGES-2016,v 1.2301 2016/06/06 14:12:10 he Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2990,3 +2990,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated x11/xscreensaver-demo to 5.35 [wiz 2016-06-06]
 	Updated devel/doxygen to 1.8.11 [wiz 2016-06-06]
 	Updated devel/php-libawl to 0.56 [hauke 2016-06-06]
+	Updated net/net-snmp to 5.7.3nb4 [he 2016-06-06]
