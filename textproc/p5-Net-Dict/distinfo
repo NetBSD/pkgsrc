@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 01:59:45 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/06/07 21:23:21 mef Exp $
 
-SHA1 (Net-Dict-2.19.tar.gz) = 610de3a8281687b026fb5d30b0a3287bd2ee7544
-RMD160 (Net-Dict-2.19.tar.gz) = beb1892dd33e72c1d27e5f49f74845a2abb561aa
-SHA512 (Net-Dict-2.19.tar.gz) = 843c0ad93dd5aa51d7d4256c5a9b652df0eeaa49d55c5abe6de8fb955c821bcaac1f4f9e1f680006dbfa5824cae7631254a034839ae52780b1b0c520a5ea6afd
-Size (Net-Dict-2.19.tar.gz) = 35984 bytes
+SHA1 (Net-Dict-2.21.tar.gz) = 791577d709bf5c73f1bea3f79e0ffcb3acfb517d
+RMD160 (Net-Dict-2.21.tar.gz) = 52a7be276a23174151df97d3d8c672a2d1aac6ad
+SHA512 (Net-Dict-2.21.tar.gz) = a32eb25d969a5730761535fd26423a48e3d4d25396d59d863bc07662f04217290a7dc8e074f9a1461e16ec80ca0e72bfdff76855c9ea032ba19bb8aded643e53
+Size (Net-Dict-2.21.tar.gz) = 36388 bytes
