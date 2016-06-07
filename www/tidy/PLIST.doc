@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST.doc,v 1.9 2015/01/28 07:13:55 wiz Exp $
+@comment $NetBSD: PLIST.doc,v 1.10 2016/06/07 07:44:25 wiz Exp $
 share/doc/tidy/Overview.html
 share/doc/tidy/api/annotated.html
-share/doc/tidy/api/annotated.js
+share/doc/tidy/api/annotated_dup.js
 share/doc/tidy/api/arrowdown.png
 share/doc/tidy/api/arrowright.png
 share/doc/tidy/api/bc_s.png
