@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2016/05/06 18:08:45 schmonz Exp $
+$NetBSD: distinfo,v 1.2 2016/06/07 11:12:02 schmonz Exp $
 
-SHA1 (cpputest/v3.7.1.zip) = be970ed8d4ebc9c66e52bb8f61e9293d8e39962e
-RMD160 (cpputest/v3.7.1.zip) = 6b95320ce051703266dd2095031b6ac00004c1ab
-SHA512 (cpputest/v3.7.1.zip) = 76fed0c2d17d4190b60f94f3f15193f5cf8062c9e677751f50084740d589eb4f35f1bfd59839e3badd3fe5e8a931f2c4abaa2bd7629384a1ab94fe2fd0b7b055
-Size (cpputest/v3.7.1.zip) = 2651468 bytes
+SHA1 (cpputest-3.8.tar.gz) = c68f8b59d0beb6d4e6953173ec3611f801cdb3a1
+RMD160 (cpputest-3.8.tar.gz) = c1a4fad966bd8c557fbe62dde0d418b7d1b529ec
+SHA512 (cpputest-3.8.tar.gz) = 42b9a98549e1296ab9dfcd40bb94e1ac634fc1e70ad6250654ca0fa254c63e0349ae9ccd0b9d72c4bde1f7baccde97e08ce3e6d1fff3e464c3d9e8ae5949185f
+Size (cpputest-3.8.tar.gz) = 2333302 bytes
