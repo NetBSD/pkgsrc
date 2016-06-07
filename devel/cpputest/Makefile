@@ -1,19 +1,15 @@
-# $NetBSD: Makefile,v 1.1 2016/05/06 18:08:45 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/07 11:12:02 schmonz Exp $
 
-GITHUB_PROJECT=		cpputest
-DISTNAME=		v3.7.1
-PKGNAME=		${GITHUB_PROJECT}-${DISTNAME}
+DISTNAME=		cpputest-3.8
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GITHUB:=cpputest/}
-EXTRACT_SUFX=		.zip
-DIST_SUBDIR=		${GITHUB_PROJECT}
+GITHUB_TAG=		v${PKGVERSION_NOREV}
+GITHUB_PROJECT=		cpputest
 
 MAINTAINER=		schmonz@NetBSD.org
-HOMEPAGE=		${MASTER_SITE_GITHUB:=cpputest/cpputest/}
+HOMEPAGE=		http://cpputest.github.io/
 COMMENT=		Unit testing and mocking framework for C/C++
 LICENSE=		modified-bsd
-
-WRKSRC=			${WRKDIR}/cpputest-3.7.1
 
 PKGCONFIG_OVERRIDE+=	cpputest.pc.in
 
