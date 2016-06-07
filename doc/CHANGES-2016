@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2309 2016/06/07 11:12:08 schmonz Exp $
+$NetBSD: CHANGES-2016,v 1.2310 2016/06/07 12:11:04 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2999,3 +2999,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/msmtp to 1.6.5 [leot 2016-06-07]
 	Updated www/tidy to 20091027nb7 [wiz 2016-06-07]
 	Updated devel/cpputest to 3.8 [schmonz 2016-06-07]
+	Added net/guacamole-server version 0.9.9 [jperkin 2016-06-07]
