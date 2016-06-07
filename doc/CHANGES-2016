@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2310 2016/06/07 12:11:04 jperkin Exp $
+$NetBSD: CHANGES-2016,v 1.2311 2016/06/07 13:15:46 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3000,3 +3000,6 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/tidy to 20091027nb7 [wiz 2016-06-07]
 	Updated devel/cpputest to 3.8 [schmonz 2016-06-07]
 	Added net/guacamole-server version 0.9.9 [jperkin 2016-06-07]
+	Updated textproc/p5-XML-DOM to 1.45 [mef 2016-06-07]
+	Updated textproc/p5-XML-LibXML-Simple to 0.97 [mef 2016-06-07]
+	Updated textproc/p5-XML-XPath to 1.37 [mef 2016-06-07]
