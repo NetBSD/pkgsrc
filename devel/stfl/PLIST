@@ -1,7 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/05/24 09:20:07 leot Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/06/07 17:57:11 joerg Exp $
 include/stfl.h
-lib/libstfl.a
-lib/libstfl.so
-lib/libstfl.so.${MAJOR}
-lib/libstfl.so.${MAJOR}.${MINOR}
+lib/libstfl.la
 lib/pkgconfig/stfl.pc
