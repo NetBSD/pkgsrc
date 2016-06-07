@@ -1,4 +1,4 @@
-$NetBSD: patch-xsd-3.2.0-2_xsd_cxx_parser_state-processor.cxx,v 1.1 2013/05/21 16:36:22 joerg Exp $
+$NetBSD: patch-xsd-3.2.0-2_xsd_cxx_parser_state-processor.cxx,v 1.2 2016/06/07 17:59:51 joerg Exp $
 
 --- xsd-3.2.0-2/xsd/cxx/parser/state-processor.cxx.orig	2013-05-14 20:08:50.000000000 +0000
 +++ xsd-3.2.0-2/xsd/cxx/parser/state-processor.cxx
@@ -7,7 +7,7 @@ $NetBSD: patch-xsd-3.2.0-2_xsd_cxx_parser_state-processor.cxx,v 1.1 2013/05/21 1
                  depth_ = depth;
  
 -              prefixes_.insert (prefixes_.end (),
-+              Particles::ConstIterator e(prefixes_.end ());
++              Particles::EraseIterator e(prefixes_.end ());
 +              prefixes_.insert (e,
                                  t.prefixes_.begin ().base (),
                                  t.prefixes_.end ().base ());
@@ -17,7 +17,7 @@ $NetBSD: patch-xsd-3.2.0-2_xsd_cxx_parser_state-processor.cxx,v 1.1 2013/05/21 1
                if (prefix)
                {
 -                prefixes_.insert (prefixes_.end (),
-+                Particles::ConstIterator e(prefixes_.end ());
++                Particles::EraseIterator e(prefixes_.end ());
 +                prefixes_.insert (e,
                                    t.prefixes_.begin ().base (),
                                    t.prefixes_.end ().base ());

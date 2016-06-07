@@ -1,28 +1,31 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 03:29:39 agc Exp $
+$NetBSD: distinfo,v 1.6 2016/06/07 17:59:50 joerg Exp $
 
 SHA1 (xsd-3.2.0+dep.tar.bz2) = d57fd3b326dcfab3af8fdc40fc3cf27fb9d7c7c5
 RMD160 (xsd-3.2.0+dep.tar.bz2) = da02eb15e607ee9b434f2a729c6f8a3da0981348
 SHA512 (xsd-3.2.0+dep.tar.bz2) = d0f09505535cd14dc3189d7d0e503d8e1794d9f4afef4540aa64335d75b834a5e5d6b74ea132ee18e84f6c4a87f1f9248f2819e4d09b6279b822e6af911aa1aa
 Size (xsd-3.2.0+dep.tar.bz2) = 1054603 bytes
-SHA1 (patch-libbackend-elements-1.6.1_backend-elements_indentation_cxx.hxx) = 8d57a1a35a69eef95d7aa0881721d03efd8b2f93
-SHA1 (patch-libcult-1.4.2_cult_cli_file-arguments.hxx) = e016fb9838c2eeca557c1001172721ad4f647e30
-SHA1 (patch-libcult-1.4.2_cult_containers_graph.txx) = 5e0976f3d8bf0f72eb575b95086d50d3c40fbf26
+SHA1 (patch-libbackend-elements-1.6.1_backend-elements_indentation_cxx.hxx) = 3cbaeabc498d9e2f16407d6ef0e2ef605dbd1d74
+SHA1 (patch-libcult-1.4.2_cult_cli_file-arguments.hxx) = 8a57ec5d9e9a7748dc6a5159adf66dbadea1b0da
+SHA1 (patch-libcult-1.4.2_cult_containers_deque.hxx) = 793897b894b67fc5b5054b4cb608772fcd13d714
+SHA1 (patch-libcult-1.4.2_cult_containers_graph.txx) = 6a692dea9792cdb7dec1f2fab72c7dd107415b71
+SHA1 (patch-libcult-1.4.2_cult_containers_map.hxx) = 9fab6ce4cb9cd9d0fb473b991a893563e5f90eab
+SHA1 (patch-libcult-1.4.2_cult_containers_vector.hxx) = 60584067b74083dea9094b9e464498bcb447cbc1
 SHA1 (patch-libcult-1.4.2_cult_mm_bits_evptr.hxx) = c0665ef9f6ee3c5ad1714988388d8c92cd9818ae
 SHA1 (patch-libcult-1.4.2_cult_mm_evptr.hxx) = d7aba021918d29ad5b5f4d5ea23e435b7d908e65
 SHA1 (patch-libcult-1.4.2_cult_mm_shptr.hxx) = b8f2d82601f43af706a65aedfcd7c1567e061db9
 SHA1 (patch-libcult-1.4.2_cult_mm_static-ptr.hxx) = 76225963ff8b710eafada502d4c0c918ffef416e
 SHA1 (patch-libcult-1.4.2_cult_types_fundamental.hxx) = 561512022a9c5d27fcf335ff569a0ec66535a1af
-SHA1 (patch-libfrontend-elements-1.1.1_frontend-elements_context.hxx) = 0c5f933efdfa8caf682c1744f6840eccb11e5193
+SHA1 (patch-libfrontend-elements-1.1.1_frontend-elements_context.hxx) = 7ad057e7f0bd3d65c82d1672561475375d094b5f
 SHA1 (patch-libxsd-frontend-1.15.0_xsd-frontend_parser.cxx) = 30a9b0aecf5605b6c37e72f1a3c8fbfce01140da
 SHA1 (patch-libxsd-frontend-1.15.0_xsd-frontend_semantic-graph_elements.cxx) = 717fca1076c9c4e33a3577cb6c23fa0a9ec1ceab
-SHA1 (patch-libxsd-frontend-1.15.0_xsd-frontend_semantic-graph_elements.hxx) = aeaf05bb21b0de2702a31cecc35a5d8bb7caece2
+SHA1 (patch-libxsd-frontend-1.15.0_xsd-frontend_semantic-graph_elements.hxx) = c9dd61f155ea0971cbd66e73aaa1c570f8691839
 SHA1 (patch-libxsd-frontend-1.15.0_xsd-frontend_semantic-graph_schema.hxx) = cbf09aa1272f6f163ce002db9f4578e5795eaaf3
 SHA1 (patch-libxsd-frontend-1.15.0_xsd-frontend_transformations_anonymous.cxx) = cfe1f7d86725ef2736e6198f5f8780e3656ce6f4
 SHA1 (patch-libxsd-frontend-1.15.0_xsd-frontend_transformations_schema-per-type.cxx) = 0ed23703a8f11984dc51e2bbdcc744b32a5be369
 SHA1 (patch-xsd-3.2.0-2_xsd_cxx_elements.cxx) = 8006dc3a16d945a9c256e0fd2a4c412ad63e8919
 SHA1 (patch-xsd-3.2.0-2_xsd_cxx_parser_elements.cxx) = 06702b980f04c5718b7c0aefb8d629466501f0d2
 SHA1 (patch-xsd-3.2.0-2_xsd_cxx_parser_generator.cxx) = e56dce412f315f1b88f426480dc794a7f69e569a
-SHA1 (patch-xsd-3.2.0-2_xsd_cxx_parser_state-processor.cxx) = 7f6032eda05fa030a0abfbdb4ebfee75b5f6bb47
+SHA1 (patch-xsd-3.2.0-2_xsd_cxx_parser_state-processor.cxx) = e1d6736290d096b4a3dc5ad7d3c6502066a0445b
 SHA1 (patch-xsd-3.2.0-2_xsd_cxx_tree_elements.cxx) = df8759581d58e9b230dc4569d0bce3d23d5ab8ec
 SHA1 (patch-xsd-3.2.0-2_xsd_cxx_tree_generator.cxx) = 79c5927337f1a35e1d6ac53fbba429f1fc0350de
 SHA1 (patch-xsd-3.2.0-2_xsd_xsd.cxx) = e89a36f5616416ad31fa47b1bba2018cb3fbaec9
