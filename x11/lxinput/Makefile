@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/05/23 10:46:22 youri Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/07 10:54:24 youri Exp $
 
 DISTNAME=	lxinput-0.3.5
 CATEGORIES=	x11
@@ -11,7 +11,7 @@ COMMENT=	Simple graphical front end to configure keyboard and mouse
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	gmake intltool pkg-config
+USE_TOOLS+=	gmake intltool pkg-config msgfmt
 
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
