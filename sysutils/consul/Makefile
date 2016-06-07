@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/05/06 13:40:17 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/07 18:00:20 joerg Exp $
 
 DISTNAME=	consul-0.6.4
 CATEGORIES=	sysutils
@@ -8,6 +8,8 @@ MAINTAINER=	filip@joyent.com
 HOMEPAGE=	http://www.consul.io/
 COMMENT=	Tool for service discovery, monitoring and configuration
 LICENSE=	mpl-2.0
+
+EXTRACT_USING=	bsdtar
 
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
