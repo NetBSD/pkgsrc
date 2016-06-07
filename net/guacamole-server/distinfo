@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2016/06/07 12:09:38 jperkin Exp $
+
+SHA1 (guacamole-server-0.9.9.tar.gz) = a1ab3bf1e39291e318182b85055587fd98b39de1
+RMD160 (guacamole-server-0.9.9.tar.gz) = b399132ffc69125d20db7f036d0a018ed2f8d88f
+SHA512 (guacamole-server-0.9.9.tar.gz) = 9676f61fed2121f222a2051569419395d50e2fbc4e73a2b7a8e359c66927d8b2a25a246a174c9f1f5bef9c3a5599302c6ab08fb932a5b52ab8d3dcbf943a376f
+Size (guacamole-server-0.9.9.tar.gz) = 679797 bytes
+SHA1 (patch-src_libguac_socket-fd.c) = 9f0d497834acf2d2bc0a7eaa040174a2eb48b512
