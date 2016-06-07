@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1115 2016/06/04 23:16:14 alnsn Exp $
+# $NetBSD: Makefile,v 1.1116 2016/06/07 12:10:41 jperkin Exp $
 #
 
 COMMENT=	Networking tools
@@ -193,6 +193,7 @@ SUBDIR+=	gt-itm
 SUBDIR+=	gtk-gnutella
 SUBDIR+=	gtk-vnc
 SUBDIR+=	gtk_wicontrol
+SUBDIR+=	guacamole-server
 SUBDIR+=	gupnp
 SUBDIR+=	gupnp-av
 SUBDIR+=	gupnp-dlna
