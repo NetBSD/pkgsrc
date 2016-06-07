@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2016/06/06 13:45:59 hauke Exp $
+$NetBSD: distinfo,v 1.10 2016/06/07 17:55:51 joerg Exp $
 
-SHA1 (php55-libawl-0.56.tar.gz) = 9d88cdd139349e2b2330565c656e7c631adc3d77
-RMD160 (php55-libawl-0.56.tar.gz) = 8f6b2265c7c95242c7fb251b2aa731dc675662d6
-SHA512 (php55-libawl-0.56.tar.gz) = 6336d6f938330eee0b51f04665776269d974086ba56a3c8f4b7f53e7e17b637d899e9b329aeba3dcd690673a1a95a8cf03ae8417ebb9f356294314790915886a
-Size (php55-libawl-0.56.tar.gz) = 769208 bytes
+SHA1 (libawl-0.56.tar.gz) = 9d88cdd139349e2b2330565c656e7c631adc3d77
+RMD160 (libawl-0.56.tar.gz) = 8f6b2265c7c95242c7fb251b2aa731dc675662d6
+SHA512 (libawl-0.56.tar.gz) = 6336d6f938330eee0b51f04665776269d974086ba56a3c8f4b7f53e7e17b637d899e9b329aeba3dcd690673a1a95a8cf03ae8417ebb9f356294314790915886a
+Size (libawl-0.56.tar.gz) = 769208 bytes
