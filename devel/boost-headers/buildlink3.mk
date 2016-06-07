@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.33 2016/05/13 20:47:32 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.34 2016/06/07 11:36:50 richard Exp $
 
 BUILDLINK_TREE+=	boost-headers
 
@@ -11,6 +11,7 @@ BUILDLINK_DEPMETHOD.boost-headers?=	build
 BUILDLINK_PKGSRCDIR.boost-headers?=	../../devel/boost-headers
 
 PTHREAD_OPTS+=		require
+PTHREAD_AUTO_VARS?=	yes
 .include "../../mk/pthread.buildlink3.mk"
 .endif # BOOST_HEADERS_BUILDLINK3_MK
 
