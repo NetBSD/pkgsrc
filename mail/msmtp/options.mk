@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.14 2015/04/08 05:31:59 wiz Exp $
+# $NetBSD: options.mk,v 1.15 2016/06/07 07:08:30 leot Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.msmtp
 
 PKG_OPTIONS_OPTIONAL_GROUPS=	ssl
-PKG_OPTIONS_GROUP.ssl=	gnutls ssl
+PKG_OPTIONS_GROUP.ssl=		gnutls ssl
 
 PKG_SUPPORTED_OPTIONS=	gsasl idn inet6 scripts secret
 PKG_SUGGESTED_OPTIONS=	inet6 ssl
