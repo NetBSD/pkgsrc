@@ -1,0 +1,15 @@
+Guacamole is an HTML5 web application that provides access to desktop
+environments using remote desktop protocols (such as VNC or RDP).  Guacamole
+is also the project that produces this web application, and provides an API
+that drives it.  This API can be used to power other similar applications or
+services.
+
+As an API, Guacamole provides a common and efficient means of streaming text
+data over a JavaScript-based tunnel using either HTTP or WebSocket, and a
+client implementation which supports the Guacamole protocol and renders the
+remote display when combined with a Guacamole protocol stream from the
+tunnel.
+
+It provides cross-browser mouse and keyboard events, an XML-driven on-screen
+keyboard, and synchronized nestable layers with hardware-accelerated
+compositing.
