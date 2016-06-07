@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.1 2016/05/24 09:20:07 leot Exp $
+$NetBSD: distinfo,v 1.2 2016/06/07 17:57:11 joerg Exp $
 
 SHA1 (stfl-0.24.tar.gz) = c770a20f719f5a7f0a691727098c51b43df9c33c
 RMD160 (stfl-0.24.tar.gz) = 374ef95e6de3e77991a469ce75c1c972d8c8a3be
 SHA512 (stfl-0.24.tar.gz) = 95df4574b1bc32d795751156dc5b93afbca3ba241607a3a55210c89dda61b9a26ad574bb5f729a0158c9052235dbf63d6c58b38e7f1061d14ab7062af6150fa0
 Size (stfl-0.24.tar.gz) = 45585 bytes
-SHA1 (patch-aa) = fc6e09cdb31feaa59422222ebf6ea6ac788c8813
-SHA1 (patch-ab) = 3ef69d82bf1c2d1477332f79f5535a59ed87b89a
+SHA1 (patch-aa) = d7da2b2e561bc972a7ac976a9deb48805ed4a090
+SHA1 (patch-ab) = 8577547eed804983f4c09028bc4fc48e8f73661d
 SHA1 (patch-ac) = dfaa67b489463ff4758161ffbf4bccad510f0d7f
 SHA1 (patch-ad) = 3a92ae825c02ced62802630ca82affedeab88a03
