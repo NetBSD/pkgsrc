@@ -1,14 +1,62 @@
-$NetBSD: patch-ab,v 1.1 2016/05/24 09:20:07 leot Exp $
+$NetBSD: patch-ab,v 1.2 2016/06/07 17:57:11 joerg Exp $
 
-Create a symbolic link also for the versioned SONAME.
+libtoolify.
 
---- Makefile.orig	2012-01-19 21:12:56.000000000 +0000
-+++ Makefile	2012-01-19 21:13:57.000000000 +0000
-@@ -65,6 +65,7 @@
+--- Makefile.orig	2015-02-12 13:14:33.000000000 +0000
++++ Makefile
+@@ -20,26 +20,23 @@
+ 
+ include Makefile.cfg
+ 
+-export CC = gcc -pthread
+-export CFLAGS += -I. -Wall -Os -ggdb -D_GNU_SOURCE -fPIC
+-export LDLIBS += -lncursesw
++export CFLAGS += -I. -Wall -D_GNU_SOURCE -pthread
++export LDLIBS += ${CURSES_LIB}
+ 
+-SONAME  := libstfl.so.0
+-VERSION := 0.24
++.SUFFIXES:	.c	.lo
+ 
+-all: libstfl.so.$(VERSION) libstfl.a example
++.c.lo:
++	libtool --mode=compile ${CC} -o $@ -c ${CFLAGS} $<
++
++all: libstfl.la
+ 
+ example: libstfl.a example.o
+ 
+-libstfl.a: public.o base.o parser.o dump.o style.o binding.o iconv.o \
+-           $(patsubst %.c,%.o,$(wildcard widgets/*.c))
+-	rm -f $@
+-	ar qc $@ $^
+-	ranlib $@
+-
+-libstfl.so.$(VERSION): public.o base.o parser.o dump.o style.o binding.o iconv.o \
+-                       $(patsubst %.c,%.o,$(wildcard widgets/*.c))
+-	$(CC) -shared -Wl,-soname,$(SONAME) -o $@ $(LDLIBS) $^
++libstfl.la: public.lo base.lo parser.lo dump.lo style.lo binding.lo iconv.lo \
++           $(patsubst %.c,%.lo,$(wildcard widgets/*.c))
++	libtool --mode=link ${CC} ${LDLIBS} -o libstfl.la -version-number 0:24 -rpath ${PREFIX}/lib \
++	    public.lo base.lo parser.lo dump.lo style.lo binding.lo iconv.lo \
++	    $(patsubst %.c,%.lo,$(wildcard widgets/*.c))
+ 
+ clean:
+ 	rm -f libstfl.a example core core.* *.o Makefile.deps
+@@ -60,14 +57,12 @@ Makefile.deps: *.c widgets/*.c *.h
+ install: all stfl.pc
+ 	mkdir -p $(DESTDIR)$(prefix)/$(libdir)/pkgconfig
+ 	mkdir -p $(DESTDIR)$(prefix)/include
+-	install -m 644 libstfl.a $(DESTDIR)$(prefix)/$(libdir)
+ 	install -m 644 stfl.h $(DESTDIR)$(prefix)/include/
  	install -m 644 stfl.pc $(DESTDIR)$(prefix)/$(libdir)/pkgconfig/
- 	install -m 644 libstfl.so.$(VERSION) $(DESTDIR)$(prefix)/$(libdir)
- 	ln -fs libstfl.so.$(VERSION) $(DESTDIR)$(prefix)/$(libdir)/libstfl.so
-+	ln -fs libstfl.so.$(VERSION) $(DESTDIR)$(prefix)/$(libdir)/$(SONAME)
+-	install -m 644 libstfl.so.$(VERSION) $(DESTDIR)$(prefix)/$(libdir)
+-	ln -fs libstfl.so.$(VERSION) $(DESTDIR)$(prefix)/$(libdir)/libstfl.so
++	libtool --mode=install ${BSD_INSTALL_LIB} libstfl.la $(DESTDIR)$(prefix)/$(libdir)
  
  stfl.pc: stfl.pc.in
- 	sed 's,@VERSION@,$(VERSION),g' < $< | sed 's,@PREFIX@,$(prefix),g' > $@
+-	sed 's,@VERSION@,$(VERSION),g' < $< | sed 's,@PREFIX@,$(prefix),g' > $@
++	sed -e 's,@VERSION@,$(VERSION),g' -e 's,@PREFIX@,$(prefix),g' -e 's|@COMPILER_RPATH_FLAG@|${COMPILER_RPATH_FLAG}|g' -e 's,@CURSES_LIB@,${CURSES_LIB},g' > $@ < $<
+ 
+ ifeq ($(FOUND_SPL),1)
+ include spl/Makefile.snippet
