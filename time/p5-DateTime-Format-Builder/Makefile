@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2016/01/30 13:06:09 mef Exp $
+# $NetBSD: Makefile,v 1.15 2016/06/07 20:58:39 mef Exp $
 
 DISTNAME=	DateTime-Format-Builder-0.81
 PKGNAME=	p5-${DISTNAME}00
@@ -18,6 +18,7 @@ DEPENDS+=	p5-Params-Validate>=0.72:../../devel/p5-Params-Validate
 DEPENDS+=	p5-Task-Weaken-[0-9]*:../../devel/p5-Task-Weaken
 # for make test
 BUILD_DEPENDS+=	p5-Package-Stash-[0-9]*:../../devel/p5-Package-Stash
+BUILD_DEPENDS+=	p5-Sub-Name-[0-9]*:../../devel/p5-Sub-Name
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=		auto/DateTime/Format/Builder/.packlist
