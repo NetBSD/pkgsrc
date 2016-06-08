@@ -32,7 +32,7 @@
         <loctext xml:lang='C'>OpenNTPD time server</loctext>
       </common_name>
       <documentation>
-        <manpage title='ntpd' section='8' />
+        <manpage title='ntpd' section='8' manpath='@PREFIX@/@PKGMANDIR@'/>
         <doc_link name='openntpd.org' uri='http://www.openntpd.org/' />
       </documentation>
     </template>

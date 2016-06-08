@@ -33,7 +33,7 @@
         <loctext xml:lang='C'>Sendmail SMTP Server</loctext>
       </common_name>
       <documentation>
-        <manpage title='sendmail' section='8' />
+        <manpage title='sendmail' section='8' manpath='@PREFIX@/@PKGMANDIR@'/>
         <doc_link name='sendmail.com' uri='http://www.sendmail.com/sm/open_source/docs/' />
       </documentation>
     </template>
