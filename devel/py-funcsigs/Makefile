@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2016/05/04 14:02:18 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2016/06/08 17:49:20 wiz Exp $
 
 DISTNAME=	funcsigs-1.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	https://pypi.python.org/packages/94/4a/db842e7a0545de1cdb0439bb80e6e42dfe82aaeaadd4072f2263a4fbed23/
+MASTER_SITES=	${MASTER_SITE_PYPI:=f/funcsigs/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://github.com/aliles/funcsigs/

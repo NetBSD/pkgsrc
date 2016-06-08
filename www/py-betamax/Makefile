@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2016/05/05 11:37:32 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2016/06/08 17:49:20 wiz Exp $
 
 DISTNAME=	betamax-0.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www
-MASTER_SITES=	https://pypi.python.org/packages/cc/bd/4879257f4d7c44bb3f19b9d48c9b5e5d1f4ea6efab2d4da48c6bd55468ff/
+MASTER_SITES=	${MASTER_SITE_PYPI:=b/betamax/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pypi.python.org/pypi/betamax
