@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2015/12/05 21:25:36 adam Exp $
+# $NetBSD: Makefile,v 1.6 2016/06/08 17:43:28 wiz Exp $
 
 DISTNAME=	astroid-1.3.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/a/astroid/
+MASTER_SITES=	${MASTER_SITE_PYPI:=a/astroid/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://bitbucket.org/logilab/astroid

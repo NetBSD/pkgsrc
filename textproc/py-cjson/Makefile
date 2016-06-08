@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2015/12/05 21:26:01 adam Exp $
+# $NetBSD: Makefile,v 1.4 2016/06/08 17:43:41 wiz Exp $
 #
 
 DISTNAME=	python-cjson-1.0.5
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}/1}
 CATEGORIES=	python textproc
-MASTER_SITES=	http://pypi.python.org/packages/source/p/python-cjson/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-cjson/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://ag-projects.com/

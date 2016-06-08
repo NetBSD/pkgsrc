@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2015/08/15 17:23:55 kleink Exp $
+# $NetBSD: Makefile,v 1.8 2016/06/08 17:43:24 wiz Exp $
 
 DISTNAME=	blinker-1.4
 PKGREVISION=	1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	http://pypi.python.org/packages/source/b/blinker/
+MASTER_SITES=	${MASTER_SITE_PYPI:=b/blinker/}
 
 MAINTAINER=	kleink@NetBSD.org
 HOMEPAGE=	http://pythonhosted.org/blinker/

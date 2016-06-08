@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.32 2014/12/01 11:27:09 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2016/06/08 17:43:43 wiz Exp $
 
 DISTNAME=	pytz-2014.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	time python
-MASTER_SITES=	http://pypi.python.org/packages/source/p/pytz/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytz/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	markd@NetBSD.org

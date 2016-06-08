@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2015/04/25 13:48:50 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2016/06/08 17:43:39 wiz Exp $
 
 DISTNAME=	bcrypt-1.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	python security
-MASTER_SITES=	https://pypi.python.org/packages/source/b/bcrypt/
+MASTER_SITES=	${MASTER_SITE_PYPI:=b/bcrypt/}
 
 MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	https://github.com/pyca/bcrypt/

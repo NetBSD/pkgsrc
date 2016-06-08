@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2014/04/11 17:58:35 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2016/06/08 17:43:40 wiz Exp $
 
 DISTNAME=	cssselect-0.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc
-MASTER_SITES=	http://pypi.python.org/packages/source/c/cssselect/
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/cssselect/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://packages.python.org/cssselect/

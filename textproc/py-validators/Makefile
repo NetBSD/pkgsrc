@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2014/10/05 22:22:49 rodent Exp $
+# $NetBSD: Makefile,v 1.4 2016/06/08 17:43:42 wiz Exp $
 
 DISTNAME=	validators-0.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	python textproc
-MASTER_SITES=	https://pypi.python.org/packages/source/v/validators/
+MASTER_SITES=	${MASTER_SITE_PYPI:=v/validators/}
 
 MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	https://github.com/kvesteri/validators

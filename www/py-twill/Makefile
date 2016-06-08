@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2015/12/05 21:26:06 adam Exp $
+# $NetBSD: Makefile,v 1.5 2016/06/08 17:43:47 wiz Exp $
 
 DISTNAME=	twill-1.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	python www
-MASTER_SITES=	https://pypi.python.org/packages/source/t/twill/
+MASTER_SITES=	${MASTER_SITE_PYPI:=t/twill/}
 
 MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	http://twill.idyll.org/

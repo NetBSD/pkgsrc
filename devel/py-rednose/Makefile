@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2015/06/30 22:51:56 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2016/06/08 17:43:29 wiz Exp $
 
 DISTNAME=	rednose-0.4.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/r/rednose/
+MASTER_SITES=	${MASTER_SITE_PYPI:=r/rednose/}
 
 MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	http://gfxmonk.net/dist/0install/rednose.xml

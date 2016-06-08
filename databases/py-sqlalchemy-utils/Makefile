@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2015/04/01 02:24:00 rodent Exp $
+# $NetBSD: Makefile,v 1.8 2016/06/08 17:43:22 wiz Exp $
 
 DISTNAME=	SQLAlchemy-Utils-0.29.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	databases python
-MASTER_SITES=	https://pypi.python.org/packages/source/S/SQLAlchemy-Utils/
+MASTER_SITES=	${MASTER_SITE_PYPI:=S/SQLAlchemy-Utils/}
 
 MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	https://github.com/kvesteri/sqlalchemy-utils

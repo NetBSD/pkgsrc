@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2015/03/15 19:11:21 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.15 2016/06/08 17:43:26 wiz Exp $
 
 DISTNAME=	testtools-1.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	https://pypi.python.org/packages/source/t/testtools/
+MASTER_SITES=	${MASTER_SITE_PYPI:=t/testtools/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/testing-cabal/testtools
