@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2016/01/30 03:39:01 mef Exp $
+# $NetBSD: Makefile,v 1.6 2016/06/08 19:25:08 wiz Exp $
 
 DISTNAME=	Hijk-0.26
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/A/AV/AVAR/
 
