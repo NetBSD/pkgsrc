@@ -30,7 +30,7 @@
         <loctext xml:lang='C'>PostgreSQL RDBMS</loctext>
       </common_name>
       <documentation>
-        <manpage title='postgres' section='1M' />
+        <manpage title='postgres' section='1M' manpath='@PREFIX@/@PKGMANDIR@'/>
         <doc_link name='postgresql.org' uri='http://postgresql.org' />
       </documentation>
     </template>

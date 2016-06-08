@@ -24,7 +24,7 @@
         <loctext xml:lang='C'>tenshi log analysis and reporting tool</loctext>
       </common_name>
       <documentation>
-        <manpage title='tenshi' section='8' />
+        <manpage title='tenshi' section='8' manpath='@PREFIX@/@PKGMANDIR@'/>
         <doc_link name='tenshi' uri='http://www.inversepath.com/tenshi.html' />
       </documentation>
     </template>

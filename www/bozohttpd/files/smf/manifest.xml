@@ -28,7 +28,7 @@
         <loctext xml:lang='C'>Bozotic HTTP server</loctext>
       </common_name>
       <documentation>
-        <manpage title='bozohttpd' section='8' manpath='man'/>
+        <manpage title='bozohttpd' section='8' manpath='@PREFIX@/@PKGMANDIR@'/>
       </documentation>
     </template>
   </service>
