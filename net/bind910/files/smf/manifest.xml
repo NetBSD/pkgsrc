@@ -27,7 +27,7 @@ CDDL HEADER END
         ident   "@(#)server.xml 1.8     07/06/19 SMI"
 -->
 <!-- Portions Copyright 2007 Vedran Bender -->
-<service_bundle type='manifest' name='@SMF_NAME@'>
+<service_bundle type='manifest' name='export'>
   <service name='@SMF_PREFIX@/@SMF_NAME@' type='service' version='1'>
     <dependency name='filesystem_minimal' grouping='require_all' restart_on='none' type='service'>
       <service_fmri value='svc:/system/filesystem/local' />
