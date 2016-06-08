@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2014/06/08 22:13:36 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/08 17:43:22 wiz Exp $
 
 DISTNAME=	pymongo-2.7.1
 PKGNAME=	${DISTNAME:S/py/${PYPKGPREFIX}-/1}
 CATEGORIES=	databases python
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pymongo/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pymongo/}
 
 MAINTAINER=	mishka@NetBSD.org
 HOMEPAGE=	http://github.com/mongodb/mongo-python-driver

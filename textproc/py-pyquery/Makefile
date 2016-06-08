@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2014/12/07 17:09:09 rodent Exp $
+# $NetBSD: Makefile,v 1.4 2016/06/08 17:43:41 wiz Exp $
 
 DISTNAME=	pyquery-1.2.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	python textproc
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pyquery/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyquery/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	rodent@NetBSD.org

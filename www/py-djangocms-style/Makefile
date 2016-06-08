@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2016/03/25 21:04:04 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2016/06/08 17:43:49 wiz Exp $
 
 DISTNAME=	djangocms-style-1.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	www python
-MASTER_SITES=	http://pypi.python.org/packages/source/d/djangocms-style/
+MASTER_SITES=	${MASTER_SITE_PYPI:=d/djangocms-style/}
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	https://github.com/divio/djangocms-style/

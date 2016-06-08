@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2015/04/05 21:38:32 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.24 2016/06/08 17:43:36 wiz Exp $
 
 DISTNAME=	boto-2.37.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python www
-MASTER_SITES=	https://pypi.python.org/packages/source/b/boto/
+MASTER_SITES=	${MASTER_SITE_PYPI:=b/boto/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/boto/boto/

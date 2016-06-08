@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2016/04/13 18:25:05 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2016/06/08 17:43:26 wiz Exp $
 
 DISTNAME=	setuptools_trial-0.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	http://pypi.python.org/packages/source/s/setuptools_trial/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/setuptools_trial/}
 
 MAINTAINER=	gdt@ir.bbn.com
 HOMEPAGE=	http://pypi.python.org/pypi/setuptools_trial/

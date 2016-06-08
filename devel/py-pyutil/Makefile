@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2015/12/05 21:25:39 adam Exp $
+# $NetBSD: Makefile,v 1.14 2016/06/08 17:43:26 wiz Exp $
 
 DISTNAME=	pyutil-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	http://pypi.python.org/packages/source/p/pyutil/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyutil/}
 
 MAINTAINER=	gdt@ir.bbn.com
 HOMEPAGE=	http://pypi.python.org/pypi/pyutil

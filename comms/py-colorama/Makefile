@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2014/12/05 14:52:52 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/08 17:43:21 wiz Exp $
 
 DISTNAME=	colorama-0.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	comms python
-MASTER_SITES=	https://pypi.python.org/packages/source/c/colorama/
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/colorama/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://pypi.python.org/pypi/colorama

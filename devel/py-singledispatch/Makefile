@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2015/04/13 23:12:41 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2016/06/08 17:43:24 wiz Exp $
 
 DISTNAME=	singledispatch-3.4.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	https://pypi.python.org/packages/source/s/singledispatch/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/singledispatch/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pypi.python.org/pypi/singledispatch

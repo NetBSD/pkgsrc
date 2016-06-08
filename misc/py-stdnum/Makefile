@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2015/12/05 21:25:50 adam Exp $
+# $NetBSD: Makefile,v 1.6 2016/06/08 17:43:36 wiz Exp $
 
 DISTNAME=	python-stdnum-0.9
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}/}
 CATEGORIES=	misc
-MASTER_SITES=	https://pypi.python.org/packages/source/p/python-stdnum/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-stdnum/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://arthurdejong.org/python-stdnum

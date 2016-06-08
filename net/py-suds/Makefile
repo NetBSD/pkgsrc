@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2015/12/05 21:25:54 adam Exp $
+# $NetBSD: Makefile,v 1.7 2016/06/08 17:43:36 wiz Exp $
 
 DISTNAME=	suds-0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
-MASTER_SITES=	http://pypi.python.org/packages/source/s/suds/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/suds/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://fedorahosted.org/suds/

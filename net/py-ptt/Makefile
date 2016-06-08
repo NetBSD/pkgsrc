@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/11/18 02:25:37 asau Exp $
+# $NetBSD: Makefile,v 1.4 2016/06/08 17:43:36 wiz Exp $
 #
 
 PTTVERS=	1.9.0
@@ -6,7 +6,7 @@ DISTNAME=	twitter-${PTTVERS}
 PKGNAME=	${PYPKGPREFIX}-ptt-${PTTVERS}
 PKGREVISION=	1
 CATEGORIES=	net python
-MASTER_SITES=	http://pypi.python.org/packages/source/t/twitter/
+MASTER_SITES=	${MASTER_SITE_PYPI:=t/twitter/}
 
 MAINTAINER=	imil@NetBSD.org
 HOMEPAGE=	http://mike.verdone.ca/twitter/

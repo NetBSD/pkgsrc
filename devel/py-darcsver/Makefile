@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2015/12/05 21:25:36 adam Exp $
+# $NetBSD: Makefile,v 1.7 2016/06/08 17:43:24 wiz Exp $
 
 DISTNAME=	darcsver-1.7.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	http://pypi.python.org/packages/source/d/darcsver/
+MASTER_SITES=	${MASTER_SITE_PYPI:=d/darcsver/}
 
 MAINTAINER=	gdt@ir.bbn.com
 HOMEPAGE=	https://pypi.python.org/pypi/darcsver/

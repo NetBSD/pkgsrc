@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2015/12/05 21:25:35 adam Exp $
+# $NetBSD: Makefile,v 1.8 2016/06/08 17:43:23 wiz Exp $
 
 DISTNAME=	lettuce-0.2.18
 CATEGORIES=	devel
-MASTER_SITES=	http://pypi.python.org/packages/source/l/lettuce/
+MASTER_SITES=	${MASTER_SITE_PYPI:=l/lettuce/}
 
 MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	http://lettuce.it/

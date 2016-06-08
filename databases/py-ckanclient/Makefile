@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2015/12/05 21:25:32 adam Exp $
+# $NetBSD: Makefile,v 1.12 2016/06/08 17:43:21 wiz Exp $
 
 DISTNAME=	ckanclient-0.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases
-MASTER_SITES=	http://pypi.python.org/packages/source/c/ckanclient/
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/ckanclient/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ckan.org/

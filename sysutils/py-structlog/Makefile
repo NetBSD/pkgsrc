@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2015/04/02 22:23:31 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2016/06/08 17:43:39 wiz Exp $
 
 DISTNAME=	structlog-15.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	python sysutils
-MASTER_SITES=	https://pypi.python.org/packages/source/s/structlog/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/structlog/}
 
 MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	http://www.structlog.org/

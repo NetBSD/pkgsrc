@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2014/01/25 10:30:08 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2016/06/08 17:43:33 wiz Exp $
 
 DISTNAME=	ranking-0.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	games python
-MASTER_SITES=	http://pypi.python.org/packages/source/r/ranking/
+MASTER_SITES=	${MASTER_SITE_PYPI:=r/ranking/}
 
 MAINTAINER=	kleink@NetBSD.org
 HOMEPAGE=	http://pythonhosted.org/ranking/

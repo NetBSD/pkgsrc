@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2015/01/25 12:00:49 adam Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/08 17:43:49 wiz Exp $
 
 DISTNAME=	mod_wsgi-metrics-1.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
-MASTER_SITES=	http://pypi.python.org/packages/source/m/mod_wsgi-metrics/
+MASTER_SITES=	${MASTER_SITE_PYPI:=m/mod_wsgi-metrics/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://code.google.com/p/modwsgi/

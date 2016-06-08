@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2014/12/31 13:57:32 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2016/06/08 17:43:46 wiz Exp $
 
 DISTNAME=	Flask-Mail-0.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www python
-MASTER_SITES=	http://pypi.python.org/packages/source/F/Flask-Mail/
+MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask-Mail/}
 
 MAINTAINER=	kleink@NetBSD.org
 HOMEPAGE=	http://pythonhosted.org/Flask-Mail/

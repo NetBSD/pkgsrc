@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2015/07/15 18:30:13 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/08 17:43:43 wiz Exp $
 
 DISTNAME=	FormEncode-1.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
-MASTER_SITES=	https://pypi.python.org/packages/source/F/FormEncode/
+MASTER_SITES=	${MASTER_SITE_PYPI:=F/FormEncode/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

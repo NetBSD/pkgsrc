@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2015/07/12 07:56:09 wen Exp $
+# $NetBSD: Makefile,v 1.20 2016/06/08 17:43:20 wiz Exp $
 
 DISTNAME=		simpy-3.0.8
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		cad math
-MASTER_SITES=		http://pypi.python.org/packages/source/s/simpy/
+MASTER_SITES=		${MASTER_SITE_PYPI:=s/simpy/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://simpy.readthedocs.org/

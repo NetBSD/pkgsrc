@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2015/12/05 21:25:36 adam Exp $
+# $NetBSD: Makefile,v 1.4 2016/06/08 17:43:32 wiz Exp $
 
 DISTNAME=	distorm3-3.3.0
 PKGNAME=	${PYPKGPREFIX}-distorm3-3.3.0
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/d/distorm3/
+MASTER_SITES=	${MASTER_SITE_PYPI:=d/distorm3/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pettai@NetBSD.org

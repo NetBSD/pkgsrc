@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2016/02/17 12:20:57 he Exp $
+# $NetBSD: Makefile,v 1.4 2016/06/08 17:43:37 wiz Exp $
 
 DISTNAME=	ncclient-0.4.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/n/ncclient/
+MASTER_SITES=	${MASTER_SITE_PYPI:=n/ncclient/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pypi.python.org/pypi/ncclient

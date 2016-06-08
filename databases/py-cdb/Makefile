@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2015/12/05 21:25:32 adam Exp $
+# $NetBSD: Makefile,v 1.8 2016/06/08 17:43:21 wiz Exp $
 
 DISTNAME=	python-cdb-0.35
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
 CATEGORIES=	databases
-MASTER_SITES=	https://pypi.python.org/packages/source/p/python-cdb/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-cdb/}
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://pilcrow.madison.wi.us/

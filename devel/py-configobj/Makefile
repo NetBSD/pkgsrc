@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2015/02/04 10:08:33 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/08 17:43:24 wiz Exp $
 
 DISTNAME=	configobj-5.0.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	http://pypi.python.org/packages/source/c/configobj/
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/configobj/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://www.voidspace.org.uk/python/configobj.html

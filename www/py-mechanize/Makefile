@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2015/12/05 21:26:06 adam Exp $
+# $NetBSD: Makefile,v 1.14 2016/06/08 17:43:46 wiz Exp $
 
 DISTNAME=	mechanize-0.2.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www
-MASTER_SITES=	http://pypi.python.org/packages/source/m/mechanize/ \
+MASTER_SITES=	${MASTER_SITE_PYPI:=m/mechanize/ \}
 		http://wwwsearch.sourceforge.net/mechanize/src/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2014/02/03 10:21:13 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/08 17:43:22 wiz Exp $
 
 DISTNAME=	sqlsoup-0.9.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
-MASTER_SITES=	https://pypi.python.org/packages/source/s/sqlsoup/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/sqlsoup/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://bitbucket.org/zzzeek/sqlsoup

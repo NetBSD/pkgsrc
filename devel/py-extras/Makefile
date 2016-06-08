@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2015/03/15 20:13:23 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.3 2016/06/08 17:43:29 wiz Exp $
 
 DISTNAME=	extras-0.0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	https://pypi.python.org/packages/source/e/extras/
+MASTER_SITES=	${MASTER_SITE_PYPI:=e/extras/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/testing-cabal/extras

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2014/07/28 02:38:24 wen Exp $
+# $NetBSD: Makefile,v 1.21 2016/06/08 17:43:36 wiz Exp $
 
 DISTNAME=	IPy-0.81
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/IPy/IP/}
 CATEGORIES=	net python
-MASTER_SITES=	http://pypi.python.org/packages/source/I/IPy/
+MASTER_SITES=	${MASTER_SITE_PYPI:=I/IPy/}
 
 MAINTAINER=	wenheping@gmail.com
 HOMEPAGE=	https://github.com/haypo/python-ipy/

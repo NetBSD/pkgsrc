@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2015/04/19 22:20:48 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/08 17:43:49 wiz Exp $
 
 DISTNAME=	SPARQLWrapper-1.6.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	python www
-MASTER_SITES=	https://pypi.python.org/packages/source/S/SPARQLWrapper/
+MASTER_SITES=	${MASTER_SITE_PYPI:=S/SPARQLWrapper/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://rdflib.github.io/sparqlwrapper/

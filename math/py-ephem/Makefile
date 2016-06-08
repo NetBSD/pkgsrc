@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2015/12/05 21:25:49 adam Exp $
+# $NetBSD: Makefile,v 1.12 2016/06/08 17:43:35 wiz Exp $
 
 DISTNAME=	pyephem-3.7.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pyephem/ephem/}
 CATEGORIES=	geography math
-MASTER_SITES=	http://pypi.python.org/packages/source/p/pyephem/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyephem/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.rhodesmill.org/brandon/projects/pyephem.html

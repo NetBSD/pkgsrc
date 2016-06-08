@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2014/05/13 17:08:44 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2016/06/08 17:43:28 wiz Exp $
 
 DISTNAME=	daemonize-2.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	https://pypi.python.org/packages/source/d/daemonize/
+MASTER_SITES=	${MASTER_SITE_PYPI:=d/daemonize/}
 
 MAINTAINER=	imil@NetBSD.org
 HOMEPAGE=	https://github.com/thesharp/daemonize

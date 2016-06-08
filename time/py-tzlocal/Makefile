@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2015/02/04 11:41:09 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/08 17:43:43 wiz Exp $
 
 DISTNAME=	tzlocal-1.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	time python
-MASTER_SITES=	http://pypi.python.org/packages/source/t/tzlocal/
+MASTER_SITES=	${MASTER_SITE_PYPI:=t/tzlocal/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

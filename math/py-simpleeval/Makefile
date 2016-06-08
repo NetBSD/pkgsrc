@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2015/12/05 21:25:49 adam Exp $
+# $NetBSD: Makefile,v 1.3 2016/06/08 17:43:36 wiz Exp $
 
 DISTNAME=	simpleeval-0.8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	http://pypi.python.org/packages/source/s/simpleeval/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/simpleeval/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://github.com/danthedeckie/simpleeval

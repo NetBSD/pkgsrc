@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2012/10/25 06:56:47 asau Exp $
+# $NetBSD: Makefile,v 1.3 2016/06/08 17:43:40 wiz Exp $
 #
 
 DISTNAME=	Unidecode-0.04.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc
-MASTER_SITES=	http://pypi.python.org/packages/source/U/Unidecode/
+MASTER_SITES=	${MASTER_SITE_PYPI:=U/Unidecode/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pypi.python.org/pypi/Unidecode/

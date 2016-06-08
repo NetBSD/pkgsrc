@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2014/07/05 19:33:17 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/08 17:43:35 wiz Exp $
 
 DISTNAME=	intervals-0.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/i/intervals/
+MASTER_SITES=	${MASTER_SITE_PYPI:=i/intervals/}
 
 MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	https://github.com/kvesteri/intervals

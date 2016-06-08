@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2015/12/05 21:25:58 adam Exp $
+# $NetBSD: Makefile,v 1.8 2016/06/08 17:43:39 wiz Exp $
 
 VERSION=		0.7.11
 DISTNAME=		cuisine-${VERSION}
 #PKGNAME=		cuisine-0.7.11
 CATEGORIES=		sysutils
-MASTER_SITES=		https://pypi.python.org/packages/source/c/cuisine/
+MASTER_SITES=		${MASTER_SITE_PYPI:=c/cuisine/}
 
 MAINTAINER=		imil@NetBSD.org
 HOMEPAGE=		https://github.com/sebastien/cuisine

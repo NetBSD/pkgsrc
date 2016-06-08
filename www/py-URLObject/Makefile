@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2015/07/15 18:37:02 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/08 17:43:44 wiz Exp $
 
 DISTNAME=	URLObject-2.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
-MASTER_SITES=	https://pypi.python.org/packages/source/U/URLObject/
+MASTER_SITES=	${MASTER_SITE_PYPI:=U/URLObject/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://github.com/zacharyvoase/urlobject

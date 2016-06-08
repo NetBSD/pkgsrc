@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2016/01/09 22:38:27 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2016/06/08 17:43:27 wiz Exp $
 
 DISTNAME=		linecache2-1.0.0
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=		1
 CATEGORIES=		devel python
-MASTER_SITES=		http://pypi.python.org/packages/source/l/linecache2/
+MASTER_SITES=		${MASTER_SITE_PYPI:=l/linecache2/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://pypi.python.org/pypi/linecache2

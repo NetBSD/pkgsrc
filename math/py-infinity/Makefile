@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2014/06/14 13:57:58 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/08 17:43:35 wiz Exp $
 
 DISTNAME=	infinity-1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel math python
-MASTER_SITES=	https://pypi.python.org/packages/source/i/infinity/
+MASTER_SITES=	${MASTER_SITE_PYPI:=i/infinity/}
 
 MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	https://github.com/kvesteri/infinity

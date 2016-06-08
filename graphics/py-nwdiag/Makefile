@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2015/03/15 17:47:15 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.12 2016/06/08 17:43:34 wiz Exp $
 #
 
 DISTNAME=	nwdiag-1.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics
-MASTER_SITES=	http://pypi.python.org/packages/source/n/nwdiag/
+MASTER_SITES=	${MASTER_SITE_PYPI:=n/nwdiag/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://blockdiag.com/nwdiag/build/html/

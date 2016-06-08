@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2013/07/02 11:15:55 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2016/06/08 17:43:41 wiz Exp $
 #
 
 DISTNAME=	anyjson-0.3.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc
-MASTER_SITES=	http://pypi.python.org/packages/source/a/anyjson/
+MASTER_SITES=	${MASTER_SITE_PYPI:=a/anyjson/}
 
 MAINTAINER=	pkgsrc-users@netbsd.org
 HOMEPAGE=	http://bitbucket.org/runeh/anyjson/

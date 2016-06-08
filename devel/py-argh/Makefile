@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2015/04/14 11:40:31 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2016/06/08 17:43:29 wiz Exp $
 
 DISTNAME=	argh-0.26.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/a/argh/
+MASTER_SITES=	${MASTER_SITE_PYPI:=a/argh/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://github.com/neithere/argh/

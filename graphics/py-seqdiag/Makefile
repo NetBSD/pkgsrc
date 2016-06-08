@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2015/03/15 19:31:45 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.15 2016/06/08 17:43:34 wiz Exp $
 
 DISTNAME=	seqdiag-0.9.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics
-MASTER_SITES=	http://pypi.python.org/packages/source/s/seqdiag/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/seqdiag/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://blockdiag.com/seqdiag/build/html/

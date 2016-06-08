@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2016/01/02 11:00:12 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/08 17:43:26 wiz Exp $
 
 DISTNAME=	nose-exclude-0.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	http://pypi.python.org/packages/source/n/nose-exclude/
+MASTER_SITES=	${MASTER_SITE_PYPI:=n/nose-exclude/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pypi.python.org/pypi/nose-exclude

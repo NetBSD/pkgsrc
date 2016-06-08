@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2014/02/17 00:20:28 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/08 17:43:41 wiz Exp $
 
 DISTNAME=	ejson-0.1.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	python textproc
-MASTER_SITES=	https://pypi.python.org/packages/source/e/ejson/
+MASTER_SITES=	${MASTER_SITE_PYPI:=e/ejson/}
 DIST_SUBDIR=	${PKGBASE:S/${PYPKGPREFIX}/py/1}
 
 MAINTAINER=	rodent@NetBSD.org

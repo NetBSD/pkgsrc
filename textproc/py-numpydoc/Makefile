@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2015/12/11 19:23:57 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2016/06/08 17:43:39 wiz Exp $
 
 DISTNAME=	numpydoc-0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	math python
-MASTER_SITES=	http://pypi.python.org/packages/source/n/numpydoc/
+MASTER_SITES=	${MASTER_SITE_PYPI:=n/numpydoc/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://pypi.python.org/pypi/numpydoc

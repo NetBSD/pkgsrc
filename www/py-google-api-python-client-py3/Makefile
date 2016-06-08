@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2015/04/13 23:12:43 rodent Exp $
+# $NetBSD: Makefile,v 1.5 2016/06/08 17:43:48 wiz Exp $
 
 DISTNAME=	google-api-python-client-py3-1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-py3//}
 CATEGORIES=	python www
-MASTER_SITES=	https://pypi.python.org/packages/source/g/google-api-python-client-py3/
+MASTER_SITES=	${MASTER_SITE_PYPI:=g/google-api-python-client-py3/}
 
 MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/google-api-python-client/

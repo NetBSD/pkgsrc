@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2015/12/05 21:26:05 adam Exp $
+# $NetBSD: Makefile,v 1.8 2016/06/08 17:43:45 wiz Exp $
 
 DISTNAME=	djangorestframework-0.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
-MASTER_SITES=	http://pypi.python.org/packages/source/d/djangorestframework/
+MASTER_SITES=	${MASTER_SITE_PYPI:=d/djangorestframework/}
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://django-rest-framework.org/

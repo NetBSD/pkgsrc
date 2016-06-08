@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2016/05/21 05:35:24 richard Exp $
+# $NetBSD: Makefile,v 1.11 2016/06/08 17:43:34 wiz Exp $
 
 DISTNAME=	pycha-0.7.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pycha/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pycha/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://bitbucket.org/lgs/pycha/

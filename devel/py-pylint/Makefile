@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2015/12/05 21:25:39 adam Exp $
+# $NetBSD: Makefile,v 1.7 2016/06/08 17:43:28 wiz Exp $
 
 DISTNAME=	pylint-1.4.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pylint/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pylint/}
 
 MAINTAINER=	helgoman@users.sourceforge.net
 HOMEPAGE=	http://www.logilab.org/project/pylint

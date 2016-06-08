@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2015/12/05 21:25:36 adam Exp $
+# $NetBSD: Makefile,v 1.6 2016/06/08 17:43:23 wiz Exp $
 
 DISTNAME=	pydoctor-0.5
 PKGNAME=	${DISTNAME:S/py/${PYPKGPREFIX}-/}
 CATEGORIES=	devel
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pydoctor/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pydoctor/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pypi.python.org/pypi/pydoctor/

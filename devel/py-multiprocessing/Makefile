@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2015/12/05 21:25:38 adam Exp $
+# $NetBSD: Makefile,v 1.9 2016/06/08 17:43:25 wiz Exp $
 
 DISTNAME=	multiprocessing-2.6.2.1
 PKGNAME=	${PYPKGPREFIX}-multiprocessing-2.6.2.1
 CATEGORIES=	devel
-MASTER_SITES=	http://pypi.python.org/packages/source/m/multiprocessing/
+MASTER_SITES=	${MASTER_SITE_PYPI:=m/multiprocessing/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pypi.python.org/pypi/multiprocessing/
