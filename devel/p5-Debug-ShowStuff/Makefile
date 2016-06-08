@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2015/11/27 13:14:33 mef Exp $
+# $NetBSD: Makefile,v 1.3 2016/06/08 19:22:48 wiz Exp $
 
 DISTNAME=	Debug-ShowStuff-1.16
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/M/MI/MIKO/
 
