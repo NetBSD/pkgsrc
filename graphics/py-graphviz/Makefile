@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2015/11/19 07:38:30 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/08 17:43:33 wiz Exp $
 
 DISTNAME=	pygraphviz-1.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	graphics
-MASTER_SITES=	http://pypi.python.org/packages/source/p/pygraphviz/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pygraphviz/}
 
 MAINTAINER=	helgoman@users.sourceforge.net
 HOMEPAGE=	http://networkx.lanl.gov/pygraphviz/index.html

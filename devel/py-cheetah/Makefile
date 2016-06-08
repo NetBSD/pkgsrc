@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2015/12/05 21:25:36 adam Exp $
+# $NetBSD: Makefile,v 1.19 2016/06/08 17:43:24 wiz Exp $
 
 DISTNAME=	Cheetah-2.4.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 PKGREVISION=	1
 CATEGORIES=	devel
-MASTER_SITES=	http://pypi.python.org/packages/source/C/Cheetah/
+MASTER_SITES=	${MASTER_SITE_PYPI:=C/Cheetah/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cheetahtemplate.org/

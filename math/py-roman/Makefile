@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2015/03/15 17:15:02 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.7 2016/06/08 17:43:35 wiz Exp $
 
 DISTNAME=	roman-2.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	http://pypi.python.org/packages/source/r/roman/
+MASTER_SITES=	${MASTER_SITE_PYPI:=r/roman/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

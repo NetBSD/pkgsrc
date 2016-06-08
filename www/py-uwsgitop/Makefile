@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2014/05/03 19:07:55 rodent Exp $
+# $NetBSD: Makefile,v 1.6 2016/06/08 17:43:47 wiz Exp $
 
 DISTNAME=	uwsgitop-0.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	python www
-MASTER_SITES=	https://pypi.python.org/packages/source/u/uwsgitop/
+MASTER_SITES=	${MASTER_SITE_PYPI:=u/uwsgitop/}
 
 MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	http://projects.unbit.it/uwsgi/wiki/StatsServer

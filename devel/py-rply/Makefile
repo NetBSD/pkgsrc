@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2015/04/01 02:45:52 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2016/06/08 17:43:28 wiz Exp $
 
 DISTNAME=	rply-0.7.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/r/rply/
+MASTER_SITES=	${MASTER_SITE_PYPI:=r/rply/}
 
 MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	https://github.com/alex/rply/
