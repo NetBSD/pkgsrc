@@ -62,7 +62,6 @@
 		    value='core,signal' />
 	</property_group>
 
-	<stability value='Unstable' />
 
 	<template>
 		<common_name>

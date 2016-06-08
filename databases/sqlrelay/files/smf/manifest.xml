@@ -32,7 +32,6 @@
       <exec_method type="method" name="start" exec="@PREFIX@/bin/sqlr-cachemanager" timeout_seconds="3600" />
       <exec_method type="method" name="stop" exec=":kill" timeout_seconds="3600" />
     </instance>
-    <stability value="Evolving" />
     <template>
       <common_name>
         <loctext xml:lang="C">SQL Relay</loctext>

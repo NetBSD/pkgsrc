@@ -20,7 +20,6 @@
     <property_group name="application" type="application">
       <propval name="config_file" type="astring" value="@PKG_SYSCONFDIR@/prosody.cfg.lua" />
     </property_group>
-    <stability value="Evolving" />
     <template>
       <common_name>
         <loctext xml:lang="C">Prosody XMPP server</loctext>

@@ -29,7 +29,6 @@
     <property_group name='startd' type='framework'>
       <propval name='ignore_error' type='astring' value='core,signal' />
     </property_group>
-    <stability value='Evolving' />
     <template>
       <common_name>
         <loctext xml:lang='C'>Postfix SMTP Server</loctext>

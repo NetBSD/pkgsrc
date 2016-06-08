@@ -18,7 +18,6 @@
     </method_context>
     <exec_method name='start' type='method' exec='@PREFIX@/@SMF_METHOD_FILE.mysqld@ start' timeout_seconds='18446744073709551615' />
     <exec_method name='stop' type='method' exec='@PREFIX@/@SMF_METHOD_FILE.mysqld@ stop' timeout_seconds='18446744073709551615' />
-    <stability value='Evolving' />
     <template>
       <common_name>
         <loctext xml:lang='C'>MySQL RDBMS</loctext>
