@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2015/12/05 21:26:06 adam Exp $
+# $NetBSD: Makefile,v 1.9 2016/06/08 17:43:46 wiz Exp $
 
 DISTNAME=	pendrell-0.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel www python
-MASTER_SITES=	http://pypi.python.org/packages/source/p/pendrell/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pendrell/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pendrell.olix0r.net/

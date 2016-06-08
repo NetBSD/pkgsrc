@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2014/12/31 13:57:32 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2016/06/08 17:43:43 wiz Exp $
 
 DISTNAME=	Flask-Cache-0.13.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www python
-MASTER_SITES=	http://pypi.python.org/packages/source/F/Flask-Cache/
+MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask-Cache/}
 
 MAINTAINER=	kleink@NetBSD.org
 HOMEPAGE=	http://packages.python.org/Flask-Cache/

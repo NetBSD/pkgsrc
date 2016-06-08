@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2014/06/01 23:34:08 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2016/06/08 17:43:42 wiz Exp $
 
 DISTNAME=	defusedxml-0.4.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	python textproc
-MASTER_SITES=	https://pypi.python.org/packages/source/d/defusedxml/
+MASTER_SITES=	${MASTER_SITE_PYPI:=d/defusedxml/}
 
 MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	https://bitbucket.org/tiran/defusedxml

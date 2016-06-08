@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2014/08/13 20:07:56 gls Exp $
+# $NetBSD: Makefile,v 1.18 2016/06/08 17:43:40 wiz Exp $
 
 DISTNAME=	Jinja2-2.7.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	textproc python
-MASTER_SITES=	http://pypi.python.org/packages/source/J/Jinja2/
+MASTER_SITES=	${MASTER_SITE_PYPI:=J/Jinja2/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://jinja.pocoo.org/

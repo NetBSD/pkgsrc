@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2015/03/21 21:23:30 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2016/06/08 17:43:33 wiz Exp $
 
 DISTNAME=	pyfits-3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	graphics
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pyfits/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyfits/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://www.stsci.edu/resources/software_hardware/pyfits
