@@ -38,7 +38,6 @@
       <exec_method name='start' type='method' exec='@LOCALBASE@/sbin/ndb_mgmd --reload -f @PKG_SYSCONFDIR@/mysql-cluster.ini' timeout_seconds='0' />
       <exec_method name='stop' type='method' exec=':kill' timeout_seconds='0' />
     </instance>
-    <stability value='Evolving' />
     <template>
       <common_name>
         <loctext xml:lang='C'>MySQL Cluster</loctext>

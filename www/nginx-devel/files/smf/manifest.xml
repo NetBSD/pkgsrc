@@ -25,7 +25,6 @@
     <property_group name="application" type="application">
       <propval name="config_file" type="astring" value="@PKG_SYSCONFDIR@/nginx.conf" />
     </property_group>
-    <stability value="Evolving" />
     <template>
       <common_name>
         <loctext xml:lang="C">Nginx HTTP daemon</loctext>
