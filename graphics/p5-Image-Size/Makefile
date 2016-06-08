@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2015/07/12 18:56:22 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2016/06/08 19:23:54 wiz Exp $
 
 DISTNAME=	Image-Size-3.300
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Image/}
 

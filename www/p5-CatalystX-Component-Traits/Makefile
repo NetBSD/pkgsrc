@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2015/07/12 18:56:34 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2016/06/08 19:25:01 wiz Exp $
 
 DISTNAME=	CatalystX-Component-Traits-0.19
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel www
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=CatalystX/}
 
