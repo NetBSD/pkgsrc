@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2015/12/11 13:17:10 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2016/06/08 19:24:17 wiz Exp $
 
 DISTNAME=	kpcli-3.0
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kpcli/}
 EXTRACT_SUFX=	.pl

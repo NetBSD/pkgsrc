@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.50 2016/04/24 06:33:25 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2016/06/08 19:23:54 wiz Exp $
 
 # Author requests that we package only "production" versions.
 # Check http://owl.phy.queensu.ca/~phil/exiftool/history.html
 DISTNAME=	Image-ExifTool-10.15
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	graphics perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Image/} \
 		http://owl.phy.queensu.ca/~phil/exiftool/

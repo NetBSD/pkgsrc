@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2015/06/12 10:50:05 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2016/06/08 19:23:51 wiz Exp $
 
 DISTNAME=	Locale-Currency-Format-1.30
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	finance perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/T/TN/TNGUYEN/}
 
