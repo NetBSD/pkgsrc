@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2015/03/15 19:31:45 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.16 2016/06/08 17:43:24 wiz Exp $
 
 DISTNAME=	Babel-1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 PKGREVISION=	1
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/B/Babel/
+MASTER_SITES=	${MASTER_SITE_PYPI:=B/Babel/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://babel.pocoo.org/

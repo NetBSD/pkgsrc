@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2014/11/09 20:47:58 rodent Exp $
+# $NetBSD: Makefile,v 1.6 2016/06/08 17:43:37 wiz Exp $
 #
 
 DISTNAME=	celery-3.1.16
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
-MASTER_SITES=	https://pypi.python.org/packages/source/c/celery/
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/celery/}
 
 MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	http://www.celeryproject.org/

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2015/10/01 23:11:41 rodent Exp $
+# $NetBSD: Makefile,v 1.14 2016/06/08 17:43:26 wiz Exp $
 
 DISTNAME=	pip-7.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	http://pypi.python.org/packages/source/p/pip/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pip/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.pip-installer.org/

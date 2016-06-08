@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2015/04/25 10:40:51 adam Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/08 17:43:32 wiz Exp $
 
 .include "../../devel/py-pyobjc/Makefile.common"
 
 DISTNAME=	pyobjc-framework-ServiceManagement-${PYOBJC_VERS}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	http://pypi.python.org/packages/source/p/pyobjc-framework-ServiceManagement/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyobjc-framework-ServiceManagement/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pythonhosted.org/pyobjc/

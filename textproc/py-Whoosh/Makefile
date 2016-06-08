@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2015/12/05 21:26:02 adam Exp $
+# $NetBSD: Makefile,v 1.9 2016/06/08 17:43:40 wiz Exp $
 #
 
 DISTNAME=	Whoosh-2.5.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc devel
-MASTER_SITES=	http://pypi.python.org/packages/source/W/Whoosh/
+MASTER_SITES=	${MASTER_SITE_PYPI:=W/Whoosh/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://whoosh.ca/
