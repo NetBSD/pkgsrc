@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2016/06/08 17:43:34 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2016/06/08 17:49:20 wiz Exp $
 
 DISTNAME=	imagesize-0.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics python
-#MASTER_SITES=	${MASTER_SITE_PYPI:=i/imagesize/}
-MASTER_SITES=	http://pypi.python.org/packages/53/72/6c6f1e787d9cab2cc733cf042f125abec07209a58308831c9f292504e826/
+MASTER_SITES=	${MASTER_SITE_PYPI:=i/imagesize/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/shibukawa/imagesize_py/

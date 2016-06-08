@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2016/04/24 09:44:35 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/08 17:49:19 wiz Exp $
 
 DISTNAME=	hypothesis-3.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	https://pypi.python.org/packages/7a/0c/f28f6d95fdbe4cfb810f1f5ae0e806400d39068f0f706c8e9772a6520dfd/
+MASTER_SITES=	${MASTER_SITE_PYPI:=h/hypothesis/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pypi.python.org/pypi/hypothesis/
