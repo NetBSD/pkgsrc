@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2015/12/05 21:25:42 adam Exp $
+# $NetBSD: Makefile,v 1.17 2016/06/08 17:43:33 wiz Exp $
 
 DISTNAME=		TTFQuery-1.0.5
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		fonts python
-MASTER_SITES=		http://pypi.python.org/packages/source/T/TTFQuery/
+MASTER_SITES=		${MASTER_SITE_PYPI:=T/TTFQuery/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://ttfquery.sourceforge.net/

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2015/04/02 22:36:59 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/08 17:43:42 wiz Exp $
 
 DISTNAME=	ftfy-3.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	python textproc
-MASTER_SITES=	https://pypi.python.org/packages/source/f/ftfy/
+MASTER_SITES=	${MASTER_SITE_PYPI:=f/ftfy/}
 
 MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	http://github.com/LuminosoInsight/python-ftfy

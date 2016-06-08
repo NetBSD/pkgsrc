@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2015/12/05 21:26:06 adam Exp $
+# $NetBSD: Makefile,v 1.4 2016/06/08 17:43:48 wiz Exp $
 
 DISTNAME=	python-digest-1.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	python www
-MASTER_SITES=	https://pypi.python.org/packages/source/p/python-digest/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-digest/}
 
 MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	http://bitbucket.org/akoha/python-digest/
