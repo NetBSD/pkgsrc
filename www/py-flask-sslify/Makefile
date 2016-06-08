@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2014/12/31 13:57:33 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2016/06/08 17:43:47 wiz Exp $
 
 DISTNAME=	Flask-SSLify-0.1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	python security www
-MASTER_SITES=	https://pypi.python.org/packages/source/F/Flask-SSLify/
+MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask-SSLify/}
 
 MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	https://github.com/kennethreitz/flask-sslify

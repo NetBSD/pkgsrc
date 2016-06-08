@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2016/03/06 14:31:58 adam Exp $
+# $NetBSD: Makefile,v 1.4 2016/06/08 17:43:49 wiz Exp $
 
 DISTNAME=	djangocms-googlemap-0.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
-MASTER_SITES=	http://pypi.python.org/packages/source/d/djangocms-googlemap/
+MASTER_SITES=	${MASTER_SITE_PYPI:=d/djangocms-googlemap/}
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	https://github.com/divio/djangocms-googlemap/

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2015/12/05 21:25:53 adam Exp $
+# $NetBSD: Makefile,v 1.3 2016/06/08 17:43:37 wiz Exp $
 
 DISTNAME=	beanstalkc-0.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
-MASTER_SITES=	https://pypi.python.org/packages/source/b/beanstalkc/
+MASTER_SITES=	${MASTER_SITE_PYPI:=b/beanstalkc/}
 
 MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	http://github.com/earl/beanstalkc

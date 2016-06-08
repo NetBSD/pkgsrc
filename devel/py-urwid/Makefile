@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2015/11/12 16:38:45 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2016/06/08 17:43:27 wiz Exp $
 
 DISTNAME=	urwid-1.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	https://pypi.python.org/packages/source/u/urwid/
+MASTER_SITES=	${MASTER_SITE_PYPI:=u/urwid/}
 
 MAINTAINER=	tonio@NetBSD.org
 HOMEPAGE=	http://urwid.org/

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2013/04/01 17:35:59 kleink Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/08 17:43:26 wiz Exp $
 
 DISTNAME=	speaklater-1.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
-MASTER_SITES=	http://pypi.python.org/packages/source/s/speaklater/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/speaklater/}
 
 MAINTAINER=	kleink@NetBSD.org
 HOMEPAGE=	http://github.com/mitsuhiko/speaklater

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2015/03/15 17:30:24 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.14 2016/06/08 17:43:33 wiz Exp $
 
 DISTNAME=	actdiag-0.5.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics
-MASTER_SITES=	http://pypi.python.org/packages/source/a/actdiag/
+MASTER_SITES=	${MASTER_SITE_PYPI:=a/actdiag/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://blockdiag.com/actdiag/build/html/

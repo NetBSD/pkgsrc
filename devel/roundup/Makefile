@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.48 2015/12/05 21:25:40 adam Exp $
+# $NetBSD: Makefile,v 1.49 2016/06/08 17:43:27 wiz Exp $
 
 DISTNAME=	roundup-1.4.19
 PKGREVISION=	2
 CATEGORIES=	devel
-MASTER_SITES=	http://pypi.python.org/packages/source/r/roundup/
+MASTER_SITES=	${MASTER_SITE_PYPI:=r/roundup/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://roundup.sourceforge.net/

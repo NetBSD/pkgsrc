@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2014/08/07 01:40:00 rodent Exp $
+# $NetBSD: Makefile,v 1.4 2016/06/08 17:43:27 wiz Exp $
 
 DISTNAME=	macholib-1.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/m/macholib/
+MASTER_SITES=	${MASTER_SITE_PYPI:=m/macholib/}
 
 MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	http://bitbucket.org/ronaldoussoren/macholib

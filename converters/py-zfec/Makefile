@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2015/12/05 21:25:31 adam Exp $
+# $NetBSD: Makefile,v 1.15 2016/06/08 17:43:21 wiz Exp $
 
 DISTNAME=	zfec-1.4.24
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	converters
-MASTER_SITES=	http://pypi.python.org/packages/source/z/zfec/
+MASTER_SITES=	${MASTER_SITE_PYPI:=z/zfec/}
 
 MAINTAINER=	gdt@ir.bbn.com
 HOMEPAGE=	http://pypi.python.org/pypi/zfec/

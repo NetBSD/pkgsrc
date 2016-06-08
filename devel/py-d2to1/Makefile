@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2015/04/05 23:17:05 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/08 17:43:29 wiz Exp $
 
 DISTNAME=	d2to1-0.2.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/d/d2to1/
+MASTER_SITES=	${MASTER_SITE_PYPI:=d/d2to1/}
 
 MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	http://pypi.python.org/pypi/d2to1

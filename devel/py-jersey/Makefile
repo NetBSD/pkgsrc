@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2015/12/05 21:25:38 adam Exp $
+# $NetBSD: Makefile,v 1.10 2016/06/08 17:43:25 wiz Exp $
 
 DISTNAME=	jersey-0.1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	http://pypi.python.org/packages/source/j/jersey/
+MASTER_SITES=	${MASTER_SITE_PYPI:=j/jersey/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pypi.python.org/pypi/jersey

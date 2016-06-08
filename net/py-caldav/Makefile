@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2015/12/05 21:25:53 adam Exp $
+# $NetBSD: Makefile,v 1.8 2016/06/08 17:43:37 wiz Exp $
 
 DISTNAME=	caldav-0.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net
-MASTER_SITES=	https://pypi.python.org/packages/source/c/caldav/
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/caldav/}
 
 MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	http://bitbucket.org/cyrilrbt/caldav

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2015/04/19 21:27:58 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/08 17:43:43 wiz Exp $
 
 DISTNAME=	isodate-0.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	python time
-MASTER_SITES=	https://pypi.python.org/packages/source/i/isodate/
+MASTER_SITES=	${MASTER_SITE_PYPI:=i/isodate/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://cheeseshop.python.org/pypi/isodate

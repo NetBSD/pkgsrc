@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2014/08/20 13:23:51 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/08 17:43:43 wiz Exp $
 
 DISTNAME=	WebOb-1.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
-MASTER_SITES=	http://pypi.python.org/packages/source/W/WebOb/
+MASTER_SITES=	${MASTER_SITE_PYPI:=W/WebOb/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://pypi.python.org/pypi/WebOb

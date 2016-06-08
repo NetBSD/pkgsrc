@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2015/12/05 21:25:37 adam Exp $
+# $NetBSD: Makefile,v 1.7 2016/06/08 17:43:23 wiz Exp $
 
 DISTNAME=	ipaddr-2.1.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	https://googledrive.com/host/0B6wLlfdySbEUMkh1ZWhpZk1pZmc/
-MASTER_SITES+=	https://pypi.python.org/packages/source/i/ipaddr/
+MASTER_SITES+=	${MASTER_SITE_PYPI:=i/ipaddr/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/ipaddr-py/

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2015/12/05 21:25:49 adam Exp $
+# $NetBSD: Makefile,v 1.18 2016/06/08 17:43:35 wiz Exp $
 
 DISTNAME=	networkx-1.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	http://pypi.python.org/packages/source/n/networkx/ \
+MASTER_SITES=	${MASTER_SITE_PYPI:=n/networkx/ \}
 		http://networkx.lanl.gov/download/networkx/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2015/07/16 11:36:20 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2016/06/08 17:43:46 wiz Exp $
 
 DISTNAME=	Paste-2.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www
-MASTER_SITES=	http://pypi.python.org/packages/source/P/Paste/
+MASTER_SITES=	${MASTER_SITE_PYPI:=P/Paste/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pythonpaste.org/

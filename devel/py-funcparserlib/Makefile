@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2015/03/15 17:20:19 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.6 2016/06/08 17:43:25 wiz Exp $
 
 DISTNAME=	funcparserlib-0.3.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	http://pypi.python.org/packages/source/f/funcparserlib/
+MASTER_SITES=	${MASTER_SITE_PYPI:=f/funcparserlib/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/funcparserlib/

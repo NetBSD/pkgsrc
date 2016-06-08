@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2015/08/28 15:18:24 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2016/06/08 17:43:48 wiz Exp $
 
 DISTNAME=	gunicorn-19.3.0
 PKGREVISION=	1
 CATEGORIES=	www
-MASTER_SITES=	https://pypi.python.org/packages/source/g/gunicorn/
+MASTER_SITES=	${MASTER_SITE_PYPI:=g/gunicorn/}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 
 MAINTAINER=	gls@NetBSD.org

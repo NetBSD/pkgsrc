@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2014/11/09 19:31:56 rodent Exp $
+# $NetBSD: Makefile,v 1.3 2016/06/08 17:43:34 wiz Exp $
 
 DISTNAME=	hy-0.10.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	lang python
-MASTER_SITES=	https://pypi.python.org/packages/source/h/hy/
+MASTER_SITES=	${MASTER_SITE_PYPI:=h/hy/}
 
 MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	http://hylang.org/

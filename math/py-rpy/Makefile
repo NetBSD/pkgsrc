@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.39 2015/04/14 11:40:31 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2016/06/08 17:43:35 wiz Exp $
 
 DISTNAME=	rpy2-2.5.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/rpy2/rpy/}
 PKGREVISION=	2
 CATEGORIES=	math python
-MASTER_SITES=	https://pypi.python.org/packages/source/r/rpy2/
+MASTER_SITES=	${MASTER_SITE_PYPI:=r/rpy2/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://rpy.sourceforge.net/
