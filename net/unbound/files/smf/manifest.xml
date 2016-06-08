@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
-<!-- $NetBSD: manifest.xml,v 1.1 2015/10/21 21:30:14 joerg Exp $ -->
+<!-- $NetBSD: manifest.xml,v 1.2 2016/06/08 09:46:04 jperkin Exp $ -->
 <!DOCTYPE service_bundle SYSTEM "/usr/share/lib/xml/dtd/service_bundle.dtd.1">
-<service_bundle type="manifest" name="@SMF_NAME@">
+<service_bundle type="manifest" name="export">
   <service name="@SMF_PREFIX@/@SMF_NAME@" type="service" version="1">
     <create_default_instance enabled="false" />
     <single_instance />
