@@ -121,11 +121,11 @@ sub GenerateHash ($$) {
 		if ( $included =~ m|options.mk| )	{ next;}
 		if ( $included =~ m|enigmail.mk| )	{ next;}
 
-		$included =~ s,\${.CURDIR},$shortname,;
-		if ($included =~ /\${([^}]+)}/ ) { 
+		$included =~ s,\$\{.CURDIR},$shortname,;
+		if ($included =~ /\$\{([^}]+)}/ ) { 
 		    my($varname) = $1;
 		    my($value) = show_var($varname, $shortdir);
-		    $included =~ s/\${[^}]+}/$value/;
+		    $included =~ s/\$\{[^}]+}/$value/;
 		    if ($value eq '') {
 			print STDERR 
 $FILE, ': ', __LINE__, ' Value ${', $varname, '} is empty at ', $shortdir, "\n";
