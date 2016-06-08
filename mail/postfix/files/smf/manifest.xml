@@ -35,7 +35,7 @@
         <loctext xml:lang='C'>Postfix SMTP Server</loctext>
       </common_name>
       <documentation>
-        <manpage title='postfix' section='1' />
+        <manpage title='postfix' section='1' manpath='@PREFIX@/@PKGMANDIR@'/>
         <doc_link name='postfix.org' uri='http://www.postfix.org/documentation.html' />
       </documentation>
     </template>

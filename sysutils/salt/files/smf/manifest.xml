@@ -31,7 +31,7 @@
           <loctext xml:lang='C'>Salt Master daemon</loctext>
         </common_name>
         <documentation>
-          <manpage title='salt-master' section='1' manpath='man'/>
+          <manpage title='salt-master' section='1' manpath='@PREFIX@/@PKGMANDIR@'/>
         </documentation>
       </template>
     </instance>
@@ -51,7 +51,7 @@
           <loctext xml:lang='C'>Salt Minion daemon</loctext>
         </common_name>
         <documentation>
-          <manpage title='salt-minion' section='1' manpath='man'/>
+          <manpage title='salt-minion' section='1' manpath='@PREFIX@/@PKGMANDIR@'/>
         </documentation>
       </template>
     </instance>

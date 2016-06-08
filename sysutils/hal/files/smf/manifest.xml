@@ -71,7 +71,7 @@
 			</loctext>
 		</common_name>
 		<documentation>
-			<manpage title='hald' section='8' />
+			<manpage title='hald' section='8' manpath='@PREFIX@/@PKGMANDIR@'/>
 		</documentation>
 	</template>
 

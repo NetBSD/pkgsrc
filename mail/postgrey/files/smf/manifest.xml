@@ -43,7 +43,7 @@
         <loctext xml:lang='C'>Postgrey Greylisting for Postfix</loctext>
       </common_name>
       <documentation>
-        <manpage title='postgrey' section='1' />
+        <manpage title='postgrey' section='1' manpath='@PREFIX@/@PKGMANDIR@'/>
         <doc_link name='postgrey website' uri='http://postgrey.schweikert.ch' />
       </documentation>
     </template>
