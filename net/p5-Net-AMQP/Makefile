@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2015/06/12 10:50:45 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2016/06/08 19:24:09 wiz Exp $
 
 DISTNAME=	Net-AMQP-0.06
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/C/CH/CHIPS/
 

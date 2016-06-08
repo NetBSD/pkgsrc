@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2016/04/14 12:45:29 mef Exp $
+# $NetBSD: Makefile,v 1.18 2016/06/08 19:22:43 wiz Exp $
 
 DISTNAME=	Config-AutoConf-0.313
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Config/}
 MASTER_SITES+=	${MASTER_SITE_PERL_CPAN:=../../authors/id/A/AM/AMBS/irConfig/}

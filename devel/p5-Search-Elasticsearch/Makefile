@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2016/04/14 12:50:34 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2016/06/08 19:23:29 wiz Exp $
 
 DISTNAME=	Search-Elasticsearch-2.00
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	https://cpan.metacpan.org/authors/id/D/DR/DRTECH/
 #ASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Search/}

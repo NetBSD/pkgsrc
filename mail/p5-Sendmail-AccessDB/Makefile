@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2016/01/18 14:41:01 mef Exp $
+# $NetBSD: Makefile,v 1.26 2016/06/08 19:24:00 wiz Exp $
 
 DISTNAME=	Sendmail-AccessDB-1.04
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Sendmail/}
 

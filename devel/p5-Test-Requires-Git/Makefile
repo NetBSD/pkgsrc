@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2016/04/16 13:42:24 mef Exp $
+# $NetBSD: Makefile,v 1.3 2016/06/08 19:23:40 wiz Exp $
 
 DISTNAME=	Test-Requires-Git-1.005
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/B/BO/BOOK/
 

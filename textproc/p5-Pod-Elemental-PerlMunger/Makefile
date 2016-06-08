@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2016/06/05 08:07:19 wen Exp $
+# $NetBSD: Makefile,v 1.14 2016/06/08 19:24:32 wiz Exp $
 
 DISTNAME=	Pod-Elemental-PerlMunger-0.200006
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Pod/}
 

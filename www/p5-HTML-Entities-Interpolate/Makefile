@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2016/01/18 11:42:36 mef Exp $
+# $NetBSD: Makefile,v 1.11 2016/06/08 19:25:02 wiz Exp $
 #
 
 DISTNAME=	HTML-Entities-Interpolate-1.09
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTML/}
 EXTRACT_SUFX=	.tgz

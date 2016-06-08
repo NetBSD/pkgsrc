@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2015/07/25 07:21:09 mef Exp $
+# $NetBSD: Makefile,v 1.16 2016/06/08 19:22:37 wiz Exp $
 
 DISTNAME=	CPAN-Meta-Check-0.012
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=CPAN/}
 
