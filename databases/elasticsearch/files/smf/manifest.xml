@@ -45,7 +45,6 @@
     <property_group name='startd' type='framework'>
       <propval name='duration' type='astring' value='child' />
     </property_group>
-    <stability value='Evolving' />
     <template>
       <common_name>
         <loctext xml:lang='C'>ElasticSearch: A Distributed RESTful Search Engine</loctext>

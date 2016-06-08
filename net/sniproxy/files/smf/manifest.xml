@@ -17,7 +17,6 @@
 		<propval name="config_file" type="astring" value="@PKG_SYSCONFDIR@/sniproxy.conf" />
 	</property_group>
 
-	<stability value='Unstable'/>
 	<template>
 		<common_name>
 			<loctext xml:lang='C'>HTTPS SNI Proxy</loctext>

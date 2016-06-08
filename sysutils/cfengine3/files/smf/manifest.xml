@@ -40,6 +40,5 @@
         </common_name>
       </template>
     </instance>
-    <stability value="Evolving" />
   </service>
 </service_bundle>

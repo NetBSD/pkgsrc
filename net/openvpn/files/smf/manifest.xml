@@ -19,7 +19,6 @@
 		<property_group name="application" type="application">
 			<propval name="config" type="astring" value="@PKG_SYSCONFDIR@/openvpn.conf"/>
 		</property_group>
-		<stability value="External"/>
 		<template>
 			<common_name>
 				<loctext xml:lang="C">openvpn</loctext>

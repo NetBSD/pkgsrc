@@ -128,7 +128,6 @@ CDDL HEADER END
         <propval name='chroot_dir' type='astring' value='' />
       </property_group>
     </instance>
-    <stability value='Unstable' />
     <template>
       <common_name>
         <loctext xml:lang='C'>BIND DNS server</loctext>

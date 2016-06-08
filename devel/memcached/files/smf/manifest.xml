@@ -21,7 +21,6 @@
       <propval name='user' type='astring' value='@MEMCACHED_USER@' />
       <propval name='memory' type='integer' value='64' />
     </property_group>
-    <stability value='Evolving' />
     <template>
       <common_name>
         <loctext xml:lang='C'>memcached</loctext>

@@ -29,7 +29,6 @@
       </property_group>
       <!-- Properties in this group are used by routeadm (1M) -->
       <property_group name='routeadm' type='application'>
-        <stability value='Unstable' />
         <!-- Identifies service as a routing service -->
         <propval name='daemon' type='astring' value='@PREFIX@/sbin/zebra' />
         <propval name='value_authorization' type='astring' value='solaris.smf.value.routing' />
@@ -38,7 +37,6 @@
       </property_group>
       <!-- Properties in this group are modifiable via routeadm (1M) -->
       <property_group name='routing' type='application'>
-        <stability value='Evolving' />
         <propval name='value_authorization' type='astring' value='solaris.smf.value.routing' />
         <!-- Options common to Quagga daemons
                      Property names are equivalent to the long
@@ -104,7 +102,6 @@
       </property_group>
       <!-- Properties in this group are used by routeadm (1M) -->
       <property_group name='routeadm' type='application'>
-        <stability value='Unstable' />
         <!-- Identifies service as a routing service -->
         <propval name='daemon' type='astring' value='@PREFIX@/sbin/ripd' />
         <propval name='legacy-daemon' type='astring' value='/usr/sfw/sbin/ripdstart' />
@@ -176,7 +173,6 @@
       </property_group>
       <!-- Properties in this group are used by routeadm (1M) -->
       <property_group name='routeadm' type='application'>
-        <stability value='Unstable' />
         <!-- Identifies service as a routing service -->
         <propval name='daemon' type='astring' value='@PREFIX@/sbin/ripngd' />
         <propval name='value_authorization' type='astring' value='solaris.smf.value.routing' />
@@ -250,7 +246,6 @@
       </property_group>
       <!-- Properties in this group are used by routeadm (1M) -->
       <property_group name='routeadm' type='application'>
-        <stability value='Unstable' />
         <!-- Identifies service as a routing service -->
         <propval name='daemon' type='astring' value='@PREFIX@/sbin/ospfd' />
         <propval name='legacy-daemon' type='astring' value='/usr/sfw/sbin/ospfdstart' />
@@ -320,7 +315,6 @@
       </property_group>
       <!-- Properties in this group are used by routeadm (1M) -->
       <property_group name='routeadm' type='application'>
-        <stability value='Unstable' />
         <!-- Identifies service as a routing service -->
         <propval name='daemon' type='astring' value='@PREFIX@/sbin/ospf6d' />
         <propval name='value_authorization' type='astring' value='solaris.smf.value.routing' />
@@ -392,7 +386,6 @@
       </property_group>
       <!-- Properties in this group are used by routeadm (1M) -->
       <property_group name='routeadm' type='application'>
-        <stability value='Unstable' />
         <!-- Identifies service as a routing service -->
         <propval name='daemon' type='astring' value='@PREFIX@/sbin/bgpd' />
         <propval name='legacy-daemon' type='astring' value='/usr/sfw/sbin/bgpdstart' />
@@ -449,6 +442,5 @@
         </documentation>
       </template>
     </instance>
-    <stability value='Unstable' />
   </service>
 </service_bundle>

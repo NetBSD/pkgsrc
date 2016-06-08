@@ -27,7 +27,6 @@
     <property_group name="application" type="application">
       <propval name="config_file" type="astring" value="@PKG_SYSCONFDIR@/munin-node.conf" />
     </property_group>
-    <stability value="Evolving" />
     <template>
       <common_name>
         <loctext xml:lang="C">Munin node</loctext>

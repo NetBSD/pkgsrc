@@ -37,7 +37,6 @@
       <propval name='action' type='astring' value='DEFER_IF_PERMIT'/>
       <propval name='text' type='astring' value='Policy restrictions; try later'/>
     </property_group>
-    <stability value='Unstable' />
     <template>
       <common_name>
         <loctext xml:lang='C'>Postgrey Greylisting for Postfix</loctext>

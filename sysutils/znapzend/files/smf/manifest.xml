@@ -15,7 +15,6 @@
 		<exec_method type="method" name="stop"    exec=":kill" timeout_seconds="180" />
 		<exec_method type="method" name="refresh" exec=":kill -HUP" timeout_seconds="180" />
 
-		<stability value="Unstable" />
 
 		<template>
 			<common_name><loctext xml:lang="C">ZnapZend - ZFS Backup System</loctext></common_name>
