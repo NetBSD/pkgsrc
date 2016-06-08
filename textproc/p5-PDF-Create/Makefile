@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.38 2016/06/05 12:54:08 wen Exp $
+# $NetBSD: Makefile,v 1.39 2016/06/08 03:18:34 wen Exp $
 #
 
 DISTNAME=	PDF-Create-1.32
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=PDF/}
 
@@ -14,6 +15,8 @@ LICENSE=	${PERL5_LICENSE}
 PERL5_PACKLIST=		auto/PDF/Create/.packlist
 
 DEPENDS+=	p5-File-Share>=0.25:../../devel/p5-File-Share
+DEPENDS+=	p5-File-ShareDir>=0:../../devel/p5-File-ShareDir
+DEPENDS+=	p5-File-ShareDir-Install>=0:../../devel/p5-File-ShareDir-Install
 DEPENDS+=	p5-JSON>=0:../../converters/p5-JSON
 
 BUILD_DEPENDS=	p5-Test-LeakTrace>=0.14:../../devel/p5-Test-LeakTrace
