@@ -40,7 +40,7 @@
 			</loctext>
 		</common_name>
 		<documentation>
-			<manpage title='dbus-daemon' section='1' />
+			<manpage title='dbus-daemon' section='1' manpath='@PREFIX@/@PKGMANDIR@'/>
 		</documentation>
 	</template>
   </service>
