@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.32 2016/03/05 02:47:12 wen Exp $
+# $NetBSD: Makefile,v 1.33 2016/06/08 19:24:04 wiz Exp $
 #
 
 DISTNAME=	Spreadsheet-ParseExcel-0.65
 PKGNAME=	p5-${DISTNAME}00
+PKGREVISION=	1
 CATEGORIES=	math perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Spreadsheet/}
 

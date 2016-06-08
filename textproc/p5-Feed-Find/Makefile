@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2015/06/12 10:51:23 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2016/06/08 19:24:28 wiz Exp $
 #
 
 DISTNAME=		Feed-Find-0.07
 PKGNAME=		p5-${DISTNAME}
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		textproc perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=../by-authors/id/B/BT/BTROTT/}
 

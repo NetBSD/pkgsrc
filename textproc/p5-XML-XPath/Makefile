@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2016/06/07 13:13:34 mef Exp $
+# $NetBSD: Makefile,v 1.35 2016/06/08 19:24:46 wiz Exp $
 
 DISTNAME=	XML-XPath-1.37
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 

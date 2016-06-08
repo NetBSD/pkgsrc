@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2016/02/23 02:17:26 wen Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/08 19:24:09 wiz Exp $
 
 DISTNAME=		IO-Socket-Timeout-0.32
 PKGNAME=		p5-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		net perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=IO/}
 
