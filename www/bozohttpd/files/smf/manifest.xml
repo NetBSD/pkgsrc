@@ -1,6 +1,6 @@
 <?xml version='1.0'?>
 <!DOCTYPE service_bundle SYSTEM '/usr/share/lib/xml/dtd/service_bundle.dtd.1'>
-<service_bundle type='manifest' name='@SMF_NAME@'>
+<service_bundle type='manifest' name='export'>
   <service name='@SMF_PREFIX@/@SMF_NAME@' type='service' version='1'>
     <create_default_instance enabled='false' />
     <single_instance />
