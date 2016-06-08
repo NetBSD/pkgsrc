@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2015/08/31 09:31:34 kleink Exp $
+# $NetBSD: Makefile,v 1.8 2016/06/08 17:43:46 wiz Exp $
 
 DISTNAME=	webassets-0.11.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
-MASTER_SITES=	http://pypi.python.org/packages/source/w/webassets/
+MASTER_SITES=	${MASTER_SITE_PYPI:=w/webassets/}
 
 MAINTAINER=	kleink@NetBSD.org
 HOMEPAGE=	http://elsdoerfer.name/docs/webassets/

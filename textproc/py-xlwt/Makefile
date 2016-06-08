@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2015/12/05 21:26:02 adam Exp $
+# $NetBSD: Makefile,v 1.5 2016/06/08 17:43:41 wiz Exp $
 
 DISTNAME=	xlwt-0.7.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
-MASTER_SITES=	http://pypi.python.org/packages/source/x/xlwt/
+MASTER_SITES=	${MASTER_SITE_PYPI:=x/xlwt/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.python-excel.org/

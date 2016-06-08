@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2015/12/05 21:25:45 adam Exp $
+# $NetBSD: Makefile,v 1.10 2016/06/08 17:43:33 wiz Exp $
 
 DISTNAME=	aafigure-0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	2
 CATEGORIES=	graphics converters python
-MASTER_SITES=	http://pypi.python.org/packages/source/a/aafigure/
+MASTER_SITES=	${MASTER_SITE_PYPI:=a/aafigure/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://launchpad.net/aafigure

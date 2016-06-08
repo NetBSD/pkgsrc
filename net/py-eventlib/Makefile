@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2015/12/05 21:25:53 adam Exp $
+# $NetBSD: Makefile,v 1.8 2016/06/08 17:43:37 wiz Exp $
 
 DISTNAME=	eventlib-0.1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
-MASTER_SITES=	https://pypi.python.org/packages/source/e/eventlib/
+MASTER_SITES=	${MASTER_SITE_PYPI:=e/eventlib/}
 
 MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	http://travis-ci.org/Yipit/eventlib/

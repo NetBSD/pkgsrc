@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2014/11/09 20:40:01 rodent Exp $
+# $NetBSD: Makefile,v 1.14 2016/06/08 17:43:36 wiz Exp $
 
 DISTNAME=	kombu-3.0.23
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
-MASTER_SITES=	https://pypi.python.org/packages/source/k/kombu/
+MASTER_SITES=	${MASTER_SITE_PYPI:=k/kombu/}
 
 MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	http://kombu.readthedocs.org/

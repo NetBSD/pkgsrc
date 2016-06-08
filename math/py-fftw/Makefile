@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2015/12/25 20:06:47 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2016/06/08 17:43:35 wiz Exp $
 
 DISTNAME=	PyFFTW3-0.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Py//S/FFTW/fftw/S/3//}
 PKGREVISION=	2
 CATEGORIES=	math
-MASTER_SITES=	http://pypi.python.org/packages/source/P/PyFFTW3/
+MASTER_SITES=	${MASTER_SITE_PYPI:=P/PyFFTW3/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://pypi.python.org/pypi/PyFFTW3
