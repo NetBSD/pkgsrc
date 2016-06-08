@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2016/05/03 15:13:42 mef Exp $
+# $NetBSD: Makefile,v 1.8 2016/06/08 19:23:13 wiz Exp $
 
 DISTNAME=	MooX-Log-Any-0.004004
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/C/CA/CAZADOR/}
 
