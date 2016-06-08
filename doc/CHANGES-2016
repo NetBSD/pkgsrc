@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2314 2016/06/08 14:16:53 jperkin Exp $
+$NetBSD: CHANGES-2016,v 1.2315 2016/06/08 14:38:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3006,3 +3006,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/p5-PDF-Create to 1.32nb1 [wen 2016-06-08]
 	Updated security/opendnssec to 1.4.10 [he 2016-06-08]
 	Added sysutils/ansible2 version 2.1.0.0 [jperkin 2016-06-08]
+	Updated misc/libreoffice to 5.1.3.2nb2 [wiz 2016-06-08]
