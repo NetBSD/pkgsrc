@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2016/05/18 12:34:19 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2016/06/08 17:49:20 wiz Exp $
 
 DISTNAME=	setproctitle-1.1.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils
-MASTER_SITES=	https://pypi.python.org/packages/5a/0d/dc0d2234aacba6cf1a729964383e3452c52096dc695581248b548786f2b3/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/setproctitle/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pypi.python.org/pypi/setproctitle

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.30 2016/05/29 21:30:53 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2016/06/08 17:49:19 wiz Exp $
 
 DISTNAME=	virtualenv-15.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/5c/79/5dae7494b9f5ed061cff9a8ab8d6e1f02db352f3facf907d9eb614fb80e9/
+MASTER_SITES=	${MASTER_SITE_PYPI:=v/virtualenv/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pypi.python.org/pypi/virtualenv

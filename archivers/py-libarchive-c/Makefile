@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2016/05/29 18:49:54 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2016/06/08 17:49:19 wiz Exp $
 
 DISTNAME=	libarchive-c-2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	https://pypi.python.org/packages/78/99/c962cfa81a0acff3cb569564349f0a3c249c2435e543bc75a79a8b7fcf03/
+MASTER_SITES=	${MASTER_SITE_PYPI:=l/libarchive-c/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/Changaco/python-libarchive-c
