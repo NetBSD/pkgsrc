@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2015/12/05 21:26:02 adam Exp $
+# $NetBSD: Makefile,v 1.11 2016/06/08 17:43:41 wiz Exp $
 
 DISTNAME=	relatorio-0.6.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
-MASTER_SITES=	http://pypi.python.org/packages/source/r/relatorio/
+MASTER_SITES=	${MASTER_SITE_PYPI:=r/relatorio/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://relatorio.tryton.org/

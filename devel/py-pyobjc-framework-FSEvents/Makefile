@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2015/04/25 10:40:50 adam Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/08 17:43:31 wiz Exp $
 
 .include "../../devel/py-pyobjc/Makefile.common"
 
 DISTNAME=	pyobjc-framework-FSEvents-${PYOBJC_VERS}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	http://pypi.python.org/packages/source/p/pyobjc-framework-FSEvents/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyobjc-framework-FSEvents/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pythonhosted.org/pyobjc/

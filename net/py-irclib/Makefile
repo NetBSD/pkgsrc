@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2015/03/26 15:57:12 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2016/06/08 17:43:36 wiz Exp $
 #
 
 PYIRCVERS=	11.1.1
 DISTNAME=	irc-${PYIRCVERS}
 PKGNAME=	${PYPKGPREFIX}-irclib-${PYIRCVERS}
 CATEGORIES=	net python
-MASTER_SITES=	http://pypi.python.org/packages/source/i/irc/
+MASTER_SITES=	${MASTER_SITE_PYPI:=i/irc/}
 EXTRACT_SUFX=	.zip
 EXTRACT_OPTS_ZIP=-aa -q -o
 

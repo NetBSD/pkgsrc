@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2015/12/05 21:26:05 adam Exp $
+# $NetBSD: Makefile,v 1.6 2016/06/08 17:43:44 wiz Exp $
 
 DISTNAME=	cmsplugin_gallery-0.5.5
 PKGNAME=	${PYPKGPREFIX}-django-${DISTNAME}
 CATEGORIES=	www python
-MASTER_SITES=	http://pypi.python.org/packages/source/c/cmsplugin_gallery/
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/cmsplugin_gallery/}
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://github.com/centralniak/cmsplugin_gallery
