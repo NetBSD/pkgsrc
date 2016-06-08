@@ -25,7 +25,7 @@
 				<loctext xml:lang="C">openvpn</loctext>
 			</common_name>
 			<documentation>
-				<manpage title="openvpn" section="8" manpath="man"/>
+				<manpage title="openvpn" section="8" manpath='@PREFIX@/@PKGMANDIR@'/>
 				<doc_link name="openvpn.net" uri="http://openvpn.net/index.php/manuals"/>
 			</documentation>
 		</template>
