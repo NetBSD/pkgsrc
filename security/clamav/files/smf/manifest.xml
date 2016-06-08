@@ -32,7 +32,7 @@
           <loctext xml:lang='C'>ClamAV anti-virus scanner daemon</loctext>
         </common_name>
         <documentation>
-          <manpage title='clamd' section='8' manpath='man'/>
+          <manpage title='clamd' section='8' manpath='@PREFIX@/@PKGMANDIR@'/>
         </documentation>
       </template>
     </instance>
@@ -48,7 +48,7 @@
           <loctext xml:lang='C'>ClamAV anti-virus database update daemon</loctext>
         </common_name>
         <documentation>
-          <manpage title='freshclam' section='1' manpath='man'/>
+          <manpage title='freshclam' section='1' manpath='@PREFIX@/@PKGMANDIR@'/>
         </documentation>
       </template>
     </instance>
@@ -63,7 +63,7 @@
           <loctext xml:lang='C'>ClamAV anti-virus sendmail filter</loctext>
         </common_name>
         <documentation>
-          <manpage title='clamav-milter' section='8' manpath='man'/>
+          <manpage title='clamav-milter' section='8' manpath='@PREFIX@/@PKGMANDIR@'/>
         </documentation>
       </template>
     </instance>
