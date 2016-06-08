@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15993 2016/06/07 08:39:52 wiz Exp $
+$NetBSD: TODO,v 1.15994 2016/06/08 08:06:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1216,6 +1216,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Authen-CAS-Client-0.07
 	o p5-Authen-TacacsPlus-0.26
 	o p5-BerkeleyDB-0.55
+	o p5-Business-ISBN-2.011
 	o p5-Bytes-Random-Secure-0.29
 	o p5-CDB_File-0.98
 	o p5-CDDB-2.00
@@ -1234,6 +1235,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-DBD-SQLite2-0.37
 	o p5-Data-AMF-0.02004
 	o p5-Data-SimplePassword-0.11
+	o p5-DateTime-TimeZone-2.00
 	o p5-Device-XBee-API-0.8
 	o p5-Digest-Hashcash-1.1
 	o p5-Encode-2.82
@@ -1487,6 +1489,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-markdown-2.6.5
 	o py-matplotlib-1.4.3
 	o py-mccabe-0.4.0
+	o py-mcomix-1.2.1
 	o py-metar-0.20
 	o py-mezzanine-4.1.0
 	o py-munkres-1.0.7
@@ -1803,6 +1806,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o windowlab-1.40
 	o wine-1.8.2
 	o wine-devel-1.9.11
+	o wireshark-2.0.4
 	o wmi-11
 	o wmii+ixp-3.9.2 [pkg/43459; wip (wmii-devel); see also libixp entry]
 	o wmx-8
