@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2015/12/05 21:25:43 adam Exp $
+# $NetBSD: Makefile,v 1.3 2016/06/08 17:43:33 wiz Exp $
 
 DISTNAME=	easyAI-0.0.0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	games
-MASTER_SITES=	https://pypi.python.org/packages/source/e/easyAI/
+MASTER_SITES=	${MASTER_SITE_PYPI:=e/easyAI/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pypi.python.org/pypi/easyAI

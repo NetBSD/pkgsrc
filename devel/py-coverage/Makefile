@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2015/11/07 21:43:21 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2016/06/08 17:43:24 wiz Exp $
 
 DISTNAME=	coverage-4.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	http://pypi.python.org/packages/source/c/coverage/
+MASTER_SITES=	${MASTER_SITE_PYPI:=c/coverage/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://nedbatchelder.com/code/coverage/

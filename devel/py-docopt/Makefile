@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2014/08/31 21:30:58 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2016/06/08 17:43:28 wiz Exp $
 
 DISTNAME=	docopt-0.6.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	https://pypi.python.org/packages/source/d/docopt/
+MASTER_SITES=	${MASTER_SITE_PYPI:=d/docopt/}
 
 MAINTAINER=	imil@NetBSD.org
 HOMEPAGE=	https://pypi.python.org/pypi/docopt/

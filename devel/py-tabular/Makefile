@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2015/12/05 21:25:39 adam Exp $
+# $NetBSD: Makefile,v 1.5 2016/06/08 17:43:27 wiz Exp $
 
 DISTNAME=	tabular-0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	http://pypi.python.org/packages/source/t/tabular/
+MASTER_SITES=	${MASTER_SITE_PYPI:=t/tabular/}
 
 MAINTAINER=	dholland@NetBSD.org
 HOMEPAGE=	http://pypi.python.org/pypi/tabular

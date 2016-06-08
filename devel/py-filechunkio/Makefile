@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2015/04/05 21:13:41 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.6 2016/06/08 17:43:25 wiz Exp $
 
 DISTNAME=	filechunkio-1.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	http://pypi.python.org/packages/source/f/filechunkio/
+MASTER_SITES=	${MASTER_SITE_PYPI:=f/filechunkio/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://bitbucket.org/fabian/filechunkio

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2015/07/15 18:23:55 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/08 17:43:43 wiz Exp $
 
 DISTNAME=	waitress-0.8.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
-MASTER_SITES=	https://pypi.python.org/packages/source/w/waitress/
+MASTER_SITES=	${MASTER_SITE_PYPI:=w/waitress/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/Pylons/waitress

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2015/01/03 00:05:47 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/08 17:43:23 wiz Exp $
 
 DISTNAME=	flake8-2.2.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	http://pypi.python.org/packages/source/f/flake8/
+MASTER_SITES=	${MASTER_SITE_PYPI:=f/flake8/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pypi.python.org/pypi/flake8/

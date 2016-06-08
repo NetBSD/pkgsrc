@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2015/11/25 12:53:42 jperkin Exp $
+# $NetBSD: Makefile,v 1.13 2016/06/08 17:43:40 wiz Exp $
 
 DISTNAME=	pyenchant-1.6.6
 PKGNAME=	${DISTNAME:S/py/${PYPKGPREFIX}-/}
 CATEGORIES=	textproc
-MASTER_SITES=	http://pypi.python.org/packages/source/p/pyenchant/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyenchant/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pythonhosted.org/pyenchant/

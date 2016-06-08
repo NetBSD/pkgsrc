@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2015/12/05 21:25:39 adam Exp $
+# $NetBSD: Makefile,v 1.9 2016/06/08 17:43:26 wiz Exp $
 
 VERS=		0.9.3
 DISTNAME=	rope-${VERS}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	http://pypi.python.org/packages/source/r/rope/
+MASTER_SITES=	${MASTER_SITE_PYPI:=r/rope/}
 
 MAINTAINER=	helgoman@users.sourceforge.net
 HOMEPAGE=	http://rope.sourceforge.net/

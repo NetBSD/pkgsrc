@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2015/06/14 21:49:04 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2016/06/08 17:43:24 wiz Exp $
 
 DISTNAME=	python-hglib-1.6
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}/}
 CATEGORIES=	devel python
-MASTER_SITES=	https://pypi.python.org/packages/source/p/python-hglib/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-hglib/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://mercurial.selenic.com/wiki/PythonHglib
