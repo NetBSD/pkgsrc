@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2015/06/12 10:49:46 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2016/06/08 19:23:33 wiz Exp $
 #
 
 DISTNAME=	Term-Animation-2.6
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/K/KB/KBAUCOM/
 
