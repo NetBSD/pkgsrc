@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2016/05/08 15:07:40 wen Exp $
+# $NetBSD: Makefile,v 1.8 2016/06/08 19:22:21 wiz Exp $
 
 DISTNAME=	Sereal-Decoder-3.014
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	security perl5 converters
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../CPAN/authors/id/Y/YV/YVES/}
 

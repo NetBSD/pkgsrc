@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2015/06/12 10:48:28 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2016/06/08 19:22:16 wiz Exp $
 
 DISTNAME=	Net-ICQ2000-0.2.1
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	9
+PKGREVISION=	10
 CATEGORIES=	chat perl5
 MASTER_SITES=	http://gonzo.kiev.ua/projects/vicq.old/
 #		${MASTER_SITE_SOURCEFORGE:=neticq2k/}

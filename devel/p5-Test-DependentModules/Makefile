@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2015/11/26 13:02:14 mef Exp $
+# $NetBSD: Makefile,v 1.7 2016/06/08 19:23:36 wiz Exp $
 
 DISTNAME=	Test-DependentModules-0.26
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/D/DR/DROLSKY/
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Test/}

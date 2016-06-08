@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/11/30 13:33:25 mef Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/08 19:23:35 wiz Exp $
 
 DISTNAME=	Test-CPAN-Meta-0.25
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/B/BA/BARBIE/
 

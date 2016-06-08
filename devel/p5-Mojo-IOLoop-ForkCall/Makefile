@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2015/06/12 10:49:28 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2016/06/08 19:23:13 wiz Exp $
 
 VERSION=	0.17
 DISTNAME=	${VERSION}
 PKGNAME=	p5-Mojo-IOLoop-ForkCall-${VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/jberger/Mojo-IOLoop-ForkCall/archive/
 

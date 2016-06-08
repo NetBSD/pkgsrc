@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2015/06/12 10:49:47 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2016/06/08 19:23:34 wiz Exp $
 #
 
 VERS=		0.11
 DISTNAME=	Term-ReadPassword-${VERS}
 PKGNAME=	p5-Term-ReadPassword-${VERS}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Term/}
 

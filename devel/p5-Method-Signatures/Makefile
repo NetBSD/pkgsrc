@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2016/05/03 05:10:38 mef Exp $
+# $NetBSD: Makefile,v 1.13 2016/06/08 19:23:09 wiz Exp $
 
 DISTNAME=	Method-Signatures-20160315
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/B/BA/BAREFOOT/}
 #MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Method/}
