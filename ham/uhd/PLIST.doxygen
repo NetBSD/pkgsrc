@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.doxygen,v 1.5 2016/01/26 08:13:23 mef Exp $
+@comment $NetBSD: PLIST.doxygen,v 1.6 2016/06/08 00:00:56 gdt Exp $
 share/doc/uhd/doxygen/html/Ettus_Logo.png
 share/doc/uhd/doxygen/html/N2xx-JTAG.jpg
 share/doc/uhd/doxygen/html/TRRS.png
@@ -6,7 +6,7 @@ share/doc/uhd/doxygen/html/algorithm_8hpp.html
 share/doc/uhd/doxygen/html/algorithm_8hpp.js
 share/doc/uhd/doxygen/html/algorithm_8hpp_source.html
 share/doc/uhd/doxygen/html/annotated.html
-share/doc/uhd/doxygen/html/annotated.js
+share/doc/uhd/doxygen/html/annotated_dup.js
 share/doc/uhd/doxygen/html/arrowdown.png
 share/doc/uhd/doxygen/html/arrowright.png
 share/doc/uhd/doxygen/html/assert__has_8hpp.html
@@ -385,6 +385,7 @@ share/doc/uhd/doxygen/html/fp__compare__delta_8ipp.js
 share/doc/uhd/doxygen/html/fp__compare__epsilon_8ipp.html
 share/doc/uhd/doxygen/html/fp__compare__epsilon_8ipp.js
 share/doc/uhd/doxygen/html/functions.html
+share/doc/uhd/doxygen/html/functions_0x7e.html
 share/doc/uhd/doxygen/html/functions_a.html
 share/doc/uhd/doxygen/html/functions_b.html
 share/doc/uhd/doxygen/html/functions_c.html
@@ -396,6 +397,7 @@ share/doc/uhd/doxygen/html/functions_eval.html
 share/doc/uhd/doxygen/html/functions_f.html
 share/doc/uhd/doxygen/html/functions_func.html
 share/doc/uhd/doxygen/html/functions_func.js
+share/doc/uhd/doxygen/html/functions_func_0x7e.html
 share/doc/uhd/doxygen/html/functions_func_a.html
 share/doc/uhd/doxygen/html/functions_func_b.html
 share/doc/uhd/doxygen/html/functions_func_c.html
@@ -418,7 +420,6 @@ share/doc/uhd/doxygen/html/functions_func_u.html
 share/doc/uhd/doxygen/html/functions_func_v.html
 share/doc/uhd/doxygen/html/functions_func_w.html
 share/doc/uhd/doxygen/html/functions_func_x.html
-share/doc/uhd/doxygen/html/functions_func_~.html
 share/doc/uhd/doxygen/html/functions_g.html
 share/doc/uhd/doxygen/html/functions_h.html
 share/doc/uhd/doxygen/html/functions_i.html
@@ -437,7 +438,6 @@ share/doc/uhd/doxygen/html/functions_v.html
 share/doc/uhd/doxygen/html/functions_vars.html
 share/doc/uhd/doxygen/html/functions_w.html
 share/doc/uhd/doxygen/html/functions_x.html
-share/doc/uhd/doxygen/html/functions_~.html
 share/doc/uhd/doxygen/html/gain__group_8hpp.html
 share/doc/uhd/doxygen/html/gain__group_8hpp_source.html
 share/doc/uhd/doxygen/html/general_8dox.html
@@ -459,7 +459,6 @@ share/doc/uhd/doxygen/html/globals_r.html
 share/doc/uhd/doxygen/html/globals_s.html
 share/doc/uhd/doxygen/html/globals_type.html
 share/doc/uhd/doxygen/html/globals_u.html
-share/doc/uhd/doxygen/html/globals_vars.html
 share/doc/uhd/doxygen/html/globals_x.html
 share/doc/uhd/doxygen/html/gpio__api_8dox.html
 share/doc/uhd/doxygen/html/gps__ctrl_8hpp.html
