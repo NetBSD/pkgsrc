@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2016/05/29 21:28:42 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2016/06/08 17:49:19 wiz Exp $
 
 DISTNAME=	pytest-runner-2.8
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel
-MASTER_SITES=	https://pypi.python.org/packages/46/6c/ff61a9e0d513222afa3529bdb565a465812b7e50b218a5afd705f46b258c/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pytest-runner/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pypi.python.org/pypi/pytest-runner
