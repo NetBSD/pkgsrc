@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE service_bundle SYSTEM "/usr/share/lib/xml/dtd/service_bundle.dtd.1">
-<service_bundle type="manifest" name="pdns">
+<service_bundle type="manifest" name="export">
   <service name="@SMF_PREFIX@/pdns-recursor" type="service" version="1">
     <create_default_instance enabled="false" />
     <single_instance />
