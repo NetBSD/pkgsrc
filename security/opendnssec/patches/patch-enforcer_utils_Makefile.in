@@ -1,18 +1,10 @@
-$NetBSD: patch-enforcer_utils_Makefile.in,v 1.3 2015/11/16 10:09:08 he Exp $
+$NetBSD: patch-enforcer_utils_Makefile.in,v 1.4 2016/06/08 08:35:10 he Exp $
 
 Regenerate after adding installation of migration scripts to Makefile.am.
 
 --- enforcer/utils/Makefile.in.orig	2015-10-05 14:20:51.000000000 +0000
 +++ enforcer/utils/Makefile.in
-@@ -423,7 +423,6 @@ pkcs11_softhsm_module = @pkcs11_softhsm_
- prefix = @prefix@
- program_transform_name = @program_transform_name@
- psdir = @psdir@
--runstatedir = @runstatedir@
- sbindir = @sbindir@
- sharedstatedir = @sharedstatedir@
- srcdir = @srcdir@
-@@ -798,7 +797,8 @@ info: info-am
+@@ -797,7 +797,8 @@ info: info-am
  
  info-am:
  
@@ -22,7 +14,7 @@ Regenerate after adding installation of migration scripts to Makefile.am.
  
  install-dvi: install-dvi-am
  
-@@ -856,20 +856,27 @@ uninstall-man: uninstall-man1
+@@ -855,20 +856,27 @@ uninstall-man: uninstall-man1
  	ctags ctags-am distclean distclean-compile distclean-generic \
  	distclean-libtool distclean-tags distdir dvi dvi-am html \
  	html-am info info-am install install-am install-binPROGRAMS \
