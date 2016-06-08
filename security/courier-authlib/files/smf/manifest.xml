@@ -24,7 +24,6 @@
     <property_group name='general' type='framework'>
       <propval name='action_authorization' type='astring' value='solaris.smf.manage.courier-authlib' />
     </property_group>
-    <stability value='Evolving' />
     <template>
       <common_name>
         <loctext xml:lang='C'>authlib - Generic authentication API for Courier mail services</loctext>

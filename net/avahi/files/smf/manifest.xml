@@ -21,7 +21,6 @@
     <exec_method name='start' type='method' exec='@PREFIX@/sbin/avahi-daemon -D' timeout_seconds='60'/>
     <exec_method name='stop' type='method' exec='@PREFIX@/sbin/avahi-daemon -k' timeout_seconds='60'/>
     <exec_method name='refresh' type='method' exec='@PREFIX@/sbin/avahi-daemon -r' timeout_seconds='60'/>
-    <stability value='Evolving'/>
     <template>
       <common_name>
         <loctext xml:lang='C'>Avahi mDNS Daemon</loctext>

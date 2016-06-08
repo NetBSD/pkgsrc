@@ -29,7 +29,6 @@
     <property_group name="application" type="application">
       <propval name="config_file" type="astring" value="@PKG_SYSCONFDIR@/local.ini" />
     </property_group>
-    <stability value="Evolving" />
     <template>
       <common_name>
         <loctext xml:lang="C">CouchDB server</loctext>
