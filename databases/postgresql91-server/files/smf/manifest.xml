@@ -24,7 +24,6 @@
       <propval name='data' type='astring' value='@PGHOME@/data' />
       <propval name='log' type='astring' value='@VARBASE@/log/postgresql.log' />
     </property_group>
-    <stability value='Evolving' />
     <template>
       <common_name>
         <loctext xml:lang='C'>PostgreSQL RDBMS</loctext>
