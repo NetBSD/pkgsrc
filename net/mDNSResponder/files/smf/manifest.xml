@@ -23,7 +23,7 @@
         <loctext xml:lang='C'>Apple ease-of-use IP networking initiative</loctext>
       </common_name>
       <documentation>
-        <manpage title='mdnsd' section='8M'/>
+        <manpage title='mdnsd' section='8M' manpath='@PREFIX@/@PKGMANDIR@'/>
       </documentation>
     </template>
   </service>

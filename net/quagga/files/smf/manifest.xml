@@ -72,7 +72,7 @@
           <loctext xml:lang='C'>Quagga: zebra, RIB, kernel intermediary and misc daemon</loctext>
         </common_name>
         <documentation>
-          <manpage title='zebra' section='1M' manpath='@PREFIX@/man' />
+          <manpage title='zebra' section='1M' manpath='@PREFIX@/@PKGMANDIR@'/>
           <doc_link name='quagga.net' uri='http://www.quagga.net/' />
         </documentation>
       </template>
@@ -144,7 +144,7 @@
           <loctext xml:lang='C'>Quagga: ripd, RIPv1/2 IPv4 routing protocol daemon.</loctext>
         </common_name>
         <documentation>
-          <manpage title='ripd' section='1M' manpath='@PREFIX@/man' />
+          <manpage title='ripd' section='1M' manpath='@PREFIX@/@PKGMANDIR@'/>
           <doc_link name='quagga.net' uri='http://www.quagga.net/' />
         </documentation>
       </template>
@@ -215,7 +215,7 @@
           <loctext xml:lang='C'>Quagga: ripngd, RIPng IPv6 routing protocol daemon.</loctext>
         </common_name>
         <documentation>
-          <manpage title='ripngd' section='1M' manpath='@PREFIX@/man' />
+          <manpage title='ripngd' section='1M' manpath='@PREFIX@/@PKGMANDIR@'/>
           <doc_link name='quagga.net' uri='http://www.quagga.net/' />
         </documentation>
       </template>
@@ -288,7 +288,7 @@
           <loctext xml:lang='C'>Quagga: ospfd, OSPFv2 IPv4 routing protocol daemon.</loctext>
         </common_name>
         <documentation>
-          <manpage title='ospfd' section='1M' manpath='@PREFIX@/man' />
+          <manpage title='ospfd' section='1M' manpath='@PREFIX@/@PKGMANDIR@'/>
           <doc_link name='quagga.net' uri='http://www.quagga.net/' />
         </documentation>
       </template>
@@ -357,7 +357,7 @@
           <loctext xml:lang='C'>Quagga: ospf6d, OSPFv3 IPv6 routing protocol daemon.</loctext>
         </common_name>
         <documentation>
-          <manpage title='ospf6d' section='1M' manpath='@PREFIX@/man' />
+          <manpage title='ospf6d' section='1M' manpath='@PREFIX@/@PKGMANDIR@'/>
           <doc_link name='quagga.net' uri='http://www.quagga.net/' />
         </documentation>
       </template>
@@ -444,7 +444,7 @@
           <loctext xml:lang='C'>Quagga: bgpd, BGP routing protocol daemon.</loctext>
         </common_name>
         <documentation>
-          <manpage title='bgpd' section='1M' manpath='@PREFIX@/man' />
+          <manpage title='bgpd' section='1M' manpath='@PREFIX@/@PKGMANDIR@'/>
           <doc_link name='quagga.net' uri='http://www.quagga.net/' />
         </documentation>
       </template>
