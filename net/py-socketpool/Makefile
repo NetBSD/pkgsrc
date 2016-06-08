@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2015/12/05 21:25:54 adam Exp $
+# $NetBSD: Makefile,v 1.6 2016/06/08 17:43:37 wiz Exp $
 
 DISTNAME=	socketpool-0.5.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net
-MASTER_SITES=	https://pypi.python.org/packages/source/s/socketpool/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/socketpool/}
 
 MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	https://github.com/benoitc/socketpool

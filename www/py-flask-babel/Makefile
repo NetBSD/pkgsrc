@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2014/12/31 13:57:32 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2016/06/08 17:43:47 wiz Exp $
 
 DISTNAME=	Flask-Babel-0.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www
-MASTER_SITES=	https://pypi.python.org/packages/source/F/Flask-Babel/
+MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask-Babel/}
 
 MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	http://github.com/mitsuhiko/flask-babel

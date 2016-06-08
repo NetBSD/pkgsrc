@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2015/04/19 22:03:29 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/08 17:43:42 wiz Exp $
 
 DISTNAME=	rdflib-4.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	python textproc
-MASTER_SITES=	https://pypi.python.org/packages/source/r/rdflib/
+MASTER_SITES=	${MASTER_SITE_PYPI:=r/rdflib/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	${MASTER_SITE_GITHUB:=RDFLib/rdflib/}

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2016/03/20 22:11:16 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2016/06/08 17:43:46 wiz Exp $
 
 DISTNAME=	Mezzanine-1.2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www
-MASTER_SITES=	http://pypi.python.org/packages/source/M/Mezzanine/
+MASTER_SITES=	${MASTER_SITE_PYPI:=M/Mezzanine/}
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://mezzanine.jupo.org/

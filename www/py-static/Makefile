@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2014/08/20 13:44:58 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/08 17:43:43 wiz Exp $
 
 DISTNAME=	static-1.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www
-MASTER_SITES=	https://pypi.python.org/packages/source/s/static/
+MASTER_SITES=	${MASTER_SITE_PYPI:=s/static/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pypi.python.org/pypi/static

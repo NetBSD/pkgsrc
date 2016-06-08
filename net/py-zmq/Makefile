@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2014/11/15 02:09:46 obache Exp $
+# $NetBSD: Makefile,v 1.17 2016/06/08 17:43:36 wiz Exp $
 
 DISTNAME=	pyzmq-14.4.1
 PKGNAME=        ${DISTNAME:S/py/${PYPKGPREFIX}-/1}
 CATEGORIES=	net python
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pyzmq/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pyzmq/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/zeromq/pyzmq/

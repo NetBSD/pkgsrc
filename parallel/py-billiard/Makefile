@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2014/07/16 23:15:12 rodent Exp $
+# $NetBSD: Makefile,v 1.13 2016/06/08 17:43:38 wiz Exp $
 
 DISTNAME=	billiard-3.3.0.18
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	parallel
-MASTER_SITES=	https://pypi.python.org/packages/source/b/billiard/
+MASTER_SITES=	${MASTER_SITE_PYPI:=b/billiard/}
 
 MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	http://github.com/celery/billiard

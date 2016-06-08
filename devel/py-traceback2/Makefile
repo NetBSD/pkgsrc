@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2016/01/09 13:27:46 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/08 17:43:27 wiz Exp $
 
 DISTNAME=		traceback2-1.4.0
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		devel python
-MASTER_SITES=		http://pypi.python.org/packages/source/t/traceback2/
+MASTER_SITES=		${MASTER_SITE_PYPI:=t/traceback2/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://pypi.python.org/pypi/traceback2

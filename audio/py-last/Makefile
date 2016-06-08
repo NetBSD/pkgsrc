@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2014/01/25 10:29:57 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2016/06/08 17:43:20 wiz Exp $
 
 DISTNAME=	pylast-0.5.11
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	audio python
-MASTER_SITES=	http://pypi.python.org/packages/source/p/pylast/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pylast/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/pylast/

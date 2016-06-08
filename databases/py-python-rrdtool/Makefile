@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2015/12/05 21:25:33 adam Exp $
+# $NetBSD: Makefile,v 1.5 2016/06/08 17:43:23 wiz Exp $
 
 DISTNAME=	python-rrdtool-1.4.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	databases
-MASTER_SITES=	https://pypi.python.org/packages/source/p/python-rrdtool/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-rrdtool/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/pbanaszkiewicz/python-rrdtool

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2014/12/31 13:57:33 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2016/06/08 17:43:46 wiz Exp $
 
 DISTNAME=	Flask-Script-2.0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	www python
-MASTER_SITES=	http://pypi.python.org/packages/source/F/Flask-Script/
+MASTER_SITES=	${MASTER_SITE_PYPI:=F/Flask-Script/}
 
 MAINTAINER=	kleink@NetBSD.org
 HOMEPAGE=	http://flask-script.readthedocs.org/en/latest/

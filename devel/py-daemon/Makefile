@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2015/12/05 21:25:36 adam Exp $
+# $NetBSD: Makefile,v 1.7 2016/06/08 17:43:24 wiz Exp $
 
 DISTNAME=	python-daemon-1.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
 CATEGORIES=	devel python
-MASTER_SITES=	http://pypi.python.org/packages/source/p/python-daemon/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/python-daemon/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://pypi.python.org/pypi/python-daemon/

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2014/06/02 00:00:15 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/08 17:43:39 wiz Exp $
 
 DISTNAME=	pydeep-0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	python security
-MASTER_SITES=	https://pypi.python.org/packages/source/p/pydeep/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pydeep/}
 
 MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	http://www.github.com/kbandla/pydeep

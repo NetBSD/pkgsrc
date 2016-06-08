@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2016/04/13 18:19:49 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2016/06/08 17:43:36 wiz Exp $
 
 DISTNAME=	foolscap-0.11.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
-MASTER_SITES=	http://pypi.python.org/packages/source/f/foolscap/
+MASTER_SITES=	${MASTER_SITE_PYPI:=f/foolscap/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
 #MAINTAINER+=	gdt@NetBSD.org

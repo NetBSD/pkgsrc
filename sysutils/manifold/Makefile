@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2015/12/05 21:25:59 adam Exp $
+# $NetBSD: Makefile,v 1.5 2016/06/08 17:43:39 wiz Exp $
 
 PKGNAME=	${DISTNAME:S/^M/m/}
 DISTNAME=	Manifold-0.2.0
 CATEGORIES=	sysutils
-MASTER_SITES=	http://pypi.python.org/packages/source/M/Manifold/
+MASTER_SITES=	${MASTER_SITE_PYPI:=M/Manifold/}
 
 MAINTAINER=	filip@joyent.com
 HOMEPAGE=	http://code.google.com/p/manifold/

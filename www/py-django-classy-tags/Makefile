@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2016/03/06 14:18:52 adam Exp $
+# $NetBSD: Makefile,v 1.13 2016/06/08 17:43:44 wiz Exp $
 
 DISTNAME=	django-classy-tags-0.7.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
-MASTER_SITES=	http://pypi.python.org/packages/source/d/django-classy-tags/
+MASTER_SITES=	${MASTER_SITE_PYPI:=d/django-classy-tags/}
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://github.com/ojii/django-classy-tags/

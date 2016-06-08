@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2015/08/23 11:15:03 wen Exp $
+# $NetBSD: Makefile,v 1.3 2016/06/08 17:43:23 wiz Exp $
 
 DISTNAME=	mccabe-0.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	http://pypi.python.org/packages/source/m/mccabe/
+MASTER_SITES=	${MASTER_SITE_PYPI:=m/mccabe/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pypi.python.org/pypi/mccabe/

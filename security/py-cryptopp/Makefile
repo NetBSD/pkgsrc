@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2015/12/05 21:25:56 adam Exp $
+# $NetBSD: Makefile,v 1.13 2016/06/08 17:43:38 wiz Exp $
 
 VERSION=	0.6.0
 VERSION_EXCESSIVE=	1206569328141510525648634803928199668821045408958
 DISTNAME=	pycryptopp-${VERSION}.${VERSION_EXCESSIVE}
 PKGNAME=	${PYPKGPREFIX}-cryptopp-${VERSION}
 CATEGORIES=	security python
-MASTER_SITES=	http://pypi.python.org/packages/source/p/pycryptopp/
+MASTER_SITES=	${MASTER_SITE_PYPI:=p/pycryptopp/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tahoe-lafs.org/trac/pycryptopp

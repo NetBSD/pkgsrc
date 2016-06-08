@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2015/12/05 21:26:02 adam Exp $
+# $NetBSD: Makefile,v 1.9 2016/06/08 17:43:40 wiz Exp $
 
 DISTNAME=	jsonlib-1.6.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
-MASTER_SITES=	http://pypi.python.org/packages/source/j/jsonlib/
+MASTER_SITES=	${MASTER_SITE_PYPI:=j/jsonlib/}
 
 MAINTAINER=	wenheping@gmail.com
 HOMEPAGE=	https://launchpad.net/jsonlib

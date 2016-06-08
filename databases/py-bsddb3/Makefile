@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.49 2014/01/25 10:29:59 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2016/06/08 17:43:21 wiz Exp $
 
 DISTNAME=	bsddb3-6.0.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
-MASTER_SITES=	http://pypi.python.org/packages/source/b/bsddb3/
+MASTER_SITES=	${MASTER_SITE_PYPI:=b/bsddb3/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pypi.python.org/pypi/bsddb3/

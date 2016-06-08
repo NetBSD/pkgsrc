@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2015/12/05 21:25:37 adam Exp $
+# $NetBSD: Makefile,v 1.4 2016/06/08 17:43:32 wiz Exp $
 
 DISTNAME=	google-apputils-0.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	devel
-MASTER_SITES=	https://pypi.python.org/packages/source/g/google-apputils/
+MASTER_SITES=	${MASTER_SITE_PYPI:=g/google-apputils/}
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	https://github.com/google/google-apputils

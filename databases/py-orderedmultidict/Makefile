@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2016/03/03 19:42:29 shattered Exp $
+# $NetBSD: Makefile,v 1.9 2016/06/08 17:43:22 wiz Exp $
 
 DISTNAME=	orderedmultidict-0.7.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases python
-MASTER_SITES=	https://pypi.python.org/packages/source/o/orderedmultidict/
+MASTER_SITES=	${MASTER_SITE_PYPI:=o/orderedmultidict/}
 
 MAINTAINER=	rodent@NetBSD.org
 HOMEPAGE=	https://github.com/gruns/orderedmultidict
