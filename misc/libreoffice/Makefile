@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.81 2016/05/22 18:20:47 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2016/06/08 14:38:21 wiz Exp $
 
 VERREL=		5.1.3
 VERRC=		2
 VER=		${VERREL}.${VERRC}
 DISTNAME=	libreoffice-${VER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${VERREL}/
 EXTRACT_SUFX=	.tar.xz
@@ -20,12 +20,19 @@ LICENSE=	gnu-lgpl-v3
 BUILDLINK_TRANSFORM+=	opt:-O2:-O
 .endif
 
+.if !empty(MACHINE_PLATFORM:MNetBSD*)
+pre-build:
+	cd ${WRKSRC} && ${BUILD_MAKE_CMD} Executable_gengal && paxctl +m instdir/program/gengal.bin
+.endif
+
 GCC_REQD+=	4.6
 PYTHON_VERSIONS_INCOMPATIBLE=	27
 
 CHECK_SHLIBS_SUPPORTED=	no
 # configure will be regenerated.
 CHECK_PORTABILITY_SKIP=configure
+
+NOT_PAX_MPROTECT_SAFE+=	${PKGNAME_NOREV}/lib/libreoffice/program/soffice.bin
 
 DIST_SUBDIR=	libreoffice
 
