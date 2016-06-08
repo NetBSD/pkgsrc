@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2016/05/18 12:31:54 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2016/06/08 17:49:19 wiz Exp $
 
 DISTNAME=	requests-toolbelt-0.6.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	https://pypi.python.org/packages/e1/a4/a94c037bc72ad70441aff1403d3243510d2542ddca7759faaeffeb11aefe/
+MASTER_SITES=	${MASTER_SITE_PYPI:=r/requests-toolbelt/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://pypi.python.org/pypi/requests-toolbelt
