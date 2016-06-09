@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2016/06/09 01:55:21 jnemeth Exp $
+
+SHA1 (speedtest-cli-0.3.2.tar.gz) = 265717d2097a96a76a0e51ecac75bac56326cd24
+RMD160 (speedtest-cli-0.3.2.tar.gz) = eb3650fd097e366846b78959dac05563552205d2
+SHA512 (speedtest-cli-0.3.2.tar.gz) = c98a10772f81b4db503483eb675cbdeacac7803c02a6554ee6d075143e93cfed0834ebda2f6ead5f75a169a5840d0789537dc06e1a8829d52ae112d0fc7eba6c
+Size (speedtest-cli-0.3.2.tar.gz) = 14220 bytes
