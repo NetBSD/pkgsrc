@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/06/08 17:43:37 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2016/06/09 05:55:35 wiz Exp $
 
 DISTNAME=	SoftLayer-3.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/SoftLayer/softlayer/}
@@ -7,7 +7,7 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_PYPI:=S/SoftLayer/}
 
 MAINTAINER=	imil@NetBSD.org
-HOMEPAGE=	${MASTER_SITE_PYPI:=S/SoftLayer/}
+HOMEPAGE=	https://pypi.python.org/pypi/SoftLayer
 COMMENT=	SoftLayer API bindings for Python
 LICENSE=	mit
 
