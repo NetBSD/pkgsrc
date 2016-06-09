@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/05/16 15:05:48 nils Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/09 06:23:39 wiz Exp $
 
 DISTNAME=			cookiecutter-1.3.0
 GITHUB_PROJECT=			cookiecutter
@@ -8,7 +8,7 @@ MASTER_SITES=			${MASTER_SITE_GITHUB:=audreyr/}
 EXTRACT_SUFX=			.zip
 
 MAINTAINER=			gde@llew.me
-HOMEPAGE=			${MASTER_SITE_GITHUB:=audreyr/cookiecutter/}
+HOMEPAGE=			https://github.com/audreyr/cookiecutter/
 COMMENT=			Command-line utility that creates projects from project templates
 LICENSE=			modified-bsd
 

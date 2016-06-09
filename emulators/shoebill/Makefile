@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/03/29 22:03:08 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2016/06/09 06:23:40 wiz Exp $
 
 GITHUB_PROJECT=	shoebill
 DISTNAME=	0.0.5
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=pruten/}
 DIST_SUBDIR=	${GITHUB_PROJECT}
 
 MAINTAINER=	hauke@NetBSD.org
-HOMEPAGE=	${MASTER_SITE_GITHUB:=pruten/shoebill/}
+HOMEPAGE=	https://github.com/pruten/shoebill/
 COMMENT=	Macintosh II emulator that runs A/UX
 LICENSE=	2-clause-bsd
 

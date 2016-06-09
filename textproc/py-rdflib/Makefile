@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/06/08 17:43:42 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2016/06/09 06:23:40 wiz Exp $
 
 DISTNAME=	rdflib-4.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	python textproc
 MASTER_SITES=	${MASTER_SITE_PYPI:=r/rdflib/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	${MASTER_SITE_GITHUB:=RDFLib/rdflib/}
+HOMEPAGE=	https://github.com/RDFLib/rdflib/
 COMMENT=	Python library for working with RDF
 LICENSE=	2-clause-bsd
 

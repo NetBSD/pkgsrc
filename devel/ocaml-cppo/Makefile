@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/05/05 11:45:38 jaapb Exp $
+# $NetBSD: Makefile,v 1.4 2016/06/09 06:23:38 wiz Exp $
 
 DISTNAME=	cppo-1.3.1
 PKGNAME=	ocaml-${DISTNAME}
@@ -9,7 +9,7 @@ GITHUB_PROJECT=	cppo
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	jaapb@NetBSD.org
-HOMEPAGE=	${MASTER_SITE_GITHUB:=mjambon/cppo/}
+HOMEPAGE=	https://github.com/mjambon/cppo/
 COMMENT=	C-style preprocessor for OCaml
 LICENSE=	modified-bsd
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2016/06/09 01:55:21 jnemeth Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/09 06:23:40 wiz Exp $
 
 DISTNAME=	speedtest-cli-0.3.2
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sivel/}
@@ -6,7 +6,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 CATEGORIES=	net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${MASTER_SITE_GITHUB:=sivel/speedtest-cli/}
+HOMEPAGE=	https://github.com/sivel/speedtest-cli/
 COMMENT=	Command line client for use with speedtest.net
 LICENSE=	apache-2.0
 
