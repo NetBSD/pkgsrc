@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2015/04/25 14:24:58 tnn Exp $
+# $NetBSD: Makefile,v 1.41 2016/06/09 09:49:45 youri Exp $
 
-PKGREVISION= 1
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-DISTNAME=	xfce4-datetime-plugin-0.6.2
+DISTNAME=	xfce4-datetime-plugin-0.6.99
 CATEGORIES=	time
 MASTER_SITES=	http://archive.xfce.org/src/panel-plugins/xfce4-datetime-plugin/0.6/
 
