@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2335 2016/06/09 13:19:50 mef Exp $
+$NetBSD: CHANGES-2016,v 1.2336 2016/06/09 13:27:58 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3033,3 +3033,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/p5-Lingua-Stem-Ru to 0.04 [mef 2016-06-09]
 	Updated textproc/p5-Lingua-PT-Stemmer to 0.02 [mef 2016-06-09]
 	Updated textproc/p5-Encode to 2.84 [mef 2016-06-09]
+	Updated net/syncthing to 0.13.5 [gdt 2016-06-09]
