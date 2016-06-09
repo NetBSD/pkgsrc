@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/07/06 04:12:49 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/09 06:23:40 wiz Exp $
 #
 
 GITHUB_TAG=	v0.2.2
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=paginagmbh/}
 DIST_SUBDIR=	ruby-${GITHUB_PROJECT}
 
 MAINTAINER=	rodent@NetBSD.org
-HOMEPAGE=	${MASTER_SITES}${GITHUB_PROJECT}
+HOMEPAGE=	https://github.com/paginagmbh/redmine_lightbox2
 COMMENT=	Lightbox for image attachments in Redmine
 LICENSE=	mit
 
