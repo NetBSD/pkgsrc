@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2016/05/06 07:41:06 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.5 2016/06/09 04:41:48 jnemeth Exp $
 include/asterisk.h
 include/asterisk/_private.h
 include/asterisk/abstract_jb.h
@@ -113,6 +113,7 @@ include/asterisk/mod_format.h
 include/asterisk/module.h
 include/asterisk/monitor.h
 include/asterisk/musiconhold.h
+include/asterisk/named_locks.h
 include/asterisk/netsock.h
 include/asterisk/netsock2.h
 include/asterisk/network.h
