@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2319 2016/06/09 02:09:00 jnemeth Exp $
+$NetBSD: CHANGES-2016,v 1.2320 2016/06/09 02:24:47 markd Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3011,3 +3011,6 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated pkgtools/revbump to 2.12 [wiz 2016-06-08]
 	Updated devel/py-pyev to 0.9.0 [wiz 2016-06-08]
 	Added net/speedtest-cli version 0.3.2 [jnemeth 2016-06-09]
+	Added security/py-kerberos version 1.2.4 [markd 2016-06-09]
+	Added security/py-urllib2-kerberos version 0.1.6 [markd 2016-06-09]
+	Removed security/py-Kerberos successor security/py-kerberos [markd 2016-06-09]
