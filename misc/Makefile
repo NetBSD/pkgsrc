@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.469 2016/05/26 08:55:07 markd Exp $
+# $NetBSD: Makefile,v 1.470 2016/06/09 09:51:36 youri Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -351,6 +351,7 @@ SUBDIR+=	whohas
 SUBDIR+=	window
 SUBDIR+=	xchm
 SUBDIR+=	xdg-utils
+SUBDIR+=	xfce4-calculator-plugin
 SUBDIR+=	xfce4-smartbookmark-plugin
 SUBDIR+=	xfce4-time-out-plugin
 SUBDIR+=	xfce4-weather-plugin
