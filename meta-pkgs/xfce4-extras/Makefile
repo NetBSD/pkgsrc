@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2015/07/26 14:01:42 youri Exp $
+# $NetBSD: Makefile,v 1.65 2016/06/09 09:43:03 youri Exp $
 
 META_PACKAGE=	yes
 
@@ -26,6 +26,7 @@ DEPENDS+=	xfce4-dict>=0.7.1:../../textproc/xfce4-dict
 DEPENDS+=	xfce4-eyes-plugin>=4.4.3:../../x11/xfce4-eyes-plugin
 DEPENDS+=	xfce4-fsguard-plugin>=1.0.1:../../sysutils/xfce4-fsguard-plugin
 DEPENDS+=	xfce4-genmon-plugin>=3.4:../../sysutils/xfce4-genmon-plugin
+DEPENDS+=	xfce4-indicator-plugin>=2.3.3:../../x11/xfce4-indicator-plugin
 DEPENDS+=	xfce4-mailwatch-plugin>=1.2.0:../../mail/xfce4-mailwatch-plugin
 DEPENDS+=	xfce4-mixer>=4.10.0:../../audio/xfce4-mixer
 DEPENDS+=	xfce4-mount-plugin>=0.6.7:../../sysutils/xfce4-mount-plugin
