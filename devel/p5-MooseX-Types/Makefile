@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2016/06/08 19:23:18 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2016/06/09 12:10:08 mef Exp $
 
 DISTNAME=	MooseX-Types-0.46
 PKGNAME=	p5-${DISTNAME}
@@ -23,6 +23,8 @@ BUILD_DEPENDS+=	p5-Module-Build-Tiny>=0.035:../../devel/p5-Module-Build-Tiny
 #BUILD_DEPENDS+=	{perl>=5.10.1,p5-Test-Simple>=0.80}:../../devel/p5-Test-Simple
 BUILD_DEPENDS+=	p5-Test-Fatal>=0.003:../../devel/p5-Test-Fatal
 BUILD_DEPENDS+=	p5-Test-Requires>=0.05:../../devel/p5-Test-Requires
+# for make test
+BUILD_DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/MooseX/Types/.packlist
