@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2016/06/09 01:55:21 jnemeth Exp $
+bin/speedtest
+bin/speedtest-cli
+${PYSITELIB}/${EGG_FILE}/PKG-INFO
+${PYSITELIB}/${EGG_FILE}/SOURCES.txt
+${PYSITELIB}/${EGG_FILE}/dependency_links.txt
+${PYSITELIB}/${EGG_FILE}/entry_points.txt
+${PYSITELIB}/${EGG_FILE}/top_level.txt
+${PYSITELIB}/speedtest_cli.py
+${PYSITELIB}/speedtest_cli.pyc
+${PYSITELIB}/speedtest_cli.pyo
+man/man1/speedtest-cli.1
+man/man1/speedtest.1
