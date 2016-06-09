@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/05/26 09:49:48 markd Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/09 23:37:20 markd Exp $
 
 DISTNAME=	kconfigwidgets-${KF5VER}
 CATEGORIES=	x11
@@ -11,7 +11,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 BUILD_DEPENDS+= kdoctools>=${KF5VER}:../../devel/kdoctools
 
-USE_TOOLS+=	perl:run
+USE_TOOLS+=	perl:run msgmerge
 
 REPLACE_PERL+=	src/preparetips5
 
