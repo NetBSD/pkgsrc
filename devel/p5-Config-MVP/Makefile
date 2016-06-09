@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2016/06/08 19:22:44 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2016/06/09 12:10:07 mef Exp $
 
 DISTNAME=	Config-MVP-2.200010
 PKGNAME=	p5-${DISTNAME}
@@ -25,6 +25,7 @@ BUILD_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
 #BUILD_DEPENDS+=	{perl>=5.14.1,p5-Test-Simple>=0.96}:../../devel/p5-Test-Simple
 # for make test
 BUILD_DEPENDS+=	p5-Module-Pluggable-[0-9]*:../../devel/p5-Module-Pluggable
+BUILD_DEPENDS+=	p5-Package-DeprecationManager-[0-9]*:../../devel/p5-Package-DeprecationManager
 
 
 USE_LANGUAGES=		# empty
