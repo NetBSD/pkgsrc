@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2016/06/09 02:18:52 markd Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/urllib2_kerberos.py
+${PYSITELIB}/urllib2_kerberos.pyc
+${PYSITELIB}/urllib2_kerberos.pyo
