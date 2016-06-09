@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2325 2016/06/09 08:39:18 youri Exp $
+$NetBSD: CHANGES-2016,v 1.2326 2016/06/09 08:55:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3019,3 +3019,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated misc/xfce4-weather-plugin to 0.8.7 [youri 2016-06-09]
 	Updated sysutils/xfce4-verve-plugin to 1.1.0 [youri 2016-06-09]
 	Updated misc/xfce4-smartbookmark-plugin to 0.4.99 [youri 2016-06-09]
+	Updated www/libsass to 3.3.6 [adam 2016-06-09]
+	Updated www/sassc to 3.3.6 [adam 2016-06-09]
