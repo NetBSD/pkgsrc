@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.10 2015/11/04 01:32:40 agc Exp $
+$NetBSD: distinfo,v 1.11 2016/06/09 09:38:23 youri Exp $
 
-SHA1 (xfce4-battery-plugin-1.0.5.tar.bz2) = f1748044874909e434b0d325068289d948f999d7
-RMD160 (xfce4-battery-plugin-1.0.5.tar.bz2) = 305b46ef187fa266851ebc5e3dcf7699fa0856fe
-SHA512 (xfce4-battery-plugin-1.0.5.tar.bz2) = f49f33178a771b952442f498cee2c722146c9982cb27453e6547a7c7838eaa0a22588a7d2a56f189f7e9e7b90ed7e5ac7a4e6cfee55dc5e43d32c5ef95b20062
-Size (xfce4-battery-plugin-1.0.5.tar.bz2) = 403505 bytes
+SHA1 (xfce4-battery-plugin-1.0.99.tar.bz2) = b96fe4608ffc55b5da9feac235678de9fdb89072
+RMD160 (xfce4-battery-plugin-1.0.99.tar.bz2) = 6ebef5561e89bd3a174a850649ea410653c0a2ab
+SHA512 (xfce4-battery-plugin-1.0.99.tar.bz2) = 5c9de4d8f688f450f19bfe09ef410c7a8e3049e43ce613aa2dc250ea9097721e2839357e60d2926a4d2812ef7178d079ba7caa8c9899cfac9b78c018bbbf503d
+Size (xfce4-battery-plugin-1.0.99.tar.bz2) = 415377 bytes
 SHA1 (patch-panel-plugin_battery.c) = 2aa4abb3b24bea30f266ee203271d27021110a4f
