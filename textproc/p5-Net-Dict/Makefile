@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2016/06/08 19:24:31 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2016/06/09 12:59:03 mef Exp $
 #
 
 DISTNAME=		Net-Dict-2.21
@@ -22,6 +22,7 @@ DEPENDS+=		p5-Tk-[0-9]*:../../x11/p5-Tk
 DEPENDS+=		p5-Test-Differences-[0-9]*:../../devel/p5-Test-Differences
 # for make test
 BUILD_DEPENDS+=		p5-Test-RequiresInternet-[0-9]*:../../net/p5-Test-RequiresInternet
+BUILD_DEPENDS+=		p5-Text-Diff-[0-9]*:../../textproc/p5-Text-Diff
 
 REPLACE_PERL+=		dict
 REPLACE_PERL+=		tkdict
