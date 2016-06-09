@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2015/07/02 13:57:48 youri Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/06/09 08:11:29 youri Exp $
 bin/xfce4-about
 include/xfce4/libxfce4kbd-private-2/libxfce4kbd-private/xfce-shortcut-dialog.h
 include/xfce4/libxfce4kbd-private-2/libxfce4kbd-private/xfce-shortcuts-grabber.h
@@ -41,7 +41,6 @@ share/examples/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml
 share/gtk-doc/html/libxfce4ui/XfceSMClient.html
 share/gtk-doc/html/libxfce4ui/home.png
 share/gtk-doc/html/libxfce4ui/index.html
-share/gtk-doc/html/libxfce4ui/index.sgml
 share/gtk-doc/html/libxfce4ui/ix01.html
 share/gtk-doc/html/libxfce4ui/left-insensitive.png
 share/gtk-doc/html/libxfce4ui/left.png
