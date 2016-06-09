@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/04/10 19:38:52 prlw1 Exp $
+# $NetBSD: Makefile,v 1.4 2016/06/09 06:23:40 wiz Exp $
 
 DISTNAME=	sayaka-3.2.0
 PKGREVISION=	1
@@ -8,7 +8,7 @@ GITHUB_PROJECT=	${DISTNAME:S/-${PKGVERSION_NOREV}//}
 GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	tsutsui@NetBSD.org
-HOMEPAGE=	${MASTER_SITES}${GITHUB_PROJECT}
+HOMEPAGE=	https://github.com/isaki68k/sayaka
 COMMENT=	Terminal specific Twitter client
 LICENSE=	modified-bsd
 

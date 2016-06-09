@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/10/17 08:12:43 ryoon Exp $
+# $NetBSD: Makefile,v 1.3 2016/06/09 06:23:40 wiz Exp $
 
 DISTNAME=	LucenePlusPlus-rel_3.0.7
 PKGNAME=	${DISTNAME:S/LucenePlusPlus-rel_/lucene++-/}
@@ -7,7 +7,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=luceneplusplus/LucenePlusPlus/archive/rel_${PKGVERSION_NOREV}/}
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	${MASTER_SITE_GITHUB:=luceneplusplus/LucenePlusPlus/}
+HOMEPAGE=	https://github.com/luceneplusplus/LucenePlusPlus/
 COMMENT=	C++ port of Lucene text search library
 LICENSE=	gnu-lgpl-v3 OR apache-2.0
 
