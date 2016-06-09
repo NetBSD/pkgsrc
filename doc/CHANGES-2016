@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2320 2016/06/09 02:24:47 markd Exp $
+$NetBSD: CHANGES-2016,v 1.2321 2016/06/09 04:44:45 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3014,3 +3014,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added security/py-kerberos version 1.2.4 [markd 2016-06-09]
 	Added security/py-urllib2-kerberos version 0.1.6 [markd 2016-06-09]
 	Removed security/py-Kerberos successor security/py-kerberos [markd 2016-06-09]
+	Updated comms/asterisk13 to 13.9.1 [jnemeth 2016-06-09]
