@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2334 2016/06/09 09:55:42 youri Exp $
+$NetBSD: CHANGES-2016,v 1.2335 2016/06/09 13:19:50 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3029,3 +3029,7 @@ Changes to the packages collection and infrastructure in 2016:
 	Added x11/xfce4-indicator-plugin version 2.3.3 [youri 2016-06-09]
 	Added misc/xfce4-calculator-plugin version 0.5.2 [youri 2016-06-09]
 	Updated x11/xfce4-whiskermenu-plugin to 1.5.3 [youri 2016-06-09]
+	Updated textproc/p5-Dist-Zilla-Plugin-PodWeaver to 4.008 [mef 2016-06-09]
+	Updated textproc/p5-Lingua-Stem-Ru to 0.04 [mef 2016-06-09]
+	Updated textproc/p5-Lingua-PT-Stemmer to 0.02 [mef 2016-06-09]
+	Updated textproc/p5-Encode to 2.84 [mef 2016-06-09]
