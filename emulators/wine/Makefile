@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.191 2016/03/05 11:28:28 jperkin Exp $
+# $NetBSD: Makefile,v 1.192 2016/06/09 15:26:35 fhajny Exp $
 
 DISTNAME=	wine-1.6.2
 PKGREVISION=	10
@@ -18,7 +18,7 @@ ONLY_FOR_PLATFORM+=	*-*-i386 #*-*-x86_64
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_LANGUAGES=		c
+USE_LANGUAGES=		c c99
 USE_LIBTOOL=		yes
 USE_NCURSES=		yes
 USE_TOOLS+=		bison flex gmake mktemp msgfmt
