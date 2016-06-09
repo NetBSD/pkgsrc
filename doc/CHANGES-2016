@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2329 2016/06/09 09:33:16 youri Exp $
+$NetBSD: CHANGES-2016,v 1.2330 2016/06/09 09:34:20 youri Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3024,3 +3024,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/xfce4-netload-plugin to 1.2.99 [youri 2016-06-09]
 	Updated x11/xfce4-eyes-plugin to 4.4.99 [youri 2016-06-09]
 	Updated multimedia/xfce4-mpc-plugin to 0.4.99 [youri 2016-06-09]
+	Updated sysutils/xfce4-fsguard-plugin to 1.0.99 [youri 2016-06-09]
