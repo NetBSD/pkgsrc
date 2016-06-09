@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2016/06/08 19:23:22 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2016/06/09 12:57:17 mef Exp $
 
 DISTNAME=	Package-DeprecationManager-0.16
 PKGNAME=	p5-${DISTNAME}
@@ -24,6 +24,7 @@ BUILD_DEPENDS+=	p5-Test-Fatal-[0-9]*:../../devel/p5-Test-Fatal
 BUILD_DEPENDS+=	p5-Test-Requires-[0-9]*:../../devel/p5-Test-Requires
 # for make test
 BUILD_DEPENDS+=	p5-Test-Warnings-[0-9]*:../../devel/p5-Test-Warnings
+BUILD_DEPENDS+=	p5-Sub-Name-[0-9]*:../../devel/p5-Sub-Name
 
 DEPENDS+=	p5-Params-Util-[0-9]*:../../devel/p5-Params-Util
 DEPENDS+=	p5-Sub-Install-[0-9]*:../../devel/p5-Sub-Install
