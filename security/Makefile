@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.583 2016/05/26 09:13:16 markd Exp $
+# $NetBSD: Makefile,v 1.584 2016/06/09 02:20:45 markd Exp $
 #
 
 COMMENT=	Security tools
@@ -368,7 +368,6 @@ SUBDIR+=	pscan
 SUBDIR+=	putty
 SUBDIR+=	pwsafe
 SUBDIR+=	py-Des
-SUBDIR+=	py-Kerberos
 SUBDIR+=	py-OpenSSL
 SUBDIR+=	py-SSLCrypto
 SUBDIR+=	py-acme
@@ -390,6 +389,7 @@ SUBDIR+=	py-ezPyCrypto
 SUBDIR+=	py-gnupg
 SUBDIR+=	py-hsm
 SUBDIR+=	py-itsdangerous
+SUBDIR+=	py-kerberos
 SUBDIR+=	py-keyring
 SUBDIR+=	py-lasso
 SUBDIR+=	py-libtaxii
@@ -413,6 +413,7 @@ SUBDIR+=	py-simplesha3
 SUBDIR+=	py-smbpasswd
 SUBDIR+=	py-stix
 SUBDIR+=	py-tlslite
+SUBDIR+=	py-urllib2-kerberos
 SUBDIR+=	py-xmlsec
 SUBDIR+=	py-yara
 SUBDIR+=	py-yubiauth
