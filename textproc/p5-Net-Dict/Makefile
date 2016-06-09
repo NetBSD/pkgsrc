@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2016/06/09 12:59:03 mef Exp $
-#
+# $NetBSD: Makefile,v 1.17 2016/06/09 13:26:43 mef Exp $
 
 DISTNAME=		Net-Dict-2.21
 PKGNAME=		p5-${DISTNAME}
