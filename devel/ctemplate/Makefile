@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2015/06/12 10:48:48 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2016/06/09 06:23:38 wiz Exp $
 
 DISTNAME=	ctemplate-2.3
 PKGREVISION=	1
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=OlafvdSpek/}
 GITHUB_TAG=	${DISTNAME}
 
 MAINTAINER=	rodent@NetBSD.org
-HOMEPAGE=	${MASTER_SITE_GITHUB:=OlafvdSpek/ctemplate}
+HOMEPAGE=	https://github.com/OlafvdSpek/ctemplate
 COMMENT=	Simple but powerful template language for C++
 LICENSE=	modified-bsd
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/07/07 12:14:45 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/09 06:23:39 wiz Exp $
 #
 
 GITHUB_TAG=	v0.1
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=Nitrino/}
 DIST_SUBDIR=	ruby-redmine-flatly-light-theme
 
 MAINTAINER=	rodent@NetBSD.org
-HOMEPAGE=	${MASTER_SITES}${GITHUB_PROJECT}
+HOMEPAGE=	https://github.com/Nitrino/flatly_light_redmine
 COMMENT=	Flatly light theme for Redmine
 LICENSE=	mit
 
