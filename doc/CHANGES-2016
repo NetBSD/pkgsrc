@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2318 2016/06/08 22:34:38 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2319 2016/06/09 02:09:00 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3010,3 +3010,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/perl5 to 5.24.0 [he 2016-06-08]
 	Updated pkgtools/revbump to 2.12 [wiz 2016-06-08]
 	Updated devel/py-pyev to 0.9.0 [wiz 2016-06-08]
+	Added net/speedtest-cli version 0.3.2 [jnemeth 2016-06-09]
