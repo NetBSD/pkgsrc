@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.15996 2016/06/09 08:22:49 youri Exp $
+$NetBSD: TODO,v 1.15997 2016/06/09 11:19:07 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1068,6 +1068,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o lq-sp-1.3.4.14
 	o lsh-2.1
 	o lua-keybinder-0.3.1
+	o lua53-5.3.3
 	o lv2-5.4
 	o lwm-1.2.4
 	o lyx-2.1.4
@@ -1502,6 +1503,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-pendrell-0.3.7
 	o py-proteus-3.6.1
 	o py-ptt-1.10.2
+	o py-pycountry-1.20
+	o py-qrcode-5.3
 	o py-quixote-2.9
 	o py-radare2-0.10.3
 	o py-reportlab-3.0
@@ -1510,6 +1513,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-serpent-1.12
 	o py-simpletal-5.1
 	o py-smb-1.1.17
+	o py-softlayer-5.1.0
 	o py-spf-2.0.12t
 	o py-sqlparse-0.1.18
 	o py-sqlrelay-0.64
@@ -1532,8 +1536,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o qlandkartegt-1.8.1 [pkg/49910]
 	o qnetwalk-1.4
 	o qt4-creator-3.4.0
-	o qt5-5.6.0
-	o qt5-qtbase-5.6.0
+	o qt5-5.7.0
+	o qt5-qtbase-5.7.0
 	o quodlibet2-3.5.3
 	o radare2-0.10.3
 	o radare2-valabind-0.10.0
