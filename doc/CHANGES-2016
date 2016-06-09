@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2322 2016/06/09 08:11:43 youri Exp $
+$NetBSD: CHANGES-2016,v 1.2323 2016/06/09 08:18:41 youri Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3016,3 +3016,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Removed security/py-Kerberos successor security/py-kerberos [markd 2016-06-09]
 	Updated comms/asterisk13 to 13.9.1 [jnemeth 2016-06-09]
 	Updated x11/libxfce4ui to 4.13.0 [youri 2016-06-09]
+	Updated misc/xfce4-weather-plugin to 0.8.7 [youri 2016-06-09]
