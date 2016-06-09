@@ -1,15 +1,15 @@
-# $NetBSD: hacks.mk,v 1.3 2016/04/25 12:12:40 wiz Exp $
+# $NetBSD: hacks.mk,v 1.4 2016/06/09 12:28:54 ryoon Exp $
 
 .if !defined(EMACS_HACKS_MK)
 EMACS_HACKS_MK=	defined
 
 .include "../../mk/compiler.mk"
 
-### On NetBSD/amd64 7.99.26, gcc optimisation, at least for version 5.3,
+### On NetBSD/amd64 7.99.26, gcc optimisation, at least for version 5.x,
 ### produces, a "temacs" binary which segfaults.
 ###
 .  if !empty(MACHINE_PLATFORM:MNetBSD-*-x86_64)
-.    if !empty(CC_VERSION:Mgcc-5.3.*)
+.    if !empty(CC_VERSION:Mgcc-5.*)
 PKG_HACKS+=		optimisation
 BUILDLINK_TRANSFORM+=	opt:-O2:-O0
 .    endif
