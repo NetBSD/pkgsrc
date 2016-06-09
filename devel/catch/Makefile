@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/03/01 20:17:18 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2016/06/09 06:23:38 wiz Exp $
 
 DISTNAME=	Catch-1.3.4
 PKGNAME=	${DISTNAME:tl}
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=philsquared/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${MASTER_SITE_GITHUB:=philsquared/Catch/}
+HOMEPAGE=	https://github.com/philsquared/Catch/
 COMMENT=	C++-native, framework for unit-tests, TDD and BDD
 LICENSE=	boost-license
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2016/01/01 23:54:16 kamil Exp $
+# $NetBSD: Makefile,v 1.4 2016/06/09 06:23:40 wiz Exp $
 
 DISTNAME=	ansiweather-1.06
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=fcambus/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${MASTER_SITE_GITHUB:=fcambus/ansiweather/}
+HOMEPAGE=	https://github.com/fcambus/ansiweather/
 COMMENT=	Display current weather conditions in your terminal
 LICENSE=	modified-bsd
 
