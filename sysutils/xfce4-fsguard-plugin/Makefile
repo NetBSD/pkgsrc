@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2015/06/29 10:29:06 youri Exp $
+# $NetBSD: Makefile,v 1.35 2016/06/09 09:30:47 youri Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
-DISTNAME=	xfce4-fsguard-plugin-1.0.2
+DISTNAME=	xfce4-fsguard-plugin-1.0.99
 CATEGORIES=	sysutils
 MASTER_SITES=	http://archive.xfce.org/src/panel-plugins/xfce4-fsguard-plugin/1.0/
 
