@@ -1,6 +1,12 @@
-@comment $NetBSD: PLIST,v 1.3 2015/04/21 08:56:44 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.4 2016/06/09 09:31:55 youri Exp $
 lib/xfce4/panel/plugins/libeyes.la
+share/icons/hicolor/16x16/apps/xfce4-eyes.png
+share/icons/hicolor/22x22/apps/xfce4-eyes.png
+share/icons/hicolor/24x24/apps/xfce4-eyes.png
+share/icons/hicolor/32x32/apps/xfce4-eyes.png
+share/icons/hicolor/36x36/apps/xfce4-eyes.png
 share/icons/hicolor/48x48/apps/xfce4-eyes.png
+share/locale/am/LC_MESSAGES/xfce4-eyes-plugin.mo
 share/locale/ar/LC_MESSAGES/xfce4-eyes-plugin.mo
 share/locale/ast/LC_MESSAGES/xfce4-eyes-plugin.mo
 share/locale/be/LC_MESSAGES/xfce4-eyes-plugin.mo
