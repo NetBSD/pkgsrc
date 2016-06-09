@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2323 2016/06/09 08:18:41 youri Exp $
+$NetBSD: CHANGES-2016,v 1.2324 2016/06/09 08:22:49 youri Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3017,3 +3017,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated comms/asterisk13 to 13.9.1 [jnemeth 2016-06-09]
 	Updated x11/libxfce4ui to 4.13.0 [youri 2016-06-09]
 	Updated misc/xfce4-weather-plugin to 0.8.7 [youri 2016-06-09]
+	Updated sysutils/xfce4-verve-plugin to 1.1.0 [youri 2016-06-09]
