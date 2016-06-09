@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2015/04/21 08:56:44 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.26 2016/06/09 08:36:33 youri Exp $
 bin/xfce4-panel
 bin/xfce4-popup-applicationsmenu
 bin/xfce4-popup-directorymenu
@@ -15,8 +15,21 @@ include/xfce4/libxfce4panel-1.0/libxfce4panel/xfce-panel-macros-46.h
 include/xfce4/libxfce4panel-1.0/libxfce4panel/xfce-panel-macros.h
 include/xfce4/libxfce4panel-1.0/libxfce4panel/xfce-panel-plugin-provider.h
 include/xfce4/libxfce4panel-1.0/libxfce4panel/xfce-panel-plugin.h
+include/xfce4/libxfce4panel-2.0/libxfce4panel/libxfce4panel-config.h
+include/xfce4/libxfce4panel-2.0/libxfce4panel/libxfce4panel-enum-types.h
+include/xfce4/libxfce4panel-2.0/libxfce4panel/libxfce4panel-enums.h
+include/xfce4/libxfce4panel-2.0/libxfce4panel/libxfce4panel.h
+include/xfce4/libxfce4panel-2.0/libxfce4panel/xfce-arrow-button.h
+include/xfce4/libxfce4panel-2.0/libxfce4panel/xfce-panel-convenience.h
+include/xfce4/libxfce4panel-2.0/libxfce4panel/xfce-panel-image.h
+include/xfce4/libxfce4panel-2.0/libxfce4panel/xfce-panel-macros-46.h
+include/xfce4/libxfce4panel-2.0/libxfce4panel/xfce-panel-macros.h
+include/xfce4/libxfce4panel-2.0/libxfce4panel/xfce-panel-plugin-provider.h
+include/xfce4/libxfce4panel-2.0/libxfce4panel/xfce-panel-plugin.h
 lib/libxfce4panel-1.0.la
+lib/libxfce4panel-2.0.la
 lib/pkgconfig/libxfce4panel-1.0.pc
+lib/pkgconfig/libxfce4panel-2.0.pc
 lib/xfce4/panel/migrate
 lib/xfce4/panel/plugins/libactions.la
 lib/xfce4/panel/plugins/libapplicationsmenu.la
@@ -30,6 +43,7 @@ lib/xfce4/panel/plugins/libsystray.la
 lib/xfce4/panel/plugins/libtasklist.la
 lib/xfce4/panel/plugins/libwindowmenu.la
 lib/xfce4/panel/wrapper-1.0
+lib/xfce4/panel/wrapper-2.0
 share/applications/panel-desktop-handler.desktop
 share/applications/panel-preferences.desktop
 share/examples/xfce4/panel/default.xml
@@ -144,4 +158,3 @@ share/xfce4/panel/plugins/showdesktop.desktop
 share/xfce4/panel/plugins/systray.desktop
 share/xfce4/panel/plugins/tasklist.desktop
 share/xfce4/panel/plugins/windowmenu.desktop
-@comment $NetBSD: PLIST,v 1.25 2015/04/21 08:56:44 jperkin Exp $
