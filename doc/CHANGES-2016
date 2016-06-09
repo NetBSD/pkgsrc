@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2327 2016/06/09 09:20:45 youri Exp $
+$NetBSD: CHANGES-2016,v 1.2328 2016/06/09 09:32:07 youri Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3022,3 +3022,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/libsass to 3.3.6 [adam 2016-06-09]
 	Updated www/sassc to 3.3.6 [adam 2016-06-09]
 	Updated sysutils/xfce4-netload-plugin to 1.2.99 [youri 2016-06-09]
+	Updated x11/xfce4-eyes-plugin to 4.4.99 [youri 2016-06-09]
