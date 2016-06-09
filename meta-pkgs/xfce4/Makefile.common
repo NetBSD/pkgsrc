@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.59 2016/06/09 09:42:06 youri Exp $
+# $NetBSD: Makefile.common,v 1.60 2016/06/09 09:50:27 youri Exp $
 #
 # used by archivers/xfce4-thunar-archive/Makefile
 # used by audio/xfce4-mixer/Makefile
@@ -10,6 +10,7 @@
 # used by editors/xfce4-mousepad/Makefile
 # used by mail/xfce4-mailwatch-plugin/Makefile
 # used by meta-pkgs/xfce4-extras/Makefile
+# used by misc/xfce4-calculator-plugin/Makefile
 # used by misc/xfce4-smartbookmark-plugin/Makefile
 # used by misc/xfce4-time-out-plugin/Makefile
 # used by misc/xfce4-weather-plugin/Makefile
