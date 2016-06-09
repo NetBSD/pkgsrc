@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.793 2016/05/30 22:58:45 khorben Exp $
+# $NetBSD: Makefile,v 1.794 2016/06/09 09:43:35 youri Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -658,6 +658,7 @@ SUBDIR+=	xfce4-exo
 SUBDIR+=	xfce4-eyes-plugin
 SUBDIR+=	xfce4-garcon
 SUBDIR+=	xfce4-gtk2-engine
+SUBDIR+=	xfce4-indicator-plugin
 SUBDIR+=	xfce4-kbdleds-plugin
 SUBDIR+=	xfce4-notes-plugin
 SUBDIR+=	xfce4-notifyd
