@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/05/16 14:06:06 nils Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/09 06:23:39 wiz Exp $
 
 DISTNAME=	whichcraft-0.1.1
 GITHUB_PROJECT=	whichcraft
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=pydanny/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	gde@llew.me
-HOMEPAGE=	${MASTER_SITE_GITHUB:=pydanny/whichcraft/}
+HOMEPAGE=	https://github.com/pydanny/whichcraft/
 COMMENT=	Cross-platform cross-python shutil.which functionality
 LICENSE=	modified-bsd
 

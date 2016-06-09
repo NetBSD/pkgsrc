@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2015/07/06 04:12:49 rodent Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/09 06:23:39 wiz Exp $
 
 GITHUB_PROJECT=	redmine_bootstrap_kit
 DISTNAME=	0.2.3
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_GITHUB:=jbox-web/}
 DIST_SUBDIR=	ruby-${GITHUB_PROJECT}
 
 MAINTAINER=	rodent@NetBSD.org
-HOMEPAGE=	${MASTER_SITES}${GITHUB_PROJECT}
+HOMEPAGE=	https://github.com/jbox-web/redmine_bootstrap_kit
 COMMENT=	Redmine plugin which facilitates developing Redmine plugins
 LICENSE=	mit
 
