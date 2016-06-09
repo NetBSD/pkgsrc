@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2016/06/09 09:43:03 youri Exp $
+# $NetBSD: Makefile,v 1.66 2016/06/09 09:51:11 youri Exp $
 
 META_PACKAGE=	yes
 
@@ -20,6 +20,7 @@ DEPENDS+=	xfce4-cpugraph-plugin>=1.0.5:../../sysutils/xfce4-cpugraph-plugin
 DEPENDS+=	xfce4-wavelan-plugin>=0.5.11:../../net/xfce4-wavelan-plugin
 
 DEPENDS+=	xfce4-battery-plugin>=1.0.5:../../sysutils/xfce4-battery-plugin
+DEPENDS+=	xfce4-calculator-plugin>=0.5.2:../../misc/xfce4-calculator-plugin
 DEPENDS+=	xfce4-clipman-plugin>=1.2.6:../../x11/xfce4-clipman-plugin
 DEPENDS+=	xfce4-datetime-plugin>=0.6.2:../../time/xfce4-datetime-plugin
 DEPENDS+=	xfce4-dict>=0.7.1:../../textproc/xfce4-dict
