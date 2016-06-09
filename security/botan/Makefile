@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2016/05/23 06:52:54 kre Exp $
+# $NetBSD: Makefile,v 1.37 2016/06/09 07:20:57 he Exp $
 
 DISTNAME=	Botan-1.10.12
 PKGNAME=	${DISTNAME:tl}
@@ -41,6 +41,11 @@ CONFIGURE_ARGS+=	--cpu=ppc
 CONFIGURE_ARGS+=	--cpu=ppc64
 .elif ${MACHINE_ARCH} == "arm"
 CONFIGURE_ARGS+=	--cpu=arm
+.endif
+
+.if ${OPSYS} != "SunOS"
+PLIST_SRC+=	PLIST
+PLIST_SRC+=	PLIST.non-SunOS
 .endif
 
 .include "../../lang/python/application.mk"
