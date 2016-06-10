@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2339 2016/06/10 15:23:57 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2340 2016/06/10 19:42:52 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3037,3 +3037,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/syncthing to 0.13.5 [gdt 2016-06-09]
 	Updated www/firefox to 46.0.1nb2 [wiz 2016-06-10]
 	Updated graphics/png to 1.6.23 [wiz 2016-06-10]
+	Updated pkgtools/pkglint to 5.4.1 [rillig 2016-06-10]
