@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2340 2016/06/10 19:42:52 rillig Exp $
+$NetBSD: CHANGES-2016,v 1.2341 2016/06/10 21:43:16 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3038,3 +3038,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/firefox to 46.0.1nb2 [wiz 2016-06-10]
 	Updated graphics/png to 1.6.23 [wiz 2016-06-10]
 	Updated pkgtools/pkglint to 5.4.1 [rillig 2016-06-10]
+	Updated pkgtools/url2pkg to 2.26 [rillig 2016-06-10]
