@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.244 2016/06/06 08:55:35 taca Exp $
+# $NetBSD: Makefile,v 1.245 2016/06/10 23:15:36 alnsn Exp $
 
 DISTNAME=		openssh-7.2p2
 PKGNAME=		${DISTNAME:S/p2/.2/}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_OPENBSD:=OpenSSH/portable/}
 
@@ -72,7 +72,6 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-mantype=man
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-pid-dir=${SSH_PID_DIR:Q}
-CONFIGURE_ARGS+=	--with-ssl-dir=${SSLBASE:Q}
 CONFIGURE_ARGS+=	--with-tcp-wrappers=${BUILDLINK_PREFIX.tcp_wrappers}
 
 .if ${OPSYS} != "Interix"
@@ -83,6 +82,10 @@ CONFIGURE_ARGS+=	--with-privsep-user=${OPENSSH_USER:Q}
 # pkgsrc already enforces a "secure" version of zlib via dependencies,
 # so skip this bogus version check.
 CONFIGURE_ARGS+=	--without-zlib-version-check
+
+.if ${_PKGSRC_MKPIE} != "no"
+CONFIGURE_ARGS+=	--with-pie
+.endif
 
 # the openssh configure script finds and uses ${LD} if defined and
 # defaults to ${CC} if not. we override LD here, since running the
@@ -108,6 +111,10 @@ CONFIGURE_ARGS+=	--disable-libutil
 # prior version don't have it.  So, disable use of strnvis(3) now.
 #
 CONFIGURE_ENV+=		ac_cv_func_strnvis=no
+#
+# workaround for ./configure problem, pkg/50936
+#
+CONFIGURE_ENV+=		ac_cv_func_reallocarray=no
 .endif
 
 .if (${OPSYS} == "SunOS") && (${OS_VERSION} == "5.8" || ${OS_VERSION} == "5.9")
@@ -175,7 +182,6 @@ SUBST_SED.patch=	-e '/channel_input_port_forward_request/s/0/ROOTUID/'
 SUBST_VARS.patch=	PKG_SYSCONFDIR
 
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
 .include "../../security/tcp_wrappers/buildlink3.mk"
 
 #
