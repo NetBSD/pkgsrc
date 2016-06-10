@@ -236,6 +236,7 @@ var (
 	CheckvarPathmask               = &VarChecker{"Pathmask", (*VartypeCheck).Pathmask}
 	CheckvarPathname               = &VarChecker{"Pathname", (*VartypeCheck).Pathname}
 	CheckvarPerl5Packlist          = &VarChecker{"Perl5Packlist", (*VartypeCheck).Perl5Packlist}
+	CheckvarPerms                  = &VarChecker{"Perms", (*VartypeCheck).Perms}
 	CheckvarPkgName                = &VarChecker{"PkgName", (*VartypeCheck).PkgName}
 	CheckvarPkgPath                = &VarChecker{"PkgPath", (*VartypeCheck).PkgPath}
 	CheckvarPkgOptionsVar          = &VarChecker{"PkgOptionsVar", (*VartypeCheck).PkgOptionsVar}

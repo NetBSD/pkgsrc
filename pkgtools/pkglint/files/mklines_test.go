@@ -244,3 +244,17 @@ func (s *Suite) Test_MkLines_LoopModifier(c *check.C) {
 		"WARN: chat/xchat/Makefile:4: Unknown shell command \"${GCONF_SCHEMAS:@.s.@"+
 		"${INSTALL_DATA} ${WRKSRC}/src/common/dbus/${.s.} ${DESTDIR}${GCONF_SCHEMAS_DIR}/@}\".\n")
 }
+
+func (s *Suite) Test_MkLines_Indentation_DependsOn(c *check.C) {
+	G.globalData.InitVartypes()
+	mklines := s.NewMkLines("Makefile",
+		"# $"+"NetBSD$",
+		"PKG_SKIP_REASON+=\t\"Fails everywhere\"",
+		".if ${OPSYS} == \"Cygwin\"",
+		"PKG_SKIP_REASON+=\t\"Fails on Cygwin\"",
+		".endif")
+
+	mklines.Check()
+
+	c.Check(s.Output(), equals, "NOTE: Makefile:4: Consider defining NOT_FOR_PLATFORM instead of setting PKG_SKIP_REASON depending on ${OPSYS}.\n")
+}
