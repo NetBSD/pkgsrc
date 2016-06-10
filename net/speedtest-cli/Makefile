@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/06/10 06:34:23 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2016/06/10 07:19:13 jnemeth Exp $
 
 DISTNAME=	speedtest-cli-0.3.2
 MASTER_SITES=	${MASTER_SITE_GITHUB:=sivel/}
@@ -12,8 +12,6 @@ LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
-
-#NO_BUILD=	yes
 
 REPLACE_PYTHON=	*.py
 
