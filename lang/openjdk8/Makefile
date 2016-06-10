@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2016/06/01 00:40:40 pgoyette Exp $
+# $NetBSD: Makefile,v 1.36 2016/06/10 10:12:49 tnn Exp $
 
 DISTNAME=	openjdk-1.8.92-20160506
 PKGNAME=	openjdk8-1.8.92
@@ -184,15 +184,15 @@ ${WRKDIR}/stage1-done:
 
 # stage 1.5 reconfigures, since the bootstrap JDK major version might have changed now
 ${WRKDIR}/stage1_5-done: ${WRKDIR}/stage1-done
-.if defined(BATCH)
-	@${RECURSIVE_MAKE} ${MAKEFLAGS} apply-va-hack
-.endif
 .if defined(TOOLS_PLATFORM.paxctl)
 	${PAXCTL} +m ${WRKDIR}/bootstrap/bin/[a-ik-z]*
 	${PAXCTL} +m ${WRKDIR}/bootstrap/bin/j[b-z]*
 	${PAXCTL} +m ${WRKDIR}/bootstrap/bin/jar*
 	${PAXCTL} +m ${WRKDIR}/bootstrap/bin/java
 	${PAXCTL} +m ${WRKDIR}/bootstrap/bin/java[a-z]*
+.endif
+.if defined(BATCH)
+	@${RECURSIVE_MAKE} ${MAKEFLAGS} apply-va-hack
 .endif
 	@${STEP_MSG} "Reconfiguring with newly built JDK"
 	@${RECURSIVE_MAKE} ${MAKEFLAGS} do-configure
