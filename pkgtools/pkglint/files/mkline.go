@@ -216,8 +216,9 @@ func (mkline *MkLine) checkInclude() {
 	}
 }
 
-func (mkline *MkLine) checkCond(indentation *Indentation, forVars map[string]bool) {
+func (mkline *MkLine) checkCond(forVars map[string]bool) {
 	indent, directive, args := mkline.Indent(), mkline.Directive(), mkline.Args()
+	indentation := &G.Mk.indentation
 
 	switch directive {
 	case "endif", "endfor", "elif", "else":
@@ -943,6 +944,10 @@ func (mkline *MkLine) checkVarassignSpecific() {
 	if hasPrefix(varname, "SITES_") {
 		mkline.Warn0("SITES_* is deprecated. Please use SITES.* instead.")
 	}
+
+	if varname == "PKG_SKIP_REASON" && G.Mk.indentation.DependsOn("OPSYS") {
+		mkline.Note0("Consider defining NOT_FOR_PLATFORM instead of setting PKG_SKIP_REASON depending on ${OPSYS}.")
+	}
 }
 
 func (mkline *MkLine) checkVarassignBsdPrefs() {
@@ -1224,6 +1229,34 @@ func (mkline *MkLine) CheckCond() {
 			mkline.CheckVartype(varname, opUseMatch, value, "")
 		}
 	})
+
+	mkline.rememberUsedVariables(cond)
+}
+
+func (mkline *MkLine) rememberUsedVariables(cond *Tree) {
+	if G.Mk == nil {
+		return
+	}
+
+	indentation := &G.Mk.indentation
+	arg0varname := func(node *Tree) {
+		varname := node.args[0].(string)
+		indentation.AddVar(varname)
+	}
+	arg0varuse := func(node *Tree) {
+		varuse := node.args[0].(MkVarUse)
+		indentation.AddVar(varuse.varname)
+	}
+	arg2varuse := func(node *Tree) {
+		varuse := node.args[2].(MkVarUse)
+		indentation.AddVar(varuse.varname)
+	}
+	cond.Visit("defined", arg0varname)
+	cond.Visit("empty", arg0varuse)
+	cond.Visit("compareVarNum", arg0varuse)
+	cond.Visit("compareVarStr", arg0varuse)
+	cond.Visit("compareVarVar", arg0varuse)
+	cond.Visit("compareVarVar", arg2varuse)
 }
 
 func (mkline *MkLine) CheckValidCharactersInValue(reValid string) {
@@ -1679,10 +1712,42 @@ func (vuc *VarUseContext) String() string {
 }
 
 type Indentation struct {
-	data []int
+	depth         []int             // Number of space characters; always a multiple of 2
+	conditionVars []map[string]bool // Variables on which the current path depends
 }
 
-func (ind *Indentation) Len() int        { return len(ind.data) }
-func (ind *Indentation) Depth() int      { return ind.data[len(ind.data)-1] }
-func (ind *Indentation) Pop()            { ind.data = ind.data[:len(ind.data)-1] }
-func (ind *Indentation) Push(indent int) { ind.data = append(ind.data, indent) }
+func (ind *Indentation) Len() int {
+	return len(ind.depth)
+}
+
+func (ind *Indentation) Depth() int {
+	return ind.depth[len(ind.depth)-1]
+}
+
+func (ind *Indentation) Pop() {
+	newlen := ind.Len() - 1
+	ind.depth = ind.depth[:newlen]
+	ind.conditionVars = ind.conditionVars[:newlen]
+}
+
+func (ind *Indentation) Push(indent int) {
+	ind.depth = append(ind.depth, indent)
+	ind.conditionVars = append(ind.conditionVars, nil)
+}
+
+func (ind *Indentation) AddVar(varname string) {
+	level := ind.Len() - 1
+	if ind.conditionVars[level] == nil {
+		ind.conditionVars[level] = make(map[string]bool)
+	}
+	ind.conditionVars[level][varname] = true
+}
+
+func (ind *Indentation) DependsOn(varname string) bool {
+	for _, vars := range ind.conditionVars {
+		if vars[varname] {
+			return true
+		}
+	}
+	return false
+}
