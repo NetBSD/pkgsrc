@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2338 2016/06/10 13:17:29 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2339 2016/06/10 15:23:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3036,3 +3036,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/p5-Net-Dict to 2.21 [mef 2016-06-09]
 	Updated net/syncthing to 0.13.5 [gdt 2016-06-09]
 	Updated www/firefox to 46.0.1nb2 [wiz 2016-06-10]
+	Updated graphics/png to 1.6.23 [wiz 2016-06-10]
