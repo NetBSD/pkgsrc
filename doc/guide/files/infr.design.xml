@@ -1,4 +1,4 @@
-<!-- $NetBSD: infr.design.xml,v 1.8 2007/08/15 06:33:45 rillig Exp $ -->
+<!-- $NetBSD: infr.design.xml,v 1.9 2016/06/10 21:21:42 rillig Exp $ -->
 
 <chapter id="infr.design"> <?dbhtml filename="infr.design.html"?>
 <title>Design of the pkgsrc infrastructure</title>
@@ -147,10 +147,10 @@ CFLAGS+=                -Wall
 <title>How can variables be specified?</title>
 
 	<para>There are many ways in which the definition and use of a
-	variable can be restricted in order to detect bugs and
-	violations of the (mostly unwritten) policies. See the
-	<literal>pkglint</literal> developer's documentation for further
-	details.</para>
+	variable can be restricted in order to detect bugs and violations
+	of the (mostly unwritten) policies. A package can be checked with
+	<literal>pkglint -Wall</literal> to see whether it meets these
+	rules.</para>
 
 </sect1>
 
@@ -181,7 +181,7 @@ CFLAGS+=                -Wall
 	parameter since it is very likely that further text will be
 	added after calling the procedure, which would effectively apply
 	the procedure to only a part of the variable. Also, references
-	to other variables wit will be modified after calling the
+	to other variables will be modified after calling the
 	procedure.</para>
 
 	<para>A procedure can declare its output parameters either as
