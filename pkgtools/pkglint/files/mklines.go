@@ -17,6 +17,7 @@ type MkLines struct {
 	plistVars      map[string]bool    // Variables that are registered in PLIST_VARS, to ensure that all user-defined variables are added to it.
 	tools          map[string]bool    // Set of tools that are declared to be used.
 	SeenBsdPrefsMk bool
+	indentation    Indentation // Indentation depth of preprocessing directives
 }
 
 func NewMkLines(lines []*Line) *MkLines {
@@ -41,7 +42,8 @@ func NewMkLines(lines []*Line) *MkLines {
 		make(map[string]bool),
 		make(map[string]bool),
 		tools,
-		false}
+		false,
+		Indentation{}}
 }
 
 func (mklines *MkLines) DefineVar(mkline *MkLine, varname string) {
@@ -99,7 +101,8 @@ func (mklines *MkLines) Check() {
 
 	var substcontext SubstContext
 	var varalign VaralignBlock
-	indentation := Indentation{[]int{0}} // Indentation depth of preprocessing directives
+	indentation := &mklines.indentation
+	indentation.Push(0)
 	for _, mkline := range mklines.mklines {
 		mkline.Check()
 		varalign.Check(mkline)
@@ -120,7 +123,7 @@ func (mklines *MkLines) Check() {
 			}
 
 		case mkline.IsCond():
-			mkline.checkCond(&indentation, mklines.forVars)
+			mkline.checkCond(mklines.forVars)
 
 		case mkline.IsDependency():
 			mkline.checkDependencyRule(allowedTargets)

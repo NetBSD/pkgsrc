@@ -662,6 +662,13 @@ func (cv *VartypeCheck) Perl5Packlist() {
 	}
 }
 
+func (cv *VartypeCheck) Perms() {
+	if cv.value == "${ROOT_USER}" || cv.value == "${ROOT_GROUP}" {
+		valuename := cv.value[2 : len(cv.value)-1]
+		cv.line.Error1("%s must not be used in permission definitions. Use REAL_%[1]s instead.", valuename)
+	}
+}
+
 func (cv *VartypeCheck) PkgName() {
 	if cv.op != opUseMatch && cv.value == cv.valueNovar && !matches(cv.value, rePkgname) {
 		cv.line.Warn1("%q is not a valid package name. A valid package name has the form packagename-version, where version consists only of digits, letters and dots.", cv.value)

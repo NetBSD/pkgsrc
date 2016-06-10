@@ -478,7 +478,6 @@ func (gd *GlobalData) loadDeprecatedVars() {
 
 		// November 2006
 		"SKIP_PORTABILITY_CHECK": "Use CHECK_PORTABILITY_SKIP (a list of patterns) instead.",
-		"PKG_SKIP_REASON":        "Use PKG_FAIL_REASON instead.",
 
 		// January 2007
 		"BUILDLINK_TRANSFORM.*": "Use BUILDLINK_FNAME_TRANSFORM.* instead.",
