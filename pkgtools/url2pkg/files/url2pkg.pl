@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: url2pkg.pl,v 1.31 2016/06/01 12:45:59 wiz Exp $
+# $NetBSD: url2pkg.pl,v 1.32 2016/06/10 21:43:04 rillig Exp $
 #
 
 # Copyright (c) 2010 The NetBSD Foundation, Inc.
@@ -507,14 +507,13 @@ sub adjust_package_from_extracted_distfiles()
 		unlink("Makefile-url2pkg.new");
 		die("$0: ERROR: didn't find the url2pkg marker in the file.\n");
 	}
-		
 }
 
 sub main() {
 	my $url;
 
 	if (!-f "../../mk/bsd.pkg.mk") {
-		die("$0 must be run from a package directory (.../pkgsrc/category/package).");
+		die("ERROR: $0 must be run from a package directory (.../pkgsrc/category/package).\n");
 	}
 
 	my @extract_cookie = <w*/.extract_done>;
