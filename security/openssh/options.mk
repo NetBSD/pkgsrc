@@ -1,11 +1,19 @@
-# $NetBSD: options.mk,v 1.31 2015/08/22 05:17:22 taca Exp $
+# $NetBSD: options.mk,v 1.32 2016/06/10 23:15:36 alnsn Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openssh
-PKG_SUPPORTED_OPTIONS=	kerberos hpn-patch pam
+PKG_SUPPORTED_OPTIONS=	hpn-patch kerberos openssl pam
+PKG_SUGGESTED_OPTIONS=	openssl
 
 .include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mopenssl)
+.include "../../security/openssl/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-ssl-dir=${SSLBASE:Q}
+.else
+CONFIGURE_ARGS+=	--without-openssl
+.endif
 
 .if !empty(PKG_OPTIONS:Mkerberos)
 .  include "../../mk/krb5.buildlink3.mk"
