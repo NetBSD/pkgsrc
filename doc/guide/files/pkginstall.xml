@@ -1,4 +1,4 @@
-<!-- $NetBSD: pkginstall.xml,v 1.19 2014/06/10 15:09:42 joerg Exp $ -->
+<!-- $NetBSD: pkginstall.xml,v 1.20 2016/06/10 21:20:51 rillig Exp $ -->
 
 <chapter id="pkginstall"> <?dbhtml filename="pkginstall.html"?>
 <title>The pkginstall framework</title>
@@ -102,7 +102,11 @@ directories anywhere in the file system:</para>
     to be destroyed by the installation scripts.  The difference between
     the two is that the latter prompts the administrator to remove any
     directories that may be left after deinstallation (because they were
-    not empty), while the former does not.</para>
+    not empty), while the former does not.  Example:</para>
+
+<programlisting>
+MAKE_DIRS+=             ${VARBASE}/foo/private
+</programlisting>
   </listitem>
 
   <listitem>
@@ -114,7 +118,8 @@ directories anywhere in the file system:</para>
     numerical mode.  For example:</para>
 
 <programlisting>
-MAKE_DIRS_PERMS+=         ${VARBASE}/foo/private ${ROOT_USER} ${ROOT_GROUP} 0700
+MAKE_DIRS_PERMS+=       ${VARBASE}/foo/private \
+                        ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0700
 </programlisting>
 
     <para>The difference between the two is exactly the same as their
@@ -164,7 +169,8 @@ installation prefix:</para>
     this order.  For example:</para>
 
 <programlisting>
-REQD_FILES_PERMS+= ${PREFIX}/share/somefile ${VARBASE}/somefile ${ROOT_USER} ${ROOT_GROUP} 0700
+REQD_FILES_PERMS+=      ${PREFIX}/share/somefile ${VARBASE}/somefile \
+                        ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0700
 </programlisting>
 
     <para>The difference between the two is exactly the same as their
