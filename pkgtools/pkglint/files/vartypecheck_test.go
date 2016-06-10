@@ -277,6 +277,16 @@ func (s *Suite) TestVartypeCheck_Pathlist(c *check.C) {
 	c.Check(s.Output(), equals, "WARN: fname:1: All components of PATH (in this case \".\") should be absolute paths.\n")
 }
 
+func (s *Suite) Test_VartypeCheck_Perms(c *check.C) {
+	runVartypeChecks("CONF_FILES_PERMS", opAssignAppend, (*VartypeCheck).Perms,
+		"root",
+		"${ROOT_USER}",
+		"ROOT_USER",
+		"${REAL_ROOT_USER}")
+
+	c.Check(s.Output(), equals, "ERROR: fname:2: ROOT_USER must not be used in permission definitions. Use REAL_ROOT_USER instead.\n")
+}
+
 func (s *Suite) TestVartypeCheck_PkgOptionsVar(c *check.C) {
 	runVartypeChecks("PKG_OPTIONS_VAR.screen", opAssign, (*VartypeCheck).PkgOptionsVar,
 		"PKG_OPTIONS.${PKGBASE}")
