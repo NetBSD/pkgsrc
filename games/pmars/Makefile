@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/06/11 18:43:24 kamil Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/11 21:23:28 kamil Exp $
 #
 
 DISTNAME=		pmars-0.9.2
@@ -10,9 +10,9 @@ HOMEPAGE=		http://www.koth.org/pmars/
 COMMENT=		The official Core Wars simulator
 LICENSE=		gnu-gpl-v2
 
-BUILD_MAKE_FLAGS+=	-C src
+BUILD_DIRS=		src
 BUILD_MAKE_FLAGS+=	CC=${CC:Q}
-BUILD_MAKE_FLAGS+=	LIB="-Wl,-rpath,${BUILDLINK_PREFIX.libX11}/lib -lX11"
+BUILD_MAKE_FLAGS+=	LIB="${COMPILER_RPATH_FLAG}${X11BASE}/lib -lX11"
 
 INSTALLATION_DIRS+=	bin share/pmars share/pmars/config share/pmars/warriors ${PKGMANDIR}/man6
 
