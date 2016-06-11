@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2346 2016/06/11 12:47:40 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.2347 2016/06/11 12:59:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3044,3 +3044,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated pkgtools/pkg_regress to 0.3 [rillig 2016-06-11]
 	Updated www/seamonkey to 2.40nb2 [wiz 2016-06-11]
 	Added devel/p5-Function-Parameters version 1.0705 [kamil 2016-06-11]
+	Updated security/tor-browser to 5.5.4nb2 [wiz 2016-06-11]
