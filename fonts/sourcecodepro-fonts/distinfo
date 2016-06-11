@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 20:44:39 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/06/11 18:55:07 wiz Exp $
 
-SHA1 (SourceCodePro_FontsOnly-1.017.zip) = c0e3f6f8e25b434c0e28a817539632f8a5ecb9e5
-RMD160 (SourceCodePro_FontsOnly-1.017.zip) = ea82d4de6fecf1aa718a371f1c436b75e0d6131d
-SHA512 (SourceCodePro_FontsOnly-1.017.zip) = 70dacfb3a76a09fd58eb43b7257c68d79580d4b6b8a7ae52bee1ab148ac60e462d34837ac8353f31c47ed3c271c39b0676b6cac0266d2df8afc5c00754e157fe
-Size (SourceCodePro_FontsOnly-1.017.zip) = 799805 bytes
+SHA1 (sourcecodepro-fonts-1.030/1.030R-it.tar.gz) = d266fb8cc558a85d76432ee0731144fade7b4be1
+RMD160 (sourcecodepro-fonts-1.030/1.030R-it.tar.gz) = fdcd19b5276887cb95b1688ac4daf582e0347195
+SHA512 (sourcecodepro-fonts-1.030/1.030R-it.tar.gz) = 0fdc27dbe99a19b85f1913fc256db51ae8776b0d5602a3a3efdef5e5ad4a15fd619c45600f6c6fd5a891de5e7b06f8f0588e2c56c5ccd1e03c26ce1801b4094b
+Size (sourcecodepro-fonts-1.030/1.030R-it.tar.gz) = 7682204 bytes

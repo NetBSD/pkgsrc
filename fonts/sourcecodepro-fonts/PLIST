@@ -1,8 +1,15 @@
-@comment $NetBSD: PLIST,v 1.2 2013/01/20 09:45:25 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/06/11 18:55:07 wiz Exp $
 share/fonts/sourcecodepro/SourceCodePro-Black.otf
+share/fonts/sourcecodepro/SourceCodePro-BlackIt.otf
 share/fonts/sourcecodepro/SourceCodePro-Bold.otf
+share/fonts/sourcecodepro/SourceCodePro-BoldIt.otf
 share/fonts/sourcecodepro/SourceCodePro-ExtraLight.otf
+share/fonts/sourcecodepro/SourceCodePro-ExtraLightIt.otf
+share/fonts/sourcecodepro/SourceCodePro-It.otf
 share/fonts/sourcecodepro/SourceCodePro-Light.otf
+share/fonts/sourcecodepro/SourceCodePro-LightIt.otf
 share/fonts/sourcecodepro/SourceCodePro-Medium.otf
+share/fonts/sourcecodepro/SourceCodePro-MediumIt.otf
 share/fonts/sourcecodepro/SourceCodePro-Regular.otf
 share/fonts/sourcecodepro/SourceCodePro-Semibold.otf
+share/fonts/sourcecodepro/SourceCodePro-SemiboldIt.otf
