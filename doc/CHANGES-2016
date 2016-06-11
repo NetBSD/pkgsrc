@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2344 2016/06/11 09:37:28 rillig Exp $
+$NetBSD: CHANGES-2016,v 1.2345 2016/06/11 12:34:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3042,3 +3042,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/openssh to openssh-7.2.2nb2 [alnsn 2016-06-10]
 	Updated mail/thunderbird to 45.1.0nb1 [wiz 2016-06-11]
 	Updated pkgtools/pkg_regress to 0.3 [rillig 2016-06-11]
+	Updated www/seamonkey to 2.40nb2 [wiz 2016-06-11]
