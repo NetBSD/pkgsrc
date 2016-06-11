@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2016/06/11 18:33:22 wiz Exp $
+
+Fix unportable test(1) operator.
+
+--- configure.orig	2016-06-09 16:12:51.000000000 +0000
++++ configure
+@@ -40378,7 +40378,7 @@ fi
+ fi
+ 
+ 
+-if test "X$with_cares" == "Xyes"; then :
++if test "X$with_cares" = "Xyes"; then :
+ 
+ 
+ pkg_failed=no
