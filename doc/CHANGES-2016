@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2349 2016/06/11 14:30:28 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2350 2016/06/11 14:31:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3047,3 +3047,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/tor-browser to 5.5.4nb2 [wiz 2016-06-11]
 	Updated net/mikutter to 3.4.0 [tsutsui 2016-06-11]
 	Updated misc/p5-Business-ISBN to 2.011 [wiz 2016-06-11]
+	Updated time/p5-DateTime-TimeZone to 2.00 [wiz 2016-06-11]
