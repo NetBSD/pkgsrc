@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/06/08 10:30:46 youri Exp $
+# $NetBSD: Makefile,v 1.4 2016/06/11 18:18:22 youri Exp $
 
 DISTNAME=	lxterminal-0.2.0
 CATEGORIES=	x11
@@ -10,7 +10,7 @@ COMMENT=	Desktop-independent VTE-based terminal emulator with tabs
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	intltool pkg-config msgfmt
+USE_TOOLS+=	gmake intltool pkg-config msgfmt
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
