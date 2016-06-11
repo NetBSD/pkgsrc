@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2013/07/03 15:58:02 jperkin Exp $
+# $NetBSD: options.mk,v 1.7.22.1 2016/06/11 18:31:02 spz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libthrift
 PKG_SUPPORTED_OPTIONS=	csharp java erlang python perl php ruby
@@ -93,6 +93,7 @@ CONFIGURE_ARGS+=	--without-php_extension
 .if !empty(PKG_OPTIONS:Mruby)
 CONFIGURE_ARGS+=	--with-ruby
 CONFIGURE_ARGS+=	--enable-gen-rb
+CONFIGURE_ENV+=		ac_cv_path_RUBY=${RUBY}
 PLIST.ruby=		yes
 
 .include "../../lang/ruby/buildlink3.mk"
