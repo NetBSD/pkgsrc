@@ -84,7 +84,6 @@ I. The pkgsrc user's guide
             4.1.6. Finding if newer versions of your installed packages are in
                 pkgsrc
             4.1.7. Other administrative functions
-            4.1.8. A word of warning
 
         4.2. Building packages from source
 
@@ -196,10 +195,8 @@ II. The pkgsrc developer's guide
         12.3. Code snippets
 
             12.3.1. Adding things to a list
-            12.3.2. Converting an internal list into an external list
-            12.3.3. Passing variables to a shell command
-            12.3.4. Quoting guideline
-            12.3.5. Workaround for a bug in BSD Make
+            12.3.2. Passing variables to a shell command
+            12.3.3. Quoting guideline
 
     13. PLIST issues
 
@@ -406,17 +403,15 @@ III. The pkgsrc infrastructure internals
 
     25. Regression tests
 
-        25.1. The regression tests framework
-        25.2. Running the regression tests
-        25.3. Adding a new regression test
+        25.1. Running the regression tests
+        25.2. Adding a new regression test
 
-            25.3.1. Overridable functions
-            25.3.2. Helper functions
+            25.2.1. Overridable functions
+            25.2.2. Helper functions
 
     26. Porting pkgsrc
 
         26.1. Porting pkgsrc to a new operating system
-        26.2. Adding support for a new compiler
 
 A. A simple example package: bison
 
@@ -488,7 +483,7 @@ pkgsrc currently contains several thousand packages, including:
 
   * meta-pkgs/kde4 - The K Desktop Environment
 
-...just to name a few.
+? just to name a few.
 
 pkgsrc has built-in support for handling varying dependencies, such as pthreads
 and X11, and extended features such as IPv6 support on a range of platforms.
@@ -735,7 +730,6 @@ Table of Contents
         4.1.6. Finding if newer versions of your installed packages are in
             pkgsrc
         4.1.7. Other administrative functions
-        4.1.8. A word of warning
 
     4.2. Building packages from source
 
@@ -1035,8 +1029,6 @@ directories. Use bmake corresponding to the installation you're working with to
 build and install packages.
 
 3.3. Platform-specific notes
-
-Here are some platform-specific notes you should be aware of.
 
 3.3.1. Cygwin
 
@@ -1504,7 +1496,6 @@ Table of Contents
     4.1.5. Checking for security vulnerabilities in installed packages
     4.1.6. Finding if newer versions of your installed packages are in pkgsrc
     4.1.7. Other administrative functions
-    4.1.8. A word of warning
 
 4.2. Building packages from source
 
@@ -1664,18 +1655,6 @@ any dependencies.
 4.1.7. Other administrative functions
 
 The pkg_admin executes various administrative functions on the package system.
-
-4.1.8. A word of warning
-
-Please pay very careful attention to the warnings expressed in the pkg_add(1)
-manual page about the inherent dangers of installing binary packages which you
-did not create yourself, and the security holes that can be introduced onto
-your system by indiscriminate adding of such files.
-
-The same warning of course applies to every package you install from source
-when you haven't completely read and understood the source code of the package,
-the compiler that is used to build the package and all the other tools that are
-involved.
 
 4.2. Building packages from source
 
@@ -1918,8 +1897,6 @@ each variable's intent.
     to change this variable.
 
 5.2. Variables affecting the build process
-
-XXX
 
   * PACKAGES: The top level directory for the binary packages. The default is $
     {PKGSRCDIR}/packages.
@@ -2601,21 +2578,14 @@ Utilities for people maintaining pkgsrc (or: more obscure pkg utilities)
 
 9.3. How to use pkgsrc as non-root
 
-If you want to use pkgsrc as non-root user, you can set some variables to make
-pkgsrc work under these conditions. At the very least, you need to set
-UNPRIVILEGED to "yes"; this will turn on unprivileged mode and set multiple
-related variables to allow installation of packages as non-root.
+To install packages from source as a non-root user, download pkgsrc as
+described in Chapter 2, Where to get pkgsrc and how to keep it up-to-date, cd
+into that directory and run the command ./bootstrap/bootstrap --unprivileged.
 
-In case the defaults are not enough, you may want to tune some other variables
-used. For example, if the automatic user/group detection leads to incorrect
-values (or not the ones you would like to use), you can change them by setting
-UNPRIVILEGED_USER and UNPRIVILEGED_GROUP respectively.
+This will install the binary part of pkgsrc to ~/pkg and put the pkgsrc
+configuration mk.conf into ~/pkg/etc.
 
-As regards bootstrapping, please note that the bootstrap script will ease
-non-root configuration when given the "--ignore-user-check" flag, as it will
-choose and use multiple default directories under ~/pkg as the installation
-targets. These directories can be overridden by the "--prefix" flag provided by
-the script, as well as some others that allow finer tuning of the tree layout.
+For more details, see mk/unprivileged.mk.
 
 9.4. How to resume transfers when fetching distfiles?
 
@@ -2903,10 +2873,8 @@ Table of Contents
     12.3. Code snippets
 
         12.3.1. Adding things to a list
-        12.3.2. Converting an internal list into an external list
-        12.3.3. Passing variables to a shell command
-        12.3.4. Quoting guideline
-        12.3.5. Workaround for a bug in BSD Make
+        12.3.2. Passing variables to a shell command
+        12.3.3. Quoting guideline
 
 13. PLIST issues
 
@@ -3570,14 +3538,14 @@ Please pay attention to the following gotchas:
 The distinfo file contains the message digest, or checksum, of each distfile
 needed for the package. This ensures that the distfiles retrieved from the
 Internet have not been corrupted during transfer or altered by a malign force
-to introduce a security hole. Due to recent rumor about weaknesses of digest
-algorithms, all distfiles are protected using both SHA1 and RMD160 message
-digests, as well as the file size.
+to introduce a security hole. To provide maximum security, all distfiles are
+protected using three different message digest algorithms (SHA1, RMD160,
+SHA512), as well as the file size.
 
 The distinfo file also contains the checksums for all the patches found in the
 patches directory (see Section 11.3, "patches/*").
 
-To regenerate the distinfo file, use the make makedistinfo or make mdi command.
+To regenerate the distinfo file, use the make distinfo command.
 
 Some packages have different sets of distfiles depending on the platform, for
 example lang/openjdk7. These are kept in the same distinfo file and care should
@@ -3586,9 +3554,9 @@ lost.
 
 11.3. patches/*
 
-Many packages still don't work out-of-the box on the various platforms that are
-supported by pkgsrc. Therefore, a number of custom patch files are needed to
-make the package work. These patch files are found in the patches/ directory.
+Some packages don't work out-of-the box on the various platforms that are
+supported by pkgsrc. These packages need to be patched to make them work. The
+patch files can be found in the patches/ directory.
 
 In the patch phase, these patches are applied to the files in WRKSRC directory
 after extracting them, in alphabetic order.
@@ -3612,10 +3580,10 @@ There are a number of standard cases:
   * Patches that change source code should mention the platform and other
     environment (for example, the compiler) that the patch is needed for.
 
-In all, the patch should be commented so that any developer who knows the code
-of the application can make some use of the patch. Special care should be taken
-for the upstream developers, since we generally want that they accept our
-patches, so we have less work in the future.
+The patch should be commented so that any developer who knows the code of the
+application can make some use of the patch. Special care should be taken for
+the upstream developers, since we generally want that they accept our patches,
+so we have less work in the future.
 
 11.3.2. Creating patch files
 
@@ -3890,10 +3858,8 @@ Table of Contents
 12.3. Code snippets
 
     12.3.1. Adding things to a list
-    12.3.2. Converting an internal list into an external list
-    12.3.3. Passing variables to a shell command
-    12.3.4. Quoting guideline
-    12.3.5. Workaround for a bug in BSD Make
+    12.3.2. Passing variables to a shell command
+    12.3.3. Quoting guideline
 
 Pkgsrc consists of many Makefile fragments, each of which forms a well-defined
 part of the pkgsrc system. Using the make(1) system as a programming language
@@ -3953,23 +3919,14 @@ the backslash is passed as is. In a variable assignment, any hash character
 that is not preceded by a backslash starts a comment that continues upto the
 end of the logical line.
 
-Note: Because of this parsing algorithm the only way to create a variable
-consisting of a single backslash is using the ``!='' operator, for example:
-BACKSLASH!=echo "\\".
-
-So far for defining variables. The other thing you can do with variables is
-evaluating them. A variable is evaluated when it is part of the right side of
-the ``:='' or the ``!='' operator, or directly before executing a shell command
-which the variable is part of. In all other cases, make(1) performs lazy
-evaluation, that is, variables are not evaluated until there's no other way.
-The ``modifiers'' mentioned in the man page also evaluate the variable.
+The evaluation of variables either happens immediately or lazy. It happens
+immediately when the variable occurs on the right-hand side of the ``:='' or
+the ``!='' operator, in a .if condition or a .for loop. In the other cases, it
+is evaluated lazily.
 
 Some of the modifiers split the string into words and then operate on the
 words, others operate on the string as a whole. When a string is split into
-words, it is split as you would expect it from sh(1).
-
-No rule without exception?the .for loop does not follow the shell quoting rules
-but splits at sequences of whitespace.
+words, it is split like in sh(1).
 
 There are several types of variables that should be handled differently.
 Strings and two types of lists.
@@ -4023,60 +3980,32 @@ all other cases, you must not add a quoting level. You must not merge internal
 and external lists, unless you are sure that all entries are correctly
 interpreted in both lists.
 
-12.3.2. Converting an internal list into an external list
-
-EXT_LIST=       # empty
-.for i in ${INT_LIST}
-EXT_LIST+=      ${i:Q}""
-.endfor
-
-This code converts the internal list INT_LIST into the external list EXT_LIST.
-As the elements of an internal list are unquoted they must be quoted here. The
-reason for appending "" is explained below.
-
-12.3.3. Passing variables to a shell command
+12.3.2. Passing variables to a shell command
 
 Sometimes you may want to print an arbitrary string. There are many ways to get
 it wrong and only few that can handle every nastiness.
 
 STRING=         foo bar <    > * `date` $$HOME ' "
-EXT_LIST=       string=${STRING:Q} x=second\ item
+EXAMPLE_ENV=    string=${STRING:Q} x=multiple\ quoted\ words
 
 all:
         echo ${STRING}                  # 1
-        echo "${STRING}"                # 2
-        echo "${STRING:Q}"              # 3
-        echo ${STRING:Q}                # 4
-        echo x${STRING:Q} | sed 1s,.,,  # 5
-        printf "%s\\n" ${STRING:Q}""    # 6
-        env ${EXT_LIST} /bin/sh -c 'echo "$$string"; echo "$$x"'
+        echo ${STRING:Q}                # 2
+        printf '%s\n' ${STRING:Q}''     # 3
+        env ${EXAMPLE_ENV} sh -c 'echo "$$string"; echo "$$x"' # 4
 
 Example 1 leads to a syntax error in the shell, as the characters are just
 copied.
 
-Example 2 leads to a syntax error too, and if you leave out the last "
-character from ${STRING}, date(1) will be executed. The $HOME shell variable
-would be evaluated, too.
+Example 2 can handle all strings, except those starting with a dash or those
+containing backslashes.
 
-Example 3 outputs each space character preceded by a backslash (or not),
-depending on the implementation of the echo(1) command.
+Example 3 can handle arbitrary strings.
 
-Example 4 handles correctly every string that does not start with a dash. In
-that case, the result depends on the implementation of the echo(1) command. As
-long as you can guarantee that your input does not start with a dash, this form
-is appropriate.
+In example 4, the EXT_LIST does not need to be quoted because the quoting has
+already been done when adding elements to the list.
 
-Example 5 handles even the case of a leading dash correctly.
-
-Example 6 also works with every string and is the light-weight solution, since
-it does not involve a pipe, which has its own problems.
-
-The EXT_LIST does not need to be quoted because the quoting has already been
-done when adding elements to the list.
-
-As internal lists shall not be passed to the shell, there is no example for it.
-
-12.3.4. Quoting guideline
+12.3.3. Quoting guideline
 
 There are many possible sources of wrongly quoted variables. This section lists
 some of the commonly known ones.
@@ -4140,17 +4069,6 @@ some of the commonly known ones.
     \ is interpreted as a line-continuation by make(1), which makes the second
     line the arguments of the echo(1) command from the first line. To avoid
     this, write ${i:Q}"".
-
-12.3.5. Workaround for a bug in BSD Make
-
-The pkgsrc bmake program does not handle the following assignment correctly. In
-case _othervar_ contains a ``-'' character, one of the closing braces is
-included in ${VAR} after this code executes.
-
-VAR:=   ${VAR:N${_othervar_:C/-//}}
-
-For a more complex code snippet and a workaround, see the package regress/
-make-quoting, testcase bug1.
 
 Chapter 13. PLIST issues
 
@@ -6327,8 +6245,11 @@ This is due to copyright law, and reasons for license choices are outside the
 scope of pkgsrc. The pkgsrc system recognizes that there are a number of
 licenses which some users may find objectionable or difficult or impossible to
 comply with. The Free Software Foundation has declared some licenses "Free",
-and the Open Source Initiative has a definition of "Open Source". Note that a
-package whose license forbids to copy does not meet either the Free or Open
+and the Open Source Initiative has a definition of "Open Source". The pkgsrc
+system, as a policy choice, does not label packages which have licenses that
+are Free or Open Source. However, packages without a license meeting either of
+those tests are labeled with a license tag denoting the license. Note that a
+package with no license to copy trivially does not meet either the Free or Open
 Source test.
 
 For packages which are not Free or Open Source, pkgsrc will not build the
@@ -8348,17 +8269,15 @@ Table of Contents
 
 25. Regression tests
 
-    25.1. The regression tests framework
-    25.2. Running the regression tests
-    25.3. Adding a new regression test
+    25.1. Running the regression tests
+    25.2. Adding a new regression test
 
-        25.3.1. Overridable functions
-        25.3.2. Helper functions
+        25.2.1. Overridable functions
+        25.2.2. Helper functions
 
 26. Porting pkgsrc
 
     26.1. Porting pkgsrc to a new operating system
-    26.2. Adding support for a new compiler
 
 Chapter 24. Design of the pkgsrc infrastructure
 
@@ -8587,12 +8506,11 @@ Chapter 25. Regression tests
 
 Table of Contents
 
-25.1. The regression tests framework
-25.2. Running the regression tests
-25.3. Adding a new regression test
+25.1. Running the regression tests
+25.2. Adding a new regression test
 
-    25.3.1. Overridable functions
-    25.3.2. Helper functions
+    25.2.1. Overridable functions
+    25.2.2. Helper functions
 
 The pkgsrc infrastructure consists of a large codebase, and there are many
 corners where every little bit of a file is well thought out, making pkgsrc
@@ -8601,22 +8519,20 @@ changes from breaking anything, a suite of regression tests should go along
 with every important part of the pkgsrc infrastructure. This chapter describes
 how regression tests work in pkgsrc and how you can add new tests.
 
-25.1. The regression tests framework
-
-25.2. Running the regression tests
+25.1. Running the regression tests
 
 You first need to install the pkgtools/pkg_regress package, which provides the 
 pkg_regress command. Then you can simply run that command, which will run all
 tests in the regress category.
 
-25.3. Adding a new regression test
+25.2. Adding a new regression test
 
 Every directory in the regress category that contains a file called spec is
 considered a regression test. This file is a shell program that is included by
 the pkg_regress command. The following functions can be overridden to suit your
 needs.
 
-25.3.1. Overridable functions
+25.2.1. Overridable functions
 
 These functions do not take any parameters. Although they are called in "set -e
 " mode, they don't stop at the first failing command. See this StackOverflow
@@ -8658,7 +8574,7 @@ do_cleanup
     This function cleans everything up after the test has been run. By default
     it does nothing.
 
-25.3.2. Helper functions
+25.2.2. Helper functions
 
 exit_status expected
 
@@ -8671,7 +8587,8 @@ output_require regex...
     matches the extended regular expression. If it does not, the test will
     fail. Example:
 
-    output_require
+    output_require "looks fine"
+    output_require "^[[:alpha:]+[[:space:]][[:alpha:]]{6}$"
 
 output_prohibit(regex...)
 
@@ -8684,7 +8601,6 @@ Chapter 26. Porting pkgsrc
 Table of Contents
 
 26.1. Porting pkgsrc to a new operating system
-26.2. Adding support for a new compiler
 
 The pkgsrc system has already been ported to many operating systems, hardware
 architectures and compilers. This chapter explains the necessary steps to make
@@ -8719,10 +8635,6 @@ mk/tools/tools.MyOS.mk
 
 Now, you should be able to build some basic packages, like lang/perl5, shells/
 bash.
-
-26.2. Adding support for a new compiler
-
-TODO
 
 Appendix A. A simple example package: bison
 

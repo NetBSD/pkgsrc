@@ -102,7 +102,6 @@
 <dt><span class="sect2"><a href="#vulnerabilities">4.1.5. Checking for security vulnerabilities in installed packages</a></span></dt>
 <dt><span class="sect2"><a href="#pkg_versions">4.1.6. Finding if newer versions of your installed packages are in pkgsrc</a></span></dt>
 <dt><span class="sect2"><a href="#using.pkg_admin">4.1.7. Other administrative functions</a></span></dt>
-<dt><span class="sect2"><a href="#a-word-of-warning">4.1.8. A word of warning</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#building-packages-from-source">4.2. Building packages from source</a></span></dt>
 <dd><dl>
@@ -184,7 +183,7 @@ builds)</a></span></dt>
 <dd><dl>
 <dt><span class="sect1"><a href="#components.Makefile">11.1. <code class="filename">Makefile</code></a></span></dt>
 <dt><span class="sect1"><a href="#components.distinfo">11.2. <code class="filename">distinfo</code></a></span></dt>
-<dt><span class="sect1"><a href="#components.patches">11.3. patches/*</a></span></dt>
+<dt><span class="sect1"><a href="#components.patches">11.3. <code class="filename">patches/*</code></a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#components.patch.structure">11.3.1. Structure of a single patch file</a></span></dt>
 <dt><span class="sect2"><a href="#components.patches.caveats">11.3.2. Creating patch files</a></span></dt>
@@ -210,10 +209,8 @@ builds)</a></span></dt>
 <dt><span class="sect1"><a href="#makefile.code">12.3. Code snippets</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#adding-to-list">12.3.1. Adding things to a list</a></span></dt>
-<dt><span class="sect2"><a href="#converting-internal-to-external">12.3.2. Converting an internal list into an external list</a></span></dt>
-<dt><span class="sect2"><a href="#passing-variable-to-shell">12.3.3. Passing variables to a shell command</a></span></dt>
-<dt><span class="sect2"><a href="#quoting-guideline">12.3.4. Quoting guideline</a></span></dt>
-<dt><span class="sect2"><a href="#bsd-make-bug-workaround">12.3.5. Workaround for a bug in BSD Make</a></span></dt>
+<dt><span class="sect2"><a href="#passing-variable-to-shell">12.3.2. Passing variables to a shell command</a></span></dt>
+<dt><span class="sect2"><a href="#quoting-guideline">12.3.3. Quoting guideline</a></span></dt>
 </dl></dd>
 </dl></dd>
 <dt><span class="chapter"><a href="#plist">13. PLIST issues</a></span></dt>
@@ -420,19 +417,15 @@ builds)</a></span></dt>
 </dl></dd>
 <dt><span class="chapter"><a href="#regression">25. Regression tests</a></span></dt>
 <dd><dl>
-<dt><span class="sect1"><a href="#regression.descr">25.1. The regression tests framework</a></span></dt>
-<dt><span class="sect1"><a href="#regression.run">25.2. Running the regression tests</a></span></dt>
-<dt><span class="sect1"><a href="#regression.new">25.3. Adding a new regression test</a></span></dt>
+<dt><span class="sect1"><a href="#regression.run">25.1. Running the regression tests</a></span></dt>
+<dt><span class="sect1"><a href="#regression.new">25.2. Adding a new regression test</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#regression.fun.override">25.3.1. Overridable functions</a></span></dt>
-<dt><span class="sect2"><a href="#regression.fun.helper">25.3.2. Helper functions</a></span></dt>
+<dt><span class="sect2"><a href="#regression.fun.override">25.2.1. Overridable functions</a></span></dt>
+<dt><span class="sect2"><a href="#regression.fun.helper">25.2.2. Helper functions</a></span></dt>
 </dl></dd>
 </dl></dd>
 <dt><span class="chapter"><a href="#porting">26. Porting pkgsrc</a></span></dt>
-<dd><dl>
-<dt><span class="sect1"><a href="#porting.opsys">26.1. Porting pkgsrc to a new operating system</a></span></dt>
-<dt><span class="sect1"><a href="#porting.compiler">26.2. Adding support for a new compiler</a></span></dt>
-</dl></dd>
+<dd><dl><dt><span class="sect1"><a href="#porting.opsys">26.1. Porting pkgsrc to a new operating system</a></span></dt></dl></dd>
 </dl></dd>
 <dt><span class="appendix"><a href="#examples">A. A simple example package: bison</a></span></dt>
 <dd><dl>
@@ -517,7 +510,7 @@ packages for himself, which is a time-costly task.</p>
 <li class="listitem"><p><a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/meta-pkgs/kde4/README.html" target="_top"><code class="filename">meta-pkgs/kde4</code></a> - The K
 	  Desktop Environment</p></li>
 </ul></div>
-<p>...just to name a few.</p>
+<p>&#8230; just to name a few.</p>
 <p>pkgsrc has built-in support for handling varying dependencies,
       such as pthreads and X11, and extended features such as IPv6 support on
       a range of platforms.</p>
@@ -858,7 +851,6 @@ minutes!</p>
 <dt><span class="sect2"><a href="#vulnerabilities">4.1.5. Checking for security vulnerabilities in installed packages</a></span></dt>
 <dt><span class="sect2"><a href="#pkg_versions">4.1.6. Finding if newer versions of your installed packages are in pkgsrc</a></span></dt>
 <dt><span class="sect2"><a href="#using.pkg_admin">4.1.7. Other administrative functions</a></span></dt>
-<dt><span class="sect2"><a href="#a-word-of-warning">4.1.8. A word of warning</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#building-packages-from-source">4.2. Building packages from source</a></span></dt>
 <dd><dl>
@@ -1188,7 +1180,6 @@ release -d
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="platform-specific-notes"></a>3.3. Platform-specific notes</h2></div></div></div>
-<p>Here are some platform-specific notes you should be aware of.</p>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="cygwin"></a>3.3.1. Cygwin</h3></div></div></div>
@@ -1702,7 +1693,6 @@ WRAPPER_SHELL=  ${LOCALBASE}/bin/bash
 <dt><span class="sect2"><a href="#vulnerabilities">4.1.5. Checking for security vulnerabilities in installed packages</a></span></dt>
 <dt><span class="sect2"><a href="#pkg_versions">4.1.6. Finding if newer versions of your installed packages are in pkgsrc</a></span></dt>
 <dt><span class="sect2"><a href="#using.pkg_admin">4.1.7. Other administrative functions</a></span></dt>
-<dt><span class="sect2"><a href="#a-word-of-warning">4.1.8. A word of warning</a></span></dt>
 </dl></dd>
 <dt><span class="sect1"><a href="#building-packages-from-source">4.2. Building packages from source</a></span></dt>
 <dd><dl>
@@ -1898,21 +1888,6 @@ Version mismatch: 'tcsh' 6.09.00 vs 6.10.00
 <a name="using.pkg_admin"></a>4.1.7. Other administrative functions</h3></div></div></div>
 <p>The <span class="command"><strong>pkg_admin</strong></span> executes various
     administrative functions on the package system.</p>
-</div>
-<div class="sect2">
-<div class="titlepage"><div><div><h3 class="title">
-<a name="a-word-of-warning"></a>4.1.8. A word of warning</h3></div></div></div>
-<p>Please pay very careful attention to the warnings
-    expressed in the <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?pkg_add+1+NetBSD-5.0.1+i386"><span class="citerefentry"><span class="refentrytitle">pkg_add</span>(1)</span></a> manual page about the
-    inherent dangers of installing binary packages which you did
-    not create yourself, and the security holes that can be
-    introduced onto your system by indiscriminate adding of such
-    files.</p>
-<p>The same warning of course applies to every package you
-    install from source when you haven't completely read and
-    understood the source code of the package, the compiler that
-    is used to build the package and all the other tools that are
-    involved.</p>
 </div>
 </div>
 <div class="sect1">
@@ -2215,7 +2190,7 @@ works.</p>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="variables-affecting-build"></a>5.2. Variables affecting the build process</h2></div></div></div>
-<p>XXX
+<p>
       </p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
 <li class="listitem"><p><code class="varname">PACKAGES</code>: The top level
@@ -2235,7 +2210,7 @@ works.</p>
 	    pkgsrc tree instances.)</p></li>
 <li class="listitem"><p><code class="varname">LOCALPATCHES</code>:
 	    Directory for local patches that aren't part of pkgsrc.
-	    See <a class="xref" href="#components.patches" title="11.3. patches/*">Section 11.3, &#8220;patches/*&#8221;</a> for more
+	    See <a class="xref" href="#components.patches" title="11.3. patches/*">Section 11.3, &#8220;<code class="filename">patches/*</code>&#8221;</a> for more
 	    information.</p></li>
 <li class="listitem"><p><code class="varname">PKGMAKECONF</code>: Location of
 	    the <a class="link" href="#mk.conf"><code class="filename">mk.conf</code></a> file used by a package's
@@ -3016,23 +2991,14 @@ utilities)</p>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="non-root-pkgsrc"></a>9.3. How to use pkgsrc as non-root</h2></div></div></div>
-<p>If you want to use pkgsrc as non-root user, you can set some
-variables to make pkgsrc work under these conditions.  At the very least,
-you need to set <code class="varname">UNPRIVILEGED</code> to <span class="quote">&#8220;<span class="quote">yes</span>&#8221;</span>; this
-will turn on unprivileged mode and set multiple related variables to allow
-installation of packages as non-root.</p>
-<p>In case the defaults are not enough, you may want to tune some other
-variables used.  For example, if the automatic user/group detection leads
-to incorrect values (or not the ones you would like to use), you can change
-them by setting <code class="varname">UNPRIVILEGED_USER</code> and
-<code class="varname">UNPRIVILEGED_GROUP</code> respectively.</p>
-<p>As regards bootstrapping, please note that the
-<span class="command"><strong>bootstrap</strong></span> script will ease non-root configuration when
-given the <span class="quote">&#8220;<span class="quote">--ignore-user-check</span>&#8221;</span> flag, as it will choose and
-use multiple default directories under <code class="filename">~/pkg</code> as the
-installation targets.  These directories can be overridden by the
-<span class="quote">&#8220;<span class="quote">--prefix</span>&#8221;</span> flag provided by the script, as well as some others
-that allow finer tuning of the tree layout.</p>
+<p>To install packages from source as a non-root user, download
+pkgsrc as described in <a class="xref" href="#getting" title="Chapter 2. Where to get pkgsrc and how to keep it up-to-date">Chapter 2, <i>Where to get pkgsrc and how to keep it up-to-date</i></a>, cd into that
+directory and run the command <span class="command"><strong>./bootstrap/bootstrap
+--unprivileged</strong></span>.</p>
+<p>This will install the binary part of pkgsrc to
+<code class="filename">~/pkg</code> and put the pkgsrc configuration <a class="link" href="#mk.conf"><code class="filename">mk.conf</code></a>
+into <code class="filename">~/pkg/etc</code>.</p>
+<p>For more details, see <code class="filename">mk/unprivileged.mk</code>.</p>
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
@@ -3342,7 +3308,7 @@ anymore, you can remove that file and run <span class="command"><strong>cvs -q u
 <dd><dl>
 <dt><span class="sect1"><a href="#components.Makefile">11.1. <code class="filename">Makefile</code></a></span></dt>
 <dt><span class="sect1"><a href="#components.distinfo">11.2. <code class="filename">distinfo</code></a></span></dt>
-<dt><span class="sect1"><a href="#components.patches">11.3. patches/*</a></span></dt>
+<dt><span class="sect1"><a href="#components.patches">11.3. <code class="filename">patches/*</code></a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#components.patch.structure">11.3.1. Structure of a single patch file</a></span></dt>
 <dt><span class="sect2"><a href="#components.patches.caveats">11.3.2. Creating patch files</a></span></dt>
@@ -3368,10 +3334,8 @@ anymore, you can remove that file and run <span class="command"><strong>cvs -q u
 <dt><span class="sect1"><a href="#makefile.code">12.3. Code snippets</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#adding-to-list">12.3.1. Adding things to a list</a></span></dt>
-<dt><span class="sect2"><a href="#converting-internal-to-external">12.3.2. Converting an internal list into an external list</a></span></dt>
-<dt><span class="sect2"><a href="#passing-variable-to-shell">12.3.3. Passing variables to a shell command</a></span></dt>
-<dt><span class="sect2"><a href="#quoting-guideline">12.3.4. Quoting guideline</a></span></dt>
-<dt><span class="sect2"><a href="#bsd-make-bug-workaround">12.3.5. Workaround for a bug in BSD Make</a></span></dt>
+<dt><span class="sect2"><a href="#passing-variable-to-shell">12.3.2. Passing variables to a shell command</a></span></dt>
+<dt><span class="sect2"><a href="#quoting-guideline">12.3.3. Quoting guideline</a></span></dt>
 </dl></dd>
 </dl></dd>
 <dt><span class="chapter"><a href="#plist">13. PLIST issues</a></span></dt>
@@ -3963,7 +3927,7 @@ everything worked.</p>
 <dl class="toc">
 <dt><span class="sect1"><a href="#components.Makefile">11.1. <code class="filename">Makefile</code></a></span></dt>
 <dt><span class="sect1"><a href="#components.distinfo">11.2. <code class="filename">distinfo</code></a></span></dt>
-<dt><span class="sect1"><a href="#components.patches">11.3. patches/*</a></span></dt>
+<dt><span class="sect1"><a href="#components.patches">11.3. <code class="filename">patches/*</code></a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#components.patch.structure">11.3.1. Structure of a single patch file</a></span></dt>
 <dt><span class="sect2"><a href="#components.patches.caveats">11.3.2. Creating patch files</a></span></dt>
@@ -4135,15 +4099,14 @@ converters    games         mbone         print         x11
   digest, or checksum, of each distfile needed for the package. This
   ensures that the distfiles retrieved from the Internet have not been
   corrupted during transfer or altered by a malign force to introduce
-  a security hole. Due to recent rumor about weaknesses of digest
-  algorithms, all distfiles are protected using both SHA1 and RMD160
-  message digests, as well as the file size.</p>
+  a security hole. To provide maximum security, all distfiles are
+  protected using three different message digest algorithms (SHA1,
+  RMD160, SHA512), as well as the file size.</p>
 <p>The <code class="filename">distinfo</code> file also contains the
   checksums for all the patches found in the
-  <code class="filename">patches</code> directory (see <a class="xref" href="#components.patches" title="11.3. patches/*">Section 11.3, &#8220;patches/*&#8221;</a>).</p>
+  <code class="filename">patches</code> directory (see <a class="xref" href="#components.patches" title="11.3. patches/*">Section 11.3, &#8220;<code class="filename">patches/*</code>&#8221;</a>).</p>
 <p>To regenerate the <code class="filename">distinfo</code> file, use the
-  <span class="command"><strong>make makedistinfo</strong></span> or <span class="command"><strong>make mdi</strong></span>
-  command.</p>
+  <span class="command"><strong>make distinfo</strong></span> command.</p>
 <p>Some packages have different sets of distfiles depending on
   the platform, for example <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/lang/openjdk7/README.html" target="_top"><code class="filename">lang/openjdk7</code></a>. These are kept in the same
   <code class="filename">distinfo</code> file and care should be taken when
@@ -4152,15 +4115,15 @@ converters    games         mbone         print         x11
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="components.patches"></a>11.3. patches/*</h2></div></div></div>
-<p>Many packages still don't work out-of-the box on the various
-  platforms that are supported by pkgsrc. Therefore, a number of custom
-  patch files are needed to make the package work. These patch files are
+<a name="components.patches"></a>11.3. <code class="filename">patches/*</code>
+</h2></div></div></div>
+<p>Some packages don't work out-of-the box on the various
+  platforms that are supported by pkgsrc. These packages need
+  to be patched to make them work. The patch files can be
   found in the <code class="filename">patches/</code> directory.</p>
 <p>In the <span class="emphasis"><em>patch</em></span> phase, these patches are
   applied to the files in <code class="varname">WRKSRC</code> directory after
-  extracting them, in <a class="ulink" href="http://www.opengroup.org/onlinepubs/009695399/utilities/xcu_chap02.html#tag_02_13_03" target="_top">alphabetic
-  order</a>.</p>
+  extracting them, in alphabetic order.</p>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="components.patch.structure"></a>11.3.1. Structure of a single patch file</h3></div></div></div>
@@ -4183,7 +4146,7 @@ converters    games         mbone         print         x11
   platform and other environment (for example, the compiler) that the
   patch is needed for.</p></li>
 </ul></div>
-<p>In all, the patch should be commented so that any
+<p>The patch should be commented so that any
   developer who knows the code of the application can make some use of
   the patch. Special care should be taken for the upstream developers,
   since we generally want that they accept our patches, so we have less
@@ -4574,10 +4537,8 @@ FILESDIR=${.CURDIR}/../xemacs/files
 <dt><span class="sect1"><a href="#makefile.code">12.3. Code snippets</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#adding-to-list">12.3.1. Adding things to a list</a></span></dt>
-<dt><span class="sect2"><a href="#converting-internal-to-external">12.3.2. Converting an internal list into an external list</a></span></dt>
-<dt><span class="sect2"><a href="#passing-variable-to-shell">12.3.3. Passing variables to a shell command</a></span></dt>
-<dt><span class="sect2"><a href="#quoting-guideline">12.3.4. Quoting guideline</a></span></dt>
-<dt><span class="sect2"><a href="#bsd-make-bug-workaround">12.3.5. Workaround for a bug in BSD Make</a></span></dt>
+<dt><span class="sect2"><a href="#passing-variable-to-shell">12.3.2. Passing variables to a shell command</a></span></dt>
+<dt><span class="sect2"><a href="#quoting-guideline">12.3.3. Quoting guideline</a></span></dt>
 </dl></dd>
 </dl>
 </div>
@@ -4646,24 +4607,14 @@ correct:
     passed as is. In a variable assignment, any hash character that is
     not preceded by a backslash starts a comment that continues upto the
     end of the logical line.</p>
-<p><span class="emphasis"><em>Note:</em></span> Because of this parsing algorithm
-    the only way to create a variable consisting of a single backslash
-    is using the ``!='' operator, for example: <code class="varname">BACKSLASH!=echo "\\"</code>.</p>
-<p>So far for defining variables. The other thing you can do with
-    variables is evaluating them. A variable is evaluated when it is
-    part of the right side of the ``:='' or the ``!='' operator, or
-    directly before executing a shell command which the variable is part
-    of. In all other cases, <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1+NetBSD-5.0.1+i386"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> performs lazy evaluation, that
-    is, variables are not evaluated until there's no other way. The
-    ``modifiers'' mentioned in the man page also evaluate the
-    variable.</p>
+<p>The evaluation of variables either happens immediately or lazy.
+    It happens immediately when the variable occurs
+    on the right-hand side of the ``:='' or the ``!='' operator, in a
+    <code class="varname">.if</code> condition or a <code class="varname">.for</code> loop.
+    In the other cases, it is evaluated lazily.</p>
 <p>Some of the modifiers split the string into words and then
     operate on the words, others operate on the string as a whole. When
-    a string is split into words, it is split as you would expect
-    it from <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?sh+1+NetBSD-5.0.1+i386"><span class="citerefentry"><span class="refentrytitle">sh</span>(1)</span></a>.</p>
-<p>No rule without exception&mdash;the <span class="command"><strong>.for</strong></span>
-    loop does not follow the shell quoting rules but splits at sequences
-    of whitespace.</p>
+    a string is split into words, it is split like in <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?sh+1+NetBSD-5.0.1+i386"><span class="citerefentry"><span class="refentrytitle">sh</span>(1)</span></a>.</p>
 <p>There are several types of variables that should be handled
     differently. Strings and two types of lists.</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
@@ -4732,66 +4683,32 @@ EXT_LIST+=              ${ANOTHER_EXT_LIST}     # 4
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="converting-internal-to-external"></a>12.3.2. Converting an internal list into an external list</h3></div></div></div>
-<pre class="programlisting">
-EXT_LIST=       # empty
-.for i in ${INT_LIST}
-EXT_LIST+=      ${i:Q}""
-.endfor
-</pre>
-<p>This code converts the internal list
-      <code class="varname">INT_LIST</code> into the external list
-      <code class="varname">EXT_LIST</code>. As the elements of an internal list
-      are unquoted they must be quoted here. The reason for appending
-      <code class="varname">""</code> is explained below.</p>
-</div>
-<div class="sect2">
-<div class="titlepage"><div><div><h3 class="title">
-<a name="passing-variable-to-shell"></a>12.3.3. Passing variables to a shell command</h3></div></div></div>
+<a name="passing-variable-to-shell"></a>12.3.2. Passing variables to a shell command</h3></div></div></div>
 <p>Sometimes you may want to print an arbitrary string. There
 	are many ways to get it wrong and only few that can handle every
 	nastiness.</p>
 <pre class="programlisting">
 STRING=         foo bar &lt;    &gt; * `date` $$HOME ' "
-EXT_LIST=       string=${STRING:Q} x=second\ item
+EXAMPLE_ENV=    string=${STRING:Q} x=multiple\ quoted\ words
 
 all:
         echo ${STRING}                  # 1
-        echo "${STRING}"                # 2
-        echo "${STRING:Q}"              # 3
-        echo ${STRING:Q}                # 4
-        echo x${STRING:Q} | sed 1s,.,,  # 5
-        printf "%s\\n" ${STRING:Q}""    # 6
-        env ${EXT_LIST} /bin/sh -c 'echo "$$string"; echo "$$x"'
+        echo ${STRING:Q}                # 2
+        printf '%s\n' ${STRING:Q}''     # 3
+        env ${EXAMPLE_ENV} sh -c 'echo "$$string"; echo "$$x"' # 4
 </pre>
 <p>Example 1 leads to a syntax error in the shell, as the
       characters are just copied.</p>
-<p>Example 2 leads to a syntax error too, and if you leave out
-      the last " character from <code class="varname">${STRING}</code>,
-      <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?date+1+NetBSD-5.0.1+i386"><span class="citerefentry"><span class="refentrytitle">date</span>(1)</span></a> will be executed. The <code class="varname">$HOME</code> shell
-      variable would be evaluated, too.</p>
-<p>Example 3 outputs each space character preceded by a
-      backslash (or not), depending on the implementation of the
-      <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?echo+1+NetBSD-5.0.1+i386"><span class="citerefentry"><span class="refentrytitle">echo</span>(1)</span></a> command.</p>
-<p>Example 4 handles correctly every string that does not start
-      with a dash. In that case, the result depends on the
-      implementation of the <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?echo+1+NetBSD-5.0.1+i386"><span class="citerefentry"><span class="refentrytitle">echo</span>(1)</span></a> command. As long as you can
-      guarantee that your input does not start with a dash, this form is
-      appropriate.</p>
-<p>Example 5 handles even the case of a leading dash
-      correctly.</p>
-<p>Example 6 also works with every string and is the
-      light-weight solution, since it does not involve a pipe, which has
-      its own problems.</p>
-<p>The <code class="varname">EXT_LIST</code> does not need to be quoted
-      because the quoting has already been done when adding elements to
-      the list.</p>
-<p>As internal lists shall not be passed to the shell, there is
-      no example for it.</p>
+<p>Example 2 can handle all strings, except those starting
+      with a dash or those containing backslashes.</p>
+<p>Example 3 can handle arbitrary strings.</p>
+<p>In example 4, the <code class="varname">EXT_LIST</code> does not
+      need to be quoted because the quoting has already been done
+      when adding elements to the list.</p>
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="quoting-guideline"></a>12.3.4. Quoting guideline</h3></div></div></div>
+<a name="quoting-guideline"></a>12.3.3. Quoting guideline</h3></div></div></div>
 <p>There are many possible sources of wrongly quoted variables.
       This section lists some of the commonly known ones.</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
@@ -4871,20 +4788,6 @@ for_test:
 	<code class="varname">${i:Q}""</code>.</p>
 </li>
 </ul></div>
-</div>
-<div class="sect2">
-<div class="titlepage"><div><div><h3 class="title">
-<a name="bsd-make-bug-workaround"></a>12.3.5. Workaround for a bug in BSD Make</h3></div></div></div>
-<p>The pkgsrc bmake program does not handle the following
-      assignment correctly. In case <code class="varname">_othervar_</code>
-      contains a ``-'' character, one of the closing braces is included
-      in <code class="varname">${VAR}</code> after this code executes.</p>
-<pre class="programlisting">
-VAR:=   ${VAR:N${_othervar_:C/-//}}
-</pre>
-<p>For a more complex code snippet and a workaround, see the
-      package <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/regress/make-quoting/README.html" target="_top"><code class="filename">regress/make-quoting</code></a>, testcase
-      <code class="varname">bug1</code>.</p>
 </div>
 </div>
 </div>
@@ -6316,7 +6219,7 @@ details.</p>
     for pkgs in the <code class="filename">cross</code> category.  The value of
     <code class="varname">PREFIX</code> needs to be put
     into the various places in the program's source where paths to
-    these files are encoded.  See <a class="xref" href="#components.patches" title="11.3. patches/*">Section 11.3, &#8220;patches/*&#8221;</a> and <a class="xref" href="#fixes.libtool" title="19.3.1. Shared libraries - libtool">Section 19.3.1, &#8220;Shared libraries - libtool&#8221;</a> for more details.</p>
+    these files are encoded.  See <a class="xref" href="#components.patches" title="11.3. patches/*">Section 11.3, &#8220;<code class="filename">patches/*</code>&#8221;</a> and <a class="xref" href="#fixes.libtool" title="19.3.1. Shared libraries - libtool">Section 19.3.1, &#8220;Shared libraries - libtool&#8221;</a> for more details.</p>
 <p>When choosing which of these variables to use,
     follow the following rules:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
@@ -6650,7 +6553,7 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
     applied, files ending in <code class="filename">.orig</code> or
     <code class="filename">.rej</code> are ignored. Any special options to
     <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?patch+1+NetBSD-5.0.1+i386"><span class="citerefentry"><span class="refentrytitle">patch</span>(1)</span></a> can be handed in
-    <code class="varname">PATCH_DIST_ARGS</code>.  See <a class="xref" href="#components.patches" title="11.3. patches/*">Section 11.3, &#8220;patches/*&#8221;</a> for more details.</p>
+    <code class="varname">PATCH_DIST_ARGS</code>.  See <a class="xref" href="#components.patches" title="11.3. patches/*">Section 11.3, &#8220;<code class="filename">patches/*</code>&#8221;</a> for more details.</p>
 <p>By default <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?patch+1+NetBSD-5.0.1+i386"><span class="citerefentry"><span class="refentrytitle">patch</span>(1)</span></a> is given special args to make
     it fail if the patches apply with some lines of fuzz. Please
     fix (regen) the patches so that they apply cleanly. The
@@ -7367,7 +7270,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="tools.questions"></a>18.4. Questions regarding the tools</h2></div></div></div>
 <div class="qandaset">
-<a name="idm83805728"></a><dl>
+<a name="idm83808672"></a><dl>
 <dt>18.4.1. <a href="#tools.new">How do I add a new tool?</a>
 </dt>
 <dt>18.4.2. <a href="#tools.listall">How do I get a list of all available
@@ -7386,7 +7289,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.new"></a><a name="idm83805344"></a><p><b>18.4.1.</b></p>
+<a name="tools.new"></a><a name="idm83808288"></a><p><b>18.4.1.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I add a new tool?</p></td>
 </tr>
@@ -7396,7 +7299,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.listall"></a><a name="idm83804320"></a><p><b>18.4.2.</b></p>
+<a name="tools.listall"></a><a name="idm83807264"></a><p><b>18.4.2.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I get a list of all available
 	tools?</p></td>
@@ -7407,7 +7310,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.used"></a><a name="idm83803296"></a><p><b>18.4.3.</b></p>
+<a name="tools.used"></a><a name="idm83806240"></a><p><b>18.4.3.</b></p>
 </td>
 <td align="left" valign="top"><p>How can I get a list of all the tools that a
 	package is using while being built? I want to know whether it
@@ -7518,14 +7421,15 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
     <code class="filename">../../mk/bsd.prefs.mk</code> before, which in turn
     loads the user preferences.</p>
 <p>But note that some variables may not be completely defined
-    after <code class="filename">../../mk/bsd.prefs.mk</code> has been included,
-    as they may contain references to variables that are not yet
-    defined. In shell commands (the lines in
-    <code class="filename">Makefile</code> that are indented with a tab) this is
-    no problem, since variables are only expanded when they are used.
-    But in the preprocessor directives mentioned above and in dependency
-    lines (of the form <code class="literal">target: dependencies</code>) the
-    variables are expanded at load time.</p>
+    after <code class="filename">../../mk/bsd.prefs.mk</code> has been
+    included, as they may contain references to variables that are
+    not yet defined. In shell commands (the lines in
+    <code class="filename">Makefile</code> that are indented with a tab) this
+    is no problem, since variables are only expanded when they are
+    used. But in the preprocessor directives mentioned above and in
+    dependency lines (of the form <code class="literal">target:
+    dependencies</code>) the variables are expanded at load
+    time.</p>
 <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
 <h3 class="title">Note</h3>
 <p>To check whether a variable can be used at load time,
@@ -7567,8 +7471,12 @@ INTERACTIVE_STAGE=      configure install
     users may find objectionable or difficult or impossible to comply
     with.  The Free Software Foundation has declared some licenses
     "Free", and the Open Source Initiative has a definition of "Open
-    Source".  Note that a package whose license forbids to copy does
-    not meet either the Free or Open Source test.</p>
+    Source".  The pkgsrc system, as a policy choice, does not label
+    packages which have licenses that are Free or Open Source.
+    However, packages without a license meeting either of those tests
+    are labeled with a license tag denoting the license.  Note that a
+    package with no license to copy trivially does not meet either the
+    Free or Open Source test.</p>
 <p>For packages which are not Free or Open Source, pkgsrc will
     not build the package unless the user has indicated to pkgsrc that
     packages with that particular license may be built.  Note that
@@ -9554,7 +9462,7 @@ place.</p></li>
 	and if you still don't have the answer, ask on the
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset">
-<a name="idm83229600"></a><dl>
+<a name="idm83207968"></a><dl>
 <dt>22.1. <a href="#devfaq.makeflags">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
@@ -9599,7 +9507,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="idm83229216"></a><p><b>22.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="idm83207584"></a><p><b>22.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9615,7 +9523,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="idm83225248"></a><p><b>22.2.</b></p>
+<a name="devfaq.make"></a><a name="idm83203488"></a><p><b>22.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9633,7 +9541,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="idm83220768"></a><p><b>22.3.</b></p>
+<a name="devfaq.cc"></a><a name="idm83199136"></a><p><b>22.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9651,7 +9559,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="idm83216672"></a><p><b>22.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="idm83194912"></a><p><b>22.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9664,7 +9572,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="idm83214368"></a><p><b>22.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="idm83192736"></a><p><b>22.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9680,7 +9588,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="idm83211296"></a><p><b>22.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="idm83189664"></a><p><b>22.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9704,7 +9612,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="idm83203232"></a><p><b>22.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="idm83173408"></a><p><b>22.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9729,7 +9637,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="idm83199392"></a><p><b>22.8.</b></p>
+<a name="devfaq.documentation"></a><a name="idm83169568"></a><p><b>22.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9777,7 +9685,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="idm83192992"></a><p><b>22.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="idm83163168"></a><p><b>22.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
@@ -10136,19 +10044,15 @@ details.</p>
 </dl></dd>
 <dt><span class="chapter"><a href="#regression">25. Regression tests</a></span></dt>
 <dd><dl>
-<dt><span class="sect1"><a href="#regression.descr">25.1. The regression tests framework</a></span></dt>
-<dt><span class="sect1"><a href="#regression.run">25.2. Running the regression tests</a></span></dt>
-<dt><span class="sect1"><a href="#regression.new">25.3. Adding a new regression test</a></span></dt>
+<dt><span class="sect1"><a href="#regression.run">25.1. Running the regression tests</a></span></dt>
+<dt><span class="sect1"><a href="#regression.new">25.2. Adding a new regression test</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#regression.fun.override">25.3.1. Overridable functions</a></span></dt>
-<dt><span class="sect2"><a href="#regression.fun.helper">25.3.2. Helper functions</a></span></dt>
+<dt><span class="sect2"><a href="#regression.fun.override">25.2.1. Overridable functions</a></span></dt>
+<dt><span class="sect2"><a href="#regression.fun.helper">25.2.2. Helper functions</a></span></dt>
 </dl></dd>
 </dl></dd>
 <dt><span class="chapter"><a href="#porting">26. Porting pkgsrc</a></span></dt>
-<dd><dl>
-<dt><span class="sect1"><a href="#porting.opsys">26.1. Porting pkgsrc to a new operating system</a></span></dt>
-<dt><span class="sect1"><a href="#porting.compiler">26.2. Adding support for a new compiler</a></span></dt>
-</dl></dd>
+<dd><dl><dt><span class="sect1"><a href="#porting.opsys">26.1. Porting pkgsrc to a new operating system</a></span></dt></dl></dd>
 </dl>
 </div>
 </div>
@@ -10431,12 +10335,11 @@ CFLAGS+=                -Wall
 <div class="toc">
 <p><b>Table of Contents</b></p>
 <dl class="toc">
-<dt><span class="sect1"><a href="#regression.descr">25.1. The regression tests framework</a></span></dt>
-<dt><span class="sect1"><a href="#regression.run">25.2. Running the regression tests</a></span></dt>
-<dt><span class="sect1"><a href="#regression.new">25.3. Adding a new regression test</a></span></dt>
+<dt><span class="sect1"><a href="#regression.run">25.1. Running the regression tests</a></span></dt>
+<dt><span class="sect1"><a href="#regression.new">25.2. Adding a new regression test</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#regression.fun.override">25.3.1. Overridable functions</a></span></dt>
-<dt><span class="sect2"><a href="#regression.fun.helper">25.3.2. Helper functions</a></span></dt>
+<dt><span class="sect2"><a href="#regression.fun.override">25.2.1. Overridable functions</a></span></dt>
+<dt><span class="sect2"><a href="#regression.fun.helper">25.2.2. Helper functions</a></span></dt>
 </dl></dd>
 </dl>
 </div>
@@ -10450,12 +10353,7 @@ CFLAGS+=                -Wall
 	how you can add new tests.</p>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="regression.descr"></a>25.1. The regression tests framework</h2></div></div></div>
-<p></p>
-</div>
-<div class="sect1">
-<div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="regression.run"></a>25.2. Running the regression tests</h2></div></div></div>
+<a name="regression.run"></a>25.1. Running the regression tests</h2></div></div></div>
 <p>You first need to install the <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/pkg_regress/README.html" target="_top"><code class="filename">pkgtools/pkg_regress</code></a> package, which
 	provides the <span class="command"><strong>pkg_regress</strong></span> command. Then you
 	can simply run that command, which will run all tests in the
@@ -10463,7 +10361,7 @@ CFLAGS+=                -Wall
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="regression.new"></a>25.3. Adding a new regression test</h2></div></div></div>
+<a name="regression.new"></a>25.2. Adding a new regression test</h2></div></div></div>
 <p>Every directory in the <code class="filename">regress</code>
 	category that contains a file called <code class="filename">spec</code>
 	is considered a regression test. This file is a shell program
@@ -10472,7 +10370,7 @@ CFLAGS+=                -Wall
 	needs.</p>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="regression.fun.override"></a>25.3.1. Overridable functions</h3></div></div></div>
+<a name="regression.fun.override"></a>25.2.1. Overridable functions</h3></div></div></div>
 <p>These functions do not take any parameters. Although they
 	are called in <span class="quote">&#8220;<span class="quote">set -e</span>&#8221;</span> mode, they don't stop at the
 	first failing command. See <a class="ulink" href="http://stackoverflow.com/q/4072984" target="_top">this StackOverflow
@@ -10519,7 +10417,7 @@ check_result() {
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="regression.fun.helper"></a>25.3.2. Helper functions</h3></div></div></div>
+<a name="regression.fun.helper"></a>25.2.2. Helper functions</h3></div></div></div>
 <div class="variablelist"><dl class="variablelist">
 <dt><span class="term"><code class="varname">exit_status expected</code></span></dt>
 <dd><p>This function compares the exitcode of the
@@ -10532,7 +10430,8 @@ check_result() {
 	extended regular expression. If it does not, the test will
 	fail. Example:</p>
 <pre class="programlisting">
-output_require 
+output_require "looks fine"
+output_require "^[[:alpha:]+[[:space:]][[:alpha:]]{6}$"
 </pre>
 </dd>
 <dt><span class="term"><code class="varname">output_prohibit(regex...)</code></span></dt>
@@ -10550,10 +10449,7 @@ output_require
 <a name="porting"></a>Chapter 26. Porting pkgsrc</h2></div></div></div>
 <div class="toc">
 <p><b>Table of Contents</b></p>
-<dl class="toc">
-<dt><span class="sect1"><a href="#porting.opsys">26.1. Porting pkgsrc to a new operating system</a></span></dt>
-<dt><span class="sect1"><a href="#porting.compiler">26.2. Adding support for a new compiler</a></span></dt>
-</dl>
+<dl class="toc"><dt><span class="sect1"><a href="#porting.opsys">26.1. Porting pkgsrc to a new operating system</a></span></dt></dl>
 </div>
 <p>The pkgsrc system has already been ported to many
 	operating systems, hardware architectures and compilers. This
@@ -10591,11 +10487,6 @@ output_require
 </dl></div>
 <p>Now, you should be able to build some basic packages, like
 	<a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/lang/perl5/README.html" target="_top"><code class="filename">lang/perl5</code></a>, <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/shells/bash/README.html" target="_top"><code class="filename">shells/bash</code></a>.</p>
-</div>
-<div class="sect1">
-<div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="porting.compiler"></a>26.2. Adding support for a new compiler</h2></div></div></div>
-<p>TODO</p>
 </div>
 </div>
 </div>
