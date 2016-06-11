@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.795 2016/06/11 22:08:20 kamil Exp $
+# $NetBSD: Makefile,v 1.796 2016/06/11 23:01:18 kamil Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -133,6 +133,7 @@ SUBDIR+=	hs-X11
 SUBDIR+=	hs-X11-xft
 SUBDIR+=	hsetroot
 SUBDIR+=	hyena
+SUBDIR+=	i3lock
 SUBDIR+=	iceauth
 SUBDIR+=	ico
 SUBDIR+=	imwheel
