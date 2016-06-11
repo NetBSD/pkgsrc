@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2015/06/07 05:49:28 ryoon Exp $
+# $NetBSD: Makefile,v 1.76 2016/06/11 12:54:24 rillig Exp $
 
 BASH_VERSION=		4.3
 BASH_PATCHLEVEL=	039
@@ -65,7 +65,7 @@ PKG_SUPPORTED_OPTIONS=	static
 ## Static link
 ##
 .if !empty(PKG_OPTIONS:Mstatic)
-CONFIGURE_ARGS+=	--enable-static-link
+CONFIGURE_ARGS+=		--enable-static-link
 BUILDLINK_DEPMETHOD.gettext=	build
 BUILDLINK_DEPMETHOD.readline=	build
 .endif
