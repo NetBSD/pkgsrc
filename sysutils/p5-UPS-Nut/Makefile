@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2016/06/08 19:24:27 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2016/06/11 22:43:30 dholland Exp $
 
 .include "../../sysutils/ups-nut/Makefile.common"
 
@@ -8,9 +8,9 @@ PKGREVISION=		6
 CATEGORIES=		sysutils perl5
 PATCHDIR=		${.CURDIR}/patches
 
-WRKSRC= 		${WRKDIR}/${DISTNAME}/scripts/perl
+WRKSRC=			${WRKDIR}/${DISTNAME}/scripts/perl
 
-PERL5_PACKLIST=         auto/UPS/Nut/.packlist
+PERL5_PACKLIST=		auto/UPS/Nut/.packlist
 
 pre-configure:
 	${CP} ${FILESDIR}/Makefile.PL ${WRKSRC}
