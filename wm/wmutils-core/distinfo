@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/06/11 23:07:14 kamil Exp $
+
+SHA1 (wmutils-core-1.2.tar.gz) = 50323435323f4b0647e57b570405aa00dc2832bc
+RMD160 (wmutils-core-1.2.tar.gz) = 064149190ae07c70175951d7b17f2d30ab5c5351
+SHA512 (wmutils-core-1.2.tar.gz) = 78c6828b8b54290a6ddfe655e2015580ef7aee0a3d45e63f42874cecab85836c9ed1cdf6398d158611250fffcf0ea6567980464daa1c00ed744d0f10f728059b
+Size (wmutils-core-1.2.tar.gz) = 9475 bytes
