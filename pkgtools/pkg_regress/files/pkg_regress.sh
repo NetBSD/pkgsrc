@@ -1,6 +1,6 @@
 #! @SH@
 #
-# $NetBSD: pkg_regress.sh,v 1.4 2006/07/10 12:44:19 rillig Exp $
+# $NetBSD: pkg_regress.sh,v 1.5 2016/06/11 09:37:16 rillig Exp $
 #
 set -e
 
@@ -10,43 +10,34 @@ set -e
 
 # hooks overridable by test spec file
 
-do_setup()
-{
+do_setup() {
 	return
 }
 
-do_cleanup()
-{
+do_cleanup() {
 	return
 }
 
-do_test()
-{
+do_test() {
 	do_test_default
 }
 
-do_test_default()
-{
-	# Run the test. We use an if statement to ensure that the script
-	# isn't terminated if it is executed with sh -e.
-	if ${TEST_MAKE} ${MAKEARGS_TEST} >${TEST_OUTFILE} 2>&1
-	then
-	    TEST_EXITSTATUS=$?
-	else
-	    TEST_EXITSTATUS=$?
-	fi
-}
-
-check_result()
-{
+check_result() {
 	return
 }
 
-#
-# Internal helper routines
-#
+# Internal helper functions
 
-# regress_fail <msg>
+do_test_default() {
+	# The if is necessary to prevent sh -e from exiting.
+	if $TEST_MAKE $MAKEARGS_TEST >$TEST_OUTFILE 2>&1; then
+		TEST_EXITSTATUS=$?
+	else
+		TEST_EXITSTATUS=$?
+	fi
+}
+
+# usage: regress_fail msg...
 regress_fail() {
 
 	echo "ERROR: $*" 1>&2
@@ -55,40 +46,34 @@ regress_fail() {
 
 # result checking routines
 
-# Test exit status
-exit_status()
-{
+# Text exit status
+exit_status() {
 
-	[ "$1" -eq "${TEST_EXITSTATUS}" ] \
-	|| regress_fail "Expected exit code $1, but got ${TEST_EXITSTATUS}."
+	[ "$1" -eq "$TEST_EXITSTATUS" ] \
+	|| regress_fail "Expected exit code $1, but got $TEST_EXITSTATUS."
 }
 
 # Test positive match against output
-output_require()
-{
+output_require() {
 
 	for re in "$@"; do
-		${TEST_EGREP} "${re}" < ${TEST_OUTFILE} >/dev/null \
-		|| regress_fail "Expected \"${re}\" in the output, but it is not there."
+		$TEST_EGREP "$re" < $TEST_OUTFILE >/dev/null \
+		|| regress_fail "Expected \"$re\" in the output, but it is not there."
 	done
 }
 
 # Test negative match against output
-output_prohibit()
-{
+output_prohibit() {
 
 	for re in "$@"; do
-		if ${TEST_EGREP} "${re}" < ${TEST_OUTFILE} >/dev/null; then
-			regress_fail "Didn't expect \"${re}\" in the output, but found it."
+		if $TEST_EGREP "$re" < $TEST_OUTFILE >/dev/null; then
+			regress_fail "Didn't expect \"$re\" in the output, but found it."
 		fi
 	done
 }
 
-# runtest runs a test in a subshell, so that environment settings etc in
-# one test do not interfere with other tests.
-runtest() {
-    if (
-	cd $1
+do_runtest() {
+	cd "$1"
 	TEST_RESULT=0
 	TEST_EXITSTATUS=0
 	TEST_OUTFILE=`mktemp -t pkg_regress` || exit 1
@@ -104,59 +89,63 @@ runtest() {
 
 	do_cleanup
 
-	if [ -n "${MAKEARGS_CLEAN}" ]
-	then
-	    ${TEST_MAKE} ${MAKEARGS_CLEAN} >>${TEST_OUTFILE}
+	if [ -n "$MAKEARGS_CLEAN" ]; then
+		$TEST_MAKE $MAKEARGS_CLEAN >>$TEST_OUTFILE
 	fi
 
-	if [ -n "${TEST_VERBOSE}" ]
-	then
-	    cat ${TEST_OUTFILE}
+	if [ "$verbose" = "yes" ]; then
+		cat $TEST_OUTFILE
 	fi
 
-	rm -f ${TEST_OUTFILE}
-	exit ${TEST_RESULT}
-    )
-    then
-	TEST_PASS=`expr ${TEST_PASS} + 1`
-    else
-	TEST_FAIL=`expr ${TEST_FAIL} + 1`
-	TEST_FAILURES="${TEST_FAILURES} $1"
-    fi
+	rm -f $TEST_OUTFILE
+	exit $TEST_RESULT
 }
 
+# runtest runs a test in a subshell, so that environment settings etc in
+# one test do not interfere with other tests.
+runtest() {
+	if [ "$verbose" = "yes" ]; then
+		echo "Running $1"
+	fi
 
-TEST_PASS=0
-TEST_FAIL=0
-TEST_FAILURES=
+	if (do_runtest "$1"); then
+		passed=`expr $passed + 1`
+	else
+		failed=`expr $failed + 1`
+		failed_names="$failed_names $1"
+    	fi
+}
+
+verbose=no
+passed=0
+failed=0
+failed_names=""
 
 cd $PKGSRCDIR/regress
 
-case $1 in
-    -v) TEST_VERBOSE=1
-	shift ;;
-esac
-
-if [ $# -ne 0 ]
-then
-    TEST_LIST="$@"
-else
-    TEST_LIST="*"
-fi
-
-for dir in ${TEST_LIST}
-do
-    if [ -f $dir/spec ]
-    then
-	runtest $dir
-    fi
+while [ $# -gt 0 ]; do
+	case "$1" in
+	-v) shift; verbose=yes;;
+	--) shift; break;;
+	-*) echo "usage: $0 [-v] [directory...]" 1>&2; exit 1 ;;
+	*) break
+	esac
 done
 
-if [ -n "${TEST_FAILURES}" ]
-then
-    echo "Tests failed: ${TEST_FAILURES}"
-    echo
+if [ $# -eq 0 ]; then
+	set -- *
+fi
+
+for dir in "$@"; do
+	if [ -f $dir/spec ]; then
+		runtest $dir
+	fi
+done
+
+if [ -n "$failed_names" ]; then
+	echo "Tests failed:$failed_names"
+	echo
 fi
 
 echo "Statistics:"
-echo "  $TEST_PASS passed, $TEST_FAIL failed"
+echo "  $passed passed, $failed failed"
