@@ -1,4 +1,4 @@
-<!-- $NetBSD: faq.xml,v 1.52 2016/06/11 13:19:54 rillig Exp $ -->
+<!-- $NetBSD: faq.xml,v 1.53 2016/06/11 14:58:26 rillig Exp $ -->
 
 <chapter id="faq"> <?dbhtml filename="faq.html"?>
 <title>Frequently Asked Questions</title>
@@ -222,25 +222,16 @@ utilities)</para>
 <sect1 id="non-root-pkgsrc">
 <title>How to use pkgsrc as non-root</title>
 
-<para>If you want to use pkgsrc as non-root user, you can set some
-variables to make pkgsrc work under these conditions.  At the very least,
-you need to set <varname>UNPRIVILEGED</varname> to <quote>yes</quote>; this
-will turn on unprivileged mode and set multiple related variables to allow
-installation of packages as non-root.</para>
+<para>To install packages from source as a non-root user, download
+pkgsrc as described in <xref linkend="getting"/>, cd into that
+directory and run the command <command>./bootstrap/bootstrap
+--unprivileged</command>.</para>
 
-<para>In case the defaults are not enough, you may want to tune some other
-variables used.  For example, if the automatic user/group detection leads
-to incorrect values (or not the ones you would like to use), you can change
-them by setting <varname>UNPRIVILEGED_USER</varname> and
-<varname>UNPRIVILEGED_GROUP</varname> respectively.</para>
+<para>This will install the binary part of pkgsrc to
+<filename>~/pkg</filename> and put the pkgsrc configuration &mk.conf;
+into <filename>~/pkg/etc</filename>.</para>
 
-<para>As regards bootstrapping, please note that the
-<command>bootstrap</command> script will ease non-root configuration when
-given the <quote>--ignore-user-check</quote> flag, as it will choose and
-use multiple default directories under <filename>~/pkg</filename> as the
-installation targets.  These directories can be overridden by the
-<quote>--prefix</quote> flag provided by the script, as well as some others
-that allow finer tuning of the tree layout.</para>
+<para>For more details, see <filename>mk/unprivileged.mk</filename>.</para>
 
 </sect1>
 
