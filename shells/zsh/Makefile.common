@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.79 2016/05/05 06:28:58 wiz Exp $
+# $NetBSD: Makefile.common,v 1.80 2016/06/11 23:34:07 dholland Exp $
 # used by shells/zsh/Makefile
 
 DISTNAME=	zsh-${ZSH_VERSION}
@@ -60,9 +60,9 @@ _ZSH_OPSYS.${OPSYS}?=		ldflags tcsetpgrp
 
 ### static
 
-_ZSH_LINKAGE.static.CONFIGURE_ARGS=	--disable-dynamic
+_ZSH_LINKAGE.static.CONFIGURE_ARGS=			--disable-dynamic
 _ZSH_LINKAGE.static.BUILDLINK_PASSTHRU_RPATHDIRS?=
-_ZSH_LINKAGE.static.LDFLAGS?=		-static
+_ZSH_LINKAGE.static.LDFLAGS?=				-static
 
 ### dynamic
 
@@ -93,9 +93,9 @@ PLIST.terminfo=	yes
 .if empty(MACHINE_PLATFORM:MNetBSD-[0-9]*) && empty(MACHINE_PLATFORM:MGNUkFreeBSD-[0-9]*)
 CHECK_BUILTIN.curses=	yes
 .include "../../mk/curses.builtin.mk"
-.if !empty(USE_BUILTIN.curses:M[Yy][Ee][Ss]) || ${OPSYS} == "SunOS" || ${OPSYS} == "Linux"
+.  if !empty(USE_BUILTIN.curses:M[Yy][Ee][Ss]) || ${OPSYS} == "SunOS" || ${OPSYS} == "Linux"
 PLIST.curses=	yes
-.endif
+.  endif
 .endif
 
 ################################################################################
@@ -114,7 +114,7 @@ CONFIGURE_ARGS+=		${_ZSH_LINKAGE.${_ZSH_LINKAGE}.CONFIGURE_ARGS} \
 BUILDLINK_PASSTHRU_RPATHDIRS+=	${_ZSH_LINKAGE.${_ZSH_LINKAGE}.BUILDLINK_PASSTHRU_RPATHDIRS}
 LDFLAGS+=			${_ZSH_LINKAGE.${_ZSH_LINKAGE}.LDFLAGS}
 .if ${_ZSH_LINKAGE} == dynamic
-PLIST.dynamic=	yes
+PLIST.dynamic=			yes
 .endif
 
 ################################################################################

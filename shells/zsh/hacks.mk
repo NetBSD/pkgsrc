@@ -1,7 +1,7 @@
-# $NetBSD: hacks.mk,v 1.3 2012/08/16 13:30:27 wiz Exp $
+# $NetBSD: hacks.mk,v 1.4 2016/06/11 23:34:07 dholland Exp $
 
 .if !defined(ZSH_HACKS_MK)
-ZSH_HACKS_MK= defined
+ZSH_HACKS_MK=	defined
 
 ### [Sun Dec 21 02:00:19 JST 2008 : uebayasi]
 ### Built a dynamically linked "zsh" binary on NetBSD systems which use
