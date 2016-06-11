@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2012/10/31 11:25:50 asau Exp $
+# $NetBSD: Makefile,v 1.40 2016/06/11 18:14:42 rillig Exp $
 #
 
 DISTNAME=		pkgsrc-guide-${PKGVERSION}
@@ -30,6 +30,12 @@ BUILD_DEFS+=		OUTPUTS
 OUTPUTS?=		lint html html-split ascii pdf
 
 INSTALLATION_DIRS=	${DOCDIR}
+
+SUBST_CLASSES+=		docbook45
+SUBST_STAGE.docbook45=	pre-configure
+SUBST_FILES.docbook45=	${WRKDIR}/htdocs/share/xml/*
+SUBST_SED.docbook45=	-e 's,V4\.2,V4.5,'
+SUBST_SED.docbook45+=	-e 's,/4\.2/,/4.5/,'
 
 .if defined(OUTPUTS)
 .  if !empty(OUTPUTS:Mascii)
