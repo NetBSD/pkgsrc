@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2358 2016/06/11 18:55:17 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2359 2016/06/11 20:16:33 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3056,3 +3056,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/wget to 1.18 [wiz 2016-06-11]
 	Added games/pmars version 0.9.2 [kamil 2016-06-11]
 	Updated fonts/sourcecodepro-fonts to 1.030 [wiz 2016-06-11]
+	Removed www/webkit1-gtk [kamil 2016-06-11]
+	Removed www/webkit1-gtk3 [kamil 2016-06-11]
