@@ -310,26 +310,25 @@ builds)</a></span></dt>
 <dd><dl>
 <dt><span class="sect1"><a href="#general-operation">19.1. General operation</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#portability-of-packages">19.1.1. Portability of packages</a></span></dt>
-<dt><span class="sect2"><a href="#pulling-vars-from-etc-mk.conf">19.1.2. How to pull in user-settable variables from <code class="filename">mk.conf</code></a></span></dt>
-<dt><span class="sect2"><a href="#user-interaction">19.1.3. User interaction</a></span></dt>
-<dt><span class="sect2"><a href="#handling-licenses">19.1.4. Handling licenses</a></span></dt>
-<dt><span class="sect2"><a href="#restricted-packages">19.1.5. Restricted packages</a></span></dt>
-<dt><span class="sect2"><a href="#dependencies">19.1.6. Handling dependencies</a></span></dt>
-<dt><span class="sect2"><a href="#conflicts">19.1.7. Handling conflicts with other packages</a></span></dt>
-<dt><span class="sect2"><a href="#not-building-packages">19.1.8. Packages that cannot or should not be built</a></span></dt>
-<dt><span class="sect2"><a href="#undeletable-packages">19.1.9. Packages which should not be deleted, once installed</a></span></dt>
-<dt><span class="sect2"><a href="#security-handling">19.1.10. Handling packages with security problems</a></span></dt>
-<dt><span class="sect2"><a href="#bumping-pkgrevision">19.1.11. How to handle incrementing versions when fixing an existing package</a></span></dt>
-<dt><span class="sect2"><a href="#fixes.subst">19.1.12. Substituting variable text in the package files (the SUBST framework)</a></span></dt>
+<dt><span class="sect2"><a href="#pulling-vars-from-etc-mk.conf">19.1.1. How to pull in user-settable variables from <code class="filename">mk.conf</code></a></span></dt>
+<dt><span class="sect2"><a href="#user-interaction">19.1.2. User interaction</a></span></dt>
+<dt><span class="sect2"><a href="#handling-licenses">19.1.3. Handling licenses</a></span></dt>
+<dt><span class="sect2"><a href="#restricted-packages">19.1.4. Restricted packages</a></span></dt>
+<dt><span class="sect2"><a href="#dependencies">19.1.5. Handling dependencies</a></span></dt>
+<dt><span class="sect2"><a href="#conflicts">19.1.6. Handling conflicts with other packages</a></span></dt>
+<dt><span class="sect2"><a href="#not-building-packages">19.1.7. Packages that cannot or should not be built</a></span></dt>
+<dt><span class="sect2"><a href="#undeletable-packages">19.1.8. Packages which should not be deleted, once installed</a></span></dt>
+<dt><span class="sect2"><a href="#security-handling">19.1.9. Handling packages with security problems</a></span></dt>
+<dt><span class="sect2"><a href="#bumping-pkgrevision">19.1.10. How to handle incrementing versions when fixing an existing package</a></span></dt>
+<dt><span class="sect2"><a href="#fixes.subst">19.1.11. Substituting variable text in the package files (the SUBST framework)</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#fixes.fetch">19.2. Fixing problems in the <span class="emphasis"><em>fetch</em></span> phase</a></span></dt>
+<dt><span class="sect1"><a href="#fixes.fetch">19.2. The <span class="emphasis"><em>fetch</em></span> phase</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#no-plain-download">19.2.1. Packages whose distfiles aren't available for plain downloading</a></span></dt>
 <dt><span class="sect2"><a href="#modified-distfiles-same-name">19.2.2. How to handle modified distfiles with the 'old' name</a></span></dt>
 <dt><span class="sect2"><a href="#build.fetch.github">19.2.3. Packages hosted on github.com</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#fixes.configure">19.3. Fixing problems in the <span class="emphasis"><em>configure</em></span> phase</a></span></dt>
+<dt><span class="sect1"><a href="#fixes.configure">19.3. The <span class="emphasis"><em>configure</em></span> phase</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#fixes.libtool">19.3.1. Shared libraries - libtool</a></span></dt>
 <dt><span class="sect2"><a href="#using-libtool">19.3.2. Using libtool on GNU packages that already support libtool</a></span></dt>
@@ -343,14 +342,14 @@ builds)</a></span></dt>
 <dt><span class="sect2"><a href="#shell-scripts">19.4.4. Packages containing shell scripts</a></span></dt>
 <dt><span class="sect2"><a href="#other-programming-languages">19.4.5. Other programming languages</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#fixes.build">19.5. Fixing problems in the <span class="emphasis"><em>build</em></span> phase</a></span></dt>
+<dt><span class="sect1"><a href="#fixes.build">19.5. The <span class="emphasis"><em>build</em></span> phase</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#fixes.build.cpp">19.5.1. Compiling C and C++ code conditionally</a></span></dt>
 <dt><span class="sect2"><a href="#compiler-bugs">19.5.2. How to handle compiler bugs</a></span></dt>
 <dt><span class="sect2"><a href="#undefined-reference">19.5.3. Undefined reference to <span class="quote">&#8220;<span class="quote">...</span>&#8221;</span></a></span></dt>
 <dt><span class="sect2"><a href="#out-of-memory">19.5.4. Running out of memory</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#fixes.install">19.6. Fixing problems in the <span class="emphasis"><em>install</em></span> phase</a></span></dt>
+<dt><span class="sect1"><a href="#fixes.install">19.6. The <span class="emphasis"><em>install</em></span> phase</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#install-scripts">19.6.1. Creating needed directories</a></span></dt>
 <dt><span class="sect2"><a href="#where-to-install-documentation">19.6.2. Where to install documentation</a></span></dt>
@@ -3295,6 +3294,8 @@ check.</p>
 <li class="step"><p>Make sure that you don't have old copies of the packages
 	extracted. Run <span class="command"><strong>make clean clean-depends</strong></span> to
 	verify this.</p></li>
+<li class="step"><p>If you are a package developer who wants to invest
+	some work, have a look at <a class="xref" href="#fixes" title="Chapter 19. Making your package work">Chapter 19, <i>Making your package work</i></a>.</p></li>
 <li class="step"><p>If the problem still exists, write a mail to the
 	<code class="literal">pkgsrc-users</code> mailing list.</p></li>
 </ol></div>
@@ -3467,26 +3468,25 @@ anymore, you can remove that file and run <span class="command"><strong>cvs -q u
 <dd><dl>
 <dt><span class="sect1"><a href="#general-operation">19.1. General operation</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#portability-of-packages">19.1.1. Portability of packages</a></span></dt>
-<dt><span class="sect2"><a href="#pulling-vars-from-etc-mk.conf">19.1.2. How to pull in user-settable variables from <code class="filename">mk.conf</code></a></span></dt>
-<dt><span class="sect2"><a href="#user-interaction">19.1.3. User interaction</a></span></dt>
-<dt><span class="sect2"><a href="#handling-licenses">19.1.4. Handling licenses</a></span></dt>
-<dt><span class="sect2"><a href="#restricted-packages">19.1.5. Restricted packages</a></span></dt>
-<dt><span class="sect2"><a href="#dependencies">19.1.6. Handling dependencies</a></span></dt>
-<dt><span class="sect2"><a href="#conflicts">19.1.7. Handling conflicts with other packages</a></span></dt>
-<dt><span class="sect2"><a href="#not-building-packages">19.1.8. Packages that cannot or should not be built</a></span></dt>
-<dt><span class="sect2"><a href="#undeletable-packages">19.1.9. Packages which should not be deleted, once installed</a></span></dt>
-<dt><span class="sect2"><a href="#security-handling">19.1.10. Handling packages with security problems</a></span></dt>
-<dt><span class="sect2"><a href="#bumping-pkgrevision">19.1.11. How to handle incrementing versions when fixing an existing package</a></span></dt>
-<dt><span class="sect2"><a href="#fixes.subst">19.1.12. Substituting variable text in the package files (the SUBST framework)</a></span></dt>
+<dt><span class="sect2"><a href="#pulling-vars-from-etc-mk.conf">19.1.1. How to pull in user-settable variables from <code class="filename">mk.conf</code></a></span></dt>
+<dt><span class="sect2"><a href="#user-interaction">19.1.2. User interaction</a></span></dt>
+<dt><span class="sect2"><a href="#handling-licenses">19.1.3. Handling licenses</a></span></dt>
+<dt><span class="sect2"><a href="#restricted-packages">19.1.4. Restricted packages</a></span></dt>
+<dt><span class="sect2"><a href="#dependencies">19.1.5. Handling dependencies</a></span></dt>
+<dt><span class="sect2"><a href="#conflicts">19.1.6. Handling conflicts with other packages</a></span></dt>
+<dt><span class="sect2"><a href="#not-building-packages">19.1.7. Packages that cannot or should not be built</a></span></dt>
+<dt><span class="sect2"><a href="#undeletable-packages">19.1.8. Packages which should not be deleted, once installed</a></span></dt>
+<dt><span class="sect2"><a href="#security-handling">19.1.9. Handling packages with security problems</a></span></dt>
+<dt><span class="sect2"><a href="#bumping-pkgrevision">19.1.10. How to handle incrementing versions when fixing an existing package</a></span></dt>
+<dt><span class="sect2"><a href="#fixes.subst">19.1.11. Substituting variable text in the package files (the SUBST framework)</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#fixes.fetch">19.2. Fixing problems in the <span class="emphasis"><em>fetch</em></span> phase</a></span></dt>
+<dt><span class="sect1"><a href="#fixes.fetch">19.2. The <span class="emphasis"><em>fetch</em></span> phase</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#no-plain-download">19.2.1. Packages whose distfiles aren't available for plain downloading</a></span></dt>
 <dt><span class="sect2"><a href="#modified-distfiles-same-name">19.2.2. How to handle modified distfiles with the 'old' name</a></span></dt>
 <dt><span class="sect2"><a href="#build.fetch.github">19.2.3. Packages hosted on github.com</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#fixes.configure">19.3. Fixing problems in the <span class="emphasis"><em>configure</em></span> phase</a></span></dt>
+<dt><span class="sect1"><a href="#fixes.configure">19.3. The <span class="emphasis"><em>configure</em></span> phase</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#fixes.libtool">19.3.1. Shared libraries - libtool</a></span></dt>
 <dt><span class="sect2"><a href="#using-libtool">19.3.2. Using libtool on GNU packages that already support libtool</a></span></dt>
@@ -3500,14 +3500,14 @@ anymore, you can remove that file and run <span class="command"><strong>cvs -q u
 <dt><span class="sect2"><a href="#shell-scripts">19.4.4. Packages containing shell scripts</a></span></dt>
 <dt><span class="sect2"><a href="#other-programming-languages">19.4.5. Other programming languages</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#fixes.build">19.5. Fixing problems in the <span class="emphasis"><em>build</em></span> phase</a></span></dt>
+<dt><span class="sect1"><a href="#fixes.build">19.5. The <span class="emphasis"><em>build</em></span> phase</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#fixes.build.cpp">19.5.1. Compiling C and C++ code conditionally</a></span></dt>
 <dt><span class="sect2"><a href="#compiler-bugs">19.5.2. How to handle compiler bugs</a></span></dt>
 <dt><span class="sect2"><a href="#undefined-reference">19.5.3. Undefined reference to <span class="quote">&#8220;<span class="quote">...</span>&#8221;</span></a></span></dt>
 <dt><span class="sect2"><a href="#out-of-memory">19.5.4. Running out of memory</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#fixes.install">19.6. Fixing problems in the <span class="emphasis"><em>install</em></span> phase</a></span></dt>
+<dt><span class="sect1"><a href="#fixes.install">19.6. The <span class="emphasis"><em>install</em></span> phase</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#install-scripts">19.6.1. Creating needed directories</a></span></dt>
 <dt><span class="sect2"><a href="#where-to-install-documentation">19.6.2. Where to install documentation</a></span></dt>
@@ -5434,7 +5434,7 @@ BUILDLINK_TREE+=	-tiff
       adjusted, too. This is needed so pkgsrc will require the correct
       package dependency and not settle for an older one when building
       the source.</p>
-<p>See <a class="xref" href="#dependencies" title="19.1.6. Handling dependencies">Section 19.1.6, &#8220;Handling dependencies&#8221;</a> for
+<p>See <a class="xref" href="#dependencies" title="19.1.5. Handling dependencies">Section 19.1.5, &#8220;Handling dependencies&#8221;</a> for
       more information about dependencies on other packages,
       including the <code class="varname">BUILDLINK_ABI_DEPENDS</code> and
       <code class="varname">ABI_DEPENDS</code> definitions.</p>
@@ -5683,12 +5683,17 @@ these variables.</p>
 <p>The following variables can be set to request the creation of
 directories anywhere in the file system:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p><code class="varname">MAKE_DIRS</code> and <code class="varname">OWN_DIRS</code>
+<li class="listitem">
+<p><code class="varname">MAKE_DIRS</code> and <code class="varname">OWN_DIRS</code>
     contain a list of directories that should be created and should attempt
     to be destroyed by the installation scripts.  The difference between
     the two is that the latter prompts the administrator to remove any
     directories that may be left after deinstallation (because they were
-    not empty), while the former does not.</p></li>
+    not empty), while the former does not.  Example:</p>
+<pre class="programlisting">
+MAKE_DIRS+=             ${VARBASE}/foo/private
+</pre>
+</li>
 <li class="listitem">
 <p><code class="varname">MAKE_DIRS_PERMS</code> and
     <code class="varname">OWN_DIRS_PERMS</code> contain a list of tuples describing
@@ -5697,7 +5702,8 @@ directories anywhere in the file system:</p>
     separated by spaces: the directory name, its owner, its group and its
     numerical mode.  For example:</p>
 <pre class="programlisting">
-MAKE_DIRS_PERMS+=         ${VARBASE}/foo/private ${ROOT_USER} ${ROOT_GROUP} 0700
+MAKE_DIRS_PERMS+=       ${VARBASE}/foo/private \
+                        ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0700
 </pre>
 <p>The difference between the two is exactly the same as their
     non-<code class="varname">PERMS</code> counterparts.</p>
@@ -5736,7 +5742,8 @@ installation prefix:</p>
     specifies their owner, their group and their numeric permissions, in
     this order.  For example:</p>
 <pre class="programlisting">
-REQD_FILES_PERMS+= ${PREFIX}/share/somefile ${VARBASE}/somefile ${ROOT_USER} ${ROOT_GROUP} 0700
+REQD_FILES_PERMS+=      ${PREFIX}/share/somefile ${VARBASE}/somefile \
+                        ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0700
 </pre>
 <p>The difference between the two is exactly the same as their
     non-<code class="varname">PERMS</code> counterparts.</p>
@@ -7360,7 +7367,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="tools.questions"></a>18.4. Questions regarding the tools</h2></div></div></div>
 <div class="qandaset">
-<a name="idm80579472"></a><dl>
+<a name="idm83805728"></a><dl>
 <dt>18.4.1. <a href="#tools.new">How do I add a new tool?</a>
 </dt>
 <dt>18.4.2. <a href="#tools.listall">How do I get a list of all available
@@ -7379,7 +7386,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.new"></a><a name="idm80579088"></a><p><b>18.4.1.</b></p>
+<a name="tools.new"></a><a name="idm83805344"></a><p><b>18.4.1.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I add a new tool?</p></td>
 </tr>
@@ -7389,7 +7396,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.listall"></a><a name="idm80578064"></a><p><b>18.4.2.</b></p>
+<a name="tools.listall"></a><a name="idm83804320"></a><p><b>18.4.2.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I get a list of all available
 	tools?</p></td>
@@ -7400,7 +7407,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.used"></a><a name="idm80577040"></a><p><b>18.4.3.</b></p>
+<a name="tools.used"></a><a name="idm83803296"></a><p><b>18.4.3.</b></p>
 </td>
 <td align="left" valign="top"><p>How can I get a list of all the tools that a
 	package is using while being built? I want to know whether it
@@ -7424,26 +7431,25 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <dl class="toc">
 <dt><span class="sect1"><a href="#general-operation">19.1. General operation</a></span></dt>
 <dd><dl>
-<dt><span class="sect2"><a href="#portability-of-packages">19.1.1. Portability of packages</a></span></dt>
-<dt><span class="sect2"><a href="#pulling-vars-from-etc-mk.conf">19.1.2. How to pull in user-settable variables from <code class="filename">mk.conf</code></a></span></dt>
-<dt><span class="sect2"><a href="#user-interaction">19.1.3. User interaction</a></span></dt>
-<dt><span class="sect2"><a href="#handling-licenses">19.1.4. Handling licenses</a></span></dt>
-<dt><span class="sect2"><a href="#restricted-packages">19.1.5. Restricted packages</a></span></dt>
-<dt><span class="sect2"><a href="#dependencies">19.1.6. Handling dependencies</a></span></dt>
-<dt><span class="sect2"><a href="#conflicts">19.1.7. Handling conflicts with other packages</a></span></dt>
-<dt><span class="sect2"><a href="#not-building-packages">19.1.8. Packages that cannot or should not be built</a></span></dt>
-<dt><span class="sect2"><a href="#undeletable-packages">19.1.9. Packages which should not be deleted, once installed</a></span></dt>
-<dt><span class="sect2"><a href="#security-handling">19.1.10. Handling packages with security problems</a></span></dt>
-<dt><span class="sect2"><a href="#bumping-pkgrevision">19.1.11. How to handle incrementing versions when fixing an existing package</a></span></dt>
-<dt><span class="sect2"><a href="#fixes.subst">19.1.12. Substituting variable text in the package files (the SUBST framework)</a></span></dt>
+<dt><span class="sect2"><a href="#pulling-vars-from-etc-mk.conf">19.1.1. How to pull in user-settable variables from <code class="filename">mk.conf</code></a></span></dt>
+<dt><span class="sect2"><a href="#user-interaction">19.1.2. User interaction</a></span></dt>
+<dt><span class="sect2"><a href="#handling-licenses">19.1.3. Handling licenses</a></span></dt>
+<dt><span class="sect2"><a href="#restricted-packages">19.1.4. Restricted packages</a></span></dt>
+<dt><span class="sect2"><a href="#dependencies">19.1.5. Handling dependencies</a></span></dt>
+<dt><span class="sect2"><a href="#conflicts">19.1.6. Handling conflicts with other packages</a></span></dt>
+<dt><span class="sect2"><a href="#not-building-packages">19.1.7. Packages that cannot or should not be built</a></span></dt>
+<dt><span class="sect2"><a href="#undeletable-packages">19.1.8. Packages which should not be deleted, once installed</a></span></dt>
+<dt><span class="sect2"><a href="#security-handling">19.1.9. Handling packages with security problems</a></span></dt>
+<dt><span class="sect2"><a href="#bumping-pkgrevision">19.1.10. How to handle incrementing versions when fixing an existing package</a></span></dt>
+<dt><span class="sect2"><a href="#fixes.subst">19.1.11. Substituting variable text in the package files (the SUBST framework)</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#fixes.fetch">19.2. Fixing problems in the <span class="emphasis"><em>fetch</em></span> phase</a></span></dt>
+<dt><span class="sect1"><a href="#fixes.fetch">19.2. The <span class="emphasis"><em>fetch</em></span> phase</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#no-plain-download">19.2.1. Packages whose distfiles aren't available for plain downloading</a></span></dt>
 <dt><span class="sect2"><a href="#modified-distfiles-same-name">19.2.2. How to handle modified distfiles with the 'old' name</a></span></dt>
 <dt><span class="sect2"><a href="#build.fetch.github">19.2.3. Packages hosted on github.com</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#fixes.configure">19.3. Fixing problems in the <span class="emphasis"><em>configure</em></span> phase</a></span></dt>
+<dt><span class="sect1"><a href="#fixes.configure">19.3. The <span class="emphasis"><em>configure</em></span> phase</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#fixes.libtool">19.3.1. Shared libraries - libtool</a></span></dt>
 <dt><span class="sect2"><a href="#using-libtool">19.3.2. Using libtool on GNU packages that already support libtool</a></span></dt>
@@ -7457,14 +7463,14 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <dt><span class="sect2"><a href="#shell-scripts">19.4.4. Packages containing shell scripts</a></span></dt>
 <dt><span class="sect2"><a href="#other-programming-languages">19.4.5. Other programming languages</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#fixes.build">19.5. Fixing problems in the <span class="emphasis"><em>build</em></span> phase</a></span></dt>
+<dt><span class="sect1"><a href="#fixes.build">19.5. The <span class="emphasis"><em>build</em></span> phase</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#fixes.build.cpp">19.5.1. Compiling C and C++ code conditionally</a></span></dt>
 <dt><span class="sect2"><a href="#compiler-bugs">19.5.2. How to handle compiler bugs</a></span></dt>
 <dt><span class="sect2"><a href="#undefined-reference">19.5.3. Undefined reference to <span class="quote">&#8220;<span class="quote">...</span>&#8221;</span></a></span></dt>
 <dt><span class="sect2"><a href="#out-of-memory">19.5.4. Running out of memory</a></span></dt>
 </dl></dd>
-<dt><span class="sect1"><a href="#fixes.install">19.6. Fixing problems in the <span class="emphasis"><em>install</em></span> phase</a></span></dt>
+<dt><span class="sect1"><a href="#fixes.install">19.6. The <span class="emphasis"><em>install</em></span> phase</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#install-scripts">19.6.1. Creating needed directories</a></span></dt>
 <dt><span class="sect2"><a href="#where-to-install-documentation">19.6.2. Where to install documentation</a></span></dt>
@@ -7494,18 +7500,14 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="general-operation"></a>19.1. General operation</h2></div></div></div>
-<div class="sect2">
-<div class="titlepage"><div><div><h3 class="title">
-<a name="portability-of-packages"></a>19.1.1. Portability of packages</h3></div></div></div>
 <p>One appealing feature of pkgsrc is that it runs on many
-    different platforms. As a result, it is important to ensure,
-    where possible, that packages in pkgsrc are portable. This
-    chapter mentions some particular details you should pay
-    attention to while working on pkgsrc.</p>
-</div>
+  different platforms. As a result, it is important to ensure,
+  where possible, that packages in pkgsrc are portable. This
+  chapter mentions some particular details you should pay
+  attention to while working on pkgsrc.</p>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="pulling-vars-from-etc-mk.conf"></a>19.1.2. How to pull in user-settable variables from <a class="link" href="#mk.conf"><code class="filename">mk.conf</code></a>
+<a name="pulling-vars-from-etc-mk.conf"></a>19.1.1. How to pull in user-settable variables from <a class="link" href="#mk.conf"><code class="filename">mk.conf</code></a>
 </h3></div></div></div>
 <p>The pkgsrc user can configure pkgsrc by overriding several
     variables in the file pointed to by <code class="varname">MAKECONF</code>,
@@ -7516,24 +7518,23 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
     <code class="filename">../../mk/bsd.prefs.mk</code> before, which in turn
     loads the user preferences.</p>
 <p>But note that some variables may not be completely defined
-    after <code class="filename">../../mk/bsd.prefs.mk</code> has been
-    included, as they may contain references to variables that are
-    not yet defined. In shell commands this is no problem, since
-    variables are actually macros, which are only expanded when they
-    are used. But in the preprocessor directives mentioned above and
-    in dependency lines (of the form <code class="literal">target:
-    dependencies</code>) the variables are expanded at load
-    time.</p>
+    after <code class="filename">../../mk/bsd.prefs.mk</code> has been included,
+    as they may contain references to variables that are not yet
+    defined. In shell commands (the lines in
+    <code class="filename">Makefile</code> that are indented with a tab) this is
+    no problem, since variables are only expanded when they are used.
+    But in the preprocessor directives mentioned above and in dependency
+    lines (of the form <code class="literal">target: dependencies</code>) the
+    variables are expanded at load time.</p>
 <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
 <h3 class="title">Note</h3>
-<p>Currently there is no exhaustive list of all
-    variables that tells you whether they can be used at load time
-    or only at run time, but it is in preparation.</p>
+<p>To check whether a variable can be used at load time,
+    run <span class="command"><strong>pkglint -Wall</strong></span> on your package.</p>
 </div>
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="user-interaction"></a>19.1.3. User interaction</h3></div></div></div>
+<a name="user-interaction"></a>19.1.2. User interaction</h3></div></div></div>
 <p>Occasionally, packages require interaction from the user,
     and this can be in a number of ways:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
@@ -7546,23 +7547,19 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <li class="listitem"><p>help during the build process</p></li>
 <li class="listitem"><p>help during the installation of a package</p></li>
 </ul></div>
-<p>The <code class="varname">INTERACTIVE_STAGE</code> definition is
-    provided to notify the pkgsrc mechanism of an interactive stage
-    which will be needed, and this should be set in the package's
-    <code class="filename">Makefile</code>, e.g.:</p>
-<pre class="programlisting">
-INTERACTIVE_STAGE=      build
-    </pre>
-<p>Multiple interactive stages can be specified:</p>
+<p>A package can set the <code class="varname">INTERACTIVE_STAGE</code>
+    variable to define which stages need interaction. This should be
+    done in the package's <code class="filename">Makefile</code>, e.g.:</p>
 <pre class="programlisting">
 INTERACTIVE_STAGE=      configure install
     </pre>
 <p>The user can then decide to skip this package by setting the
-    <code class="varname">BATCH</code> variable.</p>
+    <code class="varname">BATCH</code> variable. Packages that require interaction
+    are also excluded from bulk builds.</p>
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="handling-licenses"></a>19.1.4. Handling licenses</h3></div></div></div>
+<a name="handling-licenses"></a>19.1.3. Handling licenses</h3></div></div></div>
 <p>Authors of software can choose the licence under which
     software can be copied.  This is due to copyright law, and reasons
     for license choices are outside the scope of pkgsrc.  The pkgsrc
@@ -7570,12 +7567,8 @@ INTERACTIVE_STAGE=      configure install
     users may find objectionable or difficult or impossible to comply
     with.  The Free Software Foundation has declared some licenses
     "Free", and the Open Source Initiative has a definition of "Open
-    Source".  The pkgsrc system, as a policy choice, does not label
-    packages which have licenses that are Free or Open Source.
-    However, packages without a license meeting either of those tests
-    are labeled with a license tag denoting the license.  Note that a
-    package with no license to copy trivially does not meet either the
-    Free or Open Source test.</p>
+    Source".  Note that a package whose license forbids to copy does
+    not meet either the Free or Open Source test.</p>
 <p>For packages which are not Free or Open Source, pkgsrc will
     not build the package unless the user has indicated to pkgsrc that
     packages with that particular license may be built.  Note that
@@ -7586,7 +7579,7 @@ INTERACTIVE_STAGE=      configure install
     of binary packages are not currently subject to this mechanism;
     this is a bug.)</p>
 <p>One might want to only install packages with a BSD license,
-    or the GPL, and not the other.  The free licenses are added to the 
+    or the GPL, and not the other.  The free licenses are added to the
     default <code class="varname">ACCEPTABLE_LICENSES</code> variable.  The
     user can override the default by setting the
     <code class="varname">ACCEPTABLE_LICENSES</code> variable with "=" instead
@@ -7699,7 +7692,7 @@ ACCEPTABLE_LICENSES+=xv-license
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="restricted-packages"></a>19.1.5. Restricted packages</h3></div></div></div>
+<a name="restricted-packages"></a>19.1.4. Restricted packages</h3></div></div></div>
 <p>Some licenses restrict how software may be re-distributed.
     Because a license tag is required unless the package is Free or
     Open Source, all packages with restrictions should have license
@@ -7767,7 +7760,7 @@ ACCEPTABLE_LICENSES+=xv-license
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="dependencies"></a>19.1.6. Handling dependencies</h3></div></div></div>
+<a name="dependencies"></a>19.1.5. Handling dependencies</h3></div></div></div>
 <p>Your package may depend on some other package being present
     - and there are various ways of expressing this dependency.
     pkgsrc supports the <code class="varname">BUILD_DEPENDS</code> and
@@ -7861,7 +7854,7 @@ DEPENDS+=       ImageMagick&gt;=6.0:../../graphics/ImageMagick
 <p>If you need to depend on minimum versions of libraries,
 	see the buildlink section of the pkgsrc guide.</p>
 <p>For security fixes, please update the package
-	vulnerabilities file. See <a class="xref" href="#security-handling" title="19.1.10. Handling packages with security problems">Section 19.1.10, &#8220;Handling packages with security problems&#8221;</a> for more
+	vulnerabilities file. See <a class="xref" href="#security-handling" title="19.1.9. Handling packages with security problems">Section 19.1.9, &#8220;Handling packages with security problems&#8221;</a> for more
 	information.</p>
 </li>
 </ol></div>
@@ -7874,7 +7867,7 @@ DEPENDS+=       ImageMagick&gt;=6.0:../../graphics/ImageMagick
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="conflicts"></a>19.1.7. Handling conflicts with other packages</h3></div></div></div>
+<a name="conflicts"></a>19.1.6. Handling conflicts with other packages</h3></div></div></div>
 <p>Your package may conflict with other packages a user might
     already have installed on his system, e.g. if your package
     installs the same set of files as another package in the pkgsrc
@@ -7901,7 +7894,7 @@ CONFLICTS=      bar-[0-9]*
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="not-building-packages"></a>19.1.8. Packages that cannot or should not be built</h3></div></div></div>
+<a name="not-building-packages"></a>19.1.7. Packages that cannot or should not be built</h3></div></div></div>
 <p>There are several reasons why a package might be
     instructed to not build under certain circumstances.  If the
     package builds and runs on most platforms, the exceptions
@@ -7940,7 +7933,7 @@ CONFLICTS=      bar-[0-9]*
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="undeletable-packages"></a>19.1.9. Packages which should not be deleted, once installed</h3></div></div></div>
+<a name="undeletable-packages"></a>19.1.8. Packages which should not be deleted, once installed</h3></div></div></div>
 <p>To ensure that a package may not be deleted, once it has been
     installed, the <code class="varname">PKG_PRESERVE</code> definition should
     be set in the package Makefile. This will be carried into any
@@ -7951,7 +7944,7 @@ CONFLICTS=      bar-[0-9]*
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="security-handling"></a>19.1.10. Handling packages with security problems</h3></div></div></div>
+<a name="security-handling"></a>19.1.9. Handling packages with security problems</h3></div></div></div>
 <p>When a vulnerability is found, this should be noted in
     <code class="filename">localsrc/security/advisories/pkg-vulnerabilities</code>,
     and after committing that file, ask pkgsrc-security@NetBSD.org to
@@ -7968,7 +7961,7 @@ CONFLICTS=      bar-[0-9]*
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="bumping-pkgrevision"></a>19.1.11. How to handle incrementing versions when fixing an existing package</h3></div></div></div>
+<a name="bumping-pkgrevision"></a>19.1.10. How to handle incrementing versions when fixing an existing package</h3></div></div></div>
 <p>When making fixes to an existing package it can be useful
     to change the version number in <code class="varname">PKGNAME</code>. To
     avoid conflicting with future versions by the original author, a
@@ -8029,7 +8022,7 @@ DISTNAME=       foo-17.43
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="fixes.subst"></a>19.1.12. Substituting variable text in the package files (the SUBST framework)</h3></div></div></div>
+<a name="fixes.subst"></a>19.1.11. Substituting variable text in the package files (the SUBST framework)</h3></div></div></div>
 <p>When you want to replace the same text in multiple files
     or when the replacement text varies, patches alone cannot help.
     This is where the SUBST framework comes in. It provides an
@@ -8089,7 +8082,7 @@ SUBST_SED.fix-paths+=           -e 's,"/var/log,"${VARBASE}/log,g'
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="fixes.fetch"></a>19.2. Fixing problems in the <span class="emphasis"><em>fetch</em></span> phase</h2></div></div></div>
+<a name="fixes.fetch"></a>19.2. The <span class="emphasis"><em>fetch</em></span> phase</h2></div></div></div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="no-plain-download"></a>19.2.1. Packages whose distfiles aren't available for plain downloading</h3></div></div></div>
@@ -8130,7 +8123,7 @@ FETCH_MESSAGE+= "manually from "${MASTER_SITES:Q}"."
     <code class="varname">DISTFILES</code> and
     <code class="varname">PATCHFILES</code> for this package will be put in that
     subdirectory of the local distfiles directory.
-    (See <a class="xref" href="#bumping-pkgrevision" title="19.1.11. How to handle incrementing versions when fixing an existing package">Section 19.1.11, &#8220;How to handle incrementing versions when fixing an existing package&#8221;</a> for more details.)
+    (See <a class="xref" href="#bumping-pkgrevision" title="19.1.10. How to handle incrementing versions when fixing an existing package">Section 19.1.10, &#8220;How to handle incrementing versions when fixing an existing package&#8221;</a> for more details.)
     In case this
     happens more often, <code class="varname">PKGNAME</code> can be used (thus
     including the <code class="filename">nbX</code> suffix) or a date stamp
@@ -8195,7 +8188,7 @@ EXTRACT_SUFX=   .zip
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="fixes.configure"></a>19.3. Fixing problems in the <span class="emphasis"><em>configure</em></span> phase</h2></div></div></div>
+<a name="fixes.configure"></a>19.3. The <span class="emphasis"><em>configure</em></span> phase</h2></div></div></div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="fixes.libtool"></a>19.3.1. Shared libraries - libtool</h3></div></div></div>
@@ -8494,7 +8487,7 @@ pre-configure:
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="fixes.build"></a>19.5. Fixing problems in the <span class="emphasis"><em>build</em></span> phase</h2></div></div></div>
+<a name="fixes.build"></a>19.5. The <span class="emphasis"><em>build</em></span> phase</h2></div></div></div>
 <p>The most common failures when building a package are that
 	some platforms do not provide certain header files, functions or
 	libraries, or they provide the functions in a library that the
@@ -8696,7 +8689,7 @@ of functions.</p>
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="fixes.install"></a>19.6. Fixing problems in the <span class="emphasis"><em>install</em></span> phase</h2></div></div></div>
+<a name="fixes.install"></a>19.6. The <span class="emphasis"><em>install</em></span> phase</h2></div></div></div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="install-scripts"></a>19.6.1. Creating needed directories</h3></div></div></div>
@@ -9561,7 +9554,7 @@ place.</p></li>
 	and if you still don't have the answer, ask on the
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset">
-<a name="idm80019600"></a><dl>
+<a name="idm83229600"></a><dl>
 <dt>22.1. <a href="#devfaq.makeflags">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
@@ -9606,7 +9599,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="idm80019216"></a><p><b>22.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="idm83229216"></a><p><b>22.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9622,7 +9615,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="idm80015248"></a><p><b>22.2.</b></p>
+<a name="devfaq.make"></a><a name="idm83225248"></a><p><b>22.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9640,7 +9633,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="idm80002576"></a><p><b>22.3.</b></p>
+<a name="devfaq.cc"></a><a name="idm83220768"></a><p><b>22.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9658,7 +9651,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="idm79998480"></a><p><b>22.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="idm83216672"></a><p><b>22.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9671,7 +9664,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="idm79996176"></a><p><b>22.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="idm83214368"></a><p><b>22.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9687,7 +9680,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="idm79993104"></a><p><b>22.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="idm83211296"></a><p><b>22.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9711,7 +9704,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="idm79985040"></a><p><b>22.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="idm83203232"></a><p><b>22.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9736,7 +9729,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="idm79981328"></a><p><b>22.8.</b></p>
+<a name="devfaq.documentation"></a><a name="idm83199392"></a><p><b>22.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9784,7 +9777,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="idm79974800"></a><p><b>22.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="idm83192992"></a><p><b>22.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
@@ -10301,10 +10294,10 @@ CFLAGS+=                -Wall
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="infr.varspec"></a>24.4. How can variables be specified?</h2></div></div></div>
 <p>There are many ways in which the definition and use of a
-	variable can be restricted in order to detect bugs and
-	violations of the (mostly unwritten) policies. See the
-	<code class="literal">pkglint</code> developer's documentation for further
-	details.</p>
+	variable can be restricted in order to detect bugs and violations
+	of the (mostly unwritten) policies. A package can be checked with
+	<code class="literal">pkglint -Wall</code> to see whether it meets these
+	rules.</p>
 </div>
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
@@ -10331,7 +10324,7 @@ CFLAGS+=                -Wall
 	parameter since it is very likely that further text will be
 	added after calling the procedure, which would effectively apply
 	the procedure to only a part of the variable. Also, references
-	to other variables wit will be modified after calling the
+	to other variables will be modified after calling the
 	procedure.</p>
 <p>A procedure can declare its output parameters either as
 	suitable for use in preprocessing directives or as only
@@ -10480,26 +10473,46 @@ CFLAGS+=                -Wall
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="regression.fun.override"></a>25.3.1. Overridable functions</h3></div></div></div>
-<p>These functions do not take any parameters. They are all
-	called in <span class="quote">&#8220;<span class="quote">set -e</span>&#8221;</span> mode, so you should be careful
-	to check the exitcodes of any commands you run in the
-	test.</p>
+<p>These functions do not take any parameters. Although they
+	are called in <span class="quote">&#8220;<span class="quote">set -e</span>&#8221;</span> mode, they don't stop at the
+	first failing command. See <a class="ulink" href="http://stackoverflow.com/q/4072984" target="_top">this StackOverflow
+	question</a> for details.</p>
 <div class="variablelist"><dl class="variablelist">
-<dt><span class="term"><code class="varname">do_setup()</code></span></dt>
+<dt><span class="term"><code class="varname">do_setup</code></span></dt>
 <dd><p>This function prepares the environment for the
 	test. By default it does nothing.</p></dd>
-<dt><span class="term"><code class="varname">do_test()</code></span></dt>
-<dd><p>This function runs the actual test. By default,
+<dt><span class="term"><code class="varname">do_test</code></span></dt>
+<dd>
+<p>This function runs the actual test. By default,
 	it calls <code class="varname">TEST_MAKE</code> with the arguments
 	<code class="varname">MAKEARGS_TEST</code> and writes its output including
 	error messages into the file
-	<code class="varname">TEST_OUTFILE</code>.</p></dd>
-<dt><span class="term"><code class="varname">check_result()</code></span></dt>
-<dd><p>This function is run after the test and is
+	<code class="varname">TEST_OUTFILE</code>.</p>
+<p>When defining this function, make sure that all output that
+	needs to be checked is written to the correct output file.
+	Example:</p>
+<pre class="programlisting">
+do_test() {
+	echo "Example output"
+} 1&gt;$TEST_OUTFILE 2&gt;&amp;1
+</pre>
+</dd>
+<dt><span class="term"><code class="varname">check_result</code></span></dt>
+<dd>
+<p>This function is run after the test and is
 	typically used to compare the actual output from the one that is
 	expected. It can make use of the various helper functions from
-	the next section.</p></dd>
-<dt><span class="term"><code class="varname">do_cleanup()</code></span></dt>
+	the next section. Example:</p>
+<pre class="programlisting">
+check_result() {
+	exit_status 0
+	output_require "Example"
+	output_require "^[[:alpha:]+[[:space:]][[:alpha:]]{6}$"
+	output_prohibit "no such file or directory"
+}
+</pre>
+</dd>
+<dt><span class="term"><code class="varname">do_cleanup</code></span></dt>
 <dd><p>This function cleans everything up after the
 	test has been run. By default it does nothing.</p></dd>
 </dl></div>
@@ -10508,15 +10521,20 @@ CFLAGS+=                -Wall
 <div class="titlepage"><div><div><h3 class="title">
 <a name="regression.fun.helper"></a>25.3.2. Helper functions</h3></div></div></div>
 <div class="variablelist"><dl class="variablelist">
-<dt><span class="term"><code class="varname">exit_status(expected)</code></span></dt>
+<dt><span class="term"><code class="varname">exit_status expected</code></span></dt>
 <dd><p>This function compares the exitcode of the
-	<span class="command"><strong>do_test()</strong></span> function with its first parameter.
+	<span class="command"><strong>do_test</strong></span> function with its first parameter.
 	If they differ, the test will fail.</p></dd>
-<dt><span class="term"><code class="varname">output_require(regex...)</code></span></dt>
-<dd><p>This function checks for each of its parameters
-	if the output from <span class="command"><strong>do_test()</strong></span> matches the
+<dt><span class="term"><code class="varname">output_require regex...</code></span></dt>
+<dd>
+<p>This function checks for each of its parameters
+	if the output from <span class="command"><strong>do_test</strong></span> matches the
 	extended regular expression. If it does not, the test will
-	fail.</p></dd>
+	fail. Example:</p>
+<pre class="programlisting">
+output_require 
+</pre>
+</dd>
 <dt><span class="term"><code class="varname">output_prohibit(regex...)</code></span></dt>
 <dd><p>This function checks for each of its parameters
 	if the output from <span class="command"><strong>do_test()</strong></span> does
