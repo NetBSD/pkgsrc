@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2016/06/11 23:00:13 kamil Exp $
+bin/i3lock
+man/man1/i3lock.1
+share/examples/i3lock/pam.d/i3lock
