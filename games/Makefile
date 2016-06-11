@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.387 2015/12/14 15:32:25 wiz Exp $
+# $NetBSD: Makefile,v 1.388 2016/06/11 18:44:24 kamil Exp $
 #
 
 COMMENT=	Games
@@ -256,6 +256,7 @@ SUBDIR+=	picmi
 SUBDIR+=	pingus
 SUBDIR+=	pioneers
 SUBDIR+=	plib
+SUBDIR+=	pmars
 SUBDIR+=	polyglot
 SUBDIR+=	powder
 SUBDIR+=	powermanga
