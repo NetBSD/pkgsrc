@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2355 2016/06/11 18:29:53 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2356 2016/06/11 18:33:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3053,3 +3053,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated games/scummvm to 1.8.1 [wiz 2016-06-11]
 	Updated devel/gettext to 0.19.8.1 [wiz 2016-06-11]
 	Updated devel/gmake to 4.2.1 [wiz 2016-06-11]
+	Updated net/wget to 1.18 [wiz 2016-06-11]
