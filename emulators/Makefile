@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.244 2016/03/23 14:23:18 hauke Exp $
+# $NetBSD: Makefile,v 1.245 2016/06/11 21:10:37 kamil Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -84,6 +84,7 @@ SUBDIR+=	hercules-images
 SUBDIR+=	ia64sim
 SUBDIR+=	kegs
 SUBDIR+=	kenigma
+SUBDIR+=	keystone
 SUBDIR+=	klh10
 SUBDIR+=	libdsk
 SUBDIR+=	libretro-catsfc
@@ -123,6 +124,7 @@ SUBDIR+=	p11
 SUBDIR+=	palmosemulator
 SUBDIR+=	pcemu
 SUBDIR+=	pearpc
+SUBDIR+=	py-keystone
 SUBDIR+=	qemu
 SUBDIR+=	qemu0
 SUBDIR+=	raine
