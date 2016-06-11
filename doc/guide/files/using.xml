@@ -1,4 +1,4 @@
-<!-- $NetBSD: using.xml,v 1.39 2015/01/26 23:00:00 wiz Exp $ -->
+<!-- $NetBSD: using.xml,v 1.40 2016/06/11 13:39:44 rillig Exp $ -->
 
 <chapter id="using"> <?dbhtml filename="using.html"?>
 <title>Using pkgsrc</title>
@@ -211,24 +211,6 @@ Version mismatch: 'tcsh' 6.09.00 vs 6.10.00
 
     <para>The <command>pkg_admin</command> executes various
     administrative functions on the package system.</para>
-
-  </sect2>
-
-  <sect2 id="a-word-of-warning">
-    <title>A word of warning</title>
-
-    <para>Please pay very careful attention to the warnings
-    expressed in the &man.pkg.add.1; manual page about the
-    inherent dangers of installing binary packages which you did
-    not create yourself, and the security holes that can be
-    introduced onto your system by indiscriminate adding of such
-    files.</para>
-
-    <para>The same warning of course applies to every package you
-    install from source when you haven't completely read and
-    understood the source code of the package, the compiler that
-    is used to build the package and all the other tools that are
-    involved.</para>
 
   </sect2>
 </sect1>
