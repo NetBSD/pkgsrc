@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q1,v 1.1.2.21 2016/06/06 18:38:24 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q1,v 1.1.2.22 2016/06/11 18:32:48 spz Exp $
 
 Changes to the packages collection and infrastructure on the pkgsrc-2016Q1 branch:
 
@@ -236,3 +236,12 @@ net/ntp4: security update
 Pullup ticket #5040 - requested by taca
 net/ntp4: package build fixes
 
+Pullup ticket #5041 - requested by taca
+security/openssh: security patch
+
+Pullup ticket #5038 - requested by joerg
+www/nginx: security patch
+www/nginx-devel: security patch
+
+Pullup ticket #5039 - requested by taca
+devel/libthrift: build fix
