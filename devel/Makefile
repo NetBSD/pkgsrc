@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2273 2016/06/06 21:33:31 alnsn Exp $
+# $NetBSD: Makefile,v 1.2274 2016/06/11 12:45:46 kamil Exp $
 #
 
 COMMENT=	Development utilities
@@ -1040,6 +1040,7 @@ SUBDIR+=	p5-Find-Lib
 SUBDIR+=	p5-FindBin-libs
 SUBDIR+=	p5-Format-Human-Bytes
 SUBDIR+=	p5-FreezeThaw
+SUBDIR+=	p5-Function-Parameters
 SUBDIR+=	p5-Future
 SUBDIR+=	p5-Getopt-ArgvFile
 SUBDIR+=	p5-Getopt-Euclid
