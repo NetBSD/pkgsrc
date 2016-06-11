@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2016/06/11 22:07:01 kamil Exp $
+bin/dunst
+man/man1/dunst.1
+share/dbus-1/services/org.knopwob.dunst.service
+share/dunst/dunstrc
