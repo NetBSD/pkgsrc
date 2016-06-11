@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.21 2014/04/02 17:36:00 wiedi Exp $
+# $NetBSD: options.mk,v 1.22 2016/06/11 00:37:24 wiedi Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.exim
 PKG_SUPPORTED_OPTIONS=	exim-appendfile-maildir exim-appendfile-mailstore
@@ -77,7 +77,7 @@ LOOKUP_LIBS+=-lpq
 .endif
 
 .if !empty(PKG_OPTIONS:Mexim-lookup-redis)
-LOCAL_MAKEFILE_OPTIONS+=EXPERIMENTAL_REDIS=YES
+LOCAL_MAKEFILE_OPTIONS+=LOOKUP_REDIS=YES
 LOOKUP_LIBS+=-lhiredis
 .  include "../../databases/hiredis/buildlink3.mk"
 .endif
