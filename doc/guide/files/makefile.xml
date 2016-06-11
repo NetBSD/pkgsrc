@@ -1,4 +1,4 @@
-<!-- $NetBSD: makefile.xml,v 1.25 2016/06/11 14:58:26 rillig Exp $ -->
+<!-- $NetBSD: makefile.xml,v 1.26 2016/06/11 19:54:44 rillig Exp $ -->
 
 <chapter id="makefile"> <?dbhtml filename="makefile.html"?>
   <title>Programming in <filename>Makefile</filename>s</title>
@@ -139,43 +139,35 @@ correct:
 
   </sect1>
 
-  <sect1 id="makefile.code">
-    <title>Code snippets</title>
+<sect1 id="makefile.code">
+<title>Code snippets</title>
 
-    <para>This section presents you with some code snippets you should
-    use in your own code. If you don't find anything appropriate here,
-    you should test your code and add it here.</para>
+<sect2 id="adding-to-list">
+<title>Adding things to a list</title>
 
-    <sect2 id="adding-to-list">
-      <title>Adding things to a list</title>
+<para>When adding a string that possibly contains whitespace or quotes to
+a list (example 1), it must be quoted using the <code>:Q</code>
+modifier.</para>
+
+<para>When adding another list to a list (example 2), it must not be
+quoted, since its elements are already quoted.</para>
 
 <programlisting>
-STRING=                 foo * bar `date`
-INT_LIST=               # empty
-ANOTHER_INT_LIST=       apache-[0-9]*:../../www/apache
-EXT_LIST=               # empty
-ANOTHER_EXT_LIST=       a=b c=d
+STRING=         foo * bar `date`
+LIST=           # empty
+ANOTHER_LIST=   a=b c=d
 
-INT_LIST+=              ${STRING}               # 1
-INT_LIST+=              ${ANOTHER_INT_LIST}     # 2
-EXT_LIST+=              ${STRING:Q}             # 3
-EXT_LIST+=              ${ANOTHER_EXT_LIST}     # 4
+LIST+=          ${STRING:Q}       # 1
+LIST+=          ${ANOTHER_LIST}   # 2
 </programlisting>
 
-      <para>When you add a string to an external list (example 3), it
-      must be quoted. In all other cases, you must not add a quoting
-      level. You must not merge internal and external lists, unless you
-      are sure that all entries are correctly interpreted in both
-      lists.</para>
+</sect2>
 
-    </sect2>
+<sect2 id="echo-literal">
+<title>Echoing a string exacty as-is</title>
 
-    <sect2 id="passing-variable-to-shell">
-      <title>Passing variables to a shell command</title>
-
-	<para>Sometimes you may want to print an arbitrary string. There
-	are many ways to get it wrong and only few that can handle every
-	nastiness.</para>
+<para>Echoing a string containing special characters needs special
+work.</para>
 
 <programlisting>
 STRING=         foo bar &lt;    &gt; * `date` $$HOME ' "
@@ -185,109 +177,111 @@ all:
         echo ${STRING}                  # 1
         echo ${STRING:Q}                # 2
         printf '%s\n' ${STRING:Q}''     # 3
-        env ${EXAMPLE_ENV} sh -c 'echo "$$string"; echo "$$x"' # 4
+        env ${EXAMPLE_ENV} sh -c 'echo "$$string"; echo "$$x"'   # 4
 </programlisting>
 
-      <para>Example 1 leads to a syntax error in the shell, as the
-      characters are just copied.</para>
+<para>Example 1 leads to a syntax error in the shell, as the characters
+are just copied.</para>
 
-      <para>Example 2 can handle all strings, except those starting
-      with a dash or those containing backslashes.</para>
+<para>Example 2 quotes the string so that the shell interprets it
+correctly. But the echo command may additionally interpret strings with a
+leading dash or those containing backslashes.</para>
 
-      <para>Example 3 can handle arbitrary strings.</para>
+<para>Example 3 can handle arbitrary strings, since &man.printf.1; only
+interprets the format string, but not the next argument.</para>
 
-      <para>In example 4, the <varname>EXT_LIST</varname> does not
-      need to be quoted because the quoting has already been done
-      when adding elements to the list.</para>
-    </sect2>
+<para>In example 4, the <varname>EXAMPLE_ENV</varname> does not
+need to be quoted because the quoting has already been done
+when adding elements to the list.</para>
 
-    <sect2 id="quoting-guideline">
-      <title>Quoting guideline</title>
+</sect2>
 
-      <para>There are many possible sources of wrongly quoted variables.
-      This section lists some of the commonly known ones.</para>
+<sect2 id="cflags-gnu-configure">
+<title>Passing <varname>CFLAGS</varname> to GNU configure scripts</title>
 
-      <itemizedlist>
+<para>When passing <varname>CFLAGS</varname> or similar variables to a
+GNU-style configure script (especially those that call other configure
+scripts), it must not have leading or trailing whitespace, since
+otherwise the configure script gets confused. To trim leading and
+trailing whitespace, use the <code>:M</code> modifier, as in the
+following example:</para>
 
-	<listitem><para>Whenever you use the value of a list, think
-	about what happens to leading or trailing whitespace. If the
-	list is a well-formed shell expression, you can apply the
-	<varname>:M*</varname> modifier to strip leading and trailing
-	whitespace from each word. The <varname>:M</varname> operator
-	first splits its argument according to the rules of the shell,
-	and then creates a new list consisting of all words that match
-	the shell glob expression <varname>*</varname>, that is: all.
-	One class of situations where this is needed is when adding a
-	variable like <varname>CPPFLAGS</varname> to
-	<varname>CONFIGURE_ARGS</varname>. If the configure script
-	invokes other configure scripts, it strips the leading and
-	trailing whitespace from the variable and then passes it to the
-	other configure scripts. But these configure scripts expect the
-	(child) <varname>CPPFLAGS</varname> variable to be the same as
-	the parent <varname>CPPFLAGS</varname>. That's why we better
-	pass the <varname>CPPFLAGS</varname> value properly trimmed. And
-	here is how we do it:</para>
+<!--
+Additional details, intentionally left out of the guide to keep the text
+short:
+
+If the configure script calls other configure scripts, it strips the
+leading and trailing whitespace from the variable and then passes it to
+the other configure scripts. But these configure scripts expect the
+(child) <varname>CPPFLAGS</varname> variable to be the same as the parent
+<varname>CPPFLAGS</varname>.
+-->
 
 <programlisting>
 CPPFLAGS=               # empty
-CPPFLAGS+=              -Wundef -DPREFIX=\"${PREFIX:Q}\"
+CPPFLAGS+=              -Wundef -DPREFIX=\"${PREFIX}\"
 CPPFLAGS+=              ${MY_CPPFLAGS}
 
 CONFIGURE_ARGS+=        CPPFLAGS=${CPPFLAGS:M*:Q}
 
 all:
         echo x${CPPFLAGS:Q}x            # leading and trailing whitespace
-        echo x${CONFIGURE_ARGS}x        # properly trimmed
-</programlisting></listitem>
+        echo x${CONFIGURE_ARGS:Q}x      # properly trimmed
+</programlisting>
 
-	<listitem><para>The example above contains one bug: The
-	<varname>${PREFIX}</varname> is a properly quoted shell
-	expression, but there is the C compiler after it, which also
-	expects a properly quoted string (this time in C syntax). The
-	version above is therefore only correct if
-	<varname>${PREFIX}</varname> does not have embedded backslashes
-	or double quotes. If you want to allow these, you have to add
-	another layer of quoting to each variable that is used as a C
-	string literal. You cannot use the <varname>:Q</varname>
-	operator for it, as this operator only works for the
-	shell.</para></listitem>
+<para>In this example, <varname>CPPFLAGS</varname> has both leading and
+trailing whitespace because the <code>+=</code> operator always adds a
+space.</para>
 
-	<listitem><para>Whenever a variable can be empty, the
-	<varname>:Q</varname> operator can have surprising results. Here
-	are two completely different cases which can be solved with the
-	same trick.</para>
+</sect2>
+<sect2 id="empty-variables">
+<title>Handling possibly empty variables</title>
+
+<para>When a possibly empty variable is used in a shell program, it may
+lead to a syntax error.</para>
 
 <programlisting>
-EMPTY=                  # empty
-empty_test:
-        for i in a ${EMPTY:Q} c; do \
-            echo "$$i"; \
-        done
+EGFILES=        # empty
 
-for_test:
-.for i in a:\ a:\test.txt
-        echo ${i:Q}
-        echo "foo"
+install-examples:   # produces a syntax error in the shell
+        for egfile in ${EGFILES}; do            \
+                echo "Installing $$egfile";     \
+        done
+</programlisting>
+
+<para>The shell only sees the text <code>for egfile in ; do</code>, since
+<code>${EGFILES}</code> is replaced with an empty string by &man.make.1;.
+To fix this syntax error, use one of the snippets below.</para>
+
+<programlisting>
+EMPTY=          # empty
+
+install-examples:
+        for egfile in ${EGFILES} ""; do         \
+                [ -n "$$egfile" ] || continue;  \
+                echo "Installing $$egfile";     \
+        done
+</programlisting>
+
+<para>In this case, an empty string is appended to the iteration list (to
+prevent the syntax error) and filtered out later.</para>
+
+<programlisting>
+EGFILES=        # empty
+
+install-examples:
+.for egfile in ${EGFILES}
+        echo "Installing ${egfile}"
 .endfor
 </programlisting>
 
-	<para>The first example will only print two of the three lines
-	we might have expected. This is because
-	<varname>${EMPTY:Q}</varname> expands to the empty string, which
-	the shell cannot see. The workaround is to write
-	<varname>${EMPTY:Q}""</varname>. This pattern can be often found
-	as <varname>${TEST} -z ${VAR:Q}</varname> or as <varname>${TEST}
-	-f ${FNAME:Q}</varname> (both of these are wrong).</para>
+<para>This variant only works when <varname>EGFILES</varname> does not
+contain filenames with spaces, since the <code>.for</code> loop splits on
+simple whitespace.</para>
 
-	<para>The second example will only print three lines instead of
-	four. The first line looks like <varname>a:\ echo foo</varname>.
-	This is because the backslash of the value
-	<varname>a:\</varname> is interpreted as a line-continuation by
-	&man.make.1;, which makes the second line the arguments of the
-	&man.echo.1; command from the first line. To avoid this, write
-	<varname>${i:Q}""</varname>.</para></listitem>
+<para>To have a shell command test whether a make variable is empty, use
+the following code: <code>${TEST} -z ${POSSIBLY_EMPTY:Q}""</code>.</para>
 
-      </itemizedlist>
-    </sect2>
-  </sect1>
+</sect2>
+</sect1>
 </chapter>
