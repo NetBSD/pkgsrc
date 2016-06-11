@@ -1,6 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2008/02/19 17:21:42 weinem Exp $
+# $NetBSD: Makefile,v 1.17 2016/06/11 18:14:42 rillig Exp $
 
-WEB_PREFIX?=	${.CURDIR}/../htdocs
+WEB_PREFIX?=		${.CURDIR}/../htdocs
+DBX_XML_CATALOG?=	${SGML_PREFIX}/docbook/4.5/catalog.xml
+DBX_XML_DTD?=		${XML_PREFIX}/docbook/4.5/docbookx.dtd
+DBX_SGML_CATALOG?=	${SGML_PREFIX}/docbook/4.5/catalog
 
 DOC=	pkgsrc
 

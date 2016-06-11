@@ -1,4 +1,4 @@
-<!-- $NetBSD: devfaq.xml,v 1.13 2014/07/26 11:52:12 wiz Exp $ -->
+<!-- $NetBSD: devfaq.xml,v 1.14 2016/06/11 18:14:42 rillig Exp $ -->
 
 <chapter id="devfaq"> <?dbhtml filename="devfaq.html"?>
 <title>Frequently Asked Questions</title>
@@ -79,21 +79,21 @@
 <qandaentry id="devfaq.master_sites">
 
 	<question><para>What does
-	<literal>${MASTER_SITE_SOURCEFORGE:=package/}</literal> mean? I
-	don't understand the <literal>:=</literal> inside
+	<code>${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
+	don't understand the <code>:=</code> inside
 	it.</para></question>
 
-	<answer><para>The <literal>:=</literal> is not really an
-	assignment operator, like you might expect at first sight.
+	<answer><para>The <code>:=</code> is not really an
+	assignment operator, although it looks like it.
 	Instead, it is a degenerate form of
-	<literal>${LIST:<replaceable>old_string</replaceable>=<replaceable>new_string</replaceable>}</literal>,
-	which is documented in the &man.make.1; man page and which you
-	may have seen as in <literal>${SRCS:.c=.o}</literal>. In the
+	<code>${LIST:<replaceable>old_string</replaceable>=<replaceable>new_string</replaceable>}</code>,
+	which is documented in the &man.make.1; man page and which is
+	commonly used in the form <code>${SRCS:.c=.o}</code>. In the
 	case of <varname>MASTER_SITE_*</varname>,
 	<replaceable>old_string</replaceable> is the empty string and
 	<replaceable>new_string</replaceable> is
-	<literal>package/</literal>. That's where the
-	<literal>:</literal> and the <literal>=</literal> fall
+	<code>package/</code>. That's where the
+	<code>:</code> and the <code>=</code> fall
 	together.</para></answer>
 
 </qandaentry>
