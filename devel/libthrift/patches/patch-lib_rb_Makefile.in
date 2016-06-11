@@ -1,0 +1,28 @@
+$NetBSD: patch-lib_rb_Makefile.in,v 1.1.2.2 2016/06/11 18:31:02 spz Exp $
+
+* Avoid to build again on install stage.
+
+--- lib/rb/Makefile.in.orig	2011-08-11 13:19:12.000000000 +0000
++++ lib/rb/Makefile.in
+@@ -70,6 +70,7 @@ am__configure_deps = $(am__aclocal_m4_de
+ mkinstalldirs = $(install_sh) -d
+ CONFIG_HEADER = $(top_builddir)/config.h
+ CONFIG_CLEAN_FILES =
++CONFIG_STAMP = config.done
+ SOURCES =
+ DIST_SOURCES =
+ DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
+@@ -493,9 +494,12 @@ uninstall-am: uninstall-info-am
+ 
+ DESTDIR ?= /
+ 
+-all-local:
++all-local: ${CONFIG_STAMP}
++
++${CONFIG_STAMP}:
+ 	if [ -n "$(RUBY_PREFIX)" ] ; then $(RUBY) setup.rb config --prefix=$(DESTDIR)$(RUBY_PREFIX) --rbdir='$$libdir/ruby' --sodir='$$libdir/ruby' ; elif [ -n "$(DESTDIR)" ] ; then $(RUBY) setup.rb config --prefix=$(DESTDIR) ; else $(RUBY) setup.rb config ; fi
+ 	$(RUBY) setup.rb setup
++	touch $@
+ 
+ install-exec-hook:
+ 	$(RUBY) setup.rb install --prefix=$(DESTDIR)

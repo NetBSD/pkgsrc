@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2015/11/03 03:27:45 agc Exp $
+$NetBSD: distinfo,v 1.11.4.1 2016/06/11 18:31:02 spz Exp $
 
 SHA1 (thrift-0.7.0.tar.gz) = b8f6877bc75878984355da4efe171ad99ff05b6a
 RMD160 (thrift-0.7.0.tar.gz) = d9db8ff077347134101cd017e086511c4317b052
@@ -8,7 +8,7 @@ SHA1 (patch-ac) = 84032447dc90b7071d8f54fc56dd30584fbc8116
 SHA1 (patch-compiler_cpp_src_generate_t__rb__generator.cc) = 1b2e71c38fdf3211be65bc199f348fcbadfe805c
 SHA1 (patch-compiler_cpp_src_thrifty.yy) = 69ccc48794edf8358ab39950794e1c542641fb3f
 SHA1 (patch-lib__rb__ext__extconf.rb) = 627725567f6d78070e28d430ebe7ac96910df8ec
-SHA1 (patch-lib__rb__setup.rb) = 4e08bb4c0828306ee2391f5d5760e74a5df30a73
+SHA1 (patch-lib__rb__setup.rb) = 9b189208c01a654ff633756d8800fb327ba7a9b7
 SHA1 (patch-lib_cpp_src_async_TAsyncBufferProcessor.h) = 2387b52d1dcd01637bd0853743ede85dd4a3357b
 SHA1 (patch-lib_cpp_src_async_TAsyncChannel.cpp) = dd3d65fd83f6ab4ebbc81f7e6ea98b05ef13592e
 SHA1 (patch-lib_cpp_src_async_TAsyncChannel.h) = 6a9e25f84d9d1d8b1192c5f3b059ea7a39c8396a
@@ -24,3 +24,4 @@ SHA1 (patch-lib_cpp_src_transport_TServerSocket.cpp) = dc54a0991f5918de04da73f18
 SHA1 (patch-lib_cpp_test_Benchmark.cpp) = 65a3a873b33f7290551c535b4ef8c9a109aae3e1
 SHA1 (patch-lib_erl_Makefile.in) = 74bfbc9f191f685cb175801a495ae4af0eaa6e69
 SHA1 (patch-lib_php_src_ext_thrift__protocol_php__thrift__protocol.cpp) = 6c1f1add0bfc652662efa59fc47d15e91a4d6a2b
+SHA1 (patch-lib_rb_Makefile.in) = 4478e76bafded2725ad1146bfc6d3e5855f37d41
