@@ -1,4 +1,4 @@
-<!-- $NetBSD: porting.xml,v 1.5 2014/05/09 06:52:15 obache Exp $ -->
+<!-- $NetBSD: porting.xml,v 1.6 2016/06/11 14:58:26 rillig Exp $ -->
 
 <chapter id="porting"> <?dbhtml filename="porting.html"?>
 <title>Porting pkgsrc</title>
@@ -48,13 +48,6 @@
 	<para>Now, you should be able to build some basic packages, like
 	<filename role="pkg">lang/perl5</filename>, <filename
 	role="pkg">shells/bash</filename>.</para>
-
-</sect1>
-
-<sect1 id="porting.compiler">
-<title>Adding support for a new compiler</title>
-
-	<para>TODO</para>
 
 </sect1>
 

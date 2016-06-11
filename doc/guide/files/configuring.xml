@@ -1,4 +1,4 @@
-<!-- $NetBSD: configuring.xml,v 1.48 2016/04/10 16:02:02 joerg Exp $ -->
+<!-- $NetBSD: configuring.xml,v 1.49 2016/06/11 14:58:26 rillig Exp $ -->
 
 <chapter id="configuring">
   <title>Configuring pkgsrc</title>
@@ -90,7 +90,7 @@ works.</para>
 
   <sect1 id="variables-affecting-build">
     <title>Variables affecting the build process</title>
-    <para>XXX
+    <para>
       <itemizedlist>
 	<listitem><para><varname>PACKAGES</varname>: The top level
 	    directory for the binary packages. The default is
