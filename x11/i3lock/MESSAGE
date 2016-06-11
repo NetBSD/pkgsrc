@@ -1,0 +1,12 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2016/06/11 23:00:13 kamil Exp $
+
+You need to copy the i3lock PAM configuration file to your PAM
+configuration directory (typically /etc/pam.d).  You can find a sample
+file in:
+
+	${EGDIR}/pam.d/i3lock
+
+It may need to be manually adjusted.
+
+===========================================================================
