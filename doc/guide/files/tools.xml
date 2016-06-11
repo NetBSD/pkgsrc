@@ -1,4 +1,4 @@
-<!-- $NetBSD: tools.xml,v 1.6 2011/10/30 22:08:17 wiz Exp $ -->
+<!-- $NetBSD: tools.xml,v 1.7 2016/06/11 20:19:36 rillig Exp $ -->
 
 <chapter id="tools">
 <title>Tools needed for building or running</title>
@@ -90,36 +90,4 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 
 </sect1>
 
-<sect1 id="tools.questions">
-<title>Questions regarding the tools</title>
-
-<qandaset>
-<qandaentry id="tools.new">
-
-	<question><para>How do I add a new tool?</para></question>
-
-	<answer><para>TODO</para></answer>
-
-</qandaentry>
-<qandaentry id="tools.listall">
-
-	<question><para>How do I get a list of all available
-	tools?</para></question>
-
-	<answer><para>TODO</para></answer>
-
-</qandaentry>
-<qandaentry id="tools.used">
-
-	<question><para>How can I get a list of all the tools that a
-	package is using while being built? I want to know whether it
-	uses sed or not.</para></question>
-
-	<answer><para>Currently, you can't. (TODO: But I want to be able
-	to do it.)</para></answer>
-
-</qandaentry>
-
-</qandaset>
-</sect1>
 </chapter>
