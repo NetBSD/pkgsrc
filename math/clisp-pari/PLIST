@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2013/04/06 04:03:36 rodent Exp $
+@comment $NetBSD: PLIST,v 1.4 2016/06/11 23:29:35 dholland Exp $
 lib/clisp/dynmod/lib-pari.so
 lib/clisp/dynmod/pari.lisp
-lib/clisp/pari/README
 lib/clisp/pari/Makefile
+lib/clisp/pari/README
 lib/clisp/pari/cpari.o
 lib/clisp/pari/link.sh
 lib/clisp/pari/pari.fas
