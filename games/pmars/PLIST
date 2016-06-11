@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2016/06/11 18:43:24 kamil Exp $
+bin/pmars
+man/man6/pmars.6
+share/pmars/CONTRIB
+share/pmars/README
+share/pmars/config/94x.opt
+share/pmars/config/icws.opt
+share/pmars/config/mw.mac
+share/pmars/config/pmars.mac
+share/pmars/config/x.opt
+share/pmars/warriors/aeka.red
+share/pmars/warriors/flashpaper.red
+share/pmars/warriors/pspace.red
+share/pmars/warriors/rave.red
+share/pmars/warriors/validate.red
