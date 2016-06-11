@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/06/07 11:12:02 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2016/06/11 18:55:01 schmonz Exp $
 
 DISTNAME=		cpputest-3.8
 CATEGORIES=		devel
@@ -22,10 +22,9 @@ BUILD_DIRS=		${CONFIGURE_DIRS}
 USE_TOOLS+=		automake autoreconf pkg-config
 USE_LANGUAGES=		c c++
 
+TEST_TARGET=		check tdd
+
 pre-configure:
 	cd ${WRKSRC}/${CONFIGURE_DIRS} && autoreconf .. -fiv
-
-# $ ../configure
-# $ make
 
 .include "../../mk/bsd.pkg.mk"
