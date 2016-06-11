@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2348 2016/06/11 14:27:14 tsutsui Exp $
+$NetBSD: CHANGES-2016,v 1.2349 2016/06/11 14:30:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3046,3 +3046,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added devel/p5-Function-Parameters version 1.0705 [kamil 2016-06-11]
 	Updated security/tor-browser to 5.5.4nb2 [wiz 2016-06-11]
 	Updated net/mikutter to 3.4.0 [tsutsui 2016-06-11]
+	Updated misc/p5-Business-ISBN to 2.011 [wiz 2016-06-11]
