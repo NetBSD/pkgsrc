@@ -1,4 +1,6 @@
-$NetBSD: patch-af,v 1.7 2015/03/07 22:40:48 rodent Exp $
+$NetBSD: patch-af,v 1.8 2016/06/11 12:54:24 rillig Exp $
+
+Fixes PRIdMAX and PRIuMAX on AIX < 5.1.
 
 --- builtins/printf.def.orig	2014-01-03 15:35:33.000000000 +0000
 +++ builtins/printf.def
