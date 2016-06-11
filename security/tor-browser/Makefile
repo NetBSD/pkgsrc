@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2016/04/11 19:02:03 ryoon Exp $
+# $NetBSD: Makefile,v 1.8 2016/06/11 12:59:48 wiz Exp $
 
 TORBVER=	5.5.4
 
 DISTNAME=	tor-browser-38.7.1esr-5.5-1
 PKGNAME=	tor-browser-${TORBVER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES+=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.xz
@@ -41,6 +41,9 @@ LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/tor-browser ${COMPILER_RPATH_FLAG
 LDFLAGS.SunOS+=		-lm
 
 ALL_ENV+=		MOZILLA_PKG_NAME=tor-browser
+
+NOT_PAX_MPROTECT_SAFE+=	lib/tor-browser/firefox
+NOT_PAX_MPROTECT_SAFE+=	lib/tor-browser/firefox-bin
 
 # Avoid ld "invalid section index" errors.
 BUILDLINK_TRANSFORM.SunOS+=	rm:-fdata-sections
