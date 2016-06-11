@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2357 2016/06/11 18:45:23 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.2358 2016/06/11 18:55:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3055,3 +3055,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/gmake to 4.2.1 [wiz 2016-06-11]
 	Updated net/wget to 1.18 [wiz 2016-06-11]
 	Added games/pmars version 0.9.2 [kamil 2016-06-11]
+	Updated fonts/sourcecodepro-fonts to 1.030 [wiz 2016-06-11]
