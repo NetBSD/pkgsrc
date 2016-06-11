@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2014/07/31 06:52:22 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2016/06/11 14:56:17 wiz Exp $
 bin/scummvm
 man/man6/scummvm.6
 share/doc/scummvm/AUTHORS
@@ -9,7 +9,9 @@ share/doc/scummvm/COPYING.LGPL
 share/doc/scummvm/COPYRIGHT
 share/doc/scummvm/NEWS
 share/doc/scummvm/README
+share/icons/hicolor/scalable/apps/scummvm.svg
 share/pixmaps/scummvm.xpm
+share/scummvm/access.dat
 share/scummvm/drascula.dat
 share/scummvm/hugo.dat
 share/scummvm/kyra.dat
