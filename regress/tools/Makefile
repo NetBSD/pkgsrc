@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/04/09 00:47:13 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2016/06/11 11:36:14 rillig Exp $
 #
 
 DISTNAME=	# not applicable
@@ -9,16 +9,19 @@ DISTFILES=	# none
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Test whether the TOOLS do what I expect
+LICENSE=	2-clause-bsd
 
 WRKSRC=		${WRKDIR}
+NO_CHECKSUM=	yes
+PLIST_SRC=	# none
 REGRESS_TESTS=	awk sed sh sort tar tr
 USE_TOOLS+=	awk sed sh sort tar tr
 
 do-build:
 .for t in ${REGRESS_TESTS}
-	${_PKG_SILENT}${_PKG_DEBUG}set -e; cd ${WRKSRC:Q};		\
+	${RUN} cd ${WRKSRC};						\
 	${ECHO_MSG} "Running testsuite "${t:Q};				\
-	${SH} ${FILESDIR:Q}/${t:Q}-test.sh
+	${SH} ${FILESDIR}/${t:Q}-test.sh
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
