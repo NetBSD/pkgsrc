@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2014/09/28 03:18:07 obache Exp $
+# $NetBSD: Makefile,v 1.9 2016/06/11 23:39:28 dholland Exp $
 #
 
 DISTNAME=	sigscheme-0.8.5
@@ -22,7 +22,7 @@ CONFIGURE_ARGS+=	--with-libgcroots=installed
 
 TEST_TARGET=	check
 
-CFLAGS+=		--std=c99
+CFLAGS+=		-std=c99
 
 .include "../../devel/libgcroots/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
