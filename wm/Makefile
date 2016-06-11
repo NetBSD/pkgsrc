@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.131 2016/05/21 21:54:41 youri Exp $
+# $NetBSD: Makefile,v 1.132 2016/06/11 23:08:05 kamil Exp $
 #
 
 COMMENT=	X11 window managers, configuration tools, and themes
@@ -96,6 +96,7 @@ SUBDIR+=	wmctrl
 SUBDIR+=	wmextra
 SUBDIR+=	wmi
 SUBDIR+=	wmii
+SUBDIR+=	wmutils-core
 SUBDIR+=	wmx
 SUBDIR+=	wmx-gnome
 SUBDIR+=	xfce4-wm
