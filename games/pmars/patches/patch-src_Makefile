@@ -1,0 +1,27 @@
+$NetBSD: patch-src_Makefile,v 1.1 2016/06/11 18:41:56 kamil Exp $
+
+Improve readability of $(CC)
+
+--- src/Makefile.orig	2000-12-24 12:53:39.000000000 +0000
++++ src/Makefile
+@@ -37,8 +37,7 @@ flags:
+ 
+ $(MAINFILE): $(OBJ1) $(OBJ2) $(OBJ3)
+ 	@echo Linking $(MAINFILE)
+-	@$(CC) -o $(MAINFILE) $(OBJ1) $(OBJ2) $(OBJ3) $(LIB)
+-	@strip $(MAINFILE)
++	$(CC) -o $(MAINFILE) $(OBJ1) $(OBJ2) $(OBJ3) $(LIB)
+ 	@echo done
+ 
+ token.o asm.o disasm.o: asm.h
+@@ -55,9 +54,8 @@ $(OBJ1) $(OBJ2) $(OBJ3): Makefile config
+ 
+ .c.o:
+ 	@echo Compiling $*.o 
+-	@$(CC) $(CFLAGS) -c $*.c
++	$(CC) $(CFLAGS) -c $*.c
+ 
+ 
+ clean:
+ 	rm -f $(OBJ1) $(OBJ2) $(OBJ3) core
+-
