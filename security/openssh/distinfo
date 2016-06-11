@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.100 2016/03/15 20:54:07 bsiegert Exp $
+$NetBSD: distinfo,v 1.100.2.1 2016/06/11 09:53:06 spz Exp $
 
 SHA1 (openssh-7.2p2.tar.gz) = 70e35d7d6386fe08abbd823b3a12a3ca44ac6d38
 RMD160 (openssh-7.2p2.tar.gz) = d18d73719ceeefa5116b5b741124f3604d7ddb99
@@ -23,7 +23,7 @@ SHA1 (patch-openbsd-compat_port-tun.c) = 690dfb1f945d186dd3de5bea70ed8fab86e590e
 SHA1 (patch-platform.c) = f8f211dbc5e596c0f82eb86324d18a84c6151ec5
 SHA1 (patch-sandbox-darwin.c) = c9a1fe2e4dbf98e929d983b4206a244e0e354b75
 SHA1 (patch-scp.c) = 9c2317b0f796641903a826db355ba06595a26ea1
-SHA1 (patch-session.c) = 2aa1d95a35b52519c4921494855f861dc1380f3b
+SHA1 (patch-session.c) = 2a7276382278f70ac1d8f51f273e8ffa2c0c59d2
 SHA1 (patch-sftp-common.c) = 6819aa040c8f1caa30a704cf6f0588e498df8778
 SHA1 (patch-ssh.c) = 6877d8205d999906c14240d4d112b084609927ca
 SHA1 (patch-sshd.8) = 5bf48cd27cef8e8810b9dc7115f5180102a345d1
