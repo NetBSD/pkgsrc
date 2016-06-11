@@ -1,9 +1,9 @@
-$NetBSD: patch-client-src_getfsent.c,v 1.1 2016/02/29 05:50:40 mlelstv Exp $
+$NetBSD: patch-client-src_getfsent.c,v 1.2 2016/06/11 21:07:28 dholland Exp $
 
 Support looking up devices by name.
 
---- client-src/getfsent.c.orig	2012-02-21 12:36:41.000000000 +0100
-+++ client-src/getfsent.c	2016-02-28 09:39:42.565217334 +0100
+--- client-src/getfsent.c.orig	2012-02-21 11:36:41.000000000 +0000
++++ client-src/getfsent.c
 @@ -41,6 +41,12 @@
  
  static char *dev2rdev(char *);
@@ -17,7 +17,7 @@ Support looking up devices by name.
  /*
   * You are in a twisty maze of passages, all alike.
   * Geesh.
-@@ -74,10 +80,20 @@
+@@ -74,10 +80,20 @@ get_fstab_nextentry(
      struct fstab *sys_fsent = getfsent();
      static char *xfsname = NULL, *xmntdir = NULL;
      static char *xfstype = NULL, *xmntopts = NULL;
@@ -38,7 +38,7 @@ Support looking up devices by name.
      fsent->mntdir  = xmntdir  = newstralloc(xmntdir,  sys_fsent->fs_file);
      fsent->freq    = sys_fsent->fs_freq;
      fsent->passno  = sys_fsent->fs_passno;
-@@ -429,10 +445,15 @@
+@@ -429,10 +445,15 @@ static char *
  dev2rdev(
      char *	name)
  {
@@ -55,7 +55,7 @@ Support looking up devices by name.
  
    if(stat(name, &st) == 0 && !S_ISBLK(st.st_mode)) {
      /*
-@@ -441,6 +462,10 @@
+@@ -441,6 +462,10 @@ dev2rdev(
      return stralloc(name);
    }
  
@@ -66,7 +66,7 @@ Support looking up devices by name.
    s = name;
    ch = *s++;
  
-@@ -464,6 +489,7 @@
+@@ -464,6 +489,7 @@ dev2rdev(
      ch = *s++;
    }
    amfree(fname);
@@ -74,3 +74,12 @@ Support looking up devices by name.
    return stralloc(name);			/* no match */
  }
  
+@@ -477,6 +503,8 @@ samefile(
+ {
+   int i;
+   for(i = 0; i < 3; ++i) {
++    if (stats[i].st_dev == (dev_t)-1)
++      continue;
+     if (stats[i].st_dev == estat->st_dev &&
+ 	stats[i].st_ino == estat->st_ino)
+       return 1;
