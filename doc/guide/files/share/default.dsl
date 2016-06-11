@@ -2,12 +2,14 @@
 <!ENTITY netbsd.dsl PUBLIC "-//NetBSD//DOCUMENT DocBook DSSSL Stylesheet//EN" CDATA DSSSL>
 ]>
 
-<!-- $NetBSD: default.dsl,v 1.1.1.1 2004/10/21 14:27:43 grant Exp $ -->
+<!-- $NetBSD: default.dsl,v 1.2 2016/06/11 18:14:42 rillig Exp $ -->
 
 <style-sheet>
   <style-specification use="docbook">
     <style-specification-body>
-
+      <![ %output.print; [
+        (element code ($mono-seq$))
+      ]]>
     </style-specification-body>
   </style-specification>
 

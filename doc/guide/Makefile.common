@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2014/10/05 16:41:06 wiz Exp $
+# $NetBSD: Makefile.common,v 1.6 2016/06/11 18:14:42 rillig Exp $
 #
 # This is included by doc/guide and meta-pkgs/pkgsrc-guide-tools.
 #
@@ -13,8 +13,8 @@ _GUIDE_DEPTYPE?=	build
 _GUIDE_OUTPUTS?=	lint html html-split ascii pdf
 
 # html output
-_GUIDE_DEPENDS+=	docbook>=4.0:../../textproc/docbook
-_GUIDE_DEPENDS+=	docbook-xml>=4.0:../../textproc/docbook-xml
+_GUIDE_DEPENDS+=	docbook>=4.5:../../textproc/docbook
+_GUIDE_DEPENDS+=	docbook-xml>=4.5:../../textproc/docbook-xml
 _GUIDE_DEPENDS+=	docbook-xsl>=1.62.4:../../textproc/docbook-xsl
 _GUIDE_DEPENDS+=	dsssl-docbook-modular>=1.54:../../textproc/dsssl-docbook-modular
 _GUIDE_DEPENDS+=	opensp>=1.5:../../textproc/opensp
