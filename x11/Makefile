@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.794 2016/06/09 09:43:35 youri Exp $
+# $NetBSD: Makefile,v 1.795 2016/06/11 22:08:20 kamil Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -47,6 +47,7 @@ SUBDIR+=	dri2proto
 SUBDIR+=	dri3proto
 SUBDIR+=	driconf
 SUBDIR+=	dtx11session
+SUBDIR+=	dunst
 SUBDIR+=	dxpc
 SUBDIR+=	ede
 SUBDIR+=	editres
