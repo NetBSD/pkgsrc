@@ -1,6 +1,6 @@
 #! @SH@
 #
-# $NetBSD: pkg_regress.sh,v 1.5 2016/06/11 09:37:16 rillig Exp $
+# $NetBSD: pkg_regress.sh,v 1.6 2016/06/11 10:31:06 rillig Exp $
 #
 set -e
 
@@ -89,7 +89,7 @@ do_runtest() {
 
 	do_cleanup
 
-	if [ -n "$MAKEARGS_CLEAN" ]; then
+	if [ -n "${MAKEARGS_CLEAN-}" ]; then
 		$TEST_MAKE $MAKEARGS_CLEAN >>$TEST_OUTFILE
 	fi
 
