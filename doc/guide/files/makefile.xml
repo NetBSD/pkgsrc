@@ -1,4 +1,4 @@
-<!-- $NetBSD: makefile.xml,v 1.24 2014/12/03 07:05:05 ryoon Exp $ -->
+<!-- $NetBSD: makefile.xml,v 1.25 2016/06/11 14:58:26 rillig Exp $ -->
 
 <chapter id="makefile"> <?dbhtml filename="makefile.html"?>
   <title>Programming in <filename>Makefile</filename>s</title>
@@ -78,28 +78,15 @@ correct:
     not preceded by a backslash starts a comment that continues upto the
     end of the logical line.</para>
 
-    <para><emphasis>Note:</emphasis> Because of this parsing algorithm
-    the only way to create a variable consisting of a single backslash
-    is using the ``!='' operator, for example: <!-- FIXME
-    --><varname>BACKSLASH!=echo "\\"</varname>.</para>
-
-    <para>So far for defining variables. The other thing you can do with
-    variables is evaluating them. A variable is evaluated when it is
-    part of the right side of the ``:='' or the ``!='' operator, or
-    directly before executing a shell command which the variable is part
-    of. In all other cases, &man.make.1; performs lazy evaluation, that
-    is, variables are not evaluated until there's no other way. The
-    ``modifiers'' mentioned in the man page also evaluate the
-    variable.</para>
+    <para>The evaluation of variables either happens immediately or lazy.
+    It happens immediately when the variable occurs
+    on the right-hand side of the ``:='' or the ``!='' operator, in a
+    <varname>.if</varname> condition or a <varname>.for</varname> loop.
+    In the other cases, it is evaluated lazily.</para>
 
     <para>Some of the modifiers split the string into words and then
     operate on the words, others operate on the string as a whole. When
-    a string is split into words, it is split as you would expect
-    it from &man.sh.1;.</para>
-
-    <para>No rule without exception&mdash;the <command>.for</command>
-    loop does not follow the shell quoting rules but splits at sequences
-    of whitespace.</para>
+    a string is split into words, it is split like in &man.sh.1;.</para>
 
     <para>There are several types of variables that should be handled
     differently. Strings and two types of lists.</para>
@@ -183,24 +170,6 @@ EXT_LIST+=              ${ANOTHER_EXT_LIST}     # 4
 
     </sect2>
 
-    <sect2 id="converting-internal-to-external">
-      <title>Converting an internal list into an external list</title>
-
-<programlisting>
-EXT_LIST=       # empty
-.for i in ${INT_LIST}
-EXT_LIST+=      ${i:Q}""
-.endfor
-</programlisting>
-
-      <para>This code converts the internal list
-      <varname>INT_LIST</varname> into the external list
-      <varname>EXT_LIST</varname>. As the elements of an internal list
-      are unquoted they must be quoted here. The reason for appending
-      <varname>""</varname> is explained below.</para>
-
-    </sect2>
-
     <sect2 id="passing-variable-to-shell">
       <title>Passing variables to a shell command</title>
 
@@ -210,50 +179,26 @@ EXT_LIST+=      ${i:Q}""
 
 <programlisting>
 STRING=         foo bar &lt;    &gt; * `date` $$HOME ' "
-EXT_LIST=       string=${STRING:Q} x=second\ item
+EXAMPLE_ENV=    string=${STRING:Q} x=multiple\ quoted\ words
 
 all:
         echo ${STRING}                  # 1
-        echo "${STRING}"                # 2
-        echo "${STRING:Q}"              # 3
-        echo ${STRING:Q}                # 4
-        echo x${STRING:Q} | sed 1s,.,,  # 5
-        printf "%s\\n" ${STRING:Q}""    # 6
-        env ${EXT_LIST} /bin/sh -c 'echo "$$string"; echo "$$x"'
+        echo ${STRING:Q}                # 2
+        printf '%s\n' ${STRING:Q}''     # 3
+        env ${EXAMPLE_ENV} sh -c 'echo "$$string"; echo "$$x"' # 4
 </programlisting>
 
       <para>Example 1 leads to a syntax error in the shell, as the
       characters are just copied.</para>
 
-      <para>Example 2 leads to a syntax error too, and if you leave out
-      the last " character from <varname>${STRING}</varname>,
-      &man.date.1; will be executed. The <varname>$HOME</varname> shell
-      variable would be evaluated, too.</para>
+      <para>Example 2 can handle all strings, except those starting
+      with a dash or those containing backslashes.</para>
 
-      <para>Example 3 outputs each space character preceded by a
-      backslash (or not), depending on the implementation of the
-      &man.echo.1; command.</para>
+      <para>Example 3 can handle arbitrary strings.</para>
 
-      <para>Example 4 handles correctly every string that does not start
-      with a dash. In that case, the result depends on the
-      implementation of the &man.echo.1; command. As long as you can
-      guarantee that your input does not start with a dash, this form is
-      appropriate.</para>
-
-      <para>Example 5 handles even the case of a leading dash
-      correctly.</para>
-
-      <para>Example 6 also works with every string and is the
-      light-weight solution, since it does not involve a pipe, which has
-      its own problems.</para>
-
-      <para>The <varname>EXT_LIST</varname> does not need to be quoted
-      because the quoting has already been done when adding elements to
-      the list.</para>
-
-      <para>As internal lists shall not be passed to the shell, there is
-      no example for it.</para>
-
+      <para>In example 4, the <varname>EXT_LIST</varname> does not
+      need to be quoted because the quoting has already been done
+      when adding elements to the list.</para>
     </sect2>
 
     <sect2 id="quoting-guideline">
@@ -344,24 +289,5 @@ for_test:
 
       </itemizedlist>
     </sect2>
-
-    <sect2 id="bsd-make-bug-workaround">
-      <title>Workaround for a bug in BSD Make</title>
-
-      <para>The pkgsrc bmake program does not handle the following
-      assignment correctly. In case <varname>_othervar_</varname>
-      contains a ``-'' character, one of the closing braces is included
-      in <varname>${VAR}</varname> after this code executes.</para>
-
-<programlisting>
-VAR:=   ${VAR:N${_othervar_:C/-//}}
-</programlisting>
-
-      <para>For a more complex code snippet and a workaround, see the
-      package <filename role="pkg">regress/make-quoting</filename>, testcase
-      <varname>bug1</varname>.</para>
-
-    </sect2>
-
   </sect1>
 </chapter>
