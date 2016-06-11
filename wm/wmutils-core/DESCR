@@ -1,0 +1,22 @@
+wmutils is a a set of Window Manipulation Utilities.
+Its purpose is to separate all the vital functions
+of a window manager into separate pieces.
+
+Using these tools, you can build your own window manager
+as a shell script. Think of wmutils as coreutils for X11.
+
+Here is the list of the core utilities composing wmutils:
+
+chwb: change window's border
+chwso: change window's stacking order
+ignw: ignore/unignore window
+killw: kill windows
+lsw: list windows
+mapw: map/unmap windows
+pfw: print focused window
+wattr: show window's attributes
+wmp: move the mouse pointer
+wmv: move a window
+wrs: resize a window
+wtf: focus a window
+wtp: teleport a window
