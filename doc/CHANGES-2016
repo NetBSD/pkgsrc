@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2342 2016/06/10 23:17:03 alnsn Exp $
+$NetBSD: CHANGES-2016,v 1.2343 2016/06/11 06:29:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3040,3 +3040,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated pkgtools/pkglint to 5.4.1 [rillig 2016-06-10]
 	Updated pkgtools/url2pkg to 2.26 [rillig 2016-06-10]
 	Updated security/openssh to openssh-7.2.2nb2 [alnsn 2016-06-10]
+	Updated mail/thunderbird to 45.1.0nb1 [wiz 2016-06-11]
