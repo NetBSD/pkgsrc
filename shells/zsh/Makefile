@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2015/12/08 11:24:59 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.75 2016/06/11 23:34:07 dholland Exp $
 
 .include "../../shells/zsh/Makefile.common"
 
@@ -7,7 +7,7 @@ ZSH_MAINTAINER=	uebayasi@NetBSD.org
 
 CONFIGURE_ARGS+=	--disable-gdbm
 
-SUBST_CLASSES+=	prefix-fixup
+SUBST_CLASSES+=			prefix-fixup
 SUBST_STAGE.prefix-fixup=	pre-configure
 SUBST_FILES.prefix-fixup= \
 	Misc/globtests \
@@ -25,7 +25,7 @@ SUBST_FILES.prefix-fixup= \
 	Functions/Misc/zed \
 	Functions/Example/cat \
 	Functions/Example/zless
-SUBST_SED.prefix-fixup= 	-e 's|^\#\!/bin/zsh|\#\!${PREFIX}/bin/zsh|g'
+SUBST_SED.prefix-fixup=		-e 's|^\#\!/bin/zsh|\#\!${PREFIX}/bin/zsh|g'
 SUBST_SED.prefix-fixup+=	-e 's|^\#\! /bin/zsh|\#\! ${PREFIX}/bin/zsh|g'
 SUBST_SED.prefix-fixup+=	-e 's|^\#\!/usr/local/bin/zsh|\#\!${PREFIX}/bin/zsh|g'
 SUBST_SED.prefix-fixup+=	-e 's|^\#\! /usr/local/bin/zsh|\#\! ${PREFIX}/bin/zsh|g'
