@@ -1,0 +1,7 @@
+Core War is a game in which two or more virus-like programs fight against
+each other in a simulated memory space or core.
+
+Core War programs are written in an assembly language called Redcode which is
+interpreted by a Core War simulator or MARS (Memory Array Redcode Simulator).
+
+The object of the game is to prevent the other program(s) from executing.
