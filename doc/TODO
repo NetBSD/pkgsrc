@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16004 2016/06/11 14:40:27 wiz Exp $
+$NetBSD: TODO,v 1.16005 2016/06/11 14:56:28 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1602,7 +1602,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o scripts-1.0.1
 	o scrollz-2.3
 	o scsh-1.3.0
-	o scummvm-1.8.1
 	o seahorse-3.14
 	o seahorse-nautilus-3.10.1
 	o seccure-0.5a
