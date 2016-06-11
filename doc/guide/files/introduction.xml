@@ -1,4 +1,4 @@
-<!-- $NetBSD: introduction.xml,v 1.37 2016/01/17 22:06:16 sevan Exp $ -->
+<!-- $NetBSD: introduction.xml,v 1.38 2016/06/11 14:58:26 rillig Exp $ -->
 
 <chapter id="introduction">
   <title>What is pkgsrc?</title>
@@ -39,7 +39,7 @@ packages for himself, which is a time-costly task.</para>
       </listitem>
     </itemizedlist>
 
-    <para>...just to name a few.</para>
+    <para>&#x2026; just to name a few.</para>
 
     <para>pkgsrc has built-in support for handling varying dependencies,
       such as pthreads and X11, and extended features such as IPv6 support on

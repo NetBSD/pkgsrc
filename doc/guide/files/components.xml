@@ -1,4 +1,4 @@
-<!-- $NetBSD: components.xml,v 1.51 2015/07/04 16:12:54 joerg Exp $ -->
+<!-- $NetBSD: components.xml,v 1.52 2016/06/11 14:58:26 rillig Exp $ -->
 
 <chapter id="components"> <?dbhtml filename="components.html"?>
 <title>Package components - files, directories and contents</title>
@@ -190,9 +190,9 @@ converters    games         mbone         print         x11
   digest, or checksum, of each distfile needed for the package. This
   ensures that the distfiles retrieved from the Internet have not been
   corrupted during transfer or altered by a malign force to introduce
-  a security hole. Due to recent rumor about weaknesses of digest
-  algorithms, all distfiles are protected using both SHA1 and RMD160
-  message digests, as well as the file size.</para>
+  a security hole. To provide maximum security, all distfiles are
+  protected using three different message digest algorithms (SHA1,
+  RMD160, SHA512), as well as the file size.</para>
 
   <para>The <filename>distinfo</filename> file also contains the
   checksums for all the patches found in the
@@ -200,8 +200,7 @@ converters    games         mbone         print         x11
   linkend="components.patches"/>).</para>
 
   <para>To regenerate the <filename>distinfo</filename> file, use the
-  <command>make makedistinfo</command> or <command>make mdi</command>
-  command.</para>
+  <command>make distinfo</command> command.</para>
 
   <para>Some packages have different sets of distfiles depending on
   the platform, for example <filename
@@ -213,18 +212,16 @@ converters    games         mbone         print         x11
 </sect1>
 
 <sect1 id="components.patches">
-  <title>patches/*</title>
+  <title><filename>patches/*</filename></title>
 
-  <para>Many packages still don't work out-of-the box on the various
-  platforms that are supported by pkgsrc. Therefore, a number of custom
-  patch files are needed to make the package work. These patch files are
+  <para>Some packages don't work out-of-the box on the various
+  platforms that are supported by pkgsrc. These packages need
+  to be patched to make them work. The patch files can be
   found in the <filename>patches/</filename> directory.</para>
 
   <para>In the <emphasis>patch</emphasis> phase, these patches are
   applied to the files in <varname>WRKSRC</varname> directory after
-  extracting them, in <ulink
-  url="http://www.opengroup.org/onlinepubs/009695399/utilities/xcu_chap02.html#tag_02_13_03">alphabetic
-  order</ulink>.</para>
+  extracting them, in alphabetic order.</para>
 
 <sect2 id="components.patch.structure">
 <title>Structure of a single patch file</title>
@@ -254,7 +251,7 @@ converters    games         mbone         print         x11
 
   </itemizedlist>
 
-  <para>In all, the patch should be commented so that any
+  <para>The patch should be commented so that any
   developer who knows the code of the application can make some use of
   the patch. Special care should be taken for the upstream developers,
   since we generally want that they accept our patches, so we have less
