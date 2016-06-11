@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.143 2016/04/27 16:41:22 ryoon Exp $
+# $NetBSD: Makefile,v 1.144 2016/06/11 12:34:27 wiz Exp $
 
 DISTNAME=	seamonkey-${SM_VER}.source
 PKGNAME=	seamonkey-${SM_VER:S/b/beta/}
-PKGREVISION=	1
+PKGREVISION=	2
 SM_VER=		2.40
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=seamonkey/releases/${SM_VER}/source/}
@@ -17,6 +17,9 @@ MOZILLA_DIR=	mozilla/
 PLIST_SRC+=	${PLIST_SRC_DFLT}
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	unzip pax
+
+NOT_PAX_MPROTECT_SAFE+=	lib/seamonkey/seamonkey
+NOT_PAX_MPROTECT_SAFE+=	lib/seamonkey/seamonkey-bin
 
 .include "../../www/firefox45/mozilla-common.mk"
 .include "options.mk"
