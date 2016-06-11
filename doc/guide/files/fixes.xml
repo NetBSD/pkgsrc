@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.134 2016/04/06 14:59:18 reed Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.135 2016/06/11 13:06:14 rillig Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -703,7 +703,7 @@ SUBST_SED.fix-paths+=           -e 's,"/var/log,"${VARBASE}/log,g'
   </sect2>
 </sect1>
 <sect1 id="fixes.fetch">
-  <title>Fixing problems in the <emphasis>fetch</emphasis> phase</title>
+  <title>The <emphasis>fetch</emphasis> phase</title>
 
   <sect2 id="no-plain-download">
     <title>Packages whose distfiles aren't available for plain downloading</title>
@@ -812,7 +812,7 @@ EXTRACT_SUFX=   .zip
 
 
 <sect1 id="fixes.configure">
-  <title>Fixing problems in the <emphasis>configure</emphasis> phase</title>
+  <title>The <emphasis>configure</emphasis> phase</title>
 
   <sect2 id="fixes.libtool">
     <title>Shared libraries - libtool</title>
@@ -1177,7 +1177,7 @@ pre-configure:
 </sect1>
 
 <sect1 id="fixes.build">
-  <title>Fixing problems in the <emphasis>build</emphasis> phase</title>
+  <title>The <emphasis>build</emphasis> phase</title>
 
 	<para>The most common failures when building a package are that
 	some platforms do not provide certain header files, functions or
@@ -1363,7 +1363,7 @@ of functions.</para>
 </sect1>
 
 <sect1 id="fixes.install">
-  <title>Fixing problems in the <emphasis>install</emphasis> phase</title>
+  <title>The <emphasis>install</emphasis> phase</title>
 
   <sect2 id="install-scripts">
     <title>Creating needed directories</title>
