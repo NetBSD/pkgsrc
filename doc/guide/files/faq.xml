@@ -1,4 +1,4 @@
-<!-- $NetBSD: faq.xml,v 1.51 2014/12/30 15:13:19 wiz Exp $ -->
+<!-- $NetBSD: faq.xml,v 1.52 2016/06/11 13:19:54 rillig Exp $ -->
 
 <chapter id="faq"> <?dbhtml filename="faq.html"?>
 <title>Frequently Asked Questions</title>
@@ -595,6 +595,9 @@ check.</para>
 	<step><para>Make sure that you don't have old copies of the packages
 	extracted. Run <command>make clean clean-depends</command> to
 	verify this.</para></step>
+
+	<step><para>If you are a package developer who wants to invest
+	some work, have a look at <xref linkend="fixes"/>.</para></step>
 
 	<step><para>If the problem still exists, write a mail to the
 	<literal>pkgsrc-users</literal> mailing list.</para></step>
