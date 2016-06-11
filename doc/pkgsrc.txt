@@ -296,29 +296,28 @@ II. The pkgsrc developer's guide
 
         19.1. General operation
 
-            19.1.1. Portability of packages
-            19.1.2. How to pull in user-settable variables from mk.conf
-            19.1.3. User interaction
-            19.1.4. Handling licenses
-            19.1.5. Restricted packages
-            19.1.6. Handling dependencies
-            19.1.7. Handling conflicts with other packages
-            19.1.8. Packages that cannot or should not be built
-            19.1.9. Packages which should not be deleted, once installed
-            19.1.10. Handling packages with security problems
-            19.1.11. How to handle incrementing versions when fixing an
+            19.1.1. How to pull in user-settable variables from mk.conf
+            19.1.2. User interaction
+            19.1.3. Handling licenses
+            19.1.4. Restricted packages
+            19.1.5. Handling dependencies
+            19.1.6. Handling conflicts with other packages
+            19.1.7. Packages that cannot or should not be built
+            19.1.8. Packages which should not be deleted, once installed
+            19.1.9. Handling packages with security problems
+            19.1.10. How to handle incrementing versions when fixing an
                 existing package
-            19.1.12. Substituting variable text in the package files (the SUBST
+            19.1.11. Substituting variable text in the package files (the SUBST
                 framework)
 
-        19.2. Fixing problems in the fetch phase
+        19.2. The fetch phase
 
             19.2.1. Packages whose distfiles aren't available for plain
                 downloading
             19.2.2. How to handle modified distfiles with the 'old' name
             19.2.3. Packages hosted on github.com
 
-        19.3. Fixing problems in the configure phase
+        19.3. The configure phase
 
             19.3.1. Shared libraries - libtool
             19.3.2. Using libtool on GNU packages that already support libtool
@@ -332,14 +331,14 @@ II. The pkgsrc developer's guide
             19.4.4. Packages containing shell scripts
             19.4.5. Other programming languages
 
-        19.5. Fixing problems in the build phase
+        19.5. The build phase
 
             19.5.1. Compiling C and C++ code conditionally
             19.5.2. How to handle compiler bugs
             19.5.3. Undefined reference to "..."
             19.5.4. Running out of memory
 
-        19.6. Fixing problems in the install phase
+        19.6. The install phase
 
             19.6.1. Creating needed directories
             19.6.2. Where to install documentation
@@ -2834,7 +2833,10 @@ they have chosen.
  3. Make sure that you don't have old copies of the packages extracted. Run 
     make clean clean-depends to verify this.
 
- 4. If the problem still exists, write a mail to the pkgsrc-users mailing list.
+ 4. If you are a package developer who wants to invest some work, have a look
+    at Chapter 19, Making your package work.
+
+ 5. If the problem still exists, write a mail to the pkgsrc-users mailing list.
 
 9.17. What does "Makefile appears to contain unresolved cvs/rcs/??? merge
 conflicts" mean?
@@ -3001,28 +3003,27 @@ Table of Contents
 
     19.1. General operation
 
-        19.1.1. Portability of packages
-        19.1.2. How to pull in user-settable variables from mk.conf
-        19.1.3. User interaction
-        19.1.4. Handling licenses
-        19.1.5. Restricted packages
-        19.1.6. Handling dependencies
-        19.1.7. Handling conflicts with other packages
-        19.1.8. Packages that cannot or should not be built
-        19.1.9. Packages which should not be deleted, once installed
-        19.1.10. Handling packages with security problems
-        19.1.11. How to handle incrementing versions when fixing an existing
+        19.1.1. How to pull in user-settable variables from mk.conf
+        19.1.2. User interaction
+        19.1.3. Handling licenses
+        19.1.4. Restricted packages
+        19.1.5. Handling dependencies
+        19.1.6. Handling conflicts with other packages
+        19.1.7. Packages that cannot or should not be built
+        19.1.8. Packages which should not be deleted, once installed
+        19.1.9. Handling packages with security problems
+        19.1.10. How to handle incrementing versions when fixing an existing
             package
-        19.1.12. Substituting variable text in the package files (the SUBST
+        19.1.11. Substituting variable text in the package files (the SUBST
             framework)
 
-    19.2. Fixing problems in the fetch phase
+    19.2. The fetch phase
 
         19.2.1. Packages whose distfiles aren't available for plain downloading
         19.2.2. How to handle modified distfiles with the 'old' name
         19.2.3. Packages hosted on github.com
 
-    19.3. Fixing problems in the configure phase
+    19.3. The configure phase
 
         19.3.1. Shared libraries - libtool
         19.3.2. Using libtool on GNU packages that already support libtool
@@ -3036,14 +3037,14 @@ Table of Contents
         19.4.4. Packages containing shell scripts
         19.4.5. Other programming languages
 
-    19.5. Fixing problems in the build phase
+    19.5. The build phase
 
         19.5.1. Compiling C and C++ code conditionally
         19.5.2. How to handle compiler bugs
         19.5.3. Undefined reference to "..."
         19.5.4. Running out of memory
 
-    19.6. Fixing problems in the install phase
+    19.6. The install phase
 
         19.6.1. Creating needed directories
         19.6.2. Where to install documentation
@@ -4573,7 +4574,7 @@ buildlink3.mk files, their BUILDLINK_ABI_DEPENDS.pkg adjusted, too. This is
 needed so pkgsrc will require the correct package dependency and not settle for
 an older one when building the source.
 
-See Section 19.1.6, "Handling dependencies" for more information about
+See Section 19.1.5, "Handling dependencies" for more information about
 dependencies on other packages, including the BUILDLINK_ABI_DEPENDS and
 ABI_DEPENDS definitions.
 
@@ -4782,7 +4783,9 @@ anywhere in the file system:
     and should attempt to be destroyed by the installation scripts. The
     difference between the two is that the latter prompts the administrator to
     remove any directories that may be left after deinstallation (because they
-    were not empty), while the former does not.
+    were not empty), while the former does not. Example:
+
+    MAKE_DIRS+=             ${VARBASE}/foo/private
 
   * MAKE_DIRS_PERMS and OWN_DIRS_PERMS contain a list of tuples describing
     which directories should be created and should attempt to be destroyed by
@@ -4790,7 +4793,8 @@ anywhere in the file system:
     by spaces: the directory name, its owner, its group and its numerical mode.
     For example:
 
-    MAKE_DIRS_PERMS+=         ${VARBASE}/foo/private ${ROOT_USER} ${ROOT_GROUP} 0700
+    MAKE_DIRS_PERMS+=       ${VARBASE}/foo/private \
+                            ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0700
 
     The difference between the two is exactly the same as their non-PERMS
     counterparts.
@@ -4820,7 +4824,8 @@ handle files outside the installation prefix:
     specifies their owner, their group and their numeric permissions, in this
     order. For example:
 
-    REQD_FILES_PERMS+= ${PREFIX}/share/somefile ${VARBASE}/somefile ${ROOT_USER} ${ROOT_GROUP} 0700
+    REQD_FILES_PERMS+=      ${PREFIX}/share/somefile ${VARBASE}/somefile \
+                            ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0700
 
     The difference between the two is exactly the same as their non-PERMS
     counterparts.
@@ -6196,28 +6201,27 @@ Table of Contents
 
 19.1. General operation
 
-    19.1.1. Portability of packages
-    19.1.2. How to pull in user-settable variables from mk.conf
-    19.1.3. User interaction
-    19.1.4. Handling licenses
-    19.1.5. Restricted packages
-    19.1.6. Handling dependencies
-    19.1.7. Handling conflicts with other packages
-    19.1.8. Packages that cannot or should not be built
-    19.1.9. Packages which should not be deleted, once installed
-    19.1.10. Handling packages with security problems
-    19.1.11. How to handle incrementing versions when fixing an existing
+    19.1.1. How to pull in user-settable variables from mk.conf
+    19.1.2. User interaction
+    19.1.3. Handling licenses
+    19.1.4. Restricted packages
+    19.1.5. Handling dependencies
+    19.1.6. Handling conflicts with other packages
+    19.1.7. Packages that cannot or should not be built
+    19.1.8. Packages which should not be deleted, once installed
+    19.1.9. Handling packages with security problems
+    19.1.10. How to handle incrementing versions when fixing an existing
         package
-    19.1.12. Substituting variable text in the package files (the SUBST
+    19.1.11. Substituting variable text in the package files (the SUBST
         framework)
 
-19.2. Fixing problems in the fetch phase
+19.2. The fetch phase
 
     19.2.1. Packages whose distfiles aren't available for plain downloading
     19.2.2. How to handle modified distfiles with the 'old' name
     19.2.3. Packages hosted on github.com
 
-19.3. Fixing problems in the configure phase
+19.3. The configure phase
 
     19.3.1. Shared libraries - libtool
     19.3.2. Using libtool on GNU packages that already support libtool
@@ -6231,14 +6235,14 @@ Table of Contents
     19.4.4. Packages containing shell scripts
     19.4.5. Other programming languages
 
-19.5. Fixing problems in the build phase
+19.5. The build phase
 
     19.5.1. Compiling C and C++ code conditionally
     19.5.2. How to handle compiler bugs
     19.5.3. Undefined reference to "..."
     19.5.4. Running out of memory
 
-19.6. Fixing problems in the install phase
+19.6. The install phase
 
     19.6.1. Creating needed directories
     19.6.2. Where to install documentation
@@ -6265,14 +6269,12 @@ Table of Contents
 
 19.1. General operation
 
-19.1.1. Portability of packages
-
 One appealing feature of pkgsrc is that it runs on many different platforms. As
 a result, it is important to ensure, where possible, that packages in pkgsrc
 are portable. This chapter mentions some particular details you should pay
 attention to while working on pkgsrc.
 
-19.1.2. How to pull in user-settable variables from mk.conf
+19.1.1. How to pull in user-settable variables from mk.conf
 
 The pkgsrc user can configure pkgsrc by overriding several variables in the
 file pointed to by MAKECONF, which is mk.conf by default. When you want to use
@@ -6282,17 +6284,18 @@ loads the user preferences.
 
 But note that some variables may not be completely defined after ../../mk/
 bsd.prefs.mk has been included, as they may contain references to variables
-that are not yet defined. In shell commands this is no problem, since variables
-are actually macros, which are only expanded when they are used. But in the
-preprocessor directives mentioned above and in dependency lines (of the form
-target: dependencies) the variables are expanded at load time.
+that are not yet defined. In shell commands (the lines in Makefile that are
+indented with a tab) this is no problem, since variables are only expanded when
+they are used. But in the preprocessor directives mentioned above and in
+dependency lines (of the form target: dependencies) the variables are expanded
+at load time.
 
 Note
 
-Currently there is no exhaustive list of all variables that tells you whether
-they can be used at load time or only at run time, but it is in preparation.
+To check whether a variable can be used at load time, run pkglint -Wall on your
+package.
 
-19.1.3. User interaction
+19.1.2. User interaction
 
 Occasionally, packages require interaction from the user, and this can be in a
 number of ways:
@@ -6308,32 +6311,24 @@ number of ways:
 
   * help during the installation of a package
 
-The INTERACTIVE_STAGE definition is provided to notify the pkgsrc mechanism of
-an interactive stage which will be needed, and this should be set in the
-package's Makefile, e.g.:
-
-INTERACTIVE_STAGE=      build
-
-
-Multiple interactive stages can be specified:
+A package can set the INTERACTIVE_STAGE variable to define which stages need
+interaction. This should be done in the package's Makefile, e.g.:
 
 INTERACTIVE_STAGE=      configure install
 
 
 The user can then decide to skip this package by setting the BATCH variable.
+Packages that require interaction are also excluded from bulk builds.
 
-19.1.4. Handling licenses
+19.1.3. Handling licenses
 
 Authors of software can choose the licence under which software can be copied.
 This is due to copyright law, and reasons for license choices are outside the
 scope of pkgsrc. The pkgsrc system recognizes that there are a number of
 licenses which some users may find objectionable or difficult or impossible to
 comply with. The Free Software Foundation has declared some licenses "Free",
-and the Open Source Initiative has a definition of "Open Source". The pkgsrc
-system, as a policy choice, does not label packages which have licenses that
-are Free or Open Source. However, packages without a license meeting either of
-those tests are labeled with a license tag denoting the license. Note that a
-package with no license to copy trivially does not meet either the Free or Open
+and the Open Source Initiative has a definition of "Open Source". Note that a
+package whose license forbids to copy does not meet either the Free or Open
 Source test.
 
 For packages which are not Free or Open Source, pkgsrc will not build the
@@ -6450,7 +6445,7 @@ Another problem with such usage is that it does not enable a user to tell
 pkgsrc to proceed for a single package without also telling pkgsrc to proceed
 for all packages with that tag.
 
-19.1.5. Restricted packages
+19.1.4. Restricted packages
 
 Some licenses restrict how software may be re-distributed. Because a license
 tag is required unless the package is Free or Open Source, all packages with
@@ -6507,7 +6502,7 @@ not distributable and cannot be obtained for a period of one full quarter
 branch. Packages with manual / interactive fetch must have a maintainer and it
 is his/her responsibility to ensure this.
 
-19.1.6. Handling dependencies
+19.1.5. Handling dependencies
 
 Your package may depend on some other package being present - and there are
 various ways of expressing this dependency. pkgsrc supports the BUILD_DEPENDS
@@ -6588,7 +6583,7 @@ version numbers recognized by pkg_info(1).
     section of the pkgsrc guide.
 
     For security fixes, please update the package vulnerabilities file. See
-    Section 19.1.10, "Handling packages with security problems" for more
+    Section 19.1.9, "Handling packages with security problems" for more
     information.
 
 If your package needs files from another package to build, add the relevant
@@ -6596,7 +6591,7 @@ distribution files to DISTFILES, so they will be extracted automatically. See
 the print/ghostscript package for an example. (It relies on the jpeg sources
 being present in source form during the build.)
 
-19.1.7. Handling conflicts with other packages
+19.1.6. Handling conflicts with other packages
 
 Your package may conflict with other packages a user might already have
 installed on his system, e.g. if your package installs the same set of files as
@@ -6621,7 +6616,7 @@ and in pkgsrc/foo/baz/Makefile:
 CONFLICTS=      bar-[0-9]*
 
 
-19.1.8. Packages that cannot or should not be built
+19.1.7. Packages that cannot or should not be built
 
 There are several reasons why a package might be instructed to not build under
 certain circumstances. If the package builds and runs on most platforms, the
@@ -6650,7 +6645,7 @@ functionality already provided by the system), set PKG_SKIP_REASON to a
 descriptive message. If the package should fail because some preconditions are
 not met, set PKG_FAIL_REASON to a descriptive message.
 
-19.1.9. Packages which should not be deleted, once installed
+19.1.8. Packages which should not be deleted, once installed
 
 To ensure that a package may not be deleted, once it has been installed, the
 PKG_PRESERVE definition should be set in the package Makefile. This will be
@@ -6658,7 +6653,7 @@ carried into any binary package that is made from this pkgsrc entry. A "
 preserved" package will not be deleted using pkg_delete(1) unless the "-f"
 option is used.
 
-19.1.10. Handling packages with security problems
+19.1.9. Handling packages with security problems
 
 When a vulnerability is found, this should be noted in localsrc/security/
 advisories/pkg-vulnerabilities, and after committing that file, ask
@@ -6675,7 +6670,7 @@ submit a pullup request!
 Binary packages already on ftp.NetBSD.org will be handled semi-automatically by
 a weekly cron job.
 
-19.1.11. How to handle incrementing versions when fixing an existing package
+19.1.10. How to handle incrementing versions when fixing an existing package
 
 When making fixes to an existing package it can be useful to change the version
 number in PKGNAME. To avoid conflicting with future versions by the original
@@ -6726,7 +6721,7 @@ Examples of changes that do merit an increase to PKGREVISION include:
 
 PKGREVISION must also be incremented when dependencies have ABI changes.
 
-19.1.12. Substituting variable text in the package files (the SUBST framework)
+19.1.11. Substituting variable text in the package files (the SUBST framework)
 
 When you want to replace the same text in multiple files or when the
 replacement text varies, patches alone cannot help. This is where the SUBST
@@ -6777,7 +6772,7 @@ blocks look uniform.
 There are some more variables, but they are so seldomly used that they are only
 documented in the mk/subst.mk file.
 
-19.2. Fixing problems in the fetch phase
+19.2. The fetch phase
 
 19.2.1. Packages whose distfiles aren't available for plain downloading
 
@@ -6810,7 +6805,7 @@ commit message.
 Then, the correct way to work around this is to set DIST_SUBDIR to a unique
 directory name, usually based on PKGNAME_NOREV. All DISTFILES and PATCHFILES
 for this package will be put in that subdirectory of the local distfiles
-directory. (See Section 19.1.11, "How to handle incrementing versions when
+directory. (See Section 19.1.10, "How to handle incrementing versions when
 fixing an existing package" for more details.) In case this happens more often,
 PKGNAME can be used (thus including the nbX suffix) or a date stamp can be
 appended, like ${PKGNAME_NOREV}-YYYYMMDD.
@@ -6869,7 +6864,7 @@ GITHUB_RELEASE= rel-${PKGVERSION_NOREV} # usually just set this to ${DISTNAME}
 EXTRACT_SUFX=   .zip
 
 
-19.3. Fixing problems in the configure phase
+19.3. The configure phase
 
 19.3.1. Shared libraries - libtool
 
@@ -7109,7 +7104,7 @@ Currently, there is no special handling for other languages in pkgsrc. If a
 compiler package provides a buildlink3.mk file, include that, otherwise just
 add a (build) dependency on the appropriate compiler package.
 
-19.5. Fixing problems in the build phase
+19.5. The build phase
 
 The most common failures when building a package are that some platforms do not
 provide certain header files, functions or libraries, or they provide the
@@ -7250,7 +7245,7 @@ this variable is similar to running the shell builtin ulimit command to raise
 the maximum data segment size or maximum stack size of a process, respectively,
 to their hard limits.
 
-19.6. Fixing problems in the install phase
+19.6. The install phase
 
 19.6.1. Creating needed directories
 
@@ -8483,7 +8478,8 @@ this point.
 
 There are many ways in which the definition and use of a variable can be
 restricted in order to detect bugs and violations of the (mostly unwritten)
-policies. See the pkglint developer's documentation for further details.
+policies. A package can be checked with pkglint -Wall to see whether it meets
+these rules.
 
 24.5. Designing interfaces for Makefile fragments
 
@@ -8505,7 +8501,7 @@ calling a procedure all input parameters must be completely resolvable. For
 example, CONFIGURE_ARGS should never be an input parameter since it is very
 likely that further text will be added after calling the procedure, which would
 effectively apply the procedure to only a part of the variable. Also,
-references to other variables wit will be modified after calling the procedure.
+references to other variables will be modified after calling the procedure.
 
 A procedure can declare its output parameters either as suitable for use in
 preprocessing directives or as only available at runtime. The latter
@@ -8622,44 +8618,60 @@ needs.
 
 25.3.1. Overridable functions
 
-These functions do not take any parameters. They are all called in "set -e"
-mode, so you should be careful to check the exitcodes of any commands you run
-in the test.
+These functions do not take any parameters. Although they are called in "set -e
+" mode, they don't stop at the first failing command. See this StackOverflow
+question for details.
 
-do_setup()
+do_setup
 
     This function prepares the environment for the test. By default it does
     nothing.
 
-do_test()
+do_test
 
     This function runs the actual test. By default, it calls TEST_MAKE with the
     arguments MAKEARGS_TEST and writes its output including error messages into
     the file TEST_OUTFILE.
 
-check_result()
+    When defining this function, make sure that all output that needs to be
+    checked is written to the correct output file. Example:
+
+    do_test() {
+            echo "Example output"
+    } 1>$TEST_OUTFILE 2>&1
+
+check_result
 
     This function is run after the test and is typically used to compare the
     actual output from the one that is expected. It can make use of the various
-    helper functions from the next section.
+    helper functions from the next section. Example:
 
-do_cleanup()
+    check_result() {
+            exit_status 0
+            output_require "Example"
+            output_require "^[[:alpha:]+[[:space:]][[:alpha:]]{6}$"
+            output_prohibit "no such file or directory"
+    }
+
+do_cleanup
 
     This function cleans everything up after the test has been run. By default
     it does nothing.
 
 25.3.2. Helper functions
 
-exit_status(expected)
+exit_status expected
 
-    This function compares the exitcode of the do_test() function with its
-    first parameter. If they differ, the test will fail.
+    This function compares the exitcode of the do_test function with its first
+    parameter. If they differ, the test will fail.
 
-output_require(regex...)
+output_require regex...
 
     This function checks for each of its parameters if the output from do_test
-    () matches the extended regular expression. If it does not, the test will
-    fail.
+    matches the extended regular expression. If it does not, the test will
+    fail. Example:
+
+    output_require
 
 output_prohibit(regex...)
 
