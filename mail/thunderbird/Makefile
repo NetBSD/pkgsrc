@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.171 2016/06/11 06:29:30 wiz Exp $
+# $NetBSD: Makefile,v 1.172 2016/06/11 12:10:00 wiz Exp $
 
 DISTNAME=	thunderbird-${TB_VER}.source
 PKGNAME=	thunderbird-${TB_VER}
@@ -24,7 +24,8 @@ CONFIGURE_ARGS+=	--enable-application=mail
 # Disable WebRTC support for Thunderbird unconditionally.
 CONFIGURE_ARGS+=	--disable-webrtc
 
-NOT_PAX_MPROTECT_SAFE+=	bin/thunderbird
+NOT_PAX_MPROTECT_SAFE+=	lib/thunderbird/thunderbird
+NOT_PAX_MPROTECT_SAFE+=	lib/thunderbird/thunderbird-bin
 
 ALL_ENV+=		MOZILLA_PKG_NAME=thunderbird
 
