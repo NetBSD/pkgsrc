@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/06/11 21:03:41 kamil Exp $
+
+SHA1 (keystone-0.9.tar.gz) = 9bfe72935fac94da371335fcb8efb895e8b14551
+RMD160 (keystone-0.9.tar.gz) = abbe90149236006c09c7e46c5e3f6057454b1b62
+SHA512 (keystone-0.9.tar.gz) = 170f8f73a7cdd8f049cda3fbc49b968d8ca8a524bbf8ca161a52be4f3c55003b7afd1df8fc118b7838a8484f6128d180f08f09d7a0dcb2c72c3d2009fd59684d
+Size (keystone-0.9.tar.gz) = 2878845 bytes
