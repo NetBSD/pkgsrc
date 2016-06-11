@@ -1,0 +1,26 @@
+#! /bin/sh
+# $NetBSD: spec,v 1.1 2016/06/11 10:48:28 rillig Exp $
+set -eu
+
+check_portability() {
+	env	CK_FNAME="$1" \
+		CK_PROGNAME="check-portability.awk" \
+		awk	-f "$PKGSRCDIR/mk/check/check-subr.awk" \
+			-f "$PKGSRCDIR/mk/check/check-portability.awk" \
+			"$@"
+
+	# See http://stackoverflow.com/q/4072984
+	echo "result $? for $1"
+}
+
+do_test() {
+	check_portability "files/portability-ok"
+	check_portability "files/portability-test-eqeq"
+} >$TEST_OUTFILE 2>&1
+
+check_result() {
+	output_require "0 for files/portability-ok"
+	output_require "files/portability-test-eqeq: if \["
+	output_require "files/portability-test-eqeq: elif test"
+	output_require "result 1 for files/portability-test-eqeq"
+}
