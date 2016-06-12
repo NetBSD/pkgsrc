@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.15 2014/06/15 14:19:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2016/06/12 14:36:29 wiz Exp $
 include/gc.h
 include/gc/cord.h
+include/gc/cord_pos.h
+include/gc/ec.h
 include/gc/gc.h
 include/gc/gc_allocator.h
 include/gc/gc_backptr.h
