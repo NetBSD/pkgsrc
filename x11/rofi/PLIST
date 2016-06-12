@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2016/06/12 20:31:10 kamil Exp $
+bin/rofi
+bin/rofi-sensible-terminal
+man/man1/rofi-sensible-terminal.1
+man/man1/rofi.1
