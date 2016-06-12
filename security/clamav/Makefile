@@ -1,6 +1,5 @@
-# $NetBSD: Makefile,v 1.30 2016/06/06 22:49:36 pgoyette Exp $
+# $NetBSD: Makefile,v 1.31 2016/06/12 16:06:01 taca Exp $
 
-PKGREVISION= 3
 .include "Makefile.common"
 
 COMMENT=	Anti-virus toolkit
@@ -48,7 +47,7 @@ MESSAGE_SUBST+=	CLAMAV_USER=${CLAMAV_USER}
 
 SUBST_CLASSES+=		vars
 SUBST_STAGE.vars=	pre-configure
-SUBST_FILES.vars=	etc/clamd.conf.sample
+SUBST_FILES.vars=	etc/clamav-milter.conf.sample etc/clamd.conf.sample
 SUBST_VARS.vars=	CLAMAV_DBDIR
 
 RCD_SCRIPTS=	clamd freshclamd
