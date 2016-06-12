@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2014/09/08 09:13:02 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/12 11:37:50 wiedi Exp $
 
 DISTNAME=	direvent-5.0
 CATEGORIES=	sysutils
@@ -13,5 +13,8 @@ GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 TEST_TARGET=		check
 INFO_FILES=		yes
+
+CONFIGURE_ARGS+=	--disable-nls
+LDFLAGS.SunOS+=		-lsocket -lnsl
 
 .include "../../mk/bsd.pkg.mk"
