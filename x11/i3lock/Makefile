@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2016/06/11 23:00:13 kamil Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/12 19:48:02 kamil Exp $
 #
 
-DISTNAME=	i3lock-2.7
+DISTNAME=	i3lock-2.8
 CATEGORIES=	x11
 MASTER_SITES=	http://i3wm.org/i3lock/
 EXTRACT_SUFX=	.tar.bz2
