@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2381 2016/06/12 16:15:13 cheusov Exp $
+$NetBSD: CHANGES-2016,v 1.2382 2016/06/12 18:47:51 youri Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3086,3 +3086,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/clamav to 0.99.2 [taca 2016-06-12]
 	Updated devel/mk-configure to 0.29.1 [cheusov 2016-06-12]
 	Updated pkgtools/distbb to 0.47.2 [cheusov 2016-06-12]
+	Updated x11/xfce4-dashboard to 0.6.0 [youri 2016-06-12]
