@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2014/11/09 08:32:17 obache Exp $
+# $NetBSD: Makefile,v 1.11 2016/06/12 14:33:57 wiz Exp $
 
-DISTNAME=	libatomic_ops-7.4.2
+DISTNAME=	libatomic_ops-7.4.4
 CATEGORIES=	devel
 MASTER_SITES=	http://www.ivmaisoft.com/_bin/atomic_ops/
 
