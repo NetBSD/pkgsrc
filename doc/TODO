@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16016 2016/06/12 14:40:37 wiz Exp $
+$NetBSD: TODO,v 1.16017 2016/06/12 15:59:38 wiz Exp $
 
 Suggested new packages
 ======================
@@ -819,14 +819,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o groonga-6.0.0
 	o gsharutils-4.15.2
 	o gss-1.0.3
-	o gst-plugins1-bad-1.8.2
-	o gst-plugins1-base-1.8.2
-	o gst-plugins1-good-1.8.2
-	o gst-plugins1-libav-1.8.2
-	o gst-plugins1-ugly-1.8.2
 	o gst-rtsp-server-1.6.2
 	o gst123-0.3.4
-	o gstreamer1-1.8.2
 	o gthumb-3.4.0
 	o gtk-gnutella-0.98.4
 	o gtk-systrace-20030623
