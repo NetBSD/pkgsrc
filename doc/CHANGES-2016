@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2384 2016/06/12 20:05:53 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.2385 2016/06/12 20:35:09 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3089,3 +3089,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated x11/xfce4-dashboard to 0.6.0 [youri 2016-06-12]
 	Updated x11/i3lock to 2.8 [kamil 2016-06-12]
 	Added devel/picasm version 1.14 [kamil 2016-06-12]
+	Added x11/rofi version 1.0.1 [kamil 2016-06-12]
