@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/06/12 17:11:26 prlw1 Exp $
+
+SHA1 (iagno-3.20.2.tar.xz) = 872c3be27d2ba2073530f3b2ed5fae7ce6a7acce
+RMD160 (iagno-3.20.2.tar.xz) = f41f458e23b600b9b96540be0a703c043907975b
+SHA512 (iagno-3.20.2.tar.xz) = 1e3eccb7df2dce94ea9700cf352a6023020cda9639a3f42693a2d231e53278d8e55d334ef3017868c75330dedd5b8d3af9fefa8a1fe77d2db4fd558c4c64a4cc
+Size (iagno-3.20.2.tar.xz) = 1815316 bytes
