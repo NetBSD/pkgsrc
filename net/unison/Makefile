@@ -1,9 +1,6 @@
-# $NetBSD: Makefile,v 1.100 2016/05/05 11:45:41 jaapb Exp $
+# $NetBSD: Makefile,v 1.101 2016/06/12 14:30:05 wiz Exp $
 
-DISTNAME=	unison-2.48.3
-# XXX remove DIST_SUBDIR with next release
-DIST_SUBDIR=	${DISTNAME}-release
-PKGREVISION=	11
+DISTNAME=	unison-2.48.4
 CATEGORIES=	net
 MASTER_SITES=	http://www.seas.upenn.edu/~bcpierce/unison/download/releases/stable/
 
@@ -20,7 +17,7 @@ BUILDLINK_ABI_DEPENDS.ocaml+=	ocaml>=3.11.2
 BUILDLINK_API_DEPENDS.ocaml-lablgtk+= ocaml-lablgtk>=2.16.0
 
 # docs: unison-manual.pdf/html/ps/dvi
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
+WRKSRC=		${WRKDIR}/src
 USE_TOOLS+=	gmake
 MAKE_FLAGS+=	CFLAGS=""
 MAKE_ENV+=	HOME=${WRKDIR:Q}
