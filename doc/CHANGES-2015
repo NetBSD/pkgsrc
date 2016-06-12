@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2015,v 1.5230 2016/01/08 21:45:59 ryoon Exp $
+$NetBSD: CHANGES-2015,v 1.5231 2016/06/12 08:50:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2015:
 
@@ -8531,6 +8531,7 @@ Changes to the packages collection and infrastructure in 2015:
 	Added www/libsass version 3.3.2 [adam 2015-12-30]
 	Added www/sassc version 3.3.2 [adam 2015-12-30]
 	Added security/boringssl version 20151230 [agc 2015-12-30]
+	Added devel/include-what-you-use version 0.5 [bsiegert 2015-12-30]
 	Updated databases/p5-DBD-mysql to 4.033 [wen 2015-12-31]
 	Updated textproc/p5-Text-Sass to 1.0.3 [wen 2015-12-31]
 	Updated textproc/p5-XML-XPath to 1.16 [wen 2015-12-31]
