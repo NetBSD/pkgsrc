@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2379 2016/06/12 16:06:31 taca Exp $
+$NetBSD: CHANGES-2016,v 1.2380 2016/06/12 16:14:49 cheusov Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3084,3 +3084,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated multimedia/gst-plugins1-good to 1.8.2 [wiz 2016-06-12]
 	Updated multimedia/gst-plugins1-libav to 1.8.2 [wiz 2016-06-12]
 	Updated security/clamav to 0.99.2 [taca 2016-06-12]
+	Updated devel/mk-configure to 0.29.1 [cheusov 2016-06-12]
