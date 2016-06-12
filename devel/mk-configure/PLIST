@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2014/11/30 16:26:58 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.11 2016/06/12 15:30:17 cheusov Exp $
 bin/mkc_check_common.sh
 bin/mkc_check_compiler
 bin/mkc_check_custom
@@ -421,6 +421,9 @@ share/mk-configure/builtins/prog_flex
 share/mk-configure/builtins/prog_gawk
 share/mk-configure/builtins/prog_gm4
 share/mk-configure/builtins/prog_gmake
+share/mk-configure/features/_mkcfake.c
+share/mk-configure/features/err/err.c
+share/mk-configure/features/fgetln/fgetln.c
 share/mk-configure/features/getline/getline.c
 share/mk-configure/features/mkc_CIRCLEQ.h
 share/mk-configure/features/mkc_LIST.h
@@ -430,15 +433,21 @@ share/mk-configure/features/mkc_SLIST.h
 share/mk-configure/features/mkc_SPLAY.h
 share/mk-configure/features/mkc_STAILQ.h
 share/mk-configure/features/mkc_TAILQ.h
+share/mk-configure/features/mkc_err.h
+share/mk-configure/features/mkc_fgetln.h
 share/mk-configure/features/mkc_getline.h
 share/mk-configure/features/mkc_libdl.h
 share/mk-configure/features/mkc_libm.h
+share/mk-configure/features/mkc_progname.h
 share/mk-configure/features/mkc_strlcat.h
 share/mk-configure/features/mkc_strlcpy.h
+share/mk-configure/features/mkc_warn.h
 share/mk-configure/features/netbsd_sys_queue.h
 share/mk-configure/features/netbsd_sys_tree.h
+share/mk-configure/features/progname/progname.c
 share/mk-configure/features/strlcat/strlcat.c
 share/mk-configure/features/strlcpy/strlcpy.c
+share/mk-configure/features/warn/warn.c
 share/mkc-mk/mkc.configure.mk
 share/mkc-mk/mkc.files.mk
 share/mkc-mk/mkc.init.mk
@@ -466,11 +475,15 @@ share/mkc-mk/mkc_imp.f_SLIST.mk
 share/mkc-mk/mkc_imp.f_SPLAY.mk
 share/mkc-mk/mkc_imp.f_STAILQ.mk
 share/mkc-mk/mkc_imp.f_TAILQ.mk
+share/mkc-mk/mkc_imp.f_err.mk
+share/mkc-mk/mkc_imp.f_fgetln.mk
 share/mkc-mk/mkc_imp.f_getline.mk
 share/mkc-mk/mkc_imp.f_libdl.mk
 share/mkc-mk/mkc_imp.f_libm.mk
+share/mkc-mk/mkc_imp.f_progname.mk
 share/mkc-mk/mkc_imp.f_strlcat.mk
 share/mkc-mk/mkc_imp.f_strlcpy.mk
+share/mkc-mk/mkc_imp.f_warn.mk
 share/mkc-mk/mkc_imp.files.mk
 share/mkc-mk/mkc_imp.final.mk
 share/mkc-mk/mkc_imp.inc.mk
