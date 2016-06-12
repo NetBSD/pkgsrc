@@ -1,6 +1,7 @@
-$NetBSD: patch-data_Makefile.in,v 1.1 2015/07/10 17:48:00 youri Exp $
+$NetBSD: patch-data_Makefile.in,v 1.2 2016/06/12 18:47:37 youri Exp $
 
 Adjust config path.
+
 --- data/Makefile.in.orig	2015-06-11 17:55:53.000000000 +0000
 +++ data/Makefile.in
 @@ -429,7 +429,7 @@ SUBDIRS = \
