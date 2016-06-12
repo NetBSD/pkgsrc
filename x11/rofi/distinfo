@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/06/12 20:31:10 kamil Exp $
+
+SHA1 (rofi-1.0.1.tar.gz) = e393b8cb605397e5f295307dbb9d4025a508e84e
+RMD160 (rofi-1.0.1.tar.gz) = 8b16b6ea3fb72614bfb7147aa63460fe98696384
+SHA512 (rofi-1.0.1.tar.gz) = 48c8df2455f7de9ffb93af8d76ada89e6a5d2bbd6552bfac0c4f13c624061384371095e19208f6b554a1164ac83232cc735b3c39f94079635804b300e563eb1c
+Size (rofi-1.0.1.tar.gz) = 241236 bytes
