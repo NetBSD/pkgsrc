@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.796 2016/06/11 23:01:18 kamil Exp $
+# $NetBSD: Makefile,v 1.797 2016/06/12 20:32:59 kamil Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -485,6 +485,7 @@ SUBDIR+=	renderproto9
 SUBDIR+=	rep-gtk2
 SUBDIR+=	resourceproto
 SUBDIR+=	rgb
+SUBDIR+=	rofi
 SUBDIR+=	rox-session
 SUBDIR+=	rox-wallpaper
 SUBDIR+=	rstart
