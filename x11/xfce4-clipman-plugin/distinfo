@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2015/11/04 03:29:05 agc Exp $
+$NetBSD: distinfo,v 1.8 2016/06/12 11:23:12 youri Exp $
 
 SHA1 (xfce4-clipman-plugin-1.2.6.tar.bz2) = 71767fef0a8366bb9a6bd3edeacf4a8dabdcaa40
 RMD160 (xfce4-clipman-plugin-1.2.6.tar.bz2) = 0e34628b195b5a452ebdb1c8ed9d631c662d1676
 SHA512 (xfce4-clipman-plugin-1.2.6.tar.bz2) = fc6b4cee1990ff13f4c0050ebf3e4b69fc0f7124fa2dd9b41933ce11449d322fad666b1af82bd610ce2add28d012a7dddc345be4afa1432bb330ecd6344a168e
 Size (xfce4-clipman-plugin-1.2.6.tar.bz2) = 438346 bytes
-SHA1 (patch-panel-plugin_Makefile.in) = 0c624023ae9e7d2676b979e1f8d740982010dedc
+SHA1 (patch-panel-plugin_Makefile.in) = f4e58a9a075623a82bbbea29c6510e9ff838b777
