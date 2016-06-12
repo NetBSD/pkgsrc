@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2386 2016/06/12 22:14:29 szptvlfn Exp $
+$NetBSD: CHANGES-2016,v 1.2387 2016/06/12 23:12:41 youri Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3091,3 +3091,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added devel/picasm version 1.14 [kamil 2016-06-12]
 	Added x11/rofi version 1.0.1 [kamil 2016-06-12]
 	Updated graphics/feh to 2.16 [szptvlfn 2016-06-12]
+	Added graphics/gnome-themes-standard version 3.20.2 [youri 2016-06-12]
