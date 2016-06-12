@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2376 2016/06/12 14:37:48 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2377 2016/06/12 14:40:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3076,3 +3076,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/libatomic_ops to 7.4.4 [wiz 2016-06-12]
 	Updated devel/boehm-gc to 7.4.4 [wiz 2016-06-12]
 	Updated textproc/json-c to 0.12.1 [wiz 2016-06-12]
+	Updated x11/xterm to 325 [wiz 2016-06-12]
