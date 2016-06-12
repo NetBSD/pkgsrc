@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2371 2016/06/12 13:27:27 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2372 2016/06/12 14:30:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3071,3 +3071,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/ImageMagick to 7.0.1.10 [leot 2016-06-12]
 	Updated graphics/p5-PerlMagick to 7.0.1.10 [leot 2016-06-12]
 	Updated devel/git to 2.8.4 [wiz 2016-06-12]
+	Updated net/unison to 2.48.4 [wiz 2016-06-12]
