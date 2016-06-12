@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2366 2016/06/12 08:06:55 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2367 2016/06/12 08:55:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3066,3 +3066,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-File-Next to 1.14 [wiz 2016-06-12]
 	Updated www/p5-CGI to 4.30 [wiz 2016-06-12]
 	Updated devel/p5-Expect to 1.33 [wiz 2016-06-12]
+	Updated devel/afl to 2.14b [wiz 2016-06-12]
