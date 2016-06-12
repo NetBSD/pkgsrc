@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2368 2016/06/12 09:32:14 leot Exp $
+$NetBSD: CHANGES-2016,v 1.2369 2016/06/12 09:44:55 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3068,3 +3068,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Expect to 1.33 [wiz 2016-06-12]
 	Updated devel/afl to 2.14b [wiz 2016-06-12]
 	Updated print/cups-filters to 1.9.0 [leot 2016-06-12]
+	Updated graphics/ImageMagick to 7.0.1.10 [leot 2016-06-12]
