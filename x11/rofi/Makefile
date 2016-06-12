@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2016/06/12 20:31:10 kamil Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/12 22:57:58 kamil Exp $
 
 DISTNAME=	rofi-1.0.1
 CATEGORIES=	x11
-# We need to specify this long path to get submodules fetched
-MASTER_SITES=	${MASTER_SITE_GITHUB:=DaveDavenport/${PKGBASE}/releases/download/${PKGVERSION_NOREV}/}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=DaveDavenport/}
+# We need to specify this way to get submodules fetched
+GITHUB_RELEASE=	${PKGVERSION_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://davedavenport.github.io/rofi/
