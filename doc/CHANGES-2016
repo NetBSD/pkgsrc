@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2369 2016/06/12 09:44:55 leot Exp $
+$NetBSD: CHANGES-2016,v 1.2370 2016/06/12 09:45:27 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3069,3 +3069,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/afl to 2.14b [wiz 2016-06-12]
 	Updated print/cups-filters to 1.9.0 [leot 2016-06-12]
 	Updated graphics/ImageMagick to 7.0.1.10 [leot 2016-06-12]
+	Updated graphics/p5-PerlMagick to 7.0.1.10 [leot 2016-06-12]
