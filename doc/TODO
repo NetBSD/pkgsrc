@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16014 2016/06/12 14:36:38 wiz Exp $
+$NetBSD: TODO,v 1.16015 2016/06/12 14:37:48 wiz Exp $
 
 Suggested new packages
 ======================
@@ -962,7 +962,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o jools-1.0
 	o jove-4.16.0.73
 	o jpilot-syncmal-0.81
-	o json-c-0.12.1
 	o kadu-0.11.1
 	o kaffe-1.1.9
 	o kapooka-0.3
