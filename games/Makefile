@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.388 2016/06/11 18:44:24 kamil Exp $
+# $NetBSD: Makefile,v 1.389 2016/06/12 17:11:26 prlw1 Exp $
 #
 
 COMMENT=	Games
@@ -146,6 +146,7 @@ SUBDIR+=	hex-a-hop
 SUBDIR+=	hitori
 SUBDIR+=	holtz
 SUBDIR+=	hugo
+SUBDIR+=	iagno
 SUBDIR+=	icbm3d
 SUBDIR+=	icebreaker
 SUBDIR+=	imaze
