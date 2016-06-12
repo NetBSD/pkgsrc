@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2016/05/21 20:12:18 bad Exp $
+# $NetBSD: Makefile,v 1.48 2016/06/12 18:52:04 abs Exp $
 
 VERSION=	4.2.5
 VERSION_IPXE=	1.0.0
@@ -203,25 +203,25 @@ pre-build:
 	${CP} -f ${FILESDIR}/locking.sh  ${WRKSRC}/hotplug/NetBSD/
 	${SED} -e "s,@XENDCONFDIR@,${PKG_SYSCONFDIR},g" \
 		${XENTOP}/docs/man/xl.pod.1 |\
-	    pod2man >${WRKDIR}/xl.1
+	    pod2man -n xl >${WRKDIR}/xl.1
 	${SED} -e "s,@XENDCONFDIR@,${PKG_SYSCONFDIR},g" \
 		${XENTOP}/docs/man/xm.pod.1 |\
-	    pod2man >${WRKDIR}/xm.1
+	    pod2man -n xm >${WRKDIR}/xm.1
 	${SED} -e "s,@XENDCONFDIR@,${PKG_SYSCONFDIR},g" \
 		${XENTOP}/docs/man/xend-config.sxp.pod.5 |\
-	    pod2man >${WRKDIR}/xend-config.sxp.5
+	    pod2man -n xend-config.sxp >${WRKDIR}/xend-config.sxp.5
 	${SED} -e "s,@XENDCONFDIR@,${PKG_SYSCONFDIR},g" \
 		${XENTOP}/docs/man/xl.cfg.pod.5 |\
-	    pod2man >${WRKDIR}/xl.cfg.5
+	    pod2man -n xl.cfg >${WRKDIR}/xl.cfg.5
 	${SED} -e "s,@XENDCONFDIR@,${PKG_SYSCONFDIR},g" \
 		${XENTOP}/docs/man/xl.conf.pod.5 |\
-	    pod2man >${WRKDIR}/xl.conf.5
+	    pod2man -n xl.conf >${WRKDIR}/xl.conf.5
 	${SED} -e "s,@XENDCONFDIR@,${PKG_SYSCONFDIR},g" \
 		${XENTOP}/docs/man/xlcpupool.cfg.pod.5 |\
-	    pod2man >${WRKDIR}/xlcpupool.cfg.5
+	    pod2man -n xlcpupool.cfg >${WRKDIR}/xlcpupool.cfg.5
 	${SED} -e "s,@XENDCONFDIR@,${PKG_SYSCONFDIR},g" \
 		${XENTOP}/docs/man/xmdomain.cfg.pod.5 |\
-	    pod2man >${WRKDIR}/xmdomain.cfg.5
+	    pod2man -n xmdomain.cfg >${WRKDIR}/xmdomain.cfg.5
 
 INSTALLATION_DIRS=	${EGDIR} ${PKGMANDIR}/man5
 
