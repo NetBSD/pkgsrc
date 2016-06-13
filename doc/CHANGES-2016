@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2411 2016/06/13 23:15:46 youri Exp $
+$NetBSD: CHANGES-2016,v 1.2412 2016/06/13 23:20:06 youri Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3115,3 +3115,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated wm/marco to 1.14.2 [youri 2016-06-13]
 	Updated x11/mate-desktop to 1.14.1 [youri 2016-06-13]
 	Updated sysutils/xfce4-systemload-plugin to 1.1.99 [youri 2016-06-13]
+	Updated x11/mate-screensaver to 1.14.1 [youri 2016-06-13]
