@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2389 2016/06/13 00:26:22 youri Exp $
+$NetBSD: CHANGES-2016,v 1.2390 2016/06/13 02:01:39 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3094,3 +3094,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Added graphics/gnome-themes-standard version 3.20.2 [youri 2016-06-12]
 	Added graphics/arc-theme version 20160605 [youri 2016-06-12]
 	Added graphics/paper-icon-theme version 1.3.2 [youri 2016-06-13]
+	Updated devel/capstone to 3.0.4nb2 [kamil 2016-06-13]
+	Added devel/py-capstone to 3.0.4 [kamil 2016-06-13]
