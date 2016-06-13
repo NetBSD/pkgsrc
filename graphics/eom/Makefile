@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2016/05/21 19:20:33 youri Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/13 23:09:49 youri Exp $
 
 .include "../../meta-pkgs/mate/Makefile.common"
 
-DISTNAME=	eom-${MATE_VERSION}
+DISTNAME=	eom-1.14.1
 CATEGORIES=	graphics
 
 COMMENT=	Eye of MATE: an image viewing and cataloging program
