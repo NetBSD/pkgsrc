@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1 2016/05/21 19:12:27 youri Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/06/13 23:28:36 youri Exp $
 include/polkit-gtk-mate-1/polkitgtkmate/polkitgtkmate.h
 include/polkit-gtk-mate-1/polkitgtkmate/polkitgtkmatetypes.h
 include/polkit-gtk-mate-1/polkitgtkmate/polkitlockbutton.h
-lib/girepository-1.0/PolkitGtkMate-1.0.typelib
+${PLIST.introspection}lib/girepository-1.0/PolkitGtkMate-1.0.typelib
 lib/libpolkit-gtk-mate-1.la
 lib/pkgconfig/polkit-gtk-mate-1.pc
 libexec/polkit-mate-authentication-agent-1
 share/examples/mate-polkit/xdg/autostart/polkit-mate-authentication-agent-1.desktop
-share/gir-1.0/PolkitGtkMate-1.0.gir
+${PLIST.introspection}share/gir-1.0/PolkitGtkMate-1.0.gir
 share/locale/am/LC_MESSAGES/mate-polkit.mo
 share/locale/ar/LC_MESSAGES/mate-polkit.mo
 share/locale/be/LC_MESSAGES/mate-polkit.mo
