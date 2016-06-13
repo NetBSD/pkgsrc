@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2391 2016/06/13 02:09:15 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.2392 2016/06/13 07:42:14 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3097,3 +3097,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/capstone to 3.0.4nb2 [kamil 2016-06-13]
 	Added devel/py-capstone to 3.0.4 [kamil 2016-06-13]
 	Added devel/py-filebytes to 0.9.10 [kamil 2016-06-13]
+	Updated mail/p5-Mail-IMAPClient to 3.38 [wen 2016-06-13]
