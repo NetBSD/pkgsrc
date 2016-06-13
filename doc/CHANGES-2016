@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2403 2016/06/13 22:31:46 youri Exp $
+$NetBSD: CHANGES-2016,v 1.2404 2016/06/13 22:32:41 youri Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3107,3 +3107,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated cad/gtkwave to 3.3.73 [mef 2016-06-13]
 	Updated x11/libmatekbd to 1.14.1 [youri 2016-06-13]
 	Updated sysutils/caja to 1.14.1 [youri 2016-06-13]
+	Updated print/atril to 1.14.1 [youri 2016-06-13]
