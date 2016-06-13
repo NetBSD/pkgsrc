@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2407 2016/06/13 23:08:51 youri Exp $
+$NetBSD: CHANGES-2016,v 1.2408 2016/06/13 23:10:15 youri Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3111,3 +3111,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated archivers/engrampa to 1.14.1 [youri 2016-06-13]
 	Updated security/polkit to 0.113nb2 [youri 2016-06-13]
 	Updated x11/mate-menus to 1.14.0nb1 [youri 2016-06-13]
+	Updated graphics/eom to 1.14.1 [youri 2016-06-13]
