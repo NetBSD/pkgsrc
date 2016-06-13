@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/05/21 18:47:25 youri Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/06/13 22:10:34 youri Exp $
 include/libmatekbd/matekbd-desktop-config.h
 include/libmatekbd/matekbd-indicator-config.h
 include/libmatekbd/matekbd-indicator.h
