@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 03:29:18 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/06/13 12:26:11 wiz Exp $
 
-SHA1 (radare2-0.9.9.tar.xz) = c420516085a2ab43ba9ef0bdad4fb690c0f7da9e
-RMD160 (radare2-0.9.9.tar.xz) = 81a0bb2acdf0847d229aa41aaf8313ad1dcd8e09
-SHA512 (radare2-0.9.9.tar.xz) = 6ea9396f59a5f61d7d433bc2eceb093526112c58114e2c7d83127d52442e376fbb4277d44447c252c9ba99d1ad1d966a06a6a0d5049660ef330029e2facb4cc9
-Size (radare2-0.9.9.tar.xz) = 4318304 bytes
-SHA1 (patch-libr_config.mk.tail) = 9281ce23890ea8839b4420baef46bb3e0ead4a66
-SHA1 (patch-shlr_gdb_Makefile) = 7eaff010e2f2daf1d5a8797c800c11565347cc3a
+SHA1 (radare2-0.10.3.tar.xz) = c8e0ac38725e4ace2c594f2ff5208fd8ad3a85ee
+RMD160 (radare2-0.10.3.tar.xz) = 047bb1d183c8c10498d0fc3b586f46334d583903
+SHA512 (radare2-0.10.3.tar.xz) = c6cd195b755de8343b584a8d6f28ce1f7afb55f3c4de87d5a9ea5b4c6266b27a96f2546f070d567e142128386b81335462cac829fc765429ce5b1216d8eac736
+Size (radare2-0.10.3.tar.xz) = 4954408 bytes
