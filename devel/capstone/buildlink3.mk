@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2014/12/05 11:51:58 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2016/06/13 01:51:04 kamil Exp $
 
 BUILDLINK_TREE+=	capstone
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	capstone
 CAPSTONE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.capstone+=	capstone>=3.0
-BUILDLINK_PKGSRCDIR.capstone?=	../../devel/capstone
+BUILDLINK_PKGSRCDIR.capstone?=		../../devel/capstone
 .endif	# CAPSTONE_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-capstone
