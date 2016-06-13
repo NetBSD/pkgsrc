@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2015/10/15 10:53:35 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2016/06/13 21:40:22 youri Exp $
 
 DISTNAME=	xdg-utils-1.1.1
 PKGNAME=	${DISTNAME:S/-rc/rc/}
-CATEGORIES=	sysutils
+CATEGORIES=	misc
 MASTER_SITES=	http://portland.freedesktop.org/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
