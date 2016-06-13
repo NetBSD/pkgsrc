@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/05/21 18:52:34 youri Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/06/13 23:14:30 youri Exp $
 bin/mate-about
 bin/mate-color-select
 include/mate-desktop-2.0/libmate-desktop/mate-aboutdialog.h
@@ -74,6 +74,7 @@ share/icons/hicolor/256x256/apps/mate.png
 share/icons/hicolor/32x32/apps/mate.png
 share/icons/hicolor/48x48/apps/mate.png
 share/icons/hicolor/scalable/apps/mate-symbolic.svg
+share/icons/hicolor/scalable/apps/mate.svg
 share/libmate-desktop/pnp.ids
 share/locale/af/LC_MESSAGES/mate-desktop.mo
 share/locale/am/LC_MESSAGES/mate-desktop.mo
