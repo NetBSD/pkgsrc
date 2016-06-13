@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2016/05/21 19:01:59 youri Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/06/13 23:23:42 youri Exp $
 bin/mate-desktop-item-edit
 bin/mate-panel
 bin/mate-panel-test-applets
 include/mate-panel-4.0/libmate-panel-applet/mate-panel-applet-enums.h
 include/mate-panel-4.0/libmate-panel-applet/mate-panel-applet-gsettings.h
 include/mate-panel-4.0/libmate-panel-applet/mate-panel-applet.h
-lib/girepository-1.0/MatePanelApplet-4.0.typelib
 lib/libmate-panel-applet-4.la
 lib/mate-panel/libclock-applet.la
 lib/mate-panel/libfish-applet.la
@@ -16,7 +15,6 @@ man/man1/mate-desktop-item-edit.1
 man/man1/mate-panel-test-applets.1
 man/man1/mate-panel.1
 share/applications/mate-panel.desktop
-share/gir-1.0/MatePanelApplet-4.0.gir
 share/glib-2.0/schemas/org.mate.panel.applet.clock.gschema.xml
 share/glib-2.0/schemas/org.mate.panel.applet.fish.gschema.xml
 share/glib-2.0/schemas/org.mate.panel.applet.window-list.gschema.xml
