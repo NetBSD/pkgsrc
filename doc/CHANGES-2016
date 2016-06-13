@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2402 2016/06/13 22:10:42 youri Exp $
+$NetBSD: CHANGES-2016,v 1.2403 2016/06/13 22:31:46 youri Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3106,3 +3106,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-radare2 to 0.10.3 [wiz 2016-06-13]
 	Updated cad/gtkwave to 3.3.73 [mef 2016-06-13]
 	Updated x11/libmatekbd to 1.14.1 [youri 2016-06-13]
+	Updated sysutils/caja to 1.14.1 [youri 2016-06-13]
