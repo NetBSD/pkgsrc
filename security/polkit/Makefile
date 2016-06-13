@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2016/05/21 19:27:47 leot Exp $
+# $NetBSD: Makefile,v 1.4 2016/06/13 23:06:46 youri Exp $
 #
 
 DISTNAME=	polkit-0.113
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	http://www.freedesktop.org/software/polkit/releases/
 
