@@ -1,0 +1,17 @@
+$NetBSD: patch-Makefile.am,v 1.1 2016/06/13 00:26:04 youri Exp $
+
+Install to pkgsrc prefix.
+
+--- Makefile.am.orig	2016-05-23 02:15:15.000000000 +0000
++++ Makefile.am
+@@ -7,8 +7,8 @@ EXTRA_DIST = \
+ themedir = $(datadir)/icons
+ 
+ install-data-hook:
+-	$(MKDIR_P) $(DESTDIR)/usr/share/icons
+-	cp -Rv Paper $(DESTDIR)/usr/share/icons/.
++	$(MKDIR_P) $(DESTDIR)$(PREFIX)/share/icons
++	cp -Rv Paper $(DESTDIR)$(PREFIX)/share/icons/.
+ 
+ uninstall-hook:
+ 	test -e $(DESTDIR)/usr/share/icons/Paper && rm -rfv $(DESTDIR)/usr/share/icons/Paper
