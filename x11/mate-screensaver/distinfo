@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.1 2016/05/21 19:14:19 youri Exp $
+$NetBSD: distinfo,v 1.2 2016/06/13 23:19:43 youri Exp $
 
-SHA1 (mate-screensaver-1.14.0.tar.xz) = 72c0eccfb5a25ba03830f710f68f4d164feab7df
-RMD160 (mate-screensaver-1.14.0.tar.xz) = f5d0e0c5d0773f389faae8c4b1688c1d982e35be
-SHA512 (mate-screensaver-1.14.0.tar.xz) = 7a6377a530e0bea56469147a87cf358cf2759beeca75c5fb19781a096b24eec5e286f52bf9b22a09a1f7c6e9b991aee21cedaafe7c7bb9d7edf2b5410e9158f2
-Size (mate-screensaver-1.14.0.tar.xz) = 4910280 bytes
+SHA1 (mate-screensaver-1.14.1.tar.xz) = 0aae11c766ef7dc1383de182661bf89b43750f1a
+RMD160 (mate-screensaver-1.14.1.tar.xz) = 65e79c5ec4732f6cce7e7b0d81aab1db3d181384
+SHA512 (mate-screensaver-1.14.1.tar.xz) = 28b5834450da9d7d2fd3a77504f244e69212e751435bd41a957f30a5231db312dba37ee39442c63a40098bb3d1e1fade81ea423f9d59b29fc5d1201522d1d8f8
+Size (mate-screensaver-1.14.1.tar.xz) = 4912772 bytes
 SHA1 (patch-configure) = 7d59fa943a0410db98456dadcf17ba000f3ba0fc
 SHA1 (patch-src_gs-auth-pam.c) = 7b9ad4af83d21c4d5090cd2fa01ca25468cd7e49
