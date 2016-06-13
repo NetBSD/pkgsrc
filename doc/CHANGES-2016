@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2406 2016/06/13 23:07:14 youri Exp $
+$NetBSD: CHANGES-2016,v 1.2407 2016/06/13 23:08:51 youri Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3110,3 +3110,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated print/atril to 1.14.1 [youri 2016-06-13]
 	Updated archivers/engrampa to 1.14.1 [youri 2016-06-13]
 	Updated security/polkit to 0.113nb2 [youri 2016-06-13]
+	Updated x11/mate-menus to 1.14.0nb1 [youri 2016-06-13]
