@@ -1,0 +1,9 @@
+Capstone is a disassembly framework with the target of becoming
+the ultimate disasm engine for binary analysis and reversing in
+the security community.
+
+Capstone supports multiple hardware architectures, including ARM,
+ARM64 (ARMv8), Mips, PPC, Sparc, SystemZ, XCore and X86 (including
+X86_64).
+
+This package ships with Python bindings.
