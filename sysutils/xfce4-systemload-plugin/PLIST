@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2015/04/21 08:56:41 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.7 2016/06/13 23:15:28 youri Exp $
 lib/xfce4/panel/plugins/libsystemload.la
 share/locale/ar/LC_MESSAGES/xfce4-systemload-plugin.mo
 share/locale/ast/LC_MESSAGES/xfce4-systemload-plugin.mo
@@ -15,6 +15,7 @@ share/locale/eu/LC_MESSAGES/xfce4-systemload-plugin.mo
 share/locale/fi/LC_MESSAGES/xfce4-systemload-plugin.mo
 share/locale/fr/LC_MESSAGES/xfce4-systemload-plugin.mo
 share/locale/gl/LC_MESSAGES/xfce4-systemload-plugin.mo
+share/locale/he/LC_MESSAGES/xfce4-systemload-plugin.mo
 share/locale/hr/LC_MESSAGES/xfce4-systemload-plugin.mo
 share/locale/hu/LC_MESSAGES/xfce4-systemload-plugin.mo
 share/locale/id/LC_MESSAGES/xfce4-systemload-plugin.mo
