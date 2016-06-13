@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2015/11/04 01:32:41 agc Exp $
+$NetBSD: distinfo,v 1.13 2016/06/13 23:15:28 youri Exp $
 
-SHA1 (xfce4-systemload-plugin-1.1.2.tar.bz2) = 05de6cebb2c2c4934f808932ce7711059850a7a5
-RMD160 (xfce4-systemload-plugin-1.1.2.tar.bz2) = 36d86ef3d9ff8fcb0cf7d04d65d8035201c8d228
-SHA512 (xfce4-systemload-plugin-1.1.2.tar.bz2) = 4d2216a707991ca17e7a935a6836a5b4236c1ab38e1738a57f754d63aca3d183802e5e530563a6e31c754ba6e4cd225742b4f23170acb07277f18eaee682fd31
-Size (xfce4-systemload-plugin-1.1.2.tar.bz2) = 305948 bytes
+SHA1 (xfce4-systemload-plugin-1.1.99.tar.bz2) = ecac8eb9c73d9f6fb23a22c28ce86ae7d1995d55
+RMD160 (xfce4-systemload-plugin-1.1.99.tar.bz2) = 035a81f8d7e86af1c65a48104f75f31e277f9f55
+SHA512 (xfce4-systemload-plugin-1.1.99.tar.bz2) = be6f3600ae01de2e8faaf4539042c102eaf275f6415cb18c8605dda828ce199e8c791f7c33f488cd5493f8155ee5c915c2de0698dc4c5f6f6a620e860bbdf3d4
+Size (xfce4-systemload-plugin-1.1.99.tar.bz2) = 326291 bytes
