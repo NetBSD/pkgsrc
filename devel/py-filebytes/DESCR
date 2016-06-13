@@ -1,0 +1,2 @@
+Library to read and edit files in the following formats: Executable and Linking
+Format (ELF), Portable Executable (PE), MachO and OAT (Android Runtime).
