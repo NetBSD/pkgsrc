@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/05/22 13:01:45 youri Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/06/13 22:31:25 youri Exp $
 bin/caja
 bin/caja-autorun-software
 bin/caja-connect-server
@@ -14,7 +14,6 @@ include/caja/libcaja-extension/caja-menu-provider.h
 include/caja/libcaja-extension/caja-menu.h
 include/caja/libcaja-extension/caja-property-page-provider.h
 include/caja/libcaja-extension/caja-property-page.h
-lib/girepository-1.0/Caja-2.0.typelib
 lib/libcaja-extension.la
 lib/pkgconfig/libcaja-extension.pc
 libexec/caja-convert-metadata
@@ -34,6 +33,7 @@ share/applications/mate-network-scheme.desktop
 share/caja/browser.xml
 share/caja/caja-extras.placeholder
 share/caja/caja-suggested.placeholder
+share/caja/caja.css
 share/caja/patterns/blue_gray_rough.png
 share/caja/patterns/blue_ridge.png
 share/caja/patterns/blue_type.png
@@ -75,7 +75,6 @@ share/caja/ui/caja-navigation-window-ui.xml
 share/caja/ui/caja-shell-ui.xml
 share/caja/ui/caja-spatial-window-ui.xml
 share/dbus-1/services/org.mate.freedesktop.FileManager1.service
-share/gir-1.0/Caja-2.0.gir
 share/glib-2.0/schemas/org.mate.caja.gschema.xml
 share/glib-2.0/schemas/org.mate.media-handling.gschema.xml
 share/gtk-doc/html/libcaja-extension/ch01.html
