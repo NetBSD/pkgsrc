@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16022 2016/06/13 12:03:12 wiz Exp $
+$NetBSD: TODO,v 1.16023 2016/06/13 12:26:27 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1532,7 +1532,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o qt5-qtbase-5.7.0
 	o quodlibet2-3.5.3
 	o radare2-0.10.3
-	o radare2-valabind-0.10.0
 	o radiance-4R1
 	o ragel-7.0.0.6
 	o rails-4.1.5
