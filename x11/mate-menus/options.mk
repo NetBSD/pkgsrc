@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2016/05/21 18:59:08 youri Exp $
+# $NetBSD: options.mk,v 1.2 2016/06/13 23:08:31 youri Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mate-menus
 PKG_SUPPORTED_OPTIONS=	introspection python
-PKG_SUGGESTED_OPTIONS=	introspection python
+PKG_SUGGESTED_OPTIONS=	python
 
 .include "../../mk/bsd.options.mk"
 

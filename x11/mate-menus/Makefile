@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2016/05/21 18:59:08 youri Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/13 23:08:31 youri Exp $
 
 .include "../../meta-pkgs/mate/Makefile.common"
 
 DISTNAME=	mate-menus-${MATE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	sysutils
 
 COMMENT=	Implementation of the desktop menu specification for MATE
