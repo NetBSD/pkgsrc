@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2388 2016/06/12 23:46:42 youri Exp $
+$NetBSD: CHANGES-2016,v 1.2389 2016/06/13 00:26:22 youri Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3093,3 +3093,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/feh to 2.16 [szptvlfn 2016-06-12]
 	Added graphics/gnome-themes-standard version 3.20.2 [youri 2016-06-12]
 	Added graphics/arc-theme version 20160605 [youri 2016-06-12]
+	Added graphics/paper-icon-theme version 1.3.2 [youri 2016-06-13]
