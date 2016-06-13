@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.386 2016/04/17 08:13:09 jperkin Exp $
+# $NetBSD: bsd.prefs.mk,v 1.387 2016/06/13 13:26:42 jperkin Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -707,7 +707,7 @@ _PKGSRC_USE_RELRO=	yes
 .endif
 
 _PKGSRC_USE_SSP=	no
-.if (${PKGSRC_USE_SSP:tl} == "yes") && \
+.if (${PKGSRC_USE_SSP:tl} != "no") && \
     (${_OPSYS_SUPPORTS_SSP:Uno} == "yes")
 _PKGSRC_USE_SSP=	yes
 .endif
