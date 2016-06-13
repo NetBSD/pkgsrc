@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2016/03/07 13:14:31 mef Exp $
+@comment $NetBSD: PLIST,v 1.9 2016/06/13 13:36:55 mef Exp $
 share/doc/gnuradio-${PKGVERSION}/dial_tone.py
 share/doc/gnuradio-${PKGVERSION}/fm_demod.py
 share/doc/gnuradio-${PKGVERSION}/fm_rx.grc
@@ -192,6 +192,7 @@ share/doc/gnuradio-${PKGVERSION}/html/WaterfallDisplayPlot_8h__incl.map
 share/doc/gnuradio-${PKGVERSION}/html/WaterfallDisplayPlot_8h__incl.md5
 share/doc/gnuradio-${PKGVERSION}/html/WaterfallDisplayPlot_8h__incl.png
 share/doc/gnuradio-${PKGVERSION}/html/WaterfallDisplayPlot_8h_source.html
+share/doc/gnuradio-${PKGVERSION}/html/_formulas.tex
 share/doc/gnuradio-${PKGVERSION}/html/abs__ff_8h.html
 share/doc/gnuradio-${PKGVERSION}/html/abs__ff_8h__incl.map
 share/doc/gnuradio-${PKGVERSION}/html/abs__ff_8h__incl.md5
@@ -378,7 +379,7 @@ share/doc/gnuradio-${PKGVERSION}/html/and__ss_8h__incl.md5
 share/doc/gnuradio-${PKGVERSION}/html/and__ss_8h__incl.png
 share/doc/gnuradio-${PKGVERSION}/html/and__ss_8h_source.html
 share/doc/gnuradio-${PKGVERSION}/html/annotated.html
-share/doc/gnuradio-${PKGVERSION}/html/annotated.js
+share/doc/gnuradio-${PKGVERSION}/html/annotated_dup.js
 share/doc/gnuradio-${PKGVERSION}/html/annotator__1to1_8h.html
 share/doc/gnuradio-${PKGVERSION}/html/annotator__1to1_8h__incl.map
 share/doc/gnuradio-${PKGVERSION}/html/annotator__1to1_8h__incl.md5
@@ -4418,52 +4419,6 @@ share/doc/gnuradio-${PKGVERSION}/html/fmdet__cf_8h__incl.png
 share/doc/gnuradio-${PKGVERSION}/html/fmdet__cf_8h_source.html
 share/doc/gnuradio-${PKGVERSION}/html/folderclosed.png
 share/doc/gnuradio-${PKGVERSION}/html/folderopen.png
-share/doc/gnuradio-${PKGVERSION}/html/form_0.png
-share/doc/gnuradio-${PKGVERSION}/html/form_1.png
-share/doc/gnuradio-${PKGVERSION}/html/form_10.png
-share/doc/gnuradio-${PKGVERSION}/html/form_11.png
-share/doc/gnuradio-${PKGVERSION}/html/form_12.png
-share/doc/gnuradio-${PKGVERSION}/html/form_13.png
-share/doc/gnuradio-${PKGVERSION}/html/form_14.png
-share/doc/gnuradio-${PKGVERSION}/html/form_15.png
-share/doc/gnuradio-${PKGVERSION}/html/form_16.png
-share/doc/gnuradio-${PKGVERSION}/html/form_17.png
-share/doc/gnuradio-${PKGVERSION}/html/form_18.png
-share/doc/gnuradio-${PKGVERSION}/html/form_19.png
-share/doc/gnuradio-${PKGVERSION}/html/form_2.png
-share/doc/gnuradio-${PKGVERSION}/html/form_20.png
-share/doc/gnuradio-${PKGVERSION}/html/form_21.png
-share/doc/gnuradio-${PKGVERSION}/html/form_22.png
-share/doc/gnuradio-${PKGVERSION}/html/form_23.png
-share/doc/gnuradio-${PKGVERSION}/html/form_24.png
-share/doc/gnuradio-${PKGVERSION}/html/form_25.png
-share/doc/gnuradio-${PKGVERSION}/html/form_26.png
-share/doc/gnuradio-${PKGVERSION}/html/form_27.png
-share/doc/gnuradio-${PKGVERSION}/html/form_28.png
-share/doc/gnuradio-${PKGVERSION}/html/form_29.png
-share/doc/gnuradio-${PKGVERSION}/html/form_3.png
-share/doc/gnuradio-${PKGVERSION}/html/form_30.png
-share/doc/gnuradio-${PKGVERSION}/html/form_31.png
-share/doc/gnuradio-${PKGVERSION}/html/form_32.png
-share/doc/gnuradio-${PKGVERSION}/html/form_33.png
-share/doc/gnuradio-${PKGVERSION}/html/form_34.png
-share/doc/gnuradio-${PKGVERSION}/html/form_35.png
-share/doc/gnuradio-${PKGVERSION}/html/form_36.png
-share/doc/gnuradio-${PKGVERSION}/html/form_37.png
-share/doc/gnuradio-${PKGVERSION}/html/form_38.png
-share/doc/gnuradio-${PKGVERSION}/html/form_39.png
-share/doc/gnuradio-${PKGVERSION}/html/form_4.png
-share/doc/gnuradio-${PKGVERSION}/html/form_40.png
-share/doc/gnuradio-${PKGVERSION}/html/form_41.png
-share/doc/gnuradio-${PKGVERSION}/html/form_42.png
-share/doc/gnuradio-${PKGVERSION}/html/form_43.png
-share/doc/gnuradio-${PKGVERSION}/html/form_44.png
-share/doc/gnuradio-${PKGVERSION}/html/form_45.png
-share/doc/gnuradio-${PKGVERSION}/html/form_5.png
-share/doc/gnuradio-${PKGVERSION}/html/form_6.png
-share/doc/gnuradio-${PKGVERSION}/html/form_7.png
-share/doc/gnuradio-${PKGVERSION}/html/form_8.png
-share/doc/gnuradio-${PKGVERSION}/html/form_9.png
 share/doc/gnuradio-${PKGVERSION}/html/form__menus_8h.html
 share/doc/gnuradio-${PKGVERSION}/html/form__menus_8h__dep__incl.map
 share/doc/gnuradio-${PKGVERSION}/html/form__menus_8h__dep__incl.md5
@@ -4472,7 +4427,6 @@ share/doc/gnuradio-${PKGVERSION}/html/form__menus_8h__incl.map
 share/doc/gnuradio-${PKGVERSION}/html/form__menus_8h__incl.md5
 share/doc/gnuradio-${PKGVERSION}/html/form__menus_8h__incl.png
 share/doc/gnuradio-${PKGVERSION}/html/form__menus_8h_source.html
-share/doc/gnuradio-${PKGVERSION}/html/formula.repository
 share/doc/gnuradio-${PKGVERSION}/html/fpll_8h.html
 share/doc/gnuradio-${PKGVERSION}/html/fpll_8h.js
 share/doc/gnuradio-${PKGVERSION}/html/fpll_8h__incl.map
@@ -4603,6 +4557,7 @@ share/doc/gnuradio-${PKGVERSION}/html/fsm_8h__incl.md5
 share/doc/gnuradio-${PKGVERSION}/html/fsm_8h__incl.png
 share/doc/gnuradio-${PKGVERSION}/html/fsm_8h_source.html
 share/doc/gnuradio-${PKGVERSION}/html/functions.html
+share/doc/gnuradio-${PKGVERSION}/html/functions_0x7e.html
 share/doc/gnuradio-${PKGVERSION}/html/functions_a.html
 share/doc/gnuradio-${PKGVERSION}/html/functions_b.html
 share/doc/gnuradio-${PKGVERSION}/html/functions_c.html
@@ -4614,6 +4569,7 @@ share/doc/gnuradio-${PKGVERSION}/html/functions_eval.html
 share/doc/gnuradio-${PKGVERSION}/html/functions_f.html
 share/doc/gnuradio-${PKGVERSION}/html/functions_func.html
 share/doc/gnuradio-${PKGVERSION}/html/functions_func.js
+share/doc/gnuradio-${PKGVERSION}/html/functions_func_0x7e.html
 share/doc/gnuradio-${PKGVERSION}/html/functions_func_a.html
 share/doc/gnuradio-${PKGVERSION}/html/functions_func_b.html
 share/doc/gnuradio-${PKGVERSION}/html/functions_func_c.html
@@ -4637,7 +4593,6 @@ share/doc/gnuradio-${PKGVERSION}/html/functions_func_t.html
 share/doc/gnuradio-${PKGVERSION}/html/functions_func_u.html
 share/doc/gnuradio-${PKGVERSION}/html/functions_func_v.html
 share/doc/gnuradio-${PKGVERSION}/html/functions_func_w.html
-share/doc/gnuradio-${PKGVERSION}/html/functions_func_~.html
 share/doc/gnuradio-${PKGVERSION}/html/functions_g.html
 share/doc/gnuradio-${PKGVERSION}/html/functions_h.html
 share/doc/gnuradio-${PKGVERSION}/html/functions_i.html
@@ -4692,7 +4647,6 @@ share/doc/gnuradio-${PKGVERSION}/html/functions_w.html
 share/doc/gnuradio-${PKGVERSION}/html/functions_x.html
 share/doc/gnuradio-${PKGVERSION}/html/functions_y.html
 share/doc/gnuradio-${PKGVERSION}/html/functions_z.html
-share/doc/gnuradio-${PKGVERSION}/html/functions_~.html
 share/doc/gnuradio-${PKGVERSION}/html/fxpt_8h.html
 share/doc/gnuradio-${PKGVERSION}/html/fxpt_8h__dep__incl.map
 share/doc/gnuradio-${PKGVERSION}/html/fxpt_8h__dep__incl.md5
@@ -10599,7 +10553,7 @@ share/doc/gnuradio-${PKGVERSION}/xml/mute__cc_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/mute__ff_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/mute__ii_8h.xml
 share/doc/gnuradio-${PKGVERSION}/xml/mute__ss_8h.xml
-share/doc/gnuradio-${PKGVERSION}/xml/namespace@236.xml
+share/doc/gnuradio-${PKGVERSION}/xml/namespace_0D236.xml
 share/doc/gnuradio-${PKGVERSION}/xml/namespaceapache.xml
 share/doc/gnuradio-${PKGVERSION}/xml/namespaceapache_1_1thrift.xml
 share/doc/gnuradio-${PKGVERSION}/xml/namespaceapache_1_1thrift_1_1server.xml
