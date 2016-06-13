@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2405 2016/06/13 22:41:26 youri Exp $
+$NetBSD: CHANGES-2016,v 1.2406 2016/06/13 23:07:14 youri Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3109,3 +3109,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/caja to 1.14.1 [youri 2016-06-13]
 	Updated print/atril to 1.14.1 [youri 2016-06-13]
 	Updated archivers/engrampa to 1.14.1 [youri 2016-06-13]
+	Updated security/polkit to 0.113nb2 [youri 2016-06-13]
