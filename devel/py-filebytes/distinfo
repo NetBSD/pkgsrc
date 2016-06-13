@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/06/13 02:07:35 kamil Exp $
+
+SHA1 (filebytes-0.9.10.tar.gz) = 08796c502e1b8865da354e41a5eb739e05b20321
+RMD160 (filebytes-0.9.10.tar.gz) = bd6a2957e6a477cada270c4d927fdadbd60b746a
+SHA512 (filebytes-0.9.10.tar.gz) = 4a3402f9a564d74b71290c33862cc857757a94621d3e2fe414807263f185601dd6f5dabed8105992b5f09132617e3aff9bf35561526621812224d687fb17c376
+Size (filebytes-0.9.10.tar.gz) = 1110923 bytes
