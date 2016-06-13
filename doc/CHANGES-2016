@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2397 2016/06/13 12:26:26 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2398 2016/06/13 12:26:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3102,3 +3102,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-ZopeInterface to 4.2.0 [wiz 2016-06-13]
 	Updated devel/py-decorator to 4.0.10 [wiz 2016-06-13]
 	Updated devel/radare2-valabind to 0.10.0 [wiz 2016-06-13]
+	Updated devel/radare2 to 0.10.3 [wiz 2016-06-13]
