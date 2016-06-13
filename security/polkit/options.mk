@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2016/05/20 18:39:33 youri Exp $
+# $NetBSD: options.mk,v 1.2 2016/06/13 23:06:46 youri Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.polkit
 PKG_SUPPORTED_OPTIONS=	introspection pam
-PKG_SUGGESTED_OPTIONS=	introspection pam
+PKG_SUGGESTED_OPTIONS=	pam
 
 .include "../../mk/bsd.options.mk"
 
