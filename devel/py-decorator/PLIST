@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/11/13 22:58:28 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/06/13 12:03:01 wiz Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/pbr.json
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/decorator.py
 ${PYSITELIB}/decorator.pyc
