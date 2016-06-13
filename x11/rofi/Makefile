@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/06/13 11:20:29 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2016/06/13 23:03:42 kamil Exp $
 
 DISTNAME=	rofi-1.0.1
 CATEGORIES=	x11
@@ -17,7 +17,7 @@ GNU_CONFIGURE=	yes
 
 REPLACE_BASH+=	script/rofi-sensible-terminal
 
-.include "../../x11/rofi/options.mk"
+.include "options.mk"
 
 .include "../../x11/startup-notification/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
