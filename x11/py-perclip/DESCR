@@ -1,0 +1,11 @@
+Pyperclip is a cross-platform Python module for copy and paste clipboard
+functions.
+
+This program detects underlaying OS and installed software:
+ - gtk,
+ - PyQt4,
+ - xclip,
+ - xsel,
+ - klipper (&qdbus).
+
+It works with Python 2 and 3.
