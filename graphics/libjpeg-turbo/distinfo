@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.10 2015/11/03 21:34:08 agc Exp $
+$NetBSD: distinfo,v 1.11 2016/06/14 12:07:57 wiz Exp $
 
-SHA1 (libjpeg-turbo-1.4.1.tar.gz) = 363a149f644211462c45138a19674f38100036d3
-RMD160 (libjpeg-turbo-1.4.1.tar.gz) = b27ca3054d3e690f7f4930f2da972bc6cd710997
-SHA512 (libjpeg-turbo-1.4.1.tar.gz) = 81197fdac40c55cb9820b832c55dab9dd5aa19427a22feb6027510a4dc9c45aeea6a37203447600481f5162a0a2ca972324997cc89fc7e51b51808260df0598d
-Size (libjpeg-turbo-1.4.1.tar.gz) = 1529614 bytes
-SHA1 (patch-aa) = b034aa62198abfee0627e84352506faa339b3bfb
+SHA1 (libjpeg-turbo-1.5.0.tar.gz) = 9adc21b927e48e4c6889e77079f6c1f3eecf98ab
+RMD160 (libjpeg-turbo-1.5.0.tar.gz) = 5ec39b43d6ab39864739ea4009a22c59cb5924cf
+SHA512 (libjpeg-turbo-1.5.0.tar.gz) = 3b7249a5f5c7b1f1fa99924ac6bc9bff3bf811815ef38505af5359d1f0edb0bfb771f0fa54308743a2d9305cb19a997453fdb00d0aade3f2f17ea917a45fde22
+Size (libjpeg-turbo-1.5.0.tar.gz) = 1654276 bytes
+SHA1 (patch-aa) = 9d021941dd5d6179c1febbe62c2bd2bf3157a6b8
 SHA1 (patch-configure) = 5e6b6b08c82e9406e9ab1b423dd1f6367cf02ab6
 SHA1 (patch-jpeglib.h) = 22f69b5fed1882c33f4a8a6e42b8aca5ed195de3
-SHA1 (patch-simd_jsimd__arm.c) = ad5e75466b7460063dbd05ed749107eb7039d478
+SHA1 (patch-simd_jsimd__arm.c) = a8bf4b4f2993d1878ee163a11d4189b4da3dafcd

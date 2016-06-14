@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2015/07/21 21:37:12 rjs Exp $
-#
+# $NetBSD: Makefile,v 1.14 2016/06/14 12:07:57 wiz Exp $
 
-DISTNAME=	libjpeg-turbo-1.4.1
+DISTNAME=	libjpeg-turbo-1.5.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libjpeg-turbo/}
 
@@ -21,6 +20,8 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+= --with-jpeg8
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
+
+PKGCONFIG_OVERRIDE=	release/libturbojpeg.pc.in release/libjpeg.pc.in
 
 TEST_TARGET=	test
 
