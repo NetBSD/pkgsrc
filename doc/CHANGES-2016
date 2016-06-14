@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2421 2016/06/14 08:00:53 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.2422 2016/06/14 12:08:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3126,3 +3126,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated emulators/py-keystone to 0.9nb1 [kamil 2016-06-14]
 	Added devel/ropper version 1.9.5 [kamil 2016-06-14]
 	Added security/py-aes version 1.6.0 [kamil 2016-06-14]
+	Updated graphics/libjpeg-turbo to 1.5.0 [wiz 2016-06-14]
