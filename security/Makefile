@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.584 2016/06/09 02:20:45 markd Exp $
+# $NetBSD: Makefile,v 1.585 2016/06/14 07:59:09 kamil Exp $
 #
 
 COMMENT=	Security tools
@@ -371,6 +371,7 @@ SUBDIR+=	py-Des
 SUBDIR+=	py-OpenSSL
 SUBDIR+=	py-SSLCrypto
 SUBDIR+=	py-acme
+SUBDIR+=	py-aes
 SUBDIR+=	py-asn1
 SUBDIR+=	py-asn1-modules
 SUBDIR+=	py-backports.ssl_match_hostname
