@@ -1,20 +1,20 @@
-$NetBSD: patch-aa,v 1.4 2015/07/21 21:37:12 rjs Exp $
+$NetBSD: patch-aa,v 1.5 2016/06/14 12:07:58 wiz Exp $
 
---- Makefile.in.orig	2015-06-08 18:41:46.000000000 +0000
+--- Makefile.in.orig	2016-06-07 17:33:56.000000000 +0000
 +++ Makefile.in
-@@ -414,7 +414,6 @@ build_cpu = @build_cpu@
- build_os = @build_os@
- build_vendor = @build_vendor@
+@@ -573,7 +573,6 @@ build_vendor = @build_vendor@
+ builddir = @builddir@
  datadir = @datadir@
+ datarootdir = @datarootdir@
 -docdir = @docdir@
+ dvidir = @dvidir@
  exec_prefix = @exec_prefix@
  host = @host@
- host_alias = @host_alias@
-@@ -495,6 +494,7 @@ dist_man1_MANS = cjpeg.1 djpeg.1 jpegtra
- DOCS = coderules.txt jconfig.txt change.log rdrle.c wrrle.c BUILDING.txt \
- 	ChangeLog.txt
- 
+@@ -654,6 +653,7 @@ djpeg_SOURCES = cdjpeg.h cderror.h cdjpe
+ djpeg_LDADD = libjpeg.la
+ djpeg_CFLAGS = -DGIF_SUPPORTED -DPPM_SUPPORTED $(am__append_16)
+ jpegtran_SOURCES = jpegtran.c rdswitch.c cdjpeg.c transupp.c transupp.h
 +docdir = $(datadir)/doc/libjpeg-turbo
- dist_doc_DATA = README README-turbo.txt libjpeg.txt structure.txt usage.txt \
- 	wizard.txt
- 
+ jpegtran_LDADD = libjpeg.la
+ rdjpgcom_SOURCES = rdjpgcom.c
+ rdjpgcom_LDADD = libjpeg.la
