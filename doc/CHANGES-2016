@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2419 2016/06/14 07:04:08 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.2420 2016/06/14 07:16:42 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3120,7 +3120,8 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated x11/mate-panel to 1.14.1 [youri 2016-06-13]
 	Updated sysutils/xfce4-diskperf-plugin to 2.5.99 [youri 2016-06-13]
 	Updated security/mate-polkit to 1.14.0nb1 [youri 2016-06-13]
-	Added sysutils/i3status to 2.10 [kamil 2016-06-14]
+	Added sysutils/i3status version 2.10 [kamil 2016-06-14]
 	Updated devel/py-capstone to 3.0.4nb1 [kamil 2016-06-14]
 	Updated emulators/keystone to 0.9nb1 [kamil 2016-06-14]
 	Updated emulators/py-keystone to 0.9nb1 [kamil 2016-06-14]
+	Added devel/ropper version 1.9.5 [kamil 2016-06-14]
