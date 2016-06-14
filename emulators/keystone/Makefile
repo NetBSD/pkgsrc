@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2016/06/11 21:03:41 kamil Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/14 06:59:43 kamil Exp $
 
 .include "Makefile.common"
+
+PKGREVISION=	1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Multi-platform and multi-arch assembler framework
