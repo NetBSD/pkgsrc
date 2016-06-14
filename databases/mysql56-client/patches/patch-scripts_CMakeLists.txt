@@ -1,10 +1,10 @@
-$NetBSD: patch-scripts_CMakeLists.txt,v 1.1 2013/02/13 21:00:06 adam Exp $
+$NetBSD: patch-scripts_CMakeLists.txt,v 1.2 2016/06/14 13:23:44 fhajny Exp $
 
-Fix paths.
+Fix paths. Set sysconfdir early for substitution in scripts.
 
---- scripts/CMakeLists.txt.orig	2013-01-22 16:54:49.000000000 +0000
+--- scripts/CMakeLists.txt.orig	2015-11-16 09:38:05.000000000 +0000
 +++ scripts/CMakeLists.txt
-@@ -182,22 +182,14 @@ ENDIF(UNIX)
+@@ -205,22 +205,15 @@ ENDIF(UNIX)
  # i.e. makes access relative the current directory. This matches
  # the documentation, so better not change this.
  
@@ -24,6 +24,15 @@ Fix paths.
 -ELSE()
    SET(localstatedir ${MYSQL_DATADIR})
 -ENDIF()
++SET(sysconfdir ${DEFAULT_SYSCONFDIR})
  
  IF(UNIX)
    SET(EXT)
+@@ -238,7 +231,6 @@ INSTALL_SCRIPT(
+   )
+ 
+ SET(prefix "${CMAKE_INSTALL_PREFIX}")
+-SET(sysconfdir ${prefix})
+ SET(bindir ${prefix}/${INSTALL_BINDIR})
+ SET(libexecdir ${prefix}/${INSTALL_SBINDIR})
+ SET(scriptdir ${prefix}/${INSTALL_BINDIR})
