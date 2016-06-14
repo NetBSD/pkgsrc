@@ -1,0 +1,4 @@
+You can use ropper to display information about binary files in different file
+formats and you can search for gadgets to build rop chains for different
+architectures (x86/X86_64, ARM/ARM64, MIPS/MIPS64, PowerPC). For disassembly
+ropper uses the awesome Capstone Framework.
