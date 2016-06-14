@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.41 2016/04/18 10:01:16 adam Exp $
+@comment $NetBSD: PLIST,v 1.42 2016/06/14 16:49:17 adam Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -1222,6 +1222,7 @@ share/mysql/test/r/ssl-big.result
 share/mysql/test/r/ssl.result
 share/mysql/test/r/ssl_8k_key.result
 share/mysql/test/r/ssl_and_innodb.result
+share/mysql/test/r/ssl_ca.result
 share/mysql/test/r/ssl_cipher.result
 share/mysql/test/r/ssl_compress.result
 share/mysql/test/r/ssl_connect.result
@@ -6237,6 +6238,7 @@ share/mysql/test/t/ssl.test
 share/mysql/test/t/ssl_8k_key-master.opt
 share/mysql/test/t/ssl_8k_key.test
 share/mysql/test/t/ssl_and_innodb.test
+share/mysql/test/t/ssl_ca.test
 share/mysql/test/t/ssl_cipher-master.opt
 share/mysql/test/t/ssl_cipher.test
 share/mysql/test/t/ssl_compress.test
