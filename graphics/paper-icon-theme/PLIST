@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/06/13 00:26:04 youri Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/06/14 13:29:28 youri Exp $
 share/icons/Paper/16x16/actions/action-unavailable.svg
 share/icons/Paper/16x16/actions/add.svg
 share/icons/Paper/16x16/actions/address-book-new.svg
@@ -437,6 +437,7 @@ share/icons/Paper/16x16/apps/AdobeReader11.png
 share/icons/Paper/16x16/apps/AdobeReader12.png
 share/icons/Paper/16x16/apps/AdobeReader8.png
 share/icons/Paper/16x16/apps/AdobeReader9.png
+share/icons/Paper/16x16/apps/Blender.png
 share/icons/Paper/16x16/apps/Etermutilities-terminal.png
 share/icons/Paper/16x16/apps/GnomeBaker.png
 share/icons/Paper/16x16/apps/MerProject-qtcreator.png
@@ -448,6 +449,8 @@ share/icons/Paper/16x16/apps/QtProject-linguist.png
 share/icons/Paper/16x16/apps/QtProject-qtcreator-qt5.png
 share/icons/Paper/16x16/apps/QtProject-qtcreator.png
 share/icons/Paper/16x16/apps/Sci48M.png
+share/icons/Paper/16x16/apps/Spotify.png
+share/icons/Paper/16x16/apps/Thunar.png
 share/icons/Paper/16x16/apps/VBox.png
 share/icons/Paper/16x16/apps/abrt.png
 share/icons/Paper/16x16/apps/access.png
@@ -984,9 +987,11 @@ share/icons/Paper/16x16/apps/orage.png
 share/icons/Paper/16x16/apps/orage_globaltime.png
 share/icons/Paper/16x16/apps/orca.png
 share/icons/Paper/16x16/apps/org.gnome.Aisleriot.png
+share/icons/Paper/16x16/apps/org.gnome.Bijiben.png
 share/icons/Paper/16x16/apps/org.gnome.Books.png
 share/icons/Paper/16x16/apps/org.gnome.Calendar.png
 share/icons/Paper/16x16/apps/org.gnome.Cheese.png
+share/icons/Paper/16x16/apps/org.gnome.Clocks.png
 share/icons/Paper/16x16/apps/org.gnome.Contacts.png
 share/icons/Paper/16x16/apps/org.gnome.Documents.png
 share/icons/Paper/16x16/apps/org.gnome.Mahjongg.png
@@ -2940,11 +2945,13 @@ share/icons/Paper/16x16/web/Amazon-www.amazon.de.png
 share/icons/Paper/16x16/web/Amazon-www.amazon.es.png
 share/icons/Paper/16x16/web/Amazon-www.amazon.fr.png
 share/icons/Paper/16x16/web/Amazon-www.amazon.it.png
+share/icons/Paper/16x16/web/Dropbox.png
 share/icons/Paper/16x16/web/Google-plus.google.com.png
 share/icons/Paper/16x16/web/Pocket-getpocket.com.png
 share/icons/Paper/16x16/web/Reddit-pay.reddit.com.png
 share/icons/Paper/16x16/web/Reddit-reddit.com.png
 share/icons/Paper/16x16/web/Twitter-twitter.com.png
+share/icons/Paper/16x16/web/YouTube-youtube.com.png
 share/icons/Paper/16x16/web/Youtube-youtube.com.png
 share/icons/Paper/16x16/web/amazon-mp3-store-source.png
 share/icons/Paper/16x16/web/amazon-store.png
@@ -3045,6 +3052,7 @@ share/icons/Paper/16x16@2x/apps/AdobeReader11.png
 share/icons/Paper/16x16@2x/apps/AdobeReader12.png
 share/icons/Paper/16x16@2x/apps/AdobeReader8.png
 share/icons/Paper/16x16@2x/apps/AdobeReader9.png
+share/icons/Paper/16x16@2x/apps/Blender.png
 share/icons/Paper/16x16@2x/apps/Etermutilities-terminal.png
 share/icons/Paper/16x16@2x/apps/GnomeBaker.png
 share/icons/Paper/16x16@2x/apps/MerProject-qtcreator.png
@@ -3056,6 +3064,8 @@ share/icons/Paper/16x16@2x/apps/QtProject-linguist.png
 share/icons/Paper/16x16@2x/apps/QtProject-qtcreator-qt5.png
 share/icons/Paper/16x16@2x/apps/QtProject-qtcreator.png
 share/icons/Paper/16x16@2x/apps/Sci48M.png
+share/icons/Paper/16x16@2x/apps/Spotify.png
+share/icons/Paper/16x16@2x/apps/Thunar.png
 share/icons/Paper/16x16@2x/apps/VBox.png
 share/icons/Paper/16x16@2x/apps/abrt.png
 share/icons/Paper/16x16@2x/apps/access.png
@@ -3592,9 +3602,11 @@ share/icons/Paper/16x16@2x/apps/orage.png
 share/icons/Paper/16x16@2x/apps/orage_globaltime.png
 share/icons/Paper/16x16@2x/apps/orca.png
 share/icons/Paper/16x16@2x/apps/org.gnome.Aisleriot.png
+share/icons/Paper/16x16@2x/apps/org.gnome.Bijiben.png
 share/icons/Paper/16x16@2x/apps/org.gnome.Books.png
 share/icons/Paper/16x16@2x/apps/org.gnome.Calendar.png
 share/icons/Paper/16x16@2x/apps/org.gnome.Cheese.png
+share/icons/Paper/16x16@2x/apps/org.gnome.Clocks.png
 share/icons/Paper/16x16@2x/apps/org.gnome.Contacts.png
 share/icons/Paper/16x16@2x/apps/org.gnome.Documents.png
 share/icons/Paper/16x16@2x/apps/org.gnome.Mahjongg.png
@@ -4539,11 +4551,13 @@ share/icons/Paper/16x16@2x/web/Amazon-www.amazon.de.png
 share/icons/Paper/16x16@2x/web/Amazon-www.amazon.es.png
 share/icons/Paper/16x16@2x/web/Amazon-www.amazon.fr.png
 share/icons/Paper/16x16@2x/web/Amazon-www.amazon.it.png
+share/icons/Paper/16x16@2x/web/Dropbox.png
 share/icons/Paper/16x16@2x/web/Google-plus.google.com.png
 share/icons/Paper/16x16@2x/web/Pocket-getpocket.com.png
 share/icons/Paper/16x16@2x/web/Reddit-pay.reddit.com.png
 share/icons/Paper/16x16@2x/web/Reddit-reddit.com.png
 share/icons/Paper/16x16@2x/web/Twitter-twitter.com.png
+share/icons/Paper/16x16@2x/web/YouTube-youtube.com.png
 share/icons/Paper/16x16@2x/web/Youtube-youtube.com.png
 share/icons/Paper/16x16@2x/web/amazon-mp3-store-source.png
 share/icons/Paper/16x16@2x/web/amazon-store.png
@@ -5802,6 +5816,7 @@ share/icons/Paper/24x24/apps/AdobeReader11.png
 share/icons/Paper/24x24/apps/AdobeReader12.png
 share/icons/Paper/24x24/apps/AdobeReader8.png
 share/icons/Paper/24x24/apps/AdobeReader9.png
+share/icons/Paper/24x24/apps/Blender.png
 share/icons/Paper/24x24/apps/Etermutilities-terminal.png
 share/icons/Paper/24x24/apps/GnomeBaker.png
 share/icons/Paper/24x24/apps/MerProject-qtcreator.png
@@ -5813,6 +5828,8 @@ share/icons/Paper/24x24/apps/QtProject-linguist.png
 share/icons/Paper/24x24/apps/QtProject-qtcreator-qt5.png
 share/icons/Paper/24x24/apps/QtProject-qtcreator.png
 share/icons/Paper/24x24/apps/Sci48M.png
+share/icons/Paper/24x24/apps/Spotify.png
+share/icons/Paper/24x24/apps/Thunar.png
 share/icons/Paper/24x24/apps/VBox.png
 share/icons/Paper/24x24/apps/abrt.png
 share/icons/Paper/24x24/apps/access.png
@@ -6349,9 +6366,11 @@ share/icons/Paper/24x24/apps/orage.png
 share/icons/Paper/24x24/apps/orage_globaltime.png
 share/icons/Paper/24x24/apps/orca.png
 share/icons/Paper/24x24/apps/org.gnome.Aisleriot.png
+share/icons/Paper/24x24/apps/org.gnome.Bijiben.png
 share/icons/Paper/24x24/apps/org.gnome.Books.png
 share/icons/Paper/24x24/apps/org.gnome.Calendar.png
 share/icons/Paper/24x24/apps/org.gnome.Cheese.png
+share/icons/Paper/24x24/apps/org.gnome.Clocks.png
 share/icons/Paper/24x24/apps/org.gnome.Contacts.png
 share/icons/Paper/24x24/apps/org.gnome.Documents.png
 share/icons/Paper/24x24/apps/org.gnome.Mahjongg.png
@@ -8360,11 +8379,13 @@ share/icons/Paper/24x24/web/Amazon-www.amazon.de.png
 share/icons/Paper/24x24/web/Amazon-www.amazon.es.png
 share/icons/Paper/24x24/web/Amazon-www.amazon.fr.png
 share/icons/Paper/24x24/web/Amazon-www.amazon.it.png
+share/icons/Paper/24x24/web/Dropbox.png
 share/icons/Paper/24x24/web/Google-plus.google.com.png
 share/icons/Paper/24x24/web/Pocket-getpocket.com.png
 share/icons/Paper/24x24/web/Reddit-pay.reddit.com.png
 share/icons/Paper/24x24/web/Reddit-reddit.com.png
 share/icons/Paper/24x24/web/Twitter-twitter.com.png
+share/icons/Paper/24x24/web/YouTube-youtube.com.png
 share/icons/Paper/24x24/web/Youtube-youtube.com.png
 share/icons/Paper/24x24/web/amazon-mp3-store-source.png
 share/icons/Paper/24x24/web/amazon-store.png
@@ -8465,6 +8486,7 @@ share/icons/Paper/24x24@2x/apps/AdobeReader11.png
 share/icons/Paper/24x24@2x/apps/AdobeReader12.png
 share/icons/Paper/24x24@2x/apps/AdobeReader8.png
 share/icons/Paper/24x24@2x/apps/AdobeReader9.png
+share/icons/Paper/24x24@2x/apps/Blender.png
 share/icons/Paper/24x24@2x/apps/Etermutilities-terminal.png
 share/icons/Paper/24x24@2x/apps/GnomeBaker.png
 share/icons/Paper/24x24@2x/apps/MerProject-qtcreator.png
@@ -8476,6 +8498,8 @@ share/icons/Paper/24x24@2x/apps/QtProject-linguist.png
 share/icons/Paper/24x24@2x/apps/QtProject-qtcreator-qt5.png
 share/icons/Paper/24x24@2x/apps/QtProject-qtcreator.png
 share/icons/Paper/24x24@2x/apps/Sci48M.png
+share/icons/Paper/24x24@2x/apps/Spotify.png
+share/icons/Paper/24x24@2x/apps/Thunar.png
 share/icons/Paper/24x24@2x/apps/VBox.png
 share/icons/Paper/24x24@2x/apps/abrt.png
 share/icons/Paper/24x24@2x/apps/access.png
@@ -9012,9 +9036,11 @@ share/icons/Paper/24x24@2x/apps/orage.png
 share/icons/Paper/24x24@2x/apps/orage_globaltime.png
 share/icons/Paper/24x24@2x/apps/orca.png
 share/icons/Paper/24x24@2x/apps/org.gnome.Aisleriot.png
+share/icons/Paper/24x24@2x/apps/org.gnome.Bijiben.png
 share/icons/Paper/24x24@2x/apps/org.gnome.Books.png
 share/icons/Paper/24x24@2x/apps/org.gnome.Calendar.png
 share/icons/Paper/24x24@2x/apps/org.gnome.Cheese.png
+share/icons/Paper/24x24@2x/apps/org.gnome.Clocks.png
 share/icons/Paper/24x24@2x/apps/org.gnome.Contacts.png
 share/icons/Paper/24x24@2x/apps/org.gnome.Documents.png
 share/icons/Paper/24x24@2x/apps/org.gnome.Mahjongg.png
@@ -9959,11 +9985,13 @@ share/icons/Paper/24x24@2x/web/Amazon-www.amazon.de.png
 share/icons/Paper/24x24@2x/web/Amazon-www.amazon.es.png
 share/icons/Paper/24x24@2x/web/Amazon-www.amazon.fr.png
 share/icons/Paper/24x24@2x/web/Amazon-www.amazon.it.png
+share/icons/Paper/24x24@2x/web/Dropbox.png
 share/icons/Paper/24x24@2x/web/Google-plus.google.com.png
 share/icons/Paper/24x24@2x/web/Pocket-getpocket.com.png
 share/icons/Paper/24x24@2x/web/Reddit-pay.reddit.com.png
 share/icons/Paper/24x24@2x/web/Reddit-reddit.com.png
 share/icons/Paper/24x24@2x/web/Twitter-twitter.com.png
+share/icons/Paper/24x24@2x/web/YouTube-youtube.com.png
 share/icons/Paper/24x24@2x/web/Youtube-youtube.com.png
 share/icons/Paper/24x24@2x/web/amazon-mp3-store-source.png
 share/icons/Paper/24x24@2x/web/amazon-store.png
@@ -10064,6 +10092,7 @@ share/icons/Paper/32x32/apps/AdobeReader11.png
 share/icons/Paper/32x32/apps/AdobeReader12.png
 share/icons/Paper/32x32/apps/AdobeReader8.png
 share/icons/Paper/32x32/apps/AdobeReader9.png
+share/icons/Paper/32x32/apps/Blender.png
 share/icons/Paper/32x32/apps/Etermutilities-terminal.png
 share/icons/Paper/32x32/apps/GnomeBaker.png
 share/icons/Paper/32x32/apps/MerProject-qtcreator.png
@@ -10075,6 +10104,8 @@ share/icons/Paper/32x32/apps/QtProject-linguist.png
 share/icons/Paper/32x32/apps/QtProject-qtcreator-qt5.png
 share/icons/Paper/32x32/apps/QtProject-qtcreator.png
 share/icons/Paper/32x32/apps/Sci48M.png
+share/icons/Paper/32x32/apps/Spotify.png
+share/icons/Paper/32x32/apps/Thunar.png
 share/icons/Paper/32x32/apps/VBox.png
 share/icons/Paper/32x32/apps/abrt.png
 share/icons/Paper/32x32/apps/access.png
@@ -10611,9 +10642,11 @@ share/icons/Paper/32x32/apps/orage.png
 share/icons/Paper/32x32/apps/orage_globaltime.png
 share/icons/Paper/32x32/apps/orca.png
 share/icons/Paper/32x32/apps/org.gnome.Aisleriot.png
+share/icons/Paper/32x32/apps/org.gnome.Bijiben.png
 share/icons/Paper/32x32/apps/org.gnome.Books.png
 share/icons/Paper/32x32/apps/org.gnome.Calendar.png
 share/icons/Paper/32x32/apps/org.gnome.Cheese.png
+share/icons/Paper/32x32/apps/org.gnome.Clocks.png
 share/icons/Paper/32x32/apps/org.gnome.Contacts.png
 share/icons/Paper/32x32/apps/org.gnome.Documents.png
 share/icons/Paper/32x32/apps/org.gnome.Mahjongg.png
@@ -11558,11 +11591,13 @@ share/icons/Paper/32x32/web/Amazon-www.amazon.de.png
 share/icons/Paper/32x32/web/Amazon-www.amazon.es.png
 share/icons/Paper/32x32/web/Amazon-www.amazon.fr.png
 share/icons/Paper/32x32/web/Amazon-www.amazon.it.png
+share/icons/Paper/32x32/web/Dropbox.png
 share/icons/Paper/32x32/web/Google-plus.google.com.png
 share/icons/Paper/32x32/web/Pocket-getpocket.com.png
 share/icons/Paper/32x32/web/Reddit-pay.reddit.com.png
 share/icons/Paper/32x32/web/Reddit-reddit.com.png
 share/icons/Paper/32x32/web/Twitter-twitter.com.png
+share/icons/Paper/32x32/web/YouTube-youtube.com.png
 share/icons/Paper/32x32/web/Youtube-youtube.com.png
 share/icons/Paper/32x32/web/amazon-mp3-store-source.png
 share/icons/Paper/32x32/web/amazon-store.png
@@ -11663,6 +11698,7 @@ share/icons/Paper/32x32@2x/apps/AdobeReader11.png
 share/icons/Paper/32x32@2x/apps/AdobeReader12.png
 share/icons/Paper/32x32@2x/apps/AdobeReader8.png
 share/icons/Paper/32x32@2x/apps/AdobeReader9.png
+share/icons/Paper/32x32@2x/apps/Blender.png
 share/icons/Paper/32x32@2x/apps/Etermutilities-terminal.png
 share/icons/Paper/32x32@2x/apps/GnomeBaker.png
 share/icons/Paper/32x32@2x/apps/MerProject-qtcreator.png
@@ -11674,6 +11710,8 @@ share/icons/Paper/32x32@2x/apps/QtProject-linguist.png
 share/icons/Paper/32x32@2x/apps/QtProject-qtcreator-qt5.png
 share/icons/Paper/32x32@2x/apps/QtProject-qtcreator.png
 share/icons/Paper/32x32@2x/apps/Sci48M.png
+share/icons/Paper/32x32@2x/apps/Spotify.png
+share/icons/Paper/32x32@2x/apps/Thunar.png
 share/icons/Paper/32x32@2x/apps/VBox.png
 share/icons/Paper/32x32@2x/apps/abrt.png
 share/icons/Paper/32x32@2x/apps/access.png
@@ -12210,9 +12248,11 @@ share/icons/Paper/32x32@2x/apps/orage.png
 share/icons/Paper/32x32@2x/apps/orage_globaltime.png
 share/icons/Paper/32x32@2x/apps/orca.png
 share/icons/Paper/32x32@2x/apps/org.gnome.Aisleriot.png
+share/icons/Paper/32x32@2x/apps/org.gnome.Bijiben.png
 share/icons/Paper/32x32@2x/apps/org.gnome.Books.png
 share/icons/Paper/32x32@2x/apps/org.gnome.Calendar.png
 share/icons/Paper/32x32@2x/apps/org.gnome.Cheese.png
+share/icons/Paper/32x32@2x/apps/org.gnome.Clocks.png
 share/icons/Paper/32x32@2x/apps/org.gnome.Contacts.png
 share/icons/Paper/32x32@2x/apps/org.gnome.Documents.png
 share/icons/Paper/32x32@2x/apps/org.gnome.Mahjongg.png
@@ -13157,11 +13197,13 @@ share/icons/Paper/32x32@2x/web/Amazon-www.amazon.de.png
 share/icons/Paper/32x32@2x/web/Amazon-www.amazon.es.png
 share/icons/Paper/32x32@2x/web/Amazon-www.amazon.fr.png
 share/icons/Paper/32x32@2x/web/Amazon-www.amazon.it.png
+share/icons/Paper/32x32@2x/web/Dropbox.png
 share/icons/Paper/32x32@2x/web/Google-plus.google.com.png
 share/icons/Paper/32x32@2x/web/Pocket-getpocket.com.png
 share/icons/Paper/32x32@2x/web/Reddit-pay.reddit.com.png
 share/icons/Paper/32x32@2x/web/Reddit-reddit.com.png
 share/icons/Paper/32x32@2x/web/Twitter-twitter.com.png
+share/icons/Paper/32x32@2x/web/YouTube-youtube.com.png
 share/icons/Paper/32x32@2x/web/Youtube-youtube.com.png
 share/icons/Paper/32x32@2x/web/amazon-mp3-store-source.png
 share/icons/Paper/32x32@2x/web/amazon-store.png
@@ -13262,6 +13304,7 @@ share/icons/Paper/48x48/apps/AdobeReader11.png
 share/icons/Paper/48x48/apps/AdobeReader12.png
 share/icons/Paper/48x48/apps/AdobeReader8.png
 share/icons/Paper/48x48/apps/AdobeReader9.png
+share/icons/Paper/48x48/apps/Blender.png
 share/icons/Paper/48x48/apps/Etermutilities-terminal.png
 share/icons/Paper/48x48/apps/GnomeBaker.png
 share/icons/Paper/48x48/apps/MerProject-qtcreator.png
@@ -13273,6 +13316,8 @@ share/icons/Paper/48x48/apps/QtProject-linguist.png
 share/icons/Paper/48x48/apps/QtProject-qtcreator-qt5.png
 share/icons/Paper/48x48/apps/QtProject-qtcreator.png
 share/icons/Paper/48x48/apps/Sci48M.png
+share/icons/Paper/48x48/apps/Spotify.png
+share/icons/Paper/48x48/apps/Thunar.png
 share/icons/Paper/48x48/apps/VBox.png
 share/icons/Paper/48x48/apps/abrt.png
 share/icons/Paper/48x48/apps/access.png
@@ -13809,9 +13854,11 @@ share/icons/Paper/48x48/apps/orage.png
 share/icons/Paper/48x48/apps/orage_globaltime.png
 share/icons/Paper/48x48/apps/orca.png
 share/icons/Paper/48x48/apps/org.gnome.Aisleriot.png
+share/icons/Paper/48x48/apps/org.gnome.Bijiben.png
 share/icons/Paper/48x48/apps/org.gnome.Books.png
 share/icons/Paper/48x48/apps/org.gnome.Calendar.png
 share/icons/Paper/48x48/apps/org.gnome.Cheese.png
+share/icons/Paper/48x48/apps/org.gnome.Clocks.png
 share/icons/Paper/48x48/apps/org.gnome.Contacts.png
 share/icons/Paper/48x48/apps/org.gnome.Documents.png
 share/icons/Paper/48x48/apps/org.gnome.Mahjongg.png
@@ -14792,11 +14839,13 @@ share/icons/Paper/48x48/web/Amazon-www.amazon.de.png
 share/icons/Paper/48x48/web/Amazon-www.amazon.es.png
 share/icons/Paper/48x48/web/Amazon-www.amazon.fr.png
 share/icons/Paper/48x48/web/Amazon-www.amazon.it.png
+share/icons/Paper/48x48/web/Dropbox.png
 share/icons/Paper/48x48/web/Google-plus.google.com.png
 share/icons/Paper/48x48/web/Pocket-getpocket.com.png
 share/icons/Paper/48x48/web/Reddit-pay.reddit.com.png
 share/icons/Paper/48x48/web/Reddit-reddit.com.png
 share/icons/Paper/48x48/web/Twitter-twitter.com.png
+share/icons/Paper/48x48/web/YouTube-youtube.com.png
 share/icons/Paper/48x48/web/Youtube-youtube.com.png
 share/icons/Paper/48x48/web/amazon-mp3-store-source.png
 share/icons/Paper/48x48/web/amazon-store.png
@@ -14897,6 +14946,7 @@ share/icons/Paper/48x48@2x/apps/AdobeReader11.png
 share/icons/Paper/48x48@2x/apps/AdobeReader12.png
 share/icons/Paper/48x48@2x/apps/AdobeReader8.png
 share/icons/Paper/48x48@2x/apps/AdobeReader9.png
+share/icons/Paper/48x48@2x/apps/Blender.png
 share/icons/Paper/48x48@2x/apps/Etermutilities-terminal.png
 share/icons/Paper/48x48@2x/apps/GnomeBaker.png
 share/icons/Paper/48x48@2x/apps/MerProject-qtcreator.png
@@ -14908,6 +14958,8 @@ share/icons/Paper/48x48@2x/apps/QtProject-linguist.png
 share/icons/Paper/48x48@2x/apps/QtProject-qtcreator-qt5.png
 share/icons/Paper/48x48@2x/apps/QtProject-qtcreator.png
 share/icons/Paper/48x48@2x/apps/Sci48M.png
+share/icons/Paper/48x48@2x/apps/Spotify.png
+share/icons/Paper/48x48@2x/apps/Thunar.png
 share/icons/Paper/48x48@2x/apps/VBox.png
 share/icons/Paper/48x48@2x/apps/abrt.png
 share/icons/Paper/48x48@2x/apps/access.png
@@ -15444,9 +15496,11 @@ share/icons/Paper/48x48@2x/apps/orage.png
 share/icons/Paper/48x48@2x/apps/orage_globaltime.png
 share/icons/Paper/48x48@2x/apps/orca.png
 share/icons/Paper/48x48@2x/apps/org.gnome.Aisleriot.png
+share/icons/Paper/48x48@2x/apps/org.gnome.Bijiben.png
 share/icons/Paper/48x48@2x/apps/org.gnome.Books.png
 share/icons/Paper/48x48@2x/apps/org.gnome.Calendar.png
 share/icons/Paper/48x48@2x/apps/org.gnome.Cheese.png
+share/icons/Paper/48x48@2x/apps/org.gnome.Clocks.png
 share/icons/Paper/48x48@2x/apps/org.gnome.Contacts.png
 share/icons/Paper/48x48@2x/apps/org.gnome.Documents.png
 share/icons/Paper/48x48@2x/apps/org.gnome.Mahjongg.png
@@ -16391,11 +16445,13 @@ share/icons/Paper/48x48@2x/web/Amazon-www.amazon.de.png
 share/icons/Paper/48x48@2x/web/Amazon-www.amazon.es.png
 share/icons/Paper/48x48@2x/web/Amazon-www.amazon.fr.png
 share/icons/Paper/48x48@2x/web/Amazon-www.amazon.it.png
+share/icons/Paper/48x48@2x/web/Dropbox.png
 share/icons/Paper/48x48@2x/web/Google-plus.google.com.png
 share/icons/Paper/48x48@2x/web/Pocket-getpocket.com.png
 share/icons/Paper/48x48@2x/web/Reddit-pay.reddit.com.png
 share/icons/Paper/48x48@2x/web/Reddit-reddit.com.png
 share/icons/Paper/48x48@2x/web/Twitter-twitter.com.png
+share/icons/Paper/48x48@2x/web/YouTube-youtube.com.png
 share/icons/Paper/48x48@2x/web/Youtube-youtube.com.png
 share/icons/Paper/48x48@2x/web/amazon-mp3-store-source.png
 share/icons/Paper/48x48@2x/web/amazon-store.png
@@ -16496,6 +16552,7 @@ share/icons/Paper/512x512/apps/AdobeReader11.png
 share/icons/Paper/512x512/apps/AdobeReader12.png
 share/icons/Paper/512x512/apps/AdobeReader8.png
 share/icons/Paper/512x512/apps/AdobeReader9.png
+share/icons/Paper/512x512/apps/Blender.png
 share/icons/Paper/512x512/apps/Etermutilities-terminal.png
 share/icons/Paper/512x512/apps/GnomeBaker.png
 share/icons/Paper/512x512/apps/MerProject-qtcreator.png
@@ -16507,6 +16564,8 @@ share/icons/Paper/512x512/apps/QtProject-linguist.png
 share/icons/Paper/512x512/apps/QtProject-qtcreator-qt5.png
 share/icons/Paper/512x512/apps/QtProject-qtcreator.png
 share/icons/Paper/512x512/apps/Sci48M.png
+share/icons/Paper/512x512/apps/Spotify.png
+share/icons/Paper/512x512/apps/Thunar.png
 share/icons/Paper/512x512/apps/VBox.png
 share/icons/Paper/512x512/apps/abrt.png
 share/icons/Paper/512x512/apps/access.png
@@ -17043,9 +17102,11 @@ share/icons/Paper/512x512/apps/orage.png
 share/icons/Paper/512x512/apps/orage_globaltime.png
 share/icons/Paper/512x512/apps/orca.png
 share/icons/Paper/512x512/apps/org.gnome.Aisleriot.png
+share/icons/Paper/512x512/apps/org.gnome.Bijiben.png
 share/icons/Paper/512x512/apps/org.gnome.Books.png
 share/icons/Paper/512x512/apps/org.gnome.Calendar.png
 share/icons/Paper/512x512/apps/org.gnome.Cheese.png
+share/icons/Paper/512x512/apps/org.gnome.Clocks.png
 share/icons/Paper/512x512/apps/org.gnome.Contacts.png
 share/icons/Paper/512x512/apps/org.gnome.Documents.png
 share/icons/Paper/512x512/apps/org.gnome.Mahjongg.png
@@ -17990,11 +18051,13 @@ share/icons/Paper/512x512/web/Amazon-www.amazon.de.png
 share/icons/Paper/512x512/web/Amazon-www.amazon.es.png
 share/icons/Paper/512x512/web/Amazon-www.amazon.fr.png
 share/icons/Paper/512x512/web/Amazon-www.amazon.it.png
+share/icons/Paper/512x512/web/Dropbox.png
 share/icons/Paper/512x512/web/Google-plus.google.com.png
 share/icons/Paper/512x512/web/Pocket-getpocket.com.png
 share/icons/Paper/512x512/web/Reddit-pay.reddit.com.png
 share/icons/Paper/512x512/web/Reddit-reddit.com.png
 share/icons/Paper/512x512/web/Twitter-twitter.com.png
+share/icons/Paper/512x512/web/YouTube-youtube.com.png
 share/icons/Paper/512x512/web/Youtube-youtube.com.png
 share/icons/Paper/512x512/web/amazon-mp3-store-source.png
 share/icons/Paper/512x512/web/amazon-store.png
@@ -18095,6 +18158,7 @@ share/icons/Paper/512x512@2x/apps/AdobeReader11.png
 share/icons/Paper/512x512@2x/apps/AdobeReader12.png
 share/icons/Paper/512x512@2x/apps/AdobeReader8.png
 share/icons/Paper/512x512@2x/apps/AdobeReader9.png
+share/icons/Paper/512x512@2x/apps/Blender.png
 share/icons/Paper/512x512@2x/apps/Etermutilities-terminal.png
 share/icons/Paper/512x512@2x/apps/GnomeBaker.png
 share/icons/Paper/512x512@2x/apps/MerProject-qtcreator.png
@@ -18106,6 +18170,8 @@ share/icons/Paper/512x512@2x/apps/QtProject-linguist.png
 share/icons/Paper/512x512@2x/apps/QtProject-qtcreator-qt5.png
 share/icons/Paper/512x512@2x/apps/QtProject-qtcreator.png
 share/icons/Paper/512x512@2x/apps/Sci48M.png
+share/icons/Paper/512x512@2x/apps/Spotify.png
+share/icons/Paper/512x512@2x/apps/Thunar.png
 share/icons/Paper/512x512@2x/apps/VBox.png
 share/icons/Paper/512x512@2x/apps/abrt.png
 share/icons/Paper/512x512@2x/apps/access.png
@@ -18642,9 +18708,11 @@ share/icons/Paper/512x512@2x/apps/orage.png
 share/icons/Paper/512x512@2x/apps/orage_globaltime.png
 share/icons/Paper/512x512@2x/apps/orca.png
 share/icons/Paper/512x512@2x/apps/org.gnome.Aisleriot.png
+share/icons/Paper/512x512@2x/apps/org.gnome.Bijiben.png
 share/icons/Paper/512x512@2x/apps/org.gnome.Books.png
 share/icons/Paper/512x512@2x/apps/org.gnome.Calendar.png
 share/icons/Paper/512x512@2x/apps/org.gnome.Cheese.png
+share/icons/Paper/512x512@2x/apps/org.gnome.Clocks.png
 share/icons/Paper/512x512@2x/apps/org.gnome.Contacts.png
 share/icons/Paper/512x512@2x/apps/org.gnome.Documents.png
 share/icons/Paper/512x512@2x/apps/org.gnome.Mahjongg.png
@@ -19589,11 +19657,13 @@ share/icons/Paper/512x512@2x/web/Amazon-www.amazon.de.png
 share/icons/Paper/512x512@2x/web/Amazon-www.amazon.es.png
 share/icons/Paper/512x512@2x/web/Amazon-www.amazon.fr.png
 share/icons/Paper/512x512@2x/web/Amazon-www.amazon.it.png
+share/icons/Paper/512x512@2x/web/Dropbox.png
 share/icons/Paper/512x512@2x/web/Google-plus.google.com.png
 share/icons/Paper/512x512@2x/web/Pocket-getpocket.com.png
 share/icons/Paper/512x512@2x/web/Reddit-pay.reddit.com.png
 share/icons/Paper/512x512@2x/web/Reddit-reddit.com.png
 share/icons/Paper/512x512@2x/web/Twitter-twitter.com.png
+share/icons/Paper/512x512@2x/web/YouTube-youtube.com.png
 share/icons/Paper/512x512@2x/web/Youtube-youtube.com.png
 share/icons/Paper/512x512@2x/web/amazon-mp3-store-source.png
 share/icons/Paper/512x512@2x/web/amazon-store.png
