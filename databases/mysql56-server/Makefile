@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2016/04/18 10:32:47 adam Exp $
+# $NetBSD: Makefile,v 1.29 2016/06/14 13:23:45 fhajny Exp $
 
 PKGNAME=	${DISTNAME:S/-/-server-/}
+PKGREVISION=	1
 COMMENT=	MySQL 5, a free SQL database (server)
 
 CONFLICTS=	mysql3-server-[0-9]*
@@ -35,6 +36,8 @@ PLIST.auth_socket=	yes
 .endif
 
 PTHREAD_OPTS+=		require
+
+CONF_FILES+=		share/mysql/my-default.cnf ${PKG_SYSCONFDIR}/my.cnf
 
 PKG_GROUPS=		${MYSQL_GROUP}
 PKG_USERS=		${MYSQL_USER}:${MYSQL_GROUP}
