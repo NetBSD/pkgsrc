@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2012/08/04 13:42:21 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2016/06/14 12:07:57 wiz Exp $
 bin/cjpeg
 bin/djpeg
 bin/jpegtran
@@ -12,13 +12,16 @@ include/jpeglib.h
 include/turbojpeg.h
 lib/libjpeg.la
 lib/libturbojpeg.la
+lib/pkgconfig/libjpeg.pc
+lib/pkgconfig/libturbojpeg.pc
 man/man1/cjpeg.1
 man/man1/djpeg.1
 man/man1/jpegtran.1
 man/man1/rdjpgcom.1
 man/man1/wrjpgcom.1
-share/doc/libjpeg-turbo/README
-share/doc/libjpeg-turbo/README-turbo.txt
+share/doc/libjpeg-turbo/LICENSE.md
+share/doc/libjpeg-turbo/README.ijg
+share/doc/libjpeg-turbo/README.md
 share/doc/libjpeg-turbo/example.c
 share/doc/libjpeg-turbo/libjpeg.txt
 share/doc/libjpeg-turbo/structure.txt
