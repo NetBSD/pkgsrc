@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2424 2016/06/14 18:03:07 agc Exp $
+$NetBSD: CHANGES-2016,v 1.2425 2016/06/14 18:16:18 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3132,3 +3132,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/mysql55-server to 5.5.50 [adam 2016-06-14]
 	Updated security/netpgpverify to 20160614 [agc 2016-06-14]
 	Updated security/libnetpgpverify to 20160614 [agc 2016-06-14]
+	Updated x11/dunst to 1.1.0nb1 [kamil 2016-06-14]
