@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/06/12 23:46:22 youri Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/14 00:39:16 youri Exp $
 
 DISTNAME=	arc-theme
 PKGNAME=	arc-theme-20160605
@@ -15,7 +15,7 @@ GITHUB_TAG=	20160605
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	automake pkg-config
+USE_TOOLS+=	automake pkg-config intltool
 DEPENDS+=	gtk2-engines-murrine-[0-9]*:../../x11/gtk2-engines-murrine
 DEPENDS+=	gnome-themes-standard-[0-9]*:../../graphics/gnome-themes-standard
 
