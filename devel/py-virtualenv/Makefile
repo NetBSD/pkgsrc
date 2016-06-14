@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2016/06/08 17:49:19 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2016/06/14 11:21:12 wiedi Exp $
 
 DISTNAME=	virtualenv-15.0.2
+PKGREVISION=	1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_PYPI:=v/virtualenv/}
@@ -15,7 +16,7 @@ FILES_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 REPLACE_PYTHON=	virtualenv.py
 
 post-install:
-	${RM} -f ${DESTDIR}${PREFIX}/bin/virtualenv
+	${MV} ${DESTDIR}${PREFIX}/bin/virtualenv ${DESTDIR}${PREFIX}/bin/virtualenv-${PYVERSSUFFIX}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
