@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2016/06/13 23:08:40 kamil Exp $
+# $NetBSD: Makefile,v 1.3 2016/06/14 06:54:19 kamil Exp $
 
 .include "../../devel/capstone/Makefile.common"
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES+=	python
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -11,5 +12,6 @@ LICENSE=	modified-bsd
 
 PYSETUPSUBDIR=	bindings/python
 
+.include "../../devel/capstone/buildlink3.mk"
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
