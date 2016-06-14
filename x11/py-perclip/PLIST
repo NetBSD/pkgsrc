@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2016/06/14 08:37:24 kamil Exp $
+${PYSITELIB}/${EGG_FILE}/PKG-INFO
+${PYSITELIB}/${EGG_FILE}/SOURCES.txt
+${PYSITELIB}/${EGG_FILE}/dependency_links.txt
+${PYSITELIB}/${EGG_FILE}/top_level.txt
+${PYSITELIB}/pyperclip/__init__.py
+${PYSITELIB}/pyperclip/__init__.pyc
+${PYSITELIB}/pyperclip/__init__.pyo
+${PYSITELIB}/pyperclip/clipboards.py
+${PYSITELIB}/pyperclip/clipboards.pyc
+${PYSITELIB}/pyperclip/clipboards.pyo
+${PYSITELIB}/pyperclip/exceptions.py
+${PYSITELIB}/pyperclip/exceptions.pyc
+${PYSITELIB}/pyperclip/exceptions.pyo
+${PYSITELIB}/pyperclip/windows.py
+${PYSITELIB}/pyperclip/windows.pyc
+${PYSITELIB}/pyperclip/windows.pyo
