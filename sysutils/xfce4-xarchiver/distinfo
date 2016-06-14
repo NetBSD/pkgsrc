@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 01:32:41 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/06/14 12:13:34 youri Exp $
 
 SHA1 (xarchiver-0.5.4.tar.bz2) = 4a02a6f77b03be72065f19dd98db1fa5325d3bb6
 RMD160 (xarchiver-0.5.4.tar.bz2) = af130364d48678ee74a818eccfc8c7de34294e20
 SHA512 (xarchiver-0.5.4.tar.bz2) = 3b767c2601d94104e2fc72aa8d168afa5a154b5747a9b0518d1c348417e56e4c19d872a0029fb78decc897e0f3bc9573e17d0317b85f584e7275b0e519f5f30d
 Size (xarchiver-0.5.4.tar.bz2) = 1003045 bytes
+SHA1 (patch-xarchiver.desktop.in) = cf261bcb66bca0d87afd59a6ca38f1433cb1b482
