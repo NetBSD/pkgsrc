@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2416 2016/06/13 23:29:11 youri Exp $
+$NetBSD: CHANGES-2016,v 1.2417 2016/06/14 06:42:13 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3120,3 +3120,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated x11/mate-panel to 1.14.1 [youri 2016-06-13]
 	Updated sysutils/xfce4-diskperf-plugin to 2.5.99 [youri 2016-06-13]
 	Updated security/mate-polkit to 1.14.0nb1 [youri 2016-06-13]
+	Added sysutils/i3status to 2.10 [kamil 2016-06-14]
