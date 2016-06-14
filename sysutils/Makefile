@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.673 2016/06/08 14:17:29 jperkin Exp $
+# $NetBSD: Makefile,v 1.674 2016/06/14 06:40:31 kamil Exp $
 #
 
 COMMENT=	System utilities
@@ -268,6 +268,7 @@ SUBDIR+=	hs-temporary
 SUBDIR+=	htop
 SUBDIR+=	hytctl
 SUBDIR+=	i2ocfg
+SUBDIR+=	i3status
 SUBDIR+=	i810switch
 SUBDIR+=	iat
 SUBDIR+=	idesk
