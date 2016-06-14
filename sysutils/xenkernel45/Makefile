@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2016/05/21 16:07:01 prlw1 Exp $
+# $NetBSD: Makefile,v 1.16 2016/06/14 15:38:54 prlw1 Exp $
 
 VERSION=	4.5.3
 DISTNAME=	xen-${VERSION}
@@ -36,7 +36,7 @@ EXTRA_CFLAGS+=	-Qunused-arguments -no-integrated-as -Wno-error=format \
 		-Wno-error=unused-function -Wno-error=unused-const-variable \
 		-Wno-error=ignored-attributes -Wno-error=initializer-overrides
 .endif
-.if !empty(PKGSRC_COMPILER:Mgcc)
+.if !empty(CC_VERSION:Mgcc-5*)
 EXTRA_CFLAGS+=	-Wno-error=maybe-uninitialized
 .endif
 
