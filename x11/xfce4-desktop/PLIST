@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.23 2015/04/21 08:56:43 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.24 2016/06/14 13:09:47 youri Exp $
 bin/xfdesktop
 bin/xfdesktop-settings
 man/man1/xfdesktop.1
 share/applications/xfce-backdrop-settings.desktop
 share/backgrounds/xfce/xfce-blue.jpg
-share/backgrounds/xfce/xfce-teal.jpg
 share/icons/hicolor/32x32/apps/xfce4-backdrop.png
 share/icons/hicolor/32x32/apps/xfce4-menueditor.png
 share/icons/hicolor/48x48/apps/xfce4-backdrop.png
