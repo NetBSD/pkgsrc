@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/06/14 07:58:40 kamil Exp $
+
+SHA1 (pyaes-1.6.0.tar.gz) = 9068e3e30e4ecc6dd91c96a4251fda810a2249c2
+RMD160 (pyaes-1.6.0.tar.gz) = c77341f48d8210fe4078f76aa062835802cc13ae
+SHA512 (pyaes-1.6.0.tar.gz) = e9886cd09e9c803ecd71d72716c33b2721daab940356300726e34951cae945c995b3057e9574299585b77a0bd96058b505a07bfd146dcaf04db63c0ac251d454
+Size (pyaes-1.6.0.tar.gz) = 28855 bytes

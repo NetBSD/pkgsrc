@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2016/06/14 07:58:40 kamil Exp $
+${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/pyaes/__init__.py
+${PYSITELIB}/pyaes/__init__.pyc
+${PYSITELIB}/pyaes/__init__.pyo
+${PYSITELIB}/pyaes/aes.py
+${PYSITELIB}/pyaes/aes.pyc
+${PYSITELIB}/pyaes/aes.pyo
+${PYSITELIB}/pyaes/blockfeeder.py
+${PYSITELIB}/pyaes/blockfeeder.pyc
+${PYSITELIB}/pyaes/blockfeeder.pyo
+${PYSITELIB}/pyaes/util.py
+${PYSITELIB}/pyaes/util.pyc
+${PYSITELIB}/pyaes/util.pyo
