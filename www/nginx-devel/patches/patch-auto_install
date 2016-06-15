@@ -1,16 +1,16 @@
-$NetBSD: patch-auto_install,v 1.1 2013/12/05 15:04:06 imil Exp $
+$NetBSD: patch-auto_install,v 1.2 2016/06/15 14:53:48 fhajny Exp $
 
 Do not create PID directory.
 
---- auto/install.orig	2013-11-19 10:03:47.000000000 +0000
+--- auto/install.orig	2016-05-31 13:43:50.000000000 +0000
 +++ auto/install
-@@ -141,9 +141,6 @@ install:	$NGX_OBJS${ngx_dirsep}nginx${ng
+@@ -148,9 +148,6 @@ install:	build $NGX_INSTALL_PERL_MODULES
  		|| cp conf/nginx.conf '\$(DESTDIR)$NGX_CONF_PATH'
  	cp conf/nginx.conf '\$(DESTDIR)$NGX_CONF_PREFIX/nginx.conf.default'
  
--	test -d '\$(DESTDIR)`dirname "$NGX_PID_PATH"`' \
+-	test -d '\$(DESTDIR)`dirname "$NGX_PID_PATH"`' \\
 -		|| mkdir -p '\$(DESTDIR)`dirname "$NGX_PID_PATH"`'
 -
- 	test -d '\$(DESTDIR)`dirname "$NGX_HTTP_LOG_PATH"`' || \
- 		mkdir -p '\$(DESTDIR)`dirname "$NGX_HTTP_LOG_PATH"`'
+ 	test -d '\$(DESTDIR)`dirname "$NGX_HTTP_LOG_PATH"`' \\
+ 		|| mkdir -p '\$(DESTDIR)`dirname "$NGX_HTTP_LOG_PATH"`'
  
