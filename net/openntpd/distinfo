@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.12 2016/05/14 14:55:34 bsiegert Exp $
+$NetBSD: distinfo,v 1.13 2016/06/15 05:40:21 wiz Exp $
 
-SHA1 (openntpd-5.9p1.tar.gz) = ad190fea59fab655ce79b263849d552e46accaac
-RMD160 (openntpd-5.9p1.tar.gz) = b3fb3371b3f2612c7fe2a4d36dd25bc96e1c772e
-SHA512 (openntpd-5.9p1.tar.gz) = 227a4d42f43f4abfaa97fb85cf121d3b9a6646259faeda785dbeb3e4a27285a7f95daf96e72135871a31f772895f3b66c10bd628c87e453507ce69102f5e1213
-Size (openntpd-5.9p1.tar.gz) = 432844 bytes
-SHA1 (patch-configure) = 9a6b639f7a88d2047fa2b61727b0824406ab660f
+SHA1 (openntpd-6.0p1.tar.gz) = 4495e1ba750a6c6c623bba784c5e0f6423585206
+RMD160 (openntpd-6.0p1.tar.gz) = a07b4c96d843c206550a20f839485c04771916b8
+SHA512 (openntpd-6.0p1.tar.gz) = a71c516dbe7596cbcb3a385112a59a82185b7e3d93a52eda695cea5a0a599ba7fbf58daa81da55d608255cb6950398123fa7d71663604a4c3bcbee949711296d
+Size (openntpd-6.0p1.tar.gz) = 432696 bytes
