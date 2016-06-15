@@ -1,0 +1,14 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2016/06/15 22:04:17 kamil Exp $
+
+Add NetBSD entry.
+
+--- CMakeLists.txt.orig	2016-01-30 10:49:18.000000000 +0000
++++ CMakeLists.txt
+@@ -59,6 +59,7 @@ endif()
+ 
+ set( USE_CLANG 1 )
+ set( IS_FREEBSD 0 )
++set( IS_NETBSD 1 )
+ set( BUILD_WXC 0 )
+ set( CL_COPY_WX_LIBS 0 )
+ set( WITH_SFTP 1 )
