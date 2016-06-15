@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/09/03 23:01:47 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2016/06/15 20:10:51 rumko Exp $
 
 Avoid using obsolete functions.
 
