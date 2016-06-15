@@ -1,0 +1,22 @@
+$NetBSD: patch-sdk_wxsqlite3_configure,v 1.1 2016/06/15 22:04:17 kamil Exp $
+
+Fix shell portability issue.
+
+--- sdk/wxsqlite3/configure.orig	2016-01-30 10:49:18.000000000 +0000
++++ sdk/wxsqlite3/configure
+@@ -5717,7 +5717,7 @@ echo "${ECHO_T}$bakefile_cv_gcc31" >&6
+             SHARED_LD_CXX="\${CXX} -dynamiclib -single_module -headerpad_max_install_names -o"
+         fi
+ 
+-        if test "x$GCC" == "xyes"; then
++        if test "x$GCC" = "xyes"; then
+             PIC_FLAG="-dynamic -fPIC"
+         fi
+         if test "x$XLCC" = "xyes"; then
+@@ -8045,6 +8045,3 @@ echo "$as_me: error:
+         echo "  Now, just run make."
+         echo " ----------------------------------------------------------------"
+         echo
+-
+-
+-
