@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2436 2016/06/15 14:54:16 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.2437 2016/06/15 20:03:45 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3146,3 +3146,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/SOGo to 2.3.12 [taca 2016-06-15]
 	Updated www/nginx to 1.10.1 [fhajny 2016-06-15]
 	Updated www/nginx-devel to 1.11.1 [fhajny 2016-06-15]
+	Updated security/py-acme to 0.8.1 [fhajny 2016-06-15]
+	Updated security/py-certbot to 0.8.1 [fhajny 2016-06-15]
