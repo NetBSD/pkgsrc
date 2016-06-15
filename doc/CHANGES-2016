@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2430 2016/06/15 08:40:04 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.2431 2016/06/15 12:07:55 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3139,3 +3139,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-CGI to 4.31 [wiz 2016-06-15]
 	Updated graphics/p5-Image-ExifTool to 10.20 [wiz 2016-06-15]
 	Added editors/sasm version 3.5.0 [kamil 2016-06-15]
+	Updated databases/mysql56-client to 5.6.31 [adam 2016-06-15]
+	Updated databases/mysql56-server to 5.6.31 [adam 2016-06-15]
