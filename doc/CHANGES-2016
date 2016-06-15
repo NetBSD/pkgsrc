@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2435 2016/06/15 14:54:04 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.2436 2016/06/15 14:54:16 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3145,3 +3145,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/SOPE to 2.3.12 [taca 2016-06-15]
 	Updated www/SOGo to 2.3.12 [taca 2016-06-15]
 	Updated www/nginx to 1.10.1 [fhajny 2016-06-15]
+	Updated www/nginx-devel to 1.11.1 [fhajny 2016-06-15]
