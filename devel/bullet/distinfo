@@ -1,9 +1,7 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 03:27:17 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/06/15 20:10:50 rumko Exp $
 
-SHA1 (bullet-2.76.tgz) = 95043d586001387eab50cd773f4082e1a0d6f1b0
-RMD160 (bullet-2.76.tgz) = 2024f8674791e596dd6b605000dad8052a796eed
-SHA512 (bullet-2.76.tgz) = 07f714fef5a4565197a27359fc18ecd4f24414b9ce5e32a6c867a2a8cb8fe157d46210f31ea5a1917d1b12dfe2f6a82ca856364ceaa5007821bd286054ee0cf7
-Size (bullet-2.76.tgz) = 6193578 bytes
-SHA1 (patch-Demos_MiniCL__VectorAdd_CMakeLists.txt) = cb80ec8046c9b93811540aef97dcc255b7c31e8f
-SHA1 (patch-aa) = de9d5ce6e67c8e5a4a2efa5c67e48bbb790d54ce
-SHA1 (patch-src_BulletSoftBody_btSoftBodyInternals.h) = 00b5a8b56f17239d90e9411932a4e6f1ac5ee443
+SHA1 (bullet-2.82-r2704.tgz) = a0867257b9b18e9829bbeb4c6c5872a5b29d1d33
+RMD160 (bullet-2.82-r2704.tgz) = e474f915b0d0bc8dc7d8d137eced9291732cc7fc
+SHA512 (bullet-2.82-r2704.tgz) = 44bec0bd74e6d9cd8c75a41d0faa068dc05f0cdad92ff001cc53ff29912db245606827a9e763ce2cf1b551b545668a779fdc4455f73c1901b57aaa4eee31901f
+Size (bullet-2.82-r2704.tgz) = 7937108 bytes
+SHA1 (patch-aa) = edecca92f1c3ff2ed1544d2d98767883e3f8f497
