@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2016/06/15 08:38:29 kamil Exp $
+bin/fasm
+bin/listing
+bin/sasm
+share/applications/sasm.desktop
+share/doc/sasm/changelog.gz
+share/doc/sasm/copyright
+share/sasm/NASM/macro.c
+share/sasm/Projects/FASMHello.asm
+share/sasm/Projects/FASMHellox64.asm
+share/sasm/Projects/GASHello.asm
+share/sasm/Projects/GASHellox64.asm
+share/sasm/Projects/NASMHello.asm
+share/sasm/Projects/NASMHellox64.asm
+share/sasm/include/io.inc
+share/sasm/include/io64.inc
+share/sasm/keys.ini
+share/sasm/sasm.png
