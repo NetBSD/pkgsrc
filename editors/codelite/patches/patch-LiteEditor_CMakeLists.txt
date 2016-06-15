@@ -1,0 +1,36 @@
+$NetBSD: patch-LiteEditor_CMakeLists.txt,v 1.1 2016/06/15 22:04:17 kamil Exp $
+
+Add switch for NetBSD to not fall under "other OS".
+
+Fix path of installation of manpages.
+
+--- LiteEditor/CMakeLists.txt.orig	2016-01-30 10:49:18.000000000 +0000
++++ LiteEditor/CMakeLists.txt
+@@ -14,6 +14,9 @@ include( "${wxWidgets_USE_FILE}" )
+ # Include paths
+ include_directories("${CL_SRC_ROOT}/Plugin" "${CL_SRC_ROOT}/sdk/wxsqlite3/include" "${CL_SRC_ROOT}/CodeLite" "${CL_SRC_ROOT}/PCH" "${CL_SRC_ROOT}/Interfaces")
+ 
++# GNU dirs
++include(GNUInstallDirs)
++
+ ## On UNIX we require GTK
+ if (UNIX AND NOT APPLE)
+     if (GTK_VERSION EQUAL 3)
+@@ -68,6 +71,8 @@ set( ADDITIONAL_LIBRARIES "" )
+ if (UNIX)
+     if ( IS_FREEBSD )
+         set(ADDITIONAL_LIBRARIES "-lkvm")
++    elseif ( IS_NETBSD )
++        set(ADDITIONAL_LIBRARIES "")
+     elseif ( UNIX AND NOT APPLE )
+         set(ADDITIONAL_LIBRARIES "-ldl -lutil -lgobject-2.0")
+     else ( )
+@@ -112,7 +117,7 @@ if(NOT APPLE)
+ 
+     ## Manual pages
+     if(UNIX AND NOT APPLE)
+-        install(DIRECTORY ${CL_SRC_ROOT}/Runtime/man1 DESTINATION ${CL_PREFIX}/share/man)
++        install(DIRECTORY ${CL_SRC_ROOT}/Runtime/man1 DESTINATION ${CL_PREFIX}/${CMAKE_INSTALL_MANDIR})
+     endif()
+ 
+     ## Copy default configuration files
