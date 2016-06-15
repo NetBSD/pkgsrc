@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.172 2016/05/21 21:46:12 youri Exp $
+# $NetBSD: Makefile,v 1.173 2016/06/15 08:38:54 kamil Exp $
 #
 
 COMMENT=	Editors
@@ -116,6 +116,7 @@ SUBDIR+=	qgoogletranslator
 SUBDIR+=	rox-edit
 SUBDIR+=	sam
 SUBDIR+=	sandy
+SUBDIR+=	sasm
 SUBDIR+=	scite
 SUBDIR+=	se
 SUBDIR+=	speedbar
