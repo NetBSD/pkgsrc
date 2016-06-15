@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2015/11/03 21:33:51 agc Exp $
+$NetBSD: distinfo,v 1.8 2016/06/15 18:55:18 rumko Exp $
 
 SHA1 (Coin-3.1.3.tar.gz) = 8e9f05628461963623686d3ec53102214e233dd1
 RMD160 (Coin-3.1.3.tar.gz) = e57fd6a4876a06874429f9ad6b96f166f5609362
@@ -6,4 +6,5 @@ SHA512 (Coin-3.1.3.tar.gz) = d6fd47ecc74e96fc4de46e3a683f038f1907b96db2bbe935fb4
 Size (Coin-3.1.3.tar.gz) = 5981534 bytes
 SHA1 (patch-aa) = 9d5e5f1cc46344e2c882059d29625762365d628e
 SHA1 (patch-include_Inventor_C_base_math-undefs.h) = 0faecc1d8b3b0d08dff9e6e07ce644a2fdc745aa
+SHA1 (patch-include_Inventor_SbBasic.h) = 424efed0d4655d3a0f4099403f2f127e6499cb73
 SHA1 (patch-src_fonts_freetype.cpp) = 32a4713f2a200724f76e64c42d68a64e4fc8fde7
