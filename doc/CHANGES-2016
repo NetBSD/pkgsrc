@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2426 2016/06/15 03:35:10 agc Exp $
+$NetBSD: CHANGES-2016,v 1.2427 2016/06/15 05:40:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3135,3 +3135,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated x11/dunst to 1.1.0nb1 [kamil 2016-06-14]
 	Updated security/netpgpverify to 20160615 [agc 2016-06-15]
 	Updated security/libnetpgpverify to 20160615 [agc 2016-06-15]
+	Updated net/openntpd to 6.0p1 [wiz 2016-06-15]
