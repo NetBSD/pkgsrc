@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2437 2016/06/15 20:03:45 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.2438 2016/06/15 20:12:20 rumko Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3148,3 +3148,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/nginx-devel to 1.11.1 [fhajny 2016-06-15]
 	Updated security/py-acme to 0.8.1 [fhajny 2016-06-15]
 	Updated security/py-certbot to 0.8.1 [fhajny 2016-06-15]
+	Updated devel/bullet to 2.82 [rumko 2016-06-15]
+	Updated devel/bullet to 2.82 [rumko 2016-06-15]
