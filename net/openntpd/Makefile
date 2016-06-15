@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2016/05/14 14:55:34 bsiegert Exp $
+# $NetBSD: Makefile,v 1.44 2016/06/15 05:40:21 wiz Exp $
 
-DISTNAME=		openntpd-5.9p1
+DISTNAME=		openntpd-6.0p1
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_OPENBSD:=OpenNTPD/}
 
