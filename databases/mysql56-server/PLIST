@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2016/04/18 10:32:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.24 2016/06/15 11:30:40 adam Exp $
 bin/innochecksum
 bin/my_print_defaults
 bin/myisam_ftdump
@@ -32,6 +32,7 @@ lib/mysql/plugin/qa_auth_interface.so
 lib/mysql/plugin/qa_auth_server.so
 lib/mysql/plugin/semisync_master.so
 lib/mysql/plugin/semisync_slave.so
+lib/mysql/plugin/test_udf_services.so
 lib/mysql/plugin/validate_password.so
 sbin/mysqld
 share/aclocal/mysql.m4
@@ -39,7 +40,6 @@ share/doc/mysql/COPYING
 share/doc/mysql/ChangeLog
 share/doc/mysql/INFO_BIN
 share/doc/mysql/INFO_SRC
-share/doc/mysql/INSTALL-BINARY
 share/doc/mysql/README
 share/mysql/binary-configure
 share/mysql/bulgarian/errmsg.sys
@@ -255,6 +255,7 @@ share/mysql/test/extra/rpl_tests/rpl_failed_optimize.test
 share/mysql/test/extra/rpl_tests/rpl_filters.test
 share/mysql/test/extra/rpl_tests/rpl_flsh_tbls.test
 share/mysql/test/extra/rpl_tests/rpl_foreign_key.test
+share/mysql/test/extra/rpl_tests/rpl_generate_mts_gap.test
 share/mysql/test/extra/rpl_tests/rpl_get_master_version_and_clock.test
 share/mysql/test/extra/rpl_tests/rpl_gtid_drop_table.inc
 share/mysql/test/extra/rpl_tests/rpl_gtid_mts_relay_log_recovery.test
@@ -282,6 +283,7 @@ share/mysql/test/extra/rpl_tests/rpl_mixing_engines.test
 share/mysql/test/extra/rpl_tests/rpl_mts_crash_safe.inc
 share/mysql/test/extra/rpl_tests/rpl_mts_crash_safe.test
 share/mysql/test/extra/rpl_tests/rpl_mts_execute_partial_trx_in_relay_log.inc
+share/mysql/test/extra/rpl_tests/rpl_mts_relay_log_recovery.test
 share/mysql/test/extra/rpl_tests/rpl_multi_query.test
 share/mysql/test/extra/rpl_tests/rpl_multi_update.test
 share/mysql/test/extra/rpl_tests/rpl_multi_update2.test
@@ -1549,6 +1551,7 @@ share/mysql/test/r/ssl-sha512.result
 share/mysql/test/r/ssl.result
 share/mysql/test/r/ssl_8k_key.result
 share/mysql/test/r/ssl_and_innodb.result
+share/mysql/test/r/ssl_ca.result
 share/mysql/test/r/ssl_cipher.result
 share/mysql/test/r/ssl_compress.result
 share/mysql/test/r/ssl_connect.result
@@ -1669,6 +1672,7 @@ share/mysql/test/r/type_uint.result
 share/mysql/test/r/type_varchar.result
 share/mysql/test/r/type_year.result
 share/mysql/test/r/udf.result
+share/mysql/test/r/udf_services.result
 share/mysql/test/r/udf_skip_grants.result
 share/mysql/test/r/union.result
 share/mysql/test/r/unsafe_binlog_innodb.result
@@ -3462,8 +3466,10 @@ share/mysql/test/suite/innodb/r/checksum.result
 share/mysql/test/suite/innodb/r/create-index.result
 share/mysql/test/suite/innodb/r/create_isl_with_direct.result
 share/mysql/test/suite/innodb/r/dropdb.result
+share/mysql/test/suite/innodb/r/flush-hang.result
 share/mysql/test/suite/innodb/r/foreign_key.result
 share/mysql/test/suite/innodb/r/import.result
+share/mysql/test/suite/innodb/r/import_update_stats.result
 share/mysql/test/suite/innodb/r/index_tree_operation.result
 share/mysql/test/suite/innodb/r/innodb-2byte-collation.result
 share/mysql/test/suite/innodb/r/innodb-ac-non-locking-select.result
@@ -3596,6 +3602,7 @@ share/mysql/test/suite/innodb/r/innodb_bug60229.result
 share/mysql/test/suite/innodb/r/innodb_bug70867.result
 share/mysql/test/suite/innodb/r/innodb_corrupt_bit.result
 share/mysql/test/suite/innodb/r/innodb_ctype_ldml.result
+share/mysql/test/suite/innodb/r/innodb_deadlock_with_autoinc.result
 share/mysql/test/suite/innodb/r/innodb_file_format.result
 share/mysql/test/suite/innodb/r/innodb_file_limit_check.result
 share/mysql/test/suite/innodb/r/innodb_force_recovery.result
@@ -3655,8 +3662,10 @@ share/mysql/test/suite/innodb/t/create_isl_with_direct-master.opt
 share/mysql/test/suite/innodb/t/create_isl_with_direct.test
 share/mysql/test/suite/innodb/t/disabled.def
 share/mysql/test/suite/innodb/t/dropdb.test
+share/mysql/test/suite/innodb/t/flush-hang.test
 share/mysql/test/suite/innodb/t/foreign_key.test
 share/mysql/test/suite/innodb/t/import.test
+share/mysql/test/suite/innodb/t/import_update_stats.test
 share/mysql/test/suite/innodb/t/index_tree_operation.test
 share/mysql/test/suite/innodb/t/innodb-2byte-collation-master.opt
 share/mysql/test/suite/innodb/t/innodb-2byte-collation.test
@@ -3815,6 +3824,8 @@ share/mysql/test/suite/innodb/t/innodb_bug70867.test
 share/mysql/test/suite/innodb/t/innodb_corrupt_bit.test
 share/mysql/test/suite/innodb/t/innodb_ctype_ldml-master.opt
 share/mysql/test/suite/innodb/t/innodb_ctype_ldml.test
+share/mysql/test/suite/innodb/t/innodb_deadlock_with_autoinc-master.opt
+share/mysql/test/suite/innodb/t/innodb_deadlock_with_autoinc.test
 share/mysql/test/suite/innodb/t/innodb_file_format-master.opt
 share/mysql/test/suite/innodb/t/innodb_file_format.test
 share/mysql/test/suite/innodb/t/innodb_file_limit_check-master.opt
@@ -6449,6 +6460,8 @@ share/mysql/test/suite/rpl/r/rpl_mts_debug.result
 share/mysql/test/suite/rpl/r/rpl_mts_execute_partial_trx_with_auto_pos_off.result
 share/mysql/test/suite/rpl/r/rpl_mts_execute_partial_trx_with_auto_pos_on.result
 share/mysql/test/suite/rpl/r/rpl_mts_gtids_restart_slave_io_lost_trx.result
+share/mysql/test/suite/rpl/r/rpl_mts_relay_log_post_crash_recovery.result
+share/mysql/test/suite/rpl/r/rpl_mts_relay_log_recovery_on_error.result
 share/mysql/test/suite/rpl/r/rpl_mts_slave_hang_with_partial_trx.result
 share/mysql/test/suite/rpl/r/rpl_mts_stop_slave.result
 share/mysql/test/suite/rpl/r/rpl_multi_delete.result
@@ -6646,6 +6659,7 @@ share/mysql/test/suite/rpl/r/rpl_sp_privileges.result
 share/mysql/test/suite/rpl/r/rpl_spec_variables.result
 share/mysql/test/suite/rpl/r/rpl_special_charset.result
 share/mysql/test/suite/rpl/r/rpl_sporadic_master.result
+share/mysql/test/suite/rpl/r/rpl_sql_thread_error.result
 share/mysql/test/suite/rpl/r/rpl_sql_thread_killed_waiting_commit_lock.result
 share/mysql/test/suite/rpl/r/rpl_ssl.result
 share/mysql/test/suite/rpl/r/rpl_ssl1.result
@@ -7035,6 +7049,10 @@ share/mysql/test/suite/rpl/t/rpl_mts_execute_partial_trx_with_auto_pos_on-slave.
 share/mysql/test/suite/rpl/t/rpl_mts_execute_partial_trx_with_auto_pos_on.test
 share/mysql/test/suite/rpl/t/rpl_mts_gtids_restart_slave_io_lost_trx-slave.opt
 share/mysql/test/suite/rpl/t/rpl_mts_gtids_restart_slave_io_lost_trx.test
+share/mysql/test/suite/rpl/t/rpl_mts_relay_log_post_crash_recovery-slave.opt
+share/mysql/test/suite/rpl/t/rpl_mts_relay_log_post_crash_recovery.test
+share/mysql/test/suite/rpl/t/rpl_mts_relay_log_recovery_on_error-slave.opt
+share/mysql/test/suite/rpl/t/rpl_mts_relay_log_recovery_on_error.test
 share/mysql/test/suite/rpl/t/rpl_mts_slave_hang_with_partial_trx-slave.opt
 share/mysql/test/suite/rpl/t/rpl_mts_slave_hang_with_partial_trx.test
 share/mysql/test/suite/rpl/t/rpl_mts_stop_slave-slave.opt
@@ -7340,6 +7358,7 @@ share/mysql/test/suite/rpl/t/rpl_special_charset-slave.opt
 share/mysql/test/suite/rpl/t/rpl_special_charset.test
 share/mysql/test/suite/rpl/t/rpl_sporadic_master-master.opt
 share/mysql/test/suite/rpl/t/rpl_sporadic_master.test
+share/mysql/test/suite/rpl/t/rpl_sql_thread_error.test
 share/mysql/test/suite/rpl/t/rpl_sql_thread_killed_waiting_commit_lock-slave.opt
 share/mysql/test/suite/rpl/t/rpl_sql_thread_killed_waiting_commit_lock.test
 share/mysql/test/suite/rpl/t/rpl_ssl.test
@@ -9593,6 +9612,8 @@ share/mysql/test/t/ssl.test
 share/mysql/test/t/ssl_8k_key-master.opt
 share/mysql/test/t/ssl_8k_key.test
 share/mysql/test/t/ssl_and_innodb.test
+share/mysql/test/t/ssl_ca-master.opt
+share/mysql/test/t/ssl_ca.test
 share/mysql/test/t/ssl_cipher-master.opt
 share/mysql/test/t/ssl_cipher.test
 share/mysql/test/t/ssl_compress.test
@@ -9745,6 +9766,8 @@ share/mysql/test/t/type_varchar.test
 share/mysql/test/t/type_year.test
 share/mysql/test/t/udf-master.opt
 share/mysql/test/t/udf.test
+share/mysql/test/t/udf_services-master.opt
+share/mysql/test/t/udf_services.test
 share/mysql/test/t/udf_skip_grants-master.opt
 share/mysql/test/t/udf_skip_grants.test
 share/mysql/test/t/union-master.opt
