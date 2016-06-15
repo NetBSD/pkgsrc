@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2428 2016/06/15 07:38:11 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2429 2016/06/15 07:46:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3137,3 +3137,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/libnetpgpverify to 20160615 [agc 2016-06-15]
 	Updated net/openntpd to 6.0p1 [wiz 2016-06-15]
 	Updated www/p5-CGI to 4.31 [wiz 2016-06-15]
+	Updated graphics/p5-Image-ExifTool to 10.20 [wiz 2016-06-15]
