@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2431 2016/06/15 12:07:55 adam Exp $
+$NetBSD: CHANGES-2016,v 1.2432 2016/06/15 12:45:13 abs Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3141,3 +3141,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added editors/sasm version 3.5.0 [kamil 2016-06-15]
 	Updated databases/mysql56-client to 5.6.31 [adam 2016-06-15]
 	Updated databases/mysql56-server to 5.6.31 [adam 2016-06-15]
+	Updated net/syncthing to 0.13.7 [abs 2016-06-15]
