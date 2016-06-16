@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2015/08/02 03:01:10 markd Exp $
+# $NetBSD: Makefile,v 1.4 2016/06/16 04:03:14 markd Exp $
 
 DISTNAME=	collection-langarabic
-PKGNAME=	texlive-${DISTNAME}-2014pre1
+PKGNAME=	texlive-${DISTNAME}-2016pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	37746
+TEXLIVE_REV=	40201
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -15,6 +15,7 @@ DEPENDS+=	texlive-collection-basic-[0-9]*:../../meta-pkgs/texlive-collection-bas
 # depend amiri
 DEPENDS+=	tex-arabi-[0-9]*:../../print/tex-arabi
 # depend arabi-add
+# depend arabluatex
 DEPENDS+=	tex-arabtex-[0-9]*:../../print/tex-arabtex
 # depend bidi
 # depend bidihl

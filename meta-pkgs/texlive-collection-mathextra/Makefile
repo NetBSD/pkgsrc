@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2015/08/02 03:13:22 markd Exp $
+# $NetBSD: Makefile,v 1.5 2016/06/16 04:03:15 markd Exp $
 
 DISTNAME=	collection-mathextra
-PKGNAME=	texlive-${DISTNAME}-2014pre2
+PKGNAME=	texlive-${DISTNAME}-2016pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	37535
+TEXLIVE_REV=	40076
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -27,7 +27,11 @@ DEPENDS+=	tex-ccfonts-[0-9]*:../../fonts/tex-ccfonts
 DEPENDS+=	tex-concmath-[0-9]*:../../fonts/tex-concmath
 DEPENDS+=	tex-concrete-[0-9]*:../../fonts/tex-concrete
 # depend conteq
+# depend delim
+# depend delimseasy
+# depend drawmatrix
 # depend ebproof
+# depend econometrics
 # depend eqnarray
 # depend extarrows
 # depend extpfeil
@@ -40,6 +44,7 @@ DEPENDS+=	tex-concrete-[0-9]*:../../fonts/tex-concrete
 # depend lpform
 # depend lplfitch
 DEPENDS+=	tex-mathcomp-[0-9]*:../../print/tex-mathcomp
+# depend mathpartir
 # depend mattens
 # depend mhequ
 # depend multiobjective
@@ -49,6 +54,7 @@ DEPENDS+=	tex-mathcomp-[0-9]*:../../print/tex-mathcomp
 DEPENDS+=	tex-oubraces-[0-9]*:../../print/tex-oubraces
 # depend perfectcut
 # depend prftree
+# depend prooftrees
 # depend proba
 # depend rec-thy
 # depend ribbonproofs

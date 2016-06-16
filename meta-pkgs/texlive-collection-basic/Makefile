@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2015/07/14 02:36:23 minskim Exp $
+# $NetBSD: Makefile,v 1.5 2016/06/16 04:03:13 markd Exp $
 
 DISTNAME=	collection-basic
-PKGNAME=	texlive-${DISTNAME}-2015
+PKGNAME=	texlive-${DISTNAME}-2016
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	33040
+TEXLIVE_REV=	41149
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -39,10 +39,13 @@ DEPENDS+=	tex-pdftex>=1.40.11pl32132:../../print/tex-pdftex
 DEPENDS+=	tex-plain>=3.141592653.26647:../../print/tex-plain
 DEPENDS+=	tex-tetex>=3.0.32132:../../print/tex-tetex
 DEPENDS+=	tex-tex>=3.1415926:../../print/tex-tex
+DEPENDS+=	tex-tex-ini-files-[0-9]*:../../print/tex-tex-ini-files
 DEPENDS+=	tex-texconfig>=2013:../../print/tex-texconfig
 DEPENDS+=	tex-texlive-docindex>=2014:../../print/tex-texlive-docindex
 # texlive-msg-translations is not needed in pkgsrc.
 DEPENDS+=	tex-texlive-scripts>=2013:../../print/tex-texlive-scripts
+DEPENDS+=	tex-unicode-data-[0-9]*:../../print/tex-unicode-data
+DEPENDS+=	tex-updmap-map-[0-9]*:../../print/tex-updmap-map
 DEPENDS+=	tex-xdvi>=22.87:../../print/tex-xdvi
 
 META_PACKAGE=	yes
