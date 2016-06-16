@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2016/04/23 12:40:42 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2016/06/16 15:47:19 taca Exp $
 ${CT_WEBDIR}/.htaccess.default
 ${CT_WEBDIR}/README.md
 ${CT_WEBDIR}/assets/ace/1.1.8/ace.js
@@ -3412,6 +3412,7 @@ ${CT_WEBDIR}/vendor/composer/autoload_files.php
 ${CT_WEBDIR}/vendor/composer/autoload_namespaces.php
 ${CT_WEBDIR}/vendor/composer/autoload_psr4.php
 ${CT_WEBDIR}/vendor/composer/autoload_real.php
+${CT_WEBDIR}/vendor/composer/autoload_static.php
 ${CT_WEBDIR}/vendor/composer/installed.json
 ${CT_WEBDIR}/vendor/contao-components/compass/README.md
 ${CT_WEBDIR}/vendor/contao-components/compass/composer.json
@@ -3544,7 +3545,6 @@ ${CT_WEBDIR}/vendor/matthiasmullie/minify/src/Exceptions/FileImportException.php
 ${CT_WEBDIR}/vendor/matthiasmullie/minify/src/Exceptions/IOException.php
 ${CT_WEBDIR}/vendor/matthiasmullie/minify/src/JS.php
 ${CT_WEBDIR}/vendor/matthiasmullie/minify/src/Minify.php
-${CT_WEBDIR}/vendor/matthiasmullie/path-converter/.coveralls.yml
 ${CT_WEBDIR}/vendor/matthiasmullie/path-converter/LICENSE
 ${CT_WEBDIR}/vendor/matthiasmullie/path-converter/composer.json
 ${CT_WEBDIR}/vendor/matthiasmullie/path-converter/src/Converter.php
@@ -3641,14 +3641,10 @@ ${CT_WEBDIR}/vendor/phpspec/php-diff/lib/Diff/Renderer/Html/SideBySide.php
 ${CT_WEBDIR}/vendor/phpspec/php-diff/lib/Diff/Renderer/Text/Context.php
 ${CT_WEBDIR}/vendor/phpspec/php-diff/lib/Diff/Renderer/Text/Unified.php
 ${CT_WEBDIR}/vendor/phpspec/php-diff/lib/Diff/SequenceMatcher.php
-${CT_WEBDIR}/vendor/simplepie/simplepie/.gitignore
 ${CT_WEBDIR}/vendor/simplepie/simplepie/.travis.yml
 ${CT_WEBDIR}/vendor/simplepie/simplepie/LICENSE.txt
 ${CT_WEBDIR}/vendor/simplepie/simplepie/README.markdown
 ${CT_WEBDIR}/vendor/simplepie/simplepie/autoloader.php
-${CT_WEBDIR}/vendor/simplepie/simplepie/build/charset.php
-${CT_WEBDIR}/vendor/simplepie/simplepie/build/compile.php
-${CT_WEBDIR}/vendor/simplepie/simplepie/build/header.txt
 ${CT_WEBDIR}/vendor/simplepie/simplepie/composer.json
 ${CT_WEBDIR}/vendor/simplepie/simplepie/db.sql
 ${CT_WEBDIR}/vendor/simplepie/simplepie/idn/LICENCE
@@ -3662,7 +3658,9 @@ ${CT_WEBDIR}/vendor/simplepie/simplepie/library/SimplePie/Cache/Base.php
 ${CT_WEBDIR}/vendor/simplepie/simplepie/library/SimplePie/Cache/DB.php
 ${CT_WEBDIR}/vendor/simplepie/simplepie/library/SimplePie/Cache/File.php
 ${CT_WEBDIR}/vendor/simplepie/simplepie/library/SimplePie/Cache/Memcache.php
+${CT_WEBDIR}/vendor/simplepie/simplepie/library/SimplePie/Cache/Memcached.php
 ${CT_WEBDIR}/vendor/simplepie/simplepie/library/SimplePie/Cache/MySQL.php
+${CT_WEBDIR}/vendor/simplepie/simplepie/library/SimplePie/Cache/Redis.php
 ${CT_WEBDIR}/vendor/simplepie/simplepie/library/SimplePie/Caption.php
 ${CT_WEBDIR}/vendor/simplepie/simplepie/library/SimplePie/Category.php
 ${CT_WEBDIR}/vendor/simplepie/simplepie/library/SimplePie/Content/Type/Sniffer.php
@@ -3688,7 +3686,6 @@ ${CT_WEBDIR}/vendor/simplepie/simplepie/library/SimplePie/Sanitize.php
 ${CT_WEBDIR}/vendor/simplepie/simplepie/library/SimplePie/Source.php
 ${CT_WEBDIR}/vendor/simplepie/simplepie/library/SimplePie/XML/Declaration/Parser.php
 ${CT_WEBDIR}/vendor/simplepie/simplepie/library/SimplePie/gzdecode.php
-${CT_WEBDIR}/vendor/simplepie/simplepie/phpunit.xml.dist
 ${CT_WEBDIR}/vendor/swiftmailer/swiftmailer/.gitignore
 ${CT_WEBDIR}/vendor/swiftmailer/swiftmailer/.travis.yml
 ${CT_WEBDIR}/vendor/swiftmailer/swiftmailer/CHANGES
