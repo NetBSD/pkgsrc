@@ -1,4 +1,4 @@
-# $NetBSD: bin-install.mk,v 1.23 2011/11/05 17:04:42 tcort Exp $
+# $NetBSD: bin-install.mk,v 1.24 2016/06/16 00:14:55 mspo Exp $
 #
 
 # This file provides the following targets:
@@ -31,7 +31,7 @@
 # replaced with OS release ("1.5", ...) and architecture ("mipsel", ...)
 .if ${OPSYS} == "NetBSD"
 BINPKG_SITES?= \
-	ftp://ftp.NetBSD.org/pub/pkgsrc/packages/NetBSD/$${arch}/$${rel}
+	http://cdn.NetBSD.org/pub/pkgsrc/packages/NetBSD/$${arch}/$${rel}
 .elif ${OPSYS} == "Minix"
 BINPKG_SITES?= \
 	ftp://ftp.minix3.org/pub/minix/packages/$$(${UNAME} -r)/$${arch}
