@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2457 2016/06/16 17:12:44 pettai Exp $
+$NetBSD: CHANGES-2016,v 1.2458 2016/06/16 17:22:18 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3582,3 +3582,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated geography/opencpn-plugin-weather_routing to 20160611 [bouyer 2016-06-16]
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.626 [tsutsui 2016-06-16]
 	Updated net/knot to 2.2.1 [pettai 2016-06-16]
+	Updated www/contao35 to 3.5.14 [taca 2016-06-16]
