@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:01:48 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/06/16 04:06:00 markd Exp $
 
-SHA1 (tex-babel-hungarian-35053/babel-hungarian.tar.xz) = de03e5e4576aa4dd640ab05d727cd1b154096f3e
-RMD160 (tex-babel-hungarian-35053/babel-hungarian.tar.xz) = e46d15838a73b18fa0153f1eea82d6e526a5530f
-SHA512 (tex-babel-hungarian-35053/babel-hungarian.tar.xz) = 8de58c4b98835e1d0729e80c7b8909c4ec527211e471048efcd88331cd6266d01bc3ad6eaf25836d921fee0e70cf224e306daacdbd91879e92cf3499a7197b47
-Size (tex-babel-hungarian-35053/babel-hungarian.tar.xz) = 53848 bytes
+SHA1 (tex-babel-hungarian-38945/babel-hungarian.tar.xz) = 1facc9424bf67ebcc6ceecc50a28b1723e06c6fc
+RMD160 (tex-babel-hungarian-38945/babel-hungarian.tar.xz) = 0b99ebc32ea524ee0e6de6f8af72defd5faa7991
+SHA512 (tex-babel-hungarian-38945/babel-hungarian.tar.xz) = f220f3dcd8adeb8ebfc719c4a1dd2decb087940ccfcc527a822d69b58b81b0b2115e2b46238080b4d012ea09e42160eaa750a7894d82158cf92f4158474e0845
+Size (tex-babel-hungarian-38945/babel-hungarian.tar.xz) = 53888 bytes

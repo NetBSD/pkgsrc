@@ -1,4 +1,25 @@
-@comment $NetBSD: PLIST,v 1.2 2013/11/17 17:22:05 minskim Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/06/16 04:06:06 markd Exp $
+share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-de-1901.tex
+share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-de-1996.tex
+share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-de-ch-1901.tex
+share/texmf-dist/tex/generic/hyph-utf8/patterns/ptex/hyph-de-1901.ec.tex
+share/texmf-dist/tex/generic/hyph-utf8/patterns/ptex/hyph-de-1996.ec.tex
+share/texmf-dist/tex/generic/hyph-utf8/patterns/ptex/hyph-de-ch-1901.ec.tex
+share/texmf-dist/tex/generic/hyph-utf8/patterns/tex/hyph-de-1901.tex
+share/texmf-dist/tex/generic/hyph-utf8/patterns/tex/hyph-de-1996.tex
+share/texmf-dist/tex/generic/hyph-utf8/patterns/tex/hyph-de-ch-1901.tex
+share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-de-1901.chr.txt
+share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-de-1901.hyp.txt
+share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-de-1901.lic.txt
+share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-de-1901.pat.txt
+share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-de-1996.chr.txt
+share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-de-1996.hyp.txt
+share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-de-1996.lic.txt
+share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-de-1996.pat.txt
+share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-de-ch-1901.chr.txt
+share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-de-ch-1901.hyp.txt
+share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-de-ch-1901.lic.txt
+share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-de-ch-1901.pat.txt
 share/texmf-dist/tex/generic/hyphen/dehyphn.tex
 share/texmf-dist/tex/generic/hyphen/dehypht.tex
 share/texmf-dist/tex/generic/hyphen/dehyphtex.tex

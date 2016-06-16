@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/04 01:02:59 agc Exp $
+$NetBSD: distinfo,v 1.4 2016/06/16 04:06:18 markd Exp $
 
-SHA1 (tex-xcolor-15878/xcolor.doc.tar.xz) = d81690d7181edad2231f55ed24e2c34adeb9fe42
-RMD160 (tex-xcolor-15878/xcolor.doc.tar.xz) = 57decb6a0c8a0476a927b946bffe05a63f685e8b
-SHA512 (tex-xcolor-15878/xcolor.doc.tar.xz) = 5f820814ce77df271e0a3dfce78cb065f088efe666cb4e31221a1d03a1fb6690c117eca22566f644ab4a82c372c4474d3297fcb4f3642f8ada920320b855cca9
-Size (tex-xcolor-15878/xcolor.doc.tar.xz) = 647504 bytes
+SHA1 (tex-xcolor-41044/xcolor.doc.tar.xz) = caa5bb55d40d43a80905c0d8074e7fa9cf0c1a15
+RMD160 (tex-xcolor-41044/xcolor.doc.tar.xz) = efc696a9d1e0566233f90e225c42221939b5043c
+SHA512 (tex-xcolor-41044/xcolor.doc.tar.xz) = df90b8d9c690983c8e75bbb289cf7ff475b7589ca6af2e8a7b1fd50702530097e5343fd9866054c1786fc99beb55a97a4d7c4bd7b0fa3e98460935dfb7de259d
+Size (tex-xcolor-41044/xcolor.doc.tar.xz) = 669996 bytes

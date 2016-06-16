@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/28 11:55:19 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/06/16 04:06:02 markd Exp $
 bin/csplain
 bin/pdfcsplain
 share/texmf-dist/tex/csplain/base/csenc-k.tex
@@ -12,6 +12,7 @@ share/texmf-dist/tex/csplain/base/csplain-utf8.ini
 share/texmf-dist/tex/csplain/base/csplain.ini
 share/texmf-dist/tex/csplain/base/czhyphen.ex
 share/texmf-dist/tex/csplain/base/czhyphen.tex
+share/texmf-dist/tex/csplain/base/etex-mac.tex
 share/texmf-dist/tex/csplain/base/extcode.tex
 share/texmf-dist/tex/csplain/base/fonttabs.tex
 share/texmf-dist/tex/csplain/base/hyphen.ex
@@ -37,11 +38,16 @@ share/texmf-dist/tex/csplain/fonts/cs-adventor.tex
 share/texmf-dist/tex/csplain/fonts/cs-all.tex
 share/texmf-dist/tex/csplain/fonts/cs-antt.tex
 share/texmf-dist/tex/csplain/fonts/cs-arev.tex
+share/texmf-dist/tex/csplain/fonts/cs-baskerx.tex
 share/texmf-dist/tex/csplain/fonts/cs-bera.tex
 share/texmf-dist/tex/csplain/fonts/cs-bonum.tex
 share/texmf-dist/tex/csplain/fonts/cs-charter.tex
 share/texmf-dist/tex/csplain/fonts/cs-cursor.tex
 share/texmf-dist/tex/csplain/fonts/cs-heros.tex
+share/texmf-dist/tex/csplain/fonts/cs-heuristica.tex
+share/texmf-dist/tex/csplain/fonts/cs-iwona.tex
+share/texmf-dist/tex/csplain/fonts/cs-kurier.tex
+share/texmf-dist/tex/csplain/fonts/cs-libertine.tex
 share/texmf-dist/tex/csplain/fonts/cs-pagella.tex
 share/texmf-dist/tex/csplain/fonts/cs-polta.tex
 share/texmf-dist/tex/csplain/fonts/cs-schola.tex
@@ -51,15 +57,25 @@ share/texmf-dist/tex/csplain/fonts/cyrchars.tex
 share/texmf-dist/tex/csplain/fonts/dcfonts.tex
 share/texmf-dist/tex/csplain/fonts/ecfonts.tex
 share/texmf-dist/tex/csplain/fonts/exchars.tex
+share/texmf-dist/tex/csplain/fonts/ff-mac.tex
+share/texmf-dist/tex/csplain/fonts/ki-math.tex
+share/texmf-dist/tex/csplain/fonts/kp-fonts.tex
+share/texmf-dist/tex/csplain/fonts/kp-math.tex
 share/texmf-dist/tex/csplain/fonts/lmfonts.tex
 share/texmf-dist/tex/csplain/fonts/luafonts.tex
 share/texmf-dist/tex/csplain/fonts/ntx-math.tex
+share/texmf-dist/tex/csplain/fonts/pazo-math.tex
 share/texmf-dist/tex/csplain/fonts/tx-math.tex
+share/texmf-dist/tex/csplain/fonts/uni-math.tex
 share/texmf-dist/tex/csplain/fonts/unifam.tex
+share/texmf-dist/tex/csplain/opmac/fontfam-catalog.tex
+share/texmf-dist/tex/csplain/opmac/fontfam-global.tex
+share/texmf-dist/tex/csplain/opmac/fontfam.tex
 share/texmf-dist/tex/csplain/opmac/op-example.bib
 share/texmf-dist/tex/csplain/opmac/opmac-bib-iso690.tex
 share/texmf-dist/tex/csplain/opmac/opmac-bib-simple.tex
 share/texmf-dist/tex/csplain/opmac/opmac-bib.tex
+share/texmf-dist/tex/csplain/opmac/opmac-luatex.tex
 share/texmf-dist/tex/csplain/opmac/opmac-xetex.tex
 share/texmf-dist/tex/csplain/opmac/opmac.tex
 share/texmf-dist/tex/csplain/opmac/pdfuni.tex

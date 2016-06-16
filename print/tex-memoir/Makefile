@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2015/08/09 09:43:36 markd Exp $
+# $NetBSD: Makefile,v 1.10 2016/06/16 04:06:12 markd Exp $
 
 DISTNAME=	memoir
-PKGNAME=	tex-${DISTNAME}-3.7e
-TEXLIVE_REV=	37809
+PKGNAME=	tex-${DISTNAME}-3.7f
+TEXLIVE_REV=	41203
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/memoir

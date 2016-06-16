@@ -1,28 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2016/04/23 21:50:21 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2016/06/16 04:06:00 markd Exp $
 share/texmf-dist/bibtex/bib/biblatex/biblatex/biblatex-examples.bib
 share/texmf-dist/bibtex/bib/biblatex/biblatex/biblatex-examples.bltxml
 share/texmf-dist/bibtex/bst/biblatex/biblatex.bst
-share/texmf-dist/bibtex/csf/biblatex/latin1.csf
-share/texmf-dist/bibtex/csf/biblatex/latin1_at.csf
-share/texmf-dist/bibtex/csf/biblatex/latin1_de.csf
-share/texmf-dist/bibtex/csf/biblatex/latin1_dk.csf
-share/texmf-dist/bibtex/csf/biblatex/latin1_fi.csf
-share/texmf-dist/bibtex/csf/biblatex/latin1_no.csf
-share/texmf-dist/bibtex/csf/biblatex/latin1_se.csf
-share/texmf-dist/bibtex/csf/biblatex/latin9.csf
-share/texmf-dist/bibtex/csf/biblatex/latin9_at.csf
-share/texmf-dist/bibtex/csf/biblatex/latin9_de.csf
-share/texmf-dist/bibtex/csf/biblatex/latin9_dk.csf
-share/texmf-dist/bibtex/csf/biblatex/latin9_fi.csf
-share/texmf-dist/bibtex/csf/biblatex/latin9_no.csf
-share/texmf-dist/bibtex/csf/biblatex/latin9_se.csf
-share/texmf-dist/bibtex/csf/biblatex/winansi.csf
-share/texmf-dist/bibtex/csf/biblatex/winansi_at.csf
-share/texmf-dist/bibtex/csf/biblatex/winansi_de.csf
-share/texmf-dist/bibtex/csf/biblatex/winansi_dk.csf
-share/texmf-dist/bibtex/csf/biblatex/winansi_fi.csf
-share/texmf-dist/bibtex/csf/biblatex/winansi_no.csf
-share/texmf-dist/bibtex/csf/biblatex/winansi_se.csf
 share/texmf-dist/tex/latex/biblatex/bbx/alphabetic-verb.bbx
 share/texmf-dist/tex/latex/biblatex/bbx/alphabetic.bbx
 share/texmf-dist/tex/latex/biblatex/bbx/authortitle-comp.bbx
@@ -51,11 +30,9 @@ share/texmf-dist/tex/latex/biblatex/bbx/verbose-trad2.bbx
 share/texmf-dist/tex/latex/biblatex/bbx/verbose-trad3.bbx
 share/texmf-dist/tex/latex/biblatex/bbx/verbose.bbx
 share/texmf-dist/tex/latex/biblatex/biblatex.cfg
+share/texmf-dist/tex/latex/biblatex/biblatex.def
 share/texmf-dist/tex/latex/biblatex/biblatex.sty
-share/texmf-dist/tex/latex/biblatex/biblatex_.def
-share/texmf-dist/tex/latex/biblatex/biblatex_.sty
-share/texmf-dist/tex/latex/biblatex/biblatex_legacy.def
-share/texmf-dist/tex/latex/biblatex/biblatex_legacy.sty
+share/texmf-dist/tex/latex/biblatex/blx-bibtex.def
 share/texmf-dist/tex/latex/biblatex/blx-compat.def
 share/texmf-dist/tex/latex/biblatex/blx-dm.def
 share/texmf-dist/tex/latex/biblatex/blx-mcite.def
@@ -117,6 +94,7 @@ share/texmf-dist/tex/latex/biblatex/lbx/polish.lbx
 share/texmf-dist/tex/latex/biblatex/lbx/portuges.lbx
 share/texmf-dist/tex/latex/biblatex/lbx/portuguese.lbx
 share/texmf-dist/tex/latex/biblatex/lbx/russian.lbx
+share/texmf-dist/tex/latex/biblatex/lbx/slovak.lbx
 share/texmf-dist/tex/latex/biblatex/lbx/slovene.lbx
 share/texmf-dist/tex/latex/biblatex/lbx/spanish.lbx
 share/texmf-dist/tex/latex/biblatex/lbx/swedish.lbx

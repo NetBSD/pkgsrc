@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/05/04 12:32:14 markd Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/16 04:06:00 markd Exp $
 
 DISTNAME=	babel-hungarian
-PKGNAME=	tex-${DISTNAME}-1.5
-TEXLIVE_REV=	35053
+PKGNAME=	tex-${DISTNAME}-1.5c
+TEXLIVE_REV=	38945
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/babel-hungarian

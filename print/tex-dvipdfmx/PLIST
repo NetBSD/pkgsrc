@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2013/11/17 17:27:35 minskim Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/06/16 04:06:02 markd Exp $
 share/texmf-dist/fonts/cmap/dvipdfmx/EUC-UCS2
 share/texmf-dist/fonts/cmap/dvipdfmx/README
 share/texmf-dist/fonts/cmap/dvipdfmx/UTF8-UCS2
 share/texmf-dist/fonts/map/dvipdfmx/cid-x.map
 share/texmf-dist/fonts/map/dvipdfmx/ckx.map
-share/texmf-dist/fonts/map/dvipdfmx/updmap/kanjix.map

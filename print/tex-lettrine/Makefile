@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/05/16 10:30:16 markd Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/16 04:06:11 markd Exp $
 
 DISTNAME=	lettrine
-PKGNAME=	tex-${DISTNAME}-1.8
-TEXLIVE_REV=	36295
+PKGNAME=	tex-${DISTNAME}-1.9
+TEXLIVE_REV=	38268
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/lettrine

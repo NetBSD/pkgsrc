@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 01:02:15 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/06/16 04:06:06 markd Exp $
 
-SHA1 (tex-hyphen-farsi-18673/hyphen-farsi.tar.xz) = 535307eedab62027517fa600d0ab95a1ed519cb2
-RMD160 (tex-hyphen-farsi-18673/hyphen-farsi.tar.xz) = 88e2b58a2b9349cbb541205f06f106dcf17229b1
-SHA512 (tex-hyphen-farsi-18673/hyphen-farsi.tar.xz) = 792460b99b1a5f696119a040de1876181ea39b1ffad82133e2420589830883e5acccd41f1a9d06a793ae14e3d4d7be3913d378a751de87e04d59672b7c8b4e05
-Size (tex-hyphen-farsi-18673/hyphen-farsi.tar.xz) = 336 bytes
+SHA1 (tex-hyphen-farsi-40340/hyphen-farsi.tar.xz) = 51c0ce5adbc0bcf81014bb8da9405982597a7ef5
+RMD160 (tex-hyphen-farsi-40340/hyphen-farsi.tar.xz) = 29943cf80f8896c64df5e121939d2894279336c2
+SHA512 (tex-hyphen-farsi-40340/hyphen-farsi.tar.xz) = 359fb8adb62ab9147dc5cbede75fd30ee79b306cc949ad9dc6bb6ff81a0add1821be4e6bde7adb40e365dec31623d6edb42b3bca4b88b495c9825de820694f67
+Size (tex-hyphen-farsi-40340/hyphen-farsi.tar.xz) = 380 bytes

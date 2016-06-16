@@ -1,14 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2015/09/01 21:17:55 markd Exp $
-share/texmf-dist/doc/latex/europasscv/Makefile.europasscv
+@comment $NetBSD: PLIST,v 1.2 2016/06/16 04:06:03 markd Exp $
 share/texmf-dist/doc/latex/europasscv/README
-share/texmf-dist/doc/latex/europasscv/address_europass_icon.svg
 share/texmf-dist/doc/latex/europasscv/europasscv.pdf
 share/texmf-dist/doc/latex/europasscv/europasscv.tex
-share/texmf-dist/doc/latex/europasscv/europasslogo2013.svg
 share/texmf-dist/doc/latex/europasscv/example/europasscv_en.pdf
 share/texmf-dist/doc/latex/europasscv/example/europasscv_en.tex
-share/texmf-dist/doc/latex/europasscv/im_europass_icon.svg
-share/texmf-dist/doc/latex/europasscv/mail_europass_icon.svg
-share/texmf-dist/doc/latex/europasscv/mobile_europass_icon.svg
-share/texmf-dist/doc/latex/europasscv/telephone_europass_icon.svg
-share/texmf-dist/doc/latex/europasscv/website_europass_icon.svg

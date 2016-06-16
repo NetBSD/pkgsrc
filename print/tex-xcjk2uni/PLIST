@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/10 01:04:04 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/06/16 04:06:18 markd Exp $
 share/texmf-dist/tex/latex/xcjk2uni/cmap/c0001.cmap
 share/texmf-dist/tex/latex/xcjk2uni/cmap/c0002.cmap
 share/texmf-dist/tex/latex/xcjk2uni/cmap/c0003.cmap
@@ -356,6 +356,4 @@ share/texmf-dist/tex/latex/xcjk2uni/xCJK2uni-UGB.def
 share/texmf-dist/tex/latex/xcjk2uni/xCJK2uni-UGBK.def
 share/texmf-dist/tex/latex/xcjk2uni/xCJK2uni-UJIS.def
 share/texmf-dist/tex/latex/xcjk2uni/xCJK2uni-UKS.def
-share/texmf-dist/tex/latex/xcjk2uni/xCJK2uni-make.tex
-share/texmf-dist/tex/latex/xcjk2uni/xCJK2uni-sfd.def
 share/texmf-dist/tex/latex/xcjk2uni/xCJK2uni.sty

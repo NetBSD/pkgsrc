@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/31 06:45:33 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/06/16 04:06:11 markd Exp $
 bin/lollipop
-share/texmf-dist/tex/lollipop/dvilollipop.ini
-share/texmf-dist/tex/lollipop/dvilualollipop.ini
 share/texmf-dist/tex/lollipop/lollipop-define.tex
 share/texmf-dist/tex/lollipop/lollipop-document.tex
 share/texmf-dist/tex/lollipop/lollipop-float.tex
@@ -15,5 +13,3 @@ share/texmf-dist/tex/lollipop/lollipop-text.tex
 share/texmf-dist/tex/lollipop/lollipop-tools.tex
 share/texmf-dist/tex/lollipop/lollipop.ini
 share/texmf-dist/tex/lollipop/lollipop.tex
-share/texmf-dist/tex/lollipop/lualollipop.ini
-share/texmf-dist/tex/lollipop/xelollipop.ini

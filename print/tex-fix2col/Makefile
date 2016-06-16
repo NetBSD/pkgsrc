@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2016/01/27 10:42:26 markd Exp $
-# TeX Live Revision 17133
+# $NetBSD: Makefile,v 1.3 2016/06/16 04:06:03 markd Exp $
 
 DISTNAME=	fix2col
-PKGNAME=	tex-${DISTNAME}-2009
+PKGNAME=	tex-${DISTNAME}-0.04
+TEXLIVE_REV=	38770
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Fix miscellaneous two column mode features

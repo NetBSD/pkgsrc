@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/05/16 10:30:19 markd Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/16 04:06:16 markd Exp $
 
 DISTNAME=	showlabels
-PKGNAME=	tex-${DISTNAME}-1.6.6
-TEXLIVE_REV=	32364
+PKGNAME=	tex-${DISTNAME}-1.7
+TEXLIVE_REV=	39083
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/showlabels

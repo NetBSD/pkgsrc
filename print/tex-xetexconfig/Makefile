@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2015/04/25 05:25:39 markd Exp $
+# $NetBSD: Makefile,v 1.3 2016/06/16 04:06:18 markd Exp $
 
 DISTNAME=	xetexconfig
-PKGNAME=	tex-${DISTNAME}-2014
-TEXLIVE_REV=	34727
+PKGNAME=	tex-${DISTNAME}-2016
+TEXLIVE_REV=	41133
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Configuration files for XeTeX

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/05/14 17:07:35 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/16 04:06:04 markd Exp $
 
 DISTNAME=	hausarbeit-jura
-PKGNAME=	tex-${DISTNAME}-1.1
-TEXLIVE_REV=	34009
+PKGNAME=	tex-${DISTNAME}-1.4
+TEXLIVE_REV=	40774
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/hausarbeit-jura

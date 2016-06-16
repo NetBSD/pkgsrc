@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:02:26 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/06/16 04:06:11 markd Exp $
 
-SHA1 (tex-lettrine-36295/lettrine.doc.tar.xz) = 0d9caaef6c748a508981340a7d1cd526f827dabe
-RMD160 (tex-lettrine-36295/lettrine.doc.tar.xz) = a6e655689535cea22821a6013b387ac45e462aa9
-SHA512 (tex-lettrine-36295/lettrine.doc.tar.xz) = 7c81c44a41be097c8ce310fddc7f0f7e438f70761c3538f5021d124ec583c4d227b5cd6d869f89ef7fe2b18ab9a2036b3ff2789198fbd63071c16909c31324de
-Size (tex-lettrine-36295/lettrine.doc.tar.xz) = 456308 bytes
+SHA1 (tex-lettrine-38268/lettrine.doc.tar.xz) = 9fe8c5fce4e5ffd346a37c0597c6b18a36a1da3d
+RMD160 (tex-lettrine-38268/lettrine.doc.tar.xz) = dd131d7f2ae6ba363dccbd5ab58764dbca3454bd
+SHA512 (tex-lettrine-38268/lettrine.doc.tar.xz) = ad86069b1a10769c269f5c3188d5d5866629edad019ebce72e56faf6994a1a43b83fceff8434bd495f1f56e369e7e2e0c9b0c3187ddf8705f31e2085edbc49c2
+Size (tex-lettrine-38268/lettrine.doc.tar.xz) = 472136 bytes

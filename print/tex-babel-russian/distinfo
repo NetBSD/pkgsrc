@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/04 01:01:49 agc Exp $
+$NetBSD: distinfo,v 1.4 2016/06/16 04:06:00 markd Exp $
 
-SHA1 (tex-babel-russian-37209/babel-russian.tar.xz) = 4b62e7c640ff1067e3f4d291e97dab65f467efc3
-RMD160 (tex-babel-russian-37209/babel-russian.tar.xz) = 95217365e2a2366be41fbb155ad5d3ed7883baff
-SHA512 (tex-babel-russian-37209/babel-russian.tar.xz) = 5015c80aaf7715775013b32c807b87b0f34ed773f8b4d8d1f61866420e3feb7e24915e1cb6cc0f58bccde06b593908071193670b9ee030a58fd77174890e8711
-Size (tex-babel-russian-37209/babel-russian.tar.xz) = 5380 bytes
+SHA1 (tex-babel-russian-39784/babel-russian.tar.xz) = 3c24ac5a00718a6237dab19e41b00a62a0ea9afc
+RMD160 (tex-babel-russian-39784/babel-russian.tar.xz) = a33bdbbfbc38b01c9efaff3e151cb493a9777474
+SHA512 (tex-babel-russian-39784/babel-russian.tar.xz) = 77b8d6d210acd1ace4aafcfe58ce8314e200ad1a502cc6203283b69c626b7f39509156eadede4c76bdecbc8ad81ec68c23be69faaf6c26a9adc6b5efc67b381c
+Size (tex-babel-russian-39784/babel-russian.tar.xz) = 5404 bytes

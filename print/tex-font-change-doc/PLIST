@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/08 14:09:52 wiz Exp $
-share/texmf-dist/doc/plain/font-change/README
-share/texmf-dist/doc/plain/font-change/default-amssymbols.tex
+@comment $NetBSD: PLIST,v 1.2 2016/06/16 04:06:04 markd Exp $
+share/texmf-dist/doc/plain/font-change/README.txt
 share/texmf-dist/doc/plain/font-change/font-change.pdf
+share/texmf-dist/doc/plain/font-change/font-change.tex
+share/texmf-dist/doc/plain/font-change/font-change_FRENCH.pdf
+share/texmf-dist/doc/plain/font-change/font-change_FRENCH.tex

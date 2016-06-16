@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2016/01/30 03:26:06 markd Exp $
+# $NetBSD: Makefile,v 1.3 2016/06/16 04:05:59 markd Exp $
 
 DISTNAME=	aleph
-PKGNAME=	tex-${DISTNAME}-0.2
-TEXLIVE_REV=	33736
+PKGNAME=	tex-${DISTNAME}-0.2.40768
+TEXLIVE_REV=	40768
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Extended TeX
