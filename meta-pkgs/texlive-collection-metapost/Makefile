@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2015/09/02 10:56:49 markd Exp $
+# $NetBSD: Makefile,v 1.6 2016/06/16 04:03:15 markd Exp $
 
 DISTNAME=	collection-metapost
-PKGNAME=	texlive-${DISTNAME}-2015.37994
+PKGNAME=	texlive-${DISTNAME}-2016pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	37994
+TEXLIVE_REV=	39729
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -39,8 +39,9 @@ DEPENDS+=	tex-metauml-[0-9]*:../../graphics/tex-metauml
 DEPENDS+=	tex-mfpic-[0-9]*:../../graphics/tex-mfpic
 DEPENDS+=	tex-mfpic4ode-[0-9]*:../../graphics/tex-mfpic4ode
 DEPENDS+=	tex-mp3d-[0-9]*:../../graphics/tex-mp3d
-DEPENDS+=	tex-mpcolornames-[0-9]*:../../graphics/tex-mpcolornames
+# depend mparrows
 DEPENDS+=	tex-mpattern-[0-9]*:../../graphics/tex-mpattern
+DEPENDS+=	tex-mpcolornames-[0-9]*:../../graphics/tex-mpcolornames
 DEPENDS+=	tex-mpgraphics-[0-9]*:../../graphics/tex-mpgraphics
 DEPENDS+=	tex-piechartmp-[0-9]*:../../graphics/tex-piechartmp
 DEPENDS+=	tex-repere-[0-9]*:../../graphics/tex-repere
