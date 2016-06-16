@@ -1,6 +1,8 @@
-$NetBSD: patch-magic_Magdir_bioinformatics,v 1.1 2016/06/16 15:27:49 fhajny Exp $
+$NetBSD: patch-magic_Magdir_bioinformatics,v 1.2 2016/06/16 16:16:45 fhajny Exp $
 
 Fix unbalanced parantheses in regex.
+
+Upstream bug reported: http://bugs.gw.com/view.php?id=558
 
 --- magic/Magdir/bioinformatics.orig	2016-02-14 15:53:53.000000000 +0000
 +++ magic/Magdir/bioinformatics
