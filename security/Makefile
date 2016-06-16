@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.585 2016/06/14 07:59:09 kamil Exp $
+# $NetBSD: Makefile,v 1.586 2016/06/16 09:22:18 fhajny Exp $
 #
 
 COMMENT=	Security tools
@@ -188,6 +188,7 @@ SUBDIR+=	lsh
 SUBDIR+=	lua-sec
 SUBDIR+=	mate-polkit
 SUBDIR+=	mbedtls
+SUBDIR+=	mbedtls1
 SUBDIR+=	mcrypt
 SUBDIR+=	md4-collision
 SUBDIR+=	md5-collision
