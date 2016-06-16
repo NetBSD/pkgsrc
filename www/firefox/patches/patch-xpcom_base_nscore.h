@@ -1,4 +1,6 @@
-$NetBSD: patch-xpcom_base_nscore.h,v 1.2 2014/06/11 00:40:59 ryoon Exp $
+$NetBSD: patch-xpcom_base_nscore.h,v 1.3 2016/06/16 12:08:21 ryoon Exp $
+
+* Support llvm/clang
 
 --- xpcom/base/nscore.h.orig	2014-05-29 23:31:50.000000000 +0000
 +++ xpcom/base/nscore.h

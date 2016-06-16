@@ -1,4 +1,6 @@
-$NetBSD: patch-rc,v 1.7 2015/09/23 06:44:42 ryoon Exp $
+$NetBSD: patch-rc,v 1.8 2016/06/16 12:08:21 ryoon Exp $
+
+* Fix application name
 
 --- browser/branding/unofficial/locales/en-US/brand.dtd.orig	2015-08-24 21:53:06.000000000 +0000
 +++ browser/branding/unofficial/locales/en-US/brand.dtd

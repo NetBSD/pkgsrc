@@ -1,22 +1,13 @@
-$NetBSD: patch-aa,v 1.45 2016/04/27 16:22:40 ryoon Exp $
+$NetBSD: patch-aa,v 1.46 2016/06/16 12:08:21 ryoon Exp $
 
-* The profiler does not support Darwin/PPC so don't try to enable it
-  on that platform. Also it makes extra files appear in the PLIST on Linux
-  so disable it everywhere.
+* MOZ_ENABLE_PROFILER_SPS is not for users, Disable it
+* Disable libjpeg-turbo check
+* Add system libraries option
+* Add OSS audio support
 
-* Cocoa gamepad backend can only be used if the toolkit is cocoa too.
-
-* The preprocessor macro XP_MACOSX is misused everywhere. They tend to
-  say "#if defined(XP_MACOSX)" to actually mean
-  "#if defined(MOZ_WIDGET_COCOA)". It's okay to equate XP_MACOSX with
-  XP_DARWIN but equating it with MOZ_WIDGET_COCOA is just wrong. As a
-  result, cairo-gtk2 build on Darwin is completely broken and needs
-  heavy patching. Ideally they should be fixed individually but that
-  will be an extremely hard work, so don't define XP_MACOSX for now.
-
---- configure.in.orig	2016-04-15 16:57:45.000000000 +0000
-+++ configure.in
-@@ -1722,7 +1722,7 @@ fi
+--- old-configure.in.orig	2016-06-01 04:11:44.000000000 +0000
++++ old-configure.in
+@@ -1605,7 +1605,7 @@ fi
  dnl ========================================================
  dnl SPS Profiler
  dnl ========================================================
@@ -25,40 +16,7 @@ $NetBSD: patch-aa,v 1.45 2016/04/27 16:22:40 ryoon Exp $
  
  case "${OS_TARGET}" in
  Android)
-@@ -2004,7 +2004,6 @@ case "$target" in
-         _PLATFORM_DEFAULT_TOOLKIT='cairo-uikit'
-         direct_nspr_config=1
-     else
--        AC_DEFINE(XP_MACOSX)
-         AC_DEFINE(XP_DARWIN)
-         _PLATFORM_DEFAULT_TOOLKIT='cairo-cocoa'
-         # The ExceptionHandling framework is needed for Objective-C exception
-@@ -2646,8 +2645,7 @@ MOZ_CXX11
- 
- AC_LANG_C
- 
--dnl Check for .hidden assembler directive and visibility attribute.
--dnl Borrowed from glibc configure.in
-+dnl Setup default hidden visibility and wrapped system headers.
- dnl ===============================================================
- if test "$GNU_CC" -a "$OS_TARGET" != WINNT; then
-   AC_DEFINE(HAVE_VISIBILITY_HIDDEN_ATTRIBUTE)
-@@ -3544,6 +3542,14 @@ if test -n "$YASM"; then
-   AC_MSG_RESULT([$_YASM_MAJOR_VERSION.$_YASM_MINOR_VERSION.$_YASM_RELEASE ($YASM_VERSION)])
- fi
- 
-+if test -n "${LIBXUL_SDK_DIR}"; then
-+    AC_MSG_WARN([pkgsrc: LIBXUL_SDK_DIR is set; assuming we want nss and nspr from xulrunner.])
-+    NSPR_CFLAGS="-I${prefix}/include/xulrunner/unstable `pkg-config --cflags nspr`"
-+    NSPR_LIBS="`pkg-config --libs nspr`"
-+    NSS_CFLAGS="`pkg-config --cflags nss`"
-+    NSS_LIBS="`pkg-config --libs nss`"
-+fi
-+
- if test -z "$SKIP_LIBRARY_CHECKS"; then
- dnl system JPEG support
- dnl ========================================================
-@@ -3571,11 +3577,7 @@ if test "$MOZ_NATIVE_JPEG" = 1; then
+@@ -3440,11 +3440,7 @@ if test "$MOZ_NATIVE_JPEG" = 1; then
                       #include <jpeglib.h> ],
                     [ #if JPEG_LIB_VERSION < $MOZJPEG
                       #error "Insufficient JPEG library version ($MOZJPEG required)."
@@ -71,18 +29,7 @@ $NetBSD: patch-aa,v 1.45 2016/04/27 16:22:40 ryoon Exp $
                     MOZ_NATIVE_JPEG=1,
                     AC_MSG_ERROR([Insufficient JPEG library version for --with-system-jpeg]))
  fi
-@@ -4321,6 +4323,10 @@ cairo-gonk)
- 
- esac
- 
-+if test "$MOZ_WIDGET_TOOLKIT" = "cocoa"; then
-+   AC_DEFINE(XP_MACOSX)
-+fi
-+
- AC_SUBST(MOZ_PDF_PRINTING)
- if test "$MOZ_PDF_PRINTING"; then
-    PDF_SURFACE_FEATURE="#define CAIRO_HAS_PDF_SURFACE 1"
-@@ -5064,6 +5070,9 @@ if test -n "$MOZ_WEBRTC"; then
+@@ -4911,6 +4907,9 @@ if test -n "$MOZ_WEBRTC"; then
      MOZ_RAW=1
      MOZ_VPX_ERROR_CONCEALMENT=1
  
@@ -92,7 +39,7 @@ $NetBSD: patch-aa,v 1.45 2016/04/27 16:22:40 ryoon Exp $
  dnl enable once Signaling lands
      MOZ_WEBRTC_SIGNALING=1
      AC_DEFINE(MOZ_WEBRTC_SIGNALING)
-@@ -5207,6 +5216,155 @@ if test "${ac_cv_c_attribute_aligned}" !
+@@ -5054,6 +5053,155 @@ if test "${ac_cv_c_attribute_aligned}" !
  fi
  
  dnl ========================================================
@@ -248,7 +195,7 @@ $NetBSD: patch-aa,v 1.45 2016/04/27 16:22:40 ryoon Exp $
  dnl = Apple platform decoder support
  dnl ========================================================
  if test "$MOZ_WIDGET_TOOLKIT" = "cocoa" || test "$MOZ_WIDGET_TOOLKIT" = "uikit"; then
-@@ -5579,6 +5737,67 @@ fi
+@@ -5488,6 +5636,67 @@ fi
  AC_SUBST(MOZ_WEBM_ENCODER)
  
  dnl ==================================
@@ -316,7 +263,7 @@ $NetBSD: patch-aa,v 1.45 2016/04/27 16:22:40 ryoon Exp $
  dnl = Check alsa availability on Linux
  dnl ==================================
  
-@@ -5592,12 +5811,23 @@ MOZ_ARG_ENABLE_BOOL(alsa,
+@@ -5501,12 +5710,23 @@ MOZ_ARG_ENABLE_BOOL(alsa,
     MOZ_ALSA=1,
     MOZ_ALSA=)
  
@@ -340,53 +287,3 @@ $NetBSD: patch-aa,v 1.45 2016/04/27 16:22:40 ryoon Exp $
  AC_SUBST(MOZ_ALSA)
  
  dnl ========================================================
-@@ -8101,6 +8331,49 @@ if test "$USE_FC_FREETYPE"; then
- fi
- 
- dnl ========================================================
-+dnl Check for harfbuzz
-+dnl ========================================================
-+
-+MOZ_ARG_WITH_BOOL(system-harfbuzz,
-+[  --with-system-harfbuzz  Use system harfbuzz (located with pkgconfig)],
-+MOZ_NATIVE_HARFBUZZ=1,
-+MOZ_NATIVE_HARFBUZZ=)
-+
-+if test -n "$MOZ_NATIVE_HARFBUZZ"; then
-+    PKG_CHECK_MODULES(MOZ_HARFBUZZ, harfbuzz >= 0.9.34)
-+fi
-+
-+AC_SUBST(MOZ_NATIVE_HARFBUZZ)
-+
-+dnl ========================================================
-+dnl Check for graphite2
-+dnl ========================================================
-+
-+MOZ_ARG_WITH_BOOL(system-graphite2,
-+[  --with-system-graphite2 Use system graphite2 (located with pkgconfig)],
-+MOZ_NATIVE_GRAPHITE2=1,
-+MOZ_NATIVE_GRAPHITE2=)
-+
-+if test -n "$MOZ_NATIVE_GRAPHITE2"; then
-+    PKG_CHECK_MODULES(MOZ_GRAPHITE2, graphite2)
-+
-+    dnl graphite2.pc has bogus version, check manually
-+    AC_TRY_COMPILE([ #include <graphite2/Font.h>
-+                     #define GR2_VERSION_REQUIRE(major,minor,bugfix)  \
-+                             ( GR2_VERSION_MAJOR * 10000 + GR2_VERSION_MINOR \
-+                               * 100 + GR2_VERSION_BUGFIX >= \
-+                               (major) * 10000 + (minor) * 100 + (bugfix) )
-+                   ], [
-+                     #if !GR2_VERSION_REQUIRE(1,2,4)
-+                     #error "Insufficient graphite2 version."
-+                     #endif
-+                   ], [],
-+                   [AC_MSG_ERROR([--with-system-graphite2 requested but no working libgraphite2 found])])
-+fi
-+
-+AC_SUBST(MOZ_NATIVE_GRAPHITE2)
-+
-+dnl ========================================================
- dnl Check for pixman and cairo
- dnl ========================================================
- 

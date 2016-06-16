@@ -1,4 +1,6 @@
-$NetBSD: patch-ipc_chromium_src_base_sys__info__posix.cc,v 1.5 2016/01/27 00:08:26 ryoon Exp $
+$NetBSD: patch-ipc_chromium_src_base_sys__info__posix.cc,v 1.6 2016/06/16 12:08:21 ryoon Exp $
+
+* Support Solaris
 
 --- ipc/chromium/src/base/sys_info_posix.cc.orig	2016-01-15 01:01:44.000000000 +0000
 +++ ipc/chromium/src/base/sys_info_posix.cc

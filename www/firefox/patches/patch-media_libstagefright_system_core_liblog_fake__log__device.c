@@ -1,4 +1,6 @@
-$NetBSD: patch-media_libstagefright_system_core_liblog_fake__log__device.c,v 1.1 2015/02/16 16:16:17 bad Exp $
+$NetBSD: patch-media_libstagefright_system_core_liblog_fake__log__device.c,v 1.2 2016/06/16 12:08:21 ryoon Exp $
+
+* For NetBSD
 
 --- media/libstagefright/system/core/liblog/fake_log_device.c.orig	2015-01-23 05:59:59.000000000 +0000
 +++ media/libstagefright/system/core/liblog/fake_log_device.c	2015-02-16 14:09:00.000000000 +0000
