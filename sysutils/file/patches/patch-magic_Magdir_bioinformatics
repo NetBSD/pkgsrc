@@ -1,0 +1,15 @@
+$NetBSD: patch-magic_Magdir_bioinformatics,v 1.1 2016/06/16 15:27:49 fhajny Exp $
+
+Fix unbalanced parantheses in regex.
+
+--- magic/Magdir/bioinformatics.orig	2016-02-14 15:53:53.000000000 +0000
++++ magic/Magdir/bioinformatics
+@@ -163,7 +163,7 @@
+ # SAM Alignment MAPQ
+ >>>>0		regex	=^([^\t]+\t){4}[0-9]{1,3}\t		
+ # SAM Alignment CIGAR
+->>>>>0		regex	=\t\\*|([0-9]+[MIDNSHPX=])+)\t		
++>>>>>0		regex	=\t(\\*|([0-9]+[MIDNSHPX=])+)\t		
+ # SAM Alignment RNEXT
+ >>>>>>0		regex	=\t(\\*|=|[!-()+->?-~][!-~]*)\t		
+ # SAM Alignment PNEXT
