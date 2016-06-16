@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2011/12/14 20:27:11 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2016/06/16 04:06:18 markd Exp $
 
 DISTNAME=	xetex.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2011
-TEXLIVE_REV=	24091
+PKGNAME=	tex-${DISTNAME:S/./-/}-2016
+TEXLIVE_REV=	40963
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-xetex

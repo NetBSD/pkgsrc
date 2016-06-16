@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.11 2015/04/23 11:36:31 markd Exp $
+$NetBSD: patch-ab,v 1.12 2016/06/16 04:06:05 markd Exp $
 
---- tex/generic/config/language.def.orig	2013-07-08 01:19:23.000000000 +0000
+--- tex/generic/config/language.def.orig	2016-05-15 01:17:05.000000000 +0000
 +++ tex/generic/config/language.def
-@@ -28,157 +28,6 @@
+@@ -28,160 +28,6 @@
  \addlanguage {USenglish}{hyphen}{}{2}{3} %%% This MUST be the first non-comment
                                           %%% line of the file
  
@@ -28,6 +28,8 @@ $NetBSD: patch-ab,v 1.11 2015/04/23 11:36:31 markd Exp $
 -\addlanguage{catalan}{loadhyph-ca.tex}{}{2}{2}
 -% from hyphen-chinese:
 -\addlanguage{pinyin}{loadhyph-zh-latn-pinyin.tex}{}{1}{1}
+-% from hyphen-churchslavonic:
+-\addlanguage{churchslavonic}{loadhyph-cu.tex}{}{1}{2}
 -% from hyphen-coptic:
 -\addlanguage{coptic}{loadhyph-cop.tex}{}{1}{1}
 -% from hyphen-croatian:
@@ -57,15 +59,15 @@ $NetBSD: patch-ab,v 1.11 2015/04/23 11:36:31 markd Exp $
 -% from hyphen-finnish:
 -\addlanguage{finnish}{loadhyph-fi.tex}{}{2}{2}
 -% from hyphen-french:
--\addlanguage{french}{loadhyph-fr.tex}{}{2}{3}
--\addlanguage{patois}{loadhyph-fr.tex}{}{2}{3}
--\addlanguage{francais}{loadhyph-fr.tex}{}{2}{3}
+-\addlanguage{french}{loadhyph-fr.tex}{}{2}{2}
+-\addlanguage{patois}{loadhyph-fr.tex}{}{2}{2}
+-\addlanguage{francais}{loadhyph-fr.tex}{}{2}{2}
 -% from hyphen-friulan:
 -\addlanguage{friulan}{loadhyph-fur.tex}{}{2}{2}
 -% from hyphen-galician:
 -\addlanguage{galician}{loadhyph-gl.tex}{}{2}{2}
 -% from hyphen-georgian:
--\addlanguage{georgian}{loadhyph-ka.tex}{}{2}{3}
+-\addlanguage{georgian}{loadhyph-ka.tex}{}{1}{2}
 -% from hyphen-german:
 -\addlanguage{german}{loadhyph-de-1901.tex}{}{2}{2}
 -\addlanguage{ngerman}{loadhyph-de-1996.tex}{}{2}{2}
@@ -103,6 +105,7 @@ $NetBSD: patch-ab,v 1.11 2015/04/23 11:36:31 markd Exp $
 -% from hyphen-latin:
 -\addlanguage{latin}{loadhyph-la.tex}{}{2}{2}
 -\addlanguage{classiclatin}{loadhyph-la-x-classic.tex}{}{2}{2}
+-\addlanguage{liturgicallatin}{loadhyph-la-x-liturgic.tex}{}{2}{2}
 -% from hyphen-latvian:
 -\addlanguage{latvian}{loadhyph-lv.tex}{}{2}{2}
 -% from hyphen-lithuanian:
@@ -115,6 +118,8 @@ $NetBSD: patch-ab,v 1.11 2015/04/23 11:36:31 markd Exp $
 -\addlanguage{norwegian}{loadhyph-nb.tex}{}{2}{2}
 -\addlanguage{norsk}{loadhyph-nb.tex}{}{2}{2}
 -\addlanguage{nynorsk}{loadhyph-nn.tex}{}{2}{2}
+-% from hyphen-occitan:
+-\addlanguage{occitan}{loadhyph-oc.tex}{}{2}{2}
 -% from hyphen-piedmontese:
 -\addlanguage{piedmontese}{loadhyph-pms.tex}{}{2}{2}
 -% from hyphen-polish:
@@ -122,8 +127,6 @@ $NetBSD: patch-ab,v 1.11 2015/04/23 11:36:31 markd Exp $
 -% from hyphen-portuguese:
 -\addlanguage{portuguese}{loadhyph-pt.tex}{}{2}{3}
 -\addlanguage{portuges}{loadhyph-pt.tex}{}{2}{3}
--\addlanguage{brazil}{loadhyph-pt.tex}{}{2}{3}
--\addlanguage{brazilian}{loadhyph-pt.tex}{}{2}{3}
 -% from hyphen-romanian:
 -\addlanguage{romanian}{loadhyph-ro.tex}{}{2}{2}
 -% from hyphen-romansh:

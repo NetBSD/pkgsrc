@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/05/04 12:30:11 markd Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/16 04:06:00 markd Exp $
 
 DISTNAME=	babel-friulan
-PKGNAME=	tex-${DISTNAME}-2014
-TEXLIVE_REV=	30361
+PKGNAME=	tex-${DISTNAME}-1.3
+TEXLIVE_REV=	39861
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/babel-friulan

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/06/14 12:50:05 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2016/06/16 04:06:14 markd Exp $
 share/texmf-dist/makeindex/plain/plaintex.ist
 share/texmf-dist/tex/plain/base/fontchart.tex
 share/texmf-dist/tex/plain/base/gkpmac.tex
@@ -11,13 +11,10 @@ share/texmf-dist/tex/plain/base/plain.tex
 share/texmf-dist/tex/plain/base/wlist.tex
 share/texmf-dist/tex/plain/config/aleph.ini
 share/texmf-dist/tex/plain/config/bplain.ini
-share/texmf-dist/tex/plain/config/dviluatex.ini
 share/texmf-dist/tex/plain/config/etex.ini
-share/texmf-dist/tex/plain/config/luatex.ini
 share/texmf-dist/tex/plain/config/omega.ini
 share/texmf-dist/tex/plain/config/pdfbplain.ini
 share/texmf-dist/tex/plain/config/pdfetex.ini
 share/texmf-dist/tex/plain/config/pdftexmagfix.tex
 share/texmf-dist/tex/plain/config/tex.ini
 share/texmf-dist/tex/plain/config/unicode-letters.def
-share/texmf-dist/tex/plain/config/xetex.ini

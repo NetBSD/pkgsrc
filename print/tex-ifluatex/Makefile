@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2015/05/05 18:05:47 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2016/06/16 04:06:10 markd Exp $
 
 DISTNAME=	ifluatex
-PKGNAME=	tex-${DISTNAME}-1.3pl26725
-TEXLIVE_REV=	26725
+PKGNAME=	tex-${DISTNAME}-1.4
+TEXLIVE_REV=	41247
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/ifluatex

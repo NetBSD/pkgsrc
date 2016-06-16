@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2015/04/26 21:11:21 markd Exp $
+# $NetBSD: Makefile,v 1.4 2016/06/16 04:06:13 markd Exp $
 
 DISTNAME=	pageslts
-PKGNAME=	tex-${DISTNAME}-1.2c
-PKGREVISION=	1
-TEXLIVE_REV=	32720
+PKGNAME=	tex-${DISTNAME}-1.2f
+TEXLIVE_REV=	39164
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Provide labels for the last page in each page numbering group

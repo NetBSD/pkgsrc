@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 01:02:19 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/06/16 04:06:09 markd Exp $
 
-SHA1 (tex-hyphen-welsh-20144/hyphen-welsh.tar.xz) = 33c4fa97e9783f6efee8c89b92c0defb8b180feb
-RMD160 (tex-hyphen-welsh-20144/hyphen-welsh.tar.xz) = 8ab3a7db89498c668c84f47bf3b281d450756a3f
-SHA512 (tex-hyphen-welsh-20144/hyphen-welsh.tar.xz) = 1b07b5ce6d82c542147567894bccf469addf5a83361d4d20e06e4e471759e15b11176c2f601a00c3abb07ed90d6fa87fe6d6a92a6b148b9211c4ff49e7c58a7c
-Size (tex-hyphen-welsh-20144/hyphen-welsh.tar.xz) = 348 bytes
+SHA1 (tex-hyphen-welsh-41113/hyphen-welsh.tar.xz) = 625a80d556df6969af09a413121582378106b79d
+RMD160 (tex-hyphen-welsh-41113/hyphen-welsh.tar.xz) = 68c4d2678495e4e855862918358c7562a6096468
+SHA512 (tex-hyphen-welsh-41113/hyphen-welsh.tar.xz) = f9474e36f43a7b18043c2e37c8d9d380957da66a06e4e84c54bebba922cbc17e25747550269987057ecf2aabe8e4008dfe2c908062982bde699642a8da36b3af
+Size (tex-hyphen-welsh-41113/hyphen-welsh.tar.xz) = 20012 bytes

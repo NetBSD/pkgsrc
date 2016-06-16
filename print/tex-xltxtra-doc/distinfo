@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 01:03:00 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/06/16 04:06:19 markd Exp $
 
-SHA1 (tex-xltxtra-19809/xltxtra.doc.tar.xz) = 7fc5e780eb025576c43ea1f4a8f3db7997c9c984
-RMD160 (tex-xltxtra-19809/xltxtra.doc.tar.xz) = 42ccc2f1fa2620006f7421edc9d7fb35313cb48b
-SHA512 (tex-xltxtra-19809/xltxtra.doc.tar.xz) = 80952cd3684dae887a85ad6b58408ea4fae8f3ab00117251ed31ab302c53fe79aa75ad91b423b03594cd2bef9c3859f108d29839f73090510e2e613c330db287
-Size (tex-xltxtra-19809/xltxtra.doc.tar.xz) = 135460 bytes
+SHA1 (tex-xltxtra-39453/xltxtra.doc.tar.xz) = 88b9c0a79d7cd1209a386cbfd6435a49d3d6004a
+RMD160 (tex-xltxtra-39453/xltxtra.doc.tar.xz) = c0e763ee4486d8370ac4ccb6a1705ef5c03760ab
+SHA512 (tex-xltxtra-39453/xltxtra.doc.tar.xz) = 566c58f85699f0c59eece0caf5027732b8a125d66365956679fa98129055f87fd2d9ce4a512c82a2288450e27ee9ee05f54001024632df56666e3f87045e1c90
+Size (tex-xltxtra-39453/xltxtra.doc.tar.xz) = 132452 bytes

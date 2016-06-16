@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/12 16:42:10 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/06/16 04:06:13 markd Exp $
 share/texmf-dist/doc/latex/pdfcomment/CHANGES
 share/texmf-dist/doc/latex/pdfcomment/INSTALL
-share/texmf-dist/doc/latex/pdfcomment/README
+share/texmf-dist/doc/latex/pdfcomment/README.md
 share/texmf-dist/doc/latex/pdfcomment/example.pdf
 share/texmf-dist/doc/latex/pdfcomment/example.tex
 share/texmf-dist/doc/latex/pdfcomment/example_latex_dvipdfmx.pdf

@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2016/06/16 04:06:18 markd Exp $
+share/texmf-dist/fonts/map/dvipdfmx/updmap/kanjix.map
+share/texmf-dist/fonts/map/dvips/updmap/builtin35.map
+share/texmf-dist/fonts/map/dvips/updmap/download35.map
+share/texmf-dist/fonts/map/dvips/updmap/ps2pk.map
+share/texmf-dist/fonts/map/dvips/updmap/psfonts.map
+share/texmf-dist/fonts/map/dvips/updmap/psfonts_pk.map
+share/texmf-dist/fonts/map/dvips/updmap/psfonts_t1.map
+share/texmf-dist/fonts/map/pdftex/updmap/pdftex.map
+share/texmf-dist/fonts/map/pdftex/updmap/pdftex_dl14.map
+share/texmf-dist/fonts/map/pdftex/updmap/pdftex_ndl14.map

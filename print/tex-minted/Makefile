@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2015/11/01 19:38:02 markd Exp $
+# $NetBSD: Makefile,v 1.4 2016/06/16 04:06:12 markd Exp $
 
 DISTNAME=	minted
-PKGNAME=	tex-${DISTNAME}-2.0
-TEXLIVE_REV=	36197
+PKGNAME=	tex-${DISTNAME}-2.1
+TEXLIVE_REV=	38339
 
 MAINTAINER=	markd@NetBSD.org
 COMMENT=	Highlighted source code for LaTeX

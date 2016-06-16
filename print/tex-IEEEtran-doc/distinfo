@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/04 01:01:40 agc Exp $
+$NetBSD: distinfo,v 1.6 2016/06/16 04:06:09 markd Exp $
 
-SHA1 (tex-IEEEtran-35194/IEEEtran.doc.tar.xz) = 0e42e02ec0201d6dbb211321cb4b33a234ac5ce9
-RMD160 (tex-IEEEtran-35194/IEEEtran.doc.tar.xz) = c50db565d2f8b8a879e778492033c57bada3a2c9
-SHA512 (tex-IEEEtran-35194/IEEEtran.doc.tar.xz) = 07487b70537e55dadc28f9d18fd9bf7e2c37568702ac961d4bdb0009092ef33f10baa52796e299b48e8427a534c2b17ab63f8c0c2b9d14358401edbd0caffe24
-Size (tex-IEEEtran-35194/IEEEtran.doc.tar.xz) = 1299108 bytes
+SHA1 (tex-IEEEtran-38238/IEEEtran.doc.tar.xz) = 37832d07af6cd4abd2b574b135eff1c62de95ada
+RMD160 (tex-IEEEtran-38238/IEEEtran.doc.tar.xz) = 6ac8f266554837ad7986906811c125dbc25a9095
+SHA512 (tex-IEEEtran-38238/IEEEtran.doc.tar.xz) = f3c23563dabafc780dfcedbcaf6b34452169d3820ffa298add3e85890c3b730d2c84cac64000ed48c47fdcaa90b58bf7f4728b28a1a95109063d14a96ddb9b74
+Size (tex-IEEEtran-38238/IEEEtran.doc.tar.xz) = 1265320 bytes

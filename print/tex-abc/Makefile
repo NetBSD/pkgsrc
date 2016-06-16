@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2016/01/30 03:26:05 markd Exp $
+# $NetBSD: Makefile,v 1.6 2016/06/16 04:05:58 markd Exp $
 
 DISTNAME=	abc
-PKGNAME=	tex-${DISTNAME}-1.0
-PKGREVISION=	1
-TEXLIVE_REV=	15878
+PKGNAME=	tex-${DISTNAME}-2.0b
+TEXLIVE_REV=	41157
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Support ABC music notation in LaTeX

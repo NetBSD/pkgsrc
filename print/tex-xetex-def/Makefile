@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2016/01/26 10:21:26 markd Exp $
+# $NetBSD: Makefile,v 1.5 2016/06/16 04:06:18 markd Exp $
 
 DISTNAME=	xetex-def
-PKGNAME=	tex-${DISTNAME}-4.04
-TEXLIVE_REV=	36646
+PKGNAME=	tex-${DISTNAME}-4.08
+TEXLIVE_REV=	40327
 
 MAINTAINER=	markd@NetBSD.org
 COMMENT=	Colour and graphics support for XeTeX

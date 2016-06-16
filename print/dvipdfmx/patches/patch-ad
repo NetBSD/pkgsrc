@@ -1,13 +1,13 @@
-$NetBSD: patch-ad,v 1.3 2015/06/14 12:50:00 markd Exp $
+$NetBSD: patch-ad,v 1.4 2016/06/16 04:06:19 markd Exp $
 
---- data/dvipdfmx.cfg.orig	2014-12-01 00:02:22.000000000 +0000
+--- data/dvipdfmx.cfg.orig	2015-11-05 00:08:29.000000000 +0000
 +++ data/dvipdfmx.cfg
-@@ -154,7 +154,7 @@ P  0x003C
+@@ -156,7 +156,7 @@ P  0x003C
  %% kpsewhich -progname=dvipdfmx -format='other text files' dvipdfmx.cfg
  %% and control which one is found by setting DVIPDFMXINPUTS.
  %%
--D  "rungs -q -dNOPAUSE -dBATCH -dEPSCrop -sPAPERSIZE=a0 -sDEVICE=pdfwrite -dCompatibilityLevel=%v -dAutoFilterGrayImages=false -dGrayImageFilter=/FlateEncode -dAutoFilterColorImages=false -dColorImageFilter=/FlateEncode -sOutputFile='%o' '%i' -c quit"
-+D  "@RUNGS@ -q -dNOPAUSE -dBATCH -dEPSCrop -sPAPERSIZE=a0 -sDEVICE=pdfwrite -dCompatibilityLevel=%v -dAutoFilterGrayImages=false -dGrayImageFilter=/FlateEncode -dAutoFilterColorImages=false -dColorImageFilter=/FlateEncode -sOutputFile='%o' '%i' -c quit"
+-D  "rungs -q -dNOPAUSE -dBATCH -dEPSCrop -sPAPERSIZE=a0 -sDEVICE=pdfwrite -dCompatibilityLevel=%v -dAutoFilterGrayImages=false -dGrayImageFilter=/FlateEncode -dAutoFilterColorImages=false -dColorImageFilter=/FlateEncode -dAutoRotatePages=/None -sOutputFile='%o' '%i' -c quit"
++D  "@RUNGS@ -q -dNOPAUSE -dBATCH -dEPSCrop -sPAPERSIZE=a0 -sDEVICE=pdfwrite -dCompatibilityLevel=%v -dAutoFilterGrayImages=false -dGrayImageFilter=/FlateEncode -dAutoFilterColorImages=false -dColorImageFilter=/FlateEncode -dAutoRotatePages=/None -sOutputFile='%o' '%i' -c quit"
  
  % other random ps converters people have experimented with.
  %D "/usr/local/bin/ps2pdf -dEPSCrop '%i' '%o'"

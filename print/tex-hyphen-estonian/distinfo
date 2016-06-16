@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 01:02:15 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/06/16 04:06:06 markd Exp $
 
-SHA1 (tex-hyphen-estonian-20144/hyphen-estonian.tar.xz) = 347422ea129d13d83b28914ea772f14c9fbda015
-RMD160 (tex-hyphen-estonian-20144/hyphen-estonian.tar.xz) = c00295d0d5bf7f77aac4d7c9d70d8396ab449d90
-SHA512 (tex-hyphen-estonian-20144/hyphen-estonian.tar.xz) = 4eefb43ffaaf1bdeb16599a809ee3d63e9008e8db924de629f6d30111536bf5ee115d1f73e315a9d45f37e358929f73f3d1bf991acbf2ef31b2bd17af1ed53d8
-Size (tex-hyphen-estonian-20144/hyphen-estonian.tar.xz) = 348 bytes
+SHA1 (tex-hyphen-estonian-40340/hyphen-estonian.tar.xz) = 110e982510803437a87e08836f22abe7c1c5f81c
+RMD160 (tex-hyphen-estonian-40340/hyphen-estonian.tar.xz) = f5571a3cbf7f11ebb0323bae8d2bacc1ec16aed3
+SHA512 (tex-hyphen-estonian-40340/hyphen-estonian.tar.xz) = db53033ff29ced7254334828ecb0a19a50f1688579418c235890783fa4a440da2ad85dd312177bb68d9b639dc3e0a35c4f21db602e2073fbd8c8a2656b4c9bd2
+Size (tex-hyphen-estonian-40340/hyphen-estonian.tar.xz) = 14696 bytes

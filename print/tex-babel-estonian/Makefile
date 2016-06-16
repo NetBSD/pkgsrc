@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/05/04 12:28:57 markd Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/16 04:05:59 markd Exp $
 
 DISTNAME=	babel-estonian
-PKGNAME=	tex-${DISTNAME}-1.1
-TEXLIVE_REV=	33023
+PKGNAME=	tex-${DISTNAME}-1.1a
+TEXLIVE_REV=	38064
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/babel-estonian

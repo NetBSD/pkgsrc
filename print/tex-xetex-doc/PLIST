@@ -1,3 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/21 17:56:10 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/06/16 04:06:18 markd Exp $
+share/texmf-dist/doc/xetex/base/NEWS
+share/texmf-dist/doc/xetex/base/README
 share/texmf-dist/doc/xetex/base/XeTeX-notes.pdf
 share/texmf-dist/doc/xetex/base/XeTeX-notes.tex

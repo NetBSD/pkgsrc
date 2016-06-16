@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2015/06/14 12:50:03 markd Exp $
+# $NetBSD: Makefile,v 1.10 2016/06/16 04:06:09 markd Exp $
 
 DISTNAME=	hyph-utf8.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2015
-TEXLIVE_REV=	37337
+PKGNAME=	tex-${DISTNAME:S/./-/}-2016
+TEXLIVE_REV=	41189
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/hyph-utf8

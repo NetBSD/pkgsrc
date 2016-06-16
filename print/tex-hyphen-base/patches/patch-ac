@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.9 2015/04/23 11:36:31 markd Exp $
+$NetBSD: patch-ac,v 1.10 2016/06/16 04:06:05 markd Exp $
 
---- tex/generic/config/language.dat.lua.orig	2013-07-08 01:19:27.000000000 +0000
+--- tex/generic/config/language.dat.lua.orig	2016-05-15 01:17:07.000000000 +0000
 +++ tex/generic/config/language.dat.lua
-@@ -33,673 +33,4 @@ return {
+@@ -33,699 +33,4 @@ return {
          -- dumylang and zerohyph are dumped in the format,
          -- since they contain either very few or no patterns at all
  -- END of language.us.lua (missing '}' appended after all entries)
@@ -100,6 +100,15 @@ $NetBSD: patch-ac,v 1.9 2015/04/23 11:36:31 markd Exp $
 -		synonyms = {  },
 -		patterns = 'hyph-zh-latn-pinyin.pat.txt',
 -		hyphenation = '',
+-	},
+--- from hyphen-churchslavonic:
+-	['churchslavonic'] = {
+-		loader = 'loadhyph-cu.tex',
+-		lefthyphenmin = 1,
+-		righthyphenmin = 2,
+-		synonyms = {  },
+-		patterns = 'hyph-cu.pat.txt',
+-		hyphenation = 'hyph-cu.hyp.txt',
 -	},
 --- from hyphen-coptic:
 -	['coptic'] = {
@@ -211,7 +220,7 @@ $NetBSD: patch-ac,v 1.9 2015/04/23 11:36:31 markd Exp $
 -	['french'] = {
 -		loader = 'loadhyph-fr.tex',
 -		lefthyphenmin = 2,
--		righthyphenmin = 3,
+-		righthyphenmin = 2,
 -		synonyms = { 'patois', 'francais' },
 -		patterns = 'hyph-fr.pat.txt',
 -		hyphenation = '',
@@ -237,8 +246,8 @@ $NetBSD: patch-ac,v 1.9 2015/04/23 11:36:31 markd Exp $
 --- from hyphen-georgian:
 -	['georgian'] = {
 -		loader = 'loadhyph-ka.tex',
--		lefthyphenmin = 2,
--		righthyphenmin = 3,
+-		lefthyphenmin = 1,
+-		righthyphenmin = 2,
 -		synonyms = {  },
 -		patterns = 'hyph-ka.pat.txt',
 -		hyphenation = '',
@@ -454,6 +463,14 @@ $NetBSD: patch-ac,v 1.9 2015/04/23 11:36:31 markd Exp $
 -		patterns = 'hyph-la-x-classic.pat.txt',
 -		hyphenation = '',
 -	},
+-	['liturgicallatin'] = {
+-		loader = 'loadhyph-la-x-liturgic.tex',
+-		lefthyphenmin = 2,
+-		righthyphenmin = 2,
+-		synonyms = {  },
+-		patterns = 'hyph-la-x-liturgic.pat.txt',
+-		hyphenation = '',
+-	},
 --- from hyphen-latvian:
 -	['latvian'] = {
 -		loader = 'loadhyph-lv.tex',
@@ -505,6 +522,15 @@ $NetBSD: patch-ac,v 1.9 2015/04/23 11:36:31 markd Exp $
 -		patterns = 'hyph-nn.pat.txt',
 -		hyphenation = 'hyph-nn.hyp.txt',
 -	},
+--- from hyphen-occitan:
+-	['occitan'] = {
+-		loader = 'loadhyph-oc.tex',
+-		lefthyphenmin = 2,
+-		righthyphenmin = 2,
+-		synonyms = {  },
+-		patterns = 'hyph-oc.pat.txt',
+-		hyphenation = '',
+-	},
 --- from hyphen-piedmontese:
 -	['piedmontese'] = {
 -		loader = 'loadhyph-pms.tex',
@@ -528,7 +554,7 @@ $NetBSD: patch-ac,v 1.9 2015/04/23 11:36:31 markd Exp $
 -		loader = 'loadhyph-pt.tex',
 -		lefthyphenmin = 2,
 -		righthyphenmin = 3,
--		synonyms = { 'portuges', 'brazil', 'brazilian' },
+-		synonyms = { 'portuges' },
 -		patterns = 'hyph-pt.pat.txt',
 -		hyphenation = 'hyph-pt.hyp.txt',
 -	},

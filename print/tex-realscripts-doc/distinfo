@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/04 01:02:41 agc Exp $
+$NetBSD: distinfo,v 1.4 2016/06/16 04:06:15 markd Exp $
 
-SHA1 (tex-realscripts-29423/realscripts.doc.tar.xz) = 27ab130b4dfc8beac91a9f4778f617d912ce86f1
-RMD160 (tex-realscripts-29423/realscripts.doc.tar.xz) = 7270b4697097fa1c03d52d238eeab9516d3b952b
-SHA512 (tex-realscripts-29423/realscripts.doc.tar.xz) = 734a32091e945ef4e13c096e6167726ad4fc9cadfffdf4ced90781a23cda23590aa8b6725e68ff1cd87db58392e517620c992084113488d1dd7c95aa725c27d9
-Size (tex-realscripts-29423/realscripts.doc.tar.xz) = 104936 bytes
+SHA1 (tex-realscripts-39706/realscripts.doc.tar.xz) = 53036f12a473724449aa4408a48065cb376ff0fd
+RMD160 (tex-realscripts-39706/realscripts.doc.tar.xz) = 5b7a032c4a86d3d093b0479fbb51763d32609c5c
+SHA512 (tex-realscripts-39706/realscripts.doc.tar.xz) = 8ceb75cffe2498fc380a2daaae430888c1627e72e8de2f992ca612029dad6b5d1d49923d0558a5d98a5fb44ec82e714b15fc056dde1298d512f5091a63f9cbca
+Size (tex-realscripts-39706/realscripts.doc.tar.xz) = 104544 bytes

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:02:16 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/06/16 04:06:06 markd Exp $
 
-SHA1 (tex-hyphen-friulan-26595/hyphen-friulan.tar.xz) = 7b098f4bc0e73db2a4400800aa552b0f43e0e4ec
-RMD160 (tex-hyphen-friulan-26595/hyphen-friulan.tar.xz) = d52a32a41af830d994149310dd48a0f5be1bf757
-SHA512 (tex-hyphen-friulan-26595/hyphen-friulan.tar.xz) = a4290acffbc43819e05d5b5da6bc83bcda6f3b28309e5553b54c32652e7470addf22565502f3bcb57ed6ed920321348b623f86493eedb5642f1adeffc165c8e8
-Size (tex-hyphen-friulan-26595/hyphen-friulan.tar.xz) = 524 bytes
+SHA1 (tex-hyphen-friulan-40340/hyphen-friulan.tar.xz) = 0c0872eea9c32a04ba94c286804863073661285d
+RMD160 (tex-hyphen-friulan-40340/hyphen-friulan.tar.xz) = 57aca8634ca8860ed35908721556c43f5277f730
+SHA512 (tex-hyphen-friulan-40340/hyphen-friulan.tar.xz) = 457a47ace9c6a62c87170167aa8999c962adb4cb3c2eb82d14088c065bc134b57408157146c087e4a24c9e91d6a750635dda46c661a0fe8c1d6456db047f7002
+Size (tex-hyphen-friulan-40340/hyphen-friulan.tar.xz) = 3364 bytes

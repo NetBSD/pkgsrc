@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/16 10:30:18 markd Exp $
-share/texmf-dist/doc/latex/pict2e/README
+@comment $NetBSD: PLIST,v 1.2 2016/06/16 04:06:14 markd Exp $
+share/texmf-dist/doc/latex/pict2e/README.md
 share/texmf-dist/doc/latex/pict2e/manifest.txt
 share/texmf-dist/doc/latex/pict2e/p2e-drivers.pdf
 share/texmf-dist/doc/latex/pict2e/pict2e.pdf

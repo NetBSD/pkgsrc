@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2015/04/23 12:27:54 markd Exp $
+# $NetBSD: Makefile,v 1.3 2016/06/16 04:06:12 markd Exp $
 
 DISTNAME=	minted.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2.0
-TEXLIVE_REV=	36197
+PKGNAME=	tex-${DISTNAME:S/./-/}-2.1
+TEXLIVE_REV=	38339
 
 MAINTAINER=	markd@NetBSD.org
 COMMENT=	Documentation for tex-minted

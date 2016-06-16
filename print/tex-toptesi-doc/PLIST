@@ -1,18 +1,21 @@
-@comment $NetBSD: PLIST,v 1.1 2015/09/01 21:17:54 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/06/16 04:06:17 markd Exp $
 share/texmf-dist/doc/latex/toptesi/FrontespiziAssemblati.pdf
 share/texmf-dist/doc/latex/toptesi/FrontespiziAssemblati.tex
 share/texmf-dist/doc/latex/toptesi/FrontespiziAssemblati1.pdf
 share/texmf-dist/doc/latex/toptesi/FrontespiziAssemblati1.tex
 share/texmf-dist/doc/latex/toptesi/FrontespiziAssemblati2.pdf
+share/texmf-dist/doc/latex/toptesi/FrontespiziAssemblati2.tex
+share/texmf-dist/doc/latex/toptesi/FrontespizioLandscape.pdf
 share/texmf-dist/doc/latex/toptesi/LPPL.tex
-share/texmf-dist/doc/latex/toptesi/LoghiFinti.pdf
-share/texmf-dist/doc/latex/toptesi/LoghiFinti.tex
+share/texmf-dist/doc/latex/toptesi/Logoblu.pdf
+share/texmf-dist/doc/latex/toptesi/Logodue.pdf
+share/texmf-dist/doc/latex/toptesi/Logoquattro.pdf
+share/texmf-dist/doc/latex/toptesi/Logotre.pdf
+share/texmf-dist/doc/latex/toptesi/Logouno.pdf
 share/texmf-dist/doc/latex/toptesi/README
 share/texmf-dist/doc/latex/toptesi/README.TEXLIVE
 share/texmf-dist/doc/latex/toptesi/Toptesi-con-ambiente-frontespizio.pdf
 share/texmf-dist/doc/latex/toptesi/Toptesi-con-ambiente-frontespizio.tex
-share/texmf-dist/doc/latex/toptesi/frontespizi-xetex.pdf
-share/texmf-dist/doc/latex/toptesi/frontespizi-xetex.tex
 share/texmf-dist/doc/latex/toptesi/frontespizi1-xetex.pdf
 share/texmf-dist/doc/latex/toptesi/frontespizi1-xetex.tex
 share/texmf-dist/doc/latex/toptesi/frontespizi2-xetex.pdf
@@ -30,8 +33,9 @@ share/texmf-dist/doc/latex/toptesi/toptesi-example.cfg
 share/texmf-dist/doc/latex/toptesi/toptesi-example.pdf
 share/texmf-dist/doc/latex/toptesi/toptesi-example.tex
 share/texmf-dist/doc/latex/toptesi/toptesi-example.xmpdata
-share/texmf-dist/doc/latex/toptesi/toptesi-it-xetex-def.ps
-share/texmf-dist/doc/latex/toptesi/toptesi-it-xetex.cfg
-share/texmf-dist/doc/latex/toptesi/toptesi-it-xetex.pdf
-share/texmf-dist/doc/latex/toptesi/toptesi-it-xetex.tex
+share/texmf-dist/doc/latex/toptesi/toptesi-it-pdftex-def.ps
+share/texmf-dist/doc/latex/toptesi/toptesi-it-pdftex.cfg
+share/texmf-dist/doc/latex/toptesi/toptesi-it-pdftex.pdf
+share/texmf-dist/doc/latex/toptesi/toptesi-it-pdftex.tex
+share/texmf-dist/doc/latex/toptesi/toptesi-it-pdftex.xmpdata
 share/texmf-dist/doc/latex/toptesi/toptesi.pdf

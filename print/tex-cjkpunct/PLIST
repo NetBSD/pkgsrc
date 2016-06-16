@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/10 01:04:04 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/06/16 04:06:01 markd Exp $
+share/texmf-dist/tex/latex/cjkpunct/CJKpunct.spa
 share/texmf-dist/tex/latex/cjkpunct/CJKpunct.sty

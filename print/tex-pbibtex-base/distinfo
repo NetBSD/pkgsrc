@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/06/16 04:06:13 markd Exp $
+
+SHA1 (tex-pbibtex-base-40986/pbibtex-base.tar.xz) = d5afd1922a15f7606e34aca6a9fbdb7e857d0d5c
+RMD160 (tex-pbibtex-base-40986/pbibtex-base.tar.xz) = 70422b0b60f35f6401fc582cad477b512e1dab88
+SHA512 (tex-pbibtex-base-40986/pbibtex-base.tar.xz) = dd06e554338d077ce03f2f8314fdac888dca143052471baab767aafa5d954975b4e1ee12330d9652bf34cdc60ee9a32567ef943584e284d729f476f39f14b660
+Size (tex-pbibtex-base-40986/pbibtex-base.tar.xz) = 14672 bytes

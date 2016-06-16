@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/11/17 16:53:18 minskim Exp $
+@comment $NetBSD: PLIST,v 1.5 2016/06/16 04:06:03 markd Exp $
 share/texmf-dist/dvips/config/alt-rule.pro
 share/texmf-dist/dvips/config/canonex.cfg
 share/texmf-dist/dvips/config/config.bakoma
@@ -60,12 +60,6 @@ share/texmf-dist/fonts/enc/dvips/base/texmext.enc
 share/texmf-dist/fonts/enc/dvips/base/texmital.enc
 share/texmf-dist/fonts/enc/dvips/base/texmsym.enc
 share/texmf-dist/fonts/enc/dvips/base/texnansx.enc
-share/texmf-dist/fonts/map/dvips/updmap/builtin35.map
-share/texmf-dist/fonts/map/dvips/updmap/download35.map
-share/texmf-dist/fonts/map/dvips/updmap/ps2pk.map
-share/texmf-dist/fonts/map/dvips/updmap/psfonts.map
-share/texmf-dist/fonts/map/dvips/updmap/psfonts_pk.map
-share/texmf-dist/fonts/map/dvips/updmap/psfonts_t1.map
 share/texmf-dist/tex/generic/dvips/blackdvi.sty
 share/texmf-dist/tex/generic/dvips/blackdvi.tex
 share/texmf-dist/tex/generic/dvips/colordvi.sty

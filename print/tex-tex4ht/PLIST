@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/08 06:55:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/06/16 04:06:16 markd Exp $
 share/texmf-dist/tex/generic/tex4ht/2up.4ht
 share/texmf-dist/tex/generic/tex4ht/8859-6.4ht
 share/texmf-dist/tex/generic/tex4ht/CJK.4ht
@@ -315,6 +315,7 @@ share/texmf-dist/tex/generic/tex4ht/splitidx.4ht
 share/texmf-dist/tex/generic/tex4ht/srcltx.4ht
 share/texmf-dist/tex/generic/tex4ht/subeqnarray.4ht
 share/texmf-dist/tex/generic/tex4ht/subfigure.4ht
+share/texmf-dist/tex/generic/tex4ht/subscript.4ht
 share/texmf-dist/tex/generic/tex4ht/supertabular.4ht
 share/texmf-dist/tex/generic/tex4ht/sverb.4ht
 share/texmf-dist/tex/generic/tex4ht/svg.4ht
@@ -3568,6 +3569,8 @@ share/texmf-dist/tex4ht/ht-fonts/unicode/cyrillic/cmcyr/cmcbxti.htf
 share/texmf-dist/tex4ht/ht-fonts/unicode/cyrillic/cmcyr/cmccsc.htf
 share/texmf-dist/tex4ht/ht-fonts/unicode/dstroke/dsrom.htf
 share/texmf-dist/tex4ht/ht-fonts/unicode/dstroke/esint.htf
+share/texmf-dist/tex4ht/ht-fonts/unicode/ec/eccc-uni.htf
+share/texmf-dist/tex4ht/ht-fonts/unicode/ec/eccc.htf
 share/texmf-dist/tex4ht/ht-fonts/unicode/greek/ibygrk/fibr.htf
 share/texmf-dist/tex4ht/ht-fonts/unicode/hebrew/cjhebltx.htf
 share/texmf-dist/tex4ht/ht-fonts/unicode/hebrew/crml.htf

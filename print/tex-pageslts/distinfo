@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/04 01:02:34 agc Exp $
+$NetBSD: distinfo,v 1.4 2016/06/16 04:06:13 markd Exp $
 
-SHA1 (tex-pageslts-32720/pageslts.tar.xz) = 5b2acc17bc117a4f0d87987c66f59db80a9bda79
-RMD160 (tex-pageslts-32720/pageslts.tar.xz) = 21ffc0f1dbed0112106728455cb4c72b3ed3bbdd
-SHA512 (tex-pageslts-32720/pageslts.tar.xz) = 4c2bd65bb626b8a874b4e8db5334c1cb077cc46846077197b87c6c4567f9ac2e57a0481cfeb15c6025c67d466eb81c873e236894e7cb2e79f0462c55bcfdd01b
-Size (tex-pageslts-32720/pageslts.tar.xz) = 9156 bytes
+SHA1 (tex-pageslts-39164/pageslts.tar.xz) = 3abbdb642fb4d73a9774a2b4e13eb4440a4770d9
+RMD160 (tex-pageslts-39164/pageslts.tar.xz) = 92604279e694eeca354485e3121d1376773f7ad5
+SHA512 (tex-pageslts-39164/pageslts.tar.xz) = e40173c155f0122420683ad06f9e4fadeeca9522553f3d71a358ea1df719facfd26b0155fba5e3bf8210843c87c8ae4179df12f281545af2d7a1ac4821a63471
+Size (tex-pageslts-39164/pageslts.tar.xz) = 9820 bytes

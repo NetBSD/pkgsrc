@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/05/16 10:30:18 markd Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/16 04:06:14 markd Exp $
 
 DISTNAME=	pict2e
-PKGNAME=	tex-${DISTNAME}-0.2z
-TEXLIVE_REV=	32658
+PKGNAME=	tex-${DISTNAME}-0.3b
+TEXLIVE_REV=	39591
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/pict2e

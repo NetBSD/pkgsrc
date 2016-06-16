@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:01:50 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/06/16 04:06:00 markd Exp $
 
-SHA1 (tex-babel-welsh-30299/babel-welsh.tar.xz) = a81a55c669640c04c4958dc53636cafa44fcabe6
-RMD160 (tex-babel-welsh-30299/babel-welsh.tar.xz) = ed18db80ef75f5630e1e8161ce53f2e8ca282dc6
-SHA512 (tex-babel-welsh-30299/babel-welsh.tar.xz) = fa6ac86f0a87711a8aef608460544dc6227473ba5fb26a7edd1acd358818c6b7546efcd4e7a39502d12882a2cacb1bae945b033b7f406d6865a13d49762a0878
-Size (tex-babel-welsh-30299/babel-welsh.tar.xz) = 2256 bytes
+SHA1 (tex-babel-welsh-38372/babel-welsh.tar.xz) = 166b78ea79c0fcf3e515061c600eb6385bcc44bb
+RMD160 (tex-babel-welsh-38372/babel-welsh.tar.xz) = dd96ec1073d1570c59e61ff8473dcdf96120cb56
+SHA512 (tex-babel-welsh-38372/babel-welsh.tar.xz) = 6d9fa08e22d46641aa04e315cef6f02c145cc79aa6ddd4066e11de3fa8b02d189421fc2f3c09773785ebf65e4486b5c45b74b12ebb934176d77324bbba301a8e
+Size (tex-babel-welsh-38372/babel-welsh.tar.xz) = 1836 bytes

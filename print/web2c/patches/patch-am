@@ -1,22 +1,22 @@
-$NetBSD: patch-am,v 1.6 2011/12/14 19:33:40 minskim Exp $
+$NetBSD: patch-am,v 1.7 2016/06/16 04:06:20 markd Exp $
 
---- man/Makefile.in.orig	2011-05-11 07:06:49.000000000 +0000
+--- man/Makefile.in.orig	2016-03-07 18:22:26.000000000 +0000
 +++ man/Makefile.in
-@@ -315,7 +315,7 @@ x_tool_libs = @x_tool_libs@
+@@ -433,7 +433,7 @@ x_tool_libs = @x_tool_libs@
  man_sources = $(bootstrap_man_sources) $(am__append_1) $(am__append_2) \
- 	$(am__append_3) $(am__append_5) $(am__append_6) \
- 	$(am__append_7) $(am__append_9) $(am__append_11) \
--	$(am__append_12) $(am__append_14) $(misc_man_sources)
-+	$(am__append_12) $(am__append_14)
+ 	$(am__append_4) $(am__append_7) $(am__append_8) \
+ 	$(am__append_9) $(am__append_11) $(am__append_13) \
+-	$(am__append_14) $(am__append_16) $(misc_man_sources)
++	$(am__append_14) $(am__append_16)
  EXTRA_DIST = $(bootstrap_man_sources) $(web_man_sources) tex.man \
  	mf.man mpost.man etex.man $(pdftex_man_sources) luatex.man \
- 	$(otangle_man_sources) aleph.man $(misc_man_sources) \
-@@ -324,7 +324,7 @@ EXTRA_DIST = $(bootstrap_man_sources) $(
- bootstrap_man_sources = ctie.man cweb.man tangle.man tie.man
+ 	$(otangle_man_sources) aleph.man $(misc_man_sources) spell.add
+@@ -441,7 +441,7 @@ bootstrap_man_sources = ctie.man cweb.ma
  
  # Symlinks within $(man1dir): FILE:LINK indicates LINK.1->FILE.1
--man1_links = cweb:ctangle cweb:cweave $(am__append_4) $(am__append_8) \
-+man1_links = cweb:ctangle cweb:cweave $(am__append_4) \
- 	$(am__append_10) $(am__append_13) $(am__append_15)
+ man1_links = cweb:ctangle cweb:cweave $(am__append_3) $(am__append_5) \
+-	$(am__append_6) $(am__append_10) $(am__append_12) \
++	$(am__append_6) $(am__append_12) \
+ 	$(am__append_15) $(am__append_17)
  web_man_sources = bibtex.man dvicopy.man dvitomp.man dvitype.man gftodvi.man \
  	gftopk.man gftype.man mft.man patgen.man pktogf.man pktype.man \

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 01:01:57 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/06/16 04:06:01 markd Exp $
 
-SHA1 (tex-cjk-ko-37899/cjk-ko.tar.xz) = e2d3cc31521532e865d9e7665b97ee728ff5b381
-RMD160 (tex-cjk-ko-37899/cjk-ko.tar.xz) = 90c81959a0483d5df738b123148981f5b3d7183e
-SHA512 (tex-cjk-ko-37899/cjk-ko.tar.xz) = d191032270b045ff32386f705a6ac21f773af23cf9c47d7696e27ac7c866e23d0c6fc093f00e78d3d2be62898b66f7e10c3bc52ab2cc2489309c24a88163b940
-Size (tex-cjk-ko-37899/cjk-ko.tar.xz) = 8268 bytes
+SHA1 (tex-cjk-ko-40373/cjk-ko.tar.xz) = 322ac01e3e5e91fe73b7ee0f1b4b411bf16dda77
+RMD160 (tex-cjk-ko-40373/cjk-ko.tar.xz) = 6e470bc658f8d94f0cd4548eb942ac491fa50751
+SHA512 (tex-cjk-ko-40373/cjk-ko.tar.xz) = 659618d5f018c9702a9ded411e3bf146dae025f71348039bb54d0dc0973be9e85a3bf34d2031fcc31f6edadc8d5be30a33633a53830854588d6a3d7dd0f6452b
+Size (tex-cjk-ko-40373/cjk-ko.tar.xz) = 8408 bytes

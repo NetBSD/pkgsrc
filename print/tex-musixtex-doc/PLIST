@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2015/08/02 11:49:59 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2016/06/16 04:06:13 markd Exp $
 man/man1/musixflx.1
 man/man1/musixtex.1
 share/texmf-dist/doc/generic/musixtex/ChangeLog-114.txt
@@ -6,6 +6,10 @@ share/texmf-dist/doc/generic/musixtex/ChangeLog-115.txt
 share/texmf-dist/doc/generic/musixtex/ChangeLog-116.txt
 share/texmf-dist/doc/generic/musixtex/ChangeLog-117.txt
 share/texmf-dist/doc/generic/musixtex/ChangeLog-118.txt
+share/texmf-dist/doc/generic/musixtex/ChangeLog-119.txt
+share/texmf-dist/doc/generic/musixtex/ChangeLog-120.txt
+share/texmf-dist/doc/generic/musixtex/ChangeLog-121.txt
+share/texmf-dist/doc/generic/musixtex/ChangeLog-122.txt
 share/texmf-dist/doc/generic/musixtex/ChangeLog-musixdoc.txt
 share/texmf-dist/doc/generic/musixtex/README
 share/texmf-dist/doc/generic/musixtex/examples/8bitchar.tex
@@ -67,6 +71,7 @@ share/texmf-dist/doc/generic/musixtex/examples/pacifiqn.tex
 share/texmf-dist/doc/generic/musixtex/examples/pacifiqt.tex
 share/texmf-dist/doc/generic/musixtex/examples/parnasum.tex
 share/texmf-dist/doc/generic/musixtex/examples/partitur.tex
+share/texmf-dist/doc/generic/musixtex/examples/pedal.tex
 share/texmf-dist/doc/generic/musixtex/examples/prelfug.tex
 share/texmf-dist/doc/generic/musixtex/examples/prelude.tex
 share/texmf-dist/doc/generic/musixtex/examples/pslurvgap.tex
@@ -85,7 +90,6 @@ share/texmf-dist/doc/generic/musixtex/examples/traeumer.tex
 share/texmf-dist/doc/generic/musixtex/examples/widor.tex
 share/texmf-dist/doc/generic/musixtex/examples/widor_16.tex
 share/texmf-dist/doc/generic/musixtex/examples/widor_20.tex
-share/texmf-dist/doc/generic/musixtex/musixcrd/README.musixcrd
 share/texmf-dist/doc/generic/musixtex/musixcrd/doc.pdf
 share/texmf-dist/doc/generic/musixtex/musixdoc.pdf
 share/texmf-dist/doc/generic/musixtex/musixdoc/accidentals.tex
@@ -109,7 +113,7 @@ share/texmf-dist/doc/generic/musixtex/musixdoc/musixdoc.tex
 share/texmf-dist/doc/generic/musixtex/musixdoc/parameters.tex
 share/texmf-dist/doc/generic/musixtex/musixdoc/preparing.tex
 share/texmf-dist/doc/generic/musixtex/musixdoc/repeats.tex
-share/texmf-dist/doc/generic/musixtex/musixdoc/rests.tex
+share/texmf-dist/doc/generic/musixtex/musixdoc/restsdoc.tex
 share/texmf-dist/doc/generic/musixtex/musixdoc/settingup.tex
 share/texmf-dist/doc/generic/musixtex/musixdoc/slurstiesTypeK.tex
 share/texmf-dist/doc/generic/musixtex/musixdoc/slurstiesfont.tex

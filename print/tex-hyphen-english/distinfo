@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:02:15 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/06/16 04:06:06 markd Exp $
 
-SHA1 (tex-hyphen-english-25990/hyphen-english.tar.xz) = da96a403e6f083b880fd203a1b0015dcff35ba29
-RMD160 (tex-hyphen-english-25990/hyphen-english.tar.xz) = 69a2eecbf3ab9bc6a245fbf178b626cbcc5ea887
-SHA512 (tex-hyphen-english-25990/hyphen-english.tar.xz) = 408c845b526edf26e8a8838870b8af6af7d35a4decbe370b8ac7d96611d4eb524dc224ef159c37caa99bd03a8097adadca853e9ff0cc0157dd08c7a65716c56d
-Size (tex-hyphen-english-25990/hyphen-english.tar.xz) = 584 bytes
+SHA1 (tex-hyphen-english-40340/hyphen-english.tar.xz) = 4d85a9dfba24865a7f78a2468656ae3c0399c0c2
+RMD160 (tex-hyphen-english-40340/hyphen-english.tar.xz) = e582d3f8c83db81301ac2fb6ae2950dc695d9d94
+SHA512 (tex-hyphen-english-40340/hyphen-english.tar.xz) = ad63a021a80313f7da414e08270a8c25f5c0a8cfe463fea0305f1e15b43096b929fd903736d14877aa68967ee821712c85a260ca8169088f7823c3ffe6b43496
+Size (tex-hyphen-english-40340/hyphen-english.tar.xz) = 41000 bytes

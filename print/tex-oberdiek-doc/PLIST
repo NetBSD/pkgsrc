@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/10/16 21:55:12 minskim Exp $
+@comment $NetBSD: PLIST,v 1.6 2016/06/16 04:06:13 markd Exp $
 share/texmf-dist/doc/latex/oberdiek/accsupp-example1.tex
 share/texmf-dist/doc/latex/oberdiek/accsupp-example2.tex
 share/texmf-dist/doc/latex/oberdiek/accsupp.pdf
@@ -202,7 +202,6 @@ share/texmf-dist/doc/latex/oberdiek/test/iflang-test2.tex
 share/texmf-dist/doc/latex/oberdiek/test/iflang-test3.tex
 share/texmf-dist/doc/latex/oberdiek/test/iflang-test4.tex
 share/texmf-dist/doc/latex/oberdiek/test/iflang-test5.tex
-share/texmf-dist/doc/latex/oberdiek/test/ifpdf-test1.tex
 share/texmf-dist/doc/latex/oberdiek/test/ifvtex-test1.tex
 share/texmf-dist/doc/latex/oberdiek/test/infwarerr-test1.tex
 share/texmf-dist/doc/latex/oberdiek/test/infwarerr-test2.tex

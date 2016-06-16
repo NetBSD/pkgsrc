@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:02:00 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/06/16 04:06:02 markd Exp $
 
-SHA1 (tex-ctable-33900/ctable.tar.xz) = b7f7b3b0afb063320e291dd5e6b8ab41d8288224
-RMD160 (tex-ctable-33900/ctable.tar.xz) = 00fc4fe891657f814b8a21475a417267f02a8415
-SHA512 (tex-ctable-33900/ctable.tar.xz) = d2502db7b498de7ef57c174a6a503e36b4f2a43121bbeec7134b8f226a7a2956b570fce328d88c5b8c09406b2a5a741c547d66474412f6f7502b4d5e477fffb9
-Size (tex-ctable-33900/ctable.tar.xz) = 3596 bytes
+SHA1 (tex-ctable-38672/ctable.tar.xz) = d353e95c832fa5a22ec995fdd811671508c332cb
+RMD160 (tex-ctable-38672/ctable.tar.xz) = 772ed11cad8e0dc600cfe206ce35d8a66ee075f4
+SHA512 (tex-ctable-38672/ctable.tar.xz) = f63a9cbfaad0876407e3b465c3cb3e1ef79ee7a468886ae72d8cb2c031ff81ec03d59005d20d024fa82a1d7c4d7d785398c30d8472af06b16531c6faa331d87b
+Size (tex-ctable-38672/ctable.tar.xz) = 3624 bytes

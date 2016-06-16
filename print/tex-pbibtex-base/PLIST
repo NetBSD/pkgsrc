@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2016/06/16 04:06:13 markd Exp $
+share/texmf-dist/pbibtex/bib/jxampl.bib
+share/texmf-dist/pbibtex/bst/jabbrv.bst
+share/texmf-dist/pbibtex/bst/jalpha.bst
+share/texmf-dist/pbibtex/bst/jipsj.bst
+share/texmf-dist/pbibtex/bst/jname.bst
+share/texmf-dist/pbibtex/bst/jorsj.bst
+share/texmf-dist/pbibtex/bst/jplain.bst
+share/texmf-dist/pbibtex/bst/junsrt.bst
+share/texmf-dist/pbibtex/bst/tieice.bst
+share/texmf-dist/pbibtex/bst/tipsj.bst

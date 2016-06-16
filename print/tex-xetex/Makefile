@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2015/06/12 10:51:00 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2016/06/16 04:06:18 markd Exp $
 
 DISTNAME=	xetex
-PKGNAME=	tex-${DISTNAME}-2011
-PKGREVISION=	4
-TEXLIVE_REV=	24091
+PKGNAME=	tex-${DISTNAME}-2016
+TEXLIVE_REV=	40963
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Unicode and OpenType-enabled TeX engine
