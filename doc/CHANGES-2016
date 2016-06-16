@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2444 2016/06/16 05:30:04 rumko Exp $
+$NetBSD: CHANGES-2016,v 1.2445 2016/06/16 08:34:52 roy Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3567,3 +3567,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added print/tex-unicode-data version 1.4a [markd 2016-06-16]
 	Added print/tex-unicode-data-doc version 1.4a [markd 2016-06-16]
 	Added print/tex-updmap-map version 2016 [markd 2016-06-16]
+	Updated devel/fossil to 1.35 [roy 2016-06-16]
