@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/06/14 00:38:41 youri Exp $
+# $NetBSD: Makefile,v 1.3 2016/06/16 08:36:06 youri Exp $
 
 DISTNAME=	gnome-themes-standard-3.20.2
 CATEGORIES=	graphics gnome
@@ -11,7 +11,7 @@ COMMENT=	Default themes for the GNOME desktop
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	pkg-config intltool
+USE_TOOLS+=	msgfmt pkg-config intltool
 
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
