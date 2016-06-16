@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/04/24 10:21:54 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/06/16 15:57:02 bouyer Exp $
 lib/opencpn/libocpn_draw_pi.so
 share/locale/ca/LC_MESSAGES/opencpn-ocpn_draw_pi.mo
 share/locale/cs/LC_MESSAGES/opencpn-ocpn_draw_pi.mo
@@ -30,6 +30,10 @@ share/opencpn/plugins/ocpn_draw_pi/data/EBL.png
 share/opencpn/plugins/ocpn_draw_pi/data/EBL.svg
 share/opencpn/plugins/ocpn_draw_pi/data/EBLgrey.png
 share/opencpn/plugins/ocpn_draw_pi/data/EBLgrey.svg
+share/opencpn/plugins/ocpn_draw_pi/data/GZ.png
+share/opencpn/plugins/ocpn_draw_pi/data/GZ.svg
+share/opencpn/plugins/ocpn_draw_pi/data/GZgrey.png
+share/opencpn/plugins/ocpn_draw_pi/data/GZgrey.svg
 share/opencpn/plugins/ocpn_draw_pi/data/ODManager.png
 share/opencpn/plugins/ocpn_draw_pi/data/ODManager.svg
 share/opencpn/plugins/ocpn_draw_pi/data/ODManagerGrey.png
