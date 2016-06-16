@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/09/02 10:50:40 markd Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/16 04:00:47 markd Exp $
 
 DISTNAME=	shapes.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.0
-TEXLIVE_REV=	37937
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.1
+TEXLIVE_REV=	38024
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/shapes

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2015/08/02 13:23:06 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2016/06/16 04:00:47 markd Exp $
 share/texmf-dist/doc/generic/pstricks/Changes
 share/texmf-dist/doc/generic/pstricks/Changes.dvips
 share/texmf-dist/doc/generic/pstricks/Changes.generic
@@ -9,6 +9,7 @@ share/texmf-dist/doc/generic/pstricks/ctandir.sty
 share/texmf-dist/doc/generic/pstricks/images/flowers.eps
 share/texmf-dist/doc/generic/pstricks/images/tiger.eps
 share/texmf-dist/doc/generic/pstricks/images/tiger.pdf
+share/texmf-dist/doc/generic/pstricks/pst-doc.bst
 share/texmf-dist/doc/generic/pstricks/pst-doc.ist
 share/texmf-dist/doc/generic/pstricks/pst-doc.pdf
 share/texmf-dist/doc/generic/pstricks/pst-news.sty
@@ -33,9 +34,10 @@ share/texmf-dist/doc/generic/pstricks/pst-news14.pdf
 share/texmf-dist/doc/generic/pstricks/pst-news14.tex
 share/texmf-dist/doc/generic/pstricks/pst-news15.pdf
 share/texmf-dist/doc/generic/pstricks/pst-news15.tex
+share/texmf-dist/doc/generic/pstricks/pst-news16.pdf
+share/texmf-dist/doc/generic/pstricks/pst-news16.tex
 share/texmf-dist/doc/generic/pstricks/pst-user.pdf
 share/texmf-dist/doc/generic/pstricks/pst-user.tgz
-share/texmf-dist/doc/generic/pstricks/pstricks-add-data9.data
 share/texmf-dist/doc/generic/pstricks/pstricks-bug.tex
 share/texmf-dist/doc/generic/pstricks/pstricks-doc.pdf
 share/texmf-dist/doc/generic/pstricks/test-pst.pdf

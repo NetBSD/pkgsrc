@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2013/12/03 20:04:35 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2016/06/16 04:00:46 markd Exp $
 
 DISTNAME=	mptopdf
-PKGNAME=	tex-${DISTNAME}-2013
-TEXLIVE_REV=	29751
+PKGNAME=	tex-${DISTNAME}-2016
+TEXLIVE_REV=	41282
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Script to convert mpost to PDF
