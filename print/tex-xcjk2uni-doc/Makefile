@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/05/10 01:04:04 markd Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/16 04:06:18 markd Exp $
 
 DISTNAME=	xcjk2uni.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-0.4
-TEXLIVE_REV=	34382
+PKGNAME=	tex-${DISTNAME:S/./-/}-0.6
+TEXLIVE_REV=	41121
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/xcjk2uni

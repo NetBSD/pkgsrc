@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2015/06/14 12:50:04 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2016/06/16 04:06:11 markd Exp $
 share/texmf-dist/makeindex/latex/gglo.ist
 share/texmf-dist/makeindex/latex/gind.ist
 share/texmf-dist/tex/latex/base/alltt.sty
@@ -61,8 +61,9 @@ share/texmf-dist/tex/latex/base/leqno.sty
 share/texmf-dist/tex/latex/base/letter.cls
 share/texmf-dist/tex/latex/base/letter.sty
 share/texmf-dist/tex/latex/base/lppl.tex
+share/texmf-dist/tex/latex/base/ltluatex.lua
+share/texmf-dist/tex/latex/base/ltluatex.tex
 share/texmf-dist/tex/latex/base/ltnews.cls
-share/texmf-dist/tex/latex/base/ltpatch.ltx
 share/texmf-dist/tex/latex/base/ltxcheck.tex
 share/texmf-dist/tex/latex/base/ltxdoc.cls
 share/texmf-dist/tex/latex/base/ltxguide.cls
@@ -148,7 +149,6 @@ share/texmf-dist/tex/latex/base/ucmss.fd
 share/texmf-dist/tex/latex/base/ucmtt.fd
 share/texmf-dist/tex/latex/base/ulasy.fd
 share/texmf-dist/tex/latex/base/ullasy.fd
-share/texmf-dist/tex/latex/base/unicode-letters.def
 share/texmf-dist/tex/latex/base/utf8-test.tex
 share/texmf-dist/tex/latex/base/utf8.def
 share/texmf-dist/tex/latex/base/utf8enc.dfu

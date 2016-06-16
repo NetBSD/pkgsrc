@@ -1,12 +1,14 @@
-@comment $NetBSD: PLIST,v 1.5 2015/04/25 03:56:15 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2016/06/16 04:06:14 markd Exp $
 share/texmf-dist/scripts/pgfplots/matlab2pgfplots.m
 share/texmf-dist/scripts/pgfplots/matlab2pgfplots.sh
 share/texmf-dist/scripts/pgfplots/pgf2pdf.sh
 share/texmf-dist/scripts/pgfplots/pgfplots.py
 share/texmf-dist/tex/context/third/pgfplots/t-pgfplots.tex
 share/texmf-dist/tex/context/third/pgfplots/t-pgfplotstable.tex
+share/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.colorbrewer.code.tex
 share/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.surfshading.code.tex
 share/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.tex
+share/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarycolorbrewer.code.tex
 share/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.colormaps.code.tex
 share/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.dateplot.code.tex
 share/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.decorations.softclip.code.tex
@@ -72,11 +74,13 @@ share/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex
 share/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.code.tex
 share/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
 share/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.code.tex
+share/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.tex
 share/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.tex
 share/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.tex
 share/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex
 share/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.pgfsys-dvipdfmx.def
 share/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.pgfsys-dvips.def
+share/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.pgfsys-luatex.def
 share/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.pgfsys-pdftex.def
 share/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.pgfsys-xetex.def
 share/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code.tex

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2016/01/30 03:26:06 markd Exp $
+# $NetBSD: Makefile,v 1.5 2016/06/16 04:05:59 markd Exp $
 
 DISTNAME=	algorithm2e.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-5.0
-TEXLIVE_REV=	28749
+PKGNAME=	tex-${DISTNAME:S/./-/}-5.1
+TEXLIVE_REV=	38805
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Documentation for tex-algorithm2e

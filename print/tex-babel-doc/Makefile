@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2015/04/22 10:02:03 markd Exp $
+# $NetBSD: Makefile,v 1.5 2016/06/16 04:05:59 markd Exp $
 
 DISTNAME=	babel.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-3.9l
-TEXLIVE_REV=	35266
+PKGNAME=	tex-${DISTNAME:S/./-/}-3.9r
+TEXLIVE_REV=	40706
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-babel

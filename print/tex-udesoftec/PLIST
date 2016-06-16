@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/14 17:07:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/06/16 04:06:17 markd Exp $
 share/texmf-dist/bibtex/bst/udesoftec/udesoftec.bst
+share/texmf-dist/tex/latex/udesoftec/udesoftec-bibcommon.sty
+share/texmf-dist/tex/latex/udesoftec/udesoftec-biblatex.sty
 share/texmf-dist/tex/latex/udesoftec/udesoftec-bst.sty
 share/texmf-dist/tex/latex/udesoftec/udesoftec-cover-uba.pdf
 share/texmf-dist/tex/latex/udesoftec/udesoftec-cover-ude-de.pdf

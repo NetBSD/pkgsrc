@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2016/01/30 03:26:09 markd Exp $
+# $NetBSD: Makefile,v 1.3 2016/06/16 04:06:00 markd Exp $
 
 DISTNAME=	booktabs
-PKGNAME=	tex-${DISTNAME}-1.61803
-TEXLIVE_REV=	15878
+PKGNAME=	tex-${DISTNAME}-1.618033
+TEXLIVE_REV=	40846
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Publication quality tables in LaTeX

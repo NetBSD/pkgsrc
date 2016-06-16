@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:01:48 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/06/16 04:06:00 markd Exp $
 
-SHA1 (tex-babel-friulan-30361/babel-friulan.tar.xz) = b2993095e17db6fd0caed41282b9714c7fff7ae2
-RMD160 (tex-babel-friulan-30361/babel-friulan.tar.xz) = a4031fd28212f124e2f50baba2b4432276a98b0a
-SHA512 (tex-babel-friulan-30361/babel-friulan.tar.xz) = 5d5277c74d0535de54145902ed93b75f029fefdd01a5bb768ecb3fb32adf6e9afd0624bad79a3de2f7eb91a649654fd11825446bb733ef7214219b2ac3549067
-Size (tex-babel-friulan-30361/babel-friulan.tar.xz) = 1644 bytes
+SHA1 (tex-babel-friulan-39861/babel-friulan.tar.xz) = d0ee2e1bce59f230a7d2e34e1b29b3b5628b9895
+RMD160 (tex-babel-friulan-39861/babel-friulan.tar.xz) = bb3ea9ff0d0d14c9c89e10b736bfffb044fc7099
+SHA512 (tex-babel-friulan-39861/babel-friulan.tar.xz) = 248a15bda269eee791945df1664ac668dc37b7cc52e1d59b264f447f2fdd531cc72279e1d4a95a7dbffabf2579aafda8d4b3ec3ef39865248a0349590bb906ed
+Size (tex-babel-friulan-39861/babel-friulan.tar.xz) = 1576 bytes
