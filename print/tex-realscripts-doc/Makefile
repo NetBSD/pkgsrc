@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2015/04/25 04:30:08 markd Exp $
+# $NetBSD: Makefile,v 1.3 2016/06/16 04:06:15 markd Exp $
 
 DISTNAME=	realscripts.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-0.3c
-TEXLIVE_REV=	29423
+PKGNAME=	tex-${DISTNAME:S/./-/}-0.3d
+TEXLIVE_REV=	39706
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-realscripts

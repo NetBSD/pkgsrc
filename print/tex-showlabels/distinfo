@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:02:44 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/06/16 04:06:16 markd Exp $
 
-SHA1 (tex-showlabels-32364/showlabels.tar.xz) = 5839a596b45307e1a25317aeb76a5ba5e7a1e2c8
-RMD160 (tex-showlabels-32364/showlabels.tar.xz) = e67b6fb7ef2bf56b2dcf467580ec7fe24105b9ab
-SHA512 (tex-showlabels-32364/showlabels.tar.xz) = f208ea3ea6d9924d7261a39457b94bfc55ba09085f86a1fb32fe3552a8679595600b05fb5a507afe6a8480a515f55f9da310fe83b50940b172a772c02379ace9
-Size (tex-showlabels-32364/showlabels.tar.xz) = 2816 bytes
+SHA1 (tex-showlabels-39083/showlabels.tar.xz) = 0b577cac550b462b85bbdc460d7e9f85bc1024ff
+RMD160 (tex-showlabels-39083/showlabels.tar.xz) = ce316c1f7687b7ca5c4f43456d54f4190a53ea4d
+SHA512 (tex-showlabels-39083/showlabels.tar.xz) = f39c59bd671beef3188ee68ec39664c54f0295c05969d935a3dfd6c3281002df0094d7de3a9e0e6e1f77b2bfc5c662f687a9cbc70cdfbb28c975742ce0297d54
+Size (tex-showlabels-39083/showlabels.tar.xz) = 3096 bytes

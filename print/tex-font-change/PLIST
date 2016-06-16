@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/08 14:09:51 wiz Exp $
-share/texmf-dist/tex/plain/font-change/font-change.tex
+@comment $NetBSD: PLIST,v 1.2 2016/06/16 04:06:03 markd Exp $
+share/texmf-dist/tex/plain/font-change/default-amssymbols.tex
 share/texmf-dist/tex/plain/font-change/font_antp_euler.tex
 share/texmf-dist/tex/plain/font-change/font_antt-condensed-light.tex
 share/texmf-dist/tex/plain/font-change/font_antt-condensed-medium.tex

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2015/06/14 12:50:05 markd Exp $
+# $NetBSD: Makefile,v 1.22 2016/06/16 04:06:14 markd Exp $
 
 DISTNAME=	pdftex
-PKGNAME=	tex-${DISTNAME}-1.40.11pl37432
-TEXLIVE_REV=	37432
+PKGNAME=	tex-${DISTNAME}-2016
+TEXLIVE_REV=	41149
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/pdftex
@@ -15,6 +15,8 @@ DEPENDS+=	tex-etex-[0-9]*:../../print/tex-etex
 DEPENDS+=	tex-hyphen-base-[0-9]*:../../print/tex-hyphen-base
 DEPENDS+=	tex-kpathsea-[0-9]*:../../print/tex-kpathsea
 DEPENDS+=	tex-plain-[0-9]*:../../print/tex-plain
+DEPENDS+=	tex-tex-ini-files-[0-9]*:../../print/tex-tex-ini-files
+DEPENDS+=	tex-updmap-map-[0-9]*:../../print/tex-updmap-map
 DEPENDS+=	web2c-[0-9]*:../../print/web2c
 
 USE_TOOLS+=	sh:run

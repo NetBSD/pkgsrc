@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2013/11/18 18:36:53 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2016/06/16 04:06:11 markd Exp $
 
 DISTNAME=	latex-bin
-PKGNAME=	tex-${DISTNAME}-2013
-TEXLIVE_REV=	29764
+PKGNAME=	tex-${DISTNAME}-2016
+TEXLIVE_REV=	40963
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	LaTeX executables
@@ -10,6 +10,7 @@ COMMENT=	LaTeX executables
 CONFLICTS+=	teTeX-texmf<=3.0nb21
 CONFLICTS+=	tex-bin-latex<2009
 DEPENDS+=	tex-latex>=2012:../../print/tex-latex
+DEPENDS+=	tex-tex-ini-files-[0-9]*:../../print/tex-tex-ini-files
 SUPERSEDES=	tex-bin-latex<2009
 
 INSTALLATION_DIRS=	bin

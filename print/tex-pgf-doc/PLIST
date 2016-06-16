@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2015/04/25 03:53:52 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2016/06/16 04:06:14 markd Exp $
 share/texmf-dist/doc/generic/pgf/AUTHORS
 share/texmf-dist/doc/generic/pgf/ChangeLog
 share/texmf-dist/doc/generic/pgf/FILES
 share/texmf-dist/doc/generic/pgf/INSTALL
 share/texmf-dist/doc/generic/pgf/README
+share/texmf-dist/doc/generic/pgf/README-3.0.0
 share/texmf-dist/doc/generic/pgf/images/brave-gnu-world-logo-mask.bb
 share/texmf-dist/doc/generic/pgf/images/brave-gnu-world-logo-mask.jpg
 share/texmf-dist/doc/generic/pgf/images/brave-gnu-world-logo.25.bb
@@ -57,6 +58,7 @@ share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-gd-algorithms-in-c.tex
 share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-gd-binding-layer.tex
 share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-gd-circular.tex
 share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-gd-display-layer.tex
+share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-gd-edge-routing.tex
 share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-gd-examples.tex
 share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-gd-force.tex
 share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-gd-layered.tex
@@ -74,6 +76,7 @@ share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-library-3d.tex
 share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-library-angles.tex
 share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-library-arrows.tex
 share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-library-automata.tex
+share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-library-babel.tex
 share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-library-backgrounds.tex
 share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-library-calc.tex
 share/texmf-dist/doc/generic/pgf/text-en/pgfmanual-en-library-calendar.tex

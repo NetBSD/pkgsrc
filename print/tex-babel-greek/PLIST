@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/04 12:31:14 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/06/16 04:06:00 markd Exp $
 share/texmf-dist/tex/generic/babel-greek/athnum.sty
 share/texmf-dist/tex/generic/babel-greek/greek.ldf
 share/texmf-dist/tex/generic/babel-greek/grmath.sty
-share/texmf-dist/tex/generic/babel-greek/grsymb.sty

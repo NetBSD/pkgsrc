@@ -1,60 +1,42 @@
-$NetBSD: patch-bin_musixtex,v 1.4 2015/08/02 11:49:59 markd Exp $
+$NetBSD: patch-bin_musixtex,v 1.5 2016/06/16 04:06:13 markd Exp $
 
 Fix paths to commands.
 
---- bin/musixtex.orig	2015-07-26 22:48:40.000000000 +0000
+--- bin/musixtex.orig	2016-04-07 17:14:54.000000000 +0000
 +++ bin/musixtex
-@@ -91,11 +91,11 @@ if #arg == 0 then
- end
- 
- -- defaults:
--tex = "etex"  
--musixflx = "musixflx"
--dvips = "dvips -e0 "
--dvi = dvips
--ps2pdf = "ps2pdf"
-+tex = "@LOCALBASE@/bin/etex"  
-+musixflx = "@LOCALBASE@/bin/musixflx"
-+dvips = "@LOCALBASE@/bin/dvips -e0 "
-+dvi = "@LOCALBASE@/bin/dvips"dvips
-+ps2pdf = "@LOCALBASE@/bin/ps2pdf"
- intermediate = 1
- passes = 2
- index = 0
-@@ -112,19 +112,19 @@ repeat
-     os.exit(0)
-   elseif this_arg == "-l" then
-     if tex == "pdfetex" then
--      tex = "pdflatex"
-+      tex = "@LOCALBASE@/bin/pdflatex"
-     else
--      tex = "latex"
-+      tex = "@LOCALBASE@/bin/latex"
+@@ -176,10 +176,10 @@ local dvips = "dvips -e0"
+ function defaults()
+   prepmx = "prepmx"
+   pmx = "pmxab"
+-  tex = "etex"  
+-  musixflx = "musixflx"
+-  dvi = dvips
+-  ps2pdf = "ps2pdf"
++  tex = "@LOCALBASE@/bin/etex"  
++  musixflx = "@LOCALBASE@/bin/musixflx"
++  dvi = @LOCALBASE@/bin/dvips
++  ps2pdf = "@LOCALBASE@/bin/ps2pdf"
+   cleanup = true  -- clean up intermediate and log files
+   index = false
+   latex = false 
+@@ -333,9 +333,9 @@ function find_file(this_arg)
+     if not override:match"l" then latex = tex:match"latex" end 
+     if not force_engine then -- select appropriate default engine
+       if latex then 
+-        if dvi==nil then tex = "pdflatex" else tex = "latex" end
++        if dvi==nil then tex = "@LOCALBASE@/bin/pdflatex" else tex = "@LOCALBASE@/bin/latex" end
+       else 
+-        if dvi==nil then tex = "pdfetex" else tex = "etex" end
++        if dvi==nil then tex = "@LOCALBASE@/bin/pdfetex" else tex = "@LOCALBASE@/bin/etex" end
+       end  
      end
-   elseif this_arg == "-p" then
-     if tex == "latex" then
--      tex = "pdflatex"
-+      tex = "@LOCALBASE@/bin/pdflatex"
-     else
--      tex = "pdfetex"
-+      tex = "@LOCALBASE@/bin/pdfetex"
+   end
+@@ -402,7 +402,7 @@ function tex_process(tex,basename,extens
+   local latex = latex
+   if extension == "ltx" then
+     if not force_engine and not latex then
+-      if dvi then tex = "latex" else tex = "pdflatex" end
++      if dvi then tex = "@LOCALBASE@/bin/latex" else tex = "@LOCALBASE@/bin/pdflatex" end
      end
-     dvi = ""; ps2pdf = ""
-   elseif this_arg == "-d" then
--    dvi = "dvipdfm"; ps2pdf = ""
-+    dvi = "@LOCALBASE@/bin/dvipdfm"; ps2pdf = ""
-   elseif this_arg == "-s" then
-     dvi = ""; ps2pdf = ""
-   elseif this_arg == "-i" then
-@@ -132,9 +132,9 @@ repeat
-   elseif this_arg == "-1" then
-     passes = 1
-   elseif this_arg == "-f" then
--    tex = "etex"; dvi = dvips; ps2pdf = "ps2pdf"; intermediate = 1; passes = 2; index = 0; preprocess = 0
-+    tex = "@LOCALBASE@/bin/etex"; dvi = "@LOCALBASE@/bin/dvips"; ps2pdf = "@LOCALBASE@/bin/ps2pdf"; intermediate = 1; passes = 2; index = 0; preprocess = 0
-   elseif this_arg == "-g" then
--    dvi = dvips; ps2pdf = ""
-+    dvi = "@LOCALBASE@/bin/dvips"; ps2pdf = ""
-   elseif this_arg == "-x" then
-     index = 1
-   elseif this_arg == "-a" then
+     latex = true
+   end
