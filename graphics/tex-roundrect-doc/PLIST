@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2015/09/02 10:50:40 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/06/16 04:00:47 markd Exp $
+share/texmf-dist/doc/metapost/roundrect/CHANGES
 share/texmf-dist/doc/metapost/roundrect/README
 share/texmf-dist/doc/metapost/roundrect/lppl.txt
 share/texmf-dist/doc/metapost/roundrect/roundrect.pdf

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/09/02 10:50:40 markd Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/16 04:00:47 markd Exp $
 
 DISTNAME=	roundrect
-PKGNAME=	tex-${DISTNAME}-1.0
-TEXLIVE_REV=	37994
+PKGNAME=	tex-${DISTNAME}-2.2
+TEXLIVE_REV=	39796
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/roundrect

@@ -1,18 +1,24 @@
-@comment $NetBSD: PLIST,v 1.2 2015/04/22 00:03:49 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/06/16 04:00:47 markd Exp $
 share/texmf-dist/doc/generic/pst-plot/Changes
-share/texmf-dist/doc/generic/pst-plot/Contents
 share/texmf-dist/doc/generic/pst-plot/README
-share/texmf-dist/doc/generic/pst-plot/dtk02-1.pdf
-share/texmf-dist/doc/generic/pst-plot/dtk02-1.tex
-share/texmf-dist/doc/generic/pst-plot/dtk02-2.bib
-share/texmf-dist/doc/generic/pst-plot/dtk02-2.pdf
-share/texmf-dist/doc/generic/pst-plot/dtk02-2.tex
+share/texmf-dist/doc/generic/pst-plot/data/Data.dat
+share/texmf-dist/doc/generic/pst-plot/data/LSM.data
+share/texmf-dist/doc/generic/pst-plot/data/LSM2.data
+share/texmf-dist/doc/generic/pst-plot/data/boxplot.data
+share/texmf-dist/doc/generic/pst-plot/data/data.data
+share/texmf-dist/doc/generic/pst-plot/data/data1.dat
+share/texmf-dist/doc/generic/pst-plot/data/data3.data
+share/texmf-dist/doc/generic/pst-plot/data/dataMul.data
+share/texmf-dist/doc/generic/pst-plot/data/demo.txt
+share/texmf-dist/doc/generic/pst-plot/data/demo0.data
+share/texmf-dist/doc/generic/pst-plot/data/demo1.data
+share/texmf-dist/doc/generic/pst-plot/data/demo2.data
+share/texmf-dist/doc/generic/pst-plot/data/demo3.data
+share/texmf-dist/doc/generic/pst-plot/data/dotmatrix.data
+share/texmf-dist/doc/generic/pst-plot/data/pst-plot-doc.eps
+share/texmf-dist/doc/generic/pst-plot/data/pstricks-add-data9.data
+share/texmf-dist/doc/generic/pst-plot/data/test.data
+share/texmf-dist/doc/generic/pst-plot/data/zz.tex
 share/texmf-dist/doc/generic/pst-plot/pst-plot-doc.bib
-share/texmf-dist/doc/generic/pst-plot/pst-plot-doc.dat
-share/texmf-dist/doc/generic/pst-plot/pst-plot-doc.eps
 share/texmf-dist/doc/generic/pst-plot/pst-plot-doc.pdf
-share/texmf-dist/doc/generic/pst-plot/pst-plot-doc.png
 share/texmf-dist/doc/generic/pst-plot/pst-plot-doc.tex
-share/texmf-dist/doc/generic/pst-plot/tugboat01-4.bib
-share/texmf-dist/doc/generic/pst-plot/tugboat01-4.pdf
-share/texmf-dist/doc/generic/pst-plot/tugboat01-4.tex

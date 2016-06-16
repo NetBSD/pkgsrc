@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2016/04/23 22:32:02 markd Exp $
+$NetBSD: distinfo,v 1.2 2016/06/16 04:00:46 markd Exp $
 
-SHA1 (tex-pst-ovl-34033/pst-ovl.tar.xz) = 937637179c383dc23147ee3b22e3114d7a6ada1a
-RMD160 (tex-pst-ovl-34033/pst-ovl.tar.xz) = 55fb8b51de7c4a02328d9e5c8d3695b53b163b02
-SHA512 (tex-pst-ovl-34033/pst-ovl.tar.xz) = 15026559fa39cd4933f6c7fcb790e60bca86e432c9b11790755164f5fbf59b9fbbf2c052b3c6b247c2d9e96544510a73abf3c93c13d781ffde1f8f4c39d642ed
-Size (tex-pst-ovl-34033/pst-ovl.tar.xz) = 1916 bytes
+SHA1 (tex-pst-ovl-40873/pst-ovl.tar.xz) = 813aaec20f750601b0d55459a17ec9ed5b50c73e
+RMD160 (tex-pst-ovl-40873/pst-ovl.tar.xz) = 3bd59e7fc04c70c69d14f8ad071c51b7974f03ed
+SHA512 (tex-pst-ovl-40873/pst-ovl.tar.xz) = fe7a0009da602fb20e173e84a5fb6f520a0a76efb9f03662712b134da3c81961bd7b57bf9f28ae60b6f9bc7f694eb531967344f9dc829354aec63da70ed884f8
+Size (tex-pst-ovl-40873/pst-ovl.tar.xz) = 1944 bytes

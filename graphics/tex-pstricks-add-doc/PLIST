@@ -1,7 +1,19 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/18 21:45:14 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/06/16 04:00:47 markd Exp $
 share/texmf-dist/doc/generic/pstricks-add/Changes
 share/texmf-dist/doc/generic/pstricks-add/README
+share/texmf-dist/doc/generic/pstricks-add/data/contourN.data
+share/texmf-dist/doc/generic/pstricks-add/data/data.data
+share/texmf-dist/doc/generic/pstricks-add/data/data3.data
+share/texmf-dist/doc/generic/pstricks-add/data/dataMul.data
+share/texmf-dist/doc/generic/pstricks-add/data/demo0.data
+share/texmf-dist/doc/generic/pstricks-add/data/demo1.data
+share/texmf-dist/doc/generic/pstricks-add/data/demo2.data
+share/texmf-dist/doc/generic/pstricks-add/data/demo3.data
+share/texmf-dist/doc/generic/pstricks-add/data/dotmatrix.data
+share/texmf-dist/doc/generic/pstricks-add/data/matrix.data
+share/texmf-dist/doc/generic/pstricks-add/data/matrix1.data
+share/texmf-dist/doc/generic/pstricks-add/data/matrix2.data
+share/texmf-dist/doc/generic/pstricks-add/data/pstricks-add-doc.data
 share/texmf-dist/doc/generic/pstricks-add/pstricks-add-doc.bib
-share/texmf-dist/doc/generic/pstricks-add/pstricks-add-doc.dat
 share/texmf-dist/doc/generic/pstricks-add/pstricks-add-doc.pdf
 share/texmf-dist/doc/generic/pstricks-add/pstricks-add-doc.tex
