@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2015/05/06 10:19:23 markd Exp $
+# $NetBSD: Makefile,v 1.3 2016/06/16 12:37:54 wiz Exp $
 
 DISTNAME=	collection-latex-doc
 PKGNAME=	texlive-${DISTNAME}-2010
@@ -20,7 +20,7 @@ DEPENDS+=	tex-babelbib-doc>=1.29:../../print/tex-babelbib-doc
 DEPENDS+=	tex-carlisle-doc>=2010:../../print/tex-carlisle-doc
 DEPENDS+=	tex-colortbl-doc>=0.1:../../print/tex-colortbl-doc
 DEPENDS+=	tex-fancyhdr-doc>=3.1:../../print/tex-fancyhdr-doc
-DEPENDS+=	tex-fix2col-doc>=2009:../../print/tex-fix2col-doc
+DEPENDS+=	tex-fix2col-doc>=0.04<2000:../../print/tex-fix2col-doc
 DEPENDS+=	tex-geometry-doc>=5.6:../../print/tex-geometry-doc
 DEPENDS+=	tex-graphics-doc>=1.0onb1:../../print/tex-graphics-doc
 DEPENDS+=	tex-hyperref-doc>=6.81p:../../print/tex-hyperref-doc
