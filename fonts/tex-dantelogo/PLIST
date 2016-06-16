@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:37 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/06/16 03:57:27 markd Exp $
 share/texmf-dist/fonts/enc/dvips/dantelogo/dante.enc
 share/texmf-dist/fonts/map/dvips/dantelogo/dante.map
 share/texmf-dist/fonts/opentype/public/dantelogo/DANTE-Bold-Italic.otf
@@ -20,6 +20,6 @@ share/texmf-dist/fonts/type1/public/dantelogo/DANTE.pfb
 share/texmf-dist/fonts/vf/public/dantelogo/DANTE-Bold--texnansx.vf
 share/texmf-dist/fonts/vf/public/dantelogo/DANTE-Bold-Italic--texnansx.vf
 share/texmf-dist/fonts/vf/public/dantelogo/DANTE-Italic--texnansx.vf
+share/texmf-dist/tex/latex/dantelogo/OT1DANTE.fd
+share/texmf-dist/tex/latex/dantelogo/T1DANTE.fd
 share/texmf-dist/tex/latex/dantelogo/dantelogo.sty
-share/texmf-dist/tex/latex/dantelogo/ot1dante.fd
-share/texmf-dist/tex/latex/dantelogo/t1dante.fd
