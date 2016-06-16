@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16029 2016/06/16 12:08:47 ryoon Exp $
+$NetBSD: TODO,v 1.16030 2016/06/16 14:17:23 fhajny Exp $
 
 Suggested new packages
 ======================
@@ -1091,7 +1091,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mantis-1.2.19
 	o mapserver-7.0.1
 	o matchbox-panel-0.9.3
-	o mbedtls-2.0.0
 	o mbuf-20141227
 	o mbuffer-20160228
 	o mcabber-1.0.2
