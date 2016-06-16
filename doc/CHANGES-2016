@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2450 2016/06/16 13:50:58 pettai Exp $
+$NetBSD: CHANGES-2016,v 1.2451 2016/06/16 14:17:23 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3573,3 +3573,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/firefox-l10n to 47.0 [ryoon 2016-06-16]
 	Updated www/apache-tomcat8 to 8.0.36 [prlw1 2016-06-16]
 	Updated net/unbound to 1.5.9 [pettai 2016-06-16]
+	Updated security/mbedtls to 2.2.1 [fhajny 2016-06-16]
