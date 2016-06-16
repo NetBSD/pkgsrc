@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/06/16 04:03:15 markd Exp $
+# $NetBSD: Makefile,v 1.4 2016/06/16 12:37:54 wiz Exp $
 
 DISTNAME=	collection-latex
 PKGNAME=	texlive-${DISTNAME}-2016pre1
@@ -22,7 +22,7 @@ DEPENDS+=	tex-carlisle>=2010:../../print/tex-carlisle
 DEPENDS+=	tex-colortbl>=0.1nb1:../../print/tex-colortbl
 # depend dvisvgm-def
 DEPENDS+=	tex-fancyhdr>=3.1nb1:../../print/tex-fancyhdr
-DEPENDS+=	tex-fix2col>=2009:../../print/tex-fix2col
+DEPENDS+=	tex-fix2col>=0.04<2000:../../print/tex-fix2col
 DEPENDS+=	tex-geometry>=5.6:../../print/tex-geometry
 DEPENDS+=	tex-graphics>=1.0onb1:../../print/tex-graphics
 # depend graphics-cfg
