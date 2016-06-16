@@ -1,10 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/06/16 03:57:29 markd Exp $
 share/texmf-dist/doc/fonts/ipaex-type1/LICENSE
 share/texmf-dist/doc/fonts/ipaex-type1/README-en
 share/texmf-dist/doc/fonts/ipaex-type1/README-ja
-share/texmf-dist/doc/fonts/ipaex-type1/c70ipxg.fdx
-share/texmf-dist/doc/fonts/ipaex-type1/c70ipxga.fdx
-share/texmf-dist/doc/fonts/ipaex-type1/c70ipxm.fdx
-share/texmf-dist/doc/fonts/ipaex-type1/c70ipxma.fdx
 share/texmf-dist/doc/fonts/ipaex-type1/sample-ipaex-type1.pdf
 share/texmf-dist/doc/fonts/ipaex-type1/sample-ipaex-type1.tex
