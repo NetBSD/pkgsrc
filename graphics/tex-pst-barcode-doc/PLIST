@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/04/05 19:38:05 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/06/16 04:00:46 markd Exp $
 share/texmf-dist/doc/generic/pst-barcode/Changes
-share/texmf-dist/doc/generic/pst-barcode/README
+share/texmf-dist/doc/generic/pst-barcode/README.md
 share/texmf-dist/doc/generic/pst-barcode/pst-barcode-doc.bib
 share/texmf-dist/doc/generic/pst-barcode/pst-barcode-doc.pdf
 share/texmf-dist/doc/generic/pst-barcode/pst-barcode-doc.tex

@@ -1,10 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1 2015/07/03 23:56:42 markd Exp $
-share/texmf-dist/doc/latex/bclogo/LISEZ-MOI.doc
-share/texmf-dist/doc/latex/bclogo/LISEZ-MOI.latex
-share/texmf-dist/doc/latex/bclogo/README.doc
-share/texmf-dist/doc/latex/bclogo/README.latex
+@comment $NetBSD: PLIST,v 1.2 2016/06/16 04:00:46 markd Exp $
+share/texmf-dist/doc/latex/bclogo/LISEZ-MOI
+share/texmf-dist/doc/latex/bclogo/README
 share/texmf-dist/doc/latex/bclogo/bclogo-doc.pdf
 share/texmf-dist/doc/latex/bclogo/bclogo-doc.tex
+share/texmf-dist/doc/latex/bclogo/bclogo.pdf
 share/texmf-dist/doc/latex/bclogo/brace.mps
+share/texmf-dist/doc/latex/bclogo/fond.pdf
+share/texmf-dist/doc/latex/bclogo/index.xml
 share/texmf-dist/doc/latex/bclogo/losanges.mps
 share/texmf-dist/doc/latex/bclogo/spir.mps
+share/texmf-dist/doc/latex/bclogo/syracuse-crop.pdf
+share/texmf-dist/doc/latex/bclogo/syracuse.pdf
+share/texmf-dist/doc/latex/bclogo/syracuse.tex
