@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/03 03:29:36 agc Exp $
+$NetBSD: distinfo,v 1.4 2016/06/16 03:54:44 markd Exp $
 
-SHA1 (tex-luatexbase-30562/luatexbase.doc.tar.xz) = 25d13396535a561fafc86d28f71f7f3a17ca13ca
-RMD160 (tex-luatexbase-30562/luatexbase.doc.tar.xz) = 1c146d0dd6578276f1add7199aa80831f2ece0a2
-SHA512 (tex-luatexbase-30562/luatexbase.doc.tar.xz) = 017dcd24ed13ce496abf696136528bf8699b43254454b5b0c7d9aabe8dca2461c63019ff98a7985aade5e87043d348cc225d4fbf6956c6c74acc88b1c2794789
-Size (tex-luatexbase-30562/luatexbase.doc.tar.xz) = 2391892 bytes
+SHA1 (tex-luatexbase-38550/luatexbase.doc.tar.xz) = c653d8563b9612f666ac356e43da3d22d0aeba70
+RMD160 (tex-luatexbase-38550/luatexbase.doc.tar.xz) = bd819e7de111a9fb2fdfbff460114dcd26284176
+SHA512 (tex-luatexbase-38550/luatexbase.doc.tar.xz) = ca43941d3318a0357b4d790c618a5c98c09d11bc9228c1ccef84f772a34ba52280b14f253f0de00903e379fb0f7d3bff0d675b14f7ba0a935bd762b1b2ccc53b
+Size (tex-luatexbase-38550/luatexbase.doc.tar.xz) = 263756 bytes
