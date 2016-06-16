@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.294 2016/05/08 11:38:40 markd Exp $
+# $NetBSD: Makefile,v 1.295 2016/06/16 03:59:40 markd Exp $
 #
 
 COMMENT=	Fonts
@@ -344,6 +344,8 @@ SUBDIR+=	tex-cmbright
 SUBDIR+=	tex-cmbright-doc
 SUBDIR+=	tex-cmcyr
 SUBDIR+=	tex-cmcyr-doc
+SUBDIR+=	tex-cmexb
+SUBDIR+=	tex-cmexb-doc
 SUBDIR+=	tex-cmextra
 SUBDIR+=	tex-cmll
 SUBDIR+=	tex-cmll-doc
@@ -682,6 +684,8 @@ SUBDIR+=	tex-prodint
 SUBDIR+=	tex-prodint-doc
 SUBDIR+=	tex-psnfss
 SUBDIR+=	tex-psnfss-doc
+SUBDIR+=	tex-ptex-fonts
+SUBDIR+=	tex-ptex-fonts-doc
 SUBDIR+=	tex-punk
 SUBDIR+=	tex-punk-doc
 SUBDIR+=	tex-punk-latex
