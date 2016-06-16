@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.66 2016/04/19 03:12:42 manu Exp $
+# $NetBSD: Makefile,v 1.67 2016/06/16 04:01:02 manu Exp $
 
-DISTNAME=	glusterfs-3.7.11
+DISTNAME=	glusterfs-3.8.0
 #PKGREVISION=	1
 CATEGORIES=	filesystems
 MASTER_SITES=	http://bits.gluster.org/pub/gluster/glusterfs/src/
@@ -25,7 +25,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	33 34 # only 2.x supported as of 3.6.0
 
 REPLACE_PYTHON+=	contrib/ipaddr-py/ipaddr.py
 REPLACE_PYTHON+=	extras/ganesha/scripts/generate-epoch.py
-REPLACE_PYTHON+=	extras/geo-rep/schedule_georep.py
+REPLACE_PYTHON+=	extras/geo-rep/schedule_georep.py.in
 REPLACE_PYTHON+=	extras/snap_scheduler/gcron.py
 REPLACE_PYTHON+=	extras/snap_scheduler/snap_scheduler.py
 REPLACE_PYTHON+=	geo-replication/src/peer_mountbroker.in
@@ -48,6 +48,9 @@ REPLACE_PYTHON+=	tools/glusterfind/src/utils.py
 REPLACE_BASH+=		extras/ganesha/ocf/ganesha_grace
 REPLACE_BASH+=		extras/ganesha/ocf/ganesha_mon
 REPLACE_BASH+=		extras/ganesha/ocf/ganesha_nfsd
+REPLACE_BASH+=		extras/ganesha/scripts/copy-export-ganesha.sh
+REPLACE_BASH+=		extras/ganesha/scripts/create-export-ganesha.sh
+REPLACE_BASH+=		extras/ganesha/scripts/dbus-send.sh
 REPLACE_BASH+=		extras/ganesha/scripts/ganesha-ha.sh
 REPLACE_BASH+=		extras/geo-rep/generate-gfid-file.sh
 REPLACE_BASH+=		extras/geo-rep/get-gfid.sh
@@ -57,6 +60,7 @@ REPLACE_BASH+=		extras/peer_add_secret_pub.in
 REPLACE_BASH+=		extras/peer_add_secret_pub.in
 REPLACE_BASH+=		extras/post-upgrade-script-for-quota.sh
 REPLACE_BASH+=		extras/pre-upgrade-script-for-quota.sh
+REPLACE_BASH+=		extras/stop-all-gluster-processes.sh
 REPLACE_BASH+=		geo-replication/src/gverify.sh
 REPLACE_BASH+=		geo-replication/src/peer_gsec_create.in
 REPLACE_BASH+=		geo-replication/src/set_geo_rep_pem_keys.sh
