@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 11:27:40 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/16 03:57:27 markd Exp $
 
 DISTNAME=	erewhon
-PKGNAME=	tex-${DISTNAME}-1.04
-TEXLIVE_REV=	36743
+PKGNAME=	tex-${DISTNAME}-1.05
+TEXLIVE_REV=	39604
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/erewhon

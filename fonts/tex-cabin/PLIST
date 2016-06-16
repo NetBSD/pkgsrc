@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/06/16 03:57:26 markd Exp $
 share/texmf-dist/fonts/enc/dvips/cabin/cbn_6vzwvh.enc
 share/texmf-dist/fonts/enc/dvips/cabin/cbn_7kg2sc.enc
 share/texmf-dist/fonts/enc/dvips/cabin/cbn_aojlca.enc
@@ -245,6 +245,7 @@ share/texmf-dist/fonts/type1/impallari/cabin/Cabin-BoldItalic.pfb
 share/texmf-dist/fonts/type1/impallari/cabin/Cabin-Italic.pfb
 share/texmf-dist/fonts/type1/impallari/cabin/Cabin-Medium.pfb
 share/texmf-dist/fonts/type1/impallari/cabin/Cabin-MediumItalic.pfb
+share/texmf-dist/fonts/type1/impallari/cabin/Cabin-Regular.cff
 share/texmf-dist/fonts/type1/impallari/cabin/Cabin-Regular.pfb
 share/texmf-dist/fonts/type1/impallari/cabin/Cabin-SemiBold.pfb
 share/texmf-dist/fonts/type1/impallari/cabin/Cabin-SemiBoldItalic.pfb

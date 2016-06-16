@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2015/06/14 11:20:00 markd Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/06/16 03:57:30 markd Exp $
 share/texmf-dist/fonts/enc/dvips/roboto/rbto_2gjoqz.enc
 share/texmf-dist/fonts/enc/dvips/roboto/rbto_4cxnmx.enc
 share/texmf-dist/fonts/enc/dvips/roboto/rbto_4j5rgv.enc
@@ -972,6 +972,12 @@ share/texmf-dist/fonts/tfm/google/roboto/RobotoCondensed-Regular-tosf-ts1.tfm
 share/texmf-dist/fonts/tfm/google/roboto/RobotoSlab-Bold-lf-ly1--base.tfm
 share/texmf-dist/fonts/tfm/google/roboto/RobotoSlab-Bold-lf-ly1.tfm
 share/texmf-dist/fonts/tfm/google/roboto/RobotoSlab-Bold-lf-ot1.tfm
+share/texmf-dist/fonts/tfm/google/roboto/RobotoSlab-Bold-lf-sc-ly1--base.tfm
+share/texmf-dist/fonts/tfm/google/roboto/RobotoSlab-Bold-lf-sc-ly1.tfm
+share/texmf-dist/fonts/tfm/google/roboto/RobotoSlab-Bold-lf-sc-ot1--base.tfm
+share/texmf-dist/fonts/tfm/google/roboto/RobotoSlab-Bold-lf-sc-ot1.tfm
+share/texmf-dist/fonts/tfm/google/roboto/RobotoSlab-Bold-lf-sc-t1--base.tfm
+share/texmf-dist/fonts/tfm/google/roboto/RobotoSlab-Bold-lf-sc-t1.tfm
 share/texmf-dist/fonts/tfm/google/roboto/RobotoSlab-Bold-lf-t1--base.tfm
 share/texmf-dist/fonts/tfm/google/roboto/RobotoSlab-Bold-lf-t1.tfm
 share/texmf-dist/fonts/tfm/google/roboto/RobotoSlab-Bold-lf-ts1--base.tfm
@@ -979,6 +985,12 @@ share/texmf-dist/fonts/tfm/google/roboto/RobotoSlab-Bold-lf-ts1.tfm
 share/texmf-dist/fonts/tfm/google/roboto/RobotoSlab-Light-lf-ly1--base.tfm
 share/texmf-dist/fonts/tfm/google/roboto/RobotoSlab-Light-lf-ly1.tfm
 share/texmf-dist/fonts/tfm/google/roboto/RobotoSlab-Light-lf-ot1.tfm
+share/texmf-dist/fonts/tfm/google/roboto/RobotoSlab-Light-lf-sc-ly1--base.tfm
+share/texmf-dist/fonts/tfm/google/roboto/RobotoSlab-Light-lf-sc-ly1.tfm
+share/texmf-dist/fonts/tfm/google/roboto/RobotoSlab-Light-lf-sc-ot1--base.tfm
+share/texmf-dist/fonts/tfm/google/roboto/RobotoSlab-Light-lf-sc-ot1.tfm
+share/texmf-dist/fonts/tfm/google/roboto/RobotoSlab-Light-lf-sc-t1--base.tfm
+share/texmf-dist/fonts/tfm/google/roboto/RobotoSlab-Light-lf-sc-t1.tfm
 share/texmf-dist/fonts/tfm/google/roboto/RobotoSlab-Light-lf-t1--base.tfm
 share/texmf-dist/fonts/tfm/google/roboto/RobotoSlab-Light-lf-t1.tfm
 share/texmf-dist/fonts/tfm/google/roboto/RobotoSlab-Light-lf-ts1--base.tfm
@@ -986,6 +998,12 @@ share/texmf-dist/fonts/tfm/google/roboto/RobotoSlab-Light-lf-ts1.tfm
 share/texmf-dist/fonts/tfm/google/roboto/RobotoSlab-Regular-lf-ly1--base.tfm
 share/texmf-dist/fonts/tfm/google/roboto/RobotoSlab-Regular-lf-ly1.tfm
 share/texmf-dist/fonts/tfm/google/roboto/RobotoSlab-Regular-lf-ot1.tfm
+share/texmf-dist/fonts/tfm/google/roboto/RobotoSlab-Regular-lf-sc-ly1--base.tfm
+share/texmf-dist/fonts/tfm/google/roboto/RobotoSlab-Regular-lf-sc-ly1.tfm
+share/texmf-dist/fonts/tfm/google/roboto/RobotoSlab-Regular-lf-sc-ot1--base.tfm
+share/texmf-dist/fonts/tfm/google/roboto/RobotoSlab-Regular-lf-sc-ot1.tfm
+share/texmf-dist/fonts/tfm/google/roboto/RobotoSlab-Regular-lf-sc-t1--base.tfm
+share/texmf-dist/fonts/tfm/google/roboto/RobotoSlab-Regular-lf-sc-t1.tfm
 share/texmf-dist/fonts/tfm/google/roboto/RobotoSlab-Regular-lf-t1--base.tfm
 share/texmf-dist/fonts/tfm/google/roboto/RobotoSlab-Regular-lf-t1.tfm
 share/texmf-dist/fonts/tfm/google/roboto/RobotoSlab-Regular-lf-ts1--base.tfm
@@ -993,6 +1011,12 @@ share/texmf-dist/fonts/tfm/google/roboto/RobotoSlab-Regular-lf-ts1.tfm
 share/texmf-dist/fonts/tfm/google/roboto/RobotoSlab-Thin-lf-ly1--base.tfm
 share/texmf-dist/fonts/tfm/google/roboto/RobotoSlab-Thin-lf-ly1.tfm
 share/texmf-dist/fonts/tfm/google/roboto/RobotoSlab-Thin-lf-ot1.tfm
+share/texmf-dist/fonts/tfm/google/roboto/RobotoSlab-Thin-lf-sc-ly1--base.tfm
+share/texmf-dist/fonts/tfm/google/roboto/RobotoSlab-Thin-lf-sc-ly1.tfm
+share/texmf-dist/fonts/tfm/google/roboto/RobotoSlab-Thin-lf-sc-ot1--base.tfm
+share/texmf-dist/fonts/tfm/google/roboto/RobotoSlab-Thin-lf-sc-ot1.tfm
+share/texmf-dist/fonts/tfm/google/roboto/RobotoSlab-Thin-lf-sc-t1--base.tfm
+share/texmf-dist/fonts/tfm/google/roboto/RobotoSlab-Thin-lf-sc-t1.tfm
 share/texmf-dist/fonts/tfm/google/roboto/RobotoSlab-Thin-lf-t1--base.tfm
 share/texmf-dist/fonts/tfm/google/roboto/RobotoSlab-Thin-lf-t1.tfm
 share/texmf-dist/fonts/tfm/google/roboto/RobotoSlab-Thin-lf-ts1--base.tfm
@@ -1474,15 +1498,27 @@ share/texmf-dist/fonts/vf/google/roboto/RobotoCondensed-Regular-tosf-sc-t1.vf
 share/texmf-dist/fonts/vf/google/roboto/RobotoCondensed-Regular-tosf-t1.vf
 share/texmf-dist/fonts/vf/google/roboto/RobotoCondensed-Regular-tosf-ts1.vf
 share/texmf-dist/fonts/vf/google/roboto/RobotoSlab-Bold-lf-ly1.vf
+share/texmf-dist/fonts/vf/google/roboto/RobotoSlab-Bold-lf-sc-ly1.vf
+share/texmf-dist/fonts/vf/google/roboto/RobotoSlab-Bold-lf-sc-ot1.vf
+share/texmf-dist/fonts/vf/google/roboto/RobotoSlab-Bold-lf-sc-t1.vf
 share/texmf-dist/fonts/vf/google/roboto/RobotoSlab-Bold-lf-t1.vf
 share/texmf-dist/fonts/vf/google/roboto/RobotoSlab-Bold-lf-ts1.vf
 share/texmf-dist/fonts/vf/google/roboto/RobotoSlab-Light-lf-ly1.vf
+share/texmf-dist/fonts/vf/google/roboto/RobotoSlab-Light-lf-sc-ly1.vf
+share/texmf-dist/fonts/vf/google/roboto/RobotoSlab-Light-lf-sc-ot1.vf
+share/texmf-dist/fonts/vf/google/roboto/RobotoSlab-Light-lf-sc-t1.vf
 share/texmf-dist/fonts/vf/google/roboto/RobotoSlab-Light-lf-t1.vf
 share/texmf-dist/fonts/vf/google/roboto/RobotoSlab-Light-lf-ts1.vf
 share/texmf-dist/fonts/vf/google/roboto/RobotoSlab-Regular-lf-ly1.vf
+share/texmf-dist/fonts/vf/google/roboto/RobotoSlab-Regular-lf-sc-ly1.vf
+share/texmf-dist/fonts/vf/google/roboto/RobotoSlab-Regular-lf-sc-ot1.vf
+share/texmf-dist/fonts/vf/google/roboto/RobotoSlab-Regular-lf-sc-t1.vf
 share/texmf-dist/fonts/vf/google/roboto/RobotoSlab-Regular-lf-t1.vf
 share/texmf-dist/fonts/vf/google/roboto/RobotoSlab-Regular-lf-ts1.vf
 share/texmf-dist/fonts/vf/google/roboto/RobotoSlab-Thin-lf-ly1.vf
+share/texmf-dist/fonts/vf/google/roboto/RobotoSlab-Thin-lf-sc-ly1.vf
+share/texmf-dist/fonts/vf/google/roboto/RobotoSlab-Thin-lf-sc-ot1.vf
+share/texmf-dist/fonts/vf/google/roboto/RobotoSlab-Thin-lf-sc-t1.vf
 share/texmf-dist/fonts/vf/google/roboto/RobotoSlab-Thin-lf-t1.vf
 share/texmf-dist/fonts/vf/google/roboto/RobotoSlab-Thin-lf-ts1.vf
 share/texmf-dist/tex/latex/roboto/LY1Roboto-LF.fd

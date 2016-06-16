@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 11:27:36 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/16 03:57:27 markd Exp $
 
 DISTNAME=	cmtiup.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.3a
-TEXLIVE_REV=	20512
+PKGNAME=	tex-${DISTNAME:S/./-/}-2.1
+TEXLIVE_REV=	39728
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/cmtiup

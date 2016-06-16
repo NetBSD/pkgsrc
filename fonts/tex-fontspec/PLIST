@@ -1,7 +1,12 @@
-@comment $NetBSD: PLIST,v 1.3 2012/07/09 14:29:22 minskim Exp $
+@comment $NetBSD: PLIST,v 1.4 2016/06/16 03:57:29 markd Exp $
 share/texmf-dist/tex/latex/fontspec/fontspec-luatex.sty
-share/texmf-dist/tex/latex/fontspec/fontspec-patches.sty
 share/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
 share/texmf-dist/tex/latex/fontspec/fontspec.cfg
 share/texmf-dist/tex/latex/fontspec/fontspec.lua
 share/texmf-dist/tex/latex/fontspec/fontspec.sty
+share/texmf-dist/tex/latex/fontspec/tuenc.def
+share/texmf-dist/tex/latex/fontspec/tufontrange-T1.def
+share/texmf-dist/tex/latex/fontspec/tufontrange-TS1.def
+share/texmf-dist/tex/latex/fontspec/tulmr.fd
+share/texmf-dist/tex/latex/fontspec/tulmss.fd
+share/texmf-dist/tex/latex/fontspec/tulmtt.fd
