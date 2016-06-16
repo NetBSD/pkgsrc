@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2015/06/14 12:50:03 markd Exp $
+@comment $NetBSD: PLIST,v 1.9 2016/06/16 04:06:10 markd Exp $
 share/texmf-dist/doc/latex/koma-script/INSTALL.txt
 share/texmf-dist/doc/latex/koma-script/INSTALLD.txt
 share/texmf-dist/doc/latex/koma-script/README
@@ -21,7 +21,6 @@ share/texmf-dist/doc/latex/koma-script/scrguien.html
 share/texmf-dist/doc/latex/koma-script/scrguien.pdf
 share/texmf-dist/doc/latex/koma-script/scrhack.html
 share/texmf-dist/doc/latex/koma-script/scrhack.pdf
-share/texmf-dist/doc/latex/koma-script/scrjura.pdf
 share/texmf-dist/doc/latex/koma-script/scrlayer-notecolumn.html
 share/texmf-dist/doc/latex/koma-script/scrlayer-scrpage.html
 share/texmf-dist/doc/latex/koma-script/scrlayer.html
@@ -80,6 +79,7 @@ share/texmf-dist/source/latex/koma-script/doc/english/scrdatetime.tex
 share/texmf-dist/source/latex/koma-script/doc/english/scrextend.tex
 share/texmf-dist/source/latex/koma-script/doc/english/scrhack.tex
 share/texmf-dist/source/latex/koma-script/doc/english/scrjura.tex
+share/texmf-dist/source/latex/koma-script/doc/english/scrjuraexample.tex
 share/texmf-dist/source/latex/koma-script/doc/english/scrlayer-notecolumn-example.tex
 share/texmf-dist/source/latex/koma-script/doc/english/scrlayer-notecolumn.tex
 share/texmf-dist/source/latex/koma-script/doc/english/scrlayer-scrpage-experts.tex
@@ -133,6 +133,7 @@ share/texmf-dist/source/latex/koma-script/doc/ngerman/scrdatetime.tex
 share/texmf-dist/source/latex/koma-script/doc/ngerman/scrextend.tex
 share/texmf-dist/source/latex/koma-script/doc/ngerman/scrhack.tex
 share/texmf-dist/source/latex/koma-script/doc/ngerman/scrjura.tex
+share/texmf-dist/source/latex/koma-script/doc/ngerman/scrjuraexample.tex
 share/texmf-dist/source/latex/koma-script/doc/ngerman/scrlayer-notecolumn-example.tex
 share/texmf-dist/source/latex/koma-script/doc/ngerman/scrlayer-notecolumn.tex
 share/texmf-dist/source/latex/koma-script/doc/ngerman/scrlayer-scrpage-experts.tex
@@ -199,6 +200,7 @@ share/texmf-dist/source/latex/koma-script/scrkernel-paragraphs.dtx
 share/texmf-dist/source/latex/koma-script/scrkernel-pseudolengths.dtx
 share/texmf-dist/source/latex/koma-script/scrkernel-sections.dtx
 share/texmf-dist/source/latex/koma-script/scrkernel-title.dtx
+share/texmf-dist/source/latex/koma-script/scrkernel-tocstyle.dtx
 share/texmf-dist/source/latex/koma-script/scrkernel-typearea.dtx
 share/texmf-dist/source/latex/koma-script/scrkernel-variables.dtx
 share/texmf-dist/source/latex/koma-script/scrkernel-version.dtx
@@ -234,6 +236,7 @@ share/texmf-dist/tex/latex/koma-script/float.hak
 share/texmf-dist/tex/latex/koma-script/floatrow.hak
 share/texmf-dist/tex/latex/koma-script/hyperref.hak
 share/texmf-dist/tex/latex/koma-script/listings.hak
+share/texmf-dist/tex/latex/koma-script/lscape.hak
 share/texmf-dist/tex/latex/koma-script/scraddr.sty
 share/texmf-dist/tex/latex/koma-script/scrartcl.cls
 share/texmf-dist/tex/latex/koma-script/scrbase.sty

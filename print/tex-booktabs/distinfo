@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:01:52 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/06/16 04:06:00 markd Exp $
 
-SHA1 (tex-booktabs-15878/booktabs.tar.xz) = eddeb5798f1b2ac20fa22d19ef973635092af971
-RMD160 (tex-booktabs-15878/booktabs.tar.xz) = 94e672e8a8813e3348e1ced6c2f23c0af49be25a
-SHA512 (tex-booktabs-15878/booktabs.tar.xz) = e7c6faff8757033813fe0aa8fbc15ef328bc9df3e5b20b91f71df252d01868fa5815b920300958342cecea479ff9746faead5514cb1feb9aaedb97367e48d014
-Size (tex-booktabs-15878/booktabs.tar.xz) = 2400 bytes
+SHA1 (tex-booktabs-40846/booktabs.tar.xz) = 98cbcdf4d85e7d5233b79f2019081cbe1e99882e
+RMD160 (tex-booktabs-40846/booktabs.tar.xz) = 48d7427104dfdf838e7415f4b5b30eedff5a92b8
+SHA512 (tex-booktabs-40846/booktabs.tar.xz) = 9f8f36ef21fbb4e1691080465bf22e07167a6d3bd74b074867c3538cb0154244c802cc0b451b1fd226e325bc98afaf5e19ec38c68f1040b5e165ccea3882b1e1
+Size (tex-booktabs-40846/booktabs.tar.xz) = 2200 bytes

@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.6 2015/05/05 12:23:56 markd Exp $
+# $NetBSD: Makefile,v 1.7 2016/06/16 04:06:05 markd Exp $
 
 DISTNAME=	hyphen-chinese
-PKGNAME=	tex-${DISTNAME}-2014
-TEXLIVE_REV=	25990
+PKGNAME=	tex-${DISTNAME}-2016
+TEXLIVE_REV=	40340
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Hyphenation patterns for Chinese
+LICENSE=	lppl-1.3c
 
 CONFLICTS+=	teTeX-texmf<=3.0nb12
+DEPENDS+=	tex-hyphen-base-[0-9]*:../../print/tex-hyphen-base
 DEPENDS+=	tex-hyph-utf8-[0-9]*:../../print/tex-hyph-utf8
 
 TEX_HYPHEN_DAT+=	pinyin loadhyph-zh-latn-pinyin.tex

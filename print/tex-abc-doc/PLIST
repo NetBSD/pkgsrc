@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/11/07 19:57:06 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/06/16 04:05:58 markd Exp $
 share/texmf-dist/doc/latex/abc/README
 share/texmf-dist/doc/latex/abc/abc.pdf
 share/texmf-dist/doc/latex/abc/example.tex
+share/texmf-dist/doc/latex/abc/jacky.abc
 share/texmf-dist/doc/latex/abc/mupexa.tex
 share/texmf-dist/doc/latex/abc/poll.abc
 share/texmf-dist/doc/latex/abc/simple.mup
