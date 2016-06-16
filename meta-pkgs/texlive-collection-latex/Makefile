@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2015/06/14 13:28:53 markd Exp $
+# $NetBSD: Makefile,v 1.3 2016/06/16 04:03:15 markd Exp $
 
 DISTNAME=	collection-latex
-PKGNAME=	texlive-${DISTNAME}-2015
+PKGNAME=	texlive-${DISTNAME}-2016pre1
 CATEGORIES=	meta-pkgs
-TEXLIVE_REV=	33055
+TEXLIVE_REV=	41011
 MASTER_SITES=	# empty
 
 MAINTAINER=	minskim@NetBSD.org
@@ -20,10 +20,12 @@ DEPENDS+=	tex-babel-english>=3.3p:../../print/tex-babel-english
 DEPENDS+=	tex-babelbib>=1.29:../../print/tex-babelbib
 DEPENDS+=	tex-carlisle>=2010:../../print/tex-carlisle
 DEPENDS+=	tex-colortbl>=0.1nb1:../../print/tex-colortbl
+# depend dvisvgm-def
 DEPENDS+=	tex-fancyhdr>=3.1nb1:../../print/tex-fancyhdr
 DEPENDS+=	tex-fix2col>=2009:../../print/tex-fix2col
 DEPENDS+=	tex-geometry>=5.6:../../print/tex-geometry
 DEPENDS+=	tex-graphics>=1.0onb1:../../print/tex-graphics
+# depend graphics-cfg
 DEPENDS+=	tex-hyperref>=6.81pnb3:../../print/tex-hyperref
 DEPENDS+=	tex-latex>=2010:../../print/tex-latex
 DEPENDS+=	tex-latex-bin>=2010:../../print/tex-latex-bin

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2015/05/16 03:07:05 markd Exp $
+# $NetBSD: Makefile,v 1.4 2016/06/16 04:03:14 markd Exp $
 
 DISTNAME=	collection-langeuropean
-PKGNAME=	texlive-${DISTNAME}-2014pre2
+PKGNAME=	texlive-${DISTNAME}-2016pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	36307
+TEXLIVE_REV=	39721
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -28,7 +28,9 @@ DEPENDS+=	tex-babel-irish-[0-9]*:../../print/tex-babel-irish
 DEPENDS+=	tex-babel-kurmanji-[0-9]*:../../print/tex-babel-kurmanji
 DEPENDS+=	tex-babel-latin-[0-9]*:../../print/tex-babel-latin
 DEPENDS+=	tex-babel-latvian-[0-9]*:../../print/tex-babel-latvian
+# depend babel-macedonian
 DEPENDS+=	tex-babel-norsk-[0-9]*:../../print/tex-babel-norsk
+# depend babel-occitan
 DEPENDS+=	tex-babel-piedmontese-[0-9]*:../../print/tex-babel-piedmontese
 DEPENDS+=	tex-babel-romanian-[0-9]*:../../print/tex-babel-romanian
 DEPENDS+=	tex-babel-romansh-[0-9]*:../../print/tex-babel-romansh
@@ -39,6 +41,7 @@ DEPENDS+=	tex-babel-swedish-[0-9]*:../../print/tex-babel-swedish
 DEPENDS+=	tex-babel-turkish-[0-9]*:../../print/tex-babel-turkish
 DEPENDS+=	tex-babel-welsh-[0-9]*:../../print/tex-babel-welsh
 # depend finbib
+# depend gloss-occitan
 # depend hrlatex
 DEPENDS+=	tex-hyphen-armenian-[0-9]*:../../print/tex-hyphen-armenian
 DEPENDS+=	tex-hyphen-croatian-[0-9]*:../../print/tex-hyphen-croatian
@@ -55,6 +58,7 @@ DEPENDS+=	tex-hyphen-latin-[0-9]*:../../print/tex-hyphen-latin
 DEPENDS+=	tex-hyphen-latvian-[0-9]*:../../print/tex-hyphen-latvian
 DEPENDS+=	tex-hyphen-lithuanian-[0-9]*:../../print/tex-hyphen-lithuanian
 DEPENDS+=	tex-hyphen-norwegian-[0-9]*:../../print/tex-hyphen-norwegian
+# depend hyphen-occitan
 DEPENDS+=	tex-hyphen-piedmontese-[0-9]*:../../print/tex-hyphen-piedmontese
 DEPENDS+=	tex-hyphen-romanian-[0-9]*:../../print/tex-hyphen-romanian
 DEPENDS+=	tex-hyphen-romansh-[0-9]*:../../print/tex-hyphen-romansh
@@ -65,9 +69,11 @@ DEPENDS+=	tex-hyphen-uppersorbian-[0-9]*:../../print/tex-hyphen-uppersorbian
 DEPENDS+=	tex-hyphen-welsh-[0-9]*:../../print/tex-hyphen-welsh
 # depend lithuanian
 # lshort-dutch is documentation only
+# lshort-estonian is documentation only
 # lshort-finnish is documentation only
 # lshort-slovenian is documentation only
 # lshort-turkish is documentation only
+# depend nevelok
 # depend swebib
 # depend turkmen
 
