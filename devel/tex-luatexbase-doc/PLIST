@@ -1,33 +1,3 @@
-@comment $NetBSD: PLIST,v 1.2 2015/04/21 23:26:35 markd Exp $
-share/texmf-dist/doc/luatex/luatexbase/NEWS
-share/texmf-dist/doc/luatex/luatexbase/README
-share/texmf-dist/doc/luatex/luatexbase/TODO
-share/texmf-dist/doc/luatex/luatexbase/luatexbase-attr.pdf
-share/texmf-dist/doc/luatex/luatexbase/luatexbase-cctb.pdf
-share/texmf-dist/doc/luatex/luatexbase/luatexbase-compat.pdf
-share/texmf-dist/doc/luatex/luatexbase/luatexbase-loader.pdf
-share/texmf-dist/doc/luatex/luatexbase/luatexbase-mcb.pdf
-share/texmf-dist/doc/luatex/luatexbase/luatexbase-modutils.pdf
-share/texmf-dist/doc/luatex/luatexbase/luatexbase-regs.pdf
+@comment $NetBSD: PLIST,v 1.3 2016/06/16 03:54:44 markd Exp $
+share/texmf-dist/doc/luatex/luatexbase/README.md
 share/texmf-dist/doc/luatex/luatexbase/luatexbase.pdf
-share/texmf-dist/doc/luatex/luatexbase/test-attr-latex.tex
-share/texmf-dist/doc/luatex/luatexbase/test-attr-plain.tex
-share/texmf-dist/doc/luatex/luatexbase/test-base-latex.tex
-share/texmf-dist/doc/luatex/luatexbase/test-base-plain.tex
-share/texmf-dist/doc/luatex/luatexbase/test-cctb-latex.tex
-share/texmf-dist/doc/luatex/luatexbase/test-cctb-plain.tex
-share/texmf-dist/doc/luatex/luatexbase/test-compat-latex.tex
-share/texmf-dist/doc/luatex/luatexbase/test-compat-plain.tex
-share/texmf-dist/doc/luatex/luatexbase/test-loader-latex.tex
-share/texmf-dist/doc/luatex/luatexbase/test-loader-plain.tex
-share/texmf-dist/doc/luatex/luatexbase/test-loader.lua
-share/texmf-dist/doc/luatex/luatexbase/test-loader.sub.lua
-share/texmf-dist/doc/luatex/luatexbase/test-mcb-aux.tex
-share/texmf-dist/doc/luatex/luatexbase/test-mcb-latex.tex
-share/texmf-dist/doc/luatex/luatexbase/test-mcb-plain.tex
-share/texmf-dist/doc/luatex/luatexbase/test-mcb.lua
-share/texmf-dist/doc/luatex/luatexbase/test-modutils-latex.tex
-share/texmf-dist/doc/luatex/luatexbase/test-modutils-plain.tex
-share/texmf-dist/doc/luatex/luatexbase/test-modutils.lua
-share/texmf-dist/doc/luatex/luatexbase/test-regs-latex.tex
-share/texmf-dist/doc/luatex/luatexbase/test-regs-plain.tex
