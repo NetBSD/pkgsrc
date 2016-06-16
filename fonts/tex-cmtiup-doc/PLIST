@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/06/16 03:57:27 markd Exp $
 share/texmf-dist/doc/latex/cmtiup/README
 share/texmf-dist/doc/latex/cmtiup/cmtiup.dtx
 share/texmf-dist/doc/latex/cmtiup/cmtiup.ins
 share/texmf-dist/doc/latex/cmtiup/cmtiup.pdf
-share/texmf-dist/doc/latex/cmtiup/testfont.pdf
