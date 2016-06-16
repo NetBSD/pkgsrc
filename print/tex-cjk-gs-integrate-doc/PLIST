@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2015/09/02 11:17:24 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/06/16 04:06:01 markd Exp $
 share/texmf-dist/doc/fonts/cjk-gs-integrate/ChangeLog
 share/texmf-dist/doc/fonts/cjk-gs-integrate/README.md
-share/texmf-dist/doc/fonts/cjk-gs-integrate/macosx-filelist
 share/texmf-dist/doc/fonts/cjk-gs-integrate/tests/Makefile
 share/texmf-dist/doc/fonts/cjk-gs-integrate/tests/adobe-CNS1.tex
 share/texmf-dist/doc/fonts/cjk-gs-integrate/tests/adobe-GB1-012.tex

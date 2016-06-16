@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.51 2016/05/22 18:20:49 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2016/06/16 04:06:20 markd Exp $
 
-DISTNAME=	texlive-20150521-source
-PKGNAME=	xetex-0.99992
-PKGREVISION=	8
+DISTNAME=	texlive-20160523-source
+PKGNAME=	xetex-0.99996
 CATEGORIES=	print
-MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2015/
+MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2016/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	minskim@NetBSD.org
@@ -28,6 +27,7 @@ CONFIGURE_ARGS+=	--disable-aleph --disable-etex --disable-pdftex \
 			--disable-luatex --disable-mf --disable-mf-nowin \
 			--with-x=no \
 			--disable-luajittex \
+			--disable-mflua --disable-mfluajit \
 			--disable-mp --disable-pmp --disable-upmp \
 			--disable-ptex --disable-eptex --disable-uptex --disable-euptex \
 			--disable-web-progs \

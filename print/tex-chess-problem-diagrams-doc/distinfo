@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:01:56 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/06/16 04:06:01 markd Exp $
 
-SHA1 (tex-chess-problem-diagrams-36531/chess-problem-diagrams.doc.tar.xz) = ea1373ee08bd2c49cce545ce666955e0f28f6c98
-RMD160 (tex-chess-problem-diagrams-36531/chess-problem-diagrams.doc.tar.xz) = a9c9c4ef34cb3b697694cfd22194c51806baafee
-SHA512 (tex-chess-problem-diagrams-36531/chess-problem-diagrams.doc.tar.xz) = 884510edafcd3af1180fe0e6efa31ad7b0a2ffaced88d4998c302e22c42d18fabbea9018cb1dbb21d2682ff31934954bcc5c94e7521e7cd6fb891645e307350b
-Size (tex-chess-problem-diagrams-36531/chess-problem-diagrams.doc.tar.xz) = 291940 bytes
+SHA1 (tex-chess-problem-diagrams-39317/chess-problem-diagrams.doc.tar.xz) = 55e069510e1bd7e11c73e3dd6791128dcb668ad1
+RMD160 (tex-chess-problem-diagrams-39317/chess-problem-diagrams.doc.tar.xz) = 688dd5709d56a16bfcf83d8af54018943cab9a27
+SHA512 (tex-chess-problem-diagrams-39317/chess-problem-diagrams.doc.tar.xz) = e75442063999bb3af6fdf4668d0dc1f3637e099740264388b88e86e66aaa0c61a8e568f44c002d4e4f606ce6172acf00370e0ee9e8362e8e719cf3dbda38a1ef
+Size (tex-chess-problem-diagrams-39317/chess-problem-diagrams.doc.tar.xz) = 292616 bytes

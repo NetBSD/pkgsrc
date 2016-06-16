@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2016/01/30 03:26:05 markd Exp $
+# $NetBSD: Makefile,v 1.3 2016/06/16 04:05:58 markd Exp $
 
 DISTNAME=	abc.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.0
-TEXLIVE_REV=	15878
+PKGNAME=	tex-${DISTNAME:S/./-/}-2.0b
+TEXLIVE_REV=	41157
 
 MAINTAINER=	nico@orgrim.net
 COMMENT=	Documentation for tex-abc

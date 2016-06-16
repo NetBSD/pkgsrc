@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/04 01:02:23 agc Exp $
+$NetBSD: distinfo,v 1.6 2016/06/16 04:06:10 markd Exp $
 
-SHA1 (tex-kotex-utils-36210/kotex-utils.tar.xz) = 6a231d379f805a966b2ef55825d0b25b32a8b1a8
-RMD160 (tex-kotex-utils-36210/kotex-utils.tar.xz) = 2b850848fe1b3520e871cb726b978a1595ac8256
-SHA512 (tex-kotex-utils-36210/kotex-utils.tar.xz) = dc6dc9b39bfc6ea3b1bc21b389ea6d9e71d16e5ceae3a29d29bad6fcdb40b837e9ba13687efcb2d2d8b6dc9d641887fa061a4f304c8a1bb3279e6ceedfdb359c
-Size (tex-kotex-utils-36210/kotex-utils.tar.xz) = 30612 bytes
+SHA1 (tex-kotex-utils-38727/kotex-utils.tar.xz) = d1d1a9d0e0e09a5a3acb546ad7fee068fb62ec3d
+RMD160 (tex-kotex-utils-38727/kotex-utils.tar.xz) = 5ac9949bfc6e251c5b7024bc27b64fbcef78172a
+SHA512 (tex-kotex-utils-38727/kotex-utils.tar.xz) = 13139abd0493aa9806e089b6bb334de6a6a0da595f5735b65d38843f0a54b1a6e76f473661bb108af3069634bff02d2ef1c44ff04dc5a1c11af164f60b1579af
+Size (tex-kotex-utils-38727/kotex-utils.tar.xz) = 30484 bytes
