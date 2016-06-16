@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 21:34:22 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/06/16 04:00:46 markd Exp $
 
-SHA1 (tex-bclogo-23305/bclogo.doc.tar.xz) = ee2e3b801435ccb388cea3d2d2f247b8f4453768
-RMD160 (tex-bclogo-23305/bclogo.doc.tar.xz) = 4897e6fb7db9b257737f4c180bcbb86167aa6cf6
-SHA512 (tex-bclogo-23305/bclogo.doc.tar.xz) = ce9fe0522a5054c4ded6690b12ac6298d85391479370a790ad873688634f2f0330cd5052d26ecc42813d23b8548d9db80334563e010ef467f31aa41eec62b004
-Size (tex-bclogo-23305/bclogo.doc.tar.xz) = 534716 bytes
+SHA1 (tex-bclogo-39364/bclogo.doc.tar.xz) = 2c9d793fa92af561b218c1857f51527674095e2b
+RMD160 (tex-bclogo-39364/bclogo.doc.tar.xz) = 0333f802074e30fe7be1475208ad8ce739f7eeae
+SHA512 (tex-bclogo-39364/bclogo.doc.tar.xz) = 3fed336fd1c3ecc419eb2c8cd3d757615e95c735305e6cc0608c781609b82da59d9f53c90398f1a0766240887ecfe399cbe682e3561810535a6b95b2f38b8700
+Size (tex-bclogo-39364/bclogo.doc.tar.xz) = 662208 bytes
