@@ -1,4 +1,6 @@
-$NetBSD: patch-intl_hyphenation_glue_hnjalloc.h,v 1.1 2015/12/16 09:34:56 ryoon Exp $
+$NetBSD: patch-intl_hyphenation_glue_hnjalloc.h,v 1.2 2016/06/16 12:08:21 ryoon Exp $
+
+* Support Solaris
 
 --- intl/hyphenation/glue/hnjalloc.h.orig	2015-12-04 00:36:54.000000000 +0000
 +++ intl/hyphenation/glue/hnjalloc.h

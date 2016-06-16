@@ -1,4 +1,6 @@
-$NetBSD: patch-gfx_ycbcr_yuv__row__arm.S,v 1.1 2014/12/01 18:12:38 ryoon Exp $
+$NetBSD: patch-gfx_ycbcr_yuv__row__arm.S,v 1.2 2016/06/16 12:08:21 ryoon Exp $
+
+* Copy from yuv_row_arm.s to process it with pre-processor
 
 --- gfx/ycbcr/yuv_row_arm.S.orig	2014-12-01 14:53:14.000000000 +0000
 +++ gfx/ycbcr/yuv_row_arm.S
