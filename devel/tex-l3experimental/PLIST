@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/04/27 07:03:52 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/06/16 03:54:43 markd Exp $
 share/texmf-dist/tex/latex/l3experimental/l3sort/l3sort.sty
 share/texmf-dist/tex/latex/l3experimental/l3str/l3flag.sty
 share/texmf-dist/tex/latex/l3experimental/l3str/l3regex-trace.sty
@@ -27,7 +27,6 @@ share/texmf-dist/tex/latex/l3experimental/l3str/l3str-esc-name.def
 share/texmf-dist/tex/latex/l3experimental/l3str/l3str-esc-string.def
 share/texmf-dist/tex/latex/l3experimental/l3str/l3str-esc-url.def
 share/texmf-dist/tex/latex/l3experimental/l3str/l3str-format.sty
-share/texmf-dist/tex/latex/l3experimental/l3str/l3str.sty
 share/texmf-dist/tex/latex/l3experimental/l3str/l3tl-analysis.sty
 share/texmf-dist/tex/latex/l3experimental/l3str/l3tl-build.sty
 share/texmf-dist/tex/latex/l3experimental/xcoffins/xcoffins.sty

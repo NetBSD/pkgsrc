@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2015/04/21 23:22:24 markd Exp $
+# $NetBSD: Makefile,v 1.3 2016/06/16 03:54:43 markd Exp $
 
 DISTNAME=	lualibs
-PKGNAME=	tex-${DISTNAME}-2.2
-TEXLIVE_REV=	34736
+PKGNAME=	tex-${DISTNAME}-2.4
+TEXLIVE_REV=	40370
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Additional Lua functions for LuaTeX macro programmers

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 03:29:35 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/06/16 03:54:43 markd Exp $
 
-SHA1 (tex-l3kernel-37997/l3kernel.doc.tar.xz) = 9ca6af89097cd50b8932a73ca9c24924d4f55986
-RMD160 (tex-l3kernel-37997/l3kernel.doc.tar.xz) = c9d55a4b8a305819df4226d7ce11606209a42994
-SHA512 (tex-l3kernel-37997/l3kernel.doc.tar.xz) = bd3524489737c3d9e79edf5c278459006c5f78002f390786456cae9564c403603f01ba8c2427b91916cdde30827ad44a24d34c42ecf196a4d0f750bba9e87fe1
-Size (tex-l3kernel-37997/l3kernel.doc.tar.xz) = 6616380 bytes
+SHA1 (tex-l3kernel-41246/l3kernel.doc.tar.xz) = 478d4263f598d34f1583d96b9025316910f58189
+RMD160 (tex-l3kernel-41246/l3kernel.doc.tar.xz) = 65cf269ed928d53a17dd3e201e3f06879bce93b5
+SHA512 (tex-l3kernel-41246/l3kernel.doc.tar.xz) = ed9bae7f2207c2bbbde204eab88d2ca7c2405ccf619b9e5275eec887c8e88b6c293313cca6f860d0e9869f850153ee64459631e02137b9cc429f9c867e28716a
+Size (tex-l3kernel-41246/l3kernel.doc.tar.xz) = 6490320 bytes
