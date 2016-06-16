@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2015/04/25 03:56:15 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2016/06/16 04:06:14 markd Exp $
+share/texmf-dist/doc/context/third/pgfplots/Makefile
 share/texmf-dist/doc/context/third/pgfplots/pgfplotsexample-context.pdf
 share/texmf-dist/doc/context/third/pgfplots/pgfplotsexample-context.tex
 share/texmf-dist/doc/context/third/pgfplots/pgfplotsexample-context.tuc

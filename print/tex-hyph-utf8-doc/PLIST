@@ -1,18 +1,11 @@
-@comment $NetBSD: PLIST,v 1.5 2015/06/14 12:50:03 markd Exp $
+@comment $NetBSD: PLIST,v 1.6 2016/06/16 04:06:09 markd Exp $
 share/texmf-dist/doc/generic/hyph-utf8/CHANGES
 share/texmf-dist/doc/generic/hyph-utf8/HISTORY
-share/texmf-dist/doc/generic/hyph-utf8/bg/azbukaExtended.pdf
-share/texmf-dist/doc/generic/hyph-utf8/bg/azbukaExtended.tex
-share/texmf-dist/doc/generic/hyph-utf8/es/README
-share/texmf-dist/doc/generic/hyph-utf8/es/division.pdf
-share/texmf-dist/doc/generic/hyph-utf8/hu/huhyphn.pdf
 share/texmf-dist/doc/generic/hyph-utf8/hyphenation-distribution.pdf
 share/texmf-dist/doc/generic/hyph-utf8/hyphenation-distribution.tex
 share/texmf-dist/doc/generic/hyph-utf8/hyphenation.pdf
 share/texmf-dist/doc/generic/hyph-utf8/hyphenation.tex
 share/texmf-dist/doc/generic/hyph-utf8/img/miktex-languages.png
 share/texmf-dist/doc/generic/hyph-utf8/img/texlive-collection.png
-share/texmf-dist/doc/generic/hyph-utf8/sa/hyphenmin.txt
-share/texmf-dist/doc/latex/hyph-utf8/README
 share/texmf-dist/doc/luatex/hyph-utf8/README
 share/texmf-dist/doc/luatex/hyph-utf8/luatex-hyphen.pdf

@@ -1,11 +1,11 @@
-$NetBSD: patch-ac,v 1.6 2015/12/12 19:11:47 markd Exp $
+$NetBSD: patch-ac,v 1.7 2016/06/16 04:06:19 markd Exp $
 
 Prepare @PREFIX@ for substituting the correct one in from the pkgsrc Makefile.
 
 Solaris portability fix.
 
---- libs/lua52/lua-5.2.4/src/luaconf.h.orig	2013-04-05 10:58:37.000000000 +0000
-+++ libs/lua52/lua-5.2.4/src/luaconf.h
+--- libs/lua52/lua52-src/src/luaconf.h.orig	2013-04-05 10:58:37.000000000 +0000
++++ libs/lua52/lua52-src/src/luaconf.h
 @@ -102,7 +102,7 @@
  #else			/* }{ */
  

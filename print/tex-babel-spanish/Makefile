@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/05/04 12:44:23 markd Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/16 04:06:00 markd Exp $
 
 DISTNAME=	babel-spanish
-PKGNAME=	tex-${DISTNAME}-5.0n
-TEXLIVE_REV=	33668
+PKGNAME=	tex-${DISTNAME}-5.0p
+TEXLIVE_REV=	39920
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/babel-spanish
