@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2016/03/05 11:28:21 jperkin Exp $
+# $NetBSD: Makefile,v 1.37 2016/06/16 08:34:29 roy Exp $
 
-DISTNAME=	fossil-src-1.34
+DISTNAME=	fossil-src-1.35
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	1
+WRKSRC=		${WRKDIR}/${PKGNAME}
 CATEGORIES=	devel scm
 MASTER_SITES=	http://www.fossil-scm.org/download/
 
