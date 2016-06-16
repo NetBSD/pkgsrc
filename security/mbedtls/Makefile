@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2016/03/05 11:29:22 jperkin Exp $
+# $NetBSD: Makefile,v 1.3 2016/06/16 14:17:03 fhajny Exp $
 #
 
-DISTNAME=		mbedtls-1.3.11-gpl
-PKGNAME=		${DISTNAME:-gpl=}
-PKGREVISION=		1
+DISTNAME=		mbedtls-2.2.1-apache
+PKGNAME=		${DISTNAME:-apache=}
 CATEGORIES=		security devel
 MASTER_SITES=		https://tls.mbed.org/download/
 EXTRACT_SUFX=		.tgz
@@ -11,7 +10,7 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://tls.mbed.org/
 COMMENT=		Lightweight, modular cryptographic and SSL/TLS library
-LICENSE=		gnu-gpl-v2
+LICENSE=		apache-2.0
 
 CONFLICTS+=		polarssl-[0-9]*
 SUPERSEDES+=		polarssl-[0-9]*
@@ -28,13 +27,8 @@ REPLACE_PERL=		tests/scripts/*.pl
 
 CMAKE_ARGS+=		-DUSE_SHARED_MBEDTLS_LIBRARY=ON
 MAKE_ENV+=		RANLIB=${RANLIB:Q}
-TEST_TARGET=		check
 
 LDFLAGS.SunOS+=		-lsocket
-
-post-install:
-	${CHMOD} -x ${DESTDIR}${PREFIX}/lib/libmbedtls.a
-	${SETENV} ${SH} ${WRKSRC}/scripts/polarssl_symlinks.sh ${DESTDIR}${PREFIX}/lib
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
