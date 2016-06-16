@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/04 01:02:15 agc Exp $
+$NetBSD: distinfo,v 1.6 2016/06/16 04:06:05 markd Exp $
 
-SHA1 (tex-hyphen-chinese-25990/hyphen-chinese.tar.xz) = bb3b6c6f86ac3a43021164645525f794d0c59e1c
-RMD160 (tex-hyphen-chinese-25990/hyphen-chinese.tar.xz) = 16183477734e58efca6b44a7eac74a7f5c1de7f3
-SHA512 (tex-hyphen-chinese-25990/hyphen-chinese.tar.xz) = 119e03050a0829386bbbba145488f60a44d0e7ac4af1b355f33e541936345603c2d5dc95685c95716dd0aa4e61685b2b7ce7efeb69f1cd8d48e026c0a0297fd4
-Size (tex-hyphen-chinese-25990/hyphen-chinese.tar.xz) = 444 bytes
+SHA1 (tex-hyphen-chinese-40340/hyphen-chinese.tar.xz) = a28cbbb9829ba6dcd871cbd11173bf131fc5e9a5
+RMD160 (tex-hyphen-chinese-40340/hyphen-chinese.tar.xz) = 6ebf164db7439151b9b34c3ef6d79d4ad6ec0f92
+SHA512 (tex-hyphen-chinese-40340/hyphen-chinese.tar.xz) = b8f892f7fb3514e83f806a2b6fe72062adfbad9473bf0f225e403ef9a9bb56d9ba5440888592af5c456319489cd851bcda52ccb3ae5ad2be9c9e133e2668271e
+Size (tex-hyphen-chinese-40340/hyphen-chinese.tar.xz) = 2428 bytes

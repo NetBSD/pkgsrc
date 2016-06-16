@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2015/06/14 12:50:06 markd Exp $
+# $NetBSD: Makefile,v 1.3 2016/06/16 04:06:17 markd Exp $
 
 DISTNAME=	udesoftec
-PKGNAME=	tex-${DISTNAME}-1.4.6
-TEXLIVE_REV=	37399
+PKGNAME=	tex-${DISTNAME}-1.5.2
+TEXLIVE_REV=	40613
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/udesoftec

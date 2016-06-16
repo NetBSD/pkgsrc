@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/05/10 01:04:04 markd Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/16 04:06:01 markd Exp $
 
 DISTNAME=	cjkpunct.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-4.8.1.2
-TEXLIVE_REV=	15878
+PKGNAME=	tex-${DISTNAME:S/./-/}-4.8.4
+TEXLIVE_REV=	41119
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/cjkpunct

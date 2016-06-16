@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/11/05 13:35:45 minskim Exp $
-share/texmf-dist/doc/latex/csquotes/README
-share/texmf-dist/doc/latex/csquotes/RELEASE
+@comment $NetBSD: PLIST,v 1.2 2016/06/16 04:06:02 markd Exp $
+share/texmf-dist/doc/latex/csquotes/README.md
+share/texmf-dist/doc/latex/csquotes/RELEASE.md
 share/texmf-dist/doc/latex/csquotes/csquotes.pdf
 share/texmf-dist/doc/latex/csquotes/csquotes.tex

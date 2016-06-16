@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2016/06/16 04:06:18 markd Exp $
+share/texmf-dist/tex/generic/unicode-data/CaseFolding.txt
+share/texmf-dist/tex/generic/unicode-data/EastAsianWidth.txt
+share/texmf-dist/tex/generic/unicode-data/LineBreak.txt
+share/texmf-dist/tex/generic/unicode-data/MathClass.txt
+share/texmf-dist/tex/generic/unicode-data/SpecialCasing.txt
+share/texmf-dist/tex/generic/unicode-data/UnicodeData.txt
+share/texmf-dist/tex/generic/unicode-data/load-unicode-data.tex
+share/texmf-dist/tex/generic/unicode-data/load-unicode-math-classes.tex
+share/texmf-dist/tex/generic/unicode-data/load-unicode-xetex-classes.tex
