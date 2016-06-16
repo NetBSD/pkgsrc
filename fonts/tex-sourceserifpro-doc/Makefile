@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/09/02 11:06:14 markd Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/16 03:57:31 markd Exp $
 
 DISTNAME=	sourceserifpro.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.1
-TEXLIVE_REV=	37425
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.2
+TEXLIVE_REV=	40598
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/sourceserifpro

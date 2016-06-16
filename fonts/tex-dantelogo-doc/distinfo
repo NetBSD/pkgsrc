@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 20:44:53 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/06/16 03:57:27 markd Exp $
 
-SHA1 (tex-dantelogo-35295/dantelogo.doc.tar.xz) = 39f25a1cd65c9dd9140750812e0bde5819ead9cd
-RMD160 (tex-dantelogo-35295/dantelogo.doc.tar.xz) = 820383d530abf4235ed243bf250a3973c0733d32
-SHA512 (tex-dantelogo-35295/dantelogo.doc.tar.xz) = 582c20568acdcc52009768083fd5139047f020cb9d9880b1defd109ffcb9ca355c4558326319a4f21128f71fbc03067f25e4a9eb87408230982be3c512329af9
-Size (tex-dantelogo-35295/dantelogo.doc.tar.xz) = 71300 bytes
+SHA1 (tex-dantelogo-38599/dantelogo.doc.tar.xz) = 0c5d031f3aaed0092f9e0a6e592afa1abf8a100d
+RMD160 (tex-dantelogo-38599/dantelogo.doc.tar.xz) = fb4fd151301e7da82192bfd52815e63d2ad83568
+SHA512 (tex-dantelogo-38599/dantelogo.doc.tar.xz) = d44681ab675da9689c0cc03c80984bacfde850c566aaf642e4a77325f0475238cf9a74af976ad268f99795109e62aadd3938c3de260d597e1731bc1e8a06963b
+Size (tex-dantelogo-38599/dantelogo.doc.tar.xz) = 203152 bytes

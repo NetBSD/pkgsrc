@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/04/26 02:31:13 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/06/16 03:57:29 markd Exp $
 share/texmf-dist/fonts/source/public/knuth-local/black.mf
 share/texmf-dist/fonts/source/public/knuth-local/blackaps.mf
 share/texmf-dist/fonts/source/public/knuth-local/blackimagen.mf
@@ -24,6 +24,8 @@ share/texmf-dist/fonts/source/public/knuth-local/slantlino4.mf
 share/texmf-dist/fonts/source/public/knuth-local/slantlj4.mf
 share/texmf-dist/fonts/source/public/knuth-local/snfont.mf
 share/texmf-dist/fonts/tfm/public/knuth-local/domino.tfm
+share/texmf-dist/fonts/tfm/public/knuth-local/logod10.tfm
+share/texmf-dist/fonts/tfm/public/knuth-local/logosl9.tfm
 share/texmf-dist/fonts/tfm/public/knuth-local/random.tfm
 share/texmf-dist/fonts/tfm/public/knuth-local/snfont.tfm
 share/texmf-dist/mft/knuth-local/e.mft

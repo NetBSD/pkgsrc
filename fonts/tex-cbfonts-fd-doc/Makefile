@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/05/03 19:37:21 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/16 03:57:26 markd Exp $
 
 DISTNAME=	cbfonts-fd.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-1.0
-TEXLIVE_REV=	31624
+PKGNAME=	tex-${DISTNAME:S/./-/}-1.1
+TEXLIVE_REV=	39936
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Documentation for tex-cbfonts-fd

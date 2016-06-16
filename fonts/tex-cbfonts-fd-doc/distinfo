@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 20:44:48 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/06/16 03:57:26 markd Exp $
 
-SHA1 (tex-cbfonts-fd-31624/cbfonts-fd.doc.tar.xz) = c494bf76feea24da12f68f02bf40fdff5f6f58b1
-RMD160 (tex-cbfonts-fd-31624/cbfonts-fd.doc.tar.xz) = 95ee49a55351cc6d4bc7586667fe2551858839cb
-SHA512 (tex-cbfonts-fd-31624/cbfonts-fd.doc.tar.xz) = 92e03ed459a338e66811a581645340532fe3d1b523164d89b3a93fd67f5afb6ef6266d44a76cf0ad3bff00a87393e534975dfaf9f406104a15cb8b3e1da442f8
-Size (tex-cbfonts-fd-31624/cbfonts-fd.doc.tar.xz) = 652912 bytes
+SHA1 (tex-cbfonts-fd-39936/cbfonts-fd.doc.tar.xz) = 3164c9364e5841a876dfe63565c0713110f9d975
+RMD160 (tex-cbfonts-fd-39936/cbfonts-fd.doc.tar.xz) = 24e70c9685cb1dafd296c9048c95b8753ae02b74
+SHA512 (tex-cbfonts-fd-39936/cbfonts-fd.doc.tar.xz) = 743a2dd0a61ef75402d0b613b5cd036a954521a4d851f0afab8769b6bd22ea544f742647b637991d55507becdb3d76f21e206cc2cbac1c610f308398d08f9568
+Size (tex-cbfonts-fd-39936/cbfonts-fd.doc.tar.xz) = 444308 bytes

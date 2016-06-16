@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2015/08/02 12:43:51 markd Exp $
+# $NetBSD: Makefile,v 1.3 2016/06/16 03:57:28 markd Exp $
 
 DISTNAME=	fontawesome.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-4.3.01
-TEXLIVE_REV=	37890
+PKGNAME=	tex-${DISTNAME:S/./-/}-4.6.3.1
+TEXLIVE_REV=	41195
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/fontawesome

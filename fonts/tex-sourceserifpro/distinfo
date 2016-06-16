@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 20:45:18 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/06/16 03:57:31 markd Exp $
 
-SHA1 (tex-sourceserifpro-37425/sourceserifpro.tar.xz) = 7b30e25a6fe75d788de374453081436cb8e7dc83
-RMD160 (tex-sourceserifpro-37425/sourceserifpro.tar.xz) = b55ed819d5065295f49bc58db27ca39485c1ac2c
-SHA512 (tex-sourceserifpro-37425/sourceserifpro.tar.xz) = 8d373ca56aea92d3a63808bccda0184f69cc39e05fa92c9d7c01bbc9444d3f23df621069b6398529f0cae25ee13632c93bbfc08990942c06a64e82a42d6f3065
-Size (tex-sourceserifpro-37425/sourceserifpro.tar.xz) = 1065896 bytes
+SHA1 (tex-sourceserifpro-40598/sourceserifpro.tar.xz) = 0159c7f80d198b8edf157bd8f6b91ff6424613b9
+RMD160 (tex-sourceserifpro-40598/sourceserifpro.tar.xz) = 1446e896612fb2ef456c365dbca8fd06ce1f80d2
+SHA512 (tex-sourceserifpro-40598/sourceserifpro.tar.xz) = 2de13912bb3ed2ca972c820a73aeadd68fed299c6bc93ad541732101ccba916e8000ecaf3ce197c466401b4d9a5c8e4b59ad70f90a2ebee6ae44c69783915b11
+Size (tex-sourceserifpro-40598/sourceserifpro.tar.xz) = 1065936 bytes

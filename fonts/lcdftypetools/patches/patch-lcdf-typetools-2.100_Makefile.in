@@ -1,9 +1,9 @@
-$NetBSD: patch-lcdf-typetools-2.100_Makefile.in,v 1.2 2015/06/14 11:19:58 markd Exp $
+$NetBSD: patch-lcdf-typetools-2.100_Makefile.in,v 1.3 2016/06/16 03:57:25 markd Exp $
 
 Don't install files that tex-glyphlist installs
 
---- lcdf-typetools-2.104/Makefile.in.orig	2014-01-09 12:51:50.000000000 +0000
-+++ lcdf-typetools-2.104/Makefile.in
+--- lcdf-typetools-src/Makefile.in.orig	2014-01-09 12:51:50.000000000 +0000
++++ lcdf-typetools-src/Makefile.in
 @@ -703,7 +703,7 @@ info: info-recursive
  
  info-am:
