@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.29 2016/02/26 10:57:45 jperkin Exp $
+# $NetBSD: options.mk,v 1.30 2016/06/16 12:08:21 ryoon Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.firefox
 PKG_SUPPORTED_OPTIONS=	official-mozilla-branding
@@ -46,6 +46,7 @@ CONFIGURE_ARGS+=	--disable-libnotify
 .if !empty(PKG_OPTIONS:Mmozilla-jemalloc)
 PLIST.jemalloc=		yes
 CONFIGURE_ARGS+=	--enable-jemalloc
+CONFIGURE_ARGS+=	--enable-replace-malloc
 .else
 CONFIGURE_ARGS+=	--disable-jemalloc
 .endif
@@ -61,12 +62,16 @@ O0TRACKING=-fvar-tracking-assignments -fvar-tracking
 .endif
 
 .if !empty(PKG_OPTIONS:Mdebug)
-CONFIGURE_ARGS+=	--enable-debug="-g -O0 ${O0TRACKING}" --enable-debug-symbols --disable-optimize
+CONFIGURE_ARGS+=	--enable-debug="-g -O0 ${O0TRACKING}"
+CONFIGURE_ARGS+=	--enable-debug-symbols
+CONFIGURE_ARGS+=	--disable-optimize
+CONFIGURE_ARGS+=	--enable-debug-js-modules
 CONFIGURE_ARGS+=	--disable-install-strip
 PLIST.debug=		yes
 .else
 .if !empty(PKG_OPTIONS:Mdebug-info)
 CONFIGURE_ARGS+=	--enable-debug-symbols
+CONFIGURE_ARGS+=	--enable-optimize=-O0
 .else
 CONFIGURE_ARGS+=	--disable-debug-symbols
 .endif

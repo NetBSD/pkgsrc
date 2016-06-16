@@ -1,4 +1,6 @@
-$NetBSD: patch-memory_mozalloc_mozalloc__abort.cpp,v 1.5 2015/09/23 06:44:42 ryoon Exp $
+$NetBSD: patch-memory_mozalloc_mozalloc__abort.cpp,v 1.6 2016/06/16 12:08:21 ryoon Exp $
+
+* Support Solaris
 
 --- memory/mozalloc/mozalloc_abort.cpp.orig	2015-08-24 21:53:14.000000000 +0000
 +++ memory/mozalloc/mozalloc_abort.cpp

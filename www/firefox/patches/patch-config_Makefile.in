@@ -1,13 +1,13 @@
-$NetBSD: patch-config_Makefile.in,v 1.5 2015/05/12 22:48:54 ryoon Exp $
+$NetBSD: patch-config_Makefile.in,v 1.6 2016/06/16 12:08:21 ryoon Exp $
 
---- config/Makefile.in.orig	2015-05-04 00:43:23.000000000 +0000
+* Support system libraries
+
+--- config/Makefile.in.orig	2016-06-01 04:11:40.000000000 +0000
 +++ config/Makefile.in
-@@ -77,6 +77,16 @@ export:: $(export-preqs)
+@@ -49,6 +49,14 @@ export:: $(export-preqs)
  		-DMOZ_NATIVE_LIBEVENT=$(MOZ_NATIVE_LIBEVENT) \
  		-DMOZ_NATIVE_LIBVPX=$(MOZ_NATIVE_LIBVPX) \
  		-DMOZ_NATIVE_ICU=$(MOZ_NATIVE_ICU) \
-+		-DMOZ_NATIVE_GRAPHITE2=$(MOZ_NATIVE_GRAPHITE2) \
-+		-DMOZ_NATIVE_HARFBUZZ=$(MOZ_NATIVE_HARFBUZZ) \
 +		-DMOZ_NATIVE_OGG=$(MOZ_NATIVE_OGG) \
 +		-DMOZ_NATIVE_THEORA=$(MOZ_NATIVE_THEORA) \
 +		-DMOZ_NATIVE_VORBIS=$(MOZ_NATIVE_VORBIS) \

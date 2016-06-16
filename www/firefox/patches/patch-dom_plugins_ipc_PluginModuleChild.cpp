@@ -1,4 +1,6 @@
-$NetBSD: patch-dom_plugins_ipc_PluginModuleChild.cpp,v 1.7 2015/04/05 12:54:11 ryoon Exp $
+$NetBSD: patch-dom_plugins_ipc_PluginModuleChild.cpp,v 1.8 2016/06/16 12:08:21 ryoon Exp $
+
+* Support Solaris
 
 --- dom/plugins/ipc/PluginModuleChild.cpp.orig	2015-03-27 02:20:27.000000000 +0000
 +++ dom/plugins/ipc/PluginModuleChild.cpp

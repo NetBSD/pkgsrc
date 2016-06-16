@@ -1,4 +1,6 @@
-$NetBSD: patch-ao,v 1.14 2016/01/27 13:44:27 ryoon Exp $
+$NetBSD: patch-ao,v 1.15 2016/06/16 12:08:21 ryoon Exp $
+
+* For devel/xulrunner*
 
 --- toolkit/mozapps/installer/packager.mk.orig	2016-01-23 23:23:49.000000000 +0000
 +++ toolkit/mozapps/installer/packager.mk
