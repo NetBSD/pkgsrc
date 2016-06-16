@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.174 2016/06/15 22:05:04 kamil Exp $
+# $NetBSD: Makefile,v 1.175 2016/06/16 02:29:27 kamil Exp $
 #
 
 COMMENT=	Editors
@@ -15,6 +15,7 @@ SUBDIR+=	bvi
 SUBDIR+=	ce
 SUBDIR+=	ce-doc
 SUBDIR+=	ce-x11
+SUBDIR+=	codeblocks
 SUBDIR+=	codelite
 SUBDIR+=	conglomerate
 SUBDIR+=	cooledit
