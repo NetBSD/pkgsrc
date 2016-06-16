@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2015/06/14 11:31:46 markd Exp $
+# $NetBSD: Makefile,v 1.3 2016/06/16 04:01:58 markd Exp $
 
 DISTNAME=	apnum
-PKGNAME=	tex-${DISTNAME}-1.2
-TEXLIVE_REV=	37357
+PKGNAME=	tex-${DISTNAME}-1.6
+TEXLIVE_REV=	39710
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://ctan.org/pkg/apnum
 COMMENT=	Arbitrary precision numbers implemented by TeX macros
 LICENSE=	public-domain
 
