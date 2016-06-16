@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2454 2016/06/16 15:47:50 taca Exp $
+$NetBSD: CHANGES-2016,v 1.2455 2016/06/16 16:10:35 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3577,3 +3577,6 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/nsd to 4.1.10 [pettai 2016-06-16]
 	Updated sysutils/file to 5.28 [fhajny 2016-06-16]
 	Updated www/contao35 to 3.5.13 [taca 2016-06-16]
+	Updated geography/opencpn to 4.4.0 [bouyer 2016-06-16]
+	Updated geography/opencpn-plugin-draw to 1.1p13 [bouyer 2016-06-16]
+	Updated geography/opencpn-plugin-weather_routing to 20160611 [bouyer 2016-06-16]
