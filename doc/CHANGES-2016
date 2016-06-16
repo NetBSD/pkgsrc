@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2440 2016/06/15 22:10:23 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.2441 2016/06/16 02:30:25 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3155,3 +3155,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/netpgpverify to 20160617 [agc 2016-06-15]
 	Updated security/libnetpgpverify to 20160617 [agc 2016-06-15]
 	Added editors/codelite version 9.1 [kamil 2016-06-15]
+	Added editors/codeblocks version 16.01 [kamil 2016-06-16]
