@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2016/05/05 06:23:57 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2016/06/16 16:05:51 schnoebe Exp $
 #
 
 PKGVER=		8.2.1
+PKGREVISION=	1
 DISTNAME=	conserver-${PKGVER}
 PKGNAME=	conserver8-${PKGVER}
 CATEGORIES=	comms
