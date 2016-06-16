@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2456 2016/06/16 16:30:53 tsutsui Exp $
+$NetBSD: CHANGES-2016,v 1.2457 2016/06/16 17:12:44 pettai Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3581,3 +3581,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated geography/opencpn-plugin-draw to 1.1p13 [bouyer 2016-06-16]
 	Updated geography/opencpn-plugin-weather_routing to 20160611 [bouyer 2016-06-16]
 	Updated multimedia/adobe-flash-plugin11 to 11.2.202.626 [tsutsui 2016-06-16]
+	Updated net/knot to 2.2.1 [pettai 2016-06-16]
