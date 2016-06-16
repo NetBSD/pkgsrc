@@ -1,4 +1,6 @@
-$NetBSD: patch-gfx_cairo_libpixman_src_pixman-arm-neon-asm.S,v 1.1 2015/10/16 12:59:36 jmcneill Exp $
+$NetBSD: patch-gfx_cairo_libpixman_src_pixman-arm-neon-asm.S,v 1.2 2016/06/16 12:08:21 ryoon Exp $
+
+* Support NetBSD/earm
 
 --- gfx/cairo/libpixman/src/pixman-arm-neon-asm.S.orig	2015-09-29 21:45:08.000000000 +0000
 +++ gfx/cairo/libpixman/src/pixman-arm-neon-asm.S

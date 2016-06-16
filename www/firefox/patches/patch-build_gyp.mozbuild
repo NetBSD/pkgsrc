@@ -1,4 +1,7 @@
-$NetBSD: patch-build_gyp.mozbuild,v 1.2 2015/01/30 07:32:24 pho Exp $
+$NetBSD: patch-build_gyp.mozbuild,v 1.3 2016/06/16 12:08:21 ryoon Exp $
+
+Hunk #1:
+  Try to add Video4Linux2 support
 
 Hunk #2:
   On Darwin, don't assume iOS just because the toolkit is not
