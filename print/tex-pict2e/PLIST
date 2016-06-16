@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/16 10:30:18 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/06/16 04:06:14 markd Exp $
 share/texmf-dist/tex/latex/pict2e/p2e-dvipdfm.def
 share/texmf-dist/tex/latex/pict2e/p2e-dvipdfmx.def
 share/texmf-dist/tex/latex/pict2e/p2e-dvips.def
+share/texmf-dist/tex/latex/pict2e/p2e-luatex.def
 share/texmf-dist/tex/latex/pict2e/p2e-pctex32.def
 share/texmf-dist/tex/latex/pict2e/p2e-pctexps.def
 share/texmf-dist/tex/latex/pict2e/p2e-pdftex.def

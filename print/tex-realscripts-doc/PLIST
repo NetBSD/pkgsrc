@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/21 17:37:03 minskim Exp $
-share/texmf-dist/doc/latex/realscripts/README
+@comment $NetBSD: PLIST,v 1.2 2016/06/16 04:06:15 markd Exp $
+share/texmf-dist/doc/latex/realscripts/README.md
 share/texmf-dist/doc/latex/realscripts/realscripts.pdf

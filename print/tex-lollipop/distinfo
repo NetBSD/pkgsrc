@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:02:26 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/06/16 04:06:11 markd Exp $
 
-SHA1 (tex-lollipop-33676/lollipop.tar.xz) = e9d64acc2a067fcc231a1685b849688ab4571b73
-RMD160 (tex-lollipop-33676/lollipop.tar.xz) = 438650723fe613fff6b061617e5b280214a5e397
-SHA512 (tex-lollipop-33676/lollipop.tar.xz) = 68f5f7e9589980be8ae0cbb775c2a146cafd968c355220201ba18002b8add60880d991c73f003b6556ffb336a659fd4e32094db52a513c0140bbba6b5b1a4af3
-Size (tex-lollipop-33676/lollipop.tar.xz) = 51536 bytes
+SHA1 (tex-lollipop-41130/lollipop.tar.xz) = 472f561720f41ea763a63efd5ec7552c6d50b7cc
+RMD160 (tex-lollipop-41130/lollipop.tar.xz) = fd3a67a90810fdecfe12e3c1dace279499755fc8
+SHA512 (tex-lollipop-41130/lollipop.tar.xz) = 8f4cb795e59573868fd16750b815abdf51c005e10bc4a5e56fd49c180b6e217e14da380db4d5743e4172ab7e9771d37973393d1624919ad9c018711dc1286679
+Size (tex-lollipop-41130/lollipop.tar.xz) = 51260 bytes
