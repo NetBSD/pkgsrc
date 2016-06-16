@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.38 2016/06/05 13:57:37 mef Exp $
+# $NetBSD: Makefile,v 1.39 2016/06/16 15:27:49 fhajny Exp $
 
-DISTNAME=		file-5.27
+DISTNAME=		file-5.28
 CATEGORIES=		sysutils
 MASTER_SITES=		ftp://ftp.astron.com/pub/file/
 
@@ -28,7 +28,7 @@ BUILDLINK_TRANSFORM+=	opt:-Wextra:-W
 .endif
 # gcc<3 does not know -Wunused-parameter
 .if !empty(CC_VERSION:Mgcc-2*)
-BUILDLINK_TRANSFORM+=  rm:-Wunused-parameter
+BUILDLINK_TRANSFORM+=	rm:-Wunused-parameter
 .endif
 
 CFLAGS.AIX+=	-D_LINUX_SOURCE_COMPAT
