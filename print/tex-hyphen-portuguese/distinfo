@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 01:02:18 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/06/16 04:06:08 markd Exp $
 
-SHA1 (tex-hyphen-portuguese-20144/hyphen-portuguese.tar.xz) = c12e3e242e653b683ede3fe4826b36c525b9d691
-RMD160 (tex-hyphen-portuguese-20144/hyphen-portuguese.tar.xz) = feab98391044216212281b58dce1745d1289c130
-SHA512 (tex-hyphen-portuguese-20144/hyphen-portuguese.tar.xz) = 60287e5c8213782b5dc4743549cce4f172d6577deee26ca52932674a4f2e5622558483825258ac91201d1e39afbe9da21570dd54e2e57af9126edae0182ac903
-Size (tex-hyphen-portuguese-20144/hyphen-portuguese.tar.xz) = 360 bytes
+SHA1 (tex-hyphen-portuguese-40340/hyphen-portuguese.tar.xz) = 22fb5e2e60a22e96bc14d9473a02b19b5c871930
+RMD160 (tex-hyphen-portuguese-40340/hyphen-portuguese.tar.xz) = 101f4de5376adec01c8699ee91cc9c8bcb36d1b5
+SHA512 (tex-hyphen-portuguese-40340/hyphen-portuguese.tar.xz) = a35a68984f1743192c19259cad4b936d56fcc27d31aa92810950d44ed58494d2409642f2e3892a62caf6b3e2e88aa76c22b5d80d5fc4ffd1b9764c11a63c5612
+Size (tex-hyphen-portuguese-40340/hyphen-portuguese.tar.xz) = 3416 bytes

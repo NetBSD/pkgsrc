@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 01:02:19 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/06/16 04:06:09 markd Exp $
 
-SHA1 (tex-hyphen-turkish-20144/hyphen-turkish.tar.xz) = 895ed46e25ff58e373fc6123be76ffb1664029c9
-RMD160 (tex-hyphen-turkish-20144/hyphen-turkish.tar.xz) = 9febc2e877d5a219f2bc1e9249a4eb4f687950f3
-SHA512 (tex-hyphen-turkish-20144/hyphen-turkish.tar.xz) = 577f96e53c1ecd16e201d801deb2f3114768e94f2c8b6e7bab91c743d228c3b176e03b315903c9741982a6a914c0ab48d918e3c1eddeea3aa8f2863d12ce09f2
-Size (tex-hyphen-turkish-20144/hyphen-turkish.tar.xz) = 536 bytes
+SHA1 (tex-hyphen-turkish-40340/hyphen-turkish.tar.xz) = 51aae180f1ef18a5232218af5ec2aecd6039f6d3
+RMD160 (tex-hyphen-turkish-40340/hyphen-turkish.tar.xz) = 5a3e947eafa2473ce3c2cab3d9b0044b86b63946
+SHA512 (tex-hyphen-turkish-40340/hyphen-turkish.tar.xz) = 607f638f05d8a0ac62432ff0ddc3d84dead16be78b2211d9c25dda0ee3027b33383166531b93ffc9195e1f326cc30180f9777e769b268e8918d71f046592e3e3
+Size (tex-hyphen-turkish-40340/hyphen-turkish.tar.xz) = 3888 bytes

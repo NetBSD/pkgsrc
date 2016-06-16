@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1 2016/06/16 04:06:15 markd Exp $
+share/texmf-dist/doc/ptex/ptex-base/Changelog_eptex_beforeTL
+share/texmf-dist/doc/ptex/ptex-base/Changelog_ptex
+share/texmf-dist/doc/ptex/ptex-base/LICENSE
+share/texmf-dist/doc/ptex/ptex-base/README.md
+share/texmf-dist/doc/ptex/ptex-base/README_ptex
+share/texmf-dist/doc/ptex/ptex-base/eptex_resume.pdf
+share/texmf-dist/doc/ptex/ptex-base/eptexdoc.pdf
+share/texmf-dist/doc/ptex/ptex-base/eptexdoc.tex
+share/texmf-dist/doc/ptex/ptex-base/fam256d.tex
+share/texmf-dist/doc/ptex/ptex-base/fam256p.tex
+share/texmf-dist/doc/ptex/ptex-base/jfm.pdf
+share/texmf-dist/doc/ptex/ptex-base/jfm.tex
+share/texmf-dist/doc/ptex/ptex-base/jtex.pdf
+share/texmf-dist/doc/ptex/ptex-base/jtex.tex
+share/texmf-dist/doc/ptex/ptex-base/jtexdoc.pdf
+share/texmf-dist/doc/ptex/ptex-base/jtexdoc.tex
+share/texmf-dist/doc/ptex/ptex-base/ptexdoc.pdf
+share/texmf-dist/doc/ptex/ptex-base/ptexdoc.tex
+share/texmf-dist/doc/ptex/ptex-base/ptexskip.pdf
+share/texmf-dist/doc/ptex/ptex-base/ptexskip.tex

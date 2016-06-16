@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2015/11/04 01:02:45 agc Exp $
+$NetBSD: distinfo,v 1.4 2016/06/16 04:06:16 markd Exp $
 
-SHA1 (tex-siunitx-37870/siunitx.tar.xz) = 3207b8a2f2df57b89fd07cd34a4241ccd767e0be
-RMD160 (tex-siunitx-37870/siunitx.tar.xz) = 4fe9387afcdfaf82afe19ac142aef8389a99df61
-SHA512 (tex-siunitx-37870/siunitx.tar.xz) = 3fc914555cf03011c947575ffda13c5847d8ca13d4281bc3ef07b3466395d7da70bc4ac6b7ffe7e629516096ecc6a34d06349072b169e632687875ab68886393
-Size (tex-siunitx-37870/siunitx.tar.xz) = 34624 bytes
+SHA1 (tex-siunitx-39922/siunitx.tar.xz) = 0ab39932ce11d878cdc4b0e5b93433e8d5c876d3
+RMD160 (tex-siunitx-39922/siunitx.tar.xz) = 4d8c38617c3cd2bc012d41a43da4adb72b8d818b
+SHA512 (tex-siunitx-39922/siunitx.tar.xz) = 112bfc97bf176df6c17a18731d7351b38c9643a2649cd606318feaf958a80e0c31eee5567372ad0bd209f1a2234e0c780dda6075742b26a1c4b7913d614bc2f4
+Size (tex-siunitx-39922/siunitx.tar.xz) = 34896 bytes

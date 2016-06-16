@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 14:09:51 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/16 04:06:03 markd Exp $
 
 DISTNAME=	font-change
-PKGNAME=	tex-${DISTNAME}-2015.1
-TEXLIVE_REV=	36535
+PKGNAME=	tex-${DISTNAME}-2015.2
+TEXLIVE_REV=	40403
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/font-change

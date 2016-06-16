@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/10 01:04:04 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/06/16 04:06:01 markd Exp $
 share/texmf-dist/doc/latex/cjkpunct/CJKpunct.pdf
-share/texmf-dist/doc/latex/cjkpunct/CJKpunct.spa
-share/texmf-dist/doc/latex/cjkpunct/README
-share/texmf-dist/doc/latex/cjkpunct/README.zh-cn.txt
+share/texmf-dist/doc/latex/cjkpunct/README.md
 share/texmf-dist/doc/latex/cjkpunct/examples/example-CJKfntef.tex
 share/texmf-dist/doc/latex/cjkpunct/examples/example-gb.tex
 share/texmf-dist/doc/latex/cjkpunct/examples/example-gbk.tex
 share/texmf-dist/doc/latex/cjkpunct/examples/example-utf8.tex
+share/texmf-dist/doc/latex/cjkpunct/setpunct/README.txt
 share/texmf-dist/doc/latex/cjkpunct/setpunct/setpunct-macros.tex
 share/texmf-dist/doc/latex/cjkpunct/setpunct/setpunct-main.tex

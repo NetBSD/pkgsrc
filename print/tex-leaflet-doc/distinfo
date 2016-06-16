@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 01:02:25 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/06/16 04:06:11 markd Exp $
 
-SHA1 (tex-leaflet-32093/leaflet.doc.tar.xz) = b456fa760b67f12f7ae9694e7c4807a4dfb62af7
-RMD160 (tex-leaflet-32093/leaflet.doc.tar.xz) = dc8117ff052024ce7e40c2e36d7f725367386fe1
-SHA512 (tex-leaflet-32093/leaflet.doc.tar.xz) = 8f1af1fd2e464a77cd0385b2bac665e1a0d5dd9d993bcd82e2dec29aebfb20dabc87483a735c11184d589d74c512719f39583d6fca274fb49e9f90dacfbee0c3
-Size (tex-leaflet-32093/leaflet.doc.tar.xz) = 335708 bytes
+SHA1 (tex-leaflet-39683/leaflet.doc.tar.xz) = c828981277fafe99b43e2556df0e3f738e5cdaf3
+RMD160 (tex-leaflet-39683/leaflet.doc.tar.xz) = fedbe1fb98cef7db8aa88e07d82590b139159310
+SHA512 (tex-leaflet-39683/leaflet.doc.tar.xz) = 316089abccfbcc9062d80c920723e9754b3bd5e450fccb40492608be5c778e41a76018b01a298539a045ca79e29eca95831237f31532a8cf92ff0b7329a520ba
+Size (tex-leaflet-39683/leaflet.doc.tar.xz) = 337892 bytes

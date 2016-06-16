@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:02:18 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/06/16 04:06:08 markd Exp $
 
-SHA1 (tex-hyphen-piedmontese-29193/hyphen-piedmontese.tar.xz) = db8cae36fdde0271178a6fd5e7128656c6e761e9
-RMD160 (tex-hyphen-piedmontese-29193/hyphen-piedmontese.tar.xz) = b79689332e3ec10c908387f7ce3e07fff3ccd763
-SHA512 (tex-hyphen-piedmontese-29193/hyphen-piedmontese.tar.xz) = 6f9d23d3bc55172c2bf8f0dc846615fa71b877f179925dc214d11118df1d9acf95ff285572338a41b8abde4b4e635908ce313fb85a07727d81b7f68c50e37ff7
-Size (tex-hyphen-piedmontese-29193/hyphen-piedmontese.tar.xz) = 452 bytes
+SHA1 (tex-hyphen-piedmontese-40340/hyphen-piedmontese.tar.xz) = e10ad99a99ba1fe6c305bbfd83ddf91df845fe73
+RMD160 (tex-hyphen-piedmontese-40340/hyphen-piedmontese.tar.xz) = 0c30b31f6f927a8e2b2a2692f34d921e5690a928
+SHA512 (tex-hyphen-piedmontese-40340/hyphen-piedmontese.tar.xz) = 165de96a3873386984b661bf31f52e91e0a995b94194b80f382102b89581bde39dad7c55e03291c228328d34041d596d3965626f7b30d2c66032c8aef69852a5
+Size (tex-hyphen-piedmontese-40340/hyphen-piedmontese.tar.xz) = 2904 bytes

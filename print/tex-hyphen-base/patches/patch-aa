@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.11 2015/04/23 11:36:31 markd Exp $
+$NetBSD: patch-aa,v 1.12 2016/06/16 04:06:05 markd Exp $
 
---- tex/generic/config/language.dat.orig	2013-07-08 01:19:20.000000000 +0000
+--- tex/generic/config/language.dat.orig	2016-05-15 01:17:02.000000000 +0000
 +++ tex/generic/config/language.dat
-@@ -57,154 +57,3 @@ english		hyphen.tex  % do not change!
+@@ -57,157 +57,3 @@ english		hyphen.tex  % do not change!
  % 
  dumylang	dumyhyph.tex    %for testing a new language.
  nohyphenation	zerohyph.tex    %a language with no patterns at all.
@@ -28,6 +28,8 @@ $NetBSD: patch-aa,v 1.11 2015/04/23 11:36:31 markd Exp $
 -catalan loadhyph-ca.tex
 -% from hyphen-chinese:
 -pinyin loadhyph-zh-latn-pinyin.tex
+-% from hyphen-churchslavonic:
+-churchslavonic loadhyph-cu.tex
 -% from hyphen-coptic:
 -coptic loadhyph-cop.tex
 -% from hyphen-croatian:
@@ -103,6 +105,7 @@ $NetBSD: patch-aa,v 1.11 2015/04/23 11:36:31 markd Exp $
 -% from hyphen-latin:
 -latin loadhyph-la.tex
 -classiclatin loadhyph-la-x-classic.tex
+-liturgicallatin loadhyph-la-x-liturgic.tex
 -% from hyphen-latvian:
 -latvian loadhyph-lv.tex
 -% from hyphen-lithuanian:
@@ -115,6 +118,8 @@ $NetBSD: patch-aa,v 1.11 2015/04/23 11:36:31 markd Exp $
 -=norwegian
 -=norsk
 -nynorsk loadhyph-nn.tex
+-% from hyphen-occitan:
+-occitan loadhyph-oc.tex
 -% from hyphen-piedmontese:
 -piedmontese loadhyph-pms.tex
 -% from hyphen-polish:
@@ -122,8 +127,6 @@ $NetBSD: patch-aa,v 1.11 2015/04/23 11:36:31 markd Exp $
 -% from hyphen-portuguese:
 -portuguese loadhyph-pt.tex
 -=portuges
--=brazil
--=brazilian
 -% from hyphen-romanian:
 -romanian loadhyph-ro.tex
 -% from hyphen-romansh:

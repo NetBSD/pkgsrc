@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2015/06/14 12:50:00 markd Exp $
+# $NetBSD: Makefile,v 1.11 2016/06/16 04:06:19 markd Exp $
 
-DISTNAME=	texlive-20150521-source
+DISTNAME=	texlive-20160523-source
 PKGNAME=	dviljk-2.6.5
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	print
-MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2015/
+MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2016/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	minskim@NetBSD.org

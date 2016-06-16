@@ -1,3 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/04 12:46:11 markd Exp $
-share/texmf-dist/tex/generic/babel-vietnamese/vietnam.ldf
+@comment $NetBSD: PLIST,v 1.2 2016/06/16 04:06:00 markd Exp $
 share/texmf-dist/tex/generic/babel-vietnamese/vietnamese.ldf

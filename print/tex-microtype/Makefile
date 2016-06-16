@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2016/01/27 10:13:21 markd Exp $
+# $NetBSD: Makefile,v 1.5 2016/06/16 04:06:12 markd Exp $
 
 DISTNAME=	microtype
-PKGNAME=	tex-${DISTNAME}-2.5a
-TEXLIVE_REV=	30755
+PKGNAME=	tex-${DISTNAME}-2.6a
+TEXLIVE_REV=	41127
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Interface to the micro-typographic features of pdfTeX

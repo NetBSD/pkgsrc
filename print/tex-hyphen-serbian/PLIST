@@ -1,1 +1,20 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/15 07:48:25 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/06/16 04:06:08 markd Exp $
+share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-sr-cyrl.tex
+share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-sr-latn.tex
+share/texmf-dist/tex/generic/hyph-utf8/patterns/ptex/hyph-sh-cyrl.t2a.tex
+share/texmf-dist/tex/generic/hyph-utf8/patterns/ptex/hyph-sh-latn.ec.tex
+share/texmf-dist/tex/generic/hyph-utf8/patterns/tex/hyph-sh-cyrl.tex
+share/texmf-dist/tex/generic/hyph-utf8/patterns/tex/hyph-sh-latn.tex
+share/texmf-dist/tex/generic/hyph-utf8/patterns/tex/hyph-sr-cyrl.tex
+share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-sh-cyrl.chr.txt
+share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-sh-cyrl.hyp.txt
+share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-sh-cyrl.lic.txt
+share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-sh-cyrl.pat.txt
+share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-sh-latn.chr.txt
+share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-sh-latn.hyp.txt
+share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-sh-latn.lic.txt
+share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-sh-latn.pat.txt
+share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-sr-cyrl.chr.txt
+share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-sr-cyrl.hyp.txt
+share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-sr-cyrl.lic.txt
+share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-sr-cyrl.pat.txt

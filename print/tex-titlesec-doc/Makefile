@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2016/01/26 10:53:51 markd Exp $
+# $NetBSD: Makefile,v 1.6 2016/06/16 04:06:17 markd Exp $
 
 DISTNAME=	titlesec.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-2.10.0
-TEXLIVE_REV=	24852
+PKGNAME=	tex-${DISTNAME:S/./-/}-2.10.2
+TEXLIVE_REV=	40129
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-titlesec
