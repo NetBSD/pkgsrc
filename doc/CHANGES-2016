@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2452 2016/06/16 15:26:03 pettai Exp $
+$NetBSD: CHANGES-2016,v 1.2453 2016/06/16 15:28:02 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3575,3 +3575,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/unbound to 1.5.9 [pettai 2016-06-16]
 	Updated security/mbedtls to 2.2.1 [fhajny 2016-06-16]
 	Updated net/nsd to 4.1.10 [pettai 2016-06-16]
+	Updated sysutils/file to 5.28 [fhajny 2016-06-16]
