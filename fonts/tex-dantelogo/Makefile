@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2015/05/08 11:27:37 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/16 03:57:27 markd Exp $
 
 DISTNAME=	dantelogo
-PKGNAME=	tex-${DISTNAME}-0.02
-TEXLIVE_REV=	35295
+PKGNAME=	tex-${DISTNAME}-0.03
+TEXLIVE_REV=	38599
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/dantelogo
