@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2460 2016/06/16 20:42:58 leot Exp $
+$NetBSD: CHANGES-2016,v 1.2461 2016/06/16 23:20:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3584,3 +3584,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/knot to 2.2.1 [pettai 2016-06-16]
 	Updated www/contao35 to 3.5.14 [taca 2016-06-16]
 	Updated www/webkit-gtk to 2.12.3nb1 [leot 2016-06-16]
+	Updated www/drupal7 to 7.44 [taca 2016-06-16]
