@@ -1,4 +1,6 @@
-$NetBSD: patch-bf,v 1.4 2014/02/20 13:19:03 ryoon Exp $
+$NetBSD: patch-bf,v 1.5 2016/06/16 12:08:21 ryoon Exp $
+
+* For NetBSD, use pthread_attr_get_np
 
 --- js/src/jsnativestack.cpp.orig	2013-09-10 03:43:36.000000000 +0000
 +++ js/src/jsnativestack.cpp

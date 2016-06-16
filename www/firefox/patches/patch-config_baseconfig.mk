@@ -1,4 +1,6 @@
-$NetBSD: patch-config_baseconfig.mk,v 1.7 2016/03/08 21:32:52 ryoon Exp $
+$NetBSD: patch-config_baseconfig.mk,v 1.8 2016/06/16 12:08:21 ryoon Exp $
+
+* Set pkgsrc directory structure
 
 --- config/baseconfig.mk.orig	2016-02-25 23:01:53.000000000 +0000
 +++ config/baseconfig.mk
