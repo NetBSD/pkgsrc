@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2015/05/09 23:31:53 markd Exp $
+# $NetBSD: Makefile,v 1.3 2016/06/16 04:03:15 markd Exp $
 
 DISTNAME=	collection-langjapanese
-PKGNAME=	texlive-${DISTNAME}-2014pre1
+PKGNAME=	texlive-${DISTNAME}-2016pre1
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
-TEXLIVE_REV=	33790
+TEXLIVE_REV=	41002
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
@@ -24,14 +24,21 @@ DEPENDS+=	tex-japanese-otf-[0-9]*:../../fonts/tex-japanese-otf
 DEPENDS+=	tex-jsclasses-[0-9]*:../../print/tex-jsclasses
 # lshort-japanese is documentation only
 # depend luatexja
+DEPENDS+=	tex-pbibtex-base-[0-9]*:../../print/tex-pbibtex-base
+# depend platex
 DEPENDS+=	tex-ptex-[0-9]*:../../print/tex-ptex
+DEPENDS+=	tex-ptex-base-[0-9]*:../../print/tex-ptex-base
+DEPENDS+=	tex-ptex-fonts-[0-9]*:../../fonts/tex-ptex-fonts
 # depend ptex2pdf
 # depend pxbase
 # depend pxchfon
 # depend pxcjkcat
 # depend pxjahyper
 # depend pxrubrica
+# depend uplatex
 # depend uptex
+# depend uptex-base
+# depend uptex-fonts
 DEPENDS+=	tex-wadalab-[0-9]*:../../fonts/tex-wadalab
 # depend zxjafbfont
 # depend zxjatype
