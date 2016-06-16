@@ -1,4 +1,6 @@
-$NetBSD: patch-ipc_chromium_src_chrome_common_transport__dib.h,v 1.3 2014/02/20 13:19:03 ryoon Exp $
+$NetBSD: patch-ipc_chromium_src_chrome_common_transport__dib.h,v 1.4 2016/06/16 12:08:21 ryoon Exp $
+
+* Support Solaris
 
 --- ipc/chromium/src/chrome/common/transport_dib.h.orig	2013-05-11 19:19:32.000000000 +0000
 +++ ipc/chromium/src/chrome/common/transport_dib.h

@@ -1,4 +1,6 @@
-$NetBSD: patch-toolkit_components_protobuf_src_google_protobuf_stubs_atomicops.h,v 1.1 2015/10/16 12:59:36 jmcneill Exp $
+$NetBSD: patch-toolkit_components_protobuf_src_google_protobuf_stubs_atomicops.h,v 1.2 2016/06/16 12:08:21 ryoon Exp $
+
+* Support NetBSD/earm
 
 --- toolkit/components/protobuf/src/google/protobuf/stubs/atomicops.h.orig	2015-09-29 21:45:03.000000000 +0000
 +++ toolkit/components/protobuf/src/google/protobuf/stubs/atomicops.h

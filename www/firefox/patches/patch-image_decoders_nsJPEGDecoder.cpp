@@ -1,6 +1,9 @@
-$NetBSD: patch-image_decoders_nsJPEGDecoder.cpp,v 1.6 2015/08/11 23:48:18 ryoon Exp $
+$NetBSD: patch-image_decoders_nsJPEGDecoder.cpp,v 1.7 2016/06/16 12:08:21 ryoon Exp $
 
---- image/decoders/nsJPEGDecoder.cpp.orig	2015-08-07 15:54:06.000000000 +0000
+Partially revert https://bugzilla.mozilla.org/show_bug.cgi?id=791305
+to allow building against jpeg (not jpeg-turbo).
+
+--- image/decoders/nsJPEGDecoder.cpp.orig	2015-04-20 02:19:51.000000000 +0000
 +++ image/decoders/nsJPEGDecoder.cpp
 @@ -23,13 +23,28 @@
  
@@ -45,12 +48,12 @@ $NetBSD: patch-image_decoders_nsJPEGDecoder.cpp,v 1.6 2015/08/11 23:48:18 ryoon 
                mInfo.out_color_space = JCS_RGB;
            }
 +#else
-+          mInfo.out_color_space = JCS_RGB;
++        mInfo.out_color_space = JCS_RGB;
 +#endif
            break;
          case JCS_CMYK:
          case JCS_YCCK:
-@@ -448,6 +467,16 @@ nsJPEGDecoder::WriteInternal(const char*
+@@ -448,6 +467,15 @@ nsJPEGDecoder::WriteInternal(const char*
        return; // I/O suspension
      }
  
@@ -63,11 +66,10 @@ $NetBSD: patch-image_decoders_nsJPEGDecoder.cpp,v 1.6 2015/08/11 23:48:18 ryoon 
 +      mInfo.cconvert->color_convert = ycc_rgb_convert_argb;
 +    }
 +#endif
-+
      // If this is a progressive JPEG ...
      mState = mInfo.buffered_image ?
               JPEG_DECOMPRESS_PROGRESSIVE : JPEG_DECOMPRESS_SEQUENTIAL;
-@@ -629,7 +658,11 @@ nsJPEGDecoder::OutputScanlines(bool* sus
+@@ -629,7 +657,11 @@ nsJPEGDecoder::OutputScanlines(bool* sus
  
        MOZ_ASSERT(imageRow, "Should have a row buffer here");
  
@@ -79,7 +81,7 @@ $NetBSD: patch-image_decoders_nsJPEGDecoder.cpp,v 1.6 2015/08/11 23:48:18 ryoon 
          // Special case: scanline will be directly converted into packed ARGB
          if (jpeg_read_scanlines(&mInfo, (JSAMPARRAY)&imageRow, 1) != 1) {
            *suspend = true; // suspend
-@@ -953,6 +986,282 @@ term_source (j_decompress_ptr jd)
+@@ -953,6 +985,282 @@ term_source (j_decompress_ptr jd)
  } // namespace image
  } // namespace mozilla
  

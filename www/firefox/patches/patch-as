@@ -1,9 +1,10 @@
-$NetBSD: patch-as,v 1.18 2016/01/27 13:44:27 ryoon Exp $
+$NetBSD: patch-as,v 1.19 2016/06/16 12:08:21 ryoon Exp $
 
-Treat DragonFly like FreeBSD.
+* Treat DragonFly like FreeBSD.
+* Add system ICU support
 
---- js/src/configure.in.orig	2016-01-23 23:23:39.000000000 +0000
-+++ js/src/configure.in
+--- js/src/old-configure.in.orig	2016-01-23 23:23:39.000000000 +0000
++++ js/src/old-configure.in
 @@ -2123,8 +2123,7 @@ AC_LANG_CPLUSPLUS
  
  MOZ_CXX11

@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.77 2016/05/31 11:45:10 wiz Exp $
+# $NetBSD: mozilla-common.mk,v 1.78 2016/06/16 12:08:21 ryoon Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 #
@@ -48,8 +48,6 @@ CONFIGURE_ARGS+=	--enable-crypto
 CONFIGURE_ARGS+=	--with-pthreads
 CONFIGURE_ARGS+=	--disable-javaxpcom
 CONFIGURE_ARGS+=	--enable-default-toolkit=cairo-gtk2
-#CONFIGURE_ARGS+=	--enable-gstreamer=1.0
-##CONFIGURE_ARGS+=	--disable-gstreamer
 CONFIGURE_ARGS+=	--enable-svg
 CONFIGURE_ARGS+=	--enable-mathml
 CONFIGURE_ARGS+=	--enable-pango
@@ -64,17 +62,7 @@ CONFIGURE_ARGS+=	--with-system-nspr
 CONFIGURE_ARGS+=	--with-system-jpeg
 CONFIGURE_ARGS+=	--with-system-zlib
 CONFIGURE_ARGS+=	--with-system-bz2
-# 1.2 or later is required.
-#CONFIGURE_ARGS+=	--with-system-theora
-#CONFIGURE_ARGS+=	--with-system-ogg
-#CONFIGURE_ARGS+=	--with-system-tremor
-#CONFIGURE_ARGS+=	--with-system-vorbis
-# opus support requires Ogg Theora support
-#CONFIGURE_ARGS+=	--with-system-opus
-CONFIGURE_ARGS+=	--with-system-graphite2
-CONFIGURE_ARGS+=	--with-system-harfbuzz
 CONFIGURE_ARGS+=	--with-system-libevent=${BUILDLINK_PREFIX.libevent}
-#CONFIGURE_ARGS+=	--enable-system-sqlite
 CONFIGURE_ARGS+=	--disable-crashreporter
 CONFIGURE_ARGS+=	--disable-necko-wifi
 CONFIGURE_ARGS+=	--enable-chrome-format=flat
@@ -90,8 +78,6 @@ CONFIGURE_ARGS+=	--enable-canvas
 #CONFIGURE_ARGS+=	--enable-readline
 CONFIGURE_ARGS+=	--disable-installer
 CONFIGURE_ARGS+=	--enable-url-classifier
-#CONFIGURE_ARGS+=	--enable-startup-notification
-#CONFIGURE_ARGS+=	--enable-shared-js
 CONFIGURE_ARGS+=	--with-system-ply
 CONFIGURE_ARGS+=	--disable-icf
 CONFIGURE_ARGS+=	--disable-updater
@@ -99,7 +85,6 @@ CONFIGURE_ARGS+=	--disable-updater
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure
 SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
-SUBST_FILES.fix-paths=		${MOZILLA_DIR}xpcom/build/nsXPCOMPrivate.h
 SUBST_FILES.fix-paths+=		${MOZILLA_DIR}xpcom/io/nsAppFileLocationProvider.cpp
 SUBST_SED.fix-paths+=		-e 's,/usr/lib/mozilla/plugins,${PREFIX}/lib/netscape/plugins,g'
 
@@ -117,8 +102,6 @@ PYTHON_FOR_BUILD_ONLY=		yes
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-sqlite2
 .include "../../lang/python/application.mk"
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
-
-#BUILD_MAKE_FLAGS+=		MOZ_WEBRTC_IN_LIBXUL=1
 
 SUBST_CLASSES+=		python
 SUBST_STAGE.python=	pre-configure
@@ -208,12 +191,6 @@ PLIST_SUBST+=	DLL_SUFFIX=".so"
 .endif
 
 .include "../../archivers/bzip2/buildlink3.mk"
-#.include "../../audio/libopus/buildlink3.mk"
-#.include "../../audio/tremor/buildlink3.mk"
-#.include "../../audio/libvorbis/buildlink3.mk"
-#BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.8.9
-#CONFIGURE_ENV+=	ac_cv_sqlite_secure_delete=yes	# c.f. patches/patch-al
-#.include "../../databases/sqlite3/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libevent+=	libevent>=1.1
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
@@ -227,14 +204,11 @@ BUILDLINK_API_DEPENDS.nss+=	nss>=3.23nb1
 .include "../../graphics/MesaLib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.10.2nb4
 .include "../../graphics/cairo/buildlink3.mk"
-.include "../../graphics/graphite2/buildlink3.mk"
-#.include "../../multimedia/libogg/buildlink3.mk"
-#.include "../../multimedia/libtheora/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libvpx+=	libvpx>=1.3.0
 .include "../../multimedia/libvpx/buildlink3.mk"
 .include "../../net/libIDL/buildlink3.mk"
 .include "../../textproc/hunspell/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.18.3nb1
+BUILDLINK_API_DEPENDS.gtk2+=  gtk2+>=2.18.3nb1
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../multimedia/ffmpeg3/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"

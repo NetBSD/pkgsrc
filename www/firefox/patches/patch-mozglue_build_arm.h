@@ -1,4 +1,6 @@
-$NetBSD: patch-mozglue_build_arm.h,v 1.1 2015/10/25 15:59:37 jmcneill Exp $
+$NetBSD: patch-mozglue_build_arm.h,v 1.2 2016/06/16 12:08:21 ryoon Exp $
+
+* Support NetBSD/earm
 
 --- mozglue/build/arm.h.orig	2015-09-29 21:45:02.000000000 +0000
 +++ mozglue/build/arm.h

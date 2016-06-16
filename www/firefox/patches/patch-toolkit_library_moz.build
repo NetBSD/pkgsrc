@@ -1,12 +1,8 @@
-$NetBSD: patch-toolkit_library_moz.build,v 1.5 2016/04/27 16:22:40 ryoon Exp $
+$NetBSD: patch-toolkit_library_moz.build,v 1.6 2016/06/16 12:08:21 ryoon Exp $
 
-MOZ_GSTREAMER:
-  GSTREAMER_LIBS are linked to libxul on Darwin, while they are
-  dlopen(3)'ed at runtime on other platforms. The problem is that the
-  toolkit being cocoa isn't relevant at all. It's Darwin that needs
-  the special handling, not Cocoa.
+* Support system libraries
 
---- toolkit/library/moz.build.orig	2016-04-15 16:57:47.000000000 +0000
+--- toolkit/library/moz.build.orig	2016-06-01 04:11:43.000000000 +0000
 +++ toolkit/library/moz.build
 @@ -211,6 +211,7 @@ if CONFIG['OS_ARCH'] == 'Linux' and CONF
      ]
@@ -14,9 +10,9 @@ MOZ_GSTREAMER:
  OS_LIBS += CONFIG['MOZ_CAIRO_OSLIBS']
 +OS_LIBS += CONFIG['MOZ_LIBV4L2_LIBS']
  OS_LIBS += CONFIG['MOZ_WEBRTC_X11_LIBS']
+ OS_LIBS += CONFIG['MOZ_SERVO_LIBS']
  
- if CONFIG['MOZ_NATIVE_JPEG']:
-@@ -222,6 +223,30 @@ if CONFIG['MOZ_NATIVE_PNG']:
+@@ -223,6 +224,30 @@ if CONFIG['MOZ_NATIVE_PNG']:
  if CONFIG['MOZ_NATIVE_HUNSPELL']:
      OS_LIBS += CONFIG['MOZ_HUNSPELL_LIBS']
  
@@ -47,16 +43,10 @@ MOZ_GSTREAMER:
  if CONFIG['MOZ_NATIVE_LIBEVENT']:
      OS_LIBS += CONFIG['MOZ_LIBEVENT_LIBS']
  
-@@ -234,6 +259,15 @@ if not CONFIG['MOZ_TREE_PIXMAN']:
+@@ -235,6 +260,9 @@ if not CONFIG['MOZ_TREE_PIXMAN']:
  if CONFIG['MOZ_ALSA']:
      OS_LIBS += CONFIG['MOZ_ALSA_LIBS']
  
-+if CONFIG['MOZ_NATIVE_GRAPHITE2']:
-+    OS_LIBS += CONFIG['MOZ_GRAPHITE2_LIBS']
-+
-+if CONFIG['MOZ_NATIVE_HARFBUZZ']:
-+    OS_LIBS += CONFIG['MOZ_HARFBUZZ_LIBS']
-+
 +if CONFIG['MOZ_OSS']:
 +    OS_LIBS += CONFIG['MOZ_OSS_LIBS']
 +

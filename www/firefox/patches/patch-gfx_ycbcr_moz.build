@@ -1,4 +1,6 @@
-$NetBSD: patch-gfx_ycbcr_moz.build,v 1.1 2014/12/01 18:12:38 ryoon Exp $
+$NetBSD: patch-gfx_ycbcr_moz.build,v 1.2 2016/06/16 12:08:21 ryoon Exp $
+
+* yuv_row_arm.S requires pre-processor
 
 --- gfx/ycbcr/moz.build.orig	2014-11-26 12:30:03.000000000 +0000
 +++ gfx/ycbcr/moz.build

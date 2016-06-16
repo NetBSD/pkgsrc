@@ -1,4 +1,6 @@
-$NetBSD: patch-media_openmax__dl_dl_api_armCOMM__s.h,v 1.1 2015/10/16 12:59:36 jmcneill Exp $
+$NetBSD: patch-media_openmax__dl_dl_api_armCOMM__s.h,v 1.2 2016/06/16 12:08:21 ryoon Exp $
+
+* Support NetBSD/earm
 
 --- media/openmax_dl/dl/api/armCOMM_s.h.orig	2015-09-29 21:44:56.000000000 +0000
 +++ media/openmax_dl/dl/api/armCOMM_s.h

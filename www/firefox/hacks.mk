@@ -1,7 +1,7 @@
-# $NetBSD: hacks.mk,v 1.4 2013/05/23 13:12:13 ryoon Exp $
+# $NetBSD: hacks.mk,v 1.5 2016/06/16 12:08:21 ryoon Exp $
 
-.if !defined(XULRUNNER_HACKS_MK)
-XULRUNNER_HACKS_MK=	defined
+.if !defined(FIREFOX_HACKS_MK)
+FIREFOX_HACKS_MK=	defined
 
 .include "../../mk/bsd.fast.prefs.mk"
 .include "../../mk/compiler.mk"
@@ -10,4 +10,4 @@ XULRUNNER_HACKS_MK=	defined
 CXXFLAGS+=	-Wno-return-type-c-linkage
 .endif
 
-.endif	# XULRUNNER_HACKS_MK
+.endif	# FIREFOX_HACKS_MK
