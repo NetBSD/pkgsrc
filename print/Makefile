@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.660 2016/05/21 21:50:53 youri Exp $
+# $NetBSD: Makefile,v 1.661 2016/06/16 04:11:08 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -873,6 +873,8 @@ SUBDIR+=	tex-path
 SUBDIR+=	tex-path-doc
 SUBDIR+=	tex-pb-diagram
 SUBDIR+=	tex-pb-diagram-doc
+SUBDIR+=	tex-pbibtex-base
+SUBDIR+=	tex-pbibtex-base-doc
 SUBDIR+=	tex-pbox
 SUBDIR+=	tex-pdfcomment
 SUBDIR+=	tex-pdfcomment-doc
@@ -940,6 +942,8 @@ SUBDIR+=	tex-pspicture-doc
 SUBDIR+=	tex-pstricks-examples-doc
 SUBDIR+=	tex-pstricks-examples-en-doc
 SUBDIR+=	tex-ptex
+SUBDIR+=	tex-ptex-base
+SUBDIR+=	tex-ptex-base-doc
 SUBDIR+=	tex-ptex-doc
 SUBDIR+=	tex-r_und_s
 SUBDIR+=	tex-r_und_s-doc
@@ -1060,6 +1064,8 @@ SUBDIR+=	tex-tetex
 SUBDIR+=	tex-tetex-doc
 SUBDIR+=	tex-tex
 SUBDIR+=	tex-tex-font-errors-cheatsheet-doc
+SUBDIR+=	tex-tex-init-files
+SUBDIR+=	tex-tex-init-files-doc
 SUBDIR+=	tex-tex-overview-doc
 SUBDIR+=	tex-tex-refs-doc
 SUBDIR+=	tex-tex4ht
@@ -1151,8 +1157,11 @@ SUBDIR+=	tex-umlaute-doc
 SUBDIR+=	tex-underscore
 SUBDIR+=	tex-underscore-doc
 SUBDIR+=	tex-undolabl
+SUBDIR+=	tex-unicode-data
+SUBDIR+=	tex-unicode-data-doc
 SUBDIR+=	tex-units
 SUBDIR+=	tex-units-doc
+SUBDIR+=	tex-updmap-map
 SUBDIR+=	tex-upquote
 SUBDIR+=	tex-upquote-doc
 SUBDIR+=	tex-url
