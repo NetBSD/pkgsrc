@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2015/06/14 11:19:58 markd Exp $
+# $NetBSD: Makefile,v 1.3 2016/06/16 03:57:25 markd Exp $
 
-DISTNAME=	texlive-20150521-source
-PKGNAME=	lcdftypetools-2.104
+DISTNAME=	texlive-20160523-source
+PKGNAME=	lcdftypetools-2.105
 CATEGORIES=	fonts
-MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2015/
+MASTER_SITES=	ftp://tug.org/historic/systems/texlive/2016/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

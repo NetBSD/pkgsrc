@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/03 20:45:11 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/06/16 03:57:30 markd Exp $
 
-SHA1 (tex-newpx-37993/newpx.tar.xz) = 68f6d3eab6c8740f86ab80de0a94ea9e1c3523f7
-RMD160 (tex-newpx-37993/newpx.tar.xz) = b97080f18a9b6b9fbc2d18884f85e9ba1673745d
-SHA512 (tex-newpx-37993/newpx.tar.xz) = aac0f097b8ab25d087a65710099f65c81967decf8597db952b28fd46a91530b70cd72ae777289e2f00a9c74e7fdac3105d2d4f3989d1c4488762bff7e1b3bc66
-Size (tex-newpx-37993/newpx.tar.xz) = 1327204 bytes
+SHA1 (tex-newpx-39698/newpx.tar.xz) = 44b2e99dd59ef6d6e51598924e036110023dd41c
+RMD160 (tex-newpx-39698/newpx.tar.xz) = b2c0e966518749b8722395101e1b49a4074869d7
+SHA512 (tex-newpx-39698/newpx.tar.xz) = 4415e775302c577b2f872726ab6dee6ce9489012a5083cdae0e5e4723a2961214ca418a3ccb0c0eeb465e0f35ebdbaaf10c6eadbebd91743cbf82e76789b88bc
+Size (tex-newpx-39698/newpx.tar.xz) = 1377136 bytes
