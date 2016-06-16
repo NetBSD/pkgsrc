@@ -1,20 +1,18 @@
-@comment $NetBSD: PLIST,v 1.4 2015/04/22 22:42:18 markd Exp $
+@comment $NetBSD: PLIST,v 1.5 2016/06/16 04:06:04 markd Exp $
 bin/makeglossaries
 share/texmf-dist/scripts/glossaries/glossaries.perl
-share/texmf-dist/scripts/glossaries/mfirstuc.perl
 share/texmf-dist/tex/latex/glossaries/base/glossaries-babel.sty
 share/texmf-dist/tex/latex/glossaries/base/glossaries-compatible-207.sty
 share/texmf-dist/tex/latex/glossaries/base/glossaries-compatible-307.sty
 share/texmf-dist/tex/latex/glossaries/base/glossaries-polyglossia.sty
 share/texmf-dist/tex/latex/glossaries/base/glossaries-prefix.sty
 share/texmf-dist/tex/latex/glossaries/base/glossaries.sty
-share/texmf-dist/tex/latex/glossaries/base/mfirstuc-english.sty
-share/texmf-dist/tex/latex/glossaries/base/mfirstuc.sty
 share/texmf-dist/tex/latex/glossaries/expl/glossaries-accsupp.sty
-share/texmf-dist/tex/latex/glossaries/styles/glossary-inline.sty
 share/texmf-dist/tex/latex/glossaries/styles/glossary-hypernav.sty
+share/texmf-dist/tex/latex/glossaries/styles/glossary-inline.sty
 share/texmf-dist/tex/latex/glossaries/styles/glossary-list.sty
 share/texmf-dist/tex/latex/glossaries/styles/glossary-long.sty
+share/texmf-dist/tex/latex/glossaries/styles/glossary-longbooktabs.sty
 share/texmf-dist/tex/latex/glossaries/styles/glossary-longragged.sty
 share/texmf-dist/tex/latex/glossaries/styles/glossary-mcols.sty
 share/texmf-dist/tex/latex/glossaries/styles/glossary-super.sty

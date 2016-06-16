@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2016/01/27 09:46:17 markd Exp $
+# $NetBSD: Makefile,v 1.4 2016/06/16 04:06:15 markd Exp $
 
 DISTNAME=	preview
-PKGNAME=	tex-${DISTNAME}-11.88
-TEXLIVE_REV=	35488
+PKGNAME=	tex-${DISTNAME}-11.89
+TEXLIVE_REV=	38865
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Extract bits of a LaTeX source for output

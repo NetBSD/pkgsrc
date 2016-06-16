@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/08/02 02:02:15 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/06/16 04:06:15 markd Exp $
 share/texmf-dist/doc/latex/polyglossia/README
 share/texmf-dist/doc/latex/polyglossia/example-arabic.pdf
 share/texmf-dist/doc/latex/polyglossia/example-arabic.tex
@@ -10,3 +10,5 @@ share/texmf-dist/doc/latex/polyglossia/examples.pdf
 share/texmf-dist/doc/latex/polyglossia/examples.tex
 share/texmf-dist/doc/latex/polyglossia/polyglossia.pdf
 share/texmf-dist/doc/latex/polyglossia/polyglossia.tex
+share/texmf-dist/doc/latex/polyglossia/test-welsh.pdf
+share/texmf-dist/doc/latex/polyglossia/test-welsh.tex

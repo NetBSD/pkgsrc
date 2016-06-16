@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2016/01/26 10:18:26 markd Exp $
+# $NetBSD: Makefile,v 1.5 2016/06/16 04:06:18 markd Exp $
 
 DISTNAME=	xltxtra
-PKGNAME=	tex-${DISTNAME}-0.5e
-TEXLIVE_REV=	19809
+PKGNAME=	tex-${DISTNAME}-0.6
+TEXLIVE_REV=	39453
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Extras files for LaTeX users of XeTeX

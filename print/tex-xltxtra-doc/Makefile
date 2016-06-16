@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2016/01/26 10:18:26 markd Exp $
+# $NetBSD: Makefile,v 1.5 2016/06/16 04:06:19 markd Exp $
 
 DISTNAME=	xltxtra.doc
-PKGNAME=	tex-${DISTNAME:S/./-/}-0.5e
-TEXLIVE_REV=	19809
+PKGNAME=	tex-${DISTNAME:S/./-/}-0.6
+TEXLIVE_REV=	39453
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Documentation for tex-xltxtra

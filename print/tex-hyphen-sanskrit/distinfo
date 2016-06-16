@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2015/11/04 01:02:18 agc Exp $
+$NetBSD: distinfo,v 1.5 2016/06/16 04:06:08 markd Exp $
 
-SHA1 (tex-hyphen-sanskrit-20144/hyphen-sanskrit.tar.xz) = 339167e7f34846c450e78c047b95edb5b197ebad
-RMD160 (tex-hyphen-sanskrit-20144/hyphen-sanskrit.tar.xz) = 0e5480f1a29da52ae6272b9856a761c0adeffd0f
-SHA512 (tex-hyphen-sanskrit-20144/hyphen-sanskrit.tar.xz) = f636c61fbc1d86fcaffcb5dd746c482da1d44af09706d3b79d577d317b823e38158921d75689391412082951b55aa1aa2b549e1e6b128f27e184c8e183d03d58
-Size (tex-hyphen-sanskrit-20144/hyphen-sanskrit.tar.xz) = 348 bytes
+SHA1 (tex-hyphen-sanskrit-40340/hyphen-sanskrit.tar.xz) = f3376ca564b54425d8026dd0db254eaadfc38fcb
+RMD160 (tex-hyphen-sanskrit-40340/hyphen-sanskrit.tar.xz) = cc35f882b6a6443004d2c7817bb1cb5d18f6ec68
+SHA512 (tex-hyphen-sanskrit-40340/hyphen-sanskrit.tar.xz) = 2051929e868b59c645fa44598150f9f9738a8dc1192578e33fdb5f73dd0c425b26508d579653c3aa1415ba402701f1377f4301ac90355e746f9bc1b61e6ffc20
+Size (tex-hyphen-sanskrit-40340/hyphen-sanskrit.tar.xz) = 4168 bytes

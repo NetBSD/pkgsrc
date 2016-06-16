@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2016/01/27 10:21:54 markd Exp $
+# $NetBSD: Makefile,v 1.17 2016/06/16 04:06:12 markd Exp $
 
 DISTNAME=	luatex
-PKGNAME=	tex-${DISTNAME}-0.70.1pl37242
-TEXLIVE_REV=	37242
+PKGNAME=	tex-${DISTNAME}-0.95
+TEXLIVE_REV=	40963
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.luatex.org/
@@ -11,8 +11,10 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	luatex>=0.60.1:../../print/luatex
 DEPENDS+=	tex-etex-[0-9]*:../../print/tex-etex
+DEPENDS+=	tex-tex-ini-files-[0-9]*:../../print/tex-tex-ini-files
 DEPENDS+=	tex-pdftex-[0-9]*:../../print/tex-pdftex
 DEPENDS+=	tex-plain>=3.14159265.12854:../../print/tex-plain
+DEPENDS+=	tex-unicode-data-[0-9]*:../../print/tex-unicode-data
 
 PKG_SYSCONFSUBDIR=	texmf
 

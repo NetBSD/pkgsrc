@@ -1,1 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/16 02:51:23 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/06/16 04:06:07 markd Exp $
+share/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-kmr.tex
+share/texmf-dist/tex/generic/hyph-utf8/patterns/ptex/hyph-kmr.ec.tex
+share/texmf-dist/tex/generic/hyph-utf8/patterns/tex/hyph-kmr.tex
+share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-kmr.chr.txt
+share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-kmr.hyp.txt
+share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-kmr.lic.txt
+share/texmf-dist/tex/generic/hyph-utf8/patterns/txt/hyph-kmr.pat.txt

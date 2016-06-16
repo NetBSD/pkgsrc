@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2015/08/09 10:31:16 markd Exp $
+# $NetBSD: Makefile,v 1.3 2016/06/16 04:06:16 markd Exp $
 
 DISTNAME=	siunitx
-PKGNAME=	tex-${DISTNAME}-2.6h
-TEXLIVE_REV=	37870
+PKGNAME=	tex-${DISTNAME}-2.6q
+TEXLIVE_REV=	39922
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/siunitx
