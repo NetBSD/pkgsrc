@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2016/01/30 04:56:41 markd Exp $
+# $NetBSD: Makefile,v 1.5 2016/06/16 03:57:27 markd Exp $
 
 DISTNAME=	cmcyr
-PKGNAME=	tex-${DISTNAME}-2009
-PKGREVISION=	1
-TEXLIVE_REV=	16696
-DIST_SUBDIR=	${PKGBASE}-${TEXLIVE_REV}.2010
+PKGNAME=	tex-${DISTNAME}-2016
+TEXLIVE_REV=	39273
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Computer Modern fonts with cyrillic extensions

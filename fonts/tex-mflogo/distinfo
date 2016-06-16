@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 20:45:10 agc Exp $
+$NetBSD: distinfo,v 1.7 2016/06/16 03:57:30 markd Exp $
 
-SHA1 (tex-mflogo-35821/mflogo.tar.xz) = 5701e91d9ebe7af91ef82281e9fd5825b2a889c9
-RMD160 (tex-mflogo-35821/mflogo.tar.xz) = 996585ac4263a61a13b14ecb6cc955e0fd80b41e
-SHA512 (tex-mflogo-35821/mflogo.tar.xz) = 7eb37fafa01d435298eebebe98d9f971ce69bd947d40a195d798851fc717ebe2ff419b024018f033024d96c93dce5ee49d07aaddc65a396c247076dcd87b0cdb
-Size (tex-mflogo-35821/mflogo.tar.xz) = 1304 bytes
+SHA1 (tex-mflogo-38628/mflogo.tar.xz) = 403d3e587166dd17e3d45a6a399207238f5da588
+RMD160 (tex-mflogo-38628/mflogo.tar.xz) = 456c33215b41335f13ded26994c99c99277db705
+SHA512 (tex-mflogo-38628/mflogo.tar.xz) = 9d8b35173fd7b6e0f0565d1da100bb9494623a70eb3c23cd0b171907d87d0eb4bce6341ad50ed339fd3a9e2e50a2ee4d7dc2e336e1b7200a61e87601f80cc91e
+Size (tex-mflogo-38628/mflogo.tar.xz) = 1608 bytes

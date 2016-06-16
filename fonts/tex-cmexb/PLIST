@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2016/06/16 03:57:27 markd Exp $
+share/texmf-dist/fonts/map/dvips/cmexb/cmexb.map
+share/texmf-dist/fonts/tfm/public/cmexb/cmexb10.tfm
+share/texmf-dist/fonts/type1/public/cmexb/cmexb10.pfb

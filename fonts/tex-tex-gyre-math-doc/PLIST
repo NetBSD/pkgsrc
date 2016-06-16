@@ -1,12 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/06 09:37:04 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/06/16 03:57:31 markd Exp $
 share/texmf-dist/doc/fonts/tex-gyre-math/GUST-FONT-LICENSE.txt
 share/texmf-dist/doc/fonts/tex-gyre-math/INSTALL.txt
+share/texmf-dist/doc/fonts/tex-gyre-math/LICENSE-DejaVu.txt
 share/texmf-dist/doc/fonts/tex-gyre-math/MANIFEST-TeX-Gyre-Bonum-Math.txt
+share/texmf-dist/doc/fonts/tex-gyre-math/MANIFEST-TeX-Gyre-DejaVu-Math.txt
 share/texmf-dist/doc/fonts/tex-gyre-math/MANIFEST-TeX-Gyre-Pagella-Math.txt
 share/texmf-dist/doc/fonts/tex-gyre-math/MANIFEST-TeX-Gyre-Schola-Math.txt
 share/texmf-dist/doc/fonts/tex-gyre-math/MANIFEST-TeX-Gyre-Termes-Math.txt
 share/texmf-dist/doc/fonts/tex-gyre-math/README
 share/texmf-dist/doc/fonts/tex-gyre-math/README-TeX-Gyre-Bonum-Math.txt
+share/texmf-dist/doc/fonts/tex-gyre-math/README-TeX-Gyre-DejaVu-Math.txt
 share/texmf-dist/doc/fonts/tex-gyre-math/README-TeX-Gyre-Pagella-Math.txt
 share/texmf-dist/doc/fonts/tex-gyre-math/README-TeX-Gyre-Schola-Math.txt
 share/texmf-dist/doc/fonts/tex-gyre-math/README-TeX-Gyre-Termes-Math.txt
@@ -14,6 +17,8 @@ share/texmf-dist/doc/fonts/tex-gyre-math/math-test-context.tex
 share/texmf-dist/doc/fonts/tex-gyre-math/math-test.tex
 share/texmf-dist/doc/fonts/tex-gyre-math/test-context-texgyre_bonum_math.pdf
 share/texmf-dist/doc/fonts/tex-gyre-math/test-context-texgyre_bonum_math.tex
+share/texmf-dist/doc/fonts/tex-gyre-math/test-context-texgyre_dejavu_math.pdf
+share/texmf-dist/doc/fonts/tex-gyre-math/test-context-texgyre_dejavu_math.tex
 share/texmf-dist/doc/fonts/tex-gyre-math/test-context-texgyre_pagella_math.pdf
 share/texmf-dist/doc/fonts/tex-gyre-math/test-context-texgyre_pagella_math.tex
 share/texmf-dist/doc/fonts/tex-gyre-math/test-context-texgyre_schola_math.pdf
@@ -22,6 +27,8 @@ share/texmf-dist/doc/fonts/tex-gyre-math/test-context-texgyre_termes_math.pdf
 share/texmf-dist/doc/fonts/tex-gyre-math/test-context-texgyre_termes_math.tex
 share/texmf-dist/doc/fonts/tex-gyre-math/test-lualatex-texgyre_bonum_math.pdf
 share/texmf-dist/doc/fonts/tex-gyre-math/test-lualatex-texgyre_bonum_math.tex
+share/texmf-dist/doc/fonts/tex-gyre-math/test-lualatex-texgyre_dejavu_math.pdf
+share/texmf-dist/doc/fonts/tex-gyre-math/test-lualatex-texgyre_dejavu_math.tex
 share/texmf-dist/doc/fonts/tex-gyre-math/test-lualatex-texgyre_pagella_math.pdf
 share/texmf-dist/doc/fonts/tex-gyre-math/test-lualatex-texgyre_pagella_math.tex
 share/texmf-dist/doc/fonts/tex-gyre-math/test-lualatex-texgyre_schola_math.pdf
@@ -30,6 +37,8 @@ share/texmf-dist/doc/fonts/tex-gyre-math/test-lualatex-texgyre_termes_math.pdf
 share/texmf-dist/doc/fonts/tex-gyre-math/test-lualatex-texgyre_termes_math.tex
 share/texmf-dist/doc/fonts/tex-gyre-math/test-word-texgyre_bonum_math.docx
 share/texmf-dist/doc/fonts/tex-gyre-math/test-word-texgyre_bonum_math.pdf
+share/texmf-dist/doc/fonts/tex-gyre-math/test-word-texgyre_dejavu_math.docx
+share/texmf-dist/doc/fonts/tex-gyre-math/test-word-texgyre_dejavu_math.pdf
 share/texmf-dist/doc/fonts/tex-gyre-math/test-word-texgyre_pagella_math.docx
 share/texmf-dist/doc/fonts/tex-gyre-math/test-word-texgyre_pagella_math.pdf
 share/texmf-dist/doc/fonts/tex-gyre-math/test-word-texgyre_schola_math.docx
@@ -38,6 +47,8 @@ share/texmf-dist/doc/fonts/tex-gyre-math/test-word-texgyre_termes_math.docx
 share/texmf-dist/doc/fonts/tex-gyre-math/test-word-texgyre_termes_math.pdf
 share/texmf-dist/doc/fonts/tex-gyre-math/test-xelatex-texgyre_bonum_math.pdf
 share/texmf-dist/doc/fonts/tex-gyre-math/test-xelatex-texgyre_bonum_math.tex
+share/texmf-dist/doc/fonts/tex-gyre-math/test-xelatex-texgyre_dejavu_math.pdf
+share/texmf-dist/doc/fonts/tex-gyre-math/test-xelatex-texgyre_dejavu_math.tex
 share/texmf-dist/doc/fonts/tex-gyre-math/test-xelatex-texgyre_pagella_math.pdf
 share/texmf-dist/doc/fonts/tex-gyre-math/test-xelatex-texgyre_pagella_math.tex
 share/texmf-dist/doc/fonts/tex-gyre-math/test-xelatex-texgyre_schola_math.pdf

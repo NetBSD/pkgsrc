@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2015/05/05 18:13:30 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2016/06/16 03:57:29 markd Exp $
 
 DISTNAME=	knuth-local
-PKGNAME=	tex-${DISTNAME}-2014
-TEXLIVE_REV=	33147
+PKGNAME=	tex-${DISTNAME}-2016
+TEXLIVE_REV=	38627
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/knuth-local

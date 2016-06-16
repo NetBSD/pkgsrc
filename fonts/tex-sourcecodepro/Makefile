@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2015/06/14 11:20:00 markd Exp $
+# $NetBSD: Makefile,v 1.3 2016/06/16 03:57:31 markd Exp $
 
 DISTNAME=	sourcecodepro
-PKGNAME=	tex-${DISTNAME}-2.4
-TEXLIVE_REV=	37395
+PKGNAME=	tex-${DISTNAME}-2.6
+TEXLIVE_REV=	40597
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/sourcecodepro

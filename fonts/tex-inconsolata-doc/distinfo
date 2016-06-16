@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 20:45:04 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/06/16 03:57:29 markd Exp $
 
-SHA1 (tex-inconsolata-36009/inconsolata.doc.tar.xz) = 0050ccf655cb47df74bbe04a9294f3a1ba8673b4
-RMD160 (tex-inconsolata-36009/inconsolata.doc.tar.xz) = 504efb85aaf77d4b812354f0569367c557e9f3a2
-SHA512 (tex-inconsolata-36009/inconsolata.doc.tar.xz) = fab566e178c4d64991630d1794afbd1b10aa4e0e31ed5381a4407988fcd48600fbe2887792e2b7df9974938c1978fa644d2c8441ea15f11c44774603390630c3
-Size (tex-inconsolata-36009/inconsolata.doc.tar.xz) = 365176 bytes
+SHA1 (tex-inconsolata-39839/inconsolata.doc.tar.xz) = af2362eb7029f953f2ac45471ff4c0a411a6a4b7
+RMD160 (tex-inconsolata-39839/inconsolata.doc.tar.xz) = 5bd9c5d0dd261cedffaf8cf6775f3d3bfd995d96
+SHA512 (tex-inconsolata-39839/inconsolata.doc.tar.xz) = 9ba1f360f5ad167a9ebc400773992250d41e111599d4c966b5c5aee8dfd7e00912fb11d5e1e369da94eacc399b5ca5fbecbca35f62af9a0918d68e686e285ee3
+Size (tex-inconsolata-39839/inconsolata.doc.tar.xz) = 350332 bytes
