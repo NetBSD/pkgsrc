@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 21:34:32 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/06/16 04:00:47 markd Exp $
 
-SHA1 (tex-roundrect-37994/roundrect.tar.xz) = a36e0bf8660a35486dfde2fe0ee8fe563991a786
-RMD160 (tex-roundrect-37994/roundrect.tar.xz) = cf4ef44401c19e2e00d123f1afbc328745442736
-SHA512 (tex-roundrect-37994/roundrect.tar.xz) = 906b98f2e03aa47e392f935f8917c141c55aa992fd97abc9e306c94f3aba11261f13d5c54acbe5a8dc1f66bb6eeba4f0f868d8af7dabd03fcc8c4db7349234cb
-Size (tex-roundrect-37994/roundrect.tar.xz) = 2280 bytes
+SHA1 (tex-roundrect-39796/roundrect.tar.xz) = a5f195dc4ff820d2021a3c7fe92331c11b4c6dff
+RMD160 (tex-roundrect-39796/roundrect.tar.xz) = ad50a9609b75a21289eed033af31283477cd63e9
+SHA512 (tex-roundrect-39796/roundrect.tar.xz) = 21929d563b3791805551c181fcaf52035a602273b702845d6288f4a543f9814daccad655b17e69eef5bf7dd71481761faa79854fe0aafc1b7e01b9c637f40216
+Size (tex-roundrect-39796/roundrect.tar.xz) = 2200 bytes
