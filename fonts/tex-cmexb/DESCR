@@ -1,0 +1,4 @@
+This package implements PFB font which is accessible normally by Sauter
+extrapolation only as bitmap font. The cmexb10.tfm is exactly the output of
+METAFONT using Sauter extrapolation. The cmexb10.pdf is generated using
+mftrace. This small package is a part of CSTeX.

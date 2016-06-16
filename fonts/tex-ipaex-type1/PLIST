@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2015/05/08 11:27:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/06/16 03:57:29 markd Exp $
 share/texmf-dist/fonts/map/dvips/ipaex-type1/ipaex-type1.map
 share/texmf-dist/fonts/tfm/public/ipaex-type1/ipxg-r-ot1.tfm
 share/texmf-dist/fonts/tfm/public/ipaex-type1/ipxg-r-t1.tfm
@@ -833,9 +833,13 @@ share/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-ufa.pfb
 share/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-ufe.pfb
 share/texmf-dist/fonts/type1/public/ipaex-type1/ipxm-r-uff.pfb
 share/texmf-dist/tex/latex/ipaex-type1/c70ipxg.fd
+share/texmf-dist/tex/latex/ipaex-type1/c70ipxg.fdx
 share/texmf-dist/tex/latex/ipaex-type1/c70ipxga.fd
+share/texmf-dist/tex/latex/ipaex-type1/c70ipxga.fdx
 share/texmf-dist/tex/latex/ipaex-type1/c70ipxm.fd
+share/texmf-dist/tex/latex/ipaex-type1/c70ipxm.fdx
 share/texmf-dist/tex/latex/ipaex-type1/c70ipxma.fd
+share/texmf-dist/tex/latex/ipaex-type1/c70ipxma.fdx
 share/texmf-dist/tex/latex/ipaex-type1/ot1ipxg.fd
 share/texmf-dist/tex/latex/ipaex-type1/ot1ipxm.fd
 share/texmf-dist/tex/latex/ipaex-type1/t1ipxg.fd
