@@ -1,7 +1,6 @@
-$NetBSD: patch-js_src_jit_none_AtomicOperations-sparc.h,v 1.1 2016/05/04 16:22:35 martin Exp $
+$NetBSD: patch-js_src_jit_none_AtomicOperations-sparc.h,v 1.2 2016/06/16 12:08:21 ryoon Exp $
 
 Part of https://bugzilla.mozilla.org/show_bug.cgi?id=1232150
-
 
 --- /dev/null	2016-05-02 17:53:05.061148459 +0200
 +++ js/src/jit/none/AtomicOperations-sparc.h	2016-05-02 18:11:03.394211888 +0200

@@ -1,7 +1,7 @@
-$NetBSD: patch-ipc_glue_GeckoChildProcessHost.cpp,v 1.10 2015/01/16 22:42:09 ryoon Exp $
+$NetBSD: patch-ipc_glue_GeckoChildProcessHost.cpp,v 1.11 2016/06/16 12:08:21 ryoon Exp $
 
-* Just because OS_ARCH is Darwin does not mean MacOS X specific
-  kludges are needed.
+* Support Solaris
+* Fix NetBSD linking
 
 --- ipc/glue/GeckoChildProcessHost.cpp.orig	2015-01-09 04:38:16.000000000 +0000
 +++ ipc/glue/GeckoChildProcessHost.cpp
