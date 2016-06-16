@@ -1,4 +1,6 @@
-$NetBSD: patch-js_src_jsdate.cpp,v 1.3 2016/03/08 21:32:52 ryoon Exp $
+$NetBSD: patch-js_src_jsdate.cpp,v 1.4 2016/06/16 12:08:21 ryoon Exp $
+
+* For NetBSD
 
 --- js/src/jsdate.cpp.orig	2016-02-25 23:02:04.000000000 +0000
 +++ js/src/jsdate.cpp
