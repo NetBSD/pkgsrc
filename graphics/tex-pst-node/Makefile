@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2016/01/30 04:05:52 markd Exp $
+# $NetBSD: Makefile,v 1.4 2016/06/16 04:00:46 markd Exp $
 
 DISTNAME=	pst-node
-PKGNAME=	tex-${DISTNAME}-1.35
-TEXLIVE_REV=	34856
+PKGNAME=	tex-${DISTNAME}-1.36
+TEXLIVE_REV=	40743
 
 MAINTAINER=	minskim@NetBSD.org
 COMMENT=	Nodes and node connections in pstricks
