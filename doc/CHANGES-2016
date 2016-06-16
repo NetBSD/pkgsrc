@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2458 2016/06/16 17:22:18 taca Exp $
+$NetBSD: CHANGES-2016,v 1.2459 2016/06/16 19:38:43 markd Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3381,8 +3381,8 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated print/tex-etex-pkg-doc to 2.6 [markd 2016-06-16]
 	Updated print/tex-europasscv to 2016 [markd 2016-06-16]
 	Updated print/tex-europasscv-doc to 2016 [markd 2016-06-16]
-	Updated print/tex-fix2col to 0.04 [markd 2016-06-16]
-	Updated print/tex-fix2col-doc to 0.04 [markd 2016-06-16]
+	Updated print/tex-fix2col to 2016 [markd 2016-06-16]
+	Updated print/tex-fix2col-doc to 2016 [markd 2016-06-16]
 	Updated print/tex-font-change to 2015.2 [markd 2016-06-16]
 	Updated print/tex-font-change-doc to 2015.2 [markd 2016-06-16]
 	Updated print/tex-glossaries to 4.23 [markd 2016-06-16]
