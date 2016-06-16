@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.661 2016/06/16 04:11:08 markd Exp $
+# $NetBSD: Makefile,v 1.662 2016/06/16 19:32:38 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -1064,8 +1064,8 @@ SUBDIR+=	tex-tetex
 SUBDIR+=	tex-tetex-doc
 SUBDIR+=	tex-tex
 SUBDIR+=	tex-tex-font-errors-cheatsheet-doc
-SUBDIR+=	tex-tex-init-files
-SUBDIR+=	tex-tex-init-files-doc
+SUBDIR+=	tex-tex-ini-files
+SUBDIR+=	tex-tex-ini-files-doc
 SUBDIR+=	tex-tex-overview-doc
 SUBDIR+=	tex-tex-refs-doc
 SUBDIR+=	tex-tex4ht
