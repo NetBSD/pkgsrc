@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.4 2016/03/14 11:07:59 bouyer Exp $
+$NetBSD: distinfo,v 1.5 2016/06/16 16:03:55 bouyer Exp $
 
-SHA1 (weather_routing_pi-20160208-509fd720895fcc19fd55bc175305d3a956b0cc8b.tar.gz) = 5fa4e285a8628bf546e7aa674a79eb181594ee4d
-RMD160 (weather_routing_pi-20160208-509fd720895fcc19fd55bc175305d3a956b0cc8b.tar.gz) = 484c173e0f85a384ae30d39f98ae429bcff40793
-SHA512 (weather_routing_pi-20160208-509fd720895fcc19fd55bc175305d3a956b0cc8b.tar.gz) = 93bc3147bf532cfc956e78a927f7e22be3f1628591ee0baf4a7df94adba6102947b2c6d2863f8429215522122a92c3dbe3acd4d0c258843bec6a2c0d5ae10a66
-Size (weather_routing_pi-20160208-509fd720895fcc19fd55bc175305d3a956b0cc8b.tar.gz) = 793334 bytes
+SHA1 (weather_routing_pi-20160611-264605a7a9e3b33e10bbd2375a7d3fd55518b3dc.tar.gz) = aac7a6e11ac087d3654cdfe7907e28a8d6fe8d3b
+RMD160 (weather_routing_pi-20160611-264605a7a9e3b33e10bbd2375a7d3fd55518b3dc.tar.gz) = 7040af0413957cac5a2e09f16f6afd05467f24ce
+SHA512 (weather_routing_pi-20160611-264605a7a9e3b33e10bbd2375a7d3fd55518b3dc.tar.gz) = 920e878d4c25059e30259bcc3d68e32219a7dacb23e35a4b969a568e1ecdd10718bc7b978e4468efcf7faad8927a8bee0076ab8e00a29e51563e1c84083e5006
+Size (weather_routing_pi-20160611-264605a7a9e3b33e10bbd2375a7d3fd55518b3dc.tar.gz) = 847325 bytes
 SHA1 (patch-cmake_PluginConfigure.cmake) = e2873cbba3d776227d72b8538634f687dc04c439
+SHA1 (patch-src_RouteMap.cpp) = e705e8f11d58675d443c1992c7cf5ab26f2be856
