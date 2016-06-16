@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2014/10/13 12:51:10 mef Exp $
+# $NetBSD: Makefile,v 1.16 2016/06/16 14:05:38 mef Exp $
 
 META_PACKAGE=	yes
 
@@ -14,7 +14,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/gnuradio/
 COMMENT=	Collection of GNU Radio (meta package, easy to install whole thing)
 
-# 21 package for now
+# 20 package for now
 DEPENDS+=	gnuradio-atsc-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-atsc
 DEPENDS+=	gnuradio-channels-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-channels
 DEPENDS+=	gnuradio-companion-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-companion
@@ -22,7 +22,8 @@ DEPENDS+=	gnuradio-core-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-core
 DEPENDS+=	gnuradio-ctrlport-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-ctrlport
 
 DEPENDS+=	gnuradio-digital-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-digital
-DEPENDS+=	gnuradio-doxygen-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-doxygen
+# dropped, for unstable with doxygen update
+#EPENDS+=	gnuradio-doxygen-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-doxygen
 DEPENDS+=	gnuradio-dtv-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-dtv
 DEPENDS+=	gnuradio-fcd-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-fcd
 DEPENDS+=	gnuradio-fec-${VERSION}{,nb[0-9]*}:../../ham/gnuradio-fec
