@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2015/05/05 18:29:17 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2016/06/16 03:57:30 markd Exp $
 
 DISTNAME=	mflogo.doc
 # should be
 #PKGNAME=	tex-${DISTNAME:S/./-/}-2.0
-PKGNAME=	tex-${DISTNAME:S/./-/}-2014
-TEXLIVE_REV=	35821
+PKGNAME=	tex-${DISTNAME:S/./-/}-2016
+TEXLIVE_REV=	38628
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://ctan.org/pkg/mflogo

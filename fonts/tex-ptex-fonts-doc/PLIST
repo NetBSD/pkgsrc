@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2016/06/16 03:57:30 markd Exp $
+share/texmf-dist/doc/fonts/ptex-fonts/Changes_makejvf
+share/texmf-dist/doc/fonts/ptex-fonts/LICENSE
+share/texmf-dist/doc/fonts/ptex-fonts/README.md
+share/texmf-dist/doc/fonts/ptex-fonts/README_makejvf
