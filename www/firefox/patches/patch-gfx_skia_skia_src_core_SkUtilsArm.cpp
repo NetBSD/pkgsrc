@@ -1,4 +1,6 @@
-$NetBSD: patch-gfx_skia_skia_src_core_SkUtilsArm.cpp,v 1.2 2016/04/27 16:22:40 ryoon Exp $
+$NetBSD: patch-gfx_skia_skia_src_core_SkUtilsArm.cpp,v 1.3 2016/06/16 12:08:21 ryoon Exp $
+
+* Support NetBSD
 
 --- gfx/skia/skia/src/core/SkUtilsArm.cpp.orig	2016-04-15 16:57:41.000000000 +0000
 +++ gfx/skia/skia/src/core/SkUtilsArm.cpp

@@ -1,4 +1,6 @@
-$NetBSD: patch-ipc_chromium_src_build_build__config.h,v 1.3 2014/02/20 13:19:03 ryoon Exp $
+$NetBSD: patch-ipc_chromium_src_build_build__config.h,v 1.4 2016/06/16 12:08:21 ryoon Exp $
+
+* Add Solaris identifier
 
 --- ipc/chromium/src/build/build_config.h.orig	2013-05-11 19:19:32.000000000 +0000
 +++ ipc/chromium/src/build/build_config.h
