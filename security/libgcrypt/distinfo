@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.63 2016/04/18 06:19:57 wiz Exp $
+$NetBSD: distinfo,v 1.64 2016/06/17 11:56:13 wiz Exp $
 
-SHA1 (libgcrypt-1.7.0.tar.bz2) = f840b737faafded451a084ae143285ad68bbfb01
-RMD160 (libgcrypt-1.7.0.tar.bz2) = a3dd720acd67977bf0e2158b8a61bbe384c27356
-SHA512 (libgcrypt-1.7.0.tar.bz2) = 658eca9161d104b81c249dc47d9e4f2df58f26c63bd28ee9ad7a642fd84f09faddbde51e070bc923bfd54fb5785acf8ff2f0da244e6b497b57407f5f67c3574b
-Size (libgcrypt-1.7.0.tar.bz2) = 2840453 bytes
+SHA1 (libgcrypt-1.7.1.tar.bz2) = b688add52b622bb96bbd823ba21aa05a116d442f
+RMD160 (libgcrypt-1.7.1.tar.bz2) = 1be0c84cf7bcb1ac8a185ff965e02b9182708f6f
+SHA512 (libgcrypt-1.7.1.tar.bz2) = 08ca7de8b6324d1119935b1f400b0ef55e761d42178a4daa8077d36072e5f0987ec6e7834a98c62f1a06261b1b99edc45b3041a873e284a002d8486ffc3347f5
+Size (libgcrypt-1.7.1.tar.bz2) = 2843435 bytes
 SHA1 (patch-aa) = 3dd44b8745128a6788d24f9eb00002624a5fc52b
 SHA1 (patch-src_visibility.h) = 8cbbf6803ab34b4b7dda832aa8ee18247aa89518
