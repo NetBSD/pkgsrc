@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2015/08/18 07:31:01 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2016/06/17 15:15:41 prlw1 Exp $
 
 BUILDLINK_TREE+=	clamav
 
@@ -12,8 +12,10 @@ BUILDLINK_PKGSRCDIR.clamav?=	../../security/clamav
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
+.include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .endif	# CLAMAV_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-clamav
