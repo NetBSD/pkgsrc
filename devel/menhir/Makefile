@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2016/06/03 00:14:47 nonaka Exp $
+# $NetBSD: Makefile,v 1.19 2016/06/17 11:12:36 jaapb Exp $
 #
 
 DISTNAME=	menhir-20160303
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://cristal.inria.fr/~fpottier/menhir/
 
@@ -10,13 +11,12 @@ HOMEPAGE=	http://cristal.inria.fr/~fpottier/menhir/
 COMMENT=	LR(1) parser generator in OCaml
 LICENSE=	qpl-v1.0
 
-BUILD_DEPENDS+=	ocamlbuild-[0-9]*:../../devel/ocamlbuild
-
 USE_TOOLS+=		gmake
 MAKE_JOBS_SAFE=	no
 
 SUPERSEDES=	ocaml-menhir-[0-9]*
 OCAML_USE_FINDLIB=	yes
+OCAML_FINDLIB_REGISTER=	no
 
 .include "../../mk/ocaml.mk"
 
@@ -30,4 +30,5 @@ EGDIR=				${PREFIX}/share/examples/${PKGBASE}
 MAKE_ENV+=		EGDIR=${EGDIR:Q} USE_OCAMLFIND=true \
 	OCAML_SITELIBDIR=${OCAML_SITELIBDIR}
 
+.include "../../devel/ocamlbuild/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
