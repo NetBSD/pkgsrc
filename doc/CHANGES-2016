@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2462 2016/06/17 02:25:54 schmonz Exp $
+$NetBSD: CHANGES-2016,v 1.2463 2016/06/17 09:19:56 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3586,3 +3586,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/webkit-gtk to 2.12.3nb1 [leot 2016-06-16]
 	Updated www/drupal7 to 7.44 [taca 2016-06-16]
 	Updated devel/check to 0.10.0 [schmonz 2016-06-17]
+	Updated time/ruby-tzinfo03 to 0.3.50 [taca 2016-06-17]
