@@ -1,7 +1,8 @@
-$NetBSD: patch-Makefile.in,v 1.1 2014/10/26 13:43:48 jaapb Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2016/06/17 16:31:30 jaapb Exp $
 
 Change configure procedure to use pkgsrc settings rather than detection
---- Makefile.in.orig	2014-04-04 12:45:43.000000000 +0000
+Also install in site-lib
+--- Makefile.in.orig	2016-04-12 06:47:31.000000000 +0000
 +++ Makefile.in
 @@ -33,7 +33,7 @@ OCAMLDOC = @OCAMLDOC@
  OCAMLLEX = @OCAMLLEX@
@@ -22,15 +23,15 @@ Change configure procedure to use pkgsrc settings rather than detection
  else
  all: byte $(OCAMLBEST)
 @@ -240,7 +240,7 @@ $(DGRAPH_DIR)/dgraph.opt: $(CMXA) $(DGRA
- # while graph.cmi may be required at the same time by some .cmo of the 
- # bytecodes, leading to tentative access to a corrupted graph.cmi. 
+ # while graph.cmi may be required at the same time by some .cmo of the
+ # bytecodes, leading to tentative access to a corrupted graph.cmi.
  
 -ifeq (@LABLGNOMECANVAS@,yes)
 +ifeq (${USE_LABLGTK},yes)
  graph.cmx: | $(DGRAPH_DIR)/dgraph.byte \
  	$(VIEWER_DIR)/viewgraph.byte \
  	$(ED_DIR)/editor.byte
-@@ -378,7 +378,7 @@ INSTALL_LIBDIR=$(DESTDIR)$(OCAMLLIB)/oca
+@@ -381,7 +381,7 @@ INSTALL_LIBDIR=$(DESTDIR)$(OCAMLLIB)/oca
  
  install: install-$(OCAMLBEST) install-byte
  	mkdir -p $(BINDIR)
@@ -39,7 +40,7 @@ Change configure procedure to use pkgsrc settings rather than detection
  ifeq ($(OCAMLBEST),byte)
  	cp -f $(BINDIR)/graph-editor.byte $(BINDIR)/graph-editor$(EXE)
  	cp -f $(BINDIR)/graph-viewer.byte $(BINDIR)/graph-viewer$(EXE)
-@@ -392,7 +392,7 @@ install-byte:
+@@ -395,7 +395,7 @@ install-byte:
  	mkdir -p $(INSTALL_LIBDIR)
  	cp -f graph.cmo graph.cmi $(CMA) $(INSTALL_LIBDIR)
  	cp -f $(SRCDIR)/*.mli $(INSTALL_LIBDIR)
@@ -48,7 +49,7 @@ Change configure procedure to use pkgsrc settings rather than detection
  	mkdir -p $(BINDIR)
  	cp -f $(ED_DIR)/editor.byte $(BINDIR)/graph-editor.byte
  	cp -f $(VIEWER_CMILIB) $(VIEWER_CMOLIB) $(INSTALL_LIBDIR)
-@@ -406,7 +406,7 @@ install-opt: install-byte
+@@ -409,7 +409,7 @@ install-opt: install-byte
  	cp -f graph$(OBJEXT) graph$(LIBEXT) graph.cmi graph.cmx \
  		$(CMXA) $(CMXS) $(INSTALL_LIBDIR)
  	cp -f $(SRCDIR)/*.mli $(INSTALL_LIBDIR)
@@ -57,16 +58,22 @@ Change configure procedure to use pkgsrc settings rather than detection
  	mkdir -p $(BINDIR)
  	cp -f $(ED_DIR)/editor.opt $(BINDIR)/graph-editor.opt
  	cp -f $(VIEWER_CMILIB) $(VIEWER_CMXLIB) $(VIEWER_CMXLIB:.cmx=.o) \
-@@ -419,7 +419,7 @@ endif
+@@ -421,12 +421,12 @@ ifeq (@LABLGNOMECANVAS@,yes)
+ endif
+ 
+ ifdef DESTDIR
+-OCAMLFINDDEST := -destdir $(DESTDIR)
++OCAMLFINDDEST := -destdir $(DESTDIR)${PREFIX}/${OCAML_SITELIBDIR}
+ endif
  
  install-findlib: META
  ifdef OCAMLFIND
 -ifeq (@LABLGNOMECANVAS@,yes)
 +ifeq (${USE_LABLGTK},yes)
- 	$(OCAMLFIND) install ocamlgraph META \
+ 	$(OCAMLFIND) install $(OCAMLFINDDEST) ocamlgraph META \
  		$(SRCDIR)/*.mli $(VIEWER_DIR)/*.mli $(DGRAPH_DIR)/*.mli \
  		graph$(OBJEXT) graph$(LIBEXT) graph.cmx graph.cmo graph.cmi \
-@@ -448,7 +448,7 @@ NODOC	= blocks dot_parser dot_lexer vers
+@@ -455,7 +455,7 @@ NODOC	= blocks dot_parser dot_lexer vers
  NODOC	:= $(patsubst %, $(SRCDIR)/%.cmo, $(NODOC))
  DOC_CMO	= $(filter-out $(NODOC) $(LIB), $(CMO))
  DOC_SRC	= $(CMI:.cmi=.mli) $(DOC_CMO:.cmo=.mli) $(DOC_CMO:.cmo=.ml)

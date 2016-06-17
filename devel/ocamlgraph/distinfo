@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 03:27:53 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/06/17 16:31:30 jaapb Exp $
 
-SHA1 (ocamlgraph-1.8.5.tar.gz) = e53a92d50685ab38f2b856eb64d93aa36dc7bcdf
-RMD160 (ocamlgraph-1.8.5.tar.gz) = c3b67023bae65f9c8a2d32722d0e90a6a947d4fa
-SHA512 (ocamlgraph-1.8.5.tar.gz) = e3bf7f43f7b5167cbd23ea44a510d1a569d35771882ab7ae83bacc73822c5f4c944f62c95e0efa813b765e1e385a6b3ebff342cbf1c5589c73d022b8591a52dc
-Size (ocamlgraph-1.8.5.tar.gz) = 269438 bytes
-SHA1 (patch-Makefile.in) = ce8d401563d37fea0780787dbd81a7e03455c01f
+SHA1 (ocamlgraph-1.8.7.tar.gz) = d6a8d92ead78b48655db13e7fd13e2fc7d305121
+RMD160 (ocamlgraph-1.8.7.tar.gz) = 63be5297b1bc62d13c411cc0eafee9cada21a980
+SHA512 (ocamlgraph-1.8.7.tar.gz) = 27559293bf576ecc9cf49090e24905c50d00ebaeb444a3c917826f3cfe1e7ceab34b43e30f98634811b1688b675d8747b590b5bb103a720d099304f5031feb2e
+Size (ocamlgraph-1.8.7.tar.gz) = 272625 bytes
+SHA1 (patch-Makefile.in) = f0376c5aab2db6ec873a81d0e071d0634f86b2cc

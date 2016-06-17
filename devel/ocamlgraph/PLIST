@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/10/26 13:43:48 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/06/17 16:31:30 jaapb Exp $
 ${PLIST.lablgtk}bin/graph-editor
 ${PLIST.lablgtk}bin/graph-viewer
 ${PLIST.lablgtk}${OCAML_SITELIB}/ocamlgraph/dgraph.cmi
@@ -13,6 +13,7 @@ ${PLIST.ocaml-opt}${PLIST.lablgtk}${OCAML_SITELIB}/ocamlgraph/viewgraph.o
 ${OCAML_SITELIB}/ocamlgraph/META
 ${OCAML_SITELIB}/ocamlgraph/builder.mli
 ${OCAML_SITELIB}/ocamlgraph/classic.mli
+${OCAML_SITELIB}/ocamlgraph/clique.mli
 ${OCAML_SITELIB}/ocamlgraph/cliquetree.mli
 ${OCAML_SITELIB}/ocamlgraph/coloring.mli
 ${OCAML_SITELIB}/ocamlgraph/components.mli
@@ -48,6 +49,7 @@ ${OCAML_SITELIB}/ocamlgraph/leaderlist.mli
 ${OCAML_SITELIB}/ocamlgraph/mcs_m.mli
 ${OCAML_SITELIB}/ocamlgraph/md.mli
 ${OCAML_SITELIB}/ocamlgraph/merge.mli
+${OCAML_SITELIB}/ocamlgraph/mincut.mli
 ${OCAML_SITELIB}/ocamlgraph/minsep.mli
 ${OCAML_SITELIB}/ocamlgraph/nonnegative.mli
 ${OCAML_SITELIB}/ocamlgraph/oper.mli
