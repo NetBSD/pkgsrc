@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/03/02 19:35:30 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/06/17 15:48:24 youri Exp $
 bin/transmission-qt
 man/man1/transmission-qt.1
+share/applications/transmission-qt.desktop
