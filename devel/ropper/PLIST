@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/06/14 07:14:39 kamil Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/06/17 08:15:16 kamil Exp $
 bin/ropper
 ${PYSITELIB}/ropper-1.9.5-py2.7.egg-info/PKG-INFO
 ${PYSITELIB}/ropper-1.9.5-py2.7.egg-info/SOURCES.txt
@@ -86,9 +86,9 @@ ${PYSITELIB}/ropper/ropchain/arch/__init__.pyo
 ${PYSITELIB}/ropper/ropchain/arch/ropchainx86.py
 ${PYSITELIB}/ropper/ropchain/arch/ropchainx86.pyc
 ${PYSITELIB}/ropper/ropchain/arch/ropchainx86.pyo
-${PYSITELIB}/ropper/ropchain/arch/ropchain${MACHINE_ARCH}.py
-${PYSITELIB}/ropper/ropchain/arch/ropchain${MACHINE_ARCH}.pyc
-${PYSITELIB}/ropper/ropchain/arch/ropchain${MACHINE_ARCH}.pyo
+${PYSITELIB}/ropper/ropchain/arch/ropchainx86_64.py
+${PYSITELIB}/ropper/ropchain/arch/ropchainx86_64.pyc
+${PYSITELIB}/ropper/ropchain/arch/ropchainx86_64.pyo
 ${PYSITELIB}/ropper/ropchain/ropchain.py
 ${PYSITELIB}/ropper/ropchain/ropchain.pyc
 ${PYSITELIB}/ropper/ropchain/ropchain.pyo
