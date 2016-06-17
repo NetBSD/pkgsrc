@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2016/04/23 16:18:52 taca Exp $
+# $NetBSD: Makefile,v 1.7 2016/06/17 14:04:00 taca Exp $
 #
 
 DISTNAME=	contao-${CT_PKGVER}
@@ -85,9 +85,6 @@ PKG_USERS_VARS+=	APACHE_USER
 
 pre-configure:
 	${CP} ${FILESDIR}/contao.conf ${WRKDIR}
-
-pre-install:
-	cd ${WRKSRC}; ${RM} -fr files/music_academy templates/music_academy.sql
 
 do-install:
 	cd ${WRKSRC}; pax -rw ${WWW_FILES} ${DESTDIR}${PREFIX}/${CT_WEBDIR}
