@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2016/05/05 11:45:38 jaapb Exp $
+# $NetBSD: Makefile,v 1.6 2016/06/17 12:36:50 jaapb Exp $
 
 DISTNAME=	extlib-1.6.1
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	https://ocaml-extlib.googlecode.com/files/
 
