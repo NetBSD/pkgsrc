@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.7 2016/02/16 13:05:23 fhajny Exp $
+$NetBSD: distinfo,v 1.8 2016/06/17 12:09:08 fhajny Exp $
 
-SHA1 (ganglia-web-3.7.1.tar.gz) = f7852fed1e3afdfa093c1c12a5db9dc7b7b91028
-RMD160 (ganglia-web-3.7.1.tar.gz) = b0693c44bbdc4b32b095957c1ccf4735b7941119
-SHA512 (ganglia-web-3.7.1.tar.gz) = 5a907a4d35b363713c3b0ba43964c0076e5f85972ba9721c1cf14c164bca2c96327b442e7cb92d11f1d5d94f15b10289cf71b2e3aa122ebcd73153be133c1a64
-Size (ganglia-web-3.7.1.tar.gz) = 854938 bytes
+SHA1 (ganglia-web-3.7.2.tar.gz) = c19f0446f1bfea71a8482d640ea0bfd5bdda788d
+RMD160 (ganglia-web-3.7.2.tar.gz) = 2abd57780260ea795a702a877dac63de4dfa669c
+SHA512 (ganglia-web-3.7.2.tar.gz) = 033b00923a4cf7f342a44de9e37da67411992054e7f103fa09d91bbd125fb9066cc4e77ae5011810d7d926e2997b48d30e3d505d83239cd4c0a6b996a7679f8d
+Size (ganglia-web-3.7.2.tar.gz) = 704632 bytes
 SHA1 (patch-Makefile) = c246326e81b3df16b3289891e0b6ad37fb8fca55
 SHA1 (patch-conf__default.php.in) = 0d5d9417d20f74bd1b1e3ab4e83738779a19fda1
 SHA1 (patch-eval__conf.php) = ce40cbee4c9867f86a67009074d0d46308dcb561
