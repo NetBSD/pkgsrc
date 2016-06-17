@@ -1,5 +1,6 @@
-$NetBSD: patch-Makefile,v 1.1 2014/10/26 14:14:09 jaapb Exp $
+$NetBSD: patch-Makefile,v 1.2 2016/06/17 16:15:48 jaapb Exp $
 
+Correct installation procedure
 --- Makefile.orig	2014-04-29 18:52:44.000000000 +0000
 +++ Makefile
 @@ -18,13 +18,13 @@ OCAMLBUILD = ocamlbuild
