@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2479 2016/06/17 14:14:15 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.2480 2016/06/17 15:33:47 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3603,3 +3603,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/openldap-server to 2.4.44nb2 [jperkin 2016-06-17]
 	Updated graphics/optipng to 0.7.6 [adam 2016-06-17]
 	Updated sysutils/rsyslog to 8.19.0 [fhajny 2016-06-17]
+	Updated devel/ocaml-cmdliner to 0.9.8 [jaapb 2016-06-17]
