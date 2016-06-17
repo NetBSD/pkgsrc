@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.68 2016/04/12 16:01:06 jaapb Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.69 2016/06/17 08:53:42 jaapb Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -792,22 +792,22 @@ _INSTALL_UNPACK_TMPL+=		${_INSTALL_OFR_FILE}
 
 ${_INSTALL_OFR_FILE}: ../../mk/pkginstall/ocaml-findlib-register
 	${RUN}${MKDIR} ${.TARGET:H}
-.if defined(OCAML_FINDLIB_REGISTER)
+.if !empty(OCAML_FINDLIB_REGISTER:M[Yy][Ee][Ss])
 	${RUN}${SED} ${FILES_SUBST_SED} \
 		../../mk/pkginstall/ocaml-findlib-register > ${.TARGET}
 .else
-	${RUN} ${RM} -f ${.TARGET}; \
+	${RUN}${RM} -f ${.TARGET}; \
 	${TOUCH} ${TOUCH_ARGS} ${.TARGET}
 .endif
 
 .PHONY: install-script-data-ocaml-findlib-register
 install-script-data: install-script-data-ocaml-findlib-register
 install-script-data-ocaml-findlib-register:
-.if defined(OCAML_FINDLIB_REGISTER)
-		${RUN} \
-		cd ${PKG_DB_TMPDIR} && ${PKGSRC_SETENV} ${INSTALL_SCRIPTS_ENV} \
-		${_PKG_DEBUG_SCRIPT} ${INSTALL_FILE} ${PKGNAME} \
-			UNPACK +OCAML_FINDLIB_REGISTER
+.if !empty(OCAML_FINDLIB_REGISTER:M[Yy][Ee][Ss])
+	${RUN} \
+	cd ${PKG_DB_TMPDIR} && ${PKGSRC_SETENV} ${INSTALL_SCRIPTS_ENV} \
+	${_PKG_DEBUG_SCRIPT} ${INSTALL_FILE} ${PKGNAME} \
+		UNPACK +OCAML_FINDLIB_REGISTER
 .endif
 
 # PKG_SHELL contains the pathname of the shell that should be added or
@@ -1060,6 +1060,7 @@ FILES_SUBST+=		LS=${LS:Q}
 FILES_SUBST+=		MKDIR=${MKDIR:Q}
 FILES_SUBST+=		MV=${MV:Q}
 FILES_SUBST+=		OCAML_FINDLIB_DIRS=${OCAML_FINDLIB_DIRS:Q}
+FILES_SUBST+=		OCAML_SITELIBDIR=${OCAML_SITELIBDIR:Q}
 FILES_SUBST+=		PERL5=${PERL5:Q}
 FILES_SUBST+=		PKG_ADMIN=${PKG_ADMIN_CMD:Q}
 FILES_SUBST+=		PKG_INFO=${PKG_INFO_CMD:Q}
