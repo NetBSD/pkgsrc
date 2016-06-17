@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2468 2016/06/17 11:51:21 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.2469 2016/06/17 11:54:18 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3592,3 +3592,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ocaml-cppo to 1.3.2 [jaapb 2016-06-17]
 	Updated devel/ocaml-re to 1.6.0 [jaapb 2016-06-17]
 	Updated databases/mongodb to 3.2.7 [fhajny 2016-06-17]
+	Updated devel/py-argcomplete to 1.4.1 [fhajny 2016-06-17]
