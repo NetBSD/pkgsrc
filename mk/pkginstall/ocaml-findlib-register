@@ -1,4 +1,4 @@
-# $NetBSD: ocaml-findlib-register,v 1.1 2016/04/12 15:52:29 jaapb Exp $
+# $NetBSD: ocaml-findlib-register,v 1.2 2016/06/17 08:53:42 jaapb Exp $
 #
 # Generate an +OCAML_FINDLIB_REGISTER script that handles registration for
 # findlib after a binary installation
@@ -20,6 +20,8 @@ ECHO="@ECHO@"
 GREP="@GREP@"
 MV="@MV@"
 OCAML_FINDLIB_DIRS="@OCAML_FINDLIB_DIRS@"
+OCAML_FINDLIB_REGISTER="@OCAML_FINDLIB_REGISTER@"
+OCAML_SITELIBDIR="@OCAML_SITELIBDIR@"
 PWD_CMD="@PWD_CMD@"
 RM="@RM@"
 TOUCH="@TOUCH@"
@@ -46,11 +48,11 @@ esac
 ${TOUCH} ${LDCONF}.tmp
 for i in ${OCAML_FINDLIB_DIRS}
 do
-  ${GREP} -F -v -- "$i" < "${LDCONF}" >> "${LDCONF}.tmp"
+  ${GREP} -F -v -- "${OCAML_SITELIBDIR}/$i" < "${LDCONF}" >> "${LDCONF}.tmp"
   case $ACTION in
   ADD)
     $echo "${PKGNAME}: adding $i to ${LDCONF}"
-    ${ECHO} "@PREFIX@/$i" >> "${LDCONF}.tmp"
+    ${ECHO} "@PREFIX@/${OCAML_SITELIBDIR}/$i" >> "${LDCONF}.tmp"
 	;;
 
   REMOVE)
