@@ -1,0 +1,36 @@
+<?xml version='1.0'?>
+<!DOCTYPE service_bundle SYSTEM '/usr/share/lib/xml/dtd/service_bundle.dtd.1'>
+<service_bundle type='manifest' name='export'>
+  <service name='@SMF_PREFIX@/@SMF_NAME@' type='service' version='0'>
+    <create_default_instance enabled='false'/>
+    <single_instance/>
+    <dependency name='network' grouping='require_all' restart_on='error' type='service'>
+      <service_fmri value='svc:/milestone/network:default'/>
+    </dependency>
+    <dependency name='filesystem-local' grouping='require_all' restart_on='error' type='service'>
+      <service_fmri value='svc:/system/filesystem/local:default'/>
+    </dependency>
+    <method_context working_directory='@OPENLDAP_VARDIR@'>
+      <method_environment>
+        <envvar name='PATH' value='@PREFIX@/sbin:@PREFIX@/bin:/sbin:/usr/sbin:/usr/bin'/>
+      </method_environment>
+    </method_context>
+    <exec_method name='start' type='method' exec='@PREFIX@/libexec/slapd -u @SLAPD_USER@ -g @LDAP_GROUP@ -h &quot;ldap:// ldaps://&quot; -f %{config_file}' timeout_seconds='60'/>
+    <exec_method name='stop' type='method' exec=':kill' timeout_seconds='60'/>
+    <property_group name='startd' type='framework'>
+      <propval name='ignore_error' type='astring' value='core,signal'/>
+    </property_group>
+    <property_group name='application' type='application'>
+      <propval name='config_file' type='astring' value='@PKG_SYSCONFDIR@/openldap/slapd.conf'/>
+    </property_group>
+    <template>
+      <common_name>
+        <loctext xml:lang='C'>OpenLDAP Server</loctext>
+      </common_name>
+      <documentation>
+        <manpage title='slapd.conf' section='5' manpath='@PREFIX@/@PKGMANDIR@'/>
+        <manpage title='slapd' section='8' manpath='@PREFIX@/@PKGMANDIR@'/>
+      </documentation>
+    </template>
+  </service>
+</service_bundle>

@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: slapd.sh,v 1.8 2006/05/31 18:17:49 ghen Exp $
+# $NetBSD: slapd.sh,v 1.1 2016/06/17 13:56:53 jperkin Exp $
 #
 # OpenLDAP standalone LDAP daemon
 #
