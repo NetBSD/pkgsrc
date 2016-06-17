@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/06/17 16:39:55 prlw1 Exp $
+
+SHA1 (libecap-1.0.1.tar.gz) = 89533c2ac77fee7b26f53c20c25a1423ce1498b7
+RMD160 (libecap-1.0.1.tar.gz) = 72cac0074be057805511d33156baacb0eeaef4ed
+SHA512 (libecap-1.0.1.tar.gz) = 0054ad11b3f558d7c623060a69207a1b8e679803cabdf1a2bce4b04335d71c016eec770fc9d2cbf3d0a93502c255cb528305f9f8e6df4e095fcb980667045919
+Size (libecap-1.0.1.tar.gz) = 339799 bytes
