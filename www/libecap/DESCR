@@ -1,0 +1,20 @@
+eCAP is a software interface that allows a network application,
+such as an HTTP proxy or an ICAP server, to outsource content
+analysis and adaptation to a loadable module. For each applicable
+protocol message being processed, an eCAP-enabled host application
+supplies the message details to the adaptation module and gets back
+an adapted message, a "not interested" response, or a "block this
+message now!" instruction.  These exchanges often include message
+bodies.
+
+The adaptation module can also exchange meta-information with the
+host application to supply additional details such as configuration
+options, a reason behind the decision to ignore a message, or a
+detected virus name.
+
+If you are familiar with the ICAP protocol (RFC 3507), then you
+may think of eCAP as an "embedded ICAP", where network interactions
+with an ICAP server are replaced with function calls to an adaptation
+module.
+
+The libecap library implements the eCAP API in C++.
