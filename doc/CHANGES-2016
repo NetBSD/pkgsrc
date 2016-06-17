@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2485 2016/06/17 16:53:34 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.2486 2016/06/17 19:46:52 roy Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3609,3 +3609,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ocamlgraph to 1.8.7 [jaapb 2016-06-17]
 	Added www/libecap version 1.0.1 [prlw1 2016-06-17]
 	Updated lang/nodejs to 6.2.2 [fhajny 2016-06-17]
+	Updated net/dhcpcd to 6.11.1 [roy 2016-06-17]
