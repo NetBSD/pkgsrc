@@ -1,17 +1,15 @@
-$NetBSD: distinfo,v 1.17 2016/04/22 16:52:14 jperkin Exp $
+$NetBSD: distinfo,v 1.18 2016/06/17 14:14:04 fhajny Exp $
 
-SHA1 (rsyslog-8.18.0.tar.gz) = aea11258e2d25986c13541d2077f4913f28ce34e
-RMD160 (rsyslog-8.18.0.tar.gz) = 4b12d52db40a5cceff23ee71c5789f4902c73b5f
-SHA512 (rsyslog-8.18.0.tar.gz) = 6b159ba23100b4675576f5b247d2bf482bab0beaa071c26c692c99e50f202b0b272b7a64ba2b7c726390d663677b7a6d68666b06f73825e35605b13ae0930fc7
-Size (rsyslog-8.18.0.tar.gz) = 2261731 bytes
+SHA1 (rsyslog-8.19.0.tar.gz) = 3009080ac177d6293b8c460e920a1370075fcbf3
+RMD160 (rsyslog-8.19.0.tar.gz) = 07ca168cf97f65380e5d765691f8350ea7b884ff
+SHA512 (rsyslog-8.19.0.tar.gz) = 77c40c9d76591ed3561ec76242be2c647848533df5599320ea988cbc200614c47930e0b63f190d31a0c1cec2443d57ca374f07e0909f11eba8a4bd4b8eee0e44
+Size (rsyslog-8.19.0.tar.gz) = 2279714 bytes
 SHA1 (patch-grammar_lexer.l) = d52518e8b962820a030e01fcf5d00c1e3f1377ec
 SHA1 (patch-platform_redhat_rsyslog.conf) = b2fc1dbeb2b679b82d6c1a86ec1e4e72ef460433
 SHA1 (patch-plugins_imfile_imfile.c) = 65b56f6799e2b206e1a8c3d055a4e9dc22da88be
 SHA1 (patch-plugins_imptcp_imptcp.c) = 47f7184acf0279df4117924108f961529b22a21e
 SHA1 (patch-plugins_imuxsock_imuxsock.c) = a3c682d5a2132cd4796893f286193259087223da
 SHA1 (patch-plugins_mmexternal_mmexternal.c) = 09b8007f44abc9a20fed884a132e734c8b613fb4
-SHA1 (patch-plugins_ommysql_ommysql.c) = d3a1d3837d64a38a8e3064c30fb95bf3efb70877
-SHA1 (patch-plugins_ompgsql_ompgsql.c) = 549197b89efed1e8f45f536f58dafd67df3d462d
 SHA1 (patch-runtime_lookup.c) = cedb0531ff00063d44467029beba852ce4fbc0be
 SHA1 (patch-runtime_nsd__ptcp.c) = fcc8bdd5c5068cc0fb2f3b29d53a6bee41c7a437
 SHA1 (patch-tools_rsyslogd.8) = a3c79f551111b7bf5933ca5e0930b1f52875f341
