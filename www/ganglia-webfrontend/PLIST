@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2016/02/16 13:05:23 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.6 2016/06/17 12:09:08 fhajny Exp $
 share/examples/ganglia/apache.conf
 share/examples/ganglia/conf.php
 share/examples/ganglia/default.json
@@ -227,17 +227,8 @@ share/ganglia/js/jquery.ba-bbq.js
 share/ganglia/js/jquery.ba-bbq.min.js
 share/ganglia/js/jquery.buttonsetv.js
 share/ganglia/js/jquery.cookie.js
-share/ganglia/js/jquery.flot.crosshair.js
-share/ganglia/js/jquery.flot.crosshair.min.js
 share/ganglia/js/jquery.flot.events.js
 share/ganglia/js/jquery.flot.js
-share/ganglia/js/jquery.flot.min.js
-share/ganglia/js/jquery.flot.selection.js
-share/ganglia/js/jquery.flot.selection.min.js
-share/ganglia/js/jquery.flot.stack.js
-share/ganglia/js/jquery.flot.stack.min.js
-share/ganglia/js/jquery.flot.time.js
-share/ganglia/js/jquery.flot.time.min.js
 share/ganglia/js/jquery.gangZoom.js
 share/ganglia/js/jquery.livesearch.js
 share/ganglia/js/jquery.livesearch.min.js
@@ -247,15 +238,6 @@ share/ganglia/js/jquery.multiselect.js
 share/ganglia/js/jquery.qtip.min.js
 share/ganglia/js/jquery.scrollTo-1.4.2.js
 share/ganglia/js/jquery.scrollTo-1.4.3.1-min.js
-share/ganglia/js/jstree/jstree.js
-share/ganglia/js/jstree/jstree.min.js
-share/ganglia/js/jstree/libs/jquery.js
-share/ganglia/js/jstree/libs/require.js
-share/ganglia/js/jstree/themes/default/32px.png
-share/ganglia/js/jstree/themes/default/40px.png
-share/ganglia/js/jstree/themes/default/style.css
-share/ganglia/js/jstree/themes/default/style.min.css
-share/ganglia/js/jstree/themes/default/throbber.gif
 share/ganglia/js/tasseo.js
 share/ganglia/lib/Cache/Driver_Json.php
 share/ganglia/lib/Cache/Driver_Memcache.php
