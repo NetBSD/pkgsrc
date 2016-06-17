@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2483 2016/06/17 16:31:46 jaapb Exp $
+$NetBSD: CHANGES-2016,v 1.2484 2016/06/17 16:40:46 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3607,3 +3607,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/transmission-qt to 2.92nb1 [youri 2016-06-17]
 	Updated misc/ocaml-cudf to 0.8 [jaapb 2016-06-17]
 	Updated devel/ocamlgraph to 1.8.7 [jaapb 2016-06-17]
+	Added www/libecap version 1.0.1 [prlw1 2016-06-17]
