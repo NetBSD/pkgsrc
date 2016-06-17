@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2016/05/05 11:45:39 jaapb Exp $
+# $NetBSD: Makefile,v 1.6 2016/06/17 10:18:03 jaapb Exp $
 
 DISTNAME=	ocamlmod-0.0.7
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	http://forge.ocamlcore.org/frs/download.php/1350/
 
