@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2482 2016/06/17 16:16:06 jaapb Exp $
+$NetBSD: CHANGES-2016,v 1.2483 2016/06/17 16:31:46 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3606,3 +3606,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ocaml-cmdliner to 0.9.8 [jaapb 2016-06-17]
 	Updated net/transmission-qt to 2.92nb1 [youri 2016-06-17]
 	Updated misc/ocaml-cudf to 0.8 [jaapb 2016-06-17]
+	Updated devel/ocamlgraph to 1.8.7 [jaapb 2016-06-17]
