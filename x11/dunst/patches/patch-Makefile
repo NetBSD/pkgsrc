@@ -1,0 +1,20 @@
+$NetBSD: patch-Makefile,v 1.1 2016/06/17 19:42:47 kamil Exp $
+
+Fix the install target on SmartOS.
+
+There shouldn't be used cp(1) there, but it's good enough for now.
+
+--- Makefile.orig	2014-07-29 20:49:11.000000000 +0000
++++ Makefile
+@@ -75,9 +75,9 @@ install: all
+ 	cp -f dunst.1 ${DESTDIR}${MANPREFIX}/man1/
+ 	chmod 644 ${DESTDIR}${MANPREFIX}/man1/dunst.1
+ 	mkdir -p "${DESTDIR}${PREFIX}/share/dunst"
+-	 cp -f dunstrc ${DESTDIR}${PREFIX}/share/dunst
++	cp -f dunstrc ${DESTDIR}${PREFIX}/share/dunst
+ 	mkdir -p "${DESTDIR}${PREFIX}/share/dbus-1/services/"
+-	cp -vf org.knopwob.dunst.service "${DESTDIR}${PREFIX}/share/dbus-1/services/org.knopwob.dunst.service"
++	cp -f org.knopwob.dunst.service "${DESTDIR}${PREFIX}/share/dbus-1/services/org.knopwob.dunst.service"
+ 
+ uninstall:
+ 	@echo removing executables from ${DESTDIR}${PREFIX}/bin
