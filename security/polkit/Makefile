@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/06/13 23:06:46 youri Exp $
+# $NetBSD: Makefile,v 1.5 2016/06/17 20:31:24 kamil Exp $
 #
 
 DISTNAME=	polkit-0.113
@@ -24,6 +24,7 @@ PKGCONFIG_OVERRIDE+=	data/polkit-agent-1.pc.in
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-polkitd-user=${POLKITD_USER}
+CONFIGURE_ARGS+=	--disable-libsystemd-login
 
 .include "../../mk/bsd.prefs.mk"
 
