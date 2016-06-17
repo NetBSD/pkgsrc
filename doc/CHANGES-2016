@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2464 2016/06/17 09:24:06 taca Exp $
+$NetBSD: CHANGES-2016,v 1.2465 2016/06/17 10:49:18 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3588,3 +3588,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/check to 0.10.0 [schmonz 2016-06-17]
 	Updated time/ruby-tzinfo03 to 0.3.50 [taca 2016-06-17]
 	Updated time/ruby-tzinfo-data to 1.2016.5 [taca 2016-06-17]
+	Updated devel/ocaml-deriving-ocsigen to 0.7.1 [jaapb 2016-06-17]
