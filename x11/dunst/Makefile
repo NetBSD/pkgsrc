@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/06/14 18:14:17 kamil Exp $
+# $NetBSD: Makefile,v 1.4 2016/06/17 19:24:35 kamil Exp $
 
 DISTNAME=	dunst-1.1.0
 PKGREVISION=	1
@@ -25,5 +25,6 @@ SUBST_SED.fix-paths+=		-e 's,/usr/share,${PREFIX}/share,g'
 .include "../../devel/pango/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../x11/libxdg-basedir/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libXScrnSaver/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
