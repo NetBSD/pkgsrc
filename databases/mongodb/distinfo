@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.13 2016/03/13 20:50:53 fhajny Exp $
+$NetBSD: distinfo,v 1.14 2016/06/17 11:51:07 fhajny Exp $
 
-SHA1 (mongodb-src-r3.2.4.tar.gz) = c97aab8e2fcb10adfd61be1c56350e6f4c13d685
-RMD160 (mongodb-src-r3.2.4.tar.gz) = d27f29b5fce9bb559a0cf84feddabd367515d44e
-SHA512 (mongodb-src-r3.2.4.tar.gz) = fb7b3ea3c704cde023ec540f4a142d3beba217f33e8c30da04318e365c5d52cbfa00b98824c53485b5f8918a83095c9b26db43861d80029e8e924e66dd8ea694
-Size (mongodb-src-r3.2.4.tar.gz) = 29647777 bytes
-SHA1 (patch-SConstruct) = d872e234effef5275201b46d506bc45a7ad12862
+SHA1 (mongodb-src-r3.2.7.tar.gz) = be6b4b1d770db3360e3dc61f78fcb3be73db1e67
+RMD160 (mongodb-src-r3.2.7.tar.gz) = 106a8bd4b6b1372d33e7ddcafbf6b6d6e6feb2a1
+SHA512 (mongodb-src-r3.2.7.tar.gz) = cc64d50d37175e6ed8e7a2c9a497ed7f720727af181ae65216c8a03bd68a6353f73a95977aed13fae2596d4be0f4caf37fe60f1f54c410769fc7df02bf1f04bf
+Size (mongodb-src-r3.2.7.tar.gz) = 28494513 bytes
+SHA1 (patch-SConstruct) = aa9bcab6be8785f03cdb30acef1eb37e489d661f
 SHA1 (patch-debian_mongod.conf) = d4146b3d62b4472d55609c7f6aaa596f8f893d1f
 SHA1 (patch-src_mongo_base_initializer.h) = add32c5940c922a98122d0e6883eb3ad52dc25c5
 SHA1 (patch-src_mongo_db_repl_isself.c) = 8cb386b7b0a8925908f20ac9b9b18cac796367ba
@@ -18,6 +18,6 @@ SHA1 (patch-src_mongo_util_processinfo__netbsd.cpp) = 4c746c4c3a79df849994c00a46
 SHA1 (patch-src_third__party_mozjs-38_platform_x86__64_netbsd_build_js-confdefs.h) = 81107c2d368884dc0d2fddc03862fe58f2035206
 SHA1 (patch-src_third__party_mozjs-38_platform_x86__64_netbsd_include_js-config.h) = f2b90732fd18048cf7feac44cca54c99a2420a4a
 SHA1 (patch-src_third__party_s2_base_port.h) = 892ce91b5aaa432f34e1e7c169b7fd6eea2a3e94
-SHA1 (patch-src_third__party_wiredtiger_SConscript) = 2b023c7299a7c81c5e5314f8ff181d7ca834e933
+SHA1 (patch-src_third__party_wiredtiger_SConscript) = 9b11a7703f4db845fb38ba996238fe1ca7f24767
 SHA1 (patch-src_third__party_wiredtiger_build__dragonfly_wiredtiger__config.h) = 0b00da401f832d985107dfa5dcc6447db4beec6d
 SHA1 (patch-src_third__party_wiredtiger_build__netbsd_wiredtiger__config.h) = 63d3a0cc66d9fcc76b21150de8be1b6e050b7d8d
