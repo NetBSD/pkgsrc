@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/06/14 07:14:39 kamil Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/17 10:53:02 wiz Exp $
 
 DISTNAME=	Ropper-1.9.5
 PKGNAME=	${DISTNAME:tl}
@@ -11,15 +11,16 @@ HOMEPAGE=	https://github.com/sashs/Ropper/
 COMMENT=	Display information about executables and search for gadgets
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=		${WRKDIR}/${DISTNAME}
-USE_LANGUAGES=	# none
-
 DEPENDS+=	${PYPKGPREFIX}-capstone-[0-9]*:../../devel/py-capstone
 DEPENDS+=	${PYPKGPREFIX}-filebytes-[0-9]*:../../devel/py-filebytes
 DEPENDS+=	${PYPKGPREFIX}-readline-[0-9]*:../../devel/py-readline
 # Optional but needed for extra features
-# The keystone software is now public so this will be likely by mandatory soon
+# The keystone software is now public so this will be likely be mandatory soon
 DEPENDS+=	${PYPKGPREFIX}-keystone-[0-9]*:../../emulators/py-keystone
+
+USE_LANGUAGES=	# none
+WRKSRC=		${WRKDIR}/${DISTNAME}
+EGG_NAME=	${DISTNAME:tl}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
