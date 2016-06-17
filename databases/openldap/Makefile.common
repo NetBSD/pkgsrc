@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.37 2016/02/25 11:46:21 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.38 2016/06/17 13:56:53 jperkin Exp $
 #
 # used by databases/openldap-client/Makefile
 # used by databases/openldap-cloak/Makefile
@@ -29,7 +29,6 @@ CONFLICTS+=		ldapsdk-[0-9]*
 
 DISTINFO_FILE=		${.CURDIR}/../../databases/openldap/distinfo
 PATCHDIR=		${.CURDIR}/../../databases/openldap/patches
-FILESDIR=		${.CURDIR}/../../databases/openldap/files
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		soelim
