@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2474 2016/06/17 12:20:23 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.2475 2016/06/17 13:01:29 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3598,3 +3598,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/py-xlsxwriter to 0.9.2 [fhajny 2016-06-17]
 	Updated www/ganglia-webfrontend to 3.7.2 [fhajny 2016-06-17]
 	Updated lang/nodejs to 6.2.1 [fhajny 2016-06-17]
+	Updated ham/fldigi to 3.23.11 [mef 2016-06-17]
