@@ -1,19 +1,18 @@
-# $NetBSD: Makefile,v 1.4 2016/06/09 06:23:38 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2016/06/17 10:57:47 jaapb Exp $
 
-DISTNAME=	cppo-1.3.1
+VERSION=	1.3.2
+GITHUB_PROJECT=	cppo
+DISTNAME=	${GITHUB_PROJECT}-${VERSION}
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mjambon/}
-GITHUB_PROJECT=	cppo
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
 MAINTAINER=	jaapb@NetBSD.org
-HOMEPAGE=	https://github.com/mjambon/cppo/
+HOMEPAGE=	http://mjambom.com/cppo.html
 COMMENT=	C-style preprocessor for OCaml
 LICENSE=	modified-bsd
 
-WRKSRC=		${WRKDIR}/cppo-1.3.1
 USE_LANGUAGES=	# none
 USE_TOOLS+=	gmake
 
@@ -31,5 +30,7 @@ MAKE_ENV+=	BEST=.byte
 
 MAKE_ENV+=	BINDIR=${DESTDIR}/${PREFIX}/bin DESTDIR=${DESTDIR} OCAML_SITELIBDIR=${OCAML_SITELIBDIR}
 INSTALLATION_DIRS+=	bin ${OCAML_SITELIBDIR}/cppo_ocamlbuild
+OCAML_FINDLIB_DIRS=	cppo_ocamlbuild
 
+.include "../../devel/ocamlbuild/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
