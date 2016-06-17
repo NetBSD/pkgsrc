@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2015/07/28 08:49:14 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2016/06/17 17:21:38 tsutsui Exp $
 
 PKGNAME=	suse_gtk2-${SUSE_VERSION}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	emulators
 RPMUPDPKGS+=	gdk-pixbuf-query-loaders-2.30.1-20.1.${SUSE_ARCH}
 RPMUPDPKGS+=	gtk2-tools-2.24.23-7.1.${SUSE_ARCH}
@@ -12,7 +12,7 @@ RPMUPDPKGS+=	libgdk_pixbuf-2_0-0-2.30.1-20.1.${SUSE_ARCH}
 RPMPKGS+=	libgraphite2-3-1.2.0-6.1.2.${SUSE_ARCH}
 RPMUPDPKGS+=	libgtk-2_0-0-2.24.23-7.1.${SUSE_ARCH}
 RPMPKGS+=	libharfbuzz0-0.9.21-1.3.${SUSE_ARCH}
-RPMUPDPKGS+=	libjasper1-1.900.1-160.13.1.${SUSE_ARCH}
+RPMUPDPKGS+=	libjasper1-1.900.1-160.22.2.${SUSE_ARCH}
 RPMUPDPKGS+=	libpango-1_0-0-1.36.1-4.2.${SUSE_ARCH}
 RPMPKGS+=	libpangox-1_0-0-0.0.2-4.1.3.${SUSE_ARCH}
 RPMPKGS+=	orbit2-2.14.19-15.1.3.${SUSE_ARCH}

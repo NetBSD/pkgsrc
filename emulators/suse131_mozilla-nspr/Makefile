@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2015/07/28 08:49:15 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2016/06/17 17:21:39 tsutsui Exp $
 
 PKGNAME=	suse_mozilla-nspr-${SUSE_VERSION}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	emulators
-RPMUPDPKGS+=	mozilla-nspr-4.10.8-22.1.${SUSE_ARCH}
+RPMUPDPKGS+=	mozilla-nspr-4.12-34.1.${SUSE_ARCH}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Linux compatibility package for Mozilla NSPR
