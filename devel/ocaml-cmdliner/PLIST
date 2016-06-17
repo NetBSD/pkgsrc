@@ -1,17 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2014/10/09 20:07:36 jaapb Exp $
-lib/ocaml/site-lib/cmdliner/CHANGES.md
-lib/ocaml/site-lib/cmdliner/META
-lib/ocaml/site-lib/cmdliner/README.md
-lib/ocaml/site-lib/cmdliner/chorus.ml
-${PLIST.opt}lib/ocaml/site-lib/cmdliner/cmdliner.a
-lib/ocaml/site-lib/cmdliner/cmdliner.cma
-lib/ocaml/site-lib/cmdliner/cmdliner.cmi
-${PLIST.opt}lib/ocaml/site-lib/cmdliner/cmdliner.cmx
-${PLIST.opt}lib/ocaml/site-lib/cmdliner/cmdliner.cmxa
-${PLIST.opt}lib/ocaml/site-lib/cmdliner/cmdliner.cmxs
-lib/ocaml/site-lib/cmdliner/cmdliner.mli
-lib/ocaml/site-lib/cmdliner/cp_ex.ml
-lib/ocaml/site-lib/cmdliner/darcs_ex.ml
-lib/ocaml/site-lib/cmdliner/revolt.ml
-lib/ocaml/site-lib/cmdliner/rm_ex.ml
-lib/ocaml/site-lib/cmdliner/tail_ex.ml
+@comment $NetBSD: PLIST,v 1.2 2016/06/17 15:33:24 jaapb Exp $
+${OCAML_SITELIB}/cmdliner/META
+${PLIST.ocaml-opt}${OCAML_SITELIB}/cmdliner/cmdliner.a
+${OCAML_SITELIB}/cmdliner/cmdliner.cma
+${OCAML_SITELIB}/cmdliner/cmdliner.cmi
+${PLIST.ocaml-opt}${OCAML_SITELIB}/cmdliner/cmdliner.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/cmdliner/cmdliner.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/cmdliner/cmdliner.cmxs
+${OCAML_SITELIB}/cmdliner/cmdliner.mli
