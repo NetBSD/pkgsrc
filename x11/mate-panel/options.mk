@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2016/05/21 19:01:59 youri Exp $
+# $NetBSD: options.mk,v 1.2 2016/06/18 09:05:02 youri Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mate-panel
 PKG_SUPPORTED_OPTIONS=	introspection
-PKG_SUGGESTED_OPTIONS=	introspection
+PKG_SUGGESTED_OPTIONS=
 
 .include "../../mk/bsd.options.mk"
 
