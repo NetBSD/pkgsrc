@@ -1,8 +1,14 @@
-$NetBSD: patch-aa,v 1.2 2009/10/31 21:42:27 joerg Exp $
+$NetBSD: patch-aa,v 1.3 2016/06/18 11:30:35 mef Exp $
 
---- configure.orig	2009-07-11 21:36:00.000000000 +0200
-+++ configure
-@@ -23533,23 +23533,7 @@ _ACEOF
+date: 2009-11-01 06:42:27 +0900;  author: joerg;  state: Exp;  lines: +1 -10;
+Drop unneeded fragment from patch.
+
+date: 2009-10-30 01:25:57 +0900;  author: joerg;  state: Exp;
+Do not stupidly insist on GNU gettext, thanks.
+
+--- configure.orig	2016-05-17 06:02:07.000000000 +0900
++++ configure	2016-06-18 19:29:50.000000000 +0900
+@@ -18179,23 +18179,7 @@ $as_echo "#define HAVE_CFLOCALECOPYCURRE
  
      if test "$USE_NLS" = "yes"; then
      gt_use_preinstalled_gnugettext=no
@@ -24,9 +30,9 @@ $NetBSD: patch-aa,v 1.2 2009/10/31 21:42:27 joerg Exp $
 -          gt_expression_test_code=
 -        fi
  
-         { $as_echo "$as_me:$LINENO: checking for GNU gettext in libc" >&5
+         { $as_echo "$as_me:${as_lineno-$LINENO}: checking for GNU gettext in libc" >&5
  $as_echo_n "checking for GNU gettext in libc... " >&6; }
-@@ -24366,15 +24350,11 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -18883,15 +18867,11 @@ else
  $gt_revision_test_code
  extern int _nl_msg_cat_cntr;
  extern
@@ -43,7 +49,7 @@ $NetBSD: patch-aa,v 1.2 2009/10/31 21:42:27 joerg Exp $
    ;
    return 0;
  }
-@@ -24423,15 +24403,11 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -18911,15 +18891,11 @@ rm -f core conftest.err conftest.$ac_obj
  $gt_revision_test_code
  extern int _nl_msg_cat_cntr;
  extern
