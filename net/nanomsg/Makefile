@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/06/18 08:16:27 kamil Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/18 08:24:32 kamil Exp $
 
 DISTNAME=	nanomsg-1.0.0
 CATEGORIES=	net
@@ -10,7 +10,5 @@ COMMENT=	Scalability protocols library
 LICENSE=	x11
 
 USE_CMAKE=	yes
-
-PKGCONFIG_OVERRIDE+=	libnanomsg.pc.in
 
 .include "../../mk/bsd.pkg.mk"
