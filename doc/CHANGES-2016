@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2496 2016/06/18 11:31:07 mef Exp $
+$NetBSD: CHANGES-2016,v 1.2497 2016/06/18 12:34:07 tsutsui Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3620,3 +3620,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated multimedia/mpv to 0.17.0nb1 [leot 2016-06-18]
 	Added net/nanomsgxx version 0.2 [kamil 2016-06-18]
 	Updated devel/cflow to 1.5 [mef 2016-06-18]
+	Updated net/mikutter to 3.4.1 [tsutsui 2016-06-18]
