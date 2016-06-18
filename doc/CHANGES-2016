@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2502 2016/06/18 14:09:21 mef Exp $
+$NetBSD: CHANGES-2016,v 1.2503 2016/06/18 17:08:57 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3626,3 +3626,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-CPAN-Checksums to 2.12 [mef 2016-06-18]
 	Updated devel/p5-Config-IniFiles to 2.92 [mef 2016-06-18]
 	Updated devel/p5-Data-MessagePack to 0.50 [mef 2016-06-18]
+	Updated net/youtube-dl to 20160618.1 [leot 2016-06-18]
