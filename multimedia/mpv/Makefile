@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2016/04/13 16:14:01 leot Exp $
+# $NetBSD: Makefile,v 1.32 2016/06/18 10:58:28 leot Exp $
 
 DISTNAME=	mpv-0.17.0
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mpv-player/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -50,7 +51,7 @@ SUBST_MESSAGE.docutils=	Fix docutils command names.
 .include "../../multimedia/libass/buildlink3.mk"
 .include "../../multimedia/libdvdnav/buildlink3.mk"
 .include "../../multimedia/libdvdread/buildlink3.mk"
-.include "../../multimedia/ffmpeg2/buildlink3.mk"
+.include "../../multimedia/ffmpeg3/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/jpeg.buildlink3.mk"
