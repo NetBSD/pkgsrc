@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/06/18 13:03:27 kamil Exp $
+
+SHA1 (URI-ws-0.03.tar.gz) = 5da86d0b2e7a987dee73987edbac4717c5987298
+RMD160 (URI-ws-0.03.tar.gz) = 0098e43108376a4aa541c099fa7f0d3fa574d35c
+SHA512 (URI-ws-0.03.tar.gz) = 138f6605a4cf83d90a2b0b4238ee5112e8b3aa422fa9cdfc98e7d99767c1993200cd4a2487bae982c1adfd0e8574cc866249166ab64afdb2b7631ca220c0fa5a
+Size (URI-ws-0.03.tar.gz) = 11724 bytes
