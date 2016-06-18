@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2490 2016/06/18 08:18:10 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.2491 2016/06/18 09:06:19 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3614,3 +3614,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated fonts/cantarell-fonts to 0.0.24 [mef 2016-06-18]
 	Updated devel/byacc to 20160606 [mef 2016-06-18]
 	Added net/nanomsg version 1.0.0 [kamil 2016-06-18]
+	Updated devel/cfitsio to 3.390 [mef 2016-06-18]
