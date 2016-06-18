@@ -1,63 +1,74 @@
-# $NetBSD: Makefile,v 1.30 2016/06/04 16:28:22 youri Exp $
+# $NetBSD: Makefile,v 1.31 2016/06/18 10:23:16 youri Exp $
 
-CONSOLEKIT_VER=		0.4.6
-DISTNAME=		ConsoleKit-${CONSOLEKIT_VER}
-PKGNAME=		consolekit-${CONSOLEKIT_VER}
-PKGREVISION=		2
-CATEGORIES=		sysutils
-MASTER_SITES=		http://www.freedesktop.org/software/ConsoleKit/dist/
-EXTRACT_SUFX=		.tar.xz
+CONSOLEKIT_VER=	1.0.2
+DISTNAME=	${CONSOLEKIT_VER}
+PKGNAME=	consolekit-${CONSOLEKIT_VER}
+CATEGORIES=	sysutils
+MASTER_SITES=	${MASTER_SITE_GITHUB:=ConsoleKit2/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.freedesktop.org/wiki/Software/ConsoleKit
+MAINTAINER=	youri@NetBSD.org
+HOMEPAGE=	https://github.com/ConsoleKit2/ConsoleKit2/
 COMMENT=	Framework for defining and tracking users, login sessions, and seats
 LICENSE=	gnu-gpl-v2
 
+GITHUB_PROJECT=	ConsoleKit2
+GITHUB_TAG=	${CONSOLEKIT_VER}
+
+MESSAGE_SUBST+=	PREFIX=${PREFIX}
+
+BUILD_DEFS+=	VARBASE 	\
+		PKG_SYSCONFBASE
+
+EGDIR=			${PREFIX}/share/examples/consolekit
 PKG_SYSCONFSUBDIR=	ConsoleKit
+RULESDIR=		${PREFIX}/share/polkit-1/rules.d
 
-EGDIR=		${PREFIX}/share/examples/consolekit
-CONF_FILES+=	${EGDIR}/00-primary.seat ${PKG_SYSCONFDIR}/run-seat.d/00-primary.seat
-CONF_FILES+=	${EGDIR}/ConsoleKit.conf ${PKG_SYSCONFBASE}/dbus-1/system.d/ConsoleKit.conf
+MAKE_DIRS=	${PKG_SYSCONFDIR}/run-seat.d		\
+		${PKG_SYSCONFDIR}/run-session.d		\
+		${PKG_SYSCONFDIR}/seats.d		\
+		${PKG_SYSCONFBASE}/dbus-1/system.d	\
+		${PKG_SYSCONFBASE}/logrotate.d		\
+		${PKG_SYSCONFBASE}/X11/xinit/xinitrc.d
 
-MAKE_DIRS=	${PKG_SYSCONFDIR}/run-seat.d
 
-BUILD_DEFS+=		VARBASE
-BUILD_DEFS+=		PKG_SYSCONFBASE
+CONF_FILES+=	${EGDIR}/ConsoleKit/seats.d/00-primary.seat		\
+		${PKG_SYSCONFDIR}/seats.d/00-primary.seat		\
+		${EGDIR}/dbus-1/system.d/ConsoleKit.conf 		\
+		${PKG_SYSCONFBASE}/dbus-1/system.d/ConsoleKit.conf 	\
+		${EGDIR}/logrotate.d/consolekit				\
+		${PKG_SYSCONFBASE}/logrotate.d/consolekit		\
+		${EGDIR}/X11/xinit/xinitrc.d/90-consolekit		\
+		${PKG_SYSCONFBASE}/X11/xinit/xinitrc.d/90-consolekit
 
-GNU_CONFIGURE=		YES
-USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=		gmake intltool msgfmt perl pkg-config
-USE_TOOLS+=		autoconf automake autoreconf
-USE_LIBTOOL=		YES
+GNU_CONFIGURE=	YES
+USE_TOOLS+=	gmake intltool msgfmt perl pkg-config automake
+USE_LIBTOOL=	YES
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE:Q}
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+CONFIGURE_ARGS+=--sysconfdir=${PKG_SYSCONFBASE}			\
+		--localstatedir=${VARBASE}			\
+		--enable-pam-module				\
+		--with-pam-module-dir=${PREFIX}/lib/security	\
 
 CONFIGURE_ARGS.SunOS+=	--enable-rbac-shutdown=solaris.system.shutdown
 
-# TODO
-#CONFIGURE_ARGS+=	--enable-pam-module
-#.include "../../mk/pam.buildlink3.mk"
-
-post-extract:
-	${CP} ${FILESDIR}/ck-sysdeps-netbsd.c ${WRKSRC}/src/
-	${CP} ${FILESDIR}/ck-sysdeps-openbsd.c ${WRKSRC}/src/
+INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR} 			\
+			DBUS_SYS_DIR=${EGDIR}/dbus-1/system.d	\
+			XINITRC_DIR=${EGDIR}/X11/xinit/xinitrc.d
 
 pre-configure:
-	cd ${WRKSRC} && autoreconf -vi ${AUTORECONF_ARGS}
+	cd ${WRKSRC} && ./autogen.sh
 
-.include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
 post-install:
-	${INSTALL_SCRIPT} ${FILESDIR}/ck-get-x11-display-device.FreeBSD \
-		${DESTDIR}${PREFIX}/libexec/ck-get-x11-display-device
-	${INSTALL_SCRIPT} ${FILESDIR}/ck-get-x11-server-pid.FreeBSD \
-		${DESTDIR}${PREFIX}/libexec/ck-get-x11-server-pid
-.endif
+	${MKDIR} ${DESTDIR}${RULESDIR} &&		\
+	${INSTALL_DATA} ${FILESDIR}/50-shutdown.rules	\
+	${DESTDIR}${RULESDIR}/50-shutdown.rules
+
+BUILD_DEPENDS+=		gdbus-codegen-[0-9]*:../../devel/gdbus-codegen
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/polkit/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
+.include "../../mk/pam.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
