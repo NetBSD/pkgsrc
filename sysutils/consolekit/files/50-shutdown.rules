@@ -1,0 +1,9 @@
+polkit.addRule(function (action, subject) {
+	if (action.id == "org.freedesktop.consolekit.system.restart" ||
+	action.id == "org.freedesktop.consolekit.system.stop"  ||
+	action.id == "org.freedesktop.consolekit.system.suspend" ||
+	action.id == "org.freedesktop.consolekit.system.hibernate"
+	&& subject.isInGroup("operator")) {
+		return polkit.Result.YES;
+	}
+});
