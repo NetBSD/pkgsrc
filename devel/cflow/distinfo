@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2015/11/03 03:27:18 agc Exp $
+$NetBSD: distinfo,v 1.8 2016/06/18 11:30:35 mef Exp $
 
-SHA1 (cflow-1.4.tar.gz) = 43d969b9898103ad125cd2e65f1f652550cb9434
-RMD160 (cflow-1.4.tar.gz) = 8c7b3f7b242f46b340d758c02d011f7efca66694
-SHA512 (cflow-1.4.tar.gz) = e94639074550ead4fa63cbc9cc7e1bf16073b78c3114606b7e427d39da030d2e49bd2318703948ef4c0be1a14371e5a4f71a6f49f1a2298d31a5ec3a57ab8ea9
-Size (cflow-1.4.tar.gz) = 795545 bytes
-SHA1 (patch-aa) = e05ef8092bdc5d0df8b380f7063e46baea4f49c3
+SHA1 (cflow-1.5.tar.gz) = b38be51dca40fab3b1b1cd02b4f4eca1ce60160b
+RMD160 (cflow-1.5.tar.gz) = 3f48e4dd291b1b3748772f75a1873ad8062880bb
+SHA512 (cflow-1.5.tar.gz) = 73a9b8fd9c630bab1f96238a0bfb45eadfcca69049c07b8bc663ccaeac1a1c9c759b0c64d81d5553bdb41732b7541b0d49ecf451809ffc0482283d4e41aeb125
+Size (cflow-1.5.tar.gz) = 1005230 bytes
+SHA1 (patch-aa) = e253a51a0fcd3d5eb57c632caff1dd7953dd61da
