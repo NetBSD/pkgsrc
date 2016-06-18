@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16038 2016/06/18 18:57:40 bsiegert Exp $
+$NetBSD: TODO,v 1.16039 2016/06/18 20:28:17 mef Exp $
 
 Suggested new packages
 ======================
@@ -1315,7 +1315,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Sub-Exporter-GlobExporter-0.005
 	o p5-Switch-2.17
 	o p5-Sys-Utmp-1.7
-	o p5-System-Command-1.117
 	o p5-TAP-Harness-Archive-0.18
 	o p5-Term-ANSIColor-4.04
 	o p5-Term-ReadLine-1.30
