@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/06/11 18:18:22 youri Exp $
+# $NetBSD: Makefile,v 1.5 2016/06/18 09:07:19 youri Exp $
 
 DISTNAME=	lxterminal-0.2.0
 CATEGORIES=	x11
@@ -11,6 +11,8 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake intltool pkg-config msgfmt
+
+LDFLAGS.SunOS+=	-lsocket
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
