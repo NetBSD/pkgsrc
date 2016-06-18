@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.15 2016/05/03 08:26:43 wiz Exp $
+$NetBSD: patch-aa,v 1.16 2016/06/18 11:26:56 ryoon Exp $
 
 Exclude -flto for gcc 4.1.3 (used in NetBSD/vax 6)
 Exclude -flto for gcc 4.4.7 (Used in DragonFly 2.13 - 3.1)
@@ -11,7 +11,7 @@ Make -O2 conditional so can be overridden by environment
    endif
    GCC_VERSION = $(shell $(GCC) -v /dev/null 2>&1 | grep 'gcc version' | awk '{ print $$3 }')
 -  LTO_EXCLUDE_VERSIONS = 
-+  LTO_EXCLUDE_VERSIONS = 4.1.3 4.4.7 4.8.3 4.8.4 4.8.5 5.3.0
++  LTO_EXCLUDE_VERSIONS = 4.1.3 4.4.7 4.8.3 4.8.4 4.8.5 5.3.0 5.4.0
    PCAPLIB = pcap
    ifeq (agcc,$(findstring agcc,$(GCC))) # Android target build?
      OS_CCDEFS = -D_GNU_SOURCE
