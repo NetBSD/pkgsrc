@@ -1,4 +1,4 @@
-# $NetBSD: waf.mk,v 1.2 2015/05/24 14:06:42 bsiegert Exp $
+# $NetBSD: waf.mk,v 1.3 2016/06/18 10:16:07 leot Exp $
 
 WAF_ENV+=	CC=${CC:Q}
 WAF_ENV+=	CFLAGS=${CFLAGS:Q}
@@ -18,7 +18,10 @@ WAF_ENV+=	JOBS=${MAKE_JOBS:Q}
 WAF_ENV+=	LC_ALL="en_US.UTF-8"
 .endif
 
-WAF_ARGS=	--mandir=${PREFIX}/${PKGMANDIR}
+WAF_HAS_MANDIR?=	yes
+.if !empty(WAF_HAS_MANDIR:M[yY][eE][sS])
+WAF_ARGS=		--mandir=${PREFIX}/${PKGMANDIR}
+.endif
 
 post-extract:
 	cp ${PREFIX}/bin/waf ${WRKSRC}
