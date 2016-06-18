@@ -1,11 +1,11 @@
-$NetBSD: patch-src_polkitbackend_polkitbackendjsauthority.c,v 1.1 2016/05/20 18:39:33 youri Exp $
+$NetBSD: patch-src_polkitbackend_polkitbackendjsauthority.c,v 1.2 2016/06/18 12:16:23 youri Exp $
 
 * for *BSD netgroup functions
 * for no SIGPOLL
 * Fix a memory leak
 * Add getgrouplist for SunOS
 
---- src/polkitbackend/polkitbackendjsauthority.c.orig   2015-06-19 20:39:58.000000000 +0000
+--- src/polkitbackend/polkitbackendjsauthority.c.orig	2015-06-19 20:39:58.000000000 +0000
 +++ src/polkitbackend/polkitbackendjsauthority.c
 @@ -24,7 +24,12 @@
  #include <errno.h>
@@ -50,7 +50,7 @@ $NetBSD: patch-src_polkitbackend_polkitbackendjsauthority.c,v 1.1 2016/05/20 18:
    char *netgroup;
 +#endif
    JSBool is_in_netgroup = JS_FALSE;
-
+ 
    if (!JS_ConvertArguments (cx, argc, JS_ARGV (cx, vp), "SS", &user_str, &netgroup_str))
 @@ -1913,3 +1923,52 @@ utils_spawn_finish (GAsyncResult   *res,
   out:
