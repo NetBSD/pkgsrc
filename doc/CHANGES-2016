@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2507 2016/06/18 21:18:31 leot Exp $
+$NetBSD: CHANGES-2016,v 1.2508 2016/06/18 21:32:35 jakllsch Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3635,3 +3635,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Git-Repository to 1.320 [mef 2016-06-18]
 	Updated print/cups to 2.1.4 [leot 2016-06-18]
 	Updated games/wesnoth to 1.12.6 [leot 2016-06-18]
+	Updated x11/xephem to 3.7.7 [jakllsch 2016-06-18]
