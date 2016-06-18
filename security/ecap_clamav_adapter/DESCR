@@ -1,0 +1,2 @@
+This eCAP adapter checks HTTP request and response bodies using the ClamAV
+antivirus library and denies access to messages with detected viruses.
