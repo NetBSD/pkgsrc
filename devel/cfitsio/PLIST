@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.7 2015/04/08 16:23:27 hiramatsu Exp $
+@comment $NetBSD: PLIST,v 1.8 2016/06/18 09:06:11 mef Exp $
+bin/testprog
 include/drvrsmem.h
 include/fitsio.h
 include/fitsio2.h
