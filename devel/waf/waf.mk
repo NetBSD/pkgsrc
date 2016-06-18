@@ -1,4 +1,4 @@
-# $NetBSD: waf.mk,v 1.3 2016/06/18 10:16:07 leot Exp $
+# $NetBSD: waf.mk,v 1.4 2016/06/18 10:30:14 leot Exp $
 
 WAF_ENV+=	CC=${CC:Q}
 WAF_ENV+=	CFLAGS=${CFLAGS:Q}
@@ -20,7 +20,7 @@ WAF_ENV+=	LC_ALL="en_US.UTF-8"
 
 WAF_HAS_MANDIR?=	yes
 .if !empty(WAF_HAS_MANDIR:M[yY][eE][sS])
-WAF_ARGS=		--mandir=${PREFIX}/${PKGMANDIR}
+WAF_ARGS+=		--mandir=${PREFIX}/${PKGMANDIR}
 .endif
 
 post-extract:
