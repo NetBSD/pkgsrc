@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2016/06/16 04:06:14 markd Exp $
+# $NetBSD: Makefile,v 1.17 2016/06/18 20:55:01 markd Exp $
 
 DISTNAME=	pdftex.doc
 PKGNAME=	tex-${DISTNAME:S/./-/}-2016
@@ -11,6 +11,7 @@ LICENSE=	gnu-gpl-v2
 
 TEXLIVE_IGNORE_PATTERNS=	texmf-dist/doc/man/man1/pdftex.1
 
+USE_TOOLS+=	perl:run
 REPLACE_PERL+=	texmf-dist/doc/pdftex/manual/syntaxform.pl
 
 .include "../../print/texlive/package.mk"
