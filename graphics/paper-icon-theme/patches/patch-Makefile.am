@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile.am,v 1.1 2016/06/13 00:26:04 youri Exp $
+$NetBSD: patch-Makefile.am,v 1.2 2016/06/18 09:06:01 youri Exp $
 
 Install to pkgsrc prefix.
 
@@ -11,7 +11,7 @@ Install to pkgsrc prefix.
 -	$(MKDIR_P) $(DESTDIR)/usr/share/icons
 -	cp -Rv Paper $(DESTDIR)/usr/share/icons/.
 +	$(MKDIR_P) $(DESTDIR)$(PREFIX)/share/icons
-+	cp -Rv Paper $(DESTDIR)$(PREFIX)/share/icons/.
++	cp -R Paper $(DESTDIR)$(PREFIX)/share/icons/.
  
  uninstall-hook:
  	test -e $(DESTDIR)/usr/share/icons/Paper && rm -rfv $(DESTDIR)/usr/share/icons/Paper
