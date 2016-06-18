@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2016/04/14 12:36:01 mef Exp $
+$NetBSD: distinfo,v 1.9 2016/06/18 13:53:26 mef Exp $
 
-SHA1 (CPAN-Checksums-2.11.tar.gz) = a4c48aa3b66942080fd7ca9bc583a25869860b21
-RMD160 (CPAN-Checksums-2.11.tar.gz) = 833052436774527715a81cc0b51116efbe4522ba
-SHA512 (CPAN-Checksums-2.11.tar.gz) = cdc7fcc71fe52c9f3e6512a45398d8f65693c7d348117e636bfeec8a09b5c64495e1b000e671011f19998dbea73255997b15bae85943d2d0b7a0620b1e2a8865
-Size (CPAN-Checksums-2.11.tar.gz) = 14686 bytes
+SHA1 (CPAN-Checksums-2.12.tar.gz) = 1252f423b0b3460d22a8a5a94217e61f4eaea38f
+RMD160 (CPAN-Checksums-2.12.tar.gz) = 38a55f6e203aed8f910bc4b3552baf51ca14923a
+SHA512 (CPAN-Checksums-2.12.tar.gz) = 86cf82d04bb9611d2efbbb1a5c5d5b793a07a1c844e205b6c3ebddc26b4fd5f5a9b3a5a8ca659d5a546c4c3ab0de93b39f1af2d4cae802213d40e1f93f60d4c7
+Size (CPAN-Checksums-2.12.tar.gz) = 14868 bytes
