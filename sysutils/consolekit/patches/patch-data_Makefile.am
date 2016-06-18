@@ -1,15 +1,16 @@
-$NetBSD: patch-data_Makefile.am,v 1.1 2016/06/18 10:23:17 youri Exp $
+$NetBSD: patch-data_Makefile.am,v 1.2 2016/06/18 11:09:36 ryoon Exp $
 
 * Fix installation of script data files
 
 --- data/Makefile.am.orig	2015-06-28 08:37:44.000000000 +0000
 +++ data/Makefile.am
-@@ -113,7 +113,7 @@ install-logrotate: $(LOGROTATE_CONFS)
+@@ -113,8 +113,7 @@ install-logrotate: $(LOGROTATE_CONFS)
  
  install-90-consolekit: $(XINITRC_CONFS)
  	$(MKDIR_P) $(DESTDIR)$(XINITRC_DIR)/
 -	$(INSTALL_PROGRAM) 90-consolekit $(DESTDIR)$(XINITRC_DIR) && \
-+	$(INSTALL_DATA) 90-consolekit $(DESTDIR)$(XINITRC_DIR) && \
- 		chmod +x $(DESTDIR)$(XINITRC_DIR)/90-consolekit
+-		chmod +x $(DESTDIR)$(XINITRC_DIR)/90-consolekit
++	$(INSTALL_DATA) 90-consolekit $(DESTDIR)$(XINITRC_DIR)
  
  uninstall-logrotate:
+ 	rm -f $(DESTDIR)$(sysconfdir)/logrotate.d/consolekit
