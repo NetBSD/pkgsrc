@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2005/11/13 03:09:20 minskim Exp $
+# $NetBSD: options.mk,v 1.2 2016/06/18 18:55:52 bsiegert Exp $
 #
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.mpop
@@ -10,13 +10,13 @@ PKG_SUGGESTED_OPTIONS=		ssl
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mgnutls)
-CONFIGURE_ARGS+=	--with-ssl=gnutls
+CONFIGURE_ARGS+=	--with-tls=gnutls
 .  include "../../security/gnutls/buildlink3.mk"
 .elif !empty(PKG_OPTIONS:Mssl)
-CONFIGURE_ARGS+=	--with-ssl=openssl
+CONFIGURE_ARGS+=	--with-tls=openssl
 .  include "../../security/openssl/buildlink3.mk"
 .else
-CONFIGURE_ARGS+=	--disable-ssl
+CONFIGURE_ARGS+=	--disable-tls
 .endif
 
 .if !empty(PKG_OPTIONS:Mgsasl)
