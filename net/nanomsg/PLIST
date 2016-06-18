@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2016/06/18 08:16:27 kamil Exp $
+bin/nanocat
+include/nanomsg/bus.h
+include/nanomsg/inproc.h
+include/nanomsg/ipc.h
+include/nanomsg/nn.h
+include/nanomsg/pair.h
+include/nanomsg/pipeline.h
+include/nanomsg/pubsub.h
+include/nanomsg/reqrep.h
+include/nanomsg/survey.h
+include/nanomsg/tcp.h
+include/nanomsg/ws.h
+lib/libnanomsg.so
+lib/libnanomsg.so.${PKGVERSION}
+lib/libnanomsg.so.5.0.0
+lib/pkgconfig/nanomsg.pc
