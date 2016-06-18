@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2504 2016/06/18 18:57:40 bsiegert Exp $
+$NetBSD: CHANGES-2016,v 1.2505 2016/06/18 20:28:17 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3628,3 +3628,8 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-Data-MessagePack to 0.50 [mef 2016-06-18]
 	Updated net/youtube-dl to 20160618.1 [leot 2016-06-18]
 	Updated mail/mpop to 1.2.5 [bsiegert 2016-06-18]
+	Updated devel/p5-Devel-PPPort to 3.34 [mef 2016-06-18]
+	Updated devel/p5-Event to 1.26 [mef 2016-06-18]
+	Updated devel/p5-Getopt-Long to 2.49.1 [mef 2016-06-18]
+	Updated devel/p5-System-Command to 1.118 [mef 2016-06-18]
+	Updated devel/p5-Git-Repository to 1.320 [mef 2016-06-18]
