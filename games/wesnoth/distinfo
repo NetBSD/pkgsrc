@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.57 2015/11/21 16:13:39 leot Exp $
+$NetBSD: distinfo,v 1.58 2016/06/18 21:18:16 leot Exp $
 
-SHA1 (wesnoth-1.12.5.tar.bz2) = 7bcfa9c5e36e139e0f93578eba717fd7af773b2a
-RMD160 (wesnoth-1.12.5.tar.bz2) = 5c615864f35b3a6627ff7a28b3e490ae7f600299
-SHA512 (wesnoth-1.12.5.tar.bz2) = 1a785c02389cd4bdc79b61f62c5bb98f01fde61c3923527195a5a8e8f8986349fcda3d40a4fb14248626ea8e79eba12b8232e39cce08bfea7fbdf3d9627d53b4
-Size (wesnoth-1.12.5.tar.bz2) = 387726941 bytes
+SHA1 (wesnoth-1.12.6.tar.bz2) = 225b018d9e61191d3c48663a515ecca82c4d8995
+RMD160 (wesnoth-1.12.6.tar.bz2) = 8a097e8b711e428799ebc0b95e8d771d83035db6
+SHA512 (wesnoth-1.12.6.tar.bz2) = 12ca3b5de8fd385b05cc8e76604f7aed68127a7542599d6e97cce793e10636e00bd65dcb088701e20ccc7191f41b1d67a00b291f885df880fac00d13d6fbde7a
+Size (wesnoth-1.12.6.tar.bz2) = 387869758 bytes
 SHA1 (patch-CMakeLists.txt) = 1f17a95793db0d311508f1ff93f9aacedc7782f9
 SHA1 (patch-ae) = 17c9f08bbe2aeb12771fc1c3430b1cf84ee75e15
 SHA1 (patch-af) = ed3ef2d26a33b87e42e8c820c669315b81bf7938
