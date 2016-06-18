@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2015/11/03 01:12:34 agc Exp $
+$NetBSD: distinfo,v 1.13 2016/06/18 11:24:54 ryoon Exp $
 
-SHA1 (hydrogen-0.9.6.1/0.9.6.1.tar.gz) = 3a288fbb06f65fd257e7f7648e07891276dbf56a
-RMD160 (hydrogen-0.9.6.1/0.9.6.1.tar.gz) = a5b3c969c51fdbd18d0fe7eadae3199e44b192aa
-SHA512 (hydrogen-0.9.6.1/0.9.6.1.tar.gz) = afb501fb1565a95677aa2702f5d93ee611f03f60dfc8aa5a22714bb261bfeecf2b28e0b591763ec4d1a0b60f8153ef01c3fdfae924ca252943a2396ac953717f
-Size (hydrogen-0.9.6.1/0.9.6.1.tar.gz) = 6626629 bytes
+SHA1 (Hydrogen-0.9.6.1.tar.gz) = 3a288fbb06f65fd257e7f7648e07891276dbf56a
+RMD160 (Hydrogen-0.9.6.1.tar.gz) = a5b3c969c51fdbd18d0fe7eadae3199e44b192aa
+SHA512 (Hydrogen-0.9.6.1.tar.gz) = afb501fb1565a95677aa2702f5d93ee611f03f60dfc8aa5a22714bb261bfeecf2b28e0b591763ec4d1a0b60f8153ef01c3fdfae924ca252943a2396ac953717f
+Size (Hydrogen-0.9.6.1.tar.gz) = 6626629 bytes
