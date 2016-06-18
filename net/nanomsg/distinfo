@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/06/18 08:16:27 kamil Exp $
+
+SHA1 (nanomsg-1.0.0.tar.gz) = 57f90778a9bb7b95a7fd73910fd41894f3ee9cab
+RMD160 (nanomsg-1.0.0.tar.gz) = fb5b2218aafe90951354d30baeaf0d06a6f9722a
+SHA512 (nanomsg-1.0.0.tar.gz) = 06fc4eadac29439024bd24230c73f43ddc46e6b6848ad75952b67bf301066be5752a844173597c1b42e55c1ebb66a2d2cb7693e4cbfc07584b4398597cbc9200
+Size (nanomsg-1.0.0.tar.gz) = 305040 bytes
