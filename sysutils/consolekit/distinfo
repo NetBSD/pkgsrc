@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.13 2016/06/18 10:23:16 youri Exp $
+$NetBSD: distinfo,v 1.14 2016/06/18 11:09:35 ryoon Exp $
 
-SHA1 (1.0.2.tar.gz) = aca2f13f65e77ebffc9fb65d6102cd8edde522ba
-RMD160 (1.0.2.tar.gz) = 1af1cfe8bdfc92215e8393eb4246c0e8667ae5e5
-SHA512 (1.0.2.tar.gz) = a0ce6b3b8eded4ec9fb0774b617cbf6b50aedef16a2bc28ec783e296eb3acc4a250611abb108aaf4f3716f3386ba397644fe55615e516f156982e9102cbb950e
-Size (1.0.2.tar.gz) = 205101 bytes
-SHA1 (patch-data_Makefile.am) = 7d37d6c3b5c0bab2e1e4b7000bd23f72b646cf9c
+SHA1 (ConsoleKit2-1.0.2.tar.bz2) = 57b5fc3eae0391105e4933e79e6aeda943e6da81
+RMD160 (ConsoleKit2-1.0.2.tar.bz2) = 7b151e8d25dedb6961d2d83b934d79d9411147ff
+SHA512 (ConsoleKit2-1.0.2.tar.bz2) = a6d1c876aafe3cb102d916c6b6086283eff77d2f35fbda460196cb71daf16d21a6713096bfc9e1b6ccef9719b2fcb25b6124024f3245f9410d0e503087c479f7
+Size (ConsoleKit2-1.0.2.tar.bz2) = 622723 bytes
+SHA1 (patch-data_Makefile.am) = 5de63a98459914c7fda185d71fefd553b82107d3
+SHA1 (patch-data_Makefile.in) = a1861d2b80cc45ec6e4d625b635d1fb3c8b90122
