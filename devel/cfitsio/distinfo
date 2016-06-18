@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.13 2015/11/03 03:27:18 agc Exp $
+$NetBSD: distinfo,v 1.14 2016/06/18 09:06:11 mef Exp $
 
-SHA1 (cfitsio3370.tar.gz) = 48bd6389dcff3228508eec70384f2cae3a88ff32
-RMD160 (cfitsio3370.tar.gz) = 709e2d3e9d69abe84f93a8cbc343f05eddedf8b9
-SHA512 (cfitsio3370.tar.gz) = 97c820757513ac0c59c277b39b8f8a6d1cbc1b2d37ca8ee68d645533a37d25fcdba87e676eaaf3cfa557c34591e9476326d892e0f8c42d3e1372e1d6a4406d18
-Size (cfitsio3370.tar.gz) = 4738430 bytes
-SHA1 (patch-aa) = f0942f57ba02fe62d373cbfe9315b3e1f87ab05f
+SHA1 (cfitsio3390.tar.gz) = 818ee00793ae27dfc75752c2415d0a7230ad5066
+RMD160 (cfitsio3390.tar.gz) = 515146dd69dfacc0a41f5d2727332c81b9fa501b
+SHA512 (cfitsio3390.tar.gz) = 9e72fe58e1b2e45dfad23c5a60f9056a4e958b3b567751c5284d5d89992f0a2721aa44ede8655f0e1595eaea9d6ba4644b001c54274764f9d05f890d471e4534
+Size (cfitsio3390.tar.gz) = 4755390 bytes
+SHA1 (patch-aa) = cacbc44cd442096d094faef79a2bb47980df8543
 SHA1 (patch-ad) = 761aedc2ae885c119ac2726ba89aaa7c193a8834
