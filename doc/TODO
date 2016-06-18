@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16032 2016/06/17 16:31:46 jaapb Exp $
+$NetBSD: TODO,v 1.16033 2016/06/18 06:42:00 bsiegert Exp $
 
 Suggested new packages
 ======================
@@ -1023,6 +1023,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o libjit-1.0.2
 	o libkface-4.14.0
 	o libkgeomap-4.14.0
+	o libksba-1.3.4
 	o libkvkontakte-4.14.0
 	o liblzo-2.09
 	o libmatheval-1.1.11
