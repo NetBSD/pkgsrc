@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.5 2015/04/08 16:23:28 hiramatsu Exp $
+$NetBSD: patch-aa,v 1.6 2016/06/18 09:06:11 mef Exp $
 
 Use libtool.
 
---- Makefile.in.orig	2014-06-04 03:51:29.000000000 +0900
-+++ Makefile.in	2015-04-08 21:11:43.000000000 +0900
-@@ -34,12 +34,13 @@
+--- Makefile.in.orig	2016-04-02 04:06:28.000000000 +0900
++++ Makefile.in	2016-06-18 17:30:44.000000000 +0900
+@@ -37,14 +37,15 @@ INSTALL_DIRS	= @INSTALL_ROOT@ ${CFITSIO_
  SHELL =		/bin/sh
  ARCHIVE =	@ARCHIVE@
  RANLIB =	@RANLIB@
@@ -12,92 +12,90 @@ Use libtool.
 +CC =		${LIBTOOL} --mode=compile @CC@
 +LD =		${LIBTOOL} --mode=link @CC@
  CFLAGS =	@CFLAGS@
+ CPPFLAGS =	@CPPFLAGS@
  SSE_FLAGS =	@SSE_FLAGS@
  FC =		@FC@
- LDFLAGS =	$(CFLAGS)
+ LDFLAGS =	@LDFLAGS@
+ LDFLAGS_BIN =	@LDFLAGS_BIN@
 -DEFS =		@DEFS@
 +DEFS =		@DEFS@ -Dunix
  LIBS =		@LIBS@
  FLEX =		flex
  BISON =		bison
-@@ -89,11 +90,10 @@
+@@ -94,11 +95,11 @@ all:
  all-nofitsio:
  		${MAKE} stand_alone "FITSIO_SRC="
  
--stand_alone:	libcfitsio.a
-+stand_alone:	libcfitsio.la
+-stand_alone:	lib${PACKAGE}.a
++stand_alone:	lib${PACKAGE}.la
  
--libcfitsio.a:	${OBJECTS}
--		${ARCHIVE} libcfitsio.a ${OBJECTS}; \
--		${RANLIB} libcfitsio.a;
-+libcfitsio.la:	${OBJECTS}
+-lib${PACKAGE}.a:	${OBJECTS}
+-		${ARCHIVE} $@ ${OBJECTS}; \
+-		${RANLIB} $@;
++lib${PACKAGE}.la:	${OBJECTS}
++		${ARCHIVE} $lib${PACKAGE}.la ${OBJECTS}; \
 +		${LIBTOOL} --mode=link @CC@ -o $@ ${OBJECTS:.o=.lo} -rpath ${PREFIX}/lib -version-info 3:0
  
- shared: libcfitsio${SHLIB_SUFFIX}
+ shared: lib${PACKAGE}${SHLIB_SUFFIX}
  
-@@ -104,10 +104,10 @@
+@@ -109,10 +110,10 @@ lib${PACKAGE}${SHLIB_SUFFIX}: ${OBJECTS}
  			ln -sf ${CFITSIO_SHLIB_SONAME} $@; \
  		fi
  
--install:	libcfitsio.a $(INSTALL_DIRS)
--		/bin/cp -a libcfitsio* ${CFITSIO_LIB}
+-install:	lib${PACKAGE}.a ${INSTALL_DIRS}
+-		/bin/cp -a lib${PACKAGE}* ${CFITSIO_LIB}
 -		/bin/cp fitsio.h fitsio2.h longnam.h drvrsmem.h ${CFITSIO_INCLUDE}
 -		/bin/cp cfitsio.pc ${CFITSIO_LIB}/pkgconfig
-+install:	libcfitsio.la $(INSTALL_DIRS)
++install:	lib${PACKAGE}.la ${INSTALL_DIRS}
 +		${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} libcfitsio.la ${CFITSIO_LIB}
 +		${BSD_INSTALL_DATA} fitsio.h fitsio2.h longnam.h drvrsmem.h ${CFITSIO_INCLUDE}/
 +		${BSD_INSTALL_DATA} cfitsio.pc ${CFITSIO_LIB}/pkgconfig
- 
- .c.o:
- 		$(CC) -c -o ${<D}/${@F} $(CFLAGS) $(DEFS) $<
-@@ -115,32 +115,32 @@
+ 		@for task in ${FPACK_UTILS} ${UTILS}; do \
+ 		    if [ -f $$task ]; then \
+ 			if [ ! -d ${CFITSIO_BIN} ]; then mkdir -p ${CFITSIO_BIN}; fi; \
+@@ -133,29 +134,29 @@ utils:		${FPACK_UTILS} ${UTILS}
  swapproc.o:	swapproc.c
- 		$(CC) -c $(CFLAGS) $(SSE_FLAGS) $(DEFS) $<
+ 		${CC} -c ${CFLAGS} ${CPPFLAGS} ${SSE_FLAGS} ${DEFS} $<
  
--smem:		smem.o libcfitsio.a ${OBJECTS}
--		${CC} $(CFLAGS) $(DEFS) -o smem smem.o -L. -lcfitsio -lm
-+smem:		smem.o libcfitsio.la ${OBJECTS}
+-smem:		smem.o lib${PACKAGE}.a ${OBJECTS}
+-		${CC} ${LDFLAGS_BIN} ${DEFS} -o $@ ${@}.o -L. -l${PACKAGE} -lm
++smem:		smem.o lib${PACKAGE}.la ${OBJECTS}
 +		${LD} $(CFLAGS) $(DEFS) -o smem smem.o -L. -lcfitsio -lm
  
--testprog:	testprog.o libcfitsio.a ${OBJECTS}
--		${CC} $(CFLAGS) $(DEFS) -o testprog testprog.o -L. -lcfitsio -lm ${LIBS}
-+testprog:	testprog.o libcfitsio.la ${OBJECTS}
-+		${LD} $(CFLAGS) $(DEFS) -o testprog testprog.o -L. -lcfitsio -lm ${LIBS}
+-testprog:	testprog.o lib${PACKAGE}.a ${OBJECTS}
+-		${CC} ${LDFLAGS_BIN} ${DEFS} -o $@ ${@}.o -L. -l${PACKAGE} -lm ${LIBS}
++testprog:	testprog.o lib${PACKAGE}.la ${OBJECTS}
++		${LD} ${LDFLAGS_BIN} ${DEFS} -o $@ ${@}.o -L. -l${PACKAGE} -lm ${LIBS}
  
--fpack:		fpack.o fpackutil.o libcfitsio.a ${OBJECTS}
--		${CC} $(CFLAGS) $(DEFS) -o fpack fpack.o fpackutil.o libcfitsio.a -lm ${LIBS}
-+fpack:		fpack.o fpackutil.o libcfitsio.la ${OBJECTS}
-+		${LD} $(CFLAGS) $(DEFS) -o fpack fpack.o fpackutil.o libcfitsio.a -lm ${LIBS}
+-fpack:		fpack.o fpackutil.o lib${PACKAGE}.a ${OBJECTS}
+-		${CC} ${LDFLAGS_BIN} ${DEFS} -o $@ ${@}.o fpackutil.o -L. -l${PACKAGE} -lm ${LIBS}
++fpack:		fpack.o fpackutil.o lib${PACKAGE}.la ${OBJECTS}
++		${LD} ${LDFLAGS_BIN} ${DEFS} -o $@ ${@}.o fpackutil.o -L. -l${PACKAGE} -lm ${LIBS}
  
--funpack:	funpack.o fpackutil.o libcfitsio.a ${OBJECTS}
--		${CC} $(CFLAGS) $(DEFS) -o funpack funpack.o fpackutil.o libcfitsio.a -lm ${LIBS}
-+funpack:	funpack.o fpackutil.o libcfitsio.la ${OBJECTS}
-+		${LD} $(CFLAGS) $(DEFS) -o funpack funpack.o fpackutil.o libcfitsio.a -lm ${LIBS}
+-funpack:	funpack.o fpackutil.o lib${PACKAGE}.a ${OBJECTS}
+-		${CC} ${LDFLAGS_BIN} ${DEFS} -o $@ ${@}.o fpackutil.o -L. -l${PACKAGE} -lm ${LIBS}
++funpack:	funpack.o fpackutil.o lib${PACKAGE}.la ${OBJECTS}
++		${LD} ${LDFLAGS_BIN} ${DEFS} -o $@ ${@}.o fpackutil.o -L. -l${PACKAGE} -lm ${LIBS}
  
--fitscopy:	fitscopy.o libcfitsio.a ${OBJECTS}
--		${CC} $(CFLAGS) $(DEFS) -o fitscopy fitscopy.o -L. -lcfitsio -lm ${LIBS}
-+fitscopy:	fitscopy.o libcfitsio.la ${OBJECTS}
-+		${LD} $(CFLAGS) $(DEFS) -o fitscopy fitscopy.o -L. -lcfitsio -lm ${LIBS}
+-fitscopy:	fitscopy.o lib${PACKAGE}.a ${OBJECTS}
+-		${CC} ${LDFLAGS_BIN} ${DEFS} -o $@ ${@}.o -L. -l${PACKAGE} -lm ${LIBS}
++fitscopy:	fitscopy.o lib${PACKAGE}.la ${OBJECTS}
++		${LD} ${LDFLAGS_BIN} ${DEFS} -o $@ ${@}.o -L. -l${PACKAGE} -lm ${LIBS}
  
--speed:		speed.o libcfitsio.a ${OBJECTS}
--		${CC} $(CFLAGS) $(DEFS) -o speed speed.o -L. -lcfitsio -lm ${LIBS}
-+speed:		speed.o libcfitsio.la ${OBJECTS}
-+		${LD} $(CFLAGS) $(DEFS) -o speed speed.o -L. -lcfitsio -lm ${LIBS}
+-speed:		speed.o lib${PACKAGE}.a ${OBJECTS}
+-		${CC} ${LDFLAGS_BIN} ${DEFS} -o $@ ${@}.o -L. -l${PACKAGE} -lm ${LIBS}
++speed:		speed.o lib${PACKAGE}.la ${OBJECTS}
++		${LD} ${LDFLAGS_BIN} ${DEFS} -o $@ ${@}.o -L. -l${PACKAGE} -lm ${LIBS}
  
--imcopy:		imcopy.o libcfitsio.a ${OBJECTS}
--		${CC} $(CFLAGS) $(DEFS) -o imcopy imcopy.o -L. -lcfitsio -lm ${LIBS}
-+imcopy:		imcopy.o libcfitsio.la ${OBJECTS}
-+		${LD} $(CFLAGS) $(DEFS) -o imcopy imcopy.o -L. -lcfitsio -lm ${LIBS}
+-imcopy:		imcopy.o lib${PACKAGE}.a ${OBJECTS}
+-		${CC} ${LDFLAGS_BIN} ${DEFS} -o $@ ${@}.o -L. -l${PACKAGE} -lm ${LIBS}
++imcopy:		imcopy.o lib${PACKAGE}.la ${OBJECTS}
++		${LD} ${LDFLAGS_BIN} ${DEFS} -o $@ ${@}.o -L. -l${PACKAGE} -lm ${LIBS}
  
--listhead:	listhead.o libcfitsio.a ${OBJECTS}
--		${CC} $(CFLAGS) $(DEFS) -o listhead listhead.o -L. -lcfitsio -lm ${LIBS}
-+listhead:	listhead.o libcfitsio.la ${OBJECTS}
-+		${LD} $(CFLAGS) $(DEFS) -o listhead listhead.o -L. -lcfitsio -lm ${LIBS}
- 
--cookbook:	cookbook.o libcfitsio.a ${OBJECTS}
--		${CC} $(CFLAGS) $(DEFS) -o cookbook cookbook.o -L. -lcfitsio -lm ${LIBS}
-+cookbook:	cookbook.o libcfitsio.la ${OBJECTS}
-+		${LD} $(CFLAGS) $(DEFS) -o cookbook cookbook.o -L. -lcfitsio -lm ${LIBS}
+-cookbook:	cookbook.o lib${PACKAGE}.a ${OBJECTS}
+-		${CC} ${LDFLAGS_BIN} ${DEFS} -o $@ ${@}.o -L. -l${PACKAGE} -lm ${LIBS}
++cookbook:	cookbook.o lib${PACKAGE}.la ${OBJECTS}
++		${LD} ${LDFLAGS_BIN} ${DEFS} -o $@ ${@}.o -L. -l${PACKAGE} -lm ${LIBS}
  
  eval:		# Rebuild eval_* files from flex/bison source
- 		$(FLEX) -t eval.l > eval_l.c1
+ 		${FLEX} -t eval.l > eval_l.c1
