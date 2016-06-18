@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2499 2016/06/18 13:47:40 mef Exp $
+$NetBSD: CHANGES-2016,v 1.2500 2016/06/18 13:53:36 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3623,3 +3623,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/mikutter to 3.4.1 [tsutsui 2016-06-18]
 	Added www/p5-URI-ws version 0.03 [kamil 2016-06-18]
 	Updated devel/p5-Array-Compare to 2.12 [mef 2016-06-18]
+	Updated devel/p5-CPAN-Checksums to 2.12 [mef 2016-06-18]
