@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2494 2016/06/18 10:58:48 leot Exp $
+$NetBSD: CHANGES-2016,v 1.2495 2016/06/18 11:30:01 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3618,3 +3618,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added security/ecap_clamav_adapter version 2.0.0 [prlw1 2016-06-18]
 	Updated sysutils/consolekit to 1.0.2 [youri 2016-06-18]
 	Updated multimedia/mpv to 0.17.0nb1 [leot 2016-06-18]
+	Added net/nanomsgxx version 0.2 [kamil 2016-06-18]
