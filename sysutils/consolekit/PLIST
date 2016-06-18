@@ -1,15 +1,24 @@
-@comment $NetBSD: PLIST,v 1.6 2016/06/04 16:28:22 youri Exp $
+@comment $NetBSD: PLIST,v 1.7 2016/06/18 10:23:16 youri Exp $
 bin/ck-history
 bin/ck-launch-session
 bin/ck-list-sessions
 include/ConsoleKit/ck-connector/ck-connector.h
+lib/ConsoleKit/scripts/ck-system-hibernate
+lib/ConsoleKit/scripts/ck-system-hybridsleep
 lib/ConsoleKit/scripts/ck-system-restart
 lib/ConsoleKit/scripts/ck-system-stop
+lib/ConsoleKit/scripts/ck-system-suspend
 lib/libck-connector.la
 lib/pkgconfig/ck-connector.pc
+lib/security/pam_ck_connector.la
 libexec/ck-collect-session-info
 libexec/ck-get-x11-display-device
 libexec/ck-get-x11-server-pid
+man/man1/ck-history.1
+man/man1/ck-launch-session.1
+man/man1/ck-list-sessions.1
+man/man1/console-kit-daemon.1m
+man/man8/pam_ck_connector.8
 sbin/ck-log-system-restart
 sbin/ck-log-system-start
 sbin/ck-log-system-stop
@@ -18,10 +27,17 @@ share/dbus-1/interfaces/org.freedesktop.ConsoleKit.Manager.xml
 share/dbus-1/interfaces/org.freedesktop.ConsoleKit.Seat.xml
 share/dbus-1/interfaces/org.freedesktop.ConsoleKit.Session.xml
 share/dbus-1/system-services/org.freedesktop.ConsoleKit.service
-share/examples/consolekit/00-primary.seat
-share/examples/consolekit/ConsoleKit.conf
+share/examples/consolekit/ConsoleKit/seats.d/00-primary.seat
+share/examples/consolekit/X11/xinit/xinitrc.d/90-consolekit
+share/examples/consolekit/dbus-1/system.d/ConsoleKit.conf
+share/examples/consolekit/logrotate.d/consolekit
+share/locale/bg/LC_MESSAGES/ConsoleKit2.mo
+share/locale/es/LC_MESSAGES/ConsoleKit2.mo
+share/locale/es_419/LC_MESSAGES/ConsoleKit2.mo
+share/locale/ru/LC_MESSAGES/ConsoleKit2.mo
 share/polkit-1/actions/org.freedesktop.consolekit.policy
+share/polkit-1/rules.d/50-shutdown.rules
+@pkgdir share/examples/consolekit/ConsoleKit/run-session.d
+@pkgdir share/examples/consolekit/ConsoleKit/run-seat.d
 @pkgdir lib/ConsoleKit/run-session.d
 @pkgdir lib/ConsoleKit/run-seat.d
-@pkgdir etc/ConsoleKit/run-session.d
-@pkgdir etc/ConsoleKit/run-seat.d

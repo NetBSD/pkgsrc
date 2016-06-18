@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2016/06/18 10:23:16 youri Exp $
+
+ConsoleKit:
+
+Users in the operator group can stop, restart, suspend, hibernate the
+machine as described in ${PREFIX}/share/polkit-1/rules.d/50-shutdown.rules.
+
+===========================================================================
