@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16036 2016/06/18 09:08:12 mef Exp $
+$NetBSD: TODO,v 1.16037 2016/06/18 11:31:07 mef Exp $
 
 Suggested new packages
 ======================
@@ -492,7 +492,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cdk-5.0.20120323
 	o cdrkit-1.1.10
 	o cfengine3-3.8.1
-	o cflow-1.5
 	o cflow-mode-1.4
 	o cgal-4.6.1
 	o cgen-20160301
