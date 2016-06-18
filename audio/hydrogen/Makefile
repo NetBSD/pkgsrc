@@ -1,19 +1,19 @@
-# $NetBSD: Makefile,v 1.50 2016/04/20 12:10:26 nros Exp $
+# $NetBSD: Makefile,v 1.51 2016/06/18 11:24:54 ryoon Exp $
 
-DISTNAME=	0.9.6.1
-PKGNAME=	hydrogen-0.9.6.1
+DISTNAME=	Hydrogen-0.9.6.1
+PKGNAME=	${DISTNAME:tl}
 PKGREVISION=	2
 CATEGORIES=	audio
-MASTER_SITES=	https://github.com/hydrogen-music/hydrogen/archive/
-
-# Hydrogen publishes files like ".../archive/0.9.6.1.tar.gz"
-DIST_SUBDIR=	${PKGNAME_NOREV}
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
+MASTER_SITES=	${MASTER_SITE_GITHUB:=hydrogen-music/}
+GITHUB_PROJECT=	Hydrogen
+GITHUB_TAG=	${PKGVERSION_NOREV}
 
 MAINTAINER=	mrg@eterna.com.au
 HOMEPAGE=	http://www.hydrogen-music.org/
 COMMENT=	Real time drum machine/sequencer
 LICENSE=	gnu-gpl-v2
+
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
