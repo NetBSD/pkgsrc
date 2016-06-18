@@ -1,9 +1,9 @@
-$NetBSD: patch-src_polkit_polkitunixprocess.c,v 1.1 2016/05/20 18:39:33 youri Exp $
+$NetBSD: patch-src_polkit_polkitunixprocess.c,v 1.2 2016/06/18 12:16:23 youri Exp $
 
 * NetBSD support
 * SunOS support
 
---- src/polkit/polkitunixprocess.c.orig 2014-01-14 22:42:25.000000000 +0000
+--- src/polkit/polkitunixprocess.c.orig	2014-01-14 22:42:25.000000000 +0000
 +++ src/polkit/polkitunixprocess.c
 @@ -29,10 +29,19 @@
  #include <sys/sysctl.h>
@@ -22,17 +22,17 @@ $NetBSD: patch-src_polkit_polkitunixprocess.c,v 1.1 2016/05/20 18:39:33 youri Ex
 +#ifdef HAVE_SOLARIS
 +#include <procfs.h>
 +#endif
-
+ 
  #include "polkitunixprocess.h"
  #include "polkitsubject.h"
 @@ -80,7 +89,7 @@ enum
-
+ 
  static void subject_iface_init (PolkitSubjectIface *subject_iface);
-
+ 
 -static guint64 get_start_time_for_pid (gint    pid,
 +static guint64 get_start_time_for_pid (pid_t    pid,
                                         GError **error);
-
+ 
  static gint _polkit_unix_process_get_owner (PolkitUnixProcess  *process,
 @@ -89,6 +98,9 @@ static gint _polkit_unix_process_get_own
  #ifdef HAVE_FREEBSD
@@ -41,11 +41,11 @@ $NetBSD: patch-src_polkit_polkitunixprocess.c,v 1.1 2016/05/20 18:39:33 youri Ex
 +#if defined(__NetBSD__)
 +static gboolean get_kinfo_proc (gint pid, struct kinfo_proc2 *p);
 +#endif
-
+ 
  G_DEFINE_TYPE_WITH_CODE (PolkitUnixProcess, polkit_unix_process, G_TYPE_OBJECT,
                           G_IMPLEMENT_INTERFACE (POLKIT_TYPE_SUBJECT, subject_iface_init)
 @@ -514,17 +526,17 @@ subject_iface_init (PolkitSubjectIface *
-
+ 
  #ifdef HAVE_SOLARIS
  static int
 -get_pid_psinfo (pid_t pid, struct psinfo *ps)
@@ -53,7 +53,7 @@ $NetBSD: patch-src_polkit_polkitunixprocess.c,v 1.1 2016/05/20 18:39:33 youri Ex
  {
    char pname[32];
    int  procfd;
-
+ 
 -  (void) snprintf(pname, sizeof(pname), "/proc/%d/psinfo", pid);
 +  (void) snprintf(pname, sizeof(pname), "/proc/%lu/psinfo", pid);
    if ((procfd = open(pname, O_RDONLY)) == -1)
@@ -68,7 +68,7 @@ $NetBSD: patch-src_polkit_polkitunixprocess.c,v 1.1 2016/05/20 18:39:33 youri Ex
 @@ -554,12 +566,38 @@ get_kinfo_proc (pid_t pid, struct kinfo_
  }
  #endif
-
+ 
 +#ifdef __NetBSD__
 +static gboolean
 +get_kinfo_proc (pid_t pid, struct kinfo_proc2 *p)
@@ -108,10 +108,10 @@ $NetBSD: patch-src_polkit_polkitunixprocess.c,v 1.1 2016/05/20 18:39:33 youri Ex
 @@ -571,7 +609,7 @@ get_start_time_for_pid (pid_t    pid,
    start_time = 0;
    contents = NULL;
-
+ 
 -  filename = g_strdup_printf ("/proc/%d/stat", pid);
 +  filename = g_strdup_printf ("/proc/%lu/stat", pid);
-
+ 
    if (!g_file_get_contents (filename, &contents, &length, error))
      goto out;
 @@ -631,8 +669,8 @@ get_start_time_for_pid (pid_t    pid,
@@ -122,13 +122,13 @@ $NetBSD: patch-src_polkit_polkitunixprocess.c,v 1.1 2016/05/20 18:39:33 youri Ex
 -  struct kinfo_proc p;
 +#elif defined(__NetBSD__)
 +  struct kinfo_proc2 p;
-
+ 
    start_time = 0;
-
+ 
 @@ -647,9 +685,43 @@ get_start_time_for_pid (pid_t    pid,
        goto out;
      }
-
+ 
 +  start_time = (guint64) p.p_ustart_sec;
 +
 +out:
@@ -148,7 +148,7 @@ $NetBSD: patch-src_polkit_polkitunixprocess.c,v 1.1 2016/05/20 18:39:33 youri Ex
 +    }
 +
    start_time = (guint64) p.ki_start.tv_sec;
-
+ 
  out:
 +#elif HAVE_SOLARIS
 +  psinfo_t p;
@@ -167,7 +167,7 @@ $NetBSD: patch-src_polkit_polkitunixprocess.c,v 1.1 2016/05/20 18:39:33 youri Ex
 +#else
 +#warning Your system is not supported
  #endif
-
+ 
    return start_time;
 @@ -664,6 +736,10 @@ _polkit_unix_process_get_owner (PolkitUn
    gchar **lines;
@@ -183,7 +183,7 @@ $NetBSD: patch-src_polkit_polkitunixprocess.c,v 1.1 2016/05/20 18:39:33 youri Ex
 @@ -676,7 +752,7 @@ _polkit_unix_process_get_owner (PolkitUn
    lines = NULL;
    contents = NULL;
-
+ 
 -#ifdef HAVE_FREEBSD
 +#if defined(HAVE_FREEBSD) || defined(__NetBSD__)
    if (get_kinfo_proc (process->pid, &p) == 0)
@@ -192,7 +192,7 @@ $NetBSD: patch-src_polkit_polkitunixprocess.c,v 1.1 2016/05/20 18:39:33 youri Ex
 @@ -688,7 +764,23 @@ _polkit_unix_process_get_owner (PolkitUn
        goto out;
      }
-
+ 
 +#ifdef __NetBSD__
 +  result = p.p_uid;
 +#else
@@ -211,5 +211,5 @@ $NetBSD: patch-src_polkit_polkitunixprocess.c,v 1.1 2016/05/20 18:39:33 youri Ex
 +    }
 +  result = p.pr_uid;
  #else
-
+ 
    /* see 'man proc' for layout of the status file
