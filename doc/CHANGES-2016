@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2491 2016/06/18 09:06:19 mef Exp $
+$NetBSD: CHANGES-2016,v 1.2492 2016/06/18 10:19:37 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3615,3 +3615,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/byacc to 20160606 [mef 2016-06-18]
 	Added net/nanomsg version 1.0.0 [kamil 2016-06-18]
 	Updated devel/cfitsio to 3.390 [mef 2016-06-18]
+	Added security/ecap_clamav_adapter version 2.0.0 [prlw1 2016-06-18]
