@@ -1,12 +1,7 @@
-$NetBSD: distinfo,v 1.12 2015/11/04 01:32:08 agc Exp $
+$NetBSD: distinfo,v 1.13 2016/06/18 10:23:16 youri Exp $
 
-SHA1 (ConsoleKit-0.4.6.tar.xz) = bde79a4aa1bf3dc69a8e03731c7eb06e2dbda2d3
-RMD160 (ConsoleKit-0.4.6.tar.xz) = 7140db9e26accde56d672330e7045fafbafe6990
-SHA512 (ConsoleKit-0.4.6.tar.xz) = 54955e3e83778a9216846104da8762fd50a37190e209127dd5d211e2227da617e14f6f5c1359905396d299656e526d14e1187b28eaff7d0ae1d7563dc8d9b46d
-Size (ConsoleKit-0.4.6.tar.xz) = 366572 bytes
-SHA1 (patch-aa) = 1c637d4ba3dfbb17d141f6b29140cf1d3d42ed7e
-SHA1 (patch-ab) = c32c8f88a0dd87c9b6d4473bf6526c07fb593404
-SHA1 (patch-ac) = 3ef09f16ee039da7cea0c020c2aeccfe5d88c57c
-SHA1 (patch-ad) = c0cf170a85e04e2dadfd490f303a40e8d62cc626
-SHA1 (patch-ae) = dcb689861f8ee425b94a8acf1cb344a782b4328b
-SHA1 (patch-af) = 9c7febd3a1e995060e5755b205c5d4a7217bc1b8
+SHA1 (1.0.2.tar.gz) = aca2f13f65e77ebffc9fb65d6102cd8edde522ba
+RMD160 (1.0.2.tar.gz) = 1af1cfe8bdfc92215e8393eb4246c0e8667ae5e5
+SHA512 (1.0.2.tar.gz) = a0ce6b3b8eded4ec9fb0774b617cbf6b50aedef16a2bc28ec783e296eb3acc4a250611abb108aaf4f3716f3386ba397644fe55615e516f156982e9102cbb950e
+Size (1.0.2.tar.gz) = 205101 bytes
+SHA1 (patch-data_Makefile.am) = 7d37d6c3b5c0bab2e1e4b7000bd23f72b646cf9c
