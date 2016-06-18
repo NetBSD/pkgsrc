@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1118 2016/06/18 08:17:03 kamil Exp $
+# $NetBSD: Makefile,v 1.1119 2016/06/18 11:28:53 kamil Exp $
 #
 
 COMMENT=	Networking tools
@@ -364,6 +364,7 @@ SUBDIR+=	nagios-plugins
 SUBDIR+=	nagstamon
 SUBDIR+=	nam
 SUBDIR+=	nanomsg
+SUBDIR+=	nanomsgxx
 SUBDIR+=	nap
 SUBDIR+=	napshare
 SUBDIR+=	nasd
