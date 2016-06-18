@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.32 2016/06/18 11:09:35 ryoon Exp $
+# $NetBSD: Makefile,v 1.33 2016/06/18 11:20:40 kamil Exp $
 
 CONSOLEKIT_VER=	1.0.2
 DISTNAME=	ConsoleKit2-1.0.2
 PKGNAME=	consolekit-${CONSOLEKIT_VER}
 CATEGORIES=	sysutils
-MASTER_SITES=	https://github.com/ConsoleKit2/ConsoleKit2/releases/download/${CONSOLEKIT_VER}/
+GITHUB_RELEASE= ${CONSOLEKIT_VER}
+GITHUB_PROJECT=	ConsoleKit2
+MASTER_SITES=	${MASTER_SITE_GITHUB:=ConsoleKit2/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	youri@NetBSD.org
