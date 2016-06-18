@@ -1,17 +1,10 @@
-# $NetBSD: Makefile,v 1.229 2016/03/22 14:43:53 khorben Exp $
-#
-# The CUPS author is very good about taking back changes into the main
-# CUPS distribution.  The correct place to send patches or bug-fixes is:
-# cups-bugs@cups.org.
+# $NetBSD: Makefile,v 1.230 2016/06/18 20:36:38 leot Exp $
 
-DISTNAME=	cups-${DIST_VERS}-source
-PKGNAME=	cups-${DIST_VERS:S/-/./g}
-PKGREVISION=	1
-BASE_VERS=	2.1.3
-DIST_VERS=	${BASE_VERS}
+DISTNAME=	cups-2.1.4-source
+PKGNAME=	${DISTNAME:S/-source//}
 CATEGORIES=	print
-MASTER_SITES=	http://www.cups.org/software/${BASE_VERS}/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GITHUB:=apple/}
+GITHUB_RELEASE=	release-${PKGVERSION_NOREV}
 
 MAINTAINER=	sbd@NetBSD.org
 HOMEPAGE=	http://www.cups.org/
@@ -20,7 +13,7 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 
 CONFLICTS+=	LPRng-[0-9]* LPRng-core-[0-9]*
 
-WRKSRC=			${WRKDIR}/cups-${BASE_VERS}
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 UNLIMIT_RESOURCES=	datasize memorysize
 USE_LANGUAGES=		c c++	# pdftops is a C++ application
 USE_PKGLOCALEDIR=	yes
