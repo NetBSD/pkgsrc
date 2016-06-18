@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/06/18 22:11:53 kamil Exp $
+
+SHA1 (harvid-0.8.1.tar.gz) = ad132fed434bf648f92ed84c57b5b4a749ceeea2
+RMD160 (harvid-0.8.1.tar.gz) = 4b4545fafcaa620402f417a72e235062a41d88f5
+SHA512 (harvid-0.8.1.tar.gz) = b425eca844bb9eec3ec8caa324f783132a3e83938b258a5f8e92ce6dc47108ae491a009223b7e3c8051d965a1ff1b5e5509a804d1462641128a8524cde5ae60a
+Size (harvid-0.8.1.tar.gz) = 116277 bytes
