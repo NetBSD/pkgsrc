@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2509 2016/06/18 21:49:14 youri Exp $
+$NetBSD: CHANGES-2016,v 1.2510 2016/06/18 22:15:38 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3637,3 +3637,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated games/wesnoth to 1.12.6 [leot 2016-06-18]
 	Updated x11/xephem to 3.7.7 [jakllsch 2016-06-18]
 	Updated x11/mate-panel to 1.14.1nb1 [youri 2016-06-18]
+	Added multimedia/harvid version 0.8.1 [kamil 2016-06-18]
