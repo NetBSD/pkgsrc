@@ -1,8 +1,10 @@
-$NetBSD: patch-ab,v 1.1 2005/12/09 13:47:58 joerg Exp $
+$NetBSD: patch-bm__unix.c,v 1.1 2016/06/19 16:55:28 tsutsui Exp $
 
---- bm_unix.c.orig	2005-12-09 13:38:29.000000000 +0000
+- use <errno.h> for errno.
+
+--- bm_unix.c.orig	2013-08-25 18:59:33.000000000 +0000
 +++ bm_unix.c
-@@ -25,6 +25,7 @@
+@@ -27,6 +27,7 @@
  
  
  #include "bmore.h"
@@ -10,7 +12,7 @@ $NetBSD: patch-ab,v 1.1 2005/12/09 13:47:58 joerg Exp $
  #include <termios.h>
  
  #define TBUFSIZ 1024
-@@ -257,7 +258,6 @@ int
+@@ -260,7 +261,6 @@ int
  vgetc()
  {
      char cha;
