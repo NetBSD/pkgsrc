@@ -1,15 +1,15 @@
-$NetBSD: patch-src_fcstat.c,v 1.4 2014/07/15 14:48:34 ryoon Exp $
+$NetBSD: patch-src_fcstat.c,v 1.5 2016/06/19 20:48:55 wiz Exp $
 
 The argument types to scandir(3) differ between different OSes.
 OpenBSD seems to be still different. I used the provided alphasort
 instead of rewriting the equivalent sorter function.
 statvfs and fstatvfs need another include file, at least on MirBSD.
 
---- src/fcstat.c.orig	2014-03-05 09:27:42.000000000 +0000
+--- src/fcstat.c.orig	2016-04-06 03:22:55.000000000 +0000
 +++ src/fcstat.c
-@@ -42,6 +42,12 @@
- #ifdef HAVE_SYS_MOUNT_H
- #include <sys/mount.h>
+@@ -52,6 +52,12 @@ typedef long long INT64;
+ #define EPOCH_OFFSET 11644473600i64
+ typedef __int64 INT64;
  #endif
 +#ifdef __MirBSD__
 +#include <sys/statvfs.h>
@@ -18,9 +18,9 @@ statvfs and fstatvfs need another include file, at least on MirBSD.
 +#include "../scandir.c"
 +#endif
  
- #ifdef _WIN32
- #ifdef __GNUC__
-@@ -158,7 +164,11 @@ Adler32Finish (struct Adler32 *ctx)
+ /* Workaround for problems in the stat() in the Microsoft C library:
+  *
+@@ -159,7 +165,11 @@ Adler32Finish (struct Adler32 *ctx)
  #ifdef HAVE_STRUCT_DIRENT_D_TYPE
  /* dirent.d_type can be relied upon on FAT filesystem */
  static FcBool
@@ -32,7 +32,7 @@ statvfs and fstatvfs need another include file, at least on MirBSD.
  {
      return entry->d_type != DT_DIR;
  }
-@@ -197,7 +207,11 @@ FcDirChecksum (const FcChar8 *dir, time_
+@@ -263,7 +273,11 @@ FcDirChecksum (const FcChar8 *dir, time_
  #else
  		 NULL,
  #endif
