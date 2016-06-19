@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2534 2016/06/19 17:25:53 prlw1 Exp $
+$NetBSD: CHANGES-2016,v 1.2535 2016/06/19 18:03:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3686,3 +3686,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated cross/bfd-mdsetimage to 1.15.1nb2 [wiz 2016-06-19]
 	Updated editors/bvi to 1.4.0 [tsutsui 2016-06-19]
 	Updated editors/ne to 3.02 [prlw1 2016-06-19]
+	Updated pkgtools/pkglint4 to 4.163 [wiz 2016-06-19]
