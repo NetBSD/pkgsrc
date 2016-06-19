@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2538 2016/06/19 20:21:50 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2539 2016/06/19 20:24:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3690,3 +3690,4 @@ Changes to the packages collection and infrastructure in 2016:
 	mk: remove support for USE_CROSSBASE [wiz 2016-06-19]
 	mk: remove support for INSTALLATION_PREFIX [wiz 2016-06-19]
 	Updated graphics/ImageMagick to 7.0.2.0 [wiz 2016-06-19]
+	Updated devel/afl to 2.15b [wiz 2016-06-19]
