@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2016/06/19 09:16:15 kamil Exp $
+bin/xjadeo
+bin/xjremote
+man/man1/xjadeo.1
+man/man1/xjremote.1
+share/xjadeo/ArdourMono.ttf
