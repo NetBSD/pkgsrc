@@ -1,17 +1,15 @@
-# $NetBSD: directories.help,v 1.5 2016/06/19 18:01:58 wiz Exp $
+# $NetBSD: directories.help,v 1.6 2016/06/19 20:03:09 wiz Exp $
 #
 # This file contains some short documentation on the directories that
 # are used within pkgsrc.
 
 # PREFIX
 #	This is the directory where the package should install its
-#	files. The actual value depends on the variable
-#	INSTALLATION_PREFIX.
+#	files. This is usually LOCALBASE.
 #
 #	Tags: read-only, system-defined, non-overridable, etc.
 #
 #	See also:
-#		INSTALLATION_PREFIX,
 #		LOCALBASE.
 #
 
