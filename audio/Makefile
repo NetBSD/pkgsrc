@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.534 2016/06/05 00:47:40 ryoon Exp $
+# $NetBSD: Makefile,v 1.535 2016/06/19 09:16:57 kamil Exp $
 #
 
 COMMENT=	Audio tools
@@ -484,6 +484,7 @@ SUBDIR+=	xhippo
 SUBDIR+=	xine-alsa
 SUBDIR+=	xine-esound
 SUBDIR+=	xine-pulse
+SUBDIR+=	xjadeo
 SUBDIR+=	xmcd
 SUBDIR+=	xmix
 SUBDIR+=	xmmix
