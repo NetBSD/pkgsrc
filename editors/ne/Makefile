@@ -1,32 +1,20 @@
-# $NetBSD: Makefile,v 1.17 2016/02/25 12:56:10 jperkin Exp $
+# $NetBSD: Makefile,v 1.18 2016/06/19 17:25:31 prlw1 Exp $
 
-DISTNAME=	ne-1.31
+DISTNAME=	ne-3.02
 CATEGORIES=	editors
-MASTER_SITES=	ftp://ftp.cus.cam.ac.uk/pub/software/programs/NE/
-DISTFILES=	${DISTNAME}.tar.gz ne.manpage.1 NE.spec.ascii NE.changes.spec
+MASTER_SITES=	ftp://ftp.csx.cam.ac.uk/pub/software/wordprocessing/unix/ne/
 
-MAINTAINER=	bjh@mail.dotcom.fr
-COMMENT=	Re-write of Phoenix E.  A sensible light-weight editor
+MAINTAINER=	prlw1@cam.ac.uk
+HOMEPAGE=	ftp://ftp.csx.cam.ac.uk/pub/software/wordprocessing/unix/ne/
+COMMENT=	Terminal text editor
+LICENSE=	gnu-gpl-v2
 
-MAKE_JOBS_SAFE=		no
+GNU_CONFIGURE=	yes
 
-DIST_SUBDIR=	${PKGNAME_NOREV}
-WRKSRC=		${WRKDIR}/src
+CONFIGURE_ARGS+=	--enable-termcap
 
-EXTRACT_ONLY=	${DISTNAME}.tar.gz
+BUILD_TARGET=	build
 
-BUILD_TARGET.SunOS=	SunOS5_gcc ne
-BUILD_TARGET.*=		NetBSD ne
-
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/nenewp ${DESTDIR}${PREFIX}/bin/ne
-	${INSTALL_MAN} ${_DISTDIR}/ne.manpage.1 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/ne.1
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/ne
-	${INSTALL_DATA} ${_DISTDIR}/NE.spec.ascii ${_DISTDIR}/NE.changes.spec \
-		${WRKSRC}/LICENCE ${DESTDIR}${PREFIX}/share/doc/ne
-
+.include "../../devel/pcre/buildlink3.mk"
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
