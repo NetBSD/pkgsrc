@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2531 2016/06/19 16:13:39 schmonz Exp $
+$NetBSD: CHANGES-2016,v 1.2532 2016/06/19 16:26:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3671,3 +3671,16 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/py-at-spi2 to 2.20.2 [prlw1 2016-06-19]
 	Updated textproc/gspell to 1.0.2 [prlw1 2016-06-19]
 	Updated devel/p5-Pegex to 0.61 [schmonz 2016-06-19]
+	Moved cross/binutils to cross/cross-binutils [wiz 2016-06-19]
+	Moved cross/libtool-base to cross/cross-libtool-base [wiz 2016-06-19]
+	Updated cross/mingw to 3.3.1nb1 [wiz 2016-06-19]
+	Updated cross/mingw-binutils to 2.18nb2 [wiz 2016-06-19]
+	Updated cross/mingw-gcc to 3.4.5nb1 [wiz 2016-06-19]
+	Updated cross/mingw-runtime-bin to 3.14nb1 [wiz 2016-06-19]
+	Updated cross/mingw-w32api-bin to 3.11nb1 [wiz 2016-06-19]
+	Updated cross/nios2-binutils to 2.24nb3 [wiz 2016-06-19]
+	Updated cross/nios2-gcc to 4.7.3nb3 [wiz 2016-06-19]
+	Updated cross/nios2-gcc3 to 3.4.6nb3 [wiz 2016-06-19]
+	Updated cross/nios2-gcc41 to 4.1.2nb3 [wiz 2016-06-19]
+	Updated cross/bfd-crunchide to 1.2nb1 [wiz 2016-06-19]
+	Updated cross/bfd-mdsetimage to 1.15.1nb2 [wiz 2016-06-19]
