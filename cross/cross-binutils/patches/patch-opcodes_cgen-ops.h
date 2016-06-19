@@ -1,4 +1,4 @@
-$NetBSD: patch-opcodes_cgen-ops.h,v 1.1 2012/05/04 16:07:02 joerg Exp $
+$NetBSD: patch-opcodes_cgen-ops.h,v 1.1 2016/06/19 16:18:28 wiz Exp $
 
 --- opcodes/cgen-ops.h.orig	2012-04-27 20:34:26.000000000 +0000
 +++ opcodes/cgen-ops.h
