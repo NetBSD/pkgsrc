@@ -1,0 +1,23 @@
+# $NetBSD: DEINSTALL,v 1.1 2016/06/19 12:53:04 taca Exp $
+
+CT_WEBDIR="@PREFIX@/@CT_WEBDIR@"
+CT_DIRS="assets system"
+
+case ${STAGE} in
+DEINSTALL)
+	for i in system/cache system/config system/modules system/tmp \
+	    system/themes web/system/cron web/share; do
+	    rm -f ${CT_WEBDIR}/$i/.gitignore
+	done
+	rm -f ${CT_WEBDIR}/web/system/cron/cron.txt
+	rm -f ${CT_WEBDIR}/system/initialize.php
+	;;
+POST-DEINSTALL)
+	# remove cache files.
+	rm -fr ${CT_WEBDIR}/app/cache
+	for i in css images js; do
+		test -d ${CT_WEBDIR} &&
+		find ${CT_WEBDIR}/assets/$i -type f -exec rm {} \;
+	done
+	;;
+esac
