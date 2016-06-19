@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2015/02/02 02:37:37 mef Exp $
+# $NetBSD: Makefile,v 1.22 2016/06/19 22:59:30 joerg Exp $
 
 DISTNAME=	qof-0.7.5
 PKGREVISION=	17
@@ -10,7 +10,7 @@ HOMEPAGE=	http://qof.alioth.debian.org/
 COMMENT=	Query Object Framework
 LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=	doxygen>=1.8.9.1:../../devel/doxygen
+BUILD_DEPENDS+=	doxygen>=1.8.11:../../devel/doxygen
 
 MAKE_JOBS_SAFE=		no
 
