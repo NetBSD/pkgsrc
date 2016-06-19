@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/05/29 07:06:35 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/19 16:51:02 joerg Exp $
 #
 
 DISTNAME=	jrep-0.6.0
@@ -18,6 +18,7 @@ LICENSE=	apache-2.0
 
 USE_LANGUAGES=	c
 USE_JAVA=	yes
+USE_TOOLS+=	pod2man
 
 TEST_TARGET=	test
 
