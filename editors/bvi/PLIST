@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2004/03/03 21:30:08 ben Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/06/19 16:55:28 tsutsui Exp $
 bin/bmore
 bin/bvedit
 bin/bvi
 bin/bview
 man/man1/bmore.1
 man/man1/bvi.1
-lib/bmore.help
+share/bvi/bmore.help
