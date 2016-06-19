@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.1 2015/11/25 16:42:21 rillig Exp $
+# $NetBSD: makevars.map,v 1.2 2016/06/19 18:03:05 wiz Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -738,7 +738,6 @@ UPDATE_TARGET		List of Identifier [$user]
 USE_BSD_MAKEFILE	Yes [$package]
 USE_BUILTIN.*		YesNo_Indirectly [builtin.mk:s]
 USE_CMAKE		Yes [$package]
-USE_CROSSBASE		Yes [m:s]
 USE_FEATURES		List of Identifier [$package]
 USE_GCC_RUNTIME		YesNo [$package]
 USE_GNU_CONFIGURE_HOST	YesNo [$package]
