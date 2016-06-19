@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2016/06/08 19:23:02 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2016/06/19 12:29:07 mef Exp $
 #
 
-DISTNAME=	IO-AIO-4.32
+DISTNAME=	IO-AIO-4.34
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	2
-CATEGORIES=	parallel
+CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=IO/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -16,6 +15,9 @@ LICENSE=	${PERL5_LICENSE}
 # Its configure script is run via  Makefile.PL
 # with all perl configuration settings, id est
 # the Config module, set in its environment
+
+# build time requirment
+BUILD_DEPENDS+=	p5-Canary-Stability-[0-9]*:../../devel/p5-Canary-Stability
 
 USE_LANGUAGES=	c
 PERL5_PACKLIST=	auto/IO/AIO/.packlist
