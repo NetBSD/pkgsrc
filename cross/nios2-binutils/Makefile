@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2014/11/10 03:34:53 mef Exp $
+# $NetBSD: Makefile,v 1.14 2016/06/19 16:20:28 wiz Exp $
 
 DISTNAME=		binutils-2.24
 PKGNAME=		${DISTNAME:S/^/nios2-/}
@@ -17,7 +17,6 @@ USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-USE_PKGLOCALEDIR=	yes
 USE_GNU_CONFIGURE_HOST=	no
 INFO_FILES=		# empty
 
@@ -36,14 +35,13 @@ NIOS2_TARGET=		nios2-elf
 CONFIGURE_ARGS+=	--disable-werror --target=${NIOS2_TARGET} --disable-nls
 PLIST_SUBST+=		NIOS2_TARGET=${NIOS2_TARGET:Q}
 
-USE_CROSSBASE=		yes
-BUILD_DEFS+=		CROSSBASE
-PATH:=			${CROSSBASE}/bin:${PATH}
+GNU_CONFIGURE_PREFIX=	${PREFIX}/cross
+PATH:=			${PREFIX}/cross/bin:${PATH}
 AUTO_MKDIRS=		yes
 
 # following file installed is reference only, not used at all for the moment
 post-install:
-	${INSTALL_DATA} files/nios2elf-netbsd.x ${DESTDIR}${PREFIX}/${NIOS2_TARGET}/lib/ldscripts
+	${INSTALL_DATA} files/nios2elf-netbsd.x ${DESTDIR}${PREFIX}/cross/${NIOS2_TARGET}/lib/ldscripts
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

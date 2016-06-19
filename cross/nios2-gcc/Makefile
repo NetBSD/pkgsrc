@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2015/06/12 10:48:35 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2016/06/19 16:20:28 wiz Exp $
 .include		"../../cross/nios2/Makefile.common"
 PKGNAME=		nios2-gcc-${PKG_VERSION}
 PKG_VERSION=		4.7.3
@@ -14,7 +14,6 @@ USE_TOOLS+=		ksh gettext gmake makeinfo perl tar automake autoconf gawk
 USE_LIBTOOL=		yes
 USE_LANGUAGES+=		c c++
 USE_GNU_CONFIGURE_HOST=	no
-#BUILD_DEFS+=		CROSSBASE	#included in ../nios2/Makefile.common
 WRKSRC=			${WRKDIR}/gcc-nios2
 
 CONFIGURE_ARGS+=	--enable-languages=c
@@ -54,15 +53,15 @@ do-extract:
 
 # to avoid conflict with binutils (to be fixed by more sophisticated way)
 post-install:
-	${RM}  ${DESTDIR}${CROSSBASE}/lib/libiberty.a
+	${RM}  ${DESTDIR}${PREFIX}/cross/lib/libiberty.a
 #  to avoid conflict wit mingw-w64-gcc-4.5.1
-	${RM}  ${DESTDIR}${CROSSBASE}/man/man7/fsf-funding.7
-	${RM}  ${DESTDIR}${CROSSBASE}/man/man7/gfdl.7
-	${RM}  ${DESTDIR}${CROSSBASE}/man/man7/gpl.7
-	${RM}  ${DESTDIR}${CROSSBASE}/info/cpp.info
-	${RM}  ${DESTDIR}${CROSSBASE}/info/cppinternals.info
-	${RM}  ${DESTDIR}${CROSSBASE}/info/gcc.info
-	${RM}  ${DESTDIR}${CROSSBASE}/info/gccinstall.info
-	${RM}  ${DESTDIR}${CROSSBASE}/info/gccint.info
+	${RM}  ${DESTDIR}${PREFIX}/cross/man/man7/fsf-funding.7
+	${RM}  ${DESTDIR}${PREFIX}/cross/man/man7/gfdl.7
+	${RM}  ${DESTDIR}${PREFIX}/cross/man/man7/gpl.7
+	${RM}  ${DESTDIR}${PREFIX}/cross/info/cpp.info
+	${RM}  ${DESTDIR}${PREFIX}/cross/info/cppinternals.info
+	${RM}  ${DESTDIR}${PREFIX}/cross/info/gcc.info
+	${RM}  ${DESTDIR}${PREFIX}/cross/info/gccinstall.info
+	${RM}  ${DESTDIR}${PREFIX}/cross/info/gccint.info
 
 .include "../../mk/bsd.pkg.mk"
