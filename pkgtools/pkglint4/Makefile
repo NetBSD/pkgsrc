@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2016/02/02 08:02:29 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2016/06/19 18:03:05 wiz Exp $
 
-PKGNAME=	pkglint4-4.162
+PKGNAME=	pkglint4-4.163
 CATEGORIES=	pkgtools
 
 OWNER=		rillig@NetBSD.org
