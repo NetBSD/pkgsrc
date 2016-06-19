@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.662 2016/06/16 19:32:38 markd Exp $
+# $NetBSD: Makefile,v 1.663 2016/06/19 04:11:16 markd Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -450,6 +450,8 @@ SUBDIR+=	tex-dvipdfmx-def
 SUBDIR+=	tex-dvipdfmx-doc
 SUBDIR+=	tex-dvips
 SUBDIR+=	tex-dvips-doc
+SUBDIR+=	tex-dvisvgm-def
+SUBDIR+=	tex-dvisvgm-def-doc
 SUBDIR+=	tex-easy-todo
 SUBDIR+=	tex-easy-todo-doc
 SUBDIR+=	tex-edmac
@@ -574,6 +576,8 @@ SUBDIR+=	tex-glossaries-doc
 SUBDIR+=	tex-go
 SUBDIR+=	tex-go-doc
 SUBDIR+=	tex-graphics
+SUBDIR+=	tex-graphics-cfg
+SUBDIR+=	tex-graphics-cfg-doc
 SUBDIR+=	tex-graphics-doc
 SUBDIR+=	tex-guide-to-latex
 SUBDIR+=	tex-gustlib
