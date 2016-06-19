@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q1,v 1.1.2.22 2016/06/11 18:32:48 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q1,v 1.1.2.23 2016/06/19 10:36:09 spz Exp $
 
 Changes to the packages collection and infrastructure on the pkgsrc-2016Q1 branch:
 
@@ -245,3 +245,6 @@ www/nginx-devel: security patch
 
 Pullup ticket #5039 - requested by taca
 devel/libthrift: build fix
+
+Pullup ticket #5044 - requested by bsiegert
+security/libksba: security update
