@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2520 2016/06/19 09:18:10 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.2521 2016/06/19 10:08:05 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3653,3 +3653,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/thunderbird to 45.1.1 [ryoon 2016-06-19]
 	Updated mail/thunderbird-l10n to 45.1.1 [ryoon 2016-06-19]
 	Added audio/xjadeo version 0.8.5 [kamil 2016-06-19]
+	Updated devel/ocaml-extlib to 1.7.0 [jaapb 2016-06-19]
