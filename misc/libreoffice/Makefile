@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.82 2016/06/08 14:38:21 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2016/06/19 16:50:32 joerg Exp $
 
 VERREL=		5.1.3
 VERRC=		2
@@ -22,7 +22,7 @@ BUILDLINK_TRANSFORM+=	opt:-O2:-O
 
 .if !empty(MACHINE_PLATFORM:MNetBSD*)
 pre-build:
-	cd ${WRKSRC} && ${BUILD_MAKE_CMD} Executable_gengal && paxctl +m instdir/program/gengal.bin
+	cd ${WRKSRC} && ${BUILD_MAKE_CMD} Executable_gengal && ${TOOLS_PLATFORM.paxctl} +m instdir/program/gengal.bin
 .endif
 
 GCC_REQD+=	4.6
