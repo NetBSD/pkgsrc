@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.60 2016/06/06 11:53:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.61 2016/06/19 20:29:44 wiz Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -351,6 +351,7 @@ lib/calibre/calibre/ebooks/metadata/lrx.py
 lib/calibre/calibre/ebooks/metadata/meta.py
 lib/calibre/calibre/ebooks/metadata/mobi.py
 lib/calibre/calibre/ebooks/metadata/odt.py
+lib/calibre/calibre/ebooks/metadata/opf.py
 lib/calibre/calibre/ebooks/metadata/opf2.py
 lib/calibre/calibre/ebooks/metadata/pdb.py
 lib/calibre/calibre/ebooks/metadata/pdf.py
@@ -382,6 +383,7 @@ lib/calibre/calibre/ebooks/metadata/tag_mapper.py
 lib/calibre/calibre/ebooks/metadata/toc.py
 lib/calibre/calibre/ebooks/metadata/topaz.py
 lib/calibre/calibre/ebooks/metadata/txt.py
+lib/calibre/calibre/ebooks/metadata/utils.py
 lib/calibre/calibre/ebooks/metadata/worker.py
 lib/calibre/calibre/ebooks/metadata/xisbn.py
 lib/calibre/calibre/ebooks/metadata/xmp.py
@@ -773,6 +775,7 @@ lib/calibre/calibre/gui2/device_drivers/mtp_folder_browser.py
 lib/calibre/calibre/gui2/dialogs/__init__.py
 lib/calibre/calibre/gui2/dialogs/add_empty_book.py
 lib/calibre/calibre/gui2/dialogs/add_from_isbn.py
+lib/calibre/calibre/gui2/dialogs/add_from_isbn_ui.py
 lib/calibre/calibre/gui2/dialogs/authors_edit.py
 lib/calibre/calibre/gui2/dialogs/book_info.py
 lib/calibre/calibre/gui2/dialogs/catalog.py
@@ -1306,6 +1309,7 @@ lib/calibre/calibre/utils/ipc/simple_worker.py
 lib/calibre/calibre/utils/ipc/worker.py
 lib/calibre/calibre/utils/iphlpapi.py
 lib/calibre/calibre/utils/ipython.py
+lib/calibre/calibre/utils/iso8601.py
 lib/calibre/calibre/utils/linux_trash.py
 lib/calibre/calibre/utils/localization.py
 lib/calibre/calibre/utils/localunzip.py
@@ -3255,7 +3259,6 @@ share/calibre/recipes/toronto_sun.recipe
 share/calibre/recipes/tovima.recipe
 share/calibre/recipes/toyokeizai.recipe
 share/calibre/recipes/tpm_uk.recipe
-share/calibre/recipes/tr.recipe
 share/calibre/recipes/tri_city_herald.recipe
 share/calibre/recipes/trojmiasto_pl.recipe
 share/calibre/recipes/trombon.recipe
@@ -3398,6 +3401,7 @@ share/calibre/templates/html_export_default_index.tmpl
 share/calibre/templates/inline_toc_styles.css
 share/calibre/templates/lrf.xsl
 share/calibre/templates/new_book.html
+share/calibre/templates/new_nav.html
 share/calibre/templates/rtf.xsl
 share/calibre/tracer.epub
 share/calibre/user-manual-translation-stats.json
