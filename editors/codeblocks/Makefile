@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/06/16 02:28:51 kamil Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/19 23:01:01 joerg Exp $
 #
 
 DISTNAME=	codeblocks_16.01
@@ -23,6 +23,11 @@ CONFIGURE_ARGS+=	--with-contrib-plugins=AutoVersioning,BrowseTracker,byogames,cb
 BUILD_DEPENDS+=	zip-[0-9]*:../../archivers/zip
 
 PKGCONFIG_OVERRIDE+=	codeblocks.pc.in
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+CXXFLAGS+=	-std=c++11
+.endif
 
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
