@@ -1,6 +1,11 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 23:49:44 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/06/19 23:23:02 jaapb Exp $
 
-SHA1 (ocaml-opam/1.2.0.tar.gz) = b7923516a853afe86e8439afd23c0dae5fa8ad57
-RMD160 (ocaml-opam/1.2.0.tar.gz) = 34533715c2ab096c62bddab0e95d3a9ce2d8ca4c
-SHA512 (ocaml-opam/1.2.0.tar.gz) = eed6e1f9242b5264f4874c00b3a4b319f5838a620782905a891a4dbaed2fef0366fad00808ffadb80ace82f419331d9bc6fc914c179ca5983cf178b44b2e4cba
-Size (ocaml-opam/1.2.0.tar.gz) = 596525 bytes
+SHA1 (opam-1.2.2.tar.gz) = 40d6ea499c06254ace4bed1d280a6e401cec0945
+RMD160 (opam-1.2.2.tar.gz) = a940f513f0247715b592bbbe13dc0f395acb3fca
+SHA512 (opam-1.2.2.tar.gz) = 12105b5219a14d4c4cb29c387dd5af858d2b4a2a1bad7dcd70e4c284fc52848df82933396571b85251d904b3c14cdf02db55060c1ba29dc34b8bab3721d05f54
+Size (opam-1.2.2.tar.gz) = 648951 bytes
+SHA1 (patch-src_core_opamCompiler.ml) = 535b329701864500f95365026304bc7a1a0e69fa
+SHA1 (patch-src_core_opamFilter.ml) = bb8759d42a3761e0bb989358b01a7c083258dd8e
+SHA1 (patch-src_core_opamPackage.ml) = c5c6105aab369251da355ba31515e2e4d9d54552
+SHA1 (patch-src_core_opamVersion.ml.in) = 77e12dad3cd0c5265b99af4271ba4d89439c6be2
+SHA1 (patch-src_solver_opamCudf.ml) = 1dd3710694657f9d956397cc527d92b4cbdf0fce
