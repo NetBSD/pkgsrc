@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2016/06/18 09:06:11 mef Exp $
+# $NetBSD: Makefile,v 1.31 2016/06/19 07:40:17 markd Exp $
 
 DISTNAME=	cfitsio3390
 PKGNAME=	${DISTNAME:S/o3/o-3./}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://heasarc.gsfc.nasa.gov/FTP/software/fitsio/c/
 
@@ -31,6 +32,9 @@ post-build:
 	cd ${WRKSRC}; \
 	./testprog > /dev/null; \
 	${CMP} testprog.fit testprog.std
+
+pre-install:
+	rm ${WRKSRC}/testprog
 
 post-install:
 	cd ${WRKSRC}/docs; \
