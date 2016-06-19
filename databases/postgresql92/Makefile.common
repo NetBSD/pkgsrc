@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.23 2016/06/19 20:48:29 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.24 2016/06/19 21:09:55 fhajny Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -8,21 +8,13 @@
 #	<lang>-postgresql	client-side interface to PostgreSQL
 #	postgresql-<lang>	server-side module for PostgreSQL backend
 #
-# used by databases/postgresql92-adminpack/Makefile
 # used by databases/postgresql92-client/Makefile
 # used by databases/postgresql92-contrib/Makefile
-# used by databases/postgresql92-datatypes/Makefile
-# used by databases/postgresql92-dblink/Makefile
 # used by databases/postgresql92-docs/Makefile
-# used by databases/postgresql92-fuzzystrmatch/Makefile
-# used by databases/postgresql92-monitoring/Makefile
-# used by databases/postgresql92-pgcrypto/Makefile
 # used by databases/postgresql92-plperl/Makefile
 # used by databases/postgresql92-plpython/Makefile
 # used by databases/postgresql92-pltcl/Makefile
-# used by databases/postgresql92-replicationtools/Makefile
 # used by databases/postgresql92-server/Makefile
-# used by databases/postgresql92-upgrade/Makefile
 
 DISTNAME=	postgresql-9.2.17
 CATEGORIES=	databases
