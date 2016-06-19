@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/09 17:32:33 marino Exp $
+# $NetBSD: Makefile,v 1.6 2016/06/19 16:20:27 wiz Exp $
 
 DISTNAME=	binutils-2.18
 PKGNAME=	mingw-${DISTNAME:S/-src//}
@@ -11,18 +11,18 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mingw.sourceforge.net/
 COMMENT=	GNU binutils for win32 cross-development
 
-USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-USE_CROSSBASE=		yes
 USE_TOOLS+=		pax
 INFO_FILES=		yes
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
+INSTALLATION_DIRS+=	cross/bin
+
 post-install:
 .for f in windres dllwrap
-	${LN} -fs ${PREFIX}/bin/${MINGW_TARGET}-${f} \
-                ${DESTDIR}${PREFIX}/${MINGW_TARGET}/bin/${f}
+	${LN} -fs ${PREFIX}/cross/bin/${MINGW_TARGET}-${f} \
+                ${DESTDIR}${PREFIX}/cross/${MINGW_TARGET}/bin/${f}
 .endfor
 
 .include "../../cross/mingw/Makefile.common"
