@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2522 2016/06/19 10:37:16 jaapb Exp $
+$NetBSD: CHANGES-2016,v 1.2523 2016/06/19 10:44:15 wiedi Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3655,3 +3655,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added audio/xjadeo version 0.8.5 [kamil 2016-06-19]
 	Updated devel/ocaml-extlib to 1.7.0 [jaapb 2016-06-19]
 	Updated misc/dose3 to 5.0rc2 [jaapb 2016-06-19]
+	Updated editors/nano to 2.6.0 [wiedi 2016-06-19]
