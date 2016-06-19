@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2016/06/09 08:20:43 he Exp $
+# $NetBSD: Makefile,v 1.39 2016/06/19 05:26:37 markd Exp $
 
 DISTNAME=	Botan-1.10.12
 PKGNAME=	${DISTNAME:tl}
@@ -20,6 +20,7 @@ PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 1.8.14; 1.10 is su
 CONFIG_SHELL=		${PYTHONBIN}
 CONFIGURE_SCRIPT=	./configure.py
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--without-sphinx
 
 MAKE_FLAGS+=	LIB_OPT=${CXXFLAGS:Q}
 
