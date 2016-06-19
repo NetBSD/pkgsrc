@@ -1,29 +1,33 @@
-$NetBSD: patch-Makefile.config.in,v 1.1 2014/10/27 12:01:36 jaapb Exp $
+$NetBSD: patch-Makefile.config.in,v 1.2 2016/06/19 10:36:59 jaapb Exp $
 
 Use OCaml site-lib directory for installation
---- Makefile.config.in.orig	2014-10-21 11:45:17.000000000 +0000
+--- Makefile.config.in.orig	2016-06-15 10:23:22.000000000 +0000
 +++ Makefile.config.in
-@@ -9,21 +9,12 @@ OCAMLFIND=@OCAMLFIND@
+@@ -9,25 +9,8 @@ OCAMLFIND=@OCAMLFIND@
  
  DOSELIBS = _build/doselibs
  
--DESTDIR =
--ifeq ($(DESTDIR),)
- exec_prefix=@prefix@
--BINDIR=@bindir@
--LIBDIR=$(shell ocamlfind printconf destdir)
+-BINDIR = @prefix@@bindir@
+-# if prefix is /usr/local (default), then we use ocamlfind, 
+-# otherwise use build the destdir using the given prefix
+-ifeq (@prefix@,/usr/local)
+-  ifeq ("@OCAML_OS_TYPE@","Win32")
+-    LIBDIR=$(shell ocamlfind printconf destdir | cygpath -f - -m)
+-  else
+-    LIBDIR = $(shell ocamlfind printconf destdir)
+-  endif
+-else
+-  LIBDIR = @prefix@@libdir@/ocaml/$(shell ocamlc -version)
+-endif
+-
+-# if DESTDIR is specified, we ignore the prefix and we use the 
+-# default debian location
+-ifneq ($(DESTDIR),)
+-  BINDIR = $(DESTDIR)@bindir@
+-  LIBDIR = $(DESTDIR)@libdir@/ocaml
+-endif
 +BINDIR=${DESTDIR}@bindir@
 +LIBDIR=${DESTDIR}${PREFIX}/${OCAML_SITELIBDIR}
  
  INSTALL=$(OCAMLFIND) install -destdir $(LIBDIR)
  UNINSTALL=$(OCAMLFIND) remove -destdir $(LIBDIR)
--else
--LIBDIR = $(DESTDIR)/$(shell ocamlc -where)
--BINDIR = $(DESTDIR)/usr/bin
--
--INSTALL = $(OCAMLFIND) install -destdir $(LIBDIR)
--UNINSTALL = $(OCAMLFIND) remove -destdir $(LIBDIR)
--endif
- 
- ifeq ("@OCAML_OS_TYPE@","freebsd")
-   LDFLAGS += -fstack-protector
