@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2015/02/02 02:36:48 mef Exp $
+@comment $NetBSD: PLIST,v 1.14 2016/06/19 22:59:30 joerg Exp $
 include/qof/deprecated.h
 include/qof/guid.h
 include/qof/kvpframe.h
@@ -42,7 +42,7 @@ lib/libqofsql.la
 lib/pkgconfig/qof-1.pc
 lib/pkgconfig/qof.pc
 share/doc/qof/html/doxy/annotated.html
-share/doc/qof/html/doxy/annotated.js
+share/doc/qof/html/doxy/annotated_dup.js
 share/doc/qof/html/doxy/arrowdown.png
 share/doc/qof/html/doxy/arrowright.png
 share/doc/qof/html/doxy/backendapi.html
