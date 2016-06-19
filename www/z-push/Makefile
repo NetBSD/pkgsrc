@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/06/05 00:02:21 jym Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/19 22:16:48 jym Exp $
 #
 
 DISTNAME=	z-push-${ZPUSH_VERSION}
@@ -73,6 +73,9 @@ SUBST_MESSAGE.state-dir=Fixing Z-push state directory path.
 
 post-extract:
 	${CP} ${FILESDIR}/z-push.conf ${WRKDIR}/z-push.conf
+
+post-patch:
+	${FIND} ${WRKSRC} -name "*.orig" -print | ${XARGS} ${RM} -f
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/config.php	\
