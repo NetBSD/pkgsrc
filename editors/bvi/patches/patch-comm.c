@@ -1,8 +1,10 @@
-$NetBSD: patch-aa,v 1.3 2005/12/09 13:47:58 joerg Exp $
+$NetBSD: patch-comm.c,v 1.1 2016/06/19 16:55:28 tsutsui Exp $
 
---- comm.c.orig	2005-12-09 13:37:50.000000000 +0000
+- use <errno.h> for errno.
+
+--- comm.c.orig	2014-01-29 14:54:53.000000000 +0000
 +++ comm.c
-@@ -32,6 +32,8 @@
+@@ -35,6 +35,8 @@
  #include "bvi.h"
  #include "set.h"
  
@@ -11,7 +13,7 @@ $NetBSD: patch-aa,v 1.3 2005/12/09 13:47:58 joerg Exp $
  #ifdef HAVE_UNISTD_H
  #	include <unistd.h>
  #endif
-@@ -81,7 +83,6 @@ PTR		end_addr;
+@@ -84,7 +86,6 @@ PTR		end_addr;
  extern	char	*name;			/* actual filename */
  extern	char	**files;		/* used for "next" and "rewind" */
  extern	int		numfiles, curfile;
