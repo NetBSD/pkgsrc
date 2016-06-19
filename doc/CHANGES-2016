@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2527 2016/06/19 15:25:28 prlw1 Exp $
+$NetBSD: CHANGES-2016,v 1.2528 2016/06/19 15:40:40 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3667,3 +3667,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added www/contao42 version 4.2.0 [taca 2016-06-19]
 	Updated games/gnome-sudoku to 3.20.2 [prlw1 2016-06-19]
 	Updated graphics/eog3 to 3.20.2 [prlw1 2016-06-19]
+	Updated math/gnome-calculator to 3.20.1 [prlw1 2016-06-19]
