@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2012,v 1.4036 2015/08/10 16:08:29 wiz Exp $
+$NetBSD: CHANGES-2012,v 1.4037 2016/06/19 20:51:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2012:
 
@@ -606,6 +606,7 @@ Changes to the packages collection and infrastructure in 2012:
 	Updated textproc/xmlrpc-c to 1.16.39 [adam 2012-02-06]
 	Updated shells/mksh to 40d [bsiegert 2012-02-06]
 	Added multimedia/ffmpeg2theora version 0.28 [tron 2012-02-06]
+	Added net/php-geoip version 1.0.8 [fhajny 2012-02-06]
 	Updated cross/avrdude to 5.11 [mef 2012-02-07]
 	Updated www/trac to 0.12.3 [gdt 2012-02-07]
 	Updated biology/py-mol to 1.4.1nb2 [sbd 2012-02-07]
