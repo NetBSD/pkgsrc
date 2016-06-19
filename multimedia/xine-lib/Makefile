@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.139 2015/11/18 14:19:47 ryoon Exp $
+# $NetBSD: Makefile,v 1.139.4.1 2016/06/19 17:03:04 spz Exp $
 
-PKGREVISION= 3
+PKGREVISION= 4
 .include "Makefile.common"
 
 COMMENT=		Multimedia player library
@@ -55,13 +55,13 @@ PLIST.oss=	yes
 CPPFLAGS.SunOS+=	-D__u32=uint32_t -DHAVE_SYSI86 -DHAVE_MMX_FALSE
 LDFLAGS.SunOS+=		-lresolv
 
+.include "options.mk"
+
 # flac is supported internally; don't know what the plugin is good for
 # but until autodetection is turned off, force external flac for now.
 .include "../../audio/flac/buildlink3.mk"
-.include "../../audio/faac/buildlink3.mk"
 .include "../../audio/faad2/buildlink3.mk"
 .include "../../audio/liba52/buildlink3.mk"
-.include "../../audio/libdca/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
 #.include "../../audio/libmpcdec/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"

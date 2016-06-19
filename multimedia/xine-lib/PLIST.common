@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.38 2014/04/17 13:53:47 wiz Exp $
+@comment $NetBSD: PLIST.common,v 1.38.16.1 2016/06/19 17:03:04 spz Exp $
 bin/xine-config
 bin/xine-list-1.2
 include/xine.h
@@ -68,8 +68,8 @@ lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_a52.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_a52.so
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_bitplane.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_bitplane.so
-lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_dts.a
-lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_dts.so
+${PLIST.dts}lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_dts.a
+${PLIST.dts}lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_dts.so
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_dvaudio.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_dvaudio.so
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_faad.a
