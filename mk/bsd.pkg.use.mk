@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.use.mk,v 1.61 2016/06/19 18:01:58 wiz Exp $
+#	$NetBSD: bsd.pkg.use.mk,v 1.62 2016/06/19 20:03:09 wiz Exp $
 #
 # Turn USE_* macros into proper depedency logic.  Included near the top of
 # bsd.pkg.mk, after bsd.prefs.mk.
@@ -50,11 +50,7 @@ PLIST_SUBST+=		IMAKE_MANNEWSUFFIX=${IMAKE_MANNEWSUFFIX:Q}
 MAKE_FLAGS+=		CC=${CC:Q} CXX=${CXX:Q}
 .endif
 
-.if defined(INSTALLATION_PREFIX)
-PREFIX=			${INSTALLATION_PREFIX}
-.else
 PREFIX=			${LOCALBASE}
-.endif
 
 ############################################################################
 # General settings
