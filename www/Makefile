@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1180 2016/06/18 13:04:16 kamil Exp $
+# $NetBSD: Makefile,v 1.1181 2016/06/19 12:53:49 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -84,6 +84,7 @@ SUBDIR+=	clisp-fastcgi
 #SUBDIR+=	contao		# only contains Makefile fragments
 SUBDIR+=	contao35
 SUBDIR+=	contao41
+SUBDIR+=	contao42
 SUBDIR+=	cppcms
 SUBDIR+=	crawl
 SUBDIR+=	cronolog
