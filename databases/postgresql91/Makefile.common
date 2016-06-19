@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.31 2016/05/23 14:27:34 adam Exp $
+# $NetBSD: Makefile.common,v 1.32 2016/06/19 20:48:28 fhajny Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -10,6 +10,7 @@
 #
 # used by databases/postgresql91-adminpack/Makefile
 # used by databases/postgresql91-client/Makefile
+# used by databases/postgresql91-contrib/Makefile
 # used by databases/postgresql91-datatypes/Makefile
 # used by databases/postgresql91-dblink/Makefile
 # used by databases/postgresql91-docs/Makefile
