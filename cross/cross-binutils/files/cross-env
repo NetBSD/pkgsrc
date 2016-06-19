@@ -1,5 +1,5 @@
 #! /bin/sh
-# $NetBSD: cross-env,v 1.2 2002/03/13 10:41:57 abs Exp $
+# $NetBSD: cross-env,v 1.1 2016/06/19 16:18:28 wiz Exp $
 
 PREFIX=@@PREFIX@@
 

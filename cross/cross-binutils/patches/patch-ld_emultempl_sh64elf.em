@@ -1,4 +1,4 @@
-$NetBSD: patch-ld_emultempl_sh64elf.em,v 1.1 2016/04/04 17:28:57 joerg Exp $
+$NetBSD: patch-ld_emultempl_sh64elf.em,v 1.1 2016/06/19 16:18:28 wiz Exp $
 
 --- ld/emultempl/sh64elf.em.orig	2016-04-04 16:42:51.033302791 +0000
 +++ ld/emultempl/sh64elf.em
