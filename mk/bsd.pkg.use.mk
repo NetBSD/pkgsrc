@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.use.mk,v 1.60 2015/07/04 16:18:38 joerg Exp $
+#	$NetBSD: bsd.pkg.use.mk,v 1.61 2016/06/19 18:01:58 wiz Exp $
 #
 # Turn USE_* macros into proper depedency logic.  Included near the top of
 # bsd.pkg.mk, after bsd.prefs.mk.
@@ -52,8 +52,6 @@ MAKE_FLAGS+=		CC=${CC:Q} CXX=${CXX:Q}
 
 .if defined(INSTALLATION_PREFIX)
 PREFIX=			${INSTALLATION_PREFIX}
-.elif defined(USE_CROSSBASE)
-PREFIX=			${CROSSBASE}
 .else
 PREFIX=			${LOCALBASE}
 .endif
