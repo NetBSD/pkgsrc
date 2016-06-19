@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/02/25 11:35:33 jperkin Exp $
+# $NetBSD: Makefile,v 1.1 2016/06/19 16:19:04 wiz Exp $
 
 # XXX This is kludgerific copypasta of devel/libtool-base/Makefile for
 # cross-compilation.  Please make it go away!
@@ -37,9 +37,6 @@ COMMENT=	Generic shared library support script (the script itself)
 
 CONFLICTS+=	libtool<=1.3.5nb11
 
-# XXX Added for cross-compilation.
-USE_CROSSBASE=	yes
-
 TEST_TARGET=	check
 
 OVERRIDE_DIRDEPTH.install-sh=	1
@@ -60,12 +57,12 @@ CFLAGS.SunOS+=	${_COMPILER_ABI_FLAG.${ABI}}
 # and Fortran compilers.
 #
 USE_LANGUAGES=		c c++
+GNU_CONFIGURE_PREFIX=	${PREFIX}/cross
 CONFIGURE_ARGS+=	--disable-ltdl-install
 
 USE_TOOLS+=		echo
 
 # XXX Added for cross-compilation.
-PLIST_SRC=	../../devel/libtool-base/PLIST
 FILESDIR=	../../devel/libtool-base/files
 
 .PHONY: fix-libtool
@@ -84,7 +81,7 @@ post-build:
 		${FILESDIR}/shlibtool.in > ${WRKSRC}/shlibtool
 
 post-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/shlibtool ${DESTDIR}${PREFIX}/bin/shlibtool
+	${INSTALL_SCRIPT} ${WRKSRC}/shlibtool ${DESTDIR}${PREFIX}/cross/bin/shlibtool
 
 BUILDLINK_DEPMETHOD.dlcompat=	build
 
