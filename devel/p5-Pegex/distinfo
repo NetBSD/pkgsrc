@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2015/11/03 03:28:39 agc Exp $
+$NetBSD: distinfo,v 1.6 2016/06/19 16:13:33 schmonz Exp $
 
-SHA1 (Pegex-0.60.tar.gz) = 8c5db29c3be8f75d8f4991080e86c89ce3469c35
-RMD160 (Pegex-0.60.tar.gz) = 165d70183e157df72b7412b4a5a239e6998daeee
-SHA512 (Pegex-0.60.tar.gz) = e0ea53d38ad889cef33d3121acbc0dd265cea3a9396100266be9c3f1a2b4d43fc18f752087d8f95830783d18b9d18bcecd36a91bde756b6eb5dd900b661338c5
-Size (Pegex-0.60.tar.gz) = 149449 bytes
+SHA1 (Pegex-0.61.tar.gz) = 6e72bb34be91d56edee94ae4cb9ac8ceb7b9065d
+RMD160 (Pegex-0.61.tar.gz) = f41b5f990498b6e19e9c7c929aaf5d27479e1d9d
+SHA512 (Pegex-0.61.tar.gz) = 0c7fc26865d42178d85621fabc454846812a204489658553d8546dd0afd5cdfec4032cb97de3ed4393d9fd050756b51ca7986a78b9e949436bcb5bf7d94c386a
+Size (Pegex-0.61.tar.gz) = 150430 bytes
