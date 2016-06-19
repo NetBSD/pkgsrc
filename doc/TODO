@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16040 2016/06/19 09:16:08 wiz Exp $
+$NetBSD: TODO,v 1.16041 2016/06/19 12:17:58 ryoon Exp $
 
 Suggested new packages
 ======================
@@ -1769,6 +1769,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o veusz-1.24
 	o vfu-4.09
 	o vicq-0.4.2
+	o viewvc-1.1.24
 	o vile-9.8q
 	o vinagre-3.16.1
 	o vino-3.16.0
