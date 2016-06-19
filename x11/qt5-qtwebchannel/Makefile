@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2016/04/11 19:01:41 ryoon Exp $
+# $NetBSD: Makefile,v 1.11 2016/06/19 05:07:24 markd Exp $
 
 DISTNAME=	qtwebchannel-opensource-src-${QTVERSION}
 PKGNAME=	qt5-qtwebchannel-${QTVERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 COMMENT=	Qt5 WebChannel module
 
 MAKE_ENV+=		QTDIR=${QTDIR}
@@ -18,4 +18,5 @@ post-install:
 .endfor
 
 .include "../../x11/qt5-qtdeclarative/buildlink3.mk"
+.include "../../x11/qt5-qtwebsockets/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
