@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2510 2016/06/18 22:15:38 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.2511 2016/06/19 04:19:37 markd Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3638,3 +3638,8 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated x11/xephem to 3.7.7 [jakllsch 2016-06-18]
 	Updated x11/mate-panel to 1.14.1nb1 [youri 2016-06-18]
 	Added multimedia/harvid version 0.8.1 [kamil 2016-06-18]
+	Added print/tex-graphics-cfg version 2016 [markd 2016-06-19]
+	Added print/tex-graphics-cfg-doc version 2016 [markd 2016-06-19]
+	Added print/tex-dvisvgm-def version 1.0a [markd 2016-06-19]
+	Added print/tex-dvisvgm-def-doc version 1.0a [markd 2016-06-19]
+	Updated meta-pkgs/texlive-collection-latex to 2016 [markd 2016-06-19]
