@@ -1,13 +1,13 @@
-$NetBSD: patch-ag,v 1.28 2014/12/30 13:34:59 wiz Exp $
+$NetBSD: patch-ag,v 1.29 2016/06/19 23:05:17 joerg Exp $
 
 1. chunk:
 https://bugs.xine-project.org/show_bug.cgi?id=536
-2. chunk
+3. chunk
 https://bugs.xine-project.org/show_bug.cgi?id=531
 
---- configure.ac.orig	2012-06-09 17:30:18.000000000 +0000
-+++ configure.ac	2012-09-20 14:41:33.687892237 +0000
-@@ -9,7 +9,7 @@
+--- configure.ac.orig	2014-05-29 11:11:59.000000000 +0000
++++ configure.ac
+@@ -9,7 +9,7 @@ m4_esyscmd([./version.sh])
  
  dnl Initialize autoconf, autoheader, and automake
  AC_INIT([xine-lib], XINE_VERSION_SPEC, [xine-bugs@lists.sourceforge.net])
@@ -16,7 +16,17 @@ https://bugs.xine-project.org/show_bug.cgi?id=531
  AC_CONFIG_SRCDIR([src/xine-engine/xine.c])
  AC_CONFIG_MACRO_DIR([m4])
  AC_CONFIG_LIBOBJ_DIR([lib])
-@@ -905,6 +913,7 @@
+@@ -466,7 +466,8 @@ AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[]],
+ CC_ATTRIBUTE_ALIGNED
+ 
+ CC_ATTRIBUTE_VISIBILITY([protected],
+-                        [visibility_export="protected"],
++                        [visibility_export="protected"
++                         CC_ATTRIBUTE_VISIBILITY([default])],
+                         [CC_ATTRIBUTE_VISIBILITY([default], [visibility_export="default"])])
+ CC_ATTRIBUTE_VISIBILITY([internal])
+ 
+@@ -920,6 +921,7 @@ AC_CHECK_FUNCS([strncasecmp _strnicmp], 
  
  AC_FUNC_FSEEKO
  
