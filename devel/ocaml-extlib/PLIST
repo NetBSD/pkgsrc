@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2014/10/26 10:54:36 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/06/19 10:07:47 jaapb Exp $
 ${OCAML_SITELIB}/extlib/IO.cmi
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/extlib/IO.cmx
 ${OCAML_SITELIB}/extlib/IO.mli
@@ -21,6 +21,12 @@ ${OCAML_SITELIB}/extlib/enum.mli
 ${OCAML_SITELIB}/extlib/extArray.cmi
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/extlib/extArray.cmx
 ${OCAML_SITELIB}/extlib/extArray.mli
+${OCAML_SITELIB}/extlib/extBuffer.cmi
+${PLIST.ocaml-opt}${OCAML_SITELIB}/extlib/extBuffer.cmx
+${OCAML_SITELIB}/extlib/extBuffer.mli
+${OCAML_SITELIB}/extlib/extBytes.cmi
+${PLIST.ocaml-opt}${OCAML_SITELIB}/extlib/extBytes.cmx
+${OCAML_SITELIB}/extlib/extBytes.mli
 ${OCAML_SITELIB}/extlib/extHashtbl.cmi
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/extlib/extHashtbl.cmx
 ${OCAML_SITELIB}/extlib/extHashtbl.mli
@@ -29,6 +35,7 @@ ${OCAML_SITELIB}/extlib/extLib.cma
 ${OCAML_SITELIB}/extlib/extLib.cmi
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/extlib/extLib.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/extlib/extLib.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/extlib/extLib.cmxs
 ${OCAML_SITELIB}/extlib/extList.cmi
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/extlib/extList.cmx
 ${OCAML_SITELIB}/extlib/extList.mli

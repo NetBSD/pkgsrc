@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 03:27:52 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/06/19 10:07:47 jaapb Exp $
 
-SHA1 (extlib-1.6.1.tar.gz) = 0022ed273affff85432d5587d46a8721817d315e
-RMD160 (extlib-1.6.1.tar.gz) = 4d92f55e71ee6effe58b07126458caa118472aa3
-SHA512 (extlib-1.6.1.tar.gz) = 9473f474bee99248bdc5e3c56741a191a8f0b89dbf750a4d9e92692b7871c997c584a2dc7e57f55b36b5ddcaf7a11d45b490b117ac15806e35813b82b696f541
-Size (extlib-1.6.1.tar.gz) = 72780 bytes
+SHA1 (ocaml-extlib-1.7.0.tar.gz) = 92d3ff333bb9b3f2effe19abdcb49229539b5c3a
+RMD160 (ocaml-extlib-1.7.0.tar.gz) = 0a5cd78ad58fc76c3e0bf9889b577dffc846f129
+SHA512 (ocaml-extlib-1.7.0.tar.gz) = 3f268e22f7f415e81bbc07c28561fc067ca87748fcdcb6515691d1270858f452ec2ba0eb7b80ca29f06b40f01c1e89a6b71380c7d9de37c60d2bb86093cb8be2
+Size (ocaml-extlib-1.7.0.tar.gz) = 83327 bytes
+SHA1 (patch-Makefile) = d4b332b440bf03a49d8067212a4911a7b050a749
