@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2511 2016/06/19 04:19:37 markd Exp $
+$NetBSD: CHANGES-2016,v 1.2512 2016/06/19 05:09:12 markd Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3643,3 +3643,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Added print/tex-dvisvgm-def version 1.0a [markd 2016-06-19]
 	Added print/tex-dvisvgm-def-doc version 1.0a [markd 2016-06-19]
 	Updated meta-pkgs/texlive-collection-latex to 2016 [markd 2016-06-19]
+	Updated devel/p5-Scope-Upper to 0.29 [markd 2016-06-19]
+	Updated graphics/libraw to 0.17.2 [markd 2016-06-19]
