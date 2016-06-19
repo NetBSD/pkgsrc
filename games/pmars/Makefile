@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/06/11 21:23:28 kamil Exp $
+# $NetBSD: Makefile,v 1.3 2016/06/19 23:02:06 joerg Exp $
 #
 
 DISTNAME=		pmars-0.9.2
@@ -12,7 +12,7 @@ LICENSE=		gnu-gpl-v2
 
 BUILD_DIRS=		src
 BUILD_MAKE_FLAGS+=	CC=${CC:Q}
-BUILD_MAKE_FLAGS+=	LIB="${COMPILER_RPATH_FLAG}${X11BASE}/lib -lX11"
+BUILD_MAKE_FLAGS+=	LIB="${COMPILER_RPATH_FLAG}${X11BASE}/lib -L${X11BASE}/lib -lX11"
 
 INSTALLATION_DIRS+=	bin share/pmars share/pmars/config share/pmars/warriors ${PKGMANDIR}/man6
 
