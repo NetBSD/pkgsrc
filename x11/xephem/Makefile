@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2016/06/19 10:53:05 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2016/06/19 23:48:22 jakllsch Exp $
 
 DISTNAME=	xephem-3.7.7
 CATEGORIES=	x11
@@ -54,6 +54,7 @@ do-install:
 	${INSTALL_DATA} ${WRKDIR}/XEphem ${DESTDIR}${PREFIX}/lib/X11/app-defaults
 	cd ${WRKSRC}; ${CP} -R auxil catalogs fifos fits gallery help lo \
 		${DESTDIR}${PREFIX}/share/xephem
+	rm ${DESTDIR}${PREFIX}/share/xephem/*/._*
 	${CHOWN} -R ${SHAREOWN} ${DESTDIR}${PREFIX}/share/xephem
 
 .include "../../x11/libX11/buildlink3.mk"
