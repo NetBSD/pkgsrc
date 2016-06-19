@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2016/04/21 22:17:16 prlw1 Exp $
+$NetBSD: distinfo,v 1.5 2016/06/19 14:41:53 prlw1 Exp $
 
-SHA1 (gnome-sudoku-3.20.0.tar.xz) = b1a745bb5224db111d739ab40eb85159e2df27bc
-RMD160 (gnome-sudoku-3.20.0.tar.xz) = c69861beded077248e2360c06d2cecbff12fbab2
-SHA512 (gnome-sudoku-3.20.0.tar.xz) = c4e1834f0e15bd8a1758af28ecb5c4edef7e69018854a39cf816ee706ac929207fc533ce7754b22d5c32665da73ab3d53c7c3064daf7ab2b5663ae09b0111932
-Size (gnome-sudoku-3.20.0.tar.xz) = 3026544 bytes
+SHA1 (gnome-sudoku-3.20.2.tar.xz) = 6681dbea11d6d9ddec7684df6984c75535bce0a8
+RMD160 (gnome-sudoku-3.20.2.tar.xz) = d8b8e49547adf94844b4af1c85b9d303794ca700
+SHA512 (gnome-sudoku-3.20.2.tar.xz) = 6bfb553c7db81555d7f62301f893776c55bad03e1efe473f04df943bd5037b532effc3ef6d90ac4d064557eba109a4228eb77c4283971b28877acbac1e60be8d
+Size (gnome-sudoku-3.20.2.tar.xz) = 3027968 bytes
