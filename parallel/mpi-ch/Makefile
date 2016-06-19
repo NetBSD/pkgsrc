@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2015/09/23 12:02:50 joerg Exp $
+# $NetBSD: Makefile,v 1.81 2016/06/19 18:13:00 wiz Exp $
 
 DISTNAME=	mpich-3.0.4
 PKGREVISION=	3
@@ -14,7 +14,6 @@ DEPENDS+=	bash-[0-9]*:../../shells/bash
 #MPI_SUBPREFIX=		mpich
 #MPI_PREFIX=		${LOCALBASE}/${MPI_SUBPREFIX}
 MPI_PREFIX=		${LOCALBASE}
-INSTALLATION_PREFIX=	${MPI_PREFIX}
 
 OVERRIDE_DIRDEPTH=	3
 
