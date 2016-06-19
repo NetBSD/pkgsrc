@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2544 2016/06/19 20:39:25 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2545 2016/06/19 20:40:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3696,3 +3696,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/meld to 3.16.1 [wiz 2016-06-19]
 	Updated audio/musicpd to 0.19.16 [wiz 2016-06-19]
 	Updated time/p5-DateTime-Locale to 1.04 [wiz 2016-06-19]
+	Updated devel/pcre to 8.39 [wiz 2016-06-19]
