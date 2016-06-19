@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2016/06/19 16:20:27 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2016/06/19 16:23:59 wiz Exp $
 
 DISTNAME=		w32api-3.11
 PKGNAME=		mingw-w32api-bin-3.11
+PKGREVISION=		1
 CATEGORIES=		cross
 MASTER_SITES=		${MASTER_SITE_MINGW}
 
