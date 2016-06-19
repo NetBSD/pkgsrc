@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2546 2016/06/19 20:41:51 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2547 2016/06/19 20:44:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3698,3 +3698,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated time/p5-DateTime-Locale to 1.04 [wiz 2016-06-19]
 	Updated devel/pcre to 8.39 [wiz 2016-06-19]
 	Updated time/py-vdirsyncer to 0.11.2 [wiz 2016-06-19]
+	Updated devel/confuse to 3.0 [wiz 2016-06-19]
