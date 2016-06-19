@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2015/12/10 10:07:45 markd Exp $
+# $NetBSD: Makefile,v 1.31 2016/06/19 04:13:06 markd Exp $
 
 DISTNAME=	jadetex
 PKGNAME=	tex-${DISTNAME}-3.13
-PKGREVISION=	9
+PKGREVISION=	10
 TEXLIVE_REV=	18835
 
 MAINTAINER=	minskim@NetBSD.org
@@ -13,6 +13,7 @@ DEPENDS+=	tex-ec-[0-9]*:../../fonts/tex-ec
 DEPENDS+=	tex-babel-[0-9]*:../../print/tex-babel
 DEPENDS+=	tex-fancyhdr-[0-9]*:../../print/tex-fancyhdr
 DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
+DEPENDS+=	tex-graphics-cfg-[0-9]*:../../print/tex-graphics-cfg
 DEPENDS+=	tex-hyperref-[0-9]*:../../print/tex-hyperref
 DEPENDS+=	tex-lambda-[0-9]*:../../print/tex-lambda
 DEPENDS+=	tex-latex-[0-9]*:../../print/tex-latex
