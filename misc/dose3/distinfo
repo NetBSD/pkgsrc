@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.2 2015/11/03 23:49:34 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/06/19 10:36:58 jaapb Exp $
 
-SHA1 (dose3-3.3-beta2.tar.gz) = 8ae292162328356416dd5008db11c2bab8fbd834
-RMD160 (dose3-3.3-beta2.tar.gz) = 6b9a25539102a6ba579bf21064d6fe159842692f
-SHA512 (dose3-3.3-beta2.tar.gz) = 7540b2390f8ef49acdf4ac5c7598e25137b380f4d0b862d75a144a2e12d3f7e24633e8f0e3597f74cd48491f9fa7559dc1664692eb3a840eca26e0f077550db8
-Size (dose3-3.3-beta2.tar.gz) = 257564 bytes
-SHA1 (patch-META.in) = 13bede847fef7b94fe30ac9b7c339572e8212e8d
-SHA1 (patch-Makefile) = 4f50c506798a0749d2bd6d3ca975ecf8b107a75f
-SHA1 (patch-Makefile.config.in) = e2fe2efb61c18f099dd9ae29ef35ef8c8f943a61
-SHA1 (patch-configure.ac) = 88ecf59fd023b183f60192ab46243ce084ffaa28
+SHA1 (dose3-5.0~rc2.tar.gz) = 258ec6906e541d3d3e0b607aaaee3322dbee0221
+RMD160 (dose3-5.0~rc2.tar.gz) = e8be76f3d16ef6fa809883dcad1da743cfaa9c49
+SHA512 (dose3-5.0~rc2.tar.gz) = 594458df5437cdf155e35ddbf5ae034d626941f2b5fd28efad02149cd94417421300262e122ce502e52130ec81d6d3cee713889f8ffba6ecf945a536ea745301
+Size (dose3-5.0~rc2.tar.gz) = 297350 bytes
+SHA1 (patch-Makefile) = 1be9791f9d225d8adf81c309fd4c0aac1a6078ef
+SHA1 (patch-Makefile.config.in) = cae3219764b2f9ba75ae8bdd3d79d9e2e71c7234
+SHA1 (patch-algo_dominators.ml) = f1e5f7b4ce60b3b187cd5a9aca15a4f6c41f90b4
