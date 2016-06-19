@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16044 2016/06/19 20:21:50 wiz Exp $
+$NetBSD: TODO,v 1.16045 2016/06/19 20:24:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -384,7 +384,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o adocman-0.13
 	o adodb-5.20
 	o aewm++-1.0.27
-	o afl-2.15b
 	o afterstep-2.2.12
 	o aget-0.4.1
 	o alacarte-0.13.2
