@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/04/06 20:27:17 rodent Exp $
-#
+# $NetBSD: Makefile,v 1.5 2016/06/19 16:20:27 wiz Exp $
 
 DISTNAME=		mingw-gcc-${DIST_VERSION}
 PKGNAME=		${DISTNAME:S/-${DIST_VERSION}/-${GCC_VERSION}/}
@@ -14,9 +13,8 @@ HOMEPAGE=		http://mingw.sourceforge.net/
 COMMENT=		GNU C Compiler for win32 cross-development
 
 USE_TOOLS+=		gmake
-USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-USE_CROSSBASE=		yes
+GNU_CONFIGURE_PREFIX=	${PREFIX}/cross
 INFO_FILES=		yes
 
 WRKSRC=			${WRKDIR}/gcc-${DIST_VERSION}
@@ -36,13 +34,13 @@ post-install:
 		${MAKE_FLAGS} install-target-libobjc
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${INSTALL_ENV} ${GMAKE} \
 		${MAKE_FLAGS} install-target-libstdc++-v3
-	${INSTALL_PROGRAM_DIR} ${DESTDIR}${CROSSBASE}/${MINGW_TARGET}/bin
-	cd ${DESTDIR}${CROSSBASE}/bin && ${LN} -fs ${MINGW_TARGET}-gcc ${MINGW_TARGET}-cc
-	cd ${DESTDIR}${CROSSBASE} && ${LN} -fs bin/${MINGW_TARGET}-cpp ${MINGW_TARGET}/bin/cpp
-	cd ${DESTDIR}${CROSSBASE} && ${LN} -fs bin/${MINGW_TARGET}-cc  ${MINGW_TARGET}/bin/cc
-	cd ${DESTDIR}${CROSSBASE} && ${LN} -fs bin/${MINGW_TARGET}-gcc ${MINGW_TARGET}/bin/gcc
-	cd ${DESTDIR}${CROSSBASE} && ${LN} -fs bin/${MINGW_TARGET}-c++ ${MINGW_TARGET}/bin/c++
-	cd ${DESTDIR}${CROSSBASE} && ${LN} -fs bin/${MINGW_TARGET}-g++ ${MINGW_TARGET}/bin/g++
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/cross/${MINGW_TARGET}/bin
+	cd ${DESTDIR}${PREFIX}/cross/bin && ${LN} -fs ${MINGW_TARGET}-gcc ${MINGW_TARGET}-cc
+	cd ${DESTDIR}${PREFIX}/cross && ${LN} -fs bin/${MINGW_TARGET}-cpp ${MINGW_TARGET}/bin/cpp
+	cd ${DESTDIR}${PREFIX}/cross && ${LN} -fs bin/${MINGW_TARGET}-cc  ${MINGW_TARGET}/bin/cc
+	cd ${DESTDIR}${PREFIX}/cross && ${LN} -fs bin/${MINGW_TARGET}-gcc ${MINGW_TARGET}/bin/gcc
+	cd ${DESTDIR}${PREFIX}/cross && ${LN} -fs bin/${MINGW_TARGET}-c++ ${MINGW_TARGET}/bin/c++
+	cd ${DESTDIR}${PREFIX}/cross && ${LN} -fs bin/${MINGW_TARGET}-g++ ${MINGW_TARGET}/bin/g++
 
 .include "../../cross/mingw/Makefile.common"
 .include "../../cross/mingw-binutils/buildlink3.mk"
