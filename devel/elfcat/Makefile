@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2016/06/09 06:23:38 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2016/06/19 14:33:11 prlw1 Exp $
 
 DISTNAME=	elfcat-1.0.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=randomstuff/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
 
-MAINTAINER=	pkgsrc-users@NetBSD.rog
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/randomstuff/elfcat/
 COMMENT=	Dump sections or program entries from a ELF file
 LICENSE=	mit
