@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2528 2016/06/19 15:40:40 prlw1 Exp $
+$NetBSD: CHANGES-2016,v 1.2529 2016/06/19 15:55:20 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3668,3 +3668,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated games/gnome-sudoku to 3.20.2 [prlw1 2016-06-19]
 	Updated graphics/eog3 to 3.20.2 [prlw1 2016-06-19]
 	Updated math/gnome-calculator to 3.20.1 [prlw1 2016-06-19]
+	Updated devel/py-at-spi2 to 2.20.2 [prlw1 2016-06-19]
