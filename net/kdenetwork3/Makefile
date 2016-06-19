@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.107 2016/03/05 11:27:52 jperkin Exp $
+# $NetBSD: Makefile,v 1.108 2016/06/19 15:48:29 joerg Exp $
 
 DISTNAME=	kdenetwork-${_KDE_VERSION}
-PKGREVISION=	36
+PKGREVISION=	37
 CATEGORIES=	net
 COMMENT=	Network modules for the KDE integrated X11 desktop
 
@@ -33,6 +33,10 @@ CONFIGURE_ENV.SunOS+=	ac_cv_sys_file_offset_bits=no
 .elif !exists(${X11BASE}/lib/libXss.so)
 CONFIGURE_ENV+=		ac_cv_lib_Xss_XScreenSaverQueryInfo="no"
 .endif
+
+post-extract:
+	mv ${WRKSRC}/filesharing/advanced/kcm_sambaconf/kcminterface.ui ${WRKSRC}/filesharing/advanced/kcm_sambaconf/kcminterface.ui.dist
+	${TR} '\000' '\001' < ${WRKSRC}/filesharing/advanced/kcm_sambaconf/kcminterface.ui.dist > ${WRKSRC}/filesharing/advanced/kcm_sambaconf/kcminterface.ui
 
 post-configure:
 	${TOUCH} ${WRKSRC}/Makefile ${WRKSRC}/config.h
