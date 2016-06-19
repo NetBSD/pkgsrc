@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2015/12/26 23:07:11 dholland Exp $
+# $NetBSD: Makefile,v 1.26 2016/06/19 16:20:27 wiz Exp $
 
 DISTNAME=	bfd-crunchide-1.2
 CATEGORIES=	cross
@@ -13,20 +13,21 @@ BUILDLINK_DEPMETHOD.cross-binutils=	build
 WRKSRC=		${WRKDIR}
 NO_CONFIGURE=	yes
 
-USE_CROSSBASE=	yes
-CPPFLAGS+=	-I${PREFIX}/include
+CPPFLAGS+=	-I${PREFIX}/cross/include
 MAKE_ENV+=	LIBS=${BFD_LIBS:Q}
 MAKE_ENV+=	${BSD_MAKE_ENV}
 USE_BSD_MAKEFILE=yes
+MAKE_FLAGS+=	PREFIX=${PREFIX}/cross
+MAKE_FLAGS+=	BINDIR=${PREFIX}/cross/bin
 
-BFD_LIBS=	${PREFIX}/lib/libbfd.a ${PREFIX}/lib/libiberty.a ${PREFIX}/lib/libintl.a
+BFD_LIBS=	${PREFIX}/cross/lib/libbfd.a ${PREFIX}/cross/lib/libiberty.a ${PREFIX}/cross/lib/libintl.a
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	cross/bin
 
 do-extract:
 	@${MKDIR} ${WRKSRC}
 	@${CP} ${FILESDIR}/Makefile ${FILESDIR}/crunchide.1 ${FILESDIR}/crunchide.c \
 		${WRKSRC}
 
-.include "../../cross/binutils/buildlink3.mk"
+.include "../../cross/cross-binutils/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
