@@ -1,14 +1,14 @@
-$NetBSD: patch-Makefile,v 1.1 2014/10/27 12:01:36 jaapb Exp $
+$NetBSD: patch-Makefile,v 1.2 2016/06/19 10:36:59 jaapb Exp $
 
-Use proper location for camlp4
---- Makefile.orig	2014-10-21 11:45:17.000000000 +0000
+stublibs does not need to be created
+--- Makefile.orig	2016-06-15 10:23:22.000000000 +0000
 +++ Makefile
-@@ -41,7 +41,7 @@ itarget:
+@@ -231,7 +231,7 @@ INSTALL_STUFF = $(filter-out $(exclude_c
  
- _build/Camlp4MacroParser.cmxs:
- 	mkdir -p _build
--	ocamlopt -shared $(shell ocamlc -where)/camlp4/Camlp4Parsers/Camlp4MacroParser.cmx -o _build/Camlp4MacroParser.cmxs
-+	ocamlopt -shared ${PREFIX}/lib/ocaml/camlp4/Camlp4Parsers/Camlp4MacroParser.cmx -o _build/Camlp4MacroParser.cmxs
+ installlib: META installcudf
+ 	@test -d $(LIBDIR) || mkdir -p $(LIBDIR)
+-	@test -d $(LIBDIR)/stublibs || mkdir -p $(LIBDIR)/stublibs
++#	@test -d $(LIBDIR)/stublibs || mkdir -p $(LIBDIR)/stublibs
+ 	@$(INSTALL) -patch-version $(VERSION) $(NAME) $(INSTALL_STUFF)
+ 	@echo "Install dose librairies to $(LIBDIR)"
  
- $(DOSELIBS)/cudf.%:
- 	$(OCAMLBUILD) $(OBFLAGS) cudf/cudf.$*
