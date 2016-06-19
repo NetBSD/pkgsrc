@@ -1,6 +1,8 @@
-$NetBSD: patch-ab,v 1.23 2013/02/18 08:41:34 markd Exp $
+$NetBSD: patch-ab,v 1.24 2016/06/19 05:55:57 markd Exp $
 
 * First two chunks: automake-1.13 compatability.
+
+Latest rrdtool doesnt have separate librrd_th
 
 --- configure.in.orig	2011-08-15 08:34:28.000000000 +0000
 +++ configure.in
@@ -53,6 +55,32 @@ $NetBSD: patch-ab,v 1.23 2013/02/18 08:41:34 markd Exp $
         PCAP_ROOT=`cd ${PCAP_ROOT} && pwd`
         CORELIBS="${CORELIBS} -L$PCAP_ROOT -lpcap"
         INCS="${INCS} -I$PCAP_ROOT"
+@@ -876,19 +889,19 @@ else
+    fi
+ fi
+ 
+-RRD_LIB="-L${RRD_HOME}/lib -lrrd_th"
++RRD_LIB="-L${RRD_HOME}/lib -lrrd"
+ 
+-if test -f "$RRD_HOME/lib/librrd_th.so"; then
++if test -f "$RRD_HOME/lib/librrd.so"; then
+    AC_MSG_RESULT(checking for rrdtool... yes)
+ else
+-  if test -f "$RRD_HOME/lib/librrd_th.dylib"; then # OSX
++  if test -f "$RRD_HOME/lib/librrd.dylib"; then # OSX
+      AC_MSG_RESULT(checking for rrdtool... yes)
+   else
+-     if test -f "$RRD_HOME/lib/librrd_th.a"; then
++     if test -f "$RRD_HOME/lib/librrd.a"; then
+        AC_MSG_RESULT(checking for rrdtool... yes)
+      else
+-       AC_CHECK_LIB([rrd_th], [main])
+-       if test ".${ac_cv_lib_rrd_th_main}" != ".yes"; then
++       AC_CHECK_LIB([rrd], [main])
++       if test ".${ac_cv_lib_rrd_main}" != ".yes"; then
+          AC_MSG_ERROR(Unable to find RRD at $RRD_HOME: please use --with-rrd-home=DIR);
+ 	 AC_MSG_ERROR(RRD source can be downloaded from http://www.rrdtool.org/);
+        else
 @@ -1721,8 +1734,6 @@ if test -f "GeoLiteCity.dat"; then
  else
     if test -f "3rd_party/GeoLiteCity.dat.gz"; then
