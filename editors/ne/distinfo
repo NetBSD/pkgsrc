@@ -1,20 +1,7 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 03:32:18 agc Exp $
+$NetBSD: distinfo,v 1.7 2016/06/19 17:25:31 prlw1 Exp $
 
-SHA1 (ne-1.31/ne-1.31.tar.gz) = 25642fa74c720bef7ba56f96673d2d2d554f2f57
-RMD160 (ne-1.31/ne-1.31.tar.gz) = a3c2d90d289737b67a66ae7d79005ac665ebba53
-SHA512 (ne-1.31/ne-1.31.tar.gz) = 906473a523ed4c203ba6fc6a2164f0bd8f0cf99c858f3a8501d211af1d261819c60639e39c680ee0a66d5f6ed877bc98a5a458783552a4f66c2a6ea63e2a4a1a
-Size (ne-1.31/ne-1.31.tar.gz) = 342567 bytes
-SHA1 (ne-1.31/ne.manpage.1) = b252b2c55fa057f7aaf2e092bbc9acec5e263373
-RMD160 (ne-1.31/ne.manpage.1) = cc46ad47ea8a26b668d15d9a2a63f74859a003d5
-SHA512 (ne-1.31/ne.manpage.1) = e74f8feed05f2fdc217dd19654d995d11aaef7737a31f6fc85028068a159b1334cbf59dadbd02647f1842bd4805c1b5e54c6d22a31b41a58a11aff282d5af51b
-Size (ne-1.31/ne.manpage.1) = 4578 bytes
-SHA1 (ne-1.31/NE.spec.ascii) = 83a4acfea7c5e01a3efdf67105596af77d968f2f
-RMD160 (ne-1.31/NE.spec.ascii) = 7d972e836458912ce17c2a16dd8a1152ff33a5a0
-SHA512 (ne-1.31/NE.spec.ascii) = 421ceaaa4293900c0d7f3b2c549f87674234448d9c2b8bbd5b228bd849863e034b495dd33598922b57e31502b034f39aa64129f289956178bc791cc9e0cbe3e3
-Size (ne-1.31/NE.spec.ascii) = 318118 bytes
-SHA1 (ne-1.31/NE.changes.spec) = 587a72694b34763b324bd694549f951250e3d309
-RMD160 (ne-1.31/NE.changes.spec) = a619a2d8a80054138cb97198fbb2d6e8f473a178
-SHA512 (ne-1.31/NE.changes.spec) = 76e6b3c24cf282fac00563a9c66e572bed4c47e295183a9d7ff4dba6b907c0f4555e68a43390679f5f8a767be02e754099dc80ca25dea480f5b167fc5fc47d8d
-Size (ne-1.31/NE.changes.spec) = 7380 bytes
-SHA1 (patch-aa) = 83fe227f538774e6268126c39bc31cdf188b15f1
-SHA1 (patch-sysunix.c) = 942bcfa3aa4be33b06d018d0ce3b546db99849f2
+SHA1 (ne-3.02.tar.gz) = 7e93213780a668856b8bda0e80bad0dd8a6e543b
+RMD160 (ne-3.02.tar.gz) = 9c97a88759871e0139b3b0a5f122628e24a836bc
+SHA512 (ne-3.02.tar.gz) = 18414f32967c99a29a22587daa1c24de86df3677b238b1bbc88c1a5c888e5a025a5bbcee00f8ea74e9f4591f60d544c82151a1e295f4dcb3ace6aafa55cce0bb
+Size (ne-3.02.tar.gz) = 601076 bytes
+SHA1 (patch-Makefile.in) = 9f10a8a6ab8569e417fa01dfb430e62993094a0d
