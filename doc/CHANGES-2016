@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2541 2016/06/19 20:30:46 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2542 2016/06/19 20:32:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3693,3 +3693,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/afl to 2.15b [wiz 2016-06-19]
 	Updated misc/calibre to 2.59.0 [wiz 2016-06-19]
 	Updated security/libgpg-error to 1.23 [wiz 2016-06-19]
+	Updated devel/meld to 3.16.1 [wiz 2016-06-19]
