@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16052 2016/06/19 20:41:51 wiz Exp $
+$NetBSD: TODO,v 1.16053 2016/06/19 20:44:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -524,7 +524,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o compiz-0.8.10
 	o concurrencykit-0.5.1
 	o cone-0.92
-	o confuse-3.0
 	o cook-2.31
 	o courier-0.76.0
 	o courier-authlib-0.66.2
