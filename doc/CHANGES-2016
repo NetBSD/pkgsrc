@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2536 2016/06/19 18:04:04 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2537 2016/06/19 20:03:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3688,3 +3688,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated editors/ne to 3.02 [prlw1 2016-06-19]
 	Updated pkgtools/pkglint4 to 4.163 [wiz 2016-06-19]
 	mk: remove support for USE_CROSSBASE [wiz 2016-06-19]
+	mk: remove support for INSTALLATION_PREFIX [wiz 2016-06-19]
