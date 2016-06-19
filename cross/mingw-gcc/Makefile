@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2016/06/19 16:20:27 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2016/06/19 16:23:59 wiz Exp $
 
 DISTNAME=		mingw-gcc-${DIST_VERSION}
 PKGNAME=		${DISTNAME:S/-${DIST_VERSION}/-${GCC_VERSION}/}
+PKGREVISION=		1
 CATEGORIES=		cross
 MASTER_SITES=		${MASTER_SITE_MINGW}
 DISTFILES=		gcc-core-${DIST_VERSION}-src.tar.gz \
