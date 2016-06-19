@@ -1,23 +1,20 @@
-# $NetBSD: Makefile,v 1.7 2016/05/05 11:45:40 jaapb Exp $
+# $NetBSD: Makefile,v 1.8 2016/06/19 23:23:02 jaapb Exp $
 
-VERSION=	1.2.0
-PKGNAME=	ocaml-opam-${VERSION}
-DISTNAME=	${VERSION}
-DIST_SUBDIR=	ocaml-opam
-PKGREVISION=	5
+VERSION=	1.2.2
+GITHUB_PROJECT=	opam
+DISTNAME=	${GITHUB_PROJECT}-${VERSION}
+PKGNAME=	ocaml-${DISTNAME}
 CATEGORIES=	misc
-MASTER_SITES=	https://github.com/ocaml/opam/archive/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=ocaml/}
 
 MAINTAINER=	jaapb@NetBSD.org
-HOMEPAGE=	https://github.com/ocaml/opam/archive/
+HOMEPAGE=	http://opam.ocaml.org/
 COMMENT=	OCaml package manager
 LICENSE=	gnu-lgpl-v3
 MAKE_JOBS_SAFE=	no
 
 HAS_CONFIGURE=	yes
 USE_TOOLS+=	gawk gmake
-
-WRKSRC=	${WRKDIR}/opam-${VERSION}
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX} --mandir=${PREFIX}/${PKGMANDIR}
 
