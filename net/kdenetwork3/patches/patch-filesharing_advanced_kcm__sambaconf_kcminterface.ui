@@ -1,0 +1,104 @@
+$NetBSD: patch-filesharing_advanced_kcm__sambaconf_kcminterface.ui,v 1.1 2016/06/19 15:48:29 joerg Exp $
+
+--- filesharing/advanced/kcm_sambaconf/kcminterface.ui.orig	2016-06-18 16:49:43.000000000 +0000
++++ filesharing/advanced/kcm_sambaconf/kcminterface.ui
+@@ -282,9 +282,6 @@ and reappear on the right-hand side, as 
+                                         <property name="text">
+                                             <string>Share</string>
+                                         </property>
+-                                        <property name="accel">
+-                                            <string>Alt+</string>
+-                                        </property>
+                                         <property name="checked">
+                                             <bool>true</bool>
+                                         </property>
+@@ -300,9 +297,6 @@ and reappear on the right-hand side, as 
+                                         <property name="text">
+                                             <string>User</string>
+                                         </property>
+-                                        <property name="accel">
+-                                            <string>Alt+</string>
+-                                        </property>
+                                     </widget>
+                                     <widget class="QRadioButton">
+                                         <property name="name">
+@@ -315,9 +309,6 @@ and reappear on the right-hand side, as 
+                                         <property name="text">
+                                             <string>Server</string>
+                                         </property>
+-                                        <property name="accel">
+-                                            <string>Alt+</string>
+-                                        </property>
+                                     </widget>
+                                     <widget class="QRadioButton">
+                                         <property name="name">
+@@ -342,9 +333,6 @@ and reappear on the right-hand side, as 
+                                         <property name="text">
+                                             <string>ADS</string>
+                                         </property>
+-                                        <property name="accel">
+-                                            <string>Alt+</string>
+-                                        </property>
+                                     </widget>
+                                 </vbox>
+                             </widget>
+@@ -774,9 +762,6 @@ and reappear on the right-hand side, as 
+                                 <property name="text">
+                                     <string>Edit Share...</string>
+                                 </property>
+-                                <property name="accel">
+-                                    <string>Alt+</string>
+-                                </property>
+                             </widget>
+                             <widget class="QPushButton">
+                                 <property name="name">
+@@ -1448,9 +1433,6 @@ Only change something if you know what y
+                                                         <property name="text">
+                                                             <string>Obey PAM restrictions</string>
+                                                         </property>
+-                                                        <property name="accel">
+-                                                            <string>Alt+</string>
+-                                                        </property>
+                                                     </widget>
+                                                     <widget class="QCheckBox">
+                                                         <property name="name">
+@@ -1463,9 +1445,6 @@ Only change something if you know what y
+                                                         <property name="text">
+                                                             <string>PAM password change</string>
+                                                         </property>
+-                                                        <property name="accel">
+-                                                            <string>Alt+</string>
+-                                                        </property>
+                                                     </widget>
+                                                 </vbox>
+                                             </widget>
+@@ -1505,9 +1484,6 @@ Only change something if you know what y
+                                                         <property name="text">
+                                                             <string>Paranoid server security</string>
+                                                         </property>
+-                                                        <property name="accel">
+-                                                            <string>Alt+</string>
+-                                                        </property>
+                                                     </widget>
+                                                 </vbox>
+                                             </widget>
+@@ -1599,9 +1575,6 @@ Only change something if you know what y
+                                                         <property name="text">
+                                                             <string>Bind interfaces only</string>
+                                                         </property>
+-                                                        <property name="accel">
+-                                                            <string>Alt+</string>
+-                                                        </property>
+                                                     </widget>
+                                                     <widget class="QComboBox" row="0" column="1">
+                                                         <item>
+@@ -6093,9 +6066,6 @@ This is only available if the SSL librar
+                                             <property name="text">
+                                                 <string>UNIX extensions</string>
+                                             </property>
+-                                            <property name="accel">
+-                                                <string>Alt+</string>
+-                                            </property>
+                                         </widget>
+                                         <widget class="QCheckBox">
+                                             <property name="name">
