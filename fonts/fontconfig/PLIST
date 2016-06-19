@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2014/04/01 21:21:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.26 2016/06/19 20:48:55 wiz Exp $
 bin/fc-cache
 bin/fc-cat
 bin/fc-list
@@ -178,6 +178,11 @@ man/man3/FcPatternHash.3
 man/man3/FcPatternPrint.3
 man/man3/FcPatternReference.3
 man/man3/FcPatternRemove.3
+man/man3/FcRangeCopy.3
+man/man3/FcRangeCreateDouble.3
+man/man3/FcRangeCreateInteger.3
+man/man3/FcRangeDestroy.3
+man/man3/FcRangeGetDouble.3
 man/man3/FcStrBasename.3
 man/man3/FcStrCmp.3
 man/man3/FcStrCmpIgnoreCase.3
@@ -210,6 +215,8 @@ man/man3/FcValueDestroy.3
 man/man3/FcValueEqual.3
 man/man3/FcValuePrint.3
 man/man3/FcValueSave.3
+man/man3/FcWeightFromOpenType.3
+man/man3/FcWeightToOpenType.3
 man/man5/fonts-conf.5
 share/doc/fontconfig/fontconfig-devel.pdf
 share/doc/fontconfig/fontconfig-devel.txt
@@ -371,6 +378,11 @@ share/doc/fontconfig/fontconfig-devel/fcpatternhash.html
 share/doc/fontconfig/fontconfig-devel/fcpatternprint.html
 share/doc/fontconfig/fontconfig-devel/fcpatternreference.html
 share/doc/fontconfig/fontconfig-devel/fcpatternremove.html
+share/doc/fontconfig/fontconfig-devel/fcrangecopy.html
+share/doc/fontconfig/fontconfig-devel/fcrangecreatedouble.html
+share/doc/fontconfig/fontconfig-devel/fcrangecreateinteger.html
+share/doc/fontconfig/fontconfig-devel/fcrangedestroy.html
+share/doc/fontconfig/fontconfig-devel/fcrangegetdouble.html
 share/doc/fontconfig/fontconfig-devel/fcstrbasename.html
 share/doc/fontconfig/fontconfig-devel/fcstrcmp.html
 share/doc/fontconfig/fontconfig-devel/fcstrcmpignorecase.html
@@ -403,6 +415,8 @@ share/doc/fontconfig/fontconfig-devel/fcvaluedestroy.html
 share/doc/fontconfig/fontconfig-devel/fcvalueequal.html
 share/doc/fontconfig/fontconfig-devel/fcvalueprint.html
 share/doc/fontconfig/fontconfig-devel/fcvaluesave.html
+share/doc/fontconfig/fontconfig-devel/fcweightfromopentype.html
+share/doc/fontconfig/fontconfig-devel/fcweighttoopentype.html
 share/doc/fontconfig/fontconfig-devel/ln12.html
 share/doc/fontconfig/fontconfig-devel/t1.html
 share/doc/fontconfig/fontconfig-devel/x102.html
@@ -414,6 +428,10 @@ share/doc/fontconfig/fontconfig-user.txt
 share/examples/fontconfig/conf.d/README
 share/examples/fontconfig/fonts.conf
 share/fontconfig/conf.avail/10-autohint.conf
+share/fontconfig/conf.avail/10-hinting-full.conf
+share/fontconfig/conf.avail/10-hinting-medium.conf
+share/fontconfig/conf.avail/10-hinting-none.conf
+share/fontconfig/conf.avail/10-hinting-slight.conf
 share/fontconfig/conf.avail/10-no-sub-pixel.conf
 share/fontconfig/conf.avail/10-scale-bitmap-fonts.conf
 share/fontconfig/conf.avail/10-sub-pixel-bgr.conf
