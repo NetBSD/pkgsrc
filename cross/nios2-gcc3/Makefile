@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/06/12 10:48:35 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2016/06/19 16:20:28 wiz Exp $
 
 PKG_VERSION=		3.4.6
 # PKGNAME will have option name only when explictly selected
@@ -17,23 +17,19 @@ NOT_FOR_BULK_PLATFORM=	SunOS-*-*
 
 EXTRACT_ELEMENTS=	gcc
 WRKSRC=			${WRKDIR}/gcc
-#PATH:=                  ${CROSSBASE}/bin:${PATH}
 
 USE_TOOLS+=		gmake makeinfo perl
 USE_GNU_CONFIGURE_HOST=	no
-#BUILD_DEFS+=		CROSSBASE	#included in ../nios2/Makefile.common
 
 DEPENDS+=		nios2-binutils-[0-9]*:../../cross/nios2-binutils
 
 GNU_CONFIGURE=		yes
-USE_PKGLOCALEDIR=	yes
 
 NIOS2_TARGET?=		nios2-elf
 PLIST_SUBST+=		NIOS2_TARGET=${NIOS2_TARGET:Q}
 
-USE_CROSSBASE=		yes
-BUILD_DEFS+=		CROSSBASE
-PATH:=			${CROSSBASE}/bin:${PATH}
+GNU_CONFIGURE_PREFIX=	${PREFIX}/cross
+PATH:=			${PREFIX}/cross/bin:${PATH}
 
 BUILD_DEPENDS+=		gtexinfo-[0-9]*:../../devel/gtexinfo
 
@@ -57,15 +53,15 @@ INFO_FILES=		no
 
 # to avoid conflict with binutils (to be fixed by more sophisticated way)
 post-install:
-	${RM}  ${DESTDIR}${CROSSBASE}/lib/libiberty.a
+	${RM}  ${DESTDIR}${PREFIX}/cross/lib/libiberty.a
 #  to avoid conflict wit mingw-w64-gcc-4.5.1
-	${RM}  ${DESTDIR}${CROSSBASE}/man/man7/fsf-funding.7
-	${RM}  ${DESTDIR}${CROSSBASE}/man/man7/gfdl.7
-	${RM}  ${DESTDIR}${CROSSBASE}/man/man7/gpl.7
-	${RM}  ${DESTDIR}${CROSSBASE}/info/cpp.info
-	${RM}  ${DESTDIR}${CROSSBASE}/info/cppinternals.info
-	${RM}  ${DESTDIR}${CROSSBASE}/info/gcc.info
-	${RM}  ${DESTDIR}${CROSSBASE}/info/gccinstall.info
-	${RM}  ${DESTDIR}${CROSSBASE}/info/gccint.info
+	${RM}  ${DESTDIR}${PREFIX}/cross/man/man7/fsf-funding.7
+	${RM}  ${DESTDIR}${PREFIX}/cross/man/man7/gfdl.7
+	${RM}  ${DESTDIR}${PREFIX}/cross/man/man7/gpl.7
+	${RM}  ${DESTDIR}${PREFIX}/cross/info/cpp.info
+	${RM}  ${DESTDIR}${PREFIX}/cross/info/cppinternals.info
+	${RM}  ${DESTDIR}${PREFIX}/cross/info/gcc.info
+	${RM}  ${DESTDIR}${PREFIX}/cross/info/gccinstall.info
+	${RM}  ${DESTDIR}${PREFIX}/cross/info/gccint.info
 
 .include "../../mk/bsd.pkg.mk"

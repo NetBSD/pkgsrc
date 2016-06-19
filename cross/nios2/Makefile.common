@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2014/01/27 18:41:11 wiz Exp $ -*- Makefile -*-
+# $NetBSD: Makefile.common,v 1.5 2016/06/19 16:20:28 wiz Exp $ -*- Makefile -*-
 #
 # used by cross/nios2-binutils/Makefile
 # used by cross/nios2-gcc/Makefile
@@ -12,15 +12,13 @@ MASTER_SITES=		https://sourcery.mentor.com/GNUToolchain/package11649/public/nios
 EXTRACT_SUFX=           .tar.bz2
 
 GNU_CONFIGURE=		yes
-INFO_FILES=		#empty
-USE_PKGLOCALEDIR=	yes
+INFO_FILES=		yes
 
 NIOS2_TARGET?=		nios2-elf
 PLIST_SUBST+=		NIOS2_TARGET=${NIOS2_TARGET:Q}
 
-USE_CROSSBASE=		yes
-BUILD_DEFS+=		CROSSBASE
-PATH:=			${CROSSBASE}/bin:${PATH}
+GNU_CONFIGURE_PREFIX=	${PREFIX}/cross
+PATH:=			${PREFIX}/cross/bin:${PATH}
 
 BUILD_DEPENDS+=		gtexinfo-[0-9]*:../../devel/gtexinfo
 # MASTER_SITES with https:// and FETCH_USING= curl

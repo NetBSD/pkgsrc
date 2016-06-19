@@ -1,4 +1,5 @@
-# $NetBSD: Makefile,v 1.4 2015/06/12 10:48:35 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2016/06/19 16:20:28 wiz Exp $
+
 DISTNAME=		nios2_gnu_gcc4_13.0
 PKG_VERSION=		4.1.2
 PKGNAME=		nios2-gcc41-${PKG_VERSION}
@@ -14,14 +15,12 @@ LICENSE=		gnu-gpl-v2
 DEPENDS+=		nios2-binutils-[0-9]*:../../cross/nios2-binutils
 BUILD_DEPENDS+=		gtexinfo-[0-9]*:../../devel/gtexinfo
 
-BUILD_DEFS+=		CROSSBASE
 GNU_CONFIGURE=		yes
 INFO_FILES=		no
 EXTRACT_ELEMENTS=	gcc-4.1
-USE_PKGLOCALEDIR=	yes
 WRKSRC=			${WRKDIR}/${EXTRACT_ELEMENTS}
-PATH:=                  ${CROSSBASE}/bin:${PATH}
-USE_CROSSBASE=		yes
+PATH:=                  ${PREFIX}/cross/bin:${PATH}
+GNU_CONFIGURE_PREFIX=	${PREFIX}/cross
 USE_TOOLS+=		gmake makeinfo perl bison tar
 # following line to avoid getting
 #    make: exec(nios2--netbsdelf-ar) failed (No such file or directory)
@@ -50,15 +49,15 @@ do-extract:
 
 # to avoid conflict with binutils (to be fixed by more sophisticated way)
 post-install:
-	${RM}  ${DESTDIR}${CROSSBASE}/lib/libiberty.a
+	${RM}  ${DESTDIR}${PREFIX}/cross/lib/libiberty.a
 #  to avoid conflict wit mingw-w64-gcc-4.5.1
-	${RM}  ${DESTDIR}${CROSSBASE}/man/man7/fsf-funding.7
-	${RM}  ${DESTDIR}${CROSSBASE}/man/man7/gfdl.7
-	${RM}  ${DESTDIR}${CROSSBASE}/man/man7/gpl.7
-	${RM}  ${DESTDIR}${CROSSBASE}/info/cpp.info
-	${RM}  ${DESTDIR}${CROSSBASE}/info/cppinternals.info
-	${RM}  ${DESTDIR}${CROSSBASE}/info/gcc.info
-	${RM}  ${DESTDIR}${CROSSBASE}/info/gccinstall.info
-	${RM}  ${DESTDIR}${CROSSBASE}/info/gccint.info
+	${RM}  ${DESTDIR}${PREFIX}/cross/man/man7/fsf-funding.7
+	${RM}  ${DESTDIR}${PREFIX}/cross/man/man7/gfdl.7
+	${RM}  ${DESTDIR}${PREFIX}/cross/man/man7/gpl.7
+	${RM}  ${DESTDIR}${PREFIX}/cross/info/cpp.info
+	${RM}  ${DESTDIR}${PREFIX}/cross/info/cppinternals.info
+	${RM}  ${DESTDIR}${PREFIX}/cross/info/gcc.info
+	${RM}  ${DESTDIR}${PREFIX}/cross/info/gccinstall.info
+	${RM}  ${DESTDIR}${PREFIX}/cross/info/gccint.info
 
 .include "../../mk/bsd.pkg.mk"
