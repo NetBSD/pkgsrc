@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2016/06/17 12:36:50 jaapb Exp $
+# $NetBSD: Makefile,v 1.7 2016/06/19 10:07:47 jaapb Exp $
 
-DISTNAME=	extlib-1.6.1
-PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	4
+VERSION=	1.7.0
+GITHUB_PROJECT=	ocaml-extlib
+DISTNAME=	${GITHUB_PROJECT}-${VERSION}
 CATEGORIES=	devel
-MASTER_SITES=	https://ocaml-extlib.googlecode.com/files/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=ygrek/}
 
 MAINTAINER=	jaapb@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/ocaml-extlib/
@@ -18,10 +18,8 @@ OCAML_USE_FINDLIB=	yes
 
 .include "../../mk/ocaml.mk"
 
-BUILD_TARGET=	all
-.if ${OCAML_USE_OPT_COMPILER} == "yes"
-BUILD_TARGET+=	opt
-.endif
+BUILD_TARGET=	build
 
-.include "../../lang/camlp4/buildlink3.mk"
+.include "../../devel/ocaml-cppo/buildlink3.mk"
+#.include "../../lang/camlp4/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
