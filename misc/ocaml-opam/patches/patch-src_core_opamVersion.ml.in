@@ -1,0 +1,14 @@
+$NetBSD: patch-src_core_opamVersion.ml.in,v 1.1 2016/06/19 23:23:02 jaapb Exp $
+
+Reflect API change in dose3
+--- src/core/opamVersion.ml.in.orig	2015-04-27 07:46:51.000000000 +0000
++++ src/core/opamVersion.ml.in
+@@ -27,7 +27,7 @@ let compare v w =
+   let cut s = match OpamMisc.cut_at s '-' with
+     | Some (s,_) -> s
+     | None -> s in
+-  Debian.Version.compare (cut v) (cut w)
++  Versioning.Debian.compare (cut v) (cut w)
+ 
+ module O = struct
+   type t = string
