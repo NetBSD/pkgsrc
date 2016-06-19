@@ -1,0 +1,22 @@
+$NetBSD: patch-contrib_postgres__fdw_Makefile,v 1.1 2016/06/19 20:40:10 fhajny Exp $
+
+Backport PGXS build fix from newer branches.
+
+--- contrib/postgres_fdw/Makefile.orig	2016-05-09 20:53:56.000000000 +0000
++++ contrib/postgres_fdw/Makefile
+@@ -5,7 +5,6 @@ OBJS = postgres_fdw.o option.o deparse.o
+ 
+ PG_CPPFLAGS = -I$(libpq_srcdir)
+ SHLIB_LINK = $(libpq)
+-SHLIB_PREREQS = submake-libpq
+ 
+ EXTENSION = postgres_fdw
+ DATA = postgres_fdw--1.0.sql
+@@ -20,6 +19,7 @@ PG_CONFIG = pg_config
+ PGXS := $(shell $(PG_CONFIG) --pgxs)
+ include $(PGXS)
+ else
++SHLIB_PREREQS = submake-libpq
+ subdir = contrib/postgres_fdw
+ top_builddir = ../..
+ include $(top_builddir)/src/Makefile.global
