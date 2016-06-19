@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2512 2016/06/19 05:09:12 markd Exp $
+$NetBSD: CHANGES-2016,v 1.2513 2016/06/19 06:24:48 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3645,3 +3645,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated meta-pkgs/texlive-collection-latex to 2016 [markd 2016-06-19]
 	Updated devel/p5-Scope-Upper to 0.29 [markd 2016-06-19]
 	Updated graphics/libraw to 0.17.2 [markd 2016-06-19]
+	Updated www/firefox45 to 45.2.0 [ryoon 2016-06-19]
