@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2016/06/19 20:48:29 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.5 2016/06/19 21:09:57 fhajny Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -8,21 +8,13 @@
 #	<lang>-postgresql	client-side interface to PostgreSQL
 #	postgresql-<lang>	server-side module for PostgreSQL backend
 #
-# used by databases/postgresql95-adminpack/Makefile
 # used by databases/postgresql95-client/Makefile
 # used by databases/postgresql95-contrib/Makefile
-# used by databases/postgresql95-datatypes/Makefile
-# used by databases/postgresql95-dblink/Makefile
 # used by databases/postgresql95-docs/Makefile
-# used by databases/postgresql95-fuzzystrmatch/Makefile
-# used by databases/postgresql95-monitoring/Makefile
-# used by databases/postgresql95-pgcrypto/Makefile
 # used by databases/postgresql95-plperl/Makefile
 # used by databases/postgresql95-plpython/Makefile
 # used by databases/postgresql95-pltcl/Makefile
-# used by databases/postgresql95-replicationtools/Makefile
 # used by databases/postgresql95-server/Makefile
-# used by databases/postgresql95-upgrade/Makefile
 
 DISTNAME=	postgresql-9.5.3
 CATEGORIES=	databases
