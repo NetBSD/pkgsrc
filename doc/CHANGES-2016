@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2525 2016/06/19 12:54:13 taca Exp $
+$NetBSD: CHANGES-2016,v 1.2526 2016/06/19 14:42:23 prlw1 Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3665,3 +3665,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-IO-AIO to 4.34 [mef 2016-06-19]
 	Updated devel/p5-Hash-Util-FieldHash-Compat to 0.11 [mef 2016-06-19]
 	Added www/contao42 version 4.2.0 [taca 2016-06-19]
+	Updated games/gnome-sudoku to 3.20.2 [prlw1 2016-06-19]
