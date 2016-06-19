@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2523 2016/06/19 10:44:15 wiedi Exp $
+$NetBSD: CHANGES-2016,v 1.2524 2016/06/19 12:33:21 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3656,3 +3656,11 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ocaml-extlib to 1.7.0 [jaapb 2016-06-19]
 	Updated misc/dose3 to 5.0rc2 [jaapb 2016-06-19]
 	Updated editors/nano to 2.6.0 [wiedi 2016-06-19]
+	Updated devel/p5-Git-Version-Compare to 1.004 [mef 2016-06-19]
+	Updated devel/p5-Gnome2 to 1.046 [mef 2016-06-19]
+	Updated devel/p5-Search-Elasticsearch to 2.03 [mef 2016-06-19]
+	Updated devel/p5-MetaCPAN-Client to 1.015000 [mef 2016-06-19]
+	Updated devel/p5-Log-Dispatch to 2.56 [mef 2016-06-19]
+	Updated devel/p5-IPC-SysV to 2.07 [mef 2016-06-19]
+	Updated devel/p5-IO-AIO to 4.34 [mef 2016-06-19]
+	Updated devel/p5-Hash-Util-FieldHash-Compat to 0.11 [mef 2016-06-19]
