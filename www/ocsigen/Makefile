@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.21 2016/05/05 11:45:42 jaapb Exp $
+# $NetBSD: Makefile,v 1.22 2016/06/20 19:35:56 jaapb Exp $
 #
 
-VERSION=	2.6
+VERSION=	2.7
+GITHUB_PROJECT=	ocsigenserver
 PKGNAME=	ocsigen-${VERSION}
-PKGREVISION=	2
-DISTNAME=	${VERSION}
-DIST_SUBDIR=	ocsigenserver
+DISTNAME=	${GITHUB_PROJECT}-${VERSION}
 CATEGORIES=	www
-MASTER_SITES=	http://github.com/ocsigen/ocsigenserver/archive/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=ocsigen/}
 
 MAINTAINER=	jaapb@NetBSD.org
 HOMEPAGE=	http://www.ocsigen.org/
@@ -56,6 +55,7 @@ USE_TOOLS+=	gmake
 WRKSRC=	${WRKDIR}/ocsigenserver-${VERSION}
 
 OCAML_USE_FINDLIB=	yes
+OCAML_FINDLIB_DIRS=	ocsigenserver
 
 .include "../../mk/ocaml.mk"
 
