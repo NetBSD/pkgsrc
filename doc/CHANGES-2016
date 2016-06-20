@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2558 2016/06/20 15:10:49 jaapb Exp $
+$NetBSD: CHANGES-2016,v 1.2559 2016/06/20 16:06:02 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3753,3 +3753,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added devel/ocaml-js-build-tools version 113.33.04 [jaapb 2016-06-20]
 	Updated security/p5-Authen-CAS-Client to 0.07 [mef 2016-06-20]
 	Updated devel/ocaml-sexplib to 113.33.03 [jaapb 2016-06-20]
+	Updated misc/screen to 4.4.0 [ryoon 2016-06-20]
