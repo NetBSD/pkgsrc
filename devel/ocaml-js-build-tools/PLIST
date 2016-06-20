@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2016/06/20 14:50:12 jaapb Exp $
+${OCAML_SITELIB}/js-build-tools/META
+${PLIST.ocaml-opt}${OCAML_SITELIB}/js-build-tools/jane_street_ocamlbuild_goodies.a
+${OCAML_SITELIB}/js-build-tools/jane_street_ocamlbuild_goodies.annot
+${OCAML_SITELIB}/js-build-tools/jane_street_ocamlbuild_goodies.cma
+${OCAML_SITELIB}/js-build-tools/jane_street_ocamlbuild_goodies.cmi
+${OCAML_SITELIB}/js-build-tools/jane_street_ocamlbuild_goodies.cmt
+${OCAML_SITELIB}/js-build-tools/jane_street_ocamlbuild_goodies.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/js-build-tools/jane_street_ocamlbuild_goodies.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/js-build-tools/jane_street_ocamlbuild_goodies.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/js-build-tools/jane_street_ocamlbuild_goodies.cmxs
+${PLIST.ocaml-opt}${OCAML_SITELIB}/js-build-tools/oasis2opam_install.a
+${OCAML_SITELIB}/js-build-tools/oasis2opam_install.annot
+${OCAML_SITELIB}/js-build-tools/oasis2opam_install.cma
+${OCAML_SITELIB}/js-build-tools/oasis2opam_install.cmi
+${OCAML_SITELIB}/js-build-tools/oasis2opam_install.cmt
+${OCAML_SITELIB}/js-build-tools/oasis2opam_install.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/js-build-tools/oasis2opam_install.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/js-build-tools/oasis2opam_install.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/js-build-tools/oasis2opam_install.cmxs
