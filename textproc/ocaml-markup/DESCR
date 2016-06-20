@@ -1,0 +1,13 @@
+Markup.ml is a pair of best-effort parsers implementing the HTML5 and XML
+specifications.
+
+In addition to being error-correcting, the parsers are:
+* streaming: capable of parsing partial input and emitting signals while more
+  input is still being received;
+* lazy: not parsing input unless you have requested the next parsing signal,
+  so you can easily stop parsing partway through a document;
+* non-blocking: they can be used with Lwt, but still provide a straightforward
+  synchronous interface for simple usage; and
+* one-pass: memory consumption is limited since the parsers don't build up a
+  document representation, nor buffer input beyond a small amount of
+  lookahead.
