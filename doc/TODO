@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16056 2016/06/20 17:28:54 joerg Exp $
+$NetBSD: TODO,v 1.16057 2016/06/20 17:29:07 joerg Exp $
 
 Suggested new packages
 ======================
@@ -470,7 +470,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bottlerocket-0.05b3
 	o bpython-0.15
 	o brasero-3.4.0
-	o bsdtar-3.2.0
 	o bugzilla-5.0.2
 	o bwa-0.7.12 [needs shm_open(3), please contact MAINTAINER]
 	o byobu-5.104
