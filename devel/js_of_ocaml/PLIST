@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2016/02/17 17:02:30 jaapb Exp $
-@unexec %D/libexec/ocaml-findlib-register del %D/${OCAML_SITELIB}/js_of_ocaml
+@comment $NetBSD: PLIST,v 1.8 2016/06/20 14:01:42 jaapb Exp $
 bin/js_of_ocaml
 bin/jsoo_minify
 bin/jsoo_mkcmis
@@ -7,6 +6,8 @@ bin/jsoo_mktop
 ${OCAML_SITELIB}/js_of_ocaml/META
 ${OCAML_SITELIB}/js_of_ocaml/array.js
 ${OCAML_SITELIB}/js_of_ocaml/bigarray.js
+${OCAML_SITELIB}/js_of_ocaml/bigstring.js
+${OCAML_SITELIB}/js_of_ocaml/bin_prot.js
 ${OCAML_SITELIB}/js_of_ocaml/cSS.cmi
 ${OCAML_SITELIB}/js_of_ocaml/cSS.mli
 ${OCAML_SITELIB}/js_of_ocaml/classlist.js
@@ -16,6 +17,7 @@ ${OCAML_SITELIB}/js_of_ocaml/compiler.cmi
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml/compiler.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml/compiler.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml/compiler.cmxs
+${OCAML_SITELIB}/js_of_ocaml/core_kernel.js
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml/deriving_Json.cmx
 ${OCAML_SITELIB}/js_of_ocaml/deriving_Json.mli
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml/deriving_Json_lexer.cmx
@@ -70,6 +72,9 @@ ${OCAML_SITELIB}/js_of_ocaml/jsooTopCamlp4.cmo
 ${OCAML_SITELIB}/js_of_ocaml/jsooTopError.cmi
 ${OCAML_SITELIB}/js_of_ocaml/jsooTopError.cmo
 ${OCAML_SITELIB}/js_of_ocaml/jsooTopError.mli
+${OCAML_SITELIB}/js_of_ocaml/jsooTopPpx.cmi
+${OCAML_SITELIB}/js_of_ocaml/jsooTopPpx.cmo
+${OCAML_SITELIB}/js_of_ocaml/jsooTopPpx.mli
 ${OCAML_SITELIB}/js_of_ocaml/jsoo_findlib_support.a
 ${OCAML_SITELIB}/js_of_ocaml/jsoo_findlib_support.cma
 ${OCAML_SITELIB}/js_of_ocaml/jsoo_findlib_support.cmi
@@ -102,6 +107,7 @@ ${OCAML_SITELIB}/js_of_ocaml/ocamlbuild_js_of_ocaml.cmi
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml/ocamlbuild_js_of_ocaml.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml/ocamlbuild_js_of_ocaml.cmxs
 ${OCAML_SITELIB}/js_of_ocaml/ocamlbuild_js_of_ocaml.mli
+${OCAML_SITELIB}/js_of_ocaml/object.js
 ${OCAML_SITELIB}/js_of_ocaml/pa_deriving_Json.cmo
 ${OCAML_SITELIB}/js_of_ocaml/pa_deriving_Json.cmi
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/js_of_ocaml/pa_deriving_Json.cmx
@@ -154,4 +160,3 @@ ${OCAML_SITELIB}/js_of_ocaml/worker.cmi
 ${OCAML_SITELIB}/js_of_ocaml/worker.mli
 ${OCAML_SITELIB}/js_of_ocaml/xmlHttpRequest.cmi
 ${OCAML_SITELIB}/js_of_ocaml/xmlHttpRequest.mli
-@exec %D/libexec/ocaml-findlib-register add %D/${OCAML_SITELIB}/js_of_ocaml
