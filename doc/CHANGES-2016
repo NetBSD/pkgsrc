@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2556 2016/06/20 14:50:32 jaapb Exp $
+$NetBSD: CHANGES-2016,v 1.2557 2016/06/20 15:03:47 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3751,3 +3751,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added textproc/ocaml-markup version 0.7.2 [jaapb 2016-06-20]
 	Updated devel/js_of_ocaml to 2.8 [jaapb 2016-06-20]
 	Added devel/ocaml-js-build-tools version 113.33.04 [jaapb 2016-06-20]
+	Updated security/p5-Authen-CAS-Client to 0.07 [mef 2016-06-20]
