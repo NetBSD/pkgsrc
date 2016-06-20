@@ -80,13 +80,13 @@ DESCRIPTION
      carded in favor of the new data.
 
 SEE ALSO
-     archive(3), archive_entry_acl(3), archive_entry_paths(3),
-     archive_entry_perms(3), archive_entry_time(3)
+     archive_entry_acl(3), archive_entry_paths(3), archive_entry_perms(3),
+     archive_entry_time(3) libarchive(3),
 
 HISTORY
      The libarchive library first appeared in FreeBSD 5.3.
 
 AUTHORS
-     The libarchive library was written by Tim Kientzle ⟨kientzle@acm.org⟩.
+     The libarchive library was written by Tim Kientzle <kientzle@acm.org>.
 
 BSD			       Feburary 2, 2012 			   BSD
