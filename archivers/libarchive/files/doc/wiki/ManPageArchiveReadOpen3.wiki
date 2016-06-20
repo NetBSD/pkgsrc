@@ -12,27 +12,27 @@ Streaming Archive Library (libarchive, -larchive)
 == SYNOPSIS == 
 '''<nowiki>#include <archive.h></nowiki>''' 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_read_open'''(''struct archive *'', ''void *client_data'', ''archive_open_callback *'', ''archive_read_callback *'', ''archive_close_callback *''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_read_open2'''(''struct archive *'', ''void *client_data'', ''archive_open_callback *'', ''archive_read_callback *'', ''archive_skip_callback *'', ''archive_close_callback *''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_read_open_FILE'''(''struct archive *'', ''FILE *file''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_read_open_fd'''(''struct archive *'', ''int fd'', ''size_t block_size''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_read_open_filename'''(''struct archive *'', ''const char *filename'', ''size_t block_size''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_read_open_memory'''(''struct archive *'', ''void *buff'', ''size_t size''); 
 == DESCRIPTION == 
@@ -59,7 +59,7 @@ raw bytes from the archive.
 Like 
 '''archive_read_open'''(), 
 except that it accepts a 
-'''FILE *''' 
+''FILE *'' 
 pointer. 
 This function should not be used with tape drives or other devices 
 that require strict I/O blocking. 
@@ -92,21 +92,21 @@ A complete description of the
 and 
 '''struct archive_entry''' 
 objects can be found in the overview manual page for 
-'''libarchive'''(3). 
+[[ManPageibarchive3]]. 
 == CLIENT CALLBACKS == 
 The callback functions must match the following prototypes: 
 <ul> 
 <li> 
-'''typedef ssize_t''' 
+''typedef la_ssize_t'' 
 '''archive_read_callback'''(''struct archive *'', ''void *client_data'', ''const void **buffer'') 
 </li><li> 
-'''typedef off_t''' 
+''typedef la_int64_t'' 
 '''archive_skip_callback'''(''struct archive *'', ''void *client_data'', ''off_t request'') 
 </li><li> 
-'''typedef int''' 
+''typedef int'' 
 '''archive_open_callback'''(''struct archive *'', ''void *client_data'') 
 </li><li> 
-'''typedef int''' 
+''typedef int'' 
 '''archive_close_callback'''(''struct archive *'', ''void *client_data'') 
 </li></ul> 
 
@@ -125,9 +125,9 @@ The read callback is invoked whenever the library
 requires raw bytes from the archive. 
 The read callback should read data into a buffer, 
 set the 
-```text 
+```text
 const void **buffer 
-``` 
+```
 argument to point to the available data, and 
 return a count of the number of bytes available. 
 The library will invoke the read callback again 
@@ -179,12 +179,12 @@ and
 '''archive_error_string'''() 
 functions. 
 == SEE ALSO == 
-'''tar'''(1), 
-'''libarchive'''(3), 
-'''archive_read'''(3), 
-'''archive_read_data'''(3), 
-'''archive_read_filter'''(3), 
-'''archive_read_format'''(3), 
-'''archive_read_set_options'''(3), 
-'''archive_util'''(3), 
-'''tar'''(5) 
+[[ManPageBsdtar1]], 
+[[ManPageibarchive3]], 
+[[ManPagerchiveead3]], 
+[[ManPagerchiveeadata3]], 
+[[ManPagerchiveeadilter3]], 
+[[ManPagerchiveeadormat3]], 
+[[ManPagerchiveeadetptions3]], 
+[[ManPagerchivetil3]], 
+[[ManPageTar5]] 

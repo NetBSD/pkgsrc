@@ -99,12 +99,12 @@ DESCRIPTION
      ond field of 0.
 
 SEE ALSO
-     archive(3), archive_entry(3)
+     archive_entry(3) libarchive(3),
 
 HISTORY
      The libarchive library first appeared in FreeBSD 5.3.
 
 AUTHORS
-     The libarchive library was written by Tim Kientzle ⟨kientzle@acm.org⟩.
+     The libarchive library was written by Tim Kientzle <kientzle@acm.org>.
 
 BSD			       February 2, 2012 			   BSD

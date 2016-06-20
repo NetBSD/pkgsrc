@@ -160,6 +160,33 @@ Defaults to enabled, use
 \fB!rockridge\fP
 to disable.
 .RE
+.TP
+Format tar
+.RS 5
+.TP
+\fBcompat-2x\fP
+Libarchive 2.x incorrectly encoded Unicode filenames on
+some platforms.
+This option mimics the libarchive 2.x filename handling
+so that such archives can be read correctly.
+.TP
+\fBhdrcharset\fP
+The value is used as a character set name that will be
+used when translating filenames.
+.TP
+\fBmac-ext\fP
+Support Mac OS metadata extension that records data in special
+files beginning with a period and underscore.
+Defaults to enabled on Mac OS, disabled on other platforms.
+Use
+\fB!mac-ext\fP
+to disable.
+.TP
+\fBread_concatenated_archives\fP
+Ignore zeroed blocks in the archive, which occurs when multiple tar archives
+have been concatenated together.  Without this option, only the contents of
+the first concatenated archive would be read.
+.RE
 .RE
 .SH ERRORS
 .ad l

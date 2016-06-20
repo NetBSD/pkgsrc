@@ -8,11 +8,11 @@ Streaming Archive Library (libarchive, -larchive)
 == SYNOPSIS == 
 '''<nowiki>#include <archive.h></nowiki>''' 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_read_next_header'''(''struct archive *'', ''struct archive_entry **''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_read_next_header2'''(''struct archive *'', ''struct archive_entry *''); 
 == DESCRIPTION == 
@@ -50,14 +50,14 @@ and
 '''archive_error_string'''() 
 functions. 
 == SEE ALSO == 
-'''tar'''(1), 
-'''libarchive'''(3), 
-'''archive_read'''(3), 
-'''archive_read_data'''(3), 
-'''archive_read_extract'''(3), 
-'''archive_read_filter'''(3), 
-'''archive_read_format'''(3), 
-'''archive_read_open'''(3), 
-'''archive_read_set_options'''(3), 
-'''archive_util'''(3), 
-'''tar'''(5) 
+[[ManPageBsdtar1]], 
+[[ManPageibarchive3]], 
+[[ManPagerchiveead3]], 
+[[ManPagerchiveeadata3]], 
+[[ManPagerchiveeadxtract3]], 
+[[ManPagerchiveeadilter3]], 
+[[ManPagerchiveeadormat3]], 
+[[ManPagerchiveeadpen3]], 
+[[ManPagerchiveeadetptions3]], 
+[[ManPagerchivetil3]], 
+[[ManPageTar5]] 

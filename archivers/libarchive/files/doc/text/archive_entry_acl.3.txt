@@ -126,7 +126,7 @@ RETURN VALUES
      archive_entry_acl_text_w().
 
 SEE ALSO
-     archive(3), archive_entry(3)
+     archive_entry(3) libarchive(3),
 
 BUGS
      ARCHIVE_ENTRY_ACL_STYLE_EXTRA_ID and ARCHIVE_ENTRY_ACL_STYLE_MARK_DEFAULT

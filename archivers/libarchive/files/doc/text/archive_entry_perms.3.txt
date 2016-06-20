@@ -158,8 +158,8 @@ DESCRIPTION
      strtofflags(3), which stops parsing at the first unrecognized name.)
 
 SEE ALSO
-     archive(3), archive_entry(3), archive_entry_acl(3), archive_read_disk(3),
-     archive_write_disk(3)
+     archive_entry(3), archive_entry_acl(3), archive_read_disk(3),
+     archive_write_disk(3) libarchive(3),
 
 BUGS
      The platform types uid_t and gid_t are often 16 or 32 bit wide.  In this

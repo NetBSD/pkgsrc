@@ -1,5 +1,5 @@
-<!-- Creator     : groff version 1.21 -->
-<!-- CreationDate: Sat Feb  9 12:24:06 2013 -->
+<!-- Creator     : groff version 1.22.3 -->
+<!-- CreationDate: Sun Jun 19 19:54:08 2016 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -26,14 +26,22 @@ ARCHIVE_WRITE_FILTER(3)</p>
 <p style="margin-top: 1em"><b>NAME</b></p>
 
 
-<p style="margin-left:6%;"><b>archive_write_add_filter_bzip2</b>,
+<p style="margin-left:6%;"><b>archive_write_add_filter_b64encode</b>,
+<b>archive_write_add_filter_by_name</b>,
+<b>archive_write_add_filter_bzip2</b>,
 <b>archive_write_add_filter_compress</b>,
+<b>archive_write_add_filter_grzip</b>,
 <b>archive_write_add_filter_gzip</b>,
+<b>archive_write_add_filter_lrzip</b>,
+<b>archive_write_add_filter_lz4</b>,
 <b>archive_write_add_filter_lzip</b>,
 <b>archive_write_add_filter_lzma</b>,
+<b>archive_write_add_filter_lzop</b>,
 <b>archive_write_add_filter_none</b>,
 <b>archive_write_add_filter_program</b>,
-<b>archive_write_add_filter_xz</b></p>
+<b>archive_write_add_filter_uuencode</b>,
+<b>archive_write_add_filter_xz</b> &mdash; functions
+enabling output filters</p>
 
 <p style="margin-top: 1em"><b>LIBRARY</b></p>
 
@@ -48,6 +56,11 @@ ARCHIVE_WRITE_FILTER(3)</p>
 <p style="margin-left:6%; margin-top: 1em"><i>int</i></p>
 
 
+<p style="margin-left:12%;"><b>archive_write_add_filter_b64encode</b>(<i>struct&nbsp;archive&nbsp;*</i>);</p>
+
+<p style="margin-left:6%; margin-top: 1em"><i>int</i></p>
+
+
 <p style="margin-left:12%;"><b>archive_write_add_filter_bzip2</b>(<i>struct&nbsp;archive&nbsp;*</i>);</p>
 
 <p style="margin-left:6%; margin-top: 1em"><i>int</i></p>
@@ -58,7 +71,22 @@ ARCHIVE_WRITE_FILTER(3)</p>
 <p style="margin-left:6%; margin-top: 1em"><i>int</i></p>
 
 
+<p style="margin-left:12%;"><b>archive_write_add_filter_grzip</b>(<i>struct&nbsp;archive&nbsp;*</i>);</p>
+
+<p style="margin-left:6%; margin-top: 1em"><i>int</i></p>
+
+
 <p style="margin-left:12%;"><b>archive_write_add_filter_gzip</b>(<i>struct&nbsp;archive&nbsp;*</i>);</p>
+
+<p style="margin-left:6%; margin-top: 1em"><i>int</i></p>
+
+
+<p style="margin-left:12%;"><b>archive_write_add_filter_lrzip</b>(<i>struct&nbsp;archive&nbsp;*</i>);</p>
+
+<p style="margin-left:6%; margin-top: 1em"><i>int</i></p>
+
+
+<p style="margin-left:12%;"><b>archive_write_add_filter_lz4</b>(<i>struct&nbsp;archive&nbsp;*</i>);</p>
 
 <p style="margin-left:6%; margin-top: 1em"><i>int</i></p>
 
@@ -69,6 +97,11 @@ ARCHIVE_WRITE_FILTER(3)</p>
 
 
 <p style="margin-left:12%;"><b>archive_write_add_filter_lzma</b>(<i>struct&nbsp;archive&nbsp;*</i>);</p>
+
+<p style="margin-left:6%; margin-top: 1em"><i>int</i></p>
+
+
+<p style="margin-left:12%;"><b>archive_write_add_filter_lzop</b>(<i>struct&nbsp;archive&nbsp;*</i>);</p>
 
 <p style="margin-left:6%; margin-top: 1em"><i>int</i></p>
 
@@ -84,19 +117,36 @@ ARCHIVE_WRITE_FILTER(3)</p>
 <p style="margin-left:6%; margin-top: 1em"><i>int</i></p>
 
 
+<p style="margin-left:12%;"><b>archive_write_add_filter_uuencode</b>(<i>struct&nbsp;archive&nbsp;*</i>);</p>
+
+<p style="margin-left:6%; margin-top: 1em"><i>int</i></p>
+
+
 <p style="margin-left:12%;"><b>archive_write_add_filter_xz</b>(<i>struct&nbsp;archive&nbsp;*</i>);</p>
 
 <p style="margin-top: 1em"><b>DESCRIPTION <br>
 archive_write_add_filter_bzip2</b>(),
 <b>archive_write_add_filter_compress</b>(),
+<b>archive_write_add_filter_grzip</b>(),
 <b>archive_write_add_filter_gzip</b>(),
+<b>archive_write_add_filter_lrzip</b>(),
+<b>archive_write_add_filter_lz4</b>(),
 <b>archive_write_add_filter_lzip</b>(),
 <b>archive_write_add_filter_lzma</b>(),
+<b>archive_write_add_filter_lzop</b>(),
 <b>archive_write_add_filter_xz</b>(),</p>
 
 <p style="margin-left:17%;">The resulting archive will be
 compressed as specified. Note that the compressed output is
 always properly blocked.</p>
+
+
+<p style="margin-top: 1em"><b>archive_write_add_filter_b64encode</b>(),
+<b>archive_write_add_filter_uuencode</b>(),</p>
+
+<p style="margin-left:17%;">The output will be encoded as
+specified. The encoded output is always properly
+blocked.</p>
 
 
 <p style="margin-top: 1em"><b>archive_write_add_filter_none</b>()</p>
@@ -130,7 +180,7 @@ archive_write(3), archive_write_format(3),
 archive_write_set_options(3), cpio(5), mtree(5), tar(5)</p>
 
 <p style="margin-left:6%; margin-top: 1em">BSD
-February&nbsp;2, 2012 BSD</p>
+August&nbsp;14, 2014 BSD</p>
 <hr>
 </body>
 </html>

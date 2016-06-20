@@ -83,6 +83,25 @@ OPTIONS
 	     rockridge
 		     Support RockRidge extensions.  Defaults to enabled, use
 		     !rockridge to disable.
+     Format tar
+	     compat-2x
+		     Libarchive 2.x incorrectly encoded Unicode filenames on
+		     some platforms.  This option mimics the libarchive 2.x
+		     filename handling so that such archives can be read cor‐
+		     rectly.
+	     hdrcharset
+		     The value is used as a character set name that will be
+		     used when translating filenames.
+	     mac-ext
+		     Support Mac OS metadata extension that records data in
+		     special files beginning with a period and underscore.
+		     Defaults to enabled on Mac OS, disabled on other plat‐
+		     forms.  Use !mac-ext to disable.
+	     read_concatenated_archives
+		     Ignore zeroed blocks in the archive, which occurs when
+		     multiple tar archives have been concatenated together.
+		     Without this option, only the contents of the first con‐
+		     catenated archive would be read.
 
 ERRORS
      Detailed error codes and textual descriptions are available from the

@@ -1,5 +1,5 @@
-<!-- Creator     : groff version 1.21 -->
-<!-- CreationDate: Sat Feb  9 12:24:07 2013 -->
+<!-- Creator     : groff version 1.22.3 -->
+<!-- CreationDate: Sun Jun 19 19:54:08 2016 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -30,7 +30,7 @@ ARCHIVE_WRITE_OPTIONS(3)</p>
 <b>archive_write_set_format_option</b>,
 <b>archive_write_set_option</b>,
 <b>archive_write_set_options</b> &mdash; functions
-controlling options for reading archives</p>
+controlling options for writing archives</p>
 
 <p style="margin-top: 1em"><b>LIBRARY</b></p>
 
@@ -93,9 +93,11 @@ will be returned.</p>
 <p style="margin-left:17%; margin-top: 1em">If
 <i>module</i> is not NULL, <i>option</i> and <i>value</i>
 will be provided to the filter or reader named
-<i>module</i>. The return value will be that of the module.
-If there is no such module, <b>ARCHIVE_FAILED</b> will be
-returned.</p>
+<i>module</i>. The return value will be either
+<b>ARCHIVE_OK</b> if the option was successfully handled or
+<b>ARCHIVE_WARN</b> if the option was unrecognized by the
+module or could otherwise not be handled. If there is no
+such module, <b>ARCHIVE_FAILED</b> will be returned.</p>
 
 <p style="margin-left:17%; margin-top: 1em">If
 <i>module</i> is NULL, <i>option</i> and <i>value</i> will
@@ -280,7 +282,7 @@ full size of the image.</p>
 <p style="margin-left:27%;">Specifies the boot semantics
 used by the El Torito boot image: If the <i>value</i> is
 <b>fd</b>, then the boot image is assumed to be a bootable
-floppy image. If the <i>value</i> is <b>hd</b>, then the the
+floppy image. If the <i>value</i> is <b>hd</b>, then the
 boot image is assumed to be a bootable hard disk image. If
 the <i>value</i> is <b>no-emulation</b>, the boot image is
 used without floppy or hard disk emulation. If the boot
@@ -477,6 +479,59 @@ should not be compressed when using <b>zisofs=direct</b>.
 This option can be provided multiple times to suppress
 compression on many files.</p>
 
+<p>Format zip <b><br>
+compression</b></p>
+
+<p style="margin-left:27%;">The value is either
+&rsquo;&rsquo;store&rsquo;&rsquo; or
+&rsquo;&rsquo;deflate&rsquo;&rsquo; to indicate how the
+following entries should be compressed. Note that this
+setting is ignored for directories, symbolic links, and
+other special entries.</p>
+
+<p><b>experimental</b></p>
+
+<p style="margin-left:27%;">This boolean option enables or
+disables experimental Zip features that may not be
+compatible with other Zip implementations.</p>
+
+<p><b>fakecrc32</b></p>
+
+<p style="margin-left:27%;">This boolean option disables
+CRC calculations. All CRC fields are set to zero. It should
+not be used except for testing purposes.</p>
+
+<p><b>hdrcharset</b></p>
+
+<p style="margin-left:27%;">This sets the character set
+used for filenames.</p>
+
+<p><b>zip64</b></p>
+
+<p style="margin-left:27%; margin-top: 1em">Zip64
+extensions provide additional file size information for
+entries larger than 4 GiB. They also provide extended file
+offset and archive size information when archives exceed 4
+GiB. By default, the Zip writer selectively enables these
+extensions only as needed. In particular, if the file size
+is unknown, the Zip writer will include Zip64 extensions to
+guard against the possibility that the file might be larger
+than 4 GiB.</p>
+
+<p style="margin-left:27%; margin-top: 1em">Setting this
+boolean option will force the writer to use Zip64 extensions
+even for small files that would not otherwise require them.
+This is primarily useful for testing.</p>
+
+<p style="margin-left:27%; margin-top: 1em">Disabling this
+option with <b>!zip64</b> will force the Zip writer to avoid
+Zip64 extensions: It will reject files with size greater
+than 4 GiB, it will reject any new entries once the total
+archive size reaches 4 GiB, and it will not use Zip64
+extensions for files with unknown size. In particular, this
+can improve compatibility when generating archives where the
+entry sizes are not known in advance.</p>
+
 <p style="margin-top: 1em"><b>EXAMPLES</b></p>
 
 <p style="margin-left:6%;">The following example creates an
@@ -496,9 +551,10 @@ archive_write_open_filename(a, filename, blocksize);</p>
 
 <p style="margin-top: 1em"><b>ERRORS</b></p>
 
-<p style="margin-left:6%;">Detailed error codes and textual
-descriptions are available from the <b>archive_errno</b>()
-and <b>archive_error_string</b>() functions.</p>
+<p style="margin-left:6%;">More detailed error codes and
+textual descriptions are available from the
+<b>archive_errno</b>() and <b>archive_error_string</b>()
+functions.</p>
 
 <p style="margin-top: 1em"><b>SEE ALSO</b></p>
 

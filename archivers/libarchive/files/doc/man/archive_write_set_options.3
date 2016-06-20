@@ -5,7 +5,7 @@
 \fB\%archive_write_set_format_option\fP,
 \fB\%archive_write_set_option\fP,
 \fB\%archive_write_set_options\fP
-\- functions controlling options for reading archives
+\- functions controlling options for writing archives
 .SH LIBRARY
 .ad l
 Streaming Archive Library (libarchive, -larchive)
@@ -66,7 +66,12 @@ and
 \fIvalue\fP
 will be provided to the filter or reader named
 \fImodule\fP.
-The return value will be that of the module.
+The return value will be either
+\fBARCHIVE_OK\fP
+if the option was successfully handled or
+\fBARCHIVE_WARN\fP
+if the option was unrecognized by the module or could otherwise
+not be handled.
 If there is no such module,
 \fBARCHIVE_FAILED\fP
 will be returned.
@@ -243,7 +248,7 @@ If the
 \fIvalue\fP
 is
 \fBhd\fP,
-then the the boot image is assumed to be a bootable hard disk image.
+then the boot image is assumed to be a bootable hard disk image.
 If the
 \fIvalue\fP
 is
@@ -410,6 +415,54 @@ Specifies a filename that should not be compressed when using
 This option can be provided multiple times to suppress compression
 on many files.
 .RE
+.TP
+Format zip
+.RS 5
+.TP
+\fBcompression\fP
+The value is either
+``store''
+or
+``deflate''
+to indicate how the following entries should be compressed.
+Note that this setting is ignored for directories, symbolic links,
+and other special entries.
+.TP
+\fBexperimental\fP
+This boolean option enables or disables experimental Zip features
+that may not be compatible with other Zip implementations.
+.TP
+\fBfakecrc32\fP
+This boolean option disables CRC calculations.
+All CRC fields are set to zero.
+It should not be used except for testing purposes.
+.TP
+\fBhdrcharset\fP
+This sets the character set used for filenames.
+.TP
+\fBzip64\fP
+Zip64 extensions provide additional file size information
+for entries larger than 4 GiB.
+They also provide extended file offset and archive size information
+when archives exceed 4 GiB.
+By default, the Zip writer selectively enables these extensions only as needed.
+In particular, if the file size is unknown, the Zip writer will
+include Zip64 extensions to guard against the possibility that the
+file might be larger than 4 GiB.
+.PP
+Setting this boolean option will force the writer to use Zip64 extensions
+even for small files that would not otherwise require them.
+This is primarily useful for testing.
+.PP
+Disabling this option with
+\fB!zip64\fP
+will force the Zip writer to avoid Zip64 extensions:
+It will reject files with size greater than 4 GiB,
+it will reject any new entries once the total archive size reaches 4 GiB,
+and it will not use Zip64 extensions for files with unknown size.
+In particular, this can improve compatibility when generating archives
+where the entry sizes are not known in advance.
+.RE
 .RE
 .SH EXAMPLES
 .ad l
@@ -429,7 +482,7 @@ archive_write_open_filename(a, filename, blocksize);
 .RE
 .SH ERRORS
 .ad l
-Detailed error codes and textual descriptions are available from the
+More detailed error codes and textual descriptions are available from the
 \fB\%archive_errno\fP()
 and
 \fB\%archive_error_string\fP()

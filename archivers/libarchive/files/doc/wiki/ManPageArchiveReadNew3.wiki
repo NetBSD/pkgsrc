@@ -7,7 +7,7 @@ Streaming Archive Library (libarchive, -larchive)
 == SYNOPSIS == 
 '''<nowiki>#include <archive.h></nowiki>''' 
 <br> 
-'''struct archive *''' 
+''struct archive *'' 
 <br> 
 '''archive_read_new'''(''void''); 
 == DESCRIPTION == 
@@ -20,13 +20,13 @@ is returned on error.
 A complete description of the 
 '''struct archive''' 
 object can be found in the overview manual page for 
-'''libarchive'''(3). 
+[[ManPageibarchive3]]. 
 == SEE ALSO == 
-'''tar'''(1), 
-'''libarchive'''(3), 
-'''archive_read_data'''(3), 
-'''archive_read_filter'''(3), 
-'''archive_read_format'''(3), 
-'''archive_read_set_options'''(3), 
-'''archive_util'''(3), 
-'''tar'''(5) 
+[[ManPageBsdtar1]], 
+[[ManPageibarchive3]], 
+[[ManPagerchiveeadata3]], 
+[[ManPagerchiveeadilter3]], 
+[[ManPagerchiveeadormat3]], 
+[[ManPagerchiveeadetptions3]], 
+[[ManPagerchivetil3]], 
+[[ManPageTar5]] 

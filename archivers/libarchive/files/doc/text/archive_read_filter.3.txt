@@ -3,8 +3,10 @@ ARCHIVE_READ_FILTER(3)	 BSD Library Functions Manual	ARCHIVE_READ_FILTER(3)
 NAME
      archive_read_support_filter_all, archive_read_support_filter_bzip2,
      archive_read_support_filter_compress, archive_read_support_filter_gzip,
-     archive_read_support_filter_lzma, archive_read_support_filter_none,
-     archive_read_support_filter_xz, archive_read_support_filter_program,
+     archive_read_support_filter_lz4, archive_read_support_filter_lzma,
+     archive_read_support_filter_none, archive_read_support_filter_rpm,
+     archive_read_support_filter_uu, archive_read_support_filter_xz,
+     archive_read_support_filter_program,
      archive_read_support_filter_program_signature — functions for reading
      streaming archives
 
@@ -24,13 +26,31 @@ SYNOPSIS
      archive_read_support_filter_compress(struct archive *);
 
      int
+     archive_read_support_filter_grzip(struct archive *);
+
+     int
      archive_read_support_filter_gzip(struct archive *);
+
+     int
+     archive_read_support_filter_lrzip(struct archive *);
+
+     int
+     archive_read_support_filter_lz4(struct archive *);
 
      int
      archive_read_support_filter_lzma(struct archive *);
 
      int
+     archive_read_support_filter_lzop(struct archive *);
+
+     int
      archive_read_support_filter_none(struct archive *);
+
+     int
+     archive_read_support_filter_rpm(struct archive *);
+
+     int
+     archive_read_support_filter_uu(struct archive *);
 
      int
      archive_read_support_filter_xz(struct archive *);
@@ -45,9 +65,15 @@ SYNOPSIS
 DESCRIPTION
      archive_read_support_filter_bzip2(),
 	     archive_read_support_filter_compress(),
+	     archive_read_support_filter_grzip(),
 	     archive_read_support_filter_gzip(),
+	     archive_read_support_filter_lrzip(),
+	     archive_read_support_filter_lz4(),
 	     archive_read_support_filter_lzma(),
+	     archive_read_support_filter_lzop(),
 	     archive_read_support_filter_none(),
+	     archive_read_support_filter_rpm(),
+	     archive_read_support_filter_uu(),
 	     archive_read_support_filter_xz()
 	     Enables auto-detection code and decompression support for the
 	     specified compression.  These functions may fall back on external
@@ -82,4 +108,4 @@ SEE ALSO
      libarchive(3), archive_read(3), archive_read_data(3),
      archive_read_format(3), archive_read_format(3)
 
-BSD			       February 2, 2012 			   BSD
+BSD				August 14, 2014 			   BSD

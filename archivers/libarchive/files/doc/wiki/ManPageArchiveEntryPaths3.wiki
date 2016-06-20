@@ -30,104 +30,104 @@ Streaming Archive Library (libarchive, -larchive)
 == SYNOPSIS == 
 '''<nowiki>#include <archive_entry.h></nowiki>''' 
 <br> 
-'''const char *''' 
+''const char *'' 
 <br> 
 '''archive_entry_hardlink'''(''struct archive_entry *a''); 
 <br> 
-'''const wchar_t *''' 
+''const wchar_t *'' 
 <br> 
 '''archive_entry_hardlink_w'''(''struct archive_entry *a''); 
 <br> 
-'''void''' 
+''void'' 
 <br> 
 '''archive_entry_set_hardlink'''(''struct archive_entry *a'', ''const char *path''); 
 <br> 
-'''void''' 
+''void'' 
 <br> 
 '''archive_entry_copy_hardlink'''(''struct archive_entry *a'', ''const char *path''); 
 <br> 
-'''void''' 
+''void'' 
 <br> 
 '''archive_entry_copy_hardlink_w'''(''struct archive_entry *a '', ''const'', ''wchar_t'', ''*path"''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_entry_update_hardlink_utf8'''(''struct archive_entry *a'', ''const char *path''); 
 <br> 
-'''void''' 
+''void'' 
 <br> 
 '''archive_entry_set_link'''(''struct archive_entry *a'', ''const char *path''); 
 <br> 
-'''void''' 
+''void'' 
 <br> 
 '''archive_entry_copy_link'''(''struct archive_entry *a'', '' const char *path''); 
 <br> 
-'''void''' 
+''void'' 
 <br> 
 '''archive_entry_copy_link_w'''(''struct archive_entry *a'', '' const wchar_t *path''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_entry_update_link_utf8'''(''struct archive_entry *a'', '' const char *path''); 
 <br> 
-'''const char *''' 
+''const char *'' 
 <br> 
 '''archive_entry_pathname'''(''struct archive_entry *a''); 
 <br> 
-'''const wchar_t *''' 
+''const wchar_t *'' 
 <br> 
 '''archive_entry_pathname_w'''(''struct archive_entry *a''); 
 <br> 
-'''void''' 
+''void'' 
 <br> 
 '''archive_entry_set_pathname'''(''struct archive_entry *a'', ''const char *path''); 
 <br> 
-'''void''' 
+''void'' 
 <br> 
 '''archive_entry_copy_pathname'''(''struct archive_entry *a'', ''const char *path''); 
 <br> 
-'''void''' 
+''void'' 
 <br> 
 '''archive_entry_copy_pathname_w'''(''struct archive_entry *a'', ''const wchar_t *path''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_entry_update_pathname_utf8'''(''struct archive_entry *a'', ''const char *path''); 
 <br> 
-'''const char *''' 
+''const char *'' 
 <br> 
 '''archive_entry_sourcepath'''(''struct archive_entry *a''); 
 <br> 
-'''void''' 
+''void'' 
 <br> 
 '''archive_entry_copy_sourcepath'''(''struct archive_entry *a'', ''const char *path''); 
 <br> 
-'''const char *''' 
+''const char *'' 
 <br> 
 '''archive_entry_symlink'''(''struct archive_entry *a''); 
 <br> 
-'''const wchar_t *''' 
+''const wchar_t *'' 
 <br> 
 '''archive_entry_symlink_w'''(''struct archive_entry *a''); 
 <br> 
-'''void''' 
+''void'' 
 <br> 
 '''archive_entry_set_symlink'''(''struct archive_entry *a'', ''const char *path''); 
 <br> 
-'''void''' 
+''void'' 
 <br> 
 '''archive_entry_copy_symlink'''(''struct archive_entry *a'', ''const char *path''); 
 <br> 
-'''void''' 
+''void'' 
 <br> 
 '''archive_entry_copy_symlink_w'''(''struct archive_entry *a'', ''const wchar_t *path''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_entry_update_symlink_utf8'''(''struct archive_entry *a'', ''const char *path''); 
 == DESCRIPTION == 
 Path names supported by 
-'''archive_entry'''(3): 
+[[ManPagerchiventry3]]: 
 <dl> 
 <dt>hardlink</dt><dd> 
 Destination of the hardlink. 
@@ -140,7 +140,7 @@ the destination for that.
 Path in the archive 
 </dd><dt>sourcepath</dt><dd> 
 Path on the disk for use by 
-'''archive_read_disk'''(3). 
+[[ManPagerchiveeadisk3]]. 
 </dd><dt>symlink</dt><dd> 
 Destination of the symbolic link. 
 </dd></dl> 
@@ -171,5 +171,5 @@ It doesn't have a corresponding get accessor function.
 is an alias for  
 '''archive_entry_copy_XXX'''(). 
 == SEE ALSO == 
-'''archive'''(3), 
-'''archive_entry'''(3) 
+[[ManPagerchiventry3]] 
+[[ManPageibarchive3]], 

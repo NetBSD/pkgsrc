@@ -7,7 +7,7 @@ Streaming Archive Library (libarchive, -larchive)
 == SYNOPSIS == 
 '''<nowiki>#include <archive.h></nowiki>''' 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_write_finish_entry'''(''struct archive *''); 
 == DESCRIPTION == 
@@ -15,7 +15,7 @@ Close out the entry just written.
 In particular, this writes out the final padding required by some formats. 
 Ordinarily, clients never need to call this, as it 
 is called automatically by 
-'''archive_write_next_header'''() 
+'''archive_write_header'''() 
 and 
 '''archive_write_close'''() 
 as needed. 
@@ -38,10 +38,10 @@ and
 '''archive_error_string'''() 
 functions. 
 == SEE ALSO == 
-'''tar'''(1), 
-'''libarchive'''(3), 
-'''archive_write_data'''(3), 
-'''archive_write_set_options'''(3), 
-'''cpio'''(5), 
-'''mtree'''(5), 
-'''tar'''(5) 
+[[ManPageBsdtar1]], 
+[[ManPageibarchive3]], 
+[[ManPagerchiveriteata3]], 
+[[ManPagerchiveriteetptions3]], 
+[[ManPageCpio5]], 
+[[ManPageMtree5]], 
+[[ManPageTar5]] 
