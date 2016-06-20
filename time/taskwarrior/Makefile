@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/06/20 20:37:43 kamil Exp $
+# $NetBSD: Makefile,v 1.3 2016/06/20 20:59:35 kamil Exp $
 #
 
 DISTNAME=	task-2.5.1
@@ -7,7 +7,7 @@ CATEGORIES=	time
 MASTER_SITES=	http://www.taskwarrior.org/download/
 
 MAINTAINER=	esg@sdf.lonestar.org
-HOMEPAGE=	http://taskwarrior.org/projects/show/taskwarrior/
+HOMEPAGE=	http://taskwarrior.org/
 COMMENT=	Open source, command-line, TODO list manager
 LICENSE=	mit
 
