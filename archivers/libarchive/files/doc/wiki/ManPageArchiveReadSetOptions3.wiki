@@ -9,19 +9,19 @@ ARCHIVE_READ_OPTIONS(3) manual page
 Streaming Archive Library (libarchive, -larchive) 
 == SYNOPSIS == 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_read_set_filter_option'''(''struct archive *'', ''const char *module'', ''const char *option'', ''const char *value''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_read_set_format_option'''(''struct archive *'', ''const char *module'', ''const char *option'', ''const char *value''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_read_set_option'''(''struct archive *'', ''const char *module'', ''const char *option'', ''const char *value''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_read_set_options'''(''struct archive *'', ''const char *options''); 
 == DESCRIPTION == 
@@ -151,6 +151,28 @@ Defaults to enabled, use
 '''!rockridge''' 
 to disable. 
 </dd></dl> 
+</dd><dt>Format tar</dt><dd> 
+<dl> 
+<dt>'''compat-2x'''</dt><dd> 
+Libarchive 2.x incorrectly encoded Unicode filenames on 
+some platforms. 
+This option mimics the libarchive 2.x filename handling 
+so that such archives can be read correctly. 
+</dd><dt>'''hdrcharset'''</dt><dd> 
+The value is used as a character set name that will be 
+used when translating filenames. 
+</dd><dt>'''mac-ext'''</dt><dd> 
+Support Mac OS metadata extension that records data in special 
+files beginning with a period and underscore. 
+Defaults to enabled on Mac OS, disabled on other platforms. 
+Use 
+'''!mac-ext''' 
+to disable. 
+</dd><dt>'''read_concatenated_archives'''</dt><dd> 
+Ignore zeroed blocks in the archive, which occurs when multiple tar archives 
+have been concatenated together.  Without this option, only the contents of 
+the first concatenated archive would be read. 
+</dd></dl> 
 </dd></dl> 
 == ERRORS == 
 Detailed error codes and textual descriptions are available from the 
@@ -159,7 +181,7 @@ and
 '''archive_error_string'''() 
 functions. 
 == SEE ALSO == 
-'''tar'''(1), 
-'''libarchive'''(3), 
-'''archive_write_set_options'''(3), 
-'''archive_read'''(3) 
+[[ManPageBsdtar1]], 
+[[ManPageibarchive3]], 
+[[ManPagerchiveriteetptions3]], 
+[[ManPagerchiveead3]] 
