@@ -1,5 +1,5 @@
-<!-- Creator     : groff version 1.21 -->
-<!-- CreationDate: Sat Feb  9 12:24:09 2013 -->
+<!-- Creator     : groff version 1.22.3 -->
+<!-- CreationDate: Sun Jun 19 19:54:10 2016 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -221,6 +221,13 @@ to the current directory after processing any
 <b>&minus;C</b> options and before extracting any files.</p>
 
 
+<p style="margin-top: 1em"><b>&minus;&minus;clear-nochange-fflags</b></p>
+
+<p style="margin-left:17%;">(x mode only) Before removing
+file system objects to replace them, clear platform-specific
+file flags that might prevent removal.</p>
+
+
 <p style="margin-top: 1em"><b>&minus;&minus;disable-copyfile</b></p>
 
 <p style="margin-left:17%;">Mac OS X specific. Disable the
@@ -309,6 +316,13 @@ only) Synonym for <b>&minus;L</b>.</p>
 specific(v10.6 or later). Compress extracted regular files
 with HFS+ compression.</p>
 
+
+<p style="margin-top: 1em"><b>&minus;&minus;ignore-zeros</b></p>
+
+<p style="margin-left:17%;">An alias of
+<b>&minus;&minus;options read_concatenated_archives</b> for
+compatibility with GNU tar.</p>
+
 <p style="margin-top: 1em"><b>&minus;&minus;include</b>
 <i>pattern</i></p>
 
@@ -382,6 +396,13 @@ archived.</p>
 <p style="margin-left:17%;">(c mode only) Compress the
 resulting archive with lrzip(1). In extract or list modes,
 this option is ignored.</p>
+
+<p style="margin-top: 1em"><b>&minus;&minus;lz4</b></p>
+
+<p style="margin-left:17%; margin-top: 1em">(c mode only)
+Compress the archive with lz4-compatible compression before
+writing it. In input mode, this option is ignored; lz4
+compression is recognized automatically on input.</p>
 
 <p style="margin-top: 1em"><b>&minus;&minus;lzma</b></p>
 
@@ -624,6 +645,33 @@ and zpaq (best, extremely slow).</p>
 <p style="margin-left:27%;">A decimal integer from 1 to 9
 specifying the lrzip compression level.</p>
 
+<p><b>lz4:compression-level</b></p>
+
+<p style="margin-left:27%;">A decimal integer from 1 to 9
+specifying the lzop compression level.</p>
+
+<p><b>lz4:stream-checksum</b></p>
+
+<p style="margin-left:27%;">Enable stream checksum. This is
+by default, use <b>lz4:!stream-checksum</b> to disable.</p>
+
+<p><b>lz4:block-checksum</b></p>
+
+<p style="margin-left:27%;">Enable block checksum (Disabled
+by default).</p>
+
+<p><b>lz4:block-size</b></p>
+
+<p style="margin-left:27%;">A decimal integer from 4 to 7
+specifying the lz4 compression block size (7 is set by
+default).</p>
+
+<p><b>lz4:block-dependence</b></p>
+
+<p style="margin-left:27%;">Use the previous block of the
+block being compressed for a compression dictionary to
+improve compression ratio.</p>
+
 <p><b>lzop:compression-level</b></p>
 
 <p style="margin-left:27%;">A decimal integer from 1 to 9
@@ -670,6 +718,27 @@ columns.</p>
 method. Supported values are store (uncompressed) and
 deflate (gzip algorithm).</p>
 
+<p><b>zip:encryption</b></p>
+
+<p style="margin-left:27%;">Enable encryption using
+traditional zip encryption.</p>
+
+<p><b>zip:encryption</b>=<i>type</i></p>
+
+<p style="margin-left:27%;">Use <i>type</i> as encryption
+type. Supported values are zipcrypt (traditional zip
+encryption), aes128 (WinZip AES-128 encryption) and aes256
+(WinZip AES-256 encryption).</p>
+
+<p><b>read_concatenated_archives</b></p>
+
+<p style="margin-left:27%;">Ignore zeroed blocks in the
+archive, which occurs when multiple tar archives have been
+concatenated together. Without this option, only the
+contents of the first concatenated archive would be read.
+This option is comparable to the <b>&minus;i</b>,
+<b>&minus;&minus;ignore-zeros</b> option of GNU tar.</p>
+
 <p style="margin-left:17%;">If a provided option is not
 supported by any module, that is a fatal error.</p>
 
@@ -696,6 +765,15 @@ the default, if <b>tar</b> is being run by root and can be
 overridden by also specifying
 <b>&minus;&minus;no-same-owner</b> and
 <b>&minus;&minus;no-same-permissions</b>.</p>
+
+<p style="margin-top: 1em"><b>&minus;&minus;passphrase</b>
+<i>passphrase</i></p>
+
+<p style="margin-left:17%;">The <i>passphrase</i> is used
+to extract or create an encrypted archive. Currently, zip is
+the only supported format that supports encryption. You
+shouldn&rsquo;t use this option unless you realize how
+insecure use of this option is.</p>
 
 <p style="margin-top: 1em"><b>&minus;&minus;posix</b></p>
 
@@ -835,8 +913,8 @@ using the builtin compression support.</p>
 create and extract modes, <b>tar</b> will list each file
 name as it is read from or written to the archive. In list
 mode, <b>tar</b> will produce output similar to that of
-ls(1). Additional <b>&minus;v</b> options will provide
-additional detail.</p>
+ls(1). An additional <b>&minus;v</b> option will also
+provide ls-like details in create and extract mode.</p>
 
 
 <p style="margin-top: 1em"><b>&minus;&minus;version</b></p>
@@ -1226,8 +1304,7 @@ be better support for file selection on both create and
 extract.</p>
 
 <p style="margin-left:6%; margin-top: 1em">There is not yet
-any support for multi-volume archives or for archiving
-sparse files.</p>
+any support for multi-volume archives.</p>
 
 <p style="margin-left:6%; margin-top: 1em">Converting
 between dissimilar archive formats (such as tar and cpio)
@@ -1237,7 +1314,7 @@ incompatible ways that different archive formats store
 hardlink information.)</p>
 
 <p style="margin-left:6%; margin-top: 1em">BSD
-November&nbsp;1, 2012 BSD</p>
+September&nbsp;16, 2014 BSD</p>
 <hr>
 </body>
 </html>
