@@ -1,10 +1,10 @@
-$NetBSD: patch-al,v 1.5 2016/05/02 19:10:40 jperkin Exp $
+$NetBSD: patch-al,v 1.6 2016/06/20 16:04:44 ryoon Exp $
 
 Make extra calls to remove utmp entries when utmpx is used.
 For non-login entries we only update utmpx, as it stores
 more information, and utilities are reading both.
 
---- utmp.c.orig	2015-06-28 21:37:40.000000000 +0000
+--- utmp.c.orig	2016-06-19 19:41:03.000000000 +0000
 +++ utmp.c
 @@ -48,6 +48,12 @@ extern char *LoginName;
  extern int real_uid, eff_uid;
@@ -39,27 +39,3 @@ more information, and utilities are reading both.
    if (utmpok && D_loginslot != (slot_t)0 && D_loginslot != (slot_t)-1)
      {
        debug1(" logging you in again (slot %#x)\n", (int)D_loginslot);
-@@ -631,7 +643,11 @@ int pid;
-   /* must use temp variable because of NetBSD/sparc64, where
-    * ut_xtime is long(64) but time_t is int(32) */
-   (void)time(&now);
-+#ifdef __APPLE__
-+  u->ut_time = now;
-+#else
-   u->ut_tv.tv_sec = now;
-+#endif
- }
- 
- static slot_t
-@@ -743,7 +759,11 @@ int pid;
-   strncpy(u->ut_line, line, sizeof(u->ut_line));
-   strncpy(u->ut_name, user, sizeof(u->ut_name));
-   (void)time(&now);
-+#ifdef __APPLE__
-+  u->ut_time = now;
-+#else
-   u->ut_tv.tv_sec = now;
-+#endif
- }
- 
- static slot_t
