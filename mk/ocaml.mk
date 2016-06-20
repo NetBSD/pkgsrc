@@ -1,4 +1,4 @@
-# $NetBSD: ocaml.mk,v 1.9 2016/06/17 08:53:42 jaapb Exp $
+# $NetBSD: ocaml.mk,v 1.10 2016/06/20 19:44:04 jaapb Exp $
 #
 # This Makefile fragment handles the common variables used by OCaml packages.
 #
@@ -39,6 +39,8 @@ BUILD_DEFS+=	OCAML_USE_OPT_COMPILER
 _VARGROUPS+=	ocaml
 _PKG_VARS.ocaml=	\
 	OCAML_USE_FINDLIB \
+	OCAML_FINDLIB_DIRS \
+	OCAML_FINDLIB_REGISTER \
 	OCAML_USE_OASIS \
 	OCAML_USE_OASIS_DYNRUN \
 	OCAML_USE_OPAM \
