@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2568 2016/06/20 20:33:21 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.2569 2016/06/20 21:24:01 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3763,3 +3763,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ocaml-ppx_sexp_conv to 113.33.01 [jaapb 2016-06-20]
 	Updated www/ocsigen to 2.7 [jaapb 2016-06-20]
 	Added time/taskwarrior version 2.5.1 [kamil 2016-06-20]
+	mk/bsd.pkg.mk: started freeze for pkgsrc-2016Q2 branch [jperkin 2016-06-20]
