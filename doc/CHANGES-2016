@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2560 2016/06/20 17:28:54 joerg Exp $
+$NetBSD: CHANGES-2016,v 1.2561 2016/06/20 17:29:07 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3755,3 +3755,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ocaml-sexplib to 113.33.03 [jaapb 2016-06-20]
 	Updated misc/screen to 4.4.0 [ryoon 2016-06-20]
 	Updated archivers/libarchive to 3.2.1 [joerg 2016-06-20]
+	Updated archivers/bsdtar to 3.2.1 [joerg 2016-06-20]
