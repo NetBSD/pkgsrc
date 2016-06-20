@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16057 2016/06/20 17:29:07 joerg Exp $
+$NetBSD: TODO,v 1.16058 2016/06/20 19:21:33 kamil Exp $
 
 Suggested new packages
 ======================
@@ -60,11 +60,6 @@ Suggested new packages
 	choosefont
 	http://choosefont.sourceforge.net/
 	Utility for browsing, previewing and selecting a X11 font.
-
-	ardour
-	http://ardour.org/
-	Digital audio workstation with plugins, professional mixer,
-	multichannel recording, and more.
 
 	libdisassemble
 	http://www.immunitysec.com/resources-freesoftware.shtml
