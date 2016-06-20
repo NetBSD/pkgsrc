@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2015/01/17 12:44:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.9 2016/06/20 17:28:33 joerg Exp $
 include/archive.h
 include/archive_entry.h
 lib/libarchive.la
@@ -11,6 +11,7 @@ man/man3/archive_entry_perms.3
 man/man3/archive_entry_stat.3
 man/man3/archive_entry_time.3
 man/man3/archive_read.3
+man/man3/archive_read_add_passphrase.3
 man/man3/archive_read_data.3
 man/man3/archive_read_disk.3
 man/man3/archive_read_extract.3
@@ -34,6 +35,7 @@ man/man3/archive_write_header.3
 man/man3/archive_write_new.3
 man/man3/archive_write_open.3
 man/man3/archive_write_set_options.3
+man/man3/archive_write_set_passphrase.3
 man/man3/libarchive.3
 man/man3/libarchive_changes.3
 man/man3/libarchive_internals.3

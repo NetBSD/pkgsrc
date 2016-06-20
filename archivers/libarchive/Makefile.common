@@ -1,9 +1,8 @@
-# $NetBSD: Makefile.common,v 1.4 2016/03/05 11:28:02 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.5 2016/06/20 17:28:33 joerg Exp $
 # used by archivers/bsdtar/Makefile
 # used by archivers/libarchive/Makefile
 
-DISTNAME=	libarchive-3.1.2
-PKGREVISION=	2
+DISTNAME=	libarchive-3.2.1
 CATEGORIES=	archivers
 MASTER_SITES=	http://www.libarchive.org/downloads/
 DISTFILES=	# empty
