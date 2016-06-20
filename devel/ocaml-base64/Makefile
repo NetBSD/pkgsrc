@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2016/06/09 06:23:38 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2016/06/20 10:26:21 jaapb Exp $
 
+VERSION=	2.0.0
 GITHUB_PROJECT=	ocaml-base64
-DISTNAME=	${GITHUB_PROJECT}-2.0.0
-PKGREVISION=	1
+DISTNAME=	${GITHUB_PROJECT}-${VERSION}
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GITHUB:=mirage/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -12,7 +13,6 @@ HOMEPAGE=	https://github.com/mirage/ocaml-base64/
 COMMENT=	Base64 encoding and decoding in OCaml
 LICENSE=	isc
 
-WRKSRC=		${WRKDIR}/ocaml-base64-2.0.0
 HAS_CONFIGURE=	yes
 USE_LANGUAGES=	# none
 
