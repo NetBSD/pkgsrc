@@ -1,4 +1,4 @@
-.TH TAR 1 "November 1, 2012" ""
+.TH TAR 1 "September 16, 2014" ""
 .SH NAME
 .ad l
 \fB\%tar\fP
@@ -192,6 +192,11 @@ to the current directory after processing any
 \fB\-C\fP
 options and before extracting any files.
 .TP
+\fB\-Fl\fP clear-nochange-fflags
+(x mode only)
+Before removing file system objects to replace them, clear platform-specific
+file flags that might prevent removal.
+.TP
 \fB\-Fl\fP disable-copyfile
 Mac OS X specific.
 Disable the use of
@@ -275,6 +280,11 @@ Show usage.
 (x mode only)
 Mac OS X specific(v10.6 or later). Compress extracted regular files with HFS+ compression.
 .TP
+\fB\-Fl\fP ignore-zeros
+An alias of
+\fB\-Fl\fP options \fBread_concatenated_archives\fP
+for compatibility with GNU tar.
+.TP
 \fB\-Fl\fP include \fIpattern\fP
 Process only files or directories that match the specified pattern.
 Note that exclusions specified with
@@ -342,6 +352,12 @@ Issue a warning message unless all links to each file are archived.
 Compress the resulting archive with
 \fBlrzip\fP(1).
 In extract or list modes, this option is ignored.
+.TP
+\fB\-Fl\fP lz4
+(c mode only)
+Compress the archive with lz4-compatible compression before writing it.
+In input mode, this option is ignored; lz4 compression is recognized
+automatically on input.
 .TP
 \fB\-Fl\fP lzma
 (c mode only) Compress the resulting archive with the original LZMA algorithm.
@@ -556,6 +572,25 @@ and zpaq (best, extremely slow).
 \fBlrzip:compression-level\fP
 A decimal integer from 1 to 9 specifying the lrzip compression level.
 .TP
+\fBlz4:compression-level\fP
+A decimal integer from 1 to 9 specifying the lzop compression level.
+.TP
+\fBlz4:stream-checksum\fP
+Enable stream checksum. This is by default, use
+\fBlz4:!stream-checksum\fP
+to disable.
+.TP
+\fBlz4:block-checksum\fP
+Enable block checksum (Disabled by default).
+.TP
+\fBlz4:block-size\fP
+A decimal integer from 4 to 7 specifying the lz4 compression block size
+(7 is set by default).
+.TP
+\fBlz4:block-dependence\fP
+Use the previous block of the block being compressed for
+a compression dictionary to improve compression ratio.
+.TP
 \fBlzop:compression-level\fP
 A decimal integer from 1 to 9 specifying the lzop compression level.
 .TP
@@ -592,6 +627,24 @@ Use
 \fItype\fP
 as compression method.
 Supported values are store (uncompressed) and deflate (gzip algorithm).
+.TP
+\fBzip:encryption\fP
+Enable encryption using traditional zip encryption.
+.TP
+\fBzip:encryption\fP=\fItype\fP
+Use
+\fItype\fP
+as encryption type.
+Supported values are zipcrypt (traditional zip encryption),
+aes128 (WinZip AES-128 encryption) and aes256 (WinZip AES-256 encryption).
+.TP
+\fBread_concatenated_archives\fP
+Ignore zeroed blocks in the archive, which occurs when multiple tar archives
+have been concatenated together.  Without this option, only the contents of
+the first concatenated archive would be read.  This option is comparable to
+the
+\fB\-i\fP, \fB\-Fl\fP ignore-zeros
+option of GNU tar.
 .RE
 If a provided option is not supported by any module, that
 is a fatal error.
@@ -619,6 +672,14 @@ is being run by root and can be overridden by also specifying
 \fB\-Fl\fP no-same-owner
 and
 \fB\-Fl\fP no-same-permissions.
+.TP
+\fB\-Fl\fP passphrase \fIpassphrase\fP
+The
+\fIpassphrase\fP
+is used to extract or create an encrypted archive.
+Currently, zip is the only supported format that supports encryption.
+You shouldn't use this option unless you realize how insecure
+use of this option is.
 .TP
 \fB\-Fl\fP posix
 (c, r, u mode only)
@@ -772,9 +833,9 @@ In list mode,
 \fB\%tar\fP
 will produce output similar to that of
 \fBls\fP(1).
-Additional
+An additional
 \fB\-v\fP
-options will provide additional detail.
+option will also provide ls-like details in create and extract mode.
 .TP
 \fB\-Fl\fP version
 Print version of
@@ -935,18 +996,11 @@ format can be used to create an output archive with arbitrary ownership,
 permissions, or names that differ from existing data on disk:
 .PP
 .RS 4
+.nf
 $ cat input.mtree
-.RE
-.RS 4
 #mtree
-.RE
-.RS 4
 usr/bin uid=0 gid=0 mode=0755 type=dir
-.RE
-.RS 4
 usr/bin/ls uid=0 gid=0 mode=0755 type=file content=myls
-.RE
-.RS 4
 $ tar -cvf output.tar @input.mtree
 .RE
 .PP
@@ -1254,8 +1308,7 @@ option is specified.
 There needs to be better support for file selection on both create
 and extract.
 .PP
-There is not yet any support for multi-volume archives or for archiving
-sparse files.
+There is not yet any support for multi-volume archives.
 .PP
 Converting between dissimilar archive formats (such as tar and cpio) using the
 \fB@\fP \fI-\fP

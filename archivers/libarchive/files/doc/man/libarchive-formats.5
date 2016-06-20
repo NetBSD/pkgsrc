@@ -29,7 +29,7 @@ It can write POSIX-standard
 ``ustar''
 and
 ``pax interchange''
-formats and a subset of the legacy GNU tar format.
+formats as well as v7 tar format and a subset of the legacy GNU tar format.
 .PP
 All tar formats store each entry in one or more 512-byte records.
 The first record is used for file metadata, including filename,
@@ -39,7 +39,6 @@ Later variants have extended this by either appropriating undefined
 areas of the header record, extending the header to multiple records,
 or by storing special entries that modify the interpretation of
 subsequent entries.
-.PP
 .RS 5
 .TP
 \fBgnutar\fP
@@ -128,6 +127,31 @@ Archive entries are limited to 8 gigabytes in size.
 Note that the pax interchange format has none of these restrictions.
 The ustar format is old and widely supported.
 It is recommended when compatibility is the primary concern.
+.TP
+\fBv7\fP
+The libarchive library can read and write the legacy v7 tar format.
+This format has the following limitations:
+.RS 5
+.IP \(bu
+Only regular files, directories, and symbolic links can be archived.
+Block and character device nodes, FIFOs, and sockets cannot be archived.
+.IP \(bu
+Path names in the archive are limited to 100 bytes.
+.IP \(bu
+Symbolic links and hard links are stored in the archive with
+the name of the referenced file.
+This name is limited to 100 bytes.
+.IP \(bu
+User and group information are stored as numeric IDs; there
+is no provision for storing user or group names.
+.IP \(bu
+Extended attributes, file flags, and other extended
+security information cannot be stored.
+.IP \(bu
+Archive entries are limited to 8 gigabytes in size.
+.RE
+Generally, users should prefer the ustar format for portability
+as the v7 tar format is both less useful and less portable.
 .RE
 .PP
 The libarchive library also reads a variety of commonly-used extensions to
@@ -194,7 +218,7 @@ It is standard, portable, and immune from byte-order confusion.
 File sizes and mtime are limited to 33 bits (8GB file size),
 other fields are limited to 18 bits.
 .TP
-\fBSVR4\fP
+\fBSVR4/newc\fP
 The libarchive library can read both CRC and non-CRC variants of
 this format.
 The SVR4 format uses eight-digit hexadecimal values for
@@ -349,8 +373,10 @@ area adjacent to the entry.
 Libarchive can read both extensions,
 including archives that may include both types of long filenames.
 Programs using libarchive can write GNU/SVR4 format
-if they provide a filename table to be written into
-the archive before any of the entries.
+if they provide an entry called
+\fI//\fP
+containing a filename table to be written into the archive
+before any of the entries.
 Any entries whose names are not in the filename table
 will be written using BSD-style long filenames.
 This can cause problems for programs such as
@@ -391,18 +417,29 @@ using libarchive.
 If it cannot locate and open the file on disk, libarchive
 will return an error for any attempt to read the entry
 body.
-.SS LHA
-XXX Information about libarchive's LHA support XXX
+.SS 7-Zip
+Libarchive can read and write 7-Zip format archives.
+TODO: Need more information
 .SS CAB
-XXX Information about libarchive's CAB support XXX
-.SS XAR
-XXX Information about libarchive's XAR support XXX
+Libarchive can read Microsoft Cabinet (
+``CAB )''
+format archives.
+TODO: Need more information.
+.SS LHA
+TODO: Information about libarchive's LHA support
 .SS RAR
 Libarchive has limited support for reading RAR format archives.
 Currently, libarchive can read RARv3 format archives
 which have been either created uncompressed, or compressed using
 any of the compression methods supported by the RARv3 format.
 Libarchive can also read self-extracting RAR archives.
+.SS Warc
+Libarchive can read and write
+``web archives''.
+TODO: Need more information
+.SS XAR
+Libarchive can read and write the XAR format used by many Apple tools.
+TODO: Need more information
 .SH SEE ALSO
 .ad l
 \fBar\fP(1),
