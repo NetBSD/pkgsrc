@@ -1,6 +1,6 @@
 LIBARCHIVE_CHANGES(3) manual page 
 == NAME == 
-'''changes''' in libarchive interface 
+- changes in libarchive interface 
 == CHANGES IN LIBARCHIVE 3 == 
 This page describes user-visible changes in libarchive3, and lists 
 public functions and other symbols changed, deprecated or removed 
@@ -82,13 +82,13 @@ There are a few cases where these changes will affect your source code:
 In some cases, libarchive's wider types will introduce the possibility 
 of truncation: for example, on a system with a 16-bit 
 '''uid_t , you risk having uid''' 
-```text 
+```text
 65536 
-``` 
+```
 be truncated to uid 
-```text 
+```text
 0, 
-``` 
+```
 which can cause serious security problems. 
 </li><li> 
 Typedef function pointer types will be incompatible. 
@@ -281,23 +281,23 @@ ARCHIVE_COMPRESSION_LZIP
 ARCHIVE_FILTER_LZIP 
 </dd><dt></dt><dd> 
 ARCHIVE_BYTES_PER_RECORD 
-```text 
+```text
 512 
-``` 
+```
 </dd><dt></dt><dd> 
 ARCHIVE_DEFAULT_BYTES_PER_BLOCK 
-```text 
+```text
 10240 
-``` 
+```
 </dd></dl> 
 == SEE ALSO == 
-'''libarchive'''(3), 
-'''archive_read'''(3), 
-'''archive_read_filter'''(3), 
-'''archive_read_format'''(3), 
-'''archive_read_set_options'''(3), 
-'''archive_write'''(3), 
-'''archive_write_filter'''(3), 
-'''archive_write_format'''(3), 
-'''archive_write_set_options'''(3), 
-'''archive_util'''(3) 
+[[ManPageibarchive3]], 
+[[ManPagerchiveead3]], 
+[[ManPagerchiveeadilter3]], 
+[[ManPagerchiveeadormat3]], 
+[[ManPagerchiveeadetptions3]], 
+[[ManPagerchiverite3]], 
+[[ManPagerchiveriteilter3]], 
+[[ManPagerchiveriteormat3]], 
+[[ManPagerchiveriteetptions3]], 
+[[ManPagerchivetil3]] 

@@ -10,7 +10,7 @@ LIBRARY
 SYNOPSIS
      #include <archive.h>
 
-     ssize_t
+     la_ssize_t
      archive_read_data(struct archive *, void *buff, size_t len);
 
      int

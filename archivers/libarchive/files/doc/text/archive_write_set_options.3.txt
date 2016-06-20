@@ -3,7 +3,7 @@ ARCHIVE_WRITE_OPTIONS(3) BSD Library Functions Manual ARCHIVE_WRITE_OPTIONS(3)
 NAME
      archive_write_set_filter_option, archive_write_set_format_option,
      archive_write_set_option, archive_write_set_options — functions control‐
-     ling options for reading archives
+     ling options for writing archives
 
 LIBRARY
      Streaming Archive Library (libarchive, -larchive)
@@ -38,9 +38,11 @@ DESCRIPTION
 	     be returned.
 
 	     If module is not NULL, option and value will be provided to the
-	     filter or reader named module.  The return value will be that of
-	     the module.  If there is no such module, ARCHIVE_FAILED will be
-	     returned.
+	     filter or reader named module.  The return value will be either
+	     ARCHIVE_OK if the option was successfully handled or ARCHIVE_WARN
+	     if the option was unrecognized by the module or could otherwise
+	     not be handled.  If there is no such module, ARCHIVE_FAILED will
+	     be returned.
 
 	     If module is NULL, option and value will be provided to every
 	     registered module.  If any module returns ARCHIVE_FATAL, this
@@ -149,7 +151,7 @@ OPTIONS
 		     Specifies the boot semantics used by the El Torito boot
 		     image: If the value is fd, then the boot image is assumed
 		     to be a bootable floppy image.  If the value is hd, then
-		     the the boot image is assumed to be a bootable hard disk
+		     the boot image is assumed to be a bootable hard disk
 		     image.  If the value is no-emulation, the boot image is
 		     used without floppy or hard disk emulation.  If the boot
 		     image is exactly 1.2MB, 1.44MB, or 2.88MB, then the
@@ -279,6 +281,44 @@ OPTIONS
 		     Specifies a filename that should not be compressed when
 		     using zisofs=direct.  This option can be provided multi‐
 		     ple times to suppress compression on many files.
+     Format zip
+	     compression
+		     The value is either “store” or “deflate” to indicate how
+		     the following entries should be compressed.  Note that
+		     this setting is ignored for directories, symbolic links,
+		     and other special entries.
+	     experimental
+		     This boolean option enables or disables experimental Zip
+		     features that may not be compatible with other Zip imple‐
+		     mentations.
+	     fakecrc32
+		     This boolean option disables CRC calculations.  All CRC
+		     fields are set to zero.  It should not be used except for
+		     testing purposes.
+	     hdrcharset
+		     This sets the character set used for filenames.
+	     zip64   Zip64 extensions provide additional file size information
+		     for entries larger than 4 GiB.  They also provide
+		     extended file offset and archive size information when
+		     archives exceed 4 GiB.  By default, the Zip writer selec‐
+		     tively enables these extensions only as needed.  In par‐
+		     ticular, if the file size is unknown, the Zip writer will
+		     include Zip64 extensions to guard against the possibility
+		     that the file might be larger than 4 GiB.
+
+		     Setting this boolean option will force the writer to use
+		     Zip64 extensions even for small files that would not oth‐
+		     erwise require them.  This is primarily useful for test‐
+		     ing.
+
+		     Disabling this option with !zip64 will force the Zip
+		     writer to avoid Zip64 extensions: It will reject files
+		     with size greater than 4 GiB, it will reject any new
+		     entries once the total archive size reaches 4 GiB, and it
+		     will not use Zip64 extensions for files with unknown
+		     size.  In particular, this can improve compatibility when
+		     generating archives where the entry sizes are not known
+		     in advance.
 
 EXAMPLES
      The following example creates an archive write handle to create a gzip-
@@ -294,7 +334,7 @@ EXAMPLES
 	   archive_write_open_filename(a, filename, blocksize);
 
 ERRORS
-     Detailed error codes and textual descriptions are available from the
+     More detailed error codes and textual descriptions are available from the
      archive_errno() and archive_error_string() functions.
 
 SEE ALSO

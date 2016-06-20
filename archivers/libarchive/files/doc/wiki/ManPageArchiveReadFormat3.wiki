@@ -21,63 +21,63 @@ Streaming Archive Library (libarchive, -larchive)
 == SYNOPSIS == 
 '''<nowiki>#include <archive.h></nowiki>''' 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_read_support_format_7zip'''(''struct archive *''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_read_support_format_all'''(''struct archive *''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_read_support_format_ar'''(''struct archive *''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_read_support_format_by_code'''(''struct archive *'', ''int''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_read_support_format_cab'''(''struct archive *''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_read_support_format_cpio'''(''struct archive *''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_read_support_format_empty'''(''struct archive *''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_read_support_format_iso9660'''(''struct archive *''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_read_support_format_lha'''(''struct archive *''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_read_support_format_mtree'''(''struct archive *''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_read_support_format_rar'''(''struct archive *''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_read_support_format_raw'''(''struct archive *''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_read_support_format_tar'''(''struct archive *''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_read_support_format_xar'''(''struct archive *''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_read_support_format_zip'''(''struct archive *''); 
 == DESCRIPTION == 
@@ -149,18 +149,18 @@ and
 '''archive_error_string'''() 
 functions. 
 == SEE ALSO == 
-'''tar'''(1), 
-'''libarchive'''(3), 
-'''archive_read_data'''(3), 
-'''archive_read_filter'''(3), 
-'''archive_read_set_options'''(3), 
-'''archive_util'''(3), 
-'''tar'''(5) 
+[[ManPageBsdtar1]], 
+[[ManPageibarchive3]], 
+[[ManPagerchiveeadata3]], 
+[[ManPagerchiveeadilter3]], 
+[[ManPagerchiveeadetptions3]], 
+[[ManPagerchivetil3]], 
+[[ManPageTar5]] 
 == BUGS == 
 Many traditional archiver programs treat 
 empty files as valid empty archives. 
 For example, many implementations of 
-'''tar'''(1) 
+[[ManPageBsdtar1]] 
 allow you to append entries to an empty file. 
 Of course, it is impossible to determine the format of an empty file 
 by inspecting the contents, so this library treats empty files as 

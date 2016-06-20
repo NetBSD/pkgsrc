@@ -157,7 +157,7 @@ DESCRIPTION
    Identifying unique files
      The functions archive_entry_dev() and archive_entry_ino64() are used by
      archive_entry_linkify(3) to find hardlinks.  The pair of device and inode
-     is suppossed to identify hardlinked files.
+     is supposed to identify hardlinked files.
 
      The device major and minor number can be obtained independently using
      archive_entry_devmajor() and archive_entry_devminor().  The device can be
@@ -184,7 +184,7 @@ DESCRIPTION
      split form.
 
 SEE ALSO
-     archive(3), archive_entry_acl(3), archive_entry_perms(3),
-     archive_entry_time(3), stat(2)
+     archive_entry_acl(3), archive_entry_perms(3), archive_entry_time(3),
+     libarchive(3), stat(2)
 
 BSD			       February 2, 2012 			   BSD

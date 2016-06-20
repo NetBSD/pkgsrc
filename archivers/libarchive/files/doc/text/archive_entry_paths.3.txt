@@ -131,6 +131,6 @@ DESCRIPTION
      archive_entry_set_XXX() is an alias for archive_entry_copy_XXX().
 
 SEE ALSO
-     archive(3), archive_entry(3)
+     archive_entry(3) libarchive(3),
 
 BSD			       February 2, 2012 			   BSD
