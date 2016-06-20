@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2016/05/05 15:53:08 jaapb Exp $
+# $NetBSD: Makefile,v 1.25 2016/06/20 19:39:43 jaapb Exp $
 
 DISTNAME=		pcre-ocaml-7.1.6
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		devel
 MASTER_SITES=          ${MASTER_SITE_GITHUB:=mmottl/}
 GITHUB_RELEASE=                v${PKGVERSION_NOREV}
@@ -20,7 +20,7 @@ MAKE_JOBS_SAFE=	no
 
 EGDIR=			${PREFIX}/share/examples/pcre-ocaml
 INSTALLATION_DIRS+=	${EGDIR}
-OCAML_FINDLIB_DIRS=	${OCAML_SITELIBDIR}/pcre
+OCAML_FINDLIB_DIRS=	pcre
 
 post-install:
 	cd ${WRKSRC}/examples && pax -rw -pm . ${DESTDIR}${EGDIR}
