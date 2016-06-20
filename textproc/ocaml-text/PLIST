@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2016/02/06 12:33:06 jaapb Exp $
-@unexec %D/libexec/ocaml-findlib-register del %D/${OCAML_SITELIB}/text
+@comment $NetBSD: PLIST,v 1.4 2016/06/20 10:29:29 jaapb Exp $
 ${OCAML_SITELIB}/text/META
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/text/bigarray.a
 ${OCAML_SITELIB}/text/bigarray.cma
@@ -34,4 +33,3 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/text/text.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/text/text.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/text/text.cmxs
 ${OCAML_SITELIB}/text/text.mli
-@exec %D/libexec/ocaml-findlib-register add %D/${OCAML_SITELIB}/text
