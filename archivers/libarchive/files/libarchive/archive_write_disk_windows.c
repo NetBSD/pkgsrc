@@ -330,8 +330,6 @@ file_information(struct archive_write_disk *a, wchar_t *path,
 				break;
 			case L'C': case L'c':
 				if (((p[2] == L'M' || p[2] == L'm' ) &&
-				    (p[3] == L'D' || p[3] == L'd' )) ||
-				    ((p[2] == L'M' || p[2] == L'm' ) &&
 				    (p[3] == L'D' || p[3] == L'd' )))
 					*mode |= S_IXUSR | S_IXGRP | S_IXOTH;
 				break;
@@ -470,9 +468,17 @@ permissive_name_w(struct archive_write_disk *a)
 		return (-1);
 	archive_wstring_ensure(&(a->_name_data), 4 + l + 1 + wcslen(wn) + 1);
 	a->name = a->_name_data.s;
-	/* Prepend "\\?\" and drive name. */
-	archive_wstrncpy(&(a->_name_data), L"\\\\?\\", 4);
-	archive_wstrncat(&(a->_name_data), wsp, l);
+	/* Prepend "\\?\" and drive name if not already added. */
+	if (l > 3 && wsp[0] == L'\\' && wsp[1] == L'\\' &&
+		wsp[2] == L'?' && wsp[3] == L'\\')
+	{
+		archive_wstrncpy(&(a->_name_data), wsp, l);
+	}
+	else
+	{
+		archive_wstrncpy(&(a->_name_data), L"\\\\?\\", 4);
+		archive_wstrncat(&(a->_name_data), wsp, l);
+	}
 	archive_wstrncat(&(a->_name_data), L"\\", 1);
 	archive_wstrcat(&(a->_name_data), wn);
 	a->name = a->_name_data.s;
@@ -525,7 +531,7 @@ la_GetFunctionKernel32(const char *name)
 	static int set;
 	if (!set) {
 		set = 1;
-		lib = LoadLibrary("kernel32.dll");
+		lib = LoadLibrary(TEXT("kernel32.dll"));
 	}
 	if (lib == NULL) {
 		fprintf(stderr, "Can't load kernel32.dll?!\n");
@@ -1011,7 +1017,11 @@ _archive_write_disk_data_block(struct archive *_a,
 		    "Write request too large");
 		return (ARCHIVE_WARN);
 	}
+#if ARCHIVE_VERSION_NUMBER < 3999000
 	return (ARCHIVE_OK);
+#else
+	return (size);
+#endif
 }
 
 static ssize_t
