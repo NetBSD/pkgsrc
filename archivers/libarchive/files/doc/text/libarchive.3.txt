@@ -62,10 +62,10 @@ OVERVIEW
      pages for each API or utility function.
 
 READING AN ARCHIVE
-     See libarchive_read(3).
+     See archive_read(3).
 
 WRITING AN ARCHIVE
-     See libarchive_write(3).
+     See archive_write(3).
 
 WRITING ENTRIES TO DISK
      The archive_write_disk(3) API allows you to write archive_entry(3)
@@ -133,7 +133,7 @@ HISTORY
 
 AUTHORS
      The libarchive library was originally written by Tim Kientzle
-     ⟨kientzle@acm.org⟩.
+     <kientzle@acm.org>.
 
 BUGS
      Some archive formats support information that is not supported by struct

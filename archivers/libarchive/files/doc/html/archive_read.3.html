@@ -1,5 +1,5 @@
-<!-- Creator     : groff version 1.21 -->
-<!-- CreationDate: Sat Feb  9 12:24:03 2013 -->
+<!-- Creator     : groff version 1.22.3 -->
+<!-- CreationDate: Sun Jun 19 19:54:06 2016 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -114,7 +114,7 @@ read(2) system call) to read this data from the archive, or
 more efficient interface. You may prefer to use the
 higher-level <b>archive_read_data_skip</b>(), which reads
 and discards the data for this entry,
-<b>archive_read_data_to_file</b>(), which copies the data to
+<b>archive_read_data_into_fd</b>(), which copies the data to
 the provided file descriptor, or
 <b>archive_read_extract</b>(), which recreates the specified
 entry on disk and copies data from the archive. In
@@ -164,7 +164,7 @@ archive_read_free(a); <br>
 free(mydata); <br>
 }</p>
 
-<p style="margin-left:14%; margin-top: 1em">ssize_t <br>
+<p style="margin-left:14%; margin-top: 1em">la_ssize_t <br>
 myread(struct archive *a, void *client_data, const void
 **buff) <br>
 { <br>
@@ -214,8 +214,7 @@ first appeared in FreeBSD&nbsp;5.3.</p>
 <p style="margin-top: 1em"><b>AUTHORS</b></p>
 
 <p style="margin-left:6%;">The <b>libarchive</b> library
-was written by Tim Kientzle &lang; kientzle@acm.org&rang;
-.</p>
+was written by Tim Kientzle &lt;kientzle@acm.org&gt;.</p>
 
 <p style="margin-top: 1em"><b>BUGS</b></p>
 

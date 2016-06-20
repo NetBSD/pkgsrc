@@ -192,7 +192,7 @@ HISTORY
 
 AUTHORS
      The libarchive library was written by Tim Kientzle
-     ⟨kientzle@FreeBSD.org⟩.
+     <kientzle@FreeBSD.org>.
 
 BUGS
      The “standard” user name and group name lookup functions are not the

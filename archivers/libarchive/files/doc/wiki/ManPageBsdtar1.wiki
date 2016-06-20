@@ -94,7 +94,7 @@ The pathnames or patterns on the command line indicate
 which items in the archive should be processed. 
 Patterns are shell-style globbing patterns as 
 documented in 
-'''tcsh'''(1). 
+[[tcsh(1)|http://www.freebsd.org/cgi/man.cgi?query=tcsh&sektion=1]]. 
 == OPTIONS == 
 Unless specifically stated otherwise, options are applicable in 
 all operating modes. 
@@ -104,22 +104,22 @@ all operating modes.
 The specified archive is opened and the entries 
 in it will be appended to the current archive. 
 As a simple example, 
-```text 
+```text
 tar -c -f - newfile @original.tar 
-``` 
+```
 writes a new archive to standard output containing a file 
 ''newfile'' 
 and all of the entries from 
 ''original.tar''. 
 In contrast, 
-```text 
+```text
 tar -c -f - newfile original.tar 
-``` 
+```
 creates a new archive with only two entries. 
 Similarly, 
-```text 
+```text
 tar -czf - --format pax @- 
-``` 
+```
 reads an archive from standard input (whose format will be determined 
 automatically) and converts it into a gzip-compressed 
 pax-format archive on stdout. 
@@ -131,34 +131,34 @@ can be used to convert archives from one format to another.
 Use the archive suffix to decide a set of the format and 
 the compressions. 
 As a simple example, 
-```text 
+```text
 tar -a -cf archive.tgz source.c source.h 
-``` 
+```
 creates a new archive with restricted pax format and gzip compression, 
-```text 
+```text
 tar -a -cf archive.tar.bz2.uu source.c source.h 
-``` 
+```
 creates a new archive with restricted pax format and bzip2 compression 
 and uuencode compression, 
-```text 
+```text
 tar -a -cf archive.zip source.c source.h 
-``` 
+```
 creates a new archive with zip format, 
-```text 
+```text
 tar -a -jcf archive.tgz source.c source.h 
-``` 
+```
 ignores the 
 "-j" 
 option, and creates a new archive with restricted pax format 
 and gzip compression, 
-```text 
+```text
 tar -a -jcf archive.xxx source.c source.h 
-``` 
+```
 if it is unknown suffix or no suffix, creates a new archive with 
 restricted pax format and bzip2 compression. 
 </dd><dt>-B, --read-full-blocks</dt><dd> 
 Ignored for compatibility with other 
-'''tar'''(1) 
+[[ManPageBsdtar1]] 
 implementations. 
 </dd><dt>-b ''blocksize'', --block-size ''blocksize''</dt><dd> 
 Specify the block size, in 512-byte records, for tape drive I/O. 
@@ -176,10 +176,14 @@ but before extracting entries from the archive.
 to the current directory after processing any 
 -C 
 options and before extracting any files. 
+</dd><dt>--clear-nochange-fflags</dt><dd> 
+(x mode only) 
+Before removing file system objects to replace them, clear platform-specific 
+file flags that might prevent removal. 
 </dd><dt>--disable-copyfile</dt><dd> 
 Mac OS X specific. 
 Disable the use of 
-'''copyfile'''(3). 
+[[copyfile(3)|http://www.freebsd.org/cgi/man.cgi?query=copyfile&sektion=3]]. 
 </dd><dt>--exclude ''pattern''</dt><dd> 
 Do not process files or directories that match the 
 specified pattern. 
@@ -195,7 +199,7 @@ Supported formats include
 and 
 "ustar". 
 Other formats may also be supported; see 
-'''libarchive-formats'''(5) 
+[[ManPageibarchiveormats5]] 
 for more information about currently-supported formats. 
 In r and u modes, when extending an existing archive, the format specified 
 here must be compatible with the format of the existing archive on disk. 
@@ -248,6 +252,10 @@ Show usage.
 </dd><dt>--hfsCompression</dt><dd> 
 (x mode only) 
 Mac OS X specific(v10.6 or later). Compress extracted regular files with HFS+ compression. 
+</dd><dt>--ignore-zeros</dt><dd> 
+An alias of 
+--options '''read_concatenated_archives''' 
+for compatibility with GNU tar. 
 </dd><dt>--include ''pattern''</dt><dd> 
 Process only files or directories that match the specified pattern. 
 Note that exclusions specified with 
@@ -259,9 +267,9 @@ The
 --include 
 option is especially useful when filtering archives. 
 For example, the command 
-```text 
+```text
 tar -c -f new.tar --include='*foo*' @old.tgz 
-``` 
+```
 creates a new archive 
 ''new.tar'' 
 containing only the entries from 
@@ -271,7 +279,7 @@ Sq foo.
 </dd><dt>-J, --xz</dt><dd> 
 (c mode only) 
 Compress the resulting archive with 
-'''xz'''(1). 
+[[xz(1)|http://www.freebsd.org/cgi/man.cgi?query=xz&sektion=1]]. 
 In extract or list modes, this option is ignored. 
 Note that, unlike other 
 '''tar''' 
@@ -280,7 +288,7 @@ automatically when reading archives.
 </dd><dt>-j, --bzip, --bzip2, --bunzip2</dt><dd> 
 (c mode only) 
 Compress the resulting archive with 
-'''bzip2'''(1). 
+[[bzip2(1)|http://www.freebsd.org/cgi/man.cgi?query=bzip2&sektion=1]]. 
 In extract or list modes, this option is ignored. 
 Note that, unlike other 
 '''tar''' 
@@ -306,8 +314,13 @@ Issue a warning message unless all links to each file are archived.
 </dd><dt>--lrzip</dt><dd> 
 (c mode only) 
 Compress the resulting archive with 
-'''lrzip'''(1). 
+[[lrzip(1)|http://www.freebsd.org/cgi/man.cgi?query=lrzip&sektion=1]]. 
 In extract or list modes, this option is ignored. 
+</dd><dt>--lz4</dt><dd> 
+(c mode only) 
+Compress the archive with lz4-compatible compression before writing it. 
+In input mode, this option is ignored; lz4 compression is recognized 
+automatically on input. 
 </dd><dt>--lzma</dt><dd> 
 (c mode only) Compress the resulting archive with the original LZMA algorithm. 
 Use of this option is discouraged and new archives should be created with 
@@ -320,7 +333,7 @@ automatically when reading archives.
 </dd><dt>--lzop</dt><dd> 
 (c mode only) 
 Compress the resulting archive with 
-'''lzop'''(1). 
+[[lzop(1)|http://www.freebsd.org/cgi/man.cgi?query=lzop&sektion=1]]. 
 In extract or list modes, this option is ignored. 
 </dd><dt>-m, --modification-time</dt><dd> 
 (x mode only) 
@@ -365,7 +378,7 @@ not by newlines.
 This is often used to read filenames output by the 
 -print0 
 option to 
-'''find'''(1). 
+[[find(1)|http://www.freebsd.org/cgi/man.cgi?query=find&sektion=1]]. 
 </dd><dt>--no-same-owner</dt><dd> 
 (x mode only) 
 Do not extract owner and group IDs. 
@@ -488,6 +501,20 @@ Supported values are bzip2, gzip, lzo (ultra fast),
 and zpaq (best, extremely slow). 
 </dd><dt>'''lrzip:compression-level'''</dt><dd> 
 A decimal integer from 1 to 9 specifying the lrzip compression level. 
+</dd><dt>'''lz4:compression-level'''</dt><dd> 
+A decimal integer from 1 to 9 specifying the lzop compression level. 
+</dd><dt>'''lz4:stream-checksum'''</dt><dd> 
+Enable stream checksum. This is by default, use 
+'''lz4:!stream-checksum''' 
+to disable. 
+</dd><dt>'''lz4:block-checksum'''</dt><dd> 
+Enable block checksum (Disabled by default). 
+</dd><dt>'''lz4:block-size'''</dt><dd> 
+A decimal integer from 4 to 7 specifying the lz4 compression block size 
+(7 is set by default). 
+</dd><dt>'''lz4:block-dependence'''</dt><dd> 
+Use the previous block of the block being compressed for 
+a compression dictionary to improve compression ratio. 
 </dd><dt>'''lzop:compression-level'''</dt><dd> 
 A decimal integer from 1 to 9 specifying the lzop compression level. 
 </dd><dt>'''xz:compression-level'''</dt><dd> 
@@ -518,6 +545,21 @@ Use
 ''type'' 
 as compression method. 
 Supported values are store (uncompressed) and deflate (gzip algorithm). 
+</dd><dt>'''zip:encryption'''</dt><dd> 
+Enable encryption using traditional zip encryption. 
+</dd><dt>'''zip:encryption'''=''type''</dt><dd> 
+Use 
+''type'' 
+as encryption type. 
+Supported values are zipcrypt (traditional zip encryption), 
+aes128 (WinZip AES-128 encryption) and aes256 (WinZip AES-256 encryption). 
+</dd><dt>'''read_concatenated_archives'''</dt><dd> 
+Ignore zeroed blocks in the archive, which occurs when multiple tar archives 
+have been concatenated together.  Without this option, only the contents of 
+the first concatenated archive would be read.  This option is comparable to 
+the 
+-i, --ignore-zeros 
+option of GNU tar. 
 </dd></dl> 
 If a provided option is not supported by any module, that 
 is a fatal error. 
@@ -543,6 +585,13 @@ is being run by root and can be overridden by also specifying
 --no-same-owner 
 and 
 --no-same-permissions. 
+</dd><dt>--passphrase ''passphrase''</dt><dd> 
+The 
+''passphrase'' 
+is used to extract or create an encrypted archive. 
+Currently, zip is the only supported format that supports encryption. 
+You shouldn't use this option unless you realize how insecure 
+use of this option is. 
 </dd><dt>--posix</dt><dd> 
 (c, r, u mode only) 
 Synonym for 
@@ -632,7 +681,7 @@ Note that
 also disables the special handling of lines containing 
 "-C". 
 Note:  If you are generating lists of files using 
-'''find'''(1), 
+[[find(1)|http://www.freebsd.org/cgi/man.cgi?query=find&sektion=1]], 
 you probably want to use 
 -n 
 as well. 
@@ -682,10 +731,10 @@ the archive.
 In list mode, 
 '''tar''' 
 will produce output similar to that of 
-'''ls'''(1). 
-Additional 
+[[ls(1)|http://www.freebsd.org/cgi/man.cgi?query=ls&sektion=1]]. 
+An additional 
 -v 
-options will provide additional detail. 
+option will also provide ls-like details in create and extract mode. 
 </dd><dt>--version</dt><dd> 
 Print version of 
 '''tar''' 
@@ -702,7 +751,7 @@ for more information about the handling of exclusions.
 </dd><dt>-y</dt><dd> 
 (c mode only) 
 Compress the resulting archive with 
-'''bzip2'''(1). 
+[[bzip2(1)|http://www.freebsd.org/cgi/man.cgi?query=bzip2&sektion=1]]. 
 In extract or list modes, this option is ignored. 
 Note that, unlike other 
 '''tar''' 
@@ -711,7 +760,7 @@ automatically when reading archives.
 </dd><dt>-Z, --compress, --uncompress</dt><dd> 
 (c mode only) 
 Compress the resulting archive with 
-'''compress'''(1). 
+[[compress(1)|http://www.freebsd.org/cgi/man.cgi?query=compress&sektion=1]]. 
 In extract or list modes, this option is ignored. 
 Note that, unlike other 
 '''tar''' 
@@ -720,7 +769,7 @@ automatically when reading archives.
 </dd><dt>-z, --gunzip, --gzip</dt><dd> 
 (c mode only) 
 Compress the resulting archive with 
-'''gzip'''(1). 
+[[gzip(1)|http://www.freebsd.org/cgi/man.cgi?query=gzip&sektion=1]]. 
 In extract or list modes, this option is ignored. 
 Note that, unlike other 
 '''tar''' 
@@ -731,22 +780,22 @@ automatically when reading archives.
 The following environment variables affect the execution of 
 '''tar''': 
 <dl> 
-<dt>'''TAR_READER_OPTIONS''' 
+<dt>'''TAR_READER_OPTIONS'''</dt><dd> 
 The default options for format readers and compression readers. 
 The 
 --options 
 option overrides this. 
-</dt><dt>'''TAR_WRITER_OPTIONS''' 
+</dd><dt>'''TAR_WRITER_OPTIONS'''</dt><dd> 
 The default options for format writers and compression writers. 
 The 
 --options 
 option overrides this. 
-</dt><dt>'''LANG''' 
+</dd><dt>'''LANG'''</dt><dd> 
 The locale to use. 
 See 
-'''environ'''(7) 
+[[environ(7)|http://www.freebsd.org/cgi/man.cgi?query=environ&sektion=7]] 
 for more information. 
-</dt><dt>'''TAPE''' 
+</dd><dt>'''TAPE'''</dt><dd> 
 The default device. 
 The 
 -f 
@@ -754,12 +803,12 @@ option overrides this.
 Please see the description of the 
 -f 
 option above for more details. 
-</dt><dt>'''TZ''' 
+</dd><dt>'''TZ'''</dt><dd> 
 The timezone to use when displaying dates. 
 See 
-'''environ'''(7) 
+[[environ(7)|http://www.freebsd.org/cgi/man.cgi?query=environ&sektion=7]] 
 for more information. 
-</dt></dl> 
+</dd></dl> 
 == EXIT STATUS == 
 The '''tar''' utility exits 0 on success, and &gt;0 if an error occurs. 
 == EXAMPLES == 
@@ -770,37 +819,37 @@ that contains two files
 ''source.c'' 
 and 
 ''source.h'': 
-```text 
+```text
 tar -czf file.tar.gz source.c source.h 
-``` 
+```
 
 To view a detailed table of contents for this 
 archive: 
-```text 
+```text
 tar -tvf file.tar.gz 
-``` 
+```
 
 To extract all entries from the archive on 
 the default tape drive: 
-```text 
+```text
 tar -x 
-``` 
+```
 
 To examine the contents of an ISO 9660 cdrom image: 
-```text 
+```text
 tar -tf image.iso 
-``` 
+```
 
 To move file hierarchies, invoke 
 '''tar''' 
 as 
-```text 
+```text
 tar -cf - -C srcdir\. | tar -xpf - -C destdir 
-``` 
+```
 or more traditionally 
-```text 
+```text
 cd srcdir ; tar -cf -\. | (cd destdir ; tar -xpf -) 
-``` 
+```
 
 In create mode, the list of files and directories to be archived 
 can also include directory change instructions of the form 
@@ -808,9 +857,9 @@ can also include directory change instructions of the form
 and archive inclusions of the form 
 '''@'''''archive-file''. 
 For example, the command line 
-```text 
+```text
 tar -c -f new.tar foo1 @old.tgz -C/tmp foo2 
-``` 
+```
 will create a new archive 
 ''new.tar''. 
 '''tar''' 
@@ -827,25 +876,17 @@ directory and add
 to the output archive. 
 
 An input file in 
-'''mtree'''(5) 
+[[ManPageMtree5]] 
 format can be used to create an output archive with arbitrary ownership, 
 permissions, or names that differ from existing data on disk: 
 
-```text 
-$ cat input.mtree 
-``` 
-```text 
-#mtree 
-``` 
-```text 
-usr/bin uid=0 gid=0 mode=0755 type=dir 
-``` 
-```text 
-usr/bin/ls uid=0 gid=0 mode=0755 type=file content=myls 
-``` 
-```text 
-$ tar -cvf output.tar @input.mtree 
-``` 
+```text
+$ cat input.mtree
+#mtree
+usr/bin uid=0 gid=0 mode=0755 type=dir
+usr/bin/ls uid=0 gid=0 mode=0755 type=file content=myls
+$ tar -cvf output.tar @input.mtree
+```
 
 The 
 --newer 
@@ -867,21 +908,21 @@ For example, you can generate mtree output which only contains
 and 
 '''uid''' 
 keywords: 
-```text 
+```text
 tar -cf file.tar --format=mtree --options='!all,type,time,uid' dir 
-``` 
+```
 or you can set the compression level used by gzip or xz compression: 
-```text 
+```text
 tar -czf file.tar --options='compression-level=9'. 
-``` 
+```
 For more details, see the explanation of the 
 '''archive_read_set_options'''() 
 and 
 '''archive_write_set_options'''() 
 API calls that are described in 
-'''archive_read'''(3) 
+[[ManPagerchiveead3]] 
 and 
-'''archive_write'''(3). 
+[[ManPagerchiverite3]]. 
 == COMPATIBILITY == 
 The bundled-arguments format is supported for compatibility 
 with historic implementations. 
@@ -891,9 +932,9 @@ Arguments follow as separate words.
 The order of the arguments must match the order 
 of the corresponding characters in the bundled command word. 
 For example, 
-```text 
+```text
 tar tbf 32 file.tar 
-``` 
+```
 specifies three flags 
 '''t''', 
 '''b''', 
@@ -994,9 +1035,9 @@ will refuse to extract the entry.
 To protect yourself, you should be wary of any archives that 
 come from untrusted sources. 
 You should examine the contents of an archive with 
-```text 
+```text
 tar -tf filename 
-``` 
+```
 before extraction. 
 You should use the 
 -k 
@@ -1016,17 +1057,17 @@ an archive while preserving any absolute pathnames,
 ''..'' 
 components, or symlinks to other directories. 
 == SEE ALSO == 
-'''bzip2'''(1), 
-'''compress'''(1), 
-'''cpio'''(1), 
-'''gzip'''(1), 
-'''mt'''(1), 
-'''pax'''(1), 
-'''shar'''(1), 
-'''xz'''(1), 
-'''libarchive'''(3), 
-'''libarchive-formats'''(5), 
-'''tar'''(5) 
+[[bzip2(1)|http://www.freebsd.org/cgi/man.cgi?query=bzip2&sektion=1]], 
+[[compress(1)|http://www.freebsd.org/cgi/man.cgi?query=compress&sektion=1]], 
+[[ManPageBsdcpio1]], 
+[[gzip(1)|http://www.freebsd.org/cgi/man.cgi?query=gzip&sektion=1]], 
+[[mt(1)|http://www.freebsd.org/cgi/man.cgi?query=mt&sektion=1]], 
+[[pax(1)|http://www.freebsd.org/cgi/man.cgi?query=pax&sektion=1]], 
+[[shar(1)|http://www.freebsd.org/cgi/man.cgi?query=shar&sektion=1]], 
+[[xz(1)|http://www.freebsd.org/cgi/man.cgi?query=xz&sektion=1]], 
+[[ManPageibarchive3]], 
+[[ManPageibarchiveormats5]], 
+[[ManPageTar5]] 
 == STANDARDS == 
 There is no current POSIX standard for the tar command; it appeared 
 in 
@@ -1057,7 +1098,7 @@ beginning with
 FreeBSD 1.0. 
 
 This is a complete re-implementation based on the 
-'''libarchive'''(3) 
+[[ManPageibarchive3]] 
 library. 
 It was first released with 
 FreeBSD 5.4 
@@ -1090,9 +1131,9 @@ a tape drive.
 If the output is being written to a regular file, the last block 
 will not be padded. 
 Many compressors, including 
-'''gzip'''(1) 
+[[gzip(1)|http://www.freebsd.org/cgi/man.cgi?query=gzip&sektion=1]] 
 and 
-'''bzip2'''(1), 
+[[bzip2(1)|http://www.freebsd.org/cgi/man.cgi?query=bzip2&sektion=1]], 
 complain about the null padding when decompressing an archive created by 
 '''tar''', 
 although they still extract it correctly. 
@@ -1100,13 +1141,13 @@ although they still extract it correctly.
 The compression and decompression is implemented internally, so 
 there may be insignificant differences between the compressed output 
 generated by 
-```text 
+```text
 tar -czf - file 
-``` 
+```
 and that generated by 
-```text 
+```text
 tar -cf - file | gzip 
-``` 
+```
 
 The default should be to read and write archives to the standard I/O paths, 
 but tradition (and POSIX) dictates otherwise. 
@@ -1145,8 +1186,7 @@ option is specified.
 There needs to be better support for file selection on both create 
 and extract. 
 
-There is not yet any support for multi-volume archives or for archiving 
-sparse files. 
+There is not yet any support for multi-volume archives. 
 
 Converting between dissimilar archive formats (such as tar and cpio) using the 
 '''@'''''-'' 

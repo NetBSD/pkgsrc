@@ -65,7 +65,7 @@ DESCRIPTION
      read this data from the archive, or archive_read_data_block() which pro‐
      vides a slightly more efficient interface.  You may prefer to use the
      higher-level archive_read_data_skip(), which reads and discards the data
-     for this entry, archive_read_data_to_file(), which copies the data to the
+     for this entry, archive_read_data_into_fd(), which copies the data to the
      provided file descriptor, or archive_read_extract(), which recreates the
      specified entry on disk and copies data from the archive.	In particular,
      note that archive_read_extract() uses the struct archive_entry structure
@@ -106,7 +106,7 @@ EXAMPLE
 	     free(mydata);
 	   }
 
-	   ssize_t
+	   la_ssize_t
 	   myread(struct archive *a, void *client_data, const void **buff)
 	   {
 	     struct mydata *mydata = client_data;
@@ -144,7 +144,7 @@ HISTORY
      The libarchive library first appeared in FreeBSD 5.3.
 
 AUTHORS
-     The libarchive library was written by Tim Kientzle ⟨kientzle@acm.org⟩.
+     The libarchive library was written by Tim Kientzle <kientzle@acm.org>.
 
 BUGS
      Many traditional archiver programs treat empty files as valid empty ar‐

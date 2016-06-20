@@ -101,6 +101,11 @@ OPTIONS
 	     (x mode only) chroot() to the current directory after processing
 	     any -C options and before extracting any files.
 
+     --clear-nochange-fflags
+	     (x mode only) Before removing file system objects to replace
+	     them, clear platform-specific file flags that might prevent
+	     removal.
+
      --disable-copyfile
 	     Mac OS X specific.  Disable the use of copyfile(3).
 
@@ -153,6 +158,10 @@ OPTIONS
 	     (x mode only) Mac OS X specific(v10.6 or later). Compress
 	     extracted regular files with HFS+ compression.
 
+     --ignore-zeros
+	     An alias of --options read_concatenated_archives for compatibil‐
+	     ity with GNU tar.
+
      --include pattern
 	     Process only files or directories that match the specified pat‐
 	     tern.  Note that exclusions specified with --exclude take prece‐
@@ -197,6 +206,10 @@ OPTIONS
      --lrzip
 	     (c mode only) Compress the resulting archive with lrzip(1).  In
 	     extract or list modes, this option is ignored.
+
+     --lz4   (c mode only) Compress the archive with lz4-compatible compres‐
+	     sion before writing it.  In input mode, this option is ignored;
+	     lz4 compression is recognized automatically on input.
 
      --lzma  (c mode only) Compress the resulting archive with the original
 	     LZMA algorithm.  Use of this option is discouraged and new ar‐
@@ -333,6 +346,20 @@ OPTIONS
 	     lrzip:compression-level
 		     A decimal integer from 1 to 9 specifying the lrzip com‐
 		     pression level.
+	     lz4:compression-level
+		     A decimal integer from 1 to 9 specifying the lzop com‐
+		     pression level.
+	     lz4:stream-checksum
+		     Enable stream checksum. This is by default, use
+		     lz4:!stream-checksum to disable.
+	     lz4:block-checksum
+		     Enable block checksum (Disabled by default).
+	     lz4:block-size
+		     A decimal integer from 4 to 7 specifying the lz4 compres‐
+		     sion block size (7 is set by default).
+	     lz4:block-dependence
+		     Use the previous block of the block being compressed for
+		     a compression dictionary to improve compression ratio.
 	     lzop:compression-level
 		     A decimal integer from 1 to 9 specifying the lzop com‐
 		     pression level.
@@ -358,6 +385,19 @@ OPTIONS
 	     zip:compression=type
 		     Use type as compression method.  Supported values are
 		     store (uncompressed) and deflate (gzip algorithm).
+	     zip:encryption
+		     Enable encryption using traditional zip encryption.
+	     zip:encryption=type
+		     Use type as encryption type.  Supported values are
+		     zipcrypt (traditional zip encryption), aes128 (WinZip
+		     AES-128 encryption) and aes256 (WinZip AES-256 encryp‐
+		     tion).
+	     read_concatenated_archives
+		     Ignore zeroed blocks in the archive, which occurs when
+		     multiple tar archives have been concatenated together.
+		     Without this option, only the contents of the first con‐
+		     catenated archive would be read.  This option is compara‐
+		     ble to the -i, --ignore-zeros option of GNU tar.
 	     If a provided option is not supported by any module, that is a
 	     fatal error.
 
@@ -376,6 +416,12 @@ OPTIONS
 	     This is the default, if tar is being run by root and can be over‐
 	     ridden by also specifying --no-same-owner and
 	     --no-same-permissions.
+
+     --passphrase passphrase
+	     The passphrase is used to extract or create an encrypted archive.
+	     Currently, zip is the only supported format that supports encryp‐
+	     tion.  You shouldn't use this option unless you realize how inse‐
+	     cure use of this option is.
 
      --posix
 	     (c, r, u mode only) Synonym for --format pax
@@ -469,7 +515,8 @@ OPTIONS
 	     Produce verbose output.  In create and extract modes, tar will
 	     list each file name as it is read from or written to the archive.
 	     In list mode, tar will produce output similar to that of ls(1).
-	     Additional -v options will provide additional detail.
+	     An additional -v option will also provide ls-like details in cre‐
+	     ate and extract mode.
 
      --version
 	     Print version of tar and libarchive, and exit.
@@ -698,12 +745,11 @@ BUGS
      There needs to be better support for file selection on both create and
      extract.
 
-     There is not yet any support for multi-volume archives or for archiving
-     sparse files.
+     There is not yet any support for multi-volume archives.
 
      Converting between dissimilar archive formats (such as tar and cpio)
      using the @- convention can cause hard link information to be lost.
      (This is a consequence of the incompatible ways that different archive
      formats store hardlink information.)
 
-BSD			       November 1, 2012 			   BSD
+BSD			      September 16, 2014			   BSD

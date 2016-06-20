@@ -24,15 +24,7 @@ corresponding character.
 
 Each line is interpreted independently as one of the following types: 
 <dl> 
-<dt>Signature</dt><dd> 
-The first line of any mtree file must begin with 
-"#mtree". 
-If a file contains any full path entries, the first line should 
-begin with 
-"#mtree v2.0", 
-otherwise, the first line should begin with 
-"#mtree v1.0". 
-</dd><dt>Blank</dt><dd> 
+<dt>Blank</dt><dd> 
 Blank lines are ignored. 
 </dd><dt>Comment</dt><dd> 
 Lines beginning with 
@@ -100,14 +92,60 @@ Currently supported keywords are as follows:
 <dt>'''cksum'''</dt><dd> 
 The checksum of the file using the default algorithm specified by 
 the 
-'''cksum'''(1) 
+[[cksum(1)|http://www.freebsd.org/cgi/man.cgi?query=cksum&sektion=1]] 
 utility. 
+</dd><dt>'''device'''</dt><dd> 
+The device number for 
+.B block 
+or 
+.B char 
+file types. 
+The value must be one of the following forms: 
+
+<dl> 
+<dt>''format'',''major'',''minor''Bo,''subunit'' Bc</dt><dd> 
+A device with 
+''major'', minor 
+and optional 
+''subunit'' 
+fields. 
+Their meaning is specified by the operating's system 
+''format''. 
+See below for valid formats. 
+</dd><dt>''number''</dt><dd> 
+Opaque number (as stored on the file system). 
+</dd></dl> 
+
+The following values for 
+''format'' 
+are recognized: 
+.B native , 
+.B 386bsd , 
+.B 4bsd , 
+.B bsdos , 
+.B freebsd , 
+.B hpux , 
+.B isc , 
+.B linux , 
+.B netbsd , 
+.B osf1 , 
+.B sco , 
+.B solaris , 
+.B sunos , 
+.B svr3 , 
+.B svr4 ,  
+and  
+.B ultrix . 
+
+See 
+[[mknod(8)|http://www.freebsd.org/cgi/man.cgi?query=mknod&sektion=8]] 
+for more details. 
 </dd><dt>'''contents'''</dt><dd> 
 The full pathname of a file that holds the contents of this file. 
 </dd><dt>'''flags'''</dt><dd> 
 The file flags as a symbolic name. 
 See 
-'''chflags'''(1) 
+[[chflags(1)|http://www.freebsd.org/cgi/man.cgi?query=chflags&sektion=1]] 
 for information on these names. 
 If no flags are to be set the string 
 "none" 
@@ -118,6 +156,8 @@ The file group as a numeric value.
 The file group as a symbolic name. 
 </dd><dt>'''ignore'''</dt><dd> 
 Ignore any file hierarchy below this file. 
+</dd><dt>'''inode'''</dt><dd> 
+The inode number. 
 </dd><dt>'''link'''</dt><dd> 
 The target of the symbolic link when type=link. 
 </dd><dt>'''md5'''</dt><dd> 
@@ -132,6 +172,16 @@ value.
 The number of hard links the file is expected to have. 
 </dd><dt>'''nochange'''</dt><dd> 
 Make sure this file or directory exists but otherwise ignore all attributes. 
+</dd><dt>'''optional'''</dt><dd> 
+The file is optional; do not complain about the file if it is not in 
+the file hierarchy. 
+</dd><dt>'''resdevice'''</dt><dd> 
+The 
+"resident" 
+device number of the file, e.g. the ID of the device that 
+contains the file. 
+Its format is the same as the one for 
+'''device'''. 
 </dd><dt>'''ripemd160digest'''</dt><dd> 
 The 
 '''RIPEMD160''' 
@@ -160,6 +210,24 @@ message digest of the file.
 </dd><dt>'''sha256digest'''</dt><dd> 
 A synonym for 
 '''sha256'''. 
+</dd><dt>'''sha384'''</dt><dd> 
+The 
+'''FIPS''' 
+180-2 
+("Tn SHA-384") 
+message digest of the file. 
+</dd><dt>'''sha384digest'''</dt><dd> 
+A synonym for 
+'''sha384'''. 
+</dd><dt>'''sha512'''</dt><dd> 
+The 
+'''FIPS''' 
+180-2 
+("Tn SHA-512") 
+message digest of the file. 
+</dd><dt>'''sha512digest'''</dt><dd> 
+A synonym for 
+'''sha512'''. 
 </dd><dt>'''size'''</dt><dd> 
 The size, in bytes, of the file. 
 </dd><dt>'''time'''</dt><dd> 
@@ -190,20 +258,10 @@ The file owner as a symbolic name.
 </dd></dl> 
 
 == SEE ALSO == 
-'''cksum'''(1), 
-'''find'''(1), 
-'''mtree'''(8) 
+[[cksum(1)|http://www.freebsd.org/cgi/man.cgi?query=cksum&sektion=1]], 
+[[find(1)|http://www.freebsd.org/cgi/man.cgi?query=find&sektion=1]], 
+[[mtree(8)|http://www.freebsd.org/cgi/man.cgi?query=mtree&sektion=8]] 
 == BUGS == 
-The 
-FreeBSD 
-implementation of mtree does not currently support 
-the 
-'''mtree''' 
-2.0 
-format. 
-The requirement for a 
-"#mtree" 
-signature line is new and not yet widely implemented. 
 == HISTORY == 
 The 
 '''mtree''' 
@@ -214,7 +272,7 @@ The
 digest capability was added in 
 FreeBSD 2.1, 
 in response to the widespread use of programs which can spoof 
-'''cksum'''(1). 
+[[cksum(1)|http://www.freebsd.org/cgi/man.cgi?query=cksum&sektion=1]]. 
 The 
 '''SHA-1''' 
 and 

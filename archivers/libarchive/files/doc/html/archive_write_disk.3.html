@@ -1,5 +1,5 @@
-<!-- Creator     : groff version 1.21 -->
-<!-- CreationDate: Sat Feb  9 12:24:06 2013 -->
+<!-- Creator     : groff version 1.22.3 -->
+<!-- CreationDate: Sun Jun 19 19:54:08 2016 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -94,14 +94,14 @@ archive *</i></p>
 <i>struct&nbsp;archive_entry&nbsp;*</i>);</p>
 
 
-<p style="margin-left:6%; margin-top: 1em"><i>ssize_t</i></p>
+<p style="margin-left:6%; margin-top: 1em"><i>la_ssize_t</i></p>
 
 
 <p style="margin-left:12%;"><b>archive_write_data</b>(<i>struct&nbsp;archive&nbsp;*</i>,
 <i>const&nbsp;void&nbsp;*</i>, <i>size_t</i>);</p>
 
 
-<p style="margin-left:6%; margin-top: 1em"><i>ssize_t</i></p>
+<p style="margin-left:6%; margin-top: 1em"><i>la_ssize_t</i></p>
 
 
 <p style="margin-left:12%;"><b>archive_write_data_block</b>(<i>struct&nbsp;archive&nbsp;*</i>,
@@ -242,12 +242,23 @@ is to not refuse such paths. Note that paths ending in
 <i>..</i> always cause an error, regardless of this
 flag.</p>
 
+<p><b>ARCHIVE_EXTRACT_SECURE_NOABSOLUTEPATHS</b></p>
+
+<p style="margin-left:27%;">Refuse to extract an absolute
+path. The default is to not refuse such paths.</p>
+
 <p><b>ARCHIVE_EXTRACT_SPARSE</b></p>
 
 <p style="margin-left:27%;">Scan data for blocks of NUL
 bytes and try to recreate them with holes. This results in
 sparse files, independent of whether the archive format
 supports or uses them.</p>
+
+<p><b>ARCHIVE_EXTRACT_CLEAR_NOCHANGE_FFLAGS</b></p>
+
+<p style="margin-left:27%;">Before removing a file system
+object prior to replacing it, clear platform-specific file
+flags which might prevent its removal.</p>
 
 
 <p style="margin-top: 1em"><b>archive_write_disk_set_group_lookup</b>(),
@@ -390,8 +401,7 @@ FreeBSD&nbsp;6.3.</p>
 <p style="margin-top: 1em"><b>AUTHORS</b></p>
 
 <p style="margin-left:6%;">The <b>libarchive</b> library
-was written by Tim Kientzle &lang; kientzle@acm.org&rang;
-.</p>
+was written by Tim Kientzle &lt;kientzle@acm.org&gt;.</p>
 
 <p style="margin-top: 1em"><b>BUGS</b></p>
 

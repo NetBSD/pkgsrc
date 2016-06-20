@@ -15,7 +15,7 @@ object, set any desired options, initialize the archive, append entries, then
 close the archive and release all resources. 
 === Create archive object=== 
 See 
-'''archive_write_new'''(3). 
+[[ManPagerchiveriteew3]]. 
 
 To write an archive, you must first obtain an initialized 
 '''struct archive''' 
@@ -23,10 +23,10 @@ object from
 '''archive_write_new'''(). 
 === Enable filters and formats, configure block size and padding=== 
 See 
-'''archive_write_filter'''(3), 
-'''archive_write_format'''(3) 
+[[ManPagerchiveriteilter3]], 
+[[ManPagerchiveriteormat3]] 
 and 
-'''archive_write_blocksize'''(3). 
+[[ManPagerchiveritelocksize3]]. 
 
 You can then modify this object for the desired operations with the 
 various 
@@ -40,10 +40,10 @@ functions to enable the corresponding compression and format
 support. 
 === Set options=== 
 See 
-'''archive_read_set_options'''(3). 
+[[ManPagerchiveeadetptions3]]. 
 === Open archive=== 
 See 
-'''archive_write_open'''(3). 
+[[ManPagerchiveritepen3]]. 
 
 Once you have prepared the 
 '''struct archive''' 
@@ -55,13 +55,13 @@ the most basic expects you to provide pointers to several
 functions that can provide blocks of bytes from the archive. 
 There are convenience forms that allow you to 
 specify a filename, file descriptor, 
-'''FILE *''' 
+''FILE *'' 
 object, or a block of memory from which to write the archive data. 
 === Produce archive=== 
 See 
-'''archive_write_header'''(3) 
+[[ManPagerchiveriteeader3]] 
 and 
-'''archive_write_data'''(3). 
+[[ManPagerchiveriteata3]]. 
 
 Individual archive entries are written in a three-step 
 process: 
@@ -78,7 +78,7 @@ field, which specifies the type of object and
 field, which specifies the size of the data portion of the object. 
 === Release resources=== 
 See 
-'''archive_write_free'''(3). 
+[[ManPagerchiveriteree3]]. 
 
 After all entries have been written, use the 
 '''archive_write_free'''() 
@@ -87,10 +87,10 @@ function to release all resources.
 The following sketch illustrates basic usage of the library. 
 In this example, 
 the callback functions are simply wrappers around the standard 
-'''open'''(2), 
-'''write'''(2), 
+[[open(2)|http://www.freebsd.org/cgi/man.cgi?query=open&sektion=2]], 
+[[write(2)|http://www.freebsd.org/cgi/man.cgi?query=write&sektion=2]], 
 and 
-'''close'''(2) 
+[[close(2)|http://www.freebsd.org/cgi/man.cgi?query=close&sektion=2]] 
 system calls. 
 ```text
 #ifdef __linux__
@@ -116,7 +116,7 @@ myopen(struct archive *a, void *client_data)
   else
     return (ARCHIVE_FATAL);
 }
-ssize_t
+la_ssize_t
 mywrite(struct archive *a, void *client_data, const void *buff, size_t n)
 {
   struct mydata *mydata = client_data;
@@ -142,8 +142,13 @@ write_archive(const char *outname, const char **filename)
   int fd;
   a = archive_write_new();
   mydata->name = outname;
-  archive_write_add_filter_gzip(a);
-  archive_write_set_format_ustar(a);
+  /* Set archive format and filter according to output file extension.
+   * If it fails, set default format. Platform depended function.
+   * See supported formats in archive_write_set_format_filter_by_ext.c */
+  if (archive_write_set_format_filter_by_ext(a, outname) != ARCHIVE_OK)  {
+    archive_write_add_filter_gzip(a);
+    archive_write_set_format_ustar(a);
+  }  
   archive_write_open(a, mydata, myopen, mywrite, myclose);
   while (*filename) {
     stat(*filename, &st);
@@ -153,7 +158,7 @@ write_archive(const char *outname, const char **filename)
     archive_write_header(a, entry);
     if ((fd = open(*filename, O_RDONLY)) != -1) {
       len = read(fd, buff, sizeof(buff));
-      while ( len > 0 ) {
+      while (len > 0) {
         archive_write_data(a, buff, len);
         len = read(fd, buff, sizeof(buff));
       }
@@ -168,18 +173,18 @@ int main(int argc, const char **argv)
 {
   const char *outname;
   argv++;
-  outname = argv++;
+  outname = *argv++;
   write_archive(outname, argv);
   return 0;
 }
 ```
 == SEE ALSO == 
-'''tar'''(1), 
-'''libarchive'''(3), 
-'''archive_write_set_options'''(3), 
-'''cpio'''(5), 
-'''mtree'''(5), 
-'''tar'''(5) 
+[[ManPageBsdtar1]], 
+[[ManPageibarchive3]], 
+[[ManPagerchiveriteetptions3]], 
+[[ManPageCpio5]], 
+[[ManPageMtree5]], 
+[[ManPageTar5]] 
 == HISTORY == 
 The 
 '''libarchive''' 

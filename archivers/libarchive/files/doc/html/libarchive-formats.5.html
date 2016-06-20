@@ -1,5 +1,5 @@
-<!-- Creator     : groff version 1.21 -->
-<!-- CreationDate: Sat Feb  9 12:24:08 2013 -->
+<!-- Creator     : groff version 1.22.3 -->
+<!-- CreationDate: Sun Jun 19 19:54:09 2016 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -53,8 +53,9 @@ all supported formats.</p>
 Formats</b> <br>
 The libarchive(3) library can read most tar archives. It can
 write POSIX-standard &rsquo;&rsquo;ustar&rsquo;&rsquo; and
-&rsquo;&rsquo;pax interchange&rsquo;&rsquo; formats and a
-subset of the legacy GNU tar format.</p>
+&rsquo;&rsquo;pax interchange&rsquo;&rsquo; formats as well
+as v7 tar format and a subset of the legacy GNU tar
+format.</p>
 
 <p style="margin-left:6%; margin-top: 1em">All tar formats
 store each entry in one or more 512-byte records. The first
@@ -169,6 +170,51 @@ format has none of these restrictions. The ustar format is
 old and widely supported. It is recommended when
 compatibility is the primary concern.</p>
 
+<p style="margin-top: 1em"><b>v7</b></p>
+
+<p style="margin-left:17%; margin-top: 1em">The libarchive
+library can read and write the legacy v7 tar format. This
+format has the following limitations:</p>
+
+<p><b>&bull;</b></p>
+
+<p style="margin-left:22%;">Only regular files,
+directories, and symbolic links can be archived. Block and
+character device nodes, FIFOs, and sockets cannot be
+archived.</p>
+
+<p><b>&bull;</b></p>
+
+<p style="margin-left:22%;">Path names in the archive are
+limited to 100 bytes.</p>
+
+<p><b>&bull;</b></p>
+
+<p style="margin-left:22%;">Symbolic links and hard links
+are stored in the archive with the name of the referenced
+file. This name is limited to 100 bytes.</p>
+
+<p><b>&bull;</b></p>
+
+<p style="margin-left:22%;">User and group information are
+stored as numeric IDs; there is no provision for storing
+user or group names.</p>
+
+<p><b>&bull;</b></p>
+
+<p style="margin-left:22%;">Extended attributes, file
+flags, and other extended security information cannot be
+stored.</p>
+
+<p><b>&bull;</b></p>
+
+<p style="margin-left:22%;">Archive entries are limited to
+8 gigabytes in size.</p>
+
+<p style="margin-left:17%;">Generally, users should prefer
+the ustar format for portability as the v7 tar format is
+both less useful and less portable.</p>
+
 <p style="margin-left:6%; margin-top: 1em">The libarchive
 library also reads a variety of commonly-used extensions to
 the basic tar format. These extensions are recognized
@@ -238,15 +284,15 @@ ASCII. It is standard, portable, and immune from byte-order
 confusion. File sizes and mtime are limited to 33 bits (8GB
 file size), other fields are limited to 18 bits.</p>
 
-<p style="margin-top: 1em"><b>SVR4</b></p>
+<p style="margin-top: 1em"><b>SVR4/newc</b></p>
 
-<p style="margin-left:17%; margin-top: 1em">The libarchive
-library can read both CRC and non-CRC variants of this
-format. The SVR4 format uses eight-digit hexadecimal values
-for all header fields. This limits file size to 4GB, and
-also limits the mtime and other fields to 32 bits. The SVR4
-format can optionally include a CRC of the file contents,
-although libarchive does not currently verify this CRC.</p>
+<p style="margin-left:17%;">The libarchive library can read
+both CRC and non-CRC variants of this format. The SVR4
+format uses eight-digit hexadecimal values for all header
+fields. This limits file size to 4GB, and also limits the
+mtime and other fields to 32 bits. The SVR4 format can
+optionally include a CRC of the file contents, although
+libarchive does not currently verify this CRC.</p>
 
 <p style="margin-left:6%; margin-top: 1em">Cpio first
 appeared in PWB/UNIX 1.0, which was released within AT&amp;T
@@ -383,12 +429,13 @@ at the beginning of the archive; the BSD format stores each
 long filename in an extension area adjacent to the entry.
 Libarchive can read both extensions, including archives that
 may include both types of long filenames. Programs using
-libarchive can write GNU/SVR4 format if they provide a
-filename table to be written into the archive before any of
-the entries. Any entries whose names are not in the filename
-table will be written using BSD-style long filenames. This
-can cause problems for programs such as GNU ld that do not
-support the BSD-style long filenames.</p>
+libarchive can write GNU/SVR4 format if they provide an
+entry called <i>//</i> containing a filename table to be
+written into the archive before any of the entries. Any
+entries whose names are not in the filename table will be
+written using BSD-style long filenames. This can cause
+problems for programs such as GNU ld that do not support the
+BSD-style long filenames.</p>
 
 <p style="margin-left:6%; margin-top: 1em"><b>mtree</b>
 <br>
@@ -417,14 +464,18 @@ and return those to the program using libarchive. If it
 cannot locate and open the file on disk, libarchive will
 return an error for any attempt to read the entry body.</p>
 
-<p style="margin-left:6%; margin-top: 1em"><b>LHA</b> <br>
-XXX Information about libarchive&rsquo;s LHA support XXX</p>
+<p style="margin-left:6%; margin-top: 1em"><b>7-Zip</b>
+<br>
+Libarchive can read and write 7-Zip format archives. TODO:
+Need more information</p>
 
 <p style="margin-left:6%; margin-top: 1em"><b>CAB</b> <br>
-XXX Information about libarchive&rsquo;s CAB support XXX</p>
+Libarchive can read Microsoft Cabinet (
+&rsquo;&rsquo;CAB&rsquo;&rsquo;) format archives. TODO: Need
+more information.</p>
 
-<p style="margin-left:6%; margin-top: 1em"><b>XAR</b> <br>
-XXX Information about libarchive&rsquo;s XAR support XXX</p>
+<p style="margin-left:6%; margin-top: 1em"><b>LHA</b> <br>
+TODO: Information about libarchive&rsquo;s LHA support</p>
 
 <p style="margin-left:6%; margin-top: 1em"><b>RAR</b> <br>
 Libarchive has limited support for reading RAR format
@@ -433,6 +484,14 @@ archives which have been either created uncompressed, or
 compressed using any of the compression methods supported by
 the RARv3 format. Libarchive can also read self-extracting
 RAR archives.</p>
+
+<p style="margin-left:6%; margin-top: 1em"><b>Warc</b> <br>
+Libarchive can read and write &rsquo;&rsquo;web
+archives&rsquo;&rsquo;. TODO: Need more information</p>
+
+<p style="margin-left:6%; margin-top: 1em"><b>XAR</b> <br>
+Libarchive can read and write the XAR format used by many
+Apple tools. TODO: Need more information</p>
 
 <p style="margin-top: 1em"><b>SEE ALSO</b></p>
 

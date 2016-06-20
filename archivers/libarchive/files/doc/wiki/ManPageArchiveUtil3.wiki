@@ -20,66 +20,66 @@ Streaming Archive Library (libarchive, -larchive)
 == SYNOPSIS == 
 '''<nowiki>#include <archive.h></nowiki>''' 
 <br> 
-'''void''' 
+''void'' 
 <br> 
 '''archive_clear_error'''(''struct archive *''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_compression'''(''struct archive *''); 
 <br> 
-'''const char *''' 
+''const char *'' 
 <br> 
 '''archive_compression_name'''(''struct archive *''); 
 <br> 
-'''void''' 
+''void'' 
 <br> 
 '''archive_copy_error'''(''struct archive *'', ''struct archive *''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_errno'''(''struct archive *''); 
 <br> 
-'''const char *''' 
+''const char *'' 
 <br> 
 '''archive_error_string'''(''struct archive *''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_file_count'''(''struct archive *''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_filter_code'''(''struct archive *'', ''int''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_filter_count'''(''struct archive *'', ''int''); 
 <br> 
-'''const char *''' 
+''const char *'' 
 <br> 
 '''archive_filter_name'''(''struct archive *'', ''int''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_format'''(''struct archive *''); 
 <br> 
-'''const char *''' 
+''const char *'' 
 <br> 
 '''archive_format_name'''(''struct archive *''); 
 <br> 
-'''int64_t''' 
+''int64_t'' 
 <br> 
 '''archive_position'''(''struct archive *'', ''int''); 
 <br> 
-'''void''' 
+''void'' 
 <br> 
 '''archive_set_error'''(''struct archive *'', ''int error_code'', ''const char *fmt'', ''...''); 
 == DESCRIPTION == 
 These functions provide access to various information about the 
 '''struct archive''' 
 object used in the 
-'''libarchive'''(3) 
+[[ManPageibarchive3]] 
 library. 
 <dl> 
 <dt>'''archive_clear_error'''()</dt><dd> 
@@ -95,7 +95,7 @@ Synonym for
 Copies error information from one archive to another. 
 </dd><dt>'''archive_errno'''()</dt><dd> 
 Returns a numeric error code (see 
-'''errno'''(2)) 
+[[errno(2)|http://www.freebsd.org/cgi/man.cgi?query=errno&sektion=2]]) 
 indicating the reason for the most recent error return. 
 Note that this can not be reliably used to detect whether an 
 error has occurred. 
@@ -107,13 +107,13 @@ The error message here is usually more specific than that
 obtained from passing the result of 
 '''archive_errno'''() 
 to 
-'''strerror'''(3). 
+[[strerror(3)|http://www.freebsd.org/cgi/man.cgi?query=strerror&sektion=3]]. 
 </dd><dt>'''archive_file_count'''()</dt><dd> 
 Returns a count of the number of files processed by this archive object. 
 The count is incremented by calls to 
-'''archive_write_header'''(3) 
+[[ManPagerchiveriteeader3]] 
 or 
-'''archive_read_next_header'''(3). 
+[[ManPagerchiveeadexteader3]]. 
 </dd><dt>'''archive_filter_code'''()</dt><dd> 
 Returns a numeric code identifying the indicated filter. 
 See 
@@ -202,10 +202,10 @@ Field-width specifiers and other printf features are
 not uniformly supported and should not be used. 
 </dd></dl> 
 == SEE ALSO == 
-'''archive_read'''(3), 
-'''archive_write'''(3), 
-'''libarchive'''(3), 
-'''printf'''(3) 
+[[ManPagerchiveead3]], 
+[[ManPagerchiverite3]], 
+[[ManPageibarchive3]], 
+[[printf(3)|http://www.freebsd.org/cgi/man.cgi?query=printf&sektion=3]] 
 == HISTORY == 
 The 
 '''libarchive''' 

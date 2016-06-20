@@ -50,11 +50,11 @@ Streaming Archive Library (libarchive, -larchive)
 .br
 \fB\%archive_write_header\fP(\fI\%struct\ archive\ *\fP, \fI\%struct\ archive_entry\ *\fP);
 .br
-\fIssize_t\fP
+\fIla_ssize_t\fP
 .br
 \fB\%archive_write_data\fP(\fI\%struct\ archive\ *\fP, \fI\%const\ void\ *\fP, \fI\%size_t\fP);
 .br
-\fIssize_t\fP
+\fIla_ssize_t\fP
 .br
 \fB\%archive_write_data_block\fP(\fI\%struct\ archive\ *\fP, \fI\%const\ void\ *\fP, \fI\%size_t\ size\fP, \fI\%int64_t\ offset\fP);
 .br
@@ -183,10 +183,18 @@ Note that paths ending in
 \fI\& ..\fP
 always cause an error, regardless of this flag.
 .TP
+\fBARCHIVE_EXTRACT_SECURE_NOABSOLUTEPATHS\fP
+Refuse to extract an absolute path.
+The default is to not refuse such paths.
+.TP
 \fBARCHIVE_EXTRACT_SPARSE\fP
 Scan data for blocks of NUL bytes and try to recreate them with holes.
 This results in sparse files, independent of whether the archive format
 supports or uses them.
+.TP
+\fBARCHIVE_EXTRACT_CLEAR_NOCHANGE_FFLAGS\fP
+Before removing a file system object prior to replacing it, clear
+platform-specific file flags which might prevent its removal.
 .RE
 .TP
 \fB\%archive_write_disk_set_group_lookup\fP(),

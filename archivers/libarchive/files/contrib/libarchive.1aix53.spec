@@ -127,11 +127,8 @@ rm -fr %buildroot
 All persons listed below can be reached at <cvs_login>@pld-linux.org
 
 $Log: libarchive.1aix53.spec,v $
-Revision 1.6  2015/01/17 12:44:48  adam
-Changes 3.1.2:
-This is a maintenance update to fix issues with the new RAR seeking
-feature. This new release also contains fixes for build failures when
-building libarchive using Visual Studio 2012 and MinGW.
+Revision 1.7  2016/06/20 17:24:56  joerg
+Update for libarchive 3.2.1.
 
 Release 1aix53  2006/12/12 rm1023@dcx.com
 - tweak for aix-5.3

@@ -4,9 +4,9 @@ NAME
      cpio — copy files to and from archives
 
 SYNOPSIS
-     cpio {-i} [options] [pattern ...] [< archive]
-     cpio {-o} [options] < name-list [> archive]
-     cpio {-p} [options] dest-dir < name-list
+     cpio -i [options] [pattern ...] [< archive]
+     cpio -o [options] < name-list [> archive]
+     cpio -p [options] dest-dir < name-list
 
 DESCRIPTION
      cpio copies files between archives and directories.  This implementation
@@ -86,8 +86,8 @@ OPTIONS
 
      --insecure
 	     (i and p mode only) Disable security checks during extraction or
-	     copying.  This allows extraction via symbolic links and path
-	     names containing ‘..’ in the name.
+	     copying.  This allows extraction via symbolic links, absolute
+	     paths, and path names containing ‘..’ in the name.
 
      -J, --xz
 	     (o mode only) Compress the file with xz-compatible compression
@@ -109,12 +109,22 @@ OPTIONS
 	     (o mode only) Compress the resulting archive with lrzip(1).  In
 	     input mode, this option is ignored.
 
+     --lz4   (o mode only) Compress the archive with lz4-compatible compres‐
+	     sion before writing it.  In input mode, this option is ignored;
+	     lz4 compression is recognized automatically on input.
+
      --lzma  (o mode only) Compress the file with lzma-compatible compression
 	     before writing it.  In input mode, this option is ignored; lzma
 	     compression is recognized automatically on input.
 
      --lzop  (o mode only) Compress the resulting archive with lzop(1).  In
 	     input mode, this option is ignored.
+
+     --passphrase passphrase
+	     The passphrase is used to extract or create an encrypted archive.
+	     Currently, zip is only a format that cpio can handle encrypted
+	     archives.	You shouldn't use this option unless you realize how
+	     insecure use of this option is.
 
      -m, --preserve-modification-time
 	     (i and p modes) Set file modification time on created files to
@@ -267,4 +277,4 @@ BUGS
      mats cannot support files over 4 gigabytes, except for the “odc” variant,
      which can support files up to 8 gigabytes.
 
-BSD				October 7, 2012 			   BSD
+BSD			      September 16, 2014			   BSD
