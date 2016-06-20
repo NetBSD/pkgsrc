@@ -1,4 +1,4 @@
-.TH archive_util 3 "January 8, 2005" ""
+.TH ARCHIVE_UTIL 3 "February 2, 2012" ""
 .SH NAME
 .ad l
 \fB\%archive_clear_error\fP,
@@ -8,10 +8,17 @@
 \fB\%archive_errno\fP,
 \fB\%archive_error_string\fP,
 \fB\%archive_file_count\fP,
+\fB\%archive_filter_code\fP,
+\fB\%archive_filter_count\fP,
+\fB\%archive_filter_name\fP,
 \fB\%archive_format\fP,
 \fB\%archive_format_name\fP,
+\fB\%archive_position\fP,
 \fB\%archive_set_error\fP
 \- libarchive utility functions
+.SH LIBRARY
+.ad l
+Streaming Archive Library (libarchive, -larchive)
 .SH SYNOPSIS
 .ad l
 \fB#include <archive.h>\fP
@@ -46,11 +53,27 @@
 .br
 \fIint\fP
 .br
+\fB\%archive_filter_code\fP(\fI\%struct\ archive\ *\fP, \fI\%int\fP);
+.br
+\fIint\fP
+.br
+\fB\%archive_filter_count\fP(\fI\%struct\ archive\ *\fP, \fI\%int\fP);
+.br
+\fIconst char *\fP
+.br
+\fB\%archive_filter_name\fP(\fI\%struct\ archive\ *\fP, \fI\%int\fP);
+.br
+\fIint\fP
+.br
 \fB\%archive_format\fP(\fI\%struct\ archive\ *\fP);
 .br
 \fIconst char *\fP
 .br
 \fB\%archive_format_name\fP(\fI\%struct\ archive\ *\fP);
+.br
+\fIint64_t\fP
+.br
+\fB\%archive_position\fP(\fI\%struct\ archive\ *\fP, \fI\%int\fP);
 .br
 \fIvoid\fP
 .br
@@ -69,12 +92,12 @@ Clears any error information left over from a previous call.
 Not generally used in client code.
 .TP
 \fB\%archive_compression\fP()
-Returns a numeric code indicating the current compression.
-This value is set by
-\fB\%archive_read_open\fP().
+Synonym for
+\fB\%archive_filter_code(a,\fP(\fI\%0)\fP).
 .TP
 \fB\%archive_compression_name\fP()
-Returns a text description of the current compression suitable for display.
+Synonym for
+\fB\%archive_filter_name(a,\fP(\fI\%0)\fP).
 .TP
 \fB\%archive_copy_error\fP()
 Copies error information from one archive to another.
@@ -83,6 +106,10 @@ Copies error information from one archive to another.
 Returns a numeric error code (see
 \fBerrno\fP(2))
 indicating the reason for the most recent error return.
+Note that this can not be reliably used to detect whether an
+error has occurred.
+It should be used only after another libarchive function
+has returned an error status.
 .TP
 \fB\%archive_error_string\fP()
 Returns a textual error message suitable for display.
@@ -95,9 +122,48 @@ to
 \fB\%archive_file_count\fP()
 Returns a count of the number of files processed by this archive object.
 The count is incremented by calls to
-\fBarchive_write_header\fP()
+\fBarchive_write_header\fP(3)
 or
-\fBarchive_read_next_header\fP(.)
+\fBarchive_read_next_header\fP(3).
+.TP
+\fB\%archive_filter_code\fP()
+Returns a numeric code identifying the indicated filter.
+See
+\fB\%archive_filter_count\fP()
+for details of the numbering.
+.TP
+\fB\%archive_filter_count\fP()
+Returns the number of filters in the current pipeline.
+For read archive handles, these filters are added automatically
+by the automatic format detection.
+For write archive handles, these filters are added by calls to the various
+\fB\%archive_write_add_filter_XXX\fP()
+functions.
+Filters in the resulting pipeline are numbered so that filter 0
+is the filter closest to the format handler.
+As a convenience, functions that expect a filter number will
+accept -1 as a synonym for the highest-numbered filter.
+.PP
+For example, when reading a uuencoded gzipped tar archive, there
+are three filters:
+filter 0 is the gunzip filter,
+filter 1 is the uudecode filter,
+and filter 2 is the pseudo-filter that wraps the archive read functions.
+In this case, requesting
+\fB\%archive_position(a,\fP(\fI\%-1)\fP)
+would be a synonym for
+\fB\%archive_position(a,\fP(\fI\%2)\fP)
+which would return the number of bytes currently read from the archive, while
+\fB\%archive_position(a,\fP(\fI\%1)\fP)
+would return the number of bytes after uudecoding, and
+\fB\%archive_position(a,\fP(\fI\%0)\fP)
+would return the number of bytes after decompression.
+.TP
+\fB\%archive_filter_name\fP()
+Returns a textual name identifying the indicated filter.
+See
+\fB\%archive_filter_count\fP()
+for details of the numbering.
 .TP
 \fB\%archive_format\fP()
 Returns a numeric code indicating the format of the current
@@ -112,6 +178,17 @@ These entries will have different format codes.
 .TP
 \fB\%archive_format_name\fP()
 A textual description of the format of the current entry.
+.TP
+\fB\%archive_position\fP()
+Returns the number of bytes read from or written to the indicated filter.
+In particular,
+\fB\%archive_position(a,\fP(\fI\%0)\fP)
+returns the number of bytes read or written by the format handler, while
+\fB\%archive_position(a,\fP(\fI\%-1)\fP)
+returns the number of bytes read or written to the archive.
+See
+\fB\%archive_filter_count\fP()
+for details of the numbering here.
 .TP
 \fB\%archive_set_error\fP()
 Sets the numeric error code and error description that will be returned
