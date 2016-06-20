@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2561 2016/06/20 17:29:07 joerg Exp $
+$NetBSD: CHANGES-2016,v 1.2562 2016/06/20 18:53:02 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3756,3 +3756,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated misc/screen to 4.4.0 [ryoon 2016-06-20]
 	Updated archivers/libarchive to 3.2.1 [joerg 2016-06-20]
 	Updated archivers/bsdtar to 3.2.1 [joerg 2016-06-20]
+	Updated devel/ocaml-ppx_driver to 113.33.01 [jaapb 2016-06-20]
