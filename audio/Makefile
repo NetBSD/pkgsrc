@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.536 2016/06/20 08:10:13 kamil Exp $
+# $NetBSD: Makefile,v 1.537 2016/06/20 08:20:34 kamil Exp $
 #
 
 COMMENT=	Audio tools
@@ -31,6 +31,7 @@ SUBDIR+=	amarok-kde3
 SUBDIR+=	amp
 SUBDIR+=	ampache
 SUBDIR+=	applerecords
+SUBDIR+=	ardour
 SUBDIR+=	ario
 SUBDIR+=	arts
 SUBDIR+=	asunder
