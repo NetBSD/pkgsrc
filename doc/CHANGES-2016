@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2563 2016/06/20 18:53:16 jaapb Exp $
+$NetBSD: CHANGES-2016,v 1.2564 2016/06/20 18:53:52 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3758,3 +3758,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated archivers/bsdtar to 3.2.1 [joerg 2016-06-20]
 	Updated devel/ocaml-ppx_driver to 113.33.01 [jaapb 2016-06-20]
 	Updated devel/ocaml-ppx_driver to 113.33.01 [jaapb 2016-06-20]
+	Updated devel/ocaml-ppx_core to 113.33.01 [jaapb 2016-06-20]
