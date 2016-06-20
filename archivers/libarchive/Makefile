@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.42 2016/02/25 09:28:36 jperkin Exp $
+# $NetBSD: Makefile,v 1.43 2016/06/20 17:28:33 joerg Exp $
 
 .include "Makefile.common"
 
 COMMENT=	Library to read/create different archive formats
 
 USE_LIBTOOL=		yes
+CONFIGURE_ARGS+=	--disable-bsdcat
 CONFIGURE_ARGS+=	--disable-bsdcpio
 CONFIGURE_ARGS+=	--disable-bsdtar
 
