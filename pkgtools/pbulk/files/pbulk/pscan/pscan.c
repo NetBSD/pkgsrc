@@ -1,4 +1,4 @@
-/* $NetBSD: pscan.c,v 1.9 2015/11/03 19:06:48 joerg Exp $ */
+/* $NetBSD: pscan.c,v 1.10 2016/06/20 17:54:43 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -136,7 +136,7 @@ main(int argc, char **argv)
 			usage();
 		pkgsrc_tree = argv[0];
 
-		client_mode(client_port);
+		client_mode(client_port, bmake_path);
 	}
 
 	if (argc != 2)
@@ -145,15 +145,18 @@ main(int argc, char **argv)
 	pkgsrc_tree = argv[0];
 	output_file = argv[1];
 
-	if (limited_scan == 0)
-		find_full_tree();
-	else
+	if (limited_scan != 0)
 		read_limited_list();
 
-	if (has_job()) {
-		if (master_port != NULL)
+	if (master_port != NULL) {
+		if (limited_scan == 0)
+			add_job_full("find_full_tree");
+		if (has_job())
 			master_mode(master_port, start_script);
-		else
+	} else {
+		if (limited_scan == 0)
+			find_full_tree();
+		if (has_job())
 			standalone_mode();
 	}
 
