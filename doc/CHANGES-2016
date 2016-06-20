@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2565 2016/06/20 19:06:47 jaapb Exp $
+$NetBSD: CHANGES-2016,v 1.2566 2016/06/20 19:12:52 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3760,3 +3760,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ocaml-ppx_driver to 113.33.01 [jaapb 2016-06-20]
 	Updated devel/ocaml-ppx_core to 113.33.01 [jaapb 2016-06-20]
 	Updated devel/ocaml-ppx_type_conv to 113.33.01 [jaapb 2016-06-20]
+	Updated devel/ocaml-ppx_sexp_conv to 113.33.01 [jaapb 2016-06-20]
