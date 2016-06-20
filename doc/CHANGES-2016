@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2552 2016/06/20 08:11:38 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.2553 2016/06/20 08:21:47 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3747,3 +3747,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/redis to 3.2.1 [fhajny 2016-06-19]
 	Updated misc/ocaml-opam to 1.2.2 [jaapb 2016-06-19]
 	Added audio/liblo version 0.28 [kamil 2016-06-20]
+	Added audio/ardour version 4.7 [kamil 2016-06-20]
