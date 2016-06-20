@@ -4,7 +4,7 @@ LIBARCHIVE-FORMATS(5) manual page
 - archive formats supported by the libarchive library 
 == DESCRIPTION == 
 The 
-'''libarchive'''(3) 
+[[ManPageibarchive3]] 
 library reads and writes a variety of streaming archive formats. 
 Generally speaking, all of these archive formats consist of a series of 
 "entries". 
@@ -21,13 +21,13 @@ to support, though many programs do use libarchive convenience
 functions to enable all supported formats. 
 === Tar Formats=== 
 The 
-'''libarchive'''(3) 
+[[ManPageibarchive3]] 
 library can read most tar archives. 
 It can write POSIX-standard 
 "ustar" 
 and 
 "pax interchange" 
-formats and a subset of the legacy GNU tar format. 
+formats as well as v7 tar format and a subset of the legacy GNU tar format. 
 
 All tar formats store each entry in one or more 512-byte records. 
 The first record is used for file metadata, including filename, 
@@ -37,11 +37,10 @@ Later variants have extended this by either appropriating undefined
 areas of the header record, extending the header to multiple records, 
 or by storing special entries that modify the interpretation of 
 subsequent entries. 
-
 <dl> 
 <dt>'''gnutar'''</dt><dd> 
 The 
-'''libarchive'''(3) 
+[[ManPageibarchive3]] 
 library can read most GNU-format tar archives. 
 It currently supports the most popular GNU extensions, including 
 modern long filename and linkname support, as well as atime and ctime data. 
@@ -51,12 +50,12 @@ It can read GNU sparse file entries, including the new POSIX-based
 formats. 
 
 The 
-'''libarchive'''(3) 
+[[ManPageibarchive3]] 
 library can write GNU tar format, including long filename 
 and linkname support, as well as atime and ctime data. 
 </dd><dt>'''pax'''</dt><dd> 
 The 
-'''libarchive'''(3) 
+[[ManPageibarchive3]] 
 library can read and write POSIX-compliant pax interchange format 
 archives. 
 Pax interchange format archives are an extension of the older ustar 
@@ -122,6 +121,30 @@ Archive entries are limited to 8 gigabytes in size.
 Note that the pax interchange format has none of these restrictions. 
 The ustar format is old and widely supported. 
 It is recommended when compatibility is the primary concern. 
+</dd><dt>'''v7'''</dt><dd> 
+The libarchive library can read and write the legacy v7 tar format. 
+This format has the following limitations: 
+<ul> 
+<li> 
+Only regular files, directories, and symbolic links can be archived. 
+Block and character device nodes, FIFOs, and sockets cannot be archived. 
+</li><li> 
+Path names in the archive are limited to 100 bytes. 
+</li><li> 
+Symbolic links and hard links are stored in the archive with 
+the name of the referenced file. 
+This name is limited to 100 bytes. 
+</li><li> 
+User and group information are stored as numeric IDs; there 
+is no provision for storing user or group names. 
+</li><li> 
+Extended attributes, file flags, and other extended 
+security information cannot be stored. 
+</li><li> 
+Archive entries are limited to 8 gigabytes in size. 
+</li></ul> 
+Generally, users should prefer the ustar format for portability 
+as the v7 tar format is both less useful and less portable. 
 </dd></dl> 
 
 The libarchive library also reads a variety of commonly-used extensions to 
@@ -183,7 +206,7 @@ This format stores the header contents as octal values in ASCII.
 It is standard, portable, and immune from byte-order confusion. 
 File sizes and mtime are limited to 33 bits (8GB file size), 
 other fields are limited to 18 bits. 
-</dd><dt>'''SVR4'''</dt><dd> 
+</dd><dt>'''SVR4/newc'''</dt><dd> 
 The libarchive library can read both CRC and non-CRC variants of 
 this format. 
 The SVR4 format uses eight-digit hexadecimal values for 
@@ -224,18 +247,18 @@ The libarchive library can write two different kinds of shar archives:
 <dt>'''shar'''</dt><dd> 
 The traditional shar format uses a limited set of POSIX 
 commands, including 
-'''echo'''(1), 
-'''mkdir'''(1), 
+[[echo(1)|http://www.freebsd.org/cgi/man.cgi?query=echo&sektion=1]], 
+[[mkdir(1)|http://www.freebsd.org/cgi/man.cgi?query=mkdir&sektion=1]], 
 and 
-'''sed'''(1). 
+[[sed(1)|http://www.freebsd.org/cgi/man.cgi?query=sed&sektion=1]]. 
 It is suitable for portably archiving small collections of plain text files. 
 However, it is not generally well-suited for large archives 
 (many implementations of 
-'''sh'''(1) 
+[[sh(1)|http://www.freebsd.org/cgi/man.cgi?query=sh&sektion=1]] 
 have limits on the size of a script) nor should it be used with non-text files. 
 </dd><dt>'''shardump'''</dt><dd> 
 This format is similar to shar but encodes files using 
-'''uuencode'''(1) 
+[[uuencode(1)|http://www.freebsd.org/cgi/man.cgi?query=uuencode&sektion=1]] 
 so that the result will be a plain text file regardless of the file contents. 
 It also includes additional shell commands that attempt to reproduce as 
 many file attributes as possible, including owner, mode, and flags. 
@@ -319,11 +342,11 @@ can only be accurately detected by first reading the
 Central Directory. 
 === Archive (library) file format=== 
 The Unix archive format (commonly created by the 
-'''ar'''(1) 
+[[ar(1)|http://www.freebsd.org/cgi/man.cgi?query=ar&sektion=1]] 
 archiver) is a general-purpose format which is 
 used almost exclusively for object files to be 
 read by the link editor 
-'''ld'''(1). 
+[[ld(1)|http://www.freebsd.org/cgi/man.cgi?query=ld&sektion=1]]. 
 The ar format has never been standardised. 
 There are two common variants: 
 the GNU format derived from SVR4, 
@@ -336,27 +359,29 @@ area adjacent to the entry.
 Libarchive can read both extensions, 
 including archives that may include both types of long filenames. 
 Programs using libarchive can write GNU/SVR4 format 
-if they provide a filename table to be written into 
-the archive before any of the entries. 
+if they provide an entry called 
+''//'' 
+containing a filename table to be written into the archive 
+before any of the entries. 
 Any entries whose names are not in the filename table 
 will be written using BSD-style long filenames. 
 This can cause problems for programs such as 
 GNU ld that do not support the BSD-style long filenames. 
 === mtree=== 
 Libarchive can read and write files in 
-'''mtree'''(5) 
+[[ManPageMtree5]] 
 format. 
 This format is not a true archive format, but rather a textual description 
 of a file hierarchy in which each line specifies the name of a file and 
 provides specific metadata about that file. 
 Libarchive can read all of the keywords supported by both 
 the NetBSD and FreeBSD versions of 
-'''mtree'''(8), 
+[[mtree(8)|http://www.freebsd.org/cgi/man.cgi?query=mtree&sektion=8]], 
 although many of the keywords cannot currently be stored in an 
 '''archive_entry''' 
 object. 
 When writing, libarchive supports use of the 
-'''archive_write_set_options'''(3) 
+[[ManPagerchiveriteetptions3]] 
 interface to specify which keywords should be included in the 
 output. 
 If libarchive was compiled with access to suitable 
@@ -378,26 +403,37 @@ using libarchive.
 If it cannot locate and open the file on disk, libarchive 
 will return an error for any attempt to read the entry 
 body. 
-=== LHA=== 
-XXX Information about libarchive's LHA support XXX 
+=== 7-Zip=== 
+Libarchive can read and write 7-Zip format archives. 
+TODO: Need more information 
 === CAB=== 
-XXX Information about libarchive's CAB support XXX 
-=== XAR=== 
-XXX Information about libarchive's XAR support XXX 
+Libarchive can read Microsoft Cabinet ( 
+"CAB )" 
+format archives. 
+TODO: Need more information. 
+=== LHA=== 
+TODO: Information about libarchive's LHA support 
 === RAR=== 
 Libarchive has limited support for reading RAR format archives. 
 Currently, libarchive can read RARv3 format archives 
 which have been either created uncompressed, or compressed using 
 any of the compression methods supported by the RARv3 format. 
 Libarchive can also read self-extracting RAR archives. 
+=== Warc=== 
+Libarchive can read and write 
+"web archives". 
+TODO: Need more information 
+=== XAR=== 
+Libarchive can read and write the XAR format used by many Apple tools. 
+TODO: Need more information 
 == SEE ALSO == 
-'''ar'''(1), 
-'''cpio'''(1), 
-'''mkisofs'''(1), 
-'''shar'''(1), 
-'''tar'''(1), 
-'''zip'''(1), 
-'''zlib'''(3), 
-'''cpio'''(5), 
-'''mtree'''(5), 
-'''tar'''(5) 
+[[ar(1)|http://www.freebsd.org/cgi/man.cgi?query=ar&sektion=1]], 
+[[ManPageBsdcpio1]], 
+[[mkisofs(1)|http://www.freebsd.org/cgi/man.cgi?query=mkisofs&sektion=1]], 
+[[shar(1)|http://www.freebsd.org/cgi/man.cgi?query=shar&sektion=1]], 
+[[ManPageBsdtar1]], 
+[[zip(1)|http://www.freebsd.org/cgi/man.cgi?query=zip&sektion=1]], 
+[[zlib(3)|http://www.freebsd.org/cgi/man.cgi?query=zlib&sektion=3]], 
+[[ManPageCpio5]], 
+[[ManPageMtree5]], 
+[[ManPageTar5]] 

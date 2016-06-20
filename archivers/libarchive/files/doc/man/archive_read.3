@@ -101,7 +101,7 @@ which provides a slightly more efficient interface.
 You may prefer to use the higher-level
 \fB\%archive_read_data_skip\fP(),
 which reads and discards the data for this entry,
-\fB\%archive_read_data_to_file\fP(),
+\fB\%archive_read_data_into_fd\fP(),
 which copies the data to the provided file descriptor, or
 \fB\%archive_read_extract\fP(),
 which recreates the specified entry on disk and copies data
@@ -155,7 +155,7 @@ list_archive(const char *name)
   archive_read_free(a);
   free(mydata);
 }
-ssize_t
+la_ssize_t
 myread(struct archive *a, void *client_data, const void **buff)
 {
   struct mydata *mydata = client_data;
