@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2016/06/20 11:10:40 jaapb Exp $
+# $NetBSD: Makefile,v 1.14 2016/06/20 15:20:03 jaapb Exp $
 #
 
 VERSION=	4.0.0
 GITHUB_PROJECT=	tyxml
 DISTNAME=	${GITHUB_PROJECT}-${VERSION}
 PKGNAME=	ocaml-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GITHUB:=ocsigen/}
 
@@ -16,6 +17,7 @@ LICENSE=	gnu-lgpl-v2.1 # with openssl exemption
 CONFLICTS+=	ocsigen<2.0
 
 MAKE_ENV+=	INSTALLDIR="${DESTDIR}${PREFIX}/${OCAML_SITELIBDIR}"
+CONFIGURE_ARGS+=	"--enable-syntax"
 
 USE_TOOLS=	gmake
 OCAML_USE_OASIS=	yes
