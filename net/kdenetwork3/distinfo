@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.56 2016/06/19 15:48:29 joerg Exp $
+$NetBSD: distinfo,v 1.57 2016/06/20 12:34:00 joerg Exp $
 
 SHA1 (kdenetwork-3.5.10.tar.bz2) = eb280bffaf4642bfda442cc6a9fb38dc4163b720
 RMD160 (kdenetwork-3.5.10.tar.bz2) = f888f53746f1e734d3c15c09eac1c2b9c0564b20
@@ -19,6 +19,7 @@ SHA1 (patch-bc) = 8e6349eb5680fa7ac807c09d38816e744aa359c2
 SHA1 (patch-bd) = 05c285a1965f5a9af03b0570ac51a1ea19d7fed0
 SHA1 (patch-be) = 69eee4103409cd10dc673c3f7da3736c9505e927
 SHA1 (patch-filesharing_advanced_kcm__sambaconf_kcminterface.ui) = 162a020fcc99e1ca25ac52afa7ce34a56a3c4086
+SHA1 (patch-filesharing_advanced_kcm__sambaconf_qmultichecklistitem.cpp) = 46bb9a2788fc03651a0740b4c070246e18422bf4
 SHA1 (patch-kopete_kopete_chatwindow_emoticonselector.cpp) = 0f315d1d4125dd2622f56849386cfd389d75e7de
 SHA1 (patch-kopete_libkopete_kopetepasswordedaccount.h) = 65ba4a13c9933d2a8629daeadcf1e1516e8a80eb
 SHA1 (patch-kopete_libkopete_kopeteproperties.h) = 3428271a6840fdfb57d7aece2c6e68047c9db422
