@@ -1,0 +1,29 @@
+$NetBSD: patch-libs_ardouralsautil_wscript,v 1.1 2016/06/20 08:17:43 kamil Exp $
+
+Add support for NetBSD.
+
+--- libs/ardouralsautil/wscript.orig	2016-02-19 01:28:56.000000000 +0000
++++ libs/ardouralsautil/wscript
+@@ -17,12 +17,12 @@ def options(opt):
+ 
+ def configure(conf):
+     autowaf.configure(conf)
+-    if re.search ("linux", sys.platform) != None and Options.options.dist_target != 'mingw':
++    if (re.search ("linux", sys.platform) != None or sys.platform.startswith('netbsd')) and Options.options.dist_target != 'mingw':
+         autowaf.check_pkg(conf, 'alsa', uselib_store='ALSA')
+         autowaf.check_pkg(conf, 'dbus-1', uselib_store='DBUS', mandatory = False)
+ 
+ def build(bld):
+-    if re.search ("linux", sys.platform) != None:
++    if re.search ("linux", sys.platform) != None or sys.platform.startswith('netbsd'):
+         if bld.is_defined('HAVE_ALSA'):
+             obj = bld(features = 'cxx cxxshlib')
+             obj.source = [
+@@ -51,6 +51,7 @@ def build(bld):
+             obj.defines = [
+                     '_POSIX_SOURCE',
+                     '_XOPEN_SOURCE=500',
++                    '_NETBSD_SOURCE',
+                     'ARD_PROG_NAME="ardour-request-device"',
+                     'ARD_APPL_NAME="Ardour ALSA Backend"',
+             ]
