@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.7 2016/02/06 13:20:33 jaapb Exp $
+$NetBSD: distinfo,v 1.8 2016/06/20 19:35:56 jaapb Exp $
 
-SHA1 (ocsigenserver/2.6.tar.gz) = 85526cc9b0b40111bfceaa27fbb232e68859a1f1
-RMD160 (ocsigenserver/2.6.tar.gz) = e823500a4bd1317b63dbd079828755bdf935d2ba
-SHA512 (ocsigenserver/2.6.tar.gz) = 56805378d375de7e7653f74b3681fe21c798df2c50ee6889bd238df8f64aa053dfdbd1df2b6396b2f8c9ed8547b8176ef9498ccbf19df4bf111469353a6d9434
-Size (ocsigenserver/2.6.tar.gz) = 1261542 bytes
+SHA1 (ocsigenserver-2.7.tar.gz) = ce8319c61c368df3b8f7f31be4af8828c801b08d
+RMD160 (ocsigenserver-2.7.tar.gz) = 8839bdcb642ebf4631085803d1c6159e9af3d397
+SHA512 (ocsigenserver-2.7.tar.gz) = e31fa428e1d86232e4066a93fc948b592e80bb3e8374efee4f40d02c53e8a713ade8aa9904623c1129c892557ac4a451928278b808abe190bb254e6e43aab256
+Size (ocsigenserver-2.7.tar.gz) = 1262049 bytes
 SHA1 (patch-Makefile) = c91c9f739462e3ef79bcd3ee4f05acfcff1e4518
 SHA1 (patch-src_Makefile) = acbd4a0e9b6c4a853f18fdacd1625ee142b5c423
+SHA1 (patch-src_http_ocsigen_senders.ml) = 61fcd61531f955d169991692f44d532597057984
+SHA1 (patch-src_http_ocsigen_senders.mli) = 71dce72976e55a49c8111dea29ceaa8f0008bdd8
