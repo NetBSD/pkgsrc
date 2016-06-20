@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2016/05/05 16:04:21 jaapb Exp $
+# $NetBSD: Makefile,v 1.31 2016/06/20 15:36:04 jaapb Exp $
 #
 
 DISTNAME=		ocamlnet-4.1.1
+PKGREVISION=	1
 CATEGORIES=		net
 MASTER_SITES=		http://download.camlcity.org/download/
 
@@ -19,14 +20,9 @@ USE_TOOLS+=		gmake
 BUILD_TARGET=		all
 OCAML_USE_FINDLIB=	yes
 OCAML_FINDLIB_DIRS= \
-	${OCAML_SITELIBDIR}/equeue ${OCAML_SITELIBDIR}/netcamlbox \
-	${OCAML_SITELIBDIR}/netcgi2-plex ${OCAML_SITELIBDIR}/netcgi2 \
-	${OCAML_SITELIBDIR}/netclient ${OCAML_SITELIBDIR}/netmulticore \
-	${OCAML_SITELIBDIR}/netplex ${OCAML_SITELIBDIR}/netshm \
-	${OCAML_SITELIBDIR}/netstring-pcre ${OCAML_SITELIBDIR}/netstring \
-	${OCAML_SITELIBDIR}/netsys ${OCAML_SITELIBDIR}/netunidata \
-	${OCAML_SITELIBDIR}/netzip ${OCAML_SITELIBDIR}/rpc-auth-local \
-	${OCAML_SITELIBDIR}/rpc-generator ${OCAML_SITELIBDIR}/rpc
+	equeue netcamlbox netcgi2-plex netcgi2 netclient netmulticore \
+	netplex netshm netstring-pcre netstring netsys netunidata \
+	netzip rpc-auth-local rpc-generator rpc
 
 .include "../../mk/ocaml.mk"
 .include "../../mk/bsd.prefs.mk"
@@ -37,7 +33,7 @@ BUILD_TARGET+=		opt
 .endif
 .if ${OPSYS} == "SunOS"
 PLIST.xti=		yes
-OCAML_FINDLIB_DIRS+=	${OCAML_SITELIBDIR}/rpc-xti
+OCAML_FINDLIB_DIRS+=	rpc-xti
 .endif
 
 .include "options.mk"
