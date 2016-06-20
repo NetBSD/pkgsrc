@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.535 2016/06/19 09:16:57 kamil Exp $
+# $NetBSD: Makefile,v 1.536 2016/06/20 08:10:13 kamil Exp $
 #
 
 COMMENT=	Audio tools
@@ -245,6 +245,7 @@ SUBDIR+=	libgroove
 SUBDIR+=	libid3tag
 SUBDIR+=	libifp
 SUBDIR+=	liblastfm
+SUBDIR+=	liblo
 SUBDIR+=	libmad
 SUBDIR+=	libmatemixer
 SUBDIR+=	libmikmod
