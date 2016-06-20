@@ -19,8 +19,8 @@ DESCRIPTION
 
    Tar Formats
      The libarchive(3) library can read most tar archives.  It can write
-     POSIX-standard “ustar” and “pax interchange” formats and a subset of the
-     legacy GNU tar format.
+     POSIX-standard “ustar” and “pax interchange” formats as well as v7 tar
+     format and a subset of the legacy GNU tar format.
 
      All tar formats store each entry in one or more 512-byte records.	The
      first record is used for file metadata, including filename, timestamp,
@@ -94,6 +94,23 @@ DESCRIPTION
 	     tions.  The ustar format is old and widely supported.  It is rec‐
 	     ommended when compatibility is the primary concern.
 
+     v7      The libarchive library can read and write the legacy v7 tar for‐
+	     mat.  This format has the following limitations:
+	     ·	 Only regular files, directories, and symbolic links can be
+		 archived.  Block and character device nodes, FIFOs, and sock‐
+		 ets cannot be archived.
+	     ·	 Path names in the archive are limited to 100 bytes.
+	     ·	 Symbolic links and hard links are stored in the archive with
+		 the name of the referenced file.  This name is limited to 100
+		 bytes.
+	     ·	 User and group information are stored as numeric IDs; there
+		 is no provision for storing user or group names.
+	     ·	 Extended attributes, file flags, and other extended security
+		 information cannot be stored.
+	     ·	 Archive entries are limited to 8 gigabytes in size.
+	     Generally, users should prefer the ustar format for portability
+	     as the v7 tar format is both less useful and less portable.
+
      The libarchive library also reads a variety of commonly-used extensions
      to the basic tar format.  These extensions are recognized automatically
      whenever they appear.
@@ -142,7 +159,8 @@ DESCRIPTION
 	     File sizes and mtime are limited to 33 bits (8GB file size),
 	     other fields are limited to 18 bits.
 
-     SVR4    The libarchive library can read both CRC and non-CRC variants of
+     SVR4/newc
+	     The libarchive library can read both CRC and non-CRC variants of
 	     this format.  The SVR4 format uses eight-digit hexadecimal values
 	     for all header fields.  This limits file size to 4GB, and also
 	     limits the mtime and other fields to 32 bits.  The SVR4 format
@@ -254,11 +272,11 @@ DESCRIPTION
      the BSD format stores each long filename in an extension area adjacent to
      the entry.  Libarchive can read both extensions, including archives that
      may include both types of long filenames.	Programs using libarchive can
-     write GNU/SVR4 format if they provide a filename table to be written into
-     the archive before any of the entries.  Any entries whose names are not
-     in the filename table will be written using BSD-style long filenames.
-     This can cause problems for programs such as GNU ld that do not support
-     the BSD-style long filenames.
+     write GNU/SVR4 format if they provide an entry called // containing a
+     filename table to be written into the archive before any of the entries.
+     Any entries whose names are not in the filename table will be written
+     using BSD-style long filenames.  This can cause problems for programs
+     such as GNU ld that do not support the BSD-style long filenames.
 
    mtree
      Libarchive can read and write files in mtree(5) format.  This format is
@@ -282,14 +300,16 @@ DESCRIPTION
      it cannot locate and open the file on disk, libarchive will return an
      error for any attempt to read the entry body.
 
-   LHA
-     XXX Information about libarchive's LHA support XXX
+   7-Zip
+     Libarchive can read and write 7-Zip format archives.  TODO: Need more
+     information
 
    CAB
-     XXX Information about libarchive's CAB support XXX
+     Libarchive can read Microsoft Cabinet ( “CAB”) format archives.  TODO:
+     Need more information.
 
-   XAR
-     XXX Information about libarchive's XAR support XXX
+   LHA
+     TODO: Information about libarchive's LHA support
 
    RAR
      Libarchive has limited support for reading RAR format archives.  Cur‐
@@ -297,6 +317,14 @@ DESCRIPTION
      created uncompressed, or compressed using any of the compression methods
      supported by the RARv3 format.  Libarchive can also read self-extracting
      RAR archives.
+
+   Warc
+     Libarchive can read and write “web archives”.  TODO: Need more informa‐
+     tion
+
+   XAR
+     Libarchive can read and write the XAR format used by many Apple tools.
+     TODO: Need more information
 
 SEE ALSO
      ar(1), cpio(1), mkisofs(1), shar(1), tar(1), zip(1), zlib(3), cpio(5),

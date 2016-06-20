@@ -1,5 +1,5 @@
-<!-- Creator     : groff version 1.21 -->
-<!-- CreationDate: Sat Feb  9 12:24:08 2013 -->
+<!-- Creator     : groff version 1.22.3 -->
+<!-- CreationDate: Sun Jun 19 19:54:09 2016 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -50,16 +50,6 @@ corresponding character.</p>
 
 <p style="margin-left:6%; margin-top: 1em">Each line is
 interpreted independently as one of the following types:</p>
-
-<p style="margin-top: 1em">Signature</p>
-
-<p style="margin-left:22%; margin-top: 1em">The first line
-of any mtree file must begin with
-&rsquo;&rsquo;#mtree&rsquo;&rsquo;. If a file contains any
-full path entries, the first line should begin with
-&rsquo;&rsquo;#mtree v2.0&rsquo;&rsquo;, otherwise, the
-first line should begin with &rsquo;&rsquo;#mtree
-v1.0&rsquo;&rsquo;.</p>
 
 <p style="margin-top: 1em">Blank</p>
 
@@ -144,6 +134,37 @@ supported keywords are as follows:</p>
 the file using the default algorithm specified by the
 cksum(1) utility.</p>
 
+<p style="margin-top: 1em"><b>device</b></p>
+
+<p style="margin-left:22%; margin-top: 1em">The device
+number for <b>block</b> or <b>char</b> file types. The value
+must be one of the following forms:</p>
+
+
+<p style="margin-top: 1em"><i>format</i>,<i>major</i>,<i>minor</i>[
+<br>
+,<i>subunit</i>]</p>
+
+<p style="margin-left:29%;">A device with <i>major</i>,
+<i>minor</i> and optional <i>subunit</i> fields. Their
+meaning is specified by the operating&rsquo;s system
+<i>format</i>. See below for valid formats.</p>
+
+<p style="margin-top: 1em"><i>number</i></p>
+
+<p style="margin-left:29%;">Opaque number (as stored on the
+file system).</p>
+
+<p style="margin-left:22%; margin-top: 1em">The following
+values for <i>format</i> are recognized: <b>native</b>,
+<b>386bsd</b>, <b>4bsd</b>, <b>bsdos</b>, <b>freebsd</b>,
+<b>hpux</b>, <b>isc</b>, <b>linux</b>, <b>netbsd</b>,
+<b>osf1</b>, <b>sco</b>, <b>solaris</b>, <b>sunos</b>,
+<b>svr3</b>, <b>svr4</b>, and <b>ultrix</b>.</p>
+
+<p style="margin-left:22%; margin-top: 1em">See mknod(8)
+for more details.</p>
+
 <p style="margin-top: 1em"><b>contents</b></p>
 
 <p style="margin-left:22%; margin-top: 1em">The full
@@ -171,6 +192,11 @@ as a symbolic name.</p>
 
 <p style="margin-left:22%; margin-top: 1em">Ignore any file
 hierarchy below this file.</p>
+
+<p style="margin-top: 1em"><b>inode</b></p>
+
+<p style="margin-left:22%; margin-top: 1em">The inode
+number.</p>
 
 <p style="margin-top: 1em"><b>link</b></p>
 
@@ -203,6 +229,19 @@ hard links the file is expected to have.</p>
 <p style="margin-left:22%; margin-top: 1em">Make sure this
 file or directory exists but otherwise ignore all
 attributes.</p>
+
+<p style="margin-top: 1em"><b>optional</b></p>
+
+<p style="margin-left:22%; margin-top: 1em">The file is
+optional; do not complain about the file if it is not in the
+file hierarchy.</p>
+
+<p style="margin-top: 1em"><b>resdevice</b></p>
+
+<p style="margin-left:22%; margin-top: 1em">The
+&rsquo;&rsquo;resident&rsquo;&rsquo; device number of the
+file, e.g. the ID of the device that contains the file. Its
+format is the same as the one for <b>device</b>.</p>
 
 <p style="margin-top: 1em"><b>ripemd160digest</b></p>
 
@@ -240,6 +279,28 @@ file.</p>
 
 <p style="margin-left:22%;">A synonym for
 <b>sha256</b>.</p>
+
+<p style="margin-top: 1em"><b>sha384</b></p>
+
+<p style="margin-left:22%; margin-top: 1em">The FIPS 180-2
+(&rsquo;&rsquo;SHA-384&rsquo;&rsquo;) message digest of the
+file.</p>
+
+<p style="margin-top: 1em"><b>sha384digest</b></p>
+
+<p style="margin-left:22%;">A synonym for
+<b>sha384</b>.</p>
+
+<p style="margin-top: 1em"><b>sha512</b></p>
+
+<p style="margin-left:22%; margin-top: 1em">The FIPS 180-2
+(&rsquo;&rsquo;SHA-512&rsquo;&rsquo;) message digest of the
+file.</p>
+
+<p style="margin-top: 1em"><b>sha512digest</b></p>
+
+<p style="margin-left:22%;">A synonym for
+<b>sha512</b>.</p>
 
 <p style="margin-top: 1em"><b>size</b></p>
 
@@ -302,15 +363,8 @@ as a symbolic name.</p>
 
 <p style="margin-left:6%;">cksum(1), find(1), mtree(8)</p>
 
-<p style="margin-top: 1em"><b>BUGS</b></p>
-
-<p style="margin-left:6%;">The FreeBSD implementation of
-mtree does not currently support the <b>mtree</b> 2.0
-format. The requirement for a
-&rsquo;&rsquo;#mtree&rsquo;&rsquo; signature line is new and
-not yet widely implemented.</p>
-
-<p style="margin-top: 1em"><b>HISTORY</b></p>
+<p style="margin-top: 1em"><b>BUGS <br>
+HISTORY</b></p>
 
 <p style="margin-left:6%;">The <b>mtree</b> utility
 appeared in 4.3BSD&minus;Reno. The MD5 digest capability was
@@ -323,8 +377,8 @@ was added in FreeBSD&nbsp;4.0, and mostly comes from NetBSD.
 The &rsquo;&rsquo;full&rsquo;&rsquo; entry format was added
 by NetBSD.</p>
 
-<p style="margin-left:6%; margin-top: 1em">BSD May&nbsp;6,
-2008 BSD</p>
+<p style="margin-left:6%; margin-top: 1em">BSD
+September&nbsp;4, 2013 BSD</p>
 <hr>
 </body>
 </html>
