@@ -1,0 +1,18 @@
+$NetBSD: distinfo,v 1.1 2016/06/20 08:17:42 kamil Exp $
+
+SHA1 (ardour-4.7.tar.gz) = 95047ccb3fc599ce11c473a0fd7f1eb012c3e440
+RMD160 (ardour-4.7.tar.gz) = 366f7057fab9878ac425dd70a751899984abc030
+SHA512 (ardour-4.7.tar.gz) = 5daff563ec0b2dc38ec6ca55bb12526ef54da9d8d5a29a9fd6d869f54b83e6fe5ff3c28ef654e6700455110b4a46ce42a33902eb66d96330c6c0948eb3cd3096
+Size (ardour-4.7.tar.gz) = 9863149 bytes
+SHA1 (patch-gtk2__ardour_ardour.sh.in) = 4949797546a2644604aa70e24742b529512d3ad6
+SHA1 (patch-gtk2__ardour_wscript) = ab2e95282d82ba08aad83b59f8d2acf9fe45e3c6
+SHA1 (patch-libs_ardour_session__state.cc) = 168f67f4af32181d2e3d85d2759383f9acfcbf29
+SHA1 (patch-libs_ardouralsautil_wscript) = 7867f29bc2590219ad0cca387bae27bc503374f4
+SHA1 (patch-libs_backends_alsa_zita-alsa-pcmi.cc) = bb9efc33e62e840ba253031b60d4de323b7c3e21
+SHA1 (patch-libs_backends_jack_wscript) = a048453911b72c9005a5821a5227443e9f78c2e6
+SHA1 (patch-libs_fst_wscript) = b94e18a903fe3fc0bc71edefa1fd690adc17ee6d
+SHA1 (patch-libs_pbd_fpu.cc) = ebdb6d345bf2e3db0402165412978cb1c9043950
+SHA1 (patch-libs_pbd_mountpoint.cc) = 001b8112c08086d32989c82ab699335ecb92ede6
+SHA1 (patch-libs_pbd_wscript) = 0caa774358b511d9790e146e92454a0c34a8d5ef
+SHA1 (patch-libs_vfork_wscript) = 1d357b3bed8a2006cdc50fcdfa387ebca8c699c7
+SHA1 (patch-wscript) = e3f64b19c9bf92784139feb0640c3cee39233af8

@@ -1,0 +1,13 @@
+$NetBSD: patch-libs_vfork_wscript,v 1.1 2016/06/20 08:17:43 kamil Exp $
+
+There are problems with C++11 heavy code on NetBSD when building against
+_POSIX_SOURCE and _XOPEN_SOURCE. Fix it by using _NETBSD_SOURCE.
+
+--- libs/vfork/wscript.orig	2016-02-19 01:28:56.000000000 +0000
++++ libs/vfork/wscript
+@@ -25,4 +25,5 @@ def build(bld):
+     obj.defines = [
+             '_POSIX_SOURCE',
+             '_XOPEN_SOURCE=500',
++            '_NETBSD_SOURCE',
+     ]

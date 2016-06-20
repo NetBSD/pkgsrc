@@ -1,0 +1,15 @@
+$NetBSD: patch-libs_fst_wscript,v 1.1 2016/06/20 08:17:43 kamil Exp $
+
+There are problems with C++11 heavy code on NetBSD when building against _POSIX_SOURCE.
+Fix it by using _NETBSD_SOURCE.
+
+--- libs/fst/wscript.orig	2016-02-19 01:28:56.000000000 +0000
++++ libs/fst/wscript
+@@ -83,6 +83,7 @@ def build(bld):
+     obj.includes  = [ '../pbd/', '../ardour/', '.' ]
+     obj.defines = [
+         '_POSIX_SOURCE',
++        '_NETBSD_SOURCE',
+         'USE_WS_PREFIX',
+         'VST_SCANNER_APP',
+         'PACKAGE="' + I18N_PACKAGE + str(bld.env['MAJOR']) + '"',

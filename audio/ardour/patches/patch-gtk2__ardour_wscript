@@ -1,0 +1,64 @@
+$NetBSD: patch-gtk2__ardour_wscript,v 1.1 2016/06/20 08:17:43 kamil Exp $
+
+Install configuration into a custom EGDIR.
+
+--- gtk2_ardour/wscript.orig	2016-02-19 01:28:56.000000000 +0000
++++ gtk2_ardour/wscript
+@@ -651,13 +651,13 @@ def build(bld):
+     obj              = bld(features = 'subst')
+     obj.source       = [ 'clearlooks.rc.in' ]
+     obj.target       = 'clearlooks.rc'
+-    obj.install_path = bld.env['CONFDIR']
++    obj.install_path = os.environ['EGDIR']
+     set_subst_dict(obj, font_subst_dict)
+ 
+     obj              = bld(features = 'subst')
+     obj.source       = [ 'default_ui_config.in' ]
+     obj.target       = 'default_ui_config'
+-    obj.install_path = bld.env['CONFDIR']
++    obj.install_path = os.environ['EGDIR']
+     set_subst_dict(obj, font_subst_dict)
+ 
+     # Menus
+@@ -681,7 +681,7 @@ def build(bld):
+         obj.dep_vars = ['PTFORMAT', 'GTKOSX', 'WINDOWS']
+         obj.stdin = program + '.menus.in'
+         obj.stdout = program + '.menus'
+-        bld.install_files (bld.env['CONFDIR'], program + '.menus')
++        bld.install_files (os.environ['EGDIR'], program + '.menus')
+ 
+     # Freedesktop
+     freedesktop_subst_dict = {
+@@ -728,12 +728,12 @@ def build(bld):
+             source = b + '.bindings.in',
+             rule = a_rule
+             )
+-        obj.install_path = bld.env['CONFDIR']
++        obj.install_path = os.environ['EGDIR']
+ 
+     # not modified at present
+-    bld.install_files(bld.env['CONFDIR'], 'dark.colors')
+-    bld.install_files(bld.env['CONFDIR'], 'step_editing.bindings')
+-    bld.install_files(bld.env['CONFDIR'], 'mixer.bindings')
++    bld.install_files(os.environ['EGDIR'], 'dark.colors')
++    bld.install_files(os.environ['EGDIR'], 'step_editing.bindings')
++    bld.install_files(os.environ['EGDIR'], 'mixer.bindings')
+ 
+     # Icons/Images
+     bld.install_files(os.path.join (bld.env['DATADIR'], 'icons'), bld.path.ant_glob('icons/*.png'))
+@@ -749,12 +749,12 @@ def build(bld):
+         bld.install_files(os.path.join (bld.env['DATADIR'], 'icons'), 'icons/cursor_square/hotspots')
+ 
+     # Default UI configuration
+-    bld.install_files(bld.env['CONFDIR'], 'default_ui_config')
++    bld.install_files(os.environ['EGDIR'], 'default_ui_config')
+     # Color Themes
+-    bld.install_files(bld.env['CONFDIR'], 'dark.colors')
++    bld.install_files(os.environ['EGDIR'], 'dark.colors')
+ 
+     # Default export stuff
+-    bld.install_files(os.path.join(bld.env['CONFDIR'], 'export'), bld.path.ant_glob('export/*.format'))
++    bld.install_files(os.path.join(os.environ['EGDIR'], 'export'), bld.path.ant_glob('export/*.format'))
+ 
+     # i18n
+     if bld.is_defined('ENABLE_NLS'):

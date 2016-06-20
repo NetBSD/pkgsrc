@@ -1,0 +1,45 @@
+$NetBSD: patch-wscript,v 1.1 2016/06/20 08:17:43 kamil Exp $
+
+ALSA and PortAudio are supported on NetBSD.
+
+--- wscript.orig	2016-02-19 01:28:56.000000000 +0000
++++ wscript
+@@ -924,7 +924,7 @@ def configure(conf):
+                   okmsg = 'ok',
+                   errmsg = 'too old\nPlease install boost version 1.39 or higher.')
+ 
+-    if re.search ("linux", sys.platform) != None and Options.options.dist_target != 'mingw':
++    if (re.search ("linux", sys.platform) != None or sys.platform.startswith('netbsd')) and Options.options.dist_target != 'mingw':
+         autowaf.check_pkg(conf, 'alsa', uselib_store='ALSA')
+ 
+     autowaf.check_pkg(conf, 'glib-2.0', uselib_store='GLIB', atleast_version='2.28', mandatory=True)
+@@ -1093,16 +1093,16 @@ int main () { return 0; }
+     conf.env['BUILD_PABACKEND'] = any('portaudio' in b for b in backends)
+     conf.env['BUILD_CORECRAPPITA'] = any('coreaudio' in b for b in backends)
+ 
+-    if re.search ("linux", sys.platform) != None and Options.options.dist_target != 'mingw' and conf.env['BUILD_PABACKEND']:
+-        print("PortAudio Backend is not for Linux")
++    if (re.search ("linux", sys.platform) != None or sys.platform.startswith('netbsd')) and Options.options.dist_target != 'mingw' and conf.env['BUILD_PABACKEND']:
++        print("PortAudio Backend is not for Linux/NetBSD")
+         sys.exit(1)
+ 
+     if sys.platform != 'darwin' and conf.env['BUILD_CORECRAPPITA']:
+         print("Coreaudio backend is only available for OSX")
+         sys.exit(1)
+ 
+-    if re.search ("linux", sys.platform) == None and conf.env['BUILD_ALSABACKEND']:
+-        print("ALSA Backend is only available on Linux")
++    if re.search ("linux", sys.platform) == None and not sys.platform.startswith('netbsd') and conf.env['BUILD_ALSABACKEND']:
++        print("ALSA Backend is only available on Linux/NetBSD")
+         sys.exit(1)
+ 
+     set_compiler_flags (conf, Options.options)
+@@ -1241,7 +1241,7 @@ def build(bld):
+     for i in children:
+         bld.recurse(i)
+ 
+-    bld.install_files (bld.env['CONFDIR'], 'system_config')
++    bld.install_files (os.environ['EGDIR'], 'system_config')
+ 
+     if bld.env['RUN_TESTS']:
+         bld.add_post_fun(test)
