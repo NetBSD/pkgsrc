@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2016/06/17 15:33:24 jaapb Exp $
+# $NetBSD: Makefile,v 1.10 2016/06/20 10:43:18 jaapb Exp $
 
 PKGNAME=	ocaml-${DISTNAME}
 DISTNAME=	cmdliner-0.9.8
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://erratique.ch/software/cmdliner/releases/
 EXTRACT_SUFX=	.tbz
