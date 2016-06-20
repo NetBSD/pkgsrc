@@ -1,4 +1,4 @@
-$NetBSD: patch-ao,v 1.5 2015/09/01 13:34:47 kim Exp $
+$NetBSD: patch-ao,v 1.6 2016/06/20 16:04:44 ryoon Exp $
 
 Replace configurable paths with tags.
 
@@ -9,13 +9,13 @@ YOU MUST RUN DIFF BEFORE SUBSTITUTIONS!
 
 RUNNING "make patch" TAKES YOU TOO FAR.
 
---- etc/etcscreenrc.orig	Sun Apr 29 01:25:34 2001
+--- etc/etcscreenrc.orig	2015-09-05 19:28:22.000000000 +0000
 +++ etc/etcscreenrc
 @@ -1,6 +1,6 @@
  #
  # This is an example for the global screenrc file.
 -# You may want to install this file as /usr/local/etc/screenrc.
-+# You may want to install this file as @PKG_SYSCONFDIR@/screenrc.
++# You may want to install this file as /usr/pkg/etc/screenrc.
  # Check config.h for the exact location.
  #
  # Flaws of termcap and standard settings are done here.
