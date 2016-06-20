@@ -1,5 +1,5 @@
-<!-- Creator     : groff version 1.21 -->
-<!-- CreationDate: Sat Feb  9 12:24:05 2013 -->
+<!-- Creator     : groff version 1.22.3 -->
+<!-- CreationDate: Sun Jun 19 19:54:07 2016 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -168,6 +168,36 @@ disable.</p>
 
 <p style="margin-left:27%;">Support RockRidge extensions.
 Defaults to enabled, use <b>!rockridge</b> to disable.</p>
+
+<p>Format tar <b><br>
+compat-2x</b></p>
+
+<p style="margin-left:27%;">Libarchive 2.x incorrectly
+encoded Unicode filenames on some platforms. This option
+mimics the libarchive 2.x filename handling so that such
+archives can be read correctly.</p>
+
+<p><b>hdrcharset</b></p>
+
+<p style="margin-left:27%;">The value is used as a
+character set name that will be used when translating
+filenames.</p>
+
+<p><b>mac-ext</b></p>
+
+<p style="margin-left:27%;">Support Mac OS metadata
+extension that records data in special files beginning with
+a period and underscore. Defaults to enabled on Mac OS,
+disabled on other platforms. Use <b>!mac-ext</b> to
+disable.</p>
+
+<p><b>read_concatenated_archives</b></p>
+
+<p style="margin-left:27%;">Ignore zeroed blocks in the
+archive, which occurs when multiple tar archives have been
+concatenated together. Without this option, only the
+contents of the first concatenated archive would be
+read.</p>
 
 <p style="margin-top: 1em"><b>ERRORS</b></p>
 

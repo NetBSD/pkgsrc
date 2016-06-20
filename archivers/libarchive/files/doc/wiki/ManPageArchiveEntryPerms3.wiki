@@ -30,99 +30,99 @@ Streaming Archive Library (libarchive, -larchive)
 == SYNOPSIS == 
 '''<nowiki>#include <archive_entry.h></nowiki>''' 
 <br> 
-'''gid_t''' 
+''gid_t'' 
 <br> 
 '''archive_entry_gid'''(''struct archive_entry *a''); 
 <br> 
-'''void''' 
+''void'' 
 <br> 
 '''archive_entry_set_gid'''(''struct archive_entry *a'', ''gid_t gid''); 
 <br> 
-'''uid_t''' 
+''uid_t'' 
 <br> 
 '''archive_entry_uid'''(''struct archive_entry *a''); 
 <br> 
-'''void''' 
+''void'' 
 <br> 
 '''archive_entry_set_uid'''(''struct archive_entry *a'', ''uid_t uid''); 
 <br> 
-'''mode_t''' 
+''mode_t'' 
 <br> 
 '''archive_entry_perm'''(''struct archive_entry *a''); 
 <br> 
-'''void''' 
+''void'' 
 <br> 
 '''archive_entry_set_perm'''(''struct archive_entry *a'', ''mode_t mode''); 
 <br> 
-'''const char *''' 
+''const char *'' 
 <br> 
 '''archive_entry_strmode'''(''struct archive_entry *a''); 
 <br> 
-'''const char *''' 
+''const char *'' 
 <br> 
 '''archive_entry_gname'''(''struct archive_entry *a''); 
 <br> 
-'''const wchar_t *''' 
+''const wchar_t *'' 
 <br> 
 '''archive_entry_gname_w'''(''struct archive_entry *a''); 
 <br> 
-'''void''' 
+''void'' 
 <br> 
 '''archive_entry_set_gname'''(''struct archive_entry *a'', ''const char *a''); 
 <br> 
-'''void''' 
+''void'' 
 <br> 
 '''archive_entry_copy_gname'''(''struct archive_entry *a'', ''const char *name''); 
 <br> 
-'''void''' 
+''void'' 
 <br> 
 '''archive_entry_copy_gname_w'''(''struct archive_entry *a'', ''const wchar_t *name''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_entry_update_gname_utf8'''(''struct archive_entry *a'', ''const char *name''); 
 <br> 
-'''const char *''' 
+''const char *'' 
 <br> 
 '''archive_entry_uname'''(''struct archive_entry *a''); 
 <br> 
-'''const wchar_t *''' 
+''const wchar_t *'' 
 <br> 
 '''archive_entry_uname_w'''(''struct archive_entry *a''); 
 <br> 
-'''void''' 
+''void'' 
 <br> 
 '''archive_entry_set_uname'''(''struct archive_entry *a'', ''const char *name''); 
 <br> 
-'''void''' 
+''void'' 
 <br> 
 '''archive_entry_copy_uname'''(''struct archive_entry *a'', ''const char *name''); 
 <br> 
-'''void''' 
+''void'' 
 <br> 
 '''archive_entry_copy_uname_w'''(''struct archive_entry *a'', ''const wchar_t *name''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_entry_update_uname_utf8'''(''struct archive_entry *a'', ''const char *name''); 
 <br> 
-'''void''' 
+''void'' 
 <br> 
 '''archive_entry_fflags'''(''struct archive_entry *a'', ''unsigned long *set_bits'', ''unsigned long *clear_bits''); 
 <br> 
-'''const char *''' 
+''const char *'' 
 <br> 
 '''archive_entry_fflags_text'''(''struct archive_entry *a''); 
 <br> 
-'''void''' 
+''void'' 
 <br> 
 '''archive_entry_set_fflags'''(''struct archive_entry *a'', ''unsigned long set_bits'', ''unsigned long clear_bits''); 
 <br> 
-'''const char *''' 
+''const char *'' 
 <br> 
 '''archive_entry_copy_fflags_text'''(''struct archive_entry *a'', ''const char *text''); 
 <br> 
-'''const wchar_t *''' 
+''const wchar_t *'' 
 <br> 
 '''archive_entry_copy_fflags_text_w'''(''struct archive_entry *a'', ''const wchar_t *text''); 
 == DESCRIPTION == 
@@ -144,7 +144,7 @@ The permission is also set as side effect of calling
 
 '''archive_entry_strmode'''() 
 returns a string representation of the permission as used by the long mode of 
-'''ls'''(1). 
+[[ls(1)|http://www.freebsd.org/cgi/man.cgi?query=ls&sektion=1]]. 
 === User and group name=== 
 User and group names can be provided in one of three different ways: 
 <dl> 
@@ -184,7 +184,7 @@ In unusual circumstances, you can force a fully-specified set
 of file flags by setting the bitmap of flags to clear to the complement 
 of the bitmap of flags to set. 
 (This differs from 
-'''fflagstostr'''(3), 
+[[fflagstostr(3)|http://www.freebsd.org/cgi/man.cgi?query=fflagstostr&sektion=3]], 
 which only includes names for set bits.) 
 Converting a bitmap to a textual string is a platform-specific 
 operation; bits that are not meaningful on the current platform 
@@ -204,14 +204,14 @@ Note that every name \(em including names that follow an unrecognized
 name \(em will be evaluated, and the bitmaps will be set to reflect 
 every name that is recognized. 
 (In particular, this differs from 
-'''strtofflags'''(3), 
+[[strtofflags(3)|http://www.freebsd.org/cgi/man.cgi?query=strtofflags&sektion=3]], 
 which stops parsing at the first unrecognized name.) 
 == SEE ALSO == 
-'''archive'''(3), 
-'''archive_entry'''(3), 
-'''archive_entry_acl'''(3), 
-'''archive_read_disk'''(3), 
-'''archive_write_disk'''(3) 
+[[ManPagerchiventry3]], 
+[[ManPagerchiventrycl3]], 
+[[ManPagerchiveeadisk3]], 
+[[ManPagerchiveriteisk3]] 
+[[ManPageibarchive3]], 
 == BUGS == 
 The platform types 
 ''uid_t'' 
