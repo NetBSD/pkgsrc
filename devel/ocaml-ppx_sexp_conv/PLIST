@@ -1,17 +1,20 @@
-@comment $NetBSD: PLIST,v 1.1 2016/03/04 15:50:18 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/06/20 19:10:56 jaapb Exp $
 ${OCAML_SITELIB}/ppx_sexp_conv/META
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_sexp_conv/ppx_sexp_conv.a
+${OCAML_SITELIB}/ppx_sexp_conv/ppx_sexp_conv.annot
 ${OCAML_SITELIB}/ppx_sexp_conv/ppx_sexp_conv.cma
 ${OCAML_SITELIB}/ppx_sexp_conv/ppx_sexp_conv.cmi
+${OCAML_SITELIB}/ppx_sexp_conv/ppx_sexp_conv.cmt
+${OCAML_SITELIB}/ppx_sexp_conv/ppx_sexp_conv.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_sexp_conv/ppx_sexp_conv.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_sexp_conv/ppx_sexp_conv.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_sexp_conv/ppx_sexp_conv.cmxs
-${OCAML_SITELIB}/ppx_sexp_conv/ppx_sexp_conv.mli
-${OCAML_SITELIB}/ppx_sexp_conv_expander/META
-${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_sexp_conv_expander/ppx_sexp_conv_expander.a
-${OCAML_SITELIB}/ppx_sexp_conv_expander/ppx_sexp_conv_expander.cma
-${OCAML_SITELIB}/ppx_sexp_conv_expander/ppx_sexp_conv_expander.cmi
-${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_sexp_conv_expander/ppx_sexp_conv_expander.cmx
-${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_sexp_conv_expander/ppx_sexp_conv_expander.cmxa
-${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_sexp_conv_expander/ppx_sexp_conv_expander.cmxs
-${OCAML_SITELIB}/ppx_sexp_conv_expander/ppx_sexp_conv_expander.mli
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_sexp_conv/ppx_sexp_conv_expander.a
+${OCAML_SITELIB}/ppx_sexp_conv/ppx_sexp_conv_expander.annot
+${OCAML_SITELIB}/ppx_sexp_conv/ppx_sexp_conv_expander.cma
+${OCAML_SITELIB}/ppx_sexp_conv/ppx_sexp_conv_expander.cmi
+${OCAML_SITELIB}/ppx_sexp_conv/ppx_sexp_conv_expander.cmt
+${OCAML_SITELIB}/ppx_sexp_conv/ppx_sexp_conv_expander.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_sexp_conv/ppx_sexp_conv_expander.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_sexp_conv/ppx_sexp_conv_expander.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_sexp_conv/ppx_sexp_conv_expander.cmxs
