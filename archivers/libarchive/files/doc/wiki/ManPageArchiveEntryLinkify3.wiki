@@ -11,19 +11,19 @@ Streaming Archive Library (libarchive, -larchive)
 == SYNOPSIS == 
 '''<nowiki>#include <archive_entry.h></nowiki>''' 
 <br> 
-'''struct archive_entry_linkresolver *''' 
+''struct archive_entry_linkresolver *'' 
 <br> 
 '''archive_entry_linkresolver_new'''(''void''); 
 <br> 
-'''void''' 
+''void'' 
 <br> 
 '''archive_entry_linkresolver_set_strategy'''(''struct archive_entry_linkresolver *resolver'', ''int format''); 
 <br> 
-'''void''' 
+''void'' 
 <br> 
 '''archive_entry_linkresolver_free'''(''struct archive_entry_linkresolver *resolver''); 
 <br> 
-'''void''' 
+''void'' 
 <br> 
 '''archive_entry_linkify'''(''struct archive_entry_linkresolver *resolver'', ''struct archive_entry **entry'', ''struct archive_entry **sparse''); 
 == DESCRIPTION == 
@@ -64,7 +64,7 @@ The
 '''archive_entry_linkresolver_set_strategy'''() 
 function selects the optimal hardlink strategy for the given format. 
 The format code can be obtained from 
-'''archive_format'''(3). 
+[[ManPagerchiveormat3]]. 
 The function can be called more than once, but it is recommended to 
 flush all deferred entries first. 
 
@@ -191,7 +191,7 @@ NULL.
 returns 
 NULL 
 on 
-'''malloc'''(3) 
+[[malloc(3)|http://www.freebsd.org/cgi/man.cgi?query=malloc&sektion=3]] 
 failures. 
 == SEE ALSO == 
-'''archive_entry'''(3) 
+[[ManPagerchiventry3]] 
