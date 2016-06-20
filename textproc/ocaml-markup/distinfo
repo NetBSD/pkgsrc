@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/06/20 11:08:31 jaapb Exp $
+
+SHA1 (markup-0.7.2.tar.gz) = e4f7c378a4e4fd69a3b1ad947a1c7b3a81b8a605
+RMD160 (markup-0.7.2.tar.gz) = e8071516331af8b1c33ec6c0e675611b0cfb2a75
+SHA512 (markup-0.7.2.tar.gz) = 72a87f54692a0b751c23e6b52bc4ecaa68334b0c6c067793cbf5b011b7d06ce7563f9aa2daeef3553ab48bb6cb9e592587b5a4f37279eaef7b45e19e5b372f73
+Size (markup-0.7.2.tar.gz) = 275010 bytes

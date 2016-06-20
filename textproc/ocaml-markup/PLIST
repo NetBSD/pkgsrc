@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1 2016/06/20 11:08:31 jaapb Exp $
+${OCAML_SITELIB}/markup/META
+${PLIST.ocaml-opt}${OCAML_SITELIB}/markup/markup.a
+${OCAML_SITELIB}/markup/markup.cma
+${OCAML_SITELIB}/markup/markup.cmi
+${OCAML_SITELIB}/markup/markup.cmt
+${OCAML_SITELIB}/markup/markup.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/markup/markup.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/markup/markup.cmxa
+${OCAML_SITELIB}/markup/markup.mli
+${PLIST.ocaml-opt}${OCAML_SITELIB}/markup/markup_lwt.a
+${OCAML_SITELIB}/markup/markup_lwt.cma
+${OCAML_SITELIB}/markup/markup_lwt.cmi
+${OCAML_SITELIB}/markup/markup_lwt.cmt
+${OCAML_SITELIB}/markup/markup_lwt.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/markup/markup_lwt.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/markup/markup_lwt.cmxa
+${OCAML_SITELIB}/markup/markup_lwt.mli
+${PLIST.ocaml-opt}${OCAML_SITELIB}/markup/markup_lwt_unix.a
+${OCAML_SITELIB}/markup/markup_lwt_unix.cma
+${OCAML_SITELIB}/markup/markup_lwt_unix.cmi
+${OCAML_SITELIB}/markup/markup_lwt_unix.cmt
+${OCAML_SITELIB}/markup/markup_lwt_unix.cmti
+${PLIST.ocaml-opt}${OCAML_SITELIB}/markup/markup_lwt_unix.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/markup/markup_lwt_unix.cmxa
+${OCAML_SITELIB}/markup/markup_lwt_unix.mli
