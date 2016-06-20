@@ -10,7 +10,7 @@ Streaming Archive Library (libarchive, -larchive)
 .ad l
 \fB#include <archive.h>\fP
 .br
-\fIssize_t\fP
+\fIla_ssize_t\fP
 .br
 \fB\%archive_write_data\fP(\fI\%struct\ archive\ *\fP, \fI\%const\ void\ *\fP, \fI\%size_t\fP);
 .SH DESCRIPTION
@@ -19,10 +19,7 @@ Write data corresponding to the header just written.
 .SH RETURN VALUES
 .ad l
 This function returns the number of bytes actually written, or
-.RS 4
--1
-.RE
-on error.
+a negative error code on error.
 .SH ERRORS
 .ad l
 Detailed error codes and textual descriptions are available from the
@@ -30,6 +27,15 @@ Detailed error codes and textual descriptions are available from the
 and
 \fB\%archive_error_string\fP()
 functions.
+.SH BUGS
+.ad l
+In libarchive 3.x, this function sometimes returns
+zero on success instead of returning the number of bytes written.
+Specifically, this occurs when writing to an
+Vt archive_write_disk
+handle.
+Clients should treat any value less than zero as an error
+and consider any non-negative value as success.
 .SH SEE ALSO
 .ad l
 \fBtar\fP(1),

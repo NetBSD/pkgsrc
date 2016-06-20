@@ -9,19 +9,26 @@ LIBRARY
 SYNOPSIS
      #include <archive.h>
 
-     ssize_t
+     la_ssize_t
      archive_write_data(struct archive *, const void *, size_t);
 
 DESCRIPTION
      Write data corresponding to the header just written.
 
 RETURN VALUES
-     This function returns the number of bytes actually written, or -1 on
-     error.
+     This function returns the number of bytes actually written, or a negative
+     error code on error.
 
 ERRORS
      Detailed error codes and textual descriptions are available from the
      archive_errno() and archive_error_string() functions.
+
+BUGS
+     In libarchive 3.x, this function sometimes returns zero on success
+     instead of returning the number of bytes written.	Specifically, this
+     occurs when writing to an archive_write_disk handle.  Clients should
+     treat any value less than zero as an error and consider any non-negative
+     value as success.
 
 SEE ALSO
      tar(1), libarchive(3), archive_write_finish_entry(3),

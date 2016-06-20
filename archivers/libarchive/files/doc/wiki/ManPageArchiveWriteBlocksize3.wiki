@@ -10,19 +10,19 @@ Streaming Archive Library (libarchive, -larchive)
 == SYNOPSIS == 
 '''<nowiki>#include <archive.h></nowiki>''' 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_write_get_bytes_per_block'''(''struct archive *''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_write_set_bytes_per_block'''(''struct archive *'', ''int bytes_per_block''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_write_get_bytes_in_last_block'''(''struct archive *''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_write_set_bytes_in_last_block'''(''struct archive *'', ''int''); 
 == DESCRIPTION == 
@@ -71,9 +71,9 @@ and
 '''archive_write_get_bytes_in_last_block'''() 
 return currently configured block size 
 Po 
-```text 
+```text
 -1 
-``` 
+```
 indicates the default block size 
 Pc, 
 or 
@@ -85,9 +85,9 @@ and
 '''archive_error_string'''() 
 functions. 
 == SEE ALSO == 
-'''tar'''(1), 
-'''libarchive'''(3), 
-'''archive_write_set_options'''(3), 
-'''cpio'''(5), 
-'''mtree'''(5), 
-'''tar'''(5) 
+[[ManPageBsdtar1]], 
+[[ManPageibarchive3]], 
+[[ManPagerchiveriteetptions3]], 
+[[ManPageCpio5]], 
+[[ManPageMtree5]], 
+[[ManPageTar5]] 
