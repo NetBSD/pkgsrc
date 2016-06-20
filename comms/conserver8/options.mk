@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2016/06/15 23:02:10 schnoebe Exp $
+# $NetBSD: options.mk,v 1.4 2016/06/20 15:25:39 schnoebe Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.conserver8
 
@@ -7,7 +7,7 @@ PKG_OPTIONS_GROUP.connectivity=inet6 uds
 
 PKG_SUPPORTED_OPTIONS=	pam ssl
 
-PKG_SUGGESTED_OPTIONS=	ssl
+PKG_SUGGESTED_OPTIONS=	ssl inet6
 
 .include "../../mk/bsd.options.mk"
 
