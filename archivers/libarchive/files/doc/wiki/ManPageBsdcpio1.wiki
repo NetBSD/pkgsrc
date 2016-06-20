@@ -5,22 +5,22 @@ CPIO(1) manual page
 == SYNOPSIS == 
 <br> 
 '''cpio''' 
-<nowiki>{</nowiki>-i<nowiki>}</nowiki> 
+-i 
 <nowiki>[</nowiki>''options''<nowiki>]</nowiki> 
 <nowiki>[</nowiki>''pattern'' ...<nowiki>]</nowiki> 
-<nowiki>[</nowiki>''<lt;'' archive<nowiki>]</nowiki> 
+<nowiki>[</nowiki>''&lt;'' archive<nowiki>]</nowiki> 
 <br> 
 '''cpio''' 
-<nowiki>{</nowiki>-o<nowiki>}</nowiki> 
+-o 
 <nowiki>[</nowiki>''options''<nowiki>]</nowiki> 
-''<lt;'' name-list 
+''&lt;'' name-list 
 <nowiki>[</nowiki>''>'' archive<nowiki>]</nowiki> 
 <br> 
 '''cpio''' 
-<nowiki>{</nowiki>-p<nowiki>}</nowiki> 
+-p 
 <nowiki>[</nowiki>''options''<nowiki>]</nowiki> 
 ''dest-dir'' 
-''<lt;'' name-list 
+''&lt;'' name-list 
 == DESCRIPTION == 
 '''cpio''' 
 copies files between archives and directories. 
@@ -115,10 +115,10 @@ The POSIX.1 tar format.
 The default format is 
 ''odc''. 
 See 
-'''libarchive-formats'''(5) 
+[[ManPageibarchiveormats5]] 
 for more complete information about the 
 formats currently supported by the underlying 
-'''libarchive'''(3) 
+[[ManPageibarchive3]] 
 library. 
 </dd><dt>-h, --help</dt><dd> 
 Print usage information. 
@@ -131,7 +131,8 @@ See above for description.
 </dd><dt>--insecure</dt><dd> 
 (i and p mode only) 
 Disable security checks during extraction or copying. 
-This allows extraction via symbolic links and path names containing 
+This allows extraction via symbolic links, absolute paths, 
+and path names containing 
 Sq .. 
 in the name. 
 </dd><dt>-J, --xz</dt><dd> 
@@ -154,8 +155,13 @@ instead of copying.
 </dd><dt>--lrzip</dt><dd> 
 (o mode only) 
 Compress the resulting archive with 
-'''lrzip'''(1). 
+[[lrzip(1)|http://www.freebsd.org/cgi/man.cgi?query=lrzip&sektion=1]]. 
 In input mode, this option is ignored. 
+</dd><dt>--lz4</dt><dd> 
+(o mode only) 
+Compress the archive with lz4-compatible compression before writing it. 
+In input mode, this option is ignored; lz4 compression is recognized 
+automatically on input. 
 </dd><dt>--lzma</dt><dd> 
 (o mode only) 
 Compress the file with lzma-compatible compression before writing it. 
@@ -164,8 +170,17 @@ automatically on input.
 </dd><dt>--lzop</dt><dd> 
 (o mode only) 
 Compress the resulting archive with 
-'''lzop'''(1). 
+[[lzop(1)|http://www.freebsd.org/cgi/man.cgi?query=lzop&sektion=1]]. 
 In input mode, this option is ignored. 
+</dd><dt>--passphrase ''passphrase''</dt><dd> 
+The 
+''passphrase'' 
+is used to extract or create an encrypted archive. 
+Currently, zip is only a format that 
+'''cpio''' 
+can handle encrypted archives. 
+You shouldn't use this option unless you realize how insecure 
+use of this option is. 
 </dd><dt>-m, --preserve-modification-time</dt><dd> 
 (i and p modes) 
 Set file modification time on created files to match 
@@ -267,34 +282,34 @@ The '''cpio''' utility exits 0 on success, and &gt;0 if an error occurs.
 The following environment variables affect the execution of 
 '''cpio''': 
 <dl> 
-<dt>'''LANG''' 
+<dt>'''LANG'''</dt><dd> 
 The locale to use. 
 See 
-'''environ'''(7) 
+[[environ(7)|http://www.freebsd.org/cgi/man.cgi?query=environ&sektion=7]] 
 for more information. 
-</dt><dt>'''TZ''' 
+</dd><dt>'''TZ'''</dt><dd> 
 The timezone to use when displaying dates. 
 See 
-'''environ'''(7) 
+[[environ(7)|http://www.freebsd.org/cgi/man.cgi?query=environ&sektion=7]] 
 for more information. 
-</dt></dl> 
+</dd></dl> 
 == EXAMPLES == 
 The 
 '''cpio''' 
 command is traditionally used to copy file hierarchies in conjunction 
 with the 
-'''find'''(1) 
+[[find(1)|http://www.freebsd.org/cgi/man.cgi?query=find&sektion=1]] 
 command. 
 The first example here simply copies all files from 
 ''src'' 
 to 
 ''dest'': 
-```text 
+```text
 find src | cpio -pmud dest 
-``` 
+```
 
 By carefully selecting options to the 
-'''find'''(1) 
+[[find(1)|http://www.freebsd.org/cgi/man.cgi?query=find&sektion=1]] 
 command and combining it with other standard utilities, 
 it is possible to exercise very fine control over which files are copied. 
 This next example copies files from 
@@ -302,9 +317,9 @@ This next example copies files from
 to 
 ''dest'' 
 that are more than 2 days old and whose names match a particular pattern: 
-```text 
-find src -mtime ''+2'' | grep foo[bar] | cpio -pdmu dest 
-``` 
+```text
+find src -mtime +2 | grep foo[bar] | cpio -pdmu dest 
+```
 
 This example copies files from 
 ''src'' 
@@ -312,9 +327,9 @@ to
 ''dest'' 
 that are more than 2 days old and which contain the word 
 "foobar": 
-```text 
-find src -mtime ''+2'' | xargs grep -l foobar | cpio -pdmu dest 
-``` 
+```text
+find src -mtime +2 | xargs grep -l foobar | cpio -pdmu dest 
+```
 == COMPATIBILITY == 
 The mode options i, o, and p and the options 
 a, B, c, d, f, l, m, r, t, u, and v comply with SUSv2. 
@@ -345,15 +360,15 @@ with the standard.
 For best compatibility, scripts should limit themselves to the 
 standard syntax. 
 == SEE ALSO == 
-'''bzip2'''(1), 
-'''tar'''(1), 
-'''gzip'''(1), 
-'''mt'''(1), 
-'''pax'''(1), 
-'''libarchive'''(3), 
-'''cpio'''(5), 
-'''libarchive-formats'''(5), 
-'''tar'''(5) 
+[[bzip2(1)|http://www.freebsd.org/cgi/man.cgi?query=bzip2&sektion=1]], 
+[[ManPageBsdtar1]], 
+[[gzip(1)|http://www.freebsd.org/cgi/man.cgi?query=gzip&sektion=1]], 
+[[mt(1)|http://www.freebsd.org/cgi/man.cgi?query=mt&sektion=1]], 
+[[pax(1)|http://www.freebsd.org/cgi/man.cgi?query=pax&sektion=1]], 
+[[ManPageibarchive3]], 
+[[ManPageCpio5]], 
+[[ManPageibarchiveormats5]], 
+[[ManPageTar5]] 
 == STANDARDS == 
 There is no current POSIX standard for the cpio command; it appeared 
 in 
@@ -382,7 +397,7 @@ actually predates
 even though it was not well-known outside of AT&T until some time later. 
 
 This is a complete re-implementation based on the 
-'''libarchive'''(3) 
+[[ManPageibarchive3]] 
 library. 
 == BUGS == 
 The cpio archive format has several basic limitations: 

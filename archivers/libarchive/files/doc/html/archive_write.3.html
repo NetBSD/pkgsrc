@@ -1,5 +1,5 @@
-<!-- Creator     : groff version 1.21 -->
-<!-- CreationDate: Sat Feb  9 12:24:05 2013 -->
+<!-- Creator     : groff version 1.22.3 -->
+<!-- CreationDate: Sun Jun 19 19:54:07 2016 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -163,7 +163,7 @@ else <br>
 return (ARCHIVE_FATAL); <br>
 }</p>
 
-<p style="margin-left:14%; margin-top: 1em">ssize_t <br>
+<p style="margin-left:14%; margin-top: 1em">la_ssize_t <br>
 mywrite(struct archive *a, void *client_data, const void
 *buff, size_t n) <br>
 { <br>
@@ -199,8 +199,17 @@ int fd;</p>
 <p style="margin-left:14%; margin-top: 1em">a =
 archive_write_new(); <br>
 mydata-&gt;name = outname; <br>
+/* Set archive format and filter according to output file
+extension. <br>
+* If it fails, set default format. Platform depended
+function. <br>
+* See supported formats in
+archive_write_set_format_filter_by_ext.c */ <br>
+if (archive_write_set_format_filter_by_ext(a, outname) !=
+ARCHIVE_OK) { <br>
 archive_write_add_filter_gzip(a); <br>
 archive_write_set_format_ustar(a); <br>
+} <br>
 archive_write_open(a, mydata, myopen, mywrite, myclose);
 <br>
 while (*filename) { <br>
@@ -211,7 +220,7 @@ archive_entry_set_pathname(entry, *filename); <br>
 archive_write_header(a, entry); <br>
 if ((fd = open(*filename, O_RDONLY)) != -1) { <br>
 len = read(fd, buff, sizeof(buff)); <br>
-while ( len &gt; 0 ) { <br>
+while (len &gt; 0) { <br>
 archive_write_data(a, buff, len); <br>
 len = read(fd, buff, sizeof(buff)); <br>
 } <br>
@@ -228,7 +237,7 @@ argc, const char **argv) <br>
 { <br>
 const char *outname; <br>
 argv++; <br>
-outname = argv++; <br>
+outname = *argv++; <br>
 write_archive(outname, argv); <br>
 return 0; <br>
 }</p>
@@ -246,8 +255,7 @@ first appeared in FreeBSD&nbsp;5.3.</p>
 <p style="margin-top: 1em"><b>AUTHORS</b></p>
 
 <p style="margin-left:6%;">The <b>libarchive</b> library
-was written by Tim Kientzle &lang; kientzle@acm.org&rang;
-.</p>
+was written by Tim Kientzle &lt;kientzle@acm.org&gt;.</p>
 
 <p style="margin-top: 1em"><b>BUGS</b></p>
 

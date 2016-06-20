@@ -13,15 +13,15 @@ make it easy to add new archive and compression formats.
 Externally, libarchive exposes most operations through an 
 opaque, object-style interface. 
 The 
-'''archive_entry'''(3) 
+[[ManPagerchiventry3]] 
 objects store information about a single filesystem object. 
 The rest of the library provides facilities to write 
-'''archive_entry'''(3) 
+[[ManPagerchiventry3]] 
 objects to archive files, 
 read them from archive files, 
 and write them to disk. 
 (There are plans to add a facility to read 
-'''archive_entry'''(3) 
+[[ManPagerchiventry3]] 
 objects from disk as well.) 
 
 The read and write APIs each have four layers: a public API 
@@ -37,7 +37,7 @@ an archive or disk writer, and then use a single set of
 code to select and write entries, regardless of the target. 
 == READ ARCHITECTURE == 
 From the outside, clients use the 
-'''archive_read'''(3) 
+[[ManPagerchiveead3]] 
 API to manipulate an 
 '''archive''' 
 object to read entries and bodies from an archive stream. 
@@ -50,9 +50,9 @@ The API has four layers:
 The lowest layer is the I/O layer. 
 This layer can be overridden by clients, but most clients use 
 the packaged I/O callbacks provided, for example, by 
-'''archive_read_open_memory'''(3), 
+[[ManPagerchiveeadpenemory3]], 
 and 
-'''archive_read_open_fd'''(3). 
+[[ManPagerchiveeadpend3]]. 
 The compression layer calls the I/O layer to 
 read bytes and decompresses them for the format layer. 
 The format layer unpacks a stream of uncompressed bytes and 
@@ -93,7 +93,7 @@ Keep in mind that not all clients are reading from disk:
 clients reading from networks may provide different-sized 
 blocks on every request and cannot skip at all; 
 advanced clients may use 
-'''mmap'''(2) 
+[[mmap(2)|http://www.freebsd.org/cgi/man.cgi?query=mmap&sektion=2]] 
 to read the entire file into memory at once and return the 
 entire file to libarchive as a single block; 
 other clients may begin asynchronous I/O operations for the 
@@ -319,11 +319,11 @@ Fortunately, such archives are very rare, and libarchive can read
 most ZIP archives, though it cannot always extract as much information 
 as a dedicated ZIP program. 
 == SEE ALSO == 
-'''archive'''(3), 
-'''archive_entry'''(3), 
-'''archive_read'''(3), 
-'''archive_write'''(3), 
-'''archive_write_disk'''(3) 
+[[ManPagerchiventry3]], 
+[[ManPagerchiveead3]], 
+[[ManPagerchiverite3]], 
+[[ManPagerchiveriteisk3]] 
+[[ManPageibarchive3]], 
 == HISTORY == 
 The 
 '''libarchive''' 
