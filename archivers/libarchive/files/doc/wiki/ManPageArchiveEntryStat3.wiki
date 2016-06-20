@@ -35,123 +35,123 @@ Streaming Archive Library (libarchive, -larchive)
 == SYNOPSIS == 
 '''<nowiki>#include <archive_entry.h></nowiki>''' 
 <br> 
-'''const struct stat *''' 
+''const struct stat *'' 
 <br> 
 '''archive_entry_stat'''(''struct archive_entry *a''); 
 <br> 
-'''void''' 
+''void'' 
 <br> 
 '''archive_entry_copy_stat'''(''struct archive_entry *a'', ''const struct stat *sb''); 
 <br> 
-'''mode_t''' 
+''mode_t'' 
 <br> 
 '''archive_entry_filetype'''(''struct archive_entry *a''); 
 <br> 
-'''void''' 
+''void'' 
 <br> 
 '''archive_entry_set_filetype'''(''struct archive_entry *a'', ''unsigned int type''); 
 <br> 
-'''mode_t''' 
+''mode_t'' 
 <br> 
 '''archive_entry_mode'''(''struct archive_entry *a''); 
 <br> 
-'''void''' 
+''void'' 
 <br> 
 '''archive_entry_set_mode'''(''struct archive_entry *a'', ''mode_t mode''); 
 <br> 
-'''int64_t''' 
+''int64_t'' 
 <br> 
 '''archive_entry_size'''(''struct archive_entry *a''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_entry_size_is_set'''(''struct archive_entry *a''); 
 <br> 
-'''void''' 
+''void'' 
 <br> 
 '''archive_entry_set_size'''(''struct archive_entry *a'', ''int64_t size''); 
 <br> 
-'''void''' 
+''void'' 
 <br> 
 '''archive_entry_unset_size'''(''struct archive_entry *a''); 
 <br> 
-'''dev_t''' 
+''dev_t'' 
 <br> 
 '''archive_entry_dev'''(''struct archive_entry *a''); 
 <br> 
-'''void''' 
+''void'' 
 <br> 
 '''archive_entry_set_dev'''(''struct archive_entry *a'', ''dev_t dev''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_entry_dev_is_set'''(''struct archive_entry *a''); 
 <br> 
-'''dev_t''' 
+''dev_t'' 
 <br> 
 '''archive_entry_devmajor'''(''struct archive_entry *a''); 
 <br> 
-'''void''' 
+''void'' 
 <br> 
 '''archive_entry_set_devmajor'''(''struct archive_entry *a'', ''dev_t major''); 
 <br> 
-'''dev_t''' 
+''dev_t'' 
 <br> 
 '''archive_entry_devminor'''(''struct archive_entry *a''); 
 <br> 
-'''void''' 
+''void'' 
 <br> 
 '''archive_entry_set_devminor'''(''struct archive_entry *a'', ''dev_t minor''); 
 <br> 
-'''ino_t''' 
+''ino_t'' 
 <br> 
 '''archive_entry_ino'''(''struct archive_entry *a''); 
 <br> 
-'''void''' 
+''void'' 
 <br> 
 '''archive_entry_set_ino'''(''struct archive_entry *a'', ''unsigned long ino''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_entry_ino_is_set'''(''struct archive_entry *a''); 
 <br> 
-'''int64_t''' 
+''int64_t'' 
 <br> 
 '''archive_entry_ino64'''(''struct archive_entry *a''); 
 <br> 
-'''void''' 
+''void'' 
 <br> 
 '''archive_entry_set_ino64'''(''struct archive_entry *a'', ''int64_t ino''); 
 <br> 
-'''unsigned int''' 
+''unsigned int'' 
 <br> 
 '''archive_entry_nlink'''(''struct archive_entry *a''); 
 <br> 
-'''void''' 
+''void'' 
 <br> 
 '''archive_entry_set_nlink'''(''struct archive_entry *a'', ''unsigned int count''); 
 <br> 
-'''dev_t''' 
+''dev_t'' 
 <br> 
 '''archive_entry_rdev'''(''struct archive_entry *a''); 
 <br> 
-'''dev_t''' 
+''dev_t'' 
 <br> 
 '''archive_entry_rdevmajor'''(''struct archive_entry *a''); 
 <br> 
-'''dev_t''' 
+''dev_t'' 
 <br> 
 '''archive_entry_rdevminor'''(''struct archive_entry *a''); 
 <br> 
-'''void''' 
+''void'' 
 <br> 
 '''archive_entry_set_rdev'''(''struct archive_entry *a'', ''dev_t dev''); 
 <br> 
-'''void''' 
+''void'' 
 <br> 
 '''archive_entry_set_rdevmajor'''(''struct archive_entry *a'', ''dev_t major''); 
 <br> 
-'''void''' 
+''void'' 
 <br> 
 '''archive_entry_set_rdevminor'''(''struct archive_entry *a'', ''dev_t minor''); 
 == DESCRIPTION == 
@@ -160,7 +160,7 @@ The function
 '''archive_entry_stat'''() 
 converts the various fields stored in the archive entry to the format 
 used by 
-'''stat'''(2). 
+[[stat(2)|http://www.freebsd.org/cgi/man.cgi?query=stat&sektion=2]]. 
 The return value remains valid until either 
 '''archive_entry_clear'''() 
 or 
@@ -217,7 +217,7 @@ Named pipe (fifo)
 </dd></dl> 
 Not all file types are supported by all platforms. 
 The constants used by 
-'''stat'''(2) 
+[[stat(2)|http://www.freebsd.org/cgi/man.cgi?query=stat&sektion=2]] 
 may have different numeric values from the 
 corresponding constants above. 
 
@@ -258,9 +258,9 @@ The functions
 and 
 '''archive_entry_ino64'''() 
 are used by 
-'''archive_entry_linkify'''(3) 
+[[ManPagerchiventryinkify3]] 
 to find hardlinks. 
-The pair of device and inode is suppossed to identify hardlinked files. 
+The pair of device and inode is supposed to identify hardlinked files. 
 
 The device major and minor number can be obtained independently using 
 '''archive_entry_devmajor'''() 
@@ -301,8 +301,8 @@ platforms.
 Some archive formats use the combined form, while other formats use 
 the split form. 
 == SEE ALSO == 
-'''archive'''(3), 
-'''archive_entry_acl'''(3), 
-'''archive_entry_perms'''(3), 
-'''archive_entry_time'''(3), 
-'''stat'''(2) 
+[[ManPagerchiventrycl3]], 
+[[ManPagerchiventryerms3]], 
+[[ManPagerchiventryime3]], 
+[[ManPageibarchive3]], 
+[[stat(2)|http://www.freebsd.org/cgi/man.cgi?query=stat&sektion=2]] 

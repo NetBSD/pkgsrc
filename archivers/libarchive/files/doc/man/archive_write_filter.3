@@ -1,20 +1,32 @@
-.TH ARCHIVE_WRITE_FILTER 3 "February 2, 2012" ""
+.TH ARCHIVE_WRITE_FILTER 3 "August 14, 2014" ""
 .SH NAME
 .ad l
+\fB\%archive_write_add_filter_b64encode\fP,
+\fB\%archive_write_add_filter_by_name\fP,
 \fB\%archive_write_add_filter_bzip2\fP,
 \fB\%archive_write_add_filter_compress\fP,
+\fB\%archive_write_add_filter_grzip\fP,
 \fB\%archive_write_add_filter_gzip\fP,
+\fB\%archive_write_add_filter_lrzip\fP,
+\fB\%archive_write_add_filter_lz4\fP,
 \fB\%archive_write_add_filter_lzip\fP,
 \fB\%archive_write_add_filter_lzma\fP,
+\fB\%archive_write_add_filter_lzop\fP,
 \fB\%archive_write_add_filter_none\fP,
 \fB\%archive_write_add_filter_program\fP,
+\fB\%archive_write_add_filter_uuencode\fP,
 \fB\%archive_write_add_filter_xz\fP
+\- functions enabling output filters
 .SH LIBRARY
 .ad l
 Streaming Archive Library (libarchive, -larchive)
 .SH SYNOPSIS
 .ad l
 \fB#include <archive.h>\fP
+.br
+\fIint\fP
+.br
+\fB\%archive_write_add_filter_b64encode\fP(\fI\%struct\ archive\ *\fP);
 .br
 \fIint\fP
 .br
@@ -26,7 +38,19 @@ Streaming Archive Library (libarchive, -larchive)
 .br
 \fIint\fP
 .br
+\fB\%archive_write_add_filter_grzip\fP(\fI\%struct\ archive\ *\fP);
+.br
+\fIint\fP
+.br
 \fB\%archive_write_add_filter_gzip\fP(\fI\%struct\ archive\ *\fP);
+.br
+\fIint\fP
+.br
+\fB\%archive_write_add_filter_lrzip\fP(\fI\%struct\ archive\ *\fP);
+.br
+\fIint\fP
+.br
+\fB\%archive_write_add_filter_lz4\fP(\fI\%struct\ archive\ *\fP);
 .br
 \fIint\fP
 .br
@@ -38,11 +62,19 @@ Streaming Archive Library (libarchive, -larchive)
 .br
 \fIint\fP
 .br
+\fB\%archive_write_add_filter_lzop\fP(\fI\%struct\ archive\ *\fP);
+.br
+\fIint\fP
+.br
 \fB\%archive_write_add_filter_none\fP(\fI\%struct\ archive\ *\fP);
 .br
 \fIint\fP
 .br
 \fB\%archive_write_add_filter_program\fP(\fI\%struct\ archive\ *\fP, \fI\%const\ char\ *\ cmd\fP);
+.br
+\fIint\fP
+.br
+\fB\%archive_write_add_filter_uuencode\fP(\fI\%struct\ archive\ *\fP);
 .br
 \fIint\fP
 .br
@@ -53,12 +85,21 @@ Streaming Archive Library (libarchive, -larchive)
 .TP
 \fB\%archive_write_add_filter_bzip2\fP(),
 \fB\%archive_write_add_filter_compress\fP(),
+\fB\%archive_write_add_filter_grzip\fP(),
 \fB\%archive_write_add_filter_gzip\fP(),
+\fB\%archive_write_add_filter_lrzip\fP(),
+\fB\%archive_write_add_filter_lz4\fP(),
 \fB\%archive_write_add_filter_lzip\fP(),
 \fB\%archive_write_add_filter_lzma\fP(),
+\fB\%archive_write_add_filter_lzop\fP(),
 \fB\%archive_write_add_filter_xz\fP(),
 The resulting archive will be compressed as specified.
 Note that the compressed output is always properly blocked.
+.TP
+\fB\%archive_write_add_filter_b64encode\fP(),
+\fB\%archive_write_add_filter_uuencode\fP(),
+The output will be encoded as specified.
+The encoded output is always properly blocked.
 .TP
 \fB\%archive_write_add_filter_none\fP()
 This is never necessary.

@@ -88,7 +88,7 @@ CLIENT CALLBACKS
      If the open fails, it should call archive_set_error() to register an
      error code and message and return ARCHIVE_FATAL.
 
-	   typedef ssize_t archive_write_callback(struct archive *,
+	   typedef la_ssize_t archive_write_callback(struct archive *,
 	   void *client_data, const void *buffer, size_t length)
 
      The write callback is invoked whenever the library needs to write raw

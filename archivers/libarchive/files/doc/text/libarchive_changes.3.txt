@@ -1,7 +1,7 @@
 LIBARCHIVE_CHANGES(3)	 BSD Library Functions Manual	 LIBARCHIVE_CHANGES(3)
 
 NAME
-     changes in libarchive interface
+     — changes in libarchive interface
 
 CHANGES IN LIBARCHIVE 3
      This page describes user-visible changes in libarchive3, and lists public

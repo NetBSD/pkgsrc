@@ -10,19 +10,19 @@ Streaming Archive Library (libarchive, -larchive)
 == SYNOPSIS == 
 '''<nowiki>#include <archive.h></nowiki>''' 
 <br> 
-'''ssize_t''' 
+''la_ssize_t'' 
 <br> 
 '''archive_read_data'''(''struct archive *'', ''void *buff'', ''size_t len''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_read_data_block'''(''struct archive *'', ''const void **buff'', ''size_t *len'', ''off_t *offset''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_read_data_skip'''(''struct archive *''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_read_data_into_fd'''(''struct archive *'', ''int fd''); 
 == DESCRIPTION == 
@@ -88,14 +88,14 @@ and
 '''archive_error_string'''() 
 functions. 
 == SEE ALSO == 
-'''tar'''(1), 
-'''libarchive'''(3), 
-'''archive_read'''(3), 
-'''archive_read_extract'''(3), 
-'''archive_read_filter'''(3), 
-'''archive_read_format'''(3), 
-'''archive_read_header'''(3), 
-'''archive_read_open'''(3), 
-'''archive_read_set_options'''(3), 
-'''archive_util'''(3), 
-'''tar'''(5) 
+[[ManPageBsdtar1]], 
+[[ManPageibarchive3]], 
+[[ManPagerchiveead3]], 
+[[ManPagerchiveeadxtract3]], 
+[[ManPagerchiveeadilter3]], 
+[[ManPagerchiveeadormat3]], 
+[[ManPagerchiveeadeader3]], 
+[[ManPagerchiveeadpen3]], 
+[[ManPagerchiveeadetptions3]], 
+[[ManPagerchivetil3]], 
+[[ManPageTar5]] 

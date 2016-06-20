@@ -1,12 +1,15 @@
-.TH ARCHIVE_READ_FILTER 3 "February 2, 2012" ""
+.TH ARCHIVE_READ_FILTER 3 "August 14, 2014" ""
 .SH NAME
 .ad l
 \fB\%archive_read_support_filter_all\fP,
 \fB\%archive_read_support_filter_bzip2\fP,
 \fB\%archive_read_support_filter_compress\fP,
 \fB\%archive_read_support_filter_gzip\fP,
+\fB\%archive_read_support_filter_lz4\fP,
 \fB\%archive_read_support_filter_lzma\fP,
 \fB\%archive_read_support_filter_none\fP,
+\fB\%archive_read_support_filter_rpm\fP,
+\fB\%archive_read_support_filter_uu\fP,
 \fB\%archive_read_support_filter_xz\fP,
 \fB\%archive_read_support_filter_program\fP,
 \fB\%archive_read_support_filter_program_signature\fP
@@ -32,7 +35,19 @@ Streaming Archive Library (libarchive, -larchive)
 .br
 \fIint\fP
 .br
+\fB\%archive_read_support_filter_grzip\fP(\fI\%struct\ archive\ *\fP);
+.br
+\fIint\fP
+.br
 \fB\%archive_read_support_filter_gzip\fP(\fI\%struct\ archive\ *\fP);
+.br
+\fIint\fP
+.br
+\fB\%archive_read_support_filter_lrzip\fP(\fI\%struct\ archive\ *\fP);
+.br
+\fIint\fP
+.br
+\fB\%archive_read_support_filter_lz4\fP(\fI\%struct\ archive\ *\fP);
 .br
 \fIint\fP
 .br
@@ -40,7 +55,19 @@ Streaming Archive Library (libarchive, -larchive)
 .br
 \fIint\fP
 .br
+\fB\%archive_read_support_filter_lzop\fP(\fI\%struct\ archive\ *\fP);
+.br
+\fIint\fP
+.br
 \fB\%archive_read_support_filter_none\fP(\fI\%struct\ archive\ *\fP);
+.br
+\fIint\fP
+.br
+\fB\%archive_read_support_filter_rpm\fP(\fI\%struct\ archive\ *\fP);
+.br
+\fIint\fP
+.br
+\fB\%archive_read_support_filter_uu\fP(\fI\%struct\ archive\ *\fP);
 .br
 \fIint\fP
 .br
@@ -59,9 +86,15 @@ Streaming Archive Library (libarchive, -larchive)
 .TP
 \fB\%archive_read_support_filter_bzip2\fP(),
 \fB\%archive_read_support_filter_compress\fP(),
+\fB\%archive_read_support_filter_grzip\fP(),
 \fB\%archive_read_support_filter_gzip\fP(),
+\fB\%archive_read_support_filter_lrzip\fP(),
+\fB\%archive_read_support_filter_lz4\fP(),
 \fB\%archive_read_support_filter_lzma\fP(),
+\fB\%archive_read_support_filter_lzop\fP(),
 \fB\%archive_read_support_filter_none\fP(),
+\fB\%archive_read_support_filter_rpm\fP(),
+\fB\%archive_read_support_filter_uu\fP(),
 \fB\%archive_read_support_filter_xz\fP()
 Enables auto-detection code and decompression support for the
 specified compression.
