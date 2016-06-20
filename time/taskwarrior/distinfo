@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2016/06/20 20:30:42 kamil Exp $
+
+SHA1 (task-2.5.1.tar.gz) = 647faf0784aa8ebe48cba3e2061f79e1ddbf3e84
+RMD160 (task-2.5.1.tar.gz) = ae04417ff7f007c6e01d4d6bd4dede67adc1e35f
+SHA512 (task-2.5.1.tar.gz) = ec17e5cefff55ecd2c1cb717801c02683d94030906c8d86450c3c79c0bc5a18d82559a5e9e26a91411a1025a241b78ddbc1de51cafc1a2dd531e8229e5e61c10
+Size (task-2.5.1.tar.gz) = 903428 bytes
+SHA1 (patch-src_commands_CmdEdit.cpp) = 07c33f7cb07e7459cc5eabacbe3b003afa8db060
