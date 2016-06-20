@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2015/04/29 09:37:40 jaapb Exp $
-@unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/calendar
+@comment $NetBSD: PLIST,v 1.5 2016/06/20 10:31:22 jaapb Exp $
 lib/ocaml/site-lib/calendar/META
 lib/ocaml/site-lib/calendar/calendar.mli
 lib/ocaml/site-lib/calendar/calendarLib.a
@@ -23,4 +22,3 @@ lib/ocaml/site-lib/calendar/time_Zone.mli
 lib/ocaml/site-lib/calendar/time_sig.mli
 lib/ocaml/site-lib/calendar/utils.mli
 lib/ocaml/site-lib/calendar/version.mli
-@exec %D/libexec/ocaml-findlib-register add %D/lib/ocaml/site-lib/calendar
