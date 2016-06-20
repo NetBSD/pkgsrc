@@ -26,6 +26,9 @@ ManPageArchiveEntryTime3.wiki: ../mdoc2wiki.awk ../../libarchive/archive_entry_t
 ManPageArchiveRead3.wiki: ../mdoc2wiki.awk ../../libarchive/archive_read.3
 	awk -f ../mdoc2wiki.awk < ../../libarchive/archive_read.3 > ManPageArchiveRead3.wiki
 
+ManPageArchiveReadAddPassphrase3.wiki: ../mdoc2wiki.awk ../../libarchive/archive_read_add_passphrase.3
+	awk -f ../mdoc2wiki.awk < ../../libarchive/archive_read_add_passphrase.3 > ManPageArchiveReadAddPassphrase3.wiki
+
 ManPageArchiveReadData3.wiki: ../mdoc2wiki.awk ../../libarchive/archive_read_data.3
 	awk -f ../mdoc2wiki.awk < ../../libarchive/archive_read_data.3 > ManPageArchiveReadData3.wiki
 
@@ -95,6 +98,9 @@ ManPageArchiveWriteOpen3.wiki: ../mdoc2wiki.awk ../../libarchive/archive_write_o
 ManPageArchiveWriteSetOptions3.wiki: ../mdoc2wiki.awk ../../libarchive/archive_write_set_options.3
 	awk -f ../mdoc2wiki.awk < ../../libarchive/archive_write_set_options.3 > ManPageArchiveWriteSetOptions3.wiki
 
+ManPageArchiveWriteSetPassphrase3.wiki: ../mdoc2wiki.awk ../../libarchive/archive_write_set_passphrase.3
+	awk -f ../mdoc2wiki.awk < ../../libarchive/archive_write_set_passphrase.3 > ManPageArchiveWriteSetPassphrase3.wiki
+
 ManPageCpio5.wiki: ../mdoc2wiki.awk ../../libarchive/cpio.5
 	awk -f ../mdoc2wiki.awk < ../../libarchive/cpio.5 > ManPageCpio5.wiki
 
@@ -121,4 +127,4 @@ ManPageBsdtar1.wiki: ../mdoc2wiki.awk ../../tar/bsdtar.1
 
 ManPageBsdcpio1.wiki: ../mdoc2wiki.awk ../../cpio/bsdcpio.1
 	awk -f ../mdoc2wiki.awk < ../../cpio/bsdcpio.1 > ManPageBsdcpio1.wiki
-all: ManPageArchiveEntry3.wiki ManPageArchiveEntryAcl3.wiki ManPageArchiveEntryLinkify3.wiki ManPageArchiveEntryPaths3.wiki ManPageArchiveEntryPerms3.wiki ManPageArchiveEntryStat3.wiki ManPageArchiveEntryTime3.wiki ManPageArchiveRead3.wiki ManPageArchiveReadData3.wiki ManPageArchiveReadDisk3.wiki ManPageArchiveReadExtract3.wiki ManPageArchiveReadFilter3.wiki ManPageArchiveReadFormat3.wiki ManPageArchiveReadFree3.wiki ManPageArchiveReadHeader3.wiki ManPageArchiveReadNew3.wiki ManPageArchiveReadOpen3.wiki ManPageArchiveReadSetOptions3.wiki ManPageArchiveUtil3.wiki ManPageArchiveWrite3.wiki ManPageArchiveWriteBlocksize3.wiki ManPageArchiveWriteData3.wiki ManPageArchiveWriteDisk3.wiki ManPageArchiveWriteFilter3.wiki ManPageArchiveWriteFinishEntry3.wiki ManPageArchiveWriteFormat3.wiki ManPageArchiveWriteFree3.wiki ManPageArchiveWriteHeader3.wiki ManPageArchiveWriteNew3.wiki ManPageArchiveWriteOpen3.wiki ManPageArchiveWriteSetOptions3.wiki ManPageCpio5.wiki ManPageLibarchive3.wiki ManPageLibarchiveChanges3.wiki ManPageLibarchiveFormats5.wiki ManPageLibarchiveInternals3.wiki ManPageMtree5.wiki ManPageTar5.wiki ManPageBsdtar1.wiki ManPageBsdcpio1.wiki
+all: ManPageArchiveEntry3.wiki ManPageArchiveEntryAcl3.wiki ManPageArchiveEntryLinkify3.wiki ManPageArchiveEntryPaths3.wiki ManPageArchiveEntryPerms3.wiki ManPageArchiveEntryStat3.wiki ManPageArchiveEntryTime3.wiki ManPageArchiveRead3.wiki ManPageArchiveReadAddPassphrase3.wiki ManPageArchiveReadData3.wiki ManPageArchiveReadDisk3.wiki ManPageArchiveReadExtract3.wiki ManPageArchiveReadFilter3.wiki ManPageArchiveReadFormat3.wiki ManPageArchiveReadFree3.wiki ManPageArchiveReadHeader3.wiki ManPageArchiveReadNew3.wiki ManPageArchiveReadOpen3.wiki ManPageArchiveReadSetOptions3.wiki ManPageArchiveUtil3.wiki ManPageArchiveWrite3.wiki ManPageArchiveWriteBlocksize3.wiki ManPageArchiveWriteData3.wiki ManPageArchiveWriteDisk3.wiki ManPageArchiveWriteFilter3.wiki ManPageArchiveWriteFinishEntry3.wiki ManPageArchiveWriteFormat3.wiki ManPageArchiveWriteFree3.wiki ManPageArchiveWriteHeader3.wiki ManPageArchiveWriteNew3.wiki ManPageArchiveWriteOpen3.wiki ManPageArchiveWriteSetOptions3.wiki ManPageArchiveWriteSetPassphrase3.wiki ManPageCpio5.wiki ManPageLibarchive3.wiki ManPageLibarchiveChanges3.wiki ManPageLibarchiveFormats5.wiki ManPageLibarchiveInternals3.wiki ManPageMtree5.wiki ManPageTar5.wiki ManPageBsdtar1.wiki ManPageBsdcpio1.wiki

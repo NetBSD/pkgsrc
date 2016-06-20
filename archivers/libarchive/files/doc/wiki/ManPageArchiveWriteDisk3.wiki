@@ -19,55 +19,55 @@ Streaming Archive Library (libarchive, -larchive)
 == SYNOPSIS == 
 '''<nowiki>#include <archive.h></nowiki>''' 
 <br> 
-'''struct archive *''' 
+''struct archive *'' 
 <br> 
 '''archive_write_disk_new'''(''void''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_write_disk_set_options'''(''struct archive *'', ''int flags''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_write_disk_set_skip_file'''(''struct archive *'', ''dev_t'', ''ino_t''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_write_disk_set_group_lookup'''(''struct archive *'', ''void *'', ''gid_t (*)(void *, const char *gname, gid_t gid)'', ''void (*cleanup)(void *)''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_write_disk_set_standard_lookup'''(''struct archive *''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_write_disk_set_user_lookup'''(''struct archive *'', ''void *'', ''uid_t (*)(void *, const char *uname, uid_t uid)'', ''void (*cleanup)(void *)''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_write_header'''(''struct archive *'', ''struct archive_entry *''); 
 <br> 
-'''ssize_t''' 
+''la_ssize_t'' 
 <br> 
 '''archive_write_data'''(''struct archive *'', ''const void *'', ''size_t''); 
 <br> 
-'''ssize_t''' 
+''la_ssize_t'' 
 <br> 
 '''archive_write_data_block'''(''struct archive *'', ''const void *'', ''size_t size'', ''int64_t offset''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_write_finish_entry'''(''struct archive *''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_write_close'''(''struct archive *''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_write_finish'''(''struct archive *''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_write_free'''(''struct archive *''); 
 == DESCRIPTION == 
@@ -165,10 +165,16 @@ The default is to not refuse such paths.
 Note that paths ending in 
 ''..'' 
 always cause an error, regardless of this flag. 
+</dd><dt>'''ARCHIVE_EXTRACT_SECURE_NOABSOLUTEPATHS'''</dt><dd> 
+Refuse to extract an absolute path. 
+The default is to not refuse such paths. 
 </dd><dt>'''ARCHIVE_EXTRACT_SPARSE'''</dt><dd> 
 Scan data for blocks of NUL bytes and try to recreate them with holes. 
 This results in sparse files, independent of whether the archive format 
 supports or uses them. 
+</dd><dt>'''ARCHIVE_EXTRACT_CLEAR_NOCHANGE_FFLAGS'''</dt><dd> 
+Before removing a file system object prior to replacing it, clear 
+platform-specific file flags which might prevent its removal. 
 </dd></dl> 
 </dd><dt> 
 '''archive_write_disk_set_group_lookup'''(), 
@@ -195,22 +201,22 @@ object is destroyed.
 This convenience function installs a standard set of user 
 and group lookup functions. 
 These functions use 
-'''getpwnam'''(3) 
+[[getpwnam(3)|http://www.freebsd.org/cgi/man.cgi?query=getpwnam&sektion=3]] 
 and 
-'''getgrnam'''(3) 
+[[getgrnam(3)|http://www.freebsd.org/cgi/man.cgi?query=getgrnam&sektion=3]] 
 to convert names to ids, defaulting to the ids if the names cannot 
 be looked up. 
 These functions also implement a simple memory cache to reduce 
 the number of calls to 
-'''getpwnam'''(3) 
+[[getpwnam(3)|http://www.freebsd.org/cgi/man.cgi?query=getpwnam&sektion=3]] 
 and 
-'''getgrnam'''(3). 
+[[getgrnam(3)|http://www.freebsd.org/cgi/man.cgi?query=getgrnam&sektion=3]]. 
 </dd><dt>'''archive_write_header'''()</dt><dd> 
 Build and write a header using the data in the provided 
 '''struct archive_entry''' 
 structure. 
 See 
-'''archive_entry'''(3) 
+[[ManPagerchiventry3]] 
 for information on creating and populating 
 '''struct archive_entry''' 
 objects. 
@@ -263,10 +269,10 @@ if it was not invoked manually, then releases all resources.
 More information about the 
 ''struct'' archive 
 object and the overall design of the library can be found in the 
-'''libarchive'''(3) 
+[[ManPageibarchive3]] 
 overview. 
 Many of these functions are also documented under 
-'''archive_write'''(3). 
+[[ManPagerchiverite3]]. 
 == RETURN VALUES == 
 Most functions return 
 '''ARCHIVE_OK''' 
@@ -288,9 +294,9 @@ object.
 '''archive_write_data'''() 
 returns a count of the number of bytes actually written, 
 or 
-```text 
+```text
 -1 
-``` 
+```
 on error. 
 == ERRORS == 
 Detailed error codes and textual descriptions are available from the 
@@ -299,10 +305,10 @@ and
 '''archive_error_string'''() 
 functions. 
 == SEE ALSO == 
-'''archive_read'''(3), 
-'''archive_write'''(3), 
-'''tar'''(1), 
-'''libarchive'''(3) 
+[[ManPagerchiveead3]], 
+[[ManPagerchiverite3]], 
+[[ManPageBsdtar1]], 
+[[ManPageibarchive3]] 
 == HISTORY == 
 The 
 '''libarchive''' 
@@ -331,7 +337,7 @@ files, but can cause unexpected results.
 In particular, directory permissions are not fully 
 restored until the archive is closed. 
 If you use 
-'''chdir'''(2) 
+[[chdir(2)|http://www.freebsd.org/cgi/man.cgi?query=chdir&sektion=2]] 
 to change the current directory between calls to 
 '''archive_read_extract'''() 
 or before calling 
@@ -377,9 +383,9 @@ in the entry.
 The 
 "standard" 
 user-id and group-id lookup functions are not the defaults because 
-'''getgrnam'''(3) 
+[[getgrnam(3)|http://www.freebsd.org/cgi/man.cgi?query=getgrnam&sektion=3]] 
 and 
-'''getpwnam'''(3) 
+[[getpwnam(3)|http://www.freebsd.org/cgi/man.cgi?query=getpwnam&sektion=3]] 
 are sometimes too large for particular applications. 
 The current design allows the application author to use a more 
 compact implementation when appropriate. 

@@ -1,4 +1,4 @@
-.TH MTREE 5 "May 6, 2008" ""
+.TH MTREE 5 "September 4, 2013" ""
 .SH NAME
 .ad l
 \fB\%mtree\fP
@@ -26,15 +26,6 @@ corresponding character.
 .PP
 Each line is interpreted independently as one of the following types:
 .RS 5
-.TP
-Signature
-The first line of any mtree file must begin with
-``#mtree''.
-If a file contains any full path entries, the first line should
-begin with
-``#mtree v2.0'',
-otherwise, the first line should begin with
-``#mtree v1.0''.
 .TP
 Blank
 Blank lines are ignored.
@@ -115,6 +106,55 @@ the
 \fBcksum\fP(1)
 utility.
 .TP
+\fBdevice\fP
+The device number for
+.B block
+or
+.B char
+file types.
+The value must be one of the following forms:
+.PP
+.RS 5
+.TP
+\fIformat\fP, \fImajor\fP, \fIminor\fP Bo, \fIsubunit\fP Bc
+A device with
+\fImajor\fP, minor
+and optional
+\fIsubunit\fP
+fields.
+Their meaning is specified by the operating's system
+\fIformat\fP.
+See below for valid formats.
+.TP
+\fInumber\fP
+Opaque number (as stored on the file system).
+.RE
+.PP
+The following values for
+\fIformat\fP
+are recognized:
+.B native ,
+.B 386bsd ,
+.B 4bsd ,
+.B bsdos ,
+.B freebsd ,
+.B hpux ,
+.B isc ,
+.B linux ,
+.B netbsd ,
+.B osf1 ,
+.B sco ,
+.B solaris ,
+.B sunos ,
+.B svr3 ,
+.B svr4 , 
+and 
+.B ultrix .
+.PP
+See
+\fBmknod\fP(8)
+for more details.
+.TP
 \fBcontents\fP
 The full pathname of a file that holds the contents of this file.
 .TP
@@ -136,6 +176,9 @@ The file group as a symbolic name.
 \fBignore\fP
 Ignore any file hierarchy below this file.
 .TP
+\fBinode\fP
+The inode number.
+.TP
 \fBlink\fP
 The target of the symbolic link when type=link.
 .TP
@@ -155,6 +198,18 @@ The number of hard links the file is expected to have.
 .TP
 \fBnochange\fP
 Make sure this file or directory exists but otherwise ignore all attributes.
+.TP
+\fBoptional\fP
+The file is optional; do not complain about the file if it is not in
+the file hierarchy.
+.TP
+\fBresdevice\fP
+The
+``resident''
+device number of the file, e.g. the ID of the device that
+contains the file.
+Its format is the same as the one for
+\fBdevice\fP.
 .TP
 \fBripemd160digest\fP
 The
@@ -190,6 +245,28 @@ message digest of the file.
 \fBsha256digest\fP
 A synonym for
 \fBsha256\fP.
+.TP
+\fBsha384\fP
+The
+Tn FIPS
+180-2
+(``Tn SHA-384'')
+message digest of the file.
+.TP
+\fBsha384digest\fP
+A synonym for
+\fBsha384\fP.
+.TP
+\fBsha512\fP
+The
+Tn FIPS
+180-2
+(``Tn SHA-512'')
+message digest of the file.
+.TP
+\fBsha512digest\fP
+A synonym for
+\fBsha512\fP.
 .TP
 \fBsize\fP
 The size, in bytes, of the file.
@@ -238,16 +315,6 @@ The file owner as a symbolic name.
 \fBmtree\fP(8)
 .SH BUGS
 .ad l
-The
-FreeBSD
-implementation of mtree does not currently support
-the
-\fB\%mtree\fP
-2.0
-format.
-The requirement for a
-``#mtree''
-signature line is new and not yet widely implemented.
 .SH HISTORY
 .ad l
 The

@@ -235,13 +235,13 @@ MISCELLANEOUS NOTES
      program.
 
 SEE ALSO
-     archive(3), archive_entry(3), archive_read(3), archive_write(3),
-     archive_write_disk(3)
+     archive_entry(3), archive_read(3), archive_write(3),
+     archive_write_disk(3) libarchive(3),
 
 HISTORY
      The libarchive library first appeared in FreeBSD 5.3.
 
 AUTHORS
-     The libarchive library was written by Tim Kientzle ⟨kientzle@acm.org⟩.
+     The libarchive library was written by Tim Kientzle <kientzle@acm.org>.
 
 BSD			       January 26, 2011 			   BSD

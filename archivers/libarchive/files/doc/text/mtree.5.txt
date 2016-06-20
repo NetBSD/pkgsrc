@@ -20,11 +20,6 @@ DESCRIPTION
 
      Each line is interpreted independently as one of the following types:
 
-     Signature	 The first line of any mtree file must begin with “#mtree”.
-		 If a file contains any full path entries, the first line
-		 should begin with “#mtree v2.0”, otherwise, the first line
-		 should begin with “#mtree v1.0”.
-
      Blank	 Blank lines are ignored.
 
      Comment	 Lines beginning with # are ignored.
@@ -76,6 +71,23 @@ DESCRIPTION
      cksum	 The checksum of the file using the default algorithm speci‐
 		 fied by the cksum(1) utility.
 
+     device	 The device number for block or char file types.  The value
+		 must be one of the following forms:
+
+		 format,major,minor[,subunit]
+		       A device with major, minor and optional subunit fields.
+		       Their meaning is specified by the operating's system
+		       format.	See below for valid formats.
+
+		 number
+		       Opaque number (as stored on the file system).
+
+		 The following values for format are recognized: native,
+		 386bsd, 4bsd, bsdos, freebsd, hpux, isc, linux, netbsd, osf1,
+		 sco, solaris, sunos, svr3, svr4, and ultrix.
+
+		 See mknod(8) for more details.
+
      contents	 The full pathname of a file that holds the contents of this
 		 file.
 
@@ -88,6 +100,8 @@ DESCRIPTION
      gname	 The file group as a symbolic name.
 
      ignore	 Ignore any file hierarchy below this file.
+
+     inode	 The inode number.
 
      link	 The target of the symbolic link when type=link.
 
@@ -102,6 +116,13 @@ DESCRIPTION
 
      nochange	 Make sure this file or directory exists but otherwise ignore
 		 all attributes.
+
+     optional	 The file is optional; do not complain about the file if it is
+		 not in the file hierarchy.
+
+     resdevice	 The “resident” device number of the file, e.g. the ID of the
+		 device that contains the file.  Its format is the same as the
+		 one for device.
 
      ripemd160digest
 		 The RIPEMD160 message digest of the file.
@@ -119,6 +140,16 @@ DESCRIPTION
 
      sha256digest
 		 A synonym for sha256.
+
+     sha384	 The FIPS 180-2 (“SHA-384”) message digest of the file.
+
+     sha384digest
+		 A synonym for sha384.
+
+     sha512	 The FIPS 180-2 (“SHA-512”) message digest of the file.
+
+     sha512digest
+		 A synonym for sha512.
 
      size	 The size, in bytes, of the file.
 
@@ -142,10 +173,6 @@ SEE ALSO
      cksum(1), find(1), mtree(8)
 
 BUGS
-     The FreeBSD implementation of mtree does not currently support the mtree
-     2.0 format.  The requirement for a “#mtree” signature line is new and not
-     yet widely implemented.
-
 HISTORY
      The mtree utility appeared in 4.3BSD-Reno.  The MD5 digest capability was
      added in FreeBSD 2.1, in response to the widespread use of programs which
@@ -155,4 +182,4 @@ HISTORY
      added in FreeBSD 4.0, and mostly comes from NetBSD.  The “full” entry
      format was added by NetBSD.
 
-BSD				  May 6, 2008				   BSD
+BSD			       September 4, 2013			   BSD
