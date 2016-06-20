@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2016/03/04 15:50:18 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2016/06/20 19:10:56 jaapb Exp $
 
-SHA1 (ppx_sexp_conv-113.24.00.tar.gz) = 52933578450189d61cf5905386bb42ba62970322
-RMD160 (ppx_sexp_conv-113.24.00.tar.gz) = 9f0c92fa715a31cb7af13f43de17d8d6237dc0ef
-SHA512 (ppx_sexp_conv-113.24.00.tar.gz) = c3ee772c5d6e89713d1c4a7fd0858cfcbc9a85e3278727db830ce0b73c0c4c9eb5fc31718644799292ee4e58da345fffa294f1b651287a09c99b7d84400bee82
-Size (ppx_sexp_conv-113.24.00.tar.gz) = 32961 bytes
+SHA1 (ppx_sexp_conv-113.33.01.tar.gz) = f2441255e5c2b25dc4814d70626a1ee373312b9e
+RMD160 (ppx_sexp_conv-113.33.01.tar.gz) = 4c5f55c7573b070cfd9a06273e5f515ef1977140
+SHA512 (ppx_sexp_conv-113.33.01.tar.gz) = 661f8f97560d138c8c690a53ab40d8d26c322bbb5bd60eada9de0bf36c5b28d45c991c961ad309b5ddee7b4638a56b27973a833cb5e46118f0e85267851bd31e
+Size (ppx_sexp_conv-113.33.01.tar.gz) = 36621 bytes
+SHA1 (patch-Makefile) = b12d42bc09b98dcbfc41fbfa01892733d8619c3a
