@@ -73,10 +73,10 @@ DESCRIPTION
 CLIENT CALLBACKS
      The callback functions must match the following prototypes:
 
-	   typedef ssize_t archive_read_callback(struct archive *,
+	   typedef la_ssize_t archive_read_callback(struct archive *,
 	   void *client_data, const void **buffer)
 
-	   typedef off_t archive_skip_callback(struct archive *,
+	   typedef la_int64_t archive_skip_callback(struct archive *,
 	   void *client_data, off_t request)
 
 	   typedef int archive_open_callback(struct archive *, void

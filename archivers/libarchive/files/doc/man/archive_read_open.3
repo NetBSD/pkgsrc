@@ -109,10 +109,10 @@ objects can be found in the overview manual page for
 The callback functions must match the following prototypes:
 .RS 5
 .IP
-\fItypedef ssize_t\fP
+\fItypedef la_ssize_t\fP
 \fB\%archive_read_callback\fP(\fI\%struct\ archive\ *\fP, \fI\%void\ *client_data\fP, \fI\%const\ void\ **buffer\fP)
 .IP
-\fItypedef off_t\fP
+\fItypedef la_int64_t\fP
 \fB\%archive_skip_callback\fP(\fI\%struct\ archive\ *\fP, \fI\%void\ *client_data\fP, \fI\%off_t\ request\fP)
 .IP
 \fItypedef int\fP
