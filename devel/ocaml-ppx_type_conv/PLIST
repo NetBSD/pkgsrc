@@ -1,19 +1,25 @@
-@comment $NetBSD: PLIST,v 1.1 2016/03/04 15:44:28 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/06/20 19:06:29 jaapb Exp $
 ${OCAML_SITELIB}/ppx_type_conv/META
-${OCAML_SITELIB}/ppx_type_conv/ignore_unused_warning.mli
+${OCAML_SITELIB}/ppx_type_conv/ignore_unused_warning.annot
+${OCAML_SITELIB}/ppx_type_conv/ignore_unused_warning.cmt
+${OCAML_SITELIB}/ppx_type_conv/ignore_unused_warning.cmti
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_type_conv/ppx_type_conv.a
 ${OCAML_SITELIB}/ppx_type_conv/ppx_type_conv.cma
 ${OCAML_SITELIB}/ppx_type_conv/ppx_type_conv.cmi
+${OCAML_SITELIB}/ppx_type_conv/ppx_type_conv.cmt
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_type_conv/ppx_type_conv.cmx
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_type_conv/ppx_type_conv.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_type_conv/ppx_type_conv.cmxs
-${OCAML_SITELIB}/ppx_type_conv/std.ml
-${OCAML_SITELIB}/ppx_type_conv/type_conv.mli
-${OCAML_SITELIB}/ppx_type_conv_deriving/META
-${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_type_conv_deriving/ppx_type_conv_deriving.a
-${OCAML_SITELIB}/ppx_type_conv_deriving/ppx_type_conv_deriving.cma
-${OCAML_SITELIB}/ppx_type_conv_deriving/ppx_type_conv_deriving.cmi
-${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_type_conv_deriving/ppx_type_conv_deriving.cmx
-${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_type_conv_deriving/ppx_type_conv_deriving.cmxa
-${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_type_conv_deriving/ppx_type_conv_deriving.cmxs
-${OCAML_SITELIB}/ppx_type_conv_deriving/ppx_type_conv_deriving.ml
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_type_conv/ppx_type_conv_deriving.a
+${OCAML_SITELIB}/ppx_type_conv/ppx_type_conv_deriving.annot
+${OCAML_SITELIB}/ppx_type_conv/ppx_type_conv_deriving.cma
+${OCAML_SITELIB}/ppx_type_conv/ppx_type_conv_deriving.cmi
+${OCAML_SITELIB}/ppx_type_conv/ppx_type_conv_deriving.cmt
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_type_conv/ppx_type_conv_deriving.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_type_conv/ppx_type_conv_deriving.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/ppx_type_conv/ppx_type_conv_deriving.cmxs
+${OCAML_SITELIB}/ppx_type_conv/std.annot
+${OCAML_SITELIB}/ppx_type_conv/std.cmt
+${OCAML_SITELIB}/ppx_type_conv/type_conv.annot
+${OCAML_SITELIB}/ppx_type_conv/type_conv.cmt
+${OCAML_SITELIB}/ppx_type_conv/type_conv.cmti
