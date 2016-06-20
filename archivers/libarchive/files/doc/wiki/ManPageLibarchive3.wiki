@@ -51,17 +51,17 @@ RAR archives,
 XAR archives. 
 </li></ul> 
 The library automatically detects archives compressed with 
-'''gzip'''(1), 
-'''bzip2'''(1), 
-'''xz'''(1), 
-'''lzip'''(1), 
+[[gzip(1)|http://www.freebsd.org/cgi/man.cgi?query=gzip&sektion=1]], 
+[[bzip2(1)|http://www.freebsd.org/cgi/man.cgi?query=bzip2&sektion=1]], 
+[[xz(1)|http://www.freebsd.org/cgi/man.cgi?query=xz&sektion=1]], 
+[[lzip(1)|http://www.freebsd.org/cgi/man.cgi?query=lzip&sektion=1]], 
 or 
-'''compress'''(1) 
+[[compress(1)|http://www.freebsd.org/cgi/man.cgi?query=compress&sektion=1]] 
 and decompresses them transparently. 
 It can similarly detect and decode archives processed with 
-'''uuencode'''(1) 
+[[uuencode(1)|http://www.freebsd.org/cgi/man.cgi?query=uuencode&sektion=1]] 
 or which have an 
-'''rpm'''(1) 
+[[rpm(1)|http://www.freebsd.org/cgi/man.cgi?query=rpm&sektion=1]] 
 header. 
 
 When writing an archive, you can specify the compression 
@@ -97,9 +97,9 @@ Pax interchange format is an extension of the tar archive format that
 eliminates essentially all of the limitations of historic tar formats 
 in a standard fashion that is supported 
 by POSIX-compliant 
-'''pax'''(1) 
+[[pax(1)|http://www.freebsd.org/cgi/man.cgi?query=pax&sektion=1]] 
 implementations on many systems as well as several newer implementations of 
-'''tar'''(1). 
+[[ManPageBsdtar1]]. 
 Note that the default write format will suppress the pax extended 
 attributes for most entries; explicitly requesting pax format will 
 enable those attributes for all entries. 
@@ -117,19 +117,19 @@ More detailed information can be found in the individual manual
 pages for each API or utility function. 
 == READING AN ARCHIVE == 
 See 
-'''libarchive_read'''(3). 
+[[ManPagerchiveead3]]. 
 == WRITING AN ARCHIVE == 
 See 
-'''libarchive_write'''(3). 
+[[ManPagerchiverite3]]. 
 == WRITING ENTRIES TO DISK == 
 The 
-'''archive_write_disk'''(3) 
+[[ManPagerchiveriteisk3]] 
 API allows you to write 
-'''archive_entry'''(3) 
+[[ManPagerchiventry3]] 
 objects to disk using the same API used by 
-'''archive_write'''(3). 
+[[ManPagerchiverite3]]. 
 The 
-'''archive_write_disk'''(3) 
+[[ManPagerchiveriteisk3]] 
 API is used internally by 
 '''archive_read_extract'''('';'') 
 using it directly can provide greater control over how entries 
@@ -139,21 +139,21 @@ archive-to-archive copy and archive-to-disk extraction
 operations. 
 == READING ENTRIES FROM DISK == 
 The 
-'''archive_read_disk'''(3) 
+[[ManPagerchiveeadisk3]] 
 supports for populating 
-'''archive_entry'''(3) 
+[[ManPagerchiventry3]] 
 objects from information in the filesystem. 
 This includes the information accessible from the 
-'''stat'''(2) 
+[[stat(2)|http://www.freebsd.org/cgi/man.cgi?query=stat&sektion=2]] 
 system call as well as ACLs, extended attributes, 
 and other metadata. 
 The 
-'''archive_read_disk'''(3) 
+[[ManPagerchiveeadisk3]] 
 API also supports iterating over directory trees, 
 which allows directories of files to be read using 
 an API compatible with 
 the 
-'''archive_read'''(3) 
+[[ManPagerchiveead3]] 
 API. 
 == DESCRIPTION == 
 Detailed descriptions of each function are provided by the 
@@ -168,7 +168,7 @@ The
 structure contains a complete description of a single archive 
 entry. 
 It uses an opaque interface that is fully documented in 
-'''archive_entry'''(3). 
+[[ManPagerchiventry3]]. 
 
 Users familiar with historic formats should be aware that the newer 
 variants have eliminated most restrictions on the length of textual fields. 
@@ -192,7 +192,7 @@ operations on this archive.
 On error, the 
 '''archive_errno'''() 
 function can be used to retrieve a numeric error code (see 
-'''errno'''(2)). 
+[[errno(2)|http://www.freebsd.org/cgi/man.cgi?query=errno&sektion=2]]). 
 The 
 '''archive_error_string'''() 
 returns a textual error message suitable for display. 
@@ -216,15 +216,15 @@ and
 functions can be used to obtain more information. 
 == ENVIRONMENT == 
 There are character set conversions within the 
-'''archive_entry'''(3) 
+[[ManPagerchiventry3]] 
 functions that are impacted by the currently-selected locale. 
 == SEE ALSO == 
-'''tar'''(1), 
-'''archive_entry'''(3), 
-'''archive_read'''(3), 
-'''archive_util'''(3), 
-'''archive_write'''(3), 
-'''tar'''(5) 
+[[ManPageBsdtar1]], 
+[[ManPagerchiventry3]], 
+[[ManPagerchiveead3]], 
+[[ManPagerchivetil3]], 
+[[ManPagerchiverite3]], 
+[[ManPageTar5]] 
 == HISTORY == 
 The 
 '''libarchive''' 

@@ -665,10 +665,10 @@ HISTORY
      in turn replaced the tap program from First Edition Unix.	John Gilmore's
      pdtar public-domain implementation (circa 1987) was highly influential
      and formed the basis of GNU tar (circa 1988).  Joerg Shilling's star
-     archiver is another open-source (GPL) archiver (originally developed
+     archiver is another open-source (CDDL) archiver (originally developed
      circa 1985) which features complete support for pax interchange format.
 
      This documentation was written as part of the libarchive and bsdtar
-     project by Tim Kientzle ⟨kientzle@FreeBSD.org⟩.
+     project by Tim Kientzle <kientzle@FreeBSD.org>.
 
 BSD			       December 23, 2011			   BSD

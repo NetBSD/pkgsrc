@@ -145,6 +145,6 @@ HISTORY
      The libarchive library first appeared in FreeBSD 5.3.
 
 AUTHORS
-     The libarchive library was written by Tim Kientzle ⟨kientzle@acm.org⟩.
+     The libarchive library was written by Tim Kientzle <kientzle@acm.org>.
 
 BSD			       February 2, 2012 			   BSD

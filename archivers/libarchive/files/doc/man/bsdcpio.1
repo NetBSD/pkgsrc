@@ -1,4 +1,4 @@
-.TH CPIO 1 "October 7, 2012" ""
+.TH CPIO 1 "September 16, 2014" ""
 .SH NAME
 .ad l
 \fB\%cpio\fP
@@ -7,19 +7,19 @@
 .ad l
 .br
 \fB\%cpio\fP
-{\fB\-i\fP}
+\fB\-i\fP
 [\fIoptions\fP]
 [\fIpattern\fP ...]
 [\fI<\fP archive]
 .br
 \fB\%cpio\fP
-{\fB\-o\fP}
+\fB\-o\fP
 [\fIoptions\fP]
 \fI<\fP name-list
 [\fI>\fP archive]
 .br
 \fB\%cpio\fP
-{\fB\-p\fP}
+\fB\-p\fP
 [\fIoptions\fP]
 \fIdest-dir\fP
 \fI<\fP name-list
@@ -158,7 +158,8 @@ See above for description.
 \fB\-Fl\fP insecure
 (i and p mode only)
 Disable security checks during extraction or copying.
-This allows extraction via symbolic links and path names containing
+This allows extraction via symbolic links, absolute paths,
+and path names containing
 Sq ..
 in the name.
 .TP
@@ -189,6 +190,12 @@ Compress the resulting archive with
 \fBlrzip\fP(1).
 In input mode, this option is ignored.
 .TP
+\fB\-Fl\fP lz4
+(o mode only)
+Compress the archive with lz4-compatible compression before writing it.
+In input mode, this option is ignored; lz4 compression is recognized
+automatically on input.
+.TP
 \fB\-Fl\fP lzma
 (o mode only)
 Compress the file with lzma-compatible compression before writing it.
@@ -200,6 +207,16 @@ automatically on input.
 Compress the resulting archive with
 \fBlzop\fP(1).
 In input mode, this option is ignored.
+.TP
+\fB\-Fl\fP passphrase \fIpassphrase\fP
+The
+\fIpassphrase\fP
+is used to extract or create an encrypted archive.
+Currently, zip is only a format that
+\fB\%cpio\fP
+can handle encrypted archives.
+You shouldn't use this option unless you realize how insecure
+use of this option is.
 .TP
 \fB\-m\fP, \fB\-Fl\fP preserve-modification-time
 (i and p modes)

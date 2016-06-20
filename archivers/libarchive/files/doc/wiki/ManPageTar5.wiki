@@ -158,7 +158,7 @@ the 100 characters of old-style archives.
 <nowiki>IEEE Std 1003.1-1988 (``POSIX.1'')</nowiki> 
 defined a standard tar file format to be read and written 
 by compliant implementations of 
-'''tar'''(1). 
+[[ManPageBsdtar1]]. 
 This format is often called the 
 "ustar" 
 format, after the magic value used 
@@ -359,9 +359,9 @@ sign, a value string, and a new line.
 The decimal number indicates the length of the entire line, including the 
 initial length field and the trailing newline. 
 An example of such a field is: 
-```text 
-25 ctime=1084839148.1212\en 
-``` 
+```text
+25 ctime=1084839148.1212\n 
+```
 Keys in all lowercase are standard keys. 
 Vendors can add their own keys by prefixing them with an all uppercase 
 vendor name and a period. 
@@ -616,9 +616,9 @@ list of files to be renamed or symlinked after extraction; this was
 originally used to support long names. 
 The contents of this record 
 are a text description of the operations to be done, in the form 
-"Rename %s to %s\en" 
+"Rename %s to %s\n" 
 or 
-"Symlink %s to %s\en ;" 
+"Symlink %s to %s\n ;" 
 in either case, both 
 filenames are escaped using K&R C syntax. 
 Due to security concerns, "N" records are now generally ignored 
@@ -876,9 +876,9 @@ POSIX pax interchange format global extensions.
 POSIX pax interchange format per-file extensions. 
 </dd></dl> 
 == SEE ALSO == 
-'''ar'''(1), 
-'''pax'''(1), 
-'''tar'''(1) 
+[[ar(1)|http://www.freebsd.org/cgi/man.cgi?query=ar&sektion=1]], 
+[[pax(1)|http://www.freebsd.org/cgi/man.cgi?query=pax&sektion=1]], 
+[[ManPageBsdtar1]] 
 == STANDARDS == 
 The 
 '''tar''' 
@@ -886,9 +886,9 @@ utility is no longer a part of POSIX or the Single Unix Standard.
 It last appeared in 
 <nowiki>Version 2 of the Single UNIX Specification (``SUSv2'')</nowiki>. 
 It has been supplanted in subsequent standards by 
-'''pax'''(1). 
+[[pax(1)|http://www.freebsd.org/cgi/man.cgi?query=pax&sektion=1]]. 
 The ustar format is currently part of the specification for the 
-'''pax'''(1) 
+[[pax(1)|http://www.freebsd.org/cgi/man.cgi?query=pax&sektion=1]] 
 utility. 
 The pax interchange file format is new with 
 <nowiki>IEEE Std 1003.1-2001 (``POSIX.1'')</nowiki>. 
@@ -909,7 +909,7 @@ and formed the basis of
 (circa 1988). 
 Joerg Shilling's 
 '''star''' 
-archiver is another open-source (GPL) archiver (originally developed 
+archiver is another open-source (CDDL) archiver (originally developed 
 circa 1985) which features complete support for pax interchange 
 format. 
 

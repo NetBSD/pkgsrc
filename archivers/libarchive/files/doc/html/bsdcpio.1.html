@@ -1,5 +1,5 @@
-<!-- Creator     : groff version 1.21 -->
-<!-- CreationDate: Sat Feb  9 12:24:09 2013 -->
+<!-- Creator     : groff version 1.22.3 -->
+<!-- CreationDate: Sun Jun 19 19:54:10 2016 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -29,12 +29,12 @@ to and from archives</p>
 
 <p style="margin-top: 1em"><b>SYNOPSIS</b></p>
 
-<p style="margin-left:13%;"><b>cpio</b> {<b>&minus;i</b>}
+<p style="margin-left:13%;"><b>cpio &minus;i</b>
 [<i>options</i>] [<i>pattern&nbsp;...</i>]
 [<i>&lt;&nbsp;archive</i>] <b><br>
-cpio</b> {<b>&minus;o</b>} [<i>options</i>] <i>&lt;
-name-list</i> [<i>&gt;&nbsp;archive</i>] <b><br>
-cpio</b> {<b>&minus;p</b>} [<i>options</i>] <i>dest-dir &lt;
+cpio &minus;o</b> [<i>options</i>] <i>&lt; name-list</i>
+[<i>&gt;&nbsp;archive</i>] <b><br>
+cpio &minus;p</b> [<i>options</i>] <i>dest-dir &lt;
 name-list</i></p>
 
 <p style="margin-top: 1em"><b>DESCRIPTION</b></p>
@@ -190,8 +190,8 @@ description.</p>
 
 <p style="margin-left:17%;">(i and p mode only) Disable
 security checks during extraction or copying. This allows
-extraction via symbolic links and path names containing
-&rsquo;..&rsquo; in the name.</p>
+extraction via symbolic links, absolute paths, and path
+names containing &rsquo;..&rsquo; in the name.</p>
 
 <p style="margin-top: 1em"><b>&minus;J</b>,
 <b>&minus;&minus;xz</b></p>
@@ -227,6 +227,13 @@ copying.</p>
 resulting archive with lrzip(1). In input mode, this option
 is ignored.</p>
 
+<p style="margin-top: 1em"><b>&minus;&minus;lz4</b></p>
+
+<p style="margin-left:17%; margin-top: 1em">(o mode only)
+Compress the archive with lz4-compatible compression before
+writing it. In input mode, this option is ignored; lz4
+compression is recognized automatically on input.</p>
+
 <p style="margin-top: 1em"><b>&minus;&minus;lzma</b></p>
 
 <p style="margin-left:17%; margin-top: 1em">(o mode only)
@@ -239,6 +246,15 @@ compression is recognized automatically on input.</p>
 <p style="margin-left:17%; margin-top: 1em">(o mode only)
 Compress the resulting archive with lzop(1). In input mode,
 this option is ignored.</p>
+
+<p style="margin-top: 1em"><b>&minus;&minus;passphrase</b>
+<i>passphrase</i></p>
+
+<p style="margin-left:17%;">The <i>passphrase</i> is used
+to extract or create an encrypted archive. Currently, zip is
+only a format that <b>cpio</b> can handle encrypted
+archives. You shouldn&rsquo;t use this option unless you
+realize how insecure use of this option is.</p>
 
 <p style="margin-top: 1em"><b>&minus;m</b>,
 <b>&minus;&minus;preserve-modification-time</b></p>
@@ -500,7 +516,7 @@ systems. The cpio archive formats cannot support files over
 variant, which can support files up to 8 gigabytes.</p>
 
 <p style="margin-left:6%; margin-top: 1em">BSD
-October&nbsp;7, 2012 BSD</p>
+September&nbsp;16, 2014 BSD</p>
 <hr>
 </body>
 </html>
