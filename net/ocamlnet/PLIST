@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2016/05/05 16:04:21 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.13 2016/06/20 15:36:04 jaapb Exp $
 ${OCAML_SITELIB}/equeue/META
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/equeue/equeue.a
 ${OCAML_SITELIB}/equeue/equeue.cma
@@ -704,20 +704,3 @@ ${OCAML_SITELIB}/shell/shell_sys.cmi
 ${OCAML_SITELIB}/shell/shell_sys.mli
 ${OCAML_SITELIB}/shell/shell_uq.cmi
 ${OCAML_SITELIB}/shell/shell_uq.mli
-@exec %D/libexec/ocaml-findlib-register add %D/${OCAML_SITELIB}/equeue
-@exec %D/libexec/ocaml-findlib-register add %D/${OCAML_SITELIB}/netcgi2-plex
-@exec %D/libexec/ocaml-findlib-register add %D/${OCAML_SITELIB}/netplex
-@exec %D/libexec/ocaml-findlib-register add %D/${OCAML_SITELIB}/netclient
-@exec %D/libexec/ocaml-findlib-register add %D/${OCAML_SITELIB}/netshm
-@exec %D/libexec/ocaml-findlib-register add %D/${OCAML_SITELIB}/rpc
-@exec %D/libexec/ocaml-findlib-register add %D/${OCAML_SITELIB}/shell
-@exec %D/libexec/ocaml-findlib-register add %D/${OCAML_SITELIB}/netcamlbox
-@exec %D/libexec/ocaml-findlib-register add %D/${OCAML_SITELIB}/netstring
-@exec %D/libexec/ocaml-findlib-register add %D/${OCAML_SITELIB}/rpc-auth-local
-@exec %D/libexec/ocaml-findlib-register add %D/${OCAML_SITELIB}/netcgi2
-@exec %D/libexec/ocaml-findlib-register add %D/${OCAML_SITELIB}/netmulticore
-@exec %D/libexec/ocaml-findlib-register add %D/${OCAML_SITELIB}/netsys
-@exec %D/libexec/ocaml-findlib-register add %D/${OCAML_SITELIB}/rpc-generator
-@exec %D/libexec/ocaml-findlib-register add %D/${OCAML_SITELIB}/netunidata
-@exec %D/libexec/ocaml-findlib-register add %D/${OCAML_SITELIB}/netzip
-${PLIST.xti}@exec %D/libexec/ocaml-findlib-register add %D/${OCAML_SITELIB}/rpc-xti
