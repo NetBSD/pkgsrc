@@ -1,9 +1,9 @@
-$NetBSD: patch-ai,v 1.6 2015/09/01 13:34:47 kim Exp $
+$NetBSD: patch-ai,v 1.7 2016/06/20 16:04:44 ryoon Exp $
 
 This glues in the code from patch-am (see also path-al and patch-an).
 
---- os.h.orig	2015-06-28 21:22:56.000000000 +0000
-+++ os.h	2015-09-01 12:37:29.000000000 +0000
+--- os.h.orig	2016-06-19 19:41:03.000000000 +0000
++++ os.h
 @@ -71,9 +71,6 @@
  # undef exit
  #endif /* sun */
@@ -14,23 +14,30 @@ This glues in the code from patch-am (see also path-al and patch-an).
  #ifndef HAVE_STRERROR
  /* No macros, please */
  #undef strerror
-@@ -250,10 +247,17 @@
+@@ -250,9 +247,15 @@ extern int errno;
  #endif
  
  #if defined(UTMPOK) || defined(BUGGYGETLOGIN)
--# if defined(SVR4) && !defined(DGUX) && !defined(__hpux)
-+# if (defined(SVR4) && !defined(DGUX) && !defined(__hpux)) \
+-# if defined(SVR4) && !defined(DGUX) && !defined(__hpux) && !defined(linux)
++# if defined(SVR4) && !defined(DGUX) && !defined(__hpux) && !defined(linux) \
 +  || (defined(__NetBSD_Version__) && (__NetBSD_Version__ >= 106050000)) \
 +  || (defined(__DragonFly__) && (__DragonFly_version >= 200902))
  #  include <utmpx.h>
--#  ifdef UTMPX_FILE /* GNU extension */
-+#  if defined(UTMPX_FILE) /* GNU extension */
- #   define UTMPFILE	UTMPX_FILE
-+#  elif defined(_PATH_UTMPX)
-+#   define UTMPFILE	_PATH_UTMPX
-+#  endif
-+#  if defined(__NetBSD__)
-+#   define NetBSD_UTMP
- #  endif
++#if defined(UTMPX_FILE) /* GNU extension */
+ #  define UTMPFILE	UTMPX_FILE
++#elif defined(_PATH_UTMPX)
++#  define UTMPFILE	_PATH_UTMPX
++#endif
  #  define utmp		utmpx
  #  define getutent	getutxent
+ #  define getutid	getutxid
+@@ -261,6 +264,9 @@ extern int errno;
+ #  define setutent	setutxent
+ #  define endutent	endutxent
+ #  define ut_time	ut_xtime
++#  if defined(__NetBSD__)
++#    define NetBSD_UTMP
++#  endif
+ # else /* SVR4 */
+ #  include <utmp.h>
+ # endif /* SVR4 */
