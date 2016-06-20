@@ -19,55 +19,55 @@ Streaming Archive Library (libarchive, -larchive)
 == SYNOPSIS == 
 '''<nowiki>#include <archive.h></nowiki>''' 
 <br> 
-'''struct archive *''' 
+''struct archive *'' 
 <br> 
 '''archive_read_disk_new'''(''void''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_read_disk_set_symlink_logical'''(''struct archive *''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_read_disk_set_symlink_physical'''(''struct archive *''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_read_disk_set_symlink_hybrid'''(''struct archive *''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_read_disk_gname'''(''struct archive *'', ''gid_t''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_read_disk_uname'''(''struct archive *'', ''uid_t''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_read_disk_set_gname_lookup'''(''struct archive *'', ''void *'', ''const char *(*lookup)(void *, gid_t)'', ''void (*cleanup)(void *)''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_read_disk_set_uname_lookup'''(''struct archive *'', ''void *'', ''const char *(*lookup)(void *, uid_t)'', ''void (*cleanup)(void *)''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_read_disk_set_standard_lookup'''(''struct archive *''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_read_disk_entry_from_file'''(''struct archive *'', ''struct archive_entry *'', ''int fd'', ''const struct stat *''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_read_close'''(''struct archive *''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_read_finish'''(''struct archive *''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_read_free'''(''struct archive *''); 
 == DESCRIPTION == 
@@ -121,16 +121,16 @@ object is destroyed or when new lookup functions are registered.
 This convenience function installs a standard set of user 
 and group name lookup functions. 
 These functions use 
-'''getpwuid'''(3) 
+[[getpwuid(3)|http://www.freebsd.org/cgi/man.cgi?query=getpwuid&sektion=3]] 
 and 
-'''getgrgid'''(3) 
+[[getgrgid(3)|http://www.freebsd.org/cgi/man.cgi?query=getgrgid&sektion=3]] 
 to convert ids to names, defaulting to NULL if the names cannot 
 be looked up. 
 These functions also implement a simple memory cache to reduce 
 the number of calls to 
-'''getpwuid'''(3) 
+[[getpwuid(3)|http://www.freebsd.org/cgi/man.cgi?query=getpwuid&sektion=3]] 
 and 
-'''getgrgid'''(3). 
+[[getgrgid(3)|http://www.freebsd.org/cgi/man.cgi?query=getgrgid&sektion=3]]. 
 </dd><dt>'''archive_read_disk_entry_from_file'''()</dt><dd> 
 Populates a 
 '''struct archive_entry''' 
@@ -138,7 +138,7 @@ object with information about a particular file.
 The 
 '''archive_entry''' 
 object must have already been created with 
-'''archive_entry_new'''(3) 
+[[ManPagerchiventryew3]] 
 and at least one of the source path or path fields must already be set. 
 (If both are set, the source path will be used.) 
 
@@ -179,7 +179,7 @@ if it was not invoked manually, then releases all resources.
 More information about the 
 ''struct'' archive 
 object and the overall design of the library can be found in the 
-'''libarchive'''(3) 
+[[ManPageibarchive3]] 
 overview. 
 == EXAMPLE == 
 The following illustrates basic usage of the library by 
@@ -243,12 +243,12 @@ and
 '''archive_error_string'''() 
 functions. 
 == SEE ALSO == 
-'''archive_read'''(3), 
-'''archive_util'''(3), 
-'''archive_write'''(3), 
-'''archive_write_disk'''(3), 
-'''tar'''(1), 
-'''libarchive'''(3) 
+[[ManPagerchiveead3]], 
+[[ManPagerchivetil3]], 
+[[ManPagerchiverite3]], 
+[[ManPagerchiveriteisk3]], 
+[[ManPageBsdtar1]], 
+[[ManPageibarchive3]] 
 == HISTORY == 
 The 
 '''libarchive''' 
@@ -269,9 +269,9 @@ Tim Kientzle  &lt;kientzle@FreeBSD.org.&gt;
 The 
 "standard" 
 user name and group name lookup functions are not the defaults because 
-'''getgrgid'''(3) 
+[[getgrgid(3)|http://www.freebsd.org/cgi/man.cgi?query=getgrgid&sektion=3]] 
 and 
-'''getpwuid'''(3) 
+[[getpwuid(3)|http://www.freebsd.org/cgi/man.cgi?query=getpwuid&sektion=3]] 
 are sometimes too large for particular applications. 
 The current design allows the application author to use a more 
 compact implementation when appropriate. 
@@ -289,7 +289,7 @@ to look up such information.
 
 This API should provide a set of methods for walking a directory tree. 
 That would make it a direct parallel of the 
-'''archive_read'''(3) 
+[[ManPagerchiveead3]] 
 API. 
 When such methods are implemented, the 
 "hybrid" 

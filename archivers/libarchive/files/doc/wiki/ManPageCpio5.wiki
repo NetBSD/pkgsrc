@@ -17,7 +17,7 @@ The header record stores a series of integer values that generally
 follow the fields in 
 ''struct'' stat. 
 (See 
-'''stat'''(2) 
+[[stat(2)|http://www.freebsd.org/cgi/man.cgi?query=stat&sektion=2]] 
 for details.) 
 The variants differ primarily in how they store those integers 
 (binary, octal, or hexadecimal). 
@@ -241,8 +241,8 @@ entries in cpio archives.
 
 XXX Others? XXX 
 == SEE ALSO == 
-'''cpio'''(1), 
-'''tar'''(5) 
+[[ManPageBsdcpio1]], 
+[[ManPageTar5]] 
 == STANDARDS == 
 The 
 '''cpio''' 
@@ -250,9 +250,9 @@ utility is no longer a part of POSIX or the Single Unix Standard.
 It last appeared in 
 <nowiki>Version 2 of the Single UNIX Specification (``SUSv2'')</nowiki>. 
 It has been supplanted in subsequent standards by 
-'''pax'''(1). 
+[[pax(1)|http://www.freebsd.org/cgi/man.cgi?query=pax&sektion=1]]. 
 The portable ASCII format is currently part of the specification for the 
-'''pax'''(1) 
+[[pax(1)|http://www.freebsd.org/cgi/man.cgi?query=pax&sektion=1]] 
 utility. 
 == HISTORY == 
 The original cpio utility was written by Dick Haight 
