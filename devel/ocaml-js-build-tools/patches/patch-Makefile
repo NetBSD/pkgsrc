@@ -1,0 +1,23 @@
+$NetBSD: patch-Makefile,v 1.1 2016/06/20 14:50:12 jaapb Exp $
+
+Install into the proper directory
+--- Makefile.orig	2016-05-09 12:01:24.000000000 +0000
++++ Makefile
+@@ -2,7 +2,7 @@
+ 
+ SETUP := setup.exe
+ NAME := js-build-tools
+-PREFIX = $(shell grep ^prefix= setup.data | cut -d\" -f 2)
++#PREFIX = $(shell grep ^prefix= setup.data | cut -d\" -f 2)
+ 
+ # Default rule
+ default: build
+@@ -30,7 +30,7 @@ $(NAME).install: install.ml setup.log se
+ 	ocaml -I "$(OCAML_TOPLEVEL_PATH)" install.ml
+ 
+ install: $(NAME).install
+-	opam-installer -i --prefix $(PREFIX) $(NAME).install
++	opam-installer -i --prefix ${DESTDIR}$(PREFIX) --libdir ${OCAML_SITELIBDIR} $(NAME).install
+ 
+ uninstall: $(NAME).install
+ 	opam-installer -u --prefix $(PREFIX) $(NAME).install
