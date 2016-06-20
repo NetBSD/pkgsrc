@@ -9,15 +9,15 @@ Streaming Archive Library (libarchive, -larchive)
 == SYNOPSIS == 
 '''<nowiki>#include <archive.h></nowiki>''' 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_read_close'''(''struct archive *''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_read_finish'''(''struct archive *''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_read_free'''(''struct archive *''); 
 == DESCRIPTION == 
@@ -40,7 +40,7 @@ Invokes
 '''archive_read_close'''() 
 if it was not invoked manually, then release all resources. 
 Note: In libarchive 1.x, this function was declared to return 
-'''void ,''' 
+''void ,'' 
 which made it impossible to detect certain errors when 
 '''archive_read_close'''() 
 was invoked implicitly from this function. 
@@ -58,11 +58,11 @@ and
 '''archive_error_string'''() 
 functions. 
 == SEE ALSO == 
-'''libarchive'''(3), 
-'''archive_read_new'''(3), 
-'''archive_read_data'''(3), 
-'''archive_read_filter'''(3), 
-'''archive_read_format'''(3), 
-'''archive_read_open'''(3), 
-'''archive_read_set_options'''(3), 
-'''archive_util'''(3) 
+[[ManPageibarchive3]], 
+[[ManPagerchiveeadew3]], 
+[[ManPagerchiveeadata3]], 
+[[ManPagerchiveeadilter3]], 
+[[ManPagerchiveeadormat3]], 
+[[ManPagerchiveeadpen3]], 
+[[ManPagerchiveeadetptions3]], 
+[[ManPagerchivetil3]] 

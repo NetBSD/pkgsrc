@@ -15,8 +15,8 @@ SYNOPSIS
 DESCRIPTION
      Close out the entry just written.	In particular, this writes out the
      final padding required by some formats.  Ordinarily, clients never need
-     to call this, as it is called automatically by
-     archive_write_next_header() and archive_write_close() as needed.
+     to call this, as it is called automatically by archive_write_header() and
+     archive_write_close() as needed.
 
 RETURN VALUES
      This function returns ARCHIVE_OK on success, or one of several non-zero
