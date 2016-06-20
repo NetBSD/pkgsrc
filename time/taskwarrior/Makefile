@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2016/06/20 20:30:42 kamil Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/20 20:37:43 kamil Exp $
 #
 
 DISTNAME=	task-2.5.1
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.taskwarrior.org/download/
 MAINTAINER=	esg@sdf.lonestar.org
 HOMEPAGE=	http://taskwarrior.org/projects/show/taskwarrior/
 COMMENT=	Open source, command-line, TODO list manager
-LICENSE=	gnu-gpl-v2
+LICENSE=	mit
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
