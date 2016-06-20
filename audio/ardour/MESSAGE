@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2016/06/20 08:17:42 kamil Exp $
+
+In order to get additional features available in Ardour, video-timeline and
+video-monitor for soundtracks you need to install:
+
+1) audio/xjadeo       - X JAck viDEo mOnitor
+
+2) multimedia/harvid  - HTTP Ardour Video Daemon
+
+===========================================================================

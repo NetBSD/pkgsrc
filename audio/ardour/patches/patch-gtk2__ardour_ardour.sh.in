@@ -1,0 +1,35 @@
+$NetBSD: patch-gtk2__ardour_ardour.sh.in,v 1.1 2016/06/20 08:17:43 kamil Exp $
+
+Fix ldd(1) parsing on NetBSD:
+
+ * NetBSD
+
+$ ldd /bin/cat
+/bin/cat:
+        -lc.12 => /lib/libc.so.12
+
+ * Linux
+
+$ ldd /usr/bin/cat
+	linux-vdso.so.1 =>  (0x0000726abb373000)
+	libc.so.6 => /lib64/libc.so.6 (0x0000726abafa7000)
+	/lib64/ld-linux-x86-64.so.2 (0x0000726abb374000)
+
+
+--- gtk2_ardour/ardour.sh.in.orig	2016-02-19 01:28:56.000000000 +0000
++++ gtk2_ardour/ardour.sh.in
+@@ -23,7 +23,7 @@ fi
+ 
+ ## Glib atomic test
+ 
+-GLIB=$(ldd @LIBDIR@/ardour-@VERSION@ 2> /dev/null | grep glib-2.0 | sed 's/.*=> \([^ ]*\) .*/\1/')
++GLIB=$(ldd @LIBDIR@/ardour-@VERSION@ 2> /dev/null | grep glib-2.0 | sed 's/.*=> \([^ ]*\)/\1/;s/ .*//')
+ 
+ if [ "$GLIB" = "" ]; then
+ 	echo "WARNING: Could not check your glib-2.0 for mutex locking atomic operations."
+@@ -66,5 +66,3 @@ if [ $# -gt 0 ] ; then
+ fi
+ 
+ exec $GDB @LIBDIR@/ardour-@VERSION@ "$@"
+-
+-
