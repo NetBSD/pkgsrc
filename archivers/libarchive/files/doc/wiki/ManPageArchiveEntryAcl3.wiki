@@ -14,35 +14,35 @@ Streaming Archive Library (libarchive, -larchive)
 == SYNOPSIS == 
 '''<nowiki>#include <archive_entry.h></nowiki>''' 
 <br> 
-'''void''' 
+''void'' 
 <br> 
 '''archive_entry_acl_add_entry'''(''struct archive_entry *a'', ''int type'', ''int permset'', ''int tag'', ''int qualifier'', ''const char *name''); 
 <br> 
-'''void''' 
+''void'' 
 <br> 
 '''archive_entry_acl_add_entry_w'''(''struct archive_entry *a'', ''int type'', ''int permset'', ''int tag'', ''int qualifier'', ''const wchar_t *name''); 
 <br> 
-'''void''' 
+''void'' 
 <br> 
 '''archive_entry_acl_clear'''(''struct archive_entry *a''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_entry_acl_count'''(''struct archive_entry *a'', ''int type''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_entry_acl_next'''(''struct archive_entry *a'', ''int type'', ''int *ret_type'', ''int *ret_permset'', ''int *ret_tag'', ''int *ret_qual'', ''const char **ret_name''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_entry_acl_next_w'''(''struct archive_entry *a'', ''int type'', ''int *ret_type'', ''int *ret_permset'', ''int *ret_tag'', ''int *ret_qual'', ''const wchar_t **ret_name''); 
 <br> 
-'''int''' 
+''int'' 
 <br> 
 '''archive_entry_acl_reset'''(''struct archive_entry *a'', ''int type''); 
 <br> 
-'''const wchar_t *''' 
+''const wchar_t *'' 
 <br> 
 '''archive_entry_acl_text_w'''(''struct archive_entry *a'', ''int flags''); 
 == DESCRIPTION == 
@@ -142,9 +142,9 @@ or
 '''archive_entry_acl_next_w'''(). 
 The function returns either 0, if no non-extended ACLs are found. 
 In this case, the access permissions should be obtained by 
-'''archive_entry_mode'''(3) 
+[[ManPagerchiventryode3]] 
 or set using 
-'''chmod'''(2). 
+[[chmod(2)|http://www.freebsd.org/cgi/man.cgi?query=chmod&sektion=2]]. 
 Otherwise, the function returns the same value as 
 '''archive_entry_acl_count'''(). 
 
@@ -195,8 +195,8 @@ The returned long string is valid until the next call to
 or 
 '''archive_entry_acl_text_w'''(). 
 == SEE ALSO == 
-'''archive'''(3), 
-'''archive_entry'''(3) 
+[[ManPagerchiventry3]] 
+[[ManPageibarchive3]], 
 == BUGS == 
 ARCHIVE_ENTRY_ACL_STYLE_EXTRA_ID 
 and 

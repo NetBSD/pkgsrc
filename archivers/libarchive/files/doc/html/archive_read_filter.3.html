@@ -1,5 +1,5 @@
-<!-- Creator     : groff version 1.21 -->
-<!-- CreationDate: Sat Feb  9 12:24:04 2013 -->
+<!-- Creator     : groff version 1.22.3 -->
+<!-- CreationDate: Sun Jun 19 19:54:07 2016 -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -30,8 +30,11 @@ ARCHIVE_READ_FILTER(3)</p>
 <b>archive_read_support_filter_bzip2</b>,
 <b>archive_read_support_filter_compress</b>,
 <b>archive_read_support_filter_gzip</b>,
+<b>archive_read_support_filter_lz4</b>,
 <b>archive_read_support_filter_lzma</b>,
 <b>archive_read_support_filter_none</b>,
+<b>archive_read_support_filter_rpm</b>,
+<b>archive_read_support_filter_uu</b>,
 <b>archive_read_support_filter_xz</b>,
 <b>archive_read_support_filter_program</b>,
 <b>archive_read_support_filter_program_signature</b> &mdash;
@@ -65,7 +68,22 @@ functions for reading streaming archives</p>
 <p style="margin-left:6%; margin-top: 1em"><i>int</i></p>
 
 
+<p style="margin-left:12%;"><b>archive_read_support_filter_grzip</b>(<i>struct&nbsp;archive&nbsp;*</i>);</p>
+
+<p style="margin-left:6%; margin-top: 1em"><i>int</i></p>
+
+
 <p style="margin-left:12%;"><b>archive_read_support_filter_gzip</b>(<i>struct&nbsp;archive&nbsp;*</i>);</p>
+
+<p style="margin-left:6%; margin-top: 1em"><i>int</i></p>
+
+
+<p style="margin-left:12%;"><b>archive_read_support_filter_lrzip</b>(<i>struct&nbsp;archive&nbsp;*</i>);</p>
+
+<p style="margin-left:6%; margin-top: 1em"><i>int</i></p>
+
+
+<p style="margin-left:12%;"><b>archive_read_support_filter_lz4</b>(<i>struct&nbsp;archive&nbsp;*</i>);</p>
 
 <p style="margin-left:6%; margin-top: 1em"><i>int</i></p>
 
@@ -75,7 +93,22 @@ functions for reading streaming archives</p>
 <p style="margin-left:6%; margin-top: 1em"><i>int</i></p>
 
 
+<p style="margin-left:12%;"><b>archive_read_support_filter_lzop</b>(<i>struct&nbsp;archive&nbsp;*</i>);</p>
+
+<p style="margin-left:6%; margin-top: 1em"><i>int</i></p>
+
+
 <p style="margin-left:12%;"><b>archive_read_support_filter_none</b>(<i>struct&nbsp;archive&nbsp;*</i>);</p>
+
+<p style="margin-left:6%; margin-top: 1em"><i>int</i></p>
+
+
+<p style="margin-left:12%;"><b>archive_read_support_filter_rpm</b>(<i>struct&nbsp;archive&nbsp;*</i>);</p>
+
+<p style="margin-left:6%; margin-top: 1em"><i>int</i></p>
+
+
+<p style="margin-left:12%;"><b>archive_read_support_filter_uu</b>(<i>struct&nbsp;archive&nbsp;*</i>);</p>
 
 <p style="margin-left:6%; margin-top: 1em"><i>int</i></p>
 
@@ -99,9 +132,15 @@ functions for reading streaming archives</p>
 <p style="margin-top: 1em"><b>DESCRIPTION <br>
 archive_read_support_filter_bzip2</b>(),
 <b>archive_read_support_filter_compress</b>(),
+<b>archive_read_support_filter_grzip</b>(),
 <b>archive_read_support_filter_gzip</b>(),
+<b>archive_read_support_filter_lrzip</b>(),
+<b>archive_read_support_filter_lz4</b>(),
 <b>archive_read_support_filter_lzma</b>(),
+<b>archive_read_support_filter_lzop</b>(),
 <b>archive_read_support_filter_none</b>(),
+<b>archive_read_support_filter_rpm</b>(),
+<b>archive_read_support_filter_uu</b>(),
 <b>archive_read_support_filter_xz</b>()</p>
 
 <p style="margin-left:17%;">Enables auto-detection code and
@@ -157,7 +196,7 @@ archive_read_data(3), archive_read_format(3),
 archive_read_format(3)</p>
 
 <p style="margin-left:6%; margin-top: 1em">BSD
-February&nbsp;2, 2012 BSD</p>
+August&nbsp;14, 2014 BSD</p>
 <hr>
 </body>
 </html>
