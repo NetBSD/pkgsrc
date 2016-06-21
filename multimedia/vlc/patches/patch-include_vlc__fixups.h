@@ -1,13 +1,13 @@
-$NetBSD: patch-include_vlc__fixups.h,v 1.2 2015/10/25 11:00:18 wiz Exp $
+$NetBSD: patch-include_vlc__fixups.h,v 1.3 2016/06/21 17:58:05 joerg Exp $
 
 on NetBSD-current, just define "uselocale", nothing else
 fixes build
 
-static_assert: a C compiler is used to detect if this symbol
-exists in assert.h, but the header file is included by a c++
-compiler too.
+static_assert: Assume that a compiler in C11 or C++11 frontend mode
+has the _Static_assert keyword, but define the macro if it is missing
+from the headers.
 
---- include/vlc_fixups.h.orig	2015-02-17 09:07:37.000000000 +0000
+--- include/vlc_fixups.h.orig	2015-04-13 19:54:35.000000000 +0000
 +++ include/vlc_fixups.h
 @@ -218,16 +218,28 @@ int posix_memalign (void **, size_t, siz
  
@@ -38,7 +38,7 @@ compiler too.
  static inline void freelocale(locale_t loc)
  {
      (void)loc;
-@@ -238,8 +250,9 @@ static inline locale_t newlocale(int mas
+@@ -238,9 +250,12 @@ static inline locale_t newlocale(int mas
      return NULL;
  }
  #endif
@@ -46,6 +46,9 @@ compiler too.
  
 -#if !defined (HAVE_STATIC_ASSERT)
 +#if !defined (static_assert)
++# if !(__STDC_VERSION__ - 0 >= 201112L || __cplusplus >= 201103L)
  # define _Static_assert(x, s) ((void) sizeof (struct { unsigned:-!(x); }))
++# endif
  # define static_assert _Static_assert
  #endif
+ 
