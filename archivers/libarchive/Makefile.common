@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2016/06/20 17:28:33 joerg Exp $
+# $NetBSD: Makefile.common,v 1.6 2016/06/21 12:23:01 joerg Exp $
 # used by archivers/bsdtar/Makefile
 # used by archivers/libarchive/Makefile
 
@@ -17,3 +17,4 @@ CONFIGURE_ARGS+=	--without-expat
 CONFIGURE_ARGS+=	--without-lzo2
 CONFIGURE_ARGS+=	--without-nettle
 CONFIGURE_ARGS+=	--without-xml2
+CONFIGURE_ARGS+=	--disable-maintainer-mode
