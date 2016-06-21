@@ -14,7 +14,7 @@ The pkgsrc Developers
 
 Copyright   1994-2016 The NetBSD Foundation, Inc
 
-$NetBSD: pkgsrc.xml,v 1.29 2016/05/06 17:26:34 jnemeth Exp $
+$NetBSD: pkgsrc.xml,v 1.30 2016/06/11 18:14:42 rillig Exp $
 
 Abstract
 
@@ -195,8 +195,9 @@ II. The pkgsrc developer's guide
         12.3. Code snippets
 
             12.3.1. Adding things to a list
-            12.3.2. Passing variables to a shell command
-            12.3.3. Quoting guideline
+            12.3.2. Echoing a string exacty as-is
+            12.3.3. Passing CFLAGS to GNU configure scripts
+            12.3.4. Handling possibly empty variables
 
     13. PLIST issues
 
@@ -287,7 +288,6 @@ II. The pkgsrc developer's guide
         18.1. Tools for pkgsrc builds
         18.2. Tools needed by packages
         18.3. Tools provided by platforms
-        18.4. Questions regarding the tools
 
     19. Making your package work
 
@@ -2873,8 +2873,9 @@ Table of Contents
     12.3. Code snippets
 
         12.3.1. Adding things to a list
-        12.3.2. Passing variables to a shell command
-        12.3.3. Quoting guideline
+        12.3.2. Echoing a string exacty as-is
+        12.3.3. Passing CFLAGS to GNU configure scripts
+        12.3.4. Handling possibly empty variables
 
 13. PLIST issues
 
@@ -2965,7 +2966,6 @@ Table of Contents
     18.1. Tools for pkgsrc builds
     18.2. Tools needed by packages
     18.3. Tools provided by platforms
-    18.4. Questions regarding the tools
 
 19. Making your package work
 
@@ -3858,8 +3858,9 @@ Table of Contents
 12.3. Code snippets
 
     12.3.1. Adding things to a list
-    12.3.2. Passing variables to a shell command
-    12.3.3. Quoting guideline
+    12.3.2. Echoing a string exacty as-is
+    12.3.3. Passing CFLAGS to GNU configure scripts
+    12.3.4. Handling possibly empty variables
 
 Pkgsrc consists of many Makefile fragments, each of which forms a well-defined
 part of the pkgsrc system. Using the make(1) system as a programming language
@@ -3958,32 +3959,24 @@ Strings and two types of lists.
 
 12.3. Code snippets
 
-This section presents you with some code snippets you should use in your own
-code. If you don't find anything appropriate here, you should test your code
-and add it here.
-
 12.3.1. Adding things to a list
 
-STRING=                 foo * bar `date`
-INT_LIST=               # empty
-ANOTHER_INT_LIST=       apache-[0-9]*:../../www/apache
-EXT_LIST=               # empty
-ANOTHER_EXT_LIST=       a=b c=d
+When adding a string that possibly contains whitespace or quotes to a list
+(example 1), it must be quoted using the :Q modifier.
 
-INT_LIST+=              ${STRING}               # 1
-INT_LIST+=              ${ANOTHER_INT_LIST}     # 2
-EXT_LIST+=              ${STRING:Q}             # 3
-EXT_LIST+=              ${ANOTHER_EXT_LIST}     # 4
+When adding another list to a list (example 2), it must not be quoted, since
+its elements are already quoted.
 
-When you add a string to an external list (example 3), it must be quoted. In
-all other cases, you must not add a quoting level. You must not merge internal
-and external lists, unless you are sure that all entries are correctly
-interpreted in both lists.
+STRING=         foo * bar `date`
+LIST=           # empty
+ANOTHER_LIST=   a=b c=d
 
-12.3.2. Passing variables to a shell command
+LIST+=          ${STRING:Q}       # 1
+LIST+=          ${ANOTHER_LIST}   # 2
 
-Sometimes you may want to print an arbitrary string. There are many ways to get
-it wrong and only few that can handle every nastiness.
+12.3.2. Echoing a string exacty as-is
+
+Echoing a string containing special characters needs special work.
 
 STRING=         foo bar <    > * `date` $$HOME ' "
 EXAMPLE_ENV=    string=${STRING:Q} x=multiple\ quoted\ words
@@ -3992,83 +3985,81 @@ all:
         echo ${STRING}                  # 1
         echo ${STRING:Q}                # 2
         printf '%s\n' ${STRING:Q}''     # 3
-        env ${EXAMPLE_ENV} sh -c 'echo "$$string"; echo "$$x"' # 4
+        env ${EXAMPLE_ENV} sh -c 'echo "$$string"; echo "$$x"'   # 4
 
 Example 1 leads to a syntax error in the shell, as the characters are just
 copied.
 
-Example 2 can handle all strings, except those starting with a dash or those
+Example 2 quotes the string so that the shell interprets it correctly. But the
+echo command may additionally interpret strings with a leading dash or those
 containing backslashes.
 
-Example 3 can handle arbitrary strings.
+Example 3 can handle arbitrary strings, since printf(1) only interprets the
+format string, but not the next argument.
 
-In example 4, the EXT_LIST does not need to be quoted because the quoting has
-already been done when adding elements to the list.
+In example 4, the EXAMPLE_ENV does not need to be quoted because the quoting
+has already been done when adding elements to the list.
 
-12.3.3. Quoting guideline
+12.3.3. Passing CFLAGS to GNU configure scripts
 
-There are many possible sources of wrongly quoted variables. This section lists
-some of the commonly known ones.
+When passing CFLAGS or similar variables to a GNU-style configure script
+(especially those that call other configure scripts), it must not have leading
+or trailing whitespace, since otherwise the configure script gets confused. To
+trim leading and trailing whitespace, use the :M modifier, as in the following
+example:
 
-  * Whenever you use the value of a list, think about what happens to leading
-    or trailing whitespace. If the list is a well-formed shell expression, you
-    can apply the :M* modifier to strip leading and trailing whitespace from
-    each word. The :M operator first splits its argument according to the rules
-    of the shell, and then creates a new list consisting of all words that
-    match the shell glob expression *, that is: all. One class of situations
-    where this is needed is when adding a variable like CPPFLAGS to
-    CONFIGURE_ARGS. If the configure script invokes other configure scripts, it
-    strips the leading and trailing whitespace from the variable and then
-    passes it to the other configure scripts. But these configure scripts
-    expect the (child) CPPFLAGS variable to be the same as the parent CPPFLAGS.
-    That's why we better pass the CPPFLAGS value properly trimmed. And here is
-    how we do it:
+CPPFLAGS=               # empty
+CPPFLAGS+=              -Wundef -DPREFIX=\"${PREFIX}\"
+CPPFLAGS+=              ${MY_CPPFLAGS}
 
-    CPPFLAGS=               # empty
-    CPPFLAGS+=              -Wundef -DPREFIX=\"${PREFIX:Q}\"
-    CPPFLAGS+=              ${MY_CPPFLAGS}
+CONFIGURE_ARGS+=        CPPFLAGS=${CPPFLAGS:M*:Q}
 
-    CONFIGURE_ARGS+=        CPPFLAGS=${CPPFLAGS:M*:Q}
+all:
+        echo x${CPPFLAGS:Q}x            # leading and trailing whitespace
+        echo x${CONFIGURE_ARGS:Q}x      # properly trimmed
 
-    all:
-            echo x${CPPFLAGS:Q}x            # leading and trailing whitespace
-            echo x${CONFIGURE_ARGS}x        # properly trimmed
+In this example, CPPFLAGS has both leading and trailing whitespace because the
++= operator always adds a space.
 
-  * The example above contains one bug: The ${PREFIX} is a properly quoted
-    shell expression, but there is the C compiler after it, which also expects
-    a properly quoted string (this time in C syntax). The version above is
-    therefore only correct if ${PREFIX} does not have embedded backslashes or
-    double quotes. If you want to allow these, you have to add another layer of
-    quoting to each variable that is used as a C string literal. You cannot use
-    the :Q operator for it, as this operator only works for the shell.
+12.3.4. Handling possibly empty variables
 
-  * Whenever a variable can be empty, the :Q operator can have surprising
-    results. Here are two completely different cases which can be solved with
-    the same trick.
+When a possibly empty variable is used in a shell program, it may lead to a
+syntax error.
 
-    EMPTY=                  # empty
-    empty_test:
-            for i in a ${EMPTY:Q} c; do \
-                echo "$$i"; \
-            done
+EGFILES=        # empty
 
-    for_test:
-    .for i in a:\ a:\test.txt
-            echo ${i:Q}
-            echo "foo"
-    .endfor
+install-examples:   # produces a syntax error in the shell
+        for egfile in ${EGFILES}; do            \
+                echo "Installing $$egfile";     \
+        done
 
-    The first example will only print two of the three lines we might have
-    expected. This is because ${EMPTY:Q} expands to the empty string, which the
-    shell cannot see. The workaround is to write ${EMPTY:Q}"". This pattern can
-    be often found as ${TEST} -z ${VAR:Q} or as ${TEST} -f ${FNAME:Q} (both of
-    these are wrong).
+The shell only sees the text for egfile in ; do, since ${EGFILES} is replaced
+with an empty string by make(1). To fix this syntax error, use one of the
+snippets below.
 
-    The second example will only print three lines instead of four. The first
-    line looks like a:\ echo foo. This is because the backslash of the value a:
-    \ is interpreted as a line-continuation by make(1), which makes the second
-    line the arguments of the echo(1) command from the first line. To avoid
-    this, write ${i:Q}"".
+EMPTY=          # empty
+
+install-examples:
+        for egfile in ${EGFILES} ""; do         \
+                [ -n "$$egfile" ] || continue;  \
+                echo "Installing $$egfile";     \
+        done
+
+In this case, an empty string is appended to the iteration list (to prevent the
+syntax error) and filtered out later.
+
+EGFILES=        # empty
+
+install-examples:
+.for egfile in ${EGFILES}
+        echo "Installing ${egfile}"
+.endfor
+
+This variant only works when EGFILES does not contain filenames with spaces,
+since the .for loop splits on simple whitespace.
+
+To have a shell command test whether a make variable is empty, use the
+following code: ${TEST} -z ${POSSIBLY_EMPTY:Q}"".
 
 Chapter 13. PLIST issues
 
@@ -6033,7 +6024,6 @@ Table of Contents
 18.1. Tools for pkgsrc builds
 18.2. Tools needed by packages
 18.3. Tools provided by platforms
-18.4. Questions regarding the tools
 
 The USE_TOOLS definition is used both internally by pkgsrc and also for
 individual packages to define what commands are needed for building a package
@@ -6092,26 +6082,6 @@ TOOLS_PLATFORM.bzcat?=          /usr/bin/bzip2 -cd
 .endif
 
 TOOLS_PLATFORM.true?=           true                    # shell builtin
-
-18.4. Questions regarding the tools
-
-18.4.1. How do I add a new tool?
-18.4.2. How do I get a list of all available tools?
-18.4.3. How can I get a list of all the tools that a package is using while
-    being built? I want to know whether it uses sed or not.
-
-18.4.1. How do I add a new tool?
-
-        TODO
-
-18.4.2. How do I get a list of all available tools?
-
-        TODO
-
-18.4.3. How can I get a list of all the tools that a package is using while
-        being built? I want to know whether it uses sed or not.
-
-        Currently, you can't. (TODO: But I want to be able to do it.)
 
 Chapter 19. Making your package work
 
@@ -6724,12 +6694,13 @@ in. Please mention that the distfiles were compared and what was found in your
 commit message.
 
 Then, the correct way to work around this is to set DIST_SUBDIR to a unique
-directory name, usually based on PKGNAME_NOREV. All DISTFILES and PATCHFILES
-for this package will be put in that subdirectory of the local distfiles
-directory. (See Section 19.1.10, "How to handle incrementing versions when
-fixing an existing package" for more details.) In case this happens more often,
-PKGNAME can be used (thus including the nbX suffix) or a date stamp can be
-appended, like ${PKGNAME_NOREV}-YYYYMMDD.
+directory name, usually based on PKGNAME_NOREV (but take care with python or
+ruby packages, where PKGNAME includes a variable prefix). All DISTFILES and
+PATCHFILES for this package will be put in that subdirectory of the local
+distfiles directory. (See Section 19.1.10, "How to handle incrementing versions
+when fixing an existing package" for more details.) In case this happens more
+often, PKGNAME can be used (thus including the nbX suffix) or a date stamp can
+be appended, like ${PKGNAME_NOREV}-YYYYMMDD.
 
 DIST_SUBDIR is also used when a distfile's name does not contain a version and
 the distfile is apt to change. In cases where the likelihood of this is very
@@ -7916,12 +7887,12 @@ pkgsrc-users mailing list.
 22.6. What does ${MASTER_SITE_SOURCEFORGE:=package/} mean? I don't understand
       the := inside it.
 
-      The := is not really an assignment operator, like you might expect at
-      first sight. Instead, it is a degenerate form of ${LIST:old_string=
-      new_string}, which is documented in the make(1) man page and which you
-      may have seen as in ${SRCS:.c=.o}. In the case of MASTER_SITE_*,
-      old_string is the empty string and new_string is package/. That's where
-      the : and the = fall together.
+      The := is not really an assignment operator, although it looks like it.
+      Instead, it is a degenerate form of ${LIST:old_string=new_string}, which
+      is documented in the make(1) man page and which is commonly used in the
+      form ${SRCS:.c=.o}. In the case of MASTER_SITE_*, old_string is the empty
+      string and new_string is package/. That's where the : and the = fall
+      together.
 
 22.7. Which mailing lists are there for package developers?
 
