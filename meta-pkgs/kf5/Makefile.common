@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2016/05/25 23:13:12 markd Exp $
+# $NetBSD: Makefile.common,v 1.2 2016/06/21 17:59:07 joerg Exp $
 # used by misc/attica-qt5/Makefile
 # used by sysutils/baloo5/Makefile
 # used by x11/frameworkintegration/Makefile
@@ -78,3 +78,12 @@ CMAKE_ARGS+=	-DKDE_INSTALL_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
 
 pre-configure:
 	${MKDIR} ${WRKSRC}/_KDE_build
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "NetBSD"
+# Work-around bad use-warning check in GNU ld 2.26
+# /usr/lib/librpcsvc.so.1: warning: warning: this program uses xdr_peername(), which is deprecated and buggy.
+# is triggered, even though the current linker output contains
+# no references to it.
+BUILDLINK_TRANSFORM+=	rm:-Wl,--fatal-warnings
+.endif
