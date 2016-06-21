@@ -31,7 +31,7 @@
       </h3>
 </div></div>
 <div><p class="copyright">Copyright © 1994-2016 The NetBSD Foundation, Inc</p></div>
-<div><p class="pubdate">$NetBSD: pkgsrc.xml,v 1.29 2016/05/06 17:26:34 jnemeth Exp $</p></div>
+<div><p class="pubdate">$NetBSD: pkgsrc.xml,v 1.30 2016/06/11 18:14:42 rillig Exp $</p></div>
 <div><div class="abstract">
 <p class="title"><b>Abstract</b></p>
 <p>pkgsrc is a centralized package management system for
@@ -209,8 +209,9 @@ builds)</a></span></dt>
 <dt><span class="sect1"><a href="#makefile.code">12.3. Code snippets</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#adding-to-list">12.3.1. Adding things to a list</a></span></dt>
-<dt><span class="sect2"><a href="#passing-variable-to-shell">12.3.2. Passing variables to a shell command</a></span></dt>
-<dt><span class="sect2"><a href="#quoting-guideline">12.3.3. Quoting guideline</a></span></dt>
+<dt><span class="sect2"><a href="#echo-literal">12.3.2. Echoing a string exacty as-is</a></span></dt>
+<dt><span class="sect2"><a href="#cflags-gnu-configure">12.3.3. Passing <code class="varname">CFLAGS</code> to GNU configure scripts</a></span></dt>
+<dt><span class="sect2"><a href="#empty-variables">12.3.4. Handling possibly empty variables</a></span></dt>
 </dl></dd>
 </dl></dd>
 <dt><span class="chapter"><a href="#plist">13. PLIST issues</a></span></dt>
@@ -301,7 +302,6 @@ builds)</a></span></dt>
 <dt><span class="sect1"><a href="#pkgsrc-tools">18.1. Tools for pkgsrc builds</a></span></dt>
 <dt><span class="sect1"><a href="#package-tools">18.2. Tools needed by packages</a></span></dt>
 <dt><span class="sect1"><a href="#platform-tools">18.3. Tools provided by platforms</a></span></dt>
-<dt><span class="sect1"><a href="#tools.questions">18.4. Questions regarding the tools</a></span></dt>
 </dl></dd>
 <dt><span class="chapter"><a href="#fixes">19. Making your package work</a></span></dt>
 <dd><dl>
@@ -3334,8 +3334,9 @@ anymore, you can remove that file and run <span class="command"><strong>cvs -q u
 <dt><span class="sect1"><a href="#makefile.code">12.3. Code snippets</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#adding-to-list">12.3.1. Adding things to a list</a></span></dt>
-<dt><span class="sect2"><a href="#passing-variable-to-shell">12.3.2. Passing variables to a shell command</a></span></dt>
-<dt><span class="sect2"><a href="#quoting-guideline">12.3.3. Quoting guideline</a></span></dt>
+<dt><span class="sect2"><a href="#echo-literal">12.3.2. Echoing a string exacty as-is</a></span></dt>
+<dt><span class="sect2"><a href="#cflags-gnu-configure">12.3.3. Passing <code class="varname">CFLAGS</code> to GNU configure scripts</a></span></dt>
+<dt><span class="sect2"><a href="#empty-variables">12.3.4. Handling possibly empty variables</a></span></dt>
 </dl></dd>
 </dl></dd>
 <dt><span class="chapter"><a href="#plist">13. PLIST issues</a></span></dt>
@@ -3426,7 +3427,6 @@ anymore, you can remove that file and run <span class="command"><strong>cvs -q u
 <dt><span class="sect1"><a href="#pkgsrc-tools">18.1. Tools for pkgsrc builds</a></span></dt>
 <dt><span class="sect1"><a href="#package-tools">18.2. Tools needed by packages</a></span></dt>
 <dt><span class="sect1"><a href="#platform-tools">18.3. Tools provided by platforms</a></span></dt>
-<dt><span class="sect1"><a href="#tools.questions">18.4. Questions regarding the tools</a></span></dt>
 </dl></dd>
 <dt><span class="chapter"><a href="#fixes">19. Making your package work</a></span></dt>
 <dd><dl>
@@ -4537,8 +4537,9 @@ FILESDIR=${.CURDIR}/../xemacs/files
 <dt><span class="sect1"><a href="#makefile.code">12.3. Code snippets</a></span></dt>
 <dd><dl>
 <dt><span class="sect2"><a href="#adding-to-list">12.3.1. Adding things to a list</a></span></dt>
-<dt><span class="sect2"><a href="#passing-variable-to-shell">12.3.2. Passing variables to a shell command</a></span></dt>
-<dt><span class="sect2"><a href="#quoting-guideline">12.3.3. Quoting guideline</a></span></dt>
+<dt><span class="sect2"><a href="#echo-literal">12.3.2. Echoing a string exacty as-is</a></span></dt>
+<dt><span class="sect2"><a href="#cflags-gnu-configure">12.3.3. Passing <code class="varname">CFLAGS</code> to GNU configure scripts</a></span></dt>
+<dt><span class="sect2"><a href="#empty-variables">12.3.4. Handling possibly empty variables</a></span></dt>
 </dl></dd>
 </dl>
 </div>
@@ -4657,36 +4658,28 @@ correct:
 <div class="sect1">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="makefile.code"></a>12.3. Code snippets</h2></div></div></div>
-<p>This section presents you with some code snippets you should
-    use in your own code. If you don't find anything appropriate here,
-    you should test your code and add it here.</p>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="adding-to-list"></a>12.3.1. Adding things to a list</h3></div></div></div>
+<p>When adding a string that possibly contains whitespace or quotes to
+a list (example 1), it must be quoted using the <code class="code">:Q</code>
+modifier.</p>
+<p>When adding another list to a list (example 2), it must not be
+quoted, since its elements are already quoted.</p>
 <pre class="programlisting">
-STRING=                 foo * bar `date`
-INT_LIST=               # empty
-ANOTHER_INT_LIST=       apache-[0-9]*:../../www/apache
-EXT_LIST=               # empty
-ANOTHER_EXT_LIST=       a=b c=d
+STRING=         foo * bar `date`
+LIST=           # empty
+ANOTHER_LIST=   a=b c=d
 
-INT_LIST+=              ${STRING}               # 1
-INT_LIST+=              ${ANOTHER_INT_LIST}     # 2
-EXT_LIST+=              ${STRING:Q}             # 3
-EXT_LIST+=              ${ANOTHER_EXT_LIST}     # 4
+LIST+=          ${STRING:Q}       # 1
+LIST+=          ${ANOTHER_LIST}   # 2
 </pre>
-<p>When you add a string to an external list (example 3), it
-      must be quoted. In all other cases, you must not add a quoting
-      level. You must not merge internal and external lists, unless you
-      are sure that all entries are correctly interpreted in both
-      lists.</p>
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="passing-variable-to-shell"></a>12.3.2. Passing variables to a shell command</h3></div></div></div>
-<p>Sometimes you may want to print an arbitrary string. There
-	are many ways to get it wrong and only few that can handle every
-	nastiness.</p>
+<a name="echo-literal"></a>12.3.2. Echoing a string exacty as-is</h3></div></div></div>
+<p>Echoing a string containing special characters needs special
+work.</p>
 <pre class="programlisting">
 STRING=         foo bar &lt;    &gt; * `date` $$HOME ' "
 EXAMPLE_ENV=    string=${STRING:Q} x=multiple\ quoted\ words
@@ -4695,99 +4688,83 @@ all:
         echo ${STRING}                  # 1
         echo ${STRING:Q}                # 2
         printf '%s\n' ${STRING:Q}''     # 3
-        env ${EXAMPLE_ENV} sh -c 'echo "$$string"; echo "$$x"' # 4
+        env ${EXAMPLE_ENV} sh -c 'echo "$$string"; echo "$$x"'   # 4
 </pre>
-<p>Example 1 leads to a syntax error in the shell, as the
-      characters are just copied.</p>
-<p>Example 2 can handle all strings, except those starting
-      with a dash or those containing backslashes.</p>
-<p>Example 3 can handle arbitrary strings.</p>
-<p>In example 4, the <code class="varname">EXT_LIST</code> does not
-      need to be quoted because the quoting has already been done
-      when adding elements to the list.</p>
+<p>Example 1 leads to a syntax error in the shell, as the characters
+are just copied.</p>
+<p>Example 2 quotes the string so that the shell interprets it
+correctly. But the echo command may additionally interpret strings with a
+leading dash or those containing backslashes.</p>
+<p>Example 3 can handle arbitrary strings, since <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?printf+1+NetBSD-5.0.1+i386"><span class="citerefentry"><span class="refentrytitle">printf</span>(1)</span></a> only
+interprets the format string, but not the next argument.</p>
+<p>In example 4, the <code class="varname">EXAMPLE_ENV</code> does not
+need to be quoted because the quoting has already been done
+when adding elements to the list.</p>
 </div>
 <div class="sect2">
 <div class="titlepage"><div><div><h3 class="title">
-<a name="quoting-guideline"></a>12.3.3. Quoting guideline</h3></div></div></div>
-<p>There are many possible sources of wrongly quoted variables.
-      This section lists some of the commonly known ones.</p>
-<div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem">
-<p>Whenever you use the value of a list, think
-	about what happens to leading or trailing whitespace. If the
-	list is a well-formed shell expression, you can apply the
-	<code class="varname">:M*</code> modifier to strip leading and trailing
-	whitespace from each word. The <code class="varname">:M</code> operator
-	first splits its argument according to the rules of the shell,
-	and then creates a new list consisting of all words that match
-	the shell glob expression <code class="varname">*</code>, that is: all.
-	One class of situations where this is needed is when adding a
-	variable like <code class="varname">CPPFLAGS</code> to
-	<code class="varname">CONFIGURE_ARGS</code>. If the configure script
-	invokes other configure scripts, it strips the leading and
-	trailing whitespace from the variable and then passes it to the
-	other configure scripts. But these configure scripts expect the
-	(child) <code class="varname">CPPFLAGS</code> variable to be the same as
-	the parent <code class="varname">CPPFLAGS</code>. That's why we better
-	pass the <code class="varname">CPPFLAGS</code> value properly trimmed. And
-	here is how we do it:</p>
+<a name="cflags-gnu-configure"></a>12.3.3. Passing <code class="varname">CFLAGS</code> to GNU configure scripts</h3></div></div></div>
+<p>When passing <code class="varname">CFLAGS</code> or similar variables to a
+GNU-style configure script (especially those that call other configure
+scripts), it must not have leading or trailing whitespace, since
+otherwise the configure script gets confused. To trim leading and
+trailing whitespace, use the <code class="code">:M</code> modifier, as in the
+following example:</p>
 <pre class="programlisting">
 CPPFLAGS=               # empty
-CPPFLAGS+=              -Wundef -DPREFIX=\"${PREFIX:Q}\"
+CPPFLAGS+=              -Wundef -DPREFIX=\"${PREFIX}\"
 CPPFLAGS+=              ${MY_CPPFLAGS}
 
 CONFIGURE_ARGS+=        CPPFLAGS=${CPPFLAGS:M*:Q}
 
 all:
         echo x${CPPFLAGS:Q}x            # leading and trailing whitespace
-        echo x${CONFIGURE_ARGS}x        # properly trimmed
+        echo x${CONFIGURE_ARGS:Q}x      # properly trimmed
 </pre>
-</li>
-<li class="listitem"><p>The example above contains one bug: The
-	<code class="varname">${PREFIX}</code> is a properly quoted shell
-	expression, but there is the C compiler after it, which also
-	expects a properly quoted string (this time in C syntax). The
-	version above is therefore only correct if
-	<code class="varname">${PREFIX}</code> does not have embedded backslashes
-	or double quotes. If you want to allow these, you have to add
-	another layer of quoting to each variable that is used as a C
-	string literal. You cannot use the <code class="varname">:Q</code>
-	operator for it, as this operator only works for the
-	shell.</p></li>
-<li class="listitem">
-<p>Whenever a variable can be empty, the
-	<code class="varname">:Q</code> operator can have surprising results. Here
-	are two completely different cases which can be solved with the
-	same trick.</p>
+<p>In this example, <code class="varname">CPPFLAGS</code> has both leading and
+trailing whitespace because the <code class="code">+=</code> operator always adds a
+space.</p>
+</div>
+<div class="sect2">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="empty-variables"></a>12.3.4. Handling possibly empty variables</h3></div></div></div>
+<p>When a possibly empty variable is used in a shell program, it may
+lead to a syntax error.</p>
 <pre class="programlisting">
-EMPTY=                  # empty
-empty_test:
-        for i in a ${EMPTY:Q} c; do \
-            echo "$$i"; \
-        done
+EGFILES=        # empty
 
-for_test:
-.for i in a:\ a:\test.txt
-        echo ${i:Q}
-        echo "foo"
+install-examples:   # produces a syntax error in the shell
+        for egfile in ${EGFILES}; do            \
+                echo "Installing $$egfile";     \
+        done
+</pre>
+<p>The shell only sees the text <code class="code">for egfile in ; do</code>, since
+<code class="code">${EGFILES}</code> is replaced with an empty string by <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1+NetBSD-5.0.1+i386"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a>.
+To fix this syntax error, use one of the snippets below.</p>
+<pre class="programlisting">
+EMPTY=          # empty
+
+install-examples:
+        for egfile in ${EGFILES} ""; do         \
+                [ -n "$$egfile" ] || continue;  \
+                echo "Installing $$egfile";     \
+        done
+</pre>
+<p>In this case, an empty string is appended to the iteration list (to
+prevent the syntax error) and filtered out later.</p>
+<pre class="programlisting">
+EGFILES=        # empty
+
+install-examples:
+.for egfile in ${EGFILES}
+        echo "Installing ${egfile}"
 .endfor
 </pre>
-<p>The first example will only print two of the three lines
-	we might have expected. This is because
-	<code class="varname">${EMPTY:Q}</code> expands to the empty string, which
-	the shell cannot see. The workaround is to write
-	<code class="varname">${EMPTY:Q}""</code>. This pattern can be often found
-	as <code class="varname">${TEST} -z ${VAR:Q}</code> or as <code class="varname">${TEST}
-	-f ${FNAME:Q}</code> (both of these are wrong).</p>
-<p>The second example will only print three lines instead of
-	four. The first line looks like <code class="varname">a:\ echo foo</code>.
-	This is because the backslash of the value
-	<code class="varname">a:\</code> is interpreted as a line-continuation by
-	<a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1+NetBSD-5.0.1+i386"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a>, which makes the second line the arguments of the
-	<a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?echo+1+NetBSD-5.0.1+i386"><span class="citerefentry"><span class="refentrytitle">echo</span>(1)</span></a> command from the first line. To avoid this, write
-	<code class="varname">${i:Q}""</code>.</p>
-</li>
-</ul></div>
+<p>This variant only works when <code class="varname">EGFILES</code> does not
+contain filenames with spaces, since the <code class="code">.for</code> loop splits on
+simple whitespace.</p>
+<p>To have a shell command test whether a make variable is empty, use
+the following code: <code class="code">${TEST} -z ${POSSIBLY_EMPTY:Q}""</code>.</p>
 </div>
 </div>
 </div>
@@ -7194,7 +7171,6 @@ builds)</i></a>).
 <dt><span class="sect1"><a href="#pkgsrc-tools">18.1. Tools for pkgsrc builds</a></span></dt>
 <dt><span class="sect1"><a href="#package-tools">18.2. Tools needed by packages</a></span></dt>
 <dt><span class="sect1"><a href="#platform-tools">18.3. Tools provided by platforms</a></span></dt>
-<dt><span class="sect1"><a href="#tools.questions">18.4. Questions regarding the tools</a></span></dt>
 </dl>
 </div>
 <p>The <code class="varname">USE_TOOLS</code> definition is used both internally
@@ -7265,65 +7241,6 @@ TOOLS_PLATFORM.bzcat?=          /usr/bin/bzip2 -cd
 
 TOOLS_PLATFORM.true?=           true                    # shell builtin
 </pre>
-</div>
-<div class="sect1">
-<div class="titlepage"><div><div><h2 class="title" style="clear: both">
-<a name="tools.questions"></a>18.4. Questions regarding the tools</h2></div></div></div>
-<div class="qandaset">
-<a name="idm83808672"></a><dl>
-<dt>18.4.1. <a href="#tools.new">How do I add a new tool?</a>
-</dt>
-<dt>18.4.2. <a href="#tools.listall">How do I get a list of all available
-	tools?</a>
-</dt>
-<dt>18.4.3. <a href="#tools.used">How can I get a list of all the tools that a
-	package is using while being built? I want to know whether it
-	uses sed or not.</a>
-</dt>
-</dl>
-<table border="0" style="width: 100%;">
-<colgroup>
-<col align="left" width="1%">
-<col>
-</colgroup>
-<tbody>
-<tr class="question">
-<td align="left" valign="top">
-<a name="tools.new"></a><a name="idm83808288"></a><p><b>18.4.1.</b></p>
-</td>
-<td align="left" valign="top"><p>How do I add a new tool?</p></td>
-</tr>
-<tr class="answer">
-<td align="left" valign="top"></td>
-<td align="left" valign="top"><p>TODO</p></td>
-</tr>
-<tr class="question">
-<td align="left" valign="top">
-<a name="tools.listall"></a><a name="idm83807264"></a><p><b>18.4.2.</b></p>
-</td>
-<td align="left" valign="top"><p>How do I get a list of all available
-	tools?</p></td>
-</tr>
-<tr class="answer">
-<td align="left" valign="top"></td>
-<td align="left" valign="top"><p>TODO</p></td>
-</tr>
-<tr class="question">
-<td align="left" valign="top">
-<a name="tools.used"></a><a name="idm83806240"></a><p><b>18.4.3.</b></p>
-</td>
-<td align="left" valign="top"><p>How can I get a list of all the tools that a
-	package is using while being built? I want to know whether it
-	uses sed or not.</p></td>
-</tr>
-<tr class="answer">
-<td align="left" valign="top"></td>
-<td align="left" valign="top"><p>Currently, you can't. (TODO: But I want to be able
-	to do it.)</p></td>
-</tr>
-</tbody>
-</table>
-</div>
 </div>
 </div>
 <div class="chapter">
@@ -8025,17 +7942,17 @@ FETCH_MESSAGE+= "manually from "${MASTER_SITES:Q}"."
     no trojan horse or so crept in.
     Please mention that the distfiles were compared and what was found
     in your commit message.</p>
-<p>Then, the correct way to work around this is to
-    set <code class="varname">DIST_SUBDIR</code> to a unique directory name,
-    usually based on <code class="varname">PKGNAME_NOREV</code>. All
-    <code class="varname">DISTFILES</code> and
+<p>Then, the correct way to work around this is to set
+    <code class="varname">DIST_SUBDIR</code> to a unique directory name, usually
+    based on <code class="varname">PKGNAME_NOREV</code> (but take care with
+    python or ruby packages, where <code class="varname">PKGNAME</code> includes
+    a variable prefix). All <code class="varname">DISTFILES</code> and
     <code class="varname">PATCHFILES</code> for this package will be put in that
-    subdirectory of the local distfiles directory.
-    (See <a class="xref" href="#bumping-pkgrevision" title="19.1.10. How to handle incrementing versions when fixing an existing package">Section 19.1.10, &#8220;How to handle incrementing versions when fixing an existing package&#8221;</a> for more details.)
-    In case this
+    subdirectory of the local distfiles directory. (See <a class="xref" href="#bumping-pkgrevision" title="19.1.10. How to handle incrementing versions when fixing an existing package">Section 19.1.10, &#8220;How to handle incrementing versions when fixing an existing package&#8221;</a> for more details.) In case this
     happens more often, <code class="varname">PKGNAME</code> can be used (thus
-    including the <code class="filename">nbX</code> suffix) or a date stamp
-    can be appended, like <code class="varname">${PKGNAME_NOREV}-YYYYMMDD</code>.</p>
+    including the <code class="filename">nbX</code> suffix) or a date stamp can
+    be appended, like
+    <code class="varname">${PKGNAME_NOREV}-YYYYMMDD</code>.</p>
 <p><code class="varname">DIST_SUBDIR</code> is also used when a distfile's name does not contain a version and the distfile is apt to change. In cases where the likelihood of this is very small, <code class="varname">DIST_SUBDIR</code> might not be required. Additionally, <code class="varname">DIST_SUBDIR</code> must not be removed unless the distfile name changes, even if a package is being moved or renamed.</p>
 <p>Do not forget regenerating the <code class="filename">distinfo</code> file
     after that, since it contains the <code class="varname">DIST_SUBDIR</code>
@@ -9462,7 +9379,7 @@ place.</p></li>
 	and if you still don't have the answer, ask on the
 	<code class="literal">pkgsrc-users</code> mailing list.</p>
 <div class="qandaset">
-<a name="idm83207968"></a><dl>
+<a name="idm79398672"></a><dl>
 <dt>22.1. <a href="#devfaq.makeflags">What is the difference between
 	MAKEFLAGS, .MAKEFLAGS and
 	MAKE_FLAGS?</a>
@@ -9507,7 +9424,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="idm83207584"></a><p><b>22.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="idm79398160"></a><p><b>22.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9523,7 +9440,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="idm83203488"></a><p><b>22.2.</b></p>
+<a name="devfaq.make"></a><a name="idm79394192"></a><p><b>22.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9541,7 +9458,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="idm83199136"></a><p><b>22.3.</b></p>
+<a name="devfaq.cc"></a><a name="idm79389712"></a><p><b>22.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9559,7 +9476,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="idm83194912"></a><p><b>22.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="idm79385616"></a><p><b>22.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9572,7 +9489,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="idm83192736"></a><p><b>22.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="idm79383440"></a><p><b>22.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9588,31 +9505,31 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="idm83189664"></a><p><b>22.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="idm79380240"></a><p><b>22.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
-	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
-	don't understand the <code class="literal">:=</code> inside
+	<code class="code">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
+	don't understand the <code class="code">:=</code> inside
 	it.</p></td>
 </tr>
 <tr class="answer">
 <td align="left" valign="top"></td>
-<td align="left" valign="top"><p>The <code class="literal">:=</code> is not really an
-	assignment operator, like you might expect at first sight.
+<td align="left" valign="top"><p>The <code class="code">:=</code> is not really an
+	assignment operator, although it looks like it.
 	Instead, it is a degenerate form of
-	<code class="literal">${LIST:<em class="replaceable"><code>old_string</code></em>=<em class="replaceable"><code>new_string</code></em>}</code>,
-	which is documented in the <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1+NetBSD-5.0.1+i386"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> man page and which you
-	may have seen as in <code class="literal">${SRCS:.c=.o}</code>. In the
+	<code class="code">${LIST:<em class="replaceable"><code>old_string</code></em>=<em class="replaceable"><code>new_string</code></em>}</code>,
+	which is documented in the <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?make+1+NetBSD-5.0.1+i386"><span class="citerefentry"><span class="refentrytitle">make</span>(1)</span></a> man page and which is
+	commonly used in the form <code class="code">${SRCS:.c=.o}</code>. In the
 	case of <code class="varname">MASTER_SITE_*</code>,
 	<em class="replaceable"><code>old_string</code></em> is the empty string and
 	<em class="replaceable"><code>new_string</code></em> is
-	<code class="literal">package/</code>. That's where the
-	<code class="literal">:</code> and the <code class="literal">=</code> fall
+	<code class="code">package/</code>. That's where the
+	<code class="code">:</code> and the <code class="code">=</code> fall
 	together.</p></td>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="idm83173408"></a><p><b>22.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="idm79373328"></a><p><b>22.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9637,7 +9554,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="idm83169568"></a><p><b>22.8.</b></p>
+<a name="devfaq.documentation"></a><a name="idm79369616"></a><p><b>22.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9685,7 +9602,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="idm83163168"></a><p><b>22.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="idm79363088"></a><p><b>22.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
