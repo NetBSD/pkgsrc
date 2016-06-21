@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2016/05/06 14:00:45 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.10 2016/06/21 07:53:50 fhajny Exp $
 bin/redis-benchmark
 bin/redis-check-aof
 bin/redis-check-rdb
@@ -71,6 +71,7 @@ share/examples/redis/tests/unit/dump.tcl
 share/examples/redis/tests/unit/expire.tcl
 share/examples/redis/tests/unit/geo.tcl
 share/examples/redis/tests/unit/hyperloglog.tcl
+share/examples/redis/tests/unit/introspection-2.tcl
 share/examples/redis/tests/unit/introspection.tcl
 share/examples/redis/tests/unit/keyspace.tcl
 share/examples/redis/tests/unit/latency-monitor.tcl
