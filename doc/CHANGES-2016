@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2570 2016/06/21 12:58:38 tsutsui Exp $
+$NetBSD: CHANGES-2016,v 1.2571 2016/06/21 13:39:33 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3765,3 +3765,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added time/taskwarrior version 2.5.1 [kamil 2016-06-20]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2016Q2 branch [jperkin 2016-06-20]
 	Updated x11/mlterm to 3.7.1 [tsutsui 2016-06-21]
+	Updated archivers/libarchive to 3.2.1nb1 [joerg 2016-06-21]
