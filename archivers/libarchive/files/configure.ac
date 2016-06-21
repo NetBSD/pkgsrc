@@ -374,11 +374,8 @@ if test "x$with_lzma" != "xno"; then
   AC_CACHE_CHECK(
     [whether we have multithread support in lzma],
     ac_cv_lzma_has_mt,
-    [AC_LINK_IFELSE([
-      AC_LANG_PROGRAM([[#include <lzma.h>]
-                       [#if LZMA_VERSION < 50020000]
-                       [#error unsupported]
-                       [#endif]],
+    [AC_COMPILE_IFELSE([
+      AC_LANG_PROGRAM([[#include <lzma.h>]],
                       [[lzma_stream_encoder_mt(0, 0);]])],
       [ac_cv_lzma_has_mt=yes], [ac_cv_lzma_has_mt=no])])
   if test "x$ac_cv_lzma_has_mt" != xno; then
@@ -849,6 +846,7 @@ if test "x$with_openssl" != "xno"; then
     else
       AC_CHECK_FUNCS([PKCS5_PBKDF2_HMAC_SHA1])
     fi
+    AC_CHECK_LIB(crypto,EVP_CIPHER_CTX_init)
 fi
 
 # Probe libmd AFTER OpenSSL/libcrypto.
