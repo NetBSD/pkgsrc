@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.1 2016/05/03 14:53:05 fhajny Exp $
+$NetBSD: distinfo,v 1.2 2016/06/21 18:00:02 joerg Exp $
 
 SHA1 (pyfasthash-0.6.2.tar.gz) = e703ff597cd8db8bfd83f44f0e42e7ac9153c302
 RMD160 (pyfasthash-0.6.2.tar.gz) = 3a6e3f5015c8b2c8d4a7f2bc04ef0ca7f75eabb6
 SHA512 (pyfasthash-0.6.2.tar.gz) = 1820a56f27dd58d1aff4657230b1e5c9b276d64fc1573ad5c14612efd92d584070f12414a9e4fd9929eb61e054a6d65dc6ce1f25457431eaf736c38ecb6fc9be
 Size (pyfasthash-0.6.2.tar.gz) = 197576 bytes
-SHA1 (patch-setup.py) = c3eb408f636d3db00d1a72da4dfa190cc2350291
+SHA1 (patch-pyhash.py) = 6e9428959693b72c8efe50ed272b8c1610a682c5
+SHA1 (patch-setup.py) = e993f644120ab43eb4853624fc78de0bb33b8880
 SHA1 (patch-src_fnv_fnv.h) = c942d2bb434ffdc99a6110781bf66e5cb878a889
-SHA1 (patch-src_lookup3_lookup3.c) = 7f4ffad27d55f1c2d52288b9cb2afb1c5af8213b
+SHA1 (patch-src_lookup3_lookup3.c) = 85e5be79ddf7050af7e98858610323accdaba453
