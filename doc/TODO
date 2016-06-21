@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16058 2016/06/20 19:21:33 kamil Exp $
+$NetBSD: TODO,v 1.16059 2016/06/21 14:00:42 mef Exp $
 
 Suggested new packages
 ======================
@@ -1199,7 +1199,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-AuthCAS-1.6
 	o p5-Authen-TacacsPlus-0.26
 	o p5-BerkeleyDB-0.55
-	o p5-Bytes-Random-Secure-0.29
 	o p5-CDB_File-0.98
 	o p5-CDDB-2.00
 	o p5-CPANPLUS-2.102
