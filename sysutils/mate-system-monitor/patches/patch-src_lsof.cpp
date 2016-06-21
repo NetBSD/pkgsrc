@@ -1,7 +1,7 @@
-$NetBSD: patch-src_lsof.cpp,v 1.3 2016/06/16 10:00:46 youri Exp $
+$NetBSD: patch-src_lsof.cpp,v 1.4 2016/06/21 16:24:00 youri Exp $
 
 Casting temporaries to references is not valid.
-Submitted upstream.
+Merged upstream.
 
 --- src/lsof.cpp.orig	2016-04-05 16:12:54.000000000 +0000
 +++ src/lsof.cpp
