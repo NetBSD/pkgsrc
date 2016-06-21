@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.136 2016/06/11 13:12:38 rillig Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.137 2016/06/21 21:47:29 wiz Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -735,17 +735,18 @@ FETCH_MESSAGE+= "manually from "${MASTER_SITES:Q}"."
     no trojan horse or so crept in.
     Please mention that the distfiles were compared and what was found
     in your commit message.</para>
-    <para>Then, the correct way to work around this is to
-    set <varname>DIST_SUBDIR</varname> to a unique directory name,
-    usually based on <varname>PKGNAME_NOREV</varname>. All
-    <varname>DISTFILES</varname> and
+    <para>Then, the correct way to work around this is to set
+    <varname>DIST_SUBDIR</varname> to a unique directory name, usually
+    based on <varname>PKGNAME_NOREV</varname> (but take care with
+    python or ruby packages, where <varname>PKGNAME</varname> includes
+    a variable prefix). All <varname>DISTFILES</varname> and
     <varname>PATCHFILES</varname> for this package will be put in that
-    subdirectory of the local distfiles directory.
-    (See <xref linkend="bumping-pkgrevision"/> for more details.)
-    In case this
+    subdirectory of the local distfiles directory. (See <xref
+    linkend="bumping-pkgrevision"/> for more details.) In case this
     happens more often, <varname>PKGNAME</varname> can be used (thus
-    including the <filename>nbX</filename> suffix) or a date stamp
-    can be appended, like <varname>${PKGNAME_NOREV}-YYYYMMDD</varname>.</para>
+    including the <filename>nbX</filename> suffix) or a date stamp can
+    be appended, like
+    <varname>${PKGNAME_NOREV}-YYYYMMDD</varname>.</para>
     <para><varname>DIST_SUBDIR</varname> is also used when a distfile's name does not contain a version and the distfile is apt to change. In cases where the likelihood of this is very small, <varname>DIST_SUBDIR</varname> might not be required. Additionally, <varname>DIST_SUBDIR</varname> must not be removed unless the distfile name changes, even if a package is being moved or renamed.</para>
     <para>Do not forget regenerating the <filename>distinfo</filename> file
     after that, since it contains the <varname>DIST_SUBDIR</varname>
