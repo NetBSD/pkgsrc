@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2016/06/17 16:39:55 prlw1 Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/21 17:57:07 joerg Exp $
 
 DISTNAME=	libecap-1.0.1
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://www.measurement-factory.com/tmp/ecap/
 
