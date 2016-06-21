@@ -1,10 +1,11 @@
-$NetBSD: patch-configure,v 1.13 2015/06/13 21:25:45 tsutsui Exp $
+$NetBSD: patch-configure,v 1.14 2016/06/21 12:57:39 tsutsui Exp $
 
 - setuid root is handled by SPECIAL_PERMS in pkgsrc
+- fix a bug that skk is always enabled
 
---- configure.orig	2015-06-07 01:36:26.000000000 +0000
+--- configure.orig	2016-05-08 06:47:04.000000000 +0000
 +++ configure
-@@ -21667,7 +21667,7 @@ else
+@@ -21909,7 +21909,7 @@ else
  fi
  
  if test "$gui" = "fb" ; then
@@ -13,3 +14,16 @@ $NetBSD: patch-configure,v 1.13 2015/06/13 21:25:45 tsutsui Exp $
  fi
  
  
+@@ -23610,7 +23610,11 @@ if test "${enable_skk+set}" = set; then 
+   enableval=$enable_skk; skk=$enable_skk
+ fi
+ 
+-if test "$enable_shared" != "no" ; then
++if test "$enable_shared" = "no" ; then
++	skk="no"
++fi
++
++if test "x$skk" != "xno" ; then
+ 	MAKE_DIRS="inputmethod/skk ${MAKE_DIRS}"
+ 	OUTPUT_FILES="inputmethod/skk/Makefile ${OUTPUT_FILES}"
+ 	if test "x$with_libltdl" != xno ; then
