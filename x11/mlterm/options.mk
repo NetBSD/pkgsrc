@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.11 2016/02/14 14:04:16 tsutsui Exp $
+# $NetBSD: options.mk,v 1.12 2016/06/21 12:57:39 tsutsui Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mlterm
-PKG_SUPPORTED_OPTIONS=	cairo canna fribidi gdk_pixbuf2 ibus libind m17nlib mlterm-fb otl scim uim wnn4 xft2
+PKG_SUPPORTED_OPTIONS=	cairo canna fribidi gdk_pixbuf2 ibus libind m17nlib mlterm-fb otl scim skk uim wnn4 xft2
 PKG_SUGGESTED_OPTIONS=	cairo fribidi gdk_pixbuf2 m17nlib otl xft2
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux"
 PKG_SUGGESTED_OPTIONS+=	mlterm-fb
@@ -9,7 +9,7 @@ PKG_SUGGESTED_OPTIONS+=	mlterm-fb
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		bidi cairo canna fb ibus ind m17nlib otl scim uim wnn xft2
+PLIST_VARS+=		bidi cairo canna fb ibus ind m17nlib otl scim skk uim wnn xft2
 
 .if !empty(PKG_OPTIONS:Mmlterm-fb)
 CONFIGURE_ARGS+=	--with-gui=xlib,fb
@@ -85,6 +85,13 @@ LICENSE+=		AND gnu-lgpl-v2
 USE_LANGUAGES=		c c++
 .else
 CONFIGURE_ARGS+=	--disable-scim
+.endif
+
+.if !empty(PKG_OPTIONS:Mskk)
+CONFIGURE_ARGS+=	--enable-skk
+PLIST.skk=		yes
+.else
+CONFIGURE_ARGS+=	--disable-skk
 .endif
 
 .if !empty(PKG_OPTIONS:Muim)
