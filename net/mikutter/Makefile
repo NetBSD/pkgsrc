@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.122 2016/06/18 12:33:28 tsutsui Exp $
+# $NetBSD: Makefile,v 1.123 2016/06/21 14:03:39 tsutsui Exp $
 #
 
 DISTNAME=	mikutter.3.4.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/./-/}
+DIST_SUBDIR=	${PKGNAME_NOREV}
 CATEGORIES=	net
 MASTER_SITES=	http://mikutter.hachune.net/bin/
 
