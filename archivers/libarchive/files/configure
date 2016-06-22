@@ -14748,6 +14748,9 @@ else
 /* end confdefs.h.  */
 
       #include <lzma.h>
+                       #if LZMA_VERSION < 50020000
+                       #error unsupported
+                       #endif
 int
 main ()
 {
@@ -14756,12 +14759,13 @@ lzma_stream_encoder_mt(0, 0);
   return 0;
 }
 _ACEOF
-if ac_fn_c_try_compile "$LINENO"; then :
+if ac_fn_c_try_link "$LINENO"; then :
   ac_cv_lzma_has_mt=yes
 else
   ac_cv_lzma_has_mt=no
 fi
-rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
+rm -f core conftest.err conftest.$ac_objext \
+    conftest$ac_exeext conftest.$ac_ext
 fi
 { $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lzma_has_mt" >&5
 $as_echo "$ac_cv_lzma_has_mt" >&6; }
