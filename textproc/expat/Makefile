@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2016/05/17 19:15:01 drochner Exp $
+# $NetBSD: Makefile,v 1.33 2016/06/22 15:39:09 drochner Exp $
 #
 
-DISTNAME=	expat-2.1.1
-PKGREVISION=	1
+DISTNAME=	expat-2.2.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=expat/}
 EXTRACT_SUFX=	.tar.bz2
