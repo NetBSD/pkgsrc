@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.231 2016/06/22 08:07:11 joerg Exp $
+# $NetBSD: bootstrap,v 1.232 2016/06/22 11:40:16 joerg Exp $
 #
 # Copyright (c) 2001-2011 Alistair Crooks <agc@NetBSD.org>
 # All rights reserved.
@@ -1197,16 +1197,17 @@ copy_src $pkgsrcdir/archivers/libarchive/files libarchive
 run_cmd "(cd $wrkdir/libarchive; env $BSTRAP_ENV \
 $shprog ./configure $configure_quiet_flags --enable-static --disable-shared \
 --disable-bsdtar --disable-bsdcpio --disable-posix-regex-lib --disable-xattr \
---disable-acl --without-zlib --without-bz2lib --without-lzmadec \
---without-iconv --without-lzma --without-lzo2 --without-nettle \
---without-openssl --without-xml2 --without-expat MAKE=$bmake && $bmake $make_quiet_flags -j$make_jobs)"
+--disable-maintainer-mode --disable-acl --without-zlib --without-bz2lib \
+--without-lzmadec --without-iconv --without-lzma --without-lzo2 \
+--without-nettle --without-openssl --without-xml2 --without-expat \
+MAKE=$bmake && $bmake $make_quiet_flags -j$make_jobs)"
 copy_src $pkgsrcdir/pkgtools/pkg_install/files pkg_install
 run_cmd "(cd $wrkdir/pkg_install; env $BSTRAP_ENV \
 CPPFLAGS='$CPPFLAGS -I${wrkdir}/libnbcompat -I${wrkdir}/libarchive/libarchive' \
 LDFLAGS='$LDFLAGS -L${wrkdir}/libnbcompat' \
 LIBS='$LIBS -lnbcompat' $shprog ./configure $configure_quiet_flags -C \
 --enable-bootstrap --prefix=$prefix --sysconfdir=$sysconfdir \
---disable-maintainer-mode --with-pkgdbdir=$pkgdbdir --infodir=$infodir \
+--with-pkgdbdir=$pkgdbdir --infodir=$infodir \
 --mandir=$mandir $pkg_install_args && \
 STATIC_LIBARCHIVE=$wrkdir/libarchive/.libs/libarchive.a \
 PKGSRC_MACHINE_ARCH="$machine_arch" $bmake $make_quiet_flags -j$make_jobs)"
