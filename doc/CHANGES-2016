@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2573 2016/06/22 10:30:29 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2574 2016/06/22 10:36:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3768,3 +3768,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated archivers/libarchive to 3.2.1nb1 [joerg 2016-06-21]
 	Updated security/p5-Bytes-Random-Secure to 0.29 [mef 2016-06-21]
 	Updated archivers/lhasa to 0.3.1 [wiz 2016-06-22]
+	Updated security/libtasn1 to 4.8 [wiz 2016-06-22]
