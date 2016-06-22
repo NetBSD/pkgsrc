@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.45 2015/11/04 01:17:49 agc Exp $
+$NetBSD: distinfo,v 1.46 2016/06/22 10:36:00 wiz Exp $
 
-SHA1 (libtasn1-4.5.tar.gz) = 7d648928729ffd38de84fac8b94d3ae0558de472
-RMD160 (libtasn1-4.5.tar.gz) = 1060f96cab7f4580f76cbb5b632b7a6376576544
-SHA512 (libtasn1-4.5.tar.gz) = 9319c7109b006f6f1f52c5cc0ff4b076db0037fb977535e04980dc3a9b3195ef20a451f04771d0eff1d1a104557cc14ccd5147f82e4229230d6539046e7f5108
-Size (libtasn1-4.5.tar.gz) = 1850279 bytes
+SHA1 (libtasn1-4.8.tar.gz) = a59c9f5db50909bd21ae143da40d74397fd51320
+RMD160 (libtasn1-4.8.tar.gz) = c0959f5f5ed12e2963e2edb10a28a17c387d735a
+SHA512 (libtasn1-4.8.tar.gz) = 22a0d1b2fc57efd18aa23ea720f915ec0c31bd2f60653181b0537d3d7c3c3262cef3a76e3be03fdb7d7cd5a6b4156a1033b156e56717bfa37a32f176692319f3
+Size (libtasn1-4.8.tar.gz) = 1859924 bytes
