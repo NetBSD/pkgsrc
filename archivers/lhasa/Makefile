@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2015/08/26 21:25:31 shattered Exp $
+# $NetBSD: Makefile,v 1.8 2016/06/22 10:30:18 wiz Exp $
 
-DISTNAME=	lhasa-0.3.0
+DISTNAME=	lhasa-0.3.1
 CATEGORIES=	archivers
 MASTER_SITES=	https://soulsphere.org/projects/lhasa/
 
@@ -14,6 +14,13 @@ GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE=	liblhasa.pc.in
 TEST_TARGET=		check
 
-CONFLICTS=		lha-[0-9]*
+USE_TOOLS+=		bash # tests-only
+REPLACE_BASH+=		test/test-dry-run
+REPLACE_BASH+=		test/test-crc-output
+REPLACE_BASH+=		test/test-print
+REPLACE_BASH+=		test/test-decompress
+REPLACE_BASH+=		test/test-file-headers
+REPLACE_BASH+=		test/test-extract
+REPLACE_BASH+=		test/test-list-output
 
 .include "../../mk/bsd.pkg.mk"
