@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2575 2016/06/22 10:41:37 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2576 2016/06/22 15:40:46 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3770,3 +3770,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated archivers/lhasa to 0.3.1 [wiz 2016-06-22]
 	Updated security/libtasn1 to 4.8 [wiz 2016-06-22]
 	Updated time/remind to 3.1.15 [wiz 2016-06-22]
+	Updated textproc/expat to 2.2.0 [drochner 2016-06-22]
