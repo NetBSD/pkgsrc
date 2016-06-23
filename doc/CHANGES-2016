@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2580 2016/06/23 17:25:08 maya Exp $
+$NetBSD: CHANGES-2016,v 1.2581 2016/06/23 17:41:25 agc Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3775,3 +3775,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated multimedia/ffmpeg3 to 3.0.2nb2 [fly 2016-06-23]
 	Updated multimedia/ffmpeg1 to 1.2.12nb3 [fly 2016-06-23]
 	Updated multimedia/ffmpeg010 to 20150312.0.10.16nb3 [fly 2016-06-23]
+	Updated security/netpgpverify to 20160622 [agc 2016-06-23]
+	Updated security/libnetpgpverify to 20160622 [agc 2016-06-23]
