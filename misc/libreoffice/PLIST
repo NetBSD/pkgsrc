@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2016/05/15 01:18:57 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.12 2016/06/23 20:12:23 ryoon Exp $
 bin/libreoffice
 bin/lobase
 bin/localc
@@ -303,6 +303,10 @@ ${PKGNAME}/lib/libreoffice/program/opengl/basicFragmentShader.glsl
 ${PKGNAME}/lib/libreoffice/program/opengl/basicVertexShader.glsl
 ${PKGNAME}/lib/libreoffice/program/opengl/blendedTextureFragmentShader.glsl
 ${PKGNAME}/lib/libreoffice/program/opengl/blendedTextureVertexShader.glsl
+${PKGNAME}/lib/libreoffice/program/opengl/combinedFragmentShader.glsl
+${PKGNAME}/lib/libreoffice/program/opengl/combinedTextureFragmentShader.glsl
+${PKGNAME}/lib/libreoffice/program/opengl/combinedTextureVertexShader.glsl
+${PKGNAME}/lib/libreoffice/program/opengl/combinedVertexShader.glsl
 ${PKGNAME}/lib/libreoffice/program/opengl/commonFragmentShader.glsl
 ${PKGNAME}/lib/libreoffice/program/opengl/commonVertexShader.glsl
 ${PKGNAME}/lib/libreoffice/program/opengl/convolutionFragmentShader.glsl
