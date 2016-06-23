@@ -1,4 +1,4 @@
-/* $NetBSD: master.c,v 1.11 2015/12/07 16:52:40 joerg Exp $ */
+/* $NetBSD: master.c,v 1.12 2016/06/23 15:07:39 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007, 2009 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -68,6 +68,7 @@ struct scan_peer {
 };
 
 static void	assign_job(struct scan_peer *);
+static void	reassign_jobs(void);
 
 static void
 do_nothing(void *arg)
@@ -106,6 +107,7 @@ finish_job(void *arg)
 	LIST_REMOVE(peer, peer_link);
 	process_job(peer->job, JOB_DONE);
 	assign_job(peer);
+	reassign_jobs();
 }
 
 static void
@@ -202,6 +204,21 @@ assign_job(struct scan_peer *peer)
 }
 
 static void
+reassign_jobs(void)
+{
+	struct scan_peer *peer;
+
+	while ((peer = LIST_FIRST(&inactive_peers)) != NULL) {
+		if (!has_job())
+			break;
+		LIST_REMOVE(peer, peer_link);
+		assign_job(peer);
+		if (peer-> job == NULL)
+			break;
+	}
+}
+
+static void
 listen_handler(int sock, void *arg)
 {
 	struct scan_peer *peer;
@@ -225,7 +242,6 @@ listen_handler(int sock, void *arg)
 static void
 child_handler(struct signal_event *ev)
 {
-	struct scan_peer *peer;
 	int status;
 
 	if (waitpid(child_pid, &status, WNOHANG) == -1) {
@@ -238,13 +254,7 @@ child_handler(struct signal_event *ev)
 
 	clients_started = 1;
 	signal_del(ev);
-
-	while ((peer = LIST_FIRST(&inactive_peers)) != NULL) {
-		LIST_REMOVE(peer, peer_link);
-		assign_job(peer);
-		if (peer-> job == NULL)
-			break;
-	}
+	reassign_jobs();
 }
 
 void
