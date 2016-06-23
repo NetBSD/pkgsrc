@@ -1,4 +1,7 @@
-$NetBSD: patch-src_doc_PdfImage.cpp,v 1.1 2016/06/19 22:55:18 joerg Exp $
+$NetBSD: patch-src_doc_PdfImage.cpp,v 1.2 2016/06/23 14:15:15 adam Exp $
+
+Recognize TIFF images with alpha channel when using the photometric
+colour tag.
 
 --- src/doc/PdfImage.cpp.orig	2016-06-07 16:48:51.790860153 +0000
 +++ src/doc/PdfImage.cpp
