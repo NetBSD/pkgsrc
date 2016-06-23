@@ -1,4 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2015/08/16 12:03:02 leot Exp $
+$NetBSD: patch-aa,v 1.7 2016/06/23 18:24:07 dholland Exp $
+
+ - Configure for pkgsrc
+ - Use BSD_INSTALL_* to avoid problems on old Solaris (PR 32296)
+ - Handle config file the pkgsrc way
 
 --- Makefile.in.orig	2007-05-13 17:27:21.000000000 +0000
 +++ Makefile.in
@@ -8,12 +12,19 @@ $NetBSD: patch-aa,v 1.6 2015/08/16 12:03:02 leot Exp $
 -DESTDIR         =
  prefix          = @prefix@
  exec_prefix     = @exec_prefix@
-@@ -31,7 +30,8 @@ install: wmweather wmweather.1
- 	${INSTALL_PROGRAM} wmweather   ${DESTDIR}${bindir}
- 	${INSTALL_DATA}    wmweather.1 ${DESTDIR}${mandir}/man1
+@@ -28,10 +27,12 @@ wmgeneral.o: wmgeneral.c wmgeneral.h
+ 
+ install: wmweather wmweather.1
+-	${INSTALL} -d ${DESTDIR}${bindir} ${DESTDIR}${mandir}/man1 ${DESTDIR}${sysconfdir}
+-	${INSTALL_PROGRAM} wmweather   ${DESTDIR}${bindir}
+-	${INSTALL_DATA}    wmweather.1 ${DESTDIR}${mandir}/man1
 -	${LN_S} wmweather   ${DESTDIR}${bindir}/wmWeather
 -	${LN_S} wmweather.1 ${DESTDIR}${mandir}/man1/wmWeather.1
 -	test -e ${DESTDIR}${sysconfdir}/${sysconffile} || ${INSTALL_DATA} wmweather.conf ${DESTDIR}${sysconfdir}/${sysconffile}
++	${BSD_INSTALL_PROGRAM_DIR} ${DESTDIR}${bindir}
++	${BSD_INSTALL_MAN_DIR} ${DESTDIR}${mandir}/man1 ${DESTDIR}${sysconfdir}
++	${BSD_INSTALL_PROGRAM} wmweather   ${DESTDIR}${bindir}
++	${BSD_INSTALL_DATA}    wmweather.1 ${DESTDIR}${mandir}/man1
 +	${LN_S} -f wmweather   ${DESTDIR}${bindir}/wmWeather
 +	${LN_S} -f wmweather.1 ${DESTDIR}${mandir}/man1/wmWeather.1
 +	${BSD_INSTALL_DATA_DIR} ${DESTDIR}${prefix}/share/examples/wmweather
