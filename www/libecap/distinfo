@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2016/06/21 17:57:07 joerg Exp $
+$NetBSD: distinfo,v 1.3 2016/06/23 15:05:38 prlw1 Exp $
 
 SHA1 (libecap-1.0.1.tar.gz) = 89533c2ac77fee7b26f53c20c25a1423ce1498b7
 RMD160 (libecap-1.0.1.tar.gz) = 72cac0074be057805511d33156baacb0eeaef4ed
 SHA512 (libecap-1.0.1.tar.gz) = 0054ad11b3f558d7c623060a69207a1b8e679803cabdf1a2bce4b04335d71c016eec770fc9d2cbf3d0a93502c255cb528305f9f8e6df4e095fcb980667045919
 Size (libecap-1.0.1.tar.gz) = 339799 bytes
-SHA1 (patch-src_libecap_common_memory.h) = 674ed41deea66df513e523ccb40169f961448a0d
+SHA1 (patch-src_libecap_common_memory.h) = ef1b37d342c23539af1c1e0967e3f19044c672a1
