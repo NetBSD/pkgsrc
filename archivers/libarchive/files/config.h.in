@@ -784,6 +784,9 @@
 /* Define to 1 if `__tm_gmtoff' is a member of `struct tm'. */
 #undef HAVE_STRUCT_TM___TM_GMTOFF
 
+/* Define to 1 if the system has the type `struct vfsconf'. */
+#undef HAVE_STRUCT_VFSCONF
+
 /* Define to 1 if you have the `symlink' function. */
 #undef HAVE_SYMLINK
 

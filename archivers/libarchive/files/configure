@@ -17264,6 +17264,23 @@ fi
 done
 
 
+# DragonFly uses vfsconf, FreeBSD xvfsconf.
+ac_fn_c_check_type "$LINENO" "struct vfsconf" "ac_cv_type_struct_vfsconf" "#if HAVE_SYS_TYPES_H
+	#include <sys/types.h>
+	#endif
+	#include <sys/mount.h>
+
+"
+if test "x$ac_cv_type_struct_vfsconf" = xyes; then :
+
+cat >>confdefs.h <<_ACEOF
+#define HAVE_STRUCT_VFSCONF 1
+_ACEOF
+
+
+fi
+
+
 # There are several variants of readdir_r around; we only
 # accept the POSIX-compliant version.
 cat confdefs.h - <<_ACEOF >conftest.$ac_ext
