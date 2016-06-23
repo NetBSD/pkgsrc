@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2579 2016/06/23 17:23:46 maya Exp $
+$NetBSD: CHANGES-2016,v 1.2580 2016/06/23 17:25:08 maya Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3774,3 +3774,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated multimedia/ffmpeg2 to 2.8.7nb2 [fly 2016-06-23]
 	Updated multimedia/ffmpeg3 to 3.0.2nb2 [fly 2016-06-23]
 	Updated multimedia/ffmpeg1 to 1.2.12nb3 [fly 2016-06-23]
+	Updated multimedia/ffmpeg010 to 20150312.0.10.16nb3 [fly 2016-06-23]
