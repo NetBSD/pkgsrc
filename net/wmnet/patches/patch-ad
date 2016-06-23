@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.5 2006/03/23 17:36:16 joerg Exp $
+$NetBSD: patch-ad,v 1.6 2016/06/23 19:04:54 dholland Exp $
 
 --- wmnet.c.orig	Fri May  5 03:01:14 2000
 +++ wmnet.c	Mon Jul  8 16:52:30 2002
-@@ -55,9 +55,13 @@
+@@ -55,9 +55,14 @@
  #include<X11/Xlib.h>
  #include<X11/Xutil.h>
  #include<X11/Xatom.h>
@@ -11,6 +11,7 @@ $NetBSD: patch-ad,v 1.5 2006/03/23 17:36:16 joerg Exp $
  # include<sys/socket.h>
  # include"getopt.h"
 +#elif defined (sun)
++# include<alloca.h>
 +# include<sys/socket.h>
 +# include<sys/sockio.h>
 +# include "getopt.h"
