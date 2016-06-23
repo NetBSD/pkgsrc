@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2015/11/18 14:19:47 ryoon Exp $
+# $NetBSD: Makefile,v 1.24 2016/06/23 17:24:51 maya Exp $
 
 PKGNAME=	ffmpeg010-20150312.${DISTVERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ffmpeg.mplayerhq.hu/
 COMMENT=	Decoding, encoding and streaming software (v0.10)
@@ -38,7 +38,7 @@ CONF_FILES+=	${PREFIX}/share/examples/ffmpeg010/ffserver.conf \
    || !empty(CC_VERSION:Mgcc-4.[01].*) \
    || empty(CC_VERSION:Mgcc*)
 CONFIGURE_ARGS+=	--disable-asm
-.elif !empty(CC_VERSION:Mgcc-4.*)
+.elif !empty(CC_VERSION:Mgcc-[456].*)
 CFLAGS+=-mstackrealign -mpreferred-stack-boundary=4
 .endif
 .endif
