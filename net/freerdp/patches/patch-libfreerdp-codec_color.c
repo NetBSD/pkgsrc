@@ -1,4 +1,6 @@
-$NetBSD: patch-libfreerdp-codec_color.c,v 1.1 2013/10/10 00:09:07 joerg Exp $
+$NetBSD: patch-libfreerdp-codec_color.c,v 1.2 2016/06/24 16:39:58 he Exp $
+
+Make some internal functions static.
 
 --- libfreerdp-codec/color.c.orig	2013-10-09 23:34:52.000000000 +0000
 +++ libfreerdp-codec/color.c
