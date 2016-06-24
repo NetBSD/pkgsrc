@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/05/13 20:47:32 adam Exp $
+# $NetBSD: Makefile,v 1.5 2016/06/24 20:32:08 fhajny Exp $
 
 BOOST_PACKAGE=		python
 BOOST_COMMENT=		(Boost.Python binary library)
@@ -30,7 +30,7 @@ do-install: boost-install-libs
 # The python3 variant also includes redundant copies of the libs
 # that conflict with the python2 variant.
 post-install:
-	${RM} -v ${DESTDIR}${PREFIX}/lib/libboost_python.*
+	${RM} ${DESTDIR}${PREFIX}/lib/libboost_python.*
 .endif
 
 .include "../../mk/bsd.pkg.mk"
