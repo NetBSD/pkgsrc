@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2015/11/04 00:35:01 agc Exp $
+$NetBSD: distinfo,v 1.7 2016/06/24 16:39:58 he Exp $
 
 SHA1 (freerdp-1.0.2.tar.gz) = 6c21e7f1505c64eeff056497bdd7b64551d34f5b
 RMD160 (freerdp-1.0.2.tar.gz) = cf2a584c3a3628ca068913d7e5bcd2e305211045
@@ -6,7 +6,8 @@ SHA512 (freerdp-1.0.2.tar.gz) = fa46ecaf134f1ac6c84ec58be5b2d02333c4b78907befd08
 Size (freerdp-1.0.2.tar.gz) = 3506620 bytes
 SHA1 (patch-CMakeLists.txt) = b107092ada08bd5caecc6fdf9428ebc447e87f83
 SHA1 (patch-client_X11_CMakeLists.txt) = cef86f1b64a562b5d7c2fa9d2f934a5167276b14
-SHA1 (patch-libfreerdp-codec_color.c) = 63bb566d4b37a8a04cbb3e1ce1071ba0d3efffad
+SHA1 (patch-libfreerdp-codec_color.c) = 61e03ac9cd67ca30b103abbb0534afef8be2f02a
+SHA1 (patch-libfreerdp-core_crypto.c) = 2a927b7bd651b0ce14b57ffa60768175ee8d212a
 SHA1 (patch-libfreerdp-core_listener.c) = 6023aa6714cf26cb3d0193978531b49bf7b06c78
-SHA1 (patch-libfreerdp-core_orders.c) = 7534fab21949795b15525a9496c129d7fd4f1956
+SHA1 (patch-libfreerdp-core_orders.c) = c05e91f86117fe6d32bcd2eee5f3d215efb02c76
 SHA1 (patch-libfreerdp-core_tcp.c) = 0a4cfac09484fd1f9ba3efb18e35540b9684e23c

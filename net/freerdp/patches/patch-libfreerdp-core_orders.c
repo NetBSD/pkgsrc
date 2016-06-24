@@ -1,4 +1,6 @@
-$NetBSD: patch-libfreerdp-core_orders.c,v 1.1 2013/10/10 00:09:07 joerg Exp $
+$NetBSD: patch-libfreerdp-core_orders.c,v 1.2 2016/06/24 16:39:58 he Exp $
+
+Make internal inline functions static.
 
 --- libfreerdp-core/orders.c.orig	2013-10-09 23:33:10.000000000 +0000
 +++ libfreerdp-core/orders.c
