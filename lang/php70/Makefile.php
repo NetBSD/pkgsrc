@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.1 2015/12/06 15:17:31 taca Exp $
+# $NetBSD: Makefile.php,v 1.2 2016/06/24 15:27:57 taca Exp $
 # used by lang/php70/Makefile
 # used by www/ap-php/Makefile
 # used by www/php-fpm/Makefile
@@ -23,9 +23,7 @@ CONFIGURE_ARGS+=	--with-config-file-scan-dir=${PKG_SYSCONFDIR}/php.d
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 
-CONFIGURE_ARGS+=	--with-regex=system
-
-CONFIGURE_ARGS+=	--without-mysql
+CONFIGURE_ARGS+=	--without-mysqli
 CONFIGURE_ARGS+=	--without-iconv
 CONFIGURE_ARGS+=	--without-pear
 #CONFIGURE_ARGS+=	--without-intl
