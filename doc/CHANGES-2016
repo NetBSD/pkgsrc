@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2585 2016/06/24 15:29:04 taca Exp $
+$NetBSD: CHANGES-2016,v 1.2586 2016/06/24 16:12:13 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3783,3 +3783,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/php55 to 5.5.37 [taca 2016-06-24]
 	Updated lang/php56 to 5.6.23 [taca 2016-06-24]
 	Updated lang/php70 to 7.0.8 [taca 2016-06-24]
+	Updated lang/nodejs4 to 4.4.6 [fhajny 2016-06-24]
