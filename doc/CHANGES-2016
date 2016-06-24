@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2584 2016/06/24 11:34:59 he Exp $
+$NetBSD: CHANGES-2016,v 1.2585 2016/06/24 15:29:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3780,3 +3780,6 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated x11/wmweather to 2.4.5nb2 [dholland 2016-06-23]
 	Updated misc/libreoffice to 5.1.4.2 [ryoon 2016-06-23]
 	Updated net/freerdp to 1.0.2nb14 [he 2016-06-24]
+	Updated lang/php55 to 5.5.37 [taca 2016-06-24]
+	Updated lang/php56 to 5.6.23 [taca 2016-06-24]
+	Updated lang/php70 to 7.0.8 [taca 2016-06-24]
