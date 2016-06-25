@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2016/05/05 09:42:19 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.11 2016/06/25 13:55:15 jaapb Exp $
 bin/ocamlfind
 ${OCAML_SITELIB}/bigarray/META
 ${OCAML_SITELIB}/bytes/META
@@ -38,7 +38,6 @@ ${OCAML_SITELIB}/str/META
 ${OCAML_SITELIB}/threads/META
 ${OCAML_SITELIB}/unix/META
 lib/ocaml/topfind
-libexec/ocaml-findlib-register
 @comment man/man1/ocamlfind.1
 @comment man/man5/META.5
 @comment man/man5/findlib.conf.5
