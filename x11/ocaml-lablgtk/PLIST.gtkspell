@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST.gtkspell,v 1.1 2014/10/10 08:37:49 jaapb Exp $
-lib/ocaml/site-lib/lablgtk2/gtkSpell.cmi
-${PLIST.opt}lib/ocaml/site-lib/lablgtk2/gtkSpell.cmx
-lib/ocaml/site-lib/lablgtk2/gtkSpell.ml
-${PLIST.opt}lib/ocaml/site-lib/lablgtk2/lablgtkspell.a
-lib/ocaml/site-lib/lablgtk2/lablgtkspell.cma
-${PLIST.opt}lib/ocaml/site-lib/lablgtk2/lablgtkspell.cmxa
-${PLIST.opt}lib/ocaml/site-lib/lablgtk2/lablgtkspell.cmxs
-lib/ocaml/site-lib/lablgtk2/liblablgtkspell.a
-${PLIST.stubs}lib/ocaml/site-lib/lablgtk2/dlllablgtkspell.so
+@comment $NetBSD: PLIST.gtkspell,v 1.2 2016/06/25 14:33:11 jaapb Exp $
+${OCAML_SITELIB}/lablgtk2/gtkSpell.cmi
+${PLIST.ocaml-opt}${OCAML_SITELIB}/lablgtk2/gtkSpell.cmx
+${OCAML_SITELIB}/lablgtk2/gtkSpell.ml
+${PLIST.ocaml-opt}${OCAML_SITELIB}/lablgtk2/lablgtkspell.a
+${OCAML_SITELIB}/lablgtk2/lablgtkspell.cma
+${PLIST.ocaml-opt}${OCAML_SITELIB}/lablgtk2/lablgtkspell.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/lablgtk2/lablgtkspell.cmxs
+${OCAML_SITELIB}/lablgtk2/liblablgtkspell.a
+${PLIST.stubs}${OCAML_SITELIB}/lablgtk2/dlllablgtkspell.so

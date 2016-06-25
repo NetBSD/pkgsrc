@@ -1,17 +1,17 @@
-@comment $NetBSD: PLIST.gtksourceview,v 1.1 2014/10/10 08:37:49 jaapb Exp $
-lib/ocaml/site-lib/lablgtk2/gSourceView.cmi
-${PLIST.opt}lib/ocaml/site-lib/lablgtk2/gSourceView.cmx
-lib/ocaml/site-lib/lablgtk2/gSourceView.ml
-lib/ocaml/site-lib/lablgtk2/gtkSourceView.cmi
-${PLIST.opt}lib/ocaml/site-lib/lablgtk2/gtkSourceView.cmx
-lib/ocaml/site-lib/lablgtk2/gtkSourceView.ml
-${PLIST.opt}lib/ocaml/site-lib/lablgtk2/lablgtksourceview.a
-lib/ocaml/site-lib/lablgtk2/lablgtksourceview.cma
-${PLIST.opt}lib/ocaml/site-lib/lablgtk2/lablgtksourceview.cmxa
-${PLIST.opt}lib/ocaml/site-lib/lablgtk2/lablgtksourceview.cmxs
-lib/ocaml/site-lib/lablgtk2/liblablgtksourceview.a
-lib/ocaml/site-lib/lablgtk2/sourceViewEnums.cmi
-${PLIST.opt}lib/ocaml/site-lib/lablgtk2/sourceViewEnums.cmx
-lib/ocaml/site-lib/lablgtk2/sourceViewEnums.ml
-lib/ocaml/site-lib/lablgtk2/sourceView_tags.h
-${PLIST.stubs}lib/ocaml/site-lib/lablgtk2/dlllablgtksourceview.so
+@comment $NetBSD: PLIST.gtksourceview,v 1.2 2016/06/25 14:33:11 jaapb Exp $
+${OCAML_SITELIB}/lablgtk2/gSourceView.cmi
+${PLIST.ocaml-opt}${OCAML_SITELIB}/lablgtk2/gSourceView.cmx
+${OCAML_SITELIB}/lablgtk2/gSourceView.ml
+${OCAML_SITELIB}/lablgtk2/gtkSourceView.cmi
+${PLIST.ocaml-opt}${OCAML_SITELIB}/lablgtk2/gtkSourceView.cmx
+${OCAML_SITELIB}/lablgtk2/gtkSourceView.ml
+${PLIST.ocaml-opt}${OCAML_SITELIB}/lablgtk2/lablgtksourceview.a
+${OCAML_SITELIB}/lablgtk2/lablgtksourceview.cma
+${PLIST.ocaml-opt}${OCAML_SITELIB}/lablgtk2/lablgtksourceview.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/lablgtk2/lablgtksourceview.cmxs
+${OCAML_SITELIB}/lablgtk2/liblablgtksourceview.a
+${OCAML_SITELIB}/lablgtk2/sourceViewEnums.cmi
+${PLIST.ocaml-opt}${OCAML_SITELIB}/lablgtk2/sourceViewEnums.cmx
+${OCAML_SITELIB}/lablgtk2/sourceViewEnums.ml
+${OCAML_SITELIB}/lablgtk2/sourceView_tags.h
+${PLIST.stubs}${OCAML_SITELIB}/lablgtk2/dlllablgtksourceview.so

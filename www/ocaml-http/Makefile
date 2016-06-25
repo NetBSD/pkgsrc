@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2016/05/05 11:45:42 jaapb Exp $
+# $NetBSD: Makefile,v 1.10 2016/06/25 14:32:49 jaapb Exp $
 #
 
 DISTNAME=	ocaml-http-0.1.5
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	www
 MASTER_SITES=	http://forge.ocamlcore.org/frs/download.php/545/
 
@@ -14,21 +14,19 @@ LICENSE=	gnu-gpl-v2
 WRKSRC=		${WRKDIR}/ocaml-http_0.1.5
 USE_LANGUAGES=	# none
 USE_TOOLS+=	gmake
-MAKE_ENV=	PKG_DESTDIR=${DESTDIR}/${PREFIX}/lib/ocaml/site-lib/
+MAKE_ENV=	PKG_DESTDIR=${DESTDIR}/${PREFIX}/${OCAML_SITELIBDIR}
 
 BUILD_TARGET=	all
 
-PLIST_VARS=     opt
-.if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || \
-    (${MACHINE_ARCH} == "sparc") || (${MACHINE_ARCH} == "x86_64") || \
-    (${MACHINE_ARCH} == "arm")
-PLIST.opt=      yes
+OCAML_USE_FINDLIB=	yes
+
+.include "../../mk/ocaml.mk"
+
+.if (${OCAML_USE_OPT_COMPILER} == "yes")
 BUILD_TARGET+=	opt
 .endif
 
 .include "../../lang/camlp4/buildlink3.mk"
-.include "../../lang/ocaml/buildlink3.mk"
-.include "../../devel/ocaml-findlib/buildlink3.mk"
 .include "../../devel/pcre-ocaml/buildlink3.mk"
 .include "../../net/ocamlnet/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
