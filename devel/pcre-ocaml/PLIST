@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2015/01/20 14:31:09 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.7 2016/06/25 14:30:31 jaapb Exp $
 ${OCAML_SITELIB}/pcre/META
 ${OCAML_SITELIB}/pcre/dllpcre_stubs.so
 ${OCAML_SITELIB}/pcre/libpcre_stubs.a
@@ -21,5 +21,3 @@ share/examples/pcre-ocaml/pcregrep/README.md
 share/examples/pcre-ocaml/pcregrep/pcregrep.ml
 share/examples/pcre-ocaml/subst/README.md
 share/examples/pcre-ocaml/subst/subst.ml
-@exec %D/libexec/ocaml-findlib-register add %D/${OCAML_SITELIB}/pcre
-@unexec %D/libexec/ocaml-findlib-register del %D/${OCAML_SITELIB}/pcre
