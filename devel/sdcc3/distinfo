@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.6 2015/11/03 03:29:32 agc Exp $
+$NetBSD: distinfo,v 1.7 2016/06/25 17:48:15 bouyer Exp $
 
-SHA1 (sdcc-src-3.5.0.tar.bz2) = fdbc448af18441ccfd4034a27ad7ebb780a15723
-RMD160 (sdcc-src-3.5.0.tar.bz2) = cc979be3fe388a2c1bcfd9db595ac4fd48e5c7e4
-SHA512 (sdcc-src-3.5.0.tar.bz2) = a5842945da065ab566b7e073782e92f851da48c160990d49b76ab4773fe1c14286cab399fb7f2456432e4043ee7ce07c3b149aeb103c51f85a33fdc5f8798f4e
-Size (sdcc-src-3.5.0.tar.bz2) = 10504517 bytes
-SHA1 (patch-Makefile_in) = 0a5fd582904d4f7dc991110758dbe136c35881aa
+SHA1 (sdcc-src-3.6.0.tar.bz2) = e0e69deca22d7947ad1d53f9601a7c95ffd69326
+RMD160 (sdcc-src-3.6.0.tar.bz2) = 6fd429f63057f4457e8279e59c1af77861833b1f
+SHA512 (sdcc-src-3.6.0.tar.bz2) = fd05cf13f7acf0b71a35a99f99dc6ef8abcb4f41fbe1ab0cf25348842b57317217410b4a521ea1a70db93d8e7e4e6dac272ec14d893cdbcfa584ee963f42ad2f
+Size (sdcc-src-3.6.0.tar.bz2) = 17993788 bytes
+SHA1 (patch-Makefile_in) = 58be6bfe1ddc055883ef171adc71f363e6ade121
 SHA1 (patch-aa) = fc702b7de0c871761f959a4fbdfee26f5e1a2cc5
 SHA1 (patch-device_non-free_lib_Makefile.in) = 49894224d38ccf614c636831a61e569a48921850
 SHA1 (patch-device_non-free_lib_pic14_libdev_Makefile.in) = 82baa9488e6f7fae0761346451ca5b756266bfe9
@@ -17,4 +17,4 @@ SHA1 (patch-support_makebin_Makefile_in) = 6045bc4a0870b57f74c597b4a6215bf3accd1
 SHA1 (patch-support_scripts_Makefile.in) = f292001be4a7dc0a629529087838138e1bb52161
 SHA1 (patch-support_sdbinutils_Makefile.in) = 5d8fce39c55d44340a6431426aa01690e39b7c67
 SHA1 (patch-support_sdbinutils_bfd_asxxxx.c) = 3163003fec4ea548dc89ce35ef0e9b7ed53c67f9
-SHA1 (patch-support_sdbinutils_libiberty_Makefile.in) = 59156eb5ba663a26871c95bda9ebbd64b1ecbdc6
+SHA1 (patch-support_sdbinutils_libiberty_Makefile.in) = 42f1467c07c28e510ed47f876a0cd8d1657c50ce
