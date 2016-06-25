@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST.gnome,v 1.1 2014/10/10 08:37:49 jaapb Exp $
-lib/ocaml/site-lib/lablgtk2/gnoDruid.cmi
-${PLIST.opt}lib/ocaml/site-lib/lablgtk2/gnoDruid.cmx
-lib/ocaml/site-lib/lablgtk2/gnoDruid.ml
-lib/ocaml/site-lib/lablgtk2/gnomeDruid.cmi
-${PLIST.opt}lib/ocaml/site-lib/lablgtk2/gnomeDruid.cmx
-lib/ocaml/site-lib/lablgtk2/gnomeDruid.ml
-lib/ocaml/site-lib/lablgtk2/gnomeui_tags.h
-${PLIST.opt}lib/ocaml/site-lib/lablgtk2/lablgnomeui.a
-lib/ocaml/site-lib/lablgtk2/lablgnomeui.cma
-${PLIST.opt}lib/ocaml/site-lib/lablgtk2/lablgnomeui.cmxa
-${PLIST.opt}lib/ocaml/site-lib/lablgtk2/lablgnomeui.cmxs
-lib/ocaml/site-lib/lablgtk2/liblablgnomeui.a
-${PLIST.stubs}lib/ocaml/site-lib/lablgtk2/dlllablgnomeui.so
+@comment $NetBSD: PLIST.gnome,v 1.2 2016/06/25 14:33:11 jaapb Exp $
+${OCAML_SITELIB}/lablgtk2/gnoDruid.cmi
+${PLIST.ocaml-opt}${OCAML_SITELIB}/lablgtk2/gnoDruid.cmx
+${OCAML_SITELIB}/lablgtk2/gnoDruid.ml
+${OCAML_SITELIB}/lablgtk2/gnomeDruid.cmi
+${PLIST.ocaml-opt}${OCAML_SITELIB}/lablgtk2/gnomeDruid.cmx
+${OCAML_SITELIB}/lablgtk2/gnomeDruid.ml
+${OCAML_SITELIB}/lablgtk2/gnomeui_tags.h
+${PLIST.ocaml-opt}${OCAML_SITELIB}/lablgtk2/lablgnomeui.a
+${OCAML_SITELIB}/lablgtk2/lablgnomeui.cma
+${PLIST.ocaml-opt}${OCAML_SITELIB}/lablgtk2/lablgnomeui.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/lablgtk2/lablgnomeui.cmxs
+${OCAML_SITELIB}/lablgtk2/liblablgnomeui.a
+${PLIST.stubs}${OCAML_SITELIB}/lablgtk2/dlllablgnomeui.so

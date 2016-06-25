@@ -1,12 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2013/06/16 09:45:19 jaapb Exp $
-@unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/expat
-lib/ocaml/site-lib/expat/META
-lib/ocaml/site-lib/expat/dllmlexpat.so
-${PLIST.opt}lib/ocaml/site-lib/expat/expat.a
-lib/ocaml/site-lib/expat/expat.cma
-${PLIST.opt}lib/ocaml/site-lib/expat/expat.cmxa
-${PLIST.opt}lib/ocaml/site-lib/expat/expat.cmxs
-lib/ocaml/site-lib/expat/expat.cmi
-lib/ocaml/site-lib/expat/expat.mli
-lib/ocaml/site-lib/expat/libmlexpat.a
-@exec %D/libexec/ocaml-findlib-register add %D/lib/ocaml/site-lib/expat
+@comment $NetBSD: PLIST,v 1.3 2016/06/25 14:32:00 jaapb Exp $
+${OCAML_SITELIB}/expat/META
+${OCAML_SITELIB}/expat/dllmlexpat.so
+${PLIST.ocaml-opt}${OCAML_SITELIB}/expat/expat.a
+${OCAML_SITELIB}/expat/expat.cma
+${PLIST.ocaml-opt}${OCAML_SITELIB}/expat/expat.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/expat/expat.cmxs
+${OCAML_SITELIB}/expat/expat.cmi
+${OCAML_SITELIB}/expat/expat.mli
+${OCAML_SITELIB}/expat/libmlexpat.a
