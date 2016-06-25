@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.7 2016/05/05 11:27:47 jaapb Exp $
+$NetBSD: distinfo,v 1.8 2016/06/25 14:01:34 jaapb Exp $
 
-SHA1 (camlzip-1.05.tar.gz) = 0c32485958dd1a9c18f6f0abe1d2bf8e62caef74
-RMD160 (camlzip-1.05.tar.gz) = f54260638f4bbf43275907285d811a319077c0c8
-SHA512 (camlzip-1.05.tar.gz) = 5128243fc7528e5ec6cbb7d9b121e8cb0b6d486a95a82161cd74cafe05454602c9952ed6fee3d38a53614e5ecdc20ef88437681107c5952bf85b8f8c78bf042d
-Size (camlzip-1.05.tar.gz) = 25817 bytes
-SHA1 (patch-zip.ml) = d3ff0fcd82a13882767c3ad648b9775e2d9d0b73
-SHA1 (patch-zlibstubs.c) = ee597e402c37e221ff504e8a4d7cbada28c9cb9a
+SHA1 (camlzip-1.06.tar.gz) = fcf13339e836fe7e945907da62038271f814a00b
+RMD160 (camlzip-1.06.tar.gz) = 99f9366d4daff7923225166dc9f2d19b8dae86d9
+SHA512 (camlzip-1.06.tar.gz) = 5ef0172927106589620678897f12f054533503a5cf13df71bf4deda43f223d0cd6acce118977e87bce53afe289f367b851f192a8e693274c2bd13549121019dd
+Size (camlzip-1.06.tar.gz) = 26499 bytes

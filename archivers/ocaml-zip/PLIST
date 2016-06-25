@@ -1,15 +1,13 @@
-@comment $NetBSD: PLIST,v 1.4 2013/04/03 12:29:40 jaapb Exp $
-@unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/zip
+@comment $NetBSD: PLIST,v 1.5 2016/06/25 14:01:34 jaapb Exp $
 lib/ocaml/site-lib/zip/META
 lib/ocaml/site-lib/zip/dllcamlzip.so
 lib/ocaml/site-lib/zip/gzip.cmi
 lib/ocaml/site-lib/zip/gzip.mli
 lib/ocaml/site-lib/zip/libcamlzip.a
-${PLIST.opt}lib/ocaml/site-lib/zip/zip.a
+${PLIST.ocaml-opt}lib/ocaml/site-lib/zip/zip.a
 lib/ocaml/site-lib/zip/zip.cma
 lib/ocaml/site-lib/zip/zip.cmi
-${PLIST.opt}lib/ocaml/site-lib/zip/zip.cmxa
+${PLIST.ocaml-opt}lib/ocaml/site-lib/zip/zip.cmxa
 lib/ocaml/site-lib/zip/zip.mli
 lib/ocaml/site-lib/zip/zlib.cmi
 lib/ocaml/site-lib/zip/zlib.mli
-@exec %D/libexec/ocaml-findlib-register add %D/lib/ocaml/site-lib/zip
