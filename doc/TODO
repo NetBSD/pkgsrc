@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16062 2016/06/25 13:59:40 jaapb Exp $
+$NetBSD: TODO,v 1.16063 2016/06/25 17:03:08 maya Exp $
 
 Suggested new packages
 ======================
@@ -1466,6 +1466,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-munkres-1.0.7
 	o py-musicbrainz-0.7.4
 	o py-ncclient-0.4.7
+	o py-networkx-1.11 (PR/51271 has patch)
 	o py-newt-0.52.18
 	o py-notify-0.3.1
 	o py-numpydoc-0.6.0
@@ -1474,6 +1475,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-pendrell-0.3.7
 	o py-proteus-3.6.1
 	o py-ptt-1.10.2
+	o py-pandas-1.81.1 (PR/51272 has patch)
 	o py-pycountry-1.20
 	o py-qrcode-5.3
 	o py-quixote-2.9
@@ -1491,6 +1493,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-stdnum-1.2
 	o py-suds-0.4.1
 	o py-sybase-0.37
+	o py-sympy-1.0 (PR/51270 has patch)
 	o py-test-httpbin-0.2.3
 	o py-tlslite-0.4.6
 	o py-uliweb-0.5b0
