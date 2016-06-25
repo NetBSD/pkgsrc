@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2014/10/09 21:22:27 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/06/25 14:05:01 jaapb Exp $
 ${OCAML_SITELIB}/batteries/META
 ${OCAML_SITELIB}/batteries/batArray.cmi
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/batteries/batArray.cmx
@@ -42,6 +42,9 @@ ${OCAML_SITELIB}/batteries/batCharParser.mli
 ${OCAML_SITELIB}/batteries/batComplex.cmi
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/batteries/batComplex.cmx
 ${OCAML_SITELIB}/batteries/batComplex.mli
+${OCAML_SITELIB}/batteries/batConcreteQueue_403.cmi
+${PLIST.ocaml-opt}${OCAML_SITELIB}/batteries/batConcreteQueue_403.cmx
+${OCAML_SITELIB}/batteries/batConcreteQueue_403.mli
 ${OCAML_SITELIB}/batteries/batConcurrent.cmi
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/batteries/batConcurrent.cmx
 ${OCAML_SITELIB}/batteries/batConcurrent.mli
