@@ -1,0 +1,22 @@
+#!@SH@
+#
+# $NetBSD: INSTALL,v 1.1 2016/06/25 13:55:15 jaapb Exp $
+
+GREP="@GREP@"
+OCAML_FINDLIB_DIRS="@OCAML_FINDLIB_DIRS@"
+OCAML_SITELIBDIR="@OCAML_SITELIBDIR@"
+TOUCH="@TOUCH@"
+
+LDCONF="@PREFIX@/lib/ocaml/ld.conf"
+
+case "${STAGE}" in
+POST-INSTALL)
+	${TOUCH} "${LDCONF}.tmp"
+	for i in ${OCAML_FINDLIB_DIRS}
+	do
+		${GREP} -F -v -- "${OCAML_SITELIBDIR}/$i" < "${LDCONF}" > "${LDCONF}.tmp"
+		${ECHO} "@PREFIX@/${OCAML_SITELIBDIR}/$i" >> "${LDCONF}.tmp"
+		mv "${LDCONF}.tmp" "${LDCONF}"
+	done
+        ;;
+esac
