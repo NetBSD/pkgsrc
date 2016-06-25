@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2014/10/09 21:38:49 jaapb Exp $
-@unexec %D/libexec/ocaml-findlib-register del %D/${OCAML_SITELIB}/react
+@comment $NetBSD: PLIST,v 1.4 2016/06/25 14:29:01 jaapb Exp $
 ${OCAML_SITELIB}/react/META
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/react/react.a
 ${OCAML_SITELIB}/react/react.cmi
@@ -12,4 +11,3 @@ ${PLIST.ocaml-opt}${OCAML_SITELIB}/react/react_top.a
 ${OCAML_SITELIB}/react/react_top.cma
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/react/react_top.cmxa
 ${PLIST.ocaml-opt}${OCAML_SITELIB}/react/react_top.cmxs
-@exec %D/libexec/ocaml-findlib-register add %D/${OCAML_SITELIB}/react
