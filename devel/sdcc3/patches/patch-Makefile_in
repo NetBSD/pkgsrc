@@ -1,14 +1,14 @@
-$NetBSD: patch-Makefile_in,v 1.1 2013/10/21 15:12:38 ryoon Exp $
+$NetBSD: patch-Makefile_in,v 1.2 2016/06/25 17:48:15 bouyer Exp $
 
 * Make the makefile stop on error.
 * Build sdcpp in earlier stage.
 
---- Makefile.in.orig	2012-11-12 21:58:19.000000000 +0000
-+++ Makefile.in
-@@ -106,19 +106,19 @@ all: checkconf sdcc
+--- Makefile.in.orig	2016-05-15 13:34:37.000000000 +0200
++++ Makefile.in	2016-06-25 13:15:26.000000000 +0200
+@@ -120,19 +120,19 @@
  tini: checkconf sdcc-tini
  
- sdcc-libs:
+ sdcc-libs: sdcc-sdbinutils
 -	for lib in $(SDCC_LIBS); do $(MAKE) -C $$lib; done
 +	for lib in $(SDCC_LIBS); do $(MAKE) -C $$lib || exit 1; done
  
@@ -17,18 +17,18 @@ $NetBSD: patch-Makefile_in,v 1.1 2013/10/21 15:12:38 ryoon Exp $
  
  sdcc-as:
 -	for as in $(SDCC_AS); do $(MAKE) -C $$as ; done
-+	for as in $(SDCC_AS); do $(MAKE) -C $$as || exit 1; done
++	for as in $(SDCC_AS); do $(MAKE) -C $$as || exit 1 ; done
  
  sdcc-ld:
  	$(MAKE) -C sdas/linksrc $(SDCC_LD)
  
  sdcc-misc:
 -	for misc in $(SDCC_MISC); do $(MAKE) -C $$misc ; done
-+	for misc in $(SDCC_MISC); do $(MAKE) -C $$misc || exit 1; done
++	for misc in $(SDCC_MISC); do $(MAKE) -C $$misc || exit 1 ; done
  
  sdcc-scripts:
  	$(MAKE) -C $(SDCC_SCRIPTS)
-@@ -172,7 +172,7 @@ sdcc-base: sdcc-cc sdcc-as sdcc-ld
+@@ -192,7 +192,7 @@
  install: checkconf sdcc
  	$(MAKE) -f main.mk install
  	@for pkg in $(PKGS); do\
@@ -37,7 +37,7 @@ $NetBSD: patch-Makefile_in,v 1.1 2013/10/21 15:12:38 ryoon Exp $
  	done
  
  # Deleting all the installed files
-@@ -180,7 +180,7 @@ install: checkconf sdcc
+@@ -200,7 +200,7 @@
  uninstall:
  	$(MAKE) -f main.mk uninstall
  	@for pkg in $(PKGS); do\
@@ -46,7 +46,7 @@ $NetBSD: patch-Makefile_in,v 1.1 2013/10/21 15:12:38 ryoon Exp $
  	done
  
  # Deleting all files created by building the program
-@@ -190,7 +190,7 @@ clean:
+@@ -210,7 +210,7 @@
  	$(MAKE) -f $(srcdir)/clean.mk clean
  	@echo "+ Cleaning packages in their directories..."
  	for pkg in $(PKGS); do\
@@ -55,7 +55,7 @@ $NetBSD: patch-Makefile_in,v 1.1 2013/10/21 15:12:38 ryoon Exp $
  	done
  
  # Deleting all files created by configuring or building the program
-@@ -198,10 +198,10 @@ clean:
+@@ -218,10 +218,10 @@
  distclean:
  	@echo "+ DistCleaning packages using clean.mk..."
  	for pkg in $(PKGS); do\
@@ -68,7 +68,7 @@ $NetBSD: patch-Makefile_in,v 1.1 2013/10/21 15:12:38 ryoon Exp $
  	done
  	@echo "+ DistCleaning root of the project..."
  	$(MAKE) -f $(srcdir)/clean.mk distclean
-@@ -211,7 +211,7 @@ distclean:
+@@ -231,7 +231,7 @@
  mostlyclean: clean
  	$(MAKE) -f $(srcdir)/clean.mk mostlyclean
  	for pkg in $(PKGS); do\
@@ -77,7 +77,7 @@ $NetBSD: patch-Makefile_in,v 1.1 2013/10/21 15:12:38 ryoon Exp $
  	done
  
  # Deleting everything that can reconstructed by this Makefile. It deletes
-@@ -220,7 +220,7 @@ mostlyclean: clean
+@@ -240,7 +240,7 @@
  realclean: distclean
  	$(MAKE) -f $(srcdir)/clean.mk realclean
  	for pkg in $(PKGS); do\
@@ -86,7 +86,7 @@ $NetBSD: patch-Makefile_in,v 1.1 2013/10/21 15:12:38 ryoon Exp $
  	done
  
  # Creating distribution
-@@ -244,8 +244,9 @@ installcheck:
+@@ -264,8 +264,9 @@
  # ---------------------
  dep: $(SDCC_LIBS)
  	$(MAKE) -f main.mk dep
