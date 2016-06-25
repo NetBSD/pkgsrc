@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.15 2015/08/22 17:06:16 bouyer Exp $
+# $NetBSD: Makefile,v 1.16 2016/06/25 17:48:15 bouyer Exp $
 
-DISTNAME=	sdcc-src-3.5.0
+DISTNAME=	sdcc-src-3.6.0
 PKGNAME=	${DISTNAME:S/-src//}
 #PKGREVISION=	2
 CATEGORIES=	devel lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sdcc/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	bouyer@NetBSD.org
 HOMEPAGE=	http://sdcc.sourceforge.net/
 COMMENT=	Cross compile microcontroller code
 LICENSE=	gnu-gpl-v2
@@ -19,7 +19,8 @@ USE_LANGUAGES=	c c++
 # XXX - This HACK circumvent a problem with the use of yacc that breaks the
 # XXX - building process of sdcc.  Use of bison fixes this problem for now.
 #
-USE_TOOLS+=	bison
+USE_TOOLS+=	bison makeinfo
+INFO_FILES=	yes
 
 BUILD_TARGET=	dep all
 
@@ -37,6 +38,7 @@ CONFIGURE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH:Q}
 CONFIGURE_ENV+=		sdcc_cv_c_ggdb="no"
 
 REPLACE_PYTHON=		support/scripts/as2gbmap.py
+MAKE_JOBS_SAFE=		NO
 
 .include "../../mk/bsd.prefs.mk"
 
