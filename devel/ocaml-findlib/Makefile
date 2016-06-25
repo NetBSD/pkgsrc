@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2016/05/05 09:42:19 jaapb Exp $
+# $NetBSD: Makefile,v 1.29 2016/06/25 13:55:15 jaapb Exp $
 
 DISTNAME=		findlib-1.6.2
 PKGNAME=	ocaml-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=		devel
 MASTER_SITES=		http://download.camlcity.org/download/
 
@@ -10,12 +11,15 @@ HOMEPAGE=		http://www.camlcity.org/
 COMMENT=		Library finder for OCaml
 LICENSE=		mit
 
+OCAML_FINDLIB_DIRS+=	bigarray bytes compiler-libs dynlink findlib graphics \
+			ocamldoc num-top num stdlib str threads unix
+
 .include "../../mk/ocaml.mk"
 
 # Undeclared dependencies between different components
 MAKE_JOBS_SAFE=		no
 
-USE_TOOLS+=		gmake m4 bash
+USE_TOOLS+=		gmake m4 bash fgrep:run sh:run
 USE_PKGLOCALEDIR=	yes
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	-bindir ${PREFIX}/bin
@@ -35,7 +39,8 @@ INSTALLATION_DIRS=	lib/ocaml libexec bin ${OCAML_SITELIBDIR}
 
 CONF_FILES=		${EGDIR}/ocamlfind.conf ${PKG_SYSCONFDIR}/ocamlfind.conf
 
-USE_TOOLS+=		fgrep:run sh:run
+FILES_SUBST+=		OCAML_FINDLIB_DIRS="${OCAML_FINDLIB_DIRS}" OCAML_SITELIBDIR="${OCAML_SITELIBDIR}"
+
 SUBST_CLASSES+=		ofr
 SUBST_STAGE.ofr=	pre-configure
 SUBST_FILES.ofr=	ocaml-findlib-register.sh
@@ -47,12 +52,6 @@ SUBST_CLASSES+=		pathes
 SUBST_STAGE.pathes=	post-install
 SUBST_FILES.pathes=	${DESTDIR}${PREFIX}/lib/ocaml/site-lib/findlib/Makefile.config
 SUBST_SED.pathes=	-e 's,^\(OCAML_CORE_BIN=\).*,\1'${PREFIX:Q}/bin','
-
-post-extract:
-	${CP} ${FILESDIR}/ocaml-findlib-register.sh ${WRKSRC}
-
-post-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/ocaml-findlib-register.sh ${DESTDIR}${PREFIX}/libexec/ocaml-findlib-register
 
 do-test:
 	${RUN} cd ${WRKSRC}; ${SH} itest
