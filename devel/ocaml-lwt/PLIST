@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2016/02/17 17:00:38 jaapb Exp $
-@unexec %D/libexec/ocaml-findlib-register del %D/${OCAML_SITELIB}/lwt
+@comment $NetBSD: PLIST,v 1.8 2016/06/25 14:18:35 jaapb Exp $
 ${PLIST.ppx}bin/ppx_lwt
 ${OCAML_SITELIB}/lwt/META
 ${OCAML_SITELIB}/lwt/dlllwt-unix_stubs.so
@@ -240,4 +239,3 @@ ${PLIST.ppx}${OCAML_SITELIB}/lwt/ppx_lwt.cmt
 ${PLIST.ppx}${OCAML_SITELIB}/lwt/ppx_lwt.cmti
 ${PLIST.ocaml-opt}${PLIST.ppx}${OCAML_SITELIB}/lwt/ppx_lwt.cmx
 ${PLIST.ppx}${OCAML_SITELIB}/lwt/ppx_lwt.mli
-@exec %D/libexec/ocaml-findlib-register add %D/${OCAML_SITELIB}/lwt
