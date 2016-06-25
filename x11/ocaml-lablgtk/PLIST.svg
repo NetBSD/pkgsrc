@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST.svg,v 1.1 2014/10/10 08:37:49 jaapb Exp $
-${PLIST.opt}lib/ocaml/site-lib/lablgtk2/lablrsvg.a
-lib/ocaml/site-lib/lablgtk2/lablrsvg.cma
-${PLIST.opt}lib/ocaml/site-lib/lablgtk2/lablrsvg.cmxa
-${PLIST.opt}lib/ocaml/site-lib/lablgtk2/lablrsvg.cmxs
-lib/ocaml/site-lib/lablgtk2/liblablrsvg.a
-lib/ocaml/site-lib/lablgtk2/rsvg.cmi
-${PLIST.opt}lib/ocaml/site-lib/lablgtk2/rsvg.cmx
-lib/ocaml/site-lib/lablgtk2/rsvg.ml
-${PLIST.stubs}lib/ocaml/site-lib/lablgtk2/dlllablrsvg.so
+@comment $NetBSD: PLIST.svg,v 1.2 2016/06/25 14:33:11 jaapb Exp $
+${PLIST.ocaml-opt}${OCAML_SITELIB}/lablgtk2/lablrsvg.a
+${OCAML_SITELIB}/lablgtk2/lablrsvg.cma
+${PLIST.ocaml-opt}${OCAML_SITELIB}/lablgtk2/lablrsvg.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/lablgtk2/lablrsvg.cmxs
+${OCAML_SITELIB}/lablgtk2/liblablrsvg.a
+${OCAML_SITELIB}/lablgtk2/rsvg.cmi
+${PLIST.ocaml-opt}${OCAML_SITELIB}/lablgtk2/rsvg.cmx
+${OCAML_SITELIB}/lablgtk2/rsvg.ml
+${PLIST.stubs}${OCAML_SITELIB}/lablgtk2/dlllablrsvg.so

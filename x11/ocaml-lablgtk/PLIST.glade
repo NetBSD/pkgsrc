@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST.glade,v 1.1 2014/10/10 08:37:49 jaapb Exp $
+@comment $NetBSD: PLIST.glade,v 1.2 2016/06/25 14:33:11 jaapb Exp $
 bin/lablgladecc2
-lib/ocaml/site-lib/lablgtk2/glade.cmi
-${PLIST.opt}lib/ocaml/site-lib/lablgtk2/glade.cmx
-lib/ocaml/site-lib/lablgtk2/glade.ml
-${PLIST.opt}lib/ocaml/site-lib/lablgtk2/lablglade.a
-lib/ocaml/site-lib/lablgtk2/lablglade.cma
-${PLIST.opt}lib/ocaml/site-lib/lablgtk2/lablglade.cmxa
-${PLIST.opt}lib/ocaml/site-lib/lablgtk2/lablglade.cmxs
-lib/ocaml/site-lib/lablgtk2/liblablglade2.a
-${PLIST.stubs}lib/ocaml/site-lib/lablgtk2/dlllablglade2.so
+${OCAML_SITELIB}/lablgtk2/glade.cmi
+${PLIST.ocaml-opt}${OCAML_SITELIB}/lablgtk2/glade.cmx
+${OCAML_SITELIB}/lablgtk2/glade.ml
+${PLIST.ocaml-opt}${OCAML_SITELIB}/lablgtk2/lablglade.a
+${OCAML_SITELIB}/lablgtk2/lablglade.cma
+${PLIST.ocaml-opt}${OCAML_SITELIB}/lablgtk2/lablglade.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/lablgtk2/lablglade.cmxs
+${OCAML_SITELIB}/lablgtk2/liblablglade2.a
+${PLIST.stubs}${OCAML_SITELIB}/lablgtk2/dlllablglade2.so

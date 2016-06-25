@@ -1,10 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2014/10/28 14:53:19 hiramatsu Exp $
-@unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/curl
-lib/ocaml/site-lib/curl/META
-${PLIST.opt}lib/ocaml/site-lib/curl/curl.a
-lib/ocaml/site-lib/curl/curl.cma
-lib/ocaml/site-lib/curl/curl.cmi
-${PLIST.opt}lib/ocaml/site-lib/curl/curl.cmxa
-lib/ocaml/site-lib/curl/curl.mli
-${PLIST.opt}lib/ocaml/site-lib/curl/libcurl-helper.a
-@exec %D/libexec/ocaml-findlib-register add %D/lib/ocaml/site-lib/curl
+@comment $NetBSD: PLIST,v 1.3 2016/06/25 14:32:27 jaapb Exp $
+${OCAML_SITELIB}/curl/META
+${PLIST.ocaml-opt}${OCAML_SITELIB}/curl/curl.a
+${OCAML_SITELIB}/curl/curl.cma
+${OCAML_SITELIB}/curl/curl.cmi
+${PLIST.ocaml-opt}${OCAML_SITELIB}/curl/curl.cmxa
+${OCAML_SITELIB}/curl/curl.mli
+${PLIST.ocaml-opt}${OCAML_SITELIB}/curl/libcurl-helper.a
