@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16063 2016/06/25 17:03:08 maya Exp $
+$NetBSD: TODO,v 1.16064 2016/06/25 17:15:57 maya Exp $
 
 Suggested new packages
 ======================
@@ -14,6 +14,9 @@ Suggested new packages
 
 	Any interesting packages in OpenBSD's ports.
 	http://openports.se/
+
+	squashfs
+	Full package provided in pkg/51058
 
 	bacula-rescue
 	Scripts used to help create rescue boot CDs for bare metal
@@ -575,6 +578,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o drivel-3.0.5
 	o dropbear-2016.72
 	o drupal-8.0.3
+	o duplicity-0.7.07 [pkg/51061]
 	o dvdisaster-0.79.5
 	o dvdstyler-2.9.6
 	o e2fsprogs-1.42.12 [wip]
