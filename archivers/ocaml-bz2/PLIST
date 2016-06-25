@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/09/16 12:30:46 jaapb Exp $
-@unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/bz2
+@comment $NetBSD: PLIST,v 1.2 2016/06/25 14:15:05 jaapb Exp $
 lib/ocaml/site-lib/bz2/META
 ${PLIST.opt}lib/ocaml/site-lib/bz2/bz2.a
 lib/ocaml/site-lib/bz2/bz2.cma
@@ -9,4 +8,3 @@ lib/ocaml/site-lib/bz2/bz2.cmi
 lib/ocaml/site-lib/bz2/bz2.mli
 lib/ocaml/site-lib/bz2/dllcamlbz2.so
 lib/ocaml/site-lib/bz2/libcamlbz2.a
-@exec %D/libexec/ocaml-findlib-register add %D/lib/ocaml/site-lib/bz2
