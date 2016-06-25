@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.3 2015/11/04 02:00:00 agc Exp $
+$NetBSD: distinfo,v 1.4 2016/06/25 13:59:20 jaapb Exp $
 
-SHA1 (pxp-1.2.3.tar.gz) = 4d0846f9f22d354740bb5a6c638da170e7a04e36
-RMD160 (pxp-1.2.3.tar.gz) = 276b19d06d89927c751518a36a36cef4f3f62fe8
-SHA512 (pxp-1.2.3.tar.gz) = 44ba4dbbd1ceec152f286976df6d948fd2ffc238d30a3abb31fcc54e8d37ae4281e9303294b1a79668e7402c5003cd6fbc0714700862f0e2e77c99a1e0af3e36
-Size (pxp-1.2.3.tar.gz) = 702592 bytes
+SHA1 (pxp-1.2.8.tar.gz) = f8482217db665a8d9b25023ee231f6419c127142
+RMD160 (pxp-1.2.8.tar.gz) = 8b15bc7529a46f533fa258c837359ef7d69a2086
+SHA512 (pxp-1.2.8.tar.gz) = 3292bfbda494066e454331a9cfc56b03f55afe8548bdf24fea09d9bc0a03c333c027f7b527983bd9b4d659458c95acf7e3fc251c72d26ab3502f52067c9f2549
+Size (pxp-1.2.8.tar.gz) = 619689 bytes
+SHA1 (patch-src_pxp-engine_pxp-document.ml) = c9c4bcdb102ca44e4fc676a11059fffc46e672de
 SHA1 (patch-tools_src_m2parsergen_Makefile) = 115700c42eb1a2204eb395e4840681c4663f0a76
 SHA1 (patch-tools_src_odoc_Makefile) = 1c7b769bd9d145b6e12850428af2eb61720f2334
