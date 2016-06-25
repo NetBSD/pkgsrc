@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2016/05/05 11:45:37 jaapb Exp $
+# $NetBSD: Makefile,v 1.23 2016/06/25 14:16:17 jaapb Exp $
 
 PKGNAME=	ocaml-sqlite3-${VERSION}
 DISTNAME=	v${VERSION}
 VERSION=	2.0.6
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	databases
 MASTER_SITES=	http://github.com/mmottl/sqlite3-ocaml/archive/
 
@@ -20,6 +20,5 @@ USE_TOOLS+=	gmake pkg-config
 OCAML_USE_OASIS=	yes
 
 .include "../../mk/ocaml.mk"
-.include "../../devel/ocaml-findlib/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
