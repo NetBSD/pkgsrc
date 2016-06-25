@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2589 2016/06/25 14:05:20 jaapb Exp $
+$NetBSD: CHANGES-2016,v 1.2590 2016/06/25 14:48:13 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3787,3 +3787,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/pxp to 1.2.8 [jaapb 2016-06-25]
 	Updated archivers/ocaml-zip to 1.06 [jaapb 2016-06-25]
 	Updated devel/ocaml-batteries to 2.5.0 [jaapb 2016-06-25]
+	Updated devel/ocaml-ppx_optcomp to 113.33.00 [jaapb 2016-06-25]
