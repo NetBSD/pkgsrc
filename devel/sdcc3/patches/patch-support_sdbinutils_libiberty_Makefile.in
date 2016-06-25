@@ -1,13 +1,13 @@
-$NetBSD: patch-support_sdbinutils_libiberty_Makefile.in,v 1.2 2015/08/22 17:06:16 bouyer Exp $
+$NetBSD: patch-support_sdbinutils_libiberty_Makefile.in,v 1.3 2016/06/25 17:48:15 bouyer Exp $
 
---- support/sdbinutils/libiberty/Makefile.in.orig	2015-03-26 14:11:08.000000000 +0100
-+++ support/sdbinutils/libiberty/Makefile.in	2015-08-22 13:14:04.000000000 +0200
-@@ -451,7 +451,7 @@
+--- support/sdbinutils/libiberty/Makefile.in.orig	2015-07-01 10:37:09.000000000 +0200
++++ support/sdbinutils/libiberty/Makefile.in	2016-06-25 13:17:19.000000000 +0200
+@@ -361,7 +361,7 @@
  # multilib-specific flags, it's overridden by FLAGS_TO_PASS from the
  # default multilib, so we have to take CFLAGS into account as well,
  # since it will be passed the multilib flags.
 -MULTIOSDIR = `$(CC) $(CFLAGS) -print-multi-os-directory`
 +MULTIOSDIR = "."
  install_to_libdir: all
- #	${mkinstalldirs} $(DESTDIR)$(libdir)/$(MULTIOSDIR)
- #	$(INSTALL_DATA) $(TARGETLIB) $(DESTDIR)$(libdir)/$(MULTIOSDIR)/$(TARGETLIB)n
+ 	if test -n "${target_header_dir}"; then \
+ 		${mkinstalldirs} $(DESTDIR)$(libdir)/$(MULTIOSDIR); \
