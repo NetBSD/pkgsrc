@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2016/03/04 15:29:40 jaapb Exp $
+$NetBSD: distinfo,v 1.2 2016/06/25 14:47:54 jaapb Exp $
 
-SHA1 (ppx_optcomp-113.24.00.tar.gz) = 227eb2511fe83e399a8bf0bf9f2f60b0d0cbbd4b
-RMD160 (ppx_optcomp-113.24.00.tar.gz) = 07d28ce202437b0c455c9ed86c3f85c8f7abe86f
-SHA512 (ppx_optcomp-113.24.00.tar.gz) = b8a59d3d7bbd4a8a1bb48cf5e74583fd979b7c4ea0b790adced4e5c36f48ee1928844da11c7400a9df0ff62508d83a1aa625beeb95a0313b5917a2b4308bb874
-Size (ppx_optcomp-113.24.00.tar.gz) = 14615 bytes
+SHA1 (ppx_optcomp-113.33.00.tar.gz) = 0232ac0352073bc05e401be2c7011fd55c538a08
+RMD160 (ppx_optcomp-113.33.00.tar.gz) = 818664cad171138dd739df8b897939dedcf9a0e6
+SHA512 (ppx_optcomp-113.33.00.tar.gz) = b20042d5a25ef4204fd26ba844c1a696577e3f68ace73f122487a64e8ce4138b71792b2bf094068e29a379179d88d2656931ae94bae9c5fcd8307fbdc97aa5c2
+Size (ppx_optcomp-113.33.00.tar.gz) = 16814 bytes
+SHA1 (patch-Makefile) = f55b9c7fe4d6d0cb68e3a66d934a9c8f0fe863a4
