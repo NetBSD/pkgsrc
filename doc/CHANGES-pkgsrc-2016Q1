@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q1,v 1.1.2.24 2016/06/19 17:03:47 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q1,v 1.1.2.25 2016/06/25 19:49:01 bsiegert Exp $
 
 Changes to the packages collection and infrastructure on the pkgsrc-2016Q1 branch:
 
@@ -251,3 +251,7 @@ security/libksba: security update
 
 Pullup ticket #5043 - requested by jperkin
 multimedia/xine-lib: dependency fix
+
+Pullup ticket #5046 - requested by taca
+www/drupal7: security fix
+
