@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2016/06/20 10:21:52 jaapb Exp $
+# $NetBSD: Makefile,v 1.14 2016/06/25 14:31:35 jaapb Exp $
 #
 
 DISTNAME=	cryptokit-1.10
 PKGNAME=	ocaml-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	http://forge.ocamlcore.org/frs/download.php/1493/
 
