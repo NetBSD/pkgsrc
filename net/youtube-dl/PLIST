@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2016/06/18 17:08:40 leot Exp $
+@comment $NetBSD: PLIST,v 1.23 2016/06/26 20:27:30 adam Exp $
 bin/youtube-dl
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -302,6 +302,9 @@ ${PYSITELIB}/youtube_dl/extractor/cliprs.pyo
 ${PYSITELIB}/youtube_dl/extractor/clipsyndicate.py
 ${PYSITELIB}/youtube_dl/extractor/clipsyndicate.pyc
 ${PYSITELIB}/youtube_dl/extractor/clipsyndicate.pyo
+${PYSITELIB}/youtube_dl/extractor/closertotruth.py
+${PYSITELIB}/youtube_dl/extractor/closertotruth.pyc
+${PYSITELIB}/youtube_dl/extractor/closertotruth.pyo
 ${PYSITELIB}/youtube_dl/extractor/cloudy.py
 ${PYSITELIB}/youtube_dl/extractor/cloudy.pyc
 ${PYSITELIB}/youtube_dl/extractor/cloudy.pyo
@@ -614,9 +617,6 @@ ${PYSITELIB}/youtube_dl/extractor/gamespot.pyo
 ${PYSITELIB}/youtube_dl/extractor/gamestar.py
 ${PYSITELIB}/youtube_dl/extractor/gamestar.pyc
 ${PYSITELIB}/youtube_dl/extractor/gamestar.pyo
-${PYSITELIB}/youtube_dl/extractor/gametrailers.py
-${PYSITELIB}/youtube_dl/extractor/gametrailers.pyc
-${PYSITELIB}/youtube_dl/extractor/gametrailers.pyo
 ${PYSITELIB}/youtube_dl/extractor/gazeta.py
 ${PYSITELIB}/youtube_dl/extractor/gazeta.pyc
 ${PYSITELIB}/youtube_dl/extractor/gazeta.pyo
@@ -1430,6 +1430,9 @@ ${PYSITELIB}/youtube_dl/extractor/sportbox.pyo
 ${PYSITELIB}/youtube_dl/extractor/sportdeutschland.py
 ${PYSITELIB}/youtube_dl/extractor/sportdeutschland.pyc
 ${PYSITELIB}/youtube_dl/extractor/sportdeutschland.pyo
+${PYSITELIB}/youtube_dl/extractor/sportschau.py
+${PYSITELIB}/youtube_dl/extractor/sportschau.pyc
+${PYSITELIB}/youtube_dl/extractor/sportschau.pyo
 ${PYSITELIB}/youtube_dl/extractor/srgssr.py
 ${PYSITELIB}/youtube_dl/extractor/srgssr.pyc
 ${PYSITELIB}/youtube_dl/extractor/srgssr.pyo
