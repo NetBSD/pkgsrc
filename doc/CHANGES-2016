@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2591 2016/06/25 17:49:04 bouyer Exp $
+$NetBSD: CHANGES-2016,v 1.2592 2016/06/26 09:15:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3789,3 +3789,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/ocaml-batteries to 2.5.0 [jaapb 2016-06-25]
 	Updated devel/ocaml-ppx_optcomp to 113.33.00 [jaapb 2016-06-25]
 	Updated devel/sdcc3 to 3.6.0 [bouyer 2016-06-25]
+	Updated misc/cowsay to 3.04 [wiz 2016-06-26]
