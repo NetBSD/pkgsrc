@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2016/01/04 12:45:36 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.8 2016/06/26 04:29:56 dholland Exp $
 
 DISTNAME=	xmonad-0.12
 PKGNAME=	${DISTNAME}
@@ -8,7 +8,7 @@ MAINTAINER=	esg@sdf.lonestar.org
 COMMENT=	Tiling window manager
 LICENSE=	modified-bsd
 
-# don't need default binary
+# don't need default binary (see MESSAGE)
 SUBST_CLASSES+=	1
 SUBST_STAGE.1=	pre-patch
 SUBST_FILES.1=	xmonad.cabal
