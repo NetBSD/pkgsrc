@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2009/06/14 18:07:19 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2016/06/26 09:15:40 wiz Exp $
 bin/cowsay
 bin/cowthink
 man/man1/cowsay.1
 man/man1/cowthink.1
 share/cows/beavis.zen.cow
+share/cows/blowfish.cow
 share/cows/bong.cow
 share/cows/bud-frogs.cow
 share/cows/bunny.cow
