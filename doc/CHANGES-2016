@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2593 2016/06/26 12:05:00 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.2594 2016/06/26 12:18:10 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3791,3 +3791,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/sdcc3 to 3.6.0 [bouyer 2016-06-25]
 	Updated misc/cowsay to 3.04 [wiz 2016-06-26]
 	Updated www/libproxy to 0.4.13 [kamil 2016-06-26]
+	Updated net/nanomsg to 1.0.0nb1 [kamil 2016-06-26]
