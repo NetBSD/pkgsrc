@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16068 2016/06/26 12:33:19 wiz Exp $
+$NetBSD: TODO,v 1.16069 2016/06/26 20:16:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1461,6 +1461,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-datapkg-0.9
 	o py-django-photologue-2.7
 	o py-djangorestframework-2.3.12
+	o py-dns-1.14.0
 	o py-doctor-15.1.0
 	o py-ephem3-3.7.6.0
 	o py-flake8-2.5.4
