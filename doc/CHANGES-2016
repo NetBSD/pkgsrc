@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2595 2016/06/26 19:03:43 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2596 2016/06/26 20:31:47 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -2736,6 +2736,11 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/py-twisted to 16.2.0 [wiz 2016-05-23]
 	Updated x11/gtkmm3 to 3.20.1 [prlw1 2016-05-23]
 	Added meta-pkgs/lxde version 1.0 [youri 2016-05-23]
+	Updated databases/postgresql91 to 9.1.22 [adam 2016-05-23]
+	Updated databases/postgresql92 to 9.2.17 [adam 2016-05-23]
+	Updated databases/postgresql93 to 9.3.13 [adam 2016-05-23]
+	Updated databases/postgresql94 to 9.4.8 [adam 2016-05-23]
+	Updated databases/postgresql95 to 9.5.3 [adam 2016-05-23]
 	Updated databases/elasticsearch to 2.3.3 [fhajny 2016-05-24]
 	Added devel/stfl version 0.24 [leot 2016-05-24]
 	Added news/newsbeuter version 2.9 [leot 2016-05-24]
@@ -3793,3 +3798,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/libproxy to 0.4.13 [kamil 2016-06-26]
 	Updated net/nanomsg to 1.0.0nb1 [kamil 2016-06-26]
 	Updated pkgtools/url2pkg to 2.27 [wiz 2016-06-26]
+	Updated net/youtube-dl to 20160625 [adam 2016-06-26]
