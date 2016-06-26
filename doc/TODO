@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16067 2016/06/26 09:23:56 wiz Exp $
+$NetBSD: TODO,v 1.16068 2016/06/26 12:33:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -320,6 +320,10 @@ Suggested new packages
 	kexi
 	http://www.kexi-project.org/
 	Visual database applications creator
+
+	Tor BSD Diversity Project
+	https://torbsd.github.io/porting-pets.html
+	Various tools that are useful for privacy and/or tor
 
 	Missing xorg packages
 	app: constype, intel-gpu-tools
