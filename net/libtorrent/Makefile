@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2016/03/05 11:27:52 jperkin Exp $
+# $NetBSD: Makefile,v 1.56 2016/06/27 19:16:02 maya Exp $
 
 DISTNAME=	libtorrent-0.13.6
 PKGREVISION=	1
@@ -39,7 +39,7 @@ CONFIGURE_ARGS+=	--with-kqueue
 .include "../../mk/compiler.mk"
 
 # See http://libtorrent.rakshasa.no/ticket/96
-.if !empty(CC_VERSION:Mgcc-4.*)
+.if !empty(CC_VERSION:Mgcc-[45].*)
 CXXFLAGS+=	-fpermissive -fno-strength-reduce -fno-thread-jumps \
 		-fno-inline -fforce-addr
 .endif
