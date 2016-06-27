@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/04/08 01:42:41 rodent Exp $
-#
+# $NetBSD: Makefile,v 1.6 2016/06/27 15:41:29 wiz Exp $
 
 DISTNAME=	SourceSansPro_FontsOnly-1.038
 PKGNAME=	${DISTNAME:S/SourceSansPro_FontsOnly/sourcesans-fonts/}
@@ -8,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sourcesans.adobe/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/sourcesans.adobe/
+HOMEPAGE=	https://adobe-fonts.github.io/source-sans-pro/
 COMMENT=	Set of OpenType fonts designed for user interfaces from Adobe
 LICENSE=	ofl-v1.1
 
