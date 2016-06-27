@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.54 2016/05/08 11:01:38 markd Exp $
+# $NetBSD: Makefile,v 1.55 2016/06/27 22:17:23 markd Exp $
 
 DISTNAME=	kde-workspace-4.11.22
 PKGNAME=	${DISTNAME:S/-4/4-4/}
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	x11
 COMMENT=	Base workspace for the KDE 4 integrated X11 desktop
 MASTER_SITES=	${MASTER_SITE_KDE:=applications/15.08.0/src/}
@@ -51,6 +51,14 @@ CONF_FILES+=		${PREFIX}/share/examples/kde4-dbus/org.kde.kcontrol.kcmkdm.conf \
 
 SPECIAL_PERMS+=		${PREFIX}/lib/kde4/libexec/kcheckpass \
 			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 6555
+
+KDM_USER?=		kdm
+KDM_GROUP?=		${KDM_USER}
+PKG_USERS_VARS+=	KDM_USER
+PKG_GROUPS_VARS+=	KDM_GROUP
+PKG_GROUPS=		${KDM_GROUP}
+PKG_USERS=		${KDM_USER}:${KDM_GROUP}
+PKG_GECOS.${KDM_USER}=	kdm unprivileged user
 
 REPLACE_PERL+= \
 	kcontrol/keys/convertShortcuts.pl \
