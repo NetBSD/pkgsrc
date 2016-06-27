@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16072 2016/06/27 13:55:27 sevan Exp $
+$NetBSD: TODO,v 1.16073 2016/06/27 20:47:20 leot Exp $
 
 Suggested new packages
 ======================
@@ -1144,6 +1144,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o mp3splt-gtk-0.9.0
 	o mpdas-0.4.1
 	o mpeg4ip-1.6.1
+	o mpv-0.18.0 [leot]
 	o mserv-devel-0.41
 	o msgpack-1.4.1 [pkg/51083]
 	o multitail-6.4.2
