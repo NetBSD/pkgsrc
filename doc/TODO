@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16071 2016/06/27 13:43:54 sevan Exp $
+$NetBSD: TODO,v 1.16072 2016/06/27 13:55:27 sevan Exp $
 
 Suggested new packages
 ======================
@@ -324,6 +324,10 @@ Suggested new packages
 	Tor BSD Diversity Project
 	https://torbsd.github.io/porting-pets.html
 	Various tools that are useful for privacy and/or tor
+
+	NetBox
+	https://github.com/digitalocean/netbox
+	IP address management and data center infrastructure management tool
 
 	Missing xorg packages
 	app: constype, intel-gpu-tools
