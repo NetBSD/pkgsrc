@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2016/02/02 04:33:57 dbj Exp $
+$NetBSD: distinfo,v 1.9 2016/06/28 16:57:51 bouyer Exp $
 
 SHA1 (qgis-2.12.3.tar.bz2) = b2b8b6bda01ebec7ccbc8ab41d0e00fa6be217be
 RMD160 (qgis-2.12.3.tar.bz2) = 6b3350e978d27397020b01983ceaa00104d1bd17
@@ -13,3 +13,4 @@ SHA1 (patch-mac_CMakeLists.txt) = 2468c0a629738ce78cccb784395eb1f41049cc73
 SHA1 (patch-mac_cmake_1qt.cmake.in) = d74f7201849ef6dd83f39251e466eb04c791c0e6
 SHA1 (patch-src_core_CMakeLists.txt) = 4c504717fbce05984e9ac5867d407f9dcfa11d25
 SHA1 (patch-src_core_qgsapplication.cpp) = f6e81f86220c6bf85b55ee2f5fd8d6c7667ec385
+SHA1 (patch-src_crssync_CMakeLists.txt) = 49b551cd2231704dac0872b7c8893b5bdda3e0ad
