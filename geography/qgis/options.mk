@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2016/02/02 04:33:57 dbj Exp $
+# $NetBSD: options.mk,v 1.6 2016/06/28 16:57:51 bouyer Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qgis
 PKG_SUPPORTED_OPTIONS=	python
@@ -12,6 +12,8 @@ PKG_SUPPORTED_OPTIONS=	python
 
 .if empty(PKG_OPTIONS:Mpython)
 CMAKE_ARGS+=		-DWITH_BINDINGS:BOOL=FALSE
+PYTHON_FOR_BUILD_ONLY=	YES
+.include "../../lang/python/application.mk"
 .else
 CMAKE_ARGS+=		-DWITH_BINDINGS:BOOL=TRUE
 CMAKE_ARGS+=		-DSIP_BINARY_PATH:PATH=${BUILDLINK_PREFIX.py-sip}/bin

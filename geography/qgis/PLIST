@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2016/02/02 04:33:57 dbj Exp $
+@comment $NetBSD: PLIST,v 1.6 2016/06/28 16:57:51 bouyer Exp $
 bin/qbrowser
 bin/qgis
 bin/qgis_bench
@@ -618,8 +618,6 @@ lib/libqgis_gui.so.${PKGVERSION}
 lib/libqgis_gui.so
 lib/libqgis_networkanalysis.so.${PKGVERSION}
 lib/libqgis_networkanalysis.so
-lib/libqgispython.so.${PKGVERSION}
-lib/libqgispython.so
 lib/qgis/crssync
 lib/qgis/plugins/libbasicauthmethod.so
 lib/qgis/plugins/libcoordinatecaptureplugin.so
