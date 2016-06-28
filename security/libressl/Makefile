@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2016/03/01 02:07:48 sevan Exp $
+# $NetBSD: Makefile,v 1.5 2016/06/28 13:10:51 wiz Exp $
 
 DISTNAME=	libressl-2.2.6
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_OPENBSD:=LibreSSL/}
 
@@ -15,6 +16,7 @@ USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE+=	libcrypto.pc.in
 PKGCONFIG_OVERRIDE+=	libssl.pc.in
+PKGCONFIG_OVERRIDE+=	libtls.pc.in
 PKGCONFIG_OVERRIDE+=	openssl.pc.in
 
 LIBRESSL_PREFIX=	${PREFIX}/${PKGBASE}
@@ -29,7 +31,7 @@ CONFS= 			cert.pem openssl.cnf x509v3.cnf
 .for f in ${CONFS}
 CONF_FILES+= 		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
-					
+
 # Handle subprefix
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${LIBRESSL_PREFIX:Q}/lib
 BUILDLINK_PASSTHRU_RPATHDIRS+=	${LIBRESSL_PREFIX:Q}/lib
