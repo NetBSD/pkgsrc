@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST.python,v 1.1 2016/02/02 04:33:57 dbj Exp $
+@comment $NetBSD: PLIST.python,v 1.2 2016/06/28 16:57:51 bouyer Exp $
+lib/libqgispython.so.${PKGVERSION}
+lib/libqgispython.so
 share/qgis/python/console/__init__.py
 share/qgis/python/console/console.py
 share/qgis/python/console/console_compile_apis.py
