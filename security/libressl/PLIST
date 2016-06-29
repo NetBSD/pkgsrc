@@ -1,4 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2016/03/01 01:49:48 sevan Exp $
+@comment $NetBSD: PLIST,v 1.4 2016/06/29 08:23:33 wiz Exp $
+lib/pkgconfig/libcrypto.pc
+lib/pkgconfig/libssl.pc
+lib/pkgconfig/libtls.pc
+lib/pkgconfig/openssl.pc
 libressl/bin/openssl
 libressl/include/openssl/aes.h
 libressl/include/openssl/asn1.h
@@ -75,10 +79,6 @@ libressl/include/tls.h
 libressl/lib/libcrypto.la
 libressl/lib/libssl.la
 libressl/lib/libtls.la
-libressl/lib/pkgconfig/libcrypto.pc
-libressl/lib/pkgconfig/libssl.pc
-libressl/lib/pkgconfig/libtls.pc
-libressl/lib/pkgconfig/openssl.pc
 libressl/man/man1/openssl.1
 libressl/man/man3/ASN1_OBJECT_free.3
 libressl/man/man3/ASN1_OBJECT_new.3
