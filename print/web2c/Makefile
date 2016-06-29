@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2016/06/16 04:06:20 markd Exp $
+# $NetBSD: Makefile,v 1.53 2016/06/29 10:01:05 markd Exp $
 
 DISTNAME=	texlive-20160523-source
 PKGNAME=	web2c-2016
@@ -14,7 +14,7 @@ CONFLICTS+=	ja-ptex-bin-[0-9]*
 CONFLICTS+=	teTeX-bin<=3.0nb28
 CONFLICTS+=	texlive-tetex<2010
 DEPENDS+=	kpathsea>=6.2.1:../../print/kpathsea
-DEPENDS+=	ptexenc>=1.3.3:../../print/ptexenc
+DEPENDS+=	ptexenc>=1.3.4:../../print/ptexenc
 
 EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
 			${DISTNAME}/texk/web2c
