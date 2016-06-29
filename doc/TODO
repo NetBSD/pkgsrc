@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16074 2016/06/29 08:26:07 wiz Exp $
+$NetBSD: TODO,v 1.16075 2016/06/29 10:36:50 wiz Exp $
 
 Suggested new packages
 ======================
@@ -792,8 +792,8 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnu-crypto-2.1.0
 	o gnu-pw-mgr-2.0
 	o gnucap-20130423
-	o gnucash-2.6.13
-	o gnucash-docs-2.6.13
+	o gnucash-2.6.13 [wiz]
+	o gnucash-docs-2.6.13 [wiz]
 	o gnuchess-book-1.02
 	o gnustep-back-0.24.1
 	o gnustep-base-1.24.8
@@ -1240,7 +1240,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-DBD-SQLite2-0.37
 	o p5-Data-AMF-0.02004
 	o p5-Data-SimplePassword-0.11
-	o p5-DateTime-Locale-1.05
+	o p5-DateTime-Locale-1.05 [wiz]
 	o p5-Device-XBee-API-0.8
 	o p5-Digest-Hashcash-1.1
 	o p5-FCGI-1.3.3
@@ -1258,11 +1258,11 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Heap-1.04
 	o p5-IO-Interface-1.09
 	o p5-IO-Prompt-0.997003
-	o p5-IO-Socket-SSL-2.029
+	o p5-IO-Socket-SSL-2.029 [wiz]
 	o p5-IP-Country-3.03
 	o p5-JSON-Any-1.39
 	o p5-LWP-Protocol-PSGI-0.09
-	o p5-List-AllUtils-0.11
+	o p5-List-AllUtils-0.11 [wiz]
 	o p5-Locale-Codes-3.38
 	o p5-Locale-Currency-Format-1.35
 	o p5-Math-BigInt-GMP-1.49
@@ -1271,8 +1271,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o p5-Math-Random-MT-1.17
 	o p5-Math-Random-MT-Perl-1.15
 	o p5-Memoize-Memcached-0.11
-	o p5-Moo-2.002003 [wiz]
-	o p5-Moo-2.002004
+	o p5-Moo-2.002004 [wiz]
 	o p5-MooX-Log-Any-0.004004
 	o p5-Moose-Policy-0.05
 	o p5-Net-DBus-1.1.0
