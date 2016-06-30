@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2614 2016/06/30 17:42:48 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2615 2016/06/30 17:43:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3817,3 +3817,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated misc/calibre to 2.60.0 [wiz 2016-06-30]
 	Updated sysutils/desktop-file-utils to 0.23 [wiz 2016-06-30]
 	Updated textproc/p5-XML-LibXML to 2.0126 [wiz 2016-06-30]
+	Updated www/py-betamax to 0.7.1 [wiz 2016-06-30]
