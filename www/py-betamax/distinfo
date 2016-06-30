@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2016/05/05 11:37:32 wiz Exp $
+$NetBSD: distinfo,v 1.4 2016/06/30 17:42:56 wiz Exp $
 
-SHA1 (betamax-0.7.0.tar.gz) = ed67f608c6a87165edad65e0e01ea8ea9d7b7a50
-RMD160 (betamax-0.7.0.tar.gz) = 8e6e7aba41023e0b02534c68d778750b1a600684
-SHA512 (betamax-0.7.0.tar.gz) = 52d2e37c19b97d09d68cc5a24b27b3eed80b1894537284216e0f7c1c6a3a3697d231754ba837758f3ce39fed5d9428cd64aef581c590e18f45801d41a0271136
-Size (betamax-0.7.0.tar.gz) = 75780 bytes
+SHA1 (betamax-0.7.1.tar.gz) = 63ad1bd6bf048975564cf07dacb5c8921eb50adf
+RMD160 (betamax-0.7.1.tar.gz) = 28fcfa76e2e629f9387df1a6d05e581c0781edc1
+SHA512 (betamax-0.7.1.tar.gz) = b74575ef73b96836afe8342b411bc529b5595b5d42cbc75ce7e1952352a7ea3cc123a5fe88e4bddce2d925cb9849abe05fd8318c2a954a6d6dcb10ca3b36463e
+Size (betamax-0.7.1.tar.gz) = 75952 bytes
