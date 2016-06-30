@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.11 2015/12/27 12:36:42 joerg Exp $
+# $NetBSD: Makefile.in,v 1.12 2016/06/30 17:42:04 wiz Exp $
 
 BOOTSTRAP=	@bootstrap@
 
@@ -22,4 +22,3 @@ distclean: clean
 	rm -f config.log config.status configure.lineno
 	rm -f Makefile */Makefile
 	rm -f lib/config.h lib/pkg_install.conf.5 lib/pkg_install.conf.cat
-	rm -f bpm/bpm.sh
