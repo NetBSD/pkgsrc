@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2016/06/26 20:10:23 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2016/06/30 18:03:46 wiz Exp $
 
 VERSION=	2.0.8
 DISTNAME=	pyspf-${VERSION}
@@ -11,7 +11,7 @@ HOMEPAGE=	https://pypi.python.org/pypi/pyspf
 COMMENT=	Python implementation of the RFC 4408 SPF protocol
 LICENSE=	python-software-foundation
 
-PYTHON_VERSIONED_DEPENDENCIES+=	dns
+DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
