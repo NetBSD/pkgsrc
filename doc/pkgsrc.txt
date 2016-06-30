@@ -3201,7 +3201,7 @@ PYTHON_VERSIONED_DEPENDENCIES to the list of packages that should be depended
 upon and include "../../lang/python/versioned_dependencies.mk", then the pkgsrc
 infrastructure will depend on the appropriate package version. For example:
 
-PYTHON_VERSIONED_DEPENDENCIES=dateutil dns
+PYTHON_VERSIONED_DEPENDENCIES=dateutil
 
 Look inside versioned_dependencies.mk for a list of supported packages.
 
