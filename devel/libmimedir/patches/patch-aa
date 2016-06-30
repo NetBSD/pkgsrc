@@ -1,6 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2009/07/08 16:18:34 joerg Exp $
+$NetBSD: patch-aa,v 1.4 2016/06/30 17:38:52 wiz Exp $
 
---- Makefile.in.orig	2005-10-17 01:19:55.000000000 +0200
+Convert to libtool.
+
+--- Makefile.in.orig	2008-06-03 16:58:26.000000000 +0000
 +++ Makefile.in
 @@ -22,7 +22,7 @@ LOBJS= dirlex.lo dirsynt.lo parse.lo get
  
@@ -22,4 +24,4 @@ $NetBSD: patch-aa,v 1.3 2009/07/08 16:18:34 joerg Exp $
 +	$(LIBTOOL) --mode=install ${BSD_INSTALL_LIB} libmimedir.la ${DESTDIR}${libdir}/libmimedir.la
  
  clean:
- 	rm -f $(OBJS) $(LOBJS) *.a *.la *.core
+ 	rm -f $(OBJS) $(LOBJS) test.o *.a *.la *.core
