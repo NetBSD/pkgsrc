@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.bsd,v 1.10 2016/06/15 16:45:10 agc Exp $
+# $NetBSD: Makefile.bsd,v 1.11 2016/06/30 21:10:59 agc Exp $
 
 PROG=netpgpverify
 
@@ -8,7 +8,7 @@ SRCS+= pgpsum.c rsa.c
 
 SRCS+= bzlib.c zlib.c
 
-SRCS+= md5c.c rmd160.c sha1.c sha2.c tiger.c
+SRCS+= md5c.c rmd160.c sha1.c sha2.c
 
 CPPFLAGS+=-I.
 
