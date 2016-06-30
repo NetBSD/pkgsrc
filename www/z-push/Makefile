@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/06/19 22:16:48 jym Exp $
+# $NetBSD: Makefile,v 1.3 2016/06/30 03:17:52 taca Exp $
 #
 
 DISTNAME=	z-push-${ZPUSH_VERSION}
@@ -58,6 +58,7 @@ REPLACE.php.new=	${PREFIX}/bin/php
 REPLACE_FILES.php=	z-push-admin.php
 REPLACE_FILES.php+=	z-push-top.php
 REPLACE_FILES.php+=	backend/zarafa/listfolders.php
+REPLACE_FILES.php+=	tools/migrate-2.0.x-2.1.0.php
 
 SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	pre-configure
@@ -74,8 +75,9 @@ SUBST_MESSAGE.state-dir=Fixing Z-push state directory path.
 post-extract:
 	${CP} ${FILESDIR}/z-push.conf ${WRKDIR}/z-push.conf
 
-post-patch:
+pre-configure:
 	${FIND} ${WRKSRC} -name "*.orig" -print | ${XARGS} ${RM} -f
+	${CHMOD} -x ${WRKSRC}/lib/syncobjects/syncresolverecipient.php
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/config.php	\
