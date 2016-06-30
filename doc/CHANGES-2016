@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2604 2016/06/30 16:39:27 jperkin Exp $
+$NetBSD: CHANGES-2016,v 1.2605 2016/06/30 17:38:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3807,3 +3807,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/gd to 2.1.1nb3 [taca 2016-06-30]
 	Added lang/coreclr version 1.0.0 [kamil 2016-06-30]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2016Q2 branch [jperkin 2016-06-30]
+	Updated audio/libsndfile to 1.0.27 [wiz 2016-06-30]
