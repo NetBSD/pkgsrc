@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.144 2016/06/30 17:41:17 wiz Exp $
+# $NetBSD: Makefile,v 1.145 2016/06/30 18:03:46 wiz Exp $
 
 DISTNAME=	calibre-2.60.0
 CATEGORIES=	misc
@@ -19,6 +19,7 @@ DEPENDS+=	xdg-utils>=1.0.2:../../misc/xdg-utils
 #DEPENDS+=	poppler-utils-[0-9]*:../../print/poppler-utils
 DEPENDS+=	${PYPKGPREFIX}-lxml>=3.2.1:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-beautifulsoup>=3.0.5:../../www/py-beautifulsoup
+DEPENDS+=	${PYPKGPREFIX}-dns>=1.6.0:../../net/py-dns
 DEPENDS+=	${PYPKGPREFIX}-mechanize>=0.1.11nb1:../../www/py-mechanize
 DEPENDS+=	${PYPKGPREFIX}-cssselect>=0.7.1:../../textproc/py-cssselect
 DEPENDS+=	${PYPKGPREFIX}-cssutils>=0.9.9:../../textproc/py-cssutils
@@ -32,8 +33,7 @@ DEPENDS+=	${PYPKGPREFIX}-netifaces>=0.8:../../net/py-netifaces
 DEPENDS+=	${PYPKGPREFIX}-apsw>=3.7.17:../../databases/py-apsw
 
 # dateutil>=1.4.1
-# dns>=1.6.0
-PYTHON_VERSIONED_DEPENDENCIES=	dateutil dns
+PYTHON_VERSIONED_DEPENDENCIES=	dateutil
 
 EXTRACT_USING=  bsdtar
 
