@@ -1,24 +1,35 @@
-# $NetBSD: Makefile,v 1.24 2015/12/05 21:25:42 adam Exp $
+# $NetBSD: Makefile,v 1.25 2016/06/30 17:56:14 wiz Exp $
 
-DISTNAME=		fonttools-2.4
-PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=		fonts python
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fonttools/}
+DISTNAME=	fonttools-3.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	fonts
+MASTER_SITES=	${MASTER_SITE_GITHUB:=behdad/}
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://fonttools.sourceforge.net/
-COMMENT=		Library for manipulating fonts
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/behdad/fonttools/
+COMMENT=	Library for manipulating fonts
 
-DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+DEPENDS+=	${PYPKGPREFIX}-numpy-[0-9]*:../../math/py-numpy
+USE_LANGUAGES=	# none
 
-PYTHON_SELF_CONFLICT=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 2.4
+REPLACE_PYTHON+=	setup.py
 
-SUBST_CLASSES+=		fix-mandir
-SUBST_STAGE.fix-mandir=	pre-configure
-SUBST_FILES.fix-mandir=	setup.py
-SUBST_SED.fix-mandir=	-e 's|share/man/man1|${PKGMANDIR}/man1|g'
+SUBST_CLASSES+=		man
+SUBST_SED.man+=		-e "s,share/man,${PKGMANDIR},"
+SUBST_FILES.man+=	setup.py
+SUBST_STAGE.man=	pre-configure
+SUBST_MESSAGE.man=	Fixing man page installation path.
 
-.include "../../lang/python/distutils.mk"
+PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
+FILES_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
+
+post-install:
+	cd ${DESTDIR}${PREFIX}/bin && \
+	for i in pyftinspect pyftmerge pyftsubset ttx; do \
+		mv $$i $$i-${PYVERSSUFFIX}; \
+	done
+
+.include "../../lang/python/application.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
