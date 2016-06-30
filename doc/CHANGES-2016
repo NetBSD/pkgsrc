@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2603 2016/06/30 12:18:51 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.2603.2.1 2016/06/30 16:36:16 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3806,3 +3806,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/php-ja-wordpress to 4.5.3 [taca 2016-06-29]
 	Updated graphics/gd to 2.1.1nb3 [taca 2016-06-30]
 	Added lang/coreclr version 1.0.0 [kamil 2016-06-30]
+	mk/bsd.pkg.mk: freeze ended for pkgsrc-2016Q2 branch [jperkin 2016-06-30]
