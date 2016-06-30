@@ -1,0 +1,3 @@
+bin/dnseval @PREFIX@/bin/dnseval-@PYVERSSUFFIX@
+bin/dnsping @PREFIX@/bin/dnsping-@PYVERSSUFFIX@
+bin/dnstraceroute @PREFIX@/bin/dnstraceroute-@PYVERSSUFFIX@
