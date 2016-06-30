@@ -5281,7 +5281,7 @@ SYSCONFDIR="$sysconfdir"
 PKG_DBDIR="$pkgdbdir"
 
 
-ac_config_files="$ac_config_files Makefile add/Makefile admin/Makefile bpm/bpm.sh create/Makefile delete/Makefile info/Makefile lib/Makefile lib/pkg_install.conf.5 lib/pkg_install.conf.cat"
+ac_config_files="$ac_config_files Makefile add/Makefile admin/Makefile create/Makefile delete/Makefile info/Makefile lib/Makefile lib/pkg_install.conf.5 lib/pkg_install.conf.cat"
 
 cat >confcache <<\_ACEOF
 # This file is a shell script that caches the results of configure
@@ -5977,7 +5977,6 @@ do
     "Makefile") CONFIG_FILES="$CONFIG_FILES Makefile" ;;
     "add/Makefile") CONFIG_FILES="$CONFIG_FILES add/Makefile" ;;
     "admin/Makefile") CONFIG_FILES="$CONFIG_FILES admin/Makefile" ;;
-    "bpm/bpm.sh") CONFIG_FILES="$CONFIG_FILES bpm/bpm.sh" ;;
     "create/Makefile") CONFIG_FILES="$CONFIG_FILES create/Makefile" ;;
     "delete/Makefile") CONFIG_FILES="$CONFIG_FILES delete/Makefile" ;;
     "info/Makefile") CONFIG_FILES="$CONFIG_FILES info/Makefile" ;;
