@@ -5447,14 +5447,13 @@ PGPV_BN_clear(PGPV_BIGNUM *a)
 	if (a) {
 		mp_clear(a);
 	}
+	free(a);
 }
 
 void
 PGPV_BN_clear_free(PGPV_BIGNUM *a)
 {
-	if (a) {
-		mp_clear(a);
-	}
+	PGPV_BN_clear(a);
 }
 
 int
