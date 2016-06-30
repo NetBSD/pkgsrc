@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2626 2016/06/30 18:06:05 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2627 2016/06/30 21:05:00 agc Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3829,3 +3829,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Added net/py-dnsdiag version 1.5.0 [wiz 2016-06-30]
 	Updated fonts/py-fonttools to 3.0 [wiz 2016-06-30]
 	Updated emulators/mame to 0.175 [wiz 2016-06-30]
+	Updated security/netpgpverify to 20160623 [agc 2016-06-30]
+	Updated security/libnetpgpverify to 20160623 [agc 2016-06-30]
