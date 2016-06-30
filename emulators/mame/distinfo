@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.54 2016/06/30 18:05:55 wiz Exp $
+$NetBSD: distinfo,v 1.55 2016/06/30 18:14:23 wiz Exp $
 
 SHA1 (mame-0.175.tar.gz) = 5b308fa2f0d825090a59e18d5172b99f4503c111
 RMD160 (mame-0.175.tar.gz) = e9f97ea9b1782a8869a877b555e693180af4b4e2
 SHA512 (mame-0.175.tar.gz) = fc03179f9a89c757c1bfbe6e3c0c9c49e0c847ed8e43bd2fb90b2841faf7bc422ed7b704b36972237bb79643e3e718b442c7093d22dc74e80e5106b722440de3
 Size (mame-0.175.tar.gz) = 102916507 bytes
 SHA1 (patch-3rdparty_bgfx_examples_common_font_font__manager.cpp) = e39b2dff553505531adb5f0a31b0a22306b8e2e4
-SHA1 (patch-3rdparty_bx_include_bx_thread.h) = 1a7643a67a094879466cd372f95e023bb1ea0d17
+SHA1 (patch-3rdparty_bx_include_bx_thread.h) = 8083a10d76626ed93fe940a614bb43bcc2ac3a08
 SHA1 (patch-makefile) = 07a3b69c4044b01da9a28f6ebd1601ae16b2a996
 SHA1 (patch-scripts_genie.lua) = f0b6b9fe00b6f572089fc2a7495fe1fd3c86ae4e

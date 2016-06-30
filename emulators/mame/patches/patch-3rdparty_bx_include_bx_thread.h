@@ -1,4 +1,6 @@
-$NetBSD: patch-3rdparty_bx_include_bx_thread.h,v 1.4 2016/06/30 18:05:55 wiz Exp $
+$NetBSD: patch-3rdparty_bx_include_bx_thread.h,v 1.5 2016/06/30 18:14:23 wiz Exp $
+
+https://github.com/bkaradzic/bx/pull/118
 
 --- 3rdparty/bx/include/bx/thread.h.orig	2016-06-29 06:34:30.000000000 +0000
 +++ 3rdparty/bx/include/bx/thread.h
