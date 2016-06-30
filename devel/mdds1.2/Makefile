@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2016/05/18 11:48:45 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2016/06/30 17:39:44 wiz Exp $
 
-DISTNAME=	mdds-1.2.0
+DISTNAME=	mdds-1.2.1
 PKGNAME=	${DISTNAME:S/mdds/mdds1.2/}
 CATEGORIES=	devel
 MASTER_SITES=	http://kohei.us/files/mdds/src/
