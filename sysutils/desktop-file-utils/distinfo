@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.14 2015/11/04 01:32:11 agc Exp $
+$NetBSD: distinfo,v 1.15 2016/06/30 17:42:18 wiz Exp $
 
-SHA1 (desktop-file-utils-0.22.tar.xz) = 617f130091dbcc5e739d82ee48e2b3932da5957d
-RMD160 (desktop-file-utils-0.22.tar.xz) = b95fdd904ebd94e085df725cb1266c06c1a508ae
-SHA512 (desktop-file-utils-0.22.tar.xz) = 26c1f0da44e4d3fc286640084ad1fad0595fc94edb5d2edd2a4d8cbed0aea4e409aa1a610cbba372f8e540188b62aed764fc7fdecddefbcfeeaedd1d19e3d20a
-Size (desktop-file-utils-0.22.tar.xz) = 131028 bytes
+SHA1 (desktop-file-utils-0.23.tar.xz) = 10e9df65fdf2b896ce4d5f16616ea0df7c01d8f8
+RMD160 (desktop-file-utils-0.23.tar.xz) = 308058ff58db3a8a4ac28bf4b0d57df2dfede7bf
+SHA512 (desktop-file-utils-0.23.tar.xz) = 66a8ddfbb2be8edc14e16427e0dafa6fb1ef7491c816f19221fb5d5782e964cdcc3ae89807339f1c565af828aa83403cc56edeb2d03b3f93e013f3c5e9e6fe6a
+Size (desktop-file-utils-0.23.tar.xz) = 132000 bytes
 SHA1 (patch-ab) = 82809458adbb142b64bfc3b5cd29ce39413d51fc
