@@ -1,0 +1,32 @@
+$NetBSD: patch-src_pal_src_config.h.in,v 1.1 2016/06/30 12:16:24 kamil Exp $
+
+Revert:                                                         
+
+commit 5ac6af932fe2a3f4b285b6dcc79010caf807ea9d
+Author: Mike McLaughlin <mikem@microsoft.com>
+Date:   Fri May 27 20:03:32 2016 -0700
+
+    Fix the named semaphore leak on OSX (and Linux) (#5269)
+
+It broke NetBSD.
+
+--- src/pal/src/config.h.in.orig	2016-06-14 01:12:15.000000000 +0000
++++ src/pal/src/config.h.in
+@@ -101,9 +101,6 @@
+ #cmakedefine01 PTHREAD_CREATE_MODIFIES_ERRNO
+ #cmakedefine01 SEM_INIT_MODIFIES_ERRNO
+ #cmakedefine01 HAVE_PROCFS_CTL
+-#cmakedefine01 HAVE_PROCFS_MAPS
+-#cmakedefine01 HAVE_PROCFS_STAT
+-#cmakedefine01 HAVE_PROCFS_STATUS
+ #cmakedefine01 HAVE_COMPATIBLE_ACOS
+ #cmakedefine01 HAVE_COMPATIBLE_ASIN
+ #cmakedefine01 HAVE_COMPATIBLE_POW
+@@ -139,6 +136,7 @@
+ #cmakedefine01 HAVE_SCHED_OTHER_ASSIGNABLE
+ 
+ #define CHECK_TRACE_SPECIFIERS 0
++#define PROCFS_MEM_NAME ""
+ #define HAVE_GETHRTIME 0
+ #define HAVE_LOWERCASE_ISO_NAME 0
+ #define HAVE_READ_REAL_TIME 0

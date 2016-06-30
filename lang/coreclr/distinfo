@@ -1,0 +1,15 @@
+$NetBSD: distinfo,v 1.1 2016/06/30 12:16:24 kamil Exp $
+
+SHA1 (coreclr-1.0.0.tar.gz) = 0e9d7c8f78376c087abd0d83f959c8d1b8d3045c
+RMD160 (coreclr-1.0.0.tar.gz) = c275c337106f30f8050bd534e707b681c89f012b
+SHA512 (coreclr-1.0.0.tar.gz) = f4500fbc470044139e3dbb1a03e466b522546bba2b0964ec2506e1d002be7e78cf75592c4c42f2b09940881173b2305785b7499fb2967a32c4b72c03cc1bd8a9
+Size (coreclr-1.0.0.tar.gz) = 34303728 bytes
+SHA1 (patch-src_debug_debug-pal_unix_twowaypipe.cpp) = d514b087cf091e3a95c04dc4d7e22846b179a04b
+SHA1 (patch-src_debug_ee_debugger.cpp) = fe5df4646f063d19db3466f7b36b862f50d4f060
+SHA1 (patch-src_debug_inc_twowaypipe.h) = aea06d9e5d764cee3b7132e72b02b678b87c3d72
+SHA1 (patch-src_debug_shared_dbgtransportsession.cpp) = 487a595dd8bd1855056171f0d3ba5b99c092f576
+SHA1 (patch-src_inc_clrconfigvalues.h) = 8ca7841a24a7af459a9c26e737ef1ee2ece90be2
+SHA1 (patch-src_pal_inc_pal.h) = b29f2adbbdc07418dd6c269d9d4d9444c43f4ca3
+SHA1 (patch-src_pal_src_config.h.in) = fb8a262308f46707c083c7471be87ba0ac79947f
+SHA1 (patch-src_pal_src_configure.cmake) = 72865c6fd355901862192280a727351de62f5ac5
+SHA1 (patch-src_pal_src_thread_process.cpp) = fdb7b548da9989f352ad69e459d23e82d63a13a6
