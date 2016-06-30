@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1121 2016/06/30 17:47:20 wiz Exp $
+# $NetBSD: Makefile,v 1.1122 2016/06/30 17:48:27 wiz Exp $
 #
 
 COMMENT=	Networking tools
@@ -603,6 +603,7 @@ SUBDIR+=	py-caldav
 SUBDIR+=	py-celery
 SUBDIR+=	py-cymruwhois
 SUBDIR+=	py-dns
+SUBDIR+=	py-dnsdiag
 SUBDIR+=	py-dpkt
 SUBDIR+=	py-dropbox
 SUBDIR+=	py-eventlib
