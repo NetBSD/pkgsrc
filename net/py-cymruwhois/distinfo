@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/06/30 17:47:02 wiz Exp $
+
+SHA1 (python-cymruwhois-1.5.tar.gz) = cd18e164243c5a9fcd579cc00af6c238da5156ed
+RMD160 (python-cymruwhois-1.5.tar.gz) = 1b87a6946758039d3f5c5cd6a547543cad02228a
+SHA512 (python-cymruwhois-1.5.tar.gz) = 91475ce1d2dd3f938f5d7c062a6d27fc34d5194c78217c9b4d980a51261bd060036e782da290b0dc17263ff014f7c1feee455c4939be38a70fa887f39d0cd2b7
+Size (python-cymruwhois-1.5.tar.gz) = 10504 bytes
