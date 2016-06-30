@@ -1,0 +1,14 @@
+Running tests:
+
+I PAL (Platform Abstraction Layer)
+
+Done in the package's Makefile:
+
+$ bmake test
+
+II Managed code tests
+
+Fetch tests from:
+http://dotnet-ci.cloudapp.net/job/dotnet_coreclr/job/master/job/debug_windows_nt/lastSuccessfulBuild/artifact/bin/tests/tests.zip
+
+In directory: tests/
