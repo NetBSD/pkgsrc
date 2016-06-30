@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.ac,v 1.41 2016/02/14 08:06:54 agc Exp $
+dnl $NetBSD: configure.ac,v 1.42 2016/06/30 17:42:04 wiz Exp $
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
 AC_INIT([pkg_install], [20090911], [joerg@NetBSD.org])
@@ -172,7 +172,7 @@ AC_SUBST(SYSCONFDIR)
 PKG_DBDIR="$pkgdbdir"
 AC_SUBST(PKG_DBDIR)
 
-AC_CONFIG_FILES([Makefile add/Makefile admin/Makefile bpm/bpm.sh \
+AC_CONFIG_FILES([Makefile add/Makefile admin/Makefile \
 	create/Makefile delete/Makefile info/Makefile \
 	lib/Makefile lib/pkg_install.conf.5 lib/pkg_install.conf.cat])
 AC_OUTPUT
