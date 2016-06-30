@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2607 2016/06/30 17:39:02 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2608 2016/06/30 17:39:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3810,3 +3810,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated audio/libsndfile to 1.0.27 [wiz 2016-06-30]
 	Updated devel/afl to 2.16b [wiz 2016-06-30]
 	Updated devel/libmimedir to 0.5.1 [wiz 2016-06-30]
+	Updated devel/mdds1.2 to 1.2.1 [wiz 2016-06-30]
