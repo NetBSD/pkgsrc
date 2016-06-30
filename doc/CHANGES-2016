@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2619 2016/06/30 17:44:28 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2620 2016/06/30 17:44:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3822,3 +3822,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated finance/gnucash-docs to 2.6.13 [wiz 2016-06-30]
 	Updated time/p5-DateTime-Locale to 1.05 [wiz 2016-06-30]
 	Updated security/p5-IO-Socket-SSL to 2.029 [wiz 2016-06-30]
+	Updated devel/p5-List-AllUtils to 0.11 [wiz 2016-06-30]
