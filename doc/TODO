@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16086 2016/06/30 17:43:33 wiz Exp $
+$NetBSD: TODO,v 1.16087 2016/06/30 17:43:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -788,7 +788,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o gnu-crypto-2.1.0
 	o gnu-pw-mgr-2.0
 	o gnucap-20130423
-	o gnucash-docs-2.6.13 [wiz]
 	o gnuchess-book-1.02
 	o gnustep-back-0.24.1
 	o gnustep-base-1.24.8
