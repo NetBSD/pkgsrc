@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.7 2015/11/03 03:27:43 agc Exp $
+$NetBSD: distinfo,v 1.8 2016/06/30 17:38:52 wiz Exp $
 
-SHA1 (libmimedir-0.5.tar.gz) = d54856d19d360ade0fa3b503e7c7e3cab0dfc59a
-RMD160 (libmimedir-0.5.tar.gz) = e943e0a9c0191b38168fa2a0c75f5ab9b8d997a4
-SHA512 (libmimedir-0.5.tar.gz) = e8902fb1ff245e08fc47ff3b2b23ded398466ea0a9e73203b3d47e9d6f140a391a93db083e42dcd40b2f19caea8fb29f22b30574464c9157889579e53c817d3d
-Size (libmimedir-0.5.tar.gz) = 283581 bytes
-SHA1 (patch-aa) = 75207872d248f012dd156a4a114e445aa93ab250
-SHA1 (patch-ab) = daf643a5bc66b573837244941c527f88fea49d27
+SHA1 (libmimedir-0.5.1.tar.gz) = 9ce47cb996a8c78529435fcf87d6657d9be2c87a
+RMD160 (libmimedir-0.5.1.tar.gz) = e20dfd1a83853d01718ddb60c8ea65ffddf8f281
+SHA512 (libmimedir-0.5.1.tar.gz) = 156be7b56260cb1d83ea6f9378ef2d79147c7d92bf83370edb8ef69aac7a7fff68ed262d79c4c397029297241c18b091d286e014cbdfb68962afa8222b649568
+Size (libmimedir-0.5.1.tar.gz) = 284854 bytes
+SHA1 (patch-aa) = d304af90c20a8d8657d037fa745559d849257fde
