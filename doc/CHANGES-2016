@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2605 2016/06/30 17:38:20 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2606 2016/06/30 17:38:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3808,3 +3808,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added lang/coreclr version 1.0.0 [kamil 2016-06-30]
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2016Q2 branch [jperkin 2016-06-30]
 	Updated audio/libsndfile to 1.0.27 [wiz 2016-06-30]
+	Updated devel/afl to 2.16b [wiz 2016-06-30]
