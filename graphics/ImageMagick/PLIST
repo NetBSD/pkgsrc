@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.88 2016/06/19 20:21:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.89 2016/06/30 17:40:58 wiz Exp $
 bin/Magick++-config
 bin/MagickCore-config
 bin/MagickWand-config
@@ -1227,6 +1227,7 @@ share/doc/ImageMagick-7/www/porting.html
 share/doc/ImageMagick-7/www/quantize.html
 share/doc/ImageMagick-7/www/resources.html
 share/doc/ImageMagick-7/www/search.html
+share/doc/ImageMagick-7/www/security-policy.html
 share/doc/ImageMagick-7/www/sitemap.html
 share/doc/ImageMagick-7/www/source/analyze.c
 share/doc/ImageMagick-7/www/source/coder.xml
