@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16082 2016/06/30 17:41:28 wiz Exp $
+$NetBSD: TODO,v 1.16083 2016/06/30 17:42:28 wiz Exp $
 
 Suggested new packages
 ======================
@@ -573,7 +573,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o denemo-2.0.8
 	o desklaunch-1.1.7
 	o deskmenu-1.4.5
-	o desktop-file-utils-0.23 [wiz]
 	o dhcpcd-dbus-0.6.1
 	o di-4.42
 	o digikam-4.14.0
