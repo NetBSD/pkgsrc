@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2622 2016/06/30 17:46:08 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2623 2016/06/30 17:47:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3825,3 +3825,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/p5-List-AllUtils to 0.11 [wiz 2016-06-30]
 	Updated net/py-dns to 1.14.0 [wiz 2016-06-30]
 	Removed net/py-dns3 [wiz 2016-06-30]
+	Added net/py-cymruwhois version 1.5 [wiz 2016-06-30]
