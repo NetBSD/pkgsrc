@@ -209,30 +209,6 @@ obuf_add_mem(obuf_t *obuf, const char *s, size_t len)
 	return 0;
 }
 
-/* varargs-based printf to string */
-__printflike(2, 3)
-static int
-obuf_printf(obuf_t *obuf, const char *fmt, ...)
-{
-	va_list	 args;
-	char	*cp;
-	int	 ret;
-	int	 cc;
-
-	if (obuf && fmt) {
-		ret = 1;
-		va_start(args, fmt);
-		cc = vasprintf(&cp, fmt, args);
-		va_end(args);
-		if (cc > 0) {
-			ret = obuf_add_mem(obuf, cp, (size_t)cc);
-			free(cp);
-		}
-		return ret;
-	}
-	return 0;
-}
-
 /* read a file into the pgpv_mem_t struct */
 static int
 read_file(pgpv_t *pgp, const char *f)
@@ -484,9 +460,11 @@ static size_t
 fmt_binary(obuf_t *obuf, const uint8_t *bin, unsigned len)
 {
 	unsigned	i;
+	char		newbuf[3];
 
 	for (i = 0 ; i < len ; i++) {
-		if (!obuf_printf(obuf, "%02hhx", bin[i])) {
+		snprintf(newbuf, sizeof(newbuf), "%02hhx", bin[i]);
+		if (!obuf_add_mem(obuf, newbuf, 2)) {
 			return 0;
 		}
 	}
@@ -623,17 +601,24 @@ static int
 fmt_fingerprint(obuf_t *obuf, pgpv_fingerprint_t *fingerprint, const char *name)
 {
 	unsigned	i;
+	char		newbuf[3];
+	int		cc;
 
-	if (!obuf_printf(obuf, "%s ", name)) {
+	if (!obuf_add_mem(obuf, name, strlen(name)) ||
+	    !obuf_add_mem(obuf, " ", 1)) {
 		return 0;
 	}
 	for (i = 0 ; i < fingerprint->len ; i++) {
-		if (!obuf_printf(obuf, "%02hhx%s",
-			fingerprint->v[i], (i % 2 == 1) ? " " : "")) {
-				return 0;
+		cc = snprintf(newbuf, sizeof(newbuf), "%02hhx",
+			fingerprint->v[i]);
+		if (!obuf_add_mem(obuf, newbuf, cc)) {
+			return 0;
+		}
+		if (i % 2 == 1 && !obuf_add_mem(obuf, " ", 1)) {
+			return 0;
 		}
 	}
-	return obuf_printf(obuf, "\n");
+	return obuf_add_mem(obuf, "\n", 1);
 }
 
 /* calculate keyid from a pubkey */
@@ -734,26 +719,32 @@ fmt_time(obuf_t *obuf, const char *header, int64_t n, const char *trailer, int r
 	time_t		elapsed;
 	time_t		now;
 	time_t		t;
+	char		newbuf[128];
+	int		cc;
 
 	t = (time_t)n;
 	now = time(NULL);
 	elapsed = now - t;
 	gmtime_r(&t, &tm);            
-	if (!obuf_printf(obuf, "%s%04d-%02d-%02d", header,
-		tm.tm_year + 1900, tm.tm_mon + 1, tm.tm_mday)) {
-			return 0;
+	cc = snprintf(newbuf, sizeof(newbuf), "%04d-%02d-%02d",
+		tm.tm_year + 1900, tm.tm_mon + 1, tm.tm_mday);
+	if (!obuf_add_mem(obuf, header, strlen(header)) ||
+	    !obuf_add_mem(obuf, newbuf, cc)) {
+		return 0;
 	}
 	if (relative) {
-		if (!obuf_printf(obuf, " (%lldy %lldm %lldd %lldh %s)",
+		cc = snprintf(newbuf, sizeof(newbuf),
+			" (%lldy %lldm %lldd %lldh %s)",
 			llabs((long long)elapsed / YEARSECS),
 			llabs(((long long)elapsed % YEARSECS) / MONSECS),
 			llabs(((long long)elapsed % MONSECS) / DAYSECS),
 			llabs(((long long)elapsed % DAYSECS) / HOURSECS),
-			(now > t) ? "ago" : "ahead")) {
-				return 0;
+			(now > t) ? "ago" : "ahead");
+		if (!obuf_add_mem(obuf, newbuf, cc)) {
+			return 0;
 		}
 	}
-	return obuf_printf(obuf, "%s", trailer);
+	return (*trailer) ? obuf_add_mem(obuf, trailer, strlen(trailer)) : 1;
 }
 
 /* dump key mpis to stdout */
@@ -1505,7 +1496,13 @@ numkeybits(const pgpv_pubkey_t *pubkey)
 static int
 fmt_pubkey(obuf_t *obuf, pgpv_pubkey_t *pubkey, const char *leader)
 {
-	if (!obuf_printf(obuf, "%s %u/%s ", leader, numkeybits(pubkey), fmtkeyalg(pubkey->keyalg))) {
+	char	newbuf[128];
+	int	cc;
+
+	cc = snprintf(newbuf, sizeof(newbuf), " %u/%s ",
+		numkeybits(pubkey), fmtkeyalg(pubkey->keyalg));
+	if (!obuf_add_mem(obuf, leader, strlen(leader)) ||
+	    !obuf_add_mem(obuf, newbuf, cc)) {
 		return 0;
 	}
 	if (!fmt_binary(obuf, pubkey->keyid, PGPV_KEYID_LEN)) {
@@ -1519,7 +1516,7 @@ fmt_pubkey(obuf_t *obuf, pgpv_pubkey_t *pubkey, const char *leader)
 			return 0;
 		}
 	}
-	if (!obuf_printf(obuf, "\n")) {
+	if (!obuf_add_mem(obuf, "\n", 1)) {
 		return 0;
 	}
 	return fmt_fingerprint(obuf, &pubkey->fingerprint, "fingerprint  ");
@@ -1533,12 +1530,14 @@ static int
 fmt_userid(obuf_t *obuf, pgpv_primarykey_t *primary, uint8_t u)
 {
 	pgpv_signed_userid_t	*userid;
+	const char		*s;
 
 	userid = &ARRAY_ELEMENT(primary->signed_userids, u);
-	return obuf_printf(obuf, "uid           %.*s%s\n",
-			(int)userid->userid.size, userid->userid.data,
-			(userid->revoked == COMPROMISED) ? " [COMPROMISED AND REVOKED]" :
-			(userid->revoked) ? " [REVOKED]" : "");
+	s = (userid->revoked == COMPROMISED) ? " [COMPROMISED AND REVOKED]\n" :
+		(userid->revoked) ? " [REVOKED]\n" : "\n";
+	return obuf_add_mem(obuf, "uid           ", 14) &&
+		obuf_add_mem(obuf, userid->userid.data, userid->userid.size) &&
+		obuf_add_mem(obuf, s, strlen(s));
 }
 
 /* format a trust sig - used to order the userids when formatting */
@@ -1548,13 +1547,11 @@ fmt_trust(obuf_t *obuf, pgpv_signed_userid_t *userid, uint32_t u)
 	pgpv_signature_t	*sig;
 
 	sig = &ARRAY_ELEMENT(userid->sigs, u);
-	if (!obuf_printf(obuf, "trust          ")) {
+	if (!obuf_add_mem(obuf, "trust          ", 15) ||
+	    !fmt_binary(obuf, sig->signer, 8)) {
 		return 0;
 	}
-	if (!fmt_binary(obuf, sig->signer, 8)) {
-		return 0;
-	}
-	return obuf_printf(obuf, "\n");
+	return obuf_add_mem(obuf, "\n", 1);
 }
 
 /* print a primary key, per RFC 4880 */
@@ -1595,7 +1592,7 @@ fmt_primary(obuf_t *obuf, pgpv_primarykey_t *primary, unsigned subkey, const cha
 			}
 		}
 	}
-	return obuf_printf(obuf, "\n");
+	return obuf_add_mem(obuf, "\n", 1);
 }
 
 
@@ -2342,6 +2339,7 @@ read_ssh_file(pgpv_t *pgp, pgpv_primarykey_t *primary, const char *fmt, ...)
 	char			*space;
 	char		 	*buf;
 	char		 	*bin;
+	char			 newbuf[2048];
 	char			 f[1024];
 	int			 ok;
 	int			 cc;
@@ -2457,13 +2455,16 @@ read_ssh_file(pgpv_t *pgp, pgpv_primarykey_t *primary, const char *fmt, ...)
 				space + 1);
 		}
 		calc_keyid(pubkey, "sha1");
-		userid.userid.size = asprintf((char **)(void *)&userid.userid.data,
-						"%s (%s) %s",
-						hostname,
-						f,
-						owner);
-		ARRAY_APPEND(primary->signed_userids, userid);
-		primary->fmtsize = estimate_primarykey_size(primary) + 1024;
+		cc = snprintf(newbuf, sizeof(newbuf), "%s (%s) %s",
+			hostname, f, owner);
+		userid.userid.size = cc;
+		if ((userid.userid.data = calloc(1, cc + 1)) == NULL) {
+			ok = 0;
+		} else {
+			memcpy(userid.userid.data, newbuf, cc);
+			ARRAY_APPEND(primary->signed_userids, userid);
+			primary->fmtsize = estimate_primarykey_size(primary) + 1024;
+		}
 	}
 	(void) free(bin);
 	(void) free(buf);
