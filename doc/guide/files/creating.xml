@@ -1,4 +1,4 @@
-<!-- $NetBSD: creating.xml,v 1.20 2016/01/12 12:03:39 wiz Exp $ -->
+<!-- $NetBSD: creating.xml,v 1.21 2016/06/30 18:03:46 wiz Exp $ -->
 
 <chapter id="creating">
 <title>Creating a new pkgsrc package from scratch</title>
@@ -189,7 +189,7 @@ packages that should be depended upon and include
 then the pkgsrc infrastructure will depend on the appropriate package
 version. For example:
 <programlisting>
-PYTHON_VERSIONED_DEPENDENCIES=dateutil dns
+PYTHON_VERSIONED_DEPENDENCIES=dateutil
 </programlisting>
 Look inside <filename>versioned_dependencies.mk</filename> for a list
 of supported packages.</para>
