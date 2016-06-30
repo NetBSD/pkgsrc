@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2613 2016/06/30 17:42:28 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2614 2016/06/30 17:42:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3816,3 +3816,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/ImageMagick to 7.0.2.1 [wiz 2016-06-30]
 	Updated misc/calibre to 2.60.0 [wiz 2016-06-30]
 	Updated sysutils/desktop-file-utils to 0.23 [wiz 2016-06-30]
+	Updated textproc/p5-XML-LibXML to 2.0126 [wiz 2016-06-30]
