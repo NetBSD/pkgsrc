@@ -1,7 +1,14 @@
-@comment $NetBSD: PLIST,v 1.11 2014/01/17 22:48:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2016/06/30 17:45:04 wiz Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/dns/__init__.py
 ${PYSITELIB}/dns/__init__.pyc
 ${PYSITELIB}/dns/__init__.pyo
+${PYSITELIB}/dns/_compat.py
+${PYSITELIB}/dns/_compat.pyc
+${PYSITELIB}/dns/_compat.pyo
 ${PYSITELIB}/dns/dnssec.py
 ${PYSITELIB}/dns/dnssec.pyc
 ${PYSITELIB}/dns/dnssec.pyo
@@ -71,12 +78,24 @@ ${PYSITELIB}/dns/rdatatype.pyo
 ${PYSITELIB}/dns/rdtypes/ANY/AFSDB.py
 ${PYSITELIB}/dns/rdtypes/ANY/AFSDB.pyc
 ${PYSITELIB}/dns/rdtypes/ANY/AFSDB.pyo
+${PYSITELIB}/dns/rdtypes/ANY/CAA.py
+${PYSITELIB}/dns/rdtypes/ANY/CAA.pyc
+${PYSITELIB}/dns/rdtypes/ANY/CAA.pyo
+${PYSITELIB}/dns/rdtypes/ANY/CDNSKEY.py
+${PYSITELIB}/dns/rdtypes/ANY/CDNSKEY.pyc
+${PYSITELIB}/dns/rdtypes/ANY/CDNSKEY.pyo
+${PYSITELIB}/dns/rdtypes/ANY/CDS.py
+${PYSITELIB}/dns/rdtypes/ANY/CDS.pyc
+${PYSITELIB}/dns/rdtypes/ANY/CDS.pyo
 ${PYSITELIB}/dns/rdtypes/ANY/CERT.py
 ${PYSITELIB}/dns/rdtypes/ANY/CERT.pyc
 ${PYSITELIB}/dns/rdtypes/ANY/CERT.pyo
 ${PYSITELIB}/dns/rdtypes/ANY/CNAME.py
 ${PYSITELIB}/dns/rdtypes/ANY/CNAME.pyc
 ${PYSITELIB}/dns/rdtypes/ANY/CNAME.pyo
+${PYSITELIB}/dns/rdtypes/ANY/CSYNC.py
+${PYSITELIB}/dns/rdtypes/ANY/CSYNC.pyc
+${PYSITELIB}/dns/rdtypes/ANY/CSYNC.pyo
 ${PYSITELIB}/dns/rdtypes/ANY/DLV.py
 ${PYSITELIB}/dns/rdtypes/ANY/DLV.pyc
 ${PYSITELIB}/dns/rdtypes/ANY/DLV.pyo
@@ -89,6 +108,12 @@ ${PYSITELIB}/dns/rdtypes/ANY/DNSKEY.pyo
 ${PYSITELIB}/dns/rdtypes/ANY/DS.py
 ${PYSITELIB}/dns/rdtypes/ANY/DS.pyc
 ${PYSITELIB}/dns/rdtypes/ANY/DS.pyo
+${PYSITELIB}/dns/rdtypes/ANY/EUI48.py
+${PYSITELIB}/dns/rdtypes/ANY/EUI48.pyc
+${PYSITELIB}/dns/rdtypes/ANY/EUI48.pyo
+${PYSITELIB}/dns/rdtypes/ANY/EUI64.py
+${PYSITELIB}/dns/rdtypes/ANY/EUI64.pyc
+${PYSITELIB}/dns/rdtypes/ANY/EUI64.pyo
 ${PYSITELIB}/dns/rdtypes/ANY/GPOS.py
 ${PYSITELIB}/dns/rdtypes/ANY/GPOS.pyc
 ${PYSITELIB}/dns/rdtypes/ANY/GPOS.pyo
@@ -146,6 +171,9 @@ ${PYSITELIB}/dns/rdtypes/ANY/TLSA.pyo
 ${PYSITELIB}/dns/rdtypes/ANY/TXT.py
 ${PYSITELIB}/dns/rdtypes/ANY/TXT.pyc
 ${PYSITELIB}/dns/rdtypes/ANY/TXT.pyo
+${PYSITELIB}/dns/rdtypes/ANY/URI.py
+${PYSITELIB}/dns/rdtypes/ANY/URI.pyc
+${PYSITELIB}/dns/rdtypes/ANY/URI.pyo
 ${PYSITELIB}/dns/rdtypes/ANY/X25.py
 ${PYSITELIB}/dns/rdtypes/ANY/X25.pyc
 ${PYSITELIB}/dns/rdtypes/ANY/X25.pyo
@@ -194,9 +222,15 @@ ${PYSITELIB}/dns/rdtypes/IN/__init__.pyo
 ${PYSITELIB}/dns/rdtypes/__init__.py
 ${PYSITELIB}/dns/rdtypes/__init__.pyc
 ${PYSITELIB}/dns/rdtypes/__init__.pyo
+${PYSITELIB}/dns/rdtypes/dnskeybase.py
+${PYSITELIB}/dns/rdtypes/dnskeybase.pyc
+${PYSITELIB}/dns/rdtypes/dnskeybase.pyo
 ${PYSITELIB}/dns/rdtypes/dsbase.py
 ${PYSITELIB}/dns/rdtypes/dsbase.pyc
 ${PYSITELIB}/dns/rdtypes/dsbase.pyo
+${PYSITELIB}/dns/rdtypes/euibase.py
+${PYSITELIB}/dns/rdtypes/euibase.pyc
+${PYSITELIB}/dns/rdtypes/euibase.pyo
 ${PYSITELIB}/dns/rdtypes/mxbase.py
 ${PYSITELIB}/dns/rdtypes/mxbase.pyc
 ${PYSITELIB}/dns/rdtypes/mxbase.pyo
@@ -245,4 +279,3 @@ ${PYSITELIB}/dns/wiredata.pyo
 ${PYSITELIB}/dns/zone.py
 ${PYSITELIB}/dns/zone.pyc
 ${PYSITELIB}/dns/zone.pyo
-${PYSITELIB}/${EGG_FILE}
