@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2617 2016/06/30 17:43:52 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2618 2016/06/30 17:44:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3820,3 +3820,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/py-betamax to 0.7.1 [wiz 2016-06-30]
 	Updated finance/gnucash to 2.6.13 [wiz 2016-06-30]
 	Updated finance/gnucash-docs to 2.6.13 [wiz 2016-06-30]
+	Updated time/p5-DateTime-Locale to 1.05 [wiz 2016-06-30]
