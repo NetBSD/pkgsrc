@@ -1,0 +1,23 @@
+Ever been wondering if your ISP is hijacking your DNS traffic? Ever
+observed any misbehavior with your DNS responses? Ever been redirected
+to wrong address and suspected something is wrong with your DNS?
+Here we have a set of tools to perform basic audits on your DNS
+requests and responses to make sure your DNS is working as you
+expect.
+
+You can measure the response time of any given DNS server for
+arbitrary requests using dnsping. Just like traditional ping utility,
+it gives you similar functionality for DNS requests.
+
+You can also trace the path your DNS request takes to destination
+to make sure it is not being redirected or hijacked. This can be
+done by comparing different DNS queries being sent to the same DNS
+server using dnstraceroute and observe if there is any difference
+between the path.
+
+dnseval evaluates multiple DNS resolvers and helps you choose the
+best DNS server for your network. While it is highly recommended
+to use your own DNS resolver and never trust any third-party DNS
+server, but in case you need to choose the best DNS forwarder for
+your network, dnseval lets you compare different DNS servers from
+performance (latency) and reliability (loss) point of view.
