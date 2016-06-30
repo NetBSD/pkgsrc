@@ -1,8 +1,32 @@
-$NetBSD: patch-makefile,v 1.15 2016/04/14 21:47:07 wiz Exp $
+$NetBSD: patch-makefile,v 1.16 2016/06/30 18:05:55 wiz Exp $
 
---- makefile.orig	2016-03-30 09:03:03.000000000 +0000
+--- makefile.orig	2016-06-29 06:34:30.000000000 +0000
 +++ makefile
-@@ -833,11 +833,6 @@ $(info GCC $(GCC_VERSION) detected)
+@@ -168,19 +168,19 @@ GENIEOS := solaris
+ endif
+ ifeq ($(firstword $(filter FreeBSD,$(UNAME))),FreeBSD)
+ OS := freebsd
+-GENIEOS := freebsd
++GENIEOS := bsd
+ endif
+ ifeq ($(firstword $(filter GNU/kFreeBSD,$(UNAME))),GNU/kFreeBSD)
+ OS := freebsd
+-GENIEOS := freebsd
++GENIEOS := bsd
+ endif
+ ifeq ($(firstword $(filter NetBSD,$(UNAME))),NetBSD)
+ OS := netbsd
+-GENIEOS := freebsd
++GENIEOS := bsd
+ endif
+ ifeq ($(firstword $(filter OpenBSD,$(UNAME))),OpenBSD)
+ OS := openbsd
+-GENIEOS := freebsd
++GENIEOS := bsd
+ endif
+ ifeq ($(firstword $(filter Darwin,$(UNAME))),Darwin)
+ OS := macosx
+@@ -881,11 +881,6 @@ $(info GCC $(GCC_VERSION) detected)
  else
  $(info Clang $(CLANG_VERSION) detected)
  ifneq ($(TARGETOS),asmjs)

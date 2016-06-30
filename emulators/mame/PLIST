@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2016/05/26 09:02:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.15 2016/06/30 18:05:55 wiz Exp $
 bin/castool
 bin/chdman
 bin/floptool
@@ -167,6 +167,7 @@ share/mame/hash/database.xml
 share/mame/hash/dim68k.xml
 share/mame/hash/dmv.xml
 share/mame/hash/dps1.xml
+share/mame/hash/e01_flop.xml
 share/mame/hash/ec1841.xml
 share/mame/hash/einstein.xml
 share/mame/hash/electron_cart.xml
@@ -183,6 +184,7 @@ share/mame/hash/fm77av.xml
 share/mame/hash/fm7_cass.xml
 share/mame/hash/fm7_disk.xml
 share/mame/hash/fmtowns_cd.xml
+share/mame/hash/fmtowns_flop.xml
 share/mame/hash/g7400.xml
 share/mame/hash/galaxy.xml
 share/mame/hash/gamate.xml
@@ -328,6 +330,7 @@ share/mame/hash/pc8801_cass.xml
 share/mame/hash/pc8801_flop.xml
 share/mame/hash/pc88va.xml
 share/mame/hash/pc98.xml
+share/mame/hash/pc98_cd.xml
 share/mame/hash/pce.xml
 share/mame/hash/pce_tourvision.xml
 share/mame/hash/pcecd.xml
@@ -350,6 +353,7 @@ share/mame/hash/plus4_flop.xml
 share/mame/hash/pmd85_cass.xml
 share/mame/hash/pockchalv2.xml
 share/mame/hash/pockchalw.xml
+share/mame/hash/pofo.xml
 share/mame/hash/pokemini.xml
 share/mame/hash/pro128_cart.xml
 share/mame/hash/pro128_cass.xml
