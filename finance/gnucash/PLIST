@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.59 2016/04/08 22:00:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.60 2016/06/30 17:43:22 wiz Exp $
 bin/gnc-fq-check
 bin/gnc-fq-dump
 bin/gnc-fq-helper
@@ -391,7 +391,6 @@ ${PYSITELIB}/gnucash/gnucash_core.py
 ${PYSITELIB}/gnucash/gnucash_core_c.py
 libexec/gnucash/overrides/gnucash-env
 libexec/gnucash/overrides/gnucash-make-guids
-libexec/gnucash/overrides/guile
 libexec/gnucash/src/libqof/qof/test/kvp_frame.h
 libexec/gnucash/src/libqof/qof/test/qofbook.h
 libexec/gnucash/src/libqof/qof/test/qofinstance.h
@@ -593,6 +592,7 @@ share/gnucash/accounts/es_MX/acctchrt_spouseinc.gnucash-xea
 share/gnucash/accounts/es_MX/acctchrt_spouseretire.gnucash-xea
 share/gnucash/accounts/fi_FI/acctchrt_common.gnucash-xea
 share/gnucash/accounts/fi_FI/acctchrt_ry.gnucash-xea
+share/gnucash/accounts/fi_FI/acctchrt_sbr-xbrl.gnucash-xea
 share/gnucash/accounts/fr_CA/acctchrt_actifsfixes.gnucash-xea
 share/gnucash/accounts/fr_CA/acctchrt_automobile.gnucash-xea
 share/gnucash/accounts/fr_CA/acctchrt_basecommune.gnucash-xea
@@ -804,8 +804,10 @@ share/gnucash/accounts/sk/acctchrt_spouseinc.gnucash-xea
 share/gnucash/accounts/sk/acctchrt_spouseretire.gnucash-xea
 share/gnucash/accounts/sv_AX/acctchrt_common.gnucash-xea
 share/gnucash/accounts/sv_AX/acctchrt_rf.gnucash-xea
+share/gnucash/accounts/sv_AX/acctchrt_sbr-xbrl.gnucash-xea
 share/gnucash/accounts/sv_FI/acctchrt_common.gnucash-xea
 share/gnucash/accounts/sv_FI/acctchrt_rf.gnucash-xea
+share/gnucash/accounts/sv_FI/acctchrt_sbr-xbrl.gnucash-xea
 share/gnucash/accounts/sv_SE/acctchrt_common.gnucash-xea
 share/gnucash/accounts/sv_SE/bas_2012.gnucash-xea
 share/gnucash/accounts/tr_TR/acctchrt_TEKDUZ.gnucash-xea
@@ -894,6 +896,7 @@ share/gnucash/gtkbuilder/dialog-userpass.glade
 share/gnucash/gtkbuilder/dialog-vendor.glade
 share/gnucash/gtkbuilder/gnc-date-format.glade
 share/gnucash/gtkbuilder/gnc-frequency.glade
+${PLIST.ofx}share/gnucash/ui/gnc-plugin-ofx-ui.xml
 share/gnucash/gtkbuilder/gnc-plugin-page-budget.glade
 share/gnucash/gtkbuilder/gnc-plugin-page-register.glade
 share/gnucash/gtkbuilder/gnc-plugin-page-register2.glade
@@ -1127,7 +1130,6 @@ share/gnucash/ui/gnc-plugin-csv-import-ui.xml
 share/gnucash/ui/gnc-plugin-customer_import-ui.xml
 share/gnucash/ui/gnc-plugin-file-history-ui.xml
 share/gnucash/ui/gnc-plugin-log-replay-ui.xml
-${PLIST.ofx}share/gnucash/ui/gnc-plugin-ofx-ui.xml
 share/gnucash/ui/gnc-plugin-page-account-tree-ui.xml
 share/gnucash/ui/gnc-plugin-page-account-tree2-ui.xml
 share/gnucash/ui/gnc-plugin-page-budget-ui.xml
