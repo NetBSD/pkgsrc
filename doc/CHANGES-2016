@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2625 2016/06/30 17:56:25 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2626 2016/06/30 18:06:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3828,3 +3828,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added net/py-cymruwhois version 1.5 [wiz 2016-06-30]
 	Added net/py-dnsdiag version 1.5.0 [wiz 2016-06-30]
 	Updated fonts/py-fonttools to 3.0 [wiz 2016-06-30]
+	Updated emulators/mame to 0.175 [wiz 2016-06-30]
