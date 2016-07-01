@@ -1,12 +1,22 @@
-$NetBSD: patch-configure.seed,v 1.1 2016/04/08 16:59:07 adam Exp $
+$NetBSD: patch-configure.seed,v 1.2 2016/07/01 04:51:15 adam Exp $
 
+Portability fix.
 Do not use included nDPI.
 Do not use -O0 for clang.
 On Darwin, install into man/.
 
---- configure.seed.orig	2015-11-30 18:15:18.000000000 +0000
+--- configure.seed.orig	2016-06-27 19:31:18.000000000 +0000
 +++ configure.seed
-@@ -44,35 +44,6 @@ GIT_BRANCH="@GIT_BRANCH@"
+@@ -33,7 +33,7 @@ fi
+ 
+ if [ test -f /usr/bin/lsb_release ]; then
+    CODENAME=`/usr/bin/lsb_release -c|cut -f 2`
+-   if [[ $CODENAME == "wheezy" ]]; then :
++   if [[ $CODENAME = "wheezy" ]]; then :
+      CPPFLAGS="${CPPFLAGS} -DOLD_NETFILTER_INTERFACE=1"
+    fi
+ fi
+@@ -46,35 +46,6 @@ GIT_BRANCH="@GIT_BRANCH@"
  PRO_GIT_RELEASE="@PRO_GIT_RELEASE@"
  PRO_GIT_DATE="@PRO_GIT_DATE@"
  
@@ -42,7 +52,7 @@ On Darwin, install into man/.
  
  AC_MSG_CHECKING(for ntopng professional edition)
  if test -d "pro"; then :
-@@ -351,7 +322,7 @@ if test x$GPP = x
+@@ -359,7 +330,7 @@ if test x$GPP = x
  then
  	GPP="g++"
  else
@@ -51,7 +61,7 @@ On Darwin, install into man/.
  fi
  
  GIT=`which git`
-@@ -374,11 +345,7 @@ then
+@@ -382,11 +353,7 @@ then
   INSTALL_DIR=${ac_default_prefix}
  fi
  
