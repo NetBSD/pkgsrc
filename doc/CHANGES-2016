@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2634 2016/07/01 16:16:16 bouyer Exp $
+$NetBSD: CHANGES-2016,v 1.2635 2016/07/01 17:02:59 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3841,3 +3841,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/nodejs4 to 4.4.7 [fhajny 2016-07-01]
 	Updated devel/rudiments to 0.55.0 [fhajny 2016-07-01]
 	Updated geography/qgis to 2.14.3 [bouyer 2016-07-01]
+	Updated databases/sqlrelay to 0.65.0 [fhajny 2016-07-01]
