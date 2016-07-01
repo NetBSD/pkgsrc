@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2016/04/08 16:51:23 adam Exp $
+# $NetBSD: Makefile,v 1.2 2016/07/01 04:51:15 adam Exp $
 
-DISTNAME=	ntopng-2.2
-PKGNAME=	ndpi-1.7.1
+DISTNAME=	ntopng-2.4-stable
+PKGNAME=	ndpi-1.8.0
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ntop/}
 
