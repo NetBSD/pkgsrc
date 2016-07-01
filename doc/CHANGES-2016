@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2632 2016/07/01 15:41:38 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.2633 2016/07/01 16:02:22 fhajny Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3839,3 +3839,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/ntopng to 2.4 [adam 2016-07-01]
 	Updated multimedia/mpv to 0.18.0 [leot 2016-07-01]
 	Updated lang/nodejs4 to 4.4.7 [fhajny 2016-07-01]
+	Updated devel/rudiments to 0.55.0 [fhajny 2016-07-01]
