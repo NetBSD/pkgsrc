@@ -1,7 +1,7 @@
 #!@PERL@ -w
 # -*- perl -*-
 #
-# $NetBSD: finddepends,v 1.11 2014/06/24 15:00:27 wiz Exp $
+# $NetBSD: finddepends,v 1.12 2016/07/01 21:50:20 wiz Exp $
 #
 # Copyright (c) 2006, 2014 The NetBSD Foundation, Inc.
 #
@@ -72,6 +72,8 @@ if (! -d $PKGSRCDIR || ! -d "$PKGSRCDIR/doc" || ! -d "$PKGSRCDIR/mk") {
 }
 
 @bl3files = <$PKGSRCDIR/*/*/buildlink3.mk>;
+push(@bl3files, "$PKGSRCDIR/mk/ocaml.mk");
+
 %bl3content = ();
 foreach $bl3 (@bl3files) {
     open OUT, $bl3 or die "can't open $bl3";
