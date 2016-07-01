@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.9 2016/06/28 16:57:51 bouyer Exp $
+$NetBSD: distinfo,v 1.10 2016/07/01 16:15:18 bouyer Exp $
 
-SHA1 (qgis-2.12.3.tar.bz2) = b2b8b6bda01ebec7ccbc8ab41d0e00fa6be217be
-RMD160 (qgis-2.12.3.tar.bz2) = 6b3350e978d27397020b01983ceaa00104d1bd17
-SHA512 (qgis-2.12.3.tar.bz2) = 62e3f67e418a17ddf5b91e237959f1d7f1fa8b20aa2db9d107d587e6d02f9acd2b34a32858e960638ccaa4b29d099d4d5b008abbd649684ae82b3000b2d8cb86
-Size (qgis-2.12.3.tar.bz2) = 69119328 bytes
+SHA1 (qgis-2.14.3.tar.bz2) = 0763930953d7f6a3a7ce284cc480d78cb130c3b6
+RMD160 (qgis-2.14.3.tar.bz2) = 0392c7fa8a0976056c0f023ea5acec37aaf01fac
+SHA512 (qgis-2.14.3.tar.bz2) = d99079e68484bf0aed515ecfcbb382eaf9c59c6fc2a00d01987cc4a0100bd13a70044d2390045461bc4b9a7377c9ebe09a12d43f591cc9b473758fcfa9abefd7
+Size (qgis-2.14.3.tar.bz2) = 74078303 bytes
 SHA1 (patch-CMakeLists.txt) = d9f670b121f508ac6565668e2f57975b19edde76
 SHA1 (patch-cmake_FindGDAL.cmake) = aad87704be813306d2727bac748c3df826ed709e
 SHA1 (patch-cmake_FindGEOS.cmake) = f11f1bead1e31aba3f6167dd8eaf1ad10cf7d6ab
 SHA1 (patch-cmake_FindPostgres.cmake) = ac665b3ae7f9dc4dd5a61aa8e1263267dc4ee143
-SHA1 (patch-cmake_SIPMacros.cmake) = 796e55b74455751d3dfbef41ba48e3324e7d64dc
+SHA1 (patch-cmake_SIPMacros.cmake) = ef3018674e0f0b542a323d4a50ba53bb1a756608
 SHA1 (patch-mac_CMakeLists.txt) = 2468c0a629738ce78cccb784395eb1f41049cc73
 SHA1 (patch-mac_cmake_1qt.cmake.in) = d74f7201849ef6dd83f39251e466eb04c791c0e6
 SHA1 (patch-src_core_CMakeLists.txt) = 4c504717fbce05984e9ac5867d407f9dcfa11d25
