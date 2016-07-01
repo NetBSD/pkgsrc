@@ -1,4 +1,4 @@
-$NetBSD: patch-src_crssync_CMakeLists.txt,v 1.1 2016/06/28 16:57:51 bouyer Exp $
+$NetBSD: patch-src_crssync_CMakeLists.txt,v 1.2 2016/07/01 16:15:18 bouyer Exp $
 Fix executing dynamically-linked executable from the build directory
 
 --- src/crssync/CMakeLists.txt.orig	2016-06-26 16:02:58.000000000 +0200
