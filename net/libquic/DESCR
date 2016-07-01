@@ -1,0 +1,14 @@
+QUIC is an experimental protocol aimed at reducing web latency over
+that of TCP.  On the surface, QUIC is very similar to TCP+TLS+SPDY
+implemented on UDP.  Because TCP is implement in operating system
+kernels, and middlebox firmware, making significant changes to TCP is
+next to impossible.  However, since QUIC is built on top of UDP, it
+suffers from no such limitations.
+
+Key features of QUIC over existing TCP+TLS+SPDY include
+
++ Dramatically reduced connection establishment time
++ Improved congestion control
++ Multiplexing without head of line blocking
++ Forward error correction
++ Connection migration
