@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2016/03/05 11:28:19 jperkin Exp $
+# $NetBSD: Makefile,v 1.4 2016/07/01 17:02:39 fhajny Exp $
 
 PKGNAME=		${DISTNAME:S/sqlrelay/sqlrelay-nodejs/}
-PKGREVISION=		1
 COMMENT=		node.js API for SQL Relay
 
 .include "../../databases/sqlrelay/Makefile.common"
@@ -17,6 +16,8 @@ CONFIGURE_ARGS+=	--disable-freetds
 CONFIGURE_ARGS+=	--disable-mysql
 
 BUILD_DIRS=		src/api/nodejs
+
+CXXFLAGS+=		-std=c++11
 
 # Benign reference inside an object file
 CHECK_WRKREF_SKIP+=	lib/node_modules/sqlrelay/sqlrelay.node
