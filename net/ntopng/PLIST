@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2016/04/08 16:59:07 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2016/07/01 04:51:15 adam Exp $
 bin/ntopng
 man/man8/ntopng.8
 share/ntopng/httpdocs/bootstrap/css/bootstrap-theme.css
@@ -25,6 +25,20 @@ share/ntopng/httpdocs/css/cubism.css
 share/ntopng/httpdocs/css/datepicker.css
 share/ntopng/httpdocs/css/dc.css
 share/ntopng/httpdocs/css/flags.css
+share/ntopng/httpdocs/css/images/ui-bg_diagonals-thick_18_b81900_40x40.png
+share/ntopng/httpdocs/css/images/ui-bg_diagonals-thick_20_666666_40x40.png
+share/ntopng/httpdocs/css/images/ui-bg_flat_10_000000_40x100.png
+share/ntopng/httpdocs/css/images/ui-bg_glass_100_f6f6f6_1x400.png
+share/ntopng/httpdocs/css/images/ui-bg_glass_100_fdf5ce_1x400.png
+share/ntopng/httpdocs/css/images/ui-bg_glass_65_ffffff_1x400.png
+share/ntopng/httpdocs/css/images/ui-bg_gloss-wave_35_f6a828_500x100.png
+share/ntopng/httpdocs/css/images/ui-bg_highlight-soft_100_eeeeee_1x100.png
+share/ntopng/httpdocs/css/images/ui-bg_highlight-soft_75_ffe45c_1x100.png
+share/ntopng/httpdocs/css/images/ui-icons_222222_256x240.png
+share/ntopng/httpdocs/css/images/ui-icons_228ef1_256x240.png
+share/ntopng/httpdocs/css/images/ui-icons_ef8c08_256x240.png
+share/ntopng/httpdocs/css/images/ui-icons_ffd27a_256x240.png
+share/ntopng/httpdocs/css/images/ui-icons_ffffff_256x240.png
 share/ntopng/httpdocs/css/jquery-ui.css
 share/ntopng/httpdocs/css/ntopng.css
 share/ntopng/httpdocs/css/nv.d3.css
@@ -195,6 +209,7 @@ share/ntopng/httpdocs/js/pdfmake.js
 share/ntopng/httpdocs/js/pie-chart.js
 share/ntopng/httpdocs/js/prettify.js
 share/ntopng/httpdocs/js/rickshaw.js
+share/ntopng/httpdocs/js/ripe_widget_api.js
 share/ntopng/httpdocs/js/sankey.js
 share/ntopng/httpdocs/js/sequence_sunburst.js
 share/ntopng/httpdocs/js/springy-ntop.js
@@ -214,7 +229,6 @@ share/ntopng/scripts/callbacks/second.lua
 share/ntopng/scripts/lua/API.lua
 share/ntopng/scripts/lua/about.lua
 share/ntopng/scripts/lua/admin/add_user.lua
-share/ntopng/scripts/lua/admin/change_user_password.lua
 share/ntopng/scripts/lua/admin/change_user_prefs.lua
 share/ntopng/scripts/lua/admin/delete_user.lua
 share/ntopng/scripts/lua/admin/get_user_info.lua
@@ -239,14 +253,17 @@ share/ntopng/scripts/lua/flow_details.lua
 share/ntopng/scripts/lua/flow_stats.lua
 share/ntopng/scripts/lua/flows_stats.lua
 share/ntopng/scripts/lua/get_alerts_data.lua
+share/ntopng/scripts/lua/get_db_data.lua
 share/ntopng/scripts/lua/get_db_flows.lua
-share/ntopng/scripts/lua/get_filter_host.lua
 share/ntopng/scripts/lua/get_flow_data.lua
 share/ntopng/scripts/lua/get_flows_data.lua
 share/ntopng/scripts/lua/get_geo_hosts.lua
 share/ntopng/scripts/lua/get_grouped_hosts_data.lua
+share/ntopng/scripts/lua/get_historical_data.lua
+share/ntopng/scripts/lua/get_historical_favourites.lua
 share/ntopng/scripts/lua/get_hitters_data.lua
 share/ntopng/scripts/lua/get_host_activitymap.lua
+share/ntopng/scripts/lua/get_host_categories.lua
 share/ntopng/scripts/lua/get_host_contacts.lua
 share/ntopng/scripts/lua/get_host_daily_activity.lua
 share/ntopng/scripts/lua/get_host_data.lua
@@ -255,13 +272,16 @@ share/ntopng/scripts/lua/get_hosts_data.lua
 share/ntopng/scripts/lua/get_hosts_interaction.lua
 share/ntopng/scripts/lua/get_http_hosts.lua
 share/ntopng/scripts/lua/get_http_hosts_data.lua
+share/ntopng/scripts/lua/get_nbox_data.lua
 share/ntopng/scripts/lua/get_process_info.lua
 share/ntopng/scripts/lua/get_processes_data.lua
 share/ntopng/scripts/lua/get_system_hosts_interaction.lua
 share/ntopng/scripts/lua/get_top_talkers.lua
 share/ntopng/scripts/lua/get_treemap.lua
 share/ntopng/scripts/lua/get_user_info.lua
+share/ntopng/scripts/lua/host_category_stats.lua
 share/ntopng/scripts/lua/host_details.lua
+share/ntopng/scripts/lua/host_details_categories.lua
 share/ntopng/scripts/lua/host_details_ndpi.lua
 share/ntopng/scripts/lua/host_dns_breakdown.lua
 share/ntopng/scripts/lua/host_get_json.lua
@@ -287,6 +307,7 @@ share/ntopng/scripts/lua/iface_hosts_list.lua
 share/ntopng/scripts/lua/iface_local_stats.lua
 share/ntopng/scripts/lua/iface_ndpi_stats.lua
 share/ntopng/scripts/lua/iface_ports_list.lua
+share/ntopng/scripts/lua/iface_tcp_stats.lua
 share/ntopng/scripts/lua/inc/add_user_dialog.lua
 share/ntopng/scripts/lua/inc/change_user_password_form.lua
 share/ntopng/scripts/lua/inc/delete_user_dialog.lua
@@ -307,10 +328,12 @@ share/ntopng/scripts/lua/modules/db_utils.lua
 share/ntopng/scripts/lua/modules/dkjson.lua
 share/ntopng/scripts/lua/modules/flow_utils.lua
 share/ntopng/scripts/lua/modules/graph_utils.lua
+share/ntopng/scripts/lua/modules/historical_utils.lua
 share/ntopng/scripts/lua/modules/json.lua
 share/ntopng/scripts/lua/modules/lua_trace.lua
 share/ntopng/scripts/lua/modules/lua_utils.lua
 share/ntopng/scripts/lua/modules/persistence.lua
+share/ntopng/scripts/lua/modules/prefs_utils.lua
 share/ntopng/scripts/lua/modules/sqlite_utils.lua
 share/ntopng/scripts/lua/modules/template.lua
 share/ntopng/scripts/lua/modules/top_scripts/top_asn.lua
@@ -336,7 +359,7 @@ share/ntopng/scripts/lua/processes_stats.lua
 share/ntopng/scripts/lua/protocols/dns_aggregations.lua
 share/ntopng/scripts/lua/protocols/epp_aggregations.lua
 share/ntopng/scripts/lua/resolve_address.lua
-share/ntopng/scripts/lua/set_active_interface.lua
+share/ntopng/scripts/lua/runtime.lua
 share/ntopng/scripts/lua/set_if_prefs.lua
 share/ntopng/scripts/lua/sflow_tree.lua
 share/ntopng/scripts/lua/sflows_stats.lua
@@ -355,4 +378,5 @@ share/ntopng/scripts/lua/test_snmp.lua
 share/ntopng/scripts/lua/top_generic.lua
 share/ntopng/scripts/lua/top_hosts.lua
 share/ntopng/scripts/lua/user_stats.lua
+share/ntopng/scripts/lua/vlan_details.lua
 share/ntopng/scripts/lua/vlan_stats.lua
