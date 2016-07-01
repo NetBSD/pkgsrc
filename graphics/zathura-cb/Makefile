@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2016/02/14 13:53:23 leot Exp $
+# $NetBSD: Makefile,v 1.2 2016/07/01 17:55:23 jperkin Exp $
 #
 
 DISTNAME=	zathura-cb-0.1.5
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://pwmt.org/projects/zathura-cb/download/
 
