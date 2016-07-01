@@ -1,8 +1,8 @@
-$NetBSD: patch-src_listener.cpp,v 1.1 2014/12/28 17:29:42 fhajny Exp $
+$NetBSD: patch-src_listener.cpp,v 1.2 2016/07/01 16:02:12 fhajny Exp $
 
 Recent Illumos (SunOS) platforms come with a basic epoll implementation
 which is detected, but isn't good enough for rudiments.
---- src/listener.cpp.orig	2014-09-24 21:22:44.000000000 +0000
+--- src/listener.cpp.orig	2016-02-12 21:45:11.000000000 +0000
 +++ src/listener.cpp
 @@ -8,6 +8,10 @@
  // for FD_ZERO/FD_SET on windows
@@ -12,6 +12,6 @@ which is detected, but isn't good enough for rudiments.
 +	#undef RUDIMENTS_HAVE_EPOLL
 +#endif
 +
- #ifdef RUDIMENTS_HAS_SSL
- 	// Redhat 6.2 needs _GNU_SOURCE
- 	#ifndef _GNU_SOURCE
+ #ifdef RUDIMENTS_HAVE_STDLIB_H
+ 	#include <stdlib.h>
+ #endif
