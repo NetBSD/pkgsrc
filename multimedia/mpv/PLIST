@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2016/04/13 16:14:01 leot Exp $
+@comment $NetBSD: PLIST,v 1.7 2016/07/01 07:47:38 leot Exp $
 bin/mpv
 man/man1/mpv.1
 share/applications/mpv.desktop
@@ -6,6 +6,7 @@ share/doc/mpv/input.conf
 share/doc/mpv/mplayer-input.conf
 share/doc/mpv/mpv.conf
 share/doc/mpv/restore-old-bindings.conf
+share/examples/mpv/encoding-profiles.conf
 share/icons/hicolor/16x16/apps/mpv.png
 share/icons/hicolor/32x32/apps/mpv.png
 share/icons/hicolor/64x64/apps/mpv.png
