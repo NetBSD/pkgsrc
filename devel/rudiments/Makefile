@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2016/07/01 16:02:12 fhajny Exp $
+# $NetBSD: Makefile,v 1.38 2016/07/01 17:00:15 fhajny Exp $
 #
 
 DISTNAME=		rudiments-0.55.0
@@ -28,5 +28,6 @@ CWRAPPERS_APPEND.cxx+=	-Wno-error=unused-private-field
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
+.include "../../mk/krb5.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
