@@ -1,19 +1,10 @@
-$NetBSD: patch-configure,v 1.3 2016/01/08 10:08:16 fhajny Exp $
+$NetBSD: patch-configure,v 1.4 2016/07/01 16:02:12 fhajny Exp $
 
 Portability. Avoid mangling of other compiler debug flags.
 
---- configure.orig	2015-10-15 04:47:15.000000000 +0000
+--- configure.orig	2016-03-26 17:20:08.000000000 +0000
 +++ configure
-@@ -20702,7 +20702,7 @@ $as_echo "no" >&6; }
- fi
- rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
- 
--if ( test "$RUDIMENTS_HAVE_SCO" == "yes" -a "$CXX" == "CC" )
-+if ( test "$RUDIMENTS_HAVE_SCO" = "yes" -a "$CXX" = "CC" )
- then
- { $as_echo "$as_me:${as_lineno-$LINENO}: checking for long long type" >&5
- $as_echo_n "checking for long long type... " >&6; }
-@@ -29896,7 +29896,7 @@ GETPGIDLIB=""
+@@ -30710,7 +30710,7 @@ GETPGIDLIB=""
  if ( test "$HAVE_GETPGID" = "yes" )
  then
  SAVECXXFLAGS="$CXXFLAGS"
