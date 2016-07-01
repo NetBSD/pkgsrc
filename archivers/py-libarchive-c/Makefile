@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2016/06/08 17:49:19 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2016/07/01 17:55:23 jperkin Exp $
 
 DISTNAME=	libarchive-c-2.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=l/libarchive-c/}
 
