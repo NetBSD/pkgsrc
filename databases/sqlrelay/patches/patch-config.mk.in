@@ -1,13 +1,14 @@
-$NetBSD: patch-config.mk.in,v 1.2 2015/09/02 12:39:33 fhajny Exp $
+$NetBSD: patch-config.mk.in,v 1.3 2016/07/01 17:02:39 fhajny Exp $
 
---- config.mk.in.orig	2015-08-24 07:39:39.000000000 +0000
+We install init scripts ourselves.
+--- config.mk.in.orig	2016-03-24 00:59:48.000000000 +0000
 +++ config.mk.in
-@@ -861,7 +861,7 @@ MODULERENAME = $(top_builddir)/moduleren
+@@ -921,7 +921,7 @@ MODULERENAME = $(top_builddir)/moduleren
  
  
  # build directories
--INSTALLSUBDIRS = install-src install-bin install-etc install-init install-man install-doc install-license install-pkgconfig
-+INSTALLSUBDIRS = install-src install-bin install-etc install-man install-doc install-license install-pkgconfig
- UNINSTALLSUBDIRS = uninstall-src uninstall-bin uninstall-etc uninstall-init uninstall-man uninstall-doc uninstall-license uninstall-pkgconfig
- 
- ifeq ($(SQLRELAY_ENABLE_SHARED),yes)
+-INSTALLSUBDIRS = install-src install-bin install-etc install-init install-license
++INSTALLSUBDIRS = install-src install-bin install-etc install-license
+ ifeq ($(ENABLE_CPP),yes)
+ INSTALLSUBDIRS += install-pkgconfig
+ endif
