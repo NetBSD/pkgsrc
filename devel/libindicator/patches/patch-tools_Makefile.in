@@ -1,0 +1,13 @@
+$NetBSD: patch-tools_Makefile.in,v 1.1 2016/07/02 14:41:24 joerg Exp $
+
+--- tools/Makefile.in.orig	2016-07-02 13:52:36.000000000 +0000
++++ tools/Makefile.in
+@@ -291,7 +291,7 @@ target_alias = @target_alias@
+ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+-@USE_GTK3_FALSE@INDICATOR_LIB = -lindicator
++@USE_GTK3_FALSE@INDICATOR_LIB = ${COMPILER_RPATH_FLAG}${PREFIX}/lib -lindicator
+ @USE_GTK3_TRUE@INDICATOR_LIB = -lindicator3
+ @USE_GTK3_FALSE@VER = 
+ @USE_GTK3_TRUE@VER = 3
