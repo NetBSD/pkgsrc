@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2651 2016/07/02 13:24:27 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2652 2016/07/02 14:33:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3868,3 +3868,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/firefox to 47.0.1 [ryoon 2016-07-02]
 	Updated www/firefox-l10n to 47.0.1 [ryoon 2016-07-02]
 	Updated security/libgcrypt to 1.7.1nb1 [wiz 2016-07-02]
+	Updated misc/calibre to 2.61.0 [wiz 2016-07-02]
