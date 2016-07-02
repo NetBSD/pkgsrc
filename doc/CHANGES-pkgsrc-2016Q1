@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2016Q1,v 1.1.2.25 2016/06/25 19:49:01 bsiegert Exp $
+$NetBSD: CHANGES-pkgsrc-2016Q1,v 1.1.2.26 2016/07/02 13:53:04 bsiegert Exp $
 
 Changes to the packages collection and infrastructure on the pkgsrc-2016Q1 branch:
 
@@ -254,4 +254,22 @@ multimedia/xine-lib: dependency fix
 
 Pullup ticket #5046 - requested by taca
 www/drupal7: security fix
+
+Pullup ticket #5042 - requested by joerg
+lang/php70: build fix
+
+Pullup ticket #5047 - requested by sevan
+multimedia/adobe-flash-plugin: security fix
+
+Pullup ticket #5049 - requested by taca
+graphics/optipng: security fix
+
+Pullup ticket #5050 - requested by taca
+lang/php55: security fix
+
+Pullup ticket #5051 - requested by taca
+lang/php56: security fix
+
+Pullup ticket #5052 - requested by taca
+lang/php70: security fix
 
