@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2016/05/05 07:03:47 leot Exp $
+@comment $NetBSD: PLIST,v 1.5 2016/07/02 12:30:16 ryoon Exp $
 bin/ffmpeg3
 bin/ffprobe3
 bin/ffserver3
@@ -9,6 +9,7 @@ include/ffmpeg3/libavcodec/d3d11va.h
 include/ffmpeg3/libavcodec/dirac.h
 include/ffmpeg3/libavcodec/dv_profile.h
 include/ffmpeg3/libavcodec/dxva2.h
+include/ffmpeg3/libavcodec/jni.h
 include/ffmpeg3/libavcodec/qsv.h
 include/ffmpeg3/libavcodec/vaapi.h
 include/ffmpeg3/libavcodec/vda.h
@@ -59,6 +60,11 @@ include/ffmpeg3/libavutil/file.h
 include/ffmpeg3/libavutil/frame.h
 include/ffmpeg3/libavutil/hash.h
 include/ffmpeg3/libavutil/hmac.h
+include/ffmpeg3/libavutil/hwcontext.h
+include/ffmpeg3/libavutil/hwcontext_cuda.h
+include/ffmpeg3/libavutil/hwcontext_dxva2.h
+include/ffmpeg3/libavutil/hwcontext_vaapi.h
+include/ffmpeg3/libavutil/hwcontext_vdpau.h
 include/ffmpeg3/libavutil/imgutils.h
 include/ffmpeg3/libavutil/intfloat.h
 include/ffmpeg3/libavutil/intreadwrite.h
@@ -105,7 +111,7 @@ include/ffmpeg3/libswscale/version.h
 lib/ffmpeg3/libavcodec.a
 lib/ffmpeg3/libavcodec.so
 lib/ffmpeg3/libavcodec.so.57
-lib/ffmpeg3/libavcodec.so.57.24.102
+lib/ffmpeg3/libavcodec.so.57.48.101
 lib/ffmpeg3/libavdevice.a
 lib/ffmpeg3/libavdevice.so
 lib/ffmpeg3/libavdevice.so.57
@@ -113,15 +119,15 @@ lib/ffmpeg3/libavdevice.so.57.0.101
 lib/ffmpeg3/libavfilter.a
 lib/ffmpeg3/libavfilter.so
 lib/ffmpeg3/libavfilter.so.6
-lib/ffmpeg3/libavfilter.so.6.31.100
+lib/ffmpeg3/libavfilter.so.6.47.100
 lib/ffmpeg3/libavformat.a
 lib/ffmpeg3/libavformat.so
 lib/ffmpeg3/libavformat.so.57
-lib/ffmpeg3/libavformat.so.57.25.100
+lib/ffmpeg3/libavformat.so.57.41.100
 lib/ffmpeg3/libavutil.a
 lib/ffmpeg3/libavutil.so
 lib/ffmpeg3/libavutil.so.55
-lib/ffmpeg3/libavutil.so.55.17.103
+lib/ffmpeg3/libavutil.so.55.28.100
 lib/ffmpeg3/libpostproc.a
 lib/ffmpeg3/libpostproc.so
 lib/ffmpeg3/libpostproc.so.54
@@ -129,11 +135,11 @@ lib/ffmpeg3/libpostproc.so.54.0.100
 lib/ffmpeg3/libswresample.a
 lib/ffmpeg3/libswresample.so
 lib/ffmpeg3/libswresample.so.2
-lib/ffmpeg3/libswresample.so.2.0.101
+lib/ffmpeg3/libswresample.so.2.1.100
 lib/ffmpeg3/libswscale.a
 lib/ffmpeg3/libswscale.so
 lib/ffmpeg3/libswscale.so.4
-lib/ffmpeg3/libswscale.so.4.0.100
+lib/ffmpeg3/libswscale.so.4.1.100
 lib/ffmpeg3/pkgconfig/libavcodec.pc
 lib/ffmpeg3/pkgconfig/libavdevice.pc
 lib/ffmpeg3/pkgconfig/libavfilter.pc
