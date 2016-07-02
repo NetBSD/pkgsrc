@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.9 2016/01/03 16:53:30 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2016/07/02 11:09:37 wiz Exp $
 
 DISTNAME=	mercurial-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel scm
-MASTER_SITES=	https://mercurial.selenic.com/release/
+MASTER_SITES=	https://www.mercurial-scm.org/release/
 
 MAINTAINER=	wiz@NetBSD.org
-HOMEPAGE=	http://mercurial.selenic.com/
+HOMEPAGE=	https://www.mercurial-scm.org/
 COMMENT=	Fast, lightweight source control management system
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3 # OR newer
 
