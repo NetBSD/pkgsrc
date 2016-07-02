@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.20 2016/05/05 11:45:37 jaapb Exp $
+# $NetBSD: Makefile,v 1.21 2016/07/02 09:42:14 jaapb Exp $
 #
 
-DISTNAME=		ocaml-mysql-1.1.2
-PKGREVISION=	2
+VERSION=	1.2.0
+GITHUB_PROJECT=	ocaml-mysql
+GITHUB_TAG=	v${VERSION}
+DISTNAME=	${GITHUB_PROJECT}-${VERSION}
 CATEGORIES=		databases
-MASTER_SITES=		http://forge.ocamlcore.org/frs/download.php/1308/
+MASTER_SITES=		${MASTER_SITE_GITHUB:=ygrek/}
 
 MAINTAINER=		jaapb@NetBSD.org
 HOMEPAGE=		http://ocaml-mysql.forge.ocamlcore.org/
@@ -18,6 +20,8 @@ USE_TOOLS+=		gmake
 DOCDIR=			${PREFIX}/share/doc/ocaml-mysql
 INSTALLATION_DIRS=	${DOCDIR}
 
+OCAML_USE_FINDLIB=	yes
+
 .include "../../mk/ocaml.mk"
 
 BUILD_TARGET=	all htdoc
@@ -28,7 +32,5 @@ BUILD_TARGET+=	opt
 post-install:
 	cd ${WRKSRC}/doc/mysql/html && ${INSTALL_DATA} *.html ${DESTDIR}${DOCDIR}
 
-.include "../../devel/ocaml-findlib/buildlink3.mk"
-.include "../../lang/camlp4/buildlink3.mk"
 .include "../../mk/mysql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
