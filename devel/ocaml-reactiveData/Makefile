@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2016/06/20 17:43:51 jaapb Exp $
+# $NetBSD: Makefile,v 1.7 2016/07/02 09:17:54 jaapb Exp $
 
 GITHUB_PROJECT=	reactiveData
 DISTNAME=	${GITHUB_PROJECT}-0.2
@@ -36,4 +36,5 @@ do-install:
 	done
 
 .include "../../devel/ocaml-react/buildlink3.mk"
+.include "../../devel/ocamlbuild/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
