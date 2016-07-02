@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2639 2016/07/02 08:12:47 joerg Exp $
+$NetBSD: CHANGES-2016,v 1.2640 2016/07/02 08:51:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3855,3 +3855,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added net/libquic version 0.0.3 [agc 2016-07-01]
 	Updated pkgtools/revbump to 2.13 [wiz 2016-07-01]
 	Removed devel/bazel [joerg 2016-07-02]
+	Updated misc/calibre1 to 1.48.0nb18 [wiz 2016-07-02]
