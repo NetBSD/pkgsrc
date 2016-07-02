@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2015/12/13 21:33:14 kamil Exp $
+@comment $NetBSD: PLIST,v 1.4 2016/07/02 15:07:47 adam Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -1341,8 +1341,8 @@ lib/python${PY_VER_SUFFIX}/ensurepip/__init__.pyo
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.py
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyc
 lib/python${PY_VER_SUFFIX}/ensurepip/__main__.pyo
-lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-7.1.2-py2.py3-none-any.whl
-lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/setuptools-18.2-py2.py3-none-any.whl
+lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/pip-8.1.1-py2.py3-none-any.whl
+lib/python${PY_VER_SUFFIX}/ensurepip/_bundled/setuptools-20.10.1-py2.py3-none-any.whl
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.py
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.pyc
 lib/python${PY_VER_SUFFIX}/ensurepip/_uninstall.pyo
@@ -1631,6 +1631,9 @@ lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_autoexpand.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_calltips.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_calltips.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_calltips.pyo
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_config_help.py
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_config_help.pyo
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_config_help.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_config_name.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_config_name.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_config_name.pyo
@@ -1640,6 +1643,9 @@ lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_configdialog.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_delegator.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_delegator.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_delegator.pyo
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_editmenu.py
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_editmenu.pyo
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_editmenu.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_editor.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_editor.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_editor.pyo
@@ -1664,9 +1670,18 @@ lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_parenmatch.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_pathbrowser.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_pathbrowser.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_pathbrowser.pyo
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_percolator.py
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_percolator.pyo
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_percolator.pyc
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_replacedialog.py
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_replacedialog.pyo
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_replacedialog.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_rstrip.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_rstrip.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_rstrip.pyo
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_searchdialog.py
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_searchdialog.pyc
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_searchdialog.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_searchdialogbase.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_searchdialogbase.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_searchdialogbase.pyo
@@ -1679,6 +1694,9 @@ lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_text.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_textview.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_textview.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_textview.pyo
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_undodelegator.py
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_undodelegator.pyc
+lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_undodelegator.pyo
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_warning.py
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_warning.pyc
 lib/python${PY_VER_SUFFIX}/idlelib/idle_test/test_warning.pyo
@@ -2484,16 +2502,15 @@ lib/python${PY_VER_SUFFIX}/test/badsyntax_future7.py
 lib/python${PY_VER_SUFFIX}/test/badsyntax_future8.py
 lib/python${PY_VER_SUFFIX}/test/badsyntax_future9.py
 lib/python${PY_VER_SUFFIX}/test/badsyntax_pep3120.py
-lib/python${PY_VER_SUFFIX}/test/buffer_tests.py
-lib/python${PY_VER_SUFFIX}/test/buffer_tests.pyc
-lib/python${PY_VER_SUFFIX}/test/buffer_tests.pyo
 lib/python${PY_VER_SUFFIX}/test/bytecode_helper.py
 lib/python${PY_VER_SUFFIX}/test/bytecode_helper.pyc
 lib/python${PY_VER_SUFFIX}/test/bytecode_helper.pyo
+lib/python${PY_VER_SUFFIX}/test/capath/0e4015b9.0
 lib/python${PY_VER_SUFFIX}/test/capath/4e1295a3.0
 lib/python${PY_VER_SUFFIX}/test/capath/5ed36f99.0
 lib/python${PY_VER_SUFFIX}/test/capath/6e88d7b8.0
 lib/python${PY_VER_SUFFIX}/test/capath/99d0fa06.0
+lib/python${PY_VER_SUFFIX}/test/capath/ce7b8643.0
 lib/python${PY_VER_SUFFIX}/test/cfgparser.1
 lib/python${PY_VER_SUFFIX}/test/cfgparser.2
 lib/python${PY_VER_SUFFIX}/test/cfgparser.3
@@ -2726,7 +2743,6 @@ lib/python${PY_VER_SUFFIX}/test/future_test2.pyo
 lib/python${PY_VER_SUFFIX}/test/gdb_sample.py
 lib/python${PY_VER_SUFFIX}/test/gdb_sample.pyc
 lib/python${PY_VER_SUFFIX}/test/gdb_sample.pyo
-lib/python${PY_VER_SUFFIX}/test/https_svn_python_org_root.pem
 lib/python${PY_VER_SUFFIX}/test/ieee754.txt
 lib/python${PY_VER_SUFFIX}/test/imghdrdata/python.bmp
 lib/python${PY_VER_SUFFIX}/test/imghdrdata/python.exr
@@ -3961,6 +3977,8 @@ lib/python${PY_VER_SUFFIX}/test/test_operator.pyo
 lib/python${PY_VER_SUFFIX}/test/test_optparse.py
 lib/python${PY_VER_SUFFIX}/test/test_optparse.pyc
 lib/python${PY_VER_SUFFIX}/test/test_optparse.pyo
+lib/python${PY_VER_SUFFIX}/test/test_ordered_dict.pyc
+lib/python${PY_VER_SUFFIX}/test/test_ordered_dict.pyo
 lib/python${PY_VER_SUFFIX}/test/test_os.py
 lib/python${PY_VER_SUFFIX}/test/test_os.pyc
 lib/python${PY_VER_SUFFIX}/test/test_os.pyo
@@ -3988,9 +4006,6 @@ lib/python${PY_VER_SUFFIX}/test/test_pep247.pyo
 lib/python${PY_VER_SUFFIX}/test/test_pep277.py
 lib/python${PY_VER_SUFFIX}/test/test_pep277.pyc
 lib/python${PY_VER_SUFFIX}/test/test_pep277.pyo
-lib/python${PY_VER_SUFFIX}/test/test_pep292.py
-lib/python${PY_VER_SUFFIX}/test/test_pep292.pyc
-lib/python${PY_VER_SUFFIX}/test/test_pep292.pyo
 lib/python${PY_VER_SUFFIX}/test/test_pep3120.py
 lib/python${PY_VER_SUFFIX}/test/test_pep3120.pyc
 lib/python${PY_VER_SUFFIX}/test/test_pep3120.pyo
@@ -4345,6 +4360,10 @@ lib/python${PY_VER_SUFFIX}/test/test_ttk_textonly.pyo
 lib/python${PY_VER_SUFFIX}/test/test_tuple.py
 lib/python${PY_VER_SUFFIX}/test/test_tuple.pyc
 lib/python${PY_VER_SUFFIX}/test/test_tuple.pyo
+lib/python${PY_VER_SUFFIX}/test/test_ordered_dict.py
+lib/python${PY_VER_SUFFIX}/test/test_turtle.py
+lib/python${PY_VER_SUFFIX}/test/test_turtle.pyc
+lib/python${PY_VER_SUFFIX}/test/test_turtle.pyo
 lib/python${PY_VER_SUFFIX}/test/test_typechecks.py
 lib/python${PY_VER_SUFFIX}/test/test_typechecks.pyc
 lib/python${PY_VER_SUFFIX}/test/test_typechecks.pyo
@@ -4513,6 +4532,7 @@ lib/python${PY_VER_SUFFIX}/test/tracedmodules/testmod.pyo
 lib/python${PY_VER_SUFFIX}/test/win_console_handler.py
 lib/python${PY_VER_SUFFIX}/test/win_console_handler.pyc
 lib/python${PY_VER_SUFFIX}/test/win_console_handler.pyo
+lib/python${PY_VER_SUFFIX}/test/wrongcert.pem
 lib/python${PY_VER_SUFFIX}/test/xmltestdata/simple-ns.xml
 lib/python${PY_VER_SUFFIX}/test/xmltestdata/simple.xml
 lib/python${PY_VER_SUFFIX}/test/xmltestdata/test.xml
