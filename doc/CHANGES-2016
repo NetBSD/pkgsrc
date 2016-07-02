@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2653 2016/07/02 15:25:35 adam Exp $
+$NetBSD: CHANGES-2016,v 1.2654 2016/07/02 19:33:36 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3872,3 +3872,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/python27 to 2.7.12 [adam 2016-07-02]
 	Updated lang/python34 to 3.4.5 [adam 2016-07-02]
 	Updated lang/python35 to 3.5.2 [adam 2016-07-02]
+	Updated mail/dovecot2 to 2.2.25 [adam 2016-07-02]
