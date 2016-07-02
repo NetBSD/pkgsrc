@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2016/05/05 11:45:41 jaapb Exp $
+# $NetBSD: Makefile,v 1.10 2016/07/02 10:11:09 jaapb Exp $
 
-PKGNAME= ocaml-${DISTNAME}
-DISTNAME=	csv-1.3.0
-PKGREVISION=	6
+VERSION=	1.5
+GITHUB_PROJECT=	ocaml-csv
+DISTNAME=	${GITHUB_PROJECT}-${VERSION}
 CATEGORIES=	textproc
-MASTER_SITES=	http://forge.ocamlcore.org/frs/download.php/1172/
+MASTER_SITES=	${MASTER_SITE_GITHUB:=Chris00/}
 
 MAINTAINER=	jaapb@NetBSD.org
 HOMEPAGE=	http://csv.forge.ocamlcore.org/
@@ -16,29 +16,19 @@ USE_LANGUAGES=	c
 
 CONFIGURE_ARGS+=	--destdir "${DESTDIR}" --prefix "${PREFIX}"
 
-SUBST_CLASSES+=	destdir
-SUBST_STAGE.destdir=    post-configure
-SUBST_MESSAGE.destdir=  Changing install location to DESTDIR
-SUBST_FILES.destdir=    setup.ml
-SUBST_SED.destdir=      -e 's,"install" :: findlib_name,"install" :: "-destdir ${DESTDIR}${PREFIX}/lib/ocaml/site-lib" :: "-ldconf /dev/null" :: findlib_name,'
+OCAML_USE_OASIS=	yes
+
+#SUBST_CLASSES+=	destdir
+#SUBST_STAGE.destdir=    post-configure
+#SUBST_MESSAGE.destdir=  Changing install location to DESTDIR
+#SUBST_FILES.destdir=    setup.ml
+#SUBST_SED.destdir=      -e 's,"install" :: findlib_name,"install" :: "-destdir ${DESTDIR}${PREFIX}/lib/ocaml/site-lib" :: "-ldconf /dev/null" :: findlib_name,'
+
+pre-configure:
+	cd ${WRKSRC} && ${MAKE} setup.ml
 
 .include "../../mk/bsd.prefs.mk"
 
-PLIST_VARS=     opt
-.if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || \
-    (${MACHINE_ARCH} == "sparc") || (${MACHINE_ARCH} == "x86_64")
-PLIST.opt=	yes
-.endif
-
-do-configure:
-	cd ${WRKSRC} && ${CONFIGURE_ENV} ocaml setup.ml -configure ${CONFIGURE_ARGS}
-
-do-build:
-	cd ${WRKSRC} && ${MAKE_ENV} ocaml setup.ml -build
-
-do-install:
-	cd ${WRKSRC} && ocaml setup.ml -install
-
-.include "../../devel/ocaml-findlib/buildlink3.mk"
-.include "../../lang/ocaml/buildlink3.mk"
+.include "../../mk/ocaml.mk"
+.include "../../devel/ocaml-oasis/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
