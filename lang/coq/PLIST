@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2016/02/06 16:08:36 jaapb Exp $
+@comment $NetBSD: PLIST,v 1.19 2016/07/02 10:17:18 jaapb Exp $
 bin/coq-tex
 bin/coq_makefile
 bin/coqc
@@ -142,6 +142,7 @@ lib/coq/lib/aux_file.cmi
 lib/coq/lib/backtrace.cmi
 lib/coq/lib/bigint.cmi
 lib/coq/lib/cArray.cmi
+lib/coq/lib/cEphemeron.cmi
 lib/coq/lib/cList.cmi
 lib/coq/lib/cMap.cmi
 lib/coq/lib/cObj.cmi
@@ -159,7 +160,6 @@ lib/coq/lib/control.cmi
 lib/coq/lib/deque.cmi
 lib/coq/lib/dyn.cmi
 lib/coq/lib/envars.cmi
-lib/coq/lib/ephemeron.cmi
 lib/coq/lib/errors.cmi
 lib/coq/lib/exninfo.cmi
 lib/coq/lib/explore.cmi
