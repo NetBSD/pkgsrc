@@ -1,0 +1,22 @@
+$NetBSD: patch-src_FlightCrew_CMakeLists.txt,v 1.1 2016/07/02 14:43:12 joerg Exp $
+
+--- src/FlightCrew/CMakeLists.txt.orig	2016-07-02 09:58:43.000000000 +0000
++++ src/FlightCrew/CMakeLists.txt
+@@ -55,7 +55,7 @@ set( ALL_INCLUDES ${BoostParts_SOURCE_DI
+                   ${zipios_SOURCE_DIR} )
+ set( GCC_PCH_TARGET gccPCH_fc )
+ 
+-precompiled_header( SOURCES ALL_INCLUDES ${GCC_PCH_TARGET} ${PCH_NAME} )
++# precompiled_header( SOURCES ALL_INCLUDES ${GCC_PCH_TARGET} ${PCH_NAME} )
+ 
+ #############################################################################
+ 
+@@ -112,7 +112,7 @@ elseif( CMAKE_COMPILER_IS_GNUCXX )
+     add_definitions( -Wall )
+ 
+     # Make sure the PCH is built for GCC
+-    add_dependencies( ${PROJECT_NAME} ${GCC_PCH_TARGET} )
++    #add_dependencies( ${PROJECT_NAME} ${GCC_PCH_TARGET} )
+ endif()
+ 
+ # needed for correct Xerces header inclusion
