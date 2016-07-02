@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2016/06/06 12:28:37 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2016/07/02 09:36:20 wiz Exp $
 
 DISTNAME=		khard-0.9.0
+PKGREVISION=		1
 CATEGORIES=		misc net
 MASTER_SITES=		${MASTER_SITE_PYPI:=k/khard/}
 
@@ -12,6 +13,7 @@ LICENSE=		gnu-gpl-v3
 DEPENDS+=		${PYPKGPREFIX}-configobj-[0-9]*:../../devel/py-configobj
 DEPENDS+=		${PYPKGPREFIX}-vobject-[0-9]*:../../textproc/py-vobject
 DEPENDS+=		${PYPKGPREFIX}-argparse-[0-9]*:../../devel/py-argparse
+DEPENDS+=		${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 0.4.1
 
