@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2016/06/30 18:03:46 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2016/07/02 08:51:40 wiz Exp $
 
 DISTNAME=	calibre-1.48.0
-PKGREVISION=	17
+PKGREVISION=	18
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=calibre/}
 EXTRACT_SUFX=	.tar.xz
@@ -126,8 +126,8 @@ post-install:
 BUILDLINK_API_DEPENDS.libusb+=	libusb>=0.1.12
 .include "../../devel/libusb/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
-BUILDLINK_API_DEPENDS.ImageMagick+=	ImageMagick>=6.5.9
-.include "../../graphics/ImageMagick/buildlink3.mk"
+BUILDLINK_API_DEPENDS.ImageMagick6+=	ImageMagick6>=6.5.9
+.include "../../graphics/ImageMagick6/buildlink3.mk"
 BUILDLINK_API_DEPENDS.pyimaging+=	${PYPKGPREFIX}-imaging>=1.1.6
 .include "../../graphics/py-imaging/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libwmf+=	libwmf>=0.2.8
