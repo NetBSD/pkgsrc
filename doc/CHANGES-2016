@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2646 2016/07/02 11:09:48 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2647 2016/07/02 12:23:13 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3862,3 +3862,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/coq to 8.5pl1 [jaapb 2016-07-02]
 	Updated devel/jemalloc to 4.2.1 [wiz 2016-07-02]
 	Updated devel/py-mercurial to 3.8.4 [wiz 2016-07-02]
+	Updated devel/nss to 3.25 [ryoon 2016-07-02]
