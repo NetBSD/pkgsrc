@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2016/05/20 21:32:24 youri Exp $
+$NetBSD: distinfo,v 1.2 2016/07/02 14:41:24 joerg Exp $
 
 SHA1 (libindicator-12.10.1.tar.gz) = 25c8a0a150651ee6b2198df3f36fcbb49f0295c2
 RMD160 (libindicator-12.10.1.tar.gz) = c5353a3ee5b9b24fac0cb2a7b620a23c406055af
 Size (libindicator-12.10.1.tar.gz) = 427764 bytes
 SHA1 (patch-configure) = 3af0c7c242613fac3727620dcca1aa5e51d0fa6f
+SHA1 (patch-tools_Makefile.in) = 9988879025dd4cc541407958e83b0d69eea1926c
