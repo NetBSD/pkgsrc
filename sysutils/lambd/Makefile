@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/10/23 19:51:09 asau Exp $
+# $NetBSD: Makefile,v 1.17 2016/07/02 14:44:50 joerg Exp $
 
 DISTNAME=	lambd-20010719
 PKGREVISION=	2
@@ -20,5 +20,10 @@ do-extract:
 	${MKDIR} ${WRKSRC}
 	${CP} ${FILESDIR}/*.[ch8] ${WRKSRC}
 	${CP} ${FILESDIR}/Makefile ${WRKSRC}
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mgcc)
+CFLAGS+=	-Wno-error=unused-but-set-variable
+.endif
 
 .include "../../mk/bsd.pkg.mk"
