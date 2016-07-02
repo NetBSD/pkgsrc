@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.54 2016/02/06 11:25:09 tron Exp $
+$NetBSD: distinfo,v 1.55 2016/07/02 15:05:43 adam Exp $
 
-SHA1 (Python-2.7.11.tar.xz) = c3b8bbe3f084c4d4ea13ffb03d75a5e22f9756ff
-RMD160 (Python-2.7.11.tar.xz) = 215c72b1d81e878a675984783ed8df041ee7539c
-SHA512 (Python-2.7.11.tar.xz) = 72166763a2fe6aab45ecf378f55a1efc7322d1742c4638bae84f4ed4b9fb4c01f2a0293733c64426ae2c70df24d95ff2b1e2a4f3c2715de00d8f320d4d939ea0
-Size (Python-2.7.11.tar.xz) = 12277476 bytes
+SHA1 (Python-2.7.12.tar.xz) = 05360b8ade117b35e266b2004a7f1f11250c6dcd
+RMD160 (Python-2.7.12.tar.xz) = c330f6ac08ed67f307de0e726a288bab16c832d5
+SHA512 (Python-2.7.12.tar.xz) = 6ddbbce47cc49597433d98ca05c2f62f07ed1070807b645602a8e9e9b996adc6fa66fa20a33cd7d23d4e7e925e25071d7301d288149fbe4e8c5f06d5438dda1f
+Size (Python-2.7.12.tar.xz) = 12390820 bytes
 SHA1 (patch-Include_pyerrors.h) = 0d2cd52d18cc719b895fa32ed7e11c6cb15bae54
 SHA1 (patch-Include_pyport.h) = f3e4ddbc954425a65301465410911222ca471320
-SHA1 (patch-Lib_distutils_unixccompiler.py) = def4142633b8f6b75e905b5c57be1d5c19b42d33
+SHA1 (patch-Lib_distutils_unixccompiler.py) = db16c9aca2f29730945f28247b88b18828739bbb
 SHA1 (patch-Lib_multiprocessing_process.py) = 15699bd8ec822bf54a0631102e00e0a34f882803
 SHA1 (patch-Modules__ssl.c) = 6e68f88ad205106691900f091a897ffe0a4c363c
 SHA1 (patch-Modules_getaddrinfo.c) = aa699d257f1bc98b9a3183a21324053e134409d1
