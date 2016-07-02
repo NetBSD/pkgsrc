@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2641 2016/07/02 09:36:35 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2642 2016/07/02 09:57:00 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3857,3 +3857,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Removed devel/bazel [joerg 2016-07-02]
 	Updated misc/calibre1 to 1.48.0nb18 [wiz 2016-07-02]
 	Updated misc/khard to 0.9.0nb1 [wiz 2016-07-02]
+	Updated databases/ocaml-mysql to 1.2.0 [jaapb 2016-07-02]
