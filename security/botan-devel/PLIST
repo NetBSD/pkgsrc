@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2016/05/19 21:58:43 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2016/07/02 14:42:30 joerg Exp $
 bin/botan
 include/botan-1.11/botan/adler32.h
 include/botan-1.11/botan/aead.h
@@ -210,7 +210,7 @@ include/botan-1.11/botan/sym_algo.h
 include/botan-1.11/botan/symkey.h
 include/botan-1.11/botan/system_rng.h
 include/botan-1.11/botan/tea.h
-${PLIST.x86_64}include/botan-1.11/botan/threefish_avx2.h
+${PLIST.x86}include/botan-1.11/botan/threefish_avx2.h
 include/botan-1.11/botan/threefish.h
 include/botan-1.11/botan/tiger.h
 include/botan-1.11/botan/tls_alert.h
