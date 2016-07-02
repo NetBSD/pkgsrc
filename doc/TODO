@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16092 2016/07/01 07:47:48 leot Exp $
+$NetBSD: TODO,v 1.16093 2016/07/02 09:32:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -507,6 +507,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o cherokee-1.2.103 [pkg/48268]
 	o chimera-1.30a
 	o chktex-1.7.2
+	o chromium-bsu-0.9.16
 	o chrony-2.3
 	o cim-5.1
 	o cinepaint-1.3
@@ -1517,6 +1518,9 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o py-yubiauth-0.3.10
 	o py-zconfig-3.0.3
 	o py34-html-docs-3.4.3
+	o python27-2.7.12
+	o python34-3.4.5
+	o python35-3.5.2
 	o pythontidy-1.23
 	o qbzr-0.22.4
 	o qcad-3.13.1.3
