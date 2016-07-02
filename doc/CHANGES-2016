@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2638 2016/07/01 21:50:30 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2639 2016/07/02 08:12:47 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3854,3 +3854,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/sqlrelay-sqlite to 0.65.0 [fhajny 2016-07-01]
 	Added net/libquic version 0.0.3 [agc 2016-07-01]
 	Updated pkgtools/revbump to 2.13 [wiz 2016-07-01]
+	Removed devel/bazel [joerg 2016-07-02]
