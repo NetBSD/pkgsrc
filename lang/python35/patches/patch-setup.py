@@ -1,8 +1,8 @@
-$NetBSD: patch-setup.py,v 1.1 2015/12/05 17:12:13 adam Exp $
+$NetBSD: patch-setup.py,v 1.2 2016/07/02 15:07:48 adam Exp $
 
---- setup.py.orig	2014-03-17 02:31:31.000000000 +0000
+--- setup.py.orig	2016-06-25 21:38:39.000000000 +0000
 +++ setup.py
-@@ -33,7 +33,8 @@ host_platform = get_platform()
+@@ -44,7 +44,8 @@ host_platform = get_platform()
  COMPILED_WITH_PYDEBUG = ('--with-pydebug' in sysconfig.get_config_var("CONFIG_ARGS"))
  
  # This global variable is used to hold the list of modules to be disabled.
@@ -12,8 +12,8 @@ $NetBSD: patch-setup.py,v 1.1 2015/12/05 17:12:13 adam Exp $
  
  def add_dir_to_list(dirlist, dir):
      """Add the directory 'dir' to the list 'dirlist' (after any relative
-@@ -441,15 +442,15 @@ class PyBuildExt(build_ext):
-             os.unlink(tmpfile)
+@@ -488,15 +489,15 @@ class PyBuildExt(build_ext):
+             return ['m']
  
      def detect_modules(self):
 -        # Ensure that /usr/local is always used, but the local build
@@ -37,7 +37,7 @@ $NetBSD: patch-setup.py,v 1.1 2015/12/05 17:12:13 adam Exp $
          self.add_multiarch_paths()
  
          # Add paths specified in the environment variables LDFLAGS and
-@@ -751,8 +752,7 @@ class PyBuildExt(build_ext):
+@@ -809,8 +810,7 @@ class PyBuildExt(build_ext):
                                 depends = ['socketmodule.h']) )
          # Detect SSL support for the socket module (via _ssl)
          search_for_ssl_incs_in = [
@@ -47,7 +47,7 @@ $NetBSD: patch-setup.py,v 1.1 2015/12/05 17:12:13 adam Exp $
                               ]
          ssl_incs = find_file('openssl/ssl.h', inc_dirs,
                               search_for_ssl_incs_in
-@@ -763,9 +763,7 @@ class PyBuildExt(build_ext):
+@@ -821,9 +821,7 @@ class PyBuildExt(build_ext):
              if krb5_h:
                  ssl_incs += krb5_h
          ssl_libs = find_library_file(self.compiler, 'ssl',lib_dirs,
@@ -58,7 +58,7 @@ $NetBSD: patch-setup.py,v 1.1 2015/12/05 17:12:13 adam Exp $
  
          if (ssl_incs is not None and
              ssl_libs is not None):
-@@ -784,7 +782,7 @@ class PyBuildExt(build_ext):
+@@ -842,7 +840,7 @@ class PyBuildExt(build_ext):
  
          # look for the openssl version header on the compiler search path.
          opensslv_h = find_file('openssl/opensslv.h', [],
@@ -67,7 +67,7 @@ $NetBSD: patch-setup.py,v 1.1 2015/12/05 17:12:13 adam Exp $
          if opensslv_h:
              name = os.path.join(opensslv_h[0], 'openssl/opensslv.h')
              if host_platform == 'darwin' and is_macosx_sdk_path(name):
-@@ -1148,6 +1146,30 @@ class PyBuildExt(build_ext):
+@@ -1216,6 +1214,30 @@ class PyBuildExt(build_ext):
          dbm_order = ['gdbm']
          # The standard Unix dbm module:
          if host_platform not in ['cygwin']:
@@ -98,7 +98,7 @@ $NetBSD: patch-setup.py,v 1.1 2015/12/05 17:12:13 adam Exp $
              config_args = [arg.strip("'")
                             for arg in sysconfig.get_config_var("CONFIG_ARGS").split()]
              dbm_args = [arg for arg in config_args
-@@ -1159,7 +1181,7 @@ class PyBuildExt(build_ext):
+@@ -1227,7 +1249,7 @@ class PyBuildExt(build_ext):
              dbmext = None
              for cand in dbm_order:
                  if cand == "ndbm":
@@ -107,7 +107,7 @@ $NetBSD: patch-setup.py,v 1.1 2015/12/05 17:12:13 adam Exp $
                          # Some systems have -lndbm, others have -lgdbm_compat,
                          # others don't have either
                          if self.compiler.find_library_file(lib_dirs,
-@@ -1956,10 +1986,7 @@ class PyBuildExt(build_ext):
+@@ -2027,10 +2049,7 @@ class PyBuildExt(build_ext):
              depends = ['_decimal/docstrings.h']
          else:
              srcdir = sysconfig.get_config_var('srcdir')
@@ -119,7 +119,7 @@ $NetBSD: patch-setup.py,v 1.1 2015/12/05 17:12:13 adam Exp $
              libraries = []
              sources = [
                '_decimal/_decimal.c',
-@@ -2205,7 +2232,7 @@ def main():
+@@ -2276,7 +2295,7 @@ def main():
            # If you change the scripts installed here, you also need to
            # check the PyBuildScripts command above, and change the links
            # created by the bininstall target in Makefile.pre.in
