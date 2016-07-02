@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.8 2015/11/03 01:56:16 agc Exp $
+$NetBSD: distinfo,v 1.9 2016/07/02 09:42:14 jaapb Exp $
 
-SHA1 (ocaml-mysql-1.1.2.tar.gz) = 17e228ab1063e1feca637de4fe45234adab619aa
-RMD160 (ocaml-mysql-1.1.2.tar.gz) = e36d0d29ce88351694f67d2444c990293a462434
-SHA512 (ocaml-mysql-1.1.2.tar.gz) = 8144e2519d250dcc9d6c533db36a57924c77b93d8eae200dd9c9f8c447c8fa3325cca4b0f0c78f4a5b8ece9d76c02dee41f7d9458ebef8c3b8bcf8cfc322de2b
-Size (ocaml-mysql-1.1.2.tar.gz) = 120030 bytes
+SHA1 (ocaml-mysql-1.2.0.tar.gz) = 4f6060513a00dafc2d635140198a7b5c3defabec
+RMD160 (ocaml-mysql-1.2.0.tar.gz) = 31bb16185eea4e3c7be7ed951dec74e38dc0f9cb
+SHA512 (ocaml-mysql-1.2.0.tar.gz) = a84574339f69ee27d208bfd264213dee7dc2782b56f21b6f18a6440a62b1bf1de7d62a072d32a899a7714d91b81c7816c1761752cf45afa62667eacfea7287f2
+Size (ocaml-mysql-1.2.0.tar.gz) = 99236 bytes
+SHA1 (patch-mysql_stubs.c) = df767db9dddf12efb7f2fe558d563ebe920a92d0
