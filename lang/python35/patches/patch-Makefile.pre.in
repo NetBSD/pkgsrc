@@ -1,10 +1,10 @@
-$NetBSD: patch-Makefile.pre.in,v 1.1 2015/12/05 17:12:13 adam Exp $
+$NetBSD: patch-Makefile.pre.in,v 1.2 2016/07/02 15:07:48 adam Exp $
 
 Use only one optimisation level; needed for PLIST and setuptools compatibility.
 
---- Makefile.pre.in.orig	2015-09-13 11:41:23.000000000 +0000
+--- Makefile.pre.in.orig	2016-06-25 21:38:37.000000000 +0000
 +++ Makefile.pre.in
-@@ -86,7 +86,7 @@ PY_CFLAGS_NODIST=$(CONFIGURE_CFLAGS_NODI
+@@ -91,7 +91,7 @@ PY_CFLAGS_NODIST=$(CONFIGURE_CFLAGS_NODI
  # be able to build extension modules using the directories specified in the
  # environment variables
  PY_CPPFLAGS=	$(BASECPPFLAGS) -I. -IInclude -I$(srcdir)/Include $(CONFIGURE_CPPFLAGS) $(CPPFLAGS)
@@ -13,16 +13,16 @@ Use only one optimisation level; needed for PLIST and setuptools compatibility.
  NO_AS_NEEDED=	@NO_AS_NEEDED@
  LDLAST=		@LDLAST@
  SGI_ABI=	@SGI_ABI@
-@@ -700,7 +700,7 @@ Python/importlib_external.h: $(srcdir)/L
- 	./Programs/_freeze_importlib \
- 		$(srcdir)/Lib/importlib/_bootstrap_external.py Python/importlib_external.h
+@@ -724,7 +724,7 @@ Python/importlib_external.h: $(srcdir)/L
+ 	        $(srcdir)/Lib/importlib/_bootstrap_external.py Python/importlib_external.h; \
+ 	fi
  
 -Python/importlib.h: $(srcdir)/Lib/importlib/_bootstrap.py Programs/_freeze_importlib
 +Python/importlib.h: $(srcdir)/Lib/importlib/_bootstrap.py Programs/_freeze_importlib $(LIBRARY_OBJS_OMIT_FROZEN)
- 	./Programs/_freeze_importlib \
- 		$(srcdir)/Lib/importlib/_bootstrap.py Python/importlib.h
- 
-@@ -845,7 +845,7 @@ Objects/setobject.o: $(srcdir)/Objects/s
+ 	if test "$(cross_compiling)" != "yes"; then \
+ 	    ./Programs/_freeze_importlib \
+ 	        $(srcdir)/Lib/importlib/_bootstrap.py Python/importlib.h; \
+@@ -882,7 +882,7 @@ Objects/setobject.o: $(srcdir)/Objects/s
  $(OPCODETARGETS_H): $(OPCODETARGETGEN_FILES)
  	$(OPCODETARGETGEN) $(OPCODETARGETS_H)
  
@@ -31,7 +31,7 @@ Use only one optimisation level; needed for PLIST and setuptools compatibility.
  
  Python/frozen.o: Python/importlib.h Python/importlib_external.h
  
-@@ -1085,7 +1085,8 @@ altbininstall: $(BUILDPYTHON) @FRAMEWORK
+@@ -1122,7 +1122,8 @@ altbininstall: $(BUILDPYTHON) @FRAMEWORK
  		if test -n "$(PY3LIBRARY)"; then \
  			$(INSTALL_SHARED) $(PY3LIBRARY) $(DESTDIR)$(LIBDIR)/$(PY3LIBRARY); \
  		fi; \
@@ -41,7 +41,7 @@ Use only one optimisation level; needed for PLIST and setuptools compatibility.
  	fi
  	if test "x$(LIPO_32BIT_FLAGS)" != "x" ; then \
  		rm -f $(DESTDIR)$(BINDIR)python$(VERSION)-32$(EXE); \
-@@ -1271,11 +1272,6 @@ libinstall:	build_all $(srcdir)/Lib/$(PL
+@@ -1312,11 +1313,6 @@ libinstall:	build_all $(srcdir)/Lib/$(PL
  		-x 'bad_coding|badsyntax|site-packages|lib2to3/tests/data' \
  		$(DESTDIR)$(LIBDEST)
  	-PYTHONPATH=$(DESTDIR)$(LIBDEST) $(RUNSHARED) \
@@ -53,7 +53,7 @@ Use only one optimisation level; needed for PLIST and setuptools compatibility.
  		$(PYTHON_FOR_BUILD) -Wi $(DESTDIR)$(LIBDEST)/compileall.py \
  		-d $(LIBDEST)/site-packages -f \
  		-x badsyntax $(DESTDIR)$(LIBDEST)/site-packages
-@@ -1284,10 +1280,6 @@ libinstall:	build_all $(srcdir)/Lib/$(PL
+@@ -1325,10 +1321,6 @@ libinstall:	build_all $(srcdir)/Lib/$(PL
  		-d $(LIBDEST)/site-packages -f \
  		-x badsyntax $(DESTDIR)$(LIBDEST)/site-packages
  	-PYTHONPATH=$(DESTDIR)$(LIBDEST) $(RUNSHARED) \
