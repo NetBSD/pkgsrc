@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.46 2016/05/03 12:34:27 taca Exp $
+@comment $NetBSD: PLIST,v 1.47 2016/07/02 19:32:09 adam Exp $
 bin/doveadm
 bin/doveconf
 bin/dsync
@@ -27,6 +27,7 @@ include/dovecot/auth-fields.h
 include/dovecot/auth-master-connection.h
 include/dovecot/auth-master.h
 include/dovecot/auth-penalty.h
+include/dovecot/auth-policy.h
 include/dovecot/auth-postfix-connection.h
 include/dovecot/auth-request-handler.h
 include/dovecot/auth-request-stats.h
@@ -70,6 +71,9 @@ include/dovecot/dbox-file.h
 include/dovecot/dbox-mail.h
 include/dovecot/dbox-save.h
 include/dovecot/dbox-storage.h
+include/dovecot/dcrypt-iostream-private.h
+include/dovecot/dcrypt-private.h
+include/dovecot/dcrypt.h
 include/dovecot/dict-client.h
 include/dovecot/dict-private.h
 include/dovecot/dict-sql-settings.h
@@ -214,6 +218,7 @@ include/dovecot/imem.h
 include/dovecot/index-attachment.h
 include/dovecot/index-mail.h
 include/dovecot/index-mailbox-size.h
+include/dovecot/index-pop3-uidl.h
 include/dovecot/index-rebuild.h
 include/dovecot/index-search-private.h
 include/dovecot/index-search-result.h
@@ -248,6 +253,7 @@ include/dovecot/istream-callback.h
 include/dovecot/istream-chain.h
 include/dovecot/istream-concat.h
 include/dovecot/istream-crlf.h
+include/dovecot/istream-decrypt.h
 include/dovecot/istream-dot.h
 include/dovecot/istream-failure-at.h
 include/dovecot/istream-file-private.h
@@ -407,6 +413,7 @@ include/dovecot/notify-plugin.h
 include/dovecot/numpack.h
 include/dovecot/ostream-cmp.h
 include/dovecot/ostream-dot.h
+include/dovecot/ostream-encrypt.h
 include/dovecot/ostream-escaped.h
 include/dovecot/ostream-failure-at.h
 include/dovecot/ostream-hash.h
@@ -421,6 +428,7 @@ include/dovecot/passdb-cache.h
 include/dovecot/passdb-template.h
 include/dovecot/passdb.h
 include/dovecot/password-scheme.h
+include/dovecot/pkcs5.h
 include/dovecot/pop3-capability.h
 include/dovecot/pop3-client.h
 include/dovecot/pop3-commands.h
@@ -552,6 +560,9 @@ lib/dovecot/lib21_fts_squat_plugin.la
 lib/dovecot/lib30_imap_zlib_plugin.la
 lib/dovecot/lib90_stats_plugin.la
 lib/dovecot/lib95_imap_stats_plugin.la
+lib/dovecot/lib99_welcome_plugin.la
+lib/dovecot/libdcrypt_openssl.la
+lib/dovecot/libdcrypt_openssl.so
 lib/dovecot/libdovecot-compression.la
 lib/dovecot/libdovecot-dsync.la
 lib/dovecot/libdovecot-fts.la
@@ -617,6 +628,7 @@ man/man1/doveadm-expunge.1
 man/man1/doveadm-fetch.1
 man/man1/doveadm-flags.1
 man/man1/doveadm-force-resync.1
+man/man1/doveadm-fs.1
 man/man1/doveadm-fts.1
 man/man1/doveadm-help.1
 man/man1/doveadm-import.1
@@ -677,6 +689,7 @@ share/doc/dovecot/wiki/Authentication.Mechanisms.txt
 share/doc/dovecot/wiki/Authentication.MultipleDatabases.txt
 share/doc/dovecot/wiki/Authentication.PasswordSchemes.txt
 share/doc/dovecot/wiki/Authentication.Penalty.txt
+share/doc/dovecot/wiki/Authentication.Policy.txt
 share/doc/dovecot/wiki/Authentication.RestrictAccess.txt
 share/doc/dovecot/wiki/Authentication.txt
 share/doc/dovecot/wiki/BasicConfiguration.txt
@@ -849,6 +862,7 @@ share/doc/dovecot/wiki/Plugins.Snarf.txt
 share/doc/dovecot/wiki/Plugins.Stats.txt
 share/doc/dovecot/wiki/Plugins.Trash.txt
 share/doc/dovecot/wiki/Plugins.Virtual.txt
+share/doc/dovecot/wiki/Plugins.Welcome.txt
 share/doc/dovecot/wiki/Plugins.Zlib.txt
 share/doc/dovecot/wiki/Plugins.txt
 share/doc/dovecot/wiki/PostLoginScripting.txt
@@ -905,10 +919,18 @@ share/doc/dovecot/wiki/WhyDoesItNotWork.txt
 share/doc/dovecot/wiki/maildrop.txt
 share/doc/dovecot/wiki/mutt.txt
 share/doc/dovecot/wiki/uw2dovecot.sh.txt
+share/dovecot/stopwords/stopwords_da.txt
+share/dovecot/stopwords/stopwords_de.txt
 share/dovecot/stopwords/stopwords_en.txt
+share/dovecot/stopwords/stopwords_es.txt
 share/dovecot/stopwords/stopwords_fi.txt
 share/dovecot/stopwords/stopwords_fr.txt
+share/dovecot/stopwords/stopwords_it.txt
+share/dovecot/stopwords/stopwords_nl.txt
 share/dovecot/stopwords/stopwords_no.txt
+share/dovecot/stopwords/stopwords_pt.txt
+share/dovecot/stopwords/stopwords_ro.txt
+share/dovecot/stopwords/stopwords_ru.txt
 share/dovecot/stopwords/stopwords_sv.txt
 share/examples/dovecot/conf.d/10-auth.conf
 share/examples/dovecot/conf.d/10-director.conf
