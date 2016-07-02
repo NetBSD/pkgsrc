@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/06/17 19:24:35 kamil Exp $
+# $NetBSD: Makefile,v 1.5 2016/07/02 14:43:34 joerg Exp $
 
 DISTNAME=	dunst-1.1.0
 PKGREVISION=	1
@@ -11,7 +11,7 @@ HOMEPAGE=	http://knopwob.org/dunst/
 COMMENT=	Customizable and lightweight notification-daemon
 LICENSE=	modified-bsd
 
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pkg-config
 
 MAKE_FLAGS+=	MANPREFIX=${PREFIX}/${PKGMANDIR}
 
