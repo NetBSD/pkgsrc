@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2643 2016/07/02 10:11:24 jaapb Exp $
+$NetBSD: CHANGES-2016,v 1.2644 2016/07/02 10:17:40 jaapb Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3859,3 +3859,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated misc/khard to 0.9.0nb1 [wiz 2016-07-02]
 	Updated databases/ocaml-mysql to 1.2.0 [jaapb 2016-07-02]
 	Updated textproc/ocaml-csv to 1.5 [jaapb 2016-07-02]
+	Updated lang/coq to 8.5pl1 [jaapb 2016-07-02]
