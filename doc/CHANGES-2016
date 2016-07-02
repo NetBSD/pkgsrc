@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2649 2016/07/02 12:38:31 ryoon Exp $
+$NetBSD: CHANGES-2016,v 1.2650 2016/07/02 12:45:00 ryoon Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3866,3 +3866,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated multimedia/ffmpeg3 to 3.1.1 [ryoon 2016-07-02]
 	Updated multimedia/ffplay3 to 3.1.1 [ryoon 2016-07-02]
 	Updated www/firefox to 47.0.1 [ryoon 2016-07-02]
+	Updated www/firefox-l10n to 47.0.1 [ryoon 2016-07-02]
