@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2640 2016/07/02 08:51:51 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2641 2016/07/02 09:36:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3856,3 +3856,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated pkgtools/revbump to 2.13 [wiz 2016-07-01]
 	Removed devel/bazel [joerg 2016-07-02]
 	Updated misc/calibre1 to 1.48.0nb18 [wiz 2016-07-02]
+	Updated misc/khard to 0.9.0nb1 [wiz 2016-07-02]
