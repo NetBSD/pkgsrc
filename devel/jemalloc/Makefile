@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/07/02 11:00:42 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2016/07/02 12:10:04 wiz Exp $
 
 DISTNAME=	jemalloc-4.2.1
 CATEGORIES=	devel
@@ -24,6 +24,8 @@ CONFIGURE_ARGS+=        --with-xslroot=${PREFIX}/share/xsl/docbook/
 
 USE_TOOLS+=		perl:run
 REPLACE_PERL=		bin/jeprof.in
+
+PKGCONFIG_OVERRIDE=	jemalloc.pc.in
 
 BUILD_TARGET=		all dist
 
