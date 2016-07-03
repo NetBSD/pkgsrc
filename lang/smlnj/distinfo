@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.23 2016/07/03 19:29:27 dholland Exp $
+$NetBSD: distinfo,v 1.24 2016/07/03 19:35:13 dholland Exp $
 
 SHA1 (smlnj-110.73/MLRISC.tgz) = 59a38a4a1c63cecf97764a99577b3f929b5ccbc9
 RMD160 (smlnj-110.73/MLRISC.tgz) = dd951776482f37421a17701d67c051741691c6cb
@@ -90,13 +90,22 @@ SHA1 (patch-aj) = 6318548da4c943c60fe63d41529803ea3fa2c96e
 SHA1 (patch-ak) = 6fb3d4444c75123dc8c5fa7bb6cea835c78ef6e3
 SHA1 (patch-am) = 95f3e5a041163279f68e782469a30f6f765b7511
 SHA1 (patch-an) = 3d750d5d20b2d3ab69b492eb60e27aded45ec3f7
-SHA1 (patch-ao) = 1c66024c5949269291cbf6f815baf6162db47d31
+SHA1 (patch-ao) = 1cf3dfb01314556bcb0cd61e2d0d1577e1cebc04
 SHA1 (patch-ap) = af8b50c0f21e969e036064f5c808eaccc79d5c4b
 SHA1 (patch-aq) = 32d96ad2552d5ac914581686904e94a96e5ca059
 SHA1 (patch-at) = cd7d23adaf8882e9b431d6581283fdb58044e05c
 SHA1 (patch-config___arch-n-opsys) = b0c952b0b9ed6312a115761fdbd4c30aaa208b4c
+SHA1 (patch-src_runtime_c-libs_posix-filesys_stat.c) = d5a315ac342a8a59099ae9eb131c899250a2404f
+SHA1 (patch-src_runtime_c-libs_posix-filesys_stat__64.c) = 2a3e1f6ffc8f688e3c2ebf8b5913481093feb0fa
+SHA1 (patch-src_runtime_c-libs_posix-procenv_time.c) = 4c38da9110687b179237deef7fee389e0bbece4c
+SHA1 (patch-src_runtime_c-libs_smlnj-date_mktime.c) = a3bcb173a99972ab65208f65083bb30a7e09ab67
+SHA1 (patch-src_runtime_c-libs_smlnj-runtime_gc-ctl.c) = 673d04282ef95093012a2c1e2b66d867357ee4ef
+SHA1 (patch-src_runtime_gc_c-globals-tbl.c) = 19ac4ccc3ed0e784c1aeab0fe3ed781417540561
 SHA1 (patch-src_runtime_gc_gc-stats.h) = af61db9d1f04e566d4c5c2bc5dcf4c6958f0ea78
+SHA1 (patch-src_runtime_gc_heap-out-util.c) = 214c673e57efda9346b200509a1beb48af2aa443
 SHA1 (patch-src_runtime_gc_init-gc.c) = 5d1d5a13a51d732590dd4f375824bbc389a0525d
+SHA1 (patch-src_runtime_gc_mem-writer.c) = d43974ff5e8e576490656f9d24daf66fecab4849
+SHA1 (patch-src_runtime_kernel_main.c) = db26470b16f56e93ebecc62f34aa6b7a474089ec
 SHA1 (patch-src_runtime_kernel_unix-timers.c) = 1c1db5bce0ec1e72adafb9380027884cf746c75c
 SHA1 (patch-src_runtime_mach-dep_unix-prof.c) = 90a4b81e2a8532e4e06f29bfe42c55423a0f4154
 SHA1 (patch-src_runtime_objs_mk.alpha32-dunix) = 9e3a36f4663cd685459f2fbde41b8c5f154bd9c2
