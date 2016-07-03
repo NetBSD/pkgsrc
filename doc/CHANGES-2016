@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2671 2016/07/03 13:21:49 morr Exp $
+$NetBSD: CHANGES-2016,v 1.2672 2016/07/03 13:46:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3890,3 +3890,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated math/pari to 2.7.6 [wiz 2016-07-03]
 	Removed net/polsms [kamil 2016-07-03]
 	Updated editors/vim-share to 7.4.1987 [morr 2016-07-03]
+	Updated security/libressl to 2.3.6 [wiz 2016-07-03]
