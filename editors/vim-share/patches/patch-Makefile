@@ -1,12 +1,12 @@
-$NetBSD: patch-Makefile,v 1.4 2016/01/05 21:36:04 joerg Exp $
+$NetBSD: patch-Makefile,v 1.5 2016/07/03 13:20:59 morr Exp $
 
 Handle Xaw support appropiately.
 
 Fix GNUmakeism by not depending on $< in non-suffix rules.
 
---- src/Makefile.orig	2013-08-10 15:07:12.000000000 +0000
+--- src/Makefile.orig	2016-07-03 10:35:32.000000000 +0000
 +++ src/Makefile
-@@ -1201,22 +1201,27 @@ MOTIF_BUNDLE	=
+@@ -1253,22 +1253,27 @@ MOTIF_BUNDLE	=
  ### Athena GUI
  ### Use Xaw3d to make the menus look a little bit nicer
  #XAW_LIB = -lXaw3d
@@ -41,16 +41,16 @@ Fix GNUmakeism by not depending on $< in non-suffix rules.
  
  ATHENA_IPATH	= $(GUI_INC_LOC)
  ATHENA_LIBS_DIR = $(GUI_LIB_LOC)
-@@ -1947,7 +1952,7 @@ installrtbase: $(HELPSOURCE)/vim.1 $(DES
- 	-$(SHELL) ./installman.sh install $(DEST_MAN) "" $(INSTALLMANARGS)
+@@ -2168,7 +2173,7 @@ installrtbase: $(HELPSOURCE)/vim.1 $(DES
+ 		mv -f tags tags.dist; fi
  	@echo generating help tags
- # Generate the help tags with ":helptags" to handle all languages.
--	-@cd $(HELPSOURCE); $(MAKE) VIMEXE=$(DEST_BIN)/$(VIMTARGET) vimtags
-+	-@cd $(HELPSOURCE); $(MAKE) VIMEXE=../../src/$(VIMTARGET) vimtags
+ 	-@cd $(HELPSOURCE); if test -z "$(CROSS_COMPILING)"; then \
+-		$(MAKE) VIMEXE=$(DEST_BIN)/$(VIMTARGET) vimtags; fi
++		$(MAKE) VIMEXE=../../src/$(VIMTARGET) vimtags; fi
  	cd $(HELPSOURCE); \
  		files=`ls *.txt tags`; \
  		files="$$files `ls *.??x tags-?? 2>/dev/null || true`"; \
-@@ -2076,26 +2081,26 @@ installtools: $(TOOLS) $(DESTDIR)$(exec_
+@@ -2306,26 +2311,26 @@ installtools: $(TOOLS) $(DESTDIR)$(exec_
  	      fi
  	-chmod $(FILEMOD) $(DEST_TOOLS)/*
  # replace the path in some tools
@@ -91,15 +91,3 @@ Fix GNUmakeism by not depending on $< in non-suffix rules.
  
  # install the language specific files, if they were unpacked
  install-languages: languages $(DEST_LANG) $(DEST_KMAP)
-@@ -2596,9 +2601,9 @@ auto/pathdef.c: Makefile auto/config.mk
- 	-@sh $(srcdir)/pathdef.sh
- 
- auto/gui_gtk_gresources.c: gui_gtk_res.xml
--	$(GLIB_COMPILE_RESOURCES) --target=$@ --sourcedir=../pixmaps --generate --c-name=gui_gtk --manual-register $<
-+	$(GLIB_COMPILE_RESOURCES) --target=$@ --sourcedir=../pixmaps --generate --c-name=gui_gtk --manual-register gui_gtk_res.xml
- auto/gui_gtk_gresources.h: gui_gtk_res.xml
--	$(GLIB_COMPILE_RESOURCES) --target=$@ --sourcedir=../pixmaps --generate --c-name=gui_gtk --manual-register $<
-+	$(GLIB_COMPILE_RESOURCES) --target=$@ --sourcedir=../pixmaps --generate --c-name=gui_gtk --manual-register gui_gtk_res.xml
- 
- # All the object files are put in the "objects" directory.  Since not all make
- # commands understand putting object files in another directory, it must be
