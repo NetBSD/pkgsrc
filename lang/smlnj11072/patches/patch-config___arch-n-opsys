@@ -1,8 +1,12 @@
-$NetBSD: patch-config___arch-n-opsys,v 1.1 2016/07/03 18:49:02 dholland Exp $
+$NetBSD: patch-config___arch-n-opsys,v 1.2 2016/07/03 19:00:25 dholland Exp $
 
---- config/_arch-n-opsys.orig	2008-08-13 22:37:59.000000000 +0400
-+++ config/_arch-n-opsys	2009-01-27 17:24:34.000000000 +0300
-@@ -118,13 +118,15 @@
+Fix version reporting.
+Learn about x86_64.
+Support ppc and sparc on NetBSD.
+
+--- config/_arch-n-opsys.dist	2016-07-03 18:45:43.000000000 +0000
++++ config/_arch-n-opsys
+@@ -119,13 +119,15 @@ case `uname -s` in
      ;;
    NetBSD)
      case `uname -r` in
@@ -15,8 +19,9 @@ $NetBSD: patch-config___arch-n-opsys,v 1.1 2016/07/03 18:49:02 dholland Exp $
      esac
      HEAP_OPSYS=bsd
 -    case `uname -m` in
+-      *86) ARCH=x86;;
 +    case `uname -p` in
-       *86) ARCH=x86;;
++      *86|x86_64) ARCH=x86;;
 +      powerpc) ARCH=ppc;;
 +      sparc) ARCH=sparc;;
        *) exit 1;;
