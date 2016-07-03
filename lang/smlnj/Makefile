@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2016/04/14 22:10:06 dholland Exp $
+# $NetBSD: Makefile,v 1.27 2016/07/03 19:08:22 dholland Exp $
 #
 
 DISTNAME=	boot.${BOX}-unix
@@ -47,22 +47,37 @@ SML_SCRIPTS=	_link-sml _run-sml _ml-build _ml-makedepend
 
 .include "../../lang/smlnj/Makefile.common"
 
-# create parent directory for the runtime system
+#
+# For smlnj reasons the runtime system needs to be unpacked twice, once
+# in work/src and once in work/base.
+#
+# As of 20160624, instead of inconsistently patching one copy or the
+# other and hoping, or patching both and duplicating all the patches,
+# we'll patch only work/src, and then *after* patching clone work/src
+# into work/base.
+#
+
+# create parent directories for the runtime system
 pre-extract:
 	${MKDIR} ${WRKDIR}/src || ${TRUE}
+	${MKDIR} ${WRKDIR}/base || ${TRUE}
 
 # make it easier to patch the runtime system
 do-extract:
-	${RUN} extract_file="${_DISTDIR}/config.tgz"; export extract_file;	\
+	${RUN} extract_file="${_DISTDIR}/config.tgz";	\
+		export extract_file;			\
 		cd ${WRKDIR}; ${EXTRACT_CMD}
-	${RUN} extract_file="${_DISTDIR}/runtime.tgz"; export extract_file;	\
+	${RUN} extract_file="${_DISTDIR}/runtime.tgz";	\
+		export extract_file;			\
 		cd ${WRKDIR}/src; ${EXTRACT_CMD}
-	${RUN} extract_file="${_DISTDIR}/runtime.tgz"; export extract_file;	\
-		mkdir ${WRKDIR}/base; cd ${WRKDIR}/base; ${EXTRACT_CMD}
 
-# make symlinks to the dist files
+# symlink the rest of the distfiles
 post-extract:
-	cd ${WRKDIR} && ${LN} -sf ${_DISTDIR}/*  .
+	cd ${WRKDIR} && ${LN} -sf ${_DISTDIR}/* .
+
+# make the necessary copy of the runtime, _after_ patching src
+post-patch:
+	cd ${WRKDIR}/src && pax -rw runtime ${WRKDIR}/base/
 
 # resolve definition of SML_BASE, CFLAGS in patched files
 do-configure:
