@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.93 2016/07/03 15:05:48 sevan Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.94 2016/07/03 15:20:16 sevan Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -68,30 +68,6 @@
     <title>Platform-specific notes</title>
 
     <para>For details related to supported versions consult the platform-specific README files found in <xref linkend="supported-platforms"/></para>
-
-    <sect2 id="cygwin">
-      <title>Cygwin</title>
-
-      <para>You need to install minimal base packages in `Base' category
-      plus any of compiler, gcc, gcc4, and/or clang.
-      For gcc and gcc4, C and C++ compiler will be installed by default,
-      but you can install Fortran compiler additionally
-      because it will be required to use libtool.
-      If it is not installed (or too old), Fortran compiler will be
-      installed with pkgsrc automatically.</para>
-
-      <para>As noted in
-      <ulink url="http://cygwin.com/faq-nochunks.html#faq.using.su">Cygwin FAQ: `Why doesn't su work?'</ulink>,
-      su(1) command has been in Cygwin distribution, but it has never worked.
-      Unless you bootstrap pkgsrc with the --unprivileged option, workaround is:
-      </para>
-      <itemizedlist>
-        <listitem>
-          <para>Right click "Cygwin Terminal" in your Start Menu,
-          then pick "Run as administrator".</para>
-        </listitem>
-      </itemizedlist>
-    </sect2>
 
     <sect2 id="interix">
       <title>Interix</title>
