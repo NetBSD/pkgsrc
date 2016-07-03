@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.91 2016/07/03 14:38:15 sevan Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.92 2016/07/03 14:52:38 sevan Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -409,30 +409,6 @@ ICCBASE=                /opt/intel/cc/10.1.008
       libtool-linked C++ shared libraries will have a runtime
       dependency on the icc libraries until this is fixed in
       libtool.</para>
-
-    </sect2>
-
-    <sect2 id="mirbsd">
-      <title>MirBSD</title>
-
-      <para>The package tools of the (older) native ports tree,
-      <ulink url="//www.mirbsd.org/ports.htm">MirPorts</ulink>,
-      have the same names as the ones used by pkgsrc. Care should be taken
-      that the right tools are used. When installing packages from source,
-      use the <filename>bmake</filename> command for pkgsrc and
-      <filename>mmake</filename> for MirPorts.</para>
-
-      <para>pkgsrc and MirPorts use the same location for the package
-      database, <filename>/var/db/pkg</filename>. It is strongly recommended
-      to use <filename>/usr/pkg/db</filename> instead, so that the pkgsrc
-      tree is self-contained. This is also the default setting used in the
-      binary package builds.</para>
-
-      <para>Binary packages for MirBSD/i386 can be found on the pkgsrc ftp
-      server. The bootstrap kit there already contains the
-      <command>pkgin</command> package manager. See the
-      <ulink url="https://www.mirbsd.org/pkgsrc.htm">pkgsrc on MirOS</ulink>
-      page for more details.</para>
 
     </sect2>
 
