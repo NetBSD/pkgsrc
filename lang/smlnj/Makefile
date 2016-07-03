@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2016/07/03 19:21:44 dholland Exp $
+# $NetBSD: Makefile,v 1.32 2016/07/03 19:26:35 dholland Exp $
 #
 
 DISTNAME=	boot.${BOX}-unix
@@ -79,8 +79,10 @@ do-extract:
 		cd ${WRKDIR}/src; ${EXTRACT_CMD}
 
 # symlink the rest of the distfiles
+# also copy in new configs 
 post-extract:
 	cd ${WRKDIR} && ${LN} -sf ${_DISTDIR}/* .
+	cp ${FILESDIR}/mk.* ${WRKDIR}/src/runtime/objs/
 
 # make the necessary copy of the runtime, _after_ patching src
 post-patch:
