@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.92 2016/07/03 14:52:38 sevan Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.93 2016/07/03 15:05:48 sevan Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -91,15 +91,6 @@
           then pick "Run as administrator".</para>
         </listitem>
       </itemizedlist>
-    </sect2>
-
-    <sect2 id="gnukfreebsd">
-      <title>GNU/kFreeBSD</title>
-
-      <para>Debian GNU/kFreeBSD is the only GNU/kFreeBSD distribution now.</para>
-
-      <para> You should install ncurses (libncurses and libncurses-dev)
-      packages.</para>
     </sect2>
 
     <sect2 id="interix">
