@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16108 2016/07/03 11:31:39 wiz Exp $
+$NetBSD: TODO,v 1.16109 2016/07/03 11:50:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1126,7 +1126,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o modular-xorg-xquartz-1.18.0
 	o molden-4.8 [after which PR 40252 can be closed]
 	o molden-5.5
-	o moneyguru-2.10.0
 	o monit-5.17
 	o mono-4.4.0.122
 	o mono-tools-4.2
