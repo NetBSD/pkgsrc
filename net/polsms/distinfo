@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.13 2009/02/16 19:06:00 joerg Exp $
-
-SHA1 (sms-2.0.3.tar.gz) = 7f8bc2591306524e70d205ba47f4cddb18f213c4
-RMD160 (sms-2.0.3.tar.gz) = 20adede9e00fe844141e1dfb6c2e462433c46626
-Size (sms-2.0.3.tar.gz) = 48450 bytes
-SHA1 (patch-aa) = 3742c7ef2bcddab9ab56999973be223541cbae16
