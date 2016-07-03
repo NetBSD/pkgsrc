@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.38 2016/06/12 22:13:57 szptvlfn Exp $
+$NetBSD: distinfo,v 1.39 2016/07/03 22:00:16 szptvlfn Exp $
 
-SHA1 (feh-2.16.tar.bz2) = 9fa1f890d01be21e6a4c5957e6d3f32e0c7ea3b1
-RMD160 (feh-2.16.tar.bz2) = 74f3e84735822bf35355f66c095f604dd527577a
-SHA512 (feh-2.16.tar.bz2) = f429b54d91d0c955c1105ee8e1f4e3030a4afd7e0b06311e33c76e662859d55028e6e2a6785ca6676efd12d927a6eb8fdc77d5885bdf721453d4ac112e278d70
-Size (feh-2.16.tar.bz2) = 2125570 bytes
+SHA1 (feh-2.16.1.tar.bz2) = c8a3f44b3ebd0d62e4d38238c8cc2097d818a310
+RMD160 (feh-2.16.1.tar.bz2) = 94eaa31b5a84df2416c4bb8d8af8c6fcace6089a
+SHA512 (feh-2.16.1.tar.bz2) = e3163af487d2bfb32e0faa8f6b10fc26a3590aed77014f04967cccc66d6a201dd8960b4ae7fd88aaeeda280ee7e6040be6321337fbe4f8f78119440d89d4b0fe
+Size (feh-2.16.1.tar.bz2) = 2125781 bytes
 SHA1 (patch-config.mk) = af7990e42c4c0a351c0d40eeb8221cd619ef72fb
 SHA1 (patch-src_imlib_c) = 925d2536b69f99acc949cb6bd67422d001335492
