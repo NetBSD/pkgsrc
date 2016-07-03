@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2016/07/03 19:16:03 dholland Exp $
+# $NetBSD: Makefile,v 1.30 2016/07/03 19:18:46 dholland Exp $
 #
 
 DISTNAME=	boot.${BOX}-unix
@@ -118,13 +118,21 @@ SUBST_MESSAGE.cflags=	Setting CFLAGS
 SUBST_FILES.cflags=	src/runtime/objs/* base/runtime/objs/*
 SUBST_VARS.cflags=	CFLAGS
 
+# use the proper shell
+SUBST_CLASSES+=		shell
+SUBST_STAGE.shell=	pre-configure
+SUBST_MESSAGE.shell=	Choosing the right shell
+SUBST_FILES.shell=	config/install.sh
+SUBST_VARS.shell=	CONFIG_SHELL
+
 # nothing here any more
 do-configure:
 	${DO_NADA}
 
 # The build target needs to run $WRKDIR/config/install.sh
 do-build:
-	cd ${WRKDIR} && unset PWD && ${SETENV} ${BUILD_ENV} ./config/install.sh
+	cd ${WRKDIR} && unset PWD && ${SETENV} ${BUILD_ENV} \
+		${CONFIG_SHELL} ./config/install.sh
 
 # install target
 # (see ftp://ftp.research.bell-labs.com/dist/smlnj/working/110.38/INSTALL)
