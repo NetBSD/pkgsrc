@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2016/06/29 08:23:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2016/07/03 13:46:06 wiz Exp $
 lib/pkgconfig/libcrypto.pc
 lib/pkgconfig/libssl.pc
 lib/pkgconfig/libtls.pc
@@ -26,7 +26,6 @@ libressl/include/openssl/dh.h
 libressl/include/openssl/dsa.h
 libressl/include/openssl/dso.h
 libressl/include/openssl/dtls1.h
-libressl/include/openssl/e_os2.h
 libressl/include/openssl/ec.h
 libressl/include/openssl/ecdh.h
 libressl/include/openssl/ecdsa.h
@@ -348,6 +347,7 @@ libressl/man/man3/BUF_MEM_new.3
 libressl/man/man3/BUF_strdup.3
 libressl/man/man3/CMS_add0_cert.3
 libressl/man/man3/CMS_add1_recipient_cert.3
+libressl/man/man3/CMS_add1_signer.3
 libressl/man/man3/CMS_compress.3
 libressl/man/man3/CMS_decrypt.3
 libressl/man/man3/CMS_encrypt.3
@@ -357,7 +357,6 @@ libressl/man/man3/CMS_get0_SignerInfos.3
 libressl/man/man3/CMS_get0_type.3
 libressl/man/man3/CMS_get1_ReceiptRequest.3
 libressl/man/man3/CMS_sign.3
-libressl/man/man3/CMS_sign_add1_signer.3
 libressl/man/man3/CMS_sign_receipt.3
 libressl/man/man3/CMS_uncompress.3
 libressl/man/man3/CMS_verify.3
@@ -373,6 +372,8 @@ libressl/man/man3/CRYPTO_THREADID_current.3
 libressl/man/man3/CRYPTO_THREADID_get_callback.3
 libressl/man/man3/CRYPTO_THREADID_hash.3
 libressl/man/man3/CRYPTO_THREADID_set_callback.3
+libressl/man/man3/CRYPTO_THREADID_set_numeric.3
+libressl/man/man3/CRYPTO_THREADID_set_pointer.3
 libressl/man/man3/CRYPTO_add.3
 libressl/man/man3/CRYPTO_add_lock.3
 libressl/man/man3/CRYPTO_destroy_dynlockid.3
@@ -390,6 +391,7 @@ libressl/man/man3/CRYPTO_set_id_callback.3
 libressl/man/man3/CRYPTO_set_locking_callback.3
 libressl/man/man3/CRYPTO_w_lock.3
 libressl/man/man3/CRYPTO_w_unlock.3
+libressl/man/man3/DECLARE_LHASH_OF.3
 libressl/man/man3/DES_cbc_cksum.3
 libressl/man/man3/DES_cfb64_encrypt.3
 libressl/man/man3/DES_cfb_encrypt.3
@@ -634,6 +636,14 @@ libressl/man/man3/ERR_reason_error_string.3
 libressl/man/man3/ERR_remove_state.3
 libressl/man/man3/ERR_remove_thread_state.3
 libressl/man/man3/ERR_set_mark.3
+libressl/man/man3/EVP_AEAD_CTX_cleanup.3
+libressl/man/man3/EVP_AEAD_CTX_init.3
+libressl/man/man3/EVP_AEAD_CTX_open.3
+libressl/man/man3/EVP_AEAD_CTX_seal.3
+libressl/man/man3/EVP_AEAD_key_length.3
+libressl/man/man3/EVP_AEAD_max_overhead.3
+libressl/man/man3/EVP_AEAD_max_tag_len.3
+libressl/man/man3/EVP_AEAD_nonce_length.3
 libressl/man/man3/EVP_BytesToKey.3
 libressl/man/man3/EVP_CIPHER_CTX_block_size.3
 libressl/man/man3/EVP_CIPHER_CTX_cipher.3
@@ -703,7 +713,6 @@ libressl/man/man3/EVP_MD_type.3
 libressl/man/man3/EVP_OpenFinal.3
 libressl/man/man3/EVP_OpenInit.3
 libressl/man/man3/EVP_OpenUpdate.3
-libressl/man/man3/EVP_PKEVP_PKEY_CTX_set_app_data.3
 libressl/man/man3/EVP_PKEY_CTX_ctrl.3
 libressl/man/man3/EVP_PKEY_CTX_ctrl_str.3
 libressl/man/man3/EVP_PKEY_CTX_dup.3
@@ -731,7 +740,6 @@ libressl/man/man3/EVP_PKEY_assign_RSA.3
 libressl/man/man3/EVP_PKEY_cmp.3
 libressl/man/man3/EVP_PKEY_cmp_parameters.3
 libressl/man/man3/EVP_PKEY_copy_parameters.3
-libressl/man/man3/EVP_PKEY_ctrl_str.3
 libressl/man/man3/EVP_PKEY_decrypt.3
 libressl/man/man3/EVP_PKEY_decrypt_init.3
 libressl/man/man3/EVP_PKEY_derive.3
@@ -776,6 +784,10 @@ libressl/man/man3/EVP_SignUpdate.3
 libressl/man/man3/EVP_VerifyFinal.3
 libressl/man/man3/EVP_VerifyInit.3
 libressl/man/man3/EVP_VerifyUpdate.3
+libressl/man/man3/EVP_aead_aes_128_gcm.3
+libressl/man/man3/EVP_aead_aes_256_gcm.3
+libressl/man/man3/EVP_aead_chacha20_poly1305.3
+libressl/man/man3/EVP_aead_chacha20_poly1305_ietf.3
 libressl/man/man3/EVP_aes_128_ccm.3
 libressl/man/man3/EVP_aes_128_gcm.3
 libressl/man/man3/EVP_aes_192_ccm.3
@@ -833,7 +845,6 @@ libressl/man/man3/EVP_rc5_32_12_16_cfb.3
 libressl/man/man3/EVP_rc5_32_12_16_ecb.3
 libressl/man/man3/EVP_rc5_32_12_16_ofb.3
 libressl/man/man3/EVP_ripemd160.3
-libressl/man/man3/EVP_sha.3
 libressl/man/man3/EVP_sha1.3
 libressl/man/man3/EVP_sha224.3
 libressl/man/man3/EVP_sha256.3
@@ -844,6 +855,10 @@ libressl/man/man3/HMAC_Final.3
 libressl/man/man3/HMAC_Init.3
 libressl/man/man3/HMAC_Update.3
 libressl/man/man3/HMAC_cleanup.3
+libressl/man/man3/LHASH_COMP_FN_TYPE.3
+libressl/man/man3/LHASH_DOALL_ARG_FN_TYPE.3
+libressl/man/man3/LHASH_DOALL_FN_TYPE.3
+libressl/man/man3/LHASH_HASH_FN_TYPE.3
 libressl/man/man3/MD2.3
 libressl/man/man3/MD2_Final.3
 libressl/man/man3/MD2_Init.3
@@ -975,7 +990,6 @@ libressl/man/man3/RIPEMD160.3
 libressl/man/man3/RIPEMD160_Final.3
 libressl/man/man3/RIPEMD160_Init.3
 libressl/man/man3/RIPEMD160_Update.3
-libressl/man/man3/RSA_PKCS1_RSAref.3
 libressl/man/man3/RSA_PKCS1_SSLeay.3
 libressl/man/man3/RSA_blinding_off.3
 libressl/man/man3/RSA_blinding_on.3
@@ -1076,7 +1090,6 @@ libressl/man/man3/SSL_CTX_sess_number.3
 libressl/man/man3/SSL_CTX_sess_set_cache_size.3
 libressl/man/man3/SSL_CTX_sess_set_get_cb.3
 libressl/man/man3/SSL_CTX_sess_set_new_cb.3
-libressl/man/man3/SSL_CTX_sess_set_remove.3
 libressl/man/man3/SSL_CTX_sess_set_remove_cb.3
 libressl/man/man3/SSL_CTX_sess_timeouts.3
 libressl/man/man3/SSL_CTX_sessions.3
@@ -1147,7 +1160,6 @@ libressl/man/man3/SSL_free.3
 libressl/man/man3/SSL_get0_session.3
 libressl/man/man3/SSL_get1_session.3
 libressl/man/man3/SSL_get_SSL_CTX.3
-libressl/man/man3/SSL_get_accept_state.3
 libressl/man/man3/SSL_get_cipher.3
 libressl/man/man3/SSL_get_cipher_bits.3
 libressl/man/man3/SSL_get_cipher_list.3
@@ -1165,7 +1177,6 @@ libressl/man/man3/SSL_get_fd.3
 libressl/man/man3/SSL_get_info_callback.3
 libressl/man/man3/SSL_get_max_cert_list.3
 libressl/man/man3/SSL_get_mode.3
-libressl/man/man3/SSL_get_msg_callback_arg.3
 libressl/man/man3/SSL_get_options.3
 libressl/man/man3/SSL_get_peer_cert_chain.3
 libressl/man/man3/SSL_get_peer_certificate.3
@@ -1357,7 +1368,6 @@ libressl/man/man3/bn_dump.3
 libressl/man/man3/bn_expand.3
 libressl/man/man3/bn_expand2.3
 libressl/man/man3/bn_fix_top.3
-libressl/man/man3/bn_internal.3
 libressl/man/man3/bn_mul_add_words.3
 libressl/man/man3/bn_mul_comba4.3
 libressl/man/man3/bn_mul_comba8.3
@@ -1403,7 +1413,6 @@ libressl/man/man3/d2i_ECPKParameters.3
 libressl/man/man3/d2i_ECPKParameters_bio.3
 libressl/man/man3/d2i_ECPKParameters_fp.3
 libressl/man/man3/d2i_Netscape_RSA.3
-libressl/man/man3/d2i_PKCS8PrivateKey.3
 libressl/man/man3/d2i_PKCS8PrivateKey_bio.3
 libressl/man/man3/d2i_PKCS8PrivateKey_fp.3
 libressl/man/man3/d2i_RSAPrivateKey.3
@@ -1429,7 +1438,6 @@ libressl/man/man3/des_read_pw_string.3
 libressl/man/man3/dh.3
 libressl/man/man3/dsa.3
 libressl/man/man3/ec.3
-libressl/man/man3/ecdsa.3
 libressl/man/man3/engine.3
 libressl/man/man3/evp.3
 libressl/man/man3/get_session_cb.3
@@ -1481,7 +1489,6 @@ libressl/man/man3/lh_node_usage_stats_bio.3
 libressl/man/man3/lh_retrieve.3
 libressl/man/man3/lh_stats.3
 libressl/man/man3/lh_stats_bio.3
-libressl/man/man3/lhash.3
 libressl/man/man3/mul.3
 libressl/man/man3/mul_add.3
 libressl/man/man3/new_session_cb.3
@@ -1498,8 +1505,11 @@ libressl/man/man3/tls_config_clear_keys.3
 libressl/man/man3/tls_config_free.3
 libressl/man/man3/tls_config_insecure_noverifycert.3
 libressl/man/man3/tls_config_insecure_noverifyname.3
+libressl/man/man3/tls_config_insecure_noverifytime.3
 libressl/man/man3/tls_config_new.3
 libressl/man/man3/tls_config_parse_protocols.3
+libressl/man/man3/tls_config_prefer_ciphers_client.3
+libressl/man/man3/tls_config_prefer_ciphers_server.3
 libressl/man/man3/tls_config_set_ca_file.3
 libressl/man/man3/tls_config_set_ca_mem.3
 libressl/man/man3/tls_config_set_ca_path.3
@@ -1513,24 +1523,34 @@ libressl/man/man3/tls_config_set_key_mem.3
 libressl/man/man3/tls_config_set_protocols.3
 libressl/man/man3/tls_config_set_verify_depth.3
 libressl/man/man3/tls_config_verify.3
+libressl/man/man3/tls_config_verify_client.3
+libressl/man/man3/tls_config_verify_client_optional.3
 libressl/man/man3/tls_configure.3
+libressl/man/man3/tls_conn_cipher.3
+libressl/man/man3/tls_conn_version.3
 libressl/man/man3/tls_connect.3
 libressl/man/man3/tls_connect_fds.3
 libressl/man/man3/tls_connect_servername.3
 libressl/man/man3/tls_connect_socket.3
 libressl/man/man3/tls_error.3
 libressl/man/man3/tls_free.3
+libressl/man/man3/tls_handshake.3
 libressl/man/man3/tls_init.3
 libressl/man/man3/tls_load_file.3
+libressl/man/man3/tls_peer_cert_contains_name.3
+libressl/man/man3/tls_peer_cert_hash.3
+libressl/man/man3/tls_peer_cert_issuer.3
+libressl/man/man3/tls_peer_cert_notafter.3
+libressl/man/man3/tls_peer_cert_notbefore.3
+libressl/man/man3/tls_peer_cert_provided.3
+libressl/man/man3/tls_peer_cert_subject.3
 libressl/man/man3/tls_read.3
 libressl/man/man3/tls_reset.3
 libressl/man/man3/tls_server.3
 libressl/man/man3/tls_write.3
 libressl/man/man3/tmp_rsa_callback.3
-libressl/man/man3/ui.3
-libressl/man/man3/ui_compat.3
 libressl/man/man3/verify_callback.3
 libressl/man/man3/x509.3
-share/examples/libressl/cert.pem
-share/examples/libressl/openssl.cnf
-share/examples/libressl/x509v3.cnf
+libressl/share/examples/libressl/cert.pem
+libressl/share/examples/libressl/openssl.cnf
+libressl/share/examples/libressl/x509v3.cnf
