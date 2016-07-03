@@ -1,4 +1,4 @@
-$NetBSD: README.MirBSD,v 1.1 2011/01/23 19:07:24 agc Exp $
+$NetBSD: README.MirBSD,v 1.2 2016/07/03 14:47:05 sevan Exp $
 
 Please read the general README file as well.
 
@@ -41,3 +41,6 @@ also have to adjust the mk.conf used by bmake.
 The standard compiler is mgcc; if you have more than one native compiler
 installed (assuming all are GCC variants), export CC=gcc-1.2.3 before
 using pkgsrc and possibly adjust /usr/pkg/etc/mk.conf accordingly.
+
+The pkgsrc on MirOS page contains more details
+https://www.mirbsd.org/pkgsrc.htm
