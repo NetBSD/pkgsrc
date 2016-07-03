@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2016/07/03 19:18:47 dholland Exp $
+$NetBSD: distinfo,v 1.7 2016/07/03 19:26:35 dholland Exp $
 
 SHA1 (smlnj-110.72/MLRISC.tgz) = 9bb9eb169337533304c2e0e4eb9af263d38c398a
 RMD160 (smlnj-110.72/MLRISC.tgz) = 484512df036421e216d4afed01beb978d33e16bb
@@ -61,11 +61,9 @@ SHA1 (smlnj-110.72/trace-debug-profile.tgz) = e80d8076d961a36e067b559c0227956285
 RMD160 (smlnj-110.72/trace-debug-profile.tgz) = 6c85734aefd0672a645497550dacf56f503dd726
 Size (smlnj-110.72/trace-debug-profile.tgz) = 3905 bytes
 SHA1 (patch-aa) = f738a6284236158b6b95928768fe1213cc77fc20
-SHA1 (patch-ab) = 2c9a448c8566d87a2d01528cf6e38ed0dfd9328b
 SHA1 (patch-ad) = 67802bbdf42408c60bbce4087f20d000a3445677
 SHA1 (patch-ae) = 0ba98fb2b012daf75dcc4ac416cbf0fd3182114b
 SHA1 (patch-af) = 3a1c1cadd26eb246adafff823d49b4ab7161793b
-SHA1 (patch-ag) = 1dd473bf9b21cd6218945c119fb08230dcd3c4bf
 SHA1 (patch-ah) = 93d7453dc82d91d29662cc02dd8ab9e8b8987393
 SHA1 (patch-ai) = 6a15a5415bd73e6618bc45b9a7eb021543e9cecd
 SHA1 (patch-aj) = 6318548da4c943c60fe63d41529803ea3fa2c96e
