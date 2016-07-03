@@ -1,8 +1,11 @@
-$NetBSD: patch-ao,v 1.1 2016/07/03 17:50:31 dholland Exp $
+$NetBSD: patch-ao,v 1.2 2016/07/03 19:35:36 dholland Exp $
 
---- src/runtime/kernel/boot.c.orig
+- use fgetc correctly
+- fix uninitialized variable detected by gcc5
+
+--- src/runtime/kernel/boot.c.orig	2005-11-02 22:24:39.000000000 +0000
 +++ src/runtime/kernel/boot.c
-@@ -124,7 +124,7 @@
+@@ -130,7 +130,7 @@ PVT ml_val_t BuildFileList (ml_state_t *
      ml_val_t	fileList;
  # define SIZE_BUF_LEN	128	/* this should be plenty for two numbers */
      char        sizeBuf[SIZE_BUF_LEN];
@@ -11,3 +14,13 @@ $NetBSD: patch-ao,v 1.1 2016/07/03 17:50:31 dholland Exp $
  
      numFiles = 0;
  
+@@ -175,6 +175,9 @@ PVT ml_val_t BuildFileList (ml_state_t *
+ 	}
+ 	fclose (listF);
+     }
++    else {
++	*mbplp = 0;
++    }
+ 
+   /* create the in-heap list */
+     for (fileList = LIST_nil, i = numFiles;  --i >= 0; ) {
