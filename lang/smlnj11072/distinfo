@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2016/07/03 19:11:15 dholland Exp $
+$NetBSD: distinfo,v 1.6 2016/07/03 19:18:47 dholland Exp $
 
 SHA1 (smlnj-110.72/MLRISC.tgz) = 9bb9eb169337533304c2e0e4eb9af263d38c398a
 RMD160 (smlnj-110.72/MLRISC.tgz) = 484512df036421e216d4afed01beb978d33e16bb
@@ -76,7 +76,7 @@ SHA1 (patch-ao) = 1c66024c5949269291cbf6f815baf6162db47d31
 SHA1 (patch-ap) = af8b50c0f21e969e036064f5c808eaccc79d5c4b
 SHA1 (patch-aq) = 32d96ad2552d5ac914581686904e94a96e5ca059
 SHA1 (patch-ar) = 727afe6de54eb244c48e99c661f6b8ae3f780de0
-SHA1 (patch-at) = 376b67d25ef428377b1686fcd6232628867d6eae
+SHA1 (patch-at) = cd7d23adaf8882e9b431d6581283fdb58044e05c
 SHA1 (patch-config___arch-n-opsys) = 7035758667350aa9558a14e28245d022e43369ea
 SHA1 (patch-src_runtime_gc_gc-stats.h) = af61db9d1f04e566d4c5c2bc5dcf4c6958f0ea78
 SHA1 (patch-src_runtime_gc_init-gc.c) = 5d1d5a13a51d732590dd4f375824bbc389a0525d
