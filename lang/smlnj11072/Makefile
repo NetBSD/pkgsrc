@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2016/07/03 19:26:35 dholland Exp $
+# $NetBSD: Makefile,v 1.9 2016/07/03 19:35:36 dholland Exp $
 #
 
 DISTNAME=	boot.${BOX}-unix
@@ -49,6 +49,9 @@ BUILD_ENV+=	SMLNJ_HOME="${WRKDIR}"
 
 # the build uses patch directly (yuk)
 BUILD_ENV+=	PATCH=${PATCH:Q} PATCH_ARGS=${PATCH_ARGS:Q}
+
+# useful for debugging
+#CFLAGS+=	-Wall
 
 # note that this includes bsd.prefs.mk
 .include "../../lang/smlnj/Makefile.common"
