@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2016/03/03 13:01:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.30 2016/07/03 11:23:09 wiz Exp $
 bin/easy_install-${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_FILE}/PKG-INFO
 ${PYSITELIB}/${EGG_FILE}/SOURCES.txt
@@ -142,9 +142,9 @@ ${PYSITELIB}/setuptools/launch.pyo
 ${PYSITELIB}/setuptools/lib2to3_ex.py
 ${PYSITELIB}/setuptools/lib2to3_ex.pyc
 ${PYSITELIB}/setuptools/lib2to3_ex.pyo
-${PYSITELIB}/setuptools/msvc9_support.py
-${PYSITELIB}/setuptools/msvc9_support.pyc
-${PYSITELIB}/setuptools/msvc9_support.pyo
+${PYSITELIB}/setuptools/msvc.py
+${PYSITELIB}/setuptools/msvc.pyc
+${PYSITELIB}/setuptools/msvc.pyo
 ${PYSITELIB}/setuptools/package_index.py
 ${PYSITELIB}/setuptools/package_index.pyc
 ${PYSITELIB}/setuptools/package_index.pyo
