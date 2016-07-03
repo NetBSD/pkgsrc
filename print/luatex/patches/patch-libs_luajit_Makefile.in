@@ -1,0 +1,16 @@
+$NetBSD: patch-libs_luajit_Makefile.in,v 1.1 2016/07/03 11:19:51 markd Exp $
+
+Ensure that the luajit generated asm file is PIC for libtool use, particularly
+important when linking under SunOS... appending @PLT seems to workaround the
+issue with generated PC relative calls.
+
+--- libs/luajit/Makefile.in.orig	2016-03-21 20:23:37.000000000 +0000
++++ libs/luajit/Makefile.in
+@@ -1827,6 +1827,7 @@ lj_folddef.h: native/buildvm-stamp
+ 
+ lj_vm_obj.o lj_vm_asm.S: native/buildvm-stamp
+ 	$(AM_V_GEN)native/buildvm -m $(LJVM_MODE) -o $@
++	test lj_vm_asm.S && $(SED) -i.orig 's/\(call lj_.*\)$$/\1@PLT/' lj_vm_asm.S
+ 
+ lj_vm_obj.lo: lj_vm_obj.o lib_base.lo
+ 	$(AM_V_GEN)sed 's/lib_base/lj_vm_obj/' lib_base.lo >$@ \
