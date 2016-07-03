@@ -1,0 +1,15 @@
+$NetBSD: patch-src_runtime_objs_mk.ppc-darwin5,v 1.1 2016/07/03 19:29:28 dholland Exp $
+
+Honor pkgsrc CFLAGS.
+
+--- src/runtime/objs/mk.ppc-darwin5~	2002-10-10 17:08:59.000000000 +0000
++++ src/runtime/objs/mk.ppc-darwin5
+@@ -9,7 +9,7 @@ SHELL =		/bin/sh
+ 
+ MAKE =		make
+ CC =		cc -ansi
+-CFLAGS =	-g -O2
++CFLAGS =	@CFLAGS@
+ CPP =           cc -x assembler-with-cpp -E -P -ansi
+ XOBJS =
+ XLIBS =	
