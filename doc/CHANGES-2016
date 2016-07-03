@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2655 2016/07/02 21:03:18 jperkin Exp $
+$NetBSD: CHANGES-2016,v 1.2656 2016/07/03 10:56:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3874,3 +3874,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/python35 to 3.5.2 [adam 2016-07-02]
 	Updated mail/dovecot2 to 2.2.25 [adam 2016-07-02]
 	Updated databases/openldap-server to 2.4.44nb3 [jperkin 2016-07-02]
+	Updated devel/afl to 2.18b [wiz 2016-07-03]
