@@ -1,4 +1,6 @@
-$NetBSD: patch-ae,v 1.1 2016/07/03 17:50:31 dholland Exp $
+$NetBSD: patch-ae,v 1.2 2016/07/03 18:33:36 dholland Exp $
+
+Support for NetBSD.
 
 --- src/runtime/mach-dep/SPARC.prim.asm.orig	Fri Jun 15 15:05:19 2001
 +++ src/runtime/mach-dep/SPARC.prim.asm
