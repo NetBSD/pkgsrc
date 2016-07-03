@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.86 2016/06/11 14:58:26 rillig Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.87 2016/07/03 13:14:16 sevan Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -70,8 +70,6 @@
     <sect2 id="cygwin">
       <title>Cygwin</title>
 
-      <para>Cygwin 1.7.x and later are supported.</para>
-
       <para>You need to install minimal base packages in `Base' category
       plus any of compiler, gcc, gcc4, and/or clang.
       For gcc and gcc4, C and C++ compiler will be installed by default,
@@ -95,8 +93,6 @@
 
     <sect2 id="darwin">
       <title>Darwin (Mac OS X)</title>
-      <!-- Mention which MacOS X versions this corresponds to! -->
-      <para>Darwin 8.x and up are supported.</para>
 
       <para>Before you start, you need to download and install
       the Mac OS X Developer Tools from Apple's Developer Connection.
@@ -111,9 +107,6 @@
 
     <sect2 id="freebsd">
       <title>FreeBSD</title>
-
-      <para>FreeBSD 8.3 and 9.0 have been tested and are supported,
-      other versions may work.</para>
 
       <para>Care should be taken so that the tools that this kit installs do not conflict
       with the FreeBSD userland tools. There are several steps:</para>
@@ -151,8 +144,7 @@
     <sect2 id="gnukfreebsd">
       <title>GNU/kFreeBSD</title>
 
-      <para>Debian GNU/kFreeBSD is the only GNU/kFreeBSD distribution now.
-      Debian GNU/kFreeBSD 7.0 or later is tested and supported.</para>
+      <para>Debian GNU/kFreeBSD is the only GNU/kFreeBSD distribution now.</para>
 
       <para> You should install ncurses (libncurses and libncurses-dev)
       packages.</para>
@@ -471,10 +463,6 @@ ICCBASE=                /opt/intel/cc/10.1.008
     <sect2 id="mirbsd">
       <title>MirBSD</title>
 
-      <para>pkgsrc has been tested on MirBSD #10-current (2011 and newer).
-      Older versions might also work. Releases before #10 are not
-      supported.</para>
-
       <para>The package tools of the (older) native ports tree,
       <ulink url="//www.mirbsd.org/ports.htm">MirPorts</ulink>,
       have the same names as the ones used by pkgsrc. Care should be taken
@@ -498,9 +486,6 @@ ICCBASE=                /opt/intel/cc/10.1.008
 
     <sect2 id="openbsd">
       <title>OpenBSD</title>
-
-      <para>OpenBSD 5.1 has been tested and supported,
-      other versions may work.</para>
 
       <para>Care should be taken so that the tools that this kit installs do not conflict
       with the OpenBSD userland tools. There are several steps:</para>
