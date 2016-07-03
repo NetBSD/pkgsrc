@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2670 2016/07/03 12:46:23 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.2671 2016/07/03 13:21:49 morr Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3889,3 +3889,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/py-html2text to 2016.5.29 [wiz 2016-07-03]
 	Updated math/pari to 2.7.6 [wiz 2016-07-03]
 	Removed net/polsms [kamil 2016-07-03]
+	Updated editors/vim-share to 7.4.1987 [morr 2016-07-03]
