@@ -1,0 +1,15 @@
+$NetBSD: patch-src_runtime_objs_mk.x86-linux-pthreads,v 1.1 2016/07/03 19:29:28 dholland Exp $
+
+Honor pkgsrc CFLAGS.
+
+--- src/runtime/objs/mk.x86-linux-pthreads~	2004-01-31 14:24:42.000000000 +0000
++++ src/runtime/objs/mk.x86-linux-pthreads
+@@ -5,7 +5,7 @@ SHELL =		/bin/sh
+ 
+ MAKE =		make
+ CC =		gcc -ansi
+-CFLAGS =	-O2 -D_REENTRANT
++CFLAGS =	@CFLAGS@ -D_REENTRANT
+ CPP =		gcc -x assembler-with-cpp -E -P
+ #XOBJS =	xmonitor.o
+ #LD_LIBS =	-lX11
