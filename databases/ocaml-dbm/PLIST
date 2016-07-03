@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2013/07/06 11:18:39 jaapb Exp $
-lib/ocaml/dbm.a
-lib/ocaml/dbm.cma
-lib/ocaml/dbm.cmi
-lib/ocaml/dbm.cmxa
-lib/ocaml/dbm.cmxs
-lib/ocaml/dbm.mli
-lib/ocaml/libcamldbm.a
-lib/ocaml/site-lib/dbm/META
-lib/ocaml/stublibs/dllcamldbm.so
+@comment $NetBSD: PLIST,v 1.3 2016/07/03 10:44:49 jaapb Exp $
+${PLIST.ocaml-opt}${OCAML_SITELIB}/dbm/dbm.a
+${OCAML_SITELIB}/dbm/dbm.cma
+${OCAML_SITELIB}/dbm/dbm.cmi
+${PLIST.ocaml-opt}${OCAML_SITELIB}/dbm/dbm.cmx
+${PLIST.ocaml-opt}${OCAML_SITELIB}/dbm/dbm.cmxa
+${PLIST.ocaml-opt}${OCAML_SITELIB}/dbm/dbm.cmxs
+${OCAML_SITELIB}/dbm/dbm.mli
+${OCAML_SITELIB}/dbm/libcamldbm.a
+${OCAML_SITELIB}/dbm/META
+${OCAML_SITELIB}/dbm/dllcamldbm.so
