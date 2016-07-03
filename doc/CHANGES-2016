@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2676 2016/07/03 19:39:00 dholland Exp $
+$NetBSD: CHANGES-2016,v 1.2677 2016/07/03 22:00:41 szptvlfn Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3895,3 +3895,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated textproc/jrep to 0.6.1 [cheusov 2016-07-03]
 	Added lang/smlnj11072 version 110.72 [dholland 2016-07-03]
 	Updated lang/smlnj to 110.73nb2 [dholland 2016-07-03]
+	Updated graphics/feh to 2.16.1 [szptvlfn 2016-07-03]
