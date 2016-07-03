@@ -1,0 +1,79 @@
+$NetBSD: patch-aa,v 1.1 2016/07/03 17:50:31 dholland Exp $
+
+--- config/targets.orig	2010-02-03 19:40:28.000000000 +0300
++++ config/targets	2010-02-07 05:56:52.000000000 +0300
+@@ -91,7 +91,7 @@
+ 
+ # build ML-Burg
+ #
+-#request ml-burg
++request ml-burg
+ 
+ # pre-compile and install the remaining components of the SML/NJ library
+ # (everything except smlnj-lib.cm, aka Util, itself)
+@@ -100,7 +100,7 @@
+ 
+ # pre-compile and install CM "portable graph" utility library
+ #
+-#request pgraph-util
++request pgraph-util
+ 
+ # pre-compile and install "Trace-Debug-Profile" utility library
+ # (provides simple back-trace- and coverage facilities)
+@@ -120,7 +120,7 @@
+ # pre-compile and install eXene, which is a library for X-Windows programming.
+ # EXene requires CML.
+ #
+-#request eXene
++request eXene
+ 
+ # pre-compile (certain) parts of MLRISC that are not already part of the SML/NJ
+ # compiler itself
+@@ -130,7 +130,7 @@
+ # pre-compile and install the C-Kit, which is a library for parsing and
+ # type-checking C programs
+ #
+-#request ckit
++request ckit
+ 
+ # pre-compile and install the ML-NLFFI Library, which is the core of
+ # a new foreign function interface (where "foreign" functions are
+@@ -140,7 +140,7 @@
+ # This preview release currently works under X86/Linux, Sparc/Solaris,
+ # PPC/MacOSX, and X86/Win32.
+ #
+-#request ml-nlffi-lib
++request ml-nlffi-lib
+ 
+ # build ML-NLFFI-Gen, a program generator tool used in conjunction with
+ # the new "NLFFI" foreign function interface.  The tool generates ML
+@@ -149,13 +149,13 @@
+ # This preview release currently works under X86/Linux, Sparc/Solaris,
+ # PPC/MacOSX, and X86/Win32.
+ #
+-#request ml-nlffigen
++request ml-nlffigen
+ 
+ # pre-compile and install the MLRISC Tools library.
+ # This library is for parsing and pretty printing SML code.
+ # It's used by various MLRISC code generator generator.
+ #
+-#request mlrisc-tools
++request mlrisc-tools
+ 
+ # Build and install the 'nowhere' program translator.
+ # This tool translates programs with conditional patterns (where clauses) 
+@@ -163,11 +163,11 @@
+ # (bad) documentation.
+ # (Requires the mlrisc-tools library!)
+ #
+-#request nowhere
++request nowhere
+ 
+ # Build and install 'heap2asm' - an experimental component of
+ # a new facility for producing true stand-alone executables.
+-#request heap2asm
++request heap2asm
+ 
+ # Note: autoloading is always enabled.
+ #   In order to customize what is being pre-registered for autoloading
