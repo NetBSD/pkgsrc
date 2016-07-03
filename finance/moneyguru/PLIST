@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2016/02/01 13:32:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2016/07/03 11:50:29 wiz Exp $
 bin/moneyguru
 share/applications/moneyguru.desktop
 share/moneyguru/ambuttonbar/AMButtonBar.h
@@ -38,6 +38,7 @@ share/moneyguru/build/help/.doctrees/developer/core/index.doctree
 share/moneyguru/build/help/.doctrees/developer/core/model/account.doctree
 share/moneyguru/build/help/.doctrees/developer/core/model/amount.doctree
 share/moneyguru/build/help/.doctrees/developer/core/model/budget.doctree
+share/moneyguru/build/help/.doctrees/developer/core/model/currency.doctree
 share/moneyguru/build/help/.doctrees/developer/core/model/date.doctree
 share/moneyguru/build/help/.doctrees/developer/core/model/entry.doctree
 share/moneyguru/build/help/.doctrees/developer/core/model/oven.doctree
@@ -48,7 +49,6 @@ share/moneyguru/build/help/.doctrees/developer/core/model/undo.doctree
 share/moneyguru/build/help/.doctrees/developer/core/plugin.doctree
 share/moneyguru/build/help/.doctrees/developer/devprocess.doctree
 share/moneyguru/build/help/.doctrees/developer/hscommon/build.doctree
-share/moneyguru/build/help/.doctrees/developer/hscommon/currency.doctree
 share/moneyguru/build/help/.doctrees/developer/hscommon/desktop.doctree
 share/moneyguru/build/help/.doctrees/developer/hscommon/gui/base.doctree
 share/moneyguru/build/help/.doctrees/developer/hscommon/gui/column.doctree
@@ -108,6 +108,7 @@ share/moneyguru/build/help/_sources/developer/core/index.txt
 share/moneyguru/build/help/_sources/developer/core/model/account.txt
 share/moneyguru/build/help/_sources/developer/core/model/amount.txt
 share/moneyguru/build/help/_sources/developer/core/model/budget.txt
+share/moneyguru/build/help/_sources/developer/core/model/currency.txt
 share/moneyguru/build/help/_sources/developer/core/model/date.txt
 share/moneyguru/build/help/_sources/developer/core/model/entry.txt
 share/moneyguru/build/help/_sources/developer/core/model/oven.txt
@@ -118,7 +119,6 @@ share/moneyguru/build/help/_sources/developer/core/model/undo.txt
 share/moneyguru/build/help/_sources/developer/core/plugin.txt
 share/moneyguru/build/help/_sources/developer/devprocess.txt
 share/moneyguru/build/help/_sources/developer/hscommon/build.txt
-share/moneyguru/build/help/_sources/developer/hscommon/currency.txt
 share/moneyguru/build/help/_sources/developer/hscommon/desktop.txt
 share/moneyguru/build/help/_sources/developer/hscommon/gui/base.txt
 share/moneyguru/build/help/_sources/developer/hscommon/gui/column.txt
@@ -181,6 +181,7 @@ share/moneyguru/build/help/developer/core/index.html
 share/moneyguru/build/help/developer/core/model/account.html
 share/moneyguru/build/help/developer/core/model/amount.html
 share/moneyguru/build/help/developer/core/model/budget.html
+share/moneyguru/build/help/developer/core/model/currency.html
 share/moneyguru/build/help/developer/core/model/date.html
 share/moneyguru/build/help/developer/core/model/entry.html
 share/moneyguru/build/help/developer/core/model/oven.html
@@ -191,7 +192,6 @@ share/moneyguru/build/help/developer/core/model/undo.html
 share/moneyguru/build/help/developer/core/plugin.html
 share/moneyguru/build/help/developer/devprocess.html
 share/moneyguru/build/help/developer/hscommon/build.html
-share/moneyguru/build/help/developer/hscommon/currency.html
 share/moneyguru/build/help/developer/hscommon/desktop.html
 share/moneyguru/build/help/developer/hscommon/gui/base.html
 share/moneyguru/build/help/developer/hscommon/gui/column.html
@@ -341,6 +341,10 @@ share/moneyguru/cocoa/controllers/networth/MGBalanceSheet.h
 share/moneyguru/cocoa/controllers/networth/MGBalanceSheet.m
 share/moneyguru/cocoa/controllers/networth/MGNetWorthView.h
 share/moneyguru/cocoa/controllers/networth/MGNetWorthView.m
+share/moneyguru/cocoa/controllers/pluginlist/MGPluginListTable.h
+share/moneyguru/cocoa/controllers/pluginlist/MGPluginListTable.m
+share/moneyguru/cocoa/controllers/pluginlist/MGPluginListView.h
+share/moneyguru/cocoa/controllers/pluginlist/MGPluginListView.m
 share/moneyguru/cocoa/controllers/profit/MGIncomeStatement.h
 share/moneyguru/cocoa/controllers/profit/MGIncomeStatement.m
 share/moneyguru/cocoa/controllers/profit/MGProfitView.h
@@ -548,6 +552,7 @@ share/moneyguru/core/__init__.py
 share/moneyguru/core/__init__.pyc
 share/moneyguru/core/app.py
 share/moneyguru/core/app.pyc
+share/moneyguru/core/args.py
 share/moneyguru/core/const.py
 share/moneyguru/core/const.pyc
 share/moneyguru/core/document.py
@@ -602,6 +607,8 @@ share/moneyguru/core/gui/net_worth_graph.py
 share/moneyguru/core/gui/networth_view.py
 share/moneyguru/core/gui/pie_chart.py
 share/moneyguru/core/gui/pie_chart.pyc
+share/moneyguru/core/gui/pluginlist_table.py
+share/moneyguru/core/gui/pluginlist_view.py
 share/moneyguru/core/gui/print_view.py
 share/moneyguru/core/gui/print_view.pyc
 share/moneyguru/core/gui/profit_graph.py
@@ -629,6 +636,7 @@ share/moneyguru/core/loader/native.py
 share/moneyguru/core/loader/native.pyc
 share/moneyguru/core/loader/ofx.py
 share/moneyguru/core/loader/qif.py
+share/moneyguru/core/loader/sgmllib.py
 share/moneyguru/core/model/__init__.py
 share/moneyguru/core/model/__init__.pyc
 share/moneyguru/core/model/_amount.so
@@ -742,12 +750,14 @@ share/moneyguru/core/tests/main_test.py
 share/moneyguru/core/tests/model/__init__.py
 share/moneyguru/core/tests/model/account_test.py
 share/moneyguru/core/tests/model/amount_test.py
+share/moneyguru/core/tests/model/currency_core_test.py
 share/moneyguru/core/tests/model/currency_test.py
 share/moneyguru/core/tests/model/date_test.py
 share/moneyguru/core/tests/plugin_test.py
 share/moneyguru/core/tests/pref_test.py
 share/moneyguru/core/tests/reconciliation_test.py
 share/moneyguru/core/tests/recurrence_test.py
+share/moneyguru/core/tests/show_account_test.py
 share/moneyguru/core/tests/split_test.py
 share/moneyguru/core/tests/testdata/csv/ambiguous_date.csv
 share/moneyguru/core/tests/testdata/csv/amount_with_dollar_sign.csv
@@ -774,6 +784,7 @@ share/moneyguru/core/tests/testdata/moneyguru/no_balance_account.moneyguru
 share/moneyguru/core/tests/testdata/moneyguru/off_currency_reconciliations.moneyguru
 share/moneyguru/core/tests/testdata/moneyguru/payee_description.moneyguru
 share/moneyguru/core/tests/testdata/moneyguru/simple.moneyguru
+share/moneyguru/core/tests/testdata/moneyguru/unsupported_currency.moneyguru
 share/moneyguru/core/tests/testdata/moneyguru/with_references1.moneyguru
 share/moneyguru/core/tests/testdata/moneyguru/with_references2.moneyguru
 share/moneyguru/core/tests/testdata/moneyguru/with_references3.moneyguru
@@ -872,6 +883,7 @@ share/moneyguru/help/en/developer/core/index.rst
 share/moneyguru/help/en/developer/core/model/account.rst
 share/moneyguru/help/en/developer/core/model/amount.rst
 share/moneyguru/help/en/developer/core/model/budget.rst
+share/moneyguru/help/en/developer/core/model/currency.rst
 share/moneyguru/help/en/developer/core/model/date.rst
 share/moneyguru/help/en/developer/core/model/entry.rst
 share/moneyguru/help/en/developer/core/model/oven.rst
@@ -882,7 +894,6 @@ share/moneyguru/help/en/developer/core/model/undo.rst
 share/moneyguru/help/en/developer/core/plugin.rst
 share/moneyguru/help/en/developer/devprocess.rst
 share/moneyguru/help/en/developer/hscommon/build.rst
-share/moneyguru/help/en/developer/hscommon/currency.rst
 share/moneyguru/help/en/developer/hscommon/desktop.rst
 share/moneyguru/help/en/developer/hscommon/gui/base.rst
 share/moneyguru/help/en/developer/hscommon/gui/column.rst
@@ -989,8 +1000,6 @@ share/moneyguru/hscommon/__init__.pyc
 share/moneyguru/hscommon/build.py
 share/moneyguru/hscommon/build.pyc
 share/moneyguru/hscommon/conflict.py
-share/moneyguru/hscommon/currency.py
-share/moneyguru/hscommon/currency.pyc
 share/moneyguru/hscommon/debug.py
 share/moneyguru/hscommon/desktop.py
 share/moneyguru/hscommon/desktop.pyc
@@ -1030,7 +1039,6 @@ share/moneyguru/hscommon/sphinxgen.pyc
 share/moneyguru/hscommon/sqlite.py
 share/moneyguru/hscommon/tests/__init__.py
 share/moneyguru/hscommon/tests/conflict_test.py
-share/moneyguru/hscommon/tests/currency_test.py
 share/moneyguru/hscommon/tests/notify_test.py
 share/moneyguru/hscommon/tests/path_test.py
 share/moneyguru/hscommon/tests/selectable_list_test.py
@@ -1043,6 +1051,14 @@ share/moneyguru/hscommon/trans.py
 share/moneyguru/hscommon/trans.pyc
 share/moneyguru/hscommon/util.py
 share/moneyguru/hscommon/util.pyc
+share/moneyguru/images/TabClose_Front.tif
+share/moneyguru/images/TabClose_Front_Pressed.tif
+share/moneyguru/images/TabClose_Front_Rollover.tif
+share/moneyguru/images/TabControlRep.tif
+share/moneyguru/images/TabIcon.tif
+share/moneyguru/images/TabNewMetal.png
+share/moneyguru/images/TabNewMetalPressed.png
+share/moneyguru/images/TabNewMetalRollover.png
 share/moneyguru/images/account_in_12.png
 share/moneyguru/images/account_in_16.png
 share/moneyguru/images/account_out_12.png
@@ -1075,6 +1091,9 @@ share/moneyguru/images/minus_8.png
 share/moneyguru/images/nav_down_6.png
 share/moneyguru/images/nav_left_9.png
 share/moneyguru/images/nav_right_9.png
+share/moneyguru/images/overflowImage.tiff
+share/moneyguru/images/overflowImagePressed.tif
+share/moneyguru/images/pi.png
 share/moneyguru/images/piechart_visibility_off_16.png
 share/moneyguru/images/piechart_visibility_on_16.png
 share/moneyguru/images/plus_8.png
@@ -1141,11 +1160,8 @@ share/moneyguru/locale/ru/LC_MESSAGES/ui.mo
 share/moneyguru/locale/ru/LC_MESSAGES/ui.po
 share/moneyguru/locale/ui.pot
 share/moneyguru/psmtabbarcontrol/.gitignore
-share/moneyguru/psmtabbarcontrol/Info.plist
 share/moneyguru/psmtabbarcontrol/NSBezierPath_AMShading.h
 share/moneyguru/psmtabbarcontrol/NSBezierPath_AMShading.m
-share/moneyguru/psmtabbarcontrol/PSMAquaTabStyle.h
-share/moneyguru/psmtabbarcontrol/PSMAquaTabStyle.m
 share/moneyguru/psmtabbarcontrol/PSMMetalTabStyle.h
 share/moneyguru/psmtabbarcontrol/PSMMetalTabStyle.m
 share/moneyguru/psmtabbarcontrol/PSMOverflowPopUpButton.h
@@ -1161,37 +1177,9 @@ share/moneyguru/psmtabbarcontrol/PSMTabBarControl.m
 share/moneyguru/psmtabbarcontrol/PSMTabDragAssistant.h
 share/moneyguru/psmtabbarcontrol/PSMTabDragAssistant.m
 share/moneyguru/psmtabbarcontrol/PSMTabStyle.h
-share/moneyguru/psmtabbarcontrol/PSMUnifiedTabStyle.h
-share/moneyguru/psmtabbarcontrol/PSMUnifiedTabStyle.m
-share/moneyguru/psmtabbarcontrol/ReadMe.rtfd/TXT.rtf
-share/moneyguru/psmtabbarcontrol/ReadMe.rtfd/startpage.gif
-share/moneyguru/psmtabbarcontrol/images/AquaTabClose_Front.tif
-share/moneyguru/psmtabbarcontrol/images/AquaTabClose_Front_Pressed.tif
-share/moneyguru/psmtabbarcontrol/images/AquaTabClose_Front_Rollover.tif
-share/moneyguru/psmtabbarcontrol/images/AquaTabNew.png
-share/moneyguru/psmtabbarcontrol/images/AquaTabNewPressed.png
-share/moneyguru/psmtabbarcontrol/images/AquaTabNewRollover.png
-share/moneyguru/psmtabbarcontrol/images/AquaTabsBackground.png
-share/moneyguru/psmtabbarcontrol/images/AquaTabsDown.png
-share/moneyguru/psmtabbarcontrol/images/AquaTabsDownGraphite.png
-share/moneyguru/psmtabbarcontrol/images/AquaTabsDownNonKey.png
-share/moneyguru/psmtabbarcontrol/images/AquaTabsSeparator.png
-share/moneyguru/psmtabbarcontrol/images/AquaTabsSeparatorDown.png
-share/moneyguru/psmtabbarcontrol/images/TabClose_Front.tif
-share/moneyguru/psmtabbarcontrol/images/TabClose_Front_Pressed.tif
-share/moneyguru/psmtabbarcontrol/images/TabClose_Front_Rollover.tif
-share/moneyguru/psmtabbarcontrol/images/TabControlRep.tif
-share/moneyguru/psmtabbarcontrol/images/TabIcon.tif
-share/moneyguru/psmtabbarcontrol/images/TabNewMetal.png
-share/moneyguru/psmtabbarcontrol/images/TabNewMetalPressed.png
-share/moneyguru/psmtabbarcontrol/images/TabNewMetalRollover.png
-share/moneyguru/psmtabbarcontrol/images/overflowImage.tiff
-share/moneyguru/psmtabbarcontrol/images/overflowImagePressed.tif
-share/moneyguru/psmtabbarcontrol/images/pi.png
-share/moneyguru/psmtabbarcontrol/waf
-share/moneyguru/psmtabbarcontrol/wscript
 share/moneyguru/qt/__init__.py
 share/moneyguru/qt/app.py
+share/moneyguru/qt/args.py
 share/moneyguru/qt/const.py
 share/moneyguru/qt/controller/__init__.py
 share/moneyguru/qt/controller/account/__init__.py
@@ -1202,6 +1190,7 @@ share/moneyguru/qt/controller/account_panel.py
 share/moneyguru/qt/controller/account_reassign_panel.py
 share/moneyguru/qt/controller/account_sheet.py
 share/moneyguru/qt/controller/account_sheet_view.py
+share/moneyguru/qt/controller/base_transaction_view.py
 share/moneyguru/qt/controller/base_view.py
 share/moneyguru/qt/controller/budget/__init__.py
 share/moneyguru/qt/controller/budget/table.py
@@ -1230,6 +1219,8 @@ share/moneyguru/qt/controller/networth/sheet.py
 share/moneyguru/qt/controller/networth/view.py
 share/moneyguru/qt/controller/new_view.py
 share/moneyguru/qt/controller/panel.py
+share/moneyguru/qt/controller/pluginlist_table.py
+share/moneyguru/qt/controller/pluginlist_view.py
 share/moneyguru/qt/controller/preferences_panel.py
 share/moneyguru/qt/controller/profit/__init__.py
 share/moneyguru/qt/controller/profit/sheet.py
