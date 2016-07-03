@@ -1,0 +1,15 @@
+$NetBSD: patch-as,v 1.1 2016/07/03 17:50:31 dholland Exp $
+
+NetBSD has POSIX signals since 2.0 at least.
+
+--- base/runtime/include/ml-unixdep.h.orig	2008-12-05 20:57:39.000000000 +0300
++++ base/runtime/include/ml-unixdep.h	2009-03-19 00:16:29.000000000 +0300
+@@ -323,7 +323,7 @@
+ #elif defined(OPSYS_NETBSD) /* version 3.x */
+ #  define OS_NAME	"BSD"
+ #  define HAS_POSIX_LIBRARIES
+-#  define HAS_BSD_SIGS
++#  define HAS_POSIX_SIGS
+ #  define HAS_GETRUSAGE
+ #  define HAS_SETITIMER
+ #  define HAS_MMAP

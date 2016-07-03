@@ -1,0 +1,12 @@
+$NetBSD: patch-aj,v 1.1 2016/07/03 17:50:31 dholland Exp $
+
+--- config/_ml-makedepend.orig	2004-12-14 23:23:38.000000000 +0000
++++ config/_ml-makedepend	2005-12-24 22:48:05.000000000 +0000
+@@ -1,5 +1,7 @@
+ #!@SHELL@
+ 
++SMLNJ_HOME="${SMLNJ_HOME:-@SML_BASE@}"
++
+ if [ x${SMLNJ_HOME} = x ] ; then
+     BIN_DIR="@BINDIR@"
+ else
