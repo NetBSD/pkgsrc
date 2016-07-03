@@ -1,0 +1,15 @@
+$NetBSD: patch-src_runtime_objs_mk.ppc-aix,v 1.1 2016/07/03 19:29:28 dholland Exp $
+
+Honor pkgsrc CFLAGS.
+
+--- src/runtime/objs/mk.ppc-aix~	2000-06-01 18:34:03.000000000 +0000
++++ src/runtime/objs/mk.ppc-aix
+@@ -5,7 +5,7 @@ SHELL 		= /bin/sh
+ 
+ # note: the vendor cpp isn't expanding nested macro applications correctly.
+ CC =            cc
+-CFLAGS =        -O2
++CFLAGS =        @CFLAGS@
+ CPP =           /lib/cpp
+ 
+ #CC =            gcc -ansi
