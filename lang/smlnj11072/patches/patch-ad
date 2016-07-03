@@ -1,0 +1,25 @@
+$NetBSD: patch-ad,v 1.1 2016/07/03 17:50:31 dholland Exp $
+
+--- src/runtime/include/asm-base.h.orig
++++ src/runtime/include/asm-base.h
+@@ -36,6 +36,11 @@
+ #    define _ASM
+ #    include <sys/stack.h>
+ #    include <sys/trap.h>
++#  elif defined(OPSYS_NETBSD)
++#    include <machine/trap.h>
++#    define WINDOWSIZE (16*4)
++#    define SA(x) (((x)+7)&~7)
++#    define ST_INT_OVERFLOW 0x87
+ #  endif
+ #  define CGLOBAL(ID)	.global	CSYM(ID)
+ #  define LABEL(ID)	ID:
+@@ -104,7 +109,7 @@
+ #    define DOUBLE(V)	.double V
+ #    define LABEL(ID)   ID:
+ 
+-#  elif (defined(OPSYS_LINUX) && defined(TARGET_PPC))
++#  elif ((defined(OPSYS_LINUX) || defined(OPSYS_NETBSD)) && defined(TARGET_PPC))
+ #    define CFUNSYM(ID)	ID
+ #    define CGLOBAL(ID)	.globl CSYM(ID)
+ #    define TEXT	.section ".text"

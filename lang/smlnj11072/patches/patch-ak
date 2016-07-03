@@ -1,0 +1,12 @@
+$NetBSD: patch-ak,v 1.1 2016/07/03 17:50:31 dholland Exp $
+
+--- config/_run-sml.orig	2004-12-17 21:12:23.000000000 +0000
++++ config/_run-sml	2005-12-24 22:50:18.000000000 +0000
+@@ -19,6 +19,7 @@
+ #
+ # SITE SPECIFIC CONFIGURATION INFO
+ #
++SMLNJ_HOME="${SMLNJ_HOME:-@SML_BASE@}"
+ 
+ # On cygwin, make sure SMLNJ_HOME is given a POSIX-style pathname.
+ if [ x"$SMLNJ_HOME" != x ] ; then
