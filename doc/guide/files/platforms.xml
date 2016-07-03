@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.94 2016/07/03 15:20:16 sevan Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.95 2016/07/03 15:26:27 sevan Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -272,58 +272,6 @@ interix:kP=\E[S:kN=\E[T:kH=\E[U:dc@:DC@:tc=pcansi:
 	</screen>
 
       </sect3>
-    </sect2>
-
-    <sect2 id="irix">
-      <title>IRIX</title>
-
-      <para>You will need a working C compiler, either gcc or SGI's MIPS and MIPSpro
-      compiler (cc/c89).  Please set the <varname>CC</varname> environment variable
-      according to your preference.  If you do not have a license for the MIPSpro
-      compiler suite, you can download a gcc tardist file from <ulink
-      url="http://freeware.sgi.com/">http://freeware.sgi.com/</ulink>.</para>
-
-      <para>Please note that you will need IRIX 6.5.17 or higher, as this is the earliest
-      version of IRIX providing support for &man.if.indextoname.3;, &man.if.nametoindex.3;,
-      etc.</para>
-
-      <para>At this point in time, pkgsrc only supports one ABI at a time.  That is, you cannot
-	switch between the old 32-bit ABI, the new 32-bit ABI and the 64-bit ABI.  If
-	you start out using "abi=n32", that's what all your packages will be built
-	with.</para>
-
-      <para>Therefore, please make sure that you have no conflicting
-      <varname>CFLAGS</varname> in your environment or the
-      &mk.conf;.  Particularly, make sure that you do not
-      try to link n32 object files with lib64 or vice versa.  Check your
-      <filename>/etc/compiler.defaults</filename>!</para>
-
-      <para>If you have the actual pkgsrc tree mounted via NFS from a different host,
-      please make sure to set <varname>WRKOBJDIR</varname> to a local directory,
-      as it appears that IRIX linker occasionally runs into issues when trying to
-      link over a network-mounted file system.</para>
-
-      <para>The bootstrapping process should set all the right options for programs such
-      as imake(1), but you may want to set some options depending on your local
-      setup.  Please see <filename>pkgsrc/mk/defaults/mk.conf</filename> and, of
-      course, your compiler's man pages for details.</para>
-
-      <para>If you are using SGI's MIPSPro compiler, please set
-
-      <programlisting>
-PKGSRC_COMPILER=        mipspro
-      </programlisting>
-
-      in &mk.conf;.  Otherwise, pkgsrc will assume you
-      are using gcc and may end up passing invalid flags to the compiler.  Note that
-      bootstrap should create an appropriate <filename>mk.conf.example</filename> by
-      default.</para>
-
-      <para>If you have both the MIPSPro compiler chain installed as well as gcc,
-      but want to make sure that MIPSPro is used, please set your <varname>PATH</varname>
-      to <emphasis>not</emphasis> include the location of gcc (often
-      <filename>/usr/freeware/bin</filename>), and (important) pass the
-      '--preserve-path' flag.</para>
     </sect2>
 
     <sect2 id="linux">
