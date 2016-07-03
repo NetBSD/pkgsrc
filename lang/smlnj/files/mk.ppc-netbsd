@@ -1,0 +1,25 @@
+# mk.ppc-netbsd
+# $NetBSD: mk.ppc-netbsd,v 1.1 2016/07/03 19:26:35 dholland Exp $
+#
+
+SHELL		= /bin/sh
+
+MAKE =		gmake
+GCC =		gcc
+ARFLAGS =	Trcv
+CFLAGS =	@CFLAGS@
+LDFLAGS=
+CPP =		$(GCC) -x c -E -P
+
+#XOBJS =	xmonitor.o
+#LD_LIBS =	-lX11
+#BASE_DEFS =	-DHEAP_MONITOR -DPOLL_DEBUG
+XOBJS =
+XLIBS =
+DEFS =		$(BASE_DEFS) -DHOST_PPC -DTARGET_PPC -DOPSYS_UNIX -DOPSYS_NETBSD
+TARGET =	PPC
+VERSION =	v-ppc-netbsd
+RUNTIME =	run.ppc-netbsd
+
+all:
+	($(MAKE) RUNTIME="$(RUNTIME)" MAKE="$(MAKE)" VERSION="$(VERSION)" CC="$(CC)" CFLAGS="$(CFLAGS)" CPP="$(CPP)" AS="$(AS)" AR="$(AR)" RANLIB="$(RANLIB)" TARGET=$(TARGET) DEFS="$(DEFS)" XOBJS="$(XOBJS)" XLIBS="$(XLIBS)" LD_LIBS="$(LD_LIBS)" $(RUNTIME))
