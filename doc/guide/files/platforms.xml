@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.89 2016/07/03 13:58:19 sevan Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.90 2016/07/03 14:32:22 sevan Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -448,53 +448,6 @@ ICCBASE=                /opt/intel/cc/10.1.008
       <ulink url="https://www.mirbsd.org/pkgsrc.htm">pkgsrc on MirOS</ulink>
       page for more details.</para>
 
-    </sect2>
-
-    <sect2 id="openbsd">
-      <title>OpenBSD</title>
-
-      <para>Care should be taken so that the tools that this kit installs do not conflict
-      with the OpenBSD userland tools. There are several steps:</para>
-
-      <orderedlist>
-	<listitem>
-	  <para>OpenBSD stores its ports pkg database in
-	  <filename>/var/db/pkg</filename>. It is therefore
-	  recommended that you choose a different location (e.g.
-	  <filename>/usr/pkgdb</filename>) by
-	  using the --pkgdbdir option to the bootstrap script.</para>
-	</listitem>
-
-	<listitem>
-	  <para>If you do not intend to use the OpenBSD ports tools, it's probably a
-	  good idea to move them out of the way to avoid confusion, e.g.</para>
-
-	  <screen>
-&rprompt; <userinput>cd /usr/sbin</userinput>
-&rprompt; <userinput>mv pkg_add pkg_add.orig</userinput>
-&rprompt; <userinput>mv pkg_create pkg_create.orig</userinput>
-&rprompt; <userinput>mv pkg_delete pkg_delete.orig</userinput>
-&rprompt; <userinput>mv pkg_info pkg_info.orig</userinput>
-	  </screen>
-	</listitem>
-
-	<listitem>
-	  <para>An example &mk.conf; file will be placed in
-	  <filename>/etc/mk.conf.example</filename> file
-	  when you use the bootstrap script. OpenBSD's make program uses
-	  &mk.conf;
-	  as well. You can work around this by enclosing all the pkgsrc-specific parts
-	  of the file with:</para>
-
-	  <programlisting>
-.ifdef BSD_PKG_MK
-# pkgsrc stuff, e.g. insert defaults/mk.conf or similar here
-.else
-# OpenBSD stuff
-.endif
-	  </programlisting>
-	</listitem>
-      </orderedlist>
     </sect2>
 
     <sect2 id="solaris">
