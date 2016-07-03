@@ -1,0 +1,37 @@
+# $NetBSD: Makefile.common,v 1.1 2016/07/03 17:50:31 dholland Exp $
+
+# smlnj also supports hppa, sparc, ppc, mlrisc & alpha
+# pkg support for those platforms, and say, solaris-x86
+# is left as an (easy) exercise for the reader.
+ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-sparc NetBSD-*-powerpc \
+			FreeBSD-*-i386 Linux-*-i386 SunOS-*-sparc
+
+.include "../../mk/bsd.prefs.mk"
+
+# Possible values of BOX and OS must be kept in sync with the
+# currently ported platforms.
+
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD"
+OS=		bsd
+.elif ${OPSYS} == "SunOS" || ${OPSYS} == "Linux"
+OS=		${LOWER_OPSYS}
+.endif
+
+PLIST_VARS+=	nlffi		# not available on all platforms
+
+.if ${MACHINE_ARCH} == "i386"
+BOX=		x86
+PLIST.nlffi=	yes
+.elif ${MACHINE_ARCH} == "powerpc"
+BOX=		ppc
+.elif ${MACHINE_ARCH} == "sparc"
+BOX=		${MACHINE_ARCH}
+PLIST.nlffi=	yes
+.else
+# for "make fetch", default to i386 instead of trying to download
+# a non-existing file
+BOX=		x86
+PLIST.nlffi=	yes
+.endif
+
+PLIST_SUBST+=	BOX=${BOX:Q} OS=${OS:Q} NLFFI=${NLFFI}
