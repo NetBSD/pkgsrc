@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2668 2016/07/03 11:59:07 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2669 2016/07/03 12:05:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3887,3 +3887,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated fonts/unifont to 9.0.01 [wiz 2016-07-03]
 	Updated finance/moneyguru to 2.10.0 [wiz 2016-07-03]
 	Updated textproc/py-html2text to 2016.5.29 [wiz 2016-07-03]
+	Updated math/pari to 2.7.6 [wiz 2016-07-03]
