@@ -1,0 +1,13 @@
+$NetBSD: patch-aq,v 1.1 2016/07/03 17:50:31 dholland Exp $
+
+--- src/runtime/mach-dep/PPC.prim.asm.orig
++++ src/runtime/mach-dep/PPC.prim.asm
+@@ -813,7 +813,7 @@
+ 	lfd	f31, 136(r3)
+ 	blr
+ 
+-#if (defined(TARGET_PPC) && (defined(OPSYS_LINUX) || defined(OPSYS_DARWIN) ))
++#if (defined(TARGET_PPC) && (defined(OPSYS_LINUX) || defined(OPSYS_DARWIN) || defined(OPSYS_NETBSD) ))
+ 
+ #define CACHE_LINE_SZB		32
+ #define CACHE_LINE_MASK		(CACHE_LINE_SZB-1)
