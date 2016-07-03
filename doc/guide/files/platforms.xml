@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.87 2016/07/03 13:14:16 sevan Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.88 2016/07/03 13:24:09 sevan Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -66,6 +66,8 @@
 
   <sect1 id="platform-specific-notes">
     <title>Platform-specific notes</title>
+
+    <para>For details related to supported versions consult the platform-specific README files found in <xref linkend="supported-platforms"/></para>
 
     <sect2 id="cygwin">
       <title>Cygwin</title>
