@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.5 2009/06/14 18:09:38 joerg Exp $
-bin/sms
-bin/smsaddr
-share/sms/contrib/mimecut
-share/sms/contrib/procmailrc
-share/sms/doc/README
-share/sms/doc/README.smsrc
-share/sms/doc/readme.html
