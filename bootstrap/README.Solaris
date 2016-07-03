@@ -1,4 +1,4 @@
-$NetBSD: README.Solaris,v 1.14 2012/07/13 16:12:41 jperkin Exp $
+$NetBSD: README.Solaris,v 1.15 2016/07/03 15:38:12 sevan Exp $
 
 You will need a working C compiler. Any version of gcc >2.8 should
 work, 2.95.x and 3.x have been tested. SunPro 5 and 8 have been
@@ -107,5 +107,22 @@ SUNWSPROBASE so you will not need to set these variables again.
 Whichever compiler you use, please ensure the compiler tools and
 your $prefix are in your PATH. This includes /usr/ccs/{bin,lib}
 and eg. /usr/pkg/{bin,sbin}.
+
+You should set the following variables in your mk.conf file:
+	CC= 	cc
+	CXX=	CC
+	CPP=	cc -E
+	CXXCPP=	CC -E
+
+Common problems
+---------------
+Sometimes, when using libtool, /bin/ksh crashes with a segmentation fault. The
+workaround is to use another shell for the configure scripts, for example by
+installing shells/bash and adding the following lines to your mk.conf:
+
+	CONFIG_SHELL=   ${LOCALBASE}/bin/bash
+	WRAPPER_SHELL=  ${LOCALBASE}/bin/bash
+
+Then, rebuild the devel/libtool-base package.
 
 bootstrap-pkgsrc has been tested on Solaris 2.6 -> 10.
