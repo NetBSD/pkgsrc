@@ -1,0 +1,15 @@
+$NetBSD: patch-src_runtime_objs_mk.hppa-hpux11,v 1.1 2016/07/03 19:29:27 dholland Exp $
+
+Honor pkgsrc CFLAGS.
+
+--- src/runtime/objs/mk.hppa-hpux11~	2005-07-20 14:30:18.000000000 +0000
++++ src/runtime/objs/mk.hppa-hpux11
+@@ -13,7 +13,7 @@ CC  =		gcc -ansi -D__STDC__
+ #CPP =		/lib/cpp.ansi
+ CPP =           cpp
+ 
+-CFLAGS =	-O
++CFLAGS =	@CFLAGS@
+ 
+ AS =		/usr/ccs/bin/as 
+ RANLIB =	ar ts

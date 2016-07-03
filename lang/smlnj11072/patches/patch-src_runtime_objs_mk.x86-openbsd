@@ -1,0 +1,15 @@
+$NetBSD: patch-src_runtime_objs_mk.x86-openbsd,v 1.1 2016/07/03 19:29:28 dholland Exp $
+
+Honor pkgsrc CFLAGS.
+
+--- src/runtime/objs/mk.x86-openbsd~	2008-12-02 16:50:18.000000000 +0000
++++ src/runtime/objs/mk.x86-openbsd
+@@ -9,7 +9,7 @@ MAKE =		gmake
+ 
+ ARFLAGS =	Trcv
+ CC =		gcc -ansi
+-CFLAGS =	-O2
++CFLAGS =	@CFLAGS@
+ CPP =		gcc -x assembler-with-cpp -E -P
+ #CPP =		/usr/bin/cpp -P
+ 
