@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.90 2016/07/03 14:32:22 sevan Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.91 2016/07/03 14:38:15 sevan Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -91,20 +91,6 @@
           then pick "Run as administrator".</para>
         </listitem>
       </itemizedlist>
-    </sect2>
-
-    <sect2 id="darwin">
-      <title>Darwin (Mac OS X)</title>
-
-      <para>Before you start, you need to download and install
-      the Mac OS X Developer Tools from Apple's Developer Connection.
-      This requires (free) membership. See
-      <ulink url="http://developer.apple.com/macosx/">http://developer.apple.com/macosx/</ulink>
-      for details. Also, make sure you install X11 (an optional
-      package included with the Developer Tools) if you intend
-      to build packages that use the X11 Window System.
-      (If you don't want or need the full Xcode GUI,
-      download and install Command Line Tools for Xcode.)</para>
     </sect2>
 
     <sect2 id="gnukfreebsd">
