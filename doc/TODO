@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16104 2016/07/03 11:13:37 wiz Exp $
+$NetBSD: TODO,v 1.16105 2016/07/03 11:17:26 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1818,7 +1818,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xemacs-current-21.5.31
 	o xenkernel46-4.6.0
 	o xentools44-4.4.0
-	o xerces-c-3.1.4
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.9.0
 	o xf86-video-geode-2.11.9 [wip]
