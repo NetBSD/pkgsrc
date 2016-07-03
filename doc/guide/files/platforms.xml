@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.96 2016/07/03 19:15:50 sevan Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.97 2016/07/03 19:25:16 sevan Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -272,59 +272,6 @@ interix:kP=\E[S:kN=\E[T:kH=\E[U:dc@:DC@:tc=pcansi:
 	</screen>
 
       </sect3>
-    </sect2>
-
-    <sect2 id="linux">
-      <title>Linux</title>
-
-      <para>Some versions of Linux (for example Debian GNU/Linux) need
-      either libtermcap or libcurses (libncurses).  Installing the
-      distributions libncurses-dev package (or equivalent) should fix
-      the problem.</para>
-
-      <para>pkgsrc supports both gcc (GNU Compiler Collection) and icc
-      (Intel C++ Compiler). gcc is the default. icc 8.0 and 8.1 on
-      i386 have been tested.</para>
-
-      <para>To bootstrap using icc, assuming the default icc installation
-      directory:</para>
-
-      <programlisting>
-env ICCBASE=/opt/intel/cc/10.1.008 ./bootstrap --compiler=icc
-      </programlisting>
-
-      <note>
-	<para>For icc 8.0 you must add `LDFLAGS=-static-libcxa' to this.</para>
-	<para>For icc 8.1 you must add `LDFLAGS=-i-static' instead.</para>
-	<para>For icc 10.1 neither of these appears to be necessary.</para>
-      </note>
-
-      <para>Use a value for ICCBASE that corresponds to the directory
-      where icc is installed. After bootstrapping, set
-      <varname>ICCBASE</varname> in &mk.conf;:</para>
-
-      <programlisting>
-ICCBASE=                /opt/intel/cc/10.1.008
-      </programlisting>
-
-      <para>The pkgsrc default for <varname>ICCBASE</varname> is
-      <filename>/opt/intel_cc_80</filename>. This is the default
-      install directory for icc 8.0. If you are using a more recent
-      version, be sure to set the correct path explicitly.
-      </para>
-
-      <para>pkgsrc uses the static linking method of the runtime libraries
-      provided by icc, so binaries can be run on other systems which do not
-      have the shared libraries installed.</para>
-
-      <para>Libtool, however, extracts a list of libraries from the
-      &man.ld.1; command run when linking a C++ shared library and
-      records it, throwing away the -Bstatic and -Bdynamic options
-      interspersed between the libraries.  This means that
-      libtool-linked C++ shared libraries will have a runtime
-      dependency on the icc libraries until this is fixed in
-      libtool.</para>
-
     </sect2>
   </sect1>
 </chapter>
