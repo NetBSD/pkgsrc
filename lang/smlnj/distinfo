@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.22 2016/07/03 19:26:35 dholland Exp $
+$NetBSD: distinfo,v 1.23 2016/07/03 19:29:27 dholland Exp $
 
 SHA1 (smlnj-110.73/MLRISC.tgz) = 59a38a4a1c63cecf97764a99577b3f929b5ccbc9
 RMD160 (smlnj-110.73/MLRISC.tgz) = dd951776482f37421a17701d67c051741691c6cb
@@ -99,4 +99,21 @@ SHA1 (patch-src_runtime_gc_gc-stats.h) = af61db9d1f04e566d4c5c2bc5dcf4c6958f0ea7
 SHA1 (patch-src_runtime_gc_init-gc.c) = 5d1d5a13a51d732590dd4f375824bbc389a0525d
 SHA1 (patch-src_runtime_kernel_unix-timers.c) = 1c1db5bce0ec1e72adafb9380027884cf746c75c
 SHA1 (patch-src_runtime_mach-dep_unix-prof.c) = 90a4b81e2a8532e4e06f29bfe42c55423a0f4154
-SHA1 (patch-src_runtime_objs_mk.x86-netbsd) = d2ede7ce4fca3c400f82ae09ee352ee6872bb1b1
+SHA1 (patch-src_runtime_objs_mk.alpha32-dunix) = 9e3a36f4663cd685459f2fbde41b8c5f154bd9c2
+SHA1 (patch-src_runtime_objs_mk.alpha32x-osf1) = 6e91f672aadb77bd1d1ab65bfa66e3d7f745846c
+SHA1 (patch-src_runtime_objs_mk.hppa-hpux) = 40ca27d05490983e734b4d20eecd268935ad2461
+SHA1 (patch-src_runtime_objs_mk.hppa-hpux11) = c7ad7769ba05b4fe609a6396d2c8dadb80256e06
+SHA1 (patch-src_runtime_objs_mk.hppa-hpux9) = 6adacac502cd12576ea65882984979ce3aa78b41
+SHA1 (patch-src_runtime_objs_mk.ppc-aix) = 509ffc0152b2cdfa4e0f6621bed026fe0f1edc99
+SHA1 (patch-src_runtime_objs_mk.ppc-darwin) = 6ae822c7b39255b5204e358e3c21aa23b93883ec
+SHA1 (patch-src_runtime_objs_mk.ppc-darwin5) = 35ddd1f10a907ebbe6b4a3310c3bded83bda8ca0
+SHA1 (patch-src_runtime_objs_mk.ppc-linux) = 171ec491a536aa782880d3b3392cf0d728fd9c03
+SHA1 (patch-src_runtime_objs_mk.x86-cygwin) = b9e1174a956a63b1023eaf70322776fe93717782
+SHA1 (patch-src_runtime_objs_mk.x86-darwin) = 7770986d2805f66f1c4d4faff2fb66b2fb4b7b8d
+SHA1 (patch-src_runtime_objs_mk.x86-freebsd) = 2420f6a04ae78ca306daeb94a312f0e4fdcd0410
+SHA1 (patch-src_runtime_objs_mk.x86-linux) = 4905280351b88b5a74f3bd68dadcdca6fd2037ac
+SHA1 (patch-src_runtime_objs_mk.x86-linux-pthreads) = 5c2730e09b05c3a00abb3ea6c732e39775973f79
+SHA1 (patch-src_runtime_objs_mk.x86-netbsd) = 3a8e93e55ed9bba470a680c327cb4e4d22d69ff4
+SHA1 (patch-src_runtime_objs_mk.x86-netbsd2) = 98408821e7c1f3ca6f50f5d9e230c903173029e1
+SHA1 (patch-src_runtime_objs_mk.x86-openbsd) = da536769b231e01a5fb045fe7dd329eee15b6706
+SHA1 (patch-src_runtime_objs_mk.x86-solaris) = 125814c60fd42389df9a1d5dbcd4313e7cabb53c

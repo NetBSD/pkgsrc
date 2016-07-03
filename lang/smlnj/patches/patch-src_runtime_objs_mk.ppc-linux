@@ -1,0 +1,15 @@
+$NetBSD: patch-src_runtime_objs_mk.ppc-linux,v 1.1 2016/07/03 19:29:27 dholland Exp $
+
+Honor pkgsrc CFLAGS.
+
+--- src/runtime/objs/mk.ppc-linux~	2000-11-10 14:04:49.000000000 +0000
++++ src/runtime/objs/mk.ppc-linux
+@@ -6,7 +6,7 @@ SHELL =		/bin/sh
+ 
+ MAKE =		make
+ CC =		gcc -ansi
+-CFLAGS =	-O2
++CFLAGS =	@CFLAGS@
+ CPP =		gcc -x c -E -P -ansi
+ #XOBJS =	xmonitor.o
+ #LD_LIBS =	-lX11
