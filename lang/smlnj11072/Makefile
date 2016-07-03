@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/07/03 19:13:22 dholland Exp $
+# $NetBSD: Makefile,v 1.4 2016/07/03 19:15:02 dholland Exp $
 #
 
 DISTNAME=	boot.${BOX}-unix
@@ -44,6 +44,7 @@ SML_LIBDIR=	${SML_BASE}/lib
 SML_BINDIR=	${SML_BASE}/bin
 SML_SCRIPTS=	_link-sml _run-sml _ml-build _ml-makedepend
 
+# note that this includes bsd.prefs.mk
 .include "../../lang/smlnj/Makefile.common"
 
 #
@@ -78,28 +79,38 @@ post-extract:
 post-patch:
 	cd ${WRKDIR}/src && pax -rw runtime ${WRKDIR}/base/
 
-# resolve definition of SML_BASE, CFLAGS in patched files
+# Turn of nlffi on powerpc (I guess it doesn't work?)
+#
+# XXX: this switch doesn't work any more as the line in question doesn't
+# exist in the current version. Someone with a PPC build machine,
+# please check it out and either change it to match the file if still
+# needed, or get rid of it.
+.if ${MACHINE_ARCH} == "powerpc"
+SUBST_CLASSES+=		nlffi
+SUBST_STAGE.nlffi=	pre-configure
+SUBST_MESSAGE.nlffi=	Turning off nlffi
+SUBST_FILES.nlffi=	config/targets
+SUBST_SED.nlffi=	-e '/^request nlffi$$/d'
+.endif # powerpc
+
+# resolve definition of SML_BASE
+SUBST_CLASSES+=		smlbase
+SUBST_STAGE.smlbase=	pre-configure
+SUBST_MESSAGE.smlbase=	Setting SML_BASE
+SUBST_FILES.smlbase=	${SML_SCRIPTS:S/^/config\//}
+SUBST_VARS.smlbase=	SML_BASE
+
+# resolve definition of CFLAGS in patched files
+# (note that we need to do this in both src/runtime and base/runtime)
+SUBST_CLASSES+=		cflags
+SUBST_STAGE.cflags=	pre-configure
+SUBST_MESSAGE.cflags=	Setting CFLAGS
+SUBST_FILES.cflags=	src/runtime/objs/* base/runtime/objs/*
+SUBST_VARS.cflags=	CFLAGS
+
+# nothing here any more
 do-configure:
-	set -e;							\
-	if [ ${MACHINE_ARCH} = "powerpc" ]; then		\
-		${AWK} '(! /^request nlffi$$/) { print }'	\
-		< ${WRKDIR}/config/targets			\
-		> ${WRKDIR}/temp;				\
-		${MV} ${WRKDIR}/temp ${WRKDIR}/config/targets;	\
-	fi
-	set -e;						\
-	cd ${WRKDIR}/config;				\
-	for f in ${SML_SCRIPTS}; do			\
-		${CP} "$${f}" "$${f}.tmp";		\
-		${SED} -e 's|@SML_BASE@|${SML_BASE}|g'	\
-			< "$${f}.tmp" > "$${f}";	\
-	done;						\
-	cd ${WRKDIR}/src/runtime/objs;			\
-	for f in *; do					\
-		${CP} "$${f}" "$${f}.tmp";		\
-		${SED} -e 's|@CFLAGS@|'${CFLAGS:Q}'|g'	\
-			< "$${f}.tmp" > "$${f}";	\
-	done
+	${DO_NADA}
 
 # The build target needs to run $WRKDIR/config/install.sh
 do-build:
