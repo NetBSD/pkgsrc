@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16110 2016/07/03 11:59:07 wiz Exp $
+$NetBSD: TODO,v 1.16111 2016/07/03 12:05:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -1346,7 +1346,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pam-yubico-2.21
 	o paragui-1.1.8
 	o parallel-20160222
-	o pari-2.7.6
 	o parrot-7.11.0
 	o patchelf-0.9
 	o patchutils-0.3.4
