@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16112 2016/07/03 13:46:18 wiz Exp $
+$NetBSD: TODO,v 1.16113 2016/07/03 16:44:00 taca Exp $
 
 Suggested new packages
 ======================
@@ -985,6 +985,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o kmymoney2-4.6.1
 	o knights-2.5.0
 	o knock-0.7
+	o knot-resolver-1.0.0
 	o kodi-16.1
 	o koffice-l10n-de-2.0.2
 	o konversation-1.6
