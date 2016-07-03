@@ -1,4 +1,6 @@
-# $NetBSD: Makefile.common,v 1.2 2016/07/03 18:21:39 dholland Exp $
+# $NetBSD: Makefile.common,v 1.3 2016/07/03 18:23:35 dholland Exp $
+#
+# used by lang/smlnj/Makefile
 
 # smlnj supports i386, hppa, sparc, ppc, mlrisc & alpha
 # but this package only handles i386, ppc, and sparc.
