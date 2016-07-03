@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/07/03 19:15:02 dholland Exp $
+# $NetBSD: Makefile,v 1.5 2016/07/03 19:16:03 dholland Exp $
 #
 
 DISTNAME=	boot.${BOX}-unix
@@ -43,6 +43,15 @@ SML_BASE=	${PREFIX}/lib/smlnj
 SML_LIBDIR=	${SML_BASE}/lib
 SML_BINDIR=	${SML_BASE}/bin
 SML_SCRIPTS=	_link-sml _run-sml _ml-build _ml-makedepend
+
+# while building, the work directory is the "installation"
+BUILD_ENV+=	SMLNJ_HOME="${WRKDIR}"
+
+# the build uses patch directly (yuk)
+BUILD_ENV+=	PATCH=${PATCH:Q} PATCH_ARGS=${PATCH_ARGS:Q}
+
+# not sure why this is needed (XXX?)
+BUILD_ENV+=	FILESDIR=${FILESDIR}
 
 # note that this includes bsd.prefs.mk
 .include "../../lang/smlnj/Makefile.common"
@@ -114,9 +123,7 @@ do-configure:
 
 # The build target needs to run $WRKDIR/config/install.sh
 do-build:
-	cd ${WRKDIR} && unset PWD && \
-	FILESDIR=${FILESDIR} PATCH=${PATCH:Q} PATCH_ARGS=${PATCH_ARGS:Q} \
-		SMLNJ_HOME="${WRKDIR}" ./config/install.sh
+	cd ${WRKDIR} && unset PWD && ${SETENV} ${BUILD_ENV} ./config/install.sh
 
 # install target
 # (see ftp://ftp.research.bell-labs.com/dist/smlnj/working/110.38/INSTALL)
