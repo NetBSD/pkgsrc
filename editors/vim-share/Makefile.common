@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.150 2014/09/01 20:28:48 jperkin Exp $
+# $NetBSD: Makefile.common,v 1.151 2016/07/03 22:25:00 jklos Exp $
 
 # used by editors/vim/Makefile
 # used by editors/vim-gtk/Makefile
@@ -12,7 +12,7 @@
 DISTNAME=		vim-${VIM_VERSION}.${VIM_PATCHLEVEL}
 CATEGORIES=		editors
 MASTER_SITES=		${MASTER_SITE_LOCAL}
-EXTRACT_SUFX=		.tar.bz2
+EXTRACT_SUFX=		.tar.gz
 
 .include "../../mk/bsd.prefs.mk"
 
