@@ -1,9 +1,40 @@
-$NetBSD: patch-Makefile,v 1.1 2012/12/15 10:25:52 jaapb Exp $
+$NetBSD: patch-Makefile,v 1.2 2016/07/03 10:44:49 jaapb Exp $
 
-Install into DESTDIR
+Make native code compilation optional and integrate with findlib
 --- Makefile.orig	2011-11-22 15:56:49.000000000 +0000
 +++ Makefile
-@@ -57,13 +57,14 @@ depend:
+@@ -11,7 +11,7 @@
+ #                                                                       #
+ #########################################################################
+ 
+-include Makefile.config
++-include Makefile.config
+ 
+ OCAMLC=ocamlc
+ OCAMLOPT=ocamlopt
+@@ -21,11 +21,18 @@ OCAMLRUN=ocamlrun
+ O=o
+ A=a
+ SO=so
+-LIBDIR=`ocamlc -where`
+-STUBLIBDIR=$(LIBDIR)/stublibs
+ 
++HAS_OCAMLOPT?= $(shell if which ocamlopt >/dev/null; then echo yes; else echo no; fi)
+ 
+-all: libcamldbm.$(A) dbm.cma dbm.cmxa dbm.cmxs 
++TARGETS := libcamldbm.$(A) dbm.cma
++FILES := META dllcamldbm.$(SO) libcamldbm.$(A) dbm.cma dbm.cmi dbm.mli
++
++ifeq ($(HAS_OCAMLOPT),yes)
++  TARGETS += dbm.cmxa dbm.cmxs
++  FILES += dbm.cmxa dbm.cmxs dbm.cmx dbm.$(A)
++endif
++
++all: $(TARGETS)
+ 
+ dbm.cma: dbm.cmo
+ 	$(OCAMLMKLIB) -o dbm -oc camldbm -linkall dbm.cmo $(DBM_LINK)
+@@ -57,13 +64,7 @@ depend:
  	$(OCAMLDEP) *.ml *.mli > .depend
  
  install::
@@ -14,14 +45,26 @@ Install into DESTDIR
 -	cp dbm.$(A) $(LIBDIR)/
 -	cd $(LIBDIR) && ranlib dbm.$(A)
 -	if test -f dbm.cmxs; then cp dbm.cmxs $(LIBDIR)/; fi
-+	if test -f dllcamldbm.$(SO); then cp dllcamldbm.$(SO) \
-+	$(DESTDIR)/$(STUBLIBDIR)/; fi 
-+	cp libcamldbm.$(A) $(DESTDIR)/$(LIBDIR)/
-+	cd $(DESTDIR)/$(LIBDIR) && ranlib libcamldbm.$(A)
-+	cp dbm.cma dbm.cmxa dbm.cmi dbm.mli $(DESTDIR)/$(LIBDIR)/
-+	cp dbm.$(A) $(DESTDIR)/$(LIBDIR)/
-+	cd $(DESTDIR)/$(LIBDIR) && ranlib dbm.$(A)
-+	if test -f dbm.cmxs; then cp dbm.cmxs $(DESTDIR)/$(LIBDIR)/; fi
++	ocamlfind install dbm $(FILES)
  
  clean::
  	rm -f *.cm* *.$(O) *.$(A) *.$(SO)
+@@ -77,12 +78,16 @@ testdbm.opt: dbm.cmxa testdbm.ml
+ clean::
+ 	rm -f testdbm.byte testdbm.opt testdatabase.*
+ 
+-test: testdbm.byte testdbm.opt
++test:: testdbm.byte
+ 	rm -f testdatabase.*
+ 	ocamlrun -I . ./testdbm.byte
+ 	rm -f testdatabase.*
++
++ifeq ($(HAS_OCAMLOPT),yes)
++test:: testdbm.opt
++	rm -f testdatabase.*
+ 	./testdbm.opt
+ 	rm -f testdatabase.*
+-	
++endif
+ 
+ include .depend
