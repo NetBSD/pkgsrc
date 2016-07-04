@@ -1,0 +1,22 @@
+$NetBSD: patch-libxl_Makefile,v 1.1.1.1 2016/07/04 07:30:52 jnemeth Exp $
+
+--- libxl/Makefile.orig	2016-02-09 14:44:19.000000000 +0000
++++ libxl/Makefile
+@@ -276,7 +276,7 @@ install: all
+ 	$(INSTALL_DIR) $(DESTDIR)$(sbindir)
+ 	$(INSTALL_DIR) $(DESTDIR)$(libdir)
+ 	$(INSTALL_DIR) $(DESTDIR)$(includedir)
+-	$(INSTALL_DIR) $(DESTDIR)$(BASH_COMPLETION_DIR)
++	$(INSTALL_DIR) $(DESTDIR)$(XEN_EXAMPLES_DIR)
+ 	$(INSTALL_DIR) $(DESTDIR)$(LIBEXEC_BIN)
+ 	$(INSTALL_DIR) $(DESTDIR)$(SHAREDIR)/pkgconfig
+ 	$(INSTALL_PROG) xl $(DESTDIR)$(sbindir)
+@@ -291,7 +291,7 @@ install: all
+ 	$(SYMLINK_SHLIB) libxlutil.so.$(XLUMAJOR) $(DESTDIR)$(libdir)/libxlutil.so
+ 	$(INSTALL_DATA) libxlutil.a $(DESTDIR)$(libdir)
+ 	$(INSTALL_DATA) libxl.h libxl_event.h libxl_json.h _libxl_types.h _libxl_types_json.h _libxl_list.h libxl_utils.h libxl_uuid.h libxlutil.h $(DESTDIR)$(includedir)
+-	$(INSTALL_DATA) bash-completion $(DESTDIR)$(BASH_COMPLETION_DIR)/xl.sh
++	$(INSTALL_DATA) bash-completion $(DESTDIR)$(XEN_EXAMPLES_DIR)/xl.sh
+ 	$(INSTALL_DATA) xenlight.pc $(DESTDIR)$(SHAREDIR)/pkgconfig/
+ 	$(INSTALL_DATA) xlutil.pc $(DESTDIR)$(SHAREDIR)/pkgconfig/
+ 
