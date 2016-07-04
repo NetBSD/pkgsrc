@@ -1,0 +1,22 @@
+$NetBSD: patch-Makefile,v 1.1.1.1 2016/07/04 07:30:50 jnemeth Exp $
+
+--- Makefile.orig	2016-02-09 14:44:19.000000000 +0000
++++ Makefile
+@@ -17,7 +17,7 @@ SUBDIRS-y += xenmon
+ SUBDIRS-y += xenstat
+ SUBDIRS-$(CONFIG_Linux) += memshr 
+ SUBDIRS-$(CONFIG_BLKTAP2) += blktap2
+-SUBDIRS-$(CONFIG_NetBSD) += xenbackendd
++#XXX SUBDIRS-$(CONFIG_NetBSD) += xenbackendd
+ SUBDIRS-y += libfsimage
+ SUBDIRS-$(CONFIG_Linux) += libvchan
+ 
+@@ -32,7 +32,7 @@ SUBDIRS-y += libxl
+ SUBDIRS-$(CONFIG_X86) += xenpaging
+ SUBDIRS-$(CONFIG_X86) += debugger/gdbsx
+ SUBDIRS-$(CONFIG_X86) += debugger/kdd
+-SUBDIRS-$(CONFIG_TESTS) += tests
++#XXX SUBDIRS-$(CONFIG_TESTS) += tests
+ 
+ # These don't cross-compile
+ ifeq ($(XEN_COMPILE_ARCH),$(XEN_TARGET_ARCH))

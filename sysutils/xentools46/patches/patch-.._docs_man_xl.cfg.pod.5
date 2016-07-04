@@ -1,0 +1,29 @@
+$NetBSD: patch-.._docs_man_xl.cfg.pod.5,v 1.1.1.1 2016/07/04 07:30:50 jnemeth Exp $
+
+--- ../docs/man/xl.cfg.pod.5.orig	2016-02-09 14:44:19.000000000 +0000
++++ ../docs/man/xl.cfg.pod.5
+@@ -4,13 +4,13 @@ xl.cfg - XL Domain Configuration File Sy
+ 
+ =head1 SYNOPSIS
+ 
+- /etc/xen/xldomain
++ @XENDCONFDIR@/xldomain
+ 
+ =head1 DESCRIPTION
+ 
+ To create a VM (a domain in Xen terminology, sometimes called a guest)
+ with xl requires the provision of a domain config file.  Typically
+-these live in `/etc/xen/DOMAIN.cfg` where DOMAIN is the name of the
++these live in `@XENDCONFDIR@/DOMAIN.cfg` where DOMAIN is the name of the
+ domain.
+ 
+ =head1 SYNTAX
+@@ -1854,7 +1854,7 @@ natively or via hardware backwards compa
+ 
+ =head1 FILES
+ 
+-F</etc/xen/NAME.cfg>
++F<@XENDCONFDIR@/NAME.cfg>
+ F</var/lib/xen/dump/NAME>
+ 
+ =head1 BUGS
