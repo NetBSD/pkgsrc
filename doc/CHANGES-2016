@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2678 2016/07/04 07:41:15 jnemeth Exp $
+$NetBSD: CHANGES-2016,v 1.2679 2016/07/04 07:45:04 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3897,3 +3897,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/smlnj to 110.73nb2 [dholland 2016-07-03]
 	Updated graphics/feh to 2.16.1 [szptvlfn 2016-07-03]
 	Added sysutils/xenkernel46 version 4.6.3 [jnemeth 2016-06-30]
+	Added sysutils/xentools46 version 4.6.3 [jnemeth 2016-06-30]
