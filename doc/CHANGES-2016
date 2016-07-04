@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2682 2016/07/04 13:43:46 abs Exp $
+$NetBSD: CHANGES-2016,v 1.2683 2016/07/04 14:12:03 mef Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3900,3 +3900,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added sysutils/xentools46 version 4.6.3 [jnemeth 2016-07-04]
 	Updated www/squid3 to 3.5.20 [adam 2016-07-04]
 	Updated net/syncthing to 0.13.10 [abs 2016-07-04]
+	Updated ham/fldigi to 3.23.12 [mef 2016-07-04]
