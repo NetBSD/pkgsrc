@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.1.1.1 2016/07/04 07:25:13 jnemeth Exp $
+
+SHA1 (xen-4.6.3.tar.gz) = 2aa59d0a05a6c5ac7f336f2069c66a54f95c4349
+RMD160 (xen-4.6.3.tar.gz) = 2798bd888ee001a4829165e55feb705a86af4f74
+SHA512 (xen-4.6.3.tar.gz) = 187a860b40c05139f22b8498a5fae1db173c3110d957147af29a56cb83b7111c9dc4946d65f9dffc847001fc01c5e9bf51886eaa1194bb9cfd0b6dbcd43a2c5c
+Size (xen-4.6.3.tar.gz) = 19707041 bytes
+SHA1 (patch-Config.mk) = a2a104d023cea4e551a3ad40927d4884d6c610bf
+SHA1 (patch-xen_Makefile) = be3f4577a205b23187b91319f91c50720919f70b
+SHA1 (patch-xen_arch_x86_Rules.mk) = 7b0894ba7311edb02118a021671f304cf3872154
+SHA1 (patch-xen_common_page__alloc.c) = c4d606de1cada8cf89b5abd16efada3d58c68a03
+SHA1 (patch-xen_drivers_passthrough_vtd_x86_ats.c) = f72fd4bb2aeeaeb0b167031dfd5498e73666aa4e
+SHA1 (patch-xen_include_asm-x86_current.h) = 8a21577be06383c0c7f53c15ba828f77fb6314ad
+SHA1 (patch-xen_include_xen_lib.h) = 82a219b7d9c5deaa2b8e0adc774f60395adc4815
