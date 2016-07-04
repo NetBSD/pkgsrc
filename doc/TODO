@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16113 2016/07/03 16:44:00 taca Exp $
+$NetBSD: TODO,v 1.16114 2016/07/04 07:41:15 jnemeth Exp $
 
 Suggested new packages
 ======================
@@ -1810,7 +1810,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o xcoral-3.14
 	o xdaliclock-2.43
 	o xemacs-current-21.5.31
-	o xenkernel46-4.6.0
 	o xentools44-4.4.0
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.9.0
