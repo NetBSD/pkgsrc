@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16115 2016/07/04 07:58:21 jnemeth Exp $
+$NetBSD: TODO,v 1.16116 2016/07/04 20:33:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -463,6 +463,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o bibtool-2.63
 	o bin86-0.16.21
 	o binkd-104
+	o binutils-2.26.1
 	o bird-1.5.0
 	o bird6-1.5.0
 	o blas-3.6.0
@@ -1409,9 +1410,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o postfix-3.0.5
 	o postfix-3.1.1
 	o postgresql-postgis-2.1.6
-	o postgresql93-9.3.13
-	o postgresql94-9.4.8
-	o postgresql95-9.5.3
 	o powerdns-3.7.3
 	o powerdns-ldap-3.7.3
 	o powerdns-mysql-3.7.3
