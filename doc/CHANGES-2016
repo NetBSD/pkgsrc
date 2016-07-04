@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2680 2016/07/04 07:52:37 jnemeth Exp $
+$NetBSD: CHANGES-2016,v 1.2681 2016/07/04 12:21:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3898,3 +3898,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/feh to 2.16.1 [szptvlfn 2016-07-03]
 	Added sysutils/xenkernel46 version 4.6.3 [jnemeth 2016-07-04]
 	Added sysutils/xentools46 version 4.6.3 [jnemeth 2016-07-04]
+	Updated www/squid3 to 3.5.20 [adam 2016-07-04]
