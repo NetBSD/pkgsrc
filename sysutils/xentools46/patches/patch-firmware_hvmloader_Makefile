@@ -1,0 +1,13 @@
+$NetBSD: patch-firmware_hvmloader_Makefile,v 1.1.1.1 2016/07/04 07:30:51 jnemeth Exp $
+
+--- firmware/hvmloader/Makefile.orig	2016-02-09 14:44:19.000000000 +0000
++++ firmware/hvmloader/Makefile
+@@ -28,7 +28,7 @@ LOADADDR = 0x100000
+ # SMBIOS spec requires format mm/dd/yyyy
+ SMBIOS_REL_DATE ?= $(shell date +%m/%d/%Y)
+ 
+-CFLAGS += $(CFLAGS_xeninclude)
++CFLAGS += $(CFLAGS_xeninclude) $(EXTRA_CFLAGS)
+ 
+ # We mustn't use tools-only public interfaces.
+ CFLAGS += -U__XEN_TOOLS__ -D__XEN_INTERFACE_VERSION__=__XEN_LATEST_INTERFACE_VERSION__
