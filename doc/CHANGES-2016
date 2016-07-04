@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2683 2016/07/04 14:12:03 mef Exp $
+$NetBSD: CHANGES-2016,v 1.2684 2016/07/04 20:44:32 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3901,3 +3901,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/squid3 to 3.5.20 [adam 2016-07-04]
 	Updated net/syncthing to 0.13.10 [abs 2016-07-04]
 	Updated ham/fldigi to 3.23.12 [mef 2016-07-04]
+	Updated devel/R-Rcpp to 0.12.5 [wiz 2016-07-04]
