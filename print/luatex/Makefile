@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2016/07/03 11:19:50 markd Exp $
+# $NetBSD: Makefile,v 1.49 2016/07/05 01:17:23 dholland Exp $
 
 DISTNAME=	texlive-20160523-source
 PKGNAME=	luatex-0.95
@@ -20,7 +20,7 @@ EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake gsed lex perl pkg-config yacc
+USE_TOOLS+=	gmake lex perl pkg-config yacc
 CONFIGURE_ARGS+=	--disable-aleph --disable-etex --disable-pdftex \
 			--enable-luatex --disable-mf --disable-mf-nowin \
 			--with-x=no \
