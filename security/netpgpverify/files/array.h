@@ -67,6 +67,8 @@
 #define ARRAY_SIZE(name)		name##vsize
 #define ARRAY_ARRAY(name)		name##s
 
+#define ARRAY_FREE(name)		free(name##s)
+
 #define ARRAY_APPEND(name, newel) do {					\
 	ARRAY_EXPAND(name);						\
 	ARRAY_COUNT(name) += 1;						\
