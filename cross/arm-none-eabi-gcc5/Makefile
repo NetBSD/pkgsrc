@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2015/12/31 21:42:50 ryoon Exp $
+# $NetBSD: Makefile,v 1.4 2016/07/05 18:59:58 ryoon Exp $
 
-DISTNAME=		gcc-5.3.0
+DISTNAME=		gcc-5.4.0
 PKGNAME=		cross-arm-none-eabi-${DISTNAME}
 CATEGORIES=		cross
-MASTER_SITES=		${MASTER_SITE_GNU:=gcc/gcc-5.3.0/}
-NEWLIBVER=              2.2.0
+MASTER_SITES=		${MASTER_SITE_GNU:=gcc/gcc-${PKGVERSION_NOREV}/}
+NEWLIBVER=              2.4.0
 SITES.newlib-${NEWLIBVER}.tar.gz=ftp://sources.redhat.com/pub/newlib/
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
 			newlib-${NEWLIBVER}.tar.gz
