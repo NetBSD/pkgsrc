@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.45 2016/04/14 12:38:23 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2016/07/05 16:13:53 taca Exp $
 #
 # When updating this package, make sure that no strings like
 # "PR 12345" are in the commit message. Upstream likes
 # to reference their own PRs this way, but this ends up
 # in NetBSD GNATS.
 
-DISTNAME=	httpd-2.4.20
+DISTNAME=	httpd-2.4.23
 PKGNAME=	${DISTNAME:S/httpd/apache/}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_APACHE:=httpd/} \
@@ -48,6 +48,7 @@ BUILDLINK_API_DEPENDS.apr-util+=	apr-util>=1.5.3
 
 CONFIGURE_ARGS+=	--disable-xml2enc
 CONFIGURE_ARGS+=	--disable-proxy-html
+CONFIGURE_ARGS+=	--enable-proxy-fdpass
 
 DFLT_APACHE_MODULES+=	all
 APACHE_MODULES?=	${DFLT_APACHE_MODULES}
