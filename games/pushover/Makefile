@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2015/04/25 14:23:02 tnn Exp $
-#
+# $NetBSD: Makefile,v 1.9 2016/07/05 17:33:00 wiz Exp $
 
-DISTNAME=	pushover-0.0.4
-PKGREVISION=	7
+DISTNAME=	pushover-0.0.5
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pushover/}
 
-MAINTAINER=	wiz@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pushover.sourceforge.net/
 COMMENT=	Remake of Pushover, a fun puzzle game
 LICENSE=	gnu-gpl-v3
