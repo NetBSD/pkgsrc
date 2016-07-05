@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2693 2016/07/05 20:24:12 agc Exp $
+$NetBSD: CHANGES-2016,v 1.2694 2016/07/05 23:57:03 agc Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3913,3 +3913,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/gwt to 2.7.0 [ryoon 2016-07-05]
 	Updated security/netpgpverify to 20160626 [agc 2016-07-05]
 	Updated security/libnetpgpverify to 20160626 [agc 2016-07-05]
+	Updated security/netpgpverify to 20160704 [agc 2016-07-05]
+	Updated security/libnetpgpverify to 20160704 [agc 2016-07-05]
