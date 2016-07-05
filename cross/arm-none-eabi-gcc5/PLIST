@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2015/12/31 21:42:50 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.3 2016/07/05 18:59:58 ryoon Exp $
 cross-arm-none-eabi/arm-none-eabi/include/_ansi.h
+cross-arm-none-eabi/arm-none-eabi/include/_newlib_version.h
 cross-arm-none-eabi/arm-none-eabi/include/_syslist.h
 cross-arm-none-eabi/arm-none-eabi/include/alloca.h
 cross-arm-none-eabi/arm-none-eabi/include/ar.h
@@ -190,6 +191,7 @@ cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/stream_iterator
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/streambuf.tcc
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/streambuf_iterator.h
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/stringfwd.h
+cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/uniform_int_dist.h
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/unique_ptr.h
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/unordered_map.h
 cross-arm-none-eabi/arm-none-eabi/include/c++/${PKGVERSION}/bits/unordered_set.h
@@ -769,6 +771,7 @@ cross-arm-none-eabi/arm-none-eabi/include/langinfo.h
 cross-arm-none-eabi/arm-none-eabi/include/libgen.h
 cross-arm-none-eabi/arm-none-eabi/include/limits.h
 cross-arm-none-eabi/arm-none-eabi/include/locale.h
+cross-arm-none-eabi/arm-none-eabi/include/machine/_arc4random.h
 cross-arm-none-eabi/arm-none-eabi/include/machine/_default_types.h
 cross-arm-none-eabi/arm-none-eabi/include/machine/_types.h
 cross-arm-none-eabi/arm-none-eabi/include/machine/ansi.h
@@ -806,6 +809,10 @@ cross-arm-none-eabi/arm-none-eabi/include/string.h
 cross-arm-none-eabi/arm-none-eabi/include/strings.h
 cross-arm-none-eabi/arm-none-eabi/include/sys/_default_fcntl.h
 cross-arm-none-eabi/arm-none-eabi/include/sys/_intsup.h
+cross-arm-none-eabi/arm-none-eabi/include/sys/_sigset.h
+cross-arm-none-eabi/arm-none-eabi/include/sys/_stdint.h
+cross-arm-none-eabi/arm-none-eabi/include/sys/_timespec.h
+cross-arm-none-eabi/arm-none-eabi/include/sys/_timeval.h
 cross-arm-none-eabi/arm-none-eabi/include/sys/_types.h
 cross-arm-none-eabi/arm-none-eabi/include/sys/cdefs.h
 cross-arm-none-eabi/arm-none-eabi/include/sys/config.h
@@ -823,6 +830,7 @@ cross-arm-none-eabi/arm-none-eabi/include/sys/queue.h
 cross-arm-none-eabi/arm-none-eabi/include/sys/reent.h
 cross-arm-none-eabi/arm-none-eabi/include/sys/resource.h
 cross-arm-none-eabi/arm-none-eabi/include/sys/sched.h
+cross-arm-none-eabi/arm-none-eabi/include/sys/select.h
 cross-arm-none-eabi/arm-none-eabi/include/sys/signal.h
 cross-arm-none-eabi/arm-none-eabi/include/sys/stat.h
 cross-arm-none-eabi/arm-none-eabi/include/sys/stdio.h
@@ -831,6 +839,8 @@ cross-arm-none-eabi/arm-none-eabi/include/sys/syslimits.h
 cross-arm-none-eabi/arm-none-eabi/include/sys/time.h
 cross-arm-none-eabi/arm-none-eabi/include/sys/timeb.h
 cross-arm-none-eabi/arm-none-eabi/include/sys/times.h
+cross-arm-none-eabi/arm-none-eabi/include/sys/timespec.h
+cross-arm-none-eabi/arm-none-eabi/include/sys/tree.h
 cross-arm-none-eabi/arm-none-eabi/include/sys/types.h
 cross-arm-none-eabi/arm-none-eabi/include/sys/unistd.h
 cross-arm-none-eabi/arm-none-eabi/include/sys/utime.h
@@ -838,6 +848,7 @@ cross-arm-none-eabi/arm-none-eabi/include/sys/wait.h
 cross-arm-none-eabi/arm-none-eabi/include/tar.h
 cross-arm-none-eabi/arm-none-eabi/include/termios.h
 cross-arm-none-eabi/arm-none-eabi/include/tgmath.h
+cross-arm-none-eabi/arm-none-eabi/include/threads.h
 cross-arm-none-eabi/arm-none-eabi/include/time.h
 cross-arm-none-eabi/arm-none-eabi/include/unctrl.h
 cross-arm-none-eabi/arm-none-eabi/include/unistd.h
@@ -1380,3 +1391,7 @@ cross-arm-none-eabi/share/gcc-${PKGVERSION}/python/libstdcxx/__init__.py
 cross-arm-none-eabi/share/gcc-${PKGVERSION}/python/libstdcxx/v6/__init__.py
 cross-arm-none-eabi/share/gcc-${PKGVERSION}/python/libstdcxx/v6/printers.py
 cross-arm-none-eabi/share/gcc-${PKGVERSION}/python/libstdcxx/v6/xmethods.py
+@pkgdir cross-arm-none-eabi/include
+@pkgdir cross-arm-none-eabi/arm-none-eabi/include/rpc
+@pkgdir cross-arm-none-eabi/arm-none-eabi/include/bits
+@pkgdir bin
