@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 02:46:54 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/07/05 19:27:02 ryoon Exp $
 
-SHA1 (gwt-2.4.0.zip) = a91ac20db0ddd5994ac3cbfb0e8061d5bbf66f88
-RMD160 (gwt-2.4.0.zip) = 79d159ba2176a4b96d7cefdfcc557301ebb1d31d
-SHA512 (gwt-2.4.0.zip) = 7c64e4fdcf2114700112ea8258f91eed3c5c64ce1067100f86a4201eb4a2f9ba2b8d89663a3bd9c45b1a0555bd3d8b1dcabeb2b59b38ffc0ebb429bcad255ec2
-Size (gwt-2.4.0.zip) = 89734508 bytes
+SHA1 (gwt-2.7.0.zip) = 2688f2ed80a36ba0e6170a4ef656581d811f330f
+RMD160 (gwt-2.7.0.zip) = 4c730e3ca663f4e2d8dd61f40efd16b804cfe9a4
+SHA512 (gwt-2.7.0.zip) = a1eed5cc25c888cf81d4f22b1f9494d5d8567b911f7aeb1d164a6359120543668280afe1a3ffc9ed87b139c7db67fbcaaabde2066e3279909d7cd6fc22eaf499
+Size (gwt-2.7.0.zip) = 108818328 bytes
