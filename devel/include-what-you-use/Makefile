@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/03/14 14:36:39 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2016/07/05 00:19:59 maya Exp $
 
 DISTNAME=	include-what-you-use-0.5.src
 PKGREVISION=	1
@@ -15,7 +15,7 @@ WRKSRC=		${WRKDIR}/include-what-you-use
 USE_CMAKE=	yes
 CMAKE_ARGS=     -DIWYU_LLVM_ROOT_PATH:PATH=${BUILDLINK_PREFIX.clang}
 USE_LANGUAGES=	c c++
-GCC_REQD=	4.8
+GCC_REQD+=	4.8
 
 REPLACE_PYTHON= *.py
 
