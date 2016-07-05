@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2012/10/28 06:30:16 asau Exp $
+# $NetBSD: Makefile,v 1.3 2016/07/05 19:27:02 ryoon Exp $
 #
 
-DISTNAME=	gwt-2.4.0
+DISTNAME=	gwt-2.7.0
 CATEGORIES=	www
-MASTER_SITES=	http://google-web-toolkit.googlecode.com/files/
+MASTER_SITES=	http://storage.googleapis.com/gwt-releases/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	https://developers.google.com/web-toolkit/
+HOMEPAGE=	http://www.gwtproject.org/
 COMMENT=	Google Web Toolkit
 LICENSE=	apache-2.0
 
@@ -26,7 +26,6 @@ INSTALLATION_DIRS=	bin ${GWTDOCDIR} ${GWTDIR}
 SUBST_CLASSES+=		gwt
 SUBST_STAGE.gwt=	pre-configure
 SUBST_MESSAGE.gwt=	Fix for GWT
-SUBST_FILES.gwt=	benchmarkViewer
 SUBST_FILES.gwt+=	i18nCreator
 SUBST_FILES.gwt+=	webAppCreator
 SUBST_SED.gwt=		-e 's,java ,${PKG_JAVA_HOME}/bin/java ,g'
@@ -34,13 +33,12 @@ SUBST_SED.gwt+=		-e 's,HOMEDIR=.*,HOMEDIR=${PREFIX}/${GWTDIR};,g'
 SUBST_SED.gwt+=		-e 's,APPDIR=.*,APPDIR=${PREFIX}/${GWTDIR};,g'
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/benchmarkViewer ${DESTDIR}${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/i18nCreator ${DESTDIR}${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/webAppCreator ${DESTDIR}${PREFIX}/bin
 
 	${INSTALL_DATA} ${WRKSRC}/*jar ${DESTDIR}${PREFIX}/${GWTDIR}
 	${INSTALL_DATA} ${WRKSRC}/*dtd ${DESTDIR}${PREFIX}/${GWTDIR}
-	${INSTALL_DATA} ${WRKSRC}/*war ${DESTDIR}${PREFIX}/${GWTDIR}
+	${INSTALL_DATA} ${WRKSRC}/*dll ${DESTDIR}${PREFIX}/${GWTDIR}
 	${INSTALL_DATA} ${WRKSRC}/*dll ${DESTDIR}${PREFIX}/${GWTDIR}
 
 	cd ${WRKSRC} && pax -rw -pmp \
