@@ -1,5 +1,5 @@
 /*-
- * Copyright (c) 2012,2013,2014,2015 Alistair Crooks <agc@NetBSD.org>
+ * Copyright (c) 2012,2013,2014,2015,2016 Alistair Crooks <agc@NetBSD.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -52,13 +52,6 @@
 #include "pgpsum.h"
 #include "rsa.h"
 #include "verify.h"
-
-#ifndef PGPV_ARRAY
-/* creates 2 unsigned vars called "name"c and "name"size in current scope */
-/* also creates an array called "name"s in current scope */
-#define PGPV_ARRAY(type, name)						\
-	unsigned name##c; unsigned name##vsize; type *name##s
-#endif
 
 /* 64bit key ids */
 #define PGPV_KEYID_LEN		8
@@ -433,7 +426,7 @@ growbuf(obuf_t *obuf, size_t cc)
 
 /* add a fixed-length area of memory */
 static int
-obuf_add_mem(obuf_t *obuf, const char *s, size_t len)
+obuf_add_mem(obuf_t *obuf, const void *s, size_t len)
 {
 	if (obuf && s && len > 0) {
 		if (!growbuf(obuf, len)) {
@@ -2838,7 +2831,7 @@ nonnull_getenv(const char *key)
 int
 pgpv_close(pgpv_t *pgp)
 {
-	unsigned	i;
+	unsigned	 i;
 
 	if (pgp == NULL) {
 		return 0;
@@ -2850,8 +2843,6 @@ pgpv_close(pgpv_t *pgp)
 	}
 	return 1;
 }
-
-#define NO_SUBKEYS	0
 
 /* return the formatted entry for the primary key desired */
 size_t
