@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2016/06/30 18:05:55 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2016/07/05 00:19:59 maya Exp $
 
 DISTNAME=	mame-0.175
 CATEGORIES=	emulators
@@ -24,7 +24,7 @@ DEPENDS+=		liberation-ttf-[0-9]*:../../fonts/liberation-ttf
 
 USE_LANGUAGES=		c99 c++
 # 4.9 is enough, but doesn't build with SSP support on NetBSD
-GCC_REQD=		5.3
+GCC_REQD+=		5.3
 USE_TOOLS+=		bsdtar gmake pkg-config
 UNLIMIT_RESOURCES+=	datasize
 MAKE_FILE=		makefile

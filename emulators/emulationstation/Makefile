@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2016/03/05 11:28:28 jperkin Exp $
+# $NetBSD: Makefile,v 1.7 2016/07/05 00:19:59 maya Exp $
 
 DISTNAME=	abba19584636c28cd98e3810e857f493cb63d06c
 PKGNAME=	emulationstation-2.0.0_rc1_20150210
@@ -15,7 +15,7 @@ LICENSE=	mit
 
 USE_CMAKE=	yes
 USE_LANGUAGES+=	c c++
-GCC_REQD=	4.7 # C++11
+GCC_REQD+=	4.7 # C++11
 
 .include "../../mk/compiler.mk"
 .if !empty(PKGSRC_COMPILER:Mclang)

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.120 2016/06/19 20:34:38 wiz Exp $
+# $NetBSD: Makefile,v 1.121 2016/07/05 00:19:59 maya Exp $
 
 DISTNAME=		mpd-0.19.16
 PKGNAME=		${DISTNAME:S/mpd/musicpd/}
@@ -20,7 +20,7 @@ USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c c++
 
 # See ${WRKSRC}/src/Compiler.h: mpd requires gcc>=4.6
-GCC_REQD=		4.6
+GCC_REQD+=		4.6
 
 # MacOS X audio output is no longer enabled by default.
 CONFIGURE_ARGS.Darwin+=	--enable-osx
