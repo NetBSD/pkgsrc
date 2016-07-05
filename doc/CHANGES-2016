@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2687 2016/07/05 16:14:24 taca Exp $
+$NetBSD: CHANGES-2016,v 1.2688 2016/07/05 17:33:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3905,3 +3905,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated databases/php-mongo to 1.6.14 [wiz 2016-07-04]
 	Updated www/trac to 1.0.12 [gdt 2016-07-05]
 	Updated www/apache24 to 2.4.23 [taca 2016-07-05]
+	Updated games/pushover to 0.0.5 [wiz 2016-07-05]
