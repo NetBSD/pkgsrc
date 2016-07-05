@@ -1,0 +1,15 @@
+$NetBSD: patch-jdk_make_lib_CoreLibraries.gmk,v 1.1 2016/07/05 14:32:21 jperkin Exp $
+
+Allow passing LIBZ in the environment.
+
+--- jdk/make/lib/CoreLibraries.gmk.orig	2016-05-06 12:11:21.000000000 +0000
++++ jdk/make/lib/CoreLibraries.gmk
+@@ -231,7 +231,7 @@ $(BUILD_LIBJAVA): $(BUILD_LIBFDLIBM)
+ 
+ BUILD_LIBZIP_EXCLUDES :=
+ ifeq ($(USE_EXTERNAL_LIBZ), true)
+-  LIBZ := -lz
++  #LIBZ := -lz
+   LIBZIP_EXCLUDES += zlib-1.2.8
+ else
+   ZLIB_CPPFLAGS := -I$(JDK_TOPDIR)/src/share/native/java/util/zip/zlib-1.2.8
