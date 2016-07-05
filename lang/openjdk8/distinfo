@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.37 2016/05/06 13:37:01 ryoon Exp $
+$NetBSD: distinfo,v 1.38 2016/07/05 14:32:21 jperkin Exp $
 
 SHA1 (openjdk7/bootstrap-jdk-1.7.76-freebsd-10-amd64-20150301.tar.xz) = 7408f52d3bbe35c2b14bbd3215cbf60f1335d334
 RMD160 (openjdk7/bootstrap-jdk-1.7.76-freebsd-10-amd64-20150301.tar.xz) = 24f1577b5fc86d137f070aedb4610c8c89e45815
@@ -105,6 +105,7 @@ SHA1 (patch-jdk_make_CreateJars.gmk) = 0f49c8ec33121d7878ea4b6bd06d2e4e4af9a1d5
 SHA1 (patch-jdk_make_GenerateSources.gmk) = ec1b64805afb6edca637d87529b1d3fa59d20828
 SHA1 (patch-jdk_make_Images.gmk) = e6643dcb25ad5457efe610f6ab7fd0ccc9b5ed41
 SHA1 (patch-jdk_make_lib_Awt2dLibraries.gmk) = ea107ae5e396263489cac9b058bcdd92891baeac
+SHA1 (patch-jdk_make_lib_CoreLibraries.gmk) = 839197feea5ccc9ede70c2c454199fa5ca00c500
 SHA1 (patch-jdk_make_lib_NioLibraries.gmk) = 5a1044c444e534d627b46d820d27bb545e65959d
 SHA1 (patch-jdk_make_lib_SoundLibraries.gmk) = b63cf0ebe204acf7264704916df875a31de84393
 SHA1 (patch-jdk_src_share_lib_security_java.security-bsd) = 5a64fc1205a5bd2f6586ad65ca21f93dfffb1606
