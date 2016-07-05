@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2016/03/29 19:03:07 mrg Exp $
+# $NetBSD: Makefile,v 1.54 2016/07/05 16:56:57 maya Exp $
 
 DISTNAME=	gxemul-0.6.0.1
 PKGREVISION=	1
@@ -8,6 +8,7 @@ MASTER_SITES=	http://gxemul.sourceforge.net/src/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gxemul.sourceforge.net/
 COMMENT=	Framework for full-system computer architecture emulation
+LICENSE=	modified-bsd
 
 USE_TOOLS+=	pax
 
