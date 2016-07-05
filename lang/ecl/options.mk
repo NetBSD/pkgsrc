@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2015/12/09 21:00:47 asau Exp $
+# $NetBSD: options.mk,v 1.10 2016/07/05 01:26:59 dholland Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.ecl
 PKG_SUPPORTED_OPTIONS+=		debug threads unicode ffi clx
@@ -18,7 +18,7 @@ CONFIGURE_ARGS+=	--enable-debug
 .if !empty(PKG_OPTIONS:Mthreads)
 CONFIGURE_ARGS+=	--enable-threads
 CONFIGURE_ENV+=		THREAD_CFLAGS=${PTHREAD_CFLAGS:Q}
-CONFIGURE_ENV+=		THREAD_LDLAGS=${BUILDLINK_LDLAGS.pthread:Q}
+CONFIGURE_ENV+=		THREAD_LDFLAGS=${BUILDLINK_LDFLAGS.pthread:Q}
 CONFIGURE_ENV+=		THREAD_LIBS=${BUILDLINK_LIBS.pthread:Q}
 # XXX Although NetBSD-6+ supports TLS, ECL oddly crashes on startup
 # on NetBSD-6 when it's used here.  Untested yet with NetBSD-7.
