@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.9 2015/12/11 12:31:03 ryoon Exp $
+$NetBSD: distinfo,v 1.10 2016/07/05 18:55:08 ryoon Exp $
 
-SHA1 (gcc-5.3.0.tar.bz2) = 0612270b103941da08376df4d0ef4e5662a2e9eb
-RMD160 (gcc-5.3.0.tar.bz2) = b06fec59ceb37aeb042bdb9e1703e53d0834d085
-SHA512 (gcc-5.3.0.tar.bz2) = d619847383405fd389f5a2d7225f97fedb01f81478dbb8339047ccba7561a5c20045ab500a8744bffd19ea51892ce09fc37f862f2cfcb42de0f0f8cd8f8da37a
-Size (gcc-5.3.0.tar.bz2) = 95441837 bytes
+SHA1 (gcc-5.4.0.tar.bz2) = 07524df2b4ab9070bad9c49ab668da72237b8115
+RMD160 (gcc-5.4.0.tar.bz2) = 7ae3413ca7e90bb21e65e637c02ddf2b675b45f4
+SHA512 (gcc-5.4.0.tar.bz2) = 2941cc950c8f2409a314df497631f9b0266211aa74746c1839c46e04f1c7c299afe2528d1ef16ea39def408a644ba48f97519ec7a7dd37d260c3e9423514265b
+Size (gcc-5.4.0.tar.bz2) = 95661481 bytes
 SHA1 (isl-0.14.tar.bz2) = b09e25df265c97ed54002cd811d227a9a26c5f9c
 RMD160 (isl-0.14.tar.bz2) = 4c69d026b51561bc1948cb7db79331b78a9d2c39
 SHA512 (isl-0.14.tar.bz2) = 117c0c6f31d91a9284a8f54a748df6494ca2ac21507a45611e911403e9610579b9323ce624aea1de0b8089b3194e59d4364f01bdb71ddcf8f6c24c749d11c4b7
@@ -31,7 +31,6 @@ SHA1 (patch-libgcc_crtstuff.c) = d22dd1fb4a79aed2e7c2864f0bb00bcc338b3ab8
 SHA1 (patch-libgcc_unwind-dw2-fde-dip.c) = 9c5e1823226521d11900b4d3b92c050d3941a1f6
 SHA1 (patch-libgfortran_configure) = f80dd6f3bb8093d071a71001c62c7b6d563e4055
 SHA1 (patch-libgo_Makefile.in) = 612987541f745c7be6835ce7fb7119884db294c3
-SHA1 (patch-libgo_mksysinfo.sh) = 5cf81d8403df9cc63adea22c2dbc24fac90767cd
 SHA1 (patch-libjava_boehm.cc) = bf5564261b02523927685340f59ce8faf7f84ace
 SHA1 (patch-libjava_configure) = 48ea2baffe87e09dda8133d286bd9b1bfe4c3f8a
 SHA1 (patch-libjava_contrib_rebuild-gcj-db.in) = bb01d738fc7db05046ae37e8ade32574de1d8297
