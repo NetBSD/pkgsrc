@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2015/04/30 00:18:23 ryoon Exp $
+@comment $NetBSD: PLIST,v 1.9 2016/07/05 18:49:23 ryoon Exp $
 bin/gitolite
 ${PERL5_SUB_INSTALLVENDORARCH}/Gitolite/Cache.pm
 ${PERL5_SUB_INSTALLVENDORARCH}/Gitolite/Common.pm
@@ -36,6 +36,7 @@ libexec/gitolite/VREF/VOTES
 libexec/gitolite/VREF/lock
 libexec/gitolite/VREF/partial-copy
 libexec/gitolite/VREF/refex-expr
+libexec/gitolite/commands/1plus1
 libexec/gitolite/commands/D
 libexec/gitolite/commands/access
 libexec/gitolite/commands/config
@@ -75,6 +76,7 @@ libexec/gitolite/syntactic-sugar/refex-expr
 libexec/gitolite/triggers/bg
 libexec/gitolite/triggers/expand-deny-messages
 libexec/gitolite/triggers/partial-copy
+libexec/gitolite/triggers/post-compile/create-with-reference
 libexec/gitolite/triggers/post-compile/ssh-authkeys
 libexec/gitolite/triggers/post-compile/ssh-authkeys-shell-users
 libexec/gitolite/triggers/post-compile/ssh-authkeys-split
