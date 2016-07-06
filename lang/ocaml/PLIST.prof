@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.prof,v 1.8 2015/09/30 13:49:50 fhajny Exp $
+@comment $NetBSD: PLIST.prof,v 1.9 2016/07/06 14:17:45 jperkin Exp $
 lib/ocaml/arg.p.cmt
 lib/ocaml/arg.p.cmx
 lib/ocaml/array.p.cmt
@@ -29,6 +29,8 @@ lib/ocaml/complex.p.cmt
 lib/ocaml/complex.p.cmx
 lib/ocaml/digest.p.cmt
 lib/ocaml/digest.p.cmx
+lib/ocaml/ephemeron.p.cmt
+lib/ocaml/ephemeron.p.cmx
 lib/ocaml/filename.p.cmt
 lib/ocaml/filename.p.cmx
 lib/ocaml/format.p.cmt
@@ -94,5 +96,7 @@ lib/ocaml/stringLabels.p.cmt
 lib/ocaml/stringLabels.p.cmx
 lib/ocaml/sys.p.cmt
 lib/ocaml/sys.p.cmx
+lib/ocaml/uchar.p.cmt
+lib/ocaml/uchar.p.cmx
 lib/ocaml/weak.p.cmt
 lib/ocaml/weak.p.cmx
