@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.opt,v 1.24 2016/05/05 08:12:01 jaapb Exp $
+@comment $NetBSD: PLIST.opt,v 1.25 2016/07/06 14:17:45 jperkin Exp $
 bin/ocamlc.opt
 bin/ocamldep.opt
 bin/ocamldoc.opt
@@ -218,7 +218,6 @@ lib/ocaml/compiler-libs/x86_masm.cmx
 lib/ocaml/compiler-libs/x86_proc.cmx
 lib/ocaml/digest.cmx
 lib/ocaml/ephemeron.cmx
-lib/ocaml/ephemeron.p.cmx
 lib/ocaml/filename.cmx
 lib/ocaml/format.cmx
 lib/ocaml/gc.cmx
@@ -332,7 +331,6 @@ lib/ocaml/threads/threadUnix.cmx
 lib/ocaml/threads/threads.a
 lib/ocaml/threads/threads.cmxa
 lib/ocaml/uchar.cmx
-lib/ocaml/uchar.p.cmx
 lib/ocaml/unix.a
 lib/ocaml/unix.cmx
 lib/ocaml/unix.cmxa
