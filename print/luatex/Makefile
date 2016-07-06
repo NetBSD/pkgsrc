@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2016/07/05 01:17:23 dholland Exp $
+# $NetBSD: Makefile,v 1.50 2016/07/06 09:47:52 jperkin Exp $
 
 DISTNAME=	texlive-20160523-source
 PKGNAME=	luatex-0.95
@@ -73,6 +73,10 @@ BUILDLINK_API_DEPENDS.kpathsea+= kpathsea>=6.2.1
 .include "../../print/poppler/buildlink3.mk"
 .include "../../print/poppler-includes/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
+
+pre-configure:
+	# Ensure we generate our patched version
+	${RM} -f libs/luajit/lj_vm_asm.S
 
 do-install:
 	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/libs/lua52/libtexlua52.la ${DESTDIR}${PREFIX}/lib
