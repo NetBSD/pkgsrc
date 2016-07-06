@@ -1,10 +1,12 @@
-$NetBSD: distinfo,v 1.7 2015/11/04 01:32:10 agc Exp $
+$NetBSD: distinfo,v 1.8 2016/07/06 10:09:33 abs Exp $
 
-SHA1 (dc-tools/abs0-dc-burn-netbsd-1.5-0-gae55ec9) = ab472a86ad283ad59d7939c5b8cdb5335c21a6bb
-RMD160 (dc-tools/abs0-dc-burn-netbsd-1.5-0-gae55ec9) = 55844b940524b11933f94b2832f7fc072ae29235
-Size (dc-tools/abs0-dc-burn-netbsd-1.5-0-gae55ec9) = 5683 bytes
+SHA1 (dc-tools/1.6.tar.gz) = eed5be42a30bc7221c5308db5b46b8996775fdef
+RMD160 (dc-tools/1.6.tar.gz) = ca538169072c8124276dd460e0b55d31d6170850
+SHA512 (dc-tools/1.6.tar.gz) = b7d35d27a7a7e1137140913c46137037e4685a817cbab8692be1d167da085fc14e8cdba1a1199e9f8e7cf9259ee462da1dc73bb8c677c2ab716314fae4ef5f42
+Size (dc-tools/1.6.tar.gz) = 5677 bytes
 SHA1 (dc-tools/ip_slave.tar.gz) = 573e0c410037715652d60a133a90b17fff279405
 RMD160 (dc-tools/ip_slave.tar.gz) = 408603e6265bff935764c68f2bf4b0ebc6bd7088
+SHA512 (dc-tools/ip_slave.tar.gz) = 8bcc922478f2da00cf979073f24c6de39c1bb7a3f4c6f87aec4d8c443129c052959f624f20ff8c235f83e6b56d45cddb6514bda12bf4ab5e200eba0dc63d600f
 Size (dc-tools/ip_slave.tar.gz) = 23008 bytes
 SHA1 (dc-tools/makeip.tar.gz) = a7f2742b8f9ad6c0d412696afff7c8c775fafbad
 RMD160 (dc-tools/makeip.tar.gz) = 218bd7138fe7af45aa0cea522cd81370c395c2de
