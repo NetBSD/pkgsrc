@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.64 2016/07/02 19:32:09 adam Exp $
+$NetBSD: distinfo,v 1.65 2016/07/06 10:39:22 adam Exp $
 
 SHA1 (dovecot-2.2.25.tar.gz) = 7fd23e4fef4f6f25a43196d36686449d6515f2b8
 RMD160 (dovecot-2.2.25.tar.gz) = 4e6494326b15bb1205e927ac227974575707808d
@@ -10,5 +10,7 @@ SHA1 (patch-ae) = 51d8cb998cc2ded8bfc767710e465b752c50e656
 SHA1 (patch-af) = c066e94dd6593d16eec3e66f5f4d26f021918498
 SHA1 (patch-src_lib-ldap_ldap-private.h) = 2d5ce32330ad4164cc75f8d209ba499d37ed01fc
 SHA1 (patch-src_lib_buffer.h) = d75017a1093c1ca34827d01ec85b06e6b03105d2
+SHA1 (patch-src_master_service-listen.c) = 58351083d928206e67bff3ae88a67556d6b43711
+SHA1 (patch-src_master_service-monitor.c) = e6b95755a99fc631bd4fd3017b6f01f022a3192d
 SHA1 (patch-src_plugins_quota_quota-fs.c) = c69305eb065a2417df1e8cd6ccbc1d317aee5d00
 SHA1 (patch-src_stats_mail-stats.h) = 90645c2aab956a0119630da4b71905db704bffda
