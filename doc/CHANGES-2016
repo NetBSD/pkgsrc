@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2694 2016/07/05 23:57:03 agc Exp $
+$NetBSD: CHANGES-2016,v 1.2695 2016/07/06 10:09:52 abs Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3915,3 +3915,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/libnetpgpverify to 20160626 [agc 2016-07-05]
 	Updated security/netpgpverify to 20160704 [agc 2016-07-05]
 	Updated security/libnetpgpverify to 20160704 [agc 2016-07-05]
+	Updated sysutils/dc-tools to 1.6 [abs 2016-07-06]
