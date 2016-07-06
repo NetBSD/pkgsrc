@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2016/07/05 18:55:08 ryoon Exp $
+# $NetBSD: Makefile,v 1.11 2016/07/06 07:21:41 wiz Exp $
 
 GCC_PKGNAME=		gcc5
 .include		"version.mk"
@@ -89,7 +89,7 @@ CONFIGURE_ARGS+=	--enable-languages=${LANGS:Q}
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--enable-long-long
 CONFIGURE_ARGS+=	--with-local-prefix=${GCC_PREFIX:Q}
-.if !empty(MACHINE_PLATFORM:MNetBSD-*-*) && ${PKGSRC_USE_SSP:Uno} == "no"
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-*) && ${PKGSRC_USE_SSP:Uno} != "no"
 # on NetBSD with stack protector, use the native SSP code in libc
 CONFIGURE_ARGS+=	--disable-libssp
 .else
