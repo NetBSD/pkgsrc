@@ -1,4 +1,4 @@
-/*	$NetBSD: gpgsig.c,v 1.4 2015/09/01 12:14:06 jperkin Exp $	*/
+/*	$NetBSD: gpgsig.c,v 1.5 2016/07/06 21:00:04 agc Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -7,7 +7,7 @@
 #include <sys/cdefs.h>
 #endif
 
-__RCSID("$NetBSD: gpgsig.c,v 1.4 2015/09/01 12:14:06 jperkin Exp $");
+__RCSID("$NetBSD: gpgsig.c,v 1.5 2016/07/06 21:00:04 agc Exp $");
 
 /*-
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -57,8 +57,8 @@ int
 gpg_verify(const char *content, size_t len, const char *keyring,
     const char *sig, size_t sig_len)
 {
-	pgpv_t pgp;
-	pgpv_cursor_t cursor;
+	pgpv_t *pgp;
+	pgpv_cursor_t *cursor;
 	static const char hdr1[] = "-----BEGIN PGP SIGNED MESSAGE-----\n";
 	static const char hdr2[] = "Hash: SHA512\n\n";
 	ssize_t buflen;
@@ -76,17 +76,17 @@ gpg_verify(const char *content, size_t len, const char *keyring,
 		buflen = len;
 	}
 
-	memset(&pgp, 0, sizeof(pgp));
-	memset(&cursor, 0, sizeof(cursor));
+	pgp = pgpv_new();
+	cursor = pgpv_new_cursor();
 
-	if (!pgpv_read_pubring(&pgp, keyring, -1))
+	if (!pgpv_read_pubring(pgp, keyring, -1))
 		err(EXIT_FAILURE, "cannot read keyring");
 
-	if (!pgpv_verify(&cursor, &pgp, buf, buflen))
+	if (!pgpv_verify(cursor, pgp, buf, buflen))
 		errx(EXIT_FAILURE, "unable to verify signature: %s",
-		    cursor.why);
+		    pgpv_get_cursor_str(cursor, "why"));
 
-	pgpv_close(&pgp);
+	pgpv_close(pgp);
 
 	if (sig_len)
 		free(buf);
