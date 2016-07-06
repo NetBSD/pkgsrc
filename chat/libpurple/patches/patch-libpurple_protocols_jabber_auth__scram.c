@@ -1,6 +1,7 @@
-$NetBSD: patch-libpurple_protocols_jabber_auth__scram.c,v 1.1 2016/07/06 05:57:51 wiz Exp $
+$NetBSD: patch-libpurple_protocols_jabber_auth__scram.c,v 1.2 2016/07/06 09:55:39 wiz Exp $
 
 Fix conflict with NetBSD's hmac(3) function.
+https://developer.pidgin.im/ticket/17061
 
 --- libpurple/protocols/jabber/auth_scram.c.orig	2015-12-31 23:19:40.000000000 +0000
 +++ libpurple/protocols/jabber/auth_scram.c
