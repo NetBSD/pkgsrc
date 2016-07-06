@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2697 2016/07/06 15:03:34 fhajny Exp $
+$NetBSD: CHANGES-2016,v 1.2698 2016/07/06 15:22:58 leot Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3918,3 +3918,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated sysutils/dc-tools to 1.6 [abs 2016-07-06]
 	Updated databases/py-cassandra-driver to 3.5.0 [fhajny 2016-07-06]
 	Updated devel/rebar to 2.6.2 [fhajny 2016-07-06]
+	Updated lang/py27-html-docs to 2.7.12 [leot 2016-07-06]
