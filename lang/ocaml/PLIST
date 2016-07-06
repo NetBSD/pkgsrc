@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.34 2016/05/19 15:30:04 jperkin Exp $
+@comment $NetBSD: PLIST,v 1.35 2016/07/06 14:17:45 jperkin Exp $
 bin/ocaml
 bin/ocamlc
 bin/ocamlcp
@@ -941,7 +941,6 @@ lib/ocaml/ephemeron.cmt
 lib/ocaml/ephemeron.cmti
 lib/ocaml/ephemeron.ml
 lib/ocaml/ephemeron.mli
-lib/ocaml/ephemeron.p.cmt
 lib/ocaml/event.mli
 lib/ocaml/expunge
 lib/ocaml/extract_crc
@@ -1198,7 +1197,6 @@ lib/ocaml/uchar.cmt
 lib/ocaml/uchar.cmti
 lib/ocaml/uchar.ml
 lib/ocaml/uchar.mli
-lib/ocaml/uchar.p.cmt
 lib/ocaml/unix.cma
 lib/ocaml/unix.cmi
 lib/ocaml/unix.mli
