@@ -15,15 +15,50 @@ func (s *Suite) TestMkversion(c *check.C) {
 	c.Check(newVersion("nb1"), check.DeepEquals, &version{nil, 1})
 	c.Check(newVersion("1.0.1a"), deepEquals, &version{[]int{1, 0, 0, 0, 1, 1}, 0})
 	c.Check(newVersion("1.0.1z"), deepEquals, &version{[]int{1, 0, 0, 0, 1, 26}, 0})
+	c.Check(newVersion("0pre20160620"), deepEquals, &version{[]int{0, -1, 20160620}, 0})
 }
 
 func (s *Suite) TestPkgverCmp(c *check.C) {
-	c.Check(pkgverCmp("1.0", "1.0alpha"), equals, 1)
-	c.Check(pkgverCmp("1.0alpha", "1.0"), equals, -1)
-	c.Check(pkgverCmp("1.0nb1", "1.0"), equals, 1)
-	c.Check(pkgverCmp("1.0nb2", "1.0nb1"), equals, 1)
-	c.Check(pkgverCmp("2.0.1nb17", "2.0.1nb4"), equals, 1)
-	c.Check(pkgverCmp("2.0.1nb4", "2.0.1nb17"), equals, -1)
-	c.Check(pkgverCmp("2.0pre", "2.0rc"), equals, 0)
-	c.Check(pkgverCmp("2.0pre", "2.0pl"), equals, -1)
+	var versions = [][]string{
+		{"0pre20160620"},
+		{"0"},
+		{"nb1"},
+		{"0.0.1-SNAPSHOT"},
+		{"1.0alpha"},
+		{"1.0alpha3"},
+		{"1", "1.0", "1.0.0"},
+		{"1.0nb1"},
+		{"1.0nb2"},
+		{"1.0.1a"},
+		{"1.0.1z"},
+		{"2.0pre", "2.0rc"},
+		{"2.0", "2.0pl"},
+		{"2.0.1nb4"},
+		{"2.0.1nb17"},
+		{"2.5beta"},
+		{"5.0"},
+		{"5.0nb5"},
+		{"5.5", "5.005"},
+		{"20151110"},
+	}
+
+	for i, iversions := range versions {
+		for _, iversion := range iversions {
+			for j, jversions := range versions {
+				for _, jversion := range jversions {
+					actual := pkgverCmp(iversion, jversion)
+					if i < j && !(actual < 0) {
+						c.Check([]interface{}{i, iversion, j, jversion, "<0"}, deepEquals, []interface{}{i, iversion, j, jversion, actual})
+					}
+					if i == j && !(actual == 0) {
+						c.Check([]interface{}{i, iversion, j, jversion, "==0"}, deepEquals, []interface{}{i, iversion, j, jversion, actual})
+					}
+					if i > j && !(actual > 0) {
+						c.Check([]interface{}{i, iversion, j, jversion, ">0"}, deepEquals, []interface{}{i, iversion, j, jversion, actual})
+					}
+				}
+			}
+
+		}
+	}
 }
