@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2016/05/07 03:09:33 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2016/07/07 16:44:14 taca Exp $
 bin/cifsdd
 bin/dbwrap_tool
 bin/eventlogadm
@@ -431,6 +431,7 @@ ${PYSITELIB}/samba/tests/samba3.py
 ${PYSITELIB}/samba/tests/samba3sam.py
 ${PYSITELIB}/samba/tests/samba_tool/__init__.py
 ${PYSITELIB}/samba/tests/samba_tool/base.py
+${PYSITELIB}/samba/tests/samba_tool/fsmo.py
 ${PYSITELIB}/samba/tests/samba_tool/gpo.py
 ${PYSITELIB}/samba/tests/samba_tool/group.py
 ${PYSITELIB}/samba/tests/samba_tool/ntacl.py
