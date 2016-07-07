@@ -5,30 +5,30 @@ import (
 )
 
 func (s *Suite) TestMkopSubst_middle(c *check.C) {
-	c.Check(mkopSubst("pkgname", false, "kgna", false, "ri", false), equals, "prime")
-	c.Check(mkopSubst("pkgname", false, "pkgname", false, "replacement", false), equals, "replacement")
+	c.Check(mkopSubst("pkgname", false, "kgna", false, "ri", ""), equals, "prime")
+	c.Check(mkopSubst("pkgname", false, "pkgname", false, "replacement", ""), equals, "replacement")
 }
 
 func (s *Suite) TestMkopSubst_left(c *check.C) {
-	c.Check(mkopSubst("pkgname", true, "kgna", false, "ri", false), equals, "pkgname")
-	c.Check(mkopSubst("pkgname", true, "pkgname", false, "replacement", false), equals, "replacement")
+	c.Check(mkopSubst("pkgname", true, "kgna", false, "ri", ""), equals, "pkgname")
+	c.Check(mkopSubst("pkgname", true, "pkgname", false, "replacement", ""), equals, "replacement")
 }
 
 func (s *Suite) TestMkopSubst_right(c *check.C) {
-	c.Check(mkopSubst("pkgname", false, "kgna", true, "ri", false), equals, "pkgname")
-	c.Check(mkopSubst("pkgname", false, "pkgname", true, "replacement", false), equals, "replacement")
+	c.Check(mkopSubst("pkgname", false, "kgna", true, "ri", ""), equals, "pkgname")
+	c.Check(mkopSubst("pkgname", false, "pkgname", true, "replacement", ""), equals, "replacement")
 }
 
 func (s *Suite) TestMkopSubst_leftRight(c *check.C) {
-	c.Check(mkopSubst("pkgname", true, "kgna", true, "ri", false), equals, "pkgname")
-	c.Check(mkopSubst("pkgname", false, "pkgname", false, "replacement", false), equals, "replacement")
+	c.Check(mkopSubst("pkgname", true, "kgna", true, "ri", ""), equals, "pkgname")
+	c.Check(mkopSubst("pkgname", false, "pkgname", false, "replacement", ""), equals, "replacement")
 }
 
-func (s *Suite) TestMkopSubst_all(c *check.C) {
-	c.Check(mkopSubst("aaaaa", false, "a", false, "b", true), equals, "bbbbb")
-	c.Check(mkopSubst("aaaaa", true, "a", false, "b", true), equals, "baaaa")
-	c.Check(mkopSubst("aaaaa", false, "a", true, "b", true), equals, "aaaab")
-	c.Check(mkopSubst("aaaaa", true, "a", true, "b", true), equals, "aaaaa")
+func (s *Suite) TestMkopSubst_gflag(c *check.C) {
+	c.Check(mkopSubst("aaaaa", false, "a", false, "b", "g"), equals, "bbbbb")
+	c.Check(mkopSubst("aaaaa", true, "a", false, "b", "g"), equals, "baaaa")
+	c.Check(mkopSubst("aaaaa", false, "a", true, "b", "g"), equals, "aaaab")
+	c.Check(mkopSubst("aaaaa", true, "a", true, "b", "g"), equals, "aaaaa")
 }
 
 func (s *Suite) TestReplaceFirst(c *check.C) {

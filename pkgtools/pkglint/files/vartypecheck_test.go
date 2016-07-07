@@ -289,9 +289,11 @@ func (s *Suite) Test_VartypeCheck_Perms(c *check.C) {
 
 func (s *Suite) TestVartypeCheck_PkgOptionsVar(c *check.C) {
 	runVartypeChecks("PKG_OPTIONS_VAR.screen", opAssign, (*VartypeCheck).PkgOptionsVar,
-		"PKG_OPTIONS.${PKGBASE}")
+		"PKG_OPTIONS.${PKGBASE}",
+		"PKG_OPTIONS.anypkgbase")
 
-	c.Check(s.Output(), equals, "ERROR: fname:1: PKGBASE must not be used in PKG_OPTIONS_VAR.\n")
+	c.Check(s.Output(), equals, ""+
+		"ERROR: fname:1: PKGBASE must not be used in PKG_OPTIONS_VAR.\n")
 }
 
 func (s *Suite) TestVartypeCheck_PkgRevision(c *check.C) {

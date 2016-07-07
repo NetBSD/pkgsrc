@@ -516,6 +516,9 @@ func (gd *GlobalData) loadDeprecatedVars() {
 
 		// January 2016
 		"SUBST_POSTCMD.*": "Has been removed, as it seemed unused.",
+
+		// June 2016
+		"USE_CROSSBASE": "Has been removed.",
 	}
 }
 

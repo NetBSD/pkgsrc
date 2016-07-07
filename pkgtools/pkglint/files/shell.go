@@ -8,97 +8,12 @@ import (
 )
 
 const (
-	reShellToken = `^\s*(` +
-		`#.*` + // shell comment
-		`|(?:` +
-		`'[^']*'` + // single quoted string
-		"|\"`[^`]+`\"" + // backticks command execution in double quotes
-		`|"(?:\\.|[^"])*"` + // double quoted string
-		"|`[^`]*`" + // backticks command execution (very simple case)
-		`|\\\$\$` + // a shell-escaped dollar sign
-		`|\\[^\$]` + // other escaped characters
-		`|\$[\w_]` + // one-character make(1) variable
-		`|\$\$[0-9A-Z_a-z]+` + // shell variable
-		`|\$\$[!#?@]` + // special shell variables
-		`|\$\$[./]` + // unescaped dollar in shell, followed by punctuation
-		`|\$\$\$\$` + // the special pid shell variable
-		`|\$\$\{[0-9A-Z_a-z]+[#%:]?[^}]*\}` + // shell variable in braces
-		`|[^\(\)'\"\\\s;&\|<>` + "`" + `\$]` + // non-special character
-		`|\$\{[^\s\"'` + "`" + `]+` + // HACK: nested make(1) variables
-		`)+` + // any of the above may be repeated
-		`|\$\$\(` + // POSIX-style backticks replacement
-		`|;;?` +
-		`|&&?` +
-		`|\|\|?` +
-		`|\(` +
-		`|\)` +
-		`|>&` +
-		`|<<?` +
-		`|>>?` +
-		`|#.*)`
 	reShVarassign    = `^([A-Z_a-z]\w*)=`
 	reShVarname      = `(?:[!#*\-\d?@]|\$\$|[A-Za-z_]\w*)`
 	reShVarexpansion = `(?:(?:#|##|%|%%|:-|:=|:\?|:\+|\+)[^$\\{}]*)`
 	reShVaruse       = `\$\$` + `(?:` + reShVarname + `|` + `\{` + reShVarname + `(?:` + reShVarexpansion + `)?` + `\})`
 	reShDollar       = `\\\$\$|` + reShVaruse + `|\$\$[,\-/|]`
 )
-
-// ShellCommandState
-type scState uint8
-
-const (
-	scstStart scState = iota
-	scstCont
-	scstInstall
-	scstInstallD
-	scstMkdir
-	scstPax
-	scstPaxS
-	scstSed
-	scstSedE
-	scstSet
-	scstSetCont
-	scstCond
-	scstCondCont
-	scstCase
-	scstCaseIn
-	scstCaseLabel
-	scstCaseLabelCont
-	scstFor
-	scstForIn
-	scstForCont
-	scstEcho
-	scstInstallDir
-	scstInstallDir2
-)
-
-func (st scState) String() string {
-	return [...]string{
-		"start",
-		"continuation",
-		"install",
-		"install -d",
-		"mkdir",
-		"pax",
-		"pax -s",
-		"sed",
-		"sed -e",
-		"set",
-		"set-continuation",
-		"cond",
-		"cond-continuation",
-		"case",
-		"case in",
-		"case label",
-		"case-label-continuation",
-		"for",
-		"for-in",
-		"for-continuation",
-		"echo",
-		"install-dir",
-		"install-dir2",
-	}[st]
-}
 
 type ShellLine struct {
 	line   *Line
@@ -355,12 +270,6 @@ func (shline *ShellLine) variableNeedsQuoting(shvarname string) bool {
 	return true
 }
 
-type ShelltextContext struct {
-	shline    *ShellLine
-	state     scState
-	shellword string
-}
-
 func (shline *ShellLine) CheckShellCommandLine(shelltext string) {
 	if G.opts.Debug {
 		defer tracecall1(shelltext)()
@@ -411,62 +320,44 @@ func (shline *ShellLine) CheckShellCommandLine(shelltext string) {
 }
 
 func (shline *ShellLine) CheckShellCommand(shellcmd string, pSetE *bool) {
-	if false {
-		p := NewMkShParser(shline.line, shellcmd, false)
-		cmds := p.Program()
-		rest := p.tok.parser.Rest()
-		if rest != "" {
-			traceStep("shellcmd=%q", shellcmd)
-			if cmds != nil {
-				for _, andor := range cmds.AndOrs {
-					traceStep("AndOr %v", andor)
-				}
+	if G.opts.Debug {
+		defer tracecall()()
+	}
+
+	program, err := parseShellProgram(shline.line, shellcmd)
+	if err != nil && contains(shellcmd, "$$(") { // Hack until the shell parser can handle subshells.
+		shline.line.Warn0("Invoking subshells via $(...) is not portable enough.")
+		return
+	}
+	if err != nil {
+		shline.line.Warnf("Pkglint ShellLine.CheckShellCommand: %s", err)
+		return
+	}
+
+	spc := &ShellProgramChecker{shline}
+	spc.checkConditionalCd(program)
+
+	(*MkShWalker).Walk(nil, program, func(node interface{}) {
+		if cmd, ok := node.(*MkShSimpleCommand); ok {
+			scc := NewSimpleCommandChecker(shline, cmd)
+			scc.Check()
+			if scc.strcmd.Name == "set" && scc.strcmd.AnyArgMatches(`^-.*e`) {
+				*pSetE = true
 			}
-			shline.line.Warnf("Pkglint parse error in ShellLine.CheckShellCommand at %q", p.peekText()+rest)
-		}
-	}
-
-	state := scstStart
-	tokens, rest := splitIntoShellTokens(shline.line, shellcmd)
-	if rest != "" {
-		shline.line.Warnf("Pkglint parse error in ShellLine.CheckShellCommand at %q (state=%s)", rest, state)
-	}
-
-	prevToken := ""
-	for _, token := range tokens {
-		if G.opts.Debug {
-			traceStep("checkShellCommand state=%v token=%q", state, token)
 		}
 
-		{
-			noQuotingNeeded := state == scstCase ||
-				state == scstForCont ||
-				state == scstSetCont ||
-				(state == scstStart && matches(token, reShVarassign))
-			shline.CheckWord(token, !noQuotingNeeded)
+		if cmd, ok := node.(*MkShList); ok {
+			spc.checkSetE(cmd, pSetE)
 		}
 
-		st := &ShelltextContext{shline, state, token}
-		st.checkCommandStart()
-		st.checkConditionalCd()
-		if state != scstPaxS && state != scstSedE && state != scstCaseLabel {
-			shline.line.CheckAbsolutePathname(token)
-		}
-		st.checkAutoMkdirs()
-		st.checkInstallMulti()
-		st.checkPaxPe()
-		st.checkQuoteSubstitution()
-		st.checkEchoN()
-		st.checkPipeExitcode()
-		st.checkSetE(pSetE, prevToken)
-
-		if state == scstSet && hasPrefix(token, "-") && contains(token, "e") || state == scstStart && token == "${RUN}" {
-			*pSetE = true
+		if cmd, ok := node.(*MkShPipeline); ok {
+			spc.checkPipeExitcode(shline.line, cmd)
 		}
 
-		state = shline.nextState(state, token)
-		prevToken = token
-	}
+		if word, ok := node.(*ShToken); ok {
+			spc.checkWord(word, false)
+		}
+	})
 }
 
 func (shline *ShellLine) CheckShellCommands(shellcmds string) {
@@ -493,7 +384,9 @@ func (shline *ShellLine) checkHiddenAndSuppress(hiddenAndSuppress, rest string) 
 		// Shell comments may be hidden, since they cannot have side effects.
 
 	default:
-		if m, cmd := match1(rest, reShellToken); m {
+		tokens, _ := splitIntoShellTokens(shline.line, rest)
+		if len(tokens) > 0 {
+			cmd := tokens[0]
 			switch cmd {
 			case "${DELAYED_ERROR_MSG}", "${DELAYED_WARNING_MSG}",
 				"${DO_NADA}",
@@ -525,28 +418,48 @@ func (shline *ShellLine) checkHiddenAndSuppress(hiddenAndSuppress, rest string) 
 	}
 }
 
-func (ctx *ShelltextContext) checkCommandStart() {
+type SimpleCommandChecker struct {
+	shline *ShellLine
+	cmd    *MkShSimpleCommand
+	strcmd *StrCommand
+}
+
+func NewSimpleCommandChecker(shline *ShellLine, cmd *MkShSimpleCommand) *SimpleCommandChecker {
+	strcmd := NewStrCommand(cmd)
+	return &SimpleCommandChecker{shline, cmd, strcmd}
+
+}
+
+func (c *SimpleCommandChecker) Check() {
 	if G.opts.Debug {
-		defer tracecall2(ctx.state.String(), ctx.shellword)()
+		defer tracecall(c.strcmd)()
 	}
 
-	state, shellword := ctx.state, ctx.shellword
-	if state != scstStart && state != scstCond {
-		return
+	c.checkCommandStart()
+	c.checkAbsolutePathnames()
+	c.checkAutoMkdirs()
+	c.checkInstallMulti()
+	c.checkPaxPe()
+	c.checkEchoN()
+}
+
+func (ctx *SimpleCommandChecker) checkCommandStart() {
+	if G.opts.Debug {
+		defer tracecall()()
 	}
 
+	shellword := ctx.strcmd.Name
 	switch {
-	case shellword == "${RUN}":
+	case shellword == "${RUN}" || shellword == "":
 	case ctx.handleForbiddenCommand():
 	case ctx.handleTool():
 	case ctx.handleCommandVariable():
-	case matches(shellword, `^(?:\$\$\(|\(|\)|:|;|;;|&&|\|\||\{|\}|break|case|cd|continue|do|done|elif|else|esac|eval|exec|exit|export|fi|for|if|read|set|shift|then|umask|unset|while)$`):
-	case matches(shellword, `^\w+=`): // Variable assignment
+	case matches(shellword, `^(?::|break|cd|continue|eval|exec|exit|export|read|set|shift|umask|unset)$`):
 	case hasPrefix(shellword, "./"): // All commands from the current directory are fine.
 	case hasPrefix(shellword, "${PKGSRCDIR"): // With or without the :Q modifier
 	case ctx.handleComment():
 	default:
-		if G.opts.WarnExtra {
+		if G.opts.WarnExtra && !(G.Mk != nil && G.Mk.indentation.DependsOn("OPSYS")) {
 			ctx.shline.line.Warn1("Unknown shell command %q.", shellword)
 			Explain3(
 				"If you want your package to be portable to all platforms that pkgsrc",
@@ -556,12 +469,12 @@ func (ctx *ShelltextContext) checkCommandStart() {
 	}
 }
 
-func (ctx *ShelltextContext) handleTool() bool {
+func (ctx *SimpleCommandChecker) handleTool() bool {
 	if G.opts.Debug {
-		defer tracecall1(ctx.shellword)()
+		defer tracecall()()
 	}
 
-	shellword := ctx.shellword
+	shellword := ctx.strcmd.Name
 	tool := G.globalData.Tools.byName[shellword]
 	if tool == nil {
 		return false
@@ -579,10 +492,15 @@ func (ctx *ShelltextContext) handleTool() bool {
 	return true
 }
 
-func (ctx *ShelltextContext) handleForbiddenCommand() bool {
-	switch path.Base(ctx.shellword) {
+func (ctx *SimpleCommandChecker) handleForbiddenCommand() bool {
+	if G.opts.Debug {
+		defer tracecall()()
+	}
+
+	shellword := ctx.strcmd.Name
+	switch path.Base(shellword) {
 	case "ktrace", "mktexlsr", "strace", "texconfig", "truss":
-		ctx.shline.line.Error1("%q must not be used in Makefiles.", ctx.shellword)
+		ctx.shline.line.Error1("%q must not be used in Makefiles.", shellword)
 		Explain3(
 			"This command must appear in INSTALL scripts, not in the package",
 			"Makefile, so that the package also works if it is installed as a binary",
@@ -592,12 +510,12 @@ func (ctx *ShelltextContext) handleForbiddenCommand() bool {
 	return false
 }
 
-func (ctx *ShelltextContext) handleCommandVariable() bool {
+func (ctx *SimpleCommandChecker) handleCommandVariable() bool {
 	if G.opts.Debug {
-		defer tracecall1(ctx.shellword)()
+		defer tracecall()()
 	}
 
-	shellword := ctx.shellword
+	shellword := ctx.strcmd.Name
 	if m, varname := match1(shellword, `^\$\{([\w_]+)\}$`); m {
 
 		if tool := G.globalData.Tools.byVarname[varname]; tool != nil {
@@ -622,12 +540,16 @@ func (ctx *ShelltextContext) handleCommandVariable() bool {
 	return false
 }
 
-func (ctx *ShelltextContext) handleComment() bool {
+func (ctx *SimpleCommandChecker) handleComment() bool {
 	if G.opts.Debug {
-		defer tracecall1(ctx.shellword)()
+		defer tracecall()()
 	}
 
-	shellword := ctx.shellword
+	shellword := ctx.strcmd.Name
+	if G.opts.Debug {
+		defer tracecall1(shellword)()
+	}
+
 	if !hasPrefix(shellword, "#") {
 		return false
 	}
@@ -660,62 +582,165 @@ func (ctx *ShelltextContext) handleComment() bool {
 	return true
 }
 
-func (ctx *ShelltextContext) checkConditionalCd() {
-	if ctx.state == scstCond && ctx.shellword == "cd" {
-		ctx.shline.line.Error0("The Solaris /bin/sh cannot handle \"cd\" inside conditionals.")
-		Explain3(
-			"When the Solaris shell is in \"set -e\" mode and \"cd\" fails, the",
-			"shell will exit, no matter if it is protected by an \"if\" or the",
-			"\"||\" operator.")
+type ShellProgramChecker struct {
+	shline *ShellLine
+}
+
+func (c *ShellProgramChecker) checkConditionalCd(list *MkShList) {
+	if G.opts.Debug {
+		defer tracecall()()
+	}
+
+	getSimple := func(list *MkShList) *MkShSimpleCommand {
+		if len(list.AndOrs) == 1 {
+			if len(list.AndOrs[0].Pipes) == 1 {
+				if len(list.AndOrs[0].Pipes[0].Cmds) == 1 {
+					return list.AndOrs[0].Pipes[0].Cmds[0].Simple
+				}
+			}
+		}
+		return nil
+	}
+
+	checkConditionalCd := func(cmd *MkShSimpleCommand) {
+		if NewStrCommand(cmd).Name == "cd" {
+			c.shline.line.Error0("The Solaris /bin/sh cannot handle \"cd\" inside conditionals.")
+			Explain3(
+				"When the Solaris shell is in \"set -e\" mode and \"cd\" fails, the",
+				"shell will exit, no matter if it is protected by an \"if\" or the",
+				"\"||\" operator.")
+		}
+	}
+
+	(*MkShWalker).Walk(nil, list, func(node interface{}) {
+		if cmd, ok := node.(*MkShIfClause); ok {
+			for _, cond := range cmd.Conds {
+				if simple := getSimple(cond); simple != nil {
+					checkConditionalCd(simple)
+				}
+			}
+		}
+		if cmd, ok := node.(*MkShLoopClause); ok {
+			if simple := getSimple(cmd.Cond); simple != nil {
+				checkConditionalCd(simple)
+			}
+		}
+	})
+}
+
+func (c *ShellProgramChecker) checkWords(words []*ShToken, checkQuoting bool) {
+	if G.opts.Debug {
+		defer tracecall()()
+	}
+
+	for _, word := range words {
+		c.checkWord(word, checkQuoting)
 	}
 }
 
-func (ctx *ShelltextContext) checkAutoMkdirs() {
-	state, shellword := ctx.state, ctx.shellword
-
-	line := ctx.shline.line
-	if (state == scstInstallD || state == scstMkdir) && matches(shellword, `^(?:\$\{DESTDIR\})?\$\{PREFIX(?:|:Q)\}/`) {
-		line.Warn1("Please use AUTO_MKDIRS instead of %q.",
-			ifelseStr(state == scstMkdir, "${MKDIR}", "${INSTALL} -d"))
-		Explain4(
-			"Setting AUTO_MKDIRS=yes automatically creates all directories that",
-			"are mentioned in the PLIST.  If you need additional directories,",
-			"specify them in INSTALLATION_DIRS, which is a list of directories",
-			"relative to ${PREFIX}.")
+func (c *ShellProgramChecker) checkWord(word *ShToken, checkQuoting bool) {
+	if G.opts.Debug {
+		defer tracecall(word.MkText)()
 	}
 
-	if (state == scstInstallDir || state == scstInstallDir2) && !contains(shellword, "$$") {
-		if m, dirname := match1(shellword, `^(?:\$\{DESTDIR\})?\$\{PREFIX(?:|:Q)\}/(.*)`); m {
-			line.Note1("You can use AUTO_MKDIRS=yes or \"INSTALLATION_DIRS+= %s\" instead of this command.", dirname)
-			Explain(
-				"Many packages include a list of all needed directories in their",
-				"PLIST file.  In such a case, you can just set AUTO_MKDIRS=yes and",
-				"be done.  The pkgsrc infrastructure will then create all directories",
-				"in advance.",
-				"",
-				"To create directories that are not mentioned in the PLIST file, it",
-				"is easier to just list them in INSTALLATION_DIRS than to execute the",
-				"commands explicitly.  That way, you don't have to think about which",
-				"of the many INSTALL_*_DIR variables is appropriate, since",
-				"INSTALLATION_DIRS takes care of that.")
+	c.shline.CheckWord(word.MkText, checkQuoting)
+}
+
+func (c *SimpleCommandChecker) checkAbsolutePathnames() {
+	if G.opts.Debug {
+		defer tracecall()()
+	}
+
+	cmdname := c.strcmd.Name
+	isSubst := false
+	for _, arg := range c.strcmd.Args {
+		if !isSubst {
+			c.shline.line.CheckAbsolutePathname(arg)
+		}
+		if false && isSubst && !matches(arg, `"^[\"\'].*[\"\']$`) {
+			c.shline.line.Warn1("Substitution commands like %q should always be quoted.", arg)
+			Explain3(
+				"Usually these substitution commands contain characters like '*' or",
+				"other shell metacharacters that might lead to lookup of matching",
+				"filenames and then expand to more than one word.")
+		}
+		isSubst = cmdname == "${PAX}" && arg == "-s" || cmdname == "${SED}" && arg == "-e"
+	}
+}
+
+func (ctx *SimpleCommandChecker) checkAutoMkdirs() {
+	if G.opts.Debug {
+		defer tracecall()()
+	}
+
+	cmdname := ctx.strcmd.Name
+	switch {
+	case cmdname == "${MKDIR}":
+		break
+	case cmdname == "${INSTALL}" && ctx.strcmd.HasOption("-d"):
+		cmdname = "${INSTALL} -d"
+	case matches(cmdname, `^\$\{INSTALL_.*_DIR\}$`):
+		break
+	default:
+		return
+	}
+
+	for _, arg := range ctx.strcmd.Args {
+		if !contains(arg, "$$") && !matches(arg, `\$\{[_.]*[a-z]`) {
+			if m, dirname := match1(arg, `^(?:\$\{DESTDIR\})?\$\{PREFIX(?:|:Q)\}/(.*)`); m {
+				ctx.shline.line.Note2("You can use AUTO_MKDIRS=yes or \"INSTALLATION_DIRS+= %s\" instead of %q.", dirname, cmdname)
+				Explain(
+					"Many packages include a list of all needed directories in their",
+					"PLIST file.  In such a case, you can just set AUTO_MKDIRS=yes and",
+					"be done.  The pkgsrc infrastructure will then create all directories",
+					"in advance.",
+					"",
+					"To create directories that are not mentioned in the PLIST file, it",
+					"is easier to just list them in INSTALLATION_DIRS than to execute the",
+					"commands explicitly.  That way, you don't have to think about which",
+					"of the many INSTALL_*_DIR variables is appropriate, since",
+					"INSTALLATION_DIRS takes care of that.")
+			}
 		}
 	}
 }
 
-func (ctx *ShelltextContext) checkInstallMulti() {
-	if ctx.state == scstInstallDir2 && hasPrefix(ctx.shellword, "$") {
-		line := ctx.shline.line
-		line.Warn0("The INSTALL_*_DIR commands can only handle one directory at a time.")
-		Explain2(
-			"Many implementations of install(1) can handle more, but pkgsrc aims",
-			"at maximum portability.")
+func (ctx *SimpleCommandChecker) checkInstallMulti() {
+	if G.opts.Debug {
+		defer tracecall()()
+	}
+
+	cmd := ctx.strcmd
+
+	if hasPrefix(cmd.Name, "${INSTALL_") && hasSuffix(cmd.Name, "_DIR}") {
+		prevdir := ""
+		for i, arg := range cmd.Args {
+			switch {
+			case hasPrefix(arg, "-"):
+				break
+			case i > 0 && (cmd.Args[i-1] == "-m" || cmd.Args[i-1] == "-o" || cmd.Args[i-1] == "-g"):
+				break
+			default:
+				if prevdir != "" {
+					ctx.shline.line.Warn0("The INSTALL_*_DIR commands can only handle one directory at a time.")
+					Explain2(
+						"Many implementations of install(1) can handle more, but pkgsrc aims",
+						"at maximum portability.")
+					return
+				}
+				prevdir = arg
+			}
+		}
 	}
 }
 
-func (ctx *ShelltextContext) checkPaxPe() {
-	if ctx.state == scstPax && ctx.shellword == "-pe" {
-		line := ctx.shline.line
-		line.Warn0("Please use the -pp option to pax(1) instead of -pe.")
+func (ctx *SimpleCommandChecker) checkPaxPe() {
+	if G.opts.Debug {
+		defer tracecall()()
+	}
+
+	if ctx.strcmd.Name == "${PAX}" && ctx.strcmd.HasOption("-pe") {
+		ctx.shline.line.Warn0("Please use the -pp option to pax(1) instead of -pe.")
 		Explain3(
 			"The -pe option tells pax to preserve the ownership of the files, which",
 			"means that the installed files will belong to the user that has built",
@@ -723,28 +748,22 @@ func (ctx *ShelltextContext) checkPaxPe() {
 	}
 }
 
-func (ctx *ShelltextContext) checkQuoteSubstitution() {
-	if ctx.state == scstPaxS || ctx.state == scstSedE {
-		if false && !matches(ctx.shellword, `"^[\"\'].*[\"\']$`) {
-			line := ctx.shline.line
-			line.Warn1("Substitution commands like %q should always be quoted.", ctx.shellword)
-			Explain3(
-				"Usually these substitution commands contain characters like '*' or",
-				"other shell metacharacters that might lead to lookup of matching",
-				"filenames and then expand to more than one word.")
-		}
+func (ctx *SimpleCommandChecker) checkEchoN() {
+	if G.opts.Debug {
+		defer tracecall()()
 	}
-}
 
-func (ctx *ShelltextContext) checkEchoN() {
-	if ctx.state == scstEcho && ctx.shellword == "-n" {
+	if ctx.strcmd.Name == "${ECHO}" && ctx.strcmd.HasOption("-n") {
 		ctx.shline.line.Warn0("Please use ${ECHO_N} instead of \"echo -n\".")
 	}
 }
 
-func (ctx *ShelltextContext) checkPipeExitcode() {
-	if G.opts.WarnExtra && ctx.state != scstCaseLabelCont && ctx.shellword == "|" {
-		line := ctx.shline.line
+func (ctx *ShellProgramChecker) checkPipeExitcode(line *Line, pipeline *MkShPipeline) {
+	if G.opts.Debug {
+		defer tracecall()()
+	}
+
+	if G.opts.WarnExtra && len(pipeline.Cmds) > 1 {
 		line.Warn0("The exitcode of the left-hand-side command of the pipe operator is ignored.")
 		Explain(
 			"In a shell command like \"cat *.txt | grep keyword\", if the command",
@@ -755,10 +774,15 @@ func (ctx *ShelltextContext) checkPipeExitcode() {
 	}
 }
 
-func (ctx *ShelltextContext) checkSetE(eflag *bool, prevToken string) {
-	if G.opts.WarnExtra && ctx.shellword == ";" && ctx.state != scstCondCont && ctx.state != scstForCont && !*eflag {
+func (ctx *ShellProgramChecker) checkSetE(list *MkShList, eflag *bool) {
+	if G.opts.Debug {
+		defer tracecall()()
+	}
+
+	// Disabled until the shell parser can recognize "command || exit 1" reliably.
+	if false && G.opts.WarnExtra && !*eflag && "the current token" == ";" {
 		*eflag = true
-		ctx.shline.line.Warn1("Please switch to \"set -e\" mode before using a semicolon (the one after %q) to separate commands.", prevToken)
+		ctx.shline.line.Warn1("Please switch to \"set -e\" mode before using a semicolon (the one after %q) to separate commands.", "previous token")
 		Explain(
 			"Normally, when a shell command fails (returns non-zero), the",
 			"remaining commands are still executed.  For example, the following",
@@ -777,6 +801,10 @@ func (ctx *ShelltextContext) checkSetE(eflag *bool, prevToken string) {
 
 // Some shell commands should not be used in the install phase.
 func (shline *ShellLine) checkCommandUse(shellcmd string) {
+	if G.opts.Debug {
+		defer tracecall()()
+	}
+
 	if G.Mk == nil || !matches(G.Mk.target, `^(?:pre|do|post)-install$`) {
 		return
 	}
@@ -815,113 +843,6 @@ func (shline *ShellLine) checkCommandUse(shellcmd string) {
 	}
 }
 
-func (shline *ShellLine) nextState(state scState, shellword string) scState {
-	switch {
-	case shellword == ";;":
-		return scstCaseLabel
-	case state == scstCaseLabelCont && shellword == "|":
-		return scstCaseLabel
-	case matches(shellword, `^[;&\|]+$`):
-		return scstStart
-	case state == scstStart:
-		switch shellword {
-		case "${INSTALL}":
-			return scstInstall
-		case "${MKDIR}":
-			return scstMkdir
-		case "${PAX}":
-			return scstPax
-		case "${SED}":
-			return scstSed
-		case "${ECHO}", "echo":
-			return scstEcho
-		case "${RUN}", "then", "else", "do", "(":
-			return scstStart
-		case "set":
-			return scstSet
-		case "if", "elif", "while":
-			return scstCond
-		case "case":
-			return scstCase
-		case "for":
-			return scstFor
-		default:
-			switch {
-			case matches(shellword, `^\$\{INSTALL_[A-Z]+_DIR\}$`):
-				return scstInstallDir
-			case matches(shellword, reShVarassign):
-				return scstStart
-			default:
-				return scstCont
-			}
-		}
-	case state == scstMkdir:
-		return scstMkdir
-	case state == scstInstall && shellword == "-d":
-		return scstInstallD
-	case state == scstInstall, state == scstInstallD:
-		if matches(shellword, `^-[ogm]$`) {
-			return scstCont // XXX: why not keep the state?
-		}
-		return state
-	case state == scstInstallDir && hasPrefix(shellword, "-"):
-		return scstCont
-	case state == scstInstallDir && hasPrefix(shellword, "$"):
-		return scstInstallDir2
-	case state == scstInstallDir || state == scstInstallDir2:
-		return state
-	case state == scstPax && shellword == "-s":
-		return scstPaxS
-	case state == scstPax && hasPrefix(shellword, "-"):
-		return scstPax
-	case state == scstPax:
-		return scstCont
-	case state == scstPaxS:
-		return scstPax
-	case state == scstSed && shellword == "-e":
-		return scstSedE
-	case state == scstSed && hasPrefix(shellword, "-"):
-		return scstSed
-	case state == scstSed:
-		return scstCont
-	case state == scstSedE:
-		return scstSed
-	case state == scstSet:
-		return scstSetCont
-	case state == scstSetCont:
-		return scstSetCont
-	case state == scstCase:
-		return scstCaseIn
-	case state == scstCaseIn && shellword == "in":
-		return scstCaseLabel
-	case state == scstCaseLabel && shellword == "esac":
-		return scstCont
-	case state == scstCaseLabel:
-		return scstCaseLabelCont
-	case state == scstCaseLabelCont && shellword == ")":
-		return scstStart
-	case state == scstCont:
-		return scstCont
-	case state == scstCond:
-		return scstCondCont
-	case state == scstCondCont:
-		return scstCondCont
-	case state == scstFor:
-		return scstForIn
-	case state == scstForIn && shellword == "in":
-		return scstForCont
-	case state == scstForCont:
-		return scstForCont
-	case state == scstEcho:
-		return scstCont
-	default:
-		if G.opts.Debug {
-			traceStep("Internal pkglint error: shellword.nextState state=%s shellword=%q", state, shellword)
-		}
-		return scstStart
-	}
-}
-
 // Example: "word1 word2;;;" => "word1", "word2", ";;", ";"
 func splitIntoShellTokens(line *Line, text string) (tokens []string, rest string) {
 	if G.opts.Debug {
@@ -943,10 +864,10 @@ func splitIntoShellTokens(line *Line, text string) (tokens []string, rest string
 		if atom.Type == shtSpace && q == shqPlain {
 			emit()
 		} else if atom.Type == shtWord || atom.Type == shtVaruse || atom.Quoting != shqPlain {
-			word += atom.Text
+			word += atom.MkText
 		} else {
 			emit()
-			tokens = append(tokens, atom.Text)
+			tokens = append(tokens, atom.MkText)
 		}
 	}
 	emit()
@@ -968,7 +889,7 @@ func splitIntoMkWords(line *Line, text string) (words []string, rest string) {
 			words = append(words, word)
 			word = ""
 		} else {
-			word += atom.Text
+			word += atom.MkText
 		}
 	}
 	if word != "" && atoms[len(atoms)-1].Quoting == shqPlain {

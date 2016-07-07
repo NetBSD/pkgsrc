@@ -145,6 +145,9 @@ func (s *Suite) TestPlistChecker_sort(c *check.C) {
 }
 
 func (s *Suite) TestPlistChecker_checkpathShare_Desktop(c *check.C) {
+	// Disabled due to PR 46570, item "10. It should stop".
+	return
+
 	s.UseCommandLine(c, "-Wextra")
 	G.Pkg = NewPackage("category/pkgpath")
 

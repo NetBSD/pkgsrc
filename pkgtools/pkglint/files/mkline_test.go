@@ -292,16 +292,11 @@ func (s *Suite) TestMkLine_(c *check.C) {
 
 	G.Mk = s.NewMkLines("Makefile",
 		"# $"+"NetBSD$",
-		"ac_cv_libpari_libs+=\t-L${BUILDLINK_PREFIX.pari}/lib", // From math/clisp-pari/Makefile, rev. 1.8
-		"var+=value")
+		"ac_cv_libpari_libs+=\t-L${BUILDLINK_PREFIX.pari}/lib") // From math/clisp-pari/Makefile, rev. 1.8
 
 	G.Mk.mklines[1].checkVarassign()
-	G.Mk.mklines[2].checkVarassign()
 
-	c.Check(s.Output(), equals, ""+
-		"WARN: Makefile:2: ac_cv_libpari_libs is defined but not used. Spelling mistake?\n"+
-		"WARN: Makefile:3: As var is modified using \"+=\", its name should indicate plural.\n"+
-		"WARN: Makefile:3: var is defined but not used. Spelling mistake?\n")
+	c.Check(s.Output(), equals, "WARN: Makefile:2: ac_cv_libpari_libs is defined but not used. Spelling mistake?\n")
 }
 
 // In variable assignments, a plain '#' introduces a line comment, unless
@@ -679,6 +674,24 @@ func (s *Suite) TestMkLine_variableNeedsQuoting_18(c *check.C) {
 	c.Check(s.Output(), equals, "") // Don’t warn about missing :Q operators.
 }
 
+func (s *Suite) Test_MkLine_variableNeedsQuoting_tool_in_CONFIGURE_ENV(c *check.C) {
+	s.UseCommandLine(c, "-Wall")
+	G.globalData.InitVartypes()
+	G.globalData.Tools = NewToolRegistry()
+	G.globalData.Tools.RegisterVarname("tar", "TAR")
+
+	mklines := s.NewMkLines("Makefile",
+		"# $"+"NetBSD$",
+		"",
+		"CONFIGURE_ENV+=\tSYS_TAR_COMMAND_PATH=${TOOLS_TAR:Q}")
+
+	mklines.mklines[2].checkVarassignVaruse()
+
+	// The TOOLS_* variables only contain the path to the tool,
+	// without any additional arguments that might be necessary.
+	c.Check(s.Output(), equals, "NOTE: Makefile:3: The :Q operator isn't necessary for ${TOOLS_TAR} here.\n")
+}
+
 func (s *Suite) Test_MkLine_Varuse_Modifier_L(c *check.C) {
 	s.UseCommandLine(c, "-Wall")
 	G.globalData.InitVartypes()
@@ -770,4 +783,29 @@ func (s *Suite) Test_MkLine_shell_varuse_in_backt_dquot(c *check.C) {
 	mklines.Check()
 
 	c.Check(s.Output(), equals, "WARN: x11/motif/Makefile:3: Unknown shell command \"${GREP}\".\n") // No parse errors.
+}
+
+// See PR 46570, Ctrl+F "3. In lang/perl5".
+func (s *Suite) Test_MkLine_getVariableType(c *check.C) {
+	mkline := NewMkLine(dummyLine)
+
+	c.Check(mkline.getVariableType("_PERL5_PACKLIST_AWK_STRIP_DESTDIR"), check.IsNil)
+	c.Check(mkline.getVariableType("SOME_DIR").guessed, equals, true)
+	c.Check(mkline.getVariableType("SOMEDIR").guessed, equals, true)
+}
+
+// See PR 46570, Ctrl+F "4. Shell quoting".
+// Pkglint is correct, since this definition for CPPFLAGS should be
+// seen by the shell as three words, not one word.
+func (s *Suite) Test_MkLine_Cflags(c *check.C) {
+	G.globalData.InitVartypes()
+	mklines := s.NewMkLines("Makefile",
+		"# $"+"NetBSD$",
+		"CPPFLAGS.SunOS+=\t-DPIPECOMMAND=\\\"/usr/sbin/sendmail -bs %s\\\"")
+
+	mklines.Check()
+
+	c.Check(s.Output(), equals, ""+
+		"WARN: Makefile:2: Unknown compiler flag \"-bs\".\n"+
+		"WARN: Makefile:2: Compiler flag \"%s\\\\\\\"\" should start with a hyphen.\n")
 }
