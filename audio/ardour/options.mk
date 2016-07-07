@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2016/06/20 08:17:42 kamil Exp $
+# $NetBSD: options.mk,v 1.2 2016/07/07 06:28:24 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ardour
 
@@ -11,7 +11,7 @@ PLIST_VARS=		alsa jack dummy
 
 .if ${OPSYS} == "Linux" || ${OPSYS} == "NetBSD"
 .  if empty(PKG_OPTIONS:Malsa)
-.    error ALSA is required on this platform
+PKG_FAIL_REASON+=	"ALSA is required on this platform."
 .  endif
 .endif
 
