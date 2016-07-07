@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16120 2016/07/07 16:45:53 taca Exp $
+$NetBSD: TODO,v 1.16121 2016/07/07 20:53:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -577,7 +577,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o deskmenu-1.4.5
 	o dhcpcd-dbus-0.6.1
 	o di-4.42
-	o digikam-4.14.0
+	o digikam-5.0
 	o dinotrace-9.4d
 	o discount-2.2.0
 	o dmidecode-3.0
@@ -1407,7 +1407,6 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o postal-0.72
 	o postfix-3.0.5
 	o postfix-3.1.1
-	o postgresql-postgis-2.1.6
 	o powerdns-3.7.3
 	o powerdns-ldap-3.7.3
 	o powerdns-mysql-3.7.3
