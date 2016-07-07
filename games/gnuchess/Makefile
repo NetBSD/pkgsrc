@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2016/05/03 01:46:15 mef Exp $
+# $NetBSD: Makefile,v 1.41 2016/07/07 14:49:25 jperkin Exp $
 
 DISTNAME=	gnuchess-6.2.2
 CATEGORIES=	games
@@ -9,30 +9,22 @@ HOMEPAGE=	http://www.gnu.org/software/chess/chess.html
 COMMENT=	GNU chess engine
 LICENSE=	gnu-gpl-v3
 
-GNU_CONFIGURE=	yes
-USE_TOOLS+=	flex gmake
 USE_LANGUAGES=	c c++
+USE_TOOLS+=	flex gmake
 
-#BOOKDIR=	${PREFIX}/lib/gnuchess
-DOCDIR=		${PREFIX}/share/doc/gnuchess
-
+GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--infodir=${PREFIX}/${PKGINFODIR}
-INFO_FILES=	yes
+CONFIGURE_ARGS+=	--disable-nls
 
-# powerpc has problems with anything >= -O2 here
-.if (${MACHINE_ARCH} == "powerpc")
-CONFIGURE_ENV+=		CFLAGS="-O -Winline -Wmissing-prototypes -funroll-loops"
-.else
-CONFIGURE_ENV+=		CFLAGS="-O3 -Winline -Wmissing-prototypes -funroll-loops -fomit-frame-pointer"
-.endif
+DOCDIR=			${PREFIX}/share/doc/gnuchess
+INFO_FILES=		yes
+INSTALLATION_DIRS=	${DOCDIR}
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing hardcoded paths.
 SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	src/book.h
 SUBST_SED.paths=	-e 's,/usr/lib/games/,${PREFIX}/lib/,g'
-
-INSTALLATION_DIRS=	${DOCDIR}
 
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/doc/README ${DESTDIR}${DOCDIR}
