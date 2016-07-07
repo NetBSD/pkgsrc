@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 01:32:11 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/07/07 08:39:12 wiz Exp $
 
-SHA1 (direvent-5.0.tar.gz) = 16d495b9fd5e1aa5dad879ddb8acbb453d2d6d36
-RMD160 (direvent-5.0.tar.gz) = 8a3c297c4bc8d1f5a37047de4a24dc8780d225d8
-SHA512 (direvent-5.0.tar.gz) = 9019d3ff532a4c15d1bd1cd78a9e9b3bdc34b1f0b8efb74ef9b3083a4d17cadc3a0b6fd5f54022e70206637fd94053da94a5caa88769d27ca9e56e2a12f304ae
-Size (direvent-5.0.tar.gz) = 742586 bytes
+SHA1 (direvent-5.1.tar.gz) = b9cfc4f6685de1cc422256c42da992a6024bbb1d
+RMD160 (direvent-5.1.tar.gz) = 5621c3667b4b467dd26d16525c2af78f26b0c61f
+SHA512 (direvent-5.1.tar.gz) = 21fd9fd2c6d7de3f8c52a56496121809456467184bf56cd5f9242a769424a72ca5a29deb5a6b10ae381ea99bc754dd1d5843aa38b478c2d7e5aa0a8ee7c9ba4d
+Size (direvent-5.1.tar.gz) = 846246 bytes
