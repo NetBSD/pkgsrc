@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2704 2016/07/07 12:09:40 rillig Exp $
+$NetBSD: CHANGES-2016,v 1.2705 2016/07/07 12:15:45 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3926,3 +3926,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated devel/libev to 4.22 [adam 2016-07-07]
 	Updated www/nghttp2 to 1.12.0 [adam 2016-07-07]
 	Updated pkgtools/pkglint to 5.4.3 [rillig 2016-07-07]
+	Updated lang/ocaml to 4.03.0nb1 [jperkin 2016-07-07]
