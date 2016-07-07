@@ -14,6 +14,9 @@ func (s *Suite) TestPkgnameFromDistname(c *check.C) {
 	c.Check(pkg.pkgnameFromDistname("${DISTNAME:S|a|b|g}", "panama-0.13"), equals, "pbnbmb-0.13")
 	c.Check(pkg.pkgnameFromDistname("${DISTNAME:S|^lib||}", "libncurses"), equals, "ncurses")
 	c.Check(pkg.pkgnameFromDistname("${DISTNAME:S|^lib||}", "mylib"), equals, "mylib")
+	c.Check(pkg.pkgnameFromDistname("${DISTNAME:tl:S/-/./g:S/he/-/1}", "SaxonHE9-5-0-1J"), equals, "saxon-9.5.0.1j")
+	c.Check(pkg.pkgnameFromDistname("${DISTNAME:C/beta/.0./}", "fspanel-0.8beta1"), equals, "${DISTNAME:C/beta/.0./}")
+	c.Check(pkg.pkgnameFromDistname("${DISTNAME:S/-0$/.0/1}", "aspell-af-0.50-0"), equals, "aspell-af-0.50.0")
 
 	c.Check(s.Output(), equals, "")
 }
@@ -155,6 +158,19 @@ func (s *Suite) TestCheckdirPackage(c *check.C) {
 		"WARN: ~/distinfo: File not found. Please run \"@BMAKE@ makesum\".\n"+
 		"ERROR: ~/Makefile: Each package must define its LICENSE.\n"+
 		"WARN: ~/Makefile: No COMMENT given.\n")
+}
+
+func (s *Suite) Test_Package_Meta_package_License(c *check.C) {
+	s.CreateTmpFileLines(c, "Makefile",
+		"# $"+"NetBSD$",
+		"",
+		"META_PACKAGE=\tyes")
+	G.CurrentDir = s.tmpdir
+	G.globalData.InitVartypes()
+
+	checkdirPackage(s.tmpdir)
+
+	c.Check(s.Output(), equals, "WARN: ~/Makefile: No COMMENT given.\n") // No error about missing LICENSE.
 }
 
 func (s *Suite) Test_Package_Varuse_LoadTime(c *check.C) {

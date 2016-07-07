@@ -1,8 +1,6 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 type MkShList struct {
 	AndOrs     []*MkShAndOr
@@ -11,10 +9,6 @@ type MkShList struct {
 
 func NewMkShList() *MkShList {
 	return &MkShList{nil, nil}
-}
-
-func (list *MkShList) String() string {
-	return fmt.Sprintf("MkShList(%v)", list.AndOrs)
 }
 
 func (list *MkShList) AddAndOr(andor *MkShAndOr) *MkShList {
@@ -36,10 +30,6 @@ func NewMkShAndOr(pipeline *MkShPipeline) *MkShAndOr {
 	return &MkShAndOr{[]*MkShPipeline{pipeline}, nil}
 }
 
-func (andor *MkShAndOr) String() string {
-	return fmt.Sprintf("MkShAndOr(%v)", andor.Pipes)
-}
-
 func (andor *MkShAndOr) Add(op string, pipeline *MkShPipeline) *MkShAndOr {
 	andor.Pipes = append(andor.Pipes, pipeline)
 	andor.Ops = append(andor.Ops, op)
@@ -55,10 +45,6 @@ func NewMkShPipeline(negated bool, cmds ...*MkShCommand) *MkShPipeline {
 	return &MkShPipeline{negated, cmds}
 }
 
-func (pipe *MkShPipeline) String() string {
-	return fmt.Sprintf("MkShPipeline(%v)", pipe.Cmds)
-}
-
 func (pipe *MkShPipeline) Add(cmd *MkShCommand) *MkShPipeline {
 	pipe.Cmds = append(pipe.Cmds, cmd)
 	return pipe
@@ -71,46 +57,13 @@ type MkShCommand struct {
 	Redirects []*MkShRedirection // For Compound and FuncDef
 }
 
-func (cmd *MkShCommand) String() string {
-	switch {
-	case cmd.Simple != nil:
-		return cmd.Simple.String()
-	case cmd.Compound != nil:
-		return cmd.Compound.String()
-	case cmd.FuncDef != nil:
-		return cmd.FuncDef.String()
-	}
-	return "MkShCommand(?)"
-}
-
 type MkShCompoundCommand struct {
 	Brace    *MkShList
 	Subshell *MkShList
 	For      *MkShForClause
 	Case     *MkShCaseClause
 	If       *MkShIfClause
-	While    *MkShLoopClause
-	Until    *MkShLoopClause
-}
-
-func (cmd *MkShCompoundCommand) String() string {
-	switch {
-	case cmd.Brace != nil:
-		return cmd.Brace.String()
-	case cmd.Subshell != nil:
-		return cmd.Subshell.String()
-	case cmd.For != nil:
-		return cmd.For.String()
-	case cmd.Case != nil:
-		return cmd.Case.String()
-	case cmd.If != nil:
-		return cmd.If.String()
-	case cmd.While != nil:
-		return cmd.While.String()
-	case cmd.Until != nil:
-		return cmd.Until.String()
-	}
-	return "MkShCompoundCommand(?)"
+	Loop     *MkShLoopClause
 }
 
 type MkShForClause struct {
@@ -119,32 +72,21 @@ type MkShForClause struct {
 	Body    *MkShList
 }
 
-func (cl *MkShForClause) String() string {
-	return fmt.Sprintf("MkShForClause(%v, %v, %v)", cl.Varname, cl.Values, cl.Body)
-}
-
 type MkShCaseClause struct {
 	Word  *ShToken
 	Cases []*MkShCaseItem
 }
 
-func (cl *MkShCaseClause) String() string {
-	return fmt.Sprintf("MkShCaseClause(...)")
-}
-
 type MkShCaseItem struct {
-	Patterns []*ShToken
-	Action   *MkShList
+	Patterns  []*ShToken
+	Action    *MkShList
+	Separator *MkShSeparator
 }
 
 type MkShIfClause struct {
 	Conds   []*MkShList
 	Actions []*MkShList
 	Else    *MkShList
-}
-
-func (cl *MkShIfClause) String() string {
-	return "MkShIf(...)"
 }
 
 func (cl *MkShIfClause) Prepend(cond *MkShList, action *MkShList) {
@@ -158,18 +100,9 @@ type MkShLoopClause struct {
 	Until  bool
 }
 
-func (cl *MkShLoopClause) String() string {
-	return "MkShLoop(...)"
-}
-
 type MkShFunctionDefinition struct {
-	Name      string
-	Body      *MkShCompoundCommand
-	Redirects []*MkShRedirection
-}
-
-func (def *MkShFunctionDefinition) String() string {
-	return "MkShFunctionDef(...)"
+	Name string
+	Body *MkShCompoundCommand
 }
 
 type MkShSimpleCommand struct {
@@ -179,33 +112,49 @@ type MkShSimpleCommand struct {
 	Redirections []*MkShRedirection
 }
 
-func (scmd *MkShSimpleCommand) String() string {
-	str := "SimpleCommand("
-	first := true
-	sep := func() {
-		if first {
-			first = false
-		} else {
-			str += ", "
+func NewStrCommand(cmd *MkShSimpleCommand) *StrCommand {
+	strcmd := &StrCommand{
+		make([]string, len(cmd.Assignments)),
+		"",
+		make([]string, len(cmd.Args))}
+	for i, assignment := range cmd.Assignments {
+		strcmd.Assignments[i] = assignment.MkText
+	}
+	if cmd.Name != nil {
+		strcmd.Name = cmd.Name.MkText
+	}
+	for i, arg := range cmd.Args {
+		strcmd.Args[i] = arg.MkText
+	}
+	return strcmd
+}
+
+type StrCommand struct {
+	Assignments []string
+	Name        string
+	Args        []string
+}
+
+func (c *StrCommand) HasOption(opt string) bool {
+	for _, arg := range c.Args {
+		if arg == opt {
+			return true
 		}
 	}
-	for _, word := range scmd.Assignments {
-		sep()
-		str += word.MkText
+	return false
+}
+
+func (c *StrCommand) AnyArgMatches(pattern string) bool {
+	for _, arg := range c.Args {
+		if matches(arg, pattern) {
+			return true
+		}
 	}
-	if word := scmd.Name; word != nil {
-		sep()
-		str += word.MkText
-	}
-	for _, word := range scmd.Args {
-		sep()
-		str += word.MkText
-	}
-	for _, redirection := range scmd.Redirections {
-		sep()
-		str += redirection.String()
-	}
-	return str + ")"
+	return false
+}
+
+func (c *StrCommand) String() string {
+	return fmt.Sprintf("%v %v %v", c.Assignments, c.Name, c.Args)
 }
 
 type MkShRedirection struct {
@@ -214,18 +163,11 @@ type MkShRedirection struct {
 	Target *ShToken
 }
 
-func (r *MkShRedirection) String() string {
-	if r.Fd != -1 {
-		return fmt.Sprintf("%d%s%s", r.Fd, r.Op, r.Target.MkText)
-	} else {
-		return r.Op + r.Target.MkText
-	}
-}
-
 // One of ";", "&", "\n"
 type MkShSeparator string
 
-func (sep *MkShSeparator) String() string {
-	return fmt.Sprintf("%q", sep)
-
-}
+var (
+	SEP_SEMI       MkShSeparator = ";"
+	SEP_BACKGROUND MkShSeparator = "&"
+	SEP_NEWLINE    MkShSeparator = "\n"
+)
