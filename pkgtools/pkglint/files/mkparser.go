@@ -27,7 +27,6 @@ func (p *MkParser) MkTokens() []*MkToken {
 			continue
 		}
 
-		needsReplace := false
 	again:
 		dollar := strings.IndexByte(repl.rest, '$')
 		if dollar == -1 {
@@ -35,13 +34,9 @@ func (p *MkParser) MkTokens() []*MkToken {
 		}
 		repl.Skip(dollar)
 		if repl.AdvanceStr("$$") {
-			needsReplace = true
 			goto again
 		}
 		text := repl.Since(mark)
-		if needsReplace {
-			text = strings.Replace(text, "$$", "$", -1)
-		}
 		if text != "" {
 			tokens = append(tokens, &MkToken{Text: text})
 			continue
@@ -91,7 +86,7 @@ func (p *MkParser) VarUse() *MkVarUse {
 	if repl.AdvanceStr("$<") {
 		return &MkVarUse{"<", nil}
 	}
-	if repl.AdvanceRegexp(`^\$(\w)`) {
+	if repl.PeekByte() == '$' && repl.AdvanceRegexp(`^\$(\w)`) {
 		varname := repl.m[1]
 		if p.EmitWarnings {
 			p.Line.Warn1("$%[1]s is ambiguous. Use ${%[1]s} if you mean a Makefile variable or $$%[1]s if you mean a shell variable.", varname)

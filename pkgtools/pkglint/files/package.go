@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"os/user"
 	"path"
 	"regexp"
 	"strconv"
@@ -196,6 +197,7 @@ func checkdirPackage(pkgpath string) {
 		} else if hasSuffix(fname, "/distinfo") {
 			haveDistinfo = true
 		}
+		pkg.checkLocallyModified(fname)
 	}
 
 	if G.opts.CheckDistinfo && G.opts.CheckPatches {
@@ -387,7 +389,7 @@ func (pkg *Package) checkfilePackageMakefile(fname string, mklines *MkLines) {
 		perlLine.Warn1("REPLACE_PERL is ignored when NO_CONFIGURE is set (in %s)", noconfLine.Line.ReferenceFrom(perlLine.Line))
 	}
 
-	if vardef["LICENSE"] == nil {
+	if vardef["LICENSE"] == nil && vardef["META_PACKAGE"] == nil {
 		NewLineWhole(fname).Error0("Each package must define its LICENSE.")
 	}
 
@@ -484,19 +486,43 @@ func (pkg *Package) determineEffectivePkgVars() {
 }
 
 func (pkg *Package) pkgnameFromDistname(pkgname, distname string) string {
-	pkgname = strings.Replace(pkgname, "${DISTNAME}", distname, -1)
+	tokens := NewMkParser(dummyLine, pkgname, false).MkTokens()
 
-	if m, before, sep, subst, after := match4(pkgname, `^(.*)\$\{DISTNAME:S(.)([^\\}:]+)\}(.*)$`); m {
-		qsep := regexp.QuoteMeta(sep)
-		if m, left, from, right, to, mod := match5(subst, `^(\^?)([^:]*)(\$?)`+qsep+`([^:]*)`+qsep+`(g?)$`); m {
-			newPkgname := before + mkopSubst(distname, left != "", from, right != "", to, mod != "") + after
+	subst := func(str, smod string) (result string) {
+		if G.opts.Debug {
+			defer tracecall(str, smod, ref(result))()
+		}
+		qsep := regexp.QuoteMeta(smod[1:2])
+		if m, left, from, right, to, flags := match5(smod, `^S`+qsep+`(\^?)([^:]*?)(\$?)`+qsep+`([^:]*)`+qsep+`([1g]*)$`); m {
+			result := mkopSubst(str, left != "", from, right != "", to, flags)
 			if G.opts.Debug {
-				traceStep("%s: pkgnameFromDistname %q => %q", pkg.vardef["PKGNAME"], pkgname, newPkgname)
+				traceStep("subst %q %q => %q", str, smod, result)
 			}
-			pkgname = newPkgname
+			return result
+		}
+		return str
+	}
+
+	result := ""
+	for _, token := range tokens {
+		if token.Varuse != nil && token.Varuse.varname == "DISTNAME" {
+			newDistname := distname
+			for _, mod := range token.Varuse.modifiers {
+				if mod == "tl" {
+					newDistname = strings.ToLower(newDistname)
+				} else if hasPrefix(mod, "S") {
+					newDistname = subst(newDistname, mod)
+				} else {
+					newDistname = token.Text
+					break
+				}
+			}
+			result += newDistname
+		} else {
+			result += token.Text
 		}
 	}
-	return pkgname
+	return result
 }
 
 func (pkg *Package) checkUpdate() {
@@ -757,4 +783,54 @@ func (mklines *MkLines) checkForUsedComment(relativeName string) {
 			"documenting its interface.")
 	}
 	SaveAutofixChanges(lines)
+}
+
+func (pkg *Package) checkLocallyModified(fname string) {
+	if G.opts.Debug {
+		defer tracecall(fname)()
+	}
+
+	ownerLine := pkg.vardef["OWNER"]
+	maintainerLine := pkg.vardef["MAINTAINER"]
+	owner := ""
+	maintainer := ""
+	if ownerLine != nil && !containsVarRef(ownerLine.Value()) {
+		owner = ownerLine.Value()
+	}
+	if maintainerLine != nil && !containsVarRef(maintainerLine.Value()) && maintainerLine.Value() != "pkgsrc-users@NetBSD.org" {
+		maintainer = maintainerLine.Value()
+	}
+	if owner == "" && maintainer == "" {
+		return
+	}
+
+	user, err := user.Current()
+	if err != nil || user.Username == "" {
+		return
+	}
+	// On Windows, this is `Computername\Username`.
+	username := regcomp(`^.*\\`).ReplaceAllString(user.Username, "")
+
+	if G.opts.Debug {
+		traceStep("user=%q owner=%q maintainer=%q", username, owner, maintainer)
+	}
+
+	if username == strings.Split(owner, "@")[0] || username == strings.Split(maintainer, "@")[0] {
+		return
+	}
+
+	if isLocallyModified(fname) {
+		if owner != "" {
+			NewLineWhole(fname).Warn1("Don't commit changes to this file without asking the OWNER, %s.", owner)
+			Explain2(
+				"See the pkgsrc guide, section \"Package components\",",
+				"keyword \"owner\", for more information.")
+		}
+		if maintainer != "" {
+			NewLineWhole(fname).Note1("Please only commit changes that %s would approve.", maintainer)
+			Explain2(
+				"See the pkgsrc guide, section \"Package components\",",
+				"keyword \"maintainer\", for more information.")
+		}
+	}
 }

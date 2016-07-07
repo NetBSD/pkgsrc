@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.487 2016/06/19 18:03:29 wiz Exp $
+# $NetBSD: Makefile,v 1.488 2016/07/07 12:09:26 rillig Exp $
 
-PKGNAME=	pkglint-5.4.2
+PKGNAME=	pkglint-5.4.3
 DISTFILES=	# none
 CATEGORIES=	pkgtools
 
@@ -25,7 +25,10 @@ SUBST_SED.pkglint+=	-e s\|@BMAKE@\|${MAKE:Q}\|g
 
 do-extract:
 	${RUN} mkdir -p ${WRKDIR}/pkglint/plist-clash
-	${RUN} cd ${FILESDIR} && ${PAX} -rw *.go */*.go pkglint.[01] ${WRKDIR}/pkglint
+	${RUN} cd ${FILESDIR} && ${PAX} -rw *.go *.y */*.go pkglint.[01] ${WRKDIR}/pkglint
+
+pre-build:
+	${RUN} env GOPATH=${WRKDIR}:${BUILDLINK_DIR}/gopkg go generate ${GO_BUILD_PATTERN}
 
 do-install: do-install-man
 
