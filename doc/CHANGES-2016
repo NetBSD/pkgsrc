@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2700 2016/07/07 08:31:31 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2701 2016/07/07 08:35:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3921,3 +3921,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/py27-html-docs to 2.7.12 [leot 2016-07-06]
 	Updated mail/mutt to 1.6.2 [tron 2016-07-07]
 	Updated multimedia/minidlna to 1.1.5 [wiz 2016-07-07]
+	Updated sysutils/duplicity to 0.7.08 [wiz 2016-07-07]
