@@ -430,7 +430,7 @@ func (mkline *MkLine) CheckVaruse(varuse *MkVarUse, vuc *VarUseContext) {
 		(vartype == nil || vartype.guessed) &&
 		!varIsUsed(varname) &&
 		!(G.Mk != nil && G.Mk.forVars[varname]) &&
-		!hasPrefix(varname, "${") {
+		!containsVarRef(varname) {
 		mkline.Warn1("%s is used but not defined. Spelling mistake?", varname)
 	}
 
@@ -999,61 +999,6 @@ func (mkline *MkLine) checkVarassignPlistComment(varname, value string) {
 	}
 }
 
-const reVarnamePlural = `^(?:` +
-	`.*[Ss]` +
-	`|.*LIST` +
-	`|.*_AWK` +
-	`|.*_ENV` +
-	`|.*_OVERRIDE` +
-	`|.*_PREREQ` +
-	`|.*_REQD` +
-	`|.*_SED` +
-	`|.*_SKIP` +
-	`|.*_SRC` +
-	`|.*_SUBST` +
-	`|.*_TARGET` +
-	`|.*_TMPL` +
-	`|BROKEN_EXCEPT_ON_PLATFORM` +
-	`|BROKEN_ON_PLATFORM` +
-	`|BUILDLINK_DEPMETHOD` +
-	`|BUILDLINK_LDADD` +
-	`|BUILDLINK_TRANSFORM` +
-	`|COMMENT` +
-	`|CRYPTO` +
-	`|DEINSTALL_TEMPLATE` +
-	`|EVAL_PREFIX` +
-	`|EXTRACT_ONLY` +
-	`|FETCH_MESSAGE` +
-	`|FIX_RPATH` +
-	`|GENERATE_PLIST` +
-	`|INSTALL_TEMPLATE` +
-	`|INTERACTIVE_STAGE` +
-	`|LICENSE` +
-	`|MASTER_SITE_.*` +
-	`|MASTER_SORT_REGEX` +
-	`|NOT_FOR_COMPILER` +
-	`|NOT_FOR_PLATFORM` +
-	`|ONLY_FOR_COMPILER` +
-	`|ONLY_FOR_PLATFORM` +
-	`|PERL5_PACKLIST` +
-	`|PLIST_CAT` +
-	`|PLIST_PRE` +
-	`|PKG_FAIL_REASON` +
-	`|PKG_SKIP_REASON` +
-	`|PREPEND_PATH` +
-	`|PYTHON_VERSIONS_INCOMPATIBLE` +
-	`|REPLACE_INTERPRETER` +
-	`|REPLACE_PERL` +
-	`|REPLACE_RUBY` +
-	`|RESTRICTED` +
-	`|SITES_.+` +
-	`|TOOLS_ALIASES\..+` +
-	`|TOOLS_BROKEN` +
-	`|TOOLS_CREATE` +
-	`|TOOLS_GNU_MISSING` +
-	`|TOOLS_NOOP` +
-	`)$`
-
 func (mkline *MkLine) CheckVartype(varname string, op MkOperator, value, comment string) {
 	if G.opts.Debug {
 		defer tracecall(varname, op, value, comment)()
@@ -1063,22 +1008,16 @@ func (mkline *MkLine) CheckVartype(varname string, op MkOperator, value, comment
 		return
 	}
 
-	varbase := varnameBase(varname)
 	vartype := mkline.getVariableType(varname)
 
 	if op == opAssignAppend {
-		if vartype != nil {
-			if !vartype.MayBeAppendedTo() {
-				mkline.Warn0("The \"+=\" operator should only be used with lists.")
-			}
-		} else if !hasPrefix(varbase, "_") && !matches(varbase, reVarnamePlural) {
-			mkline.Warn1("As %s is modified using \"+=\", its name should indicate plural.", varname)
+		if vartype != nil && !vartype.MayBeAppendedTo() {
+			mkline.Warn0("The \"+=\" operator should only be used with lists.")
 		}
 	}
 
 	switch {
 	case vartype == nil:
-		// Cannot check anything if the type is not known.
 		if G.opts.Debug {
 			traceStep1("Unchecked variable assignment for %s.", varname)
 		}
@@ -1380,7 +1319,7 @@ const (
 )
 
 func (nq NeedsQuoting) String() string {
-	return [...]string{"no", "yes", "doesn't matter", "don't known"}[nq]
+	return [...]string{"no", "yes", "doesn't matter", "don't know"}[nq]
 }
 
 func (mkline *MkLine) variableNeedsQuoting(varname string, vartype *Vartype, vuc *VarUseContext) (needsQuoting NeedsQuoting) {
@@ -1530,7 +1469,7 @@ func (mkline *MkLine) getVariableType(varname string) *Vartype {
 	switch {
 	case hasSuffix(varbase, "DIRS"):
 		gtype = &Vartype{lkShell, CheckvarPathmask, allowRuntime, true}
-	case hasSuffix(varbase, "DIR"), hasSuffix(varname, "_HOME"):
+	case hasSuffix(varbase, "DIR") && !hasSuffix(varbase, "DESTDIR"), hasSuffix(varname, "_HOME"):
 		gtype = &Vartype{lkNone, CheckvarPathname, allowRuntime, true}
 	case hasSuffix(varbase, "FILES"):
 		gtype = &Vartype{lkShell, CheckvarPathmask, allowRuntime, true}

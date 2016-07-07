@@ -49,6 +49,23 @@ func (s *Suite) TestSubstContext_Complete(c *check.C) {
 	c.Check(s.Output(), equals, "")
 }
 
+func (s *Suite) Test_SubstContext_OPSYSVARS(c *check.C) {
+	G.opts.WarnExtra = true
+	ctx := new(SubstContext)
+
+	ctx.Varassign(newSubstLine(11, "SUBST_CLASSES.SunOS+=prefix"))
+	ctx.Varassign(newSubstLine(12, "SUBST_CLASSES.NetBSD+=prefix"))
+	ctx.Varassign(newSubstLine(13, "SUBST_FILES.prefix=Makefile"))
+	ctx.Varassign(newSubstLine(14, "SUBST_SED.prefix=s,@PREFIX@,${PREFIX},g"))
+	ctx.Varassign(newSubstLine(15, "SUBST_STAGE.prefix=post-configure"))
+
+	c.Check(ctx.IsComplete(), equals, true)
+
+	ctx.Finish(newSubstLine(15, ""))
+
+	c.Check(s.Output(), equals, "")
+}
+
 func (s *Suite) TestSubstContext_NoClass(c *check.C) {
 	s.UseCommandLine(c, "-Wextra")
 	ctx := new(SubstContext)
