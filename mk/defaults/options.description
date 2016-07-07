@@ -140,6 +140,8 @@ dspam-verbose-debug	Enable verbose debugging support.
 dspam-virtualusers	Enable support for virtual users.
 dtrace			Enable DTrace support.
 dts			Enable DTS Coherent Acoustics support.
+duplicity-amazons3	Add Amazon S3 support.
+duplicity-dropbox	Add Dropbox support.
 dv			Enable usage of the libdv library.
 dvdcss			Enable CSS support for DVDs.
 dvdnav			Enable libdvdnav support to navigate DVDs.
@@ -245,8 +247,8 @@ gnome-keyring		Enable GNOME keyring support.
 gnomecanvas		Enable GNOME canvas support
 gnomevfs		Enable GNOME Virtual File System support.
 gnupg2			Use GNU Privacy Guard (GnuPG) Version 2.0
-gnupg21			Use GNU Privacy Guard (GnuPG) Version 2.1
 gnupg2-gpgsm		Install gpgsm binary.
+gnupg21			Use GNU Privacy Guard (GnuPG) Version 2.1
 gnuplot-pdf-doc		Install PDF document.
 gnutls			Enable GNU TLS support.
 goffice			Enable goffice support.
