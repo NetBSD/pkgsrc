@@ -23,6 +23,7 @@ const (
 	shtRedirect                 // >, <, >>
 	shtComment                  // # ...
 	shtSubshell                 // $$(
+	shtNewline                  // \n
 )
 
 func (t ShAtomType) String() string {
@@ -37,6 +38,7 @@ func (t ShAtomType) String() string {
 		"or", "and",
 		"redirect",
 		"comment",
+		"newline",
 	}[t]
 }
 
@@ -50,7 +52,7 @@ func (t ShAtomType) IsWord() bool {
 
 func (t ShAtomType) IsCommandDelimiter() bool {
 	switch t {
-	case shtSemicolon, shtPipe, shtBackground, shtAnd, shtOr, shtCaseSeparator:
+	case shtSemicolon, shtNewline, shtPipe, shtBackground, shtAnd, shtOr, shtCaseSeparator:
 		return true
 	}
 	return false
@@ -59,7 +61,7 @@ func (t ShAtomType) IsCommandDelimiter() bool {
 // @Beta
 type ShAtom struct {
 	Type    ShAtomType
-	Text    string
+	MkText  string
 	Quoting ShQuoting
 	Data    interface{}
 }
@@ -74,13 +76,13 @@ func NewShAtomVaruse(text string, quoting ShQuoting, varname string, modifiers .
 
 func (token *ShAtom) String() string {
 	if token.Type == shtWord && token.Quoting == shqPlain && token.Data == nil {
-		return fmt.Sprintf("%q", token.Text)
+		return fmt.Sprintf("%q", token.MkText)
 	}
 	if token.Type == shtVaruse {
 		varuse := token.Data.(*MkVarUse)
 		return fmt.Sprintf("varuse(%q)", varuse.varname+varuse.Mod())
 	}
-	return fmt.Sprintf("ShAtom(%v, %q, %s)", token.Type, token.Text, token.Quoting)
+	return fmt.Sprintf("ShAtom(%v, %q, %s)", token.Type, token.MkText, token.Quoting)
 }
 
 // ShQuoting describes the context in which a string appears
@@ -92,9 +94,11 @@ const (
 	shqDquot
 	shqSquot
 	shqBackt
+	shqSubsh
 	shqDquotBackt
 	shqBacktDquot
 	shqBacktSquot
+	shqSubshSquot
 	shqDquotBacktDquot
 	shqDquotBacktSquot
 	shqUnknown
@@ -103,8 +107,8 @@ const (
 func (q ShQuoting) String() string {
 	return [...]string{
 		"plain",
-		"d", "s", "b",
-		"db", "bd", "bs",
+		"d", "s", "b", "S",
+		"db", "bd", "bs", "Ss",
 		"dbd", "dbs",
 		"unknown",
 	}[q]

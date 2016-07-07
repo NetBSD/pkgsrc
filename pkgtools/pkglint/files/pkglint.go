@@ -202,7 +202,7 @@ func Checkfile(fname string) {
 		}
 
 	case st.Mode()&os.ModeSymlink != 0:
-		if !matches(basename, `^work`) {
+		if !hasPrefix(basename, "work") {
 			NewLineWhole(fname).Warn0("Unknown symlink name.")
 		}
 
@@ -283,6 +283,9 @@ func Checkfile(fname string) {
 
 	case matches(fname, `(?:^|/)files/[^/]*$`):
 		// Skip
+
+	case basename == "spec":
+		// Ok in regression tests
 
 	default:
 		NewLineWhole(fname).Warn0("Unexpected file found.")
