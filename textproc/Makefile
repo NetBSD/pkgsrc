@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.886 2016/06/20 11:09:21 jaapb Exp $
+# $NetBSD: Makefile,v 1.887 2016/07/07 16:12:00 jakllsch Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -737,6 +737,7 @@ SUBDIR+=	py-prettytable
 SUBDIR+=	py-pygments
 SUBDIR+=	py-pyphen
 SUBDIR+=	py-pyquery
+SUBDIR+=	py-pytoml
 SUBDIR+=	py-rdflib
 SUBDIR+=	py-relatorio
 SUBDIR+=	py-snowballstemmer
