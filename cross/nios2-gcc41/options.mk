@@ -1,8 +1,9 @@
-# $NetBSD: options.mk,v 1.2 2013/12/03 02:34:52 mef Exp $
+# $NetBSD: options.mk,v 1.3 2016/07/07 13:26:16 rillig Exp $
+
 ### Set options
-PKG_OPTIONS_VAR=        PKG_OPTIONS.nios2-gcc
-PKG_SUPPORTED_OPTIONS=  doc sysroot
-PKG_SUGGESTED_OPTIONS=      sysroot
+PKG_OPTIONS_VAR=	PKG_OPTIONS.nios2-gcc
+PKG_SUPPORTED_OPTIONS=	doc sysroot
+PKG_SUGGESTED_OPTIONS=	sysroot
 
 .include "../../mk/bsd.options.mk"
 
@@ -13,15 +14,14 @@ CFLAGS+=		-DTARGET_SYSTEM_ROOT=0 -DTARGET_SYSTEM_ROOT_RELOCATABLE
 
 # conditional SUBST_CLASSES
 .if empty(PKG_OPTIONS:Mdoc)
-post-patch:
-	(cd ${WRKSRC};					\
-	${MV}  gcc/Makefile.in gcc/Makefile.in.orig;	\
-	${SED} '-e s/@@DOC@@//'				\
-	       '-e s/@@INSTALL_HTML@@//'		\
-	       '-e s/@@INSTALL_PDF@@//'			\
-	gcc/Makefile.in.orig > gcc/Makefile.in;		\
-	)
+SUBST_CLASSES+=		nios
+SUBST_STAGE.nios=	post-patch
+SUBST_FILES.nios=	gcc/Makefile.in
+SUBST_SED.nios=		-e s/@@DOC@@//
+SUBST_SED.nios+=	-e s/@@INSTALL_HTML@@//
+SUBST_SED.nios+=	-e s/@@INSTALL_PDF@@//
 .else
+
 # bin/tex is required
 BUILD_DEPENDS+=		web2c-[0-9]*:../../print/web2c
 BUILD_DEPENDS+=		tex-cm-[0-9]*:../../fonts/tex-cm
@@ -30,12 +30,11 @@ BUILD_DEPENDS+=		tex-pdftex-doc-[0-9]*:../../print/tex-pdftex-doc
 BUILD_DEPENDS+=		tex-pdftex-[0-9]*:../../print/tex-pdftex
 BUILD_DEPENDS+=		gtexinfo-[0-9]*:../../devel/gtexinfo
 PLIST.doc=		yes
-post-patch:
-	(cd ${WRKSRC};					\
-	${MV}  gcc/Makefile.in gcc/Makefile.in.orig;	\
-	${SED} '-e s/@@DOC@@/doc/'			\
-	       '-e s/@@INSTALL_HTML@@/install-html/'	\
-	       '-e s/@@INSTALL_PDF@@/install-pdf/'	\
-	gcc/Makefile.in.orig > gcc/Makefile.in;		\
-	)
+
+SUBST_CLASSES+=		nios
+SUBST_STAGE.nios=	post-patch
+SUBST_FILES.nios=	gcc/Makefile.in
+SUBST_SED.nios=		-e s/@@DOC@@/doc/
+SUBST_SED.nios+=	-e s/@@INSTALL_HTML@@/install-html/
+SUBST_SED.nios+=	-e s/@@INSTALL_PDF@@/install-pdf/
 .endif
