@@ -15,9 +15,10 @@ func (s *Suite) Test_ShTokenizer_ShAtom(c *check.C) {
 		}
 		return p.Rest()
 	}
-	check := func(s string, expected ...*ShAtom) {
-		rest := checkRest(s, expected...)
+	check := func(str string, expected ...*ShAtom) {
+		rest := checkRest(str, expected...)
 		c.Check(rest, equals, "")
+		c.Check(s.Output(), equals, "")
 	}
 
 	token := func(typ ShAtomType, text string, quoting ShQuoting) *ShAtom {
@@ -37,7 +38,7 @@ func (s *Suite) Test_ShTokenizer_ShAtom(c *check.C) {
 		return &ShAtom{shtVaruse, text, shqPlain, varuse}
 	}
 	q := func(q ShQuoting, token *ShAtom) *ShAtom {
-		return &ShAtom{token.Type, token.Text, q, token.Data}
+		return &ShAtom{token.Type, token.MkText, q, token.Data}
 	}
 	whitespace := func(s string) *ShAtom { return token(shtSpace, s, shqPlain) }
 	space := token(shtSpace, " ", shqPlain)
@@ -302,6 +303,22 @@ func (s *Suite) Test_ShTokenizer_ShAtom(c *check.C) {
 		word("then"), space, word("action2"), semicolon, space,
 		word("else"), space, word("action3"), semicolon, space,
 		word("fi"))
+
+	if false {
+		check("$$(cat)",
+			token(shtWord, "$$(", shqSubsh),
+			token(shtWord, "cat", shqSubsh),
+			token(shtWord, ")", shqPlain))
+
+		check("$$(cat 'file')",
+			token(shtWord, "$$(", shqSubsh),
+			token(shtWord, "cat", shqSubsh),
+			token(shtSpace, " ", shqSubsh),
+			token(shtWord, "'", shqSubshSquot),
+			token(shtWord, "file", shqSubshSquot),
+			token(shtWord, "'", shqSubsh),
+			token(shtWord, ")", shqPlain))
+	}
 }
 
 func (s *Suite) Test_Shtokenizer_ShAtom_Quoting(c *check.C) {
@@ -314,7 +331,7 @@ func (s *Suite) Test_Shtokenizer_ShAtom_Quoting(c *check.C) {
 			if token == nil {
 				break
 			}
-			result += token.Text
+			result += token.MkText
 			if token.Quoting != q {
 				q = token.Quoting
 				result += "[" + q.String() + "]"

@@ -6,23 +6,6 @@ import (
 	check "gopkg.in/check.v1"
 )
 
-func (s *Suite) TestReShellToken(c *check.C) {
-	re := `^(?:` + reShellToken + `)$`
-	matches := check.NotNil
-	doesntMatch := check.IsNil
-
-	c.Check(match("", re), doesntMatch)
-	c.Check(match("$var", re), matches)
-	c.Check(match("$var$var", re), matches)
-	c.Check(match("$var;;", re), doesntMatch) // More than one token
-	c.Check(match("'single-quoted'", re), matches)
-	c.Check(match("\"", re), doesntMatch)       // Incomplete string
-	c.Check(match("'...'\"...\"", re), matches) // Mixed strings
-	c.Check(match("\"...\"", re), matches)
-	c.Check(match("`cat file`", re), matches)
-	c.Check(match("${file%.c}.o", re), matches)
-}
-
 func (s *Suite) Test_SplitIntoShellTokens_LineContinuation(c *check.C) {
 	words, rest := splitIntoShellTokens(dummyLine, "if true; then \\")
 
@@ -94,6 +77,32 @@ func (s *Suite) Test_SplitIntoMkWords_VaruseSpace(c *check.C) {
 	c.Check(rest, equals, "")
 }
 
+func (s *Suite) Test_splitIntoShellTokens_Redirect(c *check.C) {
+	words, rest := splitIntoShellTokens(dummyLine, "echo 1>output 2>>append 3>|clobber 4>&5 6<input >>append")
+
+	c.Check(words, deepEquals, []string{
+		"echo",
+		"1>", "output",
+		"2>>", "append",
+		"3>|", "clobber",
+		"4>&", "5",
+		"6<", "input",
+		">>", "append"})
+	c.Check(rest, equals, "")
+
+	words, rest = splitIntoShellTokens(dummyLine, "echo 1> output 2>> append 3>| clobber 4>& 5 6< input >> append")
+
+	c.Check(words, deepEquals, []string{
+		"echo",
+		"1>", "output",
+		"2>>", "append",
+		"3>|", "clobber",
+		"4>&", "5",
+		"6<", "input",
+		">>", "append"})
+	c.Check(rest, equals, "")
+}
+
 func (s *Suite) TestChecklineMkShellCommandLine(c *check.C) {
 	s.UseCommandLine(c, "-Wall")
 	G.Mk = s.NewMkLines("fname",
@@ -108,9 +117,7 @@ func (s *Suite) TestChecklineMkShellCommandLine(c *check.C) {
 
 	c.Check(s.Output(), equals, ""+
 		"WARN: fname:1: Unknown shell command \"uname\".\n"+
-		"WARN: fname:1: Please switch to \"set -e\" mode before using a semicolon (the one after \"uname=`uname`\") to separate commands.\n"+
 		"WARN: fname:1: Unknown shell command \"echo\".\n"+
-		"WARN: fname:1: Unquoted shell variable \"uname\".\n"+
 		"WARN: fname:1: Unknown shell command \"echo\".\n")
 
 	s.RegisterTool(&Tool{Name: "echo", Predefined: true})
@@ -137,6 +144,12 @@ func (s *Suite) TestChecklineMkShellCommandLine(c *check.C) {
 		"WARN: fname:1: COMMENT may not be used in any file; it is a write-only variable.\n"+
 		"WARN: fname:1: Please move ${COMMENT:Q} outside of any quoting characters.\n")
 
+	shline.CheckShellCommandLine("echo target=$@ exitcode=$$? '$$' \"\\$$\"")
+
+	c.Check(s.Output(), equals, ""+
+		"WARN: fname:1: Please use \"${.TARGET}\" instead of \"$@\".\n"+
+		"WARN: fname:1: The $? shell variable is often not available in \"set -e\" mode.\n")
+
 	shline.CheckShellCommandLine("echo $$@")
 
 	c.Check(s.Output(), equals, "WARN: fname:1: The $@ shell variable should only be used in double quotes.\n")
@@ -145,9 +158,9 @@ func (s *Suite) TestChecklineMkShellCommandLine(c *check.C) {
 
 	c.Check(s.Output(), equals, ""+
 		"WARN: fname:1: Pkglint parse error in ShTokenizer.ShAtom at \"$$\\\"\" (quoting=d)\n"+
-		"WARN: fname:1: Pkglint parse error in ShellLine.CheckShellCommand at \"$$\\\"\" (state=start)\n")
+		"WARN: fname:1: Pkglint ShellLine.CheckShellCommand: parse error at [\"]\n")
 
-	shline.CheckShellCommandLine("echo \"\\n\"") // As seen by make(1); the shell sees: echo "\n"
+	shline.CheckShellCommandLine("echo \"\\n\"")
 
 	c.Check(s.Output(), equals, "")
 
@@ -163,8 +176,8 @@ func (s *Suite) TestChecklineMkShellCommandLine(c *check.C) {
 	shline.CheckShellCommandLine("${RUN} subdir=\"`unzip -c \"$$e\" install.rdf | awk '/re/ { print \"hello\" }'`\"")
 
 	c.Check(s.Output(), equals, ""+
-		"WARN: fname:1: Unknown shell command \"unzip\".\n"+
 		"WARN: fname:1: The exitcode of the left-hand-side command of the pipe operator is ignored.\n"+
+		"WARN: fname:1: Unknown shell command \"unzip\".\n"+
 		"WARN: fname:1: Unknown shell command \"awk\".\n")
 
 	// From mail/thunderbird/Makefile, rev. 1.159
@@ -178,13 +191,12 @@ func (s *Suite) TestChecklineMkShellCommandLine(c *check.C) {
 
 	c.Check(s.Output(), equals, ""+
 		"WARN: fname:1: XPI_FILES is used but not defined. Spelling mistake?\n"+
-		"WARN: fname:1: UNZIP_CMD is used but not defined. Spelling mistake?\n"+
 		"WARN: fname:1: The exitcode of the left-hand-side command of the pipe operator is ignored.\n"+
-		"WARN: fname:1: Unknown shell command \"awk\".\n"+
-		"WARN: fname:1: MKDIR is used but not defined. Spelling mistake?\n"+
-		"WARN: fname:1: Unknown shell command \"${MKDIR}\".\n"+
 		"WARN: fname:1: UNZIP_CMD is used but not defined. Spelling mistake?\n"+
-		"WARN: fname:1: Unquoted shell variable \"e\".\n")
+		"WARN: fname:1: Unknown shell command \"awk\".\n"+
+		"WARN: fname:1: Unknown shell command \"${MKDIR}\".\n"+
+		"WARN: fname:1: MKDIR is used but not defined. Spelling mistake?\n"+
+		"WARN: fname:1: UNZIP_CMD is used but not defined. Spelling mistake?\n")
 
 	// From x11/wxGTK28/Makefile
 	shline.CheckShellCommandLine("" +
@@ -207,7 +219,14 @@ func (s *Suite) TestChecklineMkShellCommandLine(c *check.C) {
 
 	shline.CheckShellCommandLine("${RUN} ${INSTALL_DATA_DIR} share/pkgbase ${PREFIX}/share/pkgbase")
 
-	c.Check(s.Output(), equals, "NOTE: fname:1: You can use AUTO_MKDIRS=yes or \"INSTALLATION_DIRS+= share/pkgbase\" instead of this command.\n")
+	c.Check(s.Output(), equals, ""+
+		"NOTE: fname:1: You can use AUTO_MKDIRS=yes or \"INSTALLATION_DIRS+= share/pkgbase\" instead of \"${INSTALL_DATA_DIR}\".\n"+
+		"WARN: fname:1: The INSTALL_*_DIR commands can only handle one directory at a time.\n")
+
+	// See PR 46570, item "1. It does not"
+	shline.CheckShellCommandLine("for x in 1 2 3; do echo \"$$x\" || exit 1; done")
+
+	c.Check(s.Output(), equals, "") // No warning about missing error checking.
 }
 
 func (s *Suite) TestShellLine_CheckShelltext_nofix(c *check.C) {
@@ -271,6 +290,10 @@ func (s *Suite) TestShellLine_CheckShelltext_InternalError1(c *check.C) {
 	c.Check(tokens, deepEquals, []string{text})
 	c.Check(rest, equals, "")
 
+	shline.CheckWord(text, false)
+
+	c.Check(s.Output(), equals, "WARN: fname:1: Unknown shell command \"echo\".\n")
+
 	shline.CheckShellCommandLine(text)
 
 	c.Check(s.Output(), equals, ""+ // No parse errors
@@ -301,7 +324,7 @@ func (s *Suite) Test_ShellLine_CheckWord(c *check.C) {
 
 	shline.CheckWord("${SED_FILE.${id}}", false)
 
-	c.Check(s.Output(), equals, "WARN: fname:1: SED_FILE.${id} is used but not defined. Spelling mistake?\n")
+	c.Check(s.Output(), equals, "") // No warning for variables that are partly indirect.
 
 	shline.CheckWord("\"$@\"", false)
 
@@ -436,8 +459,21 @@ func (s *Suite) TestShellLine_CheckShellCommandLine_InstallDirs(c *check.C) {
 	shline.CheckShellCommandLine(shline.mkline.Shellcmd())
 
 	c.Check(s.Output(), equals, ""+
-		"NOTE: Makefile:85: You can use AUTO_MKDIRS=yes or \"INSTALLATION_DIRS+= dir1\" instead of this command.\n"+
-		"NOTE: Makefile:85: You can use AUTO_MKDIRS=yes or \"INSTALLATION_DIRS+= dir2\" instead of this command.\n"+
+		"NOTE: Makefile:85: You can use AUTO_MKDIRS=yes or \"INSTALLATION_DIRS+= dir1\" instead of \"${INSTALL_DATA_DIR}\".\n"+
+		"NOTE: Makefile:85: You can use AUTO_MKDIRS=yes or \"INSTALLATION_DIRS+= dir2\" instead of \"${INSTALL_DATA_DIR}\".\n"+
+		"WARN: Makefile:85: The INSTALL_*_DIR commands can only handle one directory at a time.\n")
+
+	shline.CheckShellCommandLine("${INSTALL_DATA_DIR} -d -m 0755 ${DESTDIR}${PREFIX}/share/examples/gdchart")
+
+	// No warning about multiple directories, since 0755 is an option, not an argument.
+	c.Check(s.Output(), equals, ""+
+		"NOTE: Makefile:85: You can use AUTO_MKDIRS=yes or \"INSTALLATION_DIRS+= share/examples/gdchart\" instead of \"${INSTALL_DATA_DIR}\".\n")
+
+	shline.CheckShellCommandLine("${INSTALL_DATA_DIR} -d -m 0755 ${DESTDIR}${PREFIX}/dir1 ${PREFIX}/dir2")
+
+	c.Check(s.Output(), equals, ""+
+		"NOTE: Makefile:85: You can use AUTO_MKDIRS=yes or \"INSTALLATION_DIRS+= dir1\" instead of \"${INSTALL_DATA_DIR}\".\n"+
+		"NOTE: Makefile:85: You can use AUTO_MKDIRS=yes or \"INSTALLATION_DIRS+= dir2\" instead of \"${INSTALL_DATA_DIR}\".\n"+
 		"WARN: Makefile:85: The INSTALL_*_DIR commands can only handle one directory at a time.\n")
 }
 
@@ -447,8 +483,8 @@ func (s *Suite) TestShellLine_CheckShellCommandLine_InstallD(c *check.C) {
 	shline.CheckShellCommandLine(shline.mkline.Shellcmd())
 
 	c.Check(s.Output(), equals, ""+
-		"WARN: Makefile:85: Please use AUTO_MKDIRS instead of \"${INSTALL} -d\".\n"+
-		"WARN: Makefile:85: Please use AUTO_MKDIRS instead of \"${INSTALL} -d\".\n")
+		"NOTE: Makefile:85: You can use AUTO_MKDIRS=yes or \"INSTALLATION_DIRS+= dir1\" instead of \"${INSTALL} -d\".\n"+
+		"NOTE: Makefile:85: You can use AUTO_MKDIRS=yes or \"INSTALLATION_DIRS+= dir2\" instead of \"${INSTALL} -d\".\n")
 }
 
 func (s *Suite) TestShellLine_(c *check.C) {
