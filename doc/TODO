@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16116 2016/07/04 20:33:54 wiz Exp $
+$NetBSD: TODO,v 1.16117 2016/07/07 08:37:42 wiz Exp $
 
 Suggested new packages
 ======================
@@ -579,6 +579,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o di-4.42
 	o digikam-4.14.0
 	o dinotrace-9.4d
+	o direvent-5.1
 	o discount-2.2.0
 	o dmidecode-3.0
 	o dnssec-tools-2.2
@@ -1396,7 +1397,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o pioneers-15.3
 	o pks-0.9.6
 	o plan-1.10.1
-	o plasma-5.4.1
+	o plasma-5.7
 	o ploticus-examples-230
 	o ply-3.8
 	o pngcrush-1.8.0
