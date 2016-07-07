@@ -37,7 +37,7 @@ func (s *Suite) Test_MkParser_MkTokens(c *check.C) {
 	check("literal", literal("literal"))
 	check("\\/share\\/ { print \"share directory\" }", literal("\\/share\\/ { print \"share directory\" }"))
 	check("find . -name \\*.orig -o -name \\*.pre", literal("find . -name \\*.orig -o -name \\*.pre"))
-	check("-e 's|\\$${EC2_HOME.*}|EC2_HOME}|g'", literal("-e 's|\\${EC2_HOME.*}|EC2_HOME}|g'"))
+	check("-e 's|\\$${EC2_HOME.*}|EC2_HOME}|g'", literal("-e 's|\\$${EC2_HOME.*}|EC2_HOME}|g'"))
 
 	check("${VARIABLE}", varuse("VARIABLE"))
 	check("${VARIABLE.param}", varuse("VARIABLE.param"))

@@ -75,10 +75,16 @@ func (s *Suite) NewMkLines(fname string, lines ...string) *MkLines {
 	return NewMkLines(s.NewLines(fname, lines...))
 }
 
-func (s *Suite) DebugToStdout() {
+func (s *Suite) BeginDebugToStdout() {
 	G.debugOut = os.Stdout
 	G.logOut = os.Stdout
 	G.opts.Debug = true
+}
+
+func (s *Suite) EndDebugToStdout() {
+	G.debugOut = &s.stdout
+	G.logOut = &s.stdout
+	G.opts.Debug = false
 }
 
 func (s *Suite) UseCommandLine(c *check.C, args ...string) {
