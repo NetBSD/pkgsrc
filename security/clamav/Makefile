@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2016/06/12 16:06:01 taca Exp $
+# $NetBSD: Makefile,v 1.32 2016/07/07 14:36:34 jperkin Exp $
 
 .include "Makefile.common"
 
@@ -6,6 +6,7 @@ COMMENT=	Anti-virus toolkit
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
+USE_TOOLS+=		gsed
 GNU_CONFIGURE=		yes
 SET_LIBDIR=		yes
 CONFIGURE_ARGS+=	--disable-clamav
