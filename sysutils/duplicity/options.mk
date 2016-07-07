@@ -1,9 +1,18 @@
-# $NetBSD: options.mk,v 1.2 2016/05/24 19:10:46 bsiegert Exp $
+# $NetBSD: options.mk,v 1.3 2016/07/07 08:35:46 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.duplicity
-PKG_SUPPORTED_OPTIONS=	gnupg2
+PKG_SUPPORTED_OPTIONS=	duplicity-amazons3 duplicity-dropbox gnupg2
+PKG_SUGGESTED_OPTIONS=	duplicity-amazons3 duplicity-dropbox
 
 .include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mduplicity-amazons3)
+DEPENDS+=	${PYPKGPREFIX}-boto-[0-9]*:../../net/py-boto
+.endif
+
+.if !empty(PKG_OPTIONS:Mduplicity-dropbox)
+DEPENDS+=	${PYPKGPREFIX}-dropbox-[0-9]*:../../net/py-dropbox
+.endif
 
 .if !empty(PKG_OPTIONS:Mgnupg2)
 DEPENDS+=	gnupg2-[0-9]*:../../security/gnupg2
