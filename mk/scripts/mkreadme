@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: mkreadme,v 1.28 2015/10/03 13:17:57 bsiegert Exp $
+# $NetBSD: mkreadme,v 1.29 2016/07/07 11:29:34 wiz Exp $
 #
 # Script for README.html generation
 #
@@ -270,10 +270,12 @@ echo " "
 if [ -d ${PKGSRCDIR}/pkgtools/prereq-readme ]; then
     cd ${PKGSRCDIR}/pkgtools/prereq-readme
     eval "`${BMAKE} show-tools`"
-    for v in AWK CMP ECHO EXPR FGREP FIND GREP GZIP_CMD SED SETENV SORT
-    do
-	eval "echo '---->'  ${v}=\"\${${v}}\""
-    done
+    if [ "x$quiet" != "xno" ]; then
+	for v in AWK CMP ECHO EXPR FGREP FIND GREP GZIP_CMD SED SETENV SORT
+	do
+	    eval "echo '---->'  ${v}=\"\${${v}}\""
+	done
+    fi
 else
     echo "Error:   ${PKGSRCDIR}/pkgtools/prereq-readme does not seem to exist"
     exit 1
@@ -294,7 +296,9 @@ if [ -d ${PKGSRCDIR}/pkgtools/prereq-readme ]; then
 	    echo "Failed.  This is a fatal error"
 	    clean_and_exit
 	fi
-	echo "---->  ${v}=\"${val}\""
+	if [ "x$quiet" != "xno" ]; then
+	    echo "---->  ${v}=\"${val}\""
+	fi
 	eval "${v}=\"${val}\""
     done
 else
