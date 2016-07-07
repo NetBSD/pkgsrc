@@ -1,0 +1,15 @@
+$NetBSD: patch-make_output.mk.in,v 1.1 2016/07/07 15:07:36 jperkin Exp $
+
+Use CC for linking.
+
+--- make/output.mk.in.orig	2015-12-17 20:11:20.000000000 +0000
++++ make/output.mk.in
+@@ -97,7 +97,7 @@ V_JAVAC = $(javac_verbose)$(JAVAC)
+ 
+ ld_verbose_0 = @echo " LD	"$@;
+ ld_verbose = $(ld_verbose_$(V))
+-V_LD = $(ld_verbose)$(LD)
++V_LD = $(ld_verbose)$(CC)
+ 
+ leex_verbose_0 = @echo " LEEX	"$@;
+ leex_verbose = $(leex_verbose_$(V))
