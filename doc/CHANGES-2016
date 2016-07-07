@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2707 2016/07/07 16:12:53 jakllsch Exp $
+$NetBSD: CHANGES-2016,v 1.2708 2016/07/07 16:45:06 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3929,3 +3929,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated lang/ocaml to 4.03.0nb1 [jperkin 2016-07-07]
 	Updated converters/php-mbstring to 5.5.37nb1 [jperkin 2016-07-07]
 	Added textproc/py-pytoml version 0.1.10 [jakllsch 2016-07-07]
+	Updated net/samba4 to 4.3.11 [taca 2016-07-07]
