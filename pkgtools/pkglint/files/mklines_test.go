@@ -4,6 +4,8 @@ import (
 	check "gopkg.in/check.v1"
 )
 
+const mkrcsid = "# $" + "NetBSD$"
+
 func (s *Suite) TestMkLines_AutofixConditionalIndentation(c *check.C) {
 	s.UseCommandLine(c, "--autofix", "-Wspace")
 	tmpfile := s.CreateTmpFile(c, "fname.mk", "")
@@ -257,4 +259,55 @@ func (s *Suite) Test_MkLines_Indentation_DependsOn(c *check.C) {
 	mklines.Check()
 
 	c.Check(s.Output(), equals, "NOTE: Makefile:4: Consider defining NOT_FOR_PLATFORM instead of setting PKG_SKIP_REASON depending on ${OPSYS}.\n")
+}
+
+// PR 46570, item "15. net/uucp/Makefile has a make loop"
+func (s *Suite) Test_MkLines_indirect_variables(c *check.C) {
+	s.UseCommandLine(c, "-Wall")
+	mklines := s.NewMkLines("net/uucp/Makefile",
+		"# $"+"NetBSD$",
+		"",
+		"post-configure:",
+		".for var in MAIL_PROGRAM CMDPATH",
+		"\t"+`${RUN} ${ECHO} "#define ${var} \""${UUCP_${var}}"\"`,
+		".endfor")
+
+	mklines.Check()
+
+	// No warning about UUCP_${var} being used but not defined.
+	c.Check(s.Output(), equals, ""+
+		"WARN: net/uucp/Makefile:5: Unknown shell command \"${ECHO}\".\n")
+}
+
+func (s *Suite) Test_MkLines_Check_list_variable_as_part_of_word(c *check.C) {
+	s.UseCommandLine(c, "-Wall")
+	mklines := s.NewMkLines("converters/chef/Makefile",
+		mkrcsid,
+		"\tcd ${WRKSRC} && tr '\\r' '\\n' < ${DISTDIR}/${DIST_SUBDIR}/${DISTFILES} > chef.l")
+
+	mklines.Check()
+
+	c.Check(s.Output(), equals, ""+
+		"WARN: converters/chef/Makefile:2: Unknown shell command \"tr\".\n"+
+		"WARN: converters/chef/Makefile:2: The list variable DISTFILES should not be embedded in a word.\n")
+}
+
+func (s *Suite) Test_MkLines_Check_absolute_pathname_depending_on_OPSYS(c *check.C) {
+	s.UseCommandLine(c, "-Wall")
+	G.globalData.InitVartypes()
+	mklines := s.NewMkLines("games/heretic2-demo/Makefile",
+		mkrcsid,
+		".if ${OPSYS} == \"DragonFly\"",
+		"TOOLS_PLATFORM.gtar=\t/usr/bin/bsdtar",
+		".endif",
+		"TOOLS_PLATFORM.gtar=\t/usr/bin/bsdtar")
+
+	mklines.Check()
+
+	// No warning about an unknown shell command in line 3,
+	// since that line depends on OPSYS.
+	c.Check(s.Output(), equals, ""+
+		"WARN: games/heretic2-demo/Makefile:3: The variable TOOLS_PLATFORM.gtar may not be set by any package.\n"+
+		"WARN: games/heretic2-demo/Makefile:5: The variable TOOLS_PLATFORM.gtar may not be set by any package.\n"+
+		"WARN: games/heretic2-demo/Makefile:5: Unknown shell command \"/usr/bin/bsdtar\".\n")
 }
