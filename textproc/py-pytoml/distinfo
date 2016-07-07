@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2016/07/07 16:11:06 jakllsch Exp $
+
+SHA1 (pytoml-0.1.10.zip) = fdd750dfec69e183a3599fb55b521163d27930c6
+RMD160 (pytoml-0.1.10.zip) = 5f5d9f2894cf476f3ffab463a7c94a513eebc887
+SHA512 (pytoml-0.1.10.zip) = ac92a19f016e56a163c034cde2ed2219539e3503d11084271774cd568a4ba0891eb96d6ac3d62376768afbfa44daaf80eb94b58fa2c2a0deab535fafed313c0a
+Size (pytoml-0.1.10.zip) = 8166 bytes
