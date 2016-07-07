@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2016/02/25 08:27:03 jperkin Exp $
+# $NetBSD: Makefile,v 1.15 2016/07/07 08:18:15 adam Exp $
 
-DISTNAME=	libev-4.20
+DISTNAME=	libev-4.22
 CATEGORIES=	devel
 MASTER_SITES=	http://dist.schmorp.de/libev/
 
