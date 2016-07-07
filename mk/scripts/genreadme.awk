@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: genreadme.awk,v 1.36 2015/10/03 13:17:57 bsiegert Exp $
+# $NetBSD: genreadme.awk,v 1.37 2016/07/07 12:01:22 wiz Exp $
 #
 # Copyright (c) 2002, 2003, 2005, 2006, 2015 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -468,7 +468,9 @@ END {
 			gsub(/^[ \t]*SUBDIR.*=[ \t]*/, "", category);
 			catdir = PKGSRCDIR"/"category;
 			readmenew = catdir"/"readme_name;
-			printf("Category = %s\n", category);
+			if (quiet != "yes") {
+				printf("Category = %s\n", category);
+			}
 			cat_make = catdir"/Makefile";
 			pkgs = "";
 			pkgs_file = TMPDIR "/pkgs_file";
