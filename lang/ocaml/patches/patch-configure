@@ -1,9 +1,9 @@
-$NetBSD: patch-configure,v 1.14 2016/05/05 08:12:01 jaapb Exp $
+$NetBSD: patch-configure,v 1.15 2016/07/07 12:15:36 jperkin Exp $
 
 Several configure changes to work on and detect NetBSD (and some other OSes)
 
 See also: <http://caml.inria.fr/mantis/view.php?id=6900>
---- configure.orig	2016-04-01 12:53:41.000000000 +0000
+--- configure.orig	2016-04-25 13:36:01.000000000 +0000
 +++ configure
 @@ -671,7 +671,7 @@ if test $with_sharedlibs = "yes"; then
        mkmaindll="$flexlink -maindll"
@@ -14,6 +14,15 @@ See also: <http://caml.inria.fr/mantis/view.php?id=6900>
        sharedcccompopts="-fPIC"
        mksharedlib="$bytecc -shared"
        bytecclinkopts="$bytecclinkopts -Wl,-E"
+@@ -699,7 +699,7 @@ if test $with_sharedlibs = "yes"; then
+         *gcc*)
+           sharedcccompopts="-fPIC"
+           if sh ./solaris-ld; then
+-            mksharedlib="ld -G"
++            mksharedlib="$bytecc -shared"
+             byteccrpath="-R"
+             mksharedlibrpath="-R"
+           else
 @@ -726,7 +726,7 @@ if test $with_sharedlibs = "yes"; then
        byteccrpath="-Wl,-rpath,"
        mksharedlibrpath="-rpath "
