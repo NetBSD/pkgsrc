@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.22 2016/07/06 09:47:52 jperkin Exp $
+$NetBSD: distinfo,v 1.23 2016/07/07 11:10:05 jperkin Exp $
 
 SHA1 (texlive-20160523-source.tar.xz) = 8cdcc00492fc642db59a9a07f9ea080ff6765460
 RMD160 (texlive-20160523-source.tar.xz) = 4ffc4d92f8c6408c23a34815e2d4b0f4877d9c3f
@@ -6,3 +6,4 @@ SHA512 (texlive-20160523-source.tar.xz) = 9fdd69d237238385240e918456f54791a38e57
 Size (texlive-20160523-source.tar.xz) = 258176464 bytes
 SHA1 (patch-ac) = 1ee83833a03eace2eada892130ddb2198e829f3d
 SHA1 (patch-libs_luajit_LuaJIT-src_src_host_buildvm__asm.c) = 34fa742ed696f97df637c5086bf1faf3d718cb69
+SHA1 (patch-libs_luajit_LuaJIT-src_src_vm__x86.dasc) = 491d33adbbaab8b2b81a65a8d7ba30aee775b75f
