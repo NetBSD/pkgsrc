@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.22 2015/11/04 17:41:19 agc Exp $
+$NetBSD: distinfo,v 1.23 2016/07/07 14:59:37 jperkin Exp $
 
 SHA1 (glew-1.13.0.tgz) = d5b1c499f429aa91c466193b4e8ea94a84019e37
 RMD160 (glew-1.13.0.tgz) = 4ed99bea403cbe72d05cfca25694b31209922f9f
 SHA512 (glew-1.13.0.tgz) = 8fc8d7c0d2cd9235ea51db9972f492701827bff40642fdb3cc54c10b0737dba8e6d8d0dcd8c5aa5bfaaae39c6198ba3d4292cd1662fbe1977eb9a5d187ba635f
 Size (glew-1.13.0.tgz) = 616070 bytes
-SHA1 (patch-ac) = c660635a526a7da09282b50567b9b230a35bd774
+SHA1 (patch-ac) = a5827450e1ed54fff078da5d2d333a7c14a83660
 SHA1 (patch-config_Makefile.linux) = 49ae0366211065225c944cd0088af6e591f12aa9
