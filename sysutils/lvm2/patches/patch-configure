@@ -1,0 +1,33 @@
+$NetBSD: patch-configure,v 1.1 2016/07/08 09:09:47 kamil Exp $
+
+Fix unportable shell constructs.
+
+--- configure.orig	2012-10-15 14:24:58.000000000 +0000
++++ configure
+@@ -9259,7 +9259,7 @@ $as_echo "no" >&6; }
+ fi
+ 
+ 
+-	if test x$PYTHON == xnotfound; then
++	if test x$PYTHON = xnotfound; then
+ 		as_fn_error $? "python is required for --enable-python_bindings but cannot be found
+ 		" "$LINENO" 5
+ 	fi
+@@ -9305,7 +9305,7 @@ $as_echo "no" >&6; }
+ fi
+ 
+ 
+-	if test x$PYTHON_CONFIG == xnotfound; then
++	if test x$PYTHON_CONFIG = xnotfound; then
+ 		as_fn_error $? "python headers are required for --enable-python_bindings but cannot be found
+ 		" "$LINENO" 5
+ 	fi
+@@ -10040,7 +10040,7 @@ $as_echo "no" >&6; }
+ fi
+ 
+ 
+-	if [ "x$MSGFMT" == x ];
++	if [ "x$MSGFMT" = x ];
+ 		then  as_fn_error $? "msgfmt not found in path $PATH
+ 		" "$LINENO" 5
+ 	fi;
