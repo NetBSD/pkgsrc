@@ -260,7 +260,7 @@ typedef struct pgpv_primarykey_t {
 } pgpv_primarykey_t;
 
 /* everything stems from this structure */
-typedef struct pgpv_t {
+struct pgpv_t {
 	PGPV_ARRAY(pgpv_pkt_t, 	 pkts);		/* packet array */
 	PGPV_ARRAY(pgpv_primarykey_t, primaries);	/* array of primary keys */
 	PGPV_ARRAY(pgpv_mem_t,	 areas);	/* areas we read packets from */
@@ -273,12 +273,12 @@ typedef struct pgpv_t {
 	size_t		 	 pkt;		/* when parsing, current pkt number */
 	const char		*op;		/* the operation we're doing */
 	unsigned		 ssh;		/* using ssh keys */
-} pgpv_t;
+};
 
 #define PGPV_REASON_LEN		128
 
 /* when searching, we define a cursor, and fill in an array of subscripts */
-typedef struct pgpv_cursor_t {
+struct pgpv_cursor_t {
 	pgpv_t			*pgp;			/* pointer to pgp tree */
 	char			*field;			/* field we're searching on */
 	char			*op;			/* operation we're doing */
@@ -288,7 +288,7 @@ typedef struct pgpv_cursor_t {
 	PGPV_ARRAY(size_t,	 datacookies);		/* cookies to retrieve matched data */
 	int64_t			 sigtime;		/* time of signature */
 	char			 why[PGPV_REASON_LEN];	/* reason for bad signature */
-} pgpv_cursor_t;
+};
 
 #ifndef USE_ARG
 #define USE_ARG(x)	/*LINTED*/(void)&(x)
@@ -871,18 +871,18 @@ calc_keyid(pgpv_pubkey_t *key, const char *hashtype)
 static void
 str_to_keyid(const char *s, uint8_t *keyid)
 {
-	uint64_t	u64;
+	uint64_t	u;
 
-	u64 = (uint64_t)strtoull(s, NULL, 16);
-	u64 =   ((u64 & 0x00000000000000FFUL) << 56) | 
-		((u64 & 0x000000000000FF00UL) << 40) | 
-		((u64 & 0x0000000000FF0000UL) << 24) | 
-		((u64 & 0x00000000FF000000UL) <<  8) | 
-		((u64 & 0x000000FF00000000UL) >>  8) | 
-		((u64 & 0x0000FF0000000000UL) >> 24) | 
-		((u64 & 0x00FF000000000000UL) >> 40) | 
-		((u64 & 0xFF00000000000000UL) >> 56);
-	memcpy(keyid, &u64, PGPV_KEYID_LEN);
+	u = (uint64_t)strtoull(s, NULL, 16);
+	u =     ((u & 0x00000000000000FFULL) << 56) | 
+		((u & 0x000000000000FF00ULL) << 40) | 
+		((u & 0x0000000000FF0000ULL) << 24) | 
+		((u & 0x00000000FF000000ULL) <<  8) | 
+		((u & 0x000000FF00000000ULL) >>  8) | 
+		((u & 0x0000FF0000000000ULL) >> 24) | 
+		((u & 0x00FF000000000000ULL) >> 40) | 
+		((u & 0xFF00000000000000ULL) >> 56);
+	memcpy(keyid, &u, PGPV_KEYID_LEN);
 }
 
 #define PKT_ALWAYS_ON			0x80
