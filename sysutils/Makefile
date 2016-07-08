@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.675 2016/07/04 07:47:53 jnemeth Exp $
+# $NetBSD: Makefile,v 1.676 2016/07/08 09:10:41 kamil Exp $
 #
 
 COMMENT=	System utilities
@@ -324,6 +324,7 @@ SUBDIR+=	logrider
 SUBDIR+=	logrot
 SUBDIR+=	logrotate
 SUBDIR+=	lsof
+SUBDIR+=	lvm2
 SUBDIR+=	lxmenu-data
 SUBDIR+=	lxpanel
 SUBDIR+=	lxtask
