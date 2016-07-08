@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.62 2016/06/30 17:41:17 wiz Exp $
+@comment $NetBSD: PLIST,v 1.63 2016/07/08 11:11:28 wiz Exp $
 bin/calibre
 bin/calibre-complete
 bin/calibre-customize
@@ -2712,6 +2712,7 @@ share/calibre/recipes/max_planck.recipe
 share/calibre/recipes/mayra.recipe
 share/calibre/recipes/mdj.recipe
 share/calibre/recipes/media2.recipe
+share/calibre/recipes/media_zone.recipe
 share/calibre/recipes/mediafax.recipe
 share/calibre/recipes/mediaindonesia.recipe
 share/calibre/recipes/mediapart.recipe
@@ -2788,6 +2789,7 @@ share/calibre/recipes/nationalgeographicjp.recipe
 share/calibre/recipes/nationalgeoro.recipe
 share/calibre/recipes/nationalreviewonline.recipe
 share/calibre/recipes/nauka_w_polsce.recipe
+share/calibre/recipes/navalny.recipe
 share/calibre/recipes/navegalo.recipe
 share/calibre/recipes/navy_times.recipe
 share/calibre/recipes/nbonline.recipe
@@ -3381,6 +3383,7 @@ share/calibre/recipes/yenisafak_gazetesi.recipe
 share/calibre/recipes/ynet.recipe
 share/calibre/recipes/yomiuri.recipe
 share/calibre/recipes/yomiuri_world.recipe
+share/calibre/recipes/zadolba_li.recipe
 share/calibre/recipes/zaman.recipe
 share/calibre/recipes/zaobao.recipe
 share/calibre/recipes/zaufana_trzecia_strona.recipe
