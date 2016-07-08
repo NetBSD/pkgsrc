@@ -23,9 +23,9 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 #ifndef NETPGP_VERIFY_H_
-#define NETPGP_VERIFY_H_	20160704
+#define NETPGP_VERIFY_H_	20160705
 
-#define NETPGPVERIFY_VERSION	"netpgpverify portable 20160704"
+#define NETPGPVERIFY_VERSION	"netpgpverify portable 20160705"
 
 #include <sys/types.h>
 
@@ -66,6 +66,7 @@ char *pgpv_get_cursor_str(pgpv_cursor_t */*cursor*/, const char */*field*/);
 int pgpv_get_cursor_element(pgpv_cursor_t */*cursor*/, size_t /*element*/);
 
 int pgpv_close(pgpv_t */*pgp*/);
+int pgpv_cursor_close(pgpv_cursor_t */*cursor*/);
 
 __END_DECLS
 
