@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2710 2016/07/08 08:50:33 jperkin Exp $
+$NetBSD: CHANGES-2016,v 1.2711 2016/07/08 08:51:03 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3932,3 +3932,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/samba4 to 4.3.11 [taca 2016-07-07]
 	Updated net/openvpn to 2.3.11 [jperkin 2016-07-08]
 	Updated net/openvpn-acct-wtmpx to 20130210nb3 [jperkin 2016-07-08]
+	Updated net/openvpn-nagios to 20130210nb4 [jperkin 2016-07-08]
