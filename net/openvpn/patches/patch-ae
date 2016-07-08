@@ -1,4 +1,6 @@
-$NetBSD: patch-ae,v 1.7 2013/07/31 06:53:21 adam Exp $
+$NetBSD: patch-ae,v 1.8 2016/07/08 08:49:41 jperkin Exp $
+
+Support IP_PKTINFO and net/if_tap.h
 
 --- configure.ac.orig	2013-05-31 12:00:25.000000000 +0000
 +++ configure.ac
