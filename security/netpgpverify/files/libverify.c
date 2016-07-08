@@ -1815,7 +1815,7 @@ fmt_primary(obuf_t *obuf, pgpv_t *pgp, pgpv_primarykey_t *primary, unsigned subk
 		pubkey = &primary->primary;
 	} else {
 		id = ARRAY_ELEMENT(primary->signed_subkeys, subkey);
-		pubkey = &ARRAY_ELEMENT(pgp->signed_subkeys, id - 1).subkey;
+		pubkey = &ARRAY_ELEMENT(pgp->signed_subkeys, id).subkey;
 	}
 	if (!fmt_pubkey(obuf, pubkey, "signature    ")) {
 		return 0;
