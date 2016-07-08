@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.676 2016/07/08 09:10:41 kamil Exp $
+# $NetBSD: Makefile,v 1.677 2016/07/08 14:32:00 kamil Exp $
 #
 
 COMMENT=	System utilities
@@ -300,6 +300,7 @@ SUBDIR+=	lastfss
 SUBDIR+=	lavaps
 SUBDIR+=	libbaloo4
 SUBDIR+=	libburn
+SUBDIR+=	libcap
 SUBDIR+=	libdevkit-gobject
 SUBDIR+=	libfm
 SUBDIR+=	libfm-extra
