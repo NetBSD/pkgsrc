@@ -1,4 +1,6 @@
-$NetBSD: patch-ac,v 1.10 2013/02/10 05:55:07 manu Exp $
+$NetBSD: patch-ac,v 1.11 2016/07/08 08:49:41 jperkin Exp $
+
+Support clone devices.
 
 --- src/openvpn/tun.c.orig	2011-04-06 16:05:52.000000000 +0000
 +++ src/openvpn/tun.c
