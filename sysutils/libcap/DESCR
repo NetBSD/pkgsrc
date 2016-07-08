@@ -1,0 +1,4 @@
+libcap is a library for getting and setting POSIX.1e (formerly POSIX 6)
+draft 15 capabilities.
+
+This package is restricted for the Linux environment.
