@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2008/02/27 16:14:25 apb Exp $
-sbin/3proxy
-man/man8/3proxy.8
+@comment $NetBSD: PLIST,v 1.2 2016/07/08 15:55:24 rillig Exp $
 man/man5/3proxy.cfg.5
+man/man8/3proxy.8
+sbin/3proxy
