@@ -1,0 +1,35 @@
+$NetBSD: patch-kBuild_header.kmk,v 1.1 2016/07/08 09:42:54 kamil Exp $
+
+Add NetBSD support.
+
+--- kBuild/header.kmk.orig	2016-04-29 00:52:38.000000000 +0000
++++ kBuild/header.kmk
+@@ -610,10 +610,11 @@ SUFF_OBJ    := .o
+ SUFF_LIB    := .a
+ SUFF_DLL    := .so
+ SUFF_EXE    :=
+- if1of ($(KBUILD_TARGET), dragonfly freebsd linux netbsd openbsd) ## @todo check netbsd and openbsd.
++ if1of ($(KBUILD_TARGET), dragonfly freebsd linux)
+ SUFF_SYS    := .ko
++else ifeq ($(KBUILD_TARGET),netbsd)
+  else
+-SUFF_SYS    :=
++SUFF_SYS    := .kmod
+  endif
+ SUFF_RES    :=
+ endif
+@@ -1337,8 +1338,7 @@ else
+  KBUILD_LIB_SEARCH_SUBS  :=
+  KBUILD_LIB_SEARCH_ROOTS :=
+ endif
+-KBUILD_LIB_SEARCH_PATHS  := $(foreach root, $(KBUILD_LIB_SEARCH_ROOTS), $(addprefix $(root),$(KBUILD_LIB_SEARCH_SUBS)))
+-
++KBUILD_LIB_SEARCH_PATHS  ?= $(foreach root, $(KBUILD_LIB_SEARCH_ROOTS), $(addprefix $(root),$(KBUILD_LIB_SEARCH_SUBS)))
+ 
+ #
+ # This is how we find the closest config.kmk.
+@@ -1617,4 +1617,3 @@ endif
+ # end-of-file-content
+ __header_kmk__ := 1
+ endif # !__header_kmk__
+-

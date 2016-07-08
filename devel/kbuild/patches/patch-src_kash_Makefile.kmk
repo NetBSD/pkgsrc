@@ -1,0 +1,21 @@
+$NetBSD: patch-src_kash_Makefile.kmk,v 1.1 2016/07/08 09:42:54 kamil Exp $
+
+Add NetBSD support.
+
+--- src/kash/Makefile.kmk.orig	2015-06-21 21:21:24.000000000 +0000
++++ src/kash/Makefile.kmk
+@@ -54,6 +54,8 @@ kash_DEFS.freebsd = \
+ 	HAVE_SYS_SIGNAME HAVE_SYSCTL_H HAVE_SETPROGNAME
+ kash_DEFS.openbsd = \
+ 	HAVE_SYS_SIGNAME HAVE_SYSCTL_H HAVE_SETPROGNAME
++kash_DEFS.netbsd = \
++	HAVE_SYS_SIGNAME HAVE_SYSCTL_H HAVE_SETPROGNAME
+ kash_INCS = $(kash_0_OUTDIR) . # (the last is because of error.h)
+ kash_ASFLAGS.win = -g cv8
+ kash_ASFLAGS.win.x86   = -f win32
+@@ -223,5 +225,3 @@ endif
+ include $(PATH_SUB_CURRENT)/tests/Makefile.kmk
+ 
+ include $(FILE_KBUILD_SUB_FOOTER)
+-
+-
