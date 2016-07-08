@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2016/07/06 10:09:33 abs Exp $
+# $NetBSD: Makefile,v 1.13 2016/07/08 08:30:30 abs Exp $
 
 DISTNAME=	dc-tools-1.6
 CATEGORIES=	sysutils
@@ -13,7 +13,8 @@ HOMEPAGE=	http://mc.pp.se/dc/sw.html
 COMMENT=	Dreamcast bootable CDs tools (mainly from Marcus Comstedt)
 #LICENSE=	# TODO: (see mk/license.mk)
 
-DCBURN_DISTFILE=1.6.tar.gz
+DCBURN_TAG=	1.6
+DCBURN_DISTFILE=${DCBURN_TAG}.tar.gz
 
 DEPENDS+=	cdrtools>=2.01:../../sysutils/cdrtools
 
@@ -30,14 +31,14 @@ SUBST_CLASSES+=		IP_TMPL
 SUBST_STAGE.IP_TMPL=	post-patch
 SUBST_FILES.IP_TMPL=	makeip.c
 SUBST_SED.IP_TMPL=	-e "s|"IP.TMPL"|"${PREFIX}/share/dc-tools/IP.TMPL"|"
-SUBST_MESSAGE.conf=	Update path to IP.TMPL
+SUBST_MESSAGE.IP_TMPL=	Update path to IP.TMPL
 
-DCBURN_WRKSRC=${DCBURN_DISTFILE:C:-[0-9].*-0-g:-:}
-WRKSRC=${WRKDIR}
+DCBURN_WRKSRC=		dc-burn-netbsd-${DCBURN_TAG}
+WRKSRC=			${WRKDIR}
 
-USE_TOOLS+=	tar
+USE_TOOLS+=		tar
 
-INSTALLATION_DIRS=bin share/dc-tools/serial_slave share/dc-tools/ip_slave share/doc
+INSTALLATION_DIRS=	bin share/dc-tools/serial_slave share/dc-tools/ip_slave share/doc
 
 RESTRICTED=		makeip contains PRODUCED BY OR UNDER LICENSE FROM SEGA ENTERPRISES, LTD data
 NO_SRC_ON_CDROM=	${RESTRICTED}
