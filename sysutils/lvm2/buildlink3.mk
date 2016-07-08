@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2016/07/08 09:09:47 kamil Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2016/07/08 09:17:03 kamil Exp $
 
 BUILDLINK_TREE+=	lvm2
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	lvm2
 LVM2_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.lvm2+=	lvm2>=2.02.98
-BUILDLINK_PKGSRCDIR.lvm2?=	../../wip/lvm2
+BUILDLINK_PKGSRCDIR.lvm2?=	../../sysutils/lvm2
 .endif	# LVM2_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-lvm2
