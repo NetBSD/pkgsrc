@@ -1,4 +1,6 @@
-$NetBSD: patch-af,v 1.8 2013/07/31 06:53:21 adam Exp $
+$NetBSD: patch-af,v 1.9 2016/07/08 08:49:41 jperkin Exp $
+
+Support IP_PKTINFO and net/if_tap.h
 
 --- configure.orig	2013-05-31 12:00:58.000000000 +0000
 +++ configure
