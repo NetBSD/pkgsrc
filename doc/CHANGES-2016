@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2709 2016/07/08 08:49:52 jperkin Exp $
+$NetBSD: CHANGES-2016,v 1.2710 2016/07/08 08:50:33 jperkin Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3931,3 +3931,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Added textproc/py-pytoml version 0.1.10 [jakllsch 2016-07-07]
 	Updated net/samba4 to 4.3.11 [taca 2016-07-07]
 	Updated net/openvpn to 2.3.11 [jperkin 2016-07-08]
+	Updated net/openvpn-acct-wtmpx to 20130210nb3 [jperkin 2016-07-08]
