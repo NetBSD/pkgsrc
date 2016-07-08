@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2280 2016/07/02 08:13:20 joerg Exp $
+# $NetBSD: Makefile,v 1.2281 2016/07/08 09:45:27 kamil Exp $
 #
 
 COMMENT=	Development utilities
@@ -406,6 +406,7 @@ SUBDIR+=	js2-mode
 SUBDIR+=	js_of_ocaml
 SUBDIR+=	kapptemplate
 SUBDIR+=	kbookmarks
+SUBDIR+=	kbuild
 SUBDIR+=	kcachegrind
 SUBDIR+=	kcmutils
 SUBDIR+=	kconfig
