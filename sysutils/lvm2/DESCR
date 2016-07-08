@@ -1,0 +1,5 @@
+LVM2 refers to the userspace toolset that provide logical volume management
+facilities on linux. It is reasonably backwards-compatible with the original
+LVM toolset.
+
+This package is restricted for the Linux environment.
