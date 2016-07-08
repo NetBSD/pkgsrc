@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2711 2016/07/08 08:51:03 jperkin Exp $
+$NetBSD: CHANGES-2016,v 1.2712 2016/07/08 09:11:56 kamil Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3933,3 +3933,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated net/openvpn to 2.3.11 [jperkin 2016-07-08]
 	Updated net/openvpn-acct-wtmpx to 20130210nb3 [jperkin 2016-07-08]
 	Updated net/openvpn-nagios to 20130210nb4 [jperkin 2016-07-08]
+	Added sysutils/lvm2 version 2.02.98 [kamil 2016-07-08]
