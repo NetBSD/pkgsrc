@@ -1,0 +1,33 @@
+$NetBSD: patch-src_kmk_Makefile.kmk,v 1.1 2016/07/08 09:42:54 kamil Exp $
+
+Add NetBSD support.
+
+--- src/kmk/Makefile.kmk.orig	2015-12-22 14:58:34.000000000 +0000
++++ src/kmk/Makefile.kmk
+@@ -107,6 +107,10 @@ kmkmissing_SOURCES.dragonfly = \
+ kmkmissing_SOURCES.freebsd = \
+ 	glob/fnmatch.c
+ 
++kmkmissing_SOURCES.netbsd = \
++	glob/fnmatch.c \
++	strtofflags.c
++
+ kmkmissing_SOURCES.haiku = \
+ 	kmkbuiltin/haikufakes.c \
+ 	glob/fnmatch.c
+@@ -245,6 +249,9 @@ kmk_SOURCES = \
+ 	kbuild-object.c
+ 
+ kmk_DEFS.freebsd.x86 = CONFIG_WITHOUT_THREADS
++kmk_DEFS.netbsd.x86 = CONFIG_WITHOUT_THREADS
++
++kmk_LIBS.netbsd = pthread
+ 
+ #kmk_LIBS.solaris = malloc
+ #kmk_DEFS.solaris += HAVE_MALLINFO
+@@ -645,5 +652,3 @@ test_all: \
+         test_2ndtargetexp \
+         test_30_continued_on_failure \
+         test_lazy_deps_vars
+-
+-

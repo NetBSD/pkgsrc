@@ -1,0 +1,16 @@
+$NetBSD: distinfo,v 1.1 2016/07/08 09:42:53 kamil Exp $
+
+SHA1 (kBuild-0.1.9998-8.r2814.fc25.src.rpm) = e30482f4475673cf8824ac787f469b60aedf1263
+RMD160 (kBuild-0.1.9998-8.r2814.fc25.src.rpm) = 84b3cd3e4ee904c3ba5b2a95cd98aa3e4311902d
+SHA512 (kBuild-0.1.9998-8.r2814.fc25.src.rpm) = 103a6d35385348fdb63d5acc4662c6d6ef3a7cca42bfb6bb087445fdcc121e6bbbaca507b3313d83296c293116ebc478b1bce017023c4f438305e816ec443a6c
+Size (kBuild-0.1.9998-8.r2814.fc25.src.rpm) = 16094144 bytes
+SHA1 (patch-Config.kmk) = 87ef3f8419c39728b2a6eee51bb7d03dfdf7e8e9
+SHA1 (patch-kBuild_header.kmk) = 412b1bf3730c19072be494a9970acbda6c7e5d4f
+SHA1 (patch-src_kash_Makefile.kmk) = b2f1b4f47b5c1b51ebfa35f9e5efc75ec95ff642
+SHA1 (patch-src_kmk_Makefile.kmk) = 52730e797fa169775050b62ad4fdfa1562f8340b
+SHA1 (patch-src_kmk_kmkbuiltin_install.c) = 6a31de5ae58b7f92a8a3c13d8e6b89322d4c3c86
+SHA1 (patch-src_kmk_kmkbuiltin_osdep.c) = 1e450735063dd5bc1d9e4f8370c90720040d22d5
+SHA1 (patch-src_kmk_kmkbuiltin_rm.c) = 16196926da997aa5aeba5d2bd73407f334cd44a4
+SHA1 (patch-src_lib_md5.c) = f14e8fdd4d51e25fda8a876c09f31d11f32ffa6f
+SHA1 (patch-src_sed_Makefile.kmk) = eaebdbb2ce06d09f77b350bdaceb6161d9357575
+SHA1 (patch-src_sed_lib_utils.c) = 98df0a267680a4eb45fb93e4d699a234f5d8ec25
