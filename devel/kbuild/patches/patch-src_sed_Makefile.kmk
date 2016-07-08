@@ -1,0 +1,22 @@
+$NetBSD: patch-src_sed_Makefile.kmk,v 1.1 2016/07/08 09:42:54 kamil Exp $
+
+Add NetBSD support.
+
+--- src/sed/Makefile.kmk.orig	2015-06-21 21:21:27.000000000 +0000
++++ src/sed/Makefile.kmk
+@@ -69,6 +69,10 @@ kmk_sed_SOURCES.freebsd = \
+ 	lib/strverscmp.c \
+ 	lib/obstack.c \
+ 	lib/getline.c
++kmk_sed_SOURCES.netbsd = \
++	lib/strverscmp.c \
++	lib/obstack.c \
++	lib/getline.c
+ kmk_sed_SOURCES.haiku = \
+ 	lib/strverscmp.c \
+ 	lib/obstack.c
+@@ -105,4 +109,3 @@ $(kmk_sed_0_OUTDIR)/config.h: $(kmk_sed_
+ #
+ $(kmk_sed_0_OUTDIR)/regex.h: $(kmk_sed_DEFPATH)/lib/regex_.h | $(call DIRDEP,$(kmk_sed_0_OUTDIR))
+ 	$(CP) -f $^ $@
+-

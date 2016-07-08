@@ -1,0 +1,20 @@
+$NetBSD: patch-Config.kmk,v 1.1 2016/07/08 09:42:54 kamil Exp $
+
+Add NetBSD support.
+
+--- Config.kmk.orig	2016-04-29 00:52:38.000000000 +0000
++++ Config.kmk
+@@ -361,7 +361,7 @@ endif
+ TEMPLATE_BIN-THREADED = Threaded command line binary
+ TEMPLATE_BIN-THREADED_EXTENDS = BIN
+ TEMPLATE_BIN-THREADED_EXTENDS_BY = appending
+-if1of ($(KBUILD_TARGET), dragonfly freebsd linux openbsd)
++if1of ($(KBUILD_TARGET), dragonfly freebsd linux openbsd netbsd)
+  TEMPLATE_BIN-THREADED_LIBS = pthread
+ endif
+ 
+@@ -377,4 +377,3 @@ TEMPLATE_LIB_TOOL    = $(TEMPLATE_BIN_TO
+ 
+ LIB_KDEP = $(PATH_OBJ)/kDep/$(TOOL_$(TEMPLATE_LIB_TOOL)_ARLIBPREF)kDep$(TOOL_$(TEMPLATE_LIB_TOOL)_ARLIBSUFF)
+ LIB_KUTIL = $(PATH_OBJ)/kUtil/$(TOOL_$(TEMPLATE_LIB_TOOL)_ARLIBPREF)kUtil$(TOOL_$(TEMPLATE_LIB_TOOL)_ARLIBSUFF)
+-
