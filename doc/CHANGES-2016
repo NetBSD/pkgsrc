@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2715 2016/07/08 14:32:57 kamil Exp $
+$NetBSD: CHANGES-2016,v 1.2716 2016/07/08 15:57:55 agc Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3937,3 +3937,5 @@ Changes to the packages collection and infrastructure in 2016:
 	Added devel/kbuild version 0.1.9998.8.2814.25 [kamil 2016-07-08]
 	Updated misc/calibre to 2.62.0 [wiz 2016-07-08]
 	Added sysutils/libcap version 2.25 [kamil 2016-07-08]
+	Updated security/netpgpverify to 20160705 [agc 2016-07-08]
+	Updated security/libnetpgpverify to 20160705 [agc 2016-07-08]
