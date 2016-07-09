@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2016/04/20 13:52:24 prlw1 Exp $
+# $NetBSD: Makefile,v 1.25 2016/07/09 06:39:11 wiz Exp $
 
 DISTNAME=	dansguardian-2.12.0.3
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dansguardian/}
 EXTRACT_SUFX=	.tar.bz2
