@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2016/06/20 08:17:42 kamil Exp $
+# $NetBSD: Makefile,v 1.2 2016/07/09 06:37:47 wiz Exp $
 
 DISTNAME=	ardour-4.7
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_GITHUB:=Ardour/}
 GITHUB_TAG=	${PKGVERSION_NOREV}

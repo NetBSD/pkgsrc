@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2015/06/12 10:50:09 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2016/07/09 06:38:20 wiz Exp $
 
 DISTNAME=	compface-1.5.2
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_XEMACS:=aux/}
 
