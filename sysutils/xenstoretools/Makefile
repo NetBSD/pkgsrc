@@ -1,17 +1,18 @@
-# $NetBSD: Makefile,v 1.4 2013/04/29 11:23:58 sborrill Exp $
+# $NetBSD: Makefile,v 1.5 2016/07/09 13:07:20 rillig Exp $
 #
 
 # VERSION is set in xentool41/version.mk
 .include		"../../sysutils/xentools41/version.mk"
 
-DISTNAME=		xen-${VERSION}
-PKGNAME=		xenstoretools-${VERSION}
-CATEGORIES=		sysutils
+DISTNAME=	xen-${VERSION}
+PKGNAME=	xenstoretools-${VERSION}
+PKGREVISION=	1
+CATEGORIES=	sysutils
 MASTER_SITES=	http://bits.xensource.com/oss-xen/release/${VERSION}/
 
-DISTFILES=		${DISTNAME}.tar.gz
-DISTFILES+=		ipxe-git-v${VERSION_IPXE}.tar.gz
-SITES.ipxe-git-v${VERSION_IPXE}.tar.gz +=	http://xenbits.xensource.com/xen-extfiles/
+DISTFILES=	${DISTNAME}.tar.gz
+DISTFILES+=	ipxe-git-v${VERSION_IPXE}.tar.gz
+SITES.ipxe-git-v${VERSION_IPXE}.tar.gz+= http://xenbits.xensource.com/xen-extfiles/
 
 MAINTAINER=		sborrill@NetBSD.org
 HOMEPAGE=		http://xen.org/
@@ -27,6 +28,7 @@ INSTALL_DIRS=		xenstore
 
 PKG_SYSCONFSUBDIR=	xen
 WRKSRC=			${WRKDIR}/xen-${VERSION}/tools
+BUILD_DEFS+=		VARBASE
 
 ONLY_FOR_PLATFORM=	Linux-2.6*-i386 Linux-2.6*-x86_64
 ONLY_FOR_PLATFORM+=	NetBSD-[5-9].*-x86_64 NetBSD-[5-9].*-i386
@@ -43,7 +45,7 @@ MAKE_ENV+=		MV=${MV:Q} PYTHON=${PYTHONBIN:Q} SED=${SED:Q}
 MAKE_ENV+=		VARBASE=${VARBASE}
 
 RCD_SCRIPTS=		xendomname
-FILES_SUBST+=		PREFIX=${PREFIX:Q}
+FILES_SUBST+=		PREFIX=${PREFIX}
 
 .include "../../mk/bsd.prefs.mk"
 
