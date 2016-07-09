@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2729 2016/07/09 06:40:19 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2730 2016/07/09 06:59:26 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3954,3 +3954,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated www/p5-URI-Escape-XS to 0.14 [wen 2016-07-09]
 	Updated math/p5-Math-Random to 0.72 [wen 2016-07-09]
 	Updated pkgtools/revbump to 2.14 [wiz 2016-07-09]
+	Updated www/p5-Test-WWW-Mechanize-PSGI to 0.36 [wen 2016-07-09]
