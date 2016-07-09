@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2016/07/09 06:39:10 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2016/07/09 13:10:15 rillig Exp $
 #
 
 DISTNAME=	waimea-0.4.0
@@ -39,9 +39,9 @@ CONFIGURE_ARGS+=	--disable-shape
 .  endif
 .endif
 
-CONFIGURE_ARGS+=       --disable-randr
+CONFIGURE_ARGS+=	--disable-randr
 
-REPLACE_PERL = \
+REPLACE_PERL= \
 	data/scripts/filelist.pl \
 	data/scripts/procinfo.pl \
 	data/scripts/stylesdir.pl.in
