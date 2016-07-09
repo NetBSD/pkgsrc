@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2016/01/22 15:26:25 prlw1 Exp $
+# $NetBSD: Makefile,v 1.9 2016/07/09 13:03:32 wiz Exp $
 
 DISTNAME=	glmark2-2014.03
 PKGREVISION=	2
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v3 AND modified-bsd
 
 USE_LANGUAGES=	c c++
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35
 
 USE_TOOLS+=	pkg-config
 

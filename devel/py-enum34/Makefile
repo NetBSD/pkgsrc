@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2016/06/08 17:49:19 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2016/07/09 13:03:40 wiz Exp $
 
 DISTNAME=	enum34-1.1.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://pypi.python.org/pypi/enum34
 COMMENT=	Python module for enums like in python-3.4
 LICENSE=	modified-bsd
 
-PYTHON_VERSIONS_ACCEPTED=	33 27 # unnecessary on 34 and newer
+PYTHON_VERSIONS_ACCEPTED=	27 # unnecessary on 34 and newer
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2015/12/05 21:25:40 adam Exp $
+# $NetBSD: Makefile,v 1.15 2016/07/09 13:03:44 wiz Exp $
 
 DISTNAME=	winpdb-1.4.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2 # or later
 
 DEPENDS+=	${PYPKGPREFIX}-wxWidgets>=2.6:../../x11/py-wxWidgets
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-wxWidgets
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-wxWidgets
 
 USE_LANGUAGES=	#none
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.151 2016/07/09 06:38:15 wiz Exp $
+# $NetBSD: Makefile,v 1.152 2016/07/09 13:03:46 wiz Exp $
 
 DISTNAME=	qemu-2.6.0
 PKGREVISION=	2
@@ -45,7 +45,7 @@ PKG_SYSCONFSUBDIR=	qemu
 
 REPLACE_PERL+=		scripts/texi2pod.pl
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported yet as of 1.7.0
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported yet as of 1.7.0
 
 BUILDLINK_PASSTHRU_DIRS+= /usr/lib
 BUILDLINK_PASSTHRU_RPATHDIRS+= /usr/lib
