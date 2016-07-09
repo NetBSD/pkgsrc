@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.587 2016/06/18 10:18:57 prlw1 Exp $
+# $NetBSD: Makefile,v 1.588 2016/07/09 21:45:22 rillig Exp $
 #
 
 COMMENT=	Security tools
@@ -32,6 +32,7 @@ SUBDIR+=	bitstir
 SUBDIR+=	boringssl
 SUBDIR+=	botan
 SUBDIR+=	botan-devel
+SUBDIR+=	bunny
 SUBDIR+=	caff
 SUBDIR+=	ccid
 SUBDIR+=	cfs
