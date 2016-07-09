@@ -1,4 +1,4 @@
-.\"	$NetBSD: revbump.1,v 1.24 2015/02/09 00:58:44 snj Exp $
+.\"	$NetBSD: revbump.1,v 1.25 2016/07/09 06:40:08 wiz Exp $
 .\"
 .\" Copyright (c) 2003, 2004, 2005, 2006, 2010, 2012, 2013, 2014 The NetBSD Foundation, Inc.
 .\"
@@ -31,7 +31,7 @@
 .\" OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 .\" IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 .\"
-.Dd February 9, 2015
+.Dd July 9, 2016
 .Dt REVBUMP 1
 .Os
 .Sh NAME
@@ -100,6 +100,12 @@ cvs diff `cat bl3bump makebump` | less
 cvs commit `cat bl3bump makebump`
 rm allbump bl3bump* makebump* commonbump* cvs-diff
 .Ed
+Please note that for
+.Pa lang/perl5
+it is recommended to additionally bump all packages called
+.Pa p5-*
+and every package using perl, i.e.
+.Dl grep -r perl /usr/pkgsrc
 .Sh ENVIRONMENT
 .Ev PKGSRCDIR
 pkgsrc root directory.
