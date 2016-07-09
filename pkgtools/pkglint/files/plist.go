@@ -61,8 +61,8 @@ func (ck *PlistChecker) Check(plainLines []*Line) {
 		ck.checkline(pline)
 		pline.CheckTrailingWhitespace()
 	}
-
 	ChecklinesTrailingEmptyLines(plainLines)
+
 	if G.opts.WarnPlistSort {
 		sorter := NewPlistLineSorter(plines)
 		sorter.Sort()
@@ -469,8 +469,8 @@ func NewPlistLineSorter(plines []*PlistLine) *plistLineSorter {
 		} else {
 			s.plines = append(s.plines, pline)
 			s.lines = append(s.lines, pline.line)
+			prev = pline
 		}
-		prev = pline
 	}
 	return s
 }
