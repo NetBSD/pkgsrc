@@ -144,7 +144,7 @@ func (c *StrCommand) HasOption(opt string) bool {
 	return false
 }
 
-func (c *StrCommand) AnyArgMatches(pattern string) bool {
+func (c *StrCommand) AnyArgMatches(pattern RegexPattern) bool {
 	for _, arg := range c.Args {
 		if matches(arg, pattern) {
 			return true
