@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2016/04/11 19:01:44 ryoon Exp $
+# $NetBSD: Makefile,v 1.11 2016/07/09 06:37:57 wiz Exp $
 
 DISTNAME=	libfreehand-0.1.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	converters
 MASTER_SITES=	http://dev-www.libreoffice.org/src/
 EXTRACT_SUFX=	.tar.bz2

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2015/06/12 10:48:47 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2016/07/09 06:38:05 wiz Exp $
 
 DISTNAME=	bugzilla-3.2.4
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	www devel
 MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=webtools/}
 

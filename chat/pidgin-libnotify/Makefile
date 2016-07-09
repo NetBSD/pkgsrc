@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2015/06/12 10:48:28 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2016/07/09 06:37:54 wiz Exp $
 #
 
 DISTNAME=	pidgin-libnotify-0.14
-PKGREVISION=	37
+PKGREVISION=	38
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gaim-libnotify/}
 

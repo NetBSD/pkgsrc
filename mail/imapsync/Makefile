@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2015/06/12 10:50:19 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2016/07/09 06:38:29 wiz Exp $
 
 DISTNAME=	imapsync-1.607
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	https://fedorahosted.org/released/imapsync/
 EXTRACT_SUFX=	.tgz
