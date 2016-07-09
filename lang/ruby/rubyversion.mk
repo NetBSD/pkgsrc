@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.163 2016/05/15 14:19:56 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.164 2016/07/09 10:11:08 rillig Exp $
 #
 
 # This file determines which Ruby version is used as a dependency for
@@ -609,7 +609,7 @@ RUBY_PLIST_COMMENT_CMD= \
 RUBY_PLIST_FILES_CMD= ( cd ${DESTDIR}${PREFIX}; \
 	${FIND} ${RUBY_DYNAMIC_DIRS} \( -type f -o -type l \) -print ) | \
 	${SORT} -u
-RUBY_GENERATE_PLIST =	( \
+RUBY_GENERATE_PLIST=	( \
 	${RUBY_PLIST_COMMENT_CMD}; \
 	${RUBY_PLIST_FILES_CMD} ) > ${RUBY_PLIST_DYNAMIC}
 .endif
