@@ -1,4 +1,4 @@
-# $NetBSD: versioned_dependencies.mk,v 1.24 2016/06/30 18:03:46 wiz Exp $
+# $NetBSD: versioned_dependencies.mk,v 1.25 2016/07/09 10:00:26 rillig Exp $
 #
 # This file determines which separate distribution of a Python
 # package is used as dependency, depending on the Python version
@@ -15,41 +15,41 @@
 
 .include "../../lang/python/pyversion.mk"
 
-_SUPPORTED_PACKAGES=# empty
-_SUPPORTED_PACKAGES+=Pmw x11/py-Pmw x11/py-Pmw2
-_SUPPORTED_PACKAGES+=X textproc/py-X2 textproc/py-X
-_SUPPORTED_PACKAGES+=cairo graphics/py-cairo graphics/py-cairo3
-_SUPPORTED_PACKAGES+=dateutil time/py-dateutil time/py-dateutil
-_SUPPORTED_PACKAGES+=dialog devel/py-dialog2 devel/py-dialog
-_SUPPORTED_PACKAGES+=ephem math/py-ephem math/py-ephem3
-_SUPPORTED_PACKAGES+=flup www/py-flup www/py-flup3
-_SUPPORTED_PACKAGES+=gobject devel/py-gobject devel/py-gobject3
-_SUPPORTED_PACKAGES+=google-api-python-client www/py-google-api-python-client www/py-google-api-python-client-py3
-_SUPPORTED_PACKAGES+=jsonlib textproc/py-jsonlib textproc/py-jsonlib3
-_SUPPORTED_PACKAGES+=python-digest www/py-python-digest www/py-python3-digest
+_SUPPORTED_PACKAGES=	# empty
+_SUPPORTED_PACKAGES+=	Pmw x11/py-Pmw x11/py-Pmw2
+_SUPPORTED_PACKAGES+=	X textproc/py-X2 textproc/py-X
+_SUPPORTED_PACKAGES+=	cairo graphics/py-cairo graphics/py-cairo3
+_SUPPORTED_PACKAGES+=	dateutil time/py-dateutil time/py-dateutil
+_SUPPORTED_PACKAGES+=	dialog devel/py-dialog2 devel/py-dialog
+_SUPPORTED_PACKAGES+=	ephem math/py-ephem math/py-ephem3
+_SUPPORTED_PACKAGES+=	flup www/py-flup www/py-flup3
+_SUPPORTED_PACKAGES+=	gobject devel/py-gobject devel/py-gobject3
+_SUPPORTED_PACKAGES+=	google-api-python-client www/py-google-api-python-client www/py-google-api-python-client-py3
+_SUPPORTED_PACKAGES+=	jsonlib textproc/py-jsonlib textproc/py-jsonlib3
+_SUPPORTED_PACKAGES+=	python-digest www/py-python-digest www/py-python3-digest
 
 .for pattern in ${PYTHON_VERSIONED_DEPENDENCIES}
 _PKG_MATCHED=	no
 pkg:=	${pattern:C/:.*//}
 type:=	${pattern:C/[^:]*//}
-.for name py2dir py3dir in ${_SUPPORTED_PACKAGES}
-.if "${pkg}" == "${name}"
+.  for name py2dir py3dir in ${_SUPPORTED_PACKAGES}
+.    if "${pkg}" == "${name}"
 _PKG_MATCHED=	yes
-.if ${PYPKGPREFIX} == "py27"
+.      if ${PYPKGPREFIX} == "py27"
 dir:=	${py2dir}
-.else
+.      else
 dir:=	${py3dir}
-.endif
-.if "${type}" == ":link"
+.      endif
+.      if "${type}" == ":link"
 .include "../../${dir}/buildlink3.mk"
-.elif "${type}" == ":build"
+.      elif "${type}" == ":build"
 BUILD_DEPENDS:=	${BUILD_DEPENDS} ${PYPKGPREFIX}-${pkg}-[0-9]*:../../${dir}
-.else
+.      else
 DEPENDS:=	${DEPENDS} ${PYPKGPREFIX}-${pkg}-[0-9]*:../../${dir}
-.endif
-.endif
-.endfor
-.if ${_PKG_MATCHED} == "no"
+.      endif
+.    endif
+.  endfor
+.  if ${_PKG_MATCHED} == "no"
 PKG_FAIL_REASON+=	"${pkg} unsupported in PYTHON_VERSIONED_DEPENDENCIES"
-.endif
+.  endif
 .endfor
