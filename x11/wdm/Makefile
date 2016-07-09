@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2015/12/23 12:44:20 joerg Exp $
+# $NetBSD: Makefile,v 1.62 2016/07/09 10:25:27 rillig Exp $
 
 DISTNAME=		wdm-1.28
 PKGREVISION=		18
@@ -16,7 +16,7 @@ GNU_CONFIGURE=		YES
 LDFLAGS.DragonFly=	-lintl -lfontconfig
 LDFLAGS.SunOS+=		-lintl -lresolv
 
-CONFIGURE_ARGS+=	--with-wdmdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--with-wdmdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-nlsdir=${PREFIX}/${PKGLOCALEDIR}/locale
 CONFIGURE_ARGS+=	--with-gfx-incs=${BUILDLINK_DIR}/include/WINGs
 CONFIGURE_ARGS+=	--with-gfx-libs=${BUILDLINK_DIR}/lib
@@ -53,7 +53,7 @@ CONF_FILES+=	${PREFIX}/share/examples/wdm/${f} ${PKG_SYSCONFDIR}/${f}
 CONFIGURE_ARGS+=	--with-winmgr=${wmanager:Q}
 .endfor
 
-INSTALLATION_DIRS += share/pixmaps/wdm share/examples/wdm
+INSTALLATION_DIRS+=	share/pixmaps/wdm share/examples/wdm
 
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/giflib/buildlink3.mk"
