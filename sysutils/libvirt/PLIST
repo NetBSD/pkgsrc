@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2014/11/26 23:48:03 gdt Exp $
+@comment $NetBSD: PLIST,v 1.12 2016/07/09 12:47:05 rillig Exp $
 bin/virsh
 bin/virt-host-validate
 bin/virt-pki-validate
@@ -10,12 +10,12 @@ include/libvirt/virterror.h
 lib/libvirt-lxc.la
 lib/libvirt-qemu.la
 lib/libvirt.la
+${PLIST.xen}lib/libvirt/connection-driver/libvirt_driver_libxl.la
 lib/libvirt/connection-driver/libvirt_driver_network.la
+${PLIST.hal}lib/libvirt/connection-driver/libvirt_driver_nodedev.la
 lib/libvirt/connection-driver/libvirt_driver_qemu.la
 lib/libvirt/connection-driver/libvirt_driver_secret.la
 lib/libvirt/connection-driver/libvirt_driver_storage.la
-${PLIST.hal}lib/libvirt/connection-driver/libvirt_driver_nodedev.la
-${PLIST.xen}lib/libvirt/connection-driver/libvirt_driver_libxl.la
 lib/libvirt/lock-driver/lockd.la
 lib/pkgconfig/libvirt-lxc.pc
 lib/pkgconfig/libvirt-qemu.pc
