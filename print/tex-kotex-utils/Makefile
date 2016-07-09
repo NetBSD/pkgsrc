@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2016/06/16 04:06:10 markd Exp $
+# $NetBSD: Makefile,v 1.12 2016/07/09 06:38:52 wiz Exp $
 
 DISTNAME=	kotex-utils
 PKGNAME=	tex-${DISTNAME}-2.1.0
+PKGREVISION=	1
 TEXLIVE_REV=	38727
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

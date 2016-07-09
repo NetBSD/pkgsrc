@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.116 2016/06/08 19:24:08 wiz Exp $
+# $NetBSD: Makefile,v 1.117 2016/07/09 06:38:44 wiz Exp $
 
 .include "Makefile.common"
 CATEGORIES=	net
-PKGREVISION=	5
+PKGREVISION=	6
 
 MAINTAINER=	adam@NetBSD.org
 COMMENT=	Extensible SNMP implementation

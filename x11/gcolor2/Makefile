@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2015/07/25 02:06:04 kamil Exp $
+# $NetBSD: Makefile,v 1.2 2016/07/09 06:39:16 wiz Exp $
 
 DISTNAME=	gcolor2-0.4
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GENTOO:=distfiles/}
 

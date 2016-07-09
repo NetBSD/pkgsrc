@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.32 2015/06/12 10:50:53 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2016/07/09 06:38:45 wiz Exp $
 #
 
 DISTNAME=	spread-src-3.17.3
 PKGNAME=	${DISTNAME:S/-src//}
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	net
 MASTER_SITES=	http://www.cnds.jhu.edu/download/noformdown/
 

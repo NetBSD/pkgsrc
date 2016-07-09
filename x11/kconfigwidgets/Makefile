@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2016/06/09 23:37:20 markd Exp $
+# $NetBSD: Makefile,v 1.3 2016/07/09 06:39:17 wiz Exp $
 
 DISTNAME=	kconfigwidgets-${KF5VER}
+PKGREVISION=	1
 CATEGORIES=	x11
 
 HOMEPAGE=	https://community.kde.org/Frameworks

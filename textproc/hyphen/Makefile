@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2015/06/12 10:51:21 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2016/07/09 06:39:06 wiz Exp $
 
 DISTNAME=	hyphen-2.8.6
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hunspell/}
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2016/02/28 19:47:41 joerg Exp $
+# $NetBSD: Makefile,v 1.35 2016/07/09 06:38:48 wiz Exp $
 
 DISTNAME=	openmpi-1.10.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	parallel
 MASTER_SITES=	http://www.open-mpi.org/software/ompi/v1.10/downloads/
 EXTRACT_SUFX=	.tar.bz2

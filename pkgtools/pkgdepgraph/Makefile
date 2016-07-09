@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2015/07/10 17:01:16 dholland Exp $
+# $NetBSD: Makefile,v 1.39 2016/07/09 06:38:49 wiz Exp $
 #
 
 PKGNAME=	pkgdepgraph-2.8
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	pkgtools devel
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

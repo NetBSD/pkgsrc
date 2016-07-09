@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.38 2016/04/02 08:43:25 jperkin Exp $
+# $NetBSD: Makefile,v 1.39 2016/07/09 06:38:44 wiz Exp $
 
 DISTNAME=		netdisco-${PKGVERSION}_with_mibs
 PKGNAME=		netdisco-${PKGVERSION}
 PKGVERSION=		1.3.3
-#PKGREVISION=		1
+PKGREVISION=		1
 CATEGORIES=		net
-DISTFILES=		${DEFAULT_DISTFILES} oui.txt
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=netdisco/}
 SITES.oui.txt=		http://standards.ieee.org/regauth/oui/
+DISTFILES=		${DEFAULT_DISTFILES} oui.txt
 
 MAINTAINER=		bouyer@NetBSD.org
 HOMEPAGE=		http://www.netdisco.org/

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2016/05/21 19:45:03 gdt Exp $
+# $NetBSD: Makefile,v 1.18 2016/07/09 06:38:59 wiz Exp $
 #
 
 DISTNAME=		etcmanage-0.9.4
+PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.ir.bbn.com/~gdt/etcmanage/
 

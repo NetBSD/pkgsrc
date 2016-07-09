@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2015/06/12 10:51:01 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2016/07/09 06:38:53 wiz Exp $
 #
 
 DISTNAME=	apg-2.3.0b
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	security
 MASTER_SITES=	http://www.adel.nursat.kz/apg/download/
 

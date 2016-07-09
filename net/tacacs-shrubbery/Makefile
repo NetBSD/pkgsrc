@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2015/06/12 10:50:53 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2016/07/09 06:38:46 wiz Exp $
 #
 
 DISTNAME=	tacacs+-F4.0.4.27a
 PKGNAME=	${DISTNAME:S,-F,-,}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	net security
 MASTER_SITES=	ftp://ftp.shrubbery.net/pub/tac_plus/
 

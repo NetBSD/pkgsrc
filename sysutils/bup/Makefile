@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2016/03/09 23:53:17 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2016/07/09 06:38:58 wiz Exp $
 
 DISTNAME=	bup-0.27
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	# https://github.com/bup/bup/releases/
 # doc: switch to "man" branch before downloading

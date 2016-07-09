@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2016/06/08 19:24:47 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2016/07/09 06:39:07 wiz Exp $
 
 DISTNAME=	libxml-perl-0.08
 PKGNAME=	p5-libxml-0.08
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 
