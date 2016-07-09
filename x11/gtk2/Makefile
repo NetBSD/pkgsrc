@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.278 2016/07/09 06:39:16 wiz Exp $
+# $NetBSD: Makefile,v 1.279 2016/07/09 13:04:17 wiz Exp $
 
 DISTNAME=	gtk+-2.24.30
 PKGNAME=	${DISTNAME:S/gtk/gtk2/}
@@ -80,7 +80,7 @@ SUBST_MESSAGE.iconcache=	Renaming gtk-icon-cache-update.
 SUBST_SED.iconcache=		-e 's,gtk-update-icon-cache,gtk2-update-icon-cache,g'
 SUBST_FILES.iconcache=		gtk/Makefile.in
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 2.24.22
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 2.24.22
 REPLACE_PYTHON=	gtk/gtk-builder-convert
 
 # We remove the module databases during post-install since we create them

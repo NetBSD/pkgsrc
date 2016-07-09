@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2015/12/05 21:25:29 adam Exp $
+# $NetBSD: Makefile,v 1.14 2016/07/09 13:03:32 wiz Exp $
 
 DISTNAME=	quodlibet-2.6.3
 PKGREVISION=	7
@@ -20,7 +20,7 @@ USE_PKGLOCALEDIR=	yes
 #BUILD_TARGET=		_trayicon.so _mmkeys.so
 
 PYDISTUTILSPKG= yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-gtk2, py-gstreamer0.10
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-gtk2, py-gstreamer0.10
 REPLACE_PYTHON=	exfalso.py quodlibet.py operon.py
 
 .include "../../devel/py-gobject/buildlink3.mk"

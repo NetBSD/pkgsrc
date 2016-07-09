@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2015/12/05 21:25:35 adam Exp $
+# $NetBSD: options.mk,v 1.10 2016/07/09 13:03:38 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gps
 PKG_SUPPORTED_OPTIONS=	syslog sqlite readline python pgsql
@@ -60,7 +60,7 @@ CONFIGURE_ARGS+= --without-python --disable-pygtk --disable-pygobject
 .else
 MY_CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
 CONFIGURE_ARGS+=	--with-python=${PREFIX}
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-gtk2
 .include "../../lang/python/pyversion.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
 .endif

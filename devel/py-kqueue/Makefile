@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2015/12/05 21:25:38 adam Exp $
+# $NetBSD: Makefile,v 1.17 2016/07/09 13:03:42 wiz Exp $
 
 DISTNAME=	py-kqueue-2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py-//}
@@ -18,7 +18,7 @@ PKG_SKIP_REASON+= "${PKGNAME} is not available for ${MACHINE_PLATFORM}; needs OS
 .endif
 
 EGG_NAME=	${DISTNAME:S/py-//}
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 2.0
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 2.0
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

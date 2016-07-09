@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2016/04/20 12:10:30 nros Exp $
+# $NetBSD: Makefile,v 1.17 2016/07/09 13:03:31 wiz Exp $
 
 DISTNAME=		pyvorbis-1.3
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -13,7 +13,7 @@ LICENSE=		gnu-lgpl-v2
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-ogg, and itself not ported as of 1.3
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-ogg, and itself not ported as of 1.3
 
 HAS_CONFIGURE=		yes
 CONFIG_SHELL=		${PYTHONBIN}
