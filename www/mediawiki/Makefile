@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2016/05/21 11:58:12 wen Exp $
+# $NetBSD: Makefile,v 1.60 2016/07/09 06:18:26 wen Exp $
 
 DISTNAME=	mediawiki-${VER}.${PVER}
 CATEGORIES=	www
@@ -9,10 +9,11 @@ HOMEPAGE=	http://www.mediawiki.org/
 COMMENT=	Free software wiki package originally written for Wikipedia
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	${PHP_PKG_PREFIX}-dom>=5.3.3:../../textproc/php-dom
-DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.3.3:../../graphics/php-gd
-DEPENDS+=	${PHP_PKG_PREFIX}-intl>=5.3.3:../../textproc/php-intl
-DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.3.3:../../textproc/php-json
+DEPENDS+=	${PHP_PKG_PREFIX}-dom>=5.5.9:../../textproc/php-dom
+DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.5.9:../../graphics/php-gd
+DEPENDS+=	${PHP_PKG_PREFIX}-intl>=5.5.9:../../textproc/php-intl
+DEPENDS+=	${PHP_PKG_PREFIX}-json>=5.5.9:../../textproc/php-json
+DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=5.5.9:../../converters/php-mbstring
 
 EGDIR=			share/examples/mediawiki
 MEDIAWIKI=		${PREFIX}/share/mediawiki
@@ -21,8 +22,8 @@ INSTALLATION_DIRS=	${EGDIR} share/mediawiki
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
-VER=			1.26
-PVER=			3
+VER=			1.27
+PVER=			0
 
 APACHE_USER?=		www
 APACHE_GROUP?=		www
