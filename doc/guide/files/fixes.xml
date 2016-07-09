@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.137 2016/06/21 21:47:29 wiz Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.138 2016/07/09 14:44:06 rillig Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -88,33 +88,22 @@ INTERACTIVE_STAGE=      configure install
   <sect2 id="handling-licenses">
     <title>Handling licenses</title>
 
-    <para>Authors of software can choose the licence under which
-    software can be copied.  This is due to copyright law, and reasons
-    for license choices are outside the scope of pkgsrc.  The pkgsrc
-    system recognizes that there are a number of licenses which some
-    users may find objectionable or difficult or impossible to comply
-    with.  The Free Software Foundation has declared some licenses
-    "Free", and the Open Source Initiative has a definition of "Open
-    Source".  The pkgsrc system, as a policy choice, does not label
-    packages which have licenses that are Free or Open Source.
-    However, packages without a license meeting either of those tests
-    are labeled with a license tag denoting the license.  Note that a
-    package with no license to copy trivially does not meet either the
-    Free or Open Source test.</para>
+    <para>Authors of software can choose the licence under which software
+    can be copied.  The Free Software Foundation has declared some
+    licenses "Free", and the Open Source Initiative has a definition of
+    "Open Source".</para>
 
-    <para>For packages which are not Free or Open Source, pkgsrc will
-    not build the package unless the user has indicated to pkgsrc that
-    packages with that particular license may be built.  Note that
-    this documentation avoids the term "accepted the license".  The
-    pkgsrc system is merely providing a mechanism to avoid
-    accidentally building a package with a non-free license;
-    judgement and responsibility remain with the user.  (Installation
-    of binary packages are not currently subject to this mechanism;
-    this is a bug.)</para>
+    <para>By default, pkgsrc allows packages with Free or Open Source
+    licenses to be built.  To allow packages with other licenses to be
+    built as well, the pkgsrc user needs to add these licenses to the
+    <varname>ACCEPTABLE_LICENSES</varname> variable in &mk.conf;.  Note
+    that this variable only affects which packages may be
+    <emphasis>built</emphasis>, while the license terms often also
+    restrict the actual use of the package and its redistribution.</para>
 
     <para>One might want to only install packages with a BSD license,
     or the GPL, and not the other.  The free licenses are added to the
-    default <varname>ACCEPTABLE_LICENSES</varname> variable.  The
+    default <varname>ACCEPTABLE_LICENSES</varname> variable.  The pkgsrc
     user can override the default by setting the
     <varname>ACCEPTABLE_LICENSES</varname> variable with "=" instead
     of "+=".  The licenses accepted by default are:
@@ -200,10 +189,31 @@ LICENSE=        xv-license
 ACCEPTABLE_LICENSES+=xv-license
     </programlisting>
 
+    <para>The use of <varname>LICENSE=shareware</varname>,
+    <varname>LICENSE=no-commercial-use</varname>, and similar language
+    is deprecated because it does not crisply refer to a particular
+    license text.  Another problem with such usage is that it does not
+    enable a user to tell pkgsrc to proceed for a single package
+    without also telling pkgsrc to proceed for all packages with that
+    tag.</para>
+
+  <sect3 id="new-license">
+  <title>Adding a package with a new license</title>
+
     <para>When adding a package with a new license, the following steps
     are required:</para>
     <orderedlist>
-    <listitem><para>Check if the file can avoid the -license filename tag as described above by referencing <ulink url="http://www.gnu.org/licenses/license-list.html">Various Licenses and Comments about Them</ulink> and <ulink url="http://opensource.org/licenses/alphabetical">Licenses by Name | Open Source Initiative</ulink>.  If this is the case, additionally add the license filename to:</para>
+
+    <listitem><para>Check whether the license qualifies as Free or Open
+    Source by referencing <ulink
+    url="http://www.gnu.org/licenses/license-list.en.html">Various Licenses
+    and Comments about Them</ulink> and <ulink
+    url="http://opensource.org/licenses/alphabetical">Licenses by Name |
+    Open Source Initiative</ulink>.  If this is the case, the filename in
+    <filename>pkgsrc/licenses/</filename> does not need the
+    <filename>-license</filename> suffix, and the license name should be
+    added to:</para>
+
     <itemizedlist>
     <listitem><para>DEFAULT_ACCEPTABLE_LICENSES in <filename>pkgsrc/mk/license.mk</filename></para></listitem>
     <listitem><para>default_acceptable_licenses in <filename>pkgsrc/pkgtools/pkg_install/files/lib/license.c</filename></para></listitem>
@@ -212,6 +222,11 @@ ACCEPTABLE_LICENSES+=xv-license
     <para>with the proper syntax as demonstrated in those files, respectively.</para></listitem>
     <listitem><para>The license text should be added to <filename>pkgsrc/licenses</filename> for displaying.  A list of known licenses can be seen in this directory.</para></listitem>
     </orderedlist>
+  </sect3>
+
+  <sect3 id="change-license">
+  <title>Change to the license</title>
+
     <para>When the license changes (in a way other than formatting),
     please make sure that the new license has a different name (e.g.,
     append the version number if it exists, or the date).  Just
@@ -221,14 +236,8 @@ ACCEPTABLE_LICENSES+=xv-license
     pkgsrc does not evaluate licenses for reasonableness; the only
     test is a mechanistic test of whether a particular text has been
     approved by either of two bodies.</para>
-
-    <para>The use of <varname>LICENSE=shareware</varname>,
-    <varname>LICENSE=no-commercial-use</varname>, and similar language
-    is deprecated because it does not crisply refer to a particular
-    license text.  Another problem with such usage is that it does not
-    enable a user to tell pkgsrc to proceed for a single package
-    without also telling pkgsrc to proceed for all packages with that
-    tag.</para> </sect2>
+  </sect3>
+  </sect2>
 
   <sect2 id="restricted-packages">
     <title>Restricted packages</title>
