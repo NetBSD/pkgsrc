@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2015/06/12 10:50:54 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2016/07/09 06:38:47 wiz Exp $
 #
 
 DISTNAME=		cleanscore-0.9.8.1
-PKGREVISION=		6
+PKGREVISION=		7
 LICENSE=		gnu-gpl-v2
 CATEGORIES=		news
 MASTER_SITES=		http://slrn.sourceforge.net/cleanscore/

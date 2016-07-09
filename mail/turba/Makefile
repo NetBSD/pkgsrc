@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2016/05/17 10:32:08 fhajny Exp $
+# $NetBSD: Makefile,v 1.43 2016/07/09 06:38:32 wiz Exp $
 
 DISTNAME=	turba-h3-${TURBAVER}
 PKGNAME=	turba-${TURBAVER}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	mail www
 MASTER_SITES=	http://ftp.horde.org/pub/turba/ \
 		ftp://ftp.horde.org/pub/turba/

@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.46 2016/04/10 14:34:13 wen Exp $
+# $NetBSD: Makefile,v 1.47 2016/07/09 06:38:33 wiz Exp $
 
 DISTNAME=		maxima-5.38.0
 # On updates, please make sure editors/TeXmacs knows about the new
 # version number.
 # (if needed, patch plugins/maxima/bin/{maxima_detect,tm_maxima})
+PKGREVISION=		1
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=maxima/}
 

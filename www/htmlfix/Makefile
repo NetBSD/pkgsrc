@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2015/06/12 10:51:49 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2016/07/09 06:39:12 wiz Exp $
 #
 
 DISTNAME=		htmlfix-1.03
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		www
 MASTER_SITES=		http://www.mono.org/abs/tools/htmlfix/
 

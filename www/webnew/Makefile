@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2015/08/21 08:18:26 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2016/07/09 06:39:15 wiz Exp $
 
 DISTNAME=		webnew-1.3
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		www
 MASTER_SITES=		http://oss.gw.com/people/kim/
 

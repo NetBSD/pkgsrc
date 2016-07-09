@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2015/06/12 10:50:27 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2016/07/09 06:38:32 wiz Exp $
 #
 
 DISTNAME=		antixls-0.2b
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		math
 MASTER_SITES=		http://www.af0.net/~dan/
 EXTRACT_SUFX=		.perl

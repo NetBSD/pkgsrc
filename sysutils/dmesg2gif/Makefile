@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2015/06/12 10:51:12 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2016/07/09 06:38:59 wiz Exp $
 #
 
 DISTNAME=		dmesg2gif-1.3
-PKGREVISION=		7
+PKGREVISION=		8
 CATEGORIES=		sysutils
 MASTER_SITES=		# empty
 DISTFILES=		# empty
