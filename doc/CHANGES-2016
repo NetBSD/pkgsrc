@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2736 2016/07/09 13:05:07 wiz Exp $
+$NetBSD: CHANGES-2016,v 1.2737 2016/07/09 13:05:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3961,3 +3961,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated graphics/freetype2 to 2.6.4 [adam 2016-07-09]
 	Updated devel/p5-Readonly to 2.05 [wen 2016-07-09]
 	Removed lang/python33 [wiz 2016-07-09]
+	Updated meta-pkgs/bulk-medium to 20160709 [wiz 2016-07-09]
