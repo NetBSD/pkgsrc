@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2016/04/23 10:05:18 nros Exp $
+$NetBSD: distinfo,v 1.6 2016/07/09 11:44:23 rillig Exp $
 
 SHA1 (qjackctl-0.4.2.tar.gz) = 6496615d305af476387656f8af869e8a76222db9
 RMD160 (qjackctl-0.4.2.tar.gz) = 7b287af58541654d22d29e7db95fd148af2a8db0
 SHA512 (qjackctl-0.4.2.tar.gz) = 743b8a02fb0b83a4516622aeec054d67f5cda6d8ffcc5727d3709695996c5e0054ba0af77919e43c0288fbb2259395c129d79f89b24bba6d4c0dd5cdbaa5712d
 Size (qjackctl-0.4.2.tar.gz) = 824383 bytes
-SHA1 (patch-aa) = c4e3c79361d623f4db06b5dbe18b82bde28ed854
+SHA1 (patch-aa) = aef2f8893c0107a262860f96671a1e6c791bcf42
