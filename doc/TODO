@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.16124 2016/07/09 13:05:07 wiz Exp $
+$NetBSD: TODO,v 1.16125 2016/07/09 13:19:39 wiz Exp $
 
 Suggested new packages
 ======================
@@ -361,6 +361,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o JBidwatcher-2.5.6 [wants launch4j]
 	o LPRng-core-3.8.35
 	o MesaDemos-8.3.0
+	o MesaLib-12.0
 	o OdfConverter-4.0
 	o PACK-0.0.4
 	o PAM-0.99.7.1
@@ -973,6 +974,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o kdevplatform-1.7.1
 	o keybinder-0.3.1
 	o keychain-2.8.2
+	o kf5-5.24.0
 	o kicad-4.0.2
 	o kicad-doc-4.0.2
 	o kicad-footprints-4.0.2
@@ -1781,7 +1783,7 @@ For possible Perl packages updates, see http://www.NetBSD.org/~wiz/perl.html.
 	o whowatch-1.8.5
 	o windowlab-1.40
 	o wine-1.8.3
-	o wine-devel-1.9.13
+	o wine-devel-1.9.14
 	o wmi-11
 	o wmii+ixp-3.9.2 [pkg/43459; wip (wmii-devel); see also libixp entry]
 	o wmx-8
