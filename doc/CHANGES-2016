@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2719 2016/07/09 00:14:22 wen Exp $
+$NetBSD: CHANGES-2016,v 1.2720 2016/07/09 01:29:09 taca Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3944,3 +3944,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/netpgpverify to 20160707 [agc 2016-07-08]
 	Updated security/libnetpgpverify to 20160707 [agc 2016-07-08]
 	Updated devel/p5-boolean to 0.46 [wen 2019-07-09]
+	Updated mail/dovecot2-pigeonhole to 0.4.15 [taca 2016-07-09]
