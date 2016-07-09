@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2015/12/12 16:56:04 wiedi Exp $
+# $NetBSD: Makefile,v 1.4 2016/07/09 06:37:51 wiz Exp $
 #
 
 DISTNAME=	bwa-0.7.9a
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bio-bwa/}
 EXTRACT_SUFX=	.tar.bz2
-PKGREVISION=	1
+PKGREVISION=	2
 
 MAINTAINER=	jwbacon@tds.net
 HOMEPAGE=	http://bio-bwa.sourceforge.net/
