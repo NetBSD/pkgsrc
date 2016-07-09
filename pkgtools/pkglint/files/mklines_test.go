@@ -6,7 +6,7 @@ import (
 
 const mkrcsid = "# $" + "NetBSD$"
 
-func (s *Suite) TestMkLines_AutofixConditionalIndentation(c *check.C) {
+func (s *Suite) Test_MkLines_Check__autofix_conditional_indentation(c *check.C) {
 	s.UseCommandLine(c, "--autofix", "-Wspace")
 	tmpfile := s.CreateTmpFile(c, "fname.mk", "")
 	mklines := s.NewMkLines(tmpfile,
@@ -36,7 +36,7 @@ func (s *Suite) TestMkLines_AutofixConditionalIndentation(c *check.C) {
 		".endif\n")
 }
 
-func (s *Suite) TestMkLines_UnusualTarget(c *check.C) {
+func (s *Suite) Test_MkLines_Check__unusual_target(c *check.C) {
 	mklines := s.NewMkLines("Makefile",
 		"# $"+"NetBSD$",
 		"",
@@ -48,19 +48,17 @@ func (s *Suite) TestMkLines_UnusualTarget(c *check.C) {
 	c.Check(s.Output(), equals, "WARN: Makefile:3: Unusual target \"echo\".\n")
 }
 
-func (s *Suite) TestMkLines_checklineInclude_Makefile(c *check.C) {
-	mklines := s.NewMkLines("Makefile",
-		"# $"+"NetBSD$",
-		".include \"../../other/package/Makefile\"")
+func (s *Suite) Test_MkLine_checklineInclude_Makefile(c *check.C) {
+	mkline := NewMkLine(NewLine("Makefile", 2, ".include \"../../other/package/Makefile\"", nil))
 
-	mklines.Check()
+	mkline.checkInclude()
 
 	c.Check(s.Output(), equals, ""+
 		"ERROR: Makefile:2: \"/other/package/Makefile\" does not exist.\n"+
 		"ERROR: Makefile:2: Other Makefiles must not be included directly.\n")
 }
 
-func (s *Suite) TestMkLines_Quoting(c *check.C) {
+func (s *Suite) Test_MkLines_quoting_LDFLAGS_for_GNU_configure(c *check.C) {
 	s.UseCommandLine(c, "-Wall")
 	G.globalData.InitVartypes()
 	G.Pkg = NewPackage("category/pkgbase")
@@ -71,10 +69,12 @@ func (s *Suite) TestMkLines_Quoting(c *check.C) {
 
 	mklines.Check()
 
-	c.Check(s.Output(), equals, "WARN: Makefile:3: Please use ${X11_LDFLAGS:M*:Q} instead of ${X11_LDFLAGS:Q}.\n")
+	c.Check(s.Output(), equals, ""+
+		"WARN: Makefile:3: Please use ${X11_LDFLAGS:M*:Q} instead of ${X11_LDFLAGS:Q}.\n"+
+		"WARN: Makefile:3: Please use ${X11_LDFLAGS:M*:Q} instead of ${X11_LDFLAGS:Q}.\n")
 }
 
-func (s *Suite) Test_MkLines_Varalign_Advanced(c *check.C) {
+func (s *Suite) Test_MkLines__variable_alignment_advanced(c *check.C) {
 	s.UseCommandLine(c, "-Wspace")
 	fname := s.CreateTmpFileLines(c, "Makefile",
 		"# $"+"NetBSD$",
@@ -148,7 +148,7 @@ func (s *Suite) Test_MkLines_Varalign_Advanced(c *check.C) {
 		"VAR=\t${GRP_A}${GRP_AA}${GRP_AAA}${GRP_AAAA}\n")
 }
 
-func (s *Suite) Test_MkLines_Varalign_Misc(c *check.C) {
+func (s *Suite) Test_MkLines__variable_alignment_space_and_tab(c *check.C) {
 	s.UseCommandLine(c, "-Wspace")
 	mklines := s.NewMkLines("Makefile",
 		"# $"+"NetBSD$",
@@ -161,7 +161,7 @@ func (s *Suite) Test_MkLines_Varalign_Misc(c *check.C) {
 	c.Check(s.Output(), equals, "NOTE: Makefile:3: Variable values should be aligned with tabs, not spaces.\n")
 }
 
-func (s *Suite) Test_MkLines_ForLoop_Multivar(c *check.C) {
+func (s *Suite) Test_MkLines__for_loop_multiple_variables(c *check.C) {
 	s.UseCommandLine(c, "-Wall")
 	s.RegisterTool(&Tool{Name: "echo", Varname: "ECHO", Predefined: true})
 	s.RegisterTool(&Tool{Name: "find", Varname: "FIND", Predefined: true})
@@ -182,7 +182,7 @@ func (s *Suite) Test_MkLines_ForLoop_Multivar(c *check.C) {
 		"WARN: audio/squeezeboxserver/Makefile:4: The exitcode of the left-hand-side command of the pipe operator is ignored.\n")
 }
 
-func (s *Suite) Test_MkLines_Cond_Compare_YesNo(c *check.C) {
+func (s *Suite) Test_MkLines__comparing_YesNo_variable_to_string(c *check.C) {
 	s.UseCommandLine(c, "-Wall")
 	G.globalData.InitVartypes()
 	mklines := s.NewMkLines("databases/gdbm_compat/builtin.mk",
@@ -196,7 +196,7 @@ func (s *Suite) Test_MkLines_Cond_Compare_YesNo(c *check.C) {
 		"USE_BUILTIN.gdbm should be matched against \"[yY][eE][sS]\" or \"[nN][oO]\", not compared with \"no\".\n")
 }
 
-func (s *Suite) Test_MkLines_Varuse_sh_Modifier(c *check.C) {
+func (s *Suite) Test_MkLines__varuse_sh_modifier(c *check.C) {
 	s.UseCommandLine(c, "-Wall")
 	G.globalData.InitVartypes()
 	mklines := s.NewMkLines("lang/qore/module.mk",
@@ -217,7 +217,7 @@ func (s *Suite) Test_MkLines_Varuse_sh_Modifier(c *check.C) {
 	c.Check(s.Output(), equals, "") // No warnings about defined but not used or vice versa
 }
 
-func (s *Suite) Test_MkLines_Varuse_parameterized(c *check.C) {
+func (s *Suite) Test_MkLines__varuse_parameterized(c *check.C) {
 	s.UseCommandLine(c, "-Wall")
 	G.globalData.InitVartypes()
 	mklines := s.NewMkLines("converters/wv2/Makefile",
@@ -230,7 +230,7 @@ func (s *Suite) Test_MkLines_Varuse_parameterized(c *check.C) {
 	c.Check(s.Output(), equals, "") // No warnings about defined but not used or vice versa
 }
 
-func (s *Suite) Test_MkLines_LoopModifier(c *check.C) {
+func (s *Suite) Test_MkLines__loop_modifier(c *check.C) {
 	s.UseCommandLine(c, "-Wall")
 	G.globalData.InitVartypes()
 	mklines := s.NewMkLines("chat/xchat/Makefile",
@@ -247,7 +247,8 @@ func (s *Suite) Test_MkLines_LoopModifier(c *check.C) {
 		"${INSTALL_DATA} ${WRKSRC}/src/common/dbus/${.s.} ${DESTDIR}${GCONF_SCHEMAS_DIR}/@}\".\n")
 }
 
-func (s *Suite) Test_MkLines_Indentation_DependsOn(c *check.C) {
+// PR 46570
+func (s *Suite) Test_MkLines__PKG_SKIP_REASON_depending_on_OPSYS(c *check.C) {
 	G.globalData.InitVartypes()
 	mklines := s.NewMkLines("Makefile",
 		"# $"+"NetBSD$",
@@ -262,7 +263,7 @@ func (s *Suite) Test_MkLines_Indentation_DependsOn(c *check.C) {
 }
 
 // PR 46570, item "15. net/uucp/Makefile has a make loop"
-func (s *Suite) Test_MkLines_indirect_variables(c *check.C) {
+func (s *Suite) Test_MkLines__indirect_variables(c *check.C) {
 	s.UseCommandLine(c, "-Wall")
 	mklines := s.NewMkLines("net/uucp/Makefile",
 		"# $"+"NetBSD$",
@@ -279,7 +280,7 @@ func (s *Suite) Test_MkLines_indirect_variables(c *check.C) {
 		"WARN: net/uucp/Makefile:5: Unknown shell command \"${ECHO}\".\n")
 }
 
-func (s *Suite) Test_MkLines_Check_list_variable_as_part_of_word(c *check.C) {
+func (s *Suite) Test_MkLines_Check__list_variable_as_part_of_word(c *check.C) {
 	s.UseCommandLine(c, "-Wall")
 	mklines := s.NewMkLines("converters/chef/Makefile",
 		mkrcsid,
@@ -292,7 +293,7 @@ func (s *Suite) Test_MkLines_Check_list_variable_as_part_of_word(c *check.C) {
 		"WARN: converters/chef/Makefile:2: The list variable DISTFILES should not be embedded in a word.\n")
 }
 
-func (s *Suite) Test_MkLines_Check_absolute_pathname_depending_on_OPSYS(c *check.C) {
+func (s *Suite) Test_MkLines_Check__absolute_pathname_depending_on_OPSYS(c *check.C) {
 	s.UseCommandLine(c, "-Wall")
 	G.globalData.InitVartypes()
 	mklines := s.NewMkLines("games/heretic2-demo/Makefile",
@@ -310,4 +311,78 @@ func (s *Suite) Test_MkLines_Check_absolute_pathname_depending_on_OPSYS(c *check
 		"WARN: games/heretic2-demo/Makefile:3: The variable TOOLS_PLATFORM.gtar may not be set by any package.\n"+
 		"WARN: games/heretic2-demo/Makefile:5: The variable TOOLS_PLATFORM.gtar may not be set by any package.\n"+
 		"WARN: games/heretic2-demo/Makefile:5: Unknown shell command \"/usr/bin/bsdtar\".\n")
+}
+
+func (s *Suite) Test_MkLines_checkForUsedComment(c *check.C) {
+	s.UseCommandLine(c, "--show-autofix")
+	s.NewMkLines("Makefile.common",
+		"# $"+"NetBSD$",
+		"",
+		"# used by sysutils/mc",
+	).checkForUsedComment("sysutils/mc")
+
+	c.Check(s.Output(), equals, "")
+
+	s.NewMkLines("Makefile.common").checkForUsedComment("category/package")
+
+	c.Check(s.Output(), equals, "")
+
+	s.NewMkLines("Makefile.common",
+		"# $"+"NetBSD$",
+	).checkForUsedComment("category/package")
+
+	c.Check(s.Output(), equals, "")
+
+	s.NewMkLines("Makefile.common",
+		"# $"+"NetBSD$",
+		"",
+	).checkForUsedComment("category/package")
+
+	c.Check(s.Output(), equals, "")
+
+	s.NewMkLines("Makefile.common",
+		"# $"+"NetBSD$",
+		"",
+		"VARNAME=\tvalue",
+	).checkForUsedComment("category/package")
+
+	c.Check(s.Output(), equals, ""+
+		"WARN: Makefile.common:2: Please add a line \"# used by category/package\" here.\n"+
+		"AUTOFIX: Makefile.common:2: Inserting a line \"# used by category/package\" before this line.\n")
+
+	s.NewMkLines("Makefile.common",
+		"# $"+"NetBSD$",
+		"#",
+		"#",
+	).checkForUsedComment("category/package")
+
+	c.Check(s.Output(), equals, ""+
+		"WARN: Makefile.common:3: Please add a line \"# used by category/package\" here.\n"+
+		"AUTOFIX: Makefile.common:3: Inserting a line \"# used by category/package\" before this line.\n")
+}
+
+func (s *Suite) Test_MkLines_DetermineUsedVariables__simple(c *check.C) {
+	mklines := s.NewMkLines("fname",
+		"\t${VAR}")
+	mkline := mklines.mklines[0]
+	G.Mk = mklines
+
+	mklines.DetermineUsedVariables()
+
+	c.Check(len(mklines.varuse), equals, 1)
+	c.Check(mklines.varuse["VAR"], equals, mkline)
+}
+
+func (s *Suite) Test_MkLines_DetermineUsedVariables__nested(c *check.C) {
+	mklines := s.NewMkLines("fname",
+		"\t${outer.${inner}}")
+	mkline := mklines.mklines[0]
+	G.Mk = mklines
+
+	mklines.DetermineUsedVariables()
+
+	c.Check(len(mklines.varuse), equals, 3)
+	c.Check(mklines.varuse["inner"], equals, mkline)
+	c.Check(mklines.varuse["outer."], equals, mkline)
+	c.Check(mklines.varuse["outer.*"], equals, mkline)
 }

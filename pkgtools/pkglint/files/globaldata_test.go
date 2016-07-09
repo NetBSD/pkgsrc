@@ -4,14 +4,14 @@ import (
 	check "gopkg.in/check.v1"
 )
 
-func (s *Suite) TestGlobalDataVartypes(c *check.C) {
+func (s *Suite) Test_GlobalData_InitVartypes(c *check.C) {
 	G.globalData.InitVartypes()
 
 	c.Check(G.globalData.vartypes["BSD_MAKE_ENV"].checker.name, equals, "ShellWord")
 	c.Check(G.globalData.vartypes["USE_BUILTIN.*"].checker.name, equals, "YesNoIndirectly")
 }
 
-func (s *Suite) TestParselinesSuggestedUpdates(c *check.C) {
+func (s *Suite) Test_parselinesSuggestedUpdates(c *check.C) {
 	lines := s.NewLines("doc/TODO",
 		"",
 		"Suggested package updates",
@@ -30,7 +30,7 @@ func (s *Suite) TestParselinesSuggestedUpdates(c *check.C) {
 		{lines[6], "freeciv-client", "2.5.0", "(urgent)"}})
 }
 
-func (s *Suite) TestGlobalData_LoadTools(c *check.C) {
+func (s *Suite) Test_GlobalData_loadTools(c *check.C) {
 	s.CreateTmpFileLines(c, "mk/tools/bsd.tools.mk",
 		".include \"flex.mk\"",
 		".include \"gettext.mk\"")
@@ -74,7 +74,7 @@ func (s *Suite) TestGlobalData_LoadTools(c *check.C) {
 		"TRACE: - (*ToolRegistry).Trace()\n")
 }
 
-func (s *Suite) TestGlobalData_loadDocChanges(c *check.C) {
+func (s *Suite) Test_GlobalData_loadDocChangesFromFile(c *check.C) {
 	s.CreateTmpFile(c, "doc/CHANGES-2015", ""+
 		"\tAdded category/package version 1.0 [author1 2015-01-01]\n"+
 		"\tUpdated category/package to 1.5 [author2 2015-01-02]\n"+
@@ -96,7 +96,7 @@ func (s *Suite) TestGlobalData_loadDocChanges(c *check.C) {
 	c.Check(*changes[6], equals, Change{changes[6].Line, "Downgraded", "category/package", "1.2", "author7", "2015-01-07"})
 }
 
-func (s *Suite) TestGlobalData_deprecated(c *check.C) {
+func (s *Suite) Test_GlobalData_deprecated(c *check.C) {
 	G.globalData.loadDeprecatedVars()
 
 	line := NewLine("Makefile", 5, "USE_PERL5=\tyes", nil)
