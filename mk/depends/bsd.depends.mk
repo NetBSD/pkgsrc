@@ -1,4 +1,4 @@
-# $NetBSD: bsd.depends.mk,v 1.25 2014/02/14 06:39:32 obache Exp $
+# $NetBSD: bsd.depends.mk,v 1.26 2016/07/09 16:32:54 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to dependencies.
@@ -15,6 +15,7 @@
 #
 #	Default value: no
 #
+# Keywords: depends dependencies
 
 SKIP_DEPENDS?=	no
 
