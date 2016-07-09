@@ -1,4 +1,6 @@
-$NetBSD: patch-xwin.c,v 1.1 2013/01/11 23:32:39 joerg Exp $
+$NetBSD: patch-xwin.c,v 1.2 2016/07/09 13:03:00 rillig Exp $
+
+Correct prototype for xdrawrect.
 
 --- xwin.c.orig	2013-01-11 14:30:59.000000000 +0000
 +++ xwin.c
