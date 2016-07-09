@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.138 2016/07/09 14:44:06 rillig Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.139 2016/07/09 15:19:21 rillig Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -106,52 +106,15 @@ INTERACTIVE_STAGE=      configure install
     default <varname>ACCEPTABLE_LICENSES</varname> variable.  The pkgsrc
     user can override the default by setting the
     <varname>ACCEPTABLE_LICENSES</varname> variable with "=" instead
-    of "+=".  The licenses accepted by default are:
-    <programlisting>
-	apache-1.1 apache-2.0
-	arphic-public
-	artistic artistic-2.0
-	boost-license
-	cc-by-sa-v3.0
-	cc0-1.0-universal
-	cddl-1.0
-	cpl-1.0
-	epl-v1.0
-	gnu-fdl-v1.1 gnu-fdl-v1.2 gnu-fdl-v1.3
-	gnu-gpl-v1
-	gnu-gpl-v2 gnu-lgpl-v2 gnu-lgpl-v2.1
-	gnu-gpl-v3 gnu-lgpl-v3
-	ibm-public-license-1.0
-	ipafont
-	isc
-	lppl-1.3c
-	lucent
-	miros
-	mit
-	mpl-1.0 mpl-1.1 mpl-2.0
-	mplusfont
-	ofl-v1.0 ofl-v1.1
-	original-bsd modified-bsd 2-clause-bsd
-	php
-	png-license
-	postgresql-license
-	public-domain
-	python-software-foundation
-	qpl-v1.0
-	sgi-free-software-b-v2.0
-	sleepycat-public
-	unlicense
-	x11
-	zlib
-	zpl
-    </programlisting>
-    </para>
+    of "+=".  The licenses accepted by default are defined in the
+    <varname>DEFAULT_ACCEPTABLE_LICENSES</varname> variable in the file
+    <filename>pkgsrc/mk/license.mk</filename>.</para>
 
     <para>The license tag mechanism is intended to address
     copyright-related issues surrounding building, installing and
     using a package, and not to address redistribution issues (see
     <varname>RESTRICTED</varname> and
-    <varname>NO_SRC_ON_FTP</varname>, etc.).  
+    <varname>NO_SRC_ON_FTP</varname>, etc.).
     Packages with redistribution restrictions should set these
     tags.</para>
 
@@ -217,9 +180,8 @@ ACCEPTABLE_LICENSES+=xv-license
     <itemizedlist>
     <listitem><para>DEFAULT_ACCEPTABLE_LICENSES in <filename>pkgsrc/mk/license.mk</filename></para></listitem>
     <listitem><para>default_acceptable_licenses in <filename>pkgsrc/pkgtools/pkg_install/files/lib/license.c</filename></para></listitem>
-    <listitem><para>the ACCEPTABLE_LICENSES list in <filename>pkgsrc/doc/guide/files/fixes.xml</filename></para></listitem>
     </itemizedlist>
-    <para>with the proper syntax as demonstrated in those files, respectively.</para></listitem>
+    </listitem>
     <listitem><para>The license text should be added to <filename>pkgsrc/licenses</filename> for displaying.  A list of known licenses can be seen in this directory.</para></listitem>
     </orderedlist>
   </sect3>
@@ -228,14 +190,14 @@ ACCEPTABLE_LICENSES+=xv-license
   <title>Change to the license</title>
 
     <para>When the license changes (in a way other than formatting),
-    please make sure that the new license has a different name (e.g.,
+    make sure that the new license has a different name (e.g.,
     append the version number if it exists, or the date).  Just
     because a user told pkgsrc to build programs under a previous
     version of a license does not mean that pkgsrc should build
     programs under the new licenses.  The higher-level point is that
     pkgsrc does not evaluate licenses for reasonableness; the only
     test is a mechanistic test of whether a particular text has been
-    approved by either of two bodies.</para>
+    approved by either of two bodies (FSF or OSI).</para>
   </sect3>
   </sect2>
 
@@ -243,22 +205,23 @@ ACCEPTABLE_LICENSES+=xv-license
     <title>Restricted packages</title>
 
     <para>Some licenses restrict how software may be re-distributed.
-    Because a license tag is required unless the package is Free or
-    Open Source, all packages with restrictions should have license
-    tags.  By declaring the restrictions, package tools can
+    By declaring the restrictions, package tools can
     automatically refrain from e.g. placing binary packages on FTP
     sites.</para>
 
-    <para>There are four restrictions that may be encoded, which are
+    <para>There are four possible restrictions, which are
     the cross product of sources (distfiles) and binaries not being
     placed on FTP sites and CD-ROMs.  Because this is rarely the exact
     language in any license, and because non-Free licenses tend to be
     different from each other, pkgsrc adopts a definition of FTP and
-    CD-ROM.  Pkgsrc uses "FTP" to mean that the source or binary file
-    should not be made available over the Internet at no charge.
-    Pkgsrc uses "CD-ROM" to mean that the source or binary may not be
-    made available on some kind of media, together with other source
-    and binary packages, and which is sold for a distribution charge.
+    CD-ROM.
+
+    "FTP" means making the source or binary file available over the
+    Internet at no charge.
+
+    "CD-ROM" means making the source or binary available on some kind of
+    media, together with other source and binary packages, which is sold
+    for a distribution charge.
     </para>
 
     <para>In order to encode these restrictions, the package system
@@ -314,11 +277,11 @@ ACCEPTABLE_LICENSES+=xv-license
       </listitem>
     </itemizedlist>
 
-    <para>Please note that packages will to be removed from pkgsrc
-    when the distfiles are not distributable and cannot be obtained
-    for a period of one full quarter branch. Packages with manual /
-    interactive fetch must have a maintainer and it is his/her
-    responsibility to ensure this.</para>
+    <para>Please note that packages will be removed from pkgsrc when the
+    distfiles are not distributable and cannot be obtained for a period
+    of one full quarter branch. Packages with manual/interactive fetch
+    must have a maintainer and it is his/her responsibility to ensure
+    this.</para>
   </sect2>
 
 
