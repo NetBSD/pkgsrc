@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2015/07/12 18:56:32 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2016/07/09 06:39:11 wiz Exp $
 #
 
 DISTNAME=	checkbot-1.79
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	www net perl5
 MASTER_SITES=	http://degraaff.org/checkbot/
 
