@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.39 2015/06/12 10:51:17 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2016/07/09 06:39:02 wiz Exp $
 #
 
 DISTNAME=		roller-1.20
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		sysutils
 MASTER_SITES=		http://oss.gw.com/people/kim/
 
