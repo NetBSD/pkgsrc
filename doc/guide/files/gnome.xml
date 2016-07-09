@@ -1,4 +1,4 @@
-<!-- $NetBSD: gnome.xml,v 1.9 2009/04/03 01:52:24 snj Exp $ -->
+<!-- $NetBSD: gnome.xml,v 1.10 2016/07/09 16:07:35 rillig Exp $ -->
 
 <chapter id="gnome"> <?dbhtml filename="gnome.html"?>
 <title>GNOME packaging and porting</title>
@@ -108,7 +108,7 @@ give you a general idea on the minimum required tools:</para>
     build system.  As a general rule you will need to tell this to your
     package:</para>
 
-    <programlisting>
+<programlisting>
 GNU_CONFIGURE=yes
 USE_LIBTOOL=yes
 USE_TOOLS+=gmake
@@ -119,7 +119,9 @@ USE_TOOLS+=gmake
     <para>If the package uses pkg-config to detect dependencies, add this
     tool to the list of required utilities:</para>
 
-    <programlisting>USE_TOOLS+=pkg-config</programlisting>
+<programlisting>
+USE_TOOLS+=pkg-config
+</programlisting>
 
     <para>Also use <filename role="pkg">pkgtools/verifypc</filename> at
     the end of the build process to ensure that you did not miss to
@@ -142,7 +144,9 @@ USE_TOOLS+=gmake
     report.  For such packages you should disable gtk-doc (unless it is
     the default):</para>
 
-    <programlisting>CONFIGURE_ARGS+=--disable-gtk-doc</programlisting>
+<programlisting>
+CONFIGURE_ARGS+=--disable-gtk-doc
+</programlisting>
 
     <para>The default location of installed HTML files
     (<filename>share/gtk-doc/&lt;package-name&gt;</filename>) is correct
@@ -151,7 +155,10 @@ USE_TOOLS+=gmake
     <command>devhelp</command> will not be able to open them.  You can
     do that with an entry similar to:</para>
 
-    <programlisting>CONFIGURE_ARGS+=--with-html-dir=${PREFIX}/share/gtk-doc/...</programlisting>
+<programlisting>
+CONFIGURE_ARGS+=--with-html-dir=${PREFIX}/share/gtk-doc/...
+</programlisting>
+
   </listitem>
 </itemizedlist>
 

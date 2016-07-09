@@ -1,4 +1,4 @@
-<!-- $NetBSD: plist.xml,v 1.22 2015/06/07 03:34:54 joerg Exp $ -->
+<!-- $NetBSD: plist.xml,v 1.23 2016/07/09 16:07:35 rillig Exp $ -->
 
 <chapter id="plist">
   <title>PLIST issues</title>
@@ -19,9 +19,9 @@
     <para>Be sure to add a RCS ID line as the first thing in any
     <filename>PLIST</filename> file you write:</para>
 
-    <programlisting>
+<programlisting>
 @comment &#36;NetBSD&#36;
-    </programlisting>
+</programlisting>
   </sect1>
 
   <sect1 id="automatic-plist-generation">
@@ -46,9 +46,9 @@
     <filename>libdata/foo</filename> directory removed from the
     resulting PLIST:</para>
 
-    <programlisting>
+<programlisting>
 PRINT_PLIST_AWK+=       /^libdata\/foo/ { next; }
-    </programlisting>
+</programlisting>
   </sect1>
 
   <sect1 id="plist.misc">
@@ -123,9 +123,9 @@ well as searching the <filename>pkgsrc/mk</filename> directory with <command>gre
     following way, similar to <varname>MESSAGE_SUBST</varname> (see <xref
     linkend="components.optional"/>):</para>
 
-    <programlisting>
+<programlisting>
 PLIST_SUBST+=   SOMEVAR="somevalue"
-    </programlisting>
+</programlisting>
 
     <para>This replaces all occurrences of <quote>${SOMEVAR}</quote>
     in the <filename>PLIST</filename> with
@@ -144,22 +144,22 @@ PLIST_SUBST+=   SOMEVAR="somevalue"
     <quote><literal>"@comment "</literal></quote>.
     For example, in <filename>Makefile</filename>:</para>
 
-    <programlisting>
+<programlisting>
 PLIST_VARS+=	foo
 .if <replaceable>condition</replaceable>
 PLIST.foo=	yes
 .else
-    </programlisting>
+</programlisting>
 
     <para>And then in <filename>PLIST</filename>:</para>
-    <programlisting>
+<programlisting>
 @comment &#36;NetBSD&#36;
 bin/bar
 man/man1/bar.1
 ${PLIST.foo}bin/foo
 ${PLIST.foo}man/man1/foo.1
 ${PLIST.foo}share/bar/foo.data
-    </programlisting>
+</programlisting>
 
   </sect1>
 
@@ -230,9 +230,11 @@ ${PLIST.foo}share/bar/foo.data
     terminated (with a semicolon) that will output PLIST entries which
     will be appended to the PLIST</para>
     <para>You can find one example in editors/xemacs:</para>
-    <programlisting>
-      GENERATE_PLIST+=        ${ECHO} bin/${DISTNAME}-`${WRKSRC}/src/xemacs -sd`.dmp ;
-    </programlisting>
+
+<programlisting>
+GENERATE_PLIST+=        ${ECHO} bin/${DISTNAME}-`${WRKSRC}/src/xemacs -sd`.dmp ;
+</programlisting>
+
     <para>which will append something like
     <filename>bin/xemacs-21.4.23-54e8ea71.dmp</filename> to the
     <filename>PLIST</filename>.
@@ -256,9 +258,11 @@ ${PLIST.foo}share/bar/foo.data
     <para>If a package needs an empty directory to work, create
     the directory during installation as usual, and also add an
     entry to the PLIST:
-    <programlisting>
+
+<programlisting>
 @pkgdir path/to/empty/directory
-    </programlisting>
+</programlisting>
+
     or take a look at <varname>MAKE_DIRS</varname> and
     <varname>OWN_DIRS</varname>.
     </para>
