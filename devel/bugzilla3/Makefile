@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2016/07/09 06:38:05 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2016/07/09 13:21:05 rillig Exp $
 
 DISTNAME=	bugzilla-3.2.4
 PKGREVISION=	8
@@ -32,7 +32,7 @@ PERL5_REQD+=	5.8.1
 PKG_USERS_VARS+=	APACHE_USER
 PKG_GROUPS_VARS+=	BZ_WEB_GROUP APACHE_GROUP
 
-MESSAGE_SUBST+=	BZDIR=${BZDIR:Q} PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
+MESSAGE_SUBST+=	BZDIR=${BZDIR} PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
 BZDIR=			${PREFIX}/share/bugzilla
 EGDIR=			${PREFIX}/share/examples/bugzilla
@@ -55,11 +55,11 @@ SUBST_SED.conf+=	-e "s|@CVS@|${CVS}|g"
 SUBST_SED.conf+=	-e "s|@DBDRIVER@|${DBDRIVER}|g"
 SUBST_SED.conf+=	-e "s|/usr/lib/sendmail|${SENDMAIL}|g"
 
-INSTALLATION_DIRS += ${DOCDIR} ${DOCDIR}/en ${EGDIR} ${BZDIR} ${BZDIR}/Bugzilla
-INSTALLATION_DIRS += ${BZDIR}/js ${BZDIR}/lib ${BZDIR}/template ${BZDIR}/skins
-INSTALLATION_DIRS += ${BZDIR}/docs ${BZDIR}/docs/en ${BZDIR}/docs/en/html
-INSTALLATION_DIRS += ${BZDIR}/images ${BZDIR}/docs/en/html/api
-INSTALLATION_DIRS += ${BZDIR}/docs/en/html/api/Bugzilla
+INSTALLATION_DIRS+=	${DOCDIR} ${DOCDIR}/en ${EGDIR} ${BZDIR} ${BZDIR}/Bugzilla
+INSTALLATION_DIRS+=	${BZDIR}/js ${BZDIR}/lib ${BZDIR}/template ${BZDIR}/skins
+INSTALLATION_DIRS+=	${BZDIR}/docs ${BZDIR}/docs/en ${BZDIR}/docs/en/html
+INSTALLATION_DIRS+=	${BZDIR}/images ${BZDIR}/docs/en/html/api
+INSTALLATION_DIRS+=	${BZDIR}/docs/en/html/api/Bugzilla
 
 post-extract:
 	${FIND} ${WRKSRC} -type d -name CVS | ${XARGS} ${RM} -rf
