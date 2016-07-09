@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.120 2016/05/19 11:45:36 jperkin Exp $
+# $NetBSD: pyversion.mk,v 1.121 2016/07/09 10:00:26 rillig Exp $
 
 # This file determines which Python version is used as a dependency for
 # a package.
@@ -73,10 +73,10 @@ PYTHON_PYVERSION_MK=	defined
 # optionally handled quoted package names
 .if defined(PKGNAME_REQD) && !empty(PKGNAME_REQD:Mpy[0-9][0-9]-*) || \
     defined(PKGNAME_REQD) && !empty(PKGNAME_REQD:M*-py[0-9][0-9]-*)
-PYTHON_VERSION_REQD?= ${PKGNAME_REQD:C/(^.*-|^)py([0-9][0-9])-.*/\2/}
+PYTHON_VERSION_REQD?=	${PKGNAME_REQD:C/(^.*-|^)py([0-9][0-9])-.*/\2/}
 .elif defined(PKGNAME_OLD) && !empty(PKGNAME_OLD:Mpy[0-9][0-9]-*) || \
       defined(PKGNAME_OLD) && !empty(PKGNAME_OLD:M*-py[0-9][0-9]-*)
-PYTHON_VERSION_REQD?= ${PKGNAME_OLD:C/(^.*-|^)py([0-9][0-9])-.*/\2/}
+PYTHON_VERSION_REQD?=	${PKGNAME_OLD:C/(^.*-|^)py([0-9][0-9])-.*/\2/}
 .endif
 
 .include "../../mk/bsd.prefs.mk"
@@ -90,10 +90,10 @@ PYTHON_VERSIONS_INCOMPATIBLE?=		# empty by default
 
 # transform the list into individual variables
 .for pv in ${PYTHON_VERSIONS_ACCEPTED}
-.if empty(PYTHON_VERSIONS_INCOMPATIBLE:M${pv})
+.  if empty(PYTHON_VERSIONS_INCOMPATIBLE:M${pv})
 _PYTHON_VERSION_${pv}_OK=	yes
 _PYTHON_VERSIONS_ACCEPTED+=	${pv}
-.endif
+.  endif
 .endfor
 
 #
@@ -103,24 +103,24 @@ _PYTHON_VERSIONS_ACCEPTED+=	${pv}
 # if a version is explicitely required, take it
 .if defined(PYTHON_VERSION_REQD)
 # but check if it is acceptable first, error out otherwise
-. if defined(_PYTHON_VERSION_${PYTHON_VERSION_REQD}_OK)
+.  if defined(_PYTHON_VERSION_${PYTHON_VERSION_REQD}_OK)
 _PYTHON_VERSION=	${PYTHON_VERSION_REQD}
-. endif
+.  endif
 .else
 # if the default is accepted, it is first choice
-. if !defined(_PYTHON_VERSION)
-. if defined(_PYTHON_VERSION_${PYTHON_VERSION_DEFAULT}_OK)
+.  if !defined(_PYTHON_VERSION)
+.    if defined(_PYTHON_VERSION_${PYTHON_VERSION_DEFAULT}_OK)
 _PYTHON_VERSION=	${PYTHON_VERSION_DEFAULT}
-. endif
-. endif
+.    endif
+.  endif
 # prefer an already installed version, in order of "accepted"
-. if !defined(_PYTHON_VERSION)
-. for pv in ${PYTHON_VERSIONS_ACCEPTED}
-. if defined(_PYTHON_VERSION_${pv}_OK)
+.  if !defined(_PYTHON_VERSION)
+.    for pv in ${PYTHON_VERSIONS_ACCEPTED}
+.      if defined(_PYTHON_VERSION_${pv}_OK)
 _PYTHON_VERSION?=	${pv}
-. endif
-. endfor
-. endif
+.      endif
+.    endfor
+.  endif
 .endif
 
 #
@@ -135,27 +135,27 @@ PKG_FAIL_REASON+=	"No valid Python version"
 
 # Additional CONFLICTS
 .if ${PYTHON_SELF_CONFLICT:U:tl} == "yes"
-.for i in ${PYTHON_VERSIONS_ACCEPTED:N${_PYTHON_VERSION}}
-CONFLICTS +=	${PKGNAME:S/py${_PYTHON_VERSION}/py${i}/:C/-[0-9].*$/-[0-9]*/}
-.endfor
+.  for i in ${PYTHON_VERSIONS_ACCEPTED:N${_PYTHON_VERSION}}
+CONFLICTS+=	${PKGNAME:S/py${_PYTHON_VERSION}/py${i}/:C/-[0-9].*$/-[0-9]*/}
+.  endfor
 .endif # PYCONFLICTS
 
 #
 PLIST_VARS+=	py2x py3x
 
 .if empty(_PYTHON_VERSION:Mnone)
-PYPACKAGE=	python${_PYTHON_VERSION}
-PYVERSSUFFIX=	${_PYTHON_VERSION:C/^([0-9])/\1./1}
-BUILDLINK_API_DEPENDS.${PYPACKAGE}?=		${PYPACKAGE}>=${PYVERSSUFFIX}
-PYPKGSRCDIR=	../../lang/${PYPACKAGE}
-PYDEPENDENCY=	${BUILDLINK_API_DEPENDS.${PYPACKAGE}}:${PYPKGSRCDIR}
-PYPKGPREFIX=	py${_PYTHON_VERSION}
+PYPACKAGE=				python${_PYTHON_VERSION}
+PYVERSSUFFIX=				${_PYTHON_VERSION:C/^([0-9])/\1./1}
+BUILDLINK_API_DEPENDS.${PYPACKAGE}?=	${PYPACKAGE}>=${PYVERSSUFFIX}
+PYPKGSRCDIR=				../../lang/${PYPACKAGE}
+PYDEPENDENCY=				${BUILDLINK_API_DEPENDS.${PYPACKAGE}}:${PYPKGSRCDIR}
+PYPKGPREFIX=				py${_PYTHON_VERSION}
 .endif
 .if !empty(_PYTHON_VERSION:M3*)
-PLIST.py3x=	yes
+PLIST.py3x=				yes
 .endif
 .if !empty(_PYTHON_VERSION:M2*)
-PLIST.py2x=	yes
+PLIST.py2x=				yes
 .endif
 
 PTHREAD_OPTS+=	require
@@ -196,10 +196,10 @@ PRINT_PLIST_AWK+=	/^${PYLIB:S|/|\\/|g}/ \
 			{ gsub(/${PYLIB:S|/|\\/|g}/, "$${PYLIB}") }
 .endif
 
-ALL_ENV+=	PYTHON=${PYTHONBIN}
+ALL_ENV+=		PYTHON=${PYTHONBIN}
 .if defined(USE_CMAKE)
 # used by FindPythonInterp.cmake and FindPythonLibs.cmake
-CMAKE_ARGS+=	-DPYVERSSUFFIX:STRING=${PYVERSSUFFIX}
+CMAKE_ARGS+=		-DPYVERSSUFFIX:STRING=${PYVERSSUFFIX}
 # set this explicitly, as by default it will prefer the built in framework
 CMAKE_ARGS.Darwin+=	-DPYTHON_INCLUDE_DIR:PATH=${BUILDLINK_DIR}/${PYINC}
 CMAKE_ARGS.Darwin+=	-DPYTHON_INCLUDE_PATH:PATH=${BUILDLINK_DIR}/${PYINC}

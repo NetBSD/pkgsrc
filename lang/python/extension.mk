@@ -1,4 +1,4 @@
-# $NetBSD: extension.mk,v 1.47 2016/05/30 10:31:16 wiz Exp $
+# $NetBSD: extension.mk,v 1.48 2016/07/09 10:00:26 rillig Exp $
 
 .include "../../lang/python/pyversion.mk"
 
@@ -35,11 +35,11 @@ do-build:
 do-install:
 	(cd ${WRKSRC}/${PYSETUPSUBDIR} && ${SETENV} ${INSTALL_ENV} ${MAKE_ENV} \
 	 ${PYTHONBIN} ${PYSETUP} ${PYSETUPARGS} "install" ${_PYSETUPINSTALLARGS})
-.if !target(do-test) && !(defined(TEST_TARGET) && !empty(TEST_TARGET))
+.  if !target(do-test) && !(defined(TEST_TARGET) && !empty(TEST_TARGET))
 do-test:
 	(cd ${WRKSRC}/${PYSETUPSUBDIR} && ${SETENV} ${MAKE_ENV} ${PYTHONBIN} \
 	 ${PYSETUP} ${PYSETUPARGS} ${PYSETUPTESTTARGET} ${PYSETUPTESTARGS})
-.endif
+.  endif
 
 .endif
 
@@ -62,11 +62,11 @@ PLIST_SUBST+=	PYINC=${PYINC} PYLIB=${PYLIB} PYSITELIB=${PYSITELIB}
 # prepare Python>=3.2 bytecode file location change
 # http://www.python.org/dev/peps/pep-3147/
 .if empty(_PYTHON_VERSION:M2?)
-PY_PEP3147?=	yes
+PY_PEP3147?=		yes
 .endif
 .if defined(PY_PEP3147) && !empty(PY_PEP3147:M[yY][eE][sS])
-PLIST_AWK+=	-f ${PKGSRCDIR}/lang/python/plist-python.awk
-PLIST_AWK_ENV+=	PYVERS="${PYVERSSUFFIX:S/.//}"
+PLIST_AWK+=		-f ${PKGSRCDIR}/lang/python/plist-python.awk
+PLIST_AWK_ENV+=		PYVERS="${PYVERSSUFFIX:S/.//}"
 PRINT_PLIST_AWK+=	/^[^@]/ && /[^\/]+\.py[co]$$/ {
 PRINT_PLIST_AWK+=	gsub(/__pycache__\//, "")
 PRINT_PLIST_AWK+=	gsub(/opt-1\.pyc$$/, "pyo")
