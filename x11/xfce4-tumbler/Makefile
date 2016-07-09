@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2016/05/22 18:20:49 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2016/07/09 11:39:08 rillig Exp $
 #
 #
 
@@ -18,7 +18,7 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 
-CONFIGURE_ARGS =	--disable-raw-thumbnailer \
+CONFIGURE_ARGS=	--disable-raw-thumbnailer \
 			--disable-gstreamer-thumbnailer
 
 PKGCONFIG_OVERRIDE+=	tumbler/tumbler-1.pc.in
@@ -32,7 +32,7 @@ CONF_FILES=	${EGDIR}/tumbler.rc \
 	       ${PKG_SYSCONFDIR}/tumbler/tumbler.rc
 
 INSTALL_UNSTRIPPED=	yes
-CFLAGS+=	-g
+CFLAGS+=		-g
 
 .include "options.mk"
 

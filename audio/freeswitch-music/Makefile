@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.1 2012/10/20 12:21:39 darcy Exp $
+# $NetBSD: Makefile,v 1.2 2016/07/09 11:41:57 rillig Exp $
 
 DISTNAME=	freeswitch-music-1.0.8
 CATEGORIES=	audio
 MASTER_SITES=	http://files.freeswitch.org/
-EXTRACT_SUFX=	.tar.bz2
 DIST_SUBDIR=	freeswitch
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	darcy@NetBSD.org
 COMMENT=	FreeSwitch Music - All Bitrates
 LICENSE=	mpl-1.1
 
 MUSICDIR=	share/freeswitch/sounds/music
-PLIST_SUBST += MUSICDIR="${MUSICDIR}"
+PLIST_SUBST+=	MUSICDIR="${MUSICDIR}"
 NO_BUILD=	yes
 
 pre-install:
