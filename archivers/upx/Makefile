@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2016/02/25 09:28:37 jperkin Exp $
+# $NetBSD: Makefile,v 1.26 2016/07/09 06:37:47 wiz Exp $
 
 DISTNAME=	upx-3.91-src
 PKGNAME=	${DISTNAME:S/-src//1}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=upx/}
 EXTRACT_SUFX=	.tar.bz2

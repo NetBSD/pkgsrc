@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2015/06/12 10:50:15 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2016/07/09 06:38:24 wiz Exp $
 
 DISTNAME=	g95_source
 PKGNAME=	g95-0.93
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	lang
 MASTER_SITES=	http://ftp.g95.org/v${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tgz

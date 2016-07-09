@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.51 2015/10/14 20:17:25 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2016/07/09 06:38:14 wiz Exp $
 
-PKGREVISION=	41
+PKGREVISION=	42
 
 CONFLICTS+=	emacs22-nox11-[0-9]*
 
