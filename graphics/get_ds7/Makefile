@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2015/06/12 10:50:09 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2016/07/09 06:38:20 wiz Exp $
 #
 
 DISTNAME=	get_ds7_1.2.4
 PKGNAME=	get_ds7-1.2.4
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.yk.rim.or.jp/~mamo/Computer/DS-7/
 EXTRACT_SUFX=	.tar

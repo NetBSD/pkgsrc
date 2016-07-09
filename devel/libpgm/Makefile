@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2015/06/12 10:48:51 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2016/07/09 06:38:09 wiz Exp $
 #
 
 DISTNAME=	libpgm-5.1.118
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	http://openpgm.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2

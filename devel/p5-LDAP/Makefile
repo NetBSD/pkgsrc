@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.30 2016/06/08 19:23:06 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2016/07/09 06:38:11 wiz Exp $
 #
 
 DISTNAME=	perldap-1.4.1
 # remove 'per' and 'ldap' part into uppercase (perldap -> LDAP)
 PKGNAME=	p5-${DISTNAME:S/per//tu}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel perl5 databases
 MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=directory/perldap/ancient/}
 

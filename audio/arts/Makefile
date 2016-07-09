@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.89 2015/06/12 10:48:22 wiz Exp $
+# $NetBSD: Makefile,v 1.90 2016/07/09 06:37:47 wiz Exp $
 
 DISTNAME=	arts-1.5.10
-PKGREVISION=	14
+PKGREVISION=	15
 CATEGORIES=	audio
 HOMEPAGE=	http://multimedia.kde.org/
 COMMENT=	Analog Real-Time Synthesizer

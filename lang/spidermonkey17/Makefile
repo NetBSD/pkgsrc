@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2016/05/24 19:33:13 youri Exp $
+# $NetBSD: Makefile,v 1.3 2016/07/09 06:38:27 wiz Exp $
 
 DISTNAME=	mozjs17.0.0
 PKGNAME=	${DISTNAME:S/mozjs/spidermonkey17-/}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=js/}
 

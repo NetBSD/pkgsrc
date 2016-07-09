@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.109 2016/03/05 11:28:26 jperkin Exp $
+# $NetBSD: Makefile,v 1.110 2016/07/09 06:38:14 wiz Exp $
 
 DISTNAME=		TeXmacs-1.99.2-src
 PKGNAME=		${DISTNAME:S/-src//}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		editors
 MASTER_SITES=		ftp://ftp.texmacs.org/pub/TeXmacs/tmftp/source/
 MASTER_SITES+=		http://www.texmacs.org/Download/ftp/tmftp/source/

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.94 2015/08/21 11:08:36 is Exp $
+# $NetBSD: Makefile,v 1.95 2016/07/09 06:37:55 wiz Exp $
 
 DISTNAME=	mgetty1.1.37-Jun05
 PKGNAME=	mgetty-1.1.37
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	comms
 MASTER_SITES=	ftp://alpha.greenie.net/pub/mgetty/source/1.1/
 

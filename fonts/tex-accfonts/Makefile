@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2015/06/12 10:50:06 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2016/07/09 06:38:17 wiz Exp $
 
 DISTNAME=	accfonts
 PKGNAME=	tex-${DISTNAME}-0.25
-PKGREVISION=	1
+PKGREVISION=	2
 TEXLIVE_REV=	18835
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

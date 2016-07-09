@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2016/07/03 11:31:30 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2016/07/09 06:38:17 wiz Exp $
 
 DISTNAME=	unifont-9.0.01
+PKGREVISION=	1
 CATEGORIES=	fonts
 MASTER_SITES=	http://unifoundry.com/pub/${DISTNAME}/
 

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2016/03/03 07:37:26 asau Exp $
+# $NetBSD: Makefile,v 1.19 2016/07/09 06:38:10 wiz Exp $
 #
 
 DISTNAME=	netbeans-8.1-201510222201
 PKGNAME=	netbeans-ide-8.1
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	http://download.netbeans.org/netbeans/8.1/final/zip/
 EXTRACT_SUFX=	.zip

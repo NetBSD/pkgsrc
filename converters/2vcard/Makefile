@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2015/06/12 10:48:30 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2016/07/09 06:37:56 wiz Exp $
 #
 
 DISTNAME=	2vcard-0.5
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	converters
 MASTER_SITES=	http://www.netmeister.org/apps/
 EXTRACT_SUFX=	.tar.bz2
