@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.140 2016/07/09 16:07:35 rillig Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.141 2016/07/09 16:19:15 rillig Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -325,9 +325,9 @@ ACCEPTABLE_LICENSES+=xv-license
 	libraries to build and run, and if that package has a
 	<filename>buildlink3.mk</filename> file available, use it:</para>
 
-	<programlisting>
+<programlisting>
 .include "../../graphics/jpeg/buildlink3.mk"
-	</programlisting>
+</programlisting>
       </listitem>
 
       <listitem>
@@ -335,9 +335,9 @@ ACCEPTABLE_LICENSES+=xv-license
 	libraries only for building, and if that package has a
 	<filename>buildlink3.mk</filename> file available, use it:</para>
 
-	<programlisting>
+<programlisting>
 .include "../../graphics/jpeg/buildlink3.mk"
-	</programlisting>
+</programlisting>
 	<para>but set
 	<varname>BUILDLINK_DEPMETHOD.<replaceable>jpeg</replaceable>?=build</varname>
 	to make it a build dependency only. This case is rather
@@ -348,9 +348,9 @@ ACCEPTABLE_LICENSES+=xv-license
 	<para>If your package needs binaries from another package to build,
 	use the <varname>BUILD_DEPENDS</varname> definition:</para>
 
-	<programlisting>
+<programlisting>
 BUILD_DEPENDS+= scons-[0-9]*:../../devel/scons
-	</programlisting>
+</programlisting>
       </listitem>
 
       <listitem>
@@ -370,9 +370,9 @@ BUILD_DEPENDS+= scons-[0-9]*:../../devel/scons
 	be able to execute the latex binary from the teTeX package
 	when it runs, and that is specified:</para>
 
-	<programlisting>
+<programlisting>
 DEPENDS+=        teTeX-[0-9]*:../../print/teTeX
-	</programlisting>
+</programlisting>
       </listitem>
       <listitem>
 	<para>You can use wildcards in package dependencies. Note that
@@ -390,9 +390,9 @@ DEPENDS+=        teTeX-[0-9]*:../../print/teTeX
 	will only build against a certain minimum version of a
 	pre-requisite:</para>
 
-	<programlisting>
+<programlisting>
 DEPENDS+=       ImageMagick>=6.0:../../graphics/ImageMagick
-	</programlisting>
+</programlisting>
 
 	<para>This means that the package will build using version 6.0
 	of ImageMagick or newer. Such a dependency may be warranted
@@ -816,13 +816,13 @@ EXTRACT_SUFX=   .zip
 	<quote>ar</quote>, <quote>ranlib</quote>, and <quote>ld
 	-Bshareable</quote> commands, and instead use:</para>
 
-	<programlisting>
+<programlisting>
 ${LIBTOOL} --mode=link \
     ${CC} -o ${.TARGET:.a=.la} \
         ${OBJS:.o=.lo} \
         -rpath ${PREFIX}/lib \
         -version-info major:minor
-	</programlisting>
+</programlisting>
 
 	<para>Note that the library is changed to have a
 	<filename>.la</filename> extension, and the objects are
@@ -838,7 +838,7 @@ ${LIBTOOL} --mode=link \
 
 	<para>From the libtool manual:</para>
 
-	<programlisting>
+<programlisting>
 So, libtool library versions are described by three integers:
 
 CURRENT
@@ -855,7 +855,7 @@ AGE' to `CURRENT'.
 
 If two libraries have identical CURRENT and AGE numbers, then the
 dynamic linker chooses the library with the greater REVISION number.
-	</programlisting>
+</programlisting>
 
 	<para>The <quote>-release</quote> option will produce
 	different results for a.out and ELF (excluding symlinks)
@@ -896,15 +896,15 @@ dynamic linker chooses the library with the greater REVISION number.
 	expects you to change that argument to be the
 	<filename>.la</filename> file. e.g.</para>
 
-	<programlisting>
+<programlisting>
 ${LIBTOOL} --mode=link ${CC} -o someprog -L../somelib -lsomelib
-	</programlisting>
+</programlisting>
 
 	<para>should be changed to:</para>
 
-	<programlisting>
+<programlisting>
 ${LIBTOOL} --mode=link ${CC} -o <replaceable>someprog</replaceable> <replaceable>../somelib/somelib.la</replaceable>
-	</programlisting>
+</programlisting>
 
 	<para>and it will do the right thing with the libraries.</para>
       </listitem>
@@ -915,9 +915,9 @@ ${LIBTOOL} --mode=link ${CC} -o <replaceable>someprog</replaceable> <replaceable
 	--mode=install</quote>, and change the library name to
 	<filename>.la</filename>. e.g.</para>
 
-	<programlisting>
+<programlisting>
 ${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} ${SOMELIB:.a=.la} ${PREFIX}/lib
-	</programlisting>
+</programlisting>
 
 	<para>This will install the static <filename>.a</filename>,
 	shared library, any needed symlinks, and run
