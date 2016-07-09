@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2015/11/04 01:32:39 agc Exp $
+$NetBSD: distinfo,v 1.10 2016/07/09 13:03:00 rillig Exp $
 
 SHA1 (xdu-3.0.tar.Z) = 196e2ba03253fd6b8a88fafe6b00e40632183d0c
 RMD160 (xdu-3.0.tar.Z) = 0c95ad79aaeb6e58433add71d852cc0b2312a5f9
@@ -12,5 +12,5 @@ SHA1 (xdu-3.0.i18n.patch) = 6f14b5458111b7c9776d15760d1876d242f0dabd
 RMD160 (xdu-3.0.i18n.patch) = a1ada2ae69331010dd7f3c0e77cb4410065a7254
 SHA512 (xdu-3.0.i18n.patch) = 21e7eac54680d47a2bc8f357ee60bf3d43e36e25ab05fb33bae11100ce0c504718b146988e825b91ee2eb3a0a4b3ccb24a1b82fdf97f3a44cc107f757726de43
 Size (xdu-3.0.i18n.patch) = 2760 bytes
-SHA1 (patch-aa) = 9e42f0303cb8318ff94e393c88f11babe32625f6
-SHA1 (patch-xwin.c) = fba89059b7b7d14bf43d971010ecfced88fc7ad2
+SHA1 (patch-aa) = 2fd14aa8bfa5150166f96c816a4425975d1db164
+SHA1 (patch-xwin.c) = 4223b1f8ae77941dd32c0703ef82ea43de689428
