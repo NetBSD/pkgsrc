@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2016/07/07 08:35:46 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2016/07/09 13:04:06 wiz Exp $
 
 DISTNAME=	duplicity-0.7.08
 CATEGORIES=	sysutils net
@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-paramiko-[0-9]*:../../security/py-paramiko
 
 REPLACE_PYTHON+=	bin/duplicity \
 			bin/rdiffdir
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 0.6.22
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 0.6.22
 EGG_NAME=			${DISTNAME:S/08/8/}
 
 SUBST_CLASSES+=			fix-paths

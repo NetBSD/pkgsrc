@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2016/03/05 11:28:09 jperkin Exp $
+# $NetBSD: Makefile,v 1.32 2016/07/09 13:03:33 wiz Exp $
 
 DISTNAME=	telepathy-idle-0.1.8
 PKGREVISION=	10
@@ -12,7 +12,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 BUILD_DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 0.1.8
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 0.1.8
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

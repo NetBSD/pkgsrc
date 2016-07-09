@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/06/08 17:43:24 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2016/07/09 13:03:41 wiz Exp $
 
 DISTNAME=	python-hglib-1.6
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}/}
@@ -12,7 +12,6 @@ LICENSE=	mit
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 # 2.7 and 3.4 only
 EGG_NAME=	python_hglib-unknown
 
 .include "../../lang/python/distutils.mk"

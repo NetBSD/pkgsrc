@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2016/05/18 21:25:06 joerg Exp $
+# $NetBSD: Makefile,v 1.31 2016/07/09 13:04:08 wiz Exp $
 
 VERSION=	3.3.2
 DISTNAME=	xen-${VERSION}
@@ -27,7 +27,7 @@ USE_TOOLS+=	gmake
 
 PYTHON_FOR_BUILD_ONLY=	yes
 PY_PATCHPLIST=		NO
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 3.3.2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 3.3.2
 
 SUBST_CLASSES+=		py
 SUBST_STAGE.py=		pre-build

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2015/12/05 21:25:59 adam Exp $
+# $NetBSD: Makefile,v 1.10 2016/07/09 13:04:07 wiz Exp $
 
 DISTNAME=	v0.7.6
 PROPERNAME=	${DISTNAME:S/v/xattr-/}
@@ -24,7 +24,7 @@ FILES_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 # XXX: builds, installs, but cannot be executed
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/xattr \

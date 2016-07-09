@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2015/12/05 21:25:53 adam Exp $
+# $NetBSD: Makefile,v 1.18 2016/07/09 13:04:00 wiz Exp $
 
 DISTNAME=		kenosis-0.96
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 USE_LANGUAGES=		# empty
 
 PYSETUP=		kenosis_setup.py
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 0.96
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 0.96
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2015/12/05 21:25:30 adam Exp $
+# $NetBSD: Makefile,v 1.23 2016/07/09 13:03:32 wiz Exp $
 
 DISTNAME=	myhdl-0.8.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/myhdl/MyHDL/}
@@ -10,7 +10,7 @@ HOMEPAGE=	http://jandecaluwe.com/Tools/MyHDL/Overview.html
 COMMENT=	Hardware description in Python
 LICENSE=	gnu-gpl-v2
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 0.7
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 0.7
 
 do-test:
 	cd ${WRKSRC}/myhdl/test/core && ${PYTHONBIN} test_all.py

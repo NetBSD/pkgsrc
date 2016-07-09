@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2016/06/08 17:43:38 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2016/07/09 13:04:04 wiz Exp $
 
 VERSION=	0.6.0
 VERSION_EXCESSIVE=	1206569328141510525648634803928199668821045408958
@@ -17,7 +17,7 @@ LICENSE=	gnu-gpl-v2
 USE_LANGUAGES=	c c++
 
 REPLACE_PYTHON=		pycryptopp/test/*.py
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 0.6.0.120...
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 0.6.0.120...
 
 # It would be nice if egg.mk had support for this.
 #TEST_TARGET=	@python@ setup.py test

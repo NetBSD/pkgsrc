@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2016/06/08 17:43:22 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2016/07/09 13:03:36 wiz Exp $
 
 DISTNAME=	sqlalchemy-migrate-0.9.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ HOMEPAGE=	https://github.com/stackforge/sqlalchemy-migrate
 COMMENT=	Schema migration tool for SQLAlchemy
 LICENSE=	mit
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35
 
 DEPENDS+=	${PYPKGPREFIX}-pbr-[0-9]*:../../devel/py-pbr
 DEPENDS+=	${PYPKGPREFIX}-Tempita>=0.4:../../textproc/py-Tempita

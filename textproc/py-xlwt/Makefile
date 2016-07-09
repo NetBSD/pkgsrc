@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2016/06/08 17:43:41 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2016/07/09 13:04:11 wiz Exp $
 
 DISTNAME=	xlwt-0.7.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ USE_LANGUAGES=	#none
 REPLACE_PYTHON+=	xlwt/Formatting.py
 REPLACE_PYTHON+=	xlwt/examples/*.py
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 0.7.5
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 0.7.5
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2016/07/09 06:39:16 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2016/07/09 13:04:17 wiz Exp $
 
 DISTNAME=		gnome-terminal-2.32.1
 PKGREVISION=		27
@@ -24,7 +24,7 @@ CONFIGURE_ENV+=		ac_cv_path_GTK_BUILDER_CONVERT="${PYTHONBIN} ${BUILDLINK_PREFIX
 GCONF_SCHEMAS=	gnome-terminal.schemas
 
 PYTHON_FOR_BUILD_ONLY=	YES
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 2.32.1
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 2.32.1
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 BUILDLINK_API_DEPENDS.GConf+=	GConf>=2.14.0

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2015/12/05 21:25:28 adam Exp $
+# $NetBSD: Makefile,v 1.17 2016/07/09 13:03:30 wiz Exp $
 
 DISTNAME=	v1.3.10
 PKGNAME=	beets-${DISTNAME:S/v//}
@@ -21,7 +21,7 @@ DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 DEPENDS+=	${PYPKGPREFIX}-Unidecode-[0-9]*:../../textproc/py-Unidecode
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 1.3.8
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 1.3.8
 
 DIST_SUBDIR=	py-beets
 WRKSRC=		${WRKDIR}/beets-${DISTNAME:S/v//}

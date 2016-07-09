@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2016/04/13 18:18:11 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2016/07/09 13:03:57 wiz Exp $
 
 DISTNAME=	anki-2.0.36
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:C/anki/anki2/}
@@ -20,7 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 #DEPENDS+=	${PYPKGPREFIX}-httplib2-[0-9]*:../../www/py-httplib2
 # XXX: python portaudio
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 2.0.21
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 2.0.21
 
 .include "options.mk"
 

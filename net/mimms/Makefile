@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2015/12/05 21:25:52 adam Exp $
+# $NetBSD: Makefile,v 1.6 2016/07/09 13:03:59 wiz Exp $
 
 DISTNAME=	mimms-3.2.1
 CATEGORIES=	net multimedia
@@ -15,7 +15,7 @@ LICENSE=	gnu-gpl-v3
 EGG_NAME?=       ${DISTNAME:C/-([^0-9])/_\1/gC/([0-9])\.([0-9])\.([0-9])/\1.\2/}
 
 USE_LANGUAGES=	# none
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 3.2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 3.2
 
 SUBST_CLASSES+=		man
 SUBST_FILES.man+=	setup.py

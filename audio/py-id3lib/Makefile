@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2015/12/05 21:25:29 adam Exp $
+# $NetBSD: Makefile,v 1.9 2016/07/09 13:03:31 wiz Exp $
 
 DISTNAME=	pyid3lib-0.5.1
 PKGNAME=	${PYPKGPREFIX}-id3lib-0.5.1
@@ -14,7 +14,7 @@ LICENSE=	gnu-lgpl-v2.1
 
 USE_LANGUAGES=	c c++
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 0.5.1
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 0.5.1
 
 .include "../../lang/python/distutils.mk"
 .include "../../audio/id3lib/buildlink3.mk"

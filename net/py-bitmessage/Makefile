@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/06/09 06:23:40 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2016/07/09 13:03:59 wiz Exp $
 
 GITHUB_PROJECT=	PyBitmessage
 DISTNAME=	${PYPKGPREFIX}-bitmessage-0.4.4
@@ -12,7 +12,7 @@ HOMEPAGE=	https://github.com/Bitmessage/PyBitmessage/
 COMMENT=	P2P communications protocol used to send encrypted messages
 LICENSE=	mit
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35
 
 HAS_CONFIGURE=	yes
 USE_LANGUAGES=	# none

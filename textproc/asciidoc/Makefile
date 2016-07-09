@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2015/12/05 21:26:00 adam Exp $
+# $NetBSD: Makefile,v 1.43 2016/07/09 13:04:09 wiz Exp $
 
 DISTNAME=		asciidoc-8.6.9
 PKGREVISION=		2
@@ -40,7 +40,7 @@ REPLACE_PYTHON+=	tests/testasciidoc.py
 REPLACE_PYTHON+=	tests/asciidocapi.py
 REPLACE_PYTHON+=	html5.conf xhtml11.conf xhtml11-quirks.conf
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 8.6.9 (as seen e.g. in git-docs)
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 8.6.9 (as seen e.g. in git-docs)
 
 INSTALLATION_DIRS=	bin share/asciidoc share/asciidoc/filters \
 			share/asciidoc/docbook-xsl share/asciidoc/stylesheets \

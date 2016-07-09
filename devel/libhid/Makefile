@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/12/05 21:25:35 adam Exp $
+# $NetBSD: Makefile,v 1.7 2016/07/09 13:03:39 wiz Exp $
 
 DISTNAME=	libhid-0.2.16
 PKGREVISION=	1
@@ -18,7 +18,7 @@ USE_TOOLS+=	gmake
 USE_LIBTOOL=	yes
 
 PLIST_SUBST+=	PYSITELIB=${PYSITELIB}
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 0.2.16
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 0.2.16
 
 CONFIGURE_ENV+=	PYTHON_LDFLAGS="-L${PREFIX}/lib -lpython${PYVERSSUFFIX}"
 

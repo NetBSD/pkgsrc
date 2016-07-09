@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2016/06/08 17:43:22 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2016/07/09 13:03:35 wiz Exp $
 #
 
 DISTNAME=	CouchDB-0.9
@@ -14,7 +14,7 @@ LICENSE=	modified-bsd
 DEPENDS+=	${PYPKGPREFIX}-simplejson>=2.0.9:../../converters/py-simplejson
 DEPENDS+=	${PYPKGPREFIX}-httplib2>=0.5.0:../../www/py-httplib2
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35
 
 USE_LANGUAGES=	# none
 
