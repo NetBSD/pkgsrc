@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2016/04/23 12:32:47 nros Exp $
+$NetBSD: distinfo,v 1.4 2016/07/09 11:46:04 rillig Exp $
 
 SHA1 (qsynth-0.4.1.tar.gz) = 7b394dab4182136cdd9dd6e314b9976582f0113c
 RMD160 (qsynth-0.4.1.tar.gz) = ac79db014c9282fc8735b1c8cb270f7b762d1f45
 SHA512 (qsynth-0.4.1.tar.gz) = 0a4e2dacc9116a9c52a50af39f0838a0c97d0e2f0ba75f8c3f07a219810299c5dd650ad7cd5ba337e497f83537b7cb94a181c9e3a5ba641febe1a0179d6c8620
 Size (qsynth-0.4.1.tar.gz) = 251821 bytes
-SHA1 (patch-Makefile.in) = 3f2d0e2883327de7fa0dabb25524287d04552db3
+SHA1 (patch-Makefile.in) = 6520871cdb3cb0e3e1004f051ee9e1cf45a3619b
