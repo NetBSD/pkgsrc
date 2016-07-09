@@ -1,4 +1,4 @@
-<!-- $NetBSD: infr.design.xml,v 1.9 2016/06/10 21:21:42 rillig Exp $ -->
+<!-- $NetBSD: infr.design.xml,v 1.10 2016/07/09 16:19:15 rillig Exp $ -->
 
 <chapter id="infr.design"> <?dbhtml filename="infr.design.html"?>
 <title>Design of the pkgsrc infrastructure</title>
@@ -111,7 +111,7 @@ DISTFILES=      ${DISTNAME}${EXTRACT_SUFX} additional-files.tar.gz
 	<varname>CONFIGURE_ARGS</varname>. To make the effect more
 	clear, here is an example:</para>
 
-	<programlisting>
+<programlisting>
 CONFIGURE_ARGS=         # none
 CFLAGS=                 -O
 CONFIGURE_ARGS+=        CFLAGS=${CFLAGS:Q}
@@ -119,7 +119,7 @@ CONFIGURE_ARGS+=        CFLAGS=${CFLAGS:Q}
 CONFIGURE_ARGS:=        ${CONFIGURE_ARGS}
 
 CFLAGS+=                -Wall
-	</programlisting>
+</programlisting>
 
 	<para>This code shows how the use of the <literal>:=</literal>
 	operator can quickly lead to unexpected results. The first
