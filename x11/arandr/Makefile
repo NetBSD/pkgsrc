@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2016/01/04 15:01:51 hauke Exp $
+# $NetBSD: Makefile,v 1.4 2016/07/09 09:31:05 rillig Exp $
 
 DISTNAME=	arandr-0.1.8
 CATEGORIES=	x11
@@ -17,8 +17,8 @@ DEPENDS+=	${PYPKGPREFIX}-docutils>=0.6:../../textproc/py-docutils
 DEPENDS+=	xrandr>=1.2:../../x11/xrandr
 .endif
 
-PY_PATCHPLIST = YES
-PYSETUP = setup.py
+PY_PATCHPLIST=			YES
+PYSETUP=			setup.py
 PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-gtk2, py-docutils
 
 # Adjust setup.py
