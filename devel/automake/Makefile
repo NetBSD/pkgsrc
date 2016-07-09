@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.102 2016/04/14 11:28:47 wiz Exp $
+# $NetBSD: Makefile,v 1.103 2016/07/09 06:38:05 wiz Exp $
 #
 # for major version updates, don't forget adding new links in
 # mk/tools/automake.mk
 
 DISTNAME=	automake-1.15
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=automake/} \
 		ftp://sources.redhat.com/pub/automake/
