@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.33 2016/06/18 11:20:40 kamil Exp $
+# $NetBSD: Makefile,v 1.34 2016/07/09 06:38:58 wiz Exp $
 
 CONSOLEKIT_VER=	1.0.2
 DISTNAME=	ConsoleKit2-1.0.2
 PKGNAME=	consolekit-${CONSOLEKIT_VER}
+PKGREVISION=	1
 CATEGORIES=	sysutils
 GITHUB_RELEASE= ${CONSOLEKIT_VER}
 GITHUB_PROJECT=	ConsoleKit2

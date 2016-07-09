@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.152 2016/05/03 11:40:04 prlw1 Exp $
+# $NetBSD: Makefile,v 1.153 2016/07/09 06:38:35 wiz Exp $
 
 DISTNAME=		gnome-utils-2.32.0
-PKGREVISION=		46
+PKGREVISION=		47
 CATEGORIES=		misc gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-utils/2.32/}
 EXTRACT_SUFX=		.tar.bz2

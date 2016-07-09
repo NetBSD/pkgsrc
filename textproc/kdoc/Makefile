@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2015/06/12 10:51:21 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2016/07/09 06:39:06 wiz Exp $
 
 DISTNAME=	kdoc-2.0a54
 PKGNAME=	kdoc-3.0
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	textproc kde
 MASTER_SITES=	${MASTER_SITE_KDE:=3.0/src/}
 

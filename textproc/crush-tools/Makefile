@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2015/07/12 18:56:29 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2016/07/09 06:39:04 wiz Exp $
 #
 
 DISTNAME=	crush-tools-2013-04
 PKGNAME=	${DISTNAME:C/-([0-9]+)$/.\1/}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	textproc
 MASTER_SITES=	http://crush-tools.googlecode.com/files/
 

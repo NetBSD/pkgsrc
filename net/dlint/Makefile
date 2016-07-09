@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2016/03/30 08:33:18 jperkin Exp $
+# $NetBSD: Makefile,v 1.17 2016/07/09 06:38:41 wiz Exp $
 #
 
 DISTNAME=	dlint1.4.0
 PKGNAME=	dlint-1.4.0
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	net
 MASTER_SITES=	http://www.domtools.com/pub/
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2015/06/12 10:50:56 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2016/07/09 06:38:48 wiz Exp $
 
 PKGNAME=	pkg_p5up2date-0.06
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	pkgtools
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

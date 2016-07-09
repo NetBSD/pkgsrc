@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2016/06/08 19:25:19 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2016/07/09 06:39:15 wiz Exp $
 
 DISTNAME=	wml-2.0.11
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	www perl5
 MASTER_SITES=	http://thewml.org/distrib/
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.89 2016/07/01 17:55:23 jperkin Exp $
+# $NetBSD: Makefile,v 1.90 2016/07/09 06:38:37 wiz Exp $
 
 DISTNAME=	rpm-4.12.0.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	misc
 MASTER_SITES=	http://rpm.org/releases/rpm-4.12.x/
 EXTRACT_SUFX=	.tar.bz2

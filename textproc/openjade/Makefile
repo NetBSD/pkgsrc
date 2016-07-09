@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2015/06/12 10:51:22 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2016/07/09 06:39:07 wiz Exp $
 
 DISTNAME=	openjade-1.3.2
-PKGREVISION=	10
+PKGREVISION=	11
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openjade/}
 

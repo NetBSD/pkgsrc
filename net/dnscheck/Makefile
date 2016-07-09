@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2015/06/12 10:50:40 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2016/07/09 06:38:41 wiz Exp $
 
 DISTNAME=	dotse-dnscheck-1.5.4-0-g352a15c
 PKGNAME=	dnscheck-1.5.4
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_GITHUB:=dotse/dnscheck/tarball/1.5.4/}
 
