@@ -37,9 +37,9 @@ func (exp *Expecter) StepBack() {
 	exp.index--
 }
 
-func (exp *Expecter) AdvanceIfMatches(re string) bool {
+func (exp *Expecter) AdvanceIfMatches(re RegexPattern) bool {
 	if G.opts.Debug {
-		defer tracecall2(exp.CurrentLine().Text, re)()
+		defer tracecall(exp.CurrentLine().Text, re)()
 	}
 
 	if !exp.EOF() {
