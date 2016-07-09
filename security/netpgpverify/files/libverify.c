@@ -1928,8 +1928,8 @@ lowlevel_rsa_public_check(const uint8_t *encbuf, int enclen, uint8_t *dec, const
 		printf("rsa r padding check failed\n");
 	}
 err:
-	PGPV_BN_free(encbn);
-	PGPV_BN_free(decbn);
+	PGPV_BN_clear_free(encbn);
+	PGPV_BN_clear_free(decbn);
 	if (decbuf != NULL) {
 		(void) memset(decbuf, 0x0, nbytes);
 		free(decbuf);
@@ -1952,8 +1952,8 @@ rsa_public_decrypt(int enclen, const unsigned char *enc, unsigned char *dec, RSA
 	pub.n = PGPV_BN_dup(rsa->n);
 	pub.e = PGPV_BN_dup(rsa->e);
 	ret = lowlevel_rsa_public_check(enc, enclen, dec, &pub);
-	PGPV_BN_free(pub.n);
-	PGPV_BN_free(pub.e);
+	PGPV_BN_clear_free(pub.n);
+	PGPV_BN_clear_free(pub.e);
 	return ret;
 }
 
@@ -2046,12 +2046,12 @@ bignum_is_bad(PGPV_BIGNUM *bn)
 static int
 verify_dsa_sig(uint8_t *calculated, unsigned calclen, pgpv_bignum_t *sig, pgpv_pubkey_t *pubkey)
 {
+	PGPV_BIGNUM	 *M;
+	PGPV_BIGNUM	 *W;
+	PGPV_BIGNUM	 *t1;
 	unsigned	  qbits;
 	uint8_t		  calcnum[128];
 	uint8_t		  signum[128];
-	PGPV_BIGNUM		 *M;
-	PGPV_BIGNUM		 *W;
-	PGPV_BIGNUM		 *t1;
 	int		  ret;
 
 	if (pubkey->bn[DSA_P].bn == NULL ||
@@ -2103,13 +2103,13 @@ verify_dsa_sig(uint8_t *calculated, unsigned calclen, pgpv_bignum_t *sig, pgpv_p
 	ret = memcmp(calcnum, signum, BITS_TO_BYTES(qbits)) == 0;
 done:
 	if (M) {
-		PGPV_BN_free(M);
+		PGPV_BN_clear_free(M);
 	}
 	if (W) {
-		PGPV_BN_free(W);
+		PGPV_BN_clear_free(W);
 	}
 	if (t1) {
-		PGPV_BN_free(t1);
+		PGPV_BN_clear_free(t1);
 	}
 	return ret;
 }
@@ -2991,7 +2991,8 @@ free_bn_array(pgpv_bignum_t *v, unsigned n)
 	unsigned	i;
 
 	for (i = 0 ; i < n ; i++) {
-		PGPV_BN_free(v[i].bn);
+		PGPV_BN_clear_free(v[i].bn);
+		v[i].bn = NULL;
 	}
 }
 
@@ -3005,7 +3006,9 @@ pgpv_close(pgpv_t *pgp)
 {
 	pgpv_primarykey_t	*primary;
 	pgpv_pkt_t		*pkt;
+	uint64_t		 n;
 	unsigned		 i;
+	unsigned		 j;
 
 	if (pgp == NULL) {
 		return 0;
@@ -3020,7 +3023,6 @@ pgpv_close(pgpv_t *pgp)
                 pkt = &ARRAY_ELEMENT(pgp->pkts, i);
                 switch(pkt->tag) {
                 case SIGNATURE_PKT:
-			free_bn_array(pkt->u.sigpkt.sig.bn, PGPV_MAX_SIG_BN);
                         ARRAY_FREE(pkt->u.sigpkt.subpackets);
                         break;
                 case LITDATA_PKT:
@@ -3046,12 +3048,19 @@ pgpv_close(pgpv_t *pgp)
 		primary = &ARRAY_ELEMENT(pgp->primaries, i);
 		free_bn_array(primary->primary.bn, PGPV_MAX_PUBKEY_BN);
 		ARRAY_FREE(primary->signatures);
+		for (j = 0 ; j < ARRAY_COUNT(primary->signed_userids) ; j++) {
+			n = ARRAY_ELEMENT(primary->signed_userids, j);
+			ARRAY_FREE(ARRAY_ELEMENT(pgp->signed_userids, n).signatures);
+		}
 		ARRAY_FREE(primary->signed_userids);
 		ARRAY_FREE(primary->signed_userattrs);
 		ARRAY_FREE(primary->signed_subkeys);
 	}
 	for (i = 0 ; i < ARRAY_COUNT(pgp->signatures) ; i++) {
 		free_bn_array(ARRAY_ELEMENT(pgp->signatures, i).bn, PGPV_MAX_SIG_BN);
+	}
+	for (i = 0 ; i < ARRAY_COUNT(pgp->signed_subkeys) ; i++) {
+		free_bn_array(ARRAY_ELEMENT(pgp->signed_subkeys, i).subkey.bn, PGPV_MAX_SIG_BN);
 	}
 	ARRAY_FREE(pgp->primaries);
 	ARRAY_FREE(pgp->datastarts);
