@@ -1,5 +1,7 @@
-$NetBSD: patch-aa,v 1.2 2016/04/23 10:05:18 nros Exp $
+$NetBSD: patch-aa,v 1.3 2016/07/09 11:44:24 rillig Exp $
+
 * Use the right arguments to install.
+
 --- Makefile.in.orig	2016-04-05 15:57:30.000000000 +0000
 +++ Makefile.in
 @@ -118,11 +118,10 @@ translations_lrelease:	translations_lupd
