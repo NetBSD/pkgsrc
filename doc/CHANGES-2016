@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2740 2016/07/09 17:45:39 agc Exp $
+$NetBSD: CHANGES-2016,v 1.2741 2016/07/09 21:13:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3967,3 +3967,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated security/libnetpgpverify to 20160708 [agc 2016-07-09]
 	Updated security/netpgpverify to 20160709 [agc 2016-07-09]
 	Updated security/libnetpgpverify to 20160709 [agc 2016-07-09]
+	Added archivers/py-czipfile version 1.0.0 [wiz 2016-07-09]
