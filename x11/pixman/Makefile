@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2016/07/09 06:39:17 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2016/07/09 10:22:29 rillig Exp $
 
 DISTNAME=	pixman-0.34.0
 PKGREVISION=	1
@@ -13,7 +13,7 @@ LICENSE=	mit
 
 GNU_CONFIGURE=	yes
 .if ${MACHINE_ARCH} == i386
-CONFIGURE_ARGS += --disable-sse2
+CONFIGURE_ARGS+= --disable-sse2
 .endif
 
 USE_LIBTOOL=	yes
