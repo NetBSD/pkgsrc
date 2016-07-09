@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.107 2015/07/02 18:47:57 khorben Exp $
+# $NetBSD: Makefile,v 1.108 2016/07/09 06:39:18 wiz Exp $
 
 COMMENT=	Screen saver and locker for the X window system
+PKGREVISION=	1
 
 CONFLICTS+=	xscreensaver-gnome<4.14
 

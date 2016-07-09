@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2016/03/05 11:29:18 jperkin Exp $
+# $NetBSD: Makefile,v 1.22 2016/07/09 06:38:53 wiz Exp $
 #
 
 DISTNAME=	CSP-0.32
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.su.se/pub/users/leifj/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${CSPGUIDE}

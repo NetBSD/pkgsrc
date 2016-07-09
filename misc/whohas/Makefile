@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2015/06/12 10:50:37 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2016/07/09 06:38:38 wiz Exp $
 #
 
 DISTNAME=	whohas-0.29
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	misc
 MASTER_SITES=	http://www.philippwesche.org/200811/whohas/
 

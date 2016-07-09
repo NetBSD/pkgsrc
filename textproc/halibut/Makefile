@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2015/06/12 10:51:20 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2016/07/09 06:39:05 wiz Exp $
 
 DISTNAME=	halibut-1.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.chiark.greenend.org.uk/~sgtatham/halibut/
 
