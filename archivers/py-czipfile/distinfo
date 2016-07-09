@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2016/07/09 21:13:02 wiz Exp $
+
+SHA1 (czipfile-1.0.0.tar.gz) = 7155b7238c397a7bca130ce986d03613228ca318
+RMD160 (czipfile-1.0.0.tar.gz) = e86710e82c50e85dc86b8489eb042ccce0889d03
+SHA512 (czipfile-1.0.0.tar.gz) = 522e72aaa6b90e51190b0dc7abb2629779c6c24375e526a1347bc5b6a84769b794708ae8bb220801cbd069cbee28a497117c9f52025f60a60b424249004503a1
+Size (czipfile-1.0.0.tar.gz) = 144418 bytes
+SHA1 (patch-setup.py) = 4064bad441316e88ec6dcbe97371c1b18d5a86e8
