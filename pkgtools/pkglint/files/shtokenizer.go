@@ -58,37 +58,20 @@ func (p *ShTokenizer) ShAtom(quoting ShQuoting) *ShAtom {
 }
 
 func (p *ShTokenizer) shAtomPlain() *ShAtom {
-	q := shqPlain
+	const q = shqPlain
+	if op := p.shOperator(q); op != nil {
+		return op
+	}
 	repl := p.parser.repl
 	switch {
 	case repl.AdvanceHspace():
 		return &ShAtom{shtSpace, repl.s, q, nil}
-	case repl.AdvanceStr("\n"):
-		return &ShAtom{shtNewline, repl.s, q, nil}
-	case repl.AdvanceStr(";;"):
-		return &ShAtom{shtCaseSeparator, repl.s, q, nil}
-	case repl.AdvanceStr(";"):
-		return &ShAtom{shtSemicolon, repl.s, q, nil}
-	case repl.AdvanceStr("("):
-		return &ShAtom{shtParenOpen, repl.s, q, nil}
-	case repl.AdvanceStr(")"):
-		return &ShAtom{shtParenClose, repl.s, q, nil}
-	case repl.AdvanceStr("||"):
-		return &ShAtom{shtOr, repl.s, q, nil}
-	case repl.AdvanceStr("&&"):
-		return &ShAtom{shtAnd, repl.s, q, nil}
-	case repl.AdvanceStr("|"):
-		return &ShAtom{shtPipe, repl.s, q, nil}
-	case repl.AdvanceStr("&"):
-		return &ShAtom{shtBackground, repl.s, q, nil}
 	case repl.AdvanceStr("\""):
 		return &ShAtom{shtWord, repl.s, shqDquot, nil}
 	case repl.AdvanceStr("'"):
 		return &ShAtom{shtWord, repl.s, shqSquot, nil}
 	case repl.AdvanceStr("`"):
 		return &ShAtom{shtWord, repl.s, shqBackt, nil}
-	case repl.AdvanceRegexp(`^\d*(?:<<-|<<|<&|<>|>>|>&|>\||<|>)`):
-		return &ShAtom{shtRedirect, repl.m[0], q, nil}
 	case repl.AdvanceRegexp(`^#.*`):
 		return &ShAtom{shtComment, repl.m[0], q, nil}
 	case repl.AdvanceStr("$$("):
@@ -125,6 +108,9 @@ func (p *ShTokenizer) shAtomSquot() *ShAtom {
 
 func (p *ShTokenizer) shAtomBackt() *ShAtom {
 	const q = shqBackt
+	if op := p.shOperator(q); op != nil {
+		return op
+	}
 	repl := p.parser.repl
 	switch {
 	case repl.AdvanceStr("\""):
@@ -135,24 +121,6 @@ func (p *ShTokenizer) shAtomBackt() *ShAtom {
 		return &ShAtom{shtWord, repl.s, shqBacktSquot, nil}
 	case repl.AdvanceHspace():
 		return &ShAtom{shtSpace, repl.s, q, nil}
-	case repl.AdvanceStr(";;"):
-		return &ShAtom{shtCaseSeparator, repl.s, q, nil}
-	case repl.AdvanceStr(";"):
-		return &ShAtom{shtSemicolon, repl.s, q, nil}
-	case repl.AdvanceStr("("):
-		return &ShAtom{shtParenOpen, repl.s, q, nil}
-	case repl.AdvanceStr(")"):
-		return &ShAtom{shtParenClose, repl.s, q, nil}
-	case repl.AdvanceStr("||"):
-		return &ShAtom{shtOr, repl.s, q, nil}
-	case repl.AdvanceStr("&&"):
-		return &ShAtom{shtAnd, repl.s, q, nil}
-	case repl.AdvanceStr("|"):
-		return &ShAtom{shtPipe, repl.s, q, nil}
-	case repl.AdvanceStr("&"):
-		return &ShAtom{shtBackground, repl.s, q, nil}
-	case repl.AdvanceRegexp(`^(?:<|<<|>|>>|>&)`):
-		return &ShAtom{shtRedirect, repl.s, q, nil}
 	case repl.AdvanceRegexp("^#[^`]*"):
 		return &ShAtom{shtComment, repl.s, q, nil}
 	case repl.AdvanceRegexp(`^(?:[!#%*+,\-./0-9:=?@A-Z\[\]_a-z~]+|\\[^$]|` + reShDollar + `)+`):
@@ -163,6 +131,9 @@ func (p *ShTokenizer) shAtomBackt() *ShAtom {
 
 func (p *ShTokenizer) shAtomSub() *ShAtom {
 	const q = shqSubsh
+	if op := p.shOperator(q); op != nil {
+		return op
+	}
 	repl := p.parser.repl
 	mark := repl.Mark()
 	atom := func(typ ShAtomType) *ShAtom {
@@ -171,26 +142,12 @@ func (p *ShTokenizer) shAtomSub() *ShAtom {
 	switch {
 	case repl.AdvanceHspace():
 		return atom(shtSpace)
-	case repl.AdvanceStr(";;"):
-		return atom(shtCaseSeparator)
-	case repl.AdvanceStr(";"):
-		return atom(shtSemicolon)
-	case repl.AdvanceStr("||"):
-		return atom(shtOr)
-	case repl.AdvanceStr("&&"):
-		return atom(shtAnd)
-	case repl.AdvanceStr("|"):
-		return atom(shtPipe)
-	case repl.AdvanceStr("&"):
-		return atom(shtBackground)
 	case repl.AdvanceStr("\""):
 		//return &ShAtom{shtWord, repl.s, shqDquot, nil}
 	case repl.AdvanceStr("'"):
 		return &ShAtom{shtWord, repl.s, shqSubshSquot, nil}
 	case repl.AdvanceStr("`"):
 		//return &ShAtom{shtWord, repl.s, shqBackt, nil}
-	case repl.AdvanceRegexp(`^\d*(?:<<-|<<|<&|<>|>>|>&|>\||<|>)`):
-		return &ShAtom{shtRedirect, repl.m[0], q, nil}
 	case repl.AdvanceRegexp(`^#.*`):
 		return &ShAtom{shtComment, repl.m[0], q, nil}
 	case repl.AdvanceStr(")"):
@@ -203,6 +160,9 @@ func (p *ShTokenizer) shAtomSub() *ShAtom {
 
 func (p *ShTokenizer) shAtomDquotBackt() *ShAtom {
 	const q = shqDquotBackt
+	if op := p.shOperator(q); op != nil {
+		return op
+	}
 	repl := p.parser.repl
 	switch {
 	case repl.AdvanceStr("`"):
@@ -213,24 +173,6 @@ func (p *ShTokenizer) shAtomDquotBackt() *ShAtom {
 		return &ShAtom{shtWord, repl.s, shqDquotBacktSquot, nil}
 	case repl.AdvanceRegexp("^#[^`]*"):
 		return &ShAtom{shtComment, repl.s, q, nil}
-	case repl.AdvanceStr(";;"):
-		return &ShAtom{shtCaseSeparator, repl.s, q, nil}
-	case repl.AdvanceStr(";"):
-		return &ShAtom{shtSemicolon, repl.s, q, nil}
-	case repl.AdvanceStr("("):
-		return &ShAtom{shtParenOpen, repl.s, q, nil}
-	case repl.AdvanceStr(")"):
-		return &ShAtom{shtParenClose, repl.s, q, nil}
-	case repl.AdvanceStr("||"):
-		return &ShAtom{shtOr, repl.s, q, nil}
-	case repl.AdvanceStr("&&"):
-		return &ShAtom{shtAnd, repl.s, q, nil}
-	case repl.AdvanceStr("|"):
-		return &ShAtom{shtPipe, repl.s, q, nil}
-	case repl.AdvanceStr("&"):
-		return &ShAtom{shtBackground, repl.s, q, nil}
-	case repl.AdvanceRegexp(`^(?:<|<<|>|>>|>&)`):
-		return &ShAtom{shtRedirect, repl.s, q, nil}
 	case repl.AdvanceRegexp(`^(?:[!#%*+,\-./0-9:=?@A-Z\[\]_a-z~]+|\\[^$]|` + reShDollar + `)+`):
 		return &ShAtom{shtWord, repl.s, q, nil}
 	case repl.AdvanceHspace():
@@ -293,6 +235,25 @@ func (p *ShTokenizer) shAtomDquotBacktSquot() *ShAtom {
 		return &ShAtom{shtWord, repl.s, shqDquotBackt, nil}
 	case repl.AdvanceRegexp(`^(?:[\t !"#%()*+,\-./0-9:;<=>?@A-Z\[\]^_a-z{|}~]+|\\[^$]|\\\$\$|\$\$)+`):
 		return &ShAtom{shtWord, repl.m[0], shqDquotBacktSquot, nil}
+	}
+	return nil
+}
+
+func (p *ShTokenizer) shOperator(q ShQuoting) *ShAtom {
+	repl := p.parser.repl
+	switch {
+	case repl.AdvanceStr("||"),
+		repl.AdvanceStr("&&"),
+		repl.AdvanceStr(";;"),
+		repl.AdvanceStr("\n"),
+		repl.AdvanceStr(";"),
+		repl.AdvanceStr("("),
+		repl.AdvanceStr(")"),
+		repl.AdvanceStr("|"),
+		repl.AdvanceStr("&"):
+		return &ShAtom{shtOperator, repl.s, q, nil}
+	case repl.AdvanceRegexp(`^\d*(?:<<-|<<|<&|<>|>>|>&|>\||<|>)`):
+		return &ShAtom{shtOperator, repl.m[0], q, nil}
 	}
 	return nil
 }

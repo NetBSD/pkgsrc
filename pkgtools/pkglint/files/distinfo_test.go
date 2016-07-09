@@ -4,7 +4,7 @@ import (
 	check "gopkg.in/check.v1"
 )
 
-func (s *Suite) TestChecklinesDistinfo(c *check.C) {
+func (s *Suite) Test_ChecklinesDistinfo(c *check.C) {
 	s.CreateTmpFile(c, "patches/patch-aa", ""+
 		"$"+"NetBSD$ line is ignored\n"+
 		"patch contents\n")
@@ -28,7 +28,7 @@ func (s *Suite) TestChecklinesDistinfo(c *check.C) {
 		"WARN: distinfo:7: Patch file \"patch-nonexistent\" does not exist in directory \"patches\".\n")
 }
 
-func (s *Suite) TestChecklinesDistinfo_GlobalHashMismatch(c *check.C) {
+func (s *Suite) Test_ChecklinesDistinfo_global_hash_mismatch(c *check.C) {
 	otherLine := NewLine("other/distinfo", 7, "dummy", nil)
 	G.Hash = make(map[string]*Hash)
 	G.Hash["SHA512:pkgname-1.0.tar.gz"] = &Hash{"asdfasdf", otherLine}
@@ -43,7 +43,7 @@ func (s *Suite) TestChecklinesDistinfo_GlobalHashMismatch(c *check.C) {
 		"ERROR: distinfo:EOF: Expected SHA1, RMD160, SHA512, Size checksums for \"pkgname-1.0.tar.gz\", got SHA512.\n")
 }
 
-func (s *Suite) TestChecklinesDistinfo_UncommittedPatch(c *check.C) {
+func (s *Suite) Test_ChecklinesDistinfo_uncommitted_patch(c *check.C) {
 	s.CreateTmpFile(c, "patches/patch-aa", ""+
 		"$"+"NetBSD$\n"+
 		"\n"+
@@ -65,7 +65,7 @@ func (s *Suite) TestChecklinesDistinfo_UncommittedPatch(c *check.C) {
 		"WARN: ~/distinfo:3: patches/patch-aa is registered in distinfo but not added to CVS.\n")
 }
 
-func (s *Suite) TestChecklinesDistinfo_UnrecordedPatches(c *check.C) {
+func (s *Suite) Test_ChecklinesDistinfo_unrecorded_patches(c *check.C) {
 	s.CreateTmpFile(c, "patches/CVS/Entries", "")
 	s.CreateTmpFile(c, "patches/patch-aa", "")
 	s.CreateTmpFile(c, "patches/patch-src-Makefile", "")
@@ -84,7 +84,7 @@ func (s *Suite) TestChecklinesDistinfo_UnrecordedPatches(c *check.C) {
 		"ERROR: ~/distinfo: patch \"patches/patch-src-Makefile\" is not recorded. Run \""+confMake+" makepatchsum\".\n")
 }
 
-func (s *Suite) TestChecklinesDistinfo_ManualPatches(c *check.C) {
+func (s *Suite) Test_ChecklinesDistinfo_manual_patches(c *check.C) {
 	s.CreateTmpFile(c, "patches/manual-libtool.m4",
 		"")
 	G.CurrentDir = s.tmpdir

@@ -4,7 +4,7 @@ import (
 	check "gopkg.in/check.v1"
 )
 
-func (s *Suite) TestChecklinesBuildlink3(c *check.C) {
+func (s *Suite) Test_ChecklinesBuildlink3Mk(c *check.C) {
 	G.globalData.InitVartypes()
 	mklines := s.NewMkLines("buildlink3.mk",
 		"# $"+"NetBSD$",
@@ -37,7 +37,7 @@ func (s *Suite) TestChecklinesBuildlink3(c *check.C) {
 // Before version 5.3, pkglint wrongly warned here.
 // The mk/haskell.mk file takes care of constructing the correct PKGNAME,
 // but pkglint had not looked at that file.
-func (s *Suite) TestChecklinesBuildlink3_NameMismatch(c *check.C) {
+func (s *Suite) Test_ChecklinesBuildlink3Mk_name_mismatch(c *check.C) {
 	G.globalData.InitVartypes()
 	G.Pkg = NewPackage("x11/hs-X11")
 	G.Pkg.EffectivePkgbase = "X11"
@@ -62,7 +62,7 @@ func (s *Suite) TestChecklinesBuildlink3_NameMismatch(c *check.C) {
 	c.Check(s.Output(), equals, "ERROR: buildlink3.mk:3: Package name mismatch between \"hs-X11\" in this file and \"X11\" from Makefile:3.\n")
 }
 
-func (s *Suite) TestChecklinesBuildlink3_NameMismatchMultipleInclusion(c *check.C) {
+func (s *Suite) Test_ChecklinesBuildlink3Mk_name_mismatch_multiple_inclusion(c *check.C) {
 	G.globalData.InitVartypes()
 	mklines := s.NewMkLines("buildlink3.mk",
 		"# $"+"NetBSD$",
@@ -83,7 +83,7 @@ func (s *Suite) TestChecklinesBuildlink3_NameMismatchMultipleInclusion(c *check.
 		"WARN: buildlink3.mk:9: Definition of BUILDLINK_API_DEPENDS is missing.\n")
 }
 
-func (s *Suite) TestChecklinesBuildlink3_NameMismatchAbiApi(c *check.C) {
+func (s *Suite) Test_ChecklinesBuildlink3Mk_name_mismatch_abi_api(c *check.C) {
 	G.globalData.InitVartypes()
 	mklines := s.NewMkLines("buildlink3.mk",
 		"# $"+"NetBSD$",
@@ -105,7 +105,7 @@ func (s *Suite) TestChecklinesBuildlink3_NameMismatchAbiApi(c *check.C) {
 	c.Check(s.Output(), equals, "WARN: buildlink3.mk:9: Package name mismatch between ABI \"hs-X12\" and API \"hs-X11\" (from line 8).\n")
 }
 
-func (s *Suite) TestChecklinesBuildlink3_AbiApiVersions(c *check.C) {
+func (s *Suite) Test_ChecklinesBuildlink3Mk_abi_api_versions(c *check.C) {
 	G.globalData.InitVartypes()
 	mklines := s.NewMkLines("buildlink3.mk",
 		"# $"+"NetBSD$",
@@ -128,7 +128,7 @@ func (s *Suite) TestChecklinesBuildlink3_AbiApiVersions(c *check.C) {
 		"WARN: buildlink3.mk:9: ABI version \"1.6.0\" should be at least API version \"1.6.1\" (see line 8).\n")
 }
 
-func (s *Suite) TestChecklinesBuildlink3_NoBuildlinkTreeAtBeginning(c *check.C) {
+func (s *Suite) Test_ChecklinesBuildlink3Mk_no_BUILDLINK_TREE_at_beginning(c *check.C) {
 	G.globalData.InitVartypes()
 	mklines := s.NewMkLines("buildlink3.mk",
 		"# $"+"NetBSD$",
@@ -149,7 +149,7 @@ func (s *Suite) TestChecklinesBuildlink3_NoBuildlinkTreeAtBeginning(c *check.C) 
 	c.Check(s.Output(), equals, "WARN: buildlink3.mk:3: Expected a BUILDLINK_TREE line.\n")
 }
 
-func (s *Suite) TestChecklinesBuildlink3_NoBuildlinkTreeAtEnd(c *check.C) {
+func (s *Suite) Test_ChecklinesBuildlink3Mk_no_BUILDLINK_TREE_at_end(c *check.C) {
 	G.globalData.InitVartypes()
 	mklines := s.NewMkLines("buildlink3.mk",
 		"# $"+"NetBSD$",
@@ -176,7 +176,7 @@ func (s *Suite) TestChecklinesBuildlink3_NoBuildlinkTreeAtEnd(c *check.C) {
 		"WARN: buildlink3.mk:15: This line should contain the following text: BUILDLINK_TREE+=\t-hs-X11\n")
 }
 
-func (s *Suite) TestChecklinesBuildlink3_MultipleInclusionWrong(c *check.C) {
+func (s *Suite) Test_ChecklinesBuildlink3Mk_multiple_inclusion_wrong(c *check.C) {
 	G.globalData.InitVartypes()
 	mklines := s.NewMkLines("buildlink3.mk",
 		"# $"+"NetBSD$",
@@ -193,7 +193,7 @@ func (s *Suite) TestChecklinesBuildlink3_MultipleInclusionWrong(c *check.C) {
 		"WARN: buildlink3.mk:6: This line should contain the following text: HS_X11_BUILDLINK3_MK:=\n")
 }
 
-func (s *Suite) TestChecklinesBuildlink3_EndIfMissing(c *check.C) {
+func (s *Suite) Test_ChecklinesBuildlink3Mk_missing_endif(c *check.C) {
 	G.globalData.InitVartypes()
 	mklines := s.NewMkLines("buildlink3.mk",
 		"# $"+"NetBSD$",
@@ -208,7 +208,7 @@ func (s *Suite) TestChecklinesBuildlink3_EndIfMissing(c *check.C) {
 	c.Check(s.Output(), equals, "WARN: buildlink3.mk:EOF: Expected .endif\n")
 }
 
-func (s *Suite) TestChecklinesBuildlink3_UnknownDependencyPatterns(c *check.C) {
+func (s *Suite) Test_ChecklinesBuildlink3Mk_unknown_dependency_patterns(c *check.C) {
 	G.globalData.InitVartypes()
 	mklines := s.NewMkLines("buildlink3.mk",
 		"# $"+"NetBSD$",
@@ -233,7 +233,7 @@ func (s *Suite) TestChecklinesBuildlink3_UnknownDependencyPatterns(c *check.C) {
 		"WARN: buildlink3.mk:10: Unknown dependency pattern \"hs-X11!=1.6.1.2nb2\".\n")
 }
 
-func (s *Suite) TestChecklinesBuildlink3_PkgbaseWithVariable(c *check.C) {
+func (s *Suite) Test_ChecklinesBuildlink3Mk_PKGBASE_with_variable(c *check.C) {
 	G.globalData.InitVartypes()
 	mklines := s.NewMkLines("buildlink3.mk",
 		"# $"+"NetBSD$",
@@ -255,7 +255,7 @@ func (s *Suite) TestChecklinesBuildlink3_PkgbaseWithVariable(c *check.C) {
 	c.Check(s.Output(), equals, "WARN: buildlink3.mk:3: Please use \"py\" instead of \"${PYPKGPREFIX}\".\n")
 }
 
-func (s *Suite) TestChecklinesBuildlink3_PkgbaseWithUnknownVariable(c *check.C) {
+func (s *Suite) Test_ChecklinesBuildlink3Mk_PKGBASE_with_unknown_variable(c *check.C) {
 	G.globalData.InitVartypes()
 	mklines := s.NewMkLines("buildlink3.mk",
 		"# $"+"NetBSD$",

@@ -4,7 +4,7 @@ import (
 	check "gopkg.in/check.v1"
 )
 
-func (s *Suite) TestGetopt_Short(c *check.C) {
+func (s *Suite) Test_Options_Parse_short(c *check.C) {
 	opts := NewOptions()
 	var help bool
 	opts.AddFlagVar('h', "help", &help, false, "prints a help page")
@@ -16,7 +16,7 @@ func (s *Suite) TestGetopt_Short(c *check.C) {
 	c.Check(help, equals, true)
 }
 
-func (s *Suite) TestGetopt_UnknownShort(c *check.C) {
+func (s *Suite) Test_Options_Parse_unknown_short(c *check.C) {
 	opts := NewOptions()
 
 	_, err := opts.Parse([]string{"progname", "-z"})
@@ -24,7 +24,7 @@ func (s *Suite) TestGetopt_UnknownShort(c *check.C) {
 	c.Check(err.Error(), equals, "progname: unknown option: -z")
 }
 
-func (s *Suite) TestGetopt_UnknownLong(c *check.C) {
+func (s *Suite) Test_Options_Parse_unknown_long(c *check.C) {
 	opts := NewOptions()
 
 	_, err := opts.Parse([]string{"progname", "--unknown-long"})
@@ -32,7 +32,7 @@ func (s *Suite) TestGetopt_UnknownLong(c *check.C) {
 	c.Check(err.Error(), equals, "progname: unknown option: --unknown-long")
 }
 
-func (s *Suite) TestGetopt_UnknownFlagInGroup(c *check.C) {
+func (s *Suite) Test_Options_Parse_unknown_flag_in_group(c *check.C) {
 	opts := NewOptions()
 	opts.AddFlagGroup('W', "warnings", "", "")
 
@@ -49,7 +49,7 @@ func (s *Suite) TestGetopt_UnknownFlagInGroup(c *check.C) {
 	c.Check(err.Error(), equals, "progname: option requires an argument: -W")
 }
 
-func (s *Suite) TestGetopt_AbbreviatedLong(c *check.C) {
+func (s *Suite) Test_Options_Parse_abbreviated_long(c *check.C) {
 	opts := NewOptions()
 	var longFlag, longerFlag bool
 	opts.AddFlagVar('?', "long", &longFlag, false, "")
@@ -75,7 +75,7 @@ func (s *Suite) TestGetopt_AbbreviatedLong(c *check.C) {
 	c.Check(longerFlag, equals, true)
 }
 
-func (s *Suite) TestGetopt_MixedArgsAndOptions(c *check.C) {
+func (s *Suite) Test_Options_Parse_mixed_args_and_options(c *check.C) {
 	opts := NewOptions()
 	var aflag, bflag bool
 	opts.AddFlagVar('a', "aflag", &aflag, false, "")

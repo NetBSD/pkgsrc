@@ -28,7 +28,7 @@ func ifelseStr(cond bool, a, b string) string {
 	return b
 }
 
-func mustMatch(s, re string) []string {
+func mustMatch(s string, re RegexPattern) []string {
 	if m := match(s, re); m != nil {
 		return m
 	}
@@ -192,18 +192,20 @@ func dirExists(fname string) bool {
 	return err == nil && st.Mode().IsDir()
 }
 
-var res = make(map[string]*regexp.Regexp)
+type RegexPattern string
 
-func regcomp(re string) *regexp.Regexp {
+var res = make(map[RegexPattern]*regexp.Regexp)
+
+func regcomp(re RegexPattern) *regexp.Regexp {
 	cre := res[re]
 	if cre == nil {
-		cre = regexp.MustCompile(re)
+		cre = regexp.MustCompile(string(re))
 		res[re] = cre
 	}
 	return cre
 }
 
-func match(s, re string) []string {
+func match(s string, re RegexPattern) []string {
 	if !G.opts.Profiling {
 		return regcomp(re).FindStringSubmatch(s)
 	}
@@ -216,28 +218,28 @@ func match(s, re string) []string {
 	delay := immediatelyBefore.UnixNano() - before.UnixNano()
 	timeTaken := after.UnixNano() - immediatelyBefore.UnixNano() - delay
 
-	G.retime.Add(re, int(timeTaken))
+	G.retime.Add(string(re), int(timeTaken))
 	if m != nil {
-		G.rematch.Add(re, 1)
+		G.rematch.Add(string(re), 1)
 	} else {
-		G.renomatch.Add(re, 1)
+		G.renomatch.Add(string(re), 1)
 	}
 	return m
 }
 
-func matches(s, re string) bool {
+func matches(s string, re RegexPattern) bool {
 	matches := regcomp(re).MatchString(s)
 	if G.opts.Profiling {
 		if matches {
-			G.rematch.Add(re, 1)
+			G.rematch.Add(string(re), 1)
 		} else {
-			G.renomatch.Add(re, 1)
+			G.renomatch.Add(string(re), 1)
 		}
 	}
 	return matches
 }
 
-func matchn(s, re string, n int) []string {
+func matchn(s string, re RegexPattern, n int) []string {
 	if m := match(s, re); m != nil {
 		if len(m) != 1+n {
 			panic(fmt.Sprintf("expected match%d, got match%d for %q", len(m)-1, n, re))
@@ -247,38 +249,38 @@ func matchn(s, re string, n int) []string {
 	return nil
 }
 
-func match1(s, re string) (matched bool, m1 string) {
+func match1(s string, re RegexPattern) (matched bool, m1 string) {
 	if m := matchn(s, re, 1); m != nil {
 		return true, m[1]
 	}
 	return
 }
-func match2(s, re string) (matched bool, m1, m2 string) {
+func match2(s string, re RegexPattern) (matched bool, m1, m2 string) {
 	if m := matchn(s, re, 2); m != nil {
 		return true, m[1], m[2]
 	}
 	return
 }
-func match3(s, re string) (matched bool, m1, m2, m3 string) {
+func match3(s string, re RegexPattern) (matched bool, m1, m2, m3 string) {
 	if m := matchn(s, re, 3); m != nil {
 		return true, m[1], m[2], m[3]
 	}
 	return
 }
-func match4(s, re string) (matched bool, m1, m2, m3, m4 string) {
+func match4(s string, re RegexPattern) (matched bool, m1, m2, m3, m4 string) {
 	if m := matchn(s, re, 4); m != nil {
 		return true, m[1], m[2], m[3], m[4]
 	}
 	return
 }
-func match5(s, re string) (matched bool, m1, m2, m3, m4, m5 string) {
+func match5(s string, re RegexPattern) (matched bool, m1, m2, m3, m4, m5 string) {
 	if m := matchn(s, re, 5); m != nil {
 		return true, m[1], m[2], m[3], m[4], m[5]
 	}
 	return
 }
 
-func replaceFirst(s, re, replacement string) ([]string, string) {
+func replaceFirst(s string, re RegexPattern, replacement string) ([]string, string) {
 	if G.opts.Debug {
 		defer tracecall(s, re, replacement)()
 	}
@@ -347,10 +349,10 @@ func (pr *PrefixReplacer) AdvanceHspace() bool {
 	return false
 }
 
-func (pr *PrefixReplacer) AdvanceRegexp(re string) bool {
+func (pr *PrefixReplacer) AdvanceRegexp(re RegexPattern) bool {
 	pr.m = nil
 	pr.s = ""
-	if !hasPrefix(re, "^") {
+	if !hasPrefix(string(re), "^") {
 		panic(fmt.Sprintf("PrefixReplacer.AdvanceRegexp: regular expression %q must have prefix %q.", re, "^"))
 	}
 	if G.Testing && matches("", re) {
@@ -530,7 +532,7 @@ func mkopSubst(s string, left bool, from string, right bool, to string, flags st
 	if G.opts.Debug {
 		defer tracecall(s, left, from, right, to, flags)()
 	}
-	re := ifelseStr(left, "^", "") + regexp.QuoteMeta(from) + ifelseStr(right, "$", "")
+	re := RegexPattern(ifelseStr(left, "^", "") + regexp.QuoteMeta(from) + ifelseStr(right, "$", ""))
 	done := false
 	gflag := contains(flags, "g")
 	return regcomp(re).ReplaceAllStringFunc(s, func(match string) string {
@@ -587,7 +589,7 @@ func containsVarRef(s string) bool {
 	return contains(s, "${")
 }
 
-func reReplaceRepeatedly(from string, re string, to string) string {
+func reReplaceRepeatedly(from string, re RegexPattern, to string) string {
 	replaced := regcomp(re).ReplaceAllString(from, to)
 	if replaced != from {
 		return reReplaceRepeatedly(replaced, re, to)

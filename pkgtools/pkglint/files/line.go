@@ -40,7 +40,7 @@ type Line struct {
 	changed        bool
 	before         []string
 	after          []string
-	autofixMessage *string
+	autofixMessage string
 }
 
 func NewLine(fname string, lineno int, text string, rawLines []*RawLine) *Line {
@@ -49,7 +49,7 @@ func NewLine(fname string, lineno int, text string, rawLines []*RawLine) *Line {
 
 // NewLineMulti is for logical Makefile lines that end with backslash.
 func NewLineMulti(fname string, firstLine, lastLine int, text string, rawLines []*RawLine) *Line {
-	return &Line{fname, int32(firstLine), int32(lastLine), text, rawLines, false, nil, nil, nil}
+	return &Line{fname, int32(firstLine), int32(lastLine), text, rawLines, false, nil, nil, ""}
 }
 
 // NewLineEOF creates a dummy line for logging, with the “line number” EOF.
@@ -157,9 +157,9 @@ func (line *Line) String() string {
 }
 
 func (line *Line) logAutofix() {
-	if line.autofixMessage != nil {
-		logs(llAutofix, line.Fname, line.linenos(), "%s", *line.autofixMessage)
-		line.autofixMessage = nil
+	if line.autofixMessage != "" {
+		logs(llAutofix, line.Fname, line.linenos(), "%s", line.autofixMessage)
+		line.autofixMessage = ""
 	}
 }
 
@@ -200,7 +200,7 @@ func (line *Line) AutofixReplace(from, to string) bool {
 	return false
 }
 
-func (line *Line) AutofixReplaceRegexp(from, to string) bool {
+func (line *Line) AutofixReplaceRegexp(from RegexPattern, to string) bool {
 	for _, rawLine := range line.raw {
 		if rawLine.Lineno != 0 {
 			if replaced := regcomp(from).ReplaceAllString(rawLine.textnl, to); replaced != rawLine.textnl {
@@ -224,8 +224,7 @@ func (line *Line) RememberAutofix(format string, args ...interface{}) (hasBeenFi
 		return true
 	}
 	if G.opts.PrintAutofix {
-		msg := fmt.Sprintf(format, args...)
-		line.autofixMessage = &msg
+		line.autofixMessage = fmt.Sprintf(format, args...)
 	}
 	return false
 }
@@ -259,7 +258,7 @@ func (line *Line) CheckLength(maxlength int) {
 	}
 }
 
-func (line *Line) CheckValidCharacters(reChar string) {
+func (line *Line) CheckValidCharacters(reChar RegexPattern) {
 	rest := regcomp(reChar).ReplaceAllString(line.Text, "")
 	if rest != "" {
 		uni := ""
@@ -281,9 +280,9 @@ func (line *Line) CheckTrailingWhitespace() {
 	}
 }
 
-func (line *Line) CheckRcsid(prefixRe, suggestedPrefix string) bool {
+func (line *Line) CheckRcsid(prefixRe RegexPattern, suggestedPrefix string) bool {
 	if G.opts.Debug {
-		defer tracecall2(prefixRe, suggestedPrefix)()
+		defer tracecall(prefixRe, suggestedPrefix)()
 	}
 
 	if matches(line.Text, `^`+prefixRe+`\$`+`NetBSD(?::[^\$]+)?\$$`) {

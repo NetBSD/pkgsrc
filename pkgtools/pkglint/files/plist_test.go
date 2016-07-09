@@ -4,7 +4,7 @@ import (
 	check "gopkg.in/check.v1"
 )
 
-func (s *Suite) TestChecklinesPlist(c *check.C) {
+func (s *Suite) Test_ChecklinesPlist(c *check.C) {
 	s.UseCommandLine(c, "-Wall")
 	G.Pkg = NewPackage("category/pkgbase")
 	lines := s.NewLines("PLIST",
@@ -46,7 +46,7 @@ func (s *Suite) TestChecklinesPlist(c *check.C) {
 		"ERROR: PLIST:16: Duplicate filename \"share/tzinfo\", already appeared in line 15.\n")
 }
 
-func (s *Suite) TestChecklinesPlist_empty(c *check.C) {
+func (s *Suite) Test_ChecklinesPlist__empty(c *check.C) {
 	lines := s.NewLines("PLIST",
 		"@comment $"+"NetBSD$")
 
@@ -55,7 +55,7 @@ func (s *Suite) TestChecklinesPlist_empty(c *check.C) {
 	c.Check(s.Output(), equals, "WARN: PLIST:1: PLIST files shouldn't be empty.\n")
 }
 
-func (s *Suite) TestChecklinesPlist_commonEnd(c *check.C) {
+func (s *Suite) Test_ChecklinesPlist__commonEnd(c *check.C) {
 	s.CreateTmpFile(c, "PLIST.common", ""+
 		"@comment $"+"NetBSD$\n"+
 		"bin/common\n")
@@ -68,7 +68,7 @@ func (s *Suite) TestChecklinesPlist_commonEnd(c *check.C) {
 	c.Check(s.Output(), equals, "")
 }
 
-func (s *Suite) TestChecklinesPlist_conditional(c *check.C) {
+func (s *Suite) Test_ChecklinesPlist__conditional(c *check.C) {
 	G.Pkg = NewPackage("category/pkgbase")
 	G.Pkg.plistSubstCond["PLIST.bincmds"] = true
 	lines := s.NewLines("PLIST",
@@ -80,7 +80,7 @@ func (s *Suite) TestChecklinesPlist_conditional(c *check.C) {
 	c.Check(s.Output(), equals, "WARN: PLIST:2: The bin/ directory should not have subdirectories.\n")
 }
 
-func (s *Suite) TestChecklinesPlist_sorting(c *check.C) {
+func (s *Suite) Test_ChecklinesPlist__sorting(c *check.C) {
 	s.UseCommandLine(c, "-Wplist-sort")
 	lines := s.NewLines("PLIST",
 		"@comment $"+"NetBSD$",
@@ -97,7 +97,7 @@ func (s *Suite) TestChecklinesPlist_sorting(c *check.C) {
 		"WARN: PLIST:6: \"bin/cat\" should be sorted before \"bin/otherprogram\".\n")
 }
 
-func (s *Suite) TestPlistChecker_sort(c *check.C) {
+func (s *Suite) Test_PlistLineSorter_Sort(c *check.C) {
 	s.UseCommandLine(c, "--autofix")
 	tmpfile := s.CreateTmpFile(c, "PLIST", "dummy\n")
 	ck := &PlistChecker{nil, nil, ""}
@@ -144,7 +144,7 @@ func (s *Suite) TestPlistChecker_sort(c *check.C) {
 		"sbin/program\n")
 }
 
-func (s *Suite) TestPlistChecker_checkpathShare_Desktop(c *check.C) {
+func (s *Suite) Test_PlistChecker_checkpathShare_Desktop(c *check.C) {
 	// Disabled due to PR 46570, item "10. It should stop".
 	return
 
@@ -158,7 +158,7 @@ func (s *Suite) TestPlistChecker_checkpathShare_Desktop(c *check.C) {
 	c.Check(s.Output(), equals, "WARN: PLIST:2: Packages that install a .desktop entry should .include \"../../sysutils/desktop-file-utils/desktopdb.mk\".\n")
 }
 
-func (s *Suite) TestPlistChecker_checkpathMan_gz(c *check.C) {
+func (s *Suite) Test_PlistChecker_checkpathMan_gz(c *check.C) {
 	G.Pkg = NewPackage("category/pkgbase")
 
 	ChecklinesPlist(s.NewLines("PLIST",

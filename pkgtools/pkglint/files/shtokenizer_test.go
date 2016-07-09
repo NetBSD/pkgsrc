@@ -4,7 +4,6 @@ import (
 	check "gopkg.in/check.v1"
 )
 
-// @Beta
 func (s *Suite) Test_ShTokenizer_ShAtom(c *check.C) {
 	checkRest := func(s string, expected ...*ShAtom) string {
 		p := NewShTokenizer(dummyLine, s, false)
@@ -28,6 +27,7 @@ func (s *Suite) Test_ShTokenizer_ShAtom(c *check.C) {
 	dquot := func(s string) *ShAtom { return token(shtWord, s, shqDquot) }
 	squot := func(s string) *ShAtom { return token(shtWord, s, shqSquot) }
 	backt := func(s string) *ShAtom { return token(shtWord, s, shqBackt) }
+	operator := func(s string) *ShAtom { return token(shtOperator, s, shqPlain) }
 	varuse := func(varname string, modifiers ...string) *ShAtom {
 		text := "${" + varname
 		for _, modifier := range modifiers {
@@ -42,8 +42,8 @@ func (s *Suite) Test_ShTokenizer_ShAtom(c *check.C) {
 	}
 	whitespace := func(s string) *ShAtom { return token(shtSpace, s, shqPlain) }
 	space := token(shtSpace, " ", shqPlain)
-	semicolon := token(shtSemicolon, ";", shqPlain)
-	pipe := token(shtPipe, "|", shqPlain)
+	semicolon := operator(";")
+	pipe := operator("|")
 
 	check("" /* none */)
 
@@ -55,7 +55,7 @@ func (s *Suite) Test_ShTokenizer_ShAtom(c *check.C) {
 
 	check("$$var;;",
 		word("$$var"),
-		token(shtCaseSeparator, ";;", shqPlain))
+		operator(";;"))
 
 	check("'single-quoted'",
 		q(shqSquot, word("'")),
@@ -116,7 +116,7 @@ func (s *Suite) Test_ShTokenizer_ShAtom(c *check.C) {
 		q(shqDquotBackt, space),
 		q(shqDquotBackt, word("-1")),
 		q(shqDquotBackt, space),
-		token(shtPipe, "|", shqDquotBackt),
+		q(shqDquotBackt, operator("|")),
 		q(shqDquotBackt, space),
 		q(shqDquotBackt, varuse("SED")),
 		q(shqDquotBackt, space),
@@ -136,7 +136,7 @@ func (s *Suite) Test_ShTokenizer_ShAtom(c *check.C) {
 		squot("'"), squot("s,3qt$$,3,"), word("'"))
 
 	check("(for PAGE in $$PAGES; do ",
-		&ShAtom{shtParenOpen, "(", shqPlain, nil},
+		&ShAtom{shtOperator, "(", shqPlain, nil},
 		word("for"),
 		space,
 		word("PAGE"),
@@ -212,7 +212,7 @@ func (s *Suite) Test_ShTokenizer_ShAtom(c *check.C) {
 
 	check("cat<file",
 		word("cat"),
-		token(shtRedirect, "<", shqPlain),
+		operator("<"),
 		word("file"))
 
 	check("-e \"s,\\$$sysconfdir/jabberd,\\$$sysconfdir,g\"",
@@ -243,15 +243,15 @@ func (s *Suite) Test_ShTokenizer_ShAtom(c *check.C) {
 		q(shqBackt, word("echo")),
 		q(shqBackt, semicolon),
 		q(shqBackt, word("echo")),
-		q(shqBackt, token(shtPipe, "|", shqBackt)),
+		q(shqBackt, operator("|")),
 		q(shqBackt, word("echo")),
-		q(shqBackt, token(shtBackground, "&", shqBackt)),
+		q(shqBackt, operator("&")),
 		q(shqBackt, word("echo")),
-		q(shqBackt, token(shtOr, "||", shqBackt)),
+		q(shqBackt, operator("||")),
 		q(shqBackt, word("echo")),
-		q(shqBackt, token(shtAnd, "&&", shqBackt)),
+		q(shqBackt, operator("&&")),
 		q(shqBackt, word("echo")),
-		q(shqBackt, token(shtRedirect, ">", shqBackt)),
+		q(shqBackt, operator(">")),
 		q(shqBackt, word("echo")),
 		q(shqPlain, word("`")))
 
@@ -321,7 +321,7 @@ func (s *Suite) Test_ShTokenizer_ShAtom(c *check.C) {
 	}
 }
 
-func (s *Suite) Test_Shtokenizer_ShAtom_Quoting(c *check.C) {
+func (s *Suite) Test_Shtokenizer_ShAtom__quoting(c *check.C) {
 	checkQuotingChange := func(input, expectedOutput string) {
 		p := NewShTokenizer(dummyLine, input, false)
 		q := shqPlain
@@ -389,7 +389,7 @@ func (s *Suite) Test_ShTokenizer_ShToken(c *check.C) {
 			NewShAtom(shtSpace, " ", shqDquotBackt),
 			NewShAtom(shtWord, "-1", shqDquotBackt),
 			NewShAtom(shtSpace, " ", shqDquotBackt),
-			NewShAtom(shtPipe, "|", shqDquotBackt),
+			NewShAtom(shtOperator, "|", shqDquotBackt),
 			NewShAtom(shtSpace, " ", shqDquotBackt),
 			NewShAtomVaruse("${SED}", shqDquotBackt, "SED"),
 			NewShAtom(shtSpace, " ", shqDquotBackt),
@@ -412,19 +412,19 @@ func (s *Suite) Test_ShTokenizer_ShToken(c *check.C) {
 	check("if cond1; then action1; elif cond2; then action2; else action3; fi",
 		NewShToken("if", NewShAtom(shtWord, "if", shqPlain)),
 		NewShToken("cond1", NewShAtom(shtWord, "cond1", shqPlain)),
-		NewShToken(";", NewShAtom(shtSemicolon, ";", shqPlain)),
+		NewShToken(";", NewShAtom(shtOperator, ";", shqPlain)),
 		NewShToken("then", NewShAtom(shtWord, "then", shqPlain)),
 		NewShToken("action1", NewShAtom(shtWord, "action1", shqPlain)),
-		NewShToken(";", NewShAtom(shtSemicolon, ";", shqPlain)),
+		NewShToken(";", NewShAtom(shtOperator, ";", shqPlain)),
 		NewShToken("elif", NewShAtom(shtWord, "elif", shqPlain)),
 		NewShToken("cond2", NewShAtom(shtWord, "cond2", shqPlain)),
-		NewShToken(";", NewShAtom(shtSemicolon, ";", shqPlain)),
+		NewShToken(";", NewShAtom(shtOperator, ";", shqPlain)),
 		NewShToken("then", NewShAtom(shtWord, "then", shqPlain)),
 		NewShToken("action2", NewShAtom(shtWord, "action2", shqPlain)),
-		NewShToken(";", NewShAtom(shtSemicolon, ";", shqPlain)),
+		NewShToken(";", NewShAtom(shtOperator, ";", shqPlain)),
 		NewShToken("else", NewShAtom(shtWord, "else", shqPlain)),
 		NewShToken("action3", NewShAtom(shtWord, "action3", shqPlain)),
-		NewShToken(";", NewShAtom(shtSemicolon, ";", shqPlain)),
+		NewShToken(";", NewShAtom(shtOperator, ";", shqPlain)),
 		NewShToken("fi", NewShAtom(shtWord, "fi", shqPlain)))
 
 	check("PATH=/nonexistent env PATH=${PATH:Q} true",
@@ -452,7 +452,7 @@ func (s *Suite) Test_ShTokenizer_ShToken(c *check.C) {
 			NewShAtom(shtWord, "{print}", shqBacktSquot),
 			NewShAtom(shtWord, "'", shqBackt),
 			NewShAtom(shtSpace, " ", shqBackt),
-			NewShAtom(shtRedirect, "<", shqBackt),
+			NewShAtom(shtOperator, "<", shqBackt),
 			NewShAtom(shtSpace, " ", shqBackt),
 			NewShAtomVaruse("${WRKSRC}", shqBackt, "WRKSRC"),
 			NewShAtom(shtWord, "/idfile", shqBackt),
