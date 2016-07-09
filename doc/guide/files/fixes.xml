@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.139 2016/07/09 15:19:21 rillig Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.140 2016/07/09 16:07:35 rillig Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -76,9 +76,9 @@
     variable to define which stages need interaction. This should be
     done in the package's <filename>Makefile</filename>, e.g.:</para>
 
-    <programlisting>
+<programlisting>
 INTERACTIVE_STAGE=      configure install
-    </programlisting>
+</programlisting>
 
     <para>The user can then decide to skip this package by setting the
     <varname>BATCH</varname> variable. Packages that require interaction
@@ -125,22 +125,22 @@ INTERACTIVE_STAGE=      configure install
     license, e.g. in <filename
     role="pkg">graphics/xv</filename>:</para>
 
-    <programlisting>
+<programlisting>
 LICENSE=        xv-license
-    </programlisting>
+</programlisting>
 
     <para>When trying to build, the user will get a notice that the
     package is covered by a license which has not been placed in the
     <varname>ACCEPTABLE_LICENSES</varname> variable:</para>
 
-    <programlisting>
+<programlisting>
 &cprompt; <userinput>make</userinput>
 ===> xv-3.10anb9 has an unacceptable license: xv-license.
 ===>     To view the license, enter "/usr/bin/make show-license".
 ===>     To indicate acceptance, add this line to your /etc/mk.conf:
 ===>     ACCEPTABLE_LICENSES+=xv-license
 *** Error code 1
-    </programlisting>
+</programlisting>
 
     <para>The license can be viewed with <command>make
     show-license</command>, and if the user so chooses, the line
@@ -148,9 +148,9 @@ LICENSE=        xv-license
     convey to pkgsrc that it should not in the future fail because of
     that license:</para>
 
-    <programlisting>
+<programlisting>
 ACCEPTABLE_LICENSES+=xv-license
-    </programlisting>
+</programlisting>
 
     <para>The use of <varname>LICENSE=shareware</varname>,
     <varname>LICENSE=no-commercial-use</varname>, and similar language
@@ -311,9 +311,9 @@ ACCEPTABLE_LICENSES+=xv-license
     <para>The format for a <varname>BUILD_DEPENDS</varname> and a
     <varname>DEPENDS</varname> definition is:</para>
 
-    <programlisting>
+<programlisting>
 &lt;pre-req-package-name&gt;:../../&lt;category&gt;/&lt;pre-req-package&gt;
-    </programlisting>
+</programlisting>
 
     <para>Please note that the <quote>pre-req-package-name</quote>
     may include any of the wildcard version numbers recognized by
@@ -442,15 +442,15 @@ DEPENDS+=       ImageMagick>=6.0:../../graphics/ImageMagick
     use the same config file, you would set in
     <filename>foo/bar/Makefile</filename>:</para>
 
-    <programlisting>
+<programlisting>
 CONFLICTS=      baz-[0-9]*
-    </programlisting>
+</programlisting>
 
     <para>and in <filename>pkgsrc/foo/baz/Makefile</filename>:</para>
 
-    <programlisting>
+<programlisting>
 CONFLICTS=      bar-[0-9]*
-    </programlisting>
+</programlisting>
 
   </sect2>
 
@@ -543,10 +543,10 @@ CONFLICTS=      bar-[0-9]*
     (2, ...). The <quote>nb</quote> is treated like a
     <quote>.</quote> by the package tools. e.g.</para>
 
-    <programlisting>
+<programlisting>
 DISTNAME=       foo-17.42
 PKGREVISION=    9
-    </programlisting>
+</programlisting>
 
     <para>will result in a <varname>PKGNAME</varname> of
     <quote>foo-17.42nb9</quote>. If you want to use the original
@@ -558,9 +558,9 @@ PKGREVISION=    9
     <varname>PKGREVISION</varname> should be removed, e.g. on a new
     minor release of the above package, things should be like:</para>
 
-    <programlisting>
+<programlisting>
 DISTNAME=       foo-17.43
-    </programlisting>
+</programlisting>
 
     <para><varname>PKGREVISION</varname> should be incremented for any
     non-trivial change in the resulting binary package.  Without a
@@ -605,7 +605,7 @@ DISTNAME=       foo-17.43
     easy-to-use interface for replacing text in files.
     Example:</para>
 
-    <programlisting>
+<programlisting>
 SUBST_CLASSES+=                 fix-paths
 SUBST_STAGE.fix-paths=          pre-configure
 SUBST_MESSAGE.fix-paths=        Fixing absolute paths.
@@ -613,7 +613,7 @@ SUBST_FILES.fix-paths=          src/*.c
 SUBST_FILES.fix-paths+=         scripts/*.sh
 SUBST_SED.fix-paths=            -e 's,"/usr/local,"${PREFIX},g'
 SUBST_SED.fix-paths+=           -e 's,"/var/log,"${VARBASE}/log,g'
-    </programlisting>
+</programlisting>
 
     <para><varname>SUBST_CLASSES</varname> is a list of identifiers
     that are used to identify the different SUBST blocks that are
@@ -685,11 +685,11 @@ SUBST_SED.fix-paths+=           -e 's,"/var/log,"${VARBASE}/log,g'
     <varname>FETCH_MESSAGE</varname> to a list of lines that are
     displayed to the user before aborting the build. Example:</para>
 
-    <programlisting>
+<programlisting>
 FETCH_MESSAGE=  "Please download the files"
 FETCH_MESSAGE+= "    "${DISTFILES:Q}
 FETCH_MESSAGE+= "manually from "${MASTER_SITES:Q}"."
-    </programlisting>
+</programlisting>
 
   </sect2>
 
@@ -737,7 +737,7 @@ FETCH_MESSAGE+= "manually from "${MASTER_SITES:Q}"."
       <para>
         If your distfile URL looks similar to <literal>http://github.com/username/exampleproject/archive/v1.0.zip</literal>, then you are packaging a tagged release.
       </para>
-      <programlisting>
+<programlisting>
 DISTNAME=       exampleproject-1.0
 MASTER_SITES=   ${MASTER_SITE_GITHUB:=username/}
 #GITHUB_PROJECT=        # can be omitted if same as DISTNAME
@@ -750,26 +750,26 @@ EXTRACT_SUFX=   .zip
       <para>
         If your distfile URL looks similar to <literal>http://github.com/example/example/archive/988881adc9fc3655077dc2d4d757d480b5ea0e11.tar.gz</literal>, then you are packaging a specific commit not tied to a release.
       </para>
-      <programlisting>
+<programlisting>
 DISTNAME=       example-1.0
 MASTER_SITES=   ${MASTER_SITE_GITHUB:=example/}
 #GITHUB_PROJECT=        # can be omitted if same as DISTNAME
 GITHUB_TAG=     988881adc9fc3655077dc2d4d757d480b5ea0e11
-      </programlisting>
+</programlisting>
     </sect3>
     <sect3 id="build.fetch.github.release">
       <title>Fetch based on release</title>
       <para>
         If your distfile URL looks similar to <literal>http://github.com/username/exampleproject/releases/download/rel-1.6/offensive-1.6.zip</literal>, then you are packaging a release.
       </para>
-      <programlisting>
+<programlisting>
 DISTNAME=       offensive-1.6
 PKGNAME=        ${DISTNAME:S/offensive/proper/}
 MASTER_SITES=   ${MASTER_SITE_GITHUB:=username/}
 GITHUB_PROJECT= exampleproject
 GITHUB_RELEASE= rel-${PKGVERSION_NOREV} # usually just set this to ${DISTNAME}
 EXTRACT_SUFX=   .zip
-      </programlisting>
+</programlisting>
     </sect3>
   </sect2>
 </sect1>
@@ -1000,7 +1000,7 @@ ${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} ${SOMELIB:.a=.la} ${PREFIX}/lib
 
     <para>For packages that need only autoconf:</para>
 
-    <programlisting>
+<programlisting>
 AUTOCONF_REQD=  2.50            # if default version is not good enough
 USE_TOOLS+=     autoconf        # use "autoconf213" for autoconf-2.13
 ...
@@ -1009,11 +1009,11 @@ pre-configure:
         cd ${WRKSRC} &amp;&amp; autoconf
 
 ...
-    </programlisting>
+</programlisting>
 
     <para>and for packages that need automake and autoconf:</para>
 
-    <programlisting>
+<programlisting>
 AUTOMAKE_REQD=  1.7.1           # if default version is not good enough
 USE_TOOLS+=     automake        # use "automake14" for automake-1.4
 ...
@@ -1023,7 +1023,7 @@ pre-configure:
         aclocal; autoheader; automake -a --foreign -i; autoconf
 
 ...
-    </programlisting>
+</programlisting>
 
     <para>Packages which use GNU Automake will almost certainly
     require GNU Make.</para>
@@ -1337,10 +1337,10 @@ of functions.</para>
     directory at a time. As such, you should call
     <literal>${INSTALL_*_DIR}</literal> like this:</para>
 
-    <programlisting>
+<programlisting>
 ${INSTALL_DATA_DIR} ${PREFIX}/dir1
 ${INSTALL_DATA_DIR} ${PREFIX}/dir2
-    </programlisting>
+</programlisting>
 
     <para>You can also just append <quote><literal>dir1
     dir2</literal></quote> to the
@@ -1408,7 +1408,7 @@ ${INSTALL_DATA_DIR} ${PREFIX}/dir2
     and <varname>SPECIAL_PERMS</varname> is used to install setgid the game
     binary:</para>
 
-    <programlisting>
+<programlisting>
 USE_GAMESGROUP=		yes
 
 BUILD_DEFS+=		VARBASE
@@ -1416,7 +1416,7 @@ BUILD_DEFS+=		VARBASE
 OWN_DIRS_PERMS+=	${VARBASE}/games/moon-buggy ${GAMEDIR_PERMS}
 REQD_FILES_PERMS+=	/dev/null ${VARBASE}/games/moon-buggy/mbscore ${GAMEDATA_PERMS}
 SPECIAL_PERMS+=		${PREFIX}/bin/moon-buggy ${SETGID_GAMES_PERMS}
-    </programlisting>
+</programlisting>
 
     <para>Various <varname>INSTALL_*</varname> variables are also available:
     <varname>INSTALL_GAME</varname> to install setgid game binaries,
@@ -1477,13 +1477,13 @@ SPECIAL_PERMS+=		${PREFIX}/bin/moon-buggy ${SETGID_GAMES_PERMS}
       following definitions in your <filename>Makefile</filename> (we
     shall use <command>tclsh</command> in this example):</para>
 
-    <programlisting>
+<programlisting>
 REPLACE_INTERPRETER+=   tcl
 REPLACE.tcl.old=        .*/bin/tclsh
 REPLACE.tcl.new=        ${PREFIX}/bin/tclsh
 REPLACE_FILES.tcl=      # list of tcl scripts which need to be fixed,
 # relative to ${WRKSRC}, just as in REPLACE_PERL
-    </programlisting>
+</programlisting>
 
     <note><para>Before March 2006, these variables were called
     <varname>_REPLACE.*</varname> and
@@ -1514,9 +1514,9 @@ REPLACE_FILES.tcl=      # list of tcl scripts which need to be fixed,
     (<varname>PERL5_INSTALLVENDORARCH</varname> by default),
     e.g.:</para>
 
-    <programlisting>
+<programlisting>
 PERL5_PACKLIST= auto/Pg/.packlist
-    </programlisting>
+</programlisting>
 
     <para>The perl5 config variables
     <varname>installarchlib</varname>,
