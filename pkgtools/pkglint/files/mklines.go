@@ -303,6 +303,11 @@ func (va *VaralignBlock) fixalign(mkline *MkLine, prefix, oldalign string) {
 		return
 	}
 
+	// Don’t warn about procedure parameters
+	if mkline.Op() == opAssignEval && matches(mkline.Varname(), `^[a-z]`) {
+		return
+	}
+
 	goodWidth := va.maxTabWidth
 	if goodWidth == 0 && va.differ {
 		goodWidth = va.maxSpaceWidth

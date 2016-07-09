@@ -4,7 +4,7 @@ import (
 	check "gopkg.in/check.v1"
 )
 
-func (s *Suite) TestSubstContext_Incomplete(c *check.C) {
+func (s *Suite) Test_SubstContext__incomplete(c *check.C) {
 	G.opts.WarnExtra = true
 	ctx := new(SubstContext)
 
@@ -29,7 +29,7 @@ func (s *Suite) TestSubstContext_Incomplete(c *check.C) {
 	c.Check(s.Output(), equals, "WARN: Makefile:14: Incomplete SUBST block: SUBST_STAGE.interp missing.\n")
 }
 
-func (s *Suite) TestSubstContext_Complete(c *check.C) {
+func (s *Suite) Test_SubstContext__complete(c *check.C) {
 	G.opts.WarnExtra = true
 	ctx := new(SubstContext)
 
@@ -49,7 +49,7 @@ func (s *Suite) TestSubstContext_Complete(c *check.C) {
 	c.Check(s.Output(), equals, "")
 }
 
-func (s *Suite) Test_SubstContext_OPSYSVARS(c *check.C) {
+func (s *Suite) Test_SubstContext__OPSYSVARS(c *check.C) {
 	G.opts.WarnExtra = true
 	ctx := new(SubstContext)
 
@@ -66,7 +66,7 @@ func (s *Suite) Test_SubstContext_OPSYSVARS(c *check.C) {
 	c.Check(s.Output(), equals, "")
 }
 
-func (s *Suite) TestSubstContext_NoClass(c *check.C) {
+func (s *Suite) Test_SubstContext__no_class(c *check.C) {
 	s.UseCommandLine(c, "-Wextra")
 	ctx := new(SubstContext)
 

@@ -25,7 +25,7 @@ func NewShellLine(mkline *MkLine) *ShellLine {
 }
 
 var shellcommandsContextType = &Vartype{lkNone, CheckvarShellCommands, []AclEntry{{"*", aclpAllRuntime}}, false}
-var shellwordVuc = &VarUseContext{shellcommandsContextType, vucTimeUnknown, vucQuotPlain, vucExtentWord}
+var shellwordVuc = &VarUseContext{shellcommandsContextType, vucTimeUnknown, vucQuotPlain, false}
 
 func (shline *ShellLine) CheckWord(token string, checkQuoting bool) {
 	if G.opts.Debug {
@@ -207,7 +207,7 @@ func (shline *ShellLine) checkVaruseToken(parser *MkParser, quoting ShQuoting) b
 
 	if varname != "@" {
 		vucstate := quoting.ToVarUseContext()
-		vuc := &VarUseContext{shellcommandsContextType, vucTimeUnknown, vucstate, vucExtentWordpart}
+		vuc := &VarUseContext{shellcommandsContextType, vucTimeUnknown, vucstate, true}
 		shline.mkline.CheckVaruse(varuse, vuc)
 	}
 	return true

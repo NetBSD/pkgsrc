@@ -6,7 +6,7 @@ import (
 	check "gopkg.in/check.v1"
 )
 
-func (s *Suite) Test_SplitIntoShellTokens_LineContinuation(c *check.C) {
+func (s *Suite) Test_splitIntoShellTokens__line_continuation(c *check.C) {
 	words, rest := splitIntoShellTokens(dummyLine, "if true; then \\")
 
 	c.Check(words, check.DeepEquals, []string{"if", "true", ";", "then"})
@@ -15,28 +15,28 @@ func (s *Suite) Test_SplitIntoShellTokens_LineContinuation(c *check.C) {
 	c.Check(s.Output(), equals, "WARN: Pkglint parse error in ShTokenizer.ShAtom at \"\\\\\" (quoting=plain)\n")
 }
 
-func (s *Suite) Test_SplitIntoShellTokens_DollarSlash(c *check.C) {
+func (s *Suite) Test_splitIntoShellTokens__dollar_slash(c *check.C) {
 	words, rest := splitIntoShellTokens(dummyLine, "pax -s /.*~$$//g")
 
 	c.Check(words, check.DeepEquals, []string{"pax", "-s", "/.*~$$//g"})
 	c.Check(rest, equals, "")
 }
 
-func (s *Suite) Test_SplitIntoShellTokens_DollarSubshell(c *check.C) {
+func (s *Suite) Test_splitIntoShellTokens__dollar_subshell(c *check.C) {
 	words, rest := splitIntoShellTokens(dummyLine, "id=$$(${AWK} '{print}' < ${WRKSRC}/idfile) && echo \"$$id\"")
 
 	c.Check(words, deepEquals, []string{"id=", "$$(", "${AWK}", "'{print}'", "<", "${WRKSRC}/idfile", ")", "&&", "echo", "\"$$id\""})
 	c.Check(rest, equals, "")
 }
 
-func (s *Suite) Test_SplitIntoShellTokens_Semicolons(c *check.C) {
+func (s *Suite) Test_splitIntoShellTokens__semicolons(c *check.C) {
 	words, rest := splitIntoShellTokens(dummyLine, "word1 word2;;;")
 
 	c.Check(words, deepEquals, []string{"word1", "word2", ";;", ";"})
 	c.Check(rest, equals, "")
 }
 
-func (s *Suite) Test_SplitIntoShellTokens_Whitespace(c *check.C) {
+func (s *Suite) Test_splitIntoShellTokens__whitespace(c *check.C) {
 	text := "\t${RUN} cd ${WRKSRC}&&(${ECHO} ${PERL5:Q};${ECHO})|${BASH} ./install"
 	words, rest := splitIntoShellTokens(dummyLine, text)
 
@@ -48,7 +48,7 @@ func (s *Suite) Test_SplitIntoShellTokens_Whitespace(c *check.C) {
 	c.Check(rest, equals, "")
 }
 
-func (s *Suite) Test_SplitIntoShellTokens_MkVarUse(c *check.C) {
+func (s *Suite) Test_splitIntoShellTokens__varuse_with_embedded_space_and_other_vars(c *check.C) {
 	varuseWord := "${GCONF_SCHEMAS:@.s.@${INSTALL_DATA} ${WRKSRC}/src/common/dbus/${.s.} ${DESTDIR}${GCONF_SCHEMAS_DIR}/@}"
 	words, rest := splitIntoShellTokens(dummyLine, varuseWord)
 
@@ -56,28 +56,28 @@ func (s *Suite) Test_SplitIntoShellTokens_MkVarUse(c *check.C) {
 	c.Check(rest, equals, "")
 }
 
-func (s *Suite) Test_SplitIntoMkWords_Semicolons(c *check.C) {
+func (s *Suite) Test_splitIntoMkWords__semicolons(c *check.C) {
 	words, rest := splitIntoMkWords(dummyLine, "word1 word2;;;")
 
 	c.Check(words, deepEquals, []string{"word1", "word2;;;"})
 	c.Check(rest, equals, "")
 }
 
-func (s *Suite) Test_SplitIntoShellTokens_VaruseSpace(c *check.C) {
+func (s *Suite) Test_splitIntoShellTokens__varuse_with_embedded_space(c *check.C) {
 	words, rest := splitIntoShellTokens(dummyLine, "${VAR:S/ /_/g}")
 
 	c.Check(words, deepEquals, []string{"${VAR:S/ /_/g}"})
 	c.Check(rest, equals, "")
 }
 
-func (s *Suite) Test_SplitIntoMkWords_VaruseSpace(c *check.C) {
+func (s *Suite) Test_splitIntoMkWords__varuse_with_embedded_space(c *check.C) {
 	words, rest := splitIntoMkWords(dummyLine, "${VAR:S/ /_/g}")
 
 	c.Check(words, deepEquals, []string{"${VAR:S/ /_/g}"})
 	c.Check(rest, equals, "")
 }
 
-func (s *Suite) Test_splitIntoShellTokens_Redirect(c *check.C) {
+func (s *Suite) Test_splitIntoShellTokens__redirect(c *check.C) {
 	words, rest := splitIntoShellTokens(dummyLine, "echo 1>output 2>>append 3>|clobber 4>&5 6<input >>append")
 
 	c.Check(words, deepEquals, []string{
@@ -103,7 +103,7 @@ func (s *Suite) Test_splitIntoShellTokens_Redirect(c *check.C) {
 	c.Check(rest, equals, "")
 }
 
-func (s *Suite) TestChecklineMkShellCommandLine(c *check.C) {
+func (s *Suite) Test_ShellLine_CheckShellCommandLine(c *check.C) {
 	s.UseCommandLine(c, "-Wall")
 	G.Mk = s.NewMkLines("fname",
 		"# dummy")
@@ -229,7 +229,7 @@ func (s *Suite) TestChecklineMkShellCommandLine(c *check.C) {
 	c.Check(s.Output(), equals, "") // No warning about missing error checking.
 }
 
-func (s *Suite) TestShellLine_CheckShelltext_nofix(c *check.C) {
+func (s *Suite) Test_ShellLine_CheckShellCommandLine__nofix(c *check.C) {
 	s.UseCommandLine(c, "-Wall")
 	G.globalData.InitVartypes()
 	s.RegisterTool(&Tool{Name: "echo", Predefined: true})
@@ -246,7 +246,7 @@ func (s *Suite) TestShellLine_CheckShelltext_nofix(c *check.C) {
 		"NOTE: Makefile:1: The :Q operator isn't necessary for ${PKGNAME} here.\n")
 }
 
-func (s *Suite) TestShellLine_CheckShelltext_showAutofix(c *check.C) {
+func (s *Suite) Test_ShellLine_CheckShellCommandLine__show_autofix(c *check.C) {
 	s.UseCommandLine(c, "-Wall", "--show-autofix")
 	G.globalData.InitVartypes()
 	s.RegisterTool(&Tool{Name: "echo", Predefined: true})
@@ -261,7 +261,7 @@ func (s *Suite) TestShellLine_CheckShelltext_showAutofix(c *check.C) {
 		"AUTOFIX: Makefile:1: Replacing \"${PKGNAME:Q}\" with \"${PKGNAME}\".\n")
 }
 
-func (s *Suite) TestShellLine_CheckShelltext_autofix(c *check.C) {
+func (s *Suite) Test_ShellLine_CheckShellCommandLine__autofix(c *check.C) {
 	s.UseCommandLine(c, "-Wall", "--autofix")
 	G.globalData.InitVartypes()
 	s.RegisterTool(&Tool{Name: "echo", Predefined: true})
@@ -275,7 +275,7 @@ func (s *Suite) TestShellLine_CheckShelltext_autofix(c *check.C) {
 		"AUTOFIX: Makefile:1: Replacing \"${PKGNAME:Q}\" with \"${PKGNAME}\".\n")
 }
 
-func (s *Suite) TestShellLine_CheckShelltext_InternalError1(c *check.C) {
+func (s *Suite) Test_ShellLine_CheckShellCommandLine__implementation(c *check.C) {
 	s.UseCommandLine(c, "-Wall")
 	G.globalData.InitVartypes()
 	G.Mk = s.NewMkLines("fname",
@@ -300,7 +300,7 @@ func (s *Suite) TestShellLine_CheckShelltext_InternalError1(c *check.C) {
 		"WARN: fname:1: Unknown shell command \"echo\".\n")
 }
 
-func (s *Suite) TestShellLine_CheckShelltext_DollarWithoutVariable(c *check.C) {
+func (s *Suite) Test_ShellLine_CheckShelltext__dollar_without_variable(c *check.C) {
 	G.globalData.InitVartypes()
 	G.Mk = s.NewMkLines("fname",
 		"# dummy")
@@ -355,7 +355,7 @@ func (s *Suite) Test_ShellLine_CheckWord(c *check.C) {
 	c.Check(s.Output(), equals, "")
 }
 
-func (s *Suite) Test_ShellLine_CheckWord_DollarWithoutVariable(c *check.C) {
+func (s *Suite) Test_ShellLine_CheckWord__dollar_without_variable(c *check.C) {
 	shline := NewShellLine(NewMkLine(NewLine("fname", 1, "# dummy", nil)))
 
 	shline.CheckWord("/.*~$$//g", false) // Typical argument to pax(1).
@@ -363,7 +363,7 @@ func (s *Suite) Test_ShellLine_CheckWord_DollarWithoutVariable(c *check.C) {
 	c.Check(s.Output(), equals, "")
 }
 
-func (s *Suite) TestShelltextContext_CheckCommandStart(c *check.C) {
+func (s *Suite) Test_ShellLine_CheckShellCommandLine__echo(c *check.C) {
 	s.UseCommandLine(c, "-Wall")
 	s.RegisterTool(&Tool{Name: "echo", Varname: "ECHO", MustUseVarForm: true, Predefined: true})
 	G.Mk = s.NewMkLines("fname",
@@ -380,7 +380,7 @@ func (s *Suite) TestShelltextContext_CheckCommandStart(c *check.C) {
 		"WARN: fname:3: Please use \"${ECHO}\" instead of \"echo\".\n")
 }
 
-func (s *Suite) TestShellLine_checklineMkShelltext(c *check.C) {
+func (s *Suite) Test_ShellLine_CheckShellCommandLine__shell_variables(c *check.C) {
 	text := "\tfor f in *.pl; do ${SED} s,@PREFIX@,${PREFIX}, < $f > $f.tmp && ${MV} $f.tmp $f; done"
 
 	shline := NewShellLine(NewMkLine(NewLine("Makefile", 3, text, nil)))
@@ -402,7 +402,7 @@ func (s *Suite) TestShellLine_checklineMkShelltext(c *check.C) {
 	c.Check(s.Output(), equals, "WARN: Makefile:3: Please use the RCD_SCRIPTS mechanism to install rc.d scripts automatically to ${RCD_SCRIPTS_EXAMPLEDIR}.\n")
 }
 
-func (s *Suite) TestShellLine_checkCommandUse(c *check.C) {
+func (s *Suite) Test_ShellLine_checkCommandUse(c *check.C) {
 	G.Mk = s.NewMkLines("fname",
 		"# dummy")
 	G.Mk.target = "do-install"
@@ -418,7 +418,7 @@ func (s *Suite) TestShellLine_checkCommandUse(c *check.C) {
 	c.Check(s.Output(), equals, "WARN: fname:1: ${CP} should not be used to install files.\n")
 }
 
-func (s *Suite) TestSplitIntoMkWords(c *check.C) {
+func (s *Suite) Test_splitIntoMkWords(c *check.C) {
 	url := "http://registry.gimp.org/file/fix-ca.c?action=download&id=9884&file="
 
 	words, rest := splitIntoShellTokens(dummyLine, url) // Doesn’t really make sense
@@ -437,7 +437,7 @@ func (s *Suite) TestSplitIntoMkWords(c *check.C) {
 	c.Check(rest, equals, "'rest")
 }
 
-func (s *Suite) TestShellLine_CheckShellCommandLine_SedMv(c *check.C) {
+func (s *Suite) Test_ShellLine_CheckShellCommandLine__sed_and_mv(c *check.C) {
 	shline := NewShellLine(NewMkLine(NewLine("Makefile", 85, "\t${RUN} ${SED} 's,#,// comment:,g' fname > fname.tmp; ${MV} fname.tmp fname", nil)))
 
 	shline.CheckShellCommandLine(shline.mkline.Shellcmd())
@@ -445,7 +445,7 @@ func (s *Suite) TestShellLine_CheckShellCommandLine_SedMv(c *check.C) {
 	c.Check(s.Output(), equals, "NOTE: Makefile:85: Please use the SUBST framework instead of ${SED} and ${MV}.\n")
 }
 
-func (s *Suite) TestShellLine_CheckShellCommandLine_Subshell(c *check.C) {
+func (s *Suite) Test_ShellLine_CheckShellCommandLine__subshell(c *check.C) {
 	shline := NewShellLine(NewMkLine(NewLine("Makefile", 85, "\t${RUN} uname=$$(uname)", nil)))
 
 	shline.CheckShellCommandLine(shline.mkline.Shellcmd())
@@ -453,7 +453,7 @@ func (s *Suite) TestShellLine_CheckShellCommandLine_Subshell(c *check.C) {
 	c.Check(s.Output(), equals, "WARN: Makefile:85: Invoking subshells via $(...) is not portable enough.\n")
 }
 
-func (s *Suite) TestShellLine_CheckShellCommandLine_InstallDirs(c *check.C) {
+func (s *Suite) Test_ShellLine_CheckShellCommandLine__install_dir(c *check.C) {
 	shline := NewShellLine(NewMkLine(NewLine("Makefile", 85, "\t${RUN} ${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/dir1 ${DESTDIR}${PREFIX}/dir2", nil)))
 
 	shline.CheckShellCommandLine(shline.mkline.Shellcmd())
@@ -477,7 +477,7 @@ func (s *Suite) TestShellLine_CheckShellCommandLine_InstallDirs(c *check.C) {
 		"WARN: Makefile:85: The INSTALL_*_DIR commands can only handle one directory at a time.\n")
 }
 
-func (s *Suite) TestShellLine_CheckShellCommandLine_InstallD(c *check.C) {
+func (s *Suite) Test_ShellLine_CheckShellCommandLine__install_option_d(c *check.C) {
 	shline := NewShellLine(NewMkLine(NewLine("Makefile", 85, "\t${RUN} ${INSTALL} -d ${DESTDIR}${PREFIX}/dir1 ${DESTDIR}${PREFIX}/dir2", nil)))
 
 	shline.CheckShellCommandLine(shline.mkline.Shellcmd())
@@ -487,7 +487,7 @@ func (s *Suite) TestShellLine_CheckShellCommandLine_InstallD(c *check.C) {
 		"NOTE: Makefile:85: You can use AUTO_MKDIRS=yes or \"INSTALLATION_DIRS+= dir2\" instead of \"${INSTALL} -d\".\n")
 }
 
-func (s *Suite) TestShellLine_(c *check.C) {
+func (s *Suite) Test_ShellLine__shell_comment_with_line_continuation(c *check.C) {
 	tmpfile := s.CreateTmpFile(c, "Makefile", ""+
 		"# $"+"NetBSD$\n"+
 		"pre-install:\n"+
@@ -518,7 +518,7 @@ func (s *Suite) Test_ShQuote(c *check.C) {
 	c.Check(traceQuoting("x`x\\\"x\\'x\\`x\\\\"), equals, "[plain]`[b]\\\"[b]\\'[b]\\`[b]\\\\[b]")
 }
 
-func (s *Suite) Test_unescapeBackticks(c *check.C) {
+func (s *Suite) Test_ShellLine_unescapeBackticks(c *check.C) {
 	shline := NewShellLine(NewMkLine(dummyLine))
 	// foobar="`echo \"foo   bar\"`"
 	text := "foobar=\"`echo \\\"foo   bar\\\"`\""

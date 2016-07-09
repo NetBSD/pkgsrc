@@ -6,7 +6,7 @@ import (
 	check "gopkg.in/check.v1"
 )
 
-func (s *Suite) TestVartypeCheck_AwkCommand(c *check.C) {
+func (s *Suite) Test_VartypeCheck_AwkCommand(c *check.C) {
 	runVartypeChecks("PLIST_AWK", opAssignAppend, (*VartypeCheck).AwkCommand,
 		"{print $0}",
 		"{print $$0}")
@@ -14,7 +14,7 @@ func (s *Suite) TestVartypeCheck_AwkCommand(c *check.C) {
 	c.Check(s.Output(), equals, "WARN: fname:1: $0 is ambiguous. Use ${0} if you mean a Makefile variable or $$0 if you mean a shell variable.\n")
 }
 
-func (s *Suite) TestVartypeCheck_BasicRegularExpression(c *check.C) {
+func (s *Suite) Test_VartypeCheck_BasicRegularExpression(c *check.C) {
 	runVartypeChecks("REPLACE_FILES.pl", opAssign, (*VartypeCheck).BasicRegularExpression,
 		".*\\.pl$",
 		".*\\.pl$$")
@@ -22,7 +22,7 @@ func (s *Suite) TestVartypeCheck_BasicRegularExpression(c *check.C) {
 	c.Check(s.Output(), equals, "WARN: fname:1: Pkglint parse error in MkLine.Tokenize at \"$\".\n")
 }
 
-func (s *Suite) TestVartypeCheck_BuildlinkDepmethod(c *check.C) {
+func (s *Suite) Test_VartypeCheck_BuildlinkDepmethod(c *check.C) {
 	runVartypeChecks("BUILDLINK_DEPMETHOD.libc", opAssignDefault, (*VartypeCheck).BuildlinkDepmethod,
 		"full",
 		"unknown")
@@ -30,7 +30,7 @@ func (s *Suite) TestVartypeCheck_BuildlinkDepmethod(c *check.C) {
 	c.Check(s.Output(), equals, "WARN: fname:2: Invalid dependency method \"unknown\". Valid methods are \"build\" or \"full\".\n")
 }
 
-func (s *Suite) TestVartypeCheck_Category(c *check.C) {
+func (s *Suite) Test_VartypeCheck_Category(c *check.C) {
 	s.CreateTmpFile(c, "filesyscategory/Makefile", "# empty\n")
 	s.CreateTmpFile(c, "wip/Makefile", "# empty\n")
 	G.CurrentDir = s.tmpdir
@@ -47,7 +47,7 @@ func (s *Suite) TestVartypeCheck_Category(c *check.C) {
 		"ERROR: fname:4: Invalid category \"wip\".\n")
 }
 
-func (s *Suite) TestVartypeCheck_CFlag(c *check.C) {
+func (s *Suite) Test_VartypeCheck_CFlag(c *check.C) {
 	runVartypeChecks("CFLAGS", opAssignAppend, (*VartypeCheck).CFlag,
 		"-Wall",
 		"/W3",
@@ -62,7 +62,7 @@ func (s *Suite) TestVartypeCheck_CFlag(c *check.C) {
 		"WARN: fname:5: Unknown compiler flag \"-XX:+PrintClassHistogramAfterFullGC\".\n")
 }
 
-func (s *Suite) TestVartypeCheck_Comment(c *check.C) {
+func (s *Suite) Test_VartypeCheck_Comment(c *check.C) {
 	runVartypeChecks("COMMENT", opAssign, (*VartypeCheck).Comment,
 		"Versatile Programming Language",
 		"TODO: Short description of the package",
@@ -77,7 +77,7 @@ func (s *Suite) TestVartypeCheck_Comment(c *check.C) {
 		"WARN: fname:4: COMMENT should not be longer than 70 characters.\n")
 }
 
-func (s *Suite) TestVartypeCheck_Dependency(c *check.C) {
+func (s *Suite) Test_VartypeCheck_Dependency(c *check.C) {
 	runVartypeChecks("CONFLICTS", opAssignAppend, (*VartypeCheck).Dependency,
 		"Perl",
 		"perl5>=5.22",
@@ -114,7 +114,7 @@ func (s *Suite) TestVartypeCheck_Dependency(c *check.C) {
 		"WARN: fname:21: Dependency patterns of the form pkgbase>=1.0 don't need the \"{,nb*}\" extension.\n")
 }
 
-func (s *Suite) TestVartypeCheck_DependencyWithPath(c *check.C) {
+func (s *Suite) Test_VartypeCheck_DependencyWithPath(c *check.C) {
 	s.CreateTmpFile(c, "x11/alacarte/Makefile", "# empty\n")
 	s.CreateTmpFile(c, "category/package/Makefile", "# empty\n")
 	G.globalData.Pkgsrcdir = s.tmpdir
@@ -151,7 +151,7 @@ func (s *Suite) TestVartypeCheck_DependencyWithPath(c *check.C) {
 		"WARN: fname:11: Unknown dependency pattern \"broken>\".\n")
 }
 
-func (s *Suite) TestVartypeCheck_DistSuffix(c *check.C) {
+func (s *Suite) Test_VartypeCheck_DistSuffix(c *check.C) {
 	runVartypeChecks("EXTRACT_SUFX", opAssign, (*VartypeCheck).DistSuffix,
 		".tar.gz",
 		".tar.bz2")
@@ -159,7 +159,7 @@ func (s *Suite) TestVartypeCheck_DistSuffix(c *check.C) {
 	c.Check(s.Output(), equals, "NOTE: fname:1: EXTRACT_SUFX is \".tar.gz\" by default, so this definition may be redundant.\n")
 }
 
-func (s *Suite) TestVartypeCheck_EmulPlatform(c *check.C) {
+func (s *Suite) Test_VartypeCheck_EmulPlatform(c *check.C) {
 	runVartypeChecks("EMUL_PLATFORM", opAssign, (*VartypeCheck).EmulPlatform,
 		"linux-i386",
 		"nextbsd-8087",
@@ -171,7 +171,7 @@ func (s *Suite) TestVartypeCheck_EmulPlatform(c *check.C) {
 		"WARN: fname:3: \"${LINUX}\" is not a valid emulation platform.\n")
 }
 
-func (s *Suite) TestVartypeCheck_Enum(c *check.C) {
+func (s *Suite) Test_VartypeCheck_Enum(c *check.C) {
 	runVartypeMatchChecks("JDK", enum("jdk1 jdk2 jdk4").checker,
 		"*",
 		"jdk*",
@@ -181,7 +181,7 @@ func (s *Suite) TestVartypeCheck_Enum(c *check.C) {
 	c.Check(s.Output(), equals, "WARN: fname:3: The pattern \"sun-jdk*\" cannot match any of { jdk1 jdk2 jdk4 } for JDK.\n")
 }
 
-func (s *Suite) TestVartypeCheck_FetchURL(c *check.C) {
+func (s *Suite) Test_VartypeCheck_FetchURL(c *check.C) {
 	s.RegisterMasterSite("MASTER_SITE_GNU", "http://ftp.gnu.org/pub/gnu/")
 	s.RegisterMasterSite("MASTER_SITE_GITHUB", "https://github.com/")
 
@@ -211,7 +211,7 @@ func (s *Suite) TestVartypeCheck_FetchURL(c *check.C) {
 	c.Check(s.Output(), equals, "WARN: fname:3: \"http://example.org/download?fname=<distfile>;version=<version>\" is not a valid URL.\n")
 }
 
-func (s *Suite) TestVartypeCheck_Filename(c *check.C) {
+func (s *Suite) Test_VartypeCheck_Filename(c *check.C) {
 	runVartypeChecks("FNAME", opAssign, (*VartypeCheck).Filename,
 		"Filename with spaces.docx",
 		"OS/2-manual.txt")
@@ -221,7 +221,7 @@ func (s *Suite) TestVartypeCheck_Filename(c *check.C) {
 		"WARN: fname:2: A filename should not contain a slash.\n")
 }
 
-func (s *Suite) TestVartypeCheck_LdFlag(c *check.C) {
+func (s *Suite) Test_VartypeCheck_LdFlag(c *check.C) {
 	runVartypeChecks("LDFLAGS", opAssignAppend, (*VartypeCheck).LdFlag,
 		"-lc",
 		"-L/usr/lib64",
@@ -231,7 +231,7 @@ func (s *Suite) TestVartypeCheck_LdFlag(c *check.C) {
 	c.Check(s.Output(), equals, "WARN: fname:4: Unknown linker flag \"-unknown\".\n")
 }
 
-func (s *Suite) TestVartypeCheck_MachineGnuPlatform(c *check.C) {
+func (s *Suite) Test_VartypeCheck_MachineGnuPlatform(c *check.C) {
 	runVartypeMatchChecks("MACHINE_GNU_PLATFORM", (*VartypeCheck).MachineGnuPlatform,
 		"x86_64-pc-cygwin",
 		"Cygwin-*-amd64")
@@ -241,14 +241,14 @@ func (s *Suite) TestVartypeCheck_MachineGnuPlatform(c *check.C) {
 		"WARN: fname:2: The pattern \"amd64\" cannot match any of { bitrig bsdos cygwin darwin dragonfly freebsd haiku hpux interix irix linux mirbsd netbsd openbsd osf1 solaris sunos } for the operating system part of MACHINE_GNU_PLATFORM.\n")
 }
 
-func (s *Suite) TestVartypeCheck_MailAddress(c *check.C) {
+func (s *Suite) Test_VartypeCheck_MailAddress(c *check.C) {
 	runVartypeChecks("MAINTAINER", opAssign, (*VartypeCheck).MailAddress,
 		"pkgsrc-users@netbsd.org")
 
 	c.Check(s.Output(), equals, "WARN: fname:1: Please write \"NetBSD.org\" instead of \"netbsd.org\".\n")
 }
 
-func (s *Suite) TestVartypeCheck_Message(c *check.C) {
+func (s *Suite) Test_VartypeCheck_Message(c *check.C) {
 	runVartypeChecks("SUBST_MESSAGE.id", opAssign, (*VartypeCheck).Message,
 		"\"Correct paths\"",
 		"Correct paths")
@@ -256,7 +256,7 @@ func (s *Suite) TestVartypeCheck_Message(c *check.C) {
 	c.Check(s.Output(), equals, "WARN: fname:1: SUBST_MESSAGE.id should not be quoted.\n")
 }
 
-func (s *Suite) TestVartypeCheck_Option(c *check.C) {
+func (s *Suite) Test_VartypeCheck_Option(c *check.C) {
 	G.globalData.PkgOptions = map[string]string{
 		"documented":   "Option description",
 		"undocumented": "",
@@ -270,7 +270,7 @@ func (s *Suite) TestVartypeCheck_Option(c *check.C) {
 	c.Check(s.Output(), equals, "WARN: fname:3: Unknown option \"unknown\".\n")
 }
 
-func (s *Suite) TestVartypeCheck_Pathlist(c *check.C) {
+func (s *Suite) Test_VartypeCheck_Pathlist(c *check.C) {
 	runVartypeChecks("PATH", opAssign, (*VartypeCheck).Pathlist,
 		"/usr/bin:/usr/sbin:.:${LOCALBASE}/bin")
 
@@ -287,7 +287,7 @@ func (s *Suite) Test_VartypeCheck_Perms(c *check.C) {
 	c.Check(s.Output(), equals, "ERROR: fname:2: ROOT_USER must not be used in permission definitions. Use REAL_ROOT_USER instead.\n")
 }
 
-func (s *Suite) TestVartypeCheck_PkgOptionsVar(c *check.C) {
+func (s *Suite) Test_VartypeCheck_PkgOptionsVar(c *check.C) {
 	runVartypeChecks("PKG_OPTIONS_VAR.screen", opAssign, (*VartypeCheck).PkgOptionsVar,
 		"PKG_OPTIONS.${PKGBASE}",
 		"PKG_OPTIONS.anypkgbase")
@@ -296,7 +296,7 @@ func (s *Suite) TestVartypeCheck_PkgOptionsVar(c *check.C) {
 		"ERROR: fname:1: PKGBASE must not be used in PKG_OPTIONS_VAR.\n")
 }
 
-func (s *Suite) TestVartypeCheck_PkgRevision(c *check.C) {
+func (s *Suite) Test_VartypeCheck_PkgRevision(c *check.C) {
 	runVartypeChecks("PKGREVISION", opAssign, (*VartypeCheck).PkgRevision,
 		"3a")
 
@@ -310,7 +310,7 @@ func (s *Suite) TestVartypeCheck_PkgRevision(c *check.C) {
 	c.Check(s.Output(), equals, "")
 }
 
-func (s *Suite) TestVartypeCheck_MachinePlatformPattern(c *check.C) {
+func (s *Suite) Test_VartypeCheck_MachinePlatformPattern(c *check.C) {
 	runVartypeMatchChecks("ONLY_FOR_PLATFORM", (*VartypeCheck).MachinePlatformPattern,
 		"linux-i386",
 		"nextbsd-5.0-8087",
@@ -329,7 +329,7 @@ func (s *Suite) TestVartypeCheck_MachinePlatformPattern(c *check.C) {
 		"WARN: fname:5: \"FreeBSD*\" is not a valid platform pattern.\n")
 }
 
-func (s *Suite) TestVartypeCheck_PythonDependency(c *check.C) {
+func (s *Suite) Test_VartypeCheck_PythonDependency(c *check.C) {
 	runVartypeChecks("PYTHON_VERSIONED_DEPENDENCIES", opAssign, (*VartypeCheck).PythonDependency,
 		"cairo",
 		"${PYDEP}",
@@ -340,14 +340,14 @@ func (s *Suite) TestVartypeCheck_PythonDependency(c *check.C) {
 		"WARN: fname:3: Invalid Python dependency \"cairo,X\".\n")
 }
 
-func (s *Suite) TestVartypeCheck_Restricted(c *check.C) {
+func (s *Suite) Test_VartypeCheck_Restricted(c *check.C) {
 	runVartypeChecks("NO_BIN_ON_CDROM", opAssign, (*VartypeCheck).Restricted,
 		"May only be distributed free of charge")
 
 	c.Check(s.Output(), equals, "WARN: fname:1: The only valid value for NO_BIN_ON_CDROM is ${RESTRICTED}.\n")
 }
 
-func (s *Suite) TestVartypeCheck_SedCommands(c *check.C) {
+func (s *Suite) Test_VartypeCheck_SedCommands(c *check.C) {
 	runVartypeChecks("SUBST_SED.dummy", opAssign, (*VartypeCheck).SedCommands,
 		"s,@COMPILER@,gcc,g",
 		"-e s,a,b, -e a,b,c,",
@@ -359,7 +359,7 @@ func (s *Suite) TestVartypeCheck_SedCommands(c *check.C) {
 		"NOTE: fname:2: Each sed command should appear in an assignment of its own.\n")
 }
 
-func (s *Suite) TestVartypeCheck_ShellCommands(c *check.C) {
+func (s *Suite) Test_VartypeCheck_ShellCommands(c *check.C) {
 	runVartypeChecks("GENERATE_PLIST", opAssign, (*VartypeCheck).ShellCommands,
 		"echo bin/program",
 		"echo bin/program;")
@@ -367,7 +367,7 @@ func (s *Suite) TestVartypeCheck_ShellCommands(c *check.C) {
 	c.Check(s.Output(), equals, "WARN: fname:1: This shell command list should end with a semicolon.\n")
 }
 
-func (s *Suite) TestVartypeCheck_Stage(c *check.C) {
+func (s *Suite) Test_VartypeCheck_Stage(c *check.C) {
 	runVartypeChecks("SUBST_STAGE.dummy", opAssign, (*VartypeCheck).Stage,
 		"post-patch",
 		"post-modern",
@@ -376,8 +376,8 @@ func (s *Suite) TestVartypeCheck_Stage(c *check.C) {
 	c.Check(s.Output(), equals, "WARN: fname:2: Invalid stage name \"post-modern\". Use one of {pre,do,post}-{extract,patch,configure,build,test,install}.\n")
 }
 
-func (s *Suite) TestVartypeCheck_Varname(c *check.C) {
-	runVartypeChecks("BUILD_DEFS", opAssign, (*VartypeCheck).Varname,
+func (s *Suite) Test_VartypeCheck_VariableName(c *check.C) {
+	runVartypeChecks("BUILD_DEFS", opAssign, (*VartypeCheck).VariableName,
 		"VARBASE",
 		"VarBase",
 		"PKG_OPTIONS_VAR.pkgbase",
@@ -386,7 +386,7 @@ func (s *Suite) TestVartypeCheck_Varname(c *check.C) {
 	c.Check(s.Output(), equals, "WARN: fname:2: \"VarBase\" is not a valid variable name.\n")
 }
 
-func (s *Suite) TestVartypeCheck_Yes(c *check.C) {
+func (s *Suite) Test_VartypeCheck_Yes(c *check.C) {
 	runVartypeChecks("APACHE_MODULE", opAssign, (*VartypeCheck).Yes,
 		"yes",
 		"no",
@@ -407,7 +407,7 @@ func (s *Suite) TestVartypeCheck_Yes(c *check.C) {
 		"WARN: fname:3: PKG_DEVELOPER should only be used in a \".if defined(...)\" conditional.\n")
 }
 
-func (s *Suite) TestVartypeCheck_YesNo(c *check.C) {
+func (s *Suite) Test_VartypeCheck_YesNo(c *check.C) {
 	runVartypeChecks("GNU_CONFIGURE", opAssign, (*VartypeCheck).YesNo,
 		"yes",
 		"no",
@@ -419,7 +419,7 @@ func (s *Suite) TestVartypeCheck_YesNo(c *check.C) {
 		"WARN: fname:4: GNU_CONFIGURE should be set to YES, yes, NO, or no.\n")
 }
 
-func (s *Suite) TestVartypeCheck_YesNoIndirectly(c *check.C) {
+func (s *Suite) Test_VartypeCheck_YesNoIndirectly(c *check.C) {
 	runVartypeChecks("GNU_CONFIGURE", opAssign, (*VartypeCheck).YesNoIndirectly,
 		"yes",
 		"no",
@@ -436,8 +436,8 @@ func runVartypeChecks(varname string, op MkOperator, checker func(*VartypeCheck)
 	}
 	for i, value := range values {
 		mkline := NewMkLine(NewLine("fname", i+1, varname+op.String()+value, nil))
-		valueNovar := mkline.withoutMakeVariables(mkline.Value(), true)
-		vc := &VartypeCheck{mkline, mkline.Line, mkline.Varname(), mkline.Op(), mkline.Value(), valueNovar, "", true, false}
+		valueNovar := mkline.withoutMakeVariables(mkline.Value())
+		vc := &VartypeCheck{mkline, mkline.Line, mkline.Varname(), mkline.Op(), mkline.Value(), valueNovar, "", false}
 		checker(vc)
 	}
 }
@@ -446,8 +446,8 @@ func runVartypeMatchChecks(varname string, checker func(*VartypeCheck), values .
 	for i, value := range values {
 		text := fmt.Sprintf(".if ${%s:M%s} == \"\"", varname, value)
 		mkline := NewMkLine(NewLine("fname", i+1, text, nil))
-		valueNovar := mkline.withoutMakeVariables(value, true)
-		vc := &VartypeCheck{mkline, mkline.Line, varname, opUseMatch, value, valueNovar, "", true, false}
+		valueNovar := mkline.withoutMakeVariables(value)
+		vc := &VartypeCheck{mkline, mkline.Line, varname, opUseMatch, value, valueNovar, "", false}
 		checker(vc)
 	}
 }
@@ -455,8 +455,8 @@ func runVartypeMatchChecks(varname string, checker func(*VartypeCheck), values .
 func runVartypeChecksFname(fname, varname string, op MkOperator, checker func(*VartypeCheck), values ...string) {
 	for i, value := range values {
 		mkline := NewMkLine(NewLine(fname, i+1, varname+op.String()+value, nil))
-		valueNovar := mkline.withoutMakeVariables(value, true)
-		vc := &VartypeCheck{mkline, mkline.Line, varname, op, value, valueNovar, "", true, false}
+		valueNovar := mkline.withoutMakeVariables(value)
+		vc := &VartypeCheck{mkline, mkline.Line, varname, op, value, valueNovar, "", false}
 		checker(vc)
 	}
 }

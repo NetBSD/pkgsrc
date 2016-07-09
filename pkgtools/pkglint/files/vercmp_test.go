@@ -4,7 +4,7 @@ import (
 	check "gopkg.in/check.v1"
 )
 
-func (s *Suite) TestMkversion(c *check.C) {
+func (s *Suite) Test_newVersion(c *check.C) {
 	c.Check(newVersion("5.0"), check.DeepEquals, &version{[]int{5, 0, 0}, 0})
 	c.Check(newVersion("5.0nb5"), check.DeepEquals, &version{[]int{5, 0, 0}, 5})
 	c.Check(newVersion("0.0.1-SNAPSHOT"), check.DeepEquals, &version{[]int{0, 0, 0, 0, 1, 19, 14, 1, 16, 19, 8, 15, 20}, 0})
@@ -18,7 +18,7 @@ func (s *Suite) TestMkversion(c *check.C) {
 	c.Check(newVersion("0pre20160620"), deepEquals, &version{[]int{0, -1, 20160620}, 0})
 }
 
-func (s *Suite) TestPkgverCmp(c *check.C) {
+func (s *Suite) Test_pkgverCmp(c *check.C) {
 	var versions = [][]string{
 		{"0pre20160620"},
 		{"0"},
