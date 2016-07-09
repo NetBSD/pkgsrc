@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2016/06/17 17:21:38 tsutsui Exp $
+# $NetBSD: Makefile,v 1.19 2016/07/09 06:38:16 wiz Exp $
 
 PKGNAME=	suse_base-${SUSE_VERSION}
-PKGREVISION=	12
+PKGREVISION=	13
 CATEGORIES=	emulators
 RPMUPDPKGS+=	aaa_base-${SUSE_VERSION}-16.49.1.${SUSE_ARCH}
 RPMUPDPKGS+=	bash-4.2-68.12.1.${SUSE_ARCH}
