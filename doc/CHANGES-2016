@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2016,v 1.2722 2016/07/09 02:15:03 wen Exp $
+$NetBSD: CHANGES-2016,v 1.2723 2016/07/09 02:31:28 wen Exp $
 
 Changes to the packages collection and infrastructure in 2016:
 
@@ -3947,3 +3947,4 @@ Changes to the packages collection and infrastructure in 2016:
 	Updated mail/dovecot2-pigeonhole to 0.4.15 [taca 2016-07-09]
 	Updated net/p5-SOAP-Lite to 1.20 [wen 2016-07-09]
 	Updated www/p5-Mojolicious to 6.66 [wen 2016-07-09]
+	Updated www/p5-URI-Fetch to 0.13 [wen 2016-07-09]
