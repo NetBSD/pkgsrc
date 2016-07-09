@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2015/06/25 07:38:52 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2016/07/09 13:11:58 rillig Exp $
 #
 
 DISTNAME=	mserv-php-090
@@ -12,7 +12,7 @@ MAINTAINER=	abs@absd.org
 HOMEPAGE=	# 404: http://dougiamas.com/mserv/
 COMMENT=	Quick web interface to mserv audio jukebox
 
-DEPENDS+=       mserv-[0-9]*:../../audio/mserv
+DEPENDS+=	mserv-[0-9]*:../../audio/mserv
 
 WRKSRC=		${WRKDIR}/mserv-php
 
@@ -26,7 +26,7 @@ SUBST_FILES.paths=	${WRKDIR}/config.php
 SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_STAGE.paths=	post-build
 
-INSTALLATION_DIRS += share/mserv-php share/mserv-php/image share/doc/mserv-php
+INSTALLATION_DIRS+=	share/mserv-php share/mserv-php/image share/doc/mserv-php
 
 do-build:
 	${CP} ${WRKSRC}/config.php ${WRKDIR}/config.php
