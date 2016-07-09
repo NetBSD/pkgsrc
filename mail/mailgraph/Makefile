@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2015/06/12 10:50:19 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2016/07/09 06:38:30 wiz Exp $
 #
 
 DISTNAME=	mailgraph-1.14
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	mail
 MASTER_SITES=	http://mailgraph.schweikert.ch/pub/	\
 		http://mailgraph.schweikert.ch/pub/old

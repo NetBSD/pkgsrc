@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2015/07/12 08:40:48 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2016/07/09 06:39:10 wiz Exp $
 #
 
 DISTNAME=	ratpoison-1.4.8
+PKGREVISION=	1
 CATEGORIES=	wm
 MASTER_SITES=	http://savannah.nongnu.org/download/ratpoison/
 EXTRACT_SUFX=	.tar.xz
