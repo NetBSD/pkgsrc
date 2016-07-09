@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2014/03/14 19:39:52 drochner Exp $
+# $NetBSD: options.mk,v 1.3 2016/07/09 12:23:16 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.freetype2
 PKG_SUPPORTED_OPTIONS=	png subpixel
@@ -11,8 +11,8 @@ CFLAGS+=	-DFT_CONFIG_OPTION_SUBPIXEL_RENDERING
 .endif
 
 .if !empty(PKG_OPTIONS:Mpng)
-CONFIGURE_ARGS+= --with-png=yes
+CONFIGURE_ARGS+=	--with-png=yes
 .include "../../graphics/png/buildlink3.mk"
 .else
-CONFIGURE_ARGS+= --with-png=no
+CONFIGURE_ARGS+=	--with-png=no
 .endif
