@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2016/07/09 06:39:01 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2016/07/09 12:47:05 rillig Exp $
 
 DISTNAME=		libvirt-1.2.9
 PKGREVISION=		9
@@ -37,7 +37,7 @@ CONF_FILES+=		${EGDIR}/logrotate.d/libvirtd.uml ${PKG_SYSCONFDIR}/logrotate.d/li
 CONF_FILES+=		${EGDIR}/sasl2/libvirt.conf ${PKG_SYSCONFDIR}/sasl2/libvirt.conf
 
 AUTO_MKDIRS=		yes
-RCD_SCRIPTS=            libvirtd
+RCD_SCRIPTS=		libvirtd
 
 .include "options.mk"
 
