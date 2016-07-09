@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2016/06/08 19:22:44 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2016/07/09 09:47:11 rillig Exp $
 
 DISTNAME=	Curses-1.34
 PKGNAME=	p5-${DISTNAME}
@@ -14,11 +14,6 @@ LICENSE=	${PERL5_LICENSE}
 
 PERL5_PACKLIST=		auto/Curses/.packlist
 
-# We should really work out the location of the system forms.h
-SUBST_STAGE.h_form	= post-configure
-SUBST_MESSAGE.h_form	= Hard wiring form.h
-SUBST_FILES.h_form	= c-config.h
-SUBST_SED.h_form	= -e 's,<form.h>,"/usr/include/form.h",g'
 
 MAKE_PARAMS+=	FORMS MENUS
 
@@ -26,7 +21,13 @@ MAKE_PARAMS+=	FORMS MENUS
 .include "../../mk/curses.buildlink3.mk"
 
 .if ${CURSES_TYPE} == "curses"
+# We should really work out the location of the system forms.h
 SUBST_CLASSES+=		h_form
+SUBST_STAGE.h_form=	post-configure
+SUBST_MESSAGE.h_form=	Hard wiring form.h
+SUBST_FILES.h_form=	c-config.h
+SUBST_SED.h_form=	-e 's,<form.h>,"/usr/include/form.h",g'
+
 .elif ${CURSES_TYPE} == "ncurses" || ${CURSES_TYPE} == "ncursesw"
 MAKE_PARAMS+=		PANELS
 # Don't link to system termcap as we're using ncurses
@@ -52,8 +53,8 @@ CURSES_LIBTYPE=		ncursesw
 
 .if defined(CURSES_LIBTYPE)
 MAKE_ENV+=		CURSES_LIBTYPE=${CURSES_LIBTYPE}
-MAKE_ENV+=		CURSES_CFLAGS=${BUILDLINK_INCDIRS.${CURSES_TYPE}:S/^/-I/}
-MAKE_ENV+=		CURSES_LDFLAGS=${BUILDLINK_LDADD.${CURSES_TYPE}}
+MAKE_ENV+=		CURSES_CFLAGS=${BUILDLINK_INCDIRS.${CURSES_TYPE}:@dir@-I${dir}@:Q}
+MAKE_ENV+=		CURSES_LDFLAGS=${BUILDLINK_LDADD.${CURSES_TYPE}:Q}
 .endif
 
 .include "../../mk/bsd.pkg.mk"
