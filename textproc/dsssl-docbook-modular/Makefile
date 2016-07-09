@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.39 2015/06/12 10:51:20 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2016/07/09 06:39:05 wiz Exp $
 
 DISTNAME=	docbook-dsssl-1.79
 PKGNAME=	dsssl-docbook-modular-1.79
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=docbook/}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} docbook-dsssl-doc-1.79${EXTRACT_SUFX}

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2015/10/07 13:02:39 adam Exp $
+# $NetBSD: Makefile,v 1.12 2016/07/09 06:38:41 wiz Exp $
 
 DISTNAME=	dhcpd-pools-2.27
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dhcpd-pools/}
 EXTRACT_SUFX=	.tar.xz
