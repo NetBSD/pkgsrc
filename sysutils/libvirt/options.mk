@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2014/11/26 23:40:15 gdt Exp $
+# $NetBSD: options.mk,v 1.4 2016/07/09 12:47:05 rillig Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libvirt
 
@@ -10,11 +10,11 @@ PKG_SUGGESTED_OPTIONS=	libssh2
 
 # xentools42 is the only version to install
 # the include files
-PLIST_VARS+= xen hal
+PLIST_VARS+=	xen hal
 
 # xen means xen 4.2.
 .if !empty(PKG_OPTIONS:Mxen)
-PLIST.xen = yes
+PLIST.xen= yes
 CONFIGURE_ARGS+=	--without-xen
 CONFIGURE_ARGS+=	--with-libxl=${BUILDLINK_PREFIX.xentools42}
 CONFIGURE_ARGS+=	--with-xenapi=${BUILDLINK_PREFIX.xentools42}
@@ -31,7 +31,7 @@ CONFIGURE_ARGS+=	--with-storage-lvm
 .endif
 
 .if !empty(PKG_OPTIONS:Mhal)
-PLIST.hal = yes
+PLIST.hal= yes
 CONFIGURE_ARGS+=	--with-hal=${BUILDLINK_PREFIX.hal}
 .   include "../../sysutils/hal/buildlink3.mk"
 .endif
