@@ -47,14 +47,14 @@ func ChecklinesBuildlink3Mk(mklines *MkLines) {
 			{"${RUBY_PKGPREFIX}", "ruby"},
 			{"${PHP_PKG_PREFIX}", "php"},
 		} {
-			if contains(pkgbase, pair.varuse) && !pkgbaseLine.AutofixReplace(pair.varuse, pair.simple) {
-				pkgbaseLine.Warn2("Please use %q instead of %q.", pair.simple, pair.varuse)
+			if contains(pkgbase, pair.varuse) {
+				pkgbaseLine.Warn2("Please use %q instead of %q (also in other variables in this file).", pair.simple, pair.varuse)
 				warned = true
 			}
 		}
 		if !warned {
 			if m, varuse := match1(pkgbase, `(\$\{\w+\})`); m {
-				pkgbaseLine.Warn1("Please replace %q with a simple string.", varuse)
+				pkgbaseLine.Warn1("Please replace %q with a simple string (also in other variables in this file).", varuse)
 				warned = true
 			}
 		}
