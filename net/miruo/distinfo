@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2015/11/04 00:35:11 agc Exp $
+$NetBSD: distinfo,v 1.3 2016/07/09 03:43:13 ryoon Exp $
 
-SHA1 (miruo-0.9.6.tar.gz) = f93b472a47c65db5d1b8903df2189c1945e5b86e
-RMD160 (miruo-0.9.6.tar.gz) = dc3a856b8bcf7ac8e04515c5a1da568531f8e438
-SHA512 (miruo-0.9.6.tar.gz) = 45e7f91272a7770e1645ec75a69befc59bc5d1a9a4a1bb45738d780eb90bc031c110d17b301a5a2cbd1d9bd6b7e8a16b57595babbe8d778297a2c4bed5c80969
-Size (miruo-0.9.6.tar.gz) = 118783 bytes
+SHA1 (miruo-0.9.6b.tar.gz) = 46696e209384b6a4ac4821ba2e3f26862b27ba2d
+RMD160 (miruo-0.9.6b.tar.gz) = eaddd70a1427328d964cd2dd49d6ce9e6e285759
+SHA512 (miruo-0.9.6b.tar.gz) = 01582979e70a54c9e774d9bd088efb39312ed1215a8ff76a1ea0c1e2685abae6a74c22f8a0426dbc975470d60722deab29bb1949691cdd036de4788db7c87ede
+Size (miruo-0.9.6b.tar.gz) = 119045 bytes
