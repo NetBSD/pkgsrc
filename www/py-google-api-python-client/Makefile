@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2016/05/20 23:44:20 mef Exp $
+# $NetBSD: Makefile,v 1.9 2016/07/09 13:04:14 wiz Exp $
 
 DISTNAME=	google-api-python-client-1.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-httplib2-[0-9]*:../../www/py-httplib2
 DEPENDS+=	${PYPKGPREFIX}-oauth2client>=1.4.6:../../security/py-oauth2client
 DEPENDS+=	${PYPKGPREFIX}-uritemplate-[0-9]*:../../textproc/py-uritemplate
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # as of 1.3.1
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # as of 1.3.1
 
 # doesn't work, but doesn't matter
 # see also https://github.com/google/google-api-python-client/issues/40

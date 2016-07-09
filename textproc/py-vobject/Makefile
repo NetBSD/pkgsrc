@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2015/12/05 21:26:02 adam Exp $
+# $NetBSD: Makefile,v 1.17 2016/07/09 13:04:11 wiz Exp $
 
 DISTNAME=	vobject-0.8.1c
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Python iCalendar (ics) and vCard library
 LICENSE=	apache-2.0
 
 PYTHON_VERSIONED_DEPENDENCIES=	dateutil
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 0.8.1c
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 0.8.1c
 
 PYTHON_SELF_CONFLICT=	yes
 EGG_NAME=	${DISTNAME:S/1c/1rc0/}
