@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2016/01/15 14:32:25 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2016/07/09 13:04:09 wiz Exp $
 
 DISTNAME=	markdown2social-0.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-markdown>=2.6:../../textproc/py-markdown
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
