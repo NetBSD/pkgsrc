@@ -9,21 +9,12 @@ import (
 type ShAtomType uint8
 
 const (
-	shtSpace         ShAtomType = iota
-	shtVaruse                   // ${PREFIX}
-	shtWord                     //
-	shtSemicolon                // ;
-	shtCaseSeparator            // ;;
-	shtParenOpen                // (
-	shtParenClose               // )
-	shtPipe                     // |
-	shtBackground               // &
-	shtOr                       // ||
-	shtAnd                      // &&
-	shtRedirect                 // >, <, >>
-	shtComment                  // # ...
-	shtSubshell                 // $$(
-	shtNewline                  // \n
+	shtSpace  ShAtomType = iota
+	shtVaruse            // ${PREFIX}
+	shtWord              //
+	shtOperator
+	shtComment  // # ...
+	shtSubshell // $$(
 )
 
 func (t ShAtomType) String() string {
@@ -31,28 +22,15 @@ func (t ShAtomType) String() string {
 		"space",
 		"varuse",
 		"word",
-		"semicolon",
-		"caseSeparator",
-		"parenOpen", "parenClose",
-		"pipe", "background",
-		"or", "and",
-		"redirect",
+		"operator",
 		"comment",
-		"newline",
+		"subshell",
 	}[t]
 }
 
 func (t ShAtomType) IsWord() bool {
 	switch t {
-	case shtVaruse, shtWord, shtRedirect:
-		return true
-	}
-	return false
-}
-
-func (t ShAtomType) IsCommandDelimiter() bool {
-	switch t {
-	case shtSemicolon, shtNewline, shtPipe, shtBackground, shtAnd, shtOr, shtCaseSeparator:
+	case shtVaruse, shtWord:
 		return true
 	}
 	return false
