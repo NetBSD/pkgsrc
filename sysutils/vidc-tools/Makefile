@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/23 19:51:29 asau Exp $
+# $NetBSD: Makefile,v 1.10 2016/07/09 12:54:13 rillig Exp $
 #
 
 DISTNAME=	misc-src-riscpc
@@ -11,8 +11,8 @@ COMMENT=	Tools for the VIDC console used by NetBSD/arm32 on RiscPC
 
 WRKSRC=		${WRKDIR}/misc-src
 
-ONLY_FOR_PLATFORM= NetBSD-*-arm NetBSD-*-arm32
+ONLY_FOR_PLATFORM=	NetBSD-*-arm NetBSD-*-arm32
 
-INSTALLATION_DIRS = bin ${PKGMANDIR}/cat1 ${PKGMANDIR}/html1 ${PKGMANDIR}/man1
+AUTO_MKDIRS=	yes
 
 .include "../../mk/bsd.pkg.mk"
