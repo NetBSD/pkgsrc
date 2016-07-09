@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2016/06/08 17:43:21 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2016/07/09 13:03:34 wiz Exp $
 
 DISTNAME=	zbase32-1.1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ REPLACE.python.old=	/usr/bin/env python
 REPLACE.python.new=	${PYTHONBIN}
 REPLACE_FILES.python=	zbase32/zbase32.py zbase32/test/test_zbase32.py
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 1.1.5
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 1.1.5
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

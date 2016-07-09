@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2016/07/05 00:19:59 maya Exp $
+# $NetBSD: Makefile,v 1.60 2016/07/09 13:03:46 wiz Exp $
 
 DISTNAME=	mame-0.175
 CATEGORIES=	emulators
@@ -93,7 +93,7 @@ MAKE_ENV+=	BIGENDIAN=1
 .endif
 
 PYTHON_FOR_BUILD_ONLY=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 0.151
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 0.151
 
 post-extract:
 	# will be chosen in preference to /usr/include/signal.h, but does not provide kill()

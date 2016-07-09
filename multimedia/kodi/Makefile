@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2016/04/11 19:01:58 ryoon Exp $
+# $NetBSD: Makefile,v 1.12 2016/07/09 13:03:57 wiz Exp $
 
 PKGNAME=	kodi-15.2
 PKGREVISION=	5
@@ -36,7 +36,7 @@ CONFIG_SUB_OVERRIDE=    lib/libmpeg2/.auto/config.sub \
 
 CONFIGURE_ENV+=		ac_cv_path_SWIG_EXE=${PREFIX}/bin/swig2.0
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # insists on < 3.0 as of 15.2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # insists on < 3.0 as of 15.2
 
 # These need to be ported
 CONFIGURE_ARGS+=	--disable-projectm

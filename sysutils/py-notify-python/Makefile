@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2015/12/05 21:25:59 adam Exp $
+# $NetBSD: Makefile,v 1.14 2016/07/09 13:04:07 wiz Exp $
 
 DISTNAME=	notify-python-0.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -22,7 +22,7 @@ USE_TOOLS+=	gmake pkg-config
 
 PKGCONFIG_OVERRIDE+=	notify-python.pc.in
 PY_PATCHPLIST=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-gtk2
 
 # Missing function attach_status_icon
 # http://trac.galago-project.org/ticket/121

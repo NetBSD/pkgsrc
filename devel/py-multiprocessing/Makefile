@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2016/06/08 17:43:25 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2016/07/09 13:03:42 wiz Exp $
 
 DISTNAME=	multiprocessing-2.6.2.1
 PKGNAME=	${PYPKGPREFIX}-multiprocessing-2.6.2.1
@@ -10,7 +10,7 @@ HOMEPAGE=	http://pypi.python.org/pypi/multiprocessing/
 COMMENT=	Python threading package
 LICENSE=	modified-bsd
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # does not make sense, python-3.x has it included
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # does not make sense, python-3.x has it included
 
 CFLAGS.SunOS+=	-D_XOPEN_SOURCE -D_XOPEN_SOURCE_EXTENDED=1
 

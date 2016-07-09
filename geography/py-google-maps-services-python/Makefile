@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2016/05/06 06:51:15 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2016/07/09 13:03:49 wiz Exp $
 
 DISTNAME=	google-maps-services-python-2.4.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,7 +14,6 @@ LICENSE=	apache-2.0
 BROKEN=		Needs old version of py-requests.
 
 EGG_NAME=	googlemaps-${PKGVERSION_NOREV}
-PYTHON_VERSIONS_INCOMPATIBLE=	33
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

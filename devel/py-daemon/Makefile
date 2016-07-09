@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2016/06/08 17:43:24 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2016/07/09 13:03:40 wiz Exp $
 
 DISTNAME=	python-daemon-1.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
@@ -14,7 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-lockfile>=0.9:../../devel/py-lockfile
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 1.6
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 1.6
 
 REPLACE_INTERPRETER+=	python
 REPLACE.python.old=	/usr/bin/env

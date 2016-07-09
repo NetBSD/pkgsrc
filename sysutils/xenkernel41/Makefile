@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2016/01/07 17:55:55 bouyer Exp $
+# $NetBSD: Makefile,v 1.49 2016/07/09 13:04:08 wiz Exp $
 
 VERSION=	4.1.6.1
 DISTNAME=	xen-${VERSION}
@@ -21,7 +21,7 @@ USE_TOOLS+=	gmake
 
 PYTHON_FOR_BUILD_ONLY=	yes
 PY_PATCHPLIST=		NO
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 4.1.6.1
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 4.1.6.1
 
 # XXX Why does this not work?
 # See work/xen-4.1.2/Config.mk:41 why PYTHON must be set and what for

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.105 2016/07/09 06:38:52 wiz Exp $
+# $NetBSD: Makefile,v 1.106 2016/07/09 13:04:03 wiz Exp $
 
 DISTNAME=		scribus-1.3.3.14
 PKGREVISION=		26
@@ -22,7 +22,7 @@ USE_CMAKE=	yes
 LDFLAGS.DragonFly=	-lX11
 LDFLAGS.SunOS+=		-lX11
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 1.3.3.14
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 1.3.3.14
 
 CONFIGURE_ENV+=		FREETYPE_DIR=${BUILDLINK_PREFIX.freetype2}
 CONFIGURE_ARGS+=	--enable-cairo

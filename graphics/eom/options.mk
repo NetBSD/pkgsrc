@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2016/05/21 19:20:33 youri Exp $
+# $NetBSD: options.mk,v 1.2 2016/07/09 13:03:50 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.eog
 PKG_SUPPORTED_OPTIONS=	dbus exif jpeg lcms python rsvg xmp
@@ -36,7 +36,7 @@ CONFIGURE_ARGS+=	--without-cms
 .endif
 
 .if !empty(PKG_OPTIONS:Mpython)
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-gtk2
 .include "../../lang/python/extension.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../devel/py-gobject/buildlink3.mk"

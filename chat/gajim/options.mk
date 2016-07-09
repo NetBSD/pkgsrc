@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2015/12/05 21:25:30 adam Exp $
+# $NetBSD: options.mk,v 1.7 2016/07/09 13:03:32 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gajim
 PKG_SUPPORTED_OPTIONS=	avahi gnome gnome-keyring ssl
@@ -20,7 +20,7 @@ DEPENDS+=	avahi-[0-9]*:../../net/avahi
 # gnome
 .if !empty(PKG_OPTIONS:Mgnome)
 DEPENDS+=	${PYPKGPREFIX}-gnome2-[0-9]*:../../x11/py-gnome2
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-ORBit via py-gnome2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-ORBit via py-gnome2
 .endif
 
 # gnome-keyring

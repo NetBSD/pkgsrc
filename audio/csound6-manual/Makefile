@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2016/04/20 12:10:25 nros Exp $
+# $NetBSD: Makefile,v 1.7 2016/07/09 13:03:30 wiz Exp $
 
 DISTNAME=		manual_src
 PKGNAME=		csound6-manual-${CSOUND_VERSION}
@@ -31,7 +31,7 @@ SUBST_FILES.python=	Makefile
 SUBST_STAGE.python=	pre-build
 SUBST_MESSAGE.python=	Fixing path to python.
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # as of 6.02
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # as of 6.02
 
 do-install:
 	cd ${WRKSRC}/html && pax -rw * ${DESTDIR}${PREFIX}/${DOCDIR}

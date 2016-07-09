@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2015/12/05 21:25:44 adam Exp $
+# $NetBSD: Makefile,v 1.32 2016/07/09 13:03:49 wiz Exp $
 
 # gpsd 3.11 has been released.  It has only not been updated because
 # newer versions use scons.
@@ -19,7 +19,7 @@ BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 GNU_CONFIGURE=	YES
 CONFIGURE_ENV+=	PYTHON=${PYTHONBIN}
 PY_PATCHPLIST=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 2.96
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 2.96
 
 USE_TOOLS+=	gmake
 USE_LIBTOOL=	yes

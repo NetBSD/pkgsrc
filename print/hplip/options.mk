@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2016/05/28 21:03:56 schnoebe Exp $
+# $NetBSD: options.mk,v 1.11 2016/07/09 13:04:02 wiz Exp $
 #
 # HPLIP dependencies are detailed in the following page:
 # http://hplipopensource.com/hplip-web/install/manual/distros/other.html
@@ -22,7 +22,7 @@ CONFIGURE_ARGS+=	--enable-dbus-build
 EGFILES+=		cups/pstotiff.convs cups/pstotiff.types
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/cups
 DEPENDS+=	${PYPKGPREFIX}-reportlab-[0-9]*:../../print/py-reportlab
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-reportlab
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-reportlab
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/py-dbus/buildlink3.mk"
 .else
@@ -42,7 +42,7 @@ MESSAGE_SUBST+=		EGDIR=${EGDIR}
 # version depends on if py-reportlab was installed before we called
 # out an imaging library.
 DEPENDS+=	{${PYPKGPREFIX}-imaging-[0-9]*,${PYPKGPREFIX}-Pillow-[0-9]*}:../../graphics/py-imaging
-# PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-imaging
+# PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-imaging
 .else
 CONFIGURE_ARGS+=	--disable-scan-build
 .endif
@@ -55,7 +55,7 @@ MAKE_DIRS+=		${PKG_SYSCONFDIR}/dbus-1/system.d
 .include "../../security/policykit/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 DEPENDS+=	${PYPKGPREFIX}-notify-[0-9]*:../../sysutils/py-notify
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-notify
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-notify
 . if !empty(PKG_OPTIONS:Mqt4)
 PLIST_SRC+=		PLIST.qt4
 CONFIGURE_ARGS+=	--enable-qt4

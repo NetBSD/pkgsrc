@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.120 2016/03/05 11:28:36 jperkin Exp $
+# $NetBSD: Makefile,v 1.121 2016/07/09 13:03:50 wiz Exp $
 
 DISTNAME=	blender-2.76b
 PKGREVISION=	2
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 USE_TOOLS+=		gmake sed
 USE_LANGUAGES=		c c++
 
-PYTHON_VERSIONS_ACCEPTED=	35 34 33
+PYTHON_VERSIONS_ACCEPTED=	34 35
 GCC_REQD+=	4.7
 
 BUILD_DEPENDS+=		scons-[0-9]*:../../devel/scons

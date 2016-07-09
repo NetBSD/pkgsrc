@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2016/02/21 23:22:42 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2016/07/09 13:04:15 wiz Exp $
 
 VERSION=		0.13.0
 DISTNAME=		Nevow-${VERSION}
@@ -19,7 +19,7 @@ DEPENDS+=		${PYPKGPREFIX}-xml>=0.8.3:../../textproc/py-xml
 
 REPLACE_PYTHON=		nevow/test/segfault.py
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-twisted py-xml
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-twisted py-xml
 
 INSTALLATION_DIRS+=	share/doc
 

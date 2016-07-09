@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2015/12/05 21:26:09 adam Exp $
+# $NetBSD: Makefile,v 1.25 2016/07/09 13:04:18 wiz Exp $
 
 .include "../../x11/vte/Makefile.common"
 
@@ -20,7 +20,7 @@ CONFIGURE_ARGS+=	--enable-python
 CONFIGURE_ARGS+=	--disable-freetype-test
 CONFIGURE_ARGS+=	--enable-Bsymbolic=auto
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-gtk2
 
 BUILD_DIRS=	python
 

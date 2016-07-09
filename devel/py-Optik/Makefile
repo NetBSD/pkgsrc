@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2015/12/05 21:25:38 adam Exp $
+# $NetBSD: Makefile,v 1.20 2016/07/09 13:03:39 wiz Exp $
 
 DISTNAME=	optik-1.5.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/optik/Optik/}
@@ -13,7 +13,7 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES=	#none
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35
 
 do-test:
 	cd ${WRKSRC} && ${SETENV} ${TEST_ENV} ${PYTHONBIN} test/test_optik.py

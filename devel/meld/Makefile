@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2016/06/19 20:32:32 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2016/07/09 13:03:39 wiz Exp $
 
 DISTNAME=		meld-3.16.1
 CATEGORIES=		devel
@@ -17,7 +17,7 @@ DEPENDS+=		dconf-[0-9]*:../../devel/dconf
 
 USE_TOOLS+=		intltool msgfmt
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 3.11; 3.12 will probably require 33+
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 3.16
 
 SUBST_CLASSES+=		man
 SUBST_FILES.man=	setup.py

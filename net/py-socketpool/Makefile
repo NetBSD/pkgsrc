@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2016/06/08 17:43:37 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2016/07/09 13:04:01 wiz Exp $
 
 DISTNAME=	socketpool-0.5.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ USE_LANGUAGES=	# none
 DOCDIR=			share/doc/${PKGBASE:S/${PYPKGPREFIX}/py/1}
 INSTALLATION_DIRS+=	${DOCDIR}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 0.5.3
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 0.5.3
 
 post-install:
 	${INSTALL_DATA} ${DESTDIR}${PREFIX}/socketpool/README.rst \

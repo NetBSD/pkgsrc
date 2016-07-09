@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2015/12/05 21:26:04 adam Exp $
+# $NetBSD: Makefile,v 1.17 2016/07/09 13:04:13 wiz Exp $
 
 DISTNAME=	loggerhead-${VER}
 PKGREVISION=	1
@@ -19,7 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-PasteDeploy>=1.3:../../www/py-PasteDeploy
 DEPENDS+=	${PYPKGPREFIX}-SimpleTAL>=4.1:../../www/py-simpletal
 
 PYTHON_VERSIONED_DEPENDENCIES=	flup
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-simpletal
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-simpletal
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"

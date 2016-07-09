@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2016/02/21 22:21:37 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2016/07/09 13:03:47 wiz Exp $
 
 VERSION=	1.10.2
 DISTNAME=	allmydata-tahoe-${VERSION}
@@ -45,8 +45,7 @@ DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=0.13:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-nevow>=0.11.1:../../www/py-nevow
 DEPENDS+=	${PYPKGPREFIX}-service_identity-[0-9]*:../../security/py-service_identity
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-twisted, py-xml via py-nevow, py-zbase32, py-cryptopp
-PYTHON_VERSIONS_INCOMPATIBLE+=  33 # not supported by py-service_identity>=16.0.0
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-twisted, py-xml via py-nevow, py-zbase32, py-cryptopp
 
 # Note that there is an upstream (inherited from setuptools) bug
 #   https://tahoe-lafs.org/trac/tahoe-lafs/ticket/1258#comment:29 that

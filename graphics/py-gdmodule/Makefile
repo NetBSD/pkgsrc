@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2015/12/05 21:25:45 adam Exp $
+# $NetBSD: Makefile,v 1.7 2016/07/09 13:03:51 wiz Exp $
 
 DISTNAME=	v0.58
 PKGNAME=	${PYPKGPREFIX}-gdmodule-${DISTNAME:S/v//}
@@ -17,7 +17,7 @@ WRKSRC=		${WRKDIR}/gdmodule-${DISTNAME:S/v//}
 EGG_NAME=	gdmodule-${DISTNAME:S/v//}
 
 PYSETUP=	Setup.py
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 0.58
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 0.58
 
 BUILDLINK_API_DEPENDS.gd+=	gd>=2.0.23
 .include "../../graphics/gd/buildlink3.mk"

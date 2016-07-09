@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2016/06/08 17:43:39 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2016/07/09 13:04:06 wiz Exp $
 
 VERSION=		0.7.11
 DISTNAME=		cuisine-${VERSION}
@@ -13,7 +13,7 @@ LICENSE=		modified-bsd
 
 DEPENDS+=		fabric>=1.7.0:../../sysutils/fabric
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 0.6.4
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 0.6.4
 
 WRKSRC=			${WRKDIR}/cuisine-${VERSION}
 

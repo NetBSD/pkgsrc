@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2016/07/09 06:39:17 wiz Exp $
+# $NetBSD: Makefile,v 1.63 2016/07/09 13:04:18 wiz Exp $
 
 VERSION=	2.8.12.0
 DISTNAME=	wxPython-src-${VERSION}
@@ -19,7 +19,7 @@ USE_TOOLS+=	gmake pkg-config
 # previous name of the package
 CONFLICTS+=		${PYPKGPREFIX}-wxWindows-[0-9]*
 PYTHON_SELF_CONFLICT=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 2.8.10.1
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 2.8.10.1
 
 # no scripts to avoid conflicts
 #PYSETUPBUILDARGS+=	NO_SCRIPTS=1

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2016/07/09 06:38:19 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2016/07/09 13:03:49 wiz Exp $
 
 DISTNAME=		proj-swig-0.02
 PKGREVISION=		7
@@ -17,7 +17,7 @@ GNU_CONFIGURE=		yes
 
 # Defines PYSITELIB, apparently.
 PY_PATCHPLIST=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 0.02
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 0.02
 
 # The perl build is commented out upstream, so this doesn't have any
 # effect.

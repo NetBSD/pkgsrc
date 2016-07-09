@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2015/12/05 21:25:41 adam Exp $
+# $NetBSD: Makefile,v 1.23 2016/07/09 13:03:46 wiz Exp $
 
 DISTNAME=	medit-1.2.0
 PKGREVISION=	2
@@ -19,7 +19,7 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pkg-config msgfmt intltool
 
 PYTHON_FOR_BUILD_ONLY=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 1.2.0
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 1.2.0
 CONFIGURE_ARGS+=	--with-python=no
 CONFIGURE_ENV+=	MOO_PYTHON=${PYTHONBIN}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2016/05/29 21:07:59 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2016/07/09 13:04:10 wiz Exp $
 
 .include "../../textproc/libxslt/Makefile.common"
 
@@ -11,7 +11,7 @@ COMMENT=	Python wrapper for libxslt
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 DEPENDS+=	${PYPKGPREFIX}-libxml2>=2.6.8:../../textproc/py-libxml2
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 1.1.28
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 1.1.28
 
 PYSETUPSUBDIR=	python
 NO_CONFIGURE=	yes

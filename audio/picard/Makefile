@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2015/12/05 21:25:28 adam Exp $
+# $NetBSD: Makefile,v 1.30 2016/07/09 13:03:30 wiz Exp $
 
 DISTNAME=	picard-1.3.2
 CATEGORIES=	audio
@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-mutagen>=1.20:../../audio/py-mutagen
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		msgfmt pkg-config
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 1.3.1
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 1.3.1
 
 HAS_CONFIGURE=		yes
 CONFIG_SHELL=		${PYTHONBIN}

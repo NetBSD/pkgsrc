@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2015/12/05 21:25:55 adam Exp $
+# $NetBSD: Makefile,v 1.14 2016/07/09 13:04:02 wiz Exp $
 #
 .include "../../news/hellanzb/Makefile.version"
 
@@ -17,7 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 DEPENDS+=	par2>=0.4:../../archivers/par2
 DEPENDS+=	unrar>=3.5.4:../../archivers/unrar
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-twisted
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-twisted
 
 USE_LANGUAGES=	#none
 

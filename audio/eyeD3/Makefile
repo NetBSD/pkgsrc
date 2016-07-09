@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2015/12/05 21:25:28 adam Exp $
+# $NetBSD: Makefile,v 1.4 2016/07/09 13:03:30 wiz Exp $
 
 DISTNAME=	eyeD3-0.7.5
 CATEGORIES=	audio
@@ -11,7 +11,7 @@ COMMENT=	Python tool for working with audio files (in particular, mp3)
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	# none
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 0.7.5
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 0.7.5
 REPLACE_SH+=		bin/eyeD3
 
 SUBST_CLASSES+=		python

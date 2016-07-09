@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2016/07/09 06:38:34 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2016/07/09 13:03:55 wiz Exp $
 
-DISTNAME=	bulk-medium-20160314
-PKGREVISION=	1
+DISTNAME=	bulk-medium-20160709
 CATEGORIES=	meta-pkgs
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -11,7 +10,7 @@ COMMENT=	Meta-package for a standard medium-sized limited bulk build
 
 META_PACKAGE=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-matplotlib-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-matplotlib-gtk2
 
 RESTRICTED=		Just for test build purpose
 NO_BIN_ON_CDROM=	${RESTRICTED}
@@ -92,7 +91,7 @@ BUILD_DEPENDS+=	sun-jdk6-[0-9]*:../../lang/sun-jdk6
 BUILD_DEPENDS+=	sun-jre6-[0-9]*:../../lang/sun-jre6
 BUILD_DEPENDS+=	openjdk7-[0-9]*:../../lang/openjdk7
 BUILD_DEPENDS+=	openjdk8-[0-9]*:../../lang/openjdk8
-BUILD_DEPENDS+=	python33-[0-9]*:../../lang/python33
+BUILD_DEPENDS+=	python35-[0-9]*:../../lang/python35
 BUILD_DEPENDS+=	tcl-[0-9]*:../../lang/tcl
 BUILD_DEPENDS+=	fetchmail-[0-9]*:../../mail/fetchmail
 BUILD_DEPENDS+=	imap-uw-[0-9]*:../../mail/imap-uw

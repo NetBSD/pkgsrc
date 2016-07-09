@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2015/12/05 21:25:42 adam Exp $
+# $NetBSD: Makefile,v 1.44 2016/07/09 13:03:46 wiz Exp $
 
 DISTNAME=		openmsx-0.9.0
 PKGREVISION=		5
@@ -23,7 +23,7 @@ INSTALL_MAKE_FLAGS+=	SYMLINK_FOR_BINARY=false
 INSTALL_MAKE_FLAGS+=	INSTALL_BASE=${PREFIX}/openmsx
 MAKE_ENV+=		OPENMSX_INSTALL=${PREFIX}/openmsx
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 0.9.0
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 0.9.0
 
 .include "../../mk/bsd.prefs.mk"
 

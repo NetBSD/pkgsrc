@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.24 2016/05/16 11:51:49 ryoon Exp $
+# $NetBSD: Makefile.common,v 1.25 2016/07/09 13:03:52 wiz Exp $
 # used by inputmethod/ibus-mozc/Makefile
 # used by inputmethod/mozc-elisp/Makefile
 # used by inputmethod/mozc-server/Makefile
@@ -30,8 +30,6 @@ PATCHDIR=	${.CURDIR}/../../inputmethod/mozc-server/patches
 
 BUILD_DEPENDS+=	${PYPKGPREFIX}-gyp-[0-9]*:../../devel/gyp
 BUILD_DEPENDS+=	ninja-build-[0-9]*:../../devel/ninja-build
-
-PYTHON_VERSIONS_INCOMPATIBLE=  33 # py-gyp
 
 USE_LANGUAGES=	c c++
 

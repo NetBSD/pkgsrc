@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2016/03/17 02:47:14 tnn Exp $
+# $NetBSD: Makefile,v 1.28 2016/07/09 13:03:55 wiz Exp $
 
 DISTNAME=	bulk-large-20160317
 CATEGORIES=	meta-pkgs
@@ -14,7 +14,7 @@ RESTRICTED=		Just for test build purpose
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # py-gtk2
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # py-gtk2
 
 #
 # Note: the primary purpose of this package is to build the most

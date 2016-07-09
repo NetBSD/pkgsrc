@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2015/12/05 21:25:51 adam Exp $
+# $NetBSD: Makefile,v 1.49 2016/07/09 13:03:58 wiz Exp $
 
 .include "Makefile.common"
 
@@ -28,7 +28,7 @@ SUBST_FILES.sha+=	khashmir/utkhashmir.py
 SUBST_FILES.sha+=	torrentinfo-console.py
 SUBST_SED.sha=		-e "s/^from sha import .*/from hashlib import sha1 as sha/"
 
-PYTHON_VERSIONS_INCOMPATIBLE=	33 34 35 # not yet ported as of 4.4.0
+PYTHON_VERSIONS_INCOMPATIBLE=	34 35 # not yet ported as of 4.4.0
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
