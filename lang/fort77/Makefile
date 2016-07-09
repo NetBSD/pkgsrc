@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2015/06/12 10:50:15 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2016/07/09 06:38:24 wiz Exp $
 #
 
 DISTNAME=		fort77-1.18
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SUNSITE:=devel/lang/fortran/}
 

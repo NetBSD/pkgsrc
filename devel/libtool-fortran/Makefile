@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2016/02/25 12:12:48 jperkin Exp $
+# $NetBSD: Makefile,v 1.13 2016/07/09 06:38:10 wiz Exp $
 
 ###########################################################################
 ###########################################################################
@@ -28,7 +28,7 @@
 FILESDIR=	${.CURDIR}/../libtool-base/files
 
 PKGNAME=	${DISTNAME:S/-/-fortran-/}
-PKGREVISION=	5
+PKGREVISION=	6
 
 COMMENT=	Generic shared library support script (the script itself, incl. Fortran)
 
