@@ -1,4 +1,4 @@
-# $NetBSD: g95.mk,v 1.5 2015/11/25 13:05:47 jperkin Exp $
+# $NetBSD: g95.mk,v 1.6 2016/07/09 17:12:22 dholland Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -40,10 +40,8 @@ COMPILER_G95_MK=	defined
 
 .include "../../mk/bsd.prefs.mk"
 
-.if !empty(PKGPATH:Mlang/g95) || !empty(PKGPATH:Mdevel/patch) || \
-    !empty(PKGPATH:Mdevel/libtool-base)
+.if !empty(PKGPATH:Mlang/g95)
 IGNORE_G95=	yes
-MAKEFLAGS+=	IGNORE_G95=yes
 .endif
 
 .if defined(IGNORE_G95)
