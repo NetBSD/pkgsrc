@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.97 2016/07/03 19:25:16 sevan Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.98 2016/07/09 16:19:15 rillig Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -191,9 +191,9 @@
 	don't have a termcap/terminfo entry for it, but the following .termcap
 	entry provides adequate emulation in most cases:</para>
 
-	<programlisting>
+<programlisting>
 interix:kP=\E[S:kN=\E[T:kH=\E[U:dc@:DC@:tc=pcansi:
-	</programlisting>
+</programlisting>
 
       </sect3>
       <sect3 id="platform.interix-limits">
